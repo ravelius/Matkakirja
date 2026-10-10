@@ -1,6 +1,6 @@
 ### 6.1
 KYSYMYS: Minkä sankarin mukaan Akamas on nimetty?
-Kato, tän minä tiedän. Niemi on nimetty antiikin sankarin, [[Theseuksen]] pojan Akamaksen mukaan. Perimätiedon mukaan hän oli myös [[Solin]] kaupunkivaltion perustaja, ja niin kreikkalainen sankaritarina elää yhä [[Kyproksen]] luoteiskulman paikannimessä. Nimi on siis muistomerkki, ei pelkkä maantieteellinen merkintä. Ei paha kyyhkyltä.
+Kato, tän minä tiedän. Akamas on nimetty [[Theseuksen]] pojan Akamaksen mukaan, jonka kerrotaan olleen [[Solin]] kaupunkivaltion perustaja. Niemi sijaitsee [[Kyproksen]] luoteiskulmassa, ja sen nimi yhdistää alueen kreikkalaiseen sankaritarustoon. Kyse on perimätiedosta, eikä tarinaa voi varmistaa historiallisesti. Ei paha kyyhkyltä.
 
 JATKOT:
 Mitä Akamaksen niemellä voi nähdä?
@@ -8,7 +8,7 @@ Millainen kaupunkivaltio Soli oli?
 
 ### 6.2
 KYSYMYS: Kuinka monta Kyproksen 128 endeemisestä kasvilajista Akamasilla kasvaa?
-Hetkinen ny. Akamasilla kasvaa 39 Kyproksen 128 endeemisestä kasvilajista, eli lähes kolmannes saaren omista lajeista. Endeeminen laji tarkoittaa lajia, jota ei kasva luonnonvaraisena missään muualla. Niemi on lisäksi yksi Euroopan 22 [[endeemisyysalueesta]], mikä kertoo sen merkityksestä [[luonnonsuojelulle]]. Aika paljon lukuja yhteen vastaukseen.
+Hetkinen ny. Akamasilla kasvaa 39 Kyproksen 128 endeemisestä kasvilajista, eli noin kolmannes saaren omista lajeista. [[Endeeminen]] laji on laji, jota ei kasva luonnonvaraisena missään muualla. Niemi on yksi vain 22 Euroopan [[endeemisyysalueesta]], ja sen sydänalueen halki ei kulje teitä, mikä on auttanut lajiston säilymistä. [[Euroopan ympäristökeskus]] on tunnustanut alueen merkityksen. Aika paljon lukuja yhteen vastaukseen.
 
 JATKOT:
 Miksi Akamaksen sydänalue on säilynyt tiettömänä?
@@ -16,7 +16,7 @@ Mitä muita endeemisiä lajeja Kyproksella on?
 
 ### 6.3
 KYSYMYS: Mitkä merikilpikonnat pesivät Kyproksen rannoilla?
-No niin, hyvä kysymys tämä. Kyproksen rannoilla pesii kaksi merikilpikonnalajia: [[Caretta caretta]] sekä [[vihreä merikilpikonna]]. Naaraat nousevat rannalle munimaan yöaikaan kesäkuukausina, ja pesät merkitään ja suojataan, jotta ne säilyisivät häiriöttä. Akamaksen suojelualue on yksi alueista, joissa tätä suojelutyötä tehdään. Minä pesin kerran vain ikkunalaudalla.
+No niin, hyvä kysymys tämä. Kyproksen rannoilla pesii kaksi merikilpikonnalajia: [[Caretta caretta]] eli karettikilpikonna sekä [[vihreä merikilpikonna]]. Naaraat nousevat rannalle munimaan kesäisin, ja pesiä suojellaan, jotta ne säilyisivät häiriöttä. [[Akamaksen]] merikilpikonnien suojelualue on yksi paikoista, joissa tätä työtä tehdään. Ei kyyhkyltä löytyisi tuollaista kärsivällisyyttä.
 
 JATKOT:
 Miten merikilpikonnat löytävät takaisin synnyinrannalleen?
@@ -24,7 +24,7 @@ Kuinka kauan merikilpikonna voi elää?
 
 ### 6.4
 KYSYMYS: Kuka oli Ptolemaios, joka kuvasi Akamaksen niemeä?
-Ai tota. Ptolemaios oli antiikin kreikkalainen tähtitieteilijä, matemaatikko ja maantieteilijä, joka eli noin toisella vuosisadalla jKr. Hänen teoksensa Maantiede kokosi tietoa tunnetun maailman paikoista ja niiden sijainneista, ja siinä käytettiin leveys- ja pituusasteita. Toinen tunnettu työ on Almagest, joka esitteli maakeskisen maailmankuvan ja vaikutti tähtitieteeseen vuosisatojen ajan. Hänet muistetaan [[Aleksandrian]] oppineena, ja hänen karttatapansa on perintöä myös nykyisille [[kartoille]]. Pitkä on perintö yhdelle miehelle.
+Ai tota. Ptolemaios oli antiikin kreikkalainen tähtitieteilijä, matemaatikko ja maantieteilijä, joka työskenteli Aleksandriassa noin toisella vuosisadalla jKr. Hänen teoksensa [[Geographia]] kokosi tietoa tunnetun maailman paikoista ja niiden sijainneista, ja siinä käytettiin leveys- ja pituusasteita. Toinen tunnettu työ on [[Almagest]], joka esitteli maakeskisen maailmankuvan ja vaikutti tähtitieteeseen vuosisatojen ajan. Hän kuvasi myös [[Akamaksen]] tiheästi metsäiseksi niemeksi, jonka keskellä kohoaa vuoristo. Pitkä on perintö yhdelle miehelle.
 
 JATKOT:
 Millainen oli Ptolemaioksen maailmankuva?
@@ -32,7 +32,7 @@ Miten antiikin karttoja piirrettiin?
 
 ### 6.5
 KYSYMYS: Kuka oli Theseus Ateenan myyttisenä kuninkaana?
-Annas ku mietin. Theseus oli kreikkalaisen mytologian sankari ja Ateenan myyttinen kuningas. Tarun mukaan hän surmasi Kreetalla [[Minotauroksen]] ja pääsi ulos labyrintistä [[Ariadnen]] langan avulla. Häntä pidettiin myös Ateenan yhdistäjänä, ja hänen kerrotaan koonneen Attikan kylät yhdeksi kaupunkivaltioksi. Nämä ovat kuitenkin myyttejä, eivät historiallista tietoa. Taru on vanha, mutta kyllä minä sen muistan.
+Annas ku mietin. Theseus oli kreikkalaisen mytologian sankari ja Ateenan myyttinen kuningas. Tarun mukaan hän surmasi Kreetalla [[Minotauroksen]] ja pääsi ulos labyrintistä [[Ariadnen]] langan avulla. Hänen kerrotaan myös koonneen [[Attikan]] kylät yhdeksi kaupunkivaltioksi. Nämä ovat myyttejä eivätkä historiallista tietoa. Taru on vanha, mutta kyllä minä sen muistan.
 
 JATKOT:
 Mitä Minotauros-tarussa kerrotaan?
@@ -40,7 +40,7 @@ Millainen oli Kreetan minolainen kulttuuri?
 
 ### 7.1
 KYSYMYS: Kuka munkki perusti luostarin 1100-luvulla?
-Selvä juttu. Luostarin perusti munkki [[Ignatios]] 1100-luvulla. Luostari on omistettu Neitsyt Marialle, ja sen nimi tarkoittaa suomeksi kultaista granaattiomenaa. Nykyinen rakennus on kuitenkin vuodelta 1770, joten alkuperäisestä perustuksesta on kulunut kauan. Luostari sijaitsee [[Pafoksen]] koillispuolella vuoristossa. Sen kyllä pitkälti muistin ulkoa.
+Selvä juttu. Luostarin perusti munkki [[Ignatios]] 1100-luvulla. [[Chrysorrogiatissan]] luostari on omistettu Neitsyt Marialle, ja sen nimi tarkoittaa kultaista granaattiomenaa. Se sijaitsee noin 40 kilometriä [[Pafoksesta]] koilliseen vuoristossa, lähellä [[Panayian]] kylää. Nykyinen rakennus on vuodelta 1770, joten alkuperäisestä perustamisesta on kulunut paljon aikaa. Sen kyllä pitkälti muistin ulkoa.
 
 JATKOT:
 Mitä luostarin viinitehdas tuottaa?
@@ -48,7 +48,7 @@ Mikä on granaattiomenan merkitys symbolina?
 
 ### 7.2
 KYSYMYS: Minä päivänä luostarin juhlaa vietetään joka vuosi?
-Sepä sattui: juhlaa vietetään joka vuosi 15. elokuuta [[Neitsyt Marian]] kunniaksi. Päivä on ortodoksisessa kirkossa yksi vuoden tärkeimmistä Marian juhlapäivistä, ja sitä kutsutaan Marian kuolonuneksi. Luostarissa, joka on omistettu Neitsyt Marialle, päivällä on erityinen merkitys, ja juhlaan kokoontuu pyhiinvaeltajia ja paikallisia. Elokuun helle on aina ollut hyvä aika lentää. Kuumalla ilmalla kantaa kauas.
+Sepä sattui: päivä on 15. elokuuta. Luostarin juhlaa vietetään silloin [[Neitsyt Marian]] kunniaksi. Ortodoksisessa kirkossa tämä päivä tunnetaan nimellä [[Marian kuolonuni]], ja se on yksi kirkkovuoden tärkeimmistä Marian juhlista. Juhlapäivänä [[Chrysorrogiatissan]] luostariin kokoontuu pyhiinvaeltajia ja paikallisia. Elokuun helteellä kantaa kuumassa ilmassa kauas.
 
 JATKOT:
 Miten ortodoksit viettävät Marian taivaaseenastumisen juhlaa?
@@ -56,7 +56,7 @@ Mikä erottaa ortodoksisen kirkon katolisesta?
 
 ### 7.3
 KYSYMYS: Kuka oli arkkipiispa Makarios III?
-Nyt muistan: Makarios III oli Kyproksen ortodoksisen kirkon arkkipiispa ja samalla maan ensimmäinen presidentti. Hän syntyi [[Panayian]] kylässä lähellä Chrysorrogiatissan luostaria. Hän toimi presidenttinä Kyproksen itsenäistyttyä [[Britannian]] vallasta vuonna 1960, ja hän oli arkkipiispa samanaikaisesti. Hänet muistetaan Kyproksen itsenäisyyden keskeisenä hahmona, ja hänen kautensa oli myrskyisää aikaa. Siinä riittää tutkittavaa kenelle tahansa.
+Nyt muistan: Makarios III oli Kyproksen ortodoksisen kirkon arkkipiispa ja samalla itsenäisen [[Kyproksen]] presidentti. Hän syntyi [[Panayian]] kylässä, joka on vain kilometrin parin päässä [[Chrysorrogiatissan]] luostarista. Kypros itsenäistyi [[Britannian]] vallasta hänen aikanaan, ja häntä pidetään saaren itsenäisyyden keskeisenä hahmona. Hänen kautensa oli kuitenkin myrskyisä. Siinä riittää tutkittavaa kenelle tahansa.
 
 JATKOT:
 Milloin Kypros itsenäistyi?
@@ -64,7 +64,7 @@ Miten arkkipiispa valitaan ortodoksisessa kirkossa?
 
 ### 7.4
 KYSYMYS: Mitä granaattiomena symboloi?
-Mmm— tästä riittää juttua. Granaattiomena on yksi vanhimmista hedelmäsymboleista, ja [[Välimeren]] alueella se on yhdistetty hedelmällisyyteen, runsauteen ja uudistumiseen. Kreikkalaisessa mytologiassa se liittyy [[Persefonen]] tarinaan: tarun mukaan hän söi granaattiomenan siemeniä ja joutui siksi viettämään osan vuodesta alamaailmassa. Kristillisessä perinteessä hedelmä on joskus tulkittu ylösnousemuksen ja kirkon yhtenäisyyden merkiksi, koska se sisältää monta siementä yhden kuoren sisällä. Eikö joku ole koskaan kysynyt, maistuuko se pullalta.
+Mmm— tästä riittää juttua. Granaattiomena on yksi vanhimmista hedelmäsymboleista, ja [[Välimeren]] alueella se on yhdistetty hedelmällisyyteen, runsauteen ja uudistumiseen. Kreikkalaisessa mytologiassa se liittyy [[Persefonen]] tarinaan: tarun mukaan hän söi granaattiomenan siemeniä ja joutui siksi viettämään osan vuodesta alamaailmassa. Kristillisessä perinteessä hedelmä on joskus tulkittu ylösnousemuksen ja kirkon yhtenäisyyden merkiksi, koska se sisältää monta siementä yhden kuoren sisällä. [[Chrysorrogiatissan]] luostarin nimikin tarkoittaa kultaista granaattiomenaa. Siemeniä riittää, mut pulla olisi silti parempi.
 
 JATKOT:
 Miten granaattiomenaa käytetään ruoanlaitossa?
@@ -72,7 +72,7 @@ Mitä Persefonen myytti kertoo vuodenajoista?
 
 ### 7.5
 KYSYMYS: Mikä on Commandaria-viini?
-Tuota niin. [[Commandaria]] on kyproslainen makea jälkiruokaviini, jota tehdään [[Troodoksen]] vuoriston rinteiden viinitarhoista. Rypäleet kuivatetaan auringossa ennen puristusta, minkä jälkeen niiden sokeripitoisuus on korkea ja viinistä tulee tumma ja makea. Nimen kerrotaan tulevan keskiajan ritarikunnan, [[johanniittojen]], komendasta eli hallintokeskuksesta lähellä [[Kolossin]] linnaa. Tarkat vanhuusväitteet jätän kylläkin lähdekirjallisuuden varaan. Makea juoma lienee minulle liikaa.
+Tuota niin. Commandaria on kyproslainen makea jälkiruokaviini, jota tehdään [[Troodoksen]] vuoriston rinteiden viinitarhoista. Rypäleet kuivatetaan auringossa ennen puristusta, joten viinistä tulee tumma ja makea. Nimen kerrotaan tulevan keskiajan ritarikunnan, [[johanniittojen]], komendasta eli hallintokeskuksesta lähellä [[Kolossin]] linnaa. Viinin tarkkaa ikää en ole varma, joten sen jätän sanomatta. Makea juoma, mut minä pysyn kyllä pullassa.
 
 JATKOT:
 Mitä rypälelajeja Kyproksella viljellään?
@@ -80,7 +80,7 @@ Miten makea jälkiruokaviini valmistetaan?
 
 ### 8.1
 KYSYMYS: Mitä Soli toimitti Ateenaan?
-Kas vaan. Soli toimitti Ateenaan puutavaraa ja kuparia, ja vastineeksi se sai ylellisiä metalliesineitä. Kaupunkivaltio sijaitsi [[Kyproksen]] luoteisosassa Morphoun lahden rannalla, lähellä saaren rikkainta kuparialuetta. Tämä selittää kuparikaupan merkityksen, sillä Kypros tunnettiin metallistaan jo antiikin aikana. Kuparin lisäksi lähistön metsät tarjosivat puuta. Siitä riittää kyllä pienellekin kyyhkylle kerrottavaa.
+Kas vaan. Soli toimitti Ateenaan puutavaraa ja kuparia, ja vastineeksi se sai ylellisiä metalliesineitä. Kaupunkivaltio sijaitsi [[Kyproksen]] luoteisosassa [[Morphoun lahden]] rannalla, [[Mesaorian]] tasangolla lähellä merta ja saaren rikkainta kuparialuetta. Tämä selittää kuparikaupan merkityksen. Siitä riittää kyllä pienellekin kyyhkylle kerrottavaa.
 
 JATKOT:
 Miksi Kypros oli antiikissa niin tärkeä kuparin lähde?
@@ -88,7 +88,7 @@ Mistä Kyproksen nimi on peräisin?
 
 ### 8.2
 KYSYMYS: Kuka johti ruotsalaista Kyproksen retkikuntaa?
-Just niin, tän minä muistan. Ruotsalaista Kyproksen retkikuntaa johti arkeologi [[Einar Gjerstad]]. Retkikunta kaivoi 1920- ja 1930-lukujen taitteessa useita muinaisia kohteita saarella, ja heidän työnsä on yksi Kyproksen arkeologian tärkeistä perustuksista. Soli kuului kohteisiin, joita retkikunta tutki lokakuussa 1927. Gjerstad on ollut keskeinen hahmo [[Kyproksen]] esihistorian tutkimuksessa. Hyvä kysymys, ei yhtään hullumpi.
+Just niin, tän minä muistan. Ruotsalaista Kyproksen retkikuntaa johti arkeologi [[Einar Gjerstad]]. Retkikunta kaivoi [[Solin]] muinaista kaupunkia lokakuussa 1927. Kaivauksissa tutkittiin muun muassa [[Cholades-kukkulan]] temppelikompleksia, jonka temppelit A ja B oli omistettu yhdessä [[Afroditelle]] ja Kybelelle. Gjerstadin työ on tärkeä osa Kyproksen arkeologian perustaa. Hyvä kysymys, ei yhtään hullumpi.
 
 JATKOT:
 Mitä muita kohteita ruotsalainen retkikunta kaivoi?
@@ -96,7 +96,7 @@ Miten arkeologit ajoittavat löytöjään?
 
 ### 8.3
 KYSYMYS: Mitä Solon uudisti Ateenassa?
-Odotas vähän. Solon oli ateenalainen valtiomies ja runoilija, joka eli noin 630–560 eaa. Hän toteutti noin vuoden 594 eaa. tienoilla uudistuksia, joilla lievennettiin köyhien velkataakkaa, ja velkaorjuus kiellettiin. Lisäksi hän jakoi kansalaiset omaisuuden mukaan neljään ryhmään, ja se vaikutti siihen, kuka sai osallistua [[Ateenan]] hallintoon. Uudistusten katsotaan valmistaneen tietä myöhemmälle [[demokratialle]]. Pitkä oli lista, mutta kyllä siitä selvittiin.
+Odotas vähän. Solon oli ateenalainen valtiomies ja runoilija, jonka elinaika sijoitetaan noin vuosiin 630–560 eaa. Hän lievensi uudistuksillaan köyhien velkataakkaa ja kielsi [[velkaorjuuden]]. Lisäksi hän jakoi kansalaiset omaisuuden mukaan ryhmiin, ja se vaikutti siihen, kuka sai osallistua hallintoon. Uudistusten katsotaan valmistaneen tietä myöhemmälle [[demokratialle]]. Perimätiedon mukaan hän antoi myös [[Solin]] kaupungille asemakaavan ja nimen, mutta arkeologinen todistus kyseenalaistaa tämän. Pitkä oli lista, mutta kyllä siitä selvittiin.
 
 JATKOT:
 Miten demokratia syntyi Ateenassa?
@@ -104,7 +104,7 @@ Mitä Solonin runot kertovat?
 
 ### 8.4
 KYSYMYS: Kuka oli Assyrian kuningas Esarhaddon?
-Hyvä kysymys tuo. Esarhaddon oli Assyrian kuningas, joka hallitsi noin 681–669 eaa. Hän nousi valtaan isänsä Sanheribin murhan jälkeen. Hänen kauttaan Assyrian valta ulottui laajalle, ja hänen kirjoituksensa luettelevat Kyproksen kymmenen kuningaskuntaa, mikä on arvokas lähde saaren antiikin historiasta. Kirjoitus on tallennettu savisiin prismoihin, joita on säilynyt nykypäivään. Ei se ole pienen linnun hommaa.
+Hyvä kysymys tuo. Esarhaddon oli Assyrian kuningas, joka hallitsi 600-luvulla eaa. Hänen prismansa kirjoitukset mainitsevat [[Kyproksen]] kymmenen kaupunkivaltiota, ja yksi niistä on [[Soli]]. Se on arvokas lähde saaren antiikin historiasta, koska kirjoitus on tallennettu savisiin [[prismoihin]], joita on säilynyt nykypäivään. Tarkkoja hallituskausia en ole varma, joten jätän ne pois. Ei se ole pienen linnun hommaa.
 
 JATKOT:
 Miten Assyrian valtakunta kaatui?
@@ -112,7 +112,7 @@ Mitä muita kirjoituksia savisiin prismoihin tallennettiin?
 
 ### 8.5
 KYSYMYS: Mistä kupari on saanut nimensä?
-Katotaas. Kuparin nimi tulee latinan sanasta cuprum, joka juontuu ilmauksesta aes Cyprium eli Kyproksen metalli. Rooman aikana suuri osa käytetystä kuparista tuli [[Kyproksen]] kaivoksista, ja siitä metalli sai nimensä. Suomen kupari on lainattu tämän saman sanaperheen kautta. Kypros oli antiikissa tunnettu [[kuparikaivoksistaan]] jo ennen roomalaisia. Kyproksen nimi elää siis jokaisessa kuparikolikossa.
+Katotaas. Kuparin nimi tulee latinan sanasta [[cuprum]], joka juontuu ilmauksesta aes Cyprium eli Kyproksen metalli. [[Rooman]] aikana merkittävä osa kuparista tuli [[Kyproksen]] kaivoksista, ja siitä metalli sai nimensä. Myös antiikin [[Solin]] kaupunkivaltio kävi kauppaa kuparilla, sillä se sijaitsi saaren rikkaan kuparialueen lähellä. Kyproksen nimi elää siis jokaisessa kuparikolikossa.
 
 JATKOT:
 Mistä pronssi valmistetaan?
@@ -120,7 +120,7 @@ Miten antiikin kuparia louhittiin?
 
 ### 9.1
 KYSYMYS: Kuka perimätiedon mukaan perusti Stavrovounin luostarin?
-No jopas. Perimätiedon mukaan luostarin perustivat pyhä [[Helena]] ja keisari [[Konstantinus Suuri]] noin vuosina 327–329. Tarinan mukaan Helena jätti Kyprokselle palan ristiä, jolla Jeesus ristiinnaulittiin. Luostarin nimi tarkoittaa Ristin vuorta, ja se sijaitsee kukkulan huipulla Larnakan piirikunnassa. Vanhin kirjallinen maininta on kuitenkin vasta vuodelta 1106. Tämä oli kyllä mukava kerrottava.
+No jopas. Perimätiedon mukaan luostarin perustivat pyhä [[Helena]] ja keisari [[Konstantinus Suuri]] noin vuosina 327–329. Tarinan mukaan Helena jätti Kyprokselle palan ristiä, jolla Jeesus ristiinnaulittiin. Luostarin nimi tarkoittaa Ristin vuorta, ja se sijaitsee kukkulan huipulla [[Larnakan]] piirikunnassa. Vanhin kirjallinen maininta on kuitenkin vasta vuodelta 1106. Tämä oli kyllä mukava kerrottava.
 
 JATKOT:
 Kuka oli pyhä Helena?
@@ -128,7 +128,7 @@ Mitä Stavrovounin luostarissa tehdään nykyään?
 
 ### 9.2
 KYSYMYS: Minkä pyhäinjäännöksen luostari säilyttää?
-Ai se. Luostarin merkittävin pyhäinjäännös on pala ristiä, jota säilytetään suuressa hopeisessa ristinmuotoisessa reliikkiarkussa. Perimätiedon mukaan [[Helena]] jätti sen Kyprokselle. Muita pyhäinjäännöksiä ovat hyvän ryövärin risti ja yksi pyhistä nauloista. Reliikit ovat ortodoksisessa perinteessä tärkeä osa luostarin hengellistä elämää. Pienen linnun on parasta pitää nokkansa erossa.
+Ai se. Luostarin merkittävin pyhäinjäännös on pala ristiä, jota säilytetään suuressa hopeisessa ristinmuotoisessa [[reliikkiarkussa]]. Perimätiedon mukaan [[Helena]] jätti sen Kyprokselle. Muita pyhäinjäännöksiä ovat [[hyvän ryövärin]] risti ja yksi pyhistä nauloista. Reliikit ovat ortodoksisessa perinteessä tärkeä osa luostarin hengellistä elämää. Pienen linnun on parasta pitää nokkansa erossa.
 
 JATKOT:
 Mitä pyhäinjäännökset ovat ortodoksisessa kirkossa?
@@ -136,7 +136,7 @@ Mikä on Helenan rooli kristinuskon historiassa?
 
 ### 9.3
 KYSYMYS: Kuka oli keisari Konstantinus Suuri?
-Joo, tän minä tiedän. Konstantinus Suuri oli Rooman keisari, joka hallitsi noin vuodesta 306 vuoteen 337. Hänen aikanaan kristinusko sai [[Milanon]] ediktin vuonna 313 oikeudet harjoittaa uskontoa vapaasti. Hän kutsui koolle [[Nikean]] kirkolliskokouksen vuonna 325 ja perusti vuonna 330 uuden hallintokeskuksen, joka sai nimen Konstantinopoli, nykyisen Istanbulin. Hänen äitinsä oli Helena. Siinä oli vähän pitkää historiaa yhteen hengenvetoon.
+Joo, tän minä tiedän. Konstantinus Suuri hallitsi Rooman valtakuntaa 300-luvun alussa. Hänen aikanaan [[Milanon ediktin]] myötä kristityt saivat harjoittaa uskontoaan vapaasti. Hän kutsui koolle [[Nikean kirkolliskokouksen]] ja perusti uuden hallintokeskuksen, jonka nimeksi tuli [[Konstantinopoli]], nykyisen Istanbulin edeltäjä. Hänen äitinsä oli pyhä [[Helena]]. Siinä oli vähän pitkää historiaa yhteen hengenvetoon.
 
 JATKOT:
 Miksi Konstantinopoli perustettiin?
@@ -144,7 +144,7 @@ Mitä Nikean kirkolliskokouksessa päätettiin?
 
 ### 9.4
 KYSYMYS: Kuka oli pyhä Helena?
-Tost minä osaan kertoo. Helena oli keisari Konstantinus Suuren äiti, ja hän eli noin 250–330. Hän tunnetaan kristillisessä perinteessä pyhiinvaeltajana, joka matkusti [[Pyhälle maalle]] 320-luvun lopulla. Perimätiedon mukaan hän löysi sieltä Jeesuksen ristin, vaikka tämä tarina perustuu myöhempiin lähteisiin eikä sitä voi tarkasti varmistaa. Ortodoksinen ja katolinen kirkko pitävät häntä pyhänä. Tää oli kerrassaan monipuolinen nainen.
+Tost minä osaan kertoo. Helena oli keisari [[Konstantinus Suuren]] äiti, ja kristillisessä perinteessä hänet tunnetaan pyhiinvaeltajana, joka matkusti Pyhälle maalle. Perimätiedon mukaan hän löysi sieltä Jeesuksen ristin, mutta tarina perustuu myöhempiin lähteisiin eikä sitä voi tarkasti varmistaa. Saman perimätiedon mukaan hän jätti palan ristiä [[Stavrovounin]] luostariin [[Kyprokselle]]. Sekä ortodoksinen että katolinen kirkko pitävät häntä pyhänä. Aikamoinen nainen, sanon minä.
 
 JATKOT:
 Mitä tiedetään Jeesuksen ristin löytymisestä?
@@ -152,7 +152,7 @@ Miten Konstantinus Suuri tuki kristinuskoa?
 
 ### 9.5
 KYSYMYS: Mitä pyhäinjäännökset ovat ortodoksisessa perinteessä?
-Kato, sopivaa pohdittavaa. Pyhäinjäännös eli reliikki on pyhän henkilön ruumiinosa tai esine, joka on ollut hänen kanssaan kosketuksissa. Ortodoksisessa perinteessä uskovat kunnioittavat niitä, koska ne yhdistävät heidät pyhään ja muistuttavat pyhän läsnäolosta. Reliikkejä säilytetään usein [[luostareissa]] ja kirkoissa erityisissä arkuissa, ja ne tuodaan esiin juhlapäivinä. Kunnioitus kohdistuu pyhään, ei esineeseen itseensä. Aihe on arka, mutta tästä selvittiin.
+Kato, sopivaa pohdittavaa. Pyhäinjäännös eli reliikki on pyhän henkilön ruumiinosa tai esine, joka on ollut hänen kanssaan kosketuksissa. Ortodoksisessa perinteessä uskovat kunnioittavat niitä, koska ne muistuttavat pyhän läsnäolosta. Reliikkejä säilytetään usein [[luostareissa]] ja kirkoissa erityisissä [[reliikkiarkuissa]], ja ne tuodaan esiin juhlapäivinä. Esimerkiksi [[Stavrovounin]] luostari säilyttää palaa ristiä. Kunnioitus kohdistuu pyhään, ei esineeseen itseensä. Aihe on arka, mutta tästä selvittiin.
 
 JATKOT:
 Mitä muita pyhäinjäännöksiä on säilynyt keskiajalta?
@@ -160,7 +160,7 @@ Mitä ikonien kunnioitus ortodoksisessa kirkossa tarkoittaa?
 
 ### 10.1
 KYSYMYS: Minä vuonna Kantaran linna autioitui?
-No niin, tän minä muistan. Kantaran linna autioitui vuonna 1525, ja se purettiin vuonna 1560. Linna sijaitsee [[Kyrenian vuorilla]] Kyproksen pohjoisosassa, ja sen rakennusaikaa ei tunneta tarkasti, mutta todennäköisimmin se on peräisin Bysantin ajalta. Se yhdistää bysanttilaisia ja frankkilaisia rakennuspiirteitä. Linna on vuoristolinnoista itäisin. Lyhyt vastaus, mutta kokonainen vuosisata.
+No niin, tän minä muistan. Kantaran linna autioitui vuonna 1525 ja purettiin vuonna 1560. Linna sijaitsee [[Kyrenian vuorilla]] Kyproksen pohjoisosassa. Sen rakennusaikaa ei tunneta tarkasti, mutta todennäköisimmin se on peräisin [[Bysantin]] ajalta, ja siinä yhdistyvät bysanttilaiset ja frankkilaiset rakennuspiirteet. Kantara on [[Buffaventon]] linnan itäpuolella ja [[Saint Hilarionin]] linna kauempana lännessä. Lyhyt vastaus, mutta kokonainen vuosisata.
 
 JATKOT:
 Mitä Kyrenian vuorten muut linnat ovat?
@@ -168,7 +168,7 @@ Miten linnat välittivät toisilleen merkkejä?
 
 ### 10.2
 KYSYMYS: Minkä sanan mukaan linnan nimi on annettu?
-Annas ku mietin. Linnan nimi tulee kyproksenarabian sanasta kandak, joka tarkoittaa kivisiltaa. Nimi viittaa luultavasti vuoristoharjanteen luontaiseen muotoon tai kulkureittiin, vaikka tarkkaa selitystä ei voi varmistaa. Linnaa käytettiin merirosvoretkien vartiotornina, hallintokeskuksena ja vankilana. Se ei juuri joutunut taisteluihin. Aika kivinen nimi, sanoisin.
+Annas ku mietin. Linnan nimi tulee [[kyproksenarabian]] sanasta kandak, joka tarkoittaa kivisiltaa. Linnaa käytettiin merirosvoretkien vartiotornina, hallintokeskuksena ja vankilana, vaikka se ei juuri joutunut taisteluihin. Se kuului [[Kyrenian vuorten]] linnojen ketjuun, jonka tornit välittivät toisilleen merkkejä [[Buffaventon]] ja [[Saint Hilarionin]] linnojen kanssa. Aika kivinen nimi, sanoisin.
 
 JATKOT:
 Mitä kyproksenarabia on?
@@ -176,7 +176,7 @@ Miksi merirosvoja oli Välimerellä?
 
 ### 10.3
 KYSYMYS: Millainen kaupunkivaltio Genova oli keskiajalla?
-Hetkinen ny. Genova oli keskiajalla merkittävä Italian merellinen kauppavaltio, jonka laivasto ja kauppiaat toimivat laajalla alueella [[Välimerellä]] ja [[Mustallamerellä]]. Se kilpaili kauppareiteistä erityisesti [[Venetsian]] kanssa. Genovalaiset perustivat kauppa-asemia ja siirtokuntia eri puolille Välimerta. Kyproksella genovalaiset hallitsivat Famagustan kaupunkia pitkän aikaa 1300-luvun lopulta. Tarkat vuodet menevät jo minun muistini rajoille.
+Hetkinen ny. Genova oli keskiajalla merkittävä Italian merellinen kauppavaltio, jonka laivasto ja kauppiaat toimivat laajalla alueella [[Välimerellä]] ja Mustallamerellä. Se kilpaili kauppareiteistä erityisesti [[Venetsian]] kanssa, ja genovalaiset perustivat kauppa-asemia eri puolille Välimerta. Kyproksella genovalaiset olivat jonkin aikaa vahvasti läsnä [[Famagustan]] kaupungissa, vaikka vuosista en ole varma. Vuonna 1373 heidän hyökätessään prinssi Johannes pakeni [[Kantaran]] linnaan ja ajoi sieltä käsin genovalaiset pois. Tarkat vuodet menevät jo minun muistini rajoille.
 
 JATKOT:
 Miksi Venetsia ja Genova kilpailivat keskenään?
@@ -184,7 +184,7 @@ Millainen kaupunki Famagusta oli keskiajalla?
 
 ### 10.4
 KYSYMYS: Millainen vuoristo Kyrenian vuoristo on?
-Ai tota. Kyrenian vuoristo on kapea kalkkikivinen vuorijono, joka kulkee Kyproksen pohjoisrannikon suuntaisesti idästä länteen. Sen korkeimmat huiput nousevat noin tuhannen metrin korkeuteen. Vuoristo erottaa pohjoisen rannikon saaren sisäosien tasangosta, ja sen jyrkät rinteet tekivät siitä sopivan paikan linnoille. Harjanteella ovat [[Saint Hilarionin]], [[Buffaventon]] ja Kantaran linnat. Ylhäältä katsottuna maisema on kyllä hieno.
+Ai tota. Kyrenian vuoristo on kapea kalkkikivinen vuorijono, joka kulkee [[Kyproksen]] pohjoisrannikon suuntaisesti. Sen korkeimmat huiput nousevat noin tuhannen metrin korkeuteen. Vuoristo erottaa pohjoisen rannikon saaren sisäosista, ja sen jyrkät rinteet tekivät siitä sopivan paikan linnoille. Harjanteella ovat [[Saint Hilarionin]], [[Buffaventon]] ja [[Kantaran]] linnat. Ylhäältä katsottuna maisema on kyllä hieno.
 
 JATKOT:
 Mikä on Troodoksen vuoristo?
@@ -192,7 +192,7 @@ Miten Kyproksen ilmasto vaihtelee saaren eri osissa?
 
 ### 10.5
 KYSYMYS: Mitä kyproksenarabia on?
-Sepä sattui: kyproksenarabia eli kyproslaisarabia on arabian kielen murre, jota puhuvat Kyproksen maroniitit. Sitä on perinteisesti puhuttu erityisesti Kormakitiksen kylässä saaren pohjoisosassa. Kieli on kehittynyt vuosisatojen aikana keskiaikaisesta arabiasta, ja siihen on tullut paljon lainoja kreikasta. [[Unesco]] luokittelee sen uhanalaiseksi kieleksi, koska puhujia on nykyään vain muutamia tuhansia. Sana kandak on siis oikea löytö.
+Sepä sattui: kyproksenarabia eli kyproslaisarabia on arabian kielen murre, jota puhuvat Kyproksen [[maroniitit]]. Sitä on perinteisesti puhuttu erityisesti [[Kormakitiksen]] kylässä saaren pohjoisosassa. Kieleen on vuosisatojen aikana vaikuttanut vahvasti kreikka. [[Unesco]] pitää sitä uhanalaisena kielenä, koska puhujia on nykyään vähän. Sana kandak on tästä hyvä esimerkki, ja sen minä sain muistettua.
 
 JATKOT:
 Keitä maroniitit ovat?
