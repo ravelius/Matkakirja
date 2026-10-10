@@ -39,7 +39,10 @@ PT local_593b89a1-2514-4d74-b956-2a73db862382, Siirtoseppä local_b50bb32e-18e2-
   (kopioi kansioon `_tyo/taidemuseo-aanet-20261010/`): peli −23 LUFS + ääniportti, kuuntelu −16 LUFS → rivi PT:lle (äänisivu).
 - 2) VALMIS: luentasuunnitelma `proto-3d/_tyo/taidemuseo-aanet-20261010/LUENTASUUNNITELMA.md` (A ≈9 000 merkkiä ≈600 kr, B 5 564 ≈370 kr)
   → lähetetty PT:lle omistajan korttia varten. Ei generointia ennen lupaa.
-- 3) Kytkentäkohdat LS1:n kanssa (MuseoSovitin): kysy LS1:ltä, mihin salin silmukka, askeleet ja sorina sekä teoskohtainen kertoja kytketään.
+- 3) LS1 VASTASI 11.0x: polku aanet/taidemuseo-v1/ ok. Salin silmukka y.Taustaaani(...)/o.Silmukka(...) (ISilmukka.Voimakkuus),
+  sorina voi olla huoneittain NykyinenHuone.Id:n mukaan (aula, m1–m3, kg, kg-komerot, yv, leiden). LS1 lisää MuseoSovitin.Askel-
+  tapahtuman (~0,75 m). Kertoja: kertoja/<Teos.Id>.mp3 (Rijks objnr, esim. SK-C-5). Lähetä LS1:lle manifesti, niin hän kytkee.
+  Vanha kohta:ytkentäkohdat LS1:n kanssa (MuseoSovitin): kysy LS1:ltä, mihin salin silmukka, askeleet ja sorina sekä teoskohtainen kertoja kytketään.
 
 ## 3. Odottaa
 - Freesound-lataaja käynnistetty uudelleen 09.46 (perl setsid, aja-originaalit.zsh), odottaa ~/.freesound-tokenia (OAuth). Aikakatkaisu
