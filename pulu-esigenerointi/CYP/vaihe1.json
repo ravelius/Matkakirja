@@ -379,7 +379,7 @@
   "kohde": "kohde:hahmotelma-akamas",
   "kysymys": "Minkä sankarin mukaan Akamas on nimetty?",
   "uusi": false,
-  "vastaus": "Kato, tän minä tiedän. Niemi on nimetty antiikin sankarin, [[Theseuksen]] pojan Akamaksen mukaan. Perimätiedon mukaan hän oli myös [[Solin]] kaupunkivaltion perustaja, ja niin kreikkalainen sankaritarina elää yhä [[Kyproksen]] luoteiskulman paikannimessä. Nimi on siis muistomerkki, ei pelkkä maantieteellinen merkintä. Ei paha kyyhkyltä.",
+  "vastaus": "Kato, tän minä tiedän. Akamas on nimetty [[Theseuksen]] pojan Akamaksen mukaan, jonka kerrotaan olleen [[Solin]] kaupunkivaltion perustaja. Niemi sijaitsee [[Kyproksen]] luoteiskulmassa, ja sen nimi yhdistää alueen kreikkalaiseen sankaritarustoon. Kyse on perimätiedosta, eikä tarinaa voi varmistaa historiallisesti. Ei paha kyyhkyltä.",
   "linkit": [
    "Theseuksen",
    "Solin",
@@ -394,10 +394,11 @@
   "kohde": "kohde:hahmotelma-akamas",
   "kysymys": "Kuinka monta Kyproksen 128 endeemisestä kasvilajista Akamasilla kasvaa?",
   "uusi": false,
-  "vastaus": "Hetkinen ny. Akamasilla kasvaa 39 Kyproksen 128 endeemisestä kasvilajista, eli lähes kolmannes saaren omista lajeista. Endeeminen laji tarkoittaa lajia, jota ei kasva luonnonvaraisena missään muualla. Niemi on lisäksi yksi Euroopan 22 [[endeemisyysalueesta]], mikä kertoo sen merkityksestä [[luonnonsuojelulle]]. Aika paljon lukuja yhteen vastaukseen.",
+  "vastaus": "Hetkinen ny. Akamasilla kasvaa 39 Kyproksen 128 endeemisestä kasvilajista, eli noin kolmannes saaren omista lajeista. [[Endeeminen]] laji on laji, jota ei kasva luonnonvaraisena missään muualla. Niemi on yksi vain 22 Euroopan [[endeemisyysalueesta]], ja sen sydänalueen halki ei kulje teitä, mikä on auttanut lajiston säilymistä. [[Euroopan ympäristökeskus]] on tunnustanut alueen merkityksen. Aika paljon lukuja yhteen vastaukseen.",
   "linkit": [
+   "Endeeminen",
    "endeemisyysalueesta",
-   "luonnonsuojelulle"
+   "Euroopan ympäristökeskus"
   ],
   "jatkot": [
    "Miksi Akamaksen sydänalue on säilynyt tiettömänä?",
@@ -408,10 +409,11 @@
   "kohde": "kohde:hahmotelma-akamas",
   "kysymys": "Mitkä merikilpikonnat pesivät Kyproksen rannoilla?",
   "uusi": true,
-  "vastaus": "No niin, hyvä kysymys tämä. Kyproksen rannoilla pesii kaksi merikilpikonnalajia: [[Caretta caretta]] sekä [[vihreä merikilpikonna]]. Naaraat nousevat rannalle munimaan yöaikaan kesäkuukausina, ja pesät merkitään ja suojataan, jotta ne säilyisivät häiriöttä. Akamaksen suojelualue on yksi alueista, joissa tätä suojelutyötä tehdään. Minä pesin kerran vain ikkunalaudalla.",
+  "vastaus": "No niin, hyvä kysymys tämä. Kyproksen rannoilla pesii kaksi merikilpikonnalajia: [[Caretta caretta]] eli karettikilpikonna sekä [[vihreä merikilpikonna]]. Naaraat nousevat rannalle munimaan kesäisin, ja pesiä suojellaan, jotta ne säilyisivät häiriöttä. [[Akamaksen]] merikilpikonnien suojelualue on yksi paikoista, joissa tätä työtä tehdään. Ei kyyhkyltä löytyisi tuollaista kärsivällisyyttä.",
   "linkit": [
    "Caretta caretta",
-   "vihreä merikilpikonna"
+   "vihreä merikilpikonna",
+   "Akamaksen"
   ],
   "jatkot": [
    "Miten merikilpikonnat löytävät takaisin synnyinrannalleen?",
@@ -422,10 +424,11 @@
   "kohde": "kohde:hahmotelma-akamas",
   "kysymys": "Kuka oli Ptolemaios, joka kuvasi Akamaksen niemeä?",
   "uusi": true,
-  "vastaus": "Ai tota. Ptolemaios oli antiikin kreikkalainen tähtitieteilijä, matemaatikko ja maantieteilijä, joka eli noin toisella vuosisadalla jKr. Hänen teoksensa Maantiede kokosi tietoa tunnetun maailman paikoista ja niiden sijainneista, ja siinä käytettiin leveys- ja pituusasteita. Toinen tunnettu työ on Almagest, joka esitteli maakeskisen maailmankuvan ja vaikutti tähtitieteeseen vuosisatojen ajan. Hänet muistetaan [[Aleksandrian]] oppineena, ja hänen karttatapansa on perintöä myös nykyisille [[kartoille]]. Pitkä on perintö yhdelle miehelle.",
+  "vastaus": "Ai tota. Ptolemaios oli antiikin kreikkalainen tähtitieteilijä, matemaatikko ja maantieteilijä, joka työskenteli Aleksandriassa noin toisella vuosisadalla jKr. Hänen teoksensa [[Geographia]] kokosi tietoa tunnetun maailman paikoista ja niiden sijainneista, ja siinä käytettiin leveys- ja pituusasteita. Toinen tunnettu työ on [[Almagest]], joka esitteli maakeskisen maailmankuvan ja vaikutti tähtitieteeseen vuosisatojen ajan. Hän kuvasi myös [[Akamaksen]] tiheästi metsäiseksi niemeksi, jonka keskellä kohoaa vuoristo. Pitkä on perintö yhdelle miehelle.",
   "linkit": [
-   "Aleksandrian",
-   "kartoille"
+   "Geographia",
+   "Almagest",
+   "Akamaksen"
   ],
   "jatkot": [
    "Millainen oli Ptolemaioksen maailmankuva?",
@@ -436,10 +439,11 @@
   "kohde": "kohde:hahmotelma-akamas",
   "kysymys": "Kuka oli Theseus Ateenan myyttisenä kuninkaana?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Theseus oli kreikkalaisen mytologian sankari ja Ateenan myyttinen kuningas. Tarun mukaan hän surmasi Kreetalla [[Minotauroksen]] ja pääsi ulos labyrintistä [[Ariadnen]] langan avulla. Häntä pidettiin myös Ateenan yhdistäjänä, ja hänen kerrotaan koonneen Attikan kylät yhdeksi kaupunkivaltioksi. Nämä ovat kuitenkin myyttejä, eivät historiallista tietoa. Taru on vanha, mutta kyllä minä sen muistan.",
+  "vastaus": "Annas ku mietin. Theseus oli kreikkalaisen mytologian sankari ja Ateenan myyttinen kuningas. Tarun mukaan hän surmasi Kreetalla [[Minotauroksen]] ja pääsi ulos labyrintistä [[Ariadnen]] langan avulla. Hänen kerrotaan myös koonneen [[Attikan]] kylät yhdeksi kaupunkivaltioksi. Nämä ovat myyttejä eivätkä historiallista tietoa. Taru on vanha, mutta kyllä minä sen muistan.",
   "linkit": [
    "Minotauroksen",
-   "Ariadnen"
+   "Ariadnen",
+   "Attikan"
   ],
   "jatkot": [
    "Mitä Minotauros-tarussa kerrotaan?",
@@ -450,10 +454,12 @@
   "kohde": "kohde:hahmotelma-chrysorrogiatissa",
   "kysymys": "Kuka munkki perusti luostarin 1100-luvulla?",
   "uusi": false,
-  "vastaus": "Selvä juttu. Luostarin perusti munkki [[Ignatios]] 1100-luvulla. Luostari on omistettu Neitsyt Marialle, ja sen nimi tarkoittaa suomeksi kultaista granaattiomenaa. Nykyinen rakennus on kuitenkin vuodelta 1770, joten alkuperäisestä perustuksesta on kulunut kauan. Luostari sijaitsee [[Pafoksen]] koillispuolella vuoristossa. Sen kyllä pitkälti muistin ulkoa.",
+  "vastaus": "Selvä juttu. Luostarin perusti munkki [[Ignatios]] 1100-luvulla. [[Chrysorrogiatissan]] luostari on omistettu Neitsyt Marialle, ja sen nimi tarkoittaa kultaista granaattiomenaa. Se sijaitsee noin 40 kilometriä [[Pafoksesta]] koilliseen vuoristossa, lähellä [[Panayian]] kylää. Nykyinen rakennus on vuodelta 1770, joten alkuperäisestä perustamisesta on kulunut paljon aikaa. Sen kyllä pitkälti muistin ulkoa.",
   "linkit": [
    "Ignatios",
-   "Pafoksen"
+   "Chrysorrogiatissan",
+   "Pafoksesta",
+   "Panayian"
   ],
   "jatkot": [
    "Mitä luostarin viinitehdas tuottaa?",
@@ -464,9 +470,11 @@
   "kohde": "kohde:hahmotelma-chrysorrogiatissa",
   "kysymys": "Minä päivänä luostarin juhlaa vietetään joka vuosi?",
   "uusi": false,
-  "vastaus": "Sepä sattui: juhlaa vietetään joka vuosi 15. elokuuta [[Neitsyt Marian]] kunniaksi. Päivä on ortodoksisessa kirkossa yksi vuoden tärkeimmistä Marian juhlapäivistä, ja sitä kutsutaan Marian kuolonuneksi. Luostarissa, joka on omistettu Neitsyt Marialle, päivällä on erityinen merkitys, ja juhlaan kokoontuu pyhiinvaeltajia ja paikallisia. Elokuun helle on aina ollut hyvä aika lentää. Kuumalla ilmalla kantaa kauas.",
+  "vastaus": "Sepä sattui: päivä on 15. elokuuta. Luostarin juhlaa vietetään silloin [[Neitsyt Marian]] kunniaksi. Ortodoksisessa kirkossa tämä päivä tunnetaan nimellä [[Marian kuolonuni]], ja se on yksi kirkkovuoden tärkeimmistä Marian juhlista. Juhlapäivänä [[Chrysorrogiatissan]] luostariin kokoontuu pyhiinvaeltajia ja paikallisia. Elokuun helteellä kantaa kuumassa ilmassa kauas.",
   "linkit": [
-   "Neitsyt Marian"
+   "Neitsyt Marian",
+   "Marian kuolonuni",
+   "Chrysorrogiatissan"
   ],
   "jatkot": [
    "Miten ortodoksit viettävät Marian taivaaseenastumisen juhlaa?",
@@ -477,9 +485,11 @@
   "kohde": "kohde:hahmotelma-chrysorrogiatissa",
   "kysymys": "Kuka oli arkkipiispa Makarios III?",
   "uusi": true,
-  "vastaus": "Nyt muistan: Makarios III oli Kyproksen ortodoksisen kirkon arkkipiispa ja samalla maan ensimmäinen presidentti. Hän syntyi [[Panayian]] kylässä lähellä Chrysorrogiatissan luostaria. Hän toimi presidenttinä Kyproksen itsenäistyttyä [[Britannian]] vallasta vuonna 1960, ja hän oli arkkipiispa samanaikaisesti. Hänet muistetaan Kyproksen itsenäisyyden keskeisenä hahmona, ja hänen kautensa oli myrskyisää aikaa. Siinä riittää tutkittavaa kenelle tahansa.",
+  "vastaus": "Nyt muistan: Makarios III oli Kyproksen ortodoksisen kirkon arkkipiispa ja samalla itsenäisen [[Kyproksen]] presidentti. Hän syntyi [[Panayian]] kylässä, joka on vain kilometrin parin päässä [[Chrysorrogiatissan]] luostarista. Kypros itsenäistyi [[Britannian]] vallasta hänen aikanaan, ja häntä pidetään saaren itsenäisyyden keskeisenä hahmona. Hänen kautensa oli kuitenkin myrskyisä. Siinä riittää tutkittavaa kenelle tahansa.",
   "linkit": [
+   "Kyproksen",
    "Panayian",
+   "Chrysorrogiatissan",
    "Britannian"
   ],
   "jatkot": [
@@ -491,10 +501,11 @@
   "kohde": "kohde:hahmotelma-chrysorrogiatissa",
   "kysymys": "Mitä granaattiomena symboloi?",
   "uusi": true,
-  "vastaus": "Mmm— tästä riittää juttua. Granaattiomena on yksi vanhimmista hedelmäsymboleista, ja [[Välimeren]] alueella se on yhdistetty hedelmällisyyteen, runsauteen ja uudistumiseen. Kreikkalaisessa mytologiassa se liittyy [[Persefonen]] tarinaan: tarun mukaan hän söi granaattiomenan siemeniä ja joutui siksi viettämään osan vuodesta alamaailmassa. Kristillisessä perinteessä hedelmä on joskus tulkittu ylösnousemuksen ja kirkon yhtenäisyyden merkiksi, koska se sisältää monta siementä yhden kuoren sisällä. Eikö joku ole koskaan kysynyt, maistuuko se pullalta.",
+  "vastaus": "Mmm— tästä riittää juttua. Granaattiomena on yksi vanhimmista hedelmäsymboleista, ja [[Välimeren]] alueella se on yhdistetty hedelmällisyyteen, runsauteen ja uudistumiseen. Kreikkalaisessa mytologiassa se liittyy [[Persefonen]] tarinaan: tarun mukaan hän söi granaattiomenan siemeniä ja joutui siksi viettämään osan vuodesta alamaailmassa. Kristillisessä perinteessä hedelmä on joskus tulkittu ylösnousemuksen ja kirkon yhtenäisyyden merkiksi, koska se sisältää monta siementä yhden kuoren sisällä. [[Chrysorrogiatissan]] luostarin nimikin tarkoittaa kultaista granaattiomenaa. Siemeniä riittää, mut pulla olisi silti parempi.",
   "linkit": [
    "Välimeren",
-   "Persefonen"
+   "Persefonen",
+   "Chrysorrogiatissan"
   ],
   "jatkot": [
    "Miten granaattiomenaa käytetään ruoanlaitossa?",
@@ -505,9 +516,8 @@
   "kohde": "kohde:hahmotelma-chrysorrogiatissa",
   "kysymys": "Mikä on Commandaria-viini?",
   "uusi": true,
-  "vastaus": "Tuota niin. [[Commandaria]] on kyproslainen makea jälkiruokaviini, jota tehdään [[Troodoksen]] vuoriston rinteiden viinitarhoista. Rypäleet kuivatetaan auringossa ennen puristusta, minkä jälkeen niiden sokeripitoisuus on korkea ja viinistä tulee tumma ja makea. Nimen kerrotaan tulevan keskiajan ritarikunnan, [[johanniittojen]], komendasta eli hallintokeskuksesta lähellä [[Kolossin]] linnaa. Tarkat vanhuusväitteet jätän kylläkin lähdekirjallisuuden varaan. Makea juoma lienee minulle liikaa.",
+  "vastaus": "Tuota niin. Commandaria on kyproslainen makea jälkiruokaviini, jota tehdään [[Troodoksen]] vuoriston rinteiden viinitarhoista. Rypäleet kuivatetaan auringossa ennen puristusta, joten viinistä tulee tumma ja makea. Nimen kerrotaan tulevan keskiajan ritarikunnan, [[johanniittojen]], komendasta eli hallintokeskuksesta lähellä [[Kolossin]] linnaa. Viinin tarkkaa ikää en ole varma, joten sen jätän sanomatta. Makea juoma, mut minä pysyn kyllä pullassa.",
   "linkit": [
-   "Commandaria",
    "Troodoksen",
    "johanniittojen",
    "Kolossin"
@@ -521,9 +531,11 @@
   "kohde": "kohde:hahmotelma-soli",
   "kysymys": "Mitä Soli toimitti Ateenaan?",
   "uusi": false,
-  "vastaus": "Kas vaan. Soli toimitti Ateenaan puutavaraa ja kuparia, ja vastineeksi se sai ylellisiä metalliesineitä. Kaupunkivaltio sijaitsi [[Kyproksen]] luoteisosassa Morphoun lahden rannalla, lähellä saaren rikkainta kuparialuetta. Tämä selittää kuparikaupan merkityksen, sillä Kypros tunnettiin metallistaan jo antiikin aikana. Kuparin lisäksi lähistön metsät tarjosivat puuta. Siitä riittää kyllä pienellekin kyyhkylle kerrottavaa.",
+  "vastaus": "Kas vaan. Soli toimitti Ateenaan puutavaraa ja kuparia, ja vastineeksi se sai ylellisiä metalliesineitä. Kaupunkivaltio sijaitsi [[Kyproksen]] luoteisosassa [[Morphoun lahden]] rannalla, [[Mesaorian]] tasangolla lähellä merta ja saaren rikkainta kuparialuetta. Tämä selittää kuparikaupan merkityksen. Siitä riittää kyllä pienellekin kyyhkylle kerrottavaa.",
   "linkit": [
-   "Kyproksen"
+   "Kyproksen",
+   "Morphoun lahden",
+   "Mesaorian"
   ],
   "jatkot": [
    "Miksi Kypros oli antiikissa niin tärkeä kuparin lähde?",
@@ -534,10 +546,12 @@
   "kohde": "kohde:hahmotelma-soli",
   "kysymys": "Kuka johti ruotsalaista Kyproksen retkikuntaa?",
   "uusi": false,
-  "vastaus": "Just niin, tän minä muistan. Ruotsalaista Kyproksen retkikuntaa johti arkeologi [[Einar Gjerstad]]. Retkikunta kaivoi 1920- ja 1930-lukujen taitteessa useita muinaisia kohteita saarella, ja heidän työnsä on yksi Kyproksen arkeologian tärkeistä perustuksista. Soli kuului kohteisiin, joita retkikunta tutki lokakuussa 1927. Gjerstad on ollut keskeinen hahmo [[Kyproksen]] esihistorian tutkimuksessa. Hyvä kysymys, ei yhtään hullumpi.",
+  "vastaus": "Just niin, tän minä muistan. Ruotsalaista Kyproksen retkikuntaa johti arkeologi [[Einar Gjerstad]]. Retkikunta kaivoi [[Solin]] muinaista kaupunkia lokakuussa 1927. Kaivauksissa tutkittiin muun muassa [[Cholades-kukkulan]] temppelikompleksia, jonka temppelit A ja B oli omistettu yhdessä [[Afroditelle]] ja Kybelelle. Gjerstadin työ on tärkeä osa Kyproksen arkeologian perustaa. Hyvä kysymys, ei yhtään hullumpi.",
   "linkit": [
    "Einar Gjerstad",
-   "Kyproksen"
+   "Solin",
+   "Cholades-kukkulan",
+   "Afroditelle"
   ],
   "jatkot": [
    "Mitä muita kohteita ruotsalainen retkikunta kaivoi?",
@@ -548,10 +562,11 @@
   "kohde": "kohde:hahmotelma-soli",
   "kysymys": "Mitä Solon uudisti Ateenassa?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Solon oli ateenalainen valtiomies ja runoilija, joka eli noin 630–560 eaa. Hän toteutti noin vuoden 594 eaa. tienoilla uudistuksia, joilla lievennettiin köyhien velkataakkaa, ja velkaorjuus kiellettiin. Lisäksi hän jakoi kansalaiset omaisuuden mukaan neljään ryhmään, ja se vaikutti siihen, kuka sai osallistua [[Ateenan]] hallintoon. Uudistusten katsotaan valmistaneen tietä myöhemmälle [[demokratialle]]. Pitkä oli lista, mutta kyllä siitä selvittiin.",
+  "vastaus": "Odotas vähän. Solon oli ateenalainen valtiomies ja runoilija, jonka elinaika sijoitetaan noin vuosiin 630–560 eaa. Hän lievensi uudistuksillaan köyhien velkataakkaa ja kielsi [[velkaorjuuden]]. Lisäksi hän jakoi kansalaiset omaisuuden mukaan ryhmiin, ja se vaikutti siihen, kuka sai osallistua hallintoon. Uudistusten katsotaan valmistaneen tietä myöhemmälle [[demokratialle]]. Perimätiedon mukaan hän antoi myös [[Solin]] kaupungille asemakaavan ja nimen, mutta arkeologinen todistus kyseenalaistaa tämän. Pitkä oli lista, mutta kyllä siitä selvittiin.",
   "linkit": [
-   "Ateenan",
-   "demokratialle"
+   "velkaorjuuden",
+   "demokratialle",
+   "Solin"
   ],
   "jatkot": [
    "Miten demokratia syntyi Ateenassa?",
@@ -562,8 +577,12 @@
   "kohde": "kohde:hahmotelma-soli",
   "kysymys": "Kuka oli Assyrian kuningas Esarhaddon?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Esarhaddon oli Assyrian kuningas, joka hallitsi noin 681–669 eaa. Hän nousi valtaan isänsä Sanheribin murhan jälkeen. Hänen kauttaan Assyrian valta ulottui laajalle, ja hänen kirjoituksensa luettelevat Kyproksen kymmenen kuningaskuntaa, mikä on arvokas lähde saaren antiikin historiasta. Kirjoitus on tallennettu savisiin prismoihin, joita on säilynyt nykypäivään. Ei se ole pienen linnun hommaa.",
-  "linkit": [],
+  "vastaus": "Hyvä kysymys tuo. Esarhaddon oli Assyrian kuningas, joka hallitsi 600-luvulla eaa. Hänen prismansa kirjoitukset mainitsevat [[Kyproksen]] kymmenen kaupunkivaltiota, ja yksi niistä on [[Soli]]. Se on arvokas lähde saaren antiikin historiasta, koska kirjoitus on tallennettu savisiin [[prismoihin]], joita on säilynyt nykypäivään. Tarkkoja hallituskausia en ole varma, joten jätän ne pois. Ei se ole pienen linnun hommaa.",
+  "linkit": [
+   "Kyproksen",
+   "Soli",
+   "prismoihin"
+  ],
   "jatkot": [
    "Miten Assyrian valtakunta kaatui?",
    "Mitä muita kirjoituksia savisiin prismoihin tallennettiin?"
@@ -573,10 +592,12 @@
   "kohde": "kohde:hahmotelma-soli",
   "kysymys": "Mistä kupari on saanut nimensä?",
   "uusi": true,
-  "vastaus": "Katotaas. Kuparin nimi tulee latinan sanasta cuprum, joka juontuu ilmauksesta aes Cyprium eli Kyproksen metalli. Rooman aikana suuri osa käytetystä kuparista tuli [[Kyproksen]] kaivoksista, ja siitä metalli sai nimensä. Suomen kupari on lainattu tämän saman sanaperheen kautta. Kypros oli antiikissa tunnettu [[kuparikaivoksistaan]] jo ennen roomalaisia. Kyproksen nimi elää siis jokaisessa kuparikolikossa.",
+  "vastaus": "Katotaas. Kuparin nimi tulee latinan sanasta [[cuprum]], joka juontuu ilmauksesta aes Cyprium eli Kyproksen metalli. [[Rooman]] aikana merkittävä osa kuparista tuli [[Kyproksen]] kaivoksista, ja siitä metalli sai nimensä. Myös antiikin [[Solin]] kaupunkivaltio kävi kauppaa kuparilla, sillä se sijaitsi saaren rikkaan kuparialueen lähellä. Kyproksen nimi elää siis jokaisessa kuparikolikossa.",
   "linkit": [
+   "cuprum",
+   "Rooman",
    "Kyproksen",
-   "kuparikaivoksistaan"
+   "Solin"
   ],
   "jatkot": [
    "Mistä pronssi valmistetaan?",
@@ -587,10 +608,11 @@
   "kohde": "kohde:hahmotelma-stavrovouni",
   "kysymys": "Kuka perimätiedon mukaan perusti Stavrovounin luostarin?",
   "uusi": false,
-  "vastaus": "No jopas. Perimätiedon mukaan luostarin perustivat pyhä [[Helena]] ja keisari [[Konstantinus Suuri]] noin vuosina 327–329. Tarinan mukaan Helena jätti Kyprokselle palan ristiä, jolla Jeesus ristiinnaulittiin. Luostarin nimi tarkoittaa Ristin vuorta, ja se sijaitsee kukkulan huipulla Larnakan piirikunnassa. Vanhin kirjallinen maininta on kuitenkin vasta vuodelta 1106. Tämä oli kyllä mukava kerrottava.",
+  "vastaus": "No jopas. Perimätiedon mukaan luostarin perustivat pyhä [[Helena]] ja keisari [[Konstantinus Suuri]] noin vuosina 327–329. Tarinan mukaan Helena jätti Kyprokselle palan ristiä, jolla Jeesus ristiinnaulittiin. Luostarin nimi tarkoittaa Ristin vuorta, ja se sijaitsee kukkulan huipulla [[Larnakan]] piirikunnassa. Vanhin kirjallinen maininta on kuitenkin vasta vuodelta 1106. Tämä oli kyllä mukava kerrottava.",
   "linkit": [
    "Helena",
-   "Konstantinus Suuri"
+   "Konstantinus Suuri",
+   "Larnakan"
   ],
   "jatkot": [
    "Kuka oli pyhä Helena?",
@@ -601,9 +623,11 @@
   "kohde": "kohde:hahmotelma-stavrovouni",
   "kysymys": "Minkä pyhäinjäännöksen luostari säilyttää?",
   "uusi": false,
-  "vastaus": "Ai se. Luostarin merkittävin pyhäinjäännös on pala ristiä, jota säilytetään suuressa hopeisessa ristinmuotoisessa reliikkiarkussa. Perimätiedon mukaan [[Helena]] jätti sen Kyprokselle. Muita pyhäinjäännöksiä ovat hyvän ryövärin risti ja yksi pyhistä nauloista. Reliikit ovat ortodoksisessa perinteessä tärkeä osa luostarin hengellistä elämää. Pienen linnun on parasta pitää nokkansa erossa.",
+  "vastaus": "Ai se. Luostarin merkittävin pyhäinjäännös on pala ristiä, jota säilytetään suuressa hopeisessa ristinmuotoisessa [[reliikkiarkussa]]. Perimätiedon mukaan [[Helena]] jätti sen Kyprokselle. Muita pyhäinjäännöksiä ovat [[hyvän ryövärin]] risti ja yksi pyhistä nauloista. Reliikit ovat ortodoksisessa perinteessä tärkeä osa luostarin hengellistä elämää. Pienen linnun on parasta pitää nokkansa erossa.",
   "linkit": [
-   "Helena"
+   "reliikkiarkussa",
+   "Helena",
+   "hyvän ryövärin"
   ],
   "jatkot": [
    "Mitä pyhäinjäännökset ovat ortodoksisessa kirkossa?",
@@ -614,10 +638,12 @@
   "kohde": "kohde:hahmotelma-stavrovouni",
   "kysymys": "Kuka oli keisari Konstantinus Suuri?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Konstantinus Suuri oli Rooman keisari, joka hallitsi noin vuodesta 306 vuoteen 337. Hänen aikanaan kristinusko sai [[Milanon]] ediktin vuonna 313 oikeudet harjoittaa uskontoa vapaasti. Hän kutsui koolle [[Nikean]] kirkolliskokouksen vuonna 325 ja perusti vuonna 330 uuden hallintokeskuksen, joka sai nimen Konstantinopoli, nykyisen Istanbulin. Hänen äitinsä oli Helena. Siinä oli vähän pitkää historiaa yhteen hengenvetoon.",
+  "vastaus": "Joo, tän minä tiedän. Konstantinus Suuri hallitsi Rooman valtakuntaa 300-luvun alussa. Hänen aikanaan [[Milanon ediktin]] myötä kristityt saivat harjoittaa uskontoaan vapaasti. Hän kutsui koolle [[Nikean kirkolliskokouksen]] ja perusti uuden hallintokeskuksen, jonka nimeksi tuli [[Konstantinopoli]], nykyisen Istanbulin edeltäjä. Hänen äitinsä oli pyhä [[Helena]]. Siinä oli vähän pitkää historiaa yhteen hengenvetoon.",
   "linkit": [
-   "Milanon",
-   "Nikean"
+   "Milanon ediktin",
+   "Nikean kirkolliskokouksen",
+   "Konstantinopoli",
+   "Helena"
   ],
   "jatkot": [
    "Miksi Konstantinopoli perustettiin?",
@@ -628,9 +654,11 @@
   "kohde": "kohde:hahmotelma-stavrovouni",
   "kysymys": "Kuka oli pyhä Helena?",
   "uusi": true,
-  "vastaus": "Tost minä osaan kertoo. Helena oli keisari Konstantinus Suuren äiti, ja hän eli noin 250–330. Hän tunnetaan kristillisessä perinteessä pyhiinvaeltajana, joka matkusti [[Pyhälle maalle]] 320-luvun lopulla. Perimätiedon mukaan hän löysi sieltä Jeesuksen ristin, vaikka tämä tarina perustuu myöhempiin lähteisiin eikä sitä voi tarkasti varmistaa. Ortodoksinen ja katolinen kirkko pitävät häntä pyhänä. Tää oli kerrassaan monipuolinen nainen.",
+  "vastaus": "Tost minä osaan kertoo. Helena oli keisari [[Konstantinus Suuren]] äiti, ja kristillisessä perinteessä hänet tunnetaan pyhiinvaeltajana, joka matkusti Pyhälle maalle. Perimätiedon mukaan hän löysi sieltä Jeesuksen ristin, mutta tarina perustuu myöhempiin lähteisiin eikä sitä voi tarkasti varmistaa. Saman perimätiedon mukaan hän jätti palan ristiä [[Stavrovounin]] luostariin [[Kyprokselle]]. Sekä ortodoksinen että katolinen kirkko pitävät häntä pyhänä. Aikamoinen nainen, sanon minä.",
   "linkit": [
-   "Pyhälle maalle"
+   "Konstantinus Suuren",
+   "Stavrovounin",
+   "Kyprokselle"
   ],
   "jatkot": [
    "Mitä tiedetään Jeesuksen ristin löytymisestä?",
@@ -641,9 +669,11 @@
   "kohde": "kohde:hahmotelma-stavrovouni",
   "kysymys": "Mitä pyhäinjäännökset ovat ortodoksisessa perinteessä?",
   "uusi": true,
-  "vastaus": "Kato, sopivaa pohdittavaa. Pyhäinjäännös eli reliikki on pyhän henkilön ruumiinosa tai esine, joka on ollut hänen kanssaan kosketuksissa. Ortodoksisessa perinteessä uskovat kunnioittavat niitä, koska ne yhdistävät heidät pyhään ja muistuttavat pyhän läsnäolosta. Reliikkejä säilytetään usein [[luostareissa]] ja kirkoissa erityisissä arkuissa, ja ne tuodaan esiin juhlapäivinä. Kunnioitus kohdistuu pyhään, ei esineeseen itseensä. Aihe on arka, mutta tästä selvittiin.",
+  "vastaus": "Kato, sopivaa pohdittavaa. Pyhäinjäännös eli reliikki on pyhän henkilön ruumiinosa tai esine, joka on ollut hänen kanssaan kosketuksissa. Ortodoksisessa perinteessä uskovat kunnioittavat niitä, koska ne muistuttavat pyhän läsnäolosta. Reliikkejä säilytetään usein [[luostareissa]] ja kirkoissa erityisissä [[reliikkiarkuissa]], ja ne tuodaan esiin juhlapäivinä. Esimerkiksi [[Stavrovounin]] luostari säilyttää palaa ristiä. Kunnioitus kohdistuu pyhään, ei esineeseen itseensä. Aihe on arka, mutta tästä selvittiin.",
   "linkit": [
-   "luostareissa"
+   "luostareissa",
+   "reliikkiarkuissa",
+   "Stavrovounin"
   ],
   "jatkot": [
    "Mitä muita pyhäinjäännöksiä on säilynyt keskiajalta?",
@@ -654,9 +684,12 @@
   "kohde": "kohde:hahmotelma-kantara",
   "kysymys": "Minä vuonna Kantaran linna autioitui?",
   "uusi": false,
-  "vastaus": "No niin, tän minä muistan. Kantaran linna autioitui vuonna 1525, ja se purettiin vuonna 1560. Linna sijaitsee [[Kyrenian vuorilla]] Kyproksen pohjoisosassa, ja sen rakennusaikaa ei tunneta tarkasti, mutta todennäköisimmin se on peräisin Bysantin ajalta. Se yhdistää bysanttilaisia ja frankkilaisia rakennuspiirteitä. Linna on vuoristolinnoista itäisin. Lyhyt vastaus, mutta kokonainen vuosisata.",
+  "vastaus": "No niin, tän minä muistan. Kantaran linna autioitui vuonna 1525 ja purettiin vuonna 1560. Linna sijaitsee [[Kyrenian vuorilla]] Kyproksen pohjoisosassa. Sen rakennusaikaa ei tunneta tarkasti, mutta todennäköisimmin se on peräisin [[Bysantin]] ajalta, ja siinä yhdistyvät bysanttilaiset ja frankkilaiset rakennuspiirteet. Kantara on [[Buffaventon]] linnan itäpuolella ja [[Saint Hilarionin]] linna kauempana lännessä. Lyhyt vastaus, mutta kokonainen vuosisata.",
   "linkit": [
-   "Kyrenian vuorilla"
+   "Kyrenian vuorilla",
+   "Bysantin",
+   "Buffaventon",
+   "Saint Hilarionin"
   ],
   "jatkot": [
    "Mitä Kyrenian vuorten muut linnat ovat?",
@@ -667,8 +700,13 @@
   "kohde": "kohde:hahmotelma-kantara",
   "kysymys": "Minkä sanan mukaan linnan nimi on annettu?",
   "uusi": false,
-  "vastaus": "Annas ku mietin. Linnan nimi tulee kyproksenarabian sanasta kandak, joka tarkoittaa kivisiltaa. Nimi viittaa luultavasti vuoristoharjanteen luontaiseen muotoon tai kulkureittiin, vaikka tarkkaa selitystä ei voi varmistaa. Linnaa käytettiin merirosvoretkien vartiotornina, hallintokeskuksena ja vankilana. Se ei juuri joutunut taisteluihin. Aika kivinen nimi, sanoisin.",
-  "linkit": [],
+  "vastaus": "Annas ku mietin. Linnan nimi tulee [[kyproksenarabian]] sanasta kandak, joka tarkoittaa kivisiltaa. Linnaa käytettiin merirosvoretkien vartiotornina, hallintokeskuksena ja vankilana, vaikka se ei juuri joutunut taisteluihin. Se kuului [[Kyrenian vuorten]] linnojen ketjuun, jonka tornit välittivät toisilleen merkkejä [[Buffaventon]] ja [[Saint Hilarionin]] linnojen kanssa. Aika kivinen nimi, sanoisin.",
+  "linkit": [
+   "kyproksenarabian",
+   "Kyrenian vuorten",
+   "Buffaventon",
+   "Saint Hilarionin"
+  ],
   "jatkot": [
    "Mitä kyproksenarabia on?",
    "Miksi merirosvoja oli Välimerellä?"
@@ -678,11 +716,12 @@
   "kohde": "kohde:hahmotelma-kantara",
   "kysymys": "Millainen kaupunkivaltio Genova oli keskiajalla?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Genova oli keskiajalla merkittävä Italian merellinen kauppavaltio, jonka laivasto ja kauppiaat toimivat laajalla alueella [[Välimerellä]] ja [[Mustallamerellä]]. Se kilpaili kauppareiteistä erityisesti [[Venetsian]] kanssa. Genovalaiset perustivat kauppa-asemia ja siirtokuntia eri puolille Välimerta. Kyproksella genovalaiset hallitsivat Famagustan kaupunkia pitkän aikaa 1300-luvun lopulta. Tarkat vuodet menevät jo minun muistini rajoille.",
+  "vastaus": "Hetkinen ny. Genova oli keskiajalla merkittävä Italian merellinen kauppavaltio, jonka laivasto ja kauppiaat toimivat laajalla alueella [[Välimerellä]] ja Mustallamerellä. Se kilpaili kauppareiteistä erityisesti [[Venetsian]] kanssa, ja genovalaiset perustivat kauppa-asemia eri puolille Välimerta. Kyproksella genovalaiset olivat jonkin aikaa vahvasti läsnä [[Famagustan]] kaupungissa, vaikka vuosista en ole varma. Vuonna 1373 heidän hyökätessään prinssi Johannes pakeni [[Kantaran]] linnaan ja ajoi sieltä käsin genovalaiset pois. Tarkat vuodet menevät jo minun muistini rajoille.",
   "linkit": [
    "Välimerellä",
-   "Mustallamerellä",
-   "Venetsian"
+   "Venetsian",
+   "Famagustan",
+   "Kantaran"
   ],
   "jatkot": [
    "Miksi Venetsia ja Genova kilpailivat keskenään?",
@@ -693,10 +732,12 @@
   "kohde": "kohde:hahmotelma-kantara",
   "kysymys": "Millainen vuoristo Kyrenian vuoristo on?",
   "uusi": true,
-  "vastaus": "Ai tota. Kyrenian vuoristo on kapea kalkkikivinen vuorijono, joka kulkee Kyproksen pohjoisrannikon suuntaisesti idästä länteen. Sen korkeimmat huiput nousevat noin tuhannen metrin korkeuteen. Vuoristo erottaa pohjoisen rannikon saaren sisäosien tasangosta, ja sen jyrkät rinteet tekivät siitä sopivan paikan linnoille. Harjanteella ovat [[Saint Hilarionin]], [[Buffaventon]] ja Kantaran linnat. Ylhäältä katsottuna maisema on kyllä hieno.",
+  "vastaus": "Ai tota. Kyrenian vuoristo on kapea kalkkikivinen vuorijono, joka kulkee [[Kyproksen]] pohjoisrannikon suuntaisesti. Sen korkeimmat huiput nousevat noin tuhannen metrin korkeuteen. Vuoristo erottaa pohjoisen rannikon saaren sisäosista, ja sen jyrkät rinteet tekivät siitä sopivan paikan linnoille. Harjanteella ovat [[Saint Hilarionin]], [[Buffaventon]] ja [[Kantaran]] linnat. Ylhäältä katsottuna maisema on kyllä hieno.",
   "linkit": [
+   "Kyproksen",
    "Saint Hilarionin",
-   "Buffaventon"
+   "Buffaventon",
+   "Kantaran"
   ],
   "jatkot": [
    "Mikä on Troodoksen vuoristo?",
@@ -707,13 +748,1087 @@
   "kohde": "kohde:hahmotelma-kantara",
   "kysymys": "Mitä kyproksenarabia on?",
   "uusi": true,
-  "vastaus": "Sepä sattui: kyproksenarabia eli kyproslaisarabia on arabian kielen murre, jota puhuvat Kyproksen maroniitit. Sitä on perinteisesti puhuttu erityisesti Kormakitiksen kylässä saaren pohjoisosassa. Kieli on kehittynyt vuosisatojen aikana keskiaikaisesta arabiasta, ja siihen on tullut paljon lainoja kreikasta. [[Unesco]] luokittelee sen uhanalaiseksi kieleksi, koska puhujia on nykyään vain muutamia tuhansia. Sana kandak on siis oikea löytö.",
+  "vastaus": "Sepä sattui: kyproksenarabia eli kyproslaisarabia on arabian kielen murre, jota puhuvat Kyproksen [[maroniitit]]. Sitä on perinteisesti puhuttu erityisesti [[Kormakitiksen]] kylässä saaren pohjoisosassa. Kieleen on vuosisatojen aikana vaikuttanut vahvasti kreikka. [[Unesco]] pitää sitä uhanalaisena kielenä, koska puhujia on nykyään vähän. Sana kandak on tästä hyvä esimerkki, ja sen minä sain muistettua.",
   "linkit": [
+   "maroniitit",
+   "Kormakitiksen",
    "Unesco"
   ],
   "jatkot": [
    "Keitä maroniitit ovat?",
    "Miten uhanalaisia kieliä pyritään säilyttämään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lapithos",
+  "kysymys": "Mitä nimi Lambousa tarkoittaa?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny, tän minä tiedän. Nimi Lambousa tarkoittaa loistavaa. Kaupunki sai nimensä [[Rooman]] aikana, ja syyksi arvellaan sen rikkautta, kauneutta tai majakkaa, mutta varmaa selitystä ei ole. Kaupunki oli tuolloin tunnettu kuparin jalostuksesta ja etenkin [[saviastioiden]] valmistuksesta. Minua saisi kyl kutsua loistavaksi ihan vapaasti.",
+  "linkit": [
+   "Rooman",
+   "saviastioiden"
+  ],
+  "jatkot": [
+   "Mikä oli antiikin Lapethoksen kaupunkivaltio?",
+   "Mistä Lapithos on saanut nykyisen nimensä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lapithos",
+  "kysymys": "Minä vuonna osa Lapithoksesta erotettiin Karavaksi?",
+  "uusi": false,
+  "vastaus": "Ai se. Osa Lapithoksesta erotettiin Karavaksi vuonna 1780, [[osmanien]] aikana. Aiemmin, [[Lusignanien]] vallan aikana, Lapithos oli ollut väkirikkaampi kuin [[Limassol]], Famagusta tai Pafos. Lyhyt ja napakka vastaus, just niin kuin kyyhkyn kuuluukin.",
+  "linkit": [
+   "osmanien",
+   "Lusignanien",
+   "Limassol"
+  ],
+  "jatkot": [
+   "Keitä Lusignanit olivat?",
+   "Milloin Kypros siirtyi osmanien hallintaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lapithos",
+  "kysymys": "Mitä Lapithoksessa jalostettiin Rooman aikana?",
+  "uusi": true,
+  "vastaus": "Katotaas. [[Rooman]] aikana Lapithoksessa jalostettiin [[kuparia]], ja kaupunki oli etenkin [[saviastioiden]] valmistuksen keskus. Se oli tuolloin yksi Kyproksen merkittävistä kaupungeista. Itse minä kantaisin kyl mieluummin kirjeitä kuin ruukkuja.",
+  "linkit": [
+   "Rooman",
+   "kuparia",
+   "saviastioiden"
+  ],
+  "jatkot": [
+   "Miten kuparia jalostettiin antiikin aikana?",
+   "Mistä Kypros on saanut nimensä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lapithos",
+  "kysymys": "Kuka oli kuningas Peisistratos?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: Peisistratos oli Lapithoksen kuningas. Hän auttoi laivastoineen [[Aleksanteri Suurta]] Tyroksen valtauksessa. Lapithos oli tuolloin yksi Kyproksen yhdeksästä [[kaupunkivaltiosta]]. Ei ollut pieni teko pieneltä kaupungilta, sanon minä.",
+  "linkit": [
+   "Aleksanteri Suurta",
+   "kaupunkivaltiosta"
+  ],
+  "jatkot": [
+   "Miten Aleksanteri Suuri valtasi Tyroksen?",
+   "Mitkä olivat Kyproksen muinaiset kaupunkivaltiot?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lapithos",
+  "kysymys": "Minkä vuoren juurelle Lapithos siirrettiin?",
+  "uusi": true,
+  "vastaus": "No niin, tämä on selvä. Asukkaat siirsivät kaupungin [[Pentadaktylos-vuoren]] juurelle, kun [[Bysantti]] oli ottanut saaren takaisin arabeilta vuonna 965. Uusi sijainti oli kauempana merestä kuin alkuperäinen kaupunki. Vuoren juurella olisi minunkin hyvä pitää taukoa.",
+  "linkit": [
+   "Pentadaktylos-vuoren",
+   "Bysantti"
+  ],
+  "jatkot": [
+   "Mitä Pentadaktylos-vuoriston nimi tarkoittaa?",
+   "Miten Bysantin valta Kyproksella päättyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-morphou",
+  "kysymys": "Kuka perusti kaupungin tarinan mukaan?",
+  "uusi": false,
+  "vastaus": "Kas vaan, vanha tarina. Tarinan mukaan kaupungin perustivat [[spartalaiset]], jotka toivat mukanaan [[Afrodite-palvonnan]]. Keskiajalla kaupunkia kutsuttiin Morphoksi ja Theomorphoksi. Perustajatarinat ovat aina parasta murua.",
+  "linkit": [
+   "spartalaiset",
+   "Afrodite-palvonnan"
+  ],
+  "jatkot": [
+   "Mikä oli Afroditen asema Kyproksella?",
+   "Millainen oli muinaisen Spartan yhteiskunta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-morphou",
+  "kysymys": "Minkä tuotteen viennistä Morphou oli tunnettu osmanien aikana?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Morphou oli 1500–1600-luvuilla [[osmanien]] aikana tunnettu [[pellavan]] viennistä. Sitä ennen, 1300- ja 1400-luvuilla, alueen kuninkaalliset kylät keskittyivät [[sokeriviljelyyn]]. Kyllä kelpo kauppatavaraa, sanoisin katolta katsoen.",
+  "linkit": [
+   "osmanien",
+   "pellavan",
+   "sokeriviljelyyn"
+  ],
+  "jatkot": [
+   "Mihin pellavaa on perinteisesti käytetty?",
+   "Miten sokeria jalostettiin keskiajalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-morphou",
+  "kysymys": "Mitä kuninkaat kannustivat viljelemään Morphoun kylissä?",
+  "uusi": true,
+  "vastaus": "Tuota niin, sehän on selvä. Kuninkaat kannustivat 1300- ja 1400-luvuilla kuninkaallisissa kylissä kannattavaan [[sokeriviljelyyn]]. Samaan aikaan alue tuotti yli puolet [[Kyproksen]] [[sitrushedelmistä]]. Makeaa ja hapanta samassa maassa, kyl se kelpaa.",
+  "linkit": [
+   "sokeriviljelyyn",
+   "Kyproksen",
+   "sitrushedelmistä"
+  ],
+  "jatkot": [
+   "Miten sokeria valmistettiin keskiajalla?",
+   "Mistä sitrushedelmät ovat kotoisin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-morphou",
+  "kysymys": "Mitä Morphoussa järjestetään joka vuosi?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Morphoussa järjestetään vuosittain kaksiviikkoinen [[appelsiinifestivaali]]. Kaupunki on tunnettu [[appelsiineistaan]], omenoistaan, greipeistään ja meloneistaan, ja suuri osa sitrushedelmistä viedään ulkomaille. Loput jalostetaan mehuksi ja säilykkeiksi. Kaksi viikkoa appelsiineja kuulostaa kyl hyvältä, vaikka pullaa en siellä näe.",
+  "linkit": [
+   "appelsiinifestivaali",
+   "appelsiineistaan"
+  ],
+  "jatkot": [
+   "Miten appelsiinit ovat levinneet Eurooppaan?",
+   "Mitä muita sitrushedelmiä Kyproksella viljellään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-morphou",
+  "kysymys": "Millä nimillä Morphoa kutsuttiin keskiajalla?",
+  "uusi": true,
+  "vastaus": "Mmm— tämän minä muistan. Keskiajalla kaupunkia kutsuttiin nimillä [[Morphos]] ja [[Theomorphos]]. Kaupungin perustajina pidetään tarinan mukaan [[spartalaisia]]. Nimien tarkasta merkityksestä en ole varma. Parempi myöntää kuin keksiä, sanoo kyyhky.",
+  "linkit": [
+   "Morphos",
+   "Theomorphos",
+   "spartalaisia"
+  ],
+  "jatkot": [
+   "Mitä Theomorphos-nimi tarkoittaa kreikaksi?",
+   "Miten kaupunkien nimet ovat syntyneet Kyproksella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-polis",
+  "kysymys": "Mitä kreikan sana polis tarkoittaa?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Kreikan sana polis tarkoittaa kaupunkia tai [[kaupunkivaltiota]]. Kaupungin koko nimi, Polis Chrysochous, johtuu siitä, että paikka on alueen [[hallintokeskus]]. Lyhyt sana, iso merkitys, kyl minä sen muistin.",
+  "linkit": [
+   "kaupunkivaltiota",
+   "hallintokeskus"
+  ],
+  "jatkot": [
+   "Mistä sana politiikka on peräisin?",
+   "Millainen oli antiikin kaupunkivaltio?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-polis",
+  "kysymys": "Minkä lahden keskellä Polis sijaitsee?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Polis sijaitsee [[Kyproksen]] luoteiskulmassa Chrysochoun lahden keskellä. Kaupunki on [[Akamaksen]] luonnonpuiston reunalla. Lahden keskeltä on kyllä hyvä katsella ylhäältä.",
+  "linkit": [
+   "Kyproksen",
+   "Akamaksen"
+  ],
+  "jatkot": [
+   "Mitä Akamaksen luonnonpuistossa voi nähdä?",
+   "Millaisia lahtia Kyproksen rannikolla on?"
+  ],
+  "paikka": {
+   "nimi": "Polis",
+   "lat": 35.04,
+   "lon": 32.43,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-polis",
+  "kysymys": "Mistä Chrysochou-nimi on peräisin?",
+  "uusi": true,
+  "vastaus": "Ai tota. Chrysochou tulee kreikan sanasta khryso, joka tarkoittaa kultaa. Mielipiteet ovat jakautuneet siitä, tarkoittaako nimi ensimmäisen asukkaan [[kultaseppää]] vai vaurautta läheisten [[kuparikaivosten]] ansiosta. Kulta vai kupari, ylhäältä ne kyl kiiltävät samalta.",
+  "linkit": [
+   "kultaseppää",
+   "kuparikaivosten"
+  ],
+  "jatkot": [
+   "Miten kupari liittyy Kyproksen nimeen?",
+   "Missä Kyproksella on ollut kuparikaivoksia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-polis",
+  "kysymys": "Millainen kaupunki Polis oli osmanien aikana?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. [[Osmanien]] ajasta lähtien Polis oli [[sekakaupunki]], jossa oli sekä kreikkalaisia että turkkilaisia yhteisöjä. Vuoden 1891 laskennassa asukkaita oli 476, joista 258 oli kreikkalaisia ja 218 turkkilaisia. Kyl torilla on silloin ollut monta kieltä kuulolla.",
+  "linkit": [
+   "Osmanien",
+   "sekakaupunki"
+  ],
+  "jatkot": [
+   "Miten väestölaskentoja tehtiin 1800-luvulla?",
+   "Mitä sekakaupunki tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-polis",
+  "kysymys": "Mikä Latchi on?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Latchi on [[Polisin]] kalastussatama. Polis sijaitsee [[Akamaksen]] luonnonpuiston reunalla, ja lähellä on myös [[Aphroditen]] kylpypaikka. Satamassa minä viihtyisin, siellä putoaa aina jotain syötävää.",
+  "linkit": [
+   "Polisin",
+   "Akamaksen",
+   "Aphroditen"
+  ],
+  "jatkot": [
+   "Millaisia kaloja Välimerellä pyydetään?",
+   "Mitä Akamaksen niemimaalla voi nähdä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kyrenia",
+  "kysymys": "Minä vuonna venetsialaiset laajensivat Kyrenian linnaa nykyiseen asuunsa?",
+  "uusi": false,
+  "vastaus": "Joo, linna. Venetsialaiset laajensivat Kyrenian linnaa nykyiseen asuunsa vuonna 1540, jolloin siihen tulivat paksut muurit ja tykkiaukot. [[Lusignanien]] vallan aikana kaupunki ei koskaan antautunut, mutta 1570-luvun alussa se antautui [[osmaneille]]. Tuollaisen linnan seinustalla olisi hyvä pitää taukoa.",
+  "linkit": [
+   "Lusignanien",
+   "osmaneille"
+  ],
+  "jatkot": [
+   "Miksi Venetsia hallitsi Kyprosta?",
+   "Mihin tykkiaukkoja linnoissa tarvittiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kyrenia",
+  "kysymys": "Kenelle kaupunki antautui 1570-luvun alussa?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Kaupunki antautui 1570-luvun alussa [[osmaneille]]. Sitä ennen se ei ollut koskaan antautunut [[Lusignanien]] vallan aikana, ja venetsialaiset olivat laajentaneet linnaa vuonna 1540. Linna kesti pitkään, kyl sen kunniaksi voi nostaa hattua.",
+  "linkit": [
+   "osmaneille",
+   "Lusignanien"
+  ],
+  "jatkot": [
+   "Miten osmanit valtasivat Kyproksen?",
+   "Mikä oli Osmanien valtakunta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kyrenia",
+  "kysymys": "Kuka perusti Kyrenian myytin mukaan?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: tämä on kreikkalaista myyttiä. Myytin mukaan Kyrenian perustivat [[akhaialaiset]] [[Kepheus]] ja [[Praxandros]] Troijan sodan jälkeen. He nimesivät kaupungin kotikaupunkinsa Kyreneian mukaan. Myytti on myytti, mut kaunis se on.",
+  "linkit": [
+   "akhaialaiset",
+   "Kepheus",
+   "Praxandros"
+  ],
+  "jatkot": [
+   "Keitä akhaialaiset olivat?",
+   "Mikä on Kyrenian linnan rakennushistoria?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kyrenia",
+  "kysymys": "Mitä Kyrenian linnan muurien sisällä on?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Linnan muurien sisällä on 1100-luvun kappeli, jossa on uudelleenkäytettyjä myöhäisroomalaisia [[pylväänpäitä]]. Linnassa toimii myös [[haaksirikkomuseo]]. Pylväät ovat kyl kiertäneet maailmaa paremmin kuin kyyhky.",
+  "linkit": [
+   "pylväänpäitä",
+   "haaksirikkomuseo"
+  ],
+  "jatkot": [
+   "Mitä haaksirikkomuseossa yleensä esitellään?",
+   "Mihin pylväänpäitä käytettiin antiikissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kyrenia",
+  "kysymys": "Miksi Kyrenian merkitys kasvoi 800-luvun jälkeen?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Kaupungin merkitys kasvoi 800-luvun jälkeen, koska linna tarjosi sille turvaa. [[Roomalaiset]] olivat laskeneet linnan perustukset jo 1. vuosisadalla, ja [[venetsialaiset]] laajensivat linnaa myöhemmin vuonna 1540. Linnat tuovat turvaa, ja siksi minä pysyttelen katoilla.",
+  "linkit": [
+   "Roomalaiset",
+   "venetsialaiset"
+  ],
+  "jatkot": [
+   "Miksi rannikkokaupunkeja linnoitettiin?",
+   "Milloin Venetsian valta Kyproksella alkoi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-famagusta",
+  "kysymys": "Minkä kaupungin seuraajaksi Famagusta perustettiin?",
+  "uusi": false,
+  "vastaus": "Mmm— tämän tiedän. Famagusta perustettiin noin vuonna 274 eaa. nimellä [[Arsinoe]] sen jälkeen, kun maanjäristys oli tuhonnut läheisen [[Salamin]] kaupungin. Se syntyi siis Salamin seuraajaksi. Nimi vaihtui sittemmin, kyl nimet ne vaihtuu.",
+  "linkit": [
+   "Arsinoe",
+   "Salamin"
+  ],
+  "jatkot": [
+   "Mitä Salamiin raunioista on säilynyt?",
+   "Kuka Arsinoe oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-famagusta",
+  "kysymys": "Miksi Famagustaa alettiin kutsua kirkkojen kaupungiksi?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. [[Lusignan-suvun]] vallan aikana Famagusta vaurastui kauppakeskukseksi. Etenkin Akkon kukistumisen jälkeen vuonna 1291 kaupunkiin virranneet [[pakolaiskauppiaat]] rakennuttivat niin paljon kirkkoja, että kaupunkia alettiin kutsua kirkkojen kaupungiksi. Kirkkoja riittää, kyl kyyhkynkin siellä katon löytää.",
+  "linkit": [
+   "Lusignan-suvun",
+   "pakolaiskauppiaat"
+  ],
+  "jatkot": [
+   "Mitkä Famagustan kirkot ovat säilyneet?",
+   "Mitä Akkon kukistuminen merkitsi ristiretkille?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-famagusta",
+  "kysymys": "Millaisen sataman äärellä Famagusta sijaitsee?",
+  "uusi": true,
+  "vastaus": "Ai se. Famagusta sijaitsee [[Kyproksen]] itärannikolla saaren syvimmän sataman äärellä. Kaupunki vaurastui kauppakeskukseksi [[Lusignan-suvun]] vallan aikana 1200-luvulta lähtien. Syvä satama on laivojen unelma, minulle riittäisi matala lätäkkö.",
+  "linkit": [
+   "Kyproksen",
+   "Lusignan-suvun"
+  ],
+  "jatkot": [
+   "Miten satamat vaikuttivat Välimeren kauppaan?",
+   "Mitä Famagustan satamasta kuljetettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-famagusta",
+  "kysymys": "Mitä Famagustassa tapahtui vuosina 1570–1571?",
+  "uusi": true,
+  "vastaus": "Hmm. Tämä on vakavampi asia. Vuosina 1570–1571 Famagusta oli [[Venetsian]] viimeinen Kyproksen tukikohta, joka vastusti [[osmaneja]]. Kolmentoista kuukauden piirityksen jälkeen kaupunki antautui, ja komendantti [[Marco Antonio Bragadin]] teloitettiin. Tapahtumista on yli neljäsataa vuotta, ja sen ajan sotatavat olivat toisenlaiset kuin nykyiset. Onpas siitä onneksi pitkä aika.",
+  "linkit": [
+   "Venetsian",
+   "osmaneja",
+   "Marco Antonio Bragadin"
+  ],
+  "jatkot": [
+   "Mikä oli Venetsian tasavalta?",
+   "Miten Kyproksen osmanivalta alkoi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-famagusta",
+  "kysymys": "Mitä osmanien vallan alla tapahtui Famagustan asukkaille?",
+  "uusi": true,
+  "vastaus": "Tuota niin, tämä on raskaampaa historiaa. Osmanien vallan alla [[latinalaiset]] karkotettiin kaupungista, ja [[kreikkalaiskyproslaiset]] joutuivat muuttamaan muurien ulkopuolelle 1570-luvulla. Anatoliasta tuodut turkkilaisasukkaat eivät täyttäneet autioitunutta kaupunkia. Onpas siitä pitkä aika, ja kaupunki on ehtinyt muuttua moneen kertaan.",
+  "linkit": [
+   "latinalaiset",
+   "kreikkalaiskyproslaiset"
+  ],
+  "jatkot": [
+   "Keitä kreikkalaiskyproslaiset ovat?",
+   "Mikä oli Famagustan asema Venetsian aikana?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lefkara",
+  "kysymys": "Minä vuonna Leonardo da Vinci kerrotaan vierailleen Pano Lefkarassa?",
+  "uusi": false,
+  "vastaus": "Kato, tän minä tiedän. Tarinan mukaan Leonardo da Vinci vieraili kylässä vuonna 1481 ja osti sieltä alttariliinan [[Milanon tuomiokirkkoon]]. Kylä on kuuluisa [[lefkaritikasta]], ja juuri sen yhteydessä tarina yleensä kerrotaan, mutta se on perimätietoa, jota ei ole syytä pitää varmana historiallisena tietona. Kyl se pitsi ois kelvannut kyyhkyllekin.",
+  "linkit": [
+   "Milanon tuomiokirkkoon",
+   "lefkaritikasta"
+  ],
+  "jatkot": [
+   "Mitä lefkaritika on?",
+   "Millaisia taloja Pano Lefkarassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lefkara",
+  "kysymys": "Minä vuonna kylään avattiin paikallinen pitsikoulu?",
+  "uusi": false,
+  "vastaus": "No niin, muistinpa sen. Pitsikoulu avattiin kylään vuonna 1889, ja se elvytti käsityön mainetta. Kylän naiset olivat kirjailleet pitsiä kapeilla kujilla jo vuosisatojen ajan, ja [[lefkaritika]] merkittiin myöhemmin [[Unescon]] aineettoman kulttuuriperinnön luetteloon vuonna 2009. Ei paha kyyhkyltä, muistaa vuosiluku.",
+  "linkit": [
+   "lefkaritika",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Kuinka kauan yhden pöytäliinan tekeminen kestää?",
+   "Mitä aineeton kulttuuriperintö tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lefkara",
+  "kysymys": "Mitä lefkaritika on?",
+  "uusi": true,
+  "vastaus": "Ai se. Lefkaritika on Pano Lefkaran kylän perinteinen pitsi- ja kirjontatyö, jota naiset ovat tehneet vuosisatojen ajan kylän kapeilla kujilla. Työ on hidasta: yhteen pöytäliinaan voi kulua kaksi vuotta, ja tekijöitä on koko ajan vähemmän. Kylä sijaitsee [[Larnakan]] ja [[Limassolin]] välissä vuoristossa, ja sen pääkadulla liinoja ripustetaan myyntiin suoraan puotien seinille. [[Unesco]] merkitsi taidon aineettoman kulttuuriperinnön luetteloon vuonna 2009. Kaks vuotta yhteen liinaan, enkä minä jaksais odottaa postia niin kauan.",
+  "linkit": [
+   "Larnakan",
+   "Limassolin",
+   "Unesco"
+  ],
+  "jatkot": [
+   "Miksi pitsin tekijöitä on koko ajan vähemmän?",
+   "Mikä Unesco on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lefkara",
+  "kysymys": "Mistä Lefkaran nimi juontuu?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Nimi juontuu sanoista lefka, joka tarkoittaa valkoista, ja ori, joka tarkoittaa vuoria. Se viittaa alueen vaaleaan [[kalkkikiveen]], ja kylä sijaitsee [[Troodoksen]] vuorten etelärinteillä. Valkoista vuorta, siis, ja näkyy kyl ylös asti.",
+  "linkit": [
+   "kalkkikiveen",
+   "Troodoksen"
+  ],
+  "jatkot": [
+   "Millainen vuoristo Troodos on?",
+   "Mitä kalkkikivi on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lefkara",
+  "kysymys": "Millaisia taloja Pano Lefkarassa on?",
+  "uusi": true,
+  "vastaus": "Mmm— tost minä osaan kertoo. Kylän kivitalot ovat peräisin pääosin [[osmanien]] vallan ajalta, jonka katsotaan kestäneen vuodesta 1571 vuoteen 1878. Julkisivut ovat paljasta kiveä ja aukkoja on vähän, huoneet on järjestetty sisäpihan ympärille ja talot ovat [[tasakattoisia]]. Nämä piirteet olivat kylän arkkitehtuurille tyypillisiä aina 1800-luvun loppupuolelle asti. Tasaiselle katolle on hyvä laskeutua, sen minä sanon.",
+  "linkit": [
+   "osmanien",
+   "tasakattoisia"
+  ],
+  "jatkot": [
+   "Miten Kypros joutui osmanien haltuun?",
+   "Miksi kivitalojen aukot ovat pieniä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-protaras",
+  "kysymys": "Ketä Demetrios Poliorketes väijyi Leukollan satamassa vuonna 306 eaa.?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Demetrios Poliorketes väijyi Leukollan turvallisessa satamassa Ptolemaiosta, joka oli yksi [[Aleksanteri Suuren]] seuraajista. Käydyssä taistelussa Ptolemaios kärsi tappion ja pakeni Egyptiin, ja Kypros jäi hetkeksi Demetrioksen haltuun. Leukollan kaupunkivaltio sijaitsi samalla paikalla, jossa nykyään on [[Protaras]]. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Aleksanteri Suuren",
+   "Protaras"
+  ],
+  "jatkot": [
+   "Keitä Aleksanteri Suuren seuraajat olivat?",
+   "Mitä Poliorketes tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-protaras",
+  "kysymys": "Minkä lahden ranta on Protaraksen tunnetuin?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Protaraksen tunnetuin ranta on kirkkaan turkoosi [[Fig Tree Bay]]. Protaras kasvoi nykyaikaiseksi lomakohteeksi vasta naapurikylä [[Ayia Napan]] menestyksen myötä, ja se tunnetaan Ayia Napaa rauhallisempana kohteena. Turkoosi vesi kyl näkyy ylös asti.",
+  "linkit": [
+   "Fig Tree Bay",
+   "Ayia Napan"
+  ],
+  "jatkot": [
+   "Millainen lomakohde Ayia Napa on?",
+   "Miksi aluetta kutsutaan tuulimyllyjen maaksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-protaras",
+  "kysymys": "Millainen lomakohde Protaras on?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Protaras on Ayia Napaa rauhallisempi lomakohde, joka on suunnattu perheille ja kyproslaisille itselleen. Se kasvoi nykyaikaiseksi lomakohteeksi vasta naapurikylä [[Ayia Napan]] menestyksen myötä. Alueen tunnetuin ranta on [[Fig Tree Bay]], ja aluetta on kutsuttu myös tuulimyllyjen maaksi. Rauhallinen ranta kuulostaa kyyhkystä hyvältä, ny kun sitä miettii.",
+  "linkit": [
+   "Ayia Napan",
+   "Fig Tree Bay"
+  ],
+  "jatkot": [
+   "Mikä Ayia Napa on?",
+   "Mistä Kyproksen lomakausi alkaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-prodromos",
+  "kysymys": "Minkä pyhän henkilön mukaan Prodromos on nimetty?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Prodromos on nimetty [[Johannes Kastajan]] mukaan, jota kreikkalaisessa [[ortodoksisessa]] perinteessä kutsutaan Prodromokseksi eli edelläkävijäksi. Kylä sijaitsee 1 380 metrin korkeudessa [[Troodoksen]] vuoriston rinteellä, ja se on Kyproksen korkein kylä. Ei sentään ihan pilvissä, kyl.",
+  "linkit": [
+   "Johannes Kastajan",
+   "ortodoksisessa",
+   "Troodoksen"
+  ],
+  "jatkot": [
+   "Kuka Johannes Kastaja oli?",
+   "Millainen on ortodoksinen kirkko?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-prodromos",
+  "kysymys": "Kuinka monta vakituista asukasta Prodromoksessa oli vuoden 2011 väestönlaskennassa?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Vuoden 2011 väestönlaskennassa Prodromoksessa oli enää 123 vakituista asukasta, ja asukasluku on vähentynyt tasaisesti. Yli 240 taloa on silti edelleen käytössä kesä- ja loma-asuntoina, sillä vuoriston viileys houkuttelee vierailijoita. Kylä kuuluu [[Limassolin]] piirikuntaan [[Troodoksen]] vuoriston rinteellä. Hiljaista siellä on talvella, kai.",
+  "linkit": [
+   "Limassolin",
+   "Troodoksen"
+  ],
+  "jatkot": [
+   "Miksi vuoristokylien asukasluku vähenee?",
+   "Millainen sää Troodoksen vuoristossa on talvella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-prodromos",
+  "kysymys": "Paljonko lunta Prodromoksessa kertyy talvella?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Prodromoksessa lunta kertyy talvella usein yli metrin, ja pakkasöitä on tiheään. Kylä sijaitsee 1 380 metrin korkeudessa [[Troodoksen]] vuoriston rinteellä [[Limassolin]] piirikunnassa, ja korkeus selittää kylmyyden. Kesällä vuoriston viileys taas houkuttelee vierailijoita. Lunta Välimeren saarella, sitä minä en ollu odottanut.",
+  "linkit": [
+   "Troodoksen",
+   "Limassolin"
+  ],
+  "jatkot": [
+   "Missä Kyproksella voi hiihtää?",
+   "Miksi korkealla on kylmempää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-prodromos",
+  "kysymys": "Missä Kyproksen talviurheilukeskus sijaitsee?",
+  "uusi": true,
+  "vastaus": "No jopas. Kyproksen talviurheilukeskus sijaitsee läheisellä [[Olympos-vuorella]], jolla on kolme hiihtorinnettä. Vuori on lähellä Prodromosta, Kyproksen korkeinta kylää [[Troodoksen]] vuoriston rinteellä. Hiihtämään minä en lähtis, siivet jäätyis.",
+  "linkit": [
+   "Olympos-vuorella",
+   "Troodoksen"
+  ],
+  "jatkot": [
+   "Kuinka korkea Olympos-vuori on?",
+   "Miksi Olymposta kutsutaan Chionistraksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-prodromos",
+  "kysymys": "Kuka Johannes Kastaja oli?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Johannes Kastaja oli kristillisen perinteen mukaan saarnaaja, joka kastoi ihmisiä Jordan-joessa ja jota pidetään Jeesuksen edelläkävijänä. Hänet mainitaan [[Uuden testamentin]] evankeliumeissa. [[Ortodoksisessa kirkossa]] hänestä käytetään nimeä Prodromos, joka tarkoittaa edelläkävijää, ja Kyproksen korkein kylä on nimetty hänen mukaansa. Edelläkävijä, sellaisena minäkin mielelläni lentäisin.",
+  "linkit": [
+   "Uuden testamentin",
+   "Ortodoksisessa kirkossa"
+  ],
+  "jatkot": [
+   "Mitä Uusi testamentti on?",
+   "Mitä kastaminen tarkoittaa kristinuskossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:olympos~2",
+  "kysymys": "Miksi vuoren toinen nimi on Chionistra?",
+  "uusi": false,
+  "vastaus": "Just niin, mietin samaa. Chionistra on kreikkalainen kansannimi, ja se tarkoittaa lumista. Nimi pitää paikkansa, sillä Ólympos on Kyproksen korkein kohta, 1 952 metriä, ja Välimeren saareksi huippu saa talvisin kunnon lumipeitteen. Vuori sijaitsee [[Troodosin]] vuoriston keskellä. Lumi ja Välimeri, aika outo pari kyyhkyn mielestä.",
+  "linkit": [
+   "Troodosin"
+  ],
+  "jatkot": [
+   "Kuinka paljon lunta Olymposella sataa?",
+   "Missä Kyproksella voi hiihtää?"
+  ]
+ },
+ {
+  "kohde": "kohde:olympos~2",
+  "kysymys": "Mikä Troodosin vuoristo on?",
+  "uusi": false,
+  "vastaus": "Katotaas. Troodosin vuoristo ei ole poimuttunutta mannerta vaan pala vanhaa valtameren pohjaa. [[Ofioliitiksi]] kutsuttu kivisarja syntyi noin 92 miljoonaa vuotta sitten [[Neotethys-meren]] pohjalla ja työntyi myöhemmin ilmaan. Järjestys on säilynyt niin ehjänä, että sarjaa pidetään yhtenä maailman parhaiten paljastuneista laatuaan. Vuoristoa tutkitaan ympäri maailmaa. Merenpohjalla minä en olis vielä lentänyt.",
+  "linkit": [
+   "Ofioliitiksi",
+   "Neotethys-meren"
+  ],
+  "jatkot": [
+   "Mitä tyynylaava on?",
+   "Mikä Neotethys-meri oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:olympos~2",
+  "kysymys": "Mitä tyynylaava on?",
+  "uusi": true,
+  "vastaus": "Ai tota. Tyynylaava syntyy, kun laava purkautuu veden alle ja jähmettyy pallomaisiksi patjoiksi. Patjojen läpimitta on 30 sentistä metriin, ja niiden pinta on lasimainen ja sisus huokoinen. [[Troodosin]] [[ofioliitissa]] tyynylaavat ovat sarjan ylimpänä kerroksena. Patjoja, ihan kuin tyynyjä vuoren alla.",
+  "linkit": [
+   "Troodosin",
+   "ofioliitissa"
+  ],
+  "jatkot": [
+   "Miten laava jähmettyy veden alla?",
+   "Mitä ofioliitti tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:olympos~2",
+  "kysymys": "Kuinka vanhaa Troodosin kivi on?",
+  "uusi": true,
+  "vastaus": "Nyt muistan. Troodosin ofioliittinen kivisarja syntyi noin 92 miljoonaa vuotta sitten [[Neotethys-meren]] pohjalla. Myöhemmin se työntyi ilmaan, ja sen kerrokset ovat säilyneet poikkeuksellisen ehjinä. Kyse on siis [[valtameren pohjasta]], ei tavallisesta mannerkalliosta. Onpas siit hurjan pitkä aika.",
+  "linkit": [
+   "Neotethys-meren",
+   "valtameren pohjasta"
+  ],
+  "jatkot": [
+   "Milloin dinosaurusten aika päättyi?",
+   "Miten merenpohja voi nousta vuoreksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:olympos~2",
+  "kysymys": "Miksi Olymposin huipulla on vaippakiveä?",
+  "uusi": true,
+  "vastaus": "Hmm, hyvä pointti. Troodosin ofioliitissa kerrokset ovat topografisesti väärinpäin: ylimpänä ovat tyynylaavat, sitten pystyt juonet ja karkeat syväkivet, ja alimpana ovat [[maan vaipan]] kiviä. Siksi syvimmät kivet paljastuvat vuoriston korkeimman huipun lähellä, ja Ólympos on [[serpentiiniytynyttä]] vaippakiveä. Tarkasta nousuhistoriasta en ole varma. Aika ylösalaisin tuo vuori on.",
+  "linkit": [
+   "maan vaipan",
+   "serpentiiniytynyttä"
+  ],
+  "jatkot": [
+   "Mitä serpentiniitti on?",
+   "Mikä on maan vaippa?"
+  ]
+ },
+ {
+  "kohde": "kohde:pediaios",
+  "kysymys": "Minkä kaupungin läpi joki virtaa?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Pediaíos virtaa pääkaupunki [[Nikosian]] läpi, ja kaupungissa sen rantoja pitkin pääsee kävelemään lähes kahdenkymmenen kilometrin matkan. Joki on Kyproksen pisin, 98 kilometriä, ja se saa alkunsa [[Troodoksen]] vuoristosta. Kävely joen vartta kuulostaa hyvältä, vaikka minä lentäisin.",
+  "linkit": [
+   "Nikosian",
+   "Troodoksen"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Nikosia on?",
+   "Mistä Pediaíos saa alkunsa?"
+  ]
+ },
+ {
+  "kohde": "kohde:pediaios",
+  "kysymys": "Missä muinainen Salamis sijaitsi?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Muinainen Salamis sijaitsi Kyproksen itärannikolla Famagustanlahden rannalla, Pediaíos-joen suun vieressä. Sen raunioita on nykyisin lähellä [[Famagustaa]]. Kaupunki oli [[antiikin]] aikana tärkeä satamakaupunki. Hienoa, että raunioita on yhä näkyvissä.",
+  "linkit": [
+   "Famagustaa",
+   "antiikin"
+  ],
+  "jatkot": [
+   "Mikä Famagusta on?",
+   "Mikä oli Salamis antiikin aikaan?"
+  ],
+  "paikka": {
+   "nimi": "Salamis",
+   "lat": 35.18,
+   "lon": 33.9,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:pediaios",
+  "kysymys": "Mistä Pediaíos-joki saa alkunsa?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Pediaíos saa alkunsa [[Troodoksen]] vuoriston Machairasin metsästä. Sieltä se virtaa koilliseen [[Mesaorian]] tasangon poikki ja kulkee pääkaupunki Nikosian läpi. Joki on pituudeltaan 98 kilometriä. Vuorilta mereen asti, kyl se on pitkä matka.",
+  "linkit": [
+   "Troodoksen",
+   "Mesaorian"
+  ],
+  "jatkot": [
+   "Mihin Pediaíos laskee mereen?",
+   "Mikä Mesaoria on?"
+  ]
+ },
+ {
+  "kohde": "kohde:pediaios",
+  "kysymys": "Kuinka pitkä Kyproksen pisin joki on?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Kyproksen pisin joki, Pediaíos, on 98 kilometriä pitkä. Se virtaa koilliseen [[Mesaorian]] tasangon poikki ja kulkee pääkaupunki [[Nikosian]] läpi. Mereen joki laskee Famagustanlahdella. Ei paha, saarella on kuitenkin vähän tilaa.",
+  "linkit": [
+   "Mesaorian",
+   "Nikosian"
+  ],
+  "jatkot": [
+   "Missä Kyproksen joet virtaavat?",
+   "Mistä Pediaíos saa alkunsa?"
+  ]
+ },
+ {
+  "kohde": "kohde:pediaios",
+  "kysymys": "Mihin Pediaíos laskee mereen?",
+  "uusi": true,
+  "vastaus": "Mmm— tost minä osaan kertoo. Pediaíos laskee mereen [[Famagustanlahdella]], muinaisen [[Salamiin]] kaupungin raunioiden vieressä. Joki kulkee matkallaan [[Troodoksen]] vuoristosta Mesaorian tasangon poikki ja pääkaupunki Nikosian läpi. Joen suulla on siis yhä näkyvissä antiikin jäänteitä. Rauniot ovat melkein kuin vanha postireitti.",
+  "linkit": [
+   "Famagustanlahdella",
+   "Salamiin",
+   "Troodoksen"
+  ],
+  "jatkot": [
+   "Mikä Salamis oli antiikin aikaan?",
+   "Mikä Famagustanlahti on?"
+  ]
+ },
+ {
+  "kohde": "kohde:levantinmeri",
+  "kysymys": "Mikä on lessepsiläinen vaellus?",
+  "uusi": false,
+  "vastaus": "Ai tota. Tän minä osaan. Lessepsiläinen vaellus tarkoittaa Punaisenmeren kasvien ja eläinten siirtymistä Suezin kanavan kautta itäiseen Välimereen. Kanava valmistui vuonna 1869 ja yhdisti Välimeren Punaiseenmereen. Vuosikymmeniä esteenä olivat Katkerat järvet, joiden suolapitoisuus oli liian korkea, mutta kun se tasaantui kanavan veden kanssa, este katosi. Ilmiö on saanut nimensä kanavan pääinsinöörin [[Ferdinand de Lessepsin]] mukaan, ja sen vaikutukset näkyvät erityisesti [[Levantinmeren]] ja laajemmin [[Välimeren]] eliöstössä. Kalatkin pääsevät matkaan ilman siipiä.",
+  "linkit": [
+   "Ferdinand de Lessepsin",
+   "Levantinmeren",
+   "Välimeren"
+  ],
+  "jatkot": [
+   "Mitä lajeja Punaisestamerestä on levinnyt Välimerelle?",
+   "Miksi Katkerien järvien suolapitoisuus oli niin korkea?"
+  ]
+ },
+ {
+  "kohde": "kohde:levantinmeri",
+  "kysymys": "Miten Suezin kanava muutti Välimeren eliöstöä?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Suezin kanava valmistui vuonna 1869 ja yhdisti Välimeren Punaiseenmereen. Aiemmin kulkua olivat vuosikymmeniä estäneet Katkerat järvet, joiden suolapitoisuus oli liian korkea, mutta kun suolapitoisuus tasaantui kanavan veden kanssa, este katosi. Sen jälkeen Punaisenmeren kasvit ja eläimet alkoivat asuttaa itäistä [[Välimerta]]. Ilmiötä kutsutaan lessepsiläiseksi vaellukseksi kanavan pääinsinöörin [[Ferdinand de Lessepsin]] mukaan, ja muutos on kulkenut pääosin yhteen suuntaan, Punaiseltamereltä Välimerelle.\n\nMinä olen nähnyt ylhäältä monta satamaa, mutta pinnan alle en ylety. Silti tiedän, että meri on nyt toinen kuin isoisäsi aikana.",
+  "linkit": [
+   "Välimerta",
+   "Ferdinand de Lessepsin"
+  ],
+  "jatkot": [
+   "Onko lessepsiläinen vaellus haitallista Välimeren luonnolle?",
+   "Miten Suezin kanava vaikutti laivaliikenteeseen?"
+  ]
+ },
+ {
+  "kohde": "kohde:levantinmeri",
+  "kysymys": "Miksi Katkerat järvet estivät lajien leviämisen?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Katkerat järvet sijaitsivat Suezin kanavan reitillä, ja niiden suolapitoisuus oli niin korkea, etteivät Punaisenmeren kasvit ja eläimet pystyneet kulkemaan niiden läpi. Este kesti vuosikymmeniä kanavan valmistumisen jälkeen. Kun suolapitoisuus tasaantui kanavan veden kanssa, este katosi ja eliölajit alkoivat levitä itäiseen [[Välimereen]]. Lopulta ilmiö sai nimekseen lessepsiläinen vaellus, ja sen vaikutukset näkyvät erityisesti [[Levantinmeren]] alueella. Suola on kyl pienen asian iso portinvartija.",
+  "linkit": [
+   "Välimereen",
+   "Levantinmeren"
+  ],
+  "jatkot": [
+   "Onko lessepsiläinen vaellus haitallista Välimeren luonnolle?",
+   "Miten Suezin kanava vaikutti laivaliikenteeseen?"
+  ]
+ },
+ {
+  "kohde": "kohde:levantinmeri",
+  "kysymys": "Kuka oli Ferdinand de Lesseps?",
+  "uusi": true,
+  "vastaus": "Kas vaan, tuttu nimi. Ferdinand de Lesseps oli ranskalainen diplomaatti ja kanavahankkeiden johtaja. Hän toimi Suezin kanavan pääinsinöörinä, ja kanava valmistui vuonna 1869. Hänen mukaansa on nimetty [[lessepsiläinen vaellus]], eli Punaisenmeren eliöiden leviäminen kanavan kautta itäiseen [[Välimereen]]. Aika harva saa oman ilmiön nimeensä, kyl se kelpaa.",
+  "linkit": [
+   "lessepsiläinen vaellus",
+   "Välimereen"
+  ],
+  "jatkot": [
+   "Miksi Suezin kanava rakennettiin?",
+   "Kauanko Suezin kanavan rakentaminen kesti?"
+  ]
+ },
+ {
+  "kohde": "kohde:levantinmeri",
+  "kysymys": "Kuinka syvä Levantinmeri on?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Levantinmeren syvin kohta on 4 384 metriä, ja se sijaitsee [[Plinius-hautavajoamassa]] noin kahdeksankymmentä kilometriä [[Kreetan]] eteläpuolella. Meri on Välimeren itäisin osa, ja sen pinta-ala on noin 320 000 neliökilometriä. Sen suurin saari on [[Kypros]]. Ylhäältä päin se näyttää kyllä vaan siniseltä.",
+  "linkit": [
+   "Plinius-hautavajoamassa",
+   "Kreetan",
+   "Kypros"
+  ],
+  "jatkot": [
+   "Mikä Plinius-hautavajoama on?",
+   "Millainen saari Kreeta on?"
+  ]
+ },
+ {
+  "kohde": "kohde:paphoksenmosaiikit",
+  "kysymys": "Mikä Nea Paphos oli?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Nea Paphos oli [[Kyproksen]] hallinnollinen pääkaupunki Ptolemaiosten ja [[Rooman]] aikana. Sen varakkaiden huviloiden lattioista on kaivettu esiin Välimeren parhaiten säilyneitä [[mosaiikkeja]], ja Unesco liitti Paphoksen maailmanperintöluetteloonsa vuonna 1980. Lattia, joka kestää näin pitkään, on kyl ansainnut ihailua.",
+  "linkit": [
+   "Kyproksen",
+   "Rooman",
+   "mosaiikkeja"
+  ],
+  "jatkot": [
+   "Mitä mosaiikit esittävät Dionysoksen talossa?",
+   "Milloin Paphoksen kaivaukset alkoivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:paphoksenmosaiikit",
+  "kysymys": "Miksi huvilat nimettiin lattioidensa mukaan?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. [[Theseuksen]] huvila sai nimensä lattiakuvasta, jossa Theseus taistelee [[Minotaurosta]] vastaan. Tapa on tavallinen silloin, kun rakennuksen alkuperäistä nimeä tai omistajaa ei tunneta: nimeksi valitaan se, mikä lattiassa on huomiota herättävintä. Samoin on nimetty Dionysoksen talo, ja [[Aionin talo]] löytyi vasta vuonna 1983. En ole varma, että jokaisen talon nimi on syntynyt aivan näin. Minä nimeäisin talot pullan mukaan, mut ei se taida tieteessä kelvata.",
+  "linkit": [
+   "Theseuksen",
+   "Minotaurosta",
+   "Aionin talo"
+  ],
+  "jatkot": [
+   "Mitä Aionin talon mosaiikit esittävät?",
+   "Kuka Theseus oli kreikkalaisessa myytissä?"
+  ]
+ },
+ {
+  "kohde": "kohde:paphoksenmosaiikit",
+  "kysymys": "Mitä Dionysoksen talon mosaiikeissa on kuvattu?",
+  "uusi": true,
+  "vastaus": "Ai se, hieno paikka. Dionysoksen talo on peräisin 200-luvulta jaa., ja sen pinta-ala on noin 2 000 neliömetriä, josta mosaiikit peittävät neljänneksen. Kuvissa on metsästyskohtauksia, [[Apollon]] ja [[Dafnen]] takaa-ajo, [[Ganymedes]] ja kotka sekä neljä vuodenaikaa. Talo kuuluu Nea Paphoksen varakkaiden huviloiden joukkoon.\n\nNeljä vuodenaikaa lattiassa on minusta hyvä idea. Minä olen nähnyt ne kaikki ylhäältä, ja syksy on aina paras, koska silloin leivotaan.",
+  "linkit": [
+   "Apollon",
+   "Dafnen",
+   "Ganymedes"
+  ],
+  "jatkot": [
+   "Kuka Dafne oli kreikkalaisessa myytissä?",
+   "Miten mosaiikit tehtiin antiikin aikana?"
+  ]
+ },
+ {
+  "kohde": "kohde:paphoksenmosaiikit",
+  "kysymys": "Kuka aloitti Paphoksen kaivaukset?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: kaivaukset aloitti puolalainen arkeologi [[Kazimierz Michałowski]] kesäkuussa 1965. Ne jatkuvat yhä, ja Unesco liitti Paphoksen maailmanperintöluetteloonsa vuonna 1980. Vasta vuonna 1983 löytyi esimerkiksi [[Aionin talo]]. Yhä kaivetaan, siinä on kyl kärsivällisyyttä.",
+  "linkit": [
+   "Kazimierz Michałowski",
+   "Aionin talo"
+  ],
+  "jatkot": [
+   "Miten arkeologit löytävät kadonneita kaupunkeja?",
+   "Mitä Unescon maailmanperintö tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:paphoksenmosaiikit",
+  "kysymys": "Mitä Theseuksen huvilan lattiakuva esittää?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: lattiakuvassa [[Theseus]] taistelee [[Minotaurosta]] vastaan. Myytin mukaan Theseus surmasi Minotauroksen [[Kreetan]] labyrintissa, ja juuri tämä kuva antoi huvilalle sen nimen. Tuommoisen lattian päällä kävely vaatisi kyl kunnioitusta.",
+  "linkit": [
+   "Theseus",
+   "Minotaurosta",
+   "Kreetan"
+  ],
+  "jatkot": [
+   "Kuka Minotauros oli kreikkalaisessa myytissä?",
+   "Mikä labyrintti Kreetalla oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:palaipafos",
+  "kysymys": "Miksi jumalattaresta ei ollut kuvaa?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Kirjailija [[Tacitus]] kertoo nuoren [[Tituksen]] käyneen katsomassa [[Afroditen]] pyhäkköä ja panneen merkille, ettei jumalattaresta ollut kuvaa lainkaan, vain pyramidin muotoinen kivi. Tarkkaa syytä ei tiedetä varmasti. Antiikin maailmassa jumaluutta saatettiin kuitenkin palvoa pyhänä kivenä eikä ihmisen hahmoisena patsaana. Kivi olisi kyllä helpompi kantaa kuin patsas.",
+  "linkit": [
+   "Tacitus",
+   "Tituksen",
+   "Afroditen"
+  ],
+  "jatkot": [
+   "Miten Afrodite syntyi myytin mukaan?",
+   "Kuka Titus oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:palaipafos",
+  "kysymys": "Missä Afroditen tärkein pyhäkkö oli?",
+  "uusi": false,
+  "vastaus": "Katotaas. Antiikin maailman tärkein Afroditen palvontapaikka oli [[Palaipafos]] eli Vanha Paphos, nykyinen Kouklia, Kyproksen lounaisosassa kukkulalla noin kaksitoista kilometriä uudesta Paphoksesta kaakkoon. [[Kypros]] oli jumalattaren myyttinen syntypaikka, ja [[Strabonin]] mukaan uudesta kaupungista vanhaan johtava tie täyttyi vuosittain pyhiinvaeltajista. Tuo tie olisi kyl ollut hyvä paikka tiputella leivänmuruja.",
+  "linkit": [
+   "Palaipafos",
+   "Kypros",
+   "Strabonin"
+  ],
+  "jatkot": [
+   "Mitä Strabon kirjoitti Kyproksesta?",
+   "Mikä oli Afroditen asema antiikin uskonnossa?"
+  ],
+  "paikka": {
+   "nimi": "Palaipafos",
+   "lat": 34.71,
+   "lon": 32.57,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:palaipafos",
+  "kysymys": "Miten Afrodite syntyi myytin mukaan?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Kreikkalaisen myytin mukaan Afrodite nousi meren vaahdosta ja saapui rantaan [[Kyproksella]], minkä vuoksi saarta pidettiin hänen syntypaikkanaan. Siksi saari ja erityisesti [[Palaipafos]] liitettiin hänen palvontaansa, ja paikasta tuli antiikin maailman tärkein Afroditen palvontapaikka. Vaahdosta syntyminen kuulostaa kyl pullataikinalta.",
+  "linkit": [
+   "Kyproksella",
+   "Palaipafos"
+  ],
+  "jatkot": [
+   "Kuka oli Afroditen roomalainen vastine?",
+   "Mitä Afrodite jumalattarena edusti?"
+  ]
+ },
+ {
+  "kohde": "kohde:palaipafos",
+  "kysymys": "Kuka oli Tacitus?",
+  "uusi": true,
+  "vastaus": "No jopas. Tacitus oli roomalainen historioitsija, joka eli ensimmäisen ja toisen vuosisadan vaihteessa. Hänen tunnetuimpia teoksiaan ovat [[Annales]] ja [[Germania]]. [[Palaipafoksen]] yhteydessä hän kertoo nuoren [[Tituksen]] käyneen katsomassa pyhäkköä ja havainneen, ettei jumalattaresta ollut kuvaa lainkaan, vain pyramidin muotoinen kivi. Hyvä että joku kirjoitti muistiin, minä vain kannoin kirjeet.",
+  "linkit": [
+   "Annales",
+   "Germania",
+   "Palaipafoksen",
+   "Tituksen"
+  ],
+  "jatkot": [
+   "Mitä Annales kertoo Rooman keisareista?",
+   "Millainen pyhäkkö Palaipafoksessa oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:palaipafos",
+  "kysymys": "Mitä neoliittinen aika tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Neoliittinen aika eli [[uudempi kivikausi]] on esihistorian vaihe, jolloin ihmiset siirtyivät vähitellen metsästyksestä ja keräilystä maanviljelyyn ja kiinteään asutukseen. Ajankohta vaihtelee alueittain. Vanha Paphos eli [[Palaipafos]] on ollut asuttu jo neoliittiselta ajalta. Ei kai siihen aikaan vielä kunnon pullaa leivottu.",
+  "linkit": [
+   "uudempi kivikausi",
+   "Palaipafos"
+  ],
+  "jatkot": [
+   "Mikä Khirokitia oli?",
+   "Miten maanviljelys muutti ihmisten elämää?"
+  ]
+ },
+ {
+  "kohde": "kohde:kourion",
+  "kysymys": "Mitä kaupungille tapahtui 300-luvulla?",
+  "uusi": false,
+  "vastaus": "Hetkinen. Tuo on vakava juttu. Vuosien 365 ja 370 välillä viisi voimakasta maanjäristystä tuhosi [[Kourionin]] lähes kokonaan. Tapahtumasta on yli tuhat kuusisataa vuotta, ja se sattui [[Rooman valtakunnan]] aikaan. Kaupunki rakennettiin uudelleen vasta 400-luvun lopulla, ja vuosina 648–649 arabiretkikunnat hävittivät [[akropolin]], jonka jälkeen asutus siirtyi kaksi kilometriä koilliseen [[Episkopiin]]. Onpas siitä onneksi pitkä aika.",
+  "linkit": [
+   "Kourionin",
+   "Rooman valtakunnan",
+   "akropolin",
+   "Episkopiin"
+  ],
+  "jatkot": [
+   "Miksi Kyproksella on maanjäristyksiä?",
+   "Mitä Kourionissa on nykyään nähtävillä?"
+  ]
+ },
+ {
+  "kohde": "kohde:kourion",
+  "kysymys": "Miksi asutus siirtyi Episkopiin?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Vuosina 648–649 arabiretkikunnat hävittivät Kourionin [[akropolin]], ja sen jälkeen asutus siirtyi kaksi kilometriä koilliseen [[Episkopiin]]. Paikka sai nimensä piispanistuimesta. Tapahtumista on kulunut yli tuhat kolmesataa vuotta, ja alue kuului silloin [[Bysantin valtakuntaan]]. Hyvä, että siitä on jo pitkä aika.",
+  "linkit": [
+   "akropolin",
+   "Episkopiin",
+   "Bysantin valtakuntaan"
+  ],
+  "jatkot": [
+   "Mitä Bysantin valtakunta oli?",
+   "Mikä Episkopi on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:kourion",
+  "kysymys": "Keitä mykeneläiset olivat?",
+  "uusi": true,
+  "vastaus": "Mmm— Mykeneläiset olivat pronssikauden kreikkalaisia, joiden kulttuuri sai nimensä [[Mykenen]] kaupungista [[Peloponnesoksella]]. Heidän palatsikeskuksensa romahtivat noin 1200-luvun lopulla eaa., ja sen jälkeen osa kreikkalaisista asettui uusille alueille. Kourionin perustajiksi kerrotaan [[Argoksesta]] tulleita uudisasukkaita, jotka saapuivat 1100-luvulla eaa. No, pitkä historia mahtui kyl lyhyeen vastaukseen.",
+  "linkit": [
+   "Mykenen",
+   "Peloponnesoksella",
+   "Argoksesta"
+  ],
+  "jatkot": [
+   "Miksi mykeneläiset palatsit romahtivat?",
+   "Mitä Mykenen jäännöksistä on nähtävissä nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:kourion",
+  "kysymys": "Missä Argos sijaitsee?",
+  "uusi": true,
+  "vastaus": "Ai se. Argos on kaupunki Kreikassa, [[Peloponnesoksen]] niemimaalla. Sieltä tulleet uudisasukkaat asettuivat [[Kourionin]] paikalle 1100-luvulla eaa., kun [[mykeneläisten]] palatsit olivat romahtaneet. Matka Kyprokselle merta pitkin ei ollut kyl pieni, vaikka linnuille se on pikku juttu.",
+  "linkit": [
+   "Peloponnesoksen",
+   "Kourionin",
+   "mykeneläisten"
+  ],
+  "jatkot": [
+   "Mikä oli Argoksen asema antiikin Kreikassa?",
+   "Miten antiikin kreikkalaiset kaupunkivaltiot toimivat?"
+  ],
+  "paikka": {
+   "nimi": "Argos",
+   "lat": 37.63,
+   "lon": 22.73,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:kourion",
+  "kysymys": "Mitä piispanistuin tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Piispanistuin on piispan hallinnollinen ja kirkollinen keskus, yleensä paikka, jossa sijaitsee [[tuomiokirkko]], sekä alue, jota piispa johtaa. [[Episkopin]] nimi tulee tästä: asutus siirtyi [[Kourionin]] tuhon jälkeen kaksi kilometriä koilliseen paikkaan, joka sai nimensä piispanistuimesta. Kreikan sana episkopos tarkoittaa valvojaa. Istuin kuulostaa mukavalta, minä tyydyn kyl orteen.",
+  "linkit": [
+   "tuomiokirkko",
+   "Episkopin",
+   "Kourionin"
+  ],
+  "jatkot": [
+   "Mitä tuomiokirkko tarkoittaa?",
+   "Miten kristinusko levisi Kyprokselle?"
+  ]
+ },
+ {
+  "kohde": "kohde:khirokitia",
+  "kysymys": "Miksi kylän ikä muuttui kolmella vuosituhannella?",
+  "uusi": false,
+  "vastaus": "No jopas. [[Porphyrios Dikaios]] löysi paikan vuonna 1934 ja arveli kylän syntyneen noin 4000 eaa. Myöhemmin [[radiohiiliajoitus]] siirsi perustamisen vuoteen 7000 eaa., eli noin kolme vuosituhatta aiemmaksi. Ajoitusmenetelmä mittaa orgaanisen aineen sisältämän hiili-14:n määrää, ja se antoi tarkemman tuloksen kuin alkuperäinen arvio. Kolme tuhatta vuotta lisää ei kyl ole pikku virhe.",
+  "linkit": [
+   "Porphyrios Dikaios",
+   "radiohiiliajoitus"
+  ],
+  "jatkot": [
+   "Mikä on neoliittinen kylä?",
+   "Miksi Khirokitia hylättiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:khirokitia",
+  "kysymys": "Mikä on tholos?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Tholos on pyöreä rakennus tai rakennelma. [[Khirokitiassa]] tholos-rakennuksia on tiiviissä ryhmissä kylää ympäröivän kahden ja puolen metrin paksuisen kivimuurin sisällä, ja niiden halkaisija on kahdesta yhdeksään metriä. Antiikin Kreikassa nimitystä käytettiin myös pyöreistä rakennuksista ja mykeneläisistä [[kupolihaudoista]]. Pyöreä talo on kyllä kyyhkylle sympaattinen, ei nurkkia mihin sotkeutua.",
+  "linkit": [
+   "Khirokitiassa",
+   "kupolihaudoista"
+  ],
+  "jatkot": [
+   "Millaista elämä Khirokitian kylässä oli?",
+   "Mitä kupolihauta tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:khirokitia",
+  "kysymys": "Miten radiohiiliajoitus toimii?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: menetelmä perustuu [[hiili-14]]-isotooppiin, jota elävät organismit sitovat itseensä koko elinaikansa. Kuoleman jälkeen isotoopin määrä alkaa vähentyä tasaisesti radioaktiivisen hajoamisen vuoksi, ja sen [[puolittumisaika]] on noin 5 700 vuotta. Mittaamalla jäljellä olevan määrän tutkijat voivat arvioida, milloin esimerkiksi puu tai luu on kuulunut elävään olentoon. Menetelmä sopii kymmenien tuhansien vuosien ikäisille orgaanisille löydöille, ja sen avulla myös [[Khirokitian]] ikä tarkentui.\n\nMinä en ole koskaan ajoittunut mihinkään muuhun kuin aamupalaan. Silti arvostan menetelmää, joka kertoo, mikä on vanhaa ja mikä vain luulee olevansa.",
+  "linkit": [
+   "hiili-14",
+   "puolittumisaika",
+   "Khirokitian"
+  ],
+  "jatkot": [
+   "Mitä muita ajoitusmenetelmiä arkeologit käyttävät?",
+   "Miten puun vuosirenkaat auttavat ajoituksessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:khirokitia",
+  "kysymys": "Miksi vainajat haudattiin lattian alle?",
+  "uusi": true,
+  "vastaus": "Hetkinen. [[Khirokitiassa]] vainajat haudattiin koukkuasennossa asuinrakennusten lattioiden alle. Syytä ei tiedetä varmasti, mutta tutkijat ovat pitäneet tapaa merkkinä siitä, että vainajat säilyivät osana kotitaloutta ja yhteisöä. Vastaava tapa tunnetaan myös muista esihistoriallisista asutuksista. Hiljainen ja lämmin tapa pitää omat lähellä.",
+  "linkit": [
+   "Khirokitiassa"
+  ],
+  "jatkot": [
+   "Miten neoliittiset yhteisöt hautasivat vainajansa muualla?",
+   "Millaisia esineitä Khirokitiasta on löydetty?"
+  ]
+ },
+ {
+  "kohde": "kohde:khirokitia",
+  "kysymys": "Mikä Unescon maailmanperintöluettelo on?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Unescon maailmanperintöluettelo on luettelo kohteista, joilla katsotaan olevan poikkeuksellinen merkitys koko ihmiskunnalle, ja se perustuu vuonna 1972 hyväksyttyyn maailmanperintösopimukseen. Luetteloon voidaan liittää sekä kulttuuri- että luontokohteita. [[Khirokitia]] on ollut luettelossa vuodesta 1998 ja [[Paphoksen]] kohde vuodesta 1980. Minä ehdottaisin luetteloon kyl myös hyvän leipomon.",
+  "linkit": [
+   "Khirokitia",
+   "Paphoksen"
+  ],
+  "jatkot": [
+   "Mitkä Kyproksen kohteet ovat maailmanperintöluettelossa?",
+   "Miten kohde pääsee Unescon luetteloon?"
   ]
  }
 ]
