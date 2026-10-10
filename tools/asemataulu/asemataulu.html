@@ -205,7 +205,7 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
 /* Työlistan kohteet ja väkäsen sisältö sisennettyinä (omistaja 10.10. 15.4x) */
 #tyolista details.juna { margin-left: 0.8em; }
 #tyolista details.juna .runko { padding-left: 2.1em; }
-/* Valmistuneet työlistan alla (omistaja 10.10. 16.5x) */
+/* Valmistuneet työlistan alla (omistaja 10.10. 16.3x) */
 .otsikkonappi { background: none; border: none; padding: 0; font: inherit; color: inherit; letter-spacing: inherit; cursor: pointer; }
 .otsikkonappi[aria-expanded="true"] { text-decoration: underline; text-underline-offset: 4px; }
 .otsikkonappi:focus-visible { outline: 2px solid var(--seepia); outline-offset: 2px; }
@@ -362,7 +362,7 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
         ed.setAttribute('aria-label', 'eteneminen ' + n + '/5');
         ed.title = 'eteneminen ' + n + '/5';
         for (var q = 1; q <= 5; q++) ed.append(luo('i', q <= n ? 'on' : ''));
-        // Arvioitu jäljellä oleva aika palkkien perässä (omistaja 10.10. 16.5x); kenttä valmis_arvio = ISO-aika.
+        // Arvioitu jäljellä oleva aika palkkien perässä (omistaja 10.10. 16.3x); kenttä valmis_arvio = ISO-aika.
         var jj = r.valmis_arvio ? new Date(r.valmis_arvio).getTime() - Date.now() : NaN;
         if (jj > 0) {
           var mm = Math.ceil(jj / 60000);
@@ -457,7 +457,7 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
     kyL.replaceChildren();
     if (Array.isArray(ky)) ky.forEach(function (q) { kyL.append(luo('li', '', q)); });
     kyL.hidden = !(kysymysAuki && kyN && Array.isArray(ky));
-    // Valmistuneet erikseen työlistan alle; otsikon napautus näyttää ne (omistaja 10.10. 16.5x).
+    // Valmistuneet erikseen työlistan alle; otsikon napautus näyttää ne (omistaja 10.10. 16.3x).
     var tlRivit = (t && t.rivit) || [];
     var onValmis = function (r) { return /^valmis/i.test(String(r.tila || '')); };
     taittuvat($('tyolista'), tlRivit.filter(function (r) { return !onValmis(r); }), 'otsikko', function (r) { return /työn alla|odottaa|kokoamassa/i.test(String(r.tila || '')); });
@@ -485,7 +485,7 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
       vs.append(d);
     });
 
-    // Laitteet (omistaja 10.10. 16.5x): mitä iPadilla ja Blenderillä on ajossa ja kenen ajo (Postivahdin laitteet.py → dokumentti laitteet).
+    // Laitteet (omistaja 10.10. 16.3x): mitä iPadilla ja Blenderillä on ajossa ja kenen ajo (Postivahdin laitteet.py → dokumentti laitteet).
     var la = $('laitteet');
     la.replaceChildren();
     var lr = (tila.laitteet && tila.laitteet.rivit) || [];
@@ -496,7 +496,7 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
       var kortti = luo('div', 'rooli ' + (kaytossa ? 'tila-tyo' : 'tila-lepo'));
       var paa = luo('div', 'r-paa');
       paa.append(luo('span', '', x.nimi || ''));
-      // Prosessorin käyttö pieninä palkkeina (omistaja 10.10. 17.0x): 5 palkkia = koko kone, perässä prosentti.
+      // Prosessorin käyttö pieninä palkkeina (omistaja 10.10. 16.4x): 5 palkkia = koko kone, perässä prosentti.
       if (kaytossa && typeof x.prosessori === 'number') {
         var pr = Math.max(0, Math.min(100, Math.round(x.prosessori)));
         var ed = luo('span', 'edistys laite-cpu');
