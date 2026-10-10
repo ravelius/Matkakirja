@@ -28,6 +28,20 @@ namespace Matkakirja.Linssit.Testit
             }
         }
 
+        [Testi] static void PerillaKirkasJaReunaKohteenSuunnassa()
+        {
+            Oleta.Tosi(new VihjeLento((0, 0, 0), (0.1, 0, 0)).Kesto >= 1.3 - 1e-9, "lyhytkin lento vähintään 1,3 s");
+            Oleta.Sama(1.0, VihjeLento.PerillaKirkkaus(0)); Oleta.Sama(1.0, VihjeLento.PerillaKirkkaus(VihjeLento.PerillaKirkasS));
+            Oleta.Tosi(VihjeLento.PerillaKirkkaus(VihjeLento.PerillaKirkasS + VihjeLento.PerillaHimmenee) <= 1e-9, "himmenee nollaan");
+            // Oikealla ruudun ulkopuolella → oikea reuna; kameran takana vasemmalla → oikea reuna (peilaus); suoraan takana → alareuna.
+            var (x, y) = VihjeLento.ReunaPiste(1.6, 0.5, false);
+            Oleta.Tosi(Math.Abs(x - (1 - VihjeLento.Reuna)) < 1e-9 && Math.Abs(y - 0.5) < 1e-9, $"oikea reuna {x:F2},{y:F2}");
+            (x, y) = VihjeLento.ReunaPiste(0.2, 0.5, true);
+            Oleta.Tosi(x > 0.9, $"takana vasemmalla → oikealle {x:F2}");
+            (x, y) = VihjeLento.ReunaPiste(0.5, 0.5, true);
+            Oleta.Tosi(Math.Abs(y - VihjeLento.Reuna) < 1e-9, $"suoraan takana → alareuna {y:F2}");
+        }
+
         [Testi] static void Taso1LentaaVainNakymanUlkopuolelle()
         {
             Oleta.Tosi(!VihjeLento.Lentaa(1, true), "taso 1 näkyvissä: ei lentoa");

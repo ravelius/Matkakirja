@@ -25,6 +25,9 @@ namespace Matkakirja.Natiivi
         public Func<float> Voima;
         /// <summary>Kipinän nykyinen paikka (pistevalo seuraa).</summary>
         public Vector3 Paikka { get; private set; }
+        /// <summary>Pistevalon paikka: lennossa kipinän mukana, perillä kohteessa (myös kun kipinä odottaa ruudun reunalla).</summary>
+        public Vector3 ValonPaikka => lento.Perilla ? kohde : Paikka;
+        Vector3 kohde;
         public event Action Perilla;
         bool perillaKerrottu;
 
@@ -43,7 +46,7 @@ namespace Matkakirja.Natiivi
                 var r = q.AddComponent<MeshRenderer>(); r.sharedMaterial = Materiaali(); r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off; r.receiveShadows = false;
                 k.osat[i] = q.transform; k.piirrot[i] = r;
             }
-            k.Paikka = k.V(k.lento.Paikka(0));
+            k.Paikka = k.V(k.lento.Paikka(0)); k.kohde = kohde;
             return k;
         }
 
@@ -54,12 +57,19 @@ namespace Matkakirja.Natiivi
             float dt = Time.unscaledDeltaTime; aika += dt;
             bool lennossa = !lento.Perilla;
             Paikka = V(lento.Paivita(dt));
+            var cam = Kamera();
+            // Perillä kohde ruudun ulkopuolella (PT 02.3x): kipinä odottaa ruudun reunalla kohteen suunnassa 2 m:n päässä.
+            if (!lennossa && cam != null && !Nakyvissa(kohde))
+            {
+                var v = cam.WorldToViewportPoint(kohde);
+                var (rx, ry) = VihjeLento.ReunaPiste(v.x, v.y, v.z < 0);
+                Paikka = cam.ViewportToWorldPoint(new Vector3((float)rx, (float)ry, 2f));
+            }
             historia[historiaN++ % historia.Length] = Paikka;
             if (!lennossa) perillaAika += dt;
             if (lento.Perilla && !perillaKerrottu) { perillaKerrottu = true; Perilla?.Invoke(); }
-            float voima = lennossa ? 1f : Mathf.Clamp01(Voima?.Invoke() ?? 0f);
+            float voima = lennossa ? 1f : Mathf.Max((float)VihjeLento.PerillaKirkkaus(perillaAika), Mathf.Clamp01(Voima?.Invoke() ?? 0f));
             if (!lennossa && voima <= 0.01f && perillaAika > 0.5f) { Destroy(gameObject); return; }
-            var cam = Kamera();
             float syke = lennossa ? 1f : 0.75f + 0.25f * Mathf.Cos(2f * Mathf.PI * perillaAika / SykeS);
             for (int i = 0; i <= Vana; i++)
             {

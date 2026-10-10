@@ -9,7 +9,25 @@ namespace Matkakirja.Linssit.Seikkailu
 {
     public sealed class VihjeLento
     {
-        public const double NopeusMs = 7, MinS = 0.8, MaxS = 2.2, KaariM = 0.8, KaariOsuus = 0.12;
+        public const double NopeusMs = 6, MinS = 1.3, MaxS = 2.4, KaariM = 0.8, KaariOsuus = 0.12;
+        /// <summary>Perillä kipinä pysyy täysin kirkkaana (s) ja himmenee sitten (s), vaikka vihjeen valo olisi hennompi
+        /// (PT 11.10. 02.3x, simu af4eb6678: kipinä erottui vain 0,5–1 s).</summary>
+        public const double PerillaKirkasS = 2, PerillaHimmenee = 0.8;
+        /// <summary>Kirkkaus perillä ajan mukaan (1 kirkkaana, sitten lineaarinen lasku nollaan).</summary>
+        public static double PerillaKirkkaus(double s) => s <= PerillaKirkasS ? 1 : Math.Max(0, 1 - (s - PerillaKirkasS) / PerillaHimmenee);
+        /// <summary>Ruudun reunan piste (näkymän koordinaatit 0–1) kohteen suunnassa, kun kohde ei ole ruudulla: kameran takana
+        /// oleva peilataan; reunasta Reuna (osuus) sisään.</summary>
+        public const double Reuna = 0.06;
+        public static (double X, double Y) ReunaPiste(double vx, double vy, bool takana)
+        {
+            double dx = vx - 0.5, dy = vy - 0.5;
+            if (takana) { dx = -dx; dy = -dy; }
+            double m = Math.Max(Math.Abs(dx), Math.Abs(dy));
+            if (m < 1e-6) { dx = 0; dy = -1; m = 1; }   // suoraan takana: alareunaan
+            double k = (0.5 - Reuna) / m;
+            return (0.5 + dx * k, 0.5 + dy * k);
+        }
+
         /// <summary>Lähtö katseen edestä (m) ja hieman alempaa (m), jotta kipinä näkyy heti keskellä kuvaa.</summary>
         public const double LahtoEteenM = 1.6, LahtoAlasM = 0.15;
         /// <summary>Taso 1 lentää vain, jos kohde ei ole näkymässä (vaarassa vain hento katse kohteessa, Vihjeet).</summary>

@@ -74,7 +74,7 @@ namespace Matkakirja.Natiivi
         void Kimallus(SeikkailuPelaaja p)
         {
             // Lennossa (A4): pistevalo kulkee kipinän mukana ja valaisee seiniä matkalla; perillä ValoVihjeen kirkkaus kuten ennen.
-            if (kipina != null && kimallus != null) { kimallus.transform.position = kipina.Paikka; if (!valo.Kaynnissa) { kimallus.intensity = KimallusVoima * 0.6f; return; } }
+            if (kipina != null && kimallus != null) { kimallus.transform.position = kipina.ValonPaikka; if (!valo.Kaynnissa) { kimallus.intensity = KimallusVoima * 0.6f; return; } }
             if (!valo.Kaynnissa && (kimallus == null || kimallus.intensity <= 0f)) return;
             var q = valo.Kohde; var pp = p.transform.position;
             float etaisyys = new Vector2(pp.x - (float)q.X, pp.z + (float)q.Z).magnitude;   // Kohde glTF-kehyksessä (z etelä)
@@ -153,7 +153,12 @@ namespace Matkakirja.Natiivi
             var q = kohde.Value; var d = SeikkailuKavely.Data;
             var savy = ValoVihje.SavyOsassa(d != null ? Askelaani.Osa(d, q.x, q.y, -q.z) : null, q.y);
             var (r, g, b) = ValoVihje.Vari(savy); var vari = new Color((float)r, (float)g, (float)b);
-            if (kimallus == null) kimallus = SeikkailuValot.Hehku(transform, Vector3.zero, vari, 0f, KimallusKantama, true, DioraamaNayttamo.Kerros);
+            if (kimallus == null)
+            {
+                kimallus = SeikkailuValot.Hehku(transform, Vector3.zero, vari, 0f, KimallusKantama, true, DioraamaNayttamo.Kerros);
+                // Ei volumetrista savuhehkua (PT 02.3x: himmeä ruskea möykky jäi näkyviin laiturille, myös valon ollessa nolla).
+                if (kimallus != null) foreach (var c in kimallus.GetComponents<Behaviour>()) if (!(c is Light)) Destroy(c);
+            }
             if (kimallus != null) { kimallus.transform.position = q + Vector3.up * KimallusNosto; kimallus.color = vari; kimallus.intensity = 0f; }
             // A4 (Laitetestaaja TF 180 a6: vihje ei näkynyt ruudulla): valokipinä katseen edestä kohteeseen (myös näkymän ulkopuolelle;
             // taso 1 lentää vain silloin), perillä vihjeen valo ja selvä suunnallinen ääni kohteesta. Ei tekstiä eikä hahmoa (omistaja 8.10.).
