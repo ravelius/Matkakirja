@@ -39,10 +39,11 @@
   "1.58": "aee33ab3c2cba5aa",
   "1.59": "5e17497c5f6372ab",
   "1.60": "4a8ca22618c14a91",
-  "1.61": "ed66e0c3065b1cbe"
+  "1.61": "ed66e0c3065b1cbe",
+  "1.62": "13e83718a06b3ebd"
  },
  "uusin": {
-  "skeemaversio": "1.61",
+  "skeemaversio": "1.62",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -215,6 +216,7 @@
     "intro",
     "kielinayte",
     "korkeus",
+    "lahtokohde",
     "lat",
     "lauta",
     "lentokentta",

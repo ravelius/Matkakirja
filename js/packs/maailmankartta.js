@@ -271,7 +271,7 @@ const CITIES = [
   {"id":"tallinna","name":"Tallinna","wiki":"Tallinna","ambience":"kaupunki","x":6654.2,"y":1034.5,"la":"start","lx":20,"ly":5},
   {"id":"riika","name":"Riika","wiki":"Riika","ambience":"kaupunki","x":6543.7,"y":1142.6,"la":"start","lx":20,"ly":5},
   {"id":"vilna","name":"Vilna","wiki":"Vilna","ambience":"kaupunki","x":6687.2,"y":1205.9,"la":"start","lx":20,"ly":5},
-  {"id":"tukholma","name":"Tukholma","wiki":"Tukholma","ambience":"satama","x":6435.4,"y":958.5,"airport":true,"la":"middle","lx":0,"ly":-24},
+  {"id":"tukholma","name":"Tukholma","wiki":"Tukholma","ambience":"satama","x":6435.4,"y":958.5,"start":true,"airport":true,"la":"middle","lx":0,"ly":-24},
   {"id":"oslo","name":"Oslo","wiki":"Oslo","ambience":"metsa","x":6192.4,"y":930.3,"la":"end","lx":-20,"ly":5},
   // KÄSIN LISÄTTY 17.8.2026 samalla kaavalla kuin Tampere (ks. sen
   // kommentti yllä). Todellinen paikka 60,39°N 5,32°E; maalla,

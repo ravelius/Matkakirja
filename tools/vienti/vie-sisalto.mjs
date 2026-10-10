@@ -250,8 +250,12 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *   1.61 paakaupungit.kuvat ja maat.*.paakaupunki.kuvat: Codex-havainnekuvat ämpärissä paakaupungit/<ISO3>/<pvm>/
  *        ([{ avain, url, motiivi, kuvateksti, havainnekuva, leveys, korkeus, sha256 }], Sisältökirjurin hyväksymät; PT
  *        10.10.2026); maat.*.paakaupunki.asema; kaikki maat -projektin erät 3–6 (Aasia, Afrikka, Amerikat, Oseania).
+ *   1.62 kaupungit.lahtokohde (bool, jokaisella kaupungilla): alkulennon valittavat kohteet = js/ui-apurit.js
+ *        ETUSIVUN_KOHTEET (omistaja 10.10.2026: vain Ateena, Moskova, Istanbul ja Tukholma; muut maanosat tauolla).
+ *        aloitus ennallaan pelisäännöille; Tukholma sai aloitus=true. Natiivi (NUI, juna 181): Lahtokaupungit()
+ *        käyttää lahtokohde-kenttää, kun se on paketissa; vanhat buildit näyttävät aloitus-kaupungit kuten ennen.
  */
-export const SKEEMAVERSIO_TARKKA = '1.61';
+export const SKEEMAVERSIO_TARKKA = '1.62';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;

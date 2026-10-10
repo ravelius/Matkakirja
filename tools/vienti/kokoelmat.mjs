@@ -24,6 +24,7 @@ import { ISO2 } from './iso2.mjs';
 import { POISTETUT_SAANNOT, AVAUSLUENTOJEN_TEKSTIT } from './lahteet.mjs';
 import { PAAKAUPUNGIT } from './paakaupungit.mjs';
 import { HALLINNON_PAIKAT } from '../../js/packs/laudan-paakaupungit.js';
+import { ETUSIVUN_KOHTEET } from '../../js/ui-apurit.js';
 import { lueKorkeudet } from './korkeudet.mjs';
 import ASUKASLUVUT from './kaupunkien-asukkaat.json' with { type: 'json' };
 import { maarajaRivit, MAARAJOJEN_TOLERANSSI } from './maarajat.mjs';
@@ -117,6 +118,11 @@ function lautaKokoelmat(ns) {
       saari: saaret.has(c.id),
       lentokentta: Boolean(c.airport),
       aloitus: Boolean(c.start),
+      // Skeema 1.62 (omistaja 10.10.2026, NUI): alkulennon valittavat kohteet
+      // (js/ui-apurit.js ETUSIVUN_KOHTEET). aloitus jää pelisäännöille
+      // (mannerlento, aarteiden jako); natiivin Lahtokaupungit() käyttää tätä,
+      // kun kenttä on paketissa. Kirjoitetaan jokaiselle kaupungille.
+      lahtokohde: ETUSIVUN_KOHTEET.has(c.id),
       tyyppi: c.ambience ?? null,
       tarkeys: tarkeys(c, reitteja.get(c.id) ?? 0, Boolean(maa) && PAAKAUPUNGIT[maa] === c.id),
       // Skeema 1.5 (3D-selvittäjä 23.9.2026): natiivin reittigeometria
@@ -156,7 +162,7 @@ function lautaKokoelmat(ns) {
   }
   return {
     kaupungit: taulukko(`${LAUTA}#MAAILMANKARTTA.cities`,
-      'Pelilaudan kaupungit. lat/lon: pallopiste jos on, muuten laudan Miller-koordinaateista laskettu. maa = ISO3, maa2 = ISO2 (tools/vienti/iso2.mjs). tyyppi = laudan ambience, lentokentta ja aloitus laudan liput. tarkeys 0–3 nimiöiden harvennukseen (3 = pääkaupunki tai aloitus). lauta = { x, y } laudan Miller-yksiköissä (reittigeometriaan). data = laudan raakaolio (x, y, la, lx, ly…), johon natiivi ei nojaa.',
+      'Pelilaudan kaupungit. lat/lon: pallopiste jos on, muuten laudan Miller-koordinaateista laskettu. maa = ISO3, maa2 = ISO2 (tools/vienti/iso2.mjs). tyyppi = laudan ambience, lentokentta ja aloitus laudan liput, lahtokohde = alkulennon valittava kohde (js/ui-apurit.js ETUSIVUN_KOHTEET). tarkeys 0–3 nimiöiden harvennukseen (3 = pääkaupunki tai aloitus). lauta = { x, y } laudan Miller-yksiköissä (reittigeometriaan). data = laudan raakaolio (x, y, la, lx, ly…), johon natiivi ei nojaa.',
       {}, kaupungit),
     reitit: taulukko(`${LAUTA}#MAAILMANKARTTA.edges+airRoutes`,
       'Kaupunkien väliset yhteydet: laji maa | sea (meri) | lento. askelia = laudan steps (lennolla null), via = taitepisteet laudan Miller-yksiköissä [[x, y], …] (tyhjä = suora viiva).',

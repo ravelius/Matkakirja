@@ -3,6 +3,8 @@
 //
 // Muoto: { q, options[4], correct, fact, hint, level? } — ks. CONTRIBUTING.md.
 
+import { EUROPE_QUESTIONS, EUROPE_FACTS } from './europe-questions.js';
+
 export const MAAILMA_QUESTIONS = {
   tanger: [
     {
@@ -786,6 +788,14 @@ export const MAAILMA_QUESTIONS = {
       hint: 'Vähän alle kaksisataa.',
     },
   ],
+
+  /*
+   * TUKHOLMA tuli aloitusnäytön laudalle 10.10.2026 (omistaja: alkulennossa
+   * vain Eurooppa, js/ui-apurit.js ETUSIVUN_KOHTEET). Kysymyksiä ei kysytä
+   * tällä laudalla (ks. San Francisco ja Istanbul yllä), joten eheyssäännön
+   * viisi kysymystä ovat samat kuin Euroopan laudalla.
+   */
+  tukholma: EUROPE_QUESTIONS.tukholma,
 };
 
 /**
@@ -929,4 +939,6 @@ export const MAAILMA_FACTS = {
       voice: 'isoisa',
     },
   ],
+  // Tukholma 10.10.2026: samat tiedot kuin Euroopan laudalla (ks. kysymykset).
+  tukholma: EUROPE_FACTS.tukholma,
 };

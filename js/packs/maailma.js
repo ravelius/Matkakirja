@@ -285,6 +285,23 @@ const WORLD_CITIES = [
       { pack: 'maailmankartta', city: 'tanger', label: 'Koko maailma' },
     ],
   },
+  {
+    /*
+     * TUKHOLMA (omistaja 10.10.2026): uusi lähtövalinnan kohde
+     * (js/ui-apurit.js ETUSIVUN_KOHTEET), Pohjolan portti.
+     *
+     * KOORDINAATIT: 59,329° N, 18,069° E stereografisella
+     * pallonpuoliskoprojektiolla (tools/hemispheres.mjs, Afro-Euraasian
+     * ympyrä lon0 70°, cx 862, cy 400, r 270) antaa 779,5 / 223,3;
+     * piste on nostettu 4 yksikköä pohjoiseen (779,5 / 219,3), koska
+     * laudan tyylitelty rantaviiva jättää tarkan pisteen Itämereen.
+     * Nimi yläpuolelle, koska Lontoon nimi on lännessä samalla korkeudella.
+     */
+    id: 'tukholma', name: 'Tukholma', x: 779.5, y: 219.3, airport: true, la: 'middle', lx: 0, ly: -14,
+    links: [
+      { pack: 'maailmankartta', city: 'tukholma', label: 'Koko maailma' },
+    ],
+  },
 ];
 
 // steps = kuinka monta silmälukua reitin kulkeminen vaatii.
@@ -302,6 +319,8 @@ const WORLD_EDGES = [
    */
   { a: 'sanfrancisco', b: 'losangeles', steps: 2 },
   { a: 'ateena', b: 'istanbul', steps: 2 },
+  // Tukholma 10.10.2026: Pohjanmeren ja Skagerrakin kautta Itämeren reitin pisteillä.
+  { a: 'lontoo', b: 'tukholma', steps: 3, type: 'sea', via: [[742.9, 222.3], [764.1, 225]] },
 
   // Valtamerten laivareitit
   { a: 'lontoo', b: 'newyork', steps: 5, type: 'sea', via: [[443.9, 213.6], [412.1, 259]] },
@@ -443,7 +462,8 @@ export const MAAILMA = {
     // nousi 14:stä 7.9.2026, kun Istanbul ja San Francisco tulivat
     // laudalle lähtövalinnan kohteiksi; lisäys meni pieniin aarteisiin,
     // koska tällä laudalla ei pelata eikä jako näy pelaajalle.
-    counts: { star: 1, mannerAarre: 1, isoAarre: 5, pieniAarre: 9 },
+    // 17 kaupunkia 10.10.2026 (Tukholma), lisäys pieniin aarteisiin.
+    counts: { star: 1, mannerAarre: 1, isoAarre: 5, pieniAarre: 10 },
   },
 
   questions: MAAILMA_QUESTIONS,
