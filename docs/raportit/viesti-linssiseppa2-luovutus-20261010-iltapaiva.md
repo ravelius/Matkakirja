@@ -15,8 +15,11 @@ Skriptit `proto-3d/_tyo/linssiseppa2/skriptit-20261009/`, arkit `docs/raportit/k
   merkintää → oletussävy (vallihauta 6/16/25 vs oikea 54/80/68). Koodi haaralla linssiseppa2/peking-vesivari efc88563c (masterin 3d0c8c4a7
   päällä, L 1307/1307, unity 0): Vedet peking = vallihauta, Beihai; Tunniste x < −480 m → järvet. Karttaseppä vie vedet.peking vari-v1:een
   (pyydetty 16.2x). Sitten käännös (pyydetty Julkaisijalta) + vuoro-peking3c.sh-malli → pari PT:lle → SHA Natiivisepälle junaan.
-- **ND**: v4c (v6k11) ja v4d (v6k12) kuvattu; omistaja hylkäsi v4d:n (liian kirkas/keltainen, pystynousut tyhjiä) → LR tekee v5:n →
-  sinulle: paketti nd3k-paketti.sh POHJA=nd3/v6k9 → vuoro-nd4d.sh-malli + arkit-nd4d.py-malli (oikea | v4d | v5) PT:lle. mittaa-parvis.py lyijylle.
+- **ND**: v4d hylätty (omistaja), v5 (v6k13) liian kirkas → **v5b paketti nd3/v6k14** (= v6k9 + v5b, portti 0; mallit.jsonin ND-tekijään lisätty
+  "länsijulkisivun valokuva The wub 2025 (CC BY-SA 4.0)" — muista jokaiseen uuteen ND-pakettiin, nd3k-paketti.py ei lisää sitä). Arkki
+  nd-v5b-edesta-ylha.jpg (4dc824ab5): julkisivu L 152–153 (oikea 147/158; mittaa-julkisivu.py), lyijy +6 % (mittaa-parvis.py). ODOTTAA
+  omistajan päätöstä viennistä. Portaalit: kamera-vapaa 35 m ei toimi (kääntyy) → rajaus f40:stä (arkit-nd5b.py #PORTAALIT).
+  Huom: opas kamera -komennon katseKorkeus on ellipsoidikorkeus (Pariisin maa ≈ 79 m).
 - **JUNAAN 179 (PT kuittasi, SHA:t Natiivisepälle 17.0x)**: linssiseppa2/ilmakeha-kaikkialla d3885f6d1 (omistaja 16.4x: ilmakehä kaikissa
   kaupungeissa; arkki ilmakeha-kaupungit.jpg; PT:n huomio: Prahan etuala viilenee → säädä vain lähietäisyyttä, horisontti ennallaan) ja
   linssiseppa2/peking-vesivari efc88563c (kerroin 1; arkki peking-vesivari.jpg; vallihauta 14/35/33 vs orto 54/80/68).
