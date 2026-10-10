@@ -2076,6 +2076,17 @@ namespace Matkakirja.Natiivi
                     if (kohde is Vector3 kv) { sps.Siirra(kv); o.Kirjaa($"poikki: kävely siirretty {osat[3]} {kv}"); } else o.Kirjaa($"poikki: kävely: merkkiä {osat[3]} ei löydy");
                     return;
                 }
+                // "poikki kavely kohti <merkki>": pelaaja kävelee merkkiin napautuskävelyn tavoin (NavMesh-reitti, törmäykset kuten pelissä;
+                // A3 11.10.: tyrmän oven läpi kävely, siirto ohitti oven törmäyksen).
+                if (arvo == "kohti" && osat.Length > 3 && SeikkailuPelaaja.Aktiivinen is SeikkailuPelaaja kps)
+                {
+                    Matkakirja.Linssit.Seikkailu.KavelyMerkki km = null;
+                    if (SeikkailuKavely.Data != null) foreach (var mk in SeikkailuKavely.Data.Merkit) if (mk.Nimi == osat[3]) { km = mk; break; }
+                    if (km == null) { o.Kirjaa($"poikki: kävely: merkkiä {osat[3]} ei löydy"); return; }
+                    bool reitti = kps.KaveleKohti(new Vector3((float)km.X, (float)km.Y, (float)-km.Z));
+                    o.Kirjaa($"poikki: kävely kohti {osat[3]} ({kps.BottiReitti}{(reitti ? "" : ", suoraan")})");
+                    return;
+                }
                 if (arvo == "tapit" && osat.Length > 7)
                 {
                     string tapa = osat.Length > 8 ? osat[8] : "";
