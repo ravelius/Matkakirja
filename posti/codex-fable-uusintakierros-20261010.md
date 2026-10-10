@@ -1,6 +1,6 @@
 ## Codex → Fable / Sisältökirjuri: kuvaerä #69
 
-Paikalliset generoinnit 8/18, tavulleen varmistettu R2-toimitus 6/18. Toimittamatta jätetyt 0; yksi uusi builtin-generointi per ID, ei variantteja. Uusintatilauksen69 rajattu yksi uusi yritys per ID, aiemmat kuvat säilytetty; uudet v3-polut. Etäiset pienet geneeriset rakennusmassat sallittu lähteen ehdolla, nimetyt suojatut teokset poissuljettu.
+Paikalliset generoinnit 12/18, tavulleen varmistettu R2-toimitus 12/18. Toimittamatta jätetyt 0; yksi uusi builtin-generointi per ID, ei variantteja. Uusintatilauksen69 rajattu yksi uusi yritys per ID, aiemmat kuvat säilytetty; uudet v3-polut. Etäiset pienet geneeriset rakennusmassat sallittu lähteen ehdolla, nimetyt suojatut teokset poissuljettu.
 
 Kuvakohtaiset toimitukset ja havainnot:
 
@@ -22,6 +22,26 @@ Fotorealistinen vihreä, puustoinen kaupunkinäkymä mataline harjakattoineen ja
 - Tarkastettu natiivikuva 1536 × 1024.
 - Generoitu havainnekuva: tarkka Apia/Vaea- tai Biškek/Ala-Too-paikannus, topografia, mittasuhteet, rakennusten identiteetti ja oikeudellinen suoja eivät ole faktavarmoja pelkän kuvan perusteella.
 
+### bogota-2
+
+[bogota-2-v3.png](https://media.matkakirja.app/paakaupungit/COL/20261010/bogota-2-v3.png?t=5b500438d1560a38) — Bogotán Plaza de Bolívar, katedraali ja Capitolio Nacional kirkkaassa päivänvalossa. Havainnekuva.
+
+Fotorealistinen avoin kivetty aukio, paljon kyyhkysiä, kaksitorninen historiallisen näköinen katedraali ja viereisiä kivirakennuksia kirkkaassa päivänvalossa; vuoriston siluetti taustalla. Pyydetyn Capitolio Nacionalin identiteettiä ei voi varmistaa oikeanpuoleisesta rakennuksesta; rakennusvastaavuus on epävarma ja voi olla poikkeama. Oikean tornin pienessä kellotaulussa näkyy numeromaisia säteittäisiä merkkejä. Yksittäistä numerosarjaa ei voi luotettavasti lukea natiivikoossa, mutta numerottomuusehto jää epävarmaksi. Kirkon syvennyksissä on pieniä hahmollisia arkkitehtuurikoristeita; niitä ei ole tunnistettu nimetyiksi suojatuiksi teoksiksi. Aukiolla ei näy Simón Bolívarin erillistä patsasta. Pienet kaukaiset ihmiset, ei tunnistettavia kasvoja. Ei havaittavia lippuja, logoja, kylttejä, mielenosoituksia, poliiseja, sotilaita, vartiostoa, Palacio de Justiciaa tai nimettyä suojattua nykyteosta.
+
+- Tarkastettu natiivikuva 1536 × 1024.
+- Generoitu havainnekuva: tarkka paikannus, topografia, rakennusten identiteetti, mittasuhteet ja oikeudellinen suoja eivät ole faktavarmoja pelkän kuvan perusteella.
+- Lähde69 pyytää ensimmäisen ainoan ehdokkaan ja poikkeamien kirjaamisen; uusia variantteja tai korjausgenerointeja ei tehty.
+
+### dhaka-1
+
+[dhaka-1-v3.png](https://media.matkakirja.app/paakaupungit/BGD/20261010/dhaka-1-v3.png?t=84c00858e607ea5b) — Buriganga-joen veneitä Vanhan Dhakan rannalla aamun sumussa. Havainnekuva.
+
+Fotorealistinen ruskeanvihreä leveä joki, puisia soutu- ja moottoriveneitä, vanhoja kivi-/tiilitaloja ja rannan portaita lämpimässä sumuisessa aamuvalossa. Etualan vene on tyhjä. Rannalla ja veneissä on pieniä kaukaisia ihmisiä; kasvoja ei voi tunnistaa. Kaikkien hahmojen selin-suunta ei ole yksiselitteinen. Oikeanpuoleisten rantatalojen seinillä näkyy pieniä kylttimäisiä suorakulmaisia pintoja ja merkintöjä, mutta niistä ei saa luettua tekstiä. Tämä poikkeaa kylttikiellosta. Ei havaittavia lippuja, luettavia veneiden nimiä, tunnistettavia logoja, numeroita, sotilaita, poliittisia symboleja, korkeita toimisto-/asuintorneja tai uuden matkustajaterminaalin selkeää pääaihetta. Jatiya Sangsad Bhaban, Shaheed Minar tai nimetty suojattu teos ei ole tunnistettu. Joenrannan tarkka Dhaka/Buriganga-paikannus jää varmistamatta.
+
+- Tarkastettu natiivikuva 1536 × 1024.
+- Generoitu havainnekuva: tarkka paikannus, topografia, rakennusten identiteetti, mittasuhteet ja oikeudellinen suoja eivät ole faktavarmoja pelkän kuvan perusteella.
+- Lähde69 pyytää ensimmäisen ainoan ehdokkaan ja poikkeamien kirjaamisen; uusia variantteja tai korjausgenerointeja ei tehty.
+
 ### dhaka-2
 
 [dhaka-2-v3.png](https://media.matkakirja.app/paakaupungit/BGD/20261010/dhaka-2-v3.png?t=13efc1c0a70a6cc2) — Lalbaghin linnakkeen Mughal-rakennukset ja puutarha Dhakassa. Havainnekuva.
@@ -39,6 +59,27 @@ Tyyni vihertävä järvi, rantapolku ja riippuvia pajuja; pieni historialliselta
 
 - Hoan Kiem -järven tarkka rantakulma sekä Rùa-tornin ja taustarakennusten yksilöinti/mitat varmistamatta.
 - Etäisten geneeristen rakennusmassojen tekijää, ikää ja nimeä ei ole vahvistettu; lähde69 sallii ne sivutaustana eikä niitä yksin pidätetä.
+
+### kiova-2
+
+[kiova-2-v3.png](https://media.matkakirja.app/paakaupungit/UKR/20261010/kiova-2-v3.png?t=0bf358fbc9401c0a) — Pyhän Andreaksen kirkko ja Dnipro-joen laakso Kiovassa. Havainnekuva.
+
+Turkoosinvalkoinen barokkikirkko, vihreän-/tummanpetrolinsävyiset kupolit ja kultakoristelu kukkulalla ylemmästä viistokulmasta; takana puiden latvoja ja laaja jokilaakso. Kaukaisessa horisontissa pieniä geneerisiä rakennusmassoja; kirkko hallitsee aihetta, eikä taustan yksittäinen moderni rakennus erotu etualalla tai keskellä. Ei havaittu Kiovan luolaluostoa, Uspenskin katedraalia, Isänmaa-patsasta, Maidan-muistomerkkejä, kojuja, sotakuvastoa, lippuja, luettavia tekstejä, logoja tai tunnistettavia kasvoja.
+
+- Pyhän Andreaksen kirkon täsmällinen arkkitehtoninen identiteetti, kupolien mittasuhteet sekä Dnipro-laakson näkymän tarkka geometria/koordinaatit varmistamatta.
+- Horisonin pienten geneeristen rakennusmassojen nimeä, ikää tai suunnittelijaa ei ole vahvistettu; lähde69 sallii ne sivutaustana.
+- Oikeudellista suojaa ei ole päätelty generoituja muotoja katsomalla.
+
+### kuala-lumpur-1
+
+[kuala-lumpur-1-v3.png](https://media.matkakirja.app/paakaupungit/MYS/20261010/kuala-lumpur-1-v3.png?t=e94dc8d808e0d417) — Perdana-puutarhan rauhallinen järvimaisema Kuala Lumpurissa. Havainnekuva.
+
+Tyyni puistojärvi, palmuja, suuria sademetsäpuita, nurmirantoja ja pehmeä usvainen aamuvalo. Puiden ja aamusumun lomassa etäisiä pieniä geneerisiä rakennusmassoja; ne eivät hallitse aihetta eikä näkyvissä ole tunnistettavaa nimettyä pilvenpiirtäjää. Muutamia tavallisia pieniä toiminnallisia puistovalaisimia; ei tunnistettua nimettyä valaistustaideinstallaatiota. Oikealla ja kaukana rannalla pieniä ihmisfiguureja; ei tunnistettavia kasvoja, luettavaa tekstiä, numeroita, logoja, lippuja, Petronas-torneja, KL Toweria, Merdeka118:a, Tugu Negaraa tai muita erotettavia patsaita.
+
+- Perdana-puutarhan tarkka rantakulma, puulajit sekä taustarakennusten yksilöinti/ikä varmistamatta.
+- Pienet toiminnalliset puistovalaisimet yksilöimättä; niitä ei väitetä nimetyiksi taideteoksiksi tai oikeudellisesti arvioiduiksi.
+- Lähde69 sallii etäiset pienet geneeriset rakennusmassat sivutaustana; niitä ei yksin pidätetä.
+- Pienet toiminnalliset puistovalaisimet näkyvät, vaikka kohderivissä valaistukset on rajattu pois. Ensimmäinen ainoa ehdokas toimitetaan lähteen69 mukaan poikkeaman kanssa; nimettyä valaistusteosta ei tunnistettu.
 
 ### la-paz-2
 
@@ -60,6 +101,26 @@ Turkoosi laguuni, perinteisen dhoni-puuveneen näköinen vene ja pieniä kalastu
 - Etäiset geneeriset massat eivät osoita tunnistettua nimettyä teosta; niiden tekijöistä ja juridisesta suojasta ei anneta takuuta.
 - Nimettyä poissuljettua suojattua teosta ei visuaalisessa tarkastuksessa yksilöity.
 - Kaupunkimassassa on lähteen matalaa kaupunkia korkeampia taloja. Ensimmäinen ainoa ehdokas toimitetaan uuden tilauksen mukaisesti tämän poikkeaman kanssa; nimettyä poissuljettua rakennusta ei tunnistettu.
+
+### nairobi-2
+
+[nairobi-2-v3.png](https://media.matkakirja.app/paakaupungit/KEN/20261010/nairobi-2-v3.png?t=75433b25d7e09eb3) — Ngongin kukkuloiden aaltoileva harjanne ja ruohotasanko. Havainnekuva.
+
+Yksi aidon kamerakuvan näköinen maisema: pitkä matala vihreä aaltoileva harjanne, useita pyöristyneitä rystysmäisiä kumpuja ja loivat rinteet. Etualalla ruohotasanko, yksittäisiä akaasian ja eukalyptuksen näköisiä puita, harjanteen yllä matala pilvivyö. Ei näkyvää jyrkkää kallioseinämää, fantasiahuippua, tuulivoimalaa, mastoa, rakennusta, aitaa, ajoneuvoa, ihmistä, kylttiä, lippua tai veistosta.
+
+- Paikan täsmällistä identiteettiä, harjanteen geometriaa, koordinaatteja ja mittasuhteita ei vahvistettu valokuvalähteestä.
+- Geneeristen rakenteiden tekijöistä ja juridisesta suojasta ei anneta takuuta; etäiset rakennusmassat sallitaan tilauksen ehdoilla.
+- Nimettyä poissuljettua suojattua teosta ei visuaalisessa tarkastuksessa yksilöity.
+
+### port-au-prince-1
+
+[port-au-prince-1-v3.png](https://media.matkakirja.app/paakaupungit/HTI/20261010/port-au-prince-1-v3.png?t=cde8ea1f8aa2f0e2) — Port-au-Princen lahti vehreiltä kukkuloilta nähtynä. Havainnekuva.
+
+Rauhallinen lahti ja laaja etäinen matalien kattojen kaupunkimassa vehreältä kukkulalta; etualalla palmuja ja trooppista kasvillisuutta, lämmin auringonlasku ja pilviä. Kaupunkimassa on geneerinen ja etäinen, ei yksilöityä nimettyä suojattua rakennusta tai muistomerkkiä. Vasemmalla kasvillisuuden takana osa punatiilikattoista asuintaloa ja vaaleaa verantaa; lahdella hyvin pieniä alusmaisia siluetteja. Ei luettavaa tekstiä, lippuja, ihmisiä lähikuvassa, väkivaltaa, aseellisia henkilöitä, romuja tai korostettua köyhyyskuvastoa; Palais Nationalia tai Neg Mawon -patsasta ei tunnistettu.
+
+- Paikan täsmällistä identiteettiä, harjanteen geometriaa, koordinaatteja ja mittasuhteita ei vahvistettu valokuvalähteestä.
+- Geneeristen rakenteiden tekijöistä ja juridisesta suojasta ei anneta takuuta; etäiset rakennusmassat sallitaan tilauksen ehdoilla.
+- Nimettyä poissuljettua suojattua teosta ei visuaalisessa tarkastuksessa yksilöity.
 
 PNG1536×1024 RGB/sRGB, läpinäkymätön; AI-metatieto Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Jokainen kuvateksti päättyy sanaan Havainnekuva. Natiivit säilytetty ja katsottu; pääagentti teki erillisen kuvakoontien katselmuksen, teknisen viennin varmistuksen ja R2:n HTTP/MIME/CORS/tavulleen saman tiedoston tarkistuksen. Ei sisältökorjauksia, rajauksia tai vanhojen kuvien uudelleenkäyttöä.
 
