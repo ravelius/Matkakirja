@@ -71,6 +71,7 @@ namespace Matkakirja
             if (LinssiTila == paalla) return;
             LinssiTila = paalla;
             foreach (var m in merkit) Tyyli(m);
+            foreach (var m in kevyet) Tyyli(m);
             PaivitaRenkaat();
             Likaa();
             Debug.Log($"MATKAKIRJA kaupungit: linssinimet {(paalla ? "päälle" : "pois")} ({merkit.Count} merkkiä)");
@@ -191,12 +192,16 @@ namespace Matkakirja
         /// (nappula reitillä, maailmatila, peli pois). Erillinen NaytaVain-suodattimesta: merkki näkyy vain, jos
         /// molemmat sallivat (leikkaus). Linssinimissä (LinssiTila) pelin rajausta ei käytetä (web linssiPaalla → null).
         /// </summary>
-        public void PeliSuodatin(ICollection<string> kaupungit)
+        /// <param name="maa">Pelaajan maa (ISO3): rajauksen aikana pääkaupunkipisteistä näkyy vain tämän maan (web pelinKaupunkirajaus
+        /// `maa`-kentällä). null = rajauksen aikana ei pääkaupunkipisteitä.</param>
+        public void PeliSuodatin(ICollection<string> kaupungit, string maa = null)
         {
             peliSuodatin = kaupungit == null ? null : new HashSet<string>(kaupungit);
+            peliMaa = kaupungit == null ? null : maa;
             Likaa();
         }
         HashSet<string> peliSuodatin;
+        string peliMaa;
 
         /// <summary>
         /// PELAAJAN NÄKYMÄ (omistaja 29.9.2026, web on malli): kehittäjän maailmatilassa pelaajan rajauksen ulkopuoliset pelin
@@ -229,6 +234,17 @@ namespace Matkakirja
         bool Suodatettu(string id) =>
             (suodatin == null || suodatin.Contains(id))
             && (LinssiTila || peliSuodatin == null || peliSuodatin.Contains(id) || (himmeat != null && himmeat.Contains(id)));
+
+        /// <summary>
+        /// Pääkaupunkipiste (<see cref="kevyet"/>): linssin suodatin kuten kaupungeilla (luettelossa id), ei aloitusvalinnan aikana (vain
+        /// valittavat); pelin rajaus <see cref="NimiLadonta.PaakaupunkiRajauksessa"/>.
+        /// </summary>
+        bool KevytSuodatettu(Sisalto.Kaupunki k) =>
+            (suodatin == null || suodatin.Contains(k.id)) && valintamerkkeja == 0
+            && NimiLadonta.PaakaupunkiRajauksessa(LinssiTila || peliSuodatin == null, k.maa, peliMaa, k.maa != null && pysakkiMaat.Contains(k.maa));
+
+        /// <summary>Maat (ISO3), joilla on laudan kaupunkeja (RakennaKaikki).</summary>
+        readonly HashSet<string> pysakkiMaat = new HashSet<string>();
 
         /// <summary>
         /// PELI OHJAA REITTEJÄ (build 13, pariteetti B10/D18/A3/A15/C18, löydökset 57 ja 60): webissä kaupungin
@@ -327,7 +343,7 @@ namespace Matkakirja
         void AsetaPisteenVari(Merkki m)
         {
             var r = m.pisteT.GetComponent<MeshRenderer>();
-            float nak = (m.usva < 0f ? 1f : m.usva) * (m.himmea ? HimmeanPeitto : 1f);
+            float nak = (m.usva < 0f ? 1f : m.usva) * (m.himmea ? HimmeanPeitto : 1f) * (m.paakaupunki ? m.kevytPeitto : 1f);
             if (!m.korostus.HasValue && nak >= 0.999f) { r.SetPropertyBlock(null); return; }
             var v = m.korostus ?? (pisteMateriaali != null ? pisteMateriaali.GetColor("_BaseColor") : Color.black);
             v.a *= nak;
@@ -666,6 +682,8 @@ namespace Matkakirja
             public bool piirrettyAsetettu;
             public float mitta = 1f; // kartan mittakerroin nimiölle (AsetaMitta; web nimenKarttakerroin), 1 = peruskoko
             public int etuoikeus = EtuMuut; // ladontajärjestys (PaivitaJarjestys): valittava, rengas, oma, matkan kohde, muut
+            public bool paakaupunki; // kevyt pääkaupunkipiste (kevyet-lista), ei pysäkki
+            public float kevytPeitto; // pääkaupunkipisteen peitto = nimen häivytys (piste vain nimen kanssa)
         }
 
         // Ladonnan etuoikeus (pariteetti 30.9.2026, web nimet.js OMAN_KAUPUNGIN_TARKEYS 1000 ja KOHTEEN_TARKEYS 500):
@@ -676,6 +694,18 @@ namespace Matkakirja
         const float Etuna = 0.3f;
 
         readonly List<Merkki> merkit = new List<Merkki>();
+
+        /// <summary>
+        /// PÄÄKAUPUNKIPISTEET (skeema 1.60, kokoelmat/paakaupungit.json; PT 10.10.2026, Karttasepän #4344): pääkaupungit, jotka
+        /// eivät ole laudan pysäkkejä. Olemassa oleva kaupunkimerkki pienimmässä tärkeysluokassa (tyyli 0), mutta erillään
+        /// <see cref="merkit"/>-listasta: ei pelin kaupunki (ei LahinId-, Kaupungit-, Korosta- eikä Renkaat-rajapinnoissa), ladotaan
+        /// pysäkkien jälkeen kevyenä (NimiLadonta.KaupunkiEhdokas.Kevyt: piste vain nimen kanssa, pysäkit voittavat). Napautus avaa
+        /// maan kortin (<see cref="PaakaupunkiNapautettu"/>). Vanha paketti ilman kokoelmaa: lista jää tyhjäksi.
+        /// </summary>
+        readonly List<Merkki> kevyet = new List<Merkki>();
+
+        /// <summary>Pääkaupunkipisteen napautus: (maa ISO3, pääkaupungin id). Natiivi-UI avaa maan kartuschan.</summary>
+        public static System.Action<string, string> PaakaupunkiNapautettu;
 
         /// <summary>
         /// YHTEINEN RUUTUTÖRMÄYS (löydös 38, build 11): kehyksen varatut alueet pikseleinä. Tämä kerros aloittaa
@@ -727,7 +757,7 @@ namespace Matkakirja
             if (kamera == null) kamera = Camera.main;
             nelio = Nelio();
             if (kierto != null) kierto.Napautettu += Napautus;
-            StartCoroutine(Sisalto.Hae<Sisalto.Kaupunki>("kaupungit", k => StartCoroutine(Rakenna(k))));
+            StartCoroutine(Sisalto.Hae<Sisalto.Kaupunki>("kaupungit", k => StartCoroutine(RakennaKaikki(k))));
             StartCoroutine(SeuraaMaastoa());
         }
 
@@ -747,10 +777,12 @@ namespace Matkakirja
                 yield return odota;
                 if (pallo == null) pallo = FindAnyObjectByType<Cesium3DTileset>();
                 if (pallo == null || merkit.Count == 0) continue;
-                if (pallo.tilesetSource == edellinen && merkit.Count == kaupunkeja) continue;
+                if (pallo.tilesetSource == edellinen && merkit.Count + kevyet.Count == kaupunkeja) continue;
                 edellinen = pallo.tilesetSource;
-                kaupunkeja = merkit.Count;
-                var kohteet = merkit.ToArray();
+                kaupunkeja = merkit.Count + kevyet.Count;
+                var kohteet = new Merkki[kaupunkeja];
+                merkit.CopyTo(kohteet, 0);
+                kevyet.CopyTo(kohteet, merkit.Count);
                 var korkeudet = new double[kohteet.Length];
                 for (int i = 0; i < kohteet.Length; i++) korkeudet[i] = kohteet[i].kaupunki.korkeus;
                 if (edellinen == CesiumDataSource.FromUrl && maastoKorkeudet)
@@ -800,10 +832,24 @@ namespace Matkakirja
         static int Jarjestys(Sisalto.Kaupunki k, bool paketinTarkeys) =>
             paketinTarkeys ? k.tarkeys : (k.aloitus ? 2 : k.lentokentta ? 1 : 0);
 
-        IEnumerator Rakenna(Sisalto.Kaupunki[] kaupungit)
+        /// <summary>Pysäkit ensin, sitten pääkaupunkipisteet (valinnainen kokoelma, skeema 1.60).</summary>
+        IEnumerator RakennaKaikki(Sisalto.Kaupunki[] kaupungit)
+        {
+            yield return Rakenna(kaupungit, false);
+            if (kaupungit == null) yield break;
+            Sisalto.Kaupunki[] paakaupungit = null;
+            yield return Sisalto.Hae<Sisalto.Kaupunki>("paakaupungit", k => paakaupungit = k, valinnainen: true);
+            if (paakaupungit == null || paakaupungit.Length == 0) yield break;
+            var pysakit = new HashSet<string>();
+            foreach (var m in merkit) { pysakit.Add(m.kaupunki.id); if (m.kaupunki.maa != null) pysakkiMaat.Add(m.kaupunki.maa); }
+            yield return Rakenna(System.Array.FindAll(paakaupungit, k => k.id != null && !pysakit.Contains(k.id)), true);
+        }
+
+        IEnumerator Rakenna(Sisalto.Kaupunki[] kaupungit, bool paakaupungit)
         {
             if (kaupungit == null) yield break;
-            bool paketinTarkeys = System.Array.Exists(kaupungit, k => k.tarkeys > 0);
+            // Pääkaupunkipisteet: paketin tarkeys 0 = pienin luokka (tyyli 0).
+            bool paketinTarkeys = paakaupungit || System.Array.Exists(kaupungit, k => k.tarkeys > 0);
             var valmiit = new List<Merkki>();
             int kehyksessa = 0;
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
@@ -847,7 +893,7 @@ namespace Matkakirja
                     kaupunki = k, juuri = juuri, pisteT = p, nimio = n, tarkeys = Jarjestys(k, paketinTarkeys),
                     tyyli = tarkeys,
                     normaali = (float3)math.normalize(u - keskus),
-                    pinta = (float3)u, pohjaKorkeus = k.korkeus,
+                    pinta = (float3)u, pohjaKorkeus = k.korkeus, paakaupunki = paakaupungit,
                 };
                 // Koko, asu ja nimiön mitat (pelin asu tai linssinimet, jos tila on jo päällä).
                 Tyyli(merkki);
@@ -856,6 +902,15 @@ namespace Matkakirja
             }
             // Tärkeimmät ensin; saman tärkeyden sisällä pidempi nimi ei saa etuoikeutta.
             valmiit.Sort((a, b) => b.tarkeys != a.tarkeys ? b.tarkeys - a.tarkeys : a.nimio.text.Length - b.nimio.text.Length);
+            if (paakaupungit)
+            {
+                foreach (var m in valmiit) AsetaPisteenVari(m); // piste piiloon, kunnes nimi mahtuu (kevytPeitto 0)
+                kevyet.AddRange(valmiit);
+                Likaa();
+                PallonLepo.Valmistui("kaupungit");
+                Debug.Log($"MATKAKIRJA kaupungit: {kevyet.Count} pääkaupunkipistettä");
+                yield break;
+            }
             merkit.AddRange(valmiit);
             PaivitaRenkaat();
             likainen = true; PallonLepo.Valmistui("kaupungit");
@@ -867,6 +922,13 @@ namespace Matkakirja
         {
             var paras = Osuma(ruutu);
             if (paras == null) { kortti?.Piilota(); return; }
+            if (paras.paakaupunki)
+            {
+                // Pääkaupunkipiste ei ole pysäkki: ei lentoa eikä pelin kaupunki-ilmoitusta, vain maan kortti.
+                kortti?.Piilota();
+                PaakaupunkiNapautettu?.Invoke(paras.kaupunki.maa, paras.kaupunki.id);
+                return;
+            }
             ValitseKaupunki(paras.kaupunki);
         }
 
@@ -895,6 +957,15 @@ namespace Matkakirja
                 if (m.nimio.enabled && NimenAla(m, p, kerroin).Contains(ruutu)) d = Mathf.Min(d, 1f);
                 if (d < raja && d < parasEtaisyys) { parasEtaisyys = d; paras = m; }
             }
+            if (paras != null) return paras;
+            // Pysäkit voittavat: pääkaupunkipiste osuu vain, kun sen nimi näkyy eikä mikään pysäkki ole osuma-alueella.
+            foreach (var m in kevyet)
+            {
+                if (!m.nimio.enabled || m.kevytPeitto < 0.5f || !Nakyvissa(m, kt, gt, kalusteet, out Vector3 p)) continue;
+                float d = Vector2.Distance(ruutu, p);
+                if (NimenAla(m, p, kerroin).Contains(ruutu)) d = Mathf.Min(d, 1f);
+                if (d < osumaSade * kerroin && d < parasEtaisyys) { parasEtaisyys = d; paras = m; }
+            }
             return paras;
         }
 
@@ -906,7 +977,8 @@ namespace Matkakirja
             ruutu = kamera.WorldToScreenPoint(paikka);
             float etaisyys = kohti.magnitude;
             if (etaisyys <= 0f) return false;
-            return (merkitNakyvat || LinssiTila) && !PalloKierto.PorttiSumea && Suodatettu(m.kaupunki.id)
+            return (merkitNakyvat || LinssiTila) && !PalloKierto.PorttiSumea
+                && (m.paakaupunki ? KevytSuodatettu(m.kaupunki) : Suodatettu(m.kaupunki.id))
                 && MerkkiPaivitys.Edessa(Vector3.Dot(gt.TransformDirection(m.normaali), kohti / etaisyys))
                 && ((m.valintamerkki && !LinssiTila) || !KalusteenAlla(kalusteet, ruutu));
         }
@@ -1013,8 +1085,11 @@ namespace Matkakirja
             // 2) Paikat ja ehdokkaat tärkeysjärjestyksessä (valintamerkit ja etuoikeutetut ensin: jarjestys, muuten merkit).
             nakyvat.Clear();
             ehdokkaat.Clear();
-            foreach (var m in jarjestys.Count > 0 ? jarjestys : merkit)
+            // Pääkaupunkipisteet (kevyet) pysäkkien jälkeen: ne ladotaan viimeisinä eivätkä varaa pistettään etukäteen.
+            var paajono = jarjestys.Count > 0 ? jarjestys : merkit;
+            for (int mi = 0, mn = paajono.Count + kevyet.Count; mi < mn; mi++)
             {
+                var m = mi < paajono.Count ? paajono[mi] : kevyet[mi - paajono.Count];
                 // Korkeuskerroin nostaa maastoa: merkki nousee saman verran (paketin pintakorkeudesta).
                 Vector3 paikka = gt.TransformPoint(m.pinta + m.normaali * KorkeusKerroin.Lisays(m.kaupunki.korkeus));
                 Vector3 kohti = kt.position - paikka;
@@ -1022,7 +1097,8 @@ namespace Matkakirja
                 Vector3 normaali = gt.TransformDirection(m.normaali);
                 // Aloitusportissa (PalloKierto.PorttiSumea) ei merkkejä eikä nimiöitä, kuten webin etusivupallossa.
                 Vector3 ruutu = kamera.WorldToScreenPoint(paikka);
-                bool edessa = (merkitNakyvat || LinssiTila) && !PalloKierto.PorttiSumea && Suodatettu(m.kaupunki.id)
+                bool edessa = (merkitNakyvat || LinssiTila) && !PalloKierto.PorttiSumea
+                    && (m.paakaupunki ? KevytSuodatettu(m.kaupunki) : Suodatettu(m.kaupunki.id))
                     && MerkkiPaivitys.Edessa(Vector3.Dot(normaali, kohti / etaisyys))
                     // Löydös 164 jatko (Fable 26.9.): kalusteen (kartussi, Liiku, pulu, yläpalkki) alle jäävä piste ja sen
                     // nimi piiloon; valittavan kaupungin merkki näkyy aina.
@@ -1079,6 +1155,7 @@ namespace Matkakirja
                                                    m.kaupunki.nimionAnkkuri?.dy ?? 0f, m.nimio.fontSize * m.mitta * kerroin,
                                                    kerroin * m.mitta, out var oma), // web: lx/ly kasvavat kyltin mukana
                     Oma = oma,
+                    Kevyt = m.paakaupunki,
                 });
             }
 
@@ -1117,6 +1194,12 @@ namespace Matkakirja
                 if (m.nimio.enabled != paalla) m.nimio.enabled = paalla;
                 float h = m.nimiHaive, alfa = m.nimiPeitto * m.usva * h * h * (3f - 2f * h);
                 if (Mathf.Abs(m.nimio.alpha - alfa) > 0.004f) m.nimio.alpha = alfa;
+                // Pääkaupunkipiste vain nimen kanssa: piste häivyy nimen mukana.
+                if (m.paakaupunki && Mathf.Abs(m.kevytPeitto - h * h * (3f - 2f * h)) > 0.004f)
+                {
+                    m.kevytPeitto = h * h * (3f - 2f * h);
+                    AsetaPisteenVari(m);
+                }
             }
             Naytetty = naytetty;
         }

@@ -403,6 +403,42 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Tosi(nayta[0] && paikat[0].Ank == NimiLadonta.NimenAnkkuri.Alku && paikat[0].Dx == 7.5f && paikat[0].Dy == 0, paikat[0].ToString());
         }
 
+        [Testi] static void PaakaupunkipistePysakitVoittavat()
+        {
+            // Skeema 1.60 (PT 10.10.2026): pääkaupunkipiste (Kevyt) ladotaan pysäkkien jälkeen, piste vain nimen kanssa.
+            static NimiLadonta.KaupunkiEhdokas Kevyt(float x, float y) { var e = KE(x, y); e.Kevyt = true; return e; }
+            var v = new Ruutuvaraukset(); v.Aloita(1);
+            var nayta = new List<bool>(); var paikat = new List<NimiLadonta.NimenPaikka>();
+            var k = new List<NimiLadonta.KaupunkiEhdokas>
+            {
+                KE(100, 200),      // 0: pysäkki (Rooma)
+                Kevyt(101, 201),   // 1: piste pysäkin pisteen päällä (Vatikaani) → ei mitään
+                Kevyt(400, 400),   // 2: vapaa → piste ja nimi
+                Kevyt(140, 200),   // 3: piste pysäkin nimen päällä → ei mitään
+            };
+            NimiLadonta.LadoKaupungit(k, null, Ruutu, 1f, v, nayta, paikat);
+            Oleta.Tosi(nayta.SequenceEqual(new[] { true, false, true, false }), string.Join(",", nayta));
+            Oleta.Sama(1 + 1 + 2, v.Maara, "pysäkin piste ja nimi + vapaan pääkaupungin nimi ja piste");
+            // Ilman nimeä (nimiöt pois tai nimibudjetti täynnä) ei pistettäkään.
+            v.Aloita(2);
+            var ilman = Kevyt(600, 300); ilman.Sallittu = false;
+            NimiLadonta.LadoKaupungit(new List<NimiLadonta.KaupunkiEhdokas> { ilman }, null, Ruutu, 1f, v, nayta, paikat);
+            Oleta.Tosi(!nayta[0] && v.Maara == 0, "nimiöt pois: ei näy eikä varaa");
+            v.Aloita(3);
+            NimiLadonta.LadoKaupungit(new List<NimiLadonta.KaupunkiEhdokas> { KE(100, 200), Kevyt(600, 300) }, null, Ruutu, 1f, v, nayta, paikat, 0f, 1);
+            Oleta.Tosi(nayta[0] && !nayta[1], "nimibudjetti pysäkeille ensin");
+        }
+
+        [Testi] static void PaakaupunkiRajauksessaKaupungitonMaaAina()
+        {
+            // PT 10.10.2026 (web #4347): kaupungittoman maan pääkaupunki aina, muuten vain pelaajan maan.
+            Oleta.Tosi(NimiLadonta.PaakaupunkiRajauksessa(true, "SVK", "FRA", true), "ei rajausta: näkyy");
+            Oleta.Tosi(NimiLadonta.PaakaupunkiRajauksessa(false, "SRB", "FRA", false), "Belgrad (Serbialla ei laudan kaupunkia): aina");
+            Oleta.Tosi(NimiLadonta.PaakaupunkiRajauksessa(false, "SVK", "SVK", true), "Bratislava Košicessa: näkyy");
+            Oleta.Tosi(!NimiLadonta.PaakaupunkiRajauksessa(false, "SVK", "FRA", true), "Bratislava Pariisissa: piiloon");
+            Oleta.Tosi(!NimiLadonta.PaakaupunkiRajauksessa(false, "SVK", null, true), "maa tuntematon: piiloon");
+        }
+
         [Testi] static void NimiVaihtaaKylkeaKunOikeaVarattu()
         {
             // Web sijoitaKaupunginNimi: oikea → vasen → ylä → ala → kehä.

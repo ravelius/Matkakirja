@@ -659,6 +659,12 @@ namespace Matkakirja
             /// <summary>Laudan oma asettelu (Sisalto.Kaupunki.nimionAnkkuri), jos <see cref="OnOma"/>; ks. <see cref="OmaPaikka"/>.</summary>
             public bool OnOma;
             public NimenPaikka Oma;
+            /// <summary>
+            /// PÄÄKAUPUNKIPISTE (skeema 1.60, kokoelmat/paakaupungit.json; PT 10.10.2026): kevyt piste, joka ei ole pysäkki.
+            /// Pistettä ei varata ennen nimiä; se näkyy vain nimensä kanssa ja vain, jos piste ja nimi mahtuvat pysäkkien,
+            /// ikonien ja aiempien nimien väliin (pysäkit voittavat päällekkäisyydessä). Näytetty varaa pisteen ja nimen.
+            /// </summary>
+            public bool Kevyt;
         }
 
         /// <summary>
@@ -776,6 +782,14 @@ namespace Matkakirja
         }
 
         /// <summary>
+        /// PÄÄKAUPUNKIPISTE PELIN RAJAUKSESSA (skeema 1.60; PT 10.10.2026, pariteetti web #4347): ilman rajausta (ei peliä, maailmatila,
+        /// lento, linssinimet) näkyy aina. Rajauksessa maa, jolla EI ole laudan kaupunkia (Serbia, Albania, Montenegro, minivaltiot …),
+        /// näyttää pääkaupunkinsa aina, koska se on ainoa tie maahan; maa, jolla on laudan kaupunkeja, vain pelaajan maana.
+        /// </summary>
+        public static bool PaakaupunkiRajauksessa(bool eiRajausta, string maa, string pelaajanMaa, bool maallaPysakkeja) =>
+            eiRajausta || !maallaPysakkeja || (pelaajanMaa != null && maa == pelaajanMaa);
+
+        /// <summary>
         /// KAUPUNKIEN LADONTA (löydös 50 vaihe 2, web js/karttanimet.js ladoRuutunimet): varauksissa on jo nostojen
         /// ikonit; ensin varataan KAIKKIEN kaupunkien pisteet (pelimerkit pysyvät paikallaan), sitten nimiöt
         /// järjestyksessä. Nimiö näytetään, jos se ei osu mihinkään varattuun paitsi omaan pisteeseensä (nimiö alkaa
@@ -820,7 +834,7 @@ namespace Matkakirja
             naytetaan.Clear();
             paikat.Clear();
             if (pinot != null) foreach (var r in pinot) varaukset.Varaa(r);
-            foreach (var e in ehdokkaat) varaukset.Varaa(e.Piste);
+            foreach (var e in ehdokkaat) if (!e.Kevyt) varaukset.Varaa(e.Piste);
             float sieto = kerroin;
             var sisalla = ruutu.Laajenna(sieto);
             var laaja = ruutu.Laajenna(sieto + Math.Max(0f, liikevara));
@@ -829,6 +843,13 @@ namespace Matkakirja
             {
                 var paikka = e.Lukko;
                 bool nakyy;
+                // Kevyt (pääkaupunki): ilman nimeä ei pistettäkään, eikä piste saa osua mihinkään jo varattuun.
+                if (e.Kevyt && (!e.Sallittu || e.Leveys <= 0 || ladottu >= katto || varaukset.Osuu(e.Piste)))
+                {
+                    naytetaan.Add(false);
+                    paikat.Add(paikka);
+                    continue;
+                }
                 if (!e.Pakko && e.Sallittu && ladottu >= katto)
                 {
                     naytetaan.Add(false);
@@ -855,6 +876,7 @@ namespace Matkakirja
                         && !varaukset.OsuuPaitsi(NimenLaatikko(e.X, e.Y, e.Lukko, e.Leveys, e.Korkeus, kerroin), e.Piste))
                     {
                         varaukset.Varaa(NimenLaatikko(e.X, e.Y, paikka, e.Leveys, e.Korkeus, kerroin));
+                        if (e.Kevyt) varaukset.Varaa(e.Piste);
                         ladottu++;
                         naytetaan.Add(true);
                         paikat.Add(paikka);
@@ -879,6 +901,7 @@ namespace Matkakirja
                     {
                         var l = NimenLaatikko(e.X, e.Y, paikka, e.Leveys, e.Korkeus, kerroin);
                         varaukset.Varaa(l);
+                        if (e.Kevyt) varaukset.Varaa(e.Piste);
                         ladottu++;
                         if (l.X0 < sisalla.X0 || l.Y0 < sisalla.Y0 || l.X1 > sisalla.X1 || l.Y1 > sisalla.Y1) nakyy = false;
                         naytetaan.Add(nakyy);

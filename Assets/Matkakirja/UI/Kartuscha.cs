@@ -628,6 +628,20 @@ namespace Matkakirja.Natiivi
 
         public void Vaihda() { if (auki) Sulje(); else Avaa(); }
 
+        /// <summary>
+        /// PÄÄKAUPUNKIPISTEEN NAPAUTUS (skeema 1.60, PT 10.10.2026: napautus avaa olemassa olevan maakortin; KaupunkiMerkit
+        /// .PaakaupunkiNapautettu): pelaajan oma maa avataan sellaisenaan; muu maa (maailmanäkymä, matkalla) näytetään avattuna
+        /// testimaan reittiä ja palautuu pelaajan maahan, kun kortti suljetaan tai pelaajan maa vaihtuu.
+        /// </summary>
+        public void NaytaMaa(string iso3)
+        {
+            if (string.IsNullOrEmpty(iso3) || !sallittu) return;
+            if (testiIso == null && iso3 == iso) { Avaa(); return; }
+            paakaupunginMaa = true;
+            Testaa(iso3, true);
+        }
+        bool paakaupunginMaa;
+
         /// <summary>Avattu kortti (web body.infotaulu-auki): Liiku väistyy, pulu hyppää yläpuolelle.</summary>
         public event System.Action<bool> AukiMuuttui;
 
@@ -721,6 +735,8 @@ namespace Matkakirja.Natiivi
                 kortti.RemoveFromClassList("mk-auki");
                 sisus.style.display = DisplayStyle.None;
                 Asettele();
+                // Pääkaupunkipisteestä avattu muu maa: suljettuna takaisin pelaajan maahan (NaytaMaa).
+                if (paakaupunginMaa) { paakaupunginMaa = false; testiIso = null; iso = null; Seuraa(); }
             });
             AukiMuuttui?.Invoke(false);
         }
