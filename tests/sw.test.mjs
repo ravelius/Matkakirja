@@ -275,6 +275,11 @@ const NIPUTTAMATTOMAT = new Set([
   // ainoa tuoja on js/pallolauta/nostot.js, ja pallolauta on
   // niputuksen ulkopuolella. SHELLissä paketti on.
   'js/packs/maastokohteet-ark.js',
+  // Pääkaupunkipisteet (skeema 1.60, 10.10.2026): natiivin ja viennin
+  // datapaketti, jota mikään selainmoduuli ei vielä tuo (webin piirto on
+  // Pelikoodarilla). SHELLissä paketti on. Palautetaan MODULES-listalle,
+  // kun webin ensimmäinen tuoja ilmestyy.
+  'js/packs/paakaupungit.js',
   // Vedon seuranta (valikko poistettu 22.9.2026, "Poista kaikki
   // ylimääräiset vivut valikosta"): js/main.js:n staattinen tuonti
   // hävisi menun mukana. Ainoat jäljellä olevat tuojat, js/pallo.js ja

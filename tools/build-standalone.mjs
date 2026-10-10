@@ -62,7 +62,6 @@ const MODULES = [
   'js/packs/europe-kulttuuri.js',
   'js/packs/kulttuuri-kategoriat.js',
   'js/packs/maa-kategoriat.js',
-  'js/packs/paakaupungit.js',
   // Lukee maa-kategoriat.js:ää, joten se on tämän jälkeen ja ennen
   // fokusvirta-pariisi.js:ää, joka lukee tätä.
   'js/packs/maalehtinostot-fra.js',
