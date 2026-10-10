@@ -7,6 +7,7 @@
 #
 # OSAT (Natiiviseppä 10.10.2026): pallo = pallo ja kartta, linna = linna ja linssit; kummallakin oma lukkovaraus ja 6 min:n
 # raja. Ilman osaa molemmat peräkkäin kahdella varauksella (lukko vapaana osien välissä: juna ja laitekäännökset väliin).
+# KOOT: MATKAKIRJA_ASETTELU_KOOT="mac" (tai "iphone,ipad") → vain nimen alulla valitut koot (Mac-ikkunat 10.10.); tyhjä = kaikki.
 # KUVA-ARKKI: MATKAKIRJA_ASETTELU_KUVAT="nähtävyys,ihmisen matkan valikko" (tai "*") → PNG:t kansioon <loki>-kuvat/.
 #
 # Unity -batchmode (ilman -nographicsia: paneelit piirtyvät laitteen kokoiseen tekstuuriin, kuten KoriKoosteTesti) -executeMethod

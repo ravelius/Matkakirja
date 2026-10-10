@@ -22,7 +22,7 @@ namespace Matkakirja.Editori
     public static class AsetteluTesti
     {
         /// <summary>Laitekoot: nimi, pikselit, turva-alue (origo vasen alakulma kuten Screen.safeArea), pikseliä pisteessä, tabletti.</summary>
-        static readonly (string Nimi, string Arvo)[] Koot =
+        static readonly (string Nimi, string Arvo)[] KaikkiKoot =
         {
             // iPhone 17 Pro 402 × 874 pt @3: Dynamic Island 62 pt, kotipalkki 34 pt (vaakana sivuilla 62 pt, alhaalla 21 pt).
             ("iphone-pysty", "1206,2622,0,102,1206,2334,3,0"),
@@ -30,7 +30,19 @@ namespace Matkakirja.Editori
             // iPad Pro 11" 834 × 1210 pt @2: statuspalkki 24 pt, kotipalkki 20 pt.
             ("ipad-pysty", "1668,2420,0,40,1668,2332,2,1"),
             ("ipad-vaaka", "2420,1668,0,40,2420,1580,2,1"),
+            // Natiivi Mac (PT 10.10.: omistaja testaa Mac-appia, näyttö 2560 × 1440): ikkunan sisältö pisteinä, ei turva-aluetta;
+            // koko näyttö @1 (asettelu pisteinä sama kuin @2, kevyempi tekstuuri), ikkunat @2 (Retina). Viimeinen kenttä = Mac.
+            ("mac-2560x1440", "2560,1440,0,0,2560,1440,1,1,1"),
+            ("mac-1440x900", "2880,1800,0,0,2880,1800,2,1,1"),
+            ("mac-1280x800", "2560,1600,0,0,2560,1600,2,1,1"),
         };
+
+        /// <summary>MATKAKIRJA_ASETTELU_KOOT="mac" (tai "iphone,ipad"): vain nimen alulla valitut koot; tyhjä = kaikki (alustetaan KaikkiKoot-taulun jälkeen).</summary>
+        static readonly (string Nimi, string Arvo)[] Koot = KaikkiKoot.Where(k =>
+        {
+            var v = Environment.GetEnvironmentVariable("MATKAKIRJA_ASETTELU_KOOT");
+            return string.IsNullOrWhiteSpace(v) || v.Split(',').Any(a => a.Trim().Length > 0 && k.Nimi.StartsWith(a.Trim(), StringComparison.Ordinal));
+        }).ToArray();
 
         static void SuljeMaakortti() { var k = UiNakymat.Hae().Kartuscha; k.Sulje(); k.Testaa(null, false); }
 
