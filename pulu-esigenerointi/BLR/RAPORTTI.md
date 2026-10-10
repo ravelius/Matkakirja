@@ -17,3 +17,6 @@ Päätoimittajan jatko-ohje (Sisältökirjurin pistokoe) toteutettu sanatarkoill
 5. Gomelin palatsi: vastaukset-1-2 (6.1, 6.2), vastaukset-2-1 (Starov, Rumjantsev, Paskevitš).
 6. Minsk, pommitus ja tuhoprosentti: vastaukset-1-2 (7.2), vastaukset-2-1 (Minskin tuho), vastaukset-2-2 (Minsk toisessa maailmansodassa); "24.6.1941" ja "80–90 %" poistettu kaikkialta.
 Tarkistus: tarkista-era 0 virhettä (V1 ja V2), tarkista-valmis 0 virhettä (1 varoitus: Iran/Ramsar, historiallinen tosiasia). Paketti BLR.json koottu uudelleen.
+
+### Lisäkorjaus 10.10. (jatko-ohje 2)
+Njasvižin linnan "kolmikerroksinen" ja "neljä kahdeksankulmaista tornia" (vain Wikipedia) poistettu kolmesta vastauksesta: vastaukset-1-1 (kohta 2.1), vastaukset-2-1 (Mikołaj Krzysztof Radziwiłł; lisää-avain "njasvižin linnassa"). Muu teksti ennallaan. tarkista-era ja tarkista-valmis: 0 virhettä; BLR.json koottu uudelleen.
