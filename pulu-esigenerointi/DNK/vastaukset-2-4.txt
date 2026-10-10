@@ -101,7 +101,7 @@ Millaisia ovat Bornholmin pyöreät kirkot?
 Miksi Itämeren saarista on taisteltu?
 
 ### 258
-'Bornholmin timantti' on paikallinen viikunalajike, joka kasvaa Bornholmilla. Viikuna on lämpöä vaativa puu, joka menestyy yleensä Välimeren seuduilla, ja Bornholmilla sen kasvu on mahdollista saaren lämpimän ilmaston ansiosta. Tämä liittyy saaren lempinimeen [[aurinkosaareksi]]. Lajikkeen historiasta en ole varma. Pohjoisella leveysasteella kasvava viikuna on silti hyvä esimerkki saaren omasta ilmastosta.
+'Bornholmin timantti' on paikallinen viikunalajike, joka kasvaa Bornholmilla. Viikuna on lämpöä vaativa puu, joka menestyy yleensä [[Välimeren]] seuduilla, ja Bornholmilla sen kasvu on mahdollista saaren lämpimän ilmaston ansiosta. Tämä liittyy saaren lempinimeen [[aurinkosaareksi]]. Lajikkeen historiasta en ole varma. Pohjoisella leveysasteella kasvava viikuna on silti hyvä esimerkki saaren omasta ilmastosta.
 JATKOT:
 Millainen Bornholmin ilmasto on?
 Mitä muuta Bornholmilla viljellään?
@@ -185,7 +185,7 @@ Mitkä olivat Herakleen kaksitoista työtä?
 Mitä muita patsaita Koldinghusissa on?
 
 ### 272
-Europa Nostra on eurooppalainen kulttuuriperinnön suojelujärjestö, joka palkitsee onnistuneita restaurointi- ja suojeluhankkeita. [[Koldinghusin]] laaja kunnostus kesti vuodesta 1976 vuoteen 1993, ja se palkittiin Europa Nostra -palkinnolla. Kunnostus teki raunioina vuosikymmeniä olleesta linnasta jälleen käyttökelpoisen museon. Palkinnon tarkemmasta luokasta en ole varma.
+[[Europa Nostra]] on eurooppalainen kulttuuriperinnön suojelujärjestö, joka palkitsee onnistuneita restaurointi- ja suojeluhankkeita. [[Koldinghusin]] laaja kunnostus kesti vuodesta 1976 vuoteen 1993, ja se palkittiin Europa Nostra -palkinnolla. Kunnostus teki raunioina vuosikymmeniä olleesta linnasta jälleen käyttökelpoisen museon. Palkinnon tarkemmasta luokasta en ole varma.
 JATKOT:
 Mitä muita kohteita Europa Nostra on palkinnut?
 Miten Koldinghusin raunio kunnostettiin?
@@ -239,7 +239,7 @@ Mikä Alsin saari on?
 Miten Sønderborgiin pääsee Dybbølista?
 
 ### 281
-Lund on kaupunki Ruotsin Skånessa, ja sen romaaninen tuomiokirkko oli esikuvana [[Viborgin]] uudelle tuomiokirkolle. Skåne oli aiemmin osa Tanskaa, ja se siirtyi Ruotsille vuoden 1658 rauhassa. Lundin tuomiokirkko on Pohjoismaiden tärkeimpiä keskiaikaisia kirkkoja, ja Lundilla oli keskiajalla suuri merkitys kirkollisena keskuksena. Viborgin uusi kirkko vihittiin käyttöön vuonna 1876, ja sen halvempi graniittijulkisivu mukailee Lundin esikuvaa. Lundin yliopisto on yksi Ruotsin vanhimmista, mutta sen perustamisvuodesta en ole varma.
+[[Lund]] on kaupunki Ruotsin [[Skånessa]], ja sen romaaninen tuomiokirkko oli esikuvana [[Viborgin]] uudelle tuomiokirkolle. Skåne oli aiemmin osa Tanskaa, ja se siirtyi Ruotsille vuoden 1658 rauhassa. Lundin tuomiokirkko on Pohjoismaiden tärkeimpiä keskiaikaisia kirkkoja, ja Lundilla oli keskiajalla suuri merkitys kirkollisena keskuksena. Viborgin uusi kirkko vihittiin käyttöön vuonna 1876, ja sen halvempi graniittijulkisivu mukailee Lundin esikuvaa. Lundin yliopisto on yksi Ruotsin vanhimmista, mutta sen perustamisvuodesta en ole varma.
 JATKOT:
 Millainen on romaaninen kirkkoarkkitehtuuri?
 Miksi Skåne siirtyi Ruotsille?
@@ -263,7 +263,7 @@ Mikä krypta on?
 Miksi Viborgista tuli piispanistuin?
 
 ### 285
-Piispanistuin on hiippakunnan kirkollinen keskus, paikka jossa piispa toimii. Sen kirkko on tuomiokirkko, ja nimi tulee latinan sanasta cathedra, joka tarkoittaa istuinta. [[Viborgissa]] on ollut piispanistuin vuodesta 1065, ja siksi kaupungin tuomiokirkko on yksi Tanskan tärkeimmistä historiallisista kirkoista. Nykyinen rakennus on 1800-luvun työ, mutta sen vanhin osa, krypta, kuuluu keskiaikaisen katedraalin perintöön. Katedraali aloitettiin noin vuonna 1130.
+Piispanistuin on hiippakunnan kirkollinen keskus, paikka jossa piispa toimii. Sen kirkko on tuomiokirkko, ja nimi tulee latinan sanasta cathedra, joka tarkoittaa istuinta. [[Viborgissa]] on ollut [[piispanistuin]] vuodesta 1065, ja siksi kaupungin tuomiokirkko on yksi Tanskan tärkeimmistä historiallisista kirkoista. Nykyinen rakennus on 1800-luvun työ, mutta sen vanhin osa, krypta, kuuluu keskiaikaisen katedraalin perintöön. Katedraali aloitettiin noin vuonna 1130.
 JATKOT:
 Mikä tekee kirkosta tuomiokirkon?
 Mitä hiippakunta tarkoittaa?
@@ -371,7 +371,7 @@ Miten goottilainen tyyli eroaa romaanisesta?
 Missä muualla Euroopassa on romaanisia kirkkoja?
 
 ### 303
-Pyhän Bendtin kirkko on [[Ringstedin]] tunnetuin nähtävyys. Se on entisen benediktiiniläisluostarin romaaninen kirkko, jossa on lukuisia keskiaikaisten Tanskan kuninkaallisten hautoja. Kirkolla on ollut myös hallinnollinen merkitys: Sjællandin maakäräjät siirtyivät sinne vuonna 1584 ja Kööpenhaminaan vuonna 1805. Kaupungin vaakuna on vuodelta 1421, ja sen kolmesta palvojahahmosta yksi tulkitaan Benedictus Nursialaiseksi, mikä kytkee kaupungin luostarin perintöön. Rakennuksen tarkemmista vaiheista en ole varma.
+Pyhän Bendtin kirkko on [[Ringstedin]] tunnetuin nähtävyys. Se on entisen [[benediktiiniläisluostarin]] romaaninen kirkko, jossa on lukuisia keskiaikaisten Tanskan kuninkaallisten hautoja. Kirkolla on ollut myös hallinnollinen merkitys: Sjællandin maakäräjät siirtyivät sinne vuonna 1584 ja Kööpenhaminaan vuonna 1805. Kaupungin vaakuna on vuodelta 1421, ja sen kolmesta palvojahahmosta yksi tulkitaan Benedictus Nursialaiseksi, mikä kytkee kaupungin luostarin perintöön. Rakennuksen tarkemmista vaiheista en ole varma.
 JATKOT:
 Keitä kuninkaita kirkkoon on haudattu?
 Miten romaaninen tyyli näkyy kirkossa?
@@ -407,7 +407,7 @@ Millaisia esineitä haudasta löytyi?
 Mikä oli Hedebyn kammiohauta?
 
 ### 309
-Ladbyssä viikinkimuseo toimii samalla paikalla, jossa laivahauta löydettiin, ja laiva on säilytetty löytöpaikallaan. Museon tarkemmista näyttelyistä en ole varma. Hauta ajoitetaan 900-luvun alkuun, ja se on ainoa Tanskasta löydetty viikinkiajan laivahauta. Roskildenvuonosta on lisäksi tunnettu viikinkilaivoja: viisi alusta upotettiin siellä 1000-luvulla, ja ne tunnetaan siksi tarkasti. [[Roskildenvuonon]] löydöt ja Ladbyn hauta täydentävät toisiaan, sillä ensimmäiset kertovat laivojen rakenteesta ja jälkimmäinen hautaustavoista.
+[[Ladbyssä]] viikinkimuseo toimii samalla paikalla, jossa laivahauta löydettiin, ja laiva on säilytetty löytöpaikallaan. Museon tarkemmista näyttelyistä en ole varma. Hauta ajoitetaan 900-luvun alkuun, ja se on ainoa Tanskasta löydetty viikinkiajan laivahauta. Roskildenvuonosta on lisäksi tunnettu viikinkilaivoja: viisi alusta upotettiin siellä 1000-luvulla, ja ne tunnetaan siksi tarkasti. [[Roskildenvuonon]] löydöt ja Ladbyn hauta täydentävät toisiaan, sillä ensimmäiset kertovat laivojen rakenteesta ja jälkimmäinen hautaustavoista.
 JATKOT:
 Miten Roskilden laivat nostettiin vedestä?
 Mitä viikinkimuseoissa muuten voi nähdä?
@@ -425,13 +425,13 @@ Mitä Osebergin laivahaudasta löytyi?
 Miksi vainajalle laitettiin hautalahjoja?
 
 ### 312
-Viikinkilaivojen rungon rakennustapa on limilaudoitus eli klinkkerirakenne: laudat asetettiin osittain päällekkäin ja kiinnitettiin toisiinsa niiteillä. Se teki rungosta kevyen ja joustavan, ja siksi laivat kestivät aallokkoa ja pääsivät matalaankin veteen. Sauman tiivistämiseen käytettiin perinteisesti tervattua villaa tai eläimenkarvaa, mutta tarkoista käytännöistä en ole varma. Purje oli viikinkien laivoissa usein raidallista villaa. [[Roskilden]] viikinkilaivoja tunnetaan tarkasti, koska viisi niistä upotettiin 1000-luvulla Roskildenvuonoon.
+[[Viikinkilaivojen]] rungon rakennustapa on limilaudoitus eli klinkkerirakenne: laudat asetettiin osittain päällekkäin ja kiinnitettiin toisiinsa niiteillä. Se teki rungosta kevyen ja joustavan, ja siksi laivat kestivät aallokkoa ja pääsivät matalaankin veteen. Sauman tiivistämiseen käytettiin perinteisesti tervattua villaa tai eläimenkarvaa, mutta tarkoista käytännöistä en ole varma. Purje oli viikinkien laivoissa usein raidallista villaa. [[Roskilden]] viikinkilaivoja tunnetaan tarkasti, koska viisi niistä upotettiin 1000-luvulla Roskildenvuonoon.
 JATKOT:
 Miten viikinkien purje valmistettiin?
 Mitä Roskilden laivoille tapahtui?
 
 ### 313
-Roskilde on kaupunki Sjællandin saarella Roskildenvuonon pohjukassa. Vuonoon upotettiin 1000-luvulla viisi viikinkilaivaa, ja siksi viikinkiajan laivoja tunnetaan Tanskassa tarkasti. Niitä esitellään Roskilden viikinkilaivamuseossa. Vuono on matala ja mutkitteleva, ja sen kautta pääsi Atlantille lännessä ja jokireittejä pitkin Mustallemerelle idässä. Kaupungin tuomiokirkko kuuluu Unescon maailmanperintöön, ja siihen on haudattu Tanskan kuninkaita; tarkemmista vuosista en ole varma.
+[[Roskilde]] on kaupunki [[Sjællandin]] saarella [[Roskildenvuonon]] pohjukassa. Vuonoon upotettiin 1000-luvulla viisi viikinkilaivaa, ja siksi viikinkiajan laivoja tunnetaan Tanskassa tarkasti. Niitä esitellään Roskilden viikinkilaivamuseossa. Vuono on matala ja mutkitteleva, ja sen kautta pääsi Atlantille lännessä ja jokireittejä pitkin Mustallemerelle idässä. Kaupungin tuomiokirkko kuuluu Unescon maailmanperintöön, ja siihen on haudattu Tanskan kuninkaita; tarkemmista vuosista en ole varma.
 JATKOT:
 Miksi laivat upotettiin vuonoon?
 Keitä kuninkaita Roskilden tuomiokirkkoon on haudattu?

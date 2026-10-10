@@ -17,7 +17,7 @@ Millaisia nähtävyyksiä Skanderborgin ympäristössä on?
 Miksi Tanskassa on perinteisesti rakennettu paljon tuulimyllyjä?
 
 ### 4
-Tanska on Pohjois-Euroopan kuningaskunta, jonka pinta-ala on suurelta osin jääkauden muovaamaa alavaa maata ja jonka luontoon kuuluvat pyökkimetsät, dyynit ja pitkä rannikko. Pyökki eli bøg on kansallispuu, ja toukokuussa metsät käyvät läpi bøgespringiksi kutsutun muutoksen: lehdet puhkeavat lähes koko maassa saman viikon aikana, ja ruskea talvimetsä muuttuu muutamassa päivässä kirkkaan vihreäksi. Juuri ennen lehtien puhkeamista metsän pohja peittyy valkoisilla vuokoilla. Historiassa maa tunnetaan [[viikinkiajasta]]: noin vuoden 1040 tienoilla Roskildenvuonolla lähti liikkeelle laivoja, joiden miehistöt souti kuudellakymmenellä airolla, ja viisi viikinkilaivaa upotettiin vuonoon 1000-luvulla. Sarvikypärä on 1800-luvun oopperalavojen keksintö, eikä sitä ole löydetty yhdestäkään viikinkiajan löydöstä.
+[[Tanska]] on Pohjois-Euroopan kuningaskunta, jonka pinta-ala on suurelta osin jääkauden muovaamaa alavaa maata ja jonka luontoon kuuluvat pyökkimetsät, dyynit ja pitkä rannikko. Pyökki eli bøg on kansallispuu, ja toukokuussa metsät käyvät läpi bøgespringiksi kutsutun muutoksen: lehdet puhkeavat lähes koko maassa saman viikon aikana, ja ruskea talvimetsä muuttuu muutamassa päivässä kirkkaan vihreäksi. Juuri ennen lehtien puhkeamista metsän pohja peittyy valkoisilla vuokoilla. Historiassa maa tunnetaan [[viikinkiajasta]]: noin vuoden 1040 tienoilla [[Roskildenvuonolla]] lähti liikkeelle laivoja, joiden miehistöt souti kuudellakymmenellä airolla, ja viisi viikinkilaivaa upotettiin vuonoon 1000-luvulla. Sarvikypärä on 1800-luvun oopperalavojen keksintö, eikä sitä ole löydetty yhdestäkään viikinkiajan löydöstä.
 JATKOT:
 Miksi viikinkilaivoja upotettiin Roskildenvuonoon?
 Missä Tanskan pyökkimetsiä on eniten?
@@ -29,7 +29,7 @@ Miten Hampurin satama on vaikuttanut kaupungin historiaan?
 Millainen alue Lüneburgin nummi on?
 
 ### 6
-Jääkaudella tarkoitetaan pitkää ajanjaksoa, jolloin maapallon ilmasto oli nykyistä kylmempi ja laajat alueet peittyivät mannerjäätiköillä. Viimeisimmän jääkauden aikana Pohjois-Euroopan peitti paksu jäämassa, joka ulottui Skandinaviasta Tanskan ja Pohjois-Saksan alueelle asti. Kun jää suli, se jätti jälkeensä moreenia, harjuja, kumpuja ja järviä. Painavan jään alta vapautunut maankamara kohoaa yhä, ja ilmiötä kutsutaan [[maannousuksi]]; se on Suomen rannikolla edelleen havaittavissa. Tanskassa jäljet näkyvät alavana, kumpuilevana maisemana ja Itä-Jyllannin vuonomaisina lahtina.
+Jääkaudella tarkoitetaan pitkää ajanjaksoa, jolloin maapallon ilmasto oli nykyistä kylmempi ja laajat alueet peittyivät mannerjäätiköillä. Viimeisimmän jääkauden aikana Pohjois-Euroopan peitti paksu jäämassa, joka ulottui [[Skandinaviasta]] [[Tanskan]] ja Pohjois-Saksan alueelle asti. Kun jää suli, se jätti jälkeensä moreenia, harjuja, kumpuja ja järviä. Painavan jään alta vapautunut maankamara kohoaa yhä, ja ilmiötä kutsutaan [[maannousuksi]]; se on Suomen rannikolla edelleen havaittavissa. Tanskassa jäljet näkyvät alavana, kumpuilevana maisemana ja Itä-Jyllannin vuonomaisina lahtina.
 JATKOT:
 Kuinka nopeasti maa nousee Suomessa jääkauden jäljiltä?
 Mikä on jääkauden ja jäätiköitymisen ero?
@@ -107,7 +107,7 @@ Miten merituulipuistot rakennetaan matalalle merelle?
 Miksi Tanska on edelläkävijä tuulivoimassa?
 
 ### 19
-Norjanrauma on Pohjanmeren pohjassa Norjan rannikon edustalla kulkeva pitkä syvänne. Se jatkuu [[Skagerrakin]] kautta Norjan etelärannikolle, ja sen syvin kohta on noin seitsemänsataa metriä; tarkasta luvusta en ole varma. Muu Pohjanmeri on huomattavasti matalampi, joten rauma erottuu selvästi meren pohjan muodoissa. Syvänteen on arveltu muotoutuneen jäätiköiden ja jääkautisten jäävirtojen vaikutuksesta. Rauman vesi on kylmempää ja syvempää kuin ympäröivän matalan jalustan, mikä vaikuttaa meren virtauksiin ja eliöstöön.
+[[Norjanrauma]] on [[Pohjanmeren]] pohjassa Norjan rannikon edustalla kulkeva pitkä syvänne. Se jatkuu [[Skagerrakin]] kautta Norjan etelärannikolle, ja sen syvin kohta on noin seitsemänsataa metriä; tarkasta luvusta en ole varma. Muu Pohjanmeri on huomattavasti matalampi, joten rauma erottuu selvästi meren pohjan muodoissa. Syvänteen on arveltu muotoutuneen jäätiköiden ja jääkautisten jäävirtojen vaikutuksesta. Rauman vesi on kylmempää ja syvempää kuin ympäröivän matalan jalustan, mikä vaikuttaa meren virtauksiin ja eliöstöön.
 JATKOT:
 Miten jäätiköt ovat muovanneet merenpohjaa Pohjanmerellä?
 Mikä Skagerrak on ja missä se sijaitsee?
@@ -155,7 +155,7 @@ Millaisia aarteita Tanskan kansallisgalleriassa on?
 Miksi merikotka on tärkeä Tanskan luonnolle?
 
 ### 27
-Itämeri on Atlantin haara ja maailman suurin murtovesiallas. Sen ympärillä ovat Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Vähäsuolaisuuden vuoksi laivamato ei viihdy siellä, ja siksi merenpohjassa on säilynyt vanhoja puuhylkyjä; tunnetuin on ruotsalainen sotalaiva [[Vasa]], joka kaatui neitsytmatkallaan 10. elokuuta 1628 ja nostettiin pohjasta 333 vuotta myöhemmin lähes ehjänä. Meri on matala, ja sen ainoa yhteys Pohjanmerelle kulkee Tanskan salmien kautta. Veden vaihtuminen on hidasta, minkä vuoksi meri on herkkä ympäristömuutoksille. Pohjoisosissa vesi on lähes makeaa ja lounaassa suolaisempaa.
+[[Itämeri]] on Atlantin haara ja maailman suurin murtovesiallas. Sen ympärillä ovat Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Vähäsuolaisuuden vuoksi laivamato ei viihdy siellä, ja siksi merenpohjassa on säilynyt vanhoja puuhylkyjä; tunnetuin on ruotsalainen sotalaiva [[Vasa]], joka kaatui neitsytmatkallaan 10. elokuuta 1628 ja nostettiin pohjasta 333 vuotta myöhemmin lähes ehjänä. Meri on matala, ja sen ainoa yhteys [[Pohjanmerelle]] kulkee Tanskan salmien kautta. Veden vaihtuminen on hidasta, minkä vuoksi meri on herkkä ympäristömuutoksille. Pohjoisosissa vesi on lähes makeaa ja lounaassa suolaisempaa.
 JATKOT:
 Miksi Itämeren vesi uusiutuu niin hitaasti?
 Mikä on Itämeren syvin kohta?
@@ -179,7 +179,7 @@ Miten Vasa saatiin nostettua merenpohjasta?
 Miten laivaa on säilytetty nostamisen jälkeen?
 
 ### 31
-Landsortdjupet on Itämeren syvin tunnettu kohta, ja se sijaitsee Ruotsin itärannikolla Landsortin saaren edustalla Tukholman saariston eteläpuolella. Syvyydeksi ilmoitetaan noin 459 metriä, mutta lähteet antavat hieman eri lukuja, joten tarkasta arvosta en ole varma. Syvänne on kapea ja rotkomainen, ja sen vesi vaihtuu hitaasti. Itämeren keskisyvyys on vain runsaat viisikymmentä metriä, joten Landsortdjupet on poikkeuksellinen kohta matalassa meressä. Syvänteessä ja muissa Itämeren syvissä altaissa on usein hapen puutetta.
+[[Landsortdjupet]] on Itämeren syvin tunnettu kohta, ja se sijaitsee Ruotsin itärannikolla [[Landsortin]] saaren edustalla [[Tukholman saariston]] eteläpuolella. Syvyydeksi ilmoitetaan noin 459 metriä, mutta lähteet antavat hieman eri lukuja, joten tarkasta arvosta en ole varma. Syvänne on kapea ja rotkomainen, ja sen vesi vaihtuu hitaasti. Itämeren keskisyvyys on vain runsaat viisikymmentä metriä, joten Landsortdjupet on poikkeuksellinen kohta matalassa meressä. Syvänteessä ja muissa Itämeren syvissä altaissa on usein hapen puutetta.
 JATKOT:
 Miksi Itämeren syvissä altaissa on hapen puutetta?
 Mitä Tukholman saaristossa kannattaa nähdä?
@@ -197,7 +197,7 @@ Millainen Rosenborgin linna on?
 Miksi Tanska menetti alueita Christian IV:n aikana?
 
 ### 34
-Tyylikaudet ovat aikakausia, joilla rakennustaiteella oli omat tunnuspiirteensä. Romaaninen tyyli, noin 1000-luvulta 1200-luvulle, tunnetaan paksuista muureista ja pyöreistä kaarista. Gotiikka seurasi sitä, ja sille ovat tyypillisiä suippokaaret, korkeat holvit ja suuret ikkunat. Renessanssi toi mukanaan antiikista vaikutteita saaneet symmetriset muodot, ja barokki puolestaan runsaat koristeet ja dramaattiset vaikutelmat. Roskilden tuomiokirkossa nämä kerrostuvat saman rakennuksen eri osiin, sillä kirkon rungon ympärille lisättiin hautakappeleita eri vuosisatoina. Siksi kirkko toimii eräänlaisena rakennetun historian oppikirjana.
+Tyylikaudet ovat aikakausia, joilla rakennustaiteella oli omat tunnuspiirteensä. Romaaninen tyyli, noin 1000-luvulta 1200-luvulle, tunnetaan paksuista muureista ja pyöreistä kaarista. [[Gotiikka]] seurasi sitä, ja sille ovat tyypillisiä suippokaaret, korkeat holvit ja suuret ikkunat. [[Renessanssi]] toi mukanaan antiikista vaikutteita saaneet symmetriset muodot, ja barokki puolestaan runsaat koristeet ja dramaattiset vaikutelmat. Roskilden tuomiokirkossa nämä kerrostuvat saman rakennuksen eri osiin, sillä kirkon rungon ympärille lisättiin hautakappeleita eri vuosisatoina. Siksi kirkko toimii eräänlaisena rakennetun historian oppikirjana.
 JATKOT:
 Mikä erottaa gotiikan romaanisesta tyylistä?
 Miten renessanssi levisi Pohjoismaihin?
