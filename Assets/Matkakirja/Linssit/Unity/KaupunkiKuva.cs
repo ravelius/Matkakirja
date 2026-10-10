@@ -310,6 +310,8 @@ namespace Matkakirja.Natiivi
                         case "omavalo": CesiumOmatMallit.OmaValo = v != 0; break;   // LS2 9.10.: omien mallien valo (seuraava avaus)
                         case "omavalotus": CesiumOmatMallit.Valotus = v; break;
                         case "omavarjot": OmatVarjot.Paalla = v != 0; break;   // LS2 9.10.: omien mallien aurinkovarjot
+                        case "omaleivottu": KaupunkiIlmakeha.OmaLeivottu = v != 0; break;   // LS2 10.10.: omien mallien aurinko leivotusta suunnasta
+                        case "omaatsimuutti": KaupunkiIlmakeha.OmaAtsimuuttiPakotettu = v; break;
                         case "omavarjomatka": OmatVarjot.MatkaAsetettu = v; break;
                         case "omajulkisivu": CesiumOmatMallit.Julkisivu = v; break;
                         case "omahehku": CesiumOmatMallit.Hehku = v; break;

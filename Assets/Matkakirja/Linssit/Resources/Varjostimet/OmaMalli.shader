@@ -41,6 +41,7 @@ Shader "Matkakirja/Linssit/OmaMalli"
         float4 _metallicRoughnessTexture_ST; float4 _metallicRoughnessFactor; float _metallicRoughnessTextureCoordinateIndex;
         float4 _occlusionTexture_ST; float _occlusionStrength; float _occlusionTextureCoordinateIndex;
         CBUFFER_END
+        float4 _OmaAurinko;   // omien mallien aurinko (KaupunkiIlmakeha.OmaAtsimuutti): laattojen leivottu atsimuutti, todellinen korkeus
         float4 _OmaValo;   // x valotus (1), y julkisivuvalaistuksen voima illalla, z hehkun voimistus illalla, w varjopuolen nosto
         float2 Kanava(float2 a, float2 b, float2 c, float2 d, float i) { return i < 0.5 ? a : i < 1.5 ? b : i < 2.5 ? c : d; }
         // Kuten CesiumDefaultTilesetShader: alfaleikkaus 0,5 perusvärin alfasta (LR:n korttipuut alphaMode MASK) ja kaksipuolinen piirto.
@@ -110,13 +111,13 @@ Shader "Matkakirja/Linssit/OmaMalli"
                 float4 mr = SAMPLE_TEXTURE2D(_metallicRoughnessTexture, sampler_metallicRoughnessTexture, v.uvNM.zw);
                 float metalli = saturate(_metallicRoughnessFactor.x * mr.b), karheus = clamp(_metallicRoughnessFactor.y * mr.g, 0.045, 1.0);
                 float peitto = lerp(1.0, SAMPLE_TEXTURE2D(_occlusionTexture, sampler_occlusionTexture, v.uvO).r, saturate(_occlusionStrength));
-                // Aurinko: KAUPUNGIN aurinko (_IlmAurinko, x itä, y ylös, z pohjoinen; PT 9.10.: ND kauempaa harmaa) eikä URP:n
+                // Aurinko: KAUPUNGIN aurinko (_OmaAurinko = _IlmAurinko laattojen leivotulla atsimuutilla, LS2 10.10.; x itä, y ylös, z pohjoinen; PT 9.10.: ND kauempaa harmaa) eikä URP:n
                 // päävalo, joka on kartan aurinko ja seuraa kameraa (Kartta/Aurinko.cs, ei varjoja): muuten etelän seinät jäivät valotta
                 // ja valo vaihtoi puolta kameran mukana. Päävalosta vain väri. Pehmeä kääre (Googlen leivottu valo on pehmeä), pilvien varjot.
                 Light valo = GetMainLight(TransformWorldToShadowCoord(v.w));
-                bool kaupunki = dot(_IlmAurinko.xyz, _IlmAurinko.xyz) > 0.5;
-                valo.direction = kaupunki ? normalize(_IlmAurinko.xyz) : valo.direction;
-                valo.color *= kaupunki ? saturate(_IlmAurinko.y * 6.0 + 0.1) : 1.0;   // aurinko horisontin alla → ei suoraa valoa
+                bool kaupunki = dot(_OmaAurinko.xyz, _OmaAurinko.xyz) > 0.5;
+                valo.direction = kaupunki ? normalize(_OmaAurinko.xyz) : valo.direction;
+                valo.color *= kaupunki ? saturate(_OmaAurinko.y * 6.0 + 0.1) : 1.0;   // aurinko horisontin alla → ei suoraa valoa
                 float nl = saturate((dot(n, valo.direction) + 0.25) / 1.25);
                 float pilvi = IlmPilvi(v.w * m) * _IlmPilviParam.y * saturate(_IlmAurinko.y * 4.0);
                 float3 suora = valo.color * nl * valo.shadowAttenuation * (1.0 - pilvi);
