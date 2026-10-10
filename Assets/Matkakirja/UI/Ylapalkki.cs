@@ -80,7 +80,7 @@ namespace Matkakirja.Natiivi
             get
             {
                 if (Pakota.HasValue) return Pakota.Value;
-                if (Screen.width <= Screen.height) return false;
+                if (UiRuutu.Leveys <= UiRuutu.Korkeus) return false;
                 // Vaaka-iPhone osuu aina webin rajaan (korkein vaaka-iPhone 440 pt ≤ 520 pt). Screen.dpi ei kelpaa (uusilla malleilla
                 // väärä skaala, vrt. PuhelimenSkaala), joten iPhone ei mittaa: TF 129:ssä palkki jäi vaakaan näkyviin.
                 // iPad (omistaja 3.10.2026 klo 14.2x, web päätös 43/9 "pointer: coarse and max-width: 1366px"): palkki poistuu myös
@@ -94,7 +94,8 @@ namespace Matkakirja.Natiivi
         public static bool? PakotaKelluva;
 
         /// <summary>iPhone (iOS ilman tablettia); testikomento ui ylapalkki kelluva|palkki pakottaa.</summary>
-        public static bool Puhelin => PakotaKelluva ?? (Application.platform == RuntimePlatform.IPhonePlayer && !UiKerros.Tabletti);
+        // Asettelutesti (UiRuutu.Testi, vain editorissa): puhelinkoko käyttäytyy kuin iPhone (saaririvi, matala palkki); laitteella ennallaan.
+        public static bool Puhelin => PakotaKelluva ?? ((Application.platform == RuntimePlatform.IPhonePlayer || UiRuutu.Testi != null) && !UiKerros.Tabletti);
 
         /// <summary>Kelluva yläosa poistui käytöstä (omistaja 24.9. klo 16.1x): iPhonellakin ruskea palkki.</summary>
         public static bool Kelluva => false;
@@ -138,7 +139,7 @@ namespace Matkakirja.Natiivi
         /// <summary>iPad-nahan pala @2x: 1290 × 260 px = 645 × 130 pt; alareunan varjo, sauma ja tikkaus rivit 222–260 = 19 pt.</summary>
         const float IpadNahkaLeveys = 645f, IpadNahkaKorkeus = 130f, IpadTikkaus = 19f, IpadReuna = 36f;
 
-        public static bool Matala => Puhelin && Screen.height > Screen.width && !Kelluva;
+        public static bool Matala => Puhelin && UiRuutu.Korkeus > UiRuutu.Leveys && !Kelluva;
         /// <summary>Matalan palkin rivi (webin iPhone-napit 40 × 40) ja alavara (webin täyte 4,8).</summary>
         const float MatalaRivi = 40f, MatalaAla = 4.8f;
         /// <summary>
@@ -155,7 +156,7 @@ namespace Matkakirja.Natiivi
         /// iPhonen pikseliä pisteessä: lyhyt sivu ≥ 1000 px on @3x (X:stä alkaen, paitsi XR/11 828 px ja SE 750 px @2x).
         /// Screen.dpi ei kelpaa: simulaattori ilmoitti iPhone 18 Pro:lle @2x:n dpi:n (saari laskettiin 239 pt:hen).
         /// </summary>
-        public static float PuhelimenSkaala => Mathf.Min(Screen.width, Screen.height) >= 1000 ? 3f : 2f;
+        public static float PuhelimenSkaala => UiRuutu.Testi?.PikseliaPisteessa ?? (Mathf.Min(UiRuutu.Leveys, UiRuutu.Korkeus) >= 1000 ? 3f : 2f);
 
         /// <summary>
         /// Dynamic Island tai lovi ruudun pisteinä (origo ylhäällä vasemmalla); leveys 0 = ei lovea.
@@ -167,10 +168,10 @@ namespace Matkakirja.Natiivi
         {
             if (PakotaSaari.HasValue) return PakotaSaari.Value;
             float pp = PuhelimenSkaala;
-            foreach (var c in Screen.cutouts)
-                if (c.yMax >= Screen.height - 2f * pp && c.width < Screen.width * 0.8f)
+            foreach (var c in UiRuutu.Testi == null ? Screen.cutouts : new Rect[0])
+                if (c.yMax >= UiRuutu.Korkeus - 2f * pp && c.width < UiRuutu.Leveys * 0.8f)
                 {
-                    var saari = new Rect(c.xMin / pp, (Screen.height - c.yMax) / pp, c.width / pp, c.height / pp);
+                    var saari = new Rect(c.xMin / pp, (UiRuutu.Korkeus - c.yMax) / pp, c.width / pp, c.height / pp);
                     // Löydös 73: Unity antaa Dynamic Islandin suorakulmion ruudun yläreunasta saaren alareunaan
                     // (iPhone 17: y 0,3, korkeus 49,7, leveys 127,7). Saaren todellinen kehys (Päätoimittaja 2.10. klo 16.1x,
                     // mitattu simulaattorin saarimaskista @3x): iPhone 17 125 × 36,33 pt, yläreuna 14 pt, alareuna 50,33 pt.
@@ -184,7 +185,7 @@ namespace Matkakirja.Natiivi
                     }
                     return saari;
                 }
-            float yla = (Screen.height - Screen.safeArea.yMax) / pp, w = Screen.width / pp;
+            float yla = (UiRuutu.Korkeus - UiRuutu.Turva.yMax) / pp, w = UiRuutu.Leveys / pp;
             if (yla >= 55f) return new Rect((w - 126f) / 2f, 11f, 126f, 37f);
             if (yla >= 40f) return new Rect((w - 162f) / 2f, 0f, 162f, 32f);
             return new Rect(w / 2f, 0f, 0f, 0f);
@@ -254,7 +255,7 @@ namespace Matkakirja.Natiivi
             var osoitin = Pointer.current;
             if (osoitin == null || !osoitin.press.wasPressedThisFrame) return;
             var ruutu = osoitin.position.ReadValue();
-            var pp = RuntimePanelUtils.ScreenToPanel(elama.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
+            var pp = RuntimePanelUtils.ScreenToPanel(elama.panel, new Vector2(ruutu.x, UiRuutu.Korkeus - ruutu.y));
             if (!elama.worldBound.Contains(pp)) SuljeElamaSelite();
         }
         IVisualElementScheduledItem ilmoitusAjastin, valahdysAjastin, rahaAjastin;
@@ -449,7 +450,7 @@ namespace Matkakirja.Natiivi
         void AsetaVaakaNahka(Vector4 r)
         {
             var paneeli = palkki.panel;
-            float u = paneeli != null && Screen.width > 0
+            float u = paneeli != null && UiRuutu.Leveys > 0
                 ? (RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(100f * PuhelimenSkaala, 0f)).x
                    - RuntimePanelUtils.ScreenToPanel(paneeli, Vector2.zero).x) / 100f
                 : 1f;
@@ -511,7 +512,7 @@ namespace Matkakirja.Natiivi
         {
             // Löydös 73 (omistaja 25.9. klo 05.4x): iPhonen pystyasennossa yläpalkki on aina näkyvissä; automaattinen
             // piilotus ja väkäsnappi vain vaakamuodossa (Piilossa).
-            bool pysty = Screen.height > Screen.width;
+            bool pysty = UiRuutu.Korkeus > UiRuutu.Leveys;
             if (!Puhelin || piilossa || !nakyy || pysty) { if (VetoPiilossa) NaytaVedonJalkeen(); return; }
             var o = Pointer.current;
             if (o == null) return;
@@ -570,7 +571,7 @@ namespace Matkakirja.Natiivi
                 kelloTeksti = "";
                 Aseta(rv);
             }
-            if (!((kelluvaNyt == true || matala) && Screen.height > Screen.width && !Piilossa && AsetaSaaririvi(r, matala)))
+            if (!((kelluvaNyt == true || matala) && UiRuutu.Korkeus > UiRuutu.Leveys && !Piilossa && AsetaSaaririvi(r, matala)))
             {
                 kelluvaVaraus = null;
                 // Vaaka (1.0.71-kuva): pystyn saarimusta (66 pt) ulottui piilotetun palkin alle ja näkyi yläreunassa.
@@ -620,7 +621,7 @@ namespace Matkakirja.Natiivi
         bool AsetaSaaririvi(Vector4 r, bool matala = false)
         {
             var paneeli = palkki.panel;
-            if (paneeli == null || Screen.width <= 0) return false;
+            if (paneeli == null || UiRuutu.Leveys <= 0) return false;
             float pp = PuhelimenSkaala;
             // Ruudun pisteet → paneelin yksiköt (viiteskaala ei ole iOS-pisteet kaikilla leveyksillä).
             Vector2 P(float x, float y) => RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(x * pp, y * pp));
@@ -662,7 +663,7 @@ namespace Matkakirja.Natiivi
             {
                 // Omistaja 29.9.2026 (1.0.50, palaute 5): nahkaa yhtä paljon saaren ylä- ja alapuolella, sitten tikkauskaista.
                 // Laitteen saaren mukaan; kuva rajautuu alareunasta (scale-and-crop), joten tikkaus ei veny.
-                korkeus = saariAla + saariYla + P(Screen.width / pp, 0f).x * NahkaTikkausOsuus;
+                korkeus = saariAla + saariYla + P(UiRuutu.Leveys / pp, 0f).x * NahkaTikkausOsuus;
                 // Omistaja 2.10.2026 klo 21.4x (TF 129): "Uusi yläpalkki onkin vähän liian korkea. Saisi olla enemmän tasapainossa
                 // pillerin ylä- ja alapuolella". Pilleri ja logo ovat nyt saaren keskilinjalla (KeskitaPystyyn), joten 30.9.:n
                 // lisäkorkeus (rivi saaren akselin alle, alemmas + PalkkiKorkeampi) jäi ylimääräiseksi nahaksi pillerin alle:
@@ -675,7 +676,7 @@ namespace Matkakirja.Natiivi
             // ja ☰:n 5,6 pt saaren alapuolelle (iPhone 17: pilleri y 19,6, saari y 14). Loppu alatäytteeksi.
             palkki.style.paddingBottom = Mathf.Max(0f, korkeus - yla - rivi);
             // Pilleri ei ulotu saaren alle; ilman lovea puolet leveydestä.
-            float oikea = saari.width > 0 ? ylakulma.x - SaariVali * yksikko : P(Screen.width / pp, 0f).x / 2f;
+            float oikea = saari.width > 0 ? ylakulma.x - SaariVali * yksikko : P(UiRuutu.Leveys / pp, 0f).x / 2f;
             pilleriMax = Mathf.Max(60f, oikea - r.x - SaariReuna * yksikko);
             if (PilleriOikealla)
             {
@@ -683,7 +684,7 @@ namespace Matkakirja.Natiivi
                 // ja logon sijainti leveimmän saaren mukaan ja sitten vain keskelle jää tyhjää." Keskelle kiinteä vyöhyke
                 // leveimmän saaren (Pro Max) verran + marginaali, sama kaikilla malleilla; lovellisella laitteella leveämpi lovi
                 // voittaa. Logo vasempaan reunaan, pilleri oikeaan reunaan vyöhykkeen ulkopuolelle.
-                float ruudunKeski = P(Screen.width / pp / 2f, 0f).x;
+                float ruudunKeski = P(UiRuutu.Leveys / pp / 2f, 0f).x;
                 float oma = saari.width > 0 ? (alakulma.x - ylakulma.x) / 2f : 0f;
                 // Marginaali 8 pt (ennen 12): kulmavara vei pilleriltä ~13 pt oikeasta reunasta (1.0.54-laitekuva).
                 float puoli = Mathf.Max(LeveinSaari / 2f * yksikko, oma) + (SaarenMarginaali - 4f) * yksikko;
@@ -696,7 +697,7 @@ namespace Matkakirja.Natiivi
                 // kuin logo vasemmalla; kulmakaaren vara lasketaan nostetusta yläreunasta.
                 KeskitaPilleri();
                 float oikeaVara = Mathf.Max(r.z + 8f * yksikko, KulmaVara(yla - alemmas, rivi / 2f, kulmaR, KulmaMarginaali * yksikko));
-                float oikeaReuna = P(Screen.width / pp, 0f).x - oikeaVara;
+                float oikeaReuna = P(UiRuutu.Leveys / pp, 0f).x - oikeaVara;
                 pilleriMax = Mathf.Max(60f, oikeaReuna - (ruudunKeski + puoli));
                 float logoTila = Mathf.Max(40f, (ruudunKeski - puoli) - vasenReuna);
                 float lk = Mathf.Min(matala ? rivi * 0.8f : 24f * yksikko, logoTila / logoSuhde);
@@ -709,7 +710,7 @@ namespace Matkakirja.Natiivi
                 sivut = (nahka && saari.width > 0)
                     ? new Sivut
                     {
-                        R = kulmaR, W = P(Screen.width / pp, 0f).x, RiviKeski = yla + rivi / 2f, SaariKeski = (saariYla + saariAla) / 2f,
+                        R = kulmaR, W = P(UiRuutu.Leveys / pp, 0f).x, RiviKeski = yla + rivi / 2f, SaariKeski = (saariYla + saariAla) / 2f,
                         KehaVasen = ylakulma.x - (TikkausEtaisyys + LankaPaksuus / 2f) * yksikko,
                         KehaOikea = alakulma.x + (TikkausEtaisyys + LankaPaksuus / 2f) * yksikko,
                         LogoLeveys = lk * logoSuhde, VasenPerus = vasenReuna, OikeaPerus = oikeaVara,
@@ -1076,7 +1077,7 @@ namespace Matkakirja.Natiivi
             if (osoitin == null || !osoitin.press.wasPressedThisFrame || palkki.panel == null) return;
             if (PudotusAuki != null && PudotusAuki()) return;
             var ruutu = osoitin.position.ReadValue();
-            var pp = RuntimePanelUtils.ScreenToPanel(palkki.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
+            var pp = RuntimePanelUtils.ScreenToPanel(palkki.panel, new Vector2(ruutu.x, UiRuutu.Korkeus - ruutu.y));
             if (!palkki.worldBound.Contains(pp) && !vakasnappi.worldBound.Contains(pp)) { UiKerros.OhiSulki(); Sulje(); }  // maakuntalappu ei aukea samasta napautuksesta (omistaja 30.9.2026)
         }
 
