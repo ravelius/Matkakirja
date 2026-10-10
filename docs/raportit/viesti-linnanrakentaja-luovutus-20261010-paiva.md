@@ -90,3 +90,19 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
   vienti (ASTC: proto-3d/tyokalut/astc-mip.swift valot/*.jpg) → LS1.
 - Seuraavaksi Peking (omistaja 09.3x: koekaupunki 2 × 2 km), Karttasepän paketti proto-3d/_tyo/karttaseppa/peking-20261010/lr/LUEMINUT.md.
 - Siirtoseppä: kiinni 70 kaatuu portaat-vartijan takia (PT päättää: vartijan partio LR vai testiajuri Siirtoseppä) — älä tee ennen PT:tä.
+
+## TEHTY 10.0x–10.1x: NL-sali v1 VIETY LS1:lle (PT hyväksyi 10.0x)
+- `proto-3d/_valmiit/taidemuseo-alankomaat-v1/` (LAHTEET.md): glb/sali-lod0.glb 13 k / lod1 7,8 k, 18 materiaalia, UV0 + UV1; valot/sali-lod{0,1}.jpg
+  (4096/2048) + -4x4.astcm; koodaus E_lx = näyte_lin × 1200 (leivo_sali.py: metallit 0 leivonnan ajaksi, sRGB-koodaus itse, oletusnäkymä tyhjäksi).
+  Tarkistus: scratchpad atlas_tarkistus.py (albedo × atlas, glTF-tuonnissa UV1 = uv_layers[1]).
+- PT:n jatkohuomiot: 1) Kunniagalleria tumma → LS1 varmistaa teokset ~150 lx puhelimella (lisää atlakseen täyttöä tarvittaessa);
+  2) v2: Veistosaulaan ja Leidenin siipeen listat, ovenpielet ja tunnistettava yksityiskohta, kun patsasmallit tulevat.
+
+## SEURAAVAN SESSION JÄRJESTYS (nollaus 10.1x)
+1) **PEKING** (omistaja 09.3x: koekaupunki ~2 × 2 km: Kielletty kaupunki, Jingshan, Beihai, Tian'anmen, hutongit; poikkeus ei avaa muuta
+   Euroopan ulkopuolista). Lue `proto-3d/_tyo/karttaseppa/peking-20261010/lr/LUEMINUT.md`. Mallinnuspohja peking-kielletty-kaupunki-enu.json
+   (405 rakennusta + 1 086 osaa, korkeus/räystäs/kattomuoto/väri, ENU-origo Taihedian 39.915896, 116.390814; ÄLÄ käytä GCJ-02-koordinaatteja).
+   Ennen mallinnusta: kysy PT:ltä muoto (dioraama kuten linna vai Cesium-omat mallit kuten ND/KL?) ja Raamatun Kielletyn kaupungin aiempi linjaus
+   (`grep -n "KIELLETTY KAUPUNKI" js/tyohuone-raamattu.js`); PT:n ehdot kuten Eiffel (toistuvat osat yhtenä meshinä, jaettu materiaali).
+2) LS1:n palaute NL-salista (valotaso, muisti) → säätö. 3) NL v2 patsaiden tultua. 4) LS2:n parit Eiffel v1b + Préfecture v1b → säätö → PT.
+5) Siirtoseppä/PT: kiinni 70 (portaat-vartija) — vain jos PT antaa LR:lle.
