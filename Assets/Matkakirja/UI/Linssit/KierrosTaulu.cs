@@ -200,6 +200,7 @@ namespace Matkakirja.Natiivi
             bool metro = OpasMetrolinja.Alareuna > 0f;
             OpasMetrolinja.Korostus = metro && nimiNakyy;
             OpasMetrolinja.KorostusSelite = alarivi.text;
+            OpasMetrolinja.KorostusNimi = nimi.text;   // selite vain tämän aseman alle (LS1 21.4x: Louvren alla Notre-Damen alarivi)
             otsikko.style.opacity = nimiNakyy && !metro ? 1f : 0f;
             if (Testiotsikko != null)
             {
