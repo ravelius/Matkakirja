@@ -139,7 +139,7 @@ namespace Matkakirja.Natiivi
             b.style.paddingLeft = 12; b.style.paddingRight = 12; b.style.height = 34; b.style.marginRight = 6;
             b.style.justifyContent = Justify.Center;
             var l = b.Q<Label>();
-            if (l != null) { Kirjasimet.Aseta(l, Kirjasin.Kone); l.style.color = Paperi; l.style.fontSize = 12; }
+            if (l != null) { Kirjasimet.Aseta(l, Kirjasin.Kone); l.style.color = Paperi; l.style.fontSize = Tyylikirja.Koko.Kapiteeli; }
             return b;
         }
 

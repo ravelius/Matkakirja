@@ -122,7 +122,7 @@ namespace Matkakirja.Natiivi
             otsikko = Rakenne.Teksti("", "mk-dioraama__otsikko", lauta);
             Kirjasimet.Aseta(otsikko, Kirjasin.LukuLihava);
             otsikko.style.color = Teksti;
-            otsikko.style.fontSize = 16;
+            otsikko.style.fontSize = Tyylikirja.Koko.Leipa;
             otsikko.style.whiteSpace = WhiteSpace.Normal;
             otsikko.style.marginTop = 2;
 
@@ -137,7 +137,7 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(lainaus, Kirjasin.LukuKursiivi);
             lainaus.style.color = Teksti;
             lainaus.style.whiteSpace = WhiteSpace.Normal;
-            lainaus.style.fontSize = 14;
+            lainaus.style.fontSize = Tyylikirja.Koko.Apuri;
             lainaus.style.marginTop = 6;
 
             lahde = Rakenne.Teksti("", "mk-dioraama__lahde", lauta);
@@ -151,7 +151,7 @@ namespace Matkakirja.Natiivi
             seuraava = Rakenne.Teksti("", "mk-dioraama__seuraava", lauta);
             Kirjasimet.Aseta(seuraava, Kirjasin.Luku);
             seuraava.style.color = new Color(Teksti.r, Teksti.g, Teksti.b, 0.5f);
-            seuraava.style.fontSize = 12;
+            seuraava.style.fontSize = Tyylikirja.Koko.Kapiteeli;
             seuraava.style.marginTop = 8;
             seuraava.style.whiteSpace = WhiteSpace.Normal;
             seuraava.style.display = DisplayStyle.None;
@@ -181,12 +181,12 @@ namespace Matkakirja.Natiivi
             kuoriNappi.style.right = 14; kuoriNappi.style.top = 110;
             kuoriNappi.style.backgroundColor = (Color)Tyylikirja.Kuulto.PaperiMuste60;
             kuoriNappi.style.color = Color.white;
-            kuoriNappi.style.fontSize = 12;
+            kuoriNappi.style.fontSize = Tyylikirja.Koko.Kapiteeli;
             kuoriNappi.style.paddingLeft = 10; kuoriNappi.style.paddingRight = 10; kuoriNappi.style.paddingTop = 6; kuoriNappi.style.paddingBottom = 6;
             kuoriNappi.style.borderTopLeftRadius = 8; kuoriNappi.style.borderTopRightRadius = 8;
             kuoriNappi.style.borderBottomLeftRadius = 8; kuoriNappi.style.borderBottomRightRadius = 8;
             var kuoriTeksti = kuoriNappi.Q<Label>();
-            if (kuoriTeksti != null) { kuoriTeksti.style.color = Color.white; kuoriTeksti.style.fontSize = 12; }
+            if (kuoriTeksti != null) { kuoriTeksti.style.color = Color.white; kuoriTeksti.style.fontSize = Tyylikirja.Koko.Kapiteeli; }
             kuoriNappi.style.display = KuoriRuudulla && Asetukset.Kehittaja && !LinssiOhjain.ValmiitLinssitAuki ? DisplayStyle.Flex : DisplayStyle.None;
             DioraamaUlkokuori.PakotusVaihtui += () =>
             {
@@ -264,7 +264,7 @@ namespace Matkakirja.Natiivi
             etsintaOtsikko.style.color = Teksti; etsintaOtsikko.style.fontSize = 15;
             etsintaTeksti = Rakenne.Teksti("", "mk-dioraama__etsintateksti", etsintaKortti);
             Kirjasimet.Aseta(etsintaTeksti, Kirjasin.LukuKursiivi);
-            etsintaTeksti.style.color = Teksti; etsintaTeksti.style.fontSize = 14; etsintaTeksti.style.whiteSpace = WhiteSpace.Normal;
+            etsintaTeksti.style.color = Teksti; etsintaTeksti.style.fontSize = Tyylikirja.Koko.Apuri; etsintaTeksti.style.whiteSpace = WhiteSpace.Normal;
             etsintaTeksti.style.marginTop = 4;
             etsintaKortti.style.display = DisplayStyle.None;
             etsintaKortti.RegisterCallback<PointerDownEvent>(_ => etsintaLoppuu = 0f);
@@ -937,7 +937,7 @@ namespace Matkakirja.Natiivi
                 laskuri.style.color = lahde.style.color = seuraava.style.color = alkuPehmea; puhuja.style.color = StyleKeyword.Null;
                 Kirjasimet.Aseta(otsikko, Kirjasin.LukuLihava); Kirjasimet.Aseta(teksti, Kirjasin.Luku); Kirjasimet.Aseta(lainaus, Kirjasin.LukuKursiivi);
                 Kirjasimet.Aseta(puhuja, Kirjasin.Kone);
-                otsikko.style.fontSize = 16; otsikko.style.marginLeft = 0; puhuja.style.marginLeft = 0;
+                otsikko.style.fontSize = Tyylikirja.Koko.Leipa; otsikko.style.marginLeft = 0; puhuja.style.marginLeft = 0;
                 lauta.style.paddingTop = 12; lauta.style.paddingBottom = 12; lauta.style.paddingLeft = 14; lauta.style.paddingRight = 14;
                 if (sinettiEl != null) { sinettiEl.style.display = DisplayStyle.None; initiaaliEl.style.display = DisplayStyle.None; initiaaliKaytossa = false; teksti.style.marginLeft = 0; }
                 return;
@@ -986,7 +986,7 @@ namespace Matkakirja.Natiivi
             if (string.IsNullOrEmpty(LappuTyyli))
             {
                 lappu.style.backgroundImage = StyleKeyword.Null; lappu.style.backgroundColor = Pergamentti; lappu.style.color = Teksti;
-                Kirjasimet.Aseta(lappu, Kirjasin.Kone); lappu.style.fontSize = 12;
+                Kirjasimet.Aseta(lappu, Kirjasin.Kone); lappu.style.fontSize = Tyylikirja.Koko.Kapiteeli;
                 lappu.style.paddingLeft = 8; lappu.style.paddingRight = 8; lappu.style.paddingTop = 3; lappu.style.paddingBottom = 3;
                 nasta.style.backgroundColor = Pergamentti; viiva.style.backgroundColor = Pergamentti;
                 return;
@@ -1263,7 +1263,7 @@ namespace Matkakirja.Natiivi
             uusi.pickingMode = PickingMode.Ignore;
             Kirjasimet.Aseta(uusi, Kirjasin.Kone);
             uusi.style.position = Position.Absolute;
-            uusi.style.fontSize = 12;
+            uusi.style.fontSize = Tyylikirja.Koko.Kapiteeli;
             uusi.style.color = Teksti;
             uusi.style.backgroundColor = Pergamentti;
             uusi.style.paddingLeft = 8; uusi.style.paddingRight = 8; uusi.style.paddingTop = 3; uusi.style.paddingBottom = 3;
