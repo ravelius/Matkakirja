@@ -5,7 +5,7 @@ Alku: 2026-10-10T21:59:24Z. Agenttien kulutus: kirjataan kahden ensimmäisen kau
 | id | A | B | C | D | E | F | huomio |
 |---|---|---|---|---|---|---|---|
 | bern | ✓ | kesken | | | | | |
-| vaduz | ✓ | ✓ | ✓ | ✓ (VÄÄRIN 9, EPÄVARMA 8) | ✓ | kesken (--verkko ajossa) | 5 kohdetta, lähteissä vain 5 koordinaatilla |
+| vaduz | ✓ | ✓ | ✓ | ✓ (VÄÄRIN 9, EPÄVARMA 8) | ✓ | ✓ 0 virhettä, 1 varoitus | 5 kohdetta, lähteissä vain 5 koordinaatilla |
 | monaco | ✓ | | | | | | |
 | andorralavella | kesken | | | | | | |
 | sanmarino | | | | | | | |
