@@ -122,3 +122,78 @@ Hakujen rajaus: lähteet on luettu verkosta 10.10.2026 (Museoviraston Kyppi ja F
 - **Kolme aukkoa, joihin ei ole lähdettä tässä aineistossa**: (1) Savonlinnan seudun vedenpinnan vaiheet, (2) Kyrönsalmen kivikautinen ja rautakautinen asutus, (3) rautakauden vesireitit Savonlinnan kohdalla. Esittelyn ei pidä väittää mitään näistä ilman GTK:n, Kypin (Kyrönsalmi) tai Savonlinnan maakuntamuseon lähdettä.
 - Tekijänoikeus: tekstit ovat Sisältökirjurin omia tiivistelmiä; lähteistä ei ole lainattu lauseita. Kuvia ei ole otettu; Finna-linkit ovat vain viitteitä.
 - Ristiriidat edellisiin selvityksiin: ei tiedossa; tämä tiedosto täydentää `faktapohja-olavinlinna-1500.md`:ää (1500-luku) ja `olavinlinna-historia-animaatio-tekstit-20261009.md`:ää (historia-animaatio) esihistorialla.
+
+---
+
+# LIITE (10.10.2026 klo ~09): kolmen aukon täydennys
+
+Tilaus: Päätoimittaja 10.10.2026 ~08.3x. Säännöt: vain lähteelliset väitteet; mitä ei löytynyt, on merkitty **Ei vahvistettu**. Lähteet luettu 10.10.2026. Tämä liite tarkentaa osioita 1–3 ja menee niiden edelle, jos ne ovat ristiriidassa.
+
+## Liite A. Savonlinnan seudun vedenpinnan vaiheet (aukko 1: GTK)
+
+### Vahvistetut väitteet
+- **Kyrönsalmi oli Saimaan veden lasku-uoma pohjoiseen.** GTK:n ja Saimaa Geoparkin retkioppaan mukaan Kyrönsalmen kynnys Savonlinnassa nousi Ancylusjärven pinnan yläpuolelle noin 10 700 vuotta sitten, ja Pihlajavesi kuroutui sen kautta pohjoiseen laskevaksi järveksi. Koska maa kallistui kaakkoon, vesi alkoi nousta Kyrönsalmen pohjoispuolellakin, ja noin 10 000 vuotta sitten Pihlajaveden tulva saavutti eteläisen Saimaan tason.
+- **Vuoksen puhkeaminen noin 5 700 vuotta sitten**: sama opas kuvaa, että Suursaimaan pinta laski nopeasti "useita metrejä", mahdollisesti jo muutamassa kuukaudessa, ja sen jälkeen ranta on vetäytynyt hitaasti nykyiseen asemaansa. Saimaan keskimääräinen pinta on nykyään noin 76 m merenpinnan yläpuolella.
+- **Ristiriita lähteiden välillä** (sano "noin" ja "lähteiden mukaan"):
+  - GTK/Saimaa Geopark: eteläinen Saimaa kuroutui ensimmäisen kerran itsenäiseksi järveksi noin 11 000 vuotta sitten Yoldiamerestä, ja silloinen lasku-uoma oli Kyläniemen kärjessä (Rastinniemi), ei Kyrönsalmessa. Kyrönsalmen lasku-uoma on myöhempi vaihe (10 700 v).
+  - Savon historia (Lehtosalo-Hilander): eteläinen Saimaa itsenäiseksi järveksi noin 9 500 vuotta sitten, lasku-uoma Kyrönsalmen kautta pohjoiseen.
+  - Wikipedia, Muinais-Saimaa (taustatuki; lähteinä Rainio & Johansson 2004, Saarnisto 2016): Pihlajaveden ja Suur-Saimaan pohjoisosat yhdeksi järveksi noin 10 600 vuotta sitten Kyrönsalmen kohdalta. Artikkeli toteaa, ettei yhdistymisten ajankohtia tiedetä varmasti.
+- **Korjaus osioon 1**: osion 1 lause "Saimaa kuroutui irti Ancylusjärvestä noin 9 500 vuotta sitten" on yksi lähdetulkinta. GTK sijoittaa ensimmäisen kuroutumisen noin 11 000 vuoden taakse. → Kertojalle ei tarkkaa lukua: sano "yli 9 000 vuotta sitten" tai "lähteiden mukaan noin 10 000 vuotta sitten".
+
+### Ehdotus kertojalle (William)
+> Olavinlinna seisoo Kyrönsalmessa, jossa kaksi Saimaan selkää kohtaa. Tutkijoiden mukaan salmen kynnys nousi vedestä yli 10 000 vuotta sitten, ja siitä alkoi Pihlajaveden vesien virtaus pohjoiseen. Noin 5 700 vuotta sitten Vuoksi puhkesi Laatokkaa kohti ja Saimaan pinta laski nopeasti useita metrejä. Sen jälkeen vesi on vetäytynyt hitaasti nykyiseen asemaansa.
+
+### Ei vahvistettu
+- Tarkka metrimäärä, jolla Kyrönsalmen vesi oli milloinkin nykyistä korkeammalla tai matalammalla. GTK:n oppaassa luvut (esim. 6–7 m nykypinnan yläpuolella, 82–83 m mpy) koskevat Rastinniemeä Etelä-Saimaalla eikä niitä saa siirtää Savonlinnaan.
+- GTK:n Savonlinnan kohdan rannansiirtymäkäyriä ei löytynyt verkosta. Älä väitä, että Olavinlinnan saari "nousi vedestä" tiettynä aikana: lähde koskee salmen kynnystä, ei saarta.
+- Pajusen (Geologi 6/2014) luvut koskevat Suonenjoen–Leppävirran aluetta, eivät Savonlinnaa; ei käytetä.
+
+### Lähteet
+- Tervo, Nenonen ym. (GTK) / Saimaa Geopark, Muinaismerestä Saimaaksi, geologinen retkiopas eteläiselle Saimaalle, ISBN 978-952-68862-1-3 (PDF): https://saimaageopark.fi/wp-content/uploads/2022/06/Muinaismeresta-Saimaaksi.pdf
+- Muinais-Saimaa (Wikipedia, taustatuki): https://fi.wikipedia.org/wiki/Muinais-Saimaa
+- Savon historia, Lehtosalo-Hilander, I Esihistorian vuosituhannet Savon alueella: https://savonhistoria.fi/vuoteen-1533/tarpeellista-tarinan-taustaksi/
+
+## Liite B. Kyrönsalmen muinaisjäännökset (aukko 2: Kyppi)
+
+Hakutapa: Museoviraston avoin paikkatietorajapinta (geoserver.museovirasto.fi, kerrokset muinaisjaannos_piste ja muinaisjaannos_alue, kunta = Savonlinna; 524 kiinteää muinaisjäännöstä nykyisen Savonlinnan alueella). Etäisyydet on laskettu Olavinlinnan kohteen keskipisteestä rekisterin geometriasta (laskettu arvo, ei rekisterin tieto). Kohdesivut: https://www.kyppi.fi/to.aspx?id=112.<kohteen tunnus>.
+
+### Vahvistetut väitteet (Kyppi, kiinteät muinaisjäännökset)
+- **Olavinlinna** (tunnus 1000019735): puolustusvarustus, kivilinna, ajoitus keskiaikainen ja historiallinen. Kyppi ei kuvaa kohteessa esihistoriallista vaihetta.
+- **Savonlinnan vanha asemakaava-alue** (1000007473): asuinpaikka, tyyppi kaupungit, ajoitus historiallinen (lähdetiedon vuosi 2003; vastaa Museoviraston kaupunkiarkeologista inventointia). Etäisyys linnasta noin 0,4 km. Kaupungin perustaminen kuuluu 1600-lukuun (ei esihistoriaa).
+- **Kivikautiset asuinpaikat lähimpänä**: Metsäkonttorinkuja (1000032827; asuinpaikka, hautapaikka, hiilimiilu; ajoitus kivikautinen ja historiallinen) noin 0,7 km linnasta, ja Majakkaniemi (1000002410; asuinpaikka, kivikautinen) noin 1,6 km linnasta. Kohteista on luettu vain rekisterin ajoitus ja tyyppi, ei kohdekortin kuvausta.
+- **Lisää alle 5 km:n päässä**: Tynkkylänjoki ja Tynkkylänjoki b, Vuokkorinne, Päivärinne ja Suuri Haapajärvi B (kaikki kivikautisia asuinpaikkoja), Kylmäniemi a ja b (asuinpaikka, ajoitus varhaismetallikautinen, rautakautinen ja kivikautinen, noin 3,9–4,0 km), Multamäki (varhaismetallikautinen, noin 4,8 km). Kuppikiviä on noin 3,2–3,9 km:n päässä (Kuutinmäki, Nojamaa ajoitus historiallinen; Jokipelto ajoittamaton).
+- **Puuhylkyjä Kyrönsalmessa**: Rapaluoto 1 ja 2, Kyrönsalmi Kyrönniemi, Kaupinsaari 1 ja Koululahti Vääräsaari (kaikki puuhylkyjä, ajoitus historiallinen) sekä Uuraansaari (ajoitus ei määritelty), kaikki alle 1 km linnasta, vedenalaisia kohteita. Käytä korkeintaan sanontaa "salmen pohjasta on rekisteröity historiallisia puuhylkyjä".
+- Savonlinnan alueella on rekisterissä kaikkiaan 524 kiinteää muinaisjäännöstä, joista 199 on ajoitukseltaan (myös) kivikautisia. Luvut ovat tämän päivän (10.10.2026) rajapintahaun tulos ja muuttuvat inventointien myötä; sano esittelyssä vain "satoja".
+- Pääskylahti (Savon historian mukaan seudun tunnetuin kivikautinen asuinpaikka, tutkittu 1927 ja 1929 N. Cleve ja A. Äyräpää) ei löytynyt rekisterin kohdenimellä Pääskylahti; älä anna sille Kypin tunnusta.
+
+### Ehdotus kertojalle (William)
+> Muinaisjäännösrekisterin mukaan linnan lähellä on kivikautisia asuinpaikkoja, lähimmät alle kahden kilometrin päässä. Rautakauden asutuksesta ei ole rekisterissä merkkiä aivan salmen tuntumassa. Linna rakennettiin tähän salmeen ennen kaikkea paikan aseman vuoksi, vesireittien risteyskohtaan.
+
+### Ei vahvistettu
+- Yksikään Kyppi-rekisterin kohde ei kerro kivikautisesta tai rautakautisesta asutuksesta **itse linnasaarella**. Älä väitä, että linnasaari oli asuttu ennen vuotta 1475.
+- Rekisterissä ei ole **rautakautista** asuinpaikkaa alle 3,8 km:n päässä linnasta (lähimmät Kylmäniemi a ja b noin 3,9–4,0 km). Aiempi huomio (osio 3) pitää siis: älä väitä rautakautista asutusta Kyrönsalmessa.
+- Kohteiden tarkka merkitys (asuinpaikan koko, löydöt, ajoituksen perustelut) ei ole luettu kohdekortteja pitemmälle.
+
+### Lähteet
+- Museovirasto, Kulttuuriympäristön palveluikkuna (Kyppi), kiinteät muinaisjäännökset, avoin rajapinta: https://geoserver.museovirasto.fi/geoserver/rajapinta_suojellut/wfs
+- Kyppi-kohdesivut, esim. Olavinlinna: https://www.kyppi.fi/to.aspx?id=112.1000019735
+- Savon historia, Lehtosalo-Hilander (Pääskylahti): https://savonhistoria.fi/vuoteen-1533/tarpeellista-tarinan-taustaksi/
+
+## Liite C. Savonlinnan maakuntamuseo (aukko 3)
+
+### Vahvistetut väitteet
+- Savonlinnan museo (Riihisaari) toimii **Etelä-Savon alueellisena vastuumuseona**: se suojelee maakunnan kiinteitä muinaisjäännöksiä yhteistyössä Museoviraston ja muiden viranomaisten kanssa, tekee pienehköjä inventointeja ja neuvoo kaavoituksessa ja maanrakennuksessa (museon arkeologiasivu, savonlinna.fi). Sivu ei käytä sanaa "maakuntamuseo"; Kyppi ja Lavento (2008) käyttävät nimeä Savonlinnan maakuntamuseo (Savonlinna Provincial Museum).
+- Kyppi listaa Savonlinnan maakuntamuseon (Etelä-Savo) vastuualueelle 4 795 kohdetta (kiinteitä muinaisjäännöksiä, havaintokohteita, mahdollisia muinaisjäännöksiä, löytöpaikkoja ym.). Luku on rekisterin haun tulos 10.10.2026, ei kiinteiden muinaisjäännösten määrä.
+- Helsingin yliopiston tutkimushankkeet eteläisellä Saimaalla ovat 1990-luvun alusta lähtien löytäneet satoja uusia esihistoriallisia kohteita, ja hankkeet tehtiin yhteistyössä Museoviraston ja Savonlinnan maakuntamuseon kanssa (Lavento 2008, Iskos 16, abstrakti).
+
+### Ehdotus kertojalle (William)
+> Savonlinnan museo Riihisaaressa vastaa Etelä-Savon muinaisjäännöksistä yhdessä Museoviraston kanssa. Maakunnan muinaisjäännöksiä on satoja, ja niiden tutkimus ja suojelu on tämän museon työtä.
+
+### Ei vahvistettu
+- Museon arkeologisen kokoelman koko ja ikä ("8 000 vuotta"): väite löytyi vain matkailu-/museohakemistosivulta (museomme.fi), jota ei saatu avattua; ei käyttöön ilman museon omaa sivua.
+- Tiedossa ei ole museon kokoelmaesineitä Kyrönsalmen alueelta; älä väitä, että Olavinlinnan museossa olisi esihistoriallisia löytöjä Kyrönsalmesta.
+
+### Lähteet
+- Savonlinnan museo / Riihisaari, Arkeologia: https://www.savonlinna.fi/riihisaari/museo/arkeologia/
+- Kyppi, Savonlinnan maakuntamuseo (Etelä-Savo): https://www.kyppi.fi/palveluikkuna/mjreki/read/asp/r_mkm_haku.aspx?MKMUSEO_ID=12
+- Lavento, M. (2008), Archaeological research in the Saimaa district and in the Karelian Isthmus in 1992–1999, Iskos 16: https://journal.fi/iskos/article/view/110407
