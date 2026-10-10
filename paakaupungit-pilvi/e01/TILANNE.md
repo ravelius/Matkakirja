@@ -5,7 +5,7 @@ Vaihe 0 tehty (konteksti, säädata Open-Meteo OK, malli).
 
 | id | A | B | C | D | E | F | huomio |
 |---|---|---|---|---|---|---|---|
-| zagreb | ✓ | | | | | | |
+| zagreb | ✓ | ✓ | | | | | |
 | belgrad | ✓ | | | | | | |
 | tirana | ✓ | | | | | | |
 | skopje | ✓ | | | | | | |

@@ -1,6 +1,6 @@
 # Zagreb (zagreb, e01) — kuvat
 
-Tila: kaikki alla olevat kuvat on katsottu esikatselulla. Puuttuu vielä: kohteet 5-6 ja valokuva (merkitty KESKEN).
+Tila: kaikki 22 kuvaa katsottu esikatselulla. Opas-kohtia 3.
 
 | kohta | tiedosto | leveys×korkeus | lisenssi | lähderivi | mitä kuvassa näkyy | vuosi |
 |---|---|---|---|---|---|---|
@@ -24,12 +24,11 @@ Tila: kaikki alla olevat kuvat on katsottu esikatselulla. Puuttuu vielä: kohtee
 | kohde 3 | Zrinjevac Park, Zagreb, May 2025.jpg | 4080×3060 | CC BY-SA 4.0 | Hijerovit, Wikimedia Commons (CC BY-SA 4.0) | Zrinjevacin nurmikko, leikattuja pensaita ja suihkulähde plataanien alla | 2025 |
 | kohde 4 | Umjetnički paviljon, Zagreb.jpg | 4000×2649 | CC BY-SA 4.0 | ScF, Wikimedia Commons (CC BY-SA 4.0) | Taidepaviljongin keltainen julkisivu ja lasikupoli sivusta, edessä kukkapenkki ja sorakäytävä | |
 | kohde 5 | Croatian National Theatre in Zagreb, April 18, 2022.jpg | 5472×3648 | CC BY-SA 4.0 | Koreanovsky, Wikimedia Commons (CC BY-SA 4.0) | Kansallisteatterin keltainen julkisivu pylväineen ja lippuineen, edessä kukkapenkki | 2022 |
-| kohde 6 | KESKEN | | | | | |
-| valokuva | KESKEN | | | | | |
+| kohde 6 | Zagreb - Ulica Ivana Tkalčića.jpg | 3000×4000 | CC BY 2.0 | Fred Romero from Paris, France, Wikimedia Commons (CC BY 2.0) | Tkalčićevan varrella kohoavan Neitsyt Marian kirkon barokkitorni vihreine ja kullattuine koristeineen | |
+| valokuva | Kamenita vrata 29102016-002.jpg | 2448×3264 | CC BY-SA 4.0 | Yamen, Commons (CC BY-SA 4.0) | Kivinen portti punaisine kattoineen ja holvikäytävä, jonka ohi kulkee ihmisiä selin | 2016 |
 
 ## HYLÄTYT
 
 - Cathedral of Zagreb in 2023.01.jpg: telineet ja mainosverhoilu (ING-GRAD) peittävät julkisivun.
 - Dolac, Zagreb.jpg: lähikuvassa DJ:t kasvoineen ja mainosilmapallo.
 - Mimara Museum, Zagreb 01.jpg: pelkkä kyltti, ei rakennuskuva.
-- Zagreb - Ulica Ivana Tkalčića.jpg: esikatselu ei onnistunut (429), ei katsottu.
