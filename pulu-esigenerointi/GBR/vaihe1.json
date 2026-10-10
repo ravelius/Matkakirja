@@ -18,7 +18,7 @@
   "kohde": "kohde:crystal-palace",
   "kysymys": "Miksi rakennusta ei koskaan rakennettu uudelleen?",
   "uusi": false,
-  "vastaus": "Ai tota. Surullinen loppu tällaiselle kauneudelle. Rakennus tuhoutui tulipalossa vuonna 1936, kun se oli seissyt [[Sydenham Hillillä]] noin kahdeksankymmentä vuotta konserttitalona ja näyttelyhallina. Uutta ei sen jälkeen pystytetty, ja tarkasta syystä en ole varma: yleensä mainitaan rakentamisen suuret kustannukset ja pian alkanut sota-aika, mutta tämä on yleiskuva eikä varma tieto. Paikalle jäi [[Crystal Palace Park]], ja nimi elää yhä alueen nimenä [[Etelä-Lontoossa]]. Rakennuksen tuhoutuminen oli suuri menetys, koska se oli ollut aikansa merkittävimpiä rakennusinsinööritaidon näytteitä.\nOnpas siit onneksi jääny edes nimi.",
+  "vastaus": "Ai tota. Surullinen loppu tällaiselle kauneudelle. Rakennus tuhoutui tulipalossa vuonna 1936, kun se oli seissyt [[Sydenham Hillillä]] noin kahdeksankymmentä vuotta konserttitalona ja näyttelyhallina. Uutta ei sen jälkeen pystytetty, ja tarkasta syystä en ole varma: yleensä mainitaan rakentamisen suuret kustannukset ja pian alkanut sota-aika, mutta tämä on yleiskuva eikä varma tieto. Paikalle jäi [[Crystal Palace Park]], ja nimi elää yhä alueen nimenä [[Etelä-Lontoossa]]. Rakennuksen tuhoutuminen oli suuri menetys, koska se oli ollut aikansa merkittävimpiä rakennusinsinööritaidon näytteitä.\n\nOnpas siit onneksi jääny edes nimi.",
   "linkit": [
    "Sydenham Hillillä",
    "Crystal Palace Park",
@@ -33,7 +33,7 @@
   "kohde": "kohde:crystal-palace",
   "kysymys": "Mikä oli vuoden 1851 maailmannäyttely Lontoossa?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Tost minä osaan kertoo, kunhan järjestän ajatukseni. Vuoden 1851 maailmannäyttely, englanniksi Great Exhibition, oli Lontoon [[Hyde Parkissa]] järjestetty kansainvälinen näyttely, jossa esiteltiin teollisuuden tuotteita, koneita ja käsityötä useista maista. Sitä edistivät erityisesti prinssi Albert ja kuningatar Victorian hovi, ja se oli auki toukokuusta lokakuuhun. Kävijöitä oli miljoonia, ja näyttelyä pidetään yhtenä ensimmäisistä suurista maailmannäyttelyistä. Näyttelyn tarkoitusta varten rakennettu [[Crystal Palace]] oli itsekin yksi sen suurimmista nähtävyyksistä, ja näyttelyiden perinne jatkui [[maailmannäyttelyinä]] pitkälle seuraaviin vuosikymmeniin.\nEi paha kyyhkyltä, tuo oli sentään aika monta vuosikymmentä.",
+  "vastaus": "Hetkinen ny. Tost minä osaan kertoo, kunhan järjestän ajatukseni. Vuoden 1851 maailmannäyttely, englanniksi Great Exhibition, oli Lontoon [[Hyde Parkissa]] järjestetty kansainvälinen näyttely, jossa esiteltiin teollisuuden tuotteita, koneita ja käsityötä useista maista. Sitä edistivät erityisesti prinssi Albert ja kuningatar Victorian hovi, ja se oli auki toukokuusta lokakuuhun. Kävijöitä oli miljoonia, ja näyttelyä pidetään yhtenä ensimmäisistä suurista maailmannäyttelyistä. Näyttelyn tarkoitusta varten rakennettu [[Crystal Palace]] oli itsekin yksi sen suurimmista nähtävyyksistä, ja näyttelyiden perinne jatkui [[maailmannäyttelyinä]] pitkälle seuraaviin vuosikymmeniin.\n\nEi paha kyyhkyltä, tuo oli sentään aika monta vuosikymmentä.",
   "linkit": [
    "Hyde Parkissa",
    "Crystal Palace",
@@ -48,7 +48,7 @@
   "kohde": "kohde:crystal-palace",
   "kysymys": "Mikä on tynnyriholvi?",
   "uusi": true,
-  "vastaus": "Mmm— Jaa, holvit. Sopivasti kaiteen alla. Tynnyriholvi on yksinkertaisin holvityyppi: se muodostuu puoliympyrän tai vastaavan kaaren muotoisesta poikkileikkauksesta, joka jatkuu suorana tilan koko pituuden, ja siitä tulee sisäpuolelta puolikkaan tynnyrin muotoinen. Sitä käytettiin jo [[roomalaisten]] rakennuksissa, ja se oli tavallinen myös [[romaanisissa kirkoissa]]. Kiviholvi on raskas, mutta [[Crystal Palacen]] Sydenhamin versiossa vastaava muoto toteutettiin raudasta ja lasista, jolloin katto oli kevyt ja valoisa. Holvin etu on, että se kantaa painonsa ulospäin, mutta kivestä tehtynä se vaatii vahvat seinät.\nJa tämän kaiken minä muistin ilman muistiinpanoja.",
+  "vastaus": "Mmm— Jaa, holvit. Sopivasti kaiteen alla. Tynnyriholvi on yksinkertaisin holvityyppi: se muodostuu puoliympyrän tai vastaavan kaaren muotoisesta poikkileikkauksesta, joka jatkuu suorana tilan koko pituuden, ja siitä tulee sisäpuolelta puolikkaan tynnyrin muotoinen. Sitä käytettiin jo [[roomalaisten]] rakennuksissa, ja se oli tavallinen myös [[romaanisissa kirkoissa]]. Kiviholvi on raskas, mutta [[Crystal Palacen]] Sydenhamin versiossa vastaava muoto toteutettiin raudasta ja lasista, jolloin katto oli kevyt ja valoisa. Holvin etu on, että se kantaa painonsa ulospäin, mutta kivestä tehtynä se vaatii vahvat seinät.\n\nJa tämän kaiken minä muistin ilman muistiinpanoja.",
   "linkit": [
    "roomalaisten",
    "romaanisissa kirkoissa",
@@ -63,7 +63,7 @@
   "kohde": "kohde:crystal-palace",
   "kysymys": "Millainen puisto Hyde Park on?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Olen lennellyt sen yli useammin kuin viitsin laskea. Hyde Park on suuri kuninkaallinen puisto Lontoon keskustassa, jonka mailla on aiemmin metsästetty. Puistossa on [[Serpentine-järvi]], jossa voi soutaa ja uida, ja sen kulmassa sijaitsee [[Speakers' Corner]], jossa on perinteisesti saanut pitää puheita lähes mistä aiheesta tahansa. Puisto rajoittuu [[Kensington Gardensiin]], ja yhdessä ne muodostavat laajan vihreän alueen kaupungin sydämessä. Puistossa on järjestetty myös suuria tapahtumia, kuten vuoden 1851 maailmannäyttely.\nTäältä katolta nuo puut näyttävät ihan pulleilta.",
+  "vastaus": "Joo, tän minä tiedän. Olen lennellyt sen yli useammin kuin viitsin laskea. Hyde Park on suuri kuninkaallinen puisto Lontoon keskustassa, jonka mailla on aiemmin metsästetty. Puistossa on [[Serpentine-järvi]], jossa voi soutaa ja uida, ja sen kulmassa sijaitsee [[Speakers' Corner]], jossa on perinteisesti saanut pitää puheita lähes mistä aiheesta tahansa. Puisto rajoittuu [[Kensington Gardensiin]], ja yhdessä ne muodostavat laajan vihreän alueen kaupungin sydämessä. Puistossa on järjestetty myös suuria tapahtumia, kuten vuoden 1851 maailmannäyttely.\n\nTäältä katolta nuo puut näyttävät ihan pulleilta.",
   "linkit": [
    "Serpentine-järvi",
    "Speakers' Corner",
@@ -78,7 +78,7 @@
   "kohde": "kohde:bennevis",
   "kysymys": "Mikä on felsenmeer?",
   "uusi": false,
-  "vastaus": "Ai se. Sana kuulostaa saksalta, ja sitähän se on. Felsenmeer tarkoittaa saksaksi kallionmerta eli kivimerta, ja se on maiseman muoto, jossa maa on peittynyt teräväkulmaisten kivilohkareiden kentällä. Lohkareet syntyvät, kun vesi jäätyy kallion rakoihin ja laajenee, jolloin kallio halkeaa vähitellen paloiksi. Prosessia kutsutaan [[pakkasrapautumiseksi]]. [[Ben Neviksen]] huipulla tällainen kivikenttä muodostaa tasanteen, jolla kävely vaatii tarkkuutta, ja vastaavaa maisemaa tavataan korkeilla vuorilla ja kylmillä alueilla ympäri [[Euroopan]]. Sumussa huipun löytäminen vaatii kompassia.\nNo eipä tuo kyyhkyn jaloille sovellu, kivi on kivi.",
+  "vastaus": "Ai se. Sana kuulostaa saksalta, ja sitähän se on. Felsenmeer tarkoittaa saksaksi kallionmerta eli kivimerta, ja se on maiseman muoto, jossa maa on peittynyt teräväkulmaisten kivilohkareiden kentällä. Lohkareet syntyvät, kun vesi jäätyy kallion rakoihin ja laajenee, jolloin kallio halkeaa vähitellen paloiksi. Prosessia kutsutaan [[pakkasrapautumiseksi]]. [[Ben Neviksen]] huipulla tällainen kivikenttä muodostaa tasanteen, jolla kävely vaatii tarkkuutta, ja vastaavaa maisemaa tavataan korkeilla vuorilla ja kylmillä alueilla ympäri [[Euroopan]]. Sumussa huipun löytäminen vaatii kompassia.\n\nNo eipä tuo kyyhkyn jaloille sovellu, kivi on kivi.",
   "linkit": [
    "pakkasrapautumiseksi",
    "Ben Neviksen",
@@ -93,7 +93,7 @@
   "kohde": "kohde:bennevis",
   "kysymys": "Millainen on Ben Neviksen pohjoisseinämä talvella?",
   "uusi": false,
-  "vastaus": "Selvä juttu, mutta tämä on kyllä kovin kylmä aihe. Ben Neviksen pohjoisseinämä on talvella lumen ja jään peittämä jyrkkä kalliomuuri, jonka korkeus on noin seitsemänsataa metriä ja jossa kiipeillään jäällä ja lumisilla uomilla. Se on [[Skotlannin]] tärkeimpiä [[jääkiipeilypaikkoja]], ja olosuhteet vaihtelevat nopeasti: sää voi kääntyä sumuksi, myrskyksi tai lumipyryksi lyhyessä ajassa. Seinämän juurella on kiipeilijöiden turvamaja, jota käytetään tukikohtana. [[Lumivyöryvaara]] on todellinen, ja kokeneetkin kiipeilijät seuraavat tarkasti ennusteita. Tarkkoja talvisia lukemia tai kiipeilyreittien vaikeusasteita en uskalla luvata.\nMinä katselen tuota mieluummin kaukaa, lämpimältä räystäältä.",
+  "vastaus": "Selvä juttu, mutta tämä on kyllä kovin kylmä aihe. Ben Neviksen pohjoisseinämä on talvella lumen ja jään peittämä jyrkkä kalliomuuri, jonka korkeus on noin seitsemänsataa metriä ja jossa kiipeillään jäällä ja lumisilla uomilla. Se on [[Skotlannin]] tärkeimpiä [[jääkiipeilypaikkoja]], ja olosuhteet vaihtelevat nopeasti: sää voi kääntyä sumuksi, myrskyksi tai lumipyryksi lyhyessä ajassa. Seinämän juurella on kiipeilijöiden turvamaja, jota käytetään tukikohtana. [[Lumivyöryvaara]] on todellinen, ja kokeneetkin kiipeilijät seuraavat tarkasti ennusteita. Tarkkoja talvisia lukemia tai kiipeilyreittien vaikeusasteita en uskalla luvata.\n\nMinä katselen tuota mieluummin kaukaa, lämpimältä räystäältä.",
   "linkit": [
    "Skotlannin",
    "jääkiipeilypaikkoja",
@@ -122,7 +122,7 @@
   "kohde": "kohde:bennevis",
   "kysymys": "Millainen sää Ben Neviksellä yleensä on?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Sää on Skotlannin vuorilla aina aihe. Ben Neviksen sää on tunnetusti kostea ja vaihteleva: huippu on usein pilvessä, tuuli voi olla navakka ja sateita tulee paljon. [[Sumu]] tekee suunnistamisesta vaikeaa, ja huipulla lämpötila on selvästi alempi kuin rinteen juurella. Vuorella toimi 1800-luvun lopulla [[sääasema]], jossa havaintoja tehtiin päivittäin, ja se tuotti arvokasta tietoa [[Skotlannin]] ylänköjen ilmastosta. Retkeilijän kannattaa varautua kaikkiin vuodenaikoihin yhden päivän aikana, ja tarkkoja sademääriä en lähde arvailemaan.\nKyl minä kuivana pysyn, jos pysyn kotona.",
+  "vastaus": "Annas ku mietin. Sää on Skotlannin vuorilla aina aihe. Ben Neviksen sää on tunnetusti kostea ja vaihteleva: huippu on usein pilvessä, tuuli voi olla navakka ja sateita tulee paljon. [[Sumu]] tekee suunnistamisesta vaikeaa, ja huipulla lämpötila on selvästi alempi kuin rinteen juurella. Vuorella toimi 1800-luvun lopulla [[sääasema]], jossa havaintoja tehtiin päivittäin, ja se tuotti arvokasta tietoa [[Skotlannin]] ylänköjen ilmastosta. Retkeilijän kannattaa varautua kaikkiin vuodenaikoihin yhden päivän aikana, ja tarkkoja sademääriä en lähde arvailemaan.\n\nKyl minä kuivana pysyn, jos pysyn kotona.",
   "linkit": [
    "Sumu",
    "sääasema",
@@ -137,7 +137,7 @@
   "kohde": "kohde:bennevis",
   "kysymys": "Miten Ben Nevikselle noustaan?",
   "uusi": true,
-  "vastaus": "Kas vaan, retkeilyä. Ben Nevikselle nousee tunnetuin reitti [[Glen Nevisin]] laaksosta, [[Fort Williamin]] lähellä, ja sitä kutsutaan vuoristopoluksi. Polku on selvästi merkitty ja rakennettu, mutta nousu kestää useita tunteja ja vaatii hyvää kuntoa ja asianmukaisia vaatteita, sillä sää voi muuttua nopeasti. Huipulla on kivinen tasanne, jossa suunnistaminen sumussa voi olla vaikeaa, joten kartta ja [[kompassi]] kuuluvat mukaan. Vaativampi vaihtoehto kulkee vuoren pohjoispuolen kautta, mutta sitä en kuvaile tarkemmin.\nJalkamiehelle kunnioitettava urakka, siivekkäälle yksi lepohetki.",
+  "vastaus": "Kas vaan, retkeilyä. Ben Nevikselle nousee tunnetuin reitti [[Glen Nevisin]] laaksosta, [[Fort Williamin]] lähellä, ja sitä kutsutaan vuoristopoluksi. Polku on selvästi merkitty ja rakennettu, mutta nousu kestää useita tunteja ja vaatii hyvää kuntoa ja asianmukaisia vaatteita, sillä sää voi muuttua nopeasti. Huipulla on kivinen tasanne, jossa suunnistaminen sumussa voi olla vaikeaa, joten kartta ja [[kompassi]] kuuluvat mukaan. Vaativampi vaihtoehto kulkee vuoren pohjoispuolen kautta, mutta sitä en kuvaile tarkemmin.\n\nJalkamiehelle kunnioitettava urakka, siivekkäälle yksi lepohetki.",
   "linkit": [
    "Glen Nevisin",
    "Fort Williamin",
@@ -152,7 +152,7 @@
   "kohde": "kohde:snowdon",
   "kysymys": "Mitä nimi Yr Wyddfa tarkoittaa?",
   "uusi": false,
-  "vastaus": "Joo, tän minä tiedän. Kymri on kaunis kieli, vaikka ääntäminen taitaa olla minulle liikaa. Yr Wyddfa tarkoitetaan yleensä suunnilleen \"hautakumpua\" tai \"hautaa\", ja nimi liittyy vuoren perimätietoon: legendan mukaan huipun alle on haudattu jättiläinen, jonka kuningas Arthurin kerrotaan voittaneen. Kyseessä on kuitenkin vanha kansantarina eikä historiallinen tosiasia. Englanninkielinen nimi Snowdon taas viittaa lumeen, ja vuori tunnetaan molemmilla nimillä. [[Kymrin]] kieli on [[Walesin]] virallinen kieli, ja vuori sijaitsee nykyään [[Snowdonian]] kansallispuistossa.\nPahus, kun en osaa lausua tuota oikein, vaikka olen lukenut sen monta kertaa.",
+  "vastaus": "Joo, tän minä tiedän. Kymri on kaunis kieli, vaikka ääntäminen taitaa olla minulle liikaa. Yr Wyddfa tarkoitetaan yleensä suunnilleen \"hautakumpua\" tai \"hautaa\", ja nimi liittyy vuoren perimätietoon: legendan mukaan huipun alle on haudattu jättiläinen, jonka kuningas Arthurin kerrotaan voittaneen. Kyseessä on kuitenkin vanha kansantarina eikä historiallinen tosiasia. Englanninkielinen nimi Snowdon taas viittaa lumeen, ja vuori tunnetaan molemmilla nimillä. [[Kymrin]] kieli on [[Walesin]] virallinen kieli, ja vuori sijaitsee nykyään [[Snowdonian]] kansallispuistossa.\n\nPahus, kun en osaa lausua tuota oikein, vaikka olen lukenut sen monta kertaa.",
   "linkit": [
    "Kymrin",
    "Walesin",
@@ -167,7 +167,7 @@
   "kohde": "kohde:snowdon",
   "kysymys": "Miten jäätiköt muotoilivat Snowdonin?",
   "uusi": false,
-  "vastaus": "No niin, jäätiköt. Isot ja hitaat, kuin vanhat postivaunut. Jääkaudella vuoren rinteillä virtasi jäätiköitä, jotka kaivoivat kallioperää syvälle ja jättivät jälkeensä jyrkät laaksot. Kun jäätiköt työskentelivät vuoren eri puolilta, ne kuluttivat seinämiä ja jättivät jäljelle terävän pyramidimaisen huipun sekä kapeat, jyrkkäreunaiset harjanteet, joita kutsutaan [[arêteiksi]], kuten Crib Goch ja Y Lliwedd. Rinteiden kuluttamat laaksot ovat nimeltään [[kuruiksi]], ja kymriksi niitä sanotaan \"cwm\". Yhdistelmä on tyypillinen jäätikköjen muokkaama maisema, ja samanlaista tavataan [[Alpeilla]] ja Skotlannissa.\nOnpa tuossa taas kerran aika pitkä historia mukana.",
+  "vastaus": "No niin, jäätiköt. Isot ja hitaat, kuin vanhat postivaunut. Jääkaudella vuoren rinteillä virtasi jäätiköitä, jotka kaivoivat kallioperää syvälle ja jättivät jälkeensä jyrkät laaksot. Kun jäätiköt työskentelivät vuoren eri puolilta, ne kuluttivat seinämiä ja jättivät jäljelle terävän pyramidimaisen huipun sekä kapeat, jyrkkäreunaiset harjanteet, joita kutsutaan [[arêteiksi]], kuten Crib Goch ja Y Lliwedd. Rinteiden kuluttamat laaksot ovat nimeltään [[kuruiksi]], ja kymriksi niitä sanotaan \"cwm\". Yhdistelmä on tyypillinen jäätikköjen muokkaama maisema, ja samanlaista tavataan [[Alpeilla]] ja Skotlannissa.\n\nOnpa tuossa taas kerran aika pitkä historia mukana.",
   "linkit": [
    "arêteiksi",
    "kuruiksi",
@@ -182,7 +182,7 @@
   "kohde": "kohde:snowdon",
   "kysymys": "Kulkeeko Snowdonille juna?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Joo, kulkee, mutta ei ihan tavallinen. Snowdonin huipulle nousee [[Snowdon Mountain Railway]], [[hammaspyöräratana]], joka lähtee [[Llanberisin]] kylästä ja jonka liikenne alkoi vuonna 1896. Hammaspyörä mahdollistaa jyrkän nousun, jossa tavallisen junan pyörät eivät pitäisi. Juna ei aina kulje huipulle asti, sillä sää ja vuodenaika vaikuttavat liikenteeseen. Ratalla on kauniita näköaloja, ja se on suosittu vaihtoehto kävelylle. Aikatauluista en voi antaa tarkkoja tietoja, ne kannattaa tarkistaa ajantasaisesta lähteestä.\nKyyhkynä minä lentäisin tuon matkan hetkessä, mut ratamatka kuulostaa mukavalta, etenkin jos mukana on pullaa.",
+  "vastaus": "Odotas vähän. Joo, kulkee, mutta ei ihan tavallinen. Snowdonin huipulle nousee [[Snowdon Mountain Railway]], [[hammaspyöräratana]], joka lähtee [[Llanberisin]] kylästä ja jonka liikenne alkoi vuonna 1896. Hammaspyörä mahdollistaa jyrkän nousun, jossa tavallisen junan pyörät eivät pitäisi. Juna ei aina kulje huipulle asti, sillä sää ja vuodenaika vaikuttavat liikenteeseen. Ratalla on kauniita näköaloja, ja se on suosittu vaihtoehto kävelylle. Aikatauluista en voi antaa tarkkoja tietoja, ne kannattaa tarkistaa ajantasaisesta lähteestä.\n\nKyyhkynä minä lentäisin tuon matkan hetkessä, mut ratamatka kuulostaa mukavalta, etenkin jos mukana on pullaa.",
   "linkit": [
    "Snowdon Mountain Railway",
    "hammaspyöräratana",
@@ -197,7 +197,7 @@
   "kohde": "kohde:snowdon",
   "kysymys": "Mikä on ordovikikausi?",
   "uusi": true,
-  "vastaus": "Ai tota. Geologian aikakausia, hei, hyvä kysymys. Ordovikikausi on maapallon geologinen kausi, joka sijoittuu noin 485–445 miljoonan vuoden taakse, paleotsooisen maailmankauden alkupuolelle. Tuolloin elämä oli merissä: maalla ei vielä ollut kasvillisuutta juuri lainkaan, ja meressä viihtyivät muun muassa trilobiitit, kotilot ja varhaiset korallit. Kausi päättyi laajaan sukupuuttoon, joka on yksi tunnetuimmista. Nimi tulee [[Walesin]] muinaisesta ordovikien heimosta, ja kausi liittyy läheisesti [[Snowdonian]] kallioihin, jotka syntyivät tulivuorenpurkauksissa.\nEipä silloin ollut yhtään kyyhkyä, kuvitelkaa.",
+  "vastaus": "Ai tota. Geologian aikakausia, hei, hyvä kysymys. Ordovikikausi on maapallon geologinen kausi, joka sijoittuu noin 485–445 miljoonan vuoden taakse, paleotsooisen maailmankauden alkupuolelle. Tuolloin elämä oli merissä: maalla ei vielä ollut kasvillisuutta juuri lainkaan, ja meressä viihtyivät muun muassa trilobiitit, kotilot ja varhaiset korallit. Kausi päättyi laajaan sukupuuttoon, joka on yksi tunnetuimmista. Nimi tulee [[Walesin]] muinaisesta ordovikien heimosta, ja kausi liittyy läheisesti [[Snowdonian]] kallioihin, jotka syntyivät tulivuorenpurkauksissa.\n\nEipä silloin ollut yhtään kyyhkyä, kuvitelkaa.",
   "linkit": [
    "Walesin",
    "Snowdonian"
@@ -211,7 +211,7 @@
   "kohde": "kohde:snowdon",
   "kysymys": "Mikä kansallispuisto Snowdonia on?",
   "uusi": true,
-  "vastaus": "Selvä juttu, tämä on helppo. Snowdonia on [[Pohjois-Walesin]] kansallispuisto, joka perustettiin vuonna 1951 ja jonka keskeinen vuori on Snowdon. Puisto kattaa vuoria, laaksoja, järviä ja rannikkoa, ja siellä on vaelluspolkuja, vanhoja kyliä ja [[kymrin]] kieltä puhuvia yhteisöjä. Kymrinkielinen nimi on [[Eryri]], ja se on otettu viime vuosina virallisesti käyttöön rinnakkain englanninkielisen nimen kanssa. Alue on suosittu retkeilykohde, ja luonnonsuojelun ja matkailun tasapaino on sen suuri kysymys. Tarkkaa pinta-alaa en uskalla sanoa.\nEi paha lyhyeksi kyyhkyn vastaukseksi.",
+  "vastaus": "Selvä juttu, tämä on helppo. Snowdonia on [[Pohjois-Walesin]] kansallispuisto, joka perustettiin vuonna 1951 ja jonka keskeinen vuori on Snowdon. Puisto kattaa vuoria, laaksoja, järviä ja rannikkoa, ja siellä on vaelluspolkuja, vanhoja kyliä ja [[kymrin]] kieltä puhuvia yhteisöjä. Kymrinkielinen nimi on [[Eryri]], ja se on otettu viime vuosina virallisesti käyttöön rinnakkain englanninkielisen nimen kanssa. Alue on suosittu retkeilykohde, ja luonnonsuojelun ja matkailun tasapaino on sen suuri kysymys. Tarkkaa pinta-alaa en uskalla sanoa.\n\nEi paha lyhyeksi kyyhkyn vastaukseksi.",
   "linkit": [
    "Pohjois-Walesin",
    "kymrin",
@@ -226,7 +226,7 @@
   "kohde": "kohde:pohjanmeri~3",
   "kysymys": "Miksi Pohjanmeri on niin matala?",
   "uusi": false,
-  "vastaus": "Hmm, mielenkiintoinen kysymys. Tuo on kuin iso vesilätäkkö, ylhäältä katsottuna. Pohjanmeri on matala, koska se sijaitsee [[Euroopan]] mannerjalustalla eli mantereen reunaa jatkavalla matalalla vedenalaisella tasangolla. Jääkausien aikana merenpinta oli huomattavasti nykyistä alempana, ja suuri osa nykyisestä merenpohjasta oli kuivaa maata, jota kutsutaan nimellä [[Doggerland]]. Kun jäätiköt suli, vesi nousi ja peitti alueen. Meri on suurimmaksi osaksi satojen metrien syvyyttä pienempi, mutta Norjan rannikon edustalla on syvempi [[Norjanrintama]]. Tarkkaa keskisyvyyttä en lähde arvaamaan.\nEikä tuossa pitäisi hukkua, jos osaa uida.",
+  "vastaus": "Hmm, mielenkiintoinen kysymys. Tuo on kuin iso vesilätäkkö, ylhäältä katsottuna. Pohjanmeri on matala, koska se sijaitsee [[Euroopan]] mannerjalustalla eli mantereen reunaa jatkavalla matalalla vedenalaisella tasangolla. Jääkausien aikana merenpinta oli huomattavasti nykyistä alempana, ja suuri osa nykyisestä merenpohjasta oli kuivaa maata, jota kutsutaan nimellä [[Doggerland]]. Kun jäätiköt suli, vesi nousi ja peitti alueen. Meri on suurimmaksi osaksi satojen metrien syvyyttä pienempi, mutta Norjan rannikon edustalla on syvempi [[Norjanrintama]]. Tarkkaa keskisyvyyttä en lähde arvaamaan.\n\nEikä tuossa pitäisi hukkua, jos osaa uida.",
   "linkit": [
    "Euroopan",
    "Doggerland",
@@ -241,7 +241,7 @@
   "kohde": "kohde:pohjanmeri~3",
   "kysymys": "Milloin Pohjanmereltä löydettiin öljy?",
   "uusi": false,
-  "vastaus": "Katotaas. Tämä on sellainen vuosilukukysymys, josta ei saa mennä mönkään. Pohjanmeren öljyn ja kaasun etsintä kiihtyi 1960-luvulla. Maakaasua löydettiin brittien puolelta jo 1960-luvun puolivälissä, ja öljyä löytyi Norjan alueelta Ekofiskin kentältä vuonna 1969. Tuotanto Ekofiskilla alkoi 1970-luvun alussa. Brittien puolella suuria löytöjä tehtiin 1970-luvulla, ja ne mullistivat sekä [[Norjan]] että [[Ison-Britannian]] taloutta. Löydöt tekivät [[Pohjanmeren öljyntuotannosta]] merkittävän Euroopan energiahuollolle, ja tarkat vuosiluvut eri kentille kannattaa tarkistaa erikseen.\nOnpas siinä ollut aikaa kehittää toimintaa.",
+  "vastaus": "Katotaas. Tämä on sellainen vuosilukukysymys, josta ei saa mennä mönkään. Pohjanmeren öljyn ja kaasun etsintä kiihtyi 1960-luvulla. Maakaasua löydettiin brittien puolelta jo 1960-luvun puolivälissä, ja öljyä löytyi Norjan alueelta Ekofiskin kentältä vuonna 1969. Tuotanto Ekofiskilla alkoi 1970-luvun alussa. Brittien puolella suuria löytöjä tehtiin 1970-luvulla, ja ne mullistivat sekä [[Norjan]] että [[Ison-Britannian]] taloutta. Löydöt tekivät [[Pohjanmeren öljyntuotannosta]] merkittävän Euroopan energiahuollolle, ja tarkat vuosiluvut eri kentille kannattaa tarkistaa erikseen.\n\nOnpas siinä ollut aikaa kehittää toimintaa.",
   "linkit": [
    "Norjan",
    "Ison-Britannian",
@@ -256,7 +256,7 @@
   "kohde": "kohde:pohjanmeri~3",
   "kysymys": "Mitä kaloja Pohjanmerellä pyydetään?",
   "uusi": true,
-  "vastaus": "No jopas. Kalastus on tälläkin merellä tärkeää. Pohjanmerellä pyydetään muun muassa silliä, turskaa, koljaa, kampelaa ja kirjolohta muistuttavia lajeja, ja kalastus on ollut rannikkoyhteisöille keskeinen elinkeino jo vuosisatoja. Matala ja ravinteikas vesi tarjoaa hyvät kasvuolosuhteet, ja alue on yksi Euroopan tärkeimmistä kalastusalueista. Liikakalastus on kuitenkin vähentänyt joidenkin kantojen kokoa, ja pyyntiä säännellään kiintiöillä. [[Silli]] on kuulunut pohjoiseurooppalaiseen ruokakulttuuriin pitkään, ja [[turska]] on ollut yhtä tärkeä.\nMinä kyllä maistaisin mieluummin pullaa, mut ei tuo silakkakaan paha.",
+  "vastaus": "No jopas. Kalastus on tälläkin merellä tärkeää. Pohjanmerellä pyydetään muun muassa silliä, turskaa, koljaa, kampelaa ja kirjolohta muistuttavia lajeja, ja kalastus on ollut rannikkoyhteisöille keskeinen elinkeino jo vuosisatoja. Matala ja ravinteikas vesi tarjoaa hyvät kasvuolosuhteet, ja alue on yksi Euroopan tärkeimmistä kalastusalueista. Liikakalastus on kuitenkin vähentänyt joidenkin kantojen kokoa, ja pyyntiä säännellään kiintiöillä. [[Silli]] on kuulunut pohjoiseurooppalaiseen ruokakulttuuriin pitkään, ja [[turska]] on ollut yhtä tärkeä.\n\nMinä kyllä maistaisin mieluummin pullaa, mut ei tuo silakkakaan paha.",
   "linkit": [
    "Silli",
    "turska"
@@ -270,7 +270,7 @@
   "kohde": "kohde:pohjanmeri~3",
   "kysymys": "Mikä on Vatimeri?",
   "uusi": true,
-  "vastaus": "Ai se, tämä on kiinnostava paikka. Vatimeri on Pohjanmeren rannikolla Alankomaiden, Saksan ja Tanskan edustalla sijaitseva laaja vuorovesialue, jossa vuorovesi paljastaa vuoroin laajoja mutaisia ja hiekkaisia rantatasankoja ja peittää ne uudestaan. Alue on tärkeä lintujen levähdys- ja ruokailupaikka, ja sen luonto on harvinaisen monimuotoista. Se on merkitty [[Unescon]] maailmanperintökohteeksi, ja suojelu ulottuu kaikkien kolmen maan alueille. Kävelijät voivat tehdä [[vuorovesiretkiä]], mutta vuorovesi nousee nopeasti, joten opas on tarpeen. Tarkkaa pinta-alaa en tässä uskalla sanoa.\nLintu tuntee tuon paikan, mutta pullaa sieltä ei saa.",
+  "vastaus": "Ai se, tämä on kiinnostava paikka. Vatimeri on Pohjanmeren rannikolla Alankomaiden, Saksan ja Tanskan edustalla sijaitseva laaja vuorovesialue, jossa vuorovesi paljastaa vuoroin laajoja mutaisia ja hiekkaisia rantatasankoja ja peittää ne uudestaan. Alue on tärkeä lintujen levähdys- ja ruokailupaikka, ja sen luonto on harvinaisen monimuotoista. Se on merkitty [[Unescon]] maailmanperintökohteeksi, ja suojelu ulottuu kaikkien kolmen maan alueille. Kävelijät voivat tehdä [[vuorovesiretkiä]], mutta vuorovesi nousee nopeasti, joten opas on tarpeen. Tarkkaa pinta-alaa en tässä uskalla sanoa.\n\nLintu tuntee tuon paikan, mutta pullaa sieltä ei saa.",
   "linkit": [
    "Unescon",
    "vuorovesiretkiä"
@@ -284,7 +284,7 @@
   "kohde": "kohde:pohjanmeri~3",
   "kysymys": "Mikä oli Pohjanmeren tulva vuonna 1953?",
   "uusi": true,
-  "vastaus": "Kääk. Tämä on raskas aihe. Tulva oli myrskyn aiheuttama vedennousu, joka iski Pohjanmeren rannikolle tammikuun lopun ja helmikuun alun vaihteessa vuonna 1953. Myrskyn ja vuoroveden yhteisvaikutus nosti merenpinnan ennätyksellisen korkealle, ja vesi tulvi padot ja vallit yli erityisesti [[Alankomaiden]] lounaisosassa sekä [[Englannin]] itärannikolla. Kuolleita oli Alankomaissa yli tuhat ja myös Englannissa useita satoja. Onnettomuuden jälkeen Alankomaissa käynnistettiin laaja rannikonsuojeluohjelma, [[Deltatyöt]], jonka tarkoitus oli estää vastaava tulva. Tapahtumasta on yli seitsemänkymmentä vuotta, ja ennuste- ja varoitusjärjestelmät ovat sittemmin kehittyneet.\nOnpa siit onneksi pitkä aika.",
+  "vastaus": "Kääk. Tämä on raskas aihe. Tulva oli myrskyn aiheuttama vedennousu, joka iski Pohjanmeren rannikolle tammikuun lopun ja helmikuun alun vaihteessa vuonna 1953. Myrskyn ja vuoroveden yhteisvaikutus nosti merenpinnan ennätyksellisen korkealle, ja vesi tulvi padot ja vallit yli erityisesti [[Alankomaiden]] lounaisosassa sekä [[Englannin]] itärannikolla. Kuolleita oli Alankomaissa yli tuhat ja myös Englannissa useita satoja. Onnettomuuden jälkeen Alankomaissa käynnistettiin laaja rannikonsuojeluohjelma, [[Deltatyöt]], jonka tarkoitus oli estää vastaava tulva. Tapahtumasta on yli seitsemänkymmentä vuotta, ja ennuste- ja varoitusjärjestelmät ovat sittemmin kehittyneet.\n\nOnpa siit onneksi pitkä aika.",
   "linkit": [
    "Alankomaiden",
    "Englannin",
@@ -299,7 +299,7 @@
   "kohde": "kohde:irlanninmeri",
   "kysymys": "Mikä Mansaari on?",
   "uusi": false,
-  "vastaus": "Mmm— Mansaari. Pieni saari keskellä merta, mutta oma maailmansa. Mansaari on Irlanninmeren keskellä sijaitseva itsehallinnollinen saari, joka ei kuulu Yhdistyneeseen kuningaskuntaan mutta on sen kruunun alainen alue. Sillä on oma parlamentti [[Tynwald]], jonka perinteet ulottuvat viikinkiaikaan, ja saaren pääkaupunki on Douglas. Saarella on oma kielensä, [[manksi]], joka on kelttiläinen kieli ja jota on elvytetty. Saari on tunnettu myös [[Isle of Man TT]] -moottoripyöräkilpailusta sekä manx-kissoista, joilla on tavallisesti hyvin lyhyt tai puuttuva häntä.\nTäältä ylhäältä se näyttää pieneltä, mutta puhekyvyltään isolta.",
+  "vastaus": "Mmm— Mansaari. Pieni saari keskellä merta, mutta oma maailmansa. Mansaari on Irlanninmeren keskellä sijaitseva itsehallinnollinen saari, joka ei kuulu Yhdistyneeseen kuningaskuntaan mutta on sen kruunun alainen alue. Sillä on oma parlamentti [[Tynwald]], jonka perinteet ulottuvat viikinkiaikaan, ja saaren pääkaupunki on Douglas. Saarella on oma kielensä, [[manksi]], joka on kelttiläinen kieli ja jota on elvytetty. Saari on tunnettu myös [[Isle of Man TT]] -moottoripyöräkilpailusta sekä manx-kissoista, joilla on tavallisesti hyvin lyhyt tai puuttuva häntä.\n\nTäältä ylhäältä se näyttää pieneltä, mutta puhekyvyltään isolta.",
   "linkit": [
    "Tynwald",
    "manksi",
@@ -314,7 +314,7 @@
   "kohde": "kohde:irlanninmeri",
   "kysymys": "Miksi merta kutsutaan joskus Manxinmereksi?",
   "uusi": false,
-  "vastaus": "Tuota niin. Tämä on nimeämiskysymys, joten pitää olla tarkka. Sana \"manx\" liittyy [[Mansaareen]]: se tarkoittaa saaren asukkaita, kieltä ja kulttuuria. Koska saari sijaitsee [[Irlanninmeren]] keskellä, merta on kutsuttu sen mukaan, mutta tämä nimi ei ole vakiintunut, ja yleisin nimi on Irlanninmeri. En ole varma, kuinka laajalti nimeä on käytetty tai milloin se on syntynyt, joten sen alkuperästä en lähde sanomaan enempää. Saaren oma kulttuuri on kuitenkin vahva osa meren identiteettiä, ja saari tunnetaan [[kelttiläisestä perinteestään]].\nNo niin, taas yksi nimi lisää muistettavaksi.",
+  "vastaus": "Tuota niin. Tämä on nimeämiskysymys, joten pitää olla tarkka. Sana \"manx\" liittyy [[Mansaareen]]: se tarkoittaa saaren asukkaita, kieltä ja kulttuuria. Koska saari sijaitsee [[Irlanninmeren]] keskellä, merta on kutsuttu sen mukaan, mutta tämä nimi ei ole vakiintunut, ja yleisin nimi on Irlanninmeri. En ole varma, kuinka laajalti nimeä on käytetty tai milloin se on syntynyt, joten sen alkuperästä en lähde sanomaan enempää. Saaren oma kulttuuri on kuitenkin vahva osa meren identiteettiä, ja saari tunnetaan [[kelttiläisestä perinteestään]].\n\nNo niin, taas yksi nimi lisää muistettavaksi.",
   "linkit": [
    "Mansaareen",
    "Irlanninmeren",
@@ -329,7 +329,7 @@
   "kohde": "kohde:irlanninmeri",
   "kysymys": "Mitä lauttayhteyksiä Irlannin ja Walesin välillä on?",
   "uusi": true,
-  "vastaus": "Hei, lauttoja. Selvä juttu. Irlannin ja Walesin välillä kulkee säännöllisiä lauttayhteyksiä, joista tunnetuin kulkee Dublinin ja Holyheadin välillä. Holyhead sijaitsee Anglesey-saarella Pohjois-Walesissa, ja se on yksi Irlanninmeren tärkeimmistä satamista. Lautoilla kulkee sekä matkustajia että rahtia, ja niiden merkitys on ollut suuri Irlannin ja Ison-Britannian välisessä liikenteessä. Myös [[Liverpoolin]] ja [[Dublinin]] välillä on aiemmin ollut yhteys, ja aikataulut ja reitit voivat muuttua, joten ajantasaiset tiedot kannattaa tarkistaa erikseen. Matkustusaika vaihtelee aluksesta riippuen.\nSiivillä se menisi nopeammin, mut ei mukavammin.",
+  "vastaus": "Hei, lauttoja. Selvä juttu. Irlannin ja Walesin välillä kulkee säännöllisiä lauttayhteyksiä, joista tunnetuin kulkee Dublinin ja Holyheadin välillä. Holyhead sijaitsee Anglesey-saarella Pohjois-Walesissa, ja se on yksi Irlanninmeren tärkeimmistä satamista. Lautoilla kulkee sekä matkustajia että rahtia, ja niiden merkitys on ollut suuri Irlannin ja Ison-Britannian välisessä liikenteessä. Myös [[Liverpoolin]] ja [[Dublinin]] välillä on aiemmin ollut yhteys, ja aikataulut ja reitit voivat muuttua, joten ajantasaiset tiedot kannattaa tarkistaa erikseen. Matkustusaika vaihtelee aluksesta riippuen.\n\nSiivillä se menisi nopeammin, mut ei mukavammin.",
   "linkit": [
    "Liverpoolin",
    "Dublinin"
@@ -343,7 +343,7 @@
   "kohde": "kohde:irlanninmeri",
   "kysymys": "Mikä Anglesey on?",
   "uusi": true,
-  "vastaus": "Nyt muistan: Anglesey, siis kymriksi Ynys Môn. Anglesey on Irlanninmeren suurin saari ja sijaitsee Pohjois-Walesin rannikolla. Sen ja mantereen välissä on kapea Menai-salmi, jonka yli kulkee kaksi tunnettua siltaa: Menain riippusilta, jonka insinööri Thomas Telford rakennutti ja joka valmistui vuonna 1826, sekä Britannia-silta. Saarella on rantoja, merilintujen suojelualueita ja [[Holyheadin]] satama, josta lähtevät Irlannin lautat. Kymrin kieli on saarella vahva. [[Menain riippusilta]] on yksi maailman varhaisimmista suurista riippusilloista, mutta \"varhaisimmasta\" en ole aivan varma.\nPitkä nimi siltä saarelta, mut ihan hyvin minä sen kiersin.",
+  "vastaus": "Nyt muistan: Anglesey, siis kymriksi Ynys Môn. Anglesey on Irlanninmeren suurin saari ja sijaitsee Pohjois-Walesin rannikolla. Sen ja mantereen välissä on kapea Menai-salmi, jonka yli kulkee kaksi tunnettua siltaa: Menain riippusilta, jonka insinööri Thomas Telford rakennutti ja joka valmistui vuonna 1826, sekä Britannia-silta. Saarella on rantoja, merilintujen suojelualueita ja [[Holyheadin]] satama, josta lähtevät Irlannin lautat. Kymrin kieli on saarella vahva. [[Menain riippusilta]] on yksi maailman varhaisimmista suurista riippusilloista, mutta \"varhaisimmasta\" en ole aivan varma.\n\nPitkä nimi siltä saarelta, mut ihan hyvin minä sen kiersin.",
   "linkit": [
    "Holyheadin",
    "Menain riippusilta"
@@ -357,7 +357,7 @@
   "kohde": "kohde:irlanninmeri",
   "kysymys": "Mitkä suuret kaupungit ovat Irlanninmeren rannalla?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Katsotaan karttaa mielessä. Irlanninmeren rannalla tai sen välittömässä läheisyydessä on useita suuria kaupunkeja, joista tunnetuimpia ovat Irlannin pääkaupunki [[Dublin]] ja Englannin luoteisrannikon satamakaupunki [[Liverpool]]. Liverpool on Mersey-joen suulla, ja sen satama on ollut vuosisatoja merkittävä kaupankäynnin ja siirtolaisuuden solmukohta. Pohjoisessa sijaitsee Pohjois-Irlannin pääkaupunki [[Belfast]], joka on yhteydessä merelle Belfast Loughin kautta, ja Walesin puolella Holyhead on tärkeä satama. Tarkkaa asukaslukua en tässä esitä.\nJa tän kaiken minä kannoin päässäni.",
+  "vastaus": "Odotas vähän. Katsotaan karttaa mielessä. Irlanninmeren rannalla tai sen välittömässä läheisyydessä on useita suuria kaupunkeja, joista tunnetuimpia ovat Irlannin pääkaupunki [[Dublin]] ja Englannin luoteisrannikon satamakaupunki [[Liverpool]]. Liverpool on Mersey-joen suulla, ja sen satama on ollut vuosisatoja merkittävä kaupankäynnin ja siirtolaisuuden solmukohta. Pohjoisessa sijaitsee Pohjois-Irlannin pääkaupunki [[Belfast]], joka on yhteydessä merelle Belfast Loughin kautta, ja Walesin puolella Holyhead on tärkeä satama. Tarkkaa asukaslukua en tässä esitä.\n\nJa tän kaiken minä kannoin päässäni.",
   "linkit": [
    "Dublin",
    "Liverpool",
@@ -414,7 +414,7 @@
   "kohde": "kohde:thames",
   "kysymys": "Mistä Thames saa alkunsa?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Thamesin perinteisenä lähteenä pidetään [[Thames Headia]] [[Cotswoldsin]] kukkuloilla [[Gloucestershiressä]], Kemblen kylän lähellä. Lähde ei ole aina vedessä: kuivina kausina joen alkupää voi olla kuiva, ja vesi tulee näkyviin vasta alempana. Joen todellisesta alkulähteestä on kiistelty, ja lähteiden mukaan osa pitää alkupäänä myös [[Seven Springsiä]], jonka vedet kulkevat Churn-joen kautta Thamesiin. Yksimielisyyttä asiasta ei ole.\nKuiva lähde ei ole kovin mukava katsottava, joten pysähdyn mieluummin leipomon ikkunalle.",
+  "vastaus": "Annas ku mietin. Thamesin perinteisenä lähteenä pidetään [[Thames Headia]] [[Cotswoldsin]] kukkuloilla [[Gloucestershiressä]], Kemblen kylän lähellä. Lähde ei ole aina vedessä: kuivina kausina joen alkupää voi olla kuiva, ja vesi tulee näkyviin vasta alempana. Joen todellisesta alkulähteestä on kiistelty, ja lähteiden mukaan osa pitää alkupäänä myös [[Seven Springsiä]], jonka vedet kulkevat Churn-joen kautta Thamesiin. Yksimielisyyttä asiasta ei ole.\n\nKuiva lähde ei ole kovin mukava katsottava, joten pysähdyn mieluummin leipomon ikkunalle.",
   "linkit": [
    "Thames Headia",
    "Cotswoldsin",
@@ -559,7 +559,7 @@
   "kohde": "kohde:hadrianuksen-muuri",
   "kysymys": "Kuka oli keisari Hadrianus?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Hadrianus hallitsi [[Rooman valtakuntaa]] vuosina 117–138. Hän tunnetaan laajoista matkoistaan provinsseissa ja rakennushankkeistaan: hänen aikanaan Rooman [[Pantheon]] sai nykyisen muotonsa, ja [[Britanniassa]] aloitettiin muurin rakentaminen vuonna 122. Hallitsijana hän vietti suuren osan ajastaan matkoilla ja tarkasti rajaprovinssien puolustusta.\nMatkusti paljon, mut ilman siipiä.",
+  "vastaus": "Selvä juttu. Hadrianus hallitsi [[Rooman valtakuntaa]] vuosina 117–138. Hän tunnetaan laajoista matkoistaan provinsseissa ja rakennushankkeistaan: hänen aikanaan Rooman [[Pantheon]] sai nykyisen muotonsa, ja [[Britanniassa]] aloitettiin muurin rakentaminen vuonna 122. Hallitsijana hän vietti suuren osan ajastaan matkoilla ja tarkasti rajaprovinssien puolustusta.\n\nMatkusti paljon, mut ilman siipiä.",
   "linkit": [
    "Rooman valtakuntaa",
    "Pantheon",
@@ -907,7 +907,7 @@
   "kohde": "kohde:canterburyn-katedraali",
   "kysymys": "Mistä Becket ja kuningas Henrik II riitelivät?",
   "uusi": true,
-  "vastaus": "Tuota niin. Riita koski sitä, kenellä oli ylin valta kirkon asioissa [[Englannissa]]. Becket oli aluksi kuninkaan läheinen ystävä ja toiminut hänen [[kanslerina]], mutta [[arkkipiispaksi]] tultuaan hän alkoi puolustaa kirkon oikeuksia. Kiistaa aiheuttivat erityisesti kirkon tuomioistuimet ja papiston asema suhteessa kuninkaan tuomioistuimiin, ja riita kesti vuosia noin 1160-luvulta alkaen. Aika oli toinen, sillä kirkon ja kruunun välinen raja oli tuolloin vielä vakiintumatta monessa maassa.\nOnpas siit onneksi pitkä aika.",
+  "vastaus": "Tuota niin. Riita koski sitä, kenellä oli ylin valta kirkon asioissa [[Englannissa]]. Becket oli aluksi kuninkaan läheinen ystävä ja toiminut hänen [[kanslerina]], mutta [[arkkipiispaksi]] tultuaan hän alkoi puolustaa kirkon oikeuksia. Kiistaa aiheuttivat erityisesti kirkon tuomioistuimet ja papiston asema suhteessa kuninkaan tuomioistuimiin, ja riita kesti vuosia noin 1160-luvulta alkaen. Aika oli toinen, sillä kirkon ja kruunun välinen raja oli tuolloin vielä vakiintumatta monessa maassa.\n\nOnpas siit onneksi pitkä aika.",
   "linkit": [
    "Englannissa",
    "kanslerina",
@@ -1125,7 +1125,7 @@
   "kohde": "kohde:hahmotelma-geevor-tin",
   "kysymys": "Milloin North Levant -kaivos suljettiin?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Vuosiluvut ovat sellaisia, ettei niissä saa arvailla. North Levant suljettiin vuonna 1891. Kaivos oli aikanaan merkittävä työnantaja [[Pendeenin]] ja [[Trewellardin]] kylien välisellä seudulla, ja [[Geevor]] itse jatkui myöhemmin omana yhtiönään aina 1900-luvulle. Alueen louhintahistoria ulottuu kuitenkin 1700-luvun lopulle asti.\nSiinä oli ny vuosiluvuille pieni jumppa.",
+  "vastaus": "Odotas vähän. Vuosiluvut ovat sellaisia, ettei niissä saa arvailla. North Levant suljettiin vuonna 1891. Kaivos oli aikanaan merkittävä työnantaja [[Pendeenin]] ja [[Trewellardin]] kylien välisellä seudulla, ja [[Geevor]] itse jatkui myöhemmin omana yhtiönään aina 1900-luvulle. Alueen louhintahistoria ulottuu kuitenkin 1700-luvun lopulle asti.\n\nSiinä oli ny vuosiluvuille pieni jumppa.",
   "linkit": [
    "Pendeenin",
    "Trewellardin",
@@ -1140,7 +1140,7 @@
   "kohde": "kohde:hahmotelma-geevor-tin",
   "kysymys": "Mitä metalleja Cornwallin länsiosan kaivoksista louhittiin?",
   "uusi": true,
-  "vastaus": "Ai se. Tätä minä olen katsellut ihan ylhäältäkin, vaikka montut eivät lennä vastaan. Cornwallin länsiosan kaivosalueella on louhittu tinaa ja [[kuparia]] 1700-luvun lopulta lähtien. [[Geevorin]] kaivos tunnetaan nimenomaan [[tinakaivoksena]], ja sen toiminta päättyi vuonna 1990. Kuparia louhittiin samalla alueella jo aiemmin, mutta tarkempaa vuosilukua kuparin louhinnan alkamiselle en ole varma.\nKuparista tulee muuten mieleen kolikot, jotka painavat ihan liikaa kyyhkyn selässä.",
+  "vastaus": "Ai se. Tätä minä olen katsellut ihan ylhäältäkin, vaikka montut eivät lennä vastaan. Cornwallin länsiosan kaivosalueella on louhittu tinaa ja [[kuparia]] 1700-luvun lopulta lähtien. [[Geevorin]] kaivos tunnetaan nimenomaan [[tinakaivoksena]], ja sen toiminta päättyi vuonna 1990. Kuparia louhittiin samalla alueella jo aiemmin, mutta tarkempaa vuosilukua kuparin louhinnan alkamiselle en ole varma.\n\nKuparista tulee muuten mieleen kolikot, jotka painavat ihan liikaa kyyhkyn selässä.",
   "linkit": [
    "kuparia",
    "Geevorin",
@@ -1184,7 +1184,7 @@
   "kohde": "kohde:hahmotelma-quarry-bank-mill",
   "kysymys": "Mikä laki lyhensi tehtaan työntekijöiden työaikaa vuonna 1847?",
   "uusi": false,
-  "vastaus": "Annas ku mietin. Tämä on kysymys, jossa en halua arvata nimeä väärin. Vuonna 1847 säädetty tehdaslaki tunnetaan yleisesti nimellä [[Ten Hours Act]] eli kymmenen tunnin laki, ja sen tarkoitus oli rajata tehtaissa työskentelevien naisten ja nuorten työaikaa. Laki vaikutti myös [[Quarry Bank Millin]] kaltaisiin puuvillatehtaisiin [[Britanniassa]], mutta tarkkoja yksityiskohtia, esimerkiksi sitä, ketä laki tarkalleen koski, en ole varma.\nKuuden päivän viikko ja kaksitoista tuntia päivässä, siinäpä rutistus.",
+  "vastaus": "Annas ku mietin. Tämä on kysymys, jossa en halua arvata nimeä väärin. Vuonna 1847 säädetty tehdaslaki tunnetaan yleisesti nimellä [[Ten Hours Act]] eli kymmenen tunnin laki, ja sen tarkoitus oli rajata tehtaissa työskentelevien naisten ja nuorten työaikaa. Laki vaikutti myös [[Quarry Bank Millin]] kaltaisiin puuvillatehtaisiin [[Britanniassa]], mutta tarkkoja yksityiskohtia, esimerkiksi sitä, ketä laki tarkalleen koski, en ole varma.\n\nKuuden päivän viikko ja kaksitoista tuntia päivässä, siinäpä rutistus.",
   "linkit": [
    "Ten Hours Act",
    "Quarry Bank Millin",
@@ -1283,7 +1283,7 @@
   "kohde": "kohde:hahmotelma-liverpool-docks",
   "kysymys": "Mikä on hydraulinen nosturi ja miten se toimii?",
   "uusi": true,
-  "vastaus": "Just niin, minä näin ne nosturit katolta. Tai niiden perilliset. Hydraulinen nosturi käyttää nesteen painetta nostamiseen: nestettä pumpataan paineella sylinteriin, jolloin mäntä liikkuu ja nostaa kuorman. Hydraulisen nosturin kehitti 1840-luvulla [[William Armstrong]], ja tällaiset [[hydrauliset nosturit]] nopeuttivat laivojen purkamista ja lastaamista huomattavasti myös [[Liverpoolin]] satamissa. Tarkkaa laitteiden rakennetta en osaa kuvata, mutta periaate on tämä.\nMinä kuljetan kuormani vähän vähemmällä paineella.",
+  "vastaus": "Just niin, minä näin ne nosturit katolta. Tai niiden perilliset. Hydraulinen nosturi käyttää nesteen painetta nostamiseen: nestettä pumpataan paineella sylinteriin, jolloin mäntä liikkuu ja nostaa kuorman. Hydraulisen nosturin kehitti 1840-luvulla [[William Armstrong]], ja tällaiset [[hydrauliset nosturit]] nopeuttivat laivojen purkamista ja lastaamista huomattavasti myös [[Liverpoolin]] satamissa. Tarkkaa laitteiden rakennetta en osaa kuvata, mutta periaate on tämä.\n\nMinä kuljetan kuormani vähän vähemmällä paineella.",
   "linkit": [
    "William Armstrong",
    "hydrauliset nosturit",
@@ -1421,7 +1421,7 @@
   "kohde": "kohde:hahmotelma-fish-and-chips",
   "kysymys": "Miksi fish and chips yleistyi työväenluokan ruokana?",
   "uusi": true,
-  "vastaus": "Tost minä osaan kertoo. Ruoka kulkee aina sinne missä kysyntä on. Fish and chips yleistyi työväenluokan ruokana, koska [[höyrytroolarit]] toivat tuoretta kalaa [[Pohjanmereltä]] ja [[rautatiet]] kuljettivat sen nopeasti satamista teollisuuskaupunkeihin. Se oli halpaa, kuumaa ja täyttävää, ja sitä myytiin usein kadulla käärittynä paperiin. Annos levisi nopeasti, ja kauppoja oli 1900-luvun alussa jo runsaasti.\nTaas oppi kyyhky: työläisen illallinen on myös kyyhkyn unelma.",
+  "vastaus": "Tost minä osaan kertoo. Ruoka kulkee aina sinne missä kysyntä on. Fish and chips yleistyi työväenluokan ruokana, koska [[höyrytroolarit]] toivat tuoretta kalaa [[Pohjanmereltä]] ja [[rautatiet]] kuljettivat sen nopeasti satamista teollisuuskaupunkeihin. Se oli halpaa, kuumaa ja täyttävää, ja sitä myytiin usein kadulla käärittynä paperiin. Annos levisi nopeasti, ja kauppoja oli 1900-luvun alussa jo runsaasti.\n\nTaas oppi kyyhky: työläisen illallinen on myös kyyhkyn unelma.",
   "linkit": [
    "höyrytroolarit",
    "Pohjanmereltä",
@@ -1450,7 +1450,7 @@
   "kohde": "kohde:hahmotelma-fish-and-chips",
   "kysymys": "Oliko fish and chips säännöstelyn alainen toisessa maailmansodassa?",
   "uusi": true,
-  "vastaus": "Ai se. Tähän on hyvä vastaus. Lähteiden mukaan fish and chips oli [[toisessa maailmansodassa]] yksi harvoista ruoista, joita ei Britanniassa säännelty. [[Britannian hallitus]] katsoi sen pitävän mielialaa yllä ja jätti sen [[ruokasäännöstelyn]] ulkopuolelle, ja ruoka oli halpaa, kuumaa ja täyttävää. Tarkkoja yksityiskohtia, esimerkiksi mahdollisia raaka-aineiden pulaa, en ole varma, mutta asia on tunnettu.\nSe oli varmasti ainoa ruoka, jota olisin säännöstellyt vain pulla edellä.",
+  "vastaus": "Ai se. Tähän on hyvä vastaus. Lähteiden mukaan fish and chips oli [[toisessa maailmansodassa]] yksi harvoista ruoista, joita ei Britanniassa säännelty. [[Britannian hallitus]] katsoi sen pitävän mielialaa yllä ja jätti sen [[ruokasäännöstelyn]] ulkopuolelle, ja ruoka oli halpaa, kuumaa ja täyttävää. Tarkkoja yksityiskohtia, esimerkiksi mahdollisia raaka-aineiden pulaa, en ole varma, mutta asia on tunnettu.\n\nSe oli varmasti ainoa ruoka, jota olisin säännöstellyt vain pulla edellä.",
   "linkit": [
    "toisessa maailmansodassa",
    "Britannian hallitus",
@@ -1493,7 +1493,7 @@
   "kohde": "kohde:hahmotelma-afternoon-tea",
   "kysymys": "Mitä iltapäiväteen kanssa perinteisesti tarjoillaan?",
   "uusi": true,
-  "vastaus": "Hetkinen ny, tää on mun lempiaiheitani. Iltapäiväteellä nautitaan teetä, ja sen kanssa tarjoillaan perinteisesti pieniä voileipiä, [[sconeja]] ja kakkuja. Sconejen kanssa nautitaan yleensä [[clotted creamia]] ja hilloa. Tapa syntyi 1800-luvulla, ja sen suosittajana pidetään yleensä [[Anna Russellia]], Bedfordin herttuatarta. Ateria nautitaan puolenpäivän ja illallisen välissä, joten se täyttää juuri sen tyhjän hetken, jota varten tapa alun perin syntyi. Voileivät ovat pieniä, jotta ne eivät vie tilaa kakuilta.\nKyllä tämä oli ruokaisa vastaus, vaikka minä en saanut yhtään muruakaan.",
+  "vastaus": "Hetkinen ny, tää on mun lempiaiheitani. Iltapäiväteellä nautitaan teetä, ja sen kanssa tarjoillaan perinteisesti pieniä voileipiä, [[sconeja]] ja kakkuja. Sconejen kanssa nautitaan yleensä [[clotted creamia]] ja hilloa. Tapa syntyi 1800-luvulla, ja sen suosittajana pidetään yleensä [[Anna Russellia]], Bedfordin herttuatarta. Ateria nautitaan puolenpäivän ja illallisen välissä, joten se täyttää juuri sen tyhjän hetken, jota varten tapa alun perin syntyi. Voileivät ovat pieniä, jotta ne eivät vie tilaa kakuilta.\n\nKyllä tämä oli ruokaisa vastaus, vaikka minä en saanut yhtään muruakaan.",
   "linkit": [
    "sconeja",
    "clotted creamia",
@@ -1508,7 +1508,7 @@
   "kohde": "kohde:hahmotelma-afternoon-tea",
   "kysymys": "Mikä ero on matalalla teellä ja korkealla teellä?",
   "uusi": true,
-  "vastaus": "Ai se. Hyvä kysymys tuo, koska luulisi ihan toisin. Matala tee eli [[iltapäivätee]] juotiin salongin matalien sivupöytien ääressä, ja se oli yläluokan tapa. Korkea tee eli [[high tea]] taas on työväen kunnon iltaruoka, joka syötiin noin viiden ja seitsemän välillä korkean ruokapöydän ääressä. Korkea tee ei siis ole hienompi kuin matala tee, vaan päinvastoin: nimi tulee pöydän korkeudesta eikä arvostuksesta. Iltapäivätee oli kevyt välipala, korkea tee varsinainen ateria.\nTän kanssa moni erehtyy, ja ihan syystä.",
+  "vastaus": "Ai se. Hyvä kysymys tuo, koska luulisi ihan toisin. Matala tee eli [[iltapäivätee]] juotiin salongin matalien sivupöytien ääressä, ja se oli yläluokan tapa. Korkea tee eli [[high tea]] taas on työväen kunnon iltaruoka, joka syötiin noin viiden ja seitsemän välillä korkean ruokapöydän ääressä. Korkea tee ei siis ole hienompi kuin matala tee, vaan päinvastoin: nimi tulee pöydän korkeudesta eikä arvostuksesta. Iltapäivätee oli kevyt välipala, korkea tee varsinainen ateria.\n\nTän kanssa moni erehtyy, ja ihan syystä.",
   "linkit": [
    "iltapäivätee",
    "high tea"
@@ -1522,7 +1522,7 @@
   "kohde": "kohde:hahmotelma-afternoon-tea",
   "kysymys": "Mihin aikaan yläluokan illallinen tarjoiltiin 1800-luvulla?",
   "uusi": true,
-  "vastaus": "Tota niin, kello kävi kyllä hitaasti sillon. Yläluokan päivällinen tarjoiltiin 1800-luvulla vasta noin puoli kahdeksan tai kahdeksan aikaan illalla. Lounas oli kevyt, ja päivän pisin tyhjä hetki jäi iltapäivään, jolloin nälkä alkoi vaivata. Juuri tästä syystä [[Anna Russell]] pyysi teetä ja pientä syötävää väliajaksi, ja tapa levisi muille [[seurapiireihin]]. Aterioiden ajankohdat vaihtelivat ajan ja talon mukaan, joten tarkkaa kellonaikaa ei voi sanoa kaikille.\nMinulla on tässä kohtaa ihan oma nälkä, vaikka olen vain kyyhky.",
+  "vastaus": "Tota niin, kello kävi kyllä hitaasti sillon. Yläluokan päivällinen tarjoiltiin 1800-luvulla vasta noin puoli kahdeksan tai kahdeksan aikaan illalla. Lounas oli kevyt, ja päivän pisin tyhjä hetki jäi iltapäivään, jolloin nälkä alkoi vaivata. Juuri tästä syystä [[Anna Russell]] pyysi teetä ja pientä syötävää väliajaksi, ja tapa levisi muille [[seurapiireihin]]. Aterioiden ajankohdat vaihtelivat ajan ja talon mukaan, joten tarkkaa kellonaikaa ei voi sanoa kaikille.\n\nMinulla on tässä kohtaa ihan oma nälkä, vaikka olen vain kyyhky.",
   "linkit": [
    "Anna Russell",
    "seurapiireihin"
@@ -1536,7 +1536,7 @@
   "kohde": "kohde:hahmotelma-haggis",
   "kysymys": "Minkä runon ansiosta haggiksesta tuli Skotlannin kansallisruoka?",
   "uusi": false,
-  "vastaus": "Jopas, tää on mun suosikkeja. Haggiksen nosti kansallisruoaksi runoilija [[Robert Burnsin]] vuonna 1786 kirjoittama runo Address to a Haggis. Runo on kunnianosoitus ruoalle, joka valmistetaan lampaan sisäelimistä, sipulista, kaurasuurimoista ja mausteista, ja perinteisesti se kypsennetään lampaan omassa mahalaukussa. Ensimmäiset kirjatut reseptit ovat 1400-luvulta Englannista, mutta nykyisenkaltainen resepti vakiintui [[Skotlannissa]]. Runoa luetaan yhä [[Burns Supper]] -illallisilla.\nMinun suvussani ei ole koskaan kirjoitettu runoa ruoasta, vain kirjeitä.",
+  "vastaus": "Jopas, tää on mun suosikkeja. Haggiksen nosti kansallisruoaksi runoilija [[Robert Burnsin]] vuonna 1786 kirjoittama runo Address to a Haggis. Runo on kunnianosoitus ruoalle, joka valmistetaan lampaan sisäelimistä, sipulista, kaurasuurimoista ja mausteista, ja perinteisesti se kypsennetään lampaan omassa mahalaukussa. Ensimmäiset kirjatut reseptit ovat 1400-luvulta Englannista, mutta nykyisenkaltainen resepti vakiintui [[Skotlannissa]]. Runoa luetaan yhä [[Burns Supper]] -illallisilla.\n\nMinun suvussani ei ole koskaan kirjoitettu runoa ruoasta, vain kirjeitä.",
   "linkit": [
    "Robert Burnsin",
    "Skotlannissa",
@@ -1551,7 +1551,7 @@
   "kohde": "kohde:hahmotelma-haggis",
   "kysymys": "Missä Robert Burns syntyi, ja mikä paikka se on nykyään?",
   "uusi": false,
-  "vastaus": "Ai tota, tämä on kiva kysymys. Robert Burns syntyi Ayrshiren Allowayssa savi- ja olkikattoisessa mökissä. Mökki on nykyään osa Robert Burns Birthplace Museum -museota, jossa runoilijan elämää esitellään kävijöille. Alloway sijaitsee [[Ayrshiren]] alueella Skotlannin lounaisrannikolla. [[Robert Burns Birthplace Museum]] on siis tavallaan sekä kotimuseo että pyhiinvaelluskohde Burnsin ihailijoille.\nPyhiinvaellus kuulostaa kovin virkamieheltä, mutta museossa on varmasti parempi tuoksu kuin sillä, mitä minä lennän ohi.",
+  "vastaus": "Ai tota, tämä on kiva kysymys. Robert Burns syntyi Ayrshiren Allowayssa savi- ja olkikattoisessa mökissä. Mökki on nykyään osa Robert Burns Birthplace Museum -museota, jossa runoilijan elämää esitellään kävijöille. Alloway sijaitsee [[Ayrshiren]] alueella Skotlannin lounaisrannikolla. [[Robert Burns Birthplace Museum]] on siis tavallaan sekä kotimuseo että pyhiinvaelluskohde Burnsin ihailijoille.\n\nPyhiinvaellus kuulostaa kovin virkamieheltä, mutta museossa on varmasti parempi tuoksu kuin sillä, mitä minä lennän ohi.",
   "linkit": [
    "Ayrshiren",
    "Robert Burns Birthplace Museum"
@@ -1571,7 +1571,7 @@
   "kohde": "kohde:hahmotelma-haggis",
   "kysymys": "Mistä aineksista haggis valmistetaan ja missä se kypsennetään?",
   "uusi": true,
-  "vastaus": "No niin, sisäelimiin tässä mentiin. Haggis valmistetaan lampaan [[sisäelimistä]], sipulista, [[kaurasuurimoista]], [[munuaisrasvasta]] ja mausteista, ja seos sekoitetaan lihaliemellä. Perinteisesti se kypsennetään eläimen omassa mahalaukussa, vaikka nykyisin käytetään myös keinotekoista kuorta. Haggis on skotlantilainen makkarapata, jonka maku on mausteinen ja rakenne murumainen. Kaura antaa sille sen muhevan rakenteen, ja sipuli ja mausteet pehmentävät sisäelimiä.\nMinä tyydyn mieluummin jyviin, ne ovat ainakin tuttu ruokalaji.",
+  "vastaus": "No niin, sisäelimiin tässä mentiin. Haggis valmistetaan lampaan [[sisäelimistä]], sipulista, [[kaurasuurimoista]], [[munuaisrasvasta]] ja mausteista, ja seos sekoitetaan lihaliemellä. Perinteisesti se kypsennetään eläimen omassa mahalaukussa, vaikka nykyisin käytetään myös keinotekoista kuorta. Haggis on skotlantilainen makkarapata, jonka maku on mausteinen ja rakenne murumainen. Kaura antaa sille sen muhevan rakenteen, ja sipuli ja mausteet pehmentävät sisäelimiä.\n\nMinä tyydyn mieluummin jyviin, ne ovat ainakin tuttu ruokalaji.",
   "linkit": [
    "sisäelimistä",
    "kaurasuurimoista",
@@ -1586,7 +1586,7 @@
   "kohde": "kohde:hahmotelma-haggis",
   "kysymys": "Mitä haggiksen kanssa perinteisesti tarjoillaan?",
   "uusi": true,
-  "vastaus": "Hmm, tässä on onneksi perinne kunnossa. Haggiksen kanssa tarjoillaan perinteisesti [[neeps and tatties]] eli lanttusosetta ja perunasosetta. Mukana on usein myös [[viskiä]], varsinkin tammikuisilla [[Burns Supper]] -illallisilla. Lantun mieto makeus ja perunan pehmeys tasapainottavat haggiksen voimakasta makua.\nLanttu ja peruna kuulostavat ihan kotoisilta, siitä pidän.",
+  "vastaus": "Hmm, tässä on onneksi perinne kunnossa. Haggiksen kanssa tarjoillaan perinteisesti [[neeps and tatties]] eli lanttusosetta ja perunasosetta. Mukana on usein myös [[viskiä]], varsinkin tammikuisilla [[Burns Supper]] -illallisilla. Lantun mieto makeus ja perunan pehmeys tasapainottavat haggiksen voimakasta makua.\n\nLanttu ja peruna kuulostavat ihan kotoisilta, siitä pidän.",
   "linkit": [
    "neeps and tatties",
    "viskiä",
@@ -1601,7 +1601,7 @@
   "kohde": "kohde:hahmotelma-haggis",
   "kysymys": "Mitä Burns Supper -illallisella perinteisesti tehdään?",
   "uusi": true,
-  "vastaus": "Katotaas, tästä on kunnon seremonia. Illallista vietetään joka vuosi 25. tammikuuta runoilija [[Robert Burnsin]] kunniaksi. Haggis kannetaan pöytään [[säkkipillin]] soidessa, [[Address to a Haggis]] luetaan ääneen, ja puukko työnnetään makkaraan juuri oikeassa kohdassa runoa. Ruoan kanssa tarjoillaan lanttua ja perunaa sekä viskiä. Illalliset ovat perinne, joka yhdistää ruoan, runouden ja musiikin skotlantilaisessa juhlassa.\nSäkkipilli kyllä pitää kovemmin ääntä kuin minä, mutta annan sen anteeksi.",
+  "vastaus": "Katotaas, tästä on kunnon seremonia. Illallista vietetään joka vuosi 25. tammikuuta runoilija [[Robert Burnsin]] kunniaksi. Haggis kannetaan pöytään [[säkkipillin]] soidessa, [[Address to a Haggis]] luetaan ääneen, ja puukko työnnetään makkaraan juuri oikeassa kohdassa runoa. Ruoan kanssa tarjoillaan lanttua ja perunaa sekä viskiä. Illalliset ovat perinne, joka yhdistää ruoan, runouden ja musiikin skotlantilaisessa juhlassa.\n\nSäkkipilli kyllä pitää kovemmin ääntä kuin minä, mutta annan sen anteeksi.",
   "linkit": [
    "Robert Burnsin",
    "säkkipillin",
@@ -1616,7 +1616,7 @@
   "kohde": "kohde:hahmotelma-stockton-darlington",
   "kysymys": "Minä päivänä Stockton ja Darlingtonin rautatie avattiin, ja mikä veturi veti avajaisjunaa?",
   "uusi": false,
-  "vastaus": "Kas vaan, tämä on kyllä ihan oikea viestinviejän aihe. Stockton ja Darlingtonin rautatie avattiin virallisesti 27. syyskuuta 1825 Koillis-Englannissa. Avajaisjunaa veti George ja Robert [[Stephensonin]] rakentama veturi [[Locomotion No. 1]], joka oli tilattu vuonna 1824. Se oli ensimmäinen höyryveturi, joka veti matkustajajunaa yleisellä rautatiellä. Rautatie yhdisti hiilikaivokset Darlingtoniin ja Stocktoniin.\nMeikäläisten muistiinpanojen mukaan kirjeet kulkivat sillon vielä hevosilla, mutta tuo oli kyllä alkua jollekin isolle.",
+  "vastaus": "Kas vaan, tämä on kyllä ihan oikea viestinviejän aihe. Stockton ja Darlingtonin rautatie avattiin virallisesti 27. syyskuuta 1825 Koillis-Englannissa. Avajaisjunaa veti George ja Robert [[Stephensonin]] rakentama veturi [[Locomotion No. 1]], joka oli tilattu vuonna 1824. Se oli ensimmäinen höyryveturi, joka veti matkustajajunaa yleisellä rautatiellä. Rautatie yhdisti hiilikaivokset Darlingtoniin ja Stocktoniin.\n\nMeikäläisten muistiinpanojen mukaan kirjeet kulkivat sillon vielä hevosilla, mutta tuo oli kyllä alkua jollekin isolle.",
   "linkit": [
    "Stephensonin",
    "Locomotion No. 1"
@@ -1630,7 +1630,7 @@
   "kohde": "kohde:hahmotelma-stockton-darlington",
   "kysymys": "Mitä hiilelle tapahtui, kun se saatiin kuljetettua rautateitse satamaan?",
   "uusi": false,
-  "vastaus": "Mmm— tämä on se rahareikä. Kun hiili saatiin kuljetettua rautateitse satamaan, se lastattiin laivoihin. Hiilen kuljetus laivoihin muuttui nopeasti tuottoisaksi liiketoiminnaksi, koska rautatie oli halvempi ja nopeampi kuin aiemmat tavat. Linja yhdisti Shildonin lähellä sijainneet [[hiilikaivokset]] Darlingtoniin ja Stocktoniin. Tämä osoitti, että [[höyryrautatiet]] kannattivat taloudellisesti.\nHiili on kyllä minulle kuivaa asiaa, mutta junat ovat sentään hauskoja.",
+  "vastaus": "Mmm— tämä on se rahareikä. Kun hiili saatiin kuljetettua rautateitse satamaan, se lastattiin laivoihin. Hiilen kuljetus laivoihin muuttui nopeasti tuottoisaksi liiketoiminnaksi, koska rautatie oli halvempi ja nopeampi kuin aiemmat tavat. Linja yhdisti Shildonin lähellä sijainneet [[hiilikaivokset]] Darlingtoniin ja Stocktoniin. Tämä osoitti, että [[höyryrautatiet]] kannattivat taloudellisesti.\n\nHiili on kyllä minulle kuivaa asiaa, mutta junat ovat sentään hauskoja.",
   "linkit": [
    "hiilikaivokset",
    "höyryrautatiet"
@@ -1644,7 +1644,7 @@
   "kohde": "kohde:hahmotelma-stockton-darlington",
   "kysymys": "Kuka rakensi Locomotion No. 1 -veturin?",
   "uusi": true,
-  "vastaus": "Odotas vähän, nyt muistan. Veturin rakensivat George ja Robert Stephenson. [[George Stephenson]] on yksi tunnetuimmista rautatieaikakauden uranuurtajista, ja hänen poikansa Robert jatkoi isänsä työtä. [[Locomotion No. 1]] tilattiin vuonna 1824, ja se veti avajaisjunaa vuonna 1825. Veturi oli ensimmäinen höyryveturi, joka veti matkustajajunaa yleisellä rautatiellä.\nHyvä, että isä ja poika pysyivät saman työn äärellä, sama pätee meidän sukuun.",
+  "vastaus": "Odotas vähän, nyt muistan. Veturin rakensivat George ja Robert Stephenson. [[George Stephenson]] on yksi tunnetuimmista rautatieaikakauden uranuurtajista, ja hänen poikansa Robert jatkoi isänsä työtä. [[Locomotion No. 1]] tilattiin vuonna 1824, ja se veti avajaisjunaa vuonna 1825. Veturi oli ensimmäinen höyryveturi, joka veti matkustajajunaa yleisellä rautatiellä.\n\nHyvä, että isä ja poika pysyivät saman työn äärellä, sama pätee meidän sukuun.",
   "linkit": [
    "George Stephenson",
    "Locomotion No. 1"
@@ -1658,7 +1658,7 @@
   "kohde": "kohde:hahmotelma-stockton-darlington",
   "kysymys": "Miksi Stocktonin ja Darlingtonin rautatie oli maailmalle tärkeä?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Stocktonin ja Darlingtonin rautatie oli ensimmäinen yleinen rautatie, jolla käytettiin [[höyryvetureita]]. Avajaisjunaa veti [[Locomotion No. 1]]. Linja kuljetti hiiltä kaivoksilta satamaan, ja se osoitti, että rautatie voi olla sekä käytännöllinen että tuottoisa. Näin se avasi tien [[rautatieaikakaudelle]], jossa matkustaminen ja tavarankuljetus muuttuivat perusteellisesti.\nOlen tässä vähän mustasukkainen, sillä rautatie vei meiltä osan kirjeliikenteestä.",
+  "vastaus": "Joo, tän minä tiedän. Stocktonin ja Darlingtonin rautatie oli ensimmäinen yleinen rautatie, jolla käytettiin [[höyryvetureita]]. Avajaisjunaa veti [[Locomotion No. 1]]. Linja kuljetti hiiltä kaivoksilta satamaan, ja se osoitti, että rautatie voi olla sekä käytännöllinen että tuottoisa. Näin se avasi tien [[rautatieaikakaudelle]], jossa matkustaminen ja tavarankuljetus muuttuivat perusteellisesti.\n\nOlen tässä vähän mustasukkainen, sillä rautatie vei meiltä osan kirjeliikenteestä.",
   "linkit": [
    "höyryvetureita",
    "Locomotion No. 1",
@@ -1673,7 +1673,7 @@
   "kohde": "kohde:hahmotelma-stockton-darlington",
   "kysymys": "Kuinka paljon Locomotion No. 1 maksoi ja milloin se tilattiin?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Locomotion No. 1 tilattiin vuonna 1824. Veturin rakensi [[Robert Stephenson and Company]], jonka [[George Stephenson]] perusti poikansa kanssa. Veturi veti [[Stocktonin ja Darlingtonin rautatien]] avajaisjunaa vuonna 1825 ja oli ensimmäinen höyryveturi, joka veti matkustajajunaa yleisellä rautatiellä. Hinnaksi lähteet antavat joitakin satoja puntia, mutta tarkan summan suhteen en ole varma, enkä lähde muuntamaan sitä nykyrahaksi.\nHinta oli siis jo silloin kokonainen omaisuus, ei ihan postimerkkirahaa.",
+  "vastaus": "Selvä juttu. Locomotion No. 1 tilattiin vuonna 1824. Veturin rakensi [[Robert Stephenson and Company]], jonka [[George Stephenson]] perusti poikansa kanssa. Veturi veti [[Stocktonin ja Darlingtonin rautatien]] avajaisjunaa vuonna 1825 ja oli ensimmäinen höyryveturi, joka veti matkustajajunaa yleisellä rautatiellä. Hinnaksi lähteet antavat joitakin satoja puntia, mutta tarkan summan suhteen en ole varma, enkä lähde muuntamaan sitä nykyrahaksi.\n\nHinta oli siis jo silloin kokonainen omaisuus, ei ihan postimerkkirahaa.",
   "linkit": [
    "Robert Stephenson and Company",
    "George Stephenson",
@@ -1688,7 +1688,7 @@
   "kohde": "kohde:hahmotelma-watt-soho",
   "kysymys": "Ketkä kaksi miestä kehittivät Sohon manufaktuurilla mullistavan höyrykoneen?",
   "uusi": false,
-  "vastaus": "Ai se, tän minä muistan. Höyrykoneen kehittivät Sohon manufaktuurilla yhdessä Matthew [[Boulton]] ja James [[Watt]]. Boulton perusti ja johti tehdasta Birminghamissa, ja Watt suunnitteli höyrykoneen, jonka ansiosta teollisuuden voimanlähteet muuttuivat. Vuonna 1782 tehtaaseen asennettiin ensimmäinen Wattin suunnittelema höyrykone. Itse manufaktuurirakennus purettiin kuitenkin jo vuonna 1853.\nHyvä pari, toinen ideoi ja toinen rahoitti, kuten kunnon postitoimistossa.",
+  "vastaus": "Ai se, tän minä muistan. Höyrykoneen kehittivät Sohon manufaktuurilla yhdessä Matthew [[Boulton]] ja James [[Watt]]. Boulton perusti ja johti tehdasta Birminghamissa, ja Watt suunnitteli höyrykoneen, jonka ansiosta teollisuuden voimanlähteet muuttuivat. Vuonna 1782 tehtaaseen asennettiin ensimmäinen Wattin suunnittelema höyrykone. Itse manufaktuurirakennus purettiin kuitenkin jo vuonna 1853.\n\nHyvä pari, toinen ideoi ja toinen rahoitti, kuten kunnon postitoimistossa.",
   "linkit": [
    "Boulton",
    "Watt"
@@ -1702,7 +1702,7 @@
   "kohde": "kohde:hahmotelma-watt-soho",
   "kysymys": "Mitä tehtaalla valmistettiin höyrykoneiden lisäksi?",
   "uusi": false,
-  "vastaus": "No niin, hyvä kysymys. Sohon manufaktuurilla valmistettiin muun muassa nappeja, solkia ja koriste-esineitä. Myöhemmin tehtaalla valmistettiin myös [[hopeaesineitä]]. Tehdas oli [[teollisen vallankumouksen]] alkuaikoina edelläkävijä [[sarjatuotannossa]], ja tuotteet olivat pieniä käyttöesineitä. [[Matthew Boulton]] vuokrasi tontin 1760-luvun alussa, ja uusi tehdasrakennus valmistui 1766.\nNapit ja soljet ovat vähän sellaista, jota minulla ei ole tarvetta kantaa, mutta kauniita ne kyllä ovat.",
+  "vastaus": "No niin, hyvä kysymys. Sohon manufaktuurilla valmistettiin muun muassa nappeja, solkia ja koriste-esineitä. Myöhemmin tehtaalla valmistettiin myös [[hopeaesineitä]]. Tehdas oli [[teollisen vallankumouksen]] alkuaikoina edelläkävijä [[sarjatuotannossa]], ja tuotteet olivat pieniä käyttöesineitä. [[Matthew Boulton]] vuokrasi tontin 1760-luvun alussa, ja uusi tehdasrakennus valmistui 1766.\n\nNapit ja soljet ovat vähän sellaista, jota minulla ei ole tarvetta kantaa, mutta kauniita ne kyllä ovat.",
   "linkit": [
    "hopeaesineitä",
    "teollisen vallankumouksen",
@@ -1718,7 +1718,7 @@
   "kohde": "kohde:hahmotelma-watt-soho",
   "kysymys": "Milloin Sohon manufaktuurin rakennus purettiin?",
   "uusi": true,
-  "vastaus": "Kas vaan, tähän vastaus on kurja. Sohon manufaktuurin rakennus purettiin 1800-luvulla, mutta tarkkaa vuotta en ole varma. Tehdas oli toiminut vuosikymmeniä, ja sen alueella oli kehitetty [[James Wattin]] [[höyrykonetta]], joka muutti teollisuuden voimanlähteet. Tehtaan lähellä sijainnut [[Soho House]] on säilynyt, ja siellä toimii museo. Tehdasrakennus on siis kadonnut jo kauan sitten, mutta sen työ elää eteenpäin.\nRakennuksia tulee ja menee, kyyhkyt vain pysyvät.",
+  "vastaus": "Kas vaan, tähän vastaus on kurja. Sohon manufaktuurin rakennus purettiin 1800-luvulla, mutta tarkkaa vuotta en ole varma. Tehdas oli toiminut vuosikymmeniä, ja sen alueella oli kehitetty [[James Wattin]] [[höyrykonetta]], joka muutti teollisuuden voimanlähteet. Tehtaan lähellä sijainnut [[Soho House]] on säilynyt, ja siellä toimii museo. Tehdasrakennus on siis kadonnut jo kauan sitten, mutta sen työ elää eteenpäin.\n\nRakennuksia tulee ja menee, kyyhkyt vain pysyvät.",
   "linkit": [
    "James Wattin",
    "höyrykonetta",
@@ -1733,7 +1733,7 @@
   "kohde": "kohde:hahmotelma-watt-soho",
   "kysymys": "Mitä erikoista oli Sohon manufaktuurin rahapajassa?",
   "uusi": true,
-  "vastaus": "Hetkinen ny, tästä on kiva kuulla. Sohon manufaktuurissa toimi rahapaja, jota pidetään maailman ensimmäisenä [[höyryvoimalla]] käyvänä rahapajana. Sen perusti [[Matthew Boulton]]. Höyryvoima teki kolikoiden valmistuksesta nopeampaa ja tasaisempaa kuin käsityönä. Tämä sopi tehtaan henkeen, sillä manufaktuuri oli [[sarjatuotannon]] edelläkävijä.\nRahaa en ole koskaan kantanut, kirjeitä kylläkin.",
+  "vastaus": "Hetkinen ny, tästä on kiva kuulla. Sohon manufaktuurissa toimi rahapaja, jota pidetään maailman ensimmäisenä [[höyryvoimalla]] käyvänä rahapajana. Sen perusti [[Matthew Boulton]]. Höyryvoima teki kolikoiden valmistuksesta nopeampaa ja tasaisempaa kuin käsityönä. Tämä sopi tehtaan henkeen, sillä manufaktuuri oli [[sarjatuotannon]] edelläkävijä.\n\nRahaa en ole koskaan kantanut, kirjeitä kylläkin.",
   "linkit": [
    "höyryvoimalla",
    "Matthew Boulton",
@@ -1748,7 +1748,7 @@
   "kohde": "kohde:hahmotelma-watt-soho",
   "kysymys": "Milloin Sohon tehdasrakennus valmistui ja kuka tontin vuokrasi?",
   "uusi": true,
-  "vastaus": "Tuota niin, muistinvarainen aihe, mutta tämä on selvä. Sohon uusi tehdasrakennus valmistui vuonna 1766. Matthew [[Boulton]] ja hänen liikekumppaninsa vuokrasivat tontin 1760-luvun alussa Birminghamin Sohossa. Tehtaalla valmistettiin nappeja, solkia ja koriste-esineitä, ja myöhemmin hopeaesineitä. Vuonna 1782 sinne asennettiin ensimmäinen [[Wattin]] suunnittelema höyrykone.\nSiinä oli kyllä pitkä suunnitelmallinen ura, aivan kuin postireitissä.",
+  "vastaus": "Tuota niin, muistinvarainen aihe, mutta tämä on selvä. Sohon uusi tehdasrakennus valmistui vuonna 1766. Matthew [[Boulton]] ja hänen liikekumppaninsa vuokrasivat tontin 1760-luvun alussa Birminghamin Sohossa. Tehtaalla valmistettiin nappeja, solkia ja koriste-esineitä, ja myöhemmin hopeaesineitä. Vuonna 1782 sinne asennettiin ensimmäinen [[Wattin]] suunnittelema höyrykone.\n\nSiinä oli kyllä pitkä suunnitelmallinen ura, aivan kuin postireitissä.",
   "linkit": [
    "Boulton",
    "Wattin"
@@ -1762,7 +1762,7 @@
   "kohde": "kohde:hahmotelma-isle-of-skye",
   "kysymys": "Mistä kivilajeista Musta ja Punainen Cuillin koostuvat?",
   "uusi": false,
-  "vastaus": "Kato, nyt mennään vuorille. Musta [[Cuillin]] koostuu karkeasta gabrosta, joka tarjoaa kiipeilijöille erinomaisen pidon. Punainen Cuillin on graniittia, ja siksi se on loivempi ja kasvipeitteisempi kuin tummempi naapurinsa. Vuoristo sijaitsee [[Skyen]] saarella, ja se jakautuu näihin kahteen osaan. Musta Cuillin on jylhä ja kivinen, kun taas Punainen on pyöreämpi ja pehmeämpi.\nMinä katson näitä mieluummin ylhäältä kuin kiipeän ne, siivet on sitä varten.",
+  "vastaus": "Kato, nyt mennään vuorille. Musta [[Cuillin]] koostuu karkeasta gabrosta, joka tarjoaa kiipeilijöille erinomaisen pidon. Punainen Cuillin on graniittia, ja siksi se on loivempi ja kasvipeitteisempi kuin tummempi naapurinsa. Vuoristo sijaitsee [[Skyen]] saarella, ja se jakautuu näihin kahteen osaan. Musta Cuillin on jylhä ja kivinen, kun taas Punainen on pyöreämpi ja pehmeämpi.\n\nMinä katson näitä mieluummin ylhäältä kuin kiipeän ne, siivet on sitä varten.",
   "linkit": [
    "Cuillin",
    "Skyen"
@@ -1776,7 +1776,7 @@
   "kohde": "kohde:hahmotelma-isle-of-skye",
   "kysymys": "Mikä on Cuillinin ja koko Skyen korkein huippu?",
   "uusi": false,
-  "vastaus": "Joo, tän minä tiedän. Cuillinin ja koko Skyen korkein huippu on [[Sgùrr Alasdair]], joka on 992 metriä merenpinnasta. Huippu kuuluu Mustaan Cuillinin vuoristoon, jonka pääharjanne kaartuu noin 14 kilometrin matkalla [[Loch Coruiskin]] ympärillä. Huippu on kiipeilijöille tunnettu ja vaativa kohde. Koko vuoristo on nimetty kansalliseksi maisema-alueeksi.\nIsoisäkin olisi varmasti kirjoittanut tästä ylevästi, minä sanon vain, että korkealla on kylmä.",
+  "vastaus": "Joo, tän minä tiedän. Cuillinin ja koko Skyen korkein huippu on [[Sgùrr Alasdair]], joka on 992 metriä merenpinnasta. Huippu kuuluu Mustaan Cuillinin vuoristoon, jonka pääharjanne kaartuu noin 14 kilometrin matkalla [[Loch Coruiskin]] ympärillä. Huippu on kiipeilijöille tunnettu ja vaativa kohde. Koko vuoristo on nimetty kansalliseksi maisema-alueeksi.\n\nIsoisäkin olisi varmasti kirjoittanut tästä ylevästi, minä sanon vain, että korkealla on kylmä.",
   "linkit": [
    "Sgùrr Alasdair",
    "Loch Coruiskin"
@@ -1790,7 +1790,7 @@
   "kohde": "kohde:hahmotelma-isle-of-skye",
   "kysymys": "Kuinka pitkä Cuillinin pääharjanne on?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Cuillinin pääharjanne kaartuu noin 14 kilometrin matkalla Loch [[Coruiskin]] ympärillä. Harjanne koostuu Mustan Cuillinin huipuista, jotka ovat karkeaa gabroa, ja korkein huippu on Sgùrr Alasdair 992 metrin korkeudessa. Matka on lyhyt kartalla mutta vaativa maastossa. [[Skyen]] saarella vuoristo on yksi Skotlannin tunnetuimmista maisemista.\nNeljätoista kilometriä on kyyhkylle pikku lenkki, mutta vuorikiipeilijälle koko päivän työ.",
+  "vastaus": "Annas ku mietin. Cuillinin pääharjanne kaartuu noin 14 kilometrin matkalla Loch [[Coruiskin]] ympärillä. Harjanne koostuu Mustan Cuillinin huipuista, jotka ovat karkeaa gabroa, ja korkein huippu on Sgùrr Alasdair 992 metrin korkeudessa. Matka on lyhyt kartalla mutta vaativa maastossa. [[Skyen]] saarella vuoristo on yksi Skotlannin tunnetuimmista maisemista.\n\nNeljätoista kilometriä on kyyhkylle pikku lenkki, mutta vuorikiipeilijälle koko päivän työ.",
   "linkit": [
    "Coruiskin",
    "Skyen"
@@ -1804,7 +1804,7 @@
   "kohde": "kohde:hahmotelma-isle-of-skye",
   "kysymys": "Miksi Musta Cuillin on kiipeilijöiden suosiossa?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Mustan Cuillinin huiput koostuvat karkeasta [[gabrosta]], joka tarjoaa kiipeilijöille erinomaisen pidon. Kivi on jylhää ja kovaa, mikä tekee harjanteesta haastavan mutta kiehtovan reitin. Vuoristo sijaitsee [[Skyen]] saarella ja on yksi Skotlannin tunnetuimmista maisemista, ja se on nimetty [[kansalliseksi maisema-alueeksi]]. Kiipeilijät hakeutuvat sinne sekä itse kiven että maiseman vuoksi.\nKarkea kivi kuulostaa kyyhkyn varpaille ikävältä, mutta kiipeilijät tykkäävät.",
+  "vastaus": "Hyvä kysymys tuo. Mustan Cuillinin huiput koostuvat karkeasta [[gabrosta]], joka tarjoaa kiipeilijöille erinomaisen pidon. Kivi on jylhää ja kovaa, mikä tekee harjanteesta haastavan mutta kiehtovan reitin. Vuoristo sijaitsee [[Skyen]] saarella ja on yksi Skotlannin tunnetuimmista maisemista, ja se on nimetty [[kansalliseksi maisema-alueeksi]]. Kiipeilijät hakeutuvat sinne sekä itse kiven että maiseman vuoksi.\n\nKarkea kivi kuulostaa kyyhkyn varpaille ikävältä, mutta kiipeilijät tykkäävät.",
   "linkit": [
    "gabrosta",
    "Skyen",
@@ -1819,7 +1819,7 @@
   "kohde": "kohde:hahmotelma-isle-of-skye",
   "kysymys": "Missä päin Skotlantia Skye sijaitsee?",
   "uusi": true,
-  "vastaus": "Nyt muistan: tämä on Skotlannin länsirannikon helmi. Saari sijaitsee [[Skotlannin]] länsirannikon edustalla, ja siellä sijaitsee [[Cuillinin]] vuoristo. Saaren korkein kohta on [[Sgùrr Alasdair]] 992 metrin korkeudessa. Maisemat ovat jylhiä, ja Cuillin on yksi Skotlannin tunnetuimmista maisemista. Tarkka etäisyys mantereesta vaihtelee kohdasta riippuen, joten en lähde antamaan lukua.\nLänsirannikko on varmasti mukava paikka laskeutua lepäämään pitkän lennon jälkeen.",
+  "vastaus": "Nyt muistan: tämä on Skotlannin länsirannikon helmi. Saari sijaitsee [[Skotlannin]] länsirannikon edustalla, ja siellä sijaitsee [[Cuillinin]] vuoristo. Saaren korkein kohta on [[Sgùrr Alasdair]] 992 metrin korkeudessa. Maisemat ovat jylhiä, ja Cuillin on yksi Skotlannin tunnetuimmista maisemista. Tarkka etäisyys mantereesta vaihtelee kohdasta riippuen, joten en lähde antamaan lukua.\n\nLänsirannikko on varmasti mukava paikka laskeutua lepäämään pitkän lennon jälkeen.",
   "linkit": [
    "Skotlannin",
    "Cuillinin",
