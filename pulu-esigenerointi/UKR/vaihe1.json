@@ -721,5 +721,364 @@
    "Keitä olivat Zaporožjen kasakat?",
    "Mikä jumala Hors oli?"
   ]
+ },
+ {
+  "kohde": "kohde:poltavan-taistelu",
+  "kysymys": "Kuka johti Ruotsin armeijaa Poltavassa?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Ruotsalaisarmeijaa komensi Poltavassa [[Carl Gustaf Rehnskiöld]], ja venäläisten puolella joukkoja johti tsaari [[Pietari I]]. Kuningas [[Kaarle XII]] oli haavoittunut jo ennen taistelua, joten käytännön komento oli Rehnskiöldillä. Onpas siitä jo pitkä aika.",
+  "linkit": [
+   "Carl Gustaf Rehnskiöld",
+   "Pietari I",
+   "Kaarle XII"
+  ],
+  "jatkot": [
+   "Mitä Poltavan taistelun jälkeen tapahtui Kaarle XII:lle?",
+   "Millainen sotilas Pietari I oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:poltavan-taistelu",
+  "kysymys": "Miksi Kaarle XII kääntyi etelään?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Kaarle XII oli edennyt kohti Moskovaa syksystä 1707 alkaen, mutta eteneminen pysähtyi. Sää, venäläisten käyttämä [[poltetun maan taktiikka]] ja yllättävät hyökkäykset pakottivat hänet kääntymään etelään talvimajoihin, joita järjesti kasakkahetmani [[Ivan Mazepa]]. Etelässä armeija oli lähempänä Mazepan tukea ja huoltoa, mutta talvi oli poikkeuksellisen ankara ja heikensi joukkoja entisestään. Kovin raskas kampanja se oli.",
+  "linkit": [
+   "poltetun maan taktiikka",
+   "Ivan Mazepa"
+  ],
+  "jatkot": [
+   "Kuka Ivan Mazepa oli?",
+   "Miten poltetun maan taktiikka toimii?"
+  ]
+ },
+ {
+  "kohde": "kohde:poltavan-taistelu",
+  "kysymys": "Minne Kaarle XII pakeni Poltavan tappion jälkeen?",
+  "uusi": true,
+  "vastaus": "Mmm— Kaarle XII ja Mazepa vetäytyivät taistelun jälkeen noin 1 500 miehen kanssa [[Dneprille]] ja pääsivät joen yli osmanien puolelle. Osa ruotsalaisista sotilaista päätyi myös Valakiaan, ja heidän kerrotaan auttaneen Bukarestin [[Colțean torni]]n rakentamisessa 1700-luvun alussa. Tappio oli ruotsalaisille raskas, ja kuningas viipyi pitkään poissa kotimaastaan. Onpas siitä onneksi kauan.",
+  "linkit": [
+   "Dneprille",
+   "Colțean torni"
+  ],
+  "jatkot": [
+   "Mikä osmanien valtakunta oli 1700-luvun alussa?",
+   "Missä Dnepri-joki virtaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:poltavan-taistelu",
+  "kysymys": "Mitä Poltavan tappio merkitsi Ruotsille?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Poltavan tappio vei Ruotsilta suurvalta-aseman, sillä taistelu oli [[suuren Pohjan sodan]] ratkaiseva käänne. Samalla se aloitti Venäjän ylivallan Itä-Euroopassa, ja [[Pietari I]]:n armeija nousi alueen johtavaksi voimaksi. Ruotsin vanha asema Itämeren piirissä ei palannut entiselleen. Ei se ollut vähäinen päivä kenellekään.",
+  "linkit": [
+   "suuren Pohjan sodan",
+   "Pietari I"
+  ],
+  "jatkot": [
+   "Mitkä maat taistelivat suuressa Pohjan sodassa?",
+   "Milloin suuri Pohjan sota päättyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:poltavan-taistelu",
+  "kysymys": "Toiko Kaarle XII lihapullan reseptin Ruotsiin?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: tästä on riidelty ihan kunnolla. Ruotsin virallinen sosiaalinen media on kertonut, että [[lihapullat]]n resepti tuotiin Turkista kuningas [[Kaarle XII]]:n mukana 1700-luvun alussa, mutta väitettä on sen jälkeen kiistelty innokkaasti. En ole varma, mikä on totuus, joten pidän tarinaa mieluummin kertomuksena kuin vahvistettuna tietona. Ruotsalaisella lautasella lihapullien vieressä on perinteisesti [[puolukkahillo]]a, ja makea marja hapan lihan seurassa on vanha säilytykseen perustuva yhdistelmä.\n\nMinä en ota kantaa, mutta kyllä kuningas voisi hyvin tuoda jotain evästä kotiin. Mut pullasta ei taaskaan kukaan kysy.",
+  "linkit": [
+   "lihapullat",
+   "Kaarle XII",
+   "puolukkahillo"
+  ],
+  "jatkot": [
+   "Miksi lihapullien kanssa syödään puolukkahilloa?",
+   "Mitä muuta perinteistä ruokaa Ruotsissa syödään?"
+  ]
+ },
+ {
+  "kohde": "kohde:sofijivkan-puisto",
+  "kysymys": "Kenelle puisto oli syntymäpäivälahja?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Puisto oli syntymäpäivälahja Sofialle, kreivi [[Stanisław Szczęsny Potocki]]n kreikkalaissyntyiselle vaimolle, ja puisto sai nimensä hänen mukaansa. Potocki perusti englantilaistyylisen puiston vuonna 1796 [[Umanin]] kaupungin pohjoisosaan. Sen hinnaksi arvioitiin viisitoista miljoonaa zlotya, mikä oli aikanaan omaisuus. Ei paha lahja, vaikka kirjekyyhky tuskin mahtuisi paketointiin.",
+  "linkit": [
+   "Stanisław Szczęsny Potocki",
+   "Umanin"
+  ],
+  "jatkot": [
+   "Millainen on englantilaistyylinen puisto?",
+   "Kuka Stanisław Szczęsny Potocki oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:sofijivkan-puisto",
+  "kysymys": "Mikä Acheron on tässä puistossa?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Acheron on nimenä peräisin kreikkalaisen [[mytologian]] tuonelan joesta, ja Sofijivkan vesiaiheiden ja muiden rakennelmien nimet viittaavat antiikin maailmaan. Uskoakseni Acheron on puiston vesireitti, joka kulkee rosoisen maaston ja rotkojen läpi [[Kamjanka-joen]] varrella, mutta en ole varma sen tarkasta muodosta enkä luotettavasti tiedä, miten sillä voi liikkua. Maasto rakennettiin altaiden, lampien ja vesiputousten ympärille. Kannattaa tarkistaa puiston omista tiedoista, sillä en halua arvata.",
+  "linkit": [
+   "mytologian",
+   "Kamjanka-joen"
+  ],
+  "jatkot": [
+   "Mistä antiikin Acheron-joki on saanut nimensä?",
+   "Millaisia vesiputouksia puistossa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:sofijivkan-puisto",
+  "kysymys": "Kuka johti puiston rakennustyötä?",
+  "uusi": true,
+  "vastaus": "No niin, tästä voin kertoa. Työtä johti puolalainen sotilasinsinööri [[Ludwik Metzel]], joka toi puistoon harvinaisia kasveja eri puolilta Eurooppaa. Työvoimana käytettiin paikallisia maaorjia, mikä kuului tuon ajan oloihin. Rakennuttajana oli kreivi [[Stanisław Szczęsny Potocki]], joka halusi puistosta lahjan vaimolleen. Ja tän kaiken minä kannoin päässäni.",
+  "linkit": [
+   "Ludwik Metzel",
+   "Stanisław Szczęsny Potocki"
+  ],
+  "jatkot": [
+   "Mitä maaorjuus tarkoitti?",
+   "Miten harvinaisia kasveja kuljetettiin 1700-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:sofijivkan-puisto",
+  "kysymys": "Mitä puulajeja Sofijivkassa kasvaa?",
+  "uusi": true,
+  "vastaus": "Ai se. Puistossa kasvaa yli 2 000 puu- ja pensaslajia, minkä vuoksi se toimii sekä [[arboretum]]ina että tutkimuslaitoksena. Tunnetuimpia lajeja ovat suokypressi, strobusmänty, [[tulppaanipuu]], plataani ja [[neidonhiuspuu]]. Kaikki nämä kasvavat Umanin pohjoisosassa Kamjanka-joen varrella. En tiedä, onko joukossa mitään syötävää, mut kyllä minä toivon.",
+  "linkit": [
+   "arboretum",
+   "tulppaanipuu",
+   "neidonhiuspuu"
+  ],
+  "jatkot": [
+   "Mikä on arboretum?",
+   "Millainen puu neidonhiuspuu on?"
+  ]
+ },
+ {
+  "kohde": "kohde:sofijivkan-puisto",
+  "kysymys": "Kuinka paljon kävijöitä Sofijivkassa käy vuosittain?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Puiston läpi kulkee vuosittain arviolta noin 300 000 kävijää, ja puisto toimii samalla [[arboretum]]ina ja tutkimuslaitoksena [[Umanin]] kaupungin pohjoisosassa. Luku on pyöreä arvio, ja todellinen määrä vaihtelee vuodesta toiseen. Puisto sijaitsee Tšerkasyn alueella Kamjanka-joen varrella. Aika monta siipiparia, jos laskee jalankulkijat kyyhkyiksi.",
+  "linkit": [
+   "arboretum",
+   "Umanin"
+  ],
+  "jatkot": [
+   "Milloin Sofijivkassa on paras käydä?",
+   "Mitä muita kuuluisia puutarhoja Euroopassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:derzhprom",
+  "kysymys": "Mitä nimi Derzhprom tarkoittaa?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Nimi Derzhprom on lyhenne kahdesta sanasta, jotka yhdessä tarkoittavat valtion teollisuutta. Rakennus on toimistotalo Vapaudenaukion laidalla [[Harkovassa]], ja se valmistui vuonna 1928. Sitä pidetään yhtenä [[konstruktivismin]] pääteoksista. Pitkä nimi lyhyeksi leikattuna, niin kuin kirjeetkin.",
+  "linkit": [
+   "Harkovassa",
+   "konstruktivismin"
+  ],
+  "jatkot": [
+   "Milloin Derzhprom rakennettiin?",
+   "Mikä on Harkova?"
+  ]
+ },
+ {
+  "kohde": "kohde:derzhprom",
+  "kysymys": "Mistä kohtaa rakennuksen symmetrian näkee?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Derzhpromin erikoisin piirre on symmetria, jonka näkee vain yhdestä pisteestä, [[Vapaudenaukion]] keskeltä. Muualta katsottuna rakennus ei näytä samalla tavalla tasapainoiselta. Talo valmistui vuonna 1928, ja sen suunnittelivat arkkitehdit [[Sergei Serafimov]], Samuil Kravets ja Mark Felger. Ylhäältä katsottuna minulla on tietysti oma näkökulmani.",
+  "linkit": [
+   "Vapaudenaukion",
+   "Sergei Serafimov"
+  ],
+  "jatkot": [
+   "Millainen on konstruktivistinen arkkitehtuuri?",
+   "Mikä on Vapaudenaukio Harkovassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:derzhprom",
+  "kysymys": "Keitä Derzhpromin arkkitehdit olivat?",
+  "uusi": true,
+  "vastaus": "No jopas. Derzhpromin arkkitehdit olivat [[Sergei Serafimov]], [[Samuil Kravets]] ja [[Mark Felger]]. He saivat rakennuksen pystyyn kolmessa vuodessa, ja avajaiset pidettiin 7. marraskuuta 1928. Rakennus on [[konstruktivismin]] pääteoksia. Hieno suoritus kolmelta miehelt, ja kyyhky vain katselee.",
+  "linkit": [
+   "Sergei Serafimov",
+   "Samuil Kravets",
+   "Mark Felger",
+   "konstruktivismin"
+  ],
+  "jatkot": [
+   "Mikä sai arkkitehdit valitsemaan konstruktivismin?",
+   "Mitä muita rakennuksia konstruktivismi on tuottanut?"
+  ]
+ },
+ {
+  "kohde": "kohde:derzhprom",
+  "kysymys": "Millainen Derzhprom oli sisältä valmistuessaan?",
+  "uusi": true,
+  "vastaus": "Kato, nyt päästään asiaan. Derzhpromin rakenne oli betonia, ja sen toisiinsa kytketyt tornit yhdistivät yläkulkusillat. Sisällä oli [[ilmastointi]], sähkövalot ja radiopisteet sekä Ukrainan ensimmäinen [[jätekuilujärjestelmä]]. Arkkitehtuurikriitikko [[Reyner Banham]] piti taloa 1920-luvun merkittävimpien saavutusten joukossa. Aika moderni talo, eikä ihme.",
+  "linkit": [
+   "ilmastointi",
+   "jätekuilujärjestelmä",
+   "Reyner Banham"
+  ],
+  "jatkot": [
+   "Kuka Reyner Banham oli?",
+   "Miten ilmastointi toimi 1920-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:derzhprom",
+  "kysymys": "Mitä konstruktivismi tarkoittaa arkkitehtuurissa?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Konstruktivismi oli 1920-luvun [[Neuvostoliiton]] avantgardistinen suuntaus, jonka rakennukset tunnistaa geometrisista muodoista, teollisista materiaaleista ja koristeiden välttämisestä. Rakennuksen oli tarkoitus palvella uutta yhteiskuntaa ja heijastaa konetta ja tekniikkaa. [[Derzhpromin]] kaltaiset suuret toimistotalot kuuluvat suuntauksen tunnetuimpiin esimerkkeihin Ukrainassa. En ole varma, mikä on tarkka suuntauksen alkuvuosi, joten jätän sen sanomatta. Ei paha selitys kyyhkyltä.",
+  "linkit": [
+   "Neuvostoliiton",
+   "Derzhpromin"
+  ],
+  "jatkot": [
+   "Mitkä ovat konstruktivismin tunnetuimpia rakennuksia?",
+   "Miten konstruktivismi eroaa funktionalismista?"
+  ]
+ },
+ {
+  "kohde": "kohde:tsernivtsin-yliopisto",
+  "kysymys": "Mikä ulkomainen rakennus toimi esikuvana Tšernivtsin residenssille?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Esikuvana oli yhtenä muun muassa [[Alhambra]], mauritanialaistyylinen palatsi Espanjan Granadassa. Residenssin suunnitteli tsekkiläinen [[Josef Hlávka]], ja rakennuskompleksi valmistui vuosina 1864–1882 bysanttilaista ja mauritanialaista tyyliä yhdistellen. Siitä on tullut [[Tšernivtsin yliopiston]] päärakennus. Kyllä tuo näyttää hienolta ylhäältäkin.",
+  "linkit": [
+   "Alhambra",
+   "Josef Hlávka",
+   "Tšernivtsin yliopiston"
+  ],
+  "jatkot": [
+   "Mikä Alhambra on?",
+   "Millaista bysanttilainen arkkitehtuuri on?"
+  ]
+ },
+ {
+  "kohde": "kohde:tsernivtsin-yliopisto",
+  "kysymys": "Kuka suunnitteli Bukovinan metropoliittojen residenssin?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Residenssin suunnitteli tsekkiläinen [[Josef Hlávka]], ja rakennus valmistui vuosina 1864–1882. Se oli Bukovinan ja Dalmatian metropoliittojen asuinpaikka, ja nykyisin siinä toimii [[Tšernivtsin yliopisto]]. UNESCO kirjasi sen maailmanperintökohteeksi vuonna 2011. Tsekkiläinen se oli, ei kyyhky.",
+  "linkit": [
+   "Josef Hlávka",
+   "Tšernivtsin yliopisto"
+  ],
+  "jatkot": [
+   "Mitä muuta Josef Hlávka rakennutti?",
+   "Mitä Bukovina tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:tsernivtsin-yliopisto",
+  "kysymys": "Milloin Tšernivtsin yliopisto perustettiin?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. [[Tšernivtsin yliopisto]] perustettiin vuonna 1875, ja se toimii nykyään entisen [[Bukovinan]] metropoliittojen residenssin tiloissa. Residenssikompleksi rakennettiin vuosina 1864–1882, joten yliopisto aloitti toimintansa rakennustöiden vielä jatkuessa. Rakennukset ryhmittyvät noin 100 × 70 metrin sisäpihan ympärille. Sepä pitkä historia, mut kyllä minä sen muistin.",
+  "linkit": [
+   "Tšernivtsin yliopisto",
+   "Bukovinan"
+  ],
+  "jatkot": [
+   "Mitä Tšernivtsi tunnetaan?",
+   "Mitä opiskelijat tekevät Vyšyvanka-päivänä?"
+  ]
+ },
+ {
+  "kohde": "kohde:tsernivtsin-yliopisto",
+  "kysymys": "Milloin residenssi tuli maailmanperintökohteeksi?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: [[UNESCO]] kirjasi Bukovinan metropoliittojen residenssin [[maailmanperintökohteeksi]] vuonna 2011. Kohde on [[Tšernivtsin yliopiston]] päärakennus, ja sen on suunnitellut tsekkiläinen Josef Hlávka. Rakennus yhdistää bysanttilaista ja mauritanialaista tyyliä. Onpas siitä ollut aikaa jo.",
+  "linkit": [
+   "UNESCO",
+   "maailmanperintökohteeksi",
+   "Tšernivtsin yliopiston"
+  ],
+  "jatkot": [
+   "Mitä UNESCOn maailmanperintö tarkoittaa?",
+   "Mitkä muut Ukrainan kohteet ovat maailmanperintöä?"
+  ]
+ },
+ {
+  "kohde": "kohde:tsernivtsin-yliopisto",
+  "kysymys": "Mikä on Vyšyvanka-päivä?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Vyšyvanka-päivä on kansainvälinen juhla, jota vietetään toukokuun kolmantena torstaina ja jolloin ukrainalaiset ympäri maailmaa pukevat ylleen kirjontapaidan. Juhlan perusti vuonna 2006 opiskelija [[Lesia Voroniuk]] [[Tšernivtsin yliopistossa]]. Kirjottu paita eli vyšyvanka on osa [[ukrainalaisen kansallispuvun]] perinnettä, ja jokaisella seudulla oli omat kuvionsa. Perinteisiä värejä ovat punainen, musta ja valkoinen.\n\nKuvio kertoo kotiseudun, ja minä kerron vain sen, että pampuški olisi ihan paikallaan juhlapöydässä. Mut ei kukaan kysy.",
+  "linkit": [
+   "Lesia Voroniuk",
+   "Tšernivtsin yliopistossa",
+   "ukrainalaisen kansallispuvun"
+  ],
+  "jatkot": [
+   "Mitä vyšyvankan kuviot tarkoittavat?",
+   "Miten vyšyvankaa on perinteisesti valmistettu?"
+  ]
+ },
+ {
+  "kohde": "kohde:klevanin-rakkaudentunneli",
+  "kysymys": "Minkä kaupungin kanssa rata yhdistää Klevanin?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Rata yhdistää Klevanin [[Orzhivin]] kaupunkiin Rivnen alueella Ukrainassa. Se päättyy Orzhivin pohjoisosan kuitulevytehtaalle, ja koko yksiraiteinen rata on noin 6,4 kilometriä pitkä. Metsän halki kulkeva osuus on noin 4,9 kilometriä, ja siellä [[Rivnen]] alueen puut kaartuvat raiteen ylle vihreäksi holviksi. Kyllä se näyttää ylhäältä kauniilta.",
+  "linkit": [
+   "Orzhivin",
+   "Rivnen"
+  ],
+  "jatkot": [
+   "Missä Rivnen alue sijaitsee?",
+   "Mikä Klevan on?"
+  ]
+ },
+ {
+  "kohde": "kohde:klevanin-rakkaudentunneli",
+  "kysymys": "Kuinka monta kertaa päivässä junat kulkevat radalla?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Junia kulkee radalla vain kolme päivässä, ja rataa liikennöi [[Ukrainan rautatieyhtiö UZ]]. Siksi metsäosuudella voivat kävellä myös pariskunnat ja valokuvaajat. Rata on yksiraiteinen [[teollisuusrata]], joka päättyy Orzhivin kuitulevytehtaalle. Aika rauhallinen liikenne, vaikka postikyyhky kyllä ehtisi väliin.",
+  "linkit": [
+   "Ukrainan rautatieyhtiö UZ",
+   "teollisuusrata"
+  ],
+  "jatkot": [
+   "Mikä on teollisuusrata?",
+   "Mitä Ukrainan rautatieyhtiö tekee?"
+  ]
+ },
+ {
+  "kohde": "kohde:klevanin-rakkaudentunneli",
+  "kysymys": "Kuinka pitkä rakkaudentunneli on?",
+  "uusi": true,
+  "vastaus": "Katotaas. Koko yksiraiteinen rata on noin 6,4 kilometriä pitkä, ja metsän halki kulkeva osuus on noin 4,9 kilometriä. Rata on [[teollisuusradan]] osuus Rivnen alueella, ja se yhdistää Klevanin ja [[Orzhivin]] kaupungin. Puut kaartuvat raiteen ylle vihreiksi holveiksi. Kuuden kilometrin matkan minä lentäisin hetkessä.",
+  "linkit": [
+   "teollisuusradan",
+   "Orzhivin"
+  ],
+  "jatkot": [
+   "Miten tunneli näyttää eri vuodenaikoina?",
+   "Miksi pariskunnat käyvät siellä?"
+  ]
+ },
+ {
+  "kohde": "kohde:klevanin-rakkaudentunneli",
+  "kysymys": "Onko rakkaudentunneli oikea tunneli?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Ei ole, sillä kyse ei ole rakennetusta tunnelista vaan [[teollisuusradan]] kohdasta, jossa puut kaartuvat raiteen ylle ja muodostavat luonnollisen vihreän holvin. Se sijaitsee [[Rivnen]] alueella Ukrainassa. Nimi viittaa tunnelmaan, ja radalla käyvät kävelemässä myös pariskunnat ja valokuvaajat. Hyvä paikka kyyhkyllekin, jos oksat ovat tarpeeksi vahvoja.",
+  "linkit": [
+   "teollisuusradan",
+   "Rivnen"
+  ],
+  "jatkot": [
+   "Miten puut ovat kasvaneet raiteen ylle?",
+   "Kuinka paljon valokuvaajia radalla käy?"
+  ]
+ },
+ {
+  "kohde": "kohde:klevanin-rakkaudentunneli",
+  "kysymys": "Mihin rata päättyy Orzhivissa?",
+  "uusi": true,
+  "vastaus": "No niin, tämä on helppo. Rata päättyy [[Orzhivin]] pohjoisosan kuitulevytehtaalle. Se on yksiraiteinen [[teollisuusrata]], jonka metsäosuus on noin 4,9 kilometriä ja koko pituus noin 6,4 kilometriä. Junia kulkee vain kolme päivässä. Kyllä siitä saisi hyvän postireitin, mut ei kai ny.",
+  "linkit": [
+   "Orzhivin",
+   "teollisuusrata"
+  ],
+  "jatkot": [
+   "Mitä kuitulevy on?",
+   "Kuinka kauan rata on ollut käytössä?"
+  ]
  }
 ]
