@@ -40,4 +40,5 @@ leikkautui → korjattu kahdelle riville bab469d18, EI vielä uudelleenajettu. J
 
 ## Muuta
 
+todistusajo.sh: Natiivisepän uusi versio odottaa komentotiedoston luvun (natiiviseppa/todistusajo-kuittaus 80d418513, juna 180; heti käytössä /Users/Shared/Claude/wt/proto-natiiviseppa-tyokalut/tyokalut/todistusajo/todistusajo.sh).
 Soundly UI-äänet odottavat PT:n "200"-ilmoitusta. Lukkoa tai simuja ei ole minulla luovutushetkellä (ks. viimeiset viestit Julkaisijalle).
