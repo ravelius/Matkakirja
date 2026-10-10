@@ -33,3 +33,11 @@ Python-kuvatyökalut: `/Users/Shared/Claude/proto-3d/_tyo/venv-rembg/bin/python 
 1) LS2:n ND v5f -pari → PT → omistaja → säädöt (mahdollinen parvisauma: maa_v9d vs ympäröivä maa).
 2) Pariisin korttelit LS2:lle (yllä).
 3) Tiedoksi: Karttasepän Pekingin albedo `_tyo/karttaseppa/vertailu/peking/albedo-luokat.json` (Peking tauolla).
+
+## JATKO 22.1x–22.3x (nollauksen jälkeen)
+- v1 lähetetty LS2:lle ja PT:lle 22.1x. Samalla jaksolla tehtiin **v2** (`_valmiit/pariisi-korttelit-v2/`, v1 koskematon), joka korvaa v1:n
+  (LS2 ja PT tietävät): kolme julkisivua a/b/c (`pinnat.py julkisivu()`; nimetyt rakennukset c, muut a/b crc32(osm):n mukaan, rytmin
+  alku siirtyy) ja Palais Bourbonin pohjoisportikko (`lahde/palais-bourbon/portikko.json`; `korttelit_malli.py portikko()`; pinnat.py
+  jättää alueen pois porrastuksesta; maa_z painaa maan portaiden alle). Arkki `esikatselu/korttelit-v2-arkki.jpg`.
+- Kuvaskriptit (scratchpad, emissio): lahikuvat.py (6 suuntaa), portikko_kuva.py (Concorden suunta), arkki.py.
+- SEURAAVAKSI: LS2:n parit (ND v5f, Pariisi v2) → säädöt. Mahdollinen v3: LOD1/2-kevennys, tympanonin sävy, Banquen julkisivut (nyt lähes kaikki c).
