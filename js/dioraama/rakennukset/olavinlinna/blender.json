@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "bdbfd9d762131ef3",
-  "kansio": "dioraama/olavinlinna/blender/bdbfd9d762131ef3/",
+  "hash": "fcd02e01b928b7bd",
+  "kansio": "dioraama/olavinlinna/blender/fcd02e01b928b7bd/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -2870,63 +2870,63 @@
     },
     {
       "polku": "ulkokuori/ulkokuori-2k-4x4.astcm",
-      "sha256": "47912bae38a36560703141036eaeb3172916fab6fdc9322ac5d79fe199d2fb59",
+      "sha256": "e5274ade4afb42a056fb3b73e9d7b8285af31d842505904d11c0784936475bd0",
       "tavuja": 5592448
     },
     {
       "polku": "ulkokuori/ulkokuori-2k.jpg",
-      "sha256": "faf4aa913d0ba92b026bea13828633ff98adb35d677c84535e9c3fd9cf02f08a",
-      "tavuja": 2633313
+      "sha256": "1ff2c1fa90b954641250b8a1db82cbb2944196ce38100fb4136e5efff759b515",
+      "tavuja": 2632939
     },
     {
       "polku": "ulkokuori/ulkokuori-4k-4x4.astcm",
-      "sha256": "c33b95ff96add67090a18afe24f24989b47de74e1b829ee9571f8476c961f447",
+      "sha256": "5a36462bd4787a10dc391e1b51cd797dd4b092ec091e3a7ff53017932265173d",
       "tavuja": 22369664
     },
     {
       "polku": "ulkokuori/ulkokuori-4k.jpg",
-      "sha256": "31edb4996b21170c3e2277c2e628490527511e30b28eadf1ecad25861472c3e9",
-      "tavuja": 10070347
+      "sha256": "05c2929e940c4c8f93324855df5d7a854906272937a454ae569fd20147c82596",
+      "tavuja": 10064879
     },
     {
       "polku": "ulkokuori/ulkokuori-8k-4x4.astcm",
-      "sha256": "0802d16d8a701851f30ba80f113c59a3c0d9fb0889cc68f7b6a27f6765f65d29",
+      "sha256": "fa05b7a57fee30180ef51a95c59320464d4c1dc9ae69e61f89fd40a9bdfd752e",
       "tavuja": 39816848
     },
     {
       "polku": "ulkokuori/ulkokuori-8k.jpg",
-      "sha256": "1dfbc3bde24370998b98e30eeeae071f660d847cef7f28031b3ce22fe3b817c1",
-      "tavuja": 25757705
+      "sha256": "93cba9e83c16f40af69a3a24cc620928f0f332a770d71145700518a27acaa223",
+      "tavuja": 25760778
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-2k-4x4.astcm",
-      "sha256": "6ff273befa7288c905b0146391ec07a002611be6d8f56c8e3cfedab8515d2017",
+      "sha256": "91f18894fc52f2afd2c3b99ee0dbdb9bcbc56248956f2643fbb873b8982235bd",
       "tavuja": 5592448
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-2k.jpg",
-      "sha256": "8ab6db8be4924d7f0e84039d28cb71bf67d1901e6382bfaa0a76318fe3e23711",
-      "tavuja": 2051392
+      "sha256": "424d10fab9bb8d60e411d19069a989069d509fb149861197d0748ba71a616dcf",
+      "tavuja": 2050719
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-4k-4x4.astcm",
-      "sha256": "809d9914fe5f8d0ffd7965745f76cefc0812b86405d6492bc5968f262febac55",
+      "sha256": "2dee76a5df60394d758b06c633bf73605a416f735e24cd238807993862cff12c",
       "tavuja": 22369664
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-4k.jpg",
-      "sha256": "4926c80766885300af76f2fbec4192ab00bda782291efa23e60f3cba774af9af",
-      "tavuja": 7337472
+      "sha256": "43943efbdc8d1629b337113bd416f6b643b85264d827177f108095f34fb54686",
+      "tavuja": 7334875
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-8k-4x4.astcm",
-      "sha256": "f33eb62934ea1f8ab83bd8b1b726547ca1c872aeff01bc7aa171cc2ac5ca0446",
+      "sha256": "667466d455e9dfa94bbdcc3e33787194a8fc097c10d50424d60e5d90d23700aa",
       "tavuja": 39816848
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-8k.jpg",
-      "sha256": "18480dbbf0245fcf90820bf28c68458e058a08eef169d0d71443d1501e95f696",
-      "tavuja": 20110390
+      "sha256": "a42e084feda7c4715be4e33036cf2481bbba2fc0dad53d12d8f0431a6fea8c6e",
+      "tavuja": 20137836
     },
     {
       "polku": "ulkokuori/ulkokuori_huippu.glb",
