@@ -311,6 +311,7 @@ namespace Matkakirja.Natiivi
         }
 
         bool oikeaNakyy;
+        static bool kosketusKytketty;
 
         /// <summary>Pulun reunakuva piiloon seikkailun ajaksi (omistaja 8.10.: Pulu ei kuulu videopeliin).</summary>
         public static bool PuluPiiloon = true;
@@ -329,6 +330,10 @@ namespace Matkakirja.Natiivi
             if (nakyy && nayta && PuluPiiloon) { var pp = Pulu.Hae(); if (pp.Nakyvissa) { pp.Nayta(false); puluPiilotettu = true; } }
             if (nayta == nakyy) return;
             nakyy = nayta;
+            // Kosketukset (kelluva tappi, katse, napautus) lukevat EnhancedTouchin activeTouches; sen kytki vain PalloKierto, jonka
+            // linnan avaus voi sammuttaa → seikkailussa ei liikettä (iPad-simu 10.10.: veto ei näkynyt sormina). Enable/Disable
+            // ovat viitelaskettuja (Input System), joten oma pari ei häiritse PalloKiertoa.
+            if (nayta != kosketusKytketty) { kosketusKytketty = nayta; if (nayta) UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport.Enable(); else UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport.Disable(); }
             if (!nayta) PoistaTietokerros();   // seikkailu päättyi: tietokerroksen tarjous pois
             // Pulun napautus seikkailun ajan: tietokerros tai vihje (PuluKaappaa); muulloin Pulun oma (chat).
             Pulu.Hae().NapautusKaappaa = nayta ? PuluKaappaa : (System.Func<bool>)null;
