@@ -7,6 +7,8 @@
 //    kierros, esittely. Kuvakkeet olemassa olevista (Ikonit.Takaisin, Tauko, Seuraava, saapas, kirja).
 //  - Esittely: KORTTI-pohja (Kortti pohja: true) oikeassa reunassa, enintään 45 % ruudusta: nimi, alkuperäinen nimi, taiteilija
 //    ja vuosi, tekniikka ja mitat, kokoelma ja lisenssi. Napautus kortin ulkopuolelle ei sulje (kierros on tauolla kortin ajan).
+//  - Poistu (PT 10.10. museo2, EI TURHIA ✕-NAPPEJA): oikeassa yläkulmassa linssien ✕:n paikalla sama nappirivi ja nappi kuin
+//    Myllyssä ja oppaan latausruudussa (mk-kortti__napit + mk-nappi--toiminto, ui.pelit.poistu); LinssiUi piilottaa ✕:n museon ajaksi.
 using Matkakirja.Linssit.Museo;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -16,11 +18,14 @@ namespace Matkakirja.Natiivi
     public sealed class MuseoTaulu
     {
         const float KorttiOsuus = 0.42f;
-        readonly VisualElement nakyma, otsikko, ryhma, korttiJuuri;
+        readonly VisualElement nakyma, otsikko, ryhma, korttiJuuri, poistuRivi;
         readonly Label nimi, alarivi, kNimi, kAlkuperainen, kTaiteilija, kTekniikka, kLahde;
         readonly Button tauko, vapaa, esittele, edellinen, seuraava;
         readonly Kortti kortti;
         bool auki;
+
+        /// <summary>Museo auki (LinssiUi.PaivitaSulku: ✕ pois, Poistu-nappi tilalle).</summary>
+        public bool Auki => auki;
 
         public MuseoTaulu(UiKerros kerros)
         {
@@ -62,6 +67,16 @@ namespace Matkakirja.Natiivi
             vapaa = Ohjausnappi.Nappi(Ikonit.Viiva["saapas"], Kieli.T("ui.museo.vapaa-kulku"), MuseoSovitin.VapaaTaiKierros, ryhma);
             esittele = Ohjausnappi.Nappi(Ikonit.Viiva["kirja"], Kieli.T("ui.museo.esittele"), () => MuseoSovitin.Esittele(), ryhma);
 
+            poistuRivi = Rakenne.El("mk-kortti__napit", turva, PickingMode.Ignore);
+            poistuRivi.style.position = Position.Absolute;
+            poistuRivi.style.top = 16; poistuRivi.style.right = 16;
+            poistuRivi.style.display = DisplayStyle.None;
+            Kirjasimet.Aseta(Rakenne.Nappi(Kieli.T("ui.pelit.poistu"), "mk-nappi--toiminto", () =>
+            {
+                Debug.Log("MATKAKIRJA museo: Poistu");
+                UiNakymat.Hae()?.Linssit?.SuljeLinssi();
+            }, poistuRivi), Kirjasin.Kone);
+
             korttiJuuri = Rakenne.El("mk-museo-kortti", turva, PickingMode.Ignore);
             korttiJuuri.style.position = Position.Absolute;
             korttiJuuri.style.right = 16; korttiJuuri.style.top = 76; korttiJuuri.style.bottom = 96;
@@ -97,6 +112,8 @@ namespace Matkakirja.Natiivi
             auki = s != null && s.Auki;
             nakyma.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
             ryhma.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
+            poistuRivi.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
+            if (UiNakymat.Olemassa) UiNakymat.Hae().Linssit?.PaivitaSulku();
             if (!auki) { otsikko.style.display = DisplayStyle.None; korttiJuuri.style.display = DisplayStyle.None; return; }
             var k = s.Kierros;
             bool vapaana = k != null && k.Vaihe == MuseoVaihe.Vapaa;

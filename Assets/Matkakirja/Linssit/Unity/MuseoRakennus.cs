@@ -61,6 +61,8 @@ namespace Matkakirja.Natiivi
             return m;
         }
 
+        /// <summary>Teoksen vieressä oleva tekstitaulu: vaalea kerma (väliaikaishalli ja sali-GLB:n "taulu").</summary>
+        static readonly (double, double, double) TekstitauluVari = (0.85, 0.82, 0.75);
         static Color Lin((double R, double G, double B) c) => new Color((float)c.R, (float)c.G, (float)c.B).linear;
 
         GameObject Kappale(string nimi, Verkko v, Material m, Transform isa, bool lineaarinenVari, bool kaannaZ = false)
@@ -111,7 +113,7 @@ namespace Matkakirja.Natiivi
             foreach (var kv in s.KehysMateriaalit)
                 kehysMat[kv.Key] = Materiaali("Kehys " + kv.Key, Lin((kv.Value.R, kv.Value.G, kv.Value.B)), kv.Value.Metalli > 0.5 ? 0.9f : 0.05f, (float)kv.Value.Karheus, (float)kv.Value.Metalli);
             var paspisMat = kehysMat.TryGetValue("paspis", out var pm) ? pm : Materiaali("Paspis", new Color(0.82f, 0.78f, 0.69f), 0.02f, 0.9f);
-            var tauluMat = Materiaali("Tekstitaulu", Lin(MuseoGeometria.Vari(s, "paneeli_kerma", (0.85, 0.82, 0.75))), 0.03f, 0.8f);
+            var tauluMat = Materiaali("Tekstitaulu", Lin(MuseoGeometria.Vari(s, "paneeli_kerma", TekstitauluVari)), 0.03f, 0.8f);
 
             foreach (var r in s.Ripustukset)
             {
@@ -331,6 +333,9 @@ namespace Matkakirja.Natiivi
             var c = o.Vari != null && o.Vari.Length >= 3 ? new Color(o.Vari[0], o.Vari[1], o.Vari[2]) : Color.white;
             if (o.Kuva >= 0) c = Color.white;
             string p = o.Pinta ?? "";
+            // Teoskyltit (PT 10.10. museo2: "teosten vieressä pienet mustat laatat näkyvät mustina neliöinä → vaalea teoskyltti"):
+            // sali-GLB:n "taulu" on lähes musta (0,03); sama vaalea kerma kuin väliaikaishallin tekstitauluilla (liite C2.4 kohta 8).
+            if (p == "taulu") c = Lin(TekstitauluVari);
             float kiilto = 0.04f, karheus = 0.8f, metalli = 0;
             if (p == "kulta") { kiilto = 0.9f; karheus = 0.38f; metalli = 1; }
             else if (p.StartsWith("kivi_marmori", StringComparison.Ordinal)) karheus = 0.3f;
