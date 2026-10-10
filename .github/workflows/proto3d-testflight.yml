@@ -796,7 +796,7 @@ jobs:
         run: |
           set -euo pipefail
           python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
-          python3 repo/tools/testflight/sisainen-ryhma.py --bundle-id "$BUNDLE_ID" --build "$BUILD_NUMERO"
+          python3 repo/tools/testflight/sisainen-ryhma.py --bundle-id "$BUNDLE_ID" --build "$BUILD_NUMERO" --alusta IOS
 
       - name: Merkitse yöajon master ladatuksi
         if: success() && env.VIE_UNITYSTA == 'true' && env.OHITA != '1'
