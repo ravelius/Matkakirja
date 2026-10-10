@@ -44,9 +44,10 @@ namespace Matkakirja.Linssit.Testit
         [Testi] static void IndeksiV5EnsinJaPaluuV4()
         {
             // Karttaseppä 9.10.: v5 = Tukholmaan kauko2 48 m 20–40 km, Pariisin 16 m 40 km:iin; v4 ja vanhemmat varalla (Natiivisepän ehto 4).
-            Oleta.Tosi(string.Join(",", VesiIndeksi.Nimet) == "index-v5.json,index-v4.json,index-v3.json,index-v2.json,index.json", "v5 → v4 → v3 → v2 → index");
-            Oleta.Tosi(VesiIndeksi.Ensimmainen(n => n == "index-v5.json" ? null : n == "index-v4.json" ? "v4" : "vanha") == "v4", "v5 puuttuu → v4");
-            Oleta.Tosi(VesiIndeksi.Ensimmainen(n => "x" + n) == "xindex-v5.json", "v5 ensin");
+            Oleta.Tosi(string.Join(",", VesiIndeksi.Nimet) == "index-v6.json,index-v5.json,index-v4.json,index-v3.json,index-v2.json,index.json", "v6 → v5 → v4 → v3 → v2 → index");
+            Oleta.Tosi(VesiIndeksi.Ensimmainen(n => n == "index-v6.json" || n == "index-v5.json" ? null : n == "index-v4.json" ? "v4" : "vanha") == "v4", "v6 ja v5 puuttuvat → v4");
+            Oleta.Tosi(VesiIndeksi.Ensimmainen(n => n == "index-v6.json" ? null : n == "index-v5.json" ? "v5" : "vanha") == "v5", "v6 puuttuu (vanha ämpäri) → v5");
+            Oleta.Tosi(VesiIndeksi.Ensimmainen(n => "x" + n) == "xindex-v6.json", "v6 ensin");
             string s = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", "Unity", "KaupunkiVesi.cs"));
             Oleta.Tosi(s.Contains("foreach (var nimi in VesiIndeksi.Nimet)"), "KaupunkiVesi käy VesiIndeksi.Nimet");
         }
