@@ -37,6 +37,18 @@ tai devicectl device install app (bundle fi.matkakirja.peli.kehitys), sitten mui
 - TF 175 TÄNÄÄN 6.7:llä (omistaja): ehdot testit 6.7 + käännös + iPad Release-muistiajo läpi; muutosloki 175 (maininta Unity 6.7:stä
   pelaajan kielellä) PT:lle; LR:n kartiokuori vain jos ehtii.
 
+## TILA 08.3x
+- RUNKO natiiviseppa/juna-175 = **a4c6539e5** (wt j175) = d85e703fc (b5c57ee2a + Siirtoseppä 6bd5a6f5d v46x-nyky kartiokatot) + Julkaisija
+  unity-polku-175 920e5311c (vain työkalut/testit 6.7:lle). T7-kopio unity-67 = d85e703fc (EI poisteta: Julkaisijan Library-symlinkki
+  /Users/Shared/Claude/unity/kirjastot-6000.7.0b4 osoittaa siihen, kunnes pääkopio on 6.7 → ilmoita Julkaisijalle).
+  Testit a4c6539e5 uusilla skripteillä: L1294/P449/K453, unity 0.
+- Simukäännökset 6.7: b5c57ee2a KÄÄNNETTY 08.12; d85e703fc KÄÄNNETTY 76334bba2 08.17 (app lokit/natiiviseppa-app-175-67-sim-d85e703fc → Siirtoseppä arkki).
+- Release-laite d85e703fc VALMIS 08.25 (T7-kopiossa; lokit/natiiviseppa-app-175-67-laite). Appi sama kuin a4c6539e5:ssä (PT 08.2x).
+- iPad-muistiajo käynnissä 08.25 (scratchpad 53856a0f…/muisti175.sh → muisti175.out): r26 A + r27 B (v6k4, vrt. r25 0,74 / r23 0,75 Gt)
+  + ipad-ab-ajo A1 → lokit/natiiviseppa-ab175-67. Tulos (SHA + min vapaa) → Julkaisija (muistiajo-175.txt) ja PT.
+- BUILD 175 -viesti lähetetty 08.3x: Pelikoodari, Linssiseppä, LS2, NUI, Siirtoseppä, LR.
+- SEURAAVAKSI muistiajon jälkeen: lukitus (Julkaisijan NYT → proto-kaanna.sh a4c6539e5 → juna/b13 → master merge) → muutosloki 175 PT:lle.
+
 ## TILA 08.0x (PT:n käsky 07.5x: 175/6.7 → TF tänään)
 - 175/6.7-RUNKO natiiviseppa/juna-175 = **b5c57ee2a** (ff unity-67:stä; = cc0cbf9a4 + unity-polku bd281dcb9 + pulu-maat-25 c191dd31d +
   kaupunki-pisteet d02226c68). Testit 6.7:llä L1293/P449/K453, unity-tarkistus 0 (ios, ios-sim, editori), ei GetInstanceID-kutsuja.
