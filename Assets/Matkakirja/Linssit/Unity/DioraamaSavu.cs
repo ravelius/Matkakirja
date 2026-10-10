@@ -93,15 +93,17 @@ namespace Matkakirja.Natiivi
         public int Emittereita => emitterit.Count;
 
         /// <summary>Tilan liekki:-tyhjät savuksi ja lepatuspisteiksi. tilanJuuri = tilan GameObject (tyhjien avaruus).</summary>
-        public void LisaaTila(string tilaId, Transform tilanJuuri, List<DioraamaTyhja> tyhjat, Action<string> kirjaa)
+        /// <param name="vanhempi">Emitterien isä (esittelyn vaihemallit, juna 176: savu näkyy ja katoaa vaiheen mukana); null = näyttämön savujuuri.
+        /// Vaihemallin liekit eivät lisää liekkipisteitä (kaukana mantereella, eivät poistu vaiheen mukana).</param>
+        public void LisaaTila(string tilaId, Transform tilanJuuri, List<DioraamaTyhja> tyhjat, Action<string> kirjaa, Transform vanhempi = null)
         {
             if (tyhjat == null) return;
             foreach (var t in tyhjat)
             {
-                if (t.Laji == "savu") { LisaaPiippu(tilaId, tilanJuuri, t, kirjaa); continue; }
+                if (t.Laji == "savu") { LisaaPiippu(tilaId, tilanJuuri, t, kirjaa, vanhempi); continue; }
                 if (t.Laji != "liekki") continue;
                 Vector3 maailma = tilanJuuri != null ? tilanJuuri.TransformPoint(t.Paikka) : t.Paikka;
-                liekkipisteet.Add(new Vector4(maailma.x, maailma.y, maailma.z, t.Luku("sade", 2.5f)));
+                if (vanhempi == null) liekkipisteet.Add(new Vector4(maailma.x, maailma.y, maailma.z, t.Luku("sade", 2.5f)));
                 float savu = Mathf.Clamp01(t.Luku("savu", 1f));
                 if (savu <= 0f) continue;
                 if (varjostin == null) { kirjaa?.Invoke("poikki: DioraamaSavu-varjostin puuttuu"); continue; }
@@ -112,7 +114,7 @@ namespace Matkakirja.Natiivi
                 m.SetVector(IdKoko, new Vector4(0.3f * koko, 1.3f * koko, 0, 0));
                 m.SetFloat(IdPeitto, 0.35f * savu);
                 var go = new GameObject("Savu:" + tilaId + "/" + t.Id) { layer = DioraamaNayttamo.Kerros };
-                go.transform.SetParent(juuri, false);
+                go.transform.SetParent(vanhempi != null ? vanhempi : juuri, false);
                 // Savu alkaa liekin kärjestä (≈ koko) eikä pesän pohjalta.
                 go.transform.position = maailma + Vector3.up * koko * 0.8f;
                 go.AddComponent<MeshFilter>().sharedMesh = mesh;
@@ -133,7 +135,7 @@ namespace Matkakirja.Natiivi
         /// Tunnelma: savu:NN piipun suulle (extras leveys m 0,6, korkeus m nousu 4, voima 0–1 0,6, vari "#8a8580").
         /// Sama GPU-savu kuin liekeillä, mutta tasainen väri (ei liekin heijastusta), hitaampi ja korkeampi.
         /// </summary>
-        void LisaaPiippu(string tilaId, Transform tilanJuuri, DioraamaTyhja t, Action<string> kirjaa)
+        void LisaaPiippu(string tilaId, Transform tilanJuuri, DioraamaTyhja t, Action<string> kirjaa, Transform vanhempi = null)
         {
             if (varjostin == null) { kirjaa?.Invoke("poikki: DioraamaSavu-varjostin puuttuu"); return; }
             VarmistaMesh();
@@ -148,7 +150,7 @@ namespace Matkakirja.Natiivi
             m.SetFloat(IdPeitto, 0.45f * Mathf.Clamp01(t.Luku("voima", 0.6f)));
             m.SetFloat(IdElinaika, 9f);
             var go = new GameObject("Piippu:" + tilaId + "/" + t.Id) { layer = DioraamaNayttamo.Kerros };
-            go.transform.SetParent(juuri, false);
+            go.transform.SetParent(vanhempi != null ? vanhempi : juuri, false);
             go.transform.position = tilanJuuri != null ? tilanJuuri.TransformPoint(t.Paikka) : t.Paikka;
             go.AddComponent<MeshFilter>().sharedMesh = mesh;
             var r = go.AddComponent<MeshRenderer>();
