@@ -40,6 +40,15 @@
    "teksti_fi": "Sininen kabinetti päättää kabinettisarjan ennen suurta galleriaa. Tila on tarkoituksella kodikas ja hiljainen. Pysähdy ja katso lähelle, sillä pienet maalaukset avautuvat hitaasti."
   },
   {
+   "id": "graf",
+   "nimi_fi": "Grafiikka- ja valokuvakabinetti",
+   "nimi_en": "Prints and Photographs Cabinet",
+   "osat": [
+    "graf"
+   ],
+   "teksti_fi": "Rijksmuseumin grafiikkakokoelma on maailman suurimpia: siihen kuuluu satojatuhansia vedoksia, piirustuksia ja valokuvia. Paperi ja valokuvat haalistuvat valossa, joten ne ovat esillä vain himmeässä, noin 50 luksin valaistuksessa. Etsaus ja kaiverrus tekivät kuvista monistettavia, ja niin taide levisi laajalle jo 1600-luvulla."
+  },
+  {
    "id": "kg",
    "nimi_fi": "Kunniagalleria",
    "nimi_en": "Gallery of Honour",

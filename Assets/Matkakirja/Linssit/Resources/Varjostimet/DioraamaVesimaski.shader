@@ -2,6 +2,10 @@
 // (extras vesimaski: true) on ohut laatta rungon sisällä vesirajan kohdalla. Se kirjoittaa vain syvyyden (ColorMask 0, ZWrite On)
 // ennen vettä (DioraamaVesi on Geometry+10), joten veden pinta ei piirry rungon sisään; ulkopuolelta laatta on näkymätön.
 // Cull Off, koska laatan kiertosuuntaa ei ole varmistettu (LR). DepthOnly-passi pitää syvyysesikierron samana.
+// LEIMAMASKI (omistaja 10.10., TF 179: keinunnassa vettä veneen pohjalaudoilla): laatta kallistuu rungon mukana, ja tasainen
+// vedenpinta nousi matalalla laidalla laatan yläpuolelle → syvyysmaski ei riittänyt. Nyt laatta merkitsee leimapuskurin bitin 128
+// kaikkialle, mihin se projisoituu (ZTest Always, ei syvyyttä eikä väriä), ja DioraamaVesi ohittaa merkityt pikselit: veneen
+// sisus on kuiva koko keinunnan ajan. Ulkoa katsottuna laatan kohdalla vesi on rungon takana joka tapauksessa.
 Shader "Matkakirja/Linssit/DioraamaVesimaski"
 {
     SubShader
@@ -12,9 +16,10 @@ Shader "Matkakirja/Linssit/DioraamaVesimaski"
             Name "Vesimaski"
             Tags { "LightMode" = "UniversalForward" }
             ColorMask 0
-            ZWrite On
-            ZTest LEqual
+            ZWrite Off
+            ZTest Always
             Cull Off
+            Stencil { Ref 128 ReadMask 128 WriteMask 128 Comp Always Pass Replace }
             HLSLPROGRAM
             #pragma vertex vert
             #pragma fragment frag

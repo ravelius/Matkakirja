@@ -1734,6 +1734,9 @@ namespace Matkakirja.Natiivi
             SaavuLehteen(kaupunki);
         }
 
+        /// <summary>Kaupunki, jonka saapumisluento jätetään soittamatta (uusi esittely korvaa; Saapumisesitys kytkee).</summary>
+        public static Func<string, bool> SaapumisluentoPois;
+
         /// <summary>Kaupunki, jonka saapumislehti on auki: sen sulkeminen aloittaa matkakirjaluennan (web saapuminen).</summary>
         string saapumisLehti;
 
@@ -1747,6 +1750,9 @@ namespace Matkakirja.Natiivi
             Kartalle(false);
             if (kaupunki == null) return;
             var l = luennat.OtaLuento(kaupunki);
+            // PARIISIN UUSI ESITTELY KORVAA LUENNAN (omistaja 10.10. 20.0x, kortti "Uusi korvaa vanhan"): isoisän kolmen kuvan luenta
+            // jää pois kaupungeissa, joissa saapumisesitys soittaa nykyintron (Saapumisesitys.UusiEsittely); saapumisluenta päättyy heti.
+            if (l != null && SaapumisluentoPois?.Invoke(kaupunki) == true) { Debug.Log("MATKAKIRJA peli: saapumisluento pois (uusi esittely) " + kaupunki); l = null; }
             if (l != null && LykkaaLuento(kaupunki, l)) return; // saapumisluenta pysyy kesken lykkäyksen ajan (löydös 162)
             // Löydökset 86/89 (omistaja, build 13): ei paikkarivin ilmoitusta luennan alkaessa (web aloitaMerkinta ei näytä
             // ilmoitusta; tumma laatikko "Ateena, elokuussa 1873. Pölyä ja puhetta kullasta." näytti väärän väriseltä

@@ -65,6 +65,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Skeema 1.60: pääkaupungin (tai hallinnon paikan) nimi maat.*.paakaupunki-viitteestä ja asema ("pääkaupunki" /
         /// "hallinnon paikka"); null = ei tietoa (PT 10.10.: maakortin ensimmäinen rivi).</summary>
         public string Paakaupunki, PaakaupunkiAsema;
+        /// <summary>Skeema 1.61: pääkaupungin Codex-havainnekuvat (maat.*.paakaupunki.kuvat; PT 10.10. 20.5x): maakortin pikkukuvarivi
+        /// pääkaupunkirivin alla, napautus Kuvasuurennokseen. Selite = kuvateksti ("… Havainnekuva."; motiivi on vain kirjain A/B), lähderivi datan
+        /// lahde ("Matkakirjan havainnekuva", puuttuessa "Havainnekuva").</summary>
+        public readonly List<VirtaKuva> PaakaupunkiKuvat = new List<VirtaKuva>();
         public bool OnTiedot => Vakiluku != null || PintaAla != null || Demokratia != null || Keskitulo != null || Tervehdykset.Count > 0;
     }
 
@@ -296,6 +300,9 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>Havainnekuvan lähderivi (sama merkintä kuin oppaan ja nykyintron havainnekuvissa).</summary>
+        static string HavainneLahde => Kieli.T("ui.opas.lahde.havainnekuva");
+
         static void JasennaMaat(string teksti, Dictionary<string, KaupunkiTiedot> kaupungit, string paakaupungit = null)
         {
             var t = new Dictionary<string, MaaTiedot>();
@@ -322,6 +329,15 @@ namespace Matkakirja.Natiivi
                         ? (kaupungit != null && kaupungit.TryGetValue(pkId, out var pkK) ? pkK.Nimi : null)
                         : pkNimet.TryGetValue(pkId, out var pkN) ? pkN : null;
                     if (m.Paakaupunki != null) m.PaakaupunkiAsema = MiniJson.Teksti(pk, "asema");
+                    // Skeema 1.61: kuvat [{ url, motiivi, kuvateksti, havainnekuva, … }]; vanhassa paketissa kenttää ei ole.
+                    foreach (var o in Rakenne.Lista(MiniJson.Kentta(pk, "kuvat")) ?? new List<object>())
+                    {
+                        var kv = Rakenne.Olio(o);
+                        var url = kv != null ? MiniJson.Teksti(kv, "url") : null;
+                        if (string.IsNullOrEmpty(url)) continue;
+                        string motiivi = MiniJson.Teksti(kv, "motiivi"), kuvateksti = MiniJson.Teksti(kv, "kuvateksti");
+                        m.PaakaupunkiKuvat.Add(new VirtaKuva { Osoite = url, Lyhyt = kuvateksti ?? motiivi, Selite = kuvateksti ?? motiivi, Lahde = MiniJson.Teksti(kv, "lahde") ?? HavainneLahde });
+                    }
                 }
                 var lippuUrl = MiniJson.Teksti(a, "lippuUrl");
                 if (lippuUrl != null) m.Lippu.Add(lippuUrl);

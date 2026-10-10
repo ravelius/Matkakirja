@@ -467,11 +467,13 @@ namespace Matkakirja.Natiivi
             // Web: avattuna ei valtiomuotoriviä eikä "Nyt"-väliotsikkoa (display: none), vain rivit.
             valtiomuotoRivi.style.display = DisplayStyle.None;
             foreach (var vanha in tilastot.Query(className: "mk-kartuscha__rivi").ToList()) vanha.RemoveFromHierarchy();
+            pkKuvat?.RemoveFromHierarchy(); pkKuvat = null;
             vertailut.Clear();
             // Pääkaupunki ensimmäisenä rivinä (PT 10.10., sama kuin web): "HALLINNON PAIKKA", kun asema on "hallinnon paikka"
             // (ISR → Jerusalem, PSE → Ramallah); ilman tietoa ei riviä.
             if (m.Paakaupunki != null)
                 Tilasto(Kieli.T(m.PaakaupunkiAsema == "hallinnon paikka" ? "ui.kartuscha.hallinnon-paikka" : "ui.kartuscha.paakaupunki"), m.Paakaupunki, null);
+            if (m.Paakaupunki != null && m.PaakaupunkiKuvat.Count > 0) PaakaupunkiKuvat(m.PaakaupunkiKuvat);
             if (m.OnTiedot)
             {
                 Tilasto(Kieli.T("ui.kartuscha.vakiluku"), m.Vakiluku, m.VakilukuSija);
@@ -554,6 +556,37 @@ namespace Matkakirja.Natiivi
             leveys = Mathf.Ceil(leveys);
             foreach (var n in Nimikkeet()) n.style.width = leveys;
         }
+
+        /// <summary>
+        /// PÄÄKAUPUNGIN HAVAINNEKUVAT (PT 10.10.2026 20.5x, skeema 1.61): matkakirjakortin pikkukuvarivi (mk-matkakirja__pikkukuvat,
+        /// -pikkukuva ±1,4°) pääkaupunkirivin alle; napautus avaa Kuvasuurennoksen (KUVANÄKYMÄ) koko sarjalla, selitteenä kuvateksti
+        /// ja lähderivinä "Havainnekuva" (UiSisalto). Kuva, joka ei lataudu, jää pois. Napautus ei avaa sijoja (StopPropagation).
+        /// </summary>
+        void PaakaupunkiKuvat(List<VirtaKuva> kuvat)
+        {
+            pkKuvat = Rakenne.El("mk-matkakirja__pikkukuvat", tilastot);
+            for (int i = 0; i < kuvat.Count; i++)
+            {
+                var k = kuvat[i];
+                int nro = i;
+                var el = Rakenne.El("mk-matkakirja__pikkukuva", pkKuvat);
+                el.style.rotate = new Rotate(pkKuvat.childCount % 2 == 0 ? 1.4f : -1.4f);
+                el.tooltip = k.Lyhyt;
+                Kuvat.Hae(k.Osoite, t => { if (t != null) el.style.backgroundImage = new StyleBackground(t); else el.style.display = DisplayStyle.None; });
+                el.RegisterCallback<PointerDownEvent>(e =>
+                {
+                    e.StopPropagation();
+                    suurennos ??= new Kuvasuurennos(kerros.Juuri(UiKerros.Valikot));
+                    suurennos.Avaa(kuvat.Select(x => new LehtiKuva { Lahde = x.Osoite, Lyhyt = x.Lyhyt, Selite = x.Selite ?? x.Lyhyt, LahdeRivi = x.Lahde }).ToList(), nro);
+                });
+            }
+        }
+        VisualElement pkKuvat;
+        Kuvasuurennos suurennos;
+
+        /// <summary>Testi (`ui kartuscha pkkuvat`): pääkaupungin kuvarivin tila.</summary>
+        public string PaakaupunkiKuvatKuvaus() => pkKuvat == null ? "pääkaupungin kuvat: ei riviä"
+            : $"pääkaupungin kuvat: {pkKuvat.childCount} kuvaa @ {pkKuvat.worldBound.xMin:0},{pkKuvat.worldBound.yMin:0} {pkKuvat.worldBound.width:0}×{pkKuvat.worldBound.height:0}";
 
         void Tilasto(string nimike, string arvo, string sija)
         {

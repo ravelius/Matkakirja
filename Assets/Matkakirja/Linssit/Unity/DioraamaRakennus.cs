@@ -189,6 +189,8 @@ namespace Matkakirja.Natiivi
             try { malli = DioraamaGlb.Lue(glbTavut, true); }
             catch (Exception e) { kirjaa?.Invoke($"poikki: {tila.Id} glb virhe: {e.Message}"); return false; }
             if (malli?.Osat == null || malli.Osat.Count == 0) { kirjaa?.Invoke($"poikki: {tila.Id} glb ilman osia"); return false; }
+            // Kävelyosat ovat solmu per pinta (kallio, vesi, rantakivi…): kaikki mesh-solmut, ei vain ensimmäinen (Siirtoseppä 10.10.).
+            malli.Osat = malli.KaikkiOsat();
 
             int kaikkiKarjet = 0;
             foreach (var osa in malli.Osat) kaikkiKarjet += (osa.Paikat?.Length ?? 0) / 3;

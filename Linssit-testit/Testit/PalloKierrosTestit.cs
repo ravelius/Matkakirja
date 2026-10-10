@@ -5,18 +5,21 @@
 // ohi) ja laskeutuminen. Worker vastaa 2 s:ssa kierroksen jonon kohteella ja kerronta kestää kohteen KestoS:n (25–70 s, Pariisin
 // kierroksen kappaleiden mitat). Kameran silmä lasketaan joka ruudulta (1/30 s) Pariisin keskipisteen ENU:ssa (OpasKuvaus.KameraPaikka).
 // Neljä tarkistusta:
-//  1 TAAKSEPÄIN: silmän eteneminen osuuden suunnassa (pysähdys i → i+1) ei palaa yli 1 m:ä osuuden siihenastisesta parhaasta.
+//  1 TAAKSEPÄIN: silmän eteneminen osuuden suunnassa (pysähdys i → i+1) ei palaa yli 1 m:ä osuuden siihenastisesta parhaasta
+//    lähdöstä alkaen (omistaja 10.10.: pysähdyksellä pallo kiertää ja lähestyy kohdetta, joten silmä saa liikkua myös seuraavasta
+//    poispäin — sama raja kuin PalloKaupungitTestit 9.10.; lähtö kierron tangentin suuntaan ei saa palata).
 // Kaksi verkkoprofiilia: Nopea (laatat aina valmiit) ja Hidas (Googlen laattojen latausaste jää 95 %:iin eli alle LahtoValmis 98 %:n,
 // ja kohteen laatat valmistuvat 2,5 s lennon lopun jälkeen; simu 18.39: saapuessa 28–45 %) — kumpikin on pelaajalle tavallinen tilanne.
 //  2 PAIKALLAAN: silmän vaakanopeus ei ole alle SeisooMS yli SeisooMaxS sekuntia, kun seuraava kohde on tiedossa (kierroksen jono);
 //    laattojen odotus ei ole pelaajalle näkyvä syy (pallo vain seisoo).
-//    SeisooMaxS = 3 s: suunniteltu pisin seisahdus on lähdön valmistelun jarrun loppu (LipumisJarru 1 s, smootherstep alle 5 %:n
-//    vauhdissa ~0,25 s) + korostuksen sammuminen + lennon alku levosta (smootherstep, alle 0,2 m/s ~0,5 s) ≈ 1,5 s; kaksinkertainen
-//    marginaali. SeisooMS = 0,2 m/s = 5 % lipumisnopeudesta (4 m/s): 350 m:n kehyksessä alle 0,03 °/s, eli silmä näkee kuvan seisovan.
+//    SeisooMaxS = 3 s (8.10.: lähdön jarru + lennon alku levosta ≈ 1,5 s, kaksinkertainen marginaali; 10.10. alkaen pallo ei jarruta
+//    eikä lähde levosta, OpasSilmukka.KiertoSuunnitelma — raja jäi turvamarginaaliksi). SeisooMS = 0,2 m/s: 350 m:n kehyksessä
+//    alle 0,03 °/s, eli silmä näkee kuvan seisovan.
 //  3 KEHYS: silmän etäisyys katsepisteeseen pysähdyksellä (Puhuu, Odottaa) pysyy kohteen luokan rajassa (OpasKuvaus: katu ja alue
 //    350 m, rakennus 600 m, korkea kohde KorkeaEtMaxM 1 200 m).
 //  4 SAUMAT: silmän nopeus ja kiihtyvyys ovat jatkuvia vaiheiden saumoissa (Puhuu/Odottaa ↔ Lentaa): nopeuden hyppy ruudusta toiseen
-//    ≤ 0,1 m/s (= 3 m/s² kiihtyvyys 1/30 s:ssa) ja kiihtyvyyden hyppy ≤ 1 m/s² (lento alkaa ja päättyy levossa, smootherstep a(0) = 0).
+//    ≤ 0,1 m/s (= 3 m/s² kiihtyvyys 1/30 s:ssa) ja kiihtyvyyden hyppy ≤ 1 m/s² (10.10.: lento saapuu kiertoon ja lähtee siitä
+//    kierron vauhdissa — ennen "alkaa ja päättyy levossa" — joten sauma on jatkuva kierron radalla).
 using System;
 using System.Collections.Generic;
 using Matkakirja.Linssit.Kierros;
@@ -150,7 +153,8 @@ namespace Matkakirja.Linssit.Testit
                     var (pe, pn) = Enu(Reitti[i]); var (qe, qn) = Enu(Reitti[i + 1]);
                     double ue = qe - pe, un = qn - pn, l = Math.Sqrt(ue * ue + un * un); ue /= l; un /= l;
                     double paras = double.MinValue, pahin = 0; int pahinK = a, parasK = a;
-                    for (int k = a; k <= b; k++)
+                    int lahtoK = Math.Max(a, r.FindLastIndex(b, b - a + 1, x => x.Kohde == i && Pysahdyksella(x.Vaihe)));   // viimeinen pysähdysruutu
+                    for (int k = lahtoK; k <= b; k++)
                     {
                         double ete = (r[k].E - pe) * ue + (r[k].N - pn) * un;
                         if (ete > paras) { paras = ete; parasK = k; }

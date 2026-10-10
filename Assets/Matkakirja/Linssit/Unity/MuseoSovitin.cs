@@ -42,7 +42,7 @@ namespace Matkakirja.Natiivi
         public static string KuvaJuuri = "https://media.matkakirja.app/taidemuseo/alankomaat/";
         /// <summary>ASTC-seinätaso ja yksityiskohtaruudut (MuseoTekstuurit); false = vain JPEG-seinäkuvat ("museo astc pois").</summary>
         public static bool Astc = true;
-        /// <summary>LR:n sali-GLB väliaikaishallin tilalle (KuvaJuuri + "sali-v1/"); false = väliaikaishalli ("museo sali halli").</summary>
+        /// <summary>LR:n sali-GLB väliaikaishallin tilalle (KuvaJuuri + MuseoRakennus.SaliKansio); false = väliaikaishalli ("museo sali halli").</summary>
         public static bool SaliGlb = true;
         /// <summary>Sali-GLB:n taso: 0 = 13 k kolmiota + atlas 4096² (22 Mt), 1 = 7,8 k + 2048² (5,6 Mt); −1 = laitteen muistin mukaan.</summary>
         public static int SaliLod = -1;
@@ -266,6 +266,14 @@ namespace Matkakirja.Natiivi
             {
                 KuvaJuuri = osat.Length > 2 && osat[2] != "pois" ? (osat[2].EndsWith("/") ? osat[2] : osat[2] + "/") : null;
                 o.Kirjaa("museo: kuvajuuri " + (KuvaJuuri ?? "pois (paikkakuvat)") + (Auki ? " (voimaan seuraavassa avauksessa)" : ""));
+                return;
+            }
+            if (k == "heijastus")
+            {
+                if (osat.Length > 2 && (osat[2] == "0" || osat[2] == "1")) MuseoNayttamo.HeijastusPaalla = osat[2] == "1";
+                else if (osat.Length > 3 && osat[2] == "voima" && float.TryParse(osat[3].Replace(',', '.'), System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float v))
+                    MuseoNayttamo.HeijastusVoima = Mathf.Clamp(v, 0f, 4f);
+                o.Kirjaa("museo: " + (nayttamo != null ? nayttamo.HeijastusTila : $"heijastus {(MuseoNayttamo.HeijastusPaalla ? "päällä" : "pois")}"));
                 return;
             }
             if (k == "sali")

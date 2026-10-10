@@ -571,6 +571,43 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(0.5, (double)tyhja.Extras["koko"]);
         }
 
+        // 1e2) Kävelyosat (Siirtoseppä 10.10.2026): Linnanrakentajan vienti on solmu per pinta (ranta-1499: kallio, vesi,
+        // rantakivi). KaikkiOsat yhdistää kaikki mesh-solmut; Osat (vanha sopimus) on vain ensimmäinen. Siirretty solmu → Osat.
+        static byte[] KaksiMeshSolmuaGlb(string toisenTrs)
+        {
+            float[] pos = { 0, 0, 2, 1, 0, 2, 0, 1, 5 };
+            uint[] idx = { 0, 1, 2 };
+            var bin = new List<byte>();
+            foreach (var f in pos) bin.AddRange(BitConverter.GetBytes(f));
+            foreach (var ix in idx) bin.AddRange(BitConverter.GetBytes(ix));
+            string json = @"{
+              ""asset"": {""version"":""2.0""},
+              ""nodes"": [ {""name"":""ranta-kallio"",""mesh"":0}, {""name"":""ranta-rantakivi"",""mesh"":1" + toisenTrs + @"} ],
+              ""meshes"": [ {""primitives"":[{""attributes"":{""POSITION"":0},""indices"":1,""material"":0}]},
+                            {""primitives"":[{""attributes"":{""POSITION"":0},""indices"":1,""material"":1}]} ],
+              ""materials"": [ {""name"":""kallio""}, {""name"":""rantakivi""} ],
+              ""accessors"": [
+                {""bufferView"":0,""componentType"":5126,""count"":3,""type"":""VEC3""},
+                {""bufferView"":1,""componentType"":5125,""count"":3,""type"":""SCALAR""}
+              ],
+              ""bufferViews"": [ {""buffer"":0,""byteOffset"":0,""byteLength"":36}, {""buffer"":0,""byteOffset"":36,""byteLength"":12} ],
+              ""buffers"": [{""byteLength"":48}]
+            }";
+            return TeeGlbTavut(json, bin.ToArray());
+        }
+
+        [Testi] static void GlbKaikkiOsatYhdistaaMeshSolmut()
+        {
+            var m = DioraamaGlb.Lue(KaksiMeshSolmuaGlb(""), unityyn: true);
+            Oleta.Sama(1, m.Osat.Count);
+            var kaikki = m.KaikkiOsat();
+            Oleta.Sama(2, kaikki.Count);
+            Oleta.Sama("kallio", kaikki[0].Pinta);
+            Oleta.Sama("rantakivi", kaikki[1].Pinta);
+            var siirretty = DioraamaGlb.Lue(KaksiMeshSolmuaGlb(@",""translation"":[0,1,0]"), unityyn: true);
+            Oleta.Sama(1, siirretty.KaikkiOsat().Count);
+        }
+
         // 1f) SKINNATUT HAHMOT (Siirtoseppä 2.10.2026): skin (JOINTS_0 ubyte, WEIGHTS_0 float, inverseBindMatrices),
         // animaatiot (LINEAR rotaatio, STEP translaatio, yksikehyksinen idle) ja DioraamaSekoitin (näyte, crossFade).
         static byte[] TestiSkinGlb()
@@ -1185,13 +1222,16 @@ namespace Matkakirja.Linssit.Testit
         [Testi] static void YmparistonMallit()
         {
             var r = DioraamaData.Lue(KeittioFixture.Replace("\"yleiskamera\": {", "\"ymparisto\": {\"huippu\": \"m.glb\", \"mallit\": [{\"id\": \"vene\", \"huippu\": \"v.glb\", \"kevyt\": \"vk.glb\"}, " +
-                "{\"id\": \"laituri2\", \"huippu\": \"l.glb\"}, {\"id\": \"tynnyri\", \"kevyt\": \"t.glb\", \"maailmaan\": false}], " +
+                "{\"id\": \"laituri2\", \"huippu\": \"l.glb\", \"kuva_hamara\": \"l-h.jpg\", \"kuva_hamara_astc\": \"l-h.astcm\"}, {\"id\": \"tynnyri\", \"kevyt\": \"t.glb\", \"maailmaan\": false}], " +
                 "\"rantakivet\": {\"huippu\": \"r.glb\", \"kevyt\": \"rk.glb\"}},\n  \"yleiskamera\": {"));
             // Vene ja maailmaan:false ovat rekvisiittaa (ei piirretä maailman origoon), muut ja rantakivet maailmaan.
             Oleta.Sama(2, r.Ymparisto.Mallit.Count);
             Oleta.Tosi(r.Ymparisto.Mallit[0] == ("laituri2", "l.glb", null) && r.Ymparisto.Mallit[1] == ("rantakivet", "r.glb", "rk.glb"), "mallit ja rantakivet");
             Oleta.Sama(2, r.Ymparisto.Rekvisiitta.Count);
             Oleta.Tosi(r.Ymparisto.Rekvisiitta[0] == ("vene", "v.glb", "vk.glb") && r.Ymparisto.Rekvisiitta[1] == ("tynnyri", null, "t.glb"), "rekvisiitta");
+            // LR v47c: lisämallin hämäräkuva id:n mukaan (vain kentän saaneet).
+            Oleta.Sama(1, r.Ymparisto.MallitHamara.Count);
+            Oleta.Tosi(r.Ymparisto.MallitHamara["laituri2"] == ("l-h.jpg", "l-h.astcm"), "hämäräkuva");
         }
 
         // Historiamoottori: pelaajahahmo (Linnanrakentaja v44c pelaaja { glb, leikkeet, liikkeet }).

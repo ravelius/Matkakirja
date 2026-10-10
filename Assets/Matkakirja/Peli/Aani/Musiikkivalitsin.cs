@@ -58,13 +58,22 @@ namespace Matkakirja.Peli
             if (!string.IsNullOrEmpty(paikka) && t.Kaupunkiraidat.Contains(paikka)) Lisaa(t.MusaPolku("musa-kaupunki-" + paikka));
             // Kartalla vain kaupungin oma kappale (AaniTaulut.KarttaVainKaupunki, omistaja 10.10.2026).
             if (t.KarttaVainKaupunki) return polut;
-            var alue = Alue(paikka, maa);
-            if (alue != null && t.Alueraidat.Contains(alue)) Lisaa(t.MusaPolku("musa-kaupunki-" + alue));
+            Lisaa(Alueraita(paikka, maa));
             // Maanosaraita alueraidan varareittinä (vaihe 2): kuuluu, kun alueraitaa ei ole tai se puuttuu (404).
             var maanosa = Maanosa(paikka, maa);
             if (maanosa != null && t.Maanosaraidat.Contains(maanosa)) Lisaa(t.MusaPolku("musa-maanosa-" + maanosa));
             Lisaa(t.MusaPolku(t.Pohjaraita));
             return polut;
+        }
+
+        /// <summary>
+        /// Kaupungin alueraita (web kaupunginRaidat: musa-kaupunki-&lt;alue&gt;, kun alueella on raita) tai null. Ketjun alueporras ja
+        /// pallon latausmusiikin vararaita (AaniTila.LatausKaupunki) käyttävät tätä samaa valintaa.
+        /// </summary>
+        public string Alueraita(string kaupunki, string maa)
+        {
+            var alue = Alue(kaupunki, maa);
+            return alue != null && t.Alueraidat.Contains(alue) ? t.MusaPolku("musa-kaupunki-" + alue) : null;
         }
 
         /// <summary>Webin valitseMusiikki: ketjun ensimmäinen, joka ei ole puuttuvissa; null jos kaikki puuttuvat.</summary>

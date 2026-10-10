@@ -34,6 +34,33 @@ namespace Matkakirja.Natiivi
             public Rect Paikka;
             public Vector2 Kaanto = new Vector2(0.5f, 0f);
             public LatausLiike.Profiili Liike = LatausLiike.Profiili.Oletus;
+            /// <summary>Vene vedessä (null = tavallinen kerros): vesiraja, heijastus ja kosketusvarjo (Vesi).</summary>
+            public Vesi Vesi;
+        }
+
+        /// <summary>
+        /// VESI (PT 10.10.2026 20.3x, omistajan kuva Olavinlinnan latauskuvasta: vene kellui ilman heijastusta ja varjoa ja näytti
+        /// liimatulta). Veneen kerros piirtyy vesirajaan asti (alaosa upoksissa, raja pehmeä), ja sen taakse tulee vesitaso, jossa on
+        /// peilikuva vesirajasta alas (tummennettu, häipyy alaspäin, kevyt aaltovääristymä LatausLiike.Aaltosiirto) sekä tumma
+        /// kosketusvarjo vesirajassa. Vesitaso seuraa veneen nousua ja sivuliikettä mutta ei kallistu (vesi pysyy vaakasuorassa).
+        /// </summary>
+        public sealed class Vesi
+        {
+            /// <summary>Veneen rajat kerroksen osuuksina (kuvan alfan rajaus), y alas.</summary>
+            public Rect Vene;
+            /// <summary>Upotus veneen korkeudesta: vesiraja on näin paljon kölin yläpuolella.</summary>
+            public float Upotus = 0.28f;
+            /// <summary>Heijastuksen peitto vesirajassa ja syvyys veneen näkyvän korkeuden kerrannaisena.</summary>
+            public float Heijastus = 0.62f, Syvyys = 1.35f;
+            /// <summary>Heijastuksen tummennus (0 = kuvan värit, 1 = tyylikirjan kuvahimmennys).</summary>
+            public float Tummennus = 0.45f;
+            /// <summary>Aallon sivusiirto veneen leveydestä heijastuksen alareunassa.</summary>
+            public float Aalto = 0.035f;
+            /// <summary>Kosketusvarjon peitto vesirajassa.</summary>
+            public float Varjo = 0.7f;
+
+            /// <summary>Vesiraja kerroksen osuutena (y alas).</summary>
+            public float Raja => Vene.yMax - Upotus * Vene.height;
         }
 
         /// <summary>
@@ -55,6 +82,10 @@ namespace Matkakirja.Natiivi
             /// etäisyys × (1 + Lotko); painuma ja kaari seuraavat kiinnityspistettä joka ruudussa (LatausLiike.Ketjukayra).</summary>
             public bool Ketju;
             public float Lotko = 0.05f;
+            /// <summary>Häivytys sumuun (omistaja 10.10. 17.5x "köyden pitää jatkua alemmas ja hävitä sumuun"): täysi peittävyys
+            /// taustan korkeuteen HaivyAlku asti, siitä sileästi pois korkeuteen HaivyLoppu (osuuksina, y alas; LatausLiike.Haivytys).
+            /// HaivyLoppu ≤ HaivyAlku = ei häivytystä.</summary>
+            public float HaivyAlku, HaivyLoppu;
 
             /// <summary>Ankkuriköysi maasta (taustan osuus) korin kerrokseen: hieman paksumpi, riippuu ketjukäyränä.</summary>
             public static Koysi Ankkuri(Vector2 maa, int koriKerros, Vector2 kiinnitys) =>
@@ -68,6 +99,8 @@ namespace Matkakirja.Natiivi
         readonly VisualElement tausta, alaosa, koysiTaso;
         float alaosaAlku;
         readonly List<(VisualElement El, Kerros K)> kerrokset = new List<(VisualElement, Kerros)>();
+        /// <summary>Vesitasot (heijastus ja kosketusvarjo) veneen kerroksen takana: (vesitaso, kerroksen indeksi).</summary>
+        readonly List<(VisualElement El, int I)> vedet = new List<(VisualElement, int)>();
         readonly List<Koysi> koydet = new List<Koysi>();
         IVisualElementScheduledItem ajastin;
         Rect ala;
@@ -134,15 +167,32 @@ namespace Matkakirja.Natiivi
             tausta.style.backgroundImage = taustaKuva != null ? new StyleBackground(taustaKuva) : new StyleBackground(StyleKeyword.None);
             AsetaAlaosa(null, 0f);
             foreach (var (el, _) in kerrokset) el.RemoveFromHierarchy();
-            kerrokset.Clear(); koydet.Clear();
+            foreach (var (el, _) in vedet) el.RemoveFromHierarchy();
+            kerrokset.Clear(); koydet.Clear(); vedet.Clear();
             if (uudet != null)
                 foreach (var k in uudet)
                 {
                     if (k?.Kuva == null) continue;
+                    if (k.Vesi != null && k.Vesi.Vene.width > 0f && k.Vesi.Vene.height > 0f)
+                    {
+                        // Vesitaso ennen venettä (piirtyy sen taakse); vene itse meshinä vesirajaan asti.
+                        var vesi = Taysi(Rakenne.El("mk-latauskuva__vesi", Juuri, PickingMode.Ignore));
+                        int i = kerrokset.Count;
+                        vesi.generateVisualContent += mgc => PiirraVesi(mgc, i);
+                        vedet.Add((vesi, i));
+                    }
                     var el = Rakenne.El("mk-latauskuva__kerros", Juuri, PickingMode.Ignore);
                     el.style.position = Position.Absolute;
-                    el.style.backgroundImage = new StyleBackground(k.Kuva);
-                    el.style.backgroundSize = new BackgroundSize(Length.Percent(100), Length.Percent(100));
+                    if (k.Vesi != null && k.Vesi.Vene.width > 0f && k.Vesi.Vene.height > 0f)
+                    {
+                        var kk = k;
+                        el.generateVisualContent += mgc => PiirraVene(mgc, kk);
+                    }
+                    else
+                    {
+                        el.style.backgroundImage = new StyleBackground(k.Kuva);
+                        el.style.backgroundSize = new BackgroundSize(Length.Percent(100), Length.Percent(100));
+                    }
                     el.style.transformOrigin = new TransformOrigin(Length.Percent(k.Kaanto.x * 100f), Length.Percent(k.Kaanto.y * 100f));
                     kerrokset.Add((el, k));
                 }
@@ -190,6 +240,13 @@ namespace Matkakirja.Natiivi
             {
                 el.style.left = ala.x + k.Paikka.x * ala.width; el.style.top = ala.y + k.Paikka.y * ala.height;
                 el.style.width = k.Paikka.width * ala.width; el.style.height = k.Paikka.height * ala.height;
+            }
+            foreach (var (vesi, i) in vedet)
+            {
+                var k = kerrokset[i].K;
+                vesi.style.left = ala.x + k.Paikka.x * ala.width; vesi.style.top = ala.y + k.Paikka.y * ala.height;
+                vesi.style.width = k.Paikka.width * ala.width; vesi.style.height = k.Paikka.height * ala.height;
+                vesi.style.right = StyleKeyword.Auto; vesi.style.bottom = StyleKeyword.Auto;
             }
         }
 
@@ -248,7 +305,104 @@ namespace Matkakirja.Natiivi
                 el.style.rotate = new Rotate(new Angle((float)a.KulmaAste));
                 el.style.translate = new Translate((float)a.SivuPt, (float)-a.NousuPt);
             }
+            // Vesitaso seuraa veneen nousua ja sivuliikettä (heijastus kiinni kyljessä) ilman kallistusta; aallot liikkuvat.
+            foreach (var (vesi, i) in vedet)
+            {
+                var a = LatausLiike.Tila(kerrokset[i].K.Liike, t);
+                vesi.style.translate = new Translate((float)a.SivuPt, (float)-a.NousuPt);
+                vesi.MarkDirtyRepaint();
+            }
             if (koydet.Count > 0) koysiTaso.MarkDirtyRepaint();
+        }
+
+        /// <summary>Kuvan piste (osuuksina, y alas) tekstuurin uv:ksi meshissä (Unityn uv: y ylös, atlaksen alue uvRegion).</summary>
+        static Vector2 Uv(MeshWriteData md, float u, float v) =>
+            new Vector2(md.uvRegion.x + u * md.uvRegion.width, md.uvRegion.y + (1f - v) * md.uvRegion.height);
+
+        /// <summary>
+        /// Vene vesirajaan asti: veneen rajaus kuvasta, alaosa upoksissa (Vesi.Raja), raja pehmeä (alin 7 % näkyvästä korkeudesta
+        /// häipyy), jottei kylkeen jää terävää leikkausta.
+        /// </summary>
+        void PiirraVene(MeshGenerationContext mgc, Kerros k)
+        {
+            var el = mgc.visualElement;
+            float w = el.layout.width, h = el.layout.height;
+            if (!(w > 0f) || !(h > 0f)) return;
+            var v = k.Vesi;
+            float raja = v.Raja, yla = v.Vene.yMin, pehmea = raja - 0.07f * (raja - yla);
+            var md = mgc.Allocate(6, 12, k.Kuva);
+            if (md.vertexCount == 0) return;
+            float[] rivit = { yla, pehmea, raja };
+            byte[] peitto = { 255, 255, 0 };
+            for (int r = 0; r < 3; r++)
+                foreach (float x in new[] { v.Vene.xMin, v.Vene.xMax })
+                    md.SetNextVertex(new Vertex { position = new Vector3(x * w, rivit[r] * h, Vertex.nearZ),
+                        tint = Peitto(Color.white, peitto[r]), uv = Uv(md, x, rivit[r]) });
+            for (int r = 0; r < 2; r++) Nelio(md, r * 2);
+        }
+
+        static Color32 Peitto(Color32 c, byte a) { c.a = a; return c; }
+
+        /// <summary>Kaksi kolmiota myötäpäivään (y alas): ylä-vasen a, ylä-oikea a+1, ala-vasen a+2, ala-oikea a+3.</summary>
+        static void Nelio(MeshWriteData md, int a)
+        {
+            md.SetNextIndex((ushort)a); md.SetNextIndex((ushort)(a + 1)); md.SetNextIndex((ushort)(a + 3));
+            md.SetNextIndex((ushort)a); md.SetNextIndex((ushort)(a + 3)); md.SetNextIndex((ushort)(a + 2));
+        }
+
+        const int HeijastusRivit = 18, VarjoReuna = 28;
+
+        /// <summary>
+        /// Vesitaso: peilikuva vesirajasta alas (lähde = vene vesirajan yläpuolelta peilattuna, tummennettu kohti tyylikirjan
+        /// kuvahimmennystä, peitto LatausLiike.HeijastusPeitto, rivit siirtyvät sivuttain LatausLiike.Aaltosiirto) ja sen päälle
+        /// kosketusvarjo: tumma litteä ellipsi vesirajassa, reunoille häipyvä.
+        /// </summary>
+        void PiirraVesi(MeshGenerationContext mgc, int i)
+        {
+            if (i >= kerrokset.Count) return;
+            var k = kerrokset[i].K;
+            var v = k.Vesi;
+            var el = mgc.visualElement;
+            float w = el.layout.width, h = el.layout.height;
+            if (v == null || k.Kuva == null || !(w > 0f) || !(h > 0f)) return;
+            double t = Time.unscaledTime - alku;
+            float raja = v.Raja, nakyva = raja - v.Vene.yMin, syva = nakyva * v.Syvyys;
+            float aalto = v.Aalto * v.Vene.width * w;
+            Color32 himmea = Tyylikirja.Himmennys.Kuva;
+            var savy = Color.Lerp(Color.white, Peitto(himmea, 255), v.Tummennus);
+
+            var md = mgc.Allocate((HeijastusRivit + 1) * 2, HeijastusRivit * 6, k.Kuva);
+            if (md.vertexCount > 0)
+            {
+                for (int r = 0; r <= HeijastusRivit; r++)
+                {
+                    float s = (float)r / HeijastusRivit;
+                    float y = raja + s * syva, lahde = raja - s * syva;
+                    float dx = (float)LatausLiike.Aaltosiirto(s, t, aalto);
+                    var c = savy; c.a = (float)LatausLiike.HeijastusPeitto(s, v.Heijastus);
+                    foreach (float x in new[] { v.Vene.xMin, v.Vene.xMax })
+                        md.SetNextVertex(new Vertex { position = new Vector3(x * w + dx, y * h, Vertex.nearZ), tint = c, uv = Uv(md, x, lahde) });
+                }
+                for (int r = 0; r < HeijastusRivit; r++) Nelio(md, r * 2);
+            }
+
+            // Kosketusvarjo: vesirajan kohdalla, veneen levyinen, korkeus vajaa puolet näkyvästä (esikatselu 20.4x, iPad pysty).
+            var vm = mgc.Allocate(VarjoReuna + 1, VarjoReuna * 3);
+            if (vm.vertexCount == 0) return;
+            float cx = v.Vene.center.x * w, cy = (raja + 0.02f * nakyva) * h;
+            float rx = 0.5f * v.Vene.width * w, ry = 0.42f * nakyva * h;
+            Color32 keski = himmea; keski.a = (byte)Mathf.RoundToInt(255f * Mathf.Clamp01(v.Varjo));
+            Color32 reuna = himmea; reuna.a = 0;
+            vm.SetNextVertex(new Vertex { position = new Vector3(cx, cy, Vertex.nearZ), tint = keski });
+            for (int r = 0; r < VarjoReuna; r++)
+            {
+                float a = 2f * Mathf.PI * r / VarjoReuna;
+                vm.SetNextVertex(new Vertex { position = new Vector3(cx + rx * Mathf.Cos(a), cy + ry * Mathf.Sin(a), Vertex.nearZ), tint = reuna });
+            }
+            for (int r = 0; r < VarjoReuna; r++)
+            {
+                vm.SetNextIndex(0); vm.SetNextIndex((ushort)(1 + r)); vm.SetNextIndex((ushort)(1 + (r + 1) % VarjoReuna));
+            }
         }
 
         /// <summary>Kerroksen paikallinen piste (osuuksina) isännän koordinaatteihin nykyisessä asennossa.</summary>
@@ -274,21 +428,52 @@ namespace Matkakirja.Natiivi
                 var b = KerroksenPiste(k.Kerros, k.Kiinnitys, t);
                 p.strokeColor = k.Vari;
                 p.lineWidth = k.LeveysPt;
-                p.BeginPath();
-                p.MoveTo(a);
                 if (k.Ketju)
                 {
                     var a0 = k.KiintoKerros >= 0 ? KerroksenPiste(k.KiintoKerros, k.Kiinto, t, lepo: true) : a;
                     var b0 = KerroksenPiste(k.Kerros, k.Kiinnitys, t, lepo: true);
-                    var kayra = LatausLiike.Ketjukayra(a.x, a.y, b.x, b.y, Vector2.Distance(a0, b0) * (1f + k.Lotko));
+                    var kayra = LatausLiike.Ketjukayra(a.x, a.y, b.x, b.y, Vector2.Distance(a0, b0) * (1f + k.Lotko), k.HaivyLoppu > k.HaivyAlku ? 64 : 24);
+                    if (k.HaivyLoppu > k.HaivyAlku) { PiirraHaipyva(p, k, kayra); p.lineCap = LineCap.Round; continue; }
+                    p.BeginPath();
+                    p.MoveTo(a);
                     for (int i = 1; i < kayra.Length; i++) p.LineTo(new Vector2((float)kayra[i].X, (float)kayra[i].Y));
                 }
                 else
                 {
+                    p.BeginPath();
+                    p.MoveTo(a);
                     var c = LatausLiike.Ohjauspiste(a.x, a.y, b.x, b.y, k.Riippuma);
                     p.QuadraticCurveTo(new Vector2((float)c.X, (float)c.Y), b);
                 }
                 p.Stroke();
+            }
+        }
+
+        /// <summary>
+        /// Sumuun häipyvä köysi: peittävyys pisteen korkeuden mukaan (LatausLiike.Haivytys). Saman peittävyyden peräkkäiset palat
+        /// (1/32-portain) yhtenä polkuna; häivytetyt palat tasapäin (LineCap.Butt), jotta läpikuultavat päät eivät kerrostu helmiksi.
+        /// Täysin häipynyt loppu jää piirtämättä: köydellä ei ole näkyvää päätä.
+        /// </summary>
+        void PiirraHaipyva(Painter2D p, Koysi k, (double X, double Y)[] kayra)
+        {
+            float Peitto(int i) => (float)LatausLiike.Haivytys((kayra[i].Y - ala.y) / ala.height, k.HaivyAlku, k.HaivyLoppu);
+            int j = 0;
+            while (j < kayra.Length - 1)
+            {
+                float q = Mathf.Round((Peitto(j) + Peitto(j + 1)) * 16f) / 32f;
+                int loppu = j + 1;
+                while (loppu < kayra.Length - 1 && Mathf.Round((Peitto(loppu) + Peitto(loppu + 1)) * 16f) / 32f == q) loppu++;
+                if (q > 0f)
+                {
+                    var v = k.Vari; v.a *= q;
+                    p.strokeColor = v;
+                    p.lineCap = q < 1f ? LineCap.Butt : LineCap.Round;
+                    p.BeginPath();
+                    p.MoveTo(new Vector2((float)kayra[j].X, (float)kayra[j].Y));
+                    for (int i = j + 1; i <= loppu; i++) p.LineTo(new Vector2((float)kayra[i].X, (float)kayra[i].Y));
+                    p.Stroke();
+                }
+                j = loppu;
             }
         }
 

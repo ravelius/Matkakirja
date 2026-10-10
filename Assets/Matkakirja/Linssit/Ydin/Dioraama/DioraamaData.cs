@@ -611,6 +611,9 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Sijoittamattomat mallit (rekvisiitta, origo omassa juuressaan; Timeline tai seikkailu sijoittaa): ymparisto.mallit[] jossa
         /// "maailmaan": false, tai id "vene" ilman maailmaan-kenttää (Linnanrakentajan v43: vene ei ole maailmaan sijoitettu).</summary>
         public List<(string Id, string Huippu, string Kevyt)> Rekvisiitta = new List<(string, string, string)>();
+        /// <summary>Lisämallin hämäräkuva (LR v47c, 10.10.2026: ymparisto.mallit[].kuva_hamara jpg ja kuva_hamara_astc), id:n mukaan;
+        /// natiivi käyttää sitä hämärässä glb:n päiväkuvan ja DioraamaMaaston _HamaraKerroin-himmennyksen sijaan.</summary>
+        public Dictionary<string, (string Jpg, string Astc)> MallitHamara = new Dictionary<string, (string, string)>();
         public string OrtoHuippu, OrtoNormaali, OrtoKevyt;
         public string Puut, Puukortit, Horisontti, HorisonttiKuva;
         /// <summary>Veden syvyyskartta (8 bit, 0 = ranta): kuva, pikselin koko, metriä/arvo ja kuvan vasen yläkulma (Blender x, y).</summary>
@@ -920,6 +923,8 @@ namespace Matkakirja.Linssit.Dioraama
                         var mid = MiniJson.Teksti(m, "id") ?? "malli";
                         bool maailmaan = MiniJson.Kentta(m, "maailmaan") is bool mb ? mb : mid != "vene";
                         (maailmaan ? y.Mallit : y.Rekvisiitta).Add((mid, MiniJson.Teksti(m, "huippu"), MiniJson.Teksti(m, "kevyt")));
+                        string hj = MiniJson.Teksti(m, "kuva_hamara"), ha = MiniJson.Teksti(m, "kuva_hamara_astc");
+                        if (hj != null || ha != null) y.MallitHamara[mid] = (hj, ha);
                     }
                 if (MiniJson.ObjektiTaiNull(MiniJson.Kentta(ymp, "rantakivet")) is Dictionary<string, object> rk && !string.IsNullOrEmpty(MiniJson.Teksti(rk, "huippu") ?? MiniJson.Teksti(rk, "kevyt")))
                     y.Mallit.Add(("rantakivet", MiniJson.Teksti(rk, "huippu"), MiniJson.Teksti(rk, "kevyt")));

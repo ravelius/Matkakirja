@@ -82,6 +82,14 @@ namespace Matkakirja.Peli
 
         /// <summary>Säätimen (musiikki, tausta) muutos soivaan raitaan.</summary>
         public static int SaadinMs => Asetus.Kokonais("aanet.SaadinMs", 200);
+
+        // --- latausmusiikki (omistaja 10.10.2026, AaniTila.Lataus) ---
+        /// <summary>Pehmeä nousu latausruudun alussa.</summary>
+        public static int LatausNousuMs => Asetus.Kokonais("aanet.LatausNousuMs", 2000);
+        /// <summary>Näkymä aukeaa: ristihäivytys sen omaan ääneen tai pallon raidan tasoramppi kartan tasolle (~3 s, Päätoimittaja 20.2x).</summary>
+        public static int LatausRistiMs => Asetus.Kokonais("aanet.LatausRistiMs", 3000);
+        /// <summary>Ohitus tai poistuminen kesken latauksen: nopea häivytys (sama kuin linssin taustaäänen lasku).</summary>
+        public static int LatausPoisMs => Asetus.Kokonais("aanet.LatausPoisMs", 600);
     }
 
     /// <summary>Siirtymä- tai linssiraita (siirtymamusiikki.js RAIDAT).</summary>

@@ -27,6 +27,9 @@ namespace Matkakirja.Linssit.Kierros
         public double MinEtM;
         /// <summary>Kameran vähimmäiskorkeus kohteen maan yläpuolella (m): pallossa ympäröivät katot + 12 m (ESITTELYKORKEUS), muuten 55.</summary>
         public double KattoYlaM = OpasOhjaus.KattoYlaM;
+        /// <summary>Pallon kierron loppuetäisyys (m; OpasKuvaus.Kehysta, PT 10.10.: kohde täyttää lopussa noin kolmanneksen kuvan
+        /// korkeudesta); 0 = ei lähestymistä (kierto saapumisetäisyydellä).</summary>
+        public double LoppuEtM;
         public double KatseKorkeusM => MaaM + NostoM;
 
         public static Pysahdys P(string id, string nimi, string alarivi, double lat, double lon, double maa, double nosto,

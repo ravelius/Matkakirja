@@ -302,6 +302,8 @@ namespace Matkakirja.Editori
                     // Pallon kierros (UI-kuva-arkki u02): metrolinja, esitysrivi, ■, Mikä tämä on ja tapit (vapaa tila) yhtä aikaa.
                     var o = OpasValikko.Hae();
                     o.Komento("esitys on"); o.Komento("metro 0"); o.Komento("mika"); o.Komento("lopeta"); o.Komento("sulje");
+                    // Selite koko kohteen ajan (omistaja 10.10. 19.0x): pitkä selite nykyisen aseman alla.
+                    o.Komento("metro selite Gustave Eiffelin rautatorni vuoden 1889 maailmannäyttelyyn, Pariisin tunnetuin maamerkki");
                     Siirry(Vaihe.OdotaPallo);
                     break;
                 }
@@ -310,7 +312,7 @@ namespace Matkakirja.Editori
                     if (kehyksia < 20 || Kulunut < 1.0) return;
                     TarkistaPallo();
                     var o = OpasValikko.Hae();
-                    o.Komento("metro auto"); o.Komento("mika pois"); o.Komento("lopeta pois"); o.Komento("esitys auto"); o.Komento("sulje");
+                    o.Komento("metro selite"); o.Komento("metro auto"); o.Komento("mika pois"); o.Komento("lopeta pois"); o.Komento("esitys auto"); o.Komento("sulje");
                     Siirry(Vaihe.Mikseri);
                     break;
                 }
@@ -619,6 +621,10 @@ namespace Matkakirja.Editori
             if (mb.xMin < -0.5f || mb.yMin < -0.5f || mb.xMax > koko.width + 0.5f || mb.yMax > koko.height + 0.5f)
                 Virhe($"pallo: metrolinja {Laatikko(mb)} ei ole kokonaan ruudulla");
             else Kirjaa($"OK pallo: metrolinja {Laatikko(mb)}");
+            // Asemien kosketusala (omistaja 10.10. 19.0x): vähintään 44 pt leveä, koko linja.
+            var os = opas.TestiMetrolinja.TestiOsuma;
+            if (os.width < 44f || os.height < mb.height - 0.5f) Virhe($"pallo: metrolinjan kosketusala {Laatikko(os)} alle 44 pt tai linjaa lyhyempi");
+            else Kirjaa($"OK pallo: metrolinjan kosketusala {Laatikko(os)}");
             foreach (var (n2, e2) in napit.Concat(ohjaimet))
                 if (mb.Overlaps(e2.worldBound)) Virhe($"pallo: metrolinja {Laatikko(mb)} on päällekkäin: {n2} {Laatikko(e2.worldBound)}");
             var nyt = Matkakirja.Natiivi.NytRivi.TestiLappu;
@@ -632,7 +638,8 @@ namespace Matkakirja.Editori
             Rect? r = null;
             juuri.Query<VisualElement>().ForEach(e =>
             {
-                if (e == juuri || e.childCount > 0 || !Nakyvissa(e) || e.resolvedStyle.visibility == Visibility.Hidden) return;
+                if (e == juuri || e.childCount > 0 || !Nakyvissa(e) || e.resolvedStyle.visibility == Visibility.Hidden
+                    || e.name == Matkakirja.Natiivi.OpasMetrolinja.OsumaNimi) return;
                 var b = e.worldBound;
                 if (!(b.width >= 1f && b.height >= 1f)) return;
                 r = r == null ? b : Rect.MinMaxRect(Mathf.Min(r.Value.xMin, b.xMin), Mathf.Min(r.Value.yMin, b.yMin),
@@ -705,6 +712,28 @@ namespace Matkakirja.Editori
                     UiNakymat.Hae().Linssit.TestiKarttalinssi("topografia");
                     UiKerros.Hae().Juuri(LinssiUi.RadioKerros).schedule.Execute(() => Linssi("karttavalikko auki")).StartingIn(200);
                 }, () => { UiNakymat.Hae().Linssit.TestiKarttalinssi(null); SuljeKaikki(); }, 1.0),
+            // Pariisin kierros (omistaja 10.10. 19.0x): kertomuskuva lisäkuvien kokoisena niiden vasemmalla, metrolinjan selite koko kohteen
+            // ajan (kuten `ui opasvalikko metro 2` + `metro selite …` + `kuvatesti` + `kuvanosto`).
+            ("kierroksen kuvat", () =>
+                {
+                    var o = OpasValikko.Hae(); o.Komento("sulje"); o.Komento("esitys on"); o.Komento("metro 2");
+                    o.Komento("metro selite Pariisin voitonkaari Champs-Élysées'n päässä, Napoleonin tilaama 1806");
+                    // Editorissa ei verkkoa: kertomuskuvaksi 4:3-testikuva paperin sävyllä.
+                    if (Matkakirja.Natiivi.OpasKuvanosto.Testikuva == null)
+                    {
+                        var tk = new Texture2D(4, 3);
+                        var px = new Color[12]; for (int i = 0; i < 12; i++) px[i] = Tyylikirja.Kehys.Kulta;
+                        tk.SetPixels(px); tk.Apply();
+                        Matkakirja.Natiivi.OpasKuvanosto.Testikuva = tk;
+                    }
+                    o.Komento("kuvatesti"); o.Komento("kuvanosto");
+                },
+                () =>
+                {
+                    var o = OpasValikko.Hae(); o.Komento("kuvanosto pois"); o.Komento("kuvatesti pois"); o.Komento("metro selite");
+                    Matkakirja.Natiivi.OpasKuvanosto.Testikuva = null;
+                    o.Komento("metro auto"); o.Komento("esitys auto"); o.Komento("sulje");
+                }, 4.0),
             ("vapaa lento", () => { var o = OpasValikko.Hae(); o.Komento("sulje"); o.Komento("mika"); o.Komento("vapaalento"); },
                 () => { var o = OpasValikko.Hae(); o.Komento("mika pois"); o.Komento("vapaalento pois"); o.Komento("sulje"); }, 0.6),
             // Pulu (Natiivi-UI 10.10.2026): kuplapino suoraan PuluKuplat.Lisaa:lla (Sano piilottaa tekstit oletuksena), lyhyt ja
@@ -883,12 +912,24 @@ namespace Matkakirja.Editori
                     var island = new Rect(koko.width * 0.5f - 63f, 0f, 126f, 48f);
                     if (!b.Overlaps(island) && b.xMin >= 0f && b.yMin >= 0f && b.xMax <= koko.width) { ok++; continue; }
                 }
+                // Metrolinja (myös Kaupunkikierros-kyltti) tarkoituksella turva-alueen reunan yli Islandin viereen (OpasValikko.PaivitaMetro,
+                // TarkistaPallo): ehto on ruudulla pysyminen.
+                var mj = OpasValikko.Hae()?.TestiMetro;
+                if (mj != null && (e == mj || mj.Contains(e)) && b.xMin >= 0f && b.yMin >= 0f && b.xMax <= koko.width && b.yMax <= koko.height) { ok++; continue; }
                 if (++viat <= 6)
                     Virhe($"{nimi}: {(e is Button ? "nappi" : "teksti")} \"{Lyhyt(e)}\" {Laatikko(b)} ei ole kokonaan turva-alueella {Laatikko(turva)}");
             }
             if (viat > 6) Kirjaa($"-- {nimi}: {viat - 6} muuta vikaa");
             if (ylivuodot > 6) Kirjaa($"YLIVUOTO {Koot[kokoNro].Nimi}: {nimi}: {ylivuodot - 6} muuta");
             Paallekkain(naytetyt, nimi);
+            // Metrolinjan selite näkyy (simu 19.3x: 0 pt korkea, kun korostus ei tuonut lisätilaa → ei piirtynyt).
+            if (nimi == "kierroksen kuvat")
+            {
+                var sl = OpasValikko.Hae()?.TestiMetro?.Query<Label>().Where(l => l.text.StartsWith("Pariisin voitonkaari")).First();
+                if (sl == null || !Nakyva(sl) || sl.worldBound.height < 10f)
+                    Virhe($"{nimi}: metrolinjan selite ei näy ({(sl == null ? "ei elementtiä" : Laatikko(sl.worldBound))}; {OpasValikko.Hae()?.TestiMetrolinja?.Kuvaus()})");
+                else Kirjaa($"OK {nimi}: metrolinjan selite {Laatikko(sl.worldBound)}");
+            }
             // Paneelin napit paneelin sisällä (9.10.2026 ajo #12: Äänentasojen väkänen valui paneelin ja ruudun ulkopuolelle).
             var paneeli = NakymanPaneeli(nimi);
             if (paneeli?.panel != null && Nakyvissa(paneeli))

@@ -98,6 +98,30 @@ namespace Matkakirja.Linssit.Kierros
             // etäisyys pystysuuntaisen näkökentän mukaan niin, että juuri ja huippu mahtuvat kuvaan marginaalilla.
             double minEt = 0;
             if (korkeus >= KorkeaRajaM) { minEt = KorkeaEtaisyys(korkeus, kall, nosto, 50); et = Math.Max(et, minEt); }   // pienin mahtuva: lähemmäs-vaihe saa mennä siihen asti
+            // KIERRON ALKU- JA LOPPUETÄISYYS (omistaja 10.10.: "riemukaari muuten kuvataan hieman liian läheltä ja concorden aukio ehkä
+            // liian kaukaa, koska se obeliski on niin pieni … ensin kuvataan siltä etäisyydeltä kuin nyt mutta pallon liikkuessa ja
+            // kiertäessä kohdetta se samalla myös lähentyisi sitä"; PT: lopussa kohde täyttää noin kolmanneksen kuvan korkeudesta,
+            // alussa koko kohde ympäristöineen): loppuetäisyys korkeudesta (KorkeusM, aukiolla keskusmonumentti AukioKohdeKorkeusM,
+            // muuten koko leveyssuunnassa) niin, että kohde on KolmannesOsuus kuvasta, luokan rajoissa. Alku on nykyinen kehys, kuitenkin
+            // PalloAlkuMinKerroin…PalloAlkuMaxKerroin × loppu (Riemukaari 101 → 201 m, loppu 161 m; Concorde 211 → 148 m, loppu 74 m).
+            // Suuri matala kohde (Louvre, Champs-Élysées): loppu ≥ alku → ei lähestymistä. Korkea kohde (≥ KorkeaRajaM, tornit ja
+            // kirkot): alku pysyy KORKEA KOHDE -kehyksenä (koko torni kuvassa, PT 7.10.), kolmannes-sääntö vain lähestymisen loppuna, jos
+            // se on lähempänä (Tampere: 168 m:n Näsinneulan kehys 400 → 676 m työnsi 85 m:n hypyn lennon 5 m taaksepäin).
+            double loppuEt = 0;
+            if (OpasSilmukka.PalloLento)
+            {
+                // Korkeudeton kohde: koko täyttää kolmanneksen kuvan LEVEYDESTÄ (koko / KuvaSuhde pystykentässä), eikä alkua työnnetä
+                // kauemmas (Tukholman kaupungintalo, koko 130 m ilman korkeutta: kehys 150 → 523 m kiersi saapuessa 166°).
+                string ln = (luokka ?? k?.Luokka ?? "").Trim().ToLowerInvariant();
+                bool aukio = korkeus <= 0 && AukioLuokat.Contains(ln), mitattu = korkeus > 0 || aukio;
+                double hKoko = korkeus > 0 ? korkeus : aukio ? AukioKohdeKorkeusM : koko / KuvaSuhde;
+                double luokanMax = korkeus >= KorkeaRajaM ? KorkeaEtMaxM : l == Luokka.Katu ? KatuEtMaxM : l == Luokka.Alue ? AlueEtMaxM : RakennusEtMaxM;
+                loppuEt = Rajaa(hKoko / (KolmannesOsuus * 2 * tanPysty), Math.Max(PalloLoppuMinM, minEt), luokanMax);
+                if (mitattu && korkeus < KorkeaRajaM && loppuEt * PalloAlkuMinKerroin <= luokanMax)
+                    et = Rajaa(et, loppuEt * PalloAlkuMinKerroin, Math.Max(loppuEt * PalloAlkuMinKerroin, Math.Min(luokanMax, loppuEt * PalloAlkuMaxKerroin)));
+                et = Math.Max(et, minEt);
+                if (loppuEt >= et) loppuEt = 0;   // ei lähestymistä
+            }
             nosto -= KatseAlasOsuus * et;   // kohde hieman keskikohdan yläpuolelle (sirut eivät peitä)
             // ESITTELYKORKEUS (omistaja TF 169, PT 9.10.: "rakennukset ovat kuitenkin kolmiulotteisia, ja liian korkealta katsottuna ne
             // eivät näytä juuri miltään verrattuna siihen, että ollaan noin rakennuksen puolivälin korkeudella tai hieman yläpuolella"):
@@ -130,8 +154,16 @@ namespace Matkakirja.Linssit.Kierros
             {
                 Id = k.Id ?? k.Nimi, Nimi = k.Nimi, Alarivi = k.Alarivi, Teksti = k.Teksti, Lat = k.Lat, Lon = k.Lon, MaaM = maaM, NostoM = nosto,
                 Suuntima = KierrosLento.Kiedo(tulosuunta + SivuKulma), Kallistus = kall, EtaisyysM = et, MinEtM = minEt, KattoYlaM = kattoYla,
+                LoppuEtM = loppuEt > 0 && loppuEt < et ? loppuEt : 0,
             };
         }
+        /// <summary>Kierron loppu (PT 10.10.): kohde täyttää näin suuren osan pystykentästä (KuvaPystyAst) kierron lopussa.</summary>
+        public const double KolmannesOsuus = 1.0 / 3;
+        /// <summary>Kierron alku loppuetäisyyden kerrannaisena (alussa kohde ympäristöineen; kehys pidetään, jos se on välissä).</summary>
+        public const double PalloAlkuMinKerroin = 1.25, PalloAlkuMaxKerroin = 2.0;
+        /// <summary>Kierron loppuetäisyys vähintään (m) ja aukion keskusmonumentin oletuskorkeus (m; Concorden obeliski 23 m), kun
+        /// workerin korkeus_m puuttuu.</summary>
+        public const double PalloLoppuMinM = 70, AukioKohdeKorkeusM = 23;
 
         /// <summary>Pysähdyksen asento hetkellä aikaS saapumisesta: pehmeästi alkava hidas kierto ja kevyt dolly sisään.
         /// aikaS = 0 antaa täsmälleen kehyksen (lennon loppu), joten saapuminen on jatkuva.</summary>
@@ -206,18 +238,23 @@ namespace Matkakirja.Linssit.Kierros
         /// ylhäältä katsottuna), ja eteneminen q (0…1) pienentää vaakaetäisyyttä SpiraaliLahesty-osuudella ja korkeutta
         /// SpiraaliLasku-osuudella (vähintään SpiraaliMinKorkeusM katsepisteen yläpuolella); katse pysyy kohteessa.
         /// </summary>
-        public static Kuvakulma Spiraali(Kuvakulma k, double fi, double q, double maaM = double.NaN, double kattoYla = double.NaN)
+        public static Kuvakulma Spiraali(Kuvakulma k, double fi, double q, double maaM = double.NaN, double kattoYla = double.NaN) =>
+            Spiraali(k, fi, q, SpiraaliLahesty, OpasSilmukka.PalloLento ? SpiraaliLaskuPallo : SpiraaliLasku, maaM, kattoYla);
+
+        /// <summary>Spiraali omilla osuuksilla (pallon kierto, OpasSilmukka.KiertoSuunnitelma): q = 1 → vaakaetäisyys × (1 − lahesty),
+        /// silmän korkeus katsepisteestä × (1 − lasku), alarajat kuten yllä.</summary>
+        public static Kuvakulma Spiraali(Kuvakulma k, double fi, double q, double lahesty, double laskuOsuus, double maaM, double kattoYla)
         {
             const double A = Math.PI / 180;
             var e = KameraPaikka(k, k.Lat, k.Lon);
-            double c = Math.Cos(fi * A), si = Math.Sin(fi * A), sk = 1 - SpiraaliLahesty * q;
+            double c = Math.Cos(fi * A), si = Math.Sin(fi * A), sk = 1 - lahesty * q;
             double se = (e.e * c - e.n * si) * sk, sn = (e.e * si + e.n * c) * sk;
             double ve = -se, vn = -sn, vaaka = Math.Sqrt(ve * ve + vn * vn);
             // Lasku ei saa osua ohjauksen rajoihin (OpasOhjaus.Rajoita: kallistus ≤ KallistusMax, katto ≥ maa + KattoYlaM), koska ne
             // vetäisivät silmää vaakasuunnassa kohteeseen päin (PalloKierrosTestit: Concorde → Madeleine 19 m taaksepäin).
             // ESITTELYKORKEUS (omistaja TF 169): pallossa lasku syvempi (SpiraaliLaskuPallo) ja alaraja kohteen oma katto (ympäröivät katot
             // + 12 m), ei 60 m katseen yläpuolella; "Pariisin alussa pallo laskeutuu koko ajan alemmas Notre-Damea esitellessään".
-            double katto = double.IsNaN(kattoYla) ? OpasOhjaus.KattoYlaM : kattoYla, lasku = OpasSilmukka.PalloLento ? SpiraaliLaskuPallo : SpiraaliLasku;
+            double katto = double.IsNaN(kattoYla) ? OpasOhjaus.KattoYlaM : kattoYla, lasku = laskuOsuus;
             double pysty0 = e.u - k.KatseKorkeusM, ala = Math.Max(OpasSilmukka.PalloLento ? 0 : SpiraaliMinKorkeusM, vaaka / Math.Tan((OpasOhjaus.KallistusMax - 1) * A));
             if (!double.IsNaN(maaM)) ala = Math.Max(ala, maaM + katto + 5 - k.KatseKorkeusM);
             double pysty = Math.Max(Math.Min(pysty0, ala), pysty0 * (1 - lasku * q));
@@ -378,7 +415,9 @@ namespace Matkakirja.Linssit.Kierros
         // tasapainossa. Pitkällä lennolla (≥ PalloTasainenRajaM) polku parametroidaan silmän kaarenpituuden mukaan: silmä kulkee
         // saman reitin, mutta kuljettu matka seuraa 7. asteen S-käyrää S(τ), τ = t + PalloJarruVino·t·(1 − t) eli loppuhidastus
         // on hieman alkukiihdytystä pidempi. Kesto ennallaan; kääntö, kallistus ja zoomaus seuraavat samaa parametria.
-        public const double PalloTasainenRajaM = 1500, PalloJarruVino = 0.15;
+        // 10.10. (omistaja: "liike saisi hidastua pikkuhiljaa saavuttaessa kohteeseen"; PT: kiihdytykset ja jarrutukset pehmeiksi):
+        // raja 1 500 → 0 m, eli myös lyhyet pallolennot (Louvre 1,2 km: jarrutus 0,5 s:n keskiarvona 28,9 → 11,3 m/s²).
+        public const double PalloTasainenRajaM = 0, PalloJarruVino = 0.15;
         const int TasainenN = 96;
         static readonly double[] tasainenP = new double[TasainenN + 1], tasainenS = new double[TasainenN + 1], tasainenM = new double[TasainenN + 1];
         static Kuvakulma tasainenA, tasainenB; static double tasainenRho = double.NaN;

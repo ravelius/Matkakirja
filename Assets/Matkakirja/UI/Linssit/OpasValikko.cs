@@ -428,6 +428,9 @@ namespace Matkakirja.Natiivi
             kerros.JokaRuutu += PaivitaSaaVihje;
             // METROLINJA (omistaja 7.10. 10.2x): kierroksen eteneminen vasemmassa reunassa keskellä (OpasMetrolinja).
             metro = new OpasMetrolinja(Juuri);
+            // Aseman napautus (omistaja 10.10. 19.0x): kierroshyppy kohteeseen i (LS1 50204e0f2): lento, kerronta siellä ja kierros
+            // jatkuu siitä; metrolinja päivittyy KierrosLahtee-tapahtumasta.
+            metro.AsemaValittu = OpasSovitin.KierrosKohteeseen;
             kerros.JokaRuutu += PaivitaMetro;
             OpasSovitin.LatausKuvaVaihtui += LatausKuvaVaihtui;
             // Sallitut saapuvat oppaan avauksessa (aloitusvalikko jo auki): lista uudelleen, jotta rajaamaton ei jää näkyviin.
@@ -651,7 +654,7 @@ namespace Matkakirja.Natiivi
         Latauspalkki siirtymaPalkki;
         IVisualElementScheduledItem siirtymaKierros;
 
-        VisualElement siirtymaIon, avausIon;
+        VisualElement siirtymaIon, avausIon, poistuRivi;
 
         // Koko ruutu (simu 6.10.: turva-alueen ulkopuolelle jäi kartta ja krediitit), kuten DioraamaTaulun nimiruutu.
         void RakennaSiirtyma(VisualElement kerrosJuuri)
@@ -687,9 +690,16 @@ namespace Matkakirja.Natiivi
             siirtymaNimi = Rakenne.Teksti("", "mk-ajattelija__nimi", siirtymaTeksti);
             siirtymaNimi.pickingMode = PickingMode.Ignore; siirtymaNimi.style.unityTextAlign = TextAnchor.MiddleCenter; Kirjasimet.Aseta(siirtymaNimi, Kirjasin.Lcd);
             siirtymaPalkki = new Latauspalkki(siirtymaTeksti);
-            // POISTU (omistaja TF 176, PT 12.2x: "lisää latausruutuun POISTU-nappi … kuten Myllyn Poistu"): sama nappirivi ja nappi kuin
+            // POISTU (omistaja TF 176, PT 12.2x: "lisää latausruutuun POISTU-nappi … kuten Myllyn Poistu"): sama nappi kuin
             // Myllyssä; sulkee linssin, jolloin siirtymäkierros purkaa ruudun (SiirtymaPeru) ja lataus keskeytyy, ja peli palaa kartalle.
-            var poistuRivi = Rakenne.El("mk-kortti__napit", siirtymaTeksti, PickingMode.Ignore);
+            // Omistaja 10.10. 22.4x: "nappi on liian lähellä latauspalkkia. siirrä nappi oik. reunaan ja laita himmeämmälle" →
+            // OHJAUSNAPPI-pohjan ryhmä oikeaan alakulmaan turva-alueen sisään (ion-logon riville, AsetaSiirtymaIon) ja ryhmän
+            // lepotila (himmeä 0,55 kuten TAPPI). Tumma latausruutu: KORTTI-pohjan tumma variantti (vaalea reunus ja teksti) kuten
+            // museon Poistu; läpinäkyvän toimintonapin muste-teksti ei erottunut tummasta ruudusta (omistaja 22.4x).
+            poistuRivi = Rakenne.El("mk-ohjausryhma", siirtyma, PickingMode.Ignore);
+            poistuRivi.AddToClassList("mk-ohjausryhma--lepo");
+            poistuRivi.AddToClassList("mk-kortti-kehys--tumma");
+            poistuRivi.style.top = StyleKeyword.Auto;
             Kirjasimet.Aseta(Rakenne.Nappi(Kieli.T("ui.pelit.poistu"), "mk-nappi--toiminto", () =>
             {
                 Debug.Log("MATKAKIRJA opas: siirtymä — Poistu");
@@ -713,6 +723,7 @@ namespace Matkakirja.Natiivi
             // että ei jää mustia palkkeja"): ruudun koon muuttuessa näkyvä kuva sovitetaan heti peittäväksi uuteen kokoon, ja jos
             // rajaus vaihtuu (puhelin / iPad pysty / vaaka), uusi rajaus haetaan muistiin ja vaihdetaan valmistuessa; ion-logo uuteen paikkaan.
             siirtyma.RegisterCallback<GeometryChangedEvent>(e => { if (e.oldRect.size != e.newRect.size) Kierretty(); });
+            siirtymaTeksti.RegisterCallback<GeometryChangedEvent>(_ => RajaaKoysiTekstiin());
             OpasSovitin.SiirtymaAlkaa += n => UiKerros.PaaSaikeessa(() => SiirtymaAlkaa(n));
             OpasSovitin.SiirtymaValmis += () => UiKerros.PaaSaikeessa(SiirtymaValmis);
         }
@@ -764,6 +775,10 @@ namespace Matkakirja.Natiivi
             var sa = UiRuutu.Turva;
             float vali = Mathf.Max(sa.xMin, sa.yMin) * sk + KrediititTiivis.TyhjaSivuPt;
             AsetaIon(siirtymaIon, vali, vali);
+            // Poistu oikeaan alakulmaan samalle riville: alareuna kuten logon, oikea reuna turva-alueen sisään reunan lähelle
+            // (simu 22.52: logon 44 pt:n sivuväli toi napin iPhonella 16 pt:n päähän latauspalkista).
+            float oikea = (Screen.width - sa.xMax) * sk + KrediititTiivis.TyhjaSivuPt;
+            poistuRivi.style.right = oikea; poistuRivi.style.bottom = vali;
             Debug.Log($"MATKAKIRJA opas: siirtymän ion-logo {vali:0} pt vasemmasta ja alhaalta (paneeli {pw:0}, turva {sa.xMin:0}/{sa.yMin:0} px)");
         }
 
@@ -872,6 +887,12 @@ namespace Matkakirja.Natiivi
                 OpasSovitin.VapautaPalloTekstuuri();
                 return;
             }
+            // LATAUSMUSIIKKI (omistaja 10.10.2026: "pelien ja linssien (jotka vaativat latausruudun) latausruudulla voisi kuulua
+            // musiikkia"; Päätoimittaja: kuumailmapallossa kaupungin oma kappale, varalla alueraita, Olavinlinnan tasolla): heti kun
+            // ruutu on pallon latausruutu (kuvan saapumista ei odoteta), nousee pehmeästi; sama kaupunki uudelleen (kierto, kuvan
+            // saapuminen) ei ala alusta. SiirtymaValmis: raita jatkuu kierroksella ja laskee kartan tasolle; SiirtymaPeru (Poistu):
+            // nopea häivytys. Häipyvä ruutu (SiirtymaValmiin jälkeiset 1,2 s: kierto tai myöhästynyt kuva) ei käynnistä uudelleen.
+            if (!siirtyma.ClassListContains("mk-astroavaus--haipyy")) Aanisoitin.LatausmusiikkiKaupunki(OpasSovitin.KaupunkitilaId);
             // Teksti ja palkki kuvan tummaan alaosaan (pallo jää keskelle näkyviin). Leveä vaakaruutu (iPhone 2,2:1) näyttää 4:3-rajauksesta
             // vain kaistan: kohdistus 35 %:iin pitää pallon kokonaan ruudulla ja tekstin tummassa osassa (simu 14.13: 50 % leikkasi pallon).
             siirtyma.style.justifyContent = Justify.FlexEnd;
@@ -952,6 +973,12 @@ namespace Matkakirja.Natiivi
         /// kohta, jossa stillin köysi häipyy usvaan (stillistä mitattu: iPhone 0,35/0,705, iPad pysty 0,41/0,705, vaaka 0,44/0,65).
         /// </summary>
         static readonly float[] PalloSauma = { 0.73f, 0.73f, 0.69f };
+        /// <summary>Köyden loppu saumasta alaspäin (taustan osuus) ja häivytyksen alku maapisteen yläpuolella: köysi kulkee usvan
+        /// läpi tummaan alaosaan ja on poissa ennen kaupungin nimeä (iPhone ja iPad pysty ~0,83, vaaka ~0,79).</summary>
+        const float PalloKoysiSumuun = 0.06f, PalloKoysiHaivyYlla = 0.03f, PalloKoysiTekstiVali = 0.02f, PalloKoysiHaivyMin = 0.08f;
+        Latauskuva.Koysi palloAnkkuri;
+        Vector2 palloHaivy;
+        Rect palloAla;
         Latauskuva palloKerrokset;
         readonly Texture2D[] palloKerrosKuvat = new Texture2D[3];
         int palloKerrosRajaus = -1, palloKerrosKerta;
@@ -984,7 +1011,13 @@ namespace Matkakirja.Natiivi
             var koydet = new List<Latauskuva.Koysi>();
             for (int i = 0; i < 4; i++)
                 koydet.Add(new Latauskuva.Koysi { KiintoKerros = 0, Kiinto = p.Kori[i], Kerros = 1, Kiinnitys = p.Kupu[i], LeveysPt = 1f, Riippuma = 0.02f });
-            koydet.Add(Latauskuva.Koysi.Ankkuri(p.Maa, 0, p.Ankkuri));
+            // KÖYSI SUMUUN (omistaja 10.10. 17.5x: "köyden pitää jatkua alemmas ja hävitä sumuun, muuten näyttää irralliselta"):
+            // ankkuri samaan suuntaan saumasta PalloKoysiSumuun alemmas (tumma alaosa), häivytys maapisteen yläpuolelta loppuun.
+            var jatke = Matkakirja.Linssit.LatausLiike.Jatke(p.Ankkuri.x, p.Ankkuri.y, p.Maa.x, p.Maa.y, PalloSauma[r] + PalloKoysiSumuun);
+            palloAnkkuri = Latauskuva.Koysi.Ankkuri(new Vector2((float)jatke.X, (float)jatke.Y), 0, p.Ankkuri);
+            palloHaivy = new Vector2(p.Maa.y - PalloKoysiHaivyYlla, (float)jatke.Y);
+            RajaaKoysiTekstiin();
+            koydet.Add(palloAnkkuri);
             palloKerrokset.Aseta(palloKerrosKuvat[0], new[]
             {
                 // TUULI (omistaja 10.10. 16.5x: "pallo pitää liikkua selkeästi tuulessa heiluen"): sama puuskainen tuuli, pallo ±2,5° ja
@@ -1022,7 +1055,25 @@ namespace Matkakirja.Natiivi
             var koko = siirtyma.parent?.worldBound.size ?? Vector2.one;
             float w = Mathf.Max(koko.x, 1f), h = Mathf.Max(koko.y, 1f);
             var (x, y, kw, kh) = Matkakirja.Linssit.LatausLiike.Peita(w, h, t.width / (double)Mathf.Max(1, t.height), w > h * 1.5f ? VaakaKuvanAlku : -1);
-            palloKerrokset.Sovita(new Rect((float)x, (float)y, (float)kw, (float)kh));
+            palloAla = new Rect((float)x, (float)y, (float)kw, (float)kh);
+            palloKerrokset.Sovita(palloAla);
+            RajaaKoysiTekstiin();
+        }
+
+        /// <summary>
+        /// Köysi on poissa ennen kaupungin nimeä: iPhonen vaakarajauksessa (kuvasta näkyy vain kaista) nimi osuu kuvan sumuvyöhykkeen
+        /// yläosaan, jolloin köyden häivytys päättyy nimen yläpuolelle (vähintään PalloKoysiHaivyMin pitkänä). Muissa rajauksissa
+        /// köysi häipyy ennen nimeä jo PalloPisteiden mukaan.
+        /// </summary>
+        void RajaaKoysiTekstiin()
+        {
+            if (palloAnkkuri == null) return;
+            float loppu = palloHaivy.y;
+            var tb = siirtymaTeksti.worldBound;
+            if (palloAla.height > 0f && tb.height > 0f && !float.IsNaN(tb.yMin))
+                loppu = Mathf.Min(loppu, (tb.yMin - siirtyma.worldBound.yMin - palloAla.y) / palloAla.height - PalloKoysiTekstiVali);
+            palloAnkkuri.HaivyLoppu = loppu;
+            palloAnkkuri.HaivyAlku = Mathf.Min(palloHaivy.x, loppu - PalloKoysiHaivyMin);
         }
 
         void PiilotaPalloKerrokset()
@@ -1030,6 +1081,7 @@ namespace Matkakirja.Natiivi
             palloKerrosKerta++;
             palloKerrosRajaus = -1;
             palloKerroksetNakyy = false;
+            palloAnkkuri = null;
             palloKerrokset?.Nayta(false);
             palloKerrokset?.Aseta(null);
             siirtymaKuva.style.visibility = StyleKeyword.Null;
@@ -1056,6 +1108,7 @@ namespace Matkakirja.Natiivi
             siirtymaKierros?.Pause();
             siirtymaPalkki.Arvo = 1f;
             AaniVaimennus.Aseta(false, "kierros alkaa");
+            Aanisoitin.LatausmusiikkiOhi(true);   // latausraita jatkuu kierroksella: tasoramppi kartan tasolle ~3 s (kuuntelija palaa samalla)
             siirtyma.AddToClassList("mk-astroavaus--haipyy");
             siirtyma.schedule.Execute(() => siirtyma.style.opacity = 0f).ExecuteLater(16);
             // Kertalaskuri (NUI 7.10. 15.4x): häivytyksen jälkeen piiloon aina, ellei uusi siirtymä alkanut välissä (peiton tarkistus
@@ -1079,6 +1132,7 @@ namespace Matkakirja.Natiivi
             siirtyma.style.display = DisplayStyle.None;
             AsetaPalloKuva(false);
             AaniVaimennus.Aseta(false, "siirtymä peruttu");
+            Aanisoitin.LatausmusiikkiOhi(false);   // Poistu tai opas suljettu kesken latauksen: nopea häivytys
             testiEdistyminen = null;
             KrediititTiivis.CesiumNakyviin = false;
             Debug.Log("MATKAKIRJA opas: siirtymä peruttu (opas suljettu)");
@@ -1164,6 +1218,7 @@ namespace Matkakirja.Natiivi
         public VisualElement TestiJuuri => Juuri;
         public VisualElement TestiValikko => valikko;
         public VisualElement TestiMetro => metro?.TestiJuuri;
+        public OpasMetrolinja TestiMetrolinja => metro;
         /// <summary>Asettelutesti: pallon kierroksen ohjaimet (tapit, Mikä tämä on, kuvakortti).</summary>
         public IEnumerable<(string Nimi, VisualElement E)> TestiPallonOhjaimet()
         {
@@ -1704,18 +1759,20 @@ namespace Matkakirja.Natiivi
                     });
                 }
             }
-            if (!kuvaNakyy) return;
             // Vapaassa tilassa havainnekuvan paikalla on Mikä tämä on? -nappi.
             var kd = mikaRivi.style.display == DisplayStyle.Flex ? DisplayStyle.None : DisplayStyle.Flex;
-            if (kuvaKortti.style.display != kd) kuvaKortti.style.display = kd;
             float koko = KuvaKoko;
-            if (kuvaKortti.style.width.value.value != koko) { kuvaKortti.style.width = koko; kuvaKortti.style.height = koko; kuvaKortti.style.minHeight = koko; }
             // Oikean tapin keskilinjalle (iPhonella), iPadilla reunaan; pohja nappirivin nappien alareunaan.
             float oikea = Mathf.Max(OpasTapit.Reuna, OpasTapit.Reuna + (OpasTapit.Halkaisija - koko) * 0.5f);
-            if (kuvaKortti.style.right.value.value != oikea) kuvaKortti.style.right = oikea;
             float ala = OikeaAla(koko);
             float h = Juuri.resolvedStyle.height;
             if (siruNakyy && !float.IsNaN(h) && sirurivi.layout.height > 0) ala = Mathf.Max(ala, h - sirurivi.layout.yMin + KuvaRako);
+            // Kertomuskuvat (kuvanosto) lisäkuvien kokoisina niiden vasemmalle puolelle (omistaja 10.10. 19.0x); ilman nappia sen paikalle.
+            kuvanosto.AsetaKulma(koko, oikea, ala, KuvaRako, kuvaNakyy && kd == DisplayStyle.Flex);
+            if (!kuvaNakyy) return;
+            if (kuvaKortti.style.display != kd) kuvaKortti.style.display = kd;
+            if (kuvaKortti.style.width.value.value != koko) { kuvaKortti.style.width = koko; kuvaKortti.style.height = koko; kuvaKortti.style.minHeight = koko; }
+            if (kuvaKortti.style.right.value.value != oikea) kuvaKortti.style.right = oikea;
             if (kuvaKortti.style.bottom.value.value != ala) kuvaKortti.style.bottom = ala;
         }
 
@@ -2689,6 +2746,7 @@ namespace Matkakirja.Natiivi
                 }
                 case "teksti": NaytaTeksti(); return "opas: teksti auki";
                 case "kuvatesti":
+                    if (o.Length > 1 && o[1] == "pois") { testiKuva = null; naytettyKuva = null; return "opas: testikuva pois"; }
                     testiKuva = new OpasKuva
                     {
                         Url = o.Length > 1 && o[1].StartsWith("http") ? o[1]
@@ -2834,6 +2892,14 @@ namespace Matkakirja.Natiivi
                     Avaa(Nakyma.Kaupungit);
                     return $"opas: kaupungit {maanosa} / {maa}";
                 case "metro":
+                    // `ui opasvalikko metro selite <teksti>|selite`: testiselite nykyisen aseman alle (tyhjä = pois).
+                    // Komento jakaa rivin kahteen osaan (komento, loput): selitteen teksti on loppujen toinen osa.
+                    if (o.Length > 1 && (o[1] == "selite" || o[1].StartsWith("selite ")))
+                    {
+                        var st = o[1].Split(new[] { ' ' }, 2, StringSplitOptions.RemoveEmptyEntries);
+                        metro.TestiSelite = st.Length > 1 ? st[1] : null;
+                        return "opas: " + metro.Kuvaus();
+                    }
                     // `ui opasvalikko metro <i>|auto`: testilinja Pariisin kohteilla ilman kierrosta.
                     metro.Testi = o.Length > 1 && o[1] != "auto";
                     if (metro.Testi && int.TryParse(o[1], out int mi)) metro.TestiIndeksi = mi;

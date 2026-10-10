@@ -422,6 +422,12 @@ namespace Matkakirja.Natiivi
         {
             new Vector2(670.65f / 1290f, 1789.10f / 2796f), new Vector2(1065.24f / 2048f, 1747.64f / 2732f), new Vector2(1421.32f / 2732f, 1310.79f / 2048f),
         };
+        /// <summary>Veneen rajat (alfa &gt; 20) taustan osuuksina: Latauskuva.Vesi (vesiraja, heijastus ja kosketusvarjo, PT 20.3x).</summary>
+        static readonly Rect[] LinnaVene =
+        {
+            new Rect(618f / 1290f, 1759f / 2796f, 105f / 1290f, 31f / 2796f), new Rect(983f / 2048f, 1700f / 2732f, 164f / 2048f, 48f / 2732f),
+            new Rect(1312f / 2732f, 1247f / 2048f, 219f / 2732f, 64f / 2048f),
+        };
         /// <summary>Leveällä vaakaruudulla kuvan yläreuna (tornien huiput näkyviin, alaosa rajautuu).</summary>
         const float LinnaVaakaAlku = 0.06f;
         readonly Latauskuva linnaKuva;
@@ -481,8 +487,10 @@ namespace Matkakirja.Natiivi
             {
                 new Latauskuva.Kerros { Kuva = linnaTekstuurit[1], Paikka = new Rect(0, 0, 1, 1), Kaanto = new Vector2(0.5f, koli.y - 0.03f),
                     Liike = new Matkakirja.Linssit.LatausLiike.Profiili { KulmaAste = 0.5, NousuPt = 3, JaksoS = 8, Vaihe = 1.3 } },
+                // Vene vedessä (PT 20.3x, omistajan kuva: "liimattu"): upotus, peilikuva ja kosketusvarjo (Latauskuva.Vesi).
                 new Latauskuva.Kerros { Kuva = linnaTekstuurit[2], Paikka = new Rect(0, 0, 1, 1), Kaanto = koli,
-                    Liike = new Matkakirja.Linssit.LatausLiike.Profiili { KulmaAste = 0.6, NousuPt = 2.5, JaksoS = 7.5 } },
+                    Liike = new Matkakirja.Linssit.LatausLiike.Profiili { KulmaAste = 0.6, NousuPt = 2.5, JaksoS = 7.5 },
+                    Vesi = new Latauskuva.Vesi { Vene = LinnaVene[r] } },
             });
             SovitaLinnaKuva(r, nimiruutu.worldBound.size);
             // Teksti ja palkki kuvan tummaan alaosaan (kuten pallon latauskuvassa).
@@ -573,7 +581,14 @@ namespace Matkakirja.Natiivi
                 nimiruutu.RemoveFromClassList("mk-astroavaus--haipyy");
                 nimiruutu.style.opacity = 1f;
                 nimiruutu.style.display = DisplayStyle.Flex;
-                if (OnOlavinlinna(nimi)) AsetaLinnaKuva();
+                if (OnOlavinlinna(nimi))
+                {
+                    AsetaLinnaKuva();
+                    // LATAUSMUSIIKKI (omistaja 10.10.2026: "olavin linnassa voi soittaa sen lopetusmusiikin toistaiseksi"): pelin
+                    // lopetusmusiikki (SeikkailuLoppumusiikki.Url) latausruudun ajan; vain latauskuvallinen linna saa musiikin. Taso
+                    // sama kuin loppumusiikilla linnassa (linnan mikserin musiikki × sen oma kerroin).
+                    Aanisoitin.Latausmusiikki(SeikkailuLoppumusiikki.Url, SeikkailuAanet.Konteksti, SeikkailuLoppumusiikki.Id);
+                }
             }
             if (odotus)
             {
@@ -591,6 +606,8 @@ namespace Matkakirja.Natiivi
             {
                 nimiruutuAuki = false;
                 if (latauspalkki.Nakyy) latauspalkki.Arvo = 1f;   // valmis: täyttö loppuun nimiruudun häipyessä
+                // Linna aukesi → ristihäivytys linnan omiin ääniin; linssi suljettu kesken tai latausvirhe → nopea häivytys.
+                Aanisoitin.LatausmusiikkiOhi(DioraamaSovitin.Linssi != null && DioraamaSovitin.LatausVirhe == null);
                 Debug.Log($"MATKAKIRJA linssit: nimiruutu: häivytys {Time.unscaledTime - nimiruutuAlku:F1} s avauksesta");
                 nimiruutu.AddToClassList("mk-astroavaus--haipyy");
                 nimiruutu.style.opacity = 0f;
@@ -652,6 +669,11 @@ namespace Matkakirja.Natiivi
                 = lappuKerros.style.visibility = valikonAikana;
             // Linnan historia (Siirtoseppä, kuva-arkki 9.10. virhe 3): ei Pulua eikä huonekorttia historian aikana (ohjaajan suunnitelma).
             if (Matkakirja.Natiivi.SeikkailuHistoria.Kaynnissa) pulu.style.visibility = puluAlue.style.visibility = lauta.style.visibility = Visibility.Hidden;
+            // Pelattava pala (Raamattu: pelissä ei Pulun reunakuvaa; omistajan iPad TF 179: minipulu tapin päällä laiturilla ja
+            // soutukohtauksessa): minipulu ja sen napautusalue piiloon pelaajan ja veneen ajaksi. Läpipeluu 10.10. yö (tekstivahti
+            // "Kuuntele"): myös infotaulun Kuuntele-nappi, joka ei ole pelin käyttöliittymää (huoneen kuunnelma jatkuu äänenä).
+            if (SeikkailuPelaaja.Aktiivinen != null || SeikkailuVene.Aktiivinen != null)
+                pulu.style.visibility = puluAlue.style.visibility = kuunteleNappi.style.visibility = Visibility.Hidden;
             var linssi = DioraamaSovitin.Linssi;
             var rakennus = linssi?.Rakennus;
             // Kehittäjän Kuori-nappi ×:n alle oikeaan reunaan (katselmus 1.1 (78): kiinteä top 110 osui × -nappiin).

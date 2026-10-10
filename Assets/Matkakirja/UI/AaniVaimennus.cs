@@ -2,7 +2,8 @@
 // kaikki Unityn äänet (kartan äänet, pallon äänimaisema, tuuli, kori) pehmeästi hiljaisiksi kuuntelijan tasolla
 // (AudioListener.volume; natiivissa ei ole AudioMixeriä, joten tämä on yhteinen "mikseri" kaikille soittajille) ja takaisin, kun
 // latauskuva poistuu ja kierros alkaa. Käyrä ja perustaso Ydin AaniHaivytys. Natiivit moottorit (puhekanava, radio) eivät kulje
-// kuuntelijan kautta, eivätkä ne soi latauksen aikana.
+// kuuntelijan kautta, eivätkä ne soi latauksen aikana. Poikkeus: latausmusiikki (omistaja 10.10.2026, Aanisoitin Lataus-kanava)
+// soi vaimennuksen ohi ja kertoo tasonsa kuuntelijan perustasolla (Perustaso).
 using Matkakirja.Linssit;
 using UnityEngine;
 
@@ -14,6 +15,12 @@ namespace Matkakirja.Natiivi
         static bool kytketty;
 
         public static bool Paalla => haivytys.Vaimennettu;
+
+        /// <summary>
+        /// Kuuntelijan taso ilman latausruudun vaimennusta (vaimennuksen tai paluun aikana tallennettu perustaso, muuten nykyinen):
+        /// latausmusiikki (Aanisoitin, Lataus-kanava) ohittaa kuuntelijan tason ja kertoo itsensä tällä (omistaja 10.10.2026).
+        /// </summary>
+        public static float Perustaso => haivytys.Vaimennettu || haivytys.Kaynnissa ? (float)haivytys.Perus : AudioListener.volume;
 
         public static void Aseta(bool vaimenna, string syy)
         {

@@ -191,6 +191,27 @@ namespace Matkakirja.Linssit.Testit
             return l;
         }
 
+        [Testi] static void KoysiJatkuuSumuunJaHaipyy()
+        {
+            // Omistaja 10.10. 17.5x: köysi jatkuu maapisteen ohi samaan suuntaan alemmas ja häipyy sumuun ilman näkyvää päätä.
+            var j = LatausLiike.Jatke(0.51, 0.56, 0.34, 0.715, 0.80);
+            Oleta.Tosi(Math.Abs(j.Y - 0.80) < 1e-9 && j.X < 0.34, $"jatke {j}");
+            double kulma0 = Math.Atan2(0.715 - 0.56, 0.34 - 0.51), kulma1 = Math.Atan2(j.Y - 0.715, j.X - 0.34);
+            Oleta.Tosi(Math.Abs(kulma0 - kulma1) < 1e-9, "sama suunta kuin korista maahan");
+            Oleta.Tosi(LatausLiike.Jatke(0.51, 0.56, 0.34, 0.715, 0.70) == (0.34, 0.715), "maapiste jo alempana → ennallaan");
+            Oleta.Tosi(LatausLiike.Haivytys(0.60, 0.70, 0.80) == 1 && LatausLiike.Haivytys(0.80, 0.70, 0.80) == 0
+                       && LatausLiike.Haivytys(0.90, 0.70, 0.80) == 0, "täysi yllä, poissa alla");
+            double edellinen = 1;
+            for (double y = 0.70; y <= 0.80; y += 0.005)
+            {
+                double a = LatausLiike.Haivytys(y, 0.70, 0.80);
+                Oleta.Tosi(a <= edellinen + 1e-12, $"häipyy alaspäin y {y:F3}");
+                edellinen = a;
+            }
+            Oleta.Tosi(Math.Abs(LatausLiike.Haivytys(0.75, 0.70, 0.80) - 0.5) < 1e-9, "puolivälissä puoliksi");
+            Oleta.Tosi(LatausLiike.Haivytys(0.9, 0.8, 0.8) == 1, "ei häivytystä ilman väliä");
+        }
+
         [Testi] static void AnkkurikoysiRiippuuKetjukayrana()
         {
             // Maa (vasen alhaalla) → kori (oikea ylhäällä), y alas; köysi 5 % lepoetäisyyttä pidempi.
@@ -230,6 +251,26 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(r.X == 0 && Math.Abs(r.Y - 110) < 1e-9, $"5 % pituudesta alas: {r.Y}");
             var n = LatausLiike.Ohjauspiste(0, 0, 100, 0, -1);
             Oleta.Tosi(n.Y == 0, "negatiivinen riippuma = suora");
+        }
+        [Testi] static void VeneenHeijastusHaipyyJaAaltoilee()
+        {
+            // Olavinlinnan latauskuvan vene (PT 20.3x): heijastus täysi vesirajassa, häipyy alaspäin nollaan; aalto 0 vesirajassa, ≤ a.
+            Oleta.Tosi(Math.Abs(LatausLiike.HeijastusPeitto(0, 0.4) - 0.4) < 1e-9 && LatausLiike.HeijastusPeitto(1, 0.4) == 0, "päät");
+            double edellinen = 1;
+            for (double s = 0; s <= 1.0001; s += 0.05)
+            {
+                double q = LatausLiike.HeijastusPeitto(s, 0.4);
+                Oleta.Tosi(q <= edellinen + 1e-12 && q >= 0, $"laskee: {s:F2} → {q:F3}");
+                edellinen = q;
+            }
+            double maks = 0;
+            for (double t = 0; t < 5; t += 1.0 / 30)
+            {
+                Oleta.Tosi(LatausLiike.Aaltosiirto(0, t, 3) == 0, "vesirajassa ei siirtoa");
+                for (double s = 0; s <= 1; s += 0.1) maks = Math.Max(maks, Math.Abs(LatausLiike.Aaltosiirto(s, t, 3)));
+            }
+            Oleta.Tosi(maks <= 3 + 1e-9 && maks > 1, $"amplitudi {maks:F2}");
+            Oleta.Tosi(Math.Abs(LatausLiike.Aaltosiirto(0.5, 1.0, 3) - LatausLiike.Aaltosiirto(0.5, 1.0 + 1.0 / 30, 3)) < 0.5, "sileä 30 fps:llä");
         }
     }
 }
