@@ -37,6 +37,7 @@ const GENETIIVIT = {
   Alankomaat: 'Alankomaiden',
   Albania: 'Albanian',
   Algeria: 'Algerian',
+  Andorra: 'Andorran',
   Angola: 'Angolan',
   Arabiemiirikunnat: 'Arabiemiirikuntien',
   Argentiina: 'Argentiinan',
@@ -60,6 +61,10 @@ const GENETIIVIT = {
   'Etelä-Korea': 'Etelä-Korean',
   'Etelä-Sudan': 'Etelä-Sudanin',
   Etiopia: 'Etiopian',
+  Liechtenstein: 'Liechtensteinin',
+  Monaco: 'Monacon',
+  'San Marino': 'San Marinon',
+  Vatikaani: 'Vatikaanin',
   // Monikkonimi kuten Salomonsaaret: sääntö antaisi
   // "Falklandinsaaretin", joten oikea muoto on maa-kategoriat.js:n
   // poikkeustaulussa.

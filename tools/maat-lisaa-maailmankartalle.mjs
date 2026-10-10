@@ -95,6 +95,15 @@ const MAAT = {
   // 1:50M:ssä vain muutaman lautayksikön kokoinen, joten pienin rengas
   // ja harvennus kuten Hongkongilla ja Singaporella.
   MLT: ['Malta', 'Malta', 'Flag of Malta.svg', { minKoko: 0, sieto: 0.3 }],
+  // Euroopan minivaltiot (omistaja PT:n kautta 10.10.2026: "eurooppaan voisi
+  // ottaa ne minivaltiot mukaan ja tehdä niille kevyt sisältö"). Laudalla
+  // ne ovat 0,1–4 yksikön kokoisia, joten pienin rengas ja harvennus kuten
+  // Maltalla; muoto Natural Earthin 10m-aineistosta (NE_GEOJSON, _swe).
+  AND: ['Andorra', 'Andorra', 'Flag of Andorra.svg', { minKoko: 0, sieto: 0.1 }],
+  LIE: ['Liechtenstein', 'Liechtenstein', 'Flag of Liechtenstein.svg', { minKoko: 0, sieto: 0.1 }],
+  MCO: ['Monaco', 'Monaco', 'Flag of Monaco.svg', { minKoko: 0, sieto: 0.05 }],
+  SMR: ['San Marino', 'San Marino', 'Flag of San Marino.svg', { minKoko: 0, sieto: 0.1 }],
+  VAT: ['Vatikaani', 'Vatikaanivaltio', 'Flag of Vatican City (2023–present).svg', { minKoko: 0, sieto: 0.05 }],
   // Aasia ja Atlantti: pienet mutta kaupungilliset — pilleri ja
   // Tutki-palsta tarvitsevat muodon, pieni rengas riittää.
   HKG: ['Hongkong', 'Hongkong', 'Flag of Hong Kong.svg', { minKoko: 0, sieto: 0.3 }],
@@ -146,6 +155,7 @@ const ANKKURIT = [
   ['UZB', ['KGZ', 'TJK', 'TKM']],
   ['DNK', ['ALB', 'BEL', 'BLR', 'LUX', 'MDA', 'MKD', 'MNE', 'SRB', 'SVK', 'SVN']],
   ['MKD', ['MLT']],
+  ['MLT', ['AND', 'LIE', 'MCO', 'SMR', 'VAT']],
   ['MDG', ['SHN']],
   ['CHN', ['HKG']],
   ['MYS', ['SGP']],

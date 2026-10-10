@@ -37,10 +37,11 @@
   "1.56": "f05f6f25a4435881",
   "1.57": "1e8ff1cd389b1f53",
   "1.58": "aee33ab3c2cba5aa",
-  "1.59": "5e17497c5f6372ab"
+  "1.59": "5e17497c5f6372ab",
+  "1.60": "4a8ca22618c14a91"
  },
  "uusin": {
-  "skeemaversio": "1.59",
+  "skeemaversio": "1.60",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -484,7 +485,9 @@
     "maalehti",
     "nimi",
     "numeroina",
+    "paakaupunki",
     "paikallinen",
+    "perustiedot",
     "radio",
     "rajat",
     "tiedot",
@@ -547,6 +550,25 @@
     "nosto",
     "teksti",
     "wiki"
+   ],
+   "paakaupungit": [
+    "asema",
+    "asukkaat",
+    "asukkaatLahde",
+    "asukkaatVuosi",
+    "id",
+    "kuvaus",
+    "lat",
+    "lauta",
+    "lon",
+    "maa",
+    "maa2",
+    "nimi",
+    "nimiAlkukieli",
+    "pysakki",
+    "tarkeys",
+    "tunnusrakennukset",
+    "wikidata"
    ],
    "paikallisaarteet": [
     "data",

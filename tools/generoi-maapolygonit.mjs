@@ -209,6 +209,18 @@ const TARKKUUS = 10;
  */
 const NIMIVASTAAVUUS = { SDS: 'SSD' };
 
+/*
+ * MINIVALTIOT (omistaja PT:n kautta 10.10.2026: "eurooppaan voisi ottaa ne
+ * minivaltiot mukaan ja tehdä niille kevyt sisältö"). Vatikaani on laudalla
+ * noin 0,1 ja Monaco 0,6 yksikköä — MIN_KOKO ja säleraja pudottaisivat ne,
+ * ja maa ilman rengasta jäisi tummentamatta ja kaatuisi testiin. Niille
+ * pienempi toleranssi, ei kokokarsintaa, ja jos talletustarkkuus litistää
+ * muodon säleeksi, tilalle pienin näkyvä vinoneliö (0,3 yksikön säde, noin
+ * 1 km) maan keskipisteeseen: raja on silloin merkki, ei mittaus.
+ */
+const MINIVALTIOT = new Set(['AND', 'LIE', 'MCO', 'SMR', 'VAT']);
+const MINI_TOLERANSSI = 0.03;
+
 /* ------------------------------------------------------- projektion todennus */
 
 /*
@@ -674,11 +686,18 @@ for (const iso of pelimaat) {
     ompeleenKarkia += ommel.lisatyt;
     const kehä = ommel.rengas;
     const laudalla = puraRengas(kehä, projektio);
-    if (koko(laudalla) < MIN_KOKO) { pudonneet++; continue; }
-    const kevyt = yksinkertaista(laudalla, TOLERANSSI)
+    const mini = MINIVALTIOT.has(iso);
+    if (!mini && koko(laudalla) < MIN_KOKO) { pudonneet++; continue; }
+    let kevyt = yksinkertaista(laudalla, mini ? MINI_TOLERANSSI : TOLERANSSI)
       // Talletustarkkuuteen JO TÄSSÄ: kiertosuunta ja pinta-ala
       // katsotaan samoista luvuista, jotka tiedostoon menevät.
       .map(([x, y]) => [Math.round(x * TARKKUUS) / TARKKUUS, Math.round(y * TARKKUUS) / TARKKUUS]);
+    if (mini && (kevyt.length < 4 || Math.abs(pinta(kevyt)) < 0.05)) {
+      const kx = laudalla.reduce((t, [x]) => t + x, 0) / laudalla.length;
+      const ky = laudalla.reduce((t, [, y]) => t + y, 0) / laudalla.length;
+      const r = (v) => Math.round(v * TARKKUUS) / TARKKUUS;
+      kevyt = [[r(kx), r(ky - 0.3)], [r(kx + 0.3), r(ky)], [r(kx), r(ky + 0.3)], [r(kx - 0.3), r(ky)], [r(kx), r(ky - 0.3)]];
+    }
     // Kolmiota pienempi jäännös ei ole muoto vaan viiva.
     if (kevyt.length < 4) { pudonneet++; continue; }
     /*
@@ -687,7 +706,7 @@ for (const iso of pelimaat) {
      * kiertosuunta on pyöristyksen arpaa (mitattu 21.9.2026: USA, 6
      * kärkeä, ala −0,09 yksikköä²). Se putoaa kuten sirpaleet.
      */
-    if (Math.abs(pinta(kevyt)) < 1) { pudonneet++; continue; }
+    if (!mini && Math.abs(pinta(kevyt)) < 1) { pudonneet++; continue; }
     renkaat.push(koodaa(suunnista(kevyt)));
     renkaita++;
     pisteita += kevyt.length;

@@ -196,6 +196,7 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     kuvakysymykset: P.cities.filter((c) => !ns('js/sisaltotaulut.js').EI_VALOKUVAKYSYMYKSEEN.has(c.id)
       && (ns('js/sisaltotaulut.js').KAIKKI_VALOKUVAT[c.id]?.uusi?.tiedosto || ns('js/sisaltotaulut.js').KAIKKI_VALOKUVAT[c.id]?.tiedosto)).length,
     lippumaat: Object.values(P.map.countryShapes).filter((m) => m.lippu && m.nimi).length,
+    paakaupungit: ns('paakaupungit.js').PAAKAUPUNKIPISTEET.length, // skeema 1.60
     pulmaaineisto: 7,
     maastonimet: ['vuoret', 'jarvet', 'joet'].reduce((a, l) => a + ns('maailmankartta-nimet.js').MAAILMANKARTAN_NIMET[l].length, 0),
     karttavalot: kokoelma('karttavalot').alkiot.length,
