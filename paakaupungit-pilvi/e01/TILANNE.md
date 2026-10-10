@@ -1,6 +1,6 @@
 # TILANNE e01 (päivitetty 2026-10-10 19:54:36 UTC)
 
-Alku: 2026-10-10 19:32 UTC. Agenttien tokenit/kesto: kirjataan kahden ensimmäisen kaupungin jälkeen.
+Alku: 2026-10-10 19:32 UTC. Kulutus 21:52 UTC mennessä: agentit yhteensä noin 1,91 milj. tokenia (A–E, Agent-työkalun ilmoittamat), kesto tähän asti 140 min.
 Vaihe 0 tehty (konteksti, säädata Open-Meteo OK, malli).
 
 | id | A | B | C | D | E | F | huomio |
@@ -11,5 +11,5 @@ Vaihe 0 tehty (konteksti, säädata Open-Meteo OK, malli).
 | skopje | ✓ | | | | | | |
 | podgorica | ✓ | | | | | | |
 | chisinau | ✓ | | | | | | kysymykset ja yksi kohde ohuita |
-| minsk | | | | | | | |
+| minsk | ✓ | | | | | | kohde 3 ohut (5 faktaa), Gorki 7 |
 | bratislava | | | | | | | |
