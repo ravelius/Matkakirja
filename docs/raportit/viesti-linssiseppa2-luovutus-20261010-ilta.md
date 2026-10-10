@@ -10,7 +10,7 @@ skriptit `proto-3d/_tyo/linssiseppa2/skriptit-20261009/`, arkit `docs/raportit/k
    Fresnel, mip; testit MuseoLattiaTestit, L 1326/1326) + Unity/MuseoLattiaHeijastus.cs (kuutio 128² ARGBHalf, RenderToCubemap
    osaan tultaessa 0,6 s ja 4 s, sali-GLB:n vaihtuessa uudelleen; QA `linssi museo heijastus 0|1`) + MuseoValaistu.shader
    (_Heijastus > 0 ja n.y > 0,7: laatikkoprojektio, mip = karheus · 1,35, Fresnel F0 0,04) + MuseoRakennus (_Heijastus:
-   marmori 1, parketti 0,45) + MuseoSovitin (kytkentä). unity 0. Käännös **käynnistetty 17.5x** (proto-kaanna.sh 3de6981d1,
+   marmori 1, parketti 0,45) + MuseoSovitin (kytkentä). unity 0. Käännös **käynnissä irrotettuna 18.0x** (setsid PID 42071, loki proto-3d/lokit/linssiseppa2-kaanna-museo-lattia.log; proto-kaanna.sh 3de6981d1,
    PROTO_APP_KOPIO=lokit/linssiseppa2-app-museo-lattia; tulos lokit/kaannospalvelu/*3de6981d1.log) — tarkista KÄÄNNETTY ja ilmoita
    Julkaisijalle "lukko vapaa". Simu jonossa ~18.25 (Julkaisija). Ajo: `_tyo/linssiseppa2/museo-lattia/vuoro-lattia.zsh <SHA> [iPhone-UDID]`
    (LS1:n todistusajo, skenaariot sk-lattia-ipad/-puhelin: aula marmori, Kunniagalleria parketti, Yövartio; heijastus 0 | 1).
