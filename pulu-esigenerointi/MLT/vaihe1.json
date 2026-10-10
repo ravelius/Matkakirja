@@ -1455,9 +1455,11 @@
   "kohde": "kohde:hahmotelma-blue-grotto",
   "kysymys": "Mikä asumaton saari näkyy luolien edustalla?",
   "uusi": false,
-  "vastaus": "No niin, tän minä näen katolta asti. Luolien edustalla merenselällä sijaitsee asumaton [[Filfla]]-saari, joka on nykyään lintujensuojelualue. Se kuuluu Maltan saariryhmään, ja sen läheisyys antaa luolien rannikolle sen tunnusomaisen maisemansa. Saarelle ei siis asu ketään, mutta linnuille se on tärkeä paikka. Ihan pienen lintuasian minä tästä saan kyllä sanottua.",
+  "vastaus": "No niin, tän minä näen katolta asti. Luolien edustalla merenselällä sijaitsee asumaton [[Filfla]]-saari, joka on nykyään [[lintujensuojelualue]]. Se kuuluu [[Maltan]] saariryhmään, ja sen läheisyys antaa luolien rannikolle sen tunnusomaisen maisemansa. Saarelle ei siis asu ketään, mutta linnuille se on tärkeä paikka. Ihan pienen lintuasian minä tästä saan kyllä sanottua.",
   "linkit": [
-   "Filfla"
+   "Filfla",
+   "lintujensuojelualue",
+   "Maltan"
   ],
   "jatkot": [
    "Mihin Filfla-saarta on aiemmin käytetty?",
@@ -1468,8 +1470,11 @@
   "kohde": "kohde:hahmotelma-blue-grotto",
   "kysymys": "Miksi meriluolien vesi näyttää niin siniseltä?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Meriveden sininen väri johtuu siitä, että vesi imee valon punaisia ja keltaisia aallonpituuksia voimakkaammin kuin sinisiä, jolloin sinistä valoa heijastuu ja siroaa takaisin. Luolissa vaikutelmaa voimistaa se, että päivänvalo tulee luolaan veden alta ja heijastuu vaaleasta merenpohjasta ja seinistä. Sävy vaihtelee siksi valon, vuorokaudenajan ja veden syvyyden mukaan. En ole varma, miten suuri osuus kullakin tekijällä juuri Maltan luolissa on. Kyllä kyyhky tämänkin osaa, vaikka lentää mieluummin kuin uipi.",
-  "linkit": [],
+  "vastaus": "Hetkinen ny. Meriveden sininen väri johtuu siitä, että vesi imee valon punaisia ja keltaisia aallonpituuksia voimakkaammin kuin sinisiä, jolloin sinistä valoa heijastuu ja siroaa takaisin. Maltan [[meriluolissa]] vaikutelmaa voimistaa se, että päivänvalo tulee luolaan veden alta ja heijastuu vaaleasta merenpohjasta ja seinistä. Sävy vaihtelee siksi valon, vuorokaudenajan ja veden syvyyden mukaan. En ole varma, miten suuri osuus kullakin tekijällä juuri [[Välimeren]] luolissa on. Kyllä kyyhky tämänkin osaa, vaikka lentää mieluummin kuin uipi.",
+  "linkit": [
+   "meriluolissa",
+   "Välimeren"
+  ],
   "jatkot": [
    "Mikä saa meriveden näyttämään joskus vihreältä?",
    "Miksi Välimeren vesi on usein niin kirkasta?"
@@ -1479,8 +1484,12 @@
   "kohde": "kohde:hahmotelma-blue-grotto",
   "kysymys": "Mihin Filfla-saarta on aiemmin käytetty?",
   "uusi": true,
-  "vastaus": "Ai se. Filfla-saarta on käytetty ammuntaharjoitusten kohteena, lähteiden mukaan 1970-luvulle asti, minkä jälkeen se on suojeltu. Nykyään saari on asumaton lintujensuojelualue, eikä sinne ole vapaata pääsyä. Tarkkoja vuosia en ole varma kertomaan, joten ne kannattaa tarkistaa Maltan luonnonsuojeluviranomaisen tiedoista. Parempi tämäkin käyttö kuin ei mitään.",
-  "linkit": [],
+  "vastaus": "Ai se. [[Filfla]]-saarta on käytetty ammuntaharjoitusten kohteena, lähteiden mukaan 1970-luvulle asti, minkä jälkeen se on suojeltu. Nykyään saari on asumaton [[lintujensuojelualue]] [[Maltalla]], eikä sinne ole vapaata pääsyä. Tarkkoja vuosia en ole varma kertomaan, joten ne kannattaa tarkistaa Maltan luonnonsuojeluviranomaisen tiedoista. Parempi tämäkin käyttö kuin ei mitään.",
+  "linkit": [
+   "Filfla",
+   "lintujensuojelualue",
+   "Maltalla"
+  ],
   "jatkot": [
    "Miksi saaria suojellaan linnuille?",
    "Mitä muita suojelualueita Maltalla on?"
@@ -1490,8 +1499,10 @@
   "kohde": "kohde:hahmotelma-blue-grotto",
   "kysymys": "Miten Sinisiin luoliin tavallisesti pääsee tutustumaan?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Sinisiin luoliin tutustutaan yleensä Wied iż-Żurrieqin satamasta lähtevillä venekierroksilla, koska luolat ovat merenpuolella ja niiden sisään pääsee parhaiten vesiteitse. Kierrosten toteutuminen riippuu säästä ja merenkäynnistä, joten tarkka aikataulu kannattaa tarkistaa paikan päällä. Satamaa ympäröi Qrendin kylän alue, ja luolien edustalla näkyy [[Filfla]]. Siitä on lyhyt matka luolille, ja etukäteen kannattaa varautua auringonvaloon.",
+  "vastaus": "Joo, tän minä tiedän. [[Sinisiin]] luoliin tutustutaan yleensä Wied iż-Żurrieqin satamasta lähtevillä venekierroksilla, koska luolat ovat merenpuolella ja niiden sisään pääsee parhaiten vesiteitse. Kierrosten toteutuminen riippuu säästä ja merenkäynnistä, joten tarkka aikataulu kannattaa tarkistaa paikan päällä. Satamaa ympäröi [[Qrendin]] kylän alue, ja luolien edustalla näkyy [[Filfla]]. Siitä on lyhyt matka luolille, ja etukäteen kannattaa varautua auringonvaloon.",
   "linkit": [
+   "Sinisiin",
+   "Qrendin",
    "Filfla"
   ],
   "jatkot": [
@@ -1517,9 +1528,10 @@
   "kohde": "kohde:hahmotelma-victoria-cittadella",
   "kysymys": "Minä vuonna kaupunki sai nimen Victoria?",
   "uusi": false,
-  "vastaus": "Tuota niin. Kaupunki sai nimen [[Victoria]] vuonna 1887, kun Ison-Britannian hallitus antoi sen kuningatar Victorian kultaisten kruunajaisten kunniaksi. Sitä ennen kaupunki tunnettiin yksinkertaisesti nimellä Rabat. Moni gozolainen kutsuu sitä yhä vanhalla nimellään, ja Cittadella on kaupungin linnoitettu ydin. Nimiä on näköjään yhtä monta kuin kyyhkyn sukuhaaraa.",
+  "vastaus": "Tuota niin. Kaupunki sai nimen [[Victoria]] vuonna 1887, kun [[Ison-Britannian]] hallitus antoi sen kuningatar Victorian kultaisten kruunajaisten kunniaksi. Sitä ennen kaupunki tunnettiin yksinkertaisesti nimellä Rabat. Moni gozolainen kutsuu sitä yhä vanhalla nimellään, ja Cittadella on kaupungin linnoitettu ydin. Nimiä on näköjään yhtä monta kuin kyyhkyn sukuhaaraa.",
   "linkit": [
-   "Victoria"
+   "Victoria",
+   "Ison-Britannian"
   ],
   "jatkot": [
    "Miksi gozolaiset käyttävät yhä nimeä Rabat?",
@@ -1530,8 +1542,11 @@
   "kohde": "kohde:hahmotelma-victoria-cittadella",
   "kysymys": "Miksi Cittadellaa kutsutaan myös Castelloksi?",
   "uusi": true,
-  "vastaus": "Sepä sattui. Castello on italiaa ja tarkoittaa linnaa, ja nimi viittaa siihen, että Cittadella on keskiajalla linnaksi muutettu linnoitettu kaupunginosa. Akropoliksesta tehtiin linna, joka toimi turvapaikkana saaren väestölle, ja sen ulkopuolelle kasvoi 1400-luvulla esikaupunki. Nimi kertoo siis paikan tehtävästä eikä muusta, ja maltaksi sen vastine on hieman erilainen. Ei kyl linna ole kyyhkyn vahvin alue.",
-  "linkit": [],
+  "vastaus": "Sepä sattui. [[Castello]] on italiaa ja tarkoittaa linnaa, ja nimi viittaa siihen, että Cittadella on keskiajalla linnaksi muutettu linnoitettu kaupunginosa [[Gozolla]]. Akropoliksesta tehtiin linna, joka toimi turvapaikkana saaren väestölle, ja sen ulkopuolelle kasvoi 1400-luvulla esikaupunki. Nimi kertoo siis paikan tehtävästä eikä muusta, ja maltaksi sen vastine on hieman erilainen. Ei kyl linna ole kyyhkyn vahvin alue.",
+  "linkit": [
+   "Castello",
+   "Gozolla"
+  ],
   "jatkot": [
    "Miten keskiaikaiset linnat toimivat väestön turvapaikkoina?",
    "Mikä on akropolis?"
@@ -1541,8 +1556,10 @@
   "kohde": "kohde:hahmotelma-victoria-cittadella",
   "kysymys": "Mikä kaupunki Gaulos oli?",
   "uusi": true,
-  "vastaus": "Kas vaan. Gaulos oli puunilais-roomalainen kaupunki, jonka akropolis sijaitsi todennäköisesti [[Cittadellan]] paikalla. Alueella on asutusta pronssikaudesta lähtien, ja nimi tunnetaan myös Gozon antiikin nimenä. Keskiajalla akropoliksesta tehtiin linna. Kaupungin tarkasta laajuudesta ei ole varmuutta, joten sitä ei kannata väittää tarkasti. Antiikin Gozo tuntuu minusta kaukaiselta.",
+  "vastaus": "Kas vaan. [[Gaulos]] oli [[puunilais-roomalainen]] kaupunki, jonka akropolis sijaitsi todennäköisesti [[Cittadellan]] paikalla. Alueella on asutusta pronssikaudesta lähtien, ja nimi tunnetaan myös Gozon antiikin nimenä. Keskiajalla akropoliksesta tehtiin linna. Kaupungin tarkasta laajuudesta ei ole varmuutta, joten sitä ei kannata väittää tarkasti. Antiikin Gozo tuntuu minusta kaukaiselta.",
   "linkit": [
+   "Gaulos",
+   "puunilais-roomalainen",
    "Cittadellan"
   ],
   "jatkot": [
@@ -1554,8 +1571,9 @@
   "kohde": "kohde:hahmotelma-victoria-cittadella",
   "kysymys": "Miksi Cittadellan eteläiset muurit rakennettiin uusiksi?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Linnoitus oli 1500-luvulle tultaessa vanhentunut, ja osmanit valtasivat ja ryöstivät sen vuonna 1551. Eteläiset muurit rakennettiin uudelleen ruutilinnoitukseksi vuosina 1599–1622, jotta ne kestäisivät ruutiaseiden aikakauden. Syy on johdettavissa linnoituksen vanhentuneisuudesta, vaikka suoraa ilmoitusta päätöksen perusteista minulla ei ole. [[Cittadella]] sai siis uuden asun, vaikka sen ydin oli vanha. Rakentajat olivat aikansa insinöörejä, ei kyyhkyjä.",
+  "vastaus": "Annas ku mietin. Linnoitus oli 1500-luvulle tultaessa vanhentunut, ja [[osmanit]] valtasivat ja ryöstivät sen vuonna 1551. Eteläiset muurit rakennettiin uudelleen ruutilinnoitukseksi vuosina 1599–1622, jotta ne kestäisivät ruutiaseiden aikakauden. Syy on johdettavissa linnoituksen vanhentuneisuudesta, vaikka suoraa ilmoitusta päätöksen perusteista minulla ei ole. [[Cittadella]] sai siis uuden asun, vaikka sen ydin oli vanha. Rakentajat olivat aikansa insinöörejä, ei kyyhkyjä.",
   "linkit": [
+   "osmanit",
    "Cittadella"
   ],
   "jatkot": [
@@ -1581,8 +1599,10 @@
   "kohde": "kohde:hahmotelma-wied-il-ghasri",
   "kysymys": "Mitä laakson reunalla uskotaan sijainneen?",
   "uusi": false,
-  "vastaus": "Ai tota. Laakson reunalla, vedenalaisen luolan vieressä, uskotaan sijainneen Maltan perinteisiä suolapatoja. Asia on esitetty uskomuksena, joten varmaa tietoa sijainnista ei ole. Wied il-Għasri on [[Gozon]] pohjoisrannikolla, ja nykyään syrjäinen ranta on suosittu sukeltajien ja uimareiden keskuudessa. Kyyhky ei kyl suolaa tarvitse.",
+  "vastaus": "Ai tota. Laakson reunalla, vedenalaisen luolan vieressä, uskotaan sijainneen [[Maltan]] perinteisiä [[suolapatoja]]. Asia on esitetty uskomuksena, joten varmaa tietoa sijainnista ei ole. Wied il-Għasri on [[Gozon]] pohjoisrannikolla, ja nykyään syrjäinen ranta on suosittu sukeltajien ja uimareiden keskuudessa. Kyyhky ei kyl suolaa tarvitse.",
   "linkit": [
+   "Maltan",
+   "suolapatoja",
    "Gozon"
   ],
   "jatkot": [
@@ -1594,8 +1614,9 @@
   "kohde": "kohde:hahmotelma-wied-il-ghasri",
   "kysymys": "Millainen ranta Wied il-Għasrissa on?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Wied il-Għasrin ranta on rauhallinen ja sijaitsee kapean merikurun pohjalla noin 300 metrin päässä merestä. Merelle pääsee vain kapean, jyrkkäseinäisen sisäänkäynnin kautta, joten ranta on suojassa. Se on [[Gozon]] pohjoisrannikolla ja nykyään suosittu sukeltajien ja uimareiden keskuudessa. Rauhaa löytyy, kunhan muistaa kantaa omat eväät.",
+  "vastaus": "Selvä juttu. [[Wied il-Għasrin]] ranta on rauhallinen ja sijaitsee kapean merikurun pohjalla noin 300 metrin päässä merestä. Merelle pääsee vain kapean, jyrkkäseinäisen sisäänkäynnin kautta, joten ranta on suojassa. Se on [[Gozon]] pohjoisrannikolla ja nykyään suosittu sukeltajien ja uimareiden keskuudessa. Rauhaa löytyy, kunhan muistaa kantaa omat eväät.",
   "linkit": [
+   "Wied il-Għasrin",
    "Gozon"
   ],
   "jatkot": [
@@ -1607,8 +1628,9 @@
   "kohde": "kohde:hahmotelma-wied-il-ghasri",
   "kysymys": "Mikä on merikuru ja miten sellainen syntyy?",
   "uusi": true,
-  "vastaus": "No jopas, hyvä kysymys. Merikuru on kapea, jyrkkäseinäinen laakso tai halkeama, jonka kautta meri tunkeutuu maahan. Sellainen voi syntyä esimerkiksi niin, että veden syövyttämä laakso jää meren alle merenpinnan noustessa. Maltaksi laaksoa tarkoittaa sana wied, mikä näkyy esimerkiksi nimessä [[Wied il-Għasri]]. Tarkkaa syntytapaa kullekin kurulle en ole varma sanomaan. Kyyhkynä pidän kuruista, koska niistä näkee hyvin kauas.",
+  "vastaus": "No jopas, hyvä kysymys. [[Merikuru]] on kapea, jyrkkäseinäinen laakso tai halkeama, jonka kautta meri tunkeutuu maahan. Sellainen voi syntyä esimerkiksi niin, että veden syövyttämä laakso jää meren alle merenpinnan noustessa. Maltaksi laaksoa tarkoittaa sana wied, mikä näkyy esimerkiksi nimessä [[Wied il-Għasri]]. Tarkkaa syntytapaa kullekin kurulle en ole varma sanomaan. Kyyhkynä pidän kuruista, koska niistä näkee hyvin kauas.",
   "linkit": [
+   "Merikuru",
    "Wied il-Għasri"
   ],
   "jatkot": [
@@ -1620,8 +1642,11 @@
   "kohde": "kohde:hahmotelma-wied-il-ghasri",
   "kysymys": "Miten suolaa saadaan suolapadoissa merivedestä?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Suolapadoissa merivesi johdetaan matalaan altaaseen, jossa aurinko ja tuuli haihduttavat veden. Kun vesi haihtuu, jäljelle jää suola, joka kerätään talteen. Maltalla perinteiset suolapadot kaiverrettiin yleensä kallioon rannikon tuntumassa, ja Wied il-Għasrin reunalla uskotaan sijainneen sellaisia. Kuuma ja tuulinen sää nopeuttaa haihtumista.\n\nMinusta suola on kyllä kummallinen vaiva: meri antaa sitä ilmaiseksi, ja silti ihmiset kaivoivat sen kallioon. Pullan kanssa en suolaa halua, mutta Maltalla on varmasti oma suolainen leivonnaisensa, en vaan tiedä sen nimeä.",
-  "linkit": [],
+  "vastaus": "Odotas vähän. [[Suolapadoissa]] merivesi johdetaan matalaan altaaseen, jossa aurinko ja tuuli haihduttavat veden. Kun vesi haihtuu, jäljelle jää suola, joka kerätään talteen. [[Maltalla]] perinteiset suolapadot kaiverrettiin yleensä kallioon rannikon tuntumassa, ja Wied il-Għasrin reunalla uskotaan sijainneen sellaisia. Kuuma ja tuulinen sää nopeuttaa haihtumista.\n\nMinusta suola on kyllä kummallinen vaiva: meri antaa sitä ilmaiseksi, ja silti ihmiset kaivoivat sen kallioon. Pullan kanssa en suolaa halua, mutta Maltalla on varmasti oma suolainen leivonnaisensa, en vaan tiedä sen nimeä.",
+  "linkit": [
+   "Suolapadoissa",
+   "Maltalla"
+  ],
   "jatkot": [
    "Miksi suola oli ennen niin arvokasta?",
    "Miten suolaa käytettiin ruoan säilyttämiseen?"
@@ -1631,8 +1656,9 @@
   "kohde": "kohde:hahmotelma-fungus-rock",
   "kysymys": "Minä vuonna suurmestari Pinto julisti kallion kielletyksi?",
   "uusi": false,
-  "vastaus": "Hyvä kysymys tuo. Suurmestari Pinto julisti kallion kielletyksi alueeksi vuonna 1746. Kyseessä on [[Fungus Rock]], 60 metriä korkea kalkkikivisaareke Dwejran laguunin suulla Gozolla, ja syynä oli sen kasvi, jota ritarit pitivät arvokkaana. Luvattomalle kiipeäjälle luvattiin kolmen vuoden rangaistus soutuorjana. Tiukka tyyppi se Pinto.",
+  "vastaus": "Hyvä kysymys tuo. Suurmestari [[Pinto]] julisti kallion kielletyksi alueeksi vuonna 1746. Kyseessä on [[Fungus Rock]], 60 metriä korkea kalkkikivisaareke Dwejran laguunin suulla Gozolla, ja syynä oli sen kasvi, jota ritarit pitivät arvokkaana. Luvattomalle kiipeäjälle luvattiin kolmen vuoden rangaistus soutuorjana. Tiukka tyyppi se Pinto.",
   "linkit": [
+   "Pinto",
    "Fungus Rock"
   ],
   "jatkot": [
@@ -1644,8 +1670,10 @@
   "kohde": "kohde:hahmotelma-fungus-rock",
   "kysymys": "Mitä rangaistusta luvattomalle kiipeäjälle uhattiin?",
   "uusi": false,
-  "vastaus": "Katotaas. Luvattomalle kalliolle kiipeäjälle luvattiin kolmen vuoden rangaistus soutuorjana. Suurmestari Pinto oli julistanut [[Fungus Rockin]] kielletyksi alueeksi vuonna 1746, koska kalliolta löytyi arvokkaana pidetty kasvi. Rangaistus oli ankara, ja se osoittaa, kuinka tärkeänä kasvia pidettiin. Eikä meikäläinen kyl ala soutaa.",
+  "vastaus": "Katotaas. Luvattomalle kalliolle kiipeäjälle luvattiin kolmen vuoden rangaistus [[soutuorjana]]. Suurmestari [[Pinto]] oli julistanut [[Fungus Rockin]] kielletyksi alueeksi vuonna 1746, koska kalliolta löytyi arvokkaana pidetty kasvi. Rangaistus oli ankara, ja se osoittaa, kuinka tärkeänä kasvia pidettiin. Eikä meikäläinen kyl ala soutaa.",
   "linkit": [
+   "soutuorjana",
+   "Pinto",
    "Fungus Rockin"
   ],
   "jatkot": [
@@ -1657,9 +1685,10 @@
   "kohde": "kohde:hahmotelma-fungus-rock",
   "kysymys": "Mikä kasvi \"maltalainen sieni\" oikeasti on?",
   "uusi": true,
-  "vastaus": "Nyt muistan: se ei ole sieni lainkaan. Niin kutsuttu maltalainen sieni on loisikasvi, tieteelliseltä nimeltään Cynomorium coccineum, jota kasvoi [[Fungus Rockin]] kalliolla. Johanniittaritarikunnan ritarit pitivät sitä arvokkaana, koska ajan lääketieteessä uskottiin sen parantavan haavoja ja punatautia. Ritarit antoivat kasvia lahjaksi arvovaltaisille vieraille. Nimi on siis harhaanjohtava, ja kasvi on nimensä mukaisesti vaikea luokitella. Kyyhkynä pidän kyllä enemmän leivästä.",
+  "vastaus": "Nyt muistan: se ei ole sieni lainkaan. Niin kutsuttu maltalainen sieni on loisikasvi, tieteelliseltä nimeltään Cynomorium coccineum, jota kasvoi [[Fungus Rockin]] kalliolla. [[Johanniittaritarikunnan]] ritarit pitivät sitä arvokkaana, koska ajan lääketieteessä uskottiin sen parantavan haavoja ja punatautia. Ritarit antoivat kasvia lahjaksi arvovaltaisille vieraille. Nimi on siis harhaanjohtava, ja kasvi on nimensä mukaisesti vaikea luokitella. Kyyhkynä pidän kyllä enemmän leivästä.",
   "linkit": [
-   "Fungus Rockin"
+   "Fungus Rockin",
+   "Johanniittaritarikunnan"
   ],
   "jatkot": [
    "Mikä on loiskasvi?",
@@ -1670,9 +1699,12 @@
   "kohde": "kohde:hahmotelma-fungus-rock",
   "kysymys": "Mikä Sininen ikkuna oli ja mitä sille tapahtui?",
   "uusi": true,
-  "vastaus": "Ai tota. Sininen ikkuna oli luonnonkaari [[Fungus Rockin]] vieressä Dwejran alueella Gozolla. Se romahti mereen vuonna 2017, tietojeni mukaan myrskyisessä säässä, mutta tarkkaa päivää en ole varma. Kaari oli yksi saaren tunnetuimmista maisemista. Aihe on surullinen, ja hyvä että kuvia on säilynyt.",
+  "vastaus": "Ai tota. Sininen ikkuna oli [[luonnonkaari]] [[Fungus Rockin]] vieressä [[Dwejran]] alueella [[Gozolla]]. Se romahti mereen vuonna 2017, tietojeni mukaan myrskyisessä säässä, mutta tarkkaa päivää en ole varma. Kaari oli yksi saaren tunnetuimmista maisemista. Aihe on surullinen, ja hyvä että kuvia on säilynyt.",
   "linkit": [
-   "Fungus Rockin"
+   "luonnonkaari",
+   "Fungus Rockin",
+   "Dwejran",
+   "Gozolla"
   ],
   "jatkot": [
    "Miten luonnonkaaret syntyvät?",
@@ -1683,8 +1715,10 @@
   "kohde": "kohde:hahmotelma-fungus-rock",
   "kysymys": "Keitä Johanniittaritarikunnan ritarit olivat?",
   "uusi": true,
-  "vastaus": "No niin. Johanniittaritarikunta eli Pyhän Johanneksen ritarikunta oli keskiaikainen katolinen sotilas- ja sairaanhoitajarikunta. Se hallitsi Maltaa 1500-luvun alusta 1700-luvun loppuun, ja ritarit löysivät [[Fungus Rockin]] kalliolta arvokkaaksi katsomansa loisikasvin. Tarkat vuodet en ole varma kaikilta osin muistamaan, mutta heidän kautensa muovasi Maltan linnoituksia ja kaupunkeja syvästi. Ritarit ovat suosittu aihe, ja minä kyllä kuuntelen.",
+  "vastaus": "No niin. [[Johanniittaritarikunta]] eli Pyhän Johanneksen ritarikunta oli keskiaikainen katolinen sotilas- ja sairaanhoitajarikunta. Se hallitsi [[Maltaa]] 1500-luvun alusta 1700-luvun loppuun, ja ritarit löysivät [[Fungus Rockin]] kalliolta arvokkaaksi katsomansa loisikasvin. Tarkat vuodet en ole varma kaikilta osin muistamaan, mutta heidän kautensa muovasi Maltan linnoituksia ja kaupunkeja syvästi. Ritarit ovat suosittu aihe, ja minä kyllä kuuntelen.",
   "linkit": [
+   "Johanniittaritarikunta",
+   "Maltaa",
    "Fungus Rockin"
   ],
   "jatkot": [
@@ -1753,7 +1787,7 @@
   "kohde": "kohde:hahmotelma-marsalforn",
   "kysymys": "Miten Gozolle pääsee Maltalta?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Gozolle pääsee Maltan pääsaarelta lautalla, joka kulkee Ċirkewwan ja Mġarrin välillä, ja matka kestää noin puoli tuntia. Lauttayhteys on tärkein reitti saarten välillä, ja aikataulut kannattaa tarkistaa etukäteen, sillä en ole varma niiden nykyisistä väleistä. Saarella sijaitsee muun muassa matkailukeskus [[Marsalforn]], ja [[Gozo]] on Maltan saariryhmän toinen asutettu päätyyppinen saari.\n\nMinä lensin tämän välin kerran siivillä, ja se oli paljon nopeampi kuin lautta. Tosin lautalla on kahvila, ja kahvilassa saattaa olla pullaa.",
+  "vastaus": "Annas ku mietin. Gozolle pääsee Maltan pääsaarelta lautalla, joka kulkee Ċirkewwan ja Mġarrin välillä, ja matka kestää noin puoli tuntia. Lauttayhteys on tärkein reitti saarten välillä, ja aikataulut kannattaa tarkistaa etukäteen, sillä en ole varma niiden nykyisistä väleistä. Saarella sijaitsee muun muassa matkailukeskus [[Marsalforn]], ja [[Gozo]] on Maltan saariryhmän toiseksi suurin asuttu saari.\n\nMinä lensin tämän välin kerran siivillä, ja se oli paljon nopeampi kuin lautta. Tosin lautalla on kahvila, ja kahvilassa saattaa olla pullaa.",
   "linkit": [
    "Marsalforn",
    "Gozo"

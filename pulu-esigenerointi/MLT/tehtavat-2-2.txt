@@ -1,0 +1,1088 @@
+### 81
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglin kalliot (luonto · vuori)
+Tietoruudun teksti: Dingli on kylä Maltan länsiosassa noin 13 kilometrin päässä Vallettasta, ylätasangolla noin 230 metriä merenpinnan yläpuolella, lähellä Maltan korkeinta kohtaa. Kalliot tarjoavat näkymän avomerelle pienelle, asumattomalle Filfla-saarelle sekä Buskettin puutarhoille ja Verdalan palatsille. Nimen arvellaan tulevan englantilaisesta Johanniittaritarikunnan ritarista Sir Thomas Dingleystä, jolla oli paljon maata ympäristössä. Dinglin alueelta on löydetty foinikialais-, kartagolais- ja roomalaisaikaisia kalliohautoja sekä roomalaisia kylpylöitä. 1500-luvun alkuun asti lähellä oli pieni Ħal Tartarnin kylä, jonka asukkaat siirtyivät lähemmäs peltoja, ja uusi kylä kasvoi nykyiseksi Dingliksi; seurakunta perustettiin vuonna 1678.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+AIEMPI KYSYMYS: Minä vuonna Dinglin seurakunta perustettiin?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Dinglin]] seurakunta perustettiin vuonna 1678. Nykyinen kylä kasvoi 1500-luvun alun jälkeen, kun pienen [[Ħal Tartarnin]] kylän asukkaat siirtyivät lähemmäs peltoja. Kylä on siis kasvanut vanhan kylän tilalle, ei sen viereen. Onpas siinä kylällä ikää.
+KYSYMYS: Kerro lisää: Dinglin
+
+### 82
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglin kalliot (luonto · vuori)
+Tietoruudun teksti: Dingli on kylä Maltan länsiosassa noin 13 kilometrin päässä Vallettasta, ylätasangolla noin 230 metriä merenpinnan yläpuolella, lähellä Maltan korkeinta kohtaa. Kalliot tarjoavat näkymän avomerelle pienelle, asumattomalle Filfla-saarelle sekä Buskettin puutarhoille ja Verdalan palatsille. Nimen arvellaan tulevan englantilaisesta Johanniittaritarikunnan ritarista Sir Thomas Dingleystä, jolla oli paljon maata ympäristössä. Dinglin alueelta on löydetty foinikialais-, kartagolais- ja roomalaisaikaisia kalliohautoja sekä roomalaisia kylpylöitä. 1500-luvun alkuun asti lähellä oli pieni Ħal Tartarnin kylä, jonka asukkaat siirtyivät lähemmäs peltoja, ja uusi kylä kasvoi nykyiseksi Dingliksi; seurakunta perustettiin vuonna 1678.
+AIEMPI KYSYMYS: Minä vuonna Dinglin seurakunta perustettiin?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Dinglin]] seurakunta perustettiin vuonna 1678. Nykyinen kylä kasvoi 1500-luvun alun jälkeen, kun pienen [[Ħal Tartarnin]] kylän asukkaat siirtyivät lähemmäs peltoja. Kylä on siis kasvanut vanhan kylän tilalle, ei sen viereen. Onpas siinä kylällä ikää.
+KYSYMYS: Kerro lisää: Ħal Tartarnin
+
+### 83
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglin kalliot (luonto · vuori)
+Tietoruudun teksti: Dingli on kylä Maltan länsiosassa noin 13 kilometrin päässä Vallettasta, ylätasangolla noin 230 metriä merenpinnan yläpuolella, lähellä Maltan korkeinta kohtaa. Kalliot tarjoavat näkymän avomerelle pienelle, asumattomalle Filfla-saarelle sekä Buskettin puutarhoille ja Verdalan palatsille. Nimen arvellaan tulevan englantilaisesta Johanniittaritarikunnan ritarista Sir Thomas Dingleystä, jolla oli paljon maata ympäristössä. Dinglin alueelta on löydetty foinikialais-, kartagolais- ja roomalaisaikaisia kalliohautoja sekä roomalaisia kylpylöitä. 1500-luvun alkuun asti lähellä oli pieni Ħal Tartarnin kylä, jonka asukkaat siirtyivät lähemmäs peltoja, ja uusi kylä kasvoi nykyiseksi Dingliksi; seurakunta perustettiin vuonna 1678.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+AIEMPI KYSYMYS: Mikä on Maltan korkein kohta?
+AIEMPI VASTAUS (Livia):
+Kato, tämän minä näen ylhäältä. Maltan korkein kohta on Ta' Dmejrek, joka nousee 253 metriin merenpinnan yläpuolelle. Se on lähellä [[Dinglin]] kallioita, ja jyrkänne pudottaa maiseman mereen. Merellä näkyy pieni asumaton [[Filfla]]-saari.
+
+Kaksisataaviisikymmentäkolme metriä ei kuulosta paljolta, mutta kyyhkyn silmin se on kyllä oma maailmansa.
+KYSYMYS: Kerro lisää: Filfla
+
+### 84
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglin kalliot (luonto · vuori)
+Tietoruudun teksti: Dingli on kylä Maltan länsiosassa noin 13 kilometrin päässä Vallettasta, ylätasangolla noin 230 metriä merenpinnan yläpuolella, lähellä Maltan korkeinta kohtaa. Kalliot tarjoavat näkymän avomerelle pienelle, asumattomalle Filfla-saarelle sekä Buskettin puutarhoille ja Verdalan palatsille. Nimen arvellaan tulevan englantilaisesta Johanniittaritarikunnan ritarista Sir Thomas Dingleystä, jolla oli paljon maata ympäristössä. Dinglin alueelta on löydetty foinikialais-, kartagolais- ja roomalaisaikaisia kalliohautoja sekä roomalaisia kylpylöitä. 1500-luvun alkuun asti lähellä oli pieni Ħal Tartarnin kylä, jonka asukkaat siirtyivät lähemmäs peltoja, ja uusi kylä kasvoi nykyiseksi Dingliksi; seurakunta perustettiin vuonna 1678.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Historian hetki: Luxemburg 963 — kallio, josta tuli kaupunki] 963 — Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan y…
+- [Uluru — kaupunkilehti / Kivi ja väri: Kallio joka ei kulunut pois] Suurin osa alueen alkuperäisistä hiekkakivikerrostumista on kadonnut miljoonien vuosien eroosiossa — jäljellä on nyt vain tasaista pensasaavikkoa laajalti Ulurun ympärillä. Kallio itse säilyi, koska sen kivi on poikkeuksellisen yhtenäistä: siitä puuttuvat heikot rakolinjat ja kerrosrajat, joita pitkin vesi ja pakkanen yleensä murentavat kiven vähitellen soraksi ja maaperäksi. Ilman tällaisia heikkouskohtia sadevesi valuu pinnalta pois sen sijaan, että tunkeutuisi kiven sisään ja halkaisisi sitä ajan myötä. Tulos on yksi ainoa, lähes murtumaton kivimassa, joka nousee ympäröivästä tasangosta lähes 350 metriä pystyyn seinämänä joka suunnasta katsottuna.
+AIEMPI KYSYMYS: Mitä Dinglin alueelta on löydetty antiikin ajalta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Dinglin alueelta on löydetty foinikialais-, kartagolais- ja roomalaisaikaisia [[kalliohautoja]] sekä roomalaisia [[kylpylöitä]]. Alue on siis ollut asuttu jo antiikin aikana. Kylä on vanha, vaikka sen nykyinen nimi ei sitä kerro.
+KYSYMYS: Kerro lisää: kalliohautoja
+
+### 85
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglin kalliot (luonto · vuori)
+Tietoruudun teksti: Dingli on kylä Maltan länsiosassa noin 13 kilometrin päässä Vallettasta, ylätasangolla noin 230 metriä merenpinnan yläpuolella, lähellä Maltan korkeinta kohtaa. Kalliot tarjoavat näkymän avomerelle pienelle, asumattomalle Filfla-saarelle sekä Buskettin puutarhoille ja Verdalan palatsille. Nimen arvellaan tulevan englantilaisesta Johanniittaritarikunnan ritarista Sir Thomas Dingleystä, jolla oli paljon maata ympäristössä. Dinglin alueelta on löydetty foinikialais-, kartagolais- ja roomalaisaikaisia kalliohautoja sekä roomalaisia kylpylöitä. 1500-luvun alkuun asti lähellä oli pieni Ħal Tartarnin kylä, jonka asukkaat siirtyivät lähemmäs peltoja, ja uusi kylä kasvoi nykyiseksi Dingliksi; seurakunta perustettiin vuonna 1678.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tabriz — kohdekartta / Kohdekartta: Sininen moskeija] 1465 Moskeija valmistui lokakuussa 1465; rakennuttaja oli Qara Qoyunlu -hallitsijan Jahanshahin puoliso Khatun Jan Begom. Virallinen nimi on Mozaffariya, mutta se tunnetaan pelkästä väristä: Masjed-e Kabud, sininen moskeija. Tiiliseinät peitettiin laatalla sisältä ja ulkoa lähes kokonaan. Tekniikkaa on kaksi: mosaiikki, jossa jokainen pala leikataan erikseen muotoonsa, ja seitsemän värin laatta, johon värit poltetaan pintaan. Kuvioina on geometrisia verkkoja, kasviaiheita sekä kufi- ja thuluth-kalligrafiaa. Qibla-puolen kupolisali on tummansinistä kuusikulmaista laattaa, jonka kultaus on painettu kaavan läpi. Moskeija kuului laitokseen, jossa oli medresa, sufiluostari, kylpylöitä ja puutarh…
+- [Granada — kohdekartta / Kohdekartta: Alhambra] 1238–1391 Punertavalle kukkulalle Granadan laitaan alkoi vuonna 1238 nousta linnoituskaupunki, jonka arabiankielinen nimi Alhambra tarkoittaa suunnilleen punaista. Nimi juontuu paikallisesta savesta, jossa on niin paljon rautaa, että muurit hehkuvat punertavina auringonlaskussa. Rakentamisen aloitti Nasridien suvun perustaja Muhammad I, ja 1300-luvulla hallitsijat Yusuf I ja Muhammad V laajensivat linnoituksesta kokonaisen pikkukaupungin, jossa oli moskeijoita, kylpylöitä, työpajoja ja jopa oma vesijohtoverkosto. Alhambra on valtava - sen alueelle mahtuisi lähes kaksikymmentä jalkapallokenttää - ja sisällä on ainakin kuusi eri palatsia. Kuuluisin niistä on Leijonien palatsi, jonka pihalla m…
+AIEMPI KYSYMYS: Mitä Dinglin alueelta on löydetty antiikin ajalta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Dinglin alueelta on löydetty foinikialais-, kartagolais- ja roomalaisaikaisia [[kalliohautoja]] sekä roomalaisia [[kylpylöitä]]. Alue on siis ollut asuttu jo antiikin aikana. Kylä on vanha, vaikka sen nykyinen nimi ei sitä kerro.
+KYSYMYS: Kerro lisää: kylpylöitä
+
+### 86
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglin kalliot (luonto · vuori)
+Tietoruudun teksti: Dingli on kylä Maltan länsiosassa noin 13 kilometrin päässä Vallettasta, ylätasangolla noin 230 metriä merenpinnan yläpuolella, lähellä Maltan korkeinta kohtaa. Kalliot tarjoavat näkymän avomerelle pienelle, asumattomalle Filfla-saarelle sekä Buskettin puutarhoille ja Verdalan palatsille. Nimen arvellaan tulevan englantilaisesta Johanniittaritarikunnan ritarista Sir Thomas Dingleystä, jolla oli paljon maata ympäristössä. Dinglin alueelta on löydetty foinikialais-, kartagolais- ja roomalaisaikaisia kalliohautoja sekä roomalaisia kylpylöitä. 1500-luvun alkuun asti lähellä oli pieni Ħal Tartarnin kylä, jonka asukkaat siirtyivät lähemmäs peltoja, ja uusi kylä kasvoi nykyiseksi Dingliksi; seurakunta perustettiin vuonna 1678.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+AIEMPI KYSYMYS: Miksi Dinglin seutua pidettiin ritarikunnan aikana turvallisena?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ritarikunnan aikana seutua pidettiin turvallisena [[merirosvoilta]], koska [[jyrkänteiden]] takia rantaan oli mahdotonta nousta. Dinglin kallio pudottaa maiseman suoraan mereen, joten luonto vartioi aluetta. Jyrkänne on hyvä vartija, mutta lentäjälle se on vain hieno näköala.
+KYSYMYS: Kerro lisää: merirosvoilta
+
+### 87
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglin kalliot (luonto · vuori)
+Tietoruudun teksti: Dingli on kylä Maltan länsiosassa noin 13 kilometrin päässä Vallettasta, ylätasangolla noin 230 metriä merenpinnan yläpuolella, lähellä Maltan korkeinta kohtaa. Kalliot tarjoavat näkymän avomerelle pienelle, asumattomalle Filfla-saarelle sekä Buskettin puutarhoille ja Verdalan palatsille. Nimen arvellaan tulevan englantilaisesta Johanniittaritarikunnan ritarista Sir Thomas Dingleystä, jolla oli paljon maata ympäristössä. Dinglin alueelta on löydetty foinikialais-, kartagolais- ja roomalaisaikaisia kalliohautoja sekä roomalaisia kylpylöitä. 1500-luvun alkuun asti lähellä oli pieni Ħal Tartarnin kylä, jonka asukkaat siirtyivät lähemmäs peltoja, ja uusi kylä kasvoi nykyiseksi Dingliksi; seurakunta perustettiin vuonna 1678.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+AIEMPI KYSYMYS: Miksi Dinglin seutua pidettiin ritarikunnan aikana turvallisena?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ritarikunnan aikana seutua pidettiin turvallisena [[merirosvoilta]], koska [[jyrkänteiden]] takia rantaan oli mahdotonta nousta. Dinglin kallio pudottaa maiseman suoraan mereen, joten luonto vartioi aluetta. Jyrkänne on hyvä vartija, mutta lentäjälle se on vain hieno näköala.
+KYSYMYS: Kerro lisää: jyrkänteiden
+
+### 88
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostan rotunda (historia)
+Tietoruudun teksti: Mostan rotunda, Neitsyt Marian taivaaseenottamisen basilika, on roomalaiskatolinen seurakuntakirkko Mostassa; se rakennettiin vuosina 1833–1860-luvun alku Giorgio Grognet de Vassén uusklassisten piirustusten mukaan aiemman, noin vuonna 1614 rakennetun renessanssikirkon paikalle. Kirkon esikuva on Rooman Pantheon, ja sen kupoli on maailman kolmanneksi suurin tukematon kupoli; kirkko on Maltan suurin. Kaupungin väkiluku oli 1830-luvulla kasvanut liian suureksi vanhalle kirkolle, ja uusi kirkko rakennettiin vanhan ympärille, joka pysyi käytössä koko rakennusajan; mostalaiset osallistuivat rakennustyöhön sunnuntaisin ja pyhäpäivinä. Rotunda valmistui 28 vuodessa 1860-luvun alussa, vanha kirkko purettiin vuonna 1860, ja uusi vihittiin 15. lokakuuta 1871. Toisen maailmansodan aikana pommi lävisti kupolin mutta ei räjähtänyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Rakennukset: Kylän kupoli Pantheonin mallilla] 1833–1860-luku — Mostan asukkaat totesivat 1830-luvulla, että vanha kirkko oli liian pieni, ja aloittivat uuden rakentamisen. Vanha kirkko pysyi käytössä koko ajan, ja uusi nousi sen ympärille. Kyläläiset osallistuivat rakennustöihin sunnuntaisin ja pyhäpäivinä. Esikuvana oli Rooman Pantheon: pyöreän kirkon kupolin sisähalkaisija on 40 metriä, ja kupoli oli aikanaan maailman kolmanneksi suurin. Rotunda valmistui 1860-luvun alussa 28 vuoden urakan jälkeen, ja kirkko vihittiin käyttöön vuonna 1871.
+AIEMPI KYSYMYS: Minkä Rooman rakennuksen mukaan rotunda on suunniteltu?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on helppo. Rotunda on suunniteltu Rooman [[Pantheonin]] mukaan. Pyöreän kirkon [[kupolin]] sisähalkaisija on 40 metriä, ja lähteiden mukaan kupoli on maailman kolmanneksi suurin tukematon kupoli. Suunnittelija oli [[Giorgio Grognet de Vasse]]. Kyl minäkin Pantheonin tunnen, olen lentänyt sen yli.
+KYSYMYS: Kerro lisää: Pantheonin
+
+### 89
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostan rotunda (historia)
+Tietoruudun teksti: Mostan rotunda, Neitsyt Marian taivaaseenottamisen basilika, on roomalaiskatolinen seurakuntakirkko Mostassa; se rakennettiin vuosina 1833–1860-luvun alku Giorgio Grognet de Vassén uusklassisten piirustusten mukaan aiemman, noin vuonna 1614 rakennetun renessanssikirkon paikalle. Kirkon esikuva on Rooman Pantheon, ja sen kupoli on maailman kolmanneksi suurin tukematon kupoli; kirkko on Maltan suurin. Kaupungin väkiluku oli 1830-luvulla kasvanut liian suureksi vanhalle kirkolle, ja uusi kirkko rakennettiin vanhan ympärille, joka pysyi käytössä koko rakennusajan; mostalaiset osallistuivat rakennustyöhön sunnuntaisin ja pyhäpäivinä. Rotunda valmistui 28 vuodessa 1860-luvun alussa, vanha kirkko purettiin vuonna 1860, ja uusi vihittiin 15. lokakuuta 1871. Toisen maailmansodan aikana pommi lävisti kupolin mutta ei räjähtänyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Rakennukset: Kylän kupoli Pantheonin mallilla] 1833–1860-luku — Mostan asukkaat totesivat 1830-luvulla, että vanha kirkko oli liian pieni, ja aloittivat uuden rakentamisen. Vanha kirkko pysyi käytössä koko ajan, ja uusi nousi sen ympärille. Kyläläiset osallistuivat rakennustöihin sunnuntaisin ja pyhäpäivinä. Esikuvana oli Rooman Pantheon: pyöreän kirkon kupolin sisähalkaisija on 40 metriä, ja kupoli oli aikanaan maailman kolmanneksi suurin. Rotunda valmistui 1860-luvun alussa 28 vuoden urakan jälkeen, ja kirkko vihittiin käyttöön vuonna 1871.
+AIEMPI KYSYMYS: Minkä Rooman rakennuksen mukaan rotunda on suunniteltu?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on helppo. Rotunda on suunniteltu Rooman [[Pantheonin]] mukaan. Pyöreän kirkon [[kupolin]] sisähalkaisija on 40 metriä, ja lähteiden mukaan kupoli on maailman kolmanneksi suurin tukematon kupoli. Suunnittelija oli [[Giorgio Grognet de Vasse]]. Kyl minäkin Pantheonin tunnen, olen lentänyt sen yli.
+KYSYMYS: Kerro lisää: kupolin
+
+### 90
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostan rotunda (historia)
+Tietoruudun teksti: Mostan rotunda, Neitsyt Marian taivaaseenottamisen basilika, on roomalaiskatolinen seurakuntakirkko Mostassa; se rakennettiin vuosina 1833–1860-luvun alku Giorgio Grognet de Vassén uusklassisten piirustusten mukaan aiemman, noin vuonna 1614 rakennetun renessanssikirkon paikalle. Kirkon esikuva on Rooman Pantheon, ja sen kupoli on maailman kolmanneksi suurin tukematon kupoli; kirkko on Maltan suurin. Kaupungin väkiluku oli 1830-luvulla kasvanut liian suureksi vanhalle kirkolle, ja uusi kirkko rakennettiin vanhan ympärille, joka pysyi käytössä koko rakennusajan; mostalaiset osallistuivat rakennustyöhön sunnuntaisin ja pyhäpäivinä. Rotunda valmistui 28 vuodessa 1860-luvun alussa, vanha kirkko purettiin vuonna 1860, ja uusi vihittiin 15. lokakuuta 1871. Toisen maailmansodan aikana pommi lävisti kupolin mutta ei räjähtänyt.
+AIEMPI KYSYMYS: Minkä Rooman rakennuksen mukaan rotunda on suunniteltu?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on helppo. Rotunda on suunniteltu Rooman [[Pantheonin]] mukaan. Pyöreän kirkon [[kupolin]] sisähalkaisija on 40 metriä, ja lähteiden mukaan kupoli on maailman kolmanneksi suurin tukematon kupoli. Suunnittelija oli [[Giorgio Grognet de Vasse]]. Kyl minäkin Pantheonin tunnen, olen lentänyt sen yli.
+KYSYMYS: Kerro lisää: Giorgio Grognet de Vasse
+
+### 91
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostan rotunda (historia)
+Tietoruudun teksti: Mostan rotunda, Neitsyt Marian taivaaseenottamisen basilika, on roomalaiskatolinen seurakuntakirkko Mostassa; se rakennettiin vuosina 1833–1860-luvun alku Giorgio Grognet de Vassén uusklassisten piirustusten mukaan aiemman, noin vuonna 1614 rakennetun renessanssikirkon paikalle. Kirkon esikuva on Rooman Pantheon, ja sen kupoli on maailman kolmanneksi suurin tukematon kupoli; kirkko on Maltan suurin. Kaupungin väkiluku oli 1830-luvulla kasvanut liian suureksi vanhalle kirkolle, ja uusi kirkko rakennettiin vanhan ympärille, joka pysyi käytössä koko rakennusajan; mostalaiset osallistuivat rakennustyöhön sunnuntaisin ja pyhäpäivinä. Rotunda valmistui 28 vuodessa 1860-luvun alussa, vanha kirkko purettiin vuonna 1860, ja uusi vihittiin 15. lokakuuta 1871. Toisen maailmansodan aikana pommi lävisti kupolin mutta ei räjähtänyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+AIEMPI KYSYMYS: Minä vuonna kirkko vihittiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kirkko vihittiin käyttöön vuonna 1871, tarkemmin 15. lokakuuta. Rakennustyö kesti 28 vuotta, ja uusi kirkko nousi vanhan, noin vuonna 1614 rakennetun [[renessanssikirkon]] ympärille, joka pysyi käytössä koko ajan. Vanha kirkko purettiin vuonna 1860. [[Mostan]] väki sai kyllä odottaa pitkään.
+KYSYMYS: Kerro lisää: renessanssikirkon
+
+### 92
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostan rotunda (historia)
+Tietoruudun teksti: Mostan rotunda, Neitsyt Marian taivaaseenottamisen basilika, on roomalaiskatolinen seurakuntakirkko Mostassa; se rakennettiin vuosina 1833–1860-luvun alku Giorgio Grognet de Vassén uusklassisten piirustusten mukaan aiemman, noin vuonna 1614 rakennetun renessanssikirkon paikalle. Kirkon esikuva on Rooman Pantheon, ja sen kupoli on maailman kolmanneksi suurin tukematon kupoli; kirkko on Maltan suurin. Kaupungin väkiluku oli 1830-luvulla kasvanut liian suureksi vanhalle kirkolle, ja uusi kirkko rakennettiin vanhan ympärille, joka pysyi käytössä koko rakennusajan; mostalaiset osallistuivat rakennustyöhön sunnuntaisin ja pyhäpäivinä. Rotunda valmistui 28 vuodessa 1860-luvun alussa, vanha kirkko purettiin vuonna 1860, ja uusi vihittiin 15. lokakuuta 1871. Toisen maailmansodan aikana pommi lävisti kupolin mutta ei räjähtänyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Rakennukset: Kylän kupoli Pantheonin mallilla] 1833–1860-luku — Mostan asukkaat totesivat 1830-luvulla, että vanha kirkko oli liian pieni, ja aloittivat uuden rakentamisen. Vanha kirkko pysyi käytössä koko ajan, ja uusi nousi sen ympärille. Kyläläiset osallistuivat rakennustöihin sunnuntaisin ja pyhäpäivinä. Esikuvana oli Rooman Pantheon: pyöreän kirkon kupolin sisähalkaisija on 40 metriä, ja kupoli oli aikanaan maailman kolmanneksi suurin. Rotunda valmistui 1860-luvun alussa 28 vuoden urakan jälkeen, ja kirkko vihittiin käyttöön vuonna 1871.
+AIEMPI KYSYMYS: Minä vuonna kirkko vihittiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kirkko vihittiin käyttöön vuonna 1871, tarkemmin 15. lokakuuta. Rakennustyö kesti 28 vuotta, ja uusi kirkko nousi vanhan, noin vuonna 1614 rakennetun [[renessanssikirkon]] ympärille, joka pysyi käytössä koko ajan. Vanha kirkko purettiin vuonna 1860. [[Mostan]] väki sai kyllä odottaa pitkään.
+KYSYMYS: Kerro lisää: Mostan
+
+### 93
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostan rotunda (historia)
+Tietoruudun teksti: Mostan rotunda, Neitsyt Marian taivaaseenottamisen basilika, on roomalaiskatolinen seurakuntakirkko Mostassa; se rakennettiin vuosina 1833–1860-luvun alku Giorgio Grognet de Vassén uusklassisten piirustusten mukaan aiemman, noin vuonna 1614 rakennetun renessanssikirkon paikalle. Kirkon esikuva on Rooman Pantheon, ja sen kupoli on maailman kolmanneksi suurin tukematon kupoli; kirkko on Maltan suurin. Kaupungin väkiluku oli 1830-luvulla kasvanut liian suureksi vanhalle kirkolle, ja uusi kirkko rakennettiin vanhan ympärille, joka pysyi käytössä koko rakennusajan; mostalaiset osallistuivat rakennustyöhön sunnuntaisin ja pyhäpäivinä. Rotunda valmistui 28 vuodessa 1860-luvun alussa, vanha kirkko purettiin vuonna 1860, ja uusi vihittiin 15. lokakuuta 1871. Toisen maailmansodan aikana pommi lävisti kupolin mutta ei räjähtänyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+- [Malta — maalehti / Arki: Vanhin maltankielinen runo] n. 1470-luku — Maltan kieli on ainoa semiittinen kieli, jota kirjoitetaan latinalaisilla aakkosilla. Sen juuret ovat Sisilian arabiassa, mutta sanastoon on tullut paljon italiaa ja sisilian kieltä. Vanhin tunnettu maltankielinen kirjallinen teksti on Il-Kantilena, Pietru Caxaron runo. Se on kirjoitettu 1400-luvulla, luultavasti 1470-luvulla, mutta löydettiin vasta vuonna 1966. Runo säilytetään Vallettan notaariarkistossa, ja huhtikuussa 2025 se liitettiin Unescon Muisti maailmassa -luetteloon.
+AIEMPI KYSYMYS: Miten rotundan kupoli selvisi toisen maailmansodan pommista?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Toisen maailmansodan aikana pommi lävisti [[kupolin]] mutta ei räjähtänyt, joten kirkko säilyi. [[Malta]] kuului tuolloin Britannian vallan alle, ja sota ulottui saarelle asti. Tapahtumasta on yli kahdeksankymmentä vuotta, ja kirkko on yhä käytössä. Kirkko on sittemmin saanut seisoa rauhassa.
+KYSYMYS: Kerro lisää: Malta
+
+### 94
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostan rotunda (historia)
+Tietoruudun teksti: Mostan rotunda, Neitsyt Marian taivaaseenottamisen basilika, on roomalaiskatolinen seurakuntakirkko Mostassa; se rakennettiin vuosina 1833–1860-luvun alku Giorgio Grognet de Vassén uusklassisten piirustusten mukaan aiemman, noin vuonna 1614 rakennetun renessanssikirkon paikalle. Kirkon esikuva on Rooman Pantheon, ja sen kupoli on maailman kolmanneksi suurin tukematon kupoli; kirkko on Maltan suurin. Kaupungin väkiluku oli 1830-luvulla kasvanut liian suureksi vanhalle kirkolle, ja uusi kirkko rakennettiin vanhan ympärille, joka pysyi käytössä koko rakennusajan; mostalaiset osallistuivat rakennustyöhön sunnuntaisin ja pyhäpäivinä. Rotunda valmistui 28 vuodessa 1860-luvun alussa, vanha kirkko purettiin vuonna 1860, ja uusi vihittiin 15. lokakuuta 1871. Toisen maailmansodan aikana pommi lävisti kupolin mutta ei räjähtänyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Rakennukset: Kylän kupoli Pantheonin mallilla] 1833–1860-luku — Mostan asukkaat totesivat 1830-luvulla, että vanha kirkko oli liian pieni, ja aloittivat uuden rakentamisen. Vanha kirkko pysyi käytössä koko ajan, ja uusi nousi sen ympärille. Kyläläiset osallistuivat rakennustöihin sunnuntaisin ja pyhäpäivinä. Esikuvana oli Rooman Pantheon: pyöreän kirkon kupolin sisähalkaisija on 40 metriä, ja kupoli oli aikanaan maailman kolmanneksi suurin. Rotunda valmistui 1860-luvun alussa 28 vuoden urakan jälkeen, ja kirkko vihittiin käyttöön vuonna 1871.
+- [Rooma — kohdekartta / Kohdekartta: Pantheon] n. 126 Samalla paikalla seisoi ensin toinen temppeli, jonka sotapäällikkö Marcus Agrippa rakennutti noin 29 eaa., mutta se paloi. Keisari Hadrianus rakennutti tilalle täysin uuden temppelin, joka valmistui noin vuonna 126 — ja hän antoi kohteliaasti Agrippan nimen pysyä rakennuksen otsassa, vaikka koko hanke oli hänen omansa. Temppelin kupoli on edelleen maailman suurin raudoittamaton betonikupoli, halkaisijaltaan 43 metriä. Katon keskellä on pyöreä aukko, oculus eli 'silmä', jonka läpi paistaa aurinko ja sataa sade suoraan lattialle. Roomalaiset käyttivät kupolin yläosassa yhä kevyempää kiveä kuin alaosassa, jotta se ei romahtaisi omaan painoonsa. Pantheon on säilynyt näin hyväkuntoisena, …
+AIEMPI KYSYMYS: Kuinka suuri Mostan rotundan kupoli on?
+AIEMPI VASTAUS (Livia):
+Mmm— lasketaanpa. Kupolin sisähalkaisija on 40 metriä, ja lähteiden mukaan se on maailman kolmanneksi suurin tukematon kupoli. Esikuvana oli Rooman [[Pantheon]]. Rakennustyötä tekivät [[mostalaiset]] sunnuntaisin ja pyhäpäivinä.
+
+Neljäkymmentä metriä halki, ja kaikki se tehtiin vapaapäivinä. Minä väsyisin jo yhdestä pitkästä lennosta.
+KYSYMYS: Kerro lisää: Pantheon
+
+### 95
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostan rotunda (historia)
+Tietoruudun teksti: Mostan rotunda, Neitsyt Marian taivaaseenottamisen basilika, on roomalaiskatolinen seurakuntakirkko Mostassa; se rakennettiin vuosina 1833–1860-luvun alku Giorgio Grognet de Vassén uusklassisten piirustusten mukaan aiemman, noin vuonna 1614 rakennetun renessanssikirkon paikalle. Kirkon esikuva on Rooman Pantheon, ja sen kupoli on maailman kolmanneksi suurin tukematon kupoli; kirkko on Maltan suurin. Kaupungin väkiluku oli 1830-luvulla kasvanut liian suureksi vanhalle kirkolle, ja uusi kirkko rakennettiin vanhan ympärille, joka pysyi käytössä koko rakennusajan; mostalaiset osallistuivat rakennustyöhön sunnuntaisin ja pyhäpäivinä. Rotunda valmistui 28 vuodessa 1860-luvun alussa, vanha kirkko purettiin vuonna 1860, ja uusi vihittiin 15. lokakuuta 1871. Toisen maailmansodan aikana pommi lävisti kupolin mutta ei räjähtänyt.
+AIEMPI KYSYMYS: Kuinka suuri Mostan rotundan kupoli on?
+AIEMPI VASTAUS (Livia):
+Mmm— lasketaanpa. Kupolin sisähalkaisija on 40 metriä, ja lähteiden mukaan se on maailman kolmanneksi suurin tukematon kupoli. Esikuvana oli Rooman [[Pantheon]]. Rakennustyötä tekivät [[mostalaiset]] sunnuntaisin ja pyhäpäivinä.
+
+Neljäkymmentä metriä halki, ja kaikki se tehtiin vapaapäivinä. Minä väsyisin jo yhdestä pitkästä lennosta.
+KYSYMYS: Kerro lisää: mostalaiset
+
+### 96
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostan rotunda (historia)
+Tietoruudun teksti: Mostan rotunda, Neitsyt Marian taivaaseenottamisen basilika, on roomalaiskatolinen seurakuntakirkko Mostassa; se rakennettiin vuosina 1833–1860-luvun alku Giorgio Grognet de Vassén uusklassisten piirustusten mukaan aiemman, noin vuonna 1614 rakennetun renessanssikirkon paikalle. Kirkon esikuva on Rooman Pantheon, ja sen kupoli on maailman kolmanneksi suurin tukematon kupoli; kirkko on Maltan suurin. Kaupungin väkiluku oli 1830-luvulla kasvanut liian suureksi vanhalle kirkolle, ja uusi kirkko rakennettiin vanhan ympärille, joka pysyi käytössä koko rakennusajan; mostalaiset osallistuivat rakennustyöhön sunnuntaisin ja pyhäpäivinä. Rotunda valmistui 28 vuodessa 1860-luvun alussa, vanha kirkko purettiin vuonna 1860, ja uusi vihittiin 15. lokakuuta 1871. Toisen maailmansodan aikana pommi lävisti kupolin mutta ei räjähtänyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kohdekartta / Kohdekartta: Vila Velhan teatteri] 1964 Teatteri rakennettiin 1964 Avenida Seten varrelle, 1800-luvun uusklassisen Passeio Públicon länsilaidalle. Sen takana oli Teatro dos Novos, Bahian ensimmäinen ammattilaisryhmä 1950-luvulta, jota johti Bahian liittovaltionyliopiston opettaja João Augusto de Azevedo. Pysyvää näyttämöä ajoi joukko ryhmästä irtautuneita opiskelijoita — Echio Reis, Sônia Robatto, Carlos Petrovich, Othon Bastos, Thereza Sá ja Carmem Bittencourt — ja osavaltio antoi tontin 1961. Avajaisnäytöksessä Nós, Por Exemplo esiintyivät Caetano Veloso, Gilberto Gil, Tom Zé, Gal Costa ja Maria Bethânia. Talosta tuli 1960-luvun tropicália-vastakulttuurin keskus ja sotilasdiktatuurin (1964–1985) aikaisen kulttuurisen vasta…
+- [Bogotá — kaupunkilehti / Historia: Aukio joka sai patsaansa vasta vuosikymmeniä myöhemmin] Kaupungin pääaukio on kantanut kolmea nimeä. Siirtomaa-aikana se oli Plaza Mayor, itsenäistymisen jälkeen vuodesta 1821 Plaza de la Constitución, ja Plaza de Bolívar siitä tuli vasta 1846, kun aukiolle paljastettiin italialaisen Pietro Teneranin veistämä Simón Bolívarin patsas – kaupungin ensimmäinen julkinen muistomerkki. Aukion katedraali on lähes yhtä nuori: sen rakentaminen aloitettiin 11. helmikuuta 1807 munkki Domingo de Petrésin uusklassisten piirustusten mukaan ja saatiin päätökseen 19. huhtikuuta 1823.
+AIEMPI KYSYMYS: Kuka suunnitteli Mostan rotundan?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Mostan rotundan suunnitteli [[Giorgio Grognet de Vasse]], ja kirkko edustaa [[uusklassisten]] piirustusten tyyliä. Se rakennettiin vuosina 1833–1860-luvun alku vanhan, noin vuonna 1614 rakennetun kirkon ympärille. Kirkon täydellinen nimi on Neitsyt Marian taivaaseenottamisen basilika. Pitkä nimi, lyhyt kaupunki.
+KYSYMYS: Kerro lisää: uusklassisten
+
+### 97
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħal Saflieni (historia)
+Tietoruudun teksti: Ħal Saflienin hypogeum on neoliittinen maanalainen rakenne Paolassa Maltalla, Saflieni-kaudelta (3300–3000 eaa.). Sitä pidetään pyhäkkönä ja hautausmaana, ja arkeologit ovat dokumentoineet yli 7 000 ihmisen jäännökset; se on yksi parhaiten säilyneitä Maltan temppelirakentajakulttuurin kohteita. Rakenne löytyi vahingossa vuonna 1902, kun työmiehet louhivat sisternejä uudelle asuinalueelle ja puhkaisivat sen katon; kaivauksia johti aluksi Manuel Magri vuodesta 1903 ja sitten Themistocles Zammit, joka julkaisi raporttinsa vuodesta 1910. Hypogeum avattiin kävijöille jo vuonna 1908, ja nykyään Heritage Malta päästää sisään vain 80 kävijää päivässä ja säätelee tarkasti mikroilmastoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Katto romahti kaivuutyömaalla] 1902 — Vuonna 1902 Paolassa rakennettiin uutta asuinaluetta, ja työmiehet louhivat vesisäiliötä. Yhtäkkiä he puhkaisivat vahingossa katon, ja alta paljastui kolmikerroksinen labyrintti, joka oli veistetty pehmeään kalkkikiveen. Ħal Saflienin hypogeumi toimi pyhäkkönä ja hautakammiona, ja sinne haudattiin arviolta 7 000 ihmistä. Kattoon on maalattu punaokralla kierteitä ja pilkkuja, ja yhden kammion kolo saattoi vahvistaa laulun ja rummutuksen kaikua muihin huoneisiin. Nykyään sisään pääsee vain 80 kävijää päivässä.
+AIEMPI KYSYMYS: Minä vuonna hypogeum löydettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Hypogeum löydettiin vuonna 1902, kun työmiehet louhivat vesisäiliötä [[Paolassa]] uutta asuinaluetta varten ja puhkaisivat vahingossa maanalaisen tilan katon. Alta paljastui kolmikerroksinen, pehmeään kalkkikiveen veistetty rakennelma, jota oli käytetty pyhäkkönä ja hautakammiona. Kaivauksia johti aluksi [[Manuel Magri]] vuodesta 1903, ja myöhemmin työtä jatkoi [[Themistocles Zammit]]. Onneksi se löytyi.
+KYSYMYS: Kerro lisää: Paolassa
+
+### 98
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħal Saflieni (historia)
+Tietoruudun teksti: Ħal Saflienin hypogeum on neoliittinen maanalainen rakenne Paolassa Maltalla, Saflieni-kaudelta (3300–3000 eaa.). Sitä pidetään pyhäkkönä ja hautausmaana, ja arkeologit ovat dokumentoineet yli 7 000 ihmisen jäännökset; se on yksi parhaiten säilyneitä Maltan temppelirakentajakulttuurin kohteita. Rakenne löytyi vahingossa vuonna 1902, kun työmiehet louhivat sisternejä uudelle asuinalueelle ja puhkaisivat sen katon; kaivauksia johti aluksi Manuel Magri vuodesta 1903 ja sitten Themistocles Zammit, joka julkaisi raporttinsa vuodesta 1910. Hypogeum avattiin kävijöille jo vuonna 1908, ja nykyään Heritage Malta päästää sisään vain 80 kävijää päivässä ja säätelee tarkasti mikroilmastoa.
+AIEMPI KYSYMYS: Minä vuonna hypogeum löydettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Hypogeum löydettiin vuonna 1902, kun työmiehet louhivat vesisäiliötä [[Paolassa]] uutta asuinaluetta varten ja puhkaisivat vahingossa maanalaisen tilan katon. Alta paljastui kolmikerroksinen, pehmeään kalkkikiveen veistetty rakennelma, jota oli käytetty pyhäkkönä ja hautakammiona. Kaivauksia johti aluksi [[Manuel Magri]] vuodesta 1903, ja myöhemmin työtä jatkoi [[Themistocles Zammit]]. Onneksi se löytyi.
+KYSYMYS: Kerro lisää: Manuel Magri
+
+### 99
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħal Saflieni (historia)
+Tietoruudun teksti: Ħal Saflienin hypogeum on neoliittinen maanalainen rakenne Paolassa Maltalla, Saflieni-kaudelta (3300–3000 eaa.). Sitä pidetään pyhäkkönä ja hautausmaana, ja arkeologit ovat dokumentoineet yli 7 000 ihmisen jäännökset; se on yksi parhaiten säilyneitä Maltan temppelirakentajakulttuurin kohteita. Rakenne löytyi vahingossa vuonna 1902, kun työmiehet louhivat sisternejä uudelle asuinalueelle ja puhkaisivat sen katon; kaivauksia johti aluksi Manuel Magri vuodesta 1903 ja sitten Themistocles Zammit, joka julkaisi raporttinsa vuodesta 1910. Hypogeum avattiin kävijöille jo vuonna 1908, ja nykyään Heritage Malta päästää sisään vain 80 kävijää päivässä ja säätelee tarkasti mikroilmastoa.
+AIEMPI KYSYMYS: Minä vuonna hypogeum löydettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Hypogeum löydettiin vuonna 1902, kun työmiehet louhivat vesisäiliötä [[Paolassa]] uutta asuinaluetta varten ja puhkaisivat vahingossa maanalaisen tilan katon. Alta paljastui kolmikerroksinen, pehmeään kalkkikiveen veistetty rakennelma, jota oli käytetty pyhäkkönä ja hautakammiona. Kaivauksia johti aluksi [[Manuel Magri]] vuodesta 1903, ja myöhemmin työtä jatkoi [[Themistocles Zammit]]. Onneksi se löytyi.
+KYSYMYS: Kerro lisää: Themistocles Zammit
+
+### 100
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħal Saflieni (historia)
+Tietoruudun teksti: Ħal Saflienin hypogeum on neoliittinen maanalainen rakenne Paolassa Maltalla, Saflieni-kaudelta (3300–3000 eaa.). Sitä pidetään pyhäkkönä ja hautausmaana, ja arkeologit ovat dokumentoineet yli 7 000 ihmisen jäännökset; se on yksi parhaiten säilyneitä Maltan temppelirakentajakulttuurin kohteita. Rakenne löytyi vahingossa vuonna 1902, kun työmiehet louhivat sisternejä uudelle asuinalueelle ja puhkaisivat sen katon; kaivauksia johti aluksi Manuel Magri vuodesta 1903 ja sitten Themistocles Zammit, joka julkaisi raporttinsa vuodesta 1910. Hypogeum avattiin kävijöille jo vuonna 1908, ja nykyään Heritage Malta päästää sisään vain 80 kävijää päivässä ja säätelee tarkasti mikroilmastoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: Haas–Lilienthalin talo] 1886–1973 Talon rakennutti kauppias William Haas (1849–1916), joka syntyi juutalaiseen perheeseen Baijerin Reckendorfissa ja saapui San Franciscoon lokakuussa 1868. Hän menestyi nopeasti tukkukauppiaana ja meni 1880 naimisiin Bertha Greenebaumin kanssa, jonka isä oli niin ikään baijerilainen ja omisti kalifornialaisen kauppahuoneen. Perhe asui useissa vuokra-asunnoissa, kunnes rakennutti 1886 oman talon Franklin Streetille. Suunnittelijaksi tuli baijerilainen arkkitehti Peter R. Schmidt. Talo on punapuuta, tyyliltään Queen Anne ja Eastlake, ja sen kulmassa on tornihuone noitalakin muotoisine kattoineen. Pohjaratkaisu on kaupungille tyypillinen rivitalokaava, joka kehitettiin syvien ja kapei…
+- [Singapore — kohdekartta / Kohdekartta: Sultan-moskeija] ensimmäinen moskeija 1826, nykyinen 1932 Kampong Glam tarkoittaa gelam-puun kylää, ja se on kaupungin malaijilainen ja muslimien kortteli. Vuoden 1822 kaupunkisuunnitelmassa alue annettiin sulttaani Husseinille, hänen perheelleen ja hoviväelleen sekä malaijeille ja arabikauppiaille. Sulttaani pyysi palatsinsa viereen moskeijaa, ja Raffles myönsi hankkeeseen kolmetuhatta dollaria. Ensimmäinen moskeija valmistui 1826: yksikerroksinen puurakennus, jossa oli kaksiportainen katto. Sata vuotta myöhemmin rakennus oli rapistunut, ja tilalle nousi nykyinen moskeija vuonna 1932. Sen suunnitteli Denis Santry arkkitehtitoimistosta Swan & Maclaren, ja se on maan tunnetuin esimerkki indo-saraseenilaisest…
+AIEMPI KYSYMYS: Kuinka monta kävijää päivässä hypogeumiin nykyään päästetään?
+AIEMPI VASTAUS (Livia):
+No niin, tähän on selvä luku. Hypogeumiin päästetään nykyään vain 80 kävijää päivässä, ja pääsyä säätelee [[Heritage Malta]], joka valvoo myös tilan mikroilmastoa tarkasti. Rajoituksen tarkoitus on suojella herkkää, pehmeään [[kalkkikiveen]] veistettyä rakennetta ja sen vanhoja punaokramaalauksia. Käytännössä sisäänpääsy kannattaa varata hyvissä ajoin. Pitkä on matka, mut hiljaa mennään.
+KYSYMYS: Kerro lisää: Heritage Malta
+
+### 101
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħal Saflieni (historia)
+Tietoruudun teksti: Ħal Saflienin hypogeum on neoliittinen maanalainen rakenne Paolassa Maltalla, Saflieni-kaudelta (3300–3000 eaa.). Sitä pidetään pyhäkkönä ja hautausmaana, ja arkeologit ovat dokumentoineet yli 7 000 ihmisen jäännökset; se on yksi parhaiten säilyneitä Maltan temppelirakentajakulttuurin kohteita. Rakenne löytyi vahingossa vuonna 1902, kun työmiehet louhivat sisternejä uudelle asuinalueelle ja puhkaisivat sen katon; kaivauksia johti aluksi Manuel Magri vuodesta 1903 ja sitten Themistocles Zammit, joka julkaisi raporttinsa vuodesta 1910. Hypogeum avattiin kävijöille jo vuonna 1908, ja nykyään Heritage Malta päästää sisään vain 80 kävijää päivässä ja säätelee tarkasti mikroilmastoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Katto romahti kaivuutyömaalla] 1902 — Vuonna 1902 Paolassa rakennettiin uutta asuinaluetta, ja työmiehet louhivat vesisäiliötä. Yhtäkkiä he puhkaisivat vahingossa katon, ja alta paljastui kolmikerroksinen labyrintti, joka oli veistetty pehmeään kalkkikiveen. Ħal Saflienin hypogeumi toimi pyhäkkönä ja hautakammiona, ja sinne haudattiin arviolta 7 000 ihmistä. Kattoon on maalattu punaokralla kierteitä ja pilkkuja, ja yhden kammion kolo saattoi vahvistaa laulun ja rummutuksen kaikua muihin huoneisiin. Nykyään sisään pääsee vain 80 kävijää päivässä.
+AIEMPI KYSYMYS: Kuinka monta kävijää päivässä hypogeumiin nykyään päästetään?
+AIEMPI VASTAUS (Livia):
+No niin, tähän on selvä luku. Hypogeumiin päästetään nykyään vain 80 kävijää päivässä, ja pääsyä säätelee [[Heritage Malta]], joka valvoo myös tilan mikroilmastoa tarkasti. Rajoituksen tarkoitus on suojella herkkää, pehmeään [[kalkkikiveen]] veistettyä rakennetta ja sen vanhoja punaokramaalauksia. Käytännössä sisäänpääsy kannattaa varata hyvissä ajoin. Pitkä on matka, mut hiljaa mennään.
+KYSYMYS: Kerro lisää: kalkkikiveen
+
+### 102
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħal Saflieni (historia)
+Tietoruudun teksti: Ħal Saflienin hypogeum on neoliittinen maanalainen rakenne Paolassa Maltalla, Saflieni-kaudelta (3300–3000 eaa.). Sitä pidetään pyhäkkönä ja hautausmaana, ja arkeologit ovat dokumentoineet yli 7 000 ihmisen jäännökset; se on yksi parhaiten säilyneitä Maltan temppelirakentajakulttuurin kohteita. Rakenne löytyi vahingossa vuonna 1902, kun työmiehet louhivat sisternejä uudelle asuinalueelle ja puhkaisivat sen katon; kaivauksia johti aluksi Manuel Magri vuodesta 1903 ja sitten Themistocles Zammit, joka julkaisi raporttinsa vuodesta 1910. Hypogeum avattiin kävijöille jo vuonna 1908, ja nykyään Heritage Malta päästää sisään vain 80 kävijää päivässä ja säätelee tarkasti mikroilmastoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Anatolian sivilisaatioiden museo] Museo on kahdessa 1400-luvun ottomaanirakennuksessa Ankaran linnan eteläpuolella Atpazarın korttelissa. Näyttely on Mahmut Paşan bedestenissä eli katetussa kauppahallissa, jonka Mehmed II:n visiiri rakennutti vuosina 1464–1471: kymmenen kupolia kattaa suorakaiteen, ja hallissa oli 102 puotia vastakkain. Vieressä on Kurşunlu Han: keskellä piha ja pylväskäytävä, ympärillä kaksi kerrosta huoneita, 28 alhaalla ja 30 ylhäällä. Han on nykyään hallintosiipi, jossa ovat työhuoneet, kirjasto, esitelmäsali ja laboratorio. Kymmenkupolinen keskihalli on jätetty yhdeksi tilaksi, ja siinä seisovat suuret kivireliefit ja patsaat myöhäisheettiläiseltä ajalta: pitkäkaapuisia sotilaita, sotavaunuja, hierogly…
+AIEMPI KYSYMYS: Mihin tarkoitukseen hypogeum rakennettiin?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Hypogeum on [[neoliittinen]] maanalainen rakenne, jota pidetään sekä pyhäkkönä että hautausmaana. Sen [[Saflieni-kausi]] ajoittuu noin vuosiin 3300–3000 eaa., ja arkeologit ovat dokumentoineet siitä yli 7 000 ihmisen jäännökset. Kattoon on maalattu punaokralla kierteitä ja pilkkuja, ja yhden kammion kolo saattoi vahvistaa laulun ja rummutuksen kaikua muihin huoneisiin. Rakentajien ajatuksista tiedetään vähemmän kuin haluaisi.
+KYSYMYS: Kerro lisää: neoliittinen
+
+### 103
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħal Saflieni (historia)
+Tietoruudun teksti: Ħal Saflienin hypogeum on neoliittinen maanalainen rakenne Paolassa Maltalla, Saflieni-kaudelta (3300–3000 eaa.). Sitä pidetään pyhäkkönä ja hautausmaana, ja arkeologit ovat dokumentoineet yli 7 000 ihmisen jäännökset; se on yksi parhaiten säilyneitä Maltan temppelirakentajakulttuurin kohteita. Rakenne löytyi vahingossa vuonna 1902, kun työmiehet louhivat sisternejä uudelle asuinalueelle ja puhkaisivat sen katon; kaivauksia johti aluksi Manuel Magri vuodesta 1903 ja sitten Themistocles Zammit, joka julkaisi raporttinsa vuodesta 1910. Hypogeum avattiin kävijöille jo vuonna 1908, ja nykyään Heritage Malta päästää sisään vain 80 kävijää päivässä ja säätelee tarkasti mikroilmastoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Katto romahti kaivuutyömaalla] 1902 — Vuonna 1902 Paolassa rakennettiin uutta asuinaluetta, ja työmiehet louhivat vesisäiliötä. Yhtäkkiä he puhkaisivat vahingossa katon, ja alta paljastui kolmikerroksinen labyrintti, joka oli veistetty pehmeään kalkkikiveen. Ħal Saflienin hypogeumi toimi pyhäkkönä ja hautakammiona, ja sinne haudattiin arviolta 7 000 ihmistä. Kattoon on maalattu punaokralla kierteitä ja pilkkuja, ja yhden kammion kolo saattoi vahvistaa laulun ja rummutuksen kaikua muihin huoneisiin. Nykyään sisään pääsee vain 80 kävijää päivässä.
+AIEMPI KYSYMYS: Mihin tarkoitukseen hypogeum rakennettiin?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Hypogeum on [[neoliittinen]] maanalainen rakenne, jota pidetään sekä pyhäkkönä että hautausmaana. Sen [[Saflieni-kausi]] ajoittuu noin vuosiin 3300–3000 eaa., ja arkeologit ovat dokumentoineet siitä yli 7 000 ihmisen jäännökset. Kattoon on maalattu punaokralla kierteitä ja pilkkuja, ja yhden kammion kolo saattoi vahvistaa laulun ja rummutuksen kaikua muihin huoneisiin. Rakentajien ajatuksista tiedetään vähemmän kuin haluaisi.
+KYSYMYS: Kerro lisää: Saflieni-kausi
+
+### 104
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħal Saflieni (historia)
+Tietoruudun teksti: Ħal Saflienin hypogeum on neoliittinen maanalainen rakenne Paolassa Maltalla, Saflieni-kaudelta (3300–3000 eaa.). Sitä pidetään pyhäkkönä ja hautausmaana, ja arkeologit ovat dokumentoineet yli 7 000 ihmisen jäännökset; se on yksi parhaiten säilyneitä Maltan temppelirakentajakulttuurin kohteita. Rakenne löytyi vahingossa vuonna 1902, kun työmiehet louhivat sisternejä uudelle asuinalueelle ja puhkaisivat sen katon; kaivauksia johti aluksi Manuel Magri vuodesta 1903 ja sitten Themistocles Zammit, joka julkaisi raporttinsa vuodesta 1910. Hypogeum avattiin kävijöille jo vuonna 1908, ja nykyään Heritage Malta päästää sisään vain 80 kävijää päivässä ja säätelee tarkasti mikroilmastoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: Haas–Lilienthalin talo] 1886–1973 Talon rakennutti kauppias William Haas (1849–1916), joka syntyi juutalaiseen perheeseen Baijerin Reckendorfissa ja saapui San Franciscoon lokakuussa 1868. Hän menestyi nopeasti tukkukauppiaana ja meni 1880 naimisiin Bertha Greenebaumin kanssa, jonka isä oli niin ikään baijerilainen ja omisti kalifornialaisen kauppahuoneen. Perhe asui useissa vuokra-asunnoissa, kunnes rakennutti 1886 oman talon Franklin Streetille. Suunnittelijaksi tuli baijerilainen arkkitehti Peter R. Schmidt. Talo on punapuuta, tyyliltään Queen Anne ja Eastlake, ja sen kulmassa on tornihuone noitalakin muotoisine kattoineen. Pohjaratkaisu on kaupungille tyypillinen rivitalokaava, joka kehitettiin syvien ja kapei…
+- [Singapore — kohdekartta / Kohdekartta: Sultan-moskeija] ensimmäinen moskeija 1826, nykyinen 1932 Kampong Glam tarkoittaa gelam-puun kylää, ja se on kaupungin malaijilainen ja muslimien kortteli. Vuoden 1822 kaupunkisuunnitelmassa alue annettiin sulttaani Husseinille, hänen perheelleen ja hoviväelleen sekä malaijeille ja arabikauppiaille. Sulttaani pyysi palatsinsa viereen moskeijaa, ja Raffles myönsi hankkeeseen kolmetuhatta dollaria. Ensimmäinen moskeija valmistui 1826: yksikerroksinen puurakennus, jossa oli kaksiportainen katto. Sata vuotta myöhemmin rakennus oli rapistunut, ja tilalle nousi nykyinen moskeija vuonna 1932. Sen suunnitteli Denis Santry arkkitehtitoimistosta Swan & Maclaren, ja se on maan tunnetuin esimerkki indo-saraseenilaisest…
+AIEMPI KYSYMYS: Miksi hypogeumin mikroilmastoa säädellään tarkasti?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Hypogeum on pehmeään [[kalkkikiveen]] veistetty ja tuhansia vuosia vanha, joten kosteuden, lämpötilan ja ilman koostumuksen muutokset voivat vahingoittaa sitä. Kävijöiden määrää rajoitetaan, ja nykyään sisään päästetään vain 80 kävijää päivässä [[Heritage Maltan]] toimesta. Tarkkoja mittauksia tai syitä en ole varma, mutta hengitys ja kosteus ovat tällaisissa maanalaisissa tiloissa yleinen huoli, ja katon [[punaokramaalaukset]] ovat erityisen herkkiä. Hiljaa saa kulkea.
+KYSYMYS: Kerro lisää: Heritage Maltan
+
+### 105
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħal Saflieni (historia)
+Tietoruudun teksti: Ħal Saflienin hypogeum on neoliittinen maanalainen rakenne Paolassa Maltalla, Saflieni-kaudelta (3300–3000 eaa.). Sitä pidetään pyhäkkönä ja hautausmaana, ja arkeologit ovat dokumentoineet yli 7 000 ihmisen jäännökset; se on yksi parhaiten säilyneitä Maltan temppelirakentajakulttuurin kohteita. Rakenne löytyi vahingossa vuonna 1902, kun työmiehet louhivat sisternejä uudelle asuinalueelle ja puhkaisivat sen katon; kaivauksia johti aluksi Manuel Magri vuodesta 1903 ja sitten Themistocles Zammit, joka julkaisi raporttinsa vuodesta 1910. Hypogeum avattiin kävijöille jo vuonna 1908, ja nykyään Heritage Malta päästää sisään vain 80 kävijää päivässä ja säätelee tarkasti mikroilmastoa.
+AIEMPI KYSYMYS: Miksi hypogeumin mikroilmastoa säädellään tarkasti?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Hypogeum on pehmeään [[kalkkikiveen]] veistetty ja tuhansia vuosia vanha, joten kosteuden, lämpötilan ja ilman koostumuksen muutokset voivat vahingoittaa sitä. Kävijöiden määrää rajoitetaan, ja nykyään sisään päästetään vain 80 kävijää päivässä [[Heritage Maltan]] toimesta. Tarkkoja mittauksia tai syitä en ole varma, mutta hengitys ja kosteus ovat tällaisissa maanalaisissa tiloissa yleinen huoli, ja katon [[punaokramaalaukset]] ovat erityisen herkkiä. Hiljaa saa kulkea.
+KYSYMYS: Kerro lisää: punaokramaalaukset
+
+### 106
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ta’ Pinu (kulttuuri)
+Tietoruudun teksti: Ta’ Pinun kansallinen pyhäkkö on roomalaiskatolinen basilika noin 700 metrin päässä Għarbin kylästä Maltan sisarsaarella Gozolla. Pyhäkön alkuperä on tuntematon: vuonna 1575 apostolinen visitaattori Pietro Dusina piti kappelin kuntoa niin huonona, että määräsi sen suljettavaksi ja purettavaksi, mutta työmiehen käsi murtui ensimmäisessä iskussa, mitä pidettiin merkkinä, ja kappeli jäi saaren ainoaksi, joka säilyi. Vuonna 1598 Pinu Gauci tuli kappelin hoitajaksi, ja nimi muuttui Gentilen kappelista Ta’ Pinuksi eli Filipin; vuonna 1619 Amadeo Perugino maalasi pääalttarille Neitsyt Marian taivaaseenottamisen. Vuonna 1883 Karmni Grima kuuli kappelin ohi kulkiessaan äänen, joka pyysi häntä lausumaan kolme Ave Mariaa, ja seuraavina vuosina kappelin Neitsyt Marialle liitettiin ihmeitä; uuden kirkon rakentaminen aloitettiin 30. toukokuuta 1920.
+AIEMPI KYSYMYS: Mitä Ta’ Pinu tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Nimi Ta’ Pinu tarkoittaa Pinun tai Filipin kappelia. Aiemmin kappeli tunnettiin Gentilen kappelina, mutta vuonna 1598 [[Pinu Gauci]] tuli sen hoitajaksi, ja nimi muuttui hänen mukaansa. Pyhäkkö sijaitsee noin 700 metrin päässä [[Għarbin]] kylästä Maltan sisarsaarella [[Gozolla]]. Pienestä nimestä tuli iso.
+KYSYMYS: Kerro lisää: Pinu Gauci
+
+### 107
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ta’ Pinu (kulttuuri)
+Tietoruudun teksti: Ta’ Pinun kansallinen pyhäkkö on roomalaiskatolinen basilika noin 700 metrin päässä Għarbin kylästä Maltan sisarsaarella Gozolla. Pyhäkön alkuperä on tuntematon: vuonna 1575 apostolinen visitaattori Pietro Dusina piti kappelin kuntoa niin huonona, että määräsi sen suljettavaksi ja purettavaksi, mutta työmiehen käsi murtui ensimmäisessä iskussa, mitä pidettiin merkkinä, ja kappeli jäi saaren ainoaksi, joka säilyi. Vuonna 1598 Pinu Gauci tuli kappelin hoitajaksi, ja nimi muuttui Gentilen kappelista Ta’ Pinuksi eli Filipin; vuonna 1619 Amadeo Perugino maalasi pääalttarille Neitsyt Marian taivaaseenottamisen. Vuonna 1883 Karmni Grima kuuli kappelin ohi kulkiessaan äänen, joka pyysi häntä lausumaan kolme Ave Mariaa, ja seuraavina vuosina kappelin Neitsyt Marialle liitettiin ihmeitä; uuden kirkon rakentaminen aloitettiin 30. toukokuuta 1920.
+AIEMPI KYSYMYS: Mitä Ta’ Pinu tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Nimi Ta’ Pinu tarkoittaa Pinun tai Filipin kappelia. Aiemmin kappeli tunnettiin Gentilen kappelina, mutta vuonna 1598 [[Pinu Gauci]] tuli sen hoitajaksi, ja nimi muuttui hänen mukaansa. Pyhäkkö sijaitsee noin 700 metrin päässä [[Għarbin]] kylästä Maltan sisarsaarella [[Gozolla]]. Pienestä nimestä tuli iso.
+KYSYMYS: Kerro lisää: Għarbin
+
+### 108
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ta’ Pinu (kulttuuri)
+Tietoruudun teksti: Ta’ Pinun kansallinen pyhäkkö on roomalaiskatolinen basilika noin 700 metrin päässä Għarbin kylästä Maltan sisarsaarella Gozolla. Pyhäkön alkuperä on tuntematon: vuonna 1575 apostolinen visitaattori Pietro Dusina piti kappelin kuntoa niin huonona, että määräsi sen suljettavaksi ja purettavaksi, mutta työmiehen käsi murtui ensimmäisessä iskussa, mitä pidettiin merkkinä, ja kappeli jäi saaren ainoaksi, joka säilyi. Vuonna 1598 Pinu Gauci tuli kappelin hoitajaksi, ja nimi muuttui Gentilen kappelista Ta’ Pinuksi eli Filipin; vuonna 1619 Amadeo Perugino maalasi pääalttarille Neitsyt Marian taivaaseenottamisen. Vuonna 1883 Karmni Grima kuuli kappelin ohi kulkiessaan äänen, joka pyysi häntä lausumaan kolme Ave Mariaa, ja seuraavina vuosina kappelin Neitsyt Marialle liitettiin ihmeitä; uuden kirkon rakentaminen aloitettiin 30. toukokuuta 1920.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Ruoka: Leipä Unescon listalla] n. 1500-luku — Maltalainen ftira on hapanleipä, joka leivotaan rengasmaiseksi tai litteäksi. Sen väliin tulee sardiineja, tonnikalaa, perunaa, tomaattia, sipulia, kaprista ja oliiveja. Gozolla ftira tarjoillaan lähes pizzan tapaan avoimena, ohuiden perunaviipaleiden peittämänä, tai kaksinkerroin taitettuna calzonen tavoin. Ftiran leipomisen uskotaan ulottuvan 1500-luvulle. Vuonna 2020 Unescon aineettoman kulttuuriperinnön luetteloon lisättiin maltalaisen litteän hapanleivän, ftiran, valmistuksen taito.
+AIEMPI KYSYMYS: Mitä Ta’ Pinu tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Nimi Ta’ Pinu tarkoittaa Pinun tai Filipin kappelia. Aiemmin kappeli tunnettiin Gentilen kappelina, mutta vuonna 1598 [[Pinu Gauci]] tuli sen hoitajaksi, ja nimi muuttui hänen mukaansa. Pyhäkkö sijaitsee noin 700 metrin päässä [[Għarbin]] kylästä Maltan sisarsaarella [[Gozolla]]. Pienestä nimestä tuli iso.
+KYSYMYS: Kerro lisää: Gozolla
+
+### 109
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ta’ Pinu (kulttuuri)
+Tietoruudun teksti: Ta’ Pinun kansallinen pyhäkkö on roomalaiskatolinen basilika noin 700 metrin päässä Għarbin kylästä Maltan sisarsaarella Gozolla. Pyhäkön alkuperä on tuntematon: vuonna 1575 apostolinen visitaattori Pietro Dusina piti kappelin kuntoa niin huonona, että määräsi sen suljettavaksi ja purettavaksi, mutta työmiehen käsi murtui ensimmäisessä iskussa, mitä pidettiin merkkinä, ja kappeli jäi saaren ainoaksi, joka säilyi. Vuonna 1598 Pinu Gauci tuli kappelin hoitajaksi, ja nimi muuttui Gentilen kappelista Ta’ Pinuksi eli Filipin; vuonna 1619 Amadeo Perugino maalasi pääalttarille Neitsyt Marian taivaaseenottamisen. Vuonna 1883 Karmni Grima kuuli kappelin ohi kulkiessaan äänen, joka pyysi häntä lausumaan kolme Ave Mariaa, ja seuraavina vuosina kappelin Neitsyt Marialle liitettiin ihmeitä; uuden kirkon rakentaminen aloitettiin 30. toukokuuta 1920.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valparaíso — kohdekartta / Kohdekartta: Toisinajattelijoiden hautausmaa] 1825 Hautausmaa on Panteón-kukkulalla Cementerio N:o 1:n vastapäätä, vanhan kaupunginvankilan vieressä — vankilassa toimii nykyään kulttuurikeskus. Se perustettiin 1825 brittiläisten ja muiden eurooppalaisten asukkaiden haudoiksi: heidän protestanttinen uskonsa poikkesi valtionuskonnosta, joka oli roomalaiskatolinen. 1800-luvun alussa Valparaísoon muuttaneita ei-katolisia ei saanut haudata katolisiin hautausmaihin. Heidät haudattiin Playa Anchan kukkulalle tai heitettiin mereen. Vuonna 1823 Britannian konsuli George Seymour osti pormestari Robert Simpsonin avulla maata vankilan vierestä juuri tätä varten: hautausmaaksi niille, joita kutsuttiin toisinajattelijoiksi. Alue jakautuu kahdeksaan …
+AIEMPI KYSYMYS: Minä vuonna uuden kirkon rakentaminen aloitettiin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Uuden kirkon rakentaminen aloitettiin 30. toukokuuta 1920. Rakennus nousi paikalle, jossa oli jo vuosisatoja seissyt pieni kappeli, jonka Neitsyt Marialle liitettiin ihmeitä 1880-luvulta alkaen. Pyhäkkö on nykyisin [[roomalaiskatolinen]] basilika [[Għarbin]] kylän lähellä. Tarkka päivä oli helppo muistaa.
+KYSYMYS: Kerro lisää: roomalaiskatolinen
+
+### 110
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ta’ Pinu (kulttuuri)
+Tietoruudun teksti: Ta’ Pinun kansallinen pyhäkkö on roomalaiskatolinen basilika noin 700 metrin päässä Għarbin kylästä Maltan sisarsaarella Gozolla. Pyhäkön alkuperä on tuntematon: vuonna 1575 apostolinen visitaattori Pietro Dusina piti kappelin kuntoa niin huonona, että määräsi sen suljettavaksi ja purettavaksi, mutta työmiehen käsi murtui ensimmäisessä iskussa, mitä pidettiin merkkinä, ja kappeli jäi saaren ainoaksi, joka säilyi. Vuonna 1598 Pinu Gauci tuli kappelin hoitajaksi, ja nimi muuttui Gentilen kappelista Ta’ Pinuksi eli Filipin; vuonna 1619 Amadeo Perugino maalasi pääalttarille Neitsyt Marian taivaaseenottamisen. Vuonna 1883 Karmni Grima kuuli kappelin ohi kulkiessaan äänen, joka pyysi häntä lausumaan kolme Ave Mariaa, ja seuraavina vuosina kappelin Neitsyt Marialle liitettiin ihmeitä; uuden kirkon rakentaminen aloitettiin 30. toukokuuta 1920.
+AIEMPI KYSYMYS: Kuka maalasi pääalttarin taivaaseenottamisen?
+AIEMPI VASTAUS (Livia):
+Ai tota. Pääalttarin maalauksen Neitsyt Marian taivaaseenottamisesta teki [[Amadeo Perugino]] vuonna 1619. Maalaus kuuluu pyhäkön vanhaan kappeliin, jonka alkuperä on tuntematon. Kappeli tunnettiin aiemmin Gentilen kappelina, ja vuonna 1598 sen hoitajaksi tullut [[Pinu Gauci]] antoi sille nykyisen nimen. Taidetta on kyllä ollut ihan hyvä katsella ylhäältä.
+KYSYMYS: Kerro lisää: Amadeo Perugino
+
+### 111
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ta’ Pinu (kulttuuri)
+Tietoruudun teksti: Ta’ Pinun kansallinen pyhäkkö on roomalaiskatolinen basilika noin 700 metrin päässä Għarbin kylästä Maltan sisarsaarella Gozolla. Pyhäkön alkuperä on tuntematon: vuonna 1575 apostolinen visitaattori Pietro Dusina piti kappelin kuntoa niin huonona, että määräsi sen suljettavaksi ja purettavaksi, mutta työmiehen käsi murtui ensimmäisessä iskussa, mitä pidettiin merkkinä, ja kappeli jäi saaren ainoaksi, joka säilyi. Vuonna 1598 Pinu Gauci tuli kappelin hoitajaksi, ja nimi muuttui Gentilen kappelista Ta’ Pinuksi eli Filipin; vuonna 1619 Amadeo Perugino maalasi pääalttarille Neitsyt Marian taivaaseenottamisen. Vuonna 1883 Karmni Grima kuuli kappelin ohi kulkiessaan äänen, joka pyysi häntä lausumaan kolme Ave Mariaa, ja seuraavina vuosina kappelin Neitsyt Marialle liitettiin ihmeitä; uuden kirkon rakentaminen aloitettiin 30. toukokuuta 1920.
+AIEMPI KYSYMYS: Mitä tapahtui, kun kappeli määrättiin purettavaksi?
+AIEMPI VASTAUS (Livia):
+Joo, tää on hyvä tarina. Vuonna 1575 apostolinen visitaattori [[Pietro Dusina]] piti kappelin kuntoa niin huonona, että määräsi sen suljettavaksi ja purettavaksi. Ensimmäisessä iskussa työmiehen käsi kuitenkin murtui, ja tapausta pidettiin merkkinä. Kappeli säilyi [[Gozolla]], ja siitä tuli saaren ainoa, joka jäi pystyyn. Pitkä tarina, mut lyhyt käsi.
+KYSYMYS: Kerro lisää: Pietro Dusina
+
+### 112
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ta’ Pinu (kulttuuri)
+Tietoruudun teksti: Ta’ Pinun kansallinen pyhäkkö on roomalaiskatolinen basilika noin 700 metrin päässä Għarbin kylästä Maltan sisarsaarella Gozolla. Pyhäkön alkuperä on tuntematon: vuonna 1575 apostolinen visitaattori Pietro Dusina piti kappelin kuntoa niin huonona, että määräsi sen suljettavaksi ja purettavaksi, mutta työmiehen käsi murtui ensimmäisessä iskussa, mitä pidettiin merkkinä, ja kappeli jäi saaren ainoaksi, joka säilyi. Vuonna 1598 Pinu Gauci tuli kappelin hoitajaksi, ja nimi muuttui Gentilen kappelista Ta’ Pinuksi eli Filipin; vuonna 1619 Amadeo Perugino maalasi pääalttarille Neitsyt Marian taivaaseenottamisen. Vuonna 1883 Karmni Grima kuuli kappelin ohi kulkiessaan äänen, joka pyysi häntä lausumaan kolme Ave Mariaa, ja seuraavina vuosina kappelin Neitsyt Marialle liitettiin ihmeitä; uuden kirkon rakentaminen aloitettiin 30. toukokuuta 1920.
+AIEMPI KYSYMYS: Mitä Karmni Grima kuuli vuonna 1883?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Karmni Grima]] kuuli vuonna 1883 kappelin ohi kulkiessaan äänen, joka pyysi häntä lausumaan kolme [[Ave Mariaa]]. Seuraavina vuosina kappelin Neitsyt Marialle liitettiin ihmeitä, ja ne lisäsivät paikan merkitystä pyhiinvaelluskohteena. Uuden kirkon rakentaminen aloitettiin lopulta 30. toukokuuta 1920. Äänet ovat kyllä minun alaani, mut en kuule tuollaisia.
+KYSYMYS: Kerro lisää: Karmni Grima
+
+### 113
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ta’ Pinu (kulttuuri)
+Tietoruudun teksti: Ta’ Pinun kansallinen pyhäkkö on roomalaiskatolinen basilika noin 700 metrin päässä Għarbin kylästä Maltan sisarsaarella Gozolla. Pyhäkön alkuperä on tuntematon: vuonna 1575 apostolinen visitaattori Pietro Dusina piti kappelin kuntoa niin huonona, että määräsi sen suljettavaksi ja purettavaksi, mutta työmiehen käsi murtui ensimmäisessä iskussa, mitä pidettiin merkkinä, ja kappeli jäi saaren ainoaksi, joka säilyi. Vuonna 1598 Pinu Gauci tuli kappelin hoitajaksi, ja nimi muuttui Gentilen kappelista Ta’ Pinuksi eli Filipin; vuonna 1619 Amadeo Perugino maalasi pääalttarille Neitsyt Marian taivaaseenottamisen. Vuonna 1883 Karmni Grima kuuli kappelin ohi kulkiessaan äänen, joka pyysi häntä lausumaan kolme Ave Mariaa, ja seuraavina vuosina kappelin Neitsyt Marialle liitettiin ihmeitä; uuden kirkon rakentaminen aloitettiin 30. toukokuuta 1920.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Washington Squaren riemukaari] 1889–1895 Vuonna 1889 tuli kuluneeksi sata vuotta George Washingtonin virkaanastujaisista, ja liikemies William Rhinelander Stewart pystytti juhlan kunniaksi Viidennelle Avenuelle puusta ja kipsistä tehdyn muistokaaren. Stewart asui aukion pohjoislaidalla, ja hänen ystävänsä keräsivät hankkeeseen 2 765 dollaria. Vapaamuurarit kulkivat juhlakulkueessa kaaren ali Washingtonin virkaanastujaisraamattu mukanaan. Väliaikainen kaari oli niin suosittu, että rahaa kerättiin lisää ja kivinen kaari tilattiin arkkitehti Stanford Whiteltä. White otti mallin roomalaisesta riemukaaresta ja päätyi lähelle ensimmäisellä vuosisadalla rakennettua Tituksen kaarta. Rakennusaine on valkoista Tuckahoen marmoria. …
+- [Lissabon — kaupunkilehti / Lissabon: Maria Severa lauloi ensimmäisenä fadon maineeseen] Fado on Lissabonin oma laulu, eikä se ole syntynyt juhlasalissa. Kokoonpano on yhä sama kuin alussa: yksi laulaja, klassinen kitara ja portugalilainen kitara, jossa on kaksitoista kieltä kuutena parina. Ensimmäinen, joka nousi tällä laululla koko kaupungin puheenaiheeksi, oli Maria Severa Onofriana. Hän syntyi Madragoassa 26. heinäkuuta 1820 äitinsä kapakan lapsena ja lauloi Mourarian kujilla säestäen itseään. Hän kuoli tuberkuloosiin 26-vuotiaana 30. marraskuuta 1846, ja hänet haudattiin yhteishautaan ilman arkkua. Vuonna 1931 hänen tarinastaan tehtiin Portugalin ensimmäinen äänielokuva.
+AIEMPI KYSYMYS: Mitä Karmni Grima kuuli vuonna 1883?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Karmni Grima]] kuuli vuonna 1883 kappelin ohi kulkiessaan äänen, joka pyysi häntä lausumaan kolme [[Ave Mariaa]]. Seuraavina vuosina kappelin Neitsyt Marialle liitettiin ihmeitä, ja ne lisäsivät paikan merkitystä pyhiinvaelluskohteena. Uuden kirkon rakentaminen aloitettiin lopulta 30. toukokuuta 1920. Äänet ovat kyllä minun alaani, mut en kuule tuollaisia.
+KYSYMYS: Kerro lisää: Ave Mariaa
+
+### 114
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vittoriosa (Birgu) (historia)
+Tietoruudun teksti: Birgu, italiaksi Vittoriosa eli Voitokas kaupunki, on vanha linnoitettu kaupunki Grand Harbourin eteläpuolella niemellä, jonka kärjessä on Fort Saint Angelo ja tyvellä Cospicua. Ennen Vallettan perustamista Grand Harbourin hallitsemiseksi oli valloitettava Birgu. Kaupunki oli Johanniittaritarikunnan tukikohta ja käytännössä Maltan pääkaupunki vuosina 1530–1571: kun ritarikunta oli menettänyt Rodoksen osmaneille ja saanut Maltan uudeksi kodikseen, se valitsi Birgun pääkaupungiksi, koska Mdina oli sisämaassa eikä sopinut sen merisotilaallisiin tarpeisiin. Birgu on tunnettu tärkeästä osastaan Maltan suuressa piirityksessä vuonna 1565. 1900-luvun alussa kaupungissa oli yli 6 000 asukasta, ja paikalliset puhuvat Cottonera-murretta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+AIEMPI KYSYMYS: Minä vuosina Birgu oli Maltan käytännön pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tän luvun muistan. Birgu oli [[Johanniittaritarikunnan]] tukikohta ja käytännössä Maltan pääkaupunki vuosina 1530–1571. Ritarikunta oli menettänyt [[Rodoksen]] osmaneille ja saanut Maltan uudeksi kodikseen, ja se valitsi Birgun, koska Mdina oli sisämaassa eikä sopinut sen merisotilaallisiin tarpeisiin. Birgu on tunnettu myös osastaan [[Maltan suuressa piirityksessä]] vuonna 1565. Ei paha, kun muistin vuodetkin.
+KYSYMYS: Kerro lisää: Johanniittaritarikunnan
+
+### 115
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vittoriosa (Birgu) (historia)
+Tietoruudun teksti: Birgu, italiaksi Vittoriosa eli Voitokas kaupunki, on vanha linnoitettu kaupunki Grand Harbourin eteläpuolella niemellä, jonka kärjessä on Fort Saint Angelo ja tyvellä Cospicua. Ennen Vallettan perustamista Grand Harbourin hallitsemiseksi oli valloitettava Birgu. Kaupunki oli Johanniittaritarikunnan tukikohta ja käytännössä Maltan pääkaupunki vuosina 1530–1571: kun ritarikunta oli menettänyt Rodoksen osmaneille ja saanut Maltan uudeksi kodikseen, se valitsi Birgun pääkaupungiksi, koska Mdina oli sisämaassa eikä sopinut sen merisotilaallisiin tarpeisiin. Birgu on tunnettu tärkeästä osastaan Maltan suuressa piirityksessä vuonna 1565. 1900-luvun alussa kaupungissa oli yli 6 000 asukasta, ja paikalliset puhuvat Cottonera-murretta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Saari, jonka vuokra oli yksi haukka] 1530 — Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian varakuninkaalle. Suurmestari Philippe Villiers de L'Isle-Adam purjehti Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan uudelleen Pyhän Angelon linnakkeeksi.
+AIEMPI KYSYMYS: Minä vuosina Birgu oli Maltan käytännön pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tän luvun muistan. Birgu oli [[Johanniittaritarikunnan]] tukikohta ja käytännössä Maltan pääkaupunki vuosina 1530–1571. Ritarikunta oli menettänyt [[Rodoksen]] osmaneille ja saanut Maltan uudeksi kodikseen, ja se valitsi Birgun, koska Mdina oli sisämaassa eikä sopinut sen merisotilaallisiin tarpeisiin. Birgu on tunnettu myös osastaan [[Maltan suuressa piirityksessä]] vuonna 1565. Ei paha, kun muistin vuodetkin.
+KYSYMYS: Kerro lisää: Rodoksen
+
+### 116
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vittoriosa (Birgu) (historia)
+Tietoruudun teksti: Birgu, italiaksi Vittoriosa eli Voitokas kaupunki, on vanha linnoitettu kaupunki Grand Harbourin eteläpuolella niemellä, jonka kärjessä on Fort Saint Angelo ja tyvellä Cospicua. Ennen Vallettan perustamista Grand Harbourin hallitsemiseksi oli valloitettava Birgu. Kaupunki oli Johanniittaritarikunnan tukikohta ja käytännössä Maltan pääkaupunki vuosina 1530–1571: kun ritarikunta oli menettänyt Rodoksen osmaneille ja saanut Maltan uudeksi kodikseen, se valitsi Birgun pääkaupungiksi, koska Mdina oli sisämaassa eikä sopinut sen merisotilaallisiin tarpeisiin. Birgu on tunnettu tärkeästä osastaan Maltan suuressa piirityksessä vuonna 1565. 1900-luvun alussa kaupungissa oli yli 6 000 asukasta, ja paikalliset puhuvat Cottonera-murretta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+AIEMPI KYSYMYS: Minä vuosina Birgu oli Maltan käytännön pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tän luvun muistan. Birgu oli [[Johanniittaritarikunnan]] tukikohta ja käytännössä Maltan pääkaupunki vuosina 1530–1571. Ritarikunta oli menettänyt [[Rodoksen]] osmaneille ja saanut Maltan uudeksi kodikseen, ja se valitsi Birgun, koska Mdina oli sisämaassa eikä sopinut sen merisotilaallisiin tarpeisiin. Birgu on tunnettu myös osastaan [[Maltan suuressa piirityksessä]] vuonna 1565. Ei paha, kun muistin vuodetkin.
+KYSYMYS: Kerro lisää: Maltan suuressa piirityksessä
+
+### 117
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vittoriosa (Birgu) (historia)
+Tietoruudun teksti: Birgu, italiaksi Vittoriosa eli Voitokas kaupunki, on vanha linnoitettu kaupunki Grand Harbourin eteläpuolella niemellä, jonka kärjessä on Fort Saint Angelo ja tyvellä Cospicua. Ennen Vallettan perustamista Grand Harbourin hallitsemiseksi oli valloitettava Birgu. Kaupunki oli Johanniittaritarikunnan tukikohta ja käytännössä Maltan pääkaupunki vuosina 1530–1571: kun ritarikunta oli menettänyt Rodoksen osmaneille ja saanut Maltan uudeksi kodikseen, se valitsi Birgun pääkaupungiksi, koska Mdina oli sisämaassa eikä sopinut sen merisotilaallisiin tarpeisiin. Birgu on tunnettu tärkeästä osastaan Maltan suuressa piirityksessä vuonna 1565. 1900-luvun alussa kaupungissa oli yli 6 000 asukasta, ja paikalliset puhuvat Cottonera-murretta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Rakennukset: Linnake Grand Harbourin sydämessä] n. 1530–1690-luku — Fort St. Angelo Birgussa seisoo Grand Harbourin keskellä niemellä, jolla on ollut linnoitus jo keskiajalla. Antiikin aikaan paikalla oli Astarten temppeli, ja myöhemmin linnaa kutsuttiin nimellä Castrum Maris, Meren linna. Kun ritarikunta saapui Maltalle vuonna 1530, se valitsi asuinpaikakseen Birgun, ja linnake tuli suurmestarin kotipaikaksi. Nykyisen ilmeensä se sai 1690-luvun uudistuksessa, jonka suunnitteli Carlos de Grunenbergh. Britit pitivät linnakkeessa varuskuntaa vuosina 1800–1979.
+AIEMPI KYSYMYS: Millä nimellä kaupunkia kutsutaan italiaksi?
+AIEMPI VASTAUS (Livia):
+No jopas. Italiaksi Birgua kutsutaan nimellä Vittoriosa, joka tarkoittaa Voitokasta kaupunkia. Se on vanha linnoitettu kaupunki [[Grand Harbourin]] eteläpuolella niemellä, jonka kärjessä on [[Fort Saint Angelo]] ja tyvellä [[Cospicua]]. Nimi liittyy kaupungin rooliin Maltan suuressa piirityksessä vuonna 1565. Kaupungilla on siis kaksi nimeä, kuten monella hyvällä paikalla.
+KYSYMYS: Kerro lisää: Grand Harbourin
+
+### 118
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vittoriosa (Birgu) (historia)
+Tietoruudun teksti: Birgu, italiaksi Vittoriosa eli Voitokas kaupunki, on vanha linnoitettu kaupunki Grand Harbourin eteläpuolella niemellä, jonka kärjessä on Fort Saint Angelo ja tyvellä Cospicua. Ennen Vallettan perustamista Grand Harbourin hallitsemiseksi oli valloitettava Birgu. Kaupunki oli Johanniittaritarikunnan tukikohta ja käytännössä Maltan pääkaupunki vuosina 1530–1571: kun ritarikunta oli menettänyt Rodoksen osmaneille ja saanut Maltan uudeksi kodikseen, se valitsi Birgun pääkaupungiksi, koska Mdina oli sisämaassa eikä sopinut sen merisotilaallisiin tarpeisiin. Birgu on tunnettu tärkeästä osastaan Maltan suuressa piirityksessä vuonna 1565. 1900-luvun alussa kaupungissa oli yli 6 000 asukasta, ja paikalliset puhuvat Cottonera-murretta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Rakennukset: Linnake Grand Harbourin sydämessä] n. 1530–1690-luku — Fort St. Angelo Birgussa seisoo Grand Harbourin keskellä niemellä, jolla on ollut linnoitus jo keskiajalla. Antiikin aikaan paikalla oli Astarten temppeli, ja myöhemmin linnaa kutsuttiin nimellä Castrum Maris, Meren linna. Kun ritarikunta saapui Maltalle vuonna 1530, se valitsi asuinpaikakseen Birgun, ja linnake tuli suurmestarin kotipaikaksi. Nykyisen ilmeensä se sai 1690-luvun uudistuksessa, jonka suunnitteli Carlos de Grunenbergh. Britit pitivät linnakkeessa varuskuntaa vuosina 1800–1979.
+AIEMPI KYSYMYS: Millä nimellä kaupunkia kutsutaan italiaksi?
+AIEMPI VASTAUS (Livia):
+No jopas. Italiaksi Birgua kutsutaan nimellä Vittoriosa, joka tarkoittaa Voitokasta kaupunkia. Se on vanha linnoitettu kaupunki [[Grand Harbourin]] eteläpuolella niemellä, jonka kärjessä on [[Fort Saint Angelo]] ja tyvellä [[Cospicua]]. Nimi liittyy kaupungin rooliin Maltan suuressa piirityksessä vuonna 1565. Kaupungilla on siis kaksi nimeä, kuten monella hyvällä paikalla.
+KYSYMYS: Kerro lisää: Fort Saint Angelo
+
+### 119
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vittoriosa (Birgu) (historia)
+Tietoruudun teksti: Birgu, italiaksi Vittoriosa eli Voitokas kaupunki, on vanha linnoitettu kaupunki Grand Harbourin eteläpuolella niemellä, jonka kärjessä on Fort Saint Angelo ja tyvellä Cospicua. Ennen Vallettan perustamista Grand Harbourin hallitsemiseksi oli valloitettava Birgu. Kaupunki oli Johanniittaritarikunnan tukikohta ja käytännössä Maltan pääkaupunki vuosina 1530–1571: kun ritarikunta oli menettänyt Rodoksen osmaneille ja saanut Maltan uudeksi kodikseen, se valitsi Birgun pääkaupungiksi, koska Mdina oli sisämaassa eikä sopinut sen merisotilaallisiin tarpeisiin. Birgu on tunnettu tärkeästä osastaan Maltan suuressa piirityksessä vuonna 1565. 1900-luvun alussa kaupungissa oli yli 6 000 asukasta, ja paikalliset puhuvat Cottonera-murretta.
+AIEMPI KYSYMYS: Millä nimellä kaupunkia kutsutaan italiaksi?
+AIEMPI VASTAUS (Livia):
+No jopas. Italiaksi Birgua kutsutaan nimellä Vittoriosa, joka tarkoittaa Voitokasta kaupunkia. Se on vanha linnoitettu kaupunki [[Grand Harbourin]] eteläpuolella niemellä, jonka kärjessä on [[Fort Saint Angelo]] ja tyvellä [[Cospicua]]. Nimi liittyy kaupungin rooliin Maltan suuressa piirityksessä vuonna 1565. Kaupungilla on siis kaksi nimeä, kuten monella hyvällä paikalla.
+KYSYMYS: Kerro lisää: Cospicua
+
+### 120
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vittoriosa (Birgu) (historia)
+Tietoruudun teksti: Birgu, italiaksi Vittoriosa eli Voitokas kaupunki, on vanha linnoitettu kaupunki Grand Harbourin eteläpuolella niemellä, jonka kärjessä on Fort Saint Angelo ja tyvellä Cospicua. Ennen Vallettan perustamista Grand Harbourin hallitsemiseksi oli valloitettava Birgu. Kaupunki oli Johanniittaritarikunnan tukikohta ja käytännössä Maltan pääkaupunki vuosina 1530–1571: kun ritarikunta oli menettänyt Rodoksen osmaneille ja saanut Maltan uudeksi kodikseen, se valitsi Birgun pääkaupungiksi, koska Mdina oli sisämaassa eikä sopinut sen merisotilaallisiin tarpeisiin. Birgu on tunnettu tärkeästä osastaan Maltan suuressa piirityksessä vuonna 1565. 1900-luvun alussa kaupungissa oli yli 6 000 asukasta, ja paikalliset puhuvat Cottonera-murretta.
+AIEMPI KYSYMYS: Mistä Johanniittaritarikunta tuli Maltalle?
+AIEMPI VASTAUS (Livia):
+Kato, hyvä kysymys. Johanniittaritarikunta tuli Maltalle [[Rodokselta]], jonka se oli menettänyt [[osmaneille]]. Maltasta tuli ritarikunnan uusi koti, ja se asettui aluksi Birguun, jossa sen tukikohta toimi vuosina 1530–1571. Valinta perustui siihen, että Birgu oli merenrannalla, toisin kuin sisämaassa sijaitseva [[Mdina]]. Rodoksen ikävä tuskin jäi kuitenkaan helposti pois mielestä.
+KYSYMYS: Kerro lisää: Rodokselta
+
+### 121
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vittoriosa (Birgu) (historia)
+Tietoruudun teksti: Birgu, italiaksi Vittoriosa eli Voitokas kaupunki, on vanha linnoitettu kaupunki Grand Harbourin eteläpuolella niemellä, jonka kärjessä on Fort Saint Angelo ja tyvellä Cospicua. Ennen Vallettan perustamista Grand Harbourin hallitsemiseksi oli valloitettava Birgu. Kaupunki oli Johanniittaritarikunnan tukikohta ja käytännössä Maltan pääkaupunki vuosina 1530–1571: kun ritarikunta oli menettänyt Rodoksen osmaneille ja saanut Maltan uudeksi kodikseen, se valitsi Birgun pääkaupungiksi, koska Mdina oli sisämaassa eikä sopinut sen merisotilaallisiin tarpeisiin. Birgu on tunnettu tärkeästä osastaan Maltan suuressa piirityksessä vuonna 1565. 1900-luvun alussa kaupungissa oli yli 6 000 asukasta, ja paikalliset puhuvat Cottonera-murretta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+AIEMPI KYSYMYS: Mistä Johanniittaritarikunta tuli Maltalle?
+AIEMPI VASTAUS (Livia):
+Kato, hyvä kysymys. Johanniittaritarikunta tuli Maltalle [[Rodokselta]], jonka se oli menettänyt [[osmaneille]]. Maltasta tuli ritarikunnan uusi koti, ja se asettui aluksi Birguun, jossa sen tukikohta toimi vuosina 1530–1571. Valinta perustui siihen, että Birgu oli merenrannalla, toisin kuin sisämaassa sijaitseva [[Mdina]]. Rodoksen ikävä tuskin jäi kuitenkaan helposti pois mielestä.
+KYSYMYS: Kerro lisää: osmaneille
+
+### 122
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vittoriosa (Birgu) (historia)
+Tietoruudun teksti: Birgu, italiaksi Vittoriosa eli Voitokas kaupunki, on vanha linnoitettu kaupunki Grand Harbourin eteläpuolella niemellä, jonka kärjessä on Fort Saint Angelo ja tyvellä Cospicua. Ennen Vallettan perustamista Grand Harbourin hallitsemiseksi oli valloitettava Birgu. Kaupunki oli Johanniittaritarikunnan tukikohta ja käytännössä Maltan pääkaupunki vuosina 1530–1571: kun ritarikunta oli menettänyt Rodoksen osmaneille ja saanut Maltan uudeksi kodikseen, se valitsi Birgun pääkaupungiksi, koska Mdina oli sisämaassa eikä sopinut sen merisotilaallisiin tarpeisiin. Birgu on tunnettu tärkeästä osastaan Maltan suuressa piirityksessä vuonna 1565. 1900-luvun alussa kaupungissa oli yli 6 000 asukasta, ja paikalliset puhuvat Cottonera-murretta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Hiljainen kaupunki] n. 700-luku eaa. — Foinikialaiset perustivat Mdinan paikalle asutuksen noin 700-luvulla eaa., ja roomalaisten aikana se sai nimen Melita. Nykyinen nimi tulee arabian sanasta madīnah, kaupunki. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes Pyhän Johanneksen ritarikunta asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua Hiljaiseksi kaupungiksi. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle.
+AIEMPI KYSYMYS: Mistä Johanniittaritarikunta tuli Maltalle?
+AIEMPI VASTAUS (Livia):
+Kato, hyvä kysymys. Johanniittaritarikunta tuli Maltalle [[Rodokselta]], jonka se oli menettänyt [[osmaneille]]. Maltasta tuli ritarikunnan uusi koti, ja se asettui aluksi Birguun, jossa sen tukikohta toimi vuosina 1530–1571. Valinta perustui siihen, että Birgu oli merenrannalla, toisin kuin sisämaassa sijaitseva [[Mdina]]. Rodoksen ikävä tuskin jäi kuitenkaan helposti pois mielestä.
+KYSYMYS: Kerro lisää: Mdina
+
+### 123
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vittoriosa (Birgu) (historia)
+Tietoruudun teksti: Birgu, italiaksi Vittoriosa eli Voitokas kaupunki, on vanha linnoitettu kaupunki Grand Harbourin eteläpuolella niemellä, jonka kärjessä on Fort Saint Angelo ja tyvellä Cospicua. Ennen Vallettan perustamista Grand Harbourin hallitsemiseksi oli valloitettava Birgu. Kaupunki oli Johanniittaritarikunnan tukikohta ja käytännössä Maltan pääkaupunki vuosina 1530–1571: kun ritarikunta oli menettänyt Rodoksen osmaneille ja saanut Maltan uudeksi kodikseen, se valitsi Birgun pääkaupungiksi, koska Mdina oli sisämaassa eikä sopinut sen merisotilaallisiin tarpeisiin. Birgu on tunnettu tärkeästä osastaan Maltan suuressa piirityksessä vuonna 1565. 1900-luvun alussa kaupungissa oli yli 6 000 asukasta, ja paikalliset puhuvat Cottonera-murretta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Johanneksen ko-katedraali] 1572–1577 (rakennus), 1608 (Caravaggion maalaus) Arkkitehti Girolamo Cassar suunnitteli kirkon ritarikunnan omaksi konventtikirkoksi vuosina 1572–1577, ja ulkoa se on yhä vaatimaton: paksut kalkkikivimuurit ja kaksi kapeaa tornia näyttävät pikemmin linnoitukselta kuin katedraalilta. Sisällä on toisin — 1660-luvulla Mattia Preti maalasi koko katon ja seinät kultaisiksi barokkiveistoksiksi, ja lattia on yhtenäinen mosaiikki kahdeksastasadasta ritarin hautalaatasta. Caravaggio pakeni Roomasta 1607 tapettuaan miehen kaksintaistelussa, ja Maltalla hänet otettiin heinäkuussa 1608 ritarikunnan jäseneksi. Kiitokseksi hän maalasi oratorioon "Johannes Kastajan mestauksen" — ainoan teoksensa, jonka hä…
+- [Malta — maalehti / Historia: Hiljainen kaupunki] n. 700-luku eaa. — Foinikialaiset perustivat Mdinan paikalle asutuksen noin 700-luvulla eaa., ja roomalaisten aikana se sai nimen Melita. Nykyinen nimi tulee arabian sanasta madīnah, kaupunki. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes Pyhän Johanneksen ritarikunta asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua Hiljaiseksi kaupungiksi. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle.
+AIEMPI KYSYMYS: Mitä Mdinalle tapahtui ritarikunnan tulon jälkeen?
+AIEMPI VASTAUS (Livia):
+Ai se. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes [[Pyhän Johanneksen ritarikunta]] asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua [[Hiljaiseksi kaupungiksi]]. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle. [[Foinikialaiset]] perustivat asutuksen noin 700-luvulla eaa. Hiljaisuus on kyllä minun makuuni.
+KYSYMYS: Kerro lisää: Pyhän Johanneksen ritarikunta
+
+### 124
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vittoriosa (Birgu) (historia)
+Tietoruudun teksti: Birgu, italiaksi Vittoriosa eli Voitokas kaupunki, on vanha linnoitettu kaupunki Grand Harbourin eteläpuolella niemellä, jonka kärjessä on Fort Saint Angelo ja tyvellä Cospicua. Ennen Vallettan perustamista Grand Harbourin hallitsemiseksi oli valloitettava Birgu. Kaupunki oli Johanniittaritarikunnan tukikohta ja käytännössä Maltan pääkaupunki vuosina 1530–1571: kun ritarikunta oli menettänyt Rodoksen osmaneille ja saanut Maltan uudeksi kodikseen, se valitsi Birgun pääkaupungiksi, koska Mdina oli sisämaassa eikä sopinut sen merisotilaallisiin tarpeisiin. Birgu on tunnettu tärkeästä osastaan Maltan suuressa piirityksessä vuonna 1565. 1900-luvun alussa kaupungissa oli yli 6 000 asukasta, ja paikalliset puhuvat Cottonera-murretta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Hiljainen kaupunki] n. 700-luku eaa. — Foinikialaiset perustivat Mdinan paikalle asutuksen noin 700-luvulla eaa., ja roomalaisten aikana se sai nimen Melita. Nykyinen nimi tulee arabian sanasta madīnah, kaupunki. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes Pyhän Johanneksen ritarikunta asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua Hiljaiseksi kaupungiksi. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle.
+AIEMPI KYSYMYS: Mitä Mdinalle tapahtui ritarikunnan tulon jälkeen?
+AIEMPI VASTAUS (Livia):
+Ai se. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes [[Pyhän Johanneksen ritarikunta]] asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua [[Hiljaiseksi kaupungiksi]]. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle. [[Foinikialaiset]] perustivat asutuksen noin 700-luvulla eaa. Hiljaisuus on kyllä minun makuuni.
+KYSYMYS: Kerro lisää: Hiljaiseksi kaupungiksi
+
+### 125
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vittoriosa (Birgu) (historia)
+Tietoruudun teksti: Birgu, italiaksi Vittoriosa eli Voitokas kaupunki, on vanha linnoitettu kaupunki Grand Harbourin eteläpuolella niemellä, jonka kärjessä on Fort Saint Angelo ja tyvellä Cospicua. Ennen Vallettan perustamista Grand Harbourin hallitsemiseksi oli valloitettava Birgu. Kaupunki oli Johanniittaritarikunnan tukikohta ja käytännössä Maltan pääkaupunki vuosina 1530–1571: kun ritarikunta oli menettänyt Rodoksen osmaneille ja saanut Maltan uudeksi kodikseen, se valitsi Birgun pääkaupungiksi, koska Mdina oli sisämaassa eikä sopinut sen merisotilaallisiin tarpeisiin. Birgu on tunnettu tärkeästä osastaan Maltan suuressa piirityksessä vuonna 1565. 1900-luvun alussa kaupungissa oli yli 6 000 asukasta, ja paikalliset puhuvat Cottonera-murretta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Hiljainen kaupunki] n. 700-luku eaa. — Foinikialaiset perustivat Mdinan paikalle asutuksen noin 700-luvulla eaa., ja roomalaisten aikana se sai nimen Melita. Nykyinen nimi tulee arabian sanasta madīnah, kaupunki. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes Pyhän Johanneksen ritarikunta asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua Hiljaiseksi kaupungiksi. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle.
+AIEMPI KYSYMYS: Mitä Mdinalle tapahtui ritarikunnan tulon jälkeen?
+AIEMPI VASTAUS (Livia):
+Ai se. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes [[Pyhän Johanneksen ritarikunta]] asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua [[Hiljaiseksi kaupungiksi]]. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle. [[Foinikialaiset]] perustivat asutuksen noin 700-luvulla eaa. Hiljaisuus on kyllä minun makuuni.
+KYSYMYS: Kerro lisää: Foinikialaiset
+
+### 126
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fort Manoel (historia)
+Tietoruudun teksti: Fort Manoel on tähtimäinen linnoitus Manoel-saarella Gżiran edustalla Marsamxettin satamassa. Sen rakensi 1700-luvulla Johanniittaritarikunta suurmestari António Manoel de Vilhenan aikana, jonka mukaan sekä saari että linnoitus on nimetty. Linnoitus hallitsee Marsamxettin satamaa ja Slieman ankkuripaikkaa, ja se yhdistää barokkiarkkitehtuurin käytännöllisyyteen. Ranskalaismiehityksen jälkeen britit ottivat linnoituksen käyttöönsä vuonna 1800 ja pitivät sitä varuskuntanaan vuoteen 1964 asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+AIEMPI KYSYMYS: Kenen mukaan Fort Manoel on nimetty?
+AIEMPI VASTAUS (Livia):
+Hmm, tän minä tiedän. Fort Manoel on nimetty [[Johanniittaritarikunnan]] suurmestarin [[António Manoel de Vilhenan]] mukaan, jonka aikana linnoitus rakennettiin 1700-luvulla. Hänen mukaansa on nimetty myös saari, jolla linnoitus sijaitsee Marsamxettin satamassa. De Vilhena tilasi vuonna 1731 myös [[Vallettan]] julkisen teatterin ja maksoi sen itse. Mies piti selvästi nimistään kiinni.
+KYSYMYS: Kerro lisää: Johanniittaritarikunnan
+
+### 127
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fort Manoel (historia)
+Tietoruudun teksti: Fort Manoel on tähtimäinen linnoitus Manoel-saarella Gżiran edustalla Marsamxettin satamassa. Sen rakensi 1700-luvulla Johanniittaritarikunta suurmestari António Manoel de Vilhenan aikana, jonka mukaan sekä saari että linnoitus on nimetty. Linnoitus hallitsee Marsamxettin satamaa ja Slieman ankkuripaikkaa, ja se yhdistää barokkiarkkitehtuurin käytännöllisyyteen. Ranskalaismiehityksen jälkeen britit ottivat linnoituksen käyttöönsä vuonna 1800 ja pitivät sitä varuskuntanaan vuoteen 1964 asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Rakennukset: Teatteri kymmenessä kuukaudessa] 1731 — Suurmestari António Manoel de Vilhena tilasi Vallettaan julkisen teatterin vuonna 1731 ja maksoi sen itse, jotta ihmisillä olisi kunniallista huvia. Rakennus valmistui kuulemma vain kymmenessä kuukaudessa. Ensimmäinen näytelmä, Merope, esitettiin 9. tammikuuta 1732, ja näyttelijöinä olivat ritarit itse. Salissa on 534 paikkaa, ja kolme parvekekerrosta on tehty kokonaan puusta ja koristeltu lehtikullalla. Teatteria pidetään Euroopan kolmanneksi vanhimpana yhä toimivana teatterina.
+AIEMPI KYSYMYS: Kenen mukaan Fort Manoel on nimetty?
+AIEMPI VASTAUS (Livia):
+Hmm, tän minä tiedän. Fort Manoel on nimetty [[Johanniittaritarikunnan]] suurmestarin [[António Manoel de Vilhenan]] mukaan, jonka aikana linnoitus rakennettiin 1700-luvulla. Hänen mukaansa on nimetty myös saari, jolla linnoitus sijaitsee Marsamxettin satamassa. De Vilhena tilasi vuonna 1731 myös [[Vallettan]] julkisen teatterin ja maksoi sen itse. Mies piti selvästi nimistään kiinni.
+KYSYMYS: Kerro lisää: António Manoel de Vilhenan
+
+### 128
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fort Manoel (historia)
+Tietoruudun teksti: Fort Manoel on tähtimäinen linnoitus Manoel-saarella Gżiran edustalla Marsamxettin satamassa. Sen rakensi 1700-luvulla Johanniittaritarikunta suurmestari António Manoel de Vilhenan aikana, jonka mukaan sekä saari että linnoitus on nimetty. Linnoitus hallitsee Marsamxettin satamaa ja Slieman ankkuripaikkaa, ja se yhdistää barokkiarkkitehtuurin käytännöllisyyteen. Ranskalaismiehityksen jälkeen britit ottivat linnoituksen käyttöönsä vuonna 1800 ja pitivät sitä varuskuntanaan vuoteen 1964 asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Arki: Parveke josta näkee kaiken] 1600-luku — Maltalaisten talojen julkisivuja koristavat suljetut puuparvekkeet, gallariji. Ne polveutuvat arabialaisista mashrabiya-parvekkeista, mutta yleistyivät vasta 1600-luvulla. Vanhin tunnettu esitys on Vallettan suurmestarin palatsin kulmaparveke noin vuodelta 1675. Vuonna 1679 eräs vieras kirjoitti, että suurmestari käveli lasitetulla parvekkeella mielellään, koska sieltä näki aukioiden tapahtumat itse näkymättä. Parvekkeita kannattavia kivikonsoleja sanotaan saljaturiksi, ja lasiläpät ovat purtelleja.
+- [Malta — maalehti / Arki: Vanhin maltankielinen runo] n. 1470-luku — Maltan kieli on ainoa semiittinen kieli, jota kirjoitetaan latinalaisilla aakkosilla. Sen juuret ovat Sisilian arabiassa, mutta sanastoon on tullut paljon italiaa ja sisilian kieltä. Vanhin tunnettu maltankielinen kirjallinen teksti on Il-Kantilena, Pietru Caxaron runo. Se on kirjoitettu 1400-luvulla, luultavasti 1470-luvulla, mutta löydettiin vasta vuonna 1966. Runo säilytetään Vallettan notaariarkistossa, ja huhtikuussa 2025 se liitettiin Unescon Muisti maailmassa -luetteloon.
+AIEMPI KYSYMYS: Kenen mukaan Fort Manoel on nimetty?
+AIEMPI VASTAUS (Livia):
+Hmm, tän minä tiedän. Fort Manoel on nimetty [[Johanniittaritarikunnan]] suurmestarin [[António Manoel de Vilhenan]] mukaan, jonka aikana linnoitus rakennettiin 1700-luvulla. Hänen mukaansa on nimetty myös saari, jolla linnoitus sijaitsee Marsamxettin satamassa. De Vilhena tilasi vuonna 1731 myös [[Vallettan]] julkisen teatterin ja maksoi sen itse. Mies piti selvästi nimistään kiinni.
+KYSYMYS: Kerro lisää: Vallettan
+
+### 129
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fort Manoel (historia)
+Tietoruudun teksti: Fort Manoel on tähtimäinen linnoitus Manoel-saarella Gżiran edustalla Marsamxettin satamassa. Sen rakensi 1700-luvulla Johanniittaritarikunta suurmestari António Manoel de Vilhenan aikana, jonka mukaan sekä saari että linnoitus on nimetty. Linnoitus hallitsee Marsamxettin satamaa ja Slieman ankkuripaikkaa, ja se yhdistää barokkiarkkitehtuurin käytännöllisyyteen. Ranskalaismiehityksen jälkeen britit ottivat linnoituksen käyttöönsä vuonna 1800 ja pitivät sitä varuskuntanaan vuoteen 1964 asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Rakennukset: Teatteri kymmenessä kuukaudessa] 1731 — Suurmestari António Manoel de Vilhena tilasi Vallettaan julkisen teatterin vuonna 1731 ja maksoi sen itse, jotta ihmisillä olisi kunniallista huvia. Rakennus valmistui kuulemma vain kymmenessä kuukaudessa. Ensimmäinen näytelmä, Merope, esitettiin 9. tammikuuta 1732, ja näyttelijöinä olivat ritarit itse. Salissa on 534 paikkaa, ja kolme parvekekerrosta on tehty kokonaan puusta ja koristeltu lehtikullalla. Teatteria pidetään Euroopan kolmanneksi vanhimpana yhä toimivana teatterina.
+AIEMPI KYSYMYS: Minä vuonna britit ottivat linnoituksen haltuunsa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Britit ottivat linnoituksen käyttöönsä vuonna 1800 ranskalaismiehityksen jälkeen. He pitivät sitä varuskuntanaan vuoteen 1964 asti. Fort Manoel sijaitsee [[Manoel-saarella]] [[Marsamxettin]] satamassa, ja se rakennettiin alun perin Johanniittaritarikunnan aikana 1700-luvulla. Aikamoinen varuskunta-aika, ja minä kun en kestä kuin hetken yhdellä kaiteella.
+KYSYMYS: Kerro lisää: Manoel-saarella
+
+### 130
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fort Manoel (historia)
+Tietoruudun teksti: Fort Manoel on tähtimäinen linnoitus Manoel-saarella Gżiran edustalla Marsamxettin satamassa. Sen rakensi 1700-luvulla Johanniittaritarikunta suurmestari António Manoel de Vilhenan aikana, jonka mukaan sekä saari että linnoitus on nimetty. Linnoitus hallitsee Marsamxettin satamaa ja Slieman ankkuripaikkaa, ja se yhdistää barokkiarkkitehtuurin käytännöllisyyteen. Ranskalaismiehityksen jälkeen britit ottivat linnoituksen käyttöönsä vuonna 1800 ja pitivät sitä varuskuntanaan vuoteen 1964 asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+AIEMPI KYSYMYS: Minä vuonna britit ottivat linnoituksen haltuunsa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Britit ottivat linnoituksen käyttöönsä vuonna 1800 ranskalaismiehityksen jälkeen. He pitivät sitä varuskuntanaan vuoteen 1964 asti. Fort Manoel sijaitsee [[Manoel-saarella]] [[Marsamxettin]] satamassa, ja se rakennettiin alun perin Johanniittaritarikunnan aikana 1700-luvulla. Aikamoinen varuskunta-aika, ja minä kun en kestä kuin hetken yhdellä kaiteella.
+KYSYMYS: Kerro lisää: Marsamxettin
+
+### 131
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fort Manoel (historia)
+Tietoruudun teksti: Fort Manoel on tähtimäinen linnoitus Manoel-saarella Gżiran edustalla Marsamxettin satamassa. Sen rakensi 1700-luvulla Johanniittaritarikunta suurmestari António Manoel de Vilhenan aikana, jonka mukaan sekä saari että linnoitus on nimetty. Linnoitus hallitsee Marsamxettin satamaa ja Slieman ankkuripaikkaa, ja se yhdistää barokkiarkkitehtuurin käytännöllisyyteen. Ranskalaismiehityksen jälkeen britit ottivat linnoituksen käyttöönsä vuonna 1800 ja pitivät sitä varuskuntanaan vuoteen 1964 asti.
+AIEMPI KYSYMYS: Mikä on tähtilinnoitus?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tähtilinnoitus on linnoitus, jonka muurit muodostavat teräviä kulmia, joita kutsutaan [[bastioneiksi]], ja joka näyttää ylhäältä katsottuna tähdeltä. Muodon etuna on, että puolustajat voivat ampua muurin viereen yrittäviä hyökkääjiä myös sivulta. Fort Manoel on tällainen tähtimäinen linnoitus, jonka rakensi 1700-luvulla [[Johanniittaritarikunta]]. Se yhdistää barokkiarkkitehtuurin käytännöllisyyteen. Ylhäältä tähti näkyy kyllä parhaiten.
+KYSYMYS: Kerro lisää: bastioneiksi
+
+### 132
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fort Manoel (historia)
+Tietoruudun teksti: Fort Manoel on tähtimäinen linnoitus Manoel-saarella Gżiran edustalla Marsamxettin satamassa. Sen rakensi 1700-luvulla Johanniittaritarikunta suurmestari António Manoel de Vilhenan aikana, jonka mukaan sekä saari että linnoitus on nimetty. Linnoitus hallitsee Marsamxettin satamaa ja Slieman ankkuripaikkaa, ja se yhdistää barokkiarkkitehtuurin käytännöllisyyteen. Ranskalaismiehityksen jälkeen britit ottivat linnoituksen käyttöönsä vuonna 1800 ja pitivät sitä varuskuntanaan vuoteen 1964 asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+AIEMPI KYSYMYS: Mikä on tähtilinnoitus?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tähtilinnoitus on linnoitus, jonka muurit muodostavat teräviä kulmia, joita kutsutaan [[bastioneiksi]], ja joka näyttää ylhäältä katsottuna tähdeltä. Muodon etuna on, että puolustajat voivat ampua muurin viereen yrittäviä hyökkääjiä myös sivulta. Fort Manoel on tällainen tähtimäinen linnoitus, jonka rakensi 1700-luvulla [[Johanniittaritarikunta]]. Se yhdistää barokkiarkkitehtuurin käytännöllisyyteen. Ylhäältä tähti näkyy kyllä parhaiten.
+KYSYMYS: Kerro lisää: Johanniittaritarikunta
+
+### 133
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fort Manoel (historia)
+Tietoruudun teksti: Fort Manoel on tähtimäinen linnoitus Manoel-saarella Gżiran edustalla Marsamxettin satamassa. Sen rakensi 1700-luvulla Johanniittaritarikunta suurmestari António Manoel de Vilhenan aikana, jonka mukaan sekä saari että linnoitus on nimetty. Linnoitus hallitsee Marsamxettin satamaa ja Slieman ankkuripaikkaa, ja se yhdistää barokkiarkkitehtuurin käytännöllisyyteen. Ranskalaismiehityksen jälkeen britit ottivat linnoituksen käyttöönsä vuonna 1800 ja pitivät sitä varuskuntanaan vuoteen 1964 asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Rakennukset: Teatteri kymmenessä kuukaudessa] 1731 — Suurmestari António Manoel de Vilhena tilasi Vallettaan julkisen teatterin vuonna 1731 ja maksoi sen itse, jotta ihmisillä olisi kunniallista huvia. Rakennus valmistui kuulemma vain kymmenessä kuukaudessa. Ensimmäinen näytelmä, Merope, esitettiin 9. tammikuuta 1732, ja näyttelijöinä olivat ritarit itse. Salissa on 534 paikkaa, ja kolme parvekekerrosta on tehty kokonaan puusta ja koristeltu lehtikullalla. Teatteria pidetään Euroopan kolmanneksi vanhimpana yhä toimivana teatterina.
+AIEMPI KYSYMYS: Kuka oli suurmestari António Manoel de Vilhena?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. António Manoel de Vilhena oli [[Johanniittaritarikunnan]] suurmestari, jonka aikana Fort Manoel rakennettiin 1700-luvulla. Hänen mukaansa on nimetty sekä linnoitus että saari, jolla se sijaitsee. Vuonna 1731 hän tilasi [[Vallettaan]] julkisen teatterin ja maksoi sen itse, ja ensimmäinen näytelmä [[Merope]] esitettiin 9. tammikuuta 1732. Muita tietoja hänestä en ole varma muistamaan. Mies siis rakensi sekä linnoituksen että huvit.
+KYSYMYS: Kerro lisää: Vallettaan
+
+### 134
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fort Manoel (historia)
+Tietoruudun teksti: Fort Manoel on tähtimäinen linnoitus Manoel-saarella Gżiran edustalla Marsamxettin satamassa. Sen rakensi 1700-luvulla Johanniittaritarikunta suurmestari António Manoel de Vilhenan aikana, jonka mukaan sekä saari että linnoitus on nimetty. Linnoitus hallitsee Marsamxettin satamaa ja Slieman ankkuripaikkaa, ja se yhdistää barokkiarkkitehtuurin käytännöllisyyteen. Ranskalaismiehityksen jälkeen britit ottivat linnoituksen käyttöönsä vuonna 1800 ja pitivät sitä varuskuntanaan vuoteen 1964 asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Rakennukset: Teatteri kymmenessä kuukaudessa] 1731 — Suurmestari António Manoel de Vilhena tilasi Vallettaan julkisen teatterin vuonna 1731 ja maksoi sen itse, jotta ihmisillä olisi kunniallista huvia. Rakennus valmistui kuulemma vain kymmenessä kuukaudessa. Ensimmäinen näytelmä, Merope, esitettiin 9. tammikuuta 1732, ja näyttelijöinä olivat ritarit itse. Salissa on 534 paikkaa, ja kolme parvekekerrosta on tehty kokonaan puusta ja koristeltu lehtikullalla. Teatteria pidetään Euroopan kolmanneksi vanhimpana yhä toimivana teatterina.
+AIEMPI KYSYMYS: Kuka oli suurmestari António Manoel de Vilhena?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. António Manoel de Vilhena oli [[Johanniittaritarikunnan]] suurmestari, jonka aikana Fort Manoel rakennettiin 1700-luvulla. Hänen mukaansa on nimetty sekä linnoitus että saari, jolla se sijaitsee. Vuonna 1731 hän tilasi [[Vallettaan]] julkisen teatterin ja maksoi sen itse, ja ensimmäinen näytelmä [[Merope]] esitettiin 9. tammikuuta 1732. Muita tietoja hänestä en ole varma muistamaan. Mies siis rakensi sekä linnoituksen että huvit.
+KYSYMYS: Kerro lisää: Merope
+
+### 135
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Popeye Village (kulttuuri)
+Tietoruudun teksti: Popeye Village, tunnetaan myös nimellä Sweethaven Village, on alun perin elokuvalavasteeksi rakennettu puukylä Ankkurilahdella lähellä Mellieħaa. Se pystytettiin vuonna 1980 ilmestyneen Popeye-elokuvan kuvauksia varten, jonka tuottivat Paramount Pictures ja Walt Disney Productions ja jossa pääosissa olivat Robin Williams ja Shelley Duvall. Kuvausten jälkeen rapistuneen näköisistä puurakennuksista tehtiin yleisölle avoin ulkoilmamuseo ja rantapuisto.
+AIEMPI KYSYMYS: Mitä elokuvaa varten kylä alun perin rakennettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kylä pystytettiin [[Popeye-elokuvan]] kuvauksia varten, ja elokuva ilmestyi vuonna 1980. Kuvauspaikka sijaitsee Ankkurilahdella lähellä [[Mellieħaa]], ja kylän toinen nimi on Sweethaven Village. Kuvausten jälkeen puurakennuksista tehtiin yleisölle avoin ulkoilmamuseo ja rantapuisto. Hyvä lavaste, kun se jaksoi tähän päivään.
+KYSYMYS: Kerro lisää: Popeye-elokuvan
+
+### 136
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Popeye Village (kulttuuri)
+Tietoruudun teksti: Popeye Village, tunnetaan myös nimellä Sweethaven Village, on alun perin elokuvalavasteeksi rakennettu puukylä Ankkurilahdella lähellä Mellieħaa. Se pystytettiin vuonna 1980 ilmestyneen Popeye-elokuvan kuvauksia varten, jonka tuottivat Paramount Pictures ja Walt Disney Productions ja jossa pääosissa olivat Robin Williams ja Shelley Duvall. Kuvausten jälkeen rapistuneen näköisistä puurakennuksista tehtiin yleisölle avoin ulkoilmamuseo ja rantapuisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kaupunkilehti / Historian hetki: Valletta 1565 — purjeet horisontissa] 7.9.1565 — Puolustaja nojaa muurin ampuma-aukkoon, kun toinen tarttuu hänen olkapäähänsä ja osoittaa merelle — silmät ovat liian väsyneet neljän kuukauden valvomisesta uskoakseen ensin sitä, mitä näkevät. Purjeet horisontissa eivät ole uusi osmanien laivue vaan sisilialainen apulaivasto, jota Don García de Toledo on kerännyt Messinasta kuukausia. Yli kahdeksantuhatta miestä nousee maihin Mellieħan lahdessa 7. syyskuuta, ja tieto kulkee muurilta muurille nopeammin kuin kukaan ehtii huutaa sitä ääneen. Ottomaanien komentaja Mustafa Pasha, jonka joukot ovat menettäneet paljon miehiä ja suurimman osan kesästä yhteen linnakkeeseen, ei enää usko voittoon uuden armeijan edessä. Muutaman päivän kul…
+- [Valletta — kaupunkilehti / Historian hetki] Neljä kuukautta kestänyt piiritys päättyi, kun sisilialainen apulaivasto laski maihin Mellieħan lahdessa syyskuun alussa 1565 — osmaanit purjehtivat pois muutamassa päivässä.
+AIEMPI KYSYMYS: Mitä elokuvaa varten kylä alun perin rakennettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kylä pystytettiin [[Popeye-elokuvan]] kuvauksia varten, ja elokuva ilmestyi vuonna 1980. Kuvauspaikka sijaitsee Ankkurilahdella lähellä [[Mellieħaa]], ja kylän toinen nimi on Sweethaven Village. Kuvausten jälkeen puurakennuksista tehtiin yleisölle avoin ulkoilmamuseo ja rantapuisto. Hyvä lavaste, kun se jaksoi tähän päivään.
+KYSYMYS: Kerro lisää: Mellieħaa
+
+### 137
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Popeye Village (kulttuuri)
+Tietoruudun teksti: Popeye Village, tunnetaan myös nimellä Sweethaven Village, on alun perin elokuvalavasteeksi rakennettu puukylä Ankkurilahdella lähellä Mellieħaa. Se pystytettiin vuonna 1980 ilmestyneen Popeye-elokuvan kuvauksia varten, jonka tuottivat Paramount Pictures ja Walt Disney Productions ja jossa pääosissa olivat Robin Williams ja Shelley Duvall. Kuvausten jälkeen rapistuneen näköisistä puurakennuksista tehtiin yleisölle avoin ulkoilmamuseo ja rantapuisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Robinson Crusoe — kaupunkilehti / Robinson Crusoe] Isoisän matkavuonna 1873 saarta kutsuttiin vielä nimellä Más a Tierra – vasta 1966 Chile nimesi sen virallisesti Robinson Crusoen saareksi kunniaksi tarinalle, jonka todellinen tapahtuma synnytti kaukana Tyynellämerellä.
+- [Winnipeg — kaupunkilehti / Winnipeg: Karhu, joka jäi Lontooseen] Elokuussa 1914 luutnantti Harry Colebourn, ratsuväkirykmentti Fort Garry Horsen eläinlääkäri, oli matkalla sotaan. Junapysäkillä White Riverissä hän osti 24. elokuuta kahdellakymmenellä dollarilla karhunpennun, jonka emo oli tapettu keväällä, ja nimesi sen kotikaupunkinsa mukaan: Winnipeg, lyhyesti Winnie. Karhu seurasi häntä Englantiin asti, ja ennen Ranskaan lähtöä hän jätti sen Lontoon eläintarhaan 9. joulukuuta 1914. Sinne se jäi. Vuodesta 1924 karhua kävi katsomassa A. A. Milnen poika Christopher Robin, joka vaihtoi oman nallensa nimen Edward Bearista Winnie the Poohiksi.
+- [Brisbane — kaupunkilehti / Kaupunkikuva: Katu, jolta autot poistettiin] Queen Street suljettiin autoliikenteeltä 1981, ja Robin Gibsonin suunnitteleman kävelykadun avasi kuningatar Elisabet II 9. elokuuta 1982 — ajoissa saman vuoden Kansainyhteisön kisoihin. Kävelykatu on noin viisisataa metriä pitkä George Streetiltä Edward Streetille, ja sen varrella on yli seitsemänsataa liikettä kuudessa kauppakeskuksessa, yhteensä 40 000 neliömetriä. Aluetta jatkettiin 1988 maailmannäyttelyn tahdissa. Kadun alla on maanalainen bussiasema, joten kävelykatu lepää kirjaimellisesti joukkoliikenteen päällä.
+AIEMPI KYSYMYS: Ketkä olivat elokuvan pääosien näyttelijät?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Elokuvan pääosissa olivat [[Robin Williams]] ja [[Shelley Duvall]]. Popeye-elokuva ilmestyi vuonna 1980, ja sen tuottivat Paramount Pictures ja Walt Disney Productions. Elokuvaa varten rakennettu kylä toimii nykyään ulkoilmamuseona Ankkurilahdella lähellä Mellieħaa. Hyvä pari, ja minä en nähnyt kuin katolta.
+KYSYMYS: Kerro lisää: Robin Williams
+
+### 138
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Popeye Village (kulttuuri)
+Tietoruudun teksti: Popeye Village, tunnetaan myös nimellä Sweethaven Village, on alun perin elokuvalavasteeksi rakennettu puukylä Ankkurilahdella lähellä Mellieħaa. Se pystytettiin vuonna 1980 ilmestyneen Popeye-elokuvan kuvauksia varten, jonka tuottivat Paramount Pictures ja Walt Disney Productions ja jossa pääosissa olivat Robin Williams ja Shelley Duvall. Kuvausten jälkeen rapistuneen näköisistä puurakennuksista tehtiin yleisölle avoin ulkoilmamuseo ja rantapuisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Indonesia — maalehti / Luonto: Purkaus vei Euroopalta kesän] 1815 — Sumbawan saarella kohosi 1800-luvun alussa noin 4 300 metriä korkea vuori. Huhtikuun 10. päivänä 1815 Tambora purkautui niin voimakkaasti, että huipusta katosi kolmannes ja tilalle jäi kuutisen kilometriä leveä kaldera. Pauke kuultiin ainakin 2 600 kilometrin päähän. Rikkihiukkaset nousivat stratosfääriin ja levisivät maapallon ympäri: vuosi 1816 tunnetaan kesättömänä vuotena, kun keskilämpötila laski noin puoli astetta ja sadot tuhoutuivat Euroopassa ja Pohjois-Amerikassa. Samana synkkänä kesänä Genevenjärvellä Mary Shelley alkoi kirjoittaa Frankensteinia.
+AIEMPI KYSYMYS: Ketkä olivat elokuvan pääosien näyttelijät?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Elokuvan pääosissa olivat [[Robin Williams]] ja [[Shelley Duvall]]. Popeye-elokuva ilmestyi vuonna 1980, ja sen tuottivat Paramount Pictures ja Walt Disney Productions. Elokuvaa varten rakennettu kylä toimii nykyään ulkoilmamuseona Ankkurilahdella lähellä Mellieħaa. Hyvä pari, ja minä en nähnyt kuin katolta.
+KYSYMYS: Kerro lisää: Shelley Duvall
+
+### 139
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Popeye Village (kulttuuri)
+Tietoruudun teksti: Popeye Village, tunnetaan myös nimellä Sweethaven Village, on alun perin elokuvalavasteeksi rakennettu puukylä Ankkurilahdella lähellä Mellieħaa. Se pystytettiin vuonna 1980 ilmestyneen Popeye-elokuvan kuvauksia varten, jonka tuottivat Paramount Pictures ja Walt Disney Productions ja jossa pääosissa olivat Robin Williams ja Shelley Duvall. Kuvausten jälkeen rapistuneen näköisistä puurakennuksista tehtiin yleisölle avoin ulkoilmamuseo ja rantapuisto.
+AIEMPI KYSYMYS: Ketkä tuottivat Popeye-elokuvan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Popeye-elokuvan tuottivat Paramount Pictures ja [[Walt Disney Productions]]. Elokuva ilmestyi vuonna 1980, ja sitä varten rakennettiin puukylä Ankkurilahdelle lähellä [[Mellieħaa]]. Pääosissa olivat Robin Williams ja Shelley Duvall. Kaksi isoa yhtiötä yhtä kylää varten, ei paha.
+KYSYMYS: Kerro lisää: Walt Disney Productions
+
+### 140
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Popeye Village (kulttuuri)
+Tietoruudun teksti: Popeye Village, tunnetaan myös nimellä Sweethaven Village, on alun perin elokuvalavasteeksi rakennettu puukylä Ankkurilahdella lähellä Mellieħaa. Se pystytettiin vuonna 1980 ilmestyneen Popeye-elokuvan kuvauksia varten, jonka tuottivat Paramount Pictures ja Walt Disney Productions ja jossa pääosissa olivat Robin Williams ja Shelley Duvall. Kuvausten jälkeen rapistuneen näköisistä puurakennuksista tehtiin yleisölle avoin ulkoilmamuseo ja rantapuisto.
+AIEMPI KYSYMYS: Mitä kylälle tehtiin kuvausten jälkeen?
+AIEMPI VASTAUS (Livia):
+No niin. Kuvausten jälkeen rapistuneen näköisistä puurakennuksista tehtiin yleisölle avoin ulkoilmamuseo ja rantapuisto. Kylä pystytettiin alun perin vuonna 1980 ilmestynyttä [[Popeye-elokuvaa]] varten [[Ankkurilahdelle]] lähellä [[Mellieħaa]]. Se tunnetaan nykyään sekä Popeye Villagena että Sweethaven Villagena. Lavasteesta tuli matkailukohde, mikä on kyllä kyyhkyn mielestä hieno loppu.
+KYSYMYS: Kerro lisää: Popeye-elokuvaa
+
+### 141
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Popeye Village (kulttuuri)
+Tietoruudun teksti: Popeye Village, tunnetaan myös nimellä Sweethaven Village, on alun perin elokuvalavasteeksi rakennettu puukylä Ankkurilahdella lähellä Mellieħaa. Se pystytettiin vuonna 1980 ilmestyneen Popeye-elokuvan kuvauksia varten, jonka tuottivat Paramount Pictures ja Walt Disney Productions ja jossa pääosissa olivat Robin Williams ja Shelley Duvall. Kuvausten jälkeen rapistuneen näköisistä puurakennuksista tehtiin yleisölle avoin ulkoilmamuseo ja rantapuisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Puerto Montt: Ankkuri torilla] Kapteeni Luis Alcázarin aukiolla lepää valtava, mustaksi maalattu laivan ankkuri korokkeella, jonka portaat kiertävät koko patsaan ympäri - muistomerkki kaupungin merenkulku- ja kalastusperinteelle. Puerto Montt on 1800-luvulta asti ollut Pohjois-Patagonian tärkein kauppasatama: sen kautta kulki puuta, villaa ja karjaa etelän harvaan asutuilta seuduilta, ja samaa reittiä siirtolaiset ja tavara kulkivat sisämaahan Llanquihuen järvelle asti. Aukion takana kohoava kukkula ja sen huipulla siintävä valkoinen risti kuuluvat Isla Tenglon maisemaan salmen toisella puolella. Ankkuri on suosittu tapaamispaikka ja yksi kaupungin tunnetuimmista veistoksista.
+AIEMPI KYSYMYS: Mitä kylälle tehtiin kuvausten jälkeen?
+AIEMPI VASTAUS (Livia):
+No niin. Kuvausten jälkeen rapistuneen näköisistä puurakennuksista tehtiin yleisölle avoin ulkoilmamuseo ja rantapuisto. Kylä pystytettiin alun perin vuonna 1980 ilmestynyttä [[Popeye-elokuvaa]] varten [[Ankkurilahdelle]] lähellä [[Mellieħaa]]. Se tunnetaan nykyään sekä Popeye Villagena että Sweethaven Villagena. Lavasteesta tuli matkailukohde, mikä on kyllä kyyhkyn mielestä hieno loppu.
+KYSYMYS: Kerro lisää: Ankkurilahdelle
+
+### 142
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mellieħa (kaupungit)
+Tietoruudun teksti: Mellieħa on suuri kylä Maltan pohjoisosassa, ja sen nimi juontuu seemiläisestä sanajuuresta, joka tarkoittaa suolaa – todennäköisesti alueella sijainneiden foinikialais-roomalaisten suolapatojen mukaan. Perimätiedon mukaan apostoli Paavalin matkakumppani Luukas maalasi Neitsyt Marian kuvan erään Mellieħan luolan kallioseinään, ja luola vihittiin kirkoksi vuonna 409; siitä tuli myöhemmin Neitsyt Marian pyhäkkökirkko. Kylä oli yksi Maltan kymmenestä ensimmäisestä seurakunnasta, mutta se autioitui 1400–1500-lukujen taitteessa korsaarien hyökkäysten vuoksi eikä asutus palannut ennen 1500-luvun loppua. Pohjoisrannikkoa alettiin linnoittaa 1600-luvun alussa, ja ensimmäinen Mellieħan linnoitus, Pyhän Agatan torni, valmistui vuonna 1649.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Arki: Vene jonka keulassa on silmät] n. 1900-luvun alku — Marsaxlokkin satamassa värikkäät luzzu-kalastusveneet keinuvat rivissä, ja jokaisen keulassa on kaksi silmää. Silmien arvellaan olevan perua muinaisten foinikialaisten tavasta, ja niiden sanotaan suojelevan kalastajia merellä. Luzzu kehittyi 1900-luvun alussa italialaisesta gozzo-veneestä. Rungon yläkaista, viiksi eli mustaċċ, kertoi ennen omistajan kotipaikan, ja musta viiksi ilmaisi surua perheessä. Uusia luzzuja ei enää rakenneta, mutta muutama sata on yhä käytössä.
+AIEMPI KYSYMYS: Mistä Mellieħan nimi juontuu?
+AIEMPI VASTAUS (Livia):
+Ai tota, tän minä tiedän. Nimi juontuu seemiläisestä sanajuuresta, joka tarkoittaa suolaa. Todennäköisimmin se viittaa alueella sijainneisiin [[foinikialaisten]] ja roomalaisten aikaisiin [[suolapatoihin]], joissa merivettä haihdutettiin suolaksi. Kylä sijaitsee [[Maltan]] pohjoisosassa, ja nimi kertoo, että suolaa on seudulla otettu merestä hyvin kauan. Suolaa en kyllä itse kaipaa, mut pullan päällä se olisi kyllä hyvä.
+KYSYMYS: Kerro lisää: foinikialaisten
+
+### 143
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mellieħa (kaupungit)
+Tietoruudun teksti: Mellieħa on suuri kylä Maltan pohjoisosassa, ja sen nimi juontuu seemiläisestä sanajuuresta, joka tarkoittaa suolaa – todennäköisesti alueella sijainneiden foinikialais-roomalaisten suolapatojen mukaan. Perimätiedon mukaan apostoli Paavalin matkakumppani Luukas maalasi Neitsyt Marian kuvan erään Mellieħan luolan kallioseinään, ja luola vihittiin kirkoksi vuonna 409; siitä tuli myöhemmin Neitsyt Marian pyhäkkökirkko. Kylä oli yksi Maltan kymmenestä ensimmäisestä seurakunnasta, mutta se autioitui 1400–1500-lukujen taitteessa korsaarien hyökkäysten vuoksi eikä asutus palannut ennen 1500-luvun loppua. Pohjoisrannikkoa alettiin linnoittaa 1600-luvun alussa, ja ensimmäinen Mellieħan linnoitus, Pyhän Agatan torni, valmistui vuonna 1649.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Timbuktu — kaupunkilehti / Timbuktu: Suola tulee pohjoisesta, kolme viikkoa kerrallaan] Timbuktu oli Saharan kauppareitin eteläinen päätepiste, ja siihen koko kaupunki perustui. Vielä 1900-luvun jälkipuoliskolle asti kivisuola tuotiin kuudensadankuudenkymmenenneljän kilometrin päästä pohjoisesta kahdessa vuosittaisessa karavaanissa: toinen lähti marraskuun alussa, toinen maaliskuun lopussa. Karavaanissa oli useita tuhansia kameleja, matka kesti kolme viikkoa suuntaansa, ja paluumatkalla jokainen kameli kantoi neljä tai viisi kolmenkymmenen kilon laattaa. Menomatkalla vietiin ruokaa kaivosmiehille. Nykyään laatat tulevat kuorma-autolla, ja Timbuktusta suola jatkaa veneellä muualle Maliin.
+- [Gao — kaupunkilehti / Songhain kultainen valtakunta: Kulta ja suola kulkivat jokea pitkin] Kulta-suolakauppa oli koko Sahelin talouden selkäranka, ja Songhain valtakunta hallitsi sen tärkeintä solmukohtaa. Pohjoisesta tuotu suola ja etelästä noussut kulta vaihtoivat kuljetusvälinettä Timbuktussa, kun kamelikaravaanit kohtasivat joella kulkevat lastiveneet. Tavarat matkasivat vielä noin 800 kilometrin matkan Nigerjokea pitkin Djennéstä Gaohon ja takaisin, ja jokivarren kaupungit vaurastuivat tästä liikenteestä vuosisatojen ajan. Ilmasta katsottuna joki näyttää kapealta vihreältä nauhalta hiekan keskellä - juuri tämä nauha teki Songhaista mahdollisen keskellä maailman suurinta aavikkoa.
+AIEMPI KYSYMYS: Mistä Mellieħan nimi juontuu?
+AIEMPI VASTAUS (Livia):
+Ai tota, tän minä tiedän. Nimi juontuu seemiläisestä sanajuuresta, joka tarkoittaa suolaa. Todennäköisimmin se viittaa alueella sijainneisiin [[foinikialaisten]] ja roomalaisten aikaisiin [[suolapatoihin]], joissa merivettä haihdutettiin suolaksi. Kylä sijaitsee [[Maltan]] pohjoisosassa, ja nimi kertoo, että suolaa on seudulla otettu merestä hyvin kauan. Suolaa en kyllä itse kaipaa, mut pullan päällä se olisi kyllä hyvä.
+KYSYMYS: Kerro lisää: suolapatoihin
+
+### 144
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mellieħa (kaupungit)
+Tietoruudun teksti: Mellieħa on suuri kylä Maltan pohjoisosassa, ja sen nimi juontuu seemiläisestä sanajuuresta, joka tarkoittaa suolaa – todennäköisesti alueella sijainneiden foinikialais-roomalaisten suolapatojen mukaan. Perimätiedon mukaan apostoli Paavalin matkakumppani Luukas maalasi Neitsyt Marian kuvan erään Mellieħan luolan kallioseinään, ja luola vihittiin kirkoksi vuonna 409; siitä tuli myöhemmin Neitsyt Marian pyhäkkökirkko. Kylä oli yksi Maltan kymmenestä ensimmäisestä seurakunnasta, mutta se autioitui 1400–1500-lukujen taitteessa korsaarien hyökkäysten vuoksi eikä asutus palannut ennen 1500-luvun loppua. Pohjoisrannikkoa alettiin linnoittaa 1600-luvun alussa, ja ensimmäinen Mellieħan linnoitus, Pyhän Agatan torni, valmistui vuonna 1649.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+AIEMPI KYSYMYS: Mistä Mellieħan nimi juontuu?
+AIEMPI VASTAUS (Livia):
+Ai tota, tän minä tiedän. Nimi juontuu seemiläisestä sanajuuresta, joka tarkoittaa suolaa. Todennäköisimmin se viittaa alueella sijainneisiin [[foinikialaisten]] ja roomalaisten aikaisiin [[suolapatoihin]], joissa merivettä haihdutettiin suolaksi. Kylä sijaitsee [[Maltan]] pohjoisosassa, ja nimi kertoo, että suolaa on seudulla otettu merestä hyvin kauan. Suolaa en kyllä itse kaipaa, mut pullan päällä se olisi kyllä hyvä.
+KYSYMYS: Kerro lisää: Maltan
+
+### 145
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mellieħa (kaupungit)
+Tietoruudun teksti: Mellieħa on suuri kylä Maltan pohjoisosassa, ja sen nimi juontuu seemiläisestä sanajuuresta, joka tarkoittaa suolaa – todennäköisesti alueella sijainneiden foinikialais-roomalaisten suolapatojen mukaan. Perimätiedon mukaan apostoli Paavalin matkakumppani Luukas maalasi Neitsyt Marian kuvan erään Mellieħan luolan kallioseinään, ja luola vihittiin kirkoksi vuonna 409; siitä tuli myöhemmin Neitsyt Marian pyhäkkökirkko. Kylä oli yksi Maltan kymmenestä ensimmäisestä seurakunnasta, mutta se autioitui 1400–1500-lukujen taitteessa korsaarien hyökkäysten vuoksi eikä asutus palannut ennen 1500-luvun loppua. Pohjoisrannikkoa alettiin linnoittaa 1600-luvun alussa, ja ensimmäinen Mellieħan linnoitus, Pyhän Agatan torni, valmistui vuonna 1649.
+AIEMPI KYSYMYS: Minä vuonna pyhäkkökirkon luola vihittiin kirkoksi perimätiedon mukaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Perimätiedon mukaan luola vihittiin kirkoksi vuonna 409. Samassa perimätiedossa kerrotaan, että apostoli Paavalin matkakumppani [[Luukas]] maalasi [[Neitsyt Marian]] kuvan luolan kallioseinään, ja luolasta tuli myöhemmin Neitsyt Marian pyhäkkökirkko. Kyse on siis perimätiedosta, ei tarkistetusta tosiasiasta, vaikka vuosiluku onkin perinteessä vakiintunut. Vuosiluvun muistaa helposti, vaikka lentäisi kuinka korkealla.
+KYSYMYS: Kerro lisää: Luukas
+
+### 146
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mellieħa (kaupungit)
+Tietoruudun teksti: Mellieħa on suuri kylä Maltan pohjoisosassa, ja sen nimi juontuu seemiläisestä sanajuuresta, joka tarkoittaa suolaa – todennäköisesti alueella sijainneiden foinikialais-roomalaisten suolapatojen mukaan. Perimätiedon mukaan apostoli Paavalin matkakumppani Luukas maalasi Neitsyt Marian kuvan erään Mellieħan luolan kallioseinään, ja luola vihittiin kirkoksi vuonna 409; siitä tuli myöhemmin Neitsyt Marian pyhäkkökirkko. Kylä oli yksi Maltan kymmenestä ensimmäisestä seurakunnasta, mutta se autioitui 1400–1500-lukujen taitteessa korsaarien hyökkäysten vuoksi eikä asutus palannut ennen 1500-luvun loppua. Pohjoisrannikkoa alettiin linnoittaa 1600-luvun alussa, ja ensimmäinen Mellieħan linnoitus, Pyhän Agatan torni, valmistui vuonna 1649.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Arki: Kylä syttyy juhlaan] nykyään — Kesäisin lähes joka viikonloppu jokin Maltan kylä juhlii suojelupyhimystään festalla. Pääkadut koristellaan brokadilipuilla, ja kirkko valaistaan illalla lampuilla. Juhlan huippu on korkea messu, jonka jälkeen pyhimyksen patsas kannetaan kulkueessa kylän kaduille. Sitten alkaa useita päiviä kestävä riemu: soittokunnat marssivat, ilotulitteet paukkuvat ja juhlat jatkuvat yöhön. Mġarrissa festaa vietetään 15. elokuuta Neitsyt Marian taivaaseenoton kunniaksi, ja ilotulituksesta vastaa oma seuransa.
+- [Port Moresby — kohdekartta / Kohdekartta: Pyhän Marian katedraali] 1889 alkaen Pyhän Marian katedraali on Port Moresbyn arkkihiippakunnan pääkirkko ja omistettu Neitsyt Marialle. Ulkoseinät ovat vaaleansiniset, ja pääsisäänkäynnin toisella puolen kohoaa valkoinen torni. Hiippakunta on kirkkoa vanhempi, ja sen nimi on vaihtunut kolmesti. Se perustettiin 10. toukokuuta 1889 Uuden-Guinean apostoliseksi vikariaatiksi, sai 1922 nimen Papuan vikariaatti ja 1946 Port Moresbyn vikariaatti; arkkihiippakunnaksi se korotettiin 15. marraskuuta 1966. Vuonna 2023 alueella oli 22 seurakuntaa ja noin 233 000 katolista eli 29 prosenttia väestöstä. Paavi Johannes Paavali II vieraili katedraalissa toukokuussa 1984 ja palasi hiippakuntaan tammikuussa 1995. Paavi Franciscus vi…
+AIEMPI KYSYMYS: Minä vuonna pyhäkkökirkon luola vihittiin kirkoksi perimätiedon mukaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Perimätiedon mukaan luola vihittiin kirkoksi vuonna 409. Samassa perimätiedossa kerrotaan, että apostoli Paavalin matkakumppani [[Luukas]] maalasi [[Neitsyt Marian]] kuvan luolan kallioseinään, ja luolasta tuli myöhemmin Neitsyt Marian pyhäkkökirkko. Kyse on siis perimätiedosta, ei tarkistetusta tosiasiasta, vaikka vuosiluku onkin perinteessä vakiintunut. Vuosiluvun muistaa helposti, vaikka lentäisi kuinka korkealla.
+KYSYMYS: Kerro lisää: Neitsyt Marian
+
+### 147
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mellieħa (kaupungit)
+Tietoruudun teksti: Mellieħa on suuri kylä Maltan pohjoisosassa, ja sen nimi juontuu seemiläisestä sanajuuresta, joka tarkoittaa suolaa – todennäköisesti alueella sijainneiden foinikialais-roomalaisten suolapatojen mukaan. Perimätiedon mukaan apostoli Paavalin matkakumppani Luukas maalasi Neitsyt Marian kuvan erään Mellieħan luolan kallioseinään, ja luola vihittiin kirkoksi vuonna 409; siitä tuli myöhemmin Neitsyt Marian pyhäkkökirkko. Kylä oli yksi Maltan kymmenestä ensimmäisestä seurakunnasta, mutta se autioitui 1400–1500-lukujen taitteessa korsaarien hyökkäysten vuoksi eikä asutus palannut ennen 1500-luvun loppua. Pohjoisrannikkoa alettiin linnoittaa 1600-luvun alussa, ja ensimmäinen Mellieħan linnoitus, Pyhän Agatan torni, valmistui vuonna 1649.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lima — kaupunkilehti / Lima: Muuri joka kaatui rautatien tieltä] Merirosvojen ja korsaarien uhka sai siirtomaahallinnon rakentamaan kaupungin ympärille muurin vuosina 1684–1687, varakuningas Melchor de Navarra y Rocafullin kaudella. Muurissa oli kymmenen porttia, ja se seurasi linjaa, jolla kulkevat nykyään Alfonso Ugarten, Paseo Colónin ja Graun kadut. Yhdysvaltalainen rautatieurakoitsija Henry Meiggs purki muurin 1872 Perun hallituksen sopimuksella tulevan kasvun tieltä – vain vuosi ennen isoisän matkaa. Porteista tunnetuin, Arco del Puente, tuhoutui katukauppiaiden sytyttämässä tulipalossa 1879.
+AIEMPI KYSYMYS: Milloin Pyhän Agatan torni valmistui ja mitä varten?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Pyhän Agatan torni oli ensimmäinen Mellieħan linnoitus, ja se valmistui vuonna 1649. Pohjoisrannikon linnoittaminen oli alkanut jo 1600-luvun alussa, koska rannikko oli alttiina [[korsaarien]] hyökkäyksille, jotka olivat aiemmin ajaneet kylän asukkaat pois. Torni rakennettiin siis rannikon vartiopaikaksi ja puolustukseksi. Tornit ja linnakkeet olivat osa [[Maltan]] rannikon puolustusta, jota johti [[Johanniittaritarikunta]]. Linnoituksista olisi kyllä helpompi puhua, jos ne olisivat lentäneet.
+KYSYMYS: Kerro lisää: korsaarien
+
+### 148
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mellieħa (kaupungit)
+Tietoruudun teksti: Mellieħa on suuri kylä Maltan pohjoisosassa, ja sen nimi juontuu seemiläisestä sanajuuresta, joka tarkoittaa suolaa – todennäköisesti alueella sijainneiden foinikialais-roomalaisten suolapatojen mukaan. Perimätiedon mukaan apostoli Paavalin matkakumppani Luukas maalasi Neitsyt Marian kuvan erään Mellieħan luolan kallioseinään, ja luola vihittiin kirkoksi vuonna 409; siitä tuli myöhemmin Neitsyt Marian pyhäkkökirkko. Kylä oli yksi Maltan kymmenestä ensimmäisestä seurakunnasta, mutta se autioitui 1400–1500-lukujen taitteessa korsaarien hyökkäysten vuoksi eikä asutus palannut ennen 1500-luvun loppua. Pohjoisrannikkoa alettiin linnoittaa 1600-luvun alussa, ja ensimmäinen Mellieħan linnoitus, Pyhän Agatan torni, valmistui vuonna 1649.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+AIEMPI KYSYMYS: Milloin Pyhän Agatan torni valmistui ja mitä varten?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Pyhän Agatan torni oli ensimmäinen Mellieħan linnoitus, ja se valmistui vuonna 1649. Pohjoisrannikon linnoittaminen oli alkanut jo 1600-luvun alussa, koska rannikko oli alttiina [[korsaarien]] hyökkäyksille, jotka olivat aiemmin ajaneet kylän asukkaat pois. Torni rakennettiin siis rannikon vartiopaikaksi ja puolustukseksi. Tornit ja linnakkeet olivat osa [[Maltan]] rannikon puolustusta, jota johti [[Johanniittaritarikunta]]. Linnoituksista olisi kyllä helpompi puhua, jos ne olisivat lentäneet.
+KYSYMYS: Kerro lisää: Johanniittaritarikunta
+
+### 149
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mellieħa (kaupungit)
+Tietoruudun teksti: Mellieħa on suuri kylä Maltan pohjoisosassa, ja sen nimi juontuu seemiläisestä sanajuuresta, joka tarkoittaa suolaa – todennäköisesti alueella sijainneiden foinikialais-roomalaisten suolapatojen mukaan. Perimätiedon mukaan apostoli Paavalin matkakumppani Luukas maalasi Neitsyt Marian kuvan erään Mellieħan luolan kallioseinään, ja luola vihittiin kirkoksi vuonna 409; siitä tuli myöhemmin Neitsyt Marian pyhäkkökirkko. Kylä oli yksi Maltan kymmenestä ensimmäisestä seurakunnasta, mutta se autioitui 1400–1500-lukujen taitteessa korsaarien hyökkäysten vuoksi eikä asutus palannut ennen 1500-luvun loppua. Pohjoisrannikkoa alettiin linnoittaa 1600-luvun alussa, ja ensimmäinen Mellieħan linnoitus, Pyhän Agatan torni, valmistui vuonna 1649.
+AIEMPI KYSYMYS: Miksi Mellieħa autioitui myöhäiskeskiajalla?
+AIEMPI VASTAUS (Livia):
+Joo, tähän on selvä vastaus. Kylä autioitui 1400- ja 1500-lukujen taitteessa, koska [[korsaarit]] hyökkäsivät Maltan rannikolle toistuvasti ja asukkaat joutuivat jättämään alueen. Asutus ei palannut ennen 1500-luvun loppua. Mellieħa oli kuitenkin ollut yksi [[Maltan]] kymmenestä ensimmäisestä seurakunnasta, joten autioituminen katkaisi vanhan ja tärkeän yhteisön elämän pitkäksi aikaa. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: korsaarit
+
+### 150
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mellieħa (kaupungit)
+Tietoruudun teksti: Mellieħa on suuri kylä Maltan pohjoisosassa, ja sen nimi juontuu seemiläisestä sanajuuresta, joka tarkoittaa suolaa – todennäköisesti alueella sijainneiden foinikialais-roomalaisten suolapatojen mukaan. Perimätiedon mukaan apostoli Paavalin matkakumppani Luukas maalasi Neitsyt Marian kuvan erään Mellieħan luolan kallioseinään, ja luola vihittiin kirkoksi vuonna 409; siitä tuli myöhemmin Neitsyt Marian pyhäkkökirkko. Kylä oli yksi Maltan kymmenestä ensimmäisestä seurakunnasta, mutta se autioitui 1400–1500-lukujen taitteessa korsaarien hyökkäysten vuoksi eikä asutus palannut ennen 1500-luvun loppua. Pohjoisrannikkoa alettiin linnoittaa 1600-luvun alussa, ja ensimmäinen Mellieħan linnoitus, Pyhän Agatan torni, valmistui vuonna 1649.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Melbourne — kohdekartta / Kohdekartta: Pyhän Paavalin katedraali] 1891 Tontilla pidettiin Melbournen ensimmäinen julkinen kristillinen jumalanpalvelus 1835. Kortteli oli silloin hallituksen varausmaata kaukana silloisesta keskustasta ja toimi viljatorina. Vuoteen 1848 mennessä paikka oli ensimmäisen Princes-sillan vieressä, ja näkyvä tontti luovutettiin anglikaaniselle kirkolle. Basalttinen Pyhän Paavalin kirkko vihittiin 1852. Kaupungin kasvaessa hiippakunta päätti rakentaa tilalle katedraalin, ja työ annettiin englantilaiselle uusgotiikan mestarille William Butterfieldille. Jotta kirkko mahtuisi korttelille, se käännettiin ruutukaavan mukaisesti pohjois–eteläsuuntaan eikä perinteiseen itään. Peruskivi laskettiin 1880, mutta Butterfield riitaantui melbou…
+- [Pietari — kohdekartta / Kohdekartta: Pietari-Paavalin linnoitus] 1703–1733 Pietari Suuri perusti linnoituksen vuonna 1703 pienelle Jänissaarelle Nevajoen suulle – tästä paikasta koko Pietarin kaupunki sai alkunsa. Sveitsiläissyntyinen arkkitehti Domenico Trezzini suunnitteli tähdenmuotoiset muurit ja bastionit, ja saaren keskelle nousi Pietari-Paavalin katedraali, jonka 122,5 metriä korkeaa kellotornia kruunaa kultainen enkeli tuulen mukana kääntyvän viirin päällä. Saaren nimi juontuu vanhasta tarinasta: kun Pietari Suuri astui maihin, tulvavesi ajoi säikähtäneen jäniksen suoraan hänen saappaansa suojaan. Tapahtumaa muistaa nykyään pieni pronssinen jänispatsas sillan vieressä olevan pylvään päällä, ja pylvääseen on merkitty vanhojen tulvien korkeudet. Vu…
+AIEMPI KYSYMYS: Kuka oli apostoli Paavalin matkakumppani Luukas?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Luukas oli varhaiskristillisen perinteen mukaan apostoli [[Paavalin]] matkakumppani ja lääkäri. Hänen katsotaan perinteisesti kirjoittaneen [[Luukkaan evankeliumin]] ja [[Apostolien teot]], joissa kerrotaan muun muassa Paavalin haaksirikosta Maltalla. Perimätiedon mukaan hän maalasi myös Neitsyt Marian kuvan Mellieħan luolaan, mutta sitä en pysty vahvistamaan. Tutkijat ovat eri mieltä siitä, kuka evankeliumin tarkalleen kirjoitti, joten tarkempaa en uskalla väittää. Kyllä minä silti muistan tämän, vaikka en kirjoita päiväkirjaa.
+KYSYMYS: Kerro lisää: Paavalin
+
+### 151
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mellieħa (kaupungit)
+Tietoruudun teksti: Mellieħa on suuri kylä Maltan pohjoisosassa, ja sen nimi juontuu seemiläisestä sanajuuresta, joka tarkoittaa suolaa – todennäköisesti alueella sijainneiden foinikialais-roomalaisten suolapatojen mukaan. Perimätiedon mukaan apostoli Paavalin matkakumppani Luukas maalasi Neitsyt Marian kuvan erään Mellieħan luolan kallioseinään, ja luola vihittiin kirkoksi vuonna 409; siitä tuli myöhemmin Neitsyt Marian pyhäkkökirkko. Kylä oli yksi Maltan kymmenestä ensimmäisestä seurakunnasta, mutta se autioitui 1400–1500-lukujen taitteessa korsaarien hyökkäysten vuoksi eikä asutus palannut ennen 1500-luvun loppua. Pohjoisrannikkoa alettiin linnoittaa 1600-luvun alussa, ja ensimmäinen Mellieħan linnoitus, Pyhän Agatan torni, valmistui vuonna 1649.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Etiopia — maalehti / Kirjat ja aika: Kolmastoista kuukausi, jossa on viisi päivää] Etiopian kalenterissa on kaksitoista kolmenkymmenen päivän kuukautta ja niiden perässä kolmastoista, johon jää viisi päivää — karkausvuonna kuusi. Vuosi vaihtuu meidän syyskuumme 11. päivänä, ja uudenvuodenpäivää sanotaan amharaksi Enkutatashiksi, korujen lahjaksi. Ajanlaskun alkupiste on eri kuin lännessä, joten vuosiluku on seitsemän tai kahdeksan vuotta pienempi kuin muualla maailmassa. Neljän vuoden karkauskierto on nimetty evankelistojen mukaan: Johanneksen, Matteuksen, Markuksen ja Luukkaan vuodet seuraavat toisiaan.
+AIEMPI KYSYMYS: Kuka oli apostoli Paavalin matkakumppani Luukas?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Luukas oli varhaiskristillisen perinteen mukaan apostoli [[Paavalin]] matkakumppani ja lääkäri. Hänen katsotaan perinteisesti kirjoittaneen [[Luukkaan evankeliumin]] ja [[Apostolien teot]], joissa kerrotaan muun muassa Paavalin haaksirikosta Maltalla. Perimätiedon mukaan hän maalasi myös Neitsyt Marian kuvan Mellieħan luolaan, mutta sitä en pysty vahvistamaan. Tutkijat ovat eri mieltä siitä, kuka evankeliumin tarkalleen kirjoitti, joten tarkempaa en uskalla väittää. Kyllä minä silti muistan tämän, vaikka en kirjoita päiväkirjaa.
+KYSYMYS: Kerro lisää: Luukkaan evankeliumin
+
+### 152
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mellieħa (kaupungit)
+Tietoruudun teksti: Mellieħa on suuri kylä Maltan pohjoisosassa, ja sen nimi juontuu seemiläisestä sanajuuresta, joka tarkoittaa suolaa – todennäköisesti alueella sijainneiden foinikialais-roomalaisten suolapatojen mukaan. Perimätiedon mukaan apostoli Paavalin matkakumppani Luukas maalasi Neitsyt Marian kuvan erään Mellieħan luolan kallioseinään, ja luola vihittiin kirkoksi vuonna 409; siitä tuli myöhemmin Neitsyt Marian pyhäkkökirkko. Kylä oli yksi Maltan kymmenestä ensimmäisestä seurakunnasta, mutta se autioitui 1400–1500-lukujen taitteessa korsaarien hyökkäysten vuoksi eikä asutus palannut ennen 1500-luvun loppua. Pohjoisrannikkoa alettiin linnoittaa 1600-luvun alussa, ja ensimmäinen Mellieħan linnoitus, Pyhän Agatan torni, valmistui vuonna 1649.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uusi-Seelanti — maalehti / Maorikulttuuri: Kasvot, jotka kertovat kuka olet] 1878 — Tā moko ei ollut koriste vaan asiakirja: kuviot kertoivat suvun, aseman ja tehdyt teot, ja niitä osattiin lukea. Työ ei ollut pistelyä vaan veistoa. Uhi-taltalla, usein albatrossin luusta tehdyllä, iho avattiin ja väri hierottiin vakoihin, joten valmis moko tuntui sormenpäissä uurteina. Miehet saivat kuvionsa tavallisesti kasvoihin ja reisiin, naiset huuliin ja leukaan, ja sen saaminen oli siirtymä lapsuudesta aikuisuuteen. Isoisän aikaan tapa oli muuttumassa: eurooppalainen neula alkoi korvata taltan, ja miesten kasvokuviot harvinaistuivat.
+AIEMPI KYSYMYS: Kuka oli apostoli Paavalin matkakumppani Luukas?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Luukas oli varhaiskristillisen perinteen mukaan apostoli [[Paavalin]] matkakumppani ja lääkäri. Hänen katsotaan perinteisesti kirjoittaneen [[Luukkaan evankeliumin]] ja [[Apostolien teot]], joissa kerrotaan muun muassa Paavalin haaksirikosta Maltalla. Perimätiedon mukaan hän maalasi myös Neitsyt Marian kuvan Mellieħan luolaan, mutta sitä en pysty vahvistamaan. Tutkijat ovat eri mieltä siitä, kuka evankeliumin tarkalleen kirjoitti, joten tarkempaa en uskalla väittää. Kyllä minä silti muistan tämän, vaikka en kirjoita päiväkirjaa.
+KYSYMYS: Kerro lisää: Apostolien teot
+
+### 153
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsaskala (merenkulku)
+Tietoruudun teksti: Marsaskala, maltaksi myös Wied il-Għajn, on rantakaupunki Maltan eteläosassa; se oli alun perin kalastajakylä, mutta on kasvanut suosituksi matkailukohteeksi ja pysyväksi asuinpaikaksi. Nimi on koostesana arabiasta: marsa tarkoittaa satamaa, ja jälkiosa skala juontuu todennäköisesti sisilialaisia kalastajia tarkoittavasta sanasta. Maltaksi kaupunkia kutsutaan myös Wied il-Għajniksi, koska lahden pohjukkaan laskeutui ennen kaksi laaksoa, joiden makean veden lähde virtasi sisimpään lahteen. Nykyinen seurakuntakirkko, joka on omistettu Pyhälle Annalle, valmistui vasta 1953, ja kaupungin juhlaa vietetään heinäkuun lopussa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+AIEMPI KYSYMYS: Mitä marsa tarkoittaa arabiaksi?
+AIEMPI VASTAUS (Livia):
+Kato, tää on helppo. Arabian sana marsa tarkoittaa satamaa. Marsaskalan nimessä se on yhdistetty sanaan skala, joka juontuu todennäköisesti sisilialaisia kalastajia tarkoittavasta sanasta, joten nimi kertoo kaupungin kalastajasatamasta. Sanan marsa tapaa muuallakin [[Maltan]] paikannimistä, mikä muistuttaa saarten pitkästä [[arabialaisesta]] vaikutuksesta kieleen. Satamasta puheen ollen, laiturilla kelpaisi kyllä pieni murunen.
+KYSYMYS: Kerro lisää: Maltan
+
+### 154
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsaskala (merenkulku)
+Tietoruudun teksti: Marsaskala, maltaksi myös Wied il-Għajn, on rantakaupunki Maltan eteläosassa; se oli alun perin kalastajakylä, mutta on kasvanut suosituksi matkailukohteeksi ja pysyväksi asuinpaikaksi. Nimi on koostesana arabiasta: marsa tarkoittaa satamaa, ja jälkiosa skala juontuu todennäköisesti sisilialaisia kalastajia tarkoittavasta sanasta. Maltaksi kaupunkia kutsutaan myös Wied il-Għajniksi, koska lahden pohjukkaan laskeutui ennen kaksi laaksoa, joiden makean veden lähde virtasi sisimpään lahteen. Nykyinen seurakuntakirkko, joka on omistettu Pyhälle Annalle, valmistui vasta 1953, ja kaupungin juhlaa vietetään heinäkuun lopussa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Doha — kaupunkilehti / Doha: Katsomo, jossa kaksi rakennustapaa kohtaa] Kataran kulttuurikylä avattiin lokakuussa 2010 rannalle täytetylle maalle. Se on rakennettu matalaksi kyläksi: hiekanvärisiä taloja, tasakattoja, varjoisia kujia ja sisäpihoja. Keskellä on marmorista muurattu amfiteatteri, jonka ala on 3 275 neliömetriä ja johon mahtuu 5 000 katsojaa. Muoto on lainattu kahdesta suunnasta: pyöreä katsomo ja pylväät ovat antiikin Kreikasta, kaarien teräväkärkinen muoto ja parvekkeet arabialaisesta rakennustavasta. Ensimmäinen Qatarissa esitetty ooppera nähtiin täällä lokakuussa 2012, kun ohjelmassa oli Verdin Aida. Kylässä on lisäksi maan ainoa oopperatalo, jossa on 550 paikkaa.
+AIEMPI KYSYMYS: Mitä marsa tarkoittaa arabiaksi?
+AIEMPI VASTAUS (Livia):
+Kato, tää on helppo. Arabian sana marsa tarkoittaa satamaa. Marsaskalan nimessä se on yhdistetty sanaan skala, joka juontuu todennäköisesti sisilialaisia kalastajia tarkoittavasta sanasta, joten nimi kertoo kaupungin kalastajasatamasta. Sanan marsa tapaa muuallakin [[Maltan]] paikannimistä, mikä muistuttaa saarten pitkästä [[arabialaisesta]] vaikutuksesta kieleen. Satamasta puheen ollen, laiturilla kelpaisi kyllä pieni murunen.
+KYSYMYS: Kerro lisää: arabialaisesta
+
+### 155
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsaskala (merenkulku)
+Tietoruudun teksti: Marsaskala, maltaksi myös Wied il-Għajn, on rantakaupunki Maltan eteläosassa; se oli alun perin kalastajakylä, mutta on kasvanut suosituksi matkailukohteeksi ja pysyväksi asuinpaikaksi. Nimi on koostesana arabiasta: marsa tarkoittaa satamaa, ja jälkiosa skala juontuu todennäköisesti sisilialaisia kalastajia tarkoittavasta sanasta. Maltaksi kaupunkia kutsutaan myös Wied il-Għajniksi, koska lahden pohjukkaan laskeutui ennen kaksi laaksoa, joiden makean veden lähde virtasi sisimpään lahteen. Nykyinen seurakuntakirkko, joka on omistettu Pyhälle Annalle, valmistui vasta 1953, ja kaupungin juhlaa vietetään heinäkuun lopussa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Caracas — kohdekartta / Kohdekartta: Santa Teresan basilika] 1881 Basilika on kaksi uusklassista kirkkoa, jotka on liitetty yhteen kupolilla. Kupolin alla on pääalttari, ja rakennuksella on kaksi julkisivua eri suuntiin: läntinen on omistettu pyhälle Annalle ja itäinen pyhälle Teresalle. Osoite on La Palman ja Santa Teresan kulma vanhassa keskustassa. Talo nousi San Felipe Nerin kirkon paikalle. Presidentti Guzmán Blanco määräsi vanhan kirkon purettavaksi ja tilasi 1870 arkkitehti Juan Hurtado Manriquelta samalle tontille monumentaalisen uuden. Työt tehtiin 1877–1881, ja kirkko vihittiin 28. lokakuuta 1881 Santa Teresan kirkkona presidentin vaimon Ana Teresan mukaan. Basilika on Nasarealaisen kuvan tärkein kunnioituspaikka, ja pääsiäisenä väkeä tulee…
+AIEMPI KYSYMYS: Minä vuonna kaupungin seurakuntakirkko valmistui?
+AIEMPI VASTAUS (Livia):
+No niin, katsotaas. Nykyinen [[Pyhälle Annalle]] omistettu seurakuntakirkko valmistui vuonna 1953, joten se on kaupungin historiassa verrattain nuori rakennus. Kaupunki oli alun perin [[kalastajakylä]], joka on kasvanut matkailukohteeksi ja pysyväksi asuinpaikaksi, ja seurakuntakirkko kuvastaa tätä kasvua. Kaupungin juhlaa vietetään heinäkuun lopussa. Nuori kirkko, vanha satama, ja minä siinä välissä.
+KYSYMYS: Kerro lisää: Pyhälle Annalle
+
+### 156
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsaskala (merenkulku)
+Tietoruudun teksti: Marsaskala, maltaksi myös Wied il-Għajn, on rantakaupunki Maltan eteläosassa; se oli alun perin kalastajakylä, mutta on kasvanut suosituksi matkailukohteeksi ja pysyväksi asuinpaikaksi. Nimi on koostesana arabiasta: marsa tarkoittaa satamaa, ja jälkiosa skala juontuu todennäköisesti sisilialaisia kalastajia tarkoittavasta sanasta. Maltaksi kaupunkia kutsutaan myös Wied il-Għajniksi, koska lahden pohjukkaan laskeutui ennen kaksi laaksoa, joiden makean veden lähde virtasi sisimpään lahteen. Nykyinen seurakuntakirkko, joka on omistettu Pyhälle Annalle, valmistui vasta 1953, ja kaupungin juhlaa vietetään heinäkuun lopussa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Managua — kaupunkilehti / Managua: Kalastajakylä kahden riitapukarin välissä] Managua oli 1800-luvun alussa pieni kalastajakylä Xolotlán-järven rannalla, virallisesti Leal Villa de Santiago de Managua vuodesta 1819. Pääkaupungiksi siitä tuli 1852, kun liittovaltion johtaja Fulgencio Vega ehdotti sitä sovintoratkaisuksi kahden toisiaan vihaavan kaupungin väliin: liberaali León halusi hallita, konservatiivinen Granada ei suostunut siihen. Rakennustyöt kestivät vuosia, ja pääkaupungin asema vakiintui vasta 1850-luvun lopulla. Isoisän matkatessa 1873 Managua oli siis vielä nuori hallintokaupunki, tuskin viisitoistavuotias pääkaupunkina — kalastajakylän maine ei ollut vielä haihtunut, ja järvi näkyi joka kadulta.
+AIEMPI KYSYMYS: Minä vuonna kaupungin seurakuntakirkko valmistui?
+AIEMPI VASTAUS (Livia):
+No niin, katsotaas. Nykyinen [[Pyhälle Annalle]] omistettu seurakuntakirkko valmistui vuonna 1953, joten se on kaupungin historiassa verrattain nuori rakennus. Kaupunki oli alun perin [[kalastajakylä]], joka on kasvanut matkailukohteeksi ja pysyväksi asuinpaikaksi, ja seurakuntakirkko kuvastaa tätä kasvua. Kaupungin juhlaa vietetään heinäkuun lopussa. Nuori kirkko, vanha satama, ja minä siinä välissä.
+KYSYMYS: Kerro lisää: kalastajakylä
+
+### 157
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsaskala (merenkulku)
+Tietoruudun teksti: Marsaskala, maltaksi myös Wied il-Għajn, on rantakaupunki Maltan eteläosassa; se oli alun perin kalastajakylä, mutta on kasvanut suosituksi matkailukohteeksi ja pysyväksi asuinpaikaksi. Nimi on koostesana arabiasta: marsa tarkoittaa satamaa, ja jälkiosa skala juontuu todennäköisesti sisilialaisia kalastajia tarkoittavasta sanasta. Maltaksi kaupunkia kutsutaan myös Wied il-Għajniksi, koska lahden pohjukkaan laskeutui ennen kaksi laaksoa, joiden makean veden lähde virtasi sisimpään lahteen. Nykyinen seurakuntakirkko, joka on omistettu Pyhälle Annalle, valmistui vasta 1953, ja kaupungin juhlaa vietetään heinäkuun lopussa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lima — kaupunkilehti / Historia: Ichman laakso ennen espanjalaisia] Rímacin, Chillónin ja Lurínin jokilaaksoissa asui vuosisatojen ajan yhteisöjä, jotka kokosi yhteen Ichman herruus; alueen ilmeen loivat Marangan ja Liman kulttuurit. Inkavallan aikana laakso kuului Pachacamacin provinssiin, jonka pyhäkkö oli rannikon tärkein pyhiinvaelluskohde 300-luvulta 1400-luvulle. Espanjalaisten saapuessa laaksoa hallitsi kuraakka Taulichusco, joka oli aiemmin palvellut inkakeisari Huayna Capacin puolisoa Mama Viloa. Uusi kaupunki rakennettiin suoraan vanhan päälle: Taulichuscon palatsin paikalla on nykyinen hallituksen palatsi ja Puma Intin temppelin paikalla tuomiokirkko.
+- [Tšekki — maalehti / Historia: Laakso, jonka nimi kiersi maailman] 1520 — Luoteis-Böömin vuoristossa avattiin vuonna 1516 hopeakaivokset, ja laakso sai nimen Joachimsthal — nykyinen Jáchymov. Kaksi vuotta myöhemmin siellä lyötiin ensimmäiset isot hopeakolikot, ja vuodesta 1520 niitä kutsuttiin joachimsthalereiksi. Nimi lyheni pian pelkäksi thaleriksi eli taaleriksi, ja saksan sana Thal tarkoittaa laaksoa: kolikko oli siis laaksolainen. Taalereita alettiin lyödä ympäri Eurooppaa, ja samasta sanasta on kasvanut sana, jolla maksetaan yhä Yhdysvalloissa: dollari.
+AIEMPI KYSYMYS: Miksi Marsaskalaa kutsutaan myös Wied il-Għajniksi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tähän on hyvä selitys. Lahden pohjukkaan laskeutui ennen kaksi [[laaksoa]], joiden makean veden [[lähde]] virtasi sisimpään lahteen. Nimi viittaa tähän laaksoon ja lähteeseen, ja maltaksi kaupunkia kutsutaan yhä myös sillä nimellä. Makea vesi oli saarella arvokasta, joten lähde oli kalastajakylälle tärkeä. Hyvä että joku muistaa nimetä paikat vedenkin mukaan.
+KYSYMYS: Kerro lisää: laaksoa
+
+### 158
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsaskala (merenkulku)
+Tietoruudun teksti: Marsaskala, maltaksi myös Wied il-Għajn, on rantakaupunki Maltan eteläosassa; se oli alun perin kalastajakylä, mutta on kasvanut suosituksi matkailukohteeksi ja pysyväksi asuinpaikaksi. Nimi on koostesana arabiasta: marsa tarkoittaa satamaa, ja jälkiosa skala juontuu todennäköisesti sisilialaisia kalastajia tarkoittavasta sanasta. Maltaksi kaupunkia kutsutaan myös Wied il-Għajniksi, koska lahden pohjukkaan laskeutui ennen kaksi laaksoa, joiden makean veden lähde virtasi sisimpään lahteen. Nykyinen seurakuntakirkko, joka on omistettu Pyhälle Annalle, valmistui vasta 1953, ja kaupungin juhlaa vietetään heinäkuun lopussa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kohdekartta / Kohdekartta: Intiaanittaren lähde] 1837 Suihkulähde syntyi Villanuevan kreivin Claudio Martínez de Pinillosin aloitteesta. Se tuotiin Italiasta 1837, ja sen muotoili Carraran marmorista italialainen Giuseppe Gaggini. Kolmimetrinen valkoinen marmoriveistos seisoo suorakulmaisella jalustalla, jonka joka kulmassa on delfiini; delfiinien kielistä valuu vesi suuriin simpukan kuoriin, jotka muodostavat lähteen altaan. Hahmo esittää intiaaninaista nimeltä Habana, jonka mukaan kaupunki on nimetty. Nainen istuu kalliolla ja katsoo itään. Kasvot ovat intiaanin, mutta profiili on kreikkalainen — juuri se on ollut voimakkain kritiikki veistäjää kohtaan, sillä kreikkalainen profiili oli aikansa käsitys naisellisesta täydellisyydestä. Vas…
+- [Yellowstone — kaupunkilehti / Geysirit ja erämaa: Grand Prismatic Spring — sateenkaaren lähde] Grand Prismatic Spring on Yhdysvaltain suurin ja maailman kolmanneksi suurin kuuma lähde: halkaisijaltaan noin 110 metriä ja syvimmiltä kohdiltaan noin 50 metriä syvä. Keskellä vesi on niin kuumaa ja steriiliä, ettei siellä elä juuri mitään — siksi keskiosa näyttää syvän siniseltä, kun pelkkä vesi imee itseensä muut värit paitsi sinisen. Reunoilla vesi jäähtyy, ja siellä viihtyvät lämpöä sietävät bakteerit ja arkeonit muodostavat mattoja, joiden klorofylli ja karotenoidipigmentit värjäävät renkaat keltaisiksi, oransseiksi ja punaisiksi. Värit vaihtuvat vuodenajan mukaan: kesällä reunat hehkuvat oranssinpunaisina, talvella ne tummuvat lähes vihreiksi.
+AIEMPI KYSYMYS: Miksi Marsaskalaa kutsutaan myös Wied il-Għajniksi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tähän on hyvä selitys. Lahden pohjukkaan laskeutui ennen kaksi [[laaksoa]], joiden makean veden [[lähde]] virtasi sisimpään lahteen. Nimi viittaa tähän laaksoon ja lähteeseen, ja maltaksi kaupunkia kutsutaan yhä myös sillä nimellä. Makea vesi oli saarella arvokasta, joten lähde oli kalastajakylälle tärkeä. Hyvä että joku muistaa nimetä paikat vedenkin mukaan.
+KYSYMYS: Kerro lisää: lähde
+
+### 159
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsaskala (merenkulku)
+Tietoruudun teksti: Marsaskala, maltaksi myös Wied il-Għajn, on rantakaupunki Maltan eteläosassa; se oli alun perin kalastajakylä, mutta on kasvanut suosituksi matkailukohteeksi ja pysyväksi asuinpaikaksi. Nimi on koostesana arabiasta: marsa tarkoittaa satamaa, ja jälkiosa skala juontuu todennäköisesti sisilialaisia kalastajia tarkoittavasta sanasta. Maltaksi kaupunkia kutsutaan myös Wied il-Għajniksi, koska lahden pohjukkaan laskeutui ennen kaksi laaksoa, joiden makean veden lähde virtasi sisimpään lahteen. Nykyinen seurakuntakirkko, joka on omistettu Pyhälle Annalle, valmistui vasta 1953, ja kaupungin juhlaa vietetään heinäkuun lopussa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valparaíso — kohdekartta / Kohdekartta: Katolinen yliopisto] 1928 Yliopisto perustettiin maaliskuussa 1928 Isabel Caces de Brownin runsaan lahjoituksen turvin. Sitäkin vanhempi on oikeustieteellinen tiedekunta: pyhien sydänten isät perustivat sen 1894 itsenäiseksi korkeakouluksi, ja se liitettiin myöhemmin yliopistoon, koska molemmat olivat katolisen kirkon yksiköitä. Ensimmäiset tutkinnot olivat sähkötekniikka, rakentaminen, kemia, kaivostoiminta, liikkeenjohto, konetekniikka, koristetaiteet ja kauppamerenkulku. Casa Central on keskustassa muutaman korttelin päässä kongressitalosta, metrosta ja merestä, ja juuri se on kaupunkiyliopiston ongelma: alkuperäisellä paikalla ei ole tilaa kasvaa. Osa yksiköistä on siksi hajallaan Valparaísossa, Viña del Ma…
+- [Valparaíso — kohdekartta / Kohdekartta: Valparaíson yliopisto] 1981 Valparaíso oli 1800-luvulla San Franciscon eteläpuolen suurin Tyynenmeren satama ja siksi liike-elämän keskus, ja korkein opetus alkoi täällä kaupan tarpeista. Muodollinen oikeustieteen opetus alkoi 1878, ja vuoteen 1911 mennessä siitä oli kasvanut Chilen ensimmäinen alueellinen oikeustieteellinen korkeakoulu osana Chilen yliopistoa. Kaupunkiin syntyi 1920- ja 1930-luvuilla kaksi yksityistä yliopistoa, joista tulivat Federico Santa Marían teknillinen yliopisto ja katolinen yliopisto, samalla kun valtion korkeakouluopetus koottiin Chilen yliopiston alaisuuteen. Vuonna 1972 kaupungin julkinen yliopisto-opetus järjestettiin Chilen yliopiston toimipisteeksi, ja 12. helmikuuta 1981 se sai n…
+AIEMPI KYSYMYS: Mikä on kaupungin seurakuntakirkon suojeluspyhimys?
+AIEMPI VASTAUS (Livia):
+Ai se, tuo on helppo. Kirkko on omistettu [[Pyhälle Annalle]], ja se valmistui vuonna 1953. Kaupungin juhlaa vietetään heinäkuun lopussa, mikä sopii yhteen [[katolisen]] perinteen kanssa, jossa Pyhän Annan muistopäivä on heinäkuussa. Perinteessä Anna on [[Neitsyt Marian]] äiti. Maltalaiset kylät viettävät juhliaan näyttävästi, ja kyläjuhla on tärkeä osa paikallista yhteisöä. Juhlissa on aina jotain tarjolla, ja minä olen aina paikalla.
+KYSYMYS: Kerro lisää: katolisen
+
+### 160
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsaskala (merenkulku)
+Tietoruudun teksti: Marsaskala, maltaksi myös Wied il-Għajn, on rantakaupunki Maltan eteläosassa; se oli alun perin kalastajakylä, mutta on kasvanut suosituksi matkailukohteeksi ja pysyväksi asuinpaikaksi. Nimi on koostesana arabiasta: marsa tarkoittaa satamaa, ja jälkiosa skala juontuu todennäköisesti sisilialaisia kalastajia tarkoittavasta sanasta. Maltaksi kaupunkia kutsutaan myös Wied il-Għajniksi, koska lahden pohjukkaan laskeutui ennen kaksi laaksoa, joiden makean veden lähde virtasi sisimpään lahteen. Nykyinen seurakuntakirkko, joka on omistettu Pyhälle Annalle, valmistui vasta 1953, ja kaupungin juhlaa vietetään heinäkuun lopussa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Arki: Kylä syttyy juhlaan] nykyään — Kesäisin lähes joka viikonloppu jokin Maltan kylä juhlii suojelupyhimystään festalla. Pääkadut koristellaan brokadilipuilla, ja kirkko valaistaan illalla lampuilla. Juhlan huippu on korkea messu, jonka jälkeen pyhimyksen patsas kannetaan kulkueessa kylän kaduille. Sitten alkaa useita päiviä kestävä riemu: soittokunnat marssivat, ilotulitteet paukkuvat ja juhlat jatkuvat yöhön. Mġarrissa festaa vietetään 15. elokuuta Neitsyt Marian taivaaseenoton kunniaksi, ja ilotulituksesta vastaa oma seuransa.
+- [Port Moresby — kohdekartta / Kohdekartta: Pyhän Marian katedraali] 1889 alkaen Pyhän Marian katedraali on Port Moresbyn arkkihiippakunnan pääkirkko ja omistettu Neitsyt Marialle. Ulkoseinät ovat vaaleansiniset, ja pääsisäänkäynnin toisella puolen kohoaa valkoinen torni. Hiippakunta on kirkkoa vanhempi, ja sen nimi on vaihtunut kolmesti. Se perustettiin 10. toukokuuta 1889 Uuden-Guinean apostoliseksi vikariaatiksi, sai 1922 nimen Papuan vikariaatti ja 1946 Port Moresbyn vikariaatti; arkkihiippakunnaksi se korotettiin 15. marraskuuta 1966. Vuonna 2023 alueella oli 22 seurakuntaa ja noin 233 000 katolista eli 29 prosenttia väestöstä. Paavi Johannes Paavali II vieraili katedraalissa toukokuussa 1984 ja palasi hiippakuntaan tammikuussa 1995. Paavi Franciscus vi…
+AIEMPI KYSYMYS: Mikä on kaupungin seurakuntakirkon suojeluspyhimys?
+AIEMPI VASTAUS (Livia):
+Ai se, tuo on helppo. Kirkko on omistettu [[Pyhälle Annalle]], ja se valmistui vuonna 1953. Kaupungin juhlaa vietetään heinäkuun lopussa, mikä sopii yhteen [[katolisen]] perinteen kanssa, jossa Pyhän Annan muistopäivä on heinäkuussa. Perinteessä Anna on [[Neitsyt Marian]] äiti. Maltalaiset kylät viettävät juhliaan näyttävästi, ja kyläjuhla on tärkeä osa paikallista yhteisöä. Juhlissa on aina jotain tarjolla, ja minä olen aina paikalla.
+KYSYMYS: Kerro lisää: Neitsyt Marian

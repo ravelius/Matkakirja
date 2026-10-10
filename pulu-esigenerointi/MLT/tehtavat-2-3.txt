@@ -1,0 +1,1062 @@
+### 161
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Verdalan palatsi (historia)
+Tietoruudun teksti: Verdalan palatsi kohoaa Buskettin puutarhojen keskellä Siġġiewin kunnan alueella, ja se toimii nykyään Maltan presidentin virallisena kesäasuntona. Paikalla oli 1550–1560-luvuilla Johanniittaritarikunnan suurmestari Jean Parisot de la Valetten rakennuttama metsästysmaja Boschetton riistamaalla, ja maja laajennettiin palatsiksi vuonna 1586 suurmestari Hugues Loubenx de Verdallen aikana, jonka mukaan palatsi on nimetty. Rakennusta koristeltiin lisää 1600- ja 1700-luvuilla suurmestarien Giovanni Paolo Lascarisin ja António Manoel de Vilhenan kausina. Brittiaikana palatsi toimi Maltan kuvernöörin residenssinä San Anton -palatsin ohella, ja siellä majoittui myös brittihallitsijoita ja muuta ylhäisöä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+AIEMPI KYSYMYS: Minkä suurmestarin mukaan palatsi on nimetty?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Palatsi on nimetty suurmestari Hugues Loubenx de Verdallen mukaan, jonka aikana vuonna 1586 metsästysmaja laajennettiin palatsiksi. Hän johti [[Johanniittaritarikuntaa]], jonka suurmestarit hallitsivat Maltaa. Paikalla oli aiemmin suurmestari Jean Parisot de la Valetten rakennuttama metsästysmaja [[Boschetton]] riistamaalla, ja nykyisin rakennus on Maltan presidentin kesäasunto. Suurmestareita oli niin monta, että minulla meni hetki päästä perille.
+KYSYMYS: Kerro lisää: Johanniittaritarikuntaa
+
+### 162
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Verdalan palatsi (historia)
+Tietoruudun teksti: Verdalan palatsi kohoaa Buskettin puutarhojen keskellä Siġġiewin kunnan alueella, ja se toimii nykyään Maltan presidentin virallisena kesäasuntona. Paikalla oli 1550–1560-luvuilla Johanniittaritarikunnan suurmestari Jean Parisot de la Valetten rakennuttama metsästysmaja Boschetton riistamaalla, ja maja laajennettiin palatsiksi vuonna 1586 suurmestari Hugues Loubenx de Verdallen aikana, jonka mukaan palatsi on nimetty. Rakennusta koristeltiin lisää 1600- ja 1700-luvuilla suurmestarien Giovanni Paolo Lascarisin ja António Manoel de Vilhenan kausina. Brittiaikana palatsi toimi Maltan kuvernöörin residenssinä San Anton -palatsin ohella, ja siellä majoittui myös brittihallitsijoita ja muuta ylhäisöä.
+AIEMPI KYSYMYS: Minkä suurmestarin mukaan palatsi on nimetty?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Palatsi on nimetty suurmestari Hugues Loubenx de Verdallen mukaan, jonka aikana vuonna 1586 metsästysmaja laajennettiin palatsiksi. Hän johti [[Johanniittaritarikuntaa]], jonka suurmestarit hallitsivat Maltaa. Paikalla oli aiemmin suurmestari Jean Parisot de la Valetten rakennuttama metsästysmaja [[Boschetton]] riistamaalla, ja nykyisin rakennus on Maltan presidentin kesäasunto. Suurmestareita oli niin monta, että minulla meni hetki päästä perille.
+KYSYMYS: Kerro lisää: Boschetton
+
+### 163
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Verdalan palatsi (historia)
+Tietoruudun teksti: Verdalan palatsi kohoaa Buskettin puutarhojen keskellä Siġġiewin kunnan alueella, ja se toimii nykyään Maltan presidentin virallisena kesäasuntona. Paikalla oli 1550–1560-luvuilla Johanniittaritarikunnan suurmestari Jean Parisot de la Valetten rakennuttama metsästysmaja Boschetton riistamaalla, ja maja laajennettiin palatsiksi vuonna 1586 suurmestari Hugues Loubenx de Verdallen aikana, jonka mukaan palatsi on nimetty. Rakennusta koristeltiin lisää 1600- ja 1700-luvuilla suurmestarien Giovanni Paolo Lascarisin ja António Manoel de Vilhenan kausina. Brittiaikana palatsi toimi Maltan kuvernöörin residenssinä San Anton -palatsin ohella, ja siellä majoittui myös brittihallitsijoita ja muuta ylhäisöä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+AIEMPI KYSYMYS: Mitä rakennusta paikalla oli ennen palatsia?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tähän on suora vastaus. Paikalla oli ennen palatsia metsästysmaja, jonka suurmestari [[Jean Parisot de la Valette]] rakennutti 1550–1560-luvuilla [[Boschetton]] riistamaalle. Maja laajennettiin palatsiksi vuonna 1586 suurmestari Verdallen aikana, ja palatsi sai nimensä hänen mukaansa. Myöhemmin rakennusta koristeltiin lisää, ja nykyään se on Maltan presidentin kesäasunto. Metsästysmajasta palatsiksi, siinä on kyllä urakehitystä, jota kyyhky ei saavuta.
+KYSYMYS: Kerro lisää: Jean Parisot de la Valette
+
+### 164
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Verdalan palatsi (historia)
+Tietoruudun teksti: Verdalan palatsi kohoaa Buskettin puutarhojen keskellä Siġġiewin kunnan alueella, ja se toimii nykyään Maltan presidentin virallisena kesäasuntona. Paikalla oli 1550–1560-luvuilla Johanniittaritarikunnan suurmestari Jean Parisot de la Valetten rakennuttama metsästysmaja Boschetton riistamaalla, ja maja laajennettiin palatsiksi vuonna 1586 suurmestari Hugues Loubenx de Verdallen aikana, jonka mukaan palatsi on nimetty. Rakennusta koristeltiin lisää 1600- ja 1700-luvuilla suurmestarien Giovanni Paolo Lascarisin ja António Manoel de Vilhenan kausina. Brittiaikana palatsi toimi Maltan kuvernöörin residenssinä San Anton -palatsin ohella, ja siellä majoittui myös brittihallitsijoita ja muuta ylhäisöä.
+AIEMPI KYSYMYS: Mihin käyttöön Verdalan palatsi on nykyään?
+AIEMPI VASTAUS (Livia):
+Mmm— no niin. Palatsi toimii nykyään Maltan presidentin virallisena kesäasuntona. Se kohoaa [[Buskettin]] puutarhojen keskellä Siġġiewin kunnan alueella. Brittiaikana sitä käytettiin Maltan kuvernöörin residenssinä, ja nykyinen käyttö jatkaa rakennuksen vanhaa virallista asemaa. Maltan tasavallan [[presidentti]] on valtionpäämies, ja palatsi on hänen kesäpaikkansa. Kesäasunto kuulostaa minun korvaani kovin hyvältä ajatukselta.
+KYSYMYS: Kerro lisää: Buskettin
+
+### 165
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Verdalan palatsi (historia)
+Tietoruudun teksti: Verdalan palatsi kohoaa Buskettin puutarhojen keskellä Siġġiewin kunnan alueella, ja se toimii nykyään Maltan presidentin virallisena kesäasuntona. Paikalla oli 1550–1560-luvuilla Johanniittaritarikunnan suurmestari Jean Parisot de la Valetten rakennuttama metsästysmaja Boschetton riistamaalla, ja maja laajennettiin palatsiksi vuonna 1586 suurmestari Hugues Loubenx de Verdallen aikana, jonka mukaan palatsi on nimetty. Rakennusta koristeltiin lisää 1600- ja 1700-luvuilla suurmestarien Giovanni Paolo Lascarisin ja António Manoel de Vilhenan kausina. Brittiaikana palatsi toimi Maltan kuvernöörin residenssinä San Anton -palatsin ohella, ja siellä majoittui myös brittihallitsijoita ja muuta ylhäisöä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad — maalehti / Musiikki: Yhtye, jonka presidentti lähetti kouluun Zaireen] 1962–1965 — Tšadin ensimmäinen moderni yhtye oli Chari Jazz, perustettu 1964. Sitä edelsi 1962 pääkaupungissa perustettu Tchad succès, jonka soittajat olivat enimmäkseen kamerunilaisia ja kongolaisia. Naimou Mbaitoloum kokosi ystävistään Sarhissa yhtyeen Star Jazz, jota presidentti François Tombalbaye ryhtyi tukemaan ja jonka nimen hän muutti Chari Jazziksi. Hän lähetti yhtyeen Zaireen oppimaan Franco Luambo Makiadilta ja Tabu Ley Rochereaulta. Kotiin palattuaan se ehti tuskin asettua, kun soittajat lähtivät omille teilleen: Logone Band syntyi Moundoussa ja African Mélody kitaristin mukana.
+- [Buenos Aires — kaupunkilehti / Buenos Aires: Presidentti, joka ei kuullut pommia] Isoisän vierailun aikaan presidenttinä oli kirjailija ja poliitikko Domingo Faustino Sarmiento. Hänen kaudellaan 1868–1874 maahan saapui 280 000 siirtolaista, ja jo vuoden 1869 väestönlaskennassa puolet Buenos Airesin väestöstä oli äskettäin tulleita. Elokuun 22. päivänä 1873 hänen vaunuaan vastaan räjäytettiin pommi Corrientes- ja Maipú-katujen kulmassa; hyökkäys epäonnistui, kun ase petti tekijän kädessä, eikä kuuro presidentti kuullut räjähdystä. Hänen pääteoksensa jakoi maailman sivilisaatioon ja barbariaan, ja siitä ajattelusta häntä on jälkikäteen arvosteltu.
+AIEMPI KYSYMYS: Mihin käyttöön Verdalan palatsi on nykyään?
+AIEMPI VASTAUS (Livia):
+Mmm— no niin. Palatsi toimii nykyään Maltan presidentin virallisena kesäasuntona. Se kohoaa [[Buskettin]] puutarhojen keskellä Siġġiewin kunnan alueella. Brittiaikana sitä käytettiin Maltan kuvernöörin residenssinä, ja nykyinen käyttö jatkaa rakennuksen vanhaa virallista asemaa. Maltan tasavallan [[presidentti]] on valtionpäämies, ja palatsi on hänen kesäpaikkansa. Kesäasunto kuulostaa minun korvaani kovin hyvältä ajatukselta.
+KYSYMYS: Kerro lisää: presidentti
+
+### 166
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Verdalan palatsi (historia)
+Tietoruudun teksti: Verdalan palatsi kohoaa Buskettin puutarhojen keskellä Siġġiewin kunnan alueella, ja se toimii nykyään Maltan presidentin virallisena kesäasuntona. Paikalla oli 1550–1560-luvuilla Johanniittaritarikunnan suurmestari Jean Parisot de la Valetten rakennuttama metsästysmaja Boschetton riistamaalla, ja maja laajennettiin palatsiksi vuonna 1586 suurmestari Hugues Loubenx de Verdallen aikana, jonka mukaan palatsi on nimetty. Rakennusta koristeltiin lisää 1600- ja 1700-luvuilla suurmestarien Giovanni Paolo Lascarisin ja António Manoel de Vilhenan kausina. Brittiaikana palatsi toimi Maltan kuvernöörin residenssinä San Anton -palatsin ohella, ja siellä majoittui myös brittihallitsijoita ja muuta ylhäisöä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kaupunkilehti / Adelaide: Piirtäjä joka piti päänsä] Eversti William Light valitsi kaupungin paikan 1836, eikä valinta miellyttänyt juuri ketään: kuvernööri John Hindmarsh ja varhaiset siirtolaiset pitivät sitä liian kaukana Port Adelaiden satamasta ja makeasta vedestä liian köyhänä. Light piti päänsä. Hänen 1837 laatimassaan kaavassa on viisi aukiota, suora ruutu ja kahdeksikon muotoinen puistorengas, joka kiertää sekä keskustan että North Adelaiden ja erottaa ne esikaupungeista. Puistoiksi varattiin 2 300 eekkeriä ja hautausmaalle 32 lisää. Kaava on yhä paikallaan.
+- [Malta — maalehti / Ruoka: Joulun hunajarengas] perinteisesti joulu — Qagħaq tal-għasel on rengas, jonka sisällä on tumma täyte. Taikinaan tehdään viiltoja, joista täyte pursuaa esiin. Täyte valmistetaan perinteisesti hunajasta, melassista, aniksesta, kanelista ja neilikasta, ja osa lisää mukaan kaakaota. Herkkua leivottiin alun perin jouluksi, mutta siitä tuli niin suosittu, että sitä tehdään ympäri vuoden, eivätkä monet enää tiedä sen joulutaustaa. Rengas symboloi ikuista onnea, ja ulos valuva täyte kertoo, että hyvää riittää yllin kyllin.
+- [Geraldton — kaupunkilehti / Geraldton: Lyijyä ja lahden satama] Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.
+AIEMPI KYSYMYS: Mikä asema palatsilla oli brittiaikana?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Brittiaikana palatsi toimi Maltan [[kuvernöörin]] residenssinä [[San Anton -palatsin]] ohella. Siellä majoittui myös brittihallitsijoita ja muuta ylhäisöä, joten rakennus oli tärkeä paikka vallan edustuksessa. Maltalla britit pitivät hallintoa kauan, ja kuvernööri edusti Britannian kruunua saarella. Nykyään palatsin käyttö on rauhallisempaa. Kuvernöörin elämä ei kuulosta kyyhkyn elämältä, mutta pidempi vierailu voisi onnistua.
+KYSYMYS: Kerro lisää: kuvernöörin
+
+### 167
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Verdalan palatsi (historia)
+Tietoruudun teksti: Verdalan palatsi kohoaa Buskettin puutarhojen keskellä Siġġiewin kunnan alueella, ja se toimii nykyään Maltan presidentin virallisena kesäasuntona. Paikalla oli 1550–1560-luvuilla Johanniittaritarikunnan suurmestari Jean Parisot de la Valetten rakennuttama metsästysmaja Boschetton riistamaalla, ja maja laajennettiin palatsiksi vuonna 1586 suurmestari Hugues Loubenx de Verdallen aikana, jonka mukaan palatsi on nimetty. Rakennusta koristeltiin lisää 1600- ja 1700-luvuilla suurmestarien Giovanni Paolo Lascarisin ja António Manoel de Vilhenan kausina. Brittiaikana palatsi toimi Maltan kuvernöörin residenssinä San Anton -palatsin ohella, ja siellä majoittui myös brittihallitsijoita ja muuta ylhäisöä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Ruoka: Joulun hunajarengas] perinteisesti joulu — Qagħaq tal-għasel on rengas, jonka sisällä on tumma täyte. Taikinaan tehdään viiltoja, joista täyte pursuaa esiin. Täyte valmistetaan perinteisesti hunajasta, melassista, aniksesta, kanelista ja neilikasta, ja osa lisää mukaan kaakaota. Herkkua leivottiin alun perin jouluksi, mutta siitä tuli niin suosittu, että sitä tehdään ympäri vuoden, eivätkä monet enää tiedä sen joulutaustaa. Rengas symboloi ikuista onnea, ja ulos valuva täyte kertoo, että hyvää riittää yllin kyllin.
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+AIEMPI KYSYMYS: Mikä asema palatsilla oli brittiaikana?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Brittiaikana palatsi toimi Maltan [[kuvernöörin]] residenssinä [[San Anton -palatsin]] ohella. Siellä majoittui myös brittihallitsijoita ja muuta ylhäisöä, joten rakennus oli tärkeä paikka vallan edustuksessa. Maltalla britit pitivät hallintoa kauan, ja kuvernööri edusti Britannian kruunua saarella. Nykyään palatsin käyttö on rauhallisempaa. Kuvernöörin elämä ei kuulosta kyyhkyn elämältä, mutta pidempi vierailu voisi onnistua.
+KYSYMYS: Kerro lisää: San Anton -palatsin
+
+### 168
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Verdalan palatsi (historia)
+Tietoruudun teksti: Verdalan palatsi kohoaa Buskettin puutarhojen keskellä Siġġiewin kunnan alueella, ja se toimii nykyään Maltan presidentin virallisena kesäasuntona. Paikalla oli 1550–1560-luvuilla Johanniittaritarikunnan suurmestari Jean Parisot de la Valetten rakennuttama metsästysmaja Boschetton riistamaalla, ja maja laajennettiin palatsiksi vuonna 1586 suurmestari Hugues Loubenx de Verdallen aikana, jonka mukaan palatsi on nimetty. Rakennusta koristeltiin lisää 1600- ja 1700-luvuilla suurmestarien Giovanni Paolo Lascarisin ja António Manoel de Vilhenan kausina. Brittiaikana palatsi toimi Maltan kuvernöörin residenssinä San Anton -palatsin ohella, ja siellä majoittui myös brittihallitsijoita ja muuta ylhäisöä.
+AIEMPI KYSYMYS: Ketkä suurmestarit koristelivat palatsia myöhemmin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tähän löytyy nimet. Rakennusta koristeltiin lisää 1600- ja 1700-luvuilla suurmestari [[Giovanni Paolo Lascarisin]] ja [[António Manoel de Vilhenan]] kausina. Molemmat johtivat [[Johanniittaritarikuntaa]], ja heidän aikanaan palatsia kaunistettiin vuosisatojen kuluessa. Alkuperäinen palatsi oli rakennettu vuonna 1586 suurmestari Verdallen aikana. Nimet ovat pitkiä, ja muistin ne silti, kuten aina.
+KYSYMYS: Kerro lisää: Giovanni Paolo Lascarisin
+
+### 169
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Verdalan palatsi (historia)
+Tietoruudun teksti: Verdalan palatsi kohoaa Buskettin puutarhojen keskellä Siġġiewin kunnan alueella, ja se toimii nykyään Maltan presidentin virallisena kesäasuntona. Paikalla oli 1550–1560-luvuilla Johanniittaritarikunnan suurmestari Jean Parisot de la Valetten rakennuttama metsästysmaja Boschetton riistamaalla, ja maja laajennettiin palatsiksi vuonna 1586 suurmestari Hugues Loubenx de Verdallen aikana, jonka mukaan palatsi on nimetty. Rakennusta koristeltiin lisää 1600- ja 1700-luvuilla suurmestarien Giovanni Paolo Lascarisin ja António Manoel de Vilhenan kausina. Brittiaikana palatsi toimi Maltan kuvernöörin residenssinä San Anton -palatsin ohella, ja siellä majoittui myös brittihallitsijoita ja muuta ylhäisöä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Rakennukset: Teatteri kymmenessä kuukaudessa] 1731 — Suurmestari António Manoel de Vilhena tilasi Vallettaan julkisen teatterin vuonna 1731 ja maksoi sen itse, jotta ihmisillä olisi kunniallista huvia. Rakennus valmistui kuulemma vain kymmenessä kuukaudessa. Ensimmäinen näytelmä, Merope, esitettiin 9. tammikuuta 1732, ja näyttelijöinä olivat ritarit itse. Salissa on 534 paikkaa, ja kolme parvekekerrosta on tehty kokonaan puusta ja koristeltu lehtikullalla. Teatteria pidetään Euroopan kolmanneksi vanhimpana yhä toimivana teatterina.
+AIEMPI KYSYMYS: Ketkä suurmestarit koristelivat palatsia myöhemmin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tähän löytyy nimet. Rakennusta koristeltiin lisää 1600- ja 1700-luvuilla suurmestari [[Giovanni Paolo Lascarisin]] ja [[António Manoel de Vilhenan]] kausina. Molemmat johtivat [[Johanniittaritarikuntaa]], ja heidän aikanaan palatsia kaunistettiin vuosisatojen kuluessa. Alkuperäinen palatsi oli rakennettu vuonna 1586 suurmestari Verdallen aikana. Nimet ovat pitkiä, ja muistin ne silti, kuten aina.
+KYSYMYS: Kerro lisää: António Manoel de Vilhenan
+
+### 170
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Għar Dalam (historia)
+Tietoruudun teksti: Għar Dalam on 144 metriä pitkä luolaputki Birżebbuġan liepeillä, ja sen kerrostumista on löydetty pleistoseeni- ja holoseenikautisten eläinten luita: kääpiönorsuja, virtahepoja, jättiläisjoutsenia, peuroja ja karhuja. Luola on antanut nimensä Maltan esihistorian varhaiselle Għar Dalam -vaiheelle, ja sitä pidetään yhtenä saarten tärkeimmistä muinaismuistoista. Ensimmäiset tieteelliset kaivaukset teki italialainen paleontologi Arturo Issel vuonna 1865, ja lisäkaivauksia teki John H. Cooke vuonna 1892; osa löydöistä lähetettiin vertailukokoelmaksi Lontoon British Museumiin.
+AIEMPI KYSYMYS: Minä vuonna Arturo Issel teki ensimmäiset tieteelliset kaivaukset luolassa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Italialainen paleontologi [[Arturo Issel]] teki ensimmäiset tieteelliset kaivaukset vuonna 1865. Lisäkaivauksia teki John H. Cooke vuonna 1892, ja osa löydöistä lähetettiin vertailukokoelmaksi Lontoon [[British Museumiin]]. Luolan kerrostumista on löytynyt eläinten luita [[pleistoseeni]]- ja holoseenikaudelta, mikä tekee paikasta tutkijoille arvokkaan. Vuosiluvut pysyvät päässä, kun on opetellut ne oikein.
+KYSYMYS: Kerro lisää: Arturo Issel
+
+### 171
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Għar Dalam (historia)
+Tietoruudun teksti: Għar Dalam on 144 metriä pitkä luolaputki Birżebbuġan liepeillä, ja sen kerrostumista on löydetty pleistoseeni- ja holoseenikautisten eläinten luita: kääpiönorsuja, virtahepoja, jättiläisjoutsenia, peuroja ja karhuja. Luola on antanut nimensä Maltan esihistorian varhaiselle Għar Dalam -vaiheelle, ja sitä pidetään yhtenä saarten tärkeimmistä muinaismuistoista. Ensimmäiset tieteelliset kaivaukset teki italialainen paleontologi Arturo Issel vuonna 1865, ja lisäkaivauksia teki John H. Cooke vuonna 1892; osa löydöistä lähetettiin vertailukokoelmaksi Lontoon British Museumiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Punta Arenas — kaupunkilehti / Salmi ja Etelämanner: Beaglen jäljillä ja Darwinin pyynnöstä] Salmi kartoitettiin kunnolla vasta 1800-luvulla. Phillip Parker King mittasi rannat 1826–1830 HMS Adventurella yhdessä HMS Beaglen kanssa, ja työstä kerrottiin Lontoon maantieteellisen seuran kahdessa kokouksessa 1831. Richard Charles Mayne johti HMS Nassaun mittausretkeä 1866–1869; luonnontieteilijänä oli Robert Oliver Cunningham. Charles Darwin pyysi amiraliteettia käskemään Maynen keräämään venelastin verran sukupuuttoon kuolleiden nelijalkaisten fossiileja, ja löydöt vietiin British Museumiin. Amiraliteetti kokosi salmen purjehdusohjeet 1871, kaksi vuotta ennen isoisän matkaa. Vuoden 1881 rajasopimuksessa Argentiina tunnusti salmen Chilelle.
+- [Karthago — kaupunkilehti / Karthago: Englantilaisen kaivajan mosaiikit] Marraskuussa 1856 englantilainen matkakirjailija ja pastori Nathan Davis aloitti Britannian ulkoministeriön rahoittamat kaivaukset Karthagossa. Tammikuussa 1857 hän löysi ensimmäisen suuren löytönsä, kuukausia ja vuodenaikoja kuvaavan mosaiikkilattian, ja kehitti samalla menetelmän, jolla herkät mosaiikit voitiin irrottaa maasta rikkomatta niitä – tekniikka on käytössä yhä. Vuosina 1857–1860 Lontoon British Museumiin saapui Karthagosta kymmeniä laatikollisia löytöjä, ja isoisän matkavuoteen 1873 mennessä osa kaupungin kauneimmista roomalaisista lattiakuvioista oli jo asetettu näytteille Englannissa, kaukana omalta rannaltaan.
+AIEMPI KYSYMYS: Minä vuonna Arturo Issel teki ensimmäiset tieteelliset kaivaukset luolassa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Italialainen paleontologi [[Arturo Issel]] teki ensimmäiset tieteelliset kaivaukset vuonna 1865. Lisäkaivauksia teki John H. Cooke vuonna 1892, ja osa löydöistä lähetettiin vertailukokoelmaksi Lontoon [[British Museumiin]]. Luolan kerrostumista on löytynyt eläinten luita [[pleistoseeni]]- ja holoseenikaudelta, mikä tekee paikasta tutkijoille arvokkaan. Vuosiluvut pysyvät päässä, kun on opetellut ne oikein.
+KYSYMYS: Kerro lisää: British Museumiin
+
+### 172
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Għar Dalam (historia)
+Tietoruudun teksti: Għar Dalam on 144 metriä pitkä luolaputki Birżebbuġan liepeillä, ja sen kerrostumista on löydetty pleistoseeni- ja holoseenikautisten eläinten luita: kääpiönorsuja, virtahepoja, jättiläisjoutsenia, peuroja ja karhuja. Luola on antanut nimensä Maltan esihistorian varhaiselle Għar Dalam -vaiheelle, ja sitä pidetään yhtenä saarten tärkeimmistä muinaismuistoista. Ensimmäiset tieteelliset kaivaukset teki italialainen paleontologi Arturo Issel vuonna 1865, ja lisäkaivauksia teki John H. Cooke vuonna 1892; osa löydöistä lähetettiin vertailukokoelmaksi Lontoon British Museumiin.
+AIEMPI KYSYMYS: Minä vuonna Arturo Issel teki ensimmäiset tieteelliset kaivaukset luolassa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Italialainen paleontologi [[Arturo Issel]] teki ensimmäiset tieteelliset kaivaukset vuonna 1865. Lisäkaivauksia teki John H. Cooke vuonna 1892, ja osa löydöistä lähetettiin vertailukokoelmaksi Lontoon [[British Museumiin]]. Luolan kerrostumista on löytynyt eläinten luita [[pleistoseeni]]- ja holoseenikaudelta, mikä tekee paikasta tutkijoille arvokkaan. Vuosiluvut pysyvät päässä, kun on opetellut ne oikein.
+KYSYMYS: Kerro lisää: pleistoseeni
+
+### 173
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Għar Dalam (historia)
+Tietoruudun teksti: Għar Dalam on 144 metriä pitkä luolaputki Birżebbuġan liepeillä, ja sen kerrostumista on löydetty pleistoseeni- ja holoseenikautisten eläinten luita: kääpiönorsuja, virtahepoja, jättiläisjoutsenia, peuroja ja karhuja. Luola on antanut nimensä Maltan esihistorian varhaiselle Għar Dalam -vaiheelle, ja sitä pidetään yhtenä saarten tärkeimmistä muinaismuistoista. Ensimmäiset tieteelliset kaivaukset teki italialainen paleontologi Arturo Issel vuonna 1865, ja lisäkaivauksia teki John H. Cooke vuonna 1892; osa löydöistä lähetettiin vertailukokoelmaksi Lontoon British Museumiin.
+AIEMPI KYSYMYS: Millaisten eläinten luita luolasta on löydetty?
+AIEMPI VASTAUS (Livia):
+No jopas, vähän joutuu kaivamaan muistista. Luolan kerrostumista on löydetty pleistoseeni- ja holoseenikautisten eläinten luita, muun muassa kääpiönorsuja, virtahepoja, jättiläisjoutsenia, peuroja ja karhuja. Luola on [[Għar Dalamin]] luolaputki Birżebbuġan liepeillä, ja sitä pidetään yhtenä [[Maltan]] tärkeimmistä muinaismuistoista. Luolan nimi on annettu myös Maltan esihistorian varhaiselle vaiheelle. Jättiläisjoutsen on kyllä kiinnostava, ja minä pysyn silti pienemmässä koossa.
+KYSYMYS: Kerro lisää: Għar Dalamin
+
+### 174
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Għar Dalam (historia)
+Tietoruudun teksti: Għar Dalam on 144 metriä pitkä luolaputki Birżebbuġan liepeillä, ja sen kerrostumista on löydetty pleistoseeni- ja holoseenikautisten eläinten luita: kääpiönorsuja, virtahepoja, jättiläisjoutsenia, peuroja ja karhuja. Luola on antanut nimensä Maltan esihistorian varhaiselle Għar Dalam -vaiheelle, ja sitä pidetään yhtenä saarten tärkeimmistä muinaismuistoista. Ensimmäiset tieteelliset kaivaukset teki italialainen paleontologi Arturo Issel vuonna 1865, ja lisäkaivauksia teki John H. Cooke vuonna 1892; osa löydöistä lähetettiin vertailukokoelmaksi Lontoon British Museumiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+AIEMPI KYSYMYS: Millaisten eläinten luita luolasta on löydetty?
+AIEMPI VASTAUS (Livia):
+No jopas, vähän joutuu kaivamaan muistista. Luolan kerrostumista on löydetty pleistoseeni- ja holoseenikautisten eläinten luita, muun muassa kääpiönorsuja, virtahepoja, jättiläisjoutsenia, peuroja ja karhuja. Luola on [[Għar Dalamin]] luolaputki Birżebbuġan liepeillä, ja sitä pidetään yhtenä [[Maltan]] tärkeimmistä muinaismuistoista. Luolan nimi on annettu myös Maltan esihistorian varhaiselle vaiheelle. Jättiläisjoutsen on kyllä kiinnostava, ja minä pysyn silti pienemmässä koossa.
+KYSYMYS: Kerro lisää: Maltan
+
+### 175
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Għar Dalam (historia)
+Tietoruudun teksti: Għar Dalam on 144 metriä pitkä luolaputki Birżebbuġan liepeillä, ja sen kerrostumista on löydetty pleistoseeni- ja holoseenikautisten eläinten luita: kääpiönorsuja, virtahepoja, jättiläisjoutsenia, peuroja ja karhuja. Luola on antanut nimensä Maltan esihistorian varhaiselle Għar Dalam -vaiheelle, ja sitä pidetään yhtenä saarten tärkeimmistä muinaismuistoista. Ensimmäiset tieteelliset kaivaukset teki italialainen paleontologi Arturo Issel vuonna 1865, ja lisäkaivauksia teki John H. Cooke vuonna 1892; osa löydöistä lähetettiin vertailukokoelmaksi Lontoon British Museumiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Arki] Maltalla arki on värikästä: kalastajaveneiden silmät katsovat merelle, puuparvekkeet vihertävät kadun yllä ja kesäisin kylän kirkko syttyy valoihin. Kaiken taustalla soi kieli, jonka juuret ovat arabiassa mutta jota kirjoitetaan latinalaisilla aakkosilla.
+AIEMPI KYSYMYS: Kuinka pitkä Għar Dalamin luolaputki on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Luolaputki on 144 metriä pitkä, ja se sijaitsee Birżebbuġan liepeillä [[Maltalla]]. Luolan kerrostumista on löydetty eläinten luita, ja paikka on antanut nimensä myös [[Għar Dalam -vaiheelle]], joka on Maltan esihistorian varhainen jakso. Sitä pidetään yhtenä saarten tärkeimmistä muinaismuistoista. Sadankolmenkymmenen metrin luola ei minulle kauhean pitkä ole, kun lentää.
+KYSYMYS: Kerro lisää: Maltalla
+
+### 176
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Għar Dalam (historia)
+Tietoruudun teksti: Għar Dalam on 144 metriä pitkä luolaputki Birżebbuġan liepeillä, ja sen kerrostumista on löydetty pleistoseeni- ja holoseenikautisten eläinten luita: kääpiönorsuja, virtahepoja, jättiläisjoutsenia, peuroja ja karhuja. Luola on antanut nimensä Maltan esihistorian varhaiselle Għar Dalam -vaiheelle, ja sitä pidetään yhtenä saarten tärkeimmistä muinaismuistoista. Ensimmäiset tieteelliset kaivaukset teki italialainen paleontologi Arturo Issel vuonna 1865, ja lisäkaivauksia teki John H. Cooke vuonna 1892; osa löydöistä lähetettiin vertailukokoelmaksi Lontoon British Museumiin.
+AIEMPI KYSYMYS: Kuinka pitkä Għar Dalamin luolaputki on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Luolaputki on 144 metriä pitkä, ja se sijaitsee Birżebbuġan liepeillä [[Maltalla]]. Luolan kerrostumista on löydetty eläinten luita, ja paikka on antanut nimensä myös [[Għar Dalam -vaiheelle]], joka on Maltan esihistorian varhainen jakso. Sitä pidetään yhtenä saarten tärkeimmistä muinaismuistoista. Sadankolmenkymmenen metrin luola ei minulle kauhean pitkä ole, kun lentää.
+KYSYMYS: Kerro lisää: Għar Dalam -vaiheelle
+
+### 177
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Għar Dalam (historia)
+Tietoruudun teksti: Għar Dalam on 144 metriä pitkä luolaputki Birżebbuġan liepeillä, ja sen kerrostumista on löydetty pleistoseeni- ja holoseenikautisten eläinten luita: kääpiönorsuja, virtahepoja, jättiläisjoutsenia, peuroja ja karhuja. Luola on antanut nimensä Maltan esihistorian varhaiselle Għar Dalam -vaiheelle, ja sitä pidetään yhtenä saarten tärkeimmistä muinaismuistoista. Ensimmäiset tieteelliset kaivaukset teki italialainen paleontologi Arturo Issel vuonna 1865, ja lisäkaivauksia teki John H. Cooke vuonna 1892; osa löydöistä lähetettiin vertailukokoelmaksi Lontoon British Museumiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sri Lanka — maalehti / Luonto: Norsut palaavat kuninkaan tekojärvelle] Kuningas Mahasen rakennutti Minneriyan tekojärven 200-luvulla kastelemaan kuivan vyöhykkeen peltoja. Puolitoista vuosituhatta myöhemmin se ruokkii toista joukkoa. Kun kuiva kausi elokuusta lokakuuhun tyhjentää ympäristön vesipaikat, järven pinta laskee ja paljastaa laajan ruohottuneen pohjan — seudun ainoan vihreän laitumen. Norsut vaeltavat sinne ympäröivistä metsistä ja toisesta kansallispuistosta asti: tavallisesti niitä lasketaan sadasta viidestäkymmenestä kahteensataan, joidenkin raporttien mukaan jopa seitsemänsataa. Alue rauhoitettiin 1938 ja siitä tuli kansallispuisto 1997.
+AIEMPI KYSYMYS: Miksi luolasta on löytynyt kääpiönorsujen luita?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Pienikokoiset [[norsut]] ovat tunnettu ilmiö eristyneillä saarilla, sillä rajallinen ravinto ajaa suuria eläimiä pienenemään. [[Għar Dalamin]] luolasta on löydetty [[pleistoseenikauden]] eläinten luita, muun muassa [[kääpiönorsuja]], virtahepoja ja jättiläisjoutsenia. Tarkkaa selitystä siitä, miten eläimet Maltalle tulivat, en ole varma, enkä halua arvailla. Kääpiönorsu kuulostaa minusta sympaattiselta, ja lentäminen olisi sille silti hankalaa.
+KYSYMYS: Kerro lisää: norsut
+
+### 178
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Għar Dalam (historia)
+Tietoruudun teksti: Għar Dalam on 144 metriä pitkä luolaputki Birżebbuġan liepeillä, ja sen kerrostumista on löydetty pleistoseeni- ja holoseenikautisten eläinten luita: kääpiönorsuja, virtahepoja, jättiläisjoutsenia, peuroja ja karhuja. Luola on antanut nimensä Maltan esihistorian varhaiselle Għar Dalam -vaiheelle, ja sitä pidetään yhtenä saarten tärkeimmistä muinaismuistoista. Ensimmäiset tieteelliset kaivaukset teki italialainen paleontologi Arturo Issel vuonna 1865, ja lisäkaivauksia teki John H. Cooke vuonna 1892; osa löydöistä lähetettiin vertailukokoelmaksi Lontoon British Museumiin.
+AIEMPI KYSYMYS: Miksi luolasta on löytynyt kääpiönorsujen luita?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Pienikokoiset [[norsut]] ovat tunnettu ilmiö eristyneillä saarilla, sillä rajallinen ravinto ajaa suuria eläimiä pienenemään. [[Għar Dalamin]] luolasta on löydetty [[pleistoseenikauden]] eläinten luita, muun muassa [[kääpiönorsuja]], virtahepoja ja jättiläisjoutsenia. Tarkkaa selitystä siitä, miten eläimet Maltalle tulivat, en ole varma, enkä halua arvailla. Kääpiönorsu kuulostaa minusta sympaattiselta, ja lentäminen olisi sille silti hankalaa.
+KYSYMYS: Kerro lisää: pleistoseenikauden
+
+### 179
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Għar Dalam (historia)
+Tietoruudun teksti: Għar Dalam on 144 metriä pitkä luolaputki Birżebbuġan liepeillä, ja sen kerrostumista on löydetty pleistoseeni- ja holoseenikautisten eläinten luita: kääpiönorsuja, virtahepoja, jättiläisjoutsenia, peuroja ja karhuja. Luola on antanut nimensä Maltan esihistorian varhaiselle Għar Dalam -vaiheelle, ja sitä pidetään yhtenä saarten tärkeimmistä muinaismuistoista. Ensimmäiset tieteelliset kaivaukset teki italialainen paleontologi Arturo Issel vuonna 1865, ja lisäkaivauksia teki John H. Cooke vuonna 1892; osa löydöistä lähetettiin vertailukokoelmaksi Lontoon British Museumiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itä-Timor — maalehti / Luonto: Kääpiönorsuja ja jättiläisliskoja] Timor kuuluu Wallacean vyöhykkeeseen, jossa Aasian ja Australian eliömaailmat kohtaavat; saarella aasialaiset lajit ovat enemmistönä. Pleistoseenikaudella täällä eli komodonvaraanin kaltaisia jättiläisvaraaneja ja kääpiöstegodoneja, norsujen sukulaisia — samaa sarjaa kuin Floresilla, Sumballa ja Sulawesilla. Nykylajistossa on omia kotoperäisiä nisäkkäitä, muun muassa vain Timorilla elävä päästäinen ja oma rottalajinsa; kuskus taas on australialaisperäinen pussieläin, joka on ilmeisesti tuotu saarelle. Lintulajeja on 250, ja niistä 24 elää vain täällä. Metsä pudottaa lehtensä kuivaksi kaudeksi.
+AIEMPI KYSYMYS: Miksi luolasta on löytynyt kääpiönorsujen luita?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Pienikokoiset [[norsut]] ovat tunnettu ilmiö eristyneillä saarilla, sillä rajallinen ravinto ajaa suuria eläimiä pienenemään. [[Għar Dalamin]] luolasta on löydetty [[pleistoseenikauden]] eläinten luita, muun muassa [[kääpiönorsuja]], virtahepoja ja jättiläisjoutsenia. Tarkkaa selitystä siitä, miten eläimet Maltalle tulivat, en ole varma, enkä halua arvailla. Kääpiönorsu kuulostaa minusta sympaattiselta, ja lentäminen olisi sille silti hankalaa.
+KYSYMYS: Kerro lisää: kääpiönorsuja
+
+### 180
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalkara (merenkulku)
+Tietoruudun teksti: Kalkara on kylä Maltan satama-alueella Kalkaran puron ympärillä, ja sen naapureina ovat Birgu, Żabbar ja Xgħajra. Nimi juontuu latinan kalkkia tarkoittavasta sanasta calce, ja alueella uskotaan olleen kalkinpolttouuni jo roomalaisajalta. Kylä syntyi pienenä kalastajayhteisönä suojaisan Kalkaran puron ympärille, ja jotkut historioitsijat arvelevat sen olleen yksi Maltan ensimmäisistä asutuista paikoista, koska Grand Harbourin poukamat tarjosivat suojan pitkän merimatkan jälkeen. Kristinusko saapui alueelle mahdollisesti jo varhain, sillä Santa Duminkan kedolta on löydetty varhaiskristillisiä hypogeumeja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+AIEMPI KYSYMYS: Mistä latinan sanasta Kalkaran nimi juontuu?
+AIEMPI VASTAUS (Livia):
+Kato, tää menee näin. Kalkaran nimi juontuu latinan kalkkia tarkoittavasta sanasta calce. Alueella uskotaan olleen kalkinpolttouuni jo roomalaisajalta, mikä selittää nimen. Kalkkia käytettiin rakentamisessa, ja [[Maltan]] rakennukset ovat pitkälti kalkkikiveä. Kylä syntyi pienenä kalastajayhteisönä [[Kalkaran puron]] ympärille. Kalkki on ihan kelpo aihe, vaikka minä olisin kysynyt jotain pehmeämpää.
+KYSYMYS: Kerro lisää: Maltan
+
+### 181
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalkara (merenkulku)
+Tietoruudun teksti: Kalkara on kylä Maltan satama-alueella Kalkaran puron ympärillä, ja sen naapureina ovat Birgu, Żabbar ja Xgħajra. Nimi juontuu latinan kalkkia tarkoittavasta sanasta calce, ja alueella uskotaan olleen kalkinpolttouuni jo roomalaisajalta. Kylä syntyi pienenä kalastajayhteisönä suojaisan Kalkaran puron ympärille, ja jotkut historioitsijat arvelevat sen olleen yksi Maltan ensimmäisistä asutuista paikoista, koska Grand Harbourin poukamat tarjosivat suojan pitkän merimatkan jälkeen. Kristinusko saapui alueelle mahdollisesti jo varhain, sillä Santa Duminkan kedolta on löydetty varhaiskristillisiä hypogeumeja.
+AIEMPI KYSYMYS: Mistä latinan sanasta Kalkaran nimi juontuu?
+AIEMPI VASTAUS (Livia):
+Kato, tää menee näin. Kalkaran nimi juontuu latinan kalkkia tarkoittavasta sanasta calce. Alueella uskotaan olleen kalkinpolttouuni jo roomalaisajalta, mikä selittää nimen. Kalkkia käytettiin rakentamisessa, ja [[Maltan]] rakennukset ovat pitkälti kalkkikiveä. Kylä syntyi pienenä kalastajayhteisönä [[Kalkaran puron]] ympärille. Kalkki on ihan kelpo aihe, vaikka minä olisin kysynyt jotain pehmeämpää.
+KYSYMYS: Kerro lisää: Kalkaran puron
+
+### 182
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalkara (merenkulku)
+Tietoruudun teksti: Kalkara on kylä Maltan satama-alueella Kalkaran puron ympärillä, ja sen naapureina ovat Birgu, Żabbar ja Xgħajra. Nimi juontuu latinan kalkkia tarkoittavasta sanasta calce, ja alueella uskotaan olleen kalkinpolttouuni jo roomalaisajalta. Kylä syntyi pienenä kalastajayhteisönä suojaisan Kalkaran puron ympärille, ja jotkut historioitsijat arvelevat sen olleen yksi Maltan ensimmäisistä asutuista paikoista, koska Grand Harbourin poukamat tarjosivat suojan pitkän merimatkan jälkeen. Kristinusko saapui alueelle mahdollisesti jo varhain, sillä Santa Duminkan kedolta on löydetty varhaiskristillisiä hypogeumeja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+- [Valletta — kaupunkilehti / Historia: Lähes neljän kuukauden piiritys] Sulttaani Suleiman Suuri lähetti vuonna 1565 valtavan laivaston ajamaan ritarit Maltalta. Piiritys kesti 18. toukokuuta – 8. syyskuuta, ja saarta puolusti noin 500 ritaria ja 6 000 jalkaväen sotilasta. Osmanit hyökkäsivät ensin Pyhän Elmon linnakkeeseen Sciberras-vuoren kärjessä, nykyisen Vallettan paikalla, ja sen valtaaminen 23. kesäkuuta maksoi heille ainakin 6 000 miestä. Birgu ja Senglea kestivät silti pommituksen, jossa aikalaiskertoja Francisco Balbin mukaan ammuttiin noin 130 000 tykinkuulaa. Voiton jälkeen Euroopasta virtasi Maltalle rahaa, ja suurmestari Jean de Valette rakensi Sciberras-vuorelle linnoitetun kaupungin, joka sai hänen nimensä.
+AIEMPI KYSYMYS: Mitkä kylät rajaavat Kalkaraa?
+AIEMPI VASTAUS (Livia):
+Ai se, minä tiedän. Kalkaran naapureina ovat [[Birgu]], [[Żabbar]] ja [[Xgħajra]]. Kylä sijaitsee [[Maltan]] satama-alueella Kalkaran puron ympärillä. Se syntyi pienenä kalastajayhteisönä, ja jotkut historioitsijat arvelevat sen olleen yksi saaren ensimmäisistä asutuista paikoista. Kolme naapuria riittää minulle hyvin, kunhan jokaisessa on leipomo.
+KYSYMYS: Kerro lisää: Birgu
+
+### 183
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalkara (merenkulku)
+Tietoruudun teksti: Kalkara on kylä Maltan satama-alueella Kalkaran puron ympärillä, ja sen naapureina ovat Birgu, Żabbar ja Xgħajra. Nimi juontuu latinan kalkkia tarkoittavasta sanasta calce, ja alueella uskotaan olleen kalkinpolttouuni jo roomalaisajalta. Kylä syntyi pienenä kalastajayhteisönä suojaisan Kalkaran puron ympärille, ja jotkut historioitsijat arvelevat sen olleen yksi Maltan ensimmäisistä asutuista paikoista, koska Grand Harbourin poukamat tarjosivat suojan pitkän merimatkan jälkeen. Kristinusko saapui alueelle mahdollisesti jo varhain, sillä Santa Duminkan kedolta on löydetty varhaiskristillisiä hypogeumeja.
+AIEMPI KYSYMYS: Mitkä kylät rajaavat Kalkaraa?
+AIEMPI VASTAUS (Livia):
+Ai se, minä tiedän. Kalkaran naapureina ovat [[Birgu]], [[Żabbar]] ja [[Xgħajra]]. Kylä sijaitsee [[Maltan]] satama-alueella Kalkaran puron ympärillä. Se syntyi pienenä kalastajayhteisönä, ja jotkut historioitsijat arvelevat sen olleen yksi saaren ensimmäisistä asutuista paikoista. Kolme naapuria riittää minulle hyvin, kunhan jokaisessa on leipomo.
+KYSYMYS: Kerro lisää: Żabbar
+
+### 184
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalkara (merenkulku)
+Tietoruudun teksti: Kalkara on kylä Maltan satama-alueella Kalkaran puron ympärillä, ja sen naapureina ovat Birgu, Żabbar ja Xgħajra. Nimi juontuu latinan kalkkia tarkoittavasta sanasta calce, ja alueella uskotaan olleen kalkinpolttouuni jo roomalaisajalta. Kylä syntyi pienenä kalastajayhteisönä suojaisan Kalkaran puron ympärille, ja jotkut historioitsijat arvelevat sen olleen yksi Maltan ensimmäisistä asutuista paikoista, koska Grand Harbourin poukamat tarjosivat suojan pitkän merimatkan jälkeen. Kristinusko saapui alueelle mahdollisesti jo varhain, sillä Santa Duminkan kedolta on löydetty varhaiskristillisiä hypogeumeja.
+AIEMPI KYSYMYS: Mitkä kylät rajaavat Kalkaraa?
+AIEMPI VASTAUS (Livia):
+Ai se, minä tiedän. Kalkaran naapureina ovat [[Birgu]], [[Żabbar]] ja [[Xgħajra]]. Kylä sijaitsee [[Maltan]] satama-alueella Kalkaran puron ympärillä. Se syntyi pienenä kalastajayhteisönä, ja jotkut historioitsijat arvelevat sen olleen yksi saaren ensimmäisistä asutuista paikoista. Kolme naapuria riittää minulle hyvin, kunhan jokaisessa on leipomo.
+KYSYMYS: Kerro lisää: Xgħajra
+
+### 185
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalkara (merenkulku)
+Tietoruudun teksti: Kalkara on kylä Maltan satama-alueella Kalkaran puron ympärillä, ja sen naapureina ovat Birgu, Żabbar ja Xgħajra. Nimi juontuu latinan kalkkia tarkoittavasta sanasta calce, ja alueella uskotaan olleen kalkinpolttouuni jo roomalaisajalta. Kylä syntyi pienenä kalastajayhteisönä suojaisan Kalkaran puron ympärille, ja jotkut historioitsijat arvelevat sen olleen yksi Maltan ensimmäisistä asutuista paikoista, koska Grand Harbourin poukamat tarjosivat suojan pitkän merimatkan jälkeen. Kristinusko saapui alueelle mahdollisesti jo varhain, sillä Santa Duminkan kedolta on löydetty varhaiskristillisiä hypogeumeja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Petra — kohdekartta / Kohdekartta: Kuninkaanhaudat] Laakson pohjoisreunan jyrkänteessä on rivi Petran suurimpia hautajulkisivuja, joita kutsutaan yhteisnimellä kuninkaanhaudat. Ne edustavat hellenistisen arkkitehtuurin nabatealaista versiota, mutta julkisivut ovat kuluneet pahoin — hiekkakivi rapautuu, ja moni yksityiskohta on kadonnut kokonaan. Ryhmään luetaan neljä hautaa. Palatsihaudan arvellaan olleen Petran kuninkaiden hauta. Sen vieressä on Korinttilainen hauta, jonka arkkitehtuuri on samaa hellenististä sukua kuin Aarrekammion. Kaksi muuta ovat Silkkihauta ja Uurnahauta, joista Silkkihauta jää vaatimattomammaksi. Uurnahauta on ryhmän näyttävin. Sen edessä on suuri piha, jota kannattelevat holvikaaret, ja rakennus sai myöhemmin kokonaa…
+- [Port Vila — kohdekartta / Kohdekartta: Pyhän sydämen katedraali] nykyaika Cathédrale du Sacré-Cœur on Port Vilan moderni katolinen katedraali ja Port Vilan hiippakunnan istuin. Nimi on ranskaksi, kuten monet muutkin kaupungin nimet: ranska on englannin ja bislaman ohella yksi Vanuatun virallisista kielistä. Kristinusko on Vanuatun valtauskonto, ja siihen kuuluu yli yhdeksänkymmentä prosenttia väestöstä. Suurin kirkkokunta on Vanuatun presbyteerikirkko, johon kuuluu kolmasosa väestöstä; katolinen kirkko ja Melanesian kirkko ovat kumpikin noin viidentoista prosentin kokoisia. Kirkkokuntien jako kertoo saarten lähetyshistoriasta: lähetyssaarnaajia alkoi saapua Uusille Hebrideille 1839, ja presbyteerit menestyivät erityisesti eteläisillä saarilla. Ni-vanuatu…
+AIEMPI KYSYMYS: Mitä tarkoittaa hypogeumi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on kiehtova sana. Hypogeumi tarkoittaa maanalaista rakennetta, yleensä hautakammiota tai kalliosta louhittua tilaa, ja sana tulee kreikasta merkityksessä "maan alla". Kalkaran Santa Duminkan kedolta on löydetty varhaiskristillisiä hypogeumeja, jotka viittaavat siihen, että [[kristinusko]] saapui alueelle mahdollisesti jo varhain. [[Maltalla]] tunnetaan myös esihistoriallinen [[Ħal Saflienin]] hypogeumi, mutta en ole varma sen tarkoista vaiheista. Maan alle en kyllä lentäisi.
+KYSYMYS: Kerro lisää: kristinusko
+
+### 186
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalkara (merenkulku)
+Tietoruudun teksti: Kalkara on kylä Maltan satama-alueella Kalkaran puron ympärillä, ja sen naapureina ovat Birgu, Żabbar ja Xgħajra. Nimi juontuu latinan kalkkia tarkoittavasta sanasta calce, ja alueella uskotaan olleen kalkinpolttouuni jo roomalaisajalta. Kylä syntyi pienenä kalastajayhteisönä suojaisan Kalkaran puron ympärille, ja jotkut historioitsijat arvelevat sen olleen yksi Maltan ensimmäisistä asutuista paikoista, koska Grand Harbourin poukamat tarjosivat suojan pitkän merimatkan jälkeen. Kristinusko saapui alueelle mahdollisesti jo varhain, sillä Santa Duminkan kedolta on löydetty varhaiskristillisiä hypogeumeja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Arki] Maltalla arki on värikästä: kalastajaveneiden silmät katsovat merelle, puuparvekkeet vihertävät kadun yllä ja kesäisin kylän kirkko syttyy valoihin. Kaiken taustalla soi kieli, jonka juuret ovat arabiassa mutta jota kirjoitetaan latinalaisilla aakkosilla.
+AIEMPI KYSYMYS: Mitä tarkoittaa hypogeumi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on kiehtova sana. Hypogeumi tarkoittaa maanalaista rakennetta, yleensä hautakammiota tai kalliosta louhittua tilaa, ja sana tulee kreikasta merkityksessä "maan alla". Kalkaran Santa Duminkan kedolta on löydetty varhaiskristillisiä hypogeumeja, jotka viittaavat siihen, että [[kristinusko]] saapui alueelle mahdollisesti jo varhain. [[Maltalla]] tunnetaan myös esihistoriallinen [[Ħal Saflienin]] hypogeumi, mutta en ole varma sen tarkoista vaiheista. Maan alle en kyllä lentäisi.
+KYSYMYS: Kerro lisää: Maltalla
+
+### 187
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalkara (merenkulku)
+Tietoruudun teksti: Kalkara on kylä Maltan satama-alueella Kalkaran puron ympärillä, ja sen naapureina ovat Birgu, Żabbar ja Xgħajra. Nimi juontuu latinan kalkkia tarkoittavasta sanasta calce, ja alueella uskotaan olleen kalkinpolttouuni jo roomalaisajalta. Kylä syntyi pienenä kalastajayhteisönä suojaisan Kalkaran puron ympärille, ja jotkut historioitsijat arvelevat sen olleen yksi Maltan ensimmäisistä asutuista paikoista, koska Grand Harbourin poukamat tarjosivat suojan pitkän merimatkan jälkeen. Kristinusko saapui alueelle mahdollisesti jo varhain, sillä Santa Duminkan kedolta on löydetty varhaiskristillisiä hypogeumeja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Katto romahti kaivuutyömaalla] 1902 — Vuonna 1902 Paolassa rakennettiin uutta asuinaluetta, ja työmiehet louhivat vesisäiliötä. Yhtäkkiä he puhkaisivat vahingossa katon, ja alta paljastui kolmikerroksinen labyrintti, joka oli veistetty pehmeään kalkkikiveen. Ħal Saflienin hypogeumi toimi pyhäkkönä ja hautakammiona, ja sinne haudattiin arviolta 7 000 ihmistä. Kattoon on maalattu punaokralla kierteitä ja pilkkuja, ja yhden kammion kolo saattoi vahvistaa laulun ja rummutuksen kaikua muihin huoneisiin. Nykyään sisään pääsee vain 80 kävijää päivässä.
+AIEMPI KYSYMYS: Mitä tarkoittaa hypogeumi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on kiehtova sana. Hypogeumi tarkoittaa maanalaista rakennetta, yleensä hautakammiota tai kalliosta louhittua tilaa, ja sana tulee kreikasta merkityksessä "maan alla". Kalkaran Santa Duminkan kedolta on löydetty varhaiskristillisiä hypogeumeja, jotka viittaavat siihen, että [[kristinusko]] saapui alueelle mahdollisesti jo varhain. [[Maltalla]] tunnetaan myös esihistoriallinen [[Ħal Saflienin]] hypogeumi, mutta en ole varma sen tarkoista vaiheista. Maan alle en kyllä lentäisi.
+KYSYMYS: Kerro lisää: Ħal Saflienin
+
+### 188
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalkara (merenkulku)
+Tietoruudun teksti: Kalkara on kylä Maltan satama-alueella Kalkaran puron ympärillä, ja sen naapureina ovat Birgu, Żabbar ja Xgħajra. Nimi juontuu latinan kalkkia tarkoittavasta sanasta calce, ja alueella uskotaan olleen kalkinpolttouuni jo roomalaisajalta. Kylä syntyi pienenä kalastajayhteisönä suojaisan Kalkaran puron ympärille, ja jotkut historioitsijat arvelevat sen olleen yksi Maltan ensimmäisistä asutuista paikoista, koska Grand Harbourin poukamat tarjosivat suojan pitkän merimatkan jälkeen. Kristinusko saapui alueelle mahdollisesti jo varhain, sillä Santa Duminkan kedolta on löydetty varhaiskristillisiä hypogeumeja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Rakennukset: Linnake Grand Harbourin sydämessä] n. 1530–1690-luku — Fort St. Angelo Birgussa seisoo Grand Harbourin keskellä niemellä, jolla on ollut linnoitus jo keskiajalla. Antiikin aikaan paikalla oli Astarten temppeli, ja myöhemmin linnaa kutsuttiin nimellä Castrum Maris, Meren linna. Kun ritarikunta saapui Maltalle vuonna 1530, se valitsi asuinpaikakseen Birgun, ja linnake tuli suurmestarin kotipaikaksi. Nykyisen ilmeensä se sai 1690-luvun uudistuksessa, jonka suunnitteli Carlos de Grunenbergh. Britit pitivät linnakkeessa varuskuntaa vuosina 1800–1979.
+AIEMPI KYSYMYS: Millainen yhteisö Kalkara oli alun perin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kalkara syntyi pienenä kalastajayhteisönä suojaisan [[Kalkaran puron]] ympärille. Jotkut historioitsijat arvelevat sen olleen yksi [[Maltan]] ensimmäisistä asutuista paikoista, koska [[Grand Harbourin]] poukamat tarjosivat suojan pitkän merimatkan jälkeen. Alueella uskotaan olleen kalkinpolttouuni jo roomalaisajalta, ja varhaiskristillisiä hypogeumeja on löytynyt läheltä. Tuo on vain arvelu, mutta järkevä sellainen. Kalastajat ovat kyllä aina olleet minun suosikkejani.
+KYSYMYS: Kerro lisää: Grand Harbourin
+
+### 189
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalkara (merenkulku)
+Tietoruudun teksti: Kalkara on kylä Maltan satama-alueella Kalkaran puron ympärillä, ja sen naapureina ovat Birgu, Żabbar ja Xgħajra. Nimi juontuu latinan kalkkia tarkoittavasta sanasta calce, ja alueella uskotaan olleen kalkinpolttouuni jo roomalaisajalta. Kylä syntyi pienenä kalastajayhteisönä suojaisan Kalkaran puron ympärille, ja jotkut historioitsijat arvelevat sen olleen yksi Maltan ensimmäisistä asutuista paikoista, koska Grand Harbourin poukamat tarjosivat suojan pitkän merimatkan jälkeen. Kristinusko saapui alueelle mahdollisesti jo varhain, sillä Santa Duminkan kedolta on löydetty varhaiskristillisiä hypogeumeja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kaupunkilehti / Historian hetki: Valletta 1565 — purjeet horisontissa] 7.9.1565 — Puolustaja nojaa muurin ampuma-aukkoon, kun toinen tarttuu hänen olkapäähänsä ja osoittaa merelle — silmät ovat liian väsyneet neljän kuukauden valvomisesta uskoakseen ensin sitä, mitä näkevät. Purjeet horisontissa eivät ole uusi osmanien laivue vaan sisilialainen apulaivasto, jota Don García de Toledo on kerännyt Messinasta kuukausia. Yli kahdeksantuhatta miestä nousee maihin Mellieħan lahdessa 7. syyskuuta, ja tieto kulkee muurilta muurille nopeammin kuin kukaan ehtii huutaa sitä ääneen. Ottomaanien komentaja Mustafa Pasha, jonka joukot ovat menettäneet paljon miehiä ja suurimman osan kesästä yhteen linnakkeeseen, ei enää usko voittoon uuden armeijan edessä. Muutaman päivän kul…
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+- [Valletta — kaupunkilehti / Valletta] Kalkkikivestä veistetty linnoituskaupunki kahden sataman välissä — koko vanhakaupunki on ruutukaavaa, jonka ritarikunta piirsi suoraksi jo vuonna 1566.
+AIEMPI KYSYMYS: Mikä Grand Harbour on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Grand Harbour on [[Maltan]] suuri luonnonsatama, jota ympäröivät [[Valletta]] ja muita kaupunkeja, kuten [[Birgu]]. Sen poukamat ovat tarjonneet suojaa merimatkalta saapuville jo kauan, ja Kalkaran kylä sijaitsee tämän satama-alueen tuntumassa. Satama on ollut saaren historiassa keskeinen. Tarkkoja mittoja en ole varma, joten jätän ne pois. Satamien katseleminen ylhäältä on parasta, mitä tiedän.
+KYSYMYS: Kerro lisää: Valletta
+
+### 190
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sininen luola (luonto · vuori)
+Tietoruudun teksti: Sininen luola on joukko meriluolia Maltan kaakkoisrannikolla, lähellä Wied iż-Żurrieqin kalastajasatamaa. Luolat ja satama kuuluvat Qrendin kylän alueeseen, mikä vahvistettiin Qrendin ja Żurrieqin välisessä rajakiistassa vuonna 1910. Luolien seinät heijastavat merenveden erilaisia sinisen sävyjä, ja jotkin luolat heijastavat myös vedenalaisen kasviston ja eläimistön fosforoivia värejä. Aivan luolien edustalla, merenselällä, sijaitsee asumaton Filfla-saari, joka on nykyään lintujensuojelualue.
+AIEMPI KYSYMYS: Minkä kylän alueeseen luolat kuuluvat?
+AIEMPI VASTAUS (Livia):
+Kato, tää on helppo. Luolat ja Wied iż-Żurrieqin kalastajasatama kuuluvat [[Qrendin]] kylän alueeseen, ja tämä vahvistettiin Qrendin ja [[Żurrieqin]] välisessä rajakiistassa vuonna 1910. Kylä sijaitsee Maltan kaakkoisrannikolla, jossa meriluolien seinät heijastavat meriveden eri sinisen sävyjä. Luolien edustalla näkyy asumaton [[Filfla]]-saari. Rajakiistoja on kyllä tässä maailmassa nähty, mut tää pysyi onneksi paperilla.
+KYSYMYS: Kerro lisää: Qrendin
+
+### 191
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sininen luola (luonto · vuori)
+Tietoruudun teksti: Sininen luola on joukko meriluolia Maltan kaakkoisrannikolla, lähellä Wied iż-Żurrieqin kalastajasatamaa. Luolat ja satama kuuluvat Qrendin kylän alueeseen, mikä vahvistettiin Qrendin ja Żurrieqin välisessä rajakiistassa vuonna 1910. Luolien seinät heijastavat merenveden erilaisia sinisen sävyjä, ja jotkin luolat heijastavat myös vedenalaisen kasviston ja eläimistön fosforoivia värejä. Aivan luolien edustalla, merenselällä, sijaitsee asumaton Filfla-saari, joka on nykyään lintujensuojelualue.
+AIEMPI KYSYMYS: Minkä kylän alueeseen luolat kuuluvat?
+AIEMPI VASTAUS (Livia):
+Kato, tää on helppo. Luolat ja Wied iż-Żurrieqin kalastajasatama kuuluvat [[Qrendin]] kylän alueeseen, ja tämä vahvistettiin Qrendin ja [[Żurrieqin]] välisessä rajakiistassa vuonna 1910. Kylä sijaitsee Maltan kaakkoisrannikolla, jossa meriluolien seinät heijastavat meriveden eri sinisen sävyjä. Luolien edustalla näkyy asumaton [[Filfla]]-saari. Rajakiistoja on kyllä tässä maailmassa nähty, mut tää pysyi onneksi paperilla.
+KYSYMYS: Kerro lisää: Żurrieqin
+
+### 192
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sininen luola (luonto · vuori)
+Tietoruudun teksti: Sininen luola on joukko meriluolia Maltan kaakkoisrannikolla, lähellä Wied iż-Żurrieqin kalastajasatamaa. Luolat ja satama kuuluvat Qrendin kylän alueeseen, mikä vahvistettiin Qrendin ja Żurrieqin välisessä rajakiistassa vuonna 1910. Luolien seinät heijastavat merenveden erilaisia sinisen sävyjä, ja jotkin luolat heijastavat myös vedenalaisen kasviston ja eläimistön fosforoivia värejä. Aivan luolien edustalla, merenselällä, sijaitsee asumaton Filfla-saari, joka on nykyään lintujensuojelualue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+AIEMPI KYSYMYS: Minkä kylän alueeseen luolat kuuluvat?
+AIEMPI VASTAUS (Livia):
+Kato, tää on helppo. Luolat ja Wied iż-Żurrieqin kalastajasatama kuuluvat [[Qrendin]] kylän alueeseen, ja tämä vahvistettiin Qrendin ja [[Żurrieqin]] välisessä rajakiistassa vuonna 1910. Kylä sijaitsee Maltan kaakkoisrannikolla, jossa meriluolien seinät heijastavat meriveden eri sinisen sävyjä. Luolien edustalla näkyy asumaton [[Filfla]]-saari. Rajakiistoja on kyllä tässä maailmassa nähty, mut tää pysyi onneksi paperilla.
+KYSYMYS: Kerro lisää: Filfla
+
+### 193
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sininen luola (luonto · vuori)
+Tietoruudun teksti: Sininen luola on joukko meriluolia Maltan kaakkoisrannikolla, lähellä Wied iż-Żurrieqin kalastajasatamaa. Luolat ja satama kuuluvat Qrendin kylän alueeseen, mikä vahvistettiin Qrendin ja Żurrieqin välisessä rajakiistassa vuonna 1910. Luolien seinät heijastavat merenveden erilaisia sinisen sävyjä, ja jotkin luolat heijastavat myös vedenalaisen kasviston ja eläimistön fosforoivia värejä. Aivan luolien edustalla, merenselällä, sijaitsee asumaton Filfla-saari, joka on nykyään lintujensuojelualue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Ruoka: Joulun hunajarengas] perinteisesti joulu — Qagħaq tal-għasel on rengas, jonka sisällä on tumma täyte. Taikinaan tehdään viiltoja, joista täyte pursuaa esiin. Täyte valmistetaan perinteisesti hunajasta, melassista, aniksesta, kanelista ja neilikasta, ja osa lisää mukaan kaakaota. Herkkua leivottiin alun perin jouluksi, mutta siitä tuli niin suosittu, että sitä tehdään ympäri vuoden, eivätkä monet enää tiedä sen joulutaustaa. Rengas symboloi ikuista onnea, ja ulos valuva täyte kertoo, että hyvää riittää yllin kyllin.
+- [Vanuatu — maalehti / Luonto: Lintu, joka ei haudo munaansa] Vanuatun megapodi elää vain tässä maassa, alankometsissä, ja sen kaksi tyyppiyksilöä kerättiin Efatelta heinä- ja syyskuussa 1877. Megapodit eivät haudo munia ruumiinlämmöllä vaan hautaavat ne: osa suvun linnuista kasaa mätänevästä kasvimassasta kekoja, joiden lämpöä koiras säätää lisäämällä ja poistamalla lehtiä, osa käyttää maan omaa lämpöä ja osa auringon kuumentamaa hiekkaa. Muna on poikkeuksellisen keltuaisvaltainen, ja poikanen kuoriutuu kypsempänä kuin yksikään toinen lintu: silmät auki, siipisulat valmiina ja juoksukykyisenä samana päivänä.
+AIEMPI KYSYMYS: Mikä asumaton saari näkyy luolien edustalla?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä näen katolta asti. Luolien edustalla merenselällä sijaitsee asumaton [[Filfla]]-saari, joka on nykyään [[lintujensuojelualue]]. Se kuuluu [[Maltan]] saariryhmään, ja sen läheisyys antaa luolien rannikolle sen tunnusomaisen maisemansa. Saarelle ei siis asu ketään, mutta linnuille se on tärkeä paikka. Ihan pienen lintuasian minä tästä saan kyllä sanottua.
+KYSYMYS: Kerro lisää: lintujensuojelualue
+
+### 194
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sininen luola (luonto · vuori)
+Tietoruudun teksti: Sininen luola on joukko meriluolia Maltan kaakkoisrannikolla, lähellä Wied iż-Żurrieqin kalastajasatamaa. Luolat ja satama kuuluvat Qrendin kylän alueeseen, mikä vahvistettiin Qrendin ja Żurrieqin välisessä rajakiistassa vuonna 1910. Luolien seinät heijastavat merenveden erilaisia sinisen sävyjä, ja jotkin luolat heijastavat myös vedenalaisen kasviston ja eläimistön fosforoivia värejä. Aivan luolien edustalla, merenselällä, sijaitsee asumaton Filfla-saari, joka on nykyään lintujensuojelualue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+AIEMPI KYSYMYS: Mikä asumaton saari näkyy luolien edustalla?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä näen katolta asti. Luolien edustalla merenselällä sijaitsee asumaton [[Filfla]]-saari, joka on nykyään [[lintujensuojelualue]]. Se kuuluu [[Maltan]] saariryhmään, ja sen läheisyys antaa luolien rannikolle sen tunnusomaisen maisemansa. Saarelle ei siis asu ketään, mutta linnuille se on tärkeä paikka. Ihan pienen lintuasian minä tästä saan kyllä sanottua.
+KYSYMYS: Kerro lisää: Maltan
+
+### 195
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sininen luola (luonto · vuori)
+Tietoruudun teksti: Sininen luola on joukko meriluolia Maltan kaakkoisrannikolla, lähellä Wied iż-Żurrieqin kalastajasatamaa. Luolat ja satama kuuluvat Qrendin kylän alueeseen, mikä vahvistettiin Qrendin ja Żurrieqin välisessä rajakiistassa vuonna 1910. Luolien seinät heijastavat merenveden erilaisia sinisen sävyjä, ja jotkin luolat heijastavat myös vedenalaisen kasviston ja eläimistön fosforoivia värejä. Aivan luolien edustalla, merenselällä, sijaitsee asumaton Filfla-saari, joka on nykyään lintujensuojelualue.
+AIEMPI KYSYMYS: Miksi meriluolien vesi näyttää niin siniseltä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Meriveden sininen väri johtuu siitä, että vesi imee valon punaisia ja keltaisia aallonpituuksia voimakkaammin kuin sinisiä, jolloin sinistä valoa heijastuu ja siroaa takaisin. Maltan [[meriluolissa]] vaikutelmaa voimistaa se, että päivänvalo tulee luolaan veden alta ja heijastuu vaaleasta merenpohjasta ja seinistä. Sävy vaihtelee siksi valon, vuorokaudenajan ja veden syvyyden mukaan. En ole varma, miten suuri osuus kullakin tekijällä juuri [[Välimeren]] luolissa on. Kyllä kyyhky tämänkin osaa, vaikka lentää mieluummin kuin uipi.
+KYSYMYS: Kerro lisää: meriluolissa
+
+### 196
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sininen luola (luonto · vuori)
+Tietoruudun teksti: Sininen luola on joukko meriluolia Maltan kaakkoisrannikolla, lähellä Wied iż-Żurrieqin kalastajasatamaa. Luolat ja satama kuuluvat Qrendin kylän alueeseen, mikä vahvistettiin Qrendin ja Żurrieqin välisessä rajakiistassa vuonna 1910. Luolien seinät heijastavat merenveden erilaisia sinisen sävyjä, ja jotkin luolat heijastavat myös vedenalaisen kasviston ja eläimistön fosforoivia värejä. Aivan luolien edustalla, merenselällä, sijaitsee asumaton Filfla-saari, joka on nykyään lintujensuojelualue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+AIEMPI KYSYMYS: Miksi meriluolien vesi näyttää niin siniseltä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Meriveden sininen väri johtuu siitä, että vesi imee valon punaisia ja keltaisia aallonpituuksia voimakkaammin kuin sinisiä, jolloin sinistä valoa heijastuu ja siroaa takaisin. Maltan [[meriluolissa]] vaikutelmaa voimistaa se, että päivänvalo tulee luolaan veden alta ja heijastuu vaaleasta merenpohjasta ja seinistä. Sävy vaihtelee siksi valon, vuorokaudenajan ja veden syvyyden mukaan. En ole varma, miten suuri osuus kullakin tekijällä juuri [[Välimeren]] luolissa on. Kyllä kyyhky tämänkin osaa, vaikka lentää mieluummin kuin uipi.
+KYSYMYS: Kerro lisää: Välimeren
+
+### 197
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sininen luola (luonto · vuori)
+Tietoruudun teksti: Sininen luola on joukko meriluolia Maltan kaakkoisrannikolla, lähellä Wied iż-Żurrieqin kalastajasatamaa. Luolat ja satama kuuluvat Qrendin kylän alueeseen, mikä vahvistettiin Qrendin ja Żurrieqin välisessä rajakiistassa vuonna 1910. Luolien seinät heijastavat merenveden erilaisia sinisen sävyjä, ja jotkin luolat heijastavat myös vedenalaisen kasviston ja eläimistön fosforoivia värejä. Aivan luolien edustalla, merenselällä, sijaitsee asumaton Filfla-saari, joka on nykyään lintujensuojelualue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Arki] Maltalla arki on värikästä: kalastajaveneiden silmät katsovat merelle, puuparvekkeet vihertävät kadun yllä ja kesäisin kylän kirkko syttyy valoihin. Kaiken taustalla soi kieli, jonka juuret ovat arabiassa mutta jota kirjoitetaan latinalaisilla aakkosilla.
+AIEMPI KYSYMYS: Mihin Filfla-saarta on aiemmin käytetty?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Filfla]]-saarta on käytetty ammuntaharjoitusten kohteena, lähteiden mukaan 1970-luvulle asti, minkä jälkeen se on suojeltu. Nykyään saari on asumaton [[lintujensuojelualue]] [[Maltalla]], eikä sinne ole vapaata pääsyä. Tarkkoja vuosia en ole varma kertomaan, joten ne kannattaa tarkistaa Maltan luonnonsuojeluviranomaisen tiedoista. Parempi tämäkin käyttö kuin ei mitään.
+KYSYMYS: Kerro lisää: Maltalla
+
+### 198
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sininen luola (luonto · vuori)
+Tietoruudun teksti: Sininen luola on joukko meriluolia Maltan kaakkoisrannikolla, lähellä Wied iż-Żurrieqin kalastajasatamaa. Luolat ja satama kuuluvat Qrendin kylän alueeseen, mikä vahvistettiin Qrendin ja Żurrieqin välisessä rajakiistassa vuonna 1910. Luolien seinät heijastavat merenveden erilaisia sinisen sävyjä, ja jotkin luolat heijastavat myös vedenalaisen kasviston ja eläimistön fosforoivia värejä. Aivan luolien edustalla, merenselällä, sijaitsee asumaton Filfla-saari, joka on nykyään lintujensuojelualue.
+AIEMPI KYSYMYS: Miten Sinisiin luoliin tavallisesti pääsee tutustumaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Sinisiin]] luoliin tutustutaan yleensä Wied iż-Żurrieqin satamasta lähtevillä venekierroksilla, koska luolat ovat merenpuolella ja niiden sisään pääsee parhaiten vesiteitse. Kierrosten toteutuminen riippuu säästä ja merenkäynnistä, joten tarkka aikataulu kannattaa tarkistaa paikan päällä. Satamaa ympäröi [[Qrendin]] kylän alue, ja luolien edustalla näkyy [[Filfla]]. Siitä on lyhyt matka luolille, ja etukäteen kannattaa varautua auringonvaloon.
+KYSYMYS: Kerro lisää: Sinisiin
+
+### 199
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Victoria (Cittadella) (kaupungit)
+Tietoruudun teksti: Cittadella on Gozon pääkaupungin linnoitettu ydin, jota kutsutaan myös Castelloksi; itse kaupunki tunnettiin ennen nimeä Victoria yksinkertaisesti Rabatina. Aluetta on asutettu pronssikaudesta lähtien, ja Cittadellan paikalla sijaitsi todennäköisesti puunilais-roomalaisen Gaulos-kaupungin akropolis. Keskiajalla akropoliksesta tehtiin linna, joka toimi turvapaikkana saaren väestölle, ja sen ulkopuolelle kasvoi 1400-luvulla esikaupunki, josta muodostui nykyisen kaupungin vanha keskusta. Linnoitus oli 1500-luvulle tultaessa vanhentunut, ja osmanit valtasivat ja ryöstivät sen vuonna 1551; eteläismuurit rakennettiin uudelleen ruutilinnoitukseksi vuosina 1599–1622. Ison-Britannian hallitus antoi kaupungille nimen Victoria vasta vuonna 1887 kuningatar Victorian kultaisten kruunajaisten kunniaksi, ja moni gozolainen kutsuu sitä yhä vanhalla nimellä Rabat.
+AIEMPI KYSYMYS: Minä vuonna osmanit valtasivat ja ryöstivät Cittadellan?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Osmanit valtasivat ja ryöstivät [[Cittadellan]] vuonna 1551 ([[osmanit]] hallitsivat tuolloin laajoja alueita Välimerellä). Linnoitus oli tuolloin jo vanhentunut, sillä se oli 1500-luvulle tultaessa jäänyt jälkeen ajan sotatekniikasta. Eteläiset muurit rakennettiin myöhemmin uudelleen ruutilinnoitukseksi vuosina 1599–1622. Aihe on raskas, ja onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Cittadellan
+
+### 200
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Victoria (Cittadella) (kaupungit)
+Tietoruudun teksti: Cittadella on Gozon pääkaupungin linnoitettu ydin, jota kutsutaan myös Castelloksi; itse kaupunki tunnettiin ennen nimeä Victoria yksinkertaisesti Rabatina. Aluetta on asutettu pronssikaudesta lähtien, ja Cittadellan paikalla sijaitsi todennäköisesti puunilais-roomalaisen Gaulos-kaupungin akropolis. Keskiajalla akropoliksesta tehtiin linna, joka toimi turvapaikkana saaren väestölle, ja sen ulkopuolelle kasvoi 1400-luvulla esikaupunki, josta muodostui nykyisen kaupungin vanha keskusta. Linnoitus oli 1500-luvulle tultaessa vanhentunut, ja osmanit valtasivat ja ryöstivät sen vuonna 1551; eteläismuurit rakennettiin uudelleen ruutilinnoitukseksi vuosina 1599–1622. Ison-Britannian hallitus antoi kaupungille nimen Victoria vasta vuonna 1887 kuningatar Victorian kultaisten kruunajaisten kunniaksi, ja moni gozolainen kutsuu sitä yhä vanhalla nimellä Rabat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Saari, jonka vuokra oli yksi haukka] 1530 — Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian varakuninkaalle. Suurmestari Philippe Villiers de L'Isle-Adam purjehti Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan uudelleen Pyhän Angelon linnakkeeksi.
+AIEMPI KYSYMYS: Minä vuonna osmanit valtasivat ja ryöstivät Cittadellan?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Osmanit valtasivat ja ryöstivät [[Cittadellan]] vuonna 1551 ([[osmanit]] hallitsivat tuolloin laajoja alueita Välimerellä). Linnoitus oli tuolloin jo vanhentunut, sillä se oli 1500-luvulle tultaessa jäänyt jälkeen ajan sotatekniikasta. Eteläiset muurit rakennettiin myöhemmin uudelleen ruutilinnoitukseksi vuosina 1599–1622. Aihe on raskas, ja onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: osmanit
+
+### 201
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Victoria (Cittadella) (kaupungit)
+Tietoruudun teksti: Cittadella on Gozon pääkaupungin linnoitettu ydin, jota kutsutaan myös Castelloksi; itse kaupunki tunnettiin ennen nimeä Victoria yksinkertaisesti Rabatina. Aluetta on asutettu pronssikaudesta lähtien, ja Cittadellan paikalla sijaitsi todennäköisesti puunilais-roomalaisen Gaulos-kaupungin akropolis. Keskiajalla akropoliksesta tehtiin linna, joka toimi turvapaikkana saaren väestölle, ja sen ulkopuolelle kasvoi 1400-luvulla esikaupunki, josta muodostui nykyisen kaupungin vanha keskusta. Linnoitus oli 1500-luvulle tultaessa vanhentunut, ja osmanit valtasivat ja ryöstivät sen vuonna 1551; eteläismuurit rakennettiin uudelleen ruutilinnoitukseksi vuosina 1599–1622. Ison-Britannian hallitus antoi kaupungille nimen Victoria vasta vuonna 1887 kuningatar Victorian kultaisten kruunajaisten kunniaksi, ja moni gozolainen kutsuu sitä yhä vanhalla nimellä Rabat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Auckland — kohdekartta / Kohdekartta: Victoria Park Market] 1905 Paikka oli alun perin osaksi niemeke ja osaksi Freemans Bayn rantavyöhykettä. Lahtea alettiin täyttää 1870-luvun lopulla — siis pian isoisän käynnin jälkeen — ja levenneelle rannalle nousi liike- ja asuinrakennuksia. Torin takana kulkeva katu seuraa yhä vanhan merenrantatörmän harjaa. Viereinen Victoria Park perustettiin 1905 ja nimettiin kuningattaren mukaan, joka oli kuollut neljä vuotta aiemmin. Kaupunki pelkäsi rottien levittämää ruttoa, koska roskia vietiin tyhjille tonteille, ja kaupunginvaltuusto alkoi 1900 harkita omaa polttolaitosta. Meldrum-polttouunin urakka annettiin 1904 sydneyläiselle J. Barre Johnston Ltd:lle, ja laitos valmistui 1905. Tontille rakennettiin 1905–1918 tii…
+- [Hongkong — kohdekartta / Kohdekartta: Victoria Peak] 552 metriä Victoria Peak on Hongkongin saaren korkein kohta, 552 metriä, ja koko hallintoalueen mäkien joukossa kahdeskymmenesyhdeksäs. Kiinalainen nimi on Tai Ping Shan. Itse huipulla on radiolaitteita eikä sinne pääse; nimellä ”The Peak” tarkoitetaan yleensä sen alapuolista aluetta, jossa ovat puistot, näköalapaikat ja rinteen asuinalue. Lähin julkinen paikka huipun tuntumassa on Victoria Peakin puutarha, joka on kuvernöörin entisen kesäasunnon paikalla. Jo 1800-luvulla rinne veti puoleensa eurooppalaisia asukkaita, koska sieltä näki koko kaupungin ja koska siellä oli viileämpää kuin alhaalla. Kuudes kuvernööri Sir Richard MacDonnell rakennutti kesäasunnon rinteeseen noin vuonna 1868. Asu…
+AIEMPI KYSYMYS: Minä vuonna kaupunki sai nimen Victoria?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kaupunki sai nimen [[Victoria]] vuonna 1887, kun [[Ison-Britannian]] hallitus antoi sen kuningatar Victorian kultaisten kruunajaisten kunniaksi. Sitä ennen kaupunki tunnettiin yksinkertaisesti nimellä Rabat. Moni gozolainen kutsuu sitä yhä vanhalla nimellään, ja Cittadella on kaupungin linnoitettu ydin. Nimiä on näköjään yhtä monta kuin kyyhkyn sukuhaaraa.
+KYSYMYS: Kerro lisää: Victoria
+
+### 202
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Victoria (Cittadella) (kaupungit)
+Tietoruudun teksti: Cittadella on Gozon pääkaupungin linnoitettu ydin, jota kutsutaan myös Castelloksi; itse kaupunki tunnettiin ennen nimeä Victoria yksinkertaisesti Rabatina. Aluetta on asutettu pronssikaudesta lähtien, ja Cittadellan paikalla sijaitsi todennäköisesti puunilais-roomalaisen Gaulos-kaupungin akropolis. Keskiajalla akropoliksesta tehtiin linna, joka toimi turvapaikkana saaren väestölle, ja sen ulkopuolelle kasvoi 1400-luvulla esikaupunki, josta muodostui nykyisen kaupungin vanha keskusta. Linnoitus oli 1500-luvulle tultaessa vanhentunut, ja osmanit valtasivat ja ryöstivät sen vuonna 1551; eteläismuurit rakennettiin uudelleen ruutilinnoitukseksi vuosina 1599–1622. Ison-Britannian hallitus antoi kaupungille nimen Victoria vasta vuonna 1887 kuningatar Victorian kultaisten kruunajaisten kunniaksi, ja moni gozolainen kutsuu sitä yhä vanhalla nimellä Rabat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lhasa — kaupunkilehti / Historia: Ison pelin viimeinen näytös] Joulukuussa 1903 brittiläisen Intian joukot ylittivät Tiibetin rajan eversti Francis Younghusbandin johdolla: yli kolmetuhatta sotilasta ja seitsemäntuhatta kantajaa ja huoltoväkeä. Syynä oli Intian varakuninkaan lordi Curzonin pelko siitä, että Venäjä oli saamassa jalansijaa Tiibetissä burjaattilaisen lamaneuvonantajan Agvan Dorzhievin kautta. Huonosti varustetut tiibetiläisjoukot eivät kyenneet pysäyttämään retkikuntaa, ja se saapui Lhasaan 3. elokuuta 1904 — kolmastoista dalai-lama oli jo lähtenyt Urgaan eli nykyiseen Ulan Batoriin. Lhasan sopimus allekirjoitettiin Potalassa 7. syyskuuta, ja retkikunta lähti paluumatkalle saman kuun lopulla.
+- [Nome — kaupunkilehti / Nome: Nimi, joka syntyi kirjoitusvirheestä] Nimi Nome ei viittaa mihinkään paikalliseen sanaan vaan brittiläisen laivaston kartoitusvirheeseen. Vuosina 1850–1852 HMS Heraldilla purjehtinut kartoittaja merkitsi nimettömän niemen kohdalle muistiinpanon "? name", kysymysmerkki ja sana nimi. Ison-Britannian amiraliteetin selityksen mukaan toinen piirtäjä luki myöhemmin oman käsialansa väärin: kysymysmerkistä tuli C ja a:sta o, ja tulokseksi jäi "C. Nome" eli Cape Nome. Virheellinen nimi painettiin karttoihin, ja kun kultakaupunki perustettiin niemen juurelle 1899, se peri saman erehdyksen.
+AIEMPI KYSYMYS: Minä vuonna kaupunki sai nimen Victoria?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kaupunki sai nimen [[Victoria]] vuonna 1887, kun [[Ison-Britannian]] hallitus antoi sen kuningatar Victorian kultaisten kruunajaisten kunniaksi. Sitä ennen kaupunki tunnettiin yksinkertaisesti nimellä Rabat. Moni gozolainen kutsuu sitä yhä vanhalla nimellään, ja Cittadella on kaupungin linnoitettu ydin. Nimiä on näköjään yhtä monta kuin kyyhkyn sukuhaaraa.
+KYSYMYS: Kerro lisää: Ison-Britannian
+
+### 203
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Victoria (Cittadella) (kaupungit)
+Tietoruudun teksti: Cittadella on Gozon pääkaupungin linnoitettu ydin, jota kutsutaan myös Castelloksi; itse kaupunki tunnettiin ennen nimeä Victoria yksinkertaisesti Rabatina. Aluetta on asutettu pronssikaudesta lähtien, ja Cittadellan paikalla sijaitsi todennäköisesti puunilais-roomalaisen Gaulos-kaupungin akropolis. Keskiajalla akropoliksesta tehtiin linna, joka toimi turvapaikkana saaren väestölle, ja sen ulkopuolelle kasvoi 1400-luvulla esikaupunki, josta muodostui nykyisen kaupungin vanha keskusta. Linnoitus oli 1500-luvulle tultaessa vanhentunut, ja osmanit valtasivat ja ryöstivät sen vuonna 1551; eteläismuurit rakennettiin uudelleen ruutilinnoitukseksi vuosina 1599–1622. Ison-Britannian hallitus antoi kaupungille nimen Victoria vasta vuonna 1887 kuningatar Victorian kultaisten kruunajaisten kunniaksi, ja moni gozolainen kutsuu sitä yhä vanhalla nimellä Rabat.
+AIEMPI KYSYMYS: Miksi Cittadellaa kutsutaan myös Castelloksi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. [[Castello]] on italiaa ja tarkoittaa linnaa, ja nimi viittaa siihen, että Cittadella on keskiajalla linnaksi muutettu linnoitettu kaupunginosa [[Gozolla]]. Akropoliksesta tehtiin linna, joka toimi turvapaikkana saaren väestölle, ja sen ulkopuolelle kasvoi 1400-luvulla esikaupunki. Nimi kertoo siis paikan tehtävästä eikä muusta, ja maltaksi sen vastine on hieman erilainen. Ei kyl linna ole kyyhkyn vahvin alue.
+KYSYMYS: Kerro lisää: Castello
+
+### 204
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Victoria (Cittadella) (kaupungit)
+Tietoruudun teksti: Cittadella on Gozon pääkaupungin linnoitettu ydin, jota kutsutaan myös Castelloksi; itse kaupunki tunnettiin ennen nimeä Victoria yksinkertaisesti Rabatina. Aluetta on asutettu pronssikaudesta lähtien, ja Cittadellan paikalla sijaitsi todennäköisesti puunilais-roomalaisen Gaulos-kaupungin akropolis. Keskiajalla akropoliksesta tehtiin linna, joka toimi turvapaikkana saaren väestölle, ja sen ulkopuolelle kasvoi 1400-luvulla esikaupunki, josta muodostui nykyisen kaupungin vanha keskusta. Linnoitus oli 1500-luvulle tultaessa vanhentunut, ja osmanit valtasivat ja ryöstivät sen vuonna 1551; eteläismuurit rakennettiin uudelleen ruutilinnoitukseksi vuosina 1599–1622. Ison-Britannian hallitus antoi kaupungille nimen Victoria vasta vuonna 1887 kuningatar Victorian kultaisten kruunajaisten kunniaksi, ja moni gozolainen kutsuu sitä yhä vanhalla nimellä Rabat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Ruoka: Leipä Unescon listalla] n. 1500-luku — Maltalainen ftira on hapanleipä, joka leivotaan rengasmaiseksi tai litteäksi. Sen väliin tulee sardiineja, tonnikalaa, perunaa, tomaattia, sipulia, kaprista ja oliiveja. Gozolla ftira tarjoillaan lähes pizzan tapaan avoimena, ohuiden perunaviipaleiden peittämänä, tai kaksinkerroin taitettuna calzonen tavoin. Ftiran leipomisen uskotaan ulottuvan 1500-luvulle. Vuonna 2020 Unescon aineettoman kulttuuriperinnön luetteloon lisättiin maltalaisen litteän hapanleivän, ftiran, valmistuksen taito.
+AIEMPI KYSYMYS: Miksi Cittadellaa kutsutaan myös Castelloksi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. [[Castello]] on italiaa ja tarkoittaa linnaa, ja nimi viittaa siihen, että Cittadella on keskiajalla linnaksi muutettu linnoitettu kaupunginosa [[Gozolla]]. Akropoliksesta tehtiin linna, joka toimi turvapaikkana saaren väestölle, ja sen ulkopuolelle kasvoi 1400-luvulla esikaupunki. Nimi kertoo siis paikan tehtävästä eikä muusta, ja maltaksi sen vastine on hieman erilainen. Ei kyl linna ole kyyhkyn vahvin alue.
+KYSYMYS: Kerro lisää: Gozolla
+
+### 205
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Victoria (Cittadella) (kaupungit)
+Tietoruudun teksti: Cittadella on Gozon pääkaupungin linnoitettu ydin, jota kutsutaan myös Castelloksi; itse kaupunki tunnettiin ennen nimeä Victoria yksinkertaisesti Rabatina. Aluetta on asutettu pronssikaudesta lähtien, ja Cittadellan paikalla sijaitsi todennäköisesti puunilais-roomalaisen Gaulos-kaupungin akropolis. Keskiajalla akropoliksesta tehtiin linna, joka toimi turvapaikkana saaren väestölle, ja sen ulkopuolelle kasvoi 1400-luvulla esikaupunki, josta muodostui nykyisen kaupungin vanha keskusta. Linnoitus oli 1500-luvulle tultaessa vanhentunut, ja osmanit valtasivat ja ryöstivät sen vuonna 1551; eteläismuurit rakennettiin uudelleen ruutilinnoitukseksi vuosina 1599–1622. Ison-Britannian hallitus antoi kaupungille nimen Victoria vasta vuonna 1887 kuningatar Victorian kultaisten kruunajaisten kunniaksi, ja moni gozolainen kutsuu sitä yhä vanhalla nimellä Rabat.
+AIEMPI KYSYMYS: Mikä kaupunki Gaulos oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Gaulos]] oli [[puunilais-roomalainen]] kaupunki, jonka akropolis sijaitsi todennäköisesti [[Cittadellan]] paikalla. Alueella on asutusta pronssikaudesta lähtien, ja nimi tunnetaan myös Gozon antiikin nimenä. Keskiajalla akropoliksesta tehtiin linna. Kaupungin tarkasta laajuudesta ei ole varmuutta, joten sitä ei kannata väittää tarkasti. Antiikin Gozo tuntuu minusta kaukaiselta.
+KYSYMYS: Kerro lisää: Gaulos
+
+### 206
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Victoria (Cittadella) (kaupungit)
+Tietoruudun teksti: Cittadella on Gozon pääkaupungin linnoitettu ydin, jota kutsutaan myös Castelloksi; itse kaupunki tunnettiin ennen nimeä Victoria yksinkertaisesti Rabatina. Aluetta on asutettu pronssikaudesta lähtien, ja Cittadellan paikalla sijaitsi todennäköisesti puunilais-roomalaisen Gaulos-kaupungin akropolis. Keskiajalla akropoliksesta tehtiin linna, joka toimi turvapaikkana saaren väestölle, ja sen ulkopuolelle kasvoi 1400-luvulla esikaupunki, josta muodostui nykyisen kaupungin vanha keskusta. Linnoitus oli 1500-luvulle tultaessa vanhentunut, ja osmanit valtasivat ja ryöstivät sen vuonna 1551; eteläismuurit rakennettiin uudelleen ruutilinnoitukseksi vuosina 1599–1622. Ison-Britannian hallitus antoi kaupungille nimen Victoria vasta vuonna 1887 kuningatar Victorian kultaisten kruunajaisten kunniaksi, ja moni gozolainen kutsuu sitä yhä vanhalla nimellä Rabat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthago: Puunilaisten kaupunkikortteli] Byrsan kukkulan laelta on kaivettu esiin 200-luvulla eaa. rakennettu puunilaiskortteli: kivijalustojen päälle nousi kerrostaloja, joiden pohjakerroksessa oli kauppoja ja yläkerroksissa asuntoja, kaikki ryhmiteltynä suorakulmaisten katujen ruudukkoon. Kun roomalaiset myöhemmin tasoittivat kukkulan huipun oman fooruminsa alle, he hautasivat koko puunilaiskorttelin paksun täyttömaan sisään sen sijaan, että olisivat purkaneet sen – niin kadut, kynnykset ja porraskivet säilyivät yllättävän ehjinä lähes 2200 vuoden ajan, kunnes arkeologit löysivät ne uudelleen 1900-luvulla.
+AIEMPI KYSYMYS: Mikä kaupunki Gaulos oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Gaulos]] oli [[puunilais-roomalainen]] kaupunki, jonka akropolis sijaitsi todennäköisesti [[Cittadellan]] paikalla. Alueella on asutusta pronssikaudesta lähtien, ja nimi tunnetaan myös Gozon antiikin nimenä. Keskiajalla akropoliksesta tehtiin linna. Kaupungin tarkasta laajuudesta ei ole varmuutta, joten sitä ei kannata väittää tarkasti. Antiikin Gozo tuntuu minusta kaukaiselta.
+KYSYMYS: Kerro lisää: puunilais-roomalainen
+
+### 207
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Victoria (Cittadella) (kaupungit)
+Tietoruudun teksti: Cittadella on Gozon pääkaupungin linnoitettu ydin, jota kutsutaan myös Castelloksi; itse kaupunki tunnettiin ennen nimeä Victoria yksinkertaisesti Rabatina. Aluetta on asutettu pronssikaudesta lähtien, ja Cittadellan paikalla sijaitsi todennäköisesti puunilais-roomalaisen Gaulos-kaupungin akropolis. Keskiajalla akropoliksesta tehtiin linna, joka toimi turvapaikkana saaren väestölle, ja sen ulkopuolelle kasvoi 1400-luvulla esikaupunki, josta muodostui nykyisen kaupungin vanha keskusta. Linnoitus oli 1500-luvulle tultaessa vanhentunut, ja osmanit valtasivat ja ryöstivät sen vuonna 1551; eteläismuurit rakennettiin uudelleen ruutilinnoitukseksi vuosina 1599–1622. Ison-Britannian hallitus antoi kaupungille nimen Victoria vasta vuonna 1887 kuningatar Victorian kultaisten kruunajaisten kunniaksi, ja moni gozolainen kutsuu sitä yhä vanhalla nimellä Rabat.
+AIEMPI KYSYMYS: Miksi Cittadellan eteläiset muurit rakennettiin uusiksi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Linnoitus oli 1500-luvulle tultaessa vanhentunut, ja [[osmanit]] valtasivat ja ryöstivät sen vuonna 1551. Eteläiset muurit rakennettiin uudelleen ruutilinnoitukseksi vuosina 1599–1622, jotta ne kestäisivät ruutiaseiden aikakauden. Syy on johdettavissa linnoituksen vanhentuneisuudesta, vaikka suoraa ilmoitusta päätöksen perusteista minulla ei ole. [[Cittadella]] sai siis uuden asun, vaikka sen ydin oli vanha. Rakentajat olivat aikansa insinöörejä, ei kyyhkyjä.
+KYSYMYS: Kerro lisää: Cittadella
+
+### 208
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wied il-Għasri (luonto · vuori)
+Tietoruudun teksti: Wied il-Għasri on kapea merikuru Gozon pohjoisrannikolla, ja laakso jatkuu maalle päin kohti Għasrin kylää. Kurun pohjalla on rauhallinen ranta noin 300 metrin päässä merestä, ja merelle pääsee vain kapean, jyrkkäseinäisen sisäänkäynnin kautta. Laakson reunalla, vedenalaisen luolan vieressä, uskotaan sijainneen Maltan perinteisiä suolapatoja. Nykyään syrjäinen ranta on suosittu sukeltajien ja uimareiden keskuudessa.
+AIEMPI KYSYMYS: Minkä kylän suuntaan laakso jatkuu maalle päin?
+AIEMPI VASTAUS (Livia):
+Joo, tää on selvä. Laakso jatkuu maalle päin kohti [[Għasrin]] kylää. Wied il-Għasri on kapea merikuru [[Gozon]] pohjoisrannikolla, ja sen pohjalla on rauhallinen ranta noin 300 metrin päässä merestä. Merelle pääsee vain kapean, jyrkkäseinäisen sisäänkäynnin kautta. Lyhyt vastaus, ja kyyhky ehti tehdä sen yhdellä siiven lyönnillä.
+KYSYMYS: Kerro lisää: Għasrin
+
+### 209
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wied il-Għasri (luonto · vuori)
+Tietoruudun teksti: Wied il-Għasri on kapea merikuru Gozon pohjoisrannikolla, ja laakso jatkuu maalle päin kohti Għasrin kylää. Kurun pohjalla on rauhallinen ranta noin 300 metrin päässä merestä, ja merelle pääsee vain kapean, jyrkkäseinäisen sisäänkäynnin kautta. Laakson reunalla, vedenalaisen luolan vieressä, uskotaan sijainneen Maltan perinteisiä suolapatoja. Nykyään syrjäinen ranta on suosittu sukeltajien ja uimareiden keskuudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Saari, jonka vuokra oli yksi haukka] 1530 — Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian varakuninkaalle. Suurmestari Philippe Villiers de L'Isle-Adam purjehti Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan uudelleen Pyhän Angelon linnakkeeksi.
+- [Malta — maalehti / Historia: Jättiläisten temppeli] n. 3600–2500 eaa. — Gozon Xagħran tasangolla seisoo kiviseinä, jonka lohkareet ovat ihmistä suurempia. Paikallisen tarinan mukaan sen rakensi jättiläisnainen Sansuna, joka söi pelkkiä härkäpapuja ja hunajaa ja kantoi samalla lastaan olallaan. Todellisuudessa Ġgantijan kaksi temppeliä pystytettiin yli 5 500 vuotta sitten, ennen Egyptin pyramideja. Eteläisen temppelin seinä nousee kuuteen metriin, ja se avautuu kaakkoon. Nimi tarkoittaa jättiläisten paikkaa. Kohde liitettiin Unescon maailmanperintöluetteloon vuonna 1980.
+AIEMPI KYSYMYS: Minkä kylän suuntaan laakso jatkuu maalle päin?
+AIEMPI VASTAUS (Livia):
+Joo, tää on selvä. Laakso jatkuu maalle päin kohti [[Għasrin]] kylää. Wied il-Għasri on kapea merikuru [[Gozon]] pohjoisrannikolla, ja sen pohjalla on rauhallinen ranta noin 300 metrin päässä merestä. Merelle pääsee vain kapean, jyrkkäseinäisen sisäänkäynnin kautta. Lyhyt vastaus, ja kyyhky ehti tehdä sen yhdellä siiven lyönnillä.
+KYSYMYS: Kerro lisää: Gozon
+
+### 210
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wied il-Għasri (luonto · vuori)
+Tietoruudun teksti: Wied il-Għasri on kapea merikuru Gozon pohjoisrannikolla, ja laakso jatkuu maalle päin kohti Għasrin kylää. Kurun pohjalla on rauhallinen ranta noin 300 metrin päässä merestä, ja merelle pääsee vain kapean, jyrkkäseinäisen sisäänkäynnin kautta. Laakson reunalla, vedenalaisen luolan vieressä, uskotaan sijainneen Maltan perinteisiä suolapatoja. Nykyään syrjäinen ranta on suosittu sukeltajien ja uimareiden keskuudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+AIEMPI KYSYMYS: Mitä laakson reunalla uskotaan sijainneen?
+AIEMPI VASTAUS (Livia):
+Ai tota. Laakson reunalla, vedenalaisen luolan vieressä, uskotaan sijainneen [[Maltan]] perinteisiä [[suolapatoja]]. Asia on esitetty uskomuksena, joten varmaa tietoa sijainnista ei ole. Wied il-Għasri on [[Gozon]] pohjoisrannikolla, ja nykyään syrjäinen ranta on suosittu sukeltajien ja uimareiden keskuudessa. Kyyhky ei kyl suolaa tarvitse.
+KYSYMYS: Kerro lisää: Maltan
+
+### 211
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wied il-Għasri (luonto · vuori)
+Tietoruudun teksti: Wied il-Għasri on kapea merikuru Gozon pohjoisrannikolla, ja laakso jatkuu maalle päin kohti Għasrin kylää. Kurun pohjalla on rauhallinen ranta noin 300 metrin päässä merestä, ja merelle pääsee vain kapean, jyrkkäseinäisen sisäänkäynnin kautta. Laakson reunalla, vedenalaisen luolan vieressä, uskotaan sijainneen Maltan perinteisiä suolapatoja. Nykyään syrjäinen ranta on suosittu sukeltajien ja uimareiden keskuudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Timbuktu — kaupunkilehti / Timbuktu: Suola tulee pohjoisesta, kolme viikkoa kerrallaan] Timbuktu oli Saharan kauppareitin eteläinen päätepiste, ja siihen koko kaupunki perustui. Vielä 1900-luvun jälkipuoliskolle asti kivisuola tuotiin kuudensadankuudenkymmenenneljän kilometrin päästä pohjoisesta kahdessa vuosittaisessa karavaanissa: toinen lähti marraskuun alussa, toinen maaliskuun lopussa. Karavaanissa oli useita tuhansia kameleja, matka kesti kolme viikkoa suuntaansa, ja paluumatkalla jokainen kameli kantoi neljä tai viisi kolmenkymmenen kilon laattaa. Menomatkalla vietiin ruokaa kaivosmiehille. Nykyään laatat tulevat kuorma-autolla, ja Timbuktusta suola jatkaa veneellä muualle Maliin.
+- [Gao — kaupunkilehti / Songhain kultainen valtakunta: Kulta ja suola kulkivat jokea pitkin] Kulta-suolakauppa oli koko Sahelin talouden selkäranka, ja Songhain valtakunta hallitsi sen tärkeintä solmukohtaa. Pohjoisesta tuotu suola ja etelästä noussut kulta vaihtoivat kuljetusvälinettä Timbuktussa, kun kamelikaravaanit kohtasivat joella kulkevat lastiveneet. Tavarat matkasivat vielä noin 800 kilometrin matkan Nigerjokea pitkin Djennéstä Gaohon ja takaisin, ja jokivarren kaupungit vaurastuivat tästä liikenteestä vuosisatojen ajan. Ilmasta katsottuna joki näyttää kapealta vihreältä nauhalta hiekan keskellä - juuri tämä nauha teki Songhaista mahdollisen keskellä maailman suurinta aavikkoa.
+AIEMPI KYSYMYS: Mitä laakson reunalla uskotaan sijainneen?
+AIEMPI VASTAUS (Livia):
+Ai tota. Laakson reunalla, vedenalaisen luolan vieressä, uskotaan sijainneen [[Maltan]] perinteisiä [[suolapatoja]]. Asia on esitetty uskomuksena, joten varmaa tietoa sijainnista ei ole. Wied il-Għasri on [[Gozon]] pohjoisrannikolla, ja nykyään syrjäinen ranta on suosittu sukeltajien ja uimareiden keskuudessa. Kyyhky ei kyl suolaa tarvitse.
+KYSYMYS: Kerro lisää: suolapatoja
+
+### 212
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wied il-Għasri (luonto · vuori)
+Tietoruudun teksti: Wied il-Għasri on kapea merikuru Gozon pohjoisrannikolla, ja laakso jatkuu maalle päin kohti Għasrin kylää. Kurun pohjalla on rauhallinen ranta noin 300 metrin päässä merestä, ja merelle pääsee vain kapean, jyrkkäseinäisen sisäänkäynnin kautta. Laakson reunalla, vedenalaisen luolan vieressä, uskotaan sijainneen Maltan perinteisiä suolapatoja. Nykyään syrjäinen ranta on suosittu sukeltajien ja uimareiden keskuudessa.
+AIEMPI KYSYMYS: Millainen ranta Wied il-Għasrissa on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Wied il-Għasrin]] ranta on rauhallinen ja sijaitsee kapean merikurun pohjalla noin 300 metrin päässä merestä. Merelle pääsee vain kapean, jyrkkäseinäisen sisäänkäynnin kautta, joten ranta on suojassa. Se on [[Gozon]] pohjoisrannikolla ja nykyään suosittu sukeltajien ja uimareiden keskuudessa. Rauhaa löytyy, kunhan muistaa kantaa omat eväät.
+KYSYMYS: Kerro lisää: Wied il-Għasrin
+
+### 213
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wied il-Għasri (luonto · vuori)
+Tietoruudun teksti: Wied il-Għasri on kapea merikuru Gozon pohjoisrannikolla, ja laakso jatkuu maalle päin kohti Għasrin kylää. Kurun pohjalla on rauhallinen ranta noin 300 metrin päässä merestä, ja merelle pääsee vain kapean, jyrkkäseinäisen sisäänkäynnin kautta. Laakson reunalla, vedenalaisen luolan vieressä, uskotaan sijainneen Maltan perinteisiä suolapatoja. Nykyään syrjäinen ranta on suosittu sukeltajien ja uimareiden keskuudessa.
+AIEMPI KYSYMYS: Mikä on merikuru ja miten sellainen syntyy?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä kysymys. [[Merikuru]] on kapea, jyrkkäseinäinen laakso tai halkeama, jonka kautta meri tunkeutuu maahan. Sellainen voi syntyä esimerkiksi niin, että veden syövyttämä laakso jää meren alle merenpinnan noustessa. Maltaksi laaksoa tarkoittaa sana wied, mikä näkyy esimerkiksi nimessä [[Wied il-Għasri]]. Tarkkaa syntytapaa kullekin kurulle en ole varma sanomaan. Kyyhkynä pidän kuruista, koska niistä näkee hyvin kauas.
+KYSYMYS: Kerro lisää: Merikuru
+
+### 214
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wied il-Għasri (luonto · vuori)
+Tietoruudun teksti: Wied il-Għasri on kapea merikuru Gozon pohjoisrannikolla, ja laakso jatkuu maalle päin kohti Għasrin kylää. Kurun pohjalla on rauhallinen ranta noin 300 metrin päässä merestä, ja merelle pääsee vain kapean, jyrkkäseinäisen sisäänkäynnin kautta. Laakson reunalla, vedenalaisen luolan vieressä, uskotaan sijainneen Maltan perinteisiä suolapatoja. Nykyään syrjäinen ranta on suosittu sukeltajien ja uimareiden keskuudessa.
+AIEMPI KYSYMYS: Mikä on merikuru ja miten sellainen syntyy?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä kysymys. [[Merikuru]] on kapea, jyrkkäseinäinen laakso tai halkeama, jonka kautta meri tunkeutuu maahan. Sellainen voi syntyä esimerkiksi niin, että veden syövyttämä laakso jää meren alle merenpinnan noustessa. Maltaksi laaksoa tarkoittaa sana wied, mikä näkyy esimerkiksi nimessä [[Wied il-Għasri]]. Tarkkaa syntytapaa kullekin kurulle en ole varma sanomaan. Kyyhkynä pidän kuruista, koska niistä näkee hyvin kauas.
+KYSYMYS: Kerro lisää: Wied il-Għasri
+
+### 215
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wied il-Għasri (luonto · vuori)
+Tietoruudun teksti: Wied il-Għasri on kapea merikuru Gozon pohjoisrannikolla, ja laakso jatkuu maalle päin kohti Għasrin kylää. Kurun pohjalla on rauhallinen ranta noin 300 metrin päässä merestä, ja merelle pääsee vain kapean, jyrkkäseinäisen sisäänkäynnin kautta. Laakson reunalla, vedenalaisen luolan vieressä, uskotaan sijainneen Maltan perinteisiä suolapatoja. Nykyään syrjäinen ranta on suosittu sukeltajien ja uimareiden keskuudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Timbuktu — kaupunkilehti / Timbuktu: Suola tulee pohjoisesta, kolme viikkoa kerrallaan] Timbuktu oli Saharan kauppareitin eteläinen päätepiste, ja siihen koko kaupunki perustui. Vielä 1900-luvun jälkipuoliskolle asti kivisuola tuotiin kuudensadankuudenkymmenenneljän kilometrin päästä pohjoisesta kahdessa vuosittaisessa karavaanissa: toinen lähti marraskuun alussa, toinen maaliskuun lopussa. Karavaanissa oli useita tuhansia kameleja, matka kesti kolme viikkoa suuntaansa, ja paluumatkalla jokainen kameli kantoi neljä tai viisi kolmenkymmenen kilon laattaa. Menomatkalla vietiin ruokaa kaivosmiehille. Nykyään laatat tulevat kuorma-autolla, ja Timbuktusta suola jatkaa veneellä muualle Maliin.
+- [Gao — kaupunkilehti / Songhain kultainen valtakunta: Kulta ja suola kulkivat jokea pitkin] Kulta-suolakauppa oli koko Sahelin talouden selkäranka, ja Songhain valtakunta hallitsi sen tärkeintä solmukohtaa. Pohjoisesta tuotu suola ja etelästä noussut kulta vaihtoivat kuljetusvälinettä Timbuktussa, kun kamelikaravaanit kohtasivat joella kulkevat lastiveneet. Tavarat matkasivat vielä noin 800 kilometrin matkan Nigerjokea pitkin Djennéstä Gaohon ja takaisin, ja jokivarren kaupungit vaurastuivat tästä liikenteestä vuosisatojen ajan. Ilmasta katsottuna joki näyttää kapealta vihreältä nauhalta hiekan keskellä - juuri tämä nauha teki Songhaista mahdollisen keskellä maailman suurinta aavikkoa.
+AIEMPI KYSYMYS: Miten suolaa saadaan suolapadoissa merivedestä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Suolapadoissa]] merivesi johdetaan matalaan altaaseen, jossa aurinko ja tuuli haihduttavat veden. Kun vesi haihtuu, jäljelle jää suola, joka kerätään talteen. [[Maltalla]] perinteiset suolapadot kaiverrettiin yleensä kallioon rannikon tuntumassa, ja Wied il-Għasrin reunalla uskotaan sijainneen sellaisia. Kuuma ja tuulinen sää nopeuttaa haihtumista.
+
+Minusta suola on kyllä kummallinen vaiva: meri antaa sitä ilmaiseksi, ja silti ihmiset kaivoivat sen kallioon. Pullan kanssa en suolaa halua, mutta Maltalla on varmasti oma suolainen leivonnaisensa, en vaan tiedä sen nimeä.
+KYSYMYS: Kerro lisää: Suolapadoissa
+
+### 216
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wied il-Għasri (luonto · vuori)
+Tietoruudun teksti: Wied il-Għasri on kapea merikuru Gozon pohjoisrannikolla, ja laakso jatkuu maalle päin kohti Għasrin kylää. Kurun pohjalla on rauhallinen ranta noin 300 metrin päässä merestä, ja merelle pääsee vain kapean, jyrkkäseinäisen sisäänkäynnin kautta. Laakson reunalla, vedenalaisen luolan vieressä, uskotaan sijainneen Maltan perinteisiä suolapatoja. Nykyään syrjäinen ranta on suosittu sukeltajien ja uimareiden keskuudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Arki] Maltalla arki on värikästä: kalastajaveneiden silmät katsovat merelle, puuparvekkeet vihertävät kadun yllä ja kesäisin kylän kirkko syttyy valoihin. Kaiken taustalla soi kieli, jonka juuret ovat arabiassa mutta jota kirjoitetaan latinalaisilla aakkosilla.
+AIEMPI KYSYMYS: Miten suolaa saadaan suolapadoissa merivedestä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Suolapadoissa]] merivesi johdetaan matalaan altaaseen, jossa aurinko ja tuuli haihduttavat veden. Kun vesi haihtuu, jäljelle jää suola, joka kerätään talteen. [[Maltalla]] perinteiset suolapadot kaiverrettiin yleensä kallioon rannikon tuntumassa, ja Wied il-Għasrin reunalla uskotaan sijainneen sellaisia. Kuuma ja tuulinen sää nopeuttaa haihtumista.
+
+Minusta suola on kyllä kummallinen vaiva: meri antaa sitä ilmaiseksi, ja silti ihmiset kaivoivat sen kallioon. Pullan kanssa en suolaa halua, mutta Maltalla on varmasti oma suolainen leivonnaisensa, en vaan tiedä sen nimeä.
+KYSYMYS: Kerro lisää: Maltalla
+
+### 217
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fungus Rock (luonto · saari)
+Tietoruudun teksti: Fungus Rock on 60 metriä korkea kalkkikivisaareke Dwejran lähes ympyränmuotoisen mustan laguunin suulla Gozolla, ja se tunnetaan maltaksi myös nimellä Kenraalin kivi. Johanniittaritarikunnan ritarit löysivät kalliolta loisikasvin, jota kutsuttiin virheellisesti "maltalaiseksi sieneksi" ja jonka uskottiin ajan lääketieteessä parantavan haavoja ja punatautia; ritarit pitivät kasvia niin arvokkaana, että antoivat sitä lahjaksi arvovaltaisille vieraille. Suurmestari Pinto julisti kallion kielletyksi alueeksi vuonna 1746, ja luvattomalle kalliolle kiipeäjälle luvattiin kolmen vuoden rangaistus soutuorjana. Kallion vieressä sijaitsi myös luonnonkaari, Sininen ikkuna, joka romahti mereen vasta vuonna 2017.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: São Benton luostari] 1590–1671 Luostarin historia alkoi 1590, kun Manoel de Brito ja hänen poikansa Diogo lahjoittivat maata kahdelle Bahiasta tulleelle benediktiinimunkille, Pedro Ferrazille ja João Porcalholle. Munkit asuivat siihen asti vaatimattomassa majatalossa Nossa Senhora da Conceiçãon kappelin vieressä sillä kukkulalla, joka tunnetaan nyt São Benton mäkenä. Luostari sai 1596 lisäpyhimyksekseen Pyhän Benedictuksen ja 1602 uuden nimen Montserratin Neitsyen mukaan. Kirkon piirsi portugalilainen sotilasinsinööri Francisco Frias de Mesquita, työ alkoi 1633 ja valmistui 1671; rakennusaikana Bernardo de São Bento Correia de Souza muutti pohjan kolmilaivaiseksi, ja viereinen konventti valmistui vasta 1755 Jos…
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Lapan akvedukti] 1744–1750 Kaupungin ydin oli soiden ympäröimä, ja vesi oli huonoa: juomavesi kannettiin käsin puroista kaupungin ulkopuolelta. Jo 1602 oli suunnitelmia johtaa vettä Cariocajoen latvoilta Santa Teresan kukkulalta, mutta kanavatyöt takkusivat rahan ja tekniikan puutteessa niin, että 1600-luvun lopussa valmiina oli vain muutama sata metriä. Vasta 1706 jälkeen työ eteni, ja ensimmäinen akvedukti valmistui 1723 tuoden veden barokkiseen suihkulähteeseen nykyisellä Largo da Cariocalla. Vuoteen 1744 mennessä rakennelma oli jo huonossa kunnossa, ja kuvernööri Gomes Freire de Andrade määräsi tilalle suuremman. Sen suunnitteli portugalilainen sotilasinsinööri José Fernandes Pinto Alpoim Lissabonin Águ…
+AIEMPI KYSYMYS: Minä vuonna suurmestari Pinto julisti kallion kielletyksi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Suurmestari [[Pinto]] julisti kallion kielletyksi alueeksi vuonna 1746. Kyseessä on [[Fungus Rock]], 60 metriä korkea kalkkikivisaareke Dwejran laguunin suulla Gozolla, ja syynä oli sen kasvi, jota ritarit pitivät arvokkaana. Luvattomalle kiipeäjälle luvattiin kolmen vuoden rangaistus soutuorjana. Tiukka tyyppi se Pinto.
+KYSYMYS: Kerro lisää: Pinto
+
+### 218
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fungus Rock (luonto · saari)
+Tietoruudun teksti: Fungus Rock on 60 metriä korkea kalkkikivisaareke Dwejran lähes ympyränmuotoisen mustan laguunin suulla Gozolla, ja se tunnetaan maltaksi myös nimellä Kenraalin kivi. Johanniittaritarikunnan ritarit löysivät kalliolta loisikasvin, jota kutsuttiin virheellisesti "maltalaiseksi sieneksi" ja jonka uskottiin ajan lääketieteessä parantavan haavoja ja punatautia; ritarit pitivät kasvia niin arvokkaana, että antoivat sitä lahjaksi arvovaltaisille vieraille. Suurmestari Pinto julisti kallion kielletyksi alueeksi vuonna 1746, ja luvattomalle kalliolle kiipeäjälle luvattiin kolmen vuoden rangaistus soutuorjana. Kallion vieressä sijaitsi myös luonnonkaari, Sininen ikkuna, joka romahti mereen vasta vuonna 2017.
+AIEMPI KYSYMYS: Minä vuonna suurmestari Pinto julisti kallion kielletyksi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Suurmestari [[Pinto]] julisti kallion kielletyksi alueeksi vuonna 1746. Kyseessä on [[Fungus Rock]], 60 metriä korkea kalkkikivisaareke Dwejran laguunin suulla Gozolla, ja syynä oli sen kasvi, jota ritarit pitivät arvokkaana. Luvattomalle kiipeäjälle luvattiin kolmen vuoden rangaistus soutuorjana. Tiukka tyyppi se Pinto.
+KYSYMYS: Kerro lisää: Fungus Rock
+
+### 219
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fungus Rock (luonto · saari)
+Tietoruudun teksti: Fungus Rock on 60 metriä korkea kalkkikivisaareke Dwejran lähes ympyränmuotoisen mustan laguunin suulla Gozolla, ja se tunnetaan maltaksi myös nimellä Kenraalin kivi. Johanniittaritarikunnan ritarit löysivät kalliolta loisikasvin, jota kutsuttiin virheellisesti "maltalaiseksi sieneksi" ja jonka uskottiin ajan lääketieteessä parantavan haavoja ja punatautia; ritarit pitivät kasvia niin arvokkaana, että antoivat sitä lahjaksi arvovaltaisille vieraille. Suurmestari Pinto julisti kallion kielletyksi alueeksi vuonna 1746, ja luvattomalle kalliolle kiipeäjälle luvattiin kolmen vuoden rangaistus soutuorjana. Kallion vieressä sijaitsi myös luonnonkaari, Sininen ikkuna, joka romahti mereen vasta vuonna 2017.
+AIEMPI KYSYMYS: Mitä rangaistusta luvattomalle kiipeäjälle uhattiin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Luvattomalle kalliolle kiipeäjälle luvattiin kolmen vuoden rangaistus [[soutuorjana]]. Suurmestari [[Pinto]] oli julistanut [[Fungus Rockin]] kielletyksi alueeksi vuonna 1746, koska kalliolta löytyi arvokkaana pidetty kasvi. Rangaistus oli ankara, ja se osoittaa, kuinka tärkeänä kasvia pidettiin. Eikä meikäläinen kyl ala soutaa.
+KYSYMYS: Kerro lisää: soutuorjana
+
+### 220
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fungus Rock (luonto · saari)
+Tietoruudun teksti: Fungus Rock on 60 metriä korkea kalkkikivisaareke Dwejran lähes ympyränmuotoisen mustan laguunin suulla Gozolla, ja se tunnetaan maltaksi myös nimellä Kenraalin kivi. Johanniittaritarikunnan ritarit löysivät kalliolta loisikasvin, jota kutsuttiin virheellisesti "maltalaiseksi sieneksi" ja jonka uskottiin ajan lääketieteessä parantavan haavoja ja punatautia; ritarit pitivät kasvia niin arvokkaana, että antoivat sitä lahjaksi arvovaltaisille vieraille. Suurmestari Pinto julisti kallion kielletyksi alueeksi vuonna 1746, ja luvattomalle kalliolle kiipeäjälle luvattiin kolmen vuoden rangaistus soutuorjana. Kallion vieressä sijaitsi myös luonnonkaari, Sininen ikkuna, joka romahti mereen vasta vuonna 2017.
+AIEMPI KYSYMYS: Mitä rangaistusta luvattomalle kiipeäjälle uhattiin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Luvattomalle kalliolle kiipeäjälle luvattiin kolmen vuoden rangaistus [[soutuorjana]]. Suurmestari [[Pinto]] oli julistanut [[Fungus Rockin]] kielletyksi alueeksi vuonna 1746, koska kalliolta löytyi arvokkaana pidetty kasvi. Rangaistus oli ankara, ja se osoittaa, kuinka tärkeänä kasvia pidettiin. Eikä meikäläinen kyl ala soutaa.
+KYSYMYS: Kerro lisää: Fungus Rockin
+
+### 221
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fungus Rock (luonto · saari)
+Tietoruudun teksti: Fungus Rock on 60 metriä korkea kalkkikivisaareke Dwejran lähes ympyränmuotoisen mustan laguunin suulla Gozolla, ja se tunnetaan maltaksi myös nimellä Kenraalin kivi. Johanniittaritarikunnan ritarit löysivät kalliolta loisikasvin, jota kutsuttiin virheellisesti "maltalaiseksi sieneksi" ja jonka uskottiin ajan lääketieteessä parantavan haavoja ja punatautia; ritarit pitivät kasvia niin arvokkaana, että antoivat sitä lahjaksi arvovaltaisille vieraille. Suurmestari Pinto julisti kallion kielletyksi alueeksi vuonna 1746, ja luvattomalle kalliolle kiipeäjälle luvattiin kolmen vuoden rangaistus soutuorjana. Kallion vieressä sijaitsi myös luonnonkaari, Sininen ikkuna, joka romahti mereen vasta vuonna 2017.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+AIEMPI KYSYMYS: Mikä kasvi "maltalainen sieni" oikeasti on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: se ei ole sieni lainkaan. Niin kutsuttu maltalainen sieni on loisikasvi, tieteelliseltä nimeltään Cynomorium coccineum, jota kasvoi [[Fungus Rockin]] kalliolla. [[Johanniittaritarikunnan]] ritarit pitivät sitä arvokkaana, koska ajan lääketieteessä uskottiin sen parantavan haavoja ja punatautia. Ritarit antoivat kasvia lahjaksi arvovaltaisille vieraille. Nimi on siis harhaanjohtava, ja kasvi on nimensä mukaisesti vaikea luokitella. Kyyhkynä pidän kyllä enemmän leivästä.
+KYSYMYS: Kerro lisää: Johanniittaritarikunnan
+
+### 222
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fungus Rock (luonto · saari)
+Tietoruudun teksti: Fungus Rock on 60 metriä korkea kalkkikivisaareke Dwejran lähes ympyränmuotoisen mustan laguunin suulla Gozolla, ja se tunnetaan maltaksi myös nimellä Kenraalin kivi. Johanniittaritarikunnan ritarit löysivät kalliolta loisikasvin, jota kutsuttiin virheellisesti "maltalaiseksi sieneksi" ja jonka uskottiin ajan lääketieteessä parantavan haavoja ja punatautia; ritarit pitivät kasvia niin arvokkaana, että antoivat sitä lahjaksi arvovaltaisille vieraille. Suurmestari Pinto julisti kallion kielletyksi alueeksi vuonna 1746, ja luvattomalle kalliolle kiipeäjälle luvattiin kolmen vuoden rangaistus soutuorjana. Kallion vieressä sijaitsi myös luonnonkaari, Sininen ikkuna, joka romahti mereen vasta vuonna 2017.
+AIEMPI KYSYMYS: Mikä Sininen ikkuna oli ja mitä sille tapahtui?
+AIEMPI VASTAUS (Livia):
+Ai tota. Sininen ikkuna oli [[luonnonkaari]] [[Fungus Rockin]] vieressä [[Dwejran]] alueella [[Gozolla]]. Se romahti mereen vuonna 2017, tietojeni mukaan myrskyisessä säässä, mutta tarkkaa päivää en ole varma. Kaari oli yksi saaren tunnetuimmista maisemista. Aihe on surullinen, ja hyvä että kuvia on säilynyt.
+KYSYMYS: Kerro lisää: luonnonkaari
+
+### 223
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fungus Rock (luonto · saari)
+Tietoruudun teksti: Fungus Rock on 60 metriä korkea kalkkikivisaareke Dwejran lähes ympyränmuotoisen mustan laguunin suulla Gozolla, ja se tunnetaan maltaksi myös nimellä Kenraalin kivi. Johanniittaritarikunnan ritarit löysivät kalliolta loisikasvin, jota kutsuttiin virheellisesti "maltalaiseksi sieneksi" ja jonka uskottiin ajan lääketieteessä parantavan haavoja ja punatautia; ritarit pitivät kasvia niin arvokkaana, että antoivat sitä lahjaksi arvovaltaisille vieraille. Suurmestari Pinto julisti kallion kielletyksi alueeksi vuonna 1746, ja luvattomalle kalliolle kiipeäjälle luvattiin kolmen vuoden rangaistus soutuorjana. Kallion vieressä sijaitsi myös luonnonkaari, Sininen ikkuna, joka romahti mereen vasta vuonna 2017.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Kaari joka romahti myrskyssä] 8.3.2017 — Gozon Dwejran rannikolla seisoi kerran 28 metriä korkea kalkkikaari, jota kutsuttiin Siniseksi ikkunaksi. Meri veisti sen hitaasti: aaltojen kaivertama luola muuttui kaareksi, ja koko prosessin arvioidaan kestäneen noin 500 vuotta. Vanhin tunnettu valokuva kaaresta on todennäköisesti Richard Ellisin ottama vuodelta 1879. Kaari oli yksi saaren suosituimmista nähtävyyksistä ja esiintyi useissa elokuvissa. Maaliskuun 8. päivänä 2017 se romahti myrskyssä mereen.
+AIEMPI KYSYMYS: Mikä Sininen ikkuna oli ja mitä sille tapahtui?
+AIEMPI VASTAUS (Livia):
+Ai tota. Sininen ikkuna oli [[luonnonkaari]] [[Fungus Rockin]] vieressä [[Dwejran]] alueella [[Gozolla]]. Se romahti mereen vuonna 2017, tietojeni mukaan myrskyisessä säässä, mutta tarkkaa päivää en ole varma. Kaari oli yksi saaren tunnetuimmista maisemista. Aihe on surullinen, ja hyvä että kuvia on säilynyt.
+KYSYMYS: Kerro lisää: Dwejran
+
+### 224
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fungus Rock (luonto · saari)
+Tietoruudun teksti: Fungus Rock on 60 metriä korkea kalkkikivisaareke Dwejran lähes ympyränmuotoisen mustan laguunin suulla Gozolla, ja se tunnetaan maltaksi myös nimellä Kenraalin kivi. Johanniittaritarikunnan ritarit löysivät kalliolta loisikasvin, jota kutsuttiin virheellisesti "maltalaiseksi sieneksi" ja jonka uskottiin ajan lääketieteessä parantavan haavoja ja punatautia; ritarit pitivät kasvia niin arvokkaana, että antoivat sitä lahjaksi arvovaltaisille vieraille. Suurmestari Pinto julisti kallion kielletyksi alueeksi vuonna 1746, ja luvattomalle kalliolle kiipeäjälle luvattiin kolmen vuoden rangaistus soutuorjana. Kallion vieressä sijaitsi myös luonnonkaari, Sininen ikkuna, joka romahti mereen vasta vuonna 2017.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Ruoka: Leipä Unescon listalla] n. 1500-luku — Maltalainen ftira on hapanleipä, joka leivotaan rengasmaiseksi tai litteäksi. Sen väliin tulee sardiineja, tonnikalaa, perunaa, tomaattia, sipulia, kaprista ja oliiveja. Gozolla ftira tarjoillaan lähes pizzan tapaan avoimena, ohuiden perunaviipaleiden peittämänä, tai kaksinkerroin taitettuna calzonen tavoin. Ftiran leipomisen uskotaan ulottuvan 1500-luvulle. Vuonna 2020 Unescon aineettoman kulttuuriperinnön luetteloon lisättiin maltalaisen litteän hapanleivän, ftiran, valmistuksen taito.
+AIEMPI KYSYMYS: Mikä Sininen ikkuna oli ja mitä sille tapahtui?
+AIEMPI VASTAUS (Livia):
+Ai tota. Sininen ikkuna oli [[luonnonkaari]] [[Fungus Rockin]] vieressä [[Dwejran]] alueella [[Gozolla]]. Se romahti mereen vuonna 2017, tietojeni mukaan myrskyisessä säässä, mutta tarkkaa päivää en ole varma. Kaari oli yksi saaren tunnetuimmista maisemista. Aihe on surullinen, ja hyvä että kuvia on säilynyt.
+KYSYMYS: Kerro lisää: Gozolla
+
+### 225
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fungus Rock (luonto · saari)
+Tietoruudun teksti: Fungus Rock on 60 metriä korkea kalkkikivisaareke Dwejran lähes ympyränmuotoisen mustan laguunin suulla Gozolla, ja se tunnetaan maltaksi myös nimellä Kenraalin kivi. Johanniittaritarikunnan ritarit löysivät kalliolta loisikasvin, jota kutsuttiin virheellisesti "maltalaiseksi sieneksi" ja jonka uskottiin ajan lääketieteessä parantavan haavoja ja punatautia; ritarit pitivät kasvia niin arvokkaana, että antoivat sitä lahjaksi arvovaltaisille vieraille. Suurmestari Pinto julisti kallion kielletyksi alueeksi vuonna 1746, ja luvattomalle kalliolle kiipeäjälle luvattiin kolmen vuoden rangaistus soutuorjana. Kallion vieressä sijaitsi myös luonnonkaari, Sininen ikkuna, joka romahti mereen vasta vuonna 2017.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+AIEMPI KYSYMYS: Keitä Johanniittaritarikunnan ritarit olivat?
+AIEMPI VASTAUS (Livia):
+No niin. [[Johanniittaritarikunta]] eli Pyhän Johanneksen ritarikunta oli keskiaikainen katolinen sotilas- ja sairaanhoitajarikunta. Se hallitsi [[Maltaa]] 1500-luvun alusta 1700-luvun loppuun, ja ritarit löysivät [[Fungus Rockin]] kalliolta arvokkaaksi katsomansa loisikasvin. Tarkat vuodet en ole varma kaikilta osin muistamaan, mutta heidän kautensa muovasi Maltan linnoituksia ja kaupunkeja syvästi. Ritarit ovat suosittu aihe, ja minä kyllä kuuntelen.
+KYSYMYS: Kerro lisää: Johanniittaritarikunta
+
+### 226
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fungus Rock (luonto · saari)
+Tietoruudun teksti: Fungus Rock on 60 metriä korkea kalkkikivisaareke Dwejran lähes ympyränmuotoisen mustan laguunin suulla Gozolla, ja se tunnetaan maltaksi myös nimellä Kenraalin kivi. Johanniittaritarikunnan ritarit löysivät kalliolta loisikasvin, jota kutsuttiin virheellisesti "maltalaiseksi sieneksi" ja jonka uskottiin ajan lääketieteessä parantavan haavoja ja punatautia; ritarit pitivät kasvia niin arvokkaana, että antoivat sitä lahjaksi arvovaltaisille vieraille. Suurmestari Pinto julisti kallion kielletyksi alueeksi vuonna 1746, ja luvattomalle kalliolle kiipeäjälle luvattiin kolmen vuoden rangaistus soutuorjana. Kallion vieressä sijaitsi myös luonnonkaari, Sininen ikkuna, joka romahti mereen vasta vuonna 2017.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Saari, jonka vuokra oli yksi haukka] 1530 — Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian varakuninkaalle. Suurmestari Philippe Villiers de L'Isle-Adam purjehti Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan uudelleen Pyhän Angelon linnakkeeksi.
+- [Malta — maalehti / Historia] Pienellä saarella kohtaavat yli 5 500 vuotta vanhat kivitemppelit, maanalainen hautakammio ja kaupunki, joka suunniteltiin viivaimella. Malta on aikamatka, jonka jokaisella pysäkillä on oma kivikerroksensa.
+AIEMPI KYSYMYS: Keitä Johanniittaritarikunnan ritarit olivat?
+AIEMPI VASTAUS (Livia):
+No niin. [[Johanniittaritarikunta]] eli Pyhän Johanneksen ritarikunta oli keskiaikainen katolinen sotilas- ja sairaanhoitajarikunta. Se hallitsi [[Maltaa]] 1500-luvun alusta 1700-luvun loppuun, ja ritarit löysivät [[Fungus Rockin]] kalliolta arvokkaaksi katsomansa loisikasvin. Tarkat vuodet en ole varma kaikilta osin muistamaan, mutta heidän kautensa muovasi Maltan linnoituksia ja kaupunkeja syvästi. Ritarit ovat suosittu aihe, ja minä kyllä kuuntelen.
+KYSYMYS: Kerro lisää: Maltaa
+
+### 227
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsalforn (kaupungit)
+Tietoruudun teksti: Marsalforn on kaupunki Gozon pohjoisrannikolla, Xagħran ja Żebbuġin kukkulakylien välissä, ja siihen kuuluu myös Qbajjarin lahti. Nimi on yhdistelmäsana: marsa on arabiaa ja tarkoittaa satamaa, mutta jälkiosan forn-sanan alkuperästä ei olla varmoja. Kaupunki on Gozon suosituimpia matkailukeskuksia, ja siellä on runsaasti hotelleja, ravintoloita ja baareja, vaikka hiekkarantaa on vain vähän. Kivikkoisella rannikolla on sen sijaan lukuisia uimapaikkoja kallioiden lomassa.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+AIEMPI KYSYMYS: Mitä sana marsa tarkoittaa arabiaksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Sana marsa tarkoittaa arabiaksi satamaa. [[Marsalforn]] on yhdistelmäsana, mutta jälkiosan forn-sanan alkuperästä ei olla varmoja. Kaupunki sijaitsee [[Gozon]] pohjoisrannikolla ja on yksi saaren suosituimmista matkailukeskuksista. Satama on siis jo nimessä, ja kyyhky arvostaa selkeyttä.
+KYSYMYS: Kerro lisää: Marsalforn
+
+### 228
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsalforn (kaupungit)
+Tietoruudun teksti: Marsalforn on kaupunki Gozon pohjoisrannikolla, Xagħran ja Żebbuġin kukkulakylien välissä, ja siihen kuuluu myös Qbajjarin lahti. Nimi on yhdistelmäsana: marsa on arabiaa ja tarkoittaa satamaa, mutta jälkiosan forn-sanan alkuperästä ei olla varmoja. Kaupunki on Gozon suosituimpia matkailukeskuksia, ja siellä on runsaasti hotelleja, ravintoloita ja baareja, vaikka hiekkarantaa on vain vähän. Kivikkoisella rannikolla on sen sijaan lukuisia uimapaikkoja kallioiden lomassa.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Saari, jonka vuokra oli yksi haukka] 1530 — Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian varakuninkaalle. Suurmestari Philippe Villiers de L'Isle-Adam purjehti Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan uudelleen Pyhän Angelon linnakkeeksi.
+- [Malta — maalehti / Historia: Jättiläisten temppeli] n. 3600–2500 eaa. — Gozon Xagħran tasangolla seisoo kiviseinä, jonka lohkareet ovat ihmistä suurempia. Paikallisen tarinan mukaan sen rakensi jättiläisnainen Sansuna, joka söi pelkkiä härkäpapuja ja hunajaa ja kantoi samalla lastaan olallaan. Todellisuudessa Ġgantijan kaksi temppeliä pystytettiin yli 5 500 vuotta sitten, ennen Egyptin pyramideja. Eteläisen temppelin seinä nousee kuuteen metriin, ja se avautuu kaakkoon. Nimi tarkoittaa jättiläisten paikkaa. Kohde liitettiin Unescon maailmanperintöluetteloon vuonna 1980.
+AIEMPI KYSYMYS: Mitä sana marsa tarkoittaa arabiaksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Sana marsa tarkoittaa arabiaksi satamaa. [[Marsalforn]] on yhdistelmäsana, mutta jälkiosan forn-sanan alkuperästä ei olla varmoja. Kaupunki sijaitsee [[Gozon]] pohjoisrannikolla ja on yksi saaren suosituimmista matkailukeskuksista. Satama on siis jo nimessä, ja kyyhky arvostaa selkeyttä.
+KYSYMYS: Kerro lisää: Gozon
+
+### 229
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsalforn (kaupungit)
+Tietoruudun teksti: Marsalforn on kaupunki Gozon pohjoisrannikolla, Xagħran ja Żebbuġin kukkulakylien välissä, ja siihen kuuluu myös Qbajjarin lahti. Nimi on yhdistelmäsana: marsa on arabiaa ja tarkoittaa satamaa, mutta jälkiosan forn-sanan alkuperästä ei olla varmoja. Kaupunki on Gozon suosituimpia matkailukeskuksia, ja siellä on runsaasti hotelleja, ravintoloita ja baareja, vaikka hiekkarantaa on vain vähän. Kivikkoisella rannikolla on sen sijaan lukuisia uimapaikkoja kallioiden lomassa.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Jättiläisten temppeli] n. 3600–2500 eaa. — Gozon Xagħran tasangolla seisoo kiviseinä, jonka lohkareet ovat ihmistä suurempia. Paikallisen tarinan mukaan sen rakensi jättiläisnainen Sansuna, joka söi pelkkiä härkäpapuja ja hunajaa ja kantoi samalla lastaan olallaan. Todellisuudessa Ġgantijan kaksi temppeliä pystytettiin yli 5 500 vuotta sitten, ennen Egyptin pyramideja. Eteläisen temppelin seinä nousee kuuteen metriin, ja se avautuu kaakkoon. Nimi tarkoittaa jättiläisten paikkaa. Kohde liitettiin Unescon maailmanperintöluetteloon vuonna 1980.
+AIEMPI KYSYMYS: Minkä kahden kylän välissä Marsalforn sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Marsalforn]] sijaitsee [[Xagħran]] ja [[Żebbuġin]] kukkulakylien välissä Gozon pohjoisrannikolla. Kaupunkiin kuuluu myös Qbajjarin lahti. Se on yksi Gozon suosituimmista matkailukeskuksista, vaikka hiekkarantaa on vain vähän. Vastaus mahtui yhteen hengenvetoon.
+KYSYMYS: Kerro lisää: Xagħran
+
+### 230
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsalforn (kaupungit)
+Tietoruudun teksti: Marsalforn on kaupunki Gozon pohjoisrannikolla, Xagħran ja Żebbuġin kukkulakylien välissä, ja siihen kuuluu myös Qbajjarin lahti. Nimi on yhdistelmäsana: marsa on arabiaa ja tarkoittaa satamaa, mutta jälkiosan forn-sanan alkuperästä ei olla varmoja. Kaupunki on Gozon suosituimpia matkailukeskuksia, ja siellä on runsaasti hotelleja, ravintoloita ja baareja, vaikka hiekkarantaa on vain vähän. Kivikkoisella rannikolla on sen sijaan lukuisia uimapaikkoja kallioiden lomassa.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+AIEMPI KYSYMYS: Minkä kahden kylän välissä Marsalforn sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Marsalforn]] sijaitsee [[Xagħran]] ja [[Żebbuġin]] kukkulakylien välissä Gozon pohjoisrannikolla. Kaupunkiin kuuluu myös Qbajjarin lahti. Se on yksi Gozon suosituimmista matkailukeskuksista, vaikka hiekkarantaa on vain vähän. Vastaus mahtui yhteen hengenvetoon.
+KYSYMYS: Kerro lisää: Żebbuġin
+
+### 231
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsalforn (kaupungit)
+Tietoruudun teksti: Marsalforn on kaupunki Gozon pohjoisrannikolla, Xagħran ja Żebbuġin kukkulakylien välissä, ja siihen kuuluu myös Qbajjarin lahti. Nimi on yhdistelmäsana: marsa on arabiaa ja tarkoittaa satamaa, mutta jälkiosan forn-sanan alkuperästä ei olla varmoja. Kaupunki on Gozon suosituimpia matkailukeskuksia, ja siellä on runsaasti hotelleja, ravintoloita ja baareja, vaikka hiekkarantaa on vain vähän. Kivikkoisella rannikolla on sen sijaan lukuisia uimapaikkoja kallioiden lomassa.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+AIEMPI KYSYMYS: Millainen Marsalforn on rannoiltaan?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Marsalfornissa]] hiekkarantaa on vain vähän, mutta kivikkoisella rannikolla on lukuisia uimapaikkoja kallioiden lomassa. Kaupunki sijaitsee [[Gozon]] pohjoisrannikolla ja on saaren suosituimpia matkailukeskuksia, jossa on runsaasti hotelleja, ravintoloita ja baareja. Rannat ovat siis enemmän kallioisia kuin pehmeitä. Kyyhkynä minä kyl istun mieluummin kalliolla.
+KYSYMYS: Kerro lisää: Marsalfornissa
+
+### 232
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsalforn (kaupungit)
+Tietoruudun teksti: Marsalforn on kaupunki Gozon pohjoisrannikolla, Xagħran ja Żebbuġin kukkulakylien välissä, ja siihen kuuluu myös Qbajjarin lahti. Nimi on yhdistelmäsana: marsa on arabiaa ja tarkoittaa satamaa, mutta jälkiosan forn-sanan alkuperästä ei olla varmoja. Kaupunki on Gozon suosituimpia matkailukeskuksia, ja siellä on runsaasti hotelleja, ravintoloita ja baareja, vaikka hiekkarantaa on vain vähän. Kivikkoisella rannikolla on sen sijaan lukuisia uimapaikkoja kallioiden lomassa.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+AIEMPI KYSYMYS: Miten Gozolle pääsee Maltalta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Gozolle pääsee Maltan pääsaarelta lautalla, joka kulkee Ċirkewwan ja Mġarrin välillä, ja matka kestää noin puoli tuntia. Lauttayhteys on tärkein reitti saarten välillä, ja aikataulut kannattaa tarkistaa etukäteen, sillä en ole varma niiden nykyisistä väleistä. Saarella sijaitsee muun muassa matkailukeskus [[Marsalforn]], ja [[Gozo]] on Maltan saariryhmän toiseksi suurin asuttu saari.
+
+Minä lensin tämän välin kerran siivillä, ja se oli paljon nopeampi kuin lautta. Tosin lautalla on kahvila, ja kahvilassa saattaa olla pullaa.
+KYSYMYS: Kerro lisää: Gozo
+
+### 233
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ramla Bay (merenkulku)
+Tietoruudun teksti: Ramla Bay, maltaksi Ir-Ramla l-Ħamra eli "punainen hiekka", on lahti Gozon koillisrannikolla Marsalfornin ja San Blasin lahtien välissä, lähimpänä kylänä Xagħra. Lahden hiekka on nimensä mukaisesti punertavaa, mikä tekee siitä poikkeuksellisen Maltan saarilla, joilla suurin osa rannoista on vaaleaa kalkkikiveä tai kivikkoa. Lahtea reunustavat hiekkadyynit ja jyrkät kalliot, ja sen länsilaidalla sijaitsee luola, jonka perimätieto yhdistää Homeroksen Odysseiaan ja nymfi Kalypsoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Saari, jonka vuokra oli yksi haukka] 1530 — Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian varakuninkaalle. Suurmestari Philippe Villiers de L'Isle-Adam purjehti Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan uudelleen Pyhän Angelon linnakkeeksi.
+- [Malta — maalehti / Historia: Jättiläisten temppeli] n. 3600–2500 eaa. — Gozon Xagħran tasangolla seisoo kiviseinä, jonka lohkareet ovat ihmistä suurempia. Paikallisen tarinan mukaan sen rakensi jättiläisnainen Sansuna, joka söi pelkkiä härkäpapuja ja hunajaa ja kantoi samalla lastaan olallaan. Todellisuudessa Ġgantijan kaksi temppeliä pystytettiin yli 5 500 vuotta sitten, ennen Egyptin pyramideja. Eteläisen temppelin seinä nousee kuuteen metriin, ja se avautuu kaakkoon. Nimi tarkoittaa jättiläisten paikkaa. Kohde liitettiin Unescon maailmanperintöluetteloon vuonna 1980.
+AIEMPI KYSYMYS: Mitä Ir-Ramla l-Ħamra tarkoittaa suomeksi?
+AIEMPI VASTAUS (Livia):
+Kato, nimessä on koko kuvaus valmiina. Maltankielinen nimi tarkoittaa suomeksi punaista hiekkaa, ja se viittaa suoraan lahden rantaan: [[Gozon]] koillisrannikolla sijaitsevan lahden hiekka on punertavaa, mikä on [[Maltan]] saarilla poikkeuksellista, koska suurin osa rannoista on vaaleaa kalkkikiveä tai kivikkoa. Lahden länsilaidalla on lisäksi luola, jonka perimätieto yhdistää [[Homeroksen]] Odysseiaan. Kyl nimi kertoo kaiken, kun vaan osaa lukea.
+KYSYMYS: Kerro lisää: Gozon
+
+### 234
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ramla Bay (merenkulku)
+Tietoruudun teksti: Ramla Bay, maltaksi Ir-Ramla l-Ħamra eli "punainen hiekka", on lahti Gozon koillisrannikolla Marsalfornin ja San Blasin lahtien välissä, lähimpänä kylänä Xagħra. Lahden hiekka on nimensä mukaisesti punertavaa, mikä tekee siitä poikkeuksellisen Maltan saarilla, joilla suurin osa rannoista on vaaleaa kalkkikiveä tai kivikkoa. Lahtea reunustavat hiekkadyynit ja jyrkät kalliot, ja sen länsilaidalla sijaitsee luola, jonka perimätieto yhdistää Homeroksen Odysseiaan ja nymfi Kalypsoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+AIEMPI KYSYMYS: Mitä Ir-Ramla l-Ħamra tarkoittaa suomeksi?
+AIEMPI VASTAUS (Livia):
+Kato, nimessä on koko kuvaus valmiina. Maltankielinen nimi tarkoittaa suomeksi punaista hiekkaa, ja se viittaa suoraan lahden rantaan: [[Gozon]] koillisrannikolla sijaitsevan lahden hiekka on punertavaa, mikä on [[Maltan]] saarilla poikkeuksellista, koska suurin osa rannoista on vaaleaa kalkkikiveä tai kivikkoa. Lahden länsilaidalla on lisäksi luola, jonka perimätieto yhdistää [[Homeroksen]] Odysseiaan. Kyl nimi kertoo kaiken, kun vaan osaa lukea.
+KYSYMYS: Kerro lisää: Maltan
+
+### 235
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ramla Bay (merenkulku)
+Tietoruudun teksti: Ramla Bay, maltaksi Ir-Ramla l-Ħamra eli "punainen hiekka", on lahti Gozon koillisrannikolla Marsalfornin ja San Blasin lahtien välissä, lähimpänä kylänä Xagħra. Lahden hiekka on nimensä mukaisesti punertavaa, mikä tekee siitä poikkeuksellisen Maltan saarilla, joilla suurin osa rannoista on vaaleaa kalkkikiveä tai kivikkoa. Lahtea reunustavat hiekkadyynit ja jyrkät kalliot, ja sen länsilaidalla sijaitsee luola, jonka perimätieto yhdistää Homeroksen Odysseiaan ja nymfi Kalypsoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historian hetki: Hisarlık 1873 — kulta kaivannon seinämässä] toukokuu 1873 — Kaivannon seinämän juuresta, muurin alta, on tullut esiin kuparinen astia, ja sen sisältä alkaa nousta kultaa: diadeemeja, korvakoruja, nappeja, tuhansia pieniä kultaesineitä sekä hopeaa ja pronssia. Heinrich Schliemann on 51-vuotias, rikastunut kauppias, joka on tullut kummulle todistaakseen, että Homeroksen Troija oli totta, ja hän nimeää löydön saman tien Priamoksen aarteeksi. Oman kertomuksensa mukaan hän lähetti työmiehet tauolle ja kaivoi kullan esiin itse veitsellä, jottei kukaan näkisi; tutkijat ovat sittemmin epäilleet kertomusta, ja ne kaivajat, joiden käsien kautta löydöt kulkivat, jäivät hänen sankaritarinansa ulkopuolelle. Päiväkirjaan hän kirjoitti myös, että v…
+- [Turkki — maalehti / Historia: Yhdeksän kaupunkia päällekkäin] 1873 — Homeroksen Troijaa pidettiin pitkään pelkkänä taruna, kunnes Länsi-Turkin rannikolta kaivettiin esiin Hisarlıkin kumpu. Kummussa on yhdeksän kaupunkia päällekkäin: aina kun kaupunki tuhoutui, uusi rakennettiin raunioiden päälle, ja kumpu kasvoi kerros kerrokselta. Heinrich Schliemann aloitti kaivaukset 1870-luvulla ja kaivoi kummun läpi suuren kuilun. Vuonna 1873 hän löysi kultaesineitä, joita hän kutsui Priamoksen aarteeksi — mutta esineet olivat yli tuhat vuotta vanhempia kuin kerrottu sota. Kiireessä hän tuhosi juuri sen kerroksen, jota etsi.
+AIEMPI KYSYMYS: Mitä Ir-Ramla l-Ħamra tarkoittaa suomeksi?
+AIEMPI VASTAUS (Livia):
+Kato, nimessä on koko kuvaus valmiina. Maltankielinen nimi tarkoittaa suomeksi punaista hiekkaa, ja se viittaa suoraan lahden rantaan: [[Gozon]] koillisrannikolla sijaitsevan lahden hiekka on punertavaa, mikä on [[Maltan]] saarilla poikkeuksellista, koska suurin osa rannoista on vaaleaa kalkkikiveä tai kivikkoa. Lahden länsilaidalla on lisäksi luola, jonka perimätieto yhdistää [[Homeroksen]] Odysseiaan. Kyl nimi kertoo kaiken, kun vaan osaa lukea.
+KYSYMYS: Kerro lisää: Homeroksen
+
+### 236
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ramla Bay (merenkulku)
+Tietoruudun teksti: Ramla Bay, maltaksi Ir-Ramla l-Ħamra eli "punainen hiekka", on lahti Gozon koillisrannikolla Marsalfornin ja San Blasin lahtien välissä, lähimpänä kylänä Xagħra. Lahden hiekka on nimensä mukaisesti punertavaa, mikä tekee siitä poikkeuksellisen Maltan saarilla, joilla suurin osa rannoista on vaaleaa kalkkikiveä tai kivikkoa. Lahtea reunustavat hiekkadyynit ja jyrkät kalliot, ja sen länsilaidalla sijaitsee luola, jonka perimätieto yhdistää Homeroksen Odysseiaan ja nymfi Kalypsoon.
+AIEMPI KYSYMYS: Minkä myyttisen hahmon nimeä lahden luola kantaa?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Luolan perimätieto yhdistää nymfi [[Kalypsoon]], jonka Homeros kuvaa [[Odysseiassa]] Odysseuksen pidättäjänä hänen kotimatkallaan. Kyse on nimenomaan perimätiedosta eikä todistetusta asiasta, sillä Kalypson saaren paikasta on esitetty useita ehdotuksia, ja [[Gozo]] on yksi niistä. Ei se muuten huono paikka jäädä jumiin olisi.
+KYSYMYS: Kerro lisää: Kalypsoon
+
+### 237
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ramla Bay (merenkulku)
+Tietoruudun teksti: Ramla Bay, maltaksi Ir-Ramla l-Ħamra eli "punainen hiekka", on lahti Gozon koillisrannikolla Marsalfornin ja San Blasin lahtien välissä, lähimpänä kylänä Xagħra. Lahden hiekka on nimensä mukaisesti punertavaa, mikä tekee siitä poikkeuksellisen Maltan saarilla, joilla suurin osa rannoista on vaaleaa kalkkikiveä tai kivikkoa. Lahtea reunustavat hiekkadyynit ja jyrkät kalliot, ja sen länsilaidalla sijaitsee luola, jonka perimätieto yhdistää Homeroksen Odysseiaan ja nymfi Kalypsoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tarut ja sadut: Seireenit olivat lintuja, eivät merenneitoja] n. 480 eaa. — Odysseiassa noita Kirke varoittaa Odysseusta: seireenien laulua ei voi kuunnella ja jäädä henkiin. Miehistö tukkii korvansa mehiläisvahalla, ja Odysseus sidotaan mastoon, jotta hän kuulisi laulun mutta ei pääsisi hyppäämään mereen. Vanhimmissa kuvissa seireeni ei ole merenneito vaan lintu, jolla on naisen pää — sellaisia ne olivat kreikkalaisessa taiteessa jo 600-luvulla eaa. Merenneidon hahmon ne saivat vasta keskiajalla. Erään myöhemmän tarinan mukaan seireenit heittäytyivät mereen, kun laiva pääsi ohi.
+AIEMPI KYSYMYS: Minkä myyttisen hahmon nimeä lahden luola kantaa?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Luolan perimätieto yhdistää nymfi [[Kalypsoon]], jonka Homeros kuvaa [[Odysseiassa]] Odysseuksen pidättäjänä hänen kotimatkallaan. Kyse on nimenomaan perimätiedosta eikä todistetusta asiasta, sillä Kalypson saaren paikasta on esitetty useita ehdotuksia, ja [[Gozo]] on yksi niistä. Ei se muuten huono paikka jäädä jumiin olisi.
+KYSYMYS: Kerro lisää: Odysseiassa
+
+### 238
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ramla Bay (merenkulku)
+Tietoruudun teksti: Ramla Bay, maltaksi Ir-Ramla l-Ħamra eli "punainen hiekka", on lahti Gozon koillisrannikolla Marsalfornin ja San Blasin lahtien välissä, lähimpänä kylänä Xagħra. Lahden hiekka on nimensä mukaisesti punertavaa, mikä tekee siitä poikkeuksellisen Maltan saarilla, joilla suurin osa rannoista on vaaleaa kalkkikiveä tai kivikkoa. Lahtea reunustavat hiekkadyynit ja jyrkät kalliot, ja sen länsilaidalla sijaitsee luola, jonka perimätieto yhdistää Homeroksen Odysseiaan ja nymfi Kalypsoon.
+AIEMPI KYSYMYS: Minkä myyttisen hahmon nimeä lahden luola kantaa?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Luolan perimätieto yhdistää nymfi [[Kalypsoon]], jonka Homeros kuvaa [[Odysseiassa]] Odysseuksen pidättäjänä hänen kotimatkallaan. Kyse on nimenomaan perimätiedosta eikä todistetusta asiasta, sillä Kalypson saaren paikasta on esitetty useita ehdotuksia, ja [[Gozo]] on yksi niistä. Ei se muuten huono paikka jäädä jumiin olisi.
+KYSYMYS: Kerro lisää: Gozo
+
+### 239
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ramla Bay (merenkulku)
+Tietoruudun teksti: Ramla Bay, maltaksi Ir-Ramla l-Ħamra eli "punainen hiekka", on lahti Gozon koillisrannikolla Marsalfornin ja San Blasin lahtien välissä, lähimpänä kylänä Xagħra. Lahden hiekka on nimensä mukaisesti punertavaa, mikä tekee siitä poikkeuksellisen Maltan saarilla, joilla suurin osa rannoista on vaaleaa kalkkikiveä tai kivikkoa. Lahtea reunustavat hiekkadyynit ja jyrkät kalliot, ja sen länsilaidalla sijaitsee luola, jonka perimätieto yhdistää Homeroksen Odysseiaan ja nymfi Kalypsoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Saari, jolta Odysseus ei tahtonut lähteä] 2023 — Djerba on 514 neliökilometriä ja Pohjois-Afrikan suurin saari; vuoden 2014 laskennassa siellä asui 163 726 ihmistä. Saarta on pidetty lootuksensyöjien saarena, jonne Odysseus ajautui ja jossa miehistö unohti kotimatkan; kreikkalaisille se tunnettiin nimillä Lytos ja Meninx. Saaren juutalaisyhteisön El Ghriban synagoga on ollut yhtäjaksoisessa käytössä yli kaksituhatta vuotta, ja perimätiedon mukaan Jerusalemin temppelin tuhoutuessa paenneet papit toivat mukanaan oven ja kiviä, jotka muurattiin rakennukseen. Unesco otti koko saaren maailmanperintöluetteloon vuonna 2023.
+- [Kreikka — maalehti / Tarut ja sadut: Seireenit olivat lintuja, eivät merenneitoja] n. 480 eaa. — Odysseiassa noita Kirke varoittaa Odysseusta: seireenien laulua ei voi kuunnella ja jäädä henkiin. Miehistö tukkii korvansa mehiläisvahalla, ja Odysseus sidotaan mastoon, jotta hän kuulisi laulun mutta ei pääsisi hyppäämään mereen. Vanhimmissa kuvissa seireeni ei ole merenneito vaan lintu, jolla on naisen pää — sellaisia ne olivat kreikkalaisessa taiteessa jo 600-luvulla eaa. Merenneidon hahmon ne saivat vasta keskiajalla. Erään myöhemmän tarinan mukaan seireenit heittäytyivät mereen, kun laiva pääsi ohi.
+AIEMPI KYSYMYS: Kuka oli nymfi Kalypso Homeroksen Odysseiassa?
+AIEMPI VASTAUS (Livia):
+Ai se. Kalypso oli nymfi, joka asui Ogygian saarella ja piti [[Odysseusta]] luonaan useita vuosia sen jälkeen, kun tämän laiva oli tuhoutunut. Hän tarjosi Odysseukselle kuolemattomuutta, mutta tämä halusi silti kotiin [[Ithakaan]], ja jumalten päätöksen jälkeen Kalypso päästi hänet lähtemään. Tarina tunnetaan [[Homeroksen]] Odysseiasta, ja [[Ramla Bayn]] luola on perimätiedossa liitetty siihen. Olipas siinä ikävä kotiin.
+KYSYMYS: Kerro lisää: Odysseusta
+
+### 240
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ramla Bay (merenkulku)
+Tietoruudun teksti: Ramla Bay, maltaksi Ir-Ramla l-Ħamra eli "punainen hiekka", on lahti Gozon koillisrannikolla Marsalfornin ja San Blasin lahtien välissä, lähimpänä kylänä Xagħra. Lahden hiekka on nimensä mukaisesti punertavaa, mikä tekee siitä poikkeuksellisen Maltan saarilla, joilla suurin osa rannoista on vaaleaa kalkkikiveä tai kivikkoa. Lahtea reunustavat hiekkadyynit ja jyrkät kalliot, ja sen länsilaidalla sijaitsee luola, jonka perimätieto yhdistää Homeroksen Odysseiaan ja nymfi Kalypsoon.
+AIEMPI KYSYMYS: Kuka oli nymfi Kalypso Homeroksen Odysseiassa?
+AIEMPI VASTAUS (Livia):
+Ai se. Kalypso oli nymfi, joka asui Ogygian saarella ja piti [[Odysseusta]] luonaan useita vuosia sen jälkeen, kun tämän laiva oli tuhoutunut. Hän tarjosi Odysseukselle kuolemattomuutta, mutta tämä halusi silti kotiin [[Ithakaan]], ja jumalten päätöksen jälkeen Kalypso päästi hänet lähtemään. Tarina tunnetaan [[Homeroksen]] Odysseiasta, ja [[Ramla Bayn]] luola on perimätiedossa liitetty siihen. Olipas siinä ikävä kotiin.
+KYSYMYS: Kerro lisää: Ithakaan

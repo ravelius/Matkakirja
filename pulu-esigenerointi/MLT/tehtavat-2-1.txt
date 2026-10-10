@@ -1,0 +1,1141 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdinan vanha normannikatedraali (historia)
+Tietoruudun teksti: Mdinan normanniaikainen katedraali rakennettiin 1200-luvulla. Sisilian maanjäristys vaurioitti sitä pahoin vuonna 1693, minkä jälkeen se purettiin ja korvattiin vuosina 1696–1705 nykyisellä barokkikatedraalilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Saari, jonka vuokra oli yksi haukka] 1530 — Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian varakuninkaalle. Suurmestari Philippe Villiers de L'Isle-Adam purjehti Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan uudelleen Pyhän Angelon linnakkeeksi.
+- [Malta — maalehti / Arki: Vanhin maltankielinen runo] n. 1470-luku — Maltan kieli on ainoa semiittinen kieli, jota kirjoitetaan latinalaisilla aakkosilla. Sen juuret ovat Sisilian arabiassa, mutta sanastoon on tullut paljon italiaa ja sisilian kieltä. Vanhin tunnettu maltankielinen kirjallinen teksti on Il-Kantilena, Pietru Caxaron runo. Se on kirjoitettu 1400-luvulla, luultavasti 1470-luvulla, mutta löydettiin vasta vuonna 1966. Runo säilytetään Vallettan notaariarkistossa, ja huhtikuussa 2025 se liitettiin Unescon Muisti maailmassa -luetteloon.
+AIEMPI KYSYMYS: Miltä Mdinan vanha normannikatedraali näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä tiedän vain osan. Mdinan normanniaikainen katedraali rakennettiin 1200-luvulla, mutta sen tarkasta ulkoasusta en ole varma, joten en kuvaile julkisivua tai sisätiloja arvaamalla. Varmaa on, että [[Sisilian maanjäristyksessä]] vuonna 1693 se vaurioitui pahoin, minkä jälkeen se purettiin ja tilalle rakennettiin vuosina 1696–1705 nykyinen [[barokkikatedraali]]. Olis ollu kiva nähdä se katolta.
+KYSYMYS: Kerro lisää: Sisilian maanjäristyksessä
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdinan vanha normannikatedraali (historia)
+Tietoruudun teksti: Mdinan normanniaikainen katedraali rakennettiin 1200-luvulla. Sisilian maanjäristys vaurioitti sitä pahoin vuonna 1693, minkä jälkeen se purettiin ja korvattiin vuosina 1696–1705 nykyisellä barokkikatedraalilla.
+AIEMPI KYSYMYS: Miltä Mdinan vanha normannikatedraali näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä tiedän vain osan. Mdinan normanniaikainen katedraali rakennettiin 1200-luvulla, mutta sen tarkasta ulkoasusta en ole varma, joten en kuvaile julkisivua tai sisätiloja arvaamalla. Varmaa on, että [[Sisilian maanjäristyksessä]] vuonna 1693 se vaurioitui pahoin, minkä jälkeen se purettiin ja tilalle rakennettiin vuosina 1696–1705 nykyinen [[barokkikatedraali]]. Olis ollu kiva nähdä se katolta.
+KYSYMYS: Kerro lisää: barokkikatedraali
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdinan vanha normannikatedraali (historia)
+Tietoruudun teksti: Mdinan normanniaikainen katedraali rakennettiin 1200-luvulla. Sisilian maanjäristys vaurioitti sitä pahoin vuonna 1693, minkä jälkeen se purettiin ja korvattiin vuosina 1696–1705 nykyisellä barokkikatedraalilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Saari, jonka vuokra oli yksi haukka] 1530 — Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian varakuninkaalle. Suurmestari Philippe Villiers de L'Isle-Adam purjehti Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan uudelleen Pyhän Angelon linnakkeeksi.
+- [Malta — maalehti / Arki: Vanhin maltankielinen runo] n. 1470-luku — Maltan kieli on ainoa semiittinen kieli, jota kirjoitetaan latinalaisilla aakkosilla. Sen juuret ovat Sisilian arabiassa, mutta sanastoon on tullut paljon italiaa ja sisilian kieltä. Vanhin tunnettu maltankielinen kirjallinen teksti on Il-Kantilena, Pietru Caxaron runo. Se on kirjoitettu 1400-luvulla, luultavasti 1470-luvulla, mutta löydettiin vasta vuonna 1966. Runo säilytetään Vallettan notaariarkistossa, ja huhtikuussa 2025 se liitettiin Unescon Muisti maailmassa -luetteloon.
+AIEMPI KYSYMYS: Miksi Mdinan vanha normannikatedraali katosi?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Vanha katedraali ei kadonnut sattumalta vaan [[Sisilian maanjäristyksen]] takia: järistys vuonna 1693 vaurioitti sitä pahoin, ja sen jälkeen rakennus purettiin. Tilalle rakennettiin vuosina 1696–1705 nykyinen [[barokkikatedraali]], joka seisoo yhä [[Mdinassa]]. Onpas siit jo pitkä aika.
+KYSYMYS: Kerro lisää: Sisilian maanjäristyksen
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdinan vanha normannikatedraali (historia)
+Tietoruudun teksti: Mdinan normanniaikainen katedraali rakennettiin 1200-luvulla. Sisilian maanjäristys vaurioitti sitä pahoin vuonna 1693, minkä jälkeen se purettiin ja korvattiin vuosina 1696–1705 nykyisellä barokkikatedraalilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Hiljainen kaupunki] n. 700-luku eaa. — Foinikialaiset perustivat Mdinan paikalle asutuksen noin 700-luvulla eaa., ja roomalaisten aikana se sai nimen Melita. Nykyinen nimi tulee arabian sanasta madīnah, kaupunki. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes Pyhän Johanneksen ritarikunta asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua Hiljaiseksi kaupungiksi. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle.
+AIEMPI KYSYMYS: Miksi Mdinan vanha normannikatedraali katosi?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Vanha katedraali ei kadonnut sattumalta vaan [[Sisilian maanjäristyksen]] takia: järistys vuonna 1693 vaurioitti sitä pahoin, ja sen jälkeen rakennus purettiin. Tilalle rakennettiin vuosina 1696–1705 nykyinen [[barokkikatedraali]], joka seisoo yhä [[Mdinassa]]. Onpas siit jo pitkä aika.
+KYSYMYS: Kerro lisää: Mdinassa
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdinan vanha normannikatedraali (historia)
+Tietoruudun teksti: Mdinan normanniaikainen katedraali rakennettiin 1200-luvulla. Sisilian maanjäristys vaurioitti sitä pahoin vuonna 1693, minkä jälkeen se purettiin ja korvattiin vuosina 1696–1705 nykyisellä barokkikatedraalilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Caracas — kohdekartta / Kohdekartta: Keltainen talo] 1874 Kuvernööri Juan de Pimentelin noin vuonna 1578 piirtämässä Caracasin kartassa tontilla on vaatimaton savi- ja pystypuurakenteinen talo. Vuonna 1689 kaupunginvaltuusto osti osan tontista Antonio de Tovarin perillisiltä uutta vankilaa varten, ja vankila avattiin 1696. Eteläosa siirtyi valtuustolle 1704 maanvaihdossa, ja sille valmistui joulukuussa 1750 valtuuston oma talo. Juuri sen parvekkeelta kaniikki José Cortés de Madariaga antoi 19. huhtikuuta 1810 caracasilaisille merkin, jolla kenraalikapteeni Vicente Emparán julistettiin syrjäytetyksi — Venezuelan itsenäistymisen ensimmäinen askel. Vuoden 1812 maanjäristys jätti talon raunioiksi vuosikymmeniksi, ja korjaus kesti neljä vuotta. Vu…
+- [Kathmandu — kohdekartta / Kohdekartta: Kathmandun Durbar-aukio] nykyiset rakennukset 1500–1700-luvuilta Durbar tarkoittaa palatsien paikkaa, ja niitä on laaksossa kolme. Kathmandun aukiolla seisovat neljän kuningaskunnan — Kantipurin, Lalitpurin, Bhaktapurin ja Kirtipurin — perintörakennukset, ja aukio jakautuu kahteen nelikulmioon. Ulommassa ovat Kasthamandap, Kumari Ghar ja Shivan ja Parvatin temppeli, sisemmässä Hanuman Dhokan palatsi. Temppeleitä on kaikkiaan viisikymmentä, ja useimmat ovat 1500-luvun Malla-kuninkaiden aikaisia. Hanuman Dhoka on nimetty portin vieressä istuvan Hanuman-patsaan mukaan, joka on vuodelta 1672; dhoka on nepaliksi ovi. Palatsi kattaa viisi eekkeriä, ja sen vanhin osa on 1500-luvun puolivälistä. Kuningas Pratap Malla laaje…
+AIEMPI KYSYMYS: Milloin Mdinan nykyinen barokkikatedraali rakennettiin?
+AIEMPI VASTAUS (Livia):
+Ai tota. Annas ku mietin. Nykyinen katedraali rakennettiin vuosina 1696–1705, eli pian sen jälkeen, kun vanha normannikatedraali oli vaurioitunut pahoin vuoden 1693 [[maanjäristyksessä]] ja purettu. Rakennustyö kesti siis noin yhdeksän vuotta, ja tyyliltään uusi kirkko on [[barokkia]]. Ei paha vauhti, jos kyyhky saa arvioida.
+KYSYMYS: Kerro lisää: maanjäristyksessä
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdinan vanha normannikatedraali (historia)
+Tietoruudun teksti: Mdinan normanniaikainen katedraali rakennettiin 1200-luvulla. Sisilian maanjäristys vaurioitti sitä pahoin vuonna 1693, minkä jälkeen se purettiin ja korvattiin vuosina 1696–1705 nykyisellä barokkikatedraalilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Rakennukset] Linnoitukselta näyttävä kirkko kätkee sisäänsä kultaista barokkia, ja pikkukylän kupoli kilpaili aikanaan Rooman Pantheonin kanssa. Maltan rakennuksissa näkyy sekä ritarien että kyläläisten ylpeys.
+AIEMPI KYSYMYS: Milloin Mdinan nykyinen barokkikatedraali rakennettiin?
+AIEMPI VASTAUS (Livia):
+Ai tota. Annas ku mietin. Nykyinen katedraali rakennettiin vuosina 1696–1705, eli pian sen jälkeen, kun vanha normannikatedraali oli vaurioitunut pahoin vuoden 1693 [[maanjäristyksessä]] ja purettu. Rakennustyö kesti siis noin yhdeksän vuotta, ja tyyliltään uusi kirkko on [[barokkia]]. Ei paha vauhti, jos kyyhky saa arvioida.
+KYSYMYS: Kerro lisää: barokkia
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdinan vanha normannikatedraali (historia)
+Tietoruudun teksti: Mdinan normanniaikainen katedraali rakennettiin 1200-luvulla. Sisilian maanjäristys vaurioitti sitä pahoin vuonna 1693, minkä jälkeen se purettiin ja korvattiin vuosina 1696–1705 nykyisellä barokkikatedraalilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Johanneksen ko-katedraali] 1572–1577 (rakennus), 1608 (Caravaggion maalaus) Arkkitehti Girolamo Cassar suunnitteli kirkon ritarikunnan omaksi konventtikirkoksi vuosina 1572–1577, ja ulkoa se on yhä vaatimaton: paksut kalkkikivimuurit ja kaksi kapeaa tornia näyttävät pikemmin linnoitukselta kuin katedraalilta. Sisällä on toisin — 1660-luvulla Mattia Preti maalasi koko katon ja seinät kultaisiksi barokkiveistoksiksi, ja lattia on yhtenäinen mosaiikki kahdeksastasadasta ritarin hautalaatasta. Caravaggio pakeni Roomasta 1607 tapettuaan miehen kaksintaistelussa, ja Maltalla hänet otettiin heinäkuussa 1608 ritarikunnan jäseneksi. Kiitokseksi hän maalasi oratorioon "Johannes Kastajan mestauksen" — ainoan teoksensa, jonka hä…
+- [Malta — maalehti / Historia: Hiljainen kaupunki] n. 700-luku eaa. — Foinikialaiset perustivat Mdinan paikalle asutuksen noin 700-luvulla eaa., ja roomalaisten aikana se sai nimen Melita. Nykyinen nimi tulee arabian sanasta madīnah, kaupunki. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes Pyhän Johanneksen ritarikunta asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua Hiljaiseksi kaupungiksi. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle.
+AIEMPI KYSYMYS: Miksi Mdinaa kutsutaan Hiljaiseksi kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kun [[Pyhän Johanneksen ritarikunta]] asettui vuonna 1530 [[Birguun]], Mdina menetti asemansa Maltan pääkaupunkina. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua Hiljaiseksi kaupungiksi. Muurien sisällä asui vuonna 2024 vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle. Ylhäältä se näyttää kyl rauhalliselta.
+KYSYMYS: Kerro lisää: Pyhän Johanneksen ritarikunta
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdinan vanha normannikatedraali (historia)
+Tietoruudun teksti: Mdinan normanniaikainen katedraali rakennettiin 1200-luvulla. Sisilian maanjäristys vaurioitti sitä pahoin vuonna 1693, minkä jälkeen se purettiin ja korvattiin vuosina 1696–1705 nykyisellä barokkikatedraalilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Hiljainen kaupunki] n. 700-luku eaa. — Foinikialaiset perustivat Mdinan paikalle asutuksen noin 700-luvulla eaa., ja roomalaisten aikana se sai nimen Melita. Nykyinen nimi tulee arabian sanasta madīnah, kaupunki. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes Pyhän Johanneksen ritarikunta asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua Hiljaiseksi kaupungiksi. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle.
+AIEMPI KYSYMYS: Miksi Mdinaa kutsutaan Hiljaiseksi kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kun [[Pyhän Johanneksen ritarikunta]] asettui vuonna 1530 [[Birguun]], Mdina menetti asemansa Maltan pääkaupunkina. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua Hiljaiseksi kaupungiksi. Muurien sisällä asui vuonna 2024 vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle. Ylhäältä se näyttää kyl rauhalliselta.
+KYSYMYS: Kerro lisää: Birguun
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdinan vanha normannikatedraali (historia)
+Tietoruudun teksti: Mdinan normanniaikainen katedraali rakennettiin 1200-luvulla. Sisilian maanjäristys vaurioitti sitä pahoin vuonna 1693, minkä jälkeen se purettiin ja korvattiin vuosina 1696–1705 nykyisellä barokkikatedraalilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Arki: Vene jonka keulassa on silmät] n. 1900-luvun alku — Marsaxlokkin satamassa värikkäät luzzu-kalastusveneet keinuvat rivissä, ja jokaisen keulassa on kaksi silmää. Silmien arvellaan olevan perua muinaisten foinikialaisten tavasta, ja niiden sanotaan suojelevan kalastajia merellä. Luzzu kehittyi 1900-luvun alussa italialaisesta gozzo-veneestä. Rungon yläkaista, viiksi eli mustaċċ, kertoi ennen omistajan kotipaikan, ja musta viiksi ilmaisi surua perheessä. Uusia luzzuja ei enää rakenneta, mutta muutama sata on yhä käytössä.
+AIEMPI KYSYMYS: Mistä Mdinan nimi on peräisin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nimi Mdina tulee arabian sanasta madīnah, joka tarkoittaa kaupunkia. Aiemmin paikalla oli [[foinikialaisten]] noin 700-luvulla eaa. perustama asutus, ja roomalaisten aikana se tunnettiin nimellä [[Melita]]. Nykyinen nimi on siis hyvin yksinkertainen: kaupunki on kaupunki. Aika vaatimaton nimi, jos minulta kysytään.
+KYSYMYS: Kerro lisää: foinikialaisten
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdinan vanha normannikatedraali (historia)
+Tietoruudun teksti: Mdinan normanniaikainen katedraali rakennettiin 1200-luvulla. Sisilian maanjäristys vaurioitti sitä pahoin vuonna 1693, minkä jälkeen se purettiin ja korvattiin vuosina 1696–1705 nykyisellä barokkikatedraalilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Hiljainen kaupunki] n. 700-luku eaa. — Foinikialaiset perustivat Mdinan paikalle asutuksen noin 700-luvulla eaa., ja roomalaisten aikana se sai nimen Melita. Nykyinen nimi tulee arabian sanasta madīnah, kaupunki. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes Pyhän Johanneksen ritarikunta asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua Hiljaiseksi kaupungiksi. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle.
+AIEMPI KYSYMYS: Mistä Mdinan nimi on peräisin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nimi Mdina tulee arabian sanasta madīnah, joka tarkoittaa kaupunkia. Aiemmin paikalla oli [[foinikialaisten]] noin 700-luvulla eaa. perustama asutus, ja roomalaisten aikana se tunnettiin nimellä [[Melita]]. Nykyinen nimi on siis hyvin yksinkertainen: kaupunki on kaupunki. Aika vaatimaton nimi, jos minulta kysytään.
+KYSYMYS: Kerro lisää: Melita
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vallettan Royal Opera House (historia)
+Tietoruudun teksti: Arkkitehti Edward Middleton Barryn suunnittelema Royal Opera House valmistui Vallettaan 1866 ja oli kaupungin arkkitehtoninen ylpeys. Saksalainen pommi-isku tuhosi teatterin 7.4.1942, ja rauniot seisoivat vuosikymmeniä ennen kuin Renzo Piano muotoili ne avoimeksi ulkoilmateatteriksi, Pjazza Teatru Rjaliksi (2013).
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alpit — kaupunkilehti / Historia: Munkit, jotka kasvattivat pelastuskoiria] Pyhän Bernhardin luostarihospitsi perustettiin 1000-luvulla yli 2 400 metrin korkeuteen auttamaan matkalaisia, jotka ylittivät vaarallisen solan Sveitsin ja Italian välillä. 1600–1700-luvuilla munkit alkoivat kasvattaa vahvoja, paksuturkkisia koiria etsimään lumimyrskyihin eksyneitä matkalaisia — rotu tunnetaan nykyään Bernhardinkoirana. Kuuluisin koirista, Barry, pelasti perimätiedon mukaan yli neljäkymmentä ihmistä 1800-luvun alussa ennen kuolemaansa 1814. Hospitsi toimii yhä matkailijoiden yösijana solan yli, ja munkkien koirankasvatusperinne jatkuu läheisessä erillisessä kasvattamossa.
+AIEMPI KYSYMYS: Miltä Vallettan Royal Opera House näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Mmm— tost en oo ihan varma. Arkkitehti [[Edward Middleton Barry]] suunnitteli Royal Opera Housen, ja se valmistui [[Vallettaan]] vuonna 1866 kaupungin arkkitehtoniseksi ylpeydeksi. Tarkkaa ulkoasua tai sisustusta en osaa kuvata varmasti, joten jätän arvailut pois. Saksalainen pommi-isku tuhosi teatterin 7.4.1942, ja nykyisin paikalla on [[Renzo Pianon]] suunnittelema avoin ulkoilmateatteri. Onneksi sinne on tullut uutta elämää.
+KYSYMYS: Kerro lisää: Edward Middleton Barry
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vallettan Royal Opera House (historia)
+Tietoruudun teksti: Arkkitehti Edward Middleton Barryn suunnittelema Royal Opera House valmistui Vallettaan 1866 ja oli kaupungin arkkitehtoninen ylpeys. Saksalainen pommi-isku tuhosi teatterin 7.4.1942, ja rauniot seisoivat vuosikymmeniä ennen kuin Renzo Piano muotoili ne avoimeksi ulkoilmateatteriksi, Pjazza Teatru Rjaliksi (2013).
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Rakennukset: Teatteri kymmenessä kuukaudessa] 1731 — Suurmestari António Manoel de Vilhena tilasi Vallettaan julkisen teatterin vuonna 1731 ja maksoi sen itse, jotta ihmisillä olisi kunniallista huvia. Rakennus valmistui kuulemma vain kymmenessä kuukaudessa. Ensimmäinen näytelmä, Merope, esitettiin 9. tammikuuta 1732, ja näyttelijöinä olivat ritarit itse. Salissa on 534 paikkaa, ja kolme parvekekerrosta on tehty kokonaan puusta ja koristeltu lehtikullalla. Teatteria pidetään Euroopan kolmanneksi vanhimpana yhä toimivana teatterina.
+AIEMPI KYSYMYS: Miltä Vallettan Royal Opera House näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Mmm— tost en oo ihan varma. Arkkitehti [[Edward Middleton Barry]] suunnitteli Royal Opera Housen, ja se valmistui [[Vallettaan]] vuonna 1866 kaupungin arkkitehtoniseksi ylpeydeksi. Tarkkaa ulkoasua tai sisustusta en osaa kuvata varmasti, joten jätän arvailut pois. Saksalainen pommi-isku tuhosi teatterin 7.4.1942, ja nykyisin paikalla on [[Renzo Pianon]] suunnittelema avoin ulkoilmateatteri. Onneksi sinne on tullut uutta elämää.
+KYSYMYS: Kerro lisää: Vallettaan
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vallettan Royal Opera House (historia)
+Tietoruudun teksti: Arkkitehti Edward Middleton Barryn suunnittelema Royal Opera House valmistui Vallettaan 1866 ja oli kaupungin arkkitehtoninen ylpeys. Saksalainen pommi-isku tuhosi teatterin 7.4.1942, ja rauniot seisoivat vuosikymmeniä ennen kuin Renzo Piano muotoili ne avoimeksi ulkoilmateatteriksi, Pjazza Teatru Rjaliksi (2013).
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chicago — kohdekartta / Kohdekartta: Taideinstituutti] 1879 Alkusysäys tuli 1866, kun 35 taiteilijaa perusti Dearborn Streetin ateljeehen Chicago Academy of Designin eurooppalaisten taideakatemioiden malliin. Koulu piti olla ilmainen ja sillä oma galleria; opetus alkoi 1868, ja 1870 akatemia sai oman viisikerroksisen kivitalon. Vuoden 1871 suurpalo tuhosi sen ja jätti akatemian velkoihin. Vuoteen 1878 mennessä velkaa oli 10 000 dollaria, ja 1879 osa jäsenistä perusti uuden yhdistyksen, joka osti konkurssiin menneen edeltäjänsä omaisuuden huutokaupasta. Nykyinen nimi otettiin käyttöön 1882. Nykyinen talo Michigan Avenuen varrella rakennettiin vuoden 1893 maailmannäyttelyä varten, ja museo muutti siihen näyttelyn jälkeen. Sisäänkäyntiä vartioi ka…
+- [Houston — kohdekartta / Kohdekartta: Menilin kokoelma] 1987 Menilin kokoelma on John ja Dominique de Menilin keräämä taidekokoelma ja sitä varten rakennettu museo. Sitä on verrattu Yhdysvaltain suuriin yksityismuseoihin: New Yorkin Frickiin, Bostonin Gardneriin ja Washingtonin Phillipsiin. Museon perustana on Menil Foundation, joka perustettiin 1954 edistämään ymmärrystä ja kulttuuria ennen kaikkea taiteen kautta. Renzo Pianon suunnittelema rakennus avattiin yleisölle kesäkuussa 1987. Kokoelmassa on museon oman ilmoituksen mukaan yli 25 000 esinettä, mutta esillä on kerrallaan vain noin viisi prosenttia. Se oli Dominique de Menilin tietoinen valinta: hän halusi teosten vaihtuvan jatkuvasti, jotta kävijän kokemus olisi aina uusi. Kokoelma ulottu…
+AIEMPI KYSYMYS: Miltä Vallettan Royal Opera House näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Mmm— tost en oo ihan varma. Arkkitehti [[Edward Middleton Barry]] suunnitteli Royal Opera Housen, ja se valmistui [[Vallettaan]] vuonna 1866 kaupungin arkkitehtoniseksi ylpeydeksi. Tarkkaa ulkoasua tai sisustusta en osaa kuvata varmasti, joten jätän arvailut pois. Saksalainen pommi-isku tuhosi teatterin 7.4.1942, ja nykyisin paikalla on [[Renzo Pianon]] suunnittelema avoin ulkoilmateatteri. Onneksi sinne on tullut uutta elämää.
+KYSYMYS: Kerro lisää: Renzo Pianon
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vallettan Royal Opera House (historia)
+Tietoruudun teksti: Arkkitehti Edward Middleton Barryn suunnittelema Royal Opera House valmistui Vallettaan 1866 ja oli kaupungin arkkitehtoninen ylpeys. Saksalainen pommi-isku tuhosi teatterin 7.4.1942, ja rauniot seisoivat vuosikymmeniä ennen kuin Renzo Piano muotoili ne avoimeksi ulkoilmateatteriksi, Pjazza Teatru Rjaliksi (2013).
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Tretjakovin galleria] 1856-1893 Moskovalainen kauppias Pavel Tretjakov aloitti taidekokoelmansa vuonna 1856 ostamalla kaksi venäläistä maalausta. Vuosikymmenten aikana hän osti satoja teoksia lisää, kunnes kokoelmassa oli jo lähes 2000 taideteosta - yli 1300 maalausta, satoja piirustuksia ja muutama veistos. Elokuussa 1892 Tretjakov lahjoitti koko kokoelmansa Moskovan kaupungille, ja galleria avattiin yleisölle 15. elokuuta 1893. Nykyään museossa on esillä yli 130 000 teosta, muun muassa Andrei Rublevin kuuluisa ikoni Kolminaisuus. Museon satumaisen näköisen punatiilisen julkisivun suunnitteli taiteilija Viktor Vasnetsov vuosina 1902-1904, ja se muistuttaa suoraan venäläisestä kansantarinasta poimittua linnaa. T…
+- [Malta — maalehti / Ruoka: Joulun hunajarengas] perinteisesti joulu — Qagħaq tal-għasel on rengas, jonka sisällä on tumma täyte. Taikinaan tehdään viiltoja, joista täyte pursuaa esiin. Täyte valmistetaan perinteisesti hunajasta, melassista, aniksesta, kanelista ja neilikasta, ja osa lisää mukaan kaakaota. Herkkua leivottiin alun perin jouluksi, mutta siitä tuli niin suosittu, että sitä tehdään ympäri vuoden, eivätkä monet enää tiedä sen joulutaustaa. Rengas symboloi ikuista onnea, ja ulos valuva täyte kertoo, että hyvää riittää yllin kyllin.
+AIEMPI KYSYMYS: Miksi Vallettan Royal Opera House on nykyään raunioina?
+AIEMPI VASTAUS (Livia):
+No niin. Tää on vähän surullinen juttu. Royal Opera House ei ole nykyään enää oikeastaan raunioina, vaikka rauniot seisoivat paikallaan vuosikymmeniä: saksalainen pommi-isku tuhosi teatterin 7.4.1942 [[toisen maailmansodan]] aikana. Myöhemmin [[Renzo Piano]] muotoili rauniot avoimeksi ulkoilmateatteriksi, [[Pjazza Teatru Rjaliksi]], ja se valmistui vuonna 2013. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: toisen maailmansodan
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vallettan Royal Opera House (historia)
+Tietoruudun teksti: Arkkitehti Edward Middleton Barryn suunnittelema Royal Opera House valmistui Vallettaan 1866 ja oli kaupungin arkkitehtoninen ylpeys. Saksalainen pommi-isku tuhosi teatterin 7.4.1942, ja rauniot seisoivat vuosikymmeniä ennen kuin Renzo Piano muotoili ne avoimeksi ulkoilmateatteriksi, Pjazza Teatru Rjaliksi (2013).
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [NCL — maalehti / Rakennukset: Puiset kaaret jäljittelevät majaa] 1998 — Italialainen arkkitehti Renzo Piano suunnitteli Jean-Marie Tjibaoun kulttuurikeskuksen kymmenen kaarevaa, eri kokoista puurakennelmaa, jotka mukailevat kanakien perinteisten majojen muotoa mutta jäävät tarkoituksella keskeneräisen näköisiksi. Keskus avattiin Nouméan niemellä kesäkuussa 1998 ja nimettiin kanakijohtaja Jean-Marie Tjibaoun mukaan. Piano työskenteli tiiviisti paikallisten kanakien kanssa, jotta rakennus yhdistäisi perinteistä puuta ja kiveä nykyaikaiseen lasiin, alumiiniin ja teräkseen. Kartion muotoiset rungot ja säleiköt toimivat myös passiivisena ilmastointina: ne ohjaavat merituulen rakennusten läpi ilman koneellista jäähdytystä.
+AIEMPI KYSYMYS: Miksi Vallettan Royal Opera House on nykyään raunioina?
+AIEMPI VASTAUS (Livia):
+No niin. Tää on vähän surullinen juttu. Royal Opera House ei ole nykyään enää oikeastaan raunioina, vaikka rauniot seisoivat paikallaan vuosikymmeniä: saksalainen pommi-isku tuhosi teatterin 7.4.1942 [[toisen maailmansodan]] aikana. Myöhemmin [[Renzo Piano]] muotoili rauniot avoimeksi ulkoilmateatteriksi, [[Pjazza Teatru Rjaliksi]], ja se valmistui vuonna 2013. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Renzo Piano
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vallettan Royal Opera House (historia)
+Tietoruudun teksti: Arkkitehti Edward Middleton Barryn suunnittelema Royal Opera House valmistui Vallettaan 1866 ja oli kaupungin arkkitehtoninen ylpeys. Saksalainen pommi-isku tuhosi teatterin 7.4.1942, ja rauniot seisoivat vuosikymmeniä ennen kuin Renzo Piano muotoili ne avoimeksi ulkoilmateatteriksi, Pjazza Teatru Rjaliksi (2013).
+AIEMPI KYSYMYS: Miksi Vallettan Royal Opera House on nykyään raunioina?
+AIEMPI VASTAUS (Livia):
+No niin. Tää on vähän surullinen juttu. Royal Opera House ei ole nykyään enää oikeastaan raunioina, vaikka rauniot seisoivat paikallaan vuosikymmeniä: saksalainen pommi-isku tuhosi teatterin 7.4.1942 [[toisen maailmansodan]] aikana. Myöhemmin [[Renzo Piano]] muotoili rauniot avoimeksi ulkoilmateatteriksi, [[Pjazza Teatru Rjaliksi]], ja se valmistui vuonna 2013. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Pjazza Teatru Rjaliksi
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vallettan Royal Opera House (historia)
+Tietoruudun teksti: Arkkitehti Edward Middleton Barryn suunnittelema Royal Opera House valmistui Vallettaan 1866 ja oli kaupungin arkkitehtoninen ylpeys. Saksalainen pommi-isku tuhosi teatterin 7.4.1942, ja rauniot seisoivat vuosikymmeniä ennen kuin Renzo Piano muotoili ne avoimeksi ulkoilmateatteriksi, Pjazza Teatru Rjaliksi (2013).
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Arki: Parveke josta näkee kaiken] 1600-luku — Maltalaisten talojen julkisivuja koristavat suljetut puuparvekkeet, gallariji. Ne polveutuvat arabialaisista mashrabiya-parvekkeista, mutta yleistyivät vasta 1600-luvulla. Vanhin tunnettu esitys on Vallettan suurmestarin palatsin kulmaparveke noin vuodelta 1675. Vuonna 1679 eräs vieras kirjoitti, että suurmestari käveli lasitetulla parvekkeella mielellään, koska sieltä näki aukioiden tapahtumat itse näkymättä. Parvekkeita kannattavia kivikonsoleja sanotaan saljaturiksi, ja lasiläpät ovat purtelleja.
+- [Malta — maalehti / Arki: Vanhin maltankielinen runo] n. 1470-luku — Maltan kieli on ainoa semiittinen kieli, jota kirjoitetaan latinalaisilla aakkosilla. Sen juuret ovat Sisilian arabiassa, mutta sanastoon on tullut paljon italiaa ja sisilian kieltä. Vanhin tunnettu maltankielinen kirjallinen teksti on Il-Kantilena, Pietru Caxaron runo. Se on kirjoitettu 1400-luvulla, luultavasti 1470-luvulla, mutta löydettiin vasta vuonna 1966. Runo säilytetään Vallettan notaariarkistossa, ja huhtikuussa 2025 se liitettiin Unescon Muisti maailmassa -luetteloon.
+AIEMPI KYSYMYS: Mikä on Pjazza Teatru Rjal?
+AIEMPI VASTAUS (Livia):
+Ai se. Pjazza Teatru Rjal on [[Vallettan]] avoin ulkoilmateatteri, jonka [[Renzo Piano]] muotoili vuonna 2013 entisen Royal Opera Housen raunioista. Alkuperäisen oopperatalon tuhosi saksalainen pommi-isku 7.4.1942, ja rauniot seisoivat paikallaan vuosikymmeniä. Kauniisti tehty, sanon minä.
+KYSYMYS: Kerro lisää: Vallettan
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valletta (historia)
+Tietoruudun teksti: Valletta on Maltan pääkaupunki Grand Harbourin ja Marsamxett-sataman välissä; asukkaita on 5 157 (2021). Se on Euroopan eteläisin pääkaupunki ja pinta-alaltaan, 0,61 neliökilometriä, EU:n toiseksi pienin. Kaupungin 1500-luvun rakennukset rakennutti Johanniittaritarikunta, ja se on nimetty ranskalaisen Jean Parisot de Valetten mukaan, joka puolusti saarta osmaneja vastaan suuressa piirityksessä; peruskivi laskettiin 28. maaliskuuta 1566. Kaupunki on luonteeltaan barokki, ja sen 320 muistomerkkiä mahtuvat 0,55 neliökilometrin alueelle; Unesco hyväksyi sen maailmanperintökohteeksi vuonna 1980. Britit ottivat kaupungin haltuunsa syyskuussa 1800, ja linnoitusten purkamista ehdotettiin 1800-luvun alussa sekä uudelleen 1870- ja 1880-luvuilla, mutta linnoitukset ovat säilyneet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+AIEMPI KYSYMYS: Minä päivänä Vallettan peruskivi laskettiin vuonna 1566?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Peruskivi laskettiin 28. maaliskuuta 1566. Sen laski suurmestari [[Jean de Valette]] Sciberras-niemelle, kun [[Pyhän Johanneksen ritarikunta]] halusi suuren piirityksen jälkeen rakentaa linnoitetun pääkaupungin. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Jean de Valette
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valletta (historia)
+Tietoruudun teksti: Valletta on Maltan pääkaupunki Grand Harbourin ja Marsamxett-sataman välissä; asukkaita on 5 157 (2021). Se on Euroopan eteläisin pääkaupunki ja pinta-alaltaan, 0,61 neliökilometriä, EU:n toiseksi pienin. Kaupungin 1500-luvun rakennukset rakennutti Johanniittaritarikunta, ja se on nimetty ranskalaisen Jean Parisot de Valetten mukaan, joka puolusti saarta osmaneja vastaan suuressa piirityksessä; peruskivi laskettiin 28. maaliskuuta 1566. Kaupunki on luonteeltaan barokki, ja sen 320 muistomerkkiä mahtuvat 0,55 neliökilometrin alueelle; Unesco hyväksyi sen maailmanperintökohteeksi vuonna 1980. Britit ottivat kaupungin haltuunsa syyskuussa 1800, ja linnoitusten purkamista ehdotettiin 1800-luvun alussa sekä uudelleen 1870- ja 1880-luvuilla, mutta linnoitukset ovat säilyneet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Johanneksen ko-katedraali] 1572–1577 (rakennus), 1608 (Caravaggion maalaus) Arkkitehti Girolamo Cassar suunnitteli kirkon ritarikunnan omaksi konventtikirkoksi vuosina 1572–1577, ja ulkoa se on yhä vaatimaton: paksut kalkkikivimuurit ja kaksi kapeaa tornia näyttävät pikemmin linnoitukselta kuin katedraalilta. Sisällä on toisin — 1660-luvulla Mattia Preti maalasi koko katon ja seinät kultaisiksi barokkiveistoksiksi, ja lattia on yhtenäinen mosaiikki kahdeksastasadasta ritarin hautalaatasta. Caravaggio pakeni Roomasta 1607 tapettuaan miehen kaksintaistelussa, ja Maltalla hänet otettiin heinäkuussa 1608 ritarikunnan jäseneksi. Kiitokseksi hän maalasi oratorioon "Johannes Kastajan mestauksen" — ainoan teoksensa, jonka hä…
+- [Malta — maalehti / Historia: Hiljainen kaupunki] n. 700-luku eaa. — Foinikialaiset perustivat Mdinan paikalle asutuksen noin 700-luvulla eaa., ja roomalaisten aikana se sai nimen Melita. Nykyinen nimi tulee arabian sanasta madīnah, kaupunki. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes Pyhän Johanneksen ritarikunta asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua Hiljaiseksi kaupungiksi. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle.
+AIEMPI KYSYMYS: Minä päivänä Vallettan peruskivi laskettiin vuonna 1566?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Peruskivi laskettiin 28. maaliskuuta 1566. Sen laski suurmestari [[Jean de Valette]] Sciberras-niemelle, kun [[Pyhän Johanneksen ritarikunta]] halusi suuren piirityksen jälkeen rakentaa linnoitetun pääkaupungin. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Pyhän Johanneksen ritarikunta
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valletta (historia)
+Tietoruudun teksti: Valletta on Maltan pääkaupunki Grand Harbourin ja Marsamxett-sataman välissä; asukkaita on 5 157 (2021). Se on Euroopan eteläisin pääkaupunki ja pinta-alaltaan, 0,61 neliökilometriä, EU:n toiseksi pienin. Kaupungin 1500-luvun rakennukset rakennutti Johanniittaritarikunta, ja se on nimetty ranskalaisen Jean Parisot de Valetten mukaan, joka puolusti saarta osmaneja vastaan suuressa piirityksessä; peruskivi laskettiin 28. maaliskuuta 1566. Kaupunki on luonteeltaan barokki, ja sen 320 muistomerkkiä mahtuvat 0,55 neliökilometrin alueelle; Unesco hyväksyi sen maailmanperintökohteeksi vuonna 1980. Britit ottivat kaupungin haltuunsa syyskuussa 1800, ja linnoitusten purkamista ehdotettiin 1800-luvun alussa sekä uudelleen 1870- ja 1880-luvuilla, mutta linnoitukset ovat säilyneet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Ruoka: Joulun hunajarengas] perinteisesti joulu — Qagħaq tal-għasel on rengas, jonka sisällä on tumma täyte. Taikinaan tehdään viiltoja, joista täyte pursuaa esiin. Täyte valmistetaan perinteisesti hunajasta, melassista, aniksesta, kanelista ja neilikasta, ja osa lisää mukaan kaakaota. Herkkua leivottiin alun perin jouluksi, mutta siitä tuli niin suosittu, että sitä tehdään ympäri vuoden, eivätkä monet enää tiedä sen joulutaustaa. Rengas symboloi ikuista onnea, ja ulos valuva täyte kertoo, että hyvää riittää yllin kyllin.
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Minä vuonna Unesco hyväksyi Vallettan maailmanperintökohteeksi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tän minä muistan. [[Unesco]] hyväksyi Vallettan maailmanperintökohteeksi vuonna 1980. Kaupunki on luonteeltaan [[barokki]], ja sen 320 muistomerkkiä mahtuvat 0,55 neliökilometrin alueelle. Pieni kaupunki, iso lista.
+KYSYMYS: Kerro lisää: Unesco
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valletta (historia)
+Tietoruudun teksti: Valletta on Maltan pääkaupunki Grand Harbourin ja Marsamxett-sataman välissä; asukkaita on 5 157 (2021). Se on Euroopan eteläisin pääkaupunki ja pinta-alaltaan, 0,61 neliökilometriä, EU:n toiseksi pienin. Kaupungin 1500-luvun rakennukset rakennutti Johanniittaritarikunta, ja se on nimetty ranskalaisen Jean Parisot de Valetten mukaan, joka puolusti saarta osmaneja vastaan suuressa piirityksessä; peruskivi laskettiin 28. maaliskuuta 1566. Kaupunki on luonteeltaan barokki, ja sen 320 muistomerkkiä mahtuvat 0,55 neliökilometrin alueelle; Unesco hyväksyi sen maailmanperintökohteeksi vuonna 1980. Britit ottivat kaupungin haltuunsa syyskuussa 1800, ja linnoitusten purkamista ehdotettiin 1800-luvun alussa sekä uudelleen 1870- ja 1880-luvuilla, mutta linnoitukset ovat säilyneet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Paraguay — maalehti / Kuvataide: Barokki, jonka veistivät guaranit] 1712–1767 — Reduktioiden kirkkoihin syntyi oma tyylinsä, jota kutsutaan hispano-guaranilaiseksi barokiksi: eurooppalaiset mallikuvat annettiin guaranilaisille veistäjille, jotka toteuttivat ne omalla kädenjäljellään punaiseen hiekkakiveen ja puuhun. Trinidadin kirkon oviaukkoja kiertävät kasviaiheiset friisit ja soittavat enkelit. San Ignacio Guazú, joka perustettiin 29. joulukuuta 1609 päällikkö Arapysandún maille, tunnetaan tämän barokin pääkaupunkina, ja sen hiippakuntamuseossa on neljä salillista puisia pyhimysveistoksia.
+AIEMPI KYSYMYS: Minä vuonna Unesco hyväksyi Vallettan maailmanperintökohteeksi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tän minä muistan. [[Unesco]] hyväksyi Vallettan maailmanperintökohteeksi vuonna 1980. Kaupunki on luonteeltaan [[barokki]], ja sen 320 muistomerkkiä mahtuvat 0,55 neliökilometrin alueelle. Pieni kaupunki, iso lista.
+KYSYMYS: Kerro lisää: barokki
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valletta (historia)
+Tietoruudun teksti: Valletta on Maltan pääkaupunki Grand Harbourin ja Marsamxett-sataman välissä; asukkaita on 5 157 (2021). Se on Euroopan eteläisin pääkaupunki ja pinta-alaltaan, 0,61 neliökilometriä, EU:n toiseksi pienin. Kaupungin 1500-luvun rakennukset rakennutti Johanniittaritarikunta, ja se on nimetty ranskalaisen Jean Parisot de Valetten mukaan, joka puolusti saarta osmaneja vastaan suuressa piirityksessä; peruskivi laskettiin 28. maaliskuuta 1566. Kaupunki on luonteeltaan barokki, ja sen 320 muistomerkkiä mahtuvat 0,55 neliökilometrin alueelle; Unesco hyväksyi sen maailmanperintökohteeksi vuonna 1980. Britit ottivat kaupungin haltuunsa syyskuussa 1800, ja linnoitusten purkamista ehdotettiin 1800-luvun alussa sekä uudelleen 1870- ja 1880-luvuilla, mutta linnoitukset ovat säilyneet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+AIEMPI KYSYMYS: Kenen mukaan Valletta on nimetty?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Valletta on nimetty ranskalaisen [[Jean Parisot de Valetten]] mukaan. Hän puolusti saarta osmaneja vastaan [[suuressa piirityksessä]], ja kaupungin peruskivi laskettiin 28. maaliskuuta 1566. Aika hyvä nimikkokaupunki kyl.
+KYSYMYS: Kerro lisää: Jean Parisot de Valetten
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valletta (historia)
+Tietoruudun teksti: Valletta on Maltan pääkaupunki Grand Harbourin ja Marsamxett-sataman välissä; asukkaita on 5 157 (2021). Se on Euroopan eteläisin pääkaupunki ja pinta-alaltaan, 0,61 neliökilometriä, EU:n toiseksi pienin. Kaupungin 1500-luvun rakennukset rakennutti Johanniittaritarikunta, ja se on nimetty ranskalaisen Jean Parisot de Valetten mukaan, joka puolusti saarta osmaneja vastaan suuressa piirityksessä; peruskivi laskettiin 28. maaliskuuta 1566. Kaupunki on luonteeltaan barokki, ja sen 320 muistomerkkiä mahtuvat 0,55 neliökilometrin alueelle; Unesco hyväksyi sen maailmanperintökohteeksi vuonna 1980. Britit ottivat kaupungin haltuunsa syyskuussa 1800, ja linnoitusten purkamista ehdotettiin 1800-luvun alussa sekä uudelleen 1870- ja 1880-luvuilla, mutta linnoitukset ovat säilyneet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kohdekartta / Kohdekartta: Darghutin moskeija] n. 1560 Ottomaanit valtasivat Tripolin vuonna 1551 johanniittaritareilta, ja ensimmäinen käskynhaltija Darghut korjasi ja rakensi kaupungin linnoitukset uudelleen. Vanhakaupunki sai silloin sen viisikulmaisen muodon, joka sillä on yhä. Noin vuonna 1560 Darghut rakennutti muurien sisään oman moskeijansa ja valitsi paikaksi ritarien kirkon tontin. Perimätieto kertoo, ettei kirkkorakennusta purettu vaan se otettiin uuden rakennuksen sisään. Darghut kaatui vuonna 1565 Maltan suuressa piirityksessä. Hänen ruumiinsa tuotiin Tripoliin ja haudattiin tähän moskeijaan, ja haudat ovat yhä toisen mihrabin vieressä. Iskander Pasha teetti 1600-luvun alussa muutoksia: minareetti muotoiltiin uudelleen vuon…
+- [Sierra Leone — kaupunkilehti / Vapautettujen kaupunki: Kapteeni, joka rahoitti oman laivansa matkan] Paul Cuffee oli varakas afroamerikkalainen kveekari ja laivanvarustaja Massachusettsista, joka uskoi vapautettujen mustien tulevaisuuden olevan Afrikassa. Vuonna 1815 hän rahoitti omista varoistaan matkan, jolla hänen laivansa Traveller kuljetti 38 vapaata siirtolaista Yhdysvalloista Freetowniin — ensimmäinen tällainen yksityisrahoitteinen paluumuutto. Cuffee kuoli jo 1817 eikä nähnyt hankettaan jatkuvan suuressa mittakaavassa, mutta hänen esimerkkinsä innoitti myöhempiä siirtolaisliikkeitä, jotka toivat Freetowniin lisää vapaita afroamerikkalaisia asukkaita vuosikymmenten kuluessa.
+AIEMPI KYSYMYS: Kenen mukaan Valletta on nimetty?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Valletta on nimetty ranskalaisen [[Jean Parisot de Valetten]] mukaan. Hän puolusti saarta osmaneja vastaan [[suuressa piirityksessä]], ja kaupungin peruskivi laskettiin 28. maaliskuuta 1566. Aika hyvä nimikkokaupunki kyl.
+KYSYMYS: Kerro lisää: suuressa piirityksessä
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valletta (historia)
+Tietoruudun teksti: Valletta on Maltan pääkaupunki Grand Harbourin ja Marsamxett-sataman välissä; asukkaita on 5 157 (2021). Se on Euroopan eteläisin pääkaupunki ja pinta-alaltaan, 0,61 neliökilometriä, EU:n toiseksi pienin. Kaupungin 1500-luvun rakennukset rakennutti Johanniittaritarikunta, ja se on nimetty ranskalaisen Jean Parisot de Valetten mukaan, joka puolusti saarta osmaneja vastaan suuressa piirityksessä; peruskivi laskettiin 28. maaliskuuta 1566. Kaupunki on luonteeltaan barokki, ja sen 320 muistomerkkiä mahtuvat 0,55 neliökilometrin alueelle; Unesco hyväksyi sen maailmanperintökohteeksi vuonna 1980. Britit ottivat kaupungin haltuunsa syyskuussa 1800, ja linnoitusten purkamista ehdotettiin 1800-luvun alussa sekä uudelleen 1870- ja 1880-luvuilla, mutta linnoitukset ovat säilyneet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+AIEMPI KYSYMYS: Kuka suunnitteli Vallettan ruutukaavan?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: viivainta tarvittiin. Suunnittelijaksi paavi lähetti [[Francesco Laparellin]], joka hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti [[Fort St. Elmoa]]. Laparellin kuoltua työtä johti maltalainen [[Girolamo Cassar]]. Ruutukaava kyl miellyttää lintua.
+KYSYMYS: Kerro lisää: Francesco Laparellin
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valletta (historia)
+Tietoruudun teksti: Valletta on Maltan pääkaupunki Grand Harbourin ja Marsamxett-sataman välissä; asukkaita on 5 157 (2021). Se on Euroopan eteläisin pääkaupunki ja pinta-alaltaan, 0,61 neliökilometriä, EU:n toiseksi pienin. Kaupungin 1500-luvun rakennukset rakennutti Johanniittaritarikunta, ja se on nimetty ranskalaisen Jean Parisot de Valetten mukaan, joka puolusti saarta osmaneja vastaan suuressa piirityksessä; peruskivi laskettiin 28. maaliskuuta 1566. Kaupunki on luonteeltaan barokki, ja sen 320 muistomerkkiä mahtuvat 0,55 neliökilometrin alueelle; Unesco hyväksyi sen maailmanperintökohteeksi vuonna 1980. Britit ottivat kaupungin haltuunsa syyskuussa 1800, ja linnoitusten purkamista ehdotettiin 1800-luvun alussa sekä uudelleen 1870- ja 1880-luvuilla, mutta linnoitukset ovat säilyneet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+AIEMPI KYSYMYS: Kuka suunnitteli Vallettan ruutukaavan?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: viivainta tarvittiin. Suunnittelijaksi paavi lähetti [[Francesco Laparellin]], joka hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti [[Fort St. Elmoa]]. Laparellin kuoltua työtä johti maltalainen [[Girolamo Cassar]]. Ruutukaava kyl miellyttää lintua.
+KYSYMYS: Kerro lisää: Fort St. Elmoa
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valletta (historia)
+Tietoruudun teksti: Valletta on Maltan pääkaupunki Grand Harbourin ja Marsamxett-sataman välissä; asukkaita on 5 157 (2021). Se on Euroopan eteläisin pääkaupunki ja pinta-alaltaan, 0,61 neliökilometriä, EU:n toiseksi pienin. Kaupungin 1500-luvun rakennukset rakennutti Johanniittaritarikunta, ja se on nimetty ranskalaisen Jean Parisot de Valetten mukaan, joka puolusti saarta osmaneja vastaan suuressa piirityksessä; peruskivi laskettiin 28. maaliskuuta 1566. Kaupunki on luonteeltaan barokki, ja sen 320 muistomerkkiä mahtuvat 0,55 neliökilometrin alueelle; Unesco hyväksyi sen maailmanperintökohteeksi vuonna 1980. Britit ottivat kaupungin haltuunsa syyskuussa 1800, ja linnoitusten purkamista ehdotettiin 1800-luvun alussa sekä uudelleen 1870- ja 1880-luvuilla, mutta linnoitukset ovat säilyneet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+AIEMPI KYSYMYS: Kuka suunnitteli Vallettan ruutukaavan?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: viivainta tarvittiin. Suunnittelijaksi paavi lähetti [[Francesco Laparellin]], joka hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti [[Fort St. Elmoa]]. Laparellin kuoltua työtä johti maltalainen [[Girolamo Cassar]]. Ruutukaava kyl miellyttää lintua.
+KYSYMYS: Kerro lisää: Girolamo Cassar
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valletta (historia)
+Tietoruudun teksti: Valletta on Maltan pääkaupunki Grand Harbourin ja Marsamxett-sataman välissä; asukkaita on 5 157 (2021). Se on Euroopan eteläisin pääkaupunki ja pinta-alaltaan, 0,61 neliökilometriä, EU:n toiseksi pienin. Kaupungin 1500-luvun rakennukset rakennutti Johanniittaritarikunta, ja se on nimetty ranskalaisen Jean Parisot de Valetten mukaan, joka puolusti saarta osmaneja vastaan suuressa piirityksessä; peruskivi laskettiin 28. maaliskuuta 1566. Kaupunki on luonteeltaan barokki, ja sen 320 muistomerkkiä mahtuvat 0,55 neliökilometrin alueelle; Unesco hyväksyi sen maailmanperintökohteeksi vuonna 1980. Britit ottivat kaupungin haltuunsa syyskuussa 1800, ja linnoitusten purkamista ehdotettiin 1800-luvun alussa sekä uudelleen 1870- ja 1880-luvuilla, mutta linnoitukset ovat säilyneet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Arki: Parveke josta näkee kaiken] 1600-luku — Maltalaisten talojen julkisivuja koristavat suljetut puuparvekkeet, gallariji. Ne polveutuvat arabialaisista mashrabiya-parvekkeista, mutta yleistyivät vasta 1600-luvulla. Vanhin tunnettu esitys on Vallettan suurmestarin palatsin kulmaparveke noin vuodelta 1675. Vuonna 1679 eräs vieras kirjoitti, että suurmestari käveli lasitetulla parvekkeella mielellään, koska sieltä näki aukioiden tapahtumat itse näkymättä. Parvekkeita kannattavia kivikonsoleja sanotaan saljaturiksi, ja lasiläpät ovat purtelleja.
+AIEMPI KYSYMYS: Mitä gallariji tarkoittaa Maltan taloissa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Gallariji ovat maltalaisten talojen julkisivuja koristavia suljettuja puuparvekkeita. Ne polveutuvat arabialaisista [[mashrabiya-parvekkeista]], mutta yleistyivät vasta 1600-luvulla. Vanhin tunnettu esitys on Vallettan [[suurmestarin palatsin]] kulmaparveke noin vuodelta 1675. Sellainen parveke olis kyl minun makuuni.
+KYSYMYS: Kerro lisää: mashrabiya-parvekkeista
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valletta (historia)
+Tietoruudun teksti: Valletta on Maltan pääkaupunki Grand Harbourin ja Marsamxett-sataman välissä; asukkaita on 5 157 (2021). Se on Euroopan eteläisin pääkaupunki ja pinta-alaltaan, 0,61 neliökilometriä, EU:n toiseksi pienin. Kaupungin 1500-luvun rakennukset rakennutti Johanniittaritarikunta, ja se on nimetty ranskalaisen Jean Parisot de Valetten mukaan, joka puolusti saarta osmaneja vastaan suuressa piirityksessä; peruskivi laskettiin 28. maaliskuuta 1566. Kaupunki on luonteeltaan barokki, ja sen 320 muistomerkkiä mahtuvat 0,55 neliökilometrin alueelle; Unesco hyväksyi sen maailmanperintökohteeksi vuonna 1980. Britit ottivat kaupungin haltuunsa syyskuussa 1800, ja linnoitusten purkamista ehdotettiin 1800-luvun alussa sekä uudelleen 1870- ja 1880-luvuilla, mutta linnoitukset ovat säilyneet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Arki: Parveke josta näkee kaiken] 1600-luku — Maltalaisten talojen julkisivuja koristavat suljetut puuparvekkeet, gallariji. Ne polveutuvat arabialaisista mashrabiya-parvekkeista, mutta yleistyivät vasta 1600-luvulla. Vanhin tunnettu esitys on Vallettan suurmestarin palatsin kulmaparveke noin vuodelta 1675. Vuonna 1679 eräs vieras kirjoitti, että suurmestari käveli lasitetulla parvekkeella mielellään, koska sieltä näki aukioiden tapahtumat itse näkymättä. Parvekkeita kannattavia kivikonsoleja sanotaan saljaturiksi, ja lasiläpät ovat purtelleja.
+AIEMPI KYSYMYS: Mitä gallariji tarkoittaa Maltan taloissa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Gallariji ovat maltalaisten talojen julkisivuja koristavia suljettuja puuparvekkeita. Ne polveutuvat arabialaisista [[mashrabiya-parvekkeista]], mutta yleistyivät vasta 1600-luvulla. Vanhin tunnettu esitys on Vallettan [[suurmestarin palatsin]] kulmaparveke noin vuodelta 1675. Sellainen parveke olis kyl minun makuuni.
+KYSYMYS: Kerro lisää: suurmestarin palatsin
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdina (historia)
+Tietoruudun teksti: Mdina on linnoitettu kaupunki Maltan länsiosassa, ja se oli saaren pääkaupunki antiikista keskiajalle; kaupunki ei ole koskaan levinnyt muurien ulkopuolelle, ja asukkaita on 242. Foinikialaiset perustivat paikalle 700-luvulla eaa. siirtokunnan nimeltä Ann, ja roomalaiset nimesivät sen Melitaksi; nimi Mdina tulee arabian sanasta madīnah eli kaupunki. Kaupunki oli Maltan pääkaupunki, kunnes Johanniittaritarikunta saapui vuonna 1530 ja teki pääkaupungiksi Birgun; sen jälkeen Mdina taantui, vaikka 1700-luvun alussa siihen rakennettiin useita barokkirakennuksia. Kaupunki on pysynyt Maltan aatelin ja kirkollisten viranomaisten keskuksena, mutta se ei ole koskaan saavuttanut takaisin vuotta 1530 edeltänyttä merkitystään, minkä vuoksi sitä kutsutaan Hiljaiseksi kaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+AIEMPI KYSYMYS: Mikä on Mdinan lempinimi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Mdinan lempinimi on Hiljainen kaupunki. Kun [[Johanniittaritarikunta]] siirsi pääkaupungin vuonna 1530 [[Birguun]], Mdina taantui eikä ole sittemmin saavuttanut takaisin entistä merkitystään. Kaupunki on pysynyt Maltan aatelin ja kirkollisten viranomaisten keskuksena. Hiljaista, mut pullantuoksu varmaan leviää.
+KYSYMYS: Kerro lisää: Johanniittaritarikunta
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdina (historia)
+Tietoruudun teksti: Mdina on linnoitettu kaupunki Maltan länsiosassa, ja se oli saaren pääkaupunki antiikista keskiajalle; kaupunki ei ole koskaan levinnyt muurien ulkopuolelle, ja asukkaita on 242. Foinikialaiset perustivat paikalle 700-luvulla eaa. siirtokunnan nimeltä Ann, ja roomalaiset nimesivät sen Melitaksi; nimi Mdina tulee arabian sanasta madīnah eli kaupunki. Kaupunki oli Maltan pääkaupunki, kunnes Johanniittaritarikunta saapui vuonna 1530 ja teki pääkaupungiksi Birgun; sen jälkeen Mdina taantui, vaikka 1700-luvun alussa siihen rakennettiin useita barokkirakennuksia. Kaupunki on pysynyt Maltan aatelin ja kirkollisten viranomaisten keskuksena, mutta se ei ole koskaan saavuttanut takaisin vuotta 1530 edeltänyttä merkitystään, minkä vuoksi sitä kutsutaan Hiljaiseksi kaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Hiljainen kaupunki] n. 700-luku eaa. — Foinikialaiset perustivat Mdinan paikalle asutuksen noin 700-luvulla eaa., ja roomalaisten aikana se sai nimen Melita. Nykyinen nimi tulee arabian sanasta madīnah, kaupunki. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes Pyhän Johanneksen ritarikunta asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua Hiljaiseksi kaupungiksi. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle.
+AIEMPI KYSYMYS: Mikä on Mdinan lempinimi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Mdinan lempinimi on Hiljainen kaupunki. Kun [[Johanniittaritarikunta]] siirsi pääkaupungin vuonna 1530 [[Birguun]], Mdina taantui eikä ole sittemmin saavuttanut takaisin entistä merkitystään. Kaupunki on pysynyt Maltan aatelin ja kirkollisten viranomaisten keskuksena. Hiljaista, mut pullantuoksu varmaan leviää.
+KYSYMYS: Kerro lisää: Birguun
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdina (historia)
+Tietoruudun teksti: Mdina on linnoitettu kaupunki Maltan länsiosassa, ja se oli saaren pääkaupunki antiikista keskiajalle; kaupunki ei ole koskaan levinnyt muurien ulkopuolelle, ja asukkaita on 242. Foinikialaiset perustivat paikalle 700-luvulla eaa. siirtokunnan nimeltä Ann, ja roomalaiset nimesivät sen Melitaksi; nimi Mdina tulee arabian sanasta madīnah eli kaupunki. Kaupunki oli Maltan pääkaupunki, kunnes Johanniittaritarikunta saapui vuonna 1530 ja teki pääkaupungiksi Birgun; sen jälkeen Mdina taantui, vaikka 1700-luvun alussa siihen rakennettiin useita barokkirakennuksia. Kaupunki on pysynyt Maltan aatelin ja kirkollisten viranomaisten keskuksena, mutta se ei ole koskaan saavuttanut takaisin vuotta 1530 edeltänyttä merkitystään, minkä vuoksi sitä kutsutaan Hiljaiseksi kaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kaupunkilehti / Historian hetki: Valletta 1565 — purjeet horisontissa] 7.9.1565 — Puolustaja nojaa muurin ampuma-aukkoon, kun toinen tarttuu hänen olkapäähänsä ja osoittaa merelle — silmät ovat liian väsyneet neljän kuukauden valvomisesta uskoakseen ensin sitä, mitä näkevät. Purjeet horisontissa eivät ole uusi osmanien laivue vaan sisilialainen apulaivasto, jota Don García de Toledo on kerännyt Messinasta kuukausia. Yli kahdeksantuhatta miestä nousee maihin Mellieħan lahdessa 7. syyskuuta, ja tieto kulkee muurilta muurille nopeammin kuin kukaan ehtii huutaa sitä ääneen. Ottomaanien komentaja Mustafa Pasha, jonka joukot ovat menettäneet paljon miehiä ja suurimman osan kesästä yhteen linnakkeeseen, ei enää usko voittoon uuden armeijan edessä. Muutaman päivän kul…
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+- [Valletta — kaupunkilehti / Valletta] Kalkkikivestä veistetty linnoituskaupunki kahden sataman välissä — koko vanhakaupunki on ruutukaavaa, jonka ritarikunta piirsi suoraksi jo vuonna 1566.
+AIEMPI KYSYMYS: Minä vuonna Johanniittaritarikunta teki Birgusta pääkaupungin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Johanniittaritarikunta]] saapui Maltalle ja teki Birgusta pääkaupungin vuonna 1530. Sitä ennen pääkaupunkina oli Mdina. Vuonna 1571 pääkaupungiksi tuli uusi [[Valletta]], jonka rakentaminen oli aloitettu vuonna 1566. Paljon tuli muuttoa niemelle.
+KYSYMYS: Kerro lisää: Valletta
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdina (historia)
+Tietoruudun teksti: Mdina on linnoitettu kaupunki Maltan länsiosassa, ja se oli saaren pääkaupunki antiikista keskiajalle; kaupunki ei ole koskaan levinnyt muurien ulkopuolelle, ja asukkaita on 242. Foinikialaiset perustivat paikalle 700-luvulla eaa. siirtokunnan nimeltä Ann, ja roomalaiset nimesivät sen Melitaksi; nimi Mdina tulee arabian sanasta madīnah eli kaupunki. Kaupunki oli Maltan pääkaupunki, kunnes Johanniittaritarikunta saapui vuonna 1530 ja teki pääkaupungiksi Birgun; sen jälkeen Mdina taantui, vaikka 1700-luvun alussa siihen rakennettiin useita barokkirakennuksia. Kaupunki on pysynyt Maltan aatelin ja kirkollisten viranomaisten keskuksena, mutta se ei ole koskaan saavuttanut takaisin vuotta 1530 edeltänyttä merkitystään, minkä vuoksi sitä kutsutaan Hiljaiseksi kaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Hiljainen kaupunki] n. 700-luku eaa. — Foinikialaiset perustivat Mdinan paikalle asutuksen noin 700-luvulla eaa., ja roomalaisten aikana se sai nimen Melita. Nykyinen nimi tulee arabian sanasta madīnah, kaupunki. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes Pyhän Johanneksen ritarikunta asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua Hiljaiseksi kaupungiksi. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle.
+AIEMPI KYSYMYS: Mikä oli Mdinan nimi roomalaisaikana?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Roomalaiset nimesivät kaupungin [[Melitaksi]]. Sitä ennen paikalla oli [[foinikialaisten]] noin 700-luvulla eaa. perustama siirtokunta nimeltä Ann. Nimi ehti vaihtua monta kertaa, vaikka muurit pysyivät.
+KYSYMYS: Kerro lisää: Melitaksi
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdina (historia)
+Tietoruudun teksti: Mdina on linnoitettu kaupunki Maltan länsiosassa, ja se oli saaren pääkaupunki antiikista keskiajalle; kaupunki ei ole koskaan levinnyt muurien ulkopuolelle, ja asukkaita on 242. Foinikialaiset perustivat paikalle 700-luvulla eaa. siirtokunnan nimeltä Ann, ja roomalaiset nimesivät sen Melitaksi; nimi Mdina tulee arabian sanasta madīnah eli kaupunki. Kaupunki oli Maltan pääkaupunki, kunnes Johanniittaritarikunta saapui vuonna 1530 ja teki pääkaupungiksi Birgun; sen jälkeen Mdina taantui, vaikka 1700-luvun alussa siihen rakennettiin useita barokkirakennuksia. Kaupunki on pysynyt Maltan aatelin ja kirkollisten viranomaisten keskuksena, mutta se ei ole koskaan saavuttanut takaisin vuotta 1530 edeltänyttä merkitystään, minkä vuoksi sitä kutsutaan Hiljaiseksi kaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Arki: Vene jonka keulassa on silmät] n. 1900-luvun alku — Marsaxlokkin satamassa värikkäät luzzu-kalastusveneet keinuvat rivissä, ja jokaisen keulassa on kaksi silmää. Silmien arvellaan olevan perua muinaisten foinikialaisten tavasta, ja niiden sanotaan suojelevan kalastajia merellä. Luzzu kehittyi 1900-luvun alussa italialaisesta gozzo-veneestä. Rungon yläkaista, viiksi eli mustaċċ, kertoi ennen omistajan kotipaikan, ja musta viiksi ilmaisi surua perheessä. Uusia luzzuja ei enää rakenneta, mutta muutama sata on yhä käytössä.
+AIEMPI KYSYMYS: Mikä oli Mdinan nimi roomalaisaikana?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Roomalaiset nimesivät kaupungin [[Melitaksi]]. Sitä ennen paikalla oli [[foinikialaisten]] noin 700-luvulla eaa. perustama siirtokunta nimeltä Ann. Nimi ehti vaihtua monta kertaa, vaikka muurit pysyivät.
+KYSYMYS: Kerro lisää: foinikialaisten
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdina (historia)
+Tietoruudun teksti: Mdina on linnoitettu kaupunki Maltan länsiosassa, ja se oli saaren pääkaupunki antiikista keskiajalle; kaupunki ei ole koskaan levinnyt muurien ulkopuolelle, ja asukkaita on 242. Foinikialaiset perustivat paikalle 700-luvulla eaa. siirtokunnan nimeltä Ann, ja roomalaiset nimesivät sen Melitaksi; nimi Mdina tulee arabian sanasta madīnah eli kaupunki. Kaupunki oli Maltan pääkaupunki, kunnes Johanniittaritarikunta saapui vuonna 1530 ja teki pääkaupungiksi Birgun; sen jälkeen Mdina taantui, vaikka 1700-luvun alussa siihen rakennettiin useita barokkirakennuksia. Kaupunki on pysynyt Maltan aatelin ja kirkollisten viranomaisten keskuksena, mutta se ei ole koskaan saavuttanut takaisin vuotta 1530 edeltänyttä merkitystään, minkä vuoksi sitä kutsutaan Hiljaiseksi kaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Hiljainen kaupunki] n. 700-luku eaa. — Foinikialaiset perustivat Mdinan paikalle asutuksen noin 700-luvulla eaa., ja roomalaisten aikana se sai nimen Melita. Nykyinen nimi tulee arabian sanasta madīnah, kaupunki. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes Pyhän Johanneksen ritarikunta asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua Hiljaiseksi kaupungiksi. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle.
+AIEMPI KYSYMYS: Kuinka monta ihmistä Mdinan muurien sisällä asuu?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Vuonna 2024 muurien sisällä asui 242 ihmistä. Kaupunki ei ole koskaan levinnyt muurien ulkopuolelle, ja omaisuus siirtyy yhä sukupolvelta toiselle. Luku selittää hyvin, miksi kaupunkia kutsutaan [[Hiljaiseksi kaupungiksi]], ja myös sen, että [[Maltan]] aatelin perinteet elävät siellä. Pieni kylä, jos minulta kysytään.
+KYSYMYS: Kerro lisää: Hiljaiseksi kaupungiksi
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdina (historia)
+Tietoruudun teksti: Mdina on linnoitettu kaupunki Maltan länsiosassa, ja se oli saaren pääkaupunki antiikista keskiajalle; kaupunki ei ole koskaan levinnyt muurien ulkopuolelle, ja asukkaita on 242. Foinikialaiset perustivat paikalle 700-luvulla eaa. siirtokunnan nimeltä Ann, ja roomalaiset nimesivät sen Melitaksi; nimi Mdina tulee arabian sanasta madīnah eli kaupunki. Kaupunki oli Maltan pääkaupunki, kunnes Johanniittaritarikunta saapui vuonna 1530 ja teki pääkaupungiksi Birgun; sen jälkeen Mdina taantui, vaikka 1700-luvun alussa siihen rakennettiin useita barokkirakennuksia. Kaupunki on pysynyt Maltan aatelin ja kirkollisten viranomaisten keskuksena, mutta se ei ole koskaan saavuttanut takaisin vuotta 1530 edeltänyttä merkitystään, minkä vuoksi sitä kutsutaan Hiljaiseksi kaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+AIEMPI KYSYMYS: Kuinka monta ihmistä Mdinan muurien sisällä asuu?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Vuonna 2024 muurien sisällä asui 242 ihmistä. Kaupunki ei ole koskaan levinnyt muurien ulkopuolelle, ja omaisuus siirtyy yhä sukupolvelta toiselle. Luku selittää hyvin, miksi kaupunkia kutsutaan [[Hiljaiseksi kaupungiksi]], ja myös sen, että [[Maltan]] aatelin perinteet elävät siellä. Pieni kylä, jos minulta kysytään.
+KYSYMYS: Kerro lisää: Maltan
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdina (historia)
+Tietoruudun teksti: Mdina on linnoitettu kaupunki Maltan länsiosassa, ja se oli saaren pääkaupunki antiikista keskiajalle; kaupunki ei ole koskaan levinnyt muurien ulkopuolelle, ja asukkaita on 242. Foinikialaiset perustivat paikalle 700-luvulla eaa. siirtokunnan nimeltä Ann, ja roomalaiset nimesivät sen Melitaksi; nimi Mdina tulee arabian sanasta madīnah eli kaupunki. Kaupunki oli Maltan pääkaupunki, kunnes Johanniittaritarikunta saapui vuonna 1530 ja teki pääkaupungiksi Birgun; sen jälkeen Mdina taantui, vaikka 1700-luvun alussa siihen rakennettiin useita barokkirakennuksia. Kaupunki on pysynyt Maltan aatelin ja kirkollisten viranomaisten keskuksena, mutta se ei ole koskaan saavuttanut takaisin vuotta 1530 edeltänyttä merkitystään, minkä vuoksi sitä kutsutaan Hiljaiseksi kaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Johanneksen ko-katedraali] 1572–1577 (rakennus), 1608 (Caravaggion maalaus) Arkkitehti Girolamo Cassar suunnitteli kirkon ritarikunnan omaksi konventtikirkoksi vuosina 1572–1577, ja ulkoa se on yhä vaatimaton: paksut kalkkikivimuurit ja kaksi kapeaa tornia näyttävät pikemmin linnoitukselta kuin katedraalilta. Sisällä on toisin — 1660-luvulla Mattia Preti maalasi koko katon ja seinät kultaisiksi barokkiveistoksiksi, ja lattia on yhtenäinen mosaiikki kahdeksastasadasta ritarin hautalaatasta. Caravaggio pakeni Roomasta 1607 tapettuaan miehen kaksintaistelussa, ja Maltalla hänet otettiin heinäkuussa 1608 ritarikunnan jäseneksi. Kiitokseksi hän maalasi oratorioon "Johannes Kastajan mestauksen" — ainoan teoksensa, jonka hä…
+- [Malta — maalehti / Historia: Hiljainen kaupunki] n. 700-luku eaa. — Foinikialaiset perustivat Mdinan paikalle asutuksen noin 700-luvulla eaa., ja roomalaisten aikana se sai nimen Melita. Nykyinen nimi tulee arabian sanasta madīnah, kaupunki. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes Pyhän Johanneksen ritarikunta asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua Hiljaiseksi kaupungiksi. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle.
+AIEMPI KYSYMYS: Mitä Mdinalle tapahtui ritarikunnan saapumisen jälkeen?
+AIEMPI VASTAUS (Livia):
+Ai se. Kun [[Pyhän Johanneksen ritarikunta]] asettui vuonna 1530 Birguun, pääkaupunki siirtyi sinne ja Mdina taantui. Kaupunki ei enää kasvanut muurien ulkopuolelle, mutta 1700-luvun alussa sinne rakennettiin useita [[barokkirakennuksia]]. Se on pysynyt Maltan aatelin ja kirkollisten viranomaisten keskuksena. Hiljaisuus tekee hyvää kyyhkyllekin.
+KYSYMYS: Kerro lisää: Pyhän Johanneksen ritarikunta
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdina (historia)
+Tietoruudun teksti: Mdina on linnoitettu kaupunki Maltan länsiosassa, ja se oli saaren pääkaupunki antiikista keskiajalle; kaupunki ei ole koskaan levinnyt muurien ulkopuolelle, ja asukkaita on 242. Foinikialaiset perustivat paikalle 700-luvulla eaa. siirtokunnan nimeltä Ann, ja roomalaiset nimesivät sen Melitaksi; nimi Mdina tulee arabian sanasta madīnah eli kaupunki. Kaupunki oli Maltan pääkaupunki, kunnes Johanniittaritarikunta saapui vuonna 1530 ja teki pääkaupungiksi Birgun; sen jälkeen Mdina taantui, vaikka 1700-luvun alussa siihen rakennettiin useita barokkirakennuksia. Kaupunki on pysynyt Maltan aatelin ja kirkollisten viranomaisten keskuksena, mutta se ei ole koskaan saavuttanut takaisin vuotta 1530 edeltänyttä merkitystään, minkä vuoksi sitä kutsutaan Hiljaiseksi kaupungiksi.
+AIEMPI KYSYMYS: Mitä Mdinalle tapahtui ritarikunnan saapumisen jälkeen?
+AIEMPI VASTAUS (Livia):
+Ai se. Kun [[Pyhän Johanneksen ritarikunta]] asettui vuonna 1530 Birguun, pääkaupunki siirtyi sinne ja Mdina taantui. Kaupunki ei enää kasvanut muurien ulkopuolelle, mutta 1700-luvun alussa sinne rakennettiin useita [[barokkirakennuksia]]. Se on pysynyt Maltan aatelin ja kirkollisten viranomaisten keskuksena. Hiljaisuus tekee hyvää kyyhkyllekin.
+KYSYMYS: Kerro lisää: barokkirakennuksia
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħaġar Qim (historia)
+Tietoruudun teksti: Ħaġar Qim, kirjaimellisesti palvontakivet, on megaliittinen temppelikompleksi Maltan eteläreunalla, ajalta Ġgantija-kaudelta (3600–3200 eaa.). Maltan megaliittitemppelit ovat maailman vanhimpia uskonnollisia kohteita, ja Unesco hyväksyi Ħaġar Qimin ja neljä muuta rakennelmaa maailmanperintökohteiksi vuonna 1992. Rakentajat käyttivät pehmeää globigerinakalkkikiveä, minkä vuoksi temppeli on rapautunut ja hilseillyt vuosituhansien mittaan; suojateltta valmistui vuonna 2009. Julkisivun tunnusmerkkejä ovat kolmikivinen sisäänkäynti, ulkopenkki ja pystykivet, ja alueelta ei ole löytynyt hautauksia eikä ihmisluita, mutta lukuisia uhrieläinten luita. Noin 500 metrin päässä on Mnajdran temppelikompleksi, joka on rakennettu kovemmasta koralliittikalkkikivestä, ja rannikolla ovat Sinisen luolan meriluolat, joissa veden sininen väri heijastuu luolien seinistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Jättiläisten temppeli] n. 3600–2500 eaa. — Gozon Xagħran tasangolla seisoo kiviseinä, jonka lohkareet ovat ihmistä suurempia. Paikallisen tarinan mukaan sen rakensi jättiläisnainen Sansuna, joka söi pelkkiä härkäpapuja ja hunajaa ja kantoi samalla lastaan olallaan. Todellisuudessa Ġgantijan kaksi temppeliä pystytettiin yli 5 500 vuotta sitten, ennen Egyptin pyramideja. Eteläisen temppelin seinä nousee kuuteen metriin, ja se avautuu kaakkoon. Nimi tarkoittaa jättiläisten paikkaa. Kohde liitettiin Unescon maailmanperintöluetteloon vuonna 1980.
+AIEMPI KYSYMYS: Mitä Ħaġar Qim tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Mmm— sepä sattui. Ħaġar Qim tarkoittaa kirjaimellisesti palvontakiviä. Kyseessä on megaliittinen temppelikompleksi Maltan eteläreunalla, [[Ġgantija-kaudelta]] (3600–3200 eaa.), ja [[Unesco]] hyväksyi sen maailmanperintökohteeksi vuonna 1992. Kivet puhuvat, mut eivät kovin paljon.
+KYSYMYS: Kerro lisää: Ġgantija-kaudelta
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħaġar Qim (historia)
+Tietoruudun teksti: Ħaġar Qim, kirjaimellisesti palvontakivet, on megaliittinen temppelikompleksi Maltan eteläreunalla, ajalta Ġgantija-kaudelta (3600–3200 eaa.). Maltan megaliittitemppelit ovat maailman vanhimpia uskonnollisia kohteita, ja Unesco hyväksyi Ħaġar Qimin ja neljä muuta rakennelmaa maailmanperintökohteiksi vuonna 1992. Rakentajat käyttivät pehmeää globigerinakalkkikiveä, minkä vuoksi temppeli on rapautunut ja hilseillyt vuosituhansien mittaan; suojateltta valmistui vuonna 2009. Julkisivun tunnusmerkkejä ovat kolmikivinen sisäänkäynti, ulkopenkki ja pystykivet, ja alueelta ei ole löytynyt hautauksia eikä ihmisluita, mutta lukuisia uhrieläinten luita. Noin 500 metrin päässä on Mnajdran temppelikompleksi, joka on rakennettu kovemmasta koralliittikalkkikivestä, ja rannikolla ovat Sinisen luolan meriluolat, joissa veden sininen väri heijastuu luolien seinistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Ruoka: Joulun hunajarengas] perinteisesti joulu — Qagħaq tal-għasel on rengas, jonka sisällä on tumma täyte. Taikinaan tehdään viiltoja, joista täyte pursuaa esiin. Täyte valmistetaan perinteisesti hunajasta, melassista, aniksesta, kanelista ja neilikasta, ja osa lisää mukaan kaakaota. Herkkua leivottiin alun perin jouluksi, mutta siitä tuli niin suosittu, että sitä tehdään ympäri vuoden, eivätkä monet enää tiedä sen joulutaustaa. Rengas symboloi ikuista onnea, ja ulos valuva täyte kertoo, että hyvää riittää yllin kyllin.
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Mitä Ħaġar Qim tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Mmm— sepä sattui. Ħaġar Qim tarkoittaa kirjaimellisesti palvontakiviä. Kyseessä on megaliittinen temppelikompleksi Maltan eteläreunalla, [[Ġgantija-kaudelta]] (3600–3200 eaa.), ja [[Unesco]] hyväksyi sen maailmanperintökohteeksi vuonna 1992. Kivet puhuvat, mut eivät kovin paljon.
+KYSYMYS: Kerro lisää: Unesco
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħaġar Qim (historia)
+Tietoruudun teksti: Ħaġar Qim, kirjaimellisesti palvontakivet, on megaliittinen temppelikompleksi Maltan eteläreunalla, ajalta Ġgantija-kaudelta (3600–3200 eaa.). Maltan megaliittitemppelit ovat maailman vanhimpia uskonnollisia kohteita, ja Unesco hyväksyi Ħaġar Qimin ja neljä muuta rakennelmaa maailmanperintökohteiksi vuonna 1992. Rakentajat käyttivät pehmeää globigerinakalkkikiveä, minkä vuoksi temppeli on rapautunut ja hilseillyt vuosituhansien mittaan; suojateltta valmistui vuonna 2009. Julkisivun tunnusmerkkejä ovat kolmikivinen sisäänkäynti, ulkopenkki ja pystykivet, ja alueelta ei ole löytynyt hautauksia eikä ihmisluita, mutta lukuisia uhrieläinten luita. Noin 500 metrin päässä on Mnajdran temppelikompleksi, joka on rakennettu kovemmasta koralliittikalkkikivestä, ja rannikolla ovat Sinisen luolan meriluolat, joissa veden sininen väri heijastuu luolien seinistä.
+AIEMPI KYSYMYS: Minä vuonna suojateltta valmistui temppelin päälle?
+AIEMPI VASTAUS (Livia):
+Katotaas. Suojateltta valmistui vuonna 2009. Sitä tarvittiin, koska rakentajat käyttivät pehmeää [[globigerinakalkkikiveä]], minkä vuoksi temppeli on rapautunut ja hilseillyt vuosituhansien mittaan. Noin 500 metrin päässä on myös [[Mnajdran]] temppelikompleksi. Ihan järkevä katto kyl.
+KYSYMYS: Kerro lisää: globigerinakalkkikiveä
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħaġar Qim (historia)
+Tietoruudun teksti: Ħaġar Qim, kirjaimellisesti palvontakivet, on megaliittinen temppelikompleksi Maltan eteläreunalla, ajalta Ġgantija-kaudelta (3600–3200 eaa.). Maltan megaliittitemppelit ovat maailman vanhimpia uskonnollisia kohteita, ja Unesco hyväksyi Ħaġar Qimin ja neljä muuta rakennelmaa maailmanperintökohteiksi vuonna 1992. Rakentajat käyttivät pehmeää globigerinakalkkikiveä, minkä vuoksi temppeli on rapautunut ja hilseillyt vuosituhansien mittaan; suojateltta valmistui vuonna 2009. Julkisivun tunnusmerkkejä ovat kolmikivinen sisäänkäynti, ulkopenkki ja pystykivet, ja alueelta ei ole löytynyt hautauksia eikä ihmisluita, mutta lukuisia uhrieläinten luita. Noin 500 metrin päässä on Mnajdran temppelikompleksi, joka on rakennettu kovemmasta koralliittikalkkikivestä, ja rannikolla ovat Sinisen luolan meriluolat, joissa veden sininen väri heijastuu luolien seinistä.
+AIEMPI KYSYMYS: Minä vuonna suojateltta valmistui temppelin päälle?
+AIEMPI VASTAUS (Livia):
+Katotaas. Suojateltta valmistui vuonna 2009. Sitä tarvittiin, koska rakentajat käyttivät pehmeää [[globigerinakalkkikiveä]], minkä vuoksi temppeli on rapautunut ja hilseillyt vuosituhansien mittaan. Noin 500 metrin päässä on myös [[Mnajdran]] temppelikompleksi. Ihan järkevä katto kyl.
+KYSYMYS: Kerro lisää: Mnajdran
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħaġar Qim (historia)
+Tietoruudun teksti: Ħaġar Qim, kirjaimellisesti palvontakivet, on megaliittinen temppelikompleksi Maltan eteläreunalla, ajalta Ġgantija-kaudelta (3600–3200 eaa.). Maltan megaliittitemppelit ovat maailman vanhimpia uskonnollisia kohteita, ja Unesco hyväksyi Ħaġar Qimin ja neljä muuta rakennelmaa maailmanperintökohteiksi vuonna 1992. Rakentajat käyttivät pehmeää globigerinakalkkikiveä, minkä vuoksi temppeli on rapautunut ja hilseillyt vuosituhansien mittaan; suojateltta valmistui vuonna 2009. Julkisivun tunnusmerkkejä ovat kolmikivinen sisäänkäynti, ulkopenkki ja pystykivet, ja alueelta ei ole löytynyt hautauksia eikä ihmisluita, mutta lukuisia uhrieläinten luita. Noin 500 metrin päässä on Mnajdran temppelikompleksi, joka on rakennettu kovemmasta koralliittikalkkikivestä, ja rannikolla ovat Sinisen luolan meriluolat, joissa veden sininen väri heijastuu luolien seinistä.
+AIEMPI KYSYMYS: Milloin Unesco hyväksyi Ħaġar Qimin maailmanperintökohteeksi?
+AIEMPI VASTAUS (Livia):
+Just niin, tän tiedän. Unesco hyväksyi Ħaġar Qimin maailmanperintökohteeksi vuonna 1992 yhdessä neljän muun rakennelman kanssa. Ne tunnetaan nimellä [[Maltan megaliittitemppelit]], ja Ħaġar Qimin oma aika on [[Ġgantija-kausi]], noin 3600–3200 eaa. Ei hassumpi ikä rakennukselle.
+KYSYMYS: Kerro lisää: Maltan megaliittitemppelit
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħaġar Qim (historia)
+Tietoruudun teksti: Ħaġar Qim, kirjaimellisesti palvontakivet, on megaliittinen temppelikompleksi Maltan eteläreunalla, ajalta Ġgantija-kaudelta (3600–3200 eaa.). Maltan megaliittitemppelit ovat maailman vanhimpia uskonnollisia kohteita, ja Unesco hyväksyi Ħaġar Qimin ja neljä muuta rakennelmaa maailmanperintökohteiksi vuonna 1992. Rakentajat käyttivät pehmeää globigerinakalkkikiveä, minkä vuoksi temppeli on rapautunut ja hilseillyt vuosituhansien mittaan; suojateltta valmistui vuonna 2009. Julkisivun tunnusmerkkejä ovat kolmikivinen sisäänkäynti, ulkopenkki ja pystykivet, ja alueelta ei ole löytynyt hautauksia eikä ihmisluita, mutta lukuisia uhrieläinten luita. Noin 500 metrin päässä on Mnajdran temppelikompleksi, joka on rakennettu kovemmasta koralliittikalkkikivestä, ja rannikolla ovat Sinisen luolan meriluolat, joissa veden sininen väri heijastuu luolien seinistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Jättiläisten temppeli] n. 3600–2500 eaa. — Gozon Xagħran tasangolla seisoo kiviseinä, jonka lohkareet ovat ihmistä suurempia. Paikallisen tarinan mukaan sen rakensi jättiläisnainen Sansuna, joka söi pelkkiä härkäpapuja ja hunajaa ja kantoi samalla lastaan olallaan. Todellisuudessa Ġgantijan kaksi temppeliä pystytettiin yli 5 500 vuotta sitten, ennen Egyptin pyramideja. Eteläisen temppelin seinä nousee kuuteen metriin, ja se avautuu kaakkoon. Nimi tarkoittaa jättiläisten paikkaa. Kohde liitettiin Unescon maailmanperintöluetteloon vuonna 1980.
+AIEMPI KYSYMYS: Milloin Unesco hyväksyi Ħaġar Qimin maailmanperintökohteeksi?
+AIEMPI VASTAUS (Livia):
+Just niin, tän tiedän. Unesco hyväksyi Ħaġar Qimin maailmanperintökohteeksi vuonna 1992 yhdessä neljän muun rakennelman kanssa. Ne tunnetaan nimellä [[Maltan megaliittitemppelit]], ja Ħaġar Qimin oma aika on [[Ġgantija-kausi]], noin 3600–3200 eaa. Ei hassumpi ikä rakennukselle.
+KYSYMYS: Kerro lisää: Ġgantija-kausi
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħaġar Qim (historia)
+Tietoruudun teksti: Ħaġar Qim, kirjaimellisesti palvontakivet, on megaliittinen temppelikompleksi Maltan eteläreunalla, ajalta Ġgantija-kaudelta (3600–3200 eaa.). Maltan megaliittitemppelit ovat maailman vanhimpia uskonnollisia kohteita, ja Unesco hyväksyi Ħaġar Qimin ja neljä muuta rakennelmaa maailmanperintökohteiksi vuonna 1992. Rakentajat käyttivät pehmeää globigerinakalkkikiveä, minkä vuoksi temppeli on rapautunut ja hilseillyt vuosituhansien mittaan; suojateltta valmistui vuonna 2009. Julkisivun tunnusmerkkejä ovat kolmikivinen sisäänkäynti, ulkopenkki ja pystykivet, ja alueelta ei ole löytynyt hautauksia eikä ihmisluita, mutta lukuisia uhrieläinten luita. Noin 500 metrin päässä on Mnajdran temppelikompleksi, joka on rakennettu kovemmasta koralliittikalkkikivestä, ja rannikolla ovat Sinisen luolan meriluolat, joissa veden sininen väri heijastuu luolien seinistä.
+AIEMPI KYSYMYS: Mikä on Mnajdran temppelikompleksi?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Mnajdra on temppelikompleksi noin 500 metrin päässä [[Ħaġar Qimista]]. Toisin kuin Ħaġar Qim, se on rakennettu kovemmasta [[koralliittikalkkikivestä]]. Rannikolla lähistöllä ovat myös [[Sinisen luolan]] meriluolat, joissa veden sininen väri heijastuu luolien seinistä. Rantaa pitkin lentäisin mieluiten.
+KYSYMYS: Kerro lisää: Ħaġar Qimista
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħaġar Qim (historia)
+Tietoruudun teksti: Ħaġar Qim, kirjaimellisesti palvontakivet, on megaliittinen temppelikompleksi Maltan eteläreunalla, ajalta Ġgantija-kaudelta (3600–3200 eaa.). Maltan megaliittitemppelit ovat maailman vanhimpia uskonnollisia kohteita, ja Unesco hyväksyi Ħaġar Qimin ja neljä muuta rakennelmaa maailmanperintökohteiksi vuonna 1992. Rakentajat käyttivät pehmeää globigerinakalkkikiveä, minkä vuoksi temppeli on rapautunut ja hilseillyt vuosituhansien mittaan; suojateltta valmistui vuonna 2009. Julkisivun tunnusmerkkejä ovat kolmikivinen sisäänkäynti, ulkopenkki ja pystykivet, ja alueelta ei ole löytynyt hautauksia eikä ihmisluita, mutta lukuisia uhrieläinten luita. Noin 500 metrin päässä on Mnajdran temppelikompleksi, joka on rakennettu kovemmasta koralliittikalkkikivestä, ja rannikolla ovat Sinisen luolan meriluolat, joissa veden sininen väri heijastuu luolien seinistä.
+AIEMPI KYSYMYS: Mikä on Mnajdran temppelikompleksi?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Mnajdra on temppelikompleksi noin 500 metrin päässä [[Ħaġar Qimista]]. Toisin kuin Ħaġar Qim, se on rakennettu kovemmasta [[koralliittikalkkikivestä]]. Rannikolla lähistöllä ovat myös [[Sinisen luolan]] meriluolat, joissa veden sininen väri heijastuu luolien seinistä. Rantaa pitkin lentäisin mieluiten.
+KYSYMYS: Kerro lisää: koralliittikalkkikivestä
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħaġar Qim (historia)
+Tietoruudun teksti: Ħaġar Qim, kirjaimellisesti palvontakivet, on megaliittinen temppelikompleksi Maltan eteläreunalla, ajalta Ġgantija-kaudelta (3600–3200 eaa.). Maltan megaliittitemppelit ovat maailman vanhimpia uskonnollisia kohteita, ja Unesco hyväksyi Ħaġar Qimin ja neljä muuta rakennelmaa maailmanperintökohteiksi vuonna 1992. Rakentajat käyttivät pehmeää globigerinakalkkikiveä, minkä vuoksi temppeli on rapautunut ja hilseillyt vuosituhansien mittaan; suojateltta valmistui vuonna 2009. Julkisivun tunnusmerkkejä ovat kolmikivinen sisäänkäynti, ulkopenkki ja pystykivet, ja alueelta ei ole löytynyt hautauksia eikä ihmisluita, mutta lukuisia uhrieläinten luita. Noin 500 metrin päässä on Mnajdran temppelikompleksi, joka on rakennettu kovemmasta koralliittikalkkikivestä, ja rannikolla ovat Sinisen luolan meriluolat, joissa veden sininen väri heijastuu luolien seinistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tabriz — kohdekartta / Kohdekartta: Azerbaidžanin museo] 1958 Museo avattiin huhtikuussa 1958 Sinisen moskeijan viereen. Sen piirsi ranskalainen André Godard (1881–1965), joka johti Iranin arkeologista tutkimuslaitosta vuosina 1928–1953 ja uudelleen 1956–1960 ja suunnitteli Teheranin kansallismuseon. Talossa on kolme näyttelysalia, sivupiha, toimistohuoneita ja kirjasto, jossa on yli 2 500 käsin kirjoitettua ja painettua kirjaa historiasta, arkeologiasta, taiteesta ja Iranin kulttuurista. Ensimmäinen sali etenee aikajärjestyksessä: vanhimmat löydöt ovat 5. vuosituhannelta eaa., sitten seuraavat Urartu, akhaimenidien valtakunta ja lopuksi sasanidikausi 224–651 jaa. Toinen sali on kahtia: toisessa päässä islamilaisen ajan arkeologiaa, toisessa koli…
+- [Bogotá — kohdekartta / Kohdekartta: Keskushautausmaa] 1836 Hautausmaa avattiin 1836, ja siitä tuli maan kansallinen muistopaikka: sen presidenttien ja presidentinrouvien paviljonkiin on haudattu parikymmentä valtionpäämiestä, ensimmäisenä Kolumbian ensimmäinen perustuslaillinen presidentti Francisco de Paula Santander. Mausoleumeja veistivät muun muassa italialaiset Pietro Tenerani ja Sighinolfi. Alue julistettiin kansallismonumentiksi 1984. Muut haudat kertovat maan historian toisella tavalla. Täällä lepäävät kaupungin perustaja Gonzalo Jiménez de Quesada, runoilijat José Asunción Silva ja Rafael Pombo, kansallislaulun säveltänyt Oreste Sindici, Bavaria-panimon perustaja Leo Siegfried Kopp sekä neljä presidenttiehdokasta: Luis Carlos Galán, J…
+AIEMPI KYSYMYS: Mikä on Mnajdran temppelikompleksi?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Mnajdra on temppelikompleksi noin 500 metrin päässä [[Ħaġar Qimista]]. Toisin kuin Ħaġar Qim, se on rakennettu kovemmasta [[koralliittikalkkikivestä]]. Rannikolla lähistöllä ovat myös [[Sinisen luolan]] meriluolat, joissa veden sininen väri heijastuu luolien seinistä. Rantaa pitkin lentäisin mieluiten.
+KYSYMYS: Kerro lisää: Sinisen luolan
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ġgantija (historia)
+Tietoruudun teksti: Ġgantija, jättiläisten paikka, on neoliittinen megaliittinen temppelikompleksi Maltan Gozon saarella Xagħran ylätasangon reunalla, ajalta noin 3600–2500 eaa. Kaksi temppeliä on yli 5 500 vuotta vanhoja, ne ovat vanhimpia Maltan megaliittitemppeleistä ja vanhempia kuin Egyptin pyramidit, ja ne ovat maailman toiseksi vanhimpia yhä olemassa olevia ihmisen rakentamia uskonnollisia rakennelmia Göbekli Tepen jälkeen. Paikallisen gozolaisen kansantarinan mukaan jättiläisnainen Sansuna, joka söi vain härkäpapuja ja hunajaa, rakensi temppelit lapsi olallaan. Eteläinen temppeli on suurempi ja vanhempi, viiden apsiksen temppeli, jonka korkeus on kuusi metriä. Gozon apulaiskuvernööri, everstiluutnantti John Otto Bayer, raivautti paikan raunioista maata vuonna 1827, mutta multa ja löydöt menetettiin tutkimatta, ja rauniot rapautuivat; Unesco hyväksyi temppelit maailmanperintökohteeksi vuonna 1980.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Jättiläisten temppeli] n. 3600–2500 eaa. — Gozon Xagħran tasangolla seisoo kiviseinä, jonka lohkareet ovat ihmistä suurempia. Paikallisen tarinan mukaan sen rakensi jättiläisnainen Sansuna, joka söi pelkkiä härkäpapuja ja hunajaa ja kantoi samalla lastaan olallaan. Todellisuudessa Ġgantijan kaksi temppeliä pystytettiin yli 5 500 vuotta sitten, ennen Egyptin pyramideja. Eteläisen temppelin seinä nousee kuuteen metriin, ja se avautuu kaakkoon. Nimi tarkoittaa jättiläisten paikkaa. Kohde liitettiin Unescon maailmanperintöluetteloon vuonna 1980.
+AIEMPI KYSYMYS: Kuka jättiläisnainen kansantarinan mukaan rakensi temppelit?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Gozon kansantarinan mukaan temppelit rakensi jättiläisnainen [[Sansuna]], joka söi vain härkäpapuja ja hunajaa ja kantoi lastaan olallaan työn aikana. Tarina on perinteinen selitys sille, miten ihmistä suuremmat kivilohkareet ovat päätyneet paikoilleen [[Gozon]] saarella. Todellisuudessa [[Ġgantijan]] kaksi temppeliä pystytettiin yli 5 500 vuotta sitten, ennen Egyptin pyramideja. Härkäpavuilla minä en kyl jaksaisi lentää.
+KYSYMYS: Kerro lisää: Sansuna
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ġgantija (historia)
+Tietoruudun teksti: Ġgantija, jättiläisten paikka, on neoliittinen megaliittinen temppelikompleksi Maltan Gozon saarella Xagħran ylätasangon reunalla, ajalta noin 3600–2500 eaa. Kaksi temppeliä on yli 5 500 vuotta vanhoja, ne ovat vanhimpia Maltan megaliittitemppeleistä ja vanhempia kuin Egyptin pyramidit, ja ne ovat maailman toiseksi vanhimpia yhä olemassa olevia ihmisen rakentamia uskonnollisia rakennelmia Göbekli Tepen jälkeen. Paikallisen gozolaisen kansantarinan mukaan jättiläisnainen Sansuna, joka söi vain härkäpapuja ja hunajaa, rakensi temppelit lapsi olallaan. Eteläinen temppeli on suurempi ja vanhempi, viiden apsiksen temppeli, jonka korkeus on kuusi metriä. Gozon apulaiskuvernööri, everstiluutnantti John Otto Bayer, raivautti paikan raunioista maata vuonna 1827, mutta multa ja löydöt menetettiin tutkimatta, ja rauniot rapautuivat; Unesco hyväksyi temppelit maailmanperintökohteeksi vuonna 1980.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Saari, jonka vuokra oli yksi haukka] 1530 — Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian varakuninkaalle. Suurmestari Philippe Villiers de L'Isle-Adam purjehti Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan uudelleen Pyhän Angelon linnakkeeksi.
+- [Malta — maalehti / Historia: Jättiläisten temppeli] n. 3600–2500 eaa. — Gozon Xagħran tasangolla seisoo kiviseinä, jonka lohkareet ovat ihmistä suurempia. Paikallisen tarinan mukaan sen rakensi jättiläisnainen Sansuna, joka söi pelkkiä härkäpapuja ja hunajaa ja kantoi samalla lastaan olallaan. Todellisuudessa Ġgantijan kaksi temppeliä pystytettiin yli 5 500 vuotta sitten, ennen Egyptin pyramideja. Eteläisen temppelin seinä nousee kuuteen metriin, ja se avautuu kaakkoon. Nimi tarkoittaa jättiläisten paikkaa. Kohde liitettiin Unescon maailmanperintöluetteloon vuonna 1980.
+AIEMPI KYSYMYS: Kuka jättiläisnainen kansantarinan mukaan rakensi temppelit?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Gozon kansantarinan mukaan temppelit rakensi jättiläisnainen [[Sansuna]], joka söi vain härkäpapuja ja hunajaa ja kantoi lastaan olallaan työn aikana. Tarina on perinteinen selitys sille, miten ihmistä suuremmat kivilohkareet ovat päätyneet paikoilleen [[Gozon]] saarella. Todellisuudessa [[Ġgantijan]] kaksi temppeliä pystytettiin yli 5 500 vuotta sitten, ennen Egyptin pyramideja. Härkäpavuilla minä en kyl jaksaisi lentää.
+KYSYMYS: Kerro lisää: Gozon
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ġgantija (historia)
+Tietoruudun teksti: Ġgantija, jättiläisten paikka, on neoliittinen megaliittinen temppelikompleksi Maltan Gozon saarella Xagħran ylätasangon reunalla, ajalta noin 3600–2500 eaa. Kaksi temppeliä on yli 5 500 vuotta vanhoja, ne ovat vanhimpia Maltan megaliittitemppeleistä ja vanhempia kuin Egyptin pyramidit, ja ne ovat maailman toiseksi vanhimpia yhä olemassa olevia ihmisen rakentamia uskonnollisia rakennelmia Göbekli Tepen jälkeen. Paikallisen gozolaisen kansantarinan mukaan jättiläisnainen Sansuna, joka söi vain härkäpapuja ja hunajaa, rakensi temppelit lapsi olallaan. Eteläinen temppeli on suurempi ja vanhempi, viiden apsiksen temppeli, jonka korkeus on kuusi metriä. Gozon apulaiskuvernööri, everstiluutnantti John Otto Bayer, raivautti paikan raunioista maata vuonna 1827, mutta multa ja löydöt menetettiin tutkimatta, ja rauniot rapautuivat; Unesco hyväksyi temppelit maailmanperintökohteeksi vuonna 1980.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Jättiläisten temppeli] n. 3600–2500 eaa. — Gozon Xagħran tasangolla seisoo kiviseinä, jonka lohkareet ovat ihmistä suurempia. Paikallisen tarinan mukaan sen rakensi jättiläisnainen Sansuna, joka söi pelkkiä härkäpapuja ja hunajaa ja kantoi samalla lastaan olallaan. Todellisuudessa Ġgantijan kaksi temppeliä pystytettiin yli 5 500 vuotta sitten, ennen Egyptin pyramideja. Eteläisen temppelin seinä nousee kuuteen metriin, ja se avautuu kaakkoon. Nimi tarkoittaa jättiläisten paikkaa. Kohde liitettiin Unescon maailmanperintöluetteloon vuonna 1980.
+AIEMPI KYSYMYS: Kuka jättiläisnainen kansantarinan mukaan rakensi temppelit?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Gozon kansantarinan mukaan temppelit rakensi jättiläisnainen [[Sansuna]], joka söi vain härkäpapuja ja hunajaa ja kantoi lastaan olallaan työn aikana. Tarina on perinteinen selitys sille, miten ihmistä suuremmat kivilohkareet ovat päätyneet paikoilleen [[Gozon]] saarella. Todellisuudessa [[Ġgantijan]] kaksi temppeliä pystytettiin yli 5 500 vuotta sitten, ennen Egyptin pyramideja. Härkäpavuilla minä en kyl jaksaisi lentää.
+KYSYMYS: Kerro lisää: Ġgantijan
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ġgantija (historia)
+Tietoruudun teksti: Ġgantija, jättiläisten paikka, on neoliittinen megaliittinen temppelikompleksi Maltan Gozon saarella Xagħran ylätasangon reunalla, ajalta noin 3600–2500 eaa. Kaksi temppeliä on yli 5 500 vuotta vanhoja, ne ovat vanhimpia Maltan megaliittitemppeleistä ja vanhempia kuin Egyptin pyramidit, ja ne ovat maailman toiseksi vanhimpia yhä olemassa olevia ihmisen rakentamia uskonnollisia rakennelmia Göbekli Tepen jälkeen. Paikallisen gozolaisen kansantarinan mukaan jättiläisnainen Sansuna, joka söi vain härkäpapuja ja hunajaa, rakensi temppelit lapsi olallaan. Eteläinen temppeli on suurempi ja vanhempi, viiden apsiksen temppeli, jonka korkeus on kuusi metriä. Gozon apulaiskuvernööri, everstiluutnantti John Otto Bayer, raivautti paikan raunioista maata vuonna 1827, mutta multa ja löydöt menetettiin tutkimatta, ja rauniot rapautuivat; Unesco hyväksyi temppelit maailmanperintökohteeksi vuonna 1980.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+- [Malta — maalehti / Ruoka: Joulun hunajarengas] perinteisesti joulu — Qagħaq tal-għasel on rengas, jonka sisällä on tumma täyte. Taikinaan tehdään viiltoja, joista täyte pursuaa esiin. Täyte valmistetaan perinteisesti hunajasta, melassista, aniksesta, kanelista ja neilikasta, ja osa lisää mukaan kaakaota. Herkkua leivottiin alun perin jouluksi, mutta siitä tuli niin suosittu, että sitä tehdään ympäri vuoden, eivätkä monet enää tiedä sen joulutaustaa. Rengas symboloi ikuista onnea, ja ulos valuva täyte kertoo, että hyvää riittää yllin kyllin.
+AIEMPI KYSYMYS: Minä vuonna Bayer raivautti temppelin raunioilta maata?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Gozon apulaiskuvernööri, everstiluutnantti John Otto Bayer, raivautti paikan raunioista maata vuonna 1827. Työ tehtiin ilman tutkimusta, joten multa ja löydöt menetettiin ja rauniot rapautuivat sen jälkeen. Unesco hyväksyi temppelit [[maailmanperintökohteeksi]] vuonna 1980, ja nykyään [[Unescon]] suojelu turvaa paikan. Hyvä, että asiat tehdään nykyään toisin.
+KYSYMYS: Kerro lisää: maailmanperintökohteeksi
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ġgantija (historia)
+Tietoruudun teksti: Ġgantija, jättiläisten paikka, on neoliittinen megaliittinen temppelikompleksi Maltan Gozon saarella Xagħran ylätasangon reunalla, ajalta noin 3600–2500 eaa. Kaksi temppeliä on yli 5 500 vuotta vanhoja, ne ovat vanhimpia Maltan megaliittitemppeleistä ja vanhempia kuin Egyptin pyramidit, ja ne ovat maailman toiseksi vanhimpia yhä olemassa olevia ihmisen rakentamia uskonnollisia rakennelmia Göbekli Tepen jälkeen. Paikallisen gozolaisen kansantarinan mukaan jättiläisnainen Sansuna, joka söi vain härkäpapuja ja hunajaa, rakensi temppelit lapsi olallaan. Eteläinen temppeli on suurempi ja vanhempi, viiden apsiksen temppeli, jonka korkeus on kuusi metriä. Gozon apulaiskuvernööri, everstiluutnantti John Otto Bayer, raivautti paikan raunioista maata vuonna 1827, mutta multa ja löydöt menetettiin tutkimatta, ja rauniot rapautuivat; Unesco hyväksyi temppelit maailmanperintökohteeksi vuonna 1980.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+- [Malta — maalehti / Ruoka: Joulun hunajarengas] perinteisesti joulu — Qagħaq tal-għasel on rengas, jonka sisällä on tumma täyte. Taikinaan tehdään viiltoja, joista täyte pursuaa esiin. Täyte valmistetaan perinteisesti hunajasta, melassista, aniksesta, kanelista ja neilikasta, ja osa lisää mukaan kaakaota. Herkkua leivottiin alun perin jouluksi, mutta siitä tuli niin suosittu, että sitä tehdään ympäri vuoden, eivätkä monet enää tiedä sen joulutaustaa. Rengas symboloi ikuista onnea, ja ulos valuva täyte kertoo, että hyvää riittää yllin kyllin.
+AIEMPI KYSYMYS: Minä vuonna Bayer raivautti temppelin raunioilta maata?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Gozon apulaiskuvernööri, everstiluutnantti John Otto Bayer, raivautti paikan raunioista maata vuonna 1827. Työ tehtiin ilman tutkimusta, joten multa ja löydöt menetettiin ja rauniot rapautuivat sen jälkeen. Unesco hyväksyi temppelit [[maailmanperintökohteeksi]] vuonna 1980, ja nykyään [[Unescon]] suojelu turvaa paikan. Hyvä, että asiat tehdään nykyään toisin.
+KYSYMYS: Kerro lisää: Unescon
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ġgantija (historia)
+Tietoruudun teksti: Ġgantija, jättiläisten paikka, on neoliittinen megaliittinen temppelikompleksi Maltan Gozon saarella Xagħran ylätasangon reunalla, ajalta noin 3600–2500 eaa. Kaksi temppeliä on yli 5 500 vuotta vanhoja, ne ovat vanhimpia Maltan megaliittitemppeleistä ja vanhempia kuin Egyptin pyramidit, ja ne ovat maailman toiseksi vanhimpia yhä olemassa olevia ihmisen rakentamia uskonnollisia rakennelmia Göbekli Tepen jälkeen. Paikallisen gozolaisen kansantarinan mukaan jättiläisnainen Sansuna, joka söi vain härkäpapuja ja hunajaa, rakensi temppelit lapsi olallaan. Eteläinen temppeli on suurempi ja vanhempi, viiden apsiksen temppeli, jonka korkeus on kuusi metriä. Gozon apulaiskuvernööri, everstiluutnantti John Otto Bayer, raivautti paikan raunioista maata vuonna 1827, mutta multa ja löydöt menetettiin tutkimatta, ja rauniot rapautuivat; Unesco hyväksyi temppelit maailmanperintökohteeksi vuonna 1980.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Anatolian sivilisaatioiden museo] Museo on kahdessa 1400-luvun ottomaanirakennuksessa Ankaran linnan eteläpuolella Atpazarın korttelissa. Näyttely on Mahmut Paşan bedestenissä eli katetussa kauppahallissa, jonka Mehmed II:n visiiri rakennutti vuosina 1464–1471: kymmenen kupolia kattaa suorakaiteen, ja hallissa oli 102 puotia vastakkain. Vieressä on Kurşunlu Han: keskellä piha ja pylväskäytävä, ympärillä kaksi kerrosta huoneita, 28 alhaalla ja 30 ylhäällä. Han on nykyään hallintosiipi, jossa ovat työhuoneet, kirjasto, esitelmäsali ja laboratorio. Kymmenkupolinen keskihalli on jätetty yhdeksi tilaksi, ja siinä seisovat suuret kivireliefit ja patsaat myöhäisheettiläiseltä ajalta: pitkäkaapuisia sotilaita, sotavaunuja, hierogly…
+AIEMPI KYSYMYS: Mitä nimi Ġgantija tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Nimi Ġgantija tarkoittaa jättiläisten paikkaa. Se viittaa gozolaiseen kansantarinaan, jonka mukaan jättiläisnainen [[Sansuna]] rakensi temppelit, vaikka todellisuudessa kohde on [[neoliittinen]] [[temppelikompleksi]], joka on ajoitettu noin vuosille 3600–2500 eaa. Syy nimeen on helppo ymmärtää: lohkareet ovat ihmistä suurempia. Nimi on siis aika kuvaava, ja minä pidän siitä.
+KYSYMYS: Kerro lisää: neoliittinen
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ġgantija (historia)
+Tietoruudun teksti: Ġgantija, jättiläisten paikka, on neoliittinen megaliittinen temppelikompleksi Maltan Gozon saarella Xagħran ylätasangon reunalla, ajalta noin 3600–2500 eaa. Kaksi temppeliä on yli 5 500 vuotta vanhoja, ne ovat vanhimpia Maltan megaliittitemppeleistä ja vanhempia kuin Egyptin pyramidit, ja ne ovat maailman toiseksi vanhimpia yhä olemassa olevia ihmisen rakentamia uskonnollisia rakennelmia Göbekli Tepen jälkeen. Paikallisen gozolaisen kansantarinan mukaan jättiläisnainen Sansuna, joka söi vain härkäpapuja ja hunajaa, rakensi temppelit lapsi olallaan. Eteläinen temppeli on suurempi ja vanhempi, viiden apsiksen temppeli, jonka korkeus on kuusi metriä. Gozon apulaiskuvernööri, everstiluutnantti John Otto Bayer, raivautti paikan raunioista maata vuonna 1827, mutta multa ja löydöt menetettiin tutkimatta, ja rauniot rapautuivat; Unesco hyväksyi temppelit maailmanperintökohteeksi vuonna 1980.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Peking — kohdekartta / Kohdekartta: Yonghe-temppeli] 1694, luostariksi 1744 Rakennus alkoi prinssin kotina. Kangxi-keisari antoi sen 1702 neljännelle pojalleen Yinzhenille, ja tämän tuleva seuraaja, Qianlong-keisari, syntyi talon itäsiivessä 1711. Kun Yinzhen nousi valtaistuimelle Yongzheng-keisarina, talosta tuli Harmonian ja rauhan palatsi — ja keisarin arvon merkiksi sen turkoosit tiilikatot vaihdettiin keltaisiin, jotka oli varattu vain keisarille. Vuonna 1744 Qianlong muutti palatsin tiibetinbuddhalaiseksi luostariksi. Siitä tuli Qing-kauden merkittävin buddhalainen temppeli, jonka rakennuksissa kiinalainen ja tiibetiläinen tyyli kulkevat rinnakkain ja jonne muutti munkkeja Mongoliasta ja Tiibetistä asti. Kuuluisin aarre on Kymmenentuhan…
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+AIEMPI KYSYMYS: Mitä nimi Ġgantija tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Nimi Ġgantija tarkoittaa jättiläisten paikkaa. Se viittaa gozolaiseen kansantarinaan, jonka mukaan jättiläisnainen [[Sansuna]] rakensi temppelit, vaikka todellisuudessa kohde on [[neoliittinen]] [[temppelikompleksi]], joka on ajoitettu noin vuosille 3600–2500 eaa. Syy nimeen on helppo ymmärtää: lohkareet ovat ihmistä suurempia. Nimi on siis aika kuvaava, ja minä pidän siitä.
+KYSYMYS: Kerro lisää: temppelikompleksi
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ġgantija (historia)
+Tietoruudun teksti: Ġgantija, jättiläisten paikka, on neoliittinen megaliittinen temppelikompleksi Maltan Gozon saarella Xagħran ylätasangon reunalla, ajalta noin 3600–2500 eaa. Kaksi temppeliä on yli 5 500 vuotta vanhoja, ne ovat vanhimpia Maltan megaliittitemppeleistä ja vanhempia kuin Egyptin pyramidit, ja ne ovat maailman toiseksi vanhimpia yhä olemassa olevia ihmisen rakentamia uskonnollisia rakennelmia Göbekli Tepen jälkeen. Paikallisen gozolaisen kansantarinan mukaan jättiläisnainen Sansuna, joka söi vain härkäpapuja ja hunajaa, rakensi temppelit lapsi olallaan. Eteläinen temppeli on suurempi ja vanhempi, viiden apsiksen temppeli, jonka korkeus on kuusi metriä. Gozon apulaiskuvernööri, everstiluutnantti John Otto Bayer, raivautti paikan raunioista maata vuonna 1827, mutta multa ja löydöt menetettiin tutkimatta, ja rauniot rapautuivat; Unesco hyväksyi temppelit maailmanperintökohteeksi vuonna 1980.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Peking — kaupunkilehti / Historia: Taivaan alttari ja luku yhdeksän] Taivaan temppeli rakennettiin samaan aikaan Kielletyn kaupungin kanssa, 1406–1420, ja siellä keisari uhrasi vuosittain hyvän sadon puolesta. Pyöreän alttarin suunnittelussa toistuu keisarin luku yhdeksän: keskimmäistä marmorilaattaa ympäröi yhdeksän laatan rengas, sitten kahdeksantoista laatan rengas, ja niin edelleen yhdeksään renkaaseen asti — uloin on 9 × 9 laattaa. Sadonkorjuurukoushallissa neljä sisintä pilaria ovat vuodenajat, kaksitoista keskimmäistä kuukaudet ja kaksitoista uloimmaista perinteiset kiinalaiset tunnit.
+- [Puola — maalehti / Taide: Alttari, johon veistettiin kaupunkilaisten kasvot] 1477 — Wit Stwosz veisti Mariankirkon alttarin vuosina 1477–1489: työtä riitti kahdeksitoista vuodeksi. Avattuna alttari on 13 metriä korkea ja 11 metriä leveä, ja hahmot ovat 2,7 metriä pitkiä — jokainen veistetty yhdestä lehmuksen rungosta. Kasvot Stwosz otti krakovalaisilta, ja hän teki työnsä niin tarkasti, että hahmoista erottuvat vääntyneet sormet, pullistuneet suonet ja ihotautien jäljet.
+AIEMPI KYSYMYS: Mitä apsis tarkoittaa temppeliarkkitehtuurissa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Apsis on puoliympyrän muotoinen syvennys rakennuksen seinässä tai päädyssä. [[Ġgantijan]] eteläinen temppeli on viiden apsiksen temppeli, ja sen seinän korkeus on kuusi metriä. Myöhemmissä kirkoissa apsis sijaitsee usein [[alttarin]] takana, mutta Ġgantijan apsiksien tarkasta käytöstä en ole varma.
+
+Viisi syvennystä yhdessä temppelissä, ja ne ovat kestäneet yli viisi tuhatta vuotta. Minun sukuni pesät eivät pysy pystyssä viittä vuottakaan.
+KYSYMYS: Kerro lisää: alttarin
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ġgantija (historia)
+Tietoruudun teksti: Ġgantija, jättiläisten paikka, on neoliittinen megaliittinen temppelikompleksi Maltan Gozon saarella Xagħran ylätasangon reunalla, ajalta noin 3600–2500 eaa. Kaksi temppeliä on yli 5 500 vuotta vanhoja, ne ovat vanhimpia Maltan megaliittitemppeleistä ja vanhempia kuin Egyptin pyramidit, ja ne ovat maailman toiseksi vanhimpia yhä olemassa olevia ihmisen rakentamia uskonnollisia rakennelmia Göbekli Tepen jälkeen. Paikallisen gozolaisen kansantarinan mukaan jättiläisnainen Sansuna, joka söi vain härkäpapuja ja hunajaa, rakensi temppelit lapsi olallaan. Eteläinen temppeli on suurempi ja vanhempi, viiden apsiksen temppeli, jonka korkeus on kuusi metriä. Gozon apulaiskuvernööri, everstiluutnantti John Otto Bayer, raivautti paikan raunioista maata vuonna 1827, mutta multa ja löydöt menetettiin tutkimatta, ja rauniot rapautuivat; Unesco hyväksyi temppelit maailmanperintökohteeksi vuonna 1980.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+- [Malta — maalehti / Ruoka: Joulun hunajarengas] perinteisesti joulu — Qagħaq tal-għasel on rengas, jonka sisällä on tumma täyte. Taikinaan tehdään viiltoja, joista täyte pursuaa esiin. Täyte valmistetaan perinteisesti hunajasta, melassista, aniksesta, kanelista ja neilikasta, ja osa lisää mukaan kaakaota. Herkkua leivottiin alun perin jouluksi, mutta siitä tuli niin suosittu, että sitä tehdään ympäri vuoden, eivätkä monet enää tiedä sen joulutaustaa. Rengas symboloi ikuista onnea, ja ulos valuva täyte kertoo, että hyvää riittää yllin kyllin.
+AIEMPI KYSYMYS: Mitkä muut Maltan temppelit ovat Unescon perintökohteita?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Maltan megaliittiset temppelit on liitetty [[maailmanperintöluetteloon]], ja Ġgantijan lisäksi mukana ovat lähteiden mukaan muun muassa [[Ħaġar Qim]], [[Mnajdra]] ja [[Tarxien]]. En ole varma, mitkä kaikki temppelit luetteloon tarkalleen kuuluvat. Ġgantijan temppelit hyväksyttiin luetteloon vuonna 1980. Saarilla riittää siis kiveä ihailtavaksi.
+KYSYMYS: Kerro lisää: maailmanperintöluetteloon
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ġgantija (historia)
+Tietoruudun teksti: Ġgantija, jättiläisten paikka, on neoliittinen megaliittinen temppelikompleksi Maltan Gozon saarella Xagħran ylätasangon reunalla, ajalta noin 3600–2500 eaa. Kaksi temppeliä on yli 5 500 vuotta vanhoja, ne ovat vanhimpia Maltan megaliittitemppeleistä ja vanhempia kuin Egyptin pyramidit, ja ne ovat maailman toiseksi vanhimpia yhä olemassa olevia ihmisen rakentamia uskonnollisia rakennelmia Göbekli Tepen jälkeen. Paikallisen gozolaisen kansantarinan mukaan jättiläisnainen Sansuna, joka söi vain härkäpapuja ja hunajaa, rakensi temppelit lapsi olallaan. Eteläinen temppeli on suurempi ja vanhempi, viiden apsiksen temppeli, jonka korkeus on kuusi metriä. Gozon apulaiskuvernööri, everstiluutnantti John Otto Bayer, raivautti paikan raunioista maata vuonna 1827, mutta multa ja löydöt menetettiin tutkimatta, ja rauniot rapautuivat; Unesco hyväksyi temppelit maailmanperintökohteeksi vuonna 1980.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+AIEMPI KYSYMYS: Mitkä muut Maltan temppelit ovat Unescon perintökohteita?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Maltan megaliittiset temppelit on liitetty [[maailmanperintöluetteloon]], ja Ġgantijan lisäksi mukana ovat lähteiden mukaan muun muassa [[Ħaġar Qim]], [[Mnajdra]] ja [[Tarxien]]. En ole varma, mitkä kaikki temppelit luetteloon tarkalleen kuuluvat. Ġgantijan temppelit hyväksyttiin luetteloon vuonna 1980. Saarilla riittää siis kiveä ihailtavaksi.
+KYSYMYS: Kerro lisää: Ħaġar Qim
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ġgantija (historia)
+Tietoruudun teksti: Ġgantija, jättiläisten paikka, on neoliittinen megaliittinen temppelikompleksi Maltan Gozon saarella Xagħran ylätasangon reunalla, ajalta noin 3600–2500 eaa. Kaksi temppeliä on yli 5 500 vuotta vanhoja, ne ovat vanhimpia Maltan megaliittitemppeleistä ja vanhempia kuin Egyptin pyramidit, ja ne ovat maailman toiseksi vanhimpia yhä olemassa olevia ihmisen rakentamia uskonnollisia rakennelmia Göbekli Tepen jälkeen. Paikallisen gozolaisen kansantarinan mukaan jättiläisnainen Sansuna, joka söi vain härkäpapuja ja hunajaa, rakensi temppelit lapsi olallaan. Eteläinen temppeli on suurempi ja vanhempi, viiden apsiksen temppeli, jonka korkeus on kuusi metriä. Gozon apulaiskuvernööri, everstiluutnantti John Otto Bayer, raivautti paikan raunioista maata vuonna 1827, mutta multa ja löydöt menetettiin tutkimatta, ja rauniot rapautuivat; Unesco hyväksyi temppelit maailmanperintökohteeksi vuonna 1980.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+AIEMPI KYSYMYS: Mitkä muut Maltan temppelit ovat Unescon perintökohteita?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Maltan megaliittiset temppelit on liitetty [[maailmanperintöluetteloon]], ja Ġgantijan lisäksi mukana ovat lähteiden mukaan muun muassa [[Ħaġar Qim]], [[Mnajdra]] ja [[Tarxien]]. En ole varma, mitkä kaikki temppelit luetteloon tarkalleen kuuluvat. Ġgantijan temppelit hyväksyttiin luetteloon vuonna 1980. Saarilla riittää siis kiveä ihailtavaksi.
+KYSYMYS: Kerro lisää: Mnajdra
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ġgantija (historia)
+Tietoruudun teksti: Ġgantija, jättiläisten paikka, on neoliittinen megaliittinen temppelikompleksi Maltan Gozon saarella Xagħran ylätasangon reunalla, ajalta noin 3600–2500 eaa. Kaksi temppeliä on yli 5 500 vuotta vanhoja, ne ovat vanhimpia Maltan megaliittitemppeleistä ja vanhempia kuin Egyptin pyramidit, ja ne ovat maailman toiseksi vanhimpia yhä olemassa olevia ihmisen rakentamia uskonnollisia rakennelmia Göbekli Tepen jälkeen. Paikallisen gozolaisen kansantarinan mukaan jättiläisnainen Sansuna, joka söi vain härkäpapuja ja hunajaa, rakensi temppelit lapsi olallaan. Eteläinen temppeli on suurempi ja vanhempi, viiden apsiksen temppeli, jonka korkeus on kuusi metriä. Gozon apulaiskuvernööri, everstiluutnantti John Otto Bayer, raivautti paikan raunioista maata vuonna 1827, mutta multa ja löydöt menetettiin tutkimatta, ja rauniot rapautuivat; Unesco hyväksyi temppelit maailmanperintökohteeksi vuonna 1980.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+AIEMPI KYSYMYS: Mitkä muut Maltan temppelit ovat Unescon perintökohteita?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Maltan megaliittiset temppelit on liitetty [[maailmanperintöluetteloon]], ja Ġgantijan lisäksi mukana ovat lähteiden mukaan muun muassa [[Ħaġar Qim]], [[Mnajdra]] ja [[Tarxien]]. En ole varma, mitkä kaikki temppelit luetteloon tarkalleen kuuluvat. Ġgantijan temppelit hyväksyttiin luetteloon vuonna 1980. Saarilla riittää siis kiveä ihailtavaksi.
+KYSYMYS: Kerro lisää: Tarxien
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsaxlokk (merenkulku)
+Tietoruudun teksti: Marsaxlokk on pieni, perinteinen kalastajakylä Maltan eteläosassa; se on turistikohde, jonka sunnuntaisin pidettävä kalatori on kuuluisa. Foinikialaiset, kartagolaiset ja roomalaiset käyttivät paikkaa satamana, ja siellä on roomalaisajan sataman jäänteitä. Alun perin Żejtunin kaupunkiin kuulunut kylä tuli omaksi seurakunnakseen 1800-luvun lopulla. Nimi tulee arabian sanasta marsa eli satama ja maltan sanasta xlokk eli kaakko; asukkaita kutsutaan xlukkajreiksi, ja he ovat perinteisesti kalastajia. Suojaisessa sisäsatamassa on perinteisiä luzzi-veneitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Managua — kaupunkilehti / Managua: Kalastajakylä kahden riitapukarin välissä] Managua oli 1800-luvun alussa pieni kalastajakylä Xolotlán-järven rannalla, virallisesti Leal Villa de Santiago de Managua vuodesta 1819. Pääkaupungiksi siitä tuli 1852, kun liittovaltion johtaja Fulgencio Vega ehdotti sitä sovintoratkaisuksi kahden toisiaan vihaavan kaupungin väliin: liberaali León halusi hallita, konservatiivinen Granada ei suostunut siihen. Rakennustyöt kestivät vuosia, ja pääkaupungin asema vakiintui vasta 1850-luvun lopulla. Isoisän matkatessa 1873 Managua oli siis vielä nuori hallintokaupunki, tuskin viisitoistavuotias pääkaupunkina — kalastajakylän maine ei ollut vielä haihtunut, ja järvi näkyi joka kadulta.
+AIEMPI KYSYMYS: Minä päivänä viikosta Marsaxlokkin kalatori pidetään?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Marsaxlokkin kalatori pidetään sunnuntaisin. Tori on kuuluisa, ja se tekee paikasta suositun turistikohteen, vaikka kylä on edelleen perinteinen [[kalastajakylä]] Maltan eteläosassa. Satamassa keinuu värikkäitä [[luzzu]]-kalastusveneitä. Sunnuntaina minä menisin sinne mieluummin ennen turisteja.
+KYSYMYS: Kerro lisää: kalastajakylä
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsaxlokk (merenkulku)
+Tietoruudun teksti: Marsaxlokk on pieni, perinteinen kalastajakylä Maltan eteläosassa; se on turistikohde, jonka sunnuntaisin pidettävä kalatori on kuuluisa. Foinikialaiset, kartagolaiset ja roomalaiset käyttivät paikkaa satamana, ja siellä on roomalaisajan sataman jäänteitä. Alun perin Żejtunin kaupunkiin kuulunut kylä tuli omaksi seurakunnakseen 1800-luvun lopulla. Nimi tulee arabian sanasta marsa eli satama ja maltan sanasta xlokk eli kaakko; asukkaita kutsutaan xlukkajreiksi, ja he ovat perinteisesti kalastajia. Suojaisessa sisäsatamassa on perinteisiä luzzi-veneitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Arki: Vene jonka keulassa on silmät] n. 1900-luvun alku — Marsaxlokkin satamassa värikkäät luzzu-kalastusveneet keinuvat rivissä, ja jokaisen keulassa on kaksi silmää. Silmien arvellaan olevan perua muinaisten foinikialaisten tavasta, ja niiden sanotaan suojelevan kalastajia merellä. Luzzu kehittyi 1900-luvun alussa italialaisesta gozzo-veneestä. Rungon yläkaista, viiksi eli mustaċċ, kertoi ennen omistajan kotipaikan, ja musta viiksi ilmaisi surua perheessä. Uusia luzzuja ei enää rakenneta, mutta muutama sata on yhä käytössä.
+AIEMPI KYSYMYS: Minä päivänä viikosta Marsaxlokkin kalatori pidetään?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Marsaxlokkin kalatori pidetään sunnuntaisin. Tori on kuuluisa, ja se tekee paikasta suositun turistikohteen, vaikka kylä on edelleen perinteinen [[kalastajakylä]] Maltan eteläosassa. Satamassa keinuu värikkäitä [[luzzu]]-kalastusveneitä. Sunnuntaina minä menisin sinne mieluummin ennen turisteja.
+KYSYMYS: Kerro lisää: luzzu
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsaxlokk (merenkulku)
+Tietoruudun teksti: Marsaxlokk on pieni, perinteinen kalastajakylä Maltan eteläosassa; se on turistikohde, jonka sunnuntaisin pidettävä kalatori on kuuluisa. Foinikialaiset, kartagolaiset ja roomalaiset käyttivät paikkaa satamana, ja siellä on roomalaisajan sataman jäänteitä. Alun perin Żejtunin kaupunkiin kuulunut kylä tuli omaksi seurakunnakseen 1800-luvun lopulla. Nimi tulee arabian sanasta marsa eli satama ja maltan sanasta xlokk eli kaakko; asukkaita kutsutaan xlukkajreiksi, ja he ovat perinteisesti kalastajia. Suojaisessa sisäsatamassa on perinteisiä luzzi-veneitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Arki: Vene jonka keulassa on silmät] n. 1900-luvun alku — Marsaxlokkin satamassa värikkäät luzzu-kalastusveneet keinuvat rivissä, ja jokaisen keulassa on kaksi silmää. Silmien arvellaan olevan perua muinaisten foinikialaisten tavasta, ja niiden sanotaan suojelevan kalastajia merellä. Luzzu kehittyi 1900-luvun alussa italialaisesta gozzo-veneestä. Rungon yläkaista, viiksi eli mustaċċ, kertoi ennen omistajan kotipaikan, ja musta viiksi ilmaisi surua perheessä. Uusia luzzuja ei enää rakenneta, mutta muutama sata on yhä käytössä.
+AIEMPI KYSYMYS: Millä nimellä kylän asukkaita kutsutaan?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Marsaxlokkin asukkaita kutsutaan xlukkajreiksi. He ovat perinteisesti [[kalastajia]], ja kylä kuului alun perin [[Żejtunin]] kaupunkiin, kunnes siitä tuli 1800-luvun lopulla oma seurakunta. Ei kovin helppo sana lausua.
+KYSYMYS: Kerro lisää: kalastajia
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsaxlokk (merenkulku)
+Tietoruudun teksti: Marsaxlokk on pieni, perinteinen kalastajakylä Maltan eteläosassa; se on turistikohde, jonka sunnuntaisin pidettävä kalatori on kuuluisa. Foinikialaiset, kartagolaiset ja roomalaiset käyttivät paikkaa satamana, ja siellä on roomalaisajan sataman jäänteitä. Alun perin Żejtunin kaupunkiin kuulunut kylä tuli omaksi seurakunnakseen 1800-luvun lopulla. Nimi tulee arabian sanasta marsa eli satama ja maltan sanasta xlokk eli kaakko; asukkaita kutsutaan xlukkajreiksi, ja he ovat perinteisesti kalastajia. Suojaisessa sisäsatamassa on perinteisiä luzzi-veneitä.
+AIEMPI KYSYMYS: Millä nimellä kylän asukkaita kutsutaan?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Marsaxlokkin asukkaita kutsutaan xlukkajreiksi. He ovat perinteisesti [[kalastajia]], ja kylä kuului alun perin [[Żejtunin]] kaupunkiin, kunnes siitä tuli 1800-luvun lopulla oma seurakunta. Ei kovin helppo sana lausua.
+KYSYMYS: Kerro lisää: Żejtunin
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsaxlokk (merenkulku)
+Tietoruudun teksti: Marsaxlokk on pieni, perinteinen kalastajakylä Maltan eteläosassa; se on turistikohde, jonka sunnuntaisin pidettävä kalatori on kuuluisa. Foinikialaiset, kartagolaiset ja roomalaiset käyttivät paikkaa satamana, ja siellä on roomalaisajan sataman jäänteitä. Alun perin Żejtunin kaupunkiin kuulunut kylä tuli omaksi seurakunnakseen 1800-luvun lopulla. Nimi tulee arabian sanasta marsa eli satama ja maltan sanasta xlokk eli kaakko; asukkaita kutsutaan xlukkajreiksi, ja he ovat perinteisesti kalastajia. Suojaisessa sisäsatamassa on perinteisiä luzzi-veneitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Arki: Vene jonka keulassa on silmät] n. 1900-luvun alku — Marsaxlokkin satamassa värikkäät luzzu-kalastusveneet keinuvat rivissä, ja jokaisen keulassa on kaksi silmää. Silmien arvellaan olevan perua muinaisten foinikialaisten tavasta, ja niiden sanotaan suojelevan kalastajia merellä. Luzzu kehittyi 1900-luvun alussa italialaisesta gozzo-veneestä. Rungon yläkaista, viiksi eli mustaċċ, kertoi ennen omistajan kotipaikan, ja musta viiksi ilmaisi surua perheessä. Uusia luzzuja ei enää rakenneta, mutta muutama sata on yhä käytössä.
+AIEMPI KYSYMYS: Mitä luzzu-veneiden keulan silmät merkitsevät?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Luzzu-veneiden keulassa olevien silmien arvellaan olevan peräisin [[foinikialaisten]] tavasta, ja niiden sanotaan suojelevan kalastajia merellä. Luzzu kehittyi 1900-luvun alussa italialaisesta [[gozzo]]-veneestä. Silmät ovat siis suojelijoita, eivät koristeita. Kyl minäkin kaipaisin sellaiset.
+KYSYMYS: Kerro lisää: foinikialaisten
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsaxlokk (merenkulku)
+Tietoruudun teksti: Marsaxlokk on pieni, perinteinen kalastajakylä Maltan eteläosassa; se on turistikohde, jonka sunnuntaisin pidettävä kalatori on kuuluisa. Foinikialaiset, kartagolaiset ja roomalaiset käyttivät paikkaa satamana, ja siellä on roomalaisajan sataman jäänteitä. Alun perin Żejtunin kaupunkiin kuulunut kylä tuli omaksi seurakunnakseen 1800-luvun lopulla. Nimi tulee arabian sanasta marsa eli satama ja maltan sanasta xlokk eli kaakko; asukkaita kutsutaan xlukkajreiksi, ja he ovat perinteisesti kalastajia. Suojaisessa sisäsatamassa on perinteisiä luzzi-veneitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Arki: Vene jonka keulassa on silmät] n. 1900-luvun alku — Marsaxlokkin satamassa värikkäät luzzu-kalastusveneet keinuvat rivissä, ja jokaisen keulassa on kaksi silmää. Silmien arvellaan olevan perua muinaisten foinikialaisten tavasta, ja niiden sanotaan suojelevan kalastajia merellä. Luzzu kehittyi 1900-luvun alussa italialaisesta gozzo-veneestä. Rungon yläkaista, viiksi eli mustaċċ, kertoi ennen omistajan kotipaikan, ja musta viiksi ilmaisi surua perheessä. Uusia luzzuja ei enää rakenneta, mutta muutama sata on yhä käytössä.
+AIEMPI KYSYMYS: Mitä luzzu-veneiden keulan silmät merkitsevät?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Luzzu-veneiden keulassa olevien silmien arvellaan olevan peräisin [[foinikialaisten]] tavasta, ja niiden sanotaan suojelevan kalastajia merellä. Luzzu kehittyi 1900-luvun alussa italialaisesta [[gozzo]]-veneestä. Silmät ovat siis suojelijoita, eivät koristeita. Kyl minäkin kaipaisin sellaiset.
+KYSYMYS: Kerro lisää: gozzo
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsaxlokk (merenkulku)
+Tietoruudun teksti: Marsaxlokk on pieni, perinteinen kalastajakylä Maltan eteläosassa; se on turistikohde, jonka sunnuntaisin pidettävä kalatori on kuuluisa. Foinikialaiset, kartagolaiset ja roomalaiset käyttivät paikkaa satamana, ja siellä on roomalaisajan sataman jäänteitä. Alun perin Żejtunin kaupunkiin kuulunut kylä tuli omaksi seurakunnakseen 1800-luvun lopulla. Nimi tulee arabian sanasta marsa eli satama ja maltan sanasta xlokk eli kaakko; asukkaita kutsutaan xlukkajreiksi, ja he ovat perinteisesti kalastajia. Suojaisessa sisäsatamassa on perinteisiä luzzi-veneitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+AIEMPI KYSYMYS: Mistä Marsaxlokk-nimi on peräisin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: nimi on kaksiosainen. Marsaxlokk-nimi tulee arabian sanasta marsa, joka tarkoittaa satamaa, ja [[maltan]] sanasta xlokk, joka tarkoittaa kaakkoa. Satamana paikkaa ovat käyttäneet jo [[roomalaiset]] ja heitä aiemmat merenkulkijat, ja alueella on roomalaisajan sataman jäänteitä.
+
+Kaksi kieltä yhdessä sanassa. Ylhäältä katsoen koko Malta on tällainen sekoitus.
+KYSYMYS: Kerro lisää: maltan
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsaxlokk (merenkulku)
+Tietoruudun teksti: Marsaxlokk on pieni, perinteinen kalastajakylä Maltan eteläosassa; se on turistikohde, jonka sunnuntaisin pidettävä kalatori on kuuluisa. Foinikialaiset, kartagolaiset ja roomalaiset käyttivät paikkaa satamana, ja siellä on roomalaisajan sataman jäänteitä. Alun perin Żejtunin kaupunkiin kuulunut kylä tuli omaksi seurakunnakseen 1800-luvun lopulla. Nimi tulee arabian sanasta marsa eli satama ja maltan sanasta xlokk eli kaakko; asukkaita kutsutaan xlukkajreiksi, ja he ovat perinteisesti kalastajia. Suojaisessa sisäsatamassa on perinteisiä luzzi-veneitä.
+AIEMPI KYSYMYS: Mistä Marsaxlokk-nimi on peräisin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: nimi on kaksiosainen. Marsaxlokk-nimi tulee arabian sanasta marsa, joka tarkoittaa satamaa, ja [[maltan]] sanasta xlokk, joka tarkoittaa kaakkoa. Satamana paikkaa ovat käyttäneet jo [[roomalaiset]] ja heitä aiemmat merenkulkijat, ja alueella on roomalaisajan sataman jäänteitä.
+
+Kaksi kieltä yhdessä sanassa. Ylhäältä katsoen koko Malta on tällainen sekoitus.
+KYSYMYS: Kerro lisää: roomalaiset
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsaxlokk (merenkulku)
+Tietoruudun teksti: Marsaxlokk on pieni, perinteinen kalastajakylä Maltan eteläosassa; se on turistikohde, jonka sunnuntaisin pidettävä kalatori on kuuluisa. Foinikialaiset, kartagolaiset ja roomalaiset käyttivät paikkaa satamana, ja siellä on roomalaisajan sataman jäänteitä. Alun perin Żejtunin kaupunkiin kuulunut kylä tuli omaksi seurakunnakseen 1800-luvun lopulla. Nimi tulee arabian sanasta marsa eli satama ja maltan sanasta xlokk eli kaakko; asukkaita kutsutaan xlukkajreiksi, ja he ovat perinteisesti kalastajia. Suojaisessa sisäsatamassa on perinteisiä luzzi-veneitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Rakennukset: Satama joka muuttui toriksi] 1894 — Piranin Tartinin aukio oli ennen kaupungin sisäsatama, jossa pienet kalastusveneet lepäsivät muurien ulkopuolella. Satama ympäröitiin keskiajalla tärkeillä rakennuksilla, mutta viemärin takia viranomaiset päättivät täyttää sen, ja tori rakennettiin vuonna 1894. Aukio sai nimensä viulisti ja säveltäjä Giuseppe Tartinin mukaan, jonka pronssinen patsas paljastettiin 1896 kuvanveistäjä Antonio Dal Zòtton tekemänä. Ainoa alkuperäisen ulkoasunsa säilyttänyt rakennus on 1400-luvun goottilainen Venetsialainen talo. Myöhemmin torin lattiaksi tehtiin arkkitehti Boris Podrecan suunnittelema valkoisesta kivestä muodostettu ellipsi.
+AIEMPI KYSYMYS: Ketkä käyttivät Marsaxlokkin satamaa antiikin aikana?
+AIEMPI VASTAUS (Livia):
+Mmm— tähän on helppo vastata. Paikkaa käyttivät satamana foinikialaiset, kartagolaiset ja [[roomalaiset]], ja alueella on roomalaisajan sataman jäänteitä. Suojaisa [[sisäsatama]] on ollut käytännöllinen paikka laivoille jo kauan. Vanha satama, uudet veneet, ja tän kaiken minä olen nähnyt ylhäältä.
+KYSYMYS: Kerro lisää: sisäsatama
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Comino (luonto · saari)
+Tietoruudun teksti: Comino, maltaksi Kemmuna, on pieni saari Maltan ja Gozon välissä, pinta-alaltaan 3,5 neliökilometriä; nimi tulee kuminansiemenestä, ja pysyviä asukkaita on vain kaksi. Saari on lintusuojelualue ja luonnonsuojelualue, ja sillä on karstimaisema, jossa kasvaa kovalehtistä pensastoa; Santa Marian lahden dyyneillä kasvaa alkuperäistä kasvillisuutta. Antiikin kreikassa saarta kutsuttiin Ephaestiaksi, ja roomalaisaikana sillä asuivat viljelijät; sen jyrkät kalkkikalliot ja luolat olivat keskiajalla merirosvojen suosimia, ja vuosina 1285–1290 saarella asui maanpaossa oleva juutalainen kabbalisti Abraham Abulafia. Johanniittaritarit käyttivät saarta metsästys- ja virkistysmaana, ja salametsästäjää uhkasi kolmen vuoden orjagalleeri.
+AIEMPI KYSYMYS: Mistä Comino on saanut nimensä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Saaren nimi tulee [[kuminasta]], ja maltaksi saari on nimeltään [[Kemmuna]]. Comino on pieni, 3,5 neliökilometrin saari Maltan ja [[Gozon]] välissä, ja siellä on vain kaksi pysyvää asukasta. Pienelle saarelle riittää pieni mauste.
+KYSYMYS: Kerro lisää: kuminasta
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Comino (luonto · saari)
+Tietoruudun teksti: Comino, maltaksi Kemmuna, on pieni saari Maltan ja Gozon välissä, pinta-alaltaan 3,5 neliökilometriä; nimi tulee kuminansiemenestä, ja pysyviä asukkaita on vain kaksi. Saari on lintusuojelualue ja luonnonsuojelualue, ja sillä on karstimaisema, jossa kasvaa kovalehtistä pensastoa; Santa Marian lahden dyyneillä kasvaa alkuperäistä kasvillisuutta. Antiikin kreikassa saarta kutsuttiin Ephaestiaksi, ja roomalaisaikana sillä asuivat viljelijät; sen jyrkät kalkkikalliot ja luolat olivat keskiajalla merirosvojen suosimia, ja vuosina 1285–1290 saarella asui maanpaossa oleva juutalainen kabbalisti Abraham Abulafia. Johanniittaritarit käyttivät saarta metsästys- ja virkistysmaana, ja salametsästäjää uhkasi kolmen vuoden orjagalleeri.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Turkoosi laguuni] nykyään — Maltan ja Gozon välissä on pieni Comino eli Kemmuna. Saaren nimi tulee kumminasta, ja pysyviä asukkaita siellä on vain kaksi. Comino on lintujen suojelualue, ja sen kalkkikivirannat ovat jyrkkiä ja täynnä luolia. Sininen laguuni on Cominon ja Cominotto-luodon välissä oleva kirkasvetinen lahti, jonka vesi hohtaa turkoosina. Keskiajalla saaren luolissa piileskelivät merirosvot, ja myöhemmin ritarit käyttivät saarta metsästysmaanaan ja vartioivat riistaa tiukasti.
+AIEMPI KYSYMYS: Mistä Comino on saanut nimensä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Saaren nimi tulee [[kuminasta]], ja maltaksi saari on nimeltään [[Kemmuna]]. Comino on pieni, 3,5 neliökilometrin saari Maltan ja [[Gozon]] välissä, ja siellä on vain kaksi pysyvää asukasta. Pienelle saarelle riittää pieni mauste.
+KYSYMYS: Kerro lisää: Kemmuna
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Comino (luonto · saari)
+Tietoruudun teksti: Comino, maltaksi Kemmuna, on pieni saari Maltan ja Gozon välissä, pinta-alaltaan 3,5 neliökilometriä; nimi tulee kuminansiemenestä, ja pysyviä asukkaita on vain kaksi. Saari on lintusuojelualue ja luonnonsuojelualue, ja sillä on karstimaisema, jossa kasvaa kovalehtistä pensastoa; Santa Marian lahden dyyneillä kasvaa alkuperäistä kasvillisuutta. Antiikin kreikassa saarta kutsuttiin Ephaestiaksi, ja roomalaisaikana sillä asuivat viljelijät; sen jyrkät kalkkikalliot ja luolat olivat keskiajalla merirosvojen suosimia, ja vuosina 1285–1290 saarella asui maanpaossa oleva juutalainen kabbalisti Abraham Abulafia. Johanniittaritarit käyttivät saarta metsästys- ja virkistysmaana, ja salametsästäjää uhkasi kolmen vuoden orjagalleeri.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Saari, jonka vuokra oli yksi haukka] 1530 — Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian varakuninkaalle. Suurmestari Philippe Villiers de L'Isle-Adam purjehti Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan uudelleen Pyhän Angelon linnakkeeksi.
+- [Malta — maalehti / Historia: Jättiläisten temppeli] n. 3600–2500 eaa. — Gozon Xagħran tasangolla seisoo kiviseinä, jonka lohkareet ovat ihmistä suurempia. Paikallisen tarinan mukaan sen rakensi jättiläisnainen Sansuna, joka söi pelkkiä härkäpapuja ja hunajaa ja kantoi samalla lastaan olallaan. Todellisuudessa Ġgantijan kaksi temppeliä pystytettiin yli 5 500 vuotta sitten, ennen Egyptin pyramideja. Eteläisen temppelin seinä nousee kuuteen metriin, ja se avautuu kaakkoon. Nimi tarkoittaa jättiläisten paikkaa. Kohde liitettiin Unescon maailmanperintöluetteloon vuonna 1980.
+AIEMPI KYSYMYS: Mistä Comino on saanut nimensä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Saaren nimi tulee [[kuminasta]], ja maltaksi saari on nimeltään [[Kemmuna]]. Comino on pieni, 3,5 neliökilometrin saari Maltan ja [[Gozon]] välissä, ja siellä on vain kaksi pysyvää asukasta. Pienelle saarelle riittää pieni mauste.
+KYSYMYS: Kerro lisää: Gozon
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Comino (luonto · saari)
+Tietoruudun teksti: Comino, maltaksi Kemmuna, on pieni saari Maltan ja Gozon välissä, pinta-alaltaan 3,5 neliökilometriä; nimi tulee kuminansiemenestä, ja pysyviä asukkaita on vain kaksi. Saari on lintusuojelualue ja luonnonsuojelualue, ja sillä on karstimaisema, jossa kasvaa kovalehtistä pensastoa; Santa Marian lahden dyyneillä kasvaa alkuperäistä kasvillisuutta. Antiikin kreikassa saarta kutsuttiin Ephaestiaksi, ja roomalaisaikana sillä asuivat viljelijät; sen jyrkät kalkkikalliot ja luolat olivat keskiajalla merirosvojen suosimia, ja vuosina 1285–1290 saarella asui maanpaossa oleva juutalainen kabbalisti Abraham Abulafia. Johanniittaritarit käyttivät saarta metsästys- ja virkistysmaana, ja salametsästäjää uhkasi kolmen vuoden orjagalleeri.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Ruoka: Joulun hunajarengas] perinteisesti joulu — Qagħaq tal-għasel on rengas, jonka sisällä on tumma täyte. Taikinaan tehdään viiltoja, joista täyte pursuaa esiin. Täyte valmistetaan perinteisesti hunajasta, melassista, aniksesta, kanelista ja neilikasta, ja osa lisää mukaan kaakaota. Herkkua leivottiin alun perin jouluksi, mutta siitä tuli niin suosittu, että sitä tehdään ympäri vuoden, eivätkä monet enää tiedä sen joulutaustaa. Rengas symboloi ikuista onnea, ja ulos valuva täyte kertoo, että hyvää riittää yllin kyllin.
+- [Vanuatu — maalehti / Luonto: Lintu, joka ei haudo munaansa] Vanuatun megapodi elää vain tässä maassa, alankometsissä, ja sen kaksi tyyppiyksilöä kerättiin Efatelta heinä- ja syyskuussa 1877. Megapodit eivät haudo munia ruumiinlämmöllä vaan hautaavat ne: osa suvun linnuista kasaa mätänevästä kasvimassasta kekoja, joiden lämpöä koiras säätää lisäämällä ja poistamalla lehtiä, osa käyttää maan omaa lämpöä ja osa auringon kuumentamaa hiekkaa. Muna on poikkeuksellisen keltuaisvaltainen, ja poikanen kuoriutuu kypsempänä kuin yksikään toinen lintu: silmät auki, siipisulat valmiina ja juoksukykyisenä samana päivänä.
+AIEMPI KYSYMYS: Kuinka monta pysyvää asukasta Cominolla on?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: kaksi. Cominolla on pysyvästi vain kaksi asukasta. Saari on [[lintusuojelualue]] ja luonnonsuojelualue, ja sen kalkkikivirannat ovat jyrkkiä ja täynnä luolia. Cominon ja Cominotto-luodon välissä on [[Sininen laguuni]], jonka vesi hohtaa turkoosina. Kaksi asukasta, siinä on kyl hiljaista.
+KYSYMYS: Kerro lisää: lintusuojelualue
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Comino (luonto · saari)
+Tietoruudun teksti: Comino, maltaksi Kemmuna, on pieni saari Maltan ja Gozon välissä, pinta-alaltaan 3,5 neliökilometriä; nimi tulee kuminansiemenestä, ja pysyviä asukkaita on vain kaksi. Saari on lintusuojelualue ja luonnonsuojelualue, ja sillä on karstimaisema, jossa kasvaa kovalehtistä pensastoa; Santa Marian lahden dyyneillä kasvaa alkuperäistä kasvillisuutta. Antiikin kreikassa saarta kutsuttiin Ephaestiaksi, ja roomalaisaikana sillä asuivat viljelijät; sen jyrkät kalkkikalliot ja luolat olivat keskiajalla merirosvojen suosimia, ja vuosina 1285–1290 saarella asui maanpaossa oleva juutalainen kabbalisti Abraham Abulafia. Johanniittaritarit käyttivät saarta metsästys- ja virkistysmaana, ja salametsästäjää uhkasi kolmen vuoden orjagalleeri.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Turkoosi laguuni] nykyään — Maltan ja Gozon välissä on pieni Comino eli Kemmuna. Saaren nimi tulee kumminasta, ja pysyviä asukkaita siellä on vain kaksi. Comino on lintujen suojelualue, ja sen kalkkikivirannat ovat jyrkkiä ja täynnä luolia. Sininen laguuni on Cominon ja Cominotto-luodon välissä oleva kirkasvetinen lahti, jonka vesi hohtaa turkoosina. Keskiajalla saaren luolissa piileskelivät merirosvot, ja myöhemmin ritarit käyttivät saarta metsästysmaanaan ja vartioivat riistaa tiukasti.
+AIEMPI KYSYMYS: Kuinka monta pysyvää asukasta Cominolla on?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: kaksi. Cominolla on pysyvästi vain kaksi asukasta. Saari on [[lintusuojelualue]] ja luonnonsuojelualue, ja sen kalkkikivirannat ovat jyrkkiä ja täynnä luolia. Cominon ja Cominotto-luodon välissä on [[Sininen laguuni]], jonka vesi hohtaa turkoosina. Kaksi asukasta, siinä on kyl hiljaista.
+KYSYMYS: Kerro lisää: Sininen laguuni
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Comino (luonto · saari)
+Tietoruudun teksti: Comino, maltaksi Kemmuna, on pieni saari Maltan ja Gozon välissä, pinta-alaltaan 3,5 neliökilometriä; nimi tulee kuminansiemenestä, ja pysyviä asukkaita on vain kaksi. Saari on lintusuojelualue ja luonnonsuojelualue, ja sillä on karstimaisema, jossa kasvaa kovalehtistä pensastoa; Santa Marian lahden dyyneillä kasvaa alkuperäistä kasvillisuutta. Antiikin kreikassa saarta kutsuttiin Ephaestiaksi, ja roomalaisaikana sillä asuivat viljelijät; sen jyrkät kalkkikalliot ja luolat olivat keskiajalla merirosvojen suosimia, ja vuosina 1285–1290 saarella asui maanpaossa oleva juutalainen kabbalisti Abraham Abulafia. Johanniittaritarit käyttivät saarta metsästys- ja virkistysmaana, ja salametsästäjää uhkasi kolmen vuoden orjagalleeri.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Turkoosi laguuni] nykyään — Maltan ja Gozon välissä on pieni Comino eli Kemmuna. Saaren nimi tulee kumminasta, ja pysyviä asukkaita siellä on vain kaksi. Comino on lintujen suojelualue, ja sen kalkkikivirannat ovat jyrkkiä ja täynnä luolia. Sininen laguuni on Cominon ja Cominotto-luodon välissä oleva kirkasvetinen lahti, jonka vesi hohtaa turkoosina. Keskiajalla saaren luolissa piileskelivät merirosvot, ja myöhemmin ritarit käyttivät saarta metsästysmaanaan ja vartioivat riistaa tiukasti.
+AIEMPI KYSYMYS: Mikä on Sininen laguuni?
+AIEMPI VASTAUS (Livia):
+Katotaas. Sininen laguuni on Cominon ja [[Cominotto]]-luodon välissä oleva kirkasvetinen lahti, jonka vesi hohtaa turkoosina. Lahti sijaitsee [[Maltan]] ja Gozon välisellä saarella, joka on lintujen suojelualue, ja saaren rannat ovat jyrkkiä ja täynnä luolia. Lahti on siis kuuluisa väristään eikä rakennuksistaan.
+
+Ylhäältä katsoen vesi näyttää niin kirkkaalta, että kala voisi luulla lentävänsä.
+KYSYMYS: Kerro lisää: Cominotto
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Comino (luonto · saari)
+Tietoruudun teksti: Comino, maltaksi Kemmuna, on pieni saari Maltan ja Gozon välissä, pinta-alaltaan 3,5 neliökilometriä; nimi tulee kuminansiemenestä, ja pysyviä asukkaita on vain kaksi. Saari on lintusuojelualue ja luonnonsuojelualue, ja sillä on karstimaisema, jossa kasvaa kovalehtistä pensastoa; Santa Marian lahden dyyneillä kasvaa alkuperäistä kasvillisuutta. Antiikin kreikassa saarta kutsuttiin Ephaestiaksi, ja roomalaisaikana sillä asuivat viljelijät; sen jyrkät kalkkikalliot ja luolat olivat keskiajalla merirosvojen suosimia, ja vuosina 1285–1290 saarella asui maanpaossa oleva juutalainen kabbalisti Abraham Abulafia. Johanniittaritarit käyttivät saarta metsästys- ja virkistysmaana, ja salametsästäjää uhkasi kolmen vuoden orjagalleeri.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+AIEMPI KYSYMYS: Mikä on Sininen laguuni?
+AIEMPI VASTAUS (Livia):
+Katotaas. Sininen laguuni on Cominon ja [[Cominotto]]-luodon välissä oleva kirkasvetinen lahti, jonka vesi hohtaa turkoosina. Lahti sijaitsee [[Maltan]] ja Gozon välisellä saarella, joka on lintujen suojelualue, ja saaren rannat ovat jyrkkiä ja täynnä luolia. Lahti on siis kuuluisa väristään eikä rakennuksistaan.
+
+Ylhäältä katsoen vesi näyttää niin kirkkaalta, että kala voisi luulla lentävänsä.
+KYSYMYS: Kerro lisää: Maltan
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Comino (luonto · saari)
+Tietoruudun teksti: Comino, maltaksi Kemmuna, on pieni saari Maltan ja Gozon välissä, pinta-alaltaan 3,5 neliökilometriä; nimi tulee kuminansiemenestä, ja pysyviä asukkaita on vain kaksi. Saari on lintusuojelualue ja luonnonsuojelualue, ja sillä on karstimaisema, jossa kasvaa kovalehtistä pensastoa; Santa Marian lahden dyyneillä kasvaa alkuperäistä kasvillisuutta. Antiikin kreikassa saarta kutsuttiin Ephaestiaksi, ja roomalaisaikana sillä asuivat viljelijät; sen jyrkät kalkkikalliot ja luolat olivat keskiajalla merirosvojen suosimia, ja vuosina 1285–1290 saarella asui maanpaossa oleva juutalainen kabbalisti Abraham Abulafia. Johanniittaritarit käyttivät saarta metsästys- ja virkistysmaana, ja salametsästäjää uhkasi kolmen vuoden orjagalleeri.
+AIEMPI KYSYMYS: Kuka Abraham Abulafia oli?
+AIEMPI VASTAUS (Livia):
+No jopas. Abraham Abulafia oli 1200-luvun juutalainen mystikko, joka tunnetaan [[kabbalan]] kirjoittajana. Lähteiden mukaan hän asui maanpaossa Cominolla 1200-luvun lopulla, ja tuohon aikaan saarta käyttivät myös [[merirosvot]], joita luolat suojasivat. Pienestä saaresta on siis löytynyt paikka sekä oppineelle että rosvoille.
+KYSYMYS: Kerro lisää: kabbalan
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Comino (luonto · saari)
+Tietoruudun teksti: Comino, maltaksi Kemmuna, on pieni saari Maltan ja Gozon välissä, pinta-alaltaan 3,5 neliökilometriä; nimi tulee kuminansiemenestä, ja pysyviä asukkaita on vain kaksi. Saari on lintusuojelualue ja luonnonsuojelualue, ja sillä on karstimaisema, jossa kasvaa kovalehtistä pensastoa; Santa Marian lahden dyyneillä kasvaa alkuperäistä kasvillisuutta. Antiikin kreikassa saarta kutsuttiin Ephaestiaksi, ja roomalaisaikana sillä asuivat viljelijät; sen jyrkät kalkkikalliot ja luolat olivat keskiajalla merirosvojen suosimia, ja vuosina 1285–1290 saarella asui maanpaossa oleva juutalainen kabbalisti Abraham Abulafia. Johanniittaritarit käyttivät saarta metsästys- ja virkistysmaana, ja salametsästäjää uhkasi kolmen vuoden orjagalleeri.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Panama — kaupunkilehti / Kannaksen oikotie: Kun karanneet orjat ja merirosvot löysivät toisensa] Espanjan hallinta kannaksesta oli epätäydellinen, ja se teki hopeareitistä houkuttelevan saaliin. Merirosvot alkoivat hyökätä rannikolle noin 1560, ja Francis Drake ryösti aluetta 1572–73. Samaan aikaan karanneet orjat — cimarronit — elivät omissa yhteisöissään kannaksen sisämaassa ja saarilla ja tekivät ajoittain yhteistyötä merirosvojen kanssa. Vuonna 1582 Espanja teki cimarronien kanssa sopimuksen, joka takasi näille vapauden vastineeksi sotilaallisesta tuesta. Suojaksi Espanja rakensi Chagres-joen suulle San Lorenzon linnakkeen, joka valmistui 1601.
+AIEMPI KYSYMYS: Kuka Abraham Abulafia oli?
+AIEMPI VASTAUS (Livia):
+No jopas. Abraham Abulafia oli 1200-luvun juutalainen mystikko, joka tunnetaan [[kabbalan]] kirjoittajana. Lähteiden mukaan hän asui maanpaossa Cominolla 1200-luvun lopulla, ja tuohon aikaan saarta käyttivät myös [[merirosvot]], joita luolat suojasivat. Pienestä saaresta on siis löytynyt paikka sekä oppineelle että rosvoille.
+KYSYMYS: Kerro lisää: merirosvot
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Comino (luonto · saari)
+Tietoruudun teksti: Comino, maltaksi Kemmuna, on pieni saari Maltan ja Gozon välissä, pinta-alaltaan 3,5 neliökilometriä; nimi tulee kuminansiemenestä, ja pysyviä asukkaita on vain kaksi. Saari on lintusuojelualue ja luonnonsuojelualue, ja sillä on karstimaisema, jossa kasvaa kovalehtistä pensastoa; Santa Marian lahden dyyneillä kasvaa alkuperäistä kasvillisuutta. Antiikin kreikassa saarta kutsuttiin Ephaestiaksi, ja roomalaisaikana sillä asuivat viljelijät; sen jyrkät kalkkikalliot ja luolat olivat keskiajalla merirosvojen suosimia, ja vuosina 1285–1290 saarella asui maanpaossa oleva juutalainen kabbalisti Abraham Abulafia. Johanniittaritarit käyttivät saarta metsästys- ja virkistysmaana, ja salametsästäjää uhkasi kolmen vuoden orjagalleeri.
+AIEMPI KYSYMYS: Millaista kasvillisuutta Cominolla kasvaa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Cominon maisema on [[karstimaisema]], jossa kasvaa kovalehtistä pensastoa. [[Santa Marian lahden]] dyyneillä kasvaa alkuperäistä kasvillisuutta, jota suojellaan. Saari on lintusuojelualue ja luonnonsuojelualue. Ei kovin lehtevä paikka, mutta lintu viihtyy siellä silti.
+KYSYMYS: Kerro lisää: karstimaisema
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Comino (luonto · saari)
+Tietoruudun teksti: Comino, maltaksi Kemmuna, on pieni saari Maltan ja Gozon välissä, pinta-alaltaan 3,5 neliökilometriä; nimi tulee kuminansiemenestä, ja pysyviä asukkaita on vain kaksi. Saari on lintusuojelualue ja luonnonsuojelualue, ja sillä on karstimaisema, jossa kasvaa kovalehtistä pensastoa; Santa Marian lahden dyyneillä kasvaa alkuperäistä kasvillisuutta. Antiikin kreikassa saarta kutsuttiin Ephaestiaksi, ja roomalaisaikana sillä asuivat viljelijät; sen jyrkät kalkkikalliot ja luolat olivat keskiajalla merirosvojen suosimia, ja vuosina 1285–1290 saarella asui maanpaossa oleva juutalainen kabbalisti Abraham Abulafia. Johanniittaritarit käyttivät saarta metsästys- ja virkistysmaana, ja salametsästäjää uhkasi kolmen vuoden orjagalleeri.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kohdekartta / Kohdekartta: Pyhän Marian katedraali] 1889 alkaen Pyhän Marian katedraali on Port Moresbyn arkkihiippakunnan pääkirkko ja omistettu Neitsyt Marialle. Ulkoseinät ovat vaaleansiniset, ja pääsisäänkäynnin toisella puolen kohoaa valkoinen torni. Hiippakunta on kirkkoa vanhempi, ja sen nimi on vaihtunut kolmesti. Se perustettiin 10. toukokuuta 1889 Uuden-Guinean apostoliseksi vikariaatiksi, sai 1922 nimen Papuan vikariaatti ja 1946 Port Moresbyn vikariaatti; arkkihiippakunnaksi se korotettiin 15. marraskuuta 1966. Vuonna 2023 alueella oli 22 seurakuntaa ja noin 233 000 katolista eli 29 prosenttia väestöstä. Paavi Johannes Paavali II vieraili katedraalissa toukokuussa 1984 ja palasi hiippakuntaan tammikuussa 1995. Paavi Franciscus vi…
+- [Magadan — kaupunkilehti / Magadan: Sitsikaupunki kahden lahden välissä] Ivan Molodyhin vesitutkimusretkikunta suositteli Nagajevanlahtea sataman paikaksi ja tienrakennuksen lähtökohdaksi, ja Olan piirin toimeenpaneva komitea päätti 13. lokakuuta 1928 rakentaa lahden rannalle kulttuuriaseman. Asuintalot, koulu, sairaala ja asuntola alkoivat nousta 22. kesäkuuta 1929. Marraskuussa 1931 höyrylaiva Slavstroi toi Kaukoidän armeijasta kotiutettuja miehiä, ja asukasluku nousi kertaheitolla viidestäsadasta kahteentuhanteen. Telttojen kaupunginosaa sanottiin sitsikaupungiksi, ja sen telttakatu nimettiin armeijan komentajan Vasili Bljuherin mukaan; nykyään se on Nagajevan katu. Kaupunkioikeudet tulivat 14. heinäkuuta 1939.
+AIEMPI KYSYMYS: Millaista kasvillisuutta Cominolla kasvaa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Cominon maisema on [[karstimaisema]], jossa kasvaa kovalehtistä pensastoa. [[Santa Marian lahden]] dyyneillä kasvaa alkuperäistä kasvillisuutta, jota suojellaan. Saari on lintusuojelualue ja luonnonsuojelualue. Ei kovin lehtevä paikka, mutta lintu viihtyy siellä silti.
+KYSYMYS: Kerro lisää: Santa Marian lahden
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglin kalliot (luonto · vuori)
+Tietoruudun teksti: Dingli on kylä Maltan länsiosassa noin 13 kilometrin päässä Vallettasta, ylätasangolla noin 230 metriä merenpinnan yläpuolella, lähellä Maltan korkeinta kohtaa. Kalliot tarjoavat näkymän avomerelle pienelle, asumattomalle Filfla-saarelle sekä Buskettin puutarhoille ja Verdalan palatsille. Nimen arvellaan tulevan englantilaisesta Johanniittaritarikunnan ritarista Sir Thomas Dingleystä, jolla oli paljon maata ympäristössä. Dinglin alueelta on löydetty foinikialais-, kartagolais- ja roomalaisaikaisia kalliohautoja sekä roomalaisia kylpylöitä. 1500-luvun alkuun asti lähellä oli pieni Ħal Tartarnin kylä, jonka asukkaat siirtyivät lähemmäs peltoja, ja uusi kylä kasvoi nykyiseksi Dingliksi; seurakunta perustettiin vuonna 1678.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+AIEMPI KYSYMYS: Minkä englantilaisen ritarin mukaan Dingli on nimetty?
+AIEMPI VASTAUS (Livia):
+Just niin, hyvä kysymys. Kylän nimen uskotaan tulevan englantilaisesta [[Johanniittaritarikunnan]] ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista. Dingli sijaitsee [[Maltan]] länsiosassa ylätasangolla noin 230 metrin korkeudessa. Nimen alkuperä on siis uskomus eikä aivan varma tieto.
+KYSYMYS: Kerro lisää: Johanniittaritarikunnan
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglin kalliot (luonto · vuori)
+Tietoruudun teksti: Dingli on kylä Maltan länsiosassa noin 13 kilometrin päässä Vallettasta, ylätasangolla noin 230 metriä merenpinnan yläpuolella, lähellä Maltan korkeinta kohtaa. Kalliot tarjoavat näkymän avomerelle pienelle, asumattomalle Filfla-saarelle sekä Buskettin puutarhoille ja Verdalan palatsille. Nimen arvellaan tulevan englantilaisesta Johanniittaritarikunnan ritarista Sir Thomas Dingleystä, jolla oli paljon maata ympäristössä. Dinglin alueelta on löydetty foinikialais-, kartagolais- ja roomalaisaikaisia kalliohautoja sekä roomalaisia kylpylöitä. 1500-luvun alkuun asti lähellä oli pieni Ħal Tartarnin kylä, jonka asukkaat siirtyivät lähemmäs peltoja, ja uusi kylä kasvoi nykyiseksi Dingliksi; seurakunta perustettiin vuonna 1678.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+AIEMPI KYSYMYS: Minkä englantilaisen ritarin mukaan Dingli on nimetty?
+AIEMPI VASTAUS (Livia):
+Just niin, hyvä kysymys. Kylän nimen uskotaan tulevan englantilaisesta [[Johanniittaritarikunnan]] ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista. Dingli sijaitsee [[Maltan]] länsiosassa ylätasangolla noin 230 metrin korkeudessa. Nimen alkuperä on siis uskomus eikä aivan varma tieto.
+KYSYMYS: Kerro lisää: Maltan
