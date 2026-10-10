@@ -1,0 +1,69 @@
+================ KOHTA 6 (kohde:castel-mimi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel Mimi (ruoka)
+Tietoruudun teksti: Castel Mimi on viinitila ja historiallinen rakennus Bulboacan kylässä Anenii Noin piirissä Moldovassa. Bessarabialainen valtiomies ja viininviljelijä Constantin Mimi rakennutti sen 1800-luvun lopulla, ja työ valmistui vuosina 1900–1901 (jotkin lähteet mainitsevat jo 1893). Ranskalaisista esikuvista ammentavan uusklassisen kaksikerroksisen rungon sanotaan tehdyn raudoitetusta betonista, mikä oli aikanaan uutta. Kellarissa oli tynnyreissä noin 300 000 litraa viiniä. Kunnostus alkoi 2011 ja valmistui syyskuussa 2016; nyt paikka toimii matkailukohteena.
+
+### 6.1
+KYSYMYS: Kuka rakennutti Castel Mimin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel Mimi (ruoka)
+Tietoruudun teksti: Castel Mimi on viinitila ja historiallinen rakennus Bulboacan kylässä Anenii Noin piirissä Moldovassa. Bessarabialainen valtiomies ja viininviljelijä Constantin Mimi rakennutti sen 1800-luvun lopulla, ja työ valmistui vuosina 1900–1901 (jotkin lähteet mainitsevat jo 1893). Ranskalaisista esikuvista ammentavan uusklassisen kaksikerroksisen rungon sanotaan tehdyn raudoitetusta betonista, mikä oli aikanaan uutta. Kellarissa oli tynnyreissä noin 300 000 litraa viiniä. Kunnostus alkoi 2011 ja valmistui syyskuussa 2016; nyt paikka toimii matkailukohteena.
+
+### 6.2
+KYSYMYS: Minä vuonna Castel Mimin kunnostus valmistui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel Mimi (ruoka)
+Tietoruudun teksti: Castel Mimi on viinitila ja historiallinen rakennus Bulboacan kylässä Anenii Noin piirissä Moldovassa. Bessarabialainen valtiomies ja viininviljelijä Constantin Mimi rakennutti sen 1800-luvun lopulla, ja työ valmistui vuosina 1900–1901 (jotkin lähteet mainitsevat jo 1893). Ranskalaisista esikuvista ammentavan uusklassisen kaksikerroksisen rungon sanotaan tehdyn raudoitetusta betonista, mikä oli aikanaan uutta. Kellarissa oli tynnyreissä noin 300 000 litraa viiniä. Kunnostus alkoi 2011 ja valmistui syyskuussa 2016; nyt paikka toimii matkailukohteena.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:hahmotelma-orheiul-vechi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orheiul Vechi (historia)
+Tietoruudun teksti: Orheiul Vechi ("Vanha Orhei") on kalkkikivijyrkänteelle Răutin joen mutkaan kerrostunut muinaismuistoalue: geto-daakialainen linnoitus, keskiaikainen Moldovan kaupunki, Kultaisen ordan asutus ja 1400-luvulla kallioon louhitut luolaluostarit, joihin munkit vetäytyivät turvaan Krimin tataarien ryöstöretkiltä. Osa kaupungista hylättiin vuosisatojen kuluessa.
+
+### 7.1
+KYSYMYS: Miltä Orheiul Vechi näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orheiul Vechi (historia)
+Tietoruudun teksti: Orheiul Vechi ("Vanha Orhei") on kalkkikivijyrkänteelle Răutin joen mutkaan kerrostunut muinaismuistoalue: geto-daakialainen linnoitus, keskiaikainen Moldovan kaupunki, Kultaisen ordan asutus ja 1400-luvulla kallioon louhitut luolaluostarit, joihin munkit vetäytyivät turvaan Krimin tataarien ryöstöretkiltä. Osa kaupungista hylättiin vuosisatojen kuluessa.
+
+### 7.2
+KYSYMYS: Miksi Orheiul Vechi on nykyään raunioina?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orheiul Vechi (historia)
+Tietoruudun teksti: Orheiul Vechi ("Vanha Orhei") on kalkkikivijyrkänteelle Răutin joen mutkaan kerrostunut muinaismuistoalue: geto-daakialainen linnoitus, keskiaikainen Moldovan kaupunki, Kultaisen ordan asutus ja 1400-luvulla kallioon louhitut luolaluostarit, joihin munkit vetäytyivät turvaan Krimin tataarien ryöstöretkiltä. Osa kaupungista hylättiin vuosisatojen kuluessa.
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
