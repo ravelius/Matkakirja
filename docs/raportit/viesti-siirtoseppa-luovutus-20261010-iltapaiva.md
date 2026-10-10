@@ -29,6 +29,11 @@ Proto-haarat (peilit peili/proto/siirtoseppa-<haara>), ketju 99b9fead3 → a98b7
   ei ylitetä epäilyn aikana, RauhallinenYlitys tyhjä; piste 69 reilu ajoituskohta, peliin ei muutosta, ei Pulun vihjettä).
 - juna 179: 5f4b1f616 (ReittiKulku Ytimeen, haara hahmot-reittipaikka 8775705c9:n päällä), eecbb6474 (huoneet 2–4 laajaan testiin),
   674f3d589 (lokivaroitus puuttuvasta pintanimestä), 187359ae0 (tarkistuspiste tikkaiden yläpäähän; harja 89–91 → 88).
+- juna 179 jatkoa (kärki 0771b2e05): 51029519e (torkkuva vartija ei valpastu muiden kiinniotoista, pahin menetys 99 → 63 s, LisaMaxS 80),
+  1f7429f6b (avainesineiden tarkistuspisteet T6b/T6c/T8a), 0771b2e05 (tarjotin palaa kiinnijäännissä pöydälle: jumi pois).
+- KESKEN v47b: haara siirtoseppa/v47b d3378989b (WIP, EI JUNAAN): LR:n 02d3f613/61e0938f hylätty (1499-asu ja kappalaisen kadet puuttuivat).
+  LR vie uudelleen v45h:lla → kytke uudet hashit (PelattavaPala + kultaiset v47b), Linssit, sitten Julkaisijalta käännös- ja simuvuoro:
+  rannan kuvapari (ennen | jälkeen, sama kulma, versiot kuvaan) PT:lle; ennen-kuva voi olla todistus-vaiheet-v46z-176-b/kuvat/v06-1499.png.
 - Web PR ravelius/Matkakirja#4351 (pintapankkiin rantakivi + rantakivi(-puoli).jpg = kallio × 0,66): Julkaisija mergeää; ilmoita LR:lle mainissa → LR vie.
 - Laaja testi: `OLAVINLINNA_LAAJA=1 ./kaanna.sh KiinniJokaPisteessa` aina kun Olavinlinnan paketti, reitti tai vartijat muuttuvat (~170 s).
 - OPITTUA: natiivissa pinnan pohjakuva korvaa värin (tila B), COLOR_0 = AO/lämpö/satunnainen; kävelyosan valo atlaksesta, historiassa tasainen 0,42.
