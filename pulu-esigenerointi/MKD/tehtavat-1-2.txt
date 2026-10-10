@@ -1,0 +1,92 @@
+================ KOHTA 6 (kohde:kokinon-observatorio) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kokino (historia)
+Tietoruudun teksti: Kokino on pronssikautinen arkeologinen kohde Tatićev Kamen -huipulla Pohjois-Makedoniassa, noin 30 kilometrin päässä Kumanovosta. Alue sijaitsee 1 010–1 030 metrin korkeudessa, ja löydöt ulottuvat 1800-luvulta eaa. aina 600-luvulle eaa. Kahdella tasanteella sijaitseva kalliokohde tulkitaan pronssikautiseksi aurinko-observatorioksi, ja alemmalla tasanteella on neljä kiviistuinta. Tulkinta on kuitenkin kiistanalainen: asiantuntijoiden mukaan tähtäyspisteitä ja merkkejä on niin paljon, että suuntaukset voivat olla sattumaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Samarkand — kohdekartta / Kohdekartta: Ulugbekin observatorio] 1420-luku Ulugbek oli Timurin pojanpoika ja Samarkandin hallitsija, joka oli ennen kaikkea tähtitieteilijä. Hän kutsui kaupunkiin yli kuusikymmentä matemaatikkoa ja tähtitieteilijää, ja observatorion perustukset laskettiin 1420-luvun alkupuolella. Rakennus valmistui noin vuonna 1428. Se oli lieriön muotoinen, halkaisijaltaan 46 metriä ja korkeudeltaan kolmisenkymmentä metriä, ja se seisoi kukkulalla parikymmentä metriä ympäristöään ylempänä. Keskellä lieriötä oli Fakhri-sekstantti, jonka säde oli 40,04 metriä — aikansa suurin tähtitieteellinen mittalaite. Niin suuri kaari ei olisi mahtunut rakennuksen sisään pystysuunnassa, joten se rakennettiin osittain maan alle noin kahden metrin levyise…
+- [Quito — kaupunkilehti / Tiede: Observatorio joka kantoi retkikunnan perintöä eteenpäin] Quiton observatorio, joka avattiin La Alameda -puistoon 1873, ei syntynyt tyhjästä: se jatkoi tiedeperinnettä, jonka ranskalais-espanjalainen retkikunta oli aloittanut 130 vuotta aiemmin. Kokoelmissa on 1800-luvun mittalaitteita, muun muassa Repsoldin meridiaanipiiri ja 1875 Münchenissä valmistettu 24-senttinen Merzin kaukoputki. 1900-luvun alussa toinen ranskalainen retkikunta työskenteli samoissa tiloissa vahvistaakseen vanhat mittaustulokset – sen vuosiksi lähteet antavat joko 1901–1906 tai 1902–1914.
+
+### 6.1
+KYSYMYS: Miltä ajalta Kokinon löydöt ovat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kokino (historia)
+Tietoruudun teksti: Kokino on pronssikautinen arkeologinen kohde Tatićev Kamen -huipulla Pohjois-Makedoniassa, noin 30 kilometrin päässä Kumanovosta. Alue sijaitsee 1 010–1 030 metrin korkeudessa, ja löydöt ulottuvat 1800-luvulta eaa. aina 600-luvulle eaa. Kahdella tasanteella sijaitseva kalliokohde tulkitaan pronssikautiseksi aurinko-observatorioksi, ja alemmalla tasanteella on neljä kiviistuinta. Tulkinta on kuitenkin kiistanalainen: asiantuntijoiden mukaan tähtäyspisteitä ja merkkejä on niin paljon, että suuntaukset voivat olla sattumaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Ruoka: Kokin resepti syntyi Moskovan hienoimmassa ravintolassa] 1860-luku — Ranskalais-belgialainen kokki Lucien Olivier loi 1860-luvulla Moskovan Hermitage-ravintolan tunnusruoan: majoneesilla sidotun salaatin, jossa oli pyytä, rapujen pyrstöjä, kaviaaria, kapriksia ja oliiveja. Olivier piti tarkan reseptin salassa eikä paljastanut sitä edes keittiöhenkilökunnalleen, ja vasta hänen kuolemansa jälkeen vuonna 1894 julkaistiin versio ohjeesta. Vallankumouksen jälkeen kalliit ja harvinaiset aineet vaihtuivat halvempiin: pyystä tuli kanaa tai keittomakkaraa, rapujen pyrstöistä keitettyjä kananmunia ja oliiveista suolakurkkua ja herneitä. Tästä yksinkertaistetusta versiosta tuli neuvostoajan uudenvuodenpöydän vakioruoka, jota ilman juhla ei ollut täydellinen.
+
+### 6.2
+KYSYMYS: Miksi observatoriotulkinta on kiistanalainen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kokino (historia)
+Tietoruudun teksti: Kokino on pronssikautinen arkeologinen kohde Tatićev Kamen -huipulla Pohjois-Makedoniassa, noin 30 kilometrin päässä Kumanovosta. Alue sijaitsee 1 010–1 030 metrin korkeudessa, ja löydöt ulottuvat 1800-luvulta eaa. aina 600-luvulle eaa. Kahdella tasanteella sijaitseva kalliokohde tulkitaan pronssikautiseksi aurinko-observatorioksi, ja alemmalla tasanteella on neljä kiviistuinta. Tulkinta on kuitenkin kiistanalainen: asiantuntijoiden mukaan tähtäyspisteitä ja merkkejä on niin paljon, että suuntaukset voivat olla sattumaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Samarkand — kohdekartta / Kohdekartta: Ulugbekin observatorio] 1420-luku Ulugbek oli Timurin pojanpoika ja Samarkandin hallitsija, joka oli ennen kaikkea tähtitieteilijä. Hän kutsui kaupunkiin yli kuusikymmentä matemaatikkoa ja tähtitieteilijää, ja observatorion perustukset laskettiin 1420-luvun alkupuolella. Rakennus valmistui noin vuonna 1428. Se oli lieriön muotoinen, halkaisijaltaan 46 metriä ja korkeudeltaan kolmisenkymmentä metriä, ja se seisoi kukkulalla parikymmentä metriä ympäristöään ylempänä. Keskellä lieriötä oli Fakhri-sekstantti, jonka säde oli 40,04 metriä — aikansa suurin tähtitieteellinen mittalaite. Niin suuri kaari ei olisi mahtunut rakennuksen sisään pystysuunnassa, joten se rakennettiin osittain maan alle noin kahden metrin levyise…
+- [Quito — kaupunkilehti / Tiede: Observatorio joka kantoi retkikunnan perintöä eteenpäin] Quiton observatorio, joka avattiin La Alameda -puistoon 1873, ei syntynyt tyhjästä: se jatkoi tiedeperinnettä, jonka ranskalais-espanjalainen retkikunta oli aloittanut 130 vuotta aiemmin. Kokoelmissa on 1800-luvun mittalaitteita, muun muassa Repsoldin meridiaanipiiri ja 1875 Münchenissä valmistettu 24-senttinen Merzin kaukoputki. 1900-luvun alussa toinen ranskalainen retkikunta työskenteli samoissa tiloissa vahvistaakseen vanhat mittaustulokset – sen vuosiksi lähteet antavat joko 1901–1906 tai 1902–1914.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:hahmotelma-skopjen-vanha-rautatieasema) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skopjen vanha rautatieasema (historia)
+Tietoruudun teksti: Skopjen keskusasema oli 1900-luvun puolivälissä Jugoslavian vilkkaimpia rautatieasemia, tyylikäs kivirakennus kellotorneineen. Maanjäristys iski kaupunkiin 26.7.1963 kello 5.17, tappaen yli tuhat ihmistä ja tuhoten suuren osan kaupungista; aseman kello pysähtyi täsmälleen järistyksen hetkeen. Osittain sortunut rakennus toimii nykyään kaupunginmuseona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Linnoitus maanjäristysten raunioilla] 6. vuosisata – — Vardar-joen mutkaan roomalaiset perustivat Scupin kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus temppeleineen ja teattereineen. Vuonna 518 maanjäristys tuhosi Scupin lähes kokonaan, ja keisari Justinianus I käski rakentaa uuden linnoituksen läheiselle kukkulalle – osin juuri raunioituneen kaupungin kivistä. Kaivauksissa linnoituksen alta on paljastunut Scupin asukkaiden taloja, jotka jäivät uuden Kale-nimisen muurin alle vuosisadoiksi. Muureja on sittemmin rakennettu uudelleen bysanttilaisten, slaavien ja osmanien aikana, ja ne ovat kestäneet myös Skopjen toisen suuren maanjäristyksen vuonna 1963.
+- [Pohjois-Makedonia — maalehti / Historia: Ratsastava soturi torilla] 2011 — Skopjen pääaukiolle nousi syyskuussa 2011 pronssipatsas: hevonen ratsastajineen 10-metrisen suihkulähdejalustan päällä, yhteensä lähes 25 metriä korkea. Firenzessä valettu, Valentina Stevanovskan suunnittelema teos paljastettiin itsenäisyysäänestyksen 20-vuotispäivänä, mutta se ristittiin virallisesti vain "Ratsastavaksi soturiksi" – naapurimaa Kreikka piti Aleksanteri Suuren nimen käyttöä oman historiansa omimisena. Yli 20 vuotta kestänyt nimikiista ratkesi vasta 2018 Prespan sopimuksella, kun maan nimeksi vahvistettiin Pohjois-Makedonia. Patsas on osa Skopje 2014 -hanketta, joka täytti kaupungin sadoilla uusilla patsailla.
+
+### 7.1
+KYSYMYS: Miltä Skopjen vanha rautatieasema näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skopjen vanha rautatieasema (historia)
+Tietoruudun teksti: Skopjen keskusasema oli 1900-luvun puolivälissä Jugoslavian vilkkaimpia rautatieasemia, tyylikäs kivirakennus kellotorneineen. Maanjäristys iski kaupunkiin 26.7.1963 kello 5.17, tappaen yli tuhat ihmistä ja tuhoten suuren osan kaupungista; aseman kello pysähtyi täsmälleen järistyksen hetkeen. Osittain sortunut rakennus toimii nykyään kaupunginmuseona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Linnoitus maanjäristysten raunioilla] 6. vuosisata – — Vardar-joen mutkaan roomalaiset perustivat Scupin kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus temppeleineen ja teattereineen. Vuonna 518 maanjäristys tuhosi Scupin lähes kokonaan, ja keisari Justinianus I käski rakentaa uuden linnoituksen läheiselle kukkulalle – osin juuri raunioituneen kaupungin kivistä. Kaivauksissa linnoituksen alta on paljastunut Scupin asukkaiden taloja, jotka jäivät uuden Kale-nimisen muurin alle vuosisadoiksi. Muureja on sittemmin rakennettu uudelleen bysanttilaisten, slaavien ja osmanien aikana, ja ne ovat kestäneet myös Skopjen toisen suuren maanjäristyksen vuonna 1963.
+- [Pohjois-Makedonia — maalehti / Historia: Ratsastava soturi torilla] 2011 — Skopjen pääaukiolle nousi syyskuussa 2011 pronssipatsas: hevonen ratsastajineen 10-metrisen suihkulähdejalustan päällä, yhteensä lähes 25 metriä korkea. Firenzessä valettu, Valentina Stevanovskan suunnittelema teos paljastettiin itsenäisyysäänestyksen 20-vuotispäivänä, mutta se ristittiin virallisesti vain "Ratsastavaksi soturiksi" – naapurimaa Kreikka piti Aleksanteri Suuren nimen käyttöä oman historiansa omimisena. Yli 20 vuotta kestänyt nimikiista ratkesi vasta 2018 Prespan sopimuksella, kun maan nimeksi vahvistettiin Pohjois-Makedonia. Patsas on osa Skopje 2014 -hanketta, joka täytti kaupungin sadoilla uusilla patsailla.
+
+### 7.2
+KYSYMYS: Miksi Skopjen vanha rautatieasema on nykyään raunioina?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skopjen vanha rautatieasema (historia)
+Tietoruudun teksti: Skopjen keskusasema oli 1900-luvun puolivälissä Jugoslavian vilkkaimpia rautatieasemia, tyylikäs kivirakennus kellotorneineen. Maanjäristys iski kaupunkiin 26.7.1963 kello 5.17, tappaen yli tuhat ihmistä ja tuhoten suuren osan kaupungista; aseman kello pysähtyi täsmälleen järistyksen hetkeen. Osittain sortunut rakennus toimii nykyään kaupunginmuseona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Linnoitus maanjäristysten raunioilla] 6. vuosisata – — Vardar-joen mutkaan roomalaiset perustivat Scupin kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus temppeleineen ja teattereineen. Vuonna 518 maanjäristys tuhosi Scupin lähes kokonaan, ja keisari Justinianus I käski rakentaa uuden linnoituksen läheiselle kukkulalle – osin juuri raunioituneen kaupungin kivistä. Kaivauksissa linnoituksen alta on paljastunut Scupin asukkaiden taloja, jotka jäivät uuden Kale-nimisen muurin alle vuosisadoiksi. Muureja on sittemmin rakennettu uudelleen bysanttilaisten, slaavien ja osmanien aikana, ja ne ovat kestäneet myös Skopjen toisen suuren maanjäristyksen vuonna 1963.
+- [Pohjois-Makedonia — maalehti / Historia: Ratsastava soturi torilla] 2011 — Skopjen pääaukiolle nousi syyskuussa 2011 pronssipatsas: hevonen ratsastajineen 10-metrisen suihkulähdejalustan päällä, yhteensä lähes 25 metriä korkea. Firenzessä valettu, Valentina Stevanovskan suunnittelema teos paljastettiin itsenäisyysäänestyksen 20-vuotispäivänä, mutta se ristittiin virallisesti vain "Ratsastavaksi soturiksi" – naapurimaa Kreikka piti Aleksanteri Suuren nimen käyttöä oman historiansa omimisena. Yli 20 vuotta kestänyt nimikiista ratkesi vasta 2018 Prespan sopimuksella, kun maan nimeksi vahvistettiin Pohjois-Makedonia. Patsas on osa Skopje 2014 -hanketta, joka täytti kaupungin sadoilla uusilla patsailla.
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
