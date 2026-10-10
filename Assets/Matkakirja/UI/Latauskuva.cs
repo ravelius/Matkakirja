@@ -55,6 +55,10 @@ namespace Matkakirja.Natiivi
             /// etäisyys × (1 + Lotko); painuma ja kaari seuraavat kiinnityspistettä joka ruudussa (LatausLiike.Ketjukayra).</summary>
             public bool Ketju;
             public float Lotko = 0.05f;
+            /// <summary>Häivytys sumuun (omistaja 10.10. 17.5x "köyden pitää jatkua alemmas ja hävitä sumuun"): täysi peittävyys
+            /// taustan korkeuteen HaivyAlku asti, siitä sileästi pois korkeuteen HaivyLoppu (osuuksina, y alas; LatausLiike.Haivytys).
+            /// HaivyLoppu ≤ HaivyAlku = ei häivytystä.</summary>
+            public float HaivyAlku, HaivyLoppu;
 
             /// <summary>Ankkuriköysi maasta (taustan osuus) korin kerrokseen: hieman paksumpi, riippuu ketjukäyränä.</summary>
             public static Koysi Ankkuri(Vector2 maa, int koriKerros, Vector2 kiinnitys) =>
@@ -274,21 +278,52 @@ namespace Matkakirja.Natiivi
                 var b = KerroksenPiste(k.Kerros, k.Kiinnitys, t);
                 p.strokeColor = k.Vari;
                 p.lineWidth = k.LeveysPt;
-                p.BeginPath();
-                p.MoveTo(a);
                 if (k.Ketju)
                 {
                     var a0 = k.KiintoKerros >= 0 ? KerroksenPiste(k.KiintoKerros, k.Kiinto, t, lepo: true) : a;
                     var b0 = KerroksenPiste(k.Kerros, k.Kiinnitys, t, lepo: true);
-                    var kayra = LatausLiike.Ketjukayra(a.x, a.y, b.x, b.y, Vector2.Distance(a0, b0) * (1f + k.Lotko));
+                    var kayra = LatausLiike.Ketjukayra(a.x, a.y, b.x, b.y, Vector2.Distance(a0, b0) * (1f + k.Lotko), k.HaivyLoppu > k.HaivyAlku ? 64 : 24);
+                    if (k.HaivyLoppu > k.HaivyAlku) { PiirraHaipyva(p, k, kayra); p.lineCap = LineCap.Round; continue; }
+                    p.BeginPath();
+                    p.MoveTo(a);
                     for (int i = 1; i < kayra.Length; i++) p.LineTo(new Vector2((float)kayra[i].X, (float)kayra[i].Y));
                 }
                 else
                 {
+                    p.BeginPath();
+                    p.MoveTo(a);
                     var c = LatausLiike.Ohjauspiste(a.x, a.y, b.x, b.y, k.Riippuma);
                     p.QuadraticCurveTo(new Vector2((float)c.X, (float)c.Y), b);
                 }
                 p.Stroke();
+            }
+        }
+
+        /// <summary>
+        /// Sumuun häipyvä köysi: peittävyys pisteen korkeuden mukaan (LatausLiike.Haivytys). Saman peittävyyden peräkkäiset palat
+        /// (1/32-portain) yhtenä polkuna; häivytetyt palat tasapäin (LineCap.Butt), jotta läpikuultavat päät eivät kerrostu helmiksi.
+        /// Täysin häipynyt loppu jää piirtämättä: köydellä ei ole näkyvää päätä.
+        /// </summary>
+        void PiirraHaipyva(Painter2D p, Koysi k, (double X, double Y)[] kayra)
+        {
+            float Peitto(int i) => (float)LatausLiike.Haivytys((kayra[i].Y - ala.y) / ala.height, k.HaivyAlku, k.HaivyLoppu);
+            int j = 0;
+            while (j < kayra.Length - 1)
+            {
+                float q = Mathf.Round((Peitto(j) + Peitto(j + 1)) * 16f) / 32f;
+                int loppu = j + 1;
+                while (loppu < kayra.Length - 1 && Mathf.Round((Peitto(loppu) + Peitto(loppu + 1)) * 16f) / 32f == q) loppu++;
+                if (q > 0f)
+                {
+                    var v = k.Vari; v.a *= q;
+                    p.strokeColor = v;
+                    p.lineCap = q < 1f ? LineCap.Butt : LineCap.Round;
+                    p.BeginPath();
+                    p.MoveTo(new Vector2((float)kayra[j].X, (float)kayra[j].Y));
+                    for (int i = j + 1; i <= loppu; i++) p.LineTo(new Vector2((float)kayra[i].X, (float)kayra[i].Y));
+                    p.Stroke();
+                }
+                j = loppu;
             }
         }
 

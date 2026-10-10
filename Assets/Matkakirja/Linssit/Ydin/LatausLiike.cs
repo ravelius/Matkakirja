@@ -191,6 +191,29 @@ namespace Matkakirja.Linssit
         static double Asinh(double x) => Math.Log(x + Math.Sqrt(x * x + 1));
 
         /// <summary>
+        /// KÖYSI SUMUUN (omistaja 10.10. 17.5x pallovideosta: "köyden pitää jatkua alemmas ja hävitä sumuun, muuten näyttää
+        /// irralliselta"): maa-ankkuri jatkettuna korin kiinnityspisteestä maapisteen kautta samaan suuntaan korkeudelle y (y alas).
+        /// Jos maapiste on jo y:n alapuolella tai köysi ei laskeudu, maapiste palautetaan sellaisenaan.
+        /// </summary>
+        public static (double X, double Y) Jatke(double koriX, double koriY, double maaX, double maaY, double y)
+        {
+            double dy = maaY - koriY;
+            if (!(dy > 0) || y <= maaY) return (maaX, maaY);
+            return (maaX + (maaX - koriX) * (y - maaY) / dy, y);
+        }
+
+        /// <summary>
+        /// Köyden peittävyys korkeudella y (y alas): 1 kohdan alku yläpuolella, 0 kohdassa loppu ja sen alla, välissä sileä
+        /// (smoothstep, ei näkyvää rajaa). Loppu ≤ alku → ei häivytystä (1).
+        /// </summary>
+        public static double Haivytys(double y, double alku, double loppu)
+        {
+            if (!(loppu > alku)) return 1;
+            double u = Math.Clamp((y - alku) / (loppu - alku), 0, 1);
+            return 1 - u * u * (3 - 2 * u);
+        }
+
+        /// <summary>
         /// Köyden neliöllisen Bézier-käyrän ohjauspiste: päiden puoliväli siirrettynä alas riippuma × köyden pituus (y alas).
         /// Riippuma 0 = suora viiva.
         /// </summary>
