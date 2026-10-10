@@ -25,3 +25,13 @@ Ei taustaajoja, ei worktreetä. Python-kuvatyökalut: `/Users/Shared/Claude/prot
 2) LS2:n ND v5d -pari ja Peking-mittaus → säädöt tarvittaessa.
 3) Tiedoksi: Karttasepän orto-albedo.jpg + albedo-luokat.json vertailukansioissa (perusvärit absoluuttisesti albedoon; raa'at ortot 1,6–2,1 ×
    albedoa kirkkaampia); puut-*.bytes dioraamoihin (kytkentä Siirtoseppä/LS2).
+
+## LISÄYKSET 20.1x (ennen nollausta)
+- PT 20.1x v5d: säleet/viivat/pyörre pois, hyvä. SEURAAVAAN KIERROKSEEN: (a) arkivolttien veistosyksityiskohta pehmeni (kaaret sileitä:
+  kuvan renkaat puristuvat mallin kapeisiin renkaisiin + läpiprojektio/AO-lattia — kokeile terävämpää ylipäästöä renkaissa tai
+  Commonsin 4315 px -alkuperäistä), (b) kulmatukipilarien sivujuovat (tekoälykuvat). (c) PT kysyy: ajetaanko Louvre ja prefektuuri uudelleen
+  korjatulla projisoi_tekseli.py:llä (UV-vika koski kaikkia) — selvitä onko niissä samoja säleitä (lähikuva) ja vastaa PT:lle.
+- Karttaseppä 20.1x: Peking-vertailuorto (vertailu/peking/orto.jpg) on näyttökuva, sRGB × 1,6 → EI albedoa. Pihat pelissä 135 = albedo 136
+  → oikein (ei maamuutosta). SEURAUS: LS2:n kattovertailu (orto 161/130/101) on myös × 1,6 → todellinen kattoalbedo ~ /1,6 (S2:ssa sekoittuu
+  varjoja) → Peking v4:n katot (arvio peli ~158/128/102) voivat yhä olla liian kirkkaat. Odota LS2:n mittaus ja vertaa albedoon
+  (Karttasepän albedo-luokat.json, jos Pekingille tulee; nyt vain ND/prefektuuri/Eiffel/Louvre/KL/Olavinlinna).
