@@ -14,7 +14,7 @@ PT:N PÄÄTÖKSET 12.4x (voimassa tauon jälkeen, järjestys: Peking → kupola 
   OMAN alueen reunalla (y ≈ +1250); pohja/maatekstuurit/korkeudet tarkistettu kunnossa, aluskerros ei päällä → seuraavalla vuorolla ylhäältä
   pohjoisreuna (39.92714, 116.3908) omilla malleilla ja ilman (Google yksin) → korjaus (maa sauman yli / liuku). Ennen omistajan paria oikeaa
   vastaan: ylhäältä Karttasepän _tyo/karttaseppa/vertailu/peking/orto.jpg (meta.json: 2 m/px, x −1100…1100, y −1750…1250) + Jingshanilta etelään
-  Sisältökirjurin vertailu/peking-jingshan/kuvat 01 (CNHowey CC BY-SA 4.0, 39.923425 116.390397, klo 11.07, ~60 m) → vaatii kamera-vapaa (uusi .app,
+  Sisältökirjurin vertailu/peking-jingshan/kuvat 02 (Sisältökirjurin suositus: xiquinhosilva CC BY 4.0, 2024-09-16 klo 17.29, 39.923417 116.390463, telekuva keskiakselille; 01 usvainen, 03–04 vuodelta 2016) → vaatii kamera-vapaa (uusi .app,
   KOMENNOT="opas kamera-vapaa 1;opas ajallinen pois;opas kori 0"). LR:lle: katot kylläisen oranssit (oikea kullankeltainen), Kansan suuri halli
   ja museo litteitä harmaita laattoja.
 - ND EDESTÄ hyvä pari → LR:n v4c (julkisivu lämmin beige, portaalien syvyys, tornien aukot tummiksi); omistajalle vasta v4c:n parina.
