@@ -498,9 +498,23 @@ namespace Matkakirja.Natiivi
                 maamerkitAika = Time.unscaledTime;
                 KaupunkiYovalot.Maamerkit.Clear();
                 string kid = NykyinenKaupunkiId;
+                // v12 JULKISIVUVALOT (PT 10.10., junaan 175; Ydin Julkisivuvalot): kiinteä lista ensin (OSM:stä puuttuvat maamerkit), aina
+                // yöllä, myös kierroksen ulkopuolella; nykyinen kohde vain omalla kohdevalollaan. Kierroksen muut kohteet perään (ei tuplana).
+                bool kohdeValossa = KaupunkiYovalot.Kohde.HasValue && yk != null;
+                if (kid != null && Kehityskaupungit.On(kid))
+                    foreach (var j in Matkakirja.Linssit.Kierros.Julkisivuvalot.Kaupungin(kid))
+                    {
+                        if (KaupunkiYovalot.Maamerkit.Count >= KaupunkiYovalot.MaamerkkejaMax) break;
+                        if (kohdeValossa && KierrosLento.EtaisyysM(j.Lat, j.Lon, yk.Lat, yk.Lon) < Matkakirja.Linssit.Kierros.Julkisivuvalot.SamaM) continue;
+                        double h = MaaPisteessa(j.Lat, j.Lon);
+                        if (double.IsNaN(h)) h = OmaMaaKehalla(j.Lat, j.Lon);
+                        if (!double.IsNaN(h)) KaupunkiYovalot.Maamerkit.Add((j.Lat, j.Lon, h, j.SadeM));
+                    }
                 if (kid != null && Kehityskaupungit.On(kid) && (kierrosKohteet ?? kohteet) is List<OpasTaky> mk)
                     foreach (var t in mk)
                     {
+                        if (KaupunkiYovalot.Maamerkit.Count >= KaupunkiYovalot.MaamerkkejaMax) break;
+                        if (Matkakirja.Linssit.Kierros.Julkisivuvalot.Listalla(kid, t.Lat, t.Lon)) continue;   // listan kohde: valo jo yllä
                         if (yk != null && Math.Abs(t.Lat - yk.Lat) < 1e-5 && Math.Abs(t.Lon - yk.Lon) < 1e-5) continue;   // nykyinen kohde: oma valo
                         if (OnEiffel(t.Lat, t.Lon)) continue;   // ei Eiffelin julkisivuvaloa
                         double h = MaaPisteessa(t.Lat, t.Lon);   // kehyksen maa (kehän näytteistä), jos kohteessa on käyty
