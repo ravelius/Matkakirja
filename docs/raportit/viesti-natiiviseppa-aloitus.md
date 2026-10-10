@@ -11,10 +11,10 @@ Päätoimittaja: "PÄÄTOIMITTAJA (Opus, max)". Vertaisille SendMessage session 
 2. Juna 176 (build 177) runko natiiviseppa/juna-176 51e42e7a6: muistiajo → lukitus PT:n käskystä. (Mac TF 176 VALID, tehty.)
 3. Taidemuseo: MuseoVeistokset kytkentä + iPad-muistiajo museossa (haara natiiviseppa/museo-muisti).
 
-## PYSYVÄ: UNITY 6.7 -SEURANTA (PT 10.10. 19.5x)
-Maanantaisin Unityn julkaisut (6000.7-beeta / lopullinen 6.7 / korjaus) → PT:lle vain meitä koskeva korjaus (iOS/Metal, IL2CPP, muisti, URP,
-UI Toolkit, kaatumiset) tai lopullinen 6.7. Pysytään 6000.7.0b4:ssä → vaihto lopulliseen; sitten ~kuukausittain omassa haarassa (käännös +
-testit + iPad-muistiajo). App Store vain lopullisella; 6.3 LTS varalla.
+## PYSYVÄ: UNITY-BEETASEURANTA (PT 10.10. 19.5x; kumoaa "pysytään b4:ssä")
+HETI ALOITUKSESSA: CronCreate "4 9 * * *" (päivittäin) + aja kerran `python3 /Users/Shared/Claude/proto-3d/lokit/natiiviseppa-skriptit/unity-julkaisut.py`.
+UUSI-rivi → heti rivi PT:lle (versio + osuvat korjaukset) → testikäännös omassa haarassa (käännös, unity-tarkistus, testit, iPad-muistiajo) → läpi:
+vaihto seuraavaan junaan PT:n kuittauksella, muuten rivi syineen. App Store vain lopullisella; 6.3 LTS varalla.
 
 ## SÄÄNNÖT
 - Viestit PT:lle vain valmis erä / jumi / kysymys (≤ 8 riviä); runkoriviin "lisää muistia: kyllä/ei".

@@ -5,11 +5,14 @@ Edellinen: viesti-natiiviseppa-luovutus-20261010-aamu.md (TILA-osiot 08.0x–11.
 Viestit: SendMessage-raja oli täynnä → varakanava mcp__ccd_session_mgmt__send_message (PT local_593b89a1…, Julkaisija local_22b29f10…,
 LS1 local_45a869de…, LS2 local_fc4fcc54…, NUI local_33ba1387…, Pelikoodari local_97810d35…, Sisältökirjuri local_256f6a15…).
 
-## PYSYVÄ TEHTÄVÄ: UNITY 6.7 -PÄIVITYSSEURANTA (PT 10.10. 19.5x, omistajan kysymys; siirrä jokaiseen luovutukseen)
-- Joka MAANANTAI: tarkista Unityn julkaisut (uusi 6000.7-beeta, lopullinen 6.7, korjausversio). Ilmoita PT:lle VAIN, jos meitä koskeva korjaus
-  (iOS/Metal, IL2CPP, muisti, URP, UI Toolkit, kaatumiset) tai lopullinen 6.7 on julkaistu.
-- Linja: pysytään 6000.7.0b4:ssä → vaihto kerralla lopulliseen 6.7:ään; sen jälkeen päivitys ~kuukausittain/tarpeen mukaan omassa haarassa
-  (käännös + automaattiset testit + iPad-muistiajo). App Store -julkaisu vain lopullisella versiolla; 6.3 LTS varalla (T7 unity63-talteen + K63-kääntäjäketju).
+## PYSYVÄ TEHTÄVÄ: UNITY-BEETASEURANTA (PT 10.10. 19.5x, omistaja "kokeillaan aina uusimmalla testi versio"; KUMOAA "pysytään b4:ssä"; siirrä jokaiseen luovutukseen)
+- PÄIVITTÄIN klo 09: `python3 /Users/Shared/Claude/proto-3d/lokit/natiiviseppa-skriptit/unity-julkaisut.py` (Unityn julkaisurajapinta; 6000.7+ beeta/lopullinen,
+  ei alfoja; nähdyt unity-julkaisut-nahty.txt; tulostaa vain UUSI-rivit). CronCreate on session oma (katoaa nollauksessa, 7 vrk) → JOKAINEN UUSI SESSIO
+  luo sen uudelleen: CronCreate "4 9 * * *" + aja skripti kerran aloituksessa.
+- Uusi beeta → HETI rivi PT:lle (versio + olennaiset korjaukset: iOS/Metal, IL2CPP, muisti, URP, UI Toolkit, kaatumiset). Sitten testikäännös uudella beetalla
+  erillisessä haarassa (editori T7:lle/Hubiin, käännös, unity-tarkistus, Linssit/Peli/Kartta-testit, iPad-muistiajo Julkaisijan vuorolla). Kaikki läpi →
+  vaihto seuraavaan junaan PT:n kuittauksella; muuten rivi PT:lle syineen ja pysytään edellisessä. Lopullinen 6.7 ja LTS samalla kaavalla.
+- App Store -julkaisu vain lopullisella versiolla; 6.3 LTS varalla (T7 unity63-talteen + K63-kääntäjäketju). Tilanne 10.10. 19.5x: uusin 6000.7.0b4 (8.10.) = käytössä.
 
 ## TILA 19.3x — JUNA 180 KERTYY, MUISTIAJO YÖN JÄLKEEN
 - **JUNA 180 = natiiviseppa/juna-180 d6494497a** (BUILD 179 75fcc2b1b:n päällä; wt j175): Pelikoodari pulu-bih-lux-mlt e2b97a8a4, NUI pallo-koysi-sumuun
