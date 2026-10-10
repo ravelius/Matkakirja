@@ -260,14 +260,16 @@ namespace Matkakirja.Natiivi
             Vaihtui?.Invoke(linssi);
             LukitseVaaka(true);
 
-            // Kiinnitetty paketti myös esittelyyn (PT 10.10., juna 175: vanhoja appeja ei rikota): Olavinlinna avautuu PelattavaPala.Hashin
-            // paketista eikä uusin.json:sta, kun kehittäjä ei ole asettanut omaa osoitinta ("poikki osoitin <hash>" voittaa).
+            // Kiinnitetty paketti myös esittelyyn (PT 10.10., juna 175: vanhoja appeja ei rikota): Olavinlinna avautuu kiinnitetystä
+            // paketista eikä uusin.json:sta, kun kehittäjä ei ole asettanut omaa osoitinta ("poikki osoitin <hash>" voittaa). Esittely nykyasun
+            // paketista (EsittelyHash, omistaja 10.10.), pala 1499-paketista (PelattavaPalaHash).
             bool kiinnitaEsittely = RakennusId == Oletusrakennus && DioraamaLevyvalimuisti.TestiOsoitin == null && !peiliPaalla;
-            if ((PelattavaPalaPyydetty || kiinnitaEsittely) && DioraamaLevyvalimuisti.TestiOsoitin != PelattavaPalaHash)
+            string kiinnitys = PelattavaPalaPyydetty ? PelattavaPalaHash : kiinnitaEsittely ? EsittelyHash : null;
+            if (kiinnitys != null && DioraamaLevyvalimuisti.TestiOsoitin != kiinnitys)
             {
-                // Ennen latausta: pala-paketti osoittimeksi; jo ladattu tuotantorakennus unohdetaan (ladataan uudelleen alla).
+                // Ennen latausta: kiinnitetty paketti osoittimeksi; jo ladattu tuotantorakennus unohdetaan (ladataan uudelleen alla).
                 if (peiliPaalla) AsetaPeili("pois");
-                DioraamaLevyvalimuisti.TestiOsoitin = PelattavaPalaHash;
+                DioraamaLevyvalimuisti.TestiOsoitin = kiinnitys;
                 if (rakennus != null) LataaUudelleen();
             }
             if (rakennus == null)
@@ -394,6 +396,12 @@ namespace Matkakirja.Natiivi
             // jatkuvan orbitin vaihe. "poikki cinemachine 0" palauttaa vanhan jousipolun A/B-vertailuun.
             // Historiamoottorin kävelytila: pelaajan olan yli -kamera ohittaa lepokamerat, pakotetun kameran ja jousen (V1 7.10.).
             // Kehittäjävalikon "Olavinlinna – pelattava pala (kokeilu)" (Päätoimittaja 7.10. 16.0x): E1 heti, kun rakennus on ladattu.
+            // Esittelystä palaan (nykyasun paketti → 1499-paketti): ensin pala-paketti, pyyntö odottaa latauksen.
+            if (PelattavaPalaPyydetty && rakennus != null && DioraamaLevyvalimuisti.TestiOsoitin == EsittelyHash && EsittelyHash != PelattavaPalaHash)
+            {
+                DioraamaLevyvalimuisti.TestiOsoitin = PelattavaPalaHash; LataaUudelleen();
+                o.Kirjaa("seikkailu: pelattavan palan paketti (1499) ladataan esittelyn paketin tilalle");
+            }
             if (PelattavaPalaPyydetty && rakennus != null && nayttamo != null && cm != null && SeikkailuVene.Aktiivinen == null && SeikkailuPelaaja.Aktiivinen == null)
             {
                 PelattavaPalaPyydetty = false;
@@ -419,7 +427,7 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa($"seikkailu: pelattava pala käynnistyy{(jatka != null ? " (jatko tallennuksesta)" : "")}");
             }
             palaOhi:
-            if (historiaPyydetty && rakennus != null && nayttamo != null && !SaapumisOdotus) { historiaPyydetty = false; o.StartCoroutine(Historia(null)); }
+            if (historiaPyydetty && rakennus != null && nayttamo != null && !SaapumisOdotus) { historiaPyydetty = false; var hv = historiaValmis; historiaValmis = null; o.StartCoroutine(Historia(hv)); }
             var pelaaja = cm != null ? SeikkailuPelaaja.Aktiivinen : null;
             var vene = cm != null ? SeikkailuVene.Aktiivinen : null;
             // V2: vene etenee aina (myös kun pelaaja on jo laiturilla: vene jää kiinnitettynä); perillä pelaaja laiturille.
@@ -546,7 +554,7 @@ namespace Matkakirja.Natiivi
             SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKynttilat.Poista(); SeikkailuKappeli.Poista(); SeikkailuAanet.Poista(); SeikkailuTallentaja.Poista(); SeikkailuVihjeet.Poista(); SeikkailuValot.Poista(); SeikkailuYo.Poista(); SeikkailuSade.Poista(); SeikkailuVarjot.Palauta(); SeikkailuKasittely.Tyhjenna(); SeikkailuKavely.Pura();
             SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen;
             cm?.SeikkailuPois(); PelattavaPalaPyydetty = false; KameraVapaa = false;
-            if (DioraamaLevyvalimuisti.TestiOsoitin == PelattavaPalaHash)
+            if (DioraamaLevyvalimuisti.TestiOsoitin == PelattavaPalaHash || DioraamaLevyvalimuisti.TestiOsoitin == EsittelyHash)
             {
                 // Seuraava avaus taas tuotannosta (myös kesken latauksen suljettaessa): osoitin pois ja rakennus unohdetaan ilman latausta.
                 DioraamaLevyvalimuisti.TestiOsoitin = null;
@@ -729,6 +737,7 @@ namespace Matkakirja.Natiivi
         /// (uusin.json) ei muutu: pala lukee tämän paketin testiosoittimena (sama hash-juuri ja manifest.json kuin julkaisulla, joten
         /// levyvälimuisti toimii; Päätoimittaja 7.10.: ei 250–400 Mt joka avauksella) ja palauttaa tuotannon, kun linna suljetaan.</summary>
         /// Uusi yhteensopimaton paketti (8.10.): vaihdetaan tässä, ei uusin.json:ssa, joten vanhat appit pysyvät omassa paketissaan.
+        public const string EsittelyHash = Matkakirja.Linssit.Seikkailu.PelattavaPala.EsittelyHash;   // esittely nykyasussa (omistaja 10.10.)
         public const string PelattavaPalaHash = Matkakirja.Linssit.Seikkailu.PelattavaPala.Hash;   // Ydin PelattavaPala (v44z; testi sitoo simulaation kultaisiin)
 
         void LataaUudelleen()
@@ -1007,6 +1016,7 @@ namespace Matkakirja.Natiivi
         }
 
         bool alkuValittu, historiaPyydetty;
+        Action historiaValmis;
         /// <summary>Alun valinta auki (kertoja ei soi korttien aikana).</summary>
         public static bool AlkuValintaAuki { get; private set; }
         /// <summary>Automaattiajot (botti, todistusajo): "poikki kavely alkuvalinta 0" ohittaa valinnan suoraan peliin.</summary>
@@ -1030,7 +1040,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Linnan historia käytettävissä: Olavinlinna ladattu, ei historiaa eikä alun valintaa auki (☰ › Linnan historia).</summary>
         public static bool HistoriaKaytettavissa => aktiivinenSovitin != null && aktiivinenSovitin.rakennus != null && aktiivinenSovitin.nayttamo != null
             && RakennusId == Oletusrakennus && !SeikkailuHistoria.Kaynnissa && !AlkuValintaAuki && !SaapumisOdotus
-            && DioraamaLevyvalimuisti.TestiOsoitin == PelattavaPalaHash;   // vaihemallit ja vuodet vain pelattavan palan paketissa
+            && (DioraamaLevyvalimuisti.TestiOsoitin == PelattavaPalaHash || DioraamaLevyvalimuisti.TestiOsoitin == EsittelyHash);   // vaihemallit ja vuodet vain kiinnitetyissä paketeissa
 
         /// <summary>
         /// ☰ › Linnan historia (Natiivi-UI). Pelin aikana peli pysähtyy (aika 0, pelaajan ja vartijoiden ohjaus pois), historia soi,
@@ -1040,6 +1050,14 @@ namespace Matkakirja.Natiivi
         {
             var s = aktiivinenSovitin;
             if (s == null || !HistoriaKaytettavissa) { valmis?.Invoke(); return; }
+            // Esittelyn nykyasun paketista historiaan: historia näyttää vaiheet 1499-paketilla (LR: nykyasun kuoressa kartiot jo 1475).
+            if (DioraamaLevyvalimuisti.TestiOsoitin == EsittelyHash && EsittelyHash != PelattavaPalaHash && SeikkailuPelaaja.Aktiivinen == null)
+            {
+                DioraamaLevyvalimuisti.TestiOsoitin = PelattavaPalaHash; s.LataaUudelleen();
+                s.historiaPyydetty = true; s.historiaValmis = valmis;
+                s.o.Kirjaa("seikkailu: historia: 1499-paketti ladataan esittelyn paketin tilalle");
+                return;
+            }
             var p = SeikkailuPelaaja.Aktiivinen; var v = SeikkailuVartijat.Aktiivinen;
             float aika = Time.timeScale;
             bool pelissa = p != null;
