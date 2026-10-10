@@ -89,7 +89,7 @@ Miksi Itämeren suolapitoisuus vaihtelee pohjoisesta etelään?
 Mitä Tanskan salmet ovat?
 
 ### 176
-Łeba on Pommerin maakunnassa Itämeren rannikolla sijaitseva kaupunki, joka sijaitsee samannimisen joen suulla. Se on tunnettu rantakaupunkina ja kalastusperinteestään, ja se toimii monille [[Słowińskin kansallispuiston]] vierailijoille lähtöpaikkana. Kansallispuisto sijaitsee Łeban ja Rowyn välissä, ja sen liikkuvat dyynit sekä rannikkojärvet ovat alueen tunnetuimpia nähtävyyksiä. Kaupungin tarkemmasta historiasta en ole varma.
+Łeba on [[Pommerin]] maakunnassa Itämeren rannikolla sijaitseva kaupunki, joka sijaitsee samannimisen joen suulla. Se on tunnettu rantakaupunkina ja kalastusperinteestään, ja se toimii monille [[Słowińskin kansallispuiston]] vierailijoille lähtöpaikkana. Kansallispuisto sijaitsee Łeban ja Rowyn välissä, ja sen liikkuvat dyynit sekä rannikkojärvet ovat alueen tunnetuimpia nähtävyyksiä. Kaupungin tarkemmasta historiasta en ole varma.
 JATKOT:
 Millaisia dyynejä Słowińskin puistossa on?
 Millainen maakunta Pommeri on?
@@ -101,7 +101,7 @@ Millainen kaupunki Ustka on?
 Mitä Słowińskin puistossa voi nähdä?
 
 ### 178
-Łeba-järvi on Słowińskin kansallispuiston rannikkojärvi, joka oli aiemmin osa Itämeren lahtea. Meri kasasi lahden suulle hiekkaa, ja lopulta dyynit erottivat lahden avomerestä, jolloin siitä tuli järvi. Järvi on matalahko, ja sen ympärillä on suoperäistä maastoa, jossa [[slovinssit]] asuivat. Alueen tunnelma on rannikkojärvelle tyypillinen: vesi, ruovikot ja dyynit lomittuvat toisiinsa.
+Łeba-järvi on Słowińskin kansallispuiston rannikkojärvi, joka oli aiemmin osa [[Itämeren]] lahtea. Meri kasasi lahden suulle hiekkaa, ja lopulta dyynit erottivat lahden avomerestä, jolloin siitä tuli järvi. Järvi on matalahko, ja sen ympärillä on suoperäistä maastoa, jossa [[slovinssit]] asuivat. Alueen tunnelma on rannikkojärvelle tyypillinen: vesi, ruovikot ja dyynit lomittuvat toisiinsa.
 JATKOT:
 Miten rannikkojärvi eroaa merenlahdesta?
 Mitä lintuja rannikkojärvillä elää?
@@ -179,7 +179,7 @@ Mikä aiheuttaa Itämeren happikadon?
 Miten Itämerta suojellaan?
 
 ### 191
-Visentti eli euroopanbiisoni on Euroopan painavimpiin maaeläimiin luettava iso nautaeläin, joka elää metsissä ja laitumien reunoilla. Luonnonvarainen kanta hävisi 1900-luvun alkupuolella, ja laji pelastettiin lisäämällä eläintarhoissa eläneitä yksilöitä ja palauttamalla niitä luontoon. [[Białowieżan]] metsä Puolan ja Valko-Venäjän rajalla on tunnettu visenttien palautusalue. Wolinin kansallispuistossa visenttien suojelualue antaa vierailijoille mahdollisuuden nähdä eläin läheltä. Visentti syö pääasiassa ruohoa, lehtiä ja kaarnaa, ja lauma liikkuu hitaasti metsässä. Laji on edelleen suojeltu, ja sen kanta on kasvanut mutta pysyy herkkänä.
+Visentti eli [[euroopanbiisoni]] on Euroopan painavimpiin maaeläimiin luettava iso nautaeläin, joka elää metsissä ja laitumien reunoilla. Luonnonvarainen kanta hävisi 1900-luvun alkupuolella, ja laji pelastettiin lisäämällä eläintarhoissa eläneitä yksilöitä ja palauttamalla niitä luontoon. [[Białowieżan]] metsä Puolan ja Valko-Venäjän rajalla on tunnettu visenttien palautusalue. Wolinin kansallispuistossa visenttien suojelualue antaa vierailijoille mahdollisuuden nähdä eläin läheltä. Visentti syö pääasiassa ruohoa, lehtiä ja kaarnaa, ja lauma liikkuu hitaasti metsässä. Laji on edelleen suojeltu, ja sen kanta on kasvanut mutta pysyy herkkänä.
 JATKOT:
 Miten visentit palautettiin luontoon?
 Missä muualla Euroopassa visenttejä elää?
@@ -209,13 +209,13 @@ Miksi myrskyt kuluttavat rantaa enemmän kuin tyyni sää?
 Miten rantoja suojellaan kulumiselta?
 
 ### 196
-Eroosio tarkoittaa maa-aineksen irtoamista ja kulkeutumista pois alkuperäiseltä paikaltaan veden, tuulen, jään tai painovoiman vaikutuksesta. Se on eri asia kuin [[rapautuminen]], joka tarkoittaa kallion ja maa-aineksen hajoamista paikallaan ilman kuljetusta. Eroosio muovaa maisemia hitaasti: se kaivertaa jokilaaksoja, kuluttaa rantoja ja tasoittaa vuoria. Kuljetettu aines kerrostuu lopulta muualle, esimerkiksi jokien suistoihin ja merenpohjaan. Ihmisen toiminta, kuten metsien hakkuu ja maan muokkaus, voi nopeuttaa eroosiota.
+Eroosio tarkoittaa maa-aineksen irtoamista ja kulkeutumista pois alkuperäiseltä paikaltaan veden, tuulen, jään tai painovoiman vaikutuksesta. Se on eri asia kuin [[rapautuminen]], joka tarkoittaa kallion ja maa-aineksen hajoamista paikallaan ilman kuljetusta. Eroosio muovaa maisemia hitaasti: se kaivertaa jokilaaksoja, kuluttaa rantoja ja tasoittaa vuoria. Kuljetettu aines kerrostuu lopulta muualle, esimerkiksi [[jokien suistoihin]] ja merenpohjaan. Ihmisen toiminta, kuten metsien hakkuu ja maan muokkaus, voi nopeuttaa eroosiota.
 JATKOT:
 Miten metsänhakkuu vaikuttaa maaperän eroosioon?
 Mitä tapahtuu eroosion kuljettamalle aineksille?
 
 ### 197
-Moreeni on jäätikön jättämää sekalaista maa-ainesta, jossa on rinnakkain savea, hiekkaa, soraa ja kiviä. Koska se on pitkälti lajittumatonta ja löyhää, aallot ja virtaava vesi kuluttavat sitä helposti, ja siksi moreenista koostuvat rannat voivat vetäytyä nopeasti. Kun hienompi aines huuhtoutuu pois, jäljelle jäävät rannalle isommat kivet ja [[lohkareet]], ja syntyy kivikkoinen ranta. Puolan Itämeren rannikon jyrkänteet ovat usein jäätikön muovaamia moreenimuodostumia, vaikka Wolinin jyrkänteiden tarkkaa rakennetta en tunne.
+Moreeni on [[jäätikön]] jättämää sekalaista maa-ainesta, jossa on rinnakkain savea, hiekkaa, soraa ja kiviä. Koska se on pitkälti lajittumatonta ja löyhää, aallot ja virtaava vesi kuluttavat sitä helposti, ja siksi moreenista koostuvat rannat voivat vetäytyä nopeasti. Kun hienompi aines huuhtoutuu pois, jäljelle jäävät rannalle isommat kivet ja [[lohkareet]], ja syntyy kivikkoinen ranta. Puolan Itämeren rannikon jyrkänteet ovat usein jäätikön muovaamia moreenimuodostumia, vaikka Wolinin jyrkänteiden tarkkaa rakennetta en tunne.
 JATKOT:
 Miksi rannalle jää kiviä ja lohkareita?
 Mitä eroa on pohjamoreenilla ja päätemoreenilla?
@@ -239,7 +239,7 @@ Mikä on Puolan korkein vuoristo?
 Millaisia ovat Karkonoszet?
 
 ### 201
-E8 on yksi eurooppalaisista pitkän matkan vaellusreiteistä, joita koordinoi kansainvälinen vaellusjärjestöjen yhteistyö. Reitti alkaa lännessä Irlannista ja kulkee itään Euroopan halki, ja sen itäpää on lähteiden mukaan Bulgariassa; tarkka reitti vaihtelee osuuksittain ja lähteittäin. Puolassa reitti seuraa [[Karpaattien]] vuoristoja ja kulkee Bieszczadyn läpi Tarnican kautta. Reitti koostuu kansallisista osuuksista, joiden merkinnästä ja ylläpidosta vastaavat paikalliset yhdistykset.
+E8 on yksi eurooppalaisista pitkän matkan vaellusreiteistä, joita koordinoi kansainvälinen vaellusjärjestöjen yhteistyö. Reitti alkaa lännessä [[Irlannista]] ja kulkee itään Euroopan halki, ja sen itäpää on lähteiden mukaan Bulgariassa; tarkka reitti vaihtelee osuuksittain ja lähteittäin. Puolassa reitti seuraa [[Karpaattien]] vuoristoja ja kulkee Bieszczadyn läpi Tarnican kautta. Reitti koostuu kansallisista osuuksista, joiden merkinnästä ja ylläpidosta vastaavat paikalliset yhdistykset.
 JATKOT:
 Millaisia muita eurooppalaisia vaellusreittejä on?
 Miten pitkän vaellusreitin varusteet valitaan?
@@ -281,7 +281,7 @@ Miten karhu valmistautuu talviuneen?
 Miten retkeilijän kannattaa toimia karhun lähellä?
 
 ### 208
-Susi on koiraeläin, joka elää yleensä laumassa. Lauman johtavat pesue­paria muodostava uros ja naaras, ja muu lauma koostuu pääosin niiden jälkeläisistä. Susi saalistaa pääasiassa hirvieläimiä ja luonnonvaraisia sikoja, ja lauma pitää omaa reviiriään. Eurooppalainen susi on 1900-luvun lopulta palannut monille alueille, joilta se oli hävinnyt. Tieteellinen nimi on [[Canis lupus]], ja suden ulvonta on tapa pitää yhteyttä muihin lauman jäseniin.
+Susi on [[koiraeläin]], joka elää yleensä laumassa. Lauman johtavat pesue­paria muodostava uros ja naaras, ja muu lauma koostuu pääosin niiden jälkeläisistä. Susi saalistaa pääasiassa hirvieläimiä ja luonnonvaraisia sikoja, ja lauma pitää omaa reviiriään. Eurooppalainen susi on 1900-luvun lopulta palannut monille alueille, joilta se oli hävinnyt. Tieteellinen nimi on [[Canis lupus]], ja suden ulvonta on tapa pitää yhteyttä muihin lauman jäseniin.
 JATKOT:
 Miten susi ja ihmisen asutus voivat elää rinnakkain?
 Miten susilauma saalistaa?
@@ -347,7 +347,7 @@ Miten Lomnický štítille pääsee?
 Millainen eläin tatrangemssi on?
 
 ### 219
-Fotel Pradziada on kivimuodostelma, jonka nimi tarkoittaa isoisoisän nojatuolia ja joka on Szczeliniec Wielkin huipputasanteen korkein kohta. Huipputasanteen ympärillä oleva maasto on hiekkakivestä muodostunut halkeamien, käytävien ja kalliolabyrinttien pilkkoma massiivi. Vuoren matkailu liittyy [[Kłodzkon]] seudun 1700-luvun lopun matkailuun. Muodostelman tarkemmasta syntytavasta tai nimen alkuperästä en ole varma.
+Fotel Pradziada on kivimuodostelma, jonka nimi tarkoittaa isoisoisän nojatuolia ja joka on [[Szczeliniec Wielkin]] huipputasanteen korkein kohta. Huipputasanteen ympärillä oleva maasto on hiekkakivestä muodostunut halkeamien, käytävien ja kalliolabyrinttien pilkkoma massiivi. Vuoren matkailu liittyy [[Kłodzkon]] seudun 1700-luvun lopun matkailuun. Muodostelman tarkemmasta syntytavasta tai nimen alkuperästä en ole varma.
 JATKOT:
 Millainen kaupunki Kłodzko on?
 Miten kalliolabyrintit syntyvät hiekkakivessä?
@@ -406,3 +406,74 @@ JATKOT:
 Millainen kaupunki Praha on?
 Millaisia luolia Määrin karstissa on?
 
+### 229
+Saksa on Keski-Euroopan liittotasavalta, jonka pääkaupunki on [[Berliini]]. Maa yhdistyi 3. lokakuuta 1990. Sudeettien länsiosa ulottuu Saksin osavaltioon, jonka nimi suomeksi on [[Saksi]]. Szczeliniec Wielkin saksankielinen nimi Große Heuscheuer muistuttaa ajasta, jolloin [[Kłodzkon]] seutu kuului Preussille ja sittemmin Saksalle; toisen maailmansodan jälkeen alue siirtyi Puolalle.
+JATKOT:
+Millainen kaupunki Berliini on?
+Miten Saksa yhdistyi vuonna 1990?
+
+### 230
+Kłodzko on kaupunki Ala-Sleesiassa Lounais-Puolassa, ja sen nimi on antanut nimen koko Kłodzkon seudulle. Saksaksi kaupunki ja seutu tunnettiin nimellä Glatz. Alue kuului keskiajalla [[Böömin]] kruunuun, siirtyi 1700-luvun puolivälissä [[Preussille]] ja liitettiin Puolaan toisen maailmansodan jälkeen. Seudun tunnettuja kylpyläkaupunkeja ovat esimerkiksi [[Kudowa-Zdrój]] ja Polanica-Zdrój. Tarkkoja vuosilukuja en ole aivan varma sanomaan.
+JATKOT:
+Millaisia kylpyläkaupunkeja Kłodzkon seudulla on?
+Miten Kłodzkon seutu päätyi Puolalle?
+
+### 231
+Puolan kruunu tarkoitti keskiajan lopulla Puolan kuningaskuntaa, jonka keskus oli [[Krakova]]. Puolan ja Liettuan yhteistyö alkoi 1300-luvun lopulla, kun Liettuan suuriruhtinas Jogaila avioitui kuningatar [[Jadwigan]] kanssa ja tuli Puolan kuninkaaksi nimellä Władysław II Jagiełło. Sopimusta kutsutaan [[Krewon unioniksi]]. Siitä alkoi Jagellonien hallitsijasuvun valta Puolassa ja Liettuassa. Myöhemmin maat yhdistyivät vuonna 1569 Lublinin unionilla Puolan–Liettuan yhteisvaltioksi.
+JATKOT:
+Mitä Krewon unioni sopi?
+Miten Puola ja Liettua yhdistyivät Lublinissa?
+
+### 232
+Liettuan suuriruhtinaskunta syntyi 1200-luvulla, kun balttilaiset heimot yhdistyivät, ja sen ensimmäisenä kuninkaana pidetään [[Mindaugasta]]. Valtion keskus siirtyi suuriruhtinas [[Gediminasin]] aikana [[Vilnaan]]. Liettua kääntyi virallisesti kristinuskoon vuonna 1387 Jogailan aikana, ja sitä pidetään yhtenä viimeisistä Euroopan valtioista, jotka kristillistyivät. Vytautaksen aikana suuriruhtinaskunta oli vahvimmillaan ja ulottui itään ja etelään kauas nykyisen Liettuan rajojen ulkopuolelle.
+JATKOT:
+Millainen kaupunki Vilna on?
+Kuka Mindaugas oli?
+
+### 233
+Saksalainen ritarikunta syntyi Pyhällä maalla [[ristiretkien]] aikana 1100-luvun lopulla, ensin sairaiden hoitoon keskittyvänä yhteisönä ja pian sotilaallisena ritarikuntana. Sen tunnuksena oli valkoinen vaippa, jossa oli musta risti. 1200-luvulla ritarikunta asettui Itämeren eteläpuolelle ja valloitti Preussin heimojen alueen, minkä jälkeen se rakensi oman valtionsa, jonka keskus siirtyi 1300-luvun alussa [[Malborkiin]]. Vuonna 1525 ritarikunnan suurmestari muutti ritarikunnan Preussin alueen maalliseksi [[Preussin herttuakunnaksi]]. Ritarikunta on olemassa yhä, ja nykyään se on pääosin hengellinen ja hyväntekeväisyyttä tekevä yhteisö.
+JATKOT:
+Miten Preussin herttuakunta syntyi?
+Mitä ritarikunta tekee nykyään?
+
+### 234
+Malborkin linna, saksaksi Marienburg, on tiilestä rakennettu keskiaikainen linnakompleksi [[Nogat-joen]] varrella. Rakentaminen alkoi 1200-luvun lopulla, ja linnasta tuli [[Saksalaisen ritarikunnan]] päämaja 1300-luvun alussa. Linna jakautuu kolmeen osaan: Ylälinnaan, Keskilinnaan ja Alalinnaan. Grunwaldin taistelun jälkeen ritarikunnan joukot kestivät linnan piirityksen vuonna 1410. Linna on Unescon maailmanperintökohde, ja se vaurioitui pahoin [[toisessa maailmansodassa]], minkä jälkeen sitä on korjattu.
+JATKOT:
+Miten Malborkin linna rakennettiin?
+Mitä Malborkin linnalle tapahtui toisessa maailmansodassa?
+
+### 235
+Ensimmäinen maailmansota käytiin vuosina 1914–1918, ja se alkoi Itävalta-Unkarin kruununperillisen murhasta [[Sarajevossa]] kesäkuussa 1914. Sodan päättyessä useat suurvaltojen monarkiat hajosivat, ja Puola palasi itsenäisenä valtiona Euroopan kartalle vuonna 1918. [[Tannenbergin taistelu]] elokuussa 1914 oli itärintaman varhainen kohtaaminen Saksan ja Venäjän joukkojen välillä [[Itä-Preussissa]], ja se päättyi saksalaisten voittoon.
+JATKOT:
+Miksi ensimmäinen maailmansota alkoi?
+Miten Puola itsenäistyi vuonna 1918?
+
+### 236
+Ristiretket olivat keskiajalla kristityn Euroopan käymiä sotaretkiä, joita johti usein paavin kehotus ja joiden tavoitteena oli alun perin Pyhän maan ja Jerusalemin hallinta. Ensimmäisen ristiretken julisti [[paavi Urbanus II]] vuonna 1095, ja Jerusalem vallattiin vuonna 1099. Ristiretkiä tehtiin myöhemmin myös Euroopan pohjois- ja itäosiin: [[pohjoisiksi ristiretkiksi]] kutsutaan retkiä, joilla Itämeren alueen pakanallisia kansoja alistettiin ja käännytettiin. Saksalaisen ritarikunnan Preussin valloitus kuului tähän jatkumoon. Ruotsalaisista ristiretkistä Suomeen historiantutkijat ovat olleet eri mieltä niiden ajoituksesta ja luonteesta.
+JATKOT:
+Mitä pohjoiset ristiretket olivat?
+Miksi ristiretkiä tehtiin?
+
+### 237
+Malbork on kaupunki Nogat-joen varrella Pohjois-Puolassa Pommerin maakunnassa, ja se sijaitsee lähellä [[Gdańskin]] kaupunkia. Kaupunki on kasvanut linnan ympärille, ja saksankielinen nimi Marienburg tarkoittaa Marian linnaa. Alue kuului Saksalaisen ritarikunnan valtioon, myöhemmin Puolan kruunun ja sittemmin Preussin hallintaan, kunnes se siirtyi Puolalle toisen maailmansodan jälkeen. Kaupungin tunnetuin nähtävyys on [[Malborkin linna]]. Tarkoista väkiluvuista tai muista yksityiskohdista en ole varma.
+JATKOT:
+Miten Malborkin kaupunki kehittyi linnan ympärille?
+Millainen kaupunki Gdańsk on?
+
+### 238
+Nogat on Veikselin suiston itäinen haara, joka erkanee pääjoesta ja virtaa Malborkin kautta [[Veikselin laguuniin]]. Suistoalue on matalaa ja osittain merenpinnan alapuolella, ja sitä suojaavat penkereet ja kanavat. Aluetta kutsutaan nimellä [[Żuławy]]. Joki on ollut tärkeä vesireitti ja puolustuslinja, ja Malborkin linna rakennettiin sen rannalle.
+JATKOT:
+Mikä on Veikselin suisto?
+Miten tulvia torjutaan Żuławyn alueella?
+
+### 239
+Unescon maailmanperintökohteet ovat kulttuuri- ja luontokohteita, jotka on kirjattu maailmanperintöluetteloon, koska niillä katsotaan olevan poikkeuksellinen yleismaailmallinen arvo. Maailmanperintösopimus hyväksyttiin vuonna 1972, ja sopimusvaltiot sitoutuvat suojelemaan alueillaan olevia kohteita. Puolassa luetteloon kuuluvat esimerkiksi [[Krakovan vanhakaupunki]], [[Wieliczkan suolakaivos]] ja [[Białowieżan metsä]] sekä Malborkin linna.
+JATKOT:
+Miten maailmanperintökohde valitaan?
+Mitkä Suomen kohteet ovat maailmanperintöä?
+
+### 240
+Liettua on Baltian maista eteläisin, ja sen pääkaupunki on [[Vilna]]. Maa itsenäistyi ensimmäisen kerran vuonna 1918 ja palautti itsenäisyytensä 11. maaliskuuta 1990, ensimmäisenä Neuvostoliiton tasavaltana. Liettua liittyi Euroopan unioniin vuonna 2004. Liettuan kieli kuuluu baltilaisiin kieliin, ja sen lähin sukukieli on latvia. Grunwaldin taistelun liettuankielinen nimi Žalgiris elää nykypäivässä: sitä käyttää muun muassa kaunasilainen koripalloseura [[Žalgiris Kaunas]].
+JATKOT:
+Mitä Baltian maat ovat?
+Miten Liettua palautti itsenäisyytensä?
