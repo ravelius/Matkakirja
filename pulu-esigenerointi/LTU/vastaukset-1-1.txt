@@ -1,3 +1,17 @@
+### 1.1
+KYSYMYS: Miksi maan korkein kohta vaihtui vasta 2004?
+Kato, tää on hyvä kysymys. Korkeusero oli hyvin pieni: [[Aukštojas]] on 293,84 metriä ja aiemmin korkeimpana pidetty [[Juozapinė]] 292,7 metriä, joten välillä on noin metri. Näin pientä eroa on vaikea havaita vanhemmilla mittausmenetelmillä, ja asia selvisi vasta, kun korkeus mitattiin vuonna 2004 [[GPS]]:n avulla Vilnan Gediminas-teknillisen yliopiston geodesian laitoksella. Tarkkaa syytä sille, miksi mittausta ei tehty aiemmin, en ole varma. Metrin takia vaihtui kokonainen maan katto, kyl se vähän huvittaa.
+JATKOT:
+Miten maanmittauksessa korkeus määritetään merenpinnasta?
+Kuinka tarkasti GPS mittaa korkeutta?
+
+### 1.2
+KYSYMYS: Mikä Medininkain ylänkö on?
+No niin, katotaas. Medininkain ylänkö on Liettuan kaakkoisosassa sijaitseva kohonnut maastoalue, jolla on maan korkein kohta [[Aukštojas]]. Se sijaitsee noin 24 kilometriä [[Vilnasta]] kaakkoon. Aukštojaksesta noin viidensadan metrin päässä on [[Juozapinė]], jota pidettiin ennen maan korkeimpana kohtana. Ylänkö on korkeuserojen perusteella vaatimaton, mutta Liettuan mittakaavassa se on vuoristoa.
+JATKOT:
+Millainen luonto Liettuan ylängöillä on?
+Mitä Liettuan kaakkoisosassa muuten on nähtävää?
+
 ### 1.3
 KYSYMYS: Millainen maa Liettua on korkeussuhteiltaan?
 Hetkinen ny. Liettua on korkeussuhteiltaan matala ja suurelta osin tasainen maa, jossa alavat tasangot ja loivat kumpareet vuorottelevat. Maan korkein kohta [[Aukštojas]] kohoaa vain 293,84 metriä merenpinnan yläpuolelle [[Medininkain ylängöllä]] noin 24 kilometriä [[Vilnasta]] kaakkoon, mikä kertoo hyvin maan loivasta luonteesta. Itämeren rannikko on lyhyt ja matala. Ylhäältä katsoen se on kyl aika rauhallista maisemaa.
@@ -19,6 +33,20 @@ JATKOT:
 Mitä kieltä Liettuassa puhutaan?
 Mikä on Unescon maailmanperintöluettelo?
 
+### 2.1
+KYSYMYS: Mikä Kuurinkynnäs on?
+Ai se. Kuurinkynnäs on lähes sadan kilometrin pituinen hiekkaniemi, joka erottaa matalan lahden Itämerestä. Kapeimmillaan se on vain muutaman sadan metrin levyinen. Kun niemen metsät hakattiin 1600- ja 1700-luvuilla, tuuli pääsi liikuttamaan hiekkaa, ja [[dyynit]] alkoivat vaeltaa ja hautasivat alleen kokonaisia kyliä. Vaellus pysäytettiin istuttamalla mäntyä ja rantakauraa sata vuotta kestäneellä työllä, ja [[Unesco]] otti niemen maailmanperintöluetteloon vuonna 2000. Sata vuotta istutusta, kyl se on pitkä päivätyö.
+JATKOT:
+Miten dyynit syntyvät ja liikkuvat?
+Mitä muita Unescon kohteita Liettuassa on?
+
+### 2.2
+KYSYMYS: Miksi Itämeren vesi on murtovettä?
+Selvä juttu. Itämeri on yhteydessä Atlantin valtamereen vain kapeiden [[Tanskan salmien]] kautta, joten suolaista merivettä pääsee sinne vähän ja vesi vaihtuu hitaasti. Samalla joet ja sade tuovat mereen runsaasti makeaa vettä ympäröiviltä mailta. Seurauksena vesi on vähäsuolaista, ja meri kuuluu maailman suurimpiin murtovesialtaisiin. Vähäsuolaisessa vedessä ei viihdy [[laivamato]], minkä vuoksi vanhat puuhylyt säilyvät pohjassa. Suolaa on vähän, mutta tarinoita sitäkin enemmän.
+JATKOT:
+Millaisia eläimiä murtovedessä elää?
+Kuinka paljon suolaa Itämeressä on valtamereen verrattuna?
+
 ### 2.3
 KYSYMYS: Kuinka syvä Itämeri on?
 Annas ku mietin. Itämeri on matala meri: sen keskisyvyys on noin 50–60 metriä, ja syvin kohta, [[Landsortin syvänne]] Ruotsin rannikon edustalla, yltää lähteiden mukaan noin 460 metriin. Meri on yhteydessä Atlantin valtamereen vain kapeiden [[Tanskan salmien]] kautta, joten vesi vaihtuu hitaasti ja on murtovettä, ja siksi [[Vasan]] kaltaiset puuhylyt säilyvät pohjassa. Syvyydet on kyl enemmän kalojen kuin kyyhkyn alaa.
@@ -39,6 +67,20 @@ Joo, tän minä tiedän. [[Meripihka]] on kauan sitten puista valunutta ja kivet
 JATKOT:
 Miten meripihkasta tehdään koruja?
 Mitä meripihkan sisään voi jäädä?
+
+### 3.1
+KYSYMYS: Miksi joella on niin monta nimeä?
+Odotas vähän. Joki virtaa usean maan ja kielialueen halki, ja jokainen kieli on antanut sille oman nimensä: liettuaksi se on Nemunas, valkovenäjäksi Nioman, puolaksi [[Niemen]] ja saksaksi [[Memel]]. Nimet ovat yleensä saman vanhan nimen eri kielissä muotoutuneita muunnelmia, mutta tarkkaa alkuperää en ole varma. Joen lähde on [[Valko-Venäjällä]], ja se virtaa Liettuan halki Kuurinlahteen. Neljä nimeä, ja minä muistan vain kolme ensimmäisellä yrityksellä.
+JATKOT:
+Mistä Nemunasin nimi on peräisin?
+Mitkä muut Euroopan joet kulkevat usean maan kautta?
+
+### 3.2
+KYSYMYS: Mikä Kuurinlahti on?
+Tuota niin. Kuurinlahti on matala lahti, jonka [[Kuurinkynnäs]] erottaa Itämerestä. Se on yhteydessä mereen kapean salmen kautta, ja [[Nemunas]] laskee siihen. Lahti on murtovettä, ja sen rannat ovat tärkeä osa alueen luontoa. Ylhäältä katsottuna hiekkaniemi ja lahti näyttävät kyl ihan karttapiirrokselta.
+JATKOT:
+Miten Kuurinkynnäs on syntynyt?
+Mitä lintuja Kuurinlahdella tavataan?
 
 ### 3.3
 KYSYMYS: Missä Kaunas sijaitsee?
@@ -62,6 +104,20 @@ JATKOT:
 Miten Nemunas on vaikuttanut kaupunkien syntyyn?
 Mitä kieliä Valko-Venäjällä puhutaan?
 
+### 4.1
+KYSYMYS: Kuka kuoli linnassa vuonna 1430?
+Hyvä kysymys tuo. Linnassa kuoli vuonna 1430 [[Vytautas Suuri]], suuriruhtinas, joka oli [[Kęstutisin]] poika ja sai Trakain saarilinnan päätyöt valmiiksi noin vuonna 1409. Hän hallitsi [[Liettuan suuriruhtinaskuntaa]], joka ulottui Itämereltä lähelle Mustaamerta ja oli 1400-luvun alussa Euroopan laajimpia valtioita. Hänen kuolemastaan on onneksi pitkä aika.
+JATKOT:
+Millainen oli Liettuan suuriruhtinaskunnan hallinto?
+Missä Vytautas on haudattu?
+
+### 4.2
+KYSYMYS: Miksi linnan kunnostus oli vaikeaa?
+Mmm— Trakain linna vaurioitui pahoin, kun [[saksalainen ritarikunta]] hyökkäsi sinne vuonna 1377, ja sen jälkeen rakennus rapistui vuosisatojen kuluessa pahasti. Kun rauniota ruvettiin kunnostamaan, alkuperäisestä rakennuksesta oli jäljellä vain osia, ja puuttuvat osat piti rakentaa uudelleen niukan tiedon varassa. Linna seisoo myös järven saarella, mikä tekee rakennustyöstä hankalaa. Tarkkoja vuosia ja työvaiheita en ole varma. Ylhäältä se näyttää kyl vaikuttavalta, vaikka työ oli tuskaa.
+JATKOT:
+Miten keskiaikaisia linnoja kunnostetaan?
+Mikä on Trakain linnan nykyinen käyttö?
+
 ### 4.3
 KYSYMYS: Missä Trakai sijaitsee?
 Kato, tää on helppo. Trakai sijaitsee Liettuassa [[Vilnan]] länsipuolella, [[Galvė-järven]] ympäristössä, ja kaupungin tunnetuin nähtävyys on järven saarella seisova [[Trakain saarilinna]]. Trakai oli [[Liettuan suuriruhtinaskunnan]] tärkeimpiä keskuksia. Linna keskellä järveä näyttää ylhäältä kyl aika hyvältä.
@@ -83,6 +139,20 @@ Annas ku mietin. Vytautas Suuri oli Liettuan suuriruhtinas, joka hallitsi 1400-l
 JATKOT:
 Millainen oli Liettuan ja Puolan unioni?
 Miten Liettuasta tuli kristitty maa?
+
+### 5.1
+KYSYMYS: Miksi Kernavėä sanotaan Liettuan Troijaksi?
+Joo, tän minä tiedän. Kernavė oli Liettuan ensimmäinen pääkaupunki, jonka [[saksalainen ritarikunta]] poltti vuonna 1390 [[Pajautan laaksossa]], minkä jälkeen kaupunkia ei rakennettu uudelleen. Rauniot peittyivät myöhemmin tulvakerroksen alle, joka muuttui märäksi [[turpeeksi]] ja säilytti jäänteet lähes koskemattomina. Siksi paikkaa on kutsuttu Liettuan Troijaksi, sillä Troijan tavoin se on arkeologisesti kuuluisa tuhoutunut ja haudattu kaupunki. Minun suvussa on kyl tuhoutuneita kaupunkeja nähty, mutta ei näin hyvin säilyneitä.
+JATKOT:
+Miten arkeologit tutkivat tulvan peittämiä kohteita?
+Mitä Kernavėn alueelta on löytynyt?
+
+### 5.2
+KYSYMYS: Mikä medgrinda on?
+Annas ku mietin. Sanan merkityksestä en ole täysin varma, mutta liettuan kielessä se näyttää koostuvan sanoista puu ja lankku- tai lattiarakenne, joten kyse on todennäköisesti puusta tehdystä päällysteestä, esimerkiksi katu- tai lattiarakenteesta. [[Kernavėn]] alueella puuta ja muita jäänteitä on säilynyt poikkeuksellisen hyvin, koska märkä [[turve]] suojasi ne lahoamiselta. Tarkempaa selitystä en uskalla arvata. Tuo sana on kyl liian vaikea kyyhkylle.
+JATKOT:
+Miten märkä turve säilyttää puuta?
+Millaisia rakennuksia Kernavėssa on tutkittu?
 
 ### 5.3
 KYSYMYS: Mikä Neris-joki on?
