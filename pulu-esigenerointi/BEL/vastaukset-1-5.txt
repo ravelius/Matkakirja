@@ -1,6 +1,6 @@
 ### 21.1
-KYSYMYS: Minkä tuotteen valmistuskeskuksena Oudenaarde oli tunnettu?
-Ai se, tän minä tiedän. Oudenaarde oli tunnettu [[kuvakudosten]] valmistuskeskuksena. Tuotanto kesti 1400-luvulta 1700-luvulle, ja huippukausi osui erityisesti 1500-luvulle. Kaupungintalossa on nykyään kokoelma Oudenaarden kuvakudoksia, joten perinne on yhä nähtävillä. Kyl kirje on silti kevyempi kantaa.
+KYSYMYS: Minkä tuotteen valmistuskeskuksena [[Oudenaarde]] oli tunnettu?
+Ai se, tän minä tiedän. Oudenaarde oli tunnettu [[kuvakudosten]] valmistuskeskuksena. Tuotanto kesti 1400-luvulta 1700-luvulle, ja huippukausi osui erityisesti 1500-luvulle. [[Kaupungintalossa]] on nykyään kokoelma Oudenaarden kuvakudoksia, joten perinne on yhä nähtävillä. Kyl kirje on silti kevyempi kantaa.
 JATKOT:
 Miten kuvakudokset valmistettiin?
 Milloin Oudenaarde antautui piirityksen jälkeen?
@@ -14,14 +14,14 @@ Mitä Unescon maailmanperintöluettelo tarkoittaa?
 
 ### 21.3
 KYSYMYS: Kuka johti Oudenaarden piiritystä vuonna 1582?
-Mmm— selvä, tämä on historiaa. Piiritystä johti [[Alexander Farnese]], joka oli Espanjan Alankomaiden kenraalikuvernööri. Kaupunki antautui pitkän piirityksen jälkeen, ja sen seurauksena useimmat kauppiaat, työläiset ja jopa aateliset pakenivat. Entinen loisto ei koskaan palannut. Onpas siitä onneksi pitkä aika.
+Mmm— selvä, tämä on historiaa. Piiritystä johti [[Alexander Farnese]], joka oli [[Espanjan]] Alankomaiden [[kenraalikuvernööri]]. Kaupunki antautui pitkän piirityksen jälkeen, ja sen seurauksena useimmat kauppiaat, työläiset ja jopa aateliset pakenivat. Entinen loisto ei koskaan palannut. Onpas siitä onneksi pitkä aika.
 JATKOT:
 Millainen mies Alexander Farnese oli?
 Miksi Alankomaissa käytiin sotaa Espanjaa vastaan?
 
 ### 21.4
 KYSYMYS: Mihin Scheldt-joki virtaa?
-Kas vaan, jokikysymys, ja katolta ne näkyvät parhaiten. Scheldt saa alkunsa Ranskassa, virtaa Belgian halki ja päätyy Alankomaiden kautta Pohjanmereen. Oudenaarde sijaitsee joen varrella Itä-Flanderissa, ja joki on ollut alueen kaupungeille tärkeä kulkuväylä. Kaupunkien rakentajat ovat aina tienneet, missä vesi on.
+Kas vaan, jokikysymys, ja katolta ne näkyvät parhaiten. [[Scheldt]] saa alkunsa [[Ranskassa]], virtaa Belgian halki ja päätyy Alankomaiden kautta [[Pohjanmereen]]. [[Oudenaarde]] sijaitsee joen varrella Itä-Flanderissa, ja joki on ollut alueen kaupungeille tärkeä kulkuväylä. Kaupunkien rakentajat ovat aina tienneet, missä vesi on.
 
 Minä seuraan jokia mielelläni, koska niitä pitkin ei eksy, vaikka sumu tulisi. Tosin sumussa sekin on kyl haaste.
 JATKOT:
@@ -51,21 +51,21 @@ Mitä muita rakennuksia Edwin Clark suunnitteli?
 
 ### 22.3
 KYSYMYS: Miten hydraulinen laivanostin toimii?
-Annas ku mietin. Laivanostimessa on kaksi vedellä täytettyä allasta, joihin laiva ajetaan, ja ne on yhdistetty toisiinsa [[hydraulisilla]] mäntäjärjestelmillä. Kun ylempään altaaseen lisätään hieman vettä, se muuttuu raskaammaksi ja laskeutuu samalla, kun alempi allas nousee. Laiva syrjäyttää oman painonsa verran vettä, joten laivalla varustettu allas painaa saman verran kuin tyhjä. Siksi vähäinenkin lisäpaino riittää liikuttamaan koko rakennelmaa. Canal du Centren neljä laivanostinta toimivat tällä periaatteella. Ja tän kaiken minä muistin ilman pulla-taukoa.
+Annas ku mietin. Laivanostimessa on kaksi vedellä täytettyä allasta, joihin laiva ajetaan, ja ne on yhdistetty toisiinsa [[hydraulisilla]] mäntäjärjestelmillä. Kun ylempään altaaseen lisätään hieman vettä, se muuttuu raskaammaksi ja laskeutuu samalla, kun alempi allas nousee. Laiva syrjäyttää oman painonsa verran vettä, joten laivalla varustettu allas painaa saman verran kuin tyhjä. Siksi vähäinenkin lisäpaino riittää liikuttamaan koko rakennelmaa. [[Canal du Centren]] neljä laivanostinta toimivat tällä periaatteella. Ja tän kaiken minä muistin ilman pulla-taukoa.
 JATKOT:
 Mitä hydrauliikka tarkoittaa?
 Kuka keksi laivanostimen periaatteen?
 
 ### 22.4
 KYSYMYS: Minkä maiden läpi Maas-joki kulkee?
-Odotas vähän. Maas saa alkunsa Ranskassa, virtaa Belgian halki ja päätyy Alankomaiden kautta Pohjanmereen. Se on tärkeä kulkuväylä, ja Canal du Centre yhdistää Maasin ja [[Scheldtin]] vesistöt Walloniassa. Joki on ollut kauppareittinä merkittävä jo vuosisatojen ajan. Joet ovat kyl kyyhkyn parhaita ystäviä, ne näyttävät suunnan.
+Odotas vähän. [[Maas]] saa alkunsa Ranskassa, virtaa Belgian halki ja päätyy Alankomaiden kautta Pohjanmereen. Se on tärkeä kulkuväylä, ja [[Canal du Centre]] yhdistää Maasin ja [[Scheldtin]] vesistöt Walloniassa. Joki on ollut kauppareittinä merkittävä jo vuosisatojen ajan. Joet ovat kyl kyyhkyn parhaita ystäviä, ne näyttävät suunnan.
 JATKOT:
 Mitkä kaupungit sijaitsevat Maasin varrella?
 Miten Maas ja Scheldt liittyvät toisiinsa?
 
 ### 22.5
 KYSYMYS: Mikä on Unescon maailmanperintöluettelo?
-Hyvä kysymys tuo. Unescon maailmanperintöluettelo on luettelo kulttuuri- ja luontokohteista, joiden katsotaan olevan koko ihmiskunnan yhteistä perintöä. Se perustuu vuonna 1972 hyväksyttyyn yleissopimukseen. Luetteloon hyväksyttävän kohteen on täytettävä tietyt arvoperusteet, ja jäsenvaltiot sitoutuvat suojelemaan kohteitaan. Canal du Centren laivanostimet ovat yksi esimerkki teknisestä kohteesta, joka on luettelossa. Jopas tuli virallinen vastaus kyyhkyltä.
+Hyvä kysymys tuo. [[Unescon maailmanperintöluettelo]] on luettelo kulttuuri- ja luontokohteista, joiden katsotaan olevan koko ihmiskunnan yhteistä perintöä. Se perustuu vuonna 1972 hyväksyttyyn yleissopimukseen. Luetteloon hyväksyttävän kohteen on täytettävä tietyt arvoperusteet, ja jäsenvaltiot sitoutuvat suojelemaan kohteitaan. [[Canal du Centren]] laivanostimet ovat yksi esimerkki teknisestä kohteesta, joka on luettelossa. Jopas tuli virallinen vastaus kyyhkyltä.
 JATKOT:
 Kuinka kohde pääsee maailmanperintöluetteloon?
 Mitkä muut Belgian kohteet ovat maailmanperintöluettelossa?
@@ -79,14 +79,14 @@ Mitkä ovat Wallonian muut maailmanperintökohteet?
 
 ### 23.2
 KYSYMYS: Mitä Grand-Hornun rakennuksissa on nykyään?
-Joo, siitä voin kertoa. Nykyään Grand-Hornun omistaa [[Hainautin]] maakunta, ja rakennuksissa järjestetään vaihtuvia näyttelyitä. Entinen teollisuusalue toimii siis kulttuurikäytössä. Kohde on myös osa Wallonian maailmanperintökohteita. Sillon siinä oli kaivos, nyt siinä on näyttely.
+Joo, siitä voin kertoa. Nykyään [[Grand-Hornun]] omistaa [[Hainautin]] maakunta, ja rakennuksissa järjestetään vaihtuvia näyttelyitä. Entinen teollisuusalue toimii siis kulttuurikäytössä. Kohde on myös osa [[Wallonian]] maailmanperintökohteita. Sillon siinä oli kaivos, nyt siinä on näyttely.
 JATKOT:
 Millaisia näyttelyitä Grand-Hornussa on järjestetty?
 Mikä Hainaut on ja missä se sijaitsee?
 
 ### 23.3
 KYSYMYS: Missä Mons sijaitsee?
-Hetkinen ny, katotaas karttaa. [[Mons]] on Hainautin maakunnan pääkaupunki Belgian Walloniassa, lähellä Ranskan rajaa. Grand-Hornun kaivoskompleksi sijaitsee Monsin lähellä Hornun alueella Boussun kunnassa. Kaupunki on kulttuurikaupunkina tunnettu, ja se oli Euroopan kulttuuripääkaupunki vuonna 2015. Ylhäältä katsottuna Wallonia on yllättävän vihreää seutua.
+Hetkinen ny, katotaas karttaa. [[Mons]] on Hainautin maakunnan pääkaupunki Belgian [[Walloniassa]], lähellä Ranskan rajaa. [[Grand-Hornun]] kaivoskompleksi sijaitsee Monsin lähellä Hornun alueella Boussun kunnassa. Kaupunki on kulttuurikaupunkina tunnettu, ja se oli Euroopan kulttuuripääkaupunki vuonna 2015. Ylhäältä katsottuna Wallonia on yllättävän vihreää seutua.
 JATKOT:
 Mitä Monsissa voi nähdä?
 Mitä Euroopan kulttuuripääkaupunki tarkoittaa?
@@ -94,7 +94,7 @@ PAIKKA: Mons | 50.45 | 3.95 | kaupunki
 
 ### 23.4
 KYSYMYS: Miksi Wallonia oli teollisuuden keskus?
-Ai tota. Waloniassa on kivihiiliesiintymiä, joita louhittiin jo varhain, ja hiili antoi energiaa raudan- ja teräksenvalmistukselle. Belgia oli yksi ensimmäisistä [[teollistuneista]] maista Euroopan mantereella, ja Wallonian hiili- ja terästeollisuus oli keskeisessä asemassa. Alueen kaivoskaupungit, kuten Grand-Hornu, ovat tämän kauden todisteita. Teollisuus on sittemmin vähentynyt, ja monet entiset tehdasalueet ovat nykyään museoita tai kulttuurikohteita. Minä muistan, että savu oli joskus vahvempaa kuin sumu.
+Ai tota. [[Waloniassa]] on kivihiiliesiintymiä, joita louhittiin jo varhain, ja hiili antoi energiaa raudan- ja teräksenvalmistukselle. Belgia oli yksi ensimmäisistä [[teollistuneista]] maista Euroopan mantereella, ja Wallonian hiili- ja terästeollisuus oli keskeisessä asemassa. Alueen kaivoskaupungit, kuten [[Grand-Hornu]], ovat tämän kauden todisteita. Teollisuus on sittemmin vähentynyt, ja monet entiset tehdasalueet ovat nykyään museoita tai kulttuurikohteita. Minä muistan, että savu oli joskus vahvempaa kuin sumu.
 JATKOT:
 Miksi Wallonian raskas teollisuus on vähentynyt?
 Mitä ensimmäinen teollinen vallankumous tarkoitti?
@@ -129,14 +129,14 @@ Missä muualla hiilimonoksidia syntyy?
 
 ### 24.4
 KYSYMYS: Miksi Italiasta tuli työläisiä Belgian kaivoksiin?
-Ai tota. Toisen maailmansodan jälkeen Belgia tarvitsi kipeästi työvoimaa hiilikaivoksiinsa, ja Italiassa oli työttömyyttä. Maiden välillä sovittiin siirtolaisten tulosta, ja tuhannet [[italialaiset]] muuttivat Belgiaan kaivostyöhön. Työ oli raskasta ja vaarallista, ja monet asuivat aluksi kaivosalueiden parakeissa. Marcinellen onnettomuudessa kuolleiden joukossa oli useita italialaisia. Kaivosvuosien perintö on yhä osa Belgian ja Italian yhteistä historiaa.
+Ai tota. Toisen maailmansodan jälkeen [[Belgia]] tarvitsi kipeästi työvoimaa hiilikaivoksiinsa, ja Italiassa oli työttömyyttä. Maiden välillä sovittiin siirtolaisten tulosta, ja tuhannet [[italialaiset]] muuttivat Belgiaan kaivostyöhön. Työ oli raskasta ja vaarallista, ja monet asuivat aluksi kaivosalueiden parakeissa. [[Marcinellen]] onnettomuudessa kuolleiden joukossa oli useita italialaisia. Kaivosvuosien perintö on yhä osa Belgian ja Italian yhteistä historiaa.
 JATKOT:
 Millaisissa oloissa siirtolaiset asuivat?
 Miksi Italiassa oli työttömyyttä sodan jälkeen?
 
 ### 24.5
 KYSYMYS: Milloin Belgian hiilikaivokset suljettiin?
-Odotas vähän. Belgian viimeiset [[hiilikaivokset]] suljettiin lähteiden mukaan 1990-luvun alussa, joten kaivosteollisuus päättyi maassa jo pari vuosikymmentä ennen nykyhetkeä. Sulkeminen oli seurausta halvemmasta tuontihiilestä ja kaivosten kannattamattomuudesta. Monet entiset kaivosalueet on sittemmin muutettu museoiksi tai kulttuurikohteiksi, kuten Bois du Cazier. En ole aivan varma tarkasta vuodesta. Onpas siitä aikaa.
+Odotas vähän. [[Belgian]] viimeiset [[hiilikaivokset]] suljettiin lähteiden mukaan 1990-luvun alussa, joten kaivosteollisuus päättyi maassa jo pari vuosikymmentä ennen nykyhetkeä. Sulkeminen oli seurausta halvemmasta tuontihiilestä ja kaivosten kannattamattomuudesta. Monet entiset kaivosalueet on sittemmin muutettu museoiksi tai kulttuurikohteiksi, kuten [[Bois du Cazier]]. En ole aivan varma tarkasta vuodesta. Onpas siitä aikaa.
 JATKOT:
 Mitä entisille kaivosalueille on tehty?
 Mistä Belgia saa nykyään energiansa?
@@ -164,7 +164,7 @@ Mihin masuunia käytetään nykyään?
 
 ### 25.4
 KYSYMYS: Missä Liège sijaitsee?
-Kas vaan, katotaas ylhäältä. [[Liège]] sijaitsee Itä-Belgiassa Walloniassa, Maas-joen varrella, ja se on Liègen maakunnan pääkaupunki. Seraing kuuluu Liègen kaupunkialueeseen, jonka asukasluku on noin 600 000. Kaupunki on ollut pitkään teollisuuden ja kaupan keskus. Ylhäältä Liègen joet ja mäet erottuvat selvästi.
+Kas vaan, katotaas ylhäältä. [[Liège]] sijaitsee Itä-Belgiassa Walloniassa, [[Maas]]-joen varrella, ja se on Liègen maakunnan pääkaupunki. [[Seraing]] kuuluu Liègen kaupunkialueeseen, jonka asukasluku on noin 600 000. Kaupunki on ollut pitkään teollisuuden ja kaupan keskus. Ylhäältä Liègen joet ja mäet erottuvat selvästi.
 JATKOT:
 Mitä Liègessä voi nähdä?
 Miten Maas-joki on vaikuttanut Liègen kehitykseen?

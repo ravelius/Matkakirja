@@ -468,8 +468,10 @@
   "kohde": "kohde:hahmotelma-lions-mound",
   "kysymys": "Montako askelmaa Leijonakumpuun johtaa?",
   "uusi": true,
-  "vastaus": "Katotaas. Kumpuun johtaa 226 askelmaa. Se sijaitsee Braine-l'Alleudin kunnassa Belgiassa, ja portaat nousevat huipulle, jossa on [[leijonapatsas]]. Minä otan yleensä lyhyemmän reitin, siivillä.",
+  "vastaus": "Katotaas. Kumpuun johtaa 226 askelmaa. Se sijaitsee [[Braine-l'Alleudin]] kunnassa [[Belgiassa]], ja portaat nousevat huipulle, jossa on [[leijonapatsas]]. Minä otan yleensä lyhyemmän reitin, siivillä.",
   "linkit": [
+   "Braine-l'Alleudin",
+   "Belgiassa",
    "leijonapatsas"
   ],
   "jatkot": [
@@ -607,8 +609,9 @@
   "kohde": "kohde:hahmotelma-bastogne",
   "kysymys": "Milloin Bastognen muistomerkki vihittiin?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Muistomerkki vihittiin 16. heinäkuuta 1950. Ensimmäinen askel otettiin jo 4. heinäkuuta 1946, kun paikalta lahjoitettiin maata Yhdysvaltain presidentille, ja kunnioituksen kohteena ovat [[Ardennien taistelun]] amerikkalaiset kaatuneet ja haavoittuneet. Kärsivällisyyttä se vaati.",
+  "vastaus": "Odotas vähän. Muistomerkki vihittiin 16. heinäkuuta 1950. Ensimmäinen askel otettiin jo 4. heinäkuuta 1946, kun paikalta lahjoitettiin maata [[Yhdysvaltain]] presidentille, ja kunnioituksen kohteena ovat [[Ardennien taistelun]] amerikkalaiset kaatuneet ja haavoittuneet. Kärsivällisyyttä se vaati.",
   "linkit": [
+   "Yhdysvaltain",
    "Ardennien taistelun"
   ],
   "jatkot": [
@@ -705,9 +708,11 @@
   "kohde": "kohde:hahmotelma-bouillon",
   "kysymys": "Kuka oli Bouillonin Gotfrid?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Gotfrid oli yksi [[ensimmäisen ristiretken]] johtajista. Hän peri Bouillonin linnan vuonna 1082 ja myi sen Liègen piispalle rahoittaakseen retkensä, ja ristiretken jälkeen hän jäi hallitsemaan Jerusalemia mutta kuoli jo vuonna 1100. Melkoinen ura linnanherralle.",
+  "vastaus": "Joo, tän minä tiedän. Gotfrid oli yksi [[ensimmäisen ristiretken]] johtajista. Hän peri [[Bouillonin]] linnan vuonna 1082 ja myi sen [[Liègen]] piispalle rahoittaakseen retkensä, ja ristiretken jälkeen hän jäi hallitsemaan Jerusalemia mutta kuoli jo vuonna 1100. Melkoinen ura linnanherralle.",
   "linkit": [
-   "ensimmäisen ristiretken"
+   "ensimmäisen ristiretken",
+   "Bouillonin",
+   "Liègen"
   ],
   "jatkot": [
    "Miten ensimmäinen ristiretki päättyi?",
@@ -901,8 +906,10 @@
   "kohde": "kohde:hahmotelma-kortrijk",
   "kysymys": "Kuka voitti sodan, vaikka flaamilaiset voittivat taistelun?",
   "uusi": true,
-  "vastaus": "Ai se. Sodan voitti Ranska, vaikka flaamilaiset voittivat taistelun. Taistelusta tuli silti tärkeä kulttuurinen tukipiste [[flaamilaisliikkeelle]] 1800- ja 1900-luvuilla. Tarkkoja rauhanehtoja en muista varmasti, joten jätän ne mainitsematta. Yli seitsemänsataa vuotta ja yhä siit puhutaan.",
+  "vastaus": "Ai se. Sodan voitti [[Ranska]], vaikka [[flaamilaiset]] voittivat taistelun. Taistelusta tuli silti tärkeä kulttuurinen tukipiste [[flaamilaisliikkeelle]] 1800- ja 1900-luvuilla. Tarkkoja rauhanehtoja en muista varmasti, joten jätän ne mainitsematta. Yli seitsemänsataa vuotta ja yhä siit puhutaan.",
   "linkit": [
+   "Ranska",
+   "flaamilaiset",
    "flaamilaisliikkeelle"
   ],
   "jatkot": [
@@ -942,9 +949,11 @@
   "kohde": "kohde:hahmotelma-orval",
   "kysymys": "Mitä luostari valmistaa myyntiin?",
   "uusi": false,
-  "vastaus": "Tost minä osaan kertoo. Orvalin luostari valmistaa [[trappistiolutta]] ja erityistä juustoa. Oluen panemisen keskiaikainen perinne elvytettiin vuonna 1931 rahoittamaan luostarin jälleenrakennusta, ja nykyään luostari on tunnettu juuri oluestaan ja juustostaan. Olut ja juusto, ja pullasta ei kukaan edes mainitse mitään.",
+  "vastaus": "Tost minä osaan kertoo. [[Orvalin]] luostari valmistaa [[trappistiolutta]] ja erityistä [[juustoa]]. Oluen panemisen keskiaikainen perinne elvytettiin vuonna 1931 rahoittamaan luostarin jälleenrakennusta, ja nykyään luostari on tunnettu juuri oluestaan ja juustostaan. Olut ja juusto, ja pullasta ei kukaan edes mainitse mitään.",
   "linkit": [
-   "trappistiolutta"
+   "Orvalin",
+   "trappistiolutta",
+   "juustoa"
   ],
   "jatkot": [
    "Millaista juustoa luostareissa valmistetaan?",
@@ -1467,9 +1476,10 @@
   "kohde": "kohde:hahmotelma-oudenaarde",
   "kysymys": "Minkä tuotteen valmistuskeskuksena Oudenaarde oli tunnettu?",
   "uusi": false,
-  "vastaus": "Ai se, tän minä tiedän. Oudenaarde oli tunnettu [[kuvakudosten]] valmistuskeskuksena. Tuotanto kesti 1400-luvulta 1700-luvulle, ja huippukausi osui erityisesti 1500-luvulle. Kaupungintalossa on nykyään kokoelma Oudenaarden kuvakudoksia, joten perinne on yhä nähtävillä. Kyl kirje on silti kevyempi kantaa.",
+  "vastaus": "Ai se, tän minä tiedän. Oudenaarde oli tunnettu [[kuvakudosten]] valmistuskeskuksena. Tuotanto kesti 1400-luvulta 1700-luvulle, ja huippukausi osui erityisesti 1500-luvulle. [[Kaupungintalossa]] on nykyään kokoelma Oudenaarden kuvakudoksia, joten perinne on yhä nähtävillä. Kyl kirje on silti kevyempi kantaa.",
   "linkit": [
-   "kuvakudosten"
+   "kuvakudosten",
+   "Kaupungintalossa"
   ],
   "jatkot": [
    "Miten kuvakudokset valmistettiin?",
@@ -1495,9 +1505,11 @@
   "kohde": "kohde:hahmotelma-oudenaarde",
   "kysymys": "Kuka johti Oudenaarden piiritystä vuonna 1582?",
   "uusi": true,
-  "vastaus": "Mmm— selvä, tämä on historiaa. Piiritystä johti [[Alexander Farnese]], joka oli Espanjan Alankomaiden kenraalikuvernööri. Kaupunki antautui pitkän piirityksen jälkeen, ja sen seurauksena useimmat kauppiaat, työläiset ja jopa aateliset pakenivat. Entinen loisto ei koskaan palannut. Onpas siitä onneksi pitkä aika.",
+  "vastaus": "Mmm— selvä, tämä on historiaa. Piiritystä johti [[Alexander Farnese]], joka oli [[Espanjan]] Alankomaiden [[kenraalikuvernööri]]. Kaupunki antautui pitkän piirityksen jälkeen, ja sen seurauksena useimmat kauppiaat, työläiset ja jopa aateliset pakenivat. Entinen loisto ei koskaan palannut. Onpas siitä onneksi pitkä aika.",
   "linkit": [
-   "Alexander Farnese"
+   "Alexander Farnese",
+   "Espanjan",
+   "kenraalikuvernööri"
   ],
   "jatkot": [
    "Millainen mies Alexander Farnese oli?",
@@ -1508,8 +1520,13 @@
   "kohde": "kohde:hahmotelma-oudenaarde",
   "kysymys": "Mihin Scheldt-joki virtaa?",
   "uusi": true,
-  "vastaus": "Kas vaan, jokikysymys, ja katolta ne näkyvät parhaiten. Scheldt saa alkunsa Ranskassa, virtaa Belgian halki ja päätyy Alankomaiden kautta Pohjanmereen. Oudenaarde sijaitsee joen varrella Itä-Flanderissa, ja joki on ollut alueen kaupungeille tärkeä kulkuväylä. Kaupunkien rakentajat ovat aina tienneet, missä vesi on.\n\nMinä seuraan jokia mielelläni, koska niitä pitkin ei eksy, vaikka sumu tulisi. Tosin sumussa sekin on kyl haaste.",
-  "linkit": [],
+  "vastaus": "Kas vaan, jokikysymys, ja katolta ne näkyvät parhaiten. [[Scheldt]] saa alkunsa [[Ranskassa]], virtaa Belgian halki ja päätyy Alankomaiden kautta [[Pohjanmereen]]. [[Oudenaarde]] sijaitsee joen varrella Itä-Flanderissa, ja joki on ollut alueen kaupungeille tärkeä kulkuväylä. Kaupunkien rakentajat ovat aina tienneet, missä vesi on.\n\nMinä seuraan jokia mielelläni, koska niitä pitkin ei eksy, vaikka sumu tulisi. Tosin sumussa sekin on kyl haaste.",
+  "linkit": [
+   "Scheldt",
+   "Ranskassa",
+   "Pohjanmereen",
+   "Oudenaarde"
+  ],
   "jatkot": [
    "Mitkä kaupungit sijaitsevat Scheldtin varrella?",
    "Mikä on Pohjanmeri ja mitkä maat sen rannoilla ovat?"
@@ -1562,9 +1579,10 @@
   "kohde": "kohde:hahmotelma-canal-du-centre",
   "kysymys": "Miten hydraulinen laivanostin toimii?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Laivanostimessa on kaksi vedellä täytettyä allasta, joihin laiva ajetaan, ja ne on yhdistetty toisiinsa [[hydraulisilla]] mäntäjärjestelmillä. Kun ylempään altaaseen lisätään hieman vettä, se muuttuu raskaammaksi ja laskeutuu samalla, kun alempi allas nousee. Laiva syrjäyttää oman painonsa verran vettä, joten laivalla varustettu allas painaa saman verran kuin tyhjä. Siksi vähäinenkin lisäpaino riittää liikuttamaan koko rakennelmaa. Canal du Centren neljä laivanostinta toimivat tällä periaatteella. Ja tän kaiken minä muistin ilman pulla-taukoa.",
+  "vastaus": "Annas ku mietin. Laivanostimessa on kaksi vedellä täytettyä allasta, joihin laiva ajetaan, ja ne on yhdistetty toisiinsa [[hydraulisilla]] mäntäjärjestelmillä. Kun ylempään altaaseen lisätään hieman vettä, se muuttuu raskaammaksi ja laskeutuu samalla, kun alempi allas nousee. Laiva syrjäyttää oman painonsa verran vettä, joten laivalla varustettu allas painaa saman verran kuin tyhjä. Siksi vähäinenkin lisäpaino riittää liikuttamaan koko rakennelmaa. [[Canal du Centren]] neljä laivanostinta toimivat tällä periaatteella. Ja tän kaiken minä muistin ilman pulla-taukoa.",
   "linkit": [
-   "hydraulisilla"
+   "hydraulisilla",
+   "Canal du Centren"
   ],
   "jatkot": [
    "Mitä hydrauliikka tarkoittaa?",
@@ -1575,8 +1593,10 @@
   "kohde": "kohde:hahmotelma-canal-du-centre",
   "kysymys": "Minkä maiden läpi Maas-joki kulkee?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Maas saa alkunsa Ranskassa, virtaa Belgian halki ja päätyy Alankomaiden kautta Pohjanmereen. Se on tärkeä kulkuväylä, ja Canal du Centre yhdistää Maasin ja [[Scheldtin]] vesistöt Walloniassa. Joki on ollut kauppareittinä merkittävä jo vuosisatojen ajan. Joet ovat kyl kyyhkyn parhaita ystäviä, ne näyttävät suunnan.",
+  "vastaus": "Odotas vähän. [[Maas]] saa alkunsa Ranskassa, virtaa Belgian halki ja päätyy Alankomaiden kautta Pohjanmereen. Se on tärkeä kulkuväylä, ja [[Canal du Centre]] yhdistää Maasin ja [[Scheldtin]] vesistöt Walloniassa. Joki on ollut kauppareittinä merkittävä jo vuosisatojen ajan. Joet ovat kyl kyyhkyn parhaita ystäviä, ne näyttävät suunnan.",
   "linkit": [
+   "Maas",
+   "Canal du Centre",
    "Scheldtin"
   ],
   "jatkot": [
@@ -1588,8 +1608,11 @@
   "kohde": "kohde:hahmotelma-canal-du-centre",
   "kysymys": "Mikä on Unescon maailmanperintöluettelo?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Unescon maailmanperintöluettelo on luettelo kulttuuri- ja luontokohteista, joiden katsotaan olevan koko ihmiskunnan yhteistä perintöä. Se perustuu vuonna 1972 hyväksyttyyn yleissopimukseen. Luetteloon hyväksyttävän kohteen on täytettävä tietyt arvoperusteet, ja jäsenvaltiot sitoutuvat suojelemaan kohteitaan. Canal du Centren laivanostimet ovat yksi esimerkki teknisestä kohteesta, joka on luettelossa. Jopas tuli virallinen vastaus kyyhkyltä.",
-  "linkit": [],
+  "vastaus": "Hyvä kysymys tuo. [[Unescon maailmanperintöluettelo]] on luettelo kulttuuri- ja luontokohteista, joiden katsotaan olevan koko ihmiskunnan yhteistä perintöä. Se perustuu vuonna 1972 hyväksyttyyn yleissopimukseen. Luetteloon hyväksyttävän kohteen on täytettävä tietyt arvoperusteet, ja jäsenvaltiot sitoutuvat suojelemaan kohteitaan. [[Canal du Centren]] laivanostimet ovat yksi esimerkki teknisestä kohteesta, joka on luettelossa. Jopas tuli virallinen vastaus kyyhkyltä.",
+  "linkit": [
+   "Unescon maailmanperintöluettelo",
+   "Canal du Centren"
+  ],
   "jatkot": [
    "Kuinka kohde pääsee maailmanperintöluetteloon?",
    "Mitkä muut Belgian kohteet ovat maailmanperintöluettelossa?"
@@ -1614,9 +1637,11 @@
   "kohde": "kohde:hahmotelma-grand-hornu",
   "kysymys": "Mitä Grand-Hornun rakennuksissa on nykyään?",
   "uusi": false,
-  "vastaus": "Joo, siitä voin kertoa. Nykyään Grand-Hornun omistaa [[Hainautin]] maakunta, ja rakennuksissa järjestetään vaihtuvia näyttelyitä. Entinen teollisuusalue toimii siis kulttuurikäytössä. Kohde on myös osa Wallonian maailmanperintökohteita. Sillon siinä oli kaivos, nyt siinä on näyttely.",
+  "vastaus": "Joo, siitä voin kertoa. Nykyään [[Grand-Hornun]] omistaa [[Hainautin]] maakunta, ja rakennuksissa järjestetään vaihtuvia näyttelyitä. Entinen teollisuusalue toimii siis kulttuurikäytössä. Kohde on myös osa [[Wallonian]] maailmanperintökohteita. Sillon siinä oli kaivos, nyt siinä on näyttely.",
   "linkit": [
-   "Hainautin"
+   "Grand-Hornun",
+   "Hainautin",
+   "Wallonian"
   ],
   "jatkot": [
    "Millaisia näyttelyitä Grand-Hornussa on järjestetty?",
@@ -1627,9 +1652,11 @@
   "kohde": "kohde:hahmotelma-grand-hornu",
   "kysymys": "Missä Mons sijaitsee?",
   "uusi": true,
-  "vastaus": "Hetkinen ny, katotaas karttaa. [[Mons]] on Hainautin maakunnan pääkaupunki Belgian Walloniassa, lähellä Ranskan rajaa. Grand-Hornun kaivoskompleksi sijaitsee Monsin lähellä Hornun alueella Boussun kunnassa. Kaupunki on kulttuurikaupunkina tunnettu, ja se oli Euroopan kulttuuripääkaupunki vuonna 2015. Ylhäältä katsottuna Wallonia on yllättävän vihreää seutua.",
+  "vastaus": "Hetkinen ny, katotaas karttaa. [[Mons]] on Hainautin maakunnan pääkaupunki Belgian [[Walloniassa]], lähellä Ranskan rajaa. [[Grand-Hornun]] kaivoskompleksi sijaitsee Monsin lähellä Hornun alueella Boussun kunnassa. Kaupunki on kulttuurikaupunkina tunnettu, ja se oli Euroopan kulttuuripääkaupunki vuonna 2015. Ylhäältä katsottuna Wallonia on yllättävän vihreää seutua.",
   "linkit": [
-   "Mons"
+   "Mons",
+   "Walloniassa",
+   "Grand-Hornun"
   ],
   "jatkot": [
    "Mitä Monsissa voi nähdä?",
@@ -1646,9 +1673,11 @@
   "kohde": "kohde:hahmotelma-grand-hornu",
   "kysymys": "Miksi Wallonia oli teollisuuden keskus?",
   "uusi": true,
-  "vastaus": "Ai tota. Waloniassa on kivihiiliesiintymiä, joita louhittiin jo varhain, ja hiili antoi energiaa raudan- ja teräksenvalmistukselle. Belgia oli yksi ensimmäisistä [[teollistuneista]] maista Euroopan mantereella, ja Wallonian hiili- ja terästeollisuus oli keskeisessä asemassa. Alueen kaivoskaupungit, kuten Grand-Hornu, ovat tämän kauden todisteita. Teollisuus on sittemmin vähentynyt, ja monet entiset tehdasalueet ovat nykyään museoita tai kulttuurikohteita. Minä muistan, että savu oli joskus vahvempaa kuin sumu.",
+  "vastaus": "Ai tota. [[Waloniassa]] on kivihiiliesiintymiä, joita louhittiin jo varhain, ja hiili antoi energiaa raudan- ja teräksenvalmistukselle. Belgia oli yksi ensimmäisistä [[teollistuneista]] maista Euroopan mantereella, ja Wallonian hiili- ja terästeollisuus oli keskeisessä asemassa. Alueen kaivoskaupungit, kuten [[Grand-Hornu]], ovat tämän kauden todisteita. Teollisuus on sittemmin vähentynyt, ja monet entiset tehdasalueet ovat nykyään museoita tai kulttuurikohteita. Minä muistan, että savu oli joskus vahvempaa kuin sumu.",
   "linkit": [
-   "teollistuneista"
+   "Waloniassa",
+   "teollistuneista",
+   "Grand-Hornu"
   ],
   "jatkot": [
    "Miksi Wallonian raskas teollisuus on vähentynyt?",
@@ -1715,9 +1744,11 @@
   "kohde": "kohde:hahmotelma-bois-du-cazier",
   "kysymys": "Miksi Italiasta tuli työläisiä Belgian kaivoksiin?",
   "uusi": true,
-  "vastaus": "Ai tota. Toisen maailmansodan jälkeen Belgia tarvitsi kipeästi työvoimaa hiilikaivoksiinsa, ja Italiassa oli työttömyyttä. Maiden välillä sovittiin siirtolaisten tulosta, ja tuhannet [[italialaiset]] muuttivat Belgiaan kaivostyöhön. Työ oli raskasta ja vaarallista, ja monet asuivat aluksi kaivosalueiden parakeissa. Marcinellen onnettomuudessa kuolleiden joukossa oli useita italialaisia. Kaivosvuosien perintö on yhä osa Belgian ja Italian yhteistä historiaa.",
+  "vastaus": "Ai tota. Toisen maailmansodan jälkeen [[Belgia]] tarvitsi kipeästi työvoimaa hiilikaivoksiinsa, ja Italiassa oli työttömyyttä. Maiden välillä sovittiin siirtolaisten tulosta, ja tuhannet [[italialaiset]] muuttivat Belgiaan kaivostyöhön. Työ oli raskasta ja vaarallista, ja monet asuivat aluksi kaivosalueiden parakeissa. [[Marcinellen]] onnettomuudessa kuolleiden joukossa oli useita italialaisia. Kaivosvuosien perintö on yhä osa Belgian ja Italian yhteistä historiaa.",
   "linkit": [
-   "italialaiset"
+   "Belgia",
+   "italialaiset",
+   "Marcinellen"
   ],
   "jatkot": [
    "Millaisissa oloissa siirtolaiset asuivat?",
@@ -1728,9 +1759,11 @@
   "kohde": "kohde:hahmotelma-bois-du-cazier",
   "kysymys": "Milloin Belgian hiilikaivokset suljettiin?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Belgian viimeiset [[hiilikaivokset]] suljettiin lähteiden mukaan 1990-luvun alussa, joten kaivosteollisuus päättyi maassa jo pari vuosikymmentä ennen nykyhetkeä. Sulkeminen oli seurausta halvemmasta tuontihiilestä ja kaivosten kannattamattomuudesta. Monet entiset kaivosalueet on sittemmin muutettu museoiksi tai kulttuurikohteiksi, kuten Bois du Cazier. En ole aivan varma tarkasta vuodesta. Onpas siitä aikaa.",
+  "vastaus": "Odotas vähän. [[Belgian]] viimeiset [[hiilikaivokset]] suljettiin lähteiden mukaan 1990-luvun alussa, joten kaivosteollisuus päättyi maassa jo pari vuosikymmentä ennen nykyhetkeä. Sulkeminen oli seurausta halvemmasta tuontihiilestä ja kaivosten kannattamattomuudesta. Monet entiset kaivosalueet on sittemmin muutettu museoiksi tai kulttuurikohteiksi, kuten [[Bois du Cazier]]. En ole aivan varma tarkasta vuodesta. Onpas siitä aikaa.",
   "linkit": [
-   "hiilikaivokset"
+   "Belgian",
+   "hiilikaivokset",
+   "Bois du Cazier"
   ],
   "jatkot": [
    "Mitä entisille kaivosalueille on tehty?",
@@ -1783,9 +1816,11 @@
   "kohde": "kohde:hahmotelma-seraing",
   "kysymys": "Missä Liège sijaitsee?",
   "uusi": true,
-  "vastaus": "Kas vaan, katotaas ylhäältä. [[Liège]] sijaitsee Itä-Belgiassa Walloniassa, Maas-joen varrella, ja se on Liègen maakunnan pääkaupunki. Seraing kuuluu Liègen kaupunkialueeseen, jonka asukasluku on noin 600 000. Kaupunki on ollut pitkään teollisuuden ja kaupan keskus. Ylhäältä Liègen joet ja mäet erottuvat selvästi.",
+  "vastaus": "Kas vaan, katotaas ylhäältä. [[Liège]] sijaitsee Itä-Belgiassa Walloniassa, [[Maas]]-joen varrella, ja se on Liègen maakunnan pääkaupunki. [[Seraing]] kuuluu Liègen kaupunkialueeseen, jonka asukasluku on noin 600 000. Kaupunki on ollut pitkään teollisuuden ja kaupan keskus. Ylhäältä Liègen joet ja mäet erottuvat selvästi.",
   "linkit": [
-   "Liège"
+   "Liège",
+   "Maas",
+   "Seraing"
   ],
   "jatkot": [
    "Mitä Liègessä voi nähdä?",
@@ -1844,10 +1879,11 @@
  },
  {
   "kohde": "kohde:hahmotelma-turnhout",
-  "kysymys": "Milloin Turnhoutin kanava kaivettiin?",
+  "kysymys": "Milloin [[Turnhoutin]] kanava kaivettiin?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Turnhoutin kanava kaivettiin vuonna 1846, ja rautatie kaupunkiin rakennettiin vuonna 1855. Molemmat helpottivat kaupungin teollisuuden tavaroiden kuljetusta, sillä kaupunki oli syntynyt jo keskiajalla kahden tärkeän [[kauppareitin]] risteykseen. Sinne tuli siis vettä ja raiteita, vaikka minä olen aina tullut ilmojen kautta.",
+  "vastaus": "Annas ku mietin. Turnhoutin kanava kaivettiin vuonna 1846, ja [[rautatie]] kaupunkiin rakennettiin vuonna 1855. Molemmat helpottivat kaupungin teollisuuden tavaroiden kuljetusta, sillä kaupunki oli syntynyt jo keskiajalla kahden tärkeän [[kauppareitin]] risteykseen. Sinne tuli siis vettä ja raiteita, vaikka minä olen aina tullut ilmojen kautta.",
   "linkit": [
+   "rautatie",
    "kauppareitin"
   ],
   "jatkot": [
@@ -1857,11 +1893,13 @@
  },
  {
   "kohde": "kohde:hahmotelma-turnhout",
-  "kysymys": "Milloin Turnhout sai vapaakaupungin oikeudet?",
+  "kysymys": "Milloin [[Turnhout]] sai vapaakaupungin oikeudet?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Turnhout sai vapaakaupungin oikeudet noin vuonna 1212. Kaupunki oli syntynyt kahden tärkeän kauppareitin risteykseen [[Brabantin herttuoiden]] metsästyslinnan suojaan, ja kaupunkioikeudet vahvistivat sen asemaa kauppapaikkana.\n\nTällaisen reitin risteys on kyyhkyllekin tuttu paikka: siinä näkee ylhäältä kerralla, ketkä tulevat ja ketkä menevät. Kauppiaat eivät kyllä koskaan nosta katsettaan.",
+  "vastaus": "Hetkinen ny. Turnhout sai vapaakaupungin oikeudet noin vuonna 1212. Kaupunki oli syntynyt kahden tärkeän [[kauppareitin]] risteykseen [[Brabantin herttuoiden]] [[metsästyslinnan]] suojaan, ja kaupunkioikeudet vahvistivat sen asemaa kauppapaikkana.\n\nTällaisen reitin risteys on kyyhkyllekin tuttu paikka: siinä näkee ylhäältä kerralla, ketkä tulevat ja ketkä menevät. Kauppiaat eivät kyllä koskaan nosta katsettaan.",
   "linkit": [
-   "Brabantin herttuoiden"
+   "kauppareitin",
+   "Brabantin herttuoiden",
+   "metsästyslinnan"
   ],
   "jatkot": [
    "Mitä vapaakaupungin oikeudet tarkoittivat keskiajalla?",
@@ -1887,9 +1925,10 @@
   "kohde": "kohde:hahmotelma-coudenberg",
   "kysymys": "Minä vuonna tulipalo tuhosi koko palatsin?",
   "uusi": false,
-  "vastaus": "Mmm— Tulipalo tuhosi [[Coudenbergin palatsin]] vuonna 1731, tarkemmin yöllä 3.2.1731. Palo syttyi keittiöstä ja levisi pakkasessa hallitsemattomasti, koska sammutusvettä ei saatu ajoissa paikalle. Koko palatsi tuhoutui, ja rauniot jäivät vuosikymmeniksi paikoilleen, kunnes ne haudattiin uuden aukion alle 1770-luvulla. Onpas siit onneksi pitkä aika.",
+  "vastaus": "Mmm— Tulipalo tuhosi [[Coudenbergin palatsin]] vuonna 1731, tarkemmin yöllä 3.2.1731. Palo syttyi keittiöstä ja levisi pakkasessa hallitsemattomasti, koska sammutusvettä ei saatu ajoissa paikalle. Koko palatsi tuhoutui, ja [[rauniot]] jäivät vuosikymmeniksi paikoilleen, kunnes ne haudattiin uuden aukion alle 1770-luvulla. Onpas siit onneksi pitkä aika.",
   "linkit": [
-   "Coudenbergin palatsin"
+   "Coudenbergin palatsin",
+   "rauniot"
   ],
   "jatkot": [
    "Miksi pakkanen vaikeutti sammutustyötä?",
@@ -1900,9 +1939,10 @@
   "kohde": "kohde:hahmotelma-coudenberg",
   "kysymys": "Minkä aukion alle rauniot haudattiin 1770-luvulla?",
   "uusi": false,
-  "vastaus": "Nyt muistan: rauniot haudattiin uuden, uusklassisen [[Place Royale]] -aukion ja Kuninkaankadun alle vuosina 1775-1782. Päätös tehtiin 1770-luvulla, sillä rauniot olivat jääneet vuosikymmeniksi paikoilleen tulipalon jälkeen. Maan alle säilyneet kellarit ja salit kaivettiin esiin vasta 1900-luvun lopulla. Ylhäältä katsoen aukio näyttää ihan tavalliselta, eikä kukaan arvaa mitä sen alla on.",
+  "vastaus": "Nyt muistan: rauniot haudattiin uuden, uusklassisen [[Place Royale]] -aukion ja [[Kuninkaankadun]] alle vuosina 1775-1782. Päätös tehtiin 1770-luvulla, sillä rauniot olivat jääneet vuosikymmeniksi paikoilleen tulipalon jälkeen. Maan alle säilyneet kellarit ja salit kaivettiin esiin vasta 1900-luvun lopulla. Ylhäältä katsoen aukio näyttää ihan tavalliselta, eikä kukaan arvaa mitä sen alla on.",
   "linkit": [
-   "Place Royale"
+   "Place Royale",
+   "Kuninkaankadun"
   ],
   "jatkot": [
    "Miten uusklassinen tyyli erosi barokista?",
@@ -1927,9 +1967,10 @@
   "kohde": "kohde:hahmotelma-coudenberg",
   "kysymys": "Mistä palatsin tulipalo sai alkunsa?",
   "uusi": true,
-  "vastaus": "Tuota niin. Tulipalo sai alkunsa palatsin keittiöstä yöllä 3.2.1731. Pakkanen ja sammutusveden hidas saapuminen paikalle johtivat siihen, että tuli levisi hallitsemattomasti ja koko [[palatsi]] tuhoutui. Rauniot haudattiin myöhemmin 1700-luvun lopulla uuden aukion alle. Onpas siit hyvä että kellarit säilyivät.",
+  "vastaus": "Tuota niin. Tulipalo sai alkunsa palatsin keittiöstä yöllä 3.2.1731. Pakkanen ja sammutusveden hidas saapuminen paikalle johtivat siihen, että tuli levisi hallitsemattomasti ja koko [[palatsi]] tuhoutui. Rauniot haudattiin myöhemmin 1700-luvun lopulla uuden aukion alle. Aukio on [[Place Royale]]. Onpas siit hyvä että kellarit säilyivät.",
   "linkit": [
-   "palatsi"
+   "palatsi",
+   "Place Royale"
   ],
   "jatkot": [
    "Miten tulipaloja sammutettiin 1700-luvun kaupungeissa?",
@@ -1968,9 +2009,11 @@
   "kohde": "kohde:hahmotelma-antwerpen-beurs",
   "kysymys": "Kuka arkkitehti suunnitteli nykyisen pörssitalon uudisrakennuksen?",
   "uusi": false,
-  "vastaus": "Hyvä kysymys tuo. Nykyisen pörssitalon suunnitteli [[Joseph Schadde]], joka voitti tulipalon jälkeen järjestetyn arkkitehtikilpailun. Hän sai työn valmiiksi vuonna 1872, ja uusgoottilainen rakennus hyödynsi rohkeasti rautarakenteita sisäpihan kattamisessa. Rakennus palveli kauppiaita ja pörssinvälittäjiä vuoteen 1997 asti.\n\nRautakatto on muuten juuri sellainen asia, jota minä kunnioitan: se pitää sateen poissa mutta päästää valon läpi. Pidän sellaisesta viisaudesta, vaikka se onkin rakennettu ihmisten käsin.",
+  "vastaus": "Hyvä kysymys tuo. Nykyisen pörssitalon suunnitteli [[Joseph Schadde]], joka voitti tulipalon jälkeen järjestetyn [[arkkitehtikilpailun]]. Hän sai työn valmiiksi vuonna 1872, ja [[uusgoottilainen]] rakennus hyödynsi rohkeasti rautarakenteita sisäpihan kattamisessa. Rakennus palveli kauppiaita ja pörssinvälittäjiä vuoteen 1997 asti.\n\nRautakatto on muuten juuri sellainen asia, jota minä kunnioitan: se pitää sateen poissa mutta päästää valon läpi. Pidän sellaisesta viisaudesta, vaikka se onkin rakennettu ihmisten käsin.",
   "linkit": [
-   "Joseph Schadde"
+   "Joseph Schadde",
+   "arkkitehtikilpailun",
+   "uusgoottilainen"
   ],
   "jatkot": [
    "Miksi rauta yleistyi rakennusmateriaalina 1800-luvulla?",
@@ -1995,8 +2038,10 @@
   "kohde": "kohde:hahmotelma-antwerpen-beurs",
   "kysymys": "Mihin pörssirakennusta käytettiin Antwerpenin kaupan hiivuttua?",
   "uusi": true,
-  "vastaus": "Ai tota. Antwerpenin kauppa hiipui Espanjan vallan ja [[Amsterdamin]] nousun myötä 1500-luvun lopulla. Rakennus toimi sen jälkeen vuosisatoja muun muassa piirustusakatemiana, kunnes tulipalo tuhosi sen vuonna 1858. Pörssi ei siis kadonnut kaupungin elämästä heti, vaan sai uuden tehtävän. Minä olisin valinnut kyyhkyslaudan.",
+  "vastaus": "Ai tota. [[Antwerpenin]] kauppa hiipui [[Espanjan]] vallan ja [[Amsterdamin]] nousun myötä 1500-luvun lopulla. Rakennus toimi sen jälkeen vuosisatoja muun muassa piirustusakatemiana, kunnes tulipalo tuhosi sen vuonna 1858. Pörssi ei siis kadonnut kaupungin elämästä heti, vaan sai uuden tehtävän. Minä olisin valinnut kyyhkyslaudan.",
   "linkit": [
+   "Antwerpenin",
+   "Espanjan",
    "Amsterdamin"
   ],
   "jatkot": [
@@ -2006,11 +2051,12 @@
  },
  {
   "kohde": "kohde:hahmotelma-antwerpen-beurs",
-  "kysymys": "Mihin pörssiin Antwerpenin pörssi sulautui vuonna 1997?",
+  "kysymys": "Mihin pörssiin [[Antwerpenin]] pörssi sulautui vuonna 1997?",
   "uusi": true,
-  "vastaus": "Just niin, Antwerpenin pörssi sulautui vuonna 1997 [[Brysselin pörssiin]]. Uusgoottilainen pörssitalo oli palvellut kauppiaita ja pörssinvälittäjiä siihen asti. Rakennus oli valmistunut vuonna 1872, joten se ehti toimia pörssinä yli sata vuotta. Pitkä ura rakennukselle, ei valittamista.",
+  "vastaus": "Just niin, Antwerpenin pörssi sulautui vuonna 1997 [[Brysselin pörssiin]]. [[Uusgoottilainen]] pörssitalo oli palvellut kauppiaita ja pörssinvälittäjiä siihen asti. Rakennus oli valmistunut vuonna 1872, joten se ehti toimia pörssinä yli sata vuotta. Pitkä ura rakennukselle, ei valittamista.",
   "linkit": [
-   "Brysselin pörssiin"
+   "Brysselin pörssiin",
+   "Uusgoottilainen"
   ],
   "jatkot": [
    "Miksi pörssejä on yhdistetty Euroopassa?",
@@ -2021,9 +2067,10 @@
   "kohde": "kohde:hahmotelma-hasselt-jenever",
   "kysymys": "Minkä vuosikymmenen kiellon Hasselt vältti jenever-viinan valmistukselta ja myynniltä?",
   "uusi": false,
-  "vastaus": "No jopas. Hasselt vältti vuoden 1601 valmistus- ja myyntikiellon, eli 1600-luvun alussa annetun kiellon. Kaupunki on profiloitunut [[jenever]]-viinan tislauksen keskukseksi vuosisatojen ajan. Sitä vähän hämmästelen, että kiellosta selvittiin näinkin hyvin.",
+  "vastaus": "No jopas. Hasselt vältti vuoden 1601 valmistus- ja myyntikiellon, eli 1600-luvun alussa annetun kiellon. Kaupunki on profiloitunut [[jenever]]-viinan [[tislauksen]] keskukseksi vuosisatojen ajan. Sitä vähän hämmästelen, että kiellosta selvittiin näinkin hyvin.",
   "linkit": [
-   "jenever"
+   "jenever",
+   "tislauksen"
   ],
   "jatkot": [
    "Mistä jenever tehdään ja miten se eroaa ginistä?",
@@ -2034,8 +2081,9 @@
   "kohde": "kohde:hahmotelma-hasselt-jenever",
   "kysymys": "Minkä maan sotilaat toivat 1670-luvulla makuja hasseltilaiseen jeneveriin?",
   "uusi": false,
-  "vastaus": "Katotaas. Makuja toivat mukanaan 1670-luvulla Hasseltissa majailleet [[hollantilaiset]] sotilaat. Näiden makujen vuoksi hasseltilaiseen jeneveriin lisätään yhä muita belgialaisia enemmän yrttejä ja marjoja. Jenever on siis Hasseltissa maultaan erilaista kuin muualla Belgiassa. Sotilaat toivat siis mukanaan muutakin kuin sotamelua.",
+  "vastaus": "Katotaas. Makuja toivat mukanaan 1670-luvulla [[Hasseltissa]] majailleet [[hollantilaiset]] sotilaat. Näiden makujen vuoksi hasseltilaiseen jeneveriin lisätään yhä muita belgialaisia enemmän yrttejä ja marjoja. Jenever on siis Hasseltissa maultaan erilaista kuin muualla Belgiassa. Sotilaat toivat siis mukanaan muutakin kuin sotamelua.",
   "linkit": [
+   "Hasseltissa",
    "hollantilaiset"
   ],
   "jatkot": [
@@ -2047,9 +2095,11 @@
   "kohde": "kohde:hahmotelma-hasselt-jenever",
   "kysymys": "Mistä raaka-aineesta halpaa jeneveriä tislattiin?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Halpaa jeneveriä tislattiin [[sokerijuurikasmelassista]], ja teollistumisen myötä se levisi työväestön keskuuteen. Vuosisadan lopulla belgialainen kulutti keskimäärin 9,5 litraa 50-prosenttista jeneveriä vuodessa. Juoman halpuus teki siitä työväestön suosikin.\n\nMinä pysyn mieluummin jyvissä, ja kyllä sokerijuurikas kuulostaa pehmeämmältä tavalta aloittaa. Mut en tiedä, kuinka paljon se maistuisi.",
+  "vastaus": "Odotas vähän. Halpaa [[jeneveriä]] tislattiin [[sokerijuurikasmelassista]], ja [[teollistumisen]] myötä se levisi työväestön keskuuteen. Vuosisadan lopulla belgialainen kulutti keskimäärin 9,5 litraa 50-prosenttista jeneveriä vuodessa. Juoman halpuus teki siitä työväestön suosikin.\n\nMinä pysyn mieluummin jyvissä, ja kyllä sokerijuurikas kuulostaa pehmeämmältä tavalta aloittaa. Mut en tiedä, kuinka paljon se maistuisi.",
   "linkit": [
-   "sokerijuurikasmelassista"
+   "jeneveriä",
+   "sokerijuurikasmelassista",
+   "teollistumisen"
   ],
   "jatkot": [
    "Miten sokerijuurikkaasta saadaan sokeria?",
@@ -2072,11 +2122,12 @@
  },
  {
   "kohde": "kohde:hahmotelma-hasselt-jenever",
-  "kysymys": "Mitä Hasseltin vanhimmassa tislaamossa on nykyisin?",
+  "kysymys": "Mitä [[Hasseltin]] vanhimmassa tislaamossa on nykyisin?",
   "uusi": true,
-  "vastaus": "Mmm— Nykyisin Hasseltin vanhimmassa tislaamossa toimii [[jenevermuseo]]. Rakennus perustettiin vuonna 1803 entiselle nunnaluostarin maatilalle, ja omistajaperhe antoi sille uusklassisen julkisivun vuonna 1850. Vanha tislaamo on siis säilynyt käyttöön museona. Minä pidän siitä, että vanhat talot saavat uuden tehtävän.",
+  "vastaus": "Mmm— Nykyisin Hasseltin vanhimmassa tislaamossa toimii [[jenevermuseo]]. Rakennus perustettiin vuonna 1803 entiselle [[nunnaluostarin]] maatilalle, ja omistajaperhe antoi sille uusklassisen julkisivun vuonna 1850. Vanha tislaamo on siis säilynyt käyttöön museona. Minä pidän siitä, että vanhat talot saavat uuden tehtävän.",
   "linkit": [
-   "jenevermuseo"
+   "jenevermuseo",
+   "nunnaluostarin"
   ],
   "jatkot": [
    "Millaisia museoita Limburgin maakunnassa on?",
@@ -2115,8 +2166,10 @@
   "kohde": "kohde:hahmotelma-oostende",
   "kysymys": "Millä nimellä Oostendea on kutsuttu?",
   "uusi": true,
-  "vastaus": "Tuota niin. Oostendea alettiin kutsua Belgian merikylpylöiden kuningattareksi. Nimi liittyy kuningas Leopold I:n ja hänen poikansa Leopold II:n lomiin kaupungissa, sillä heidän suosionsa houkutteli [[aatelistoa]] rakentamaan sinne muun muassa Wellingtonin raviradan ja Kuninkaalliset galleriat. Oostende oli alun perin vaatimaton kalastajakylä, mutta kuninkaallinen suosio nosti sen merikylpylöiden joukossa aivan eri tasolle. Viisas Pöllö olisi lisännyt tähän jotain syvällistä, mutta hän on kuulemma pitämässä esitelmää jossain.",
+  "vastaus": "Tuota niin. [[Oostendea]] alettiin kutsua Belgian merikylpylöiden kuningattareksi. Nimi liittyy kuningas [[Leopold I:n]] ja hänen poikansa Leopold II:n lomiin kaupungissa, sillä heidän suosionsa houkutteli [[aatelistoa]] rakentamaan sinne muun muassa Wellingtonin raviradan ja Kuninkaalliset galleriat. Oostende oli alun perin vaatimaton kalastajakylä, mutta kuninkaallinen suosio nosti sen merikylpylöiden joukossa aivan eri tasolle. Viisas Pöllö olisi lisännyt tähän jotain syvällistä, mutta hän on kuulemma pitämässä esitelmää jossain.",
   "linkit": [
+   "Oostendea",
+   "Leopold I:n",
    "aatelistoa"
   ],
   "jatkot": [
@@ -2128,9 +2181,11 @@
   "kohde": "kohde:hahmotelma-oostende",
   "kysymys": "Milloin rautatie Oostendesta Brysseliin valmistui?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Rautatie [[Brysseliin]] valmistui vuonna 1838. Lauttayhteys Doveriin avattiin vuonna 1846, ja yhdessä ne tekivät Oostendesta Englannin-liikenteen kauttakulkusataman. Junamatka Oostendesta pääkaupunkiin kulki jo silloin, kun höyryveturit olivat vielä uutuus. Minä tosin lensin sen aina nopeammin.",
+  "vastaus": "Selvä juttu. Rautatie [[Brysseliin]] valmistui vuonna 1838. Lauttayhteys [[Doveriin]] avattiin vuonna 1846, ja yhdessä ne tekivät [[Oostendesta]] Englannin-liikenteen kauttakulkusataman. Junamatka Oostendesta pääkaupunkiin kulki jo silloin, kun höyryveturit olivat vielä uutuus. Minä tosin lensin sen aina nopeammin.",
   "linkit": [
-   "Brysseliin"
+   "Brysseliin",
+   "Doveriin",
+   "Oostendesta"
   ],
   "jatkot": [
    "Milloin ensimmäinen rautatie avattiin Belgiassa?",

@@ -93,7 +93,7 @@ Miksi flaamilaiskaupungit olivat keskiajalla rikkaita?
 
 ### 13.4
 KYSYMYS: Kuka voitti sodan, vaikka flaamilaiset voittivat taistelun?
-Ai se. Sodan voitti Ranska, vaikka flaamilaiset voittivat taistelun. Taistelusta tuli silti tärkeä kulttuurinen tukipiste [[flaamilaisliikkeelle]] 1800- ja 1900-luvuilla. Tarkkoja rauhanehtoja en muista varmasti, joten jätän ne mainitsematta. Yli seitsemänsataa vuotta ja yhä siit puhutaan.
+Ai se. Sodan voitti [[Ranska]], vaikka [[flaamilaiset]] voittivat taistelun. Taistelusta tuli silti tärkeä kulttuurinen tukipiste [[flaamilaisliikkeelle]] 1800- ja 1900-luvuilla. Tarkkoja rauhanehtoja en muista varmasti, joten jätän ne mainitsematta. Yli seitsemänsataa vuotta ja yhä siit puhutaan.
 JATKOT:
 Mikä on flaamilaisliike?
 Mitä eroa on Flanderilla ja Walloniella?
@@ -114,7 +114,7 @@ Keitä sistersiläiset munkit ovat?
 
 ### 14.2
 KYSYMYS: Mitä luostari valmistaa myyntiin?
-Tost minä osaan kertoo. Orvalin luostari valmistaa [[trappistiolutta]] ja erityistä juustoa. Oluen panemisen keskiaikainen perinne elvytettiin vuonna 1931 rahoittamaan luostarin jälleenrakennusta, ja nykyään luostari on tunnettu juuri oluestaan ja juustostaan. Olut ja juusto, ja pullasta ei kukaan edes mainitse mitään.
+Tost minä osaan kertoo. [[Orvalin]] luostari valmistaa [[trappistiolutta]] ja erityistä [[juustoa]]. Oluen panemisen keskiaikainen perinne elvytettiin vuonna 1931 rahoittamaan luostarin jälleenrakennusta, ja nykyään luostari on tunnettu juuri oluestaan ja juustostaan. Olut ja juusto, ja pullasta ei kukaan edes mainitse mitään.
 JATKOT:
 Millaista juustoa luostareissa valmistetaan?
 Mistä trappistiolut saa nimensä?

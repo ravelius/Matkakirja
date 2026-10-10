@@ -51,7 +51,7 @@ Mikä oli Quatre Brasin taistelu?
 
 ### 7.3
 KYSYMYS: Montako askelmaa Leijonakumpuun johtaa?
-Katotaas. Kumpuun johtaa 226 askelmaa. Se sijaitsee Braine-l'Alleudin kunnassa Belgiassa, ja portaat nousevat huipulle, jossa on [[leijonapatsas]]. Minä otan yleensä lyhyemmän reitin, siivillä.
+Katotaas. Kumpuun johtaa 226 askelmaa. Se sijaitsee [[Braine-l'Alleudin]] kunnassa [[Belgiassa]], ja portaat nousevat huipulle, jossa on [[leijonapatsas]]. Minä otan yleensä lyhyemmän reitin, siivillä.
 JATKOT:
 Millainen kunta Braine-l'Alleud on?
 Miten Waterloon taistelukentälle pääsee Brysselistä?
@@ -121,7 +121,7 @@ Miksi Bastogne on tunnettu Ardennien taistelusta?
 
 ### 9.3
 KYSYMYS: Milloin Bastognen muistomerkki vihittiin?
-Odotas vähän. Muistomerkki vihittiin 16. heinäkuuta 1950. Ensimmäinen askel otettiin jo 4. heinäkuuta 1946, kun paikalta lahjoitettiin maata Yhdysvaltain presidentille, ja kunnioituksen kohteena ovat [[Ardennien taistelun]] amerikkalaiset kaatuneet ja haavoittuneet. Kärsivällisyyttä se vaati.
+Odotas vähän. Muistomerkki vihittiin 16. heinäkuuta 1950. Ensimmäinen askel otettiin jo 4. heinäkuuta 1946, kun paikalta lahjoitettiin maata [[Yhdysvaltain]] presidentille, ja kunnioituksen kohteena ovat [[Ardennien taistelun]] amerikkalaiset kaatuneet ja haavoittuneet. Kärsivällisyyttä se vaati.
 JATKOT:
 Miten muistomerkin rakentaminen rahoitettiin?
 Voiko muistomerkkiin tutustua sisältä?
@@ -172,7 +172,7 @@ Mihin linnaa on käytetty keskiajan jälkeen?
 
 ### 10.5
 KYSYMYS: Kuka oli Bouillonin Gotfrid?
-Joo, tän minä tiedän. Gotfrid oli yksi [[ensimmäisen ristiretken]] johtajista. Hän peri Bouillonin linnan vuonna 1082 ja myi sen Liègen piispalle rahoittaakseen retkensä, ja ristiretken jälkeen hän jäi hallitsemaan Jerusalemia mutta kuoli jo vuonna 1100. Melkoinen ura linnanherralle.
+Joo, tän minä tiedän. Gotfrid oli yksi [[ensimmäisen ristiretken]] johtajista. Hän peri [[Bouillonin]] linnan vuonna 1082 ja myi sen [[Liègen]] piispalle rahoittaakseen retkensä, ja ristiretken jälkeen hän jäi hallitsemaan Jerusalemia mutta kuoli jo vuonna 1100. Melkoinen ura linnanherralle.
 JATKOT:
 Miten ensimmäinen ristiretki päättyi?
 Mikä Liègen piispakunta oli?
