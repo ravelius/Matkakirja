@@ -7,12 +7,17 @@
 // ja detalji häipyy puhtaaseen makroon _SplatParam.y (lahi_m) … 1,5 · lahi_m. Normaalit (huippu): kerrosnormaali
 // kallistaa mesh-normaalia ja ero valon kulmassa muuttaa kirkkautta kuten kuoren detaljissa. _SplatParam.x = kerroksia
 // (0 = pelkkä makro, 4 = normaali, 6 = huippu), .z = normaalit päällä (0/1), .w = normaalin voimakkuus.
+//
+// HÄMÄRÄ (Siirtoseppä 10.10.2026): lisämallien (rantakivet) glb-kuva on päivänvalossa, ja kuoren, puiden ja aluskasvien
+// hämäräkuvat puuttuvat niiltä → hämärässä ne hehkuivat valkoisina. Väri kerrotaan lerp(1, _HamaraKerroin, _DioraamaHamara):
+// _DioraamaHamara = 0/1 globaalisti (DioraamaNayttamo.AsetaTunnelma), _HamaraKerroin materiaalikohtainen (oletus 1 = ennallaan).
 Shader "Matkakirja/Linssit/DioraamaMaasto"
 {
     Properties
     {
         _Kuva ("Ortokuva", 2D) = "grey" {}
         _Kirkkaus ("Kirkkaus", Float) = 1
+        _HamaraKerroin ("Hämärän kirkkaus", Float) = 1
     }
     SubShader
     {
@@ -33,6 +38,7 @@ Shader "Matkakirja/Linssit/DioraamaMaasto"
             half4 _DioraamaSumuVari;
             float4 _DioraamaSumu;
             float4 _DioraamaValo;
+            half _DioraamaHamara;
             TEXTURE2D(_Kuva); SAMPLER(sampler_Kuva);
             TEXTURE2D(_SplatMaski0); TEXTURE2D(_SplatMaski1); SAMPLER(sampler_SplatMaski0);
             TEXTURE2D(_SplatDiff0); TEXTURE2D(_SplatDiff1); TEXTURE2D(_SplatDiff2);
@@ -44,6 +50,7 @@ Shader "Matkakirja/Linssit/DioraamaMaasto"
             CBUFFER_START(UnityPerMaterial)
                 float4 _Kuva_ST;
                 half _Kirkkaus;
+                half _HamaraKerroin;
                 float4 _SplatAlue;       // minX, minZ, 1/leveys, 1/syvyys
                 float4 _SplatParam;      // kerroksia, lahi_m, normaalit, normaalin voimakkuus
                 float4 _SplatToisto0;    // 1/toisto kerroksille 0–3
@@ -76,7 +83,7 @@ Shader "Matkakirja/Linssit/DioraamaMaasto"
 
             half4 frag(Vali i) : SV_Target
             {
-                half3 makro = SAMPLE_TEXTURE2D(_Kuva, sampler_Kuva, i.uv).rgb * _Kirkkaus;
+                half3 makro = SAMPLE_TEXTURE2D(_Kuva, sampler_Kuva, i.uv).rgb * (_Kirkkaus * lerp(1.0h, _HamaraKerroin, _DioraamaHamara));
                 half3 vari = makro;
                 float etaisyys = length(_WorldSpaceCameraPos - i.paikkaW);
                 int kerroksia = (int)_SplatParam.x;

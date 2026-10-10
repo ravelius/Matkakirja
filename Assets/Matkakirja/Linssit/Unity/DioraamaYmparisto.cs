@@ -33,13 +33,16 @@ namespace Matkakirja.Natiivi
         // kausi on kiinteä (talvi epäluotettava: jää suodatettu). Kehittäjä: "poikki vesi vari 0|1 [kerroin]" (0 = vanhat käsin valitut sävyt).
         public static bool MitattuVari = true;
         public static float VariKerroin = 1f;
+        /// <summary>Lisämallien kirkkaus hämärässä (Siirtoseppä 10.10., rantakivikoe 7: 1 hehkui valkoisena, 0,105 = LR:n hämäräkuvien
+        /// suhde näytti mustilta kiviltä valaistun saaren ruohossa, 0,4 vielä vaalea; 0,3 harmaa rantakivi).</summary>
+        public const float MalliHamara = 0.3f;
         static readonly Vector4 KyronsalmiSyva = new Vector4(0.0011f, 0.0030f, 0.0054f, 1f), KyronsalmiMatala = new Vector4(0.0020f, 0.0038f, 0.0058f, 1f);
 
         static readonly int IdAallot = Shader.PropertyToID("_VesiAallot"), IdParam = Shader.PropertyToID("_VesiParam"),
             IdSyvyysParam = Shader.PropertyToID("_SyvyysParam"), IdMata = Shader.PropertyToID("_VesiMata"),
             IdSyva = Shader.PropertyToID("_VesiSyva"), IdTaivasYla = Shader.PropertyToID("_VesiTaivasYla"),
             IdTaivasAla = Shader.PropertyToID("_VesiTaivasAla"), IdAurinko = Shader.PropertyToID("_VesiAurinko"),
-            IdHeijastus = Shader.PropertyToID("_VesiHeijastus"), IdKuva = Shader.PropertyToID("_Kuva"),
+            IdHeijastus = Shader.PropertyToID("_VesiHeijastus"), IdKuva = Shader.PropertyToID("_Kuva"), IdHamaraKerroin = Shader.PropertyToID("_HamaraKerroin"),
             IdPinta = Shader.PropertyToID("_Pinta"), IdSyvyys = Shader.PropertyToID("_Syvyys"),
             IdHehku = Shader.PropertyToID("_VesiHehku"), IdKiiltoSuunta = Shader.PropertyToID("_VesiKiiltoSuunta"),
             IdTaivasHorisontti = Shader.PropertyToID("_TaivasHorisontti"), IdTaivasLaki = Shader.PropertyToID("_TaivasLaki"),
@@ -560,6 +563,8 @@ namespace Matkakirja.Natiivi
             if (varjostin == null) { kirjaa?.Invoke("poikki: ympäristö: DioraamaMaasto-varjostin puuttuu"); yield break; }
             var mat = new Material(varjostin) { name = "Ymparisto:" + nimi };
             if (kuva != null) mat.SetTexture(IdKuva, kuva);
+            // Lisämallien (rantakivet, vene) kuva on päivänvalossa: hämärässä himmennys (DioraamaMaasto _HamaraKerroin).
+            if (nimi.StartsWith("malli:", StringComparison.Ordinal)) mat.SetFloat(IdHamaraKerroin, MalliHamara);
             luodut.Add(mat);
             kohteet?.Add(mat);
             int kolmiot = 0;

@@ -43,7 +43,8 @@ namespace Matkakirja.Natiivi
         public float LahiLeikkaus; float lahiNyt;
 
         static readonly int IdValo = Shader.PropertyToID("_DioraamaValo"), IdLepatus = Shader.PropertyToID("_DioraamaLepatus"),
-            IdSumuVari = Shader.PropertyToID("_DioraamaSumuVari"), IdSumu = Shader.PropertyToID("_DioraamaSumu");
+            IdSumuVari = Shader.PropertyToID("_DioraamaSumuVari"), IdSumu = Shader.PropertyToID("_DioraamaSumu"),
+            IdHamara = Shader.PropertyToID("_DioraamaHamara");
         // "Ylhäältä vasemmalta edestä": +Y ylös, -X vasen, +Z kohti tavanomaista katsojaa (Unity-avaruudessa).
         static readonly Vector3 ValonSuunta = new Vector3(-0.45f, 0.78f, 0.45f).normalized;
 
@@ -109,6 +110,7 @@ namespace Matkakirja.Natiivi
             DioraamaValot.TunnelmaAurinko = hamara ? DioraamaTunnelma.HamaraAurinko : 1f;
             DioraamaValot.TunnelmaTaivas = hamara ? DioraamaTunnelma.HamaraTaivas : 1f;
             Shader.SetGlobalFloat(DioraamaLokit.IdLintuValo, hamara ? DioraamaTunnelma.HamaraLinnut : 1f);
+            Shader.SetGlobalFloat(IdHamara, hamara ? 1f : 0f);   // DioraamaMaasto: lisämallien hämäräkerroin (rantakivet)
         }
         /// <summary>
         /// Näyttämön kuva: kamera piirtää tähän, ja DioraamaTaulu näyttää sen koko ruudun UI-elementtinä kerroksessa
