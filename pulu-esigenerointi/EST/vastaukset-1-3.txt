@@ -1,0 +1,188 @@
+### 11.1
+KYSYMYS: Mitä Struven kaarella mitattiin?
+Annas ku mietin. Struven kaarella mitattiin maapallon tarkkaa kokoa ja muotoa. Kaari on [[kolmiomittausten]] ketju, joka ulottuu Norjan Hammerfestista Mustallemerelle, ja se tuotti tietojen mukaan ensimmäisen tarkan [[meridiaanikaaren]] mittauksen. Kun tiedetään, kuinka pitkä matka vastaa yhtä leveysastetta eri kohdissa, voidaan päätellä, kuinka pallomainen Maa on. Ketjun rakensi ja mittasi saksalaissyntyinen venäläinen tiedemies [[Friedrich Georg Wilhelm von Struve]] vuosina 1816–1855. No olipa pitkä matka, onneks lentäen se sujuu.
+JATKOT:
+Miksi Maan muoto haluttiin selvittää tarkasti?
+Mitkä maat Struven kaari nykyään kulkee läpi?
+
+### 11.2
+KYSYMYS: Miten mittauspisteet on merkitty maastoon?
+Hyvä kysymys tuo. Mittauspisteet on merkitty maastoon vaatimattomasti: kallioon porattuina reikinä, rautaristeinä ja kivikasoina. Ketjussa on 265 mittauspistettä ja 258 päämittauskolmiota. Vuonna 2005 ketju otettiin [[maailmanperintöluetteloon]] geodesian merkityksensä ja kansainvälisen tieteellisen yhteistyön todistuskappaleena, ja luetteloon on valittu 34 pistettä. Merkinnät ovat siis yksinkertaisia, mutta [[geodesian]] historiassa niillä on suuri paino.
+
+Reikä kalliossa. Minä olisin merkinnyt pisteet leivoksilla, mutta ne eivät olisi kestäneet yli kahtasataa vuotta, koska kyyhkyt ovat ahneita.
+JATKOT:
+Mitä geodesia tutkii?
+Mitä UNESCOn maailmanperintöluettelo on?
+
+### 11.3
+KYSYMYS: Kuinka pitkä Struven kaari on?
+Joo, tän minä tiedän. Struven kaari on yli 2 820 kilometriä pitkä ja ulottuu Norjan [[Hammerfestista]] Mustallemerelle. Nykyisin ketju kulkee kymmenen maan halki, mutta Struven aikaan se kulki vain kolmen maan: Norjan, Ruotsin ja Venäjän keisarikunnan. Ketjussa on 258 päämittauskolmiota ja 265 mittauspistettä, ja kaaren ensimmäinen piste on [[Tartossa]] observatoriolla. Ja minä kun valitan viiden kilometrin lennoista.
+JATKOT:
+Mitkä kymmenen maata kaari nykyään kulkee?
+Mikä on Tarton observatorio?
+
+### 11.4
+KYSYMYS: Kuka Struve oli?
+Kas, tuttu nimi. Friedrich Georg Wilhelm von Struve oli saksalaissyntyinen venäläinen tiedemies, tähtitieteilijä ja geodeetti. Hän rakensi ja mittasi kolmiomittausten ketjun vuosina 1816–1855 selvittääkseen maapallon tarkan koon ja muodon. Kaaren ensimmäinen piste on [[Tartossa]] observatoriolla, jossa hän teki suuren osan tutkimuksistaan, ja myöhemmin hän johti [[Pulkovon]] observatoriota. Kyllä minä ton nimen osaan, vaikka se on pitkä.
+JATKOT:
+Mikä on Pulkovon observatorio?
+Miten Maan muoto selvitettiin ennen satelliitteja?
+
+### 11.5
+KYSYMYS: Miten kolmiomittaus toimii?
+Selvä juttu. Kolmiomittauksessa mitataan ensin yksi matka, [[perusviiva]], maastossa mahdollisimman tarkasti. Sen päistä tähdätään kaukaiseen kolmanteen pisteeseen ja mitataan kulmat. Kun yhden sivun pituus ja kulmat tunnetaan, kolmion muut sivut voidaan laskea [[trigonometrialla]], ja siitä edetään kolmio kerrallaan. Näin pitkä ketju saadaan laskettua ilman, että jokaista väliä tarvitsee kulkea, ja [[Struven kaaressa]] päämittauskolmioita on 258.
+
+Minä mittaan matkat omalla tavallani, yhdellä siiveniskulla kerrallaan. Se ei ole yhtä tarkka, mutta se pääsee perille.
+JATKOT:
+Mikä on meridiaani?
+Miten satelliitit ovat muuttaneet maanmittausta?
+
+### 12.1
+KYSYMYS: Mitä järven jäällä tapahtui vuonna 1242?
+No niin. Peipsijärven jäällä käytiin 5. huhtikuuta 1242 jäätaistelu Novgorodin tasavallan ja Saksalaisen ritarikunnan välillä. Novgorodin joukkoja johti ruhtinas [[Aleksanteri Nevski]], ja taistelun voittivat novgorodilaiset. Kuuluisa kertomus siitä, että ritarit olisivat vajonneet jään läpi, on elänyt vahvana, mutta historiantutkijat suhtautuvat siihen varauksellisesti. Tapahtumasta on yli seitsemänsataa vuotta, ja alue kuului silloin aivan toisenlaisiin valtapiireihin kuin nykyisin, jolloin järven halki kulkee Viron ja Venäjän välinen raja. Onpas siit onneksi pitkä aika.
+JATKOT:
+Kuka oli Aleksanteri Nevski?
+Mitä Saksalainen ritarikunta oli?
+
+### 12.2
+KYSYMYS: Mihin Peipsin vedet lopulta laskevat?
+Katotaas. Peipsin vedet lähtevät [[Narvajokea]] myöten Suomenlahteen. Järveen laskee noin kolmekymmentä jokea, joista suurimmat ovat [[Velikaja]] ja [[Emajoki]], ja ne kaikki päätyvät Narvajoen kautta [[Suomenlahteen]], Itämeren itäiseen lahteen. Narvajoki kulkee suurelta osin Viron ja Venäjän rajana. No, vesi ei ainakaan eksy, toisin kuin minä joskus.
+JATKOT:
+Mikä on Narvajoki?
+Mikä on Suomenlahti?
+
+### 12.3
+KYSYMYS: Kuinka syvä Peipsijärvi on?
+Hetkinen ny. Peipsijärven keskisyvyys on vain 7,1 metriä ja syvin kohta 15 metriä, vaikka pinta-ala on 3 555 neliökilometriä. Järvi on siis valtava mutta matala. Se sijaitsee [[Viron]] ja [[Venäjän]] välisellä rajalla. Matala järvi, mut kyl kyyhky uisi siinä silti huonosti.
+JATKOT:
+Miksi matalat järvet jäätyvät nopeasti?
+Mitä kalalajeja Peipsissä elää?
+
+### 12.4
+KYSYMYS: Mitä tšuudi tarkoittaa?
+Tuota niin. Tšuudi on vanha nimitys näillä mailla asuneille itämerensuomalaisille kansoille. Venäjänkielinen nimi [[Tšudskoje ozero]] tarkoittaa tšuudien järveä, ja se viittaa siis [[itämerensuomalaisiin]] kansoihin, joihin kuuluvat esimerkiksi [[virolaiset]] ja suomalaiset. Pitkä nimi, lyhyt selitys, minulle sopii.
+JATKOT:
+Mitä itämerensuomalaiset kielet ovat?
+Miten Peipsi-nimi on syntynyt?
+
+### 12.5
+KYSYMYS: Mistä osista Peipsijärvi koostuu?
+Odotas vähän. Peipsijärvi on oikeastaan kolme järveä: pohjoinen Peipsi, jonka pinta-ala on 2 611 neliökilometriä, eteläinen Pihkvan järvi, jonka pinta-ala on 708 neliökilometriä, ja niitä yhdistävä [[Lämmijärvi]], joka on 236 neliökilometriä. Yhteensä pinta-ala on 3 555 neliökilometriä. Pohjoinen osa on siis selvästi suurin, ja Pihkvan järvi on sen eteläpuolella oleva toinen suuri osa. Mukaan tulee vielä noin kolmekymmentä jokea, joiden vedet kerääntyvät yhteen.
+
+Kolme järveä yhden nimen alla. Minä olisin antanut jokaiselle oman pullan.
+JATKOT:
+Mikä on Pihkva?
+Miten Lämmijärvi on syntynyt?
+
+### 13.1
+KYSYMYS: Miksi Tartto syntyi juuri tähän kohtaan?
+Mmm— Viisas Pöllö olisi kertonut tämän paremmin, mut hän parantelee siipirikkoa. Jokilaakson soisuus teki [[Emajoesta]] esteen, sillä Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja. Paras niistä oli Tarton kohdalla, ja siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Risteyskaupunki, siis ihan kyyhkyn makuun.
+JATKOT:
+Mikä on Tarton yliopisto?
+Mitä Tartossa kannattaa nykyään katsoa?
+
+### 13.2
+KYSYMYS: Mikä lodi oli?
+Ai se. Lodi oli pieni jokiproomu tai purjealus, joka kesti myös Peipsin aallot. Isoisän aikaan, 1800-luvulla, jokea käytettiin ahkerasti tavaraliikenteeseen, ja lodit toivat [[Emajokea]] pitkin Tarttoon polttopuuta, hirsiä, heinää ja kalaa. Tietojen mukaan Emajoki on ainoa koko matkaltaan purjehduskelpoinen joki Virossa, joten vesiliikenteelle oli hyvä paikka. Pieni laiva, iso työ, kuten kyyhkyllä.
+JATKOT:
+Miten jokiliikenne on muuttunut Virossa?
+Millaisia laivoja Peipsillä on liikennöinyt?
+
+### 13.3
+KYSYMYS: Kuinka pitkä Emajoki on?
+Kas vaan. Emajoki on sata kilometriä pitkä, ja Tarton läpi sitä kulkee kymmenen kilometriä. Joki virtaa [[Võrtsjärvestä]] [[Tarton]] kautta [[Peipsijärveen]]. Yläjuoksulla se mutkittelee laajojen soiden ja tulvamaiden halki, joten sillä ei ole selvää tulvatasannetta lainkaan.
+
+Sata kilometriä on minulle yksi aamupäivä lentäen. Joki tekee saman matkan mutkitellen, ja siinä on kyllä oma viehätyksensä.
+JATKOT:
+Mikä on Võrtsjärvi?
+Miksi joet mutkittelevat?
+
+### 13.4
+KYSYMYS: Mitä Emajoen nimi tarkoittaa?
+Ai tota. Emajoki tarkoittaa äitijokea: viron kielessä ema on äiti ja jõgi joki. Se on Virossa toiseksi suurin joki virtaamaltaan, ja alajuoksulla se laskee [[Peipsiin]] [[Praagassa]]. Äitijoki, joten ehkä se pitää huolta myös kyyhkyistä.
+JATKOT:
+Mitkä muut joet Virossa ovat suuria?
+Miten viro ja suomi muistuttavat toisiaan?
+
+### 13.5
+KYSYMYS: Mistä Emajoki alkaa ja mihin se laskee?
+Tost minä osaan kertoo. Emajoki alkaa [[Võrtsjärvestä]], virtaa [[Tarton]] halki ja laskee [[Peipsijärveen]] Praagassa. Yläjuoksulla joki mutkittelee laajojen soiden ja tulvamaiden halki, ja alajuoksulla se kulkee [[Emajõe Suursoon]] läpi ennen Peipsiä. Ja koko matkan minä olisin lentänyt suoraan.
+JATKOT:
+Mikä suo on?
+Miksi suot ovat tärkeitä luonnolle?
+
+### 14.1
+KYSYMYS: Kuka todisti kraatterin syntytavan?
+Sepä sattui. Meteoriittialkuperän osoitti [[Ivan Reinvald]] tutkimuksillaan vuosina 1928, 1933 ja 1937. Ennen 1930-lukua kraatterien syntytavasta oli monta selitystä, esimerkiksi [[tulivuorenpurkauksesta]] ja [[karstista]] lähtevät. Vasta tutkimukset osoittivat, että kyseessä olivat meteoriitin tekemät kuopat. Tiede on hidasta, mut kyl se perille lentää.
+JATKOT:
+Mikä karsti on?
+Miten meteoriittikraatteri tunnistetaan?
+
+### 14.2
+KYSYMYS: Kuinka kova isku oli?
+No jopas. Iskun energia oli noin 80 terajoulea eli suunnilleen Hiroshiman pommin verran. [[Meteoriitti]] hajosi viiden ja kymmenen kilometrin korkeuden välillä, ja metsä paloi kuuden kilometrin säteellä. Suurin pala teki kraatterin, jonka halkaisija on 110 metriä ja syvyys 22 metriä ja jonka pohjalla on nyt [[Kaalin järvi]]. Onneksi siitä on jo tuhansia vuosia.
+JATKOT:
+Mitä meteoriitit ovat tehty?
+Kuinka usein meteoriitteja putoaa Maahan?
+
+### 14.3
+KYSYMYS: Kuinka suuri Kaalin pääkraatteri on?
+Kas, siitä minä tiedän. Kaalin pääkraatterin halkaisija on 110 metriä ja syvyys 22 metriä, ja sen pohjalla on nyt Kaalin järvi. Kahdeksan pienempää kraatteria, joiden halkaisija on 12–40 metriä, sijaitsee kilometrin säteellä, joten kraattereita on yhteensä yhdeksän. Ne sijaitsevat [[Saarenmaalla]] Kaalin kylässä. Pieniä kuoppia, mut kyl ne kyyhkyn silmään erottuu.
+JATKOT:
+Millainen Saarenmaa on saarena?
+Miten meteoriittikraatterit eroavat tulivuorikraattereista?
+
+### 14.4
+KYSYMYS: Milloin Kaalin meteoriitti iski?
+Hyvä kysymys tuo. Tuoreimpien arvioiden mukaan isku tapahtui pian vuosien 1530–1450 eaa. jälkeen, mutta ajoitukset vaihtelevat tutkijasta toiseen tuhansia vuosia, joten tarkkaa vuotta ei voi antaa. Se on yksi harvoista tunnetuista [[meteoriittitörmäyksistä]], jotka ovat osuneet asuttuun seutuun. Meteoriittialkuperän osoitti vasta [[Ivan Reinvald]] 1900-luvun alkupuolella.
+
+Tuhansien vuosien heitto ajoituksessa on aika paljon, kun minä itse muistan vain eilisen aamupalan. Mutta tiedemiehet pääsevät kyllä tarkemmaksi, kun ehtivät.
+JATKOT:
+Miten kraatterin ikä voidaan määrittää?
+Miten ihmiset asuivat Virossa pronssikaudella?
+
+### 14.5
+KYSYMYS: Miksi Kaalin iskua pidetään harvinaisena?
+Kato, tän minä muistan. Kaalin isku on yksi harvoista tunnetuista törmäyksistä, jotka ovat osuneet asuttuun seutuun. Useimmat meteoriitit putoavat asumattomille alueille tai mereen, koska suuri osa Maan pinnasta on merta. Metsä paloi kuuden kilometrin säteellä, ja tuoreimpien arvioiden mukaan isku sattui pian vuosien 1530–1450 eaa. jälkeen, tosin ajoitukset vaihtelevat paljon. Kraatterit sijaitsevat [[Saarenmaan]] [[Kaalin kylässä]]. Hyvä että ei sattunut kyyhkyn kohdalle.
+JATKOT:
+Mistä muualla Euroopassa löytyy meteoriittikraattereita?
+Miten tutkijat löytävät vanhoja kraattereita?
+
+### 15.1
+KYSYMYS: Kuka perusti mutakylpylän?
+Nyt muistan. Sotilaslääkäri [[Carl Abraham Hunnius]] perusti vuonna 1825 Haapsalun ensimmäisen mutahoitolan. Tieto parantavasta [[merimudasta]] levisi nopeasti Pietarin varakkaaseen väkeen ja muualle keisarikuntaan, ja hoidoissa kävi myös keisarillinen [[Romanovien]] perhe. Mutaa, mutaa, ja minä haaveilen pullasta.
+JATKOT:
+Mitä merimutahoito on?
+Mitä muita kylpyläkaupunkeja Itämeren rannalla on?
+
+### 15.2
+KYSYMYS: Mistä Haapsalun nimi tulee?
+No niin, nimi. Haapsalun nimi tulee sanoista haab eli haapa ja salu, joka vanhassa merkityksessään tarkoitti metsäistä saarta. Ruotsiksi ja saksaksi kaupunki oli pitkään [[Hapsal]], ja se oli 1200-luvulta 1900-luvun alkupuolelle asti [[rannikkoruotsalaisten]] keskuspaikka.
+
+Haapametsäinen saari kuulostaa minusta kyyhkyn unelmalta. Siellä olisi varmasti oma pullansa, en vain tiedä sen nimeä.
+JATKOT:
+Keitä rannikkoruotsalaiset ovat?
+Mitä muita vanhoja nimiä viron kaupungeilla on?
+
+### 15.3
+KYSYMYS: Mikä rooli Haapsalulla oli piispakunnassa?
+Joo, hetkinen. Lähteiden mukaan ensimmäinen maininta Haapsalusta on vuodelta 1279, jolloin kaupunki sai oikeutensa ja siitä tuli [[Saare-Lääne piispakunnan]] pääpaikka seuraavaksi kolmeksi vuosisadaksi. Haapsalun [[piispanlinna]] on yhä pystyssä, ja sen kirkon kerrotaan olevan Viron suurin yksilaivainen. Vanhoja seiniä, hyviä istuinpaikkoja kyl kyyhkyllekin.
+JATKOT:
+Mikä piispakunta on?
+Mitä keskiaikaisia linnoja Virossa on?
+
+### 15.4
+KYSYMYS: Keitä rannikkoruotsalaiset ovat?
+Ai tota, tästä tiedän vähän. Rannikkoruotsalaiset ovat ruotsinkielistä väestöä, joka on asunut Viron rannikoilla ja saarilla. [[Haapsalu]] oli heidän keskuspaikkansa 1200-luvulta 1900-luvun alkupuolelle asti, ja kaupungin ruotsinkielinen nimi oli [[Hapsal]]. Tarkempia lukuja en kyl tiedä, ne jääkööt viisaammille.
+JATKOT:
+Miten ruotsinkielinen väestö päätyi Viron rannikolle?
+Mitä ruotsinkielisiä paikannimiä Virossa on?
+
+### 15.5
+KYSYMYS: Keitä kylpylävieraita Haapsalussa kävi 1800-luvulla?
+Kas vaan, vieraslista. Sotilaslääkäri [[Carl Abraham Hunnius]] perusti Haapsaluun ensimmäisen mutahoitolan vuonna 1825. Tieto parantavasta merimudasta levisi nopeasti [[Pietarin]] varakkaaseen väkeen ja muualle keisarikuntaan, ja hoidoissa kävi myös keisarillinen [[Romanovien]] perhe.
+
+Keisarillinen perhe mudassa. Minä olisin halunnut nähdä sen ylhäältä, mutta pullakin olisi riittänyt.
+JATKOT:
+Miten Pietari ja Viro liittyivät 1800-luvulla toisiinsa?
+Millaista oli kylpylämatkailu 1800-luvulla?
