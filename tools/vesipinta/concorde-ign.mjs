@@ -12,6 +12,7 @@ import { PNG } from 'pngjs';
 import jpeg from 'jpeg-js';
 
 const A = process.argv.slice(2), opt = (k, d) => { const i = A.indexOf('--' + k); return i >= 0 ? A[i + 1] : d; };
+const NIMI = opt('nimi', 'concorde'), ORTO = opt('orto-kerros', 'ORTHOIMAGERY.ORTHOPHOTOS2021'), ORTOV = +opt('orto-vuosi', 2021);
 const [LAT, LON, SIVU] = A.filter((a, i) => !a.startsWith('--') && !(i > 0 && A[i - 1].startsWith('--'))).map(Number), ULOS = opt('ulos', '.');
 const mLat = 111320, cl = Math.cos(LAT * Math.PI / 180), dLat = SIVU / 2 / mLat, dLon = SIVU / 2 / (mLat * cl);
 const BB = [LAT - dLat, LON - dLon, LAT + dLat, LON + dLon];
@@ -25,13 +26,13 @@ const meta = { origo: { lat: LAT, lon: LON }, sivu_m: SIVU, bbox_latlon: BB, lis
   for (let py = 0; py < N; py += P) for (let px = 0; px < N; px += P) {
     const w = Math.min(P, N - px), h = Math.min(P, N - py);
     const la1 = BB[2] - (py / N) * 2 * dLat, la0 = BB[2] - ((py + h) / N) * 2 * dLat, lo0 = BB[1] + (px / N) * 2 * dLon, lo1 = BB[1] + ((px + w) / N) * 2 * dLon;
-    const buf = await hae(`${WMS}&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS2021&STYLES=&BBOX=${la0},${lo0},${la1},${lo1}&WIDTH=${w}&HEIGHT=${h}&FORMAT=image/png`);
+    const buf = await hae(`${WMS}&LAYERS=${ORTO}&STYLES=&BBOX=${la0},${lo0},${la1},${lo1}&WIDTH=${w}&HEIGHT=${h}&FORMAT=image/png`);
     const im = PNG.sync.read(buf);
     for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) { const s = (y * w + x) * 4, d = ((py + y) * N + px + x) * 4; kuva[d] = im.data[s]; kuva[d + 1] = im.data[s + 1]; kuva[d + 2] = im.data[s + 2]; kuva[d + 3] = 255; }
     console.log('orto pala', px, py);
   }
-  fs.writeFileSync(path.join(ULOS, 'concorde-orto-2021-20cm.jpg'), jpeg.encode({ data: kuva, width: N, height: N }, 92).data);
-  meta.tiedostot.orto = { tiedosto: 'concorde-orto-2021-20cm.jpg', kerros: 'ORTHOIMAGERY.ORTHOPHOTOS2021', kuvausvuosi: 2021, px: N, m_per_px: RES, rivi0: 'ylin rivi = pohjoisin, vasen sarake = läntisin (lat/lon-ruudukko bbox_latlon)' }; }
+  fs.writeFileSync(path.join(ULOS, `${NIMI}-orto-${ORTOV}-20cm.jpg`), jpeg.encode({ data: kuva, width: N, height: N }, 92).data);
+  meta.tiedostot.orto = { tiedosto: `${NIMI}-orto-${ORTOV}-20cm.jpg`, kerros: 'ORTHOIMAGERY.ORTHOPHOTOS2021', kuvausvuosi: 2021, px: N, m_per_px: RES, rivi0: 'ylin rivi = pohjoisin, vasen sarake = läntisin (lat/lon-ruudukko bbox_latlon)' }; }
 
 // 2) korkeudet: geoidi keskeltä
 const gim = await (await fromFile(opt('geoidi'))).getImage(), [gx0, gy0, gx1, gy1] = gim.getBoundingBox(), gw = gim.getWidth(), gh = gim.getHeight();
@@ -47,14 +48,14 @@ async function korkeus(nimi, kerros, tyyli, res) {
   const pohja = Math.floor(mn) - 1, png = new PNG({ width: N, height: N, bitDepth: 16, colorType: 0, inputColorType: 0, inputHasAlpha: false }), d16 = new Uint16Array(N * N);
   for (let k = 0; k < N * N; k++) d16[k] = z[k] < -100 || z[k] > 9000 ? 0 : Math.max(1, Math.round((z[k] - pohja) * 100)); // cm
   png.data = Buffer.from(d16.buffer);
-  fs.writeFileSync(path.join(ULOS, `concorde-${nimi}.png`), PNG.sync.write(png, { bitDepth: 16, colorType: 0, inputColorType: 0, inputHasAlpha: false }));
-  fs.writeFileSync(path.join(ULOS, `concorde-${nimi}.f32`), Buffer.from(z.buffer));
-  meta.tiedostot[nimi] = { png16: `concorde-${nimi}.png`, f32: `concorde-${nimi}.f32`, kerros, px: N, m_per_px: res, arvo_png16: 'NGF = pohja_m + arvo/100 (cm), 0 = ei dataa', f32: 'float32 LE, NGF m, rivi0 pohjoisin', pohja_m: pohja, min_ngf: +mn.toFixed(2), max_ngf: +mx.toFixed(2) };
+  fs.writeFileSync(path.join(ULOS, `${NIMI}-${nimi}.png`), PNG.sync.write(png, { bitDepth: 16, colorType: 0, inputColorType: 0, inputHasAlpha: false }));
+  fs.writeFileSync(path.join(ULOS, `${NIMI}-${nimi}.f32`), Buffer.from(z.buffer));
+  meta.tiedostot[nimi] = { png16: `${NIMI}-${nimi}.png`, f32: `${NIMI}-${nimi}.f32`, kerros, px: N, m_per_px: res, arvo_png16: 'NGF = pohja_m + arvo/100 (cm), 0 = ei dataa', f32: 'float32 LE, NGF m, rivi0 pohjoisin', pohja_m: pohja, min_ngf: +mn.toFixed(2), max_ngf: +mx.toFixed(2) };
   console.log(nimi, N, 'min', mn.toFixed(2), 'max', mx.toFixed(2));
 }
 await korkeus('rgealti-1m', 'ELEVATION.ELEVATIONGRIDCOVERAGE.HIGHRES', 'terrainrgb', 1);
 await korkeus('lidarhd-mnt-50cm', 'IGNF_LIDAR-HD_MNT_ELEVATION.ELEVATIONGRIDCOVERAGE.WGS84G', 'normal', 0.5);
 await korkeus('lidarhd-mns-50cm', 'IGNF_LIDAR-HD_MNS_ELEVATION.ELEVATIONGRIDCOVERAGE.WGS84G', 'normal', 0.5);
-meta.krediitti = 'Ortokuva ja korkeudet: © IGN – BD ORTHO 2021, RGE ALTI, LiDAR HD (Licence Ouverte Etalab 2.0)';
-fs.writeFileSync(path.join(ULOS, 'concorde-ign.json'), JSON.stringify(meta, null, 2));
+meta.krediitti = `Ortokuva ja korkeudet: © IGN – BD ORTHO ${ORTOV}, RGE ALTI, LiDAR HD (Licence Ouverte Etalab 2.0)`;
+fs.writeFileSync(path.join(ULOS, `${NIMI}-ign.json`), JSON.stringify(meta, null, 2));
 console.log('valmis', JSON.stringify({ geoidi: meta.geoidi_RAF20_N_m }));

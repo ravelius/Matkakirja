@@ -10,6 +10,8 @@
 //   ilmaperspektiivi-lapaisy.bin  sama koko, RGB = läpäisy kanavittain, A = 1
 // Kameran korkeustasot KORKEUDET (oletus 500 / 1500 / 3000 m) on pinottu z-akselille (32 per taso).
 // Käyttö: node tools/ilmakeha/ilmakeha-lut.mjs <ulos-kansio> [--mie 1.0] [--albedo 0.3] [--esikatselu]
+//   [--aod <AOD 550 nm> --angstrom <α> --ssa 0.92 --hm 1200]: kaupungin aerosoli (Karttaseppä 9.10.: AERONET-kuukausikeskiarvot) →
+//   Mie kanavittain: sammutus_c = AOD / HM · (λ_c / 550)^−α (λ = 680, 550, 440 nm), sironta = SSA · sammutus.
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -22,11 +24,13 @@ const KORKEUDET = [500, 1500, 3000];
 // --- ilmakehä (metreinä; Hillaire 2020 / Bruneton 2017 oletukset) ---
 const R = 6360e3, RT = 6460e3;
 const BR = [5.802e-6, 13.558e-6, 33.1e-6], HR = 8000;
-const BMS = 3.996e-6 * MIE_K, BME = 4.40e-6 * MIE_K, HM = 1200, G = 0.8;
+const AOD = arvo('aod', NaN), ANG = arvo('angstrom', 1.3), SSA = arvo('ssa', 0.92), HM = arvo('hm', 1200), G = 0.8, LAMBDA = [680, 550, 440];
+const BME = Number.isFinite(AOD) ? LAMBDA.map((l) => (AOD / HM) * Math.pow(l / 550, -ANG)) : [0, 1, 2].map(() => 4.40e-6 * MIE_K);
+const BMS = Number.isFinite(AOD) ? BME.map((b) => b * SSA) : [0, 1, 2].map(() => 3.996e-6 * MIE_K);
 const BO = [0.650e-6, 1.881e-6, 0.085e-6];
 const tiheys = (h) => [Math.exp(-h / HR), Math.exp(-h / HM), Math.max(0, 1 - Math.abs(h - 25000) / 15000)];
-const sammutus = (h) => { const [r, m, o] = tiheys(h); return [0, 1, 2].map((c) => BR[c] * r + BME * m + BO[c] * o); };
-const sironta = (h) => { const [r, m] = tiheys(h); return { r: BR.map((b) => b * r), m: BMS * m }; };
+const sammutus = (h) => { const [r, m, o] = tiheys(h); return [0, 1, 2].map((c) => BR[c] * r + BME[c] * m + BO[c] * o); };
+const sironta = (h) => { const [r, m] = tiheys(h); return { r: BR.map((b) => b * r), m: BMS.map((b) => b * m) }; };
 const vaiheR = (c) => (3 / (16 * Math.PI)) * (1 + c * c);
 const vaiheM = (c) => (3 / (8 * Math.PI)) * ((1 - G * G) * (1 + c * c)) / ((2 + G * G) * Math.pow(1 + G * G - 2 * G * c, 1.5));
 
@@ -71,7 +75,7 @@ const MW = 32, MH = 32, MS = new Float32Array(MW * MH * 3);
       for (let k = 0; k < N; k++) {
         const t = (k + 0.5) * dt, rr = rT(r, mu, t), hh = rr - R, muS = (r * mus + t * nu) / rr, s = sironta(hh), e = sammutus(hh), ts = lapaisy(hh, muS);
         for (let c = 0; c < 3; c++) {
-          const sc = s.r[c] + s.m, te = Math.exp(-e[c] * dt), kerroin = (1 - te) / Math.max(e[c], 1e-12); // analyyttinen integraali segmentille
+          const sc = s.r[c] + s.m[c], te = Math.exp(-e[c] * dt), kerroin = (1 - te) / Math.max(e[c], 1e-12); // analyyttinen integraali segmentille
           L2[c] += T[c] * sc * ts[c] * (1 / (4 * Math.PI)) * kerroin;
           F[c] += T[c] * sc * kerroin;
           T[c] *= te;
@@ -100,7 +104,7 @@ function integroi(r, mu, mus, nu, tMax, N, neliollinen) {
     const u1 = (k + 1) / N, t1 = neliollinen ? tMax * u1 * u1 : tMax * u1, dt = t1 - tEd, t = (tEd + t1) / 2; tEd = t1;
     const rr = rT(r, mu, t), hh = rr - R, muS = (r * mus + t * nu) / rr, s = sironta(hh), e = sammutus(hh), ts = lapaisy(hh, muS), ms = psi(hh, muS);
     for (let c = 0; c < 3; c++) {
-      const S = (s.r[c] * pr + s.m * pm) * ts[c] + (s.r[c] + s.m) * ms[c], te = Math.exp(-e[c] * dt);
+      const S = (s.r[c] * pr + s.m[c] * pm) * ts[c] + (s.r[c] + s.m[c]) * ms[c], te = Math.exp(-e[c] * dt);
       L[c] += T[c] * S * (1 - te) / Math.max(e[c], 1e-12);
       T[c] *= te;
     }
@@ -160,7 +164,7 @@ function integroiAP(r, mu, mus, nuVaihe, nuGeo, d) {
   for (let k = 0; k < N; k++) {
     const t = (k + 0.5) * dt, rr = rT(r, mu, t), hh = Math.max(0, rr - R), muS = (r * mus + t * nuGeo) / rr, s = sironta(hh), e = sammutus(hh), ts = lapaisy(hh, muS), ms = psi(hh, muS);
     for (let c = 0; c < 3; c++) {
-      const S = (s.r[c] * pr + s.m * pm) * ts[c] + (s.r[c] + s.m) * ms[c], te = Math.exp(-e[c] * dt);
+      const S = (s.r[c] * pr + s.m[c] * pm) * ts[c] + (s.r[c] + s.m[c]) * ms[c], te = Math.exp(-e[c] * dt);
       L[c] += T[c] * S * (1 - te) / Math.max(e[c], 1e-12);
       T[c] *= te;
     }
@@ -184,7 +188,7 @@ function kirjoita(nimi, data, kanavia, mitat, kuvaus) {
 fs.mkdirSync(ULOS, { recursive: true });
 const meta = {
   R_km: R / 1000, RT_km: RT / 1000, ap_etaisyys_km: AP_M / 1000, taivas_zeniitti: { kaava: 'UE SkyViewLut: r = R + tason korkeus, beta = acos(sqrt(r² − R²) / r), ZHA = π − beta. u < 0,5: c = 1 − (1 − 2u)², θv = ZHA·c; muuten c = (2u − 1)², θv = ZHA + beta·c', kaanteinen: 'θv < ZHA: u = (1 − sqrt(1 − θv/ZHA)) / 2; muuten u = 0,5 + 0,5·sqrt((θv − ZHA)/beta)' }, taivas_atsimuutti: { kaava: 'cos φ = 1 − 2v² (φ = kulma auringon atsimuutista, tiheä auringon puolella)', kaanteinen: 'v = sqrt((1 − cos φ)/2)' }, korkeustasot_z: 'z = taso·32 + w·31, taso 0 = 500 m, 1 = 1500 m, 2 = 3000 m',
-  tyokalu: 'tools/ilmakeha/ilmakeha-lut.mjs', luotu: new Date().toISOString(), mie_kerroin: MIE_K, albedo: ALBEDO, korkeudet_m: KORKEUDET,
+  tyokalu: 'tools/ilmakeha/ilmakeha-lut.mjs', luotu: new Date().toISOString(), mie_kerroin: MIE_K, ...(Number.isFinite(AOD) ? { aerosoli: { aod550: AOD, angstrom: ANG, ssa: SSA, hm_m: HM, aallonpituudet_nm: LAMBDA } } : {}), albedo: ALBEDO, korkeudet_m: KORKEUDET,
   yksikko: 'radianssi suhteessa auringon irradianssiin E = 1 (kanavittain valkoinen aurinko). Näyttöön: väri = valotus × L, valotus noin 10–30, sitten sävytys.',
   vakiot: { R_m: R, RT_m: RT, rayleigh: BR, HR_m: HR, mie_sironta: BMS, mie_sammutus: BME, HM_m: HM, g: G, otsoni: BO },
   taulukot: [
