@@ -1,0 +1,13 @@
+# KUITTAUSTODISTE (Natiiviseppä 10.10.2026, PT 19.1x): komennon jälkeinen tila näkyy HETI seuraavassa kuvassa ilman odota-riviä
+# (ennen korjausta kuva otettiin ennen kuin sovellus oli lukenut Documents/*-komento.txt:n → kuva näytti tilan ennen komentoa).
+kuva 01-alku kartta, ei paneeleja
+ui linssi valitsin
+kuva 02-valitsin-auki linssivalitsin auki (heti komennon jälkeen)
+ui linssi pois
+kuva 03-valitsin-piilossa linssivalitsin piilotettu (heti komennon jälkeen)
+ui linssi peite
+kuva 04-peite odotuspeite päällä (heti komennon jälkeen)
+ui linssi peite pois
+kuva 05-peite-pois odotuspeite piilotettu
+veto 200 520 215 520 0.3
+ei-testattu iPad (sama kuittauskoodi kaikilla laitteilla)

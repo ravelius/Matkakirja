@@ -141,6 +141,14 @@ kirjoita() {   # kirjoita <tiedosto> <rivi>: odottaa, että peli on lukenut edel
   local i; for i in {1..40}; do [[ -e "$D/$1" ]] || break; sleep 0.25; done
   print -r -- "$2" > "$D/.$1.tmp" && mv "$D/.$1.tmp" "$D/$1"
 }
+# KUITTAUS (Siirtoseppä/PT 10.10. 19.1x: piilotuskokeiden kuvat näyttivät tilan ENNEN komentoa): sovellus lukee komentotiedostot
+# kerran sekunnissa ja poistaa ne lukiessaan (PeliKomennot, LinssiOhjain, UiKomennot, Komennot). Skenaarion peli/linssi/ui/komento-
+# askeleen jälkeen odotetaan, että tiedosto on luettu (enintään 5 s), ja annetaan jonon ajaa (0,5 s), ennen seuraavaa askelta tai kuvaa.
+# Aikakatkaisu → VIRHE-rivi raporttiin (kohta 2), ajo jatkuu.
+kuittaus() {   # kuittaus <tiedosto> <selite>
+  local i; for i in {1..20}; do [[ -e "$D/$1" ]] || { sleep 0.5; return 0; }; sleep 0.25; done
+  tulos 2 VIRHE "komentoa ei kuitattu 5 s:ssa ($1: $2) — seuraava askel/kuva voi näyttää tilan ennen komentoa"; return 1
+}
 if [[ $PELI == *uusi-peli* ]]; then odota_rivi 'kerronta ohi' 400 0 || kirjaa "peli ei käynnistynyt (ei 'kerronta ohi')"
 else odota_rivi 'testimykistys|peli-komento' 120 0; sleep 15; fi   # ilman uutta peliä (aloitusnäkymä): skenaario odottaa itse
 # MACIN ULOSTULOON EI ÄÄNTÄ (Päätoimittaja 5.10. 13.15, omistajan kaiuttimista kuului simulaattorin striimi): Unityn JA
@@ -183,11 +191,11 @@ while IFS= read -r rivi || [[ -n $rivi ]]; do
   rivi=${rivi%%[[:space:]]#}; [[ -z $rivi || $rivi == \#* ]] && continue
   sana=${rivi%% *}; loput=${rivi#* }; [[ $loput == $rivi ]] && loput=""
   case $sana in
-    peli|linssi) VIIM=$(rivit); kirjoita $sana-komento.txt "$loput"; kirjaa "→ $sana $loput"
+    peli|linssi) VIIM=$(rivit); kirjoita $sana-komento.txt "$loput"; kirjaa "→ $sana $loput"; kuittaus $sana-komento.txt "$loput"
       # VIIM jää komennon alkuun: linssin avausrivi (linssit: auki: …) tulee usein ennen mykistystarkistusta (5.10. ajo).
       if [[ $sana == linssi && $loput == linssi* ]]; then sleep 2; m=$(mykistys) || keskeyta_aani "linssin jälkeen: $m"; fi ;;
-    ui) VIIM=$(rivit); kirjoita ui-komento.txt "ui $loput"; kirjaa "→ ui $loput" ;;
-    komento) VIIM=$(rivit); kirjoita komento.txt "$loput" ;;
+    ui) VIIM=$(rivit); kirjoita ui-komento.txt "ui $loput"; kirjaa "→ ui $loput"; kuittaus ui-komento.txt "ui $loput" ;;
+    komento) VIIM=$(rivit); kirjoita komento.txt "$loput"; kirjaa "→ komento $loput"; kuittaus komento.txt "$loput" ;;
     doc) print -r -- "${loput#*=}" > "$D/${loput%%=*}"; kirjaa "→ Documents/${loput%%=*} = ${loput#*=}" ;;   # doc <nimi>=<sisältö> (kesken ajon, esim. kaupunki-kuva-asetukset.txt=yolamput 0)
     odota) sleep $loput ;;
     tap|veto|polku)

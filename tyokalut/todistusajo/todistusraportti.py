@@ -211,7 +211,7 @@ def raportti(L, era, versio, laite, udid, skenaario):
     if not tulokset["6"]:
         tulokset["6"].append(("EI", "skenaariossa ei palaute-rivejä (ei aiempia palautteita tai niitä ei käyty läpi)"))
 
-    puutteet = [(k, t) for k in OTSIKOT for tila, t in tulokset[k] if tila == "PUUTE"]
+    puutteet = [(k, t) for k in OTSIKOT for tila, t in tulokset[k] if tila in ("PUUTE", "VIRHE")]   # VIRHE: komentoa ei kuitattu (todistusajo.sh kuittaus)
     tila = "OK" if not puutteet else "PUUTE — " + "; ".join(f"{k}: {t}" for k, t in puutteet[:3])
     out = [f"# Todistusajo: {era} {versio}", "",
            f"**{era} {versio}: {tila}**", "",

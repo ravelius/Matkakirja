@@ -67,10 +67,17 @@ ja kohteiden ääni on `ei-testattu`.
 
 Yksittäinen vika toistetaan yhdellä komennolla (VIKA TOISTETAAN ENNEN KORJAUSTA): `sarja.sh … --vain 07,12`.
 
+**Komennot kuitataan ennen seuraavaa askelta** (10.10.2026): `peli`/`linssi`/`ui`/`komento`-askeleen jälkeen ajo odottaa,
+että sovellus on lukenut komentotiedoston (se lukee Documents/*-komento.txt:n kerran sekunnissa ja poistaa sen), enintään 5 s,
+ja antaa jonon ajaa 0,5 s. Seuraava `kuva` näyttää siis komennon jälkeisen tilan ilman omaa `odota`-riviä. Jos tiedostoa ei
+lueta 5 s:ssa, kohtaan 2 tulee **VIRHE** (kuittausrivi PUUTE). Pitkät tilanmuutokset (linssin avaus, lento) odotetaan yhä
+`oleta`- tai `nakyy`-rivillä: kuittaus kertoo vain, että komento on luettu.
+
 ## Tulos: `proto-3d/lokit/todistus-<erä>-<aika>/TODISTUS.md`
 
 Ensimmäinen rivi on valmis kuittausrivi: `<erä> <SHA>: OK` tai `PUUTE — <kohta: syy>`. Tilat:
 **OK** todennettu · **PUUTE** todiste puuttuu tai jokin on rikki (estää kuittauksen) · **HUOM** tarkista itse (esim. uusi
 error-rivi, toinen äänikaappauksen puoliskoista hiljainen) · **KUORMA** käännös/poltto/kuormitus > ytimet → vain toimintatesti,
-ei fps/laatu/A-V · **EI** testaamatta, syy kerrottu (kohta 8; ei hiljaista OK:ta).
+ei fps/laatu/A-V · **EI** testaamatta, syy kerrottu (kohta 8; ei hiljaista OK:ta) · **VIRHE** komentoa ei kuitattu 5 s:ssa
+(estää kuittauksen kuten PUUTE).
 Merge-pyyntöön: TODISTUS.md:n polku + kuittausrivi; kuva-arkki.png on omistajalle sopiva kooste.
