@@ -438,7 +438,7 @@
   "kohde": "kohde:eiriksstadir",
   "kysymys": "Kuka syntyi todennäköisesti tällä tilalla?",
   "uusi": false,
-  "vastaus": "Joo, tän minä tiedän. Hyvä tarina. Tilalla syntyi todennäköisesti [[Leifr Eiríksson]], tilan perustaneen [[Punaisen Eirikin]] poika. Hänet tunnetaan ensimmäisenä tunnettuna eurooppalaisena, joka löysi Amerikan. Syntymäpaikka on kuitenkin vain todennäköinen, ei varma, ja Eiríksstaðir sijaitsee [[Haukadalurin]] laaksossa Dalasýslassa. Todennäköisesti, sanon minä, enkä lupaa enempää.",
+  "vastaus": "Joo, tän minä tiedän. Hyvä tarina. Tilalla syntyi todennäköisesti [[Leifr Eiríksson]], tilan perustaneen [[Punaisen Eirikin]] poika. Hänen yleisesti katsotaan olleen yksi ensimmäisistä eurooppalaisista, jotka saapuivat Pohjois-Amerikkaan. Syntymäpaikka on kuitenkin vain todennäköinen, ei varma, ja Eiríksstaðir sijaitsee [[Haukadalurin]] laaksossa Dalasýslassa. Todennäköisesti, sanon minä, enkä lupaa enempää.",
   "linkit": [
    "Leifr Eiríksson",
    "Punaisen Eirikin",
@@ -900,10 +900,10 @@
   "kohde": "kohde:dettifoss",
   "kysymys": "Onko Dettifoss Euroopan voimakkain putous?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Ei aivan. Kun putouksen virtaama kerrotaan pudotuskorkeudella, Dettifossia on pidetty Euroopan toiseksi väkevimpänä putouksena heti [[Reininputousten]] jälkeen. Sen keskivirtaama on 193 kuutiometriä sekunnissa, ja virtaamaltaan se on Islannin toiseksi suurin putous [[Urriðafossin]] jälkeen. Kakkonen on silti ihan kunnioitettava, sen sanoo kyyhky.",
+  "vastaus": "Selvä juttu. Lähteet eivät ole tästä täysin yhtä mieltä. Dettifossia pidetään yhtenä Euroopan väkevimmistä putouksista (se sijaitsee [[Jökulsárgljúfur]] kansallispuiston alueella), kun huomioidaan sekä virtaama että pudotuskorkeus, ja sitä verrataan usein [[Reininputousten]] kaltaisiin putouksiin. Tarkasta sijoituksesta en ole varma. Kakkonen on silti ihan kunnioitettava, sen sanoo kyyhky.",
   "linkit": [
-   "Reininputousten",
-   "Urriðafossin"
+   "Jökulsárgljúfur",
+   "Reininputousten"
   ],
   "jatkot": [
    "Missä Reininputoukset sijaitsevat?",
@@ -1377,7 +1377,7 @@
   "kohde": "kohde:hahmotelma-isafjordur",
   "kysymys": "Mikä on Neðstikaupstaður?",
   "uusi": false,
-  "vastaus": "Joo, tän minä tiedän. Neðstikaupstaður on [[Ísafjörðurin]] vanha tanskalainen kauppa-asema. Alueella seisoo yhä maan vanhin hirsitalojen ryhmä, muun muassa vuonna 1765 rakennettu [[Faktorshús]]. Ísafjörður itse oli 1500-luvulta lähtien ulkomaisten kauppiaiden tärkeä kauppapaikka, ja kaupunkioikeudet se sai vuonna 1786. Hirsitaloja, jotka ovat kestäneet enemmän talvia kuin yksikään kyyhky.",
+  "vastaus": "Joo, tän minä tiedän. Neðstikaupstaður on [[Ísafjörðurin]] vanha tanskalainen kauppa-asema. Alueella seisoo yhä vanhoja puutaloja, muun muassa vuonna 1765 rakennettu [[Faktorshús]]. Ísafjörður itse oli 1500-luvulta lähtien ulkomaisten kauppiaiden tärkeä kauppapaikka, ja kaupunkioikeudet se sai vuonna 1786. Hirsitaloja, jotka ovat kestäneet enemmän talvia kuin yksikään kyyhky.",
   "linkit": [
    "Ísafjörðurin",
    "Faktorshús"
@@ -1721,7 +1721,7 @@
   "kohde": "kohde:hahmotelma-skyr",
   "kysymys": "Mikä on Hvanneyrin maatalousyliopisto?",
   "uusi": true,
-  "vastaus": "Katotaas. Tästä on vähän tietoa, mutta olennainen löytyy. [[Hvanneyrin]] maatalousyliopisto sijaitsee Länsi-Islannissa, ja siellä opetetaan nykyaikaista maidontuotantoa ja [[karjanjalostusta]]. Lähteiden mukaan se on maan vanhin maatalousoppilaitos. Karjanjalostus, siinä on sana, jota ei kyyhkyn suussa kuule usein.",
+  "vastaus": "Katotaas. Tästä on vähän tietoa, mutta olennainen löytyy. [[Hvanneyrin]] maatalousyliopisto sijaitsee Länsi-Islannissa, ja siellä opetetaan nykyaikaista maidontuotantoa ja [[karjanjalostusta]].  Karjanjalostus, siinä on sana, jota ei kyyhkyn suussa kuule usein.",
   "linkit": [
    "Hvanneyrin",
    "karjanjalostusta"

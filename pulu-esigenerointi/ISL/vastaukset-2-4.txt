@@ -5,7 +5,7 @@ Kuka Grettir Ásmundarson oli?
 Mitä islantilaissaagat ovat?
 
 ### 242
-Jogurtti valmistetaan maidosta, johon on lisätty maitohappobakteereja. Bakteerit muuttavat maidon sokeria maitohapoksi, jolloin maito hapantuu ja koostumus paksuuntuu. Siivilöidyssä jogurtissa [[hera]] on valutettu pois, minkä vuoksi tuote on tiiviimpää kuin tavallinen jogurtti. Skyr muistuttaa tätä, mutta sen maku on mietompi ja se luokitellaan tuoreeksi hapanmaitojuustoksi.
+Jogurtti valmistetaan maidosta, johon on lisätty maitohappobakteereja. Bakteerit muuttavat maidon sokeria maitohapoksi, jolloin maito hapantuu ja koostumus paksuuntuu. Siivilöidyssä [[jogurtissa]] [[hera]] on valutettu pois, minkä vuoksi tuote on tiiviimpää kuin tavallinen jogurtti. Skyr muistuttaa tätä, mutta sen maku on mietompi ja se luokitellaan tuoreeksi hapanmaitojuustoksi.
 JATKOT:
 Mitä hera tarkoittaa?
 Miten skyr valmistetaan?
@@ -17,13 +17,13 @@ Miten Jāņi-juhlaa vietetään Latviassa?
 Mitä EU:n suojatut perinteiset tuotteet ovat?
 
 ### 244
-Hvanneyri sijaitsee Borgarfjörðurin alueella Länsi-Islannissa. Sen maatalousoppilaitos on lähteiden mukaan maan vanhin, ja opetuksessa on painotettu [[maidontuotantoa]] ja karjataloutta. Oppilaitoksen nykyisestä organisaatiosta en ole varma. Islannin oloissa maatalouden opetus on ollut tärkeää, koska viljelyaika on lyhyt ja karjan varassa on elätty vuosisatoja.
+[[Hvanneyri]] sijaitsee Borgarfjörðurin alueella Länsi-Islannissa. Siellä toimii maatalousoppilaitos, ja opetuksessa on painotettu [[maidontuotantoa]] ja [[karjataloutta]]. Oppilaitoksen nykyisestä organisaatiosta en ole varma. Islannin oloissa maatalouden opetus on ollut tärkeää, koska viljelyaika on lyhyt ja karjan varassa on elätty vuosisatoja.
 JATKOT:
 Millaista maataloutta Islannissa harjoitetaan?
 Millainen on islanninlehmä?
 
 ### 245
-Karjanjalostus tarkoittaa sitä, että eläimistä valitaan jälkeläisten emoiksi ja isiksi yksilöitä, joilla on toivottuja ominaisuuksia, esimerkiksi hyvä maidontuotanto, terveys tai sopeutuminen ilmastoon. Pitkäaikaisen valinnan kautta ominaisuudet vahvistuvat sukupolvi sukupolvelta. Islannissa on oma [[islanninkarja]], joka on tuotu maahan asutusaikana ja pysynyt pitkään erillään muista roduista. Tämä tekee jalostustyöstä erityisen kiinnostavaa, sillä pieni kanta on herkkä sukusiitokselle.
+[[Karjanjalostus]] tarkoittaa sitä, että eläimistä valitaan jälkeläisten emoiksi ja isiksi yksilöitä, joilla on toivottuja ominaisuuksia, esimerkiksi hyvä maidontuotanto, terveys tai sopeutuminen ilmastoon. Pitkäaikaisen valinnan kautta ominaisuudet vahvistuvat sukupolvi sukupolvelta. Islannissa on oma [[islanninkarja]], joka on tuotu maahan asutusaikana ja pysynyt pitkään erillään muista roduista. Tämä tekee jalostustyöstä erityisen kiinnostavaa, sillä pieni kanta on herkkä sukusiitokselle.
 JATKOT:
 Miksi Islannin karjakanta on pysynyt erillisenä?
 Mitä sukusiitos tarkoittaa?
@@ -35,13 +35,13 @@ Keitä hulduväki on islantilaisessa perinteessä?
 Miksi Islannissa uskotaan yhä kivissä asuviin olentoihin?
 
 ### 247
-Basaltti on tummaa, hienorakeista tulivuorikiveä, joka syntyy laavan jäähtyessä. Se on rautaa ja magnesiumia runsaasti sisältävää kiveä, ja suurin osa Islannista on rakentunut siitä. Reynisdrangarin kalliot ovat basalttia, jota meri on vuosien mittaan kuluttanut. Islanti sijaitsee [[Atlantin keskiselänteellä]], missä maankuoren laatat erkanevat toisistaan ja laavaa nousee jatkuvasti pintaan.
+[[Basaltti]] on tummaa, hienorakeista tulivuorikiveä, joka syntyy laavan jäähtyessä. Se on rautaa ja magnesiumia runsaasti sisältävää kiveä, ja suurin osa Islannista on rakentunut siitä. Reynisdrangarin kalliot ovat basalttia, jota meri on vuosien mittaan kuluttanut. Islanti sijaitsee [[Atlantin keskiselänteellä]], missä maankuoren laatat erkanevat toisistaan ja laavaa nousee jatkuvasti pintaan.
 JATKOT:
 Miten basalttipylväät syntyvät?
 Miksi Islannissa on niin paljon tulivuoria?
 
 ### 248
-Islands on yhdysvaltalainen matkailulehti, ja se valitsi vuonna 1991 Reynisfjaran yhdeksi maailman kymmenestä kauneimmasta ei-trooppisesta rannasta. Lehden historiasta ja levikistä en ole varma, joten niistä en lisää mitään. Vuonna 2021 ranta sijoittui kuudenneksi parhaaksi rannaksi koko maailmassa. Ranta sijaitsee lähellä [[Víkin]] kylää Etelä-Islannissa.
+Islands on matkailulehti, joka on lähteiden mukaan ylistänyt [[Reynisfjaraa]] yhtenä maailman kauneimmista rannoista. Lehden tarkemmasta taustasta ja ylistyksen ajankohdasta en ole varma, joten niistä en lisää mitään. Ranta sijaitsee lähellä [[Víkin]] kylää Etelä-Islannissa.
 JATKOT:
 Missä Vík sijaitsee?
 Miksi Reynisfjaran aallot ovat vaarallisia?
@@ -59,13 +59,13 @@ Mitä eroosio tarkoittaa?
 Miten laava eroaa magmasta?
 
 ### 251
-Basalttipylväät syntyvät, kun paksu laavakerros jäähtyy ja kutistuu. Kutistuminen aiheuttaa halkeamia, jotka järjestyvät usein kuusikulmaisiksi kuvioiksi, ja kivi jakautuu pystysuoriksi pylväiksi. Tunnettu eurooppalainen esimerkki on [[Giant's Causeway]] Pohjois-Irlannissa. Reynisfjaralla pylväitä näkyy rannan itäpäässä luolan ympärillä.
+[[Basalttipylväät]] syntyvät, kun paksu laavakerros jäähtyy ja kutistuu. Kutistuminen aiheuttaa halkeamia, jotka järjestyvät usein kuusikulmaisiksi kuvioiksi, ja kivi jakautuu pystysuoriksi pylväiksi. Tunnettu eurooppalainen esimerkki on [[Giant's Causeway]] Pohjois-Irlannissa. Reynisfjaralla pylväitä näkyy rannan itäpäässä luolan ympärillä.
 JATKOT:
 Mikä Giant's Causeway on?
 Miksi pylväät ovat usein kuusikulmaisia?
 
 ### 252
-Hálsanefshellir on luola Reynisfjaran itäpäässä, ja sitä reunustavat basalttipylväät. Luolan kaltaiset merenrannan holvit syntyvät, kun aallot kuluttavat kallion heikompia kohtia. Rannan länsipäässä kohoaa [[Dyrhólaeyn]] niemi. Reynisfjaran aallot ovat tunnetusti voimakkaita ja arvaamattomia, joten rannalla on syytä pysyä kaukana vedenrajasta.
+[[Hálsanefshellir]] on luola Reynisfjaran itäpäässä, ja sitä reunustavat basalttipylväät. Luolan kaltaiset merenrannan holvit syntyvät, kun aallot kuluttavat kallion heikompia kohtia. Rannan länsipäässä kohoaa [[Dyrhólaeyn]] niemi. Reynisfjaran aallot ovat tunnetusti voimakkaita ja arvaamattomia, joten rannalla on syytä pysyä kaukana vedenrajasta.
 JATKOT:
 Miksi Reynisfjaran aallot ovat vaarallisia?
 Millainen niemi Dyrhólaey on?
@@ -77,7 +77,7 @@ Miten Heimaeyn purkaus vaikutti asukkaisiin?
 Mitä eroa on magmalla ja laavalla?
 
 ### 254
-Hálsanefshellir on rannan itäpäässä sijaitseva luola, jonka ympärillä basalttipylväät muodostavat säännöllisiä kiviseinämiä. Luolan tarkasta syntyhistoriasta en ole varma. Meriluolat syntyvät yleisesti siten, että aallot kuluttavat kalliota heikoimmista kohdista. Alueella on syytä noudattaa varovaisuutta, koska Reynisfjaran aallot voivat nousta äkkiä kauas rannalle.
+[[Hálsanefshellir]] on rannan itäpäässä sijaitseva luola, jonka ympärillä [[basalttipylväät]] muodostavat säännöllisiä kiviseinämiä. Luolan tarkasta syntyhistoriasta en ole varma. Meriluolat syntyvät yleisesti siten, että aallot kuluttavat kalliota heikoimmista kohdista. Alueella on syytä noudattaa varovaisuutta, koska [[Reynisfjaran]] aallot voivat nousta äkkiä kauas rannalle.
 JATKOT:
 Millaisia basalttipylväät ovat?
 Missä Víkin kylä sijaitsee?
@@ -113,13 +113,13 @@ Millaisia turvetalot olivat?
 Mikä Skógar on?
 
 ### 260
-Sateenkaari syntyy, kun auringonvalo osuu vesipisaroihin. Valo taittuu pisaran pinnalla, heijastuu sen sisäpinnasta ja taittuu uudelleen ulos, jolloin valkoinen valo hajoaa väreiksi. Kaaren uloimmassa reunassa on punainen ja sisäreunassa violetti. Ilmiön syntyminen edellyttää, että aurinko on havaitsijan takana ja pisaroita on edessä. Vesisumu Skógafossin juurella tarjoaa siihen jatkuvan edellytyksen.
+[[Sateenkaari]] syntyy, kun auringonvalo osuu vesipisaroihin. Valo taittuu pisaran pinnalla, heijastuu sen sisäpinnasta ja taittuu uudelleen ulos, jolloin valkoinen valo hajoaa väreiksi. Kaaren uloimmassa reunassa on punainen ja sisäreunassa violetti. Ilmiön syntyminen edellyttää, että aurinko on havaitsijan takana ja pisaroita on edessä. Vesisumu [[Skógafossin]] juurella tarjoaa siihen jatkuvan edellytyksen.
 JATKOT:
 Miten kaksoissateenkaari syntyy?
 Miksi sateenkaaren värit ovat tässä järjestyksessä?
 
 ### 261
-Kaksoiskaari syntyy, kun osa valosta heijastuu pisarassa kaksi kertaa ennen kuin se poistuu. Tuloksena on pääkaaren yläpuolelle toinen, heikompi kaari. Toissijaisessa kaaressa värit ovat päinvastaisessa järjestyksessä: punainen on sisäreunassa ja violetti ulkoreunassa. Kaarten välissä oleva taivaan kaista näyttää tummemmalta. Putouksen sumussa [[vesipisarat]] ovat riittävän tasaisia, jotta molemmat kaaret näkyvät usein selvästi.
+[[Kaksoiskaari]] syntyy, kun osa valosta heijastuu pisarassa kaksi kertaa ennen kuin se poistuu. Tuloksena on pääkaaren yläpuolelle toinen, heikompi kaari. Toissijaisessa kaaressa värit ovat päinvastaisessa järjestyksessä: punainen on sisäreunassa ja violetti ulkoreunassa. Kaarten välissä oleva taivaan kaista näyttää tummemmalta. Putouksen sumussa [[vesipisarat]] ovat riittävän tasaisia, jotta molemmat kaaret näkyvät usein selvästi.
 JATKOT:
 Miksi kaarten välinen kaista on tumma?
 Miksi sateenkaarta ei voi lähestyä?
@@ -173,7 +173,7 @@ Millainen Fimmvörðuháls-reitti on?
 Kuka Þórr oli norjalaisessa uskonnossa?
 
 ### 270
-Islannin retkeilyseura eli Ferðafélag Íslands on retkeilyjärjestö, joka perustettiin 1920-luvun lopulla. Se ylläpitää vaellusmajoja eri puolilla maata, myös Landmannalaugarissa. Järjestö julkaisee karttoja ja vuosikirjoja sekä järjestää retkiä. Majat ovat välttämättömiä Laugavegurin kaltaisilla pitkillä reiteillä, joilla yöpyminen luonnossa on rajoitettua.
+[[Islannin retkeilyseura]] eli Ferðafélag Íslands on retkeilyjärjestö, joka perustettiin 1920-luvun lopulla. Se ylläpitää vaellusmajoja eri puolilla maata, myös Landmannalaugarissa. Järjestö julkaisee karttoja ja vuosikirjoja sekä järjestää retkiä. Majat ovat välttämättömiä [[Laugavegurin]] kaltaisilla pitkillä reiteillä, joilla yöpyminen luonnossa on rajoitettua.
 JATKOT:
 Millaisia majoja Laugavegur-reitillä on?
 Miten vaeltaja valmistautuu Islannin ylängölle?
@@ -203,7 +203,7 @@ Miten Islannissa käytetään geotermistä energiaa?
 Mikä on akviferi?
 
 ### 275
-Atlantin keskiselänne on valtameren pohjassa kulkeva vuorijono, jossa maankuoren laatat erkanevat toisistaan. Islanti on harvinainen paikka, jossa selänne kohoaa merenpinnan yläpuolelle, sillä alueella on tavallista enemmän tulivuoritoimintaa. Laattojen välinen repeämä näkyy maastossa esimerkiksi [[Þingvellirillä]], missä Euraasian ja Pohjois-Amerikan laatat etääntyvät toisistaan pari senttiä vuodessa. Ilmiö selittää Islannin runsaat tulivuoret ja geotermiset lähteet.
+[[Atlantin keskiselänne]] on valtameren pohjassa kulkeva vuorijono, jossa maankuoren laatat erkanevat toisistaan. Islanti on harvinainen paikka, jossa selänne kohoaa merenpinnan yläpuolelle, sillä alueella on tavallista enemmän tulivuoritoimintaa. Laattojen välinen repeämä näkyy maastossa esimerkiksi [[Þingvellirillä]], missä Euraasian ja Pohjois-Amerikan laatat etääntyvät toisistaan pari senttiä vuodessa. Ilmiö selittää Islannin runsaat tulivuoret ja geotermiset lähteet.
 JATKOT:
 Mikä on Þingvellirin kansallispuisto?
 Miten mannerlaatat liikkuvat?
@@ -329,7 +329,7 @@ Mikä on Þingvallavatn?
 Miksi tasavalta julistettiin Þingvellirillä?
 
 ### 296
-Alþingillä vuonna 999 tai 1000 uhkasi syntyä sisällissota kristittyjen ja muinaisuskon kannattajien välille. Ratkaisu uskottiin lainpuhuja Þorgeirille, joka julisti koko maan kristityksi. Päätöksen yhteydessä [[muinaisusko]]a sai kuitenkin harjoittaa yksityisesti. Alþingi toimii nykyisin Islannin parlamenttina.
+[[Alþingillä]] vuonna 999 tai 1000 uhkasi syntyä sisällissota kristittyjen ja muinaisuskon kannattajien välille. Ratkaisu uskottiin lainpuhuja Þorgeirille, joka julisti koko maan kristityksi. Päätöksen yhteydessä [[muinaisusko]]a sai kuitenkin harjoittaa yksityisesti. Alþingi toimii nykyisin Islannin parlamenttina.
 JATKOT:
 Millainen oli muinaisusko Islannissa?
 Mistä Alþingi on saanut nimensä?
@@ -347,7 +347,7 @@ Mikä reformaatio oli?
 Kuka Olaf Tryggvason oli?
 
 ### 299
-Akureyri on Pohjois-Islannin suurin kaupunki, ja se sijaitsee Eyjafjörðurin vuonon pohjukassa. Kaupungissa toimii [[Akureyrin yliopisto]], ja sitä pidetään usein pohjoisen keskuksena. Kaupungin kukkulalla kohoaa tunnettu kirkko. Goðafossille on matkaa noin 45 minuuttia autolla.
+[[Akureyri]] on Pohjois-Islannin suurin kaupunki, ja se sijaitsee Eyjafjörðurin vuonon pohjukassa. Kaupungissa toimii [[Akureyrin yliopisto]], ja sitä pidetään usein pohjoisen keskuksena. Kaupungin kukkulalla kohoaa tunnettu kirkko. [[Goðafossille]] on sieltä lyhyt ajomatka.
 JATKOT:
 Millainen vuono Eyjafjörður on?
 Mitä Akureyrissa voi tehdä?
@@ -359,7 +359,7 @@ Missä Grímsey sijaitsee?
 Miksi napapiiri on tärkeä rajaviiva?
 
 ### 301
-Goðafoss on putous Skjálfandafljót-joessa Pohjois-Islannissa, ja se sijaitsee kehätien varrella noin 45 minuutin ajomatkan päässä Akureyrista. Vesi putoaa noin kaksitoista metriä hevosenkengän muotoisena verhona, joka on noin kolmekymmentä metriä leveä. Nimi on luettavissa jumalten tai goðin putoukseksi. Tarina siitä, että Þorgeir olisi heittänyt jumalten patsaat putoukseen, on todennäköisesti 1800-luvun keksintö.
+[[Goðafoss]] on putous Skjálfandafljót-joessa Pohjois-Islannissa, ja se sijaitsee kehätien varrella lyhyen ajomatkan päässä [[Akureyrista]]. Vesi putoaa hevosenkengän muotoisena verhona. Nimi on luettavissa jumalten tai goðin putoukseksi. Tarina siitä, että Þorgeir olisi heittänyt jumalten patsaat putoukseen, on todennäköisesti 1800-luvun keksintö.
 JATKOT:
 Mistä tarina patsaiden heittämisestä on peräisin?
 Mikä kehätie on?
