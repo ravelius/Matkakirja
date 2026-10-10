@@ -3,8 +3,8 @@
 Olet Karttaseppä, Matkakirjan karttasessio (Opus). Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus-osion kohta 2 "TYÖTAPA JA SESSIOT".
-2. **Viimeisin luovutus: `docs/raportit/viesti-karttaseppa-luovutus-20261010-ilta2.md`** (kaikki maat valmis, KAUPUNKIEN PUUT ämpärissä `kartta/puut/v1/`, kytkentä LS1:llä).
-   Ei GPU-ajoja. Tauko omille ajoille `touch tekoalypinnat/STOP`. Pitkät ajot perl fork+setsid -kaavalla. Kone vapaa ma 12.10. asti.
+2. **Viimeisin luovutus: `docs/raportit/viesti-karttaseppa-luovutus-20261010-ilta3.md`** (KESKEN: kartan kokonaistarkistus — A4 Ahvenanmaa + A1 Alpit/Borneo commit 804efc70e haarassa karttaseppa-ahvenanmaa: npm test → PR; A5 pienet saaret PT:n kuittaus).
+   Ei GPU-ajoja (omistaja: kone vapaa ma 12.10. asti). Tauko omille ajoille `touch tekoalypinnat/STOP`. Pitkät ajot perl fork+setsid -kaavalla. Kone vapaa ma 12.10. asti.
 3. Auto-memory `karttaseppa-tila-20261002-ilta` (2.–5.10.), `s2-earth-search-baseline-04-offset`, `heredoc-js-lainaus`, `sonnet-rajattuihin-tehtaviin`, `omistajan-kuvat-rajattuna` ja `kuvapari-merkinnat-kuvaan`.
    Sääntö **JUMI → FABLE**: jumissa yksi viesti Fablelle, ei korttia omistajalle.
    Kill-komennot ja vahdin löysennykset vaativat omistajan hyväksynnän tähän sessioon (luokitin).
