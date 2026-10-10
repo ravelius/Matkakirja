@@ -211,6 +211,44 @@ namespace Matkakirja.Natiivi
                 asetaArvo?.Invoke(new Vector2(d.x, -d.y));
             }
 
+            /// <summary>KELLUVA TAPPI (Siirtoseppä 10.10., omistajan iPad TF 179: "ei tule ohjaimia"): kosketus mihin tahansa
+            /// seikkailun vasemmalle puoliskolle aloittaa tapin siitä kohdasta (paneelin pisteinä); SeikkailuTapit syöttää liikkeen
+            /// ja lopun. Osoitin KelluvaId erottaa sen UI-osoittimista; levossa tappi palaa USS-paikalleen.</summary>
+            public void KelluvaAlku(Vector2 paneeli)
+            {
+                if (osoitin >= 0 || Juuri.parent == null) return;
+                osoitin = KelluvaId;
+                var p = Juuri.parent.WorldToLocal(paneeli);
+                float puoli = Juuri.resolvedStyle.width * 0.5f;
+                if (!(puoli > 0f)) puoli = Halkaisija * 0.5f;
+                kelluvaKeski = paneeli; kelluvaSade = puoli;
+                Juuri.style.left = p.x - puoli; Juuri.style.top = p.y - puoli; Juuri.style.bottom = StyleKeyword.Auto;
+                Juuri.AddToClassList("mk-tappi--kosketus");
+                Nuppi.RemoveFromClassList("mk-tappi__nuppi--palaa");
+            }
+
+            public void KelluvaSiirto(Vector2 paneeli)
+            {
+                if (osoitin != KelluvaId || !(kelluvaSade > 0f)) return;
+                var d = (paneeli - kelluvaKeski) / kelluvaSade;
+                if (d.sqrMagnitude > 1f) d.Normalize();
+                Nuppi.style.translate = new Translate(d.x * kelluvaSade * 0.62f, d.y * kelluvaSade * 0.62f);
+                asetaArvo?.Invoke(new Vector2(d.x, -d.y));
+            }
+
+            public void KelluvaLoppu()
+            {
+                if (osoitin != KelluvaId) return;
+                Ylos(KelluvaId);
+                Juuri.style.left = StyleKeyword.Null; Juuri.style.top = StyleKeyword.Null; Juuri.style.bottom = alkuAla;
+            }
+
+            public bool Kelluu => osoitin == KelluvaId;
+            const int KelluvaId = 1 << 20;
+            Vector2 kelluvaKeski; float kelluvaSade;
+            /// <summary>Kutsujan asettama alareuna (SeikkailuTapit: TappiAla), johon kelluva tappi palaa.</summary>
+            public StyleLength alkuAla = StyleKeyword.Null;
+
             void Ylos(int id)
             {
                 if (id < 0 || id != osoitin) return;

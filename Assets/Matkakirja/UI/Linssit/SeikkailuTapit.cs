@@ -82,7 +82,7 @@ namespace Matkakirja.Natiivi
         const float NapautusPt = 10f;   // sama raja kuin PalloKierto.napautusLiike / CupolaVeto
         const double NapautusS = 0.35;
 
-        sealed class Sormi { public Vector2 Alku, Edellinen; public double AlkuT; public bool Ui, Veto, Oikealla, Kasittely; }
+        sealed class Sormi { public Vector2 Alku, Edellinen; public double AlkuT; public bool Ui, Veto, Oikealla, Kasittely, Tappi; }
         static readonly Dictionary<int, Sormi> sormet = new Dictionary<int, Sormi>();
         static readonly HashSet<int> nahdyt = new HashSet<int>();
         static Vector2 katseKertyma;
@@ -215,12 +215,12 @@ namespace Matkakirja.Natiivi
         /// <summary>Kosketukset joka ruutu (vain seikkailussa): oikean puoliskon veto katseeksi, lyhyt napautus maailmaan.</summary>
         void LueKosketukset()
         {
-            if (!nakyy) { sormet.Clear(); katseKertyma = Vector2.zero; LopetaKasittely(); return; }
+            if (!nakyy) { sormet.Clear(); katseKertyma = Vector2.zero; LopetaKasittely(); vasen?.KelluvaLoppu(); return; }
             float lev = kerros.Juuri(kerrosNro).layout.width;
             float k = lev > 1f && !float.IsNaN(lev) ? Screen.width / lev : 1f;   // pikseliä pisteessä
             nahdyt.Clear();
             // EnhancedTouch on päällä vain PalloKierron aikana (6.7: ilman sitä activeTouches heittää joka ruudussa, esim. asettelutestin kohtaus).
-            if (!UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport.enabled) { if (kasittelySormi >= 0) LopetaKasittely(); sormet.Clear(); return; }
+            if (!UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport.enabled) { if (kasittelySormi >= 0) LopetaKasittely(); vasen.KelluvaLoppu(); sormet.Clear(); return; }
             foreach (var t in Kosketus.activeTouches)
             {
                 int id = t.touchId;
@@ -234,6 +234,10 @@ namespace Matkakirja.Natiivi
                     // syötetään vasta napautusrajan jälkeen; lyhyt napautus päättää käsittelyn ilman kääntöä.
                     s.Kasittely = !s.Ui && kasittelySormi < 0 && !Kasittely.Kaynnissa && KasittelyAlkaa != null && KasittelyAlkaa(px);
                     if (s.Kasittely) { kasittelySormi = id; Kasittely.Aloita(); }
+                    // Kelluva liiketappi (omistajan iPad TF 179: "ei tule ohjaimia"): näkymätön 64 pt:n kulmatappi ei löytynyt;
+                    // kosketus vasemmalle puoliskolle (ei UI, ei esinekäsittely) aloittaa tapin kosketuskohdasta.
+                    s.Tappi = !s.Ui && !s.Kasittely && !s.Oikealla && !vasen.Kosketaan;
+                    if (s.Tappi) vasen.KelluvaAlku(Paneeliin(px, k));
                     sormet[id] = s;
                 }
                 if (s.Kasittely)
@@ -252,6 +256,12 @@ namespace Matkakirja.Natiivi
                     }
                     if (s.Veto) Ruudunpaivitys.Herata();
                 }
+                else if (s.Tappi)
+                {
+                    if (!s.Veto && ((px - s.Alku) / k).magnitude > NapautusPt) s.Veto = true;
+                    vasen.KelluvaSiirto(Paneeliin(px, k));
+                    Ruudunpaivitys.Herata();
+                }
                 else if (!s.Ui)
                 {
                     if (!s.Veto && ((px - s.Alku) / k).magnitude > NapautusPt) s.Veto = true;
@@ -268,12 +278,16 @@ namespace Matkakirja.Natiivi
                 {
                     if (t.phase == KosketusVaihe.Ended && !s.Ui && !s.Veto && t.time - s.AlkuT <= NapautusS) Napauta(px);
                     if (s.Kasittely) LopetaKasittely();
+                    if (s.Tappi) vasen.KelluvaLoppu();
                     sormet.Remove(id);
                 }
             }
             if (sormet.Count > nahdyt.Count)
-                foreach (var id in new List<int>(sormet.Keys)) if (!nahdyt.Contains(id)) { if (id == kasittelySormi) LopetaKasittely(); sormet.Remove(id); }
+                foreach (var id in new List<int>(sormet.Keys)) if (!nahdyt.Contains(id)) { if (id == kasittelySormi) LopetaKasittely(); if (sormet[id].Tappi) vasen.KelluvaLoppu(); sormet.Remove(id); }
         }
+
+        /// <summary>Input Systemin näyttöpiste (pikselit, origo vasen alakulma) paneelin pisteiksi (origo vasen yläkulma).</summary>
+        static Vector2 Paneeliin(Vector2 px, float k) => new Vector2(px.x / k, (Screen.height - px.y) / k);
 
         static void LopetaKasittely()
         {
@@ -325,7 +339,7 @@ namespace Matkakirja.Natiivi
             oikeaNakyy = nayta && OikeaTappi;
             oikea.Nayta(oikeaNakyy);
             // Alareuna ja sivureuna kuten oppaan tapeilla (krediittien yläpuolella, reunasta OpasTapit.Reuna).
-            vasen.Juuri.style.bottom = TappiAla; oikea.Juuri.style.bottom = TappiAla;
+            vasen.Juuri.style.bottom = TappiAla; oikea.Juuri.style.bottom = TappiAla; vasen.alkuAla = TappiAla;
             Debug.Log("MATKAKIRJA seikkailutapit: " + (nayta ? "näkyvät" : "piilossa"));
         }
 
