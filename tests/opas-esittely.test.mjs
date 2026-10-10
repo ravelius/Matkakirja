@@ -109,6 +109,19 @@ test('omat kohteet (Giza): vain kokeilu-otsakkeella; Liiku kierros pienimmän ki
   } finally { globalThis.fetch = vanha; }
 });
 
+test('Peking kokeilukohteena: giza-otsake (natiivin kehityskäännös) ja peking-otsake avaavat sen, ilman otsaketta ei (10.10.)', async () => {
+  const { kokeilut } = await import('../tools/pollo/sallitut.js');
+  assert.deepEqual(kokeilut('giza'), ['giza', 'peking']);
+  assert.deepEqual(kokeilut('peking'), ['peking']);
+  assert.deepEqual(kokeilut('giza, peking'), ['giza', 'peking']);
+  assert.deepEqual(kokeilut(''), []);
+  const hae = async (otsakkeet) => (await (await worker.fetch(new Request('https://pollo.example/opas/aineistot',
+    { headers: { origin: 'https://matkakirja.app', ...otsakkeet } }), { POLLO_ORIGINIT: 'https://matkakirja.app' }, {})).json()).sallitut;
+  const p = (await hae({ 'x-matkakirja-kokeilu': 'giza' })).find((x) => x.id === 'peking');
+  assert.deepEqual(p, { id: 'peking', nimi: 'Peking', lat: 39.915896, lon: 116.390814, r_m: 5000 });
+  assert.ok(!(await hae({})).some((x) => x.id === 'peking'), 'TF-appi ei näe Pekingiä');
+});
+
 test('Giza kokeilu-otsakkeella: kierros alkaa Sfinksin valmiista kerronnasta ilman mallikutsua', async () => {
   const { OPAS_OMAT } = await import('../tools/pollo/opas-omat.js');
   const e = { ...ymparisto(), OPAS_ESITTELY_TESTI: undefined, OPAS_SALLITUT_ESTO: '1' };

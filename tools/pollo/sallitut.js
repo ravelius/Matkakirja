@@ -62,9 +62,17 @@ export const OPAS_SALLITUT = Object.freeze({
  */
 export const OPAS_SALLITUT_KOKEILU = Object.freeze({
   giza: { id: 'giza', nimi: 'Gizan pyramidit', lat: 29.9765, lon: 31.1313, r_m: 1500 },
+  // Peking (koekaupunki, Raamattu 10.10.; PT 11.4x, Linssiseppä 2): vain kaupunkitilan kuvaukseen, ei esittelyä eikä kohteita.
+  peking: { id: 'peking', nimi: 'Peking', lat: 39.915896, lon: 116.390814, r_m: 5000 },
 });
-/** Pyynnön kokeilukohteet: otsakkeen id:t, jotka ovat kokeilulistalla. */
-export const kokeilut = (otsake) => String(otsake ?? '').split(',').map((x) => x.trim().toLowerCase()).filter((x) => OPAS_SALLITUT_KOKEILU[x]);
+/*
+ * Natiivin kehityskäännös lähettää otsakkeen vakiona "giza" (OpasSovitin.GizaKokeilu), joten giza avaa myös muut
+ * kokeilukohteet ilman uutta käännöstä. Muut id:t avaavat vain itsensä.
+ */
+const KOKEILUN_LISAT = Object.freeze({ giza: ['peking'] });
+/** Pyynnön kokeilukohteet: otsakkeen id:t (ja gizan lisät), jotka ovat kokeilulistalla. */
+export const kokeilut = (otsake) => [...new Set(String(otsake ?? '').split(',').map((x) => x.trim().toLowerCase())
+  .flatMap((x) => [x, ...(KOKEILUN_LISAT[x] ?? [])]))].filter((x) => OPAS_SALLITUT_KOKEILU[x]);
 const kokeilussa = (env) => (env?.OPAS_KOKEILU ?? []).map((x) => OPAS_SALLITUT_KOKEILU[x]).filter(Boolean);
 /** Sallitut tälle pyynnölle (/opas/aineistot): tuotannon lista + pyynnön kokeilukohteet. */
 export const sallitutPyynnolle = (env) => [...OPAS_SALLITUT.sallitut, ...kokeilussa(env)];
