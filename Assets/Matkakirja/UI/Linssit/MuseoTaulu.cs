@@ -52,7 +52,7 @@ namespace Matkakirja.Natiivi
             otsikko.style.display = DisplayStyle.None;
             nimi = Rakenne.Teksti("", "mk-aikajana-havainne__otsikko", otsikko);
             Kirjasimet.Aseta(nimi, Kirjasin.Goottilainen);
-            nimi.style.fontSize = 34; nimi.style.whiteSpace = WhiteSpace.Normal; nimi.style.unityTextAlign = TextAnchor.LowerLeft;
+            nimi.style.fontSize = Tyylikirja.Koko.Nimio; nimi.style.whiteSpace = WhiteSpace.Normal; nimi.style.unityTextAlign = TextAnchor.LowerLeft;
             alarivi = Rakenne.Teksti("", "mk-aikajana-havainne__kuvateksti", otsikko);
             Kirjasimet.Aseta(alarivi, Kirjasin.Antiikva);
             alarivi.style.fontSize = 19; alarivi.style.whiteSpace = WhiteSpace.Normal;
@@ -66,6 +66,9 @@ namespace Matkakirja.Natiivi
             var turva = kerros.Turva(LinssiUi.Ylakerros);
             ryhma = Ohjausnappi.Ryhma(turva);
             ryhma.style.position = Position.Absolute;
+            // OHJAUSNAPPI-ryhmän pohjatyyli on oikea yläkulma (top/right): top pois, muuten ryhmä venyy koko korkeudelle ja napit
+            // keskittyvät ruudun keskelle (LS1:n kuva-arkki 10.10. 11.4x, iPad vaaka).
+            ryhma.style.top = StyleKeyword.Auto;
             ryhma.style.bottom = 24; ryhma.style.left = 0; ryhma.style.right = 0;
             ryhma.style.justifyContent = Justify.Center;
             ryhma.style.display = DisplayStyle.None;
@@ -96,7 +99,7 @@ namespace Matkakirja.Natiivi
             ylarivi.style.alignItems = Align.Center;
             kKapiteeli = Rakenne.Teksti("", "mk-kortti__kapiteeli", ylarivi);
             Kirjasimet.Aseta(kKapiteeli, Tyylikirja.Kirjain.Kapiteeli);
-            kKapiteeli.style.flexShrink = 1; kKapiteeli.style.whiteSpace = WhiteSpace.Normal;
+            kKapiteeli.style.flexGrow = 1; kKapiteeli.style.flexShrink = 1; kKapiteeli.style.flexBasis = 0; kKapiteeli.style.whiteSpace = WhiteSpace.Normal;
             lukija = new KortinLukija(ylarivi, Kieli.T("ui.nosto.kuuntele-kortti"), saatimet: true, rajaus: () => kortti.worldBound);
             kNimi = Rakenne.Teksti("", "mk-kortti__otsikko", kortti.Sisus); kNimi.style.whiteSpace = WhiteSpace.Normal;
             Kirjasimet.Aseta(kNimi, Tyylikirja.Kirjain.Otsikko);
@@ -119,7 +122,7 @@ namespace Matkakirja.Natiivi
             hRivi.style.flexDirection = FlexDirection.Row;
             hRivi.style.justifyContent = Justify.SpaceBetween;
             hRivi.style.alignItems = Align.Center;
-            hNimi = Rakenne.Teksti("", "mk-kortti__otsikko", hRivi); hNimi.style.whiteSpace = WhiteSpace.Normal; hNimi.style.flexShrink = 1;
+            hNimi = Rakenne.Teksti("", "mk-kortti__otsikko", hRivi); hNimi.style.whiteSpace = WhiteSpace.Normal; hNimi.style.flexGrow = 1; hNimi.style.flexShrink = 1; hNimi.style.flexBasis = 0;
             Kirjasimet.Aseta(hNimi, Tyylikirja.Kirjain.Otsikko);
             hLukija = new KortinLukija(hRivi, Kieli.T("ui.nosto.kuuntele-kortti"), saatimet: true, rajaus: () => huoneKortti.worldBound);
             hTeksti = Rakenne.Teksti("", "mk-kortti__teksti", huoneKortti.Sisus); hTeksti.style.whiteSpace = WhiteSpace.Normal;
@@ -143,8 +146,9 @@ namespace Matkakirja.Natiivi
             if (isa == null) return;
             float W = isa.layout.width, H = isa.layout.height, m = Tyylikirja.Vali.M;
             if (float.IsNaN(W) || W <= 0 || H <= 0) return;
-            float napit = ryhma.resolvedStyle.bottom + ryhma.layout.height + m;
-            if (float.IsNaN(napit)) napit = m;
+            // Nappirivin yläreuna (ei bottom + korkeus: venynyt ryhmä antoi negatiivisen tilan ja ~50 pt:n kortin).
+            float napit = H - ryhma.layout.yMin + m;
+            if (float.IsNaN(napit) || napit < m || napit > H * 0.5f) napit = 24f + Tyylikirja.Nappi.Ohjaus + m;
             if (Pohja.Leveys(W) == Pohja.Luokka.Kapea)
             {
                 korttiJuuri.style.left = m; korttiJuuri.style.right = m; korttiJuuri.style.width = StyleKeyword.Auto;
@@ -154,7 +158,8 @@ namespace Matkakirja.Natiivi
             }
             else
             {
-                float yla = Ylapalkki.Varaus + m;
+                // Yläpalkin tai linssin ✕-ryhmän (OHJAUSNAPPI oikeassa yläkulmassa) alta.
+                float yla = Mathf.Max(Ylapalkki.Varaus, Tyylikirja.Vali.S + Tyylikirja.Nappi.Ohjaus) + m;
                 korttiJuuri.style.left = StyleKeyword.Auto; korttiJuuri.style.right = m; korttiJuuri.style.width = Pohja.Sivukortti(W);
                 korttiJuuri.style.top = yla; korttiJuuri.style.bottom = napit;
                 korttiJuuri.style.maxHeight = StyleKeyword.None;
