@@ -2321,5 +2321,465 @@
    "Mitä taivaaseenotto tarkoittaa?",
    "Miten Maltan festa-ilotulitus valmistetaan?"
   ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-verdala-palace",
+  "kasite": "Johanniittaritarikuntaa",
+  "kysymys": "Kerro lisää: Johanniittaritarikuntaa",
+  "vastaus": "Johanniittaritarikunta eli Pyhän Johanneksen ritarikunta syntyi alun perin sairaita hoitaneena veljeskuntana, ja sen jäsenistä tuli ajan kuluessa myös sotilaita. Ritarikunta asettui [[Rodoksen]] saarelle 1300-luvun alussa ja siirtyi sieltä Maltalle vuonna 1530, kun keisari [[Kaarle V]] antoi saaret sen hallittaviksi. Maltalla ritarikunta puolusti saaria muun muassa vuoden 1565 suuressa piirityksessä, ja sen uudeksi pääkaupungiksi rakennettiin [[Valletta]]. Ritarikunnan valta Maltalla päättyi vuonna 1798, kun [[Napoleonin]] joukot valtasivat saaret. Ritarikunta on olemassa yhä, ja sen toiminta on nykyisin pääosin hyväntekeväisyyttä.",
+  "linkit": [
+   "Rodoksen",
+   "Kaarle V",
+   "Valletta",
+   "Napoleonin"
+  ],
+  "jatkot": [
+   "Miten Malta kesti vuoden 1565 suuren piirityksen?",
+   "Mitä ritarikunta tekee nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-verdala-palace",
+  "kasite": "Boschetton",
+  "kysymys": "Kerro lisää: Boschetton",
+  "vastaus": "Boschetto on italiankielinen sana, joka tarkoittaa pientä metsikköä tai lehtoa. Siitä on peräisin myös [[Buskettin]] puutarhojen nimi, sillä Buskett on maltalaistunut muoto samasta sanasta. Alue sijaitsee Maltan saaren lounaisosassa Siġġiewin kunnan alueella, ja se on yksi saaren harvoista metsäisistä alueista. Suurmestarit käyttivät aluetta riistamaana, ja sinne rakennettiin metsästysmaja, josta kehittyi myöhemmin [[Verdalan palatsi]]. Lähistöllä ovat myös [[Dinglin kalliot]].",
+  "linkit": [
+   "Buskettin",
+   "Verdalan palatsi",
+   "Dinglin kalliot"
+  ],
+  "jatkot": [
+   "Millainen paikka Buskett on nykyään?",
+   "Millaiset ovat Dinglin kalliot?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-verdala-palace",
+  "kasite": "Jean Parisot de la Valette",
+  "kysymys": "Kerro lisää: Jean Parisot de la Valette",
+  "vastaus": "Jean Parisot de Valette oli ranskalaissyntyinen Johanniittaritarikunnan suurmestari, joka johti ritarikuntaa vuodesta 1557 kuolemaansa vuonna 1568. Hänen johdollaan Malta kesti vuoden 1565 [[suuren piirityksen]], jossa ottomaanien joukot hyökkäsivät saarelle. Piirityksen jälkeen hän laski peruskiven uudelle linnoitetulle kaupungille Sciberras-niemellä 28. maaliskuuta 1566, ja kaupunki sai myöhemmin hänen mukaansa nimen [[Valletta]]. Kaupungin suunnittelijaksi paavi lähetti [[Francesco Laparellin]], ja työtä jatkoi hänen kuolemansa jälkeen maltalainen Girolamo Cassar.",
+  "linkit": [
+   "suuren piirityksen",
+   "Valletta",
+   "Francesco Laparellin"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Valletta on kaavaltaan?",
+   "Miten vuoden 1565 piiritys päättyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-verdala-palace",
+  "kasite": "Buskettin",
+  "kysymys": "Kerro lisää: Buskettin",
+  "vastaus": "Buskett on Maltan saaren harvinainen metsäalue Siġġiewin kunnan alueella. Nimi juontuu italian sanasta boschetto, pieni metsikkö, ja alue oli suurmestarien aikana riistamaata. Puutarhojen keskellä kohoaa [[Verdalan palatsi]], ja ympäröivä alue on nykyään suosittu virkistysalue, jossa kasvaa muun muassa mäntyjä sekä sitrushedelmätarhoja. Kesäkuun lopussa alueella vietetään perinteisesti [[Imnarja]]-juhlaa, johon kuuluvat kansanmusiikki ja yhteinen ruokailu.",
+  "linkit": [
+   "Verdalan palatsi",
+   "Imnarja"
+  ],
+  "jatkot": [
+   "Mitä Imnarja-juhlassa tehdään?",
+   "Millaista luontoa Maltalla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-verdala-palace",
+  "kasite": "presidentti",
+  "kysymys": "Kerro lisää: presidentti",
+  "vastaus": "Malta on tasavalta, ja presidentti on sen valtionpäämies. Tasavalta julistettiin vuonna 1974, kun Malta oli ollut itsenäinen vuodesta 1964 ja valtionpäämiehenä oli sitä ennen Britannian kuningatar. Presidentin tehtävät ovat pääosin edustuksellisia, ja varsinaista toimeenpanovaltaa käyttää hallitus [[pääministerin]] johdolla. Presidentin valitsee parlamentti viideksi vuodeksi. Virallinen residenssi on [[San Anton -palatsi]] Attardissa, kun taas Verdalan palatsi toimii kesäasuntona.",
+  "linkit": [
+   "pääministerin",
+   "San Anton -palatsi"
+  ],
+  "jatkot": [
+   "Miten Malta itsenäistyi vuonna 1964?",
+   "Miten Maltan parlamentti toimii?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-verdala-palace",
+  "kasite": "kuvernöörin",
+  "kysymys": "Kerro lisää: kuvernöörin",
+  "vastaus": "Maltan kuvernööri edusti Britannian kruunua saarella brittiläisen vallan aikana. Britit tulivat Maltalle noin vuonna 1800, kun Napoleonin ranskalaisjoukot oli ajettu pois, ja Malta liitettiin virallisesti Britannian valtakuntaan vuoden 1814 tienoilla. Kuvernöörin virka-asuntoina toimivat muun muassa Vallettan [[suurmestarin palatsi]] sekä San Anton ja Verdalan palatsi. Maltan itsenäistyessä vuonna 1964 kuvernöörin tilalle tuli kenraalikuvernööri, ja vuoden 1974 tasavallan myötä virkaa alkoi hoitaa presidentti. Brittiaika jätti saarille pysyviä jälkiä, esimerkiksi [[englannin kielen]] asemaan.",
+  "linkit": [
+   "suurmestarin palatsi",
+   "englannin kielen"
+  ],
+  "jatkot": [
+   "Miten Malta joutui Britannian vallan alle?",
+   "Mitä kieliä Maltalla puhutaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-verdala-palace",
+  "kasite": "San Anton -palatsin",
+  "kysymys": "Kerro lisää: San Anton -palatsin",
+  "vastaus": "San Anton -palatsi sijaitsee [[Attardin]] kaupungissa Maltan keskiosassa. Se rakennettiin 1600-luvun alussa suurmestari [[Antoine de Paulen]] aikana. Brittiaikana palatsista tuli kuvernöörin virallinen asuinpaikka, ja nykyään se on Maltan presidentin virallinen residenssi. Palatsin ympärillä on laajat puutarhat, jotka ovat avoinna yleisölle.",
+  "linkit": [
+   "Attardin",
+   "Antoine de Paulen"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Attard on?",
+   "Mitä San Anton -puutarhoissa voi nähdä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-verdala-palace",
+  "kasite": "Giovanni Paolo Lascarisin",
+  "kysymys": "Kerro lisää: Giovanni Paolo Lascarisin",
+  "vastaus": "Giovanni Paolo Lascaris Castellar oli Johanniittaritarikunnan suurmestari vuosina 1636–1657. Hänen aikanaan Maltan puolustusta vahvistettiin, ja rannikolle rakennettiin vartiotorneja, jotka tunnetaan hänen mukaansa. Hänen nimensä on myös [[Vallettassa]] Lascarisin bastionilla, jonka tunneleissa toimi [[toisen maailmansodan]] aikana liittoutuneiden sotilaallinen päämaja. Hänen kaudellaan rakennettiin siis sekä Maltan rannikon että pääkaupungin puolustusta.",
+  "linkit": [
+   "Vallettassa",
+   "toisen maailmansodan"
+  ],
+  "jatkot": [
+   "Mitä Lascarisin sotahuoneissa tapahtui sodan aikana?",
+   "Miksi Maltan rannikolle rakennettiin vartiotorneja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-verdala-palace",
+  "kasite": "António Manoel de Vilhenan",
+  "kysymys": "Kerro lisää: António Manoel de Vilhenan",
+  "vastaus": "António Manoel de Vilhena oli portugalilaissyntyinen suurmestari, joka johti Johanniittaritarikuntaa vuosina 1722–1736. Hän tilasi vuonna 1731 Vallettaan julkisen teatterin ja maksoi sen itse. [[Manoel-teatteri]] on nimetty hänen mukaansa, ja sitä pidetään yhtenä Euroopan vanhimmista yhä toimivista teattereista. Hänen aikanaan rakennettiin myös [[Fort Manoel]] Marsamxett-sataman saarelle, ja [[Mdinassa]] hänen nimeään kantaa Vilhenan palatsi.",
+  "linkit": [
+   "Manoel-teatteri",
+   "Fort Manoel",
+   "Mdinassa"
+  ],
+  "jatkot": [
+   "Millainen Manoel-teatteri on sisältä?",
+   "Millainen kaupunki Mdina on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ramla-bay",
+  "kasite": "Ramla Bayn",
+  "kysymys": "Kerro lisää: Ramla Bayn",
+  "vastaus": "Ramla Bay sijaitsee Gozon koillisrannikolla, [[Marsalfornin]] ja [[San Blasin]] lahtien välissä, ja lähin kylä on Xagħra. Maltaksi lahden nimi on Ir-Ramla l-Ħamra eli punainen hiekka, ja hiekka on nimensä mukaisesti punertavaa, mikä on poikkeuksellista Maltan saarilla, joilla suurin osa rannoista on vaaleaa kalkkikiveä tai kivikkoa. Lahtea reunustavat hiekkadyynit ja jyrkät kalliot. Länsilaidalla on luola, jonka perimätieto yhdistää [[Kalypson]] ja Odysseian tarinaan, vaikka yhteys on paikallista perinnettä eikä todistettu tosiasia.",
+  "linkit": [
+   "Marsalfornin",
+   "San Blasin",
+   "Kalypson"
+  ],
+  "jatkot": [
+   "Millaisia dyynejä Gozon rannoilla on?",
+   "Mihin Odysseian tapahtumat on perinteisesti sijoitettu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ramla-bay",
+  "kasite": "mineraaleja",
+  "kysymys": "Kerro lisää: mineraaleja",
+  "vastaus": "Hiekan punainen sävy tulee useimmiten rautayhdisteistä. Kun kivi rapautuu, siitä irtoaa rakeita, joiden pinnalla tai joiden seassa on rautaoksideja, kuten [[hematiittia]] ja [[götiittiä]], ja jo pieni määrä riittää värjäämään hiekan punaiseksi, oranssiksi tai ruskeaksi. Tavallinen hiekka koostuu pääosin [[kvartsista]], joka on vaaleaa tai värittömää, joten rautapitoiset rakeet erottuvat siitä selvästi. Sävyn voimakkuus riippuu siitä, kuinka paljon rautaa rakeissa on ja kuinka pitkälle ne ovat hapettuneet.",
+  "linkit": [
+   "hematiittia",
+   "götiittiä",
+   "kvartsista"
+  ],
+  "jatkot": [
+   "Miten kivi rapautuu hiekaksi?",
+   "Missä päin maailmaa on punaisia hiekkarantoja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ramla-bay",
+  "kasite": "Ċirkewwan",
+  "kysymys": "Kerro lisää: Ċirkewwan",
+  "vastaus": "Ċirkewwa on Maltan pääsaaren luoteiskärjessä, [[Mellieħan]] seudulla, ja se on tunnetuin lähtöpaikka Gozolle. Satamasta lähtevät Gozo Channelin autolautat, jotka kulkevat [[Mġarrin]] satamaan Gozolla, ja ylitys on lyhyt. Sieltä on yhteyksiä myös [[Cominon]] saarelle. Satama on saarten välisen liikenteen tärkein solmukohta, koska siinä kulkevat sekä asukkaat että matkailijat ja rahtiliikenne.",
+  "linkit": [
+   "Mellieħan",
+   "Mġarrin",
+   "Cominon"
+  ],
+  "jatkot": [
+   "Millainen saari Comino on?",
+   "Millaisia ovat Gozon ja Maltan väliset lauttayhteydet?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ramla-bay",
+  "kasite": "Mġarrin",
+  "kysymys": "Kerro lisää: Mġarrin",
+  "vastaus": "Mġarr on Gozon pääsatama saaren kaakkoisosassa, [[Għajnsielemin]] kunnan alueella. Sinne saapuvat lautat Maltan pääsaaren Ċirkewwan satamasta, ja sen kautta kulkee suurin osa Gozon henkilö- ja tavaraliikenteestä. Sataman ylle kohoaa [[Fort Chambray]], jonka johanniittaritarit rakensivat 1700-luvun puolivälissä, ja lähistöllä on kalastaja- ja huvivenesatama. Satamasta on matkaa Gozon pääkaupunkiin [[Victoriaan]] muutaman kilometrin.",
+  "linkit": [
+   "Għajnsielemin",
+   "Fort Chambray",
+   "Victoriaan"
+  ],
+  "jatkot": [
+   "Mitä Mġarrin lähellä on nähtävää?",
+   "Miten Gozolla kulkee bussilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fort-chambray",
+  "kasite": "Cittadellan",
+  "kysymys": "Kerro lisää: Cittadellan",
+  "vastaus": "Cittadella on Victorian kukkulan päällä kohoava linnoitettu vanhakaupunki, jota paikalliset kutsuvat myös nimellä Il-Kastell. Kukkula on ollut asuttu ja puolustettu jo hyvin varhain, ja linnoitus on toiminut saaren turvapaikkana, kun rannikolle on tullut vihollisia. Vuonna 1551 [[osmanien]] joukot hyökkäsivät Gozolle ja veivät suuren osan asukkaista mukanaan, minkä jälkeen saarta ryhdyttiin linnoittamaan entistä tehokkaammin. Johanniittaritarikunnan aikana Cittadellaa vahvistettiin, ja siitä oli näkymät yli koko [[Gozon]] saaren. Nykyään muurien sisällä on muun muassa katedraali ja museoita.",
+  "linkit": [
+   "osmanien",
+   "Gozon"
+  ],
+  "jatkot": [
+   "Mikä on Victorian katedraali?",
+   "Miksi Gozolle hyökättiin 1500-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fort-chambray",
+  "kasite": "Johanniittaritarikunta",
+  "kysymys": "Kerro lisää: Johanniittaritarikunta",
+  "vastaus": "Johanniittaritarikunta syntyi sairaiden hoitoon [[Jerusalemissa]] sijainneesta sairaalasta, ja siitä kehittyi myöhemmin sotilaallinen ja hengellinen ritarikunta. Ristiretkien jälkeen se siirtyi useiden vaiheiden kautta [[Rodoksen]] saarelle, jota se hallitsi noin vuodesta 1310 vuoteen 1522. Maltan ja Gozon se sai vuonna 1530 keisari Kaarle V:ltä ja piti niitä vuoteen 1798 asti, jolloin ranskalaisjoukot valtasivat saaren. Kuuluisimpia ritarikunnan saavutuksia olivat sairaanhoito ja Maltan linnoitukset, joihin [[Fort Chambray]] kuuluu. Ritarikunta on olemassa yhä, ja sen nykyinen toiminta on pääosin hyväntekeväisyyttä.",
+  "linkit": [
+   "Jerusalemissa",
+   "Rodoksen",
+   "Fort Chambray"
+  ],
+  "jatkot": [
+   "Miten ritarikunta oli järjestetty?",
+   "Mitä ritarikunnalle tapahtui Maltan jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fort-chambray",
+  "kasite": "Fort Chambrayn",
+  "kysymys": "Kerro lisää: Fort Chambrayn",
+  "vastaus": "Fort Chambray on bastionilinnoitus [[Għajnsielemin]] kunnan alueella Gozolla, ja johanniittaritarit rakensivat sen 1700-luvun puolivälissä Ras it-Tafalin niemelle Mġarrin sataman ja Xatt l-Aħmarin välille. Sen oli tarkoitus olla ydinlinnake uudelle kaupungille, joka olisi korvannut [[Cittadellan]] Gozon pääkaupunkina, mutta suunnitelma ei koskaan toteutunut kokonaan. Vuonna 1798 ranskalaismiehityksen aikana linnoitus näki taisteluita, ja myöhemmin siitä tehtiin sotilassairaala ja mielisairaala. Nykyään linnoitusta kunnostetaan ja siihen rakennetaan majoitustiloja. Nimen alkuperää en ole varma, mutta se viittaa todennäköisesti ritarikunnan ranskalaiseen jäseneen.",
+  "linkit": [
+   "Għajnsielemin",
+   "Cittadellan"
+  ],
+  "jatkot": [
+   "Miltä linnoitus näyttää ylhäältä?",
+   "Miksi uusi kaupunki jäi rakentamatta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fort-chambray",
+  "kasite": "Ranskan",
+  "kysymys": "Kerro lisää: Ranskan",
+  "vastaus": "Ranska liittyy Maltan historiaan vuonna 1798, kun [[Napoleon Bonaparte]] pysähtyi saarelle Egyptin-retkensä aikana ja otti sen haltuunsa lähes ilman taistelua. Tämä päätti johanniittaritarikunnan yli kaksisataavuotisen vallan [[Maltalla]]. Ranskalaismiehitys jäi kuitenkin lyhyeksi: maltalaiset nousivat kapinaan, ja britit auttoivat saaren saartamisessa, kunnes ranskalaisjoukot antautuivat vuonna 1800. Malta siirtyi sen jälkeen [[Britannian]] suojelukseen, ja virallisesti saaresta tuli osa Britannian valtakuntaa vuoden 1814 Pariisin rauhan myötä.",
+  "linkit": [
+   "Napoleon Bonaparte",
+   "Maltalla",
+   "Britannian"
+  ],
+  "jatkot": [
+   "Miksi Napoleon halusi Maltan?",
+   "Miten Malta itsenäistyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fort-chambray",
+  "kasite": "Jerusalemissa",
+  "kysymys": "Kerro lisää: Jerusalemissa",
+  "vastaus": "Jerusalem on kaupunki, joka on pyhä juutalaisuudelle, kristinuskolle ja islamille, ja sen historia ulottuu tuhansien vuosien taakse. Johanniittaritarikunnan alkuperä on kaupungin pyhiinvaeltajia hoitaneessa sairaalassa, jonka perustamisessa mainitaan usein [[Amalfin]] kauppiaat 1000-luvulla. Kaupunki valloitettiin [[ensimmäisellä ristiretkellä]] vuonna 1099, ja ritarikunta kasvoi sen jälkeen sotilaalliseksi järjestöksi. Vuonna 1187 kaupunki joutui jälleen muslimien haltuun, ja ritarikunta siirtyi vähitellen muualle, aikanaan [[Rodokselle]].",
+  "linkit": [
+   "Amalfin",
+   "ensimmäisellä ristiretkellä",
+   "Rodokselle"
+  ],
+  "jatkot": [
+   "Miksi ristiretket alkoivat?",
+   "Miten johanniitat päätyivät Rodokselle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fort-chambray",
+  "kasite": "Rodoksella",
+  "kysymys": "Kerro lisää: Rodoksella",
+  "vastaus": "Rodos on Egeanmeren Dodekanesian suurin saari, ja nykyään se kuuluu Kreikkaan. Johanniittaritarit hallitsivat sitä noin vuodesta 1310 vuoteen 1522 ja rakensivat kaupunkiin mahtavat muurit ja linnoitukset, joista suuri osa on yhä näkyvissä [[Rodoksen vanhassakaupungissa]]. Vuonna 1522 sulttaani [[Suleiman Suuri]] piiritti saarta ja osmanit valtasivat sen kuuden kuukauden jälkeen, ja ritarikunta joutui lähtemään vaellukselleen. Saari oli sen jälkeen osmanien hallussa, kunnes se siirtyi Italian haltuun vuonna 1912 ja lopulta Kreikalle vuonna 1947.",
+  "linkit": [
+   "Rodoksen vanhassakaupungissa",
+   "Suleiman Suuri"
+  ],
+  "jatkot": [
+   "Millaiset linnoitukset Rodoksella ovat säilyneet?",
+   "Miten ritarikunta eli Rodoksella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fort-chambray",
+  "kasite": "Maltan",
+  "kysymys": "Kerro lisää: Maltan",
+  "vastaus": "Malta on saarivaltio Välimeren keskiosassa, ja siihen kuuluvat pääsaari Malta, [[Gozo]] sekä pieni Comino. Pääkaupunki on [[Valletta]], ja virallisia kieliä ovat malta ja englanti. Maa itsenäistyi Britanniasta vuonna 1964, siitä tuli tasavalta vuonna 1974, ja Euroopan unionin jäsen se on ollut vuodesta 2004. Saaren korkein kohta on [[Ta' Dmejrek]], joka nousee 253 metriin, ja sen lähellä Dinglin kylä seisoo jyrkänteen reunalla tasangolla.",
+  "linkit": [
+   "Gozo",
+   "Valletta",
+   "Ta' Dmejrek"
+  ],
+  "jatkot": [
+   "Miten Malta liittyi Euroopan unioniin?",
+   "Mistä Dingli on saanut nimensä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fort-chambray",
+  "kasite": "tykkien",
+  "kysymys": "Kerro lisää: tykkien",
+  "vastaus": "Tykit yleistyivät Euroopan sodankäynnissä 1300-luvulta alkaen, kun [[ruuti]] tuli sotilaskäyttöön. Aluksi ne olivat kömpelöitä ja hitaita, mutta 1400-luvulla suuret piiritystykit alkoivat murtaa keskiaikaisia muureja, ja [[Konstantinopolin]] valtaus vuonna 1453 on usein mainittu esimerkki tästä. Vastaukseksi linnoitusrakentajat kehittivät matalat, paksut ja kulmikkaat bastionilinnoitukset, joissa maavalli otti vastaan ammusten voiman. Näitä kutsutaan usein [[italialaiseksi linnoitusjärjestelmäksi]], koska ne kehitettiin ensin Italiassa, ja johanniittaritarit käyttivät samaa oppia Maltalla.",
+  "linkit": [
+   "ruuti",
+   "Konstantinopolin",
+   "italialaiseksi linnoitusjärjestelmäksi"
+  ],
+  "jatkot": [
+   "Miten bastionilinnoitus voitiin vallata?",
+   "Milloin ensimmäiset tykit otettiin käyttöön Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fort-chambray",
+  "kasite": "Fort Chambray",
+  "kysymys": "Kerro lisää: Fort Chambray",
+  "vastaus": "Fort Chambray on bastionilinnoitus Gozon kaakkoisosassa, [[Għajnsielemin]] kunnan alueella. Johanniittaritarit rakensivat sen 1700-luvun puolivälissä Ras it-Tafalin niemelle, ja se sijaitsee [[Mġarrin]] sataman ja Xatt l-Aħmarin välillä. Linnoituksen oli määrä olla ydinlinnake uudelle kaupungille, joka olisi korvannut [[Cittadellan]] Gozon pääkaupunkina, mutta suunnitelma jäi kesken. Ranskalaismiehityksen aikana vuonna 1798 linnoitus näki taisteluita, ja myöhemmin siitä tehtiin sotilassairaala ja mielisairaala. Nykyään sitä kunnostetaan ja siihen rakennetaan majoitustiloja.",
+  "linkit": [
+   "Għajnsielemin",
+   "Mġarrin",
+   "Cittadellan"
+  ],
+  "jatkot": [
+   "Millainen on bastionilinnoituksen pohjapiirros?",
+   "Miten linnoitus vaikutti Mġarrin satamaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fort-chambray",
+  "kasite": "Keisari Kaarle V",
+  "kysymys": "Kerro lisää: Keisari Kaarle V",
+  "vastaus": "Kaarle V syntyi vuonna 1500 Gentissä, ja hän oli [[Habsburgien]] sukuun kuulunut hallitsija, joka peri laajoja alueita Euroopassa. Hän oli Espanjan kuningas vuodesta 1516 ja Saksalais-roomalaisen keisarikunnan keisari vuodesta 1519. Sisilian kuninkaana hän antoi vuonna 1530 johanniittaritarikunnalle Maltan, Gozon ja Tripolin ikuiseksi läänitykseksi, ja vuosimaksuksi sovittiin yksi haukka. Kaarle luopui hallitsijan viroista vuosina 1555 ja 1556 ja kuoli vuonna 1558. Hänen valtakuntansa jaettiin lopulta [[Espanjan]] ja Itävallan Habsburgien kesken.",
+  "linkit": [
+   "Habsburgien",
+   "Espanjan"
+  ],
+  "jatkot": [
+   "Miksi Kaarle V luopui vallasta?",
+   "Miksi Sisilia kuului Habsburgeille?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fort-chambray",
+  "kasite": "Suureen satamaan",
+  "kysymys": "Kerro lisää: Suureen satamaan",
+  "vastaus": "Suuri satama eli Grand Harbour on Vallettan ja sen vastarannan kaupunkien väliin jäävä syvä luonnonsatama Maltan pääsaaren itärannikolla. Johanniittaritarikunta asettui vuonna 1530 sen rannalla sijaitsevaan [[Birgun]] kaupunkiin, ja satamaa ympäröi useita linnoituksia. Vuoden 1565 [[suuren piirityksen]] jälkeen ritarikunta perusti uuden linnoitetun kaupungin, [[Vallettan]], satamaa hallitsevalle niemelle. Satama on säilynyt tärkeänä kauppa- ja laivasatamana nykypäivään asti.",
+  "linkit": [
+   "Birgun",
+   "suuren piirityksen",
+   "Vallettan"
+  ],
+  "jatkot": [
+   "Mitä tapahtui Maltan suuressa piirityksessä?",
+   "Miksi Valletta rakennettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nadur",
+  "kasite": "Nadurin",
+  "kysymys": "Kerro lisää: Nadurin",
+  "vastaus": "Nadur on Gozon toiseksi suurin kaupunki, ja se sijaitsee korkealla harjanteella [[Victorian]] itäpuolella. Nimi juontuu arabian sanasta nadara, tähystyspaikka, ja tunnuslause Valpas viittaa samaan: kaupunki on kuin vartiopaikka saaren yllä. Vaakunassa aurinko nousee sinisestä merestä. Lähellä ovat [[San Blasin]] ja [[Daħlet Qorrotin]] pienet kalliorannat, jotka ovat suosittuja uinti- ja retkeilypaikkoja. Kaupunki tunnetaan leipomoistaan, ja harjanteella on ollut maatiloja jo kauan ennen kuin alueesta tuli oma seurakuntansa.",
+  "linkit": [
+   "Victorian",
+   "San Blasin",
+   "Daħlet Qorrotin"
+  ],
+  "jatkot": [
+   "Mitä leipomot Nadurissa valmistavat?",
+   "Miten Nadurista pääsee rannoille?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nadur",
+  "kasite": "Gozon",
+  "kysymys": "Kerro lisää: Gozon",
+  "vastaus": "Gozo on Maltan saariryhmän toiseksi suurin saari, ja se sijaitsee pääsaaren luoteispuolella. Pääkaupunki on [[Victoria]], jonka kukkulalla kohoaa linnoitettu Cittadella. Xagħran tasangolla seisovat [[Ġgantijan]] temppelit, jotka pystytettiin yli 5 500 vuotta sitten, ja paikallisen tarinan mukaan ne rakensi jättiläisnainen [[Sansuna]]. Temppelit liitettiin Unescon maailmanperintöluetteloon vuonna 1980. Saaren koillisrannikolla on punahiekkainen Ramla Bay, ja [[Nadur]] on saaren toiseksi suurin kaupunki.",
+  "linkit": [
+   "Victoria",
+   "Ġgantijan",
+   "Sansuna",
+   "Nadur"
+  ],
+  "jatkot": [
+   "Miten Ġgantijan temppelit on rakennettu?",
+   "Miten Gozo eroaa Maltan pääsaaresta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nadur",
+  "kasite": "Nadur",
+  "kysymys": "Kerro lisää: Nadur",
+  "vastaus": "Nadur on Gozon toiseksi suurin kaupunki, ja sitä kutsutaan saaren toiseksi kaupungiksi. Se sijaitsee korkealla harjanteella [[Victorian]] itäpuolella, ja nimi tulee arabian sanasta nadara, tähystyspaikka. Lähellä ovat [[San Blasin]] ja Daħlet Qorrotin kalliorannat sekä punahiekkainen [[Ramla Bay]], jotka houkuttelevat uimareita ja retkeilijöitä. Nadur tunnetaan leipomoistaan, ja Gozolla leivotaan perinteisesti [[ftiraa]], hapanleipää, jonka väliin tai päälle tulee kalaa ja kasviksia. Harjanteella on ollut maatiloja jo kauan ennen kuin alueesta tuli oma seurakuntansa.",
+  "linkit": [
+   "Victorian",
+   "San Blasin",
+   "Ramla Bay",
+   "ftiraa"
+  ],
+  "jatkot": [
+   "Mitä ftira-leipään laitetaan?",
+   "Millainen on Nadurin vaakuna?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nadur",
+  "kasite": "San Blasin",
+  "kysymys": "Kerro lisää: San Blasin",
+  "vastaus": "San Blas on pieni kalliorantainen lahti Gozon pohjoisrannikolla [[Nadurin]] lähellä, ja se on suosittu uinti- ja retkeilypaikka. Ranta ei ole hiekkainen vaan kivikkoinen, minkä vuoksi se poikkeaa lähistön [[Ramla Bayn]] punertavasta hiekasta. Lahden vierellä sijaitsee myös Daħlet Qorrotin ranta. Ramla Bay on puolestaan [[Marsalfornin]] ja San Blasin lahtien välissä, joten kolme rantaa muodostavat [[Gozon]] koillisrannikon tunnetuimman rantajakson.",
+  "linkit": [
+   "Nadurin",
+   "Ramla Bayn",
+   "Marsalfornin",
+   "Gozon"
+  ],
+  "jatkot": [
+   "Millainen on Daħlet Qorrotin ranta?",
+   "Mitä Marsalforn on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nadur",
+  "kasite": "Maltan",
+  "kysymys": "Kerro lisää: Maltan",
+  "vastaus": "Malta on saarivaltio Välimerellä, ja sen pääkaupunki on [[Valletta]]. Maltan kieli kuuluu seemiläisiin kieliin ja polveutuu arabiasta, mutta se kirjoitetaan latinalaisin aakkosin, joihin on lisätty merkkejä kuten ċ, ġ, ħ ja ż. Siinä on paljon lainasanoja italiasta ja englannista, ja englanti on maan toinen virallinen kieli. Maltan länsirannikolla [[Dinglin]] kylä seisoo noin 230 metrin korkeudessa tasangolla, jonka vieressä jyrkänne pudottaa maiseman mereen, ja merellä näkyy pieni asumaton [[Filfla]]. Maan korkein kohta, Ta' Dmejrek, on 253 metriä.",
+  "linkit": [
+   "Valletta",
+   "Dinglin",
+   "Filfla"
+  ],
+  "jatkot": [
+   "Mistä Filfla-saari on saanut nimensä?",
+   "Miten maltan kieli on kehittynyt?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nadur",
+  "kasite": "Cittadella",
+  "kysymys": "Kerro lisää: Cittadella",
+  "vastaus": "Cittadella on linnoitettu vanhakaupunki Victorian kukkulalla, ja se on Gozon pääkaupungin sydän. Muurien sisälle on perinteisesti paettu vaaran uhatessa, sillä rannikko oli pitkään avoin merirosvoille ja hyökkääjille. Kukkulalta avautuvat näkymät yli [[Gozon]], ja kirkkaalla säällä Maltan pääsaari erottuu horisontissa. [[Victorian]] vanha keskusta levittäytyy linnoituksen juurelle, ja idässä harjanteella sijaitsee [[Nadur]]. Muurien sisällä on nykyään muun muassa katedraali ja museoita.",
+  "linkit": [
+   "Gozon",
+   "Victorian",
+   "Nadur"
+  ],
+  "jatkot": [
+   "Mitä museoita Cittadellassa on?",
+   "Miksi Victoriaa kutsutaan myös nimellä Rabat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nadur",
+  "kasite": "Gozolla",
+  "kysymys": "Kerro lisää: Gozolla",
+  "vastaus": "Gozo on Maltan saariryhmän toiseksi suurin saari, ja sinne pääsee lautalla [[Mġarrin]] satamaan. Saaren ruokakulttuuri on vahvasti leipäpainotteista, ja ftira on sen tunnetuimpia ruokia: Gozolla se tarjoillaan lähes pizzan tapaan avoimena, ohuiden perunaviipaleiden peittämänä, tai kaksinkerroin taitettuna calzonen tavoin. Ftiran leipomisen uskotaan ulottuvan 1500-luvulle, ja maltalaisen litteän hapanleivän valmistuksen taito lisättiin Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2020. Saaren muinaismuistoihin kuuluvat [[Ġgantijan]] temppelit, ja pääkaupunki on [[Victoria]].",
+  "linkit": [
+   "Mġarrin",
+   "Ġgantijan",
+   "Victoria"
+  ],
+  "jatkot": [
+   "Miksi ftira lisättiin Unescon luetteloon?",
+   "Mitä Gozolla kannattaa katsoa?"
+  ]
  }
 ]
