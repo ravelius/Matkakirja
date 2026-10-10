@@ -98,6 +98,16 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
 - PT:n jatkohuomiot: 1) Kunniagalleria tumma → LS1 varmistaa teokset ~150 lx puhelimella (lisää atlakseen täyttöä tarvittaessa);
   2) v2: Veistosaulaan ja Leidenin siipeen listat, ovenpielet ja tunnistettava yksityiskohta, kun patsasmallit tulevat.
 
+## PEKING (PT 10.2x, sitova) — tila 10.3x
+- MUOTO: koko alue omina Blender-malleina GLB-laattoina kuten ND/KL (ei dioraama, ei Cesium-laattoja); ENU-origo Karttasepän paketista
+  (Taihedian 39.915896, 116.390814). Kielletty kaupunki tarkkana (toistuvat osat yksi mesh per tyyppi, jaettu materiaali), hutongit kevyinä
+  massoina + yhteinen julkisivu-/kattoatlas. Karttaseppä tekee LS2:lle maan pohjakuvan, veden, kadut ja yövalot samaan origoon.
+- RAJAUS: x −1 100…+1 100, y −1 750…+1 250 m Taihedianista (Beihai, Jingshan, KK, aukio mausoleumiin; Qianmen pois).
+- MAON MUOTOKUVA: EI eikä tyhjää kehystä (elävän taiteilijan teos, ei poliittista kannanottoa); iskulausetaulut ilman tekstiä tai pois.
+- Pohjatyö proto-3d/_tyo/linnanrakentaja/peking/: lahde/luokittele.py (15 503 → luokat, data/peking-luokat.json, esikatselu/luokat.png),
+  monumentit.py (17 maamerkkiä käsin, mitat A → Sisältökirjuri tarkistaa: _tyo/sisaltokirjuri/peking-mitat-20261010/), pihatalot.py
+  (硬山-siivet, 四合院-pihat isoista pohjista, ~73 kolmiota/talo), esik_pihat.py (EEVEE-koekuva). Seuraavaksi KK-hallit kk_halli-pohjalta + laatoitus.
+
 ## SEURAAVAN SESSION JÄRJESTYS (nollaus 10.1x)
 1) **PEKING** (omistaja 09.3x: koekaupunki ~2 × 2 km: Kielletty kaupunki, Jingshan, Beihai, Tian'anmen, hutongit; poikkeus ei avaa muuta
    Euroopan ulkopuolista). Lue `proto-3d/_tyo/karttaseppa/peking-20261010/lr/LUEMINUT.md`. Mallinnuspohja peking-kielletty-kaupunki-enu.json
