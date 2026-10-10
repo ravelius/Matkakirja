@@ -155,6 +155,43 @@ namespace Matkakirja.Linssit.Testit
             }
         }
 
+        /// <summary>Kiinnijäänti JOKA reittipisteessä 22…91 (Siirtoseppä 10.10., PT erä 1; yllä viisi kohtaa koko loppureitillä): LR:n paketti
+        /// ei voi rikkoa yhtäkään kohtaa huomaamatta. Tarkistuspisteestä ajetaan kiinnijäännin kohdan ohi, kunnes kukaan ei ole enää valpas
+        /// (sen jälkeen tilanne on sama kuin ilman kiinnijääntiä), ilman uutta kiinnijääntiä; tarkistuspiste enintään PaluuMax pistettä taaempana
+        /// ja menetetty aika ≤ LisaMaxS (malli 4.3: kiinnijäänti lisää 1–1,5 min tyrmän kanssa). v47a: pahin 99 s (kiinni 68: valppaus 60 s
+        /// pisteen 67 torkkujan vieressä), pisin paluu 19 (huone 6: kaari-ovi 22 ja voudin sali 46). Harjalla (89–91) ei ole omaa tarkistuspistettä:
+        /// paluu muurikäytävän pisteeseen 85 (menetys ~17 s).</summary>
+        public const double LisaMaxS = 120; public const int PaluuMax = 20;
+        [Testi] static void KiinniJokaPisteessa()
+        {
+            var koko = Koko(); Oleta.Tosi(koko.Loppu != null, "koko M-reitti läpi");
+            double pahin = 0; int pahinK = 0, pisinPaluu = 0;
+            for (int k = MAlku + 1; k < KiipeilyAlku; k++)
+            {
+                var tila = Tila(k); var koe = tila.Kopioi(); double t0 = koe.T;
+                koe.Kiinnijaanti(); int takaisin = koe.Seuraava;
+                // Osissa (3 pistettä kerrallaan) kunnes valppaus on ohi; jos osa jumittaa, koko loppureitti kerralla (ajurin paluuhaku osarajan yli).
+                var w = koe; int loppu = k + 1; bool jumi = false;
+                while (true)
+                {
+                    var osa = ThiefAjuri.Aja(w, w.Seuraava, loppu, budjetti: 600);
+                    if (osa.Loppu == null) { var t = ThiefAjuri.Aja(koe, koe.Seuraava, KiipeilyAlku, budjetti: 600); w = t.Loppu; loppu = KiipeilyAlku; jumi = w == null; if (jumi) { Console.WriteLine($"      kiinni {k + 1}: jumissa pisteessä {t.Pisin + 1}:"); ThiefAjuri.Tulosta(t.PisinTila); } break; }
+                    w = osa.Loppu; bool valpas = false;
+                    foreach (var h in w.Hahmot) if (h.Aktiivinen && h.Aivot.Valppaus > 0) valpas = true;
+                    if (!valpas || loppu >= KiipeilyAlku) break;
+                    loppu = Math.Min(loppu + 3, KiipeilyAlku);
+                }
+                Oleta.Tosi(!jumi && w.Kiinni == 1, $"kiinni {k + 1}: tarkistuspisteestä {takaisin + 1} pisteeseen {loppu + 1} ilman uutta kiinnijääntiä");
+                if (jumi) continue;
+                double lisa = (w.T - t0) - (Tila(loppu).T - tila.T);
+                if (lisa > pahin) { pahin = lisa; pahinK = k; }
+                pisinPaluu = Math.Max(pisinPaluu, k - takaisin);
+                Oleta.Tosi(k - takaisin <= PaluuMax, $"kiinni {k + 1}: tarkistus {takaisin + 1} enintään {PaluuMax} pistettä taaempana ({k - takaisin})");
+                Oleta.Tosi(lisa <= LisaMaxS, $"kiinni {k + 1}: menetetty aika {lisa:F0} s ≤ {LisaMaxS:F0} s");
+            }
+            Console.WriteLine($"      {KiipeilyAlku - MAlku - 1} kohtaa: pahin menetys {pahin:F0} s (kiinni {pahinK + 1}), pisin paluu {pisinPaluu} pistettä");
+        }
+
         /// <summary>Piiloon meno tekee tarkistuspisteen (SeikkailuVartijat, Siirtoseppä juna 167): muuriportailla (69, tarkistus vielä
         /// Tott-kammiossa 66) ampuma-aukkokomeroon samassa osassa kukaan ei epäile → tarkistuspiste komeroon, kiinni → komeroon.</summary>
         [Testi] static void PiiloonMenoTekeeTarkistuspisteen()
