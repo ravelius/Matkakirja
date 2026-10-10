@@ -50,7 +50,9 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static string HistoriaOtsikko;
         public const float HistoriaNakyyS = 3f;
-        const float KorostusKoko = 44f;   // KierrosTaulun kohdeotsikon koko (nimi 44 pt)
+        /// <summary>Korostetun nimen enimmäiskoko. Omistaja TF 180 (11.10. 00.0x): "Metro linjan nimikyltti on suurena liian iso mutta
+        /// kyltti saisi pysyä koko ajan esillä" → 44 pt → Arkki (26 pt), ja korostus pysyy koko kohteen ajan kuten selite.</summary>
+        const float KorostusKoko = Tyylikirja.Koko.Arkki;
         const float KorostusVaihto = 0.6f;
         float korostusTaso;
         /// <summary>
@@ -288,8 +290,9 @@ namespace Matkakirja.Natiivi
             if (nytTaso.Length != n) { nytTaso = new float[n]; alkuTaso = new float[n]; for (int k = 0; k < n; k++) nytTaso[k] = alkuTaso[k] = Taso(k, kohde); }
             float t = Mathf.Clamp01((Time.unscaledTime - vaihtoAlku) / Vaihto);
             float e = t * t * (3f - 2f * t);
-            // Korostus (kohdeotsikko metrolinjassa): taso 0 → 1 pehmeästi; nimi ja selite samassa tahdissa.
-            bool korostus = Korostus && kohde >= 0 && kohde < n;
+            // Korostus (kohdeotsikko metrolinjassa): taso 0 → 1 pehmeästi; nimi ja selite samassa tahdissa. Nimi pysyy korostettuna
+            // saapumisesta lähtöön (kohde == naytettyIndeksi; lähdössä kohde siirtyy seuraavaan), ei vain KierrosTaulun ~3 s:n ajan.
+            bool korostus = (Korostus || kohde == naytettyIndeksi) && kohde >= 0 && kohde < n;
             korostusTaso = Mathf.MoveTowards(korostusTaso, korostus ? 1f : 0f, Time.unscaledDeltaTime / KorostusVaihto);
             float kt = korostusTaso * korostusTaso * (3f - 2f * korostusTaso);
             if (kohde >= 0 && kohde < n && kt > 0f) (korostusKoko, korostusRivit) = SovitaKorostus(asemat[kohde].Nimi, asemat[kohde].Rivi);
