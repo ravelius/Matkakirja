@@ -125,7 +125,7 @@ Mitä saarelle tapahtui purkauksen jälkeen?
 
 ### 9.3
 KYSYMYS: Mikä Eldfell on?
-Just niin, tän minä tiedän. Eldfell on tulivuori [[Heimaeyn]] saarella, ja sen nimi tarkoittaa suunnilleen tulivuorta. Tammikuussa 1973 sen [[laavavirta]] tuhosi puolet kaupungista ja uhkasi sulkea sataman. Purkaus alkoi 23. tammikuuta kello yksi yöllä, ja kaupungin päälle satoi puoli miljoonaa kuutiometriä tuhkaa. Saaren viisituhatta asukasta evakuoitiin saman yön aikana.
+Just niin, tän minä tiedän. Eldfell on tulivuori [[Heimaeyn]] saarella, ja sen nimi tarkoittaa suunnilleen tulivuorta. Tammikuussa 1973 sen [[laavavirta]] tuhosi noin kolmanneksen rakennuksista (noin 400 taloa) ja uhkasi sulkea sataman. Purkaus alkoi 23. tammikuuta noin kello 1.55 yöllä. Saaren yli viisituhatta asukasta evakuoitiin saman yön aikana.
 JATKOT:
 Miten Heimaeyn satama pelastettiin?
 Kuinka monta ihmistä saarella asuu nykyään?
@@ -153,7 +153,7 @@ Kuinka korkea Látrabjarg on?
 
 ### 10.2
 KYSYMYS: Mikä on Islannin läntisin kohta?
-Selvä juttu. Se tulee heti. Islannin läntisin kohta on [[Látrabjarg]], niemeke [[Länsivuonoilla]]. Jyrkänne on neljätoista kilometriä pitkä ja korkeimmillaan 440 metriä, ja sitä pidetään Euroopan suurimpana lintujyrkänteenä. Pidemmälle länteen ei Islannissa pääse, ei edes kyyhky.
+Selvä juttu. Se tulee heti. Islannin läntisin kohta on [[Látrabjarg]], niemeke [[Länsivuonoilla]]. Jyrkänne on neljätoista kilometriä pitkä ja korkeimmillaan 440 metriä, ja sitä pidetään yhtenä Euroopan suurimmista lintujyrkänteistä. Pidemmälle länteen ei Islannissa pääse, ei edes kyyhky.
 JATKOT:
 Mitä lintuja Látrabjargilla pesii?
 Mikä on lintujyrkänne?
@@ -177,7 +177,7 @@ Miksi Látrabjarg on lajille tärkeä?
 
 ### 10.5
 KYSYMYS: Mitä lintujyrkänne tarkoittaa?
-No niin, tämä on helppo. Lintujyrkänne on jyrkkä merenrantakallio, jonka kielekkeillä ja koloissa merilinnut pesivät suurina yhdyskuntina. [[Látrabjarg]] on neljätoista kilometriä pitkä ja korkeimmillaan 440 metriä, ja sitä pidetään Euroopan suurimpana lintujyrkänteenä. Siellä pesii miljoonia lintuja, kuten [[lunneja]] ja [[suulia]]. Kyyhky pitää tällaisista, sillä kallio on melkein kuin kerrostalo.
+No niin, tämä on helppo. Lintujyrkänne on jyrkkä merenrantakallio, jonka kielekkeillä ja koloissa merilinnut pesivät suurina yhdyskuntina. [[Látrabjarg]] on neljätoista kilometriä pitkä ja korkeimmillaan 440 metriä, ja sitä pidetään yhtenä Euroopan suurimmista lintujyrkänteistä. Siellä pesii miljoonia lintuja, kuten [[lunneja]] ja [[suulia]]. Kyyhky pitää tällaisista, sillä kallio on melkein kuin kerrostalo.
 JATKOT:
 Miksi linnut pesivät jyrkänteillä?
 Mitkä linnut pesivät Látrabjargilla?

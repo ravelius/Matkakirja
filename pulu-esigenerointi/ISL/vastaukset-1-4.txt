@@ -7,7 +7,7 @@ Millaisia lintuja Grímseyllä voi nähdä?
 
 ### 16.2
 KYSYMYS: Kuinka moni saarella asuu?
-Joo, tän minä tiedän. [[Grímseyllä]] asui vuonna 2021 viisikymmentäseitsemän ihmistä. Saaren ainoa kylä on [[Sandvík]], ja se on Islannin pohjoisin asuttu paikka. Luku vaihtelee vuosittain, eikä minulla ole tuoreempaa tietoa kuin tämä vuoden 2021 lukema. Pienessä kylässä kaikki tuntevat kyyhkynkin.
+Joo, tän minä tiedän. [[Grímseyllä]] asui vuoden 2026 alussa 47 ihmistä. Saaren ainoa kylä on [[Sandvík]], ja se on Islannin pohjoisin asuttu paikka. Luku vaihtelee vuosittain, Pienessä kylässä kaikki tuntevat kyyhkynkin.
 JATKOT:
 Miten Grímseylle pääsee Islannin mantereelta?
 Miten ihmiset elävät pienellä pohjoisella saarella?
@@ -156,7 +156,7 @@ Mitä Länsivuonoilla voi nähdä?
 
 ### 20.2
 KYSYMYS: Minne noitavainoissa tuomittuja karkotettiin Länsivuonoilla?
-Mmm— tuo on raskas aihe. Tuomittuja karkotettiin [[Ísafjörðurin]] lähellä sijaitsevalle [[Hornstrandirin]] niemimaalle. Noitavainoja käytiin Länsivuonoilla 1500- ja 1600-luvuilla, ja ne kuuluivat laajempaan eurooppalaiseen ilmiöön, jossa ihmisiä syytettiin taikuudesta. Tapahtumista on yli kolmesataa vuotta, ja nykyisin Hornstrandir on luonnonsuojelualue, jossa ei juuri asu ihmisiä. Onneksi ajat ovat muuttuneet.
+Mmm— tuo on raskas aihe. Tuomitut poltettiin roviolla, ja syytöksiin liittyi usein taikamerkkejä, [[galdrastafir]]. [[Ísafjörðurin]] seudulla Länsivuonoilla noitavainoja käytiin 1500- ja 1600-luvuilla, ja ne kuuluivat laajempaan eurooppalaiseen ilmiöön, jossa ihmisiä syytettiin taikuudesta. Tapahtumista on yli kolmesataa vuotta, ja nykyisin tällaisia syytteitä ei enää nosteta. Onneksi ajat ovat muuttuneet.
 JATKOT:
 Mikä Hornstrandir on nykyisin?
 Mitä eurooppalaiset noitavainot olivat?
@@ -179,7 +179,7 @@ Miksi Länsivuonot ovat harvaan asuttuja?
 
 ### 20.5
 KYSYMYS: Millaiset noitavainot Islannissa olivat?
-Tuo on vakava aihe. Islannissa noitavainoja käytiin pääosin 1600-luvulla, ja ne olivat osa laajempaa eurooppalaista ilmiötä. Lähteiden mukaan tuomitut olivat Islannissa useammin miehiä kuin naisia, toisin kuin monessa muussa Euroopan maassa, ja syytökset liittyivät usein taikamerkkeihin, niin sanottuihin [[galdrastafir]]-merkkeihin. Länsivuonoilla noitavainoja käytiin erityisen näkyvästi, ja tuomittuja karkotettiin myös [[Hornstrandirin]] niemimaalle. Tapahtumista on yli kolmesataa vuotta, ja nykyisin tällaisia syytteitä ei enää nosteta. Se on pitkä ja hiljainen aika takana.
+Tuo on vakava aihe. Islannissa noitavainoja käytiin pääosin 1600-luvulla, ja ne olivat osa laajempaa eurooppalaista ilmiötä. Lähteiden mukaan tuomitut olivat Islannissa useammin miehiä kuin naisia, toisin kuin monessa muussa Euroopan maassa, ja syytökset liittyivät usein taikamerkkeihin, niin sanottuihin [[galdrastafir]]-merkkeihin. Länsivuonoilla [[Ísafjörðurin]] seudulla noitavainoja käytiin erityisen näkyvästi, ja tuomitut poltettiin roviolla. Tapahtumista on yli kolmesataa vuotta, ja nykyisin tällaisia syytteitä ei enää nosteta. Se on pitkä ja hiljainen aika takana.
 JATKOT:
 Millainen paikka Hornstrandir on?
 Miksi noitavainot alkoivat Euroopassa?

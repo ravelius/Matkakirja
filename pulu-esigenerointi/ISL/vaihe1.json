@@ -607,7 +607,7 @@
   "kohde": "kohde:heimaey",
   "kysymys": "Mikä Eldfell on?",
   "uusi": true,
-  "vastaus": "Just niin, tän minä tiedän. Eldfell on tulivuori [[Heimaeyn]] saarella, ja sen nimi tarkoittaa suunnilleen tulivuorta. Tammikuussa 1973 sen [[laavavirta]] tuhosi puolet kaupungista ja uhkasi sulkea sataman. Purkaus alkoi 23. tammikuuta kello yksi yöllä, ja kaupungin päälle satoi puoli miljoonaa kuutiometriä tuhkaa. Saaren viisituhatta asukasta evakuoitiin saman yön aikana.",
+  "vastaus": "Just niin, tän minä tiedän. Eldfell on tulivuori [[Heimaeyn]] saarella, ja sen nimi tarkoittaa suunnilleen tulivuorta. Tammikuussa 1973 sen [[laavavirta]] tuhosi noin kolmanneksen rakennuksista (noin 400 taloa) ja uhkasi sulkea sataman. Purkaus alkoi 23. tammikuuta noin kello 1.55 yöllä. Saaren yli viisituhatta asukasta evakuoitiin saman yön aikana.",
   "linkit": [
    "Heimaeyn",
    "laavavirta"
@@ -664,7 +664,7 @@
   "kohde": "kohde:latrabjarg",
   "kysymys": "Mikä on Islannin läntisin kohta?",
   "uusi": false,
-  "vastaus": "Selvä juttu. Se tulee heti. Islannin läntisin kohta on [[Látrabjarg]], niemeke [[Länsivuonoilla]]. Jyrkänne on neljätoista kilometriä pitkä ja korkeimmillaan 440 metriä, ja sitä pidetään Euroopan suurimpana lintujyrkänteenä. Pidemmälle länteen ei Islannissa pääse, ei edes kyyhky.",
+  "vastaus": "Selvä juttu. Se tulee heti. Islannin läntisin kohta on [[Látrabjarg]], niemeke [[Länsivuonoilla]]. Jyrkänne on neljätoista kilometriä pitkä ja korkeimmillaan 440 metriä, ja sitä pidetään yhtenä Euroopan suurimmista lintujyrkänteistä. Pidemmälle länteen ei Islannissa pääse, ei edes kyyhky.",
   "linkit": [
    "Látrabjarg",
    "Länsivuonoilla"
@@ -713,7 +713,7 @@
   "kohde": "kohde:latrabjarg",
   "kysymys": "Mitä lintujyrkänne tarkoittaa?",
   "uusi": true,
-  "vastaus": "No niin, tämä on helppo. Lintujyrkänne on jyrkkä merenrantakallio, jonka kielekkeillä ja koloissa merilinnut pesivät suurina yhdyskuntina. [[Látrabjarg]] on neljätoista kilometriä pitkä ja korkeimmillaan 440 metriä, ja sitä pidetään Euroopan suurimpana lintujyrkänteenä. Siellä pesii miljoonia lintuja, kuten [[lunneja]] ja [[suulia]]. Kyyhky pitää tällaisista, sillä kallio on melkein kuin kerrostalo.",
+  "vastaus": "No niin, tämä on helppo. Lintujyrkänne on jyrkkä merenrantakallio, jonka kielekkeillä ja koloissa merilinnut pesivät suurina yhdyskuntina. [[Látrabjarg]] on neljätoista kilometriä pitkä ja korkeimmillaan 440 metriä, ja sitä pidetään yhtenä Euroopan suurimmista lintujyrkänteistä. Siellä pesii miljoonia lintuja, kuten [[lunneja]] ja [[suulia]]. Kyyhky pitää tällaisista, sillä kallio on melkein kuin kerrostalo.",
   "linkit": [
    "Látrabjarg",
    "lunneja",
@@ -1029,7 +1029,7 @@
   "kohde": "kohde:vatnajokull",
   "kysymys": "Mikä jäätikkötulva on?",
   "uusi": false,
-  "vastaus": "Hetkinen. Jäätikkötulva, islanniksi [[jökulhlaup]], on äkillinen tulva, jossa jäätikön alle tai sisään kertynyt vesi purkautuu ulos. [[Vatnajökullilla]] se syntyy näin: jään alla purkautuvat tulivuoret sulattavat jäähän vesitaskuja, jotka lopulta murtavat heikentyneen jään ja syöksyvät ulos. Vuoden 1934 tulvassa vettä purkautui 15 kuutiokilometriä muutamassa päivässä.\n\nSellaisen vesimassan edessä pieni kyyhky pysyy mieluiten korkealla. Siellä on turvallista, ja sieltä näkee hyvin.",
+  "vastaus": "Hetkinen. Jäätikkötulva, islanniksi [[jökulhlaup]], on äkillinen tulva, jossa jäätikön alle tai sisään kertynyt vesi purkautuu ulos. [[Vatnajökullilla]] se syntyy näin: jään alla purkautuvat tulivuoret sulattavat jäähän vesitaskuja, jotka lopulta murtavat heikentyneen jään ja syöksyvät ulos. Vuoden 1934 tulvassa vettä purkautui noin 4,5 kuutiokilometriä (vanhemmat arviot 7–10 kuutiokilometriä) muutamassa päivässä.\n\nSellaisen vesimassan edessä pieni kyyhky pysyy mieluiten korkealla. Siellä on turvallista, ja sieltä näkee hyvin.",
   "linkit": [
    "jökulhlaup",
    "Vatnajökullilla"
@@ -1100,7 +1100,7 @@
   "kohde": "kohde:grimsey",
   "kysymys": "Kuinka moni saarella asuu?",
   "uusi": false,
-  "vastaus": "Joo, tän minä tiedän. [[Grímseyllä]] asui vuonna 2021 viisikymmentäseitsemän ihmistä. Saaren ainoa kylä on [[Sandvík]], ja se on Islannin pohjoisin asuttu paikka. Luku vaihtelee vuosittain, eikä minulla ole tuoreempaa tietoa kuin tämä vuoden 2021 lukema. Pienessä kylässä kaikki tuntevat kyyhkynkin.",
+  "vastaus": "Joo, tän minä tiedän. [[Grímseyllä]] asui vuoden 2026 alussa 47 ihmistä. Saaren ainoa kylä on [[Sandvík]], ja se on Islannin pohjoisin asuttu paikka. Luku vaihtelee vuosittain, Pienessä kylässä kaikki tuntevat kyyhkynkin.",
   "linkit": [
    "Grímseyllä",
    "Sandvík"
@@ -1391,10 +1391,10 @@
   "kohde": "kohde:hahmotelma-isafjordur",
   "kysymys": "Minne noitavainoissa tuomittuja karkotettiin Länsivuonoilla?",
   "uusi": false,
-  "vastaus": "Mmm— tuo on raskas aihe. Tuomittuja karkotettiin [[Ísafjörðurin]] lähellä sijaitsevalle [[Hornstrandirin]] niemimaalle. Noitavainoja käytiin Länsivuonoilla 1500- ja 1600-luvuilla, ja ne kuuluivat laajempaan eurooppalaiseen ilmiöön, jossa ihmisiä syytettiin taikuudesta. Tapahtumista on yli kolmesataa vuotta, ja nykyisin Hornstrandir on luonnonsuojelualue, jossa ei juuri asu ihmisiä. Onneksi ajat ovat muuttuneet.",
+  "vastaus": "Mmm— tuo on raskas aihe. Tuomitut poltettiin roviolla, ja syytöksiin liittyi usein taikamerkkejä, [[galdrastafir]]. [[Ísafjörðurin]] seudulla Länsivuonoilla noitavainoja käytiin 1500- ja 1600-luvuilla, ja ne kuuluivat laajempaan eurooppalaiseen ilmiöön, jossa ihmisiä syytettiin taikuudesta. Tapahtumista on yli kolmesataa vuotta, ja nykyisin tällaisia syytteitä ei enää nosteta. Onneksi ajat ovat muuttuneet.",
   "linkit": [
-   "Ísafjörðurin",
-   "Hornstrandirin"
+   "galdrastafir",
+   "Ísafjörðurin"
   ],
   "jatkot": [
    "Mikä Hornstrandir on nykyisin?",
@@ -1433,10 +1433,10 @@
   "kohde": "kohde:hahmotelma-isafjordur",
   "kysymys": "Millaiset noitavainot Islannissa olivat?",
   "uusi": true,
-  "vastaus": "Tuo on vakava aihe. Islannissa noitavainoja käytiin pääosin 1600-luvulla, ja ne olivat osa laajempaa eurooppalaista ilmiötä. Lähteiden mukaan tuomitut olivat Islannissa useammin miehiä kuin naisia, toisin kuin monessa muussa Euroopan maassa, ja syytökset liittyivät usein taikamerkkeihin, niin sanottuihin [[galdrastafir]]-merkkeihin. Länsivuonoilla noitavainoja käytiin erityisen näkyvästi, ja tuomittuja karkotettiin myös [[Hornstrandirin]] niemimaalle. Tapahtumista on yli kolmesataa vuotta, ja nykyisin tällaisia syytteitä ei enää nosteta. Se on pitkä ja hiljainen aika takana.",
+  "vastaus": "Tuo on vakava aihe. Islannissa noitavainoja käytiin pääosin 1600-luvulla, ja ne olivat osa laajempaa eurooppalaista ilmiötä. Lähteiden mukaan tuomitut olivat Islannissa useammin miehiä kuin naisia, toisin kuin monessa muussa Euroopan maassa, ja syytökset liittyivät usein taikamerkkeihin, niin sanottuihin [[galdrastafir]]-merkkeihin. Länsivuonoilla [[Ísafjörðurin]] seudulla noitavainoja käytiin erityisen näkyvästi, ja tuomitut poltettiin roviolla. Tapahtumista on yli kolmesataa vuotta, ja nykyisin tällaisia syytteitä ei enää nosteta. Se on pitkä ja hiljainen aika takana.",
   "linkit": [
    "galdrastafir",
-   "Hornstrandirin"
+   "Ísafjörðurin"
   ],
   "jatkot": [
    "Millainen paikka Hornstrandir on?",
@@ -1955,7 +1955,7 @@
   "kohde": "kohde:hahmotelma-flateyjarbok",
   "kysymys": "Mitkä saagat säilyivät islanninkielisinä ainoastaan Flateyjarbókissa?",
   "uusi": false,
-  "vastaus": "Hetkinen ny. Tämä on kirjallisuutta. Flateyjarbók sisältää [[Orkneyinga-saagan]] ja [[Färsaarelaisten saagan]], joiden ainoat säilyneet islanninkieliset versiot ovat tässä käsikirjoituksessa. Teos on pääosin [[Norjan kuninkaiden saagoja]] sisältävä kokoelma, ja kaksi pappia kirjoitti ja kuvitti sen vuosina 1387-1394. Nimet on aika kielitaitokoe, mutta selvisin.",
+  "vastaus": "Hetkinen ny. Tämä on kirjallisuutta. Flateyjarbók sisältää [[Orkneyinga-saagan]] ja [[Färsaarelaisten saagan]], ja Orkneyinga-saaga on säilynyt täydellisenä vain tässä käsikirjoituksessa. Teos on pääosin [[Norjan kuninkaiden saagoja]] sisältävä kokoelma, ja kaksi pappia kirjoitti ja kuvitti sen vuosina 1387-1394. Nimet on aika kielitaitokoe, mutta selvisin.",
   "linkit": [
    "Orkneyinga-saagan",
    "Färsaarelaisten saagan",
