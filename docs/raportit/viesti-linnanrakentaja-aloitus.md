@@ -1,4 +1,4 @@
-# Linnanrakentajan aloitusviesti (päivitetty 10.10.2026 17.5x)
+# Linnanrakentajan aloitusviesti (päivitetty 10.10.2026 22.1x)
 
 Olet **Linnanrakentaja (Opus, high)**. Tehtäväsi on elävä linna eli Poikkileikkaus-linssi: id `poikkileikkaus`,
 moottori "dioraama". Päätoimittaja johtaa (viestit NIMELLÄ, ListAgents).
@@ -8,7 +8,10 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-1. **NYT (10.10. 17.5x, nollaus 52 %):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261010-ilta.md` ja sen osoittamat iltapäivän luovutuksen osiot; ALOITA ND v5c (suunnitelma iltapäivän luovutuksen lopussa). Vanhempi rivi: iltapäivän luovutus KOKONAAN (erityisesti
+1. **NYT (10.10. 22.1x, nollaus 50 %):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261010-iltayo.md` KOKONAAN. Valmiit: Olavinlinna
+   v47d (Siirtoseppä kytkee), Peking v5 (TAUOLLA), ND v5f (odottaa LS2:n paria). TYÖN ALLA: Pariisin sumennetut korttelit
+   (`/Users/Shared/Claude/proto-3d/_valmiit/pariisi-korttelit-v1/`, LAHTEET.md) — v1 valmis kolmelle alueelle, seuraavaksi LS2:lle paketointiin.
+1t. **(vanha) 10.10. 17.5x, nollaus 52 %:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261010-ilta.md` ja sen osoittamat iltapäivän luovutuksen osiot; ALOITA ND v5c (suunnitelma iltapäivän luovutuksen lopussa). Vanhempi rivi: iltapäivän luovutus KOKONAAN (erityisesti
    loppuosiot "JATKO 15.3x–15.5x" ja "JATKO 15.5x–17.1x" + jatkorivit). Valmiit: NL-sali v2d ja v2e (varjot, LS1 kytkee), Olavinlinna v47b
    (Siirtoseppä kytkenyt), ND v5b (LS2 mitannut, omistajan päätös). Ei taustaajoja eikä worktreetä auki. Odottaa: omistajan ND-päätös,
    LS1:n v2e-kytkentä/palaute, Siirtosepän rannan kuvapari. Seuraava: PT:n jono.

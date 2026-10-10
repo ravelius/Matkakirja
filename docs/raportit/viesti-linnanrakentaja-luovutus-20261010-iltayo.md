@@ -1,4 +1,4 @@
-# Linnanrakentajan luovutus 10.10.2026 iltayö (21.5x)
+# Linnanrakentajan luovutus 10.10.2026 iltayö (21.5x, täydennetty 22.1x nollauksessa 50 %)
 
 Edellinen: `viesti-linnanrakentaja-luovutus-20261010-myohailta.md`. Haara `linnanrakentaja-tyo-20260929`. Ei taustaajoja, ei worktreetä.
 Python-kuvatyökalut: `/Users/Shared/Claude/proto-3d/_tyo/venv-rembg/bin/python -I`.
@@ -19,8 +19,17 @@ Python-kuvatyökalut: `/Users/Shared/Claude/proto-3d/_tyo/venv-rembg/bin/python 
   PT katsoo erityisesti, erottuuko tummennettu parvis saumana ympäröivästä maasta.
 - **Louvre/prefektuuri**: ei uudelleenajoa (prefektuurin korjattu atlas identtinen, Louvrella ei projisoi-ajoa). PT kuittasi.
 
+## PARIISIN SUMENNETUT KORTTELIT (PT 22.0x, aloitettu 21.6x) — v1 VALMIS, EI VIELÄ LS2:LLE
+- Kansio `/Users/Shared/Claude/proto-3d/_valmiit/pariisi-korttelit-v1/` (LAHTEET.md: menetelmä, lähteet, koot). Aineisto Karttaseppä
+  `/Users/Shared/Claude/proto-3d/_tyo/karttaseppa/sumennukset-pariisi-20261010/` (LUEMINUT.md).
+- Alueet: palais-bourbon, banque-de-france, quai-branly (Élysée pois: sumennusta ei varmistettu pelissä). glb/<alue>_lod{0,1,2}.glb,
+  `<alue>-leikkaus_latlon.json` (useita renkaita), extras origo_latlon / origo_ellipsoidi_m / leikkaus_latlon.
+- Ajo: `venv-rembg/bin/python -I lahde/valinta.py <alue>` → `lahde/pinnat.py <alueet>` → Blender `lahde/korttelit_malli.py -- <alue>`.
+  Tarkistusarkki docs/raportit/kaappaukset/linnanrakentaja-pariisi-20261010/korttelit-v1-arkki.jpg (rivit: Bourbon, Banque, Alma).
+- SEURAAVAKSI: (1) viesti LS2:lle (paketointi + pelikuva Concorden/Louvren/Eiffelin pysähdyksistä, leikkauksen saumat) ja PT:lle;
+  (2) parannukset palautteen mukaan: Palais Bourbonin pohjoispylväikkö, julkisivujen vaihtelu (ikkunarytmi on tasainen), LOD1/2 kevennys.
+
 ## SEURAAVAKSI
 1) LS2:n ND v5f -pari → PT → omistaja → säädöt (mahdollinen parvisauma: maa_v9d vs ympäröivä maa).
-2) "Muut"-jono: Karttasepän Pariisin sumennetut korttelit `_tyo/karttaseppa/sumennukset-pariisi-20261010/` (LUEMINUT.md; Élysée ja Alma
-   lidar_maskattu → korkeus_suositus_m).
+2) Pariisin korttelit LS2:lle (yllä).
 3) Tiedoksi: Karttasepän Pekingin albedo `_tyo/karttaseppa/vertailu/peking/albedo-luokat.json` (Peking tauolla).
