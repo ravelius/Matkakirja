@@ -135,6 +135,14 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>SeikkailuPelaaja.Aktiivinen != null (Siirtoseppä, Linssit/Unity/SeikkailuPelaaja.cs) heijastuksella.</summary>
+        static PropertyInfo veneAktiivinen; static bool veneHaettu;
+        /// <summary>SeikkailuVene.Aktiivinen != null (Siirtoseppä, Linssit/Unity/SeikkailuVene.cs) heijastuksella.</summary>
+        static bool VeneAktiivinen()
+        {
+            if (!veneHaettu) { veneHaettu = true; veneAktiivinen = typeof(SeikkailuTapit).Assembly.GetType("Matkakirja.Natiivi.SeikkailuVene")?.GetProperty("Aktiivinen", BindingFlags.Public | BindingFlags.Static); }
+            return veneAktiivinen?.GetValue(null) is Object o && o != null;
+        }
+
         static bool PelaajaAktiivinen()
         {
             if (!haettu)
@@ -330,7 +338,10 @@ namespace Matkakirja.Natiivi
             bool nayta = TestiNakyy ?? (PelaajaAktiivinen() || MuseoKavely?.Invoke() == true);
             // Pulu pysyy piilossa koko seikkailun (Raamattu: pelissä ei Pulun reunakuvaa): PeliOhjain.KaytossaMuuttui toi sen
             // takaisin kesken pelin tapin päälle (iPad 179 -toisto 10.10.).
-            if (nakyy && nayta && PuluPiiloon) { var pp = Pulu.Hae(); if (pp.Nakyvissa) { pp.Nayta(false); puluPiilotettu = true; } }
+            // Myös soutukohtauksessa (veneyö, SeikkailuVene; omistajan kuva TF 179: Pulu vasemmassa alakulmassa).
+            bool vene = VeneAktiivinen();
+            if (PuluPiiloon && (nakyy && nayta || vene)) { var pp = Pulu.Hae(); if (pp.Nakyvissa) { pp.Nayta(false); puluPiilotettu = true; } }
+            else if (!nakyy && !nayta && !vene && puluPiilotettu) { Pulu.Hae().Nayta(true); puluPiilotettu = false; }
             if (nayta == nakyy) return;
             nakyy = nayta;
             // Kosketukset (kelluva tappi, katse, napautus) lukevat EnhancedTouchin activeTouches; sen kytki vain PalloKierto, jonka
