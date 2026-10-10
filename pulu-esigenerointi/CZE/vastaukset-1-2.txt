@@ -49,7 +49,7 @@ Miten perinnöllisyystiede kehittyi 1900-luvulla?
 
 ### 7.3
 KYSYMYS: Miksi Mendel valitsi koekasviksi herneen?
-Selvä juttu. Herne soveltuu perinnöllisyyden tutkimiseen erinomaisesti, koska sitä on helppo kasvattaa ja siitä saa nopeasti uusia sukupolvia. Sillä on myös selvästi erottuvia ominaisuuksia, kuten siemenen väri ja muoto, joita voi seurata sukupolvesta toiseen. Herne pölyttää tavallisesti itsensä, joten tutkija pystyy hallitsemaan, mitkä kasvit risteytyvät keskenään. Siksi [[Mendel]] sai selkeitä ja toistettavia tuloksia seitsemästä eri ominaisuudesta. Kyyhkynä minä olisin ollut vaikea koekohde.
+Selvä juttu. Herne soveltuu [[perinnöllisyyden]] tutkimiseen erinomaisesti, koska sitä on helppo kasvattaa ja siitä saa nopeasti uusia sukupolvia. Sillä on myös selvästi erottuvia ominaisuuksia, kuten siemenen väri ja muoto, joita voi seurata sukupolvesta toiseen. Herne pölyttää tavallisesti itsensä, joten tutkija pystyy hallitsemaan, mitkä kasvit [[risteytyvät]] keskenään. Siksi [[Mendel]] sai selkeitä ja toistettavia tuloksia seitsemästä eri ominaisuudesta. Kyyhkynä minä olisin ollut vaikea koekohde.
 JATKOT:
 Mitä seitsemää ominaisuutta Mendel seurasi herneestä?
 Miten kasvien risteytys tehdään käytännössä?
@@ -91,14 +91,14 @@ Keitä Pernštejnit olivat?
 
 ### 8.4
 KYSYMYS: Kuka kuuluisa säveltäjä syntyi Litomyšlissä?
-Hetkinen ny. Litomyšlissä syntyi vuonna 1824 säveltäjä [[Bedřich Smetana]], joka tunnetaan tšekkiläisen kansallismusiikin uranuurtajana. Hän syntyi linnan panimon yhteydessä, jossa hänen isänsä työskenteli. Smetanan tunnetuimpiin töihin kuuluu sinfoninen runosarja Má vlast, jonka osa Vltava kuvaa jokea, joka virtaa halki Böömin. Hänen syntymäkaupunkinsa on siis ylpeä pieni paikka. Onpa kyyhkyn päässä paljon musiikkia.
+Hetkinen ny. Litomyšlissä syntyi vuonna 1824 säveltäjä [[Bedřich Smetana]], joka tunnetaan tšekkiläisen kansallismusiikin uranuurtajana. Hän syntyi linnan panimon yhteydessä, jossa hänen isänsä työskenteli. Smetanan tunnetuimpiin töihin kuuluu sinfoninen runosarja [[Má vlast]], jonka osa [[Vltava]] kuvaa jokea, joka virtaa halki Böömin. Hänen syntymäkaupunkinsa on siis ylpeä pieni paikka. Onpa kyyhkyn päässä paljon musiikkia.
 JATKOT:
 Mikä Má vlast on?
 Millaista musiikkia Smetana sävelsi?
 
 ### 8.5
 KYSYMYS: Mikä on hiippakunta?
-Mmm— hallintoa. Hiippakunta on kirkon hallinnollinen alue, jota johtaa piispa. Piispa vastaa alueensa seurakunnista ja papistosta, ja hänen virkapaikkansa on tuomiokirkko. Litomyšl oli vuodesta 1344 vuoteen 1474 oman hiippakuntansa istuin, joten kaupungissa oli aikoinaan piispa ja tuomiokirkko, vaikka kaupunki on nykyään pieni. [[Hiippakunta]] lakkasi olemasta vuonna 1474, ja piispanistuin siirtyi muualle. Aika iso rooli näin pienelle paikalle.
+Mmm— hallintoa. Hiippakunta on kirkon hallinnollinen alue, jota johtaa [[piispa]]. Piispa vastaa alueensa seurakunnista ja papistosta, ja hänen virkapaikkansa on [[tuomiokirkko]]. [[Litomyšl]] oli vuodesta 1344 vuoteen 1474 oman hiippakuntansa istuin, joten kaupungissa oli aikoinaan piispa ja tuomiokirkko, vaikka kaupunki on nykyään pieni. Hiippakunta lakkasi olemasta vuonna 1474, ja piispanistuin siirtyi muualle. Aika iso rooli näin pienelle paikalle.
 JATKOT:
 Mitä piispa tekee?
 Miksi Litomyšlin hiippakunta lakkautettiin?
@@ -126,7 +126,7 @@ Milloin höyryveturit yleistyivät Euroopassa?
 
 ### 9.4
 KYSYMYS: Miksi suolaa kuljetettiin juuri Itävallasta Böömiin?
-Annas ku mietin. Ylä-Itävallan Salzkammergut oli tunnettu suolantuotannostaan, ja Böömiin suolaa kuljetettiin, koska sitä tarvittiin siellä jokapäiväisessä käytössä. Suolakauppa oli vanhaa perua: sitä oli kuljetettu pronssikaudelta saakka vuoripolkuja pitkin. [[Hallstattin]] suolakaivos on tunnettu tällä alueella. 1700-luvun lopulla vuotuinen kuljetusmäärä oli 17 000 tonnia, ja teillä liikkui noin 350 ajoneuvoa päivässä. Siksi hevosrautatie rakennettiin helpottamaan tätä liikennettä. Paljon suolaa, vähän pullaa.
+Annas ku mietin. Ylä-Itävallan [[Salzkammergut]] oli tunnettu suolantuotannostaan, ja Böömiin suolaa kuljetettiin, koska sitä tarvittiin siellä jokapäiväisessä käytössä. Suolakauppa oli vanhaa perua: sitä oli kuljetettu pronssikaudelta saakka vuoripolkuja pitkin. [[Hallstattin]] suolakaivos on tunnettu tällä alueella. 1700-luvun lopulla vuotuinen kuljetusmäärä oli 17 000 tonnia, ja teillä liikkui noin 350 ajoneuvoa päivässä. Siksi [[hevosrautatie]] rakennettiin helpottamaan tätä liikennettä. Paljon suolaa, vähän pullaa.
 JATKOT:
 Miten suolaa on kaivettu Hallstattissa?
 Mihin suolaa muinoin käytettiin?
@@ -169,7 +169,7 @@ Mikä on jalometalli?
 
 ### 10.5
 KYSYMYS: Mitä tarkoittaa, että keskusta on suojeltu?
-Selvä juttu. Tšekin suojelujärjestelmässä historiallinen keskusta voidaan nimetä kaupunkimuistomerkkivyöhykkeeksi, jolloin sen rakennukset ja katuverkko pyritään säilyttämään. Rakennusten muutostöihin tarvitaan silloin yleensä viranomaisen lupa. Jablonec nad Nisoun keskusta on suojeltu tällä tavoin, ja sen arkkitehtonisesti arvokkain rakennus on [[uusi kaupungintalo]]. Tarkat suojelumääräykset ovat paikallisia, enkä ole niistä varma. Vanha pysyy, kun sitä suojellaan.
+Selvä juttu. Tšekin suojelujärjestelmässä historiallinen keskusta voidaan nimetä [[kaupunkimuistomerkkivyöhykkeeksi]], jolloin sen rakennukset ja katuverkko pyritään säilyttämään. Rakennusten muutostöihin tarvitaan silloin yleensä viranomaisen lupa. [[Jablonec nad Nisoun]] keskusta on suojeltu tällä tavoin, ja sen arkkitehtonisesti arvokkain rakennus on [[uusi kaupungintalo]]. Tarkat suojelumääräykset ovat paikallisia, enkä ole niistä varma. Vanha pysyy, kun sitä suojellaan.
 JATKOT:
 Miten kaupunkeja suojellaan Euroopassa?
 Mikä on UNESCOn maailmanperintö?

@@ -56,7 +56,7 @@ Mikä on maailman syvin luola ylipäätään?
 
 ### 22.4
 KYSYMYS: Miten Hranicen syvänne on syntynyt?
-Hyvä kysymys tuo. Syvänne on [[karstinen]] romahduskuoppa, ja vuonna 2020 tehdyn tieteellisen retkikunnan havaintojen perusteella arvellaan, että kuoppa on syntynyt ylös nousseen kuuman ja happamen veden vaikutuksesta. Alimmat osat ovat sedimentin täyttämiä. Arvio on siis edelleen vain arvio, eikä asiasta ole täyttä varmuutta. Tätä sain pohtia pitkään.
+Hyvä kysymys tuo. Syvänne on [[karstinen]] [[romahduskuoppa]], ja vuonna 2020 tehdyn tieteellisen retkikunnan havaintojen perusteella arvellaan, että kuoppa on syntynyt ylös nousseen kuuman ja happamen veden vaikutuksesta. Alimmat osat ovat [[sedimentin]] täyttämiä. Arvio on siis edelleen vain arvio, eikä asiasta ole täyttä varmuutta. Tätä sain pohtia pitkään.
 JATKOT:
 Mitä tarkoittaa karstimuodostuma?
 Miten kuuma happamen vesi liuottaa kiveä?
@@ -105,7 +105,7 @@ Miksi kylpylät olivat suosittuja 1800-luvulla?
 
 ### 24.1
 KYSYMYS: Mikä joki on padottu Lipnon tekojärveksi?
-Nyt muistan: joki on Vltava. Lipnon tekojärvi on rakennettu [[Vltavan]] varrelle padon ja vesivoimalan yhteyteen, ja se on Tšekin suurin vesialue. Pato valmistui vuonna 1960. Se sijaitsee Vltavan portaikon korkeimmalla portaalla, noin 726 metrin korkeudessa. Vltava on Tšekin tunnetuimpia jokia, ja Lipno on sen yläjuoksulla. Hyvin muistin tämän, vaikka vedestä en juuri perusta.
+Nyt muistan: joki on Vltava. Lipnon tekojärvi on rakennettu [[Vltavan]] varrelle [[padon]] ja [[vesivoimalan]] yhteyteen, ja se on Tšekin suurin vesialue. Pato valmistui vuonna 1960. Se sijaitsee Vltavan portaikon korkeimmalla portaalla, noin 726 metrin korkeudessa. Vltava on Tšekin tunnetuimpia jokia, ja Lipno on sen yläjuoksulla. Hyvin muistin tämän, vaikka vedestä en juuri perusta.
 JATKOT:
 Mihin Vltava virtaa?
 Miten vesivoimala tuottaa sähköä?

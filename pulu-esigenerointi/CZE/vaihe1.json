@@ -470,8 +470,10 @@
   "kohde": "kohde:mendelin-luostari",
   "kysymys": "Miksi Mendel valitsi koekasviksi herneen?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Herne soveltuu perinnöllisyyden tutkimiseen erinomaisesti, koska sitä on helppo kasvattaa ja siitä saa nopeasti uusia sukupolvia. Sillä on myös selvästi erottuvia ominaisuuksia, kuten siemenen väri ja muoto, joita voi seurata sukupolvesta toiseen. Herne pölyttää tavallisesti itsensä, joten tutkija pystyy hallitsemaan, mitkä kasvit risteytyvät keskenään. Siksi [[Mendel]] sai selkeitä ja toistettavia tuloksia seitsemästä eri ominaisuudesta. Kyyhkynä minä olisin ollut vaikea koekohde.",
+  "vastaus": "Selvä juttu. Herne soveltuu [[perinnöllisyyden]] tutkimiseen erinomaisesti, koska sitä on helppo kasvattaa ja siitä saa nopeasti uusia sukupolvia. Sillä on myös selvästi erottuvia ominaisuuksia, kuten siemenen väri ja muoto, joita voi seurata sukupolvesta toiseen. Herne pölyttää tavallisesti itsensä, joten tutkija pystyy hallitsemaan, mitkä kasvit [[risteytyvät]] keskenään. Siksi [[Mendel]] sai selkeitä ja toistettavia tuloksia seitsemästä eri ominaisuudesta. Kyyhkynä minä olisin ollut vaikea koekohde.",
   "linkit": [
+   "perinnöllisyyden",
+   "risteytyvät",
    "Mendel"
   ],
   "jatkot": [
@@ -555,9 +557,11 @@
   "kohde": "kohde:litomysl",
   "kysymys": "Kuka kuuluisa säveltäjä syntyi Litomyšlissä?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Litomyšlissä syntyi vuonna 1824 säveltäjä [[Bedřich Smetana]], joka tunnetaan tšekkiläisen kansallismusiikin uranuurtajana. Hän syntyi linnan panimon yhteydessä, jossa hänen isänsä työskenteli. Smetanan tunnetuimpiin töihin kuuluu sinfoninen runosarja Má vlast, jonka osa Vltava kuvaa jokea, joka virtaa halki Böömin. Hänen syntymäkaupunkinsa on siis ylpeä pieni paikka. Onpa kyyhkyn päässä paljon musiikkia.",
+  "vastaus": "Hetkinen ny. Litomyšlissä syntyi vuonna 1824 säveltäjä [[Bedřich Smetana]], joka tunnetaan tšekkiläisen kansallismusiikin uranuurtajana. Hän syntyi linnan panimon yhteydessä, jossa hänen isänsä työskenteli. Smetanan tunnetuimpiin töihin kuuluu sinfoninen runosarja [[Má vlast]], jonka osa [[Vltava]] kuvaa jokea, joka virtaa halki Böömin. Hänen syntymäkaupunkinsa on siis ylpeä pieni paikka. Onpa kyyhkyn päässä paljon musiikkia.",
   "linkit": [
-   "Bedřich Smetana"
+   "Bedřich Smetana",
+   "Má vlast",
+   "Vltava"
   ],
   "jatkot": [
    "Mikä Má vlast on?",
@@ -568,9 +572,11 @@
   "kohde": "kohde:litomysl",
   "kysymys": "Mikä on hiippakunta?",
   "uusi": true,
-  "vastaus": "Mmm— hallintoa. Hiippakunta on kirkon hallinnollinen alue, jota johtaa piispa. Piispa vastaa alueensa seurakunnista ja papistosta, ja hänen virkapaikkansa on tuomiokirkko. Litomyšl oli vuodesta 1344 vuoteen 1474 oman hiippakuntansa istuin, joten kaupungissa oli aikoinaan piispa ja tuomiokirkko, vaikka kaupunki on nykyään pieni. [[Hiippakunta]] lakkasi olemasta vuonna 1474, ja piispanistuin siirtyi muualle. Aika iso rooli näin pienelle paikalle.",
+  "vastaus": "Mmm— hallintoa. Hiippakunta on kirkon hallinnollinen alue, jota johtaa [[piispa]]. Piispa vastaa alueensa seurakunnista ja papistosta, ja hänen virkapaikkansa on [[tuomiokirkko]]. [[Litomyšl]] oli vuodesta 1344 vuoteen 1474 oman hiippakuntansa istuin, joten kaupungissa oli aikoinaan piispa ja tuomiokirkko, vaikka kaupunki on nykyään pieni. Hiippakunta lakkasi olemasta vuonna 1474, ja piispanistuin siirtyi muualle. Aika iso rooli näin pienelle paikalle.",
   "linkit": [
-   "Hiippakunta"
+   "piispa",
+   "tuomiokirkko",
+   "Litomyšl"
   ],
   "jatkot": [
    "Mitä piispa tekee?",
@@ -625,9 +631,11 @@
   "kohde": "kohde:konesprezna-draha",
   "kysymys": "Miksi suolaa kuljetettiin juuri Itävallasta Böömiin?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Ylä-Itävallan Salzkammergut oli tunnettu suolantuotannostaan, ja Böömiin suolaa kuljetettiin, koska sitä tarvittiin siellä jokapäiväisessä käytössä. Suolakauppa oli vanhaa perua: sitä oli kuljetettu pronssikaudelta saakka vuoripolkuja pitkin. [[Hallstattin]] suolakaivos on tunnettu tällä alueella. 1700-luvun lopulla vuotuinen kuljetusmäärä oli 17 000 tonnia, ja teillä liikkui noin 350 ajoneuvoa päivässä. Siksi hevosrautatie rakennettiin helpottamaan tätä liikennettä. Paljon suolaa, vähän pullaa.",
+  "vastaus": "Annas ku mietin. Ylä-Itävallan [[Salzkammergut]] oli tunnettu suolantuotannostaan, ja Böömiin suolaa kuljetettiin, koska sitä tarvittiin siellä jokapäiväisessä käytössä. Suolakauppa oli vanhaa perua: sitä oli kuljetettu pronssikaudelta saakka vuoripolkuja pitkin. [[Hallstattin]] suolakaivos on tunnettu tällä alueella. 1700-luvun lopulla vuotuinen kuljetusmäärä oli 17 000 tonnia, ja teillä liikkui noin 350 ajoneuvoa päivässä. Siksi [[hevosrautatie]] rakennettiin helpottamaan tätä liikennettä. Paljon suolaa, vähän pullaa.",
   "linkit": [
-   "Hallstattin"
+   "Salzkammergut",
+   "Hallstattin",
+   "hevosrautatie"
   ],
   "jatkot": [
    "Miten suolaa on kaivettu Hallstattissa?",
@@ -715,8 +723,10 @@
   "kohde": "kohde:jablonec",
   "kysymys": "Mitä tarkoittaa, että keskusta on suojeltu?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Tšekin suojelujärjestelmässä historiallinen keskusta voidaan nimetä kaupunkimuistomerkkivyöhykkeeksi, jolloin sen rakennukset ja katuverkko pyritään säilyttämään. Rakennusten muutostöihin tarvitaan silloin yleensä viranomaisen lupa. Jablonec nad Nisoun keskusta on suojeltu tällä tavoin, ja sen arkkitehtonisesti arvokkain rakennus on [[uusi kaupungintalo]]. Tarkat suojelumääräykset ovat paikallisia, enkä ole niistä varma. Vanha pysyy, kun sitä suojellaan.",
+  "vastaus": "Selvä juttu. Tšekin suojelujärjestelmässä historiallinen keskusta voidaan nimetä [[kaupunkimuistomerkkivyöhykkeeksi]], jolloin sen rakennukset ja katuverkko pyritään säilyttämään. Rakennusten muutostöihin tarvitaan silloin yleensä viranomaisen lupa. [[Jablonec nad Nisoun]] keskusta on suojeltu tällä tavoin, ja sen arkkitehtonisesti arvokkain rakennus on [[uusi kaupungintalo]]. Tarkat suojelumääräykset ovat paikallisia, enkä ole niistä varma. Vanha pysyy, kun sitä suojellaan.",
   "linkit": [
+   "kaupunkimuistomerkkivyöhykkeeksi",
+   "Jablonec nad Nisoun",
    "uusi kaupungintalo"
   ],
   "jatkot": [
@@ -1168,6 +1178,36 @@
  },
  {
   "kohde": "kohde:lednice",
+  "kysymys": "Kuka suunnitteli koko maiseman?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Yhtä nimeä minä en tähän panisi. Koko maiseman takana oli [[Liechtensteinin]] ruhtinassuku eikä yksittäinen suunnittelija: suku yhdisti omistamansa [[Valticen]] ja [[Lednicen]] maat 1600-luvulta 1900-luvulle yhdeksi suureksi puistoksi, ja 1800-luvulla työtä jatkettiin englantilaisen maisemapuiston mallin mukaan. Lednicen uusgoottilaisen asun teetti vuosina 1846–1858 ruhtinas [[Alois II]]. Alueella työskenteli eri aikoina useita arkkitehteja ja puutarhureita, mutta heidän nimiään en ole varma. Pitkäjänteisempää työtä kuin yksikään minun postireittini.",
+  "linkit": [
+   "Liechtensteinin",
+   "Valticen",
+   "Lednicen",
+   "Alois II"
+  ],
+  "jatkot": [
+   "Mikä on englantilainen maisemapuisto?",
+   "Mitä nähtävää Lednicen linnan ympäristössä on?"
+  ]
+ },
+ {
+  "kohde": "kohde:lednice",
+  "kysymys": "Mikä yhdistää linnoja toisiinsa?",
+  "uusi": false,
+  "vastaus": "Kato, tähän on helppo vastata. Se on pitkä suora juttu. Valticen ja Lednicen linnoja yhdistää ensinnäkin sama omistaja: [[Liechtensteinin]] ruhtinassuku hallitsi molempia vuosisatojen ajan. Vuonna 1715 linnat yhdistettiin toisiinsa seitsemän kilometrin pituisella puistotiellä, ja suuri osa tiestä on yhä käytössä. Lisäksi molemmat kuuluvat samaan 283 neliökilometrin kokonaisuuteen, jonka suku muotoili [[maisemapuistoksi]]. Raja kulki aikoinaan keskellä puistoa, sillä Valtice kuului Itävaltaan ja Lednice Böömin kuningaskuntaan. Seitsemän kilometriä on kyyhkylle yksi aamulenkki.",
+  "linkit": [
+   "Liechtensteinin",
+   "maisemapuistoksi"
+  ],
+  "jatkot": [
+   "Millainen linna Valtice on?",
+   "Mikä Saint-Germainin sopimus oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:lednice",
   "kysymys": "Miten englantilainen puutarha eroaa barokkipuutarhasta?",
   "uusi": true,
   "vastaus": "Hyvä kysymys tuo. Ylhäältä ero näkyy heti. Barokkipuutarha on muotoiltu tiukan geometrisesti: reitit ovat suoria, pensaat leikattuja ja koko asetelma symmetrinen, jotta kävijä näkisi vallan ja järjestyksen. Englantilaisessa maisemapuistossa pyritään päinvastoin luonnollisen näköiseen kokonaisuuteen, jossa on aaltoilevia nurmikenttiä, vapaasti kasvavia puuryhmiä, lampia ja koristerakennuksia. Tyyli kehittyi Englannissa 1700-luvulla, ja sen tunnetuimpia suunnittelijoita oli [[Capability Brown]]. [[Liechtensteinin]] ruhtinaat jatkoivat [[Lednicen]] ja [[Valticen]] alueella työtä englantilaisen puiston mallin mukaan 1800-luvulla. Kyyhkynä arvostan penkkejä enemmän kuin geometriaa.",
@@ -1220,6 +1260,35 @@
  },
  {
   "kohde": "kohde:hahmotelma-josefov-asanace",
+  "kysymys": "Miltä Josefov ennen asanacea näytti loistoaikanaan?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Hyvä kysymys. Josefov oli Prahan keskiaikainen juutalaiskortteli, jossa rakennukset olivat tiheässä ja kujat ahtaita ja mutkittelevia. Kortteliin kuului useita [[synagogia]], ja niistä kuusi on säilynyt nykypäivään. Vanha [[juutalaishautausmaa]] sijaitsi aivan asutuksen keskellä. Tarkkaa kuvausta jostakin tietystä loistovuosikymmenestä en pysty antamaan, ja kuvaukset eri aikojen kaduista, taloista ja asukkaista kannattaa tarkistaa erikseen. Kaupunkia ylhäältä katsovalle kortteli oli varmasti sokkelo.",
+  "linkit": [
+   "synagogia",
+   "juutalaishautausmaa"
+  ],
+  "jatkot": [
+   "Milloin Prahan juutalainen yhteisö asettui Josefovin alueelle?",
+   "Mikä on Vanha-uusi synagoga?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-josefov-asanace",
+  "kysymys": "Miksi Josefov ennen asanacea katosi?",
+  "uusi": false,
+  "vastaus": "Nyt muistan. Tämä on vakava aihe. Josefovin vanha asutus purettiin kaupunkisaneerauksessa, jota kutsutaan tšekiksi asanaceksi. Frans Joosef vahvisti saneerauslain vuonna 1893, ja valtaosa kujista purettiin vuosina 1895–1913. Yleisesti saneerauksen perusteena mainitaan alueen ahtaus ja huono kunto, ja tuohon aikaan samanlaisia kaupunkien uudistuksia tehtiin monessa Euroopan kaupungissa. Kuusi [[synagogaa]] ja vanha [[juutalaishautausmaa]] säilyivät, ja ne ovat edelleen paikoillaan [[Prahan]] keskustassa. Onpas siitä onneksi jo yli sata vuotta.",
+  "linkit": [
+   "synagogaa",
+   "juutalaishautausmaa",
+   "Prahan"
+  ],
+  "jatkot": [
+   "Mitä tilalle rakennettiin saneerauksen jälkeen?",
+   "Mitkä synagogat Prahassa ovat säilyneet?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-josefov-asanace",
   "kysymys": "Mitä Josefovissa voi nykyään nähdä?",
   "uusi": true,
   "vastaus": "Odotas vähän. Tähän vastaan rauhassa. Josefov on Prahan vanha juutalaiskortteli, joka kuuluu nykyään kaupungin keskustaan. Saneerauksessa säilyneet kuusi synagogaa ovat yhä paikoillaan, ja niihin kuuluu muun muassa [[Vanha-uusi synagoga]]; osa synagogista toimii museona. Korttelissa on myös vanha juutalaishautausmaa. Saneerauksen jälkeen alueelle rakennettiin uusia kaupunkitaloja ja leveitä katuja, kuten [[Pařížská]]-katu. Siellä kannattaa kulkea hiljaa ja katsoa ylös.",
@@ -1263,6 +1332,35 @@
  },
  {
   "kohde": "kohde:hahmotelma-bohemian-paradise",
+  "kysymys": "Mikä on Böömin paratiisin korkein kohta?",
+  "uusi": false,
+  "vastaus": "Tuota niin, sen minä muistan. Korkeus on helppo laskea. Alueen korkein kohta on 744 metrin korkuinen [[Kozákov]]. Se sijaitsee noin 60 kilometriä Prahasta koilliseen, [[Jičínin]] ja [[Turnovin]] kaupunkien välisellä seudulla. Huippu ei ole korkea, mutta alueen kallioiden ja metsien ansiosta maisemat ovat näyttäviä. Minulle 744 metriä on kyllä tarpeeksi.",
+  "linkit": [
+   "Kozákov",
+   "Jičínin",
+   "Turnovin"
+  ],
+  "jatkot": [
+   "Mistä Kozákov on tunnettu?",
+   "Mikä tekee Böömin paratiisista erityisen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bohemian-paradise",
+  "kysymys": "Mistä kivestä monet alueen kaupungit on rakennettu?",
+  "uusi": false,
+  "vastaus": "Just niin, se on helppo. Kivi on jalkojen alla. Monet alueen ympärillä sijaitsevat kaupungit on rakennettu [[hiekkakivestä]], jota alueella on runsaasti. Sama kivi muodostaa Böömin paratiisin kuuluisat kalliot, sillä tuuli, vesi ja pakkanen ovat vuosituhansien kuluessa muovanneet niistä erikoisia muotoja. Erityisen tunnettu on [[Prachovin kalliot]] -alue, joka on ollut suojeltu luonnonsuojelualue vuodesta 1933. Kivestä sen kun rakennetaan, vaikka minä asun mieluummin katolla.",
+  "linkit": [
+   "hiekkakivestä",
+   "Prachovin kalliot"
+  ],
+  "jatkot": [
+   "Miten tuuli ja vesi muovaavat hiekkakiveä?",
+   "Mihin hiekkakiveä käytetään rakentamisessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bohemian-paradise",
   "kysymys": "Mitä geopark tarkoittaa?",
   "uusi": true,
   "vastaus": "Selvä juttu. Kivipuistohan se on, suunnilleen. Geopark on alue, jonka geologinen perintö on tavallista merkittävämpi ja jota hoidetaan niin, että kallioperää suojellaan, siitä kerrotaan kävijöille ja alueen kehitystä tuetaan kestävästi, esimerkiksi matkailun kautta. [[Unescon]] geopark -tunnuksen saavat alueet, jotka täyttävät nämä ehdot. [[Böömin paratiisi]], tšekiksi [[Český ráj]], on Tšekin ainoa Unescon geopark. Kyl kivestä riittää juteltavaa.",
@@ -1302,6 +1400,33 @@
   "jatkot": [
    "Mikä on Turnovin kaupungin erikoisuus?",
    "Mitä akaatti on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-adrspach",
+  "kysymys": "Kuka runoilija vieraili kalliokaupungissa vuonna 1790?",
+  "uusi": false,
+  "vastaus": "No jopas, tämän minä tiedän. Hän oli kuuluisa mies. Vuonna 1790 alueella vieraili saksalainen runoilija ja kirjailija [[Johann Wolfgang von Goethe]]. Vierailu on jäänyt muistiin osana [[Adršpachin]] kalliokaupungin historiaa: ensimmäiset luonnonystävät Sleesiasta olivat saapuneet kalliokaupunkiin jo noin vuonna 1700, ja 1800-luvun alussa alueelle tehtiin ensimmäiset polut. Kyyhkyjä ei vierailijaluetteloon ole merkitty.",
+  "linkit": [
+   "Johann Wolfgang von Goethe",
+   "Adršpachin"
+  ],
+  "jatkot": [
+   "Millaisia matkoja Goethe teki Böömissä?",
+   "Mitä Goethen tunnetuimmat teokset ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-adrspach",
+  "kysymys": "Mikä lintu pesii Adršpachin kallioilla?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Sukulaisia kai. Alueen kalliolla pesii [[muuttohaukka]], ja Adršpachin alue on yksi Euroopan suurimpia sen pysyviä pesimäpaikkoja. Haukat käyttävät pystysuoria kallioseinämiä pesäpaikkoinaan, ja siksi osa kallioista suljetaan pesimäaikaan, jotta lintujen pesintä ei häiriintyisi. Alue on suojeltu kansallisena luonnonsuojelualueena vuodesta 1933. Pysyttelen kunnioittavasti kauempana.",
+  "linkit": [
+   "muuttohaukka"
+  ],
+  "jatkot": [
+   "Miten muuttohaukka metsästää?",
+   "Miksi pesimäaikana suljetaan kallioita retkeilijöiltä?"
   ]
  },
  {
@@ -1466,9 +1591,11 @@
   "kohde": "kohde:hahmotelma-hranice",
   "kysymys": "Miten Hranicen syvänne on syntynyt?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Syvänne on [[karstinen]] romahduskuoppa, ja vuonna 2020 tehdyn tieteellisen retkikunnan havaintojen perusteella arvellaan, että kuoppa on syntynyt ylös nousseen kuuman ja happamen veden vaikutuksesta. Alimmat osat ovat sedimentin täyttämiä. Arvio on siis edelleen vain arvio, eikä asiasta ole täyttä varmuutta. Tätä sain pohtia pitkään.",
+  "vastaus": "Hyvä kysymys tuo. Syvänne on [[karstinen]] [[romahduskuoppa]], ja vuonna 2020 tehdyn tieteellisen retkikunnan havaintojen perusteella arvellaan, että kuoppa on syntynyt ylös nousseen kuuman ja happamen veden vaikutuksesta. Alimmat osat ovat [[sedimentin]] täyttämiä. Arvio on siis edelleen vain arvio, eikä asiasta ole täyttä varmuutta. Tätä sain pohtia pitkään.",
   "linkit": [
-   "karstinen"
+   "karstinen",
+   "romahduskuoppa",
+   "sedimentin"
   ],
   "jatkot": [
    "Mitä tarkoittaa karstimuodostuma?",
@@ -1564,9 +1691,11 @@
   "kohde": "kohde:hahmotelma-lipno",
   "kysymys": "Mikä joki on padottu Lipnon tekojärveksi?",
   "uusi": false,
-  "vastaus": "Nyt muistan: joki on Vltava. Lipnon tekojärvi on rakennettu [[Vltavan]] varrelle padon ja vesivoimalan yhteyteen, ja se on Tšekin suurin vesialue. Pato valmistui vuonna 1960. Se sijaitsee Vltavan portaikon korkeimmalla portaalla, noin 726 metrin korkeudessa. Vltava on Tšekin tunnetuimpia jokia, ja Lipno on sen yläjuoksulla. Hyvin muistin tämän, vaikka vedestä en juuri perusta.",
+  "vastaus": "Nyt muistan: joki on Vltava. Lipnon tekojärvi on rakennettu [[Vltavan]] varrelle [[padon]] ja [[vesivoimalan]] yhteyteen, ja se on Tšekin suurin vesialue. Pato valmistui vuonna 1960. Se sijaitsee Vltavan portaikon korkeimmalla portaalla, noin 726 metrin korkeudessa. Vltava on Tšekin tunnetuimpia jokia, ja Lipno on sen yläjuoksulla. Hyvin muistin tämän, vaikka vedestä en juuri perusta.",
   "linkit": [
-   "Vltavan"
+   "Vltavan",
+   "padon",
+   "vesivoimalan"
   ],
   "jatkot": [
    "Mihin Vltava virtaa?",
@@ -1834,8 +1963,10 @@
   "kohde": "kohde:hahmotelma-slavkov",
   "kysymys": "Kuinka suuret olivat osapuolten tappiot taistelussa?",
   "uusi": true,
-  "vastaus": "Joo, tässä pitää olla tarkka. Liittoutuneiden tappiot olivat noin 36 000 miestä 89 000:sta, ja ranskalaisten noin 9 000 miestä 66 000:sta. Luvut ovat arvioita, ja lähteet voivat poiketa toisistaan. Taistelu oli aikansa mittakaavassa valtava, ja se ratkaisi [[kolmannen koalitiosodan]] kulun. Onpas siit onneksi pitkä aika.",
+  "vastaus": "Joo, tässä pitää olla tarkka. [[Austerlitzin]] taistelussa liittoutuneiden eli venäläis-itävaltalaisten joukkojen tappiot olivat noin 36 000 miestä 89 000:sta, ja [[Napoleonin]] ranskalaisten noin 9 000 miestä 66 000:sta. Luvut ovat arvioita, ja lähteet voivat poiketa toisistaan. Taistelu oli aikansa mittakaavassa valtava, ja se ratkaisi [[kolmannen koalitiosodan]] kulun. Onpas siit onneksi pitkä aika.",
   "linkit": [
+   "Austerlitzin",
+   "Napoleonin",
    "kolmannen koalitiosodan"
   ],
   "jatkot": [
@@ -1861,9 +1992,11 @@
   "kohde": "kohde:hahmotelma-pernstejn",
   "kysymys": "Mitä saksankielinen nimi Bärenstein tarkoittaa?",
   "uusi": false,
-  "vastaus": "Sepä sattui: nimi Bärenstein tarkoittaa Karhunkalliota. Medlovin herrat perustivat linnan luultavasti 1200-luvun lopulla, ja heidän sukuhaaransa otti nimekseen [[Pernštejn]], joka johtuu juuri tästä saksankielisestä nimestä. Linna on rakennettu kalliolle joen yläpuolelle, mikä sopii nimeen hyvin. Sukunimi on siis linnan nimi, ei päinvastoin.\n\nMinun sukuni on kantanut kirjeitä Caesarille asti, joten ymmärrän, miksi suku haluaa nimensä kiveen. Mut karhun valitsisin silti vasta toisena.",
+  "vastaus": "Sepä sattui: nimi Bärenstein tarkoittaa Karhunkalliota. [[Medlovin]] herrat perustivat linnan luultavasti 1200-luvun lopulla, ja heidän sukuhaaransa otti nimekseen [[Pernštejn]], joka johtuu juuri tästä saksankielisestä nimestä. Linna on rakennettu kalliolle joen yläpuolelle, mikä sopii nimeen hyvin. Sukunimi on siis linnan nimi, ei päinvastoin.\n\nMinun sukuni on kantanut kirjeitä [[Caesarille]] asti, joten ymmärrän, miksi suku haluaa nimensä kiveen. Mut karhun valitsisin silti vasta toisena.",
   "linkit": [
-   "Pernštejn"
+   "Medlovin",
+   "Pernštejn",
+   "Caesarille"
   ],
   "jatkot": [
    "Ketkä perustivat Pernštejnin linnan?",
@@ -1874,9 +2007,11 @@
   "kohde": "kohde:hahmotelma-pernstejn",
   "kysymys": "Ketkä perustivat Pernštejnin linnan?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Linnan perustivat luultavasti vuosien 1270 ja 1285 välillä [[Medlovin]] herrat. Heidän sukuhaaransa otti nimekseen Pernštejn, mikä tulee saksankielisestä nimestä Bärenstein eli Karhunkallio. Myöhemmin linnan viimeisteli 1500-luvun alkupuoliskolla Pernštejnin suku. Tarkka perustamisvuosi ei ole varma, vaan ajoitus on arvio. Hienosti muistettu, vai mitä.",
+  "vastaus": "Selvä juttu. Linnan perustivat luultavasti vuosien 1270 ja 1285 välillä [[Medlovin]] herrat. Heidän sukuhaaransa otti nimekseen Pernštejn, mikä tulee saksankielisestä nimestä [[Bärenstein]] eli Karhunkallio. Myöhemmin linnan viimeisteli 1500-luvun alkupuoliskolla [[Pernštejnin suku]]. Tarkka perustamisvuosi ei ole varma, vaan ajoitus on arvio. Hienosti muistettu, vai mitä.",
   "linkit": [
-   "Medlovin"
+   "Medlovin",
+   "Bärenstein",
+   "Pernštejnin suku"
   ],
   "jatkot": [
    "Kuka oli Medlovin herrojen aikaan Böömin kuningas?",
@@ -1901,9 +2036,12 @@
   "kohde": "kohde:hahmotelma-pernstejn",
   "kysymys": "Millainen suku Pernštejnin suku oli?",
   "uusi": true,
-  "vastaus": "Just niin, hyvä kysymys. Pernštejnin suku oli 1500-luvun alkupuoliskolla [[Böömin kuningaskunnan]] rikkain ja mahtavin herrasuku. Se otti nimensä linnasta, ja suvun aikana linna sai nykyisen goottilaisen ja renessanssin ilmeensä. Suvun alkuperä on Medlovin herroissa, jotka perustivat linnan luultavasti 1200-luvun lopulla. Niin siinä kävi, rikkaudella ja kivellä.",
+  "vastaus": "Just niin, hyvä kysymys. Pernštejnin suku oli 1500-luvun alkupuoliskolla [[Böömin kuningaskunnan]] rikkain ja mahtavin herrasuku. Se otti nimensä linnasta, ja suvun aikana linna sai nykyisen [[goottilaisen]] ja [[renessanssin]] ilmeensä. Suvun alkuperä on [[Medlovin]] herroissa, jotka perustivat linnan luultavasti 1200-luvun lopulla. Niin siinä kävi, rikkaudella ja kivellä.",
   "linkit": [
-   "Böömin kuningaskunnan"
+   "Böömin kuningaskunnan",
+   "goottilaisen",
+   "renessanssin",
+   "Medlovin"
   ],
   "jatkot": [
    "Mitä Böömin kuningaskunta oli?",
@@ -1970,9 +2108,12 @@
   "kohde": "kohde:hahmotelma-kromeriz",
   "kysymys": "Kuinka suuri kaupunki Kroměříž on?",
   "uusi": true,
-  "vastaus": "Tuota niin. Kaupungissa on noin 28 000 asukasta, ja se sijaitsee [[Zlínin]] alueella Määrissä Morava-joen molemmin puolin. Se on siis pieni mutta historiallisesti merkittävä kaupunki, jonka barokkilinna ja puutarhat kuuluvat Unescon maailmanperintöön. Täällä on varmasti oma versionsa pullasta, en vaan tiedä sen nimee.",
+  "vastaus": "Tuota niin. Kaupungissa on noin 28 000 asukasta, ja se sijaitsee [[Zlínin]] alueella Määrissä [[Morava-joen]] molemmin puolin. Se on siis pieni mutta historiallisesti merkittävä kaupunki, jonka [[barokkilinna]] ja puutarhat kuuluvat [[Unescon]] maailmanperintöön. Täällä on varmasti oma versionsa pullasta, en vaan tiedä sen nimee.",
   "linkit": [
-   "Zlínin"
+   "Zlínin",
+   "Morava-joen",
+   "barokkilinna",
+   "Unescon"
   ],
   "jatkot": [
    "Mikä Zlínin alue on?",
@@ -1997,8 +2138,10 @@
   "kohde": "kohde:hahmotelma-krivoklat",
   "kysymys": "Mihin linna muutettiin, kun se alkoi rappeutua?",
   "uusi": false,
-  "vastaus": "No niin, pieni tarkennus: rappeutuminen seurasi vankilakäytöstä eikä päinvastoin. Linna vaurioitui useita kertoja tulipaloissa, ja sitten se muutettiin ankaraksi vankilaksi, jolloin rakennus rappeutui. Myöhemmin Fürstenbergin suku rakennutti linnan uudelleen vuoden 1826 palon jälkeen. Nykyään linnassa on [[museo]]. Hyvin kävi lopulta.",
+  "vastaus": "No niin, pieni tarkennus: rappeutuminen seurasi vankilakäytöstä eikä päinvastoin. Linna vaurioitui useita kertoja [[tulipaloissa]], ja sitten se muutettiin ankaraksi vankilaksi, jolloin rakennus rappeutui. Myöhemmin [[Fürstenbergin]] suku rakennutti linnan uudelleen vuoden 1826 palon jälkeen. Nykyään linnassa on [[museo]]. Hyvin kävi lopulta.",
   "linkit": [
+   "tulipaloissa",
+   "Fürstenbergin",
    "museo"
   ],
   "jatkot": [
@@ -2024,8 +2167,12 @@
   "kohde": "kohde:hahmotelma-krivoklat",
   "kysymys": "Mitä Křivoklátin linnan museossa on esillä?",
   "uusi": true,
-  "vastaus": "Ai se. Linnassa on museo, jossa säilytetään metsästysaseiden, goottilaisten maalausten ja kirjojen kokoelmia. Linna on suojeltu kansallisena kulttuurimonumenttina. Se on aiemmin ollut Böömin kuninkaiden linna.\n\nKatolta katsottuna metsästysaseet eivät tunnu kovin kotoisilta. Mut kirjat kyllä kiinnostaisivat, sillä minä olen lukenut vähän kaikkea matkalla.",
-  "linkit": [],
+  "vastaus": "Ai se. Linnassa on museo, jossa säilytetään [[metsästysaseiden]], [[goottilaisten maalausten]] ja kirjojen kokoelmia. Linna on suojeltu kansallisena kulttuurimonumenttina. Se on aiemmin ollut [[Böömin kuninkaiden]] linna.\n\nKatolta katsottuna metsästysaseet eivät tunnu kovin kotoisilta. Mut kirjat kyllä kiinnostaisivat, sillä minä olen lukenut vähän kaikkea matkalla.",
+  "linkit": [
+   "metsästysaseiden",
+   "goottilaisten maalausten",
+   "Böömin kuninkaiden"
+  ],
   "jatkot": [
    "Mikä on kansallinen kulttuurimonumentti?",
    "Millaista oli goottilainen maalaus?"
@@ -2035,9 +2182,11 @@
   "kohde": "kohde:hahmotelma-krivoklat",
   "kysymys": "Kenelle Křivoklátin linna alun perin kuului?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Linna perustettiin 1100-luvulla, ja se kuului [[Böömin kuninkaille]]. Myöhemmin linna siirtyi Fürstenbergin suvulle, joka omisti sen vuoteen 1929. Otakar II:n aikana linnasta rakennettiin suuri kuninkaanlinna. Kuninkaille se siis kuului, kaikki alkoi sieltä.",
+  "vastaus": "Selvä juttu. Linna perustettiin 1100-luvulla, ja se kuului [[Böömin kuninkaille]]. Myöhemmin linna siirtyi [[Fürstenbergin]] suvulle, joka omisti sen vuoteen 1929. [[Otakar II:n]] aikana linnasta rakennettiin suuri kuninkaanlinna. Kuninkaille se siis kuului, kaikki alkoi sieltä.",
   "linkit": [
-   "Böömin kuninkaille"
+   "Böömin kuninkaille",
+   "Fürstenbergin",
+   "Otakar II:n"
   ],
   "jatkot": [
    "Milloin Böömin kuningaskunta syntyi?",
@@ -2219,8 +2368,10 @@
   "kohde": "kohde:hahmotelma-koniggratz",
   "kysymys": "Kuinka monta sotilasta Preussilla ja Itävallalla oli taistelussa?",
   "uusi": true,
-  "vastaus": "Katotaas. Preussilla oli noin 285 000 sotilasta ja Itävallalla noin 240 000. Taistelu oli Itävallan ja Preussin sodan suurin, ja Leipzigin taistelun 1813 jälkeen se oli maailman suurin. Kyse oli siis valtavista armeijoista, jotka kohtasivat [[Böömissä]] kesäkuun sijaan heinäkuussa 1866. Onpas siit onneksi pitkä aika.",
+  "vastaus": "Katotaas. Preussilla oli noin 285 000 sotilasta ja Itävallalla noin 240 000. Taistelu oli [[Itävallan ja Preussin sodan]] suurin, ja [[Leipzigin taistelun]] 1813 jälkeen se oli maailman suurin. Kyse oli siis valtavista armeijoista, jotka kohtasivat [[Böömissä]] heinäkuussa 1866. Onpas siit onneksi pitkä aika.",
   "linkit": [
+   "Itävallan ja Preussin sodan",
+   "Leipzigin taistelun",
    "Böömissä"
   ],
   "jatkot": [
@@ -2374,9 +2525,11 @@
   "kohde": "kohde:hahmotelma-karlovy-vary",
   "kysymys": "Mikä legenda kertoo Karlovy Varyn kuuman lähteen löytymisestä?",
   "uusi": true,
-  "vastaus": "Mmm— tost minä osaan kertoo. Legendan mukaan keisari [[Kaarle IV]] oli metsästysretkellä, ja hänen seurueensa löysi kuuman lähteen sattumalta. Keisari paransi lähteen vedellä loukkaantuneen jalkansa, ja kaupunki sai nimensä hänen mukaansa. Tarina on legenda, joten sen todenperäisyydestä ei ole varmaa tietoa. Ja tän kaiken minä kannoin päässäni.",
+  "vastaus": "Mmm— tost minä osaan kertoo. Legendan mukaan keisari [[Kaarle IV]] oli metsästysretkellä, ja hänen seurueensa löysi kuuman lähteen sattumalta. Keisari paransi lähteen vedellä loukkaantuneen jalkansa, ja kaupunki sai nimensä hänen mukaansa. Karlovy Vary on [[kylpyläkaupunki]] [[Ohře-joen]] ja Teplá-joen yhtymäkohdassa Länsi-Böömissä. Tarina on legenda, joten sen todenperäisyydestä ei ole varmaa tietoa. Ja tän kaiken minä kannoin päässäni.",
   "linkit": [
-   "Kaarle IV"
+   "Kaarle IV",
+   "kylpyläkaupunki",
+   "Ohře-joen"
   ],
   "jatkot": [
    "Mitä kuuma lähde tarkoittaa geologisesti?",
@@ -2655,10 +2808,12 @@
  },
  {
   "kohde": "kohde:hahmotelma-zdar",
-  "kysymys": "Milloin Vihreän vuoren kirkko julistettiin Unescon maailmanperintökohteeksi?",
+  "kysymys": "Milloin Vihreän vuoren kirkko tuli maailmanperintökohteeksi?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Kirkko julistettiin Unescon maailmanperintökohteeksi vuonna 1994. Se on Pyhän Johannes Nepomukilaisen pyhiinvaelluskirkko, joka sijaitsee Žďár nad Sázavoun laidalla Määrin ja Böömin historiallisen rajan tuntumassa. Rakennus on [[Johann Santini Aichelin]] viimeinen työ, ja se edustaa [[barokin]] ja goottilaisten viittausten yhdistelmää. Hyvä vuosi muistaa, vaikka lentäjän päässä on paljon muutakin.",
+  "vastaus": "Odotas vähän. Kirkko tuli [[Unescon]] maailmanperintökohteeksi vuonna 1994. Se on [[Pyhän Johannes Nepomukilaisen]] pyhiinvaelluskirkko, joka sijaitsee Žďár nad Sázavoun laidalla Määrin ja Böömin historiallisen rajan tuntumassa. Rakennus on [[Johann Santini Aichelin]] viimeinen työ, ja se edustaa [[barokin]] ja goottilaisten viittausten yhdistelmää. Hyvä vuosi muistaa, vaikka lentäjän päässä on paljon muutakin.",
   "linkit": [
+   "Unescon",
+   "Pyhän Johannes Nepomukilaisen",
    "Johann Santini Aichelin",
    "barokin"
   ],
@@ -2784,9 +2939,11 @@
   "kohde": "kohde:hahmotelma-lostice",
   "kysymys": "Milloin Loštice sai kaupunkistatuksen?",
   "uusi": true,
-  "vastaus": "Kas vaan, mennäänpä historiaan. Loštice ylennettiin kaupungiksi luultavasti vuonna 1353, eli sen asema on vakiintunut jo yli kuudensadan vuoden ajan. Ensimmäinen kirjallinen maininta paikasta on vanhempi: se löytyy piispa Bruno von Schauenburgin asiakirjasta vuodelta 1267. Näiden kahden vuosiluvun välillä asutus kasvoi siis asiakirjoissa mainitusta paikasta kaupungiksi. Vuosiluku 1353 on esitetty varauksella, koska tarkkaa ylennysajankohtaa ei ole varmuudella pystytty osoittamaan. Kaupunki on [[Määrin]] pienimpiä mutta pitkään asuttuja, ja sen asukasluku on nykyään noin 3 100. Ja kyl se vanhuus näkyy, jos osaa katsoa.",
+  "vastaus": "Kas vaan, mennäänpä historiaan. Loštice ylennettiin kaupungiksi luultavasti vuonna 1353, eli sen asema on vakiintunut jo yli kuudensadan vuoden ajan. Ensimmäinen kirjallinen maininta paikasta on vanhempi: se löytyy piispa [[Bruno von Schauenburgin]] asiakirjasta vuodelta 1267. Näiden kahden vuosiluvun välillä asutus kasvoi siis asiakirjoissa mainitusta paikasta kaupungiksi. Vuosiluku 1353 on esitetty varauksella, koska tarkkaa ylennysajankohtaa ei ole varmuudella pystytty osoittamaan. Kaupunki sijaitsee [[Třebůvka-joen]] varrella [[Olomoucin]] alueella Määrissä, ja sen asukasluku on nykyään noin 3 100. Ja kyl se vanhuus näkyy, jos osaa katsoa.",
   "linkit": [
-   "Määrin"
+   "Bruno von Schauenburgin",
+   "Třebůvka-joen",
+   "Olomoucin"
   ],
   "jatkot": [
    "Mitä kaupunkioikeudet keskiajalla tarkoittivat?",
@@ -2797,8 +2954,10 @@
   "kohde": "kohde:hahmotelma-lostice",
   "kysymys": "Mitä Lošticen juutalaisyhteisöstä tiedetään?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Lošticen juutalaisten läsnäolo on dokumentoitu vuodesta 1544 alkaen. Juutalainen hautausmaa perustettiin vuonna 1554 ja synagoga rakennettiin vuonna 1571. Vuosina 1581–1850 juutalaisyhteisö oli kaupunginhallinnosta riippumaton, mikä tarkoitti, että se hoiti omia asioitaan omana yksikkönään. Yhteisö oli osa [[Määrin]] juutalaista historiaa, jolle on tunnusomaista pienet paikalliset yhteisöt ja omat rakennuksensa. Hautausmaa ja synagoga kuuluvat niihin rakennuksiin, jotka kertovat yhteisön vuosisatojen mittaisesta arjesta kaupungissa. Mitä yhteisön myöhemmistä vaiheista tiedetään, siitä en ole varma.",
+  "vastaus": "Hetkinen ny. Lošticen juutalaisten läsnäolo on dokumentoitu vuodesta 1544 alkaen. Yhteisön [[hautausmaa]] perustettiin vuonna 1554 ja [[synagoga]] rakennettiin vuonna 1571. Vuosina 1581–1850 juutalaisyhteisö oli kaupunginhallinnosta riippumaton, mikä tarkoitti, että se hoiti omia asioitaan omana yksikkönään. Yhteisö oli osa [[Määrin]] juutalaista historiaa, jolle on tunnusomaista pienet paikalliset yhteisöt ja omat rakennuksensa. Hautausmaa ja synagoga kuuluvat niihin rakennuksiin, jotka kertovat yhteisön vuosisatojen mittaisesta arjesta kaupungissa. Mitä yhteisön myöhemmistä vaiheista tiedetään, siitä en ole varma.",
   "linkit": [
+   "hautausmaa",
+   "synagoga",
    "Määrin"
   ],
   "jatkot": [
@@ -2810,9 +2969,11 @@
   "kohde": "kohde:hahmotelma-lostice",
   "kysymys": "Kuka oli piispa Bruno von Schauenburg?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Bruno von Schauenburg oli Olomoucin piispa 1200-luvulla, ja hänen asiakirjassaan vuodelta 1267 mainitaan Loštice ensimmäisen kerran kirjallisesti. Lähteiden mukaan hän toimi [[Olomoucin]] piispana ja oli aikansa tärkeitä kirkon ja valtion miehiä Määrissä, mutta tarkkoja vuosilukuja en ole varma muistamaan. Keskiajalla piispat olivat paitsi hengellisiä johtajia myös maallisia vallanpitäjiä, ja heidän asiakirjansa ovat usein ainoa tapa, jolla pienten paikkakuntien varhaisimmat vaiheet tunnetaan. Näin on myös Lošticen kohdalla. Tässä oli kyllä enemmän muistelemista kuin tarkoitus.",
+  "vastaus": "Annas ku mietin. Bruno von Schauenburg oli Olomoucin piispa 1200-luvulla, ja hänen asiakirjassaan vuodelta 1267 mainitaan [[Loštice]] ensimmäisen kerran kirjallisesti. Lähteiden mukaan hän toimi [[Olomoucin]] piispana ja oli aikansa tärkeitä kirkon ja valtion miehiä [[Määrissä]], mutta tarkkoja vuosilukuja en ole varma muistamaan. Keskiajalla piispat olivat paitsi hengellisiä johtajia myös maallisia vallanpitäjiä, ja heidän asiakirjansa ovat usein ainoa tapa, jolla pienten paikkakuntien varhaisimmat vaiheet tunnetaan. Näin on myös Lošticen kohdalla. Tässä oli kyllä enemmän muistelemista kuin tarkoitus.",
   "linkit": [
-   "Olomoucin"
+   "Loštice",
+   "Olomoucin",
+   "Määrissä"
   ],
   "jatkot": [
    "Mikä merkitys piispoilla oli keskiajan Määrissä?",
@@ -2851,9 +3012,11 @@
   "kohde": "kohde:hahmotelma-stramberk",
   "kysymys": "Mitä Štramberkin korvat on?",
   "uusi": true,
-  "vastaus": "Tost minä osaan kertoo. Štramberkin korvat on perinteinen tšekkiläinen leivonnainen, jota on valmistettu Štramberkissä noin 800 vuotta. Se on EU:n suojattu maantieteellinen merkintä, joten nimeä saa käyttää vain paikallisesti valmistetusta tuotteesta. Tuote oli ensimmäinen tšekkiläinen, jolle tällainen suoja myönnettiin. Täsmällisestä reseptistä en ole varma, mutta perinteisesti sen tiedetään olevan mausteinen ja pehmeä makeinen, joka leivotaan käsityönä. Kaupunki sijaitsee [[Määrin]] ja Sleesian esivuoristossa. Minä haaveilen jo ikkunalaudasta, jolla tällainen lepäisi.",
+  "vastaus": "Tost minä osaan kertoo. Štramberkin korvat on perinteinen tšekkiläinen leivonnainen, jota on valmistettu Štramberkissä noin 800 vuotta. Se on EU:n [[suojattu maantieteellinen merkintä]], joten nimeä saa käyttää vain paikallisesti valmistetusta tuotteesta. Tuote oli ensimmäinen tšekkiläinen, jolle tällainen suoja myönnettiin. Täsmällisestä reseptistä en ole varma, mutta perinteisesti sen tiedetään olevan mausteinen ja pehmeä makeinen, joka leivotaan käsityönä. Kaupunki sijaitsee [[Määrin]] ja [[Sleesian]] esivuoristossa. Minä haaveilen jo ikkunalaudasta, jolla tällainen lepäisi.",
   "linkit": [
-   "Määrin"
+   "suojattu maantieteellinen merkintä",
+   "Määrin",
+   "Sleesian"
   ],
   "jatkot": [
    "Miksi korvia kutsutaan korviksi?",
@@ -2906,9 +3069,12 @@
   "kohde": "kohde:hahmotelma-mlada-boleslav",
   "kysymys": "Mikä yhtiö osti Laurin & Klementin vuonna 1925?",
   "uusi": false,
-  "vastaus": "Joo, tän minä tiedän. Laurin & Klement -yhtiön osti vuonna 1925 Škoda Works. Yhtiö oli perustettu Mladá Boleslavissa vuonna 1895, ja siitä tuli [[Škoda Auton]] edeltäjä. Autoteollisuudesta muodostui kaupungin talouden päävoima, ja nykyään Mladá Boleslav on Tšekin autoteollisuuden keskus ja siksi koko maan teollisuuden keskus. Kaupunki sijaitsee Keski-Böömin alueella Jizera-joen vasemmalla rannalla, ja siellä on noin 48 000 asukasta. Kauppa merkitsi sitä, että pienestä paikallisesta yhtiöstä tuli osa suurempaa teollisuuskonsernia.",
+  "vastaus": "Joo, tän minä tiedän. Laurin & Klement -yhtiön osti vuonna 1925 [[Škoda Works]]. Yhtiö oli perustettu [[Mladá Boleslavissa]] vuonna 1895, ja siitä tuli [[Škoda Auton]] edeltäjä. Autoteollisuudesta muodostui kaupungin talouden päävoima, ja nykyään Mladá Boleslav on Tšekin autoteollisuuden keskus ja siksi koko maan teollisuuden keskus. Kaupunki sijaitsee Keski-Böömin alueella [[Jizera-joen]] vasemmalla rannalla, ja siellä on noin 48 000 asukasta. Kauppa merkitsi sitä, että pienestä paikallisesta yhtiöstä tuli osa suurempaa teollisuuskonsernia.",
   "linkit": [
-   "Škoda Auton"
+   "Škoda Works",
+   "Mladá Boleslavissa",
+   "Škoda Auton",
+   "Jizera-joen"
   ],
   "jatkot": [
    "Mitä Laurin & Klement alun perin valmisti?",
@@ -3017,8 +3183,10 @@
   "kohde": "kohde:hahmotelma-pribram",
   "kysymys": "Mitä sametillinen vallankumous oli?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Sametillinen vallankumous oli vuoden 1989 lopulla Tšekkoslovakiassa tapahtunut rauhanomainen vallanvaihto, jossa kommunistihallinto luopui vallasta. Nimi viittaa siihen, että muutos tapahtui pääosin ilman väkivaltaa. Tapahtumat liittyivät laajempaan Itä-Euroopan murrokseen, ja Tšekkoslovakia jakautui myöhemmin Tšekiksi ja Slovakiaksi, mutta tarkan ajankohdan mainitsen vain, jos olen varma, ja tässä kohtaa en ole. Příbramissa vallankumouksen jälkeen suljettiin vanhat hopea- ja lyijykaivokset sekä uraanikaivokset. Kaupunki sijaitsee [[Litavka-joen]] varrella Keski-Böömissä, ja asukkaita on noin 33 000. Onneksi siitä on jo pitkä aika.",
+  "vastaus": "Hyvä kysymys tuo. Sametillinen vallankumous oli vuoden 1989 lopulla Tšekkoslovakiassa tapahtunut rauhanomainen vallanvaihto, jossa kommunistihallinto luopui vallasta. Nimi viittaa siihen, että muutos tapahtui pääosin ilman väkivaltaa. Tapahtumat liittyivät laajempaan [[Itä-Euroopan]] murrokseen, ja [[Tšekkoslovakia]] jakautui myöhemmin Tšekiksi ja Slovakiaksi, mutta jakautumisen tarkasta ajankohdasta en ole varma. Příbramissa vallankumouksen jälkeen suljettiin vanhat hopea- ja lyijykaivokset sekä uraanikaivokset. Kaupunki sijaitsee [[Litavka-joen]] varrella Keski-Böömissä, ja asukkaita on noin 33 000. Onneksi siitä on jo pitkä aika.",
   "linkit": [
+   "Itä-Euroopan",
+   "Tšekkoslovakia",
    "Litavka-joen"
   ],
   "jatkot": [
@@ -3030,8 +3198,10 @@
   "kohde": "kohde:hahmotelma-kamenicky-senov",
   "kysymys": "Milloin Kamenický Šenovin lasinvalmistajat mainitaan ensimmäisen kerran?",
   "uusi": false,
-  "vastaus": "Tuota niin, tähän pitää tarkentaa. Kamenický Šenovin ensimmäinen kylä, Sonov, mainitaan vuonna 1352, ja sen perustivat sorbit. Lasinvalmistajien ensimmäisestä maininnasta en ole varma, mutta kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Silloin lasin jalostus ja lasikauppa kasvoivat valtavasti, ja asukkaat alkoivat rikastua. Kaupunki sijaitsee Česká Lípan alueella Keski-Böömin ylängöllä, ja asukkaita on noin 3 800. Kylä kuului aluksi [[Česká Kamenicen]] tilaan. Kyl se vuosiluku vähän pelottaa, kun ei ole varma.",
+  "vastaus": "Tuota niin, tähän pitää tarkentaa. Kamenický Šenovin ensimmäinen kylä, Sonov, mainitaan vuonna 1352, ja sen perustivat [[sorbit]]. Lasinvalmistajien ensimmäisestä maininnasta en ole varma, mutta kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Silloin lasin jalostus ja lasikauppa kasvoivat valtavasti, ja asukkaat alkoivat rikastua. Kaupunki sijaitsee [[Česká Lípan]] alueella Keski-Böömin ylängöllä, ja asukkaita on noin 3 800. Kylä kuului aluksi [[Česká Kamenicen]] tilaan. Kyl se vuosiluku vähän pelottaa, kun ei ole varma.",
   "linkit": [
+   "sorbit",
+   "Česká Lípan",
    "Česká Kamenicen"
   ],
   "jatkot": [
@@ -3043,8 +3213,10 @@
   "kohde": "kohde:hahmotelma-kamenicky-senov",
   "kysymys": "Mikä kaupungin koulu on maailman vanhin omalla alallaan?",
   "uusi": false,
-  "vastaus": "Kas vaan. Kamenický Šenovin lasialan keskiasteen koulu on maailman vanhin oman alansa ammattikoulu. Se perustettiin vuonna 1856, ja se koulutti lasinjalostajia kaupungissa, jonka historia on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Kaupungin lasimuseo toimii noin vuonna 1770 rakennetussa talossa. Kaupunki sijaitsee Česká Lípan alueella Keski-Böömin ylängöllä, ja siellä on noin 3 800 asukasta. Koulun nykyisestä nimestä en ole varma. Kaupunki on [[lasiteollisuutensa]] ansiosta tunnettu Böömissä. Lasi on kyllä kaunista ylhäältä katsottuna.",
+  "vastaus": "Kas vaan. Kamenický Šenovin lasialan keskiasteen koulu on maailman vanhin oman alansa ammattikoulu. Se perustettiin vuonna 1856, ja se koulutti lasinjalostajia kaupungissa, jonka historia on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Kaupungin [[lasimuseo]] toimii noin vuonna 1770 rakennetussa talossa. Kaupunki sijaitsee [[Česká Lípan]] alueella Keski-Böömin ylängöllä, ja siellä on noin 3 800 asukasta. Koulun nykyisestä nimestä en ole varma. Kaupunki on [[lasiteollisuutensa]] ansiosta tunnettu Böömissä. Lasi on kyllä kaunista ylhäältä katsottuna.",
   "linkit": [
+   "lasimuseo",
+   "Česká Lípan",
    "lasiteollisuutensa"
   ],
   "jatkot": [
@@ -3056,9 +3228,11 @@
   "kohde": "kohde:hahmotelma-kamenicky-senov",
   "kysymys": "Mitä Kamenický Šenovin lasimuseossa on?",
   "uusi": true,
-  "vastaus": "Ai tota. Kamenický Šenovin lasimuseo toimii noin vuonna 1770 rakennetussa talossa, ja se liittyy kaupungin pitkään [[lasinvalmistuksen]] historiaan. Museon tarkasta kokoelmasta en ole varma, mutta tällaisissa museoissa on tavallisesti esillä paikallista lasitaidetta ja lasin jalostukseen liittyviä esineitä. Kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään, ja 1600- ja 1700-luvuilla lasin jalostus ja lasikauppa kasvoivat valtavasti. Kaupunki sijaitsee Česká Lípan alueella Keski-Böömissä, ja siellä on noin 3 800 asukasta. Talo on siis museona vanhempi kuin moni maa.",
+  "vastaus": "Ai tota. Kamenický Šenovin lasimuseo toimii noin vuonna 1770 rakennetussa talossa, ja se liittyy kaupungin pitkään [[lasinvalmistuksen]] historiaan. Museon tarkasta kokoelmasta en ole varma, mutta tällaisissa museoissa on tavallisesti esillä paikallista [[lasitaidetta]] ja lasin jalostukseen liittyviä esineitä. Kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään, ja 1600- ja 1700-luvuilla lasin jalostus ja lasikauppa kasvoivat valtavasti. Kaupunki sijaitsee [[Česká Lípan]] alueella Keski-Böömissä, ja siellä on noin 3 800 asukasta. Talo on siis museona vanhempi kuin moni maa.",
   "linkit": [
-   "lasinvalmistuksen"
+   "lasinvalmistuksen",
+   "lasitaidetta",
+   "Česká Lípan"
   ],
   "jatkot": [
    "Miten lasia jalostetaan hiomalla ja kaivertamalla?",
@@ -3069,8 +3243,10 @@
   "kohde": "kohde:hahmotelma-kamenicky-senov",
   "kysymys": "Keitä sorbit ovat?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Sorbit ovat länsislaavilainen kansa, joka asuu pääasiassa Saksassa Lausitzin alueella, ja heidän kielensä on sorbi. Kamenický Šenovin ensimmäisen kylän, Sonovin, perustivat sorbit, ja se mainitaan vuonna 1352. Kylä kuului [[Česká Kamenicen]] tilaan. Sorbien historiasta Böömissä en ole varma, joten en laajenna sitä. Nykyään kaupunki on kuitenkin tunnettu lasinvalmistuksesta, ja siinä on noin 3 800 asukasta Česká Lípan alueella. Kaupungin sorbilainen alku kertoo siitä, kuinka monet kansat ovat asuneet alueella ennen nykyistä Tšekkiä. Pieni kansa, pitkä muisti.",
+  "vastaus": "Annas ku mietin. Sorbit ovat länsislaavilainen kansa, joka asuu pääasiassa Saksassa [[Lausitzin]] alueella, ja heidän kielensä on sorbi. Kamenický Šenovin ensimmäisen kylän, [[Sonovin]], perustivat sorbit, ja se mainitaan vuonna 1352. Kylä kuului [[Česká Kamenicen]] tilaan. Sorbien historiasta Böömissä en ole varma, joten en laajenna sitä. Nykyään kaupunki on kuitenkin tunnettu lasinvalmistuksesta, ja siinä on noin 3 800 asukasta Česká Lípan alueella. Kaupungin sorbilainen alku kertoo siitä, kuinka monet kansat ovat asuneet alueella ennen nykyistä Tšekkiä. Pieni kansa, pitkä muisti.",
   "linkit": [
+   "Lausitzin",
+   "Sonovin",
    "Česká Kamenicen"
   ],
   "jatkot": [
@@ -3082,8 +3258,11 @@
   "kohde": "kohde:hahmotelma-kamenicky-senov",
   "kysymys": "Mitä lasin jalostus tarkoittaa?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Lasin jalostus tarkoittaa sitä, että valmiista lasista tehdään koriste- tai käyttöesine esimerkiksi hiomalla, kaivertamalla, maalaamalla tai muulla tavalla koristelemalla. Se eroaa lasin sulattamisesta ja puhaltamisesta, jotka ovat esineen perusmuodon valmistusta. Kamenický Šenovissa lasin jalostus ja lasikauppa kasvoivat valtavasti 1600- ja 1700-luvuilla, ja asukkaat alkoivat rikastua. Kaupungin lasialan keskiasteen koulu perustettiin vuonna 1856. Kaupunki sijaitsee Česká Lípan alueella Keski-Böömissä, ja [[lasiteollisuus]] on yhä tunnusomainen osa sen historiaa. Tämä oli sentään selkeä vastaus.",
+  "vastaus": "Joo, tän minä tiedän. Lasin jalostus tarkoittaa sitä, että valmiista lasista tehdään koriste- tai käyttöesine esimerkiksi [[hiomalla]], [[kaivertamalla]], maalaamalla tai muulla tavalla koristelemalla. Se eroaa lasin sulattamisesta ja puhaltamisesta, jotka ovat esineen perusmuodon valmistusta. [[Kamenický Šenovissa]] lasin jalostus ja lasikauppa kasvoivat valtavasti 1600- ja 1700-luvuilla, ja asukkaat alkoivat rikastua. Kaupungin lasialan keskiasteen koulu perustettiin vuonna 1856. Kaupunki sijaitsee Česká Lípan alueella Keski-Böömissä, ja [[lasiteollisuus]] on yhä tunnusomainen osa sen historiaa. Tämä oli sentään selkeä vastaus.",
   "linkit": [
+   "hiomalla",
+   "kaivertamalla",
+   "Kamenický Šenovissa",
    "lasiteollisuus"
   ],
   "jatkot": [
@@ -3095,8 +3274,10 @@
   "kohde": "kohde:hahmotelma-rabi",
   "kysymys": "Miten Jan Žižka menetti näkönsä kokonaan?",
   "uusi": false,
-  "vastaus": "Hetkinen ny. Tää on kyllä hurja tarina. Jan Žižka, husiittien sotapäällikkö, oli menettänyt toisen silmänsä jo aiemmin, ja jäljellä oleva silmä vaurioitui Rabín linnan toisen piirityksen aikana vuonna 1421. Legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä, ja hän sokeutui tämän jälkeen kokonaan. Kertomukset eroavat yksityiskohdissa toisistaan, joten tarkkaa tapahtumaketjua ei voi pitää varmana. Žižka johti joukkojaan kuitenkin sokeanakin ja kuoli vuonna 1424 kesken sotaretken, todennäköisesti [[ruttoon]]. Onpas siit onneksi pitkä aika.",
+  "vastaus": "Hetkinen ny. Tää on kyllä hurja tarina. Jan Žižka, [[husiittien]] sotapäällikkö, oli menettänyt toisen silmänsä jo aiemmin, ja jäljellä oleva silmä vaurioitui [[Rabín linnan]] toisen piirityksen aikana vuonna 1421. Legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä, ja hän sokeutui tämän jälkeen kokonaan. Kertomukset eroavat yksityiskohdissa toisistaan, joten tarkkaa tapahtumaketjua ei voi pitää varmana. Žižka johti joukkojaan kuitenkin sokeanakin ja kuoli vuonna 1424 kesken sotaretken, todennäköisesti [[ruttoon]]. Onpas siit onneksi pitkä aika.",
   "linkit": [
+   "husiittien",
+   "Rabín linnan",
    "ruttoon"
   ],
   "jatkot": [
