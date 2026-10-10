@@ -1,0 +1,4391 @@
+{
+ "versio": 1,
+ "maa": "alankomaat",
+ "nimi": "Alankomaiden sali",
+ "tyyli": {
+  "kuvaus": "Mauritshuis-kabinetit + Rijksmuseumin Kunniagalleria + Yövartio-sali",
+  "oletuskehys": "nl_aalto_musta",
+  "seinavarit_srgb": {
+   "damasti_punainen": [
+    128,
+    34,
+    38
+   ],
+   "damasti_vihrea": [
+    52,
+    82,
+    58
+   ],
+   "damasti_sininen": [
+    38,
+    62,
+    104
+   ],
+   "rijks_harmaa": [
+    58,
+    64,
+    74
+   ],
+   "paneeli_kerma": [
+    226,
+    218,
+    196
+   ],
+   "kivi_hiekka": [
+    196,
+    184,
+    160
+   ]
+  },
+  "kehysmateriaalit": {
+   "musta": {
+    "srgb": [
+     24,
+     20,
+     18
+    ],
+    "karheus": 0.32,
+    "metalli": 0.0,
+    "huom": "ebonoitu päärynä-/eebenpuu, lakattu"
+   },
+   "kulta": {
+    "srgb": [
+     206,
+     168,
+     92
+    ],
+    "karheus": 0.38,
+    "metalli": 1.0,
+    "huom": "lehtikulta, hieman kulunut"
+   },
+   "paspis": {
+    "srgb": [
+     236,
+     230,
+     214
+    ],
+    "karheus": 0.9,
+    "metalli": 0.0
+   }
+  },
+  "tone_mapping": "Neutral (Khronos PBR Neutral tai URP Neutral), bloom minimiin, vinjetti ≤ 10 %, ei automaattivalotusta"
+ },
+ "koordinaatit": "glTF: X oikealle, Y ylös, Z taaksepäin (kävijä etenee −Z), metrit; origo sisäänkäynnin lattiassa",
+ "osat": [
+  {
+   "id": "m1",
+   "nimi": "Punainen kabinetti",
+   "tyyppi": "kabinetti",
+   "laatikko": {
+    "x": [
+     -4.0,
+     4.0
+    ],
+    "z": [
+     0.0,
+     -8.0
+    ],
+    "y": [
+     0.0,
+     5.6
+    ]
+   },
+   "katto": {
+    "tyyppi": "tasainen",
+    "stukko": true,
+    "kattokruunu": true,
+    "kattoikkuna": null
+   },
+   "seina": {
+    "materiaali": "damasti_punainen",
+    "sokkeli": 0.18,
+    "paneeli": 0.95,
+    "lista": 0.45,
+    "paneelimateriaali": "paneeli_kerma"
+   },
+   "lattia": "parketti_kalanruoto",
+   "valo": {
+    "lx": 150,
+    "ev100": 6.6,
+    "kelvin": 3200,
+    "paivanvalo": 0.0
+   }
+  },
+  {
+   "id": "m2",
+   "nimi": "Vihreä kabinetti",
+   "tyyppi": "kabinetti",
+   "laatikko": {
+    "x": [
+     -4.0,
+     4.0
+    ],
+    "z": [
+     -8.4,
+     -16.4
+    ],
+    "y": [
+     0.0,
+     5.6
+    ]
+   },
+   "katto": {
+    "tyyppi": "tasainen",
+    "stukko": true,
+    "kattokruunu": true,
+    "kattoikkuna": null
+   },
+   "seina": {
+    "materiaali": "damasti_vihrea",
+    "sokkeli": 0.18,
+    "paneeli": 0.95,
+    "lista": 0.45,
+    "paneelimateriaali": "paneeli_kerma"
+   },
+   "lattia": "parketti_kalanruoto",
+   "valo": {
+    "lx": 150,
+    "ev100": 6.6,
+    "kelvin": 3200,
+    "paivanvalo": 0.0
+   }
+  },
+  {
+   "id": "m3",
+   "nimi": "Sininen kabinetti",
+   "tyyppi": "kabinetti",
+   "laatikko": {
+    "x": [
+     -4.0,
+     4.0
+    ],
+    "z": [
+     -16.8,
+     -24.8
+    ],
+    "y": [
+     0.0,
+     5.6
+    ]
+   },
+   "katto": {
+    "tyyppi": "tasainen",
+    "stukko": true,
+    "kattokruunu": true,
+    "kattoikkuna": null
+   },
+   "seina": {
+    "materiaali": "damasti_sininen",
+    "sokkeli": 0.18,
+    "paneeli": 0.95,
+    "lista": 0.45,
+    "paneelimateriaali": "paneeli_kerma"
+   },
+   "lattia": "parketti_kalanruoto",
+   "valo": {
+    "lx": 150,
+    "ev100": 6.6,
+    "kelvin": 3200,
+    "paivanvalo": 0.0
+   }
+  },
+  {
+   "id": "aula",
+   "nimi": "Aula",
+   "tyyppi": "aula",
+   "laatikko": {
+    "x": [
+     -3.0,
+     3.0
+    ],
+    "z": [
+     4.4,
+     0.4
+    ],
+    "y": [
+     0.0,
+     4.5
+    ]
+   },
+   "katto": {
+    "tyyppi": "tasainen",
+    "stukko": true,
+    "kattoikkuna": null
+   },
+   "seina": {
+    "materiaali": "paneeli_kerma",
+    "sokkeli": 0.18,
+    "paneeli": 0.0,
+    "lista": 0.35
+   },
+   "lattia": "kivi_marmori_ruutu",
+   "valo": {
+    "lx": 120,
+    "ev100": 6.6,
+    "kelvin": 3200,
+    "paivanvalo": 0.0,
+    "huom": "sisäänkäynti; kamera aloittaa täältä (origo = aulan ja m1:n välinen ovi)"
+   }
+  },
+  {
+   "id": "kg",
+   "nimi": "Kunniagalleria",
+   "tyyppi": "galleria",
+   "laatikko": {
+    "x": [
+     -4.5,
+     4.5
+    ],
+    "z": [
+     -25.2,
+     -73.2
+    ],
+    "y": [
+     0.0,
+     9.0
+    ]
+   },
+   "katto": {
+    "tyyppi": "ristiholvi",
+    "nousu": 4.5,
+    "jaksot": 4,
+    "okulus_d": 1.6,
+    "kattoikkuna": "okulus",
+    "maalattu_koriste": true
+   },
+   "seina": {
+    "materiaali": "rijks_harmaa",
+    "sokkeli": 0.25,
+    "paneeli": 0.0,
+    "lista": 0.6,
+    "pilarit": "raidallinen",
+    "ylaseina": "maalatut_lunetit"
+   },
+   "lattia": "parketti_tammi",
+   "valo": {
+    "lx": 150,
+    "ev100": 7.0,
+    "kelvin": 3500,
+    "paivanvalo": 0.5,
+    "gradientti": "valo kasvaa kohti Yövartio-salia (+20 %)"
+   }
+  },
+  {
+   "id": "kg-k1v",
+   "nimi": "Kunniagallerian komero 1 vasen",
+   "tyyppi": "komero",
+   "laatikko": {
+    "x": [
+     -8.1,
+     -5.1
+    ],
+    "z": [
+     -28.2,
+     -34.2
+    ],
+    "y": [
+     0.0,
+     7.8
+    ]
+   },
+   "katto": {
+    "tyyppi": "tasainen",
+    "kattoikkuna": [
+     2.0,
+     4.0
+    ],
+    "friisi": "cuypers",
+    "friisi_korkeus": 1.0
+   },
+   "seina": {
+    "materiaali": "rijks_harmaa",
+    "sokkeli": 0.25,
+    "paneeli": 0.0,
+    "lista": 0.3
+   },
+   "lattia": "parketti_tammi",
+   "valo": {
+    "lx": 150,
+    "ev100": 7.0,
+    "kelvin": 3500,
+    "paivanvalo": 0.3
+   }
+  },
+  {
+   "id": "kg-k1o",
+   "nimi": "Kunniagallerian komero 1 oikea",
+   "tyyppi": "komero",
+   "laatikko": {
+    "x": [
+     5.1,
+     8.1
+    ],
+    "z": [
+     -28.2,
+     -34.2
+    ],
+    "y": [
+     0.0,
+     7.8
+    ]
+   },
+   "katto": {
+    "tyyppi": "tasainen",
+    "kattoikkuna": [
+     2.0,
+     4.0
+    ],
+    "friisi": "cuypers",
+    "friisi_korkeus": 1.0
+   },
+   "seina": {
+    "materiaali": "rijks_harmaa",
+    "sokkeli": 0.25,
+    "paneeli": 0.0,
+    "lista": 0.3
+   },
+   "lattia": "parketti_tammi",
+   "valo": {
+    "lx": 150,
+    "ev100": 7.0,
+    "kelvin": 3500,
+    "paivanvalo": 0.3
+   }
+  },
+  {
+   "id": "kg-k2v",
+   "nimi": "Kunniagallerian komero 2 vasen",
+   "tyyppi": "komero",
+   "laatikko": {
+    "x": [
+     -8.1,
+     -5.1
+    ],
+    "z": [
+     -40.2,
+     -46.2
+    ],
+    "y": [
+     0.0,
+     7.8
+    ]
+   },
+   "katto": {
+    "tyyppi": "tasainen",
+    "kattoikkuna": [
+     2.0,
+     4.0
+    ],
+    "friisi": "cuypers",
+    "friisi_korkeus": 1.0
+   },
+   "seina": {
+    "materiaali": "rijks_harmaa",
+    "sokkeli": 0.25,
+    "paneeli": 0.0,
+    "lista": 0.3
+   },
+   "lattia": "parketti_tammi",
+   "valo": {
+    "lx": 150,
+    "ev100": 7.0,
+    "kelvin": 3500,
+    "paivanvalo": 0.3
+   }
+  },
+  {
+   "id": "kg-k2o",
+   "nimi": "Kunniagallerian komero 2 oikea",
+   "tyyppi": "komero",
+   "laatikko": {
+    "x": [
+     5.1,
+     8.1
+    ],
+    "z": [
+     -40.2,
+     -46.2
+    ],
+    "y": [
+     0.0,
+     7.8
+    ]
+   },
+   "katto": {
+    "tyyppi": "tasainen",
+    "kattoikkuna": [
+     2.0,
+     4.0
+    ],
+    "friisi": "cuypers",
+    "friisi_korkeus": 1.0
+   },
+   "seina": {
+    "materiaali": "rijks_harmaa",
+    "sokkeli": 0.25,
+    "paneeli": 0.0,
+    "lista": 0.3
+   },
+   "lattia": "parketti_tammi",
+   "valo": {
+    "lx": 150,
+    "ev100": 7.0,
+    "kelvin": 3500,
+    "paivanvalo": 0.3
+   }
+  },
+  {
+   "id": "kg-k3v",
+   "nimi": "Kunniagallerian komero 3 vasen",
+   "tyyppi": "komero",
+   "laatikko": {
+    "x": [
+     -8.1,
+     -5.1
+    ],
+    "z": [
+     -52.2,
+     -58.2
+    ],
+    "y": [
+     0.0,
+     7.8
+    ]
+   },
+   "katto": {
+    "tyyppi": "tasainen",
+    "kattoikkuna": [
+     2.0,
+     4.0
+    ],
+    "friisi": "cuypers",
+    "friisi_korkeus": 1.0
+   },
+   "seina": {
+    "materiaali": "rijks_harmaa",
+    "sokkeli": 0.25,
+    "paneeli": 0.0,
+    "lista": 0.3
+   },
+   "lattia": "parketti_tammi",
+   "valo": {
+    "lx": 150,
+    "ev100": 7.0,
+    "kelvin": 3500,
+    "paivanvalo": 0.3
+   }
+  },
+  {
+   "id": "kg-k3o",
+   "nimi": "Kunniagallerian komero 3 oikea",
+   "tyyppi": "komero",
+   "laatikko": {
+    "x": [
+     5.1,
+     8.1
+    ],
+    "z": [
+     -52.2,
+     -58.2
+    ],
+    "y": [
+     0.0,
+     7.8
+    ]
+   },
+   "katto": {
+    "tyyppi": "tasainen",
+    "kattoikkuna": [
+     2.0,
+     4.0
+    ],
+    "friisi": "cuypers",
+    "friisi_korkeus": 1.0
+   },
+   "seina": {
+    "materiaali": "rijks_harmaa",
+    "sokkeli": 0.25,
+    "paneeli": 0.0,
+    "lista": 0.3
+   },
+   "lattia": "parketti_tammi",
+   "valo": {
+    "lx": 150,
+    "ev100": 7.0,
+    "kelvin": 3500,
+    "paivanvalo": 0.3
+   }
+  },
+  {
+   "id": "kg-k4v",
+   "nimi": "Kunniagallerian komero 4 vasen",
+   "tyyppi": "komero",
+   "laatikko": {
+    "x": [
+     -8.1,
+     -5.1
+    ],
+    "z": [
+     -64.2,
+     -70.2
+    ],
+    "y": [
+     0.0,
+     7.8
+    ]
+   },
+   "katto": {
+    "tyyppi": "tasainen",
+    "kattoikkuna": [
+     2.0,
+     4.0
+    ],
+    "friisi": "cuypers",
+    "friisi_korkeus": 1.0
+   },
+   "seina": {
+    "materiaali": "rijks_harmaa",
+    "sokkeli": 0.25,
+    "paneeli": 0.0,
+    "lista": 0.3
+   },
+   "lattia": "parketti_tammi",
+   "valo": {
+    "lx": 150,
+    "ev100": 7.0,
+    "kelvin": 3500,
+    "paivanvalo": 0.3
+   }
+  },
+  {
+   "id": "kg-k4o",
+   "nimi": "Kunniagallerian komero 4 oikea",
+   "tyyppi": "komero",
+   "laatikko": {
+    "x": [
+     5.1,
+     8.1
+    ],
+    "z": [
+     -64.2,
+     -70.2
+    ],
+    "y": [
+     0.0,
+     7.8
+    ]
+   },
+   "katto": {
+    "tyyppi": "tasainen",
+    "kattoikkuna": [
+     2.0,
+     4.0
+    ],
+    "friisi": "cuypers",
+    "friisi_korkeus": 1.0
+   },
+   "seina": {
+    "materiaali": "rijks_harmaa",
+    "sokkeli": 0.25,
+    "paneeli": 0.0,
+    "lista": 0.3
+   },
+   "lattia": "parketti_tammi",
+   "valo": {
+    "lx": 150,
+    "ev100": 7.0,
+    "kelvin": 3500,
+    "paivanvalo": 0.3
+   }
+  },
+  {
+   "id": "yv",
+   "nimi": "Yövartio-sali",
+   "tyyppi": "paatysali",
+   "laatikko": {
+    "x": [
+     -8.0,
+     8.0
+    ],
+    "z": [
+     -73.8,
+     -89.8
+    ],
+    "y": [
+     0.0,
+     10.0
+    ]
+   },
+   "katto": {
+    "tyyppi": "kasetti",
+    "kattoikkuna": [
+     6.0,
+     6.0
+    ],
+    "kattolyhty": true
+   },
+   "seina": {
+    "materiaali": "rijks_harmaa",
+    "sokkeli": 0.25,
+    "paneeli": 0.0,
+    "lista": 0.8,
+    "friisi": "cuypers",
+    "friisi_korkeus": 1.2
+   },
+   "lattia": "parketti_tammi",
+   "valo": {
+    "lx": 180,
+    "ev100": 7.0,
+    "kelvin": 3300,
+    "paivanvalo": 0.35,
+    "huom": "Yövartio tumma ja suuri: 180 lx (CCI: tummat jopa 150–200)"
+   }
+  }
+ ],
+ "aukot": [
+  {
+   "id": "sisaankaynti",
+   "osat": [
+    "m1",
+    "aula"
+   ],
+   "seina": "+z",
+   "keskipiste": 0.0,
+   "leveys": 1.8,
+   "korkeus": 3.1,
+   "kaari": false,
+   "syvyys": 0.4
+  },
+  {
+   "id": "ovi-m1-m2",
+   "osat": [
+    "m1",
+    "m2"
+   ],
+   "seina": "-z",
+   "keskipiste": 0.0,
+   "leveys": 1.6,
+   "korkeus": 3.0,
+   "kaari": false,
+   "syvyys": 0.4
+  },
+  {
+   "id": "ovi-m2-m3",
+   "osat": [
+    "m2",
+    "m3"
+   ],
+   "seina": "-z",
+   "keskipiste": 0.0,
+   "leveys": 1.6,
+   "korkeus": 3.0,
+   "kaari": false,
+   "syvyys": 0.4
+  },
+  {
+   "id": "ovi-m3-kg",
+   "osat": [
+    "m3",
+    "kg"
+   ],
+   "seina": "-z",
+   "keskipiste": 0.0,
+   "leveys": 2.8,
+   "korkeus": 4.4,
+   "kaari": true,
+   "syvyys": 0.4
+  },
+  {
+   "id": "kaari-kg-k1v",
+   "osat": [
+    "kg",
+    "kg-k1v"
+   ],
+   "seina": "-x",
+   "keskipiste": -31.2,
+   "leveys": 5.4,
+   "korkeus": 7.2,
+   "kaari": true,
+   "syvyys": 0.6
+  },
+  {
+   "id": "kaari-kg-k1o",
+   "osat": [
+    "kg",
+    "kg-k1o"
+   ],
+   "seina": "+x",
+   "keskipiste": -31.2,
+   "leveys": 5.4,
+   "korkeus": 7.2,
+   "kaari": true,
+   "syvyys": 0.6
+  },
+  {
+   "id": "kaari-kg-k2v",
+   "osat": [
+    "kg",
+    "kg-k2v"
+   ],
+   "seina": "-x",
+   "keskipiste": -43.2,
+   "leveys": 5.4,
+   "korkeus": 7.2,
+   "kaari": true,
+   "syvyys": 0.6
+  },
+  {
+   "id": "kaari-kg-k2o",
+   "osat": [
+    "kg",
+    "kg-k2o"
+   ],
+   "seina": "+x",
+   "keskipiste": -43.2,
+   "leveys": 5.4,
+   "korkeus": 7.2,
+   "kaari": true,
+   "syvyys": 0.6
+  },
+  {
+   "id": "kaari-kg-k3v",
+   "osat": [
+    "kg",
+    "kg-k3v"
+   ],
+   "seina": "-x",
+   "keskipiste": -55.2,
+   "leveys": 5.4,
+   "korkeus": 7.2,
+   "kaari": true,
+   "syvyys": 0.6
+  },
+  {
+   "id": "kaari-kg-k3o",
+   "osat": [
+    "kg",
+    "kg-k3o"
+   ],
+   "seina": "+x",
+   "keskipiste": -55.2,
+   "leveys": 5.4,
+   "korkeus": 7.2,
+   "kaari": true,
+   "syvyys": 0.6
+  },
+  {
+   "id": "kaari-kg-k4v",
+   "osat": [
+    "kg",
+    "kg-k4v"
+   ],
+   "seina": "-x",
+   "keskipiste": -67.2,
+   "leveys": 5.4,
+   "korkeus": 7.2,
+   "kaari": true,
+   "syvyys": 0.6
+  },
+  {
+   "id": "kaari-kg-k4o",
+   "osat": [
+    "kg",
+    "kg-k4o"
+   ],
+   "seina": "+x",
+   "keskipiste": -67.2,
+   "leveys": 5.4,
+   "korkeus": 7.2,
+   "kaari": true,
+   "syvyys": 0.6
+  },
+  {
+   "id": "kaari-kg-yv",
+   "osat": [
+    "kg",
+    "yv"
+   ],
+   "seina": "-z",
+   "keskipiste": 0.0,
+   "leveys": 5.4,
+   "korkeus": 7.6,
+   "kaari": true,
+   "syvyys": 0.6
+  }
+ ],
+ "teospaikat": [
+  {
+   "id": "m1-v1",
+   "osa": "m1",
+   "seina": "-x",
+   "keskipiste": [
+    -4.0,
+    2.25,
+    -5.7
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "max_leveys": 1.7,
+   "max_korkeus": 1.5,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     -2.21,
+     5.35,
+     -5.7
+    ],
+    "suunta": [
+     -0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 19.3,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3200
+   },
+   "teos_ehdotus": "SK-A-2344"
+  },
+  {
+   "id": "m1-v2",
+   "osa": "m1",
+   "seina": "-x",
+   "keskipiste": [
+    -4.0,
+    2.25,
+    -2.3
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "max_leveys": 1.7,
+   "max_korkeus": 1.5,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     -2.21,
+     5.35,
+     -2.3
+    ],
+    "suunta": [
+     -0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 19.3,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3200
+   },
+   "teos_ehdotus": "SK-C-251"
+  },
+  {
+   "id": "m1-o1",
+   "osa": "m1",
+   "seina": "+x",
+   "keskipiste": [
+    4.0,
+    2.25,
+    -5.7
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "max_leveys": 1.7,
+   "max_korkeus": 1.5,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     2.21,
+     5.35,
+     -5.7
+    ],
+    "suunta": [
+     0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 19.3,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3200
+   },
+   "teos_ehdotus": "SK-A-2860"
+  },
+  {
+   "id": "m1-o2",
+   "osa": "m1",
+   "seina": "+x",
+   "keskipiste": [
+    4.0,
+    2.25,
+    -2.3
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "max_leveys": 1.7,
+   "max_korkeus": 1.5,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     2.21,
+     5.35,
+     -2.3
+    ],
+    "suunta": [
+     0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 19.3,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3200
+   },
+   "teos_ehdotus": "SK-A-1595"
+  },
+  {
+   "id": "m1-p1",
+   "osa": "m1",
+   "seina": "-z",
+   "keskipiste": [
+    -2.4,
+    2.2,
+    -8.0
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "max_leveys": 1.2,
+   "max_korkeus": 1.3,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_musta_kapea",
+   "valokeila": {
+    "paikka": [
+     -2.4,
+     5.35,
+     -6.181
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     -0.5
+    ],
+    "puolikulma_aste": 15.0,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3200
+   },
+   "teos_ehdotus": "SK-A-182"
+  },
+  {
+   "id": "m1-p2",
+   "osa": "m1",
+   "seina": "-z",
+   "keskipiste": [
+    2.4,
+    2.2,
+    -8.0
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "max_leveys": 1.2,
+   "max_korkeus": 1.3,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_musta_kapea",
+   "valokeila": {
+    "paikka": [
+     2.4,
+     5.35,
+     -6.181
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     -0.5
+    ],
+    "puolikulma_aste": 15.0,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3200
+   },
+   "teos_ehdotus": "SK-C-149"
+  },
+  {
+   "id": "m2-v1",
+   "osa": "m2",
+   "seina": "-x",
+   "keskipiste": [
+    -4.0,
+    1.55,
+    -14.667
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "max_leveys": 0.9,
+   "max_korkeus": 0.8,
+   "sopii": "grafiikka",
+   "kehysprofiili": "grafiikka",
+   "valokeila": {
+    "paikka": [
+     -2.268,
+     4.55,
+     -14.667
+    ],
+    "suunta": [
+     -0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 10.8,
+    "reunahaive": 0.35,
+    "lx": 50,
+    "kelvin": 3200
+   },
+   "teos_ehdotus": "RP-P-OB-444",
+   "paspis": {
+    "leveys_cm": 7,
+    "vari": [
+     236,
+     230,
+     214
+    ],
+    "lasi": true
+   }
+  },
+  {
+   "id": "m2-v2",
+   "osa": "m2",
+   "seina": "-x",
+   "keskipiste": [
+    -4.0,
+    1.55,
+    -12.4
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "max_leveys": 0.9,
+   "max_korkeus": 0.8,
+   "sopii": "grafiikka",
+   "kehysprofiili": "grafiikka",
+   "valokeila": {
+    "paikka": [
+     -2.268,
+     4.55,
+     -12.4
+    ],
+    "suunta": [
+     -0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 10.8,
+    "reunahaive": 0.35,
+    "lx": 50,
+    "kelvin": 3200
+   },
+   "teos_ehdotus": "RP-P-OB-602",
+   "paspis": {
+    "leveys_cm": 7,
+    "vari": [
+     236,
+     230,
+     214
+    ],
+    "lasi": true
+   }
+  },
+  {
+   "id": "m2-v3",
+   "osa": "m2",
+   "seina": "-x",
+   "keskipiste": [
+    -4.0,
+    1.55,
+    -10.133
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "max_leveys": 0.9,
+   "max_korkeus": 0.8,
+   "sopii": "grafiikka",
+   "kehysprofiili": "grafiikka",
+   "valokeila": {
+    "paikka": [
+     -2.268,
+     4.55,
+     -10.133
+    ],
+    "suunta": [
+     -0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 10.8,
+    "reunahaive": 0.35,
+    "lx": 50,
+    "kelvin": 3200
+   },
+   "teos_ehdotus": "RP-P-OB-578",
+   "paspis": {
+    "leveys_cm": 7,
+    "vari": [
+     236,
+     230,
+     214
+    ],
+    "lasi": true
+   }
+  },
+  {
+   "id": "m2-o1",
+   "osa": "m2",
+   "seina": "+x",
+   "keskipiste": [
+    4.0,
+    2.25,
+    -14.1
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "max_leveys": 1.7,
+   "max_korkeus": 1.5,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     2.21,
+     5.35,
+     -14.1
+    ],
+    "suunta": [
+     0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 19.3,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3200
+   },
+   "teos_ehdotus": "SK-A-4691"
+  },
+  {
+   "id": "m2-o2",
+   "osa": "m2",
+   "seina": "+x",
+   "keskipiste": [
+    4.0,
+    2.25,
+    -10.7
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "max_leveys": 1.7,
+   "max_korkeus": 1.5,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     2.21,
+     5.35,
+     -10.7
+    ],
+    "suunta": [
+     0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 19.3,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3200
+   },
+   "teos_ehdotus": "SK-A-3276"
+  },
+  {
+   "id": "m2-p1",
+   "osa": "m2",
+   "seina": "-z",
+   "keskipiste": [
+    -2.4,
+    1.55,
+    -16.4
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "max_leveys": 1.0,
+   "max_korkeus": 0.9,
+   "sopii": "grafiikka",
+   "kehysprofiili": "grafiikka",
+   "valokeila": {
+    "paikka": [
+     -2.4,
+     4.6,
+     -14.639
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     -0.5
+    ],
+    "puolikulma_aste": 11.9,
+    "reunahaive": 0.35,
+    "lx": 50,
+    "kelvin": 3200
+   },
+   "teos_ehdotus": "RP-P-OB-6",
+   "paspis": {
+    "leveys_cm": 7,
+    "vari": [
+     236,
+     230,
+     214
+    ],
+    "lasi": true
+   }
+  },
+  {
+   "id": "m2-p2",
+   "osa": "m2",
+   "seina": "-z",
+   "keskipiste": [
+    2.4,
+    1.55,
+    -16.4
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "max_leveys": 1.0,
+   "max_korkeus": 0.9,
+   "sopii": "grafiikka",
+   "kehysprofiili": "grafiikka",
+   "valokeila": {
+    "paikka": [
+     2.4,
+     4.6,
+     -14.639
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     -0.5
+    ],
+    "puolikulma_aste": 11.9,
+    "reunahaive": 0.35,
+    "lx": 50,
+    "kelvin": 3200
+   },
+   "teos_ehdotus": null,
+   "paspis": {
+    "leveys_cm": 7,
+    "vari": [
+     236,
+     230,
+     214
+    ],
+    "lasi": true
+   }
+  },
+  {
+   "id": "m3-v1",
+   "osa": "m3",
+   "seina": "-x",
+   "keskipiste": [
+    -4.0,
+    2.25,
+    -22.5
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "max_leveys": 1.7,
+   "max_korkeus": 1.5,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_kulta_1700",
+   "valokeila": {
+    "paikka": [
+     -2.21,
+     5.35,
+     -22.5
+    ],
+    "suunta": [
+     -0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 19.3,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3200
+   },
+   "teos_ehdotus": "SK-A-354"
+  },
+  {
+   "id": "m3-v2",
+   "osa": "m3",
+   "seina": "-x",
+   "keskipiste": [
+    -4.0,
+    2.25,
+    -19.1
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "max_leveys": 1.7,
+   "max_korkeus": 1.5,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_kulta_1700",
+   "valokeila": {
+    "paikka": [
+     -2.21,
+     5.35,
+     -19.1
+    ],
+    "suunta": [
+     -0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 19.3,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3200
+   },
+   "teos_ehdotus": "SK-A-2338"
+  },
+  {
+   "id": "m3-o1",
+   "osa": "m3",
+   "seina": "+x",
+   "keskipiste": [
+    4.0,
+    2.25,
+    -22.5
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "max_leveys": 1.7,
+   "max_korkeus": 1.5,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     2.21,
+     5.35,
+     -22.5
+    ],
+    "suunta": [
+     0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 19.3,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3200
+   },
+   "teos_ehdotus": "SK-A-199"
+  },
+  {
+   "id": "m3-o2",
+   "osa": "m3",
+   "seina": "+x",
+   "keskipiste": [
+    4.0,
+    2.25,
+    -19.1
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "max_leveys": 1.7,
+   "max_korkeus": 1.5,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     2.21,
+     5.35,
+     -19.1
+    ],
+    "suunta": [
+     0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 19.3,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3200
+   },
+   "teos_ehdotus": "SK-A-2099"
+  },
+  {
+   "id": "m3-e1",
+   "osa": "m3",
+   "seina": "+z",
+   "keskipiste": [
+    -2.4,
+    2.2,
+    -16.8
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "max_leveys": 1.2,
+   "max_korkeus": 1.3,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_musta_kapea",
+   "valokeila": {
+    "paikka": [
+     -2.4,
+     5.35,
+     -18.619
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     0.5
+    ],
+    "puolikulma_aste": 15.0,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3200
+   },
+   "teos_ehdotus": "SK-C-206"
+  },
+  {
+   "id": "m3-e2",
+   "osa": "m3",
+   "seina": "+z",
+   "keskipiste": [
+    2.4,
+    2.2,
+    -16.8
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "max_leveys": 1.2,
+   "max_korkeus": 1.3,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_musta_kapea",
+   "valokeila": {
+    "paikka": [
+     2.4,
+     5.35,
+     -18.619
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     0.5
+    ],
+    "puolikulma_aste": 15.0,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3200
+   },
+   "teos_ehdotus": "SK-A-2326"
+  },
+  {
+   "id": "kg-k1v-t1",
+   "osa": "kg-k1v",
+   "seina": "-x",
+   "keskipiste": [
+    -8.1,
+    2.9,
+    -31.2
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "max_leveys": 4.3,
+   "max_korkeus": 3.4,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     -5.617,
+     7.2,
+     -31.2
+    ],
+    "suunta": [
+     -0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 31.8,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": "SK-C-6"
+  },
+  {
+   "id": "kg-k1v-e1",
+   "osa": "kg-k1v",
+   "seina": "+z",
+   "keskipiste": [
+    -6.6,
+    2.5,
+    -28.2
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "max_leveys": 1.3,
+   "max_korkeus": 1.8,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     -6.6,
+     6.0,
+     -30.221
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     0.5
+    ],
+    "puolikulma_aste": 16.9,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": "SK-A-135"
+  },
+  {
+   "id": "kg-k1v-p1",
+   "osa": "kg-k1v",
+   "seina": "-z",
+   "keskipiste": [
+    -6.6,
+    2.5,
+    -34.2
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "max_leveys": 1.3,
+   "max_korkeus": 1.8,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     -6.6,
+     6.0,
+     -32.179
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     -0.5
+    ],
+    "puolikulma_aste": 16.9,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": "SK-A-1685"
+  },
+  {
+   "id": "kg-k1o-t1",
+   "osa": "kg-k1o",
+   "seina": "+x",
+   "keskipiste": [
+    8.1,
+    2.9,
+    -31.2
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "max_leveys": 4.3,
+   "max_korkeus": 3.4,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     5.617,
+     7.2,
+     -31.2
+    ],
+    "suunta": [
+     0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 31.8,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": "SK-C-216"
+  },
+  {
+   "id": "kg-k1o-e1",
+   "osa": "kg-k1o",
+   "seina": "+z",
+   "keskipiste": [
+    6.6,
+    2.5,
+    -28.2
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "max_leveys": 1.3,
+   "max_korkeus": 1.8,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     6.6,
+     6.0,
+     -30.221
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     0.5
+    ],
+    "puolikulma_aste": 16.9,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": "SK-A-4050"
+  },
+  {
+   "id": "kg-k1o-p1",
+   "osa": "kg-k1o",
+   "seina": "-z",
+   "keskipiste": [
+    6.6,
+    2.5,
+    -34.2
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "max_leveys": 1.3,
+   "max_korkeus": 1.8,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     6.6,
+     6.0,
+     -32.179
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     -0.5
+    ],
+    "puolikulma_aste": 16.9,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": "SK-A-3137"
+  },
+  {
+   "id": "kg-k2v-t1",
+   "osa": "kg-k2v",
+   "seina": "-x",
+   "keskipiste": [
+    -8.1,
+    2.9,
+    -43.2
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "max_leveys": 4.3,
+   "max_korkeus": 3.4,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     -5.617,
+     7.2,
+     -43.2
+    ],
+    "suunta": [
+     -0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 31.8,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": "SK-C-374"
+  },
+  {
+   "id": "kg-k2v-e1",
+   "osa": "kg-k2v",
+   "seina": "+z",
+   "keskipiste": [
+    -6.6,
+    2.5,
+    -40.2
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "max_leveys": 1.3,
+   "max_korkeus": 1.8,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     -6.6,
+     6.0,
+     -42.221
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     0.5
+    ],
+    "puolikulma_aste": 16.9,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": "SK-C-230"
+  },
+  {
+   "id": "kg-k2v-p1",
+   "osa": "kg-k2v",
+   "seina": "-z",
+   "keskipiste": [
+    -6.6,
+    2.5,
+    -46.2
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "max_leveys": 1.3,
+   "max_korkeus": 1.8,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     -6.6,
+     6.0,
+     -44.179
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     -0.5
+    ],
+    "puolikulma_aste": 16.9,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": "SK-A-385"
+  },
+  {
+   "id": "kg-k2o-t1",
+   "osa": "kg-k2o",
+   "seina": "+x",
+   "keskipiste": [
+    8.1,
+    2.9,
+    -43.2
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "max_leveys": 4.3,
+   "max_korkeus": 3.4,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     5.617,
+     7.2,
+     -43.2
+    ],
+    "suunta": [
+     0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 31.8,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": "SK-C-229"
+  },
+  {
+   "id": "kg-k2o-e1",
+   "osa": "kg-k2o",
+   "seina": "+z",
+   "keskipiste": [
+    6.6,
+    2.5,
+    -40.2
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "max_leveys": 1.3,
+   "max_korkeus": 1.8,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     6.6,
+     6.0,
+     -42.221
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     0.5
+    ],
+    "puolikulma_aste": 16.9,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": "SK-A-404"
+  },
+  {
+   "id": "kg-k2o-p1",
+   "osa": "kg-k2o",
+   "seina": "-z",
+   "keskipiste": [
+    6.6,
+    2.5,
+    -46.2
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "max_leveys": 1.3,
+   "max_korkeus": 1.8,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     6.6,
+     6.0,
+     -44.179
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     -0.5
+    ],
+    "puolikulma_aste": 16.9,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": null
+  },
+  {
+   "id": "kg-k3v-t1",
+   "osa": "kg-k3v",
+   "seina": "-x",
+   "keskipiste": [
+    -8.1,
+    2.9,
+    -55.2
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "max_leveys": 4.3,
+   "max_korkeus": 3.4,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     -5.617,
+     7.2,
+     -55.2
+    ],
+    "suunta": [
+     -0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 31.8,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": "SK-A-4"
+  },
+  {
+   "id": "kg-k3v-e1",
+   "osa": "kg-k3v",
+   "seina": "+z",
+   "keskipiste": [
+    -6.6,
+    2.5,
+    -52.2
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "max_leveys": 1.3,
+   "max_korkeus": 1.8,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     -6.6,
+     6.0,
+     -54.221
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     0.5
+    ],
+    "puolikulma_aste": 16.9,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": "SK-C-211"
+  },
+  {
+   "id": "kg-k3v-p1",
+   "osa": "kg-k3v",
+   "seina": "-z",
+   "keskipiste": [
+    -6.6,
+    2.5,
+    -58.2
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "max_leveys": 1.3,
+   "max_korkeus": 1.8,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     -6.6,
+     6.0,
+     -56.179
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     -0.5
+    ],
+    "puolikulma_aste": 16.9,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": "SK-A-351"
+  },
+  {
+   "id": "kg-k3o-t1",
+   "osa": "kg-k3o",
+   "seina": "+x",
+   "keskipiste": [
+    8.1,
+    2.9,
+    -55.2
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "max_leveys": 4.3,
+   "max_korkeus": 3.4,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     5.617,
+     7.2,
+     -55.2
+    ],
+    "suunta": [
+     0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 31.8,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": "SK-A-1718"
+  },
+  {
+   "id": "kg-k3o-e1",
+   "osa": "kg-k3o",
+   "seina": "+z",
+   "keskipiste": [
+    6.6,
+    2.5,
+    -52.2
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "max_leveys": 1.3,
+   "max_korkeus": 1.8,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     6.6,
+     6.0,
+     -54.221
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     0.5
+    ],
+    "puolikulma_aste": 16.9,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": "SK-A-1320"
+  },
+  {
+   "id": "kg-k3o-p1",
+   "osa": "kg-k3o",
+   "seina": "-z",
+   "keskipiste": [
+    6.6,
+    2.5,
+    -58.2
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "max_leveys": 1.3,
+   "max_korkeus": 1.8,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     6.6,
+     6.0,
+     -56.179
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     -0.5
+    ],
+    "puolikulma_aste": 16.9,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": "SK-C-244"
+  },
+  {
+   "id": "kg-k4v-t1",
+   "osa": "kg-k4v",
+   "seina": "-x",
+   "keskipiste": [
+    -8.1,
+    2.9,
+    -67.2
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "max_leveys": 4.3,
+   "max_korkeus": 3.4,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     -5.617,
+     7.2,
+     -67.2
+    ],
+    "suunta": [
+     -0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 31.8,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": "SK-A-45"
+  },
+  {
+   "id": "kg-k4v-e1",
+   "osa": "kg-k4v",
+   "seina": "+z",
+   "keskipiste": [
+    -6.6,
+    2.5,
+    -64.2
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "max_leveys": 1.3,
+   "max_korkeus": 1.8,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     -6.6,
+     6.0,
+     -66.221
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     0.5
+    ],
+    "puolikulma_aste": 16.9,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": "SK-A-156"
+  },
+  {
+   "id": "kg-k4v-p1",
+   "osa": "kg-k4v",
+   "seina": "-z",
+   "keskipiste": [
+    -6.6,
+    2.5,
+    -70.2
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "max_leveys": 1.3,
+   "max_korkeus": 1.8,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     -6.6,
+     6.0,
+     -68.179
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     -0.5
+    ],
+    "puolikulma_aste": 16.9,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": "SK-A-3957"
+  },
+  {
+   "id": "kg-k4o-t1",
+   "osa": "kg-k4o",
+   "seina": "+x",
+   "keskipiste": [
+    8.1,
+    2.9,
+    -67.2
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "max_leveys": 4.3,
+   "max_korkeus": 3.4,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     5.617,
+     7.2,
+     -67.2
+    ],
+    "suunta": [
+     0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 31.8,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": "SK-A-44"
+  },
+  {
+   "id": "kg-k4o-e1",
+   "osa": "kg-k4o",
+   "seina": "+z",
+   "keskipiste": [
+    6.6,
+    2.5,
+    -64.2
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "max_leveys": 1.3,
+   "max_korkeus": 1.8,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     6.6,
+     6.0,
+     -66.221
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     0.5
+    ],
+    "puolikulma_aste": 16.9,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": "SK-A-2979"
+  },
+  {
+   "id": "kg-k4o-p1",
+   "osa": "kg-k4o",
+   "seina": "-z",
+   "keskipiste": [
+    6.6,
+    2.5,
+    -70.2
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "max_leveys": 1.3,
+   "max_korkeus": 1.8,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     6.6,
+     6.0,
+     -68.179
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     -0.5
+    ],
+    "puolikulma_aste": 16.9,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": "SK-A-1328"
+  },
+  {
+   "id": "kg-pilari1v",
+   "osa": "kg",
+   "seina": "-x",
+   "keskipiste": [
+    -4.5,
+    3.4,
+    -37.2
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "max_leveys": 3.0,
+   "max_korkeus": 2.8,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     -2.191,
+     7.4,
+     -37.2
+    ],
+    "suunta": [
+     -0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 26.3,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": null
+  },
+  {
+   "id": "kg-pilari1o",
+   "osa": "kg",
+   "seina": "+x",
+   "keskipiste": [
+    4.5,
+    3.4,
+    -37.2
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "max_leveys": 3.0,
+   "max_korkeus": 2.8,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     2.191,
+     7.4,
+     -37.2
+    ],
+    "suunta": [
+     0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 26.3,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": null
+  },
+  {
+   "id": "kg-pilari2v",
+   "osa": "kg",
+   "seina": "-x",
+   "keskipiste": [
+    -4.5,
+    3.4,
+    -49.2
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "max_leveys": 3.0,
+   "max_korkeus": 2.8,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     -2.191,
+     7.4,
+     -49.2
+    ],
+    "suunta": [
+     -0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 26.3,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": null
+  },
+  {
+   "id": "kg-pilari2o",
+   "osa": "kg",
+   "seina": "+x",
+   "keskipiste": [
+    4.5,
+    3.4,
+    -49.2
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "max_leveys": 3.0,
+   "max_korkeus": 2.8,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     2.191,
+     7.4,
+     -49.2
+    ],
+    "suunta": [
+     0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 26.3,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": null
+  },
+  {
+   "id": "kg-pilari3v",
+   "osa": "kg",
+   "seina": "-x",
+   "keskipiste": [
+    -4.5,
+    3.4,
+    -61.2
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "max_leveys": 3.0,
+   "max_korkeus": 2.8,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     -2.191,
+     7.4,
+     -61.2
+    ],
+    "suunta": [
+     -0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 26.3,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": null
+  },
+  {
+   "id": "kg-pilari3o",
+   "osa": "kg",
+   "seina": "+x",
+   "keskipiste": [
+    4.5,
+    3.4,
+    -61.2
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "max_leveys": 3.0,
+   "max_korkeus": 2.8,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     2.191,
+     7.4,
+     -61.2
+    ],
+    "suunta": [
+     0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 26.3,
+    "reunahaive": 0.35,
+    "lx": 150,
+    "kelvin": 3500
+   },
+   "teos_ehdotus": null
+  },
+  {
+   "id": "yv-yovartio",
+   "osa": "yv",
+   "seina": "-z",
+   "keskipiste": [
+    0.0,
+    3.05,
+    -89.8
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "max_leveys": 5.4,
+   "max_korkeus": 4.3,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_yovartio",
+   "valokeila": {
+    "paikka": [
+     0.0,
+     7.8,
+     -87.058
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     -0.5
+    ],
+    "puolikulma_aste": 35.4,
+    "reunahaive": 0.35,
+    "lx": 180,
+    "kelvin": 3300
+   },
+   "teos_ehdotus": "SK-C-5"
+  },
+  {
+   "id": "yv-v1",
+   "osa": "yv",
+   "seina": "-x",
+   "keskipiste": [
+    -8.0,
+    2.9,
+    -85.5
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "max_leveys": 2.8,
+   "max_korkeus": 2.6,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     -5.748,
+     6.8,
+     -85.5
+    ],
+    "suunta": [
+     -0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 25.3,
+    "reunahaive": 0.35,
+    "lx": 180,
+    "kelvin": 3300
+   },
+   "teos_ehdotus": null
+  },
+  {
+   "id": "yv-v2",
+   "osa": "yv",
+   "seina": "-x",
+   "keskipiste": [
+    -8.0,
+    2.9,
+    -78.1
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "max_leveys": 2.8,
+   "max_korkeus": 2.6,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     -5.748,
+     6.8,
+     -78.1
+    ],
+    "suunta": [
+     -0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 25.3,
+    "reunahaive": 0.35,
+    "lx": 180,
+    "kelvin": 3300
+   },
+   "teos_ehdotus": null
+  },
+  {
+   "id": "yv-o1",
+   "osa": "yv",
+   "seina": "+x",
+   "keskipiste": [
+    8.0,
+    2.9,
+    -85.5
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "max_leveys": 2.8,
+   "max_korkeus": 2.6,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     5.748,
+     6.8,
+     -85.5
+    ],
+    "suunta": [
+     0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 25.3,
+    "reunahaive": 0.35,
+    "lx": 180,
+    "kelvin": 3300
+   },
+   "teos_ehdotus": null
+  },
+  {
+   "id": "yv-o2",
+   "osa": "yv",
+   "seina": "+x",
+   "keskipiste": [
+    8.0,
+    2.9,
+    -78.1
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "max_leveys": 2.8,
+   "max_korkeus": 2.6,
+   "sopii": "maalaus",
+   "kehysprofiili": "nl_aalto_musta",
+   "valokeila": {
+    "paikka": [
+     5.748,
+     6.8,
+     -78.1
+    ],
+    "suunta": [
+     0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 25.3,
+    "reunahaive": 0.35,
+    "lx": 180,
+    "kelvin": 3300
+   },
+   "teos_ehdotus": null
+  }
+ ],
+ "tekstitaulut": [
+  {
+   "id": "taulu-m1-v1",
+   "teospaikka": "m1-v1",
+   "keskipiste": [
+    -3.99,
+    1.45,
+    -4.5
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-m1-v2",
+   "teospaikka": "m1-v2",
+   "keskipiste": [
+    -3.99,
+    1.45,
+    -1.1
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-m1-o1",
+   "teospaikka": "m1-o1",
+   "keskipiste": [
+    3.99,
+    1.45,
+    -6.9
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-m1-o2",
+   "teospaikka": "m1-o2",
+   "keskipiste": [
+    3.99,
+    1.45,
+    -1.1
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-m1-p1",
+   "teospaikka": "m1-p1",
+   "keskipiste": [
+    -3.35,
+    1.45,
+    -7.99
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-m1-p2",
+   "teospaikka": "m1-p2",
+   "keskipiste": [
+    3.35,
+    1.45,
+    -7.99
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-m2-v1",
+   "teospaikka": "m2-v1",
+   "keskipiste": [
+    -3.99,
+    1.45,
+    -13.867
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-m2-v2",
+   "teospaikka": "m2-v2",
+   "keskipiste": [
+    -3.99,
+    1.45,
+    -11.6
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-m2-v3",
+   "teospaikka": "m2-v3",
+   "keskipiste": [
+    -3.99,
+    1.45,
+    -9.333
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-m2-o1",
+   "teospaikka": "m2-o1",
+   "keskipiste": [
+    3.99,
+    1.45,
+    -15.3
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-m2-o2",
+   "teospaikka": "m2-o2",
+   "keskipiste": [
+    3.99,
+    1.45,
+    -9.5
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-m2-p1",
+   "teospaikka": "m2-p1",
+   "keskipiste": [
+    -3.25,
+    1.45,
+    -16.39
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-m2-p2",
+   "teospaikka": "m2-p2",
+   "keskipiste": [
+    3.25,
+    1.45,
+    -16.39
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-m3-v1",
+   "teospaikka": "m3-v1",
+   "keskipiste": [
+    -3.99,
+    1.45,
+    -21.3
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-m3-v2",
+   "teospaikka": "m3-v2",
+   "keskipiste": [
+    -3.99,
+    1.45,
+    -17.9
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-m3-o1",
+   "teospaikka": "m3-o1",
+   "keskipiste": [
+    3.99,
+    1.45,
+    -23.7
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-m3-o2",
+   "teospaikka": "m3-o2",
+   "keskipiste": [
+    3.99,
+    1.45,
+    -17.9
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-m3-e1",
+   "teospaikka": "m3-e1",
+   "keskipiste": [
+    -1.45,
+    1.45,
+    -16.81
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-m3-e2",
+   "teospaikka": "m3-e2",
+   "keskipiste": [
+    3.35,
+    1.45,
+    -16.81
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k1v-t1",
+   "teospaikka": "kg-k1v-t1",
+   "keskipiste": [
+    -8.09,
+    1.45,
+    -28.7
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k1v-e1",
+   "teospaikka": "kg-k1v-e1",
+   "keskipiste": [
+    -5.6,
+    1.45,
+    -28.21
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k1v-p1",
+   "teospaikka": "kg-k1v-p1",
+   "keskipiste": [
+    -7.6,
+    1.45,
+    -34.19
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k1o-t1",
+   "teospaikka": "kg-k1o-t1",
+   "keskipiste": [
+    8.09,
+    1.45,
+    -33.7
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k1o-e1",
+   "teospaikka": "kg-k1o-e1",
+   "keskipiste": [
+    7.6,
+    1.45,
+    -28.21
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k1o-p1",
+   "teospaikka": "kg-k1o-p1",
+   "keskipiste": [
+    5.6,
+    1.45,
+    -34.19
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k2v-t1",
+   "teospaikka": "kg-k2v-t1",
+   "keskipiste": [
+    -8.09,
+    1.45,
+    -40.7
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k2v-e1",
+   "teospaikka": "kg-k2v-e1",
+   "keskipiste": [
+    -5.6,
+    1.45,
+    -40.21
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k2v-p1",
+   "teospaikka": "kg-k2v-p1",
+   "keskipiste": [
+    -7.6,
+    1.45,
+    -46.19
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k2o-t1",
+   "teospaikka": "kg-k2o-t1",
+   "keskipiste": [
+    8.09,
+    1.45,
+    -45.7
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k2o-e1",
+   "teospaikka": "kg-k2o-e1",
+   "keskipiste": [
+    7.6,
+    1.45,
+    -40.21
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k2o-p1",
+   "teospaikka": "kg-k2o-p1",
+   "keskipiste": [
+    5.6,
+    1.45,
+    -46.19
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k3v-t1",
+   "teospaikka": "kg-k3v-t1",
+   "keskipiste": [
+    -8.09,
+    1.45,
+    -52.7
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k3v-e1",
+   "teospaikka": "kg-k3v-e1",
+   "keskipiste": [
+    -5.6,
+    1.45,
+    -52.21
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k3v-p1",
+   "teospaikka": "kg-k3v-p1",
+   "keskipiste": [
+    -7.6,
+    1.45,
+    -58.19
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k3o-t1",
+   "teospaikka": "kg-k3o-t1",
+   "keskipiste": [
+    8.09,
+    1.45,
+    -57.7
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k3o-e1",
+   "teospaikka": "kg-k3o-e1",
+   "keskipiste": [
+    7.6,
+    1.45,
+    -52.21
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k3o-p1",
+   "teospaikka": "kg-k3o-p1",
+   "keskipiste": [
+    5.6,
+    1.45,
+    -58.19
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k4v-t1",
+   "teospaikka": "kg-k4v-t1",
+   "keskipiste": [
+    -8.09,
+    1.45,
+    -64.7
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k4v-e1",
+   "teospaikka": "kg-k4v-e1",
+   "keskipiste": [
+    -5.6,
+    1.45,
+    -64.21
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k4v-p1",
+   "teospaikka": "kg-k4v-p1",
+   "keskipiste": [
+    -7.6,
+    1.45,
+    -70.19
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k4o-t1",
+   "teospaikka": "kg-k4o-t1",
+   "keskipiste": [
+    8.09,
+    1.45,
+    -69.7
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k4o-e1",
+   "teospaikka": "kg-k4o-e1",
+   "keskipiste": [
+    7.6,
+    1.45,
+    -64.21
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-k4o-p1",
+   "teospaikka": "kg-k4o-p1",
+   "keskipiste": [
+    5.6,
+    1.45,
+    -70.19
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-pilari1v",
+   "teospaikka": "kg-pilari1v",
+   "keskipiste": [
+    -4.49,
+    1.45,
+    -35.35
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-pilari1o",
+   "teospaikka": "kg-pilari1o",
+   "keskipiste": [
+    4.49,
+    1.45,
+    -39.05
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-pilari2v",
+   "teospaikka": "kg-pilari2v",
+   "keskipiste": [
+    -4.49,
+    1.45,
+    -47.35
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-pilari2o",
+   "teospaikka": "kg-pilari2o",
+   "keskipiste": [
+    4.49,
+    1.45,
+    -51.05
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-pilari3v",
+   "teospaikka": "kg-pilari3v",
+   "keskipiste": [
+    -4.49,
+    1.45,
+    -59.35
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-kg-pilari3o",
+   "teospaikka": "kg-pilari3o",
+   "keskipiste": [
+    4.49,
+    1.45,
+    -63.05
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-yv-yovartio",
+   "teospaikka": "yv-yovartio",
+   "keskipiste": [
+    -3.05,
+    1.45,
+    -89.79
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-yv-v1",
+   "teospaikka": "yv-v1",
+   "keskipiste": [
+    -7.99,
+    1.45,
+    -83.75
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-yv-v2",
+   "teospaikka": "yv-v2",
+   "keskipiste": [
+    -7.99,
+    1.45,
+    -76.35
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-yv-o1",
+   "teospaikka": "yv-o1",
+   "keskipiste": [
+    7.99,
+    1.45,
+    -87.25
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-yv-o2",
+   "teospaikka": "yv-o2",
+   "keskipiste": [
+    7.99,
+    1.45,
+    -76.35
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  }
+ ],
+ "kehysprofiilit": {
+  "nl_aalto_musta": {
+   "pisteet_cm": [
+    [
+     12,
+     0
+    ],
+    [
+     12,
+     2.6
+    ],
+    [
+     11.2,
+     3.4
+    ],
+    [
+     10.2,
+     3.4
+    ],
+    [
+     9.4,
+     4.6
+    ],
+    [
+     6.8,
+     6.9
+    ],
+    [
+     4.4,
+     6.4
+    ],
+    [
+     3.2,
+     5.2
+    ],
+    [
+     2.2,
+     4.3
+    ],
+    [
+     1.3,
+     4.7
+    ],
+    [
+     0.4,
+     4.3
+    ],
+    [
+     0,
+     3.6
+    ],
+    [
+     0,
+     1.6
+    ],
+    [
+     -0.6,
+     1.6
+    ]
+   ],
+   "kuvaus": "1600-luvun ebonoitu aaltolistakehys (golflijst): leveä kalteva nauha ja kapea sisähelmi",
+   "materiaali": "musta",
+   "aaltokuvio": {
+    "nauhat_cm": [
+     [
+      9.4,
+      6.8
+     ],
+     [
+      2.2,
+      1.3
+     ]
+    ],
+    "jakso_mm": 6.0,
+    "syvyys_mm": 1.0,
+    "huom": "normaalikarttana pursotuksen suuntaan"
+   }
+  },
+  "nl_musta_kapea": {
+   "pisteet_cm": [
+    [
+     7,
+     0
+    ],
+    [
+     7,
+     2.2
+    ],
+    [
+     6.2,
+     3.0
+    ],
+    [
+     4.0,
+     4.4
+    ],
+    [
+     2.0,
+     4.0
+    ],
+    [
+     1.0,
+     3.2
+    ],
+    [
+     0,
+     2.8
+    ],
+    [
+     0,
+     1.2
+    ],
+    [
+     -0.5,
+     1.2
+    ]
+   ],
+   "kuvaus": "kabinettimaalausten kapea musta kehys",
+   "materiaali": "musta",
+   "aaltokuvio": {
+    "nauhat_cm": [
+     [
+      6.2,
+      4.0
+     ]
+    ],
+    "jakso_mm": 5.0,
+    "syvyys_mm": 0.8
+   }
+  },
+  "nl_kulta_1700": {
+   "pisteet_cm": [
+    [
+     14,
+     0
+    ],
+    [
+     14,
+     3.0
+    ],
+    [
+     13,
+     4.2
+    ],
+    [
+     11,
+     5.2
+    ],
+    [
+     8,
+     6.4
+    ],
+    [
+     6,
+     6.0
+    ],
+    [
+     4,
+     4.6
+    ],
+    [
+     2.6,
+     4.9
+    ],
+    [
+     1.2,
+     4.0
+    ],
+    [
+     0,
+     3.2
+    ],
+    [
+     0,
+     1.4
+    ],
+    [
+     -0.6,
+     1.4
+    ]
+   ],
+   "kuvaus": "1700-luvun kullattu Louis XIV -tyylinen profiili (kukka-asetelmille)",
+   "materiaali": "kulta"
+  },
+  "nl_yovartio": {
+   "pisteet_cm": [
+    [
+     24,
+     0
+    ],
+    [
+     24,
+     4.0
+    ],
+    [
+     22.5,
+     5.5
+    ],
+    [
+     20,
+     5.8
+    ],
+    [
+     16,
+     9.0
+    ],
+    [
+     11,
+     10.5
+    ],
+    [
+     7,
+     9.6
+    ],
+    [
+     4.5,
+     7.4
+    ],
+    [
+     3.2,
+     6.6
+    ],
+    [
+     2.0,
+     6.9
+    ],
+    [
+     1.0,
+     6.0
+    ],
+    [
+     0,
+     5.2
+    ],
+    [
+     0,
+     2.0
+    ],
+    [
+     -0.8,
+     2.0
+    ]
+   ],
+   "kuvaus": "Yövartion leveä musta kehys, sisällä kultaliuska (2 cm)",
+   "materiaali": "musta",
+   "materiaalit": [
+    "musta",
+    "musta",
+    "musta",
+    "musta",
+    "musta",
+    "musta",
+    "musta",
+    "musta",
+    "musta",
+    "kulta",
+    "kulta",
+    "kulta",
+    "kulta"
+   ]
+  },
+  "grafiikka": {
+   "pisteet_cm": [
+    [
+     3.0,
+     0
+    ],
+    [
+     3.0,
+     2.4
+    ],
+    [
+     2.4,
+     3.0
+    ],
+    [
+     0.6,
+     3.0
+    ],
+    [
+     0,
+     2.4
+    ],
+    [
+     0,
+     0.6
+    ],
+    [
+     -0.4,
+     0.6
+    ]
+   ],
+   "kuvaus": "grafiikan kapea musta puukehys; passepartout 7 cm ja lasi teospaikan paspis-kentästä",
+   "materiaali": "musta"
+  }
+ },
+ "reitti": [
+  {
+   "p": [
+    0.0,
+    1.6,
+    3.6
+   ],
+   "katse": [
+    0.0,
+    1.6,
+    -8.0
+   ],
+   "pysahdys_s": 0,
+   "kohde": null
+  },
+  {
+   "p": [
+    -1.45,
+    1.6,
+    -2.3
+   ],
+   "katse": [
+    -4.0,
+    2.25,
+    -2.3
+   ],
+   "pysahdys_s": 6,
+   "kohde": "m1-v2"
+  },
+  {
+   "p": [
+    1.45,
+    1.6,
+    -5.7
+   ],
+   "katse": [
+    4.0,
+    2.25,
+    -5.7
+   ],
+   "pysahdys_s": 6,
+   "kohde": "m1-o1"
+  },
+  {
+   "p": [
+    -1.8,
+    1.6,
+    -12.4
+   ],
+   "katse": [
+    -4.0,
+    1.55,
+    -12.4
+   ],
+   "pysahdys_s": 5,
+   "kohde": "m2-v2"
+  },
+  {
+   "p": [
+    1.45,
+    1.6,
+    -14.1
+   ],
+   "katse": [
+    4.0,
+    2.25,
+    -14.1
+   ],
+   "pysahdys_s": 5,
+   "kohde": "m2-o1"
+  },
+  {
+   "p": [
+    -1.45,
+    1.6,
+    -22.5
+   ],
+   "katse": [
+    -4.0,
+    2.25,
+    -22.5
+   ],
+   "pysahdys_s": 5,
+   "kohde": "m3-v1"
+  },
+  {
+   "p": [
+    0.0,
+    1.6,
+    -24.0
+   ],
+   "katse": [
+    0.0,
+    3.0,
+    -73.0
+   ],
+   "pysahdys_s": 0,
+   "kohde": null
+  },
+  {
+   "p": [
+    -1.215,
+    1.6,
+    -31.2
+   ],
+   "katse": [
+    -8.1,
+    2.9,
+    -31.2
+   ],
+   "pysahdys_s": 8,
+   "kohde": "kg-k1v-t1"
+  },
+  {
+   "p": [
+    1.215,
+    1.6,
+    -31.2
+   ],
+   "katse": [
+    8.1,
+    2.9,
+    -31.2
+   ],
+   "pysahdys_s": 8,
+   "kohde": "kg-k1o-t1"
+  },
+  {
+   "p": [
+    -1.215,
+    1.6,
+    -43.2
+   ],
+   "katse": [
+    -8.1,
+    2.9,
+    -43.2
+   ],
+   "pysahdys_s": 6,
+   "kohde": "kg-k2v-t1"
+  },
+  {
+   "p": [
+    -1.215,
+    1.6,
+    -55.2
+   ],
+   "katse": [
+    -8.1,
+    2.9,
+    -55.2
+   ],
+   "pysahdys_s": 6,
+   "kohde": "kg-k3v-t1"
+  },
+  {
+   "p": [
+    1.215,
+    1.6,
+    -67.2
+   ],
+   "katse": [
+    8.1,
+    2.9,
+    -67.2
+   ],
+   "pysahdys_s": 5,
+   "kohde": "kg-k4o-t1"
+  },
+  {
+   "p": [
+    0.0,
+    1.6,
+    -70.0
+   ],
+   "katse": [
+    0.0,
+    3.0,
+    -89.8
+   ],
+   "pysahdys_s": 0,
+   "kohde": null
+  },
+  {
+   "p": [
+    0.0,
+    1.6,
+    -82.3
+   ],
+   "katse": [
+    0.0,
+    3.05,
+    -89.8
+   ],
+   "pysahdys_s": 12,
+   "kohde": "yv-yovartio"
+  }
+ ],
+ "yhteenveto": {
+  "osia": 14,
+  "aukkoja": 13,
+  "teospaikkoja": 54,
+  "grafiikka": 5,
+  "tekstitauluja": 54,
+  "reittipisteita": 14
+ }
+}
