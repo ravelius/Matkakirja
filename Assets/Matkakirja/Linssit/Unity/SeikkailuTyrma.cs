@@ -162,7 +162,9 @@ namespace Matkakirja.Natiivi
             if (ydin.Vaihe == TyrmanVaihe.AvaimetOlissa) return avaimet;
             if (ydin.Vaihe == TyrmanVaihe.AvaimetKadessa) return ovi;
             if (ydin.Vaihe == TyrmanVaihe.Istuu && ydin.Muunnelma == 3) return SeikkailuEsineet.Aktiivinen?.Irrottamaton(ryomi) ?? ryomi;
-            return ydin.Muunnelma == 3 && ryomiOn ? ryomi : ydin.Vaihe == TyrmanVaihe.OviAuki ? ulos : ovi;
+            // Muunnelma 3: kivi irti → aukon suu (ryömintä alkaa siitä); Pulun 60 s:n avauksen jälkeen ulos oven kautta (A3).
+            if (ydin.Muunnelma == 3 && ryomiOn && !puluAvasi) return aukonSuu;
+            return ydin.Vaihe == TyrmanVaihe.OviAuki ? ulos : ovi;
         }
 
         void KiviIrti(string id) { if (id.StartsWith("irtokivi", StringComparison.Ordinal) && ydin.KiviIrti()) { kirjaa?.Invoke("seikkailu: tyrmä: irtokivi irti, aukko auki"); Kolina(ovi); } }
