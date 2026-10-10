@@ -183,3 +183,25 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
   Cycles-valo leivottu COLOR_0:aan (ANSA: vertex-leivonta antoi 0, koska palkkien kärjet ovat solmujen sisällä → leivontakopio, tahkot kutistettu 0,8),
   maa graniitti (CC0) + tornin varjo. Tarkistus `lahde/eiffel_peli.py` (emissio = pelin kaltainen). Portti: maa −1 % → läpi; torni ei vertailukelpoinen
   (kallistuu ilmakuvassa). v1d: glb-v1d/. Odottaa LS2:n paria (Google vs v2 880/600/250 m) → säätö (väri 136/98/68, valon kontrasti 0,18 + 0,95·valo).
+
+## TAUKO 12.5x (omistaja/PT: vain bugikorjaussessiot, kunnes juna 176 / build 177 ja tilinvaihto tehty) — TILA
+- **Eiffel v2: omistaja perui 12.3x, Googlen torni jää** → ei LS2:lle eikä vientiin (tiedostot eiffel-v1/glb = v2, v1d glb-v1d/; ei mitään tehtävää).
+- **Palatsi-viipale (Siirtoseppä):** osat.json palatsi rajat.min z −10,95 → −10,6 molemmissa (v44 + v44-nyky; vanhat olavinlinna-kavely-v1/
+  palatsi-viipale-talteen/), kavely.py RAJAT_MIN_Z. Worktree /Users/Shared/Claude/wt/linnanrakentaja-linna-v45f (haara origossa).
+  - 1499 VALMIS: blender 6e0c8bc2cea7df48, v45f 1de4aba50, CI 38042242356 → **PALA cf16ad94ef3c76bc**.
+  - NYKY KESKEN: vie-blender pysäytetty kesken latauksen TAUON takia (blender.json ei ladattu → vaaraton). Jatka:
+    `cd wt/linnanrakentaja-linna-v45f; source ~/.zshrc; zsh tools/dioraama/vie-blender.sh --lahde /Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-blender-v44-nyky`
+    → commit blender.json + push → `gh workflow run vie-dioraama.yml --ref linnanrakentaja-linna-v45f -f rakennus=olavinlinna -f kuiva=false -f osoitin=false`
+    → PALA-hash lokista (grep olavinlinna/<16 hex>/) → hashit Siirtosepälle ja PT:lle (molemmat yhtä aikaa).
+- **NL-sali v2 VALMIS tiedostoina, ei lähetetty** (_valmiit/taidemuseo-alankomaat-v2, LAHTEET.md): 34 veistosta (patsaat/ lod0 40 k + lod1 6 k,
+  mittakaava ARVIO kunnes Sisältökirjurin mitat.json tulee: _tyo/sisaltokirjuri/taidemuseo-alankomaat-20261010/patsaat/mitat.json → päivitä
+  patsaat-taulu.json korkeus_m, aja patsaat_pakkaa.py + alankomaat.py + tuotanto uudelleen), 13 grafiikkaa, grafiikkakabinetti, pilasterit,
+  kaarikehykset; glb/sali-lod{0,1}.glb + valot/ leivottu + astcm. Runkoon (taidemuseo-runko/lahde) lisätty: pilasterit, kaarikehys, veistos(**muut),
+  sali_kuvat --patsaat. Arkki docs/raportit/kaappaukset/linnanrakentaja-museo-20261010/taidemuseo-nl-v2-arkki.jpg → PT:lle hyväksyttäväksi, sitten LS1.
+  Simpelveldin sarkofagi jätetty pois (mittakaava epäselvä). Keyser/Verhulst skannattu vain edestä → selkä seinää kohti.
+- **Siirtosepän arkki v46z-176-b (12.2x):** 1) rannan vaaleat kivet liian kirkkaat saaren reunalla 1499 (kuten v46w), 2) ponttonisillan kohdalla
+  linnan itäpään vieressä kelluu ennen 1975 pieniä tummia palasia (ponttonisillan leikkauksen ulkopuolelle jääneitä osia) → seuraava Olavinlinna-erä.
+- **PT 12.4x (odottaa tauon loppua):** 1) ND v4c LS2:n etukuvaparin mukaan (nd-edesta-v3h.jpg, LS2:n checkout 1eacff13e): julkisivu lämmin beige
+  (ei valkoinen), portaalit porrastettuina syvennyksinä geometriana + AO (tummat 70 m:stä), tornien aukot ja kuninkaiden galleria tummina, ruusuikkuna
+  tumma; onnistuessa porttiin edestä-vyöhyke (länteen katsovat pystypinnat). 2) Peking: portti laattoihin vertailu/peking-ortoa vasten ND v4c:n
+  jälkeen; katot kylläisen oranssit (oikea kullankeltainen lasite), Kansan suuri halli ja museo litteinä harmaina laattoina 500–1 500 m:stä.
