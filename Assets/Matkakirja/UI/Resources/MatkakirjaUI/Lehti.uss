@@ -846,7 +846,7 @@
 
 .mk-lehti__selausaihe {
     max-width: 114px;
-    font-size: 10.56px;
+    font-size: var(--tk-koko-kapiteeli); /* oli 10,56 px (asteikon ulkopuolella, 10.10.2026) */
     letter-spacing: 11.82px; /* web 1.248px */
     color: var(--sea-ink);
     overflow: hidden;
@@ -2799,7 +2799,7 @@
 }
 
 .mk-lehti__osio-juttunappi .mk-nappi__teksti {
-    font-size: 13.2px;
+    font-size: var(--tk-koko-apuri); /* oli 13,2 px (asteikon ulkopuolella, 10.10.2026) */
     color: var(--tk-himmennys-tumma);
     white-space: nowrap;
     text-overflow: ellipsis;
