@@ -1,0 +1,184 @@
+### 21.1
+KYSYMYS: Miksi rautatieyhteys oli 1800-luvulla niin tärkeä hiilikaivospaikkakunnalle?
+Kato, tän minä ymmärrän heti. Hiili on painavaa ja suhteellisen halpaa tavaraa, joten sen lopullisen hinnan ratkaisi pitkälti kuljetus: hevosvankkureilla vietynä pitkä matka söi suuren osan hinnasta, kun taas junalla suuri määrä pääsi liikkeelle kerralla ja kauas. Trbovljen louhinta oli alkanut vuonna 1804, ja kun kaupunki liitettiin vuonna 1849 Itävallan [[Etelärataan]], kaivoksen hiilellä oli yhtäkkiä reitti laajoille markkinoille. Raiteet toivat myös kysyntää, sillä [[höyryveturit]] ja tehtaat tarvitsivat polttoainetta, ja 1800-luvun kuluessa kaupunkiin rakennettiin muun muassa sementtitehdas, sahalaitos ja voimalaitos. Kaivos ja rautatie tukivat siis toisiaan, kun [[hiilenlouhinta]] sai varman ostajajoukon. Kiskot näyttävät ylhäältä aina vähän kuin kirjeen reitiltä.
+JATKOT:
+Mihin Etelärata johti?
+Miten höyryveturi toimii hiilellä?
+
+### 21.2
+KYSYMYS: Miten 360 metriä korkea savupiippu pysyy pystyssä, vaikka sen huippu heiluu tuulessa?
+Hetkinen ny. Tää on fysiikkaa eikä kirjeenkantoa. Tällaisen piipun ei ole tarkoituskaan olla jäykkä kuin kivipaasi: korkea [[teräsbetonista]] valettu savupiippu suunnitellaan taipumaan tuulessa hieman ja palaamaan takaisin, ja huipun liike lasketaan mukaan rakenteeseen jo suunnitteluvaiheessa. Runko on alhaalta leveä ja seinämä paksu, ylöspäin se kapenee ja keventyy, jolloin [[painopiste]] pysyy matalana ja tuulen aiheuttama kaatava voima jää rakenteen kestämäksi. Syvä perustus levittää kuorman maaperään, ja teräsvahvisteinen betoni kestää sekä puristusta että venytystä. [[Tuulikuorma]] on laskennan keskeisimpiä tekijöitä. En ole varma Trbovljen piipun omista yksityiskohdista, mutta periaate on tämä.
+
+Minä tunnen tuon heilumisen omasta takaa: kovassa tuulessa ei kannata jäykistellä vaan antaa tuulen viedä hetki ja palata sitten linjalle. Piippu ja kyyhky ovat siinä sukulaisia, vaikka kyyhky on huomattavasti kevyempi.
+JATKOT:
+Miksi voimalaitoksille rakennetaan niin korkeita piippuja?
+Miten piipun huipun liikettä voidaan vaimentaa?
+
+### 21.3
+KYSYMYS: Mikä ero on ruskohiilellä ja kivihiilellä?
+Joo, tän minä tiedän. Ero johtuu hiilen iästä ja kypsymisasteesta: hiili muodostuu miljoonien vuosien kuluessa [[turpeesta]], ja mitä pidemmälle prosessi on edennyt, sitä kovempaa ja energiapitoisempaa aines on. Ruskohiili on nuorempaa, pehmeämpää ja kosteampaa, ja sen [[lämpöarvo]] painoa kohti on pienempi. Kivihiili on vanhempaa, tiiviimpää ja kovempaa, ja siitä saadaan enemmän energiaa samasta massasta. Koska kostea ruskohiili on kuljetettaessa raskasta ja heikkotehoista, sitä käytetään usein lähellä louhintapaikkaa, esimerkiksi [[voimalaitoksissa]]. Slovenian kaivoksissa louhitaan lähteiden mukaan pääosin ruskohiiltä, mutta en ole varma jokaisesta kaivoksesta erikseen. Kyyhkyn silmin kaikki hiili on aika samannäköistä mustaa.
+JATKOT:
+Miten hiili syntyy luonnossa?
+Miksi hiilen käyttöä vähennetään Euroopassa?
+
+### 21.4
+KYSYMYS: Mikä on Etelärata ja minne se kulki?
+No niin, tämä on hyvä reittikysymys. Etelärata, saksaksi Südbahn, oli Itävallan keisarikunnan tärkeimpiä rautatieyhteyksiä, ja sen pääreitti yhdisti [[Wienin]] Adrianmeren satamakaupunkiin [[Triesteen]]. Matkan varrelle jäivät muun muassa Graz, Maribor, Celje ja Ljubljana, joten rata kulki läpi nykyisen Slovenian alueen. Reitin tunnetuin tekninen kohta oli [[Semmeringin]] vuoristoylitys, jonka rakentaminen 1850-luvulla oli aikansa suuri insinöörityö. Trbovlje liitettiin rataan vuonna 1849, mutta reitin tarkkaa valmistumisvuotta en ole varma, joten sanon vain, että koko yhteys valmistui 1850-luvun kuluessa. Triestessä on varmasti oma versionsa pullasta, en vaan tiedä sen nimee.
+JATKOT:
+Miten Semmeringin rata rakennettiin vuorten yli?
+Miksi Trieste oli tärkeä satama Itävallalle?
+
+### 21.5
+KYSYMYS: Keitä ovat kaivoksen tontut ja haltijat eurooppalaisessa perinteessä?
+Ai se. Paikallisen legendan mukaan Trbovljen kaivoksissa temppuili [[Perkmandeljc]]-niminen tonttu, joka varasti kaivosmiesten eväät. Tällaiset olennot ovat tuttuja eri puolilta Eurooppaa, sillä pimeässä maan alla työskentelevät ihmiset selittivät odottamattomat äänet, sortumat ja kadonneet työkalut näkymättömillä asukkailla. Saksankielisellä alueella puhutaan kaivoshengistä, joita kutsutaan muun muassa nimillä Bergmännchen ja Kobold, ja [[kobolteista]] kerrotaan, että ne sotkivat malmin: kobolttimetallin nimen sanotaan juontuvan juuri tästä uskomuksesta. Tarinat toimivat samalla muistutuksena työn vaaroista ja kaivosmiesten yhteisestä ammattikulttuurista. Minä ymmärrän kyllä sen tontun, eväät ovat vakava asia.
+JATKOT:
+Mistä kobolttimetalli on saanut nimensä?
+Millaista oli Slovenian kaivosmiesten elämä 1800-luvulla?
+
+### 22.1
+KYSYMYS: Mitä Rogaška Slatinan nimi tarkoittaa, ja mistä ihmiset ovat tulleet hakemaan sen vettä?
+Annas ku mietin. Nimen jälkiosa on helpompi: sana slatina tarkoittaa slaavilaisissa kielissä kivennäislähdettä tai suolaista lähdettä, joten kyse on kirjaimellisesti lähteen kaupungista. Etuosan Rogaška-sanan alkuperästä en ole varma, ja arvaaminen olisi huonompi vastaus kuin tunnustus. Lähteen ympärille rakennettiin 1600-luvulla puuaita, ja linnanherra [[Peter de Curti]] perusti sinne majatalon vuonna 1676 ja peri lähteillä kävijöiltä maksun. Vettä pullotettiin jo silloin läheisessä lasitehtaassa tehtyihin pulloihin. Uusklassinen Tempel-paviljonki valmistui vuonna 1819, ja 1800-luvun puoliväliin mennessä kaupungista oli tullut [[Habsburgien]] monarkian eliitin muodikas kokoontumispaikka, joten vieraita tuli monarkian eri osista. Nykyään vesi tunnetaan nimellä [[Donat Mg]]. Ei paha kyyhkyltä.
+JATKOT:
+Mitä magnesium tekee ihmiselle?
+Millainen oli Habsburgien monarkia?
+
+### 22.2
+KYSYMYS: Miksi lasiteollisuus ja kylpylä sopivat niin hyvin yhteen Rogaška Slatinassa?
+Sepä sattui: yhteys on käytännöllisempi kuin luulisi. Kivennäisvettä haluttiin viedä myös kotiin, ja sitä varten tarvittiin pulloja, joten jo 1600-luvulla vettä pullotettiin läheisessä [[lasitehtaassa]] tehtyihin pulloihin. Lasi oli myös hygieeninen ja läpinäkyvä astia, jossa veden saattoi nähdä ja säilyttää maun muuttumatta. Kylpylävieraat olivat lisäksi varakasta väkeä, joka saattoi ostaa lasiesineitä muistoksi, ja siitä kasvoi [[kristallilasi]] kaupungin tunnetuksi tuotteeksi. En ole varma, miten tarkasti lasin ja veden kauppa kietoutuivat toisiinsa eri aikoina, mutta pullotuksen ja matkamuistojen yhteys on selvä. Lisäksi molemmat vetivät huomiota samoille seuduille, ja [[kivennäisvesi]] antoi paikalle nimen. Katolta katsoen kaikki tuo näyttää varsin läpinäkyvältä liiketoiminnalta.
+JATKOT:
+Miten kristallilasi valmistetaan?
+Mitä Donat Mg -vettä käytetään nykyään?
+
+### 22.3
+KYSYMYS: Mitä on kivennäisvesi ja miksi sitä juotiin hoitona?
+Selvä juttu. Kivennäisvesi on vettä, johon on maaperän läpi virratessaan liuennut mineraaleja, kuten magnesiumia, kalsiumia tai natriumia, ja sen koostumus riippuu siitä, minkä kerrosten kautta se on kulkenut. Kylpyläkaupungeissa uskottiin jo vuosisatoja sitten, että tietynlaisen lähdeveden juominen auttaa vaivoihin, ja hoitoon kuului juomisen lisäksi kylpemistä ja ulkoilua. Rogaška Slatinan vesi on [[magnesiumia]] sisältävää, ja perinteisesti sen on ajateltu tukevan etenkin ruoansulatusta, vaikka vaikutuksen tarkkaa tieteellistä arviota en tässä osaa antaa. Lähteen äärelle rakennettiin 1800-luvun alussa uusklassinen [[Tempel-paviljonki]]. Minä tyydyn lätäköiden vesiin, ja ne ovat riittäneet.
+JATKOT:
+Mitä kylpylähoitoon kuului 1800-luvulla?
+Mitä mineraaleja vedessä tavallisesti on?
+
+### 22.4
+KYSYMYS: Miten kylpyläkulttuuri levisi Habsburgien monarkiassa?
+Tuota niin. Habsburgien monarkian alueella oli lukuisia lähteiden ympärille kasvaneita kylpyläkaupunkeja, ja niiden suosio kasvoi 1800-luvulla, kun varakas yläluokka ja aatelisto alkoivat viettää kesiä hoitolaitoksissa. Tunnettuja esimerkkejä ovat [[Karlovy Vary]], [[Baden]] ja [[Bad Ischl]], ja Rogaška Slatina kuului samaan joukkoon: 1800-luvun puoliväliin mennessä siitä oli tullut monarkian eliitin muodikas kokoontumispaikka. [[Rautateiden]] yleistyminen helpotti matkustamista, ja kylpyläkaupungeissa tavattiin sekä hoidettiin terveyttä että kehitettiin seuraelämää. En ole varma, miten kylpyläkulttuurin leviäminen etenee tarkasti vuosi vuodelta, mutta suuntaus on selvä.
+
+Nämä kaupungit olivat varmasti hyvää seutua kirjeenkantajalle, koska vieraat kirjoittivat kotiin joka päivä. Suvun postissa kylpylävieraiden kortit ovat kuulemma olleet pitkä ja hajuvedeltä tuoksuva kasa.
+JATKOT:
+Miksi Baden on tunnettu kylpyläkaupunki?
+Millainen on Karlovy Varyn historia?
+
+### 22.5
+KYSYMYS: Mikä on kristallilasin ero tavalliseen lasiin?
+Ai tota. Perinteisessä kristallilasissa lasimassaan lisätään [[lyijyoksidia]], joka tekee lasista raskaamman, kirkkaamman ja kimmeltävämmän kuin tavallinen ikkuna- tai pullolasi. Lyijy nostaa lasin [[taitekerrointa]], jolloin valo taittuu voimakkaammin, ja lasi myös soi kauniisti, kun sitä napautetaan. Nykyään nimeä käytetään myös lyijyttömistä laseista, joissa lyijyn tilalla on muita aineita, joten merkintä ei yksin kerro koostumusta. En ole varma, millaista seosta Rogaškan lasi on eri aikoina ollut. Lasi hiotaan usein kuvioiduksi, ja hionta tuo esiin kimalluksen. Minun maailmani on ikkunalaudalta katsottuna aika läpinäkyvä.
+JATKOT:
+Miksi lyijylasista on luovuttu osittain?
+Miten lasia hiotaan koristeelliseksi?
+
+### 23.1
+KYSYMYS: Mitä nimi Ravne tarkoittaa, ja miksi paikan vanha nimi Guštanj vaihtui?
+No jopas. Slovenian kielessä sana ravne viittaa tasaisiin, tasamaisiin paikkoihin, ja nimi on siten kuvaus maastosta; olen kohtuullisen varma tästä, mutta en täysin. Lisäosa na Koroškem tarkoittaa Koroškan alueella sijaitsevaa. Aiempi nimi [[Guštanj]] muistuttaa saksalaista nimeä [[Gutenstein]], joka oli käytössä Kärntenissä, ja paikkaa kutsuttiin Guštanjiksi vuoteen 1952 asti. Syystä, miksi nimi juuri silloin vaihdettiin, en ole varma, enkä halua arvailla. Kaupunki mainitaan ensimmäisen kerran vuoden 1263 asiakirjassa, ja alue kuului [[Kärntenin]] herttuakuntaan jo vuodesta 976. Nimiä on kaupungilla ollut enemmän kuin minulla lempinimiä.
+JATKOT:
+Miksi paikannimiä vaihdetaan?
+Mikä on Koroška Slovenian alueena?
+
+### 23.2
+KYSYMYS: Miksi juuri tähän laaksoon syntyi terästeollisuus, ja mitä rautatie muutti?
+Odotas vähän. Raudanvalmistus alkoi seudulla 1600-luvun alussa, ja varhaisessa rautateollisuudessa tarvittiin yleensä kolme asiaa: raaka-ainetta, polttoainetta ja vesivoimaa. Metsistä saatiin [[puuhiiltä]], joesta voimaa vasaroille ja palkeille, ja Mežan laaksossa nämä olivat todennäköisesti lähellä toisiaan; en ole varma täkäläisistä yksityiskohdista, mutta tällainen yhdistelmä toistui monessa eurooppalaisessa rautaseudussa. Teräsvalmistuksella on kaupungissa yli 400 vuoden perinne. Rautatie yhdisti paikan maailmaan vuonna 1863, ja sen jälkeen raskas tuote ja raaka-aine liikkuivat kauas edullisemmin: ennen ensimmäistä maailmansotaa laadukasta ravnelaista terästä myytiin aina Lähi-itään, Kaukoitään ja Venäjälle. Joen ansiosta kaupunki sai [[vesivoimaa]] käyttöönsä. Joki teki työt, ja kaikki muut ottivat kunnian.
+JATKOT:
+Miten vesivoimalla käytettiin takomovasaroita?
+Mitä Ravnen terästä valmistetaan nykyään?
+
+### 23.3
+KYSYMYS: Miten teräs eroaa raudasta?
+Mmm— tästä saa selvän pienellä esimerkillä. Ero on pääosin hiilen määrässä: raakarauta, joka tulee masuunista, sisältää paljon [[hiiltä]] ja on siksi kovaa mutta haurasta, kun taas teräksessä hiiltä on noin kaksi prosenttia tai vähemmän, jolloin materiaali on sekä luja että työstettävä. Teräs voidaan myös seostaa muilla aineilla, kuten kromilla tai nikkelillä, jolloin siitä tulee ruostumatonta tai erityisen kestävää. Teräksen teollinen valmistus yleistyi 1800-luvun puolivälissä, kun uudet menetelmät, kuten [[Bessemerin menetelmä]], tekivät siitä halpaa. Tarkat rajat riippuvat luokituksesta, joten pidä lukuja suuntaa-antavina. Minä en tarvitse kumpaakaan, riittää kun siivet kantavat.
+JATKOT:
+Miten masuuni toimii?
+Miksi ruostumaton teräs ei ruostu?
+
+### 23.4
+KYSYMYS: Mikä on Kärntenin herttuakunta ja missä se sijaitsi?
+Kas vaan. Kärntenin herttuakunta oli Pyhään saksalais-roomalaiseen keisarikuntaan kuulunut herttuakunta, joka erotettiin [[Baijerista]] vuonna 976, ja Ravne na Koroškemin seutu kuului siihen jo tuolloin. Myöhemmin alue siirtyi [[Habsburgien]] hallintaan, ja herttuakunnan alue jakautuu nykyisin pääosin Itävallan Kärntenin osavaltion ja Slovenian Koroškan alueen kesken. Herttuakunnan tarkat rajat vaihtelivat vuosisatojen kuluessa, enkä ole varma kaikista vaiheista. Slovenian puolella kaupungit, kuten Ravne, ovat saaneet teollisuutensa jokilaaksoihin.
+
+Rajat ovat minulle outo asia, koska ylhäältä niitä ei näe. Suvun postissa ne kuitenkin tarkoittivat tullimaksuja ja jokaisella kerralla eri leimaa.
+JATKOT:
+Miten Habsburgit saivat Kärntenin hallintaansa?
+Missä Klagenfurt sijaitsee?
+
+### 23.5
+KYSYMYS: Miksi vanhat rautaverstaat sijoitettiin virtaavan veden äärelle?
+Hyvä kysymys tuo. Ennen sähköä ja höyryä vesi oli helpoin tapa saada voimaa: virtaava joki pyöritti [[vesipyörää]], jonka liike välitettiin akselien kautta työkaluille. Raudanvalmistuksessa tämä tarkoitti ennen kaikkea takomovasaroita, jotka löivät kuumaa metallia, sekä palkeita, jotka puhalsivat ilmaa tuleen ja nostivat lämpötilan riittävän korkeaksi. Vesi oli lisäksi hyödyllistä jäähdytykseen ja malmin sekä tuotteiden kuljetukseen, vaikka kulkuyhteydet vaihtelivat paikasta toiseen. Laakso, jossa joki kulki tasaisesti ja metsää oli lähellä polttoaineeksi, tarjosi siis kaiken tarvittavan, ja tämä selittää, miksi vanhoja rautapaikkoja on usein joenvarsilla. En ole varma, miten tämä pätee juuri Mežan rautaverstaisiin. Joki teki työt, ja kaikki muut ottivat kunnian.
+JATKOT:
+Miten vesipyörä toimii?
+Milloin vesivoima korvautui sähköllä teollisuudessa?
+
+### 24.1
+KYSYMYS: Miksi Velenjen kaupunki suunniteltiin ja rakennettiin lähes kokonaan uudelleen 1950-luvulla?
+Katotaas. Vanha Velenje oli vielä vuonna 1889 pieni kauppala linnan juurella, ja siellä asui vain 364 ihmistä. Ruskohiilikaivos avattiin vuonna 1875 ja toimii yhä, ja kaivostyö kasvatti työvoiman ja asuntojen tarpeen niin, ettei pieni vanha kauppala enää riittänyt. Siksi 1950-luvulla päätettiin rakentaa uusi, suunniteltu kaupunkikeskus, joka avattiin virallisesti 20. syyskuuta 1959. Slovenia kuului tuolloin Jugoslaviaan, ja samanlaisia suunniteltuja teollisuuskaupunkeja rakennettiin 1900-luvun puolivälissä muuallakin Euroopassa. Tarkkoja syitä, kuten suunnittelijoiden nimiä tai päätöksen yksityiskohtia, en ole varma, joten jätän ne pois. Uusi keskus rakennettiin [[Šalekin laaksossa]], missä [[ruskohiilikaivos]] oli tärkein työnantaja. Kaupunki syntyi suunnitelmallisemmin kuin yksikään kyyhkyn pesä.
+JATKOT:
+Millainen oli Jugoslavia?
+Mitkä muut eurooppalaiset kaupungit on rakennettu suunnitelmallisesti?
+
+### 24.2
+KYSYMYS: Mitä tarkoittaa pitkäseinälouhinta, jonka vuoksi Velenjen hiilikaivos on tunnettu?
+Tost minä osaan kertoo, ainakin periaatteen. Pitkäseinälouhinnassa hiilikerrosta louhitaan pitkällä rintamalla, joka voi olla satoja metrejä leveä, ja louhintakone liikkuu seinää pitkin irrottaen hiiltä, kun kuljetin vie sen pois. Työtilaa tukevat [[hydraulisia tukia]], jotka siirtyvät koneen mukana eteenpäin, ja tukien takana kattokerros antaa hallitusti periksi. Menetelmä on tehokas, koska tuotanto on keskitettyä ja työ pysyy pääosin tukien suojassa. Velenjen kaivoksen tiedetään louhivan poikkeuksellisen paksua hiilikerrosta, ja lähteiden mukaan siellä on kehitetty oma sovelluksensa tähän tarkoitukseen, mutta en ole varma sen yksityiskohdista. Maan alla en ole koskaan käynyt, ja hyvä niin.
+JATKOT:
+Miksi hiilikerroksen paksuus vaikuttaa louhintaan?
+Miten kaivostyön turvallisuutta on parannettu?
+
+### 24.3
+KYSYMYS: Miksi Velenjen alueella on niin paljon linnoja ja kartanoita?
+Just niin, tämä on hyvä huomio. Habsburgit omistivat seutua vuosisatojen ajan, ja mahdollisuus hallita maata tarkoitti sitä, että aatelissuvut ja läänitysherrat rakensivat tukikohtia, kartanoita ja linnoja maatilojensa ja kulkureittien turvaksi. Velenjessä tästä esimerkkinä on [[Velenjen linna]], jonka juurella vanha Velenje oli vielä vuonna 1889 pieni kauppala. Alueen runsaus ei siis ole sattumaa vaan seurausta pitkästä aatelisomistuksesta ja hallinnosta. En ole varma yksittäisten rakennusten rakennusvuosista, joten pysyttelen yleisellä tasolla. Samassa maisemassa Šalekin laakson [[kartanoita]] ja kaivoksen työntekijöiden elämä ovat eläneet vieretysten.
+
+Minä tykkään linnoista, koska niiden torneista on hyvä katsoa kaikki alle. Tosin torneissa asuu yleensä jo kyyhkyjä, ja suvun sisäinen kilpailu on kovaa.
+JATKOT:
+Mikä erottaa linnan kartanosta?
+Millaista oli aatelisen elämä kartanossa?
+
+### 24.4
+KYSYMYS: Miksi kaivosalueille syntyy sortumien takia uusia järviä?
+Odotas vähän. Kun maan alta louhitaan suuri määrä hiiltä, louhitun kerroksen päällä oleva maa ja kivi painuvat vähitellen tyhjään tilaan, ja pinta alenee. Syntyvä [[painuma]] täyttyy usein [[pohjavedellä]] ja sade- sekä purovesillä, kunnes siihen muodostuu uusi järvi. Näin on lähteiden mukaan käynyt myös Velenjen seudulla, jossa kaivostoiminnan jäljiltä on syntynyt tekojärviä; tunnetuin on [[Velenjen järvi]], mutta tarkkoja pinta-aloja en ole varma. Ilmiö on tuttu monista kaivosalueista Euroopassa, ja usein painumat on tarkoituksella täytetty vedellä, jolloin alueesta tulee virkistyskäyttöön sopiva. Kyyhkynä pidän sen verran maasta, että painuminen vähän huolettaa.
+JATKOT:
+Miten kaivosalueet kunnostetaan käytön jälkeen?
+Mitä Velenjen järvellä tehdään nykyään?
+
+### 24.5
+KYSYMYS: Mitä tarkoittaa suunniteltu uusi kaupunki?
+Kato, tää on kaupunkisuunnittelun perustermi. Suunniteltu uusi kaupunki tarkoittaa asutuskeskusta, joka rakennetaan lähes tyhjästä tai vanhan pienen kylän tilalle ennalta tehdyn yleissuunnitelman mukaan. Suunnitelmaan kuuluvat yleensä asuinalueet, kaupunkikeskus, palvelut, liikenneyhteydet ja viheralueet, ja usein syynä on jokin tietty tarve, kuten uusi teollisuuslaitos tai asuntopula. Euroopassa tunnettuja esimerkkejä ovat [[Nowa Huta]] Puolassa, [[Stevenage]] Britanniassa ja [[Tapiola]] Suomessa, ja Velenje kuuluu samaan perheeseen: sen keskusta rakennettiin 1950-luvulla. Esimerkkien tarkat perustamisvuodet jätän tähän, koska en ole niistä täysin varma. Suunnitelluissa kaupungeissa pitää olla myös leipomo, sanon vain.
+JATKOT:
+Miksi Tapiola rakennettiin?
+Millaisia ongelmia suunnitelluilla kaupungeilla on ollut?
+
+### 25.1
+KYSYMYS: Miksi Emonan rauniot löytyvät nykyisen Ljubljanan katujen alta eivätkä maan päältä?
+No niin, selitys on yksinkertainen mutta pitkä. Emonan viimeisten asukkaiden jälkeen kaupungissa ei enää ollut asutusta 500-luvun jälkipuoliskolla, ja rakennukset rapistuivat. Vuosisatojen kuluessa jäänteiden päälle kertyi maata, romua ja myöhempien rakennusten perustuksia; tällaista kerrostumaa kutsutaan [[kulttuurikerrokseksi]]. Lisäksi tulvat ja uusi rakentaminen nostivat maanpintaa, eikä kaupunki koskaan kokonaan kadonnut, vaan sen paikalle kasvoi myöhemmin [[Ljubljana]]. Siksi katujen, talojen ja vesijohtojen jäänteitä kaivetaan nykyisin esiin keskustan alta. Joitakin osia, kuten muurin pätkiä, on kunnostettu näkyviin, ja puisto on [[Jože Plečnikin]] työtä. En ole varma, kuinka suuri osa kaupungista on yhä maan alla. Onpas siitä pitkä aika.
+JATKOT:
+Miten Ljubljana kasvoi Emonan jälkeen?
+Mitä Emonan raunioista voi nähdä nykyään?
+
+### 25.2
+KYSYMYS: Mitkä kansat hyökkäsivät Emonaan 400- ja 500-luvuilla?
+Hetkinen. Emonan seutu joutui kansainvaellusten ajan liikkeiden tielle, kun Rooman valtakunnan länsiosa heikkeni. Tuolloin [[länsigootit]] leiriytyivät Emonan lähelle talvella 408–409, ja [[hunnit]] hyökkäsivät kaupunkiin vuonna 452. Vuonna 568 [[langobardit]] kulkivat sen läpi matkallaan Italiaan, eli he eivät varsinaisesti hyökänneet kaupunkiin, mutta ohimarssi kuului samaan epävakaaseen aikaan. Sen jälkeen seurasivat vielä [[avaarien]] ja slaavien hyökkäysretket, ja 500-luvun jälkipuoliskolla kaupungissa ei enää ollut asutusta. Tapahtumista on kulunut yli tuhat vuotta, ja tuolloin Euroopan valtarakenteet olivat täysin toisenlaiset kuin nykyään; Ljubljana on sittemmin kasvanut saman paikan päälle. Onpas siitä onneksi pitkä aika.
+JATKOT:
+Mitä kansainvaellukset olivat?
+Miten Rooman valtakunnan länsiosa päättyi?
+
+### 25.3
+KYSYMYS: Millainen oli roomalaisen kastrumkaupungin katuverkko?
+Nyt muistan: ruudukko. Roomalainen kastrumkaupunki kasvoi sotilasleiristä, ja leirin selkeä suunnitelma siirtyi kaupunkiin: katuverkko oli ristikko, jonka keskellä oli tori. Perinteisesti pääkadut olivat pohjois-eteläsuuntainen [[cardo]] ja itä-länsisuuntainen [[decumanus]], jotka risteävät keskustassa, ja kortteleiden muoto oli säännöllinen. Emonassa katuverkko oli roomalaiseen tapaan ristikko, ja kaupunkia suojasi muuri, joka perustettiin vuoden 14 tienoilla. Nykykeskustan alta on löytynyt muurinpätkiä, asuintaloja, patsaita ja mosaiikkeja. Tarkka kortteleiden mitta ja pääkatujen suunta Emonassa eivät ole minulle varmoja, joten en anna lukuja. Keskellä [[foorumi]] toimi kaupungin kokoontumispaikkana.
+
+Ruudukossa on kyyhkyn mielestä jotain rauhoittavaa, sillä ylhäältä katsoen kaikki osoitteet löytyvät suoraan. Suvun postiperimätiedon mukaan roomalaisille oli juuri siksi helppo viedä kirjeitä.
+JATKOT:
+Mitä foorumilla tehtiin?
+Miten roomalaiset rakensivat katuja?
+
+### 25.4
+KYSYMYS: Miksi roomalaisten sotaleireistä kasvoi kaupunkeja?
+Joo, tän minä tiedän. Sotaleirin ympärille kertyi nopeasti väkeä, joka palveli sotilaita: kauppiaita, käsityöläisiä ja perheitä, sillä [[legioonat]] tarvitsivat ruokaa, työkaluja ja majoitusta. Leirit perustettiin yleensä strategisiin paikkoihin, kuten joen äärelle tai tärkeän tien varrelle, ja juuri tällaiset paikat soveltuivat myös kaupankäyntiin. Kun sotilaita vietiin muualle, osa asukkaista jäi paikalle ja leiri muuttui vähitellen siviilikaupungiksi, ja usein asutusta vahvistettiin myös [[veteraaneilla]]. Emonassa sotilasleiri perustettiin ennen ajanlaskun alkua linnavuoren juurelle, ja varsinainen muurein varustettu kaupunki syntyi vuoden 14 tienoilla. Sijainti [[Ljubljanica]]-joen äärellä oli todennäköisesti tärkeä, mutta en ole varma reitin tarkoista yksityiskohdista. Armeija oli aikansa kaupunkisuunnittelija.
+JATKOT:
+Mikä oli roomalainen legioona?
+Miten veteraanit saivat maata asuttaakseen?
+
+### 25.5
+KYSYMYS: Miten arkeologit tutkivat raunioita elävän kaupungin alla?
+Ai tota. Elävän kaupungin alla tutkimus tehdään yleensä silloin, kun rakennushanke, katutyö tai putkiremontti paljastaa vanhoja rakenteita, ja tällaista työtä kutsutaan usein [[pelastusarkeologiaksi]]. Arkeologit kaivavat kerros kerrokselta, dokumentoivat jokaisen löydön ja rakenteen sijainnin sekä syvyyden piirtämällä, valokuvaamalla ja mittaamalla, koska kaivaminen tuhoaa alkuperäisen järjestyksen. Kerrosten järjestys kertoo, mikä on vanhempaa ja mikä uudempaa, ja siksi [[kulttuurikerrokset]] ovat heille kuin kirjan sivut. Löytöjen jälkeen alue joko rakennetaan uudelleen, jolloin rauniot peitetään tai dokumentoidaan, tai osa jäänteistä säilytetään näkyvillä. Ljubljanan keskustassa Emonan jäänteitä kaivetaan esiin juuri tällä tavalla. Eikä kyyhkyn tarvitse kaivaa, riittää kun katsoo ylhäältä.
+JATKOT:
+Miten esineiden ikä määritetään?
+Mitä Ljubljanan arkeologiset löydöt kertovat roomalaisista?
