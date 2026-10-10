@@ -21,6 +21,11 @@
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { asetaKarttaVainKaupunki } from '../js/kaupunkimusiikki.js';
+
+// Vanhan kartan ketjun testit (alue → maanosa → pohjavire, saapumistunnukset, siirtymäraidat): kytkin pois. Uusi sääntö
+// "kartalla vain kaupungin oma kappale" (omistaja 10.10.2026) on tests/kartta-vain-kaupunki.test.mjs:ssä.
+asetaKarttaVainKaupunki(false);
 
 /* ── tynkäselain ──────────────────────────────────────────────────── */
 

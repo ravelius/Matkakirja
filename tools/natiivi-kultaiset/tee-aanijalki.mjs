@@ -487,7 +487,8 @@ const TOIMINNOT = {
   },
   liuku: (e) => valitsin.asetaMusiikinLiuku(e.arvo),
   tausta: (e) => voimat.asetaKehittajanKerroin('tausta', e.arvo),
-  puuttuu: (e) => { const a = kanavanSoitin(e.kanava); a.virheSrc = a.getAttribute('src'); a.virheT = tapahtumaNro; a.laukaise('error'); },
+  // Kanava voi olla tyhjä (kartalla vain kaupungin kappale 10.10.: ei pohjavirettä eikä siirtymäraitaa) → ei mitään.
+  puuttuu: (e) => { const a = kanavanSoitin(e.kanava); if (!a) return; a.virheSrc = a.getAttribute('src'); a.virheT = tapahtumaNro; a.laukaise('error'); },
   aarre: (e) => { const aihe = ui.aiheTyypille(e.tyyppi); if (aihe) ui.soitaAarreMusiikki(aihe); },
   aarreLoppui: () => kanavanSoitin('aarre').dispatchEvent({ type: 'ended' }),
   avaus: (e) => (e.auki ? virta.aloitaAvauksenAani() : virta.lopetaAvauksenAani()),

@@ -290,7 +290,7 @@ import {
   musiikkiPaalla,
 } from './musiikkivalitsin.js';
 // Saapumistunnus luetaan samasta maa→alue-taulusta kuin alueraita.
-import { saapumistunnus } from './kaupunkimusiikki.js';
+import { KARTTA_VAIN_KAUPUNKI, saapumistunnus } from './kaupunkimusiikki.js';
 /*
  * Aarteen paljastusaihe on musiikkia, joten sekin kulkee musiikin
  * yhteisen vahvistimen kautta — muuten iOS soittaisi sen tiedoston
@@ -13033,9 +13033,10 @@ export class UI {
        * vaskimarssi johtoaiheella (omistaja 28.9.2026), one-shot 20 s. Alkaa samasta
        * napautuksesta kuin kabiini, ja pohjaraita väistyy sen ajaksi
        * kuten aarteen aiheelle. Liikeherkkyydessä lentoa ei ole, joten
-       * ei aihettakaan; radiotilassa radio on ainoa ääni.
+       * ei aihettakaan; radiotilassa radio on ainoa ääni. KARTALLA VAIN KAUPUNGIN OMA KAPPALE
+       * (omistaja 10.10.2026, PT 11.4x): aloituslento ilman musiikkia, kaupungin kappale alkaa perillä.
        */
-      if (!this.reducedMotion && !this.radioPaalla()) {
+      if (!KARTTA_VAIN_KAUPUNKI && !this.reducedMotion && !this.radioPaalla()) {
         this.soitaAarreMusiikki(MATKAN_AIHEET.aloituslento);
       }
       // Lukuääni väistyy, kun matka alkaa.
