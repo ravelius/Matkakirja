@@ -1275,11 +1275,46 @@ export function luoMaapaneeli({
   let sailio = null;
   let el = null;
 
+  /*
+   * PÄÄKAUPUNKIPISTEEN MAA (PT 10.10.2026, NATIIVI ON MALLI: Kartuscha.NaytaMaa).
+   * `omaIso` on laudan antama pelaajan maa; `vierasIso` pääkaupunkipisteestä
+   * avattu muu maa, joka näytetään avattuna ja palautuu pelaajan maahan, kun
+   * kortti suljetaan tai pelaajan maa vaihtuu.
+   */
+  let omaIso = null;
+  let omaLaatikko = null;
+  let vierasIso = null;
+
   const avaaValikko = (auki) => {
     const uusi = Boolean(auki);
     if (uusi === valikkoAuki) return;
     valikkoAuki = uusi;
+    if (!uusi && vierasIso) {
+      vierasIso = null;
+      avattuSivu = null;
+      tila = omaIso && maapaneeliKartassa() ? tilaMaalle(omaIso, omaLaatikko) : null;
+      if (!tila) pysaytaRadio();
+    }
     kirjoita();
+  };
+
+  const tilaMaalle = (iso, laatikko) => {
+    const omat = FOKUS_MAANIMET[iso] ?? {};
+    return {
+      iso,
+      laatikko,
+      nimi: maanNimi(ui, iso),
+      paikallinen: omat.paikallinen ?? '',
+      valtiomuoto: omat.valtiomuoto ?? '',
+      rivit: maanRivit(ui, iso),
+      // Kielirivin osat ovat VALMIITA ELEMENTTEJÄ (kieliOsat luo ne),
+      // joten ne tehdään kerran maan vaihtuessa eikä joka piirrossa.
+      kielet: kieliOsat(ui, iso),
+      aiheet: maanAiheet(iso),
+      // Sama lähde kuin maalehden otsikkolipulla (js/ui.js
+      // maalehdenEkaSivu): pakan oma maa-aineisto.
+      lippu: ui.game?.pack?.map?.countryShapes?.[iso]?.lippu ?? null,
+    };
   };
 
   const avaaSivu = (sivuId) => {
@@ -1610,28 +1645,23 @@ export function luoMaapaneeli({
      * se ei vaikuta sijaintiin eikä kokoon.
      */
     paivita({ iso = null, laatikko = null } = {}) {
+      const maaVaihtui = iso !== omaIso;
+      omaIso = iso;
+      omaLaatikko = laatikko;
+      if (vierasIso) {
+        // Pääkaupungin maa pysyy auki, kunnes kortti suljetaan tai pelaajan maa vaihtuu.
+        if (!maaVaihtui && maapaneeliKartassa()) return;
+        vierasIso = null;
+        valikkoAuki = false;
+        avattuSivu = null;
+      }
       if (!iso || !maapaneeliKartassa()) {
         // Kaluste pois = lähetys kiinni: valoa ei ole enää näyttämässä,
         // että jokin soi.
         if (tila) { tila = null; valikkoAuki = false; pysaytaRadio(); kirjoita(); }
         return;
       }
-      const omat = FOKUS_MAANIMET[iso] ?? {};
-      const uusi = {
-        iso,
-        laatikko,
-        nimi: maanNimi(ui, iso),
-        paikallinen: omat.paikallinen ?? '',
-        valtiomuoto: omat.valtiomuoto ?? '',
-        rivit: maanRivit(ui, iso),
-        // Kielirivin osat ovat VALMIITA ELEMENTTEJÄ (kieliOsat luo ne),
-        // joten ne tehdään kerran maan vaihtuessa eikä joka piirrossa.
-        kielet: kieliOsat(ui, iso),
-        aiheet: maanAiheet(iso),
-        // Sama lähde kuin maalehden otsikkolipulla (js/ui.js
-        // maalehdenEkaSivu): pakan oma maa-aineisto.
-        lippu: ui.game?.pack?.map?.countryShapes?.[iso]?.lippu ?? null,
-      };
+      const uusi = tilaMaalle(iso, laatikko);
       // Maan vaihtuessa kaluste sulkeutuu: sen rivit ovat toisen maan.
       if (tila?.iso !== uusi.iso) { valikkoAuki = false; avattuSivu = null; }
       tila = uusi;
@@ -1661,6 +1691,22 @@ export function luoMaapaneeli({
      * jos valikko ei ollut auki.
      */
     suljeValikko() { avaaValikko(false); },
+    /**
+     * PÄÄKAUPUNKIPISTEEN NAPAUTUS (natiivi Kartuscha.NaytaMaa): pelaajan oma
+     * maa avataan sellaisenaan; muu maa näytetään avattuna ja palautuu
+     * pelaajan maahan suljettaessa (avaaValikko) tai maan vaihtuessa (paivita).
+     */
+    naytaMaa(iso) {
+      if (!iso || !maapaneeliKartassa() || !ui.game?.pack?.map?.countryShapes?.[iso]) return false;
+      if (!vierasIso && tila?.iso === iso) { avaaValikko(true); return true; }
+      if (vierasIso === iso && valikkoAuki) return true;
+      vierasIso = iso;
+      avattuSivu = null;
+      valikkoAuki = true;
+      tila = tilaMaalle(iso, null);
+      kirjoita();
+      return true;
+    },
     /*
      * MITAT LUETAAN ELEMENTISTÄ, EI VAKIOISTA. Kalusteella ei ole enää
      * kiinteää 104 × 82 px:n laatikkoa: sen koko on sen sisältö, ja
@@ -1684,6 +1730,8 @@ export function luoMaapaneeli({
     },
     pura() {
       tila = null;
+      vierasIso = null;
+      omaIso = null;
       valikkoAuki = false;
       avattuSivu = null;
       pysaytaRadio();

@@ -2831,12 +2831,14 @@ export async function avaaPallolauta(ui) {
      * jossa drawTargets piirtää radiotilassa vain radion napit.
      */
     if (ui.radioPaalla?.()) return false;
-    // Pääkaupunkipiste ei ole pelikaupunki: napautus avaa maan maalehden (ks. paakaupunkipisteet.js).
+    /*
+     * Pääkaupunkipiste ei ole pelikaupunki: napautus avaa maan maakortin (kartuscha),
+     * kuten natiivi (Kartuscha.NaytaMaa); minivaltioilla ei ole maalehteä.
+     */
     if (k.pk) {
       if (ui.game.phase === 'pickstart') return false;
       heraa();
-      ui.avaaMaalehti?.(k.maa);
-      return true;
+      return maapaneeli.naytaMaa(k.maa);
     }
     const city = laudanKaupunki(k);
     if (!city) return false;
