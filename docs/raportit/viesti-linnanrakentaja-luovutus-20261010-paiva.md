@@ -76,3 +76,17 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
 - **PALA 1499 4e464f44e51710f8** (blender c6005f962ea35714, v45e b51e47c0c), **NYKY b4cd41abc499dbde** (blender 1cebd2b3fbfa7978, v45e 161c104de).
   Hashit Siirtosepälle ja PT:lle. n1790-leikkaukset nykyssä ranta-1499:n leikkauksissa (Siirtoseppä kysyi). Siirtoseppä kytkee vesivärin itse.
 - Siirtosepän arkki: v46w:n vaaleat rantakivet hämärässä liian kirkkaat (ei kiire) → seuraava Olavinlinna-erä.
+
+## TAIDEMUSEO, Alankomaat-sali (PT 09.5x, omistaja: museo Pekingin edelle) — tila 10.0x
+- Yhteinen runko `proto-3d/_valmiit/taidemuseo-runko/lahde/`: runko.py (Sali: osat, aukot, teospaikat + valokeilat, veistospaikat,
+  tekstitaulut, kehysprofiilit cm, reitti → sali.json), sali_blender.py (geometria; --lod, --esikatselu = kehykset + paikkamallit kuviin,
+  --ei-vientia), valot.py (yhteiset valot), sali_kuvat.py (Cycles-kamerat), leivo_sali.py (yhdistää, UV1 "valo", DIFFUSE-leivonta,
+  koodaus E_lx = näyte_lin × 600, kalibrointi 150 lx, vienti glb + valot/sali-lod<L>.jpg).
+- NL: `taidemuseo-alankomaat-v1/`: lahde/alankomaat.py → sali.json (15 osaa: Veistosaula, Mauritshuis m1–m3 damasti, Kunniagalleria kg
+  ristiholvi 4 jaksoa + 8 komeroa, Yövartio-sali yv, Leidenin antiikkisiipi; 54 teospaikkaa, 5 grafiikkaa, 20 veistospaikkaa, Rijks-ehdotukset),
+  tekstuurit (Sonnet-agentti, lahde/tekstuurit_nl.py; `python3 tekstuurit_nl.py pilari` = vain yksi).
+- LS1 (Linssiseppä) rakentaa esitysmoottorin sali.jsonia vasten (skeema hyväksytty; kehykset hän pursottaa profiileista, valot analyyttisesti).
+- Arkki PT:lle: docs/raportit/kaappaukset/linnanrakentaja-museo-20261010/taidemuseo-nl-v1-arkki.jpg (c246f4eac). Odottaa PT:n hyväksyntää →
+  vienti (ASTC: proto-3d/tyokalut/astc-mip.swift valot/*.jpg) → LS1.
+- Seuraavaksi Peking (omistaja 09.3x: koekaupunki 2 × 2 km), Karttasepän paketti proto-3d/_tyo/karttaseppa/peking-20261010/lr/LUEMINUT.md.
+- Siirtoseppä: kiinni 70 kaatuu portaat-vartijan takia (PT päättää: vartijan partio LR vai testiajuri Siirtoseppä) — älä tee ennen PT:tä.
