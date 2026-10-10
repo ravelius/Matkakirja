@@ -30,7 +30,7 @@ namespace Matkakirja.Natiivi
         readonly Kortti kortti, huoneKortti;
         readonly Label hNimi, hTeksti;
         readonly Nimikyltti huoneKyltti;
-        readonly KortinLukija lukija;
+        readonly KortinLukija lukija, hLukija;
         bool auki, korttiNakyy, luennalla, huoneAuki;
         string korttiTeos;
         EventCallback<PointerDownEvent> ohi;
@@ -114,8 +114,14 @@ namespace Matkakirja.Natiivi
             huoneKortti = new Kortti(null, pohja: true);
             korttiJuuri.Add(huoneKortti);
             huoneKortti.Sisus.pickingMode = PickingMode.Position;
-            hNimi = Rakenne.Teksti("", "mk-kortti__otsikko", huoneKortti.Sisus); hNimi.style.whiteSpace = WhiteSpace.Normal;
+            // Otsikkorivi: nimi ja kaiutin (KortinLukija; omistaja 6.9.2026 "Kaikissa missä on tekstiä" luenta), kaiutin vain avatussa kortissa.
+            var hRivi = Rakenne.El(null, huoneKortti.Sisus, PickingMode.Ignore);
+            hRivi.style.flexDirection = FlexDirection.Row;
+            hRivi.style.justifyContent = Justify.SpaceBetween;
+            hRivi.style.alignItems = Align.Center;
+            hNimi = Rakenne.Teksti("", "mk-kortti__otsikko", hRivi); hNimi.style.whiteSpace = WhiteSpace.Normal; hNimi.style.flexShrink = 1;
             Kirjasimet.Aseta(hNimi, Tyylikirja.Kirjain.Otsikko);
+            hLukija = new KortinLukija(hRivi, Kieli.T("ui.nosto.kuuntele-kortti"), saatimet: true, rajaus: () => huoneKortti.worldBound);
             hTeksti = Rakenne.Teksti("", "mk-kortti__teksti", huoneKortti.Sisus); hTeksti.style.whiteSpace = WhiteSpace.Normal;
             Kirjasimet.Aseta(hTeksti, Tyylikirja.Kirjain.Leipa);
             huoneKortti.style.display = DisplayStyle.None;
@@ -168,7 +174,7 @@ namespace Matkakirja.Natiivi
                 ohi = e =>
                 {
                     var t = e.target as VisualElement;
-                    if (t != null && ((korttiNakyy && kortti.Contains(t)) || (huoneAuki && huoneKortti.Contains(t)) || esittele.Contains(t) || lukija.Juuri.Contains(t))) return;
+                    if (t != null && ((korttiNakyy && kortti.Contains(t)) || (huoneAuki && huoneKortti.Contains(t)) || esittele.Contains(t) || lukija.Juuri.Contains(t) || hLukija.Juuri.Contains(t))) return;
                     if (t != null && t.panel != korttiJuuri.panel) return;
                     // Lukijan valikko auki: ohinapautus sulkee vain valikon (KortinLukija), ei korttia.
                     if (puu.Q(className: "mk-lukija-valikko") != null) return;
@@ -227,6 +233,7 @@ namespace Matkakirja.Natiivi
             hNimi.text = h.Nimi;
             hTeksti.text = h.Teksti ?? "";
             hTeksti.style.display = DisplayStyle.None;
+            hLukija.Pysayta(); hLukija.Juuri.style.display = DisplayStyle.None;
             huoneKortti.style.display = korttiNakyy ? DisplayStyle.None : DisplayStyle.Flex;
             huoneKyltti.Nayta(h.Id);   // tiivis kyltti ~3 s ja häivytys (Nimikyltti)
             PaivitaJuuri();
@@ -238,6 +245,9 @@ namespace Matkakirja.Natiivi
             huoneAuki = nakyy;
             hTeksti.style.display = nakyy && hTeksti.text.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             if (nakyy) { huoneKortti.style.display = DisplayStyle.Flex; huoneKyltti.Nayta(); }
+            // Kaiutin vain avatussa kortissa (tiivis kyltti on pelkkä nimi); Aseta näyttää sen, kun tekstiä on ≥ KortinLukija.Vahimmais.
+            if (nakyy) hLukija.Aseta(new[] { hNimi.text, hTeksti.text }, omistaja: "museo-huone:" + hNimi.text);
+            else { hLukija.Pysayta(); hLukija.Juuri.style.display = DisplayStyle.None; }
             huoneKyltti.Pida(nakyy);
             Ohinapautus(nakyy || korttiNakyy);
             PaivitaJuuri();
