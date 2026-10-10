@@ -418,7 +418,10 @@ namespace Matkakirja.Natiivi
             };
             if (soi) Aanisoitin.KaupunkiIntroAlkoi += kuuntelija;
             introKaupunki = k;
-            kortti.Kuvat.LuentoKaynnissa = true;   // Ohita näkyviin kuten luennan ajan
+            // PT 10.10. 19.3x (omistaja: "kohdekaupungit eivät näy kartalla nyt ollenkaan tai jos näkyvät, niin häviävät"): luentatila
+            // koski koko intron (8 kuvaa) ja piilotti nappulan ja kohteet. Luentatila vain luennan kuville; jatkossa pelkkä Ohita.
+            kortti.Kuvat.LuentoKaynnissa = false;
+            kortti.Kuvat.IntroOhita = true;
             UnityEngine.Debug.Log($"MATKAKIRJA ui saapuminen: {k} nykyintro alkaa ({sarja.Count} kuvaa, musiikki {(soi ? "odotetaan" : "ei")})");
             int seuraava = 0;
             introAjo = Ajastin.Execute(() =>
@@ -457,7 +460,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Intron ajastin ja musiikkikuuntelija pois; vaienna = Ohita tai lähtö (nopea jakso pois kuten oppaan ohituksessa).</summary>
         void LopetaIntro(bool vaienna)
         {
+            // Ohita, lähtö, loppu ja keskeytykset: Ohita pois ja luentatila ei jää päälle (myös ilman käynnissä olevaa introa).
+            kortti.Kuvat.IntroOhita = false;
             if (introKaupunki == null) return;
+            kortti.Kuvat.LuentoKaynnissa = false;
             introAjo?.Pause(); introAjo = null;
             introLopetus?.Invoke(); introLopetus = null;
             if (vaienna) { Aanisoitin.Instanssi?.KaupunkiIntroOhita(); UnityEngine.Debug.Log($"MATKAKIRJA ui saapuminen: {introKaupunki} nykyintro ohitettu"); }
