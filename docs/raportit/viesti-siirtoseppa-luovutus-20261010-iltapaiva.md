@@ -22,6 +22,12 @@ kopioi edellinen kultainen nimellä), poista `Linssit-testit/Testit/Osaviipaleet
 katoaa) ja tarkista, tarvitaanko `ThiefAjuri.cs`:n `RauhallinenYlitys { 69 }` vielä (kokeile ilman: OlavinlinnaMOsaTestit.KiinniTarkistuspisteeseenJaLoppuun
 ja PiiloonMenoTekeeTarkistuspisteen; PT: rajaa EI löysätä). Linssit + unity-tarkistus → SHA PT:lle. Uusi haara junan 177 rungon (tai 04915cace:n) päälle.
 
+## ERÄ 2 VALMIS (10.10. tauon jälkeen) — odottaa PT:n kuittausta / junaa
+
+`siirtoseppa/palatsiraja` **99b9fead3** (BUILD 177 -master 3d0c8c4a7 päällä; peili peili/proto/siirtoseppa-palatsiraja): pala cf16ad94ef3c76bc v47a,
+esittely bccf694794d5f5f6 v47a-nyky (vain palatsin rajat.min z −10,95 → −10,6). OsaviipaleetTestit.OdottaaKorjausta tyhjä. ThiefAjuri
+RauhallinenYlitys { 69 } tarvitaan yhä (ilman: kiinni 70 tarkistuspiste 5,0 m komerosta). Linssit 1307/1307, unity-tarkistus 0. Proto-worktree on tällä haaralla.
+
 ## JUNA 176 (build 177) — KUITATTU
 
 Kärki **siirtoseppa/historia-suoja 1210b674e** (PT kuittasi ehdolla Linssit läpi: 1300/1300). Natiiviseppä: junan 176 runko 9bf070143 (K454, P453, L1307, tarkista ok). Ketju a4c6539e5 → 479702aac (esittely-vaiheet) →
