@@ -1,0 +1,2360 @@
+[
+ {
+  "n": 1,
+  "kohta": "kohde:hahmotelma-triglav",
+  "kasite": "Slovenian",
+  "kysymys": "Kerro lisää: Slovenian"
+ },
+ {
+  "n": 2,
+  "kohta": "kohde:hahmotelma-triglav",
+  "kasite": "Ylä-Krainin",
+  "kysymys": "Kerro lisää: Ylä-Krainin"
+ },
+ {
+  "n": 3,
+  "kohta": "kohde:hahmotelma-triglav",
+  "kasite": "Julian Alppien",
+  "kysymys": "Kerro lisää: Julian Alppien"
+ },
+ {
+  "n": 4,
+  "kohta": "kohde:hahmotelma-triglav",
+  "kasite": "Zlatorog",
+  "kysymys": "Kerro lisää: Zlatorog"
+ },
+ {
+  "n": 5,
+  "kohta": "kohde:hahmotelma-triglav",
+  "kasite": "Triglavin",
+  "kysymys": "Kerro lisää: Triglavin"
+ },
+ {
+  "n": 6,
+  "kohta": "kohde:hahmotelma-triglav",
+  "kasite": "vaakunassa",
+  "kysymys": "Kerro lisää: vaakunassa"
+ },
+ {
+  "n": 7,
+  "kohta": "kohde:hahmotelma-triglav",
+  "kasite": "Jakob Aljaž",
+  "kysymys": "Kerro lisää: Jakob Aljaž"
+ },
+ {
+  "n": 8,
+  "kohta": "kohde:hahmotelma-triglav",
+  "kasite": "Trentan",
+  "kysymys": "Kerro lisää: Trentan"
+ },
+ {
+  "n": 9,
+  "kohta": "kohde:hahmotelma-triglav",
+  "kasite": "Soča",
+  "kysymys": "Kerro lisää: Soča"
+ },
+ {
+  "n": 10,
+  "kohta": "kohde:hahmotelma-bled",
+  "kasite": "Maria Teresia",
+  "kysymys": "Kerro lisää: Maria Teresia"
+ },
+ {
+  "n": 11,
+  "kohta": "kohde:hahmotelma-bled",
+  "kasite": "Bledinjärven",
+  "kysymys": "Kerro lisää: Bledinjärven"
+ },
+ {
+  "n": 12,
+  "kohta": "kohde:hahmotelma-bled",
+  "kasite": "pletna",
+  "kysymys": "Kerro lisää: pletna"
+ },
+ {
+  "n": 13,
+  "kohta": "kohde:hahmotelma-bled",
+  "kasite": "barokkisen",
+  "kysymys": "Kerro lisää: barokkisen"
+ },
+ {
+  "n": 14,
+  "kohta": "kohde:hahmotelma-bled",
+  "kasite": "Neitsyt Marian taivaaseenottamisen",
+  "kysymys": "Kerro lisää: Neitsyt Marian taivaaseenottamisen"
+ },
+ {
+  "n": 15,
+  "kohta": "kohde:hahmotelma-bled",
+  "kasite": "Henrik II",
+  "kysymys": "Kerro lisää: Henrik II"
+ },
+ {
+  "n": 16,
+  "kohta": "kohde:hahmotelma-bled",
+  "kasite": "Julian Alppien",
+  "kysymys": "Kerro lisää: Julian Alppien"
+ },
+ {
+  "n": 17,
+  "kohta": "kohde:hahmotelma-bled",
+  "kasite": "Radovna",
+  "kysymys": "Kerro lisää: Radovna"
+ },
+ {
+  "n": 18,
+  "kohta": "kohde:hahmotelma-bled",
+  "kasite": "Jakob Žumer",
+  "kysymys": "Kerro lisää: Jakob Žumer"
+ },
+ {
+  "n": 19,
+  "kohta": "kohde:hahmotelma-bled",
+  "kasite": "Benedikt Lergetporer",
+  "kysymys": "Kerro lisää: Benedikt Lergetporer"
+ },
+ {
+  "n": 20,
+  "kohta": "kohde:hahmotelma-bled",
+  "kasite": "Šum-vesiputous",
+  "kysymys": "Kerro lisää: Šum-vesiputous"
+ },
+ {
+  "n": 21,
+  "kohta": "kohde:hahmotelma-bled",
+  "kasite": "jäätiköiden",
+  "kysymys": "Kerro lisää: jäätiköiden"
+ },
+ {
+  "n": 22,
+  "kohta": "kohde:hahmotelma-bled",
+  "kasite": "Bledin",
+  "kysymys": "Kerro lisää: Bledin"
+ },
+ {
+  "n": 23,
+  "kohta": "kohde:hahmotelma-soca",
+  "kasite": "Slovenian",
+  "kysymys": "Kerro lisää: Slovenian"
+ },
+ {
+  "n": 24,
+  "kohta": "kohde:hahmotelma-soca",
+  "kasite": "Adrianmereen",
+  "kysymys": "Kerro lisää: Adrianmereen"
+ },
+ {
+  "n": 25,
+  "kohta": "kohde:hahmotelma-soca",
+  "kasite": "Soča",
+  "kysymys": "Kerro lisää: Soča"
+ },
+ {
+  "n": 26,
+  "kohta": "kohde:hahmotelma-soca",
+  "kasite": "Julian Alppien",
+  "kysymys": "Kerro lisää: Julian Alppien"
+ },
+ {
+  "n": 27,
+  "kohta": "kohde:hahmotelma-soca",
+  "kasite": "Trentan",
+  "kysymys": "Kerro lisää: Trentan"
+ },
+ {
+  "n": 28,
+  "kohta": "kohde:hahmotelma-soca",
+  "kasite": "Bovecin",
+  "kysymys": "Kerro lisää: Bovecin"
+ },
+ {
+  "n": 29,
+  "kohta": "kohde:hahmotelma-soca",
+  "kasite": "Kobaridin",
+  "kysymys": "Kerro lisää: Kobaridin"
+ },
+ {
+  "n": 30,
+  "kohta": "kohde:hahmotelma-soca",
+  "kasite": "Tolminin",
+  "kysymys": "Kerro lisää: Tolminin"
+ },
+ {
+  "n": 31,
+  "kohta": "kohde:hahmotelma-soca",
+  "kasite": "Itävalta-Unkarin",
+  "kysymys": "Kerro lisää: Itävalta-Unkarin"
+ },
+ {
+  "n": 32,
+  "kohta": "kohde:hahmotelma-soca",
+  "kasite": "Caporetto",
+  "kysymys": "Kerro lisää: Caporetto"
+ },
+ {
+  "n": 33,
+  "kohta": "kohde:hahmotelma-soca",
+  "kasite": "Sočan",
+  "kysymys": "Kerro lisää: Sočan"
+ },
+ {
+  "n": 34,
+  "kohta": "kohde:hahmotelma-soca",
+  "kasite": "Adrianmeren",
+  "kysymys": "Kerro lisää: Adrianmeren"
+ },
+ {
+  "n": 35,
+  "kohta": "kohde:hahmotelma-velika-planina",
+  "kasite": "Kamnikin Alppien",
+  "kysymys": "Kerro lisää: Kamnikin Alppien"
+ },
+ {
+  "n": 36,
+  "kohta": "kohde:hahmotelma-velika-planina",
+  "kasite": "paimenkylä",
+  "kysymys": "Kerro lisää: paimenkylä"
+ },
+ {
+  "n": 37,
+  "kohta": "kohde:hahmotelma-velika-planina",
+  "kasite": "Marija Snežna",
+  "kysymys": "Kerro lisää: Marija Snežna"
+ },
+ {
+  "n": 38,
+  "kohta": "kohde:hahmotelma-velika-planina",
+  "kasite": "paimenten",
+  "kysymys": "Kerro lisää: paimenten"
+ },
+ {
+  "n": 39,
+  "kohta": "kohde:hahmotelma-velika-planina",
+  "kasite": "Jože Plečnikin",
+  "kysymys": "Kerro lisää: Jože Plečnikin"
+ },
+ {
+  "n": 40,
+  "kohta": "kohde:hahmotelma-velika-planina",
+  "kasite": "Ljubljanassa",
+  "kysymys": "Kerro lisää: Ljubljanassa"
+ },
+ {
+  "n": 41,
+  "kohta": "kohde:hahmotelma-velika-planina",
+  "kasite": "Prahan linnan",
+  "kysymys": "Kerro lisää: Prahan linnan"
+ },
+ {
+  "n": 42,
+  "kohta": "kohde:hahmotelma-velika-planina",
+  "kasite": "Ylä-Krainissa",
+  "kysymys": "Kerro lisää: Ylä-Krainissa"
+ },
+ {
+  "n": 43,
+  "kohta": "kohde:hahmotelma-velika-planina",
+  "kasite": "Neitsyt Maria",
+  "kysymys": "Kerro lisää: Neitsyt Maria"
+ },
+ {
+  "n": 44,
+  "kohta": "kohde:hahmotelma-cerknica",
+  "kasite": "luolista",
+  "kysymys": "Kerro lisää: luolista"
+ },
+ {
+  "n": 45,
+  "kohta": "kohde:hahmotelma-cerknica",
+  "kasite": "Cerknican",
+  "kysymys": "Kerro lisää: Cerknican"
+ },
+ {
+  "n": 46,
+  "kohta": "kohde:hahmotelma-cerknica",
+  "kasite": "Sisä-Krainissa",
+  "kysymys": "Kerro lisää: Sisä-Krainissa"
+ },
+ {
+  "n": 47,
+  "kohta": "kohde:hahmotelma-cerknica",
+  "kasite": "Tobias Gruber",
+  "kysymys": "Kerro lisää: Tobias Gruber"
+ },
+ {
+  "n": 48,
+  "kohta": "kohde:hahmotelma-cerknica",
+  "kasite": "Johann Weikhard von Valvasor",
+  "kysymys": "Kerro lisää: Johann Weikhard von Valvasor"
+ },
+ {
+  "n": 49,
+  "kohta": "kohde:hahmotelma-cerknica",
+  "kasite": "karstipoljen",
+  "kysymys": "Kerro lisää: karstipoljen"
+ },
+ {
+  "n": 50,
+  "kohta": "kohde:hahmotelma-cerknica",
+  "kasite": "maanalaisiin onkaloihin",
+  "kysymys": "Kerro lisää: maanalaisiin onkaloihin"
+ },
+ {
+  "n": 51,
+  "kohta": "kohde:hahmotelma-cerknica",
+  "kasite": "lintualue",
+  "kysymys": "Kerro lisää: lintualue"
+ },
+ {
+  "n": 52,
+  "kohta": "kohde:hahmotelma-cerknica",
+  "kasite": "Cerknican järvi",
+  "kysymys": "Kerro lisää: Cerknican järvi"
+ },
+ {
+  "n": 53,
+  "kohta": "kohde:hahmotelma-cerknica",
+  "kasite": "Valvasorin",
+  "kysymys": "Kerro lisää: Valvasorin"
+ },
+ {
+  "n": 54,
+  "kohta": "kohde:hahmotelma-skocjan",
+  "kasite": "Karstin",
+  "kysymys": "Kerro lisää: Karstin"
+ },
+ {
+  "n": 55,
+  "kohta": "kohde:hahmotelma-skocjan",
+  "kasite": "romahdusdolinaan",
+  "kysymys": "Kerro lisää: romahdusdolinaan"
+ },
+ {
+  "n": 56,
+  "kohta": "kohde:hahmotelma-skocjan",
+  "kasite": "Monfalconen",
+  "kysymys": "Kerro lisää: Monfalconen"
+ },
+ {
+  "n": 57,
+  "kohta": "kohde:hahmotelma-skocjan",
+  "kasite": "Timavo-joen",
+  "kysymys": "Kerro lisää: Timavo-joen"
+ },
+ {
+  "n": 58,
+  "kohta": "kohde:hahmotelma-skocjan",
+  "kasite": "Škocjanin luolien",
+  "kysymys": "Kerro lisää: Škocjanin luolien"
+ },
+ {
+  "n": 59,
+  "kohta": "kohde:hahmotelma-skocjan",
+  "kasite": "Reka-joki",
+  "kysymys": "Kerro lisää: Reka-joki"
+ },
+ {
+  "n": 60,
+  "kohta": "kohde:hahmotelma-skocjan",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 61,
+  "kohta": "kohde:hahmotelma-skocjan",
+  "kasite": "ihmisasutuksesta",
+  "kysymys": "Kerro lisää: ihmisasutuksesta"
+ },
+ {
+  "n": 62,
+  "kohta": "kohde:hahmotelma-skocjan",
+  "kasite": "vieraskirja",
+  "kysymys": "Kerro lisää: vieraskirja"
+ },
+ {
+  "n": 63,
+  "kohta": "kohde:hahmotelma-skocjan",
+  "kasite": "Unesco",
+  "kysymys": "Kerro lisää: Unesco"
+ },
+ {
+  "n": 64,
+  "kohta": "kohde:hahmotelma-skocjan",
+  "kasite": "Karstilla",
+  "kysymys": "Kerro lisää: Karstilla"
+ },
+ {
+  "n": 65,
+  "kohta": "kohde:hahmotelma-skocjan",
+  "kasite": "kalkkikivestä",
+  "kysymys": "Kerro lisää: kalkkikivestä"
+ },
+ {
+  "n": 66,
+  "kohta": "kohde:hahmotelma-skocjan",
+  "kasite": "dolineja",
+  "kysymys": "Kerro lisää: dolineja"
+ },
+ {
+  "n": 67,
+  "kohta": "kohde:hahmotelma-skocjan",
+  "kasite": "Škocjanin luolat",
+  "kysymys": "Kerro lisää: Škocjanin luolat"
+ },
+ {
+  "n": 68,
+  "kohta": "kohde:hahmotelma-postojna",
+  "kasite": "Pivka-joen",
+  "kysymys": "Kerro lisää: Pivka-joen"
+ },
+ {
+  "n": 69,
+  "kohta": "kohde:hahmotelma-postojna",
+  "kasite": "Frans I:n",
+  "kysymys": "Kerro lisää: Frans I:n"
+ },
+ {
+  "n": 70,
+  "kohta": "kohde:hahmotelma-postojna",
+  "kasite": "Luka Čeč",
+  "kysymys": "Kerro lisää: Luka Čeč"
+ },
+ {
+  "n": 71,
+  "kohta": "kohde:hahmotelma-postojna",
+  "kasite": "Johann Weikhard von Valvasor",
+  "kysymys": "Kerro lisää: Johann Weikhard von Valvasor"
+ },
+ {
+  "n": 72,
+  "kohta": "kohde:hahmotelma-postojna",
+  "kasite": "luolajuna",
+  "kysymys": "Kerro lisää: luolajuna"
+ },
+ {
+  "n": 73,
+  "kohta": "kohde:hahmotelma-postojna",
+  "kasite": "Ljubljanassa",
+  "kysymys": "Kerro lisää: Ljubljanassa"
+ },
+ {
+  "n": 74,
+  "kohta": "kohde:hahmotelma-postojna",
+  "kasite": "Pivka-joki",
+  "kysymys": "Kerro lisää: Pivka-joki"
+ },
+ {
+  "n": 75,
+  "kohta": "kohde:hahmotelma-postojna",
+  "kasite": "Kalkkikivi",
+  "kysymys": "Kerro lisää: Kalkkikivi"
+ },
+ {
+  "n": 76,
+  "kohta": "kohde:hahmotelma-postojna",
+  "kasite": "postitoimisto",
+  "kysymys": "Kerro lisää: postitoimisto"
+ },
+ {
+  "n": 77,
+  "kohta": "kohde:hahmotelma-postojna",
+  "kasite": "sähkövalo",
+  "kysymys": "Kerro lisää: sähkövalo"
+ },
+ {
+  "n": 78,
+  "kohta": "kohde:hahmotelma-postojna",
+  "kasite": "Krainin herttuakunnan",
+  "kysymys": "Kerro lisää: Krainin herttuakunnan"
+ },
+ {
+  "n": 79,
+  "kohta": "kohde:hahmotelma-postojna",
+  "kasite": "Postojnan luolan",
+  "kysymys": "Kerro lisää: Postojnan luolan"
+ },
+ {
+  "n": 80,
+  "kohta": "kohde:hahmotelma-ptuj",
+  "kasite": "Poetovio",
+  "kysymys": "Kerro lisää: Poetovio"
+ },
+ {
+  "n": 81,
+  "kohta": "kohde:hahmotelma-ptuj",
+  "kasite": "Draava-joen",
+  "kysymys": "Kerro lisää: Draava-joen"
+ },
+ {
+  "n": 82,
+  "kohta": "kohde:hahmotelma-ptuj",
+  "kasite": "Vespasianuksen",
+  "kysymys": "Kerro lisää: Vespasianuksen"
+ },
+ {
+  "n": 83,
+  "kohta": "kohde:hahmotelma-ptuj",
+  "kasite": "Salzburgin",
+  "kysymys": "Kerro lisää: Salzburgin"
+ },
+ {
+  "n": 84,
+  "kohta": "kohde:hahmotelma-ptuj",
+  "kasite": "Kurentovanjessa",
+  "kysymys": "Kerro lisää: Kurentovanjessa"
+ },
+ {
+  "n": 85,
+  "kohta": "kohde:hahmotelma-ptuj",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 86,
+  "kohta": "kohde:hahmotelma-ptuj",
+  "kasite": "aineettoman kulttuuriperinnön",
+  "kysymys": "Kerro lisää: aineettoman kulttuuriperinnön"
+ },
+ {
+  "n": 87,
+  "kohta": "kohde:hahmotelma-ptuj",
+  "kasite": "Steiermarkin",
+  "kysymys": "Kerro lisää: Steiermarkin"
+ },
+ {
+  "n": 88,
+  "kohta": "kohde:hahmotelma-ptuj",
+  "kasite": "Draava",
+  "kysymys": "Kerro lisää: Draava"
+ },
+ {
+  "n": 89,
+  "kohta": "kohde:hahmotelma-ptuj",
+  "kasite": "Kroatiaa",
+  "kysymys": "Kerro lisää: Kroatiaa"
+ },
+ {
+  "n": 90,
+  "kohta": "kohde:hahmotelma-ptuj",
+  "kasite": "Unkarin",
+  "kysymys": "Kerro lisää: Unkarin"
+ },
+ {
+  "n": 91,
+  "kohta": "kohde:hahmotelma-ptuj",
+  "kasite": "Tonavaan",
+  "kysymys": "Kerro lisää: Tonavaan"
+ },
+ {
+  "n": 92,
+  "kohta": "kohde:hahmotelma-ptuj",
+  "kasite": "Itämereltä",
+  "kysymys": "Kerro lisää: Itämereltä"
+ },
+ {
+  "n": 93,
+  "kohta": "kohde:hahmotelma-ptuj",
+  "kasite": "Adrianmerelle",
+  "kysymys": "Kerro lisää: Adrianmerelle"
+ },
+ {
+  "n": 94,
+  "kohta": "kohde:hahmotelma-ptuj",
+  "kasite": "meripihkatieksi",
+  "kysymys": "Kerro lisää: meripihkatieksi"
+ },
+ {
+  "n": 95,
+  "kohta": "kohde:hahmotelma-ptuj",
+  "kasite": "Poetovion",
+  "kysymys": "Kerro lisää: Poetovion"
+ },
+ {
+  "n": 96,
+  "kohta": "kohde:hahmotelma-celje",
+  "kasite": "Celjen kreivien",
+  "kysymys": "Kerro lisää: Celjen kreivien"
+ },
+ {
+  "n": 97,
+  "kohta": "kohde:hahmotelma-celje",
+  "kasite": "Sanneckin",
+  "kysymys": "Kerro lisää: Sanneckin"
+ },
+ {
+  "n": 98,
+  "kohta": "kohde:hahmotelma-celje",
+  "kasite": "Friderikin tornin",
+  "kysymys": "Kerro lisää: Friderikin tornin"
+ },
+ {
+  "n": 99,
+  "kohta": "kohde:hahmotelma-celje",
+  "kasite": "rauniolinna",
+  "kysymys": "Kerro lisää: rauniolinna"
+ },
+ {
+  "n": 100,
+  "kohta": "kohde:hahmotelma-celje",
+  "kasite": "Heunburgin",
+  "kysymys": "Kerro lisää: Heunburgin"
+ },
+ {
+  "n": 101,
+  "kohta": "kohde:hahmotelma-celje",
+  "kasite": "Celjen kreivejä",
+  "kysymys": "Kerro lisää: Celjen kreivejä"
+ },
+ {
+  "n": 102,
+  "kohta": "kohde:hahmotelma-celje",
+  "kasite": "Celjen kreivit",
+  "kysymys": "Kerro lisää: Celjen kreivit"
+ },
+ {
+  "n": 103,
+  "kohta": "kohde:hahmotelma-celje",
+  "kasite": "Steiermarkin",
+  "kysymys": "Kerro lisää: Steiermarkin"
+ },
+ {
+  "n": 104,
+  "kohta": "kohde:hahmotelma-celje",
+  "kasite": "Savinja-joen",
+  "kysymys": "Kerro lisää: Savinja-joen"
+ },
+ {
+  "n": 105,
+  "kohta": "kohde:hahmotelma-celje",
+  "kasite": "Celjen linna",
+  "kysymys": "Kerro lisää: Celjen linna"
+ },
+ {
+  "n": 106,
+  "kohta": "kohde:hahmotelma-skofja-loka",
+  "kasite": "Otto II",
+  "kysymys": "Kerro lisää: Otto II"
+ },
+ {
+  "n": 107,
+  "kohta": "kohde:hahmotelma-skofja-loka",
+  "kasite": "Freisingin",
+  "kysymys": "Kerro lisää: Freisingin"
+ },
+ {
+  "n": 108,
+  "kohta": "kohde:hahmotelma-skofja-loka",
+  "kasite": "Baijerissa",
+  "kysymys": "Kerro lisää: Baijerissa"
+ },
+ {
+  "n": 109,
+  "kohta": "kohde:hahmotelma-skofja-loka",
+  "kasite": "pitkäperjantain",
+  "kysymys": "Kerro lisää: pitkäperjantain"
+ },
+ {
+  "n": 110,
+  "kohta": "kohde:hahmotelma-skofja-loka",
+  "kasite": "Jeesuksen",
+  "kysymys": "Kerro lisää: Jeesuksen"
+ },
+ {
+  "n": 111,
+  "kohta": "kohde:hahmotelma-skofja-loka",
+  "kasite": "Romuald",
+  "kysymys": "Kerro lisää: Romuald"
+ },
+ {
+  "n": 112,
+  "kohta": "kohde:hahmotelma-skofja-loka",
+  "kasite": "markkinaoikeudet",
+  "kysymys": "Kerro lisää: markkinaoikeudet"
+ },
+ {
+  "n": 113,
+  "kohta": "kohde:hahmotelma-skofja-loka",
+  "kasite": "kaupunkioikeudet",
+  "kysymys": "Kerro lisää: kaupunkioikeudet"
+ },
+ {
+  "n": 114,
+  "kohta": "kohde:hahmotelma-skofja-loka",
+  "kasite": "Itävallan",
+  "kysymys": "Kerro lisää: Itävallan"
+ },
+ {
+  "n": 115,
+  "kohta": "kohde:hahmotelma-skofja-loka",
+  "kasite": "Krainin herttuakuntaan",
+  "kysymys": "Kerro lisää: Krainin herttuakuntaan"
+ },
+ {
+  "n": 116,
+  "kohta": "kohde:hahmotelma-skofja-loka",
+  "kasite": "muurilla",
+  "kysymys": "Kerro lisää: muurilla"
+ },
+ {
+  "n": 117,
+  "kohta": "kohde:hahmotelma-skofja-loka",
+  "kasite": "Ylä-Krainin",
+  "kysymys": "Kerro lisää: Ylä-Krainin"
+ },
+ {
+  "n": 118,
+  "kohta": "kohde:hahmotelma-sticna",
+  "kasite": "Stičnan",
+  "kysymys": "Kerro lisää: Stičnan"
+ },
+ {
+  "n": 119,
+  "kohta": "kohde:hahmotelma-sticna",
+  "kasite": "sloveniankielinen",
+  "kysymys": "Kerro lisää: sloveniankielinen"
+ },
+ {
+  "n": 120,
+  "kohta": "kohde:hahmotelma-sticna",
+  "kasite": "Joosef II",
+  "kysymys": "Kerro lisää: Joosef II"
+ },
+ {
+  "n": 121,
+  "kohta": "kohde:hahmotelma-sticna",
+  "kasite": "Habsburgien",
+  "kysymys": "Kerro lisää: Habsburgien"
+ },
+ {
+  "n": 122,
+  "kohta": "kohde:hahmotelma-sticna",
+  "kasite": "sistersiläisluostari",
+  "kysymys": "Kerro lisää: sistersiläisluostari"
+ },
+ {
+  "n": 123,
+  "kohta": "kohde:hahmotelma-sticna",
+  "kasite": "Prahassa",
+  "kysymys": "Kerro lisää: Prahassa"
+ },
+ {
+  "n": 124,
+  "kohta": "kohde:hahmotelma-sticna",
+  "kasite": "motettien",
+  "kysymys": "Kerro lisää: motettien"
+ },
+ {
+  "n": 125,
+  "kohta": "kohde:hahmotelma-sticna",
+  "kasite": "Opus musicum",
+  "kysymys": "Kerro lisää: Opus musicum"
+ },
+ {
+  "n": 126,
+  "kohta": "kohde:hahmotelma-sticna",
+  "kasite": "benediktiiniläisten",
+  "kysymys": "Kerro lisää: benediktiiniläisten"
+ },
+ {
+  "n": 127,
+  "kohta": "kohde:hahmotelma-sticna",
+  "kasite": "Benedictuksen sääntöä",
+  "kysymys": "Kerro lisää: Benedictuksen sääntöä"
+ },
+ {
+  "n": 128,
+  "kohta": "kohde:hahmotelma-sticna",
+  "kasite": "valkoisiksi munkeiksi",
+  "kysymys": "Kerro lisää: valkoisiksi munkeiksi"
+ },
+ {
+  "n": 129,
+  "kohta": "kohde:hahmotelma-sticna",
+  "kasite": "valistuksen",
+  "kysymys": "Kerro lisää: valistuksen"
+ },
+ {
+  "n": 130,
+  "kohta": "kohde:hahmotelma-kobarid",
+  "kasite": "Caporetto",
+  "kysymys": "Kerro lisää: Caporetto"
+ },
+ {
+  "n": 131,
+  "kohta": "kohde:hahmotelma-kobarid",
+  "kasite": "Karfreit",
+  "kysymys": "Kerro lisää: Karfreit"
+ },
+ {
+  "n": 132,
+  "kohta": "kohde:hahmotelma-kobarid",
+  "kasite": "Isonzon",
+  "kysymys": "Kerro lisää: Isonzon"
+ },
+ {
+  "n": 133,
+  "kohta": "kohde:hahmotelma-kobarid",
+  "kasite": "Itävalta-Unkarin",
+  "kysymys": "Kerro lisää: Itävalta-Unkarin"
+ },
+ {
+  "n": 134,
+  "kohta": "kohde:hahmotelma-kobarid",
+  "kasite": "Caporeton taistelu",
+  "kysymys": "Kerro lisää: Caporeton taistelu"
+ },
+ {
+  "n": 135,
+  "kohta": "kohde:hahmotelma-kobarid",
+  "kasite": "Euroopan neuvosto",
+  "kysymys": "Kerro lisää: Euroopan neuvosto"
+ },
+ {
+  "n": 136,
+  "kohta": "kohde:hahmotelma-kobarid",
+  "kasite": "Piave-joen",
+  "kysymys": "Kerro lisää: Piave-joen"
+ },
+ {
+  "n": 137,
+  "kohta": "kohde:hahmotelma-kobarid",
+  "kasite": "Hemingwayn",
+  "kysymys": "Kerro lisää: Hemingwayn"
+ },
+ {
+  "n": 138,
+  "kohta": "kohde:hahmotelma-kobarid",
+  "kasite": "Julian Alppien",
+  "kysymys": "Kerro lisää: Julian Alppien"
+ },
+ {
+  "n": 139,
+  "kohta": "kohde:hahmotelma-kobarid",
+  "kasite": "Isonzo",
+  "kysymys": "Kerro lisää: Isonzo"
+ },
+ {
+  "n": 140,
+  "kohta": "kohde:hahmotelma-kobarid",
+  "kasite": "Adrianmereen",
+  "kysymys": "Kerro lisää: Adrianmereen"
+ },
+ {
+  "n": 141,
+  "kohta": "kohde:hahmotelma-kobarid",
+  "kasite": "Sočan taimen",
+  "kysymys": "Kerro lisää: Sočan taimen"
+ },
+ {
+  "n": 142,
+  "kohta": "kohde:hahmotelma-kobarid",
+  "kasite": "Julius Caesarista",
+  "kysymys": "Kerro lisää: Julius Caesarista"
+ },
+ {
+  "n": 143,
+  "kohta": "kohde:hahmotelma-kobarid",
+  "kasite": "Forum Iulii",
+  "kysymys": "Kerro lisää: Forum Iulii"
+ },
+ {
+  "n": 144,
+  "kohta": "kohde:hahmotelma-kobarid",
+  "kasite": "Triglav",
+  "kysymys": "Kerro lisää: Triglav"
+ },
+ {
+  "n": 145,
+  "kohta": "kohde:hahmotelma-ljubljansko-barje",
+  "kasite": "paalukyliä",
+  "kysymys": "Kerro lisää: paalukyliä"
+ },
+ {
+  "n": 146,
+  "kohta": "kohde:hahmotelma-ljubljansko-barje",
+  "kasite": "turpeen",
+  "kysymys": "Kerro lisää: turpeen"
+ },
+ {
+  "n": 147,
+  "kohta": "kohde:hahmotelma-ljubljansko-barje",
+  "kasite": "Igin",
+  "kysymys": "Kerro lisää: Igin"
+ },
+ {
+  "n": 148,
+  "kohta": "kohde:hahmotelma-ljubljansko-barje",
+  "kasite": "paalujen",
+  "kysymys": "Kerro lisää: paalujen"
+ },
+ {
+  "n": 149,
+  "kohta": "kohde:hahmotelma-ljubljansko-barje",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 150,
+  "kohta": "kohde:hahmotelma-ljubljansko-barje",
+  "kasite": "saarnesta",
+  "kysymys": "Kerro lisää: saarnesta"
+ },
+ {
+  "n": 151,
+  "kohta": "kohde:hahmotelma-ljubljansko-barje",
+  "kasite": "tammesta",
+  "kysymys": "Kerro lisää: tammesta"
+ },
+ {
+  "n": 152,
+  "kohta": "kohde:hahmotelma-ljubljansko-barje",
+  "kasite": "Sveitsissä",
+  "kysymys": "Kerro lisää: Sveitsissä"
+ },
+ {
+  "n": 153,
+  "kohta": "kohde:hahmotelma-ljubljansko-barje",
+  "kasite": "kaupunginmuurien",
+  "kysymys": "Kerro lisää: kaupunginmuurien"
+ },
+ {
+  "n": 154,
+  "kohta": "kohde:hahmotelma-ljubljansko-barje",
+  "kasite": "Ljubljanica-joen",
+  "kysymys": "Kerro lisää: Ljubljanica-joen"
+ },
+ {
+  "n": 155,
+  "kohta": "kohde:hahmotelma-kostanjevica",
+  "kasite": "Krka-joen",
+  "kysymys": "Kerro lisää: Krka-joen"
+ },
+ {
+  "n": 156,
+  "kohta": "kohde:hahmotelma-kostanjevica",
+  "kasite": "Venetsiaa",
+  "kysymys": "Kerro lisää: Venetsiaa"
+ },
+ {
+  "n": 157,
+  "kohta": "kohde:hahmotelma-kostanjevica",
+  "kasite": "Sistersiläisten",
+  "kysymys": "Kerro lisää: Sistersiläisten"
+ },
+ {
+  "n": 158,
+  "kohta": "kohde:hahmotelma-kostanjevica",
+  "kasite": "Božidar Jakacin galleria",
+  "kysymys": "Kerro lisää: Božidar Jakacin galleria"
+ },
+ {
+  "n": 159,
+  "kohta": "kohde:hahmotelma-kostanjevica",
+  "kasite": "veistospuisto",
+  "kysymys": "Kerro lisää: veistospuisto"
+ },
+ {
+  "n": 160,
+  "kohta": "kohde:hahmotelma-kostanjevica",
+  "kasite": "Sava-jokeen",
+  "kysymys": "Kerro lisää: Sava-jokeen"
+ },
+ {
+  "n": 161,
+  "kohta": "kohde:hahmotelma-kostanjevica",
+  "kasite": "Belgradiin",
+  "kysymys": "Kerro lisää: Belgradiin"
+ },
+ {
+  "n": 162,
+  "kohta": "kohde:hahmotelma-kostanjevica",
+  "kasite": "Tonavaan",
+  "kysymys": "Kerro lisää: Tonavaan"
+ },
+ {
+  "n": 163,
+  "kohta": "kohde:hahmotelma-kostanjevica",
+  "kasite": "Novo Mestossa",
+  "kysymys": "Kerro lisää: Novo Mestossa"
+ },
+ {
+  "n": 164,
+  "kohta": "kohde:hahmotelma-kostanjevica",
+  "kasite": "Dolenjskan",
+  "kysymys": "Kerro lisää: Dolenjskan"
+ },
+ {
+  "n": 165,
+  "kohta": "kohde:hahmotelma-kostanjevica",
+  "kasite": "suippokaaret",
+  "kysymys": "Kerro lisää: suippokaaret"
+ },
+ {
+  "n": 166,
+  "kohta": "kohde:hahmotelma-kostanjevica",
+  "kasite": "ripaholvit",
+  "kysymys": "Kerro lisää: ripaholvit"
+ },
+ {
+  "n": 167,
+  "kohta": "kohde:hahmotelma-kostanjevica",
+  "kasite": "romaanisen",
+  "kysymys": "Kerro lisää: romaanisen"
+ },
+ {
+  "n": 168,
+  "kohta": "kohde:hahmotelma-piran",
+  "kasite": "Venetsian tasavallalle",
+  "kysymys": "Kerro lisää: Venetsian tasavallalle"
+ },
+ {
+  "n": 169,
+  "kohta": "kohde:hahmotelma-piran",
+  "kasite": "Itävallan keisarikuntaan",
+  "kysymys": "Kerro lisää: Itävallan keisarikuntaan"
+ },
+ {
+  "n": 170,
+  "kohta": "kohde:hahmotelma-piran",
+  "kasite": "Paholaisen trillistä",
+  "kysymys": "Kerro lisää: Paholaisen trillistä"
+ },
+ {
+  "n": 171,
+  "kohta": "kohde:hahmotelma-piran",
+  "kasite": "sisäsatama",
+  "kysymys": "Kerro lisää: sisäsatama"
+ },
+ {
+  "n": 172,
+  "kohta": "kohde:hahmotelma-piran",
+  "kasite": "Antonio Dal Zòtto",
+  "kysymys": "Kerro lisää: Antonio Dal Zòtto"
+ },
+ {
+  "n": 173,
+  "kohta": "kohde:hahmotelma-piran",
+  "kasite": "suolakiteet",
+  "kysymys": "Kerro lisää: suolakiteet"
+ },
+ {
+  "n": 174,
+  "kohta": "kohde:hahmotelma-piran",
+  "kasite": "Adrianmeren",
+  "kysymys": "Kerro lisää: Adrianmeren"
+ },
+ {
+  "n": 175,
+  "kohta": "kohde:hahmotelma-piran",
+  "kasite": "Sečovljen",
+  "kysymys": "Kerro lisää: Sečovljen"
+ },
+ {
+  "n": 176,
+  "kohta": "kohde:hahmotelma-piran",
+  "kasite": "Napoleonin",
+  "kysymys": "Kerro lisää: Napoleonin"
+ },
+ {
+  "n": 177,
+  "kohta": "kohde:hahmotelma-piran",
+  "kasite": "Campo Formion rauhassa",
+  "kysymys": "Kerro lisää: Campo Formion rauhassa"
+ },
+ {
+  "n": 178,
+  "kohta": "kohde:hahmotelma-piran",
+  "kasite": "Habsburgien",
+  "kysymys": "Kerro lisää: Habsburgien"
+ },
+ {
+  "n": 179,
+  "kohta": "kohde:hahmotelma-piran",
+  "kasite": "viulusonaatti",
+  "kysymys": "Kerro lisää: viulusonaatti"
+ },
+ {
+  "n": 180,
+  "kohta": "kohde:hahmotelma-piran",
+  "kasite": "Paholaisen trilli",
+  "kysymys": "Kerro lisää: Paholaisen trilli"
+ },
+ {
+  "n": 181,
+  "kohta": "kohde:hahmotelma-piran",
+  "kasite": "trilleistä",
+  "kysymys": "Kerro lisää: trilleistä"
+ },
+ {
+  "n": 182,
+  "kohta": "kohde:hahmotelma-maribor",
+  "kasite": "žametovka",
+  "kysymys": "Kerro lisää: žametovka"
+ },
+ {
+  "n": 183,
+  "kohta": "kohde:hahmotelma-maribor",
+  "kasite": "Guinnessin ennätyskirjaan",
+  "kysymys": "Kerro lisää: Guinnessin ennätyskirjaan"
+ },
+ {
+  "n": 184,
+  "kohta": "kohde:hahmotelma-maribor",
+  "kasite": "Mariborin",
+  "kysymys": "Kerro lisää: Mariborin"
+ },
+ {
+  "n": 185,
+  "kohta": "kohde:hahmotelma-maribor",
+  "kasite": "Mariborissa",
+  "kysymys": "Kerro lisää: Mariborissa"
+ },
+ {
+  "n": 186,
+  "kohta": "kohde:hahmotelma-maribor",
+  "kasite": "Draava-joen",
+  "kysymys": "Kerro lisää: Draava-joen"
+ },
+ {
+  "n": 187,
+  "kohta": "kohde:hahmotelma-maribor",
+  "kasite": "Lände",
+  "kysymys": "Kerro lisää: Lände"
+ },
+ {
+  "n": 188,
+  "kohta": "kohde:hahmotelma-maribor",
+  "kasite": "Maribor",
+  "kysymys": "Kerro lisää: Maribor"
+ },
+ {
+  "n": 189,
+  "kohta": "kohde:hahmotelma-maribor",
+  "kasite": "Habsburgien",
+  "kysymys": "Kerro lisää: Habsburgien"
+ },
+ {
+  "n": 190,
+  "kohta": "kohde:hahmotelma-maribor",
+  "kasite": "Steiermarkin",
+  "kysymys": "Kerro lisää: Steiermarkin"
+ },
+ {
+  "n": 191,
+  "kohta": "kohde:hahmotelma-maribor",
+  "kasite": "markkinoita",
+  "kysymys": "Kerro lisää: markkinoita"
+ },
+ {
+  "n": 192,
+  "kohta": "kohde:hahmotelma-maribor",
+  "kasite": "Vinagin",
+  "kysymys": "Kerro lisää: Vinagin"
+ },
+ {
+  "n": 193,
+  "kohta": "kohde:hahmotelma-lipica",
+  "kasite": "Kaarle II",
+  "kysymys": "Kerro lisää: Kaarle II"
+ },
+ {
+  "n": 194,
+  "kohta": "kohde:hahmotelma-lipica",
+  "kasite": "Lipican",
+  "kysymys": "Kerro lisää: Lipican"
+ },
+ {
+  "n": 195,
+  "kohta": "kohde:hahmotelma-lipica",
+  "kasite": "Espanjasta",
+  "kysymys": "Kerro lisää: Espanjasta"
+ },
+ {
+  "n": 196,
+  "kohta": "kohde:hahmotelma-lipica",
+  "kasite": "lehmusta",
+  "kysymys": "Kerro lisää: lehmusta"
+ },
+ {
+  "n": 197,
+  "kohta": "kohde:hahmotelma-lipica",
+  "kasite": "Lipizzan-hevoset",
+  "kysymys": "Kerro lisää: Lipizzan-hevoset"
+ },
+ {
+  "n": 198,
+  "kohta": "kohde:hahmotelma-lipica",
+  "kasite": "kalkkikiveä",
+  "kysymys": "Kerro lisää: kalkkikiveä"
+ },
+ {
+  "n": 199,
+  "kohta": "kohde:hahmotelma-lipica",
+  "kasite": "dolineiksi",
+  "kysymys": "Kerro lisää: dolineiksi"
+ },
+ {
+  "n": 200,
+  "kohta": "kohde:hahmotelma-lipica",
+  "kasite": "Štanjelin",
+  "kysymys": "Kerro lisää: Štanjelin"
+ },
+ {
+  "n": 201,
+  "kohta": "kohde:hahmotelma-lipica",
+  "kasite": "Habsburgien",
+  "kysymys": "Kerro lisää: Habsburgien"
+ },
+ {
+  "n": 202,
+  "kohta": "kohde:hahmotelma-lipica",
+  "kasite": "Unkarin",
+  "kysymys": "Kerro lisää: Unkarin"
+ },
+ {
+  "n": 203,
+  "kohta": "kohde:hahmotelma-lipica",
+  "kasite": "Marie Antoinette",
+  "kysymys": "Kerro lisää: Marie Antoinette"
+ },
+ {
+  "n": 204,
+  "kohta": "kohde:hahmotelma-lipica",
+  "kasite": "Napoleonin",
+  "kysymys": "Kerro lisää: Napoleonin"
+ },
+ {
+  "n": 205,
+  "kohta": "kohde:hahmotelma-lipica",
+  "kasite": "maailmansotien",
+  "kysymys": "Kerro lisää: maailmansotien"
+ },
+ {
+  "n": 206,
+  "kohta": "kohde:hahmotelma-ormoz",
+  "kasite": "Ptujin",
+  "kysymys": "Kerro lisää: Ptujin"
+ },
+ {
+  "n": 207,
+  "kohta": "kohde:hahmotelma-ormoz",
+  "kasite": "ensimmäisen maailmansodan",
+  "kysymys": "Kerro lisää: ensimmäisen maailmansodan"
+ },
+ {
+  "n": 208,
+  "kohta": "kohde:hahmotelma-ormoz",
+  "kasite": "kosteikoksi",
+  "kysymys": "Kerro lisää: kosteikoksi"
+ },
+ {
+  "n": 209,
+  "kohta": "kohde:hahmotelma-ormoz",
+  "kasite": "muuttolinnuille",
+  "kysymys": "Kerro lisää: muuttolinnuille"
+ },
+ {
+  "n": 210,
+  "kohta": "kohde:hahmotelma-ormoz",
+  "kasite": "kahlaajille",
+  "kysymys": "Kerro lisää: kahlaajille"
+ },
+ {
+  "n": 211,
+  "kohta": "kohde:hahmotelma-ormoz",
+  "kasite": "Draava-joen",
+  "kysymys": "Kerro lisää: Draava-joen"
+ },
+ {
+  "n": 212,
+  "kohta": "kohde:hahmotelma-ormoz",
+  "kasite": "Mura-joen",
+  "kysymys": "Kerro lisää: Mura-joen"
+ },
+ {
+  "n": 213,
+  "kohta": "kohde:hahmotelma-ormoz",
+  "kasite": "Ormož",
+  "kysymys": "Kerro lisää: Ormož"
+ },
+ {
+  "n": 214,
+  "kohta": "kohde:hahmotelma-ormoz",
+  "kasite": "Andreas Marggraf",
+  "kysymys": "Kerro lisää: Andreas Marggraf"
+ },
+ {
+  "n": 215,
+  "kohta": "kohde:hahmotelma-ormoz",
+  "kasite": "Franz Karl Achard",
+  "kysymys": "Kerro lisää: Franz Karl Achard"
+ },
+ {
+  "n": 216,
+  "kohta": "kohde:hahmotelma-ormoz",
+  "kasite": "Napoleonin",
+  "kysymys": "Kerro lisää: Napoleonin"
+ },
+ {
+  "n": 217,
+  "kohta": "kohde:hahmotelma-ormoz",
+  "kasite": "kahlaajat",
+  "kysymys": "Kerro lisää: kahlaajat"
+ },
+ {
+  "n": 218,
+  "kohta": "kohde:hahmotelma-ormoz",
+  "kasite": "kosteikkoja",
+  "kysymys": "Kerro lisää: kosteikkoja"
+ },
+ {
+  "n": 219,
+  "kohta": "kohde:hahmotelma-lendava",
+  "kasite": "Unkarin kuningaskuntaan",
+  "kysymys": "Kerro lisää: Unkarin kuningaskuntaan"
+ },
+ {
+  "n": 220,
+  "kohta": "kohde:hahmotelma-lendava",
+  "kasite": "Zalan komitaatin",
+  "kysymys": "Kerro lisää: Zalan komitaatin"
+ },
+ {
+  "n": 221,
+  "kohta": "kohde:hahmotelma-lendava",
+  "kasite": "unkarilaisvähemmistön",
+  "kysymys": "Kerro lisää: unkarilaisvähemmistön"
+ },
+ {
+  "n": 222,
+  "kohta": "kohde:hahmotelma-lendava",
+  "kasite": "juutalaisyhteisöstä",
+  "kysymys": "Kerro lisää: juutalaisyhteisöstä"
+ },
+ {
+  "n": 223,
+  "kohta": "kohde:hahmotelma-lendava",
+  "kasite": "toista maailmansotaa",
+  "kysymys": "Kerro lisää: toista maailmansotaa"
+ },
+ {
+  "n": 224,
+  "kohta": "kohde:hahmotelma-lendava",
+  "kasite": "holokaustissa",
+  "kysymys": "Kerro lisää: holokaustissa"
+ },
+ {
+  "n": 225,
+  "kohta": "kohde:hahmotelma-lendava",
+  "kasite": "Joseph Haydn",
+  "kysymys": "Kerro lisää: Joseph Haydn"
+ },
+ {
+  "n": 226,
+  "kohta": "kohde:hahmotelma-lendava",
+  "kasite": "Unkarin",
+  "kysymys": "Kerro lisää: Unkarin"
+ },
+ {
+  "n": 227,
+  "kohta": "kohde:hahmotelma-lendava",
+  "kasite": "Kroatian",
+  "kysymys": "Kerro lisää: Kroatian"
+ },
+ {
+  "n": 228,
+  "kohta": "kohde:hahmotelma-lendava",
+  "kasite": "Euroopan neuvosto",
+  "kysymys": "Kerro lisää: Euroopan neuvosto"
+ },
+ {
+  "n": 229,
+  "kohta": "kohde:hahmotelma-lendava",
+  "kasite": "saamen",
+  "kysymys": "Kerro lisää: saamen"
+ },
+ {
+  "n": 230,
+  "kohta": "kohde:hahmotelma-idrija",
+  "kasite": "amalgaamin",
+  "kysymys": "Kerro lisää: amalgaamin"
+ },
+ {
+  "n": 231,
+  "kohta": "kohde:hahmotelma-idrija",
+  "kasite": "Habsburgien",
+  "kysymys": "Kerro lisää: Habsburgien"
+ },
+ {
+  "n": 232,
+  "kohta": "kohde:hahmotelma-idrija",
+  "kasite": "Espanjan",
+  "kysymys": "Kerro lisää: Espanjan"
+ },
+ {
+  "n": 233,
+  "kohta": "kohde:hahmotelma-idrija",
+  "kasite": "sinooperina",
+  "kysymys": "Kerro lisää: sinooperina"
+ },
+ {
+  "n": 234,
+  "kohta": "kohde:hahmotelma-idrija",
+  "kasite": "maailmanperintölistalle",
+  "kysymys": "Kerro lisää: maailmanperintölistalle"
+ },
+ {
+  "n": 235,
+  "kohta": "kohde:hahmotelma-idrija",
+  "kasite": "Almadénin",
+  "kysymys": "Kerro lisää: Almadénin"
+ },
+ {
+  "n": 236,
+  "kohta": "kohde:hahmotelma-idrija",
+  "kasite": "nypläpuikoille",
+  "kysymys": "Kerro lisää: nypläpuikoille"
+ },
+ {
+  "n": 237,
+  "kohta": "kohde:hahmotelma-idrija",
+  "kasite": "maantieteellisellä merkinnällä",
+  "kysymys": "Kerro lisää: maantieteellisellä merkinnällä"
+ },
+ {
+  "n": 238,
+  "kohta": "kohde:hahmotelma-idrija",
+  "kasite": "ICOMOS",
+  "kysymys": "Kerro lisää: ICOMOS"
+ },
+ {
+  "n": 239,
+  "kohta": "kohde:hahmotelma-idrija",
+  "kasite": "IUCN",
+  "kysymys": "Kerro lisää: IUCN"
+ },
+ {
+  "n": 240,
+  "kohta": "kohde:hahmotelma-idrija",
+  "kasite": "maailmanperintökomitea",
+  "kysymys": "Kerro lisää: maailmanperintökomitea"
+ },
+ {
+  "n": 241,
+  "kohta": "kohde:hahmotelma-idrija",
+  "kasite": "elohopean",
+  "kysymys": "Kerro lisää: elohopean"
+ },
+ {
+  "n": 242,
+  "kohta": "kohde:hahmotelma-idrija",
+  "kasite": "UNESCOn",
+  "kysymys": "Kerro lisää: UNESCOn"
+ },
+ {
+  "n": 243,
+  "kohta": "kohde:hahmotelma-trbovlje",
+  "kasite": "Etelärataan",
+  "kysymys": "Kerro lisää: Etelärataan"
+ },
+ {
+  "n": 244,
+  "kohta": "kohde:hahmotelma-trbovlje",
+  "kasite": "höyryveturit",
+  "kysymys": "Kerro lisää: höyryveturit"
+ },
+ {
+  "n": 245,
+  "kohta": "kohde:hahmotelma-trbovlje",
+  "kasite": "hiilenlouhinta",
+  "kysymys": "Kerro lisää: hiilenlouhinta"
+ },
+ {
+  "n": 246,
+  "kohta": "kohde:hahmotelma-trbovlje",
+  "kasite": "teräsbetonista",
+  "kysymys": "Kerro lisää: teräsbetonista"
+ },
+ {
+  "n": 247,
+  "kohta": "kohde:hahmotelma-trbovlje",
+  "kasite": "painopiste",
+  "kysymys": "Kerro lisää: painopiste"
+ },
+ {
+  "n": 248,
+  "kohta": "kohde:hahmotelma-trbovlje",
+  "kasite": "Tuulikuorma",
+  "kysymys": "Kerro lisää: Tuulikuorma"
+ },
+ {
+  "n": 249,
+  "kohta": "kohde:hahmotelma-trbovlje",
+  "kasite": "turpeesta",
+  "kysymys": "Kerro lisää: turpeesta"
+ },
+ {
+  "n": 250,
+  "kohta": "kohde:hahmotelma-trbovlje",
+  "kasite": "lämpöarvo",
+  "kysymys": "Kerro lisää: lämpöarvo"
+ },
+ {
+  "n": 251,
+  "kohta": "kohde:hahmotelma-trbovlje",
+  "kasite": "voimalaitoksissa",
+  "kysymys": "Kerro lisää: voimalaitoksissa"
+ },
+ {
+  "n": 252,
+  "kohta": "kohde:hahmotelma-trbovlje",
+  "kasite": "Wienin",
+  "kysymys": "Kerro lisää: Wienin"
+ },
+ {
+  "n": 253,
+  "kohta": "kohde:hahmotelma-trbovlje",
+  "kasite": "Triesteen",
+  "kysymys": "Kerro lisää: Triesteen"
+ },
+ {
+  "n": 254,
+  "kohta": "kohde:hahmotelma-trbovlje",
+  "kasite": "Semmeringin",
+  "kysymys": "Kerro lisää: Semmeringin"
+ },
+ {
+  "n": 255,
+  "kohta": "kohde:hahmotelma-trbovlje",
+  "kasite": "Perkmandeljc",
+  "kysymys": "Kerro lisää: Perkmandeljc"
+ },
+ {
+  "n": 256,
+  "kohta": "kohde:hahmotelma-trbovlje",
+  "kasite": "kobolteista",
+  "kysymys": "Kerro lisää: kobolteista"
+ },
+ {
+  "n": 257,
+  "kohta": "kohde:hahmotelma-rogaska",
+  "kasite": "Peter de Curti",
+  "kysymys": "Kerro lisää: Peter de Curti"
+ },
+ {
+  "n": 258,
+  "kohta": "kohde:hahmotelma-rogaska",
+  "kasite": "Habsburgien",
+  "kysymys": "Kerro lisää: Habsburgien"
+ },
+ {
+  "n": 259,
+  "kohta": "kohde:hahmotelma-rogaska",
+  "kasite": "Donat Mg",
+  "kysymys": "Kerro lisää: Donat Mg"
+ },
+ {
+  "n": 260,
+  "kohta": "kohde:hahmotelma-rogaska",
+  "kasite": "lasitehtaassa",
+  "kysymys": "Kerro lisää: lasitehtaassa"
+ },
+ {
+  "n": 261,
+  "kohta": "kohde:hahmotelma-rogaska",
+  "kasite": "kristallilasi",
+  "kysymys": "Kerro lisää: kristallilasi"
+ },
+ {
+  "n": 262,
+  "kohta": "kohde:hahmotelma-rogaska",
+  "kasite": "kivennäisvesi",
+  "kysymys": "Kerro lisää: kivennäisvesi"
+ },
+ {
+  "n": 263,
+  "kohta": "kohde:hahmotelma-rogaska",
+  "kasite": "magnesiumia",
+  "kysymys": "Kerro lisää: magnesiumia"
+ },
+ {
+  "n": 264,
+  "kohta": "kohde:hahmotelma-rogaska",
+  "kasite": "Tempel-paviljonki",
+  "kysymys": "Kerro lisää: Tempel-paviljonki"
+ },
+ {
+  "n": 265,
+  "kohta": "kohde:hahmotelma-rogaska",
+  "kasite": "Karlovy Vary",
+  "kysymys": "Kerro lisää: Karlovy Vary"
+ },
+ {
+  "n": 266,
+  "kohta": "kohde:hahmotelma-rogaska",
+  "kasite": "Baden",
+  "kysymys": "Kerro lisää: Baden"
+ },
+ {
+  "n": 267,
+  "kohta": "kohde:hahmotelma-rogaska",
+  "kasite": "Bad Ischl",
+  "kysymys": "Kerro lisää: Bad Ischl"
+ },
+ {
+  "n": 268,
+  "kohta": "kohde:hahmotelma-rogaska",
+  "kasite": "Rautateiden",
+  "kysymys": "Kerro lisää: Rautateiden"
+ },
+ {
+  "n": 269,
+  "kohta": "kohde:hahmotelma-rogaska",
+  "kasite": "lyijyoksidia",
+  "kysymys": "Kerro lisää: lyijyoksidia"
+ },
+ {
+  "n": 270,
+  "kohta": "kohde:hahmotelma-rogaska",
+  "kasite": "taitekerrointa",
+  "kysymys": "Kerro lisää: taitekerrointa"
+ },
+ {
+  "n": 271,
+  "kohta": "kohde:hahmotelma-ravne",
+  "kasite": "Guštanj",
+  "kysymys": "Kerro lisää: Guštanj"
+ },
+ {
+  "n": 272,
+  "kohta": "kohde:hahmotelma-ravne",
+  "kasite": "Gutenstein",
+  "kysymys": "Kerro lisää: Gutenstein"
+ },
+ {
+  "n": 273,
+  "kohta": "kohde:hahmotelma-ravne",
+  "kasite": "Kärntenin",
+  "kysymys": "Kerro lisää: Kärntenin"
+ },
+ {
+  "n": 274,
+  "kohta": "kohde:hahmotelma-ravne",
+  "kasite": "puuhiiltä",
+  "kysymys": "Kerro lisää: puuhiiltä"
+ },
+ {
+  "n": 275,
+  "kohta": "kohde:hahmotelma-ravne",
+  "kasite": "vesivoimaa",
+  "kysymys": "Kerro lisää: vesivoimaa"
+ },
+ {
+  "n": 276,
+  "kohta": "kohde:hahmotelma-ravne",
+  "kasite": "hiiltä",
+  "kysymys": "Kerro lisää: hiiltä"
+ },
+ {
+  "n": 277,
+  "kohta": "kohde:hahmotelma-ravne",
+  "kasite": "Bessemerin menetelmä",
+  "kysymys": "Kerro lisää: Bessemerin menetelmä"
+ },
+ {
+  "n": 278,
+  "kohta": "kohde:hahmotelma-ravne",
+  "kasite": "Baijerista",
+  "kysymys": "Kerro lisää: Baijerista"
+ },
+ {
+  "n": 279,
+  "kohta": "kohde:hahmotelma-ravne",
+  "kasite": "Habsburgien",
+  "kysymys": "Kerro lisää: Habsburgien"
+ },
+ {
+  "n": 280,
+  "kohta": "kohde:hahmotelma-ravne",
+  "kasite": "vesipyörää",
+  "kysymys": "Kerro lisää: vesipyörää"
+ },
+ {
+  "n": 281,
+  "kohta": "kohde:hahmotelma-ravne",
+  "kasite": "takomovasaroita",
+  "kysymys": "Kerro lisää: takomovasaroita"
+ },
+ {
+  "n": 282,
+  "kohta": "kohde:hahmotelma-ravne",
+  "kasite": "palkeita",
+  "kysymys": "Kerro lisää: palkeita"
+ },
+ {
+  "n": 283,
+  "kohta": "kohde:hahmotelma-velenje",
+  "kasite": "Šalekin laaksossa",
+  "kysymys": "Kerro lisää: Šalekin laaksossa"
+ },
+ {
+  "n": 284,
+  "kohta": "kohde:hahmotelma-velenje",
+  "kasite": "ruskohiilikaivos",
+  "kysymys": "Kerro lisää: ruskohiilikaivos"
+ },
+ {
+  "n": 285,
+  "kohta": "kohde:hahmotelma-velenje",
+  "kasite": "Pitkäseinälouhinnassa",
+  "kysymys": "Kerro lisää: Pitkäseinälouhinnassa"
+ },
+ {
+  "n": 286,
+  "kohta": "kohde:hahmotelma-velenje",
+  "kasite": "hydraulisia tukia",
+  "kysymys": "Kerro lisää: hydraulisia tukia"
+ },
+ {
+  "n": 287,
+  "kohta": "kohde:hahmotelma-velenje",
+  "kasite": "Velenjen",
+  "kysymys": "Kerro lisää: Velenjen"
+ },
+ {
+  "n": 288,
+  "kohta": "kohde:hahmotelma-velenje",
+  "kasite": "Velenjen linna",
+  "kysymys": "Kerro lisää: Velenjen linna"
+ },
+ {
+  "n": 289,
+  "kohta": "kohde:hahmotelma-velenje",
+  "kasite": "kartanoita",
+  "kysymys": "Kerro lisää: kartanoita"
+ },
+ {
+  "n": 290,
+  "kohta": "kohde:hahmotelma-velenje",
+  "kasite": "painuma",
+  "kysymys": "Kerro lisää: painuma"
+ },
+ {
+  "n": 291,
+  "kohta": "kohde:hahmotelma-velenje",
+  "kasite": "pohjavedellä",
+  "kysymys": "Kerro lisää: pohjavedellä"
+ },
+ {
+  "n": 292,
+  "kohta": "kohde:hahmotelma-velenje",
+  "kasite": "Velenjen järvi",
+  "kysymys": "Kerro lisää: Velenjen järvi"
+ },
+ {
+  "n": 293,
+  "kohta": "kohde:hahmotelma-velenje",
+  "kasite": "Nowa Huta",
+  "kysymys": "Kerro lisää: Nowa Huta"
+ },
+ {
+  "n": 294,
+  "kohta": "kohde:hahmotelma-velenje",
+  "kasite": "Stevenage",
+  "kysymys": "Kerro lisää: Stevenage"
+ },
+ {
+  "n": 295,
+  "kohta": "kohde:hahmotelma-velenje",
+  "kasite": "Tapiola",
+  "kysymys": "Kerro lisää: Tapiola"
+ },
+ {
+  "n": 296,
+  "kohta": "kohde:hahmotelma-emona",
+  "kasite": "kulttuurikerrokseksi",
+  "kysymys": "Kerro lisää: kulttuurikerrokseksi"
+ },
+ {
+  "n": 297,
+  "kohta": "kohde:hahmotelma-emona",
+  "kasite": "Ljubljana",
+  "kysymys": "Kerro lisää: Ljubljana"
+ },
+ {
+  "n": 298,
+  "kohta": "kohde:hahmotelma-emona",
+  "kasite": "Jože Plečnikin",
+  "kysymys": "Kerro lisää: Jože Plečnikin"
+ },
+ {
+  "n": 299,
+  "kohta": "kohde:hahmotelma-emona",
+  "kasite": "länsigootit",
+  "kysymys": "Kerro lisää: länsigootit"
+ },
+ {
+  "n": 300,
+  "kohta": "kohde:hahmotelma-emona",
+  "kasite": "hunnit",
+  "kysymys": "Kerro lisää: hunnit"
+ },
+ {
+  "n": 301,
+  "kohta": "kohde:hahmotelma-emona",
+  "kasite": "langobardit",
+  "kysymys": "Kerro lisää: langobardit"
+ },
+ {
+  "n": 302,
+  "kohta": "kohde:hahmotelma-emona",
+  "kasite": "avaarien",
+  "kysymys": "Kerro lisää: avaarien"
+ },
+ {
+  "n": 303,
+  "kohta": "kohde:hahmotelma-emona",
+  "kasite": "cardo",
+  "kysymys": "Kerro lisää: cardo"
+ },
+ {
+  "n": 304,
+  "kohta": "kohde:hahmotelma-emona",
+  "kasite": "decumanus",
+  "kysymys": "Kerro lisää: decumanus"
+ },
+ {
+  "n": 305,
+  "kohta": "kohde:hahmotelma-emona",
+  "kasite": "foorumi",
+  "kysymys": "Kerro lisää: foorumi"
+ },
+ {
+  "n": 306,
+  "kohta": "kohde:hahmotelma-emona",
+  "kasite": "legioonat",
+  "kysymys": "Kerro lisää: legioonat"
+ },
+ {
+  "n": 307,
+  "kohta": "kohde:hahmotelma-emona",
+  "kasite": "veteraaneilla",
+  "kysymys": "Kerro lisää: veteraaneilla"
+ },
+ {
+  "n": 308,
+  "kohta": "kohde:hahmotelma-emona",
+  "kasite": "Ljubljanica",
+  "kysymys": "Kerro lisää: Ljubljanica"
+ },
+ {
+  "n": 309,
+  "kohta": "kohde:hahmotelma-emona",
+  "kasite": "pelastusarkeologiaksi",
+  "kysymys": "Kerro lisää: pelastusarkeologiaksi"
+ },
+ {
+  "n": 310,
+  "kohta": "kohde:hahmotelma-emona",
+  "kasite": "kulttuurikerrokset",
+  "kysymys": "Kerro lisää: kulttuurikerrokset"
+ },
+ {
+  "n": 311,
+  "kohta": "kohde:hahmotelma-zice",
+  "kasite": "kartusiaaniluostariksi",
+  "kysymys": "Kerro lisää: kartusiaaniluostariksi"
+ },
+ {
+  "n": 312,
+  "kohta": "kohde:hahmotelma-zice",
+  "kasite": "suuren skisman",
+  "kysymys": "Kerro lisää: suuren skisman"
+ },
+ {
+  "n": 313,
+  "kohta": "kohde:hahmotelma-zice",
+  "kasite": "ylipriorin",
+  "kysymys": "Kerro lisää: ylipriorin"
+ },
+ {
+  "n": 314,
+  "kohta": "kohde:hahmotelma-zice",
+  "kasite": "osmanien",
+  "kysymys": "Kerro lisää: osmanien"
+ },
+ {
+  "n": 315,
+  "kohta": "kohde:hahmotelma-zice",
+  "kasite": "jesuiittojen",
+  "kysymys": "Kerro lisää: jesuiittojen"
+ },
+ {
+  "n": 316,
+  "kohta": "kohde:hahmotelma-zice",
+  "kasite": "Joosef II",
+  "kysymys": "Kerro lisää: Joosef II"
+ },
+ {
+  "n": 317,
+  "kohta": "kohde:hahmotelma-zice",
+  "kasite": "Bruno",
+  "kysymys": "Kerro lisää: Bruno"
+ },
+ {
+  "n": 318,
+  "kohta": "kohde:hahmotelma-zice",
+  "kasite": "Chartreusen",
+  "kysymys": "Kerro lisää: Chartreusen"
+ },
+ {
+  "n": 319,
+  "kohta": "kohde:hahmotelma-zice",
+  "kasite": "Slovenske Konjicen",
+  "kysymys": "Kerro lisää: Slovenske Konjicen"
+ },
+ {
+  "n": 320,
+  "kohta": "kohde:hahmotelma-zice",
+  "kasite": "Johannes Kastajalle",
+  "kysymys": "Kerro lisää: Johannes Kastajalle"
+ },
+ {
+  "n": 321,
+  "kohta": "kohde:hahmotelma-zice",
+  "kasite": "Pleterje",
+  "kysymys": "Kerro lisää: Pleterje"
+ },
+ {
+  "n": 322,
+  "kohta": "kohde:hahmotelma-zice",
+  "kasite": "Rooman",
+  "kysymys": "Kerro lisää: Rooman"
+ },
+ {
+  "n": 323,
+  "kohta": "kohde:hahmotelma-zice",
+  "kasite": "Avignonin",
+  "kysymys": "Kerro lisää: Avignonin"
+ },
+ {
+  "n": 324,
+  "kohta": "kohde:hahmotelma-zice",
+  "kasite": "Konstanzin kirkolliskokouksessa",
+  "kysymys": "Kerro lisää: Konstanzin kirkolliskokouksessa"
+ },
+ {
+  "n": 325,
+  "kohta": "kohde:hahmotelma-koper",
+  "kasite": "langobardien",
+  "kysymys": "Kerro lisää: langobardien"
+ },
+ {
+  "n": 326,
+  "kohta": "kohde:hahmotelma-koper",
+  "kasite": "Aegida",
+  "kysymys": "Kerro lisää: Aegida"
+ },
+ {
+  "n": 327,
+  "kohta": "kohde:hahmotelma-koper",
+  "kasite": "Bysantin",
+  "kysymys": "Kerro lisää: Bysantin"
+ },
+ {
+  "n": 328,
+  "kohta": "kohde:hahmotelma-koper",
+  "kasite": "Habsburgien",
+  "kysymys": "Kerro lisää: Habsburgien"
+ },
+ {
+  "n": 329,
+  "kohta": "kohde:hahmotelma-koper",
+  "kasite": "keisari Kaarle VI",
+  "kysymys": "Kerro lisää: keisari Kaarle VI"
+ },
+ {
+  "n": 330,
+  "kohta": "kohde:hahmotelma-koper",
+  "kasite": "Venetsian",
+  "kysymys": "Kerro lisää: Venetsian"
+ },
+ {
+  "n": 331,
+  "kohta": "kohde:hahmotelma-koper",
+  "kasite": "Koper",
+  "kysymys": "Kerro lisää: Koper"
+ },
+ {
+  "n": 332,
+  "kohta": "kohde:hahmotelma-koper",
+  "kasite": "suolapadoistaan",
+  "kysymys": "Kerro lisää: suolapadoistaan"
+ },
+ {
+  "n": 333,
+  "kohta": "kohde:hahmotelma-koper",
+  "kasite": "Sečovljen",
+  "kysymys": "Kerro lisää: Sečovljen"
+ },
+ {
+  "n": 334,
+  "kohta": "kohde:hahmotelma-koper",
+  "kasite": "podestà",
+  "kysymys": "Kerro lisää: podestà"
+ },
+ {
+  "n": 335,
+  "kohta": "kohde:hahmotelma-koper",
+  "kasite": "Napoleonin",
+  "kysymys": "Kerro lisää: Napoleonin"
+ },
+ {
+  "n": 336,
+  "kohta": "kohde:hahmotelma-koper",
+  "kasite": "Adrianmeren",
+  "kysymys": "Kerro lisää: Adrianmeren"
+ },
+ {
+  "n": 337,
+  "kohta": "kohde:hahmotelma-koper",
+  "kasite": "Piran",
+  "kysymys": "Kerro lisää: Piran"
+ },
+ {
+  "n": 338,
+  "kohta": "kohde:hahmotelma-koper",
+  "kasite": "Izola",
+  "kysymys": "Kerro lisää: Izola"
+ },
+ {
+  "n": 339,
+  "kohta": "kohde:hahmotelma-ljubljana",
+  "kasite": "Iason",
+  "kysymys": "Kerro lisää: Iason"
+ },
+ {
+  "n": 340,
+  "kohta": "kohde:hahmotelma-ljubljana",
+  "kasite": "kultaisen taljan",
+  "kysymys": "Kerro lisää: kultaisen taljan"
+ },
+ {
+  "n": 341,
+  "kohta": "kohde:hahmotelma-ljubljana",
+  "kasite": "Lohikäärmesillan",
+  "kysymys": "Kerro lisää: Lohikäärmesillan"
+ },
+ {
+  "n": 342,
+  "kohta": "kohde:hahmotelma-ljubljana",
+  "kasite": "argonautit",
+  "kysymys": "Kerro lisää: argonautit"
+ },
+ {
+  "n": 343,
+  "kohta": "kohde:hahmotelma-ljubljana",
+  "kasite": "maanjäristys",
+  "kysymys": "Kerro lisää: maanjäristys"
+ },
+ {
+  "n": 344,
+  "kohta": "kohde:hahmotelma-ljubljana",
+  "kasite": "Kranin",
+  "kysymys": "Kerro lisää: Kranin"
+ },
+ {
+  "n": 345,
+  "kohta": "kohde:hahmotelma-ljubljana",
+  "kasite": "secession-tyylin",
+  "kysymys": "Kerro lisää: secession-tyylin"
+ },
+ {
+  "n": 346,
+  "kohta": "kohde:hahmotelma-ljubljana",
+  "kasite": "Ljubljanican",
+  "kysymys": "Kerro lisää: Ljubljanican"
+ },
+ {
+  "n": 347,
+  "kohta": "kohde:hahmotelma-ljubljana",
+  "kasite": "Kolmoissilta",
+  "kysymys": "Kerro lisää: Kolmoissilta"
+ },
+ {
+  "n": 348,
+  "kohta": "kohde:hahmotelma-ljubljana",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 349,
+  "kohta": "kohde:hahmotelma-ljubljana",
+  "kasite": "karstin",
+  "kysymys": "Kerro lisää: karstin"
+ },
+ {
+  "n": 350,
+  "kohta": "kohde:hahmotelma-ljubljana",
+  "kasite": "Emonan",
+  "kysymys": "Kerro lisää: Emonan"
+ },
+ {
+  "n": 351,
+  "kohta": "kohde:hahmotelma-kocevje",
+  "kasite": "Tirolista",
+  "kysymys": "Kerro lisää: Tirolista"
+ },
+ {
+  "n": 352,
+  "kohta": "kohde:hahmotelma-kocevje",
+  "kasite": "Kärntenistä",
+  "kysymys": "Kerro lisää: Kärntenistä"
+ },
+ {
+  "n": 353,
+  "kohta": "kohde:hahmotelma-kocevje",
+  "kasite": "Ortenburgin",
+  "kysymys": "Kerro lisää: Ortenburgin"
+ },
+ {
+  "n": 354,
+  "kohta": "kohde:hahmotelma-kocevje",
+  "kasite": "Jugoslavia",
+  "kysymys": "Kerro lisää: Jugoslavia"
+ },
+ {
+  "n": 355,
+  "kohta": "kohde:hahmotelma-kocevje",
+  "kasite": "toisen maailmansodan",
+  "kysymys": "Kerro lisää: toisen maailmansodan"
+ },
+ {
+  "n": 356,
+  "kohta": "kohde:hahmotelma-kocevje",
+  "kasite": "Gottscheerisch",
+  "kysymys": "Kerro lisää: Gottscheerisch"
+ },
+ {
+  "n": 357,
+  "kohta": "kohde:hahmotelma-kocevje",
+  "kasite": "Tirolin",
+  "kysymys": "Kerro lisää: Tirolin"
+ },
+ {
+  "n": 358,
+  "kohta": "kohde:hahmotelma-kocevje",
+  "kasite": "Dinaaristen vuorten",
+  "kysymys": "Kerro lisää: Dinaaristen vuorten"
+ },
+ {
+  "n": 359,
+  "kohta": "kohde:hahmotelma-kocevje",
+  "kasite": "ruskokarhuja",
+  "kysymys": "Kerro lisää: ruskokarhuja"
+ },
+ {
+  "n": 360,
+  "kohta": "kohde:hahmotelma-kocevje",
+  "kasite": "ilveksiä",
+  "kysymys": "Kerro lisää: ilveksiä"
+ },
+ {
+  "n": 361,
+  "kohta": "kohde:hahmotelma-kocevje",
+  "kasite": "Friulin",
+  "kysymys": "Kerro lisää: Friulin"
+ },
+ {
+  "n": 362,
+  "kohta": "kohde:hahmotelma-kocevje",
+  "kasite": "Venetsian",
+  "kysymys": "Kerro lisää: Venetsian"
+ },
+ {
+  "n": 363,
+  "kohta": "kohde:hahmotelma-vipava",
+  "kasite": "illyyrit",
+  "kysymys": "Kerro lisää: illyyrit"
+ },
+ {
+  "n": 364,
+  "kohta": "kohde:hahmotelma-vipava",
+  "kasite": "kelttien",
+  "kysymys": "Kerro lisää: kelttien"
+ },
+ {
+  "n": 365,
+  "kohta": "kohde:hahmotelma-vipava",
+  "kasite": "Adrianmeren",
+  "kysymys": "Kerro lisää: Adrianmeren"
+ },
+ {
+  "n": 366,
+  "kohta": "kohde:hahmotelma-vipava",
+  "kasite": "viinitarhojen",
+  "kysymys": "Kerro lisää: viinitarhojen"
+ },
+ {
+  "n": 367,
+  "kohta": "kohde:hahmotelma-vipava",
+  "kasite": "chardonnayta",
+  "kysymys": "Kerro lisää: chardonnayta"
+ },
+ {
+  "n": 368,
+  "kohta": "kohde:hahmotelma-vipava",
+  "kasite": "sauvignon blancia",
+  "kysymys": "Kerro lisää: sauvignon blancia"
+ },
+ {
+  "n": 369,
+  "kohta": "kohde:hahmotelma-vipava",
+  "kasite": "Zelen",
+  "kysymys": "Kerro lisää: Zelen"
+ },
+ {
+  "n": 370,
+  "kohta": "kohde:hahmotelma-vipava",
+  "kasite": "viikunat",
+  "kysymys": "Kerro lisää: viikunat"
+ },
+ {
+  "n": 371,
+  "kohta": "kohde:hahmotelma-vipava",
+  "kasite": "aprikoosit",
+  "kysymys": "Kerro lisää: aprikoosit"
+ },
+ {
+  "n": 372,
+  "kohta": "kohde:hahmotelma-vipava",
+  "kasite": "Hallstattin",
+  "kysymys": "Kerro lisää: Hallstattin"
+ },
+ {
+  "n": 373,
+  "kohta": "kohde:hahmotelma-vipava",
+  "kasite": "La Tènen",
+  "kysymys": "Kerro lisää: La Tènen"
+ },
+ {
+  "n": 374,
+  "kohta": "kohde:hahmotelma-vipava",
+  "kasite": "Caesarin",
+  "kysymys": "Kerro lisää: Caesarin"
+ },
+ {
+  "n": 375,
+  "kohta": "kohde:hahmotelma-metlika",
+  "kasite": "Metlikan",
+  "kysymys": "Kerro lisää: Metlikan"
+ },
+ {
+  "n": 376,
+  "kohta": "kohde:hahmotelma-metlika",
+  "kasite": "linna",
+  "kysymys": "Kerro lisää: linna"
+ },
+ {
+  "n": 377,
+  "kohta": "kohde:hahmotelma-metlika",
+  "kasite": "Bela Krajinan",
+  "kysymys": "Kerro lisää: Bela Krajinan"
+ },
+ {
+  "n": 378,
+  "kohta": "kohde:hahmotelma-metlika",
+  "kasite": "Jurjevanje",
+  "kysymys": "Kerro lisää: Jurjevanje"
+ },
+ {
+  "n": 379,
+  "kohta": "kohde:hahmotelma-metlika",
+  "kasite": "kaupunkioikeudet",
+  "kysymys": "Kerro lisää: kaupunkioikeudet"
+ },
+ {
+  "n": 380,
+  "kohta": "kohde:hahmotelma-metlika",
+  "kasite": "Kranin merkkikreivikuntaan",
+  "kysymys": "Kerro lisää: Kranin merkkikreivikuntaan"
+ },
+ {
+  "n": 381,
+  "kohta": "kohde:hahmotelma-metlika",
+  "kasite": "Bela Krajina",
+  "kysymys": "Kerro lisää: Bela Krajina"
+ },
+ {
+  "n": 382,
+  "kohta": "kohde:hahmotelma-metlika",
+  "kasite": "Kolpa-joen",
+  "kysymys": "Kerro lisää: Kolpa-joen"
+ },
+ {
+  "n": 383,
+  "kohta": "kohde:hahmotelma-metlika",
+  "kasite": "tamburica",
+  "kysymys": "Kerro lisää: tamburica"
+ },
+ {
+  "n": 384,
+  "kohta": "kohde:hahmotelma-pohorje",
+  "kasite": "Pohorjen",
+  "kysymys": "Kerro lisää: Pohorjen"
+ },
+ {
+  "n": 385,
+  "kohta": "kohde:hahmotelma-pohorje",
+  "kasite": "Stara glažuta",
+  "kysymys": "Kerro lisää: Stara glažuta"
+ },
+ {
+  "n": 386,
+  "kohta": "kohde:hahmotelma-pohorje",
+  "kasite": "Wienin",
+  "kysymys": "Kerro lisää: Wienin"
+ },
+ {
+  "n": 387,
+  "kohta": "kohde:hahmotelma-pohorje",
+  "kasite": "Böömin",
+  "kysymys": "Kerro lisää: Böömin"
+ },
+ {
+  "n": 388,
+  "kohta": "kohde:hahmotelma-pohorje",
+  "kasite": "Črni vrh",
+  "kysymys": "Kerro lisää: Črni vrh"
+ },
+ {
+  "n": 389,
+  "kohta": "kohde:hahmotelma-pohorje",
+  "kasite": "Mariborin",
+  "kysymys": "Kerro lisää: Mariborin"
+ },
+ {
+  "n": 390,
+  "kohta": "kohde:hahmotelma-pohorje",
+  "kasite": "Lobnican",
+  "kysymys": "Kerro lisää: Lobnican"
+ },
+ {
+  "n": 391,
+  "kohta": "kohde:hahmotelma-pohorje",
+  "kasite": "hiihtomatkailun",
+  "kysymys": "Kerro lisää: hiihtomatkailun"
+ },
+ {
+  "n": 392,
+  "kohta": "kohde:hahmotelma-pohorje",
+  "kasite": "lasinvalmistuksen",
+  "kysymys": "Kerro lisää: lasinvalmistuksen"
+ },
+ {
+  "n": 393,
+  "kohta": "kohde:hahmotelma-pohorje",
+  "kasite": "Draava",
+  "kysymys": "Kerro lisää: Draava"
+ }
+]

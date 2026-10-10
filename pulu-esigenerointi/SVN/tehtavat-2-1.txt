@@ -1,0 +1,1105 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triglav (luonto · vuori)
+Tietoruudun teksti: Triglav on Slovenian korkein vuori ja Julian Alppien korkein huippu, noin 2 864 metriä merenpinnan yläpuolella. Nimi tulee muodosta, joka tarkoittaa kolmipäistä, sillä vuori näyttää Ylä-Krainin suunnalta kolmihuippuiselta. Ensimmäinen tunnettu nousu huipulle tehtiin vuonna 1778 Sigmund Zoisin aloitteesta, ja Valentin Stanič mittasi vuoren korkeuden vuonna 1808. Triglav on Slovenian ainoan kansallispuiston, Triglavin kansallispuiston, keskus, ja sen tyylitelty hahmo on osa Slovenian vaakunaa ja lippua. Vanhassa kansantarussa metsästäjä etsii aarretta, jota vartioi lumottu, kultasarvinen vuorikauris Zlatorog.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Rotko avattiin kävelijöille] 1893 — Vintgarin rotko Bledin luoteispuolella on 1,6 kilometrin mittainen kuilu, jonka Radovna-joki on kaivertanut kallioon. Seinämät nousevat 50–100 metrin korkeuteen, ja jokeen on syntynyt vesialtaita ja koskia. Rotko oli pitkään melkein saavuttamaton, kunnes Gorjen pormestari Jakob Žumer ja valokuvaaja Benedikt Lergetporer tutkivat sen vuonna 1891. Kaksi vuotta myöhemmin siihen rakennettiin puisia kävelysiltoja, ja rotko avattiin yleisölle 26. elokuuta 1893. Rotkon päässä putoaa 13-metrinen Šum-vesiputous, Slovenian suurin jokivesiputous. Sana vintgar on sittemmin alkanut tarkoittaa muitakin suojeltuja rotkoja.
+- [Slovenia — maalehti / Rakennukset: Pegasos oven kahvana] 1936 — Slovenian kansallis- ja yliopistokirjaston suunnitteli Jože Plečnik vuosina 1930–31, ja se rakennettiin vuosina 1936–1941. Hanke kohtasi aluksi vastustusta Belgradin viranomaisten taholta, mutta opiskelijoiden sinnikkäät mielenosoitukset auttoivat sen eteenpäin. Julkisivussa tiili ja kivi vuorottelevat, ja osa kivistä on paikalta löytyneitä arkeologisia jäännöksiä. Pääoven kahvat päättyvät pieneen Pegasoksen päähän. Pääportaan 32 pylvästä on tehty tummasta Podpečin marmorista, ja rakennuksen ajatus on kulku tietämättömyyden hämärästä tiedon valoon. Kirjasto sai paikkansa Unescon listalla vuonna 2021.
+AIEMPI KYSYMYS: Miksi Triglavin nimi tarkoittaa kirjaimellisesti "kolmipäistä"?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi on aika kuvaava. Triglav on [[Slovenian]] korkein vuori, ja sen nimi tarkoittaa kolmipäistä, koska vuori näyttää [[Ylä-Krainin]] suunnasta katsottuna kolmihuippuiselta. Korkeus on noin 2 864 metriä, ja vuori on myös [[Julian Alppien]] korkein huippu. Nimi siis kuvaa sitä, miltä vuori näyttää, ei mitään sen salaperäisempää. Ylhäältä katsoen huippuja on kyllä helppo laskea.
+KYSYMYS: Kerro lisää: Slovenian
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triglav (luonto · vuori)
+Tietoruudun teksti: Triglav on Slovenian korkein vuori ja Julian Alppien korkein huippu, noin 2 864 metriä merenpinnan yläpuolella. Nimi tulee muodosta, joka tarkoittaa kolmipäistä, sillä vuori näyttää Ylä-Krainin suunnalta kolmihuippuiselta. Ensimmäinen tunnettu nousu huipulle tehtiin vuonna 1778 Sigmund Zoisin aloitteesta, ja Valentin Stanič mittasi vuoren korkeuden vuonna 1808. Triglav on Slovenian ainoan kansallispuiston, Triglavin kansallispuiston, keskus, ja sen tyylitelty hahmo on osa Slovenian vaakunaa ja lippua. Vanhassa kansantarussa metsästäjä etsii aarretta, jota vartioi lumottu, kultasarvinen vuorikauris Zlatorog.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Makkara, jonka ainekset on säädetty tarkasti] 1912 — Kranjska klobasa eli Carniolan makkara on sloveenialainen esikeitetty makkara, joka muistuttaa puolalaista kielbasaa. Nimi tulee Krainin (sloveeniksi Kranjska) historiallisesta herttuakunnasta, ja sloveeninkielinen nimi mainitaan ensi kerran F. Kalinšekin keittokirjassa 1912. Makkarassa on vähintään 75–80 % sianlihaa ja enintään 20 % pekonia, ja mausteiksi sallitaan vain merisuola, valkosipulia, salpietaria ja mustapippuria. Makkarat liitetään pareiksi puutikulla ja kuumasavustetaan. Tammikuussa 2015 Slovenia sai sille EU:n suojatun maantieteellisen merkinnän (PGI), vaikka Itävalta, Kroatia ja Saksa vastustivat.
+- [Slovenia — maalehti / Ruoka: Harmaa mehiläinen Krainista] nykyään — Kranjska čebela eli Carniolan mehiläinen (Apis mellifera carnica) on läntisen mehiläisen alalaji, jonka kotiseutu on Slovenia ja jonka nimi viittaa Krainin alueeseen. Sen ruskeanharmaan värin vuoksi sitä kutsutaan myös harmaaksi mehiläiseksi. Se on hyvin lempeä, joten sitä voi pitää asutuksen lähellä, ja se on maailman toiseksi suosituin tarhamehiläinen italianmehiläisen jälkeen. EU:n suojaamiin ruokatuotteisiin kuuluu myös slovenialainen hunaja.
+AIEMPI KYSYMYS: Miksi Triglavin nimi tarkoittaa kirjaimellisesti "kolmipäistä"?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi on aika kuvaava. Triglav on [[Slovenian]] korkein vuori, ja sen nimi tarkoittaa kolmipäistä, koska vuori näyttää [[Ylä-Krainin]] suunnasta katsottuna kolmihuippuiselta. Korkeus on noin 2 864 metriä, ja vuori on myös [[Julian Alppien]] korkein huippu. Nimi siis kuvaa sitä, miltä vuori näyttää, ei mitään sen salaperäisempää. Ylhäältä katsoen huippuja on kyllä helppo laskea.
+KYSYMYS: Kerro lisää: Ylä-Krainin
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triglav (luonto · vuori)
+Tietoruudun teksti: Triglav on Slovenian korkein vuori ja Julian Alppien korkein huippu, noin 2 864 metriä merenpinnan yläpuolella. Nimi tulee muodosta, joka tarkoittaa kolmipäistä, sillä vuori näyttää Ylä-Krainin suunnalta kolmihuippuiselta. Ensimmäinen tunnettu nousu huipulle tehtiin vuonna 1778 Sigmund Zoisin aloitteesta, ja Valentin Stanič mittasi vuoren korkeuden vuonna 1808. Triglav on Slovenian ainoan kansallispuiston, Triglavin kansallispuiston, keskus, ja sen tyylitelty hahmo on osa Slovenian vaakunaa ja lippua. Vanhassa kansantarussa metsästäjä etsii aarretta, jota vartioi lumottu, kultasarvinen vuorikauris Zlatorog.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Norsut yli Alppien] Toisessa puunilaissodassa (218–201 eaa.) Karthagon sotapäällikkö Hannibal Barkas marssitti armeijansa – mukana lukuisia sotanorsuja – Espanjasta Alppien yli Italian niemimaalle ja piti roomalaisia pelossa lähes viisitoista vuotta ilman että Rooma pystyi ajamaan häntä maastaan. Vasta kun Publius Cornelius Scipio hyökkäsi suoraan Pohjois-Afrikkaan ja pakotti Hannibalin palaamaan kotiaan puolustamaan, roomalaiset kukistivat hänet Zaman taistelussa vuonna 202 eaa. Tämä pysähdyttävän lähellä ollut voitto teki Hannibalista Rooman pelätyimmän vihollisen kautta aikojen, ja hänen kasvonsa toistuivat myöhemmin lukuisissa patsaissa ja rintakuvissa.
+AIEMPI KYSYMYS: Miksi Triglavin nimi tarkoittaa kirjaimellisesti "kolmipäistä"?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi on aika kuvaava. Triglav on [[Slovenian]] korkein vuori, ja sen nimi tarkoittaa kolmipäistä, koska vuori näyttää [[Ylä-Krainin]] suunnasta katsottuna kolmihuippuiselta. Korkeus on noin 2 864 metriä, ja vuori on myös [[Julian Alppien]] korkein huippu. Nimi siis kuvaa sitä, miltä vuori näyttää, ei mitään sen salaperäisempää. Ylhäältä katsoen huippuja on kyllä helppo laskea.
+KYSYMYS: Kerro lisää: Julian Alppien
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triglav (luonto · vuori)
+Tietoruudun teksti: Triglav on Slovenian korkein vuori ja Julian Alppien korkein huippu, noin 2 864 metriä merenpinnan yläpuolella. Nimi tulee muodosta, joka tarkoittaa kolmipäistä, sillä vuori näyttää Ylä-Krainin suunnalta kolmihuippuiselta. Ensimmäinen tunnettu nousu huipulle tehtiin vuonna 1778 Sigmund Zoisin aloitteesta, ja Valentin Stanič mittasi vuoren korkeuden vuonna 1808. Triglav on Slovenian ainoan kansallispuiston, Triglavin kansallispuiston, keskus, ja sen tyylitelty hahmo on osa Slovenian vaakunaa ja lippua. Vanhassa kansantarussa metsästäjä etsii aarretta, jota vartioi lumottu, kultasarvinen vuorikauris Zlatorog.
+AIEMPI KYSYMYS: Mitä lumottu vuorikauris Zlatorog vartioi vanhassa kansantarussa?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvä satu. Vanhassa kansantarussa [[Zlatorog]], lumottu ja kultasarvinen vuorikauris, vartioi aarretta, jota metsästäjä etsii [[Triglavin]] seuduilta. Tarun yksityiskohdat vaihtelevat kertojan mukaan, enkä ole varma kaikista käänteistä, mutta aarteen vartijana kauris on tunnettu. Kultasarvinen kauris on osa [[Slovenian]] kansanperinnettä, ja sen kuva tunnetaan laajalti maassa. Meikäläisten muistiinpanojen mukaan vuorilla kuuluu olla vartija.
+KYSYMYS: Kerro lisää: Zlatorog
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triglav (luonto · vuori)
+Tietoruudun teksti: Triglav on Slovenian korkein vuori ja Julian Alppien korkein huippu, noin 2 864 metriä merenpinnan yläpuolella. Nimi tulee muodosta, joka tarkoittaa kolmipäistä, sillä vuori näyttää Ylä-Krainin suunnalta kolmihuippuiselta. Ensimmäinen tunnettu nousu huipulle tehtiin vuonna 1778 Sigmund Zoisin aloitteesta, ja Valentin Stanič mittasi vuoren korkeuden vuonna 1808. Triglav on Slovenian ainoan kansallispuiston, Triglavin kansallispuiston, keskus, ja sen tyylitelty hahmo on osa Slovenian vaakunaa ja lippua. Vanhassa kansantarussa metsästäjä etsii aarretta, jota vartioi lumottu, kultasarvinen vuorikauris Zlatorog.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Vuori jonka nimi on kolmipäinen] 1778 — Triglav on Slovenian korkein vuori, noin 2 864 metriä, ja sen nimi tarkoittaa kolmipäistä, sillä Ylä-Kraiinin suunnasta se näyttää kolmihuippuiselta. Ensimmäinen tunnettu nousu tehtiin vuonna 1778 teollisuusmies Sigmund Zoisin aloitteesta. Huipulla seisoo pieni metallitorni: pappi Jakob Aljaž osti huipun yhdellä floriinilla huhtikuussa 1895, ja viisi miestä kokosi tornin viidessä tunnissa elokuussa. Torni ja vuori ovat kansallissymboleja. Sanotaan, että jokaisen aidon slovenialaisen pitäisi nousta huipulle kerran elämässään.
+AIEMPI KYSYMYS: Mitä lumottu vuorikauris Zlatorog vartioi vanhassa kansantarussa?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvä satu. Vanhassa kansantarussa [[Zlatorog]], lumottu ja kultasarvinen vuorikauris, vartioi aarretta, jota metsästäjä etsii [[Triglavin]] seuduilta. Tarun yksityiskohdat vaihtelevat kertojan mukaan, enkä ole varma kaikista käänteistä, mutta aarteen vartijana kauris on tunnettu. Kultasarvinen kauris on osa [[Slovenian]] kansanperinnettä, ja sen kuva tunnetaan laajalti maassa. Meikäläisten muistiinpanojen mukaan vuorilla kuuluu olla vartija.
+KYSYMYS: Kerro lisää: Triglavin
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triglav (luonto · vuori)
+Tietoruudun teksti: Triglav on Slovenian korkein vuori ja Julian Alppien korkein huippu, noin 2 864 metriä merenpinnan yläpuolella. Nimi tulee muodosta, joka tarkoittaa kolmipäistä, sillä vuori näyttää Ylä-Krainin suunnalta kolmihuippuiselta. Ensimmäinen tunnettu nousu huipulle tehtiin vuonna 1778 Sigmund Zoisin aloitteesta, ja Valentin Stanič mittasi vuoren korkeuden vuonna 1808. Triglav on Slovenian ainoan kansallispuiston, Triglavin kansallispuiston, keskus, ja sen tyylitelty hahmo on osa Slovenian vaakunaa ja lippua. Vanhassa kansantarussa metsästäjä etsii aarretta, jota vartioi lumottu, kultasarvinen vuorikauris Zlatorog.
+AIEMPI KYSYMYS: Mikä osa Triglavilla on Slovenian vaakunassa ja lipussa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Sen kuvan näkee ylhäältäkin. [[Slovenian]] [[vaakunassa]] ja lipussa on tyylitelty kuva Triglavista, [[Julian Alppien]] korkeimmasta huipusta, ja kuva esittää vuoren kolmena huippuna. Vaakunassa on vuoren lisäksi aaltoviivoja sen alla ja kolme tähteä sen yläpuolella, mutta niiden tulkinnoista en ole täysin varma. Vuori on siis kirjaimellisesti osa valtion tunnusta eikä pelkkä maisema. Mut kyllä lippu erottuu ylhäältä.
+KYSYMYS: Kerro lisää: vaakunassa
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triglav (luonto · vuori)
+Tietoruudun teksti: Triglav on Slovenian korkein vuori ja Julian Alppien korkein huippu, noin 2 864 metriä merenpinnan yläpuolella. Nimi tulee muodosta, joka tarkoittaa kolmipäistä, sillä vuori näyttää Ylä-Krainin suunnalta kolmihuippuiselta. Ensimmäinen tunnettu nousu huipulle tehtiin vuonna 1778 Sigmund Zoisin aloitteesta, ja Valentin Stanič mittasi vuoren korkeuden vuonna 1808. Triglav on Slovenian ainoan kansallispuiston, Triglavin kansallispuiston, keskus, ja sen tyylitelty hahmo on osa Slovenian vaakunaa ja lippua. Vanhassa kansantarussa metsästäjä etsii aarretta, jota vartioi lumottu, kultasarvinen vuorikauris Zlatorog.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Vuori jonka nimi on kolmipäinen] 1778 — Triglav on Slovenian korkein vuori, noin 2 864 metriä, ja sen nimi tarkoittaa kolmipäistä, sillä Ylä-Kraiinin suunnasta se näyttää kolmihuippuiselta. Ensimmäinen tunnettu nousu tehtiin vuonna 1778 teollisuusmies Sigmund Zoisin aloitteesta. Huipulla seisoo pieni metallitorni: pappi Jakob Aljaž osti huipun yhdellä floriinilla huhtikuussa 1895, ja viisi miestä kokosi tornin viidessä tunnissa elokuussa. Torni ja vuori ovat kansallissymboleja. Sanotaan, että jokaisen aidon slovenialaisen pitäisi nousta huipulle kerran elämässään.
+AIEMPI KYSYMYS: Mikä on Aljažin torni Triglavin huipulla?
+AIEMPI VASTAUS (Livia):
+Kato, tää on hyvä tarina. Triglavin huipulla seisoo pieni metallitorni, jonka tunnetaan olevan pappi [[Jakob Aljaž]]n ajatus. Aljaž osti huipun yhdellä floriinilla huhtikuussa 1895, ja viisi miestä kokosi tornin saman vuoden elokuussa viidessä tunnissa. Torni ja vuori ovat [[Slovenian]] kansallissymboleja, ja sanotaan, että jokaisen aidon slovenialaisen pitäisi nousta huipulle kerran elämässään.
+
+Viisi tuntia on kyllä kunnioitettava aika. Itse en saa pesääkään kasaan siinä, ja minulla on siihen kokemusta koko suvun edestä.
+KYSYMYS: Kerro lisää: Jakob Aljaž
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triglav (luonto · vuori)
+Tietoruudun teksti: Triglav on Slovenian korkein vuori ja Julian Alppien korkein huippu, noin 2 864 metriä merenpinnan yläpuolella. Nimi tulee muodosta, joka tarkoittaa kolmipäistä, sillä vuori näyttää Ylä-Krainin suunnalta kolmihuippuiselta. Ensimmäinen tunnettu nousu huipulle tehtiin vuonna 1778 Sigmund Zoisin aloitteesta, ja Valentin Stanič mittasi vuoren korkeuden vuonna 1808. Triglav on Slovenian ainoan kansallispuiston, Triglavin kansallispuiston, keskus, ja sen tyylitelty hahmo on osa Slovenian vaakunaa ja lippua. Vanhassa kansantarussa metsästäjä etsii aarretta, jota vartioi lumottu, kultasarvinen vuorikauris Zlatorog.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Smaragdikaunotar] nykyään — Soča saa alkunsa Trenta-laaksossa Julian Alpeilla 876 metrin korkeudessa ja virtaa 138 kilometrin matkan Adrianmereen. Sen vesi on niin smaragdinvihreää, että jokea markkinoidaan nimellä Smaragdikaunotar, ja väri säilyy poikkeuksellisen pitkälle. Rannoilla syntyi myös runoutta: Simon Gregorčič kirjoitti joesta runon Soči, jota pidetään slovenialaisen kirjallisuuden mestariteoksena. Jokivarressa elää harvinaista marmoritaimenta, ja alueella kuvattiin osa vuoden 2008 Narnia-elokuvasta Prinssi Kaspian. Italiassa joki tunnetaan nimellä Isonzo.
+AIEMPI KYSYMYS: Mikä on Triglavin kansallispuisto?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Triglavin kansallispuisto on Slovenian ainoa kansallispuisto, ja sen keskus on Triglav, [[Julian Alppien]] korkein huippu. Puisto sijaitsee Slovenian luoteisosassa Alppien tuntumassa, ja siihen kuuluu myös [[Trentan]] laakso, jossa [[Soča]]-joki saa alkunsa. Vuoren tyylitelty hahmo on lisäksi osa maan vaakunaa ja lippua. Pullapuotia en siellä ole nähnyt, mutta ei kai sellaista vuorilla kuulukaan olla.
+KYSYMYS: Kerro lisää: Trentan
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triglav (luonto · vuori)
+Tietoruudun teksti: Triglav on Slovenian korkein vuori ja Julian Alppien korkein huippu, noin 2 864 metriä merenpinnan yläpuolella. Nimi tulee muodosta, joka tarkoittaa kolmipäistä, sillä vuori näyttää Ylä-Krainin suunnalta kolmihuippuiselta. Ensimmäinen tunnettu nousu huipulle tehtiin vuonna 1778 Sigmund Zoisin aloitteesta, ja Valentin Stanič mittasi vuoren korkeuden vuonna 1808. Triglav on Slovenian ainoan kansallispuiston, Triglavin kansallispuiston, keskus, ja sen tyylitelty hahmo on osa Slovenian vaakunaa ja lippua. Vanhassa kansantarussa metsästäjä etsii aarretta, jota vartioi lumottu, kultasarvinen vuorikauris Zlatorog.
+AIEMPI KYSYMYS: Mikä on Triglavin kansallispuisto?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Triglavin kansallispuisto on Slovenian ainoa kansallispuisto, ja sen keskus on Triglav, [[Julian Alppien]] korkein huippu. Puisto sijaitsee Slovenian luoteisosassa Alppien tuntumassa, ja siihen kuuluu myös [[Trentan]] laakso, jossa [[Soča]]-joki saa alkunsa. Vuoren tyylitelty hahmo on lisäksi osa maan vaakunaa ja lippua. Pullapuotia en siellä ole nähnyt, mutta ei kai sellaista vuorilla kuulukaan olla.
+KYSYMYS: Kerro lisää: Soča
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bledinjärvi (luonto · järvi)
+Tietoruudun teksti: Bledinjärvi on Julian Alppien Ylä-Krainissa, Luoteis-Slovenian Bledin kaupungin rannalla sijaitseva järvi, jonka syntyyn ovat vaikuttaneet sekä jäätiköt että maankuoren liikkeet. Sen keskellä on pieni saari, jolla on Neitsyt Marian taivaaseenottamisen pyhiinvaelluskirkko, nykymuodossaan 1600-luvun lopulta. Kirkolle johtaa 99 kiviporrasta, ja saarelle mennään perinteisesti pletna-nimisellä, seisten soudetulla puuveneellä. Soutajien ammatti juontuu vuodesta 1740, jolloin keisarinna Maria Teresia antoi 22 paikalliselle perheelle yksinoikeuden kuljettaa pyhiinvaeltajia. Järven pohjoisrannan yläpuolella kohoaa keskiaikainen Bledin linna, jonka keisari Henrik II rakennutti vuonna 1004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Mehiläisten opettaja maalasi pesät] 1770 — Anton Janša syntyi noin vuonna 1734 Breznican kylässä ja lähti lukutaidottomana opiskelemaan maalariksi Wieniin. Isän yli sadan pesän parissa kasvanut mies valitsi lopulta mehiläiset, ja vuonna 1770 hänestä tuli kaikkien Itävallan maiden ensimmäinen keisarillinen mehiläishoidon opettaja. Hän muotoili pesät niin, että ne voi pinota kuin palikat, koristi niiden etupuolet maalauksilla ja neuvoi viemään pesät kukkivien niittyjen luo. Seudun oma krainilainen mehiläinen on tunnettu rauhallisuudestaan ja hunajavarastoistaan. Maria Teresia määräsi hänen kuolemansa jälkeen kaikki opettajat käyttämään hänen kirjojaan.
+- [Slovenia — maalehti / Luonto: Saari jonne morsian kannetaan] 1655 — Bledjärven pienellä saarella seisoo Neitsyt Marian taivaaseenoton pyhiinvaelluskirkko, jonka torni on 52 metriä korkea. Kirkolle johtaa barokkinen porrasnousu vuodelta 1655, jossa on 99 kiviporrasta, ja perinteen mukaan onni seuraa sulhasta, joka kantaa morsiamensa ylös asti. Sen jälkeen soitetaan kelloa ja tehdään toive. Saarelle ei mennä sillalla vaan pletna-veneellä, jota soutaja ohjaa seisaaltaan kahdella airolla. Vuonna 1740 Maria Teresia myönsi lauttaoikeuden 22 paikalliselle suvulle, ja monet nykysoutajat polveutuvat suoraan heistä. Järveä lämmittää 23-asteinen lämpölähde.
+AIEMPI KYSYMYS: Miksi pletna-soutajan ammatti on yhä rajattu vain tietyille suvuille?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tämä on vanha sääntö. Vuonna 1740 keisarinna [[Maria Teresia]] myönsi lauttaoikeuden 22 paikalliselle suvulle kuljettaa pyhiinvaeltajia [[Bledinjärven]] saarelle, ja monet nykysoutajat polveutuvat suoraan heistä. Oikeus on siis periytynyt suvuissa, ja [[pletna]]-veneen soutaja ohjaa venettä seisaaltaan kahdella airolla. Sen tarkemmista nykyisistä säännöistä en ole varma. No, perinne on ainakin pitänyt.
+KYSYMYS: Kerro lisää: Maria Teresia
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bledinjärvi (luonto · järvi)
+Tietoruudun teksti: Bledinjärvi on Julian Alppien Ylä-Krainissa, Luoteis-Slovenian Bledin kaupungin rannalla sijaitseva järvi, jonka syntyyn ovat vaikuttaneet sekä jäätiköt että maankuoren liikkeet. Sen keskellä on pieni saari, jolla on Neitsyt Marian taivaaseenottamisen pyhiinvaelluskirkko, nykymuodossaan 1600-luvun lopulta. Kirkolle johtaa 99 kiviporrasta, ja saarelle mennään perinteisesti pletna-nimisellä, seisten soudetulla puuveneellä. Soutajien ammatti juontuu vuodesta 1740, jolloin keisarinna Maria Teresia antoi 22 paikalliselle perheelle yksinoikeuden kuljettaa pyhiinvaeltajia. Järven pohjoisrannan yläpuolella kohoaa keskiaikainen Bledin linna, jonka keisari Henrik II rakennutti vuonna 1004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Rotko avattiin kävelijöille] 1893 — Vintgarin rotko Bledin luoteispuolella on 1,6 kilometrin mittainen kuilu, jonka Radovna-joki on kaivertanut kallioon. Seinämät nousevat 50–100 metrin korkeuteen, ja jokeen on syntynyt vesialtaita ja koskia. Rotko oli pitkään melkein saavuttamaton, kunnes Gorjen pormestari Jakob Žumer ja valokuvaaja Benedikt Lergetporer tutkivat sen vuonna 1891. Kaksi vuotta myöhemmin siihen rakennettiin puisia kävelysiltoja, ja rotko avattiin yleisölle 26. elokuuta 1893. Rotkon päässä putoaa 13-metrinen Šum-vesiputous, Slovenian suurin jokivesiputous. Sana vintgar on sittemmin alkanut tarkoittaa muitakin suojeltuja rotkoja.
+AIEMPI KYSYMYS: Miksi pletna-soutajan ammatti on yhä rajattu vain tietyille suvuille?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tämä on vanha sääntö. Vuonna 1740 keisarinna [[Maria Teresia]] myönsi lauttaoikeuden 22 paikalliselle suvulle kuljettaa pyhiinvaeltajia [[Bledinjärven]] saarelle, ja monet nykysoutajat polveutuvat suoraan heistä. Oikeus on siis periytynyt suvuissa, ja [[pletna]]-veneen soutaja ohjaa venettä seisaaltaan kahdella airolla. Sen tarkemmista nykyisistä säännöistä en ole varma. No, perinne on ainakin pitänyt.
+KYSYMYS: Kerro lisää: Bledinjärven
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bledinjärvi (luonto · järvi)
+Tietoruudun teksti: Bledinjärvi on Julian Alppien Ylä-Krainissa, Luoteis-Slovenian Bledin kaupungin rannalla sijaitseva järvi, jonka syntyyn ovat vaikuttaneet sekä jäätiköt että maankuoren liikkeet. Sen keskellä on pieni saari, jolla on Neitsyt Marian taivaaseenottamisen pyhiinvaelluskirkko, nykymuodossaan 1600-luvun lopulta. Kirkolle johtaa 99 kiviporrasta, ja saarelle mennään perinteisesti pletna-nimisellä, seisten soudetulla puuveneellä. Soutajien ammatti juontuu vuodesta 1740, jolloin keisarinna Maria Teresia antoi 22 paikalliselle perheelle yksinoikeuden kuljettaa pyhiinvaeltajia. Järven pohjoisrannan yläpuolella kohoaa keskiaikainen Bledin linna, jonka keisari Henrik II rakennutti vuonna 1004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Saari jonne morsian kannetaan] 1655 — Bledjärven pienellä saarella seisoo Neitsyt Marian taivaaseenoton pyhiinvaelluskirkko, jonka torni on 52 metriä korkea. Kirkolle johtaa barokkinen porrasnousu vuodelta 1655, jossa on 99 kiviporrasta, ja perinteen mukaan onni seuraa sulhasta, joka kantaa morsiamensa ylös asti. Sen jälkeen soitetaan kelloa ja tehdään toive. Saarelle ei mennä sillalla vaan pletna-veneellä, jota soutaja ohjaa seisaaltaan kahdella airolla. Vuonna 1740 Maria Teresia myönsi lauttaoikeuden 22 paikalliselle suvulle, ja monet nykysoutajat polveutuvat suoraan heistä. Järveä lämmittää 23-asteinen lämpölähde.
+AIEMPI KYSYMYS: Miksi pletna-soutajan ammatti on yhä rajattu vain tietyille suvuille?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tämä on vanha sääntö. Vuonna 1740 keisarinna [[Maria Teresia]] myönsi lauttaoikeuden 22 paikalliselle suvulle kuljettaa pyhiinvaeltajia [[Bledinjärven]] saarelle, ja monet nykysoutajat polveutuvat suoraan heistä. Oikeus on siis periytynyt suvuissa, ja [[pletna]]-veneen soutaja ohjaa venettä seisaaltaan kahdella airolla. Sen tarkemmista nykyisistä säännöistä en ole varma. No, perinne on ainakin pitänyt.
+KYSYMYS: Kerro lisää: pletna
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bledinjärvi (luonto · järvi)
+Tietoruudun teksti: Bledinjärvi on Julian Alppien Ylä-Krainissa, Luoteis-Slovenian Bledin kaupungin rannalla sijaitseva järvi, jonka syntyyn ovat vaikuttaneet sekä jäätiköt että maankuoren liikkeet. Sen keskellä on pieni saari, jolla on Neitsyt Marian taivaaseenottamisen pyhiinvaelluskirkko, nykymuodossaan 1600-luvun lopulta. Kirkolle johtaa 99 kiviporrasta, ja saarelle mennään perinteisesti pletna-nimisellä, seisten soudetulla puuveneellä. Soutajien ammatti juontuu vuodesta 1740, jolloin keisarinna Maria Teresia antoi 22 paikalliselle perheelle yksinoikeuden kuljettaa pyhiinvaeltajia. Järven pohjoisrannan yläpuolella kohoaa keskiaikainen Bledin linna, jonka keisari Henrik II rakennutti vuonna 1004.
+AIEMPI KYSYMYS: Mitä perinteen mukaan sulhasen pitää tehdä Bledin saaren kirkon portailla häiden päivänä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tämä on suloinen perinne. Perinteen mukaan onni seuraa sulhasta, joka kantaa morsiamensa ylös asti kirkolle johtavat 99 kiviporrasta. Portaat ovat [[barokkisen]] porrasnousun osa vuodelta 1655, ja kirkko on [[Neitsyt Marian taivaaseenottamisen]] pyhiinvaelluskirkko [[Bledinjärven]] saarella. Ylhäällä soitetaan kelloa ja tehdään toive. Minä pääsen ylös siivillä ilman mitään sulhasta.
+KYSYMYS: Kerro lisää: barokkisen
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bledinjärvi (luonto · järvi)
+Tietoruudun teksti: Bledinjärvi on Julian Alppien Ylä-Krainissa, Luoteis-Slovenian Bledin kaupungin rannalla sijaitseva järvi, jonka syntyyn ovat vaikuttaneet sekä jäätiköt että maankuoren liikkeet. Sen keskellä on pieni saari, jolla on Neitsyt Marian taivaaseenottamisen pyhiinvaelluskirkko, nykymuodossaan 1600-luvun lopulta. Kirkolle johtaa 99 kiviporrasta, ja saarelle mennään perinteisesti pletna-nimisellä, seisten soudetulla puuveneellä. Soutajien ammatti juontuu vuodesta 1740, jolloin keisarinna Maria Teresia antoi 22 paikalliselle perheelle yksinoikeuden kuljettaa pyhiinvaeltajia. Järven pohjoisrannan yläpuolella kohoaa keskiaikainen Bledin linna, jonka keisari Henrik II rakennutti vuonna 1004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Asunción — kohdekartta / Kohdekartta: Asunciónin katedraali] 1845 Asunciónin katedraali on Paraguayn tärkein katolinen kirkko, ja se seisoo vanhan keskustan Catedral-kaupunginosassa. Hiippakunta on vanhempi kuin mikään talo sen päällä: paavi Paavali III perusti Paraguayn hiippakunnan 1. heinäkuuta 1547, ja se oli Río de la Platan ensimmäinen. Ensimmäinen piispa oli fransiskaani Juan de los Barrios, joka hoiti virkaa 1547–1552. Nykyinen kirkkorakennus on presidentti Carlos Antonio Lópezin ajalta ja vihittiin 1845 — isoisän matkan aikaan se oli siis alle kolmekymmentä vuotta vanha. Kirkko on omistettu taivaaseen otetulle Neitsyt Marialle, joka on pääkaupungin suojelija ja jonka mukaan koko kaupunki on nimetty. Pääalttari on päällystetty hopealla. Paavi…
+AIEMPI KYSYMYS: Mitä perinteen mukaan sulhasen pitää tehdä Bledin saaren kirkon portailla häiden päivänä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tämä on suloinen perinne. Perinteen mukaan onni seuraa sulhasta, joka kantaa morsiamensa ylös asti kirkolle johtavat 99 kiviporrasta. Portaat ovat [[barokkisen]] porrasnousun osa vuodelta 1655, ja kirkko on [[Neitsyt Marian taivaaseenottamisen]] pyhiinvaelluskirkko [[Bledinjärven]] saarella. Ylhäällä soitetaan kelloa ja tehdään toive. Minä pääsen ylös siivillä ilman mitään sulhasta.
+KYSYMYS: Kerro lisää: Neitsyt Marian taivaaseenottamisen
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bledinjärvi (luonto · järvi)
+Tietoruudun teksti: Bledinjärvi on Julian Alppien Ylä-Krainissa, Luoteis-Slovenian Bledin kaupungin rannalla sijaitseva järvi, jonka syntyyn ovat vaikuttaneet sekä jäätiköt että maankuoren liikkeet. Sen keskellä on pieni saari, jolla on Neitsyt Marian taivaaseenottamisen pyhiinvaelluskirkko, nykymuodossaan 1600-luvun lopulta. Kirkolle johtaa 99 kiviporrasta, ja saarelle mennään perinteisesti pletna-nimisellä, seisten soudetulla puuveneellä. Soutajien ammatti juontuu vuodesta 1740, jolloin keisarinna Maria Teresia antoi 22 paikalliselle perheelle yksinoikeuden kuljettaa pyhiinvaeltajia. Järven pohjoisrannan yläpuolella kohoaa keskiaikainen Bledin linna, jonka keisari Henrik II rakennutti vuonna 1004.
+AIEMPI KYSYMYS: Kuka rakennutti Bledin linnan ja milloin?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tästä on kaksi tarinaa. Lähteiden mukaan keisari [[Henrik II]] rakennutti linnan vuonna 1004, mutta en ole varma, onko vuosi tarkasti linnan rakennusvuosi vai alueen lahjoitusvuosi. Linna on keskiaikainen ja kohoaa järven pohjoisrannan yläpuolella [[Julian Alppien]] juurella. Ylhäältä katsoen kaikki linnat näyttävät samalta, mutta tämä erottuu.
+KYSYMYS: Kerro lisää: Henrik II
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bledinjärvi (luonto · järvi)
+Tietoruudun teksti: Bledinjärvi on Julian Alppien Ylä-Krainissa, Luoteis-Slovenian Bledin kaupungin rannalla sijaitseva järvi, jonka syntyyn ovat vaikuttaneet sekä jäätiköt että maankuoren liikkeet. Sen keskellä on pieni saari, jolla on Neitsyt Marian taivaaseenottamisen pyhiinvaelluskirkko, nykymuodossaan 1600-luvun lopulta. Kirkolle johtaa 99 kiviporrasta, ja saarelle mennään perinteisesti pletna-nimisellä, seisten soudetulla puuveneellä. Soutajien ammatti juontuu vuodesta 1740, jolloin keisarinna Maria Teresia antoi 22 paikalliselle perheelle yksinoikeuden kuljettaa pyhiinvaeltajia. Järven pohjoisrannan yläpuolella kohoaa keskiaikainen Bledin linna, jonka keisari Henrik II rakennutti vuonna 1004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Norsut yli Alppien] Toisessa puunilaissodassa (218–201 eaa.) Karthagon sotapäällikkö Hannibal Barkas marssitti armeijansa – mukana lukuisia sotanorsuja – Espanjasta Alppien yli Italian niemimaalle ja piti roomalaisia pelossa lähes viisitoista vuotta ilman että Rooma pystyi ajamaan häntä maastaan. Vasta kun Publius Cornelius Scipio hyökkäsi suoraan Pohjois-Afrikkaan ja pakotti Hannibalin palaamaan kotiaan puolustamaan, roomalaiset kukistivat hänet Zaman taistelussa vuonna 202 eaa. Tämä pysähdyttävän lähellä ollut voitto teki Hannibalista Rooman pelätyimmän vihollisen kautta aikojen, ja hänen kasvonsa toistuivat myöhemmin lukuisissa patsaissa ja rintakuvissa.
+AIEMPI KYSYMYS: Kuka rakennutti Bledin linnan ja milloin?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tästä on kaksi tarinaa. Lähteiden mukaan keisari [[Henrik II]] rakennutti linnan vuonna 1004, mutta en ole varma, onko vuosi tarkasti linnan rakennusvuosi vai alueen lahjoitusvuosi. Linna on keskiaikainen ja kohoaa järven pohjoisrannan yläpuolella [[Julian Alppien]] juurella. Ylhäältä katsoen kaikki linnat näyttävät samalta, mutta tämä erottuu.
+KYSYMYS: Kerro lisää: Julian Alppien
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bledinjärvi (luonto · järvi)
+Tietoruudun teksti: Bledinjärvi on Julian Alppien Ylä-Krainissa, Luoteis-Slovenian Bledin kaupungin rannalla sijaitseva järvi, jonka syntyyn ovat vaikuttaneet sekä jäätiköt että maankuoren liikkeet. Sen keskellä on pieni saari, jolla on Neitsyt Marian taivaaseenottamisen pyhiinvaelluskirkko, nykymuodossaan 1600-luvun lopulta. Kirkolle johtaa 99 kiviporrasta, ja saarelle mennään perinteisesti pletna-nimisellä, seisten soudetulla puuveneellä. Soutajien ammatti juontuu vuodesta 1740, jolloin keisarinna Maria Teresia antoi 22 paikalliselle perheelle yksinoikeuden kuljettaa pyhiinvaeltajia. Järven pohjoisrannan yläpuolella kohoaa keskiaikainen Bledin linna, jonka keisari Henrik II rakennutti vuonna 1004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Rotko avattiin kävelijöille] 1893 — Vintgarin rotko Bledin luoteispuolella on 1,6 kilometrin mittainen kuilu, jonka Radovna-joki on kaivertanut kallioon. Seinämät nousevat 50–100 metrin korkeuteen, ja jokeen on syntynyt vesialtaita ja koskia. Rotko oli pitkään melkein saavuttamaton, kunnes Gorjen pormestari Jakob Žumer ja valokuvaaja Benedikt Lergetporer tutkivat sen vuonna 1891. Kaksi vuotta myöhemmin siihen rakennettiin puisia kävelysiltoja, ja rotko avattiin yleisölle 26. elokuuta 1893. Rotkon päässä putoaa 13-metrinen Šum-vesiputous, Slovenian suurin jokivesiputous. Sana vintgar on sittemmin alkanut tarkoittaa muitakin suojeltuja rotkoja.
+AIEMPI KYSYMYS: Mikä on Vintgarin rotko Bledin lähellä?
+AIEMPI VASTAUS (Livia):
+No niin, tää on ihan eri maisema kuin järvi. Vintgarin rotko on 1,6 kilometrin mittainen kuilu Bledin luoteispuolella, jonka [[Radovna]]-joki on kaivertanut kallioon. Seinämät nousevat 50–100 metrin korkeuteen, ja jokeen on syntynyt vesialtaita ja koskia. Rotko oli pitkään melkein saavuttamaton, kunnes pormestari [[Jakob Žumer]] ja valokuvaaja [[Benedikt Lergetporer]] tutkivat sen vuonna 1891. Puiset kävelysillat rakennettiin kaksi vuotta myöhemmin, ja rotko avattiin yleisölle 26. elokuuta 1893. Rotkon päässä putoaa 13-metrinen [[Šum-vesiputous]]. Rotkossa en lentäisi, siellä on ahdasta kyyhkylle.
+KYSYMYS: Kerro lisää: Radovna
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bledinjärvi (luonto · järvi)
+Tietoruudun teksti: Bledinjärvi on Julian Alppien Ylä-Krainissa, Luoteis-Slovenian Bledin kaupungin rannalla sijaitseva järvi, jonka syntyyn ovat vaikuttaneet sekä jäätiköt että maankuoren liikkeet. Sen keskellä on pieni saari, jolla on Neitsyt Marian taivaaseenottamisen pyhiinvaelluskirkko, nykymuodossaan 1600-luvun lopulta. Kirkolle johtaa 99 kiviporrasta, ja saarelle mennään perinteisesti pletna-nimisellä, seisten soudetulla puuveneellä. Soutajien ammatti juontuu vuodesta 1740, jolloin keisarinna Maria Teresia antoi 22 paikalliselle perheelle yksinoikeuden kuljettaa pyhiinvaeltajia. Järven pohjoisrannan yläpuolella kohoaa keskiaikainen Bledin linna, jonka keisari Henrik II rakennutti vuonna 1004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Rotko avattiin kävelijöille] 1893 — Vintgarin rotko Bledin luoteispuolella on 1,6 kilometrin mittainen kuilu, jonka Radovna-joki on kaivertanut kallioon. Seinämät nousevat 50–100 metrin korkeuteen, ja jokeen on syntynyt vesialtaita ja koskia. Rotko oli pitkään melkein saavuttamaton, kunnes Gorjen pormestari Jakob Žumer ja valokuvaaja Benedikt Lergetporer tutkivat sen vuonna 1891. Kaksi vuotta myöhemmin siihen rakennettiin puisia kävelysiltoja, ja rotko avattiin yleisölle 26. elokuuta 1893. Rotkon päässä putoaa 13-metrinen Šum-vesiputous, Slovenian suurin jokivesiputous. Sana vintgar on sittemmin alkanut tarkoittaa muitakin suojeltuja rotkoja.
+AIEMPI KYSYMYS: Mikä on Vintgarin rotko Bledin lähellä?
+AIEMPI VASTAUS (Livia):
+No niin, tää on ihan eri maisema kuin järvi. Vintgarin rotko on 1,6 kilometrin mittainen kuilu Bledin luoteispuolella, jonka [[Radovna]]-joki on kaivertanut kallioon. Seinämät nousevat 50–100 metrin korkeuteen, ja jokeen on syntynyt vesialtaita ja koskia. Rotko oli pitkään melkein saavuttamaton, kunnes pormestari [[Jakob Žumer]] ja valokuvaaja [[Benedikt Lergetporer]] tutkivat sen vuonna 1891. Puiset kävelysillat rakennettiin kaksi vuotta myöhemmin, ja rotko avattiin yleisölle 26. elokuuta 1893. Rotkon päässä putoaa 13-metrinen [[Šum-vesiputous]]. Rotkossa en lentäisi, siellä on ahdasta kyyhkylle.
+KYSYMYS: Kerro lisää: Jakob Žumer
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bledinjärvi (luonto · järvi)
+Tietoruudun teksti: Bledinjärvi on Julian Alppien Ylä-Krainissa, Luoteis-Slovenian Bledin kaupungin rannalla sijaitseva järvi, jonka syntyyn ovat vaikuttaneet sekä jäätiköt että maankuoren liikkeet. Sen keskellä on pieni saari, jolla on Neitsyt Marian taivaaseenottamisen pyhiinvaelluskirkko, nykymuodossaan 1600-luvun lopulta. Kirkolle johtaa 99 kiviporrasta, ja saarelle mennään perinteisesti pletna-nimisellä, seisten soudetulla puuveneellä. Soutajien ammatti juontuu vuodesta 1740, jolloin keisarinna Maria Teresia antoi 22 paikalliselle perheelle yksinoikeuden kuljettaa pyhiinvaeltajia. Järven pohjoisrannan yläpuolella kohoaa keskiaikainen Bledin linna, jonka keisari Henrik II rakennutti vuonna 1004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Rotko avattiin kävelijöille] 1893 — Vintgarin rotko Bledin luoteispuolella on 1,6 kilometrin mittainen kuilu, jonka Radovna-joki on kaivertanut kallioon. Seinämät nousevat 50–100 metrin korkeuteen, ja jokeen on syntynyt vesialtaita ja koskia. Rotko oli pitkään melkein saavuttamaton, kunnes Gorjen pormestari Jakob Žumer ja valokuvaaja Benedikt Lergetporer tutkivat sen vuonna 1891. Kaksi vuotta myöhemmin siihen rakennettiin puisia kävelysiltoja, ja rotko avattiin yleisölle 26. elokuuta 1893. Rotkon päässä putoaa 13-metrinen Šum-vesiputous, Slovenian suurin jokivesiputous. Sana vintgar on sittemmin alkanut tarkoittaa muitakin suojeltuja rotkoja.
+AIEMPI KYSYMYS: Mikä on Vintgarin rotko Bledin lähellä?
+AIEMPI VASTAUS (Livia):
+No niin, tää on ihan eri maisema kuin järvi. Vintgarin rotko on 1,6 kilometrin mittainen kuilu Bledin luoteispuolella, jonka [[Radovna]]-joki on kaivertanut kallioon. Seinämät nousevat 50–100 metrin korkeuteen, ja jokeen on syntynyt vesialtaita ja koskia. Rotko oli pitkään melkein saavuttamaton, kunnes pormestari [[Jakob Žumer]] ja valokuvaaja [[Benedikt Lergetporer]] tutkivat sen vuonna 1891. Puiset kävelysillat rakennettiin kaksi vuotta myöhemmin, ja rotko avattiin yleisölle 26. elokuuta 1893. Rotkon päässä putoaa 13-metrinen [[Šum-vesiputous]]. Rotkossa en lentäisi, siellä on ahdasta kyyhkylle.
+KYSYMYS: Kerro lisää: Benedikt Lergetporer
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bledinjärvi (luonto · järvi)
+Tietoruudun teksti: Bledinjärvi on Julian Alppien Ylä-Krainissa, Luoteis-Slovenian Bledin kaupungin rannalla sijaitseva järvi, jonka syntyyn ovat vaikuttaneet sekä jäätiköt että maankuoren liikkeet. Sen keskellä on pieni saari, jolla on Neitsyt Marian taivaaseenottamisen pyhiinvaelluskirkko, nykymuodossaan 1600-luvun lopulta. Kirkolle johtaa 99 kiviporrasta, ja saarelle mennään perinteisesti pletna-nimisellä, seisten soudetulla puuveneellä. Soutajien ammatti juontuu vuodesta 1740, jolloin keisarinna Maria Teresia antoi 22 paikalliselle perheelle yksinoikeuden kuljettaa pyhiinvaeltajia. Järven pohjoisrannan yläpuolella kohoaa keskiaikainen Bledin linna, jonka keisari Henrik II rakennutti vuonna 1004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Rotko avattiin kävelijöille] 1893 — Vintgarin rotko Bledin luoteispuolella on 1,6 kilometrin mittainen kuilu, jonka Radovna-joki on kaivertanut kallioon. Seinämät nousevat 50–100 metrin korkeuteen, ja jokeen on syntynyt vesialtaita ja koskia. Rotko oli pitkään melkein saavuttamaton, kunnes Gorjen pormestari Jakob Žumer ja valokuvaaja Benedikt Lergetporer tutkivat sen vuonna 1891. Kaksi vuotta myöhemmin siihen rakennettiin puisia kävelysiltoja, ja rotko avattiin yleisölle 26. elokuuta 1893. Rotkon päässä putoaa 13-metrinen Šum-vesiputous, Slovenian suurin jokivesiputous. Sana vintgar on sittemmin alkanut tarkoittaa muitakin suojeltuja rotkoja.
+AIEMPI KYSYMYS: Mikä on Vintgarin rotko Bledin lähellä?
+AIEMPI VASTAUS (Livia):
+No niin, tää on ihan eri maisema kuin järvi. Vintgarin rotko on 1,6 kilometrin mittainen kuilu Bledin luoteispuolella, jonka [[Radovna]]-joki on kaivertanut kallioon. Seinämät nousevat 50–100 metrin korkeuteen, ja jokeen on syntynyt vesialtaita ja koskia. Rotko oli pitkään melkein saavuttamaton, kunnes pormestari [[Jakob Žumer]] ja valokuvaaja [[Benedikt Lergetporer]] tutkivat sen vuonna 1891. Puiset kävelysillat rakennettiin kaksi vuotta myöhemmin, ja rotko avattiin yleisölle 26. elokuuta 1893. Rotkon päässä putoaa 13-metrinen [[Šum-vesiputous]]. Rotkossa en lentäisi, siellä on ahdasta kyyhkylle.
+KYSYMYS: Kerro lisää: Šum-vesiputous
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bledinjärvi (luonto · järvi)
+Tietoruudun teksti: Bledinjärvi on Julian Alppien Ylä-Krainissa, Luoteis-Slovenian Bledin kaupungin rannalla sijaitseva järvi, jonka syntyyn ovat vaikuttaneet sekä jäätiköt että maankuoren liikkeet. Sen keskellä on pieni saari, jolla on Neitsyt Marian taivaaseenottamisen pyhiinvaelluskirkko, nykymuodossaan 1600-luvun lopulta. Kirkolle johtaa 99 kiviporrasta, ja saarelle mennään perinteisesti pletna-nimisellä, seisten soudetulla puuveneellä. Soutajien ammatti juontuu vuodesta 1740, jolloin keisarinna Maria Teresia antoi 22 paikalliselle perheelle yksinoikeuden kuljettaa pyhiinvaeltajia. Järven pohjoisrannan yläpuolella kohoaa keskiaikainen Bledin linna, jonka keisari Henrik II rakennutti vuonna 1004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Milford Sound — kaupunkilehti / Milford Sound: Piispanhiippa vedestä nousee] Vuonon suulla kohoava Mitre Peak eli māoriksi Rahotu on Milford Soundin tunnetuin maamerkki: se nousee 1 692 metrin korkeuteen lähes suoraan merenpinnasta, mikä tekee siitä yhden maailman jyrkimmistä rannikkovuorista. Englantilaiset nimesivät vuoren sen terävän muodon mukaan - huipun useat lähekkäiset piikit muistuttavat tietystä kulmasta katsottuna piispan päähinettä eli mitraa. Tyynellä säällä huippu peilautuu vuonon liikkumattomaan veteen niin tarkasti, että kuva näyttää lähes symmetriseltä. Vuori on osa samaa jäätiköiden vuosimiljoonien saatossa kuluttamaa kallioperää, josta koko Piopiotahin vuono on veistynyt.
+- [Ruotsi — maalehti / Luonto: Erämaa ilman polkuja] Sarek perustettiin kansallispuistoksi 1909, samana vuonna kuin Euroopan ensimmäiset kansallispuistot ylipäätään. Se on lähes tienotonta ja polutonta tunturimaata: parisataa yli 1800-metristä huippua, kymmeniä jäätiköitä eikä juuri lainkaan siltoja. Sisään mennään omin voimin ja ulos samoin. Kuuluisin näkymä on Rapadalen, jossa jäätiköiden liete on kasannut jokeen suistoja kuin punos — vihreä laakso keskellä harmaita vuoria. Puistossa ei ole majoitusta eikä kioskeja, joten kaikki tarvittava kannetaan selässä.
+- [Bulgaria — maalehti / Vuori ja laakso: Kivijoki, joka ei virtaa] 1895 — Vitosha-vuori alkaa heti Sofian eteläreunalta, ja sen huippu Tšerni Vrah kohoaa 2290 metriin. Rinteillä mutkittelee kivijokia: satojen metrien mittaisia nauhoja jättiläislohkareita, jotka valuvat alaspäin niin hitaasti, ettei liikettä huomaa. Kivet ovat vanhojen jäätiköiden jäänteitä. Elokuussa 1895 kolmesataa sofialaista kiipesi yhtenä joukkona huipulle, ja siitä päivästä lasketaan bulgarialaisen retkeilyn alku.
+AIEMPI KYSYMYS: Mikä lämmittää Bledinjärven vettä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Järveä lämmittää lämpölähde, jonka vesi on noin 23-asteista. Itse järvi on syntynyt [[jäätiköiden]] ja maankuoren liikkeiden vaikutuksesta [[Julian Alppien]] Ylä-Krainissa, ja sen rannalla on [[Bledin]] kaupunki.
+
+Lämmin vesi houkuttelisi minuakin, mutta jätän uinnin joutsenille. Pullan kanssa tosin neuvottelisin.
+KYSYMYS: Kerro lisää: jäätiköiden
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bledinjärvi (luonto · järvi)
+Tietoruudun teksti: Bledinjärvi on Julian Alppien Ylä-Krainissa, Luoteis-Slovenian Bledin kaupungin rannalla sijaitseva järvi, jonka syntyyn ovat vaikuttaneet sekä jäätiköt että maankuoren liikkeet. Sen keskellä on pieni saari, jolla on Neitsyt Marian taivaaseenottamisen pyhiinvaelluskirkko, nykymuodossaan 1600-luvun lopulta. Kirkolle johtaa 99 kiviporrasta, ja saarelle mennään perinteisesti pletna-nimisellä, seisten soudetulla puuveneellä. Soutajien ammatti juontuu vuodesta 1740, jolloin keisarinna Maria Teresia antoi 22 paikalliselle perheelle yksinoikeuden kuljettaa pyhiinvaeltajia. Järven pohjoisrannan yläpuolella kohoaa keskiaikainen Bledin linna, jonka keisari Henrik II rakennutti vuonna 1004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Rotko avattiin kävelijöille] 1893 — Vintgarin rotko Bledin luoteispuolella on 1,6 kilometrin mittainen kuilu, jonka Radovna-joki on kaivertanut kallioon. Seinämät nousevat 50–100 metrin korkeuteen, ja jokeen on syntynyt vesialtaita ja koskia. Rotko oli pitkään melkein saavuttamaton, kunnes Gorjen pormestari Jakob Žumer ja valokuvaaja Benedikt Lergetporer tutkivat sen vuonna 1891. Kaksi vuotta myöhemmin siihen rakennettiin puisia kävelysiltoja, ja rotko avattiin yleisölle 26. elokuuta 1893. Rotkon päässä putoaa 13-metrinen Šum-vesiputous, Slovenian suurin jokivesiputous. Sana vintgar on sittemmin alkanut tarkoittaa muitakin suojeltuja rotkoja.
+AIEMPI KYSYMYS: Mikä lämmittää Bledinjärven vettä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Järveä lämmittää lämpölähde, jonka vesi on noin 23-asteista. Itse järvi on syntynyt [[jäätiköiden]] ja maankuoren liikkeiden vaikutuksesta [[Julian Alppien]] Ylä-Krainissa, ja sen rannalla on [[Bledin]] kaupunki.
+
+Lämmin vesi houkuttelisi minuakin, mutta jätän uinnin joutsenille. Pullan kanssa tosin neuvottelisin.
+KYSYMYS: Kerro lisää: Bledin
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Soča (luonto · joki)
+Tietoruudun teksti: Soča eli italiaksi Isonzo on 138-kilometrinen joki, joka virtaa Länsi-Slovenian halki ja päättyy Koillis-Italiassa Adrianmereen. Sen lähde on Trentan laaksossa Julian Alpeilla, ja matkalla joki kulkee Bovecin, Kobaridin ja Tolminin ohi. Vesi on kirkkaan smaragdinvihreää, minkä vuoksi jokea markkinoidaan nimellä Smaragdinen kaunotar. Tunnettuja nähtävyyksiä ovat Suuri ja Pieni Sočan rotko sekä Kozjakin putous, ja ylävirran erikoisuus on uhanalainen marmoripurotaimen. Ensimmäisessä maailmansodassa laakso oli Isonzon taistelujen näyttämö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Rotko avattiin kävelijöille] 1893 — Vintgarin rotko Bledin luoteispuolella on 1,6 kilometrin mittainen kuilu, jonka Radovna-joki on kaivertanut kallioon. Seinämät nousevat 50–100 metrin korkeuteen, ja jokeen on syntynyt vesialtaita ja koskia. Rotko oli pitkään melkein saavuttamaton, kunnes Gorjen pormestari Jakob Žumer ja valokuvaaja Benedikt Lergetporer tutkivat sen vuonna 1891. Kaksi vuotta myöhemmin siihen rakennettiin puisia kävelysiltoja, ja rotko avattiin yleisölle 26. elokuuta 1893. Rotkon päässä putoaa 13-metrinen Šum-vesiputous, Slovenian suurin jokivesiputous. Sana vintgar on sittemmin alkanut tarkoittaa muitakin suojeltuja rotkoja.
+- [Slovenia — maalehti / Rakennukset: Pegasos oven kahvana] 1936 — Slovenian kansallis- ja yliopistokirjaston suunnitteli Jože Plečnik vuosina 1930–31, ja se rakennettiin vuosina 1936–1941. Hanke kohtasi aluksi vastustusta Belgradin viranomaisten taholta, mutta opiskelijoiden sinnikkäät mielenosoitukset auttoivat sen eteenpäin. Julkisivussa tiili ja kivi vuorottelevat, ja osa kivistä on paikalta löytyneitä arkeologisia jäännöksiä. Pääoven kahvat päättyvät pieneen Pegasoksen päähän. Pääportaan 32 pylvästä on tehty tummasta Podpečin marmorista, ja rakennuksen ajatus on kulku tietämättömyyden hämärästä tiedon valoon. Kirjasto sai paikkansa Unescon listalla vuonna 2021.
+AIEMPI KYSYMYS: Mitä Sočan ja Isonzon nimi kertoo joen luonteesta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Hyvä kysymys tuo. Nimet ovat saman joen slovenialainen ja italialainen muoto: Soča on joen nimi [[Slovenian]] puolella ja Isonzo sen italialainen vastine. Nimien etymologiasta en ole varma, joten en lupaa mitään luonteesta niiden perusteella. Joen luonteesta kertoo enemmän sen kirkkaan smaragdinvihreä vesi, minkä vuoksi jokea markkinoidaan nimellä Smaragdinen kaunotar. Joki on 138 kilometriä pitkä ja päättyy [[Adrianmereen]] Koillis-Italiassa. Nimiä on kaksi, ja kumpikin on hyvä.
+KYSYMYS: Kerro lisää: Slovenian
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Soča (luonto · joki)
+Tietoruudun teksti: Soča eli italiaksi Isonzo on 138-kilometrinen joki, joka virtaa Länsi-Slovenian halki ja päättyy Koillis-Italiassa Adrianmereen. Sen lähde on Trentan laaksossa Julian Alpeilla, ja matkalla joki kulkee Bovecin, Kobaridin ja Tolminin ohi. Vesi on kirkkaan smaragdinvihreää, minkä vuoksi jokea markkinoidaan nimellä Smaragdinen kaunotar. Tunnettuja nähtävyyksiä ovat Suuri ja Pieni Sočan rotko sekä Kozjakin putous, ja ylävirran erikoisuus on uhanalainen marmoripurotaimen. Ensimmäisessä maailmansodassa laakso oli Isonzon taistelujen näyttämö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Smaragdikaunotar] nykyään — Soča saa alkunsa Trenta-laaksossa Julian Alpeilla 876 metrin korkeudessa ja virtaa 138 kilometrin matkan Adrianmereen. Sen vesi on niin smaragdinvihreää, että jokea markkinoidaan nimellä Smaragdikaunotar, ja väri säilyy poikkeuksellisen pitkälle. Rannoilla syntyi myös runoutta: Simon Gregorčič kirjoitti joesta runon Soči, jota pidetään slovenialaisen kirjallisuuden mestariteoksena. Jokivarressa elää harvinaista marmoritaimenta, ja alueella kuvattiin osa vuoden 2008 Narnia-elokuvasta Prinssi Kaspian. Italiassa joki tunnetaan nimellä Isonzo.
+AIEMPI KYSYMYS: Mitä Sočan ja Isonzon nimi kertoo joen luonteesta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Hyvä kysymys tuo. Nimet ovat saman joen slovenialainen ja italialainen muoto: Soča on joen nimi [[Slovenian]] puolella ja Isonzo sen italialainen vastine. Nimien etymologiasta en ole varma, joten en lupaa mitään luonteesta niiden perusteella. Joen luonteesta kertoo enemmän sen kirkkaan smaragdinvihreä vesi, minkä vuoksi jokea markkinoidaan nimellä Smaragdinen kaunotar. Joki on 138 kilometriä pitkä ja päättyy [[Adrianmereen]] Koillis-Italiassa. Nimiä on kaksi, ja kumpikin on hyvä.
+KYSYMYS: Kerro lisää: Adrianmereen
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Soča (luonto · joki)
+Tietoruudun teksti: Soča eli italiaksi Isonzo on 138-kilometrinen joki, joka virtaa Länsi-Slovenian halki ja päättyy Koillis-Italiassa Adrianmereen. Sen lähde on Trentan laaksossa Julian Alpeilla, ja matkalla joki kulkee Bovecin, Kobaridin ja Tolminin ohi. Vesi on kirkkaan smaragdinvihreää, minkä vuoksi jokea markkinoidaan nimellä Smaragdinen kaunotar. Tunnettuja nähtävyyksiä ovat Suuri ja Pieni Sočan rotko sekä Kozjakin putous, ja ylävirran erikoisuus on uhanalainen marmoripurotaimen. Ensimmäisessä maailmansodassa laakso oli Isonzon taistelujen näyttämö.
+AIEMPI KYSYMYS: Miten maanvyörymä vuonna 585 muutti joen ja sen lähijokien kulkua?
+AIEMPI VASTAUS (Livia):
+Joo, tähän minä en osaa vastata varmasti. Maanvyörymästä vuonna 585 ja sen vaikutuksesta joen kulkuun minulla ei ole luotettavaa tietoa, joten en halua keksiä yksityiskohtia. Varmaa on se, että [[Soča]] kulkee Länsi-Slovenian halki ja päättyy Koillis-Italiassa Adrianmereen, ja että sen ympäristö on [[Julian Alppien]] aluetta. Suurten vyörymien tiedetään muuttavan jokien uomia yleisesti, mutta tämän tapauksen kohdalla en ole varma. Tota ei oo koskaan uskottu kyyhkyn kannettavaksi.
+KYSYMYS: Kerro lisää: Soča
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Soča (luonto · joki)
+Tietoruudun teksti: Soča eli italiaksi Isonzo on 138-kilometrinen joki, joka virtaa Länsi-Slovenian halki ja päättyy Koillis-Italiassa Adrianmereen. Sen lähde on Trentan laaksossa Julian Alpeilla, ja matkalla joki kulkee Bovecin, Kobaridin ja Tolminin ohi. Vesi on kirkkaan smaragdinvihreää, minkä vuoksi jokea markkinoidaan nimellä Smaragdinen kaunotar. Tunnettuja nähtävyyksiä ovat Suuri ja Pieni Sočan rotko sekä Kozjakin putous, ja ylävirran erikoisuus on uhanalainen marmoripurotaimen. Ensimmäisessä maailmansodassa laakso oli Isonzon taistelujen näyttämö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Norsut yli Alppien] Toisessa puunilaissodassa (218–201 eaa.) Karthagon sotapäällikkö Hannibal Barkas marssitti armeijansa – mukana lukuisia sotanorsuja – Espanjasta Alppien yli Italian niemimaalle ja piti roomalaisia pelossa lähes viisitoista vuotta ilman että Rooma pystyi ajamaan häntä maastaan. Vasta kun Publius Cornelius Scipio hyökkäsi suoraan Pohjois-Afrikkaan ja pakotti Hannibalin palaamaan kotiaan puolustamaan, roomalaiset kukistivat hänet Zaman taistelussa vuonna 202 eaa. Tämä pysähdyttävän lähellä ollut voitto teki Hannibalista Rooman pelätyimmän vihollisen kautta aikojen, ja hänen kasvonsa toistuivat myöhemmin lukuisissa patsaissa ja rintakuvissa.
+AIEMPI KYSYMYS: Miten maanvyörymä vuonna 585 muutti joen ja sen lähijokien kulkua?
+AIEMPI VASTAUS (Livia):
+Joo, tähän minä en osaa vastata varmasti. Maanvyörymästä vuonna 585 ja sen vaikutuksesta joen kulkuun minulla ei ole luotettavaa tietoa, joten en halua keksiä yksityiskohtia. Varmaa on se, että [[Soča]] kulkee Länsi-Slovenian halki ja päättyy Koillis-Italiassa Adrianmereen, ja että sen ympäristö on [[Julian Alppien]] aluetta. Suurten vyörymien tiedetään muuttavan jokien uomia yleisesti, mutta tämän tapauksen kohdalla en ole varma. Tota ei oo koskaan uskottu kyyhkyn kannettavaksi.
+KYSYMYS: Kerro lisää: Julian Alppien
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Soča (luonto · joki)
+Tietoruudun teksti: Soča eli italiaksi Isonzo on 138-kilometrinen joki, joka virtaa Länsi-Slovenian halki ja päättyy Koillis-Italiassa Adrianmereen. Sen lähde on Trentan laaksossa Julian Alpeilla, ja matkalla joki kulkee Bovecin, Kobaridin ja Tolminin ohi. Vesi on kirkkaan smaragdinvihreää, minkä vuoksi jokea markkinoidaan nimellä Smaragdinen kaunotar. Tunnettuja nähtävyyksiä ovat Suuri ja Pieni Sočan rotko sekä Kozjakin putous, ja ylävirran erikoisuus on uhanalainen marmoripurotaimen. Ensimmäisessä maailmansodassa laakso oli Isonzon taistelujen näyttämö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Smaragdikaunotar] nykyään — Soča saa alkunsa Trenta-laaksossa Julian Alpeilla 876 metrin korkeudessa ja virtaa 138 kilometrin matkan Adrianmereen. Sen vesi on niin smaragdinvihreää, että jokea markkinoidaan nimellä Smaragdikaunotar, ja väri säilyy poikkeuksellisen pitkälle. Rannoilla syntyi myös runoutta: Simon Gregorčič kirjoitti joesta runon Soči, jota pidetään slovenialaisen kirjallisuuden mestariteoksena. Jokivarressa elää harvinaista marmoritaimenta, ja alueella kuvattiin osa vuoden 2008 Narnia-elokuvasta Prinssi Kaspian. Italiassa joki tunnetaan nimellä Isonzo.
+AIEMPI KYSYMYS: Missä Soča saa alkunsa ja mihin se päättyy?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Se on pitkä matka. Joki saa alkunsa [[Trentan]] laaksosta Julian Alpeilla ja virtaa Länsi-Slovenian halki. Matkalla se kulkee [[Bovecin]], [[Kobaridin]] ja [[Tolminin]] ohi, ja lopulta se päättyy Koillis-Italiassa [[Adrianmereen]]. Italiassa joen nimi on Isonzo, ja sen pituus on 138 kilometriä. Joen perässä lentäisin mielelläni, kun reitti on näin selkeä.
+KYSYMYS: Kerro lisää: Trentan
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Soča (luonto · joki)
+Tietoruudun teksti: Soča eli italiaksi Isonzo on 138-kilometrinen joki, joka virtaa Länsi-Slovenian halki ja päättyy Koillis-Italiassa Adrianmereen. Sen lähde on Trentan laaksossa Julian Alpeilla, ja matkalla joki kulkee Bovecin, Kobaridin ja Tolminin ohi. Vesi on kirkkaan smaragdinvihreää, minkä vuoksi jokea markkinoidaan nimellä Smaragdinen kaunotar. Tunnettuja nähtävyyksiä ovat Suuri ja Pieni Sočan rotko sekä Kozjakin putous, ja ylävirran erikoisuus on uhanalainen marmoripurotaimen. Ensimmäisessä maailmansodassa laakso oli Isonzon taistelujen näyttämö.
+AIEMPI KYSYMYS: Missä Soča saa alkunsa ja mihin se päättyy?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Se on pitkä matka. Joki saa alkunsa [[Trentan]] laaksosta Julian Alpeilla ja virtaa Länsi-Slovenian halki. Matkalla se kulkee [[Bovecin]], [[Kobaridin]] ja [[Tolminin]] ohi, ja lopulta se päättyy Koillis-Italiassa [[Adrianmereen]]. Italiassa joen nimi on Isonzo, ja sen pituus on 138 kilometriä. Joen perässä lentäisin mielelläni, kun reitti on näin selkeä.
+KYSYMYS: Kerro lisää: Bovecin
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Soča (luonto · joki)
+Tietoruudun teksti: Soča eli italiaksi Isonzo on 138-kilometrinen joki, joka virtaa Länsi-Slovenian halki ja päättyy Koillis-Italiassa Adrianmereen. Sen lähde on Trentan laaksossa Julian Alpeilla, ja matkalla joki kulkee Bovecin, Kobaridin ja Tolminin ohi. Vesi on kirkkaan smaragdinvihreää, minkä vuoksi jokea markkinoidaan nimellä Smaragdinen kaunotar. Tunnettuja nähtävyyksiä ovat Suuri ja Pieni Sočan rotko sekä Kozjakin putous, ja ylävirran erikoisuus on uhanalainen marmoripurotaimen. Ensimmäisessä maailmansodassa laakso oli Isonzon taistelujen näyttämö.
+AIEMPI KYSYMYS: Missä Soča saa alkunsa ja mihin se päättyy?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Se on pitkä matka. Joki saa alkunsa [[Trentan]] laaksosta Julian Alpeilla ja virtaa Länsi-Slovenian halki. Matkalla se kulkee [[Bovecin]], [[Kobaridin]] ja [[Tolminin]] ohi, ja lopulta se päättyy Koillis-Italiassa [[Adrianmereen]]. Italiassa joen nimi on Isonzo, ja sen pituus on 138 kilometriä. Joen perässä lentäisin mielelläni, kun reitti on näin selkeä.
+KYSYMYS: Kerro lisää: Kobaridin
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Soča (luonto · joki)
+Tietoruudun teksti: Soča eli italiaksi Isonzo on 138-kilometrinen joki, joka virtaa Länsi-Slovenian halki ja päättyy Koillis-Italiassa Adrianmereen. Sen lähde on Trentan laaksossa Julian Alpeilla, ja matkalla joki kulkee Bovecin, Kobaridin ja Tolminin ohi. Vesi on kirkkaan smaragdinvihreää, minkä vuoksi jokea markkinoidaan nimellä Smaragdinen kaunotar. Tunnettuja nähtävyyksiä ovat Suuri ja Pieni Sočan rotko sekä Kozjakin putous, ja ylävirran erikoisuus on uhanalainen marmoripurotaimen. Ensimmäisessä maailmansodassa laakso oli Isonzon taistelujen näyttämö.
+AIEMPI KYSYMYS: Missä Soča saa alkunsa ja mihin se päättyy?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Se on pitkä matka. Joki saa alkunsa [[Trentan]] laaksosta Julian Alpeilla ja virtaa Länsi-Slovenian halki. Matkalla se kulkee [[Bovecin]], [[Kobaridin]] ja [[Tolminin]] ohi, ja lopulta se päättyy Koillis-Italiassa [[Adrianmereen]]. Italiassa joen nimi on Isonzo, ja sen pituus on 138 kilometriä. Joen perässä lentäisin mielelläni, kun reitti on näin selkeä.
+KYSYMYS: Kerro lisää: Tolminin
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Soča (luonto · joki)
+Tietoruudun teksti: Soča eli italiaksi Isonzo on 138-kilometrinen joki, joka virtaa Länsi-Slovenian halki ja päättyy Koillis-Italiassa Adrianmereen. Sen lähde on Trentan laaksossa Julian Alpeilla, ja matkalla joki kulkee Bovecin, Kobaridin ja Tolminin ohi. Vesi on kirkkaan smaragdinvihreää, minkä vuoksi jokea markkinoidaan nimellä Smaragdinen kaunotar. Tunnettuja nähtävyyksiä ovat Suuri ja Pieni Sočan rotko sekä Kozjakin putous, ja ylävirran erikoisuus on uhanalainen marmoripurotaimen. Ensimmäisessä maailmansodassa laakso oli Isonzon taistelujen näyttämö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Mitä Isonzon taistelut olivat ensimmäisessä maailmansodassa?
+AIEMPI VASTAUS (Livia):
+Joo. Tää on raskas aihe. Isonzon taistelut olivat ensimmäisen maailmansodan taisteluja, jotka käytiin Italian ja [[Itävalta-Unkarin]] armeijoiden välillä Sočan laaksossa ja sen ympäristössä vuosina 1915–1917. Taisteluita lasketaan yleensä olleen kaksitoista. Syksyllä 1917 [[Kobaridin]] lähellä käyty taistelu tunnetaan italiaksi nimellä [[Caporetto]]. Siitä on yli sata vuotta, ja laakso kuului silloin vielä Itävalta-Unkarin keisarikuntaan, jota ei enää ole. Nykyään sama laakso tunnetaan luontomatkailusta, ja sodasta muistuttavat museot ja muistomerkit. Onpa onneksi siitä jo pitkä aika.
+KYSYMYS: Kerro lisää: Itävalta-Unkarin
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Soča (luonto · joki)
+Tietoruudun teksti: Soča eli italiaksi Isonzo on 138-kilometrinen joki, joka virtaa Länsi-Slovenian halki ja päättyy Koillis-Italiassa Adrianmereen. Sen lähde on Trentan laaksossa Julian Alpeilla, ja matkalla joki kulkee Bovecin, Kobaridin ja Tolminin ohi. Vesi on kirkkaan smaragdinvihreää, minkä vuoksi jokea markkinoidaan nimellä Smaragdinen kaunotar. Tunnettuja nähtävyyksiä ovat Suuri ja Pieni Sočan rotko sekä Kozjakin putous, ja ylävirran erikoisuus on uhanalainen marmoripurotaimen. Ensimmäisessä maailmansodassa laakso oli Isonzon taistelujen näyttämö.
+AIEMPI KYSYMYS: Mitä Isonzon taistelut olivat ensimmäisessä maailmansodassa?
+AIEMPI VASTAUS (Livia):
+Joo. Tää on raskas aihe. Isonzon taistelut olivat ensimmäisen maailmansodan taisteluja, jotka käytiin Italian ja [[Itävalta-Unkarin]] armeijoiden välillä Sočan laaksossa ja sen ympäristössä vuosina 1915–1917. Taisteluita lasketaan yleensä olleen kaksitoista. Syksyllä 1917 [[Kobaridin]] lähellä käyty taistelu tunnetaan italiaksi nimellä [[Caporetto]]. Siitä on yli sata vuotta, ja laakso kuului silloin vielä Itävalta-Unkarin keisarikuntaan, jota ei enää ole. Nykyään sama laakso tunnetaan luontomatkailusta, ja sodasta muistuttavat museot ja muistomerkit. Onpa onneksi siitä jo pitkä aika.
+KYSYMYS: Kerro lisää: Caporetto
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Soča (luonto · joki)
+Tietoruudun teksti: Soča eli italiaksi Isonzo on 138-kilometrinen joki, joka virtaa Länsi-Slovenian halki ja päättyy Koillis-Italiassa Adrianmereen. Sen lähde on Trentan laaksossa Julian Alpeilla, ja matkalla joki kulkee Bovecin, Kobaridin ja Tolminin ohi. Vesi on kirkkaan smaragdinvihreää, minkä vuoksi jokea markkinoidaan nimellä Smaragdinen kaunotar. Tunnettuja nähtävyyksiä ovat Suuri ja Pieni Sočan rotko sekä Kozjakin putous, ja ylävirran erikoisuus on uhanalainen marmoripurotaimen. Ensimmäisessä maailmansodassa laakso oli Isonzon taistelujen näyttämö.
+AIEMPI KYSYMYS: Millainen kala on Sočan marmoripurotaimen?
+AIEMPI VASTAUS (Livia):
+Ai se. Marmoripurotaimen on uhanalainen kala, ja se kuuluu [[Sočan]] ylävirran erikoisuuksiin. Nimi viittaa kalan marmorimaiseen kuviointiin, ja laji elää [[Adrianmeren]] valuma-alueen jokivesissä, mutta tarkemmista elinalueista ja koosta en ole varma. Lajin suojelu on tärkeää, koska se on uhanalainen.
+
+Kalat eivät yleensä ole minun alaani, mutta jokainen uhanalainen laji ansaitsee, että siitä puhutaan oikein.
+KYSYMYS: Kerro lisää: Sočan
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Soča (luonto · joki)
+Tietoruudun teksti: Soča eli italiaksi Isonzo on 138-kilometrinen joki, joka virtaa Länsi-Slovenian halki ja päättyy Koillis-Italiassa Adrianmereen. Sen lähde on Trentan laaksossa Julian Alpeilla, ja matkalla joki kulkee Bovecin, Kobaridin ja Tolminin ohi. Vesi on kirkkaan smaragdinvihreää, minkä vuoksi jokea markkinoidaan nimellä Smaragdinen kaunotar. Tunnettuja nähtävyyksiä ovat Suuri ja Pieni Sočan rotko sekä Kozjakin putous, ja ylävirran erikoisuus on uhanalainen marmoripurotaimen. Ensimmäisessä maailmansodassa laakso oli Isonzon taistelujen näyttämö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+AIEMPI KYSYMYS: Millainen kala on Sočan marmoripurotaimen?
+AIEMPI VASTAUS (Livia):
+Ai se. Marmoripurotaimen on uhanalainen kala, ja se kuuluu [[Sočan]] ylävirran erikoisuuksiin. Nimi viittaa kalan marmorimaiseen kuviointiin, ja laji elää [[Adrianmeren]] valuma-alueen jokivesissä, mutta tarkemmista elinalueista ja koosta en ole varma. Lajin suojelu on tärkeää, koska se on uhanalainen.
+
+Kalat eivät yleensä ole minun alaani, mutta jokainen uhanalainen laji ansaitsee, että siitä puhutaan oikein.
+KYSYMYS: Kerro lisää: Adrianmeren
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velika Planina (luonto · vuori)
+Tietoruudun teksti: Velika Planina, eli suomeksi Suuri laidun, on Ylä-Krainissa Kamnikin Alppien karstiylängöllä sijaitseva hajanainen paimenkylä. Sen puiset majat ovat yhden huoneen asuntoja, joiden soikeat, päreillä katetut katot ulottuvat lähes maahan asti, joten katon alle jää suoja karjalle. Pysyviä asukkaita on vain vähän, mutta kesäisin ylängölle tuodaan yhä laumoja laiduntamaan. Kylä on yksi Euroopan harvoista näin laajoina säilyneistä paimenasutuksista. Paimenet rakensivat arkkitehti Jože Plečnikin suunnitelmien pohjalta Marija Snežna -kappelin, mutta sota-aikana kappeli ja sata muuta puurakennusta paloivat, ja uusi kappeli valmistui vuonna 1988.
+AIEMPI KYSYMYS: Miksi paimenmajojen soikeat katot ulottuvat lähes maahan asti?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Velika Planinan puiset majat ovat yhden huoneen asuntoja, joiden soikeat, päreillä katetut katot ulottuvat lähes maahan asti, joten katon alle jää suoja karjalle. Kyseessä on [[Kamnikin Alppien]] karstiylängöllä sijaitseva hajanainen [[paimenkylä]]. Kyse on siis käytännön ratkaisusta, jossa katto suojaa sekä asukkaita että eläimiä. Ylhäältä ne näyttävät isoilta pesiltä, ja sehän on minusta kohteliaisuus.
+KYSYMYS: Kerro lisää: Kamnikin Alppien
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velika Planina (luonto · vuori)
+Tietoruudun teksti: Velika Planina, eli suomeksi Suuri laidun, on Ylä-Krainissa Kamnikin Alppien karstiylängöllä sijaitseva hajanainen paimenkylä. Sen puiset majat ovat yhden huoneen asuntoja, joiden soikeat, päreillä katetut katot ulottuvat lähes maahan asti, joten katon alle jää suoja karjalle. Pysyviä asukkaita on vain vähän, mutta kesäisin ylängölle tuodaan yhä laumoja laiduntamaan. Kylä on yksi Euroopan harvoista näin laajoina säilyneistä paimenasutuksista. Paimenet rakensivat arkkitehti Jože Plečnikin suunnitelmien pohjalta Marija Snežna -kappelin, mutta sota-aikana kappeli ja sata muuta puurakennusta paloivat, ja uusi kappeli valmistui vuonna 1988.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kaupunkilehti / Bukarest: Paimen, jonka nimeä kaupunki kantaa] Bukarestin nimen alkuperää ei tiedetä varmasti, mutta perinne yhdistää sen Bucur-nimiseen mieheen: eri taruissa hän on paimen, kalastaja, metsästäjä tai ruhtinas. Katolinen lähetyssaarnaaja Blasius Kleiner kirjasi tarinan vuonna 1761 — Bucur paimensi lampaitaan Dâmbovițan rannalla, rakensi sinne kirkon ja sen viereen muutaman talon. Romanian sana bucurie tarkoittaa iloa, ja siitä kaupunki on saanut lempinimensä: ilon kaupunki. Radu Vodăn kadulla seisoo yhä pieni valkoinen Bucurin kirkko, jonka tutkijat tosin ajoittavat 1600- tai 1700-luvulle.
+AIEMPI KYSYMYS: Miksi paimenmajojen soikeat katot ulottuvat lähes maahan asti?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Velika Planinan puiset majat ovat yhden huoneen asuntoja, joiden soikeat, päreillä katetut katot ulottuvat lähes maahan asti, joten katon alle jää suoja karjalle. Kyseessä on [[Kamnikin Alppien]] karstiylängöllä sijaitseva hajanainen [[paimenkylä]]. Kyse on siis käytännön ratkaisusta, jossa katto suojaa sekä asukkaita että eläimiä. Ylhäältä ne näyttävät isoilta pesiltä, ja sehän on minusta kohteliaisuus.
+KYSYMYS: Kerro lisää: paimenkylä
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velika Planina (luonto · vuori)
+Tietoruudun teksti: Velika Planina, eli suomeksi Suuri laidun, on Ylä-Krainissa Kamnikin Alppien karstiylängöllä sijaitseva hajanainen paimenkylä. Sen puiset majat ovat yhden huoneen asuntoja, joiden soikeat, päreillä katetut katot ulottuvat lähes maahan asti, joten katon alle jää suoja karjalle. Pysyviä asukkaita on vain vähän, mutta kesäisin ylängölle tuodaan yhä laumoja laiduntamaan. Kylä on yksi Euroopan harvoista näin laajoina säilyneistä paimenasutuksista. Paimenet rakensivat arkkitehti Jože Plečnikin suunnitelmien pohjalta Marija Snežna -kappelin, mutta sota-aikana kappeli ja sata muuta puurakennusta paloivat, ja uusi kappeli valmistui vuonna 1988.
+AIEMPI KYSYMYS: Mitä paimenmajojen kappelille tapahtui sodan aikana ja milloin uusi rakennettiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tämä on surullisempi asia. [[Marija Snežna]] -kappeli rakennettiin [[paimenten]] toimesta arkkitehti [[Jože Plečnikin]] suunnitelmien pohjalta, mutta sota-aikana kappeli ja sata muuta puurakennusta paloivat. Uusi kappeli valmistui vuonna 1988. Tarkemmasta sodasta ja ajankohdasta en ole varma, sillä lähteissä puhutaan vain sota-ajasta. Onneksi kappeli on rakennettu uudelleen.
+KYSYMYS: Kerro lisää: Marija Snežna
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velika Planina (luonto · vuori)
+Tietoruudun teksti: Velika Planina, eli suomeksi Suuri laidun, on Ylä-Krainissa Kamnikin Alppien karstiylängöllä sijaitseva hajanainen paimenkylä. Sen puiset majat ovat yhden huoneen asuntoja, joiden soikeat, päreillä katetut katot ulottuvat lähes maahan asti, joten katon alle jää suoja karjalle. Pysyviä asukkaita on vain vähän, mutta kesäisin ylängölle tuodaan yhä laumoja laiduntamaan. Kylä on yksi Euroopan harvoista näin laajoina säilyneistä paimenasutuksista. Paimenet rakensivat arkkitehti Jože Plečnikin suunnitelmien pohjalta Marija Snežna -kappelin, mutta sota-aikana kappeli ja sata muuta puurakennusta paloivat, ja uusi kappeli valmistui vuonna 1988.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kaupunkilehti / Bukarest: Paimen, jonka nimeä kaupunki kantaa] Bukarestin nimen alkuperää ei tiedetä varmasti, mutta perinne yhdistää sen Bucur-nimiseen mieheen: eri taruissa hän on paimen, kalastaja, metsästäjä tai ruhtinas. Katolinen lähetyssaarnaaja Blasius Kleiner kirjasi tarinan vuonna 1761 — Bucur paimensi lampaitaan Dâmbovițan rannalla, rakensi sinne kirkon ja sen viereen muutaman talon. Romanian sana bucurie tarkoittaa iloa, ja siitä kaupunki on saanut lempinimensä: ilon kaupunki. Radu Vodăn kadulla seisoo yhä pieni valkoinen Bucurin kirkko, jonka tutkijat tosin ajoittavat 1600- tai 1700-luvulle.
+- [Mongolia — maalehti / Kuvataide: Vanha soittaja, joka teki tyylistä kansallisen] 1905–1987 — Ürjingiin Yadamsüren syntyi käsityöläisperheeseen: isoisä veisti puuta ja isä maalasi jurttia. Kahdeksanvuotiaasta hän opiskeli setänsä luona luostarissa puupiirrostekniikkaa, muutti 1930 Ulan Batoriin kirjapainon latojaksi ja päätyi sieltä Moskovan Surikov-instituuttiin. Öljyvärikauden jälkeen hän palasi 1950-luvulla litteisiin, kirkkaisiin väripintoihin — samoihin, joita buddhalainen taide oli käyttänyt — ja otti aiheikseen paimenten arjen. Tästä uustyylistä tuli mongol zurag. Vuoden 1958 työ Vanha soittaja esittää morin khuuria pitelevää vanhusta ja on yhä maan toistetuimpia maalauksia.
+AIEMPI KYSYMYS: Mitä paimenmajojen kappelille tapahtui sodan aikana ja milloin uusi rakennettiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tämä on surullisempi asia. [[Marija Snežna]] -kappeli rakennettiin [[paimenten]] toimesta arkkitehti [[Jože Plečnikin]] suunnitelmien pohjalta, mutta sota-aikana kappeli ja sata muuta puurakennusta paloivat. Uusi kappeli valmistui vuonna 1988. Tarkemmasta sodasta ja ajankohdasta en ole varma, sillä lähteissä puhutaan vain sota-ajasta. Onneksi kappeli on rakennettu uudelleen.
+KYSYMYS: Kerro lisää: paimenten
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velika Planina (luonto · vuori)
+Tietoruudun teksti: Velika Planina, eli suomeksi Suuri laidun, on Ylä-Krainissa Kamnikin Alppien karstiylängöllä sijaitseva hajanainen paimenkylä. Sen puiset majat ovat yhden huoneen asuntoja, joiden soikeat, päreillä katetut katot ulottuvat lähes maahan asti, joten katon alle jää suoja karjalle. Pysyviä asukkaita on vain vähän, mutta kesäisin ylängölle tuodaan yhä laumoja laiduntamaan. Kylä on yksi Euroopan harvoista näin laajoina säilyneistä paimenasutuksista. Paimenet rakensivat arkkitehti Jože Plečnikin suunnitelmien pohjalta Marija Snežna -kappelin, mutta sota-aikana kappeli ja sata muuta puurakennusta paloivat, ja uusi kappeli valmistui vuonna 1988.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Ruoka ja juoma: Tori Plečnikin kaarien alla] Ljubljanan keskustori (Osrednja ljubljanska tržnica) sijaitsee Ljubljanica-joen oikealla rannalla Kolmoissillan ja Lohikäärmesillan välissä. Rakennuksen suunnitteli Jože Plečnik: kaksikerroksinen halli seuraa joen kaarta, jokipuolella on suuret puolipyöreät ikkunat ja katupuolella pylväskäytävä. Tori on auki päivittäin sunnuntaita lukuun ottamatta. Alakerrassa myydään kalaa ja kuivattuja hedelmiä, molemmissa kerroksissa leipomo-, maito- ja lihakojuja, ja pylväskäytävän alla yrttejä, mausteita ja käsitöitä. Vuodesta 2021 tori kuuluu Plečnikin perintönä UNESCOn maailmanperintöluetteloon.
+- [Ljubljana — kaupunkilehti / Plečnikin ja Secessionin Ljubljana] Maanjäristyksen jälkeen Ljubljanan kadut täyttyivät secession-palatseista, ja arkkitehti Jože Plečnik antoi kaupungille sillat, kirjaston ja kesäteatterin.
+AIEMPI KYSYMYS: Mitä paimenmajojen kappelille tapahtui sodan aikana ja milloin uusi rakennettiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tämä on surullisempi asia. [[Marija Snežna]] -kappeli rakennettiin [[paimenten]] toimesta arkkitehti [[Jože Plečnikin]] suunnitelmien pohjalta, mutta sota-aikana kappeli ja sata muuta puurakennusta paloivat. Uusi kappeli valmistui vuonna 1988. Tarkemmasta sodasta ja ajankohdasta en ole varma, sillä lähteissä puhutaan vain sota-ajasta. Onneksi kappeli on rakennettu uudelleen.
+KYSYMYS: Kerro lisää: Jože Plečnikin
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velika Planina (luonto · vuori)
+Tietoruudun teksti: Velika Planina, eli suomeksi Suuri laidun, on Ylä-Krainissa Kamnikin Alppien karstiylängöllä sijaitseva hajanainen paimenkylä. Sen puiset majat ovat yhden huoneen asuntoja, joiden soikeat, päreillä katetut katot ulottuvat lähes maahan asti, joten katon alle jää suoja karjalle. Pysyviä asukkaita on vain vähän, mutta kesäisin ylängölle tuodaan yhä laumoja laiduntamaan. Kylä on yksi Euroopan harvoista näin laajoina säilyneistä paimenasutuksista. Paimenet rakensivat arkkitehti Jože Plečnikin suunnitelmien pohjalta Marija Snežna -kappelin, mutta sota-aikana kappeli ja sata muuta puurakennusta paloivat, ja uusi kappeli valmistui vuonna 1988.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Sähkövalo luolassa ennen pääkaupunkia] 1884 — Postojnan luola on 24,3 kilometrin mittainen karstiluola, jonka Pivka-joki on kaivertanut. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan luolaa. Hänestä tuli luolan ensimmäinen virallinen opas. Vuonna 1872 luolaan laskettiin raiteet, ja aluksi oppaat työnsivät vieraita vaunuissa. Sähkövalo saatiin luolaan 1884, ennen kuin Ljubljanassa oli sellaista. Luolassa on myös maailman ensimmäinen ja ainoa maanalainen postitoimisto, joka avattiin vuonna 1899.
+AIEMPI KYSYMYS: Kuka oli arkkitehti Jože Plečnik?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Jože Plečnik oli slovenialainen arkkitehti, joka eli 1872–1957. Hänet tunnetaan erityisesti töistään [[Ljubljanassa]], ja hän suunnitteli myös [[Prahan linnan]] alueen uudistuksia. Velika Planinan paimenet rakensivat hänen suunnitelmiensa pohjalta Marija Snežna -kappelin. Kyyhky arvostaa arkkitehtia, joka ymmärtää katot.
+KYSYMYS: Kerro lisää: Ljubljanassa
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velika Planina (luonto · vuori)
+Tietoruudun teksti: Velika Planina, eli suomeksi Suuri laidun, on Ylä-Krainissa Kamnikin Alppien karstiylängöllä sijaitseva hajanainen paimenkylä. Sen puiset majat ovat yhden huoneen asuntoja, joiden soikeat, päreillä katetut katot ulottuvat lähes maahan asti, joten katon alle jää suoja karjalle. Pysyviä asukkaita on vain vähän, mutta kesäisin ylängölle tuodaan yhä laumoja laiduntamaan. Kylä on yksi Euroopan harvoista näin laajoina säilyneistä paimenasutuksista. Paimenet rakensivat arkkitehti Jože Plečnikin suunnitelmien pohjalta Marija Snežna -kappelin, mutta sota-aikana kappeli ja sata muuta puurakennusta paloivat, ja uusi kappeli valmistui vuonna 1988.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+AIEMPI KYSYMYS: Kuka oli arkkitehti Jože Plečnik?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Jože Plečnik oli slovenialainen arkkitehti, joka eli 1872–1957. Hänet tunnetaan erityisesti töistään [[Ljubljanassa]], ja hän suunnitteli myös [[Prahan linnan]] alueen uudistuksia. Velika Planinan paimenet rakensivat hänen suunnitelmiensa pohjalta Marija Snežna -kappelin. Kyyhky arvostaa arkkitehtia, joka ymmärtää katot.
+KYSYMYS: Kerro lisää: Prahan linnan
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velika Planina (luonto · vuori)
+Tietoruudun teksti: Velika Planina, eli suomeksi Suuri laidun, on Ylä-Krainissa Kamnikin Alppien karstiylängöllä sijaitseva hajanainen paimenkylä. Sen puiset majat ovat yhden huoneen asuntoja, joiden soikeat, päreillä katetut katot ulottuvat lähes maahan asti, joten katon alle jää suoja karjalle. Pysyviä asukkaita on vain vähän, mutta kesäisin ylängölle tuodaan yhä laumoja laiduntamaan. Kylä on yksi Euroopan harvoista näin laajoina säilyneistä paimenasutuksista. Paimenet rakensivat arkkitehti Jože Plečnikin suunnitelmien pohjalta Marija Snežna -kappelin, mutta sota-aikana kappeli ja sata muuta puurakennusta paloivat, ja uusi kappeli valmistui vuonna 1988.
+AIEMPI KYSYMYS: Millaista elämä Velika Planinalla on kesäisin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Velika Planinalla on pysyviä asukkaita vain vähän, mutta kesäisin ylängölle tuodaan yhä laumoja laiduntamaan. Puiset majat ovat yhden huoneen asuntoja, ja niiden soikeiden päreillä katettujen kattojen alle jää suoja karjalle. Kylä sijaitsee [[Kamnikin Alppien]] karstiylängöllä [[Ylä-Krainissa]], ja se on yksi Euroopan harvoista näin laajoina säilyneistä paimenasutuksista. Paimenten päivärytmistä tai arjesta en ole varma.
+
+Ylhäältä katsoen katot näyttävät isoilta pesiltä, ja se on minulle suurin kohteliaisuus. Paikallisesta leivästä minulla ei ole tietoa, mutta toivon parasta.
+KYSYMYS: Kerro lisää: Ylä-Krainissa
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velika Planina (luonto · vuori)
+Tietoruudun teksti: Velika Planina, eli suomeksi Suuri laidun, on Ylä-Krainissa Kamnikin Alppien karstiylängöllä sijaitseva hajanainen paimenkylä. Sen puiset majat ovat yhden huoneen asuntoja, joiden soikeat, päreillä katetut katot ulottuvat lähes maahan asti, joten katon alle jää suoja karjalle. Pysyviä asukkaita on vain vähän, mutta kesäisin ylängölle tuodaan yhä laumoja laiduntamaan. Kylä on yksi Euroopan harvoista näin laajoina säilyneistä paimenasutuksista. Paimenet rakensivat arkkitehti Jože Plečnikin suunnitelmien pohjalta Marija Snežna -kappelin, mutta sota-aikana kappeli ja sata muuta puurakennusta paloivat, ja uusi kappeli valmistui vuonna 1988.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kaupunkilehti / Historia: Neitsyt, joka vahtii merenkulkijoita mäen laelta] Notre-Dame de la Garde -basilika kohoaa Marseillen korkeimmalla kalliolla, 149 metrin korkeudessa, ja sen kultainen Neitsyt Maria -patsas näkyy kauas merelle. Nykyinen basilika valmistui 1864, mutta paikalla on ollut pyhiinvaelluskohde jo 1200-luvulta, kun kukkulalle rakennettiin ensimmäinen pieni kappeli. Merenkulkijat ovat perinteisesti pitäneet basilikaa suojelijanaan ja jättäneet sinne kiitoslahjoja onnistuneista matkoista — kirkon seinillä riippuu yhä satoja pienoislaivoja ja muistolaattoja pelastuneista haaksirikoista. Marseillelaiset kutsuvat patsasta hellästi "La Bonne Mère", hyväksi äidiksi.
+- [Slovenia — maalehti / Luonto: Saari jonne morsian kannetaan] 1655 — Bledjärven pienellä saarella seisoo Neitsyt Marian taivaaseenoton pyhiinvaelluskirkko, jonka torni on 52 metriä korkea. Kirkolle johtaa barokkinen porrasnousu vuodelta 1655, jossa on 99 kiviporrasta, ja perinteen mukaan onni seuraa sulhasta, joka kantaa morsiamensa ylös asti. Sen jälkeen soitetaan kelloa ja tehdään toive. Saarelle ei mennä sillalla vaan pletna-veneellä, jota soutaja ohjaa seisaaltaan kahdella airolla. Vuonna 1740 Maria Teresia myönsi lauttaoikeuden 22 paikalliselle suvulle, ja monet nykysoutajat polveutuvat suoraan heistä. Järveä lämmittää 23-asteinen lämpölähde.
+AIEMPI KYSYMYS: Mitä Marija Snežna -nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Marija on Maria, ja snežna on lumeen viittaava sana, joten nimen voi suomentaa Lumen Neitsyt Mariaksi. Nimi liittyy [[Neitsyt Maria]]n kunnioitukseen, mutta en ole varma Velika Planinan kappelin nimen tarkasta taustasta. Kappeli rakennettiin arkkitehti [[Jože Plečnikin]] suunnitelmien pohjalta, paloi sota-aikana ja uusi valmistui vuonna 1988. Lumi ja minä emme ole ystäviä.
+KYSYMYS: Kerro lisää: Neitsyt Maria
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cerknican järvi (luonto · järvi)
+Tietoruudun teksti: Cerknican järvi on Sisä-Krainissa, Cerknican karstipoljen eteläosassa sijaitseva ajoittain katoava järvi. Täynnä ollessaan se on Slovenian suurin järvi, ja pinta-ala vaihtelee yleensä noin 26–28 neliökilometrin välillä, mutta voi nousta jopa 38 neliökilometriin. Järvi on yhteydessä maanalaisiin onkaloihin: kesällä, kun sataa vähän, vesi valuu kokonaan alempiin luoliin ja pohja peittyy nopeasti rehevään kasvillisuuteen, ja syksyn sateiden myötä vesi purkautuu takaisin. Muutokset ovat epäsäännöllisiä, ja järvi oli kuivana yli vuoden vuosina 1834–35. Valvasor esitti järvestä oman selityksensä 1687, ja sen toiminnan kuvasi tarkasti ensimmäisenä Tobias Gruber vuonna 1781.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Järvi joka katoaa kesäksi] 1689 — Kun Cerknican järvi on täynnä, se on Slovenian suurin järvi, mutta kesällä sen vesi valuu maan alle, ja pohjaan kasvaa vehreä kasvillisuus. Syksyn sateiden jälkeen vesi nousee takaisin luolista niin nopeasti, että järvi voi tulvia ympäristöönsä. Joskus se on ollut kuivana yli vuoden, kuten vuosina 1834–35, ja kalat katoavat ja palaavat veden mukana. Vuonna 1689 Johann Weikhard von Valvasor kuvasi järveä ja toi karst-sanan eurooppalaisten tutkijoiden käyttöön kuvaamaan jokien maanalaista virtausta. Järvi on tärkeä lintualue, ja sen pinta-ala vaihtelee 28 ja 38 neliökilometrin välillä.
+AIEMPI KYSYMYS: Minne Cerknican järven vesi katoaa kesäisin, ja mistä se palaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämä on vähän outo järvi. Kesällä, kun sataa vähän, vesi valuu kokonaan alempiin maanalaisiin luoliin, ja pohja peittyy nopeasti rehevään kasvillisuuteen. Syksyn sateiden myötä vesi purkautuu takaisin samoista [[luolista]], ja järvi voi tulvia ympäristöönsä. Muutokset ovat epäsäännöllisiä, ja järvi on ollut joskus kuivana yli vuoden, kuten vuosina 1834–35. [[Cerknican]] seutu on [[Sisä-Krainissa]]. Kyllä minä silti kysyisin, minne se vesi oikein menee.
+KYSYMYS: Kerro lisää: luolista
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cerknican järvi (luonto · järvi)
+Tietoruudun teksti: Cerknican järvi on Sisä-Krainissa, Cerknican karstipoljen eteläosassa sijaitseva ajoittain katoava järvi. Täynnä ollessaan se on Slovenian suurin järvi, ja pinta-ala vaihtelee yleensä noin 26–28 neliökilometrin välillä, mutta voi nousta jopa 38 neliökilometriin. Järvi on yhteydessä maanalaisiin onkaloihin: kesällä, kun sataa vähän, vesi valuu kokonaan alempiin luoliin ja pohja peittyy nopeasti rehevään kasvillisuuteen, ja syksyn sateiden myötä vesi purkautuu takaisin. Muutokset ovat epäsäännöllisiä, ja järvi oli kuivana yli vuoden vuosina 1834–35. Valvasor esitti järvestä oman selityksensä 1687, ja sen toiminnan kuvasi tarkasti ensimmäisenä Tobias Gruber vuonna 1781.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Järvi joka katoaa kesäksi] 1689 — Kun Cerknican järvi on täynnä, se on Slovenian suurin järvi, mutta kesällä sen vesi valuu maan alle, ja pohjaan kasvaa vehreä kasvillisuus. Syksyn sateiden jälkeen vesi nousee takaisin luolista niin nopeasti, että järvi voi tulvia ympäristöönsä. Joskus se on ollut kuivana yli vuoden, kuten vuosina 1834–35, ja kalat katoavat ja palaavat veden mukana. Vuonna 1689 Johann Weikhard von Valvasor kuvasi järveä ja toi karst-sanan eurooppalaisten tutkijoiden käyttöön kuvaamaan jokien maanalaista virtausta. Järvi on tärkeä lintualue, ja sen pinta-ala vaihtelee 28 ja 38 neliökilometrin välillä.
+AIEMPI KYSYMYS: Minne Cerknican järven vesi katoaa kesäisin, ja mistä se palaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämä on vähän outo järvi. Kesällä, kun sataa vähän, vesi valuu kokonaan alempiin maanalaisiin luoliin, ja pohja peittyy nopeasti rehevään kasvillisuuteen. Syksyn sateiden myötä vesi purkautuu takaisin samoista [[luolista]], ja järvi voi tulvia ympäristöönsä. Muutokset ovat epäsäännöllisiä, ja järvi on ollut joskus kuivana yli vuoden, kuten vuosina 1834–35. [[Cerknican]] seutu on [[Sisä-Krainissa]]. Kyllä minä silti kysyisin, minne se vesi oikein menee.
+KYSYMYS: Kerro lisää: Cerknican
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cerknican järvi (luonto · järvi)
+Tietoruudun teksti: Cerknican järvi on Sisä-Krainissa, Cerknican karstipoljen eteläosassa sijaitseva ajoittain katoava järvi. Täynnä ollessaan se on Slovenian suurin järvi, ja pinta-ala vaihtelee yleensä noin 26–28 neliökilometrin välillä, mutta voi nousta jopa 38 neliökilometriin. Järvi on yhteydessä maanalaisiin onkaloihin: kesällä, kun sataa vähän, vesi valuu kokonaan alempiin luoliin ja pohja peittyy nopeasti rehevään kasvillisuuteen, ja syksyn sateiden myötä vesi purkautuu takaisin. Muutokset ovat epäsäännöllisiä, ja järvi oli kuivana yli vuoden vuosina 1834–35. Valvasor esitti järvestä oman selityksensä 1687, ja sen toiminnan kuvasi tarkasti ensimmäisenä Tobias Gruber vuonna 1781.
+AIEMPI KYSYMYS: Minne Cerknican järven vesi katoaa kesäisin, ja mistä se palaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämä on vähän outo järvi. Kesällä, kun sataa vähän, vesi valuu kokonaan alempiin maanalaisiin luoliin, ja pohja peittyy nopeasti rehevään kasvillisuuteen. Syksyn sateiden myötä vesi purkautuu takaisin samoista [[luolista]], ja järvi voi tulvia ympäristöönsä. Muutokset ovat epäsäännöllisiä, ja järvi on ollut joskus kuivana yli vuoden, kuten vuosina 1834–35. [[Cerknican]] seutu on [[Sisä-Krainissa]]. Kyllä minä silti kysyisin, minne se vesi oikein menee.
+KYSYMYS: Kerro lisää: Sisä-Krainissa
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cerknican järvi (luonto · järvi)
+Tietoruudun teksti: Cerknican järvi on Sisä-Krainissa, Cerknican karstipoljen eteläosassa sijaitseva ajoittain katoava järvi. Täynnä ollessaan se on Slovenian suurin järvi, ja pinta-ala vaihtelee yleensä noin 26–28 neliökilometrin välillä, mutta voi nousta jopa 38 neliökilometriin. Järvi on yhteydessä maanalaisiin onkaloihin: kesällä, kun sataa vähän, vesi valuu kokonaan alempiin luoliin ja pohja peittyy nopeasti rehevään kasvillisuuteen, ja syksyn sateiden myötä vesi purkautuu takaisin. Muutokset ovat epäsäännöllisiä, ja järvi oli kuivana yli vuoden vuosina 1834–35. Valvasor esitti järvestä oman selityksensä 1687, ja sen toiminnan kuvasi tarkasti ensimmäisenä Tobias Gruber vuonna 1781.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kohdekartta / Kohdekartta: Porcellino] Kultaseppien sillalta on muutaman minuutin kävely kauppahallin holvien alle, jossa istuu pronssinen villisika kitansa auki. Firenzeläiset sanovat sitä porsaaksi, vaikka se ei ole porsas. Pietro Tacca valoi sen vähän ennen vuotta 1634, ja mallina oli marmoripatsas, joka oli itsekin kopio — roomalainen jäljennös hellenistisestä alkuperäisestä. Se marmori löytyi Roomasta, Medicit toivat sen Firenzeen 1500-luvun puolivälissä, ja jo silloin sitä sanottiin Kalydonian villisiaksi, tarujen pedoksi. Pronssi oli tarkoitettu Bobolin puutarhaan, mutta se päätyi kauppahallin kulmaan, ensin apteekin eteen — apteekki sai siitä nimekseen Villisian apteekki — ja myöhemmin sivummalle, jotta markkinoilla maht…
+AIEMPI KYSYMYS: Millä tavalla Valvasor ja Gruber yrittivät selittää järven arvoitusta?
+AIEMPI VASTAUS (Livia):
+Mmm— tähän en osaa vastata kokonaan. Tiedän vain, että Valvasor esitti järvestä oman selityksensä 1600-luvun lopulla ja että [[Tobias Gruber]] kuvasi sen toiminnan tarkasti ensimmäisenä vuonna 1781, lähteiden mukaan. Heidän selitystensä yksityiskohdista en ole varma, joten en halua keksiä niitä. [[Johann Weikhard von Valvasor]] toi lähteiden mukaan karst-sanan eurooppalaisten tutkijoiden käyttöön kuvaamaan jokien maanalaista virtausta. Siinä kohtaa kyyhkyn tiedot loppuvat.
+KYSYMYS: Kerro lisää: Tobias Gruber
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cerknican järvi (luonto · järvi)
+Tietoruudun teksti: Cerknican järvi on Sisä-Krainissa, Cerknican karstipoljen eteläosassa sijaitseva ajoittain katoava järvi. Täynnä ollessaan se on Slovenian suurin järvi, ja pinta-ala vaihtelee yleensä noin 26–28 neliökilometrin välillä, mutta voi nousta jopa 38 neliökilometriin. Järvi on yhteydessä maanalaisiin onkaloihin: kesällä, kun sataa vähän, vesi valuu kokonaan alempiin luoliin ja pohja peittyy nopeasti rehevään kasvillisuuteen, ja syksyn sateiden myötä vesi purkautuu takaisin. Muutokset ovat epäsäännöllisiä, ja järvi oli kuivana yli vuoden vuosina 1834–35. Valvasor esitti järvestä oman selityksensä 1687, ja sen toiminnan kuvasi tarkasti ensimmäisenä Tobias Gruber vuonna 1781.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Luolalohikäärmeen poikanen] 1689 — Olmi eli luolasalamanteri on sokea, valkoinen ja koko elämänsä pimeässä uiva eläin. Ensimmäisen kerran sen mainitsi kirjassaan Johann Weikhard von Valvasor vuonna 1689. Sateiden jälkeen olmeja huuhtoutui maan alta pintaan, ja paikalliset uskoivat niiden olevan luolalohikäärmeen poikasia. Olmin silmät ovat surkastuneet, mutta haju ja kuulo toimivat erinomaisesti. Se voi elää jopa kymmenen vuotta ilman ruokaa, ja sen enimmäiseliniäksi on arvioitu yli sata vuotta. Sloveniassa sitä kutsutaan ihmiskalaksi, koska sen iho on ihmisen ihon värinen. Postojnan luolassa olmeja voi nähdä erityisessä akvaariossa.
+- [Slovenia — maalehti / Tiede: Järvi joka katoaa kesäksi] 1689 — Kun Cerknican järvi on täynnä, se on Slovenian suurin järvi, mutta kesällä sen vesi valuu maan alle, ja pohjaan kasvaa vehreä kasvillisuus. Syksyn sateiden jälkeen vesi nousee takaisin luolista niin nopeasti, että järvi voi tulvia ympäristöönsä. Joskus se on ollut kuivana yli vuoden, kuten vuosina 1834–35, ja kalat katoavat ja palaavat veden mukana. Vuonna 1689 Johann Weikhard von Valvasor kuvasi järveä ja toi karst-sanan eurooppalaisten tutkijoiden käyttöön kuvaamaan jokien maanalaista virtausta. Järvi on tärkeä lintualue, ja sen pinta-ala vaihtelee 28 ja 38 neliökilometrin välillä.
+AIEMPI KYSYMYS: Millä tavalla Valvasor ja Gruber yrittivät selittää järven arvoitusta?
+AIEMPI VASTAUS (Livia):
+Mmm— tähän en osaa vastata kokonaan. Tiedän vain, että Valvasor esitti järvestä oman selityksensä 1600-luvun lopulla ja että [[Tobias Gruber]] kuvasi sen toiminnan tarkasti ensimmäisenä vuonna 1781, lähteiden mukaan. Heidän selitystensä yksityiskohdista en ole varma, joten en halua keksiä niitä. [[Johann Weikhard von Valvasor]] toi lähteiden mukaan karst-sanan eurooppalaisten tutkijoiden käyttöön kuvaamaan jokien maanalaista virtausta. Siinä kohtaa kyyhkyn tiedot loppuvat.
+KYSYMYS: Kerro lisää: Johann Weikhard von Valvasor
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cerknican järvi (luonto · järvi)
+Tietoruudun teksti: Cerknican järvi on Sisä-Krainissa, Cerknican karstipoljen eteläosassa sijaitseva ajoittain katoava järvi. Täynnä ollessaan se on Slovenian suurin järvi, ja pinta-ala vaihtelee yleensä noin 26–28 neliökilometrin välillä, mutta voi nousta jopa 38 neliökilometriin. Järvi on yhteydessä maanalaisiin onkaloihin: kesällä, kun sataa vähän, vesi valuu kokonaan alempiin luoliin ja pohja peittyy nopeasti rehevään kasvillisuuteen, ja syksyn sateiden myötä vesi purkautuu takaisin. Muutokset ovat epäsäännöllisiä, ja järvi oli kuivana yli vuoden vuosina 1834–35. Valvasor esitti järvestä oman selityksensä 1687, ja sen toiminnan kuvasi tarkasti ensimmäisenä Tobias Gruber vuonna 1781.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Järvi joka katoaa kesäksi] 1689 — Kun Cerknican järvi on täynnä, se on Slovenian suurin järvi, mutta kesällä sen vesi valuu maan alle, ja pohjaan kasvaa vehreä kasvillisuus. Syksyn sateiden jälkeen vesi nousee takaisin luolista niin nopeasti, että järvi voi tulvia ympäristöönsä. Joskus se on ollut kuivana yli vuoden, kuten vuosina 1834–35, ja kalat katoavat ja palaavat veden mukana. Vuonna 1689 Johann Weikhard von Valvasor kuvasi järveä ja toi karst-sanan eurooppalaisten tutkijoiden käyttöön kuvaamaan jokien maanalaista virtausta. Järvi on tärkeä lintualue, ja sen pinta-ala vaihtelee 28 ja 38 neliökilometrin välillä.
+AIEMPI KYSYMYS: Kuinka suuri Cerknican järvi on täynnä ollessaan?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Täynnä ollessaan Cerknican järvi on Slovenian suurin järvi. Sen pinta-ala vaihtelee yleensä noin 26–28 neliökilometrin välillä ja voi nousta jopa 38 neliökilometriin, mutta lähteet ilmoittavat alarajan hieman eri tavoin. Järvi sijaitsee [[karstipoljen]] eteläosassa [[Sisä-Krainissa]].
+
+Järvi, joka vaihtaa kokoaan ja katoaa kesäksi, on minun silmissäni erikoinen. Pesäpaikkaa en tähän rakentaisi.
+KYSYMYS: Kerro lisää: karstipoljen
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cerknican järvi (luonto · järvi)
+Tietoruudun teksti: Cerknican järvi on Sisä-Krainissa, Cerknican karstipoljen eteläosassa sijaitseva ajoittain katoava järvi. Täynnä ollessaan se on Slovenian suurin järvi, ja pinta-ala vaihtelee yleensä noin 26–28 neliökilometrin välillä, mutta voi nousta jopa 38 neliökilometriin. Järvi on yhteydessä maanalaisiin onkaloihin: kesällä, kun sataa vähän, vesi valuu kokonaan alempiin luoliin ja pohja peittyy nopeasti rehevään kasvillisuuteen, ja syksyn sateiden myötä vesi purkautuu takaisin. Muutokset ovat epäsäännöllisiä, ja järvi oli kuivana yli vuoden vuosina 1834–35. Valvasor esitti järvestä oman selityksensä 1687, ja sen toiminnan kuvasi tarkasti ensimmäisenä Tobias Gruber vuonna 1781.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Coober Pedy — kaupunkilehti / Opaali: Piidioksidipallot loihtivat sateenkaaren] Kun sisämeri kuivui, piidioksidipitoinen vesi valui hiekkakiven halkeamiin ja onkaloihin ja kovettui vuosimiljoonien kuluessa geeliksi ja lopulta kiveksi. Jos piidioksidin mikroskooppiset pallot järjestäytyivät kiven sisällä säännöllisiksi riveiksi, ne alkavat taittaa valoa aivan kuin hila: tuloksena on jalo-opaali, joka hohtaa eri värejä katselukulman mukaan. Jos pallot ovat epäsäännöllisessä järjestyksessä, syntyy vain himmeä, väritön opaali. Coober Pedyn kivi on tyypillisesti vaaleaa niin sanottua valkoista opaalia, koska sen emokivi on itsessään vaaleaa hiekkakiveä.
+AIEMPI KYSYMYS: Mitä kaloille tapahtuu, kun Cerknican järvi kuivuu?
+AIEMPI VASTAUS (Livia):
+Mmm— sepä sattui. Lähteiden mukaan kalat katoavat järven veden mukana ja palaavat sen mukana, kun vesi nousee takaisin luolista. Järvi on yhteydessä [[maanalaisiin onkaloihin]], joihin vesi kesällä valuu. Tarkasta mekanismista, miten kalat selviävät, en ole varma. Järvi on lisäksi tärkeä [[lintualue]]. Kalat osaavat sen minkä minäkin: kadota oikeaan aikaan.
+KYSYMYS: Kerro lisää: maanalaisiin onkaloihin
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cerknican järvi (luonto · järvi)
+Tietoruudun teksti: Cerknican järvi on Sisä-Krainissa, Cerknican karstipoljen eteläosassa sijaitseva ajoittain katoava järvi. Täynnä ollessaan se on Slovenian suurin järvi, ja pinta-ala vaihtelee yleensä noin 26–28 neliökilometrin välillä, mutta voi nousta jopa 38 neliökilometriin. Järvi on yhteydessä maanalaisiin onkaloihin: kesällä, kun sataa vähän, vesi valuu kokonaan alempiin luoliin ja pohja peittyy nopeasti rehevään kasvillisuuteen, ja syksyn sateiden myötä vesi purkautuu takaisin. Muutokset ovat epäsäännöllisiä, ja järvi oli kuivana yli vuoden vuosina 1834–35. Valvasor esitti järvestä oman selityksensä 1687, ja sen toiminnan kuvasi tarkasti ensimmäisenä Tobias Gruber vuonna 1781.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Järvi joka katoaa kesäksi] 1689 — Kun Cerknican järvi on täynnä, se on Slovenian suurin järvi, mutta kesällä sen vesi valuu maan alle, ja pohjaan kasvaa vehreä kasvillisuus. Syksyn sateiden jälkeen vesi nousee takaisin luolista niin nopeasti, että järvi voi tulvia ympäristöönsä. Joskus se on ollut kuivana yli vuoden, kuten vuosina 1834–35, ja kalat katoavat ja palaavat veden mukana. Vuonna 1689 Johann Weikhard von Valvasor kuvasi järveä ja toi karst-sanan eurooppalaisten tutkijoiden käyttöön kuvaamaan jokien maanalaista virtausta. Järvi on tärkeä lintualue, ja sen pinta-ala vaihtelee 28 ja 38 neliökilometrin välillä.
+AIEMPI KYSYMYS: Mitä kaloille tapahtuu, kun Cerknican järvi kuivuu?
+AIEMPI VASTAUS (Livia):
+Mmm— sepä sattui. Lähteiden mukaan kalat katoavat järven veden mukana ja palaavat sen mukana, kun vesi nousee takaisin luolista. Järvi on yhteydessä [[maanalaisiin onkaloihin]], joihin vesi kesällä valuu. Tarkasta mekanismista, miten kalat selviävät, en ole varma. Järvi on lisäksi tärkeä [[lintualue]]. Kalat osaavat sen minkä minäkin: kadota oikeaan aikaan.
+KYSYMYS: Kerro lisää: lintualue
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cerknican järvi (luonto · järvi)
+Tietoruudun teksti: Cerknican järvi on Sisä-Krainissa, Cerknican karstipoljen eteläosassa sijaitseva ajoittain katoava järvi. Täynnä ollessaan se on Slovenian suurin järvi, ja pinta-ala vaihtelee yleensä noin 26–28 neliökilometrin välillä, mutta voi nousta jopa 38 neliökilometriin. Järvi on yhteydessä maanalaisiin onkaloihin: kesällä, kun sataa vähän, vesi valuu kokonaan alempiin luoliin ja pohja peittyy nopeasti rehevään kasvillisuuteen, ja syksyn sateiden myötä vesi purkautuu takaisin. Muutokset ovat epäsäännöllisiä, ja järvi oli kuivana yli vuoden vuosina 1834–35. Valvasor esitti järvestä oman selityksensä 1687, ja sen toiminnan kuvasi tarkasti ensimmäisenä Tobias Gruber vuonna 1781.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Järvi joka katoaa kesäksi] 1689 — Kun Cerknican järvi on täynnä, se on Slovenian suurin järvi, mutta kesällä sen vesi valuu maan alle, ja pohjaan kasvaa vehreä kasvillisuus. Syksyn sateiden jälkeen vesi nousee takaisin luolista niin nopeasti, että järvi voi tulvia ympäristöönsä. Joskus se on ollut kuivana yli vuoden, kuten vuosina 1834–35, ja kalat katoavat ja palaavat veden mukana. Vuonna 1689 Johann Weikhard von Valvasor kuvasi järveä ja toi karst-sanan eurooppalaisten tutkijoiden käyttöön kuvaamaan jokien maanalaista virtausta. Järvi on tärkeä lintualue, ja sen pinta-ala vaihtelee 28 ja 38 neliökilometrin välillä.
+AIEMPI KYSYMYS: Mikä on karstipolje?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä sana on tuttu. Karstipolje on karstialueen laaja, tasapohjainen suljettu laakso, jonka vedet purkautuvat maan alle luolastoihin. [[Cerknican järvi]] sijaitsee Cerknican karstipoljen eteläosassa, ja siksi järven vesi voi kadota kesäksi maan alle. Sana karst on lähteiden mukaan tullut eurooppalaisten tutkijoiden käyttöön [[Valvasorin]] kuvausten kautta. Näin tämä oppitunti sujui ilman yhtäkään pullaa.
+KYSYMYS: Kerro lisää: Cerknican järvi
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cerknican järvi (luonto · järvi)
+Tietoruudun teksti: Cerknican järvi on Sisä-Krainissa, Cerknican karstipoljen eteläosassa sijaitseva ajoittain katoava järvi. Täynnä ollessaan se on Slovenian suurin järvi, ja pinta-ala vaihtelee yleensä noin 26–28 neliökilometrin välillä, mutta voi nousta jopa 38 neliökilometriin. Järvi on yhteydessä maanalaisiin onkaloihin: kesällä, kun sataa vähän, vesi valuu kokonaan alempiin luoliin ja pohja peittyy nopeasti rehevään kasvillisuuteen, ja syksyn sateiden myötä vesi purkautuu takaisin. Muutokset ovat epäsäännöllisiä, ja järvi oli kuivana yli vuoden vuosina 1834–35. Valvasor esitti järvestä oman selityksensä 1687, ja sen toiminnan kuvasi tarkasti ensimmäisenä Tobias Gruber vuonna 1781.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Luolalohikäärmeen poikanen] 1689 — Olmi eli luolasalamanteri on sokea, valkoinen ja koko elämänsä pimeässä uiva eläin. Ensimmäisen kerran sen mainitsi kirjassaan Johann Weikhard von Valvasor vuonna 1689. Sateiden jälkeen olmeja huuhtoutui maan alta pintaan, ja paikalliset uskoivat niiden olevan luolalohikäärmeen poikasia. Olmin silmät ovat surkastuneet, mutta haju ja kuulo toimivat erinomaisesti. Se voi elää jopa kymmenen vuotta ilman ruokaa, ja sen enimmäiseliniäksi on arvioitu yli sata vuotta. Sloveniassa sitä kutsutaan ihmiskalaksi, koska sen iho on ihmisen ihon värinen. Postojnan luolassa olmeja voi nähdä erityisessä akvaariossa.
+- [Slovenia — maalehti / Tiede: Järvi joka katoaa kesäksi] 1689 — Kun Cerknican järvi on täynnä, se on Slovenian suurin järvi, mutta kesällä sen vesi valuu maan alle, ja pohjaan kasvaa vehreä kasvillisuus. Syksyn sateiden jälkeen vesi nousee takaisin luolista niin nopeasti, että järvi voi tulvia ympäristöönsä. Joskus se on ollut kuivana yli vuoden, kuten vuosina 1834–35, ja kalat katoavat ja palaavat veden mukana. Vuonna 1689 Johann Weikhard von Valvasor kuvasi järveä ja toi karst-sanan eurooppalaisten tutkijoiden käyttöön kuvaamaan jokien maanalaista virtausta. Järvi on tärkeä lintualue, ja sen pinta-ala vaihtelee 28 ja 38 neliökilometrin välillä.
+AIEMPI KYSYMYS: Mikä on karstipolje?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä sana on tuttu. Karstipolje on karstialueen laaja, tasapohjainen suljettu laakso, jonka vedet purkautuvat maan alle luolastoihin. [[Cerknican järvi]] sijaitsee Cerknican karstipoljen eteläosassa, ja siksi järven vesi voi kadota kesäksi maan alle. Sana karst on lähteiden mukaan tullut eurooppalaisten tutkijoiden käyttöön [[Valvasorin]] kuvausten kautta. Näin tämä oppitunti sujui ilman yhtäkään pullaa.
+KYSYMYS: Kerro lisää: Valvasorin
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Škocjanin luolat (luonto · vuori)
+Tietoruudun teksti: Škocjanin luolat ovat luolajärjestelmä Slovenian Karstilla, ja UNESCO otti ne maailmanperintölistalleen vuonna 1986. Reka-joki katoaa Suuren romahdusdolinan kohdalla maan alle, virtaa noin 3,5 kilometriä pitkässä ja jopa yli 140 metriä korkeassa maanalaisessa kanjonissa ja jatkaa sitten maan alla yhteensä noin 34 kilometriä, kunnes nousee pintaan Monfalconen lähellä. Kanjonin suurin tila, Martelin sali, on tilavuudeltaan 2,2 miljoonaa kuutiometriä, ja sitä pidetään Euroopan suurimpana tunnettuna maanalaisena salina. Alueelta on löytynyt yli kymmenentuhatta vuotta vanhoja asutuksen jälkiä. Nykyaikaisen matkailun katsotaan alkaneen 1. tammikuuta 1819, kun luoliin otettiin käyttöön vieraskirja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Lehmus jokaisen varsan kunniaksi] 1580 — Vuonna 1580 Sisä-Itävallan arkkiherttua Kaarle perusti Karstin alueelle Lipican ratsutilan. Espanjalaista hevosta pidettiin ihanteellisena, ja Karstin maaperä ja ilmasto muistuttivat Espanjan oloja, joten paikka valittiin. Ensimmäiset hevoset, 24 tammaa ja kuusi oria, ostettiin Espanjasta vuonna 1581, ja seudun maanviljelijät häädettiin muualle. Paikan nimi tulee sanasta lipa, joka tarkoittaa lehmusta. Tilalla istutetaan yhä uusi lehmus jokaisen syntyvän varsan kunniaksi. Lipizzan-hevoset syntyvät tummina ja muuttuvat valkoisiksi vasta vuosien kuluessa.
+AIEMPI KYSYMYS: Miksi Reka-joki katoaa Škocjanissa maan alle, ja minne se sieltä päätyy?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on kyl hieno ilmiö. Reka virtaa [[Karstin]] kalkkikivialueella, jossa vesi liuottaa kiveä vähitellen, ja siksi alueella on paljon luolia ja kuiluja. Joki syöksyy Suureen [[romahdusdolinaan]] ja katoaa kallion alle, ja maan alla se virtaa yhteensä noin 34 kilometriä, osan matkaa noin 3,5 kilometriä pitkässä kanjonissa. Pintaan se nousee uudelleen [[Monfalconen]] lähellä, ja siellä siitä tulee kolmannes [[Timavo-joen]] vedestä. Ois se joelta kyl hieno temppu.
+KYSYMYS: Kerro lisää: Karstin
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Škocjanin luolat (luonto · vuori)
+Tietoruudun teksti: Škocjanin luolat ovat luolajärjestelmä Slovenian Karstilla, ja UNESCO otti ne maailmanperintölistalleen vuonna 1986. Reka-joki katoaa Suuren romahdusdolinan kohdalla maan alle, virtaa noin 3,5 kilometriä pitkässä ja jopa yli 140 metriä korkeassa maanalaisessa kanjonissa ja jatkaa sitten maan alla yhteensä noin 34 kilometriä, kunnes nousee pintaan Monfalconen lähellä. Kanjonin suurin tila, Martelin sali, on tilavuudeltaan 2,2 miljoonaa kuutiometriä, ja sitä pidetään Euroopan suurimpana tunnettuna maanalaisena salina. Alueelta on löytynyt yli kymmenentuhatta vuotta vanhoja asutuksen jälkiä. Nykyaikaisen matkailun katsotaan alkaneen 1. tammikuuta 1819, kun luoliin otettiin käyttöön vieraskirja.
+AIEMPI KYSYMYS: Miksi Reka-joki katoaa Škocjanissa maan alle, ja minne se sieltä päätyy?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on kyl hieno ilmiö. Reka virtaa [[Karstin]] kalkkikivialueella, jossa vesi liuottaa kiveä vähitellen, ja siksi alueella on paljon luolia ja kuiluja. Joki syöksyy Suureen [[romahdusdolinaan]] ja katoaa kallion alle, ja maan alla se virtaa yhteensä noin 34 kilometriä, osan matkaa noin 3,5 kilometriä pitkässä kanjonissa. Pintaan se nousee uudelleen [[Monfalconen]] lähellä, ja siellä siitä tulee kolmannes [[Timavo-joen]] vedestä. Ois se joelta kyl hieno temppu.
+KYSYMYS: Kerro lisää: romahdusdolinaan
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Škocjanin luolat (luonto · vuori)
+Tietoruudun teksti: Škocjanin luolat ovat luolajärjestelmä Slovenian Karstilla, ja UNESCO otti ne maailmanperintölistalleen vuonna 1986. Reka-joki katoaa Suuren romahdusdolinan kohdalla maan alle, virtaa noin 3,5 kilometriä pitkässä ja jopa yli 140 metriä korkeassa maanalaisessa kanjonissa ja jatkaa sitten maan alla yhteensä noin 34 kilometriä, kunnes nousee pintaan Monfalconen lähellä. Kanjonin suurin tila, Martelin sali, on tilavuudeltaan 2,2 miljoonaa kuutiometriä, ja sitä pidetään Euroopan suurimpana tunnettuna maanalaisena salina. Alueelta on löytynyt yli kymmenentuhatta vuotta vanhoja asutuksen jälkiä. Nykyaikaisen matkailun katsotaan alkaneen 1. tammikuuta 1819, kun luoliin otettiin käyttöön vieraskirja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Joki joka katoaa maan alle] 1884 — Škocjanin luolissa Reka-joki syöksyy Suureen sortumakuoppaan ja katoaa kallion alle. Maan alla se virtaa 34 kilometriä ja nousee taas pintaan Monfalconen lähellä, jossa siitä tulee kolmannes Timavo-joen vedestä. Luolaston tutkittu pituus on 6 200 metriä, ja 2,2 miljoonan kuutiometrin Martelin sali on Euroopan suurin tunnettu maanalainen sali. Järjestelmällinen tutkimus alkoi vuonna 1884, ja Unesco merkitsi luolat maailmanperintökohteeksi vuonna 1986. Alueelta on löytynyt merkkejä ihmisasutuksesta yli kymmenentuhannen vuoden ajalta.
+AIEMPI KYSYMYS: Miksi Reka-joki katoaa Škocjanissa maan alle, ja minne se sieltä päätyy?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on kyl hieno ilmiö. Reka virtaa [[Karstin]] kalkkikivialueella, jossa vesi liuottaa kiveä vähitellen, ja siksi alueella on paljon luolia ja kuiluja. Joki syöksyy Suureen [[romahdusdolinaan]] ja katoaa kallion alle, ja maan alla se virtaa yhteensä noin 34 kilometriä, osan matkaa noin 3,5 kilometriä pitkässä kanjonissa. Pintaan se nousee uudelleen [[Monfalconen]] lähellä, ja siellä siitä tulee kolmannes [[Timavo-joen]] vedestä. Ois se joelta kyl hieno temppu.
+KYSYMYS: Kerro lisää: Monfalconen
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Škocjanin luolat (luonto · vuori)
+Tietoruudun teksti: Škocjanin luolat ovat luolajärjestelmä Slovenian Karstilla, ja UNESCO otti ne maailmanperintölistalleen vuonna 1986. Reka-joki katoaa Suuren romahdusdolinan kohdalla maan alle, virtaa noin 3,5 kilometriä pitkässä ja jopa yli 140 metriä korkeassa maanalaisessa kanjonissa ja jatkaa sitten maan alla yhteensä noin 34 kilometriä, kunnes nousee pintaan Monfalconen lähellä. Kanjonin suurin tila, Martelin sali, on tilavuudeltaan 2,2 miljoonaa kuutiometriä, ja sitä pidetään Euroopan suurimpana tunnettuna maanalaisena salina. Alueelta on löytynyt yli kymmenentuhatta vuotta vanhoja asutuksen jälkiä. Nykyaikaisen matkailun katsotaan alkaneen 1. tammikuuta 1819, kun luoliin otettiin käyttöön vieraskirja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Joki joka katoaa maan alle] 1884 — Škocjanin luolissa Reka-joki syöksyy Suureen sortumakuoppaan ja katoaa kallion alle. Maan alla se virtaa 34 kilometriä ja nousee taas pintaan Monfalconen lähellä, jossa siitä tulee kolmannes Timavo-joen vedestä. Luolaston tutkittu pituus on 6 200 metriä, ja 2,2 miljoonan kuutiometrin Martelin sali on Euroopan suurin tunnettu maanalainen sali. Järjestelmällinen tutkimus alkoi vuonna 1884, ja Unesco merkitsi luolat maailmanperintökohteeksi vuonna 1986. Alueelta on löytynyt merkkejä ihmisasutuksesta yli kymmenentuhannen vuoden ajalta.
+AIEMPI KYSYMYS: Miksi Reka-joki katoaa Škocjanissa maan alle, ja minne se sieltä päätyy?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on kyl hieno ilmiö. Reka virtaa [[Karstin]] kalkkikivialueella, jossa vesi liuottaa kiveä vähitellen, ja siksi alueella on paljon luolia ja kuiluja. Joki syöksyy Suureen [[romahdusdolinaan]] ja katoaa kallion alle, ja maan alla se virtaa yhteensä noin 34 kilometriä, osan matkaa noin 3,5 kilometriä pitkässä kanjonissa. Pintaan se nousee uudelleen [[Monfalconen]] lähellä, ja siellä siitä tulee kolmannes [[Timavo-joen]] vedestä. Ois se joelta kyl hieno temppu.
+KYSYMYS: Kerro lisää: Timavo-joen
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Škocjanin luolat (luonto · vuori)
+Tietoruudun teksti: Škocjanin luolat ovat luolajärjestelmä Slovenian Karstilla, ja UNESCO otti ne maailmanperintölistalleen vuonna 1986. Reka-joki katoaa Suuren romahdusdolinan kohdalla maan alle, virtaa noin 3,5 kilometriä pitkässä ja jopa yli 140 metriä korkeassa maanalaisessa kanjonissa ja jatkaa sitten maan alla yhteensä noin 34 kilometriä, kunnes nousee pintaan Monfalconen lähellä. Kanjonin suurin tila, Martelin sali, on tilavuudeltaan 2,2 miljoonaa kuutiometriä, ja sitä pidetään Euroopan suurimpana tunnettuna maanalaisena salina. Alueelta on löytynyt yli kymmenentuhatta vuotta vanhoja asutuksen jälkiä. Nykyaikaisen matkailun katsotaan alkaneen 1. tammikuuta 1819, kun luoliin otettiin käyttöön vieraskirja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Joki joka katoaa maan alle] 1884 — Škocjanin luolissa Reka-joki syöksyy Suureen sortumakuoppaan ja katoaa kallion alle. Maan alla se virtaa 34 kilometriä ja nousee taas pintaan Monfalconen lähellä, jossa siitä tulee kolmannes Timavo-joen vedestä. Luolaston tutkittu pituus on 6 200 metriä, ja 2,2 miljoonan kuutiometrin Martelin sali on Euroopan suurin tunnettu maanalainen sali. Järjestelmällinen tutkimus alkoi vuonna 1884, ja Unesco merkitsi luolat maailmanperintökohteeksi vuonna 1986. Alueelta on löytynyt merkkejä ihmisasutuksesta yli kymmenentuhannen vuoden ajalta.
+AIEMPI KYSYMYS: Mikä tekee Martelin salista niin poikkeuksellisen?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tähän tarvitaan lukuja. Martelin sali on [[Škocjanin luolien]] maanalaisen kanjonin suurin tila, ja sen tilavuus on 2,2 miljoonaa kuutiometriä. Sitä pidetään Euroopan suurimpana tunnettuna maanalaisena salina. Kanjoni, jota pitkin [[Reka-joki]] virtaa, on noin 3,5 kilometriä pitkä ja jopa yli 140 metriä korkea, joten sali on osa poikkeuksellisen suurimittaista kokonaisuutta. Luolat ovat myös [[Unescon]] maailmanperintökohde vuodesta 1986.
+
+Kyyhkynä minä arvostan taivasta, mutta täytyy myöntää, että tuollaiseen saliin mahtuisi koko sukuni parvi. Pimeässä en kuitenkaan erottaisi edes pullan väriä.
+KYSYMYS: Kerro lisää: Škocjanin luolien
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Škocjanin luolat (luonto · vuori)
+Tietoruudun teksti: Škocjanin luolat ovat luolajärjestelmä Slovenian Karstilla, ja UNESCO otti ne maailmanperintölistalleen vuonna 1986. Reka-joki katoaa Suuren romahdusdolinan kohdalla maan alle, virtaa noin 3,5 kilometriä pitkässä ja jopa yli 140 metriä korkeassa maanalaisessa kanjonissa ja jatkaa sitten maan alla yhteensä noin 34 kilometriä, kunnes nousee pintaan Monfalconen lähellä. Kanjonin suurin tila, Martelin sali, on tilavuudeltaan 2,2 miljoonaa kuutiometriä, ja sitä pidetään Euroopan suurimpana tunnettuna maanalaisena salina. Alueelta on löytynyt yli kymmenentuhatta vuotta vanhoja asutuksen jälkiä. Nykyaikaisen matkailun katsotaan alkaneen 1. tammikuuta 1819, kun luoliin otettiin käyttöön vieraskirja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Joki joka katoaa maan alle] 1884 — Škocjanin luolissa Reka-joki syöksyy Suureen sortumakuoppaan ja katoaa kallion alle. Maan alla se virtaa 34 kilometriä ja nousee taas pintaan Monfalconen lähellä, jossa siitä tulee kolmannes Timavo-joen vedestä. Luolaston tutkittu pituus on 6 200 metriä, ja 2,2 miljoonan kuutiometrin Martelin sali on Euroopan suurin tunnettu maanalainen sali. Järjestelmällinen tutkimus alkoi vuonna 1884, ja Unesco merkitsi luolat maailmanperintökohteeksi vuonna 1986. Alueelta on löytynyt merkkejä ihmisasutuksesta yli kymmenentuhannen vuoden ajalta.
+AIEMPI KYSYMYS: Mikä tekee Martelin salista niin poikkeuksellisen?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tähän tarvitaan lukuja. Martelin sali on [[Škocjanin luolien]] maanalaisen kanjonin suurin tila, ja sen tilavuus on 2,2 miljoonaa kuutiometriä. Sitä pidetään Euroopan suurimpana tunnettuna maanalaisena salina. Kanjoni, jota pitkin [[Reka-joki]] virtaa, on noin 3,5 kilometriä pitkä ja jopa yli 140 metriä korkea, joten sali on osa poikkeuksellisen suurimittaista kokonaisuutta. Luolat ovat myös [[Unescon]] maailmanperintökohde vuodesta 1986.
+
+Kyyhkynä minä arvostan taivasta, mutta täytyy myöntää, että tuollaiseen saliin mahtuisi koko sukuni parvi. Pimeässä en kuitenkaan erottaisi edes pullan väriä.
+KYSYMYS: Kerro lisää: Reka-joki
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Škocjanin luolat (luonto · vuori)
+Tietoruudun teksti: Škocjanin luolat ovat luolajärjestelmä Slovenian Karstilla, ja UNESCO otti ne maailmanperintölistalleen vuonna 1986. Reka-joki katoaa Suuren romahdusdolinan kohdalla maan alle, virtaa noin 3,5 kilometriä pitkässä ja jopa yli 140 metriä korkeassa maanalaisessa kanjonissa ja jatkaa sitten maan alla yhteensä noin 34 kilometriä, kunnes nousee pintaan Monfalconen lähellä. Kanjonin suurin tila, Martelin sali, on tilavuudeltaan 2,2 miljoonaa kuutiometriä, ja sitä pidetään Euroopan suurimpana tunnettuna maanalaisena salina. Alueelta on löytynyt yli kymmenentuhatta vuotta vanhoja asutuksen jälkiä. Nykyaikaisen matkailun katsotaan alkaneen 1. tammikuuta 1819, kun luoliin otettiin käyttöön vieraskirja.
+AIEMPI KYSYMYS: Mikä tekee Martelin salista niin poikkeuksellisen?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tähän tarvitaan lukuja. Martelin sali on [[Škocjanin luolien]] maanalaisen kanjonin suurin tila, ja sen tilavuus on 2,2 miljoonaa kuutiometriä. Sitä pidetään Euroopan suurimpana tunnettuna maanalaisena salina. Kanjoni, jota pitkin [[Reka-joki]] virtaa, on noin 3,5 kilometriä pitkä ja jopa yli 140 metriä korkea, joten sali on osa poikkeuksellisen suurimittaista kokonaisuutta. Luolat ovat myös [[Unescon]] maailmanperintökohde vuodesta 1986.
+
+Kyyhkynä minä arvostan taivasta, mutta täytyy myöntää, että tuollaiseen saliin mahtuisi koko sukuni parvi. Pimeässä en kuitenkaan erottaisi edes pullan väriä.
+KYSYMYS: Kerro lisää: Unescon
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Škocjanin luolat (luonto · vuori)
+Tietoruudun teksti: Škocjanin luolat ovat luolajärjestelmä Slovenian Karstilla, ja UNESCO otti ne maailmanperintölistalleen vuonna 1986. Reka-joki katoaa Suuren romahdusdolinan kohdalla maan alle, virtaa noin 3,5 kilometriä pitkässä ja jopa yli 140 metriä korkeassa maanalaisessa kanjonissa ja jatkaa sitten maan alla yhteensä noin 34 kilometriä, kunnes nousee pintaan Monfalconen lähellä. Kanjonin suurin tila, Martelin sali, on tilavuudeltaan 2,2 miljoonaa kuutiometriä, ja sitä pidetään Euroopan suurimpana tunnettuna maanalaisena salina. Alueelta on löytynyt yli kymmenentuhatta vuotta vanhoja asutuksen jälkiä. Nykyaikaisen matkailun katsotaan alkaneen 1. tammikuuta 1819, kun luoliin otettiin käyttöön vieraskirja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Joki joka katoaa maan alle] 1884 — Škocjanin luolissa Reka-joki syöksyy Suureen sortumakuoppaan ja katoaa kallion alle. Maan alla se virtaa 34 kilometriä ja nousee taas pintaan Monfalconen lähellä, jossa siitä tulee kolmannes Timavo-joen vedestä. Luolaston tutkittu pituus on 6 200 metriä, ja 2,2 miljoonan kuutiometrin Martelin sali on Euroopan suurin tunnettu maanalainen sali. Järjestelmällinen tutkimus alkoi vuonna 1884, ja Unesco merkitsi luolat maailmanperintökohteeksi vuonna 1986. Alueelta on löytynyt merkkejä ihmisasutuksesta yli kymmenentuhannen vuoden ajalta.
+AIEMPI KYSYMYS: Millaisia jälkiä ihmisistä on löytynyt Škocjanin luolien alueelta?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Škocjanin luolien]] alueelta on löytynyt merkkejä [[ihmisasutuksesta]] yli kymmenentuhannen vuoden ajalta, joten [[Karstin]] seutu on ollut ihmisille tärkeä hyvin pitkään. Tarkkoja löytöjä en osaa luetella. Luolia alettiin tutkia järjestelmällisesti vuonna 1884, ja nykyaikaisen matkailun katsotaan alkaneen sen jälkeen vieraskirjan käyttöönotosta. Aika iso luku, siinä vaiheessa meidän suku ei ees kirjeitä kantanut.
+KYSYMYS: Kerro lisää: ihmisasutuksesta
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Škocjanin luolat (luonto · vuori)
+Tietoruudun teksti: Škocjanin luolat ovat luolajärjestelmä Slovenian Karstilla, ja UNESCO otti ne maailmanperintölistalleen vuonna 1986. Reka-joki katoaa Suuren romahdusdolinan kohdalla maan alle, virtaa noin 3,5 kilometriä pitkässä ja jopa yli 140 metriä korkeassa maanalaisessa kanjonissa ja jatkaa sitten maan alla yhteensä noin 34 kilometriä, kunnes nousee pintaan Monfalconen lähellä. Kanjonin suurin tila, Martelin sali, on tilavuudeltaan 2,2 miljoonaa kuutiometriä, ja sitä pidetään Euroopan suurimpana tunnettuna maanalaisena salina. Alueelta on löytynyt yli kymmenentuhatta vuotta vanhoja asutuksen jälkiä. Nykyaikaisen matkailun katsotaan alkaneen 1. tammikuuta 1819, kun luoliin otettiin käyttöön vieraskirja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Fès — kohdekartta / Kohdekartta: Saffarinin medresa] 1271 Tämä on marinidien ensimmäinen medresa. Sulttaani Abu Ya'qub Yusuf rakennutti sen vuonna 1271, ja sen jälkeen dynastia rakensi niitä kuusi lisää vuoteen 1357 mennessä. Medresa seisoo Saffarinin aukiolla, joka on nimetty siellä työskentelevien kuparaseppien mukaan — aukiolla takominen kuuluu yhä, ja isot padat seisovat rivissä kadulla. Medresa oli laitoksena uusi tulokas. Se syntyi Koillis-Iranissa 1000-luvun alkuun mennessä ja levisi vähitellen länteen, mutta Marokossa se juurtui vasta marinidien aikana. Syy oli osin opillinen: edellisen dynastian oppi oli medresalle vieras. Marinideille medresat olivat myös politiikkaa. Niillä ostettiin Fèsin vaikutusvaltaisen ja itsepäisen uskonnolli…
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Milloin Škocjanin luolista tuli matkailukohde?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Škocjanin luolien nykyaikaisen matkailun katsotaan alkaneen 1. tammikuuta 1819, kun luoliin otettiin käyttöön [[vieraskirja]]. Se on sama vuosisadan alku, jolloin monia luonnonnähtävyyksiä alettiin esitellä kävijöille. Myöhemmin [[Unesco]] otti luolat maailmanperintölistalleen vuonna 1986, ja nykyisin ne ovat tunnettu kohde Slovenian [[Karstilla]]. Minä olisin kirjoittanut siihen vain: kävi kyyhky.
+KYSYMYS: Kerro lisää: vieraskirja
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Škocjanin luolat (luonto · vuori)
+Tietoruudun teksti: Škocjanin luolat ovat luolajärjestelmä Slovenian Karstilla, ja UNESCO otti ne maailmanperintölistalleen vuonna 1986. Reka-joki katoaa Suuren romahdusdolinan kohdalla maan alle, virtaa noin 3,5 kilometriä pitkässä ja jopa yli 140 metriä korkeassa maanalaisessa kanjonissa ja jatkaa sitten maan alla yhteensä noin 34 kilometriä, kunnes nousee pintaan Monfalconen lähellä. Kanjonin suurin tila, Martelin sali, on tilavuudeltaan 2,2 miljoonaa kuutiometriä, ja sitä pidetään Euroopan suurimpana tunnettuna maanalaisena salina. Alueelta on löytynyt yli kymmenentuhatta vuotta vanhoja asutuksen jälkiä. Nykyaikaisen matkailun katsotaan alkaneen 1. tammikuuta 1819, kun luoliin otettiin käyttöön vieraskirja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Milloin Škocjanin luolista tuli matkailukohde?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Škocjanin luolien nykyaikaisen matkailun katsotaan alkaneen 1. tammikuuta 1819, kun luoliin otettiin käyttöön [[vieraskirja]]. Se on sama vuosisadan alku, jolloin monia luonnonnähtävyyksiä alettiin esitellä kävijöille. Myöhemmin [[Unesco]] otti luolat maailmanperintölistalleen vuonna 1986, ja nykyisin ne ovat tunnettu kohde Slovenian [[Karstilla]]. Minä olisin kirjoittanut siihen vain: kävi kyyhky.
+KYSYMYS: Kerro lisää: Unesco
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Škocjanin luolat (luonto · vuori)
+Tietoruudun teksti: Škocjanin luolat ovat luolajärjestelmä Slovenian Karstilla, ja UNESCO otti ne maailmanperintölistalleen vuonna 1986. Reka-joki katoaa Suuren romahdusdolinan kohdalla maan alle, virtaa noin 3,5 kilometriä pitkässä ja jopa yli 140 metriä korkeassa maanalaisessa kanjonissa ja jatkaa sitten maan alla yhteensä noin 34 kilometriä, kunnes nousee pintaan Monfalconen lähellä. Kanjonin suurin tila, Martelin sali, on tilavuudeltaan 2,2 miljoonaa kuutiometriä, ja sitä pidetään Euroopan suurimpana tunnettuna maanalaisena salina. Alueelta on löytynyt yli kymmenentuhatta vuotta vanhoja asutuksen jälkiä. Nykyaikaisen matkailun katsotaan alkaneen 1. tammikuuta 1819, kun luoliin otettiin käyttöön vieraskirja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Järvi joka katoaa kesäksi] 1689 — Kun Cerknican järvi on täynnä, se on Slovenian suurin järvi, mutta kesällä sen vesi valuu maan alle, ja pohjaan kasvaa vehreä kasvillisuus. Syksyn sateiden jälkeen vesi nousee takaisin luolista niin nopeasti, että järvi voi tulvia ympäristöönsä. Joskus se on ollut kuivana yli vuoden, kuten vuosina 1834–35, ja kalat katoavat ja palaavat veden mukana. Vuonna 1689 Johann Weikhard von Valvasor kuvasi järveä ja toi karst-sanan eurooppalaisten tutkijoiden käyttöön kuvaamaan jokien maanalaista virtausta. Järvi on tärkeä lintualue, ja sen pinta-ala vaihtelee 28 ja 38 neliökilometrin välillä.
+AIEMPI KYSYMYS: Milloin Škocjanin luolista tuli matkailukohde?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Škocjanin luolien nykyaikaisen matkailun katsotaan alkaneen 1. tammikuuta 1819, kun luoliin otettiin käyttöön [[vieraskirja]]. Se on sama vuosisadan alku, jolloin monia luonnonnähtävyyksiä alettiin esitellä kävijöille. Myöhemmin [[Unesco]] otti luolat maailmanperintölistalleen vuonna 1986, ja nykyisin ne ovat tunnettu kohde Slovenian [[Karstilla]]. Minä olisin kirjoittanut siihen vain: kävi kyyhky.
+KYSYMYS: Kerro lisää: Karstilla
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Škocjanin luolat (luonto · vuori)
+Tietoruudun teksti: Škocjanin luolat ovat luolajärjestelmä Slovenian Karstilla, ja UNESCO otti ne maailmanperintölistalleen vuonna 1986. Reka-joki katoaa Suuren romahdusdolinan kohdalla maan alle, virtaa noin 3,5 kilometriä pitkässä ja jopa yli 140 metriä korkeassa maanalaisessa kanjonissa ja jatkaa sitten maan alla yhteensä noin 34 kilometriä, kunnes nousee pintaan Monfalconen lähellä. Kanjonin suurin tila, Martelin sali, on tilavuudeltaan 2,2 miljoonaa kuutiometriä, ja sitä pidetään Euroopan suurimpana tunnettuna maanalaisena salina. Alueelta on löytynyt yli kymmenentuhatta vuotta vanhoja asutuksen jälkiä. Nykyaikaisen matkailun katsotaan alkaneen 1. tammikuuta 1819, kun luoliin otettiin käyttöön vieraskirja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bermuda — kaupunkilehti / Cahow, riutat ja luolat: Kalkkikivestä syntyneet luolat] Bermudan saaret ovat pohjimmiltaan vanhaa merenpohjan hiekkaa, joka on vuosituhansien saatossa kovettunut kalkkikiveksi. Sadevesi on liuottanut kiveen onkaloita, joiden sisään on hitaasti kasvanut tippukiviä: kattoa kohti riippuvia stalaktiitteja ja lattiasta kohoavia stalagmiitteja. Tunnetuimman luolaston, Crystal Cavesin, löysivät sattumalta kaksi poikaa 1907, kun heidän krikettipallonsa vierähti koloon ja paljasti allaan avautuvan luolan. Luolan pohjalla on kirkasvetinen suolainen järvi, jonka pinta nousee ja laskee meren vuoroveden tahdissa maan alla kulkevia rakoja pitkin – todiste siitä, että luolat ovat yhteydessä ympäröivään mereen.
+AIEMPI KYSYMYS: Mikä on karsti ja miksi siellä on niin paljon luolia?
+AIEMPI VASTAUS (Livia):
+Ai tota. Karsti on alue, jolla kallioperä koostuu helposti liukenevasta kivestä, yleensä [[kalkkikivestä]], ja sadevesi liuottaa sitä halkeamia pitkin. Vähitellen kiveen syntyy onkaloita, kuiluja ja pyöreitä kuoppia eli [[dolineja]], ja pintavedet katoavat maan alle. Siksi karstialueilla on usein luolia ja jokia, jotka virtaavat osan matkaa maan alla. Tietääkseni nimitys juontuu [[Karstin]] alueesta Slovenian ja Italian rajaseudulla, jossa myös [[Škocjanin luolat]] sijaitsevat. Tää meni melkein koulutunnista, kyl.
+KYSYMYS: Kerro lisää: kalkkikivestä
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Škocjanin luolat (luonto · vuori)
+Tietoruudun teksti: Škocjanin luolat ovat luolajärjestelmä Slovenian Karstilla, ja UNESCO otti ne maailmanperintölistalleen vuonna 1986. Reka-joki katoaa Suuren romahdusdolinan kohdalla maan alle, virtaa noin 3,5 kilometriä pitkässä ja jopa yli 140 metriä korkeassa maanalaisessa kanjonissa ja jatkaa sitten maan alla yhteensä noin 34 kilometriä, kunnes nousee pintaan Monfalconen lähellä. Kanjonin suurin tila, Martelin sali, on tilavuudeltaan 2,2 miljoonaa kuutiometriä, ja sitä pidetään Euroopan suurimpana tunnettuna maanalaisena salina. Alueelta on löytynyt yli kymmenentuhatta vuotta vanhoja asutuksen jälkiä. Nykyaikaisen matkailun katsotaan alkaneen 1. tammikuuta 1819, kun luoliin otettiin käyttöön vieraskirja.
+AIEMPI KYSYMYS: Mikä on karsti ja miksi siellä on niin paljon luolia?
+AIEMPI VASTAUS (Livia):
+Ai tota. Karsti on alue, jolla kallioperä koostuu helposti liukenevasta kivestä, yleensä [[kalkkikivestä]], ja sadevesi liuottaa sitä halkeamia pitkin. Vähitellen kiveen syntyy onkaloita, kuiluja ja pyöreitä kuoppia eli [[dolineja]], ja pintavedet katoavat maan alle. Siksi karstialueilla on usein luolia ja jokia, jotka virtaavat osan matkaa maan alla. Tietääkseni nimitys juontuu [[Karstin]] alueesta Slovenian ja Italian rajaseudulla, jossa myös [[Škocjanin luolat]] sijaitsevat. Tää meni melkein koulutunnista, kyl.
+KYSYMYS: Kerro lisää: dolineja
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Škocjanin luolat (luonto · vuori)
+Tietoruudun teksti: Škocjanin luolat ovat luolajärjestelmä Slovenian Karstilla, ja UNESCO otti ne maailmanperintölistalleen vuonna 1986. Reka-joki katoaa Suuren romahdusdolinan kohdalla maan alle, virtaa noin 3,5 kilometriä pitkässä ja jopa yli 140 metriä korkeassa maanalaisessa kanjonissa ja jatkaa sitten maan alla yhteensä noin 34 kilometriä, kunnes nousee pintaan Monfalconen lähellä. Kanjonin suurin tila, Martelin sali, on tilavuudeltaan 2,2 miljoonaa kuutiometriä, ja sitä pidetään Euroopan suurimpana tunnettuna maanalaisena salina. Alueelta on löytynyt yli kymmenentuhatta vuotta vanhoja asutuksen jälkiä. Nykyaikaisen matkailun katsotaan alkaneen 1. tammikuuta 1819, kun luoliin otettiin käyttöön vieraskirja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Joki joka katoaa maan alle] 1884 — Škocjanin luolissa Reka-joki syöksyy Suureen sortumakuoppaan ja katoaa kallion alle. Maan alla se virtaa 34 kilometriä ja nousee taas pintaan Monfalconen lähellä, jossa siitä tulee kolmannes Timavo-joen vedestä. Luolaston tutkittu pituus on 6 200 metriä, ja 2,2 miljoonan kuutiometrin Martelin sali on Euroopan suurin tunnettu maanalainen sali. Järjestelmällinen tutkimus alkoi vuonna 1884, ja Unesco merkitsi luolat maailmanperintökohteeksi vuonna 1986. Alueelta on löytynyt merkkejä ihmisasutuksesta yli kymmenentuhannen vuoden ajalta.
+AIEMPI KYSYMYS: Mikä on karsti ja miksi siellä on niin paljon luolia?
+AIEMPI VASTAUS (Livia):
+Ai tota. Karsti on alue, jolla kallioperä koostuu helposti liukenevasta kivestä, yleensä [[kalkkikivestä]], ja sadevesi liuottaa sitä halkeamia pitkin. Vähitellen kiveen syntyy onkaloita, kuiluja ja pyöreitä kuoppia eli [[dolineja]], ja pintavedet katoavat maan alle. Siksi karstialueilla on usein luolia ja jokia, jotka virtaavat osan matkaa maan alla. Tietääkseni nimitys juontuu [[Karstin]] alueesta Slovenian ja Italian rajaseudulla, jossa myös [[Škocjanin luolat]] sijaitsevat. Tää meni melkein koulutunnista, kyl.
+KYSYMYS: Kerro lisää: Škocjanin luolat
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Postojnan luola (luonto · vuori)
+Tietoruudun teksti: Postojnan luola on Pivka-joen kaivertama karstiluolasto Lounais-Sloveniassa, ja sen pituus on yli 24 kilometriä. Luolan sisällä on graffiti vuodelta 1213, ja Johann Weikhard von Valvasor kuvasi sen 1600-luvulla. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja silloin paikallinen lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan. Luolasta tuli virallisesti matkailukohde vuonna 1819, ja Čeč toimi sen ensimmäisenä oppaana. Vuonna 1872 luolaan asennettiin kiskot ja ensimmäinen matkailijoiden luolajuna, jota oppaat aluksi työnsivät itse. Sähkövalot luolaan tulivat vuonna 1884, ennen kuin Krainin pääkaupunki Ljubljana sai omansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Sähkövalo luolassa ennen pääkaupunkia] 1884 — Postojnan luola on 24,3 kilometrin mittainen karstiluola, jonka Pivka-joki on kaivertanut. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan luolaa. Hänestä tuli luolan ensimmäinen virallinen opas. Vuonna 1872 luolaan laskettiin raiteet, ja aluksi oppaat työnsivät vieraita vaunuissa. Sähkövalo saatiin luolaan 1884, ennen kuin Ljubljanassa oli sellaista. Luolassa on myös maailman ensimmäinen ja ainoa maanalainen postitoimisto, joka avattiin vuonna 1899.
+AIEMPI KYSYMYS: Miksi Postojnan luolasta tuli matkailukohde jo 1800-luvun alussa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tähän liittyy keisari. Postojnan luola on [[Pivka-joen]] kaivertama karstiluolasto, ja sen pituus on yli 24 kilometriä, joten nähtävää riitti. Vuonna 1818 luolaa valmisteltiin keisari [[Frans I:n]] vierailua varten, ja silloin paikallinen lamppujen sytyttäjä [[Luka Čeč]] löysi sattumalta uuden osan. Luola avattiin virallisesti matkailukohteeksi vuonna 1819, ja Čeč toimi sen ensimmäisenä oppaana. Luola oli ollut tunnettu jo aiemmin, sillä [[Johann Weikhard von Valvasor]] oli kuvannut sen 1600-luvulla. Kyl keisarin vierailut osas silloin tuoda kiirettä.
+KYSYMYS: Kerro lisää: Pivka-joen
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Postojnan luola (luonto · vuori)
+Tietoruudun teksti: Postojnan luola on Pivka-joen kaivertama karstiluolasto Lounais-Sloveniassa, ja sen pituus on yli 24 kilometriä. Luolan sisällä on graffiti vuodelta 1213, ja Johann Weikhard von Valvasor kuvasi sen 1600-luvulla. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja silloin paikallinen lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan. Luolasta tuli virallisesti matkailukohde vuonna 1819, ja Čeč toimi sen ensimmäisenä oppaana. Vuonna 1872 luolaan asennettiin kiskot ja ensimmäinen matkailijoiden luolajuna, jota oppaat aluksi työnsivät itse. Sähkövalot luolaan tulivat vuonna 1884, ennen kuin Krainin pääkaupunki Ljubljana sai omansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Rakennukset: Lohikäärmeet keisarin kunniaksi] 1901 — Ljubljanan Lohikäärmesilta avattiin liikenteelle 4. lokakuuta 1901, ja alun perin sen nimi oli Keisari Frans Joosefin juhlasilta. Sen oli määrä juhlistaa keisarin nelikymmenvuotista hallitusta. Silta korvasi vuonna 1819 rakennetun tammisillan, jonka maanjäristys vaurioitti vuonna 1895. Se oli Ljubljanan ensimmäinen betonisilta ja Melan-menetelmällä tehty, ja avattaessa sen kaari oli Euroopan kolmanneksi suurin. Lohikäärmepatsaat suunnitteli arkkitehti Giorgio Zaninović ja ne valmistettiin Wienissä. Nykyisen nimensä silta sai heinäkuussa 1919, ja sitä pidetään usein Wienin secession kauneimpana siltana.
+- [Slovenia — maalehti / Tiede: Sähkövalo luolassa ennen pääkaupunkia] 1884 — Postojnan luola on 24,3 kilometrin mittainen karstiluola, jonka Pivka-joki on kaivertanut. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan luolaa. Hänestä tuli luolan ensimmäinen virallinen opas. Vuonna 1872 luolaan laskettiin raiteet, ja aluksi oppaat työnsivät vieraita vaunuissa. Sähkövalo saatiin luolaan 1884, ennen kuin Ljubljanassa oli sellaista. Luolassa on myös maailman ensimmäinen ja ainoa maanalainen postitoimisto, joka avattiin vuonna 1899.
+AIEMPI KYSYMYS: Miksi Postojnan luolasta tuli matkailukohde jo 1800-luvun alussa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tähän liittyy keisari. Postojnan luola on [[Pivka-joen]] kaivertama karstiluolasto, ja sen pituus on yli 24 kilometriä, joten nähtävää riitti. Vuonna 1818 luolaa valmisteltiin keisari [[Frans I:n]] vierailua varten, ja silloin paikallinen lamppujen sytyttäjä [[Luka Čeč]] löysi sattumalta uuden osan. Luola avattiin virallisesti matkailukohteeksi vuonna 1819, ja Čeč toimi sen ensimmäisenä oppaana. Luola oli ollut tunnettu jo aiemmin, sillä [[Johann Weikhard von Valvasor]] oli kuvannut sen 1600-luvulla. Kyl keisarin vierailut osas silloin tuoda kiirettä.
+KYSYMYS: Kerro lisää: Frans I:n
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Postojnan luola (luonto · vuori)
+Tietoruudun teksti: Postojnan luola on Pivka-joen kaivertama karstiluolasto Lounais-Sloveniassa, ja sen pituus on yli 24 kilometriä. Luolan sisällä on graffiti vuodelta 1213, ja Johann Weikhard von Valvasor kuvasi sen 1600-luvulla. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja silloin paikallinen lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan. Luolasta tuli virallisesti matkailukohde vuonna 1819, ja Čeč toimi sen ensimmäisenä oppaana. Vuonna 1872 luolaan asennettiin kiskot ja ensimmäinen matkailijoiden luolajuna, jota oppaat aluksi työnsivät itse. Sähkövalot luolaan tulivat vuonna 1884, ennen kuin Krainin pääkaupunki Ljubljana sai omansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Sähkövalo luolassa ennen pääkaupunkia] 1884 — Postojnan luola on 24,3 kilometrin mittainen karstiluola, jonka Pivka-joki on kaivertanut. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan luolaa. Hänestä tuli luolan ensimmäinen virallinen opas. Vuonna 1872 luolaan laskettiin raiteet, ja aluksi oppaat työnsivät vieraita vaunuissa. Sähkövalo saatiin luolaan 1884, ennen kuin Ljubljanassa oli sellaista. Luolassa on myös maailman ensimmäinen ja ainoa maanalainen postitoimisto, joka avattiin vuonna 1899.
+AIEMPI KYSYMYS: Miksi Postojnan luolasta tuli matkailukohde jo 1800-luvun alussa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tähän liittyy keisari. Postojnan luola on [[Pivka-joen]] kaivertama karstiluolasto, ja sen pituus on yli 24 kilometriä, joten nähtävää riitti. Vuonna 1818 luolaa valmisteltiin keisari [[Frans I:n]] vierailua varten, ja silloin paikallinen lamppujen sytyttäjä [[Luka Čeč]] löysi sattumalta uuden osan. Luola avattiin virallisesti matkailukohteeksi vuonna 1819, ja Čeč toimi sen ensimmäisenä oppaana. Luola oli ollut tunnettu jo aiemmin, sillä [[Johann Weikhard von Valvasor]] oli kuvannut sen 1600-luvulla. Kyl keisarin vierailut osas silloin tuoda kiirettä.
+KYSYMYS: Kerro lisää: Luka Čeč
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Postojnan luola (luonto · vuori)
+Tietoruudun teksti: Postojnan luola on Pivka-joen kaivertama karstiluolasto Lounais-Sloveniassa, ja sen pituus on yli 24 kilometriä. Luolan sisällä on graffiti vuodelta 1213, ja Johann Weikhard von Valvasor kuvasi sen 1600-luvulla. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja silloin paikallinen lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan. Luolasta tuli virallisesti matkailukohde vuonna 1819, ja Čeč toimi sen ensimmäisenä oppaana. Vuonna 1872 luolaan asennettiin kiskot ja ensimmäinen matkailijoiden luolajuna, jota oppaat aluksi työnsivät itse. Sähkövalot luolaan tulivat vuonna 1884, ennen kuin Krainin pääkaupunki Ljubljana sai omansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Luolalohikäärmeen poikanen] 1689 — Olmi eli luolasalamanteri on sokea, valkoinen ja koko elämänsä pimeässä uiva eläin. Ensimmäisen kerran sen mainitsi kirjassaan Johann Weikhard von Valvasor vuonna 1689. Sateiden jälkeen olmeja huuhtoutui maan alta pintaan, ja paikalliset uskoivat niiden olevan luolalohikäärmeen poikasia. Olmin silmät ovat surkastuneet, mutta haju ja kuulo toimivat erinomaisesti. Se voi elää jopa kymmenen vuotta ilman ruokaa, ja sen enimmäiseliniäksi on arvioitu yli sata vuotta. Sloveniassa sitä kutsutaan ihmiskalaksi, koska sen iho on ihmisen ihon värinen. Postojnan luolassa olmeja voi nähdä erityisessä akvaariossa.
+- [Slovenia — maalehti / Tiede: Järvi joka katoaa kesäksi] 1689 — Kun Cerknican järvi on täynnä, se on Slovenian suurin järvi, mutta kesällä sen vesi valuu maan alle, ja pohjaan kasvaa vehreä kasvillisuus. Syksyn sateiden jälkeen vesi nousee takaisin luolista niin nopeasti, että järvi voi tulvia ympäristöönsä. Joskus se on ollut kuivana yli vuoden, kuten vuosina 1834–35, ja kalat katoavat ja palaavat veden mukana. Vuonna 1689 Johann Weikhard von Valvasor kuvasi järveä ja toi karst-sanan eurooppalaisten tutkijoiden käyttöön kuvaamaan jokien maanalaista virtausta. Järvi on tärkeä lintualue, ja sen pinta-ala vaihtelee 28 ja 38 neliökilometrin välillä.
+AIEMPI KYSYMYS: Miksi Postojnan luolasta tuli matkailukohde jo 1800-luvun alussa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tähän liittyy keisari. Postojnan luola on [[Pivka-joen]] kaivertama karstiluolasto, ja sen pituus on yli 24 kilometriä, joten nähtävää riitti. Vuonna 1818 luolaa valmisteltiin keisari [[Frans I:n]] vierailua varten, ja silloin paikallinen lamppujen sytyttäjä [[Luka Čeč]] löysi sattumalta uuden osan. Luola avattiin virallisesti matkailukohteeksi vuonna 1819, ja Čeč toimi sen ensimmäisenä oppaana. Luola oli ollut tunnettu jo aiemmin, sillä [[Johann Weikhard von Valvasor]] oli kuvannut sen 1600-luvulla. Kyl keisarin vierailut osas silloin tuoda kiirettä.
+KYSYMYS: Kerro lisää: Johann Weikhard von Valvasor
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Postojnan luola (luonto · vuori)
+Tietoruudun teksti: Postojnan luola on Pivka-joen kaivertama karstiluolasto Lounais-Sloveniassa, ja sen pituus on yli 24 kilometriä. Luolan sisällä on graffiti vuodelta 1213, ja Johann Weikhard von Valvasor kuvasi sen 1600-luvulla. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja silloin paikallinen lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan. Luolasta tuli virallisesti matkailukohde vuonna 1819, ja Čeč toimi sen ensimmäisenä oppaana. Vuonna 1872 luolaan asennettiin kiskot ja ensimmäinen matkailijoiden luolajuna, jota oppaat aluksi työnsivät itse. Sähkövalot luolaan tulivat vuonna 1884, ennen kuin Krainin pääkaupunki Ljubljana sai omansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiina — maalehti / Historia: Luola muurattiin umpeen tuhanneksi vuodeksi] 366 — Mogaon luolat on hakattu jyrkänteeseen 25 kilometriä Dunhuangin keidaskaupungista kaakkoon, keskelle Silkkitien risteystä. Ensimmäinen luola kaivettiin vuonna 366 mietiskelypaikaksi, ja työ jatkui 1300-luvulle asti: luolatemppeleitä on noin viisisataa ja maalauksia tuhannen vuoden ajalta. Vuonna 1900 löytyi luola, joka oli muurattu umpeen 1000-luvulla. Sen sisältä tuli esiin valtava määrä kirjakääröjä ja asiakirjoja. Kokoelma hajosi ympäri maailmaa, ja suurimmat osat ovat nyt Pekingissä, Lontoossa, Pariisissa ja Berliinissä.
+- [Slovakia — maalehti / Luonto: Luola, jonka läpi virtasi Styx] 1926 — Domican luola Etelä-Slovakiassa löytyi vuonna 1926, kun Ján Majko osoitti, että useat paikalliset luolat kuuluvat samaan verkostoon. Luolan käytävät on muovannut maanalainen joki nimeltä Styx, ja seinillä on tippukivilampia sekä lepakoiden ulosteesta syntyneitä kuoria. Jo neoliittiset ihmiset asuivat täällä, ja kaivauksissa on löydetty asumusten paaluaukkoja ja tulisijoja. Yleisölle on avattu 1600 metriä vuodesta 1932. Luola on osa Aggtelekin ja Slovakian karstin luolastoa, joka sai Unescon maailmanperintöstatuksen 1995.
+- [Kiova — kaupunkilehti / Historia: Luola, josta kasvoi luostari] Vuonna 1051 munkki Antonius asettui Athos-vuorelta palattuaan Dnipro-joen rantatörmään kaivettuun luolaan. Hänen askeettinen elämänsä veti puoleensa seuraajia, ja pian luolaan kokoontui pieni munkkiyhteisö. Kolmas johtaja, Teodosios, järjesti yhteisölle omat säännöt ja rakennutti ensimmäiset maanpäälliset rakennukset luolien yläpuolelle. Nimi Petšerska tulee sanasta petšera, luola — ja koko luostarikompleksi kantaa sitä nimeä yhä.
+AIEMPI KYSYMYS: Miten luolassa kuljettiin 1800-luvulla, kun sähkövaloja ei vielä ollut?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tähän on vastaus. Ennen sähkövaloja luolassa kuljettiin pääosin jalan lamppujen valossa, minkä vuoksi luolassa tarvittiin lamppujen sytyttäjiä, kuten [[Luka Čeč]]. Vuonna 1872 luolaan asennettiin kiskot ja otettiin käyttöön ensimmäinen matkailijoiden [[luolajuna]], jota oppaat aluksi työnsivät itse. Sähkövalo saatiin luolaan vuonna 1884, ennen kuin [[Ljubljanassa]] oli sellaista. Työntäminen kuulostaa kyl raskaalta, minä lentäisin.
+KYSYMYS: Kerro lisää: luolajuna
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Postojnan luola (luonto · vuori)
+Tietoruudun teksti: Postojnan luola on Pivka-joen kaivertama karstiluolasto Lounais-Sloveniassa, ja sen pituus on yli 24 kilometriä. Luolan sisällä on graffiti vuodelta 1213, ja Johann Weikhard von Valvasor kuvasi sen 1600-luvulla. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja silloin paikallinen lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan. Luolasta tuli virallisesti matkailukohde vuonna 1819, ja Čeč toimi sen ensimmäisenä oppaana. Vuonna 1872 luolaan asennettiin kiskot ja ensimmäinen matkailijoiden luolajuna, jota oppaat aluksi työnsivät itse. Sähkövalot luolaan tulivat vuonna 1884, ennen kuin Krainin pääkaupunki Ljubljana sai omansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Sähkövalo luolassa ennen pääkaupunkia] 1884 — Postojnan luola on 24,3 kilometrin mittainen karstiluola, jonka Pivka-joki on kaivertanut. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan luolaa. Hänestä tuli luolan ensimmäinen virallinen opas. Vuonna 1872 luolaan laskettiin raiteet, ja aluksi oppaat työnsivät vieraita vaunuissa. Sähkövalo saatiin luolaan 1884, ennen kuin Ljubljanassa oli sellaista. Luolassa on myös maailman ensimmäinen ja ainoa maanalainen postitoimisto, joka avattiin vuonna 1899.
+AIEMPI KYSYMYS: Miten luolassa kuljettiin 1800-luvulla, kun sähkövaloja ei vielä ollut?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tähän on vastaus. Ennen sähkövaloja luolassa kuljettiin pääosin jalan lamppujen valossa, minkä vuoksi luolassa tarvittiin lamppujen sytyttäjiä, kuten [[Luka Čeč]]. Vuonna 1872 luolaan asennettiin kiskot ja otettiin käyttöön ensimmäinen matkailijoiden [[luolajuna]], jota oppaat aluksi työnsivät itse. Sähkövalo saatiin luolaan vuonna 1884, ennen kuin [[Ljubljanassa]] oli sellaista. Työntäminen kuulostaa kyl raskaalta, minä lentäisin.
+KYSYMYS: Kerro lisää: Ljubljanassa
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Postojnan luola (luonto · vuori)
+Tietoruudun teksti: Postojnan luola on Pivka-joen kaivertama karstiluolasto Lounais-Sloveniassa, ja sen pituus on yli 24 kilometriä. Luolan sisällä on graffiti vuodelta 1213, ja Johann Weikhard von Valvasor kuvasi sen 1600-luvulla. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja silloin paikallinen lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan. Luolasta tuli virallisesti matkailukohde vuonna 1819, ja Čeč toimi sen ensimmäisenä oppaana. Vuonna 1872 luolaan asennettiin kiskot ja ensimmäinen matkailijoiden luolajuna, jota oppaat aluksi työnsivät itse. Sähkövalot luolaan tulivat vuonna 1884, ennen kuin Krainin pääkaupunki Ljubljana sai omansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Sähkövalo luolassa ennen pääkaupunkia] 1884 — Postojnan luola on 24,3 kilometrin mittainen karstiluola, jonka Pivka-joki on kaivertanut. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan luolaa. Hänestä tuli luolan ensimmäinen virallinen opas. Vuonna 1872 luolaan laskettiin raiteet, ja aluksi oppaat työnsivät vieraita vaunuissa. Sähkövalo saatiin luolaan 1884, ennen kuin Ljubljanassa oli sellaista. Luolassa on myös maailman ensimmäinen ja ainoa maanalainen postitoimisto, joka avattiin vuonna 1899.
+AIEMPI KYSYMYS: Miten Postojnan luola on syntynyt?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Postojnan luolan on kaivertanut [[Pivka-joki]] Lounais-Slovenian karstialueelle, ja siitä on syntynyt yli 24 kilometrin mittainen luolasto. [[Kalkkikivi]] liukenee pitkän ajan kuluessa veteen, joten vesi laajentaa halkeamia käytäviksi ja saleiksi. Tarkkoja vuosimääriä luolaston synnylle en ole varma muistamaan, joten en nimeä niitä. Luolan sisällä on graffiti vuodelta 1213, joten käytävillä on kuljettu jo keskiajalla. Joki on kyl kärsivällinen kaivaja.
+KYSYMYS: Kerro lisää: Pivka-joki
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Postojnan luola (luonto · vuori)
+Tietoruudun teksti: Postojnan luola on Pivka-joen kaivertama karstiluolasto Lounais-Sloveniassa, ja sen pituus on yli 24 kilometriä. Luolan sisällä on graffiti vuodelta 1213, ja Johann Weikhard von Valvasor kuvasi sen 1600-luvulla. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja silloin paikallinen lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan. Luolasta tuli virallisesti matkailukohde vuonna 1819, ja Čeč toimi sen ensimmäisenä oppaana. Vuonna 1872 luolaan asennettiin kiskot ja ensimmäinen matkailijoiden luolajuna, jota oppaat aluksi työnsivät itse. Sähkövalot luolaan tulivat vuonna 1884, ennen kuin Krainin pääkaupunki Ljubljana sai omansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — maalehti / Ruoka: Keitto, jonka värin tekee kalkkikivi] Achu on tikarien ja ngembojen perusruoka Kamerunin luoteis- ja länsiosissa: kokojamssi ja raa'at banaanit keitetään, kuoritaan ja survotaan huhmaressa sileäksi taikinaksi, joka muotoillaan lautaselle oman kuoppansa kanssa. Kuoppaan kaadetaan keltainen keitto, joka valmistetaan erikseen palmuöljystä, mausteista ja lihaliemestä — ja kanwa- eli niki-vedestä, jossa on liuotettua kalkkikiveä. Juuri se kääntää punaisen palmuöljyn keltaiseksi ja antaa ruoalle sen toisen nimen, keltainen keitto. Seurana on naudanlihaa, sisäelimiä tai naudannahkaa. Luoteessa ruoka on achu, lännessä taro.
+- [Kiina — maalehti / Luonto: Kalkkikivipylväitä joen mutkissa] Li-joki kiemurtelee Guilinista Yangshuohon kalkkikiven läpi. Maisema on kuuluisaa karstia: sadetta hitaasti liuottama kalkkikivi on jättänyt jäljelle kymmenien metrien korkuisia jyrkkäseinäisiä kukkuloita, jotka nousevat tasangolta yksi kerrallaan. Muoto syntyy siitä, että vesi syövyttää kiveä ennen kaikkea rakojen kohdalta, ja väliin jää liukenematonta kiveä. Kiinalaiset maisemamaalarit ovat piirtäneet näitä kukkuloita vuosisatoja, ja monessa maalauksessa väitetty liioittelu onkin lähempänä totuutta kuin luulisi.
+- [Nullarbor — kaupunkilehti / Kalkkikivitasanko elää maan alla] Nullarborin tasainen pinta kätkee alleen toisen maailman: kauan sitten merenpohjasta noussut kalkkikivi on täynnä luolia, pystykuiluja ja käytäviä, joissa muinaiset ihmiset ja aavikon eläimet ovat molemmat oppineet elämään.
+AIEMPI KYSYMYS: Miten Postojnan luola on syntynyt?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Postojnan luolan on kaivertanut [[Pivka-joki]] Lounais-Slovenian karstialueelle, ja siitä on syntynyt yli 24 kilometrin mittainen luolasto. [[Kalkkikivi]] liukenee pitkän ajan kuluessa veteen, joten vesi laajentaa halkeamia käytäviksi ja saleiksi. Tarkkoja vuosimääriä luolaston synnylle en ole varma muistamaan, joten en nimeä niitä. Luolan sisällä on graffiti vuodelta 1213, joten käytävillä on kuljettu jo keskiajalla. Joki on kyl kärsivällinen kaivaja.
+KYSYMYS: Kerro lisää: Kalkkikivi
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Postojnan luola (luonto · vuori)
+Tietoruudun teksti: Postojnan luola on Pivka-joen kaivertama karstiluolasto Lounais-Sloveniassa, ja sen pituus on yli 24 kilometriä. Luolan sisällä on graffiti vuodelta 1213, ja Johann Weikhard von Valvasor kuvasi sen 1600-luvulla. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja silloin paikallinen lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan. Luolasta tuli virallisesti matkailukohde vuonna 1819, ja Čeč toimi sen ensimmäisenä oppaana. Vuonna 1872 luolaan asennettiin kiskot ja ensimmäinen matkailijoiden luolajuna, jota oppaat aluksi työnsivät itse. Sähkövalot luolaan tulivat vuonna 1884, ennen kuin Krainin pääkaupunki Ljubljana sai omansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Sähkövalo luolassa ennen pääkaupunkia] 1884 — Postojnan luola on 24,3 kilometrin mittainen karstiluola, jonka Pivka-joki on kaivertanut. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan luolaa. Hänestä tuli luolan ensimmäinen virallinen opas. Vuonna 1872 luolaan laskettiin raiteet, ja aluksi oppaat työnsivät vieraita vaunuissa. Sähkövalo saatiin luolaan 1884, ennen kuin Ljubljanassa oli sellaista. Luolassa on myös maailman ensimmäinen ja ainoa maanalainen postitoimisto, joka avattiin vuonna 1899.
+AIEMPI KYSYMYS: Millainen postitoimisto Postojnan luolassa on?
+AIEMPI VASTAUS (Livia):
+No jopas. Postojnan luolassa on [[postitoimisto]], joka avattiin vuonna 1899, ja sitä on kutsuttu maailman ainoaksi maanalaiseksi postitoimistoksi. En ole varma, miten toimisto nykyisin toimii, joten sen tilanne kannattaa tarkistaa ajantasaisesta lähteestä. Luola oli muutenkin edistyksellinen: sinne laskettiin raiteet vuonna 1872 ja [[sähkövalo]] saatiin vuonna 1884.
+
+Maanalainen postitoimisto on minun sukuni mielestä aika erikoinen paikka. Kirje, joka kulkee kyyhkyn sijaan kallion kautta, tuntuu melkein loukkaukselta.
+KYSYMYS: Kerro lisää: postitoimisto
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Postojnan luola (luonto · vuori)
+Tietoruudun teksti: Postojnan luola on Pivka-joen kaivertama karstiluolasto Lounais-Sloveniassa, ja sen pituus on yli 24 kilometriä. Luolan sisällä on graffiti vuodelta 1213, ja Johann Weikhard von Valvasor kuvasi sen 1600-luvulla. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja silloin paikallinen lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan. Luolasta tuli virallisesti matkailukohde vuonna 1819, ja Čeč toimi sen ensimmäisenä oppaana. Vuonna 1872 luolaan asennettiin kiskot ja ensimmäinen matkailijoiden luolajuna, jota oppaat aluksi työnsivät itse. Sähkövalot luolaan tulivat vuonna 1884, ennen kuin Krainin pääkaupunki Ljubljana sai omansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Sähkövalo luolassa ennen pääkaupunkia] 1884 — Postojnan luola on 24,3 kilometrin mittainen karstiluola, jonka Pivka-joki on kaivertanut. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan luolaa. Hänestä tuli luolan ensimmäinen virallinen opas. Vuonna 1872 luolaan laskettiin raiteet, ja aluksi oppaat työnsivät vieraita vaunuissa. Sähkövalo saatiin luolaan 1884, ennen kuin Ljubljanassa oli sellaista. Luolassa on myös maailman ensimmäinen ja ainoa maanalainen postitoimisto, joka avattiin vuonna 1899.
+AIEMPI KYSYMYS: Millainen postitoimisto Postojnan luolassa on?
+AIEMPI VASTAUS (Livia):
+No jopas. Postojnan luolassa on [[postitoimisto]], joka avattiin vuonna 1899, ja sitä on kutsuttu maailman ainoaksi maanalaiseksi postitoimistoksi. En ole varma, miten toimisto nykyisin toimii, joten sen tilanne kannattaa tarkistaa ajantasaisesta lähteestä. Luola oli muutenkin edistyksellinen: sinne laskettiin raiteet vuonna 1872 ja [[sähkövalo]] saatiin vuonna 1884.
+
+Maanalainen postitoimisto on minun sukuni mielestä aika erikoinen paikka. Kirje, joka kulkee kyyhkyn sijaan kallion kautta, tuntuu melkein loukkaukselta.
+KYSYMYS: Kerro lisää: sähkövalo
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Postojnan luola (luonto · vuori)
+Tietoruudun teksti: Postojnan luola on Pivka-joen kaivertama karstiluolasto Lounais-Sloveniassa, ja sen pituus on yli 24 kilometriä. Luolan sisällä on graffiti vuodelta 1213, ja Johann Weikhard von Valvasor kuvasi sen 1600-luvulla. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja silloin paikallinen lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan. Luolasta tuli virallisesti matkailukohde vuonna 1819, ja Čeč toimi sen ensimmäisenä oppaana. Vuonna 1872 luolaan asennettiin kiskot ja ensimmäinen matkailijoiden luolajuna, jota oppaat aluksi työnsivät itse. Sähkövalot luolaan tulivat vuonna 1884, ennen kuin Krainin pääkaupunki Ljubljana sai omansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Makkara, jonka ainekset on säädetty tarkasti] 1912 — Kranjska klobasa eli Carniolan makkara on sloveenialainen esikeitetty makkara, joka muistuttaa puolalaista kielbasaa. Nimi tulee Krainin (sloveeniksi Kranjska) historiallisesta herttuakunnasta, ja sloveeninkielinen nimi mainitaan ensi kerran F. Kalinšekin keittokirjassa 1912. Makkarassa on vähintään 75–80 % sianlihaa ja enintään 20 % pekonia, ja mausteiksi sallitaan vain merisuola, valkosipulia, salpietaria ja mustapippuria. Makkarat liitetään pareiksi puutikulla ja kuumasavustetaan. Tammikuussa 2015 Slovenia sai sille EU:n suojatun maantieteellisen merkinnän (PGI), vaikka Itävalta, Kroatia ja Saksa vastustivat.
+- [Slovenia — maalehti / Ruoka: Harmaa mehiläinen Krainista] nykyään — Kranjska čebela eli Carniolan mehiläinen (Apis mellifera carnica) on läntisen mehiläisen alalaji, jonka kotiseutu on Slovenia ja jonka nimi viittaa Krainin alueeseen. Sen ruskeanharmaan värin vuoksi sitä kutsutaan myös harmaaksi mehiläiseksi. Se on hyvin lempeä, joten sitä voi pitää asutuksen lähellä, ja se on maailman toiseksi suosituin tarhamehiläinen italianmehiläisen jälkeen. EU:n suojaamiin ruokatuotteisiin kuuluu myös slovenialainen hunaja.
+AIEMPI KYSYMYS: Kuka oli Johann Weikhard von Valvasor?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Johann Weikhard von Valvasor oli krainilainen oppinut, joka kuvasi [[Krainin herttuakunnan]] maata ja luontoa 1600-luvulla. Hän kuvasi myös [[Postojnan luolan]], ja hänen kuvauksensa kuuluu luolan varhaisiin kuvauksiin. Elämänvaiheiden yksityiskohdista en ole varma, mutta hänen laaja teoksensa Krainista julkaistiin muistini mukaan 1600-luvun lopulla. Tiedon kantajana minä tunnen kollegan.
+KYSYMYS: Kerro lisää: Krainin herttuakunnan
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Postojnan luola (luonto · vuori)
+Tietoruudun teksti: Postojnan luola on Pivka-joen kaivertama karstiluolasto Lounais-Sloveniassa, ja sen pituus on yli 24 kilometriä. Luolan sisällä on graffiti vuodelta 1213, ja Johann Weikhard von Valvasor kuvasi sen 1600-luvulla. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja silloin paikallinen lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan. Luolasta tuli virallisesti matkailukohde vuonna 1819, ja Čeč toimi sen ensimmäisenä oppaana. Vuonna 1872 luolaan asennettiin kiskot ja ensimmäinen matkailijoiden luolajuna, jota oppaat aluksi työnsivät itse. Sähkövalot luolaan tulivat vuonna 1884, ennen kuin Krainin pääkaupunki Ljubljana sai omansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Sähkövalo luolassa ennen pääkaupunkia] 1884 — Postojnan luola on 24,3 kilometrin mittainen karstiluola, jonka Pivka-joki on kaivertanut. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan luolaa. Hänestä tuli luolan ensimmäinen virallinen opas. Vuonna 1872 luolaan laskettiin raiteet, ja aluksi oppaat työnsivät vieraita vaunuissa. Sähkövalo saatiin luolaan 1884, ennen kuin Ljubljanassa oli sellaista. Luolassa on myös maailman ensimmäinen ja ainoa maanalainen postitoimisto, joka avattiin vuonna 1899.
+AIEMPI KYSYMYS: Kuka oli Johann Weikhard von Valvasor?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Johann Weikhard von Valvasor oli krainilainen oppinut, joka kuvasi [[Krainin herttuakunnan]] maata ja luontoa 1600-luvulla. Hän kuvasi myös [[Postojnan luolan]], ja hänen kuvauksensa kuuluu luolan varhaisiin kuvauksiin. Elämänvaiheiden yksityiskohdista en ole varma, mutta hänen laaja teoksensa Krainista julkaistiin muistini mukaan 1600-luvun lopulla. Tiedon kantajana minä tunnen kollegan.
+KYSYMYS: Kerro lisää: Postojnan luolan
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ptuj (historia)
+Tietoruudun teksti: Ptuj on Slovenian vanhimmaksi kirjattu kaupunki Steiermarkin alueella Draava-joen rannalla. Se kehittyi roomalaisesta sotilasleiristä nimeltä Poetovio, joka sijaitsi tärkeällä joenylityspaikalla muinaisella kauppareitillä Itämereltä Adrianmerelle. Vuonna 69 Tonavan legioonat julistivat Ptujissa Vespasianuksen keisariksi, ja kaupungissa oli noin 40 000 asukasta, kunnes hunnit ryöstivät sen vuonna 450. Keskiajalla kaupunki kuului Salzburgin arkkipiispalle, ja saksaksi sitä kutsuttiin Pettauksi. Joka kevät kaupungissa vietetään kymmenpäiväistä Kurentovanjea, jossa lampaantaljoihin ja kelloihin pukeutuneet kurentit kiertävät katuja karkottamassa talvea ja pahoja henkiä.
+AIEMPI KYSYMYS: Miksi Ptujia sanotaan Slovenian vanhimmaksi kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ptuj on kirjattu Slovenian vanhimmaksi kaupungiksi, ja sen juuret ovat roomalaisessa sotilasleirissä nimeltä [[Poetovio]]. Leiri sijaitsi tärkeällä joenylityspaikalla [[Draava-joen]] rannalla muinaisella kauppareitillä Itämereltä Adrianmerelle. Vuonna 69 Tonavan legioonat julistivat Ptujissa [[Vespasianuksen]] keisariksi. Hunnit ryöstivät kaupungin lähteiden mukaan vuonna 450, ja keskiajalla se kuului [[Salzburgin]] arkkipiispalle. Viisas Pöllö kertois tämän latinaksikin, mutta hän lupasi palata jo Roomasta.
+KYSYMYS: Kerro lisää: Poetovio

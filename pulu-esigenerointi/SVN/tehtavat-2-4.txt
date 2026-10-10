@@ -1,0 +1,1030 @@
+### 241
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Idrija (tekniikka)
+Tietoruudun teksti: Idrija on Länsi-Slovenian kaupunki Idrijca-joen laaksossa, joka tunnetaan elohopeakaivoksestaan. Legendan mukaan saavinvalmistaja huomasi lähteessä pisaran nestemäistä elohopeaa vuonna 1490. Idrija on yksi harvoista paikoista maailmassa, missä elohopeaa esiintyy sekä puhtaana että sinooperina eli elohopeasulfidimalmina. Kaivos ja sen rakennukset, kuten kaivostyöläisten asuinalueet ja kaivosteatteri, kuuluvat vuodesta 2012 UNESCOn maailmanperintöön yhdessä espanjalaisen Almadénin kanssa. Kaupunki on tunnettu myös idrijalaisesta nyplätystä pitsistä, joka on suojattu maantieteellisellä merkinnällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Saavin pohjalla kimalsi elohopea] 1490 — Legendan mukaan saavinvalmistaja huomasi vuonna 1490 Idrijan lähteessä kimaltavan nestemäisen metallin. Se oli elohopeaa, ja löytö teki pienestä vuoristokylästä tärkeän kaivoskaupungin. Habsburgien aikana Idrijan elohopea kuljetettiin muun muassa Espanjan valtakunnan hopeakaivoksille, joissa sitä tarvittiin hopean irrottamiseen malmista. Kaivos ulottui lopulta lähes 400 metrin syvyyteen. Kuvan ristikkotorni on Frančiškan kuilun nostotorni, ja sen huipulla risteävät vasarat, kaivosmiesten vanha tunnus. Vuonna 2012 Idrija liitettiin yhdessä espanjalaisen Almadénin kanssa Unescon maailmanperintölistalle.
+AIEMPI KYSYMYS: Miksi Idrijan kaivos suljettiin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Idrijan elohopeakaivoksen tuotanto päättyi 1990-luvulla, mutta en ole varma tarkasta vuodesta. Syinä mainitaan yleensä malmivarojen ehtyminen ja [[elohopean]] käytön väheneminen, koska aineen terveys- ja ympäristöhaitat tunnetaan. Kaivoksen sulkemisen jälkeen kohdetta on kunnostettu, ja se on nykyään osa [[UNESCOn]] maailmanperintöä. Kaivos nukkuu, mutta minä lentelen vielä.
+KYSYMYS: Kerro lisää: elohopean
+
+### 242
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Idrija (tekniikka)
+Tietoruudun teksti: Idrija on Länsi-Slovenian kaupunki Idrijca-joen laaksossa, joka tunnetaan elohopeakaivoksestaan. Legendan mukaan saavinvalmistaja huomasi lähteessä pisaran nestemäistä elohopeaa vuonna 1490. Idrija on yksi harvoista paikoista maailmassa, missä elohopeaa esiintyy sekä puhtaana että sinooperina eli elohopeasulfidimalmina. Kaivos ja sen rakennukset, kuten kaivostyöläisten asuinalueet ja kaivosteatteri, kuuluvat vuodesta 2012 UNESCOn maailmanperintöön yhdessä espanjalaisen Almadénin kanssa. Kaupunki on tunnettu myös idrijalaisesta nyplätystä pitsistä, joka on suojattu maantieteellisellä merkinnällä.
+AIEMPI KYSYMYS: Miksi Idrijan kaivos suljettiin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Idrijan elohopeakaivoksen tuotanto päättyi 1990-luvulla, mutta en ole varma tarkasta vuodesta. Syinä mainitaan yleensä malmivarojen ehtyminen ja [[elohopean]] käytön väheneminen, koska aineen terveys- ja ympäristöhaitat tunnetaan. Kaivoksen sulkemisen jälkeen kohdetta on kunnostettu, ja se on nykyään osa [[UNESCOn]] maailmanperintöä. Kaivos nukkuu, mutta minä lentelen vielä.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 243
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trbovlje (tekniikka)
+Tietoruudun teksti: Trbovlje on Slovenian Steiermarkin historiallisessa maakunnassa sijaitseva kaivoskaupunki, joka tunnetaan pitkästä hiilenlouhinnan historiastaan. Louhinta alkoi Bukova goran rinteellä kaupungin eteläpuolella vuonna 1804, ja vuonna 1849 kaupunki liitettiin Itävallan Etelärataan. Sen jälkeen 1800-luvun aikana Trbovljeen rakennettiin muun muassa sementtitehdas, sahalaitos ja voimalaitos. Paikallisen legendan mukaan kaivoksissa temppuili Perkmandeljc-niminen tonttu, joka varasti kaivosmiesten eväät. Nykyään Trbovljen voimalaitoksella on Euroopan unionin korkein savupiippu, 360 metriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+- [Kapkaupunki — kaupunkilehti / Kapkaupunki: Bo-Kaap ja kieli, joka kirjoitettiin oikealta] Jan de Waal alkoi 1763 rakentaa Signal Hillin juurelle pieniä vuokrataloja, huurhuisjeja. Alueelle muutti kaakkoisaasialaisia muslimikäsityöläisiä, ja ensimmäinen moskeija avattiin 1794. Vuoden 1834 vapautumisen jälkeen taloja rakennettiin lisää. Korttelissa on Etelä-Afrikan suurin ennen vuotta 1850 rakennetun arkkitehtuurin keskittymä. Talojen kirkkaita värejä selitetään vapauden merkiksi, koska vuokralla ollessa ne oli maalattava valkoisiksi — mutta tapa maalata värikkäästi näyttää yleistyneen vasta 1900-luvun lopulla. Korttelin madrasoissa syntyi 1830-luvulla arabialainen afrikaans.
+AIEMPI KYSYMYS: Miksi rautatieyhteys oli 1800-luvulla niin tärkeä hiilikaivospaikkakunnalle?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä ymmärrän heti. Hiili on painavaa ja suhteellisen halpaa tavaraa, joten sen lopullisen hinnan ratkaisi pitkälti kuljetus: hevosvankkureilla vietynä pitkä matka söi suuren osan hinnasta, kun taas junalla suuri määrä pääsi liikkeelle kerralla ja kauas. Trbovljen louhinta oli alkanut vuonna 1804, ja kun kaupunki liitettiin vuonna 1849 Itävallan [[Etelärataan]], kaivoksen hiilellä oli yhtäkkiä reitti laajoille markkinoille. Raiteet toivat myös kysyntää, sillä [[höyryveturit]] ja tehtaat tarvitsivat polttoainetta, ja 1800-luvun kuluessa kaupunkiin rakennettiin muun muassa sementtitehdas, sahalaitos ja voimalaitos. Kaivos ja rautatie tukivat siis toisiaan, kun [[hiilenlouhinta]] sai varman ostajajoukon. Kiskot näyttävät ylhäältä aina vähän kuin kirjeen reitiltä.
+KYSYMYS: Kerro lisää: Etelärataan
+
+### 244
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trbovlje (tekniikka)
+Tietoruudun teksti: Trbovlje on Slovenian Steiermarkin historiallisessa maakunnassa sijaitseva kaivoskaupunki, joka tunnetaan pitkästä hiilenlouhinnan historiastaan. Louhinta alkoi Bukova goran rinteellä kaupungin eteläpuolella vuonna 1804, ja vuonna 1849 kaupunki liitettiin Itävallan Etelärataan. Sen jälkeen 1800-luvun aikana Trbovljeen rakennettiin muun muassa sementtitehdas, sahalaitos ja voimalaitos. Paikallisen legendan mukaan kaivoksissa temppuili Perkmandeljc-niminen tonttu, joka varasti kaivosmiesten eväät. Nykyään Trbovljen voimalaitoksella on Euroopan unionin korkein savupiippu, 360 metriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kaupunkilehti / Lontoo: Metron tunnelissa savusi höyryveturi] Lontoon metro avattiin 10. tammikuuta 1863 maailman ensimmäisenä maanalaisena matkustajaratana. Vaunut olivat puuta ja niitä valaistiin kaasulyhdyillä, ja maan alla junaa veti höyryveturi — savu johdettiin ulos tunneliin jätetyistä aukoista. Ensimmäisenä vuonna radalla tehtiin 9,5 miljoonaa matkaa. Nykyään asemia on 272 ja rataa 400 kilometriä. Kadun pinnassa muistuttaa yhä pronssilaatta, jonka London Transport pystytti sadan vuoden kunniaksi vuonna 1963.
+- [Lontoo — kohdekartta / Kohdekartta: Metron höyryveturi] Lontoon metro avattiin 10. tammikuuta 1863 maailman ensimmäisenä maanalaisena matkustajaratana. Vaunut olivat puuta ja niitä valaistiin kaasulyhdyillä, ja maan alla junaa veti höyryveturi — savu johdettiin ulos tunneliin jätetyistä aukoista. Ensimmäisenä vuonna radalla tehtiin 9,5 miljoonaa matkaa. Nykyään asemia on 272 ja rataa 400 kilometriä. Kadun pinnassa muistuttaa yhä pronssilaatta, jonka London Transport pystytti sadan vuoden kunniaksi vuonna 1963.
+- [Iso-Britannia — maalehti / Historia: Kilpailu, joka ratkaisi rautatien] 1829 — Kun Liverpoolin ja Manchesterin välille rakennettiin rataa, kukaan ei ollut varma, kannattaisiko vaunuja vetää veturilla vai köydellä ja paikallaan seisovalla höyrykoneella. Asia ratkaistiin kilpailulla Rainhillissä 1829. George ja Robert Stephensonin Rocket voitti: se kulki 46 kilometriä tunnissa, mikä oli silloin käsittämätön vauhti. Salaisuus oli kattilassa, jonka läpi kulki 25 kuparista putkea — mitä enemmän pintaa, sitä nopeammin vesi kiehui. Kaikki höyryveturit rakennettiin sen jälkeen samalla periaatteella.
+AIEMPI KYSYMYS: Miksi rautatieyhteys oli 1800-luvulla niin tärkeä hiilikaivospaikkakunnalle?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä ymmärrän heti. Hiili on painavaa ja suhteellisen halpaa tavaraa, joten sen lopullisen hinnan ratkaisi pitkälti kuljetus: hevosvankkureilla vietynä pitkä matka söi suuren osan hinnasta, kun taas junalla suuri määrä pääsi liikkeelle kerralla ja kauas. Trbovljen louhinta oli alkanut vuonna 1804, ja kun kaupunki liitettiin vuonna 1849 Itävallan [[Etelärataan]], kaivoksen hiilellä oli yhtäkkiä reitti laajoille markkinoille. Raiteet toivat myös kysyntää, sillä [[höyryveturit]] ja tehtaat tarvitsivat polttoainetta, ja 1800-luvun kuluessa kaupunkiin rakennettiin muun muassa sementtitehdas, sahalaitos ja voimalaitos. Kaivos ja rautatie tukivat siis toisiaan, kun [[hiilenlouhinta]] sai varman ostajajoukon. Kiskot näyttävät ylhäältä aina vähän kuin kirjeen reitiltä.
+KYSYMYS: Kerro lisää: höyryveturit
+
+### 245
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trbovlje (tekniikka)
+Tietoruudun teksti: Trbovlje on Slovenian Steiermarkin historiallisessa maakunnassa sijaitseva kaivoskaupunki, joka tunnetaan pitkästä hiilenlouhinnan historiastaan. Louhinta alkoi Bukova goran rinteellä kaupungin eteläpuolella vuonna 1804, ja vuonna 1849 kaupunki liitettiin Itävallan Etelärataan. Sen jälkeen 1800-luvun aikana Trbovljeen rakennettiin muun muassa sementtitehdas, sahalaitos ja voimalaitos. Paikallisen legendan mukaan kaivoksissa temppuili Perkmandeljc-niminen tonttu, joka varasti kaivosmiesten eväät. Nykyään Trbovljen voimalaitoksella on Euroopan unionin korkein savupiippu, 360 metriä.
+AIEMPI KYSYMYS: Miksi rautatieyhteys oli 1800-luvulla niin tärkeä hiilikaivospaikkakunnalle?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä ymmärrän heti. Hiili on painavaa ja suhteellisen halpaa tavaraa, joten sen lopullisen hinnan ratkaisi pitkälti kuljetus: hevosvankkureilla vietynä pitkä matka söi suuren osan hinnasta, kun taas junalla suuri määrä pääsi liikkeelle kerralla ja kauas. Trbovljen louhinta oli alkanut vuonna 1804, ja kun kaupunki liitettiin vuonna 1849 Itävallan [[Etelärataan]], kaivoksen hiilellä oli yhtäkkiä reitti laajoille markkinoille. Raiteet toivat myös kysyntää, sillä [[höyryveturit]] ja tehtaat tarvitsivat polttoainetta, ja 1800-luvun kuluessa kaupunkiin rakennettiin muun muassa sementtitehdas, sahalaitos ja voimalaitos. Kaivos ja rautatie tukivat siis toisiaan, kun [[hiilenlouhinta]] sai varman ostajajoukon. Kiskot näyttävät ylhäältä aina vähän kuin kirjeen reitiltä.
+KYSYMYS: Kerro lisää: hiilenlouhinta
+
+### 246
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trbovlje (tekniikka)
+Tietoruudun teksti: Trbovlje on Slovenian Steiermarkin historiallisessa maakunnassa sijaitseva kaivoskaupunki, joka tunnetaan pitkästä hiilenlouhinnan historiastaan. Louhinta alkoi Bukova goran rinteellä kaupungin eteläpuolella vuonna 1804, ja vuonna 1849 kaupunki liitettiin Itävallan Etelärataan. Sen jälkeen 1800-luvun aikana Trbovljeen rakennettiin muun muassa sementtitehdas, sahalaitos ja voimalaitos. Paikallisen legendan mukaan kaivoksissa temppuili Perkmandeljc-niminen tonttu, joka varasti kaivosmiesten eväät. Nykyään Trbovljen voimalaitoksella on Euroopan unionin korkein savupiippu, 360 metriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: Coit Tower] 1849–1934 Telegraph Hill sai nimensä 1849, kun sen laelle rakennettiin kaksikerroksinen tähystysasema. Sieltä ilmoitettiin kaupunkilaisille optisella merkinantolaitteella, mitä laivoja oli tulossa satamaan; 1853 se korvattiin sähkölennättimellä, jonka myrsky tuhosi 1870. Isoisän matkan aikaan kukkulalla oli siis yhä lennättimen nimi mutta ei enää asemaa. Paikkaa on kuvattu koko lahden ja viiden ympäröivän piirikunnan parhaaksi näköalapaikaksi. Tornin maksoi Lillie Hitchcock Coit (1843–1929). Viisitoistavuotiaana hän näki Knickerbocker Engine Co. No. 5:n palokunnan jäävän vajaamiehiseksi hälytyksessä Telegraph Hillille, heitti koulukirjansa maahan ja auttoi ruiskun mäkeen huutaen muitakin si…
+- [San Francisco — kohdekartta / Kohdekartta: Grace Cathedral] 1849–1964 Seurakunta perustettiin 1849 kultaryntäyksen vuosina. Sen kolmas kirkko rakennettiin California Streetin ja Stockton Streetin kulmaan ja vihittiin 3. toukokuuta 1868 — se on se Grace Church, jonka isoisä olisi voinut nähdä. Jäsenistöön kuului kaupungin varakkainta väkeä, muiden muassa rautatiemies Leland Stanford ja pankkiiri William Henry Crocker. Vuoden 1906 järistystä seurannut palo tuhosi kirkon, ja seurakunta sai väliaikaisen tilan 1907. Crockerin suku lahjoitti hiippakunnalle oman raunioituneen tonttinsa Nob Hillin laelta, ja peruskivi laskettiin 1910. Piirustukset teki englantilainen goottilaisen tyylin mestari George Frederick Bodley, joka kuoli 1907, ja työn saattoi loppu…
+AIEMPI KYSYMYS: Miten 360 metriä korkea savupiippu pysyy pystyssä, vaikka sen huippu heiluu tuulessa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on fysiikkaa eikä kirjeenkantoa. Tällaisen piipun ei ole tarkoituskaan olla jäykkä kuin kivipaasi: korkea [[teräsbetonista]] valettu savupiippu suunnitellaan taipumaan tuulessa hieman ja palaamaan takaisin, ja huipun liike lasketaan mukaan rakenteeseen jo suunnitteluvaiheessa. Runko on alhaalta leveä ja seinämä paksu, ylöspäin se kapenee ja keventyy, jolloin [[painopiste]] pysyy matalana ja tuulen aiheuttama kaatava voima jää rakenteen kestämäksi. Syvä perustus levittää kuorman maaperään, ja teräsvahvisteinen betoni kestää sekä puristusta että venytystä. [[Tuulikuorma]] on laskennan keskeisimpiä tekijöitä. En ole varma Trbovljen piipun omista yksityiskohdista, mutta periaate on tämä.
+
+Minä tunnen tuon heilumisen omasta takaa: kovassa tuulessa ei kannata jäykistellä vaan antaa tuulen viedä hetki ja palata sitten linjalle. Piippu ja kyyhky ovat siinä sukulaisia, vaikka kyyhky on huomattavasti kevyempi.
+KYSYMYS: Kerro lisää: teräsbetonista
+
+### 247
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trbovlje (tekniikka)
+Tietoruudun teksti: Trbovlje on Slovenian Steiermarkin historiallisessa maakunnassa sijaitseva kaivoskaupunki, joka tunnetaan pitkästä hiilenlouhinnan historiastaan. Louhinta alkoi Bukova goran rinteellä kaupungin eteläpuolella vuonna 1804, ja vuonna 1849 kaupunki liitettiin Itävallan Etelärataan. Sen jälkeen 1800-luvun aikana Trbovljeen rakennettiin muun muassa sementtitehdas, sahalaitos ja voimalaitos. Paikallisen legendan mukaan kaivoksissa temppuili Perkmandeljc-niminen tonttu, joka varasti kaivosmiesten eväät. Nykyään Trbovljen voimalaitoksella on Euroopan unionin korkein savupiippu, 360 metriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sana — kohdekartta / Kohdekartta: Talhan moskeija] 1619–1620 Qubbat Talha on yksi Sanaan vanhimmista moskeijoista, ja sen rakennutti osmanien käskynhaltija Hadji Mehmed Pasha vuosina 1619–1620 ensimmäisen osmanimiehityksen aikana. Minareetti tehtiin samaan aikaan. Vuosina 1831–1832 moskeija kunnostettiin osittain imaami al-Mahdi Abdallahin käskystä; siitä kertoo rukoussalin seinään hakattu kirjoitus. Talha on Al-Bakiriyyan pikkuveli. Se valmistui kaksikymmentäkolme vuotta myöhemmin ja lainasi osan edeltäjänsä muotokielestä, mutta jäi selvästi pienemmäksi: rukoussali on vaatimaton ja minareetti matala, ja juuri siksi rakennus istuu kapeiden kujien väliin luontevammin kuin iso esikuvansa. Kokonaisuuteen kuuluu rukoussalin ja minareetin lisäks…
+AIEMPI KYSYMYS: Miten 360 metriä korkea savupiippu pysyy pystyssä, vaikka sen huippu heiluu tuulessa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on fysiikkaa eikä kirjeenkantoa. Tällaisen piipun ei ole tarkoituskaan olla jäykkä kuin kivipaasi: korkea [[teräsbetonista]] valettu savupiippu suunnitellaan taipumaan tuulessa hieman ja palaamaan takaisin, ja huipun liike lasketaan mukaan rakenteeseen jo suunnitteluvaiheessa. Runko on alhaalta leveä ja seinämä paksu, ylöspäin se kapenee ja keventyy, jolloin [[painopiste]] pysyy matalana ja tuulen aiheuttama kaatava voima jää rakenteen kestämäksi. Syvä perustus levittää kuorman maaperään, ja teräsvahvisteinen betoni kestää sekä puristusta että venytystä. [[Tuulikuorma]] on laskennan keskeisimpiä tekijöitä. En ole varma Trbovljen piipun omista yksityiskohdista, mutta periaate on tämä.
+
+Minä tunnen tuon heilumisen omasta takaa: kovassa tuulessa ei kannata jäykistellä vaan antaa tuulen viedä hetki ja palata sitten linjalle. Piippu ja kyyhky ovat siinä sukulaisia, vaikka kyyhky on huomattavasti kevyempi.
+KYSYMYS: Kerro lisää: painopiste
+
+### 248
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trbovlje (tekniikka)
+Tietoruudun teksti: Trbovlje on Slovenian Steiermarkin historiallisessa maakunnassa sijaitseva kaivoskaupunki, joka tunnetaan pitkästä hiilenlouhinnan historiastaan. Louhinta alkoi Bukova goran rinteellä kaupungin eteläpuolella vuonna 1804, ja vuonna 1849 kaupunki liitettiin Itävallan Etelärataan. Sen jälkeen 1800-luvun aikana Trbovljeen rakennettiin muun muassa sementtitehdas, sahalaitos ja voimalaitos. Paikallisen legendan mukaan kaivoksissa temppuili Perkmandeljc-niminen tonttu, joka varasti kaivosmiesten eväät. Nykyään Trbovljen voimalaitoksella on Euroopan unionin korkein savupiippu, 360 metriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+- [Geraldton — kaupunkilehti / Geraldton: Kaupunki jota tuuli ei jätä rauhaan] Geraldtonia kutsutaan usein Australian tuulisimmaksi kaupungiksi, ja nimitys on ansaittu: iltapäivisin lokakuusta huhtikuuhun mereltä puhaltaa lähes joka päivä voimakas ja tasainen etelätuuli. Paikalliset kutsuvat sitä luotettavaksi iltatuuleksi, ja se on tehnyt kaupungista yhden Australian suosituimmista purjelautailu- ja leijalautailukohteista. Lähistön Coronation Beach on tunnettu jopa kansainvälisistä kilpailuista, joihin osallistujia saapuu ympäri maailmaa nauttimaan aalloista ja tasaisesta tuulesta. Sama tuuli, joka nykyään houkuttelee lautailijoita, oli 1800-luvulla purjelaivoille sekä siunaus että riski.
+AIEMPI KYSYMYS: Miten 360 metriä korkea savupiippu pysyy pystyssä, vaikka sen huippu heiluu tuulessa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on fysiikkaa eikä kirjeenkantoa. Tällaisen piipun ei ole tarkoituskaan olla jäykkä kuin kivipaasi: korkea [[teräsbetonista]] valettu savupiippu suunnitellaan taipumaan tuulessa hieman ja palaamaan takaisin, ja huipun liike lasketaan mukaan rakenteeseen jo suunnitteluvaiheessa. Runko on alhaalta leveä ja seinämä paksu, ylöspäin se kapenee ja keventyy, jolloin [[painopiste]] pysyy matalana ja tuulen aiheuttama kaatava voima jää rakenteen kestämäksi. Syvä perustus levittää kuorman maaperään, ja teräsvahvisteinen betoni kestää sekä puristusta että venytystä. [[Tuulikuorma]] on laskennan keskeisimpiä tekijöitä. En ole varma Trbovljen piipun omista yksityiskohdista, mutta periaate on tämä.
+
+Minä tunnen tuon heilumisen omasta takaa: kovassa tuulessa ei kannata jäykistellä vaan antaa tuulen viedä hetki ja palata sitten linjalle. Piippu ja kyyhky ovat siinä sukulaisia, vaikka kyyhky on huomattavasti kevyempi.
+KYSYMYS: Kerro lisää: Tuulikuorma
+
+### 249
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trbovlje (tekniikka)
+Tietoruudun teksti: Trbovlje on Slovenian Steiermarkin historiallisessa maakunnassa sijaitseva kaivoskaupunki, joka tunnetaan pitkästä hiilenlouhinnan historiastaan. Louhinta alkoi Bukova goran rinteellä kaupungin eteläpuolella vuonna 1804, ja vuonna 1849 kaupunki liitettiin Itävallan Etelärataan. Sen jälkeen 1800-luvun aikana Trbovljeen rakennettiin muun muassa sementtitehdas, sahalaitos ja voimalaitos. Paikallisen legendan mukaan kaivoksissa temppuili Perkmandeljc-niminen tonttu, joka varasti kaivosmiesten eväät. Nykyään Trbovljen voimalaitoksella on Euroopan unionin korkein savupiippu, 360 metriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Papua-Uusi-Guinea — maalehti / Historia: Suo, jonka pohjasta löytyi maailman vanhin puutarha] 7000 eaa. — Kukin suo on Wahgin laaksossa 1 550 metrin korkeudessa reilun kymmenen kilometrin päässä Mount Hagenista. Sen turpeesta on kaivettu esiin ojia, kuoppia, tolpanreikiä ja vesiuria, jotka ovat noin yhdeksäntuhatta vuotta vanhoja. Ojia on kolmea kokoa: suuret laskuojat, isot ja pienet sarkaojat. Niillä kuivattiin suota taarolle, joka kasvoi siellä viljelyn ylärajalla. Banaanin ja sokeriruo’on viljelystä on todisteita 6 900–6 400 vuoden takaa. Kuk on siis yksi harvoista paikoista maailmassa, joissa maanviljely keksittiin itsenäisesti, ja Unesco otti sen maailmanperintöluetteloon 2008.
+- [Norja — maalehti / Arki: Katolla kasvaa ruoho] Vuosisatoja — Vanhoissa norjalaistaloissa katto tehtiin turpeesta: ensin laudoitus, sitten kaksi kerrosta tuohta vedeneristeeksi ja päälle turvelevyt ruoho ylöspäin. Turve painaa katon tiiviisti paikalleen, eristää pakkasta ja kestää tuulta. Ruoho pitää leikata, ja siihen käytettiin ennen vuohia, jotka nostettiin katolle syömään. Tapa ei kadonnut: uusissa mökeissä ja jopa kaupunkitaloissa tehdään yhä turvekattoja, koska ne sitovat sadevettä ja pysyvät kesällä viileinä.
+- [Islanti — maalehti / Arki] Islantilainen arki pyörii kuuman veden, lampaiden ja sään ympärillä: uimala on kylän olohuone, syksyllä koko kylä lähtee vuorille, ja talot tehtiin ennen turpeesta.
+AIEMPI KYSYMYS: Mikä ero on ruskohiilellä ja kivihiilellä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ero johtuu hiilen iästä ja kypsymisasteesta: hiili muodostuu miljoonien vuosien kuluessa [[turpeesta]], ja mitä pidemmälle prosessi on edennyt, sitä kovempaa ja energiapitoisempaa aines on. Ruskohiili on nuorempaa, pehmeämpää ja kosteampaa, ja sen [[lämpöarvo]] painoa kohti on pienempi. Kivihiili on vanhempaa, tiiviimpää ja kovempaa, ja siitä saadaan enemmän energiaa samasta massasta. Koska kostea ruskohiili on kuljetettaessa raskasta ja heikkotehoista, sitä käytetään usein lähellä louhintapaikkaa, esimerkiksi [[voimalaitoksissa]]. Slovenian kaivoksissa louhitaan lähteiden mukaan pääosin ruskohiiltä, mutta en ole varma jokaisesta kaivoksesta erikseen. Kyyhkyn silmin kaikki hiili on aika samannäköistä mustaa.
+KYSYMYS: Kerro lisää: turpeesta
+
+### 250
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trbovlje (tekniikka)
+Tietoruudun teksti: Trbovlje on Slovenian Steiermarkin historiallisessa maakunnassa sijaitseva kaivoskaupunki, joka tunnetaan pitkästä hiilenlouhinnan historiastaan. Louhinta alkoi Bukova goran rinteellä kaupungin eteläpuolella vuonna 1804, ja vuonna 1849 kaupunki liitettiin Itävallan Etelärataan. Sen jälkeen 1800-luvun aikana Trbovljeen rakennettiin muun muassa sementtitehdas, sahalaitos ja voimalaitos. Paikallisen legendan mukaan kaivoksissa temppuili Perkmandeljc-niminen tonttu, joka varasti kaivosmiesten eväät. Nykyään Trbovljen voimalaitoksella on Euroopan unionin korkein savupiippu, 360 metriä.
+AIEMPI KYSYMYS: Mikä ero on ruskohiilellä ja kivihiilellä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ero johtuu hiilen iästä ja kypsymisasteesta: hiili muodostuu miljoonien vuosien kuluessa [[turpeesta]], ja mitä pidemmälle prosessi on edennyt, sitä kovempaa ja energiapitoisempaa aines on. Ruskohiili on nuorempaa, pehmeämpää ja kosteampaa, ja sen [[lämpöarvo]] painoa kohti on pienempi. Kivihiili on vanhempaa, tiiviimpää ja kovempaa, ja siitä saadaan enemmän energiaa samasta massasta. Koska kostea ruskohiili on kuljetettaessa raskasta ja heikkotehoista, sitä käytetään usein lähellä louhintapaikkaa, esimerkiksi [[voimalaitoksissa]]. Slovenian kaivoksissa louhitaan lähteiden mukaan pääosin ruskohiiltä, mutta en ole varma jokaisesta kaivoksesta erikseen. Kyyhkyn silmin kaikki hiili on aika samannäköistä mustaa.
+KYSYMYS: Kerro lisää: lämpöarvo
+
+### 251
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trbovlje (tekniikka)
+Tietoruudun teksti: Trbovlje on Slovenian Steiermarkin historiallisessa maakunnassa sijaitseva kaivoskaupunki, joka tunnetaan pitkästä hiilenlouhinnan historiastaan. Louhinta alkoi Bukova goran rinteellä kaupungin eteläpuolella vuonna 1804, ja vuonna 1849 kaupunki liitettiin Itävallan Etelärataan. Sen jälkeen 1800-luvun aikana Trbovljeen rakennettiin muun muassa sementtitehdas, sahalaitos ja voimalaitos. Paikallisen legendan mukaan kaivoksissa temppuili Perkmandeljc-niminen tonttu, joka varasti kaivosmiesten eväät. Nykyään Trbovljen voimalaitoksella on Euroopan unionin korkein savupiippu, 360 metriä.
+AIEMPI KYSYMYS: Mikä ero on ruskohiilellä ja kivihiilellä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ero johtuu hiilen iästä ja kypsymisasteesta: hiili muodostuu miljoonien vuosien kuluessa [[turpeesta]], ja mitä pidemmälle prosessi on edennyt, sitä kovempaa ja energiapitoisempaa aines on. Ruskohiili on nuorempaa, pehmeämpää ja kosteampaa, ja sen [[lämpöarvo]] painoa kohti on pienempi. Kivihiili on vanhempaa, tiiviimpää ja kovempaa, ja siitä saadaan enemmän energiaa samasta massasta. Koska kostea ruskohiili on kuljetettaessa raskasta ja heikkotehoista, sitä käytetään usein lähellä louhintapaikkaa, esimerkiksi [[voimalaitoksissa]]. Slovenian kaivoksissa louhitaan lähteiden mukaan pääosin ruskohiiltä, mutta en ole varma jokaisesta kaivoksesta erikseen. Kyyhkyn silmin kaikki hiili on aika samannäköistä mustaa.
+KYSYMYS: Kerro lisää: voimalaitoksissa
+
+### 252
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trbovlje (tekniikka)
+Tietoruudun teksti: Trbovlje on Slovenian Steiermarkin historiallisessa maakunnassa sijaitseva kaivoskaupunki, joka tunnetaan pitkästä hiilenlouhinnan historiastaan. Louhinta alkoi Bukova goran rinteellä kaupungin eteläpuolella vuonna 1804, ja vuonna 1849 kaupunki liitettiin Itävallan Etelärataan. Sen jälkeen 1800-luvun aikana Trbovljeen rakennettiin muun muassa sementtitehdas, sahalaitos ja voimalaitos. Paikallisen legendan mukaan kaivoksissa temppuili Perkmandeljc-niminen tonttu, joka varasti kaivosmiesten eväät. Nykyään Trbovljen voimalaitoksella on Euroopan unionin korkein savupiippu, 360 metriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Wienin asema] Tässä kaupungissa mitta oli kahdenlainen, ja isoisäsi olisi pitänyt siitä enemmän kuin torin väreistä. Varsovasta lounaaseen lähtevä Wienin rata avattiin 14. kesäkuuta 1845, ensin kolmenkymmenen kilometrin pätkänä, ja se ylsi Itävallan rajalle huhtikuussa 1848: kaikkiaan runsaat 327 kilometriä ja 27 asemaa. Se oli ensimmäinen rata Kongressi-Puolassa ja toinen koko keisarikunnassa. Ja se oli rakennettu eurooppalaiseen mittaan, 1 435 millimetriä kiskosta kiskoon, kun kaikilla muilla keisarikunnan radoilla mitta oli leveämpi, 1 524. Kaksi rataa, kaksi mittaa, eikä yhtäkään vaunua voinut ajaa toiselta toiselle. Pietarin rata tuli Varsovaan 1862 ja pysähtyi joen toiselle rannalle. Kierbedźin sil…
+AIEMPI KYSYMYS: Mikä on Etelärata ja minne se kulki?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvä reittikysymys. Etelärata, saksaksi Südbahn, oli Itävallan keisarikunnan tärkeimpiä rautatieyhteyksiä, ja sen pääreitti yhdisti [[Wienin]] Adrianmeren satamakaupunkiin [[Triesteen]]. Matkan varrelle jäivät muun muassa Graz, Maribor, Celje ja Ljubljana, joten rata kulki läpi nykyisen Slovenian alueen. Reitin tunnetuin tekninen kohta oli [[Semmeringin]] vuoristoylitys, jonka rakentaminen 1850-luvulla oli aikansa suuri insinöörityö. Trbovlje liitettiin rataan vuonna 1849, mutta reitin tarkkaa valmistumisvuotta en ole varma, joten sanon vain, että koko yhteys valmistui 1850-luvun kuluessa. Triestessä on varmasti oma versionsa pullasta, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Wienin
+
+### 253
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trbovlje (tekniikka)
+Tietoruudun teksti: Trbovlje on Slovenian Steiermarkin historiallisessa maakunnassa sijaitseva kaivoskaupunki, joka tunnetaan pitkästä hiilenlouhinnan historiastaan. Louhinta alkoi Bukova goran rinteellä kaupungin eteläpuolella vuonna 1804, ja vuonna 1849 kaupunki liitettiin Itävallan Etelärataan. Sen jälkeen 1800-luvun aikana Trbovljeen rakennettiin muun muassa sementtitehdas, sahalaitos ja voimalaitos. Paikallisen legendan mukaan kaivoksissa temppuili Perkmandeljc-niminen tonttu, joka varasti kaivosmiesten eväät. Nykyään Trbovljen voimalaitoksella on Euroopan unionin korkein savupiippu, 360 metriä.
+AIEMPI KYSYMYS: Mikä on Etelärata ja minne se kulki?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvä reittikysymys. Etelärata, saksaksi Südbahn, oli Itävallan keisarikunnan tärkeimpiä rautatieyhteyksiä, ja sen pääreitti yhdisti [[Wienin]] Adrianmeren satamakaupunkiin [[Triesteen]]. Matkan varrelle jäivät muun muassa Graz, Maribor, Celje ja Ljubljana, joten rata kulki läpi nykyisen Slovenian alueen. Reitin tunnetuin tekninen kohta oli [[Semmeringin]] vuoristoylitys, jonka rakentaminen 1850-luvulla oli aikansa suuri insinöörityö. Trbovlje liitettiin rataan vuonna 1849, mutta reitin tarkkaa valmistumisvuotta en ole varma, joten sanon vain, että koko yhteys valmistui 1850-luvun kuluessa. Triestessä on varmasti oma versionsa pullasta, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Triesteen
+
+### 254
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trbovlje (tekniikka)
+Tietoruudun teksti: Trbovlje on Slovenian Steiermarkin historiallisessa maakunnassa sijaitseva kaivoskaupunki, joka tunnetaan pitkästä hiilenlouhinnan historiastaan. Louhinta alkoi Bukova goran rinteellä kaupungin eteläpuolella vuonna 1804, ja vuonna 1849 kaupunki liitettiin Itävallan Etelärataan. Sen jälkeen 1800-luvun aikana Trbovljeen rakennettiin muun muassa sementtitehdas, sahalaitos ja voimalaitos. Paikallisen legendan mukaan kaivoksissa temppuili Perkmandeljc-niminen tonttu, joka varasti kaivosmiesten eväät. Nykyään Trbovljen voimalaitoksella on Euroopan unionin korkein savupiippu, 360 metriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Rata, joka kiertää vuoren kaksin verroin pidemmäksi] 1854 — Semmeringin rata avattiin vuonna 1854, ja se oli Euroopan ensimmäinen normaaliraiteinen vuoristorautatie. Carl von Ghega johdatti kiskot Gloggnitzista Mürzzuschlagiin vuoren yli. Linnuntietä päätepisteiden väli on 21 kilometriä, mutta rataa on 42, koska nousu piti kiertää loivaksi. Ylin kohta on 898 metrissä. Matkalla on 14 tunnelia, 16 viaduktia ja yli sata holvattua kivisiltaa. Moni piti hanketta mahdottomana, koska kukaan ei tiennyt, jaksaisiko veturi nousta niin jyrkkää.
+AIEMPI KYSYMYS: Mikä on Etelärata ja minne se kulki?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvä reittikysymys. Etelärata, saksaksi Südbahn, oli Itävallan keisarikunnan tärkeimpiä rautatieyhteyksiä, ja sen pääreitti yhdisti [[Wienin]] Adrianmeren satamakaupunkiin [[Triesteen]]. Matkan varrelle jäivät muun muassa Graz, Maribor, Celje ja Ljubljana, joten rata kulki läpi nykyisen Slovenian alueen. Reitin tunnetuin tekninen kohta oli [[Semmeringin]] vuoristoylitys, jonka rakentaminen 1850-luvulla oli aikansa suuri insinöörityö. Trbovlje liitettiin rataan vuonna 1849, mutta reitin tarkkaa valmistumisvuotta en ole varma, joten sanon vain, että koko yhteys valmistui 1850-luvun kuluessa. Triestessä on varmasti oma versionsa pullasta, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Semmeringin
+
+### 255
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trbovlje (tekniikka)
+Tietoruudun teksti: Trbovlje on Slovenian Steiermarkin historiallisessa maakunnassa sijaitseva kaivoskaupunki, joka tunnetaan pitkästä hiilenlouhinnan historiastaan. Louhinta alkoi Bukova goran rinteellä kaupungin eteläpuolella vuonna 1804, ja vuonna 1849 kaupunki liitettiin Itävallan Etelärataan. Sen jälkeen 1800-luvun aikana Trbovljeen rakennettiin muun muassa sementtitehdas, sahalaitos ja voimalaitos. Paikallisen legendan mukaan kaivoksissa temppuili Perkmandeljc-niminen tonttu, joka varasti kaivosmiesten eväät. Nykyään Trbovljen voimalaitoksella on Euroopan unionin korkein savupiippu, 360 metriä.
+AIEMPI KYSYMYS: Keitä ovat kaivoksen tontut ja haltijat eurooppalaisessa perinteessä?
+AIEMPI VASTAUS (Livia):
+Ai se. Paikallisen legendan mukaan Trbovljen kaivoksissa temppuili [[Perkmandeljc]]-niminen tonttu, joka varasti kaivosmiesten eväät. Tällaiset olennot ovat tuttuja eri puolilta Eurooppaa, sillä pimeässä maan alla työskentelevät ihmiset selittivät odottamattomat äänet, sortumat ja kadonneet työkalut näkymättömillä asukkailla. Saksankielisellä alueella puhutaan kaivoshengistä, joita kutsutaan muun muassa nimillä Bergmännchen ja Kobold, ja [[kobolteista]] kerrotaan, että ne sotkivat malmin: kobolttimetallin nimen sanotaan juontuvan juuri tästä uskomuksesta. Tarinat toimivat samalla muistutuksena työn vaaroista ja kaivosmiesten yhteisestä ammattikulttuurista. Minä ymmärrän kyllä sen tontun, eväät ovat vakava asia.
+KYSYMYS: Kerro lisää: Perkmandeljc
+
+### 256
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trbovlje (tekniikka)
+Tietoruudun teksti: Trbovlje on Slovenian Steiermarkin historiallisessa maakunnassa sijaitseva kaivoskaupunki, joka tunnetaan pitkästä hiilenlouhinnan historiastaan. Louhinta alkoi Bukova goran rinteellä kaupungin eteläpuolella vuonna 1804, ja vuonna 1849 kaupunki liitettiin Itävallan Etelärataan. Sen jälkeen 1800-luvun aikana Trbovljeen rakennettiin muun muassa sementtitehdas, sahalaitos ja voimalaitos. Paikallisen legendan mukaan kaivoksissa temppuili Perkmandeljc-niminen tonttu, joka varasti kaivosmiesten eväät. Nykyään Trbovljen voimalaitoksella on Euroopan unionin korkein savupiippu, 360 metriä.
+AIEMPI KYSYMYS: Keitä ovat kaivoksen tontut ja haltijat eurooppalaisessa perinteessä?
+AIEMPI VASTAUS (Livia):
+Ai se. Paikallisen legendan mukaan Trbovljen kaivoksissa temppuili [[Perkmandeljc]]-niminen tonttu, joka varasti kaivosmiesten eväät. Tällaiset olennot ovat tuttuja eri puolilta Eurooppaa, sillä pimeässä maan alla työskentelevät ihmiset selittivät odottamattomat äänet, sortumat ja kadonneet työkalut näkymättömillä asukkailla. Saksankielisellä alueella puhutaan kaivoshengistä, joita kutsutaan muun muassa nimillä Bergmännchen ja Kobold, ja [[kobolteista]] kerrotaan, että ne sotkivat malmin: kobolttimetallin nimen sanotaan juontuvan juuri tästä uskomuksesta. Tarinat toimivat samalla muistutuksena työn vaaroista ja kaivosmiesten yhteisestä ammattikulttuurista. Minä ymmärrän kyllä sen tontun, eväät ovat vakava asia.
+KYSYMYS: Kerro lisää: kobolteista
+
+### 257
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rogaška Slatina (kulttuuri)
+Tietoruudun teksti: Rogaška Slatina on Itä-Slovenian kylpyläkaupunki, joka tunnetaan parantavasta kivennäisvedestään, kylpylästään ja kristallilasistaan. Magnesiumpitoinen vesi tunnetaan nykyisin nimellä Donat Mg, ja se on vetänyt vieraita seudulle vuosisatojen ajan. Lähteen ympärille rakennettiin 1600-luvulla puuaita, ja linnanherra Peter de Curti perusti sinne majatalon vuonna 1676 ja otti lähteillä kävijöiltä maksun. Vettä pullotettiin jo silloin läheisessä lasitehtaassa tehtyihin pulloihin. Uusklassinen Tempel-paviljonki valmistui vuonna 1819, ja 1800-luvun puoliväliin mennessä kaupungista oli tullut Habsburgien monarkian eliitin muodikas kokoontumispaikka.
+AIEMPI KYSYMYS: Mitä Rogaška Slatinan nimi tarkoittaa, ja mistä ihmiset ovat tulleet hakemaan sen vettä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Nimen jälkiosa on helpompi: sana slatina tarkoittaa slaavilaisissa kielissä kivennäislähdettä tai suolaista lähdettä, joten kyse on kirjaimellisesti lähteen kaupungista. Etuosan Rogaška-sanan alkuperästä en ole varma, ja arvaaminen olisi huonompi vastaus kuin tunnustus. Lähteen ympärille rakennettiin 1600-luvulla puuaita, ja linnanherra [[Peter de Curti]] perusti sinne majatalon vuonna 1676 ja peri lähteillä kävijöiltä maksun. Vettä pullotettiin jo silloin läheisessä lasitehtaassa tehtyihin pulloihin. Uusklassinen Tempel-paviljonki valmistui vuonna 1819, ja 1800-luvun puoliväliin mennessä kaupungista oli tullut [[Habsburgien]] monarkian eliitin muodikas kokoontumispaikka, joten vieraita tuli monarkian eri osista. Nykyään vesi tunnetaan nimellä [[Donat Mg]]. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Peter de Curti
+
+### 258
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rogaška Slatina (kulttuuri)
+Tietoruudun teksti: Rogaška Slatina on Itä-Slovenian kylpyläkaupunki, joka tunnetaan parantavasta kivennäisvedestään, kylpylästään ja kristallilasistaan. Magnesiumpitoinen vesi tunnetaan nykyisin nimellä Donat Mg, ja se on vetänyt vieraita seudulle vuosisatojen ajan. Lähteen ympärille rakennettiin 1600-luvulla puuaita, ja linnanherra Peter de Curti perusti sinne majatalon vuonna 1676 ja otti lähteillä kävijöiltä maksun. Vettä pullotettiin jo silloin läheisessä lasitehtaassa tehtyihin pulloihin. Uusklassinen Tempel-paviljonki valmistui vuonna 1819, ja 1800-luvun puoliväliin mennessä kaupungista oli tullut Habsburgien monarkian eliitin muodikas kokoontumispaikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Saavin pohjalla kimalsi elohopea] 1490 — Legendan mukaan saavinvalmistaja huomasi vuonna 1490 Idrijan lähteessä kimaltavan nestemäisen metallin. Se oli elohopeaa, ja löytö teki pienestä vuoristokylästä tärkeän kaivoskaupungin. Habsburgien aikana Idrijan elohopea kuljetettiin muun muassa Espanjan valtakunnan hopeakaivoksille, joissa sitä tarvittiin hopean irrottamiseen malmista. Kaivos ulottui lopulta lähes 400 metrin syvyyteen. Kuvan ristikkotorni on Frančiškan kuilun nostotorni, ja sen huipulla risteävät vasarat, kaivosmiesten vanha tunnus. Vuonna 2012 Idrija liitettiin yhdessä espanjalaisen Almadénin kanssa Unescon maailmanperintölistalle.
+AIEMPI KYSYMYS: Mitä Rogaška Slatinan nimi tarkoittaa, ja mistä ihmiset ovat tulleet hakemaan sen vettä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Nimen jälkiosa on helpompi: sana slatina tarkoittaa slaavilaisissa kielissä kivennäislähdettä tai suolaista lähdettä, joten kyse on kirjaimellisesti lähteen kaupungista. Etuosan Rogaška-sanan alkuperästä en ole varma, ja arvaaminen olisi huonompi vastaus kuin tunnustus. Lähteen ympärille rakennettiin 1600-luvulla puuaita, ja linnanherra [[Peter de Curti]] perusti sinne majatalon vuonna 1676 ja peri lähteillä kävijöiltä maksun. Vettä pullotettiin jo silloin läheisessä lasitehtaassa tehtyihin pulloihin. Uusklassinen Tempel-paviljonki valmistui vuonna 1819, ja 1800-luvun puoliväliin mennessä kaupungista oli tullut [[Habsburgien]] monarkian eliitin muodikas kokoontumispaikka, joten vieraita tuli monarkian eri osista. Nykyään vesi tunnetaan nimellä [[Donat Mg]]. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Habsburgien
+
+### 259
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rogaška Slatina (kulttuuri)
+Tietoruudun teksti: Rogaška Slatina on Itä-Slovenian kylpyläkaupunki, joka tunnetaan parantavasta kivennäisvedestään, kylpylästään ja kristallilasistaan. Magnesiumpitoinen vesi tunnetaan nykyisin nimellä Donat Mg, ja se on vetänyt vieraita seudulle vuosisatojen ajan. Lähteen ympärille rakennettiin 1600-luvulla puuaita, ja linnanherra Peter de Curti perusti sinne majatalon vuonna 1676 ja otti lähteillä kävijöiltä maksun. Vettä pullotettiin jo silloin läheisessä lasitehtaassa tehtyihin pulloihin. Uusklassinen Tempel-paviljonki valmistui vuonna 1819, ja 1800-luvun puoliväliin mennessä kaupungista oli tullut Habsburgien monarkian eliitin muodikas kokoontumispaikka.
+AIEMPI KYSYMYS: Mitä Rogaška Slatinan nimi tarkoittaa, ja mistä ihmiset ovat tulleet hakemaan sen vettä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Nimen jälkiosa on helpompi: sana slatina tarkoittaa slaavilaisissa kielissä kivennäislähdettä tai suolaista lähdettä, joten kyse on kirjaimellisesti lähteen kaupungista. Etuosan Rogaška-sanan alkuperästä en ole varma, ja arvaaminen olisi huonompi vastaus kuin tunnustus. Lähteen ympärille rakennettiin 1600-luvulla puuaita, ja linnanherra [[Peter de Curti]] perusti sinne majatalon vuonna 1676 ja peri lähteillä kävijöiltä maksun. Vettä pullotettiin jo silloin läheisessä lasitehtaassa tehtyihin pulloihin. Uusklassinen Tempel-paviljonki valmistui vuonna 1819, ja 1800-luvun puoliväliin mennessä kaupungista oli tullut [[Habsburgien]] monarkian eliitin muodikas kokoontumispaikka, joten vieraita tuli monarkian eri osista. Nykyään vesi tunnetaan nimellä [[Donat Mg]]. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Donat Mg
+
+### 260
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rogaška Slatina (kulttuuri)
+Tietoruudun teksti: Rogaška Slatina on Itä-Slovenian kylpyläkaupunki, joka tunnetaan parantavasta kivennäisvedestään, kylpylästään ja kristallilasistaan. Magnesiumpitoinen vesi tunnetaan nykyisin nimellä Donat Mg, ja se on vetänyt vieraita seudulle vuosisatojen ajan. Lähteen ympärille rakennettiin 1600-luvulla puuaita, ja linnanherra Peter de Curti perusti sinne majatalon vuonna 1676 ja otti lähteillä kävijöiltä maksun. Vettä pullotettiin jo silloin läheisessä lasitehtaassa tehtyihin pulloihin. Uusklassinen Tempel-paviljonki valmistui vuonna 1819, ja 1800-luvun puoliväliin mennessä kaupungista oli tullut Habsburgien monarkian eliitin muodikas kokoontumispaikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yangon — kohdekartta / Kohdekartta: Chaukhtatgyin temppeli] nykyinen kuva vihittiin 1973 Bahanin kaupunginosassa Shwedagonin pohjoispuolella makaa kuudenkymmenenkuuden metrin mittainen Buddha suuren hallin alla. Työn kustansi varakas burmalainen Sir Po Tha vuonna 1899. Kuva valmistui 1907, mutta sen teki toinen rakennusliike kuin aloittaja, eivätkä mittasuhteet osuneet kohdalleen: kasvoista tuli kovat ja ankaran näköiset. 1950-luvulla vanha kuva purettiin, ja temppelin edunvalvojat aloittivat uuden. Työtä johti Tavoysta eli nykyisestä Daweista kotoisin ollut mestari U Thaung. Silmät tehtiin varta vasten Naga Glass -lasitehtaassa, ja ne ovat kookkaat: leveyttä on 1,77 metriä ja korkeutta 58 senttimetriä. Uusi kuva vihittiin vuonna 1973, ja se on maan…
+AIEMPI KYSYMYS: Miksi lasiteollisuus ja kylpylä sopivat niin hyvin yhteen Rogaška Slatinassa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: yhteys on käytännöllisempi kuin luulisi. Kivennäisvettä haluttiin viedä myös kotiin, ja sitä varten tarvittiin pulloja, joten jo 1600-luvulla vettä pullotettiin läheisessä [[lasitehtaassa]] tehtyihin pulloihin. Lasi oli myös hygieeninen ja läpinäkyvä astia, jossa veden saattoi nähdä ja säilyttää maun muuttumatta. Kylpylävieraat olivat lisäksi varakasta väkeä, joka saattoi ostaa lasiesineitä muistoksi, ja siitä kasvoi [[kristallilasi]] kaupungin tunnetuksi tuotteeksi. En ole varma, miten tarkasti lasin ja veden kauppa kietoutuivat toisiinsa eri aikoina, mutta pullotuksen ja matkamuistojen yhteys on selvä. Lisäksi molemmat vetivät huomiota samoille seuduille, ja [[kivennäisvesi]] antoi paikalle nimen. Katolta katsoen kaikki tuo näyttää varsin läpinäkyvältä liiketoiminnalta.
+KYSYMYS: Kerro lisää: lasitehtaassa
+
+### 261
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rogaška Slatina (kulttuuri)
+Tietoruudun teksti: Rogaška Slatina on Itä-Slovenian kylpyläkaupunki, joka tunnetaan parantavasta kivennäisvedestään, kylpylästään ja kristallilasistaan. Magnesiumpitoinen vesi tunnetaan nykyisin nimellä Donat Mg, ja se on vetänyt vieraita seudulle vuosisatojen ajan. Lähteen ympärille rakennettiin 1600-luvulla puuaita, ja linnanherra Peter de Curti perusti sinne majatalon vuonna 1676 ja otti lähteillä kävijöiltä maksun. Vettä pullotettiin jo silloin läheisessä lasitehtaassa tehtyihin pulloihin. Uusklassinen Tempel-paviljonki valmistui vuonna 1819, ja 1800-luvun puoliväliin mennessä kaupungista oli tullut Habsburgien monarkian eliitin muodikas kokoontumispaikka.
+AIEMPI KYSYMYS: Miksi lasiteollisuus ja kylpylä sopivat niin hyvin yhteen Rogaška Slatinassa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: yhteys on käytännöllisempi kuin luulisi. Kivennäisvettä haluttiin viedä myös kotiin, ja sitä varten tarvittiin pulloja, joten jo 1600-luvulla vettä pullotettiin läheisessä [[lasitehtaassa]] tehtyihin pulloihin. Lasi oli myös hygieeninen ja läpinäkyvä astia, jossa veden saattoi nähdä ja säilyttää maun muuttumatta. Kylpylävieraat olivat lisäksi varakasta väkeä, joka saattoi ostaa lasiesineitä muistoksi, ja siitä kasvoi [[kristallilasi]] kaupungin tunnetuksi tuotteeksi. En ole varma, miten tarkasti lasin ja veden kauppa kietoutuivat toisiinsa eri aikoina, mutta pullotuksen ja matkamuistojen yhteys on selvä. Lisäksi molemmat vetivät huomiota samoille seuduille, ja [[kivennäisvesi]] antoi paikalle nimen. Katolta katsoen kaikki tuo näyttää varsin läpinäkyvältä liiketoiminnalta.
+KYSYMYS: Kerro lisää: kristallilasi
+
+### 262
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rogaška Slatina (kulttuuri)
+Tietoruudun teksti: Rogaška Slatina on Itä-Slovenian kylpyläkaupunki, joka tunnetaan parantavasta kivennäisvedestään, kylpylästään ja kristallilasistaan. Magnesiumpitoinen vesi tunnetaan nykyisin nimellä Donat Mg, ja se on vetänyt vieraita seudulle vuosisatojen ajan. Lähteen ympärille rakennettiin 1600-luvulla puuaita, ja linnanherra Peter de Curti perusti sinne majatalon vuonna 1676 ja otti lähteillä kävijöiltä maksun. Vettä pullotettiin jo silloin läheisessä lasitehtaassa tehtyihin pulloihin. Uusklassinen Tempel-paviljonki valmistui vuonna 1819, ja 1800-luvun puoliväliin mennessä kaupungista oli tullut Habsburgien monarkian eliitin muodikas kokoontumispaikka.
+AIEMPI KYSYMYS: Miksi lasiteollisuus ja kylpylä sopivat niin hyvin yhteen Rogaška Slatinassa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: yhteys on käytännöllisempi kuin luulisi. Kivennäisvettä haluttiin viedä myös kotiin, ja sitä varten tarvittiin pulloja, joten jo 1600-luvulla vettä pullotettiin läheisessä [[lasitehtaassa]] tehtyihin pulloihin. Lasi oli myös hygieeninen ja läpinäkyvä astia, jossa veden saattoi nähdä ja säilyttää maun muuttumatta. Kylpylävieraat olivat lisäksi varakasta väkeä, joka saattoi ostaa lasiesineitä muistoksi, ja siitä kasvoi [[kristallilasi]] kaupungin tunnetuksi tuotteeksi. En ole varma, miten tarkasti lasin ja veden kauppa kietoutuivat toisiinsa eri aikoina, mutta pullotuksen ja matkamuistojen yhteys on selvä. Lisäksi molemmat vetivät huomiota samoille seuduille, ja [[kivennäisvesi]] antoi paikalle nimen. Katolta katsoen kaikki tuo näyttää varsin läpinäkyvältä liiketoiminnalta.
+KYSYMYS: Kerro lisää: kivennäisvesi
+
+### 263
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rogaška Slatina (kulttuuri)
+Tietoruudun teksti: Rogaška Slatina on Itä-Slovenian kylpyläkaupunki, joka tunnetaan parantavasta kivennäisvedestään, kylpylästään ja kristallilasistaan. Magnesiumpitoinen vesi tunnetaan nykyisin nimellä Donat Mg, ja se on vetänyt vieraita seudulle vuosisatojen ajan. Lähteen ympärille rakennettiin 1600-luvulla puuaita, ja linnanherra Peter de Curti perusti sinne majatalon vuonna 1676 ja otti lähteillä kävijöiltä maksun. Vettä pullotettiin jo silloin läheisessä lasitehtaassa tehtyihin pulloihin. Uusklassinen Tempel-paviljonki valmistui vuonna 1819, ja 1800-luvun puoliväliin mennessä kaupungista oli tullut Habsburgien monarkian eliitin muodikas kokoontumispaikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Peru — maalehti / Ruoka: Siemen, joka ei ole vilja] Kvinoa ei ole heinäkasvi vaan revonhäntäkasvien sukulainen, ja syötävä osa on siemen eikä jyvä. Sitä käytettiin karjan rehuna jo 5 200–7 000 vuotta sitten ja ihmisravinnoksi 3 000–4 000 vuotta sitten Titicacan altaassa. Siemenissä on runsaasti proteiinia, kuitua ja B-vitamiineja sekä enemmän kaliumia ja magnesiumia kuin monissa viljoissa. Kasvi kasvaa metristä kahteen, ja kukinto voi olla vihreä, punainen tai purppura — sadonkorjuun aikaan ylängön pellot ovat ruosteenpunaisia.
+AIEMPI KYSYMYS: Mitä on kivennäisvesi ja miksi sitä juotiin hoitona?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kivennäisvesi on vettä, johon on maaperän läpi virratessaan liuennut mineraaleja, kuten magnesiumia, kalsiumia tai natriumia, ja sen koostumus riippuu siitä, minkä kerrosten kautta se on kulkenut. Kylpyläkaupungeissa uskottiin jo vuosisatoja sitten, että tietynlaisen lähdeveden juominen auttaa vaivoihin, ja hoitoon kuului juomisen lisäksi kylpemistä ja ulkoilua. Rogaška Slatinan vesi on [[magnesiumia]] sisältävää, ja perinteisesti sen on ajateltu tukevan etenkin ruoansulatusta, vaikka vaikutuksen tarkkaa tieteellistä arviota en tässä osaa antaa. Lähteen äärelle rakennettiin 1800-luvun alussa uusklassinen [[Tempel-paviljonki]]. Minä tyydyn lätäköiden vesiin, ja ne ovat riittäneet.
+KYSYMYS: Kerro lisää: magnesiumia
+
+### 264
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rogaška Slatina (kulttuuri)
+Tietoruudun teksti: Rogaška Slatina on Itä-Slovenian kylpyläkaupunki, joka tunnetaan parantavasta kivennäisvedestään, kylpylästään ja kristallilasistaan. Magnesiumpitoinen vesi tunnetaan nykyisin nimellä Donat Mg, ja se on vetänyt vieraita seudulle vuosisatojen ajan. Lähteen ympärille rakennettiin 1600-luvulla puuaita, ja linnanherra Peter de Curti perusti sinne majatalon vuonna 1676 ja otti lähteillä kävijöiltä maksun. Vettä pullotettiin jo silloin läheisessä lasitehtaassa tehtyihin pulloihin. Uusklassinen Tempel-paviljonki valmistui vuonna 1819, ja 1800-luvun puoliväliin mennessä kaupungista oli tullut Habsburgien monarkian eliitin muodikas kokoontumispaikka.
+AIEMPI KYSYMYS: Mitä on kivennäisvesi ja miksi sitä juotiin hoitona?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kivennäisvesi on vettä, johon on maaperän läpi virratessaan liuennut mineraaleja, kuten magnesiumia, kalsiumia tai natriumia, ja sen koostumus riippuu siitä, minkä kerrosten kautta se on kulkenut. Kylpyläkaupungeissa uskottiin jo vuosisatoja sitten, että tietynlaisen lähdeveden juominen auttaa vaivoihin, ja hoitoon kuului juomisen lisäksi kylpemistä ja ulkoilua. Rogaška Slatinan vesi on [[magnesiumia]] sisältävää, ja perinteisesti sen on ajateltu tukevan etenkin ruoansulatusta, vaikka vaikutuksen tarkkaa tieteellistä arviota en tässä osaa antaa. Lähteen äärelle rakennettiin 1800-luvun alussa uusklassinen [[Tempel-paviljonki]]. Minä tyydyn lätäköiden vesiin, ja ne ovat riittäneet.
+KYSYMYS: Kerro lisää: Tempel-paviljonki
+
+### 265
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rogaška Slatina (kulttuuri)
+Tietoruudun teksti: Rogaška Slatina on Itä-Slovenian kylpyläkaupunki, joka tunnetaan parantavasta kivennäisvedestään, kylpylästään ja kristallilasistaan. Magnesiumpitoinen vesi tunnetaan nykyisin nimellä Donat Mg, ja se on vetänyt vieraita seudulle vuosisatojen ajan. Lähteen ympärille rakennettiin 1600-luvulla puuaita, ja linnanherra Peter de Curti perusti sinne majatalon vuonna 1676 ja otti lähteillä kävijöiltä maksun. Vettä pullotettiin jo silloin läheisessä lasitehtaassa tehtyihin pulloihin. Uusklassinen Tempel-paviljonki valmistui vuonna 1819, ja 1800-luvun puoliväliin mennessä kaupungista oli tullut Habsburgien monarkian eliitin muodikas kokoontumispaikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madagaskar — maalehti / Ruoka: Riisi ei ole ruokalaji vaan ateria] Ateria on vary ja sen seuralainen laoka. Riisiä on monta tapaa: vary maina keitetään kuivaksi, vary sosoa vetiseksi puuroksi aamiaiseksi tai sairaalle, ja sen kanssa syödään kitozaa, savustettuja sebun lihasuikaleita. Vary amin'anana on puuroa lihan ja silputun lehtivihanneksen kanssa; famadihanassa eli luiden kääntämisen juhlassa tarjotaan vary be menaka, "riisi, jossa on paljon rasvaa". Paahdettuna ja jauhettuna riisi on lango, joka kestää matkan. Yleisin juoma syntyy kattilan pohjasta: ranon'ampango on kuumaa vettä paahtuneen riisikuoren päällä. Kuivassa etelässä riisin korvaa maniokki, maissi tai hapatettu sebunmaito.
+AIEMPI KYSYMYS: Miten kylpyläkulttuuri levisi Habsburgien monarkiassa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Habsburgien monarkian alueella oli lukuisia lähteiden ympärille kasvaneita kylpyläkaupunkeja, ja niiden suosio kasvoi 1800-luvulla, kun varakas yläluokka ja aatelisto alkoivat viettää kesiä hoitolaitoksissa. Tunnettuja esimerkkejä ovat [[Karlovy Vary]], [[Baden]] ja [[Bad Ischl]], ja Rogaška Slatina kuului samaan joukkoon: 1800-luvun puoliväliin mennessä siitä oli tullut monarkian eliitin muodikas kokoontumispaikka. [[Rautateiden]] yleistyminen helpotti matkustamista, ja kylpyläkaupungeissa tavattiin sekä hoidettiin terveyttä että kehitettiin seuraelämää. En ole varma, miten kylpyläkulttuurin leviäminen etenee tarkasti vuosi vuodelta, mutta suuntaus on selvä.
+
+Nämä kaupungit olivat varmasti hyvää seutua kirjeenkantajalle, koska vieraat kirjoittivat kotiin joka päivä. Suvun postissa kylpylävieraiden kortit ovat kuulemma olleet pitkä ja hajuvedeltä tuoksuva kasa.
+KYSYMYS: Kerro lisää: Karlovy Vary
+
+### 266
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rogaška Slatina (kulttuuri)
+Tietoruudun teksti: Rogaška Slatina on Itä-Slovenian kylpyläkaupunki, joka tunnetaan parantavasta kivennäisvedestään, kylpylästään ja kristallilasistaan. Magnesiumpitoinen vesi tunnetaan nykyisin nimellä Donat Mg, ja se on vetänyt vieraita seudulle vuosisatojen ajan. Lähteen ympärille rakennettiin 1600-luvulla puuaita, ja linnanherra Peter de Curti perusti sinne majatalon vuonna 1676 ja otti lähteillä kävijöiltä maksun. Vettä pullotettiin jo silloin läheisessä lasitehtaassa tehtyihin pulloihin. Uusklassinen Tempel-paviljonki valmistui vuonna 1819, ja 1800-luvun puoliväliin mennessä kaupungista oli tullut Habsburgien monarkian eliitin muodikas kokoontumispaikka.
+AIEMPI KYSYMYS: Miten kylpyläkulttuuri levisi Habsburgien monarkiassa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Habsburgien monarkian alueella oli lukuisia lähteiden ympärille kasvaneita kylpyläkaupunkeja, ja niiden suosio kasvoi 1800-luvulla, kun varakas yläluokka ja aatelisto alkoivat viettää kesiä hoitolaitoksissa. Tunnettuja esimerkkejä ovat [[Karlovy Vary]], [[Baden]] ja [[Bad Ischl]], ja Rogaška Slatina kuului samaan joukkoon: 1800-luvun puoliväliin mennessä siitä oli tullut monarkian eliitin muodikas kokoontumispaikka. [[Rautateiden]] yleistyminen helpotti matkustamista, ja kylpyläkaupungeissa tavattiin sekä hoidettiin terveyttä että kehitettiin seuraelämää. En ole varma, miten kylpyläkulttuurin leviäminen etenee tarkasti vuosi vuodelta, mutta suuntaus on selvä.
+
+Nämä kaupungit olivat varmasti hyvää seutua kirjeenkantajalle, koska vieraat kirjoittivat kotiin joka päivä. Suvun postissa kylpylävieraiden kortit ovat kuulemma olleet pitkä ja hajuvedeltä tuoksuva kasa.
+KYSYMYS: Kerro lisää: Baden
+
+### 267
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rogaška Slatina (kulttuuri)
+Tietoruudun teksti: Rogaška Slatina on Itä-Slovenian kylpyläkaupunki, joka tunnetaan parantavasta kivennäisvedestään, kylpylästään ja kristallilasistaan. Magnesiumpitoinen vesi tunnetaan nykyisin nimellä Donat Mg, ja se on vetänyt vieraita seudulle vuosisatojen ajan. Lähteen ympärille rakennettiin 1600-luvulla puuaita, ja linnanherra Peter de Curti perusti sinne majatalon vuonna 1676 ja otti lähteillä kävijöiltä maksun. Vettä pullotettiin jo silloin läheisessä lasitehtaassa tehtyihin pulloihin. Uusklassinen Tempel-paviljonki valmistui vuonna 1819, ja 1800-luvun puoliväliin mennessä kaupungista oli tullut Habsburgien monarkian eliitin muodikas kokoontumispaikka.
+AIEMPI KYSYMYS: Miten kylpyläkulttuuri levisi Habsburgien monarkiassa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Habsburgien monarkian alueella oli lukuisia lähteiden ympärille kasvaneita kylpyläkaupunkeja, ja niiden suosio kasvoi 1800-luvulla, kun varakas yläluokka ja aatelisto alkoivat viettää kesiä hoitolaitoksissa. Tunnettuja esimerkkejä ovat [[Karlovy Vary]], [[Baden]] ja [[Bad Ischl]], ja Rogaška Slatina kuului samaan joukkoon: 1800-luvun puoliväliin mennessä siitä oli tullut monarkian eliitin muodikas kokoontumispaikka. [[Rautateiden]] yleistyminen helpotti matkustamista, ja kylpyläkaupungeissa tavattiin sekä hoidettiin terveyttä että kehitettiin seuraelämää. En ole varma, miten kylpyläkulttuurin leviäminen etenee tarkasti vuosi vuodelta, mutta suuntaus on selvä.
+
+Nämä kaupungit olivat varmasti hyvää seutua kirjeenkantajalle, koska vieraat kirjoittivat kotiin joka päivä. Suvun postissa kylpylävieraiden kortit ovat kuulemma olleet pitkä ja hajuvedeltä tuoksuva kasa.
+KYSYMYS: Kerro lisää: Bad Ischl
+
+### 268
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rogaška Slatina (kulttuuri)
+Tietoruudun teksti: Rogaška Slatina on Itä-Slovenian kylpyläkaupunki, joka tunnetaan parantavasta kivennäisvedestään, kylpylästään ja kristallilasistaan. Magnesiumpitoinen vesi tunnetaan nykyisin nimellä Donat Mg, ja se on vetänyt vieraita seudulle vuosisatojen ajan. Lähteen ympärille rakennettiin 1600-luvulla puuaita, ja linnanherra Peter de Curti perusti sinne majatalon vuonna 1676 ja otti lähteillä kävijöiltä maksun. Vettä pullotettiin jo silloin läheisessä lasitehtaassa tehtyihin pulloihin. Uusklassinen Tempel-paviljonki valmistui vuonna 1819, ja 1800-luvun puoliväliin mennessä kaupungista oli tullut Habsburgien monarkian eliitin muodikas kokoontumispaikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karachi — kohdekartta / Kohdekartta: Karachi Cityn rautatieasema] 1861–1864 Scinde Railway -yhtiö perustettiin maaliskuussa 1855, ja työt Karachin pääteasemalla alkoivat huhtikuussa 1858. Rata vei Kotriin, 174 kilometrin päähän Induksen varteen, ja se avattiin yleisölle 13. toukokuuta 1861 — seudun ensimmäinen yleisölle avattu rautatie. Itse asemarakennus valmistui toukokuussa 1864. Asema oli aluksi nimeltään McLeod Station sen kadun mukaan, jonka eteläreunalle se rakennettiin; katu on nykyään I. I. Chundrigar Road. 1880-luvulla asemasta rakennettiin uusi versio hieman lännemmäksi, ja vuoteen 1905 mennessä brittihallinnon papereissa puhuttiin Karachi Cityn asemasta. Ratapihat järjestettiin uusiksi 1908. Nykyinen keltaisesta Gizrin hiekkakivestä muurattu a…
+- [Appalakit — kaupunkilehti / Cumberlandin sola ja vuorten kansa: Hiili nousee vuoren uumenista] Pienimuotoista hiilenlouhintaa harjoitettiin Appalakkien laaksoissa jo 1700-luvun lopulla lähinnä paikallisten seppien ja kotitalouksien tarpeisiin, mutta höyrykoneiden ja rautateiden yleistyminen 1800-luvun alkupuolella kasvatti kysynnän moninkertaiseksi. Sisällissodan jälkeen teollisuuspääoma löysi vuorten sisään kätkeytyneet hiilikerrostumat, ja kokonaisia laaksoja alkoi täyttyä kaivoskylistä, joissa sukupolvi toisensa jälkeen kulki päivittäin maan alle. Nokeen mustunut kasvo ja karbidilampullinen kypärä olivat vielä vuosikymmeniä myöhemminkin tuttu näky appalakialaisen kaivosmiehen arjessa.
+AIEMPI KYSYMYS: Miten kylpyläkulttuuri levisi Habsburgien monarkiassa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Habsburgien monarkian alueella oli lukuisia lähteiden ympärille kasvaneita kylpyläkaupunkeja, ja niiden suosio kasvoi 1800-luvulla, kun varakas yläluokka ja aatelisto alkoivat viettää kesiä hoitolaitoksissa. Tunnettuja esimerkkejä ovat [[Karlovy Vary]], [[Baden]] ja [[Bad Ischl]], ja Rogaška Slatina kuului samaan joukkoon: 1800-luvun puoliväliin mennessä siitä oli tullut monarkian eliitin muodikas kokoontumispaikka. [[Rautateiden]] yleistyminen helpotti matkustamista, ja kylpyläkaupungeissa tavattiin sekä hoidettiin terveyttä että kehitettiin seuraelämää. En ole varma, miten kylpyläkulttuurin leviäminen etenee tarkasti vuosi vuodelta, mutta suuntaus on selvä.
+
+Nämä kaupungit olivat varmasti hyvää seutua kirjeenkantajalle, koska vieraat kirjoittivat kotiin joka päivä. Suvun postissa kylpylävieraiden kortit ovat kuulemma olleet pitkä ja hajuvedeltä tuoksuva kasa.
+KYSYMYS: Kerro lisää: Rautateiden
+
+### 269
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rogaška Slatina (kulttuuri)
+Tietoruudun teksti: Rogaška Slatina on Itä-Slovenian kylpyläkaupunki, joka tunnetaan parantavasta kivennäisvedestään, kylpylästään ja kristallilasistaan. Magnesiumpitoinen vesi tunnetaan nykyisin nimellä Donat Mg, ja se on vetänyt vieraita seudulle vuosisatojen ajan. Lähteen ympärille rakennettiin 1600-luvulla puuaita, ja linnanherra Peter de Curti perusti sinne majatalon vuonna 1676 ja otti lähteillä kävijöiltä maksun. Vettä pullotettiin jo silloin läheisessä lasitehtaassa tehtyihin pulloihin. Uusklassinen Tempel-paviljonki valmistui vuonna 1819, ja 1800-luvun puoliväliin mennessä kaupungista oli tullut Habsburgien monarkian eliitin muodikas kokoontumispaikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Geraldton — kaupunkilehti / Geraldton: Lyijyä ja lahden satama] Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.
+AIEMPI KYSYMYS: Mikä on kristallilasin ero tavalliseen lasiin?
+AIEMPI VASTAUS (Livia):
+Ai tota. Perinteisessä kristallilasissa lasimassaan lisätään [[lyijyoksidia]], joka tekee lasista raskaamman, kirkkaamman ja kimmeltävämmän kuin tavallinen ikkuna- tai pullolasi. Lyijy nostaa lasin [[taitekerrointa]], jolloin valo taittuu voimakkaammin, ja lasi myös soi kauniisti, kun sitä napautetaan. Nykyään nimeä käytetään myös lyijyttömistä laseista, joissa lyijyn tilalla on muita aineita, joten merkintä ei yksin kerro koostumusta. En ole varma, millaista seosta Rogaškan lasi on eri aikoina ollut. Lasi hiotaan usein kuvioiduksi, ja hionta tuo esiin kimalluksen. Minun maailmani on ikkunalaudalta katsottuna aika läpinäkyvä.
+KYSYMYS: Kerro lisää: lyijyoksidia
+
+### 270
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rogaška Slatina (kulttuuri)
+Tietoruudun teksti: Rogaška Slatina on Itä-Slovenian kylpyläkaupunki, joka tunnetaan parantavasta kivennäisvedestään, kylpylästään ja kristallilasistaan. Magnesiumpitoinen vesi tunnetaan nykyisin nimellä Donat Mg, ja se on vetänyt vieraita seudulle vuosisatojen ajan. Lähteen ympärille rakennettiin 1600-luvulla puuaita, ja linnanherra Peter de Curti perusti sinne majatalon vuonna 1676 ja otti lähteillä kävijöiltä maksun. Vettä pullotettiin jo silloin läheisessä lasitehtaassa tehtyihin pulloihin. Uusklassinen Tempel-paviljonki valmistui vuonna 1819, ja 1800-luvun puoliväliin mennessä kaupungista oli tullut Habsburgien monarkian eliitin muodikas kokoontumispaikka.
+AIEMPI KYSYMYS: Mikä on kristallilasin ero tavalliseen lasiin?
+AIEMPI VASTAUS (Livia):
+Ai tota. Perinteisessä kristallilasissa lasimassaan lisätään [[lyijyoksidia]], joka tekee lasista raskaamman, kirkkaamman ja kimmeltävämmän kuin tavallinen ikkuna- tai pullolasi. Lyijy nostaa lasin [[taitekerrointa]], jolloin valo taittuu voimakkaammin, ja lasi myös soi kauniisti, kun sitä napautetaan. Nykyään nimeä käytetään myös lyijyttömistä laseista, joissa lyijyn tilalla on muita aineita, joten merkintä ei yksin kerro koostumusta. En ole varma, millaista seosta Rogaškan lasi on eri aikoina ollut. Lasi hiotaan usein kuvioiduksi, ja hionta tuo esiin kimalluksen. Minun maailmani on ikkunalaudalta katsottuna aika läpinäkyvä.
+KYSYMYS: Kerro lisää: taitekerrointa
+
+### 271
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ravne na Koroškem (tekniikka)
+Tietoruudun teksti: Ravne na Koroškem on Pohjois-Slovenian kaupunki Mežan laaksossa, Slovenian Kärntenin eli Koroškan alueen suurin kaupunki. Paikkaa kutsuttiin vuoteen 1952 asti nimellä Guštanj, saksaksi Gutenstein Kärntenissä, ja se mainitaan ensimmäisen kerran vuoden 1263 asiakirjassa. Alue kuului Kärntenin herttuakuntaan jo vuodesta 976. Raudanvalmistus alkoi seudulla 1600-luvun alussa, ja teräsvalmistuksella on kaupungissa yli 400 vuoden perinne. Rautatie yhdisti paikan maailmaan vuonna 1863, ja laadukasta ravnelaista terästä myytiin ennen ensimmäistä maailmansotaa aina Lähi-itään, Kaukoitään ja Venäjälle.
+AIEMPI KYSYMYS: Mitä nimi Ravne tarkoittaa, ja miksi paikan vanha nimi Guštanj vaihtui?
+AIEMPI VASTAUS (Livia):
+No jopas. Slovenian kielessä sana ravne viittaa tasaisiin, tasamaisiin paikkoihin, ja nimi on siten kuvaus maastosta; olen kohtuullisen varma tästä, mutta en täysin. Lisäosa na Koroškem tarkoittaa Koroškan alueella sijaitsevaa. Aiempi nimi [[Guštanj]] muistuttaa saksalaista nimeä [[Gutenstein]], joka oli käytössä Kärntenissä, ja paikkaa kutsuttiin Guštanjiksi vuoteen 1952 asti. Syystä, miksi nimi juuri silloin vaihdettiin, en ole varma, enkä halua arvailla. Kaupunki mainitaan ensimmäisen kerran vuoden 1263 asiakirjassa, ja alue kuului [[Kärntenin]] herttuakuntaan jo vuodesta 976. Nimiä on kaupungilla ollut enemmän kuin minulla lempinimiä.
+KYSYMYS: Kerro lisää: Guštanj
+
+### 272
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ravne na Koroškem (tekniikka)
+Tietoruudun teksti: Ravne na Koroškem on Pohjois-Slovenian kaupunki Mežan laaksossa, Slovenian Kärntenin eli Koroškan alueen suurin kaupunki. Paikkaa kutsuttiin vuoteen 1952 asti nimellä Guštanj, saksaksi Gutenstein Kärntenissä, ja se mainitaan ensimmäisen kerran vuoden 1263 asiakirjassa. Alue kuului Kärntenin herttuakuntaan jo vuodesta 976. Raudanvalmistus alkoi seudulla 1600-luvun alussa, ja teräsvalmistuksella on kaupungissa yli 400 vuoden perinne. Rautatie yhdisti paikan maailmaan vuonna 1863, ja laadukasta ravnelaista terästä myytiin ennen ensimmäistä maailmansotaa aina Lähi-itään, Kaukoitään ja Venäjälle.
+AIEMPI KYSYMYS: Mitä nimi Ravne tarkoittaa, ja miksi paikan vanha nimi Guštanj vaihtui?
+AIEMPI VASTAUS (Livia):
+No jopas. Slovenian kielessä sana ravne viittaa tasaisiin, tasamaisiin paikkoihin, ja nimi on siten kuvaus maastosta; olen kohtuullisen varma tästä, mutta en täysin. Lisäosa na Koroškem tarkoittaa Koroškan alueella sijaitsevaa. Aiempi nimi [[Guštanj]] muistuttaa saksalaista nimeä [[Gutenstein]], joka oli käytössä Kärntenissä, ja paikkaa kutsuttiin Guštanjiksi vuoteen 1952 asti. Syystä, miksi nimi juuri silloin vaihdettiin, en ole varma, enkä halua arvailla. Kaupunki mainitaan ensimmäisen kerran vuoden 1263 asiakirjassa, ja alue kuului [[Kärntenin]] herttuakuntaan jo vuodesta 976. Nimiä on kaupungilla ollut enemmän kuin minulla lempinimiä.
+KYSYMYS: Kerro lisää: Gutenstein
+
+### 273
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ravne na Koroškem (tekniikka)
+Tietoruudun teksti: Ravne na Koroškem on Pohjois-Slovenian kaupunki Mežan laaksossa, Slovenian Kärntenin eli Koroškan alueen suurin kaupunki. Paikkaa kutsuttiin vuoteen 1952 asti nimellä Guštanj, saksaksi Gutenstein Kärntenissä, ja se mainitaan ensimmäisen kerran vuoden 1263 asiakirjassa. Alue kuului Kärntenin herttuakuntaan jo vuodesta 976. Raudanvalmistus alkoi seudulla 1600-luvun alussa, ja teräsvalmistuksella on kaupungissa yli 400 vuoden perinne. Rautatie yhdisti paikan maailmaan vuonna 1863, ja laadukasta ravnelaista terästä myytiin ennen ensimmäistä maailmansotaa aina Lähi-itään, Kaukoitään ja Venäjälle.
+AIEMPI KYSYMYS: Mitä nimi Ravne tarkoittaa, ja miksi paikan vanha nimi Guštanj vaihtui?
+AIEMPI VASTAUS (Livia):
+No jopas. Slovenian kielessä sana ravne viittaa tasaisiin, tasamaisiin paikkoihin, ja nimi on siten kuvaus maastosta; olen kohtuullisen varma tästä, mutta en täysin. Lisäosa na Koroškem tarkoittaa Koroškan alueella sijaitsevaa. Aiempi nimi [[Guštanj]] muistuttaa saksalaista nimeä [[Gutenstein]], joka oli käytössä Kärntenissä, ja paikkaa kutsuttiin Guštanjiksi vuoteen 1952 asti. Syystä, miksi nimi juuri silloin vaihdettiin, en ole varma, enkä halua arvailla. Kaupunki mainitaan ensimmäisen kerran vuoden 1263 asiakirjassa, ja alue kuului [[Kärntenin]] herttuakuntaan jo vuodesta 976. Nimiä on kaupungilla ollut enemmän kuin minulla lempinimiä.
+KYSYMYS: Kerro lisää: Kärntenin
+
+### 274
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ravne na Koroškem (tekniikka)
+Tietoruudun teksti: Ravne na Koroškem on Pohjois-Slovenian kaupunki Mežan laaksossa, Slovenian Kärntenin eli Koroškan alueen suurin kaupunki. Paikkaa kutsuttiin vuoteen 1952 asti nimellä Guštanj, saksaksi Gutenstein Kärntenissä, ja se mainitaan ensimmäisen kerran vuoden 1263 asiakirjassa. Alue kuului Kärntenin herttuakuntaan jo vuodesta 976. Raudanvalmistus alkoi seudulla 1600-luvun alussa, ja teräsvalmistuksella on kaupungissa yli 400 vuoden perinne. Rautatie yhdisti paikan maailmaan vuonna 1863, ja laadukasta ravnelaista terästä myytiin ennen ensimmäistä maailmansotaa aina Lähi-itään, Kaukoitään ja Venäjälle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Masqat — kaupunkilehti / Arki: Astia kiertää kädestä käteen] Suitsuke poltetaan astiassa, jonka nimi on mabkhara tai majmar. Pohjalle pannaan hehkuvaa puuhiiltä ja hiilten päälle muutama jyvä lubania eli suitsuketta; savu nousee suoraan huoneeseen, eikä liekkiä tarvita. Astiat tehdään Dhofarissa savesta, ja niitä on muotoiltu ja maalattu etenkin kolmessa kaupungissa: Salalahissa, Mirbatissa ja Taqahissa. Muoto vaihtelee nelikulmaisesta lieriöön ja veneeseen. Vieraiden tullessa astia kiertää kädestä käteen, ja jokainen ohjaa savua vaatteidensa alle ja hiuksiinsa. Illan päätteeksi sama kierros on kohtelias merkki siitä, että vierailu on ohi.
+AIEMPI KYSYMYS: Miksi juuri tähän laaksoon syntyi terästeollisuus, ja mitä rautatie muutti?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Raudanvalmistus alkoi seudulla 1600-luvun alussa, ja varhaisessa rautateollisuudessa tarvittiin yleensä kolme asiaa: raaka-ainetta, polttoainetta ja vesivoimaa. Metsistä saatiin [[puuhiiltä]], joesta voimaa vasaroille ja palkeille, ja Mežan laaksossa nämä olivat todennäköisesti lähellä toisiaan; en ole varma täkäläisistä yksityiskohdista, mutta tällainen yhdistelmä toistui monessa eurooppalaisessa rautaseudussa. Teräsvalmistuksella on kaupungissa yli 400 vuoden perinne. Rautatie yhdisti paikan maailmaan vuonna 1863, ja sen jälkeen raskas tuote ja raaka-aine liikkuivat kauas edullisemmin: ennen ensimmäistä maailmansotaa laadukasta ravnelaista terästä myytiin aina Lähi-itään, Kaukoitään ja Venäjälle. Joen ansiosta kaupunki sai [[vesivoimaa]] käyttöönsä. Joki teki työt, ja kaikki muut ottivat kunnian.
+KYSYMYS: Kerro lisää: puuhiiltä
+
+### 275
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ravne na Koroškem (tekniikka)
+Tietoruudun teksti: Ravne na Koroškem on Pohjois-Slovenian kaupunki Mežan laaksossa, Slovenian Kärntenin eli Koroškan alueen suurin kaupunki. Paikkaa kutsuttiin vuoteen 1952 asti nimellä Guštanj, saksaksi Gutenstein Kärntenissä, ja se mainitaan ensimmäisen kerran vuoden 1263 asiakirjassa. Alue kuului Kärntenin herttuakuntaan jo vuodesta 976. Raudanvalmistus alkoi seudulla 1600-luvun alussa, ja teräsvalmistuksella on kaupungissa yli 400 vuoden perinne. Rautatie yhdisti paikan maailmaan vuonna 1863, ja laadukasta ravnelaista terästä myytiin ennen ensimmäistä maailmansotaa aina Lähi-itään, Kaukoitään ja Venäjälle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kioto — kaupunkilehti / Kioto: Tuhat vuotta ja yksi muutto] Keisari Kanmu siirsi hovin Narasta tänne vuonna 794 ja rakennutti uuden pääkaupungin, Heian-kyōn. Kioto pysyi keisarien kaupunkina vuoteen 1868 asti — sotilashallitsijat asettuivat välillä Kamakuraan ja Edoon, mutta hovi jäi. Vuonna 1869 keisarin istuin siirtyi Tokioon, ja kaupunki menetti kerralla sekä hallinnollisen että taloudellisen asemansa. Vastaus oli yhteinen suunnitelma: Biwa-järveltä kaivettiin 1885–1890 kahdenkymmenen kilometrin kanava, joka toi juomavettä, kastelua ja vuodesta 1895 vesivoimaa, ja samana vuonna Kiotossa kulki Japanin ensimmäinen kaupallinen sähköraitiotie.
+AIEMPI KYSYMYS: Miksi juuri tähän laaksoon syntyi terästeollisuus, ja mitä rautatie muutti?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Raudanvalmistus alkoi seudulla 1600-luvun alussa, ja varhaisessa rautateollisuudessa tarvittiin yleensä kolme asiaa: raaka-ainetta, polttoainetta ja vesivoimaa. Metsistä saatiin [[puuhiiltä]], joesta voimaa vasaroille ja palkeille, ja Mežan laaksossa nämä olivat todennäköisesti lähellä toisiaan; en ole varma täkäläisistä yksityiskohdista, mutta tällainen yhdistelmä toistui monessa eurooppalaisessa rautaseudussa. Teräsvalmistuksella on kaupungissa yli 400 vuoden perinne. Rautatie yhdisti paikan maailmaan vuonna 1863, ja sen jälkeen raskas tuote ja raaka-aine liikkuivat kauas edullisemmin: ennen ensimmäistä maailmansotaa laadukasta ravnelaista terästä myytiin aina Lähi-itään, Kaukoitään ja Venäjälle. Joen ansiosta kaupunki sai [[vesivoimaa]] käyttöönsä. Joki teki työt, ja kaikki muut ottivat kunnian.
+KYSYMYS: Kerro lisää: vesivoimaa
+
+### 276
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ravne na Koroškem (tekniikka)
+Tietoruudun teksti: Ravne na Koroškem on Pohjois-Slovenian kaupunki Mežan laaksossa, Slovenian Kärntenin eli Koroškan alueen suurin kaupunki. Paikkaa kutsuttiin vuoteen 1952 asti nimellä Guštanj, saksaksi Gutenstein Kärntenissä, ja se mainitaan ensimmäisen kerran vuoden 1263 asiakirjassa. Alue kuului Kärntenin herttuakuntaan jo vuodesta 976. Raudanvalmistus alkoi seudulla 1600-luvun alussa, ja teräsvalmistuksella on kaupungissa yli 400 vuoden perinne. Rautatie yhdisti paikan maailmaan vuonna 1863, ja laadukasta ravnelaista terästä myytiin ennen ensimmäistä maailmansotaa aina Lähi-itään, Kaukoitään ja Venäjälle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+AIEMPI KYSYMYS: Miten teräs eroaa raudasta?
+AIEMPI VASTAUS (Livia):
+Mmm— tästä saa selvän pienellä esimerkillä. Ero on pääosin hiilen määrässä: raakarauta, joka tulee masuunista, sisältää paljon [[hiiltä]] ja on siksi kovaa mutta haurasta, kun taas teräksessä hiiltä on noin kaksi prosenttia tai vähemmän, jolloin materiaali on sekä luja että työstettävä. Teräs voidaan myös seostaa muilla aineilla, kuten kromilla tai nikkelillä, jolloin siitä tulee ruostumatonta tai erityisen kestävää. Teräksen teollinen valmistus yleistyi 1800-luvun puolivälissä, kun uudet menetelmät, kuten [[Bessemerin menetelmä]], tekivät siitä halpaa. Tarkat rajat riippuvat luokituksesta, joten pidä lukuja suuntaa-antavina. Minä en tarvitse kumpaakaan, riittää kun siivet kantavat.
+KYSYMYS: Kerro lisää: hiiltä
+
+### 277
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ravne na Koroškem (tekniikka)
+Tietoruudun teksti: Ravne na Koroškem on Pohjois-Slovenian kaupunki Mežan laaksossa, Slovenian Kärntenin eli Koroškan alueen suurin kaupunki. Paikkaa kutsuttiin vuoteen 1952 asti nimellä Guštanj, saksaksi Gutenstein Kärntenissä, ja se mainitaan ensimmäisen kerran vuoden 1263 asiakirjassa. Alue kuului Kärntenin herttuakuntaan jo vuodesta 976. Raudanvalmistus alkoi seudulla 1600-luvun alussa, ja teräsvalmistuksella on kaupungissa yli 400 vuoden perinne. Rautatie yhdisti paikan maailmaan vuonna 1863, ja laadukasta ravnelaista terästä myytiin ennen ensimmäistä maailmansotaa aina Lähi-itään, Kaukoitään ja Venäjälle.
+AIEMPI KYSYMYS: Miten teräs eroaa raudasta?
+AIEMPI VASTAUS (Livia):
+Mmm— tästä saa selvän pienellä esimerkillä. Ero on pääosin hiilen määrässä: raakarauta, joka tulee masuunista, sisältää paljon [[hiiltä]] ja on siksi kovaa mutta haurasta, kun taas teräksessä hiiltä on noin kaksi prosenttia tai vähemmän, jolloin materiaali on sekä luja että työstettävä. Teräs voidaan myös seostaa muilla aineilla, kuten kromilla tai nikkelillä, jolloin siitä tulee ruostumatonta tai erityisen kestävää. Teräksen teollinen valmistus yleistyi 1800-luvun puolivälissä, kun uudet menetelmät, kuten [[Bessemerin menetelmä]], tekivät siitä halpaa. Tarkat rajat riippuvat luokituksesta, joten pidä lukuja suuntaa-antavina. Minä en tarvitse kumpaakaan, riittää kun siivet kantavat.
+KYSYMYS: Kerro lisää: Bessemerin menetelmä
+
+### 278
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ravne na Koroškem (tekniikka)
+Tietoruudun teksti: Ravne na Koroškem on Pohjois-Slovenian kaupunki Mežan laaksossa, Slovenian Kärntenin eli Koroškan alueen suurin kaupunki. Paikkaa kutsuttiin vuoteen 1952 asti nimellä Guštanj, saksaksi Gutenstein Kärntenissä, ja se mainitaan ensimmäisen kerran vuoden 1263 asiakirjassa. Alue kuului Kärntenin herttuakuntaan jo vuodesta 976. Raudanvalmistus alkoi seudulla 1600-luvun alussa, ja teräsvalmistuksella on kaupungissa yli 400 vuoden perinne. Rautatie yhdisti paikan maailmaan vuonna 1863, ja laadukasta ravnelaista terästä myytiin ennen ensimmäistä maailmansotaa aina Lähi-itään, Kaukoitään ja Venäjälle.
+AIEMPI KYSYMYS: Mikä on Kärntenin herttuakunta ja missä se sijaitsi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kärntenin herttuakunta oli Pyhään saksalais-roomalaiseen keisarikuntaan kuulunut herttuakunta, joka erotettiin [[Baijerista]] vuonna 976, ja Ravne na Koroškemin seutu kuului siihen jo tuolloin. Myöhemmin alue siirtyi [[Habsburgien]] hallintaan, ja herttuakunnan alue jakautuu nykyisin pääosin Itävallan Kärntenin osavaltion ja Slovenian Koroškan alueen kesken. Herttuakunnan tarkat rajat vaihtelivat vuosisatojen kuluessa, enkä ole varma kaikista vaiheista. Slovenian puolella kaupungit, kuten Ravne, ovat saaneet teollisuutensa jokilaaksoihin.
+
+Rajat ovat minulle outo asia, koska ylhäältä niitä ei näe. Suvun postissa ne kuitenkin tarkoittivat tullimaksuja ja jokaisella kerralla eri leimaa.
+KYSYMYS: Kerro lisää: Baijerista
+
+### 279
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ravne na Koroškem (tekniikka)
+Tietoruudun teksti: Ravne na Koroškem on Pohjois-Slovenian kaupunki Mežan laaksossa, Slovenian Kärntenin eli Koroškan alueen suurin kaupunki. Paikkaa kutsuttiin vuoteen 1952 asti nimellä Guštanj, saksaksi Gutenstein Kärntenissä, ja se mainitaan ensimmäisen kerran vuoden 1263 asiakirjassa. Alue kuului Kärntenin herttuakuntaan jo vuodesta 976. Raudanvalmistus alkoi seudulla 1600-luvun alussa, ja teräsvalmistuksella on kaupungissa yli 400 vuoden perinne. Rautatie yhdisti paikan maailmaan vuonna 1863, ja laadukasta ravnelaista terästä myytiin ennen ensimmäistä maailmansotaa aina Lähi-itään, Kaukoitään ja Venäjälle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Saavin pohjalla kimalsi elohopea] 1490 — Legendan mukaan saavinvalmistaja huomasi vuonna 1490 Idrijan lähteessä kimaltavan nestemäisen metallin. Se oli elohopeaa, ja löytö teki pienestä vuoristokylästä tärkeän kaivoskaupungin. Habsburgien aikana Idrijan elohopea kuljetettiin muun muassa Espanjan valtakunnan hopeakaivoksille, joissa sitä tarvittiin hopean irrottamiseen malmista. Kaivos ulottui lopulta lähes 400 metrin syvyyteen. Kuvan ristikkotorni on Frančiškan kuilun nostotorni, ja sen huipulla risteävät vasarat, kaivosmiesten vanha tunnus. Vuonna 2012 Idrija liitettiin yhdessä espanjalaisen Almadénin kanssa Unescon maailmanperintölistalle.
+AIEMPI KYSYMYS: Mikä on Kärntenin herttuakunta ja missä se sijaitsi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kärntenin herttuakunta oli Pyhään saksalais-roomalaiseen keisarikuntaan kuulunut herttuakunta, joka erotettiin [[Baijerista]] vuonna 976, ja Ravne na Koroškemin seutu kuului siihen jo tuolloin. Myöhemmin alue siirtyi [[Habsburgien]] hallintaan, ja herttuakunnan alue jakautuu nykyisin pääosin Itävallan Kärntenin osavaltion ja Slovenian Koroškan alueen kesken. Herttuakunnan tarkat rajat vaihtelivat vuosisatojen kuluessa, enkä ole varma kaikista vaiheista. Slovenian puolella kaupungit, kuten Ravne, ovat saaneet teollisuutensa jokilaaksoihin.
+
+Rajat ovat minulle outo asia, koska ylhäältä niitä ei näe. Suvun postissa ne kuitenkin tarkoittivat tullimaksuja ja jokaisella kerralla eri leimaa.
+KYSYMYS: Kerro lisää: Habsburgien
+
+### 280
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ravne na Koroškem (tekniikka)
+Tietoruudun teksti: Ravne na Koroškem on Pohjois-Slovenian kaupunki Mežan laaksossa, Slovenian Kärntenin eli Koroškan alueen suurin kaupunki. Paikkaa kutsuttiin vuoteen 1952 asti nimellä Guštanj, saksaksi Gutenstein Kärntenissä, ja se mainitaan ensimmäisen kerran vuoden 1263 asiakirjassa. Alue kuului Kärntenin herttuakuntaan jo vuodesta 976. Raudanvalmistus alkoi seudulla 1600-luvun alussa, ja teräsvalmistuksella on kaupungissa yli 400 vuoden perinne. Rautatie yhdisti paikan maailmaan vuonna 1863, ja laadukasta ravnelaista terästä myytiin ennen ensimmäistä maailmansotaa aina Lähi-itään, Kaukoitään ja Venäjälle.
+AIEMPI KYSYMYS: Miksi vanhat rautaverstaat sijoitettiin virtaavan veden äärelle?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ennen sähköä ja höyryä vesi oli helpoin tapa saada voimaa: virtaava joki pyöritti [[vesipyörää]], jonka liike välitettiin akselien kautta työkaluille. Raudanvalmistuksessa tämä tarkoitti ennen kaikkea [[takomovasaroita]], jotka löivät kuumaa metallia, sekä [[palkeita]], jotka puhalsivat ilmaa tuleen ja nostivat lämpötilan riittävän korkeaksi. Vesi oli lisäksi hyödyllistä jäähdytykseen ja malmin sekä tuotteiden kuljetukseen, vaikka kulkuyhteydet vaihtelivat paikasta toiseen. Laakso, jossa joki kulki tasaisesti ja metsää oli lähellä polttoaineeksi, tarjosi siis kaiken tarvittavan, ja tämä selittää, miksi vanhoja rautapaikkoja on usein joenvarsilla. En ole varma, miten tämä pätee juuri Mežan rautaverstaisiin. Joki teki työt, ja kaikki muut ottivat kunnian.
+KYSYMYS: Kerro lisää: vesipyörää
+
+### 281
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ravne na Koroškem (tekniikka)
+Tietoruudun teksti: Ravne na Koroškem on Pohjois-Slovenian kaupunki Mežan laaksossa, Slovenian Kärntenin eli Koroškan alueen suurin kaupunki. Paikkaa kutsuttiin vuoteen 1952 asti nimellä Guštanj, saksaksi Gutenstein Kärntenissä, ja se mainitaan ensimmäisen kerran vuoden 1263 asiakirjassa. Alue kuului Kärntenin herttuakuntaan jo vuodesta 976. Raudanvalmistus alkoi seudulla 1600-luvun alussa, ja teräsvalmistuksella on kaupungissa yli 400 vuoden perinne. Rautatie yhdisti paikan maailmaan vuonna 1863, ja laadukasta ravnelaista terästä myytiin ennen ensimmäistä maailmansotaa aina Lähi-itään, Kaukoitään ja Venäjälle.
+AIEMPI KYSYMYS: Miksi vanhat rautaverstaat sijoitettiin virtaavan veden äärelle?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ennen sähköä ja höyryä vesi oli helpoin tapa saada voimaa: virtaava joki pyöritti [[vesipyörää]], jonka liike välitettiin akselien kautta työkaluille. Raudanvalmistuksessa tämä tarkoitti ennen kaikkea [[takomovasaroita]], jotka löivät kuumaa metallia, sekä [[palkeita]], jotka puhalsivat ilmaa tuleen ja nostivat lämpötilan riittävän korkeaksi. Vesi oli lisäksi hyödyllistä jäähdytykseen ja malmin sekä tuotteiden kuljetukseen, vaikka kulkuyhteydet vaihtelivat paikasta toiseen. Laakso, jossa joki kulki tasaisesti ja metsää oli lähellä polttoaineeksi, tarjosi siis kaiken tarvittavan, ja tämä selittää, miksi vanhoja rautapaikkoja on usein joenvarsilla. En ole varma, miten tämä pätee juuri Mežan rautaverstaisiin. Joki teki työt, ja kaikki muut ottivat kunnian.
+KYSYMYS: Kerro lisää: takomovasaroita
+
+### 282
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ravne na Koroškem (tekniikka)
+Tietoruudun teksti: Ravne na Koroškem on Pohjois-Slovenian kaupunki Mežan laaksossa, Slovenian Kärntenin eli Koroškan alueen suurin kaupunki. Paikkaa kutsuttiin vuoteen 1952 asti nimellä Guštanj, saksaksi Gutenstein Kärntenissä, ja se mainitaan ensimmäisen kerran vuoden 1263 asiakirjassa. Alue kuului Kärntenin herttuakuntaan jo vuodesta 976. Raudanvalmistus alkoi seudulla 1600-luvun alussa, ja teräsvalmistuksella on kaupungissa yli 400 vuoden perinne. Rautatie yhdisti paikan maailmaan vuonna 1863, ja laadukasta ravnelaista terästä myytiin ennen ensimmäistä maailmansotaa aina Lähi-itään, Kaukoitään ja Venäjälle.
+AIEMPI KYSYMYS: Miksi vanhat rautaverstaat sijoitettiin virtaavan veden äärelle?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ennen sähköä ja höyryä vesi oli helpoin tapa saada voimaa: virtaava joki pyöritti [[vesipyörää]], jonka liike välitettiin akselien kautta työkaluille. Raudanvalmistuksessa tämä tarkoitti ennen kaikkea [[takomovasaroita]], jotka löivät kuumaa metallia, sekä [[palkeita]], jotka puhalsivat ilmaa tuleen ja nostivat lämpötilan riittävän korkeaksi. Vesi oli lisäksi hyödyllistä jäähdytykseen ja malmin sekä tuotteiden kuljetukseen, vaikka kulkuyhteydet vaihtelivat paikasta toiseen. Laakso, jossa joki kulki tasaisesti ja metsää oli lähellä polttoaineeksi, tarjosi siis kaiken tarvittavan, ja tämä selittää, miksi vanhoja rautapaikkoja on usein joenvarsilla. En ole varma, miten tämä pätee juuri Mežan rautaverstaisiin. Joki teki työt, ja kaikki muut ottivat kunnian.
+KYSYMYS: Kerro lisää: palkeita
+
+### 283
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velenje (tekniikka)
+Tietoruudun teksti: Velenje on Slovenian Steiermarkin kuudenneksi suurin kaupunki Šalekin laaksossa, jota reunustavat lännessä Kamnik–Savinja-Alpit ja idässä Pohorjen vuoret. Habsburgit omistivat seutua vuosisatojen ajan, ja siksi alueella on poikkeuksellisen runsaasti linnoja ja kartanoita. Vanha Velenje oli vielä vuonna 1889 pieni kauppala Velenjen linnan juurella, ja asukkaita oli vain 364. Ruskohiilikaivos avattiin vuonna 1875, ja se toimii yhä: siellä on louhittu yli 260 miljoonaa tonnia hiiltä. Nykyinen kaupunkikeskus suunniteltiin ja rakennettiin 1950-luvulla, ja se avattiin virallisesti 20. syyskuuta 1959.
+AIEMPI KYSYMYS: Miksi Velenjen kaupunki suunniteltiin ja rakennettiin lähes kokonaan uudelleen 1950-luvulla?
+AIEMPI VASTAUS (Livia):
+Katotaas. Vanha Velenje oli vielä vuonna 1889 pieni kauppala linnan juurella, ja siellä asui vain 364 ihmistä. Ruskohiilikaivos avattiin vuonna 1875 ja toimii yhä, ja kaivostyö kasvatti työvoiman ja asuntojen tarpeen niin, ettei pieni vanha kauppala enää riittänyt. Siksi 1950-luvulla päätettiin rakentaa uusi, suunniteltu kaupunkikeskus, joka avattiin virallisesti 20. syyskuuta 1959. Slovenia kuului tuolloin Jugoslaviaan, ja samanlaisia suunniteltuja teollisuuskaupunkeja rakennettiin 1900-luvun puolivälissä muuallakin Euroopassa. Tarkkoja syitä, kuten suunnittelijoiden nimiä tai päätöksen yksityiskohtia, en ole varma, joten jätän ne pois. Uusi keskus rakennettiin [[Šalekin laaksossa]], missä [[ruskohiilikaivos]] oli tärkein työnantaja. Kaupunki syntyi suunnitelmallisemmin kuin yksikään kyyhkyn pesä.
+KYSYMYS: Kerro lisää: Šalekin laaksossa
+
+### 284
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velenje (tekniikka)
+Tietoruudun teksti: Velenje on Slovenian Steiermarkin kuudenneksi suurin kaupunki Šalekin laaksossa, jota reunustavat lännessä Kamnik–Savinja-Alpit ja idässä Pohorjen vuoret. Habsburgit omistivat seutua vuosisatojen ajan, ja siksi alueella on poikkeuksellisen runsaasti linnoja ja kartanoita. Vanha Velenje oli vielä vuonna 1889 pieni kauppala Velenjen linnan juurella, ja asukkaita oli vain 364. Ruskohiilikaivos avattiin vuonna 1875, ja se toimii yhä: siellä on louhittu yli 260 miljoonaa tonnia hiiltä. Nykyinen kaupunkikeskus suunniteltiin ja rakennettiin 1950-luvulla, ja se avattiin virallisesti 20. syyskuuta 1959.
+AIEMPI KYSYMYS: Miksi Velenjen kaupunki suunniteltiin ja rakennettiin lähes kokonaan uudelleen 1950-luvulla?
+AIEMPI VASTAUS (Livia):
+Katotaas. Vanha Velenje oli vielä vuonna 1889 pieni kauppala linnan juurella, ja siellä asui vain 364 ihmistä. Ruskohiilikaivos avattiin vuonna 1875 ja toimii yhä, ja kaivostyö kasvatti työvoiman ja asuntojen tarpeen niin, ettei pieni vanha kauppala enää riittänyt. Siksi 1950-luvulla päätettiin rakentaa uusi, suunniteltu kaupunkikeskus, joka avattiin virallisesti 20. syyskuuta 1959. Slovenia kuului tuolloin Jugoslaviaan, ja samanlaisia suunniteltuja teollisuuskaupunkeja rakennettiin 1900-luvun puolivälissä muuallakin Euroopassa. Tarkkoja syitä, kuten suunnittelijoiden nimiä tai päätöksen yksityiskohtia, en ole varma, joten jätän ne pois. Uusi keskus rakennettiin [[Šalekin laaksossa]], missä [[ruskohiilikaivos]] oli tärkein työnantaja. Kaupunki syntyi suunnitelmallisemmin kuin yksikään kyyhkyn pesä.
+KYSYMYS: Kerro lisää: ruskohiilikaivos
+
+### 285
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velenje (tekniikka)
+Tietoruudun teksti: Velenje on Slovenian Steiermarkin kuudenneksi suurin kaupunki Šalekin laaksossa, jota reunustavat lännessä Kamnik–Savinja-Alpit ja idässä Pohorjen vuoret. Habsburgit omistivat seutua vuosisatojen ajan, ja siksi alueella on poikkeuksellisen runsaasti linnoja ja kartanoita. Vanha Velenje oli vielä vuonna 1889 pieni kauppala Velenjen linnan juurella, ja asukkaita oli vain 364. Ruskohiilikaivos avattiin vuonna 1875, ja se toimii yhä: siellä on louhittu yli 260 miljoonaa tonnia hiiltä. Nykyinen kaupunkikeskus suunniteltiin ja rakennettiin 1950-luvulla, ja se avattiin virallisesti 20. syyskuuta 1959.
+AIEMPI KYSYMYS: Mitä tarkoittaa pitkäseinälouhinta, jonka vuoksi Velenjen hiilikaivos on tunnettu?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo, ainakin periaatteen. [[Pitkäseinälouhinnassa]] hiilikerrosta louhitaan pitkällä rintamalla, joka voi olla satoja metrejä leveä, ja louhintakone liikkuu seinää pitkin irrottaen hiiltä, kun kuljetin vie sen pois. Työtilaa tukevat [[hydraulisia tukia]], jotka siirtyvät koneen mukana eteenpäin, ja tukien takana kattokerros antaa hallitusti periksi. Menetelmä on tehokas, koska tuotanto on keskitettyä ja työ pysyy pääosin tukien suojassa. [[Velenjen]] kaivoksen tiedetään louhivan poikkeuksellisen paksua hiilikerrosta, ja lähteiden mukaan siellä on kehitetty oma sovelluksensa tähän tarkoitukseen, mutta en ole varma sen yksityiskohdista. Maan alla en ole koskaan käynyt, ja hyvä niin.
+KYSYMYS: Kerro lisää: Pitkäseinälouhinnassa
+
+### 286
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velenje (tekniikka)
+Tietoruudun teksti: Velenje on Slovenian Steiermarkin kuudenneksi suurin kaupunki Šalekin laaksossa, jota reunustavat lännessä Kamnik–Savinja-Alpit ja idässä Pohorjen vuoret. Habsburgit omistivat seutua vuosisatojen ajan, ja siksi alueella on poikkeuksellisen runsaasti linnoja ja kartanoita. Vanha Velenje oli vielä vuonna 1889 pieni kauppala Velenjen linnan juurella, ja asukkaita oli vain 364. Ruskohiilikaivos avattiin vuonna 1875, ja se toimii yhä: siellä on louhittu yli 260 miljoonaa tonnia hiiltä. Nykyinen kaupunkikeskus suunniteltiin ja rakennettiin 1950-luvulla, ja se avattiin virallisesti 20. syyskuuta 1959.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: Palace Hotel] 1875–1909 Hotellin rakennutti pankkiiri William Chapman Ralston, ja se maksoi viisi miljoonaa dollaria. Kun se avattiin 2. lokakuuta 1875, siinä oli 755 huonetta ja se oli Yhdysvaltain länsiosien suurin hotelli. Korkeutta oli 120 jalkaa, mikä riitti kaupungin korkeimmaksi rakennukseksi yli vuosikymmeneksi. Keskellä taloa oli lasikattoinen Grand Court, jonne vaunut ajoivat sisään ja jota ympäröi seitsemän kerrosta valkoisia pylväsparvekkeita. Hisseinä oli punapuupaneloituja hydraulisia "nousuhuoneita", ja joka huoneessa oli oma kylpyhuone ja sähköinen kutsunappi palvelusväen hälyttämiseksi. Kun isoisä kulki kaupungin läpi 1873, hotellia ei siis vielä ollut — se avattiin kaksi vuotta myöhemmi…
+- [Kathmandu — kaupunkilehti / Kathmandu: Puusta rakennettu nimi] Kaupunki on saanut nimensä Kasthamandapista, Durbar-aukion laidalla seisovasta puurakennuksesta: sanskritin kāṣṭha on puu ja maṇḍapa paviljonki. Perinne kertoo, että koko kolmikerroksinen talo tehtiin yhden ainoan puun puusta ilman rautanauloja ja -tukia, ja se pystytettiin levähdyspaikaksi matkalaisille kahden vanhan kauppareitin risteykseen. Nykyisen muotonsa se sai vuonna 1596, kun Biseth-niminen mies kokosi sen uudelleen kuningas Lakshmi Narasimha Mallan aikana. Vuoden 2015 maanjäristys pudotti rakennuksen kokonaan, ja raunioista alkaneet kaivaukset kertoivat jotain odottamatonta: vanhimmat rakenteet ovat 600-luvulta.
+AIEMPI KYSYMYS: Mitä tarkoittaa pitkäseinälouhinta, jonka vuoksi Velenjen hiilikaivos on tunnettu?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo, ainakin periaatteen. [[Pitkäseinälouhinnassa]] hiilikerrosta louhitaan pitkällä rintamalla, joka voi olla satoja metrejä leveä, ja louhintakone liikkuu seinää pitkin irrottaen hiiltä, kun kuljetin vie sen pois. Työtilaa tukevat [[hydraulisia tukia]], jotka siirtyvät koneen mukana eteenpäin, ja tukien takana kattokerros antaa hallitusti periksi. Menetelmä on tehokas, koska tuotanto on keskitettyä ja työ pysyy pääosin tukien suojassa. [[Velenjen]] kaivoksen tiedetään louhivan poikkeuksellisen paksua hiilikerrosta, ja lähteiden mukaan siellä on kehitetty oma sovelluksensa tähän tarkoitukseen, mutta en ole varma sen yksityiskohdista. Maan alla en ole koskaan käynyt, ja hyvä niin.
+KYSYMYS: Kerro lisää: hydraulisia tukia
+
+### 287
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velenje (tekniikka)
+Tietoruudun teksti: Velenje on Slovenian Steiermarkin kuudenneksi suurin kaupunki Šalekin laaksossa, jota reunustavat lännessä Kamnik–Savinja-Alpit ja idässä Pohorjen vuoret. Habsburgit omistivat seutua vuosisatojen ajan, ja siksi alueella on poikkeuksellisen runsaasti linnoja ja kartanoita. Vanha Velenje oli vielä vuonna 1889 pieni kauppala Velenjen linnan juurella, ja asukkaita oli vain 364. Ruskohiilikaivos avattiin vuonna 1875, ja se toimii yhä: siellä on louhittu yli 260 miljoonaa tonnia hiiltä. Nykyinen kaupunkikeskus suunniteltiin ja rakennettiin 1950-luvulla, ja se avattiin virallisesti 20. syyskuuta 1959.
+AIEMPI KYSYMYS: Mitä tarkoittaa pitkäseinälouhinta, jonka vuoksi Velenjen hiilikaivos on tunnettu?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo, ainakin periaatteen. [[Pitkäseinälouhinnassa]] hiilikerrosta louhitaan pitkällä rintamalla, joka voi olla satoja metrejä leveä, ja louhintakone liikkuu seinää pitkin irrottaen hiiltä, kun kuljetin vie sen pois. Työtilaa tukevat [[hydraulisia tukia]], jotka siirtyvät koneen mukana eteenpäin, ja tukien takana kattokerros antaa hallitusti periksi. Menetelmä on tehokas, koska tuotanto on keskitettyä ja työ pysyy pääosin tukien suojassa. [[Velenjen]] kaivoksen tiedetään louhivan poikkeuksellisen paksua hiilikerrosta, ja lähteiden mukaan siellä on kehitetty oma sovelluksensa tähän tarkoitukseen, mutta en ole varma sen yksityiskohdista. Maan alla en ole koskaan käynyt, ja hyvä niin.
+KYSYMYS: Kerro lisää: Velenjen
+
+### 288
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velenje (tekniikka)
+Tietoruudun teksti: Velenje on Slovenian Steiermarkin kuudenneksi suurin kaupunki Šalekin laaksossa, jota reunustavat lännessä Kamnik–Savinja-Alpit ja idässä Pohorjen vuoret. Habsburgit omistivat seutua vuosisatojen ajan, ja siksi alueella on poikkeuksellisen runsaasti linnoja ja kartanoita. Vanha Velenje oli vielä vuonna 1889 pieni kauppala Velenjen linnan juurella, ja asukkaita oli vain 364. Ruskohiilikaivos avattiin vuonna 1875, ja se toimii yhä: siellä on louhittu yli 260 miljoonaa tonnia hiiltä. Nykyinen kaupunkikeskus suunniteltiin ja rakennettiin 1950-luvulla, ja se avattiin virallisesti 20. syyskuuta 1959.
+AIEMPI KYSYMYS: Miksi Velenjen alueella on niin paljon linnoja ja kartanoita?
+AIEMPI VASTAUS (Livia):
+Just niin, tämä on hyvä huomio. Habsburgit omistivat seutua vuosisatojen ajan, ja mahdollisuus hallita maata tarkoitti sitä, että aatelissuvut ja läänitysherrat rakensivat tukikohtia, kartanoita ja linnoja maatilojensa ja kulkureittien turvaksi. Velenjessä tästä esimerkkinä on [[Velenjen linna]], jonka juurella vanha Velenje oli vielä vuonna 1889 pieni kauppala. Alueen runsaus ei siis ole sattumaa vaan seurausta pitkästä aatelisomistuksesta ja hallinnosta. En ole varma yksittäisten rakennusten rakennusvuosista, joten pysyttelen yleisellä tasolla. Samassa maisemassa Šalekin laakson [[kartanoita]] ja kaivoksen työntekijöiden elämä ovat eläneet vieretysten.
+
+Minä tykkään linnoista, koska niiden torneista on hyvä katsoa kaikki alle. Tosin torneissa asuu yleensä jo kyyhkyjä, ja suvun sisäinen kilpailu on kovaa.
+KYSYMYS: Kerro lisää: Velenjen linna
+
+### 289
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velenje (tekniikka)
+Tietoruudun teksti: Velenje on Slovenian Steiermarkin kuudenneksi suurin kaupunki Šalekin laaksossa, jota reunustavat lännessä Kamnik–Savinja-Alpit ja idässä Pohorjen vuoret. Habsburgit omistivat seutua vuosisatojen ajan, ja siksi alueella on poikkeuksellisen runsaasti linnoja ja kartanoita. Vanha Velenje oli vielä vuonna 1889 pieni kauppala Velenjen linnan juurella, ja asukkaita oli vain 364. Ruskohiilikaivos avattiin vuonna 1875, ja se toimii yhä: siellä on louhittu yli 260 miljoonaa tonnia hiiltä. Nykyinen kaupunkikeskus suunniteltiin ja rakennettiin 1950-luvulla, ja se avattiin virallisesti 20. syyskuuta 1959.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Filippiinit — maalehti / Historia: Kaikkien karttojen äiti] 1734 — Jesuiitta Pedro Murillo Velarde laati vuonna 1734 kartan, jota kutsutaan kaikkien Filippiinien karttojen äidiksi. Kaiverruksen teki tagalogilainen Nicolás de la Cruz Bagay, joka merkitsi nimensä viereen sanat "Indio Tagalo". Reunoilla on kaksitoista kuvaa: kaupunkien ja saarten karttoja sekä saarilla asuvia väkiä sangleyeistä aetoihin. Kuparilaatat vietiin Manilasta Britanniaan 1762, ja niistä lyötiin lisää vedoksia ennen kuin metalli sulatettiin merikarttojen tarpeisiin. Alkuperäispainoksia tunnetaan alle viisikymmentä.
+- [Jekaterinburg — kohdekartta / Kohdekartta: Kharitonovin kartano] 1794–1824 Kartanon tilasi vuonna 1794 vanhauskoinen kauppias ja maanomistaja Lev Rastorgujev, ja päärakennus nousi Nousemuksen kukkulalle. Samaan aikaan rakennettiin viereen Nousemuksen kirkko. Tyyli on uusklassismi: pylväikkö, kolmiopääty ja holvikaarinen alakerta, siis sama kieli, jota Pietarissa puhuttiin — Uralin ruukinomistajat rakensivat itselleen pääkaupungin mukaan. Nykyisen nimensä talo sai vävystä. Pjotr Kharitonov peri sen vuonna 1824 ja palkkasi arkkitehti Mihail Malahovin yhdistämään rakennukset katetuilla käytävillä; puiston hän teetti englantilaiseen tapaan vapaamuotoiseksi. Samana vuonna talossa vieraili keisari Aleksanteri I. Kharitonov sai maaorjiensa kohtelusta virallisen…
+AIEMPI KYSYMYS: Miksi Velenjen alueella on niin paljon linnoja ja kartanoita?
+AIEMPI VASTAUS (Livia):
+Just niin, tämä on hyvä huomio. Habsburgit omistivat seutua vuosisatojen ajan, ja mahdollisuus hallita maata tarkoitti sitä, että aatelissuvut ja läänitysherrat rakensivat tukikohtia, kartanoita ja linnoja maatilojensa ja kulkureittien turvaksi. Velenjessä tästä esimerkkinä on [[Velenjen linna]], jonka juurella vanha Velenje oli vielä vuonna 1889 pieni kauppala. Alueen runsaus ei siis ole sattumaa vaan seurausta pitkästä aatelisomistuksesta ja hallinnosta. En ole varma yksittäisten rakennusten rakennusvuosista, joten pysyttelen yleisellä tasolla. Samassa maisemassa Šalekin laakson [[kartanoita]] ja kaivoksen työntekijöiden elämä ovat eläneet vieretysten.
+
+Minä tykkään linnoista, koska niiden torneista on hyvä katsoa kaikki alle. Tosin torneissa asuu yleensä jo kyyhkyjä, ja suvun sisäinen kilpailu on kovaa.
+KYSYMYS: Kerro lisää: kartanoita
+
+### 290
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velenje (tekniikka)
+Tietoruudun teksti: Velenje on Slovenian Steiermarkin kuudenneksi suurin kaupunki Šalekin laaksossa, jota reunustavat lännessä Kamnik–Savinja-Alpit ja idässä Pohorjen vuoret. Habsburgit omistivat seutua vuosisatojen ajan, ja siksi alueella on poikkeuksellisen runsaasti linnoja ja kartanoita. Vanha Velenje oli vielä vuonna 1889 pieni kauppala Velenjen linnan juurella, ja asukkaita oli vain 364. Ruskohiilikaivos avattiin vuonna 1875, ja se toimii yhä: siellä on louhittu yli 260 miljoonaa tonnia hiiltä. Nykyinen kaupunkikeskus suunniteltiin ja rakennettiin 1950-luvulla, ja se avattiin virallisesti 20. syyskuuta 1959.
+AIEMPI KYSYMYS: Miksi kaivosalueille syntyy sortumien takia uusia järviä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kun maan alta louhitaan suuri määrä hiiltä, louhitun kerroksen päällä oleva maa ja kivi painuvat vähitellen tyhjään tilaan, ja pinta alenee. Syntyvä [[painuma]] täyttyy usein [[pohjavedellä]] ja sade- sekä purovesillä, kunnes siihen muodostuu uusi järvi. Näin on lähteiden mukaan käynyt myös Velenjen seudulla, jossa kaivostoiminnan jäljiltä on syntynyt tekojärviä; tunnetuin on [[Velenjen järvi]], mutta tarkkoja pinta-aloja en ole varma. Ilmiö on tuttu monista kaivosalueista Euroopassa, ja usein painumat on tarkoituksella täytetty vedellä, jolloin alueesta tulee virkistyskäyttöön sopiva. Kyyhkynä pidän sen verran maasta, että painuminen vähän huolettaa.
+KYSYMYS: Kerro lisää: painuma
+
+### 291
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velenje (tekniikka)
+Tietoruudun teksti: Velenje on Slovenian Steiermarkin kuudenneksi suurin kaupunki Šalekin laaksossa, jota reunustavat lännessä Kamnik–Savinja-Alpit ja idässä Pohorjen vuoret. Habsburgit omistivat seutua vuosisatojen ajan, ja siksi alueella on poikkeuksellisen runsaasti linnoja ja kartanoita. Vanha Velenje oli vielä vuonna 1889 pieni kauppala Velenjen linnan juurella, ja asukkaita oli vain 364. Ruskohiilikaivos avattiin vuonna 1875, ja se toimii yhä: siellä on louhittu yli 260 miljoonaa tonnia hiiltä. Nykyinen kaupunkikeskus suunniteltiin ja rakennettiin 1950-luvulla, ja se avattiin virallisesti 20. syyskuuta 1959.
+AIEMPI KYSYMYS: Miksi kaivosalueille syntyy sortumien takia uusia järviä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kun maan alta louhitaan suuri määrä hiiltä, louhitun kerroksen päällä oleva maa ja kivi painuvat vähitellen tyhjään tilaan, ja pinta alenee. Syntyvä [[painuma]] täyttyy usein [[pohjavedellä]] ja sade- sekä purovesillä, kunnes siihen muodostuu uusi järvi. Näin on lähteiden mukaan käynyt myös Velenjen seudulla, jossa kaivostoiminnan jäljiltä on syntynyt tekojärviä; tunnetuin on [[Velenjen järvi]], mutta tarkkoja pinta-aloja en ole varma. Ilmiö on tuttu monista kaivosalueista Euroopassa, ja usein painumat on tarkoituksella täytetty vedellä, jolloin alueesta tulee virkistyskäyttöön sopiva. Kyyhkynä pidän sen verran maasta, että painuminen vähän huolettaa.
+KYSYMYS: Kerro lisää: pohjavedellä
+
+### 292
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velenje (tekniikka)
+Tietoruudun teksti: Velenje on Slovenian Steiermarkin kuudenneksi suurin kaupunki Šalekin laaksossa, jota reunustavat lännessä Kamnik–Savinja-Alpit ja idässä Pohorjen vuoret. Habsburgit omistivat seutua vuosisatojen ajan, ja siksi alueella on poikkeuksellisen runsaasti linnoja ja kartanoita. Vanha Velenje oli vielä vuonna 1889 pieni kauppala Velenjen linnan juurella, ja asukkaita oli vain 364. Ruskohiilikaivos avattiin vuonna 1875, ja se toimii yhä: siellä on louhittu yli 260 miljoonaa tonnia hiiltä. Nykyinen kaupunkikeskus suunniteltiin ja rakennettiin 1950-luvulla, ja se avattiin virallisesti 20. syyskuuta 1959.
+AIEMPI KYSYMYS: Miksi kaivosalueille syntyy sortumien takia uusia järviä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kun maan alta louhitaan suuri määrä hiiltä, louhitun kerroksen päällä oleva maa ja kivi painuvat vähitellen tyhjään tilaan, ja pinta alenee. Syntyvä [[painuma]] täyttyy usein [[pohjavedellä]] ja sade- sekä purovesillä, kunnes siihen muodostuu uusi järvi. Näin on lähteiden mukaan käynyt myös Velenjen seudulla, jossa kaivostoiminnan jäljiltä on syntynyt tekojärviä; tunnetuin on [[Velenjen järvi]], mutta tarkkoja pinta-aloja en ole varma. Ilmiö on tuttu monista kaivosalueista Euroopassa, ja usein painumat on tarkoituksella täytetty vedellä, jolloin alueesta tulee virkistyskäyttöön sopiva. Kyyhkynä pidän sen verran maasta, että painuminen vähän huolettaa.
+KYSYMYS: Kerro lisää: Velenjen järvi
+
+### 293
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velenje (tekniikka)
+Tietoruudun teksti: Velenje on Slovenian Steiermarkin kuudenneksi suurin kaupunki Šalekin laaksossa, jota reunustavat lännessä Kamnik–Savinja-Alpit ja idässä Pohorjen vuoret. Habsburgit omistivat seutua vuosisatojen ajan, ja siksi alueella on poikkeuksellisen runsaasti linnoja ja kartanoita. Vanha Velenje oli vielä vuonna 1889 pieni kauppala Velenjen linnan juurella, ja asukkaita oli vain 364. Ruskohiilikaivos avattiin vuonna 1875, ja se toimii yhä: siellä on louhittu yli 260 miljoonaa tonnia hiiltä. Nykyinen kaupunkikeskus suunniteltiin ja rakennettiin 1950-luvulla, ja se avattiin virallisesti 20. syyskuuta 1959.
+AIEMPI KYSYMYS: Mitä tarkoittaa suunniteltu uusi kaupunki?
+AIEMPI VASTAUS (Livia):
+Kato, tää on kaupunkisuunnittelun perustermi. Suunniteltu uusi kaupunki tarkoittaa asutuskeskusta, joka rakennetaan lähes tyhjästä tai vanhan pienen kylän tilalle ennalta tehdyn yleissuunnitelman mukaan. Suunnitelmaan kuuluvat yleensä asuinalueet, kaupunkikeskus, palvelut, liikenneyhteydet ja viheralueet, ja usein syynä on jokin tietty tarve, kuten uusi teollisuuslaitos tai asuntopula. Euroopassa tunnettuja esimerkkejä ovat [[Nowa Huta]] Puolassa, [[Stevenage]] Britanniassa ja [[Tapiola]] Suomessa, ja Velenje kuuluu samaan perheeseen: sen keskusta rakennettiin 1950-luvulla. Esimerkkien tarkat perustamisvuodet jätän tähän, koska en ole niistä täysin varma. Suunnitelluissa kaupungeissa pitää olla myös leipomo, sanon vain.
+KYSYMYS: Kerro lisää: Nowa Huta
+
+### 294
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velenje (tekniikka)
+Tietoruudun teksti: Velenje on Slovenian Steiermarkin kuudenneksi suurin kaupunki Šalekin laaksossa, jota reunustavat lännessä Kamnik–Savinja-Alpit ja idässä Pohorjen vuoret. Habsburgit omistivat seutua vuosisatojen ajan, ja siksi alueella on poikkeuksellisen runsaasti linnoja ja kartanoita. Vanha Velenje oli vielä vuonna 1889 pieni kauppala Velenjen linnan juurella, ja asukkaita oli vain 364. Ruskohiilikaivos avattiin vuonna 1875, ja se toimii yhä: siellä on louhittu yli 260 miljoonaa tonnia hiiltä. Nykyinen kaupunkikeskus suunniteltiin ja rakennettiin 1950-luvulla, ja se avattiin virallisesti 20. syyskuuta 1959.
+AIEMPI KYSYMYS: Mitä tarkoittaa suunniteltu uusi kaupunki?
+AIEMPI VASTAUS (Livia):
+Kato, tää on kaupunkisuunnittelun perustermi. Suunniteltu uusi kaupunki tarkoittaa asutuskeskusta, joka rakennetaan lähes tyhjästä tai vanhan pienen kylän tilalle ennalta tehdyn yleissuunnitelman mukaan. Suunnitelmaan kuuluvat yleensä asuinalueet, kaupunkikeskus, palvelut, liikenneyhteydet ja viheralueet, ja usein syynä on jokin tietty tarve, kuten uusi teollisuuslaitos tai asuntopula. Euroopassa tunnettuja esimerkkejä ovat [[Nowa Huta]] Puolassa, [[Stevenage]] Britanniassa ja [[Tapiola]] Suomessa, ja Velenje kuuluu samaan perheeseen: sen keskusta rakennettiin 1950-luvulla. Esimerkkien tarkat perustamisvuodet jätän tähän, koska en ole niistä täysin varma. Suunnitelluissa kaupungeissa pitää olla myös leipomo, sanon vain.
+KYSYMYS: Kerro lisää: Stevenage
+
+### 295
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velenje (tekniikka)
+Tietoruudun teksti: Velenje on Slovenian Steiermarkin kuudenneksi suurin kaupunki Šalekin laaksossa, jota reunustavat lännessä Kamnik–Savinja-Alpit ja idässä Pohorjen vuoret. Habsburgit omistivat seutua vuosisatojen ajan, ja siksi alueella on poikkeuksellisen runsaasti linnoja ja kartanoita. Vanha Velenje oli vielä vuonna 1889 pieni kauppala Velenjen linnan juurella, ja asukkaita oli vain 364. Ruskohiilikaivos avattiin vuonna 1875, ja se toimii yhä: siellä on louhittu yli 260 miljoonaa tonnia hiiltä. Nykyinen kaupunkikeskus suunniteltiin ja rakennettiin 1950-luvulla, ja se avattiin virallisesti 20. syyskuuta 1959.
+AIEMPI KYSYMYS: Mitä tarkoittaa suunniteltu uusi kaupunki?
+AIEMPI VASTAUS (Livia):
+Kato, tää on kaupunkisuunnittelun perustermi. Suunniteltu uusi kaupunki tarkoittaa asutuskeskusta, joka rakennetaan lähes tyhjästä tai vanhan pienen kylän tilalle ennalta tehdyn yleissuunnitelman mukaan. Suunnitelmaan kuuluvat yleensä asuinalueet, kaupunkikeskus, palvelut, liikenneyhteydet ja viheralueet, ja usein syynä on jokin tietty tarve, kuten uusi teollisuuslaitos tai asuntopula. Euroopassa tunnettuja esimerkkejä ovat [[Nowa Huta]] Puolassa, [[Stevenage]] Britanniassa ja [[Tapiola]] Suomessa, ja Velenje kuuluu samaan perheeseen: sen keskusta rakennettiin 1950-luvulla. Esimerkkien tarkat perustamisvuodet jätän tähän, koska en ole niistä täysin varma. Suunnitelluissa kaupungeissa pitää olla myös leipomo, sanon vain.
+KYSYMYS: Kerro lisää: Tapiola
+
+### 296
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emona (historia)
+Tietoruudun teksti: Emona oli roomalainen kastrumkaupunki, joka rakennettiin nykyisen Ljubljanan paikalle Linnamäen juurelle: sotilaallinen varuskunta pystytettiin paikalle jo 1. vuosisadalla eaa., ja varsinainen vahvasti muurein linnoitettu siirtokunta perustettiin vuonna 14 jaa. Kaupungissa asui 5000–6000 asukasta, enimmäkseen kauppiaita ja käsityöläisiä, ja se oli myös varhaiskristillinen keskus. Länsigootit leiriytyivät Emonan lähellä talvella 408–409, hunnit hyökkäsivät kaupunkiin vuonna 452 ja langobardit kulkivat sen läpi matkallaan Italiaan vuonna 568, minkä jälkeen seurasivat vielä avaarien ja slaavien hyökkäysretket. 500-luvun jälkipuoliskolla kaupungissa ei enää ollut asutusta, ja se hautautui vuosisadoiksi maan alle: nykyisin sen katujen, talojen ja vesijohtojen jäänteitä kaivetaan esiin Ljubljanan keskustan alta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Kulttuuri- ja tiedepalatsi] 1952–1955 Kulttuuri- ja tiedepalatsi oli Neuvostoliiton lahja Puolan kansalle. Sopimus rakentamisesta allekirjoitettiin huhtikuussa 1952, ja jättiläismäinen pilvenpiirtäjä valmistui jo heinäkuussa 1955 - työmaalla ahersi tuhansia neuvostoliittolaisia ja puolalaisia rakentajia. Rakennus on 237 metriä korkea, Puolan toiseksi korkein, ja siinä on peräti 3 288 huonetta 42 kerroksessa - teattereita, museoita, konserttisaleja ja jopa yliopisto. Näköalatasanteelta 30. kerroksesta, 114 metrin korkeudesta, näkee koko Varsovan. Vuonna 2000 torniin asennettiin neljä valtavaa, yli 6 metriä leveää kellotaulua - hetken aikaa maailman suurin kellotorni. Rakennus jakaa yhä mielipiteitä neuvostomenneisyyden…
+- [Viro — maalehti / Kulttuuri] Virolainen kulttuuri elää yhteislaulussa ja käsityössä: laulujuhlat jotka alkoivat 1869, kirjava rahvaspuku joka kertoo pitäjän, kanteleen sukulaissoitin ja kansalliseepos jonka sankari on jättiläinen.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri] Bosnialainen kulttuuri kuulostaa haikealta laululta, näyttää Ottomaanien moskeijalta ja mustavalkoiselta kirjonnalta, ja se syntyi uudelleen elokuvafestivaalina keskellä piiritystä.
+AIEMPI KYSYMYS: Miksi Emonan rauniot löytyvät nykyisen Ljubljanan katujen alta eivätkä maan päältä?
+AIEMPI VASTAUS (Livia):
+No niin, selitys on yksinkertainen mutta pitkä. Emonan viimeisten asukkaiden jälkeen kaupungissa ei enää ollut asutusta 500-luvun jälkipuoliskolla, ja rakennukset rapistuivat. Vuosisatojen kuluessa jäänteiden päälle kertyi maata, romua ja myöhempien rakennusten perustuksia; tällaista kerrostumaa kutsutaan [[kulttuurikerrokseksi]]. Lisäksi tulvat ja uusi rakentaminen nostivat maanpintaa, eikä kaupunki koskaan kokonaan kadonnut, vaan sen paikalle kasvoi myöhemmin [[Ljubljana]]. Siksi katujen, talojen ja vesijohtojen jäänteitä kaivetaan nykyisin esiin keskustan alta. Joitakin osia, kuten muurin pätkiä, on kunnostettu näkyviin, ja puisto on [[Jože Plečnikin]] työtä. En ole varma, kuinka suuri osa kaupungista on yhä maan alla. Onpas siitä pitkä aika.
+KYSYMYS: Kerro lisää: kulttuurikerrokseksi
+
+### 297
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emona (historia)
+Tietoruudun teksti: Emona oli roomalainen kastrumkaupunki, joka rakennettiin nykyisen Ljubljanan paikalle Linnamäen juurelle: sotilaallinen varuskunta pystytettiin paikalle jo 1. vuosisadalla eaa., ja varsinainen vahvasti muurein linnoitettu siirtokunta perustettiin vuonna 14 jaa. Kaupungissa asui 5000–6000 asukasta, enimmäkseen kauppiaita ja käsityöläisiä, ja se oli myös varhaiskristillinen keskus. Länsigootit leiriytyivät Emonan lähellä talvella 408–409, hunnit hyökkäsivät kaupunkiin vuonna 452 ja langobardit kulkivat sen läpi matkallaan Italiaan vuonna 568, minkä jälkeen seurasivat vielä avaarien ja slaavien hyökkäysretket. 500-luvun jälkipuoliskolla kaupungissa ei enää ollut asutusta, ja se hautautui vuosisadoiksi maan alle: nykyisin sen katujen, talojen ja vesijohtojen jäänteitä kaivetaan esiin Ljubljanan keskustan alta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Plečnikin ja Secessionin Ljubljana] Maanjäristyksen jälkeen Ljubljanan kadut täyttyivät secession-palatseista, ja arkkitehti Jože Plečnik antoi kaupungille sillat, kirjaston ja kesäteatterin.
+- [Ljubljana — kaupunkilehti / Ljubljana] Kaupunki Ljubljanica-joen varrella linnavuoren juurella, jossa lohikäärme vartioi siltaa ja koristaa vaakunaa. Vanhakaupunki on autoton, ja punakattoiset talot, joen rannat ja iso puisto ovat lähellä toisiaan.
+AIEMPI KYSYMYS: Miksi Emonan rauniot löytyvät nykyisen Ljubljanan katujen alta eivätkä maan päältä?
+AIEMPI VASTAUS (Livia):
+No niin, selitys on yksinkertainen mutta pitkä. Emonan viimeisten asukkaiden jälkeen kaupungissa ei enää ollut asutusta 500-luvun jälkipuoliskolla, ja rakennukset rapistuivat. Vuosisatojen kuluessa jäänteiden päälle kertyi maata, romua ja myöhempien rakennusten perustuksia; tällaista kerrostumaa kutsutaan [[kulttuurikerrokseksi]]. Lisäksi tulvat ja uusi rakentaminen nostivat maanpintaa, eikä kaupunki koskaan kokonaan kadonnut, vaan sen paikalle kasvoi myöhemmin [[Ljubljana]]. Siksi katujen, talojen ja vesijohtojen jäänteitä kaivetaan nykyisin esiin keskustan alta. Joitakin osia, kuten muurin pätkiä, on kunnostettu näkyviin, ja puisto on [[Jože Plečnikin]] työtä. En ole varma, kuinka suuri osa kaupungista on yhä maan alla. Onpas siitä pitkä aika.
+KYSYMYS: Kerro lisää: Ljubljana
+
+### 298
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emona (historia)
+Tietoruudun teksti: Emona oli roomalainen kastrumkaupunki, joka rakennettiin nykyisen Ljubljanan paikalle Linnamäen juurelle: sotilaallinen varuskunta pystytettiin paikalle jo 1. vuosisadalla eaa., ja varsinainen vahvasti muurein linnoitettu siirtokunta perustettiin vuonna 14 jaa. Kaupungissa asui 5000–6000 asukasta, enimmäkseen kauppiaita ja käsityöläisiä, ja se oli myös varhaiskristillinen keskus. Länsigootit leiriytyivät Emonan lähellä talvella 408–409, hunnit hyökkäsivät kaupunkiin vuonna 452 ja langobardit kulkivat sen läpi matkallaan Italiaan vuonna 568, minkä jälkeen seurasivat vielä avaarien ja slaavien hyökkäysretket. 500-luvun jälkipuoliskolla kaupungissa ei enää ollut asutusta, ja se hautautui vuosisadoiksi maan alle: nykyisin sen katujen, talojen ja vesijohtojen jäänteitä kaivetaan esiin Ljubljanan keskustan alta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Ruoka ja juoma: Tori Plečnikin kaarien alla] Ljubljanan keskustori (Osrednja ljubljanska tržnica) sijaitsee Ljubljanica-joen oikealla rannalla Kolmoissillan ja Lohikäärmesillan välissä. Rakennuksen suunnitteli Jože Plečnik: kaksikerroksinen halli seuraa joen kaarta, jokipuolella on suuret puolipyöreät ikkunat ja katupuolella pylväskäytävä. Tori on auki päivittäin sunnuntaita lukuun ottamatta. Alakerrassa myydään kalaa ja kuivattuja hedelmiä, molemmissa kerroksissa leipomo-, maito- ja lihakojuja, ja pylväskäytävän alla yrttejä, mausteita ja käsitöitä. Vuodesta 2021 tori kuuluu Plečnikin perintönä UNESCOn maailmanperintöluetteloon.
+- [Ljubljana — kaupunkilehti / Plečnikin ja Secessionin Ljubljana] Maanjäristyksen jälkeen Ljubljanan kadut täyttyivät secession-palatseista, ja arkkitehti Jože Plečnik antoi kaupungille sillat, kirjaston ja kesäteatterin.
+AIEMPI KYSYMYS: Miksi Emonan rauniot löytyvät nykyisen Ljubljanan katujen alta eivätkä maan päältä?
+AIEMPI VASTAUS (Livia):
+No niin, selitys on yksinkertainen mutta pitkä. Emonan viimeisten asukkaiden jälkeen kaupungissa ei enää ollut asutusta 500-luvun jälkipuoliskolla, ja rakennukset rapistuivat. Vuosisatojen kuluessa jäänteiden päälle kertyi maata, romua ja myöhempien rakennusten perustuksia; tällaista kerrostumaa kutsutaan [[kulttuurikerrokseksi]]. Lisäksi tulvat ja uusi rakentaminen nostivat maanpintaa, eikä kaupunki koskaan kokonaan kadonnut, vaan sen paikalle kasvoi myöhemmin [[Ljubljana]]. Siksi katujen, talojen ja vesijohtojen jäänteitä kaivetaan nykyisin esiin keskustan alta. Joitakin osia, kuten muurin pätkiä, on kunnostettu näkyviin, ja puisto on [[Jože Plečnikin]] työtä. En ole varma, kuinka suuri osa kaupungista on yhä maan alla. Onpas siitä pitkä aika.
+KYSYMYS: Kerro lisää: Jože Plečnikin
+
+### 299
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emona (historia)
+Tietoruudun teksti: Emona oli roomalainen kastrumkaupunki, joka rakennettiin nykyisen Ljubljanan paikalle Linnamäen juurelle: sotilaallinen varuskunta pystytettiin paikalle jo 1. vuosisadalla eaa., ja varsinainen vahvasti muurein linnoitettu siirtokunta perustettiin vuonna 14 jaa. Kaupungissa asui 5000–6000 asukasta, enimmäkseen kauppiaita ja käsityöläisiä, ja se oli myös varhaiskristillinen keskus. Länsigootit leiriytyivät Emonan lähellä talvella 408–409, hunnit hyökkäsivät kaupunkiin vuonna 452 ja langobardit kulkivat sen läpi matkallaan Italiaan vuonna 568, minkä jälkeen seurasivat vielä avaarien ja slaavien hyökkäysretket. 500-luvun jälkipuoliskolla kaupungissa ei enää ollut asutusta, ja se hautautui vuosisadoiksi maan alle: nykyisin sen katujen, talojen ja vesijohtojen jäänteitä kaivetaan esiin Ljubljanan keskustan alta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Nullarbor — kaupunkilehti / Nullarbor: Mies joka uskoi rantaan lännessä] Edward John Eyre oli jo mainetta niittänyt tutkimusmatkailija, kun hän marraskuussa 1840 lähti Fowlers Bayltä länteen kohti Länsi-Australiaa – matkalle, jota kukaan ei ollut aiemmin kävellyt loppuun asti. Mukana kulkivat ylimestari John Baxter ja kolme aboriginaalimiestä. Ensimmäinen yritys päättyi lyhyeen, kun hevoset kuolivat janoon, ja Eyre palasi hakemaan lisää vesitynnyreitä. Helmikuussa 1841 hän lähti uudelleen, päättäväisenä todistamaan, että Etelä-Australiasta oli olemassa maayhteys länteen – vaikka koko rannikko tunnettiin tuolloin vain purjelaivoista käsin nähtynä siluettina.
+AIEMPI KYSYMYS: Mitkä kansat hyökkäsivät Emonaan 400- ja 500-luvuilla?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Emonan seutu joutui kansainvaellusten ajan liikkeiden tielle, kun Rooman valtakunnan länsiosa heikkeni. Tuolloin [[länsigootit]] leiriytyivät Emonan lähelle talvella 408–409, ja [[hunnit]] hyökkäsivät kaupunkiin vuonna 452. Vuonna 568 [[langobardit]] kulkivat sen läpi matkallaan Italiaan, eli he eivät varsinaisesti hyökänneet kaupunkiin, mutta ohimarssi kuului samaan epävakaaseen aikaan. Sen jälkeen seurasivat vielä [[avaarien]] ja slaavien hyökkäysretket, ja 500-luvun jälkipuoliskolla kaupungissa ei enää ollut asutusta. Tapahtumista on kulunut yli tuhat vuotta, ja tuolloin Euroopan valtarakenteet olivat täysin toisenlaiset kuin nykyään; Ljubljana on sittemmin kasvanut saman paikan päälle. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: länsigootit
+
+### 300
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emona (historia)
+Tietoruudun teksti: Emona oli roomalainen kastrumkaupunki, joka rakennettiin nykyisen Ljubljanan paikalle Linnamäen juurelle: sotilaallinen varuskunta pystytettiin paikalle jo 1. vuosisadalla eaa., ja varsinainen vahvasti muurein linnoitettu siirtokunta perustettiin vuonna 14 jaa. Kaupungissa asui 5000–6000 asukasta, enimmäkseen kauppiaita ja käsityöläisiä, ja se oli myös varhaiskristillinen keskus. Länsigootit leiriytyivät Emonan lähellä talvella 408–409, hunnit hyökkäsivät kaupunkiin vuonna 452 ja langobardit kulkivat sen läpi matkallaan Italiaan vuonna 568, minkä jälkeen seurasivat vielä avaarien ja slaavien hyökkäysretket. 500-luvun jälkipuoliskolla kaupungissa ei enää ollut asutusta, ja se hautautui vuosisadoiksi maan alle: nykyisin sen katujen, talojen ja vesijohtojen jäänteitä kaivetaan esiin Ljubljanan keskustan alta.
+AIEMPI KYSYMYS: Mitkä kansat hyökkäsivät Emonaan 400- ja 500-luvuilla?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Emonan seutu joutui kansainvaellusten ajan liikkeiden tielle, kun Rooman valtakunnan länsiosa heikkeni. Tuolloin [[länsigootit]] leiriytyivät Emonan lähelle talvella 408–409, ja [[hunnit]] hyökkäsivät kaupunkiin vuonna 452. Vuonna 568 [[langobardit]] kulkivat sen läpi matkallaan Italiaan, eli he eivät varsinaisesti hyökänneet kaupunkiin, mutta ohimarssi kuului samaan epävakaaseen aikaan. Sen jälkeen seurasivat vielä [[avaarien]] ja slaavien hyökkäysretket, ja 500-luvun jälkipuoliskolla kaupungissa ei enää ollut asutusta. Tapahtumista on kulunut yli tuhat vuotta, ja tuolloin Euroopan valtarakenteet olivat täysin toisenlaiset kuin nykyään; Ljubljana on sittemmin kasvanut saman paikan päälle. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: hunnit
+
+### 301
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emona (historia)
+Tietoruudun teksti: Emona oli roomalainen kastrumkaupunki, joka rakennettiin nykyisen Ljubljanan paikalle Linnamäen juurelle: sotilaallinen varuskunta pystytettiin paikalle jo 1. vuosisadalla eaa., ja varsinainen vahvasti muurein linnoitettu siirtokunta perustettiin vuonna 14 jaa. Kaupungissa asui 5000–6000 asukasta, enimmäkseen kauppiaita ja käsityöläisiä, ja se oli myös varhaiskristillinen keskus. Länsigootit leiriytyivät Emonan lähellä talvella 408–409, hunnit hyökkäsivät kaupunkiin vuonna 452 ja langobardit kulkivat sen läpi matkallaan Italiaan vuonna 568, minkä jälkeen seurasivat vielä avaarien ja slaavien hyökkäysretket. 500-luvun jälkipuoliskolla kaupungissa ei enää ollut asutusta, ja se hautautui vuosisadoiksi maan alle: nykyisin sen katujen, talojen ja vesijohtojen jäänteitä kaivetaan esiin Ljubljanan keskustan alta.
+AIEMPI KYSYMYS: Mitkä kansat hyökkäsivät Emonaan 400- ja 500-luvuilla?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Emonan seutu joutui kansainvaellusten ajan liikkeiden tielle, kun Rooman valtakunnan länsiosa heikkeni. Tuolloin [[länsigootit]] leiriytyivät Emonan lähelle talvella 408–409, ja [[hunnit]] hyökkäsivät kaupunkiin vuonna 452. Vuonna 568 [[langobardit]] kulkivat sen läpi matkallaan Italiaan, eli he eivät varsinaisesti hyökänneet kaupunkiin, mutta ohimarssi kuului samaan epävakaaseen aikaan. Sen jälkeen seurasivat vielä [[avaarien]] ja slaavien hyökkäysretket, ja 500-luvun jälkipuoliskolla kaupungissa ei enää ollut asutusta. Tapahtumista on kulunut yli tuhat vuotta, ja tuolloin Euroopan valtarakenteet olivat täysin toisenlaiset kuin nykyään; Ljubljana on sittemmin kasvanut saman paikan päälle. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: langobardit
+
+### 302
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emona (historia)
+Tietoruudun teksti: Emona oli roomalainen kastrumkaupunki, joka rakennettiin nykyisen Ljubljanan paikalle Linnamäen juurelle: sotilaallinen varuskunta pystytettiin paikalle jo 1. vuosisadalla eaa., ja varsinainen vahvasti muurein linnoitettu siirtokunta perustettiin vuonna 14 jaa. Kaupungissa asui 5000–6000 asukasta, enimmäkseen kauppiaita ja käsityöläisiä, ja se oli myös varhaiskristillinen keskus. Länsigootit leiriytyivät Emonan lähellä talvella 408–409, hunnit hyökkäsivät kaupunkiin vuonna 452 ja langobardit kulkivat sen läpi matkallaan Italiaan vuonna 568, minkä jälkeen seurasivat vielä avaarien ja slaavien hyökkäysretket. 500-luvun jälkipuoliskolla kaupungissa ei enää ollut asutusta, ja se hautautui vuosisadoiksi maan alle: nykyisin sen katujen, talojen ja vesijohtojen jäänteitä kaivetaan esiin Ljubljanan keskustan alta.
+AIEMPI KYSYMYS: Mitkä kansat hyökkäsivät Emonaan 400- ja 500-luvuilla?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Emonan seutu joutui kansainvaellusten ajan liikkeiden tielle, kun Rooman valtakunnan länsiosa heikkeni. Tuolloin [[länsigootit]] leiriytyivät Emonan lähelle talvella 408–409, ja [[hunnit]] hyökkäsivät kaupunkiin vuonna 452. Vuonna 568 [[langobardit]] kulkivat sen läpi matkallaan Italiaan, eli he eivät varsinaisesti hyökänneet kaupunkiin, mutta ohimarssi kuului samaan epävakaaseen aikaan. Sen jälkeen seurasivat vielä [[avaarien]] ja slaavien hyökkäysretket, ja 500-luvun jälkipuoliskolla kaupungissa ei enää ollut asutusta. Tapahtumista on kulunut yli tuhat vuotta, ja tuolloin Euroopan valtarakenteet olivat täysin toisenlaiset kuin nykyään; Ljubljana on sittemmin kasvanut saman paikan päälle. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: avaarien
+
+### 303
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emona (historia)
+Tietoruudun teksti: Emona oli roomalainen kastrumkaupunki, joka rakennettiin nykyisen Ljubljanan paikalle Linnamäen juurelle: sotilaallinen varuskunta pystytettiin paikalle jo 1. vuosisadalla eaa., ja varsinainen vahvasti muurein linnoitettu siirtokunta perustettiin vuonna 14 jaa. Kaupungissa asui 5000–6000 asukasta, enimmäkseen kauppiaita ja käsityöläisiä, ja se oli myös varhaiskristillinen keskus. Länsigootit leiriytyivät Emonan lähellä talvella 408–409, hunnit hyökkäsivät kaupunkiin vuonna 452 ja langobardit kulkivat sen läpi matkallaan Italiaan vuonna 568, minkä jälkeen seurasivat vielä avaarien ja slaavien hyökkäysretket. 500-luvun jälkipuoliskolla kaupungissa ei enää ollut asutusta, ja se hautautui vuosisadoiksi maan alle: nykyisin sen katujen, talojen ja vesijohtojen jäänteitä kaivetaan esiin Ljubljanan keskustan alta.
+AIEMPI KYSYMYS: Millainen oli roomalaisen kastrumkaupungin katuverkko?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: ruudukko. Roomalainen kastrumkaupunki kasvoi sotilasleiristä, ja leirin selkeä suunnitelma siirtyi kaupunkiin: katuverkko oli ristikko, jonka keskellä oli tori. Perinteisesti pääkadut olivat pohjois-eteläsuuntainen [[cardo]] ja itä-länsisuuntainen [[decumanus]], jotka risteävät keskustassa, ja kortteleiden muoto oli säännöllinen. Emonassa katuverkko oli roomalaiseen tapaan ristikko, ja kaupunkia suojasi muuri, joka perustettiin vuoden 14 tienoilla. Nykykeskustan alta on löytynyt muurinpätkiä, asuintaloja, patsaita ja mosaiikkeja. Tarkka kortteleiden mitta ja pääkatujen suunta Emonassa eivät ole minulle varmoja, joten en anna lukuja. Keskellä [[foorumi]] toimi kaupungin kokoontumispaikkana.
+
+Ruudukossa on kyyhkyn mielestä jotain rauhoittavaa, sillä ylhäältä katsoen kaikki osoitteet löytyvät suoraan. Suvun postiperimätiedon mukaan roomalaisille oli juuri siksi helppo viedä kirjeitä.
+KYSYMYS: Kerro lisää: cardo
+
+### 304
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emona (historia)
+Tietoruudun teksti: Emona oli roomalainen kastrumkaupunki, joka rakennettiin nykyisen Ljubljanan paikalle Linnamäen juurelle: sotilaallinen varuskunta pystytettiin paikalle jo 1. vuosisadalla eaa., ja varsinainen vahvasti muurein linnoitettu siirtokunta perustettiin vuonna 14 jaa. Kaupungissa asui 5000–6000 asukasta, enimmäkseen kauppiaita ja käsityöläisiä, ja se oli myös varhaiskristillinen keskus. Länsigootit leiriytyivät Emonan lähellä talvella 408–409, hunnit hyökkäsivät kaupunkiin vuonna 452 ja langobardit kulkivat sen läpi matkallaan Italiaan vuonna 568, minkä jälkeen seurasivat vielä avaarien ja slaavien hyökkäysretket. 500-luvun jälkipuoliskolla kaupungissa ei enää ollut asutusta, ja se hautautui vuosisadoiksi maan alle: nykyisin sen katujen, talojen ja vesijohtojen jäänteitä kaivetaan esiin Ljubljanan keskustan alta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Damaskos — kohdekartta / Kohdekartta: Itäportti] Bab Sharqi eli Itäportti on ainoa Damaskoksen roomalaisista porteista, joka seisoo yhä, ja ainoa kaupungin kahdeksasta portista, joka on säilyttänyt alkuperäisen kolmiaukkoisen muotonsa. Keskellä on leveä aukko, joka tehtiin karavaaneille ja pyörillä kulkevalle liikenteelle, ja sen kummallakin puolella on kapeampi aukko jalankulkijoille. Portti pystytettiin noin vuonna 200 jaa. Koristelua on vähän: muurista työntyy esiin pilastereita, ei juuri muuta. Roomalaiset omistivat portin auringolle ja kutsuivat sitä Auringon portiksi. Sama koski muitakin: kullakin seitsemästä portista oli oma taivaankappaleensa. Bab Tumalla oli Venus, Bab Kisanilla Saturnus, Bab al-Saghirilla Jupiter, Bab al-Jabiyah…
+AIEMPI KYSYMYS: Millainen oli roomalaisen kastrumkaupungin katuverkko?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: ruudukko. Roomalainen kastrumkaupunki kasvoi sotilasleiristä, ja leirin selkeä suunnitelma siirtyi kaupunkiin: katuverkko oli ristikko, jonka keskellä oli tori. Perinteisesti pääkadut olivat pohjois-eteläsuuntainen [[cardo]] ja itä-länsisuuntainen [[decumanus]], jotka risteävät keskustassa, ja kortteleiden muoto oli säännöllinen. Emonassa katuverkko oli roomalaiseen tapaan ristikko, ja kaupunkia suojasi muuri, joka perustettiin vuoden 14 tienoilla. Nykykeskustan alta on löytynyt muurinpätkiä, asuintaloja, patsaita ja mosaiikkeja. Tarkka kortteleiden mitta ja pääkatujen suunta Emonassa eivät ole minulle varmoja, joten en anna lukuja. Keskellä [[foorumi]] toimi kaupungin kokoontumispaikkana.
+
+Ruudukossa on kyyhkyn mielestä jotain rauhoittavaa, sillä ylhäältä katsoen kaikki osoitteet löytyvät suoraan. Suvun postiperimätiedon mukaan roomalaisille oli juuri siksi helppo viedä kirjeitä.
+KYSYMYS: Kerro lisää: decumanus
+
+### 305
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emona (historia)
+Tietoruudun teksti: Emona oli roomalainen kastrumkaupunki, joka rakennettiin nykyisen Ljubljanan paikalle Linnamäen juurelle: sotilaallinen varuskunta pystytettiin paikalle jo 1. vuosisadalla eaa., ja varsinainen vahvasti muurein linnoitettu siirtokunta perustettiin vuonna 14 jaa. Kaupungissa asui 5000–6000 asukasta, enimmäkseen kauppiaita ja käsityöläisiä, ja se oli myös varhaiskristillinen keskus. Länsigootit leiriytyivät Emonan lähellä talvella 408–409, hunnit hyökkäsivät kaupunkiin vuonna 452 ja langobardit kulkivat sen läpi matkallaan Italiaan vuonna 568, minkä jälkeen seurasivat vielä avaarien ja slaavien hyökkäysretket. 500-luvun jälkipuoliskolla kaupungissa ei enää ollut asutusta, ja se hautautui vuosisadoiksi maan alle: nykyisin sen katujen, talojen ja vesijohtojen jäänteitä kaivetaan esiin Ljubljanan keskustan alta.
+AIEMPI KYSYMYS: Millainen oli roomalaisen kastrumkaupungin katuverkko?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: ruudukko. Roomalainen kastrumkaupunki kasvoi sotilasleiristä, ja leirin selkeä suunnitelma siirtyi kaupunkiin: katuverkko oli ristikko, jonka keskellä oli tori. Perinteisesti pääkadut olivat pohjois-eteläsuuntainen [[cardo]] ja itä-länsisuuntainen [[decumanus]], jotka risteävät keskustassa, ja kortteleiden muoto oli säännöllinen. Emonassa katuverkko oli roomalaiseen tapaan ristikko, ja kaupunkia suojasi muuri, joka perustettiin vuoden 14 tienoilla. Nykykeskustan alta on löytynyt muurinpätkiä, asuintaloja, patsaita ja mosaiikkeja. Tarkka kortteleiden mitta ja pääkatujen suunta Emonassa eivät ole minulle varmoja, joten en anna lukuja. Keskellä [[foorumi]] toimi kaupungin kokoontumispaikkana.
+
+Ruudukossa on kyyhkyn mielestä jotain rauhoittavaa, sillä ylhäältä katsoen kaikki osoitteet löytyvät suoraan. Suvun postiperimätiedon mukaan roomalaisille oli juuri siksi helppo viedä kirjeitä.
+KYSYMYS: Kerro lisää: foorumi
+
+### 306
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emona (historia)
+Tietoruudun teksti: Emona oli roomalainen kastrumkaupunki, joka rakennettiin nykyisen Ljubljanan paikalle Linnamäen juurelle: sotilaallinen varuskunta pystytettiin paikalle jo 1. vuosisadalla eaa., ja varsinainen vahvasti muurein linnoitettu siirtokunta perustettiin vuonna 14 jaa. Kaupungissa asui 5000–6000 asukasta, enimmäkseen kauppiaita ja käsityöläisiä, ja se oli myös varhaiskristillinen keskus. Länsigootit leiriytyivät Emonan lähellä talvella 408–409, hunnit hyökkäsivät kaupunkiin vuonna 452 ja langobardit kulkivat sen läpi matkallaan Italiaan vuonna 568, minkä jälkeen seurasivat vielä avaarien ja slaavien hyökkäysretket. 500-luvun jälkipuoliskolla kaupungissa ei enää ollut asutusta, ja se hautautui vuosisadoiksi maan alle: nykyisin sen katujen, talojen ja vesijohtojen jäänteitä kaivetaan esiin Ljubljanan keskustan alta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jordania — maalehti / Rauniot] Jordanian läpi on kuljettu aina: karavaanit, roomalaiset legioonat ja pyhiinvaeltajat. Matkan varrelle jäi kaupunkeja ja linnoja, joita seisoo yhä pystyssä keskellä maisemaa.
+AIEMPI KYSYMYS: Miksi roomalaisten sotaleireistä kasvoi kaupunkeja?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Sotaleirin ympärille kertyi nopeasti väkeä, joka palveli sotilaita: kauppiaita, käsityöläisiä ja perheitä, sillä [[legioonat]] tarvitsivat ruokaa, työkaluja ja majoitusta. Leirit perustettiin yleensä strategisiin paikkoihin, kuten joen äärelle tai tärkeän tien varrelle, ja juuri tällaiset paikat soveltuivat myös kaupankäyntiin. Kun sotilaita vietiin muualle, osa asukkaista jäi paikalle ja leiri muuttui vähitellen siviilikaupungiksi, ja usein asutusta vahvistettiin myös [[veteraaneilla]]. Emonassa sotilasleiri perustettiin ennen ajanlaskun alkua linnavuoren juurelle, ja varsinainen muurein varustettu kaupunki syntyi vuoden 14 tienoilla. Sijainti [[Ljubljanica]]-joen äärellä oli todennäköisesti tärkeä, mutta en ole varma reitin tarkoista yksityiskohdista. Armeija oli aikansa kaupunkisuunnittelija.
+KYSYMYS: Kerro lisää: legioonat
+
+### 307
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emona (historia)
+Tietoruudun teksti: Emona oli roomalainen kastrumkaupunki, joka rakennettiin nykyisen Ljubljanan paikalle Linnamäen juurelle: sotilaallinen varuskunta pystytettiin paikalle jo 1. vuosisadalla eaa., ja varsinainen vahvasti muurein linnoitettu siirtokunta perustettiin vuonna 14 jaa. Kaupungissa asui 5000–6000 asukasta, enimmäkseen kauppiaita ja käsityöläisiä, ja se oli myös varhaiskristillinen keskus. Länsigootit leiriytyivät Emonan lähellä talvella 408–409, hunnit hyökkäsivät kaupunkiin vuonna 452 ja langobardit kulkivat sen läpi matkallaan Italiaan vuonna 568, minkä jälkeen seurasivat vielä avaarien ja slaavien hyökkäysretket. 500-luvun jälkipuoliskolla kaupungissa ei enää ollut asutusta, ja se hautautui vuosisadoiksi maan alle: nykyisin sen katujen, talojen ja vesijohtojen jäänteitä kaivetaan esiin Ljubljanan keskustan alta.
+AIEMPI KYSYMYS: Miksi roomalaisten sotaleireistä kasvoi kaupunkeja?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Sotaleirin ympärille kertyi nopeasti väkeä, joka palveli sotilaita: kauppiaita, käsityöläisiä ja perheitä, sillä [[legioonat]] tarvitsivat ruokaa, työkaluja ja majoitusta. Leirit perustettiin yleensä strategisiin paikkoihin, kuten joen äärelle tai tärkeän tien varrelle, ja juuri tällaiset paikat soveltuivat myös kaupankäyntiin. Kun sotilaita vietiin muualle, osa asukkaista jäi paikalle ja leiri muuttui vähitellen siviilikaupungiksi, ja usein asutusta vahvistettiin myös [[veteraaneilla]]. Emonassa sotilasleiri perustettiin ennen ajanlaskun alkua linnavuoren juurelle, ja varsinainen muurein varustettu kaupunki syntyi vuoden 14 tienoilla. Sijainti [[Ljubljanica]]-joen äärellä oli todennäköisesti tärkeä, mutta en ole varma reitin tarkoista yksityiskohdista. Armeija oli aikansa kaupunkisuunnittelija.
+KYSYMYS: Kerro lisää: veteraaneilla
+
+### 308
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emona (historia)
+Tietoruudun teksti: Emona oli roomalainen kastrumkaupunki, joka rakennettiin nykyisen Ljubljanan paikalle Linnamäen juurelle: sotilaallinen varuskunta pystytettiin paikalle jo 1. vuosisadalla eaa., ja varsinainen vahvasti muurein linnoitettu siirtokunta perustettiin vuonna 14 jaa. Kaupungissa asui 5000–6000 asukasta, enimmäkseen kauppiaita ja käsityöläisiä, ja se oli myös varhaiskristillinen keskus. Länsigootit leiriytyivät Emonan lähellä talvella 408–409, hunnit hyökkäsivät kaupunkiin vuonna 452 ja langobardit kulkivat sen läpi matkallaan Italiaan vuonna 568, minkä jälkeen seurasivat vielä avaarien ja slaavien hyökkäysretket. 500-luvun jälkipuoliskolla kaupungissa ei enää ollut asutusta, ja se hautautui vuosisadoiksi maan alle: nykyisin sen katujen, talojen ja vesijohtojen jäänteitä kaivetaan esiin Ljubljanan keskustan alta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Rakennukset: Kaksi siltaa vanhan viereen] 1932 — Ljubljanica-joen ylittävä Kolmoissilta on kaupungin vanhin siltapaikka, sillä puusilta mainitaan täällä jo vuonna 1280. Nykyinen kivisilta valmistui 1842 ja sai nimen Franzin silta arkkiherttua Franz Karlin mukaan. Kun liikenne ahtautui, arkkitehti Jože Plečnik suunnitteli vuonna 1929 sen viereen kaksi hieman vinoon asetettua jalankulkusiltaa, ja kolmikko avattiin liikenteelle huhtikuussa 1932. Kaiteessa on 642 kaidepylvästä. Vuodesta 2007 kaikki kolme siltaa ovat olleet vain jalankulkijoille, ja vuonna 2021 ne liitettiin Unescon maailmanperintöön osana Plečnikin perintöä.
+AIEMPI KYSYMYS: Miksi roomalaisten sotaleireistä kasvoi kaupunkeja?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Sotaleirin ympärille kertyi nopeasti väkeä, joka palveli sotilaita: kauppiaita, käsityöläisiä ja perheitä, sillä [[legioonat]] tarvitsivat ruokaa, työkaluja ja majoitusta. Leirit perustettiin yleensä strategisiin paikkoihin, kuten joen äärelle tai tärkeän tien varrelle, ja juuri tällaiset paikat soveltuivat myös kaupankäyntiin. Kun sotilaita vietiin muualle, osa asukkaista jäi paikalle ja leiri muuttui vähitellen siviilikaupungiksi, ja usein asutusta vahvistettiin myös [[veteraaneilla]]. Emonassa sotilasleiri perustettiin ennen ajanlaskun alkua linnavuoren juurelle, ja varsinainen muurein varustettu kaupunki syntyi vuoden 14 tienoilla. Sijainti [[Ljubljanica]]-joen äärellä oli todennäköisesti tärkeä, mutta en ole varma reitin tarkoista yksityiskohdista. Armeija oli aikansa kaupunkisuunnittelija.
+KYSYMYS: Kerro lisää: Ljubljanica
+
+### 309
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emona (historia)
+Tietoruudun teksti: Emona oli roomalainen kastrumkaupunki, joka rakennettiin nykyisen Ljubljanan paikalle Linnamäen juurelle: sotilaallinen varuskunta pystytettiin paikalle jo 1. vuosisadalla eaa., ja varsinainen vahvasti muurein linnoitettu siirtokunta perustettiin vuonna 14 jaa. Kaupungissa asui 5000–6000 asukasta, enimmäkseen kauppiaita ja käsityöläisiä, ja se oli myös varhaiskristillinen keskus. Länsigootit leiriytyivät Emonan lähellä talvella 408–409, hunnit hyökkäsivät kaupunkiin vuonna 452 ja langobardit kulkivat sen läpi matkallaan Italiaan vuonna 568, minkä jälkeen seurasivat vielä avaarien ja slaavien hyökkäysretket. 500-luvun jälkipuoliskolla kaupungissa ei enää ollut asutusta, ja se hautautui vuosisadoiksi maan alle: nykyisin sen katujen, talojen ja vesijohtojen jäänteitä kaivetaan esiin Ljubljanan keskustan alta.
+AIEMPI KYSYMYS: Miten arkeologit tutkivat raunioita elävän kaupungin alla?
+AIEMPI VASTAUS (Livia):
+Ai tota. Elävän kaupungin alla tutkimus tehdään yleensä silloin, kun rakennushanke, katutyö tai putkiremontti paljastaa vanhoja rakenteita, ja tällaista työtä kutsutaan usein [[pelastusarkeologiaksi]]. Arkeologit kaivavat kerros kerrokselta, dokumentoivat jokaisen löydön ja rakenteen sijainnin sekä syvyyden piirtämällä, valokuvaamalla ja mittaamalla, koska kaivaminen tuhoaa alkuperäisen järjestyksen. Kerrosten järjestys kertoo, mikä on vanhempaa ja mikä uudempaa, ja siksi [[kulttuurikerrokset]] ovat heille kuin kirjan sivut. Löytöjen jälkeen alue joko rakennetaan uudelleen, jolloin rauniot peitetään tai dokumentoidaan, tai osa jäänteistä säilytetään näkyvillä. Ljubljanan keskustassa Emonan jäänteitä kaivetaan esiin juuri tällä tavalla. Eikä kyyhkyn tarvitse kaivaa, riittää kun katsoo ylhäältä.
+KYSYMYS: Kerro lisää: pelastusarkeologiaksi
+
+### 310
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emona (historia)
+Tietoruudun teksti: Emona oli roomalainen kastrumkaupunki, joka rakennettiin nykyisen Ljubljanan paikalle Linnamäen juurelle: sotilaallinen varuskunta pystytettiin paikalle jo 1. vuosisadalla eaa., ja varsinainen vahvasti muurein linnoitettu siirtokunta perustettiin vuonna 14 jaa. Kaupungissa asui 5000–6000 asukasta, enimmäkseen kauppiaita ja käsityöläisiä, ja se oli myös varhaiskristillinen keskus. Länsigootit leiriytyivät Emonan lähellä talvella 408–409, hunnit hyökkäsivät kaupunkiin vuonna 452 ja langobardit kulkivat sen läpi matkallaan Italiaan vuonna 568, minkä jälkeen seurasivat vielä avaarien ja slaavien hyökkäysretket. 500-luvun jälkipuoliskolla kaupungissa ei enää ollut asutusta, ja se hautautui vuosisadoiksi maan alle: nykyisin sen katujen, talojen ja vesijohtojen jäänteitä kaivetaan esiin Ljubljanan keskustan alta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Kulttuuri- ja tiedepalatsi] 1952–1955 Kulttuuri- ja tiedepalatsi oli Neuvostoliiton lahja Puolan kansalle. Sopimus rakentamisesta allekirjoitettiin huhtikuussa 1952, ja jättiläismäinen pilvenpiirtäjä valmistui jo heinäkuussa 1955 - työmaalla ahersi tuhansia neuvostoliittolaisia ja puolalaisia rakentajia. Rakennus on 237 metriä korkea, Puolan toiseksi korkein, ja siinä on peräti 3 288 huonetta 42 kerroksessa - teattereita, museoita, konserttisaleja ja jopa yliopisto. Näköalatasanteelta 30. kerroksesta, 114 metrin korkeudesta, näkee koko Varsovan. Vuonna 2000 torniin asennettiin neljä valtavaa, yli 6 metriä leveää kellotaulua - hetken aikaa maailman suurin kellotorni. Rakennus jakaa yhä mielipiteitä neuvostomenneisyyden…
+- [Viro — maalehti / Kulttuuri] Virolainen kulttuuri elää yhteislaulussa ja käsityössä: laulujuhlat jotka alkoivat 1869, kirjava rahvaspuku joka kertoo pitäjän, kanteleen sukulaissoitin ja kansalliseepos jonka sankari on jättiläinen.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri] Bosnialainen kulttuuri kuulostaa haikealta laululta, näyttää Ottomaanien moskeijalta ja mustavalkoiselta kirjonnalta, ja se syntyi uudelleen elokuvafestivaalina keskellä piiritystä.
+AIEMPI KYSYMYS: Miten arkeologit tutkivat raunioita elävän kaupungin alla?
+AIEMPI VASTAUS (Livia):
+Ai tota. Elävän kaupungin alla tutkimus tehdään yleensä silloin, kun rakennushanke, katutyö tai putkiremontti paljastaa vanhoja rakenteita, ja tällaista työtä kutsutaan usein [[pelastusarkeologiaksi]]. Arkeologit kaivavat kerros kerrokselta, dokumentoivat jokaisen löydön ja rakenteen sijainnin sekä syvyyden piirtämällä, valokuvaamalla ja mittaamalla, koska kaivaminen tuhoaa alkuperäisen järjestyksen. Kerrosten järjestys kertoo, mikä on vanhempaa ja mikä uudempaa, ja siksi [[kulttuurikerrokset]] ovat heille kuin kirjan sivut. Löytöjen jälkeen alue joko rakennetaan uudelleen, jolloin rauniot peitetään tai dokumentoidaan, tai osa jäänteistä säilytetään näkyvillä. Ljubljanan keskustassa Emonan jäänteitä kaivetaan esiin juuri tällä tavalla. Eikä kyyhkyn tarvitse kaivaa, riittää kun katsoo ylhäältä.
+KYSYMYS: Kerro lisää: kulttuurikerrokset
+
+### 311
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žička kartuzija (historia)
+Tietoruudun teksti: Žičen kartuusiluostari perustettiin vuosina 1155–1165 Steiermarkin rajakreivi Ottokar III:n ja hänen poikansa herttua Ottokar IV:n toimesta kapean Žičnica-puron laaksoon: se oli ensimmäinen kartusiaaniluostari saksankielisellä alueella ja samalla ensimmäinen Ranskan ja Italian ulkopuolella. Suuren skisman aikana koko kartusiaaniveljeskunnan ylipriorin istuin siirtyi Žičeen lähes kahdeksi vuosikymmeneksi (1391–1410), ja kolme Žičen prioria peräjälkeen toimi tänä aikana koko veljeskunnan ylipriorina. Osmanien ryöstöretki vuonna 1531 käynnisti luostarin rappion, ja se siirtyi välillä komendaattoripriorien ja jesuiittojen haltuun ennen kuin kartusiaanit saivat sen takaisin 1593. Keisari Joosef II lakkautti luostarin vuonna 1782 osana kirkollisia uudistuksiaan, minkä jälkeen rakennusten annettiin rapistua: jäljellä on nykyisin raunioita ja Johannes Kastajalle omistettu kirkko.
+AIEMPI KYSYMYS: Mikä teki Žičen luostarista poikkeuksellisen tärkeän koko kartusiaanien veljeskunnalle?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Žičen luostari perustettiin vuosina 1155–1165 ensimmäiseksi [[kartusiaaniluostariksi]] saksankielisellä alueella ja samalla ensimmäiseksi Ranskan ja Italian ulkopuolella. Vielä suurempi merkitys tuli [[suuren skisman]] aikana, jolloin koko veljeskunnan [[ylipriorin]] istuin siirtyi Žičeen lähes kahdeksikymmeneksi vuodeksi, vuosina 1391–1410. Kolme Žičen prioria toimi tänä aikana peräkkäin koko veljeskunnan ylipriorina, joten pienestä laaksoluostarista tuli kartusiaanien johtopaikka. Aika iso rooli yhdelle kapealle laaksolle, sanon minä.
+KYSYMYS: Kerro lisää: kartusiaaniluostariksi
+
+### 312
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žička kartuzija (historia)
+Tietoruudun teksti: Žičen kartuusiluostari perustettiin vuosina 1155–1165 Steiermarkin rajakreivi Ottokar III:n ja hänen poikansa herttua Ottokar IV:n toimesta kapean Žičnica-puron laaksoon: se oli ensimmäinen kartusiaaniluostari saksankielisellä alueella ja samalla ensimmäinen Ranskan ja Italian ulkopuolella. Suuren skisman aikana koko kartusiaaniveljeskunnan ylipriorin istuin siirtyi Žičeen lähes kahdeksi vuosikymmeneksi (1391–1410), ja kolme Žičen prioria peräjälkeen toimi tänä aikana koko veljeskunnan ylipriorina. Osmanien ryöstöretki vuonna 1531 käynnisti luostarin rappion, ja se siirtyi välillä komendaattoripriorien ja jesuiittojen haltuun ennen kuin kartusiaanit saivat sen takaisin 1593. Keisari Joosef II lakkautti luostarin vuonna 1782 osana kirkollisia uudistuksiaan, minkä jälkeen rakennusten annettiin rapistua: jäljellä on nykyisin raunioita ja Johannes Kastajalle omistettu kirkko.
+AIEMPI KYSYMYS: Mikä teki Žičen luostarista poikkeuksellisen tärkeän koko kartusiaanien veljeskunnalle?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Žičen luostari perustettiin vuosina 1155–1165 ensimmäiseksi [[kartusiaaniluostariksi]] saksankielisellä alueella ja samalla ensimmäiseksi Ranskan ja Italian ulkopuolella. Vielä suurempi merkitys tuli [[suuren skisman]] aikana, jolloin koko veljeskunnan [[ylipriorin]] istuin siirtyi Žičeen lähes kahdeksikymmeneksi vuodeksi, vuosina 1391–1410. Kolme Žičen prioria toimi tänä aikana peräkkäin koko veljeskunnan ylipriorina, joten pienestä laaksoluostarista tuli kartusiaanien johtopaikka. Aika iso rooli yhdelle kapealle laaksolle, sanon minä.
+KYSYMYS: Kerro lisää: suuren skisman
+
+### 313
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žička kartuzija (historia)
+Tietoruudun teksti: Žičen kartuusiluostari perustettiin vuosina 1155–1165 Steiermarkin rajakreivi Ottokar III:n ja hänen poikansa herttua Ottokar IV:n toimesta kapean Žičnica-puron laaksoon: se oli ensimmäinen kartusiaaniluostari saksankielisellä alueella ja samalla ensimmäinen Ranskan ja Italian ulkopuolella. Suuren skisman aikana koko kartusiaaniveljeskunnan ylipriorin istuin siirtyi Žičeen lähes kahdeksi vuosikymmeneksi (1391–1410), ja kolme Žičen prioria peräjälkeen toimi tänä aikana koko veljeskunnan ylipriorina. Osmanien ryöstöretki vuonna 1531 käynnisti luostarin rappion, ja se siirtyi välillä komendaattoripriorien ja jesuiittojen haltuun ennen kuin kartusiaanit saivat sen takaisin 1593. Keisari Joosef II lakkautti luostarin vuonna 1782 osana kirkollisia uudistuksiaan, minkä jälkeen rakennusten annettiin rapistua: jäljellä on nykyisin raunioita ja Johannes Kastajalle omistettu kirkko.
+AIEMPI KYSYMYS: Mikä teki Žičen luostarista poikkeuksellisen tärkeän koko kartusiaanien veljeskunnalle?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Žičen luostari perustettiin vuosina 1155–1165 ensimmäiseksi [[kartusiaaniluostariksi]] saksankielisellä alueella ja samalla ensimmäiseksi Ranskan ja Italian ulkopuolella. Vielä suurempi merkitys tuli [[suuren skisman]] aikana, jolloin koko veljeskunnan [[ylipriorin]] istuin siirtyi Žičeen lähes kahdeksikymmeneksi vuodeksi, vuosina 1391–1410. Kolme Žičen prioria toimi tänä aikana peräkkäin koko veljeskunnan ylipriorina, joten pienestä laaksoluostarista tuli kartusiaanien johtopaikka. Aika iso rooli yhdelle kapealle laaksolle, sanon minä.
+KYSYMYS: Kerro lisää: ylipriorin
+
+### 314
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žička kartuzija (historia)
+Tietoruudun teksti: Žičen kartuusiluostari perustettiin vuosina 1155–1165 Steiermarkin rajakreivi Ottokar III:n ja hänen poikansa herttua Ottokar IV:n toimesta kapean Žičnica-puron laaksoon: se oli ensimmäinen kartusiaaniluostari saksankielisellä alueella ja samalla ensimmäinen Ranskan ja Italian ulkopuolella. Suuren skisman aikana koko kartusiaaniveljeskunnan ylipriorin istuin siirtyi Žičeen lähes kahdeksi vuosikymmeneksi (1391–1410), ja kolme Žičen prioria peräjälkeen toimi tänä aikana koko veljeskunnan ylipriorina. Osmanien ryöstöretki vuonna 1531 käynnisti luostarin rappion, ja se siirtyi välillä komendaattoripriorien ja jesuiittojen haltuun ennen kuin kartusiaanit saivat sen takaisin 1593. Keisari Joosef II lakkautti luostarin vuonna 1782 osana kirkollisia uudistuksiaan, minkä jälkeen rakennusten annettiin rapistua: jäljellä on nykyisin raunioita ja Johannes Kastajalle omistettu kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Miksi luostari lopulta lakkautettiin ja jätettiin rappeutumaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Luostarin rappio alkoi [[osmanien]] ryöstöretkestä vuonna 1531, minkä jälkeen se siirtyi välillä komendaattoripriorien ja [[jesuiittojen]] haltuun, kunnes kartusiaanit saivat sen takaisin vuonna 1593. Lopullisen iskun antoi keisari [[Joosef II]], joka lakkautti luostarin vuonna 1782 osana kirkollisia uudistuksiaan; yleisesti ottaen hänen uudistuksissaan lakkautettiin monia luostareita, joita hän piti yhteiskunnalle hyödyttöminä. Sen jälkeen rakennusten annettiin rapistua, ja nykyisin jäljellä ovat rauniot sekä Johannes Kastajalle omistettu kirkko. Ja kaiken tämän minä muistin ilman lunttia.
+KYSYMYS: Kerro lisää: osmanien
+
+### 315
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žička kartuzija (historia)
+Tietoruudun teksti: Žičen kartuusiluostari perustettiin vuosina 1155–1165 Steiermarkin rajakreivi Ottokar III:n ja hänen poikansa herttua Ottokar IV:n toimesta kapean Žičnica-puron laaksoon: se oli ensimmäinen kartusiaaniluostari saksankielisellä alueella ja samalla ensimmäinen Ranskan ja Italian ulkopuolella. Suuren skisman aikana koko kartusiaaniveljeskunnan ylipriorin istuin siirtyi Žičeen lähes kahdeksi vuosikymmeneksi (1391–1410), ja kolme Žičen prioria peräjälkeen toimi tänä aikana koko veljeskunnan ylipriorina. Osmanien ryöstöretki vuonna 1531 käynnisti luostarin rappion, ja se siirtyi välillä komendaattoripriorien ja jesuiittojen haltuun ennen kuin kartusiaanit saivat sen takaisin 1593. Keisari Joosef II lakkautti luostarin vuonna 1782 osana kirkollisia uudistuksiaan, minkä jälkeen rakennusten annettiin rapistua: jäljellä on nykyisin raunioita ja Johannes Kastajalle omistettu kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Linna jonka osti skotti] 1656 — Ptujin linna kohoaa kukkulalla Drava-joen yllä. Se rakennettiin 1100-luvun puolivälissä suojaamaan unkarilaisilta, ja myöhemmin siitä tuli Zagrebin jesuiittojen omaisuutta. Vuonna 1656 rahapulaan joutuneet jesuiitat myivät linnan skotlantilaissyntyiselle kenraalimarsalkka Walter Leslielle. Tämä rakennutti sen barokkiaikaan uusiksi maaseutuasunnoksi, sillä turkkilaisuhan väistyttyä linnan ei tarvinnut enää olla linnake. Lesliet omistivat sen vuoteen 1802, ja vuonna 1873 kreivitär Theresia von Herberstein osti linnan itselleen. Herbersteinien suvulla se pysyi vuoteen 1945, jolloin linna valtiollistettiin ja muutettiin alueen historian museoksi.
+- [Iguazú — kaupunkilehti / Iguazú: Jesuiittojen kivikylä viidakossa] Sata kilometriä putouksilta etelään seisovat San Ignacio Minín rauniot, yksi 1600-luvulla perustetuista jesuiittalähetysasemista, joissa espanjalaiset munkit ja guaraníalkuperäiskansa rakensivat yhdessä omavaraisia kivikaupunkeja viidakon keskelle. Asemalla asui parhaimmillaan yli 3000 asukasta, joilla oli oma verstas, kirkko ja hallinto – kokeilu, jossa alkuperäiskansa sai oman asemansa siirtomaa-ajan pakkotyön rinnalla. Jesuiitat karkotettiin 1767, minkä jälkeen kylä autioitui ja viidakko valtasi sen vuosikymmeniksi. Rauniot kaivettiin esiin vasta 1900-luvulla, ja ne ovat nykyään UNESCOn maailmanperintökohde.
+AIEMPI KYSYMYS: Miksi luostari lopulta lakkautettiin ja jätettiin rappeutumaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Luostarin rappio alkoi [[osmanien]] ryöstöretkestä vuonna 1531, minkä jälkeen se siirtyi välillä komendaattoripriorien ja [[jesuiittojen]] haltuun, kunnes kartusiaanit saivat sen takaisin vuonna 1593. Lopullisen iskun antoi keisari [[Joosef II]], joka lakkautti luostarin vuonna 1782 osana kirkollisia uudistuksiaan; yleisesti ottaen hänen uudistuksissaan lakkautettiin monia luostareita, joita hän piti yhteiskunnalle hyödyttöminä. Sen jälkeen rakennusten annettiin rapistua, ja nykyisin jäljellä ovat rauniot sekä Johannes Kastajalle omistettu kirkko. Ja kaiken tämän minä muistin ilman lunttia.
+KYSYMYS: Kerro lisää: jesuiittojen
+
+### 316
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žička kartuzija (historia)
+Tietoruudun teksti: Žičen kartuusiluostari perustettiin vuosina 1155–1165 Steiermarkin rajakreivi Ottokar III:n ja hänen poikansa herttua Ottokar IV:n toimesta kapean Žičnica-puron laaksoon: se oli ensimmäinen kartusiaaniluostari saksankielisellä alueella ja samalla ensimmäinen Ranskan ja Italian ulkopuolella. Suuren skisman aikana koko kartusiaaniveljeskunnan ylipriorin istuin siirtyi Žičeen lähes kahdeksi vuosikymmeneksi (1391–1410), ja kolme Žičen prioria peräjälkeen toimi tänä aikana koko veljeskunnan ylipriorina. Osmanien ryöstöretki vuonna 1531 käynnisti luostarin rappion, ja se siirtyi välillä komendaattoripriorien ja jesuiittojen haltuun ennen kuin kartusiaanit saivat sen takaisin 1593. Keisari Joosef II lakkautti luostarin vuonna 1782 osana kirkollisia uudistuksiaan, minkä jälkeen rakennusten annettiin rapistua: jäljellä on nykyisin raunioita ja Johannes Kastajalle omistettu kirkko.
+AIEMPI KYSYMYS: Miksi luostari lopulta lakkautettiin ja jätettiin rappeutumaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Luostarin rappio alkoi [[osmanien]] ryöstöretkestä vuonna 1531, minkä jälkeen se siirtyi välillä komendaattoripriorien ja [[jesuiittojen]] haltuun, kunnes kartusiaanit saivat sen takaisin vuonna 1593. Lopullisen iskun antoi keisari [[Joosef II]], joka lakkautti luostarin vuonna 1782 osana kirkollisia uudistuksiaan; yleisesti ottaen hänen uudistuksissaan lakkautettiin monia luostareita, joita hän piti yhteiskunnalle hyödyttöminä. Sen jälkeen rakennusten annettiin rapistua, ja nykyisin jäljellä ovat rauniot sekä Johannes Kastajalle omistettu kirkko. Ja kaiken tämän minä muistin ilman lunttia.
+KYSYMYS: Kerro lisää: Joosef II
+
+### 317
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žička kartuzija (historia)
+Tietoruudun teksti: Žičen kartuusiluostari perustettiin vuosina 1155–1165 Steiermarkin rajakreivi Ottokar III:n ja hänen poikansa herttua Ottokar IV:n toimesta kapean Žičnica-puron laaksoon: se oli ensimmäinen kartusiaaniluostari saksankielisellä alueella ja samalla ensimmäinen Ranskan ja Italian ulkopuolella. Suuren skisman aikana koko kartusiaaniveljeskunnan ylipriorin istuin siirtyi Žičeen lähes kahdeksi vuosikymmeneksi (1391–1410), ja kolme Žičen prioria peräjälkeen toimi tänä aikana koko veljeskunnan ylipriorina. Osmanien ryöstöretki vuonna 1531 käynnisti luostarin rappion, ja se siirtyi välillä komendaattoripriorien ja jesuiittojen haltuun ennen kuin kartusiaanit saivat sen takaisin 1593. Keisari Joosef II lakkautti luostarin vuonna 1782 osana kirkollisia uudistuksiaan, minkä jälkeen rakennusten annettiin rapistua: jäljellä on nykyisin raunioita ja Johannes Kastajalle omistettu kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kohdekartta / Kohdekartta: Plaza Vieja] 1559 Aukio avattiin 1559 kolmantena Plaza de Armasin ja San Franciscon jälkeen, ja sen nimi oli aluksi Plaza Nueva eli Uusi aukio: se oli kansanomainen vaihtoehto sotilaiden ja hallinnon aukiolle. Nimi vaihtui vasta, kun kaupunkiin syntyi vielä uudempi aukio, Plaza del Santo Cristo. Siirtomaa-aikana korttelit aukion ympärillä olivat kreoliylimystön asuinaluetta, ja aukiolla nähtiin teloituksia, kulkueita, härkätaisteluja ja juhlia — kaupungin varakkaimmat katselivat niitä parvekkeiltaan. 1700-luvulla aukiosta tuli tori ja sen nimi oli Plaza del Mercado, kaupungin kaupallinen keskus. Kun Santo Criston aukiolle avattiin 1814 uusi tori, Mercado Nuevo, vanha sai nimekseen Plaza Vieja erotukseks…
+- [Rooma — kohdekartta / Kohdekartta: Castel Sant’Angelo] 135–139 Linna ei ollut alkujaan linna lainkaan, vaan valtava hauta. Keisari Hadrianus rakennutti sen itselleen ja perheelleen mausoleumiksi vuosina 135–139 — hänen vaimonsa Sabina ja ottopoikansa Lucius Aelius haudattiin sinne ensimmäisinä. Vuosisatoja myöhemmin paavit muuttivat rakennuksen linnoitukseksi, ja siitä rakennettiin suoraan Pietarinkirkolle johtava salainen katettu käytävä, Passetto di Borgo, jota pitkin paavi pääsi tarvittaessa pakenemaan vaaran uhatessa. Linnan huipulla seisoo pronssinen enkelipatsas. Legendan mukaan arkkienkeli Mikael ilmestyi katolle, tuppesi miekkansa ja lopetti näin kauhean ruttoepidemian. Ensimmäinen enkelipatsas nousi katolle 1536, ja nykyinen pronssiver…
+AIEMPI KYSYMYS: Millaista on kartusiaanimunkkien arki luostarissa?
+AIEMPI VASTAUS (Livia):
+Mmm— Tästä minä olen kuullut kirjeillä. Kartusiaanien veljeskunnan perusti 1000-luvun lopulla munkki [[Bruno]] Ranskan [[Chartreusen]] vuoristoon, ja sen elämäntapa on poikkeuksellisen hiljainen. Munkit asuvat perinteisesti omissa pienissä selleissään, joissa he rukoilevat, lukevat ja tekevät käsityötä, ja suuri osa päivästä kuluu yksinäisyydessä ja vaikenemisessa. Yhteisiin jumalanpalveluksiin kokoonnutaan tiettyinä aikoina, ja yhteinen ateria ja keskustelu kuuluvat tavallisesti vain juhlapäiviin ja sunnuntaihin; tarkka päiväjärjestys vaihtelee kuitenkin luostarista toiseen.
+
+Minusta moinen hiljaisuus olisi kyyhkylle mahdoton laji, sillä minä kuhisen jo aamusta asti. Mutta ylhäältä katsottuna ne pienet sellit pihoineen näyttävät kovin järjestyneiltä.
+KYSYMYS: Kerro lisää: Bruno
+
+### 318
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žička kartuzija (historia)
+Tietoruudun teksti: Žičen kartuusiluostari perustettiin vuosina 1155–1165 Steiermarkin rajakreivi Ottokar III:n ja hänen poikansa herttua Ottokar IV:n toimesta kapean Žičnica-puron laaksoon: se oli ensimmäinen kartusiaaniluostari saksankielisellä alueella ja samalla ensimmäinen Ranskan ja Italian ulkopuolella. Suuren skisman aikana koko kartusiaaniveljeskunnan ylipriorin istuin siirtyi Žičeen lähes kahdeksi vuosikymmeneksi (1391–1410), ja kolme Žičen prioria peräjälkeen toimi tänä aikana koko veljeskunnan ylipriorina. Osmanien ryöstöretki vuonna 1531 käynnisti luostarin rappion, ja se siirtyi välillä komendaattoripriorien ja jesuiittojen haltuun ennen kuin kartusiaanit saivat sen takaisin 1593. Keisari Joosef II lakkautti luostarin vuonna 1782 osana kirkollisia uudistuksiaan, minkä jälkeen rakennusten annettiin rapistua: jäljellä on nykyisin raunioita ja Johannes Kastajalle omistettu kirkko.
+AIEMPI KYSYMYS: Millaista on kartusiaanimunkkien arki luostarissa?
+AIEMPI VASTAUS (Livia):
+Mmm— Tästä minä olen kuullut kirjeillä. Kartusiaanien veljeskunnan perusti 1000-luvun lopulla munkki [[Bruno]] Ranskan [[Chartreusen]] vuoristoon, ja sen elämäntapa on poikkeuksellisen hiljainen. Munkit asuvat perinteisesti omissa pienissä selleissään, joissa he rukoilevat, lukevat ja tekevät käsityötä, ja suuri osa päivästä kuluu yksinäisyydessä ja vaikenemisessa. Yhteisiin jumalanpalveluksiin kokoonnutaan tiettyinä aikoina, ja yhteinen ateria ja keskustelu kuuluvat tavallisesti vain juhlapäiviin ja sunnuntaihin; tarkka päiväjärjestys vaihtelee kuitenkin luostarista toiseen.
+
+Minusta moinen hiljaisuus olisi kyyhkylle mahdoton laji, sillä minä kuhisen jo aamusta asti. Mutta ylhäältä katsottuna ne pienet sellit pihoineen näyttävät kovin järjestyneiltä.
+KYSYMYS: Kerro lisää: Chartreusen
+
+### 319
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žička kartuzija (historia)
+Tietoruudun teksti: Žičen kartuusiluostari perustettiin vuosina 1155–1165 Steiermarkin rajakreivi Ottokar III:n ja hänen poikansa herttua Ottokar IV:n toimesta kapean Žičnica-puron laaksoon: se oli ensimmäinen kartusiaaniluostari saksankielisellä alueella ja samalla ensimmäinen Ranskan ja Italian ulkopuolella. Suuren skisman aikana koko kartusiaaniveljeskunnan ylipriorin istuin siirtyi Žičeen lähes kahdeksi vuosikymmeneksi (1391–1410), ja kolme Žičen prioria peräjälkeen toimi tänä aikana koko veljeskunnan ylipriorina. Osmanien ryöstöretki vuonna 1531 käynnisti luostarin rappion, ja se siirtyi välillä komendaattoripriorien ja jesuiittojen haltuun ennen kuin kartusiaanit saivat sen takaisin 1593. Keisari Joosef II lakkautti luostarin vuonna 1782 osana kirkollisia uudistuksiaan, minkä jälkeen rakennusten annettiin rapistua: jäljellä on nykyisin raunioita ja Johannes Kastajalle omistettu kirkko.
+AIEMPI KYSYMYS: Missä Žičen luostarin rauniot sijaitsevat nykyään?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Žičen luostarin rauniot sijaitsevat nykyisessä Sloveniassa, [[Slovenske Konjicen]] kaupungin lähistöllä, kapeassa Žičnica-puron laaksossa. Luostari perustettiin aikanaan Steiermarkin rajakreivin ja hänen poikansa toimesta, ja alue kuului vuosisatojen ajan Habsburgien hallitsemaan Steiermarkiin. Nykyisin paikalla näkyy raunioita sekä [[Johannes Kastajalle]] omistettu kirkko. Tietääkseni Sloveniassa toimii edelleen toinen kartusiaaniluostari, [[Pleterje]], mutta en ole aivan varma sen tämänhetkisestä tilanteesta. Aika kaukana tuo on kyyhkyn omasta kattoparvesta.
+KYSYMYS: Kerro lisää: Slovenske Konjicen
+
+### 320
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žička kartuzija (historia)
+Tietoruudun teksti: Žičen kartuusiluostari perustettiin vuosina 1155–1165 Steiermarkin rajakreivi Ottokar III:n ja hänen poikansa herttua Ottokar IV:n toimesta kapean Žičnica-puron laaksoon: se oli ensimmäinen kartusiaaniluostari saksankielisellä alueella ja samalla ensimmäinen Ranskan ja Italian ulkopuolella. Suuren skisman aikana koko kartusiaaniveljeskunnan ylipriorin istuin siirtyi Žičeen lähes kahdeksi vuosikymmeneksi (1391–1410), ja kolme Žičen prioria peräjälkeen toimi tänä aikana koko veljeskunnan ylipriorina. Osmanien ryöstöretki vuonna 1531 käynnisti luostarin rappion, ja se siirtyi välillä komendaattoripriorien ja jesuiittojen haltuun ennen kuin kartusiaanit saivat sen takaisin 1593. Keisari Joosef II lakkautti luostarin vuonna 1782 osana kirkollisia uudistuksiaan, minkä jälkeen rakennusten annettiin rapistua: jäljellä on nykyisin raunioita ja Johannes Kastajalle omistettu kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Manila — kohdekartta / Kohdekartta: Quiapon kirkko] perustettu 1588, nykyinen rakennus 1935 Quiapon kirkon paikalla oli ensin fransiskaanien rakentama bambukehikko nipapalmukatolla. Se paloi 1574, ja seurakunnan perusti nykyiseen muotoonsa fransiskaani Antonio de Nombella vuonna 1588. Suojeluspyhimykseksi tuli Johannes Kastaja. Kirkko paloi uudelleen 1603 ja 1791, ja vuoden 1863 maanjäristys tuhosi sen kokonaan; tilalle rakennettiin ensin väliaikainen kirkko ja sitten uusi, joka valmistui 1899. Vuoden 1929 tulipalo vei puisen sisäkaton ja sakariston, ja kansallistaiteilija Juan Nakpil suunnitteli rakennuksen uudelleen. Hän lisäsi kupolin ja toisen kellotornin, jotta julkisivu olisi symmetrinen. Teräsbetoninen kirkko valmistui 1935. Julkisivu…
+- [Firenze — kaupunkilehti / Firenze: Raha, joka kelpasi kaikkialla] Firenze alkoi lyödä omaa kultarahaa vuonna 1252. Floriinissa oli aina sama määrä kultaa ja aina sama kuva: toisella puolella kaupungin liljavaakuna, toisella Johannes Kastaja. Juuri muuttumattomuus teki siitä luotetun — kauppias tiesi mitä sai, vaikka raha olisi kulkenut kolmen maan läpi. Rahan takana olivat pankkiirisuvut, joista mahtavimmaksi nousi Medici. Se ei ollut ruhtinassuku vaan kauppiassuku, joka osti valtansa rahalla ja taiteella.
+AIEMPI KYSYMYS: Missä Žičen luostarin rauniot sijaitsevat nykyään?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Žičen luostarin rauniot sijaitsevat nykyisessä Sloveniassa, [[Slovenske Konjicen]] kaupungin lähistöllä, kapeassa Žičnica-puron laaksossa. Luostari perustettiin aikanaan Steiermarkin rajakreivin ja hänen poikansa toimesta, ja alue kuului vuosisatojen ajan Habsburgien hallitsemaan Steiermarkiin. Nykyisin paikalla näkyy raunioita sekä [[Johannes Kastajalle]] omistettu kirkko. Tietääkseni Sloveniassa toimii edelleen toinen kartusiaaniluostari, [[Pleterje]], mutta en ole aivan varma sen tämänhetkisestä tilanteesta. Aika kaukana tuo on kyyhkyn omasta kattoparvesta.
+KYSYMYS: Kerro lisää: Johannes Kastajalle
