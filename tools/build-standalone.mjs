@@ -864,6 +864,9 @@ const MODULES = [
    */
   // fokusmitat (ja sen fokus-grc) ennen fokusvirtaa: saapumisasento 9.9.2026
   'js/packs/fokus-grc.js',
+  // Maakortin pääkaupunkirivi (PT 10.10.2026): fokusmitat.maanPaakaupunki lukee molemmat.
+  'js/packs/laudan-paakaupungit.js',
+  'js/packs/paakaupungit.js',
   'js/fokusmitat.js',
   /*
    * PULU-CAM-pakka ENNEN fokusvirtaa (fokusvirta tuo sen staattisesti).

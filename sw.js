@@ -504,6 +504,7 @@ const SHELL = [
   './js/packs/kulttuuri-kategoriat.js',
   './js/packs/maa-kategoriat.js',
   './js/packs/paakaupungit.js',
+  './js/packs/laudan-paakaupungit.js',
   './js/packs/maalehtinostot-fra.js',
   './js/packs/nakyvat-kaupungit-fra.js',
   './js/packs/nostoankkurit-fra.js',

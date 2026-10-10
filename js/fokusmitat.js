@@ -54,6 +54,8 @@ import { asetaKuva } from './media.js';
 import { lippuUrl, lippuVara } from './packs/africa-valokuvat.js';
 import { FOKUS_LAUTAPROJEKTIOT, FOKUS_MAANIMET, FOKUS_POHJAT } from './packs/fokus-grc.js';
 import { MAATIEDOT } from './sisaltotaulut.js';
+import { HALLINNON_PAIKAT, PAAKAUPUNGIT } from './packs/laudan-paakaupungit.js';
+import { PAAKAUPUNKIPISTEET } from './packs/paakaupungit.js';
 
 /* ------------------------------------------------------- mittakaava */
 
@@ -401,9 +403,36 @@ export function maanNimi(ui, iso) {
  * pois — tyhjä rivi näyttäisi rikkinäiseltä, ja kaikilla mailla ei ole
  * kaikkia lukuja.
  */
+/**
+ * MAAN PÄÄKAUPUNKI MAAKORTILLE (PT 10.10.2026, linjaus A; natiivi tekee saman):
+ * sama lähde ja järjestys kuin viennin maat.*.paakaupunki (tools/vienti/
+ * kokoelmat.mjs): laudan pääkaupunki, sitten hallinnon paikka (Israel →
+ * Jerusalem), sitten pääkaupunkipiste (Ramallah asemalla "hallinnon paikka").
+ * Null, kun tietoa ei ole tai kaupunki ei ole tämän laudan.
+ *
+ * @returns {{ nimi: string, asema: 'pääkaupunki' | 'hallinnon paikka' } | null}
+ */
+export function maanPaakaupunki(pack, iso) {
+  if (!iso) return null;
+  const laudalta = (id, asema) => {
+    const c = (pack?.cities ?? []).find((k) => k.id === id);
+    return c?.name ? { nimi: c.name, asema } : null;
+  };
+  if (PAAKAUPUNGIT[iso]) return laudalta(PAAKAUPUNGIT[iso], 'pääkaupunki');
+  if (HALLINNON_PAIKAT[iso]) return laudalta(HALLINNON_PAIKAT[iso], 'hallinnon paikka');
+  const piste = PAAKAUPUNKIPISTEET.find((p) => p.maa === iso);
+  if (!piste || pack?.id !== 'maailmankartta') return null;
+  return { nimi: piste.nimi, asema: piste.asema === 'hallinnon paikka' ? 'hallinnon paikka' : 'pääkaupunki' };
+}
+
 export function maanRivit(ui, iso) {
   const tiedot = (MAATIEDOT[ui.game?.pack?.id] ?? {})[iso] ?? {};
   const rivit = [];
+  // Pääkaupunki ensimmäiseksi riviksi samalla rivipohjalla (sija tyhjä); ilman tietoa ei riviä.
+  const paakaupunki = maanPaakaupunki(ui.game?.pack, iso);
+  if (paakaupunki) {
+    rivit.push([paakaupunki.asema === 'hallinnon paikka' ? 'Hallinnon paikka' : 'Pääkaupunki', paakaupunki.nimi, '']);
+  }
   if (tiedot.vakiluku) rivit.push(['Väkiluku', tiedot.vakiluku, tiedot.vakilukuSija ?? '']);
   if (tiedot.pintaAla) rivit.push(['Pinta-ala', tiedot.pintaAla, tiedot.pintaAlaSija ?? '']);
   if (tiedot.demokratia?.arvo) {

@@ -23,6 +23,7 @@ import { laudaltaAsteiksi, projisoiLaudalle } from '../../js/fokusmitat.js';
 import { ISO2 } from './iso2.mjs';
 import { POISTETUT_SAANNOT, AVAUSLUENTOJEN_TEKSTIT } from './lahteet.mjs';
 import { PAAKAUPUNGIT } from './paakaupungit.mjs';
+import { HALLINNON_PAIKAT } from '../../js/packs/laudan-paakaupungit.js';
 import { lueKorkeudet } from './korkeudet.mjs';
 import ASUKASLUVUT from './kaupunkien-asukkaat.json' with { type: 'json' };
 import { maarajaRivit, MAARAJOJEN_TOLERANSSI } from './maarajat.mjs';
@@ -823,7 +824,7 @@ function maaKokoelma(ns, hae) {
    * paikkana" (hallitus ja parlamentti) symmetrisesti Palestiinan Ramallahin
    * kanssa. asema kertoo kortille otsikon: "pääkaupunki" tai "hallinnon paikka".
    */
-  const HALLINNON_PAIKAT = { ISR: 'jerusalem' };
+  // HALLINNON_PAIKAT: js/packs/laudan-paakaupungit.js (sama taulu webin maakortille).
   const paakaupunki = (iso) => (PAAKAUPUNGIT[iso] ? { id: PAAKAUPUNGIT[iso], kokoelma: 'kaupungit', asema: 'pääkaupunki' }
     : HALLINNON_PAIKAT[iso] ? { id: HALLINNON_PAIKAT[iso], kokoelma: 'kaupungit', asema: 'hallinnon paikka' }
     : pisteet.has(iso) ? { id: pisteet.get(iso).id, kokoelma: 'paakaupungit', asema: pisteet.get(iso).asema } : null);
