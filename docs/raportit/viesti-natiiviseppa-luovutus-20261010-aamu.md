@@ -44,6 +44,9 @@ tai devicectl device install app (bundle fi.matkakirja.peli.kehitys), sitten mui
 - 09.3x JUNA 176 runko = **ffc6bc860** (PT 09.2x): LS2 pilvet 43b37f198, vesivari 3a0def9e7 (⊇ 824f4f602, kerroin 1), vesi-v6 fc08ac3db
   (index-v6.json, vienti Julkaisijalle), hoyrykone 20ce06552, omaaurinko 97d2d7a71 (⊇ c4e6d2361 + tekstitesti). L1299/P449/K453, unity 0,
   pohjavahti ok. EI: LS2 osoitin-176 2550c88a7 (omistajan kortti). Muistiajo ennen 176:n lukitusta (vesivari/pilvet lisäävät dataa).
+- 176 + NUI pohjavahti-varit-175 31bac5ad0 → runko **72099e128** (tarkista.sh 0, pohjavahti 67).
+- 6.7-käynnistysjumi 08.52 (juna/b13-vahti: LuoPallo 0 % CPU ennen "Begin MonoManager ReloadAssembly", satunnainen) → Julkaisija:
+  proto-kaanna.sh ajaa LuoPallon unity-vahti.sh:n alla (RAUHA=120, jumi → yksi uusinta; varmuuskopio .ennen-luovahti-20261010).
 
 ## TILA 08.5x — JUNA 175 LUKITTU (Unity 6.7)
 - BUILD 175 = **86ef3b3e630c49012b33a552b3ff475d4cd82604** (proton master; juna/b13 8d6ff7bc9; simukäännös ee95d97c8 08.49; puu identtinen,
