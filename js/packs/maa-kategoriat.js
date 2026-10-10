@@ -123,6 +123,12 @@ const MAAN_GENETIIVIT = {
   Mauritius: 'Mauritiuksen',
   'São Tomé ja Príncipe': 'São Tomén ja Príncipen',
   Seychellit: 'Seychellien',
+  // Amerikat (kaikki maat 10.10.2026): yhdyssanamaissa molemmat osat taipuvat.
+  'Antigua ja Barbuda': 'Antiguan ja Barbudan',
+  'Dominikaaninen tasavalta': 'Dominikaanisen tasavallan',
+  'Saint Kitts ja Nevis': 'Saint Kittsin ja Nevisin',
+  'Saint Vincent ja Grenadiinit': 'Saint Vincentin ja Grenadiinien',
+  'Trinidad ja Tobago': 'Trinidadin ja Tobagon',
 };
 
 /**

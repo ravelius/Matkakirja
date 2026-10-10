@@ -89,3 +89,15 @@ test('Afrikka: 27 uutta maata rajoineen ja pääkaupunkeineen (10.10.2026)', () 
   assert.ok(PAAKAUPUNKIPISTEET.some((p) => p.maa === 'SDS'));
   assert.ok(!PAAKAUPUNKIPISTEET.some((p) => p.maa === 'ZAF'));
 });
+
+test('Amerikat: 18 uutta maata rajoineen ja pääkaupunkeineen (10.10.2026)', () => {
+  const UUDET = ['ATG', 'BHS', 'BLZ', 'BRB', 'CRI', 'DMA', 'DOM', 'GRD', 'GUY', 'HND', 'HTI', 'JAM', 'KNA',
+    'LCA', 'SLV', 'SUR', 'TTO', 'VCT'];
+  for (const iso of [...UUDET, 'USA', 'CAN', 'BOL', 'BRA', 'CHL']) {
+    assert.ok(maat[iso]?.renkaat?.length, `${iso}: rajat puuttuvat`);
+    assert.ok(PAAKAUPUNKIPISTEET.some((p) => p.maa === iso), `${iso}: pääkaupunki puuttuu`);
+  }
+  for (const iso of UUDET) assert.ok(MAIDEN_PERUSTIEDOT[iso], `${iso}: perustiedot puuttuvat`);
+  // Bolivia: La Paz on hallituksen paikka, perustuslain pääkaupunki on Sucre.
+  assert.equal(PAAKAUPUNKIPISTEET.find((p) => p.maa === 'BOL')?.asema, 'hallinnon paikka');
+});
