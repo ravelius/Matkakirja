@@ -2574,7 +2574,9 @@ export const ELAINTAKYT = {
     teksti: 'Tikkuri eli wirebird on noin 15 senttimetrin mittainen kahlaaja, joka elää vain Saint Helenan saarella keskellä Atlanttia, ja paikallinen nimi tulee sen ohuista jaloista. Lintu mainittiin ensi kerran vuonna 1638, ja se on saaren kansallislintu: se on kuvattuna vaakunassa ja lipussa sekä ennen vuotta 1998 lyötyjen viiden pennin kolikoiden kääntöpuolella. Tikkuri pysyttelee ympäri vuoden saaren avoimilla alueilla, ja saarta muuten runnellut laaja metsänhakkuu on itse asiassa hyödyttänyt juuri tätä lajia, koska se elää metsän aukoissa. Kanta on vaihdellut ja ainakin 1970-luvulta lähtien laskenut: laskennassa 1988–89 lintuja oli noin 450, vuosien 2005–06 kartoituksissa enää 200–220, ja laji luokiteltiin 2007 äärimmäisen uhanalaiseksi; vuoteen 2021 mennessä kanta oli toipunut noin 545 aikuiseen yksilöön ja luokitus laskettu vaarantuneeksi. Uhkina ovat villiintyneet kissat, vahingossa tuodut rotat, tuotu kettumaina, maastoajoneuvojen käyttö, Prosperous Bay Plainille rakennettu lentoasema ja suunniteltu tuulipuisto, ja RSPB:n hankkeet seuraavat lintuja ja yrittävät pysäyttää laskun.',
     lahde: 'en-Wikipedia "Saint Helena plover", johdanto sekä osiot "Description" '
       + 'ja "Status and conservation". Tarkistettu 8.9.2026.',
-    kuva: 'elain-shn',
+    // Kuvaa ei ole ämpärissä (HEAD 404, kartan tarkistus 10.10.2026, C4):
+    // `kuva`-viittaus poistettu, kortti latoo tekstin ja lähteen ilman
+    // kuvakehystä. Lisää `kuva: 'elain-shn'` takaisin, kun kuva on ämpärissä.
     // Piste on saaren eteläosassa (5,72 W / 15,99 S), 84,3
     // lautayksikköä St. Helena -kaupunkilaatasta (vähimmäisetäisyys 35)
     // ja SHN:n monikulmion sisällä. Laji on lähteen mukaan ympäri

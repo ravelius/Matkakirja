@@ -361,15 +361,14 @@ export const FOKUSKOHTEET_BIH = [
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Dinaaristen Alppien suurin karstijoki',
     /*
-     * 43,01972 N / 17,445 E — en-Wikipedia "Neretva". HUOM: tämä on JOEN
-     * SUU Adrianmerellä KROATIAN puolella, ei Bosnian osuus (aineiston
-     * Hylätyt-kohta 1 ja kohteen oma huomio). Piste kelpaa koko joen
-     * nimeämiseen kartalla; jos Bosnian kohdalle halutaan täsmäpiste, se
-     * on valittava erikseen esimerkiksi Mostarin tai Konjicin kohdalta.
+     * 17,74 E / 43,20 N — Neretvan Bosnian osuus Mostarin ja Čapljinan
+     * välillä. Karttavalon piste ei saa olla toisen maan alueella (kartan
+     * tarkistus 10.10.2026, A3): aiempi piste 17,445 E / 43,0197 N oli
+     * joen suulla Adrianmerellä Kroatian puolella.
      */
     laudat: {
-      maailmankartta: { x: 6414.8, y: 1682.6 },
-      europe: { x: 546.1, y: 762.2 },
+      maailmankartta: { x: 6424.7, y: 1675.3 },
+      europe: { x: 551.8, y: 757.4 },
     },
     teksti: 'Neretva on Dinaaristen Alppien suurin karstijoki: 225 '
       + 'kilometriä, josta 208 Bosnia ja Hertsegovinan puolella. Nimen '

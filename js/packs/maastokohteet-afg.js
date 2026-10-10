@@ -40,9 +40,11 @@ export const MAASTOKOHTEET_AFG = [
     ],
     korostukset: ['Hindukuš|Hindukušin'],
     nappi: 'Maailman läntisin 7 000 metrin huippu',
-    // 71.8283 E / 36.4317 N — en-Wikipedia "Noshaq"
+    // 71.8283 E / 36.4317 N — en-Wikipedia "Noshaq". Huippu on rajalla;
+    // karttavalon piste on siirretty noin 6,5 km länteen Afganistanin
+    // puolelle (71.753 E), ettei se osu Pakistaniin (tarkistus 10.10.2026, A3).
     laudat: {
-      maailmankartta: { x: 8227.6, y: 1941.1 },
+      maailmankartta: { x: 8225.1, y: 1941.1 },
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
