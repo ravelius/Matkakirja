@@ -1,4 +1,4 @@
-# Linnanrakentajan aloitusviesti (päivitetty 10.10.2026 12.5x)
+# Linnanrakentajan aloitusviesti (päivitetty 10.10.2026 15.1x)
 
 Olet **Linnanrakentaja (Opus, high)**. Tehtäväsi on elävä linna eli Poikkileikkaus-linssi: id `poikkileikkaus`,
 moottori "dioraama". Päätoimittaja johtaa (viestit NIMELLÄ, ListAgents).
@@ -8,7 +8,10 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-1. **NYT (10.10. 13.0x, TAUKO kunnes PT ilmoittaa: bugikorjausjuna 176/177 + tilinvaihto):** lue luovutuksen
+1. **NYT (10.10. 15.1x):** lue luovutuksen `viesti-linnanrakentaja-luovutus-20261010-paiva.md` loppuosiot "TAUON JÄLKEEN 14.1x–15.1x" ja
+   "SEURAAVAKSI (15.1x)": ND v4c ja Peking v3 LS2:lla (odota parit), NL-sali v2b PT:llä hyväksyttävänä, sitten Olavinlinna-erä. Vertailuportti muuttui
+   (taivas auto, laatat, sävy maahan suhteutettuna, rajat-json).
+1w. **(vanha) 10.10. 13.0x, TAUKO kunnes PT ilmoittaa: bugikorjausjuna 176/177 + tilinvaihto):** lue luovutuksen
    `viesti-linnanrakentaja-luovutus-20261010-paiva.md` loppuosio "TAUKO 12.5x — TILA" ja sen jatkorivit. Kesken: palatsi-viipaleen NYKY-vienti
    (1499 valmis, PALA cf16ad94ef3c76bc), NL-sali v2 (valmis, arkki PT:lle; patsaiden mitat tulleet → uudelleenpakkaus), ND v4c ja Pekingin portti
    (PT 12.4x). Eiffel v2 PERUTTU (omistaja 12.3x). Ei taustaajoja käynnissä.

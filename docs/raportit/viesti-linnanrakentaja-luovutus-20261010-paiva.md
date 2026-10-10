@@ -213,3 +213,23 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
   (täydet 11, vain korkeus 24 → yht. 24 korkeutta, 11 ilman mittoja; Rijks: Spiering/Falconet/Houdon sisältävät jalustan, keulakuva 140 ilman
   jalustaa, Keyserin rintakuva 72,5 ilman tammisokkelia 38,5 → skannauksessa sokkeli mukana: korkeus_m 1,11). Tauon jälkeen: patsaat-taulu.json
   korkeus_m näistä (jalustan sisältävissä skannattu osa tarkistettava kuvasta), arvio=false → patsaat_pakkaa.py → alankomaat.py → nl_tuotanto.
+
+## TAUON JÄLKEEN 14.1x–15.1x (tili vaihdettu) — TEHTY
+- **Palatsi-viipale NYKY** viety: PALA bccf694794d5f5f6 (blender 97e3984b613f4379, v45f 19699c220, CI 38047634238); 1499 cf16ad94ef3c76bc.
+  Siirtoseppä kytki molemmat (99b9fead3), OsaviipaleetTestit läpi. Worktree v45f poistettu.
+- **ND v4c** LS2:lle (tekoaly-v4c, kalibrointi_v4c.json, aja_tekseli_v4c.zsh [LODIT="0 1 2"], LAHTEET "v4c"): pystykivi lämmin beige 176/163/143,
+  projisoi_tekseli.py uudet avaimet: 'julkisivu' (etupinta P·w-moodista, vyöhykkeet AO:n jälkeen: portaalit 0,62 × seinä, galleria 0,78 ×,
+  alueet: tornien aukkojen lyijysäleet 30/30/33), 'ao_ylos' (AO 0,2 ylöspäin), 'valoisuus' nd_tumma 32/31/33, metallin musta virhe korjattu,
+  TEKSELI_DUMP=<npz> vianetsintään. Etukuvat lahde/nd_edesta.py → vertailu/edesta/. Arkki 1c2da7b30.
+- **Vertailuportti (vertaa_orto.py) muutettu**: taivas auto (aurinko + taivas erikseen, s sovitetaan oikean ortokuvan maan p10/p25:een; ND 0,6),
+  useat glb:t (pilkut/glob; laattojen extras enu_siirto_m), katot/ulokkeet sävy maahan suhteutettuna, RAJAT savy_maa + --rajat <json> (_peruste),
+  --maan-korkeus; vertailuportti.zsh välittää lisäargumentit. ND v4c LÄPI (katot −6 %, ulokkeet −12 %), v4b hylkää.
+- **Peking v3** LS2:lle (glb/, v2b glb-v2b/; LAHTEET "v3"; lahde/aja_laatat.zsh): kulta_katto okra 180/134/62, suuri halli + museo porrastettuina
+  julkisivu_pylvas-pilastereilla, tasa 0,30/0,28/0,25. Portti LÄPI rajat-peking.json:lla (maan sävy 30: ei maata laatoissa, S2 lämmin). Arkki 58580b1ac.
+- **NL-sali v2b** PT:lle hyväksyttäväksi (b9711a161): Sonnet-agentti päivitti patsaat-taulu.json (24 mitattua, 3 Rijks leveyden mukaan, 11 arvio),
+  lahde/aja_tuotanto.zsh (sali → leivonta → astcm → kuvat). Varmuuskopiot patsaat-taulu-arvio.json, patsaat-arvio/, ../taidemuseo-alankomaat-v2-arvio/.
+- PT:n levytehtävä: proto-3d/_tyo/metahuman-koe → T7 + symlinkki.
+
+## SEURAAVAKSI (15.1x)
+1) LS2:n parit ND v4c ja Peking v3 → säätö. 2) PT:n hyväksyntä NL-sali v2b → vienti LS1:lle. 3) Olavinlinna-erä Siirtosepän arkista:
+   rannan vaaleat kivet 1499 liian kirkkaat (v46w ja v46z-176-b), ponttonisillan leikkauksen ulkopuolelle jääneet tummat palaset ennen 1975.
