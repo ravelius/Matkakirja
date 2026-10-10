@@ -1,0 +1,998 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rozafan linna (historia)
+Tietoruudun teksti: Rozafan linna kohoaa Shkodërin kaupungissa Luoteis-Albaniassa kalliokukkulalla, joka nousee 130 metriä merenpinnan yläpuolelle Bunan ja Drinin jokien väliin. Vanhimmat linnoitusmuurit ovat antiikin ajalta, mutta nykyiset rakenteet ovat pääosin venetsialaisia. Paikan tunnetuin taru kertoo kolmesta veljestä, joiden rakentama muuri sortui yhä uudelleen, kunnes nuorimman veljen vaimo Rozafa muurattiin elävänä seinään. Hän pyysi jättämään auki aukot silmälle, kädelle, jalalle ja rinnalle, jotta voisi hoivata vauvaansa. Tarun mukaan kalkkikivestä valuva maito on Rozafan maitoa. Linna on nykyisin avoin arkeologinen puisto ja museo.
+AIEMPI KYSYMYS: Kuka muurattiin Rozafan linnan seinään?
+AIEMPI VASTAUS (Livia):
+Ai tota, tän minä tiedän. Taru kertoo, että kolmen veljen rakentama muuri sortui yhä uudelleen, ja se pysyi pystyssä vasta, kun nuorimman veljen vaimo [[Rozafa]] muurattiin elävänä seinään. Hän pyysi jättämään seinään aukot silmälle, kädelle, jalalle ja rinnalle, jotta hän voisi edelleen hoivata vauvaansa. Kyseessä on kansantaru eikä todennettu historiallinen tapahtuma, ja tarinoita rakennusuhrista tunnetaan laajalti [[Balkanin]] kansanperinteessä. Taru liittyy [[Shkodërin]] kaupungissa kohoavaan linnaan. Onneksi tää on vain taru.
+KYSYMYS: Kerro lisää: Rozafa
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rozafan linna (historia)
+Tietoruudun teksti: Rozafan linna kohoaa Shkodërin kaupungissa Luoteis-Albaniassa kalliokukkulalla, joka nousee 130 metriä merenpinnan yläpuolelle Bunan ja Drinin jokien väliin. Vanhimmat linnoitusmuurit ovat antiikin ajalta, mutta nykyiset rakenteet ovat pääosin venetsialaisia. Paikan tunnetuin taru kertoo kolmesta veljestä, joiden rakentama muuri sortui yhä uudelleen, kunnes nuorimman veljen vaimo Rozafa muurattiin elävänä seinään. Hän pyysi jättämään auki aukot silmälle, kädelle, jalalle ja rinnalle, jotta voisi hoivata vauvaansa. Tarun mukaan kalkkikivestä valuva maito on Rozafan maitoa. Linna on nykyisin avoin arkeologinen puisto ja museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historian hetki: Vlorë 1912 — lippu, joka ommeltiin yöllä] 28.11.1912 — Neula pistää kangasta vielä muutama tunti ennen kuin lippu nousee salkoon. Marigo Posio istuu yönsä ompelemassa punaista kangasta ja mustaa kaksipäistä kotkaa, koska lippu, jonka Ismail Qemali oli ensin lainannut, vaadittiin takaisin viime hetkellä. Perjantaina 28. marraskuuta 1912 vanha diplomaatti Qemali seisoo Vlorën satamakaupungin vaatimattomassa talossa, joka toimii samalla sairaalana, ja lukee ääneen julistuksen: Albania on itsenäinen, viiden vuosisadan osmanivallan jälkeen. Balkanin sodat ovat ajaneet Ottomaanien valtakunnan ahtaalle, ja albaanijohtajat ovat kokoontuneet Vlorëen nopeasti, ennen kuin naapurimaat ehtivät jakaa alueen keskenään: Serbian, Montenegron ja Kre…
+- [Pohjois-Makedonia — maalehti / Historia: Balkanin Jerusalem] 9.–13. vuosisata — Ohridin järvi on yksi Euroopan vanhimmista ja syvimmistä järvistä – sen pohjassa elää lajeja, joita ei tavata muualla maailmassa. Rannalla kohoava Ohridin kaupunki oli 800-luvun lopulla Pyhän Kliment Ohridilaisen koulun ansiosta slaavilaisen kirjallisuuden ja kyrillisen kirjaimiston tärkeimpiä keskuksia Euroopassa. Keskiajalla kaupungissa kerrottiin olleen 365 kirkkoa, yksi joka päivälle – legenda liioittelee, mutta kuuluisin jäljellä olevista on kalliolle Kaneon niemelle rakennettu Pyhän Johanneksen kirkko 1200-luvulta. Unesco liitti järven ja vanhankaupungin maailmanperintöluetteloon jo 1979.
+AIEMPI KYSYMYS: Kuka muurattiin Rozafan linnan seinään?
+AIEMPI VASTAUS (Livia):
+Ai tota, tän minä tiedän. Taru kertoo, että kolmen veljen rakentama muuri sortui yhä uudelleen, ja se pysyi pystyssä vasta, kun nuorimman veljen vaimo [[Rozafa]] muurattiin elävänä seinään. Hän pyysi jättämään seinään aukot silmälle, kädelle, jalalle ja rinnalle, jotta hän voisi edelleen hoivata vauvaansa. Kyseessä on kansantaru eikä todennettu historiallinen tapahtuma, ja tarinoita rakennusuhrista tunnetaan laajalti [[Balkanin]] kansanperinteessä. Taru liittyy [[Shkodërin]] kaupungissa kohoavaan linnaan. Onneksi tää on vain taru.
+KYSYMYS: Kerro lisää: Balkanin
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rozafan linna (historia)
+Tietoruudun teksti: Rozafan linna kohoaa Shkodërin kaupungissa Luoteis-Albaniassa kalliokukkulalla, joka nousee 130 metriä merenpinnan yläpuolelle Bunan ja Drinin jokien väliin. Vanhimmat linnoitusmuurit ovat antiikin ajalta, mutta nykyiset rakenteet ovat pääosin venetsialaisia. Paikan tunnetuin taru kertoo kolmesta veljestä, joiden rakentama muuri sortui yhä uudelleen, kunnes nuorimman veljen vaimo Rozafa muurattiin elävänä seinään. Hän pyysi jättämään auki aukot silmälle, kädelle, jalalle ja rinnalle, jotta voisi hoivata vauvaansa. Tarun mukaan kalkkikivestä valuva maito on Rozafan maitoa. Linna on nykyisin avoin arkeologinen puisto ja museo.
+AIEMPI KYSYMYS: Kuka muurattiin Rozafan linnan seinään?
+AIEMPI VASTAUS (Livia):
+Ai tota, tän minä tiedän. Taru kertoo, että kolmen veljen rakentama muuri sortui yhä uudelleen, ja se pysyi pystyssä vasta, kun nuorimman veljen vaimo [[Rozafa]] muurattiin elävänä seinään. Hän pyysi jättämään seinään aukot silmälle, kädelle, jalalle ja rinnalle, jotta hän voisi edelleen hoivata vauvaansa. Kyseessä on kansantaru eikä todennettu historiallinen tapahtuma, ja tarinoita rakennusuhrista tunnetaan laajalti [[Balkanin]] kansanperinteessä. Taru liittyy [[Shkodërin]] kaupungissa kohoavaan linnaan. Onneksi tää on vain taru.
+KYSYMYS: Kerro lisää: Shkodërin
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rozafan linna (historia)
+Tietoruudun teksti: Rozafan linna kohoaa Shkodërin kaupungissa Luoteis-Albaniassa kalliokukkulalla, joka nousee 130 metriä merenpinnan yläpuolelle Bunan ja Drinin jokien väliin. Vanhimmat linnoitusmuurit ovat antiikin ajalta, mutta nykyiset rakenteet ovat pääosin venetsialaisia. Paikan tunnetuin taru kertoo kolmesta veljestä, joiden rakentama muuri sortui yhä uudelleen, kunnes nuorimman veljen vaimo Rozafa muurattiin elävänä seinään. Hän pyysi jättämään auki aukot silmälle, kädelle, jalalle ja rinnalle, jotta voisi hoivata vauvaansa. Tarun mukaan kalkkikivestä valuva maito on Rozafan maitoa. Linna on nykyisin avoin arkeologinen puisto ja museo.
+AIEMPI KYSYMYS: Mitä kalkkikivestä valuva maito on tarun mukaan?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tarun mukaan kalkkikivestä valuva valkea neste on [[Rozafan]] maitoa: hän pyysi jättämään rintansa muurin ulkopuolelle, jotta voisi ruokkia vauvaansa, ja kallio vuotaa maitoa yhä. Luonnontieteellisesti tällainen valkea vuoto on yleensä kalkkipitoista vettä, joka suodattuu kiven läpi. Taru on osa [[Albanian]] kansanperinnettä ja kertoo samasta paikasta kuin linnan rakentamisen tarina. Hiljainen taru, mutta kaunis.
+KYSYMYS: Kerro lisää: Rozafan
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rozafan linna (historia)
+Tietoruudun teksti: Rozafan linna kohoaa Shkodërin kaupungissa Luoteis-Albaniassa kalliokukkulalla, joka nousee 130 metriä merenpinnan yläpuolelle Bunan ja Drinin jokien väliin. Vanhimmat linnoitusmuurit ovat antiikin ajalta, mutta nykyiset rakenteet ovat pääosin venetsialaisia. Paikan tunnetuin taru kertoo kolmesta veljestä, joiden rakentama muuri sortui yhä uudelleen, kunnes nuorimman veljen vaimo Rozafa muurattiin elävänä seinään. Hän pyysi jättämään auki aukot silmälle, kädelle, jalalle ja rinnalle, jotta voisi hoivata vauvaansa. Tarun mukaan kalkkikivestä valuva maito on Rozafan maitoa. Linna on nykyisin avoin arkeologinen puisto ja museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Yön yli syntynyt lippu] 28.11.1912 — Marraskuun 28. päivänä 1912 kokoontui Vlorëen 83 edustajaa eri puolilta Albaniaa ja julisti maan itsenäiseksi Osmanien valtakunnasta. Sen jälkeen johtaja Ismail Qemali astui vuokra-asuntonsa parvekkeelle ja nosti punaisen lipun, jossa oli Skanderbegin musta kaksipäinen kotka – symboli oli ollut osmanivallan aikana kiellettyä. Lipun ompelijaksi muistetaan paikallinen aktivisti Marigo Posio, jota kutsutaan yhä Albanian lipun äidiksi; hän teki omalla kustannuksellaan useita kopioita uusille virastoille. Qemalista tuli itsenäisen Albanian ensimmäinen pääministeri, mutta rajat vahvistuivat vasta seuraavana vuonna Lontoon suurvaltaneuvottelussa.
+- [Albania — maalehti / Luonto: Prespajärvi ja sen Maligradin saari] vuodesta 1999 — Suuri Prespajärvi lepää 853 metrin korkeudessa kolmen maan rajalla, ja Albanian osuus sen 259 neliökilometrin pinta-alasta on 46,3 neliökilometriä. Albanian puolella järven rannat kuuluvat vuonna 1999 perustettuun Prespan kansallispuistoon, jonka pinta-ala on noin 276 neliökilometriä. Pieneltä Maligradin saarelta löytyy paikallisen aatelismiehen vuonna 1369 rakennuttama Pyhän Marian kirkko. Prespan vedet purkautuvat karstin maanalaisten kanavien kautta lähteinä Ohridjärveen, jonka pinta on noin 150 metriä alempana. Ohridjärven Albanian puolella sijaitsee Pogradec, ja UNESCO ulotti järven suojelualueen Albanian rannalle vuonna 2019.
+AIEMPI KYSYMYS: Mitä kalkkikivestä valuva maito on tarun mukaan?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tarun mukaan kalkkikivestä valuva valkea neste on [[Rozafan]] maitoa: hän pyysi jättämään rintansa muurin ulkopuolelle, jotta voisi ruokkia vauvaansa, ja kallio vuotaa maitoa yhä. Luonnontieteellisesti tällainen valkea vuoto on yleensä kalkkipitoista vettä, joka suodattuu kiven läpi. Taru on osa [[Albanian]] kansanperinnettä ja kertoo samasta paikasta kuin linnan rakentamisen tarina. Hiljainen taru, mutta kaunis.
+KYSYMYS: Kerro lisää: Albanian
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rozafan linna (historia)
+Tietoruudun teksti: Rozafan linna kohoaa Shkodërin kaupungissa Luoteis-Albaniassa kalliokukkulalla, joka nousee 130 metriä merenpinnan yläpuolelle Bunan ja Drinin jokien väliin. Vanhimmat linnoitusmuurit ovat antiikin ajalta, mutta nykyiset rakenteet ovat pääosin venetsialaisia. Paikan tunnetuin taru kertoo kolmesta veljestä, joiden rakentama muuri sortui yhä uudelleen, kunnes nuorimman veljen vaimo Rozafa muurattiin elävänä seinään. Hän pyysi jättämään auki aukot silmälle, kädelle, jalalle ja rinnalle, jotta voisi hoivata vauvaansa. Tarun mukaan kalkkikivestä valuva maito on Rozafan maitoa. Linna on nykyisin avoin arkeologinen puisto ja museo.
+AIEMPI KYSYMYS: Minkä jokien välissä Rozafan linnan kukkula kohoaa?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on helppo. Linnan kalliokukkula nousee noin 130 metriä merenpinnan yläpuolelle [[Bunan]] ja [[Drinin]] jokien väliin. Kukkula sijaitsee Luoteis-Albaniassa Shkodërin kaupungissa, ja korkea kohta jokien välissä on ollut luonteva paikka linnoitukselle.
+
+Joet ovat kyyhkylle parasta suunnistusta: seuraat vain vettä, ja kotiin pääsee. Meikäläisten muistiinpanojen mukaan sama pätee ihmisiin, jotka ovat joskus kulkeneet noita rantoja.
+KYSYMYS: Kerro lisää: Bunan
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rozafan linna (historia)
+Tietoruudun teksti: Rozafan linna kohoaa Shkodërin kaupungissa Luoteis-Albaniassa kalliokukkulalla, joka nousee 130 metriä merenpinnan yläpuolelle Bunan ja Drinin jokien väliin. Vanhimmat linnoitusmuurit ovat antiikin ajalta, mutta nykyiset rakenteet ovat pääosin venetsialaisia. Paikan tunnetuin taru kertoo kolmesta veljestä, joiden rakentama muuri sortui yhä uudelleen, kunnes nuorimman veljen vaimo Rozafa muurattiin elävänä seinään. Hän pyysi jättämään auki aukot silmälle, kädelle, jalalle ja rinnalle, jotta voisi hoivata vauvaansa. Tarun mukaan kalkkikivestä valuva maito on Rozafan maitoa. Linna on nykyisin avoin arkeologinen puisto ja museo.
+AIEMPI KYSYMYS: Minkä jokien välissä Rozafan linnan kukkula kohoaa?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on helppo. Linnan kalliokukkula nousee noin 130 metriä merenpinnan yläpuolelle [[Bunan]] ja [[Drinin]] jokien väliin. Kukkula sijaitsee Luoteis-Albaniassa Shkodërin kaupungissa, ja korkea kohta jokien välissä on ollut luonteva paikka linnoitukselle.
+
+Joet ovat kyyhkylle parasta suunnistusta: seuraat vain vettä, ja kotiin pääsee. Meikäläisten muistiinpanojen mukaan sama pätee ihmisiin, jotka ovat joskus kulkeneet noita rantoja.
+KYSYMYS: Kerro lisää: Drinin
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rozafan linna (historia)
+Tietoruudun teksti: Rozafan linna kohoaa Shkodërin kaupungissa Luoteis-Albaniassa kalliokukkulalla, joka nousee 130 metriä merenpinnan yläpuolelle Bunan ja Drinin jokien väliin. Vanhimmat linnoitusmuurit ovat antiikin ajalta, mutta nykyiset rakenteet ovat pääosin venetsialaisia. Paikan tunnetuin taru kertoo kolmesta veljestä, joiden rakentama muuri sortui yhä uudelleen, kunnes nuorimman veljen vaimo Rozafa muurattiin elävänä seinään. Hän pyysi jättämään auki aukot silmälle, kädelle, jalalle ja rinnalle, jotta voisi hoivata vauvaansa. Tarun mukaan kalkkikivestä valuva maito on Rozafan maitoa. Linna on nykyisin avoin arkeologinen puisto ja museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Tasavallan vuosi] Se huuto, jonka kuulit kahviloissa, oli aiheellista. Tasavallan johdossa vaihtui isoisäsi matkavuonna neljä miestä. Estanislao Figueras kesti helmikuusta kesäkuuhun. Francisco Pi y Margall aloitti 11. kesäkuuta ja kesti 37 päivää: hän kieltäytyi tukahduttamasta etelän kapinoita aseilla, koska kapinalliset noudattivat hänen omaa oppiaan. Nicolás Salmerón aloitti 18. heinäkuuta, ja kun kenraalit vaativat häntä vahvistamaan karkureiden kuolemantuomiot, hän erosi 6. syyskuuta — hän oli oikeusministerinä itse poistanut kuolemanrangaistuksen, ja hänen mausoleuminsa seinään on kirjoitettu, että hän luopui vallasta, jottei allekirjoittaisi kuolemantuomiota. Emilio Castelar aloitti 7. syyskuuta ja v…
+AIEMPI KYSYMYS: Keiden rakentamia linnan nykyiset rakenteet ovat pääosin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Linnan nykyiset rakenteet ovat pääosin venetsialaisia, eli ne ovat peräisin [[Venetsian tasavallan]] ajalta. Vanhimmat linnoitusmuurit ovat kuitenkin paljon vanhempia, antiikin ajalta, joten kukkulalla on rakennettu ja korjattu muureja hyvin kauan. Kokonaisuus on nykyisin [[arkeologinen puisto]] ja museo. Venetsialaiset osasivat rakentaa, sen sanon vaikka kyyhkynä.
+KYSYMYS: Kerro lisää: Venetsian tasavallan
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rozafan linna (historia)
+Tietoruudun teksti: Rozafan linna kohoaa Shkodërin kaupungissa Luoteis-Albaniassa kalliokukkulalla, joka nousee 130 metriä merenpinnan yläpuolelle Bunan ja Drinin jokien väliin. Vanhimmat linnoitusmuurit ovat antiikin ajalta, mutta nykyiset rakenteet ovat pääosin venetsialaisia. Paikan tunnetuin taru kertoo kolmesta veljestä, joiden rakentama muuri sortui yhä uudelleen, kunnes nuorimman veljen vaimo Rozafa muurattiin elävänä seinään. Hän pyysi jättämään auki aukot silmälle, kädelle, jalalle ja rinnalle, jotta voisi hoivata vauvaansa. Tarun mukaan kalkkikivestä valuva maito on Rozafan maitoa. Linna on nykyisin avoin arkeologinen puisto ja museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salalah — kohdekartta / Kohdekartta: Al-Baleedin puisto] kaivauksia vuodesta 1952 Al-Baleedin arkeologinen puisto on rannassa kaupungin itälaidalla, ja se on osa Unescon maailmanperintökohdetta nimeltä Suitsukkeen maa. Kohde ei ole yksi paikka vaan neljä: Al-Baleedin lisäksi siihen kuuluvat Khor Rorin satamarauniot, Shisrin karavaanikeidas aavikolla ja Wadi Dawkahin suitsukepuisto. Yhteensä ne kattavat lähes kahdeksansataaviisikymmentä hehtaaria, ja niiden ympärillä on vielä yli tuhannen hehtaarin suojavyöhyke. Kohde kirjattiin luetteloon vuonna 2000 nimellä Suitsuketie ja nimettiin uudelleen vuonna 2005. Puiston läpi kulkee vesi, ja se on koko paikan avain. Khawr al-Balid oli aikanaan lahti, johon laivat pääsivät suoraan mereltä; sen suu kuroutu…
+AIEMPI KYSYMYS: Keiden rakentamia linnan nykyiset rakenteet ovat pääosin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Linnan nykyiset rakenteet ovat pääosin venetsialaisia, eli ne ovat peräisin [[Venetsian tasavallan]] ajalta. Vanhimmat linnoitusmuurit ovat kuitenkin paljon vanhempia, antiikin ajalta, joten kukkulalla on rakennettu ja korjattu muureja hyvin kauan. Kokonaisuus on nykyisin [[arkeologinen puisto]] ja museo. Venetsialaiset osasivat rakentaa, sen sanon vaikka kyyhkynä.
+KYSYMYS: Kerro lisää: arkeologinen puisto
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beratin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Berat on Etelä-Albanian kaupunki Osum-joen rannalla, ja sitä kutsutaan tuhannen ikkunan kaupungiksi, koska vanhojen ottomaanikautisten talojen suuret ikkunat katsovat rinteeltä alas kaupunkiin. Vanhakaupunki jakautuu kolmeen osaan: linnamäen Kalajaan, sen juurella olevaan Mangalemiin ja joen toisella puolella olevaan Goricaan. Linnan muureja vahvistettiin 400-luvulla Bysantin keisari Theodosios II:n aikana, ja niitä rakennettiin uudelleen 500- ja 1200-luvuilla. Linnan sisällä oli aikoinaan noin 20 kirkkoa ja yksi moskeija, ja useimmat kirkoista olivat 1200-luvulta. Berat liitettiin Unescon maailmanperintöluetteloon Gjirokastërin rinnalle vuonna 2008.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Valkoinen kaupunki tuhannella ikkunalla] 314 eaa. – 2008 — Makedonialainen kenraali Kassandros perusti kaupungin nimellä Antipatreia vuonna 314 eaa. isänsä Antipatroksen kunniaksi, vanhan illyrialaisasutuksen paikalle. Bysantin aikaan se tunnettiin nimellä Pulcheriopolis, ja keskiajan slaavilainen nimi Beligrad – Valkoinen kaupunki – kuvasi jo silloin sen valkoisia taloja. Osmanit valtasivat kaupungin 1417. Nykyisin Osum-joen kahta rantaa reunustavat Mangalemin ja Gorican korttelit, joiden rinteille kiipeävissä taloissa on niin paljon ikkunoita, että albaanit kutsuvat kaupunkia tuhannen ikkunan kaupungiksi. Unesco liitti Beratin maailmanperintöluetteloon 2008 yhdessä Gjirokastërin kanssa.
+AIEMPI KYSYMYS: Miksi Beratia sanotaan tuhannen ikkunan kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tämä on kaunis kysymys. Berat on saanut lempinimensä, koska rinteillä kohoavien vanhojen ottomaanikautisten talojen suuret ikkunat katsovat alas kaupunkiin ja [[Osum-joen]] rannoille. Vanhakaupunki jakautuu kolmeen osaan: linnamäen [[Kalajaan]], sen juurella olevaan [[Mangalemiin]] ja joen toisella puolella olevaan Goricaan. Nimitys ei ole tarkka luku vaan kuvaus ikkunoiden runsaudesta.
+
+Ylhäältä katsottuna rinne näyttää kyyhkyslakalta, ja sehän on minusta paras mahdollinen kaupunki.
+KYSYMYS: Kerro lisää: Osum-joen
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beratin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Berat on Etelä-Albanian kaupunki Osum-joen rannalla, ja sitä kutsutaan tuhannen ikkunan kaupungiksi, koska vanhojen ottomaanikautisten talojen suuret ikkunat katsovat rinteeltä alas kaupunkiin. Vanhakaupunki jakautuu kolmeen osaan: linnamäen Kalajaan, sen juurella olevaan Mangalemiin ja joen toisella puolella olevaan Goricaan. Linnan muureja vahvistettiin 400-luvulla Bysantin keisari Theodosios II:n aikana, ja niitä rakennettiin uudelleen 500- ja 1200-luvuilla. Linnan sisällä oli aikoinaan noin 20 kirkkoa ja yksi moskeija, ja useimmat kirkoista olivat 1200-luvulta. Berat liitettiin Unescon maailmanperintöluetteloon Gjirokastërin rinnalle vuonna 2008.
+AIEMPI KYSYMYS: Miksi Beratia sanotaan tuhannen ikkunan kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tämä on kaunis kysymys. Berat on saanut lempinimensä, koska rinteillä kohoavien vanhojen ottomaanikautisten talojen suuret ikkunat katsovat alas kaupunkiin ja [[Osum-joen]] rannoille. Vanhakaupunki jakautuu kolmeen osaan: linnamäen [[Kalajaan]], sen juurella olevaan [[Mangalemiin]] ja joen toisella puolella olevaan Goricaan. Nimitys ei ole tarkka luku vaan kuvaus ikkunoiden runsaudesta.
+
+Ylhäältä katsottuna rinne näyttää kyyhkyslakalta, ja sehän on minusta paras mahdollinen kaupunki.
+KYSYMYS: Kerro lisää: Kalajaan
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beratin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Berat on Etelä-Albanian kaupunki Osum-joen rannalla, ja sitä kutsutaan tuhannen ikkunan kaupungiksi, koska vanhojen ottomaanikautisten talojen suuret ikkunat katsovat rinteeltä alas kaupunkiin. Vanhakaupunki jakautuu kolmeen osaan: linnamäen Kalajaan, sen juurella olevaan Mangalemiin ja joen toisella puolella olevaan Goricaan. Linnan muureja vahvistettiin 400-luvulla Bysantin keisari Theodosios II:n aikana, ja niitä rakennettiin uudelleen 500- ja 1200-luvuilla. Linnan sisällä oli aikoinaan noin 20 kirkkoa ja yksi moskeija, ja useimmat kirkoista olivat 1200-luvulta. Berat liitettiin Unescon maailmanperintöluetteloon Gjirokastërin rinnalle vuonna 2008.
+AIEMPI KYSYMYS: Miksi Beratia sanotaan tuhannen ikkunan kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tämä on kaunis kysymys. Berat on saanut lempinimensä, koska rinteillä kohoavien vanhojen ottomaanikautisten talojen suuret ikkunat katsovat alas kaupunkiin ja [[Osum-joen]] rannoille. Vanhakaupunki jakautuu kolmeen osaan: linnamäen [[Kalajaan]], sen juurella olevaan [[Mangalemiin]] ja joen toisella puolella olevaan Goricaan. Nimitys ei ole tarkka luku vaan kuvaus ikkunoiden runsaudesta.
+
+Ylhäältä katsottuna rinne näyttää kyyhkyslakalta, ja sehän on minusta paras mahdollinen kaupunki.
+KYSYMYS: Kerro lisää: Mangalemiin
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beratin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Berat on Etelä-Albanian kaupunki Osum-joen rannalla, ja sitä kutsutaan tuhannen ikkunan kaupungiksi, koska vanhojen ottomaanikautisten talojen suuret ikkunat katsovat rinteeltä alas kaupunkiin. Vanhakaupunki jakautuu kolmeen osaan: linnamäen Kalajaan, sen juurella olevaan Mangalemiin ja joen toisella puolella olevaan Goricaan. Linnan muureja vahvistettiin 400-luvulla Bysantin keisari Theodosios II:n aikana, ja niitä rakennettiin uudelleen 500- ja 1200-luvuilla. Linnan sisällä oli aikoinaan noin 20 kirkkoa ja yksi moskeija, ja useimmat kirkoista olivat 1200-luvulta. Berat liitettiin Unescon maailmanperintöluetteloon Gjirokastërin rinnalle vuonna 2008.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Kaupunki, jonka suot nielaisivat] 600-luku eaa. – 1928 — Korkyran (nykyisen Korfun) kreikkalaiset perustivat Butrintiin kauppa-asutuksen viimeistään 600-luvulla eaa., ja siitä kasvoi vaurastuva Rooman-kauden kaupunki, jolla oli oma teatteri, kylpylät ja vesijohto. Bysantin aikana kaupungista tuli piispanistuin, ja lyhyen venetsialaiskauden jälkeen ympäristö alkoi soistua. Keskiajan lopulla Butrint hylättiin kokonaan, ja raunioita peitti vuosisatojen ajan malariasuo. Italialainen arkeologi Luigi Maria Ugolini alkoi kaivaa kaupunkia esiin 1928, ja työ paljasti kerroksia kreikkalaisesta, roomalaisesta ja bysanttilaisesta ajasta päällekkäin. Unesco liitti Butrintin maailmanperintöluetteloon 1992.
+- [Albania — maalehti / Historia: Valkoinen kaupunki tuhannella ikkunalla] 314 eaa. – 2008 — Makedonialainen kenraali Kassandros perusti kaupungin nimellä Antipatreia vuonna 314 eaa. isänsä Antipatroksen kunniaksi, vanhan illyrialaisasutuksen paikalle. Bysantin aikaan se tunnettiin nimellä Pulcheriopolis, ja keskiajan slaavilainen nimi Beligrad – Valkoinen kaupunki – kuvasi jo silloin sen valkoisia taloja. Osmanit valtasivat kaupungin 1417. Nykyisin Osum-joen kahta rantaa reunustavat Mangalemin ja Gorican korttelit, joiden rinteille kiipeävissä taloissa on niin paljon ikkunoita, että albaanit kutsuvat kaupunkia tuhannen ikkunan kaupungiksi. Unesco liitti Beratin maailmanperintöluetteloon 2008 yhdessä Gjirokastërin kanssa.
+AIEMPI KYSYMYS: Kuinka monta kirkkoa Beratin linnassa oli aikoinaan?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Linnan sisällä oli aikoinaan noin 20 kirkkoa ja yksi moskeija, ja useimmat kirkoista olivat 1200-luvulta. Linnan muureja vahvistettiin 400-luvulla [[Bysantin]] keisari [[Theodosios II:n]] aikana, ja niitä rakennettiin uudelleen 500- ja 1200-luvuilla. Luku on likimääräinen. Ei paha laskentaa kyyhkyltä.
+KYSYMYS: Kerro lisää: Bysantin
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beratin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Berat on Etelä-Albanian kaupunki Osum-joen rannalla, ja sitä kutsutaan tuhannen ikkunan kaupungiksi, koska vanhojen ottomaanikautisten talojen suuret ikkunat katsovat rinteeltä alas kaupunkiin. Vanhakaupunki jakautuu kolmeen osaan: linnamäen Kalajaan, sen juurella olevaan Mangalemiin ja joen toisella puolella olevaan Goricaan. Linnan muureja vahvistettiin 400-luvulla Bysantin keisari Theodosios II:n aikana, ja niitä rakennettiin uudelleen 500- ja 1200-luvuilla. Linnan sisällä oli aikoinaan noin 20 kirkkoa ja yksi moskeija, ja useimmat kirkoista olivat 1200-luvulta. Berat liitettiin Unescon maailmanperintöluetteloon Gjirokastërin rinnalle vuonna 2008.
+AIEMPI KYSYMYS: Kuinka monta kirkkoa Beratin linnassa oli aikoinaan?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Linnan sisällä oli aikoinaan noin 20 kirkkoa ja yksi moskeija, ja useimmat kirkoista olivat 1200-luvulta. Linnan muureja vahvistettiin 400-luvulla [[Bysantin]] keisari [[Theodosios II:n]] aikana, ja niitä rakennettiin uudelleen 500- ja 1200-luvuilla. Luku on likimääräinen. Ei paha laskentaa kyyhkyltä.
+KYSYMYS: Kerro lisää: Theodosios II:n
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beratin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Berat on Etelä-Albanian kaupunki Osum-joen rannalla, ja sitä kutsutaan tuhannen ikkunan kaupungiksi, koska vanhojen ottomaanikautisten talojen suuret ikkunat katsovat rinteeltä alas kaupunkiin. Vanhakaupunki jakautuu kolmeen osaan: linnamäen Kalajaan, sen juurella olevaan Mangalemiin ja joen toisella puolella olevaan Goricaan. Linnan muureja vahvistettiin 400-luvulla Bysantin keisari Theodosios II:n aikana, ja niitä rakennettiin uudelleen 500- ja 1200-luvuilla. Linnan sisällä oli aikoinaan noin 20 kirkkoa ja yksi moskeija, ja useimmat kirkoista olivat 1200-luvulta. Berat liitettiin Unescon maailmanperintöluetteloon Gjirokastërin rinnalle vuonna 2008.
+AIEMPI KYSYMYS: Mitkä kolme osaa Beratin vanhakaupunki jakautuu?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Vanhakaupunki jakautuu kolmeen osaan: [[Kalaja]] on linnamäen osa, [[Mangalem]] sijaitsee sen juurella ja [[Gorica]] on joen toisella puolella. Mangalemin ja Gorican korttelit reunustavat [[Osum-joen]] rantoja, ja niiden rinteille kiipeävissä taloissa on paljon ikkunoita. Jokaisessa kaupunginosassa on varmasti oma versionsa pullasta, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Kalaja
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beratin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Berat on Etelä-Albanian kaupunki Osum-joen rannalla, ja sitä kutsutaan tuhannen ikkunan kaupungiksi, koska vanhojen ottomaanikautisten talojen suuret ikkunat katsovat rinteeltä alas kaupunkiin. Vanhakaupunki jakautuu kolmeen osaan: linnamäen Kalajaan, sen juurella olevaan Mangalemiin ja joen toisella puolella olevaan Goricaan. Linnan muureja vahvistettiin 400-luvulla Bysantin keisari Theodosios II:n aikana, ja niitä rakennettiin uudelleen 500- ja 1200-luvuilla. Linnan sisällä oli aikoinaan noin 20 kirkkoa ja yksi moskeija, ja useimmat kirkoista olivat 1200-luvulta. Berat liitettiin Unescon maailmanperintöluetteloon Gjirokastërin rinnalle vuonna 2008.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Valkoinen kaupunki tuhannella ikkunalla] 314 eaa. – 2008 — Makedonialainen kenraali Kassandros perusti kaupungin nimellä Antipatreia vuonna 314 eaa. isänsä Antipatroksen kunniaksi, vanhan illyrialaisasutuksen paikalle. Bysantin aikaan se tunnettiin nimellä Pulcheriopolis, ja keskiajan slaavilainen nimi Beligrad – Valkoinen kaupunki – kuvasi jo silloin sen valkoisia taloja. Osmanit valtasivat kaupungin 1417. Nykyisin Osum-joen kahta rantaa reunustavat Mangalemin ja Gorican korttelit, joiden rinteille kiipeävissä taloissa on niin paljon ikkunoita, että albaanit kutsuvat kaupunkia tuhannen ikkunan kaupungiksi. Unesco liitti Beratin maailmanperintöluetteloon 2008 yhdessä Gjirokastërin kanssa.
+AIEMPI KYSYMYS: Mitkä kolme osaa Beratin vanhakaupunki jakautuu?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Vanhakaupunki jakautuu kolmeen osaan: [[Kalaja]] on linnamäen osa, [[Mangalem]] sijaitsee sen juurella ja [[Gorica]] on joen toisella puolella. Mangalemin ja Gorican korttelit reunustavat [[Osum-joen]] rantoja, ja niiden rinteille kiipeävissä taloissa on paljon ikkunoita. Jokaisessa kaupunginosassa on varmasti oma versionsa pullasta, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Mangalem
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beratin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Berat on Etelä-Albanian kaupunki Osum-joen rannalla, ja sitä kutsutaan tuhannen ikkunan kaupungiksi, koska vanhojen ottomaanikautisten talojen suuret ikkunat katsovat rinteeltä alas kaupunkiin. Vanhakaupunki jakautuu kolmeen osaan: linnamäen Kalajaan, sen juurella olevaan Mangalemiin ja joen toisella puolella olevaan Goricaan. Linnan muureja vahvistettiin 400-luvulla Bysantin keisari Theodosios II:n aikana, ja niitä rakennettiin uudelleen 500- ja 1200-luvuilla. Linnan sisällä oli aikoinaan noin 20 kirkkoa ja yksi moskeija, ja useimmat kirkoista olivat 1200-luvulta. Berat liitettiin Unescon maailmanperintöluetteloon Gjirokastërin rinnalle vuonna 2008.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Valkoinen kaupunki tuhannella ikkunalla] 314 eaa. – 2008 — Makedonialainen kenraali Kassandros perusti kaupungin nimellä Antipatreia vuonna 314 eaa. isänsä Antipatroksen kunniaksi, vanhan illyrialaisasutuksen paikalle. Bysantin aikaan se tunnettiin nimellä Pulcheriopolis, ja keskiajan slaavilainen nimi Beligrad – Valkoinen kaupunki – kuvasi jo silloin sen valkoisia taloja. Osmanit valtasivat kaupungin 1417. Nykyisin Osum-joen kahta rantaa reunustavat Mangalemin ja Gorican korttelit, joiden rinteille kiipeävissä taloissa on niin paljon ikkunoita, että albaanit kutsuvat kaupunkia tuhannen ikkunan kaupungiksi. Unesco liitti Beratin maailmanperintöluetteloon 2008 yhdessä Gjirokastërin kanssa.
+AIEMPI KYSYMYS: Mitkä kolme osaa Beratin vanhakaupunki jakautuu?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Vanhakaupunki jakautuu kolmeen osaan: [[Kalaja]] on linnamäen osa, [[Mangalem]] sijaitsee sen juurella ja [[Gorica]] on joen toisella puolella. Mangalemin ja Gorican korttelit reunustavat [[Osum-joen]] rantoja, ja niiden rinteille kiipeävissä taloissa on paljon ikkunoita. Jokaisessa kaupunginosassa on varmasti oma versionsa pullasta, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Gorica
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beratin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Berat on Etelä-Albanian kaupunki Osum-joen rannalla, ja sitä kutsutaan tuhannen ikkunan kaupungiksi, koska vanhojen ottomaanikautisten talojen suuret ikkunat katsovat rinteeltä alas kaupunkiin. Vanhakaupunki jakautuu kolmeen osaan: linnamäen Kalajaan, sen juurella olevaan Mangalemiin ja joen toisella puolella olevaan Goricaan. Linnan muureja vahvistettiin 400-luvulla Bysantin keisari Theodosios II:n aikana, ja niitä rakennettiin uudelleen 500- ja 1200-luvuilla. Linnan sisällä oli aikoinaan noin 20 kirkkoa ja yksi moskeija, ja useimmat kirkoista olivat 1200-luvulta. Berat liitettiin Unescon maailmanperintöluetteloon Gjirokastërin rinnalle vuonna 2008.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Valkoinen kaupunki tuhannella ikkunalla] 314 eaa. – 2008 — Makedonialainen kenraali Kassandros perusti kaupungin nimellä Antipatreia vuonna 314 eaa. isänsä Antipatroksen kunniaksi, vanhan illyrialaisasutuksen paikalle. Bysantin aikaan se tunnettiin nimellä Pulcheriopolis, ja keskiajan slaavilainen nimi Beligrad – Valkoinen kaupunki – kuvasi jo silloin sen valkoisia taloja. Osmanit valtasivat kaupungin 1417. Nykyisin Osum-joen kahta rantaa reunustavat Mangalemin ja Gorican korttelit, joiden rinteille kiipeävissä taloissa on niin paljon ikkunoita, että albaanit kutsuvat kaupunkia tuhannen ikkunan kaupungiksi. Unesco liitti Beratin maailmanperintöluetteloon 2008 yhdessä Gjirokastërin kanssa.
+AIEMPI KYSYMYS: Kuka perusti Beratin ja millä nimellä se tunnettiin alussa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Makedonialainen kenraali [[Kassandros]] perusti kaupungin vuonna 314 eaa. nimellä [[Antipatreia]] isänsä Antipatroksen kunniaksi vanhan illyrialaisasutuksen paikalle. Bysantin aikaan kaupunki tunnettiin nimellä Pulcheriopolis, ja keskiajan slaavilainen nimi Beligrad tarkoittaa valkoista kaupunkia. Osmanit valtasivat kaupungin vuonna 1417.
+
+Kaupunki on vaihtanut nimeä useammin kuin minä pesäpaikkaa, mutta valkoisena se on pysynyt.
+KYSYMYS: Kerro lisää: Kassandros
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beratin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Berat on Etelä-Albanian kaupunki Osum-joen rannalla, ja sitä kutsutaan tuhannen ikkunan kaupungiksi, koska vanhojen ottomaanikautisten talojen suuret ikkunat katsovat rinteeltä alas kaupunkiin. Vanhakaupunki jakautuu kolmeen osaan: linnamäen Kalajaan, sen juurella olevaan Mangalemiin ja joen toisella puolella olevaan Goricaan. Linnan muureja vahvistettiin 400-luvulla Bysantin keisari Theodosios II:n aikana, ja niitä rakennettiin uudelleen 500- ja 1200-luvuilla. Linnan sisällä oli aikoinaan noin 20 kirkkoa ja yksi moskeija, ja useimmat kirkoista olivat 1200-luvulta. Berat liitettiin Unescon maailmanperintöluetteloon Gjirokastërin rinnalle vuonna 2008.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Valkoinen kaupunki tuhannella ikkunalla] 314 eaa. – 2008 — Makedonialainen kenraali Kassandros perusti kaupungin nimellä Antipatreia vuonna 314 eaa. isänsä Antipatroksen kunniaksi, vanhan illyrialaisasutuksen paikalle. Bysantin aikaan se tunnettiin nimellä Pulcheriopolis, ja keskiajan slaavilainen nimi Beligrad – Valkoinen kaupunki – kuvasi jo silloin sen valkoisia taloja. Osmanit valtasivat kaupungin 1417. Nykyisin Osum-joen kahta rantaa reunustavat Mangalemin ja Gorican korttelit, joiden rinteille kiipeävissä taloissa on niin paljon ikkunoita, että albaanit kutsuvat kaupunkia tuhannen ikkunan kaupungiksi. Unesco liitti Beratin maailmanperintöluetteloon 2008 yhdessä Gjirokastërin kanssa.
+AIEMPI KYSYMYS: Kuka perusti Beratin ja millä nimellä se tunnettiin alussa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Makedonialainen kenraali [[Kassandros]] perusti kaupungin vuonna 314 eaa. nimellä [[Antipatreia]] isänsä Antipatroksen kunniaksi vanhan illyrialaisasutuksen paikalle. Bysantin aikaan kaupunki tunnettiin nimellä Pulcheriopolis, ja keskiajan slaavilainen nimi Beligrad tarkoittaa valkoista kaupunkia. Osmanit valtasivat kaupungin vuonna 1417.
+
+Kaupunki on vaihtanut nimeä useammin kuin minä pesäpaikkaa, mutta valkoisena se on pysynyt.
+KYSYMYS: Kerro lisää: Antipatreia
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beratin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Berat on Etelä-Albanian kaupunki Osum-joen rannalla, ja sitä kutsutaan tuhannen ikkunan kaupungiksi, koska vanhojen ottomaanikautisten talojen suuret ikkunat katsovat rinteeltä alas kaupunkiin. Vanhakaupunki jakautuu kolmeen osaan: linnamäen Kalajaan, sen juurella olevaan Mangalemiin ja joen toisella puolella olevaan Goricaan. Linnan muureja vahvistettiin 400-luvulla Bysantin keisari Theodosios II:n aikana, ja niitä rakennettiin uudelleen 500- ja 1200-luvuilla. Linnan sisällä oli aikoinaan noin 20 kirkkoa ja yksi moskeija, ja useimmat kirkoista olivat 1200-luvulta. Berat liitettiin Unescon maailmanperintöluetteloon Gjirokastërin rinnalle vuonna 2008.
+AIEMPI KYSYMYS: Milloin osmanit valtasivat Beratin?
+AIEMPI VASTAUS (Livia):
+Mmm— Osmanit valtasivat Beratin vuonna 1417, ja kaupunki pysyi osmanien hallinnassa vuosisatoja. Nykyisen vanhankaupungin rinnetalot ovat peräisin [[ottomaanikaudelta]], ja niiden suuret ikkunat ovat antaneet kaupungille sen tunnetun lempinimen. Ennen osmaneja alue oli ollut [[Bysantin]] vallan alla. Onpas siitä pitkä aika.
+KYSYMYS: Kerro lisää: ottomaanikaudelta
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valbonan laakso (luonto · vuori)
+Tietoruudun teksti: Valbonan laakso on Pohjois-Albanian Kukësin alueella sijaitseva jäätikön muovaama U-muotoinen laakso, jonka ympärille perustettiin 80 neliökilometrin kansallispuisto tammikuussa 1996. Alue kuuluu Albanian Alppeihin, ja sen korkein huippu Maja Jezercë nousee 2 694 metriin. Valbona-joki on lähes 51 kilometriä pitkä ja saa alkunsa Jezercën lähellä olevista karstilähteistä. Metsät peittävät puiston pinta-alasta 89 prosenttia, ja siellä elää ruskeakarhuja, susia, ilveksiä ja gemssejä. Laaksossa on neljä kylää, joista Valbonë on yksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Milford Sound — kaupunkilehti / Sade ja vuonon eläimet: Maailman sateisimpia paikkoja] Piopiotahi tunnetaan Uuden-Seelannin sateisimpana asuttuna paikkana: siihen sataa keskimäärin noin 6 400 millimetriä vettä vuodessa, ja sadepäiviä kertyy lähes 185 vuosittain - eli vuono on märkä joka toinen päivä. Rankimmillaan yhden vuorokauden aikana voi sataa jopa 250 millimetriä, mikä muuttaa vuonoa ympäröivät kalliot hetkessä kymmeniksi tilapäisiksi putouksiksi. Kosteus syntyy, kun Tasmaninmereltä puhaltavat länsituulet törmäävät Etelän Alppeihin ja nousevat äkkiä lähes 1 700 metrin korkeuteen, jolloin niiden kantama vesihöyry tiivistyy sateeksi lähes ympäri vuoden.
+AIEMPI KYSYMYS: Kuinka korkea on laakson ylin huippu Maja Jezercë?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Maja Jezercë nousee 2 694 metriin, ja se on Valbonan laakson ylin huippu sekä koko vuoriston korkein huippu. Huippu sijaitsee Albanian puolella, ja alue kuuluu [[Albanian Alppeihin]], joista käytetään myös nimeä [[Prokletije]]. Aika korkealla, mutta eiköhän sinne lennä kyyhkykin.
+KYSYMYS: Kerro lisää: Albanian Alppeihin
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valbonan laakso (luonto · vuori)
+Tietoruudun teksti: Valbonan laakso on Pohjois-Albanian Kukësin alueella sijaitseva jäätikön muovaama U-muotoinen laakso, jonka ympärille perustettiin 80 neliökilometrin kansallispuisto tammikuussa 1996. Alue kuuluu Albanian Alppeihin, ja sen korkein huippu Maja Jezercë nousee 2 694 metriin. Valbona-joki on lähes 51 kilometriä pitkä ja saa alkunsa Jezercën lähellä olevista karstilähteistä. Metsät peittävät puiston pinta-alasta 89 prosenttia, ja siellä elää ruskeakarhuja, susia, ilveksiä ja gemssejä. Laaksossa on neljä kylää, joista Valbonë on yksi.
+AIEMPI KYSYMYS: Kuinka korkea on laakson ylin huippu Maja Jezercë?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Maja Jezercë nousee 2 694 metriin, ja se on Valbonan laakson ylin huippu sekä koko vuoriston korkein huippu. Huippu sijaitsee Albanian puolella, ja alue kuuluu [[Albanian Alppeihin]], joista käytetään myös nimeä [[Prokletije]]. Aika korkealla, mutta eiköhän sinne lennä kyyhkykin.
+KYSYMYS: Kerro lisää: Prokletije
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valbonan laakso (luonto · vuori)
+Tietoruudun teksti: Valbonan laakso on Pohjois-Albanian Kukësin alueella sijaitseva jäätikön muovaama U-muotoinen laakso, jonka ympärille perustettiin 80 neliökilometrin kansallispuisto tammikuussa 1996. Alue kuuluu Albanian Alppeihin, ja sen korkein huippu Maja Jezercë nousee 2 694 metriin. Valbona-joki on lähes 51 kilometriä pitkä ja saa alkunsa Jezercën lähellä olevista karstilähteistä. Metsät peittävät puiston pinta-alasta 89 prosenttia, ja siellä elää ruskeakarhuja, susia, ilveksiä ja gemssejä. Laaksossa on neljä kylää, joista Valbonë on yksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Zla Kolata, Montenegron korkein huippu] vuodesta 2009 — Zla Kolata kohoaa 2 534 metriin, ja se on Montenegron korkein vuori, vaikka koko vuoriston korkein huippu Maja Jezercë (2 694 m) on Albanian puolella. Se kuuluu Prokletijeen, jonka nimi tarkoittaa kirottuja, ja vuoriston Montenegron puolelle perustettiin kansallispuisto vuonna 2009. Puiston pinta-ala on noin 16 000 hehtaaria. Viimeisen jääkauden aikana laaksoja muovasivat kilometrien mittaiset jäätiköt, ja Ropojanan jäätikkö oli noin 12,5 kilometriä pitkä. Vuoristossa on noin 20 jäätikköjärveä, joista Hridsko jezero on vajaat 300 metriä pitkä.
+AIEMPI KYSYMYS: Mistä Valbona-joki saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Valbona-joki saa alkunsa karstilähteistä, jotka sijaitsevat [[Maja Jezercën]] lähellä. Joki on lähes 51 kilometriä pitkä ja virtaa [[jäätikön]] muovaamassa U-muotoisessa laaksossa. Karstilähde syntyy, kun sadevesi liukenee kalkkikivialueella maan alle ja nousee jossain kohdassa uudelleen pintaan. Vesi tietää tien paremmin kuin minä.
+KYSYMYS: Kerro lisää: Maja Jezercën
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valbonan laakso (luonto · vuori)
+Tietoruudun teksti: Valbonan laakso on Pohjois-Albanian Kukësin alueella sijaitseva jäätikön muovaama U-muotoinen laakso, jonka ympärille perustettiin 80 neliökilometrin kansallispuisto tammikuussa 1996. Alue kuuluu Albanian Alppeihin, ja sen korkein huippu Maja Jezercë nousee 2 694 metriin. Valbona-joki on lähes 51 kilometriä pitkä ja saa alkunsa Jezercën lähellä olevista karstilähteistä. Metsät peittävät puiston pinta-alasta 89 prosenttia, ja siellä elää ruskeakarhuja, susia, ilveksiä ja gemssejä. Laaksossa on neljä kylää, joista Valbonë on yksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Myanmar — maalehti / Luonto: Järvi, joka putosi maan alle] Indawgyi Kachinin osavaltiossa on suurin kokonaan Myanmarissa sijaitseva järvi: 13 kilometriä idästä länteen ja 24 pohjoisesta etelään. Se ei ole kraatteri eikä jäätikön jälki vaan vajoama-allas, joka syntyi Sagaingin siirroksen sivuaskelmaan — sama repeämä kuin Kalifornian Salton Troughissa. Suullinen perimätieto kertoo hedelmällisestä laaksosta, joka täyttyi äkkiä vedellä maanjäristyksen jälkeen ja hukutti kylän asukkaineen. Järvi on Ramsar-kohde vuodesta 2016 ja Unescon biosfäärialue vuodesta 2017. Sen rannoilla pesii ympäri vuoden kaksi äärimmäisen uhanalaista korppikotkalajia.
+- [Alpit — kaupunkilehti / Luonto: Jää vetäytyy ylöspäin] Alppien jäätiköt ovat kutistuneet nopeasti: 1800-luvun puolivälin jälkeen niistä on sulanut yli puolet, ja pelkästään 2000-luvulla kutistuminen on kiihtynyt. Vuoristomajoja, jotka rakennettiin aikanaan jäätikön reunaan, seisoo nyt satoja metrejä paljaan kiven yllä. Sulaminen ei ole vain maisema-asia: jäätiköt varastoivat talven lumen ja päästävät sen jokiin kesällä, joten niiden kadotessa muuttuu myös se, milloin Euroopan suurissa joissa on vettä.
+- [Sveitsi — maalehti / Vuoret: Jäätikkö, joka virtaa kuin joki] 2001 — Aletschin jäätikkö on Alppien suurin: noin kaksikymmentä kilometriä pitkä ja paksuimmalta kohdalta lähes tuhat metriä syvä jäämassa. Se ei ole paikallaan vaan valuu alaspäin muutamia satoja metrejä vuodessa — niin hitaasti, ettei sitä näe, mutta pinnan tummat juovat kertovat virtauksen suunnan kuin joen pyörteet. Unesco otti jäätikön ympäristöineen maailmanperintöluetteloon vuonna 2001. Jäätikkö on lyhentynyt viime vuosikymmeninä nopeasti.
+AIEMPI KYSYMYS: Mistä Valbona-joki saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Valbona-joki saa alkunsa karstilähteistä, jotka sijaitsevat [[Maja Jezercën]] lähellä. Joki on lähes 51 kilometriä pitkä ja virtaa [[jäätikön]] muovaamassa U-muotoisessa laaksossa. Karstilähde syntyy, kun sadevesi liukenee kalkkikivialueella maan alle ja nousee jossain kohdassa uudelleen pintaan. Vesi tietää tien paremmin kuin minä.
+KYSYMYS: Kerro lisää: jäätikön
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valbonan laakso (luonto · vuori)
+Tietoruudun teksti: Valbonan laakso on Pohjois-Albanian Kukësin alueella sijaitseva jäätikön muovaama U-muotoinen laakso, jonka ympärille perustettiin 80 neliökilometrin kansallispuisto tammikuussa 1996. Alue kuuluu Albanian Alppeihin, ja sen korkein huippu Maja Jezercë nousee 2 694 metriin. Valbona-joki on lähes 51 kilometriä pitkä ja saa alkunsa Jezercën lähellä olevista karstilähteistä. Metsät peittävät puiston pinta-alasta 89 prosenttia, ja siellä elää ruskeakarhuja, susia, ilveksiä ja gemssejä. Laaksossa on neljä kylää, joista Valbonë on yksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Arsenjevin museo] perustettu 1884 Kaukoidän ensimmäinen kotiseutumuseo sai alkunsa 18. huhtikuuta 1884, kun Amurinmaan tutkimusseuran säännöt vahvistettiin, ja ovet avautuivat yleisölle lokakuussa 1890. Vuonna 1945 museo nimettiin Vladimir Arsenjevin, Ussurinmaan tutkijan ja Dersu Uzalan kirjoittajan mukaan — hänen tarinansa on lehden taigasivulla. Kokoelmissa on seudun tutkijoiden, muun muassa Prževalskin, aineistoja, jääkauden fossiileja, 1100-luvun ylimyshauta ja Bohain valtakunnan hallitsijan peili; täytetyt tiikeri ja karhu ovat museon kuuluisin näky. Vuonna 2015 se oli Venäjän katsotuin aluemuseo, yli 421 000 kävijää, ja vuonna 2019 siitä tehtiin liittovaltion museo. Rakennus on tarina itsessään: kaupp…
+- [Whitehorse — kohdekartta / Kohdekartta: Beringia-keskus] 1997 Keskus avattiin 1997 Alaska Highwayn kilometrillä 1423 ja kertoo Beringiasta — 3 200 kilometrin levyisestä maa-alueesta, joka ulottui Siperian Kolyma-joelta Kanadan Mackenzie-joelle. Alue säilyi jääkaudella jäätiköitymättä, koska ilmasto oli kuiva ja lunta satoi vähän. Juuri siksi Beringia kiinnostaa arkeologeja ja paleontologeja: se oli eläinten ja ihmisten kulkureitti Aasian ja Amerikan välillä. Liikennettä oli molempiin suuntiin. Idän suuntaan tulivat mastodontit, mammutit, hirvieläimet, biisonit, lampaat ja myskihärät; länteen menivät hevoseläimet ja kamelit. Sanan Beringia keksi ruotsalainen kasvitieteilijä Eric Hultén vuonna 1937. Keskus on myös tutkimuslaitos. Sen aineistossa on…
+AIEMPI KYSYMYS: Miten Valbonan U-muotoinen laakso on syntynyt?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Laakso on [[jäätikön]] muovaama. Alueen vuoriston laaksoja muovasivat viimeisen [[jääkauden]] aikana kilometrien mittaiset jäätiköt, ja jään kuluttamalle laaksolle on tyypillistä U:n muotoinen poikkileikkaus. Tällainen laakso eroaa jokilaaksosta, joka on yleensä V:n muotoinen. Jää oli kyllä taitava kuvanveistäjä.
+KYSYMYS: Kerro lisää: jääkauden
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valbonan laakso (luonto · vuori)
+Tietoruudun teksti: Valbonan laakso on Pohjois-Albanian Kukësin alueella sijaitseva jäätikön muovaama U-muotoinen laakso, jonka ympärille perustettiin 80 neliökilometrin kansallispuisto tammikuussa 1996. Alue kuuluu Albanian Alppeihin, ja sen korkein huippu Maja Jezercë nousee 2 694 metriin. Valbona-joki on lähes 51 kilometriä pitkä ja saa alkunsa Jezercën lähellä olevista karstilähteistä. Metsät peittävät puiston pinta-alasta 89 prosenttia, ja siellä elää ruskeakarhuja, susia, ilveksiä ja gemssejä. Laaksossa on neljä kylää, joista Valbonë on yksi.
+AIEMPI KYSYMYS: Mitä eläimiä Valbonan kansallispuistossa elää?
+AIEMPI VASTAUS (Livia):
+No jopas, tästä tykkään. Puistossa elää [[ruskeakarhuja]], [[susia]], [[ilveksiä]] ja [[gemssejä]]. Metsät peittävät puiston pinta-alasta 89 prosenttia, mikä tarjoaa eläimille laajan elinympäristön.
+
+Karhut ja sudet jäävät minusta kauas, mutta ilvestä ihailen siivin, sillä se kulkee kuin ei painaisi mitään.
+KYSYMYS: Kerro lisää: ruskeakarhuja
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valbonan laakso (luonto · vuori)
+Tietoruudun teksti: Valbonan laakso on Pohjois-Albanian Kukësin alueella sijaitseva jäätikön muovaama U-muotoinen laakso, jonka ympärille perustettiin 80 neliökilometrin kansallispuisto tammikuussa 1996. Alue kuuluu Albanian Alppeihin, ja sen korkein huippu Maja Jezercë nousee 2 694 metriin. Valbona-joki on lähes 51 kilometriä pitkä ja saa alkunsa Jezercën lähellä olevista karstilähteistä. Metsät peittävät puiston pinta-alasta 89 prosenttia, ja siellä elää ruskeakarhuja, susia, ilveksiä ja gemssejä. Laaksossa on neljä kylää, joista Valbonë on yksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Luonto: Llogaran sola Joonianmeren yllä] vuodesta 1966 — Llogaran solassa tie nousee 1 027 metrin korkeuteen Ceraunian-vuoristossa, ja kohdalta avautuu näkymä Albanian Rivieralle ja meren saarille. Ympäröivä Llogaran kansallispuisto perustettiin vuonna 1966, ja sen pinta-ala on 17,7 neliökilometriä. Puiston korkeus vaihtelee noin 200 metristä yli 2 000 metriin, ja Maja e Çikës nousee 2 045 metriin. Metsissä kasvaa mustamäntyä ja hopeakuusta sekä lehtipuita, ja seudulla elää muun muassa maakotkia, korppikotkia, metsäkauriita ja susia. Lähellä oleva Caesarin sola viittaa siihen, että Julius Caesar ajoi Pompeiusta takaa seudun halki.
+- [Anchorage — kaupunkilehti / Eläimet kaupungissa: Susia, valkovalaita ja dallinlampaita] Hirvi ja karhu eivät ole ainoat. Anchoragen seudulla elää noin kolmekymmentä sisämaan alaskansutta, ja vuonna 2007 sudet tappoivat useita koiria lenkillä omistajiensa kanssa. Puroissa ja järvissä on majavanpatoja, ja keväisin kettuja poikasineen näkee metsien viereisillä parkkipaikoilla. Ilveksiäkin havaitaan. Sewardin valtatiellä Kenain suuntaan Turnagain Armissa nähdään usein valkovalaita, ja Windy Pointissa dallinlampaat seisovat toisinaan aivan tien vierellä. Kaupungin itäpuolella alkaa Chugach State Park, jonka korkein kohta Bashful Peak on 8 005 jalkaa.
+AIEMPI KYSYMYS: Mitä eläimiä Valbonan kansallispuistossa elää?
+AIEMPI VASTAUS (Livia):
+No jopas, tästä tykkään. Puistossa elää [[ruskeakarhuja]], [[susia]], [[ilveksiä]] ja [[gemssejä]]. Metsät peittävät puiston pinta-alasta 89 prosenttia, mikä tarjoaa eläimille laajan elinympäristön.
+
+Karhut ja sudet jäävät minusta kauas, mutta ilvestä ihailen siivin, sillä se kulkee kuin ei painaisi mitään.
+KYSYMYS: Kerro lisää: susia
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valbonan laakso (luonto · vuori)
+Tietoruudun teksti: Valbonan laakso on Pohjois-Albanian Kukësin alueella sijaitseva jäätikön muovaama U-muotoinen laakso, jonka ympärille perustettiin 80 neliökilometrin kansallispuisto tammikuussa 1996. Alue kuuluu Albanian Alppeihin, ja sen korkein huippu Maja Jezercë nousee 2 694 metriin. Valbona-joki on lähes 51 kilometriä pitkä ja saa alkunsa Jezercën lähellä olevista karstilähteistä. Metsät peittävät puiston pinta-alasta 89 prosenttia, ja siellä elää ruskeakarhuja, susia, ilveksiä ja gemssejä. Laaksossa on neljä kylää, joista Valbonë on yksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Skansen] 1891 Artur Hazelius perusti Skansenin 11. lokakuuta 1891. Se on Ruotsin vanhin ulkoilmamuseo, ja sinne koottiin taloja, myllyjä ja pihoja eri puolilta Ruotsia — lähes 150 rakennusta, joista vain kolme on jälkeenpäin rakennettuja jäljennöksiä. Skansenilla asuu myös eläimiä: karhuja, hirviä, ilveksiä, poroja ja hylkeitä pääsee katsomaan aivan läheltä. Alue on 30 hehtaarin kokoinen, ja sinne pääsee muun muassa pienellä köysiradalla. Nykyään Skansenissa käy yli 1,3 miljoonaa vierasta joka vuosi. Suosituin perinne on Allsång på Skansen eli yhteislaulutilaisuus, joka on jatkunut jo vuosikymmenten ajan.
+- [Espanja — maalehti / Luonto: Kissa, joka melkein hävisi] Iberianilves syö melkein pelkkiä kaneja, ja kun kanitauti kaatoi saaliskannan 1900-luvun lopulla, ilves seurasi perässä. Vuonna 2002 niitä laskettiin koko maailmassa alle sata yksilöä — se oli maailman uhanalaisin kissaeläin. Pelastus tehtiin kolmella asialla: kanikantoja hoidettiin, ilveksiä kasvatettiin tarhoissa ja päästettiin luontoon, ja teille rakennettiin alikulkuja. Nyt niitä on yli kaksituhatta, ja laji siirrettiin luokasta "äärimmäisen uhanalainen" luokkaan "vaarantunut".
+AIEMPI KYSYMYS: Mitä eläimiä Valbonan kansallispuistossa elää?
+AIEMPI VASTAUS (Livia):
+No jopas, tästä tykkään. Puistossa elää [[ruskeakarhuja]], [[susia]], [[ilveksiä]] ja [[gemssejä]]. Metsät peittävät puiston pinta-alasta 89 prosenttia, mikä tarjoaa eläimille laajan elinympäristön.
+
+Karhut ja sudet jäävät minusta kauas, mutta ilvestä ihailen siivin, sillä se kulkee kuin ei painaisi mitään.
+KYSYMYS: Kerro lisää: ilveksiä
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valbonan laakso (luonto · vuori)
+Tietoruudun teksti: Valbonan laakso on Pohjois-Albanian Kukësin alueella sijaitseva jäätikön muovaama U-muotoinen laakso, jonka ympärille perustettiin 80 neliökilometrin kansallispuisto tammikuussa 1996. Alue kuuluu Albanian Alppeihin, ja sen korkein huippu Maja Jezercë nousee 2 694 metriin. Valbona-joki on lähes 51 kilometriä pitkä ja saa alkunsa Jezercën lähellä olevista karstilähteistä. Metsät peittävät puiston pinta-alasta 89 prosenttia, ja siellä elää ruskeakarhuja, susia, ilveksiä ja gemssejä. Laaksossa on neljä kylää, joista Valbonë on yksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Vuoristo, josta tuli ensimmäinen] 1935 — Retezatin kansallispuisto Hunedoaran alueella oli Romanian ensimmäinen kansallispuisto: hallitus perusti sen vuonna 1935 tiedemiesten Emil Racovițăn ja Alexandru Borzan aloitteesta, ja aluksi suojeltiin sata neliökilometriä vuoristoa. Puistossa on kymmeniä jäätikköjärviä, joista suurin, Bucuran järvi, on koko Romanian suurin luonnonjärvi. Jyrkin huippu, Peleaga, kohoaa yli 2500 metriin, ja rinteillä laiduntaa gemssejä eli piikkivuohia, joita puisto perustettiin alun perin suojelemaan. Retezatista tuli myöhemmin myös Unescon biosfäärialue, ja sen lainsäädäntö loi mallin kaikille Romanian myöhemmille suojelualueille.
+AIEMPI KYSYMYS: Mitä eläimiä Valbonan kansallispuistossa elää?
+AIEMPI VASTAUS (Livia):
+No jopas, tästä tykkään. Puistossa elää [[ruskeakarhuja]], [[susia]], [[ilveksiä]] ja [[gemssejä]]. Metsät peittävät puiston pinta-alasta 89 prosenttia, mikä tarjoaa eläimille laajan elinympäristön.
+
+Karhut ja sudet jäävät minusta kauas, mutta ilvestä ihailen siivin, sillä se kulkee kuin ei painaisi mitään.
+KYSYMYS: Kerro lisää: gemssejä
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valbonan laakso (luonto · vuori)
+Tietoruudun teksti: Valbonan laakso on Pohjois-Albanian Kukësin alueella sijaitseva jäätikön muovaama U-muotoinen laakso, jonka ympärille perustettiin 80 neliökilometrin kansallispuisto tammikuussa 1996. Alue kuuluu Albanian Alppeihin, ja sen korkein huippu Maja Jezercë nousee 2 694 metriin. Valbona-joki on lähes 51 kilometriä pitkä ja saa alkunsa Jezercën lähellä olevista karstilähteistä. Metsät peittävät puiston pinta-alasta 89 prosenttia, ja siellä elää ruskeakarhuja, susia, ilveksiä ja gemssejä. Laaksossa on neljä kylää, joista Valbonë on yksi.
+AIEMPI KYSYMYS: Milloin Valbonan kansallispuisto perustettiin ja kuinka iso se on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kansallispuisto perustettiin tammikuussa 1996, ja sen pinta-ala on 80 neliökilometriä. Puisto sijaitsee [[Kukësin]] alueella Pohjois-Albaniassa, ja laaksossa on neljä kylää, joista [[Valbonë]] on yksi. Aika pieni alue, mutta täynnä asiaa.
+KYSYMYS: Kerro lisää: Kukësin
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valbonan laakso (luonto · vuori)
+Tietoruudun teksti: Valbonan laakso on Pohjois-Albanian Kukësin alueella sijaitseva jäätikön muovaama U-muotoinen laakso, jonka ympärille perustettiin 80 neliökilometrin kansallispuisto tammikuussa 1996. Alue kuuluu Albanian Alppeihin, ja sen korkein huippu Maja Jezercë nousee 2 694 metriin. Valbona-joki on lähes 51 kilometriä pitkä ja saa alkunsa Jezercën lähellä olevista karstilähteistä. Metsät peittävät puiston pinta-alasta 89 prosenttia, ja siellä elää ruskeakarhuja, susia, ilveksiä ja gemssejä. Laaksossa on neljä kylää, joista Valbonë on yksi.
+AIEMPI KYSYMYS: Milloin Valbonan kansallispuisto perustettiin ja kuinka iso se on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kansallispuisto perustettiin tammikuussa 1996, ja sen pinta-ala on 80 neliökilometriä. Puisto sijaitsee [[Kukësin]] alueella Pohjois-Albaniassa, ja laaksossa on neljä kylää, joista [[Valbonë]] on yksi. Aika pieni alue, mutta täynnä asiaa.
+KYSYMYS: Kerro lisää: Valbonë
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gjirokastërin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Gjirokastër on Etelä-Albanian kaupunki, joka levittyy Drinon laakson jyrkälle rinteelle noin 300 metrin korkeuteen. Sitä kutsutaan kivikaupungiksi, sillä sen tornitalot ovat kivestä ja kivikattoisia ja voivat olla jopa viisikerroksisia. Kaupungin nimi mainitaan ensimmäisen kerran vuonna 1336, ja ottomaanien vallan alle se joutui 1418 alkaen. Yli 500 taloa on nimetty kulttuurimonumenteiksi. Historiallinen keskusta on ollut yhdessä Beratin kanssa UNESCOn maailmanperintökohde vuodesta 2005, ja kaupunkia hallitsee linnake.
+AIEMPI KYSYMYS: Miksi Gjirokastëria kutsutaan kivikaupungiksi?
+AIEMPI VASTAUS (Livia):
+Ai se. Gjirokastëria kutsutaan kivikaupungiksi, koska kaupungin tornitalot ovat kivestä ja kivikattoisia, ja ne voivat olla jopa viisikerroksisia. Kaupunki levittyy [[Drinon]] laakson jyrkälle rinteelle noin 300 metrin korkeuteen, ja sitä hallitsee [[linnake]]. Rakennustapa on tehnyt kaupungin ilmeestä hyvin yhtenäisen.
+
+Kivikatto kuulostaa raskaalta, ja pesän alla toivoisi aina hyvää rakentajaa. Mutta kauniita nuo talot ovat.
+KYSYMYS: Kerro lisää: Drinon
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gjirokastërin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Gjirokastër on Etelä-Albanian kaupunki, joka levittyy Drinon laakson jyrkälle rinteelle noin 300 metrin korkeuteen. Sitä kutsutaan kivikaupungiksi, sillä sen tornitalot ovat kivestä ja kivikattoisia ja voivat olla jopa viisikerroksisia. Kaupungin nimi mainitaan ensimmäisen kerran vuonna 1336, ja ottomaanien vallan alle se joutui 1418 alkaen. Yli 500 taloa on nimetty kulttuurimonumenteiksi. Historiallinen keskusta on ollut yhdessä Beratin kanssa UNESCOn maailmanperintökohde vuodesta 2005, ja kaupunkia hallitsee linnake.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+AIEMPI KYSYMYS: Miksi Gjirokastëria kutsutaan kivikaupungiksi?
+AIEMPI VASTAUS (Livia):
+Ai se. Gjirokastëria kutsutaan kivikaupungiksi, koska kaupungin tornitalot ovat kivestä ja kivikattoisia, ja ne voivat olla jopa viisikerroksisia. Kaupunki levittyy [[Drinon]] laakson jyrkälle rinteelle noin 300 metrin korkeuteen, ja sitä hallitsee [[linnake]]. Rakennustapa on tehnyt kaupungin ilmeestä hyvin yhtenäisen.
+
+Kivikatto kuulostaa raskaalta, ja pesän alla toivoisi aina hyvää rakentajaa. Mutta kauniita nuo talot ovat.
+KYSYMYS: Kerro lisää: linnake
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gjirokastërin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Gjirokastër on Etelä-Albanian kaupunki, joka levittyy Drinon laakson jyrkälle rinteelle noin 300 metrin korkeuteen. Sitä kutsutaan kivikaupungiksi, sillä sen tornitalot ovat kivestä ja kivikattoisia ja voivat olla jopa viisikerroksisia. Kaupungin nimi mainitaan ensimmäisen kerran vuonna 1336, ja ottomaanien vallan alle se joutui 1418 alkaen. Yli 500 taloa on nimetty kulttuurimonumenteiksi. Historiallinen keskusta on ollut yhdessä Beratin kanssa UNESCOn maailmanperintökohde vuodesta 2005, ja kaupunkia hallitsee linnake.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Valkoinen kaupunki tuhannella ikkunalla] 314 eaa. – 2008 — Makedonialainen kenraali Kassandros perusti kaupungin nimellä Antipatreia vuonna 314 eaa. isänsä Antipatroksen kunniaksi, vanhan illyrialaisasutuksen paikalle. Bysantin aikaan se tunnettiin nimellä Pulcheriopolis, ja keskiajan slaavilainen nimi Beligrad – Valkoinen kaupunki – kuvasi jo silloin sen valkoisia taloja. Osmanit valtasivat kaupungin 1417. Nykyisin Osum-joen kahta rantaa reunustavat Mangalemin ja Gorican korttelit, joiden rinteille kiipeävissä taloissa on niin paljon ikkunoita, että albaanit kutsuvat kaupunkia tuhannen ikkunan kaupungiksi. Unesco liitti Beratin maailmanperintöluetteloon 2008 yhdessä Gjirokastërin kanssa.
+AIEMPI KYSYMYS: Minkä toisen kaupungin kanssa se on maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Toinen kaupunki on [[Berat]]. Gjirokastërin historiallinen keskusta merkittiin [[Unescon]] maailmanperintöluetteloon vuonna 2005, ja Berat liitettiin samaan kohteeseen vuonna 2008. Molemmat ovat [[Etelä-Albanian]] kaupunkeja, joissa ottomaanikautinen rinnerakentaminen on säilynyt. Kaksi kaupunkia yhdessä luettelossa, hyvä pari.
+KYSYMYS: Kerro lisää: Berat
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gjirokastërin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Gjirokastër on Etelä-Albanian kaupunki, joka levittyy Drinon laakson jyrkälle rinteelle noin 300 metrin korkeuteen. Sitä kutsutaan kivikaupungiksi, sillä sen tornitalot ovat kivestä ja kivikattoisia ja voivat olla jopa viisikerroksisia. Kaupungin nimi mainitaan ensimmäisen kerran vuonna 1336, ja ottomaanien vallan alle se joutui 1418 alkaen. Yli 500 taloa on nimetty kulttuurimonumenteiksi. Historiallinen keskusta on ollut yhdessä Beratin kanssa UNESCOn maailmanperintökohde vuodesta 2005, ja kaupunkia hallitsee linnake.
+AIEMPI KYSYMYS: Minkä toisen kaupungin kanssa se on maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Toinen kaupunki on [[Berat]]. Gjirokastërin historiallinen keskusta merkittiin [[Unescon]] maailmanperintöluetteloon vuonna 2005, ja Berat liitettiin samaan kohteeseen vuonna 2008. Molemmat ovat [[Etelä-Albanian]] kaupunkeja, joissa ottomaanikautinen rinnerakentaminen on säilynyt. Kaksi kaupunkia yhdessä luettelossa, hyvä pari.
+KYSYMYS: Kerro lisää: Unescon
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gjirokastërin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Gjirokastër on Etelä-Albanian kaupunki, joka levittyy Drinon laakson jyrkälle rinteelle noin 300 metrin korkeuteen. Sitä kutsutaan kivikaupungiksi, sillä sen tornitalot ovat kivestä ja kivikattoisia ja voivat olla jopa viisikerroksisia. Kaupungin nimi mainitaan ensimmäisen kerran vuonna 1336, ja ottomaanien vallan alle se joutui 1418 alkaen. Yli 500 taloa on nimetty kulttuurimonumenteiksi. Historiallinen keskusta on ollut yhdessä Beratin kanssa UNESCOn maailmanperintökohde vuodesta 2005, ja kaupunkia hallitsee linnake.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Yön yli syntynyt lippu] 28.11.1912 — Marraskuun 28. päivänä 1912 kokoontui Vlorëen 83 edustajaa eri puolilta Albaniaa ja julisti maan itsenäiseksi Osmanien valtakunnasta. Sen jälkeen johtaja Ismail Qemali astui vuokra-asuntonsa parvekkeelle ja nosti punaisen lipun, jossa oli Skanderbegin musta kaksipäinen kotka – symboli oli ollut osmanivallan aikana kiellettyä. Lipun ompelijaksi muistetaan paikallinen aktivisti Marigo Posio, jota kutsutaan yhä Albanian lipun äidiksi; hän teki omalla kustannuksellaan useita kopioita uusille virastoille. Qemalista tuli itsenäisen Albanian ensimmäinen pääministeri, mutta rajat vahvistuivat vasta seuraavana vuonna Lontoon suurvaltaneuvottelussa.
+- [Albania — maalehti / Luonto: Prespajärvi ja sen Maligradin saari] vuodesta 1999 — Suuri Prespajärvi lepää 853 metrin korkeudessa kolmen maan rajalla, ja Albanian osuus sen 259 neliökilometrin pinta-alasta on 46,3 neliökilometriä. Albanian puolella järven rannat kuuluvat vuonna 1999 perustettuun Prespan kansallispuistoon, jonka pinta-ala on noin 276 neliökilometriä. Pieneltä Maligradin saarelta löytyy paikallisen aatelismiehen vuonna 1369 rakennuttama Pyhän Marian kirkko. Prespan vedet purkautuvat karstin maanalaisten kanavien kautta lähteinä Ohridjärveen, jonka pinta on noin 150 metriä alempana. Ohridjärven Albanian puolella sijaitsee Pogradec, ja UNESCO ulotti järven suojelualueen Albanian rannalle vuonna 2019.
+AIEMPI KYSYMYS: Minkä toisen kaupungin kanssa se on maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Toinen kaupunki on [[Berat]]. Gjirokastërin historiallinen keskusta merkittiin [[Unescon]] maailmanperintöluetteloon vuonna 2005, ja Berat liitettiin samaan kohteeseen vuonna 2008. Molemmat ovat [[Etelä-Albanian]] kaupunkeja, joissa ottomaanikautinen rinnerakentaminen on säilynyt. Kaksi kaupunkia yhdessä luettelossa, hyvä pari.
+KYSYMYS: Kerro lisää: Etelä-Albanian
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gjirokastërin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Gjirokastër on Etelä-Albanian kaupunki, joka levittyy Drinon laakson jyrkälle rinteelle noin 300 metrin korkeuteen. Sitä kutsutaan kivikaupungiksi, sillä sen tornitalot ovat kivestä ja kivikattoisia ja voivat olla jopa viisikerroksisia. Kaupungin nimi mainitaan ensimmäisen kerran vuonna 1336, ja ottomaanien vallan alle se joutui 1418 alkaen. Yli 500 taloa on nimetty kulttuurimonumenteiksi. Historiallinen keskusta on ollut yhdessä Beratin kanssa UNESCOn maailmanperintökohde vuodesta 2005, ja kaupunkia hallitsee linnake.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historian hetki: Vlorë 1912 — lippu, joka ommeltiin yöllä] 28.11.1912 — Neula pistää kangasta vielä muutama tunti ennen kuin lippu nousee salkoon. Marigo Posio istuu yönsä ompelemassa punaista kangasta ja mustaa kaksipäistä kotkaa, koska lippu, jonka Ismail Qemali oli ensin lainannut, vaadittiin takaisin viime hetkellä. Perjantaina 28. marraskuuta 1912 vanha diplomaatti Qemali seisoo Vlorën satamakaupungin vaatimattomassa talossa, joka toimii samalla sairaalana, ja lukee ääneen julistuksen: Albania on itsenäinen, viiden vuosisadan osmanivallan jälkeen. Balkanin sodat ovat ajaneet Ottomaanien valtakunnan ahtaalle, ja albaanijohtajat ovat kokoontuneet Vlorëen nopeasti, ennen kuin naapurimaat ehtivät jakaa alueen keskenään: Serbian, Montenegron ja Kre…
+AIEMPI KYSYMYS: Kuinka korkealla Gjirokastër sijaitsee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Gjirokastër levittyy jyrkälle rinteelle noin 300 metrin korkeuteen. Kaupunki sijaitsee [[Etelä-Albaniassa]] [[Drinon]] laaksossa, ja korkeuserot näkyvät kaupungin kaduissa ja taloissa. Ylhäällä on kyyhkyn paikka.
+KYSYMYS: Kerro lisää: Etelä-Albaniassa
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gjirokastërin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Gjirokastër on Etelä-Albanian kaupunki, joka levittyy Drinon laakson jyrkälle rinteelle noin 300 metrin korkeuteen. Sitä kutsutaan kivikaupungiksi, sillä sen tornitalot ovat kivestä ja kivikattoisia ja voivat olla jopa viisikerroksisia. Kaupungin nimi mainitaan ensimmäisen kerran vuonna 1336, ja ottomaanien vallan alle se joutui 1418 alkaen. Yli 500 taloa on nimetty kulttuurimonumenteiksi. Historiallinen keskusta on ollut yhdessä Beratin kanssa UNESCOn maailmanperintökohde vuodesta 2005, ja kaupunkia hallitsee linnake.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historian hetki: Vlorë 1912 — lippu, joka ommeltiin yöllä] 28.11.1912 — Neula pistää kangasta vielä muutama tunti ennen kuin lippu nousee salkoon. Marigo Posio istuu yönsä ompelemassa punaista kangasta ja mustaa kaksipäistä kotkaa, koska lippu, jonka Ismail Qemali oli ensin lainannut, vaadittiin takaisin viime hetkellä. Perjantaina 28. marraskuuta 1912 vanha diplomaatti Qemali seisoo Vlorën satamakaupungin vaatimattomassa talossa, joka toimii samalla sairaalana, ja lukee ääneen julistuksen: Albania on itsenäinen, viiden vuosisadan osmanivallan jälkeen. Balkanin sodat ovat ajaneet Ottomaanien valtakunnan ahtaalle, ja albaanijohtajat ovat kokoontuneet Vlorëen nopeasti, ennen kuin naapurimaat ehtivät jakaa alueen keskenään: Serbian, Montenegron ja Kre…
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+AIEMPI KYSYMYS: Milloin Gjirokastër mainitaan ensimmäisen kerran?
+AIEMPI VASTAUS (Livia):
+No niin, katotaas. Kaupungin nimi mainitaan ensimmäisen kerran vuonna 1336. [[Ottomaanien]] vallan alle se joutui vuodesta 1418 alkaen, ja kaupunkia hallitsee yhä [[linnake]], joka näkyy rinteen yllä jo kauas. Yli kuusisataa vuotta, ei paha ikä.
+KYSYMYS: Kerro lisää: Ottomaanien
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gjirokastërin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Gjirokastër on Etelä-Albanian kaupunki, joka levittyy Drinon laakson jyrkälle rinteelle noin 300 metrin korkeuteen. Sitä kutsutaan kivikaupungiksi, sillä sen tornitalot ovat kivestä ja kivikattoisia ja voivat olla jopa viisikerroksisia. Kaupungin nimi mainitaan ensimmäisen kerran vuonna 1336, ja ottomaanien vallan alle se joutui 1418 alkaen. Yli 500 taloa on nimetty kulttuurimonumenteiksi. Historiallinen keskusta on ollut yhdessä Beratin kanssa UNESCOn maailmanperintökohde vuodesta 2005, ja kaupunkia hallitsee linnake.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+AIEMPI KYSYMYS: Montako taloa Gjirokastërissa on nimetty kulttuurimonumenteiksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kulttuurimonumenteiksi on nimetty yli 500 taloa. Ne ovat osa kaupungin vanhaa kivirakennuskantaa, jossa [[tornitalot]] ovat kivestä ja kivikattoisia ja voivat olla viisikerroksisia. Historiallinen keskusta on [[Unescon]] maailmanperintökohde. Yli viisisataa taloa, siinä on laskemista.
+KYSYMYS: Kerro lisää: tornitalot
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krujën linna (historia)
+Tietoruudun teksti: Krujën linna kohoaa 557 metrin korkeudessa Albaniassa, ja Wikipedian mukaan se on rakennettu 400- tai 500-luvuilla. Gjergj Kastriot Skanderbeg johti täältä vastarintaa ottomaaneja vastaan vuodesta 1443. Linnaa piiritettiin muun muassa vuosina 1450 ja 1466–1467, ja sulttaani Mehmed II valtasi sen 1478, vuosikymmen Skanderbegin kuoleman jälkeen. Alueella on Skanderbegin kansallismuseo, jonka arkkitehdit Pranvera Masha ja Pirro Vaso rakensivat 1980-luvun alussa, sekä etnografinen museo. Linna on kuvattu Albanian 1000 ja 5000 lekin seteleissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Linna, jota sulttaani ei saanut] 1450 — Marraskuussa 1443 Gjergj Kastrioti eli Skanderbeg karkasi osmanien armeijasta kesken sotaretken, ratsasti Krujëhun väärennetyillä asiakirjoilla ja otti linnan haltuunsa juonella. Hän luopui islamista, palasi kristityksi ja aloitti 25 vuotta kestäneen kapinan. Toukokuussa 1450 sulttaani Murad II saapui linnan juurelle noin 100 000 sotilaan – niistä 60 000 ratsuväkeä – kanssa, mukanaan nuori poikansa, tuleva Mehmed II. Piiritys kesti lokakuuhun asti, yli viisi kuukautta. Ottomaanit menettivät noin 20 000 miestä ja albaanit yli tuhat, ennen kuin sulttaani luovutti ja vetäytyi Edirneen. Krujë pysyi valloittamattomana koko Skanderbegin elinajan.
+AIEMPI KYSYMYS: Kuka johti vastarintaa Krujën linnasta ottomaaneja vastaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Vastarintaa johti [[Skanderbeg]], eli Gjergj Kastrioti, joka otti linnan haltuunsa marraskuussa 1443 ja aloitti kapinan ottomaaneja vastaan. Kapina kesti noin 25 vuotta, ja [[Krujë]] pysyi valloittamattomana koko hänen elinaikansa. Onneksi siitä on jo kauan.
+KYSYMYS: Kerro lisää: Skanderbeg
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krujën linna (historia)
+Tietoruudun teksti: Krujën linna kohoaa 557 metrin korkeudessa Albaniassa, ja Wikipedian mukaan se on rakennettu 400- tai 500-luvuilla. Gjergj Kastriot Skanderbeg johti täältä vastarintaa ottomaaneja vastaan vuodesta 1443. Linnaa piiritettiin muun muassa vuosina 1450 ja 1466–1467, ja sulttaani Mehmed II valtasi sen 1478, vuosikymmen Skanderbegin kuoleman jälkeen. Alueella on Skanderbegin kansallismuseo, jonka arkkitehdit Pranvera Masha ja Pirro Vaso rakensivat 1980-luvun alussa, sekä etnografinen museo. Linna on kuvattu Albanian 1000 ja 5000 lekin seteleissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Linna, jota sulttaani ei saanut] 1450 — Marraskuussa 1443 Gjergj Kastrioti eli Skanderbeg karkasi osmanien armeijasta kesken sotaretken, ratsasti Krujëhun väärennetyillä asiakirjoilla ja otti linnan haltuunsa juonella. Hän luopui islamista, palasi kristityksi ja aloitti 25 vuotta kestäneen kapinan. Toukokuussa 1450 sulttaani Murad II saapui linnan juurelle noin 100 000 sotilaan – niistä 60 000 ratsuväkeä – kanssa, mukanaan nuori poikansa, tuleva Mehmed II. Piiritys kesti lokakuuhun asti, yli viisi kuukautta. Ottomaanit menettivät noin 20 000 miestä ja albaanit yli tuhat, ennen kuin sulttaani luovutti ja vetäytyi Edirneen. Krujë pysyi valloittamattomana koko Skanderbegin elinajan.
+AIEMPI KYSYMYS: Kuka johti vastarintaa Krujën linnasta ottomaaneja vastaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Vastarintaa johti [[Skanderbeg]], eli Gjergj Kastrioti, joka otti linnan haltuunsa marraskuussa 1443 ja aloitti kapinan ottomaaneja vastaan. Kapina kesti noin 25 vuotta, ja [[Krujë]] pysyi valloittamattomana koko hänen elinaikansa. Onneksi siitä on jo kauan.
+KYSYMYS: Kerro lisää: Krujë
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krujën linna (historia)
+Tietoruudun teksti: Krujën linna kohoaa 557 metrin korkeudessa Albaniassa, ja Wikipedian mukaan se on rakennettu 400- tai 500-luvuilla. Gjergj Kastriot Skanderbeg johti täältä vastarintaa ottomaaneja vastaan vuodesta 1443. Linnaa piiritettiin muun muassa vuosina 1450 ja 1466–1467, ja sulttaani Mehmed II valtasi sen 1478, vuosikymmen Skanderbegin kuoleman jälkeen. Alueella on Skanderbegin kansallismuseo, jonka arkkitehdit Pranvera Masha ja Pirro Vaso rakensivat 1980-luvun alussa, sekä etnografinen museo. Linna on kuvattu Albanian 1000 ja 5000 lekin seteleissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Linna, jota sulttaani ei saanut] 1450 — Marraskuussa 1443 Gjergj Kastrioti eli Skanderbeg karkasi osmanien armeijasta kesken sotaretken, ratsasti Krujëhun väärennetyillä asiakirjoilla ja otti linnan haltuunsa juonella. Hän luopui islamista, palasi kristityksi ja aloitti 25 vuotta kestäneen kapinan. Toukokuussa 1450 sulttaani Murad II saapui linnan juurelle noin 100 000 sotilaan – niistä 60 000 ratsuväkeä – kanssa, mukanaan nuori poikansa, tuleva Mehmed II. Piiritys kesti lokakuuhun asti, yli viisi kuukautta. Ottomaanit menettivät noin 20 000 miestä ja albaanit yli tuhat, ennen kuin sulttaani luovutti ja vetäytyi Edirneen. Krujë pysyi valloittamattomana koko Skanderbegin elinajan.
+- [Sana — kohdekartta / Kohdekartta: Talhan moskeija] 1619–1620 Qubbat Talha on yksi Sanaan vanhimmista moskeijoista, ja sen rakennutti osmanien käskynhaltija Hadji Mehmed Pasha vuosina 1619–1620 ensimmäisen osmanimiehityksen aikana. Minareetti tehtiin samaan aikaan. Vuosina 1831–1832 moskeija kunnostettiin osittain imaami al-Mahdi Abdallahin käskystä; siitä kertoo rukoussalin seinään hakattu kirjoitus. Talha on Al-Bakiriyyan pikkuveli. Se valmistui kaksikymmentäkolme vuotta myöhemmin ja lainasi osan edeltäjänsä muotokielestä, mutta jäi selvästi pienemmäksi: rukoussali on vaatimaton ja minareetti matala, ja juuri siksi rakennus istuu kapeiden kujien väliin luontevammin kuin iso esikuvansa. Kokonaisuuteen kuuluu rukoussalin ja minareetin lisäks…
+AIEMPI KYSYMYS: Milloin ottomaanit valtasivat linnan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Sulttaani [[Mehmed II]] valtasi linnan vuonna 1478, noin kymmenen vuotta [[Skanderbegin]] kuoleman jälkeen. Aiemmat piirityksen, muun muassa vuosina 1450 ja 1466–1467, eivät onnistuneet, ja linna pysyi Skanderbegin elinajan ottomaanien ulottumattomissa. Siitä on yli viisisataa vuotta, ja aika on pehmentänyt paljon. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Mehmed II
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krujën linna (historia)
+Tietoruudun teksti: Krujën linna kohoaa 557 metrin korkeudessa Albaniassa, ja Wikipedian mukaan se on rakennettu 400- tai 500-luvuilla. Gjergj Kastriot Skanderbeg johti täältä vastarintaa ottomaaneja vastaan vuodesta 1443. Linnaa piiritettiin muun muassa vuosina 1450 ja 1466–1467, ja sulttaani Mehmed II valtasi sen 1478, vuosikymmen Skanderbegin kuoleman jälkeen. Alueella on Skanderbegin kansallismuseo, jonka arkkitehdit Pranvera Masha ja Pirro Vaso rakensivat 1980-luvun alussa, sekä etnografinen museo. Linna on kuvattu Albanian 1000 ja 5000 lekin seteleissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Yön yli syntynyt lippu] 28.11.1912 — Marraskuun 28. päivänä 1912 kokoontui Vlorëen 83 edustajaa eri puolilta Albaniaa ja julisti maan itsenäiseksi Osmanien valtakunnasta. Sen jälkeen johtaja Ismail Qemali astui vuokra-asuntonsa parvekkeelle ja nosti punaisen lipun, jossa oli Skanderbegin musta kaksipäinen kotka – symboli oli ollut osmanivallan aikana kiellettyä. Lipun ompelijaksi muistetaan paikallinen aktivisti Marigo Posio, jota kutsutaan yhä Albanian lipun äidiksi; hän teki omalla kustannuksellaan useita kopioita uusille virastoille. Qemalista tuli itsenäisen Albanian ensimmäinen pääministeri, mutta rajat vahvistuivat vasta seuraavana vuonna Lontoon suurvaltaneuvottelussa.
+- [Albania — maalehti / Historia: Linna, jota sulttaani ei saanut] 1450 — Marraskuussa 1443 Gjergj Kastrioti eli Skanderbeg karkasi osmanien armeijasta kesken sotaretken, ratsasti Krujëhun väärennetyillä asiakirjoilla ja otti linnan haltuunsa juonella. Hän luopui islamista, palasi kristityksi ja aloitti 25 vuotta kestäneen kapinan. Toukokuussa 1450 sulttaani Murad II saapui linnan juurelle noin 100 000 sotilaan – niistä 60 000 ratsuväkeä – kanssa, mukanaan nuori poikansa, tuleva Mehmed II. Piiritys kesti lokakuuhun asti, yli viisi kuukautta. Ottomaanit menettivät noin 20 000 miestä ja albaanit yli tuhat, ennen kuin sulttaani luovutti ja vetäytyi Edirneen. Krujë pysyi valloittamattomana koko Skanderbegin elinajan.
+AIEMPI KYSYMYS: Milloin ottomaanit valtasivat linnan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Sulttaani [[Mehmed II]] valtasi linnan vuonna 1478, noin kymmenen vuotta [[Skanderbegin]] kuoleman jälkeen. Aiemmat piirityksen, muun muassa vuosina 1450 ja 1466–1467, eivät onnistuneet, ja linna pysyi Skanderbegin elinajan ottomaanien ulottumattomissa. Siitä on yli viisisataa vuotta, ja aika on pehmentänyt paljon. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Skanderbegin
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krujën linna (historia)
+Tietoruudun teksti: Krujën linna kohoaa 557 metrin korkeudessa Albaniassa, ja Wikipedian mukaan se on rakennettu 400- tai 500-luvuilla. Gjergj Kastriot Skanderbeg johti täältä vastarintaa ottomaaneja vastaan vuodesta 1443. Linnaa piiritettiin muun muassa vuosina 1450 ja 1466–1467, ja sulttaani Mehmed II valtasi sen 1478, vuosikymmen Skanderbegin kuoleman jälkeen. Alueella on Skanderbegin kansallismuseo, jonka arkkitehdit Pranvera Masha ja Pirro Vaso rakensivat 1980-luvun alussa, sekä etnografinen museo. Linna on kuvattu Albanian 1000 ja 5000 lekin seteleissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Yön yli syntynyt lippu] 28.11.1912 — Marraskuun 28. päivänä 1912 kokoontui Vlorëen 83 edustajaa eri puolilta Albaniaa ja julisti maan itsenäiseksi Osmanien valtakunnasta. Sen jälkeen johtaja Ismail Qemali astui vuokra-asuntonsa parvekkeelle ja nosti punaisen lipun, jossa oli Skanderbegin musta kaksipäinen kotka – symboli oli ollut osmanivallan aikana kiellettyä. Lipun ompelijaksi muistetaan paikallinen aktivisti Marigo Posio, jota kutsutaan yhä Albanian lipun äidiksi; hän teki omalla kustannuksellaan useita kopioita uusille virastoille. Qemalista tuli itsenäisen Albanian ensimmäinen pääministeri, mutta rajat vahvistuivat vasta seuraavana vuonna Lontoon suurvaltaneuvottelussa.
+- [Albania — maalehti / Historia: Linna, jota sulttaani ei saanut] 1450 — Marraskuussa 1443 Gjergj Kastrioti eli Skanderbeg karkasi osmanien armeijasta kesken sotaretken, ratsasti Krujëhun väärennetyillä asiakirjoilla ja otti linnan haltuunsa juonella. Hän luopui islamista, palasi kristityksi ja aloitti 25 vuotta kestäneen kapinan. Toukokuussa 1450 sulttaani Murad II saapui linnan juurelle noin 100 000 sotilaan – niistä 60 000 ratsuväkeä – kanssa, mukanaan nuori poikansa, tuleva Mehmed II. Piiritys kesti lokakuuhun asti, yli viisi kuukautta. Ottomaanit menettivät noin 20 000 miestä ja albaanit yli tuhat, ennen kuin sulttaani luovutti ja vetäytyi Edirneen. Krujë pysyi valloittamattomana koko Skanderbegin elinajan.
+AIEMPI KYSYMYS: Mikä museo Krujën linnan alueella on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: alueella on [[Skanderbegin kansallismuseo]], jonka arkkitehdit Pranvera Masha ja Pirro Vaso rakensivat 1980-luvun alussa. Lisäksi linnan alueella on [[etnografinen museo]]. Museoita kahdet, ja kyyhkyllä vain yhdet siivet.
+KYSYMYS: Kerro lisää: Skanderbegin kansallismuseo
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krujën linna (historia)
+Tietoruudun teksti: Krujën linna kohoaa 557 metrin korkeudessa Albaniassa, ja Wikipedian mukaan se on rakennettu 400- tai 500-luvuilla. Gjergj Kastriot Skanderbeg johti täältä vastarintaa ottomaaneja vastaan vuodesta 1443. Linnaa piiritettiin muun muassa vuosina 1450 ja 1466–1467, ja sulttaani Mehmed II valtasi sen 1478, vuosikymmen Skanderbegin kuoleman jälkeen. Alueella on Skanderbegin kansallismuseo, jonka arkkitehdit Pranvera Masha ja Pirro Vaso rakensivat 1980-luvun alussa, sekä etnografinen museo. Linna on kuvattu Albanian 1000 ja 5000 lekin seteleissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montevideo — kohdekartta / Kohdekartta: Alkuperäiskansojen taiteen museo] 1888 Talo ei ollut alun perin museo. Emilio Reus suunnitteli sen 1800-luvun lopulla kahden saksalaisen arkkitehdin kanssa vesihoitolaitokseksi, ja rakennus valmistui 1888. Myöhemmin siinä toimi puolustusministeriön päämaja, ja jossain vaiheessa talo jäi tyhjilleen. Kansalliseksi historialliseksi monumentiksi se julistettiin 1986, kunnostettiin 2004 ja sai silloin nykyisen tehtävänsä. Museo on etnografinen ja keskittyy Latinalaisen Amerikan eri osien alkuperäiskansoihin. Kokoelmassa on yli 700 etnografista tai arkeologista esinettä: tekstiilejä, perinteisiä soittimia, keramiikkaa ja taidetta. Pääpaino on Uruguayn alkuperäiskansoissa, mutta esillä ovat myös Mesoamerikka eli Meksiko ja Guatema…
+AIEMPI KYSYMYS: Mikä museo Krujën linnan alueella on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: alueella on [[Skanderbegin kansallismuseo]], jonka arkkitehdit Pranvera Masha ja Pirro Vaso rakensivat 1980-luvun alussa. Lisäksi linnan alueella on [[etnografinen museo]]. Museoita kahdet, ja kyyhkyllä vain yhdet siivet.
+KYSYMYS: Kerro lisää: etnografinen museo
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krujën linna (historia)
+Tietoruudun teksti: Krujën linna kohoaa 557 metrin korkeudessa Albaniassa, ja Wikipedian mukaan se on rakennettu 400- tai 500-luvuilla. Gjergj Kastriot Skanderbeg johti täältä vastarintaa ottomaaneja vastaan vuodesta 1443. Linnaa piiritettiin muun muassa vuosina 1450 ja 1466–1467, ja sulttaani Mehmed II valtasi sen 1478, vuosikymmen Skanderbegin kuoleman jälkeen. Alueella on Skanderbegin kansallismuseo, jonka arkkitehdit Pranvera Masha ja Pirro Vaso rakensivat 1980-luvun alussa, sekä etnografinen museo. Linna on kuvattu Albanian 1000 ja 5000 lekin seteleissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lagos — kaupunkilehti / Laguuni ja sillat: Latvuskävelysilta mangroven yllä] Lekin luonnonsuojelukeskus perustettiin 1990 suojelemaan Lekin niemen kosteikkoja: suota, suometsää ja savanniruohostoa. Alue on 78 hehtaaria, ja sen halki kulkee kahdeksikon muotoinen polkuverkko sekä 1,8 kilometrin luontopolku. Puinen kävelysilta rakennettiin 1992, ja keskuksessa on Afrikan pisin latvuskävelysilta sekä 21 metrin korkeuteen nouseva puumaja, jonka tasanteelta näkee koko alueen. Lintupiilo katsoo suolle, jolla elää krokotiileja ja varaaneja; puissa liikkuu mona-apinoita ja ruohostossa metsäantilooppeja. Suurin osa nisäkkäistä on yöeläimiä, joten päiväkävelijä näkee useammin lintuja kuin karvaa.
+AIEMPI KYSYMYS: Onko Krujën linna kuvattu Albanian rahassa?
+AIEMPI VASTAUS (Livia):
+Ai tota, tähän on helppo vastata. Kyllä, linna on kuvattu Albanian 1000 ja 5000 [[lekin]] seteleissä. Lek on Albanian rahayksikkö, ja linna liittyy vahvasti [[Skanderbegin]] johtamaan vastarintaan. Minä kantaisin kyllä mieluummin kirjeitä kuin seteleitä.
+KYSYMYS: Kerro lisää: lekin
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krujën linna (historia)
+Tietoruudun teksti: Krujën linna kohoaa 557 metrin korkeudessa Albaniassa, ja Wikipedian mukaan se on rakennettu 400- tai 500-luvuilla. Gjergj Kastriot Skanderbeg johti täältä vastarintaa ottomaaneja vastaan vuodesta 1443. Linnaa piiritettiin muun muassa vuosina 1450 ja 1466–1467, ja sulttaani Mehmed II valtasi sen 1478, vuosikymmen Skanderbegin kuoleman jälkeen. Alueella on Skanderbegin kansallismuseo, jonka arkkitehdit Pranvera Masha ja Pirro Vaso rakensivat 1980-luvun alussa, sekä etnografinen museo. Linna on kuvattu Albanian 1000 ja 5000 lekin seteleissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Linna, jota sulttaani ei saanut] 1450 — Marraskuussa 1443 Gjergj Kastrioti eli Skanderbeg karkasi osmanien armeijasta kesken sotaretken, ratsasti Krujëhun väärennetyillä asiakirjoilla ja otti linnan haltuunsa juonella. Hän luopui islamista, palasi kristityksi ja aloitti 25 vuotta kestäneen kapinan. Toukokuussa 1450 sulttaani Murad II saapui linnan juurelle noin 100 000 sotilaan – niistä 60 000 ratsuväkeä – kanssa, mukanaan nuori poikansa, tuleva Mehmed II. Piiritys kesti lokakuuhun asti, yli viisi kuukautta. Ottomaanit menettivät noin 20 000 miestä ja albaanit yli tuhat, ennen kuin sulttaani luovutti ja vetäytyi Edirneen. Krujë pysyi valloittamattomana koko Skanderbegin elinajan.
+- [Karachi — kohdekartta / Kohdekartta: Denso Hall] 1886 Kolmion muotoisessa kulmassa M. A. Jinnah Roadin, Murad Khan Roadin ja Marriott Roadin välissä seisoo pieni hiekkakivinen talo, joka valmistui 1886. Se oli Karachin ensimmäinen kirjasto, joka oli tarkoitettu kaupungin omalle väestölle: siirtomaahallinnon aiemmat kirjastot, Frere Hallin kokoelma niiden joukossa, oli varattu virkamiehille ja heidän perheilleen. Nimensä talo sai Max Densosta, joka johti Karachin kauppakamaria 1870-luvulla. Arkkitehti oli James Strachan, sama kaupungininsinööri joka piirsi Empress Marketin ja Merewetherin kellotornin. Tyyli on venetsialaisgoottia, ja ylimmässä kerroksessa on tudor-aiheita; kivi on paikallista Gizrin hiekkakiveä. Pääkadun puolella on parvek…
+AIEMPI KYSYMYS: Kuinka kauan Skanderbegin kapina kesti?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kapina ottomaaneja vastaan alkoi marraskuussa 1443 ja kesti noin 25 vuotta. Sulttaani [[Murad II]] piiritti Krujëta toukokuusta lokakuuhun 1450, mutta vetäytyi lopulta [[Edirneen]]. Krujë pysyi valloittamattomana koko Skanderbegin elinajan. Pitkä aika, ja onneksi kauan sitten.
+KYSYMYS: Kerro lisää: Murad II
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krujën linna (historia)
+Tietoruudun teksti: Krujën linna kohoaa 557 metrin korkeudessa Albaniassa, ja Wikipedian mukaan se on rakennettu 400- tai 500-luvuilla. Gjergj Kastriot Skanderbeg johti täältä vastarintaa ottomaaneja vastaan vuodesta 1443. Linnaa piiritettiin muun muassa vuosina 1450 ja 1466–1467, ja sulttaani Mehmed II valtasi sen 1478, vuosikymmen Skanderbegin kuoleman jälkeen. Alueella on Skanderbegin kansallismuseo, jonka arkkitehdit Pranvera Masha ja Pirro Vaso rakensivat 1980-luvun alussa, sekä etnografinen museo. Linna on kuvattu Albanian 1000 ja 5000 lekin seteleissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Linna, jota sulttaani ei saanut] 1450 — Marraskuussa 1443 Gjergj Kastrioti eli Skanderbeg karkasi osmanien armeijasta kesken sotaretken, ratsasti Krujëhun väärennetyillä asiakirjoilla ja otti linnan haltuunsa juonella. Hän luopui islamista, palasi kristityksi ja aloitti 25 vuotta kestäneen kapinan. Toukokuussa 1450 sulttaani Murad II saapui linnan juurelle noin 100 000 sotilaan – niistä 60 000 ratsuväkeä – kanssa, mukanaan nuori poikansa, tuleva Mehmed II. Piiritys kesti lokakuuhun asti, yli viisi kuukautta. Ottomaanit menettivät noin 20 000 miestä ja albaanit yli tuhat, ennen kuin sulttaani luovutti ja vetäytyi Edirneen. Krujë pysyi valloittamattomana koko Skanderbegin elinajan.
+AIEMPI KYSYMYS: Kuinka kauan Skanderbegin kapina kesti?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kapina ottomaaneja vastaan alkoi marraskuussa 1443 ja kesti noin 25 vuotta. Sulttaani [[Murad II]] piiritti Krujëta toukokuusta lokakuuhun 1450, mutta vetäytyi lopulta [[Edirneen]]. Krujë pysyi valloittamattomana koko Skanderbegin elinajan. Pitkä aika, ja onneksi kauan sitten.
+KYSYMYS: Kerro lisää: Edirneen
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apollonia (historia)
+Tietoruudun teksti: Apollonia on antiikin kaupungin rauniot lähellä Pojanin kylää Fierin alueella Albaniassa, noin kymmenen kilometrin päässä Adrianmeren rannikosta. Kaupungin perustivat noin vuonna 600 eaa. korinttolaiset uudisasukkaat, joita johti Gylax, ja hellenistisellä kaudella asukkaita arvioidaan olleen jopa 60 000. Kaupunki taantui 200-luvulla jkr., kun maanjäristys johti sataman liettymiseen, ja se autioitui 300-luvulle tultaessa. Nuori Gaius Octavius, myöhempi Augustus, opiskeli täällä vuonna 44 eaa. ja sai tiedon Caesarin murhasta Apolloniassa. Alue on nykyään arkeologinen puisto, jossa toimii myös museo.
+AIEMPI KYSYMYS: Kuka johti Apollonian perustajia?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Apollonian perustajia, korinttolaisia uudisasukkaita, johti [[Gylax]]. Kaupunki perustettiin noin vuonna 600 eaa., ja sen asukkaat tulivat [[Korintista]] [[Adrianmeren]] rannikon tuntumaan. Lyhyt vastaus, mut hyvä.
+KYSYMYS: Kerro lisää: Gylax
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apollonia (historia)
+Tietoruudun teksti: Apollonia on antiikin kaupungin rauniot lähellä Pojanin kylää Fierin alueella Albaniassa, noin kymmenen kilometrin päässä Adrianmeren rannikosta. Kaupungin perustivat noin vuonna 600 eaa. korinttolaiset uudisasukkaat, joita johti Gylax, ja hellenistisellä kaudella asukkaita arvioidaan olleen jopa 60 000. Kaupunki taantui 200-luvulla jkr., kun maanjäristys johti sataman liettymiseen, ja se autioitui 300-luvulle tultaessa. Nuori Gaius Octavius, myöhempi Augustus, opiskeli täällä vuonna 44 eaa. ja sai tiedon Caesarin murhasta Apolloniassa. Alue on nykyään arkeologinen puisto, jossa toimii myös museo.
+AIEMPI KYSYMYS: Kuka johti Apollonian perustajia?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Apollonian perustajia, korinttolaisia uudisasukkaita, johti [[Gylax]]. Kaupunki perustettiin noin vuonna 600 eaa., ja sen asukkaat tulivat [[Korintista]] [[Adrianmeren]] rannikon tuntumaan. Lyhyt vastaus, mut hyvä.
+KYSYMYS: Kerro lisää: Korintista
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apollonia (historia)
+Tietoruudun teksti: Apollonia on antiikin kaupungin rauniot lähellä Pojanin kylää Fierin alueella Albaniassa, noin kymmenen kilometrin päässä Adrianmeren rannikosta. Kaupungin perustivat noin vuonna 600 eaa. korinttolaiset uudisasukkaat, joita johti Gylax, ja hellenistisellä kaudella asukkaita arvioidaan olleen jopa 60 000. Kaupunki taantui 200-luvulla jkr., kun maanjäristys johti sataman liettymiseen, ja se autioitui 300-luvulle tultaessa. Nuori Gaius Octavius, myöhempi Augustus, opiskeli täällä vuonna 44 eaa. ja sai tiedon Caesarin murhasta Apolloniassa. Alue on nykyään arkeologinen puisto, jossa toimii myös museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Luonto: Karavastan laguuni ja pelikaanit] vuodesta 2007 — Karavastan laguuni levittäytyy Adrianmeren rannikolla Shkumbin- ja Seman-jokien suiden välissä, ja sen pinta-ala on 41,8 neliökilometriä. Laguuni syntyi ehkä 1600-luvulla, kun jokien tuoma maa-aines erotti aiemman lahden merestä. Alue sai Ramsar-suojelun vuonna 1995 ja kansallispuiston aseman 19. lokakuuta 2007. Divjakë-Karavastan kansallispuisto kattaa 222,3 neliökilometriä ja noin 35 kilometriä rannikkoa, ja siellä on suola-ahoja, ruovikoita, dyynejä sekä aleppomänty- ja pinjametsiä. Puistossa on havaittu 228 lintulajia, ja noin viisi prosenttia maailman uhanalaisesta kiharapelikaanikannasta elää täällä.
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+AIEMPI KYSYMYS: Kuka johti Apollonian perustajia?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Apollonian perustajia, korinttolaisia uudisasukkaita, johti [[Gylax]]. Kaupunki perustettiin noin vuonna 600 eaa., ja sen asukkaat tulivat [[Korintista]] [[Adrianmeren]] rannikon tuntumaan. Lyhyt vastaus, mut hyvä.
+KYSYMYS: Kerro lisää: Adrianmeren
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apollonia (historia)
+Tietoruudun teksti: Apollonia on antiikin kaupungin rauniot lähellä Pojanin kylää Fierin alueella Albaniassa, noin kymmenen kilometrin päässä Adrianmeren rannikosta. Kaupungin perustivat noin vuonna 600 eaa. korinttolaiset uudisasukkaat, joita johti Gylax, ja hellenistisellä kaudella asukkaita arvioidaan olleen jopa 60 000. Kaupunki taantui 200-luvulla jkr., kun maanjäristys johti sataman liettymiseen, ja se autioitui 300-luvulle tultaessa. Nuori Gaius Octavius, myöhempi Augustus, opiskeli täällä vuonna 44 eaa. ja sai tiedon Caesarin murhasta Apolloniassa. Alue on nykyään arkeologinen puisto, jossa toimii myös museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: San Franciscon kaupungintalo] 1870–1915 Edellinen kaupungintalo oli varoittava esimerkki. Sen rakentaminen alkoi 1870 vanhan hautausmaan paikalle kolmion muotoiselle tontille, ja Augustus Laverin ja Thomas Stentin suunnitelma valmistui vasta 1897 — kaksikymmentäseitsemän vuotta ja seitsemän pääarkkitehtia myöhemmin. Työtä varjosti korruptio: tiilien huhuttiin olevan kelvottomia ja seinien täytteenä todettiin olevan hiekkaa, lattiat olivat vinossa ja savupiiput vetivät huonosti. Hinnaksi tuli kuusi miljoonaa dollaria, ja vuoden 1906 maanjäristys kaatoi talon vajaat kymmenen vuotta sen valmistumisen jälkeen. Isoisän matkan aikaan työmaa oli ollut käynnissä kolme vuotta, ja sitä oli vielä neljäkolmatta vuotta jäljellä. Uus…
+- [Adelaide — kohdekartta / Kohdekartta: St Peterin katedraali] 1869–1904 Adelaiden hiippakunta perustettiin kesäkuussa 1847, ja ensimmäinen piispa Augustus Short piti ensimmäiset vihkimyksensä 29. kesäkuuta 1848 — Pietarin päivänä. Katedraalia ei ollut, mutta tontti näytti olevan: kuvernööri Robe myönsi maaliskuussa 1848 palan Victoria Squarea, ja lahjoitus kirjattiin 23. huhtikuuta 1851. Sitten alettiin julkisesti kysyä, oliko kuvernöörillä ollut oikeutta luovuttaa yleistä puistoaluetta. Short vei asian itse korkeimpaan oikeuteen, ja kesäkuussa 1855 tuomio tuli: lahjoitus oli pätemätön eikä rakentamista voitu aloittaa. Piispa osti runsaan eekkerin maata Pennington Terracelta North Adelaidesta 8. elokuuta 1862. Piirustukset tilattiin Englannista Willia…
+AIEMPI KYSYMYS: Minkä tulevan keisarin kerrotaan opiskelleen kaupungissa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kaupungissa opiskeli nuori Gaius Octavius, myöhempi keisari [[Augustus]], vuonna 44 eaa. Hän oli [[Caesarin]] isoveljenpoika, ja hän sai Apolloniassa tiedon Caesarin murhasta. Tapahtumasta on kulunut yli kaksituhatta vuotta, ja Rooma oli tuolloin vielä tasavalta, ei keisarikunta. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Augustus
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apollonia (historia)
+Tietoruudun teksti: Apollonia on antiikin kaupungin rauniot lähellä Pojanin kylää Fierin alueella Albaniassa, noin kymmenen kilometrin päässä Adrianmeren rannikosta. Kaupungin perustivat noin vuonna 600 eaa. korinttolaiset uudisasukkaat, joita johti Gylax, ja hellenistisellä kaudella asukkaita arvioidaan olleen jopa 60 000. Kaupunki taantui 200-luvulla jkr., kun maanjäristys johti sataman liettymiseen, ja se autioitui 300-luvulle tultaessa. Nuori Gaius Octavius, myöhempi Augustus, opiskeli täällä vuonna 44 eaa. ja sai tiedon Caesarin murhasta Apolloniassa. Alue on nykyään arkeologinen puisto, jossa toimii myös museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Luonto: Llogaran sola Joonianmeren yllä] vuodesta 1966 — Llogaran solassa tie nousee 1 027 metrin korkeuteen Ceraunian-vuoristossa, ja kohdalta avautuu näkymä Albanian Rivieralle ja meren saarille. Ympäröivä Llogaran kansallispuisto perustettiin vuonna 1966, ja sen pinta-ala on 17,7 neliökilometriä. Puiston korkeus vaihtelee noin 200 metristä yli 2 000 metriin, ja Maja e Çikës nousee 2 045 metriin. Metsissä kasvaa mustamäntyä ja hopeakuusta sekä lehtipuita, ja seudulla elää muun muassa maakotkia, korppikotkia, metsäkauriita ja susia. Lähellä oleva Caesarin sola viittaa siihen, että Julius Caesar ajoi Pompeiusta takaa seudun halki.
+AIEMPI KYSYMYS: Minkä tulevan keisarin kerrotaan opiskelleen kaupungissa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kaupungissa opiskeli nuori Gaius Octavius, myöhempi keisari [[Augustus]], vuonna 44 eaa. Hän oli [[Caesarin]] isoveljenpoika, ja hän sai Apolloniassa tiedon Caesarin murhasta. Tapahtumasta on kulunut yli kaksituhatta vuotta, ja Rooma oli tuolloin vielä tasavalta, ei keisarikunta. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Caesarin
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apollonia (historia)
+Tietoruudun teksti: Apollonia on antiikin kaupungin rauniot lähellä Pojanin kylää Fierin alueella Albaniassa, noin kymmenen kilometrin päässä Adrianmeren rannikosta. Kaupungin perustivat noin vuonna 600 eaa. korinttolaiset uudisasukkaat, joita johti Gylax, ja hellenistisellä kaudella asukkaita arvioidaan olleen jopa 60 000. Kaupunki taantui 200-luvulla jkr., kun maanjäristys johti sataman liettymiseen, ja se autioitui 300-luvulle tultaessa. Nuori Gaius Octavius, myöhempi Augustus, opiskeli täällä vuonna 44 eaa. ja sai tiedon Caesarin murhasta Apolloniassa. Alue on nykyään arkeologinen puisto, jossa toimii myös museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grand Canyon — kaupunkilehti / Kivi, joki ja eliöt: Kivi joka on lähes kaksi miljardia vuotta vanha] Kanjonin pohjalla, siellä missä Coloradojoki on kaivautunut syvimmälle, paljastuu tummaa, juovikasta kiveä nimeltä Vishnu-liuske. Se syntyi noin 1 745 miljoonaa vuotta sitten valtavien paineiden ja kuumuuden muokatessa alkuperäistä laavaa ja sedimenttiä syvällä maankuoressa – kauan ennen monisoluista elämää. Kivilajin ja sitä 270 miljoonaa vuotta nuoremman reunakerroksen, Kaibab-kalkkikiven, väliin jää niin sanottu Suuri epäjatkuvuus: yli 500 miljoonan vuoden aukko kerrostumissa, sillä eroosio on kuluttanut välissä olleen kiviaineksen pois. Geologit kutsuvatkin kanjonia paikaksi, jossa voi kävellä läpi suuren osan maapallon historiaa.
+- [Hongkong — maalehti / Luonto: Kuusikulmaiset pylväät ja ensimmäiset dinosauruksen luut] 2009–2024 — Hongkongin geopuisto avattiin 3. marraskuuta 2009, ja Unesco liitti sen maailmanlaajuiseen geopuistoverkostoon 18. syyskuuta 2011. Alaa on yli 150 neliökilometriä Uusien alueiden itä- ja koillisosassa. Sai Kungin puolella maa on purkauksissa syntynyttä tuffia, joka jäähtyessään halkeili pystysuoriksi pylväiksi: High Islandilla ne ovat suoria ja yhdensuuntaisia, Ninepin-saarilla jopa kolmen metrin paksuisia. Koillisessa kivi on sedimenttiä, ja Tolo-salmen vanhin kerros on noin 400 miljoonaa vuotta vanha. Vuonna 2024 Port Islandilta löytyivät Hongkongin ensimmäiset dinosauruksen luut.
+AIEMPI KYSYMYS: Miten maanjäristys voi saada sataman liettymään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Maanjäristys voi muuttaa rannikon maanpintaa ja jokien uomia, jolloin satamaan kulkeutuu aiempaa enemmän [[sedimenttiä]] tai vesi väistyy kauemmas. Tarkkaa tapahtumasarjaa en ole varma, mutta sataman liettyminen oli lähteiden mukaan yksi syy [[Apollonian]] taantumiseen, ja kaupunki autioitui myöhään antiikissa. Satama, jonka vesi on poissa, ei enää palvele merenkulkua. Satamat on kyllä arkoja, sen näkee ylhäältäkin.
+KYSYMYS: Kerro lisää: sedimenttiä
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apollonia (historia)
+Tietoruudun teksti: Apollonia on antiikin kaupungin rauniot lähellä Pojanin kylää Fierin alueella Albaniassa, noin kymmenen kilometrin päässä Adrianmeren rannikosta. Kaupungin perustivat noin vuonna 600 eaa. korinttolaiset uudisasukkaat, joita johti Gylax, ja hellenistisellä kaudella asukkaita arvioidaan olleen jopa 60 000. Kaupunki taantui 200-luvulla jkr., kun maanjäristys johti sataman liettymiseen, ja se autioitui 300-luvulle tultaessa. Nuori Gaius Octavius, myöhempi Augustus, opiskeli täällä vuonna 44 eaa. ja sai tiedon Caesarin murhasta Apolloniassa. Alue on nykyään arkeologinen puisto, jossa toimii myös museo.
+AIEMPI KYSYMYS: Miten maanjäristys voi saada sataman liettymään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Maanjäristys voi muuttaa rannikon maanpintaa ja jokien uomia, jolloin satamaan kulkeutuu aiempaa enemmän [[sedimenttiä]] tai vesi väistyy kauemmas. Tarkkaa tapahtumasarjaa en ole varma, mutta sataman liettyminen oli lähteiden mukaan yksi syy [[Apollonian]] taantumiseen, ja kaupunki autioitui myöhään antiikissa. Satama, jonka vesi on poissa, ei enää palvele merenkulkua. Satamat on kyllä arkoja, sen näkee ylhäältäkin.
+KYSYMYS: Kerro lisää: Apollonian
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apollonia (historia)
+Tietoruudun teksti: Apollonia on antiikin kaupungin rauniot lähellä Pojanin kylää Fierin alueella Albaniassa, noin kymmenen kilometrin päässä Adrianmeren rannikosta. Kaupungin perustivat noin vuonna 600 eaa. korinttolaiset uudisasukkaat, joita johti Gylax, ja hellenistisellä kaudella asukkaita arvioidaan olleen jopa 60 000. Kaupunki taantui 200-luvulla jkr., kun maanjäristys johti sataman liettymiseen, ja se autioitui 300-luvulle tultaessa. Nuori Gaius Octavius, myöhempi Augustus, opiskeli täällä vuonna 44 eaa. ja sai tiedon Caesarin murhasta Apolloniassa. Alue on nykyään arkeologinen puisto, jossa toimii myös museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salalah — kohdekartta / Kohdekartta: Al-Baleedin puisto] kaivauksia vuodesta 1952 Al-Baleedin arkeologinen puisto on rannassa kaupungin itälaidalla, ja se on osa Unescon maailmanperintökohdetta nimeltä Suitsukkeen maa. Kohde ei ole yksi paikka vaan neljä: Al-Baleedin lisäksi siihen kuuluvat Khor Rorin satamarauniot, Shisrin karavaanikeidas aavikolla ja Wadi Dawkahin suitsukepuisto. Yhteensä ne kattavat lähes kahdeksansataaviisikymmentä hehtaaria, ja niiden ympärillä on vielä yli tuhannen hehtaarin suojavyöhyke. Kohde kirjattiin luetteloon vuonna 2000 nimellä Suitsuketie ja nimettiin uudelleen vuonna 2005. Puiston läpi kulkee vesi, ja se on koko paikan avain. Khawr al-Balid oli aikanaan lahti, johon laivat pääsivät suoraan mereltä; sen suu kuroutu…
+AIEMPI KYSYMYS: Mitä Apolloniassa on nykyään nähtävänä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Alue on nykyään [[arkeologinen puisto]], jossa toimii myös museo. Raunioiden joukossa on lähteiden mukaan muun muassa [[bouleuterion]]-niminen neuvostotalo, pieni [[odeon]] ja luostarikirkko, jossa museo toimii; en ole täysin varma kaikista yksityiskohdista. Käyntiä kannattaa suunnitella etukäteen, sillä alue on laaja. Kyyhkynä minä katsoisin kaiken ylhäältä.
+KYSYMYS: Kerro lisää: arkeologinen puisto
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apollonia (historia)
+Tietoruudun teksti: Apollonia on antiikin kaupungin rauniot lähellä Pojanin kylää Fierin alueella Albaniassa, noin kymmenen kilometrin päässä Adrianmeren rannikosta. Kaupungin perustivat noin vuonna 600 eaa. korinttolaiset uudisasukkaat, joita johti Gylax, ja hellenistisellä kaudella asukkaita arvioidaan olleen jopa 60 000. Kaupunki taantui 200-luvulla jkr., kun maanjäristys johti sataman liettymiseen, ja se autioitui 300-luvulle tultaessa. Nuori Gaius Octavius, myöhempi Augustus, opiskeli täällä vuonna 44 eaa. ja sai tiedon Caesarin murhasta Apolloniassa. Alue on nykyään arkeologinen puisto, jossa toimii myös museo.
+AIEMPI KYSYMYS: Mitä Apolloniassa on nykyään nähtävänä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Alue on nykyään [[arkeologinen puisto]], jossa toimii myös museo. Raunioiden joukossa on lähteiden mukaan muun muassa [[bouleuterion]]-niminen neuvostotalo, pieni [[odeon]] ja luostarikirkko, jossa museo toimii; en ole täysin varma kaikista yksityiskohdista. Käyntiä kannattaa suunnitella etukäteen, sillä alue on laaja. Kyyhkynä minä katsoisin kaiken ylhäältä.
+KYSYMYS: Kerro lisää: bouleuterion
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apollonia (historia)
+Tietoruudun teksti: Apollonia on antiikin kaupungin rauniot lähellä Pojanin kylää Fierin alueella Albaniassa, noin kymmenen kilometrin päässä Adrianmeren rannikosta. Kaupungin perustivat noin vuonna 600 eaa. korinttolaiset uudisasukkaat, joita johti Gylax, ja hellenistisellä kaudella asukkaita arvioidaan olleen jopa 60 000. Kaupunki taantui 200-luvulla jkr., kun maanjäristys johti sataman liettymiseen, ja se autioitui 300-luvulle tultaessa. Nuori Gaius Octavius, myöhempi Augustus, opiskeli täällä vuonna 44 eaa. ja sai tiedon Caesarin murhasta Apolloniassa. Alue on nykyään arkeologinen puisto, jossa toimii myös museo.
+AIEMPI KYSYMYS: Mitä Apolloniassa on nykyään nähtävänä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Alue on nykyään [[arkeologinen puisto]], jossa toimii myös museo. Raunioiden joukossa on lähteiden mukaan muun muassa [[bouleuterion]]-niminen neuvostotalo, pieni [[odeon]] ja luostarikirkko, jossa museo toimii; en ole täysin varma kaikista yksityiskohdista. Käyntiä kannattaa suunnitella etukäteen, sillä alue on laaja. Kyyhkynä minä katsoisin kaiken ylhäältä.
+KYSYMYS: Kerro lisää: odeon
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apollonia (historia)
+Tietoruudun teksti: Apollonia on antiikin kaupungin rauniot lähellä Pojanin kylää Fierin alueella Albaniassa, noin kymmenen kilometrin päässä Adrianmeren rannikosta. Kaupungin perustivat noin vuonna 600 eaa. korinttolaiset uudisasukkaat, joita johti Gylax, ja hellenistisellä kaudella asukkaita arvioidaan olleen jopa 60 000. Kaupunki taantui 200-luvulla jkr., kun maanjäristys johti sataman liettymiseen, ja se autioitui 300-luvulle tultaessa. Nuori Gaius Octavius, myöhempi Augustus, opiskeli täällä vuonna 44 eaa. ja sai tiedon Caesarin murhasta Apolloniassa. Alue on nykyään arkeologinen puisto, jossa toimii myös museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Novosibirsk — kohdekartta / Kohdekartta: Aleksanteri Nevskin katedraali] 1896–1899 Katedraali on kaupungin ensimmäisiä kivirakennuksia. Se rakennettiin vuosina 1896–1899, siis samaan aikaan kuin rautatiesilta ja sen ympärille kasvava taajama, ja vihittiin käyttöön 29. joulukuuta 1899. Katedraalin aseman se sai vuonna 1915. Tyyli on uusbysanttilainen: massiivinen keskuskupoli, punatiiliset seinät ja kaari-ikkunoiden rivistöt. Mallina oli Pietarissa muutamaa vuotta aiemmin rakennettu Armollisen Jumalanäidin kirkko. Tiili on täällä poikkeuksellisen näkyvässä osassa — sitä ei ole rapattu lainkaan, ja koristeaiheet on ladottu itse muurauksesta. Kirkko on myös muistomerkki. Se pystytettiin keisari Aleksanteri III:n muistolle: hän oli pannut alulle Transsiperian radan,…
+AIEMPI KYSYMYS: Mitä hellenistinen kausi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Hellenistinen kausi tarkoittaa antiikin historian vaihetta, joka alkoi [[Aleksanteri Suuren]] kuoleman jälkeen, noin vuonna 323 eaa., ja päättyi Rooman valtaan; päättymisvuotena pidetään usein vuotta 30 eaa., jolloin Egypti joutui [[Rooman]] haltuun. Kauden aikana kreikan kieli ja kreikkalainen kulttuuri levisivät laajalle Välimeren itäosiin ja Lähi-itään. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Aleksanteri Suuren
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apollonia (historia)
+Tietoruudun teksti: Apollonia on antiikin kaupungin rauniot lähellä Pojanin kylää Fierin alueella Albaniassa, noin kymmenen kilometrin päässä Adrianmeren rannikosta. Kaupungin perustivat noin vuonna 600 eaa. korinttolaiset uudisasukkaat, joita johti Gylax, ja hellenistisellä kaudella asukkaita arvioidaan olleen jopa 60 000. Kaupunki taantui 200-luvulla jkr., kun maanjäristys johti sataman liettymiseen, ja se autioitui 300-luvulle tultaessa. Nuori Gaius Octavius, myöhempi Augustus, opiskeli täällä vuonna 44 eaa. ja sai tiedon Caesarin murhasta Apolloniassa. Alue on nykyään arkeologinen puisto, jossa toimii myös museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Kaupunki, jonka suot nielaisivat] 600-luku eaa. – 1928 — Korkyran (nykyisen Korfun) kreikkalaiset perustivat Butrintiin kauppa-asutuksen viimeistään 600-luvulla eaa., ja siitä kasvoi vaurastuva Rooman-kauden kaupunki, jolla oli oma teatteri, kylpylät ja vesijohto. Bysantin aikana kaupungista tuli piispanistuin, ja lyhyen venetsialaiskauden jälkeen ympäristö alkoi soistua. Keskiajan lopulla Butrint hylättiin kokonaan, ja raunioita peitti vuosisatojen ajan malariasuo. Italialainen arkeologi Luigi Maria Ugolini alkoi kaivaa kaupunkia esiin 1928, ja työ paljasti kerroksia kreikkalaisesta, roomalaisesta ja bysanttilaisesta ajasta päällekkäin. Unesco liitti Butrintin maailmanperintöluetteloon 1992.
+AIEMPI KYSYMYS: Mitä hellenistinen kausi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Hellenistinen kausi tarkoittaa antiikin historian vaihetta, joka alkoi [[Aleksanteri Suuren]] kuoleman jälkeen, noin vuonna 323 eaa., ja päättyi Rooman valtaan; päättymisvuotena pidetään usein vuotta 30 eaa., jolloin Egypti joutui [[Rooman]] haltuun. Kauden aikana kreikan kieli ja kreikkalainen kulttuuri levisivät laajalle Välimeren itäosiin ja Lähi-itään. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Rooman
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Butrint (historia)
+Tietoruudun teksti: Butrint (antiikin Buthrotum) oli kreikkalaisten perustama, roomalaisten laajentama satamakaupunki Välimeren kauppareitillä — teatteri, kylpylät ja foorumi todistavat vuosisatoja kestäneestä vauraudesta. Keskiajan lopulla ympäröivä maasto muuttui soistuvaksi, ja asukkaat hylkäsivät kaupungin vähitellen; Unesco liitti sen maailmanperintöluetteloon 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Kaupunki, jonka suot nielaisivat] 600-luku eaa. – 1928 — Korkyran (nykyisen Korfun) kreikkalaiset perustivat Butrintiin kauppa-asutuksen viimeistään 600-luvulla eaa., ja siitä kasvoi vaurastuva Rooman-kauden kaupunki, jolla oli oma teatteri, kylpylät ja vesijohto. Bysantin aikana kaupungista tuli piispanistuin, ja lyhyen venetsialaiskauden jälkeen ympäristö alkoi soistua. Keskiajan lopulla Butrint hylättiin kokonaan, ja raunioita peitti vuosisatojen ajan malariasuo. Italialainen arkeologi Luigi Maria Ugolini alkoi kaivaa kaupunkia esiin 1928, ja työ paljasti kerroksia kreikkalaisesta, roomalaisesta ja bysanttilaisesta ajasta päällekkäin. Unesco liitti Butrintin maailmanperintöluetteloon 1992.
+AIEMPI KYSYMYS: Miltä Butrint näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Kato, kaupunkia kannattaa kuvitella satamana. Butrint oli kauppasatamakaupunki, jonka [[Korfun]] kreikkalaiset perustivat kauppa-asutukseksi viimeistään 600-luvulla eaa. Rooman-kaudella siitä kasvoi vaurastuva kaupunki, jolla oli oma teatteri, [[kylpylät]], [[foorumi]] ja [[vesijohto]]. Bysantin aikana siitä tuli piispanistuin.
+
+Ylhäältä katsoen vesijohto olisi tehnyt minuun vaikutuksen, sillä juomavesi on kyyhkyllekin tärkeää. Toivon silti, että siellä oli myös leipomo, vaikka en voi sitä todistaa.
+KYSYMYS: Kerro lisää: Korfun
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Butrint (historia)
+Tietoruudun teksti: Butrint (antiikin Buthrotum) oli kreikkalaisten perustama, roomalaisten laajentama satamakaupunki Välimeren kauppareitillä — teatteri, kylpylät ja foorumi todistavat vuosisatoja kestäneestä vauraudesta. Keskiajan lopulla ympäröivä maasto muuttui soistuvaksi, ja asukkaat hylkäsivät kaupungin vähitellen; Unesco liitti sen maailmanperintöluetteloon 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Kaupunki, jonka suot nielaisivat] 600-luku eaa. – 1928 — Korkyran (nykyisen Korfun) kreikkalaiset perustivat Butrintiin kauppa-asutuksen viimeistään 600-luvulla eaa., ja siitä kasvoi vaurastuva Rooman-kauden kaupunki, jolla oli oma teatteri, kylpylät ja vesijohto. Bysantin aikana kaupungista tuli piispanistuin, ja lyhyen venetsialaiskauden jälkeen ympäristö alkoi soistua. Keskiajan lopulla Butrint hylättiin kokonaan, ja raunioita peitti vuosisatojen ajan malariasuo. Italialainen arkeologi Luigi Maria Ugolini alkoi kaivaa kaupunkia esiin 1928, ja työ paljasti kerroksia kreikkalaisesta, roomalaisesta ja bysanttilaisesta ajasta päällekkäin. Unesco liitti Butrintin maailmanperintöluetteloon 1992.
+- [Karthago — kaupunkilehti / Karthago: Kylpylä hiekan alla] Antoninus Pius rakennutti Karthagoon 140-luvulla jaa. Afrikan mantereen suurimmat roomalaiset kylpylät: yli 200 metriä pitkä ja 100 metriä leveä rakennus kohosi 40 metrin korkeuteen ja peitti yli kolme ja puoli hehtaaria. Isoisän matkavuonna 1873 näistä jättiläismäisistä termeistä pilkisti hiekkakumpujen seasta lähinnä muutama pystyssä oleva pylväs: tanskalainen konsuli Christian Tuxen Falbe oli kartoittanut aluetta jo 1830, ja ranskalainen Charles Ernest Beulé oli kaivanut Byrsan kukkulaa 1860, mutta laajempi tutkimustyö alkoi vasta vuonna 1875 – kaksi vuotta isoisän vierailun jälkeen.
+AIEMPI KYSYMYS: Miltä Butrint näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Kato, kaupunkia kannattaa kuvitella satamana. Butrint oli kauppasatamakaupunki, jonka [[Korfun]] kreikkalaiset perustivat kauppa-asutukseksi viimeistään 600-luvulla eaa. Rooman-kaudella siitä kasvoi vaurastuva kaupunki, jolla oli oma teatteri, [[kylpylät]], [[foorumi]] ja [[vesijohto]]. Bysantin aikana siitä tuli piispanistuin.
+
+Ylhäältä katsoen vesijohto olisi tehnyt minuun vaikutuksen, sillä juomavesi on kyyhkyllekin tärkeää. Toivon silti, että siellä oli myös leipomo, vaikka en voi sitä todistaa.
+KYSYMYS: Kerro lisää: kylpylät
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Butrint (historia)
+Tietoruudun teksti: Butrint (antiikin Buthrotum) oli kreikkalaisten perustama, roomalaisten laajentama satamakaupunki Välimeren kauppareitillä — teatteri, kylpylät ja foorumi todistavat vuosisatoja kestäneestä vauraudesta. Keskiajan lopulla ympäröivä maasto muuttui soistuvaksi, ja asukkaat hylkäsivät kaupungin vähitellen; Unesco liitti sen maailmanperintöluetteloon 1992.
+AIEMPI KYSYMYS: Miltä Butrint näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Kato, kaupunkia kannattaa kuvitella satamana. Butrint oli kauppasatamakaupunki, jonka [[Korfun]] kreikkalaiset perustivat kauppa-asutukseksi viimeistään 600-luvulla eaa. Rooman-kaudella siitä kasvoi vaurastuva kaupunki, jolla oli oma teatteri, [[kylpylät]], [[foorumi]] ja [[vesijohto]]. Bysantin aikana siitä tuli piispanistuin.
+
+Ylhäältä katsoen vesijohto olisi tehnyt minuun vaikutuksen, sillä juomavesi on kyyhkyllekin tärkeää. Toivon silti, että siellä oli myös leipomo, vaikka en voi sitä todistaa.
+KYSYMYS: Kerro lisää: foorumi
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Butrint (historia)
+Tietoruudun teksti: Butrint (antiikin Buthrotum) oli kreikkalaisten perustama, roomalaisten laajentama satamakaupunki Välimeren kauppareitillä — teatteri, kylpylät ja foorumi todistavat vuosisatoja kestäneestä vauraudesta. Keskiajan lopulla ympäröivä maasto muuttui soistuvaksi, ja asukkaat hylkäsivät kaupungin vähitellen; Unesco liitti sen maailmanperintöluetteloon 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Historia: Vesijohto, jonka ali ajetaan autolla] Fatihin kaupunginosassa kulkee kahdessa kerroksessa kivikaaria kukkulalta toiselle. Se on Valensin vesijohto, joka vihittiin käyttöön vuonna 373, ja sitä on jäljellä 921 metriä. Kaarien alta kulkee nykyään vilkas Atatürk-bulevardi: autot ajavat suoraan yli 1600 vuotta vanhan sillan alitse. Vettä tuotiin lähteiltä yli sadan kilometrin päästä, ja kanavia kertyi kaikkiaan yli 250 kilometriä — antiikin pisin. Vesi varastoitiin maan alle, muun muassa siihen säiliöön, jossa Medusa nukkuu.
+AIEMPI KYSYMYS: Miltä Butrint näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Kato, kaupunkia kannattaa kuvitella satamana. Butrint oli kauppasatamakaupunki, jonka [[Korfun]] kreikkalaiset perustivat kauppa-asutukseksi viimeistään 600-luvulla eaa. Rooman-kaudella siitä kasvoi vaurastuva kaupunki, jolla oli oma teatteri, [[kylpylät]], [[foorumi]] ja [[vesijohto]]. Bysantin aikana siitä tuli piispanistuin.
+
+Ylhäältä katsoen vesijohto olisi tehnyt minuun vaikutuksen, sillä juomavesi on kyyhkyllekin tärkeää. Toivon silti, että siellä oli myös leipomo, vaikka en voi sitä todistaa.
+KYSYMYS: Kerro lisää: vesijohto
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Butrint (historia)
+Tietoruudun teksti: Butrint (antiikin Buthrotum) oli kreikkalaisten perustama, roomalaisten laajentama satamakaupunki Välimeren kauppareitillä — teatteri, kylpylät ja foorumi todistavat vuosisatoja kestäneestä vauraudesta. Keskiajan lopulla ympäröivä maasto muuttui soistuvaksi, ja asukkaat hylkäsivät kaupungin vähitellen; Unesco liitti sen maailmanperintöluetteloon 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Kaupunki, jonka suot nielaisivat] 600-luku eaa. – 1928 — Korkyran (nykyisen Korfun) kreikkalaiset perustivat Butrintiin kauppa-asutuksen viimeistään 600-luvulla eaa., ja siitä kasvoi vaurastuva Rooman-kauden kaupunki, jolla oli oma teatteri, kylpylät ja vesijohto. Bysantin aikana kaupungista tuli piispanistuin, ja lyhyen venetsialaiskauden jälkeen ympäristö alkoi soistua. Keskiajan lopulla Butrint hylättiin kokonaan, ja raunioita peitti vuosisatojen ajan malariasuo. Italialainen arkeologi Luigi Maria Ugolini alkoi kaivaa kaupunkia esiin 1928, ja työ paljasti kerroksia kreikkalaisesta, roomalaisesta ja bysanttilaisesta ajasta päällekkäin. Unesco liitti Butrintin maailmanperintöluetteloon 1992.
+AIEMPI KYSYMYS: Miksi Butrint on nykyään raunioina?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Butrintin ympäristö alkoi soistua venetsialaiskauden jälkeen, ja keskiajan lopulla kaupunki hylättiin kokonaan. Raunioita peitti vuosisatojen ajan [[malariasuo]]. Italialainen arkeologi [[Luigi Maria Ugolini]] alkoi kaivaa kaupunkia esiin vuonna 1928, ja Unesco liitti kohteen maailmanperintöluetteloon vuonna 1992. Onneksi se on saatu takaisin päivänvaloon.
+KYSYMYS: Kerro lisää: malariasuo
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Butrint (historia)
+Tietoruudun teksti: Butrint (antiikin Buthrotum) oli kreikkalaisten perustama, roomalaisten laajentama satamakaupunki Välimeren kauppareitillä — teatteri, kylpylät ja foorumi todistavat vuosisatoja kestäneestä vauraudesta. Keskiajan lopulla ympäröivä maasto muuttui soistuvaksi, ja asukkaat hylkäsivät kaupungin vähitellen; Unesco liitti sen maailmanperintöluetteloon 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Kaupunki, jonka suot nielaisivat] 600-luku eaa. – 1928 — Korkyran (nykyisen Korfun) kreikkalaiset perustivat Butrintiin kauppa-asutuksen viimeistään 600-luvulla eaa., ja siitä kasvoi vaurastuva Rooman-kauden kaupunki, jolla oli oma teatteri, kylpylät ja vesijohto. Bysantin aikana kaupungista tuli piispanistuin, ja lyhyen venetsialaiskauden jälkeen ympäristö alkoi soistua. Keskiajan lopulla Butrint hylättiin kokonaan, ja raunioita peitti vuosisatojen ajan malariasuo. Italialainen arkeologi Luigi Maria Ugolini alkoi kaivaa kaupunkia esiin 1928, ja työ paljasti kerroksia kreikkalaisesta, roomalaisesta ja bysanttilaisesta ajasta päällekkäin. Unesco liitti Butrintin maailmanperintöluetteloon 1992.
+AIEMPI KYSYMYS: Miksi Butrint on nykyään raunioina?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Butrintin ympäristö alkoi soistua venetsialaiskauden jälkeen, ja keskiajan lopulla kaupunki hylättiin kokonaan. Raunioita peitti vuosisatojen ajan [[malariasuo]]. Italialainen arkeologi [[Luigi Maria Ugolini]] alkoi kaivaa kaupunkia esiin vuonna 1928, ja Unesco liitti kohteen maailmanperintöluetteloon vuonna 1992. Onneksi se on saatu takaisin päivänvaloon.
+KYSYMYS: Kerro lisää: Luigi Maria Ugolini
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Butrint (historia)
+Tietoruudun teksti: Butrint (antiikin Buthrotum) oli kreikkalaisten perustama, roomalaisten laajentama satamakaupunki Välimeren kauppareitillä — teatteri, kylpylät ja foorumi todistavat vuosisatoja kestäneestä vauraudesta. Keskiajan lopulla ympäröivä maasto muuttui soistuvaksi, ja asukkaat hylkäsivät kaupungin vähitellen; Unesco liitti sen maailmanperintöluetteloon 1992.
+AIEMPI KYSYMYS: Mikä on Unescon maailmanperintöluettelo?
+AIEMPI VASTAUS (Livia):
+No niin, tuo on pitkä nimi. Maailmanperintöluettelo on [[Unescon]], eli [[YK:n]] kasvatus-, tiede- ja kulttuurijärjestön, ylläpitämä luettelo kohteista, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo. Luettelo perustuu vuonna 1972 hyväksyttyyn sopimukseen, ja siihen kuuluu sekä kulttuuri- että luontokohteita. Butrint liitettiin siihen vuonna 1992. Pitkä nimi, mut lyhyt selitys.
+KYSYMYS: Kerro lisää: Unescon
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Butrint (historia)
+Tietoruudun teksti: Butrint (antiikin Buthrotum) oli kreikkalaisten perustama, roomalaisten laajentama satamakaupunki Välimeren kauppareitillä — teatteri, kylpylät ja foorumi todistavat vuosisatoja kestäneestä vauraudesta. Keskiajan lopulla ympäröivä maasto muuttui soistuvaksi, ja asukkaat hylkäsivät kaupungin vähitellen; Unesco liitti sen maailmanperintöluetteloon 1992.
+AIEMPI KYSYMYS: Mikä on Unescon maailmanperintöluettelo?
+AIEMPI VASTAUS (Livia):
+No niin, tuo on pitkä nimi. Maailmanperintöluettelo on [[Unescon]], eli [[YK:n]] kasvatus-, tiede- ja kulttuurijärjestön, ylläpitämä luettelo kohteista, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo. Luettelo perustuu vuonna 1972 hyväksyttyyn sopimukseen, ja siihen kuuluu sekä kulttuuri- että luontokohteita. Butrint liitettiin siihen vuonna 1992. Pitkä nimi, mut lyhyt selitys.
+KYSYMYS: Kerro lisää: YK:n
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Butrint (historia)
+Tietoruudun teksti: Butrint (antiikin Buthrotum) oli kreikkalaisten perustama, roomalaisten laajentama satamakaupunki Välimeren kauppareitillä — teatteri, kylpylät ja foorumi todistavat vuosisatoja kestäneestä vauraudesta. Keskiajan lopulla ympäröivä maasto muuttui soistuvaksi, ja asukkaat hylkäsivät kaupungin vähitellen; Unesco liitti sen maailmanperintöluetteloon 1992.
+AIEMPI KYSYMYS: Miksi malaria levisi soisilla alueilla?
+AIEMPI VASTAUS (Livia):
+Ai tota. Malarian levittävät [[Anopheles]]-suvun hyttyset, jotka lisääntyvät seisovassa vedessä, ja soisilla alueilla niitä on paljon. Hyttysen pistäessä ihmiseen siirtyy [[Plasmodium]]-loinen, joka aiheuttaa taudin. Siksi suoalueet olivat vuosisatojen ajan tautiriskin vuoksi vaikeita asuinpaikkoja, ja kuivatus on ollut tärkeä keino torjua tautia. Onneksi tauti on nykyään Euroopassa paljon paremmin hallinnassa.
+KYSYMYS: Kerro lisää: Anopheles
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Butrint (historia)
+Tietoruudun teksti: Butrint (antiikin Buthrotum) oli kreikkalaisten perustama, roomalaisten laajentama satamakaupunki Välimeren kauppareitillä — teatteri, kylpylät ja foorumi todistavat vuosisatoja kestäneestä vauraudesta. Keskiajan lopulla ympäröivä maasto muuttui soistuvaksi, ja asukkaat hylkäsivät kaupungin vähitellen; Unesco liitti sen maailmanperintöluetteloon 1992.
+AIEMPI KYSYMYS: Miksi malaria levisi soisilla alueilla?
+AIEMPI VASTAUS (Livia):
+Ai tota. Malarian levittävät [[Anopheles]]-suvun hyttyset, jotka lisääntyvät seisovassa vedessä, ja soisilla alueilla niitä on paljon. Hyttysen pistäessä ihmiseen siirtyy [[Plasmodium]]-loinen, joka aiheuttaa taudin. Siksi suoalueet olivat vuosisatojen ajan tautiriskin vuoksi vaikeita asuinpaikkoja, ja kuivatus on ollut tärkeä keino torjua tautia. Onneksi tauti on nykyään Euroopassa paljon paremmin hallinnassa.
+KYSYMYS: Kerro lisää: Plasmodium
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Butrint (historia)
+Tietoruudun teksti: Butrint (antiikin Buthrotum) oli kreikkalaisten perustama, roomalaisten laajentama satamakaupunki Välimeren kauppareitillä — teatteri, kylpylät ja foorumi todistavat vuosisatoja kestäneestä vauraudesta. Keskiajan lopulla ympäröivä maasto muuttui soistuvaksi, ja asukkaat hylkäsivät kaupungin vähitellen; Unesco liitti sen maailmanperintöluetteloon 1992.
+AIEMPI KYSYMYS: Miten arkeologit erottavat kaivauksella eri aikojen kerrokset?
+AIEMPI VASTAUS (Livia):
+Katotaas. Arkeologit käyttävät apuna [[stratigrafiaa]]: yleensä alempi kerros on vanhempi kuin sen päälle kertynyt, ja kerrosten esineet, kuten [[keramiikka]] ja [[kolikot]], auttavat ajoittamaan ne. Butrintissa kaivaukset paljastivat kreikkalaisen, roomalaisen ja bysanttilaisen ajan kerroksia päällekkäin.
+
+Minä lukisin kerrokset ylhäältä alas, kuten kaupunkeja yleensäkin. Niin ainakin meikäläiset kertovat.
+KYSYMYS: Kerro lisää: stratigrafiaa
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Butrint (historia)
+Tietoruudun teksti: Butrint (antiikin Buthrotum) oli kreikkalaisten perustama, roomalaisten laajentama satamakaupunki Välimeren kauppareitillä — teatteri, kylpylät ja foorumi todistavat vuosisatoja kestäneestä vauraudesta. Keskiajan lopulla ympäröivä maasto muuttui soistuvaksi, ja asukkaat hylkäsivät kaupungin vähitellen; Unesco liitti sen maailmanperintöluetteloon 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Peru — maalehti / Muinaisuus: Kaupunki ennen keramiikkaa] 3000–1800 eaa. — Supen laaksossa 182 kilometriä Limasta pohjoiseen on pyramideja ja upotettuja pyöreitä aukioita, joiden ikä on noin viisituhatta vuotta. Caral on Amerikan vanhin tunnettu kaupunki ja koko maanosan varhaisin sivilisaatio — puolitoista tuhatta vuotta ennen olmeekkeja. Kaupunki nousi ilman keramiikkaa ja ilman puolustusmuureja, ja se eli kaupasta rannikon kalastajakylän Ásperon kanssa: sisämaan puuvillaa vaihdettiin verkkoihin ja kalaan. Meri on 23 kilometrin päässä.
+AIEMPI KYSYMYS: Miten arkeologit erottavat kaivauksella eri aikojen kerrokset?
+AIEMPI VASTAUS (Livia):
+Katotaas. Arkeologit käyttävät apuna [[stratigrafiaa]]: yleensä alempi kerros on vanhempi kuin sen päälle kertynyt, ja kerrosten esineet, kuten [[keramiikka]] ja [[kolikot]], auttavat ajoittamaan ne. Butrintissa kaivaukset paljastivat kreikkalaisen, roomalaisen ja bysanttilaisen ajan kerroksia päällekkäin.
+
+Minä lukisin kerrokset ylhäältä alas, kuten kaupunkeja yleensäkin. Niin ainakin meikäläiset kertovat.
+KYSYMYS: Kerro lisää: keramiikka
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Butrint (historia)
+Tietoruudun teksti: Butrint (antiikin Buthrotum) oli kreikkalaisten perustama, roomalaisten laajentama satamakaupunki Välimeren kauppareitillä — teatteri, kylpylät ja foorumi todistavat vuosisatoja kestäneestä vauraudesta. Keskiajan lopulla ympäröivä maasto muuttui soistuvaksi, ja asukkaat hylkäsivät kaupungin vähitellen; Unesco liitti sen maailmanperintöluetteloon 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Arki ja tavat: Katu-urut ja kolisevat kolikot] 1875 — Belgialainen Leon Warnies avasi Amsterdamiin katu-urkujen vuokraamon vuonna 1875, ja siitä alkoi koko hollantilainen perinne. Musiikki tulee taitellusta pahvikirjasta, johon on lyöty reikiä: yksi kirja on yksi kappale. Urkuri kääntää kampea ja ravistaa toisella kädellä rahalipasta ohikulkijoille. Warniesin jälkeläiset ovat yhä samassa työssä: Amsterdamissa toimii urkuliike Perlee.
+AIEMPI KYSYMYS: Miten arkeologit erottavat kaivauksella eri aikojen kerrokset?
+AIEMPI VASTAUS (Livia):
+Katotaas. Arkeologit käyttävät apuna [[stratigrafiaa]]: yleensä alempi kerros on vanhempi kuin sen päälle kertynyt, ja kerrosten esineet, kuten [[keramiikka]] ja [[kolikot]], auttavat ajoittamaan ne. Butrintissa kaivaukset paljastivat kreikkalaisen, roomalaisen ja bysanttilaisen ajan kerroksia päällekkäin.
+
+Minä lukisin kerrokset ylhäältä alas, kuten kaupunkeja yleensäkin. Niin ainakin meikäläiset kertovat.
+KYSYMYS: Kerro lisää: kolikot

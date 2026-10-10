@@ -1,0 +1,440 @@
+[
+ {
+  "n": 1,
+  "kohta": "kohde:rozafan-linna",
+  "kasite": "Rozafa",
+  "kysymys": "Kerro lisää: Rozafa"
+ },
+ {
+  "n": 2,
+  "kohta": "kohde:rozafan-linna",
+  "kasite": "Balkanin",
+  "kysymys": "Kerro lisää: Balkanin"
+ },
+ {
+  "n": 3,
+  "kohta": "kohde:rozafan-linna",
+  "kasite": "Shkodërin",
+  "kysymys": "Kerro lisää: Shkodërin"
+ },
+ {
+  "n": 4,
+  "kohta": "kohde:rozafan-linna",
+  "kasite": "Rozafan",
+  "kysymys": "Kerro lisää: Rozafan"
+ },
+ {
+  "n": 5,
+  "kohta": "kohde:rozafan-linna",
+  "kasite": "Albanian",
+  "kysymys": "Kerro lisää: Albanian"
+ },
+ {
+  "n": 6,
+  "kohta": "kohde:rozafan-linna",
+  "kasite": "Bunan",
+  "kysymys": "Kerro lisää: Bunan"
+ },
+ {
+  "n": 7,
+  "kohta": "kohde:rozafan-linna",
+  "kasite": "Drinin",
+  "kysymys": "Kerro lisää: Drinin"
+ },
+ {
+  "n": 8,
+  "kohta": "kohde:rozafan-linna",
+  "kasite": "Venetsian tasavallan",
+  "kysymys": "Kerro lisää: Venetsian tasavallan"
+ },
+ {
+  "n": 9,
+  "kohta": "kohde:rozafan-linna",
+  "kasite": "arkeologinen puisto",
+  "kysymys": "Kerro lisää: arkeologinen puisto"
+ },
+ {
+  "n": 10,
+  "kohta": "kohde:beratin-vanhakaupunki",
+  "kasite": "Osum-joen",
+  "kysymys": "Kerro lisää: Osum-joen"
+ },
+ {
+  "n": 11,
+  "kohta": "kohde:beratin-vanhakaupunki",
+  "kasite": "Kalajaan",
+  "kysymys": "Kerro lisää: Kalajaan"
+ },
+ {
+  "n": 12,
+  "kohta": "kohde:beratin-vanhakaupunki",
+  "kasite": "Mangalemiin",
+  "kysymys": "Kerro lisää: Mangalemiin"
+ },
+ {
+  "n": 13,
+  "kohta": "kohde:beratin-vanhakaupunki",
+  "kasite": "Bysantin",
+  "kysymys": "Kerro lisää: Bysantin"
+ },
+ {
+  "n": 14,
+  "kohta": "kohde:beratin-vanhakaupunki",
+  "kasite": "Theodosios II:n",
+  "kysymys": "Kerro lisää: Theodosios II:n"
+ },
+ {
+  "n": 15,
+  "kohta": "kohde:beratin-vanhakaupunki",
+  "kasite": "Kalaja",
+  "kysymys": "Kerro lisää: Kalaja"
+ },
+ {
+  "n": 16,
+  "kohta": "kohde:beratin-vanhakaupunki",
+  "kasite": "Mangalem",
+  "kysymys": "Kerro lisää: Mangalem"
+ },
+ {
+  "n": 17,
+  "kohta": "kohde:beratin-vanhakaupunki",
+  "kasite": "Gorica",
+  "kysymys": "Kerro lisää: Gorica"
+ },
+ {
+  "n": 18,
+  "kohta": "kohde:beratin-vanhakaupunki",
+  "kasite": "Kassandros",
+  "kysymys": "Kerro lisää: Kassandros"
+ },
+ {
+  "n": 19,
+  "kohta": "kohde:beratin-vanhakaupunki",
+  "kasite": "Antipatreia",
+  "kysymys": "Kerro lisää: Antipatreia"
+ },
+ {
+  "n": 20,
+  "kohta": "kohde:beratin-vanhakaupunki",
+  "kasite": "ottomaanikaudelta",
+  "kysymys": "Kerro lisää: ottomaanikaudelta"
+ },
+ {
+  "n": 21,
+  "kohta": "kohde:valbonan-laakso",
+  "kasite": "Albanian Alppeihin",
+  "kysymys": "Kerro lisää: Albanian Alppeihin"
+ },
+ {
+  "n": 22,
+  "kohta": "kohde:valbonan-laakso",
+  "kasite": "Prokletije",
+  "kysymys": "Kerro lisää: Prokletije"
+ },
+ {
+  "n": 23,
+  "kohta": "kohde:valbonan-laakso",
+  "kasite": "Maja Jezercën",
+  "kysymys": "Kerro lisää: Maja Jezercën"
+ },
+ {
+  "n": 24,
+  "kohta": "kohde:valbonan-laakso",
+  "kasite": "jäätikön",
+  "kysymys": "Kerro lisää: jäätikön"
+ },
+ {
+  "n": 25,
+  "kohta": "kohde:valbonan-laakso",
+  "kasite": "jääkauden",
+  "kysymys": "Kerro lisää: jääkauden"
+ },
+ {
+  "n": 26,
+  "kohta": "kohde:valbonan-laakso",
+  "kasite": "ruskeakarhuja",
+  "kysymys": "Kerro lisää: ruskeakarhuja"
+ },
+ {
+  "n": 27,
+  "kohta": "kohde:valbonan-laakso",
+  "kasite": "susia",
+  "kysymys": "Kerro lisää: susia"
+ },
+ {
+  "n": 28,
+  "kohta": "kohde:valbonan-laakso",
+  "kasite": "ilveksiä",
+  "kysymys": "Kerro lisää: ilveksiä"
+ },
+ {
+  "n": 29,
+  "kohta": "kohde:valbonan-laakso",
+  "kasite": "gemssejä",
+  "kysymys": "Kerro lisää: gemssejä"
+ },
+ {
+  "n": 30,
+  "kohta": "kohde:valbonan-laakso",
+  "kasite": "Kukësin",
+  "kysymys": "Kerro lisää: Kukësin"
+ },
+ {
+  "n": 31,
+  "kohta": "kohde:valbonan-laakso",
+  "kasite": "Valbonë",
+  "kysymys": "Kerro lisää: Valbonë"
+ },
+ {
+  "n": 32,
+  "kohta": "kohde:gjirokastern-vanhakaupunki",
+  "kasite": "Drinon",
+  "kysymys": "Kerro lisää: Drinon"
+ },
+ {
+  "n": 33,
+  "kohta": "kohde:gjirokastern-vanhakaupunki",
+  "kasite": "linnake",
+  "kysymys": "Kerro lisää: linnake"
+ },
+ {
+  "n": 34,
+  "kohta": "kohde:gjirokastern-vanhakaupunki",
+  "kasite": "Berat",
+  "kysymys": "Kerro lisää: Berat"
+ },
+ {
+  "n": 35,
+  "kohta": "kohde:gjirokastern-vanhakaupunki",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 36,
+  "kohta": "kohde:gjirokastern-vanhakaupunki",
+  "kasite": "Etelä-Albanian",
+  "kysymys": "Kerro lisää: Etelä-Albanian"
+ },
+ {
+  "n": 37,
+  "kohta": "kohde:gjirokastern-vanhakaupunki",
+  "kasite": "Etelä-Albaniassa",
+  "kysymys": "Kerro lisää: Etelä-Albaniassa"
+ },
+ {
+  "n": 38,
+  "kohta": "kohde:gjirokastern-vanhakaupunki",
+  "kasite": "Ottomaanien",
+  "kysymys": "Kerro lisää: Ottomaanien"
+ },
+ {
+  "n": 39,
+  "kohta": "kohde:gjirokastern-vanhakaupunki",
+  "kasite": "tornitalot",
+  "kysymys": "Kerro lisää: tornitalot"
+ },
+ {
+  "n": 40,
+  "kohta": "kohde:krujen-linna",
+  "kasite": "Skanderbeg",
+  "kysymys": "Kerro lisää: Skanderbeg"
+ },
+ {
+  "n": 41,
+  "kohta": "kohde:krujen-linna",
+  "kasite": "Krujë",
+  "kysymys": "Kerro lisää: Krujë"
+ },
+ {
+  "n": 42,
+  "kohta": "kohde:krujen-linna",
+  "kasite": "Mehmed II",
+  "kysymys": "Kerro lisää: Mehmed II"
+ },
+ {
+  "n": 43,
+  "kohta": "kohde:krujen-linna",
+  "kasite": "Skanderbegin",
+  "kysymys": "Kerro lisää: Skanderbegin"
+ },
+ {
+  "n": 44,
+  "kohta": "kohde:krujen-linna",
+  "kasite": "Skanderbegin kansallismuseo",
+  "kysymys": "Kerro lisää: Skanderbegin kansallismuseo"
+ },
+ {
+  "n": 45,
+  "kohta": "kohde:krujen-linna",
+  "kasite": "etnografinen museo",
+  "kysymys": "Kerro lisää: etnografinen museo"
+ },
+ {
+  "n": 46,
+  "kohta": "kohde:krujen-linna",
+  "kasite": "lekin",
+  "kysymys": "Kerro lisää: lekin"
+ },
+ {
+  "n": 47,
+  "kohta": "kohde:krujen-linna",
+  "kasite": "Murad II",
+  "kysymys": "Kerro lisää: Murad II"
+ },
+ {
+  "n": 48,
+  "kohta": "kohde:krujen-linna",
+  "kasite": "Edirneen",
+  "kysymys": "Kerro lisää: Edirneen"
+ },
+ {
+  "n": 49,
+  "kohta": "kohde:apollonia",
+  "kasite": "Gylax",
+  "kysymys": "Kerro lisää: Gylax"
+ },
+ {
+  "n": 50,
+  "kohta": "kohde:apollonia",
+  "kasite": "Korintista",
+  "kysymys": "Kerro lisää: Korintista"
+ },
+ {
+  "n": 51,
+  "kohta": "kohde:apollonia",
+  "kasite": "Adrianmeren",
+  "kysymys": "Kerro lisää: Adrianmeren"
+ },
+ {
+  "n": 52,
+  "kohta": "kohde:apollonia",
+  "kasite": "Augustus",
+  "kysymys": "Kerro lisää: Augustus"
+ },
+ {
+  "n": 53,
+  "kohta": "kohde:apollonia",
+  "kasite": "Caesarin",
+  "kysymys": "Kerro lisää: Caesarin"
+ },
+ {
+  "n": 54,
+  "kohta": "kohde:apollonia",
+  "kasite": "sedimenttiä",
+  "kysymys": "Kerro lisää: sedimenttiä"
+ },
+ {
+  "n": 55,
+  "kohta": "kohde:apollonia",
+  "kasite": "Apollonian",
+  "kysymys": "Kerro lisää: Apollonian"
+ },
+ {
+  "n": 56,
+  "kohta": "kohde:apollonia",
+  "kasite": "arkeologinen puisto",
+  "kysymys": "Kerro lisää: arkeologinen puisto"
+ },
+ {
+  "n": 57,
+  "kohta": "kohde:apollonia",
+  "kasite": "bouleuterion",
+  "kysymys": "Kerro lisää: bouleuterion"
+ },
+ {
+  "n": 58,
+  "kohta": "kohde:apollonia",
+  "kasite": "odeon",
+  "kysymys": "Kerro lisää: odeon"
+ },
+ {
+  "n": 59,
+  "kohta": "kohde:apollonia",
+  "kasite": "Aleksanteri Suuren",
+  "kysymys": "Kerro lisää: Aleksanteri Suuren"
+ },
+ {
+  "n": 60,
+  "kohta": "kohde:apollonia",
+  "kasite": "Rooman",
+  "kysymys": "Kerro lisää: Rooman"
+ },
+ {
+  "n": 61,
+  "kohta": "kohde:hahmotelma-butrint",
+  "kasite": "Korfun",
+  "kysymys": "Kerro lisää: Korfun"
+ },
+ {
+  "n": 62,
+  "kohta": "kohde:hahmotelma-butrint",
+  "kasite": "kylpylät",
+  "kysymys": "Kerro lisää: kylpylät"
+ },
+ {
+  "n": 63,
+  "kohta": "kohde:hahmotelma-butrint",
+  "kasite": "foorumi",
+  "kysymys": "Kerro lisää: foorumi"
+ },
+ {
+  "n": 64,
+  "kohta": "kohde:hahmotelma-butrint",
+  "kasite": "vesijohto",
+  "kysymys": "Kerro lisää: vesijohto"
+ },
+ {
+  "n": 65,
+  "kohta": "kohde:hahmotelma-butrint",
+  "kasite": "malariasuo",
+  "kysymys": "Kerro lisää: malariasuo"
+ },
+ {
+  "n": 66,
+  "kohta": "kohde:hahmotelma-butrint",
+  "kasite": "Luigi Maria Ugolini",
+  "kysymys": "Kerro lisää: Luigi Maria Ugolini"
+ },
+ {
+  "n": 67,
+  "kohta": "kohde:hahmotelma-butrint",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 68,
+  "kohta": "kohde:hahmotelma-butrint",
+  "kasite": "YK:n",
+  "kysymys": "Kerro lisää: YK:n"
+ },
+ {
+  "n": 69,
+  "kohta": "kohde:hahmotelma-butrint",
+  "kasite": "Anopheles",
+  "kysymys": "Kerro lisää: Anopheles"
+ },
+ {
+  "n": 70,
+  "kohta": "kohde:hahmotelma-butrint",
+  "kasite": "Plasmodium",
+  "kysymys": "Kerro lisää: Plasmodium"
+ },
+ {
+  "n": 71,
+  "kohta": "kohde:hahmotelma-butrint",
+  "kasite": "stratigrafiaa",
+  "kysymys": "Kerro lisää: stratigrafiaa"
+ },
+ {
+  "n": 72,
+  "kohta": "kohde:hahmotelma-butrint",
+  "kasite": "keramiikka",
+  "kysymys": "Kerro lisää: keramiikka"
+ },
+ {
+  "n": 73,
+  "kohta": "kohde:hahmotelma-butrint",
+  "kasite": "kolikot",
+  "kysymys": "Kerro lisää: kolikot"
+ }
+]
