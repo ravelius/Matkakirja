@@ -47,6 +47,8 @@ PT local_593b89a1-2514-4d74-b956-2a73db862382, Siirtoseppä local_b50bb32e-18e2-
 ## 2c. PT 11.0x
 - Kertojan luenta: omistaja "Ei vielä" → museo ensin ilman kertojaa, ei testiottoa. Ääntämisohjeet (Sisältökirjuri) liitetty LUENTASUUNNITELMA.md:hen.
 - #4337 Julkaisijalle vihreänä; PULU_PUUTTUVA_KURATOITU pysyy pois. Webin ikäkysely kysytty PT:ltä (ehdotus <dialog class="dialog"> -pohja).
+- Webin ikäkysely TEHTY: PR #4341 (e1c656444, haara pelikoodari-web-ikakysely samassa worktreessa), merge vasta #4337:n ja
+  workerin julkaisun jälkeen (web lähettää otsakkeen aina, vanha worker hylkää esilennossa). PT tietää.
 - Museon Soundly-haku ILLALLA näytön ollessa vapaa → käsittely → manifesti LS1:lle.
 - ISS-erä 1 valmis valintaan: huiput korjattu (RAJA=0.75, kasittele.py), ääniportti 40/0.
 
