@@ -41,3 +41,16 @@ Python-kuvatyökalut: `/Users/Shared/Claude/proto-3d/_tyo/venv-rembg/bin/python 
   jättää alueen pois porrastuksesta; maa_z painaa maan portaiden alle). Arkki `esikatselu/korttelit-v2-arkki.jpg`.
 - Kuvaskriptit (scratchpad, emissio): lahikuvat.py (6 suuntaa), portikko_kuva.py (Concorden suunta), arkki.py.
 - SEURAAVAKSI: LS2:n parit (ND v5f, Pariisi v2) → säädöt. Mahdollinen v3: LOD1/2-kevennys, tympanonin sävy, Banquen julkisivut (nyt lähes kaikki c).
+
+## JATKO 22.3x–22.6x (PT 22.1x jono: museo → Olavinlinna → vertailu; PT 22.3x: Olavinlinnan laiturikivet ensin)
+- **OLAVINLINNA v47e** (PT hyväksyi Blender-parin 22.5x; Siirtoseppä tekee pelikuvaparit laiturilta ja portilta ennen kuittausta):
+  (1) rantakivet v2 `_valmiit/olavinlinna-rantakivet-v2/` (LAHTEET; pari docs/raportit/kaappaukset/linnanrakentaja-olavinlinna-20261010/
+  rantakivet-v2-pari.jpg), asennettu molempien pakettien ymparisto/mallit/ (vanhat ennen-v47e/); (2) porttiaukon kivikasa = ranta-1499-täyttö
+  (Siirtosepän l1/l2), tasoitettu `olavinlinna-kavely-v1/lahde/ranta1499_portti.py` (lähtö ranta1499_ennen_portti.json), kavely.py →
+  v47e-tyo/ → v44/kavely (vanhat kavely/ennen-portti-v47e/), leivo_ranta_v25.zsh. Vienti: worktree wt/linnanrakentaja-linna-v45k (pohja v45j),
+  skripti scratchpad vie_v47e.zsh (setsid), PALA-tunnukset lokissa → Siirtosepälle + PT:lle.
+- **MUSEO v2g** `_valmiit/taidemuseo-alankomaat-v2g/` (LAHTEET "v2g"): 11 tyhjää seinää täytetty (LS2 22.2x), jalustat profiloitu +
+  kivi_hiekka.jpg (taidemuseo-runko/lahde/sali_blender.py, vanha sali_blender_v2f.py). Tuotanto aja_tuotanto.zsh → LS2:lle kun valmis.
+  LS2:n täysi läpipeluulista tulee junan 180 käännösvuoron jälkeen.
+- **Kesken jonossa:** vertailuportti Olavinlinnan nykyasusta (VHR 2 m, kaytto vain sisäinen; malli ilman georeferenssiä glb:ssä →
+  sijoitus selvitettävä, olavinlinna-blender-v44-nyky ei sisällä rakennus-sijoitettu.json:ia), raportti PT:lle.
