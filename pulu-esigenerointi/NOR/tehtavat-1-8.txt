@@ -1,0 +1,68 @@
+================ KOHTA 36 (nosto:ekofisk) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pohjanmereen porattiin yli kaksisataa tyhjää reikää — ja sitten yksi osui juuri ennen joulua
+Tietoruudun teksti: Norja oli 1960-luvulla Euroopan köyhempiä maita. Pohjanmereltä oli etsitty öljyä vuosia, ja koereikiä oli porattu yli kaksisataa ilman että yksikään olisi osunut. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Kenttä on Norjan sektorissa noin 320 kilometriä Stavangerista lounaaseen, keskellä avomerta, eikä sinne pääse kuin helikopterilla tai laivalla. Tuotanto alkoi jo 1971, aluksi suoraan tankkereihin neljästä merenpohjan kaivosta. Sittemmin paikalle on kasvanut kokonainen kaupunki: 29 lauttaa, jotka toimivat myös naapurikenttien solmukohtana, ja putki nimeltä Norpipe, jota pitkin öljy kulkee Englantiin Teessiden jalostamolle asti.
+
+Löytö olisi voinut valua nopeasti käsien läpi, mutta maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailma…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kaivo, joka muutti maan] 1969 — Norja oli 1960-luvulla Euroopan köyhempiä maita, ja Pohjanmereltä oli etsitty öljyä vuosia tuloksetta. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailman suurin valtiollinen sijoitusrahasto. Öljyn ansiosta Norjasta tuli rikas nopeasti, mutta se joutuu nyt miettimään, mitä tehdä kun öljy loppuu.
+- [Košice — kaupunkilehti / Luonto: Kylpylälle kaivettiin kaivo, ja maasta purkautui geysiiri] 1870 — Herľanyn kylässä, noin 20 kilometriä Košicesta koilliseen, porattiin vuonna 1870 kaivoa kivennäisvedelle. Yli 400 metrin syvyydestä löytyi hiilihapon kyllästämä vesikerros, ja kaivosta alkoi purkautua kylmää vettä useiden metrien korkeuteen — ilman minkäänlaista maanalaista kuumuutta, toisin kuin tavallisissa geysiireissä. Purkaus toistuu edelleen säännöllisin väliajoin, ja se on yksi harvoista maailman poraamalla syntyneistä kylmistä geysiireistä. Isoisän matkan aikaan kaivo on vasta muutaman vuoden ikäinen uteliaisuuden aihe, ei vielä nykyisenlainen nähtävyys.
+
+### 36.1
+KYSYMYS: Kuinka monta reikää porattiin ennen kuin osui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pohjanmereen porattiin yli kaksisataa tyhjää reikää — ja sitten yksi osui juuri ennen joulua
+Tietoruudun teksti: Norja oli 1960-luvulla Euroopan köyhempiä maita. Pohjanmereltä oli etsitty öljyä vuosia, ja koereikiä oli porattu yli kaksisataa ilman että yksikään olisi osunut. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Kenttä on Norjan sektorissa noin 320 kilometriä Stavangerista lounaaseen, keskellä avomerta, eikä sinne pääse kuin helikopterilla tai laivalla. Tuotanto alkoi jo 1971, aluksi suoraan tankkereihin neljästä merenpohjan kaivosta. Sittemmin paikalle on kasvanut kokonainen kaupunki: 29 lauttaa, jotka toimivat myös naapurikenttien solmukohtana, ja putki nimeltä Norpipe, jota pitkin öljy kulkee Englantiin Teessiden jalostamolle asti.
+
+Löytö olisi voinut valua nopeasti käsien läpi, mutta maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailma…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Luonto: Kylpylälle kaivettiin kaivo, ja maasta purkautui geysiiri] 1870 — Herľanyn kylässä, noin 20 kilometriä Košicesta koilliseen, porattiin vuonna 1870 kaivoa kivennäisvedelle. Yli 400 metrin syvyydestä löytyi hiilihapon kyllästämä vesikerros, ja kaivosta alkoi purkautua kylmää vettä useiden metrien korkeuteen — ilman minkäänlaista maanalaista kuumuutta, toisin kuin tavallisissa geysiireissä. Purkaus toistuu edelleen säännöllisin väliajoin, ja se on yksi harvoista maailman poraamalla syntyneistä kylmistä geysiireistä. Isoisän matkan aikaan kaivo on vasta muutaman vuoden ikäinen uteliaisuuden aihe, ei vielä nykyisenlainen nähtävyys.
+
+### 36.2
+KYSYMYS: Miksi öljytulot pantiin rahastoon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pohjanmereen porattiin yli kaksisataa tyhjää reikää — ja sitten yksi osui juuri ennen joulua
+Tietoruudun teksti: Norja oli 1960-luvulla Euroopan köyhempiä maita. Pohjanmereltä oli etsitty öljyä vuosia, ja koereikiä oli porattu yli kaksisataa ilman että yksikään olisi osunut. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Kenttä on Norjan sektorissa noin 320 kilometriä Stavangerista lounaaseen, keskellä avomerta, eikä sinne pääse kuin helikopterilla tai laivalla. Tuotanto alkoi jo 1971, aluksi suoraan tankkereihin neljästä merenpohjan kaivosta. Sittemmin paikalle on kasvanut kokonainen kaupunki: 29 lauttaa, jotka toimivat myös naapurikenttien solmukohtana, ja putki nimeltä Norpipe, jota pitkin öljy kulkee Englantiin Teessiden jalostamolle asti.
+
+Löytö olisi voinut valua nopeasti käsien läpi, mutta maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailma…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+
+### 36.3
+KYSYMYS: Mihin Ekofiskin öljy putkitetaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pohjanmereen porattiin yli kaksisataa tyhjää reikää — ja sitten yksi osui juuri ennen joulua
+Tietoruudun teksti: Norja oli 1960-luvulla Euroopan köyhempiä maita. Pohjanmereltä oli etsitty öljyä vuosia, ja koereikiä oli porattu yli kaksisataa ilman että yksikään olisi osunut. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Kenttä on Norjan sektorissa noin 320 kilometriä Stavangerista lounaaseen, keskellä avomerta, eikä sinne pääse kuin helikopterilla tai laivalla. Tuotanto alkoi jo 1971, aluksi suoraan tankkereihin neljästä merenpohjan kaivosta. Sittemmin paikalle on kasvanut kokonainen kaupunki: 29 lauttaa, jotka toimivat myös naapurikenttien solmukohtana, ja putki nimeltä Norpipe, jota pitkin öljy kulkee Englantiin Teessiden jalostamolle asti.
+
+Löytö olisi voinut valua nopeasti käsien läpi, mutta maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailma…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kaivo, joka muutti maan] 1969 — Norja oli 1960-luvulla Euroopan köyhempiä maita, ja Pohjanmereltä oli etsitty öljyä vuosia tuloksetta. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailman suurin valtiollinen sijoitusrahasto. Öljyn ansiosta Norjasta tuli rikas nopeasti, mutta se joutuu nyt miettimään, mitä tehdä kun öljy loppuu.
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI

@@ -1,0 +1,202 @@
+================ KOHTA 11 (kohde:flamsbana) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flåmsbana (tekniikka)
+Tietoruudun teksti: Flåmsbana on 20,2 kilometrin pituinen rautatie Myrdalin ja Flåmin välillä Aurlandissa Vestlandissa. Se on Bergenin radan haara, kulkee Flåmsdalenin laaksoa pitkin ja yhdistää pääradan Sognefjordiin; korkeusero on 866 metriä, ja radalla on kaksikymmentä tunnelia ja yksi silta. Suurin nousu on 5,5 prosenttia eli 1:18, mikä tekee siitä Euroopan jyrkimmän normaaliraiteisen rautatien, ja ylämäkeen saa ajaa 40 ja alamäkeen 30 kilometriä tunnissa. Rakentaminen alkoi vuonna 1924, rata avattiin 1940 ja sähköveto otettiin käyttöön 1944. Tavaraliikenne loppui 1992, ja halvat liput ja kalliit käyttökustannukset veivät radan lakkautuksen partaalle, kunnes Flåm Utvikling otti vuonna 1998 markkinoinnin ja lipunmyynnin hoitaakseen ja nosti hintoja rajusti — nykyään rata on Norjan kolmanneksi suosituin matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Rata, joka kiertää vuoren kaksin verroin pidemmäksi] 1854 — Semmeringin rata avattiin vuonna 1854, ja se oli Euroopan ensimmäinen normaaliraiteinen vuoristorautatie. Carl von Ghega johdatti kiskot Gloggnitzista Mürzzuschlagiin vuoren yli. Linnuntietä päätepisteiden väli on 21 kilometriä, mutta rataa on 42, koska nousu piti kiertää loivaksi. Ylin kohta on 898 metrissä. Matkalla on 14 tunnelia, 16 viaduktia ja yli sata holvattua kivisiltaa. Moni piti hanketta mahdottomana, koska kukaan ei tiennyt, jaksaisiko veturi nousta niin jyrkkää.
+- [Espanja — maalehti / Luonto: Kissa, joka melkein hävisi] Iberianilves syö melkein pelkkiä kaneja, ja kun kanitauti kaatoi saaliskannan 1900-luvun lopulla, ilves seurasi perässä. Vuonna 2002 niitä laskettiin koko maailmassa alle sata yksilöä — se oli maailman uhanalaisin kissaeläin. Pelastus tehtiin kolmella asialla: kanikantoja hoidettiin, ilveksiä kasvatettiin tarhoissa ja päästettiin luontoon, ja teille rakennettiin alikulkuja. Nyt niitä on yli kaksituhatta, ja laji siirrettiin luokasta "äärimmäisen uhanalainen" luokkaan "vaarantunut".
+
+### 11.1
+KYSYMYS: Kuinka jyrkkä rata on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flåmsbana (tekniikka)
+Tietoruudun teksti: Flåmsbana on 20,2 kilometrin pituinen rautatie Myrdalin ja Flåmin välillä Aurlandissa Vestlandissa. Se on Bergenin radan haara, kulkee Flåmsdalenin laaksoa pitkin ja yhdistää pääradan Sognefjordiin; korkeusero on 866 metriä, ja radalla on kaksikymmentä tunnelia ja yksi silta. Suurin nousu on 5,5 prosenttia eli 1:18, mikä tekee siitä Euroopan jyrkimmän normaaliraiteisen rautatien, ja ylämäkeen saa ajaa 40 ja alamäkeen 30 kilometriä tunnissa. Rakentaminen alkoi vuonna 1924, rata avattiin 1940 ja sähköveto otettiin käyttöön 1944. Tavaraliikenne loppui 1992, ja halvat liput ja kalliit käyttökustannukset veivät radan lakkautuksen partaalle, kunnes Flåm Utvikling otti vuonna 1998 markkinoinnin ja lipunmyynnin hoitaakseen ja nosti hintoja rajusti — nykyään rata on Norjan kolmanneksi suosituin matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Rata, joka kiertää vuoren kaksin verroin pidemmäksi] 1854 — Semmeringin rata avattiin vuonna 1854, ja se oli Euroopan ensimmäinen normaaliraiteinen vuoristorautatie. Carl von Ghega johdatti kiskot Gloggnitzista Mürzzuschlagiin vuoren yli. Linnuntietä päätepisteiden väli on 21 kilometriä, mutta rataa on 42, koska nousu piti kiertää loivaksi. Ylin kohta on 898 metrissä. Matkalla on 14 tunnelia, 16 viaduktia ja yli sata holvattua kivisiltaa. Moni piti hanketta mahdottomana, koska kukaan ei tiennyt, jaksaisiko veturi nousta niin jyrkkää.
+
+### 11.2
+KYSYMYS: Miksi rata melkein lakkautettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flåmsbana (tekniikka)
+Tietoruudun teksti: Flåmsbana on 20,2 kilometrin pituinen rautatie Myrdalin ja Flåmin välillä Aurlandissa Vestlandissa. Se on Bergenin radan haara, kulkee Flåmsdalenin laaksoa pitkin ja yhdistää pääradan Sognefjordiin; korkeusero on 866 metriä, ja radalla on kaksikymmentä tunnelia ja yksi silta. Suurin nousu on 5,5 prosenttia eli 1:18, mikä tekee siitä Euroopan jyrkimmän normaaliraiteisen rautatien, ja ylämäkeen saa ajaa 40 ja alamäkeen 30 kilometriä tunnissa. Rakentaminen alkoi vuonna 1924, rata avattiin 1940 ja sähköveto otettiin käyttöön 1944. Tavaraliikenne loppui 1992, ja halvat liput ja kalliit käyttökustannukset veivät radan lakkautuksen partaalle, kunnes Flåm Utvikling otti vuonna 1998 markkinoinnin ja lipunmyynnin hoitaakseen ja nosti hintoja rajusti — nykyään rata on Norjan kolmanneksi suosituin matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Luonto: Kissa, joka melkein hävisi] Iberianilves syö melkein pelkkiä kaneja, ja kun kanitauti kaatoi saaliskannan 1900-luvun lopulla, ilves seurasi perässä. Vuonna 2002 niitä laskettiin koko maailmassa alle sata yksilöä — se oli maailman uhanalaisin kissaeläin. Pelastus tehtiin kolmella asialla: kanikantoja hoidettiin, ilveksiä kasvatettiin tarhoissa ja päästettiin luontoon, ja teille rakennettiin alikulkuja. Nyt niitä on yli kaksituhatta, ja laji siirrettiin luokasta "äärimmäisen uhanalainen" luokkaan "vaarantunut".
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:eidsvoll) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eidsvollin rakennus (historia)
+Tietoruudun teksti: Eidsvollsbygningen on historiallinen kartanorakennus Eidsvollissa Akershusissa Norjassa. Siellä allekirjoitettiin Norjan perustuslaki 17. toukokuuta 1814, ja talo on nykyään valtion omistama kansallismonumentti ja museo. Rakennus valmistui vuonna 1770, ja sen pinta-ala on yli 2 000 neliömetriä; noin vuonna 1800 sen osti Carsten Anker, joka kunnosti kartanon ja asui siellä perheineen juuri allekirjoituksen aikaan. Anker ajautui konkurssiin 1822 ja omistus siirtyi brittiläisille velkojille, mutta runoilija Henrik Wergelandin johtama yksityisten kansalaisten ryhmä keräsi rahat ja osti talon puutarhoineen; kauppa vahvistui 1851, ja ryhmä lahjoitti kiinteistön Norjan valtiolle. Vuonna 2011 alkanut kunnostus palautti talon mahdollisimman tarkasti vuoden 1814 asuun, ja työ valmistui perustuslain 200-vuotisjuhlaan 2014.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montevideo — kohdekartta / Kohdekartta: Estévez-palatsi] 1874 Argentiinalainen yrittäjä ja sijoittaja Francisco Estévez tilasi talon 1873 ranskalaissyntyiseltä insinöörikapteenilta Édouard Manuel de Castelilta. Palatsi valmistui toukokuussa 1874 asuintaloksi korttelille, joka oli aiemmin ollut muurikaupungin ulkoraja. Sääntö vaati, että Plaza Independencian ympärillä julkisivun on oltava doorilainen, ja niin siitä tuli. Estévez ja hänen vaimonsa Matilde Nin Reyes asuivat toisessa kerroksessa, ja katutason siipi vuokrattiin Italian konsulaatille ja liikkeille. Estévezin konkurssin jälkeen talo siirtyi Banco de Londres y Río de la Platalle, ja valtio osti sen pankilta 1878 hintaan 130 000 Uruguayn pesoa. Presidentti Lorenzo Latorre teki palatsista …
+
+### 12.1
+KYSYMYS: Mitä Eidsvollissa tapahtui 17. toukokuuta 1814?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eidsvollin rakennus (historia)
+Tietoruudun teksti: Eidsvollsbygningen on historiallinen kartanorakennus Eidsvollissa Akershusissa Norjassa. Siellä allekirjoitettiin Norjan perustuslaki 17. toukokuuta 1814, ja talo on nykyään valtion omistama kansallismonumentti ja museo. Rakennus valmistui vuonna 1770, ja sen pinta-ala on yli 2 000 neliömetriä; noin vuonna 1800 sen osti Carsten Anker, joka kunnosti kartanon ja asui siellä perheineen juuri allekirjoituksen aikaan. Anker ajautui konkurssiin 1822 ja omistus siirtyi brittiläisille velkojille, mutta runoilija Henrik Wergelandin johtama yksityisten kansalaisten ryhmä keräsi rahat ja osti talon puutarhoineen; kauppa vahvistui 1851, ja ryhmä lahjoitti kiinteistön Norjan valtiolle. Vuonna 2011 alkanut kunnostus palautti talon mahdollisimman tarkasti vuoden 1814 asuun, ja työ valmistui perustuslain 200-vuotisjuhlaan 2014.
+
+### 12.2
+KYSYMYS: Kuka pelasti talon konkurssin jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eidsvollin rakennus (historia)
+Tietoruudun teksti: Eidsvollsbygningen on historiallinen kartanorakennus Eidsvollissa Akershusissa Norjassa. Siellä allekirjoitettiin Norjan perustuslaki 17. toukokuuta 1814, ja talo on nykyään valtion omistama kansallismonumentti ja museo. Rakennus valmistui vuonna 1770, ja sen pinta-ala on yli 2 000 neliömetriä; noin vuonna 1800 sen osti Carsten Anker, joka kunnosti kartanon ja asui siellä perheineen juuri allekirjoituksen aikaan. Anker ajautui konkurssiin 1822 ja omistus siirtyi brittiläisille velkojille, mutta runoilija Henrik Wergelandin johtama yksityisten kansalaisten ryhmä keräsi rahat ja osti talon puutarhoineen; kauppa vahvistui 1851, ja ryhmä lahjoitti kiinteistön Norjan valtiolle. Vuonna 2011 alkanut kunnostus palautti talon mahdollisimman tarkasti vuoden 1814 asuun, ja työ valmistui perustuslain 200-vuotisjuhlaan 2014.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montevideo — kohdekartta / Kohdekartta: Estévez-palatsi] 1874 Argentiinalainen yrittäjä ja sijoittaja Francisco Estévez tilasi talon 1873 ranskalaissyntyiseltä insinöörikapteenilta Édouard Manuel de Castelilta. Palatsi valmistui toukokuussa 1874 asuintaloksi korttelille, joka oli aiemmin ollut muurikaupungin ulkoraja. Sääntö vaati, että Plaza Independencian ympärillä julkisivun on oltava doorilainen, ja niin siitä tuli. Estévez ja hänen vaimonsa Matilde Nin Reyes asuivat toisessa kerroksessa, ja katutason siipi vuokrattiin Italian konsulaatille ja liikkeille. Estévezin konkurssin jälkeen talo siirtyi Banco de Londres y Río de la Platalle, ja valtio osti sen pankilta 1878 hintaan 130 000 Uruguayn pesoa. Presidentti Lorenzo Latorre teki palatsista …
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:kjerag) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kjerag (luonto · vuori)
+Tietoruudun teksti: Kjerag on 1 132 metriä korkea vuori Lysefjordin eteläreunalla Rogalandissa, ja sen pohjoispuolella jyrkänne putoaa 984 metriä lähes pystysuoraan fjordiin. Tunnetuin kohde on Kjeragbolten, noin viiden kuutiometrin kivenlohkare, joka on juuttunut kahden kallion väliin. Sen päälle voi kävellä ilman varusteita, vaikka alla on 241 metrin pudotus ja sen jälkeen vielä 735 metrin rinne fjordiin. Vaellus alkaa Øygardsstølenista ja kestää kumpaankin suuntaan 2,5–3 tuntia. Kallioseinämältä on hypätty base-hyppyjä vuodesta 1994.
+
+### 13.1
+KYSYMYS: Miten iso kivi on juuttunut kahden kallion väliin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kjerag (luonto · vuori)
+Tietoruudun teksti: Kjerag on 1 132 metriä korkea vuori Lysefjordin eteläreunalla Rogalandissa, ja sen pohjoispuolella jyrkänne putoaa 984 metriä lähes pystysuoraan fjordiin. Tunnetuin kohde on Kjeragbolten, noin viiden kuutiometrin kivenlohkare, joka on juuttunut kahden kallion väliin. Sen päälle voi kävellä ilman varusteita, vaikka alla on 241 metrin pudotus ja sen jälkeen vielä 735 metrin rinne fjordiin. Vaellus alkaa Øygardsstølenista ja kestää kumpaankin suuntaan 2,5–3 tuntia. Kallioseinämältä on hypätty base-hyppyjä vuodesta 1994.
+
+### 13.2
+KYSYMYS: Kuinka pitkä vaellus Kjeragboltenille on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kjerag (luonto · vuori)
+Tietoruudun teksti: Kjerag on 1 132 metriä korkea vuori Lysefjordin eteläreunalla Rogalandissa, ja sen pohjoispuolella jyrkänne putoaa 984 metriä lähes pystysuoraan fjordiin. Tunnetuin kohde on Kjeragbolten, noin viiden kuutiometrin kivenlohkare, joka on juuttunut kahden kallion väliin. Sen päälle voi kävellä ilman varusteita, vaikka alla on 241 metrin pudotus ja sen jälkeen vielä 735 metrin rinne fjordiin. Vaellus alkaa Øygardsstølenista ja kestää kumpaankin suuntaan 2,5–3 tuntia. Kallioseinämältä on hypätty base-hyppyjä vuodesta 1994.
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:lyngenin-alpit) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lyngenin Alpit (luonto · vuori)
+Tietoruudun teksti: Lyngenin Alpit on vuoristo Tromssan maakunnassa Pohjois-Norjassa, Tromssan kaupungista itään. Se on noin 90 kilometriä pitkä ja 15–20 kilometriä leveä, ja se ulottuu neljän kunnan alueelle. Vuoristoa rajaavat idässä Lyngenvuono ja lännessä Ullsfjord. Korkein huippu Jiehkkevárri kohoaa 1 834 metriin, ja alueella on 140 jäätikköä, joiden yhteispinta-ala on noin 141 neliökilometriä. Jäätikköjen ruokkima Blåvatnet-järvi erottuu kirkkaan turkoosista väristään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Zla Kolata, Montenegron korkein huippu] vuodesta 2009 — Zla Kolata kohoaa 2 534 metriin, ja se on Montenegron korkein vuori, vaikka koko vuoriston korkein huippu Maja Jezercë (2 694 m) on Albanian puolella. Se kuuluu Prokletijeen, jonka nimi tarkoittaa kirottuja, ja vuoriston Montenegron puolelle perustettiin kansallispuisto vuonna 2009. Puiston pinta-ala on noin 16 000 hehtaaria. Viimeisen jääkauden aikana laaksoja muovasivat kilometrien mittaiset jäätiköt, ja Ropojanan jäätikkö oli noin 12,5 kilometriä pitkä. Vuoristossa on noin 20 jäätikköjärveä, joista Hridsko jezero on vajaat 300 metriä pitkä.
+
+### 14.1
+KYSYMYS: Kuinka pitkä Lyngenin Alppien vuoristo on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lyngenin Alpit (luonto · vuori)
+Tietoruudun teksti: Lyngenin Alpit on vuoristo Tromssan maakunnassa Pohjois-Norjassa, Tromssan kaupungista itään. Se on noin 90 kilometriä pitkä ja 15–20 kilometriä leveä, ja se ulottuu neljän kunnan alueelle. Vuoristoa rajaavat idässä Lyngenvuono ja lännessä Ullsfjord. Korkein huippu Jiehkkevárri kohoaa 1 834 metriin, ja alueella on 140 jäätikköä, joiden yhteispinta-ala on noin 141 neliökilometriä. Jäätikköjen ruokkima Blåvatnet-järvi erottuu kirkkaan turkoosista väristään.
+
+### 14.2
+KYSYMYS: Mikä on vuoriston korkein huippu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lyngenin Alpit (luonto · vuori)
+Tietoruudun teksti: Lyngenin Alpit on vuoristo Tromssan maakunnassa Pohjois-Norjassa, Tromssan kaupungista itään. Se on noin 90 kilometriä pitkä ja 15–20 kilometriä leveä, ja se ulottuu neljän kunnan alueelle. Vuoristoa rajaavat idässä Lyngenvuono ja lännessä Ullsfjord. Korkein huippu Jiehkkevárri kohoaa 1 834 metriin, ja alueella on 140 jäätikköä, joiden yhteispinta-ala on noin 141 neliökilometriä. Jäätikköjen ruokkima Blåvatnet-järvi erottuu kirkkaan turkoosista väristään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Zla Kolata, Montenegron korkein huippu] vuodesta 2009 — Zla Kolata kohoaa 2 534 metriin, ja se on Montenegron korkein vuori, vaikka koko vuoriston korkein huippu Maja Jezercë (2 694 m) on Albanian puolella. Se kuuluu Prokletijeen, jonka nimi tarkoittaa kirottuja, ja vuoriston Montenegron puolelle perustettiin kansallispuisto vuonna 2009. Puiston pinta-ala on noin 16 000 hehtaaria. Viimeisen jääkauden aikana laaksoja muovasivat kilometrien mittaiset jäätiköt, ja Ropojanan jäätikkö oli noin 12,5 kilometriä pitkä. Vuoristossa on noin 20 jäätikköjärveä, joista Hridsko jezero on vajaat 300 metriä pitkä.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:hahmotelma-geirangerfjord) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geirangervuono (meri)
+Tietoruudun teksti: Geirangervuono on 15 kilometrin pituinen sivuhaara Sunnylvsvuonosta Länsi-Norjan Sunnmøressä, ja sen perukassa on pieni Geirangerin kylä. Vuonon jyrkät vuorenseinämät nousevat lähes suoraan vedestä, ja niiltä putoaa useita vesiputouksia, joista tunnetuimmat ovat Seitsemän sisarta ja niitä vastapäätä oleva Kosija. Rinteillä on useita nykyään autioituneita vuoristotiloja, kuten Skageflå ja Knivsflå, joihin pääsi ennen vain jyrkkiä polkuja tai venettä pitkin. Vuonna 2005 Geirangervuono liitettiin yhdessä Nærøyvuonon kanssa Unescon maailmanperintölistalle nimellä Länsi-Norjan vuonot. Vuonoa uhkaa myös Åkernesetin epävakaa vuorenrinne, jonka romahtaminen voisi aiheuttaa hyökyaallon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Luonto: Meri nousi laakson pohjalle] 2005 — Vuono syntyi jääkaudella: paksu jäätikkö hioi laaksosta U-kirjaimen muotoisen uoman kalliota myöten, ja kun jää suli, meri työntyi tyhjään laaksoon sisämaahan asti. Siksi vuonon seinät nousevat pystysuorina suoraan vedestä ja vettä on alla satoja metrejä. Geirangervuono otettiin maailmanperintöluetteloon vuonna 2005. Rinteillä on vanhoja vuoritiloja, joihin päästiin ennen vain veneellä ja köysitikkaita pitkin — lasten kerrotaan olleen köydessä kiinni, jotta he eivät putoaisi.
+
+### 15.1
+KYSYMYS: Miksi Åkernesetin epävakaa vuorenrinne on Geirangervuonon suurin uhka?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geirangervuono (meri)
+Tietoruudun teksti: Geirangervuono on 15 kilometrin pituinen sivuhaara Sunnylvsvuonosta Länsi-Norjan Sunnmøressä, ja sen perukassa on pieni Geirangerin kylä. Vuonon jyrkät vuorenseinämät nousevat lähes suoraan vedestä, ja niiltä putoaa useita vesiputouksia, joista tunnetuimmat ovat Seitsemän sisarta ja niitä vastapäätä oleva Kosija. Rinteillä on useita nykyään autioituneita vuoristotiloja, kuten Skageflå ja Knivsflå, joihin pääsi ennen vain jyrkkiä polkuja tai venettä pitkin. Vuonna 2005 Geirangervuono liitettiin yhdessä Nærøyvuonon kanssa Unescon maailmanperintölistalle nimellä Länsi-Norjan vuonot. Vuonoa uhkaa myös Åkernesetin epävakaa vuorenrinne, jonka romahtaminen voisi aiheuttaa hyökyaallon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Luonto: Meri nousi laakson pohjalle] 2005 — Vuono syntyi jääkaudella: paksu jäätikkö hioi laaksosta U-kirjaimen muotoisen uoman kalliota myöten, ja kun jää suli, meri työntyi tyhjään laaksoon sisämaahan asti. Siksi vuonon seinät nousevat pystysuorina suoraan vedestä ja vettä on alla satoja metrejä. Geirangervuono otettiin maailmanperintöluetteloon vuonna 2005. Rinteillä on vanhoja vuoritiloja, joihin päästiin ennen vain veneellä ja köysitikkaita pitkin — lasten kerrotaan olleen köydessä kiinni, jotta he eivät putoaisi.
+
+### 15.2
+KYSYMYS: Mitkä kaksi vesiputousta ovat kuuluisia siitä, että Kosija yrittää kosia sisaruksia vastapäätä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geirangervuono (meri)
+Tietoruudun teksti: Geirangervuono on 15 kilometrin pituinen sivuhaara Sunnylvsvuonosta Länsi-Norjan Sunnmøressä, ja sen perukassa on pieni Geirangerin kylä. Vuonon jyrkät vuorenseinämät nousevat lähes suoraan vedestä, ja niiltä putoaa useita vesiputouksia, joista tunnetuimmat ovat Seitsemän sisarta ja niitä vastapäätä oleva Kosija. Rinteillä on useita nykyään autioituneita vuoristotiloja, kuten Skageflå ja Knivsflå, joihin pääsi ennen vain jyrkkiä polkuja tai venettä pitkin. Vuonna 2005 Geirangervuono liitettiin yhdessä Nærøyvuonon kanssa Unescon maailmanperintölistalle nimellä Länsi-Norjan vuonot. Vuonoa uhkaa myös Åkernesetin epävakaa vuorenrinne, jonka romahtaminen voisi aiheuttaa hyökyaallon.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

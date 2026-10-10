@@ -1,0 +1,190 @@
+================ KOHTA 16 (kohde:hahmotelma-naeroyfjord) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nærøyvuono (meri)
+Tietoruudun teksti: Nærøyvuono on Aurlandsvuonon sivuhaara, joka puolestaan haarautuu Sognevuonosta, ja se on vain noin 17 kilometrin pituinen mutta kapeimmillaan vain noin 250 metriä leveä. Jyrkät vuorenrinteet nousevat lähes suoraan vedestä yli 1 700 metrin korkeuteen, ja Bakkan kylän eteläpuolella vuono kapenee alle 500 metriin, vaikka vastakkaisten huippujen väli on vain noin kolme kilometriä. Vuonon perukassa on Gudvangenin kylä, jonne Nærøydalselva-joki laskee. Poikkeuksellisen kylminä talvina, kuten 1920-luvulla ja vuonna 1962, vuono on jäätynyt niin pahasti, että laivaliikenne on jouduttu ohjaamaan jäänreunaa pitkin. Vuonna 2005 Nærøyvuono liitettiin yhdessä Geirangervuonon kanssa Unescon maailmanperintölistalle Länsi-Norjan vuonoina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kaupunkilehti / Musiikki: Neljä vuodenaikaa unohdettiin sadaksi vuodeksi] 1725 — Vivaldin tunnetuin teos, Neljä vuodenaikaa, julkaistiin 1725 osana kaksitoista viulukonserttoa sisältävää kokoelmaa. Kukin konsertto kuvaa yhtä vuodenaikaa säkeiden ohjaamana — ukkonen, jäätynyt maa, kesän helle — ja teos oli aikanaan suosittu kautta Euroopan. Vivaldin kuoltua köyhänä Wienissä 1741 hänen musiikkinsa unohtui lähes kokonaan yli sadaksi vuodeksi, kunnes 1900-luvulla löydetyt käsikirjoitukset toivat sen takaisin — isoisän matkan aikaan Vivaldi on jo unohdettu säveltäjä.
+
+### 16.1
+KYSYMYS: Miksi Nærøyvuono on joskus jäätynyt talvisin niin pahasti, ettei sillä ole voinut liikennöidä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nærøyvuono (meri)
+Tietoruudun teksti: Nærøyvuono on Aurlandsvuonon sivuhaara, joka puolestaan haarautuu Sognevuonosta, ja se on vain noin 17 kilometrin pituinen mutta kapeimmillaan vain noin 250 metriä leveä. Jyrkät vuorenrinteet nousevat lähes suoraan vedestä yli 1 700 metrin korkeuteen, ja Bakkan kylän eteläpuolella vuono kapenee alle 500 metriin, vaikka vastakkaisten huippujen väli on vain noin kolme kilometriä. Vuonon perukassa on Gudvangenin kylä, jonne Nærøydalselva-joki laskee. Poikkeuksellisen kylminä talvina, kuten 1920-luvulla ja vuonna 1962, vuono on jäätynyt niin pahasti, että laivaliikenne on jouduttu ohjaamaan jäänreunaa pitkin. Vuonna 2005 Nærøyvuono liitettiin yhdessä Geirangervuonon kanssa Unescon maailmanperintölistalle Länsi-Norjan vuonoina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kaupunkilehti / Musiikki: Neljä vuodenaikaa unohdettiin sadaksi vuodeksi] 1725 — Vivaldin tunnetuin teos, Neljä vuodenaikaa, julkaistiin 1725 osana kaksitoista viulukonserttoa sisältävää kokoelmaa. Kukin konsertto kuvaa yhtä vuodenaikaa säkeiden ohjaamana — ukkonen, jäätynyt maa, kesän helle — ja teos oli aikanaan suosittu kautta Euroopan. Vivaldin kuoltua köyhänä Wienissä 1741 hänen musiikkinsa unohtui lähes kokonaan yli sadaksi vuodeksi, kunnes 1900-luvulla löydetyt käsikirjoitukset toivat sen takaisin — isoisän matkan aikaan Vivaldi on jo unohdettu säveltäjä.
+
+### 16.2
+KYSYMYS: Mihin isompaan vuonoon Nærøyvuono ja sen kautta Aurlandsvuono lopulta liittyvät?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nærøyvuono (meri)
+Tietoruudun teksti: Nærøyvuono on Aurlandsvuonon sivuhaara, joka puolestaan haarautuu Sognevuonosta, ja se on vain noin 17 kilometrin pituinen mutta kapeimmillaan vain noin 250 metriä leveä. Jyrkät vuorenrinteet nousevat lähes suoraan vedestä yli 1 700 metrin korkeuteen, ja Bakkan kylän eteläpuolella vuono kapenee alle 500 metriin, vaikka vastakkaisten huippujen väli on vain noin kolme kilometriä. Vuonon perukassa on Gudvangenin kylä, jonne Nærøydalselva-joki laskee. Poikkeuksellisen kylminä talvina, kuten 1920-luvulla ja vuonna 1962, vuono on jäätynyt niin pahasti, että laivaliikenne on jouduttu ohjaamaan jäänreunaa pitkin. Vuonna 2005 Nærøyvuono liitettiin yhdessä Geirangervuonon kanssa Unescon maailmanperintölistalle Länsi-Norjan vuonoina.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:hahmotelma-lofoten) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lofootit (luonto · saari)
+Tietoruudun teksti: Lofootit on saaristo ja perinteinen maakunta Pohjois-Norjan Nordlandissa, tunnettu jylhistä vuorihuipuistaan, jotka kohoavat lähes suoraan merestä. Alueella on asuttu ainakin 11 000 vuotta, ja rautakauden maanviljelyn ja karjanpidon jäljet ulottuvat noin vuoteen 250 eaa. Vágar, nykyisen Kabelvågin tienoilla sijainnut kauppapaikka, oli Pohjois-Norjan ensimmäinen tunnettu kaupunkimainen asutus jo viikinkiajalla. Lofoottien talous on vuosisatoja nojannut talviseen turskanpyyntiin: kalat puhdistetaan ja ripustetaan telineisiin kuivumaan suolaamattomina, jolloin niistä tulee tørrfisk-nimistä kalkkikuivattua kalaa. Nimen Lofoten alkuperä on kiistanalainen: sen on arveltu tarkoittavan ilveksen jalkaa tai liittyvän revontuliin, sillä saaristo on nykyään myös talvisen revontulimatkailun kohde.
+
+### 17.1
+KYSYMYS: Miksi Lofoottien turska kuivataan telineillä ilman suolaa toisin kuin Kristiansundin klippfisk?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lofootit (luonto · saari)
+Tietoruudun teksti: Lofootit on saaristo ja perinteinen maakunta Pohjois-Norjan Nordlandissa, tunnettu jylhistä vuorihuipuistaan, jotka kohoavat lähes suoraan merestä. Alueella on asuttu ainakin 11 000 vuotta, ja rautakauden maanviljelyn ja karjanpidon jäljet ulottuvat noin vuoteen 250 eaa. Vágar, nykyisen Kabelvågin tienoilla sijainnut kauppapaikka, oli Pohjois-Norjan ensimmäinen tunnettu kaupunkimainen asutus jo viikinkiajalla. Lofoottien talous on vuosisatoja nojannut talviseen turskanpyyntiin: kalat puhdistetaan ja ripustetaan telineisiin kuivumaan suolaamattomina, jolloin niistä tulee tørrfisk-nimistä kalkkikuivattua kalaa. Nimen Lofoten alkuperä on kiistanalainen: sen on arveltu tarkoittavan ilveksen jalkaa tai liittyvän revontuliin, sillä saaristo on nykyään myös talvisen revontulimatkailun kohde.
+
+### 17.2
+KYSYMYS: Mikä Vágar oli, ja miksi sitä pidetään merkittävänä löytönä Pohjois-Norjan historiassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lofootit (luonto · saari)
+Tietoruudun teksti: Lofootit on saaristo ja perinteinen maakunta Pohjois-Norjan Nordlandissa, tunnettu jylhistä vuorihuipuistaan, jotka kohoavat lähes suoraan merestä. Alueella on asuttu ainakin 11 000 vuotta, ja rautakauden maanviljelyn ja karjanpidon jäljet ulottuvat noin vuoteen 250 eaa. Vágar, nykyisen Kabelvågin tienoilla sijainnut kauppapaikka, oli Pohjois-Norjan ensimmäinen tunnettu kaupunkimainen asutus jo viikinkiajalla. Lofoottien talous on vuosisatoja nojannut talviseen turskanpyyntiin: kalat puhdistetaan ja ripustetaan telineisiin kuivumaan suolaamattomina, jolloin niistä tulee tørrfisk-nimistä kalkkikuivattua kalaa. Nimen Lofoten alkuperä on kiistanalainen: sen on arveltu tarkoittavan ilveksen jalkaa tai liittyvän revontuliin, sillä saaristo on nykyään myös talvisen revontulimatkailun kohde.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:hahmotelma-saamelaiset) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saamelaiskäräjät (kulttuuri)
+Tietoruudun teksti: Saamelaiset ovat alkuperäiskansa, joka asuu perinteisesti Sápmin alueella Pohjois-Norjassa, Ruotsissa, Suomessa ja Venäjän Kuolan niemimaalla. Heidän elinkeinojaan ovat olleet muun muassa rannikkokalastus, turkismetsästys ja lampaanhoito, mutta tunnetuin niistä on puolipaimentolainen poronhoito, joka on yhä laillisesti varattu vain saamelaisille useilla Pohjoismaiden alueilla. Norjan saamelaiskäräjät eli Sámediggi perustettiin vasta vuonna 1989, kun kuningas Olav V avasi sen ensimmäisen istunnon Karasjoessa; sitä ennen saamelaisasioita hoiti vuodesta 1964 valtion nimittämä Norjan saamelaisneuvosto. Käräjien perustamista edelsi 1970–80-lukujen Altan kiista, jossa saamelaiset vastustivat voimalaitospadon rakentamista Mázen kylän tulva-alueelle. Nykyinen käräjätalo Karasjoessa valmistui vuonna 2000, ja kaupungin asukkaista noin 80 prosenttia puhuu saamea.
+
+### 18.1
+KYSYMYS: Mikä oli Altan kiista, ja miten se johti saamelaiskäräjien perustamiseen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saamelaiskäräjät (kulttuuri)
+Tietoruudun teksti: Saamelaiset ovat alkuperäiskansa, joka asuu perinteisesti Sápmin alueella Pohjois-Norjassa, Ruotsissa, Suomessa ja Venäjän Kuolan niemimaalla. Heidän elinkeinojaan ovat olleet muun muassa rannikkokalastus, turkismetsästys ja lampaanhoito, mutta tunnetuin niistä on puolipaimentolainen poronhoito, joka on yhä laillisesti varattu vain saamelaisille useilla Pohjoismaiden alueilla. Norjan saamelaiskäräjät eli Sámediggi perustettiin vasta vuonna 1989, kun kuningas Olav V avasi sen ensimmäisen istunnon Karasjoessa; sitä ennen saamelaisasioita hoiti vuodesta 1964 valtion nimittämä Norjan saamelaisneuvosto. Käräjien perustamista edelsi 1970–80-lukujen Altan kiista, jossa saamelaiset vastustivat voimalaitospadon rakentamista Mázen kylän tulva-alueelle. Nykyinen käräjätalo Karasjoessa valmistui vuonna 2000, ja kaupungin asukkaista noin 80 prosenttia puhuu saamea.
+
+### 18.2
+KYSYMYS: Miksi poronhoito on yhä laissa varattu vain saamelaisille monilla alueilla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saamelaiskäräjät (kulttuuri)
+Tietoruudun teksti: Saamelaiset ovat alkuperäiskansa, joka asuu perinteisesti Sápmin alueella Pohjois-Norjassa, Ruotsissa, Suomessa ja Venäjän Kuolan niemimaalla. Heidän elinkeinojaan ovat olleet muun muassa rannikkokalastus, turkismetsästys ja lampaanhoito, mutta tunnetuin niistä on puolipaimentolainen poronhoito, joka on yhä laillisesti varattu vain saamelaisille useilla Pohjoismaiden alueilla. Norjan saamelaiskäräjät eli Sámediggi perustettiin vasta vuonna 1989, kun kuningas Olav V avasi sen ensimmäisen istunnon Karasjoessa; sitä ennen saamelaisasioita hoiti vuodesta 1964 valtion nimittämä Norjan saamelaisneuvosto. Käräjien perustamista edelsi 1970–80-lukujen Altan kiista, jossa saamelaiset vastustivat voimalaitospadon rakentamista Mázen kylän tulva-alueelle. Nykyinen käräjätalo Karasjoessa valmistui vuonna 2000, ja kaupungin asukkaista noin 80 prosenttia puhuu saamea.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:hahmotelma-gokstad) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gokstadin laiva (historia)
+Tietoruudun teksti: Gokstadin laiva on 800-luvulta peräisin oleva viikinkiajan pitkälaiva, joka löytyi Gokstadhaugen-hautakummusta Sandefjordin Sandarista vuonna 1880. Tilan omistajan pojat kaivoivat sattumalta esiin laivan keulan, ja Muinaismuistoyhdistyksen puheenjohtaja Nicolay Nicolaysen johti varsinaisen kaivauksen samana vuonna. Laiva on 23,8 metriä pitkä ja 5,1 metriä leveä, rakennettu limisaumaisesti tammesta, ja se on Norjan suurin säilynyt viikinkilaiva. Laiva oli tarkoitettu sekä sotaan, kauppaan että ihmisten ja tavaran kuljetukseen, ja sitä ohjattiin perässä olevalla sivuperäsimellä. Nykyään laiva on esillä Oslon viikinkilaivamuseossa, jonne se siirrettiin löytöpaikaltaan Sandefjordin lähistöltä.
+
+### 19.1
+KYSYMYS: Kuka johti Gokstadin laivan kaivauksen, ja mihin yhdistykseen hän kuului?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gokstadin laiva (historia)
+Tietoruudun teksti: Gokstadin laiva on 800-luvulta peräisin oleva viikinkiajan pitkälaiva, joka löytyi Gokstadhaugen-hautakummusta Sandefjordin Sandarista vuonna 1880. Tilan omistajan pojat kaivoivat sattumalta esiin laivan keulan, ja Muinaismuistoyhdistyksen puheenjohtaja Nicolay Nicolaysen johti varsinaisen kaivauksen samana vuonna. Laiva on 23,8 metriä pitkä ja 5,1 metriä leveä, rakennettu limisaumaisesti tammesta, ja se on Norjan suurin säilynyt viikinkilaiva. Laiva oli tarkoitettu sekä sotaan, kauppaan että ihmisten ja tavaran kuljetukseen, ja sitä ohjattiin perässä olevalla sivuperäsimellä. Nykyään laiva on esillä Oslon viikinkilaivamuseossa, jonne se siirrettiin löytöpaikaltaan Sandefjordin lähistöltä.
+
+### 19.2
+KYSYMYS: Mihin kolmeen tarkoitukseen Gokstadin laivaa käytettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gokstadin laiva (historia)
+Tietoruudun teksti: Gokstadin laiva on 800-luvulta peräisin oleva viikinkiajan pitkälaiva, joka löytyi Gokstadhaugen-hautakummusta Sandefjordin Sandarista vuonna 1880. Tilan omistajan pojat kaivoivat sattumalta esiin laivan keulan, ja Muinaismuistoyhdistyksen puheenjohtaja Nicolay Nicolaysen johti varsinaisen kaivauksen samana vuonna. Laiva on 23,8 metriä pitkä ja 5,1 metriä leveä, rakennettu limisaumaisesti tammesta, ja se on Norjan suurin säilynyt viikinkilaiva. Laiva oli tarkoitettu sekä sotaan, kauppaan että ihmisten ja tavaran kuljetukseen, ja sitä ohjattiin perässä olevalla sivuperäsimellä. Nykyään laiva on esillä Oslon viikinkilaivamuseossa, jonne se siirrettiin löytöpaikaltaan Sandefjordin lähistöltä.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-borgund) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borgundin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Borgundin sauvakirkko Lærdalissa rakennettiin noin vuosina 1180–1250, ja se toimi Borgundin kylän seurakuntakirkkona lähes 700 vuotta. Vuonna 1868 sen kirkolliset tehtävät siirrettiin viereen rakennettuun uuteen Borgundin kirkkoon, ja vanha sauvakirkko muutettiin museoksi. Se on ainoa Norjan sauvakirkoista, jonka yhteydessä on säilynyt erillinen sauvarakenteinen kellotapuli. Räystäillä kohoaa neljä veistettyä lohikäärmeenpäätä, joiden on arveltu karkottavan pahoja henkiä. Muinaismuistoyhdistys osti kirkon vuonna 1877, ja arkkitehti Christian Christie johti 1870-luvun alun kunnostuksen, jossa myöhemmät lisäykset poistettiin kirkon palauttamiseksi lähemmäs keskiaikaista asuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kirkko, joka seisoo tolppien varassa] 1180 — Sauvakirkko on rakennettu pystytolppien varaan, ja seinälaudat seisovat pystyssä maata koskematta — siksi puu ei lahoa. Borgundin kirkko valmistui noin vuonna 1180 ja on säilynyt lähes muuttumattomana. Keskiajalla kirkkoja oli yli tuhat, mutta nyt niitä on jäljellä 28. Katonharjoilla kaartuu lohikäärmeenpäitä samaan tapaan kuin viikinkilaivojen keulassa: kristillinen kirkko sai koristeekseen vanhemman uskon hahmot. Puu on suojattu tervaamalla, ja siitä tulee sen musta väri.
+- [Kairo — kaupunkilehti / Historia: Kaupunki alkoi teltasta] Kairon vanhin kaupunginosa syntyi telttaleiristä. Arabijoukkojen komentaja Amr ibn al-As jätti oman telttansa purkamatta Niilin itärannalle vuonna 641 — tarinan mukaan siksi, että kyyhky oli muninut siihen. Leiristä kasvoi al-Fustat, ja sen keskelle nousi vuonna 642 Egyptin ensimmäinen moskeija: matala vaja, jonka pylväinä olivat halkaistut palmunrungot ja lattiana sora. Fustat oli maan pääkaupunki noin viisisataa vuotta. Ensimmäisestä moskeijasta ei ole jäljellä mitään: sali on rakennettu uudelleen kerta toisensa jälkeen.
+
+### 20.1
+KYSYMYS: Miksi Borgundin sauvakirkon räystäillä on lohikäärmeenpäitä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borgundin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Borgundin sauvakirkko Lærdalissa rakennettiin noin vuosina 1180–1250, ja se toimi Borgundin kylän seurakuntakirkkona lähes 700 vuotta. Vuonna 1868 sen kirkolliset tehtävät siirrettiin viereen rakennettuun uuteen Borgundin kirkkoon, ja vanha sauvakirkko muutettiin museoksi. Se on ainoa Norjan sauvakirkoista, jonka yhteydessä on säilynyt erillinen sauvarakenteinen kellotapuli. Räystäillä kohoaa neljä veistettyä lohikäärmeenpäätä, joiden on arveltu karkottavan pahoja henkiä. Muinaismuistoyhdistys osti kirkon vuonna 1877, ja arkkitehti Christian Christie johti 1870-luvun alun kunnostuksen, jossa myöhemmät lisäykset poistettiin kirkon palauttamiseksi lähemmäs keskiaikaista asuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kirkko, joka seisoo tolppien varassa] 1180 — Sauvakirkko on rakennettu pystytolppien varaan, ja seinälaudat seisovat pystyssä maata koskematta — siksi puu ei lahoa. Borgundin kirkko valmistui noin vuonna 1180 ja on säilynyt lähes muuttumattomana. Keskiajalla kirkkoja oli yli tuhat, mutta nyt niitä on jäljellä 28. Katonharjoilla kaartuu lohikäärmeenpäitä samaan tapaan kuin viikinkilaivojen keulassa: kristillinen kirkko sai koristeekseen vanhemman uskon hahmot. Puu on suojattu tervaamalla, ja siitä tulee sen musta väri.
+
+### 20.2
+KYSYMYS: Mitä kirkolle tapahtui vuonna 1868, ja miksi se silti säilyi purkamatta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borgundin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Borgundin sauvakirkko Lærdalissa rakennettiin noin vuosina 1180–1250, ja se toimi Borgundin kylän seurakuntakirkkona lähes 700 vuotta. Vuonna 1868 sen kirkolliset tehtävät siirrettiin viereen rakennettuun uuteen Borgundin kirkkoon, ja vanha sauvakirkko muutettiin museoksi. Se on ainoa Norjan sauvakirkoista, jonka yhteydessä on säilynyt erillinen sauvarakenteinen kellotapuli. Räystäillä kohoaa neljä veistettyä lohikäärmeenpäätä, joiden on arveltu karkottavan pahoja henkiä. Muinaismuistoyhdistys osti kirkon vuonna 1877, ja arkkitehti Christian Christie johti 1870-luvun alun kunnostuksen, jossa myöhemmät lisäykset poistettiin kirkon palauttamiseksi lähemmäs keskiaikaista asuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kairo — kaupunkilehti / Historia: Kaupunki alkoi teltasta] Kairon vanhin kaupunginosa syntyi telttaleiristä. Arabijoukkojen komentaja Amr ibn al-As jätti oman telttansa purkamatta Niilin itärannalle vuonna 641 — tarinan mukaan siksi, että kyyhky oli muninut siihen. Leiristä kasvoi al-Fustat, ja sen keskelle nousi vuonna 642 Egyptin ensimmäinen moskeija: matala vaja, jonka pylväinä olivat halkaistut palmunrungot ja lattiana sora. Fustat oli maan pääkaupunki noin viisisataa vuotta. Ensimmäisestä moskeijasta ei ole jäljellä mitään: sali on rakennettu uudelleen kerta toisensa jälkeen.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

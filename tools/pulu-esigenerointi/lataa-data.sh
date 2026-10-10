@@ -3,12 +3,13 @@
 # Käyttö (repon juuresta): sh tools/pulu-esigenerointi/lataa-data.sh [iso3 pienellä, oletus fra]
 set -e
 M=${1:-fra}
+V=${SISALTO_VERSIO:-v625}
 D=pulu-esigenerointi/data
 mkdir -p "$D"
 for k in karttavalot takynostot kaupungit kaupunkilehdet maalehdet nahtavyydet kohdekartat fokusvirrat maat; do
-  curl -sSf -o "$D/$k.json" "https://media.matkakirja.app/sisalto/1/v625/kokoelmat/$k.json"
+  curl -sSf -o "$D/$k.json" "https://media.matkakirja.app/sisalto/1/$V/kokoelmat/$k.json"
 done
 for m in fokuskohteet maastokohteet hahmotelma; do
-  curl -sSf -o "$D/$m-$M.json" "https://media.matkakirja.app/sisalto/1/v625/moduulit/js/packs/$m-$M.json" || rm -f "$D/$m-$M.json"
+  curl -sSf -o "$D/$m-$M.json" "https://media.matkakirja.app/sisalto/1/$V/moduulit/js/packs/$m-$M.json" || rm -f "$D/$m-$M.json"
 done
 ls -la "$D"

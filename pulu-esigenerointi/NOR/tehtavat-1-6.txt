@@ -1,0 +1,193 @@
+================ KOHTA 26 (kohde:hahmotelma-preikestolen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Preikestolen (luonto · vuori)
+Tietoruudun teksti: Preikestolen on jyrkkä kalliotasanne Rogalannin Strandin kunnassa, joka kohoaa 604 metriä Lysevuonon yläpuolelle ja jonka lakitasanne on vain noin 25 kertaa 25 metriä. Paikan vanha paikallinen nimi oli Hyvlatonnå eli höylän hammas, ja nimi Prekestolen otettiin käyttöön vasta noin vuonna 1900, kun Stavangerin retkeilyseura halusi markkinoida paikkaa vaelluskohteena. Kalliolle ei ole koskaan asennettu aitoja tai muita turvalaitteita, koska viranomaiset ovat katsoneet niiden pilaavan maiseman. Vuonna 2024 kohteessa kävi jo 300 000 matkailijaa, ja polkua parannettiin vuonna 2013 nepalilaisten sherpojen voimin. Nykyään Preikestolen on myös suosittu BASE-hyppääjien pudotuspaikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yhdysvallat — maalehti / Tiede ja keksinnöt: Hissi, joka ei enää pudonnut] 1854 — Ennen Elisha Otisia hissi oli kori köyden varassa: kun nostoköysi petti, kori putosi pohjaan asti. Yonkersilaisen tehtaan tavarahissiä varten Otis keksi turvajarrun, joka pysäyttää korin itsestään heti kun köyden veto lakkaa. Vuonna 1854 hän esitteli sen New Yorkin Crystal Palace -näyttelyssä esityksessä, joka näytti yleisön silmissä hengenvaaralliselta: keksijä seisoi itse korkealla nostetun tason päällä. Ensimmäinen matkustajakäyttöön asennettu turvahissi otettiin käyttöön newyorkilaisessa tavaratalossa 23. maaliskuuta 1857.
+- [Havaiji — kaupunkilehti / Tulivuoret ja Pele: Diamond Head – sammunut tuhkakartio] Oahun saarella Honolulun kupeessa kohoava Diamond Head, havaijiksi Lēʻahi, syntyi yhdessä ainoassa räjähtävässä purkauksessa noin 300 000 vuotta sitten, kun nouseva magma kohtasi merivettä ja pirstoi kiven hienoksi tuhkaksi. Näin syntyi laaja, matala tuffikartio, jonka läpimitta on lähes 1,2 kilometriä. 1800-luvun brittiläiset merimiehet luulivat kraatterin seinämissä kimaltavia kalsiittikiteitä timanteiksi ja antoivat vuorelle englanninkielisen nimensä, vaikka aitoja jalokiviä paikalta ei koskaan löytynyt. Nykyään sammunut kraatteri kohoaa keskellä tiheästi asuttua Honolulua, ja sen reunalta avautuu näkymä koko kaupunkiin ja valtamerelle.
+
+### 26.1
+KYSYMYS: Mikä oli Preikestolenin vanha paikallinen nimi, ja mitä se tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Preikestolen (luonto · vuori)
+Tietoruudun teksti: Preikestolen on jyrkkä kalliotasanne Rogalannin Strandin kunnassa, joka kohoaa 604 metriä Lysevuonon yläpuolelle ja jonka lakitasanne on vain noin 25 kertaa 25 metriä. Paikan vanha paikallinen nimi oli Hyvlatonnå eli höylän hammas, ja nimi Prekestolen otettiin käyttöön vasta noin vuonna 1900, kun Stavangerin retkeilyseura halusi markkinoida paikkaa vaelluskohteena. Kalliolle ei ole koskaan asennettu aitoja tai muita turvalaitteita, koska viranomaiset ovat katsoneet niiden pilaavan maiseman. Vuonna 2024 kohteessa kävi jo 300 000 matkailijaa, ja polkua parannettiin vuonna 2013 nepalilaisten sherpojen voimin. Nykyään Preikestolen on myös suosittu BASE-hyppääjien pudotuspaikka.
+
+### 26.2
+KYSYMYS: Miksi kalliolle ei ole asennettu turva-aitoja?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Preikestolen (luonto · vuori)
+Tietoruudun teksti: Preikestolen on jyrkkä kalliotasanne Rogalannin Strandin kunnassa, joka kohoaa 604 metriä Lysevuonon yläpuolelle ja jonka lakitasanne on vain noin 25 kertaa 25 metriä. Paikan vanha paikallinen nimi oli Hyvlatonnå eli höylän hammas, ja nimi Prekestolen otettiin käyttöön vasta noin vuonna 1900, kun Stavangerin retkeilyseura halusi markkinoida paikkaa vaelluskohteena. Kalliolle ei ole koskaan asennettu aitoja tai muita turvalaitteita, koska viranomaiset ovat katsoneet niiden pilaavan maiseman. Vuonna 2024 kohteessa kävi jo 300 000 matkailijaa, ja polkua parannettiin vuonna 2013 nepalilaisten sherpojen voimin. Nykyään Preikestolen on myös suosittu BASE-hyppääjien pudotuspaikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yhdysvallat — maalehti / Tiede ja keksinnöt: Hissi, joka ei enää pudonnut] 1854 — Ennen Elisha Otisia hissi oli kori köyden varassa: kun nostoköysi petti, kori putosi pohjaan asti. Yonkersilaisen tehtaan tavarahissiä varten Otis keksi turvajarrun, joka pysäyttää korin itsestään heti kun köyden veto lakkaa. Vuonna 1854 hän esitteli sen New Yorkin Crystal Palace -näyttelyssä esityksessä, joka näytti yleisön silmissä hengenvaaralliselta: keksijä seisoi itse korkealla nostetun tason päällä. Ensimmäinen matkustajakäyttöön asennettu turvahissi otettiin käyttöön newyorkilaisessa tavaratalossa 23. maaliskuuta 1857.
+- [Havaiji — kaupunkilehti / Tulivuoret ja Pele: Diamond Head – sammunut tuhkakartio] Oahun saarella Honolulun kupeessa kohoava Diamond Head, havaijiksi Lēʻahi, syntyi yhdessä ainoassa räjähtävässä purkauksessa noin 300 000 vuotta sitten, kun nouseva magma kohtasi merivettä ja pirstoi kiven hienoksi tuhkaksi. Näin syntyi laaja, matala tuffikartio, jonka läpimitta on lähes 1,2 kilometriä. 1800-luvun brittiläiset merimiehet luulivat kraatterin seinämissä kimaltavia kalsiittikiteitä timanteiksi ja antoivat vuorelle englanninkielisen nimensä, vaikka aitoja jalokiviä paikalta ei koskaan löytynyt. Nykyään sammunut kraatteri kohoaa keskellä tiheästi asuttua Honolulua, ja sen reunalta avautuu näkymä koko kaupunkiin ja valtamerelle.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-sognefjord) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sognevuono (meri)
+Tietoruudun teksti: Sognevuono eli vuonojen kuningas on Norjan pisin ja syvin vuono, joka ulottuu 205 kilometriä sisämaahan Skjoldenin kylään Lusterin kunnassa. Sen syvin kohta on 1 308 metriä merenpinnan alapuolella, ja nimen on arveltu juontuvan vanhasta sanasta, joka viittaa vuonon suulla tuntuvaan voimakkaaseen vuorovesivirtaukseen. Vuono kulkee kymmenien kuntien halki, ja sen sisäosan yläpuolella kohoaa Jostedalsbreen, mannereurooppalaisen alueen suurin jäätikkö. Idässä sijaitseva Hurrungane-vuoristo nousee jopa 2 400 metriin. Kapea Nærøyvuono on yksi Sognevuonon lukuisista sivuhaaroista, ja koko järjestelmän tilavuus on noin 500 kuutiokilometriä.
+
+### 27.1
+KYSYMYS: Mistä Sognevuonon nimen arvellaan juontuvan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sognevuono (meri)
+Tietoruudun teksti: Sognevuono eli vuonojen kuningas on Norjan pisin ja syvin vuono, joka ulottuu 205 kilometriä sisämaahan Skjoldenin kylään Lusterin kunnassa. Sen syvin kohta on 1 308 metriä merenpinnan alapuolella, ja nimen on arveltu juontuvan vanhasta sanasta, joka viittaa vuonon suulla tuntuvaan voimakkaaseen vuorovesivirtaukseen. Vuono kulkee kymmenien kuntien halki, ja sen sisäosan yläpuolella kohoaa Jostedalsbreen, mannereurooppalaisen alueen suurin jäätikkö. Idässä sijaitseva Hurrungane-vuoristo nousee jopa 2 400 metriin. Kapea Nærøyvuono on yksi Sognevuonon lukuisista sivuhaaroista, ja koko järjestelmän tilavuus on noin 500 kuutiokilometriä.
+
+### 27.2
+KYSYMYS: Mikä jäätikkö kohoaa Sognevuonon sisäosan yläpuolella, ja miksi se on merkittävä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sognevuono (meri)
+Tietoruudun teksti: Sognevuono eli vuonojen kuningas on Norjan pisin ja syvin vuono, joka ulottuu 205 kilometriä sisämaahan Skjoldenin kylään Lusterin kunnassa. Sen syvin kohta on 1 308 metriä merenpinnan alapuolella, ja nimen on arveltu juontuvan vanhasta sanasta, joka viittaa vuonon suulla tuntuvaan voimakkaaseen vuorovesivirtaukseen. Vuono kulkee kymmenien kuntien halki, ja sen sisäosan yläpuolella kohoaa Jostedalsbreen, mannereurooppalaisen alueen suurin jäätikkö. Idässä sijaitseva Hurrungane-vuoristo nousee jopa 2 400 metriin. Kapea Nærøyvuono on yksi Sognevuonon lukuisista sivuhaaroista, ja koko järjestelmän tilavuus on noin 500 kuutiokilometriä.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-oljemuseo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjan öljymuseo (tekniikka)
+Tietoruudun teksti: Norjan öljymuseo eli Norsk Oljemuseum Stavangerissa avattiin vuonna 1999, ja sen arkkitehtuuri jäljittelee merenpuolelta katsottuna pientä öljynporauslauttaa. Museo esittelee Norjan öljyhistoriaa 1960-luvun puolivälistä alkaen: ensimmäisistä Pohjanmeren porauslautoista teräs- ja betonilauttojen kautta nykyaikaisiin tuotantolaivoihin ja merenpohjan järjestelmiin. Stavangerista tuli Norjan öljypääkaupunki, kun Phillips Petroleum löysi läheltä Ekofiskin kentän vuonna 1969 ja öljy alkoi virrata suoraan tankkereihin jo 1971. Museorakennus on noin 5 000 neliömetrin kokoinen ja sijaitsee näyttävällä paikalla Stavangerin satamassa. Se on tehnyt harvinaisesta teollisuushistoriasta suositun matkailukohteen keskellä vanhaa kalastuskaupunkia.
+
+### 28.1
+KYSYMYS: Miksi Norjan öljymuseon rakennus muistuttaa merenpuolelta katsottuna porauslauttaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjan öljymuseo (tekniikka)
+Tietoruudun teksti: Norjan öljymuseo eli Norsk Oljemuseum Stavangerissa avattiin vuonna 1999, ja sen arkkitehtuuri jäljittelee merenpuolelta katsottuna pientä öljynporauslauttaa. Museo esittelee Norjan öljyhistoriaa 1960-luvun puolivälistä alkaen: ensimmäisistä Pohjanmeren porauslautoista teräs- ja betonilauttojen kautta nykyaikaisiin tuotantolaivoihin ja merenpohjan järjestelmiin. Stavangerista tuli Norjan öljypääkaupunki, kun Phillips Petroleum löysi läheltä Ekofiskin kentän vuonna 1969 ja öljy alkoi virrata suoraan tankkereihin jo 1971. Museorakennus on noin 5 000 neliömetrin kokoinen ja sijaitsee näyttävällä paikalla Stavangerin satamassa. Se on tehnyt harvinaisesta teollisuushistoriasta suositun matkailukohteen keskellä vanhaa kalastuskaupunkia.
+
+### 28.2
+KYSYMYS: Mikä teki Stavangerista Norjan öljypääkaupungin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjan öljymuseo (tekniikka)
+Tietoruudun teksti: Norjan öljymuseo eli Norsk Oljemuseum Stavangerissa avattiin vuonna 1999, ja sen arkkitehtuuri jäljittelee merenpuolelta katsottuna pientä öljynporauslauttaa. Museo esittelee Norjan öljyhistoriaa 1960-luvun puolivälistä alkaen: ensimmäisistä Pohjanmeren porauslautoista teräs- ja betonilauttojen kautta nykyaikaisiin tuotantolaivoihin ja merenpohjan järjestelmiin. Stavangerista tuli Norjan öljypääkaupunki, kun Phillips Petroleum löysi läheltä Ekofiskin kentän vuonna 1969 ja öljy alkoi virrata suoraan tankkereihin jo 1971. Museorakennus on noin 5 000 neliömetrin kokoinen ja sijaitsee näyttävällä paikalla Stavangerin satamassa. Se on tehnyt harvinaisesta teollisuushistoriasta suositun matkailukohteen keskellä vanhaa kalastuskaupunkia.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-voss) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voss ja smalahove (ruoka)
+Tietoruudun teksti: Voss on kunta ja perinteinen maakunta Länsi-Norjassa Vangsvatnet-järven rannalla, ja sen hallintokeskus on Vossevangenin kylä. Vossin seutu tunnetaan smalahove-ruoasta, poltetusta, suolatusta ja savustetusta lampaanpäästä, jota keitetään tai höyrytetään kolmisen tuntia ja tarjoillaan lanttumuusin, perunoiden ja akvaviitin kanssa. Ruoka oli alun perin köyhien joulua edeltävää ruokaa, mutta nykyään se houkuttelee matkailijoita kokeilemaan sitä nimenomaan erikoisena ja rohkeana elämyksenä. Voss-kunta jaettiin vuonna 1868 pohjoiseen Vossestrandiin ja eteläiseen, pienempään Vossiin, ja vuonna 1885 sen läntinen osa erosi vielä omaksi Evangerin kunnakseen. Kunnan nimi juontuu todennäköisesti muinaisesta sanasta, joka viittaa veteen, ja liittyy alun perin Vangsvatnet-järven nimeen.
+
+### 29.1
+KYSYMYS: Miksi smalahovea sai vuoden 1998 jälkeen valmistaa vain karitsanpäistä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voss ja smalahove (ruoka)
+Tietoruudun teksti: Voss on kunta ja perinteinen maakunta Länsi-Norjassa Vangsvatnet-järven rannalla, ja sen hallintokeskus on Vossevangenin kylä. Vossin seutu tunnetaan smalahove-ruoasta, poltetusta, suolatusta ja savustetusta lampaanpäästä, jota keitetään tai höyrytetään kolmisen tuntia ja tarjoillaan lanttumuusin, perunoiden ja akvaviitin kanssa. Ruoka oli alun perin köyhien joulua edeltävää ruokaa, mutta nykyään se houkuttelee matkailijoita kokeilemaan sitä nimenomaan erikoisena ja rohkeana elämyksenä. Voss-kunta jaettiin vuonna 1868 pohjoiseen Vossestrandiin ja eteläiseen, pienempään Vossiin, ja vuonna 1885 sen läntinen osa erosi vielä omaksi Evangerin kunnakseen. Kunnan nimi juontuu todennäköisesti muinaisesta sanasta, joka viittaa veteen, ja liittyy alun perin Vangsvatnet-järven nimeen.
+
+### 29.2
+KYSYMYS: Mihin kahteen kuntaan Voss jaettiin vuonna 1868?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voss ja smalahove (ruoka)
+Tietoruudun teksti: Voss on kunta ja perinteinen maakunta Länsi-Norjassa Vangsvatnet-järven rannalla, ja sen hallintokeskus on Vossevangenin kylä. Vossin seutu tunnetaan smalahove-ruoasta, poltetusta, suolatusta ja savustetusta lampaanpäästä, jota keitetään tai höyrytetään kolmisen tuntia ja tarjoillaan lanttumuusin, perunoiden ja akvaviitin kanssa. Ruoka oli alun perin köyhien joulua edeltävää ruokaa, mutta nykyään se houkuttelee matkailijoita kokeilemaan sitä nimenomaan erikoisena ja rohkeana elämyksenä. Voss-kunta jaettiin vuonna 1868 pohjoiseen Vossestrandiin ja eteläiseen, pienempään Vossiin, ja vuonna 1885 sen läntinen osa erosi vielä omaksi Evangerin kunnakseen. Kunnan nimi juontuu todennäköisesti muinaisesta sanasta, joka viittaa veteen, ja liittyy alun perin Vangsvatnet-järven nimeen.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-notodden) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norsk Hydro (tekniikka)
+Tietoruudun teksti: Norsk Hydro perustettiin 2. joulukuuta 1905 nimellä Norsk hydro-elektrisk Kvælstofaktieselskab, kun insinööri Sam Eyde hyödynsi norjalaisen tiedemiehen Kristian Birkelandin kehittämää menetelmää typen sitomiseksi ilmasta keinolannoitteeksi. Menetelmä vaati valtavasti sähköenergiaa, joten yhtiö rakensi voimalaitoksen Notoddenin lähellä sijaitsevaan Svelgfossenin koskeen, ja sen ensimmäinen tehdas Notoddenissa aloitti tuotannon vuonna 1907. Toinen, vielä suurempi tehdas avattiin vuonna 1911 Rjukanissa, jonka voimalle rakennettiin oma rautatiekin. Yhtiön rahoittajina olivat ruotsalainen Wallenberg-suku ja ranskalaiset pankit. 1920-luvulla Hydron menetelmä ei enää pystynyt kilpailemaan uuden Haber–Bosch-prosessin kanssa, joten yhtiö solmi vuonna 1927 kumppanuuden saksalaisen IG Farbenin kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namibia — maalehti / Historia: Tuulinen kulma, jonka kapteeni valitsi] 1840–1885 — Oorlamien kapteeni Jonker Afrikaner lähti 1823 isänsä asuinsijoilta kolmen veljensä ja noin kolmensadan seuraajan kanssa pohjoiseen, ja pian hänen neuvostonsa hallitsi maan keskiosaa. Noin 1840 hän pysähtyi kuuman lähteen äärelle ja rakensi kivikirkon, johon mahtui viisisataa ihmistä. Nimen Windhoek hän antoi itse: se on joko afrikaansin tuulinen kulma tai muisto Winterhoekin vuorista, joiden juurella suku oli asunut. Vanhin tunnettu maininta nimestä on hänen kirjeessään 12. elokuuta 1844. Sotien jälkeen paikka autioitui: 1885 sinne saapunut kasvitieteilijä löysi enää sakaaleja ja nälkiintyneitä helmikanoja hoitamattomien hedelmäpuiden seasta.
+- [Viktorian putoukset — kaupunkilehti / Viktorian putoukset: Maailman suurin vesiverho] Viktorian putoukset syöksyvät alas 108 metrin korkeudesta lähes 1 700 metriä leveänä rintamana, ja korkeuden ja leveyden tulona laskettuna niitä pidetään maailman suurimpana yhtenäisenä vesiverhona. Zambezi-joki virtaa tasaista ylänköä pitkin, kunnes se osuu äkisti kapeaan halkeamaan basalttikalliossa ja syöksyy suoraan kapeaan rotkoon. Runsasvetisenä aikana putouksesta nousevan sumun näkee ja jyminän kuulee kymmenien kilometrien päähän, minkä ansiosta seudun asukkaat tunsivat ihmeen kauan ennen kuin yksikään ulkomaalainen astui sen äärelle.
+
+### 30.1
+KYSYMYS: Mihin keksintöön Norsk Hydron ensimmäinen tehdas Notoddenilla perustui, ja kuka sen kehitti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norsk Hydro (tekniikka)
+Tietoruudun teksti: Norsk Hydro perustettiin 2. joulukuuta 1905 nimellä Norsk hydro-elektrisk Kvælstofaktieselskab, kun insinööri Sam Eyde hyödynsi norjalaisen tiedemiehen Kristian Birkelandin kehittämää menetelmää typen sitomiseksi ilmasta keinolannoitteeksi. Menetelmä vaati valtavasti sähköenergiaa, joten yhtiö rakensi voimalaitoksen Notoddenin lähellä sijaitsevaan Svelgfossenin koskeen, ja sen ensimmäinen tehdas Notoddenissa aloitti tuotannon vuonna 1907. Toinen, vielä suurempi tehdas avattiin vuonna 1911 Rjukanissa, jonka voimalle rakennettiin oma rautatiekin. Yhtiön rahoittajina olivat ruotsalainen Wallenberg-suku ja ranskalaiset pankit. 1920-luvulla Hydron menetelmä ei enää pystynyt kilpailemaan uuden Haber–Bosch-prosessin kanssa, joten yhtiö solmi vuonna 1927 kumppanuuden saksalaisen IG Farbenin kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Winnipeg — kohdekartta / Kohdekartta: Manitoba Hydro Place] 2009 Manitoban sähköyhtiön pääkonttori valmistui Portage Avenuen varteen syyskuussa 2009 kaupungin neljänneksi korkeimpana rakennuksena. Se on liitetty Winnipeg Walkwayhin, keskustan katettuun käytäväverkkoon, joten talvella sinne pääsee useasta korttelista ulos menemättä. Torni sai toukokuussa 2012 LEED Platinum -luokituksen, ja se on siten yksi Pohjois-Amerikan energiatehokkaimmista toimistotorneista. Se on huomionarvoista juuri täällä: kaupungissa, jossa tammikuun keskilämpötila on kuudentoista pakkasasteen tienoilla ja heinäkuussa voidaan mitata kolmeakymmentä lämpöastetta, talon on selvittävä molemmista ääripäistä saman vuoden aikana.
+
+### 30.2
+KYSYMYS: Miksi tehdas piti rakentaa juuri kosken äärelle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norsk Hydro (tekniikka)
+Tietoruudun teksti: Norsk Hydro perustettiin 2. joulukuuta 1905 nimellä Norsk hydro-elektrisk Kvælstofaktieselskab, kun insinööri Sam Eyde hyödynsi norjalaisen tiedemiehen Kristian Birkelandin kehittämää menetelmää typen sitomiseksi ilmasta keinolannoitteeksi. Menetelmä vaati valtavasti sähköenergiaa, joten yhtiö rakensi voimalaitoksen Notoddenin lähellä sijaitsevaan Svelgfossenin koskeen, ja sen ensimmäinen tehdas Notoddenissa aloitti tuotannon vuonna 1907. Toinen, vielä suurempi tehdas avattiin vuonna 1911 Rjukanissa, jonka voimalle rakennettiin oma rautatiekin. Yhtiön rahoittajina olivat ruotsalainen Wallenberg-suku ja ranskalaiset pankit. 1920-luvulla Hydron menetelmä ei enää pystynyt kilpailemaan uuden Haber–Bosch-prosessin kanssa, joten yhtiö solmi vuonna 1927 kumppanuuden saksalaisen IG Farbenin kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namibia — maalehti / Historia: Tuulinen kulma, jonka kapteeni valitsi] 1840–1885 — Oorlamien kapteeni Jonker Afrikaner lähti 1823 isänsä asuinsijoilta kolmen veljensä ja noin kolmensadan seuraajan kanssa pohjoiseen, ja pian hänen neuvostonsa hallitsi maan keskiosaa. Noin 1840 hän pysähtyi kuuman lähteen äärelle ja rakensi kivikirkon, johon mahtui viisisataa ihmistä. Nimen Windhoek hän antoi itse: se on joko afrikaansin tuulinen kulma tai muisto Winterhoekin vuorista, joiden juurella suku oli asunut. Vanhin tunnettu maininta nimestä on hänen kirjeessään 12. elokuuta 1844. Sotien jälkeen paikka autioitui: 1885 sinne saapunut kasvitieteilijä löysi enää sakaaleja ja nälkiintyneitä helmikanoja hoitamattomien hedelmäpuiden seasta.
+- [Viktorian putoukset — kaupunkilehti / Viktorian putoukset: Maailman suurin vesiverho] Viktorian putoukset syöksyvät alas 108 metrin korkeudesta lähes 1 700 metriä leveänä rintamana, ja korkeuden ja leveyden tulona laskettuna niitä pidetään maailman suurimpana yhtenäisenä vesiverhona. Zambezi-joki virtaa tasaista ylänköä pitkin, kunnes se osuu äkisti kapeaan halkeamaan basalttikalliossa ja syöksyy suoraan kapeaan rotkoon. Runsasvetisenä aikana putouksesta nousevan sumun näkee ja jyminän kuulee kymmenien kilometrien päähän, minkä ansiosta seudun asukkaat tunsivat ihmeen kauan ennen kuin yksikään ulkomaalainen astui sen äärelle.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

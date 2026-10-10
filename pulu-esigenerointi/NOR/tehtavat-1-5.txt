@@ -1,0 +1,205 @@
+================ KOHTA 21 (kohde:hahmotelma-klippfisk) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klippfisk (ruoka)
+Tietoruudun teksti: Klippfisk eli suomeksi kalliokala on suolattua ja kuivattua turskaa, jota on Norjassa valmistettu satoja vuosia erityisesti Kristiansundissa. Perinteisesti kala levitettiin kuivumaan ulkoilmaan paljaille kallioille ja rannikon kiville, mistä nimi klippfisk juontuu; nykyään kuivaus tapahtuu enimmäkseen sähkölämmittimillä sisätiloissa, mutta Länsi- ja Pohjois-Norjassa kalaa kuivataan yhä ulkona vientiin Etelä-Eurooppaan. Suolaaminen yleistyi 1600-luvulla, kun halpaa suolaa alkoi tulla saataville Etelä-Euroopasta, ja tuotteesta tuli perusruokaa katolisten maiden paastopäivinä. Norjassa kalaa kutsuttiin aluksi terranova-kalaksi Newfoundlandin mukaan, ennen kuin nimi klippfisk vakiintui kuvaamaan kallioilla kuivattua kalaa. Kristiansundista kehittyi Norjan tärkein klippfisk-kaupunki, jonka satamassa on ollut purjelaivoja lastaamassa kalaa vientiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Luís — kaupunkilehti / Asulejot ja kirkkotaide: Taivas tuomiokirkon katossa] Tuomiokirkon holvikattoon on maalattu illuusio taivaasta: siniset pilvet täyttävät kupolin, ja keskellä kultareunaisessa kehyksessä Kristus kohoaa käsivarret levällään ympärillään leijuvien pienten enkelien seuratessa. Tällaiset trompe l’oeil -kattomaalaukset olivat suosittuja katolisissa kirkoissa ympäri Portugalin siirtomaita, koska ne veivät katsojan huomion pois raskaista kivipilareista ja loivat vaikutelman rajattomasta tilasta. Maalaus kuuluu samaan 1700-luvun lopun laajennukseen, joka antoi kirkolle nykyisen uusklassisen ulkoasunsa – sisällä barokin väri ja liike elävät silti yhä katossa.
+
+### 21.1
+KYSYMYS: Mistä nimi klippfisk juontuu, ja miten se liittyy kalan kuivaustapaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klippfisk (ruoka)
+Tietoruudun teksti: Klippfisk eli suomeksi kalliokala on suolattua ja kuivattua turskaa, jota on Norjassa valmistettu satoja vuosia erityisesti Kristiansundissa. Perinteisesti kala levitettiin kuivumaan ulkoilmaan paljaille kallioille ja rannikon kiville, mistä nimi klippfisk juontuu; nykyään kuivaus tapahtuu enimmäkseen sähkölämmittimillä sisätiloissa, mutta Länsi- ja Pohjois-Norjassa kalaa kuivataan yhä ulkona vientiin Etelä-Eurooppaan. Suolaaminen yleistyi 1600-luvulla, kun halpaa suolaa alkoi tulla saataville Etelä-Euroopasta, ja tuotteesta tuli perusruokaa katolisten maiden paastopäivinä. Norjassa kalaa kutsuttiin aluksi terranova-kalaksi Newfoundlandin mukaan, ennen kuin nimi klippfisk vakiintui kuvaamaan kallioilla kuivattua kalaa. Kristiansundista kehittyi Norjan tärkein klippfisk-kaupunki, jonka satamassa on ollut purjelaivoja lastaamassa kalaa vientiin.
+
+### 21.2
+KYSYMYS: Miksi suolakalasta tuli tärkeä ruoka nimenomaan katolisissa maissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klippfisk (ruoka)
+Tietoruudun teksti: Klippfisk eli suomeksi kalliokala on suolattua ja kuivattua turskaa, jota on Norjassa valmistettu satoja vuosia erityisesti Kristiansundissa. Perinteisesti kala levitettiin kuivumaan ulkoilmaan paljaille kallioille ja rannikon kiville, mistä nimi klippfisk juontuu; nykyään kuivaus tapahtuu enimmäkseen sähkölämmittimillä sisätiloissa, mutta Länsi- ja Pohjois-Norjassa kalaa kuivataan yhä ulkona vientiin Etelä-Eurooppaan. Suolaaminen yleistyi 1600-luvulla, kun halpaa suolaa alkoi tulla saataville Etelä-Euroopasta, ja tuotteesta tuli perusruokaa katolisten maiden paastopäivinä. Norjassa kalaa kutsuttiin aluksi terranova-kalaksi Newfoundlandin mukaan, ennen kuin nimi klippfisk vakiintui kuvaamaan kallioilla kuivattua kalaa. Kristiansundista kehittyi Norjan tärkein klippfisk-kaupunki, jonka satamassa on ollut purjelaivoja lastaamassa kalaa vientiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Luís — kaupunkilehti / Asulejot ja kirkkotaide: Taivas tuomiokirkon katossa] Tuomiokirkon holvikattoon on maalattu illuusio taivaasta: siniset pilvet täyttävät kupolin, ja keskellä kultareunaisessa kehyksessä Kristus kohoaa käsivarret levällään ympärillään leijuvien pienten enkelien seuratessa. Tällaiset trompe l’oeil -kattomaalaukset olivat suosittuja katolisissa kirkoissa ympäri Portugalin siirtomaita, koska ne veivät katsojan huomion pois raskaista kivipilareista ja loivat vaikutelman rajattomasta tilasta. Maalaus kuuluu samaan 1700-luvun lopun laajennukseen, joka antoi kirkolle nykyisen uusklassisen ulkoasunsa – sisällä barokin väri ja liike elävät silti yhä katossa.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-brunost) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brunost (ruoka)
+Tietoruudun teksti: Brunost eli ruskea juusto on norjalainen myöhäisjuustoperhe, jota valmistetaan keittämällä herasta, maidosta ja kermasta ruskeaa, makeaa massaa. Nykyisen kiinteän ja rasvaisen brunostin katsotaan syntyneen vuonna 1863, kun karjapiika Anne Hov keksi Gålän lähellä Valseterin vuoristotilalla lisätä kermaa herakeittoon ja keittää sitä, kunnes seos suli kiinteäksi juustomaiseksi massaksi. Hän kutsui keksintöään aluksi feitostiksi eli rasvajuustoksi, mutta nimi muuttui pian fløtemysostiksi. Muutettuaan Nord-Fronin Rusthågå-tilalle Hov alkoi lisätä seokseen myös vuohenmaitoa voimakkaamman gudbrandsdalsost-juuston valmistamiseksi, ja paikallinen kauppias Ole Kongsli alkoi viedä sitä Christianiaan asti. Keksintö auttoi merkittävästi Gudbrandsdalenin laaksoa, jonka talous oli kärsinyt viljan ja voin hintojen laskusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Arki: Ruskea juusto keitetään herasta] 1863 — Brunost tehdään herasta, joka jää juustonvalmistuksesta yli. Sitä keitetään tuntikausia, kunnes maitosokeri ruskistuu ja massa muuttuu makeaksi. Anne Hov lisäsi joukkoon kermaa vuonna 1863 Gudbrandsdalenissa, ja siitä syntyi maan tunnetuin juusto. Leivän päälle se leikataan juustohöylällä — myös se on norjalainen keksintö, vuodelta 1925.
+- [Viktoria Nyanza — kaupunkilehti / Viktoria Nyanza: Saarien meri] Viktorianjärven pinnalta pistää esiin lähes tuhat saarta — tarkkaan ottaen 985 — joista suurin osa sijaitsee Ugandan puolella. Näyttävin ryhmä on Ssese-saaristo, 84 metsäisen saaren ketju järven luoteisosassa: paikalliset kertoivat isoisän ajan matkalaisille tarinoita saarilla asuvista hengistä, jotka piti tyynnyttää ennen kalastusmatkalle lähtöä. Saarilla kasvaa yhä alkuperäistä sademetsää, kun taas mantereen rannoilla metsät on suurelta osin raivattu maanviljelylle. Kalastajakylät elävät edelleen samalla rytmillä kuin vuosisata sitten: veneet lähtevät aamuyöllä ja palaavat saaliineen ennen puolenpäivän hellettä.
+
+### 22.1
+KYSYMYS: Miksi Anne Hovin keksimä juusto ei ole tarkkaan ottaen juustoa lainkaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brunost (ruoka)
+Tietoruudun teksti: Brunost eli ruskea juusto on norjalainen myöhäisjuustoperhe, jota valmistetaan keittämällä herasta, maidosta ja kermasta ruskeaa, makeaa massaa. Nykyisen kiinteän ja rasvaisen brunostin katsotaan syntyneen vuonna 1863, kun karjapiika Anne Hov keksi Gålän lähellä Valseterin vuoristotilalla lisätä kermaa herakeittoon ja keittää sitä, kunnes seos suli kiinteäksi juustomaiseksi massaksi. Hän kutsui keksintöään aluksi feitostiksi eli rasvajuustoksi, mutta nimi muuttui pian fløtemysostiksi. Muutettuaan Nord-Fronin Rusthågå-tilalle Hov alkoi lisätä seokseen myös vuohenmaitoa voimakkaamman gudbrandsdalsost-juuston valmistamiseksi, ja paikallinen kauppias Ole Kongsli alkoi viedä sitä Christianiaan asti. Keksintö auttoi merkittävästi Gudbrandsdalenin laaksoa, jonka talous oli kärsinyt viljan ja voin hintojen laskusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viktoria Nyanza — kaupunkilehti / Viktoria Nyanza: Saarien meri] Viktorianjärven pinnalta pistää esiin lähes tuhat saarta — tarkkaan ottaen 985 — joista suurin osa sijaitsee Ugandan puolella. Näyttävin ryhmä on Ssese-saaristo, 84 metsäisen saaren ketju järven luoteisosassa: paikalliset kertoivat isoisän ajan matkalaisille tarinoita saarilla asuvista hengistä, jotka piti tyynnyttää ennen kalastusmatkalle lähtöä. Saarilla kasvaa yhä alkuperäistä sademetsää, kun taas mantereen rannoilla metsät on suurelta osin raivattu maanviljelylle. Kalastajakylät elävät edelleen samalla rytmillä kuin vuosisata sitten: veneet lähtevät aamuyöllä ja palaavat saaliineen ennen puolenpäivän hellettä.
+
+### 22.2
+KYSYMYS: Miten juuston vienti Christianiaan alkoi, ja kuka sen aloitti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brunost (ruoka)
+Tietoruudun teksti: Brunost eli ruskea juusto on norjalainen myöhäisjuustoperhe, jota valmistetaan keittämällä herasta, maidosta ja kermasta ruskeaa, makeaa massaa. Nykyisen kiinteän ja rasvaisen brunostin katsotaan syntyneen vuonna 1863, kun karjapiika Anne Hov keksi Gålän lähellä Valseterin vuoristotilalla lisätä kermaa herakeittoon ja keittää sitä, kunnes seos suli kiinteäksi juustomaiseksi massaksi. Hän kutsui keksintöään aluksi feitostiksi eli rasvajuustoksi, mutta nimi muuttui pian fløtemysostiksi. Muutettuaan Nord-Fronin Rusthågå-tilalle Hov alkoi lisätä seokseen myös vuohenmaitoa voimakkaamman gudbrandsdalsost-juuston valmistamiseksi, ja paikallinen kauppias Ole Kongsli alkoi viedä sitä Christianiaan asti. Keksintö auttoi merkittävästi Gudbrandsdalenin laaksoa, jonka talous oli kärsinyt viljan ja voin hintojen laskusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Arki: Ruskea juusto keitetään herasta] 1863 — Brunost tehdään herasta, joka jää juustonvalmistuksesta yli. Sitä keitetään tuntikausia, kunnes maitosokeri ruskistuu ja massa muuttuu makeaksi. Anne Hov lisäsi joukkoon kermaa vuonna 1863 Gudbrandsdalenissa, ja siitä syntyi maan tunnetuin juusto. Leivän päälle se leikataan juustohöylällä — myös se on norjalainen keksintö, vuodelta 1925.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-ekofisk) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ekofisk (tekniikka)
+Tietoruudun teksti: Ekofisk on öljykenttä Norjan puoleisella Pohjanmerellä noin 320 kilometriä lounaaseen Stavangerista, ja Phillips Petroleum -yhtiö löysi sen vuonna 1969 yli 200 koeporauksen jälkeen. Se oli ensimmäinen öljylöytö Pohjanmerellä, ja tuotanto suoraan tankkereihin alkoi jo vuonna 1971 neljästä merenalaisesta kaivosta. Huhtikuussa 1977 Ekofisk Bravo -lautalla tapahtui Pohjanmeren suurin öljyvuoto, kun pohjaventtiili oli asennettu väärin, ja legendaarinen sammutusmies Red Adair osallistui vuodon tukkimiseen. 1980-luvulla huomattiin, että öljyntuotanto sai kalkkikivipohjaisen kentän vajoamaan odottamattoman paljon, ja elokuussa 1987 viisi toisiinsa liitettyä lauttaa nostettiin samanaikaisesti kuusi metriä ylemmäs hydraulisylintereillä, mikä kirjattiin Guinnessin ennätyskirjaan suurimpana nostoprojektina. Ekofiskin tuotannon arvioidaan jatkuvan ainakin vuoteen 2048 saakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kaivo, joka muutti maan] 1969 — Norja oli 1960-luvulla Euroopan köyhempiä maita, ja Pohjanmereltä oli etsitty öljyä vuosia tuloksetta. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailman suurin valtiollinen sijoitusrahasto. Öljyn ansiosta Norjasta tuli rikas nopeasti, mutta se joutuu nyt miettimään, mitä tehdä kun öljy loppuu.
+
+### 23.1
+KYSYMYS: Mikä aiheutti Ekofisk Bravo -laitan öljyvuodon vuonna 1977?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ekofisk (tekniikka)
+Tietoruudun teksti: Ekofisk on öljykenttä Norjan puoleisella Pohjanmerellä noin 320 kilometriä lounaaseen Stavangerista, ja Phillips Petroleum -yhtiö löysi sen vuonna 1969 yli 200 koeporauksen jälkeen. Se oli ensimmäinen öljylöytö Pohjanmerellä, ja tuotanto suoraan tankkereihin alkoi jo vuonna 1971 neljästä merenalaisesta kaivosta. Huhtikuussa 1977 Ekofisk Bravo -lautalla tapahtui Pohjanmeren suurin öljyvuoto, kun pohjaventtiili oli asennettu väärin, ja legendaarinen sammutusmies Red Adair osallistui vuodon tukkimiseen. 1980-luvulla huomattiin, että öljyntuotanto sai kalkkikivipohjaisen kentän vajoamaan odottamattoman paljon, ja elokuussa 1987 viisi toisiinsa liitettyä lauttaa nostettiin samanaikaisesti kuusi metriä ylemmäs hydraulisylintereillä, mikä kirjattiin Guinnessin ennätyskirjaan suurimpana nostoprojektina. Ekofiskin tuotannon arvioidaan jatkuvan ainakin vuoteen 2048 saakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kaivo, joka muutti maan] 1969 — Norja oli 1960-luvulla Euroopan köyhempiä maita, ja Pohjanmereltä oli etsitty öljyä vuosia tuloksetta. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailman suurin valtiollinen sijoitusrahasto. Öljyn ansiosta Norjasta tuli rikas nopeasti, mutta se joutuu nyt miettimään, mitä tehdä kun öljy loppuu.
+
+### 23.2
+KYSYMYS: Miksi Ekofiskin öljylautat piti nostaa kuusi metriä ylemmäs 1980-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ekofisk (tekniikka)
+Tietoruudun teksti: Ekofisk on öljykenttä Norjan puoleisella Pohjanmerellä noin 320 kilometriä lounaaseen Stavangerista, ja Phillips Petroleum -yhtiö löysi sen vuonna 1969 yli 200 koeporauksen jälkeen. Se oli ensimmäinen öljylöytö Pohjanmerellä, ja tuotanto suoraan tankkereihin alkoi jo vuonna 1971 neljästä merenalaisesta kaivosta. Huhtikuussa 1977 Ekofisk Bravo -lautalla tapahtui Pohjanmeren suurin öljyvuoto, kun pohjaventtiili oli asennettu väärin, ja legendaarinen sammutusmies Red Adair osallistui vuodon tukkimiseen. 1980-luvulla huomattiin, että öljyntuotanto sai kalkkikivipohjaisen kentän vajoamaan odottamattoman paljon, ja elokuussa 1987 viisi toisiinsa liitettyä lauttaa nostettiin samanaikaisesti kuusi metriä ylemmäs hydraulisylintereillä, mikä kirjattiin Guinnessin ennätyskirjaan suurimpana nostoprojektina. Ekofiskin tuotannon arvioidaan jatkuvan ainakin vuoteen 2048 saakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kaivo, joka muutti maan] 1969 — Norja oli 1960-luvulla Euroopan köyhempiä maita, ja Pohjanmereltä oli etsitty öljyä vuosia tuloksetta. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailman suurin valtiollinen sijoitusrahasto. Öljyn ansiosta Norjasta tuli rikas nopeasti, mutta se joutuu nyt miettimään, mitä tehdä kun öljy loppuu.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-trollstigen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trollstigen (tekniikka)
+Tietoruudun teksti: Trollstigen on mutkitteleva vuoristotie ja sola Raumassa, Møre og Romsdalin läänissä, osa maantietä 63 Åndalsnesin ja Valldalin välillä. Tie nousee noin 850 metrin korkeuteen yhdellätoista jyrkällä hiuspinnemutkalla, ja sen keskimääräinen nousuprosentti on 10. Kahdeksan vuoden rakennustyön jälkeen kuningas Haakon VII avasi tien virallisesti 31. heinäkuuta 1936. Solan huipulla olevalta 700 metrin tasanteelta avautuu näkymä Stigfossenin 320 metriä putoavaan vesiputoukseen, ja tie on edelleen suljettuna talvisin lumen vuoksi. Vilkkaimpina kesäpäivinä tietä käyttää nykyään noin 2 500 ajoneuvoa vuorokaudessa.
+
+### 24.1
+KYSYMYS: Kuka avasi Trollstigenin virallisesti, ja minä vuonna?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trollstigen (tekniikka)
+Tietoruudun teksti: Trollstigen on mutkitteleva vuoristotie ja sola Raumassa, Møre og Romsdalin läänissä, osa maantietä 63 Åndalsnesin ja Valldalin välillä. Tie nousee noin 850 metrin korkeuteen yhdellätoista jyrkällä hiuspinnemutkalla, ja sen keskimääräinen nousuprosentti on 10. Kahdeksan vuoden rakennustyön jälkeen kuningas Haakon VII avasi tien virallisesti 31. heinäkuuta 1936. Solan huipulla olevalta 700 metrin tasanteelta avautuu näkymä Stigfossenin 320 metriä putoavaan vesiputoukseen, ja tie on edelleen suljettuna talvisin lumen vuoksi. Vilkkaimpina kesäpäivinä tietä käyttää nykyään noin 2 500 ajoneuvoa vuorokaudessa.
+
+### 24.2
+KYSYMYS: Miksi Trollstigen on suljettuna talvisin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trollstigen (tekniikka)
+Tietoruudun teksti: Trollstigen on mutkitteleva vuoristotie ja sola Raumassa, Møre og Romsdalin läänissä, osa maantietä 63 Åndalsnesin ja Valldalin välillä. Tie nousee noin 850 metrin korkeuteen yhdellätoista jyrkällä hiuspinnemutkalla, ja sen keskimääräinen nousuprosentti on 10. Kahdeksan vuoden rakennustyön jälkeen kuningas Haakon VII avasi tien virallisesti 31. heinäkuuta 1936. Solan huipulla olevalta 700 metrin tasanteelta avautuu näkymä Stigfossenin 320 metriä putoavaan vesiputoukseen, ja tie on edelleen suljettuna talvisin lumen vuoksi. Vilkkaimpina kesäpäivinä tietä käyttää nykyään noin 2 500 ajoneuvoa vuorokaudessa.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-hardangervidda) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hardangervidda (luonto · vuori)
+Tietoruudun teksti: Hardangervidda on Etelä-Norjan keskiosassa sijaitseva ylätasanko, Euroopan laajin laatuaan noin 6 500 neliökilometrin alalla ja keskimäärin 1 100 metrin korkeudessa. Sen korkein kohta on Sandfloegga, 1 721 metriä, ja alueella sijaitsee myös Hardangerjøkulenin jäätikkö. Ylänkö on puuton, karu tunturikangas, jolla laiduntaa yksi maailman suurimmista villipeuralaumoista; laumassa oli vielä vuonna 1996 noin 15 000 eläintä. Kivikaudella, noin 9 000–5 000 vuotta sitten, ilmasto oli lämpimämpi ja suuri osa tasangosta oli metsäistä, mistä muistuttavat suohon säilyneet männynrungot nykyisen puurajan yläpuolella. Peurat vaeltavat vuodenaikojen mukaan tasangon itäisiltä talvilaitumilta läntisille, rehevämmille vasomisalueille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Luonto: Kaupungin läpi virtaa villi joki] Nykyisin — Veiksel kulkee Varsovan halki patoamattomana, ja itäranta on jätetty lähes luonnontilaan: hiekkasärkkiä, pajukkoa ja majavia keskellä lähes kahden miljoonan asukkaan kaupunkia. Ranta kuuluu EU:n Natura 2000 -suojeluverkostoon, koska joen hiekkasaaret ovat lintujen pesimäpaikkoja. Kesäisin kaupunkilaiset makaavat samoilla hiekoilla, ja vastarannalla näkyy lasitorneja.
+
+### 25.1
+KYSYMYS: Miksi Hardangervidda oli kivikaudella metsäisempi kuin nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hardangervidda (luonto · vuori)
+Tietoruudun teksti: Hardangervidda on Etelä-Norjan keskiosassa sijaitseva ylätasanko, Euroopan laajin laatuaan noin 6 500 neliökilometrin alalla ja keskimäärin 1 100 metrin korkeudessa. Sen korkein kohta on Sandfloegga, 1 721 metriä, ja alueella sijaitsee myös Hardangerjøkulenin jäätikkö. Ylänkö on puuton, karu tunturikangas, jolla laiduntaa yksi maailman suurimmista villipeuralaumoista; laumassa oli vielä vuonna 1996 noin 15 000 eläintä. Kivikaudella, noin 9 000–5 000 vuotta sitten, ilmasto oli lämpimämpi ja suuri osa tasangosta oli metsäistä, mistä muistuttavat suohon säilyneet männynrungot nykyisen puurajan yläpuolella. Peurat vaeltavat vuodenaikojen mukaan tasangon itäisiltä talvilaitumilta läntisille, rehevämmille vasomisalueille.
+
+### 25.2
+KYSYMYS: Miten villipeurat käyttävät tasangon itä- ja länsiosia vuodenajan mukaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hardangervidda (luonto · vuori)
+Tietoruudun teksti: Hardangervidda on Etelä-Norjan keskiosassa sijaitseva ylätasanko, Euroopan laajin laatuaan noin 6 500 neliökilometrin alalla ja keskimäärin 1 100 metrin korkeudessa. Sen korkein kohta on Sandfloegga, 1 721 metriä, ja alueella sijaitsee myös Hardangerjøkulenin jäätikkö. Ylänkö on puuton, karu tunturikangas, jolla laiduntaa yksi maailman suurimmista villipeuralaumoista; laumassa oli vielä vuonna 1996 noin 15 000 eläintä. Kivikaudella, noin 9 000–5 000 vuotta sitten, ilmasto oli lämpimämpi ja suuri osa tasangosta oli metsäistä, mistä muistuttavat suohon säilyneet männynrungot nykyisen puurajan yläpuolella. Peurat vaeltavat vuodenaikojen mukaan tasangon itäisiltä talvilaitumilta läntisille, rehevämmille vasomisalueille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Luonto: Kaupungin läpi virtaa villi joki] Nykyisin — Veiksel kulkee Varsovan halki patoamattomana, ja itäranta on jätetty lähes luonnontilaan: hiekkasärkkiä, pajukkoa ja majavia keskellä lähes kahden miljoonan asukkaan kaupunkia. Ranta kuuluu EU:n Natura 2000 -suojeluverkostoon, koska joen hiekkasaaret ovat lintujen pesimäpaikkoja. Kesäisin kaupunkilaiset makaavat samoilla hiekoilla, ja vastarannalla näkyy lasitorneja.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

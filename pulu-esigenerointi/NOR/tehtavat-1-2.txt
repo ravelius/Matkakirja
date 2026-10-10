@@ -1,0 +1,212 @@
+================ KOHTA 6 (kohde:roros) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Røros (historia)
+Tietoruudun teksti: Røros on kaupunki Trøndelagin maakunnassa Norjassa, ja sitä kutsutaan usein nimellä Bergstaden eli vuorikaupunki sen kuparikaivosten takia. Se on toinen Norjan kahdesta kaupungista, joilla on ollut virallinen kaivoskaupungin asema; toinen on hopeakaupunki Kongsberg. Monet nykyisistä asukkaista työskentelevät ja asuvat yhä 1600- ja 1700-luvun rakennuksissa, ja juuri siksi kaupunki merkittiin maailmanperintöluetteloon vuonna 1980. Kaupungissa on noin kahdeksankymmentä vanhaa puutaloa, useimmat ryhmiteltyinä pihapiireiksi. Monissa on yhä tumma tervattu hirsijulkisivu, joka antaa kaupungille keskiaikaisen näön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia] Norjan historiassa kolme puuta ja yksi kaivo: tervattu keskiaikainen kirkko, koiravaljakko etelänavalla ja porauslautta, joka muutti koko maan talouden.
+- [Norja — maalehti / Historia: Kaivo, joka muutti maan] 1969 — Norja oli 1960-luvulla Euroopan köyhempiä maita, ja Pohjanmereltä oli etsitty öljyä vuosia tuloksetta. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailman suurin valtiollinen sijoitusrahasto. Öljyn ansiosta Norjasta tuli rikas nopeasti, mutta se joutuu nyt miettimään, mitä tehdä kun öljy loppuu.
+
+### 6.1
+KYSYMYS: Miksi Røros on nimeltään Bergstaden?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Røros (historia)
+Tietoruudun teksti: Røros on kaupunki Trøndelagin maakunnassa Norjassa, ja sitä kutsutaan usein nimellä Bergstaden eli vuorikaupunki sen kuparikaivosten takia. Se on toinen Norjan kahdesta kaupungista, joilla on ollut virallinen kaivoskaupungin asema; toinen on hopeakaupunki Kongsberg. Monet nykyisistä asukkaista työskentelevät ja asuvat yhä 1600- ja 1700-luvun rakennuksissa, ja juuri siksi kaupunki merkittiin maailmanperintöluetteloon vuonna 1980. Kaupungissa on noin kahdeksankymmentä vanhaa puutaloa, useimmat ryhmiteltyinä pihapiireiksi. Monissa on yhä tumma tervattu hirsijulkisivu, joka antaa kaupungille keskiaikaisen näön.
+
+### 6.2
+KYSYMYS: Mikä on Norjan toinen kaivoskaupunki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Røros (historia)
+Tietoruudun teksti: Røros on kaupunki Trøndelagin maakunnassa Norjassa, ja sitä kutsutaan usein nimellä Bergstaden eli vuorikaupunki sen kuparikaivosten takia. Se on toinen Norjan kahdesta kaupungista, joilla on ollut virallinen kaivoskaupungin asema; toinen on hopeakaupunki Kongsberg. Monet nykyisistä asukkaista työskentelevät ja asuvat yhä 1600- ja 1700-luvun rakennuksissa, ja juuri siksi kaupunki merkittiin maailmanperintöluetteloon vuonna 1980. Kaupungissa on noin kahdeksankymmentä vanhaa puutaloa, useimmat ryhmiteltyinä pihapiireiksi. Monissa on yhä tumma tervattu hirsijulkisivu, joka antaa kaupungille keskiaikaisen näön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia] Norjan historiassa kolme puuta ja yksi kaivo: tervattu keskiaikainen kirkko, koiravaljakko etelänavalla ja porauslautta, joka muutti koko maan talouden.
+- [Norja — maalehti / Historia: Kaivo, joka muutti maan] 1969 — Norja oli 1960-luvulla Euroopan köyhempiä maita, ja Pohjanmereltä oli etsitty öljyä vuosia tuloksetta. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailman suurin valtiollinen sijoitusrahasto. Öljyn ansiosta Norjasta tuli rikas nopeasti, mutta se joutuu nyt miettimään, mitä tehdä kun öljy loppuu.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:altankalliopiirrokset) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altan kalliopiirrokset (historia)
+Tietoruudun teksti: Altan kalliopiirrokset ovat Altan kunnassa Finnmarkissa Pohjois-Norjassa. Ensimmäiset piirrokset löytyivät vuonna 1973, ja sen jälkeen niitä on löytynyt yli 6 000 useasta paikasta; suurin niistä, Jiepmaluokta noin viiden kilometrin päässä Altasta, on tuhansine kuvineen muutettu ulkoilmamuseoksi. Kohde merkittiin maailmanperintöluetteloon 3. joulukuuta 1985, ja se on Norjan ainoa esihistoriallinen maailmanperintökohde. Professori Knut Helskog jakoi kuvat viiteen ryhmään ja ajoitti ne rannansiirtymän avulla: vanhimmat noin 4200 eaa. ja nuorimmat noin 500 eaa.; vuonna 2010 tutkija Jan Magne Gjerde siirsi vanhimpia vaiheita tuhat vuotta taaksepäin. Kuvasto kertoo metsästäjä-keräilijöistä, jotka osasivat hallita porolaumoja, rakentaa veneitä ja kalastaa ja jotka harjoittivat šamanistisia menoja, joihin kuului karhun ja muiden eläinten palvonta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Timbuktu — kohdekartta / Kohdekartta: Heinrich Barthin talo] 1853–1854 Saksalainen Heinrich Barth saapui Timbuktuun 7. syyskuuta 1853. Hän oli lähtenyt liikkeelle kolmen miehen retkikunnassa, mutta Richardson kuoli maaliskuussa 1851 ja Overweg syyskuussa 1852, joten Barth jatkoi yksin. Kun hän palasi Tripoliin syyskuussa 1855, matka oli ulottunut kahdenkymmenenneljän leveysasteen ja kahdenkymmenen pituusasteen yli — Tripolista Kameruniin ja Tšad-järveltä Timbuktuun, yli kaksitoistatuhatta mailia. Hän puhui sujuvasti arabiaa sekä fulania, hausaa ja kanuria ja tutki erityisesti Songhain historiaa. Timbuktussa hän asui kunta-suvun sheikin Ahmad al-Bakkai al-Kuntin talossa. Al-Bakkai (1803–1865) oli esikoloniaalisen Länsi-Sudanin viimeisiä merkittäviä so…
+
+### 7.1
+KYSYMYS: Miten piirrosten ikä on määritetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altan kalliopiirrokset (historia)
+Tietoruudun teksti: Altan kalliopiirrokset ovat Altan kunnassa Finnmarkissa Pohjois-Norjassa. Ensimmäiset piirrokset löytyivät vuonna 1973, ja sen jälkeen niitä on löytynyt yli 6 000 useasta paikasta; suurin niistä, Jiepmaluokta noin viiden kilometrin päässä Altasta, on tuhansine kuvineen muutettu ulkoilmamuseoksi. Kohde merkittiin maailmanperintöluetteloon 3. joulukuuta 1985, ja se on Norjan ainoa esihistoriallinen maailmanperintökohde. Professori Knut Helskog jakoi kuvat viiteen ryhmään ja ajoitti ne rannansiirtymän avulla: vanhimmat noin 4200 eaa. ja nuorimmat noin 500 eaa.; vuonna 2010 tutkija Jan Magne Gjerde siirsi vanhimpia vaiheita tuhat vuotta taaksepäin. Kuvasto kertoo metsästäjä-keräilijöistä, jotka osasivat hallita porolaumoja, rakentaa veneitä ja kalastaa ja jotka harjoittivat šamanistisia menoja, joihin kuului karhun ja muiden eläinten palvonta.
+
+### 7.2
+KYSYMYS: Mitä piirroksissa esitetään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altan kalliopiirrokset (historia)
+Tietoruudun teksti: Altan kalliopiirrokset ovat Altan kunnassa Finnmarkissa Pohjois-Norjassa. Ensimmäiset piirrokset löytyivät vuonna 1973, ja sen jälkeen niitä on löytynyt yli 6 000 useasta paikasta; suurin niistä, Jiepmaluokta noin viiden kilometrin päässä Altasta, on tuhansine kuvineen muutettu ulkoilmamuseoksi. Kohde merkittiin maailmanperintöluetteloon 3. joulukuuta 1985, ja se on Norjan ainoa esihistoriallinen maailmanperintökohde. Professori Knut Helskog jakoi kuvat viiteen ryhmään ja ajoitti ne rannansiirtymän avulla: vanhimmat noin 4200 eaa. ja nuorimmat noin 500 eaa.; vuonna 2010 tutkija Jan Magne Gjerde siirsi vanhimpia vaiheita tuhat vuotta taaksepäin. Kuvasto kertoo metsästäjä-keräilijöistä, jotka osasivat hallita porolaumoja, rakentaa veneitä ja kalastaa ja jotka harjoittivat šamanistisia menoja, joihin kuului karhun ja muiden eläinten palvonta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Timbuktu — kohdekartta / Kohdekartta: Heinrich Barthin talo] 1853–1854 Saksalainen Heinrich Barth saapui Timbuktuun 7. syyskuuta 1853. Hän oli lähtenyt liikkeelle kolmen miehen retkikunnassa, mutta Richardson kuoli maaliskuussa 1851 ja Overweg syyskuussa 1852, joten Barth jatkoi yksin. Kun hän palasi Tripoliin syyskuussa 1855, matka oli ulottunut kahdenkymmenenneljän leveysasteen ja kahdenkymmenen pituusasteen yli — Tripolista Kameruniin ja Tšad-järveltä Timbuktuun, yli kaksitoistatuhatta mailia. Hän puhui sujuvasti arabiaa sekä fulania, hausaa ja kanuria ja tutki erityisesti Songhain historiaa. Timbuktussa hän asui kunta-suvun sheikin Ahmad al-Bakkai al-Kuntin talossa. Al-Bakkai (1803–1865) oli esikoloniaalisen Länsi-Sudanin viimeisiä merkittäviä so…
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:nordkapp) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nordkapp (merenkulku)
+Tietoruudun teksti: Nordkapp on niemi Magerøyan saaren pohjoisrannalla Finnmarkissa. Sen 307 metriä korkean jyrkänteen päällä on laaja tasanko, jolta katsotaan keskiyön aurinkoa ja näkymää pohjoiseen; Euroopan tie E69 päättyy tänne, joten se on Euroopan pohjoisin autolla saavutettava kohta. Pohjoisimmaksi kohdaksi sitä sanotaan silti virheellisesti: naapuriniemi Knivskjellodden työntyy 1 450 metriä kauemmas pohjoiseen, ja Manner-Euroopan pohjoisin kohta on Kinnarodden Nordkinnin niemimaalla. Nordkapp on kuitenkin paikka, jossa Atlanttiin kuuluva Norjanmeri kohtaa Jäämereen kuuluvan Barentsinmeren. Keskiyön aurinko näkyy 14. toukokuuta ja 31. heinäkuuta välisenä aikana, ja tasangolle rakennettiin vuonna 1988 vierailukeskus Nordkapphallen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kohdekartta / Kohdekartta: Nairobin arboretum] 1907 Nairobin arboretum perustettiin 1907, kahdeksan vuotta sen jälkeen kun juna oli saapunut kaupunkiin. Perustaja oli Batiscombe, ja tarkoitus oli hyvin käytännöllinen: kokeilla, mitkä metsäpuulajit kasvavat Nairobin ylängöllä. Puisto oli siis alun perin koeasema, ei virkistysalue. Alue julistettiin luonnonsuojelualueeksi 1932, ja omistuskirja siirtyi valtiolle 1996. Kokeilu jätti jälkeensä poikkeuksellisen kokoelman: kolmenkymmenen hehtaarin alueella kasvaa yli 350 puulajia, sekä kotimaisia että tuotuja. Alue toimii yhä sekä tutkimuspaikkana että kaupunkilaisten ulkoilualueena. Arboretum on State House Roadin varrella Kilimanin kaupunginosassa, aivan presidentin virka-asunnon naapurissa.…
+- [Townsville — kohdekartta / Kohdekartta: Queens Gardens] 1870 Kesäkuun 14. päivänä 1870 julistettiin sadan eekkerin kasvitieteellinen reservi, jollaisia perustettiin siihen aikaan lähes joka kaupunkiin Queenslandissa. Nimi Queens Park viittasi Viktoriaan, ja tarkoitus oli yhtä lailla tieteellinen kuin taloudellinen. Puutarha oli akklimatisaatiopuutarha: siellä kokeiltiin, mitkä kaupalliset kasvit kestäisivät tropiikin. Ensimmäisiä lajeja olivat kaakao, afrikkalainen öljypalmu ja mango. Osa silloin istutetuista hoop-männyistä ja mustapavuista kasvaa yhä, ja lähteen mukaan ne saattavat olla Australian vanhimpia viljeltyjä yksilöitä. Vuosisadan lopulla puutarha alkoi muuttua muodolliseksi virkistyspuistoksi. Toisen maailmansodan aikana se oli sadant…
+
+### 8.1
+KYSYMYS: Onko Nordkapp todella Euroopan pohjoisin kohta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nordkapp (merenkulku)
+Tietoruudun teksti: Nordkapp on niemi Magerøyan saaren pohjoisrannalla Finnmarkissa. Sen 307 metriä korkean jyrkänteen päällä on laaja tasanko, jolta katsotaan keskiyön aurinkoa ja näkymää pohjoiseen; Euroopan tie E69 päättyy tänne, joten se on Euroopan pohjoisin autolla saavutettava kohta. Pohjoisimmaksi kohdaksi sitä sanotaan silti virheellisesti: naapuriniemi Knivskjellodden työntyy 1 450 metriä kauemmas pohjoiseen, ja Manner-Euroopan pohjoisin kohta on Kinnarodden Nordkinnin niemimaalla. Nordkapp on kuitenkin paikka, jossa Atlanttiin kuuluva Norjanmeri kohtaa Jäämereen kuuluvan Barentsinmeren. Keskiyön aurinko näkyy 14. toukokuuta ja 31. heinäkuuta välisenä aikana, ja tasangolle rakennettiin vuonna 1988 vierailukeskus Nordkapphallen.
+
+### 8.2
+KYSYMYS: Mitkä kaksi merta kohtaavat niemellä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nordkapp (merenkulku)
+Tietoruudun teksti: Nordkapp on niemi Magerøyan saaren pohjoisrannalla Finnmarkissa. Sen 307 metriä korkean jyrkänteen päällä on laaja tasanko, jolta katsotaan keskiyön aurinkoa ja näkymää pohjoiseen; Euroopan tie E69 päättyy tänne, joten se on Euroopan pohjoisin autolla saavutettava kohta. Pohjoisimmaksi kohdaksi sitä sanotaan silti virheellisesti: naapuriniemi Knivskjellodden työntyy 1 450 metriä kauemmas pohjoiseen, ja Manner-Euroopan pohjoisin kohta on Kinnarodden Nordkinnin niemimaalla. Nordkapp on kuitenkin paikka, jossa Atlanttiin kuuluva Norjanmeri kohtaa Jäämereen kuuluvan Barentsinmeren. Keskiyön aurinko näkyy 14. toukokuuta ja 31. heinäkuuta välisenä aikana, ja tasangolle rakennettiin vuonna 1988 vierailukeskus Nordkapphallen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kohdekartta / Kohdekartta: Nairobin arboretum] 1907 Nairobin arboretum perustettiin 1907, kahdeksan vuotta sen jälkeen kun juna oli saapunut kaupunkiin. Perustaja oli Batiscombe, ja tarkoitus oli hyvin käytännöllinen: kokeilla, mitkä metsäpuulajit kasvavat Nairobin ylängöllä. Puisto oli siis alun perin koeasema, ei virkistysalue. Alue julistettiin luonnonsuojelualueeksi 1932, ja omistuskirja siirtyi valtiolle 1996. Kokeilu jätti jälkeensä poikkeuksellisen kokoelman: kolmenkymmenen hehtaarin alueella kasvaa yli 350 puulajia, sekä kotimaisia että tuotuja. Alue toimii yhä sekä tutkimuspaikkana että kaupunkilaisten ulkoilualueena. Arboretum on State House Roadin varrella Kilimanin kaupunginosassa, aivan presidentin virka-asunnon naapurissa.…
+- [Townsville — kohdekartta / Kohdekartta: Queens Gardens] 1870 Kesäkuun 14. päivänä 1870 julistettiin sadan eekkerin kasvitieteellinen reservi, jollaisia perustettiin siihen aikaan lähes joka kaupunkiin Queenslandissa. Nimi Queens Park viittasi Viktoriaan, ja tarkoitus oli yhtä lailla tieteellinen kuin taloudellinen. Puutarha oli akklimatisaatiopuutarha: siellä kokeiltiin, mitkä kaupalliset kasvit kestäisivät tropiikin. Ensimmäisiä lajeja olivat kaakao, afrikkalainen öljypalmu ja mango. Osa silloin istutetuista hoop-männyistä ja mustapavuista kasvaa yhä, ja lähteen mukaan ne saattavat olla Australian vanhimpia viljeltyjä yksilöitä. Vuosisadan lopulla puutarha alkoi muuttua muodolliseksi virkistyspuistoksi. Toisen maailmansodan aikana se oli sadant…
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:nidaros) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nidarosin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Nidarosin tuomiokirkko on Norjan kirkon katedraali Trondheimissa. Se on rakennettu kuningas Olavi II:n haudan päälle: Olavi toi kristinuskon Norjaan, hänestä tuli maan suojeluspyhimys, ja hänen kirkossaan vihitään yhä Norjan uudet hallitsijat. Kirkkoa rakennettiin 230 vuotta, vuodesta 1070 vuoteen 1300, jolloin se oli olennaisilta osin valmis; lisäyksiä ja korjauksia on tehty siitä lähtien, ja viimeisin suuri jälleenrakennus alkoi 1869 ja päättyi 2001. Vuonna 1152 kirkosta tuli Nidarosin arkkihiippakunnan katedraali, ja vuonna 1537 se siirtyi uskonpuhdistuksessa vastaperustettuun Norjan kirkkoon. Se on maailman pohjoisin keskiaikainen katedraali, siihen mahtuu noin 1 850 ihmistä, ja sinne saapuu yhä vuosittain tuhansia pyhiinvaeltajia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jerusalem — kohdekartta / Kohdekartta: Pyhän haudan kirkko] Pyhän haudan kirkko ei ole yksi rakennus vaan monta päällekkäistä: kirkkoa on rakennettu, poltettu, korjattu ja laajennettu vuosisatojen ajan, ja lopputulos on sokkelo, jossa eri kristilliset yhteisöt hallitsevat kukin omaa osaansa. Rakennuksen kohdalla oli roomalaisaikana Venuksen temppeli, jonka keisari Hadrianus rakennutti perustaessaan kaupungin uudelleen nimellä Aelia Capitolina. Kirkon sisällä on kaksi erillistä pyhää paikkaa saman katon alla. Golgatan kappeli on yläkerrassa, kallion päällä johon noustaan portaita; alakerrassa on itse hauta pienessä kappelissa keskellä pyöreää salia. Päälaivan yllä kaartuu katolikonin kupoli, jonka keskellä on kultapohjainen Kristus-mosaiikki ja reuno…
+- [Vancouver — kohdekartta / Kohdekartta: Pyhän ruusukon katedraali] 1900 Seurakunta perustettiin kesäkuussa 1885, ja sen ensimmäiseksi kirkkoherraksi valittiin isä Patrick Fay, joka oli toiminut rautatietyöläisten pappina. Tarina kertoo, että Fay meni Coal Harbourin rantaan, katsoi etelään metsään ja valitsi kirkon paikaksi sen kohdan, jossa kasvoi korkein puu. Puukirkko valmistui 1887, ja kaksi vuotta myöhemmin sitä laajennettiin ja siihen lisättiin kellotorni. Seurakuntaan kuului tuolloin 69 perhettä. Uuden kirkon rakensi isä James McGuckin, ja hanketta pidettiin niin uhkarohkeana, että sitä kutsuttiin nimellä "McGuckinin hulluus". Seurakunta oli jo velkaa, ja rahat saatiin lopulta siten, että McGuckinin oma sääntökunta kiinnitti päämajansa Ranskassa. Per…
+
+### 9.1
+KYSYMYS: Kenen haudan päälle kirkko rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nidarosin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Nidarosin tuomiokirkko on Norjan kirkon katedraali Trondheimissa. Se on rakennettu kuningas Olavi II:n haudan päälle: Olavi toi kristinuskon Norjaan, hänestä tuli maan suojeluspyhimys, ja hänen kirkossaan vihitään yhä Norjan uudet hallitsijat. Kirkkoa rakennettiin 230 vuotta, vuodesta 1070 vuoteen 1300, jolloin se oli olennaisilta osin valmis; lisäyksiä ja korjauksia on tehty siitä lähtien, ja viimeisin suuri jälleenrakennus alkoi 1869 ja päättyi 2001. Vuonna 1152 kirkosta tuli Nidarosin arkkihiippakunnan katedraali, ja vuonna 1537 se siirtyi uskonpuhdistuksessa vastaperustettuun Norjan kirkkoon. Se on maailman pohjoisin keskiaikainen katedraali, siihen mahtuu noin 1 850 ihmistä, ja sinne saapuu yhä vuosittain tuhansia pyhiinvaeltajia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jerusalem — kohdekartta / Kohdekartta: Pyhän haudan kirkko] Pyhän haudan kirkko ei ole yksi rakennus vaan monta päällekkäistä: kirkkoa on rakennettu, poltettu, korjattu ja laajennettu vuosisatojen ajan, ja lopputulos on sokkelo, jossa eri kristilliset yhteisöt hallitsevat kukin omaa osaansa. Rakennuksen kohdalla oli roomalaisaikana Venuksen temppeli, jonka keisari Hadrianus rakennutti perustaessaan kaupungin uudelleen nimellä Aelia Capitolina. Kirkon sisällä on kaksi erillistä pyhää paikkaa saman katon alla. Golgatan kappeli on yläkerrassa, kallion päällä johon noustaan portaita; alakerrassa on itse hauta pienessä kappelissa keskellä pyöreää salia. Päälaivan yllä kaartuu katolikonin kupoli, jonka keskellä on kultapohjainen Kristus-mosaiikki ja reuno…
+
+### 9.2
+KYSYMYS: Missä Norjan hallitsijat vihitään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nidarosin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Nidarosin tuomiokirkko on Norjan kirkon katedraali Trondheimissa. Se on rakennettu kuningas Olavi II:n haudan päälle: Olavi toi kristinuskon Norjaan, hänestä tuli maan suojeluspyhimys, ja hänen kirkossaan vihitään yhä Norjan uudet hallitsijat. Kirkkoa rakennettiin 230 vuotta, vuodesta 1070 vuoteen 1300, jolloin se oli olennaisilta osin valmis; lisäyksiä ja korjauksia on tehty siitä lähtien, ja viimeisin suuri jälleenrakennus alkoi 1869 ja päättyi 2001. Vuonna 1152 kirkosta tuli Nidarosin arkkihiippakunnan katedraali, ja vuonna 1537 se siirtyi uskonpuhdistuksessa vastaperustettuun Norjan kirkkoon. Se on maailman pohjoisin keskiaikainen katedraali, siihen mahtuu noin 1 850 ihmistä, ja sinne saapuu yhä vuosittain tuhansia pyhiinvaeltajia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vancouver — kohdekartta / Kohdekartta: Pyhän ruusukon katedraali] 1900 Seurakunta perustettiin kesäkuussa 1885, ja sen ensimmäiseksi kirkkoherraksi valittiin isä Patrick Fay, joka oli toiminut rautatietyöläisten pappina. Tarina kertoo, että Fay meni Coal Harbourin rantaan, katsoi etelään metsään ja valitsi kirkon paikaksi sen kohdan, jossa kasvoi korkein puu. Puukirkko valmistui 1887, ja kaksi vuotta myöhemmin sitä laajennettiin ja siihen lisättiin kellotorni. Seurakuntaan kuului tuolloin 69 perhettä. Uuden kirkon rakensi isä James McGuckin, ja hanketta pidettiin niin uhkarohkeana, että sitä kutsuttiin nimellä "McGuckinin hulluus". Seurakunta oli jo velkaa, ja rahat saatiin lopulta siten, että McGuckinin oma sääntökunta kiinnitti päämajansa Ranskassa. Per…
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:vemork) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vemork (tekniikka)
+Tietoruudun teksti: Vemork on vesivoimalaitos ja museo Rjukanin kaupungin ulkopuolella Telemarkissa Norjassa. Norsk Hydro rakensi sen ja avasi vuonna 1911 typen sitomista ja lannoitteiden valmistusta varten, ja 108 megawatin teholla se oli avautuessaan maailman suurin voimalaitos. Myöhemmin Vemorkiin tuli maailman ensimmäinen laitos, joka valmisti raskasta vettä suurina erinä; tuotanto alkoi joulukuussa 1934. Toisessa maailmansodassa laitosta pidettiin niin vakavana uhkana — pelkona oli saksalaisten atomipommi — että sitä vastaan tehtiin ainakin viisi erillistä hyökkäystä: helmikuussa 1943 laskuvarjoilla pudotetut norjalaisagentit tuhosivat operaatiossa Gunnerside laitoksen raskaan veden osaston ja 500 kiloa tuotetta, ja helmikuussa 1944 vastarintaliike upotti lautan, joka vei lastia Saksaan. Myöhemmin selvisi, etteivät saksalaiset olleet lähelläkään pommia; raskaan veden laitos suljettiin 1971, ja voimala…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mexico City — kaupunkilehti / Mexico City: Kaupunki, joka painuu omaa vauhtiaan] Kaupunki lepää 2 240 metrin korkeudessa entisen Texcoco-järven pohjalla, ja pohja on savea, joka on yhä läpimärkää. Kun sitä vettä pumpataan juomavedeksi, savi tiivistyy ja maanpinta laskee: 1900-luvun alusta lähtien osa kaupungista on painunut jopa yhdeksän metriä, ja vauhti on nyt lähes puoli metriä vuodessa. Laaksosta ei ole vesille luonnollista purkautumistietä, ja painuva maa vaikeuttaa sade- ja jäteveden johtamista pois; kanavia ja tunneleita on kaivettu jo 1600-luvulta lähtien. Sama pehmeä pohja hidasti aikanaan Palacio de Bellas Artesin rakentamista, kun raskas marmoripalatsi alkoi vajota.
+
+### 10.1
+KYSYMYS: Mitä raskas vesi on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vemork (tekniikka)
+Tietoruudun teksti: Vemork on vesivoimalaitos ja museo Rjukanin kaupungin ulkopuolella Telemarkissa Norjassa. Norsk Hydro rakensi sen ja avasi vuonna 1911 typen sitomista ja lannoitteiden valmistusta varten, ja 108 megawatin teholla se oli avautuessaan maailman suurin voimalaitos. Myöhemmin Vemorkiin tuli maailman ensimmäinen laitos, joka valmisti raskasta vettä suurina erinä; tuotanto alkoi joulukuussa 1934. Toisessa maailmansodassa laitosta pidettiin niin vakavana uhkana — pelkona oli saksalaisten atomipommi — että sitä vastaan tehtiin ainakin viisi erillistä hyökkäystä: helmikuussa 1943 laskuvarjoilla pudotetut norjalaisagentit tuhosivat operaatiossa Gunnerside laitoksen raskaan veden osaston ja 500 kiloa tuotetta, ja helmikuussa 1944 vastarintaliike upotti lautan, joka vei lastia Saksaan. Myöhemmin selvisi, etteivät saksalaiset olleet lähelläkään pommia; raskaan veden laitos suljettiin 1971, ja voimala…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mexico City — kaupunkilehti / Mexico City: Kaupunki, joka painuu omaa vauhtiaan] Kaupunki lepää 2 240 metrin korkeudessa entisen Texcoco-järven pohjalla, ja pohja on savea, joka on yhä läpimärkää. Kun sitä vettä pumpataan juomavedeksi, savi tiivistyy ja maanpinta laskee: 1900-luvun alusta lähtien osa kaupungista on painunut jopa yhdeksän metriä, ja vauhti on nyt lähes puoli metriä vuodessa. Laaksosta ei ole vesille luonnollista purkautumistietä, ja painuva maa vaikeuttaa sade- ja jäteveden johtamista pois; kanavia ja tunneleita on kaivettu jo 1600-luvulta lähtien. Sama pehmeä pohja hidasti aikanaan Palacio de Bellas Artesin rakentamista, kun raskas marmoripalatsi alkoi vajota.
+
+### 10.2
+KYSYMYS: Mikä oli operaatio Gunnerside?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vemork (tekniikka)
+Tietoruudun teksti: Vemork on vesivoimalaitos ja museo Rjukanin kaupungin ulkopuolella Telemarkissa Norjassa. Norsk Hydro rakensi sen ja avasi vuonna 1911 typen sitomista ja lannoitteiden valmistusta varten, ja 108 megawatin teholla se oli avautuessaan maailman suurin voimalaitos. Myöhemmin Vemorkiin tuli maailman ensimmäinen laitos, joka valmisti raskasta vettä suurina erinä; tuotanto alkoi joulukuussa 1934. Toisessa maailmansodassa laitosta pidettiin niin vakavana uhkana — pelkona oli saksalaisten atomipommi — että sitä vastaan tehtiin ainakin viisi erillistä hyökkäystä: helmikuussa 1943 laskuvarjoilla pudotetut norjalaisagentit tuhosivat operaatiossa Gunnerside laitoksen raskaan veden osaston ja 500 kiloa tuotetta, ja helmikuussa 1944 vastarintaliike upotti lautan, joka vei lastia Saksaan. Myöhemmin selvisi, etteivät saksalaiset olleet lähelläkään pommia; raskaan veden laitos suljettiin 1971, ja voimala…
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

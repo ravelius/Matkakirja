@@ -1,0 +1,192 @@
+================ KOHTA 1 (kohde:galdhpiggen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Galdhøpiggen (luonto · vuori)
+Tietoruudun teksti: Galdhøpiggen on Norjan, Skandinavian ja koko Pohjois-Euroopan korkein vuori: 2 469 metriä. Se sijaitsee Lomin kunnassa Innlandetin maakunnassa Jotunheimenin vuoristossa Jotunheimenin kansallispuiston sisällä. Ympärillä kohoaa tiheä joukko muita huippuja — Keilhaus topp, Store Styggehøe, Storjuvtinden ja Skardstinden muiden muassa.
+
+### 1.1
+KYSYMYS: Mitä Jotunheimen tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Galdhøpiggen (luonto · vuori)
+Tietoruudun teksti: Galdhøpiggen on Norjan, Skandinavian ja koko Pohjois-Euroopan korkein vuori: 2 469 metriä. Se sijaitsee Lomin kunnassa Innlandetin maakunnassa Jotunheimenin vuoristossa Jotunheimenin kansallispuiston sisällä. Ympärillä kohoaa tiheä joukko muita huippuja — Keilhaus topp, Store Styggehøe, Storjuvtinden ja Skardstinden muiden muassa.
+
+### 1.2
+KYSYMYS: Onko Galdhøpiggenilla jäätikköä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Galdhøpiggen (luonto · vuori)
+Tietoruudun teksti: Galdhøpiggen on Norjan, Skandinavian ja koko Pohjois-Euroopan korkein vuori: 2 469 metriä. Se sijaitsee Lomin kunnassa Innlandetin maakunnassa Jotunheimenin vuoristossa Jotunheimenin kansallispuiston sisällä. Ympärillä kohoaa tiheä joukko muita huippuja — Keilhaus topp, Store Styggehøe, Storjuvtinden ja Skardstinden muiden muassa.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:norjanmeri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjanmeri (meri)
+Tietoruudun teksti: Norjanmeri on reunameri Norjasta luoteeseen, Pohjanmeren ja Grönlanninmeren välissä, ja se rajautuu koillisessa Barentsinmereen. Lounaassa sen erottaa Atlantista Islannin ja Färsaarten välinen vedenalainen harjanne, pohjoisessa Jan Mayenin harjanne erottaa sen Grönlanninmerestä. Meri luetaan joko Atlanttiin tai Jäämereen kuuluvaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Luonto: Joutsenet, jotka jäivät] Lähteen kirkkaat, matalat altaat pysyvät sulana talvellakin tasaisen pohjavesilämpötilan ansiosta, ja siksi kyhmyjoutsenet ovat asettuneet niille pysyvästi asumaan sen sijaan että muuttaisivat etelään. Koko kuudensadankolmen hehtaarin puistoalue on suojeltu luonnonmuistomerkki, ja se on yksi harvoista paikoista, joissa sarajevolainen pääsee kävelemään metsässä suoraan raitiovaunupysäkiltä.
+
+### 2.1
+KYSYMYS: Miksi Norjan rannikko pysyy sulana talvella?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjanmeri (meri)
+Tietoruudun teksti: Norjanmeri on reunameri Norjasta luoteeseen, Pohjanmeren ja Grönlanninmeren välissä, ja se rajautuu koillisessa Barentsinmereen. Lounaassa sen erottaa Atlantista Islannin ja Färsaarten välinen vedenalainen harjanne, pohjoisessa Jan Mayenin harjanne erottaa sen Grönlanninmerestä. Meri luetaan joko Atlanttiin tai Jäämereen kuuluvaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Luonto: Joutsenet, jotka jäivät] Lähteen kirkkaat, matalat altaat pysyvät sulana talvellakin tasaisen pohjavesilämpötilan ansiosta, ja siksi kyhmyjoutsenet ovat asettuneet niille pysyvästi asumaan sen sijaan että muuttaisivat etelään. Koko kuudensadankolmen hehtaarin puistoalue on suojeltu luonnonmuistomerkki, ja se on yksi harvoista paikoista, joissa sarajevolainen pääsee kävelemään metsässä suoraan raitiovaunupysäkiltä.
+
+### 2.2
+KYSYMYS: Mikä Jan Mayenin harjanne on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjanmeri (meri)
+Tietoruudun teksti: Norjanmeri on reunameri Norjasta luoteeseen, Pohjanmeren ja Grönlanninmeren välissä, ja se rajautuu koillisessa Barentsinmereen. Lounaassa sen erottaa Atlantista Islannin ja Färsaarten välinen vedenalainen harjanne, pohjoisessa Jan Mayenin harjanne erottaa sen Grönlanninmerestä. Meri luetaan joko Atlanttiin tai Jäämereen kuuluvaksi.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:barentsinmeri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Norjan puolella Vardøn satama pysyy sulana ympäri vuoden, koska lämmin Pohjois-Atlantin virta yltää tänne asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Aurinko nousi kaksi viikkoa liian aikaisin] 1596–97 — Willem Barentszin laiva etsi pohjoista meritietä Kiinaan ja juuttui jäihin Novaja Zemljan rannikolle. Miehet purkivat laivasta puuta, keräsivät ajopuuta ja rakensivat majan, jota he kutsuivat nimellä Behouden Huys, Pelastunut talo. Seitsemäntoista miestä talvehti siellä napayössä. Tammikuun 24. päivänä 1597 he näkivät auringon kaksi viikkoa ennen kuin sen olisi pitänyt nousta — Barentsz ei uskonut silmiään. Kyse oli harvinaisesta ilmakehän kangastuksesta. Kesäkuussa lähdettiin kahdella avoveneellä kohti kotia. Barentsz kuoli viikko lähdön jälkeen; kaksitoista pääsi perille.
+
+### 3.1
+KYSYMYS: Kuka Willem Barentsz oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Norjan puolella Vardøn satama pysyy sulana ympäri vuoden, koska lämmin Pohjois-Atlantin virta yltää tänne asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Aurinko nousi kaksi viikkoa liian aikaisin] 1596–97 — Willem Barentszin laiva etsi pohjoista meritietä Kiinaan ja juuttui jäihin Novaja Zemljan rannikolle. Miehet purkivat laivasta puuta, keräsivät ajopuuta ja rakensivat majan, jota he kutsuivat nimellä Behouden Huys, Pelastunut talo. Seitsemäntoista miestä talvehti siellä napayössä. Tammikuun 24. päivänä 1597 he näkivät auringon kaksi viikkoa ennen kuin sen olisi pitänyt nousta — Barentsz ei uskonut silmiään. Kyse oli harvinaisesta ilmakehän kangastuksesta. Kesäkuussa lähdettiin kahdella avoveneellä kohti kotia. Barentsz kuoli viikko lähdön jälkeen; kaksitoista pääsi perille.
+
+### 3.2
+KYSYMYS: Miksi merta kutsuttiin ennen Murmanskinmereksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Norjan puolella Vardøn satama pysyy sulana ympäri vuoden, koska lämmin Pohjois-Atlantin virta yltää tänne asti.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:glomma) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glomma (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Glomma oli Norjan työteliäin joki: se virtaa maan rikkaimpien metsäseutujen läpi, ja siksi siitä tuli koko maan tärkein tukinuittojoki. Puuta, vesivoimaa ja hyvä satama suistossa — se yhdistelmä nosti Fredrikstadin ympärille Norjan suurimpia teollisuuslaitoksia. Joki on 621 kilometriä pitkä, maan pisin ja vesirikkain, ja sen valuma-alueeseen kuuluu kolmetoista prosenttia Norjan pinta-alasta. Øyeren-järveen laskiessaan se on kasannut Euroopan suurimman sisämaasuiston, joka ulottuu järven poikki toiselle rannalle. Muinaisskandinaaviksi joen nimi oli Raumelfr, jyrisevä virta.
+
+### 4.1
+KYSYMYS: Miksi Glommaa käytettiin tukinuittoon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glomma (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Glomma oli Norjan työteliäin joki: se virtaa maan rikkaimpien metsäseutujen läpi, ja siksi siitä tuli koko maan tärkein tukinuittojoki. Puuta, vesivoimaa ja hyvä satama suistossa — se yhdistelmä nosti Fredrikstadin ympärille Norjan suurimpia teollisuuslaitoksia. Joki on 621 kilometriä pitkä, maan pisin ja vesirikkain, ja sen valuma-alueeseen kuuluu kolmetoista prosenttia Norjan pinta-alasta. Øyeren-järveen laskiessaan se on kasannut Euroopan suurimman sisämaasuiston, joka ulottuu järven poikki toiselle rannalle. Muinaisskandinaaviksi joen nimi oli Raumelfr, jyrisevä virta.
+
+### 4.2
+KYSYMYS: Mikä on Fetsundin uittolaitos?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glomma (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Glomma oli Norjan työteliäin joki: se virtaa maan rikkaimpien metsäseutujen läpi, ja siksi siitä tuli koko maan tärkein tukinuittojoki. Puuta, vesivoimaa ja hyvä satama suistossa — se yhdistelmä nosti Fredrikstadin ympärille Norjan suurimpia teollisuuslaitoksia. Joki on 621 kilometriä pitkä, maan pisin ja vesirikkain, ja sen valuma-alueeseen kuuluu kolmetoista prosenttia Norjan pinta-alasta. Øyeren-järveen laskiessaan se on kasannut Euroopan suurimman sisämaasuiston, joka ulottuu järven poikki toiselle rannalle. Muinaisskandinaaviksi joen nimi oli Raumelfr, jyrisevä virta.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:urnes) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urnesin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Urnesin sauvakirkko on 1100-luvun sauvakirkko Ornesissa Lustrafjordin varrella Vestlandissa. Se on Norjan vanhimpia sauvakirkkoja: osa hirsirakenteesta on 1000-luvun jälkipuoliskolta, ja nykyinen kirkko rakennettiin noin vuonna 1130 tai vähän sen jälkeen. Nimi tulee sanasta stav, joka tarkoittaa niitä tukevia puupylväitä ja nurkkatolppia, jotka kannattavat koko rakennusta; seinät ovat pystysuoria seinälankkuja rungon urissa. Kirkon pohjoisportaali on antanut nimen Urnes-tyylille, jonka koristeaiheet ovat norjalaisesta muinaisuskosta — juuri se koristelu on näkyvä todiste siitä, miten viikinkikulttuuri muuttui ja sulautui kristinuskoon. Kirkko on ollut muinaismuistoyhdistyksen omistuksessa vuodesta 1881 ja maailmanperintökohde vuodesta 1979.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kirkko, joka seisoo tolppien varassa] 1180 — Sauvakirkko on rakennettu pystytolppien varaan, ja seinälaudat seisovat pystyssä maata koskematta — siksi puu ei lahoa. Borgundin kirkko valmistui noin vuonna 1180 ja on säilynyt lähes muuttumattomana. Keskiajalla kirkkoja oli yli tuhat, mutta nyt niitä on jäljellä 28. Katonharjoilla kaartuu lohikäärmeenpäitä samaan tapaan kuin viikinkilaivojen keulassa: kristillinen kirkko sai koristeekseen vanhemman uskon hahmot. Puu on suojattu tervaamalla, ja siitä tulee sen musta väri.
+
+### 5.1
+KYSYMYS: Mikä sauvakirkko on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urnesin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Urnesin sauvakirkko on 1100-luvun sauvakirkko Ornesissa Lustrafjordin varrella Vestlandissa. Se on Norjan vanhimpia sauvakirkkoja: osa hirsirakenteesta on 1000-luvun jälkipuoliskolta, ja nykyinen kirkko rakennettiin noin vuonna 1130 tai vähän sen jälkeen. Nimi tulee sanasta stav, joka tarkoittaa niitä tukevia puupylväitä ja nurkkatolppia, jotka kannattavat koko rakennusta; seinät ovat pystysuoria seinälankkuja rungon urissa. Kirkon pohjoisportaali on antanut nimen Urnes-tyylille, jonka koristeaiheet ovat norjalaisesta muinaisuskosta — juuri se koristelu on näkyvä todiste siitä, miten viikinkikulttuuri muuttui ja sulautui kristinuskoon. Kirkko on ollut muinaismuistoyhdistyksen omistuksessa vuodesta 1881 ja maailmanperintökohde vuodesta 1979.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kirkko, joka seisoo tolppien varassa] 1180 — Sauvakirkko on rakennettu pystytolppien varaan, ja seinälaudat seisovat pystyssä maata koskematta — siksi puu ei lahoa. Borgundin kirkko valmistui noin vuonna 1180 ja on säilynyt lähes muuttumattomana. Keskiajalla kirkkoja oli yli tuhat, mutta nyt niitä on jäljellä 28. Katonharjoilla kaartuu lohikäärmeenpäitä samaan tapaan kuin viikinkilaivojen keulassa: kristillinen kirkko sai koristeekseen vanhemman uskon hahmot. Puu on suojattu tervaamalla, ja siitä tulee sen musta väri.
+
+### 5.2
+KYSYMYS: Mikä Urnes-tyyli on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urnesin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Urnesin sauvakirkko on 1100-luvun sauvakirkko Ornesissa Lustrafjordin varrella Vestlandissa. Se on Norjan vanhimpia sauvakirkkoja: osa hirsirakenteesta on 1000-luvun jälkipuoliskolta, ja nykyinen kirkko rakennettiin noin vuonna 1130 tai vähän sen jälkeen. Nimi tulee sanasta stav, joka tarkoittaa niitä tukevia puupylväitä ja nurkkatolppia, jotka kannattavat koko rakennusta; seinät ovat pystysuoria seinälankkuja rungon urissa. Kirkon pohjoisportaali on antanut nimen Urnes-tyylille, jonka koristeaiheet ovat norjalaisesta muinaisuskosta — juuri se koristelu on näkyvä todiste siitä, miten viikinkikulttuuri muuttui ja sulautui kristinuskoon. Kirkko on ollut muinaismuistoyhdistyksen omistuksessa vuodesta 1881 ja maailmanperintökohde vuodesta 1979.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
