@@ -3,40 +3,10 @@
   "taskNumber": 68,
   "requestedImages": 60,
   "generationLimit": 60,
-  "generationCalls": 31,
-  "generationRequestsIssued": 31,
-  "imageCount": 29,
-  "pendingIds": [
-    "thimphu-2",
-    "phnom-penh-1",
-    "phnom-penh-2",
-    "naypyidaw-2",
-    "islamabad-2",
-    "kabul-2",
-    "tokio-2",
-    "soul-1",
-    "bridgetown-1",
-    "san-jose-2",
-    "roseau-2",
-    "san-salvador-2",
-    "port-au-prince-2",
-    "castries-2",
-    "port-of-spain-1",
-    "paramaribo-2",
-    "washington-2",
-    "brasilia-2",
-    "santiago-de-chile-2",
-    "buenos-aires-2",
-    "havanna-1",
-    "managua-2",
-    "lima-1",
-    "montevideo-1",
-    "apia-2",
-    "canberra-1",
-    "wellington-1",
-    "suva-2",
-    "honiara-2"
-  ],
+  "generationCalls": 60,
+  "generationRequestsIssued": 60,
+  "imageCount": 58,
+  "pendingIds": [],
   "oldImageRemovalRequests": [
     {
       "id": "san-marino-1",
@@ -255,7 +225,9 @@
       "removalPerformedByCodex": false
     }
   ],
-  "productionComplete": false,
+  "productionComplete": true,
+  "generationProcessingComplete": true,
+  "overallOrderFulfilled": false,
   "partialDelivery": true,
   "allRequestedImagesDeliveredToR2": false,
   "allR2ReadbacksByteExact": true,
@@ -264,7 +236,7 @@
   "editorAcceptance": false,
   "gameIntegrated": false,
   "published": false,
-  "updatedAt": "2026-10-10T11:46:04.792920+00:00",
+  "updatedAt": "2026-10-10T13:07:46.111686+00:00",
   "publicImageDataOnly": true,
   "assets": [
     {
@@ -1332,6 +1304,1055 @@
       "editorAcceptance": false,
       "gameIntegrated": false,
       "published": false
+    },
+    {
+      "id": "thimphu-2",
+      "city": "Thimphu",
+      "ISO3": "BTN",
+      "n": 2,
+      "type": "B",
+      "filename": "thimphu-2.png",
+      "r2Key": "paakaupungit/BTN/20261010/thimphu-2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Kaksi takiinia sumuisessa Motithangin vuoristometsässä. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "84f8386c4e118eb156b2fbd83c11c61c392c1eaf4267b51576a665b7045c0ea4",
+      "bytes": 3336953,
+      "url": "https://media.matkakirja.app/paakaupungit/BTN/20261010/thimphu-2.png?t=84f8386c4e118eb1",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/BTN/20261010/thimphu-2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Sumuinen vuoristometsä, sammaleiset rungot, havupuut, rododendronin näköisiä kukkivia pensaita ja kaksi takiinia muistuttavaa raskasrakenteista sorkkaeläintä kaukaisella aukiolla. Ei ihmisiä, lippuja, rakennuksia, aitoja, katselualustoja tai veistoksia. Historiallinen dzong ei ole kuvassa.",
+      "limits": [
+        "Motithangin tarkka maantieteellinen paikka tai eläinten anatominen/lajikohtainen täsmällisyys ei ole varmistettu generoidun kuvan perusteella.",
+        "Näkyvät yleispiirteet vastaavat korjaustilauksen metsäaihetta; kuvan puu- ja kalliodetaljeista ei päätellä teosidentiteettejä."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "phnom-penh-1",
+      "city": "Phnom Penh",
+      "ISO3": "KHM",
+      "n": 1,
+      "type": "A",
+      "filename": "phnom-penh-1.png",
+      "r2Key": "paakaupungit/KHM/20261010/phnom-penh-1.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Kalastusveneitä Tonlé Sap -joella Phnom Penhin kohdalla iltapäivän valossa. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "b155f5fd5d8e851fdccc8c8f1b68d67601499d80076c2f6525005bfd83bd59eb",
+      "bytes": 2375155,
+      "url": "https://media.matkakirja.app/paakaupungit/KHM/20261010/phnom-penh-1.png?t=b155f5fd5d8e851f",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/KHM/20261010/phnom-penh-1.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Leveä ruskea joki, etualalla kaksi puisia pitkähäntäkalastusvenettä varusteineen, vastarannalla matalia paalutaloja, palmuja ja vehreää kasvillisuutta. Matala aurinko ja kultaiset heijastukset; maisema on valoisa ja yksityiskohdat näkyvät. Pienet kaukaiset veneilijät ilman tunnistettavia kasvoja. Ei palatsia, temppelikattoja, muistomerkkejä, torneja, lippuja tai luettavaa veneiden nimitekstiä.",
+      "limits": [
+        "Generoitua jokimaisemaa ei varmenneta Phnom Penhin/Tonlé Sapin/Koh Dachin tarkaksi paikaksi, talojen koordinaateiksi tai tekijyydeksi.",
+        "Näkyvät matalat perinteiset paalutalot ovat tilauksen sallittu aihe. Etäisen usvan tai puupisteiden pohjalta ei päätellä teosidentiteettiä tai modernia rakennusta."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "phnom-penh-2",
+      "city": "Phnom Penh",
+      "ISO3": "KHM",
+      "n": 2,
+      "type": "B",
+      "filename": "phnom-penh-2.png",
+      "r2Key": "paakaupungit/KHM/20261010/phnom-penh-2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Koh Dachin paalutaloja ja joenrantapolku Mekongin varrella. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "22da14b3720abfef31a2bfc2a1fc62368c60246965a7f3e4c760074305780506",
+      "bytes": 3162502,
+      "url": "https://media.matkakirja.app/paakaupungit/KHM/20261010/phnom-penh-2.png?t=22da14b3720abfef",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/KHM/20261010/phnom-penh-2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Puisia paalutaloja, banaani- ja palmukasvillisuutta, hiekkainen joenrantapolku, pieni puuvene ja sumuinen leveä joki aamun lämpimässä valossa. Etualalla tavallisia puisia aita-/kasvintukia; lähde ei kiellä niitä. Ei betonirakennusta, pagodia, stupaa, veistosta, lippua tai kylttiä. Ei ihmisiä lähikuvassa; etäiset pienveneet eivät erotu henkilöidentiteetteinä.",
+      "limits": [
+        "Generoitua jokimaisemaa ei varmenneta Phnom Penhin/Tonlé Sapin/Koh Dachin tarkaksi paikaksi, talojen koordinaateiksi tai tekijyydeksi.",
+        "Näkyvät matalat perinteiset paalutalot ovat tilauksen sallittu aihe. Etäisen usvan tai puupisteiden pohjalta ei päätellä teosidentiteettiä tai modernia rakennusta."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "naypyidaw-2",
+      "city": "Naypyidaw",
+      "ISO3": "MMR",
+      "n": 2,
+      "type": "B",
+      "filename": "naypyidaw-2.png",
+      "r2Key": "paakaupungit/MMR/20261010/naypyidaw-2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Tyyni järvi ja kaukainen kalastusvene Naypyidawin lähistöllä. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "bad228b73f093d8fa93d7ce7885d8227a5e8de79a038072d377610f48b4bd8af",
+      "bytes": 2410316,
+      "url": "https://media.matkakirja.app/paakaupungit/MMR/20261010/naypyidaw-2.png?t=bad228b73f093d8f",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/MMR/20261010/naypyidaw-2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Tyyni järvi, palmut ja kuivan vyöhykkeen metsä, matalat sinertävät kukkulat ja pieni puuvene lämpimässä iltapäivänvalossa vastaavat korjatun aiheen yleispiirteitä. Veneessä erittäin pieni tumma hahmo ilman tunnistettavia kasvoja. Ei havaittu pagodia (Uppatasanti), patoa, siltoja, rakennuksia, laitureita, kylttejä, veistoksia, lippuja, tekstiä, numeroita, logoja tai sotakuvastoa.",
+      "limits": [
+        "Paikan tarkkoja koordinaatteja, rakennusten yksilöintiä, mittasuhteita tai oikeudellista suojaa ei voi varmistaa pelkän generoidun kuvan perusteella.",
+        "Natiivikuva tarkastettu kokonaisena; tunnistamattomat pienet taustapikselit eivät yksin todista nimettyä arkkitehtuuriteosta.",
+        "Kuva perustuu korjattuun järvimotiiviin; tietyn vedenpidätysaltaan identiteetti ei ole generoidusta kuvasta varmistettavissa."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "islamabad-2",
+      "city": "Islamabad",
+      "ISO3": "PAK",
+      "n": 2,
+      "type": "B",
+      "filename": "islamabad-2.png",
+      "r2Key": "paakaupungit/PAK/20261010/islamabad-2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Kivinen metsäpolku ja pieni puro Margalla Hills -kansallispuiston luontoaiheessa. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "11c0542a0483fea1b3acc0c97b0876702fe743c4088cd9b8f39b5ee9d8f7f1a4",
+      "bytes": 3715623,
+      "url": "https://media.matkakirja.app/paakaupungit/PAK/20261010/islamabad-2.png?t=11c0542a0483fea1",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/PAK/20261010/islamabad-2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Kivinen metsäpolku vasemmalla, havu- ja lehtipuustoa, pieni puro ja sammaleisia lohkareita oikealla; lehvästön suodattama valo. Kuvassa ei näy ihmisiä, rakennuksia, siltoja, kylttejä, lippuja, patsaita tai muita selvästi rakennettuja rakenteita. Ei havaittua luettavaa tekstiä, numeroita, logoja, sotakuvastoa tai tilausten nimettyjä poissuljettuja kohteita.",
+      "limits": [
+        "Generoidun kuvan sijaintia, maantieteellistä tarkkuutta, puulajeja, mittasuhteita tai rakennusten identiteettiä ei ole varmistettu kuvan perusteella.",
+        "Ei oikeudellista varmuuslausumaa; havainto koskee näkyviä yleispiirteitä. Etäisiä epäselviä pikseleitä ei tulkita nimetyksi teokseksi."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "kabul-2",
+      "city": "Kabul",
+      "ISO3": "AFG",
+      "n": 2,
+      "type": "B",
+      "filename": "kabul-2.png",
+      "r2Key": "paakaupungit/AFG/20261010/kabul-2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Qargha-järven rauhallinen rantamaisema Kabulin länsipuolella. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "04e78f5f8c8afb4ea7cc2d004b2a875f8c80822222c18fc39c53f80840088cd5",
+      "bytes": 2690721,
+      "url": "https://media.matkakirja.app/paakaupungit/AFG/20261010/kabul-2.png?t=04e78f5f8c8afb4e",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/AFG/20261010/kabul-2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Tyyni sininen järvi, kivinen pensainen ranta, poppelimäisiä puita vasemmalla ja paljaita ruskeita vuoria taustalla. Ei havaittuja rakennuksia, ravintoloita, patoa, laitureita, veneitä, ihmisiä tai ajoneuvoja. Ei näkyvää tekstiä, numeroita, logoja, lippuja, sotakuvastoa, patsaita, muistomerkkejä tai tilausten nimettyjä poissuljettuja kohteita.",
+      "limits": [
+        "Kuvan tarkkaa sijaintia, maantieteellista vastaavuutta, mittasuhteita, puulajeja tai rakennusten identiteettia ei ole varmistettu.",
+        "Havainto koskee nakyvia yleispiirteita; ei oikeudellista varmuuslausumaa. Epaselvista etapikseleista ei paatella rakennusta tai teosidentiteettia."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "tokio-2",
+      "city": "Tokio",
+      "ISO3": "JPN",
+      "n": 2,
+      "type": "B",
+      "filename": "tokio-2.png",
+      "r2Key": "paakaupungit/JPN/20261010/tokio-2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Nezun pyhäkön punalakattua porttia ja rakennuksia Tokiossa. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "c6ea04a8de1a3e4b313c82b0e5ed536df3a43fffe546c1f8c650dbc6cda7f739",
+      "bytes": 3437515,
+      "url": "https://media.matkakirja.app/paakaupungit/JPN/20261010/tokio-2.png?t=c6ea04a8de1a3e4b",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/JPN/20261010/tokio-2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Punalakattu kaksikerroksinen portti, kultaiset ja värilliset ornamentiikat, harmaa kaareva tiilikatto, takana pyhäkkösali ja sivugalleria näkyvät. Puut peittävät muun taustan. Torii-tunnelia, moderneja torneja, uutta veistosta tai muistomerkkiä ei havaittu. Yksi pieni kävijä kaukana selin. Luettavaa tekstiä, numeroita, logoja, lippuja tai kasvoja ei havaittu; katon ja palkiston pienet yksityiskohdat näyttävät ornamenteilta.",
+      "limits": [
+        "Yleispiirteet vastaavat Nezu-jinja-tilausta, mutta yksittäisen rakennuksen identiteettiä, ajoitusta tai tarkkoja mittasuhteita ei vahvisteta generoidusta kuvasta.",
+        "Katon ja palkiston pienet koristeet eivät ole nimeltä yksilöityjä teoksia; niiden tarkkaa alkuperää tai oikeudellista asemaa ei voida varmistaa."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "soul-1",
+      "city": "Soul",
+      "ISO3": "KOR",
+      "n": 1,
+      "type": "A",
+      "filename": "soul-1.png",
+      "r2Key": "paakaupungit/KOR/20261010/soul-1.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Jongmyon Jeongjeon-pyhäkön pitkä julkisivu Soulissa. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "bf9b31aad7a0658c5d3ea75c0c552a69e6d2df3191d08133a9b42e1e3b40202b",
+      "bytes": 2889895,
+      "url": "https://media.matkakirja.app/paakaupungit/KOR/20261010/soul-1.png?t=bf9b31aad7a0658c",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/KOR/20261010/soul-1.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Pitkä matala yksikerroksinen punapylväinen puurakennus, harmaa tiilikatto ja laaja kivetty piha näkyvät. Korjattu Jongmyo-motiivi säilyi; hanok-kujaa ei esitetä. Taustalla vain vanhalta näyttävää puustoa, metsäinen kukkula ja taivas. Ei modernia skylinea, veistoksia tai valaistuksia. Yksi erittäin pieni selin näkyvä kävijä vasemmalla. Luettavaa tekstiä, numeroita, logoja, lippuja, muotokuvia, seremoniapukuja tai tunnistettavaa kasvoa ei havaittu.",
+      "limits": [
+        "Rakennus vastaa Jongmyon Jeongjeon-tilauksen näkyviä yleispiirteitä, mutta tarkkaa identiteettiä, 1601 ajoitusta ja mitoitusta ei voi vahvistaa generoidusta kuvasta.",
+        "Rakennuksen ja ympäristön mahdollisia uudempia restaurointiosia tai oikeudellista asemaa ei ole yksilöity."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "bridgetown-1",
+      "city": "Bridgetown",
+      "ISO3": "BRB",
+      "n": 1,
+      "type": "A",
+      "filename": "bridgetown-1.png",
+      "r2Key": "paakaupungit/BRB/20261010/bridgetown-1.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Careenagea esittävä tyyni vesiväylä, pienet veneet ja vanhat rantatalot ilman siltaa. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "f22d7da4ffab044b598d067b176cbafbbd756f32d95f8c8451ef957dd78c5c9f",
+      "bytes": 2642155,
+      "url": "https://media.matkakirja.app/paakaupungit/BRB/20261010/bridgetown-1.png?t=f22d7da4ffab044b",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/BRB/20261010/bridgetown-1.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Tyyni vesiväylä, pieniä veneitä ja vaaleita matalia harjakattoisia rantataloja, palmuja ja avointa vettä väylän päässä. Chamberlain Bridgea, siltaa, Independence Archia, kaariporttia, patsaita tai nimettyä poissuljettua kohdetta ei havaittu. Vasemmalla näkyy tavanomaisia pieniä kadun valaisimia. Oikean rakennuksen ovessa pieni valkea kilpimäinen yksityiskohta, sisältö ei ole luettavissa natiivikoossa.",
+      "limits": [
+        "Careenagen tarkka paikka, rakennusidentiteetit ja talojen ikä ovat varmistamatta.",
+        "Pieni kilpimäinen yksityiskohta ei ole tunnistettu teos tai luettava teksti; valaisinten ikä ja tekijä ovat tuntemattomia, eikä niitä ole tunnistettu taidevalaistukseksi.",
+        "Kadun valaisimet poikkeavat kuvakohtaisesta valaistuskiellosta; niiden oikeudellista luonnetta ei päätellä tästä havainnekuvasta."
+      ],
+      "hardVisualConstraintsObservedPass": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "san-jose-2",
+      "city": "San José",
+      "ISO3": "CRI",
+      "n": 2,
+      "type": "B",
+      "filename": "san-jose-2.png",
+      "r2Key": "paakaupungit/CRI/20261010/san-jose-2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Poás-tulivuorta esittävä turkoosi kraatterijärvi harmaiden rinteiden ja pilvimetsän keskellä. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "b33f5f4b84529248b6fd609b60e2b6d29d233d1eef912dd8e0bffa92b6e1d7bd",
+      "bytes": 2688900,
+      "url": "https://media.matkakirja.app/paakaupungit/CRI/20261010/san-jose-2.png?t=b33f5f4b84529248",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/CRI/20261010/san-jose-2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Turkoosi kraatterijärvi harmaiden kalliorinteiden keskellä, ohutta höyryä ja pilviä, kraatterin reunalla matalaa vehreää metsää. Ei havaittuja ihmisiä, rakennuksia, näköalatasanteita, kaiteita, kylttejä, tekstiä, lippuja tai taideteoksia.",
+      "limits": [
+        "Poásin kraatterin tarkka muoto, mittasuhteet, kuvauspaikka ja ajankohtainen luonnontila ovat varmistamatta."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "roseau-2",
+      "city": "Roseau",
+      "ISO3": "DMA",
+      "n": 2,
+      "type": "B",
+      "filename": "roseau-2.png",
+      "r2Key": "paakaupungit/DMA/20261010/roseau-2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Trafalgar Fallsia esittävät kaksi putousta vehreän sademetsärotkon keskellä. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "5e29e9299d499c6d95e180ffe1fb5ac2ec39254f0c1185822df27fd3ec0221a7",
+      "bytes": 3404826,
+      "url": "https://media.matkakirja.app/paakaupungit/DMA/20261010/roseau-2.png?t=5e29e9299d499c6d",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/DMA/20261010/roseau-2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Kaksi putousta vehreässä kapeassa rotkossa: toinen korkeampi ja leveämpi, toinen kapeampi, tummat märät kivet, vesisumua, saniaisia ja trooppista lehvistöä. Ei havaittuja ihmisiä, rakenteita, opasteita, näköalatasanteita, kaiteita, tekstiä tai taideteoksia.",
+      "limits": [
+        "Trafalgar Fallsin tarkka putousten geometria ja kuvauspaikka ovat varmistamatta.",
+        "Havaittu sumu ja vesiroiske eivät itsessään varmista geotermistä höyryä."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "san-salvador-2",
+      "city": "San Salvador",
+      "ISO3": "SLV",
+      "n": 2,
+      "type": "B",
+      "filename": "san-salvador-2.png",
+      "r2Key": "paakaupungit/SLV/20261010/san-salvador-2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Boquerón-kraatterin metsäiset rinteet ja sumu. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "bba9d4b03e37095e7acf2af9e051ffa8c8f8fc2bfd632e71f7f7aeb0bf8d65e5",
+      "bytes": 2787366,
+      "url": "https://media.matkakirja.app/paakaupungit/SLV/20261010/san-salvador-2.png?t=bba9d4b03e37095e",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/SLV/20261010/san-salvador-2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Syvä leveä vihreä kraatteri, jyrkät metsäiset seinämät ja reunan pilviä sekä sumua; luonnolliset kasvillisuus- ja kallioyksityiskohdat. Ei havaittavia rakennuksia, ihmisiä, kaiteita, tasanteita, kylttejä, tekstiä, numeroita, logoja, lippuja tai teoksia. Korjauksessa hylättyä teatteriaihetta ei näy.",
+      "limits": [
+        "Tarkastettu natiivikuva 1536 × 1024.",
+        "Generoitu havainnekuva: tarkka paikannus, topografia, mittasuhteet, rakennusten identiteetti ja oikeudellinen suoja eivät ole faktavarmoja kuvan perusteella."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "port-au-prince-2",
+      "city": "Port-au-Prince",
+      "ISO3": "HTI",
+      "n": 2,
+      "type": "B",
+      "filename": "port-au-prince-2.png",
+      "r2Key": "paakaupungit/HTI/20261010/port-au-prince-2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Fort Jacquesin kivimuurit aamun sumussa. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "3798ace9c1565a02e672ad88f00c5eb523bc9ed7ceeeb96c6911edc86143aa0b",
+      "bytes": 2684684,
+      "url": "https://media.matkakirja.app/paakaupungit/HTI/20261010/port-au-prince-2.png?t=3798ace9c1565a02",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/HTI/20261010/port-au-prince-2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Vanhojen sammaloituneiden kivimuurien kapea käytävä, paikallaan olevat kaksi antiikkitykkiä/tykkipaikkaa, vihreää metsää ja sumun läpi näkyvä lahti. Ei havaittavia opasteita, laattoja, patsaita, tekstiä, numeroita, logoja, lippuja, ihmisiä, sotilaita tai toimintaa. Kaupunki näkyy pienenä ja sumuisena; erottuvia korkeita tai lasisia nykyrakennuksia ei ole havaittu. Korjauksessa hylättyä torirakennusta ei näy.",
+      "limits": [
+        "Tarkastettu natiivikuva 1536 × 1024.",
+        "Generoitu havainnekuva: paikannus, topografia, mittasuhteet, rakennusten identiteetti ja oikeudellinen suoja eivät ole faktavarmoja kuvan perusteella."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "castries-2",
+      "city": "Castries",
+      "ISO3": "LCA",
+      "n": 2,
+      "type": "B",
+      "filename": "castries-2.png",
+      "r2Key": "paakaupungit/LCA/20261010/castries-2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Pigeon Islandin vanhat kivimuurit Rodney Bayn edustalla. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "b3d9aa4d034c2faabdc0be9b5e997046e6c3a1b15d756a6e08a9f82ae6d0a7c2",
+      "bytes": 2907450,
+      "url": "https://media.matkakirja.app/paakaupungit/LCA/20261010/castries-2.png?t=b3d9aa4d034c2faa",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/LCA/20261010/castries-2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Vanhan linnakkeen sammaloituneita harmaita kivimuureja ja raunioita, yksi paikallaan oleva antiikkitykki/tykkipaikka, tyyni lahti ja vihreät kukkulat lämpimässä sivuvalossa. Ei havaittavia opasteita, kaiteita, vierailukeskusta, muistomerkkejä, patsaita, tekstiä, numeroita, logoja, lippuja tai ihmisiä. Kaukaisen lahden yli pieniä rakennuksia ja veneitä, ei erottuvaa korkeaa tai lasista nykyarkkitehtuuria. Korjauksessa hylättyä katedraalin pääaihetta ei näy.",
+      "limits": [
+        "Tarkastettu natiivikuva 1536 × 1024.",
+        "Generoitu havainnekuva: tarkka Castries/Morne Fortune/Pigeon Island/Fort Rodney -paikannus, topografia, mittasuhteet, rakennusten identiteetti ja oikeudellinen suoja eivät ole faktavarmoja kuvan perusteella."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "port-of-spain-1",
+      "city": "Port of Spain",
+      "ISO3": "TTO",
+      "n": 1,
+      "type": "A",
+      "filename": "port-of-spain-1.png",
+      "r2Key": "paakaupungit/TTO/20261010/port-of-spain-1.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Queen’s Park Savannahin nurmikenttä, vanhat sateenpuut ja vihreä vuoriharjanne. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "082020f610ac93a36a57fdbcfb5b6e0a590e6102fadcab55ce8e9deb5ff60890",
+      "bytes": 3115888,
+      "url": "https://media.matkakirja.app/paakaupungit/TTO/20261010/port-of-spain-1.png?t=082020f610ac93a3",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/TTO/20261010/port-of-spain-1.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Laaja nurmikenttä, valtava sateenpuu etualalla, kaukaisia sateenpuita ja vihreä vuoriharjanne lämpimässä iltavalossa. Ihmiset ovat kaukaisia pieniä hahmoja; kasvoja ei voi tunnistaa. Ei luettavaa tekstiä, numeroita, logoa, lippua tai sotakuvastoa havaittu. Puiden välissä aivan kentän takaosassa on pieniä vaaleita vaakasuoria piirteitä. Niitä ei voida yksilöidä rakennuksiksi tai nimetyiksi teoksiksi tästä kuvasta. Magnificent Seven -huviloita tai Twin Towers -torneja ei ole havaittu.",
+      "limits": [
+        "Korjatun aiheen ehdoton rakennuksettomuus jää pienten taustapiirteiden vuoksi epävarmaksi; ei väitetä kuvasta rakennuksia tai teosidentiteettiä varmuudella.",
+        "Sateenpuulajin tarkkaa tunnistusta ja puiston sijaintia ei ole dokumentaarisesti varmennettu."
+      ],
+      "hardVisualConstraintsObservedPass": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "paramaribo-2",
+      "city": "Paramaribo",
+      "ISO3": "SUR",
+      "n": 2,
+      "type": "B",
+      "filename": "paramaribo-2.png",
+      "r2Key": "paakaupungit/SUR/20261010/paramaribo-2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Surinam-joen ruskea vesi ja trooppinen rantametsä Paramaribon lähellä. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "f176b1eddc78826304fed97880fcc9dfc4b5a8111b51322ccce5a13b39b565ab",
+      "bytes": 2169428,
+      "url": "https://media.matkakirja.app/paakaupungit/SUR/20261010/paramaribo-2.png?t=f176b1eddc788263",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/SUR/20261010/paramaribo-2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Ruskea leveä joki vedenpinnan tuntumasta, tiheä trooppinen rantametsä ja mangrovejuuria vasemmalla, aamun usvaa ja kolme pientä kalastusvenettä kaukana. Veneissä erittäin pieniä hahmoja, joiden kasvoja ei voi tunnistaa. Ei merkintöjä, lippuja, logoja tai luettavaa tekstiä. Ei rakennuksia, siltoja, satamarakennelmia, veistoksia tai nimettyä kiellettyä teosta havaittu.",
+      "limits": [
+        "Surinam-joen täsmällistä sijaintia ja kasvillisuuden lajikoostumusta ei ole varmennettu.",
+        "Luonnon yleispiirteet vastaavat aiheen kuvausta; luonnon pienet puu- ja kivimuodot eivät ole näyttöä arkkitehtuuriteoksesta."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "washington-2",
+      "city": "Washington (Washington, D.C.)",
+      "ISO3": "USA",
+      "n": 2,
+      "type": "B",
+      "filename": "washington-2.png",
+      "r2Key": "paakaupungit/USA/20261010/washington-2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Lincoln-muistomerkin vaalea pylväikkö pohjoiskulman suunnalta iltavalossa. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "e4eb2a06dc1dc435e9c41027132d3d911d0ee5e2c79b07524b3c4d50ba81b2b9",
+      "bytes": 2721981,
+      "url": "https://media.matkakirja.app/paakaupungit/USA/20261010/washington-2.png?t=e4eb2a06dc1dc435",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/USA/20261010/washington-2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Vaalea doorilainen pylväikkö ja portaiden yläpää viistosti kulmasta, etualalla oksia ja nurmea lämpimässä iltavalossa. Reflecting Pool -allasta, sen vesipintaa tai sisätilan Lincoln-patsasta ei näy. Ei lippua tai muuta nimettyä muistomerkkiä havaittu. Pieniä hahmoja portailla kaukana, ei tunnistettavia kasvoja. Kivifriisissä näkyy pieniä tiheitä kaiverruksen/merkkirivin kaltaisia yksityiskohtia. Niistä ei saa luettavaa tekstiä, mutta ehdotonta kirjoituksettomuutta ei voi vahvistaa.",
+      "limits": [
+        "Lincoln-muistomerkin täsmällistä pohjoiskulmaa ja geometrian oikeellisuutta ei ole varmennettu.",
+        "Friisin pienten merkkirivien sisältö ei ole luettavaa; niiden tekstiluonne jää epävarmaksi.",
+        "Kuvassa näkyvien historiallista tyyliä jäljittelevien ornamenttien ja porrastason lyhtymäisten kivielementtien ikää tai tekijää ei voi todistaa generoidusta kuvasta."
+      ],
+      "hardVisualConstraintsObservedPass": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "brasilia-2",
+      "city": "Brasília",
+      "ISO3": "BRA",
+      "n": 2,
+      "type": "B",
+      "filename": "brasilia-2.png",
+      "r2Key": "paakaupungit/BRA/20261010/brasilia-2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Cerradon kuivan kauden savannimaisema Brasílian seudulla. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "d4b7551b13064f9da0a88d4f8784d927c80f4b315f12f1d77f1eb5685f3e3ec1",
+      "bytes": 2672619,
+      "url": "https://media.matkakirja.app/paakaupungit/BRA/20261010/brasilia-2.png?t=d4b7551b13064f9d",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/BRA/20261010/brasilia-2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Kuivaa kultaista ruohoa, punaruskeaa maata, kiertyviä matalia puita ja laaja kukkulaharjanne sinistä taivasta vasten. Ei näy rakennuksia, teitä, siltoja, sähkölinjoja, ihmisfiguureja, luettavaa tekstiä, lippuja tai kiellettyjä kaupunkikohteita.",
+      "limits": [
+        "Tarkkaa kansallispuiston näkymää, topografiaa ja kasvilajeja ei ole varmennettu.",
+        "Fotorealistinen havainnekuva; luonnon yleispiirteet vastaavat ohjetta, ei tarkka sijaintitodiste."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "santiago-de-chile-2",
+      "city": "Santiago de Chile",
+      "ISO3": "CHL",
+      "n": 2,
+      "type": "B",
+      "filename": "santiago-de-chile-2.png",
+      "r2Key": "paakaupungit/CHL/20261010/santiago-de-chile-2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Santiagon Iglesia de San Franciscon siirtomaa-ajan kirkko. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "863c8d734b53c4203ee634de50e64c10e73d18aa3e07a39cec0d642e265213b0",
+      "bytes": 2767819,
+      "url": "https://media.matkakirja.app/paakaupungit/CHL/20261010/santiago-de-chile-2.png?t=863c8d734b53c420",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/CHL/20261010/santiago-de-chile-2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Vaalea paksumuurinen historialliselta näyttävä kirkko, sivukellotorni, kivetty piha, vanhoja puita ja matalat tiilikattoiset sivurakennukset. Koristeelliset kivipinnat ja ristit; ei havaittu luettavia kirjoituksia, kylttejä, lippuja tai erillisiä nykymuistomerkkejä. Oikealla kaukana yksi pieni ihmisfiguuri ilman erotettavia kasvoja; ei liikennettä tai korkeita nykyrakennuksia.",
+      "limits": [
+        "Iglesia de San Franciscon tarkkaa julkisivu- ja torni-identiteettiä ei ole vahvistettu; havainnekuva vastaa tilauksen näkyviä yleispiirteitä.",
+        "Koristeiden tekijöitä, ikää ja mahdollisia myöhempiä lisäyksiä ei ole yksilöity eikä juridista suojaa ratkaistu."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "buenos-aires-2",
+      "city": "Buenos Aires",
+      "ISO3": "ARG",
+      "n": 2,
+      "type": "B",
+      "filename": "buenos-aires-2.png",
+      "r2Key": "paakaupungit/ARG/20261010/buenos-aires-2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Teatro Colónin kivijulkisivu Buenos Airesissa. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "45231569800dbc82386f8932fa246f5c1daff4b93774770f17292af026153609",
+      "bytes": 2735920,
+      "url": "https://media.matkakirja.app/paakaupungit/ARG/20261010/buenos-aires-2.png?t=45231569800dbc82",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/ARG/20261010/buenos-aires-2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Vaalea eklektinen kivijulkisivu pylväineen, kaari-ikkunoineen, reliefikoristeluineen ja kolmiootsikkoineen, lämmin iltapäivävalo. Näkyy tavallisia ornamentaalisia katuvalaisimia ja julkisivureliefiä; ei tunnistettua nykytaideteosta. Ei havaittu luettavaa tekstiä, julistetauluja, logoja, lippuja, Obeliscoa tai korkeaa nykyarkkitehtuuria. Muutama pieni kävelijä kaukana jalkakäytävällä; kasvojen piirteet eivät erotu.",
+      "limits": [
+        "Teatro Colónin Cerrito-kadun puolen tarkkaa julkisivuidentiteettiä ja geometriaa ei ole vahvistettu; kuva vastaa näkyviä yleispiirteitä.",
+        "Koristeiden ja valaisinten tekijä/ikä varmistamatta; tavallinen valaisin ei itsessään ole tunnistettu taideteos."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "havanna-1",
+      "city": "Havanna",
+      "ISO3": "CUB",
+      "n": 1,
+      "type": "A",
+      "filename": "havanna-1.png",
+      "r2Key": "paakaupungit/CUB/20261010/havanna-1.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "El Morron vanha rannikkolinnoitus Havannan satamasuulla. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "79430675a9ac32b7f98f300441973540f9f8de7469eed434dd64865b519492e5",
+      "bytes": 2345832,
+      "url": "https://media.matkakirja.app/paakaupungit/CUB/20261010/havanna-1.png?t=79430675a9ac32b7",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/CUB/20261010/havanna-1.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Kalliorannikon vanha kivimuuri ja majakkatorni, etualalla sininen salmen vesi, lämmin auringonlasku. Linnoituksen päällä pieni matala vahtikoppimainen rakennelma ja paljaita pystytankoja; lippuja ei näy. Ei näkyvää tekstiä, logoja, ihmisiä, sotilaita, Cristo-patsasta, El Capitolioa, Malecón-rantamuuria tai poliittista kuvastoa.",
+      "limits": [
+        "Castillo del Morron tarkka geometria, majakan mittasuhteet ja vastarannan kuvauspaikka varmistamatta.",
+        "Pienen linnoituksen päällä olevan rakennelman käyttötarkoitus, ikä ja suunnittelija varmistamatta; ei yksilöityä nykytaideteosta."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "managua-2",
+      "city": "Managua",
+      "ISO3": "NIC",
+      "n": 2,
+      "type": "B",
+      "filename": "managua-2.png",
+      "r2Key": "paakaupungit/NIC/20261010/managua-2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Xiloán kraatterijärven metsäinen ranta. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "235920a034a2cbdba34d33619950dfaa1b06b43afcd386fbc0ec0846e6803976",
+      "bytes": 2709031,
+      "url": "https://media.matkakirja.app/paakaupungit/NIC/20261010/managua-2.png?t=235920a034a2cbdb",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/NIC/20261010/managua-2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Turkoosinvihreä järvi, jyrkähkö metsäinen ympäröivä rinne, kivinen ranta ja kuivan trooppisen metsän näköisiä puita. Ei ihmisiä, rakennuksia, laitureita, veistoksia, kylttejä, tekstiä tai lippuja. Korjausmotivi näkyy kraatterijärvimaisemana; vanhaa katedraalia ei näy.",
+      "limits": [
+        "Kuvan luonnonpiirteet vastaavat tilauksen yleispiirteitä; paikkaa, koordinaatteja ja mittasuhteita ei ole vahvistettu valokuvalähteestä.",
+        "Ei juridista takuuta yksittäisten teosten suojasta; nimettyä suojattua teosta ei havaittu."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "lima-1",
+      "city": "Lima",
+      "ISO3": "PER",
+      "n": 1,
+      "type": "A",
+      "filename": "lima-1.png",
+      "r2Key": "paakaupungit/PER/20261010/lima-1.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Huaca Pucllanan savitiilipyramidi Limassa. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "7b6fccd5c4411967a1cc1b81c0180f81471a7566663503161bcd2a3152a746ff",
+      "bytes": 2710696,
+      "url": "https://media.matkakirja.app/paakaupungit/PER/20261010/lima-1.png?t=7b6fccd5c4411967",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/PER/20261010/lima-1.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Suuri porrasmainen savitiilirakenne, vaakasuoria tasokerroksia, hiekanruskea etuala ja vähäinen kuiva kasvillisuus. Lämmin iltapäivävalo ja ohut pilvinen taivas; ei ihmisiä, nykytorneja, ravintola-/vierailurakennuksia, telineitä, kylttejä, tekstiä tai lippuja. Korjausmotivi näkyy muinaisena savitiilipyramidina, ei Plaza Mayoria tai katedraalia.",
+      "limits": [
+        "Kohteiden näkyvät yleispiirteet vastaavat kuvausta; tarkkaa rakennusidentiteettiä, tiililadontaa, koordinaatteja tai mittasuhteita ei ole vahvistettu.",
+        "Nimettyä suojattua teosta ei havaittu yksilöidysti; tekijää, kuolinvuotta tai juridista suojaa ei voi todeta generoidusta kuvasta."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "montevideo-1",
+      "city": "Montevideo",
+      "ISO3": "URY",
+      "n": 1,
+      "type": "A",
+      "filename": "montevideo-1.png",
+      "r2Key": "paakaupungit/URY/20261010/montevideo-1.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Cerro de Montevideon kukkula ja vanha linnake lahden yli nähtynä. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "0143b672f96fc3fb18e1681493cead916c390d3c160008829e0193c63f4bfdf1",
+      "bytes": 2402048,
+      "url": "https://media.matkakirja.app/paakaupungit/URY/20261010/montevideo-1.png?t=0143b672f96fc3fb",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/URY/20261010/montevideo-1.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Matala valkeaksi kalkitun kivilinnakkeen näköinen rakennus ruohoisella kukkulalla, pensaikkoa, kivinen ranta ja laaja tyyni vesi etualalla. Lämmin iltavalo; ei ihmisiä, lippuja, kylttejä, luettavaa tekstiä, modernia kaupungin siluettia, satamanostureita tai kontteja. Korjausmotivi näkyy kukkulalinnakkeena eikä Ciudad Viejan rantamuurina.",
+      "limits": [
+        "Tarkkaa Fortaleza del Cerro-/Mercado del Puerto -identiteettiä, rakennusmuotoja, paikan topografiaa ja mittasuhteita ei ole vahvistettu.",
+        "Tekijöitä, kuolinvuosia ja juridista suojaa ei voi todeta generoidusta kuvasta; nimettyä suojattua teosta ei yksilöity."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "apia-2",
+      "city": "Apia",
+      "ISO3": "WSM",
+      "n": 2,
+      "type": "B",
+      "filename": "apia-2.png",
+      "r2Key": "paakaupungit/WSM/20261010/apia-2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Falefa-putous ja vihreä luonnonallas Upolun sademetsässä. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "1b075a65ffc2cdb78e78c74df76af22dfbe7ee802be1ba30abbae56f396a6a63",
+      "bytes": 2986771,
+      "url": "https://media.matkakirja.app/paakaupungit/WSM/20261010/apia-2.png?t=1b075a65ffc2cdb7",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/WSM/20261010/apia-2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Leveä porrasmainen putous valuu tummien rosoisten kallioiden yli vihreäsävyiseen altaaseen. Ympärillä tiheää trooppista lehvästöä, saniaisia ja viiniköynnöksiä; pehmeä luonnon hajavalo ja liikkeessä sumentunut putousvesi. Ei ihmisiä, rakennuksia, polkuja, portaita, siltoja, kaiteita, pysäköintialueita, opasteita tai katoksia. Ei havaittavaa tekstiä, numeroita, logoja, lippuja, poliittisia symboleja, sotakuvastoa, veistoksia tai muistomerkkejä. Vailima-museota ei ole kuvassa.",
+      "limits": [
+        "Vastaa uuden korjausaiheen näkyviä yleispiirteitä; Falefa-putouksen täsmällistä geometriaa, kynnysten lukumäärää, mittasuhteita ja nykyistä virtaamaa ei ole paikkavarmennettu.",
+        "Nimettyä suojattua rakennetta tai teosta ei havaittu. Luonnonkallioita tai puita ei tulkita taide- tai arkkitehtuuriteokseksi."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "canberra-1",
+      "city": "Canberra",
+      "ISO3": "AUS",
+      "n": 1,
+      "type": "A",
+      "filename": "canberra-1.png",
+      "r2Key": "paakaupungit/AUS/20261010/canberra-1.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Murrumbidgee-joen luonnonmaisema Canberran eteläpuolella. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "531de755aaf7b2bf332a4ece8a4ca93c230771445e7caf8867ab045fde6b231e",
+      "bytes": 3094393,
+      "url": "https://media.matkakirja.app/paakaupungit/AUS/20261010/canberra-1.png?t=531de755aaf7b2bf",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/AUS/20261010/canberra-1.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Luonnonrantainen vihreänruskea joenmutka, harmaita jokikiviä ja kallioita etualalla, avoimen laidunmaan näköistä rantamaata, korkeita eukalyptuksen näköisiä puita, sinertävä vuorijono sekä aamusumu veden yllä. Ei rakennuksia, siltoja, patoja, keinotekoisia rantarakenteita, mastoja, torneja, veneitä, ihmisiä, tekstiä, logoja, numeroita, lippuja, veistoksia tai muistomerkkejä havaittu. Ei Burley Griffin -järven tai Commonwealth Parkin suunniteltuja puistopiirteitä; kivet, puut ja harjanne ovat luonnonpiirteitä.",
+      "limits": [
+        "Murrumbidgee-joen tarkkaa mutkaa tai Brindabellan yksilöityä harjannetta ei ole vahvistettu.",
+        "Kasvien lajimääritys sekä tilaajan pyytämän kullanruskean/punertavan latvuston vuodenaikavastaavuus jäävät varmistamatta.",
+        "Kuva vastaa korjatun motiivin näkyviä yleispiirteitä eikä ole paikkatodiste."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "wellington-1",
+      "city": "Wellington",
+      "ISO3": "NZL",
+      "n": 1,
+      "type": "A",
+      "filename": "wellington-1.png",
+      "r2Key": "paakaupungit/NZL/20261010/wellington-1.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Wellingtonin etelärannikon kallioita ja Cook-salmen aaltoja Red Rocksin tienoilla. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "a929320dc3e79eb118ef86d21bc741029f6a9fe9e0b9c174921b242733929754",
+      "bytes": 2934386,
+      "url": "https://media.matkakirja.app/paakaupungit/NZL/20261010/wellington-1.png?t=a929320dc3e79eb1",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/NZL/20261010/wellington-1.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Punertavanruskeita rosoisia rantakallioita, vaahtopäistä merta, ruohikkoisia harjanteita ja kaukainen sinertävä vuorijono; valoisa viileä aamumaisema. Ei havaittu ihmisiä, rakennuksia, teitä, laitureita, köysirataa tai merkkitorneja. Ei havaittu luettavaa tekstiä, numeroita, logoja, lippuja, tunnistettavia kasvoja, poliittisia symboleja, sotakuvastoa, veistoksia, muistomerkkejä tai valaistusinstallaatioita. Näkyvät yleispiirteet vastaavat korjattua Red Rocks / Cook-salmi -luontorannan tilausta. Tarkkaa maastomuotojen tai Eteläsaaren vuorten yksilöintiä ei ole varmennettu.",
+      "limits": [
+        "Kuva on kokonaan uusi tekoälyhavainnekuva eikä paikan valokuva tai maantieteellisen tarkkuuden todiste.",
+        "Natiivikuva katsottu kokonaisena 1536x1024-koossa; hyvin pienistä yksityiskohdista ei voi taata absoluuttista poissulkua.",
+        "Paikan täsmällistä identiteettiä, mittasuhteita, koordinaatteja tai minkään teoksen oikeudellista asemaa ei ole varmennettu kuvan perusteella."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "suva-2",
+      "city": "Suva",
+      "ISO3": "FJI",
+      "n": 2,
+      "type": "B",
+      "filename": "suva-2.png",
+      "r2Key": "paakaupungit/FJI/20261010/suva-2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Colo-i-Suvan sademetsän luonnonallas ja pienet virtapaikat Suvan lähellä. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "3275c73bfe0c889945659f0997fd43cadb6afcd95285baa31d6b8b3bc42aea6d",
+      "bytes": 3422129,
+      "url": "https://media.matkakirja.app/paakaupungit/FJI/20261010/suva-2.png?t=3275c73bfe0c8899",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/FJI/20261010/suva-2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Tiheä vihreä sademetsä, puusaniaisia, sammaleisia kiviä ja luonnonkiviportaiden yli virtaavia pieniä koskia, jotka päättyvät kirkkaaseen smaragdinvihreään altaaseen. Näkymä altaan luonnolliselta kivireunalta metsään; puusto siivilöi päivänvaloa ja vesi näkyy lievästi liikkeessä. Ei havaittu ihmisiä, rakennuksia, polkuja, rakennettuja portaita, siltoja, kaiteita tai katoksia. Virtapaikkojen porrasmaiset pinnat näyttävät luonnonkiviltä. Ei havaittu luettavaa tekstiä, numeroita, logoja, opasteita, lippuja, poliittisia symboleja, sotakuvastoa, Fiji Museumia tai Thurston Gardensin rakenteita. Näkyvät yleispiirteet vastaavat korjattua Colo-i-Suvan luonnonallastilausta; tarkkaa paikan maaston yksilöintiä ei ole varmennettu.",
+      "limits": [
+        "Kuva on kokonaan uusi tekoälyhavainnekuva eikä paikan valokuva tai maantieteellisen tarkkuuden todiste.",
+        "Natiivikuva katsottu kokonaisena 1536x1024-koossa; hyvin pienistä yksityiskohdista ei voi taata absoluuttista poissulkua.",
+        "Paikan täsmällistä identiteettiä, mittasuhteita, koordinaatteja tai minkään teoksen oikeudellista asemaa ei ole varmennettu kuvan perusteella."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "honiara-2",
+      "city": "Honiara",
+      "ISO3": "SLB",
+      "n": 2,
+      "type": "B",
+      "filename": "honiara-2.png",
+      "r2Key": "paakaupungit/SLB/20261010/honiara-2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Mataniko-putouksen maisemaa Guadalcanalin sademetsässä Honiaran takana. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "ffd8a244a32d8d75800bbd3e099b501c5a725427c409ebf120a1bc85cb3a88f8",
+      "bytes": 3188627,
+      "url": "https://media.matkakirja.app/paakaupungit/SLB/20261010/honiara-2.png?t=ffd8a244a32d8d75",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/SLB/20261010/honiara-2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Leveä putous valuu tumman kallioseinämän yli syvään sinivihreään altaaseen; näkyy vesisumua, sammalta, saniaisia ja tiheää sademetsää. Kuvakulma altaan reunalta hieman ylöspäin; vesi on liikkeessä ja lehvästön läpi tulee luonnonvaloa. Ei havaittu ihmisiä, rakennuksia, portaita, siltoja, katoksia, luolia, kylttejä, luettavaa tekstiä, logoja, numeroita, lippuja, muistomerkkejä, sodanaikaisia jäänteitä tai poliittisia symboleja. Honiaran Central Market -katosta tai myyntipöytiä ei ole näkyvissä; korjauksen luonnonaihe toteutuu.",
+      "limits": [
+        "Mataniko-putouksen täsmällinen yksilöinti, sijainti, mittasuhteet ja geomorfologia ovat varmistamatta; generointi osoittaa lähdekuvauksen yleispiirteet.",
+        "Suojatun teoksen puuttumista kuvaa havainto tästä kuvasta, ei oikeudellinen takuu."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
     }
   ],
   "omittedItems": [
@@ -1891,7 +2912,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "aasia-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "phnom-penh-1",
@@ -1908,7 +2929,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "aasia-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "phnom-penh-2",
@@ -1925,7 +2946,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "aasia-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "naypyidaw-2",
@@ -1942,7 +2963,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "aasia-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "islamabad-2",
@@ -1959,7 +2980,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "aasia-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "kabul-2",
@@ -1976,7 +2997,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "aasia-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "tokio-2",
@@ -1993,7 +3014,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "aasia-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "soul-1",
@@ -2010,7 +3031,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "aasia-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "bridgetown-1",
@@ -2027,7 +3048,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "amerikat-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "san-jose-2",
@@ -2044,7 +3065,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "amerikat-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "roseau-2",
@@ -2061,7 +3082,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "amerikat-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "san-salvador-2",
@@ -2078,7 +3099,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "amerikat-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "port-au-prince-2",
@@ -2095,7 +3116,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "amerikat-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "castries-2",
@@ -2112,7 +3133,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "amerikat-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "port-of-spain-1",
@@ -2129,7 +3150,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "amerikat-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "paramaribo-2",
@@ -2146,7 +3167,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "amerikat-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "washington-2",
@@ -2163,7 +3184,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "amerikat-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "brasilia-2",
@@ -2180,7 +3201,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "amerikat-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "santiago-de-chile-2",
@@ -2197,7 +3218,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "amerikat-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "buenos-aires-2",
@@ -2214,7 +3235,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "amerikat-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "havanna-1",
@@ -2231,7 +3252,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "amerikat-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "managua-2",
@@ -2248,7 +3269,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "amerikat-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "lima-1",
@@ -2265,7 +3286,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "amerikat-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "montevideo-1",
@@ -2282,7 +3303,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "amerikat-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "apia-2",
@@ -2299,7 +3320,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "oseania-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "canberra-1",
@@ -2316,7 +3337,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "oseania-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "wellington-1",
@@ -2333,7 +3354,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "oseania-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "suva-2",
@@ -2350,7 +3371,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "oseania-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     },
     {
       "id": "honiara-2",
@@ -2367,7 +3388,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "oseania-paakaupungit-20261010",
-      "state": "prospective-motif-corrected-before-generation"
+      "state": "R2-byte-verified"
     }
   ]
 }

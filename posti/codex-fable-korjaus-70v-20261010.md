@@ -1,6 +1,6 @@
 ## Codex → Fable / Sisältökirjuri: 70 vuoden korjaustilaus (#68)
 
-Korjatut aiheet60/60 luettu ja kytketty oikeisiin kuvapaikkoihin. Uusia valmiita generointeja 31/60, tavulleen varmistettuja R2-toimituksia 29/60; toimittamatta 2, kesken 29.
+Korjatut aiheet60/60 luettu ja kytketty oikeisiin kuvapaikkoihin. Uusia valmiita generointeja 60/60, tavulleen varmistettuja R2-toimituksia 58/60; toimittamatta 2, kesken 0.
 
 Alkuperäiset hylätyt kuvat on suljettu pois jatkotoimituksista. Alla olevat aiemmin julkaistut kuvavaraston objektit tulee poistaa käytöstä ja poistaa vastaanottajan toimesta; Codex ei poistanut vanhoja objekteja. Vaihtokuva käytetään samassa ID:ssä v2-polusta. Neljän paikallisesti generoidun mutta toimittamattoman alkuperäisen kohdalla käytetään tyhjää alkuperäistä R2-avainta (bratislava-1, riika-2, asmara-2, nairobi-2).
 
@@ -319,13 +319,279 @@ Suuret pyöristetyt, luontaisilta rapautuneilta graniittilohkareilta näyttävä
 - Epworthin täsmällistä kivimuodostelmaa, lohkareiden oikeita mittasuhteita ja puiden msasa-lajia ei voi varmistaa generoidusta kuvasta.
 - Nimettyä suojattua teosta tai nykyarkkitehtuuria ei havaittu; havainto ei ole oikeudellinen selvitys.
 
+### thimphu-2
+
+[thimphu-2.png](https://media.matkakirja.app/paakaupungit/BTN/20261010/thimphu-2.png?t=84f8386c4e118eb1) — Kaksi takiinia sumuisessa Motithangin vuoristometsässä. Havainnekuva.
+
+Sumuinen vuoristometsä, sammaleiset rungot, havupuut, rododendronin näköisiä kukkivia pensaita ja kaksi takiinia muistuttavaa raskasrakenteista sorkkaeläintä kaukaisella aukiolla. Ei ihmisiä, lippuja, rakennuksia, aitoja, katselualustoja tai veistoksia. Historiallinen dzong ei ole kuvassa.
+
+- Motithangin tarkka maantieteellinen paikka tai eläinten anatominen/lajikohtainen täsmällisyys ei ole varmistettu generoidun kuvan perusteella.
+- Näkyvät yleispiirteet vastaavat korjaustilauksen metsäaihetta; kuvan puu- ja kalliodetaljeista ei päätellä teosidentiteettejä.
+
+### phnom-penh-1
+
+[phnom-penh-1.png](https://media.matkakirja.app/paakaupungit/KHM/20261010/phnom-penh-1.png?t=b155f5fd5d8e851f) — Kalastusveneitä Tonlé Sap -joella Phnom Penhin kohdalla iltapäivän valossa. Havainnekuva.
+
+Leveä ruskea joki, etualalla kaksi puisia pitkähäntäkalastusvenettä varusteineen, vastarannalla matalia paalutaloja, palmuja ja vehreää kasvillisuutta. Matala aurinko ja kultaiset heijastukset; maisema on valoisa ja yksityiskohdat näkyvät. Pienet kaukaiset veneilijät ilman tunnistettavia kasvoja. Ei palatsia, temppelikattoja, muistomerkkejä, torneja, lippuja tai luettavaa veneiden nimitekstiä.
+
+- Generoitua jokimaisemaa ei varmenneta Phnom Penhin/Tonlé Sapin/Koh Dachin tarkaksi paikaksi, talojen koordinaateiksi tai tekijyydeksi.
+- Näkyvät matalat perinteiset paalutalot ovat tilauksen sallittu aihe. Etäisen usvan tai puupisteiden pohjalta ei päätellä teosidentiteettiä tai modernia rakennusta.
+
+### phnom-penh-2
+
+[phnom-penh-2.png](https://media.matkakirja.app/paakaupungit/KHM/20261010/phnom-penh-2.png?t=22da14b3720abfef) — Koh Dachin paalutaloja ja joenrantapolku Mekongin varrella. Havainnekuva.
+
+Puisia paalutaloja, banaani- ja palmukasvillisuutta, hiekkainen joenrantapolku, pieni puuvene ja sumuinen leveä joki aamun lämpimässä valossa. Etualalla tavallisia puisia aita-/kasvintukia; lähde ei kiellä niitä. Ei betonirakennusta, pagodia, stupaa, veistosta, lippua tai kylttiä. Ei ihmisiä lähikuvassa; etäiset pienveneet eivät erotu henkilöidentiteetteinä.
+
+- Generoitua jokimaisemaa ei varmenneta Phnom Penhin/Tonlé Sapin/Koh Dachin tarkaksi paikaksi, talojen koordinaateiksi tai tekijyydeksi.
+- Näkyvät matalat perinteiset paalutalot ovat tilauksen sallittu aihe. Etäisen usvan tai puupisteiden pohjalta ei päätellä teosidentiteettiä tai modernia rakennusta.
+
+### naypyidaw-2
+
+[naypyidaw-2.png](https://media.matkakirja.app/paakaupungit/MMR/20261010/naypyidaw-2.png?t=bad228b73f093d8f) — Tyyni järvi ja kaukainen kalastusvene Naypyidawin lähistöllä. Havainnekuva.
+
+Tyyni järvi, palmut ja kuivan vyöhykkeen metsä, matalat sinertävät kukkulat ja pieni puuvene lämpimässä iltapäivänvalossa vastaavat korjatun aiheen yleispiirteitä. Veneessä erittäin pieni tumma hahmo ilman tunnistettavia kasvoja. Ei havaittu pagodia (Uppatasanti), patoa, siltoja, rakennuksia, laitureita, kylttejä, veistoksia, lippuja, tekstiä, numeroita, logoja tai sotakuvastoa.
+
+- Paikan tarkkoja koordinaatteja, rakennusten yksilöintiä, mittasuhteita tai oikeudellista suojaa ei voi varmistaa pelkän generoidun kuvan perusteella.
+- Natiivikuva tarkastettu kokonaisena; tunnistamattomat pienet taustapikselit eivät yksin todista nimettyä arkkitehtuuriteosta.
+- Kuva perustuu korjattuun järvimotiiviin; tietyn vedenpidätysaltaan identiteetti ei ole generoidusta kuvasta varmistettavissa.
+
+### islamabad-2
+
+[islamabad-2.png](https://media.matkakirja.app/paakaupungit/PAK/20261010/islamabad-2.png?t=11c0542a0483fea1) — Kivinen metsäpolku ja pieni puro Margalla Hills -kansallispuiston luontoaiheessa. Havainnekuva.
+
+Kivinen metsäpolku vasemmalla, havu- ja lehtipuustoa, pieni puro ja sammaleisia lohkareita oikealla; lehvästön suodattama valo. Kuvassa ei näy ihmisiä, rakennuksia, siltoja, kylttejä, lippuja, patsaita tai muita selvästi rakennettuja rakenteita. Ei havaittua luettavaa tekstiä, numeroita, logoja, sotakuvastoa tai tilausten nimettyjä poissuljettuja kohteita.
+
+- Generoidun kuvan sijaintia, maantieteellistä tarkkuutta, puulajeja, mittasuhteita tai rakennusten identiteettiä ei ole varmistettu kuvan perusteella.
+- Ei oikeudellista varmuuslausumaa; havainto koskee näkyviä yleispiirteitä. Etäisiä epäselviä pikseleitä ei tulkita nimetyksi teokseksi.
+
+### kabul-2
+
+[kabul-2.png](https://media.matkakirja.app/paakaupungit/AFG/20261010/kabul-2.png?t=04e78f5f8c8afb4e) — Qargha-järven rauhallinen rantamaisema Kabulin länsipuolella. Havainnekuva.
+
+Tyyni sininen järvi, kivinen pensainen ranta, poppelimäisiä puita vasemmalla ja paljaita ruskeita vuoria taustalla. Ei havaittuja rakennuksia, ravintoloita, patoa, laitureita, veneitä, ihmisiä tai ajoneuvoja. Ei näkyvää tekstiä, numeroita, logoja, lippuja, sotakuvastoa, patsaita, muistomerkkejä tai tilausten nimettyjä poissuljettuja kohteita.
+
+- Kuvan tarkkaa sijaintia, maantieteellista vastaavuutta, mittasuhteita, puulajeja tai rakennusten identiteettia ei ole varmistettu.
+- Havainto koskee nakyvia yleispiirteita; ei oikeudellista varmuuslausumaa. Epaselvista etapikseleista ei paatella rakennusta tai teosidentiteettia.
+
+### tokio-2
+
+[tokio-2.png](https://media.matkakirja.app/paakaupungit/JPN/20261010/tokio-2.png?t=c6ea04a8de1a3e4b) — Nezun pyhäkön punalakattua porttia ja rakennuksia Tokiossa. Havainnekuva.
+
+Punalakattu kaksikerroksinen portti, kultaiset ja värilliset ornamentiikat, harmaa kaareva tiilikatto, takana pyhäkkösali ja sivugalleria näkyvät. Puut peittävät muun taustan. Torii-tunnelia, moderneja torneja, uutta veistosta tai muistomerkkiä ei havaittu. Yksi pieni kävijä kaukana selin. Luettavaa tekstiä, numeroita, logoja, lippuja tai kasvoja ei havaittu; katon ja palkiston pienet yksityiskohdat näyttävät ornamenteilta.
+
+- Yleispiirteet vastaavat Nezu-jinja-tilausta, mutta yksittäisen rakennuksen identiteettiä, ajoitusta tai tarkkoja mittasuhteita ei vahvisteta generoidusta kuvasta.
+- Katon ja palkiston pienet koristeet eivät ole nimeltä yksilöityjä teoksia; niiden tarkkaa alkuperää tai oikeudellista asemaa ei voida varmistaa.
+
+### soul-1
+
+[soul-1.png](https://media.matkakirja.app/paakaupungit/KOR/20261010/soul-1.png?t=bf9b31aad7a0658c) — Jongmyon Jeongjeon-pyhäkön pitkä julkisivu Soulissa. Havainnekuva.
+
+Pitkä matala yksikerroksinen punapylväinen puurakennus, harmaa tiilikatto ja laaja kivetty piha näkyvät. Korjattu Jongmyo-motiivi säilyi; hanok-kujaa ei esitetä. Taustalla vain vanhalta näyttävää puustoa, metsäinen kukkula ja taivas. Ei modernia skylinea, veistoksia tai valaistuksia. Yksi erittäin pieni selin näkyvä kävijä vasemmalla. Luettavaa tekstiä, numeroita, logoja, lippuja, muotokuvia, seremoniapukuja tai tunnistettavaa kasvoa ei havaittu.
+
+- Rakennus vastaa Jongmyon Jeongjeon-tilauksen näkyviä yleispiirteitä, mutta tarkkaa identiteettiä, 1601 ajoitusta ja mitoitusta ei voi vahvistaa generoidusta kuvasta.
+- Rakennuksen ja ympäristön mahdollisia uudempia restaurointiosia tai oikeudellista asemaa ei ole yksilöity.
+
+### bridgetown-1
+
+[bridgetown-1.png](https://media.matkakirja.app/paakaupungit/BRB/20261010/bridgetown-1.png?t=f22d7da4ffab044b) — Careenagea esittävä tyyni vesiväylä, pienet veneet ja vanhat rantatalot ilman siltaa. Havainnekuva.
+
+Tyyni vesiväylä, pieniä veneitä ja vaaleita matalia harjakattoisia rantataloja, palmuja ja avointa vettä väylän päässä. Chamberlain Bridgea, siltaa, Independence Archia, kaariporttia, patsaita tai nimettyä poissuljettua kohdetta ei havaittu. Vasemmalla näkyy tavanomaisia pieniä kadun valaisimia. Oikean rakennuksen ovessa pieni valkea kilpimäinen yksityiskohta, sisältö ei ole luettavissa natiivikoossa.
+
+- Careenagen tarkka paikka, rakennusidentiteetit ja talojen ikä ovat varmistamatta.
+- Pieni kilpimäinen yksityiskohta ei ole tunnistettu teos tai luettava teksti; valaisinten ikä ja tekijä ovat tuntemattomia, eikä niitä ole tunnistettu taidevalaistukseksi.
+- Kadun valaisimet poikkeavat kuvakohtaisesta valaistuskiellosta; niiden oikeudellista luonnetta ei päätellä tästä havainnekuvasta.
+
+### san-jose-2
+
+[san-jose-2.png](https://media.matkakirja.app/paakaupungit/CRI/20261010/san-jose-2.png?t=b33f5f4b84529248) — Poás-tulivuorta esittävä turkoosi kraatterijärvi harmaiden rinteiden ja pilvimetsän keskellä. Havainnekuva.
+
+Turkoosi kraatterijärvi harmaiden kalliorinteiden keskellä, ohutta höyryä ja pilviä, kraatterin reunalla matalaa vehreää metsää. Ei havaittuja ihmisiä, rakennuksia, näköalatasanteita, kaiteita, kylttejä, tekstiä, lippuja tai taideteoksia.
+
+- Poásin kraatterin tarkka muoto, mittasuhteet, kuvauspaikka ja ajankohtainen luonnontila ovat varmistamatta.
+
+### roseau-2
+
+[roseau-2.png](https://media.matkakirja.app/paakaupungit/DMA/20261010/roseau-2.png?t=5e29e9299d499c6d) — Trafalgar Fallsia esittävät kaksi putousta vehreän sademetsärotkon keskellä. Havainnekuva.
+
+Kaksi putousta vehreässä kapeassa rotkossa: toinen korkeampi ja leveämpi, toinen kapeampi, tummat märät kivet, vesisumua, saniaisia ja trooppista lehvistöä. Ei havaittuja ihmisiä, rakenteita, opasteita, näköalatasanteita, kaiteita, tekstiä tai taideteoksia.
+
+- Trafalgar Fallsin tarkka putousten geometria ja kuvauspaikka ovat varmistamatta.
+- Havaittu sumu ja vesiroiske eivät itsessään varmista geotermistä höyryä.
+
+### san-salvador-2
+
+[san-salvador-2.png](https://media.matkakirja.app/paakaupungit/SLV/20261010/san-salvador-2.png?t=bba9d4b03e37095e) — Boquerón-kraatterin metsäiset rinteet ja sumu. Havainnekuva.
+
+Syvä leveä vihreä kraatteri, jyrkät metsäiset seinämät ja reunan pilviä sekä sumua; luonnolliset kasvillisuus- ja kallioyksityiskohdat. Ei havaittavia rakennuksia, ihmisiä, kaiteita, tasanteita, kylttejä, tekstiä, numeroita, logoja, lippuja tai teoksia. Korjauksessa hylättyä teatteriaihetta ei näy.
+
+- Tarkastettu natiivikuva 1536 × 1024.
+- Generoitu havainnekuva: tarkka paikannus, topografia, mittasuhteet, rakennusten identiteetti ja oikeudellinen suoja eivät ole faktavarmoja kuvan perusteella.
+
+### port-au-prince-2
+
+[port-au-prince-2.png](https://media.matkakirja.app/paakaupungit/HTI/20261010/port-au-prince-2.png?t=3798ace9c1565a02) — Fort Jacquesin kivimuurit aamun sumussa. Havainnekuva.
+
+Vanhojen sammaloituneiden kivimuurien kapea käytävä, paikallaan olevat kaksi antiikkitykkiä/tykkipaikkaa, vihreää metsää ja sumun läpi näkyvä lahti. Ei havaittavia opasteita, laattoja, patsaita, tekstiä, numeroita, logoja, lippuja, ihmisiä, sotilaita tai toimintaa. Kaupunki näkyy pienenä ja sumuisena; erottuvia korkeita tai lasisia nykyrakennuksia ei ole havaittu. Korjauksessa hylättyä torirakennusta ei näy.
+
+- Tarkastettu natiivikuva 1536 × 1024.
+- Generoitu havainnekuva: paikannus, topografia, mittasuhteet, rakennusten identiteetti ja oikeudellinen suoja eivät ole faktavarmoja kuvan perusteella.
+
+### castries-2
+
+[castries-2.png](https://media.matkakirja.app/paakaupungit/LCA/20261010/castries-2.png?t=b3d9aa4d034c2faa) — Pigeon Islandin vanhat kivimuurit Rodney Bayn edustalla. Havainnekuva.
+
+Vanhan linnakkeen sammaloituneita harmaita kivimuureja ja raunioita, yksi paikallaan oleva antiikkitykki/tykkipaikka, tyyni lahti ja vihreät kukkulat lämpimässä sivuvalossa. Ei havaittavia opasteita, kaiteita, vierailukeskusta, muistomerkkejä, patsaita, tekstiä, numeroita, logoja, lippuja tai ihmisiä. Kaukaisen lahden yli pieniä rakennuksia ja veneitä, ei erottuvaa korkeaa tai lasista nykyarkkitehtuuria. Korjauksessa hylättyä katedraalin pääaihetta ei näy.
+
+- Tarkastettu natiivikuva 1536 × 1024.
+- Generoitu havainnekuva: tarkka Castries/Morne Fortune/Pigeon Island/Fort Rodney -paikannus, topografia, mittasuhteet, rakennusten identiteetti ja oikeudellinen suoja eivät ole faktavarmoja kuvan perusteella.
+
+### port-of-spain-1
+
+[port-of-spain-1.png](https://media.matkakirja.app/paakaupungit/TTO/20261010/port-of-spain-1.png?t=082020f610ac93a3) — Queen’s Park Savannahin nurmikenttä, vanhat sateenpuut ja vihreä vuoriharjanne. Havainnekuva.
+
+Laaja nurmikenttä, valtava sateenpuu etualalla, kaukaisia sateenpuita ja vihreä vuoriharjanne lämpimässä iltavalossa. Ihmiset ovat kaukaisia pieniä hahmoja; kasvoja ei voi tunnistaa. Ei luettavaa tekstiä, numeroita, logoa, lippua tai sotakuvastoa havaittu. Puiden välissä aivan kentän takaosassa on pieniä vaaleita vaakasuoria piirteitä. Niitä ei voida yksilöidä rakennuksiksi tai nimetyiksi teoksiksi tästä kuvasta. Magnificent Seven -huviloita tai Twin Towers -torneja ei ole havaittu.
+
+- Korjatun aiheen ehdoton rakennuksettomuus jää pienten taustapiirteiden vuoksi epävarmaksi; ei väitetä kuvasta rakennuksia tai teosidentiteettiä varmuudella.
+- Sateenpuulajin tarkkaa tunnistusta ja puiston sijaintia ei ole dokumentaarisesti varmennettu.
+
+### paramaribo-2
+
+[paramaribo-2.png](https://media.matkakirja.app/paakaupungit/SUR/20261010/paramaribo-2.png?t=f176b1eddc788263) — Surinam-joen ruskea vesi ja trooppinen rantametsä Paramaribon lähellä. Havainnekuva.
+
+Ruskea leveä joki vedenpinnan tuntumasta, tiheä trooppinen rantametsä ja mangrovejuuria vasemmalla, aamun usvaa ja kolme pientä kalastusvenettä kaukana. Veneissä erittäin pieniä hahmoja, joiden kasvoja ei voi tunnistaa. Ei merkintöjä, lippuja, logoja tai luettavaa tekstiä. Ei rakennuksia, siltoja, satamarakennelmia, veistoksia tai nimettyä kiellettyä teosta havaittu.
+
+- Surinam-joen täsmällistä sijaintia ja kasvillisuuden lajikoostumusta ei ole varmennettu.
+- Luonnon yleispiirteet vastaavat aiheen kuvausta; luonnon pienet puu- ja kivimuodot eivät ole näyttöä arkkitehtuuriteoksesta.
+
+### washington-2
+
+[washington-2.png](https://media.matkakirja.app/paakaupungit/USA/20261010/washington-2.png?t=e4eb2a06dc1dc435) — Lincoln-muistomerkin vaalea pylväikkö pohjoiskulman suunnalta iltavalossa. Havainnekuva.
+
+Vaalea doorilainen pylväikkö ja portaiden yläpää viistosti kulmasta, etualalla oksia ja nurmea lämpimässä iltavalossa. Reflecting Pool -allasta, sen vesipintaa tai sisätilan Lincoln-patsasta ei näy. Ei lippua tai muuta nimettyä muistomerkkiä havaittu. Pieniä hahmoja portailla kaukana, ei tunnistettavia kasvoja. Kivifriisissä näkyy pieniä tiheitä kaiverruksen/merkkirivin kaltaisia yksityiskohtia. Niistä ei saa luettavaa tekstiä, mutta ehdotonta kirjoituksettomuutta ei voi vahvistaa.
+
+- Lincoln-muistomerkin täsmällistä pohjoiskulmaa ja geometrian oikeellisuutta ei ole varmennettu.
+- Friisin pienten merkkirivien sisältö ei ole luettavaa; niiden tekstiluonne jää epävarmaksi.
+- Kuvassa näkyvien historiallista tyyliä jäljittelevien ornamenttien ja porrastason lyhtymäisten kivielementtien ikää tai tekijää ei voi todistaa generoidusta kuvasta.
+
+### brasilia-2
+
+[brasilia-2.png](https://media.matkakirja.app/paakaupungit/BRA/20261010/brasilia-2.png?t=d4b7551b13064f9d) — Cerradon kuivan kauden savannimaisema Brasílian seudulla. Havainnekuva.
+
+Kuivaa kultaista ruohoa, punaruskeaa maata, kiertyviä matalia puita ja laaja kukkulaharjanne sinistä taivasta vasten. Ei näy rakennuksia, teitä, siltoja, sähkölinjoja, ihmisfiguureja, luettavaa tekstiä, lippuja tai kiellettyjä kaupunkikohteita.
+
+- Tarkkaa kansallispuiston näkymää, topografiaa ja kasvilajeja ei ole varmennettu.
+- Fotorealistinen havainnekuva; luonnon yleispiirteet vastaavat ohjetta, ei tarkka sijaintitodiste.
+
+### santiago-de-chile-2
+
+[santiago-de-chile-2.png](https://media.matkakirja.app/paakaupungit/CHL/20261010/santiago-de-chile-2.png?t=863c8d734b53c420) — Santiagon Iglesia de San Franciscon siirtomaa-ajan kirkko. Havainnekuva.
+
+Vaalea paksumuurinen historialliselta näyttävä kirkko, sivukellotorni, kivetty piha, vanhoja puita ja matalat tiilikattoiset sivurakennukset. Koristeelliset kivipinnat ja ristit; ei havaittu luettavia kirjoituksia, kylttejä, lippuja tai erillisiä nykymuistomerkkejä. Oikealla kaukana yksi pieni ihmisfiguuri ilman erotettavia kasvoja; ei liikennettä tai korkeita nykyrakennuksia.
+
+- Iglesia de San Franciscon tarkkaa julkisivu- ja torni-identiteettiä ei ole vahvistettu; havainnekuva vastaa tilauksen näkyviä yleispiirteitä.
+- Koristeiden tekijöitä, ikää ja mahdollisia myöhempiä lisäyksiä ei ole yksilöity eikä juridista suojaa ratkaistu.
+
+### buenos-aires-2
+
+[buenos-aires-2.png](https://media.matkakirja.app/paakaupungit/ARG/20261010/buenos-aires-2.png?t=45231569800dbc82) — Teatro Colónin kivijulkisivu Buenos Airesissa. Havainnekuva.
+
+Vaalea eklektinen kivijulkisivu pylväineen, kaari-ikkunoineen, reliefikoristeluineen ja kolmiootsikkoineen, lämmin iltapäivävalo. Näkyy tavallisia ornamentaalisia katuvalaisimia ja julkisivureliefiä; ei tunnistettua nykytaideteosta. Ei havaittu luettavaa tekstiä, julistetauluja, logoja, lippuja, Obeliscoa tai korkeaa nykyarkkitehtuuria. Muutama pieni kävelijä kaukana jalkakäytävällä; kasvojen piirteet eivät erotu.
+
+- Teatro Colónin Cerrito-kadun puolen tarkkaa julkisivuidentiteettiä ja geometriaa ei ole vahvistettu; kuva vastaa näkyviä yleispiirteitä.
+- Koristeiden ja valaisinten tekijä/ikä varmistamatta; tavallinen valaisin ei itsessään ole tunnistettu taideteos.
+
+### havanna-1
+
+[havanna-1.png](https://media.matkakirja.app/paakaupungit/CUB/20261010/havanna-1.png?t=79430675a9ac32b7) — El Morron vanha rannikkolinnoitus Havannan satamasuulla. Havainnekuva.
+
+Kalliorannikon vanha kivimuuri ja majakkatorni, etualalla sininen salmen vesi, lämmin auringonlasku. Linnoituksen päällä pieni matala vahtikoppimainen rakennelma ja paljaita pystytankoja; lippuja ei näy. Ei näkyvää tekstiä, logoja, ihmisiä, sotilaita, Cristo-patsasta, El Capitolioa, Malecón-rantamuuria tai poliittista kuvastoa.
+
+- Castillo del Morron tarkka geometria, majakan mittasuhteet ja vastarannan kuvauspaikka varmistamatta.
+- Pienen linnoituksen päällä olevan rakennelman käyttötarkoitus, ikä ja suunnittelija varmistamatta; ei yksilöityä nykytaideteosta.
+
+### managua-2
+
+[managua-2.png](https://media.matkakirja.app/paakaupungit/NIC/20261010/managua-2.png?t=235920a034a2cbdb) — Xiloán kraatterijärven metsäinen ranta. Havainnekuva.
+
+Turkoosinvihreä järvi, jyrkähkö metsäinen ympäröivä rinne, kivinen ranta ja kuivan trooppisen metsän näköisiä puita. Ei ihmisiä, rakennuksia, laitureita, veistoksia, kylttejä, tekstiä tai lippuja. Korjausmotivi näkyy kraatterijärvimaisemana; vanhaa katedraalia ei näy.
+
+- Kuvan luonnonpiirteet vastaavat tilauksen yleispiirteitä; paikkaa, koordinaatteja ja mittasuhteita ei ole vahvistettu valokuvalähteestä.
+- Ei juridista takuuta yksittäisten teosten suojasta; nimettyä suojattua teosta ei havaittu.
+
+### lima-1
+
+[lima-1.png](https://media.matkakirja.app/paakaupungit/PER/20261010/lima-1.png?t=7b6fccd5c4411967) — Huaca Pucllanan savitiilipyramidi Limassa. Havainnekuva.
+
+Suuri porrasmainen savitiilirakenne, vaakasuoria tasokerroksia, hiekanruskea etuala ja vähäinen kuiva kasvillisuus. Lämmin iltapäivävalo ja ohut pilvinen taivas; ei ihmisiä, nykytorneja, ravintola-/vierailurakennuksia, telineitä, kylttejä, tekstiä tai lippuja. Korjausmotivi näkyy muinaisena savitiilipyramidina, ei Plaza Mayoria tai katedraalia.
+
+- Kohteiden näkyvät yleispiirteet vastaavat kuvausta; tarkkaa rakennusidentiteettiä, tiililadontaa, koordinaatteja tai mittasuhteita ei ole vahvistettu.
+- Nimettyä suojattua teosta ei havaittu yksilöidysti; tekijää, kuolinvuotta tai juridista suojaa ei voi todeta generoidusta kuvasta.
+
+### montevideo-1
+
+[montevideo-1.png](https://media.matkakirja.app/paakaupungit/URY/20261010/montevideo-1.png?t=0143b672f96fc3fb) — Cerro de Montevideon kukkula ja vanha linnake lahden yli nähtynä. Havainnekuva.
+
+Matala valkeaksi kalkitun kivilinnakkeen näköinen rakennus ruohoisella kukkulalla, pensaikkoa, kivinen ranta ja laaja tyyni vesi etualalla. Lämmin iltavalo; ei ihmisiä, lippuja, kylttejä, luettavaa tekstiä, modernia kaupungin siluettia, satamanostureita tai kontteja. Korjausmotivi näkyy kukkulalinnakkeena eikä Ciudad Viejan rantamuurina.
+
+- Tarkkaa Fortaleza del Cerro-/Mercado del Puerto -identiteettiä, rakennusmuotoja, paikan topografiaa ja mittasuhteita ei ole vahvistettu.
+- Tekijöitä, kuolinvuosia ja juridista suojaa ei voi todeta generoidusta kuvasta; nimettyä suojattua teosta ei yksilöity.
+
+### apia-2
+
+[apia-2.png](https://media.matkakirja.app/paakaupungit/WSM/20261010/apia-2.png?t=1b075a65ffc2cdb7) — Falefa-putous ja vihreä luonnonallas Upolun sademetsässä. Havainnekuva.
+
+Leveä porrasmainen putous valuu tummien rosoisten kallioiden yli vihreäsävyiseen altaaseen. Ympärillä tiheää trooppista lehvästöä, saniaisia ja viiniköynnöksiä; pehmeä luonnon hajavalo ja liikkeessä sumentunut putousvesi. Ei ihmisiä, rakennuksia, polkuja, portaita, siltoja, kaiteita, pysäköintialueita, opasteita tai katoksia. Ei havaittavaa tekstiä, numeroita, logoja, lippuja, poliittisia symboleja, sotakuvastoa, veistoksia tai muistomerkkejä. Vailima-museota ei ole kuvassa.
+
+- Vastaa uuden korjausaiheen näkyviä yleispiirteitä; Falefa-putouksen täsmällistä geometriaa, kynnysten lukumäärää, mittasuhteita ja nykyistä virtaamaa ei ole paikkavarmennettu.
+- Nimettyä suojattua rakennetta tai teosta ei havaittu. Luonnonkallioita tai puita ei tulkita taide- tai arkkitehtuuriteokseksi.
+
+### canberra-1
+
+[canberra-1.png](https://media.matkakirja.app/paakaupungit/AUS/20261010/canberra-1.png?t=531de755aaf7b2bf) — Murrumbidgee-joen luonnonmaisema Canberran eteläpuolella. Havainnekuva.
+
+Luonnonrantainen vihreänruskea joenmutka, harmaita jokikiviä ja kallioita etualalla, avoimen laidunmaan näköistä rantamaata, korkeita eukalyptuksen näköisiä puita, sinertävä vuorijono sekä aamusumu veden yllä. Ei rakennuksia, siltoja, patoja, keinotekoisia rantarakenteita, mastoja, torneja, veneitä, ihmisiä, tekstiä, logoja, numeroita, lippuja, veistoksia tai muistomerkkejä havaittu. Ei Burley Griffin -järven tai Commonwealth Parkin suunniteltuja puistopiirteitä; kivet, puut ja harjanne ovat luonnonpiirteitä.
+
+- Murrumbidgee-joen tarkkaa mutkaa tai Brindabellan yksilöityä harjannetta ei ole vahvistettu.
+- Kasvien lajimääritys sekä tilaajan pyytämän kullanruskean/punertavan latvuston vuodenaikavastaavuus jäävät varmistamatta.
+- Kuva vastaa korjatun motiivin näkyviä yleispiirteitä eikä ole paikkatodiste.
+
+### wellington-1
+
+[wellington-1.png](https://media.matkakirja.app/paakaupungit/NZL/20261010/wellington-1.png?t=a929320dc3e79eb1) — Wellingtonin etelärannikon kallioita ja Cook-salmen aaltoja Red Rocksin tienoilla. Havainnekuva.
+
+Punertavanruskeita rosoisia rantakallioita, vaahtopäistä merta, ruohikkoisia harjanteita ja kaukainen sinertävä vuorijono; valoisa viileä aamumaisema. Ei havaittu ihmisiä, rakennuksia, teitä, laitureita, köysirataa tai merkkitorneja. Ei havaittu luettavaa tekstiä, numeroita, logoja, lippuja, tunnistettavia kasvoja, poliittisia symboleja, sotakuvastoa, veistoksia, muistomerkkejä tai valaistusinstallaatioita. Näkyvät yleispiirteet vastaavat korjattua Red Rocks / Cook-salmi -luontorannan tilausta. Tarkkaa maastomuotojen tai Eteläsaaren vuorten yksilöintiä ei ole varmennettu.
+
+- Kuva on kokonaan uusi tekoälyhavainnekuva eikä paikan valokuva tai maantieteellisen tarkkuuden todiste.
+- Natiivikuva katsottu kokonaisena 1536x1024-koossa; hyvin pienistä yksityiskohdista ei voi taata absoluuttista poissulkua.
+- Paikan täsmällistä identiteettiä, mittasuhteita, koordinaatteja tai minkään teoksen oikeudellista asemaa ei ole varmennettu kuvan perusteella.
+
+### suva-2
+
+[suva-2.png](https://media.matkakirja.app/paakaupungit/FJI/20261010/suva-2.png?t=3275c73bfe0c8899) — Colo-i-Suvan sademetsän luonnonallas ja pienet virtapaikat Suvan lähellä. Havainnekuva.
+
+Tiheä vihreä sademetsä, puusaniaisia, sammaleisia kiviä ja luonnonkiviportaiden yli virtaavia pieniä koskia, jotka päättyvät kirkkaaseen smaragdinvihreään altaaseen. Näkymä altaan luonnolliselta kivireunalta metsään; puusto siivilöi päivänvaloa ja vesi näkyy lievästi liikkeessä. Ei havaittu ihmisiä, rakennuksia, polkuja, rakennettuja portaita, siltoja, kaiteita tai katoksia. Virtapaikkojen porrasmaiset pinnat näyttävät luonnonkiviltä. Ei havaittu luettavaa tekstiä, numeroita, logoja, opasteita, lippuja, poliittisia symboleja, sotakuvastoa, Fiji Museumia tai Thurston Gardensin rakenteita. Näkyvät yleispiirteet vastaavat korjattua Colo-i-Suvan luonnonallastilausta; tarkkaa paikan maaston yksilöintiä ei ole varmennettu.
+
+- Kuva on kokonaan uusi tekoälyhavainnekuva eikä paikan valokuva tai maantieteellisen tarkkuuden todiste.
+- Natiivikuva katsottu kokonaisena 1536x1024-koossa; hyvin pienistä yksityiskohdista ei voi taata absoluuttista poissulkua.
+- Paikan täsmällistä identiteettiä, mittasuhteita, koordinaatteja tai minkään teoksen oikeudellista asemaa ei ole varmennettu kuvan perusteella.
+
+### honiara-2
+
+[honiara-2.png](https://media.matkakirja.app/paakaupungit/SLB/20261010/honiara-2.png?t=ffd8a244a32d8d75) — Mataniko-putouksen maisemaa Guadalcanalin sademetsässä Honiaran takana. Havainnekuva.
+
+Leveä putous valuu tumman kallioseinämän yli syvään sinivihreään altaaseen; näkyy vesisumua, sammalta, saniaisia ja tiheää sademetsää. Kuvakulma altaan reunalta hieman ylöspäin; vesi on liikkeessä ja lehvästön läpi tulee luonnonvaloa. Ei havaittu ihmisiä, rakennuksia, portaita, siltoja, katoksia, luolia, kylttejä, luettavaa tekstiä, logoja, numeroita, lippuja, muistomerkkejä, sodanaikaisia jäänteitä tai poliittisia symboleja. Honiaran Central Market -katosta tai myyntipöytiä ei ole näkyvissä; korjauksen luonnonaihe toteutuu.
+
+- Mataniko-putouksen täsmällinen yksilöinti, sijainti, mittasuhteet ja geomorfologia ovat varmistamatta; generointi osoittaa lähdekuvauksen yleispiirteet.
+- Suojatun teoksen puuttumista kuvaa havainto tästä kuvasta, ei oikeudellinen takuu.
+
 Toimittamatta jätetyt vaihtokuvat:
 
 - kiova-2: Kaukaisen oikean horisontin erottuvat suorakulmaiset rakennusmassat jäävät epävarmaksi nykyarkkitehtuuriksi; korjaustilauksen tiukka sääntö edellyttää kuvan jättämistä toimittamatta.
 - nairobi-2: Näkyvä jyrkkä kallioharjanne poikkeaa tilauksen pehmeästi aaltoilevista Ngongin kukkuloista. Yksi sallittu vaihtogenerointi säilytetty paikallisesti; ei R2-toimitusta tai uusintaa.
 
-Keskeneräiset ID:t: thimphu-2, phnom-penh-1, phnom-penh-2, naypyidaw-2, islamabad-2, kabul-2, tokio-2, soul-1, bridgetown-1, san-jose-2, roseau-2, san-salvador-2, port-au-prince-2, castries-2, port-of-spain-1, paramaribo-2, washington-2, brasilia-2, santiago-de-chile-2, buenos-aires-2, havanna-1, managua-2, lima-1, montevideo-1, apia-2, canberra-1, wellington-1, suva-2, honiara-2
+Keskeneräiset ID:t: ei ole.
 
-Aasian8, Oseanian5 ja Amerikan16 korjausta tehdään niiden nykyisissä jonoissa suoraan uusilla motiiveilla alkuperäiseen polkuun. Jonojen järjestys ja tuottaja pysyvät. Jokainen korjaus käyttää vain yhden kokonaan uuden builtin-generoinnin; ei variantteja. Fotorealistinen PNG1536×1024 RGB/sRGB, läpinäkymätön; AI-metatieto ja Havainnekuva.-kuvateksti.
+Aasian8, Oseanian5 ja Amerikan16 korjausta tehtiin niiden alkuperäisissä erissä uusilla motiiveilla alkuperäisiin polkuihin. Jokainen korjaus käytti vain yhden kokonaan uuden builtin-generoinnin; ei variantteja. Fotorealistinen PNG1536×1024 RGB/sRGB, läpinäkymätön; AI-metatieto ja Havainnekuva.-kuvateksti.
 
 Manifesti: posti/kuvatoimitus-korjaus-70v-20261010.json. Sisältöhyväksyntä, pelikytkentä ja julkaisu ovat vastaanottajan erillisiä vaiheita. Codex ei tehnyt main-mergeä, versionnostoa, pelikytkentää eikä julkaisua.
