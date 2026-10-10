@@ -214,7 +214,7 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
   jalustaa, Keyserin rintakuva 72,5 ilman tammisokkelia 38,5 → skannauksessa sokkeli mukana: korkeus_m 1,11). Tauon jälkeen: patsaat-taulu.json
   korkeus_m näistä (jalustan sisältävissä skannattu osa tarkistettava kuvasta), arvio=false → patsaat_pakkaa.py → alankomaat.py → nl_tuotanto.
 
-## TAUON JÄLKEEN 14.1x–15.1x (tili vaihdettu) — TEHTY
+## TAUON JÄLKEEN 14.1x–15.0x (tili vaihdettu) — TEHTY
 - **Palatsi-viipale NYKY** viety: PALA bccf694794d5f5f6 (blender 97e3984b613f4379, v45f 19699c220, CI 38047634238); 1499 cf16ad94ef3c76bc.
   Siirtoseppä kytki molemmat (99b9fead3), OsaviipaleetTestit läpi. Worktree v45f poistettu.
 - **ND v4c** LS2:lle (tekoaly-v4c, kalibrointi_v4c.json, aja_tekseli_v4c.zsh [LODIT="0 1 2"], LAHTEET "v4c"): pystykivi lämmin beige 176/163/143,
@@ -230,6 +230,6 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
   lahde/aja_tuotanto.zsh (sali → leivonta → astcm → kuvat). Varmuuskopiot patsaat-taulu-arvio.json, patsaat-arvio/, ../taidemuseo-alankomaat-v2-arvio/.
 - PT:n levytehtävä: proto-3d/_tyo/metahuman-koe → T7 + symlinkki.
 
-## SEURAAVAKSI (15.1x)
+## SEURAAVAKSI (15.0x)
 1) LS2:n parit ND v4c ja Peking v3 → säätö. 2) PT:n hyväksyntä NL-sali v2b → vienti LS1:lle. 3) Olavinlinna-erä Siirtosepän arkista:
    rannan vaaleat kivet 1499 liian kirkkaat (v46w ja v46z-176-b), ponttonisillan leikkauksen ulkopuolelle jääneet tummat palaset ennen 1975.
