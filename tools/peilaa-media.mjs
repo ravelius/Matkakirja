@@ -224,7 +224,9 @@ function kohteet() {
   const ilmanKommentteja = (teksti) => teksti.split('\n')
     .filter((r) => !/^\s*(\/\/|\*|\/\*)/.test(r))
     .join('\n');
-  const koodi = ilmanKommentteja(paketit);
+  // Kuvat ja liput poimitaan paketeista sekä fokusnostosta (kortin valokuvat, esim. NAMA Machine d'Anticythère 1.jpg,
+  // ovat vain siellä); muut-tiedostoista vain arkisto-osoitteet (peili-404-jatko 11.10.2026).
+  const koodi = ilmanKommentteja(`${paketit}\n${readFileSync(join(JUURI, 'js/fokusnosto.js'), 'utf8')}`);
 
   // Heittomerkilliset nimet ("Château d\'If") katkesivat yksinkertaisella
   // hakukuviolla ensimmäiseen hipsuun ja päätyivät 404:ään. Siksi
@@ -255,10 +257,15 @@ function kohteet() {
    * poimimatta: 36 kuvaa ja 65 lippua puuttuivat peilistä
    * (Julkaisijan peili-404-selvitys 10.10.2026).
    */
+  /*
+   * Raja on Unicode-kirjain (\p{L}): ä ei ole \w, joten `reikälippu: '⏎ + '`
+   * lipputiedot.js:n proosassa osui ja tuotti tyhjän nimen. Merkkijonoliteraalissa
+   * ei voi olla rivinvaihtoa, joten arvo ei saa ylittää riviä (peili-404-jatko 11.10.).
+   */
   const poimi = (kentta) => new Set([
-    ...[...koodi.matchAll(new RegExp(`(^|[^\\w])"?${kentta}"?\\s*:\\s*'((?:[^'\\\\]|\\\\.)*)'`, 'gm'))].map((m) => pura(m[2])),
-    ...[...koodi.matchAll(new RegExp(`(^|[^\\w])"?${kentta}"?\\s*:\\s*"((?:[^"\\\\]|\\\\.)*)"`, 'gm'))].map((m) => pura(m[2])),
-  ]);
+    ...[...koodi.matchAll(new RegExp(`(^|[^\\p{L}\\p{N}_])"?${kentta}"?\\s*:\\s*'((?:[^'\\\\\\n]|\\\\.)*)'`, 'gmu'))].map((m) => pura(m[2])),
+    ...[...koodi.matchAll(new RegExp(`(^|[^\\p{L}\\p{N}_])"?${kentta}"?\\s*:\\s*"((?:[^"\\\\\\n]|\\\\.)*)"`, 'gmu'))].map((m) => pura(m[2])),
+  ].filter((n) => n.trim() !== ''));
   // `tiedosto:` tarkoittaa paketeissa Commonsin kuvatiedostoa, mutta
   // sama kentännimi on myös repon omilla äänitiedostoilla
   // (js/packs/viritysaanet.js). Niitä ei ole Commonsissa: haku palautti
