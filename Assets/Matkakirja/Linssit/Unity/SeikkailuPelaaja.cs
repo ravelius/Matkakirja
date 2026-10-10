@@ -243,9 +243,11 @@ namespace Matkakirja.Natiivi
         /// <summary>Botti (vianselvitys): kävele pisteeseen napautuskävelyn tavoin (reitti NavMeshillä). Palauttaa, löytyikö reitti.</summary>
         /// <summary>Botin viimeisimmän reitin tila (PathComplete / PathPartial = pelaaja NavMesh-saarella / ei reittiä).</summary>
         public string BottiReitti { get; private set; }
+        /// <summary>Miksi napautusreitti päättyi viimeksi ennen perille pääsyä (botin loki; perillä = null).</summary>
+        public string ReittiLoppui;
         public bool KaveleKohti(Vector3 kohde)
         {
-            napautusReitti.Clear();
+            napautusReitti.Clear(); ReittiLoppui = null;
             var polku = new NavMeshPath();
             bool ok = NavMesh.SamplePosition(kohde, out var k, 1.0f, NavMesh.AllAreas) && NavMesh.CalculatePath(transform.position, k.position, NavMesh.AllAreas, polku)
                 && polku.status != NavMeshPathStatus.PathInvalid && polku.corners.Length > 1;
@@ -259,11 +261,11 @@ namespace Matkakirja.Natiivi
         void NapautusSyote(ref KavelySyote s, float dt)
         {
             if (napautusReitti.Count == 0) return;
-            if (Math.Abs(s.LiikeX) > Kavely.KuolleAlue || Math.Abs(s.LiikeY) > Kavely.KuolleAlue) { napautusReitti.Clear(); return; }   // oma ohjaus
+            if (Math.Abs(s.LiikeX) > Kavely.KuolleAlue || Math.Abs(s.LiikeY) > Kavely.KuolleAlue) { napautusReitti.Clear(); ReittiLoppui = $"oma ohjaus ({s.LiikeX:F2}, {s.LiikeY:F2})"; return; }   // oma ohjaus
             var d = napautusReitti[0] - transform.position; d.y = 0;
             while (d.magnitude < PerillaM) { napautusReitti.RemoveAt(0); if (napautusReitti.Count == 0) return; d = napautusReitti[0] - transform.position; d.y = 0; }
             jumiAika += dt;
-            if (jumiAika > JumiS) { if ((transform.position - jumiPaikka).magnitude < 0.1f) { napautusReitti.Clear(); return; } jumiAika = 0; jumiPaikka = transform.position; }
+            if (jumiAika > JumiS) { if ((transform.position - jumiPaikka).magnitude < 0.1f) { napautusReitti.Clear(); ReittiLoppui = "jumi (ei liikettä " + JumiS + " s)"; return; } jumiAika = 0; jumiPaikka = transform.position; }
             d.Normalize();
             double y = kavely.KameraYaw * Math.PI / 180, sy = Math.Sin(y), cy = Math.Cos(y);
             s.LiikeY = d.x * sy + d.z * cy; s.LiikeX = d.x * cy - d.z * sy;
@@ -434,7 +436,7 @@ namespace Matkakirja.Natiivi
         public void Siirra(Vector3 paikka)
         {
             cc.enabled = false; transform.position = paikka; cc.enabled = true; pysty = 0; viimeMaassa = paikka;
-            kavely.NopeusX = kavely.NopeusZ = 0; napautusReitti.Clear(); silmaMaailma = float.NaN;
+            kavely.NopeusX = kavely.NopeusZ = 0; if (napautusReitti.Count > 0) ReittiLoppui = "siirto"; napautusReitti.Clear(); silmaMaailma = float.NaN;
         }
 
         static void LisaaTaytevalo(Transform isa, int kerros, Vector3 paikka)
@@ -523,7 +525,7 @@ namespace Matkakirja.Natiivi
             var s = LueSyote();
             NapautusSyote(ref s, dt);
             if (Time.unscaledTime > leikkausTarkistus) { leikkausTarkistus = Time.unscaledTime + 0.5f; SeikkailuKavely.PaivitaLeikkaukset(transform.position); }
-            if (Otteessa) { s.LiikeX = s.LiikeY = 0; s.Juoksu = false; napautusReitti.Clear(); }
+            if (Otteessa) { s.LiikeX = s.LiikeY = 0; s.Juoksu = false; if (napautusReitti.Count > 0) ReittiLoppui = "otteessa"; napautusReitti.Clear(); }
             if (PaivitaOteKiipeily(dt, s)) { PaivitaKadet(dt); return; }
             if (Ohjattu != null)
             {
