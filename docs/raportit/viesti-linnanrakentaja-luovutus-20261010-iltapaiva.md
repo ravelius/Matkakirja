@@ -91,3 +91,20 @@ Siirtosepän arkki v46z-176-b (`proto-3d/lokit/todistus-vaiheet-v46z-176-b-20261
   ripustuksella, LS1 teokset.json natiivi 691969c66 → lahde/teokset-ls1-691969c66.json) --patsaat (34) --ao 0.6 --ao-voima 0.5; varmuuskopio
   leivo_sali_ennen_varjot.py; tarkistuskuva taidemuseo-runko/lahde/atlas_kuva.py (ATLAS_LX=900). LS1 kytkee; LS1:n veistokset.json (6) ja
   m2-v1/v2 ripustus eroavat v2e:n sali.json:sta (kerrottu). Lattiaheijastus = LS1:n ajonaikainen osa.
+
+## SEURAAVA TEHTÄVÄ: ND v5c (PT 17.5x; omistaja 17.4x v5b: "paljon parempi, mutta tekstuurit menevät väärin, holvikaari leviää pystylinjojen päälle")
+v6k14 (v5b) menee junaan. v5c:n viat (PT, LS2-arkki 4dc824ab5): 1) portaalien maalatut kaarirenkaat eivät osu mallin kaaripaloihin → kaksi kaarta,
+ja maalattu kaari jatkuu pilastereille/tukipilareille; 2) ruusuikkunatason ikkunoiden maalatut kaaret ja ristikot valuvat aukkojen ohi;
+3) portaaleissa ja tympanoneissa pikselimäisiä laikkuja (lähde venytetty yli 2×).
+Suunnitelma (LR 17.5x):
+- Mallin reunakartta länsinäkymästä: codex-ohje/lansi/nd_lansi_syvyys.png + _normaali.png (syvyys-/normaalireunat) + luokat.png → elementit
+  (portaalit 3, sivuikkunat 4 + ruusu, tukipilarit/pilasterit, tornien lanseetit, galleriat) omina maskeinaan (yhtenäiset syvyystasot).
+- Kuvan rekisteröinti ELEMENTTI KERRALLAAN: kuva_lansi_kohdista.py:n paloittain affiininen kartta alkuarvauksena → kullekin elementille oma
+  affiini/homografia, joka sovittaa kuvan reunat (Canny/gradientti) mallin reunoihin (chamfer-etäisyys, ECC reunakuvilla) elementin maskissa.
+- Rajaus: kuvan yksityiskohta vain elementin omalle pinnalle (maskin sisään, ei geometrian reunan yli); elementtien väliin tasainen pohja.
+- Portaaleille tarkempi lähde: Sisältökirjurin vertailu/nd arkissa lähikuvat (arkki-nd-2025: 1, 4, 8, 11, 21, 46, 47; CC BY-SA / tarkista kuvat.json
+  /kandidaatit.json) ladataan täysikokoisina (KYSY lupa latauksiin omistajalta/PT:ltä, jos sääntö vaatii) → oma rekisteröinti portaalin maskiin.
+- Uusi portti (kaupunkipinnat-v1/lahde/): tekstuurin reunat vs mallin reunat ortossa ≤ 2 px (chamfer-mediaani/p90), venytys ≤ 2×
+  (paikallinen jakobiaani kuvasta ohjekehykseen; kuva_lansi_kohdista.py:n karttasta).
+- Sitten LODIT 0 1 2 (aja_tekseli_v5b.zsh → v5c, sama kalibrointi_v5b.json), kiviportti --L-max 1,00, ortoportti → LS2 pari
+  (sama arkki + portaalien lähikuva) → PT → omistaja.
