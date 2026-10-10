@@ -1,0 +1,1012 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kotorinlahti (meri)
+Tietoruudun teksti: Kotorinlahti on Montenegron rannikon syvälle vuoristoon työntyvä merenlahti, joka on noin 28 kilometriä pitkä ja jonka ranta-alue kiertää kaikkiaan yli 107 kilometriä. Kapeimmillaan Verigen salmessa lahti kutistuu vain 0,3 kilometrin levyiseksi, ja suurin syvyys on 60 metriä. Lahtea reunustavat Orjenin ja Lovćenin vuoristot, ja sen rannoilla ovat Kotor, Perast, Risan, Tivat ja Herceg Novi. Lahden alue on Unescon maailmanperintökohde vuodesta 1979, ja siihen kuuluvat myös Perastin edustan saarekkeet Sveti Đorđe ja Neitsyt Marian kalliosaari. Kotorin vanhankaupungin linnoitusjärjestelmä nousee yli 260 metrin korkeuteen, ja suurin osa rakenteista on Venetsian ajalta.
+AIEMPI KYSYMYS: Kuinka kapea Kotorinlahti on kapeimmillaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kapeimmillaan Kotorinlahti kutistuu [[Verigen salmessa]] vain 0,3 kilometrin eli 300 metrin levyiseksi. Koko lahti on noin 28 kilometriä pitkä ja syvimmillään 60 metriä, ja sen rannoilla sijaitsevat muun muassa [[Kotor]] ja [[Perast]]. Kapea kohta, mut kyyhky mahtuu siitä.
+KYSYMYS: Kerro lisää: Verigen salmessa
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kotorinlahti (meri)
+Tietoruudun teksti: Kotorinlahti on Montenegron rannikon syvälle vuoristoon työntyvä merenlahti, joka on noin 28 kilometriä pitkä ja jonka ranta-alue kiertää kaikkiaan yli 107 kilometriä. Kapeimmillaan Verigen salmessa lahti kutistuu vain 0,3 kilometrin levyiseksi, ja suurin syvyys on 60 metriä. Lahtea reunustavat Orjenin ja Lovćenin vuoristot, ja sen rannoilla ovat Kotor, Perast, Risan, Tivat ja Herceg Novi. Lahden alue on Unescon maailmanperintökohde vuodesta 1979, ja siihen kuuluvat myös Perastin edustan saarekkeet Sveti Đorđe ja Neitsyt Marian kalliosaari. Kotorin vanhankaupungin linnoitusjärjestelmä nousee yli 260 metrin korkeuteen, ja suurin osa rakenteista on Venetsian ajalta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historia: Muuri joka kiipeää vuorelle] 9.–18. vuosisata — Kotor kätkeytyy Euroopan eteläisimmän vuonon perukkaan, jyrkkien vuorten ja meren väliin. Kaupunki on ollut asutettu yli 2000 vuotta, ja roomalaiset, bysanttilaiset, venetsialaiset, itävaltalaiset ja osmanit ovat jättäneet siihen jälkensä – vanhankaupungin sydämessä kohoaa vuonna 1166 vihitty Pyhän Tryphonin katedraali. Suurin osa muureista nousi venetsialaisvallan aikana: ne kiipeävät 260 metrin korkeuteen kaupungin yllä, ja pituutta niillä on lähes 4,5 kilometriä. Unesco listasi Kotorin maailmanperinnöksi jo 1979, ja 2017 muurit liitettiin vielä venetsialaisten puolustusrakennelmien sarjaan.
+AIEMPI KYSYMYS: Kuinka kapea Kotorinlahti on kapeimmillaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kapeimmillaan Kotorinlahti kutistuu [[Verigen salmessa]] vain 0,3 kilometrin eli 300 metrin levyiseksi. Koko lahti on noin 28 kilometriä pitkä ja syvimmillään 60 metriä, ja sen rannoilla sijaitsevat muun muassa [[Kotor]] ja [[Perast]]. Kapea kohta, mut kyyhky mahtuu siitä.
+KYSYMYS: Kerro lisää: Kotor
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kotorinlahti (meri)
+Tietoruudun teksti: Kotorinlahti on Montenegron rannikon syvälle vuoristoon työntyvä merenlahti, joka on noin 28 kilometriä pitkä ja jonka ranta-alue kiertää kaikkiaan yli 107 kilometriä. Kapeimmillaan Verigen salmessa lahti kutistuu vain 0,3 kilometrin levyiseksi, ja suurin syvyys on 60 metriä. Lahtea reunustavat Orjenin ja Lovćenin vuoristot, ja sen rannoilla ovat Kotor, Perast, Risan, Tivat ja Herceg Novi. Lahden alue on Unescon maailmanperintökohde vuodesta 1979, ja siihen kuuluvat myös Perastin edustan saarekkeet Sveti Đorđe ja Neitsyt Marian kalliosaari. Kotorin vanhankaupungin linnoitusjärjestelmä nousee yli 260 metrin korkeuteen, ja suurin osa rakenteista on Venetsian ajalta.
+AIEMPI KYSYMYS: Kuinka kapea Kotorinlahti on kapeimmillaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kapeimmillaan Kotorinlahti kutistuu [[Verigen salmessa]] vain 0,3 kilometrin eli 300 metrin levyiseksi. Koko lahti on noin 28 kilometriä pitkä ja syvimmillään 60 metriä, ja sen rannoilla sijaitsevat muun muassa [[Kotor]] ja [[Perast]]. Kapea kohta, mut kyyhky mahtuu siitä.
+KYSYMYS: Kerro lisää: Perast
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kotorinlahti (meri)
+Tietoruudun teksti: Kotorinlahti on Montenegron rannikon syvälle vuoristoon työntyvä merenlahti, joka on noin 28 kilometriä pitkä ja jonka ranta-alue kiertää kaikkiaan yli 107 kilometriä. Kapeimmillaan Verigen salmessa lahti kutistuu vain 0,3 kilometrin levyiseksi, ja suurin syvyys on 60 metriä. Lahtea reunustavat Orjenin ja Lovćenin vuoristot, ja sen rannoilla ovat Kotor, Perast, Risan, Tivat ja Herceg Novi. Lahden alue on Unescon maailmanperintökohde vuodesta 1979, ja siihen kuuluvat myös Perastin edustan saarekkeet Sveti Đorđe ja Neitsyt Marian kalliosaari. Kotorin vanhankaupungin linnoitusjärjestelmä nousee yli 260 metrin korkeuteen, ja suurin osa rakenteista on Venetsian ajalta.
+AIEMPI KYSYMYS: Minkä vuoristojen väliin lahti jää?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Lahtea reunustavat [[Orjenin]] ja [[Lovćenin]] vuoristot, ja lahti työntyy Montenegron rannikolta syvälle vuoristoon. Alue on [[Unescon]] maailmanperintökohde vuodesta 1979. Kaksi vuoristoa yhdessä lauseessa, ei paha.
+KYSYMYS: Kerro lisää: Orjenin
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kotorinlahti (meri)
+Tietoruudun teksti: Kotorinlahti on Montenegron rannikon syvälle vuoristoon työntyvä merenlahti, joka on noin 28 kilometriä pitkä ja jonka ranta-alue kiertää kaikkiaan yli 107 kilometriä. Kapeimmillaan Verigen salmessa lahti kutistuu vain 0,3 kilometrin levyiseksi, ja suurin syvyys on 60 metriä. Lahtea reunustavat Orjenin ja Lovćenin vuoristot, ja sen rannoilla ovat Kotor, Perast, Risan, Tivat ja Herceg Novi. Lahden alue on Unescon maailmanperintökohde vuodesta 1979, ja siihen kuuluvat myös Perastin edustan saarekkeet Sveti Đorđe ja Neitsyt Marian kalliosaari. Kotorin vanhankaupungin linnoitusjärjestelmä nousee yli 260 metrin korkeuteen, ja suurin osa rakenteista on Venetsian ajalta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historia: 461 porrasta pilviin] 1851–1974 — Petar II Petrović-Njegoš oli sekä Montenegron ruhtinaspiispa että maan tärkein runoilija, ja hänen toiveensa oli levätä Lovćenin vuoren huipulla. Kuoltuaan 1851 hänet haudattiin sinne pieneen kappeliin. Ensimmäisessä maailmansodassa Itävalta-Unkarin miehittäjät halusivat pystyttää huipulle muistomerkin keisari Franz Josefille ja vaativat jäännökset siirrettäväksi Cetinjeen; kappeli rappeutui pahoin. Vasta 1970-luvulla kroatialainen kuvanveistäjä Ivan Meštrović sai valmiiksi uuden mausoleumin Jezerski vrhin huipulle, 1660 metrin korkeuteen. Huipulle kiipeää 461 kiviporrasta, ja mausoleumia pidetään maailman korkeimpana.
+AIEMPI KYSYMYS: Minkä vuoristojen väliin lahti jää?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Lahtea reunustavat [[Orjenin]] ja [[Lovćenin]] vuoristot, ja lahti työntyy Montenegron rannikolta syvälle vuoristoon. Alue on [[Unescon]] maailmanperintökohde vuodesta 1979. Kaksi vuoristoa yhdessä lauseessa, ei paha.
+KYSYMYS: Kerro lisää: Lovćenin
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kotorinlahti (meri)
+Tietoruudun teksti: Kotorinlahti on Montenegron rannikon syvälle vuoristoon työntyvä merenlahti, joka on noin 28 kilometriä pitkä ja jonka ranta-alue kiertää kaikkiaan yli 107 kilometriä. Kapeimmillaan Verigen salmessa lahti kutistuu vain 0,3 kilometrin levyiseksi, ja suurin syvyys on 60 metriä. Lahtea reunustavat Orjenin ja Lovćenin vuoristot, ja sen rannoilla ovat Kotor, Perast, Risan, Tivat ja Herceg Novi. Lahden alue on Unescon maailmanperintökohde vuodesta 1979, ja siihen kuuluvat myös Perastin edustan saarekkeet Sveti Đorđe ja Neitsyt Marian kalliosaari. Kotorin vanhankaupungin linnoitusjärjestelmä nousee yli 260 metrin korkeuteen, ja suurin osa rakenteista on Venetsian ajalta.
+AIEMPI KYSYMYS: Minkä vuoristojen väliin lahti jää?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Lahtea reunustavat [[Orjenin]] ja [[Lovćenin]] vuoristot, ja lahti työntyy Montenegron rannikolta syvälle vuoristoon. Alue on [[Unescon]] maailmanperintökohde vuodesta 1979. Kaksi vuoristoa yhdessä lauseessa, ei paha.
+KYSYMYS: Kerro lisää: Unescon
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kotorinlahti (meri)
+Tietoruudun teksti: Kotorinlahti on Montenegron rannikon syvälle vuoristoon työntyvä merenlahti, joka on noin 28 kilometriä pitkä ja jonka ranta-alue kiertää kaikkiaan yli 107 kilometriä. Kapeimmillaan Verigen salmessa lahti kutistuu vain 0,3 kilometrin levyiseksi, ja suurin syvyys on 60 metriä. Lahtea reunustavat Orjenin ja Lovćenin vuoristot, ja sen rannoilla ovat Kotor, Perast, Risan, Tivat ja Herceg Novi. Lahden alue on Unescon maailmanperintökohde vuodesta 1979, ja siihen kuuluvat myös Perastin edustan saarekkeet Sveti Đorđe ja Neitsyt Marian kalliosaari. Kotorin vanhankaupungin linnoitusjärjestelmä nousee yli 260 metrin korkeuteen, ja suurin osa rakenteista on Venetsian ajalta.
+AIEMPI KYSYMYS: Mitkä paikkakunnat sijaitsevat Kotorinlahden rannoilla?
+AIEMPI VASTAUS (Livia):
+Ai tota. Viisi nimeä, ne minä muistan. Kotorinlahden rannoilla sijaitsevat [[Kotor]], [[Perast]], [[Risan]], [[Tivat]] ja [[Herceg Novi]]. Kotorin vanhankaupungin linnoitusjärjestelmä nousee yli 260 metrin korkeuteen, ja suurin osa sen rakenteista on Venetsian ajalta.
+
+Ylhäältä katsoen muurit näyttävät vuorelle kiivenneeltä nauhalta, ja minä kunnioitan jokaista porrasta, jonka joku on rakentanut lentämättä.
+KYSYMYS: Kerro lisää: Risan
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kotorinlahti (meri)
+Tietoruudun teksti: Kotorinlahti on Montenegron rannikon syvälle vuoristoon työntyvä merenlahti, joka on noin 28 kilometriä pitkä ja jonka ranta-alue kiertää kaikkiaan yli 107 kilometriä. Kapeimmillaan Verigen salmessa lahti kutistuu vain 0,3 kilometrin levyiseksi, ja suurin syvyys on 60 metriä. Lahtea reunustavat Orjenin ja Lovćenin vuoristot, ja sen rannoilla ovat Kotor, Perast, Risan, Tivat ja Herceg Novi. Lahden alue on Unescon maailmanperintökohde vuodesta 1979, ja siihen kuuluvat myös Perastin edustan saarekkeet Sveti Đorđe ja Neitsyt Marian kalliosaari. Kotorin vanhankaupungin linnoitusjärjestelmä nousee yli 260 metrin korkeuteen, ja suurin osa rakenteista on Venetsian ajalta.
+AIEMPI KYSYMYS: Mitkä paikkakunnat sijaitsevat Kotorinlahden rannoilla?
+AIEMPI VASTAUS (Livia):
+Ai tota. Viisi nimeä, ne minä muistan. Kotorinlahden rannoilla sijaitsevat [[Kotor]], [[Perast]], [[Risan]], [[Tivat]] ja [[Herceg Novi]]. Kotorin vanhankaupungin linnoitusjärjestelmä nousee yli 260 metrin korkeuteen, ja suurin osa sen rakenteista on Venetsian ajalta.
+
+Ylhäältä katsoen muurit näyttävät vuorelle kiivenneeltä nauhalta, ja minä kunnioitan jokaista porrasta, jonka joku on rakentanut lentämättä.
+KYSYMYS: Kerro lisää: Tivat
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kotorinlahti (meri)
+Tietoruudun teksti: Kotorinlahti on Montenegron rannikon syvälle vuoristoon työntyvä merenlahti, joka on noin 28 kilometriä pitkä ja jonka ranta-alue kiertää kaikkiaan yli 107 kilometriä. Kapeimmillaan Verigen salmessa lahti kutistuu vain 0,3 kilometrin levyiseksi, ja suurin syvyys on 60 metriä. Lahtea reunustavat Orjenin ja Lovćenin vuoristot, ja sen rannoilla ovat Kotor, Perast, Risan, Tivat ja Herceg Novi. Lahden alue on Unescon maailmanperintökohde vuodesta 1979, ja siihen kuuluvat myös Perastin edustan saarekkeet Sveti Đorđe ja Neitsyt Marian kalliosaari. Kotorin vanhankaupungin linnoitusjärjestelmä nousee yli 260 metrin korkeuteen, ja suurin osa rakenteista on Venetsian ajalta.
+AIEMPI KYSYMYS: Mitkä paikkakunnat sijaitsevat Kotorinlahden rannoilla?
+AIEMPI VASTAUS (Livia):
+Ai tota. Viisi nimeä, ne minä muistan. Kotorinlahden rannoilla sijaitsevat [[Kotor]], [[Perast]], [[Risan]], [[Tivat]] ja [[Herceg Novi]]. Kotorin vanhankaupungin linnoitusjärjestelmä nousee yli 260 metrin korkeuteen, ja suurin osa sen rakenteista on Venetsian ajalta.
+
+Ylhäältä katsoen muurit näyttävät vuorelle kiivenneeltä nauhalta, ja minä kunnioitan jokaista porrasta, jonka joku on rakentanut lentämättä.
+KYSYMYS: Kerro lisää: Herceg Novi
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kotorinlahti (meri)
+Tietoruudun teksti: Kotorinlahti on Montenegron rannikon syvälle vuoristoon työntyvä merenlahti, joka on noin 28 kilometriä pitkä ja jonka ranta-alue kiertää kaikkiaan yli 107 kilometriä. Kapeimmillaan Verigen salmessa lahti kutistuu vain 0,3 kilometrin levyiseksi, ja suurin syvyys on 60 metriä. Lahtea reunustavat Orjenin ja Lovćenin vuoristot, ja sen rannoilla ovat Kotor, Perast, Risan, Tivat ja Herceg Novi. Lahden alue on Unescon maailmanperintökohde vuodesta 1979, ja siihen kuuluvat myös Perastin edustan saarekkeet Sveti Đorđe ja Neitsyt Marian kalliosaari. Kotorin vanhankaupungin linnoitusjärjestelmä nousee yli 260 metrin korkeuteen, ja suurin osa rakenteista on Venetsian ajalta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Ruoka: Pastrmajlija, Štipin uunileipä] perinneleipä — Pastrmajlija on makedonialainen leipäpiirakka, jonka pohja tehdään taikinasta ja päälle tulee lihaa, ja lisäksi juustoa ja kananmunaa. Nimi tulee sanasta pastrma, joka tarkoittaa suolattua ja kuivattua lampaanlihaa. Lihana käytetään myös savustettua tai kuivattua sikaa ja siipikarjaa, ja päälle voi tulla kaškavalia, sieniä tai tulisia marinoituja paprikoita. Leipä on yleensä soikea, ja lihakuutiot asetetaan sen päälle. Ruoka on suosittu Štipin, Velesin, Sveti Nikolen, Kratovon ja Negotinon kaupungeissa, ja Štipissä sille on omistettu vuotuinen Štipska Pastrmalijada -juhla.
+AIEMPI KYSYMYS: Mitkä saarekkeet ovat Perastin edustalla?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Perastin edustalla on kaksi saareketta: [[Sveti Đorđe]] ja [[Neitsyt Marian kalliosaari]]. Ne kuuluvat Kotorinlahden alueeseen, joka on [[Unescon]] maailmanperintökohde vuodesta 1979. Kaksi pientä saarta, ja silti ne mahtuivat kyyhkyn muistiin.
+KYSYMYS: Kerro lisää: Sveti Đorđe
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kotorinlahti (meri)
+Tietoruudun teksti: Kotorinlahti on Montenegron rannikon syvälle vuoristoon työntyvä merenlahti, joka on noin 28 kilometriä pitkä ja jonka ranta-alue kiertää kaikkiaan yli 107 kilometriä. Kapeimmillaan Verigen salmessa lahti kutistuu vain 0,3 kilometrin levyiseksi, ja suurin syvyys on 60 metriä. Lahtea reunustavat Orjenin ja Lovćenin vuoristot, ja sen rannoilla ovat Kotor, Perast, Risan, Tivat ja Herceg Novi. Lahden alue on Unescon maailmanperintökohde vuodesta 1979, ja siihen kuuluvat myös Perastin edustan saarekkeet Sveti Đorđe ja Neitsyt Marian kalliosaari. Kotorin vanhankaupungin linnoitusjärjestelmä nousee yli 260 metrin korkeuteen, ja suurin osa rakenteista on Venetsian ajalta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kohdekartta / Kohdekartta: Pyhän Marian katedraali] 1889 alkaen Pyhän Marian katedraali on Port Moresbyn arkkihiippakunnan pääkirkko ja omistettu Neitsyt Marialle. Ulkoseinät ovat vaaleansiniset, ja pääsisäänkäynnin toisella puolen kohoaa valkoinen torni. Hiippakunta on kirkkoa vanhempi, ja sen nimi on vaihtunut kolmesti. Se perustettiin 10. toukokuuta 1889 Uuden-Guinean apostoliseksi vikariaatiksi, sai 1922 nimen Papuan vikariaatti ja 1946 Port Moresbyn vikariaatti; arkkihiippakunnaksi se korotettiin 15. marraskuuta 1966. Vuonna 2023 alueella oli 22 seurakuntaa ja noin 233 000 katolista eli 29 prosenttia väestöstä. Paavi Johannes Paavali II vieraili katedraalissa toukokuussa 1984 ja palasi hiippakuntaan tammikuussa 1995. Paavi Franciscus vi…
+- [Marseille — kaupunkilehti / Historia: Neitsyt, joka vahtii merenkulkijoita mäen laelta] Notre-Dame de la Garde -basilika kohoaa Marseillen korkeimmalla kalliolla, 149 metrin korkeudessa, ja sen kultainen Neitsyt Maria -patsas näkyy kauas merelle. Nykyinen basilika valmistui 1864, mutta paikalla on ollut pyhiinvaelluskohde jo 1200-luvulta, kun kukkulalle rakennettiin ensimmäinen pieni kappeli. Merenkulkijat ovat perinteisesti pitäneet basilikaa suojelijanaan ja jättäneet sinne kiitoslahjoja onnistuneista matkoista — kirkon seinillä riippuu yhä satoja pienoislaivoja ja muistolaattoja pelastuneista haaksirikoista. Marseillelaiset kutsuvat patsasta hellästi "La Bonne Mère", hyväksi äidiksi.
+AIEMPI KYSYMYS: Mitkä saarekkeet ovat Perastin edustalla?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Perastin edustalla on kaksi saareketta: [[Sveti Đorđe]] ja [[Neitsyt Marian kalliosaari]]. Ne kuuluvat Kotorinlahden alueeseen, joka on [[Unescon]] maailmanperintökohde vuodesta 1979. Kaksi pientä saarta, ja silti ne mahtuivat kyyhkyn muistiin.
+KYSYMYS: Kerro lisää: Neitsyt Marian kalliosaari
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ostrogin luostari (kulttuuri)
+Tietoruudun teksti: Ostrogin luostari on serbiortodoksinen luostari lähellä Danilovgradia Montenegrossa. Se on rakennettu lähes pystysuoraan kallioseinämään Ostroška Greda -kallioon. Luostarin perusti 1600-luvun alussa Hertsegovinan metropoliitta Vasilije Jovanović, Ostrogin pyhä Basileios, joka kuoli siellä vuonna 1671; hänen pyhäinjäännöksensä lepäävät luolakirkossa. Vuosina 1923–1926 luostari rakennettiin uudelleen suuren tulipalon jälkeen, mutta kaksi alkuperäistä luolakirkkoa säilyi. Pyhiinvaeltajat kulkevat perinteisesti alaluostarilta yläluostarille noin kolme kilometriä, monet paljain jaloin.
+AIEMPI KYSYMYS: Kuka perusti luostarin kallioon?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Luostarin perusti Hertsegovinan metropoliitta [[Vasilije Jovanović]], josta tuli myöhemmin [[Ostrogin pyhä Basileios]]; hän kuoli luostarissa vuonna 1671. Paikan hän valitsi osin suojaksi eteneviä [[osmaneja]] vastaan, ja samoissa luolissa oli ennen häntä asunut erakkona pyhä Isaija Onogoštilainen. Kallioon asti, jonne minä pääsen siivillä.
+KYSYMYS: Kerro lisää: Vasilije Jovanović
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ostrogin luostari (kulttuuri)
+Tietoruudun teksti: Ostrogin luostari on serbiortodoksinen luostari lähellä Danilovgradia Montenegrossa. Se on rakennettu lähes pystysuoraan kallioseinämään Ostroška Greda -kallioon. Luostarin perusti 1600-luvun alussa Hertsegovinan metropoliitta Vasilije Jovanović, Ostrogin pyhä Basileios, joka kuoli siellä vuonna 1671; hänen pyhäinjäännöksensä lepäävät luolakirkossa. Vuosina 1923–1926 luostari rakennettiin uudelleen suuren tulipalon jälkeen, mutta kaksi alkuperäistä luolakirkkoa säilyi. Pyhiinvaeltajat kulkevat perinteisesti alaluostarilta yläluostarille noin kolme kilometriä, monet paljain jaloin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historia: Luostari joka kasvoi kalliosta] 1665–1671 — Korkealle Ostroškan kallioseinämään on veistetty luostari, joka näyttää kasvaneen suoraan vuoresta. Sen perusti 1665 Hertsegovinan metropoliitta Vasilije, joka valitsi paikan osin suojaksi eteneviä osmaneja vastaan – samoissa luolissa oli ennen häntä asunut erakkona pyhä Isaija Onogoštilainen. Ylempi, kahteen luolaan louhittu kirkko koristeltiin freskoin, ja Vasilije johti laajennustyötä kuolemaansa 1671 asti, minkä jälkeen hänet julistettiin pyhäksi. Ostrog on nykyään Balkanin vierailluin pyhiinvaelluskohde: sinne saapuu vuosittain yli miljoona kävijää kaikista uskonnoista.
+AIEMPI KYSYMYS: Kuka perusti luostarin kallioon?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Luostarin perusti Hertsegovinan metropoliitta [[Vasilije Jovanović]], josta tuli myöhemmin [[Ostrogin pyhä Basileios]]; hän kuoli luostarissa vuonna 1671. Paikan hän valitsi osin suojaksi eteneviä [[osmaneja]] vastaan, ja samoissa luolissa oli ennen häntä asunut erakkona pyhä Isaija Onogoštilainen. Kallioon asti, jonne minä pääsen siivillä.
+KYSYMYS: Kerro lisää: Ostrogin pyhä Basileios
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ostrogin luostari (kulttuuri)
+Tietoruudun teksti: Ostrogin luostari on serbiortodoksinen luostari lähellä Danilovgradia Montenegrossa. Se on rakennettu lähes pystysuoraan kallioseinämään Ostroška Greda -kallioon. Luostarin perusti 1600-luvun alussa Hertsegovinan metropoliitta Vasilije Jovanović, Ostrogin pyhä Basileios, joka kuoli siellä vuonna 1671; hänen pyhäinjäännöksensä lepäävät luolakirkossa. Vuosina 1923–1926 luostari rakennettiin uudelleen suuren tulipalon jälkeen, mutta kaksi alkuperäistä luolakirkkoa säilyi. Pyhiinvaeltajat kulkevat perinteisesti alaluostarilta yläluostarille noin kolme kilometriä, monet paljain jaloin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historia: Luostari joka kasvoi kalliosta] 1665–1671 — Korkealle Ostroškan kallioseinämään on veistetty luostari, joka näyttää kasvaneen suoraan vuoresta. Sen perusti 1665 Hertsegovinan metropoliitta Vasilije, joka valitsi paikan osin suojaksi eteneviä osmaneja vastaan – samoissa luolissa oli ennen häntä asunut erakkona pyhä Isaija Onogoštilainen. Ylempi, kahteen luolaan louhittu kirkko koristeltiin freskoin, ja Vasilije johti laajennustyötä kuolemaansa 1671 asti, minkä jälkeen hänet julistettiin pyhäksi. Ostrog on nykyään Balkanin vierailluin pyhiinvaelluskohde: sinne saapuu vuosittain yli miljoona kävijää kaikista uskonnoista.
+AIEMPI KYSYMYS: Kuka perusti luostarin kallioon?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Luostarin perusti Hertsegovinan metropoliitta [[Vasilije Jovanović]], josta tuli myöhemmin [[Ostrogin pyhä Basileios]]; hän kuoli luostarissa vuonna 1671. Paikan hän valitsi osin suojaksi eteneviä [[osmaneja]] vastaan, ja samoissa luolissa oli ennen häntä asunut erakkona pyhä Isaija Onogoštilainen. Kallioon asti, jonne minä pääsen siivillä.
+KYSYMYS: Kerro lisää: osmaneja
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ostrogin luostari (kulttuuri)
+Tietoruudun teksti: Ostrogin luostari on serbiortodoksinen luostari lähellä Danilovgradia Montenegrossa. Se on rakennettu lähes pystysuoraan kallioseinämään Ostroška Greda -kallioon. Luostarin perusti 1600-luvun alussa Hertsegovinan metropoliitta Vasilije Jovanović, Ostrogin pyhä Basileios, joka kuoli siellä vuonna 1671; hänen pyhäinjäännöksensä lepäävät luolakirkossa. Vuosina 1923–1926 luostari rakennettiin uudelleen suuren tulipalon jälkeen, mutta kaksi alkuperäistä luolakirkkoa säilyi. Pyhiinvaeltajat kulkevat perinteisesti alaluostarilta yläluostarille noin kolme kilometriä, monet paljain jaloin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiina — maalehti / Historia: Luola muurattiin umpeen tuhanneksi vuodeksi] 366 — Mogaon luolat on hakattu jyrkänteeseen 25 kilometriä Dunhuangin keidaskaupungista kaakkoon, keskelle Silkkitien risteystä. Ensimmäinen luola kaivettiin vuonna 366 mietiskelypaikaksi, ja työ jatkui 1300-luvulle asti: luolatemppeleitä on noin viisisataa ja maalauksia tuhannen vuoden ajalta. Vuonna 1900 löytyi luola, joka oli muurattu umpeen 1000-luvulla. Sen sisältä tuli esiin valtava määrä kirjakääröjä ja asiakirjoja. Kokoelma hajosi ympäri maailmaa, ja suurimmat osat ovat nyt Pekingissä, Lontoossa, Pariisissa ja Berliinissä.
+- [Slovakia — maalehti / Luonto: Luola, jonka läpi virtasi Styx] 1926 — Domican luola Etelä-Slovakiassa löytyi vuonna 1926, kun Ján Majko osoitti, että useat paikalliset luolat kuuluvat samaan verkostoon. Luolan käytävät on muovannut maanalainen joki nimeltä Styx, ja seinillä on tippukivilampia sekä lepakoiden ulosteesta syntyneitä kuoria. Jo neoliittiset ihmiset asuivat täällä, ja kaivauksissa on löydetty asumusten paaluaukkoja ja tulisijoja. Yleisölle on avattu 1600 metriä vuodesta 1932. Luola on osa Aggtelekin ja Slovakian karstin luolastoa, joka sai Unescon maailmanperintöstatuksen 1995.
+- [Kiova — kaupunkilehti / Historia: Luola, josta kasvoi luostari] Vuonna 1051 munkki Antonius asettui Athos-vuorelta palattuaan Dnipro-joen rantatörmään kaivettuun luolaan. Hänen askeettinen elämänsä veti puoleensa seuraajia, ja pian luolaan kokoontui pieni munkkiyhteisö. Kolmas johtaja, Teodosios, järjesti yhteisölle omat säännöt ja rakennutti ensimmäiset maanpäälliset rakennukset luolien yläpuolelle. Nimi Petšerska tulee sanasta petšera, luola — ja koko luostarikompleksi kantaa sitä nimeä yhä.
+AIEMPI KYSYMYS: Mikä säilyi vuoden 1923 palosta?
+AIEMPI VASTAUS (Livia):
+Mmm— Luostari rakennettiin uudelleen vuosina 1923–1926 suuren tulipalon jälkeen, mutta kaksi alkuperäistä [[luolakirkkoa]] säilyi. Luolakirkossa lepäävät Ostrogin pyhän Basileioksen [[pyhäinjäännökset]]. Onneksi ne kestivät.
+KYSYMYS: Kerro lisää: luolakirkkoa
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ostrogin luostari (kulttuuri)
+Tietoruudun teksti: Ostrogin luostari on serbiortodoksinen luostari lähellä Danilovgradia Montenegrossa. Se on rakennettu lähes pystysuoraan kallioseinämään Ostroška Greda -kallioon. Luostarin perusti 1600-luvun alussa Hertsegovinan metropoliitta Vasilije Jovanović, Ostrogin pyhä Basileios, joka kuoli siellä vuonna 1671; hänen pyhäinjäännöksensä lepäävät luolakirkossa. Vuosina 1923–1926 luostari rakennettiin uudelleen suuren tulipalon jälkeen, mutta kaksi alkuperäistä luolakirkkoa säilyi. Pyhiinvaeltajat kulkevat perinteisesti alaluostarilta yläluostarille noin kolme kilometriä, monet paljain jaloin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Mikaelin luostari] 1108–1113 Pyhän Mikaelin kultakupolinen luostari perustettiin Kiovan-Venäjän ruhtinas Svjatopolk II:n toimesta vuosina 1108–1113 arkkienkeli Mikaelin kunniaksi. Sen pääkirkon kupoli kullattiin ehkä ensimmäisenä koko Kiovan-Venäjällä, ja juuri siitä koko luostari sai lempinimensä ”kultakupolinen”. Vuonna 1108 luostariin tuotiin myös Konstantinopolista pyhän Barbaran pyhäinjäännökset, ja niistä tuli niin suosittu pyhiinvaellusaarre, että 1870-luvulla luostarissa kävi vuosittain jopa 100 000 vierailijaa. 1700-luvulla kirkkoa laajennettiin ukrainalaiseen barokkityyliin, ja alkuperäisestä yhdestä kupolista tuli lopulta seitsemän kupolin kokonaisuus. Sisäseiniltä löytyi myös upeita 1100-luvun bys…
+- [Bergen — kohdekartta / Kohdekartta: Korskirken] n. 1150 Ensimmäinen kirkko rakennettiin paikalle noin vuonna 1150, ja se mainitaan ensi kerran Sverren saagassa 1185. Silloin kirkko seisoi Vågenin rannalla ja merkitsi todennäköisesti Bergenin asutuksen eteläistä rajaa. Nimi ei viittaa ristin muotoiseen pohjakaavaan vaan Pyhään Ristiin: Korskirken oli yksi harvoista Norjan kirkoista, joilla oli hallussaan pala Kristuksen ristiä. Uskonpuhdistuksessa Tanskan kuningas vei sen, kuten muutkin pyhäinjäännökset ympäri maata. Kirkko vaurioitui paloissa 1198, 1248, 1413, 1582, 1623, 1640 ja 1702. Alun perin siinä oli kaksi tornia, mutta toinen tuhoutui vuoden 1582 palossa eikä sitä rakennettu uudelleen. Pohjakaava oli suora suorakaide, ja ristin mu…
+AIEMPI KYSYMYS: Mikä säilyi vuoden 1923 palosta?
+AIEMPI VASTAUS (Livia):
+Mmm— Luostari rakennettiin uudelleen vuosina 1923–1926 suuren tulipalon jälkeen, mutta kaksi alkuperäistä [[luolakirkkoa]] säilyi. Luolakirkossa lepäävät Ostrogin pyhän Basileioksen [[pyhäinjäännökset]]. Onneksi ne kestivät.
+KYSYMYS: Kerro lisää: pyhäinjäännökset
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ostrogin luostari (kulttuuri)
+Tietoruudun teksti: Ostrogin luostari on serbiortodoksinen luostari lähellä Danilovgradia Montenegrossa. Se on rakennettu lähes pystysuoraan kallioseinämään Ostroška Greda -kallioon. Luostarin perusti 1600-luvun alussa Hertsegovinan metropoliitta Vasilije Jovanović, Ostrogin pyhä Basileios, joka kuoli siellä vuonna 1671; hänen pyhäinjäännöksensä lepäävät luolakirkossa. Vuosina 1923–1926 luostari rakennettiin uudelleen suuren tulipalon jälkeen, mutta kaksi alkuperäistä luolakirkkoa säilyi. Pyhiinvaeltajat kulkevat perinteisesti alaluostarilta yläluostarille noin kolme kilometriä, monet paljain jaloin.
+AIEMPI KYSYMYS: Kuinka pitkän matkan pyhiinvaeltajat kulkevat alaluostarilta?
+AIEMPI VASTAUS (Livia):
+Kato, minä lentäisin sen. Pyhiinvaeltajat kulkevat perinteisesti [[alaluostarilta]] [[yläluostarille]] noin kolme kilometriä, ja monet tekevät sen paljain jaloin. Ostrog on nykyään [[Balkanin]] vierailluin pyhiinvaelluskohde: sinne saapuu vuosittain yli miljoona kävijää kaikista uskonnoista. Minä kunnioitan kyllä jokaista, joka kulkee sen omin jaloin.
+KYSYMYS: Kerro lisää: alaluostarilta
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ostrogin luostari (kulttuuri)
+Tietoruudun teksti: Ostrogin luostari on serbiortodoksinen luostari lähellä Danilovgradia Montenegrossa. Se on rakennettu lähes pystysuoraan kallioseinämään Ostroška Greda -kallioon. Luostarin perusti 1600-luvun alussa Hertsegovinan metropoliitta Vasilije Jovanović, Ostrogin pyhä Basileios, joka kuoli siellä vuonna 1671; hänen pyhäinjäännöksensä lepäävät luolakirkossa. Vuosina 1923–1926 luostari rakennettiin uudelleen suuren tulipalon jälkeen, mutta kaksi alkuperäistä luolakirkkoa säilyi. Pyhiinvaeltajat kulkevat perinteisesti alaluostarilta yläluostarille noin kolme kilometriä, monet paljain jaloin.
+AIEMPI KYSYMYS: Kuinka pitkän matkan pyhiinvaeltajat kulkevat alaluostarilta?
+AIEMPI VASTAUS (Livia):
+Kato, minä lentäisin sen. Pyhiinvaeltajat kulkevat perinteisesti [[alaluostarilta]] [[yläluostarille]] noin kolme kilometriä, ja monet tekevät sen paljain jaloin. Ostrog on nykyään [[Balkanin]] vierailluin pyhiinvaelluskohde: sinne saapuu vuosittain yli miljoona kävijää kaikista uskonnoista. Minä kunnioitan kyllä jokaista, joka kulkee sen omin jaloin.
+KYSYMYS: Kerro lisää: yläluostarille
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ostrogin luostari (kulttuuri)
+Tietoruudun teksti: Ostrogin luostari on serbiortodoksinen luostari lähellä Danilovgradia Montenegrossa. Se on rakennettu lähes pystysuoraan kallioseinämään Ostroška Greda -kallioon. Luostarin perusti 1600-luvun alussa Hertsegovinan metropoliitta Vasilije Jovanović, Ostrogin pyhä Basileios, joka kuoli siellä vuonna 1671; hänen pyhäinjäännöksensä lepäävät luolakirkossa. Vuosina 1923–1926 luostari rakennettiin uudelleen suuren tulipalon jälkeen, mutta kaksi alkuperäistä luolakirkkoa säilyi. Pyhiinvaeltajat kulkevat perinteisesti alaluostarilta yläluostarille noin kolme kilometriä, monet paljain jaloin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historian hetki: Obod 1494 — musteen viimeinen arkki] 4.1.1494 — Munkki Makarijen sormet ovat mustat musteesta, kun hän nostaa viimeisen painetun arkin puristimesta ja tarkistaa kirjainrivit vielä kerran vasten ikkunasta lankeavaa valoa. On 4. tammikuuta 1494, ja Crnojevićien kirjapainossa Cetinjen seudulla valmistuu Oktoih prvoglasnik — ensimmäisen äänilajin oktoehos, kirkkolaulukirja. Ruhtinas Đurađ Crnojević on hankkinut painokoneen ja kirjaimet Venetsiasta vain vuosi aiemmin, ja Makarije on oppinut käyttämään niitä kirkkoslaaviksi, kirjaimet valettuina käsin metallista. Paperi tuodaan laivoilla samaa reittiä Venetsiasta kuin kirjaimetkin, sillä lähialueella ei ole yhtään paperimyllyä. Kirja on ensimmäinen painettu teos, jonka eteläslaavila…
+- [Pohjois-Makedonia — maalehti / Historia: Balkanin Jerusalem] 9.–13. vuosisata — Ohridin järvi on yksi Euroopan vanhimmista ja syvimmistä järvistä – sen pohjassa elää lajeja, joita ei tavata muualla maailmassa. Rannalla kohoava Ohridin kaupunki oli 800-luvun lopulla Pyhän Kliment Ohridilaisen koulun ansiosta slaavilaisen kirjallisuuden ja kyrillisen kirjaimiston tärkeimpiä keskuksia Euroopassa. Keskiajalla kaupungissa kerrottiin olleen 365 kirkkoa, yksi joka päivälle – legenda liioittelee, mutta kuuluisin jäljellä olevista on kalliolle Kaneon niemelle rakennettu Pyhän Johanneksen kirkko 1200-luvulta. Unesco liitti järven ja vanhankaupungin maailmanperintöluetteloon jo 1979.
+AIEMPI KYSYMYS: Kuinka pitkän matkan pyhiinvaeltajat kulkevat alaluostarilta?
+AIEMPI VASTAUS (Livia):
+Kato, minä lentäisin sen. Pyhiinvaeltajat kulkevat perinteisesti [[alaluostarilta]] [[yläluostarille]] noin kolme kilometriä, ja monet tekevät sen paljain jaloin. Ostrog on nykyään [[Balkanin]] vierailluin pyhiinvaelluskohde: sinne saapuu vuosittain yli miljoona kävijää kaikista uskonnoista. Minä kunnioitan kyllä jokaista, joka kulkee sen omin jaloin.
+KYSYMYS: Kerro lisää: Balkanin
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ostrogin luostari (kulttuuri)
+Tietoruudun teksti: Ostrogin luostari on serbiortodoksinen luostari lähellä Danilovgradia Montenegrossa. Se on rakennettu lähes pystysuoraan kallioseinämään Ostroška Greda -kallioon. Luostarin perusti 1600-luvun alussa Hertsegovinan metropoliitta Vasilije Jovanović, Ostrogin pyhä Basileios, joka kuoli siellä vuonna 1671; hänen pyhäinjäännöksensä lepäävät luolakirkossa. Vuosina 1923–1926 luostari rakennettiin uudelleen suuren tulipalon jälkeen, mutta kaksi alkuperäistä luolakirkkoa säilyi. Pyhiinvaeltajat kulkevat perinteisesti alaluostarilta yläluostarille noin kolme kilometriä, monet paljain jaloin.
+AIEMPI KYSYMYS: Miten Ostrogin luostari on rakennettu kallioon?
+AIEMPI VASTAUS (Livia):
+Ai se. Luostari on rakennettu lähes pystysuoraan kallioseinämään [[Ostroška Greda]] -kallioon lähellä [[Danilovgradia]]. Ylempi kirkko on louhittu kahteen luolaan ja koristeltu [[freskoin]], ja kokonaisuus näyttää kasvaneen suoraan vuoresta.
+
+Ylhäältä katsottuna se on kyyhkyn silmään outo näky, kuin pesä kalliossa. Minä ymmärrän idean täysin, vaikka en ymmärrä, miten kukaan sai sinne kiviä.
+KYSYMYS: Kerro lisää: Ostroška Greda
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ostrogin luostari (kulttuuri)
+Tietoruudun teksti: Ostrogin luostari on serbiortodoksinen luostari lähellä Danilovgradia Montenegrossa. Se on rakennettu lähes pystysuoraan kallioseinämään Ostroška Greda -kallioon. Luostarin perusti 1600-luvun alussa Hertsegovinan metropoliitta Vasilije Jovanović, Ostrogin pyhä Basileios, joka kuoli siellä vuonna 1671; hänen pyhäinjäännöksensä lepäävät luolakirkossa. Vuosina 1923–1926 luostari rakennettiin uudelleen suuren tulipalon jälkeen, mutta kaksi alkuperäistä luolakirkkoa säilyi. Pyhiinvaeltajat kulkevat perinteisesti alaluostarilta yläluostarille noin kolme kilometriä, monet paljain jaloin.
+AIEMPI KYSYMYS: Miten Ostrogin luostari on rakennettu kallioon?
+AIEMPI VASTAUS (Livia):
+Ai se. Luostari on rakennettu lähes pystysuoraan kallioseinämään [[Ostroška Greda]] -kallioon lähellä [[Danilovgradia]]. Ylempi kirkko on louhittu kahteen luolaan ja koristeltu [[freskoin]], ja kokonaisuus näyttää kasvaneen suoraan vuoresta.
+
+Ylhäältä katsottuna se on kyyhkyn silmään outo näky, kuin pesä kalliossa. Minä ymmärrän idean täysin, vaikka en ymmärrä, miten kukaan sai sinne kiviä.
+KYSYMYS: Kerro lisää: Danilovgradia
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ostrogin luostari (kulttuuri)
+Tietoruudun teksti: Ostrogin luostari on serbiortodoksinen luostari lähellä Danilovgradia Montenegrossa. Se on rakennettu lähes pystysuoraan kallioseinämään Ostroška Greda -kallioon. Luostarin perusti 1600-luvun alussa Hertsegovinan metropoliitta Vasilije Jovanović, Ostrogin pyhä Basileios, joka kuoli siellä vuonna 1671; hänen pyhäinjäännöksensä lepäävät luolakirkossa. Vuosina 1923–1926 luostari rakennettiin uudelleen suuren tulipalon jälkeen, mutta kaksi alkuperäistä luolakirkkoa säilyi. Pyhiinvaeltajat kulkevat perinteisesti alaluostarilta yläluostarille noin kolme kilometriä, monet paljain jaloin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historia: Luostari joka kasvoi kalliosta] 1665–1671 — Korkealle Ostroškan kallioseinämään on veistetty luostari, joka näyttää kasvaneen suoraan vuoresta. Sen perusti 1665 Hertsegovinan metropoliitta Vasilije, joka valitsi paikan osin suojaksi eteneviä osmaneja vastaan – samoissa luolissa oli ennen häntä asunut erakkona pyhä Isaija Onogoštilainen. Ylempi, kahteen luolaan louhittu kirkko koristeltiin freskoin, ja Vasilije johti laajennustyötä kuolemaansa 1671 asti, minkä jälkeen hänet julistettiin pyhäksi. Ostrog on nykyään Balkanin vierailluin pyhiinvaelluskohde: sinne saapuu vuosittain yli miljoona kävijää kaikista uskonnoista.
+AIEMPI KYSYMYS: Miten Ostrogin luostari on rakennettu kallioon?
+AIEMPI VASTAUS (Livia):
+Ai se. Luostari on rakennettu lähes pystysuoraan kallioseinämään [[Ostroška Greda]] -kallioon lähellä [[Danilovgradia]]. Ylempi kirkko on louhittu kahteen luolaan ja koristeltu [[freskoin]], ja kokonaisuus näyttää kasvaneen suoraan vuoresta.
+
+Ylhäältä katsottuna se on kyyhkyn silmään outo näky, kuin pesä kalliossa. Minä ymmärrän idean täysin, vaikka en ymmärrä, miten kukaan sai sinne kiviä.
+KYSYMYS: Kerro lisää: freskoin
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ostrogin luostari (kulttuuri)
+Tietoruudun teksti: Ostrogin luostari on serbiortodoksinen luostari lähellä Danilovgradia Montenegrossa. Se on rakennettu lähes pystysuoraan kallioseinämään Ostroška Greda -kallioon. Luostarin perusti 1600-luvun alussa Hertsegovinan metropoliitta Vasilije Jovanović, Ostrogin pyhä Basileios, joka kuoli siellä vuonna 1671; hänen pyhäinjäännöksensä lepäävät luolakirkossa. Vuosina 1923–1926 luostari rakennettiin uudelleen suuren tulipalon jälkeen, mutta kaksi alkuperäistä luolakirkkoa säilyi. Pyhiinvaeltajat kulkevat perinteisesti alaluostarilta yläluostarille noin kolme kilometriä, monet paljain jaloin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiina — maalehti / Historia: Luola muurattiin umpeen tuhanneksi vuodeksi] 366 — Mogaon luolat on hakattu jyrkänteeseen 25 kilometriä Dunhuangin keidaskaupungista kaakkoon, keskelle Silkkitien risteystä. Ensimmäinen luola kaivettiin vuonna 366 mietiskelypaikaksi, ja työ jatkui 1300-luvulle asti: luolatemppeleitä on noin viisisataa ja maalauksia tuhannen vuoden ajalta. Vuonna 1900 löytyi luola, joka oli muurattu umpeen 1000-luvulla. Sen sisältä tuli esiin valtava määrä kirjakääröjä ja asiakirjoja. Kokoelma hajosi ympäri maailmaa, ja suurimmat osat ovat nyt Pekingissä, Lontoossa, Pariisissa ja Berliinissä.
+- [Slovakia — maalehti / Luonto: Luola, jonka läpi virtasi Styx] 1926 — Domican luola Etelä-Slovakiassa löytyi vuonna 1926, kun Ján Majko osoitti, että useat paikalliset luolat kuuluvat samaan verkostoon. Luolan käytävät on muovannut maanalainen joki nimeltä Styx, ja seinillä on tippukivilampia sekä lepakoiden ulosteesta syntyneitä kuoria. Jo neoliittiset ihmiset asuivat täällä, ja kaivauksissa on löydetty asumusten paaluaukkoja ja tulisijoja. Yleisölle on avattu 1600 metriä vuodesta 1932. Luola on osa Aggtelekin ja Slovakian karstin luolastoa, joka sai Unescon maailmanperintöstatuksen 1995.
+- [Kiova — kaupunkilehti / Historia: Luola, josta kasvoi luostari] Vuonna 1051 munkki Antonius asettui Athos-vuorelta palattuaan Dnipro-joen rantatörmään kaivettuun luolaan. Hänen askeettinen elämänsä veti puoleensa seuraajia, ja pian luolaan kokoontui pieni munkkiyhteisö. Kolmas johtaja, Teodosios, järjesti yhteisölle omat säännöt ja rakennutti ensimmäiset maanpäälliset rakennukset luolien yläpuolelle. Nimi Petšerska tulee sanasta petšera, luola — ja koko luostarikompleksi kantaa sitä nimeä yhä.
+AIEMPI KYSYMYS: Missä Ostrogin pyhän Basileioksen pyhäinjäännökset ovat?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: ne lepäävät luostarin [[luolakirkossa]]. Ostrogin pyhä Basileios eli Vasilije oli [[Hertsegovinan metropoliitta]], joka kuoli luostarissa vuonna 1671 ja julistettiin pyhäksi. Rauhallinen paikka.
+KYSYMYS: Kerro lisää: luolakirkossa
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ostrogin luostari (kulttuuri)
+Tietoruudun teksti: Ostrogin luostari on serbiortodoksinen luostari lähellä Danilovgradia Montenegrossa. Se on rakennettu lähes pystysuoraan kallioseinämään Ostroška Greda -kallioon. Luostarin perusti 1600-luvun alussa Hertsegovinan metropoliitta Vasilije Jovanović, Ostrogin pyhä Basileios, joka kuoli siellä vuonna 1671; hänen pyhäinjäännöksensä lepäävät luolakirkossa. Vuosina 1923–1926 luostari rakennettiin uudelleen suuren tulipalon jälkeen, mutta kaksi alkuperäistä luolakirkkoa säilyi. Pyhiinvaeltajat kulkevat perinteisesti alaluostarilta yläluostarille noin kolme kilometriä, monet paljain jaloin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historia: Luostari joka kasvoi kalliosta] 1665–1671 — Korkealle Ostroškan kallioseinämään on veistetty luostari, joka näyttää kasvaneen suoraan vuoresta. Sen perusti 1665 Hertsegovinan metropoliitta Vasilije, joka valitsi paikan osin suojaksi eteneviä osmaneja vastaan – samoissa luolissa oli ennen häntä asunut erakkona pyhä Isaija Onogoštilainen. Ylempi, kahteen luolaan louhittu kirkko koristeltiin freskoin, ja Vasilije johti laajennustyötä kuolemaansa 1671 asti, minkä jälkeen hänet julistettiin pyhäksi. Ostrog on nykyään Balkanin vierailluin pyhiinvaelluskohde: sinne saapuu vuosittain yli miljoona kävijää kaikista uskonnoista.
+AIEMPI KYSYMYS: Missä Ostrogin pyhän Basileioksen pyhäinjäännökset ovat?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: ne lepäävät luostarin [[luolakirkossa]]. Ostrogin pyhä Basileios eli Vasilije oli [[Hertsegovinan metropoliitta]], joka kuoli luostarissa vuonna 1671 ja julistettiin pyhäksi. Rauhallinen paikka.
+KYSYMYS: Kerro lisää: Hertsegovinan metropoliitta
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taran kanjoni (luonto · joki)
+Tietoruudun teksti: Tara on 146 kilometriä pitkä joki, joka virtaa Montenegrossa ja liittyy Drinaan. Sen kanjoni on syvimmillään noin 1 300 metriä, ja se kuuluu Durmitorin kansallispuiston Unescon maailmanperintökohteeseen. Lähellä on Žabljakin vuoristokaupunki, joka toimii koskenlaskun tukikohtana. Đurđevića Taran silta on rakennettu vuosina 1937–1940, ja se on 365 metriä pitkä ja noin 170 metriä joen yläpuolella. Partisaanit räjäyttivät sen yhden kaaren toisessa maailmansodassa, ja silta korjattiin 1946.
+AIEMPI KYSYMYS: Kuinka syvä Taran kanjoni on syvimmillään?
+AIEMPI VASTAUS (Livia):
+No jopas. Taran kanjoni on syvimmillään noin 1 300 metriä. Tara on 146 kilometriä pitkä joki, joka virtaa Montenegrossa ja liittyy [[Drinaan]], ja kanjoni kuuluu [[Durmitorin kansallispuiston]] [[Unescon]] maailmanperintökohteeseen.
+
+Kolmetoistasataa metriä alas on sellainen korkeus, että minäkin pidän siivistä tiukasti kiinni.
+KYSYMYS: Kerro lisää: Drinaan
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taran kanjoni (luonto · joki)
+Tietoruudun teksti: Tara on 146 kilometriä pitkä joki, joka virtaa Montenegrossa ja liittyy Drinaan. Sen kanjoni on syvimmillään noin 1 300 metriä, ja se kuuluu Durmitorin kansallispuiston Unescon maailmanperintökohteeseen. Lähellä on Žabljakin vuoristokaupunki, joka toimii koskenlaskun tukikohtana. Đurđevića Taran silta on rakennettu vuosina 1937–1940, ja se on 365 metriä pitkä ja noin 170 metriä joen yläpuolella. Partisaanit räjäyttivät sen yhden kaaren toisessa maailmansodassa, ja silta korjattiin 1946.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Barnojärvi, vuoren silmä joka katoaa] jääkauden perua — Durmitorin massiivissa on 18 jäätikköjärveä, joita kutsutaan nimellä gorske oči eli vuoren silmät. Barnojärvi on yksi niistä, ja se sijaitsee 1 489 metrin korkeudessa lähellä tunnetumpaa Mustaajärveä. Se on kuitenkin outo silmä: syvimmillään vettä on vain noin metri, ja rannat ovat tiheää kosteikkokasvillisuutta. Kesällä veden pintaa ei usein näe lainkaan, sillä järvi rajoittuu turvesuohon ja vesi on tummaa. Durmitorin alue on ollut Unescon maailmanperintökohde vuodesta 1980, ja noin kymmenen kilometrin kolmen järven kierros yhdistää Barnon Mustaanjärveen ja Zminje-järveen.
+- [Montenegro — maalehti / Luonto] Montenegron luonto ulottuu Balkanin suurimman järven pelikaaneista jäätiköiden veistämiin vuoriin, joiden huiput nousevat yli 2 500 metrin. Neljä nostoa vie Durmitorin matalasta vuorijärvestä Skutarijärven kosteikkoon ja sieltä Prokletijen ja Bjelasican vuorille.
+AIEMPI KYSYMYS: Kuinka syvä Taran kanjoni on syvimmillään?
+AIEMPI VASTAUS (Livia):
+No jopas. Taran kanjoni on syvimmillään noin 1 300 metriä. Tara on 146 kilometriä pitkä joki, joka virtaa Montenegrossa ja liittyy [[Drinaan]], ja kanjoni kuuluu [[Durmitorin kansallispuiston]] [[Unescon]] maailmanperintökohteeseen.
+
+Kolmetoistasataa metriä alas on sellainen korkeus, että minäkin pidän siivistä tiukasti kiinni.
+KYSYMYS: Kerro lisää: Durmitorin kansallispuiston
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taran kanjoni (luonto · joki)
+Tietoruudun teksti: Tara on 146 kilometriä pitkä joki, joka virtaa Montenegrossa ja liittyy Drinaan. Sen kanjoni on syvimmillään noin 1 300 metriä, ja se kuuluu Durmitorin kansallispuiston Unescon maailmanperintökohteeseen. Lähellä on Žabljakin vuoristokaupunki, joka toimii koskenlaskun tukikohtana. Đurđevića Taran silta on rakennettu vuosina 1937–1940, ja se on 365 metriä pitkä ja noin 170 metriä joen yläpuolella. Partisaanit räjäyttivät sen yhden kaaren toisessa maailmansodassa, ja silta korjattiin 1946.
+AIEMPI KYSYMYS: Kuinka syvä Taran kanjoni on syvimmillään?
+AIEMPI VASTAUS (Livia):
+No jopas. Taran kanjoni on syvimmillään noin 1 300 metriä. Tara on 146 kilometriä pitkä joki, joka virtaa Montenegrossa ja liittyy [[Drinaan]], ja kanjoni kuuluu [[Durmitorin kansallispuiston]] [[Unescon]] maailmanperintökohteeseen.
+
+Kolmetoistasataa metriä alas on sellainen korkeus, että minäkin pidän siivistä tiukasti kiinni.
+KYSYMYS: Kerro lisää: Unescon
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taran kanjoni (luonto · joki)
+Tietoruudun teksti: Tara on 146 kilometriä pitkä joki, joka virtaa Montenegrossa ja liittyy Drinaan. Sen kanjoni on syvimmillään noin 1 300 metriä, ja se kuuluu Durmitorin kansallispuiston Unescon maailmanperintökohteeseen. Lähellä on Žabljakin vuoristokaupunki, joka toimii koskenlaskun tukikohtana. Đurđevića Taran silta on rakennettu vuosina 1937–1940, ja se on 365 metriä pitkä ja noin 170 metriä joen yläpuolella. Partisaanit räjäyttivät sen yhden kaaren toisessa maailmansodassa, ja silta korjattiin 1946.
+AIEMPI KYSYMYS: Mitä Đurđevića Taran sillalle tapahtui toisessa maailmansodassa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Silta rakennettiin vuosina 1937–1940, ja se on 365 metriä pitkä ja noin 170 metriä joen yläpuolella. [[Partisaanit]] räjäyttivät sen yhden kaaren sodassa, ja silta korjattiin 1946. Lähellä sijaitseva [[Žabljakin]] vuoristokaupunki toimii nykyään koskenlaskun tukikohtana, ja sodasta on yli kahdeksankymmentä vuotta. Onneksi silta korjattiin.
+KYSYMYS: Kerro lisää: Partisaanit
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taran kanjoni (luonto · joki)
+Tietoruudun teksti: Tara on 146 kilometriä pitkä joki, joka virtaa Montenegrossa ja liittyy Drinaan. Sen kanjoni on syvimmillään noin 1 300 metriä, ja se kuuluu Durmitorin kansallispuiston Unescon maailmanperintökohteeseen. Lähellä on Žabljakin vuoristokaupunki, joka toimii koskenlaskun tukikohtana. Đurđevića Taran silta on rakennettu vuosina 1937–1940, ja se on 365 metriä pitkä ja noin 170 metriä joen yläpuolella. Partisaanit räjäyttivät sen yhden kaaren toisessa maailmansodassa, ja silta korjattiin 1946.
+AIEMPI KYSYMYS: Mitä Đurđevića Taran sillalle tapahtui toisessa maailmansodassa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Silta rakennettiin vuosina 1937–1940, ja se on 365 metriä pitkä ja noin 170 metriä joen yläpuolella. [[Partisaanit]] räjäyttivät sen yhden kaaren sodassa, ja silta korjattiin 1946. Lähellä sijaitseva [[Žabljakin]] vuoristokaupunki toimii nykyään koskenlaskun tukikohtana, ja sodasta on yli kahdeksankymmentä vuotta. Onneksi silta korjattiin.
+KYSYMYS: Kerro lisää: Žabljakin
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taran kanjoni (luonto · joki)
+Tietoruudun teksti: Tara on 146 kilometriä pitkä joki, joka virtaa Montenegrossa ja liittyy Drinaan. Sen kanjoni on syvimmillään noin 1 300 metriä, ja se kuuluu Durmitorin kansallispuiston Unescon maailmanperintökohteeseen. Lähellä on Žabljakin vuoristokaupunki, joka toimii koskenlaskun tukikohtana. Đurđevića Taran silta on rakennettu vuosina 1937–1940, ja se on 365 metriä pitkä ja noin 170 metriä joen yläpuolella. Partisaanit räjäyttivät sen yhden kaaren toisessa maailmansodassa, ja silta korjattiin 1946.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tampere — kaupunkilehti / Historia: Skotlantilainen, joka osti kosken] James Finlayson oli skotlantilainen konepajamies, joka oli työskennellyt Pietarissa ennen kuin hän vuonna 1820 perusti konepajan Tammerkosken yläjuoksulle. Paikka oli valittu kosken takia: se antoi voiman, jota Suomessa ei muualta saanut. Finlayson myi tehtaan 1836, ja uudet omistajat käänsivät sen puuvillatehtaaksi. Vuosisadan lopulla se oli Pohjoismaiden suurin teollisuuslaitos ja työllisti tuhansia — enimmäkseen naisia ja lapsia.
+AIEMPI KYSYMYS: Mikä on Žabljak ja mitä siellä tehdään?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo, vaikka pöllö parantelee vielä siipeään. Žabljak on Taran kanjonin lähellä sijaitseva vuoristokaupunki, joka toimii [[koskenlaskun]] tukikohtana. Kanjoni kuuluu [[Durmitorin kansallispuiston]] Unescon maailmanperintökohteeseen. Lyhyt vastaus, ja silti väsytti.
+KYSYMYS: Kerro lisää: koskenlaskun
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taran kanjoni (luonto · joki)
+Tietoruudun teksti: Tara on 146 kilometriä pitkä joki, joka virtaa Montenegrossa ja liittyy Drinaan. Sen kanjoni on syvimmillään noin 1 300 metriä, ja se kuuluu Durmitorin kansallispuiston Unescon maailmanperintökohteeseen. Lähellä on Žabljakin vuoristokaupunki, joka toimii koskenlaskun tukikohtana. Đurđevića Taran silta on rakennettu vuosina 1937–1940, ja se on 365 metriä pitkä ja noin 170 metriä joen yläpuolella. Partisaanit räjäyttivät sen yhden kaaren toisessa maailmansodassa, ja silta korjattiin 1946.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Myanmar — maalehti / Kirjallisuus: Ensimmäinen romaani oli Monte-Criston sukua] 1724–1904 — Burmalainen runo oli vuosisatoja sidottu lay-lone tha-paikin muottiin: nelitavuisia säkeitä, jotka on ketjutettu kiipeävällä riimillä kolmenkymmenen rivin säkeistöiksi. Muotti alkoi löystyä, kun brittiläinen lähetysseura toi maahan ensimmäisen kirjapainon 1816. Historiaa oli kirjoitettu jo ennen sitä: U Kala kokosi 1724 Suuret aikakirjat vuoteen 1711 asti, ja kuningas Bagyidaw asetti 1829 oppineet laatimaan Lasipalatsin aikakirjan. Ensimmäinen burmalainen romaani ilmestyi 1904, ja sen kirjoitti James Hla Kyaw — esikuvana oli Monte-Criston kreivi.
+- [Marseille — kaupunkilehti / Marseille: Monte Criston linnasaari] Sataman suulla olevalle kalliosaarelle rakennettiin 1500-luvulla linnoitus, josta tuli pian vankila. Alexandre Dumas sijoitti sinne romaaninsa Monte Criston kreivi, ja kirjasta tuli niin kuuluisa, että saarelle tehtiin turisteja varten Faria-isän selli, vaikka romaanin pappi on Dumas’n keksintöä eikä koskaan istunut siellä. Oikeat vangit eivät päässeet minnekään: saarelta ei tiettävästi ole koskaan paennut kukaan.
+AIEMPI KYSYMYS: Kuinka pitkä ja korkea Đurđevića Taran silta on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Silta on 365 metriä pitkä ja kulkee noin 170 metriä joen yläpuolella. Se rakennettiin vuosina 1937–1940 [[Montenegrossa]] [[Taran kanjonin]] ylle, ja kanjoni on syvimmillään noin 1 300 metriä.
+
+Minun mielestäni 170 metriä on jo ihan kunnon lentokorkeus, joten arvostan sitä, että joku sai sinne tien ilman siipiä.
+KYSYMYS: Kerro lisää: Montenegrossa
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taran kanjoni (luonto · joki)
+Tietoruudun teksti: Tara on 146 kilometriä pitkä joki, joka virtaa Montenegrossa ja liittyy Drinaan. Sen kanjoni on syvimmillään noin 1 300 metriä, ja se kuuluu Durmitorin kansallispuiston Unescon maailmanperintökohteeseen. Lähellä on Žabljakin vuoristokaupunki, joka toimii koskenlaskun tukikohtana. Đurđevića Taran silta on rakennettu vuosina 1937–1940, ja se on 365 metriä pitkä ja noin 170 metriä joen yläpuolella. Partisaanit räjäyttivät sen yhden kaaren toisessa maailmansodassa, ja silta korjattiin 1946.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wellington — kaupunkilehti / Wellington] Pohjoissaaren lounaiskärkeen, sataman ja jyrkkien mäkien väliin puristunut pääkaupunki Cookinsalmen rannalla. Sataman māorinkielinen nimi Te Whanganui-a-Tara tarkoittaa Taran suurta satamaa.
+AIEMPI KYSYMYS: Kuinka pitkä ja korkea Đurđevića Taran silta on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Silta on 365 metriä pitkä ja kulkee noin 170 metriä joen yläpuolella. Se rakennettiin vuosina 1937–1940 [[Montenegrossa]] [[Taran kanjonin]] ylle, ja kanjoni on syvimmillään noin 1 300 metriä.
+
+Minun mielestäni 170 metriä on jo ihan kunnon lentokorkeus, joten arvostan sitä, että joku sai sinne tien ilman siipiä.
+KYSYMYS: Kerro lisää: Taran kanjonin
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taran kanjoni (luonto · joki)
+Tietoruudun teksti: Tara on 146 kilometriä pitkä joki, joka virtaa Montenegrossa ja liittyy Drinaan. Sen kanjoni on syvimmillään noin 1 300 metriä, ja se kuuluu Durmitorin kansallispuiston Unescon maailmanperintökohteeseen. Lähellä on Žabljakin vuoristokaupunki, joka toimii koskenlaskun tukikohtana. Đurđevića Taran silta on rakennettu vuosina 1937–1940, ja se on 365 metriä pitkä ja noin 170 metriä joen yläpuolella. Partisaanit räjäyttivät sen yhden kaaren toisessa maailmansodassa, ja silta korjattiin 1946.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wellington — kaupunkilehti / Wellington] Pohjoissaaren lounaiskärkeen, sataman ja jyrkkien mäkien väliin puristunut pääkaupunki Cookinsalmen rannalla. Sataman māorinkielinen nimi Te Whanganui-a-Tara tarkoittaa Taran suurta satamaa.
+AIEMPI KYSYMYS: Milloin Đurđevića Taran silta valmistui?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: silta valmistui vuonna 1940, ja rakennustyö kesti vuodesta 1937. Silta sijaitsee [[Taran kanjonissa]]. Toisessa maailmansodassa [[partisaanit]] räjäyttivät siitä yhden kaaren, ja silta korjattiin 1946; siitä on nyt yli kahdeksankymmentä vuotta. Kestävä silta, sanoisin.
+KYSYMYS: Kerro lisää: Taran kanjonissa
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biogradska Gora (luonto · vuori)
+Tietoruudun teksti: Biogradska Gora on kansallispuisto Montenegron keskiosassa Bjelasican vuoristossa, Taran ja Limin jokien välissä. Se julistettiin kansallispuistoksi 1952, ja Unescon Ihminen ja biosfääri -ohjelman suoja lisättiin 1977. Puiston pinta-ala on 54 neliökilometriä, ja siitä 16 neliökilometriä on aarniometsää, jossa kasvaa yli viisisataa vuotta vanhoja puita. Metsän keskellä on Biogradskojärvi, puiston suurin jääkausijärvi; viisi muuta jääkausijärveä sijaitsee 1 820 metrin korkeudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Pešićan jäätikköjärvi Bjelasican rinteellä] jääkauden perua — Bjelasica on vuorijono Kolašinin lähellä, ja sen korkein huippu Crna Glava kohoaa 2 139 metriin. Jono rajautuu Lim- ja Tara-jokiin, ja siinä on kymmenen yli 2 000 metrin huippua ja kuusi jäätikköjärveä. Pešićan järvi on niistä toiseksi suurimpia: se on noin 290 metriä pitkä ja sijaitsee noin 1 800 metrin korkeudessa Crna Glavan juurella. Kesäisin rinteillä toimivat paimenten katunit eli vuoristomajat, joissa yöpyy nykyään myös retkeilijöitä. Bjelasica ja Durmitor ovat Montenegron vuoristomatkailun keskuksia, ja Kolašinin hiihtokeskus houkuttaa vuorelle myös talvella.
+AIEMPI KYSYMYS: Kuinka vanhoja aarniometsän puut ovat?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kansallispuiston aarniometsässä kasvaa yli viisisataa vuotta vanhoja puita. Aarniometsää on puistossa 16 neliökilometriä, ja koko puiston pinta-ala on 54 neliökilometriä; puisto sijaitsee Montenegron keskiosassa [[Bjelasican]] vuoristossa, ja metsän keskellä on [[Biogradskojärvi]]. Viisisataa vuotta on pitkä aika, vaikka meidän suku muistaa Caesarinkin.
+KYSYMYS: Kerro lisää: Bjelasican
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biogradska Gora (luonto · vuori)
+Tietoruudun teksti: Biogradska Gora on kansallispuisto Montenegron keskiosassa Bjelasican vuoristossa, Taran ja Limin jokien välissä. Se julistettiin kansallispuistoksi 1952, ja Unescon Ihminen ja biosfääri -ohjelman suoja lisättiin 1977. Puiston pinta-ala on 54 neliökilometriä, ja siitä 16 neliökilometriä on aarniometsää, jossa kasvaa yli viisisataa vuotta vanhoja puita. Metsän keskellä on Biogradskojärvi, puiston suurin jääkausijärvi; viisi muuta jääkausijärveä sijaitsee 1 820 metrin korkeudessa.
+AIEMPI KYSYMYS: Kuinka vanhoja aarniometsän puut ovat?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kansallispuiston aarniometsässä kasvaa yli viisisataa vuotta vanhoja puita. Aarniometsää on puistossa 16 neliökilometriä, ja koko puiston pinta-ala on 54 neliökilometriä; puisto sijaitsee Montenegron keskiosassa [[Bjelasican]] vuoristossa, ja metsän keskellä on [[Biogradskojärvi]]. Viisisataa vuotta on pitkä aika, vaikka meidän suku muistaa Caesarinkin.
+KYSYMYS: Kerro lisää: Biogradskojärvi
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biogradska Gora (luonto · vuori)
+Tietoruudun teksti: Biogradska Gora on kansallispuisto Montenegron keskiosassa Bjelasican vuoristossa, Taran ja Limin jokien välissä. Se julistettiin kansallispuistoksi 1952, ja Unescon Ihminen ja biosfääri -ohjelman suoja lisättiin 1977. Puiston pinta-ala on 54 neliökilometriä, ja siitä 16 neliökilometriä on aarniometsää, jossa kasvaa yli viisisataa vuotta vanhoja puita. Metsän keskellä on Biogradskojärvi, puiston suurin jääkausijärvi; viisi muuta jääkausijärveä sijaitsee 1 820 metrin korkeudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wellington — kaupunkilehti / Wellington] Pohjoissaaren lounaiskärkeen, sataman ja jyrkkien mäkien väliin puristunut pääkaupunki Cookinsalmen rannalla. Sataman māorinkielinen nimi Te Whanganui-a-Tara tarkoittaa Taran suurta satamaa.
+AIEMPI KYSYMYS: Minkä jokien välissä kansallispuisto sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota. Biogradska Gora sijaitsee Montenegron keskiosassa [[Bjelasican]] vuoristossa, [[Taran]] ja [[Limin]] jokien välissä. Se julistettiin kansallispuistoksi vuonna 1952. Kaksi jokea ja metsä välissä, melkein kuin täytepulla.
+KYSYMYS: Kerro lisää: Taran
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biogradska Gora (luonto · vuori)
+Tietoruudun teksti: Biogradska Gora on kansallispuisto Montenegron keskiosassa Bjelasican vuoristossa, Taran ja Limin jokien välissä. Se julistettiin kansallispuistoksi 1952, ja Unescon Ihminen ja biosfääri -ohjelman suoja lisättiin 1977. Puiston pinta-ala on 54 neliökilometriä, ja siitä 16 neliökilometriä on aarniometsää, jossa kasvaa yli viisisataa vuotta vanhoja puita. Metsän keskellä on Biogradskojärvi, puiston suurin jääkausijärvi; viisi muuta jääkausijärveä sijaitsee 1 820 metrin korkeudessa.
+AIEMPI KYSYMYS: Minkä jokien välissä kansallispuisto sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota. Biogradska Gora sijaitsee Montenegron keskiosassa [[Bjelasican]] vuoristossa, [[Taran]] ja [[Limin]] jokien välissä. Se julistettiin kansallispuistoksi vuonna 1952. Kaksi jokea ja metsä välissä, melkein kuin täytepulla.
+KYSYMYS: Kerro lisää: Limin
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biogradska Gora (luonto · vuori)
+Tietoruudun teksti: Biogradska Gora on kansallispuisto Montenegron keskiosassa Bjelasican vuoristossa, Taran ja Limin jokien välissä. Se julistettiin kansallispuistoksi 1952, ja Unescon Ihminen ja biosfääri -ohjelman suoja lisättiin 1977. Puiston pinta-ala on 54 neliökilometriä, ja siitä 16 neliökilometriä on aarniometsää, jossa kasvaa yli viisisataa vuotta vanhoja puita. Metsän keskellä on Biogradskojärvi, puiston suurin jääkausijärvi; viisi muuta jääkausijärveä sijaitsee 1 820 metrin korkeudessa.
+AIEMPI KYSYMYS: Milloin Biogradska Gora julistettiin kansallispuistoksi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Biogradska Gora julistettiin kansallispuistoksi vuonna 1952, ja [[Unescon]] Ihminen ja biosfääri -ohjelman suoja lisättiin vuonna 1977. Puisto sijaitsee [[Bjelasican]] vuoristossa Montenegron keskiosassa. Vuosiluvut menivät kyllä putkeen.
+KYSYMYS: Kerro lisää: Unescon
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biogradska Gora (luonto · vuori)
+Tietoruudun teksti: Biogradska Gora on kansallispuisto Montenegron keskiosassa Bjelasican vuoristossa, Taran ja Limin jokien välissä. Se julistettiin kansallispuistoksi 1952, ja Unescon Ihminen ja biosfääri -ohjelman suoja lisättiin 1977. Puiston pinta-ala on 54 neliökilometriä, ja siitä 16 neliökilometriä on aarniometsää, jossa kasvaa yli viisisataa vuotta vanhoja puita. Metsän keskellä on Biogradskojärvi, puiston suurin jääkausijärvi; viisi muuta jääkausijärveä sijaitsee 1 820 metrin korkeudessa.
+AIEMPI KYSYMYS: Kuinka suuri Biogradska Goran kansallispuisto on?
+AIEMPI VASTAUS (Livia):
+No niin, tässä luvut. Puiston pinta-ala on 54 neliökilometriä, ja siitä 16 neliökilometriä on [[aarniometsää]]. Puisto sijaitsee Montenegron keskiosassa [[Bjelasican]] vuoristossa. Lukuja riittää tällä kertaa, ja minä pidän niistä.
+KYSYMYS: Kerro lisää: aarniometsää
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stari Bar (historia)
+Tietoruudun teksti: Stari Bar on raunioitunut keskiaikainen kaupunki Montenegrossa, noin kolmen kilometrin päässä Adrianmeren rannikolla sijaitsevasta uudesta Barista. Se seisoo vuoren rinteellä 184 metrin korkeudessa. Varhaisella keskiajalla paikka kuului Bysantille, ja Stefan Vojislav liitti sen valtaansa noin vuonna 1040. Kaupunki tuhoutui pitkälti vuosien 1877–1878 piirityksessä, ja vuoden 1979 maanjäristys vaurioitti raunioita uudelleen. Osmanniajan akveduktin kunnostuksen jälkeen ihmiset ovat alkaneet palata alueelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+AIEMPI KYSYMYS: Kuinka korkealla Stari Bar sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Stari Bar seisoo vuoren rinteellä 184 metrin korkeudessa, noin kolmen kilometrin päässä [[Adrianmeren]] rannikolla sijaitsevasta uudesta [[Barista]]. Se on raunioitunut keskiaikainen kaupunki, joka kuului varhaisella keskiajalla [[Bysantille]]. Hyvä paikka katolle, sanoisin.
+KYSYMYS: Kerro lisää: Adrianmeren
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stari Bar (historia)
+Tietoruudun teksti: Stari Bar on raunioitunut keskiaikainen kaupunki Montenegrossa, noin kolmen kilometrin päässä Adrianmeren rannikolla sijaitsevasta uudesta Barista. Se seisoo vuoren rinteellä 184 metrin korkeudessa. Varhaisella keskiajalla paikka kuului Bysantille, ja Stefan Vojislav liitti sen valtaansa noin vuonna 1040. Kaupunki tuhoutui pitkälti vuosien 1877–1878 piirityksessä, ja vuoden 1979 maanjäristys vaurioitti raunioita uudelleen. Osmanniajan akveduktin kunnostuksen jälkeen ihmiset ovat alkaneet palata alueelle.
+AIEMPI KYSYMYS: Kuinka korkealla Stari Bar sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Stari Bar seisoo vuoren rinteellä 184 metrin korkeudessa, noin kolmen kilometrin päässä [[Adrianmeren]] rannikolla sijaitsevasta uudesta [[Barista]]. Se on raunioitunut keskiaikainen kaupunki, joka kuului varhaisella keskiajalla [[Bysantille]]. Hyvä paikka katolle, sanoisin.
+KYSYMYS: Kerro lisää: Barista
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stari Bar (historia)
+Tietoruudun teksti: Stari Bar on raunioitunut keskiaikainen kaupunki Montenegrossa, noin kolmen kilometrin päässä Adrianmeren rannikolla sijaitsevasta uudesta Barista. Se seisoo vuoren rinteellä 184 metrin korkeudessa. Varhaisella keskiajalla paikka kuului Bysantille, ja Stefan Vojislav liitti sen valtaansa noin vuonna 1040. Kaupunki tuhoutui pitkälti vuosien 1877–1878 piirityksessä, ja vuoden 1979 maanjäristys vaurioitti raunioita uudelleen. Osmanniajan akveduktin kunnostuksen jälkeen ihmiset ovat alkaneet palata alueelle.
+AIEMPI KYSYMYS: Kuinka korkealla Stari Bar sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Stari Bar seisoo vuoren rinteellä 184 metrin korkeudessa, noin kolmen kilometrin päässä [[Adrianmeren]] rannikolla sijaitsevasta uudesta [[Barista]]. Se on raunioitunut keskiaikainen kaupunki, joka kuului varhaisella keskiajalla [[Bysantille]]. Hyvä paikka katolle, sanoisin.
+KYSYMYS: Kerro lisää: Bysantille
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stari Bar (historia)
+Tietoruudun teksti: Stari Bar on raunioitunut keskiaikainen kaupunki Montenegrossa, noin kolmen kilometrin päässä Adrianmeren rannikolla sijaitsevasta uudesta Barista. Se seisoo vuoren rinteellä 184 metrin korkeudessa. Varhaisella keskiajalla paikka kuului Bysantille, ja Stefan Vojislav liitti sen valtaansa noin vuonna 1040. Kaupunki tuhoutui pitkälti vuosien 1877–1878 piirityksessä, ja vuoden 1979 maanjäristys vaurioitti raunioita uudelleen. Osmanniajan akveduktin kunnostuksen jälkeen ihmiset ovat alkaneet palata alueelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Lapan akvedukti] 1744–1750 Kaupungin ydin oli soiden ympäröimä, ja vesi oli huonoa: juomavesi kannettiin käsin puroista kaupungin ulkopuolelta. Jo 1602 oli suunnitelmia johtaa vettä Cariocajoen latvoilta Santa Teresan kukkulalta, mutta kanavatyöt takkusivat rahan ja tekniikan puutteessa niin, että 1600-luvun lopussa valmiina oli vain muutama sata metriä. Vasta 1706 jälkeen työ eteni, ja ensimmäinen akvedukti valmistui 1723 tuoden veden barokkiseen suihkulähteeseen nykyisellä Largo da Cariocalla. Vuoteen 1744 mennessä rakennelma oli jo huonossa kunnossa, ja kuvernööri Gomes Freire de Andrade määräsi tilalle suuremman. Sen suunnitteli portugalilainen sotilasinsinööri José Fernandes Pinto Alpoim Lissabonin Águ…
+AIEMPI KYSYMYS: Mikä rakennelma kunnostettiin, minkä jälkeen ihmiset ovat alkaneet palata?
+AIEMPI VASTAUS (Livia):
+Ai se. Kunnostettu rakennelma on osmanniajan [[akvedukti]], ja sen kunnostuksen jälkeen ihmiset ovat alkaneet palata alueelle. Kaupunki tuhoutui pitkälti vuosien 1877–1878 piirityksessä, ja vuoden 1979 [[maanjäristys]] vaurioitti raunioita uudelleen. Hyvä, että paikka herää henkiin.
+KYSYMYS: Kerro lisää: akvedukti
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stari Bar (historia)
+Tietoruudun teksti: Stari Bar on raunioitunut keskiaikainen kaupunki Montenegrossa, noin kolmen kilometrin päässä Adrianmeren rannikolla sijaitsevasta uudesta Barista. Se seisoo vuoren rinteellä 184 metrin korkeudessa. Varhaisella keskiajalla paikka kuului Bysantille, ja Stefan Vojislav liitti sen valtaansa noin vuonna 1040. Kaupunki tuhoutui pitkälti vuosien 1877–1878 piirityksessä, ja vuoden 1979 maanjäristys vaurioitti raunioita uudelleen. Osmanniajan akveduktin kunnostuksen jälkeen ihmiset ovat alkaneet palata alueelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kaupunkilehti / San Francisco: Maanjäristys ja päiväkausia tulta] Kello 5.12 aamulla 18. huhtikuuta 1906 voimakas maanjäristys ravisteli San Franciscoa ja Pohjois-Kaliforniaa. Sortuneiden talojen katkenneista kaasuputkista syttyi tulipaloja, jotka levisivät hallitsemattomina useiden päivien ajan, ja kun vesijohdot olivat poikki, Presidion tykistö räjäytti kokonaisia kortteleita palokujiksi. Arvion mukaan yli kolme neljäsosaa kaupungista ja koko keskusta jäi raunioiksi, ja yli puolet 400 000 asukkaasta menetti kotinsa. Uhriluvusta ei ole yksimielisyyttä: aikalaisraporteissa kuolleita oli 498, nykyarvioissa useita tuhansia. Jälleenrakennus oli nopeaa, ja kaupunki juhli toipumistaan maailmannäyttelyssä 1915.
+- [Valparaíso — kaupunkilehti / Historia: Maanjäristys joka piirsi kadut uusiksi] 16. elokuuta 1906 kello 19.55 kaupunkia järisytti maanjäristys, jonka voimakkuudeksi on laskettu 8,2 ja jonka keskus oli edustan merellä. Uhriluvusta on kaksi lukemaa: kaupungin yleisesitys sanoo 3 000 kuollutta ja yli 20 000 loukkaantunutta, kun järistyksen oma artikkeli antaa Chilen yliopiston tarkemman luvun 3 882. Jälleenrakennuksessa katuja levennettiin, Jaimen ja Deliciasin purot katettiin bulevardeiksi ja Pedro Montt -pääkatu linjattiin. Jo 19. marraskuuta 1822 järistys oli jättänyt 16 000 asukkaan kaupungin raunioiksi.
+AIEMPI KYSYMYS: Mikä rakennelma kunnostettiin, minkä jälkeen ihmiset ovat alkaneet palata?
+AIEMPI VASTAUS (Livia):
+Ai se. Kunnostettu rakennelma on osmanniajan [[akvedukti]], ja sen kunnostuksen jälkeen ihmiset ovat alkaneet palata alueelle. Kaupunki tuhoutui pitkälti vuosien 1877–1878 piirityksessä, ja vuoden 1979 [[maanjäristys]] vaurioitti raunioita uudelleen. Hyvä, että paikka herää henkiin.
+KYSYMYS: Kerro lisää: maanjäristys
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stari Bar (historia)
+Tietoruudun teksti: Stari Bar on raunioitunut keskiaikainen kaupunki Montenegrossa, noin kolmen kilometrin päässä Adrianmeren rannikolla sijaitsevasta uudesta Barista. Se seisoo vuoren rinteellä 184 metrin korkeudessa. Varhaisella keskiajalla paikka kuului Bysantille, ja Stefan Vojislav liitti sen valtaansa noin vuonna 1040. Kaupunki tuhoutui pitkälti vuosien 1877–1878 piirityksessä, ja vuoden 1979 maanjäristys vaurioitti raunioita uudelleen. Osmanniajan akveduktin kunnostuksen jälkeen ihmiset ovat alkaneet palata alueelle.
+AIEMPI KYSYMYS: Kuka liitti Stari Barin valtaansa noin vuonna 1040?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: pöllö lupasi palata jo Konstantinopolissa, joten tän minä hoidan. Stari Barin liitti valtaansa [[Stefan Vojislav]] noin vuonna 1040. Varhaisella keskiajalla paikka oli kuulunut [[Bysantille]]. Tarkempaa vuotta en lupaa.
+KYSYMYS: Kerro lisää: Stefan Vojislav
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stari Bar (historia)
+Tietoruudun teksti: Stari Bar on raunioitunut keskiaikainen kaupunki Montenegrossa, noin kolmen kilometrin päässä Adrianmeren rannikolla sijaitsevasta uudesta Barista. Se seisoo vuoren rinteellä 184 metrin korkeudessa. Varhaisella keskiajalla paikka kuului Bysantille, ja Stefan Vojislav liitti sen valtaansa noin vuonna 1040. Kaupunki tuhoutui pitkälti vuosien 1877–1878 piirityksessä, ja vuoden 1979 maanjäristys vaurioitti raunioita uudelleen. Osmanniajan akveduktin kunnostuksen jälkeen ihmiset ovat alkaneet palata alueelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Afganistan — maalehti / Musiikki: Piiri, joka kiihtyy tuntikausia] Attan on Afganistanin kansallistanssi. Tanssijat asettuvat piiriin rummuttajan ympärille, ja askel alkaa hitaana ja kiihtyy vähitellen niin, että piiri voi pyöriä kaksi tai kolme tuntia ilman muuta taukoa kuin tempon lasku. Tahdin lyö dohol, kaksipäinen tynnyrirumpu. Tyylejä on kymmeniä, ja jokainen tunnistaa omansa: kabuli, wardaki, logari, paktia, khosti, kandahari ja herati. Naisten juhlapuvuissa on pieniä peilejä, joiden sanotaan tarkoittavan valoa, ja miesten turbaanin sitomistapa kertoo heimon. Tanssin juuret johdetaan zarathustralaisiin menoihin lähes kolmentuhannen vuoden takaa.
+- [Bogotá — kohdekartta / Kohdekartta: Oikeuspalatsi] 1985 Oikeuspalatseja on ollut kolme. Ensimmäinen oli Pablo de la Cruzin piirtämä uusklassinen talo, joka toimi 1920-luvulta alkaen Calle 11:n ja Carrera 6:n kulmassa; se tuhoutui tulipalossa 9. huhtikuuta 1948 mellakoissa, jotka tunnetaan nimellä Bogotazo. Toisen suunnitteli Roberto Londoño 1960-luvulla, ja se nousi Plaza de Bolívarin pohjoislaidalle vastapäätä kongressin taloa, korttelin päähän presidentinlinnasta. Tuo toinen talo tuhoutui 6. marraskuuta 1985. M-19-liikkeen sissiosasto valtasi rakennuksen ja otti panttivangeiksi noin 350 ihmistä, joukossa korkeimman oikeuden tuomareita, virkamiehiä ja vierailijoita; ryhmä aikoi järjestää oikeudenkäynnin presidentti Belisario Betancuria vas…
+AIEMPI KYSYMYS: Mitä Stari Barille tapahtui vuosina 1877–1878?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Kaupunki tuhoutui pitkälti vuosien 1877–1878 [[piirityksessä]], ja siitä on yli sata neljäkymmentä vuotta. Vuoden 1979 [[maanjäristys]] vaurioitti raunioita vielä uudelleen. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: piirityksessä
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stari Bar (historia)
+Tietoruudun teksti: Stari Bar on raunioitunut keskiaikainen kaupunki Montenegrossa, noin kolmen kilometrin päässä Adrianmeren rannikolla sijaitsevasta uudesta Barista. Se seisoo vuoren rinteellä 184 metrin korkeudessa. Varhaisella keskiajalla paikka kuului Bysantille, ja Stefan Vojislav liitti sen valtaansa noin vuonna 1040. Kaupunki tuhoutui pitkälti vuosien 1877–1878 piirityksessä, ja vuoden 1979 maanjäristys vaurioitti raunioita uudelleen. Osmanniajan akveduktin kunnostuksen jälkeen ihmiset ovat alkaneet palata alueelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Lapan akvedukti] 1744–1750 Kaupungin ydin oli soiden ympäröimä, ja vesi oli huonoa: juomavesi kannettiin käsin puroista kaupungin ulkopuolelta. Jo 1602 oli suunnitelmia johtaa vettä Cariocajoen latvoilta Santa Teresan kukkulalta, mutta kanavatyöt takkusivat rahan ja tekniikan puutteessa niin, että 1600-luvun lopussa valmiina oli vain muutama sata metriä. Vasta 1706 jälkeen työ eteni, ja ensimmäinen akvedukti valmistui 1723 tuoden veden barokkiseen suihkulähteeseen nykyisellä Largo da Cariocalla. Vuoteen 1744 mennessä rakennelma oli jo huonossa kunnossa, ja kuvernööri Gomes Freire de Andrade määräsi tilalle suuremman. Sen suunnitteli portugalilainen sotilasinsinööri José Fernandes Pinto Alpoim Lissabonin Águ…
+AIEMPI KYSYMYS: Mitä vuoden 1979 maanjäristys teki Stari Barin raunioille?
+AIEMPI VASTAUS (Livia):
+No niin, lyhyesti. Maanjäristys vaurioitti raunioita uudelleen, koska kaupunki oli jo tuhoutunut pitkälti vuosien 1877–1878 [[piirityksessä]]. Osmanniajan [[akveduktin]] kunnostuksen jälkeen ihmiset ovat alkaneet palata alueelle, ja järistyksestä on yli neljäkymmentä vuotta. Hyvä, että paikka herää henkiin.
+KYSYMYS: Kerro lisää: akveduktin
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plavjärvi (luonto · järvi)
+Tietoruudun teksti: Plavjärvi sijaitsee Montenegron koillisosassa Plavin kunnassa Prokletijen eli Kirottujen vuorten ja Visitor-vuoriston välissä. Sen pinta-ala on noin 1,99 km², pituus noin 2,2 km ja pinta 906 metrin korkeudessa. Järvi on matala, keskisyvyydeltään vain noin yhdeksän metriä, ja sen pohjassa on kalkkikiviluolia sekä lukuisia lähteitä, joista vesi pulppuaa maasta. Vesi virtaa pois Lim-jokeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Zla Kolata, Montenegron korkein huippu] vuodesta 2009 — Zla Kolata kohoaa 2 534 metriin, ja se on Montenegron korkein vuori, vaikka koko vuoriston korkein huippu Maja Jezercë (2 694 m) on Albanian puolella. Se kuuluu Prokletijeen, jonka nimi tarkoittaa kirottuja, ja vuoriston Montenegron puolelle perustettiin kansallispuisto vuonna 2009. Puiston pinta-ala on noin 16 000 hehtaaria. Viimeisen jääkauden aikana laaksoja muovasivat kilometrien mittaiset jäätiköt, ja Ropojanan jäätikkö oli noin 12,5 kilometriä pitkä. Vuoristossa on noin 20 jäätikköjärveä, joista Hridsko jezero on vajaat 300 metriä pitkä.
+AIEMPI KYSYMYS: Minkä vuoriston juurella Plavjärvi on?
+AIEMPI VASTAUS (Livia):
+Kato, tää on helppo. Plavjärvi sijaitsee [[Montenegron]] koillisosassa Plavin kunnassa [[Prokletijen]] eli Kirottujen vuorten ja [[Visitor-vuoriston]] välissä, joten se ei ole yhden vuoriston juurella vaan kahden vuoristoryhmän välissä. Järven pinta on noin 906 metrin korkeudessa merenpinnasta. Se on pinta-alaltaan vain noin kaksi neliökilometriä, mutta ympäröivät vuoret tekevät maisemasta mahtavan. Kaksi vuoristoa yhteen kysymykseen, ei paha.
+KYSYMYS: Kerro lisää: Montenegron
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plavjärvi (luonto · järvi)
+Tietoruudun teksti: Plavjärvi sijaitsee Montenegron koillisosassa Plavin kunnassa Prokletijen eli Kirottujen vuorten ja Visitor-vuoriston välissä. Sen pinta-ala on noin 1,99 km², pituus noin 2,2 km ja pinta 906 metrin korkeudessa. Järvi on matala, keskisyvyydeltään vain noin yhdeksän metriä, ja sen pohjassa on kalkkikiviluolia sekä lukuisia lähteitä, joista vesi pulppuaa maasta. Vesi virtaa pois Lim-jokeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto] Montenegron luonto ulottuu Balkanin suurimman järven pelikaaneista jäätiköiden veistämiin vuoriin, joiden huiput nousevat yli 2 500 metrin. Neljä nostoa vie Durmitorin matalasta vuorijärvestä Skutarijärven kosteikkoon ja sieltä Prokletijen ja Bjelasican vuorille.
+AIEMPI KYSYMYS: Minkä vuoriston juurella Plavjärvi on?
+AIEMPI VASTAUS (Livia):
+Kato, tää on helppo. Plavjärvi sijaitsee [[Montenegron]] koillisosassa Plavin kunnassa [[Prokletijen]] eli Kirottujen vuorten ja [[Visitor-vuoriston]] välissä, joten se ei ole yhden vuoriston juurella vaan kahden vuoristoryhmän välissä. Järven pinta on noin 906 metrin korkeudessa merenpinnasta. Se on pinta-alaltaan vain noin kaksi neliökilometriä, mutta ympäröivät vuoret tekevät maisemasta mahtavan. Kaksi vuoristoa yhteen kysymykseen, ei paha.
+KYSYMYS: Kerro lisää: Prokletijen
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plavjärvi (luonto · järvi)
+Tietoruudun teksti: Plavjärvi sijaitsee Montenegron koillisosassa Plavin kunnassa Prokletijen eli Kirottujen vuorten ja Visitor-vuoriston välissä. Sen pinta-ala on noin 1,99 km², pituus noin 2,2 km ja pinta 906 metrin korkeudessa. Järvi on matala, keskisyvyydeltään vain noin yhdeksän metriä, ja sen pohjassa on kalkkikiviluolia sekä lukuisia lähteitä, joista vesi pulppuaa maasta. Vesi virtaa pois Lim-jokeen.
+AIEMPI KYSYMYS: Minkä vuoriston juurella Plavjärvi on?
+AIEMPI VASTAUS (Livia):
+Kato, tää on helppo. Plavjärvi sijaitsee [[Montenegron]] koillisosassa Plavin kunnassa [[Prokletijen]] eli Kirottujen vuorten ja [[Visitor-vuoriston]] välissä, joten se ei ole yhden vuoriston juurella vaan kahden vuoristoryhmän välissä. Järven pinta on noin 906 metrin korkeudessa merenpinnasta. Se on pinta-alaltaan vain noin kaksi neliökilometriä, mutta ympäröivät vuoret tekevät maisemasta mahtavan. Kaksi vuoristoa yhteen kysymykseen, ei paha.
+KYSYMYS: Kerro lisää: Visitor-vuoriston
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plavjärvi (luonto · järvi)
+Tietoruudun teksti: Plavjärvi sijaitsee Montenegron koillisosassa Plavin kunnassa Prokletijen eli Kirottujen vuorten ja Visitor-vuoriston välissä. Sen pinta-ala on noin 1,99 km², pituus noin 2,2 km ja pinta 906 metrin korkeudessa. Järvi on matala, keskisyvyydeltään vain noin yhdeksän metriä, ja sen pohjassa on kalkkikiviluolia sekä lukuisia lähteitä, joista vesi pulppuaa maasta. Vesi virtaa pois Lim-jokeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+- [Porto Velho — kaupunkilehti / Porto Velho: Aurinko laskee jokeen joka ilta] Kun ilta saapuu, Porto Velhon rantaraitille kokoontuu ihmisiä katsomaan auringonlaskua Rio Madeiran ylle - se on kaupungin vakiintunut ilta-askare siinä missä iltakävely muualla. Joelta palaa samaan aikaan kalastajaveneitä, jotka ovat olleet päivän saaliilla, sillä joki on monelle perheelle yhä tärkein toimeentulon lähde. Saalis myydään usein heti rantatorilla tuoreena, ennen kuin se ehtii pilaantua trooppisessa lämmössä. Sademetsän ilmasto tekee illoista kosteita ja lämpimiä ympäri vuoden, joten auringonlasku on myös hetki, jolloin päivän pahin helle vihdoin hellittää ja kaupunki herää toiseen elämäänsä.
+AIEMPI KYSYMYS: Mihin jokeen Plavjärven vesi virtaa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Plavjärven vesi virtaa pois [[Lim-jokeen]]. Lim kuuluu [[Drina-joen]] vesistöön ja sitä kautta lopulta [[Tonavan]] vesistöalueeseen, joten järven lähdevesi päätyy pitkän matkan jälkeen Mustaanmereen. Järven pohjassa on lukuisia lähteitä, joista vesi pulppuaa maasta, ja Lim vie ylimääräisen veden pois. Vesi löytää kyllä tiensä, ei siihen tarvita kyyhkyä.
+KYSYMYS: Kerro lisää: Lim-jokeen
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plavjärvi (luonto · järvi)
+Tietoruudun teksti: Plavjärvi sijaitsee Montenegron koillisosassa Plavin kunnassa Prokletijen eli Kirottujen vuorten ja Visitor-vuoriston välissä. Sen pinta-ala on noin 1,99 km², pituus noin 2,2 km ja pinta 906 metrin korkeudessa. Järvi on matala, keskisyvyydeltään vain noin yhdeksän metriä, ja sen pohjassa on kalkkikiviluolia sekä lukuisia lähteitä, joista vesi pulppuaa maasta. Vesi virtaa pois Lim-jokeen.
+AIEMPI KYSYMYS: Mihin jokeen Plavjärven vesi virtaa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Plavjärven vesi virtaa pois [[Lim-jokeen]]. Lim kuuluu [[Drina-joen]] vesistöön ja sitä kautta lopulta [[Tonavan]] vesistöalueeseen, joten järven lähdevesi päätyy pitkän matkan jälkeen Mustaanmereen. Järven pohjassa on lukuisia lähteitä, joista vesi pulppuaa maasta, ja Lim vie ylimääräisen veden pois. Vesi löytää kyllä tiensä, ei siihen tarvita kyyhkyä.
+KYSYMYS: Kerro lisää: Drina-joen
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plavjärvi (luonto · järvi)
+Tietoruudun teksti: Plavjärvi sijaitsee Montenegron koillisosassa Plavin kunnassa Prokletijen eli Kirottujen vuorten ja Visitor-vuoriston välissä. Sen pinta-ala on noin 1,99 km², pituus noin 2,2 km ja pinta 906 metrin korkeudessa. Järvi on matala, keskisyvyydeltään vain noin yhdeksän metriä, ja sen pohjassa on kalkkikiviluolia sekä lukuisia lähteitä, joista vesi pulppuaa maasta. Vesi virtaa pois Lim-jokeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Mihin jokeen Plavjärven vesi virtaa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Plavjärven vesi virtaa pois [[Lim-jokeen]]. Lim kuuluu [[Drina-joen]] vesistöön ja sitä kautta lopulta [[Tonavan]] vesistöalueeseen, joten järven lähdevesi päätyy pitkän matkan jälkeen Mustaanmereen. Järven pohjassa on lukuisia lähteitä, joista vesi pulppuaa maasta, ja Lim vie ylimääräisen veden pois. Vesi löytää kyllä tiensä, ei siihen tarvita kyyhkyä.
+KYSYMYS: Kerro lisää: Tonavan
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plavjärvi (luonto · järvi)
+Tietoruudun teksti: Plavjärvi sijaitsee Montenegron koillisosassa Plavin kunnassa Prokletijen eli Kirottujen vuorten ja Visitor-vuoriston välissä. Sen pinta-ala on noin 1,99 km², pituus noin 2,2 km ja pinta 906 metrin korkeudessa. Järvi on matala, keskisyvyydeltään vain noin yhdeksän metriä, ja sen pohjassa on kalkkikiviluolia sekä lukuisia lähteitä, joista vesi pulppuaa maasta. Vesi virtaa pois Lim-jokeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — maalehti / Ruoka: Keitto, jonka värin tekee kalkkikivi] Achu on tikarien ja ngembojen perusruoka Kamerunin luoteis- ja länsiosissa: kokojamssi ja raa'at banaanit keitetään, kuoritaan ja survotaan huhmaressa sileäksi taikinaksi, joka muotoillaan lautaselle oman kuoppansa kanssa. Kuoppaan kaadetaan keltainen keitto, joka valmistetaan erikseen palmuöljystä, mausteista ja lihaliemestä — ja kanwa- eli niki-vedestä, jossa on liuotettua kalkkikiveä. Juuri se kääntää punaisen palmuöljyn keltaiseksi ja antaa ruoalle sen toisen nimen, keltainen keitto. Seurana on naudanlihaa, sisäelimiä tai naudannahkaa. Luoteessa ruoka on achu, lännessä taro.
+- [Kiina — maalehti / Luonto: Kalkkikivipylväitä joen mutkissa] Li-joki kiemurtelee Guilinista Yangshuohon kalkkikiven läpi. Maisema on kuuluisaa karstia: sadetta hitaasti liuottama kalkkikivi on jättänyt jäljelle kymmenien metrien korkuisia jyrkkäseinäisiä kukkuloita, jotka nousevat tasangolta yksi kerrallaan. Muoto syntyy siitä, että vesi syövyttää kiveä ennen kaikkea rakojen kohdalta, ja väliin jää liukenematonta kiveä. Kiinalaiset maisemamaalarit ovat piirtäneet näitä kukkuloita vuosisatoja, ja monessa maalauksessa väitetty liioittelu onkin lähempänä totuutta kuin luulisi.
+- [Nullarbor — kaupunkilehti / Kalkkikivitasanko elää maan alla] Nullarborin tasainen pinta kätkee alleen toisen maailman: kauan sitten merenpohjasta noussut kalkkikivi on täynnä luolia, pystykuiluja ja käytäviä, joissa muinaiset ihmiset ja aavikon eläimet ovat molemmat oppineet elämään.
+AIEMPI KYSYMYS: Miten kalkkikiviluolat syntyvät?
+AIEMPI VASTAUS (Livia):
+Ai tota. Hyvä kysymys tuo. [[Kalkkikivi]] on kivilaji, joka liukenee hitaasti hieman happamaan sadeveteen ja pohjaveteen. Vesi laajentaa kallion halkeamia vuosisatojen ja vuosituhansien kuluessa ensin kapeiksi käytäviksi ja lopulta luoliksi, ja ilmiötä kutsutaan [[karstiutumiseksi]]. Samasta syystä kalkkikivialueilla on usein lähteitä ja maanalaisia vesireittejä, ja Plavjärven pohjassa on juuri tällaisia luolia ja lähteitä.
+
+Luolat ovat siivekkäälle vähän epäilyttäviä paikkoja, koska sinne ei näe ylhäältä, vaikka minä muuten olen aika hyvä löytämään reittejä.
+KYSYMYS: Kerro lisää: Kalkkikivi
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plavjärvi (luonto · järvi)
+Tietoruudun teksti: Plavjärvi sijaitsee Montenegron koillisosassa Plavin kunnassa Prokletijen eli Kirottujen vuorten ja Visitor-vuoriston välissä. Sen pinta-ala on noin 1,99 km², pituus noin 2,2 km ja pinta 906 metrin korkeudessa. Järvi on matala, keskisyvyydeltään vain noin yhdeksän metriä, ja sen pohjassa on kalkkikiviluolia sekä lukuisia lähteitä, joista vesi pulppuaa maasta. Vesi virtaa pois Lim-jokeen.
+AIEMPI KYSYMYS: Miten kalkkikiviluolat syntyvät?
+AIEMPI VASTAUS (Livia):
+Ai tota. Hyvä kysymys tuo. [[Kalkkikivi]] on kivilaji, joka liukenee hitaasti hieman happamaan sadeveteen ja pohjaveteen. Vesi laajentaa kallion halkeamia vuosisatojen ja vuosituhansien kuluessa ensin kapeiksi käytäviksi ja lopulta luoliksi, ja ilmiötä kutsutaan [[karstiutumiseksi]]. Samasta syystä kalkkikivialueilla on usein lähteitä ja maanalaisia vesireittejä, ja Plavjärven pohjassa on juuri tällaisia luolia ja lähteitä.
+
+Luolat ovat siivekkäälle vähän epäilyttäviä paikkoja, koska sinne ei näe ylhäältä, vaikka minä muuten olen aika hyvä löytämään reittejä.
+KYSYMYS: Kerro lisää: karstiutumiseksi
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plavjärvi (luonto · järvi)
+Tietoruudun teksti: Plavjärvi sijaitsee Montenegron koillisosassa Plavin kunnassa Prokletijen eli Kirottujen vuorten ja Visitor-vuoriston välissä. Sen pinta-ala on noin 1,99 km², pituus noin 2,2 km ja pinta 906 metrin korkeudessa. Järvi on matala, keskisyvyydeltään vain noin yhdeksän metriä, ja sen pohjassa on kalkkikiviluolia sekä lukuisia lähteitä, joista vesi pulppuaa maasta. Vesi virtaa pois Lim-jokeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Zla Kolata, Montenegron korkein huippu] vuodesta 2009 — Zla Kolata kohoaa 2 534 metriin, ja se on Montenegron korkein vuori, vaikka koko vuoriston korkein huippu Maja Jezercë (2 694 m) on Albanian puolella. Se kuuluu Prokletijeen, jonka nimi tarkoittaa kirottuja, ja vuoriston Montenegron puolelle perustettiin kansallispuisto vuonna 2009. Puiston pinta-ala on noin 16 000 hehtaaria. Viimeisen jääkauden aikana laaksoja muovasivat kilometrien mittaiset jäätiköt, ja Ropojanan jäätikkö oli noin 12,5 kilometriä pitkä. Vuoristossa on noin 20 jäätikköjärveä, joista Hridsko jezero on vajaat 300 metriä pitkä.
+AIEMPI KYSYMYS: Mitä Prokletijen nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. Nimi Prokletije tarkoittaa suunnilleen kirottuja vuoria, ja albaniaksi vuoristoa kutsutaan nimellä Bjeshkët e Nemura, jolla on sama merkitys. Vuoristo ulottuu [[Montenegron]], [[Albanian]] ja [[Kosovon]] alueelle. Nimen alkuperää selitetään usein vaikeakulkuisella maastolla ja paikallisilla tarinoilla, mutta tarkoista yksityiskohdista en ole varma. Ei kuulosta kyyhkyn kodilta, vaikka siellä varmasti lintuja lentää.
+KYSYMYS: Kerro lisää: Albanian
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plavjärvi (luonto · järvi)
+Tietoruudun teksti: Plavjärvi sijaitsee Montenegron koillisosassa Plavin kunnassa Prokletijen eli Kirottujen vuorten ja Visitor-vuoriston välissä. Sen pinta-ala on noin 1,99 km², pituus noin 2,2 km ja pinta 906 metrin korkeudessa. Järvi on matala, keskisyvyydeltään vain noin yhdeksän metriä, ja sen pohjassa on kalkkikiviluolia sekä lukuisia lähteitä, joista vesi pulppuaa maasta. Vesi virtaa pois Lim-jokeen.
+AIEMPI KYSYMYS: Mitä Prokletijen nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. Nimi Prokletije tarkoittaa suunnilleen kirottuja vuoria, ja albaniaksi vuoristoa kutsutaan nimellä Bjeshkët e Nemura, jolla on sama merkitys. Vuoristo ulottuu [[Montenegron]], [[Albanian]] ja [[Kosovon]] alueelle. Nimen alkuperää selitetään usein vaikeakulkuisella maastolla ja paikallisilla tarinoilla, mutta tarkoista yksityiskohdista en ole varma. Ei kuulosta kyyhkyn kodilta, vaikka siellä varmasti lintuja lentää.
+KYSYMYS: Kerro lisää: Kosovon
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plavjärvi (luonto · järvi)
+Tietoruudun teksti: Plavjärvi sijaitsee Montenegron koillisosassa Plavin kunnassa Prokletijen eli Kirottujen vuorten ja Visitor-vuoriston välissä. Sen pinta-ala on noin 1,99 km², pituus noin 2,2 km ja pinta 906 metrin korkeudessa. Järvi on matala, keskisyvyydeltään vain noin yhdeksän metriä, ja sen pohjassa on kalkkikiviluolia sekä lukuisia lähteitä, joista vesi pulppuaa maasta. Vesi virtaa pois Lim-jokeen.
+AIEMPI KYSYMYS: Kuinka syvä Plavjärvi on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Plavjärvi on hyvin matala järvi: sen keskisyvyys on vain noin yhdeksän metriä. Järven pinta-ala on noin kaksi neliökilometriä, pituus noin 2,2 kilometriä, ja pohjassa on [[kalkkikiviluolia]] sekä lukuisia lähteitä. Suurimman syvyyden tarkkaa lukua en ole varma, joten sitä en esitä. Vesi virtaa pois [[Lim-jokeen]]. Yhdeksän metriä, se on vähemmän kuin moni torni.
+KYSYMYS: Kerro lisää: kalkkikiviluolia
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovćen ja Njegošin mausoleumi (historia)
+Tietoruudun teksti: Njegošin mausoleumi seisoo Lovćenin vuoren Jezerski Vrh -huipulla, 1 657 metrin korkeudessa. Cetinjestä sinne johtaa noin 21 kilometrin asfalttitie. Petar II Petrović-Njegoš suunnitteli huipulle kappelin vuonna 1845 ja valitsi paikan itse hautapaikakseen; hänen jäännöksensä siirrettiin vuorelle 1855. Kappeli vaurioitui ensimmäisessä maailmansodassa, rakennettiin uudelleen 1925 ja purettiin 1960-luvun lopulla. Ivan Meštrovićin suunnittelema nykyinen mausoleumi vihittiin käyttöön 1974, ja sen sisäänkäyntiä kantavat patsaat esittävät montenegrolaisia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historia: 461 porrasta pilviin] 1851–1974 — Petar II Petrović-Njegoš oli sekä Montenegron ruhtinaspiispa että maan tärkein runoilija, ja hänen toiveensa oli levätä Lovćenin vuoren huipulla. Kuoltuaan 1851 hänet haudattiin sinne pieneen kappeliin. Ensimmäisessä maailmansodassa Itävalta-Unkarin miehittäjät halusivat pystyttää huipulle muistomerkin keisari Franz Josefille ja vaativat jäännökset siirrettäväksi Cetinjeen; kappeli rappeutui pahoin. Vasta 1970-luvulla kroatialainen kuvanveistäjä Ivan Meštrović sai valmiiksi uuden mausoleumin Jezerski vrhin huipulle, 1660 metrin korkeuteen. Huipulle kiipeää 461 kiviporrasta, ja mausoleumia pidetään maailman korkeimpana.
+AIEMPI KYSYMYS: Kuka suunnitteli nykyisen mausoleumin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nykyisen mausoleumin suunnitteli kroatialainen kuvanveistäjä [[Ivan Meštrović]], ja se vihittiin käyttöön vuonna 1974. Se seisoo [[Lovćenin]] vuoren [[Jezerski Vrh]] -huipulla, ja sen sisäänkäyntiä kantavat patsaat esittävät montenegrolaisia. Paikan valitsi aikanaan hautapaikakseen [[Petar II Petrović-Njegoš]] itse. Kerrankin helppo, minä jo pelkäsin.
+KYSYMYS: Kerro lisää: Ivan Meštrović
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovćen ja Njegošin mausoleumi (historia)
+Tietoruudun teksti: Njegošin mausoleumi seisoo Lovćenin vuoren Jezerski Vrh -huipulla, 1 657 metrin korkeudessa. Cetinjestä sinne johtaa noin 21 kilometrin asfalttitie. Petar II Petrović-Njegoš suunnitteli huipulle kappelin vuonna 1845 ja valitsi paikan itse hautapaikakseen; hänen jäännöksensä siirrettiin vuorelle 1855. Kappeli vaurioitui ensimmäisessä maailmansodassa, rakennettiin uudelleen 1925 ja purettiin 1960-luvun lopulla. Ivan Meštrovićin suunnittelema nykyinen mausoleumi vihittiin käyttöön 1974, ja sen sisäänkäyntiä kantavat patsaat esittävät montenegrolaisia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historia: 461 porrasta pilviin] 1851–1974 — Petar II Petrović-Njegoš oli sekä Montenegron ruhtinaspiispa että maan tärkein runoilija, ja hänen toiveensa oli levätä Lovćenin vuoren huipulla. Kuoltuaan 1851 hänet haudattiin sinne pieneen kappeliin. Ensimmäisessä maailmansodassa Itävalta-Unkarin miehittäjät halusivat pystyttää huipulle muistomerkin keisari Franz Josefille ja vaativat jäännökset siirrettäväksi Cetinjeen; kappeli rappeutui pahoin. Vasta 1970-luvulla kroatialainen kuvanveistäjä Ivan Meštrović sai valmiiksi uuden mausoleumin Jezerski vrhin huipulle, 1660 metrin korkeuteen. Huipulle kiipeää 461 kiviporrasta, ja mausoleumia pidetään maailman korkeimpana.
+AIEMPI KYSYMYS: Kuka suunnitteli nykyisen mausoleumin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nykyisen mausoleumin suunnitteli kroatialainen kuvanveistäjä [[Ivan Meštrović]], ja se vihittiin käyttöön vuonna 1974. Se seisoo [[Lovćenin]] vuoren [[Jezerski Vrh]] -huipulla, ja sen sisäänkäyntiä kantavat patsaat esittävät montenegrolaisia. Paikan valitsi aikanaan hautapaikakseen [[Petar II Petrović-Njegoš]] itse. Kerrankin helppo, minä jo pelkäsin.
+KYSYMYS: Kerro lisää: Lovćenin
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovćen ja Njegošin mausoleumi (historia)
+Tietoruudun teksti: Njegošin mausoleumi seisoo Lovćenin vuoren Jezerski Vrh -huipulla, 1 657 metrin korkeudessa. Cetinjestä sinne johtaa noin 21 kilometrin asfalttitie. Petar II Petrović-Njegoš suunnitteli huipulle kappelin vuonna 1845 ja valitsi paikan itse hautapaikakseen; hänen jäännöksensä siirrettiin vuorelle 1855. Kappeli vaurioitui ensimmäisessä maailmansodassa, rakennettiin uudelleen 1925 ja purettiin 1960-luvun lopulla. Ivan Meštrovićin suunnittelema nykyinen mausoleumi vihittiin käyttöön 1974, ja sen sisäänkäyntiä kantavat patsaat esittävät montenegrolaisia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historia: 461 porrasta pilviin] 1851–1974 — Petar II Petrović-Njegoš oli sekä Montenegron ruhtinaspiispa että maan tärkein runoilija, ja hänen toiveensa oli levätä Lovćenin vuoren huipulla. Kuoltuaan 1851 hänet haudattiin sinne pieneen kappeliin. Ensimmäisessä maailmansodassa Itävalta-Unkarin miehittäjät halusivat pystyttää huipulle muistomerkin keisari Franz Josefille ja vaativat jäännökset siirrettäväksi Cetinjeen; kappeli rappeutui pahoin. Vasta 1970-luvulla kroatialainen kuvanveistäjä Ivan Meštrović sai valmiiksi uuden mausoleumin Jezerski vrhin huipulle, 1660 metrin korkeuteen. Huipulle kiipeää 461 kiviporrasta, ja mausoleumia pidetään maailman korkeimpana.
+AIEMPI KYSYMYS: Kuka suunnitteli nykyisen mausoleumin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nykyisen mausoleumin suunnitteli kroatialainen kuvanveistäjä [[Ivan Meštrović]], ja se vihittiin käyttöön vuonna 1974. Se seisoo [[Lovćenin]] vuoren [[Jezerski Vrh]] -huipulla, ja sen sisäänkäyntiä kantavat patsaat esittävät montenegrolaisia. Paikan valitsi aikanaan hautapaikakseen [[Petar II Petrović-Njegoš]] itse. Kerrankin helppo, minä jo pelkäsin.
+KYSYMYS: Kerro lisää: Jezerski Vrh
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovćen ja Njegošin mausoleumi (historia)
+Tietoruudun teksti: Njegošin mausoleumi seisoo Lovćenin vuoren Jezerski Vrh -huipulla, 1 657 metrin korkeudessa. Cetinjestä sinne johtaa noin 21 kilometrin asfalttitie. Petar II Petrović-Njegoš suunnitteli huipulle kappelin vuonna 1845 ja valitsi paikan itse hautapaikakseen; hänen jäännöksensä siirrettiin vuorelle 1855. Kappeli vaurioitui ensimmäisessä maailmansodassa, rakennettiin uudelleen 1925 ja purettiin 1960-luvun lopulla. Ivan Meštrovićin suunnittelema nykyinen mausoleumi vihittiin käyttöön 1974, ja sen sisäänkäyntiä kantavat patsaat esittävät montenegrolaisia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historia: 461 porrasta pilviin] 1851–1974 — Petar II Petrović-Njegoš oli sekä Montenegron ruhtinaspiispa että maan tärkein runoilija, ja hänen toiveensa oli levätä Lovćenin vuoren huipulla. Kuoltuaan 1851 hänet haudattiin sinne pieneen kappeliin. Ensimmäisessä maailmansodassa Itävalta-Unkarin miehittäjät halusivat pystyttää huipulle muistomerkin keisari Franz Josefille ja vaativat jäännökset siirrettäväksi Cetinjeen; kappeli rappeutui pahoin. Vasta 1970-luvulla kroatialainen kuvanveistäjä Ivan Meštrović sai valmiiksi uuden mausoleumin Jezerski vrhin huipulle, 1660 metrin korkeuteen. Huipulle kiipeää 461 kiviporrasta, ja mausoleumia pidetään maailman korkeimpana.
+AIEMPI KYSYMYS: Kuka suunnitteli nykyisen mausoleumin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nykyisen mausoleumin suunnitteli kroatialainen kuvanveistäjä [[Ivan Meštrović]], ja se vihittiin käyttöön vuonna 1974. Se seisoo [[Lovćenin]] vuoren [[Jezerski Vrh]] -huipulla, ja sen sisäänkäyntiä kantavat patsaat esittävät montenegrolaisia. Paikan valitsi aikanaan hautapaikakseen [[Petar II Petrović-Njegoš]] itse. Kerrankin helppo, minä jo pelkäsin.
+KYSYMYS: Kerro lisää: Petar II Petrović-Njegoš
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovćen ja Njegošin mausoleumi (historia)
+Tietoruudun teksti: Njegošin mausoleumi seisoo Lovćenin vuoren Jezerski Vrh -huipulla, 1 657 metrin korkeudessa. Cetinjestä sinne johtaa noin 21 kilometrin asfalttitie. Petar II Petrović-Njegoš suunnitteli huipulle kappelin vuonna 1845 ja valitsi paikan itse hautapaikakseen; hänen jäännöksensä siirrettiin vuorelle 1855. Kappeli vaurioitui ensimmäisessä maailmansodassa, rakennettiin uudelleen 1925 ja purettiin 1960-luvun lopulla. Ivan Meštrovićin suunnittelema nykyinen mausoleumi vihittiin käyttöön 1974, ja sen sisäänkäyntiä kantavat patsaat esittävät montenegrolaisia.
+AIEMPI KYSYMYS: Minkä huipun päällä mausoleumi seisoo?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Mausoleumi seisoo [[Lovćenin]] vuoren [[Jezerski Vrh]] -huipulla, noin 1 660 metrin korkeudessa; lähteet antavat korkeudeksi 1 657 tai 1 660 metriä. Huipulle johtaa [[Cetinjestä]] noin 21 kilometrin asfalttitie. Sinne minä lentäisin mieluummin kuin kipuaisin tietä.
+KYSYMYS: Kerro lisää: Cetinjestä
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovćen ja Njegošin mausoleumi (historia)
+Tietoruudun teksti: Njegošin mausoleumi seisoo Lovćenin vuoren Jezerski Vrh -huipulla, 1 657 metrin korkeudessa. Cetinjestä sinne johtaa noin 21 kilometrin asfalttitie. Petar II Petrović-Njegoš suunnitteli huipulle kappelin vuonna 1845 ja valitsi paikan itse hautapaikakseen; hänen jäännöksensä siirrettiin vuorelle 1855. Kappeli vaurioitui ensimmäisessä maailmansodassa, rakennettiin uudelleen 1925 ja purettiin 1960-luvun lopulla. Ivan Meštrovićin suunnittelema nykyinen mausoleumi vihittiin käyttöön 1974, ja sen sisäänkäyntiä kantavat patsaat esittävät montenegrolaisia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Zla Kolata, Montenegron korkein huippu] vuodesta 2009 — Zla Kolata kohoaa 2 534 metriin, ja se on Montenegron korkein vuori, vaikka koko vuoriston korkein huippu Maja Jezercë (2 694 m) on Albanian puolella. Se kuuluu Prokletijeen, jonka nimi tarkoittaa kirottuja, ja vuoriston Montenegron puolelle perustettiin kansallispuisto vuonna 2009. Puiston pinta-ala on noin 16 000 hehtaaria. Viimeisen jääkauden aikana laaksoja muovasivat kilometrien mittaiset jäätiköt, ja Ropojanan jäätikkö oli noin 12,5 kilometriä pitkä. Vuoristossa on noin 20 jäätikköjärveä, joista Hridsko jezero on vajaat 300 metriä pitkä.
+AIEMPI KYSYMYS: Kuka Petar II Petrović-Njegoš oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: hän oli tärkeä mies. Petar II Petrović-Njegoš syntyi vuonna 1813 ja kuoli vuonna 1851. Hän oli [[Montenegron]] ruhtinaspiispa eli maan hengellinen ja maallinen johtaja, ja samalla maan tärkeimpiä runoilijoita; tunnetuin teos on [[Vuoren seppele]]. Hän suunnitteli [[Lovćenin]] huipulle kappelin vuonna 1845 ja valitsi paikan itse hautapaikakseen. Hän valitsi maisemansa itse, ja kyllä se kelpaa.
+KYSYMYS: Kerro lisää: Montenegron
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovćen ja Njegošin mausoleumi (historia)
+Tietoruudun teksti: Njegošin mausoleumi seisoo Lovćenin vuoren Jezerski Vrh -huipulla, 1 657 metrin korkeudessa. Cetinjestä sinne johtaa noin 21 kilometrin asfalttitie. Petar II Petrović-Njegoš suunnitteli huipulle kappelin vuonna 1845 ja valitsi paikan itse hautapaikakseen; hänen jäännöksensä siirrettiin vuorelle 1855. Kappeli vaurioitui ensimmäisessä maailmansodassa, rakennettiin uudelleen 1925 ja purettiin 1960-luvun lopulla. Ivan Meštrovićin suunnittelema nykyinen mausoleumi vihittiin käyttöön 1974, ja sen sisäänkäyntiä kantavat patsaat esittävät montenegrolaisia.
+AIEMPI KYSYMYS: Kuka Petar II Petrović-Njegoš oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: hän oli tärkeä mies. Petar II Petrović-Njegoš syntyi vuonna 1813 ja kuoli vuonna 1851. Hän oli [[Montenegron]] ruhtinaspiispa eli maan hengellinen ja maallinen johtaja, ja samalla maan tärkeimpiä runoilijoita; tunnetuin teos on [[Vuoren seppele]]. Hän suunnitteli [[Lovćenin]] huipulle kappelin vuonna 1845 ja valitsi paikan itse hautapaikakseen. Hän valitsi maisemansa itse, ja kyllä se kelpaa.
+KYSYMYS: Kerro lisää: Vuoren seppele
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovćen ja Njegošin mausoleumi (historia)
+Tietoruudun teksti: Njegošin mausoleumi seisoo Lovćenin vuoren Jezerski Vrh -huipulla, 1 657 metrin korkeudessa. Cetinjestä sinne johtaa noin 21 kilometrin asfalttitie. Petar II Petrović-Njegoš suunnitteli huipulle kappelin vuonna 1845 ja valitsi paikan itse hautapaikakseen; hänen jäännöksensä siirrettiin vuorelle 1855. Kappeli vaurioitui ensimmäisessä maailmansodassa, rakennettiin uudelleen 1925 ja purettiin 1960-luvun lopulla. Ivan Meštrovićin suunnittelema nykyinen mausoleumi vihittiin käyttöön 1974, ja sen sisäänkäyntiä kantavat patsaat esittävät montenegrolaisia.
+AIEMPI KYSYMYS: Mikä Cetinje on Montenegrolle?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Cetinje on [[Montenegron]] vanha kuninkaallinen pääkaupunki ja maan historiallinen ja kulttuurinen keskus, vaikka nykyinen pääkaupunki on [[Podgorica]]. Se sijaitsee [[Lovćenin]] juurella, ja sieltä lähtee noin 21 kilometrin asfalttitie Njegošin mausoleumille. Cetinje oli myös Zetan ruhtinaskunnan keskus sen jälkeen, kun pääkaupunki siirtyi sinne Skadarjärven rannalta. Pullaa sieltä en ole kyllä maistanut, kukaan ei kysy.
+KYSYMYS: Kerro lisää: Podgorica
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovćen ja Njegošin mausoleumi (historia)
+Tietoruudun teksti: Njegošin mausoleumi seisoo Lovćenin vuoren Jezerski Vrh -huipulla, 1 657 metrin korkeudessa. Cetinjestä sinne johtaa noin 21 kilometrin asfalttitie. Petar II Petrović-Njegoš suunnitteli huipulle kappelin vuonna 1845 ja valitsi paikan itse hautapaikakseen; hänen jäännöksensä siirrettiin vuorelle 1855. Kappeli vaurioitui ensimmäisessä maailmansodassa, rakennettiin uudelleen 1925 ja purettiin 1960-luvun lopulla. Ivan Meštrovićin suunnittelema nykyinen mausoleumi vihittiin käyttöön 1974, ja sen sisäänkäyntiä kantavat patsaat esittävät montenegrolaisia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Järvet jotka rakentavat itse patonsa] 1979 — Plitvicen 16 järveä on kytketty toisiinsa vesiputouksilla ja luonnollisilla travertiinipadoilla — kalkkikivipitoisesta vedestä sakkautuvasta kivestä, jota sammal ja levät sitovat vuosisatojen kuluessa yhä paksummaksi kerrokseksi. Padot kasvavat ja muuttavat muotoaan koko ajan, joten järvien reitti ei ole koskaan täysin sama kahtena vuosikymmenenä. Vesi vaihtaa väriään turkoosista vihreään sen mukaan, kuinka paljon mineraaleja, planktonia ja auringonvaloa siihen osuu. Plitvice on Kroatian vanhin ja suurin kansallispuisto, ja Unesco otti sen maailmanperintöluetteloon jo vuonna 1979.
+- [Serbia — maalehti / Tiede: Teslan huvila Krunska-kadulla] 1952 — Belgradin Krunska-kadun huvila valmistui vuonna 1927 Dragiša Brašovanin suunnitelmien mukaan Đorđe Genčićin kodiksi. Nikola Tesla syntyi vuonna 1856 Smiljanin kylässä, joka on nykyisin Kroatian puolella, serbiperheeseen, ja hän kuoli New Yorkissa 1943. Hänen jäämistönsä kuljetettiin New Yorkista Belgradiin syyskuussa 1951, ja museo perustettiin 5. joulukuuta 1952. Arkistossa on yli 160 000 alkuperäistä asiakirjaa, ja se on kirjattu UNESCOn Muisti maailmassa -rekisteriin vuonna 2003. Teslan tuhkat säilytetään museossa kultaisessa pallossa.
+AIEMPI KYSYMYS: Kuka Ivan Meštrović oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Ivan Meštrović oli kroatialainen kuvanveistäjä, syntynyt vuonna 1883 ja kuollut vuonna 1962. Häntä pidetään yhtenä alueensa tunnetuimmista kuvanveistäjistä. Hänen suunnittelemansa mausoleumi [[Lovćenin]] huipulla on yksi hänen tunnetuimmista töistään, ja sen sisäänkäyntiä kantavat patsaat esittävät montenegrolaisia. Hän oli [[Kroatian]] merkittävä taiteilija, ja se näkyy. Hänen nimensä jäi mieleen heti, ja sehän on jo jotain.
+KYSYMYS: Kerro lisää: Kroatian
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žabljak Crnojevića (historia)
+Tietoruudun teksti: Žabljak Crnojevića oli Zetan ruhtinaskunnan linnoitettu pääkaupunki Skadarjärven rannalla, Stefan ja Ivan Crnojevićin hallintokeskus. Osmanit valtasivat sen Shkodran piirityksen yhteydessä 1478, ja pääkaupunki siirtyi lopulta Cetinjeen. Alue palasi Montenegron hallintaan vasta 1878 Berliinin kongressissa, 400 vuotta myöhemmin. Rauniot seisovat yhä järven rannalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historia: Lyijykirjaimet Obodin kalliolla] 1493–1496 — Zetan hallitsija Ivan Crnojević siirsi pääkaupunkinsa 1480-luvulla vuoristoon perustamalleen Cetinjeen, koska Skadarjärven ranta ei enää ollut turvassa osmaneilta. Hänen poikansa Đurađ pystytti 1493 lähelle, Obodin kalliolle Rijeka Crnojevićan luona, eteläslaavien ensimmäisen kirjapainon – lyijyladelmat ja koristekirjaimet valettiin paikan päällä. Munkki Makarijen johdolla painosta vieri 4. tammikuuta 1494 valmiiksi Oktoih prvoglasnik, ensimmäinen kyrillisin kirjaimin painettu kirja Kaakkois-Euroopassa. Painosta ehti ilmestyä vain viisi teosta ennen kuin osmanien eteneminen pysäytti toiminnan 1496.
+AIEMPI KYSYMYS: Miltä Žabljak Crnojevića näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Žabljak Crnojevića oli [[Zetan ruhtinaskunnan]] linnoitettu pääkaupunki [[Skadarjärven]] rannalla ja Crnojevićien hallintokeskus. Varmasti voi sanoa, että se oli linnoitettu ja että siellä sijaitsi ruhtinaiden hallinto, mutta muurien, tornien ja rakennusten tarkasta ulkoasusta en ole varma, enkä halua kuvitella sitä aukkoja täyttämällä. Rauniot seisovat yhä järven rannalla, ja ne kertovat osan tarinasta. Ylhäältä näkee sen verran, että raunioista ei arvaa paljoa.
+KYSYMYS: Kerro lisää: Zetan ruhtinaskunnan
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žabljak Crnojevića (historia)
+Tietoruudun teksti: Žabljak Crnojevića oli Zetan ruhtinaskunnan linnoitettu pääkaupunki Skadarjärven rannalla, Stefan ja Ivan Crnojevićin hallintokeskus. Osmanit valtasivat sen Shkodran piirityksen yhteydessä 1478, ja pääkaupunki siirtyi lopulta Cetinjeen. Alue palasi Montenegron hallintaan vasta 1878 Berliinin kongressissa, 400 vuotta myöhemmin. Rauniot seisovat yhä järven rannalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historia: Lyijykirjaimet Obodin kalliolla] 1493–1496 — Zetan hallitsija Ivan Crnojević siirsi pääkaupunkinsa 1480-luvulla vuoristoon perustamalleen Cetinjeen, koska Skadarjärven ranta ei enää ollut turvassa osmaneilta. Hänen poikansa Đurađ pystytti 1493 lähelle, Obodin kalliolle Rijeka Crnojevićan luona, eteläslaavien ensimmäisen kirjapainon – lyijyladelmat ja koristekirjaimet valettiin paikan päällä. Munkki Makarijen johdolla painosta vieri 4. tammikuuta 1494 valmiiksi Oktoih prvoglasnik, ensimmäinen kyrillisin kirjaimin painettu kirja Kaakkois-Euroopassa. Painosta ehti ilmestyä vain viisi teosta ennen kuin osmanien eteneminen pysäytti toiminnan 1496.
+AIEMPI KYSYMYS: Miltä Žabljak Crnojevića näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Žabljak Crnojevića oli [[Zetan ruhtinaskunnan]] linnoitettu pääkaupunki [[Skadarjärven]] rannalla ja Crnojevićien hallintokeskus. Varmasti voi sanoa, että se oli linnoitettu ja että siellä sijaitsi ruhtinaiden hallinto, mutta muurien, tornien ja rakennusten tarkasta ulkoasusta en ole varma, enkä halua kuvitella sitä aukkoja täyttämällä. Rauniot seisovat yhä järven rannalla, ja ne kertovat osan tarinasta. Ylhäältä näkee sen verran, että raunioista ei arvaa paljoa.
+KYSYMYS: Kerro lisää: Skadarjärven
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žabljak Crnojevića (historia)
+Tietoruudun teksti: Žabljak Crnojevića oli Zetan ruhtinaskunnan linnoitettu pääkaupunki Skadarjärven rannalla, Stefan ja Ivan Crnojevićin hallintokeskus. Osmanit valtasivat sen Shkodran piirityksen yhteydessä 1478, ja pääkaupunki siirtyi lopulta Cetinjeen. Alue palasi Montenegron hallintaan vasta 1878 Berliinin kongressissa, 400 vuotta myöhemmin. Rauniot seisovat yhä järven rannalla.
+AIEMPI KYSYMYS: Miksi Žabljak Crnojevića on nykyään raunioina?
+AIEMPI VASTAUS (Livia):
+No niin, tää on vakava juttu. Osmanit valtasivat Žabljak Crnojevićin vuonna 1478 [[Shkodran]] piirityksen yhteydessä, ja sen jälkeen pääkaupunki siirtyi lopulta [[Cetinjeen]]. Linnoitus menetti asemansa ruhtinaskunnan keskuksena, ja alue palasi Montenegron hallintaan vasta vuonna 1878 [[Berliinin kongressissa]]. Täsmällistä tietoa siitä, miten rakennukset rapistuivat raunioiksi, minulla ei ole, joten sitä en väitä. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Shkodran
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žabljak Crnojevića (historia)
+Tietoruudun teksti: Žabljak Crnojevića oli Zetan ruhtinaskunnan linnoitettu pääkaupunki Skadarjärven rannalla, Stefan ja Ivan Crnojevićin hallintokeskus. Osmanit valtasivat sen Shkodran piirityksen yhteydessä 1478, ja pääkaupunki siirtyi lopulta Cetinjeen. Alue palasi Montenegron hallintaan vasta 1878 Berliinin kongressissa, 400 vuotta myöhemmin. Rauniot seisovat yhä järven rannalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historia: 461 porrasta pilviin] 1851–1974 — Petar II Petrović-Njegoš oli sekä Montenegron ruhtinaspiispa että maan tärkein runoilija, ja hänen toiveensa oli levätä Lovćenin vuoren huipulla. Kuoltuaan 1851 hänet haudattiin sinne pieneen kappeliin. Ensimmäisessä maailmansodassa Itävalta-Unkarin miehittäjät halusivat pystyttää huipulle muistomerkin keisari Franz Josefille ja vaativat jäännökset siirrettäväksi Cetinjeen; kappeli rappeutui pahoin. Vasta 1970-luvulla kroatialainen kuvanveistäjä Ivan Meštrović sai valmiiksi uuden mausoleumin Jezerski vrhin huipulle, 1660 metrin korkeuteen. Huipulle kiipeää 461 kiviporrasta, ja mausoleumia pidetään maailman korkeimpana.
+- [Montenegro — maalehti / Historia: Lyijykirjaimet Obodin kalliolla] 1493–1496 — Zetan hallitsija Ivan Crnojević siirsi pääkaupunkinsa 1480-luvulla vuoristoon perustamalleen Cetinjeen, koska Skadarjärven ranta ei enää ollut turvassa osmaneilta. Hänen poikansa Đurađ pystytti 1493 lähelle, Obodin kalliolle Rijeka Crnojevićan luona, eteläslaavien ensimmäisen kirjapainon – lyijyladelmat ja koristekirjaimet valettiin paikan päällä. Munkki Makarijen johdolla painosta vieri 4. tammikuuta 1494 valmiiksi Oktoih prvoglasnik, ensimmäinen kyrillisin kirjaimin painettu kirja Kaakkois-Euroopassa. Painosta ehti ilmestyä vain viisi teosta ennen kuin osmanien eteneminen pysäytti toiminnan 1496.
+AIEMPI KYSYMYS: Miksi Žabljak Crnojevića on nykyään raunioina?
+AIEMPI VASTAUS (Livia):
+No niin, tää on vakava juttu. Osmanit valtasivat Žabljak Crnojevićin vuonna 1478 [[Shkodran]] piirityksen yhteydessä, ja sen jälkeen pääkaupunki siirtyi lopulta [[Cetinjeen]]. Linnoitus menetti asemansa ruhtinaskunnan keskuksena, ja alue palasi Montenegron hallintaan vasta vuonna 1878 [[Berliinin kongressissa]]. Täsmällistä tietoa siitä, miten rakennukset rapistuivat raunioiksi, minulla ei ole, joten sitä en väitä. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Cetinjeen
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žabljak Crnojevića (historia)
+Tietoruudun teksti: Žabljak Crnojevića oli Zetan ruhtinaskunnan linnoitettu pääkaupunki Skadarjärven rannalla, Stefan ja Ivan Crnojevićin hallintokeskus. Osmanit valtasivat sen Shkodran piirityksen yhteydessä 1478, ja pääkaupunki siirtyi lopulta Cetinjeen. Alue palasi Montenegron hallintaan vasta 1878 Berliinin kongressissa, 400 vuotta myöhemmin. Rauniot seisovat yhä järven rannalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Berliinin karhu] Berliinin sinetissä on ollut karhu yhtäjaksoisesti 22. maaliskuuta 1280 lähtien: ensimmäinen todistettu sinetti on turkkurien kiltakirjeessä, ja siinä lukee "olen Berliinin porvarien sinetti". Vitsi on siinä, ettei karhulla todennäköisesti ole kaupungin nimen kanssa mitään tekemistä: tutkijoiden pääsääntöisen käsityksen mukaan paikannimi on slaavilaista perua sanasta berl, suo, ja karhu on kansanetymologiaa — puhuva vaakuna. Kaupunki otti asian silti kirjaimellisesti. 17. elokuuta 1939 se sai neljä elävää karhua, jotka asetettiin Köllnischer Parkiin lämmitettävään tiiliseen tarhaan vallihautoineen. Sinne muutti karhusukupolvi toisensa jälkeen: Nante ja Jette, joka synnytti 33 pentua ja jonk…
+AIEMPI KYSYMYS: Miksi Žabljak Crnojevića on nykyään raunioina?
+AIEMPI VASTAUS (Livia):
+No niin, tää on vakava juttu. Osmanit valtasivat Žabljak Crnojevićin vuonna 1478 [[Shkodran]] piirityksen yhteydessä, ja sen jälkeen pääkaupunki siirtyi lopulta [[Cetinjeen]]. Linnoitus menetti asemansa ruhtinaskunnan keskuksena, ja alue palasi Montenegron hallintaan vasta vuonna 1878 [[Berliinin kongressissa]]. Täsmällistä tietoa siitä, miten rakennukset rapistuivat raunioiksi, minulla ei ole, joten sitä en väitä. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Berliinin kongressissa
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žabljak Crnojevića (historia)
+Tietoruudun teksti: Žabljak Crnojevića oli Zetan ruhtinaskunnan linnoitettu pääkaupunki Skadarjärven rannalla, Stefan ja Ivan Crnojevićin hallintokeskus. Osmanit valtasivat sen Shkodran piirityksen yhteydessä 1478, ja pääkaupunki siirtyi lopulta Cetinjeen. Alue palasi Montenegron hallintaan vasta 1878 Berliinin kongressissa, 400 vuotta myöhemmin. Rauniot seisovat yhä järven rannalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Zla Kolata, Montenegron korkein huippu] vuodesta 2009 — Zla Kolata kohoaa 2 534 metriin, ja se on Montenegron korkein vuori, vaikka koko vuoriston korkein huippu Maja Jezercë (2 694 m) on Albanian puolella. Se kuuluu Prokletijeen, jonka nimi tarkoittaa kirottuja, ja vuoriston Montenegron puolelle perustettiin kansallispuisto vuonna 2009. Puiston pinta-ala on noin 16 000 hehtaaria. Viimeisen jääkauden aikana laaksoja muovasivat kilometrien mittaiset jäätiköt, ja Ropojanan jäätikkö oli noin 12,5 kilometriä pitkä. Vuoristossa on noin 20 jäätikköjärveä, joista Hridsko jezero on vajaat 300 metriä pitkä.
+AIEMPI KYSYMYS: Mikä oli Zetan ruhtinaskunta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Zeta oli keskiaikainen valtio ja alue nykyisen [[Montenegron]] seudulla [[Skadarjärven]] ympärillä. Sitä hallitsivat 1400-luvulla [[Crnojevićit]], ja sen pääkaupunki oli aluksi Žabljak Crnojevića. Osmanien valtauksen jälkeen keskus siirtyi [[Cetinjeen]], josta tuli myöhemmin Montenegron historiallinen keskus. Historian tunnilla minä en nukkunut, ainakin vähän.
+KYSYMYS: Kerro lisää: Montenegron
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žabljak Crnojevića (historia)
+Tietoruudun teksti: Žabljak Crnojevića oli Zetan ruhtinaskunnan linnoitettu pääkaupunki Skadarjärven rannalla, Stefan ja Ivan Crnojevićin hallintokeskus. Osmanit valtasivat sen Shkodran piirityksen yhteydessä 1478, ja pääkaupunki siirtyi lopulta Cetinjeen. Alue palasi Montenegron hallintaan vasta 1878 Berliinin kongressissa, 400 vuotta myöhemmin. Rauniot seisovat yhä järven rannalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historian hetki: Obod 1494 — musteen viimeinen arkki] 4.1.1494 — Munkki Makarijen sormet ovat mustat musteesta, kun hän nostaa viimeisen painetun arkin puristimesta ja tarkistaa kirjainrivit vielä kerran vasten ikkunasta lankeavaa valoa. On 4. tammikuuta 1494, ja Crnojevićien kirjapainossa Cetinjen seudulla valmistuu Oktoih prvoglasnik — ensimmäisen äänilajin oktoehos, kirkkolaulukirja. Ruhtinas Đurađ Crnojević on hankkinut painokoneen ja kirjaimet Venetsiasta vain vuosi aiemmin, ja Makarije on oppinut käyttämään niitä kirkkoslaaviksi, kirjaimet valettuina käsin metallista. Paperi tuodaan laivoilla samaa reittiä Venetsiasta kuin kirjaimetkin, sillä lähialueella ei ole yhtään paperimyllyä. Kirja on ensimmäinen painettu teos, jonka eteläslaavila…
+- [Montenegro — maalehti / Historia: Lyijykirjaimet Obodin kalliolla] 1493–1496 — Zetan hallitsija Ivan Crnojević siirsi pääkaupunkinsa 1480-luvulla vuoristoon perustamalleen Cetinjeen, koska Skadarjärven ranta ei enää ollut turvassa osmaneilta. Hänen poikansa Đurađ pystytti 1493 lähelle, Obodin kalliolle Rijeka Crnojevićan luona, eteläslaavien ensimmäisen kirjapainon – lyijyladelmat ja koristekirjaimet valettiin paikan päällä. Munkki Makarijen johdolla painosta vieri 4. tammikuuta 1494 valmiiksi Oktoih prvoglasnik, ensimmäinen kyrillisin kirjaimin painettu kirja Kaakkois-Euroopassa. Painosta ehti ilmestyä vain viisi teosta ennen kuin osmanien eteneminen pysäytti toiminnan 1496.
+AIEMPI KYSYMYS: Mikä oli Zetan ruhtinaskunta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Zeta oli keskiaikainen valtio ja alue nykyisen [[Montenegron]] seudulla [[Skadarjärven]] ympärillä. Sitä hallitsivat 1400-luvulla [[Crnojevićit]], ja sen pääkaupunki oli aluksi Žabljak Crnojevića. Osmanien valtauksen jälkeen keskus siirtyi [[Cetinjeen]], josta tuli myöhemmin Montenegron historiallinen keskus. Historian tunnilla minä en nukkunut, ainakin vähän.
+KYSYMYS: Kerro lisää: Crnojevićit
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žabljak Crnojevića (historia)
+Tietoruudun teksti: Žabljak Crnojevića oli Zetan ruhtinaskunnan linnoitettu pääkaupunki Skadarjärven rannalla, Stefan ja Ivan Crnojevićin hallintokeskus. Osmanit valtasivat sen Shkodran piirityksen yhteydessä 1478, ja pääkaupunki siirtyi lopulta Cetinjeen. Alue palasi Montenegron hallintaan vasta 1878 Berliinin kongressissa, 400 vuotta myöhemmin. Rauniot seisovat yhä järven rannalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Zla Kolata, Montenegron korkein huippu] vuodesta 2009 — Zla Kolata kohoaa 2 534 metriin, ja se on Montenegron korkein vuori, vaikka koko vuoriston korkein huippu Maja Jezercë (2 694 m) on Albanian puolella. Se kuuluu Prokletijeen, jonka nimi tarkoittaa kirottuja, ja vuoriston Montenegron puolelle perustettiin kansallispuisto vuonna 2009. Puiston pinta-ala on noin 16 000 hehtaaria. Viimeisen jääkauden aikana laaksoja muovasivat kilometrien mittaiset jäätiköt, ja Ropojanan jäätikkö oli noin 12,5 kilometriä pitkä. Vuoristossa on noin 20 jäätikköjärveä, joista Hridsko jezero on vajaat 300 metriä pitkä.
+AIEMPI KYSYMYS: Missä Skadarjärvi sijaitsee?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Skadarjärvi sijaitsee [[Montenegron]] ja [[Albanian]] rajalla, ja sitä pidetään yhtenä Etelä-Euroopan suurimmista järvistä. Sen rannalla seisovat Žabljak Crnojevićin rauniot. Järven lähistöllä on myös [[Shkodran]] kaupunki Albaniassa.
+
+Ylhäältä katsottuna se on iso vaalea läikkä, enkä kyllä ole koskaan lentänyt sen yli ilman evästä.
+KYSYMYS: Kerro lisää: Albanian
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žabljak Crnojevića (historia)
+Tietoruudun teksti: Žabljak Crnojevića oli Zetan ruhtinaskunnan linnoitettu pääkaupunki Skadarjärven rannalla, Stefan ja Ivan Crnojevićin hallintokeskus. Osmanit valtasivat sen Shkodran piirityksen yhteydessä 1478, ja pääkaupunki siirtyi lopulta Cetinjeen. Alue palasi Montenegron hallintaan vasta 1878 Berliinin kongressissa, 400 vuotta myöhemmin. Rauniot seisovat yhä järven rannalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tansania — maalehti / Historia: Housut yhdestä napista] 1890 — Saksa ja Britannia sopivat 1. heinäkuuta 1890 Itä-Afrikan etupiireistä. Saksa sai Helgolandin saaren Pohjanmerellä, Caprivin kaistaleen ja vapaat kädet Dar es Salaamin rannikolla, josta tuli Saksan Itä-Afrikan ydin; Britannia sai Witun, Sansibarin ja juuri sen maakaistaleen, jota se tarvitsi rautatielle Viktorianjärvelle. Samalla sopimuksella vedettiin rajat myös Togon ja Kultarannikon sekä Kamerunin ja Nigerian välille. Entinen liittokansleri Bismarck pilkkasi seuraajaansa siitä, että tämä vaihtoi housut yhteen nappiin — nimitys Helgoland–Sansibar-sopimus jäi hänen jäljiltään.
+AIEMPI KYSYMYS: Mitä Montenegro sai vuoden 1878 kongressissa?
+AIEMPI VASTAUS (Livia):
+Ai se. Berliinissä vuonna 1878 pidetyssä [[Berliinin kongressissa]] suurvallat sopivat Balkanin rajoista Venäjän ja Osmanien valtakunnan sodan jälkeen, ja kongressia johti [[Otto von Bismarck]]. Montenegro sai itsenäisyytensä tunnustettua ja alueensa kasvoi, ja Žabljak Crnojevićin alue palasi sen hallintaan. Päätöksen jälkeen Montenegro oli ensimmäistä kertaa vuosisatoihin virallisesti itsenäinen valtio. Pitkä päivä kongressilla, mutta ei kyyhkyn pöydässä.
+KYSYMYS: Kerro lisää: Otto von Bismarck
