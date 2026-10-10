@@ -1,0 +1,215 @@
+================ KOHTA 1 (kohde:hvannadalshnukur) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvannadalshnúkur (luonto · vuori)
+Tietoruudun teksti: Hvannadalshnúkur on pyramidin muotoinen huippu Öræfajökull-tulivuoren huippukraatterin luoteisreunalla Vatnajökullin kansallispuistossa. Se on Islannin korkein kohta ja maan ainoa ultraprominentti huippu — ainoa, joka kohoaa ympäristöstään yli puolentoista kilometrin verran. Huippu ei siis ole oma vuorensa vaan jäätikön peittämän tulivuoren reuna.
+
+### 1.1
+KYSYMYS: Mikä Öræfajökull on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvannadalshnúkur (luonto · vuori)
+Tietoruudun teksti: Hvannadalshnúkur on pyramidin muotoinen huippu Öræfajökull-tulivuoren huippukraatterin luoteisreunalla Vatnajökullin kansallispuistossa. Se on Islannin korkein kohta ja maan ainoa ultraprominentti huippu — ainoa, joka kohoaa ympäristöstään yli puolentoista kilometrin verran. Huippu ei siis ole oma vuorensa vaan jäätikön peittämän tulivuoren reuna.
+
+### 1.2
+KYSYMYS: Mitä ultraprominentti huippu tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvannadalshnúkur (luonto · vuori)
+Tietoruudun teksti: Hvannadalshnúkur on pyramidin muotoinen huippu Öræfajökull-tulivuoren huippukraatterin luoteisreunalla Vatnajökullin kansallispuistossa. Se on Islannin korkein kohta ja maan ainoa ultraprominentti huippu — ainoa, joka kohoaa ympäristöstään yli puolentoista kilometrin verran. Huippu ei siis ole oma vuorensa vaan jäätikön peittämän tulivuoren reuna.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:gronlanninmeri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grönlanninmeri (meri)
+Tietoruudun teksti: Grönlanninmeri rajautuu lännessä Grönlantiin, idässä Huippuvuoriin, pohjoisessa Framinsalmeen ja Jäämereen sekä etelässä Norjanmereen ja Islantiin. Se määritellään joskus osaksi Jäämerta ja joskus osaksi Atlanttia — Jäämeren ja sen sivumerten rajat ovat epätarkkoja. Merentutkimuksessa se luetaan Norjanmeren kanssa Pohjoisiin meriin.
+
+### 2.1
+KYSYMYS: Kuuluuko Grönlanninmeri Jäämereen vai Atlanttiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grönlanninmeri (meri)
+Tietoruudun teksti: Grönlanninmeri rajautuu lännessä Grönlantiin, idässä Huippuvuoriin, pohjoisessa Framinsalmeen ja Jäämereen sekä etelässä Norjanmereen ja Islantiin. Se määritellään joskus osaksi Jäämerta ja joskus osaksi Atlanttia — Jäämeren ja sen sivumerten rajat ovat epätarkkoja. Merentutkimuksessa se luetaan Norjanmeren kanssa Pohjoisiin meriin.
+
+### 2.2
+KYSYMYS: Mikä Framinsalmi on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grönlanninmeri (meri)
+Tietoruudun teksti: Grönlanninmeri rajautuu lännessä Grönlantiin, idässä Huippuvuoriin, pohjoisessa Framinsalmeen ja Jäämereen sekä etelässä Norjanmereen ja Islantiin. Se määritellään joskus osaksi Jäämerta ja joskus osaksi Atlanttia — Jäämeren ja sen sivumerten rajat ovat epätarkkoja. Merentutkimuksessa se luetaan Norjanmeren kanssa Pohjoisiin meriin.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:jorsa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þjórsá (luonto · joki)
+Tietoruudun teksti: Þjórsá on Islannin pisin joki, 230 kilometriä, ja se virtaa saaren eteläosassa. Se on jäätikköjoki, joka saa alkunsa Hofsjökullilta, kulkee kapeiden rotkojen läpi Islannin ylängöillä ja levenee alangolla. Nimi tulee sanoista á, joki, ja þjór, härkä: Landnámabókin mukaan joki nimettiin erään ensimmäisistä uudisasukaslaivoista keulakuvan mukaan, joka esitti härkää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+
+### 3.1
+KYSYMYS: Mikä Stöng on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þjórsá (luonto · joki)
+Tietoruudun teksti: Þjórsá on Islannin pisin joki, 230 kilometriä, ja se virtaa saaren eteläosassa. Se on jäätikköjoki, joka saa alkunsa Hofsjökullilta, kulkee kapeiden rotkojen läpi Islannin ylängöillä ja levenee alangolla. Nimi tulee sanoista á, joki, ja þjór, härkä: Landnámabókin mukaan joki nimettiin erään ensimmäisistä uudisasukaslaivoista keulakuvan mukaan, joka esitti härkää.
+
+### 3.2
+KYSYMYS: Mikä oli þing?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þjórsá (luonto · joki)
+Tietoruudun teksti: Þjórsá on Islannin pisin joki, 230 kilometriä, ja se virtaa saaren eteläosassa. Se on jäätikköjoki, joka saa alkunsa Hofsjökullilta, kulkee kapeiden rotkojen läpi Islannin ylängöillä ja levenee alangolla. Nimi tulee sanoista á, joki, ja þjór, härkä: Landnámabókin mukaan joki nimettiin erään ensimmäisistä uudisasukaslaivoista keulakuvan mukaan, joka esitti härkää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:thingvellir) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þingvellir (historia)
+Tietoruudun teksti: Þingvellir oli Alþingin paikka: Islannin vuosittainen käräjäkokous istui täällä vuodesta 930 aina viimeiseen Þingvellirin istuntoon 1798 asti. Vuodesta 1881 parlamentti on kokoontunut Reykjavíkissa Alþingishúsið-talossa.
+
+Nimi on muinaisnorjan Þingvǫllr, sanoista þing eli käräjät ja vǫllr eli kenttä — käräjäkentät. Sama juuri kuuluu kaukana Islannista: Dingwall ja Tingwall Skotlannissa, Thingwall Englannissa, Tynwald Mansaarella, Dinklage Saksassa ja Tingvoll Norjassa kantavat samaa nimeä ja samaa merkitystä.
+
+Paikka on myös geologinen: laakso on repeämälaakso Keski-Atlantin selänteen harjalla, Pohjois-Amerikan ja Euraasian mannerlaattojen rajalla. Etelässä on Þingvallavatn, Islannin suurin luonnonjärvi. Alue suojeltiin vuoden 1928 lailla ja siitä tuli 1930 Islannin ensimmäinen kansallispuisto — juuri tuhat vuotta käräjien perustamisen jälkeen. Maailmanperintökohde siitä tuli 2004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — kaupunkilehti / Islanti: Käräjät kahden mantereen välissä] Þingvellirissä islantilaiset kokoontuivat käräjille vuodesta 930 alkaen: lait luettiin ääneen kalliolta, koska niitä ei ollut kirjoitettu mihinkään. Paikka sattuu olemaan kohdassa, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat — rotko levenee pari senttiä vuodessa.
+- [Punta Arenas — kohdekartta / Kohdekartta: Salmen rantabulevardi] 1800-luku – nykyaika Rantakatu kulkee salmen laitaa, ja siitä avautuu näkymä vedelle ja Tulimaahan. Satama on avoin myrskyille, mutta ennen Panaman kanavan valmistumista se oli yksi Chilen tärkeimmistä: täällä Atlantin ja Tyynenmeren väliä kulkevat höyrylaivat ottivat hiiltä. Kanava vei liikenteen, ja nykyään satamaa käyttävät enimmäkseen risteilyt ja tutkimusretkikunnat. Osa Etelämantereen risteilyistä lähtee täältä, ja satama on tukikohta myös alueen kanaviin ja vuonoihin suuntautuville matkoille. Rannassa on kaksi laivaa, jotka eivät enää purjehdi. County of Peebles ja Cavenga on upotettu paikoilleen aallonmurtajiksi suojaamaan satama-allasta. County of Peebles on merenkulun historiassa …
+
+### 4.1
+KYSYMYS: Miksi sama nimi toistuu Skotlannissa ja Mansaarella?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þingvellir (historia)
+Tietoruudun teksti: Þingvellir oli Alþingin paikka: Islannin vuosittainen käräjäkokous istui täällä vuodesta 930 aina viimeiseen Þingvellirin istuntoon 1798 asti. Vuodesta 1881 parlamentti on kokoontunut Reykjavíkissa Alþingishúsið-talossa.
+
+Nimi on muinaisnorjan Þingvǫllr, sanoista þing eli käräjät ja vǫllr eli kenttä — käräjäkentät. Sama juuri kuuluu kaukana Islannista: Dingwall ja Tingwall Skotlannissa, Thingwall Englannissa, Tynwald Mansaarella, Dinklage Saksassa ja Tingvoll Norjassa kantavat samaa nimeä ja samaa merkitystä.
+
+Paikka on myös geologinen: laakso on repeämälaakso Keski-Atlantin selänteen harjalla, Pohjois-Amerikan ja Euraasian mannerlaattojen rajalla. Etelässä on Þingvallavatn, Islannin suurin luonnonjärvi. Alue suojeltiin vuoden 1928 lailla ja siitä tuli 1930 Islannin ensimmäinen kansallispuisto — juuri tuhat vuotta käräjien perustamisen jälkeen. Maailmanperintökohde siitä tuli 2004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Punta Arenas — kohdekartta / Kohdekartta: Salmen rantabulevardi] 1800-luku – nykyaika Rantakatu kulkee salmen laitaa, ja siitä avautuu näkymä vedelle ja Tulimaahan. Satama on avoin myrskyille, mutta ennen Panaman kanavan valmistumista se oli yksi Chilen tärkeimmistä: täällä Atlantin ja Tyynenmeren väliä kulkevat höyrylaivat ottivat hiiltä. Kanava vei liikenteen, ja nykyään satamaa käyttävät enimmäkseen risteilyt ja tutkimusretkikunnat. Osa Etelämantereen risteilyistä lähtee täältä, ja satama on tukikohta myös alueen kanaviin ja vuonoihin suuntautuville matkoille. Rannassa on kaksi laivaa, jotka eivät enää purjehdi. County of Peebles ja Cavenga on upotettu paikoilleen aallonmurtajiksi suojaamaan satama-allasta. County of Peebles on merenkulun historiassa …
+- [Edinburgh — kohdekartta / Kohdekartta: Holyroodin palatsi] 1501–1678 Holyroodin palatsi on Britannian hallitsijan virallinen asuinpaikka Skotlannissa. Sen vanhin osa rakennettiin 1520–1530-luvuilla, mutta suurin osa nykyisestä linnamaisesta palatsista rakennettiin uudelleen vuosina 1671–1678. Palatsin vieressä on Holyroodin luostarin rauniot — luostari perustettiin jo vuonna 1128. Palatsi tunnetaan erityisesti Marian, Skotlannin kuningattaren, kotina — hän asui siellä vuosina 1561–1567. Vuonna 1566 kuningattaren sihteeri David Rizzio murhattiin raa'asti hänen omissa huoneissaan. Palatsin 45-metrisessä juhlasalissa riippuu 96 muotokuvaa Skotlannin muinaisista kuninkaista. Koko palatsissa on 289 huonetta, ja sitä ympäröi kymmenen eekkerin puutarha.
+
+### 4.2
+KYSYMYS: Miksi käräjät lopetettiin täällä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þingvellir (historia)
+Tietoruudun teksti: Þingvellir oli Alþingin paikka: Islannin vuosittainen käräjäkokous istui täällä vuodesta 930 aina viimeiseen Þingvellirin istuntoon 1798 asti. Vuodesta 1881 parlamentti on kokoontunut Reykjavíkissa Alþingishúsið-talossa.
+
+Nimi on muinaisnorjan Þingvǫllr, sanoista þing eli käräjät ja vǫllr eli kenttä — käräjäkentät. Sama juuri kuuluu kaukana Islannista: Dingwall ja Tingwall Skotlannissa, Thingwall Englannissa, Tynwald Mansaarella, Dinklage Saksassa ja Tingvoll Norjassa kantavat samaa nimeä ja samaa merkitystä.
+
+Paikka on myös geologinen: laakso on repeämälaakso Keski-Atlantin selänteen harjalla, Pohjois-Amerikan ja Euraasian mannerlaattojen rajalla. Etelässä on Þingvallavatn, Islannin suurin luonnonjärvi. Alue suojeltiin vuoden 1928 lailla ja siitä tuli 1930 Islannin ensimmäinen kansallispuisto — juuri tuhat vuotta käräjien perustamisen jälkeen. Maailmanperintökohde siitä tuli 2004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — kaupunkilehti / Islanti: Käräjät kahden mantereen välissä] Þingvellirissä islantilaiset kokoontuivat käräjille vuodesta 930 alkaen: lait luettiin ääneen kalliolta, koska niitä ei ollut kirjoitettu mihinkään. Paikka sattuu olemaan kohdassa, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat — rotko levenee pari senttiä vuodessa.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:reykholt) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reykholt (sana)
+Tietoruudun teksti: Reykholt on kylä Reykjadalsá-joen laaksossa Länsi-Islannissa. Se oli aikanaan yksi saaren henkisistä keskuksista, ja siellä toimi vuosien ajan yksi maan tärkeimmistä kouluista.
+
+Keskiajalla Reykholtissa asui runoilija ja poliitikko Snorri Sturluson. Hänen muistiinpanonsa muinaisnorjan kielestä ja mytologiasta ovat korvaamattomia nykytutkijoille: ilman niitä pohjoinen jumaltarusto tunnettaisiin paljon huonommin. Hänen tilastaan on yhä jäljellä jäänteet ja kylpyallas kuumine altaineen sekä tunneli, joka johti kylvystä taloon.
+
+Kylässä on nykyään noin kuusikymmentä asukasta, koulukeskus ja kirjasto, joka on keskittynyt Snorrin teoksiin. Lähistöllä on Deildartunguhverin kuuma lähde, joka ohittaa kaikki muut maan lähteet kuuman veden tuotossaan: 180 litraa sekunnissa 97 asteisena.
+
+### 5.1
+KYSYMYS: Kuka Snorri Sturluson oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reykholt (sana)
+Tietoruudun teksti: Reykholt on kylä Reykjadalsá-joen laaksossa Länsi-Islannissa. Se oli aikanaan yksi saaren henkisistä keskuksista, ja siellä toimi vuosien ajan yksi maan tärkeimmistä kouluista.
+
+Keskiajalla Reykholtissa asui runoilija ja poliitikko Snorri Sturluson. Hänen muistiinpanonsa muinaisnorjan kielestä ja mytologiasta ovat korvaamattomia nykytutkijoille: ilman niitä pohjoinen jumaltarusto tunnettaisiin paljon huonommin. Hänen tilastaan on yhä jäljellä jäänteet ja kylpyallas kuumine altaineen sekä tunneli, joka johti kylvystä taloon.
+
+Kylässä on nykyään noin kuusikymmentä asukasta, koulukeskus ja kirjasto, joka on keskittynyt Snorrin teoksiin. Lähistöllä on Deildartunguhverin kuuma lähde, joka ohittaa kaikki muut maan lähteet kuuman veden tuotossaan: 180 litraa sekunnissa 97 asteisena.
+
+### 5.2
+KYSYMYS: Mikä tekee Deildartunguhverista poikkeuksellisen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reykholt (sana)
+Tietoruudun teksti: Reykholt on kylä Reykjadalsá-joen laaksossa Länsi-Islannissa. Se oli aikanaan yksi saaren henkisistä keskuksista, ja siellä toimi vuosien ajan yksi maan tärkeimmistä kouluista.
+
+Keskiajalla Reykholtissa asui runoilija ja poliitikko Snorri Sturluson. Hänen muistiinpanonsa muinaisnorjan kielestä ja mytologiasta ovat korvaamattomia nykytutkijoille: ilman niitä pohjoinen jumaltarusto tunnettaisiin paljon huonommin. Hänen tilastaan on yhä jäljellä jäänteet ja kylpyallas kuumine altaineen sekä tunneli, joka johti kylvystä taloon.
+
+Kylässä on nykyään noin kuusikymmentä asukasta, koulukeskus ja kirjasto, joka on keskittynyt Snorrin teoksiin. Lähistöllä on Deildartunguhverin kuuma lähde, joka ohittaa kaikki muut maan lähteet kuuman veden tuotossaan: 180 litraa sekunnissa 97 asteisena.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

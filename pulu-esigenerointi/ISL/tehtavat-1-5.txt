@@ -1,0 +1,206 @@
+================ KOHTA 21 (kohde:hahmotelma-blaa-lonid) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sinilóni (tekniikka)
+Tietoruudun teksti: Sinilónin vesi on väriltään maitoisen sininen korkean piidioksidipitoisuuden ansiosta, ja piihiukkaset laskeutuvat altaan pohjalle valkoiseksi mudaksi, jota kylpijät hieroivat iholleen. Lampi on ihmisen tekemä: se syntyy Svartsengin geotermisen voimalaitoksen sivutuotteena, kun turbiineja pyörittänyt kuuma vesi johdetaan lämmönvaihtimien kautta kaukolämpöverkkoon ja lopulta laavakentän painanteeseen. Vesi nousee maan alta yli 200-asteisena ja noin 12 baarin paineessa, eikä sitä voida kierrättää korkean mineraalipitoisuutensa vuoksi. Kylpylä sijaitsee Reykjanesin niemimaalla, noin viiden kilometrin päässä Grindavíkista, ja on nykyään yksi Islannin suosituimmista matkailukohteista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marrakech — kaupunkilehti / Vesi, vuoret ja puutarhat: Kaksi puutarhaa altaan ympärillä] Kaupungin vanhimmat puutarhat eivät ole kukkapenkkejä vaan vesivarastoja. Menaran puutarhat perusti Abd al-Mu'min 1157: keskellä on suuri allas, sen ympärillä hedelmätarhoja ja oliivilehtoja, ja altaan reunalla 1800-luvun paviljonki. Aluetta on noin 96 hehtaaria. Agdalin puutarhat aloitettiin Abu Ya'qub Yusufin aikana 1163–1184, ja ne ovat nykyään noin 340 hehtaaria savimuurien kehän sisällä; siellä on useita altaita ja palatsirakennuksia. Molempien altaat täytettiin khettaroilla, jotka toivat veden Atlaksen juurelta.
+
+### 21.1
+KYSYMYS: Mistä Sinilónin veden sininen väri johtuu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sinilóni (tekniikka)
+Tietoruudun teksti: Sinilónin vesi on väriltään maitoisen sininen korkean piidioksidipitoisuuden ansiosta, ja piihiukkaset laskeutuvat altaan pohjalle valkoiseksi mudaksi, jota kylpijät hieroivat iholleen. Lampi on ihmisen tekemä: se syntyy Svartsengin geotermisen voimalaitoksen sivutuotteena, kun turbiineja pyörittänyt kuuma vesi johdetaan lämmönvaihtimien kautta kaukolämpöverkkoon ja lopulta laavakentän painanteeseen. Vesi nousee maan alta yli 200-asteisena ja noin 12 baarin paineessa, eikä sitä voida kierrättää korkean mineraalipitoisuutensa vuoksi. Kylpylä sijaitsee Reykjanesin niemimaalla, noin viiden kilometrin päässä Grindavíkista, ja on nykyään yksi Islannin suosituimmista matkailukohteista.
+
+### 21.2
+KYSYMYS: Mistä altaan vesi on peräisin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sinilóni (tekniikka)
+Tietoruudun teksti: Sinilónin vesi on väriltään maitoisen sininen korkean piidioksidipitoisuuden ansiosta, ja piihiukkaset laskeutuvat altaan pohjalle valkoiseksi mudaksi, jota kylpijät hieroivat iholleen. Lampi on ihmisen tekemä: se syntyy Svartsengin geotermisen voimalaitoksen sivutuotteena, kun turbiineja pyörittänyt kuuma vesi johdetaan lämmönvaihtimien kautta kaukolämpöverkkoon ja lopulta laavakentän painanteeseen. Vesi nousee maan alta yli 200-asteisena ja noin 12 baarin paineessa, eikä sitä voida kierrättää korkean mineraalipitoisuutensa vuoksi. Kylpylä sijaitsee Reykjanesin niemimaalla, noin viiden kilometrin päässä Grindavíkista, ja on nykyään yksi Islannin suosituimmista matkailukohteista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marrakech — kaupunkilehti / Vesi, vuoret ja puutarhat: Kaksi puutarhaa altaan ympärillä] Kaupungin vanhimmat puutarhat eivät ole kukkapenkkejä vaan vesivarastoja. Menaran puutarhat perusti Abd al-Mu'min 1157: keskellä on suuri allas, sen ympärillä hedelmätarhoja ja oliivilehtoja, ja altaan reunalla 1800-luvun paviljonki. Aluetta on noin 96 hehtaaria. Agdalin puutarhat aloitettiin Abu Ya'qub Yusufin aikana 1163–1184, ja ne ovat nykyään noin 340 hehtaaria savimuurien kehän sisällä; siellä on useita altaita ja palatsirakennuksia. Molempien altaat täytettiin khettaroilla, jotka toivat veden Atlaksen juurelta.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-seydisfjordur) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Seyðisfjörður (tekniikka)
+Tietoruudun teksti: Seyðisfjörður on Itä-Islannin kaupunki samannimisen vuonon perukassa, tunnettu nykyään taiteilijayhteisöstään ja LungA-festivaalistaan. Ensimmäinen asukas oli saagojen mukaan Bjólfur, joka otti haltuunsa koko vuonon jo asutuksen alkuaikoina, mutta nykyinen kaupunki syntyi vasta 1848, kun norjalaiset kalastajat asettuivat paikalle ja rakensivat osan kaupungin vielä säilyneistä puutaloista. Vuonna 1906 Seyðisfjörðuriin nousi maihin ensimmäinen Islannin ja Euroopan yhdistävä merenalainen sähkekaapeli, jonka Store Nordiske Telegrafselskab laski Skotlannista Färsaarten kautta — siitä lähtien kaupunki oli vuosikymmeniä maan tärkein yhteyspiste ulkomaailmaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Fès — kaupunkilehti / Kirjat ja kirjoitus: Maimonides ja Fèsin oppineet] Fèsin juutalaisyhteisö oli olemassa jo kaupungin ensimmäisinä vuosisatoina, ja siitä nousi oppineita, joiden nimet tunnetaan yhä: runoilija Dunash Ben Labrat, kielioppineen Judah ben David Hayyuj ja talmudisti Isaac al-Fasi. Vuosina 1159–1165 kaupungissa asui Maimonides, aikansa merkittävimpiä juutalaisia ajattelijoita, joka oli paennut al-Andalusista. Yhteisö siirrettiin 1400-luvulla Fes Jdidiin syntyneeseen Mellahiin; tarkkaa ajankohtaa ja olosuhteita ei ole vahvistettu. Nykyään yhteisö on hyvin pieni, eivätkä korttelin synagogat ole enää käytössä.
+- [Alice Springs — kaupunkilehti / Aavikon maalarit: Koulun seinämaalaus, josta tuli liike] 1960-luvun lopulla hallitus siirsi useita länsiaavikon ryhmiä Papunyaan, 240 kilometriä Alice Springsistä luoteeseen: pintupeja, luritjoja, warlpireja, arrernteja ja anmatyerreja. Vuonna 1971 yhteisön koulunopettaja Geoffrey Bardon kannusti lapsia maalaamaan seinämaalauksen perinteisellä keho- ja hiekkaseremoniataiteen tyylillä. Vuotta myöhemmin, 1972, perustettiin osuuskunta Papunya Tula, jonka nimen jälkiosa tulee pienestä kukkulasta Papunyan lähellä — hunajamuurahaisen unipaikasta. Ryhmä tunnetaan länsiaavikon taideliikkeestä eli pistemaalauksesta, ja sen katsotaan tuoneen nykyisen aboriginaalitaiteen maailman tietoisuuteen. Useimmat taiteilijat eivät olleet koskaan maalanneet länsimaise…
+
+### 22.1
+KYSYMYS: Minä vuonna Islannin ensimmäinen sähkekaapeli tuli maihin Seyðisfjörðurissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Seyðisfjörður (tekniikka)
+Tietoruudun teksti: Seyðisfjörður on Itä-Islannin kaupunki samannimisen vuonon perukassa, tunnettu nykyään taiteilijayhteisöstään ja LungA-festivaalistaan. Ensimmäinen asukas oli saagojen mukaan Bjólfur, joka otti haltuunsa koko vuonon jo asutuksen alkuaikoina, mutta nykyinen kaupunki syntyi vasta 1848, kun norjalaiset kalastajat asettuivat paikalle ja rakensivat osan kaupungin vielä säilyneistä puutaloista. Vuonna 1906 Seyðisfjörðuriin nousi maihin ensimmäinen Islannin ja Euroopan yhdistävä merenalainen sähkekaapeli, jonka Store Nordiske Telegrafselskab laski Skotlannista Färsaarten kautta — siitä lähtien kaupunki oli vuosikymmeniä maan tärkein yhteyspiste ulkomaailmaan.
+
+### 22.2
+KYSYMYS: Mikä yhteisö kaupungissa toimii nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Seyðisfjörður (tekniikka)
+Tietoruudun teksti: Seyðisfjörður on Itä-Islannin kaupunki samannimisen vuonon perukassa, tunnettu nykyään taiteilijayhteisöstään ja LungA-festivaalistaan. Ensimmäinen asukas oli saagojen mukaan Bjólfur, joka otti haltuunsa koko vuonon jo asutuksen alkuaikoina, mutta nykyinen kaupunki syntyi vasta 1848, kun norjalaiset kalastajat asettuivat paikalle ja rakensivat osan kaupungin vielä säilyneistä puutaloista. Vuonna 1906 Seyðisfjörðuriin nousi maihin ensimmäinen Islannin ja Euroopan yhdistävä merenalainen sähkekaapeli, jonka Store Nordiske Telegrafselskab laski Skotlannista Färsaarten kautta — siitä lähtien kaupunki oli vuosikymmeniä maan tärkein yhteyspiste ulkomaailmaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Fès — kaupunkilehti / Kirjat ja kirjoitus: Maimonides ja Fèsin oppineet] Fèsin juutalaisyhteisö oli olemassa jo kaupungin ensimmäisinä vuosisatoina, ja siitä nousi oppineita, joiden nimet tunnetaan yhä: runoilija Dunash Ben Labrat, kielioppineen Judah ben David Hayyuj ja talmudisti Isaac al-Fasi. Vuosina 1159–1165 kaupungissa asui Maimonides, aikansa merkittävimpiä juutalaisia ajattelijoita, joka oli paennut al-Andalusista. Yhteisö siirrettiin 1400-luvulla Fes Jdidiin syntyneeseen Mellahiin; tarkkaa ajankohtaa ja olosuhteita ei ole vahvistettu. Nykyään yhteisö on hyvin pieni, eivätkä korttelin synagogat ole enää käytössä.
+- [Alice Springs — kaupunkilehti / Aavikon maalarit: Koulun seinämaalaus, josta tuli liike] 1960-luvun lopulla hallitus siirsi useita länsiaavikon ryhmiä Papunyaan, 240 kilometriä Alice Springsistä luoteeseen: pintupeja, luritjoja, warlpireja, arrernteja ja anmatyerreja. Vuonna 1971 yhteisön koulunopettaja Geoffrey Bardon kannusti lapsia maalaamaan seinämaalauksen perinteisellä keho- ja hiekkaseremoniataiteen tyylillä. Vuotta myöhemmin, 1972, perustettiin osuuskunta Papunya Tula, jonka nimen jälkiosa tulee pienestä kukkulasta Papunyan lähellä — hunajamuurahaisen unipaikasta. Ryhmä tunnetaan länsiaavikon taideliikkeestä eli pistemaalauksesta, ja sen katsotaan tuoneen nykyisen aboriginaalitaiteen maailman tietoisuuteen. Useimmat taiteilijat eivät olleet koskaan maalanneet länsimaise…
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-hakarl) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hákarl (ruoka)
+Tietoruudun teksti: Hákarl on kuivatusta ja käymisestä valmistettu kansallisruoka, joka tehdään yleensä Grönlanninhain tai muun unihaikalan lihasta. Tuore hain liha on myrkyllistä korkean urea- ja trimetyyliamiinioksidipitoisuutensa vuoksi, joten se on ensin haudattava sorapohjaiseen kuoppaan kivien alle puristumaan kuudesta kahteentoista viikkoa, minkä jälkeen suikaleet ripustetaan kuivumaan vielä useaksi kuukaudeksi. Lopputulos haisee voimakkaasti ammoniakilta, ja monet ensikertalaiset joutuvat nielemään palan nenä nyrpeällä. Perinteistä valmistustapaa pääsee seuraamaan yhä Bjarnarhöfnin hain museossa Snæfellsnesillä, ja hákarlia tarjoillaan tavallisesti pieninä kuutioina osana þorramatur-ateriaa keskitalven þorrablót-juhlassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Topkapın palatsi] 1459–1465 Sulttaani Mehmed II aloitti palatsin rakentamisen vuonna 1459, ja se oli valmis noin vuonna 1465. Seuraavat lähes 400 vuotta se oli Osmannien sulttaanien koti ja valtakunnan hallintokeskus, kunnes hovi muutti Dolmabahçen palatsiin 1850-luvulla. Palatsin haaremissa asuivat sulttaanin äiti, vaimot ja loppu perhe — tiloja oli yli 400 huonetta. Keittiöt puolestaan valmistivat ruokaa jopa 4000 hengelle päivittäin, ja siellä työskenteli yli 800 kokkia ja apulaista. Aarrekammiossa säilytetään yhä sulttaanien kalleuksia, kuten Lusikkamestarin timanttia ja Topkapin tikaria. Vuodesta 1924 palatsi on ollut museo, jossa kuka tahansa voi käydä katsomassa, miten sulttaanit elivät.
+- [Firenze — kohdekartta / Kohdekartta: Uffizi] 1560–1581 Uffizi ei ole rakennettu museoksi vaan virastotaloksi. Nimi tarkoittaa italiaksi yksinkertaisesti "virastoja": Cosimo I halusi kaupungin hallinnon toimistot yhteen taloon, ja Giorgio Vasari alkoi rakentaa niitä vuonna 1560. Tuloksena on pitkä kapea U, jonka avoin sisäpiha johtaa Signorian aukiolta suoraan Arnon rannalle. Medicit alkoivat säilyttää talon ylimmässä kerroksessa omaa taidekokoelmaansa, jota sai käydä katsomassa pyynnöstä jo 1500-luvun lopulla. Yleisölle museo avattiin vuonna 1769. Kokoelma pysyi Firenzessä yhden ihmisen ansiosta: suvun viimeinen jäsen Anna Maria Luisa de' Medici testamenttasi kaiken kaupungille ehdolla, ettei mitään saa koskaan viedä sieltä pois. Koko…
+
+### 23.1
+KYSYMYS: Miksi tuoretta hain lihaa ei voi syödä suoraan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hákarl (ruoka)
+Tietoruudun teksti: Hákarl on kuivatusta ja käymisestä valmistettu kansallisruoka, joka tehdään yleensä Grönlanninhain tai muun unihaikalan lihasta. Tuore hain liha on myrkyllistä korkean urea- ja trimetyyliamiinioksidipitoisuutensa vuoksi, joten se on ensin haudattava sorapohjaiseen kuoppaan kivien alle puristumaan kuudesta kahteentoista viikkoa, minkä jälkeen suikaleet ripustetaan kuivumaan vielä useaksi kuukaudeksi. Lopputulos haisee voimakkaasti ammoniakilta, ja monet ensikertalaiset joutuvat nielemään palan nenä nyrpeällä. Perinteistä valmistustapaa pääsee seuraamaan yhä Bjarnarhöfnin hain museossa Snæfellsnesillä, ja hákarlia tarjoillaan tavallisesti pieninä kuutioina osana þorramatur-ateriaa keskitalven þorrablót-juhlassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Taipei — kohdekartta / Kohdekartta: Dihua-katu] 1850-luvulta Dihua-katu on Taipein vanhin katu, ja osa siitä on ollut olemassa jo 1600-luvulla. Nykyinen katu rakennettiin 1850-luvulla, kun Quanzhousta lähtöisin olleet kauppahuoneet siirtyivät Bangkasta Dadaochengiin. Katua kutsuttiin silloin Keskikaduksi; nimen Dihua se sai vasta 1947 Xinjiangin kaupungin mukaan, joka tunnetaan nykyään nimellä Ürümqi. Kadulla käytiin kauppaa kiinalaisilla lääkeyrteillä, kankailla ja suitsukeaineilla, ja täällä myös jälkikäsiteltiin saaren teet ennen vientiä. Kauppa jatkuu yhä: kadun ympäristö on edelleen yksi Taipein vilkkaimmista kaupankäyntialueista, ja kuivatuotteita ja herkkuja myyviin liikkeisiin tullaan erityisesti kuunvuoden uudenvuoden alla. Kadu…
+- [Coober Pedy — kaupunkilehti / Opaali: Simpukka joka muuttui jalokiveksi] Muinaisen sisämeren pohjaan hautautui myös eläimiä: simpukoita, etanoita ja meriliskoja. Kun niiden kuoret ja luut lopulta hajosivat maaperässä, piidioksidipitoinen vesi täytti tyhjäksi jääneen muotin tarkalleen alkuperäisen kuoren muotoisena. Tulos on opaalikivettymä eli fossiili, joka on ulkomuodoltaan täsmälleen alkuperäisen eliön näköinen mutta koostumukseltaan kokonaan opaalia. Coober Pedyn kaivoksista on löytynyt tällä tavoin kivettyneitä simpukoita, etanoita ja jopa hain hampaita — pieniä muistoja merestä, joka peitti seudun kauan ennen ihmisiä.
+
+### 23.2
+KYSYMYS: Missä perinteistä valmistustapaa voi käydä katsomassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hákarl (ruoka)
+Tietoruudun teksti: Hákarl on kuivatusta ja käymisestä valmistettu kansallisruoka, joka tehdään yleensä Grönlanninhain tai muun unihaikalan lihasta. Tuore hain liha on myrkyllistä korkean urea- ja trimetyyliamiinioksidipitoisuutensa vuoksi, joten se on ensin haudattava sorapohjaiseen kuoppaan kivien alle puristumaan kuudesta kahteentoista viikkoa, minkä jälkeen suikaleet ripustetaan kuivumaan vielä useaksi kuukaudeksi. Lopputulos haisee voimakkaasti ammoniakilta, ja monet ensikertalaiset joutuvat nielemään palan nenä nyrpeällä. Perinteistä valmistustapaa pääsee seuraamaan yhä Bjarnarhöfnin hain museossa Snæfellsnesillä, ja hákarlia tarjoillaan tavallisesti pieninä kuutioina osana þorramatur-ateriaa keskitalven þorrablót-juhlassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Topkapın palatsi] 1459–1465 Sulttaani Mehmed II aloitti palatsin rakentamisen vuonna 1459, ja se oli valmis noin vuonna 1465. Seuraavat lähes 400 vuotta se oli Osmannien sulttaanien koti ja valtakunnan hallintokeskus, kunnes hovi muutti Dolmabahçen palatsiin 1850-luvulla. Palatsin haaremissa asuivat sulttaanin äiti, vaimot ja loppu perhe — tiloja oli yli 400 huonetta. Keittiöt puolestaan valmistivat ruokaa jopa 4000 hengelle päivittäin, ja siellä työskenteli yli 800 kokkia ja apulaista. Aarrekammiossa säilytetään yhä sulttaanien kalleuksia, kuten Lusikkamestarin timanttia ja Topkapin tikaria. Vuodesta 1924 palatsi on ollut museo, jossa kuka tahansa voi käydä katsomassa, miten sulttaanit elivät.
+- [Firenze — kohdekartta / Kohdekartta: Uffizi] 1560–1581 Uffizi ei ole rakennettu museoksi vaan virastotaloksi. Nimi tarkoittaa italiaksi yksinkertaisesti "virastoja": Cosimo I halusi kaupungin hallinnon toimistot yhteen taloon, ja Giorgio Vasari alkoi rakentaa niitä vuonna 1560. Tuloksena on pitkä kapea U, jonka avoin sisäpiha johtaa Signorian aukiolta suoraan Arnon rannalle. Medicit alkoivat säilyttää talon ylimmässä kerroksessa omaa taidekokoelmaansa, jota sai käydä katsomassa pyynnöstä jo 1500-luvun lopulla. Yleisölle museo avattiin vuonna 1769. Kokoelma pysyi Firenzessä yhden ihmisen ansiosta: suvun viimeinen jäsen Anna Maria Luisa de' Medici testamenttasi kaiken kaupungille ehdolla, ettei mitään saa koskaan viedä sieltä pois. Koko…
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-skyr) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skyr (ruoka)
+Tietoruudun teksti: Skyr on islantilainen perinteinen hapatettu maitotuote, koostumukseltaan siivilöidyn jogurtin kaltainen mutta makuaan mietoumpi; se luokitellaan tuoreeksi hapanmaitojuustoksi. Se mainitaan jo keskiaikaisissa saagoissa, muun muassa Egilin saagassa ja Grettis-saagassa, joten valmistustapa on ollut tunnettu Islannissa vuosisatoja — alun perin skyriä tehtiin lampaanmaidosta, nykyään lähes aina lehmänmaidosta. Nimi on sukua englannin sanalle shear, leikata, ja viittaa tapaan, jolla maito erotellaan hera- ja skyr-osaan. Nykyaikaista maidontuotantoa ja karjanjalostusta opetetaan muun muassa Hvanneyrin maatalousyliopistossa Länsi-Islannissa, joka on maan vanhin maatalousoppilaitos.
+
+### 24.1
+KYSYMYS: Mistä eläimestä skyriä valmistettiin alun perin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skyr (ruoka)
+Tietoruudun teksti: Skyr on islantilainen perinteinen hapatettu maitotuote, koostumukseltaan siivilöidyn jogurtin kaltainen mutta makuaan mietoumpi; se luokitellaan tuoreeksi hapanmaitojuustoksi. Se mainitaan jo keskiaikaisissa saagoissa, muun muassa Egilin saagassa ja Grettis-saagassa, joten valmistustapa on ollut tunnettu Islannissa vuosisatoja — alun perin skyriä tehtiin lampaanmaidosta, nykyään lähes aina lehmänmaidosta. Nimi on sukua englannin sanalle shear, leikata, ja viittaa tapaan, jolla maito erotellaan hera- ja skyr-osaan. Nykyaikaista maidontuotantoa ja karjanjalostusta opetetaan muun muassa Hvanneyrin maatalousyliopistossa Länsi-Islannissa, joka on maan vanhin maatalousoppilaitos.
+
+### 24.2
+KYSYMYS: Mihin englannin sanaan skyr on sukua?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skyr (ruoka)
+Tietoruudun teksti: Skyr on islantilainen perinteinen hapatettu maitotuote, koostumukseltaan siivilöidyn jogurtin kaltainen mutta makuaan mietoumpi; se luokitellaan tuoreeksi hapanmaitojuustoksi. Se mainitaan jo keskiaikaisissa saagoissa, muun muassa Egilin saagassa ja Grettis-saagassa, joten valmistustapa on ollut tunnettu Islannissa vuosisatoja — alun perin skyriä tehtiin lampaanmaidosta, nykyään lähes aina lehmänmaidosta. Nimi on sukua englannin sanalle shear, leikata, ja viittaa tapaan, jolla maito erotellaan hera- ja skyr-osaan. Nykyaikaista maidontuotantoa ja karjanjalostusta opetetaan muun muassa Hvanneyrin maatalousyliopistossa Länsi-Islannissa, joka on maan vanhin maatalousoppilaitos.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-reynisfjara) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reynisfjara (meri)
+Tietoruudun teksti: Reynisfjara on musta hiekkaranta Etelä-Islannissa, lähellä Víkin kylää ja osa Katlan Unesco-geoparkkia. Rannan itäpäässä on basalttipylväiden reunustama Hálsanefshellir-luola, lännessä Dyrhólaeyn niemi, ja ulkomerellä kohoavat Reynisdrangar — terävät basalttikalliot, jäänteitä kerran laajemmasta Reynisfjall-jyrkänteestä. Vanhan tarun mukaan kalliot syntyivät, kun kaksi peikkoa yritti vetää kolmimastoista laivaa maihin, mutta aamun sarastus muutti ne kiveksi. Yhdysvaltalainen Islands-lehti valitsi rannan vuonna 1991 yhdeksi maailman kymmenestä kauneimmasta ei-trooppisesta rannasta, ja vuonna 2021 se sijoittui kuudenneksi parhaaksi rannaksi koko maailmassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+
+### 25.1
+KYSYMYS: Mistä tarina kertoo Reynisdrangarin synnystä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reynisfjara (meri)
+Tietoruudun teksti: Reynisfjara on musta hiekkaranta Etelä-Islannissa, lähellä Víkin kylää ja osa Katlan Unesco-geoparkkia. Rannan itäpäässä on basalttipylväiden reunustama Hálsanefshellir-luola, lännessä Dyrhólaeyn niemi, ja ulkomerellä kohoavat Reynisdrangar — terävät basalttikalliot, jäänteitä kerran laajemmasta Reynisfjall-jyrkänteestä. Vanhan tarun mukaan kalliot syntyivät, kun kaksi peikkoa yritti vetää kolmimastoista laivaa maihin, mutta aamun sarastus muutti ne kiveksi. Yhdysvaltalainen Islands-lehti valitsi rannan vuonna 1991 yhdeksi maailman kymmenestä kauneimmasta ei-trooppisesta rannasta, ja vuonna 2021 se sijoittui kuudenneksi parhaaksi rannaksi koko maailmassa.
+
+### 25.2
+KYSYMYS: Minä vuonna ranta valittiin maailman kymmenen kauneimman joukkoon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reynisfjara (meri)
+Tietoruudun teksti: Reynisfjara on musta hiekkaranta Etelä-Islannissa, lähellä Víkin kylää ja osa Katlan Unesco-geoparkkia. Rannan itäpäässä on basalttipylväiden reunustama Hálsanefshellir-luola, lännessä Dyrhólaeyn niemi, ja ulkomerellä kohoavat Reynisdrangar — terävät basalttikalliot, jäänteitä kerran laajemmasta Reynisfjall-jyrkänteestä. Vanhan tarun mukaan kalliot syntyivät, kun kaksi peikkoa yritti vetää kolmimastoista laivaa maihin, mutta aamun sarastus muutti ne kiveksi. Yhdysvaltalainen Islands-lehti valitsi rannan vuonna 1991 yhdeksi maailman kymmenestä kauneimmasta ei-trooppisesta rannasta, ja vuonna 2021 se sijoittui kuudenneksi parhaaksi rannaksi koko maailmassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

@@ -1,0 +1,197 @@
+================ KOHTA 16 (kohde:grimsey) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grímsey (luonto · saari)
+Tietoruudun teksti: Grímsey on pieni saari neljänkymmenen kilometrin päässä Islannin pohjoisrannikolta, ja sen yli kulkee napapiiri. Se on Islannin pohjoisin asuttu paikka: ainoa kylä on Sandvík, ja asukkaita oli vuonna 2021 viisikymmentäseitsemän. Pinta-alaa on 5,3 neliökilometriä ja korkeinta kohtaa 105 metriä, ja rannat ovat jyrkkiä kallioseiniä lounaisrantaa lukuun ottamatta — juuri siksi saarelle tullaan katsomaan lunneja ja muita merilintuja. Napapiiri ei pysy paikallaan: Maan akselin pitkäaikainen heilahtelu siirtää sitä pohjoiseen noin 14,5 metriä vuodessa. Saarelle on pystytetty pysyvät merkit napapiirin paikoista vuosina 1717, 1817 ja 1917, ja vuonna 2017 sen kohdalle asetettiin kahdeksan tonnin kivipallo, jota siirretään sitä mukaa kuin viiva liikkuu. Napapiiri on kulkenut Grímseyn yli vuodesta 1750, ja noin vuonna 2047 se ohittaa saaren pohjoispuolelta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valparaíso — kaupunkilehti / Kirjallisuus: Etsivä joka asuu Paseo Gervasonilla] Valparaísossa syntynyt Roberto Ampuero on kirjoittanut kansainvälisesti julkaistun romaanisarjan yksityisetsivä Cayetano Brulésta. Brulé asuu kirjoissa viktoriaanisessa talossa Cerro Concepciónin kuvauksellisella Paseo Gervasonilla, ja romaaneja luetaan myös elävänä opaskirjana kaupungin kujille ja kukkuloille. Kaupunki on nimittänyt Ampueron kunniakansalaisekseen – arvonimi kuuluu espanjaksi Hijo Ilustre – ja hän on toiminut myöhemmin myös Chilen ulkoministerinä. Kirjojen näyttämö on yhä paikallaan: samat kävelykadut Gervasoni, Atkinson ja Dimalow kiertävät kukkulan reunaa.
+- [Namibia — maalehti / Luonto: Gepardi asuu farmarin mailla] 1990– — Namibian gepardikanta on maailman suurin ja terveimpiä, ja suurin osa eläimistä asuu kansallispuistojen ulkopuolella karjafarmien mailla. Siksi suojelu tarkoittaa työtä farmarien kanssa. Biologi Laurie Marker perusti 1990 Cheetah Conservation Fundin, jonka tutkimus- ja opetuskeskus on 44 kilometriä Otjiwarongosta itään. Ohjelman ydin on laumanvartijakoira: karjan mukana kasvanut koira ajaa gepardin pois, jolloin farmarin ei tarvitse tappaa sitä. Pensoittuneesta maasta raivatusta puusta puristetaan polttobriketti nimeltä Bushblok. Marker sai 2010 Tyler-palkinnon.
+
+### 16.1
+KYSYMYS: Miksi napapiirin merkki pitää siirtää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grímsey (luonto · saari)
+Tietoruudun teksti: Grímsey on pieni saari neljänkymmenen kilometrin päässä Islannin pohjoisrannikolta, ja sen yli kulkee napapiiri. Se on Islannin pohjoisin asuttu paikka: ainoa kylä on Sandvík, ja asukkaita oli vuonna 2021 viisikymmentäseitsemän. Pinta-alaa on 5,3 neliökilometriä ja korkeinta kohtaa 105 metriä, ja rannat ovat jyrkkiä kallioseiniä lounaisrantaa lukuun ottamatta — juuri siksi saarelle tullaan katsomaan lunneja ja muita merilintuja. Napapiiri ei pysy paikallaan: Maan akselin pitkäaikainen heilahtelu siirtää sitä pohjoiseen noin 14,5 metriä vuodessa. Saarelle on pystytetty pysyvät merkit napapiirin paikoista vuosina 1717, 1817 ja 1917, ja vuonna 2017 sen kohdalle asetettiin kahdeksan tonnin kivipallo, jota siirretään sitä mukaa kuin viiva liikkuu. Napapiiri on kulkenut Grímseyn yli vuodesta 1750, ja noin vuonna 2047 se ohittaa saaren pohjoispuolelta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iqaluit — kaupunkilehti / Tundra ja vuorovesi: Puu, joka kasvaa pitkin maata] Iqaluit on puurajan pohjoispuolella, vaikka se on selvästi napapiirin eteläpuolella. Syy on meressä: kylmä Baffin Island Current pitää kesät niin viileinä, että puuraja kulkee Kanadan itäosassa yhtä etelässä kuin Pohjois-Labradorissa — talvet sen sijaan ovat suunnilleen samanlaisia kuin Yellowknifessa. Puita kaupungissa on silti muutama: etelään kääntyneitä tuotuja mustakuusia, joita lumikinos suojaa talvella. Pensaista tavallisin on arktinen paju, joka voi olla lähes kahdeksan metriä pitkä ja viisitoista senttiä korkea. Se kasvaa siihen suuntaan, johon kannattaa.
+
+### 16.2
+KYSYMYS: Kuinka moni saarella asuu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grímsey (luonto · saari)
+Tietoruudun teksti: Grímsey on pieni saari neljänkymmenen kilometrin päässä Islannin pohjoisrannikolta, ja sen yli kulkee napapiiri. Se on Islannin pohjoisin asuttu paikka: ainoa kylä on Sandvík, ja asukkaita oli vuonna 2021 viisikymmentäseitsemän. Pinta-alaa on 5,3 neliökilometriä ja korkeinta kohtaa 105 metriä, ja rannat ovat jyrkkiä kallioseiniä lounaisrantaa lukuun ottamatta — juuri siksi saarelle tullaan katsomaan lunneja ja muita merilintuja. Napapiiri ei pysy paikallaan: Maan akselin pitkäaikainen heilahtelu siirtää sitä pohjoiseen noin 14,5 metriä vuodessa. Saarelle on pystytetty pysyvät merkit napapiirin paikoista vuosina 1717, 1817 ja 1917, ja vuonna 2017 sen kohdalle asetettiin kahdeksan tonnin kivipallo, jota siirretään sitä mukaa kuin viiva liikkuu. Napapiiri on kulkenut Grímseyn yli vuodesta 1750, ja noin vuonna 2047 se ohittaa saaren pohjoispuolelta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valparaíso — kaupunkilehti / Kirjallisuus: Etsivä joka asuu Paseo Gervasonilla] Valparaísossa syntynyt Roberto Ampuero on kirjoittanut kansainvälisesti julkaistun romaanisarjan yksityisetsivä Cayetano Brulésta. Brulé asuu kirjoissa viktoriaanisessa talossa Cerro Concepciónin kuvauksellisella Paseo Gervasonilla, ja romaaneja luetaan myös elävänä opaskirjana kaupungin kujille ja kukkuloille. Kaupunki on nimittänyt Ampueron kunniakansalaisekseen – arvonimi kuuluu espanjaksi Hijo Ilustre – ja hän on toiminut myöhemmin myös Chilen ulkoministerinä. Kirjojen näyttämö on yhä paikallaan: samat kävelykadut Gervasoni, Atkinson ja Dimalow kiertävät kukkulan reunaa.
+- [Namibia — maalehti / Luonto: Gepardi asuu farmarin mailla] 1990– — Namibian gepardikanta on maailman suurin ja terveimpiä, ja suurin osa eläimistä asuu kansallispuistojen ulkopuolella karjafarmien mailla. Siksi suojelu tarkoittaa työtä farmarien kanssa. Biologi Laurie Marker perusti 1990 Cheetah Conservation Fundin, jonka tutkimus- ja opetuskeskus on 44 kilometriä Otjiwarongosta itään. Ohjelman ydin on laumanvartijakoira: karjan mukana kasvanut koira ajaa gepardin pois, jolloin farmarin ei tarvitse tappaa sitä. Pensoittuneesta maasta raivatusta puusta puristetaan polttobriketti nimeltä Bushblok. Marker sai 2010 Tyler-palkinnon.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:skalholt) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skálholt (historia)
+Tietoruudun teksti: Skálholt Hvítá-joen varrella Etelä-Islannissa oli kahdeksan vuosisadan ajan yksi saaren tärkeimmistä paikoista. Piispanistuin perustettiin siihen vuonna 1056, ja vuoteen 1785 asti se oli Hólarin ohella Islannin toinen hiippakuntakeskus — siis kulttuurin ja politiikan keskus yhtä lailla kuin kirkon. Samana vuonna 1056 sinne perustettiin maan ensimmäinen virallinen koulu, Skálholtsskóli, kouluttamaan pappeja. Keskiajalla paikka oli kokonainen kylä: piispantalo, katedraali, koulu, laaja maanviljelys, paja ja katolisen ajan luostari sekä asuntolat opettajille ja väelle. Adam Bremeniläinen kuvasi sitä noin vuonna 1075 Islannin "suurimmaksi kaupungiksi". Katolisen ajan loppu piirtyi tänne: vuonna 1550 viimeinen katolinen piispa Jón Arason teloitettiin Skálholtissa kahden poikansa kanssa, ja samana vuonna hävitettiin myös pyhän Þorlákurin reliikkiarkku.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Piispa joka taisteli uskontoaan vastaan ja hävisi] 1550 — Tanska määräsi Islannin luterilaiseksi 1500-luvulla, mutta Hólarin piispa Jón Arason kieltäytyi luopumasta katolisesta uskosta. Hän kokosi miehiä, otti vangiksi kilpailevan luterilaisen piispan ja hallitsi hetken käytännössä koko Pohjois-Islantia. Vuonna 1550 hänet ja hänen kaksi poikaansa vangittiin taistelun jälkeen, ja marraskuun 7. päivänä heidät mestattiin Skálholtissa ilman oikeudenkäyntiä — päätöksen teki kuninkaan kirjuri, koska pelättiin, ettei rauhaa muuten koskaan tulisi. Arasonin kuolema päätti katolisen kirkon vallan Islannissa.
+
+### 17.1
+KYSYMYS: Milloin Skálholtiin tuli piispanistuin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skálholt (historia)
+Tietoruudun teksti: Skálholt Hvítá-joen varrella Etelä-Islannissa oli kahdeksan vuosisadan ajan yksi saaren tärkeimmistä paikoista. Piispanistuin perustettiin siihen vuonna 1056, ja vuoteen 1785 asti se oli Hólarin ohella Islannin toinen hiippakuntakeskus — siis kulttuurin ja politiikan keskus yhtä lailla kuin kirkon. Samana vuonna 1056 sinne perustettiin maan ensimmäinen virallinen koulu, Skálholtsskóli, kouluttamaan pappeja. Keskiajalla paikka oli kokonainen kylä: piispantalo, katedraali, koulu, laaja maanviljelys, paja ja katolisen ajan luostari sekä asuntolat opettajille ja väelle. Adam Bremeniläinen kuvasi sitä noin vuonna 1075 Islannin "suurimmaksi kaupungiksi". Katolisen ajan loppu piirtyi tänne: vuonna 1550 viimeinen katolinen piispa Jón Arason teloitettiin Skálholtissa kahden poikansa kanssa, ja samana vuonna hävitettiin myös pyhän Þorlákurin reliikkiarkku.
+
+### 17.2
+KYSYMYS: Kuka teloitettiin täällä vuonna 1550?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skálholt (historia)
+Tietoruudun teksti: Skálholt Hvítá-joen varrella Etelä-Islannissa oli kahdeksan vuosisadan ajan yksi saaren tärkeimmistä paikoista. Piispanistuin perustettiin siihen vuonna 1056, ja vuoteen 1785 asti se oli Hólarin ohella Islannin toinen hiippakuntakeskus — siis kulttuurin ja politiikan keskus yhtä lailla kuin kirkon. Samana vuonna 1056 sinne perustettiin maan ensimmäinen virallinen koulu, Skálholtsskóli, kouluttamaan pappeja. Keskiajalla paikka oli kokonainen kylä: piispantalo, katedraali, koulu, laaja maanviljelys, paja ja katolisen ajan luostari sekä asuntolat opettajille ja väelle. Adam Bremeniläinen kuvasi sitä noin vuonna 1075 Islannin "suurimmaksi kaupungiksi". Katolisen ajan loppu piirtyi tänne: vuonna 1550 viimeinen katolinen piispa Jón Arason teloitettiin Skálholtissa kahden poikansa kanssa, ja samana vuonna hävitettiin myös pyhän Þorlákurin reliikkiarkku.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Piispa joka taisteli uskontoaan vastaan ja hävisi] 1550 — Tanska määräsi Islannin luterilaiseksi 1500-luvulla, mutta Hólarin piispa Jón Arason kieltäytyi luopumasta katolisesta uskosta. Hän kokosi miehiä, otti vangiksi kilpailevan luterilaisen piispan ja hallitsi hetken käytännössä koko Pohjois-Islantia. Vuonna 1550 hänet ja hänen kaksi poikaansa vangittiin taistelun jälkeen, ja marraskuun 7. päivänä heidät mestattiin Skálholtissa ilman oikeudenkäyntiä — päätöksen teki kuninkaan kirjuri, koska pelättiin, ettei rauhaa muuten koskaan tulisi. Arasonin kuolema päätti katolisen kirkon vallan Islannissa.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:hahmotelma-reykjavik) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reykjavík (kaupungit)
+Tietoruudun teksti: Reykjavík on Islannin pääkaupunki ja suurin kaupunki, Faxaflóin lahden rannalla saaren lounaisosassa. Landnámabókin mukaan Ingólfur Arnarson perusti täällä ensimmäisen pysyvän asutuksen noin vuonna 874, kun hänen orjansa löysivät merestä heitetyt istuinpylväät rannalta lähes kolmen vuoden etsinnän jälkeen. Yhdeksänsataa vuotta paikka pysyi pelkkänä maatilana, kunnes siitä tuli virallisesti kauppala vuonna 1786. Nimi juontuu sanoista reykur, savu, ja vík, lahti — alue sai nimensä kuumien lähteiden noususta, joka näytti savulta ensimmäisille asukkaille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — kaupunkilehti / Historia: Mies, joka heitti pylväät mereen ja seurasi niitä] Norjalainen päällikkö Ingólfur Arnarson heitti perimätiedon mukaan laivansa kunniapylväät mereen lähestyessään Islannin rannikkoa noin vuonna 874 ja lupasi asettua sinne, minne pylväät ajautuisivat. Ne löytyivät lahdesta, jossa hän näki maasta nousevaa höyryä — hän nimesi paikan Reykjavíkiksi, "savuiseksi lahdeksi", kuumien lähteiden mukaan. Ingólfuria pidetään Islannin ensimmäisenä pysyvänä asukkaana, ja häntä seurasivat vuosikymmenten aikana tuhannet muut siirtolaiset, pääosin Norjasta ja Brittein saarilta. Asutuskausi kesti perimätiedon mukaan noin vuoteen 930 asti, jolloin koko saari katsottiin asutetuksi.
+
+### 18.1
+KYSYMYS: Mistä sanoista Reykjavíkin nimi juontuu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reykjavík (kaupungit)
+Tietoruudun teksti: Reykjavík on Islannin pääkaupunki ja suurin kaupunki, Faxaflóin lahden rannalla saaren lounaisosassa. Landnámabókin mukaan Ingólfur Arnarson perusti täällä ensimmäisen pysyvän asutuksen noin vuonna 874, kun hänen orjansa löysivät merestä heitetyt istuinpylväät rannalta lähes kolmen vuoden etsinnän jälkeen. Yhdeksänsataa vuotta paikka pysyi pelkkänä maatilana, kunnes siitä tuli virallisesti kauppala vuonna 1786. Nimi juontuu sanoista reykur, savu, ja vík, lahti — alue sai nimensä kuumien lähteiden noususta, joka näytti savulta ensimmäisille asukkaille.
+
+### 18.2
+KYSYMYS: Miten Ingólfur Arnarson löysi asuinpaikkansa tarinan mukaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reykjavík (kaupungit)
+Tietoruudun teksti: Reykjavík on Islannin pääkaupunki ja suurin kaupunki, Faxaflóin lahden rannalla saaren lounaisosassa. Landnámabókin mukaan Ingólfur Arnarson perusti täällä ensimmäisen pysyvän asutuksen noin vuonna 874, kun hänen orjansa löysivät merestä heitetyt istuinpylväät rannalta lähes kolmen vuoden etsinnän jälkeen. Yhdeksänsataa vuotta paikka pysyi pelkkänä maatilana, kunnes siitä tuli virallisesti kauppala vuonna 1786. Nimi juontuu sanoista reykur, savu, ja vík, lahti — alue sai nimensä kuumien lähteiden noususta, joka näytti savulta ensimmäisille asukkaille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — kaupunkilehti / Historia: Mies, joka heitti pylväät mereen ja seurasi niitä] Norjalainen päällikkö Ingólfur Arnarson heitti perimätiedon mukaan laivansa kunniapylväät mereen lähestyessään Islannin rannikkoa noin vuonna 874 ja lupasi asettua sinne, minne pylväät ajautuisivat. Ne löytyivät lahdesta, jossa hän näki maasta nousevaa höyryä — hän nimesi paikan Reykjavíkiksi, "savuiseksi lahdeksi", kuumien lähteiden mukaan. Ingólfuria pidetään Islannin ensimmäisenä pysyvänä asukkaana, ja häntä seurasivat vuosikymmenten aikana tuhannet muut siirtolaiset, pääosin Norjasta ja Brittein saarilta. Asutuskausi kesti perimätiedon mukaan noin vuoteen 930 asti, jolloin koko saari katsottiin asutetuksi.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:hahmotelma-akureyri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Akureyri (kaupungit)
+Tietoruudun teksti: Akureyri on Pohjois-Islannin suurin kaupunki ja koko maan viidenneksi väkirikkain kunta, Eyjafjörðurin vuonon perukassa. Sitä kutsutaan usein "Pohjoisen pääkaupungiksi", ja se on tärkeä satama- ja kalastuskeskus. Alueella asuttiin jo 800-luvulla, mutta kauppalaoikeudet Akureyri sai muiden Islannin kauppapaikkojen tapaan vasta 1786; ne menetettiin 1836, koska väkiluku ei nousi kahtatoista henkeä suuremmaksi, ja saatiin takaisin 1862. Suotuisa ilmasto ja jäätön satama ovat sittemmin tehneet kaupungista pohjoisen tärkeimmän keskuksen.
+
+### 19.1
+KYSYMYS: Miksi Akureyri menetti kauppalaoikeutensa vuonna 1836?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Akureyri (kaupungit)
+Tietoruudun teksti: Akureyri on Pohjois-Islannin suurin kaupunki ja koko maan viidenneksi väkirikkain kunta, Eyjafjörðurin vuonon perukassa. Sitä kutsutaan usein "Pohjoisen pääkaupungiksi", ja se on tärkeä satama- ja kalastuskeskus. Alueella asuttiin jo 800-luvulla, mutta kauppalaoikeudet Akureyri sai muiden Islannin kauppapaikkojen tapaan vasta 1786; ne menetettiin 1836, koska väkiluku ei nousi kahtatoista henkeä suuremmaksi, ja saatiin takaisin 1862. Suotuisa ilmasto ja jäätön satama ovat sittemmin tehneet kaupungista pohjoisen tärkeimmän keskuksen.
+
+### 19.2
+KYSYMYS: Mikä on tehnyt Akureyrin satamasta erityisen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Akureyri (kaupungit)
+Tietoruudun teksti: Akureyri on Pohjois-Islannin suurin kaupunki ja koko maan viidenneksi väkirikkain kunta, Eyjafjörðurin vuonon perukassa. Sitä kutsutaan usein "Pohjoisen pääkaupungiksi", ja se on tärkeä satama- ja kalastuskeskus. Alueella asuttiin jo 800-luvulla, mutta kauppalaoikeudet Akureyri sai muiden Islannin kauppapaikkojen tapaan vasta 1786; ne menetettiin 1836, koska väkiluku ei nousi kahtatoista henkeä suuremmaksi, ja saatiin takaisin 1862. Suotuisa ilmasto ja jäätön satama ovat sittemmin tehneet kaupungista pohjoisen tärkeimmän keskuksen.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-isafjordur) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ísafjörður (merenkulku)
+Tietoruudun teksti: Ísafjörður on Länsivuonojen suurin asutus ja koko alueen hallintokeskus, kapealla hiekkakannaksella Skutulsfjörður-vuonon rannalla. Landnámabókin mukaan Helgi Magri Hrólfsson asettui Skutulsfjörðuriin jo 800-luvulla. Kaupungista tuli ulkomaisten kauppiaiden tärkeä kauppapaikka 1500-luvulla, ja kaupunkioikeudet se sai 1786. Tanskalaisen kauppa-aseman Neðstikaupstaðurin alueella seisoo yhä maan vanhin hirsitalojen ryhmä, muun muassa vuonna 1765 rakennettu Faktorshús. 1500- ja 1600-luvuilla Länsivuonoilla käytiin myös noitavainoja, ja tuomittuja karkotettiin lähellä sijaitsevalle Hornstrandirin niemimaalle.
+
+### 20.1
+KYSYMYS: Mikä on Neðstikaupstaður?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ísafjörður (merenkulku)
+Tietoruudun teksti: Ísafjörður on Länsivuonojen suurin asutus ja koko alueen hallintokeskus, kapealla hiekkakannaksella Skutulsfjörður-vuonon rannalla. Landnámabókin mukaan Helgi Magri Hrólfsson asettui Skutulsfjörðuriin jo 800-luvulla. Kaupungista tuli ulkomaisten kauppiaiden tärkeä kauppapaikka 1500-luvulla, ja kaupunkioikeudet se sai 1786. Tanskalaisen kauppa-aseman Neðstikaupstaðurin alueella seisoo yhä maan vanhin hirsitalojen ryhmä, muun muassa vuonna 1765 rakennettu Faktorshús. 1500- ja 1600-luvuilla Länsivuonoilla käytiin myös noitavainoja, ja tuomittuja karkotettiin lähellä sijaitsevalle Hornstrandirin niemimaalle.
+
+### 20.2
+KYSYMYS: Minne noitavainoissa tuomittuja karkotettiin Länsivuonoilla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ísafjörður (merenkulku)
+Tietoruudun teksti: Ísafjörður on Länsivuonojen suurin asutus ja koko alueen hallintokeskus, kapealla hiekkakannaksella Skutulsfjörður-vuonon rannalla. Landnámabókin mukaan Helgi Magri Hrólfsson asettui Skutulsfjörðuriin jo 800-luvulla. Kaupungista tuli ulkomaisten kauppiaiden tärkeä kauppapaikka 1500-luvulla, ja kaupunkioikeudet se sai 1786. Tanskalaisen kauppa-aseman Neðstikaupstaðurin alueella seisoo yhä maan vanhin hirsitalojen ryhmä, muun muassa vuonna 1765 rakennettu Faktorshús. 1500- ja 1600-luvuilla Länsivuonoilla käytiin myös noitavainoja, ja tuomittuja karkotettiin lähellä sijaitsevalle Hornstrandirin niemimaalle.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

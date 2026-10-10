@@ -1,0 +1,261 @@
+================ KOHTA 6 (kohde:geysir) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geysir (sana)
+Tietoruudun teksti: Geysir — joskus Suuri Geysir — on kuumalähde Lounais-Islannissa. Geologisten tutkimusten mukaan se alkoi muodostua noin vuonna 1150.
+
+Englannin sana geyser on peräisin juuri tästä lähteestä, ja nimi Geysir itse tulee islannin verbistä geysa. Yksi islantilainen lähde on siis antanut nimen koko ilmiölle kaikkialla maailmassa.
+
+Geysir sijaitsee Haukadalurin laaksossa Laugarfjall-laavakupolin rinteellä. Noin viidenkymmenen metrin päässä etelässä on Strokkur, toinen kuumalähde, johon Geysir usein sekoitetaan. Koko geotermistä kenttää kutsutaan tavallisesti joko Geysiriksi tai Haukadaluriksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Luonto: Vesi purskahtaa muutaman minuutin välein] Nykyisin — Haukadalurin laaksossa maan alla on kuumaa vettä, joka kiehuu paineen alla. Kun paine kasvaa liian suureksi, vesi purskahtaa ilmaan pylvääksi. Strokkur tekee sen viiden tai kymmenen minuutin välein ja nostaa vettä parikymmentä metriä. Sen naapuri Geysir oli aikanaan vielä isompi, ja juuri siitä koko ilmiö sai maailmalla nimensä: sana geysir tulee islannin verbistä gjósa eli purskahtaa. Ennen purkausta vesi kohoaa hetkeksi siniseksi kuplaksi.
+
+### 6.1
+KYSYMYS: Mistä sana geysir tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geysir (sana)
+Tietoruudun teksti: Geysir — joskus Suuri Geysir — on kuumalähde Lounais-Islannissa. Geologisten tutkimusten mukaan se alkoi muodostua noin vuonna 1150.
+
+Englannin sana geyser on peräisin juuri tästä lähteestä, ja nimi Geysir itse tulee islannin verbistä geysa. Yksi islantilainen lähde on siis antanut nimen koko ilmiölle kaikkialla maailmassa.
+
+Geysir sijaitsee Haukadalurin laaksossa Laugarfjall-laavakupolin rinteellä. Noin viidenkymmenen metrin päässä etelässä on Strokkur, toinen kuumalähde, johon Geysir usein sekoitetaan. Koko geotermistä kenttää kutsutaan tavallisesti joko Geysiriksi tai Haukadaluriksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Luonto: Vesi purskahtaa muutaman minuutin välein] Nykyisin — Haukadalurin laaksossa maan alla on kuumaa vettä, joka kiehuu paineen alla. Kun paine kasvaa liian suureksi, vesi purskahtaa ilmaan pylvääksi. Strokkur tekee sen viiden tai kymmenen minuutin välein ja nostaa vettä parikymmentä metriä. Sen naapuri Geysir oli aikanaan vielä isompi, ja juuri siitä koko ilmiö sai maailmalla nimensä: sana geysir tulee islannin verbistä gjósa eli purskahtaa. Ennen purkausta vesi kohoaa hetkeksi siniseksi kuplaksi.
+
+### 6.2
+KYSYMYS: Mikä Strokkur on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geysir (sana)
+Tietoruudun teksti: Geysir — joskus Suuri Geysir — on kuumalähde Lounais-Islannissa. Geologisten tutkimusten mukaan se alkoi muodostua noin vuonna 1150.
+
+Englannin sana geyser on peräisin juuri tästä lähteestä, ja nimi Geysir itse tulee islannin verbistä geysa. Yksi islantilainen lähde on siis antanut nimen koko ilmiölle kaikkialla maailmassa.
+
+Geysir sijaitsee Haukadalurin laaksossa Laugarfjall-laavakupolin rinteellä. Noin viidenkymmenen metrin päässä etelässä on Strokkur, toinen kuumalähde, johon Geysir usein sekoitetaan. Koko geotermistä kenttää kutsutaan tavallisesti joko Geysiriksi tai Haukadaluriksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Luonto: Vesi purskahtaa muutaman minuutin välein] Nykyisin — Haukadalurin laaksossa maan alla on kuumaa vettä, joka kiehuu paineen alla. Kun paine kasvaa liian suureksi, vesi purskahtaa ilmaan pylvääksi. Strokkur tekee sen viiden tai kymmenen minuutin välein ja nostaa vettä parikymmentä metriä. Sen naapuri Geysir oli aikanaan vielä isompi, ja juuri siitä koko ilmiö sai maailmalla nimensä: sana geysir tulee islannin verbistä gjósa eli purskahtaa. Ennen purkausta vesi kohoaa hetkeksi siniseksi kuplaksi.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:eiriksstadir) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eiríksstaðir (merenkulku)
+Tietoruudun teksti: Eiríksstaðir on Eiríkr Þorvaldssonin — Punaisen Eirikin — entinen tila Haukadalurin laaksossa Dalasýslassa. Se on todennäköisesti hänen poikansa Leifr Eiríkssonin syntymäpaikka, ja Leifr on ensimmäinen tunnettu eurooppalainen, joka löysi Amerikan.
+
+Landnámabókin ja Punaisen Eirikin saagan mukaan Eiríkr asettui ensin Vestfirðiriin, nai Þjóðhildur Jǫrundardóttirin ja perusti tilan Vatnshornin lähelle Haukadaluriin. Sieltä hänen oli lähdettävä, kun hän oli tappanut kaksi miestä kostoksi omien orjiensa kuolemasta.
+
+Arkeologit ovat tutkineet paikkaa monta kertaa vuodesta 1894 alkaen, ja kaivauksissa on tunnistettu kahden rakennuksen jäänteet 800–900-luvuilta. Päärakennus oli pitkätalo, noin viisikymmentä neliömetriä ja neljätoista metriä pitkä, keskellä pitkä tulisija. Seinät olivat turvetta kiviperustan päällä, paksuudeltaan metrin verran. Lähistölle on rakennettu ulkoilmamuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kimberley — kaupunkilehti / Kimberley: Löytö Colesbergin kummulla] Heinäkuussa 1871 löysi etsintäretkikunnan kokki Esau Damoense timantteja pienellä kummulla, joka sijaitsi veljesten Nicolaas ja Diederik de Beersin tilalla. Tieto levisi kulovalkean tavoin, ja paikalle syntyi välitön ryntäys, jota jälkipolvet kutsuivat nimellä New Rush. Jo kuukaudessa kumpuun oli hakattu 900 erillistä kaivosvaltausta, joita työsti kiivaasti kaksi–kolmetuhatta miestä yhtä aikaa: jokainen kaivoi omaa pientä ruutuaan kirveellä ja lapiolla siinä toivossa, että seuraava lapiollinen paljastaisi timantin.
+
+### 7.1
+KYSYMYS: Kuka syntyi todennäköisesti tällä tilalla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eiríksstaðir (merenkulku)
+Tietoruudun teksti: Eiríksstaðir on Eiríkr Þorvaldssonin — Punaisen Eirikin — entinen tila Haukadalurin laaksossa Dalasýslassa. Se on todennäköisesti hänen poikansa Leifr Eiríkssonin syntymäpaikka, ja Leifr on ensimmäinen tunnettu eurooppalainen, joka löysi Amerikan.
+
+Landnámabókin ja Punaisen Eirikin saagan mukaan Eiríkr asettui ensin Vestfirðiriin, nai Þjóðhildur Jǫrundardóttirin ja perusti tilan Vatnshornin lähelle Haukadaluriin. Sieltä hänen oli lähdettävä, kun hän oli tappanut kaksi miestä kostoksi omien orjiensa kuolemasta.
+
+Arkeologit ovat tutkineet paikkaa monta kertaa vuodesta 1894 alkaen, ja kaivauksissa on tunnistettu kahden rakennuksen jäänteet 800–900-luvuilta. Päärakennus oli pitkätalo, noin viisikymmentä neliömetriä ja neljätoista metriä pitkä, keskellä pitkä tulisija. Seinät olivat turvetta kiviperustan päällä, paksuudeltaan metrin verran. Lähistölle on rakennettu ulkoilmamuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kimberley — kaupunkilehti / Kimberley: Löytö Colesbergin kummulla] Heinäkuussa 1871 löysi etsintäretkikunnan kokki Esau Damoense timantteja pienellä kummulla, joka sijaitsi veljesten Nicolaas ja Diederik de Beersin tilalla. Tieto levisi kulovalkean tavoin, ja paikalle syntyi välitön ryntäys, jota jälkipolvet kutsuivat nimellä New Rush. Jo kuukaudessa kumpuun oli hakattu 900 erillistä kaivosvaltausta, joita työsti kiivaasti kaksi–kolmetuhatta miestä yhtä aikaa: jokainen kaivoi omaa pientä ruutuaan kirveellä ja lapiolla siinä toivossa, että seuraava lapiollinen paljastaisi timantin.
+
+### 7.2
+KYSYMYS: Miksi Eiríkr joutui lähtemään Haukadalurista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eiríksstaðir (merenkulku)
+Tietoruudun teksti: Eiríksstaðir on Eiríkr Þorvaldssonin — Punaisen Eirikin — entinen tila Haukadalurin laaksossa Dalasýslassa. Se on todennäköisesti hänen poikansa Leifr Eiríkssonin syntymäpaikka, ja Leifr on ensimmäinen tunnettu eurooppalainen, joka löysi Amerikan.
+
+Landnámabókin ja Punaisen Eirikin saagan mukaan Eiríkr asettui ensin Vestfirðiriin, nai Þjóðhildur Jǫrundardóttirin ja perusti tilan Vatnshornin lähelle Haukadaluriin. Sieltä hänen oli lähdettävä, kun hän oli tappanut kaksi miestä kostoksi omien orjiensa kuolemasta.
+
+Arkeologit ovat tutkineet paikkaa monta kertaa vuodesta 1894 alkaen, ja kaivauksissa on tunnistettu kahden rakennuksen jäänteet 800–900-luvuilta. Päärakennus oli pitkätalo, noin viisikymmentä neliömetriä ja neljätoista metriä pitkä, keskellä pitkä tulisija. Seinät olivat turvetta kiviperustan päällä, paksuudeltaan metrin verran. Lähistölle on rakennettu ulkoilmamuseo.
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:holar) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hólar (kulttuuri)
+Tietoruudun teksti: Hólar on pieni yhteisö Hjaltadalurin laaksossa Skagafjörðurin alueella Pohjois-Islannissa, noin 379 kilometrin päässä Reykjavíkista. Asukkaita on satakunta. Paikalla ovat Hólarin korkeakoulun päärakennukset, katedraali, islanninhevosen historian keskus ja turvetalo Nýibær.
+
+Islannin ensimmäinen kirjapaino tuotiin Hólariin vuonna 1530. Hólar oli Pohjois-Islannin piispanistuin — Skálholt hoiti saman tehtävän etelässä — ja kulttuurin ja opetuksen keskus lähes seitsemän vuosisadan ajan, vuosina 1106–1798. Piispa Jón Ögmundsson perusti hiippakunnan 1106, ja siitä tuli pian toinen maan kahdesta oppineisuuden keskuksesta.
+
+Hólar oli myös katolisen kirkon viimeinen tukikohta Islannissa uskonpuhdistuksen aikana: sen viimeinen katolinen piispa Jón Arason mestattiin Skálholtissa 1550 kahden poikansa kanssa. Tunnetuin luterilainen piispa oli Guðbrandur Þorláksson. Nykyisen kirkon uskotaan valmistun…
+
+### 8.1
+KYSYMYS: Milloin Islannin ensimmäinen kirjapaino tuli Hólariin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hólar (kulttuuri)
+Tietoruudun teksti: Hólar on pieni yhteisö Hjaltadalurin laaksossa Skagafjörðurin alueella Pohjois-Islannissa, noin 379 kilometrin päässä Reykjavíkista. Asukkaita on satakunta. Paikalla ovat Hólarin korkeakoulun päärakennukset, katedraali, islanninhevosen historian keskus ja turvetalo Nýibær.
+
+Islannin ensimmäinen kirjapaino tuotiin Hólariin vuonna 1530. Hólar oli Pohjois-Islannin piispanistuin — Skálholt hoiti saman tehtävän etelässä — ja kulttuurin ja opetuksen keskus lähes seitsemän vuosisadan ajan, vuosina 1106–1798. Piispa Jón Ögmundsson perusti hiippakunnan 1106, ja siitä tuli pian toinen maan kahdesta oppineisuuden keskuksesta.
+
+Hólar oli myös katolisen kirkon viimeinen tukikohta Islannissa uskonpuhdistuksen aikana: sen viimeinen katolinen piispa Jón Arason mestattiin Skálholtissa 1550 kahden poikansa kanssa. Tunnetuin luterilainen piispa oli Guðbrandur Þorláksson. Nykyisen kirkon uskotaan valmistun…
+
+### 8.2
+KYSYMYS: Mikä Nýibær on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hólar (kulttuuri)
+Tietoruudun teksti: Hólar on pieni yhteisö Hjaltadalurin laaksossa Skagafjörðurin alueella Pohjois-Islannissa, noin 379 kilometrin päässä Reykjavíkista. Asukkaita on satakunta. Paikalla ovat Hólarin korkeakoulun päärakennukset, katedraali, islanninhevosen historian keskus ja turvetalo Nýibær.
+
+Islannin ensimmäinen kirjapaino tuotiin Hólariin vuonna 1530. Hólar oli Pohjois-Islannin piispanistuin — Skálholt hoiti saman tehtävän etelässä — ja kulttuurin ja opetuksen keskus lähes seitsemän vuosisadan ajan, vuosina 1106–1798. Piispa Jón Ögmundsson perusti hiippakunnan 1106, ja siitä tuli pian toinen maan kahdesta oppineisuuden keskuksesta.
+
+Hólar oli myös katolisen kirkon viimeinen tukikohta Islannissa uskonpuhdistuksen aikana: sen viimeinen katolinen piispa Jón Arason mestattiin Skálholtissa 1550 kahden poikansa kanssa. Tunnetuin luterilainen piispa oli Guðbrandur Þorláksson. Nykyisen kirkon uskotaan valmistun…
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:heimaey) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heimaey (tekniikka)
+Tietoruudun teksti: Heimaey on Vestmannaeyjarin saariston suurin saari, 13,4 neliökilometriä, ja samalla Islannin rannikon suurin ja asutuin saari. Se on neljän meripeninkulman päässä etelärannikolta ja saariston ainoa asuttu saari.
+
+Tammikuussa 1973 laavavirta viereisestä Eldfellistä tuhosi puolet kaupungista ja uhkasi sulkea sataman — saaren tärkeimmän tulonlähteen. Etenevä laava jäähdytettiin merivedellä, ja operaatio pelasti sataman.
+
+Purkaus alkoi 23. tammikuuta 1973 kello yksi yöllä. Maa alkoi täristä, halkeamat kasvoivat 1 600 metrin pituisiksi ja laava alkoi purkautua. Kaupungin päälle satoi puoli miljoonaa kuutiometriä tuhkaa. Saman yön aikana saaren 5 000 asukasta evakuoitiin, useimmat kalastusveneillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Yksi mies ratkaisi koko maan uskonnon yhdessä yössä] 1000 — Vuonna 1000 Alþingillä uhkasi puhjeta sisällissota, kun kristityt ja vanhauskoiset eivät suostuneet enää elämään samojen lakien alla. Ratkaisu jätettiin lainlausuja Þorgeir Ljósvetningagoðille, joka oli itse vanhauskoinen mutta tunnettu puolueettomuudestaan. Hän veti turkin päänsä yli ja makasi hiljaa vuorokauden, ja seuraavana päivänä hän julisti koko maan kristityksi — mutta kompromississa sai yhä uhrata vanhoille jumalille kotona salaa, syödä hevosenlihaa ja jättää vastasyntyneen lapsen heitteille, kuten ennenkin. Verta ei vuodatettu kertaakaan.
+- [Islanti — maalehti / Luonto: Kylä puolusti itseään paloletkuilla] 1973 — Tammikuussa 1973 Heimaeyn saarella aukesi kylän laidalle railo, josta purkautui laavaa. Koko väestö, yli viisituhatta ihmistä, vietiin yhdessä yössä turvaan kalastuslaivoilla — sattumalta laivasto oli myrskyn takia satamassa. Laava eteni kohti satamaa, joka oli kylän elinehto. Silloin ryhdyttiin pumppaamaan merivettä laavan päälle: vesi jäähdytti reunan kovaksi ja käänsi virtaa. Satama säilyi, ja lopulta siitä tuli aiempaa suojaisampi.
+
+### 9.1
+KYSYMYS: Miten Heimaeyn satama pelastettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heimaey (tekniikka)
+Tietoruudun teksti: Heimaey on Vestmannaeyjarin saariston suurin saari, 13,4 neliökilometriä, ja samalla Islannin rannikon suurin ja asutuin saari. Se on neljän meripeninkulman päässä etelärannikolta ja saariston ainoa asuttu saari.
+
+Tammikuussa 1973 laavavirta viereisestä Eldfellistä tuhosi puolet kaupungista ja uhkasi sulkea sataman — saaren tärkeimmän tulonlähteen. Etenevä laava jäähdytettiin merivedellä, ja operaatio pelasti sataman.
+
+Purkaus alkoi 23. tammikuuta 1973 kello yksi yöllä. Maa alkoi täristä, halkeamat kasvoivat 1 600 metrin pituisiksi ja laava alkoi purkautua. Kaupungin päälle satoi puoli miljoonaa kuutiometriä tuhkaa. Saman yön aikana saaren 5 000 asukasta evakuoitiin, useimmat kalastusveneillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Luonto: Kylä puolusti itseään paloletkuilla] 1973 — Tammikuussa 1973 Heimaeyn saarella aukesi kylän laidalle railo, josta purkautui laavaa. Koko väestö, yli viisituhatta ihmistä, vietiin yhdessä yössä turvaan kalastuslaivoilla — sattumalta laivasto oli myrskyn takia satamassa. Laava eteni kohti satamaa, joka oli kylän elinehto. Silloin ryhdyttiin pumppaamaan merivettä laavan päälle: vesi jäähdytti reunan kovaksi ja käänsi virtaa. Satama säilyi, ja lopulta siitä tuli aiempaa suojaisampi.
+
+### 9.2
+KYSYMYS: Miksi asukkaat pääsivät pois saarelta yhdessä yössä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heimaey (tekniikka)
+Tietoruudun teksti: Heimaey on Vestmannaeyjarin saariston suurin saari, 13,4 neliökilometriä, ja samalla Islannin rannikon suurin ja asutuin saari. Se on neljän meripeninkulman päässä etelärannikolta ja saariston ainoa asuttu saari.
+
+Tammikuussa 1973 laavavirta viereisestä Eldfellistä tuhosi puolet kaupungista ja uhkasi sulkea sataman — saaren tärkeimmän tulonlähteen. Etenevä laava jäähdytettiin merivedellä, ja operaatio pelasti sataman.
+
+Purkaus alkoi 23. tammikuuta 1973 kello yksi yöllä. Maa alkoi täristä, halkeamat kasvoivat 1 600 metrin pituisiksi ja laava alkoi purkautua. Kaupungin päälle satoi puoli miljoonaa kuutiometriä tuhkaa. Saman yön aikana saaren 5 000 asukasta evakuoitiin, useimmat kalastusveneillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Yksi mies ratkaisi koko maan uskonnon yhdessä yössä] 1000 — Vuonna 1000 Alþingillä uhkasi puhjeta sisällissota, kun kristityt ja vanhauskoiset eivät suostuneet enää elämään samojen lakien alla. Ratkaisu jätettiin lainlausuja Þorgeir Ljósvetningagoðille, joka oli itse vanhauskoinen mutta tunnettu puolueettomuudestaan. Hän veti turkin päänsä yli ja makasi hiljaa vuorokauden, ja seuraavana päivänä hän julisti koko maan kristityksi — mutta kompromississa sai yhä uhrata vanhoille jumalille kotona salaa, syödä hevosenlihaa ja jättää vastasyntyneen lapsen heitteille, kuten ennenkin. Verta ei vuodatettu kertaakaan.
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:latrabjarg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Látrabjarg (eläimet)
+Tietoruudun teksti: Látrabjarg on niemeke Länsivuonoilla ja Islannin läntisin kohta. Jyrkänne on Euroopan suurin lintujyrkänne: neljätoista kilometriä pitkä ja korkeimmillaan 440 metriä.
+
+Kalliolla pesii miljoonia lintuja — lunneja, suulia, kiisloja ja ruokkeja. Paikka on lajien selviytymiselle elintärkeä: jopa neljäkymmentä prosenttia maailman ruokeista pesii täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakutsk — kohdekartta / Kohdekartta: Nikolskin kirkko] suojeltu kohde 1400036000 Nikolskin eli Pyhän Nikolauksen kirkko on kartan läntisin kohde ja Jakutskin ortodoksisista kirkoista sirointi. Se on kivestä, valkoiseksi rapattu, ja sen kolmiportaisesta kellotornista kohoaa kullattu kupoli ja sen päältä pitkä terävä huippu. Rakennus kuuluu Venäjän kulttuuriperintökohteisiin tunnuksella 1400036000. Kirkko kertoo siitä, miten Jakutskin uskonnollinen kartta on kerroksellinen. Ortodoksisuus tuli kaupunkiin linnoituksen mukana 1600-luvulla, ja sen laitokset ovat yhä näkyvissä: Preobraženskin katedraali, hengellinen seminaari ja Spasskin luostari. Niiden rinnalla elävät kuitenkin vanhemmat käsitykset. Jakuuttien perinteinen usko tuntee kolme maailmaa …
+- [Dubai — kohdekartta / Kohdekartta: Al Ahmadiyan koulu] 1912 Ennen kouluja lapset opiskelivat Dubaissa moskeijoiden yhteydessä. Vuonna 1912 helmikaupalla rikastunut Sheikh Ahmed Bin Dalmouk rakennutti Deiran Al Rasiin talon, joka oli tarkoitettu pelkkään opetukseen — se on Dubain vanhin tunnettu muodollinen oppilaitos. Perustaja ei ehtinyt nähdä työtään valmiina: hänen poikansa Mohammed viimeisteli rakennuksen ja antoi koululle isänsä nimen. Opettajiksi saatiin aikansa tunnetuimpia dubailaisia lakioppineita ja islamin tutkijoita, ja koulun penkeiltä nousi sukupolvi, joka myöhemmin rakensi emiraatin liike-elämän: oppilaina olivat muun muassa Easa Al-Gurg, Majid Al Futtaim ja Abdulla Al Ghurair. Talo säilyi, ja Dubain hallitus alkoi kunnostaa sitä…
+
+### 10.1
+KYSYMYS: Kuinka suuri osa maailman ruokeista pesii täällä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Látrabjarg (eläimet)
+Tietoruudun teksti: Látrabjarg on niemeke Länsivuonoilla ja Islannin läntisin kohta. Jyrkänne on Euroopan suurin lintujyrkänne: neljätoista kilometriä pitkä ja korkeimmillaan 440 metriä.
+
+Kalliolla pesii miljoonia lintuja — lunneja, suulia, kiisloja ja ruokkeja. Paikka on lajien selviytymiselle elintärkeä: jopa neljäkymmentä prosenttia maailman ruokeista pesii täällä.
+
+### 10.2
+KYSYMYS: Mikä on Islannin läntisin kohta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Látrabjarg (eläimet)
+Tietoruudun teksti: Látrabjarg on niemeke Länsivuonoilla ja Islannin läntisin kohta. Jyrkänne on Euroopan suurin lintujyrkänne: neljätoista kilometriä pitkä ja korkeimmillaan 440 metriä.
+
+Kalliolla pesii miljoonia lintuja — lunneja, suulia, kiisloja ja ruokkeja. Paikka on lajien selviytymiselle elintärkeä: jopa neljäkymmentä prosenttia maailman ruokeista pesii täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakutsk — kohdekartta / Kohdekartta: Nikolskin kirkko] suojeltu kohde 1400036000 Nikolskin eli Pyhän Nikolauksen kirkko on kartan läntisin kohde ja Jakutskin ortodoksisista kirkoista sirointi. Se on kivestä, valkoiseksi rapattu, ja sen kolmiportaisesta kellotornista kohoaa kullattu kupoli ja sen päältä pitkä terävä huippu. Rakennus kuuluu Venäjän kulttuuriperintökohteisiin tunnuksella 1400036000. Kirkko kertoo siitä, miten Jakutskin uskonnollinen kartta on kerroksellinen. Ortodoksisuus tuli kaupunkiin linnoituksen mukana 1600-luvulla, ja sen laitokset ovat yhä näkyvissä: Preobraženskin katedraali, hengellinen seminaari ja Spasskin luostari. Niiden rinnalla elävät kuitenkin vanhemmat käsitykset. Jakuuttien perinteinen usko tuntee kolme maailmaa …
+- [Dubai — kohdekartta / Kohdekartta: Al Ahmadiyan koulu] 1912 Ennen kouluja lapset opiskelivat Dubaissa moskeijoiden yhteydessä. Vuonna 1912 helmikaupalla rikastunut Sheikh Ahmed Bin Dalmouk rakennutti Deiran Al Rasiin talon, joka oli tarkoitettu pelkkään opetukseen — se on Dubain vanhin tunnettu muodollinen oppilaitos. Perustaja ei ehtinyt nähdä työtään valmiina: hänen poikansa Mohammed viimeisteli rakennuksen ja antoi koululle isänsä nimen. Opettajiksi saatiin aikansa tunnetuimpia dubailaisia lakioppineita ja islamin tutkijoita, ja koulun penkeiltä nousi sukupolvi, joka myöhemmin rakensi emiraatin liike-elämän: oppilaina olivat muun muassa Easa Al-Gurg, Majid Al Futtaim ja Abdulla Al Ghurair. Talo säilyi, ja Dubain hallitus alkoi kunnostaa sitä…
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

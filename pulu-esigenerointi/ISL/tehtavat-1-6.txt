@@ -1,0 +1,196 @@
+================ KOHTA 26 (kohde:hahmotelma-skogafoss) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skógafoss (luonto · joki)
+Tietoruudun teksti: Skógafoss on yksi Islannin suurimmista putouksista, kaksikymmentäviisi metriä leveä ja kuusikymmentä metriä korkea, entisen rantaviivan jyrkänteellä Etelä-Islannissa. Kun meri on vuosituhansien kuluessa vetäytynyt nykyiselle paikalleen noin viiden kilometrin päähän, jäljelle jäivät entiset merenrantakalliot, jotka jatkuvat satojen kilometrien matkan rannikon suuntaisesti. Putouksen jatkuva vesisumu synnyttää aurinkoisella säällä lähes aina näkyviin yksinkertaisen tai kaksoiskaaren sateenkaaren. Tarinan mukaan alueen ensimmäinen viikinkiasukas Þrasi Þórólfsson kätki putouksen taakse aarrearkun, jonka paikalliset myöhemmin löysivät, mutta saivat irti vain arkun kanttarenkaan ennen kuin arkku katosi uudelleen; rengas on nykyään esillä Skógarin museossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sudan — maalehti / Luonto: Riutta keskellä merta, kaukana rannasta] 2016 — Sanganeb on erillinen korallirakennelma keskellä Punaistamerta, kaukana rannikon riutoista. Sadan kolmenkymmenen kilometrin päässä Port Sudanista pohjoiseen aukeaa Dungonabin lahti, jonka keskiosaa, Rawayahin laguunia, kiertää oma riuttakehänsä. Alue merkittiin Ramsar-kosteikoksi 2009 ja hyväksyttiin maailmanperintöluetteloon 2016 nimellä Sanganeb sekä Dungonabin lahti ja Mukkawarin saari. Lahden rannan mangrovet ja pikkusaaret ovat merkittävä lintualue: siellä elävät muun muassa valkosilmälokki ja nokihaukka.
+
+### 26.1
+KYSYMYS: Miksi vanhat merenrantakalliot ovat nyt kaukana rannasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skógafoss (luonto · joki)
+Tietoruudun teksti: Skógafoss on yksi Islannin suurimmista putouksista, kaksikymmentäviisi metriä leveä ja kuusikymmentä metriä korkea, entisen rantaviivan jyrkänteellä Etelä-Islannissa. Kun meri on vuosituhansien kuluessa vetäytynyt nykyiselle paikalleen noin viiden kilometrin päähän, jäljelle jäivät entiset merenrantakalliot, jotka jatkuvat satojen kilometrien matkan rannikon suuntaisesti. Putouksen jatkuva vesisumu synnyttää aurinkoisella säällä lähes aina näkyviin yksinkertaisen tai kaksoiskaaren sateenkaaren. Tarinan mukaan alueen ensimmäinen viikinkiasukas Þrasi Þórólfsson kätki putouksen taakse aarrearkun, jonka paikalliset myöhemmin löysivät, mutta saivat irti vain arkun kanttarenkaan ennen kuin arkku katosi uudelleen; rengas on nykyään esillä Skógarin museossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sudan — maalehti / Luonto: Riutta keskellä merta, kaukana rannasta] 2016 — Sanganeb on erillinen korallirakennelma keskellä Punaistamerta, kaukana rannikon riutoista. Sadan kolmenkymmenen kilometrin päässä Port Sudanista pohjoiseen aukeaa Dungonabin lahti, jonka keskiosaa, Rawayahin laguunia, kiertää oma riuttakehänsä. Alue merkittiin Ramsar-kosteikoksi 2009 ja hyväksyttiin maailmanperintöluetteloon 2016 nimellä Sanganeb sekä Dungonabin lahti ja Mukkawarin saari. Lahden rannan mangrovet ja pikkusaaret ovat merkittävä lintualue: siellä elävät muun muassa valkosilmälokki ja nokihaukka.
+
+### 26.2
+KYSYMYS: Mitä tarinan mukaan Þrasi Þórólfsson kätki putouksen taakse?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skógafoss (luonto · joki)
+Tietoruudun teksti: Skógafoss on yksi Islannin suurimmista putouksista, kaksikymmentäviisi metriä leveä ja kuusikymmentä metriä korkea, entisen rantaviivan jyrkänteellä Etelä-Islannissa. Kun meri on vuosituhansien kuluessa vetäytynyt nykyiselle paikalleen noin viiden kilometrin päähän, jäljelle jäivät entiset merenrantakalliot, jotka jatkuvat satojen kilometrien matkan rannikon suuntaisesti. Putouksen jatkuva vesisumu synnyttää aurinkoisella säällä lähes aina näkyviin yksinkertaisen tai kaksoiskaaren sateenkaaren. Tarinan mukaan alueen ensimmäinen viikinkiasukas Þrasi Þórólfsson kätki putouksen taakse aarrearkun, jonka paikalliset myöhemmin löysivät, mutta saivat irti vain arkun kanttarenkaan ennen kuin arkku katosi uudelleen; rengas on nykyään esillä Skógarin museossa.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-landmannalaugar) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landmannalaugar (luonto · vuori)
+Tietoruudun teksti: Landmannalaugar sijaitsee Fjallabakin luonnonsuojelualueella Islannin ylängöillä, Laugahraun-laavakentän reunalla; laavakenttä syntyi noin vuonna 1477 tapahtuneessa purkauksessa. Aluetta hallitsevat monivärikkäät riolittivuoret, ja paikka tunnetaan erityisesti luonnollisista geotermisistä lähteistään, joissa voi uida. Landmannalaugar on Laugavegur-vaellusreitin pohjoinen pääte, ja Islannin retkeilyseura ylläpitää siellä tukikohtaa vaeltajille. Suosittuja kohteita lähialueella ovat tunnin patikkamatkan päässä oleva Bláhnjúkur-huippu ja Ljótipollur-kraatterijärvi, ja alue toimii lähtöpisteenä pidemmille reiteille kohti Heklan tulivuorta tai halki Sprengisandurin erämaan.
+
+### 27.1
+KYSYMYS: Minä vuonna Laugahraun-laavakenttä syntyi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landmannalaugar (luonto · vuori)
+Tietoruudun teksti: Landmannalaugar sijaitsee Fjallabakin luonnonsuojelualueella Islannin ylängöillä, Laugahraun-laavakentän reunalla; laavakenttä syntyi noin vuonna 1477 tapahtuneessa purkauksessa. Aluetta hallitsevat monivärikkäät riolittivuoret, ja paikka tunnetaan erityisesti luonnollisista geotermisistä lähteistään, joissa voi uida. Landmannalaugar on Laugavegur-vaellusreitin pohjoinen pääte, ja Islannin retkeilyseura ylläpitää siellä tukikohtaa vaeltajille. Suosittuja kohteita lähialueella ovat tunnin patikkamatkan päässä oleva Bláhnjúkur-huippu ja Ljótipollur-kraatterijärvi, ja alue toimii lähtöpisteenä pidemmille reiteille kohti Heklan tulivuorta tai halki Sprengisandurin erämaan.
+
+### 27.2
+KYSYMYS: Mikä Laugavegur on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landmannalaugar (luonto · vuori)
+Tietoruudun teksti: Landmannalaugar sijaitsee Fjallabakin luonnonsuojelualueella Islannin ylängöillä, Laugahraun-laavakentän reunalla; laavakenttä syntyi noin vuonna 1477 tapahtuneessa purkauksessa. Aluetta hallitsevat monivärikkäät riolittivuoret, ja paikka tunnetaan erityisesti luonnollisista geotermisistä lähteistään, joissa voi uida. Landmannalaugar on Laugavegur-vaellusreitin pohjoinen pääte, ja Islannin retkeilyseura ylläpitää siellä tukikohtaa vaeltajille. Suosittuja kohteita lähialueella ovat tunnin patikkamatkan päässä oleva Bláhnjúkur-huippu ja Ljótipollur-kraatterijärvi, ja alue toimii lähtöpisteenä pidemmille reiteille kohti Heklan tulivuorta tai halki Sprengisandurin erämaan.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-flateyjarbok) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flateyjarbók (kulttuuri)
+Tietoruudun teksti: Flateyjarbók on suurin keskiaikainen islantilainen käsikirjoitus, 225 kirjoitettua ja kuvitettua pergamenttilehteä. Lakimies Jón Hákonarson tilasi teoksen, ja papit Jón Þórðarson ja Magnús Þórhallsson kirjoittivat ja kuvittivat sen vuosina 1387-1394. Kirja sisältää pääosin Norjan kuninkaiden saagoja, mutta myös ainoat säilyneet islanninkieliset versiot Orkneyinga-saagasta ja Färsaarelaisten saagasta sekä tärkeän Grænlendinga-saagan Vinlannin siirtokunnasta. Vuonna 1651 piispa Brynjólfur Sveinsson pyysi Tanskan kuninkaan luvalla kaikkia islantilaisia luovuttamaan vanhat käsikirjoituksensa, ja Flateyjarbók päätyi Flatey-saarelta Kööpenhaminaan, jossa se säilyi tanskalaisessa kirjastossa yli kolmesataa vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kaupunkilehti / Nuuk: Siirtokunta, joka muutti saarelta mantereelle] Kaupunki syntyi 1728, kun kuninkaallinen kuvernööri Claus Paarss siirsi Hans Egeden Toivon siirtokunnan Kangeqin saarelta mantereelle inuiittiasutuksen Nûkin kohdalle. Uusi linnake nimettiin Godthaabiksi, hyväksi toivoksi. Alku oli karu: Paarssin siirtolaiset olivat kapinoineita sotilaita ja tuomittuja, ja ensimmäisen vuoden aikana useimmat kuolivat keripukkiin ja muihin tauteihin. Vuosien 1733–1734 isorokkoepidemia tappoi suuren osan paikallisväestöstä ja myös Egeden vaimon. Egede palasi Tanskaan 1736 ja jätti työn pojalleen Poulille. Nimi vaihtui Nuukiksi vasta 1. toukokuuta 1979, samana päivänä kun kotihallinto aloitti.
+- [Nuuk — kaupunkilehti / Tiede ja tekniikka: Yliopisto, joka aloitti lähetysasemalla] Grönlannin ainoa yliopisto Ilisimatusarfik perustettiin Nuukiin 1987, jotta korkeakoulutusta olisi saatavilla myös kotona. Ensimmäiset vuodet se toimi entisellä herrnhutilaisella lähetysasemalla Uudessa Herrnhutissa — samassa paikassa, josta koko kaupunki osittain kasvoi. 2000-luvun lopulla yliopisto muutti omaan tutkimuskompleksiinsa Ilimmarfikiin, jossa ovat muun muassa kielen, kulttuurihistorian ja teologian laitokset, Grönlannin tilastokeskus ja kansalliskirjaston Groenlandica-kokoelma. Useimmat kurssit opetetaan tanskaksi, osa grönlanniksi. Yliopisto on pieni, koska moni grönlantilainen opiskelija lähtee Tanskaan.
+
+### 28.1
+KYSYMYS: Mitkä saagat säilyivät islanninkielisinä ainoastaan Flateyjarbókissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flateyjarbók (kulttuuri)
+Tietoruudun teksti: Flateyjarbók on suurin keskiaikainen islantilainen käsikirjoitus, 225 kirjoitettua ja kuvitettua pergamenttilehteä. Lakimies Jón Hákonarson tilasi teoksen, ja papit Jón Þórðarson ja Magnús Þórhallsson kirjoittivat ja kuvittivat sen vuosina 1387-1394. Kirja sisältää pääosin Norjan kuninkaiden saagoja, mutta myös ainoat säilyneet islanninkieliset versiot Orkneyinga-saagasta ja Färsaarelaisten saagasta sekä tärkeän Grænlendinga-saagan Vinlannin siirtokunnasta. Vuonna 1651 piispa Brynjólfur Sveinsson pyysi Tanskan kuninkaan luvalla kaikkia islantilaisia luovuttamaan vanhat käsikirjoituksensa, ja Flateyjarbók päätyi Flatey-saarelta Kööpenhaminaan, jossa se säilyi tanskalaisessa kirjastossa yli kolmesataa vuotta.
+
+### 28.2
+KYSYMYS: Miten kirja päätyi Tanskaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flateyjarbók (kulttuuri)
+Tietoruudun teksti: Flateyjarbók on suurin keskiaikainen islantilainen käsikirjoitus, 225 kirjoitettua ja kuvitettua pergamenttilehteä. Lakimies Jón Hákonarson tilasi teoksen, ja papit Jón Þórðarson ja Magnús Þórhallsson kirjoittivat ja kuvittivat sen vuosina 1387-1394. Kirja sisältää pääosin Norjan kuninkaiden saagoja, mutta myös ainoat säilyneet islanninkieliset versiot Orkneyinga-saagasta ja Färsaarelaisten saagasta sekä tärkeän Grænlendinga-saagan Vinlannin siirtokunnasta. Vuonna 1651 piispa Brynjólfur Sveinsson pyysi Tanskan kuninkaan luvalla kaikkia islantilaisia luovuttamaan vanhat käsikirjoituksensa, ja Flateyjarbók päätyi Flatey-saarelta Kööpenhaminaan, jossa se säilyi tanskalaisessa kirjastossa yli kolmesataa vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kaupunkilehti / Nuuk: Siirtokunta, joka muutti saarelta mantereelle] Kaupunki syntyi 1728, kun kuninkaallinen kuvernööri Claus Paarss siirsi Hans Egeden Toivon siirtokunnan Kangeqin saarelta mantereelle inuiittiasutuksen Nûkin kohdalle. Uusi linnake nimettiin Godthaabiksi, hyväksi toivoksi. Alku oli karu: Paarssin siirtolaiset olivat kapinoineita sotilaita ja tuomittuja, ja ensimmäisen vuoden aikana useimmat kuolivat keripukkiin ja muihin tauteihin. Vuosien 1733–1734 isorokkoepidemia tappoi suuren osan paikallisväestöstä ja myös Egeden vaimon. Egede palasi Tanskaan 1736 ja jätti työn pojalleen Poulille. Nimi vaihtui Nuukiksi vasta 1. toukokuuta 1979, samana päivänä kun kotihallinto aloitti.
+- [Nuuk — kaupunkilehti / Tiede ja tekniikka: Yliopisto, joka aloitti lähetysasemalla] Grönlannin ainoa yliopisto Ilisimatusarfik perustettiin Nuukiin 1987, jotta korkeakoulutusta olisi saatavilla myös kotona. Ensimmäiset vuodet se toimi entisellä herrnhutilaisella lähetysasemalla Uudessa Herrnhutissa — samassa paikassa, josta koko kaupunki osittain kasvoi. 2000-luvun lopulla yliopisto muutti omaan tutkimuskompleksiinsa Ilimmarfikiin, jossa ovat muun muassa kielen, kulttuurihistorian ja teologian laitokset, Grönlannin tilastokeskus ja kansalliskirjaston Groenlandica-kokoelma. Useimmat kurssit opetetaan tanskaksi, osa grönlanniksi. Yliopisto on pieni, koska moni grönlantilainen opiskelija lähtee Tanskaan.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-godafoss) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Goðafoss (historia)
+Tietoruudun teksti: Goðafoss on putous Pohjois-Islannissa Skjálfandafljót-joessa, pääreitin varrella noin 45 minuutin ajomatkan päässä Akureyrista. Vesi putoaa kaksitoista metriä kolmenkymmenen metrin levyisenä hevosenkengän muotoisena verhona. Nimi voidaan lukea joko jumalten tai goðin, päällikkö-papin, putoukseksi; vuosina 1879-1882 Tanskassa julkaistiin tarina, jonka mukaan lainpuhuja Þorgeir Ljósvetningagoði heitti muinaisten jumalten patsaansa putoukseen palattuaan Alþingiltä, jossa hän oli tehnyt kristinuskosta viralliseksi uskonnoksi vuonna 999 tai 1000. Tarina on todennäköisesti 1800-luvun oma keksintö, sillä vanhin lähde Þorgeirin osuudesta käännytykseen, Ari Þorgilssonin Íslendingabók, ei mainitse patsaiden heittämistä lainkaan — silti tarina on kuvattu myös Akureyrin kirkon ikkunalasiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Afganistan — maalehti / Kirjallisuus: Ensimmäinen nainen, joka kirjoitti persiaksi] 900-luku — Rabia Balkhi eli samaan aikaan kuin persiankielisen runouden isänä pidetty Rudaki, ja hän on ensimmäinen nainen, jonka tiedetään kirjoittaneen runoja persiaksi. Häntä kutsuttiin usein vain Kaabin tyttäreksi. 1200-luvun runoilijakokoelmassa hänestä sanotaan, että vaikka hän oli nainen, hän oli taidoiltaan miehiä etevämpi. Attar kirjoitti hänestä kaksisataa vuotta myöhemmin tarinan, jossa hän rakastuu veljensä orjaan Bektashiin ja kirjoittaa viimeiset säkeensä omalla verellään vankiselliin. Tutkijat pitävät kertomusta myöhempänä lisäyksenä, mutta se on elänyt kouluissa ja elokuvissa asti.
+- [Kiina — maalehti / Historia: Laivasto toi kotiin kirahvin] 1414 — Amiraali Zheng He johti vuosina 1405–1433 seitsemän suurta merimatkaa Yongle-keisarin toimeksiannosta. Laivasto purjehti Kaakkois-Aasiaan, Intiaan, Arabian niemimaalle ja Afrikan itärannikolle asti, ja mukana kulki satoja aluksia. Vuonna 1414 laivat toivat mukanaan elävän kirahvin, jollaista Kiinassa ei ollut nähty. Hovi tulkitsi eläimen qiliniksi, onnea tuottavaksi taruolennoksi. Tapaus maalattiin pystykääröön, joka tunnetaan Shen Dun nimellä; Philadelphian taidemuseo pitää säilynyttä versiota myöhempänä, 1500-luvulla tehtynä toisintona.
+
+### 29.1
+KYSYMYS: Mitä nimi Goðafoss voi tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Goðafoss (historia)
+Tietoruudun teksti: Goðafoss on putous Pohjois-Islannissa Skjálfandafljót-joessa, pääreitin varrella noin 45 minuutin ajomatkan päässä Akureyrista. Vesi putoaa kaksitoista metriä kolmenkymmenen metrin levyisenä hevosenkengän muotoisena verhona. Nimi voidaan lukea joko jumalten tai goðin, päällikkö-papin, putoukseksi; vuosina 1879-1882 Tanskassa julkaistiin tarina, jonka mukaan lainpuhuja Þorgeir Ljósvetningagoði heitti muinaisten jumalten patsaansa putoukseen palattuaan Alþingiltä, jossa hän oli tehnyt kristinuskosta viralliseksi uskonnoksi vuonna 999 tai 1000. Tarina on todennäköisesti 1800-luvun oma keksintö, sillä vanhin lähde Þorgeirin osuudesta käännytykseen, Ari Þorgilssonin Íslendingabók, ei mainitse patsaiden heittämistä lainkaan — silti tarina on kuvattu myös Akureyrin kirkon ikkunalasiin.
+
+### 29.2
+KYSYMYS: Miksi patsastarinaa pidetään myöhempänä keksintönä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Goðafoss (historia)
+Tietoruudun teksti: Goðafoss on putous Pohjois-Islannissa Skjálfandafljót-joessa, pääreitin varrella noin 45 minuutin ajomatkan päässä Akureyrista. Vesi putoaa kaksitoista metriä kolmenkymmenen metrin levyisenä hevosenkengän muotoisena verhona. Nimi voidaan lukea joko jumalten tai goðin, päällikkö-papin, putoukseksi; vuosina 1879-1882 Tanskassa julkaistiin tarina, jonka mukaan lainpuhuja Þorgeir Ljósvetningagoði heitti muinaisten jumalten patsaansa putoukseen palattuaan Alþingiltä, jossa hän oli tehnyt kristinuskosta viralliseksi uskonnoksi vuonna 999 tai 1000. Tarina on todennäköisesti 1800-luvun oma keksintö, sillä vanhin lähde Þorgeirin osuudesta käännytykseen, Ari Þorgilssonin Íslendingabók, ei mainitse patsaiden heittämistä lainkaan — silti tarina on kuvattu myös Akureyrin kirkon ikkunalasiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Afganistan — maalehti / Kirjallisuus: Ensimmäinen nainen, joka kirjoitti persiaksi] 900-luku — Rabia Balkhi eli samaan aikaan kuin persiankielisen runouden isänä pidetty Rudaki, ja hän on ensimmäinen nainen, jonka tiedetään kirjoittaneen runoja persiaksi. Häntä kutsuttiin usein vain Kaabin tyttäreksi. 1200-luvun runoilijakokoelmassa hänestä sanotaan, että vaikka hän oli nainen, hän oli taidoiltaan miehiä etevämpi. Attar kirjoitti hänestä kaksisataa vuotta myöhemmin tarinan, jossa hän rakastuu veljensä orjaan Bektashiin ja kirjoittaa viimeiset säkeensä omalla verellään vankiselliin. Tutkijat pitävät kertomusta myöhempänä lisäyksenä, mutta se on elänyt kouluissa ja elokuvissa asti.
+- [Kiina — maalehti / Historia: Laivasto toi kotiin kirahvin] 1414 — Amiraali Zheng He johti vuosina 1405–1433 seitsemän suurta merimatkaa Yongle-keisarin toimeksiannosta. Laivasto purjehti Kaakkois-Aasiaan, Intiaan, Arabian niemimaalle ja Afrikan itärannikolle asti, ja mukana kulki satoja aluksia. Vuonna 1414 laivat toivat mukanaan elävän kirahvin, jollaista Kiinassa ei ollut nähty. Hovi tulkitsi eläimen qiliniksi, onnea tuottavaksi taruolennoksi. Tapaus maalattiin pystykääröön, joka tunnetaan Shen Dun nimellä; Philadelphian taidemuseo pitää säilynyttä versiota myöhempänä, 1500-luvulla tehtynä toisintona.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-kirkjufell) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kirkjufell (luonto · vuori)
+Tietoruudun teksti: Kirkjufell on 463 metriä korkea kukkula Snæfellsnesin pohjoisrannikolla, lähellä Grundarfjörðurin kylää, ja sitä pidetään Islannin kuvatuimpana vuorena. Se on nunatak eli jääkauden aikana jäätikön yläpuolelle kohonnut kallio, ja sen rakenne koostuu vuorottelevista pleistoseenikautisista laavakerroksista ja hiekkakivestä, huipulla tuffikiveä. Vuori tunnetaan myös televisiosta: se toimi Game of Thrones -sarjan kuudennen ja seitsemännen tuotantokauden kuvauspaikkana "nuolenpää"-vuorena, jonka Koira-niminen hahmo näkee Muurin pohjoispuolella. Kiipeäminen on mahdollista kesällä ja syksyllä noin kolmessa tunnissa, mutta jyrkät kohdat ovat vaarallisia sateella, ja vuorella on sattunut kuolemantapauksia useana vuonna.
+
+### 30.1
+KYSYMYS: Mikä on nunatak?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kirkjufell (luonto · vuori)
+Tietoruudun teksti: Kirkjufell on 463 metriä korkea kukkula Snæfellsnesin pohjoisrannikolla, lähellä Grundarfjörðurin kylää, ja sitä pidetään Islannin kuvatuimpana vuorena. Se on nunatak eli jääkauden aikana jäätikön yläpuolelle kohonnut kallio, ja sen rakenne koostuu vuorottelevista pleistoseenikautisista laavakerroksista ja hiekkakivestä, huipulla tuffikiveä. Vuori tunnetaan myös televisiosta: se toimi Game of Thrones -sarjan kuudennen ja seitsemännen tuotantokauden kuvauspaikkana "nuolenpää"-vuorena, jonka Koira-niminen hahmo näkee Muurin pohjoispuolella. Kiipeäminen on mahdollista kesällä ja syksyllä noin kolmessa tunnissa, mutta jyrkät kohdat ovat vaarallisia sateella, ja vuorella on sattunut kuolemantapauksia useana vuonna.
+
+### 30.2
+KYSYMYS: Missä tv-sarjassa Kirkjufell on esiintynyt kuvauspaikkana?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kirkjufell (luonto · vuori)
+Tietoruudun teksti: Kirkjufell on 463 metriä korkea kukkula Snæfellsnesin pohjoisrannikolla, lähellä Grundarfjörðurin kylää, ja sitä pidetään Islannin kuvatuimpana vuorena. Se on nunatak eli jääkauden aikana jäätikön yläpuolelle kohonnut kallio, ja sen rakenne koostuu vuorottelevista pleistoseenikautisista laavakerroksista ja hiekkakivestä, huipulla tuffikiveä. Vuori tunnetaan myös televisiosta: se toimi Game of Thrones -sarjan kuudennen ja seitsemännen tuotantokauden kuvauspaikkana "nuolenpää"-vuorena, jonka Koira-niminen hahmo näkee Muurin pohjoispuolella. Kiipeäminen on mahdollista kesällä ja syksyllä noin kolmessa tunnissa, mutta jyrkät kohdat ovat vaarallisia sateella, ja vuorella on sattunut kuolemantapauksia useana vuonna.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
