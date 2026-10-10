@@ -5,7 +5,7 @@ Edellinen: viesti-natiiviseppa-luovutus-20261010-aamu.md (TILA-osiot 08.0x–11.
 Viestit: SendMessage-raja oli täynnä → varakanava mcp__ccd_session_mgmt__send_message (PT local_593b89a1…, Julkaisija local_22b29f10…,
 LS1 local_45a869de…, LS2 local_fc4fcc54…, NUI local_33ba1387…, Pelikoodari local_97810d35…, Sisältökirjuri local_256f6a15…).
 
-## TILA 19.4x — JUNA 180 KERTYY, MUISTIAJO YÖN JÄLKEEN
+## TILA 19.3x — JUNA 180 KERTYY, MUISTIAJO YÖN JÄLKEEN
 - **JUNA 180 = natiiviseppa/juna-180 d6494497a** (BUILD 179 75fcc2b1b:n päällä; wt j175): Pelikoodari pulu-bih-lux-mlt e2b97a8a4, NUI pallo-koysi-sumuun
   e341491f7, LS2 peking-vesikerroin 2c2305012, Natiiviseppä todistusajo-kuittaus 80d418513, LS1 museo-varjot-180 9106d012f (lattiaheijastus + sali-v2).
   L1346/P456/K461, unity 0. Lisää muistia: KYLLÄ (peilikamera HDR ~11 Mt, sali-v2) → MUISTIAJO (Pariisi A/B + Olavinlinna + museo; scratchpad
