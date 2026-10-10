@@ -1237,6 +1237,35 @@
   ]
  },
  {
+  "kohde": "kohde:hahmotelma-protaras",
+  "kysymys": "Minkä kunnan alueella Protaras sijaitsee?",
+  "uusi": true,
+  "vastaus": "No niin, tän minä tiedän. Protaras sijaitsee [[Kyproksen]] itärannikolla [[Paralimnin]] kunnan alueella. Se on rannikon kolkka, jossa on kirkkaan turkoosia vettä ja joka tunnetaan rauhallisena lomakohteena. Katolta katsottuna kunnan raja ei näy, mut ranta kyl.",
+  "linkit": [
+   "Kyproksen",
+   "Paralimnin"
+  ],
+  "jatkot": [
+   "Missä päin Kyprosta Paralimni sijaitsee?",
+   "Millainen kaupunki Paralimni on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-protaras",
+  "kysymys": "Minne Ptolemaios pakeni Leukollan taistelun jälkeen?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Lähteiden mukaan Ptolemaios vetäytyi tappion jälkeen takaisin Egyptiin, ja [[Kypros]] jäi hetkeksi [[Demetrios Poliorketeen]] haltuun. Antiikin [[Leukollan]] kaupunkivaltio sijaitsi nykyisen Protaraksen tienoilla, mutta taistelun tarkasta paikasta en ole varma. Pitkä matka merellä, sen kyyhky tietää.",
+  "linkit": [
+   "Kypros",
+   "Demetrios Poliorketeen",
+   "Leukollan"
+  ],
+  "jatkot": [
+   "Kuka Ptolemaios oli?",
+   "Miksi Kypros oli antiikin aikana tärkeä?"
+  ]
+ },
+ {
   "kohde": "kohde:hahmotelma-prodromos",
   "kysymys": "Minkä pyhän henkilön mukaan Prodromos on nimetty?",
   "uusi": false,
@@ -1311,9 +1340,10 @@
   "kohde": "kohde:olympos~2",
   "kysymys": "Miksi vuoren toinen nimi on Chionistra?",
   "uusi": false,
-  "vastaus": "Just niin, mietin samaa. Chionistra on kreikkalainen kansannimi, ja se tarkoittaa lumista. Nimi pitää paikkansa, sillä Ólympos on Kyproksen korkein kohta, 1 952 metriä, ja Välimeren saareksi huippu saa talvisin kunnon lumipeitteen. Vuori sijaitsee [[Troodosin]] vuoriston keskellä. Lumi ja Välimeri, aika outo pari kyyhkyn mielestä.",
+  "vastaus": "Just niin, mietin samaa. Chionistra on kreikkalainen kansannimi, ja se tarkoittaa lumista. Nimi pitää paikkansa, sillä Ólympos on Kyproksen korkein kohta, ja Välimeren saareksi huippu saa talvisin kunnon lumipeitteen. Vuori sijaitsee [[Troodosin]] vuoriston keskellä [[Kyproksella]]. Lumi ja Välimeri, aika outo pari kyyhkyn mielestä.",
   "linkit": [
-   "Troodosin"
+   "Troodosin",
+   "Kyproksella"
   ],
   "jatkot": [
    "Kuinka paljon lunta Olymposella sataa?",
@@ -1808,9 +1838,10 @@
   "kohde": "kohde:khirokitia",
   "kysymys": "Miksi vainajat haudattiin lattian alle?",
   "uusi": true,
-  "vastaus": "Hetkinen. [[Khirokitiassa]] vainajat haudattiin koukkuasennossa asuinrakennusten lattioiden alle. Syytä ei tiedetä varmasti, mutta tutkijat ovat pitäneet tapaa merkkinä siitä, että vainajat säilyivät osana kotitaloutta ja yhteisöä. Vastaava tapa tunnetaan myös muista esihistoriallisista asutuksista. Hiljainen ja lämmin tapa pitää omat lähellä.",
+  "vastaus": "Hetkinen. [[Khirokitiassa]] vainajat haudattiin koukkuasennossa asuinrakennusten lattioiden alle. Syytä ei tiedetä varmasti, mutta tutkijat ovat pitäneet tapaa merkkinä siitä, että vainajat säilyivät osana kotitaloutta ja yhteisöä. Vastaava tapa tunnetaan myös muista [[esihistoriallisista]] asutuksista. Hiljainen ja lämmin tapa pitää omat lähellä.",
   "linkit": [
-   "Khirokitiassa"
+   "Khirokitiassa",
+   "esihistoriallisista"
   ],
   "jatkot": [
    "Miten neoliittiset yhteisöt hautasivat vainajansa muualla?",
@@ -1829,6 +1860,293 @@
   "jatkot": [
    "Mitkä Kyproksen kohteet ovat maailmanperintöluettelossa?",
    "Miten kohde pääsee Unescon luetteloon?"
+  ]
+ },
+ {
+  "kohde": "kohde:asinounkirkko",
+  "kysymys": "Montako Troodosin kirkkoa on maailmanperintöluettelossa?",
+  "uusi": false,
+  "vastaus": "Kato, tän minä muistan. Troodosin maalattujen kirkkojen joukkoon kuuluu kymmenen bysanttilaista kirkkoa ja luostaria, ja ne kaikki ovat nykyään maailmanperintökohteita. [[Unesco]] liitti luetteloonsa ensin yhdeksän niistä vuonna 1985, ja kymmenes, [[Palaichori Oreinisin]] kirkko, tuli mukaan vasta 2001. Joukossa on myös 1100-luvulla rakennettu [[Asinoun kirkko]] Nikitarin kylässä, jonka virallinen nimi on Panagia Phorviotissa. Ei paha kyyhkyltä, laskea kymmeneen.",
+  "linkit": [
+   "Unesco",
+   "Palaichori Oreinisin",
+   "Asinoun kirkko"
+  ],
+  "jatkot": [
+   "Mikä tekee bysanttilaisesta seinämaalauksesta erityisen?",
+   "Mikä on Kyproksen vanhin säilynyt luostarikirkko?"
+  ]
+ },
+ {
+  "kohde": "kohde:asinounkirkko",
+  "kysymys": "Miksi kirkoilla on jyrkät puukatot?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Troodosvuoristossa sataa talvella runsaasti ja ylimpänä sataa myös lunta, ja jyrkkä katto päästää veden ja lumen valumaan nopeasti pois. Monissa vuoriston kirkoissa kivirakennuksen päälle on rakennettu erillinen, kaksipuolinen puukatto, jonka tehtävänä on suojata alla olevia seiniä ja [[seinämaalauksia]] kosteudelta. Esimerkiksi [[Moutoullan]] 1200-luvun kappelin jyrkkä puukatto on lajinsa varhaisin esimerkki. En ole varma, onko katto kaikissa kirkoissa rakennettu juuri tästä syystä. Katon alla on aina mukavampi, sen kyyhky tietää.",
+  "linkit": [
+   "seinämaalauksia",
+   "Moutoullan"
+  ],
+  "jatkot": [
+   "Miten vanhat seinämaalaukset säilyvät vuosisatoja?",
+   "Millaista talvi on Troodosvuoristossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:asinounkirkko",
+  "kysymys": "Mitä on freskomaalaus ja miten se tehdään?",
+  "uusi": true,
+  "vastaus": "No niin, tuosta minä tiedän jotain. Freskomaalauksessa maali levitetään märälle [[kalkkilaastiin]], jolloin värijauheet sitoutuvat seinään laastin kuivuessa ja kovettuessa. Siksi väri on osa seinää eikä vain sen pinnalla. Maalarin on työskenneltävä nopeasti, koska laasti kuivuu, ja työ tehdään yleensä päivän työosuuksina. Kuivalle seinälle maalattua tekniikkaa kutsutaan nimellä [[secco]], ja se kestää aikaa huonommin. Kirkkojen seinämaalauksissa on usein käytetty myös tekniikoiden yhdistelmiä. Ihan hyvin kyyhky selitti.",
+  "linkit": [
+   "kalkkilaastiin",
+   "secco"
+  ],
+  "jatkot": [
+   "Mistä värijauheet tehtiin ennen vanhaan?",
+   "Mitä ikonit ovat ja miten ne eroavat seinämaalauksista?"
+  ]
+ },
+ {
+  "kohde": "kohde:asinounkirkko",
+  "kysymys": "Mikä Unesco on ja miten kohde pääsee maailmanperintöluetteloon?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. [[Unesco]] on Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö, ja maailmanperintöluettelo perustuu sen vuonna 1972 hyväksymään yleissopimukseen. Kohteen ehdottaa valtio, joka on sopimuksen osapuoli. Kulttuurikohteiden arvioinnissa apuna on asiantuntijajärjestö [[ICOMOS]], ja lopullisen päätöksen tekee [[maailmanperintökomitea]]. Kohteen on täytettävä vähintään yksi kriteeri ja osoitettava poikkeuksellinen yleismaailmallinen arvo. Viisikymmentä vuotta tuli täyteen, mutta paperityö tuntuu kyyhkyn mielestä yhä pitkältä.",
+  "linkit": [
+   "Unesco",
+   "ICOMOS",
+   "maailmanperintökomitea"
+  ],
+  "jatkot": [
+   "Voiko kohde poistua maailmanperintöluettelosta?",
+   "Mitä kriteereitä kulttuurikohteilta vaaditaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:asinounkirkko",
+  "kysymys": "Mikä oli Bysantin valtakunta ja mikä oli Kyproksen asema siinä?",
+  "uusi": true,
+  "vastaus": "Ai se. Bysantin valtakunta eli Itä-Rooma oli Rooman valtakunnan itäinen jatke, jonka pääkaupunki oli [[Konstantinopoli]]. Valtakunta kesti vuoteen 1453 asti, ja sen kieli ja kirkko olivat kreikkalaisia. Kypros oli osa Bysantin valtakuntaa pitkään, joskin tarkat ajanjaksot ovat monimutkaisia, sillä saarta hallittiin aikanaan myös yhdessä arabien kanssa. Bysantin valta saarella päättyi vuonna 1191, kun [[Rikhard Leijonamieli]] valloitti Kyproksen. Bysanttilaisen ajan perintö näkyy yhä saaren kirkoissa ja niiden seinämaalauksissa. Sisarussarja pitkä, mutta suvun muistiinpanot kestävät sen.",
+  "linkit": [
+   "Konstantinopoli",
+   "Rikhard Leijonamieli"
+  ],
+  "jatkot": [
+   "Milloin Konstantinopoli valloitettiin?",
+   "Mitä Kyprokselle tapahtui Bysantin vallan jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:kykkoksenluostari",
+  "kysymys": "Miksi alkuperäisestä luostarista ei ole jäljellä mitään?",
+  "uusi": false,
+  "vastaus": "Mmm— tuo on ikävä juttu. Kykkoksen luostari on palanut maan tasalle monta kertaa, ja siksi alkuperäisestä 1000-luvun lopun rakennuksesta ei ole jäljellä mitään. Vuoristoluostarin rakenteissa oli aikanaan paljon puuta, ja valoa pidettiin avotulella, mikä tekee tulipalosta jatkuvan riskin. En ole varma, mikä aiheutti kunkin yksittäisen palon. Nykyiset rakennukset ovat siis myöhempiä, ja luostari on silti säilynyt tärkeänä ortodoksisena [[pyhiinvaelluskohteena]] [[Troodosin]] vuorilla. Onneksi se on noussut aina uudelleen.",
+  "linkit": [
+   "pyhiinvaelluskohteena",
+   "Troodosin"
+  ],
+  "jatkot": [
+   "Kuka luostarin perusti ja milloin?",
+   "Milloin nykyiset rakennukset on rakennettu?"
+  ]
+ },
+ {
+  "kohde": "kohde:kykkoksenluostari",
+  "kysymys": "Kuka perusti luostarin?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Kykkoksen luostarin perusti Bysantin keisari [[Aleksios I Komnenos]] 1000-luvun lopulla. Hän hallitsi keisarina vuosina 1081–1118, ja hänen aikanaan [[Bysantin]] valtakunta kohtasi sekä seldžukkien että ristiretkeläisten painetta. Luostari sijaitsee Troodosvuoriston luoteisrinteellä noin 1 300 metrin korkeudessa. Sen läheisin tunnettu kylä on [[Pedoulas]], josta on matkaa noin kaksikymmentä kilometriä. Keisarit kyllä tiesivät, mihin kannattaa lahjoittaa.",
+  "linkit": [
+   "Aleksios I Komnenos",
+   "Bysantin",
+   "Pedoulas"
+  ],
+  "jatkot": [
+   "Millaista Aleksios I Komnenoksen valtakausi oli?",
+   "Mikä on luostarin merkitys nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:kykkoksenluostari",
+  "kysymys": "Kuka oli arkkipiispa Makarios III ja miksi hän on tunnettu?",
+  "uusi": true,
+  "vastaus": "Kas vaan, tuo nimi kuuluu ihan kärkeen. Arkkipiispa Makarios III syntyi vuonna 1913, ja hän aloitti kirkollisen uransa munkkina Kykkoksen luostarissa. Hän johti [[Kyproksen ortodoksista kirkkoa]] ja oli samalla keskeinen poliittinen johtaja saaren itsenäistymisessä [[Britannian]] vallasta vuonna 1960. Hänestä tuli Kyproksen tasavallan ensimmäinen presidentti, ja hän toimi tehtävässä aina kuolemaansa asti vuonna 1977, lukuun ottamatta lyhyttä keskeytystä vuonna 1974. Hänen elämänsä oli pitkä ja täynnä käänteitä.",
+  "linkit": [
+   "Kyproksen ortodoksista kirkkoa",
+   "Britannian"
+  ],
+  "jatkot": [
+   "Milloin Kypros itsenäistyi Britannian vallasta?",
+   "Miksi kirkko ja politiikka kietoutuivat Kyproksella yhteen?"
+  ]
+ },
+ {
+  "kohde": "kohde:kykkoksenluostari",
+  "kysymys": "Miten ortodoksisessa luostarissa yleensä vietetään päivä?",
+  "uusi": true,
+  "vastaus": "Tuota niin, tästä minä olen kuullut ikkunalaudalta. Ortodoksisessa luostarissa päivä rakentuu rukouksen ympärille: päivä alkaa varhain [[aamupalveluksella]], jota seuraa yleensä [[liturgia]], ja päivän päätteeksi pidetään [[ehtoopalvelus]]. Rukousten väliin mahtuu työtä, kuten puutarhan hoitoa, käsitöitä ja luostarin ylläpitoa, sekä yhteiset ateriat. Tarkka aikataulu vaihtelee luostarin ja vuodenajan mukaan, enkä tiedä Kykkoksen päivärytmiä tarkasti. Aamulla ennen kuutta ei kyl pullaa jaeta.",
+  "linkit": [
+   "aamupalveluksella",
+   "liturgia",
+   "ehtoopalvelus"
+  ],
+  "jatkot": [
+   "Mitä ikonit merkitsevät ortodoksisessa rukouksessa?",
+   "Millaista ruokaa luostareissa perinteisesti syödään?"
+  ]
+ },
+ {
+  "kohde": "kohde:kykkoksenluostari",
+  "kysymys": "Miksi luostareita rakennettiin usein vuorille?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: tästä on kyyhkyn suvulla näkemystä. Luostareita rakennettiin usein vuorille, koska munkit halusivat vetäytyä pois maailman hälinästä rauhaan ja hiljaisuuteen. Askeettinen perinne, jossa hakeudutaan autioon ja vaikeapääsyiseen paikkaan, on ollut kristinuskossa vanha. Syrjäinen sijainti antoi lisäksi suojaa hyökkäyksiltä, ja vuorilta oli saatavilla vettä, puuta ja laidunmaata. Tunnettu esimerkki on [[Athos-vuoren]] luostariyhteisö Kreikassa, ja saman perinteen vaikutus näkyy [[askeesin]] ihanteessa. Ylhäältä katsottuna se on ihan järkeen käypää.",
+  "linkit": [
+   "Athos-vuoren",
+   "askeesin"
+  ],
+  "jatkot": [
+   "Mikä on Athos-vuoren luostariyhteisö?",
+   "Millaisia luostareita Kyproksella on?"
+  ]
+ },
+ {
+  "kohde": "kohde:kapgreco",
+  "kysymys": "Mikä oli niemen antiikinaikainen nimi?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: Pedalion. Antiikissa Kap Greco tunnettiin nimellä Pedalion, ja [[Strabonin]] mukaan sen yllä kohoava puolisuunnikkaan muotoinen kukkula oli pyhitetty [[Afroditelle]]. Niemi sijaitsee Kyproksen kaakkoisosassa [[Famagustanlahden]] eteläpäässä, Ayia Napan ja Protarasin välissä. Se on Kyproksen tasavallan hallitsemien alueiden itäisin kohta. Nimi on pysynyt mielessä paremmin kuin useimpien vanhojen kaupunkien.",
+  "linkit": [
+   "Strabonin",
+   "Afroditelle",
+   "Famagustanlahden"
+  ],
+  "jatkot": [
+   "Kuka oli Strabon ja mitä hän kirjoitti?",
+   "Miksi Afrodite liitetään Kyprokseen?"
+  ]
+ },
+ {
+  "kohde": "kohde:kapgreco",
+  "kysymys": "Miten merenalaiset luolat syntyvät kalkkikiveen?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Kalkkikivi liukenee hitaasti veteen, jonka mukana on [[hiilihappoa]]: sadevesi imee ilmasta ja maaperästä hiilidioksidia, jolloin siitä tulee heikosti hapanta. Kun tällainen vesi valuu halkeamia pitkin, se laajentaa niitä vähitellen luoliksi ja onkaloiksi. Meren pinta on aiemmin ollut nykyistä alempana, ja [[jääkauden]] päättymisen jälkeen [[merenpinta]] nousi, jolloin osa luolista jäi veden alle. Aaltojen kuluttava vaikutus voi myös suurentaa luolia rannikolla. En ole varma, miten Kap Grecon luolat tarkalleen syntyivät. Tähän meni taas ihan oikea hetki.",
+  "linkit": [
+   "hiilihappoa",
+   "jääkauden",
+   "merenpinta"
+  ],
+  "jatkot": [
+   "Mitä karsti tarkoittaa?",
+   "Millaisia eläimiä merenalaisissa luolissa elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:kapgreco",
+  "kysymys": "Millainen on Kyproksen ilmasto kesällä ja talvella?",
+  "uusi": true,
+  "vastaus": "Katotaas. Kyproksella on [[välimerellinen ilmasto]], jossa kesät ovat kuumia ja kuivia ja talvet leutoja ja sateisia. Sade ajoittuu pääosin syksystä kevääseen, ja kesällä sataa harvoin. Rannikolla lämpötilat pysyvät talvella leutoina, mutta [[Troodosvuoristossa]] voi talvella olla lunta ja selvästi viileämpää. Tarkat lämpötilat vaihtelevat paikan ja vuoden mukaan. Kyyhkylle kelpaa kyllä kevät, ei liian kuuma.",
+  "linkit": [
+   "välimerellinen ilmasto",
+   "Troodosvuoristossa"
+  ],
+  "jatkot": [
+   "Voiko Troodosvuorilla hiihtää talvella?",
+   "Mikä on Välimeren ilmaston vaikutus kasvillisuuteen?"
+  ]
+ },
+ {
+  "kohde": "kohde:kapgreco",
+  "kysymys": "Milloin Kypros liittyi Euroopan unioniin?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Kypros liittyi [[Euroopan unioniin]] 1. toukokuuta 2004 yhdessä yhdeksän muun maan kanssa. Saari on kuitenkin jakautunut vuodesta 1974, ja unionin lainsäädäntö on voimassa vain alueilla, joita Kyproksen tasavalta hallitsee. Maa otti käyttöön [[euron]] vuonna 2008. Kap Greco on tasavallan hallitsemien alueiden itäisin kohta ja siten käytännössä unionin itäisin kärki. Aika paljon liikennettä on kyyhkyillekin tullut sen jälkeen.",
+  "linkit": [
+   "Euroopan unioniin",
+   "euron"
+  ],
+  "jatkot": [
+   "Mitkä muut maat liittyivät unioniin vuonna 2004?",
+   "Mikä on Kyproksen jako ja mistä se johtuu?"
+  ]
+ },
+ {
+  "kohde": "kohde:kapgreco",
+  "kysymys": "Miksi Afrodite liitetään Kyprokseen?",
+  "uusi": true,
+  "vastaus": "Ai tota. Kreikkalaisen kertomuksen mukaan Afrodite syntyi meren vaahdosta ja nousi maihin Kyproksella, ja siksi hänelle on annettu lisänimi Kypris, kyproslainen. Perinteisesti syntypaikkana pidetään [[Pafoksen]] seutua saaren lounaisrannikolla, jossa kalliomuodostuma [[Petra tou Romiou]] tunnetaan Afroditen kallionaan. Antiikissa Afroditea palvottiin Kyproksella laajasti, ja Pafoksessa oli hänen tärkeä pyhäkkönsä. Merivaahdosta syntynyt jumalatar, minä taas haluaisin syntyä pullataikinasta.",
+  "linkit": [
+   "Pafoksen",
+   "Petra tou Romiou"
+  ],
+  "jatkot": [
+   "Mikä oli Afroditen pyhäkkö Pafoksessa?",
+   "Mitä muita jumalia antiikin Kyproksella palvottiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:apostolosandreas",
+  "kysymys": "Mistä luostarin lähde kertomuksen mukaan syntyi?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Perimätiedon mukaan apostoli [[Andreas]] matkusti laivalla kohti Pyhää maata, mutta alus ajautui pois kurssilta ja osui [[Karpasin]] niemen kallioihin. Rantauduttuaan Andreas löi kalliota sauvallaan, ja siitä puhkesi lähde. Lähteen veden kerrotaan palauttaneen näön aluksen kapteenille, joka oli sokea toisesta silmästään. Paikasta tuli pyhiinvaelluskohde, ja nykyinen luostari seisoo siinä, missä kertomus tapahtui. Kertomus on kaunis, ja sen minä kyllä jaksan kertoa uudestaan.",
+  "linkit": [
+   "Andreas",
+   "Karpasin"
+  ],
+  "jatkot": [
+   "Kuka oli apostoli Andreas?",
+   "Miksi luostaria kutsutaan Kyproksen Lourdesiksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:apostolosandreas",
+  "kysymys": "Kuka neuvotteli täällä antautumisestaan?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Luostarista käsin neuvotteli antautumisestaan [[Isaakios Komnenos]], joka oli hallinnut Kyprosta itsenäisenä hallitsijana. Neuvottelun toinen osapuoli oli [[Rikhard Leijonamielen]] johtama ristiretkiarmeija, joka valloitti saaren vuonna 1191. Luostari oli tuolloin 1100-luvulla linnoitettu paikka, ja nykyiset rakennukset ovat paljon myöhemmältä ajalta: pääkirkko on 1700-luvulta. Siitä on aikaa jo yli 800 vuotta, ja vieläkin tarina kulkee suusta suuhun.",
+  "linkit": [
+   "Isaakios Komnenos",
+   "Rikhard Leijonamielen"
+  ],
+  "jatkot": [
+   "Miksi Rikhard Leijonamieli valloitti Kyproksen?",
+   "Kuka johti kolmatta ristiretkeä?"
+  ]
+ },
+ {
+  "kohde": "kohde:apostolosandreas",
+  "kysymys": "Mikä on Lourdes ja miksi se on pyhiinvaelluskohde?",
+  "uusi": true,
+  "vastaus": "No jopas. Lourdes on kaupunki Etelä-Ranskassa [[Pyreneiden]] juurella. Vuonna 1858 nuori [[Bernadette Soubirous]] kertoi nähneensä Neitsyt Marian ilmestyksiä läheisessä luolassa, ja paikka muuttui pyhiinvaelluskohteeksi. Luolan luona virtaavan lähteen vettä pidetään pyhänä, ja kaupunkiin saapuu vuosittain miljoonia pyhiinvaeltajia, joukossa paljon sairaita. Katolinen kirkko on tunnustanut osan paikalla kerrotuista parantumisista ihmeiksi. Onpas sieltä kaupunki kasvanut yhdestä lähteestä.",
+  "linkit": [
+   "Pyreneiden",
+   "Bernadette Soubirous"
+  ],
+  "jatkot": [
+   "Kuka oli Bernadette Soubirous?",
+   "Mitä pyhiinvaellus tarkoittaa eri uskonnoissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:apostolosandreas",
+  "kysymys": "Miten ortodoksinen kirkko eroaa katolisesta kirkosta?",
+  "uusi": true,
+  "vastaus": "Hetkinen. Ortodoksinen ja katolinen kirkko ovat molemmat kristillisiä kirkkoja, jotka erkanivat toisistaan vähitellen, ja perinteisesti erkaantumisen vuodeksi mainitaan 1054. Katolisella kirkolla on yhteinen johtaja, [[paavi]], kun taas ortodoksisessa kirkossa on useita itsenäisiä kirkkoja, joita johtavat patriarkat ja arkkipiispat. Kiistakysymyksiä ovat olleet muun muassa [[Filioque]]-lisäys uskontunnustuksessa ja paavin valta. Ortodoksisessa jumalanpalveluksessa ovat tärkeässä asemassa [[ikonit]], ja naimisissa oleva mies voi tulla vihityksi papiksi. Vaikea aihe, sanon varovasti.",
+  "linkit": [
+   "paavi",
+   "Filioque",
+   "ikonit"
+  ],
+  "jatkot": [
+   "Mitä Filioque tarkoittaa?",
+   "Miksi ikonit ovat ortodoksisessa kirkossa tärkeitä?"
+  ]
+ },
+ {
+  "kohde": "kohde:apostolosandreas",
+  "kysymys": "Millaisia eläimiä Karpasin niemimaalla elää?",
+  "uusi": true,
+  "vastaus": "Just niin, siellä on sellaista. Karpasin niemimaa tunnetaan [[villiaaseista]], joita elää alueella vapaana. Rannoilla pesii myös [[merikilpikonnia]], joita on tavattu Kyproksen rannikolla sekä vihreän merikilpikonnan että caretta-kilpikonnan lajeina. Niemimaa on harvaanasuttua ja luonnonläheistä seutua. En ole varma tämän hetken tarkoista lukumääristä. Kyyhkynä minä tykkään kyllä ihan lintujen puolella.",
+  "linkit": [
+   "villiaaseista",
+   "merikilpikonnia"
+  ],
+  "jatkot": [
+   "Miten merikilpikonnat valitsevat pesimärantansa?",
+   "Mistä villiaasit ovat Kyproksella peräisin?"
   ]
  }
 ]
