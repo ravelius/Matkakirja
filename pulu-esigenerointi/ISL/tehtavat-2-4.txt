@@ -1,0 +1,858 @@
+### 241
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skyr (ruoka)
+Tietoruudun teksti: Skyr on islantilainen perinteinen hapatettu maitotuote, koostumukseltaan siivilöidyn jogurtin kaltainen mutta makuaan mietoumpi; se luokitellaan tuoreeksi hapanmaitojuustoksi. Se mainitaan jo keskiaikaisissa saagoissa, muun muassa Egilin saagassa ja Grettis-saagassa, joten valmistustapa on ollut tunnettu Islannissa vuosisatoja — alun perin skyriä tehtiin lampaanmaidosta, nykyään lähes aina lehmänmaidosta. Nimi on sukua englannin sanalle shear, leikata, ja viittaa tapaan, jolla maito erotellaan hera- ja skyr-osaan. Nykyaikaista maidontuotantoa ja karjanjalostusta opetetaan muun muassa Hvanneyrin maatalousyliopistossa Länsi-Islannissa, joka on maan vanhin maatalousoppilaitos.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Korskirken] n. 1150 Ensimmäinen kirkko rakennettiin paikalle noin vuonna 1150, ja se mainitaan ensi kerran Sverren saagassa 1185. Silloin kirkko seisoi Vågenin rannalla ja merkitsi todennäköisesti Bergenin asutuksen eteläistä rajaa. Nimi ei viittaa ristin muotoiseen pohjakaavaan vaan Pyhään Ristiin: Korskirken oli yksi harvoista Norjan kirkoista, joilla oli hallussaan pala Kristuksen ristiä. Uskonpuhdistuksessa Tanskan kuningas vei sen, kuten muutkin pyhäinjäännökset ympäri maata. Kirkko vaurioitui paloissa 1198, 1248, 1413, 1582, 1623, 1640 ja 1702. Alun perin siinä oli kaksi tornia, mutta toinen tuhoutui vuoden 1582 palossa eikä sitä rakennettu uudelleen. Pohjakaava oli suora suorakaide, ja ristin mu…
+AIEMPI KYSYMYS: Missä keskiaikaisissa saagoissa skyr mainitaan?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: kaksi tunnettua. Skyr mainitaan keskiaikaisissa saagoissa, muun muassa [[Egilin saagassa]] ja [[Grettis-saagassa]]. Siksi tiedetään, että valmistustapa on ollut Islannissa tunnettu vuosisatoja. Vuosisatoja, ja yhä se on kaupan hyllyllä.
+KYSYMYS: Kerro lisää: Grettis-saagassa
+
+### 242
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skyr (ruoka)
+Tietoruudun teksti: Skyr on islantilainen perinteinen hapatettu maitotuote, koostumukseltaan siivilöidyn jogurtin kaltainen mutta makuaan mietoumpi; se luokitellaan tuoreeksi hapanmaitojuustoksi. Se mainitaan jo keskiaikaisissa saagoissa, muun muassa Egilin saagassa ja Grettis-saagassa, joten valmistustapa on ollut tunnettu Islannissa vuosisatoja — alun perin skyriä tehtiin lampaanmaidosta, nykyään lähes aina lehmänmaidosta. Nimi on sukua englannin sanalle shear, leikata, ja viittaa tapaan, jolla maito erotellaan hera- ja skyr-osaan. Nykyaikaista maidontuotantoa ja karjanjalostusta opetetaan muun muassa Hvanneyrin maatalousyliopistossa Länsi-Islannissa, joka on maan vanhin maatalousoppilaitos.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mongolia — maalehti / Ruoka: Valkoinen ruoka talven varalle] Maito keitetään ensin, jotta pinnalta saadaan öröm, paksu kerma. Kuoritusta maidosta tehdään byaslag-juustoa, hieman hapatettua aartsia, jogurttia, kefiriä ja shimiin arkhia, kevyttä maitoviinaa — sekä aaruulia, kuivattuja rahkapaloja, jotka kovettuvat niin sitkeiksi että kestävät talven yli. Kaikkea tätä sanotaan yhteisnimellä tsagaan idee, valkoinen ruoka, ja se on uudenvuoden pöydän ydin. Päivän juoma on süütei tsai, suolattu maitotee, jossa on voita ja usein paahdettua viljaa. Kun teehen lisää riisiä, lihaa tai pieniä bansh-nyyttejä, siitä tulee ateria.
+AIEMPI KYSYMYS: Onko skyr jogurttia vai juustoa?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. Skyr muistuttaa koostumukseltaan siivilöityä [[jogurttia]], mutta sen maku on mietompi. Luokituksen mukaan se on kuitenkin tuore [[hapanmaitojuusto]], ja se valmistetaan hapattamalla maitoa. Kyl se silti lusikalla katoaa.
+KYSYMYS: Kerro lisää: jogurttia
+
+### 243
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skyr (ruoka)
+Tietoruudun teksti: Skyr on islantilainen perinteinen hapatettu maitotuote, koostumukseltaan siivilöidyn jogurtin kaltainen mutta makuaan mietoumpi; se luokitellaan tuoreeksi hapanmaitojuustoksi. Se mainitaan jo keskiaikaisissa saagoissa, muun muassa Egilin saagassa ja Grettis-saagassa, joten valmistustapa on ollut tunnettu Islannissa vuosisatoja — alun perin skyriä tehtiin lampaanmaidosta, nykyään lähes aina lehmänmaidosta. Nimi on sukua englannin sanalle shear, leikata, ja viittaa tapaan, jolla maito erotellaan hera- ja skyr-osaan. Nykyaikaista maidontuotantoa ja karjanjalostusta opetetaan muun muassa Hvanneyrin maatalousyliopistossa Länsi-Islannissa, joka on maan vanhin maatalousoppilaitos.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Ruoka: Juusto joka muistuttaa aurinkoa] Juhannus — Jāņu siers on hapanmaitojuusto, jota Latviassa valmistetaan juhannukseksi eli Jāņi-juhlaksi. Se tehdään kuumentamalla piimää tai rahkaa yhdessä voin, kananmunien ja kuminan kanssa, kunnes seos hyytyy kiinteäksi, pyöreäksi kakuksi. Pyöreä muoto ja keltainen sävy vertautuvat aurinkoon, jota juhannuksena juhlitaan päivän valoisimpana aikana. Perinnettä on vaalittu jo yli tuhat vuotta, ja vuonna 2015 Jāņu siers sai Euroopan unionin aidon perinteisen tuotteen suojan. Juustoa tarjotaan juhannusyönä oluen kanssa, ja monet perheet valmistavat sen yhä itse kotikeittiössä isoäidin ohjeella.
+AIEMPI KYSYMYS: Onko skyr jogurttia vai juustoa?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. Skyr muistuttaa koostumukseltaan siivilöityä [[jogurttia]], mutta sen maku on mietompi. Luokituksen mukaan se on kuitenkin tuore [[hapanmaitojuusto]], ja se valmistetaan hapattamalla maitoa. Kyl se silti lusikalla katoaa.
+KYSYMYS: Kerro lisää: hapanmaitojuusto
+
+### 244
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skyr (ruoka)
+Tietoruudun teksti: Skyr on islantilainen perinteinen hapatettu maitotuote, koostumukseltaan siivilöidyn jogurtin kaltainen mutta makuaan mietoumpi; se luokitellaan tuoreeksi hapanmaitojuustoksi. Se mainitaan jo keskiaikaisissa saagoissa, muun muassa Egilin saagassa ja Grettis-saagassa, joten valmistustapa on ollut tunnettu Islannissa vuosisatoja — alun perin skyriä tehtiin lampaanmaidosta, nykyään lähes aina lehmänmaidosta. Nimi on sukua englannin sanalle shear, leikata, ja viittaa tapaan, jolla maito erotellaan hera- ja skyr-osaan. Nykyaikaista maidontuotantoa ja karjanjalostusta opetetaan muun muassa Hvanneyrin maatalousyliopistossa Länsi-Islannissa, joka on maan vanhin maatalousoppilaitos.
+AIEMPI KYSYMYS: Mikä on Hvanneyrin maatalousyliopisto?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tästä on vähän tietoa, mutta olennainen löytyy. [[Hvanneyrin]] maatalousyliopisto sijaitsee Länsi-Islannissa, ja siellä opetetaan nykyaikaista maidontuotantoa ja [[karjanjalostusta]]. Lähteiden mukaan se on maan vanhin maatalousoppilaitos. Karjanjalostus, siinä on sana, jota ei kyyhkyn suussa kuule usein.
+KYSYMYS: Kerro lisää: Hvanneyrin
+
+### 245
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skyr (ruoka)
+Tietoruudun teksti: Skyr on islantilainen perinteinen hapatettu maitotuote, koostumukseltaan siivilöidyn jogurtin kaltainen mutta makuaan mietoumpi; se luokitellaan tuoreeksi hapanmaitojuustoksi. Se mainitaan jo keskiaikaisissa saagoissa, muun muassa Egilin saagassa ja Grettis-saagassa, joten valmistustapa on ollut tunnettu Islannissa vuosisatoja — alun perin skyriä tehtiin lampaanmaidosta, nykyään lähes aina lehmänmaidosta. Nimi on sukua englannin sanalle shear, leikata, ja viittaa tapaan, jolla maito erotellaan hera- ja skyr-osaan. Nykyaikaista maidontuotantoa ja karjanjalostusta opetetaan muun muassa Hvanneyrin maatalousyliopistossa Länsi-Islannissa, joka on maan vanhin maatalousoppilaitos.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bahr el Ghazal — kaupunkilehti / Karjapaimentolaisten maailma: Karja morsiamen hintana] Karja vaihtaa omistajaa myös avioliitossa: sulhasen suku maksaa morsiamen suvulle useita kymmeniä nautoja, mikä vahvistaa syntyvien lasten kuulumisen isän sukuun. Järjestelmä on niin vahva, että jos mies kuolee lapsettomana, hänen sukunsa voi silti maksaa karjaa naiselle, jonka lapset lasketaan juridisesti vainajan omiksi — niin kutsuttu haamuavioliitto. Dinkat ovat Etelä-Sudanin suurin kansanryhmä, noin 4,5 miljoonaa ihmistä eli reilut 40 prosenttia koko maan väestöstä, ja suurin osa heistä asuu edelleen juuri Bahr el Ghazalin ja Ylä-Niilin karjanhoitoalueilla.
+AIEMPI KYSYMYS: Mikä on Hvanneyrin maatalousyliopisto?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tästä on vähän tietoa, mutta olennainen löytyy. [[Hvanneyrin]] maatalousyliopisto sijaitsee Länsi-Islannissa, ja siellä opetetaan nykyaikaista maidontuotantoa ja [[karjanjalostusta]]. Lähteiden mukaan se on maan vanhin maatalousoppilaitos. Karjanjalostus, siinä on sana, jota ei kyyhkyn suussa kuule usein.
+KYSYMYS: Kerro lisää: karjanjalostusta
+
+### 246
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reynisfjara (meri)
+Tietoruudun teksti: Reynisfjara on musta hiekkaranta Etelä-Islannissa, lähellä Víkin kylää ja osa Katlan Unesco-geoparkkia. Rannan itäpäässä on basalttipylväiden reunustama Hálsanefshellir-luola, lännessä Dyrhólaeyn niemi, ja ulkomerellä kohoavat Reynisdrangar — terävät basalttikalliot, jäänteitä kerran laajemmasta Reynisfjall-jyrkänteestä. Vanhan tarun mukaan kalliot syntyivät, kun kaksi peikkoa yritti vetää kolmimastoista laivaa maihin, mutta aamun sarastus muutti ne kiveksi. Yhdysvaltalainen Islands-lehti valitsi rannan vuonna 1991 yhdeksi maailman kymmenestä kauneimmasta ei-trooppisesta rannasta, ja vuonna 2021 se sijoittui kuudenneksi parhaaksi rannaksi koko maailmassa.
+AIEMPI KYSYMYS: Mistä tarina kertoo Reynisdrangarin synnystä?
+AIEMPI VASTAUS (Livia):
+Kato, tää on hyvä tarina. Vanhan taruston mukaan kalliot syntyivät, kun kaksi [[peikkoa]] yritti vetää kolmimastoista laivaa maihin, mutta aamun sarastus muutti ne kiveksi. Geologisesti Reynisdrangar ovat terävät [[basalttikalliot]], jäänteitä kerran laajemmasta Reynisfjall-jyrkänteestä. Peikoilla ei ollut kovin hyvä aikataulutus.
+KYSYMYS: Kerro lisää: peikkoa
+
+### 247
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reynisfjara (meri)
+Tietoruudun teksti: Reynisfjara on musta hiekkaranta Etelä-Islannissa, lähellä Víkin kylää ja osa Katlan Unesco-geoparkkia. Rannan itäpäässä on basalttipylväiden reunustama Hálsanefshellir-luola, lännessä Dyrhólaeyn niemi, ja ulkomerellä kohoavat Reynisdrangar — terävät basalttikalliot, jäänteitä kerran laajemmasta Reynisfjall-jyrkänteestä. Vanhan tarun mukaan kalliot syntyivät, kun kaksi peikkoa yritti vetää kolmimastoista laivaa maihin, mutta aamun sarastus muutti ne kiveksi. Yhdysvaltalainen Islands-lehti valitsi rannan vuonna 1991 yhdeksi maailman kymmenestä kauneimmasta ei-trooppisesta rannasta, ja vuonna 2021 se sijoittui kuudenneksi parhaaksi rannaksi koko maailmassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [NFK — maalehti / Tiede: Saari joka nousi merestä] n. 3,1–2,3 milj. vuotta sitten — Norfolkinsaari ja pieni Phillipinsaari syntyivät, kun merenalainen kilpitulivuori purkautui toistuvasti noin 3,1–2,3 miljoonan vuoden ajan basalttilaavaa. Suurin osa alkuperäisestä tulivuoresta on sittemmin kulunut mereen, ja jäljellä on saaren korkein kohta, 319 metriä merenpinnan yläpuolelle kohoava Mount Bates, sekä rannikon jyrkät basalttikalliot ja irralliset kalliosaarekkeet. Saari on osa Norfolkinharjannetta, tuhat kilometriä pitkää enimmäkseen vedenalaista vuoristoa, joka ulottuu Uuden-Seelannin ja Uuden-Kaledonian väliin – Norfolkinsaari ja Phillipinsaari ovat harvoja kohtia, joissa harjanne kohoaa meren pinnan yläpuolelle.
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+AIEMPI KYSYMYS: Mistä tarina kertoo Reynisdrangarin synnystä?
+AIEMPI VASTAUS (Livia):
+Kato, tää on hyvä tarina. Vanhan taruston mukaan kalliot syntyivät, kun kaksi [[peikkoa]] yritti vetää kolmimastoista laivaa maihin, mutta aamun sarastus muutti ne kiveksi. Geologisesti Reynisdrangar ovat terävät [[basalttikalliot]], jäänteitä kerran laajemmasta Reynisfjall-jyrkänteestä. Peikoilla ei ollut kovin hyvä aikataulutus.
+KYSYMYS: Kerro lisää: basalttikalliot
+
+### 248
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reynisfjara (meri)
+Tietoruudun teksti: Reynisfjara on musta hiekkaranta Etelä-Islannissa, lähellä Víkin kylää ja osa Katlan Unesco-geoparkkia. Rannan itäpäässä on basalttipylväiden reunustama Hálsanefshellir-luola, lännessä Dyrhólaeyn niemi, ja ulkomerellä kohoavat Reynisdrangar — terävät basalttikalliot, jäänteitä kerran laajemmasta Reynisfjall-jyrkänteestä. Vanhan tarun mukaan kalliot syntyivät, kun kaksi peikkoa yritti vetää kolmimastoista laivaa maihin, mutta aamun sarastus muutti ne kiveksi. Yhdysvaltalainen Islands-lehti valitsi rannan vuonna 1991 yhdeksi maailman kymmenestä kauneimmasta ei-trooppisesta rannasta, ja vuonna 2021 se sijoittui kuudenneksi parhaaksi rannaksi koko maailmassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Honiara — kohdekartta / Kohdekartta: Guadalcanalin muistomerkki] 1992 Guadalcanal American Memorial vihittiin 7. elokuuta 1992, tasan viisikymmentä vuotta Red Beachin maihinnousun jälkeen. Muistomerkki syntyi Robert F. Reynoldsin aloitteesta American Battle Monuments Commissionin ja Guadalcanal–Solomon Islands Memorial Commissionin yhteistyönä, ja ABMC pitää sitä yllä. Vihkiäisistä kertova teksti on kaiverrettu punaisiin marmoritauluihin muistomerkin sisäpihalla. Merkki seisoo kukkulalla Skyway Driven varrella — ensimmäisellä kukkulalla, jonka amerikkalaiset joukot valtasivat — Matanikaujoesta länteen. Sieltä avautuu näkymä Mount Austenille ja Rautapohjan salmelle. Muistomerkki on pylonin muotoinen, pohjaltaan noin metrin sivultaan ja runsaat seitsemän m…
+- [Honiara — kohdekartta / Kohdekartta: Point Cruz] 1956 Point Cruz on niemi keskellä Honiaraa, Tandai Highwayn varrella noin neljäsosamailin päässä parlamenttitalosta pohjoiseen. Ghari-kielellä paikan nimi on naho-ni-ara, "kohti itä- ja kaakkoispasaatituulia" — ja siitä on saanut nimensä myös koko kaupunki. Niemen satama on Salomonsaarten pääsaapumissatama. Satamalaitos Solomon Islands Ports Authority perustettiin lailla 4. kesäkuuta 1956, ja satama pystyy käsittelemään kahdenkymmenen jalan kontteja. Vuonna 2014 se sai Club of Ports -tunnustuksen Tyynenmeren alueen dynaamisimpana satamana. Maaliskuussa 1959 laituriin kiinnittyi kuninkaallinen jahti Britannia prinssi Philipin vierailun aikana. Niemellä toimii myös Point Cruzin purjehdusseura…
+AIEMPI KYSYMYS: Minä vuonna ranta valittiin maailman kymmenen kauneimman joukkoon?
+AIEMPI VASTAUS (Livia):
+Ai tota. Se tapahtui vuonna 1991, kun yhdysvaltalainen [[Islands-lehti]] valitsi rannan yhdeksi maailman kymmenestä kauneimmasta ei-trooppisesta rannasta. Vuonna 2021 se sijoittui kerrotun mukaan kuudenneksi parhaaksi rannaksi koko maailmassa. Ranta kuuluu [[Katlan Unesco-geoparkkiin]] Etelä-Islannissa. Musta hiekka ja peikkokalliot, minä äänestäisin tätäkin.
+KYSYMYS: Kerro lisää: Islands-lehti
+
+### 249
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reynisfjara (meri)
+Tietoruudun teksti: Reynisfjara on musta hiekkaranta Etelä-Islannissa, lähellä Víkin kylää ja osa Katlan Unesco-geoparkkia. Rannan itäpäässä on basalttipylväiden reunustama Hálsanefshellir-luola, lännessä Dyrhólaeyn niemi, ja ulkomerellä kohoavat Reynisdrangar — terävät basalttikalliot, jäänteitä kerran laajemmasta Reynisfjall-jyrkänteestä. Vanhan tarun mukaan kalliot syntyivät, kun kaksi peikkoa yritti vetää kolmimastoista laivaa maihin, mutta aamun sarastus muutti ne kiveksi. Yhdysvaltalainen Islands-lehti valitsi rannan vuonna 1991 yhdeksi maailman kymmenestä kauneimmasta ei-trooppisesta rannasta, ja vuonna 2021 se sijoittui kuudenneksi parhaaksi rannaksi koko maailmassa.
+AIEMPI KYSYMYS: Minä vuonna ranta valittiin maailman kymmenen kauneimman joukkoon?
+AIEMPI VASTAUS (Livia):
+Ai tota. Se tapahtui vuonna 1991, kun yhdysvaltalainen [[Islands-lehti]] valitsi rannan yhdeksi maailman kymmenestä kauneimmasta ei-trooppisesta rannasta. Vuonna 2021 se sijoittui kerrotun mukaan kuudenneksi parhaaksi rannaksi koko maailmassa. Ranta kuuluu [[Katlan Unesco-geoparkkiin]] Etelä-Islannissa. Musta hiekka ja peikkokalliot, minä äänestäisin tätäkin.
+KYSYMYS: Kerro lisää: Katlan Unesco-geoparkkiin
+
+### 250
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reynisfjara (meri)
+Tietoruudun teksti: Reynisfjara on musta hiekkaranta Etelä-Islannissa, lähellä Víkin kylää ja osa Katlan Unesco-geoparkkia. Rannan itäpäässä on basalttipylväiden reunustama Hálsanefshellir-luola, lännessä Dyrhólaeyn niemi, ja ulkomerellä kohoavat Reynisdrangar — terävät basalttikalliot, jäänteitä kerran laajemmasta Reynisfjall-jyrkänteestä. Vanhan tarun mukaan kalliot syntyivät, kun kaksi peikkoa yritti vetää kolmimastoista laivaa maihin, mutta aamun sarastus muutti ne kiveksi. Yhdysvaltalainen Islands-lehti valitsi rannan vuonna 1991 yhdeksi maailman kymmenestä kauneimmasta ei-trooppisesta rannasta, ja vuonna 2021 se sijoittui kuudenneksi parhaaksi rannaksi koko maailmassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Melbourne — kohdekartta / Kohdekartta: Vanha vankila] 1845–1924 Vankila oli Port Phillipin ensimmäinen pysyvä vankila. Vartijaksi nimitettiin 1. tammikuuta 1838 George Wintle sadan punnan vuosipalkalla, ja paikkaa kutsuttiin kansanomaisesti Wintlen hotelliksi. Kun kultaa löytyi 1851 ja väkeä tulvi siirtokuntaan, järjestyksen ylläpito kävi vaikeaksi: uusi siipi rakennettiin 1852–1854, tällä kertaa basaltista eikä hiekkakivestä. Malli oli brittiläisen vankila-insinöörin Joshua Jebbin ja erityisesti Lontoon Pentonvillen mallivankilan. Muuri valmistui 1864, ja kokonaisuus täytti yhden korttelin. Aikakauden vankilaoppi uskoi hiljaisuuteen. Vakavista rikoksista tuomitut aloittivat pohjakerroksesta eristyksessä, eivätkä he saaneet puhua toisilleen; s…
+- [Syyria — maalehti / Historia: Katsomo jäi linnoituksen sisään] Bosran teatteri rakennettiin 100-luvulla jaa. mustasta basaltista, jota Hauranin tasangon alla on paksuina kerroksina. Katsomo on 102 metriä leveä, ja se on säilynyt kokonaisena ylintä pylväskäytävää myöten, mikä on roomalaisessa teatterissa harvinaista. Syy on siinä, mitä rakennukselle tehtiin myöhemmin. Teatteri jäi alun perin kaupungin muurien ulkopuolelle, mutta myöhemmät hallitsijat muurasivat sen ympärille linnoituksen torneineen vuosina 1202–1253. Katsomo jäi muurien sisään piiloon, ja sisukseen kertyi hiekkaa, joka todennäköisesti suojasi istuinrivejä. Hiekka kaivettiin pois, ja teatteri kunnostettiin vuosina 1947–1970. Bosra otettiin maailmanperintöluetteloon vuonna 1980.
+AIEMPI KYSYMYS: Mikä Reynisfjaran hiekasta tekee mustaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämän voi päätellä kivestä. Reynisfjaran hiekka on mustaa, koska se on peräisin tulivuoriperäisestä [[basaltista]], jota aallot ovat hionut hiekaksi. Rannan itäpäässä näkyy basaltin vaikutus muutenkin: siellä on [[basalttipylväiden]] reunustama [[Hálsanefshellir-luola]]. Mustalla hiekalla näkyy hyvin pulun jäljet, mikä ei ole aina eduksi.
+KYSYMYS: Kerro lisää: basaltista
+
+### 251
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reynisfjara (meri)
+Tietoruudun teksti: Reynisfjara on musta hiekkaranta Etelä-Islannissa, lähellä Víkin kylää ja osa Katlan Unesco-geoparkkia. Rannan itäpäässä on basalttipylväiden reunustama Hálsanefshellir-luola, lännessä Dyrhólaeyn niemi, ja ulkomerellä kohoavat Reynisdrangar — terävät basalttikalliot, jäänteitä kerran laajemmasta Reynisfjall-jyrkänteestä. Vanhan tarun mukaan kalliot syntyivät, kun kaksi peikkoa yritti vetää kolmimastoista laivaa maihin, mutta aamun sarastus muutti ne kiveksi. Yhdysvaltalainen Islands-lehti valitsi rannan vuonna 1991 yhdeksi maailman kymmenestä kauneimmasta ei-trooppisesta rannasta, ja vuonna 2021 se sijoittui kuudenneksi parhaaksi rannaksi koko maailmassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+AIEMPI KYSYMYS: Mikä Reynisfjaran hiekasta tekee mustaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämän voi päätellä kivestä. Reynisfjaran hiekka on mustaa, koska se on peräisin tulivuoriperäisestä [[basaltista]], jota aallot ovat hionut hiekaksi. Rannan itäpäässä näkyy basaltin vaikutus muutenkin: siellä on [[basalttipylväiden]] reunustama [[Hálsanefshellir-luola]]. Mustalla hiekalla näkyy hyvin pulun jäljet, mikä ei ole aina eduksi.
+KYSYMYS: Kerro lisää: basalttipylväiden
+
+### 252
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reynisfjara (meri)
+Tietoruudun teksti: Reynisfjara on musta hiekkaranta Etelä-Islannissa, lähellä Víkin kylää ja osa Katlan Unesco-geoparkkia. Rannan itäpäässä on basalttipylväiden reunustama Hálsanefshellir-luola, lännessä Dyrhólaeyn niemi, ja ulkomerellä kohoavat Reynisdrangar — terävät basalttikalliot, jäänteitä kerran laajemmasta Reynisfjall-jyrkänteestä. Vanhan tarun mukaan kalliot syntyivät, kun kaksi peikkoa yritti vetää kolmimastoista laivaa maihin, mutta aamun sarastus muutti ne kiveksi. Yhdysvaltalainen Islands-lehti valitsi rannan vuonna 1991 yhdeksi maailman kymmenestä kauneimmasta ei-trooppisesta rannasta, ja vuonna 2021 se sijoittui kuudenneksi parhaaksi rannaksi koko maailmassa.
+AIEMPI KYSYMYS: Mikä Reynisfjaran hiekasta tekee mustaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämän voi päätellä kivestä. Reynisfjaran hiekka on mustaa, koska se on peräisin tulivuoriperäisestä [[basaltista]], jota aallot ovat hionut hiekaksi. Rannan itäpäässä näkyy basaltin vaikutus muutenkin: siellä on [[basalttipylväiden]] reunustama [[Hálsanefshellir-luola]]. Mustalla hiekalla näkyy hyvin pulun jäljet, mikä ei ole aina eduksi.
+KYSYMYS: Kerro lisää: Hálsanefshellir-luola
+
+### 253
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reynisfjara (meri)
+Tietoruudun teksti: Reynisfjara on musta hiekkaranta Etelä-Islannissa, lähellä Víkin kylää ja osa Katlan Unesco-geoparkkia. Rannan itäpäässä on basalttipylväiden reunustama Hálsanefshellir-luola, lännessä Dyrhólaeyn niemi, ja ulkomerellä kohoavat Reynisdrangar — terävät basalttikalliot, jäänteitä kerran laajemmasta Reynisfjall-jyrkänteestä. Vanhan tarun mukaan kalliot syntyivät, kun kaksi peikkoa yritti vetää kolmimastoista laivaa maihin, mutta aamun sarastus muutti ne kiveksi. Yhdysvaltalainen Islands-lehti valitsi rannan vuonna 1991 yhdeksi maailman kymmenestä kauneimmasta ei-trooppisesta rannasta, ja vuonna 2021 se sijoittui kuudenneksi parhaaksi rannaksi koko maailmassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — kaupunkilehti / Kamerunvuoren sademetsä: Kukkia laavan reunalla] Kamerunvuoren toistuvat purkaukset eivät ole tuhonneet elämää pysyvästi: tuore laava ja tuhka rikastavat maaperää, ja vuosien kuluessa sen päälle tunkeutuu ensin sammalta ja sitten kukkivia kasveja. Vuorelta tunnetaan useita kasvilajeja, joita ei kasva luonnossa missään muualla maailmassa, muun muassa pieniä balsamikasveja. Kirjavat kukat houkuttelevat hyönteisiä pölyttämään keskellä muuten mustaa ja karua laavakenttää – elävä muistutus siitä, miten nopeasti sademetsä valtaa takaisin tuhon jäljet.
+- [Islanti — maalehti / Luonto: Kylä puolusti itseään paloletkuilla] 1973 — Tammikuussa 1973 Heimaeyn saarella aukesi kylän laidalle railo, josta purkautui laavaa. Koko väestö, yli viisituhatta ihmistä, vietiin yhdessä yössä turvaan kalastuslaivoilla — sattumalta laivasto oli myrskyn takia satamassa. Laava eteni kohti satamaa, joka oli kylän elinehto. Silloin ryhdyttiin pumppaamaan merivettä laavan päälle: vesi jäähdytti reunan kovaksi ja käänsi virtaa. Satama säilyi, ja lopulta siitä tuli aiempaa suojaisampi.
+AIEMPI KYSYMYS: Mitä basalttipylväät ovat ja miten ne syntyvät?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on kivikysymys. Basalttipylväät ovat tulivuoriperäisen [[laavan]] jäähtyessä muodostuneita pitkiä, usein kuusikulmaisia kivipylväitä. Kun laava jäähtyy ja kutistuu, se halkeilee säännöllisiksi kuvioiksi. Reynisfjaralla pylväitä on rannan itäpäässä [[Hálsanefshellir-luolaa]] reunustamassa. Siististi asetellut, kuin kyyhkyset ruokinta-aikaan.
+KYSYMYS: Kerro lisää: laavan
+
+### 254
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reynisfjara (meri)
+Tietoruudun teksti: Reynisfjara on musta hiekkaranta Etelä-Islannissa, lähellä Víkin kylää ja osa Katlan Unesco-geoparkkia. Rannan itäpäässä on basalttipylväiden reunustama Hálsanefshellir-luola, lännessä Dyrhólaeyn niemi, ja ulkomerellä kohoavat Reynisdrangar — terävät basalttikalliot, jäänteitä kerran laajemmasta Reynisfjall-jyrkänteestä. Vanhan tarun mukaan kalliot syntyivät, kun kaksi peikkoa yritti vetää kolmimastoista laivaa maihin, mutta aamun sarastus muutti ne kiveksi. Yhdysvaltalainen Islands-lehti valitsi rannan vuonna 1991 yhdeksi maailman kymmenestä kauneimmasta ei-trooppisesta rannasta, ja vuonna 2021 se sijoittui kuudenneksi parhaaksi rannaksi koko maailmassa.
+AIEMPI KYSYMYS: Mitä basalttipylväät ovat ja miten ne syntyvät?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on kivikysymys. Basalttipylväät ovat tulivuoriperäisen [[laavan]] jäähtyessä muodostuneita pitkiä, usein kuusikulmaisia kivipylväitä. Kun laava jäähtyy ja kutistuu, se halkeilee säännöllisiksi kuvioiksi. Reynisfjaralla pylväitä on rannan itäpäässä [[Hálsanefshellir-luolaa]] reunustamassa. Siististi asetellut, kuin kyyhkyset ruokinta-aikaan.
+KYSYMYS: Kerro lisää: Hálsanefshellir-luolaa
+
+### 255
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reynisfjara (meri)
+Tietoruudun teksti: Reynisfjara on musta hiekkaranta Etelä-Islannissa, lähellä Víkin kylää ja osa Katlan Unesco-geoparkkia. Rannan itäpäässä on basalttipylväiden reunustama Hálsanefshellir-luola, lännessä Dyrhólaeyn niemi, ja ulkomerellä kohoavat Reynisdrangar — terävät basalttikalliot, jäänteitä kerran laajemmasta Reynisfjall-jyrkänteestä. Vanhan tarun mukaan kalliot syntyivät, kun kaksi peikkoa yritti vetää kolmimastoista laivaa maihin, mutta aamun sarastus muutti ne kiveksi. Yhdysvaltalainen Islands-lehti valitsi rannan vuonna 1991 yhdeksi maailman kymmenestä kauneimmasta ei-trooppisesta rannasta, ja vuonna 2021 se sijoittui kuudenneksi parhaaksi rannaksi koko maailmassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Piispa joka taisteli uskontoaan vastaan ja hävisi] 1550 — Tanska määräsi Islannin luterilaiseksi 1500-luvulla, mutta Hólarin piispa Jón Arason kieltäytyi luopumasta katolisesta uskosta. Hän kokosi miehiä, otti vangiksi kilpailevan luterilaisen piispan ja hallitsi hetken käytännössä koko Pohjois-Islantia. Vuonna 1550 hänet ja hänen kaksi poikaansa vangittiin taistelun jälkeen, ja marraskuun 7. päivänä heidät mestattiin Skálholtissa ilman oikeudenkäyntiä — päätöksen teki kuninkaan kirjuri, koska pelättiin, ettei rauhaa muuten koskaan tulisi. Arasonin kuolema päätti katolisen kirkon vallan Islannissa.
+- [Islanti — maalehti / Arki: Uimala on kylän olohuone] Ympäri vuoden — Islannissa maan alta saa kuumaa vettä, ja sillä lämmitetään sekä talot että uima-altaat. Lähes joka kylässä on uimala, joka on auki ympäri vuoden ja myös pakkasella. Varsinaisen altaan vieressä on pieniä kuumia altaita, joissa istutaan leuat vedessä ja jutellaan — siellä puhutaan säästä, politiikasta ja naapureista. Yksi sääntö on ehdoton: ennen altaaseen menoa peseydytään ilman uimapukua, ja siitä muistuttavat kyltit pukuhuoneen seinällä.
+- [Islanti — maalehti / Arki: Talon seinät kasvoivat ruohoa] 1800-luku — Islannissa ei kasva metsää, joten rakennuspuuta piti tuoda meren takaa tai kerätä ajopuuna rannalta. Siksi talot tehtiin siitä, mitä oli: kiviä, turvetta ja vähän puuta. Seinät ladottiin turvelevyistä kalanruodon kuvioon, ja katolla kasvoi ruoho. Sisällä oli lämmin, mutta pimeä ja kostea. Turvetaloissa asuttiin yleisesti vielä 1800-luvulla ja paikoin 1900-luvun puolelle asti. Glaumbærin museossa niitä on säilynyt kokonainen rivi.
+AIEMPI KYSYMYS: Mikä on Unescon geopuisto?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tätä kysytään harvoin. Unescon geopuisto on alue, jolla on kansainvälisesti merkittävää geologista perintöä ja jota hoidetaan kokonaisuutena suojelun, koulutuksen ja kestävän kehityksen näkökulmasta. Reynisfjara kuuluu [[Katlan Unesco-geoparkkiin]] [[Etelä-Islannissa]]. Kivet saavat suojelua, kyyhkyt eivät.
+KYSYMYS: Kerro lisää: Etelä-Islannissa
+
+### 256
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skógafoss (luonto · joki)
+Tietoruudun teksti: Skógafoss on yksi Islannin suurimmista putouksista, kaksikymmentäviisi metriä leveä ja kuusikymmentä metriä korkea, entisen rantaviivan jyrkänteellä Etelä-Islannissa. Kun meri on vuosituhansien kuluessa vetäytynyt nykyiselle paikalleen noin viiden kilometrin päähän, jäljelle jäivät entiset merenrantakalliot, jotka jatkuvat satojen kilometrien matkan rannikon suuntaisesti. Putouksen jatkuva vesisumu synnyttää aurinkoisella säällä lähes aina näkyviin yksinkertaisen tai kaksoiskaaren sateenkaaren. Tarinan mukaan alueen ensimmäinen viikinkiasukas Þrasi Þórólfsson kätki putouksen taakse aarrearkun, jonka paikalliset myöhemmin löysivät, mutta saivat irti vain arkun kanttarenkaan ennen kuin arkku katosi uudelleen; rengas on nykyään esillä Skógarin museossa.
+AIEMPI KYSYMYS: Miksi vanhat merenrantakalliot ovat nyt kaukana rannasta?
+AIEMPI VASTAUS (Livia):
+Ai tota, tost minä osaan kertoo. Katotaas. Skógafossin takana oleva jyrkänne on entistä rantaviivaa, ja meri on vetäytynyt sen edestä vuosituhansien kuluessa noin viiden kilometrin päähän. Syyksi esitetään yleensä jääkauden jälkeinen [[maankohoaminen]]: kun maan päällä ollut jäämassa suli, maankuori alkoi kohota, ja rantaviiva siirtyi vähitellen kauemmas. Tämä on yleiskuva, eikä yksittäisen paikan tarkkaa kehitystä voi sanoa varmasti. Entiset merenrantakalliot jatkuvat [[Etelä-Islannin]] rannikon suuntaisesti satojen kilometrien matkan. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: maankohoaminen
+
+### 257
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skógafoss (luonto · joki)
+Tietoruudun teksti: Skógafoss on yksi Islannin suurimmista putouksista, kaksikymmentäviisi metriä leveä ja kuusikymmentä metriä korkea, entisen rantaviivan jyrkänteellä Etelä-Islannissa. Kun meri on vuosituhansien kuluessa vetäytynyt nykyiselle paikalleen noin viiden kilometrin päähän, jäljelle jäivät entiset merenrantakalliot, jotka jatkuvat satojen kilometrien matkan rannikon suuntaisesti. Putouksen jatkuva vesisumu synnyttää aurinkoisella säällä lähes aina näkyviin yksinkertaisen tai kaksoiskaaren sateenkaaren. Tarinan mukaan alueen ensimmäinen viikinkiasukas Þrasi Þórólfsson kätki putouksen taakse aarrearkun, jonka paikalliset myöhemmin löysivät, mutta saivat irti vain arkun kanttarenkaan ennen kuin arkku katosi uudelleen; rengas on nykyään esillä Skógarin museossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kansa kolisteli pankit pois vallasta kattiloilla] 2008–2009 — Lokakuussa 2008 Islannin kolme suurta pankkia kaatuivat muutamassa päivässä, ja koko maan talous romahti — suhteessa väkilukuun suurin pankkikriisi minkään maan historiassa. Ihmiset alkoivat kokoontua joka lauantai Alþingin eteen, ja tammikuussa 2009 mielenosoitus kasvoi tuhansiin: ihmiset toivat mukanaan kattiloita, pannuja ja kauhoja ja hakkasivat niitä yhdessä niin kovaa, että parlamentin istuntoa oli vaikea jatkaa. Meteli sai lempinimen kattilakumous. Hallitus erosi parin viikon sisällä, ja myöhemmin lähes kolmekymmentä pankkiireja ja johtajia tuomittiin vankilaan — Islanti on ainoa maa, joka vangitsi näin monta oman kriisinsä syyllistä.
+- [Islanti — maalehti / Historia: Sota jota käytiin verkonleikkureilla, ei ammuksilla] 1958–1976 — Kun Islanti laajensi kalastusrajaansa 1958, 1972 ja 1975 aina kauemmas rannikolta, Britannian troolarit eivät suostuneet väistymään — eikä Britannian laivasto liioin. Kolmessa niin sanotussa turskasodassa Islannin rannikkovartioston pienet alukset, kuten Óðinn, ajoivat troolareiden perässä ja leikkasivat niiden verkkoketjut irti erityisillä leikkureilla; brittilaivat puolestaan yrittivät väistellä ja jopa törmäillä vastaan. Ainuttakaan ammusta ei ammuttu vihaisessa mielessä, mutta aluksia vaurioitui kymmeniä. Lopulta Islanti voitti: vuonna 1976 Britannia hyväksyi 200 meripeninkulman rajan, ja se levisi pian koko maailmaan.
+AIEMPI KYSYMYS: Miksi vanhat merenrantakalliot ovat nyt kaukana rannasta?
+AIEMPI VASTAUS (Livia):
+Ai tota, tost minä osaan kertoo. Katotaas. Skógafossin takana oleva jyrkänne on entistä rantaviivaa, ja meri on vetäytynyt sen edestä vuosituhansien kuluessa noin viiden kilometrin päähän. Syyksi esitetään yleensä jääkauden jälkeinen [[maankohoaminen]]: kun maan päällä ollut jäämassa suli, maankuori alkoi kohota, ja rantaviiva siirtyi vähitellen kauemmas. Tämä on yleiskuva, eikä yksittäisen paikan tarkkaa kehitystä voi sanoa varmasti. Entiset merenrantakalliot jatkuvat [[Etelä-Islannin]] rannikon suuntaisesti satojen kilometrien matkan. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Etelä-Islannin
+
+### 258
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skógafoss (luonto · joki)
+Tietoruudun teksti: Skógafoss on yksi Islannin suurimmista putouksista, kaksikymmentäviisi metriä leveä ja kuusikymmentä metriä korkea, entisen rantaviivan jyrkänteellä Etelä-Islannissa. Kun meri on vuosituhansien kuluessa vetäytynyt nykyiselle paikalleen noin viiden kilometrin päähän, jäljelle jäivät entiset merenrantakalliot, jotka jatkuvat satojen kilometrien matkan rannikon suuntaisesti. Putouksen jatkuva vesisumu synnyttää aurinkoisella säällä lähes aina näkyviin yksinkertaisen tai kaksoiskaaren sateenkaaren. Tarinan mukaan alueen ensimmäinen viikinkiasukas Þrasi Þórólfsson kätki putouksen taakse aarrearkun, jonka paikalliset myöhemmin löysivät, mutta saivat irti vain arkun kanttarenkaan ennen kuin arkku katosi uudelleen; rengas on nykyään esillä Skógarin museossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Peking — kohdekartta / Kohdekartta: Yonghe-temppeli] 1694, luostariksi 1744 Rakennus alkoi prinssin kotina. Kangxi-keisari antoi sen 1702 neljännelle pojalleen Yinzhenille, ja tämän tuleva seuraaja, Qianlong-keisari, syntyi talon itäsiivessä 1711. Kun Yinzhen nousi valtaistuimelle Yongzheng-keisarina, talosta tuli Harmonian ja rauhan palatsi — ja keisarin arvon merkiksi sen turkoosit tiilikatot vaihdettiin keltaisiin, jotka oli varattu vain keisarille. Vuonna 1744 Qianlong muutti palatsin tiibetinbuddhalaiseksi luostariksi. Siitä tuli Qing-kauden merkittävin buddhalainen temppeli, jonka rakennuksissa kiinalainen ja tiibetiläinen tyyli kulkevat rinnakkain ja jonne muutti munkkeja Mongoliasta ja Tiibetistä asti. Kuuluisin aarre on Kymmenentuhan…
+- [Romania — maalehti / Luonto] Karpaattien vuoret ja Tonavan suisto tekevät Romaniasta Euroopan luonnon aarrearkun: Euroopan suurin säilynyt kosteikko, ensimmäinen kansallispuisto ja vuosituhansia vanha suolakaivos ovat kaikki saman maan sisällä.
+AIEMPI KYSYMYS: Mitä tarinan mukaan Þrasi Þórólfsson kätki putouksen taakse?
+AIEMPI VASTAUS (Livia):
+Kas vaan, aarretarina. Tämän minä olen lukenut jo kerran matkalla. Tarinan mukaan alueen ensimmäinen viikinkiasukas kätki putouksen taakse [[aarrearkun]]. Paikalliset löysivät arkun myöhemmin, mutta saivat irti vain sen kanttarenkaan, ja arkku katosi uudelleen. Rengas on nykyään esillä [[Skógarin museossa]], ja tarinaa on syytä pitää kansantarinana eikä todistettuna tapahtumana. Arkku ois kyl kelvannut minulle, vaikka sen sisältö olisi ollut pullaa.
+KYSYMYS: Kerro lisää: aarrearkun
+
+### 259
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skógafoss (luonto · joki)
+Tietoruudun teksti: Skógafoss on yksi Islannin suurimmista putouksista, kaksikymmentäviisi metriä leveä ja kuusikymmentä metriä korkea, entisen rantaviivan jyrkänteellä Etelä-Islannissa. Kun meri on vuosituhansien kuluessa vetäytynyt nykyiselle paikalleen noin viiden kilometrin päähän, jäljelle jäivät entiset merenrantakalliot, jotka jatkuvat satojen kilometrien matkan rannikon suuntaisesti. Putouksen jatkuva vesisumu synnyttää aurinkoisella säällä lähes aina näkyviin yksinkertaisen tai kaksoiskaaren sateenkaaren. Tarinan mukaan alueen ensimmäinen viikinkiasukas Þrasi Þórólfsson kätki putouksen taakse aarrearkun, jonka paikalliset myöhemmin löysivät, mutta saivat irti vain arkun kanttarenkaan ennen kuin arkku katosi uudelleen; rengas on nykyään esillä Skógarin museossa.
+AIEMPI KYSYMYS: Mitä tarinan mukaan Þrasi Þórólfsson kätki putouksen taakse?
+AIEMPI VASTAUS (Livia):
+Kas vaan, aarretarina. Tämän minä olen lukenut jo kerran matkalla. Tarinan mukaan alueen ensimmäinen viikinkiasukas kätki putouksen taakse [[aarrearkun]]. Paikalliset löysivät arkun myöhemmin, mutta saivat irti vain sen kanttarenkaan, ja arkku katosi uudelleen. Rengas on nykyään esillä [[Skógarin museossa]], ja tarinaa on syytä pitää kansantarinana eikä todistettuna tapahtumana. Arkku ois kyl kelvannut minulle, vaikka sen sisältö olisi ollut pullaa.
+KYSYMYS: Kerro lisää: Skógarin museossa
+
+### 260
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skógafoss (luonto · joki)
+Tietoruudun teksti: Skógafoss on yksi Islannin suurimmista putouksista, kaksikymmentäviisi metriä leveä ja kuusikymmentä metriä korkea, entisen rantaviivan jyrkänteellä Etelä-Islannissa. Kun meri on vuosituhansien kuluessa vetäytynyt nykyiselle paikalleen noin viiden kilometrin päähän, jäljelle jäivät entiset merenrantakalliot, jotka jatkuvat satojen kilometrien matkan rannikon suuntaisesti. Putouksen jatkuva vesisumu synnyttää aurinkoisella säällä lähes aina näkyviin yksinkertaisen tai kaksoiskaaren sateenkaaren. Tarinan mukaan alueen ensimmäinen viikinkiasukas Þrasi Þórólfsson kätki putouksen taakse aarrearkun, jonka paikalliset myöhemmin löysivät, mutta saivat irti vain arkun kanttarenkaan ennen kuin arkku katosi uudelleen; rengas on nykyään esillä Skógarin museossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viktorian putoukset — kaupunkilehti / Sumun synnyttämä sademetsä: Kuunvalon sateenkaari] Kun kuu on täysi tai lähes täysi ja putouksen sumupilvi riittävän tiheä, öisin taivaalle voi ilmestyä moonbow eli kuunkaari: kuunvalon taittumisesta syntyvä sateenkaari, joka näkyy silmälle vaaleana, hopeanhohtoisena kaarena. Viktorian putoukset ovat yksi harvoista paikoista maailmassa, joissa ilmiön voi nähdä säännöllisesti, sillä siihen tarvitaan sekä riittävän voimakas sumupilvi että tarpeeksi pimeä taivas. Parhaat kuukaudet kuunkaarelle ovat huhti–heinäkuu, jolloin Zambezi virtaa runsaimmillaan ja sumua riittää sekä päivisin auringolle että öisin kuulle taittua.
+AIEMPI KYSYMYS: Miksi Skógafossin yllä näkyy usein sateenkaari?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on kaunis juttu. Putouksen jatkuva vesisumu koostuu pienistä pisaroista. Kun aurinko paistaa pisaroihin sopivassa kulmassa, valo taittuu, heijastuu pisaran sisäpinnasta ja hajoaa väreiksi, jolloin näkyviin tulee [[sateenkaari]]. Aurinkoisella säällä sellainen näkyy putouksella lähes aina, joskus [[kaksoiskaarena]]. Katsojan tulee seistä aurinko selän takana.
+
+Ylhäältä katsottuna sateenkaari voi olla kokonainen ympyrä, mikä on lintuna aika hieno näky. Alhaalla ihmiset näkevät siitä vain puolikkaan.
+KYSYMYS: Kerro lisää: sateenkaari
+
+### 261
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skógafoss (luonto · joki)
+Tietoruudun teksti: Skógafoss on yksi Islannin suurimmista putouksista, kaksikymmentäviisi metriä leveä ja kuusikymmentä metriä korkea, entisen rantaviivan jyrkänteellä Etelä-Islannissa. Kun meri on vuosituhansien kuluessa vetäytynyt nykyiselle paikalleen noin viiden kilometrin päähän, jäljelle jäivät entiset merenrantakalliot, jotka jatkuvat satojen kilometrien matkan rannikon suuntaisesti. Putouksen jatkuva vesisumu synnyttää aurinkoisella säällä lähes aina näkyviin yksinkertaisen tai kaksoiskaaren sateenkaaren. Tarinan mukaan alueen ensimmäinen viikinkiasukas Þrasi Þórólfsson kätki putouksen taakse aarrearkun, jonka paikalliset myöhemmin löysivät, mutta saivat irti vain arkun kanttarenkaan ennen kuin arkku katosi uudelleen; rengas on nykyään esillä Skógarin museossa.
+AIEMPI KYSYMYS: Miksi Skógafossin yllä näkyy usein sateenkaari?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on kaunis juttu. Putouksen jatkuva vesisumu koostuu pienistä pisaroista. Kun aurinko paistaa pisaroihin sopivassa kulmassa, valo taittuu, heijastuu pisaran sisäpinnasta ja hajoaa väreiksi, jolloin näkyviin tulee [[sateenkaari]]. Aurinkoisella säällä sellainen näkyy putouksella lähes aina, joskus [[kaksoiskaarena]]. Katsojan tulee seistä aurinko selän takana.
+
+Ylhäältä katsottuna sateenkaari voi olla kokonainen ympyrä, mikä on lintuna aika hieno näky. Alhaalla ihmiset näkevät siitä vain puolikkaan.
+KYSYMYS: Kerro lisää: kaksoiskaarena
+
+### 262
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skógafoss (luonto · joki)
+Tietoruudun teksti: Skógafoss on yksi Islannin suurimmista putouksista, kaksikymmentäviisi metriä leveä ja kuusikymmentä metriä korkea, entisen rantaviivan jyrkänteellä Etelä-Islannissa. Kun meri on vuosituhansien kuluessa vetäytynyt nykyiselle paikalleen noin viiden kilometrin päähän, jäljelle jäivät entiset merenrantakalliot, jotka jatkuvat satojen kilometrien matkan rannikon suuntaisesti. Putouksen jatkuva vesisumu synnyttää aurinkoisella säällä lähes aina näkyviin yksinkertaisen tai kaksoiskaaren sateenkaaren. Tarinan mukaan alueen ensimmäinen viikinkiasukas Þrasi Þórólfsson kätki putouksen taakse aarrearkun, jonka paikalliset myöhemmin löysivät, mutta saivat irti vain arkun kanttarenkaan ennen kuin arkku katosi uudelleen; rengas on nykyään esillä Skógarin museossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kansa kolisteli pankit pois vallasta kattiloilla] 2008–2009 — Lokakuussa 2008 Islannin kolme suurta pankkia kaatuivat muutamassa päivässä, ja koko maan talous romahti — suhteessa väkilukuun suurin pankkikriisi minkään maan historiassa. Ihmiset alkoivat kokoontua joka lauantai Alþingin eteen, ja tammikuussa 2009 mielenosoitus kasvoi tuhansiin: ihmiset toivat mukanaan kattiloita, pannuja ja kauhoja ja hakkasivat niitä yhdessä niin kovaa, että parlamentin istuntoa oli vaikea jatkaa. Meteli sai lempinimen kattilakumous. Hallitus erosi parin viikon sisällä, ja myöhemmin lähes kolmekymmentä pankkiireja ja johtajia tuomittiin vankilaan — Islanti on ainoa maa, joka vangitsi näin monta oman kriisinsä syyllistä.
+- [Islanti — maalehti / Historia: Sota jota käytiin verkonleikkureilla, ei ammuksilla] 1958–1976 — Kun Islanti laajensi kalastusrajaansa 1958, 1972 ja 1975 aina kauemmas rannikolta, Britannian troolarit eivät suostuneet väistymään — eikä Britannian laivasto liioin. Kolmessa niin sanotussa turskasodassa Islannin rannikkovartioston pienet alukset, kuten Óðinn, ajoivat troolareiden perässä ja leikkasivat niiden verkkoketjut irti erityisillä leikkureilla; brittilaivat puolestaan yrittivät väistellä ja jopa törmäillä vastaan. Ainuttakaan ammusta ei ammuttu vihaisessa mielessä, mutta aluksia vaurioitui kymmeniä. Lopulta Islanti voitti: vuonna 1976 Britannia hyväksyi 200 meripeninkulman rajan, ja se levisi pian koko maailmaan.
+AIEMPI KYSYMYS: Kuinka korkea ja leveä Skógafoss on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Mitat muistan kyl. Skógafoss on noin kuusikymmentä metriä korkea ja noin kaksikymmentäviisi metriä leveä. Se on yksi [[Islannin]] suurimmista putouksista, ja se sijaitsee [[Etelä-Islannissa]] entisen rantaviivan jyrkänteellä. Ei paha muisti, vaikka sen sanonkin itse.
+KYSYMYS: Kerro lisää: Islannin
+
+### 263
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skógafoss (luonto · joki)
+Tietoruudun teksti: Skógafoss on yksi Islannin suurimmista putouksista, kaksikymmentäviisi metriä leveä ja kuusikymmentä metriä korkea, entisen rantaviivan jyrkänteellä Etelä-Islannissa. Kun meri on vuosituhansien kuluessa vetäytynyt nykyiselle paikalleen noin viiden kilometrin päähän, jäljelle jäivät entiset merenrantakalliot, jotka jatkuvat satojen kilometrien matkan rannikon suuntaisesti. Putouksen jatkuva vesisumu synnyttää aurinkoisella säällä lähes aina näkyviin yksinkertaisen tai kaksoiskaaren sateenkaaren. Tarinan mukaan alueen ensimmäinen viikinkiasukas Þrasi Þórólfsson kätki putouksen taakse aarrearkun, jonka paikalliset myöhemmin löysivät, mutta saivat irti vain arkun kanttarenkaan ennen kuin arkku katosi uudelleen; rengas on nykyään esillä Skógarin museossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Piispa joka taisteli uskontoaan vastaan ja hävisi] 1550 — Tanska määräsi Islannin luterilaiseksi 1500-luvulla, mutta Hólarin piispa Jón Arason kieltäytyi luopumasta katolisesta uskosta. Hän kokosi miehiä, otti vangiksi kilpailevan luterilaisen piispan ja hallitsi hetken käytännössä koko Pohjois-Islantia. Vuonna 1550 hänet ja hänen kaksi poikaansa vangittiin taistelun jälkeen, ja marraskuun 7. päivänä heidät mestattiin Skálholtissa ilman oikeudenkäyntiä — päätöksen teki kuninkaan kirjuri, koska pelättiin, ettei rauhaa muuten koskaan tulisi. Arasonin kuolema päätti katolisen kirkon vallan Islannissa.
+- [Islanti — maalehti / Arki: Uimala on kylän olohuone] Ympäri vuoden — Islannissa maan alta saa kuumaa vettä, ja sillä lämmitetään sekä talot että uima-altaat. Lähes joka kylässä on uimala, joka on auki ympäri vuoden ja myös pakkasella. Varsinaisen altaan vieressä on pieniä kuumia altaita, joissa istutaan leuat vedessä ja jutellaan — siellä puhutaan säästä, politiikasta ja naapureista. Yksi sääntö on ehdoton: ennen altaaseen menoa peseydytään ilman uimapukua, ja siitä muistuttavat kyltit pukuhuoneen seinällä.
+- [Islanti — maalehti / Arki: Talon seinät kasvoivat ruohoa] 1800-luku — Islannissa ei kasva metsää, joten rakennuspuuta piti tuoda meren takaa tai kerätä ajopuuna rannalta. Siksi talot tehtiin siitä, mitä oli: kiviä, turvetta ja vähän puuta. Seinät ladottiin turvelevyistä kalanruodon kuvioon, ja katolla kasvoi ruoho. Sisällä oli lämmin, mutta pimeä ja kostea. Turvetaloissa asuttiin yleisesti vielä 1800-luvulla ja paikoin 1900-luvun puolelle asti. Glaumbærin museossa niitä on säilynyt kokonainen rivi.
+AIEMPI KYSYMYS: Kuinka korkea ja leveä Skógafoss on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Mitat muistan kyl. Skógafoss on noin kuusikymmentä metriä korkea ja noin kaksikymmentäviisi metriä leveä. Se on yksi [[Islannin]] suurimmista putouksista, ja se sijaitsee [[Etelä-Islannissa]] entisen rantaviivan jyrkänteellä. Ei paha muisti, vaikka sen sanonkin itse.
+KYSYMYS: Kerro lisää: Etelä-Islannissa
+
+### 264
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skógafoss (luonto · joki)
+Tietoruudun teksti: Skógafoss on yksi Islannin suurimmista putouksista, kaksikymmentäviisi metriä leveä ja kuusikymmentä metriä korkea, entisen rantaviivan jyrkänteellä Etelä-Islannissa. Kun meri on vuosituhansien kuluessa vetäytynyt nykyiselle paikalleen noin viiden kilometrin päähän, jäljelle jäivät entiset merenrantakalliot, jotka jatkuvat satojen kilometrien matkan rannikon suuntaisesti. Putouksen jatkuva vesisumu synnyttää aurinkoisella säällä lähes aina näkyviin yksinkertaisen tai kaksoiskaaren sateenkaaren. Tarinan mukaan alueen ensimmäinen viikinkiasukas Þrasi Þórólfsson kätki putouksen taakse aarrearkun, jonka paikalliset myöhemmin löysivät, mutta saivat irti vain arkun kanttarenkaan ennen kuin arkku katosi uudelleen; rengas on nykyään esillä Skógarin museossa.
+AIEMPI KYSYMYS: Missä Skógafoss sijaitsee Islannissa?
+AIEMPI VASTAUS (Livia):
+No niin, tämän minä löydän katolta silmät kiinni. Skógafoss sijaitsee [[Etelä-Islannissa]], lähellä [[Skógarin]] kylää. Putous on entisen rantaviivan jyrkänteellä, ja nykyinen merenranta on sen edestä noin viiden kilometrin päässä. Etelärannikolla kulkee pitkä rantaviivaa seuraava kalliojono, jonka osa putous on. Ylhäältä sen löytää helposti.
+KYSYMYS: Kerro lisää: Skógarin
+
+### 265
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landmannalaugar (luonto · vuori)
+Tietoruudun teksti: Landmannalaugar sijaitsee Fjallabakin luonnonsuojelualueella Islannin ylängöillä, Laugahraun-laavakentän reunalla; laavakenttä syntyi noin vuonna 1477 tapahtuneessa purkauksessa. Aluetta hallitsevat monivärikkäät riolittivuoret, ja paikka tunnetaan erityisesti luonnollisista geotermisistä lähteistään, joissa voi uida. Landmannalaugar on Laugavegur-vaellusreitin pohjoinen pääte, ja Islannin retkeilyseura ylläpitää siellä tukikohtaa vaeltajille. Suosittuja kohteita lähialueella ovat tunnin patikkamatkan päässä oleva Bláhnjúkur-huippu ja Ljótipollur-kraatterijärvi, ja alue toimii lähtöpisteenä pidemmille reiteille kohti Heklan tulivuorta tai halki Sprengisandurin erämaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bali — kaupunkilehti / Riisipellot ja jumalten temppelit: Äititemppeli tulivuoren kupeessa] Yli tuhannen metrin korkeudessa Agung-tulivuoren rinteellä kohoaa Pura Besakih, yli kahdeksankymmenen temppelin kokonaisuus, jota balilaiset kutsuvat äititempeliksi. Vanhin maininta paikasta on kivipiirtoon kirjoitettu vuodelta 1007, ja legendan mukaan paikka valittiin, kun tietäjä Rsi Markandeya näki unessa käskyn rakentaa sinne temppeli. 1400-luvulta lähtien Besakihia on pidetty Balin hindulaisuuden keskuksena, ja sen kerroksittaiset meru-tornit näkyvät kauas: mitä useampi kerros, sitä korkea-arvoisempi jumaluus tornissa asuu. Temppeli selvisi myös Agungin purkauksesta vuonna 1963, jolloin laava pysähtyi ihmeenomaisesti porttien viereen.
+- [Aden — kaupunkilehti / Aden: Kaupunki tulivuoren pohjalla] Adenin vanhin kaupunginosa on nimeltään Crater, ja nimi on kirjaimellinen: korttelit ovat sammuneen tulivuoren kraatterin pohjalla. Nimen antoivat britit, ja virallinen nimi on Seera. Kraatteria ympäröi Jabal Shamsanin vuoristo, jonka korkeimmat huiput ylittävät 500 metriä, ja koko Adenin kallioperä on tulivuoriperäistä. Vuoden 2003 laskennassa kaupunginosassa asui 76 723 ihmistä. Kaupunki muodostuu kahdesta niemestä, ja meri molemmin puolin tasoittaa lämpötilaa: vuoden keskilämpötila on 29,1 astetta ja ilma on kostea ympäri vuoden.
+AIEMPI KYSYMYS: Minä vuonna Laugahraun-laavakenttä syntyi?
+AIEMPI VASTAUS (Livia):
+No niin, vuosiluku. Tämän muistan. Laugahraun-laavakenttä syntyi noin vuonna 1477 tapahtuneessa [[tulivuorenpurkauksessa]]. Se sijaitsee [[Landmannalaugarin]] reunalla [[Fjallabakin luonnonsuojelualueella]] Islannin ylängöillä. Vuosi on likimääräinen, joten sana noin on paikallaan. Yli viisisataa vuotta sitten, eli melkein eilen.
+KYSYMYS: Kerro lisää: tulivuorenpurkauksessa
+
+### 266
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landmannalaugar (luonto · vuori)
+Tietoruudun teksti: Landmannalaugar sijaitsee Fjallabakin luonnonsuojelualueella Islannin ylängöillä, Laugahraun-laavakentän reunalla; laavakenttä syntyi noin vuonna 1477 tapahtuneessa purkauksessa. Aluetta hallitsevat monivärikkäät riolittivuoret, ja paikka tunnetaan erityisesti luonnollisista geotermisistä lähteistään, joissa voi uida. Landmannalaugar on Laugavegur-vaellusreitin pohjoinen pääte, ja Islannin retkeilyseura ylläpitää siellä tukikohtaa vaeltajille. Suosittuja kohteita lähialueella ovat tunnin patikkamatkan päässä oleva Bláhnjúkur-huippu ja Ljótipollur-kraatterijärvi, ja alue toimii lähtöpisteenä pidemmille reiteille kohti Heklan tulivuorta tai halki Sprengisandurin erämaan.
+AIEMPI KYSYMYS: Minä vuonna Laugahraun-laavakenttä syntyi?
+AIEMPI VASTAUS (Livia):
+No niin, vuosiluku. Tämän muistan. Laugahraun-laavakenttä syntyi noin vuonna 1477 tapahtuneessa [[tulivuorenpurkauksessa]]. Se sijaitsee [[Landmannalaugarin]] reunalla [[Fjallabakin luonnonsuojelualueella]] Islannin ylängöillä. Vuosi on likimääräinen, joten sana noin on paikallaan. Yli viisisataa vuotta sitten, eli melkein eilen.
+KYSYMYS: Kerro lisää: Landmannalaugarin
+
+### 267
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landmannalaugar (luonto · vuori)
+Tietoruudun teksti: Landmannalaugar sijaitsee Fjallabakin luonnonsuojelualueella Islannin ylängöillä, Laugahraun-laavakentän reunalla; laavakenttä syntyi noin vuonna 1477 tapahtuneessa purkauksessa. Aluetta hallitsevat monivärikkäät riolittivuoret, ja paikka tunnetaan erityisesti luonnollisista geotermisistä lähteistään, joissa voi uida. Landmannalaugar on Laugavegur-vaellusreitin pohjoinen pääte, ja Islannin retkeilyseura ylläpitää siellä tukikohtaa vaeltajille. Suosittuja kohteita lähialueella ovat tunnin patikkamatkan päässä oleva Bláhnjúkur-huippu ja Ljótipollur-kraatterijärvi, ja alue toimii lähtöpisteenä pidemmille reiteille kohti Heklan tulivuorta tai halki Sprengisandurin erämaan.
+AIEMPI KYSYMYS: Minä vuonna Laugahraun-laavakenttä syntyi?
+AIEMPI VASTAUS (Livia):
+No niin, vuosiluku. Tämän muistan. Laugahraun-laavakenttä syntyi noin vuonna 1477 tapahtuneessa [[tulivuorenpurkauksessa]]. Se sijaitsee [[Landmannalaugarin]] reunalla [[Fjallabakin luonnonsuojelualueella]] Islannin ylängöillä. Vuosi on likimääräinen, joten sana noin on paikallaan. Yli viisisataa vuotta sitten, eli melkein eilen.
+KYSYMYS: Kerro lisää: Fjallabakin luonnonsuojelualueella
+
+### 268
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landmannalaugar (luonto · vuori)
+Tietoruudun teksti: Landmannalaugar sijaitsee Fjallabakin luonnonsuojelualueella Islannin ylängöillä, Laugahraun-laavakentän reunalla; laavakenttä syntyi noin vuonna 1477 tapahtuneessa purkauksessa. Aluetta hallitsevat monivärikkäät riolittivuoret, ja paikka tunnetaan erityisesti luonnollisista geotermisistä lähteistään, joissa voi uida. Landmannalaugar on Laugavegur-vaellusreitin pohjoinen pääte, ja Islannin retkeilyseura ylläpitää siellä tukikohtaa vaeltajille. Suosittuja kohteita lähialueella ovat tunnin patikkamatkan päässä oleva Bláhnjúkur-huippu ja Ljótipollur-kraatterijärvi, ja alue toimii lähtöpisteenä pidemmille reiteille kohti Heklan tulivuorta tai halki Sprengisandurin erämaan.
+AIEMPI KYSYMYS: Mikä Laugavegur on?
+AIEMPI VASTAUS (Livia):
+Ai se. Hieno reitti. Laugavegur on suosittu usean päivän vaellusreitti Islannin ylängöillä. Sen pohjoinen pääte on [[Landmannalaugar]] ja eteläpää [[Þórsmörkissä]]. Reitti kulkee värikkäiden vuorten, kuumien lähteiden ja laavakenttien halki, ja [[Islannin retkeilyseura]] ylläpitää Landmannalaugarissa tukikohtaa vaeltajille. Lentäen reitti taittuu vartissa, mutta kengät jäävät silloin säästöön.
+KYSYMYS: Kerro lisää: Landmannalaugar
+
+### 269
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landmannalaugar (luonto · vuori)
+Tietoruudun teksti: Landmannalaugar sijaitsee Fjallabakin luonnonsuojelualueella Islannin ylängöillä, Laugahraun-laavakentän reunalla; laavakenttä syntyi noin vuonna 1477 tapahtuneessa purkauksessa. Aluetta hallitsevat monivärikkäät riolittivuoret, ja paikka tunnetaan erityisesti luonnollisista geotermisistä lähteistään, joissa voi uida. Landmannalaugar on Laugavegur-vaellusreitin pohjoinen pääte, ja Islannin retkeilyseura ylläpitää siellä tukikohtaa vaeltajille. Suosittuja kohteita lähialueella ovat tunnin patikkamatkan päässä oleva Bláhnjúkur-huippu ja Ljótipollur-kraatterijärvi, ja alue toimii lähtöpisteenä pidemmille reiteille kohti Heklan tulivuorta tai halki Sprengisandurin erämaan.
+AIEMPI KYSYMYS: Mikä Laugavegur on?
+AIEMPI VASTAUS (Livia):
+Ai se. Hieno reitti. Laugavegur on suosittu usean päivän vaellusreitti Islannin ylängöillä. Sen pohjoinen pääte on [[Landmannalaugar]] ja eteläpää [[Þórsmörkissä]]. Reitti kulkee värikkäiden vuorten, kuumien lähteiden ja laavakenttien halki, ja [[Islannin retkeilyseura]] ylläpitää Landmannalaugarissa tukikohtaa vaeltajille. Lentäen reitti taittuu vartissa, mutta kengät jäävät silloin säästöön.
+KYSYMYS: Kerro lisää: Þórsmörkissä
+
+### 270
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landmannalaugar (luonto · vuori)
+Tietoruudun teksti: Landmannalaugar sijaitsee Fjallabakin luonnonsuojelualueella Islannin ylängöillä, Laugahraun-laavakentän reunalla; laavakenttä syntyi noin vuonna 1477 tapahtuneessa purkauksessa. Aluetta hallitsevat monivärikkäät riolittivuoret, ja paikka tunnetaan erityisesti luonnollisista geotermisistä lähteistään, joissa voi uida. Landmannalaugar on Laugavegur-vaellusreitin pohjoinen pääte, ja Islannin retkeilyseura ylläpitää siellä tukikohtaa vaeltajille. Suosittuja kohteita lähialueella ovat tunnin patikkamatkan päässä oleva Bláhnjúkur-huippu ja Ljótipollur-kraatterijärvi, ja alue toimii lähtöpisteenä pidemmille reiteille kohti Heklan tulivuorta tai halki Sprengisandurin erämaan.
+AIEMPI KYSYMYS: Mikä Laugavegur on?
+AIEMPI VASTAUS (Livia):
+Ai se. Hieno reitti. Laugavegur on suosittu usean päivän vaellusreitti Islannin ylängöillä. Sen pohjoinen pääte on [[Landmannalaugar]] ja eteläpää [[Þórsmörkissä]]. Reitti kulkee värikkäiden vuorten, kuumien lähteiden ja laavakenttien halki, ja [[Islannin retkeilyseura]] ylläpitää Landmannalaugarissa tukikohtaa vaeltajille. Lentäen reitti taittuu vartissa, mutta kengät jäävät silloin säästöön.
+KYSYMYS: Kerro lisää: Islannin retkeilyseura
+
+### 271
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landmannalaugar (luonto · vuori)
+Tietoruudun teksti: Landmannalaugar sijaitsee Fjallabakin luonnonsuojelualueella Islannin ylängöillä, Laugahraun-laavakentän reunalla; laavakenttä syntyi noin vuonna 1477 tapahtuneessa purkauksessa. Aluetta hallitsevat monivärikkäät riolittivuoret, ja paikka tunnetaan erityisesti luonnollisista geotermisistä lähteistään, joissa voi uida. Landmannalaugar on Laugavegur-vaellusreitin pohjoinen pääte, ja Islannin retkeilyseura ylläpitää siellä tukikohtaa vaeltajille. Suosittuja kohteita lähialueella ovat tunnin patikkamatkan päässä oleva Bláhnjúkur-huippu ja Ljótipollur-kraatterijärvi, ja alue toimii lähtöpisteenä pidemmille reiteille kohti Heklan tulivuorta tai halki Sprengisandurin erämaan.
+AIEMPI KYSYMYS: Miksi Landmannalaugarin vuoret ovat niin värikkäitä?
+AIEMPI VASTAUS (Livia):
+Kato, tää on kyl kaunis paikka. Vuoret ovat pääosin [[riolittia]], piidioksidipitoista tulivuorikiveä. Värit johtuvat kiven mineraaleista ja siitä, miten kuuma vesi ja kaasut ovat muuttaneet kiveä: rautayhdisteet antavat usein punaisia, keltaisia ja ruskeita sävyjä. Tämä on yleiskuva, enkä osaa sanoa yksittäisen vuoren värien tarkkaa alkuperää. [[Landmannalaugarin]] maisema on siksi poikkeuksellisen kirjava. Väriskaala on sellainen, että pullakin jää toiseksi.
+KYSYMYS: Kerro lisää: riolittia
+
+### 272
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landmannalaugar (luonto · vuori)
+Tietoruudun teksti: Landmannalaugar sijaitsee Fjallabakin luonnonsuojelualueella Islannin ylängöillä, Laugahraun-laavakentän reunalla; laavakenttä syntyi noin vuonna 1477 tapahtuneessa purkauksessa. Aluetta hallitsevat monivärikkäät riolittivuoret, ja paikka tunnetaan erityisesti luonnollisista geotermisistä lähteistään, joissa voi uida. Landmannalaugar on Laugavegur-vaellusreitin pohjoinen pääte, ja Islannin retkeilyseura ylläpitää siellä tukikohtaa vaeltajille. Suosittuja kohteita lähialueella ovat tunnin patikkamatkan päässä oleva Bláhnjúkur-huippu ja Ljótipollur-kraatterijärvi, ja alue toimii lähtöpisteenä pidemmille reiteille kohti Heklan tulivuorta tai halki Sprengisandurin erämaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Piispa joka taisteli uskontoaan vastaan ja hävisi] 1550 — Tanska määräsi Islannin luterilaiseksi 1500-luvulla, mutta Hólarin piispa Jón Arason kieltäytyi luopumasta katolisesta uskosta. Hän kokosi miehiä, otti vangiksi kilpailevan luterilaisen piispan ja hallitsi hetken käytännössä koko Pohjois-Islantia. Vuonna 1550 hänet ja hänen kaksi poikaansa vangittiin taistelun jälkeen, ja marraskuun 7. päivänä heidät mestattiin Skálholtissa ilman oikeudenkäyntiä — päätöksen teki kuninkaan kirjuri, koska pelättiin, ettei rauhaa muuten koskaan tulisi. Arasonin kuolema päätti katolisen kirkon vallan Islannissa.
+- [Islanti — maalehti / Arki: Uimala on kylän olohuone] Ympäri vuoden — Islannissa maan alta saa kuumaa vettä, ja sillä lämmitetään sekä talot että uima-altaat. Lähes joka kylässä on uimala, joka on auki ympäri vuoden ja myös pakkasella. Varsinaisen altaan vieressä on pieniä kuumia altaita, joissa istutaan leuat vedessä ja jutellaan — siellä puhutaan säästä, politiikasta ja naapureista. Yksi sääntö on ehdoton: ennen altaaseen menoa peseydytään ilman uimapukua, ja siitä muistuttavat kyltit pukuhuoneen seinällä.
+- [Islanti — maalehti / Arki: Talon seinät kasvoivat ruohoa] 1800-luku — Islannissa ei kasva metsää, joten rakennuspuuta piti tuoda meren takaa tai kerätä ajopuuna rannalta. Siksi talot tehtiin siitä, mitä oli: kiviä, turvetta ja vähän puuta. Seinät ladottiin turvelevyistä kalanruodon kuvioon, ja katolla kasvoi ruoho. Sisällä oli lämmin, mutta pimeä ja kostea. Turvetaloissa asuttiin yleisesti vielä 1800-luvulla ja paikoin 1900-luvun puolelle asti. Glaumbærin museossa niitä on säilynyt kokonainen rivi.
+AIEMPI KYSYMYS: Millainen tulivuori Hekla on?
+AIEMPI VASTAUS (Livia):
+No jopas, Hekla. Se on aktiivinen tulivuori [[Etelä-Islannissa]], ja se on purkautunut toistuvasti vuosisatojen aikana. Tarinoiden mukaan sitä pidettiin keskiajalla helvetin porttina. [[Landmannalaugarista]] voi lähteä pidemmälle reitille kohti Heklan tulivuorta. Kunnioitan vuorta, joka voi herätä milloin vain.
+KYSYMYS: Kerro lisää: Etelä-Islannissa
+
+### 273
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landmannalaugar (luonto · vuori)
+Tietoruudun teksti: Landmannalaugar sijaitsee Fjallabakin luonnonsuojelualueella Islannin ylängöillä, Laugahraun-laavakentän reunalla; laavakenttä syntyi noin vuonna 1477 tapahtuneessa purkauksessa. Aluetta hallitsevat monivärikkäät riolittivuoret, ja paikka tunnetaan erityisesti luonnollisista geotermisistä lähteistään, joissa voi uida. Landmannalaugar on Laugavegur-vaellusreitin pohjoinen pääte, ja Islannin retkeilyseura ylläpitää siellä tukikohtaa vaeltajille. Suosittuja kohteita lähialueella ovat tunnin patikkamatkan päässä oleva Bláhnjúkur-huippu ja Ljótipollur-kraatterijärvi, ja alue toimii lähtöpisteenä pidemmille reiteille kohti Heklan tulivuorta tai halki Sprengisandurin erämaan.
+AIEMPI KYSYMYS: Millainen tulivuori Hekla on?
+AIEMPI VASTAUS (Livia):
+No jopas, Hekla. Se on aktiivinen tulivuori [[Etelä-Islannissa]], ja se on purkautunut toistuvasti vuosisatojen aikana. Tarinoiden mukaan sitä pidettiin keskiajalla helvetin porttina. [[Landmannalaugarista]] voi lähteä pidemmälle reitille kohti Heklan tulivuorta. Kunnioitan vuorta, joka voi herätä milloin vain.
+KYSYMYS: Kerro lisää: Landmannalaugarista
+
+### 274
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landmannalaugar (luonto · vuori)
+Tietoruudun teksti: Landmannalaugar sijaitsee Fjallabakin luonnonsuojelualueella Islannin ylängöillä, Laugahraun-laavakentän reunalla; laavakenttä syntyi noin vuonna 1477 tapahtuneessa purkauksessa. Aluetta hallitsevat monivärikkäät riolittivuoret, ja paikka tunnetaan erityisesti luonnollisista geotermisistä lähteistään, joissa voi uida. Landmannalaugar on Laugavegur-vaellusreitin pohjoinen pääte, ja Islannin retkeilyseura ylläpitää siellä tukikohtaa vaeltajille. Suosittuja kohteita lähialueella ovat tunnin patikkamatkan päässä oleva Bláhnjúkur-huippu ja Ljótipollur-kraatterijärvi, ja alue toimii lähtöpisteenä pidemmille reiteille kohti Heklan tulivuorta tai halki Sprengisandurin erämaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Mitä tarkoittaa geoterminen lähde?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tämä on lämmin aihe. Geoterminen lähde saa lämpönsä maankuoren sisäisestä kuumuudesta. [[Pohjavesi]] ja sadevesi valuvat syvälle halkeamiin, kuumenevat kuuman kiven vaikutuksesta ja nousevat takaisin pinnalle. Islannissa tällaisia lähteitä on paljon, koska maa sijaitsee [[Atlantin keskiselänteen]] päällä, jossa maankuoren laatat erkanevat toisistaan. [[Landmannalaugarissa]] lähteissä voi uida. Kylpeminen kiinnostaa, mutta höyhenet ei kestä kosteutta.
+KYSYMYS: Kerro lisää: Pohjavesi
+
+### 275
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landmannalaugar (luonto · vuori)
+Tietoruudun teksti: Landmannalaugar sijaitsee Fjallabakin luonnonsuojelualueella Islannin ylängöillä, Laugahraun-laavakentän reunalla; laavakenttä syntyi noin vuonna 1477 tapahtuneessa purkauksessa. Aluetta hallitsevat monivärikkäät riolittivuoret, ja paikka tunnetaan erityisesti luonnollisista geotermisistä lähteistään, joissa voi uida. Landmannalaugar on Laugavegur-vaellusreitin pohjoinen pääte, ja Islannin retkeilyseura ylläpitää siellä tukikohtaa vaeltajille. Suosittuja kohteita lähialueella ovat tunnin patikkamatkan päässä oleva Bláhnjúkur-huippu ja Ljótipollur-kraatterijärvi, ja alue toimii lähtöpisteenä pidemmille reiteille kohti Heklan tulivuorta tai halki Sprengisandurin erämaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Orjarannikko — kaupunkilehti / Orjarannikko: Atlantin ranta, jonne kaikki tiet johtivat] Ouidah sijaitsee kapealla hiekkaharjulla Atlantin valtameren ja sisämaan laguunien välissä. Ranta on leveä ja lähes puuton, sillä avomereltä kohti rantaa kohoavat mahtavat, usein vaaralliset aallot ovat estäneet luonnollisen satama-altaan syntymisen koko rannikolle. Juuri tämä sama karu ranta toimi vuosisatoja sekä kalastajien arkena että sen viimeisenä maakaistaleena, jonka yli kuljettiin ennen merelle lähtöä. Nykyisin rannalla on hiljaista: muutama kalastajakylä, palmuja ja pieniä, valkoisiksi rapattuja majoja hiekalla.
+AIEMPI KYSYMYS: Mitä tarkoittaa geoterminen lähde?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tämä on lämmin aihe. Geoterminen lähde saa lämpönsä maankuoren sisäisestä kuumuudesta. [[Pohjavesi]] ja sadevesi valuvat syvälle halkeamiin, kuumenevat kuuman kiven vaikutuksesta ja nousevat takaisin pinnalle. Islannissa tällaisia lähteitä on paljon, koska maa sijaitsee [[Atlantin keskiselänteen]] päällä, jossa maankuoren laatat erkanevat toisistaan. [[Landmannalaugarissa]] lähteissä voi uida. Kylpeminen kiinnostaa, mutta höyhenet ei kestä kosteutta.
+KYSYMYS: Kerro lisää: Atlantin keskiselänteen
+
+### 276
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landmannalaugar (luonto · vuori)
+Tietoruudun teksti: Landmannalaugar sijaitsee Fjallabakin luonnonsuojelualueella Islannin ylängöillä, Laugahraun-laavakentän reunalla; laavakenttä syntyi noin vuonna 1477 tapahtuneessa purkauksessa. Aluetta hallitsevat monivärikkäät riolittivuoret, ja paikka tunnetaan erityisesti luonnollisista geotermisistä lähteistään, joissa voi uida. Landmannalaugar on Laugavegur-vaellusreitin pohjoinen pääte, ja Islannin retkeilyseura ylläpitää siellä tukikohtaa vaeltajille. Suosittuja kohteita lähialueella ovat tunnin patikkamatkan päässä oleva Bláhnjúkur-huippu ja Ljótipollur-kraatterijärvi, ja alue toimii lähtöpisteenä pidemmille reiteille kohti Heklan tulivuorta tai halki Sprengisandurin erämaan.
+AIEMPI KYSYMYS: Mitä tarkoittaa geoterminen lähde?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tämä on lämmin aihe. Geoterminen lähde saa lämpönsä maankuoren sisäisestä kuumuudesta. [[Pohjavesi]] ja sadevesi valuvat syvälle halkeamiin, kuumenevat kuuman kiven vaikutuksesta ja nousevat takaisin pinnalle. Islannissa tällaisia lähteitä on paljon, koska maa sijaitsee [[Atlantin keskiselänteen]] päällä, jossa maankuoren laatat erkanevat toisistaan. [[Landmannalaugarissa]] lähteissä voi uida. Kylpeminen kiinnostaa, mutta höyhenet ei kestä kosteutta.
+KYSYMYS: Kerro lisää: Landmannalaugarissa
+
+### 277
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flateyjarbók (kulttuuri)
+Tietoruudun teksti: Flateyjarbók on suurin keskiaikainen islantilainen käsikirjoitus, 225 kirjoitettua ja kuvitettua pergamenttilehteä. Lakimies Jón Hákonarson tilasi teoksen, ja papit Jón Þórðarson ja Magnús Þórhallsson kirjoittivat ja kuvittivat sen vuosina 1387-1394. Kirja sisältää pääosin Norjan kuninkaiden saagoja, mutta myös ainoat säilyneet islanninkieliset versiot Orkneyinga-saagasta ja Färsaarelaisten saagasta sekä tärkeän Grænlendinga-saagan Vinlannin siirtokunnasta. Vuonna 1651 piispa Brynjólfur Sveinsson pyysi Tanskan kuninkaan luvalla kaikkia islantilaisia luovuttamaan vanhat käsikirjoituksensa, ja Flateyjarbók päätyi Flatey-saarelta Kööpenhaminaan, jossa se säilyi tanskalaisessa kirjastossa yli kolmesataa vuotta.
+AIEMPI KYSYMYS: Mitkä saagat säilyivät islanninkielisinä ainoastaan Flateyjarbókissa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tämä on kirjallisuutta. Flateyjarbók sisältää [[Orkneyinga-saagan]] ja [[Färsaarelaisten saagan]], joiden ainoat säilyneet islanninkieliset versiot ovat tässä käsikirjoituksessa. Teos on pääosin [[Norjan kuninkaiden saagoja]] sisältävä kokoelma, ja kaksi pappia kirjoitti ja kuvitti sen vuosina 1387-1394. Nimet on aika kielitaitokoe, mutta selvisin.
+KYSYMYS: Kerro lisää: Orkneyinga-saagan
+
+### 278
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flateyjarbók (kulttuuri)
+Tietoruudun teksti: Flateyjarbók on suurin keskiaikainen islantilainen käsikirjoitus, 225 kirjoitettua ja kuvitettua pergamenttilehteä. Lakimies Jón Hákonarson tilasi teoksen, ja papit Jón Þórðarson ja Magnús Þórhallsson kirjoittivat ja kuvittivat sen vuosina 1387-1394. Kirja sisältää pääosin Norjan kuninkaiden saagoja, mutta myös ainoat säilyneet islanninkieliset versiot Orkneyinga-saagasta ja Färsaarelaisten saagasta sekä tärkeän Grænlendinga-saagan Vinlannin siirtokunnasta. Vuonna 1651 piispa Brynjólfur Sveinsson pyysi Tanskan kuninkaan luvalla kaikkia islantilaisia luovuttamaan vanhat käsikirjoituksensa, ja Flateyjarbók päätyi Flatey-saarelta Kööpenhaminaan, jossa se säilyi tanskalaisessa kirjastossa yli kolmesataa vuotta.
+AIEMPI KYSYMYS: Mitkä saagat säilyivät islanninkielisinä ainoastaan Flateyjarbókissa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tämä on kirjallisuutta. Flateyjarbók sisältää [[Orkneyinga-saagan]] ja [[Färsaarelaisten saagan]], joiden ainoat säilyneet islanninkieliset versiot ovat tässä käsikirjoituksessa. Teos on pääosin [[Norjan kuninkaiden saagoja]] sisältävä kokoelma, ja kaksi pappia kirjoitti ja kuvitti sen vuosina 1387-1394. Nimet on aika kielitaitokoe, mutta selvisin.
+KYSYMYS: Kerro lisää: Färsaarelaisten saagan
+
+### 279
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flateyjarbók (kulttuuri)
+Tietoruudun teksti: Flateyjarbók on suurin keskiaikainen islantilainen käsikirjoitus, 225 kirjoitettua ja kuvitettua pergamenttilehteä. Lakimies Jón Hákonarson tilasi teoksen, ja papit Jón Þórðarson ja Magnús Þórhallsson kirjoittivat ja kuvittivat sen vuosina 1387-1394. Kirja sisältää pääosin Norjan kuninkaiden saagoja, mutta myös ainoat säilyneet islanninkieliset versiot Orkneyinga-saagasta ja Färsaarelaisten saagasta sekä tärkeän Grænlendinga-saagan Vinlannin siirtokunnasta. Vuonna 1651 piispa Brynjólfur Sveinsson pyysi Tanskan kuninkaan luvalla kaikkia islantilaisia luovuttamaan vanhat käsikirjoituksensa, ja Flateyjarbók päätyi Flatey-saarelta Kööpenhaminaan, jossa se säilyi tanskalaisessa kirjastossa yli kolmesataa vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — kaupunkilehti / Islanti: Kieli, joka ei liikkunut] Islannin kieli on muuttunut niin vähän, että koululainen voi lukea 1200-luvun saagoja alkukielellä. Uusille asioille ei lainata sanoja vaan tehdään omat: tietokone on tölva, "lukujen ennustaja", ja kaikille islantilaisille tuttu sana yhtä lailla.
+AIEMPI KYSYMYS: Mitkä saagat säilyivät islanninkielisinä ainoastaan Flateyjarbókissa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tämä on kirjallisuutta. Flateyjarbók sisältää [[Orkneyinga-saagan]] ja [[Färsaarelaisten saagan]], joiden ainoat säilyneet islanninkieliset versiot ovat tässä käsikirjoituksessa. Teos on pääosin [[Norjan kuninkaiden saagoja]] sisältävä kokoelma, ja kaksi pappia kirjoitti ja kuvitti sen vuosina 1387-1394. Nimet on aika kielitaitokoe, mutta selvisin.
+KYSYMYS: Kerro lisää: Norjan kuninkaiden saagoja
+
+### 280
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flateyjarbók (kulttuuri)
+Tietoruudun teksti: Flateyjarbók on suurin keskiaikainen islantilainen käsikirjoitus, 225 kirjoitettua ja kuvitettua pergamenttilehteä. Lakimies Jón Hákonarson tilasi teoksen, ja papit Jón Þórðarson ja Magnús Þórhallsson kirjoittivat ja kuvittivat sen vuosina 1387-1394. Kirja sisältää pääosin Norjan kuninkaiden saagoja, mutta myös ainoat säilyneet islanninkieliset versiot Orkneyinga-saagasta ja Färsaarelaisten saagasta sekä tärkeän Grænlendinga-saagan Vinlannin siirtokunnasta. Vuonna 1651 piispa Brynjólfur Sveinsson pyysi Tanskan kuninkaan luvalla kaikkia islantilaisia luovuttamaan vanhat käsikirjoituksensa, ja Flateyjarbók päätyi Flatey-saarelta Kööpenhaminaan, jossa se säilyi tanskalaisessa kirjastossa yli kolmesataa vuotta.
+AIEMPI KYSYMYS: Miten kirja päätyi Tanskaan?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tää on pitkä juttu. Vuonna 1651 piispa [[Brynjólfur Sveinsson]] pyysi Tanskan kuninkaan luvalla islantilaisia luovuttamaan vanhat käsikirjoituksensa. Flateyjarbók siirtyi [[Flateyn]] saarelta [[Kööpenhaminaan]], jossa se säilyi tanskalaisessa kirjastossa yli kolmesataa vuotta. Yksityiskohdista en ole varma. Kolmesataa vuotta on pitkä aika olla poissa kotoa.
+KYSYMYS: Kerro lisää: Brynjólfur Sveinsson
+
+### 281
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flateyjarbók (kulttuuri)
+Tietoruudun teksti: Flateyjarbók on suurin keskiaikainen islantilainen käsikirjoitus, 225 kirjoitettua ja kuvitettua pergamenttilehteä. Lakimies Jón Hákonarson tilasi teoksen, ja papit Jón Þórðarson ja Magnús Þórhallsson kirjoittivat ja kuvittivat sen vuosina 1387-1394. Kirja sisältää pääosin Norjan kuninkaiden saagoja, mutta myös ainoat säilyneet islanninkieliset versiot Orkneyinga-saagasta ja Färsaarelaisten saagasta sekä tärkeän Grænlendinga-saagan Vinlannin siirtokunnasta. Vuonna 1651 piispa Brynjólfur Sveinsson pyysi Tanskan kuninkaan luvalla kaikkia islantilaisia luovuttamaan vanhat käsikirjoituksensa, ja Flateyjarbók päätyi Flatey-saarelta Kööpenhaminaan, jossa se säilyi tanskalaisessa kirjastossa yli kolmesataa vuotta.
+AIEMPI KYSYMYS: Miten kirja päätyi Tanskaan?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tää on pitkä juttu. Vuonna 1651 piispa [[Brynjólfur Sveinsson]] pyysi Tanskan kuninkaan luvalla islantilaisia luovuttamaan vanhat käsikirjoituksensa. Flateyjarbók siirtyi [[Flateyn]] saarelta [[Kööpenhaminaan]], jossa se säilyi tanskalaisessa kirjastossa yli kolmesataa vuotta. Yksityiskohdista en ole varma. Kolmesataa vuotta on pitkä aika olla poissa kotoa.
+KYSYMYS: Kerro lisää: Flateyn
+
+### 282
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flateyjarbók (kulttuuri)
+Tietoruudun teksti: Flateyjarbók on suurin keskiaikainen islantilainen käsikirjoitus, 225 kirjoitettua ja kuvitettua pergamenttilehteä. Lakimies Jón Hákonarson tilasi teoksen, ja papit Jón Þórðarson ja Magnús Þórhallsson kirjoittivat ja kuvittivat sen vuosina 1387-1394. Kirja sisältää pääosin Norjan kuninkaiden saagoja, mutta myös ainoat säilyneet islanninkieliset versiot Orkneyinga-saagasta ja Färsaarelaisten saagasta sekä tärkeän Grænlendinga-saagan Vinlannin siirtokunnasta. Vuonna 1651 piispa Brynjólfur Sveinsson pyysi Tanskan kuninkaan luvalla kaikkia islantilaisia luovuttamaan vanhat käsikirjoituksensa, ja Flateyjarbók päätyi Flatey-saarelta Kööpenhaminaan, jossa se säilyi tanskalaisessa kirjastossa yli kolmesataa vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kohdekartta / Kohdekartta: Grönlannin kansallismuseo] 1965 Nunatta Katersugaasivia Allagaateqarfialu oli yksi Grönlannin ensimmäisistä museoista. Sen ensimmäinen näyttely avattiin 1965 herrnhutilaisessa lähetystalossa, ja 1970-luvulla se muutti vanhaan siirtomaasatamaan vuonna 1936 rakennettuun varastoon. Muutto ei johtunut tilan puutteesta yksin: kokoelma kasvoi, kun Tanskan kansallismuseo alkoi palauttaa grönlantilaisia esineitä takaisin saarelle. Museon tunnetuin näyttely ovat Qilakitsoqin muumiot. Kaksi metsästäjää, Hans ja Jokum Grønvold, löysivät 9. lokakuuta 1972 riekkojahdissa Uummannaqin lähellä kiviröykkiön, jonka alla oli useita ruumiita. He peittivät haudan uudelleen ja ilmoittivat viranomaisille. Kahdeksan vainajaa oli säilynyt lu…
+- [Grönlanti — maalehti / Musiikki: Grönlanniksi euroviisukarsintaan] 1979 — Rasmus Lyberth syntyi Maniitsoqissa 1951, kasvoi Nuukissa ja alkoi kaksitoistavuotiaana esiintyä kitaransa kanssa. Vuonna 1969 hän lähti Kööpenhaminaan ja levytti esikoisalbuminsa Erningaan 1974. Vuonna 1979 hän osallistui Tanskan euroviisukarsintaan kappaleella Faders bøn, Isän rukous, jonka hän lauloi grönlanniksi, ja sijoittui yhdenneksitoista seitsemästätoista. Wikipedian mukaan Lyberth muutti grönlantilaista musiikkia eniten esiintymällä pelkän viihdyttämisen vuoksi. Maan suurin levy-yhtiö ULO julkaisee sekä häntä, Suméa että hiphop-ryhmä Nuuk Possea.
+AIEMPI KYSYMYS: Miten kirja päätyi Tanskaan?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tää on pitkä juttu. Vuonna 1651 piispa [[Brynjólfur Sveinsson]] pyysi Tanskan kuninkaan luvalla islantilaisia luovuttamaan vanhat käsikirjoituksensa. Flateyjarbók siirtyi [[Flateyn]] saarelta [[Kööpenhaminaan]], jossa se säilyi tanskalaisessa kirjastossa yli kolmesataa vuotta. Yksityiskohdista en ole varma. Kolmesataa vuotta on pitkä aika olla poissa kotoa.
+KYSYMYS: Kerro lisää: Kööpenhaminaan
+
+### 283
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flateyjarbók (kulttuuri)
+Tietoruudun teksti: Flateyjarbók on suurin keskiaikainen islantilainen käsikirjoitus, 225 kirjoitettua ja kuvitettua pergamenttilehteä. Lakimies Jón Hákonarson tilasi teoksen, ja papit Jón Þórðarson ja Magnús Þórhallsson kirjoittivat ja kuvittivat sen vuosina 1387-1394. Kirja sisältää pääosin Norjan kuninkaiden saagoja, mutta myös ainoat säilyneet islanninkieliset versiot Orkneyinga-saagasta ja Färsaarelaisten saagasta sekä tärkeän Grænlendinga-saagan Vinlannin siirtokunnasta. Vuonna 1651 piispa Brynjólfur Sveinsson pyysi Tanskan kuninkaan luvalla kaikkia islantilaisia luovuttamaan vanhat käsikirjoituksensa, ja Flateyjarbók päätyi Flatey-saarelta Kööpenhaminaan, jossa se säilyi tanskalaisessa kirjastossa yli kolmesataa vuotta.
+AIEMPI KYSYMYS: Mikä on saaga?
+AIEMPI VASTAUS (Livia):
+Mmm— saaga. Sen minä tiedän. Saaga on keskiajalla Islannissa ja muualla Pohjolassa kirjoitettu [[proosa]]kertomus, joka kertoo kuninkaista, suvuista ja merkittävistä tapahtumista. Saagat kirjoitettiin pääosin 1200- ja 1300-luvuilla, ja ne ovat tärkeä lähde vanhasta pohjoismaisesta elämästä ja kielestä. [[Islannissa]] niitä on säilynyt runsaasti käsikirjoituksina. Tarinoiden kantaminen on kyllä meidän sukumme alaa.
+KYSYMYS: Kerro lisää: proosa
+
+### 284
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flateyjarbók (kulttuuri)
+Tietoruudun teksti: Flateyjarbók on suurin keskiaikainen islantilainen käsikirjoitus, 225 kirjoitettua ja kuvitettua pergamenttilehteä. Lakimies Jón Hákonarson tilasi teoksen, ja papit Jón Þórðarson ja Magnús Þórhallsson kirjoittivat ja kuvittivat sen vuosina 1387-1394. Kirja sisältää pääosin Norjan kuninkaiden saagoja, mutta myös ainoat säilyneet islanninkieliset versiot Orkneyinga-saagasta ja Färsaarelaisten saagasta sekä tärkeän Grænlendinga-saagan Vinlannin siirtokunnasta. Vuonna 1651 piispa Brynjólfur Sveinsson pyysi Tanskan kuninkaan luvalla kaikkia islantilaisia luovuttamaan vanhat käsikirjoituksensa, ja Flateyjarbók päätyi Flatey-saarelta Kööpenhaminaan, jossa se säilyi tanskalaisessa kirjastossa yli kolmesataa vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Piispa joka taisteli uskontoaan vastaan ja hävisi] 1550 — Tanska määräsi Islannin luterilaiseksi 1500-luvulla, mutta Hólarin piispa Jón Arason kieltäytyi luopumasta katolisesta uskosta. Hän kokosi miehiä, otti vangiksi kilpailevan luterilaisen piispan ja hallitsi hetken käytännössä koko Pohjois-Islantia. Vuonna 1550 hänet ja hänen kaksi poikaansa vangittiin taistelun jälkeen, ja marraskuun 7. päivänä heidät mestattiin Skálholtissa ilman oikeudenkäyntiä — päätöksen teki kuninkaan kirjuri, koska pelättiin, ettei rauhaa muuten koskaan tulisi. Arasonin kuolema päätti katolisen kirkon vallan Islannissa.
+- [Islanti — maalehti / Arki: Uimala on kylän olohuone] Ympäri vuoden — Islannissa maan alta saa kuumaa vettä, ja sillä lämmitetään sekä talot että uima-altaat. Lähes joka kylässä on uimala, joka on auki ympäri vuoden ja myös pakkasella. Varsinaisen altaan vieressä on pieniä kuumia altaita, joissa istutaan leuat vedessä ja jutellaan — siellä puhutaan säästä, politiikasta ja naapureista. Yksi sääntö on ehdoton: ennen altaaseen menoa peseydytään ilman uimapukua, ja siitä muistuttavat kyltit pukuhuoneen seinällä.
+- [Islanti — maalehti / Arki: Talon seinät kasvoivat ruohoa] 1800-luku — Islannissa ei kasva metsää, joten rakennuspuuta piti tuoda meren takaa tai kerätä ajopuuna rannalta. Siksi talot tehtiin siitä, mitä oli: kiviä, turvetta ja vähän puuta. Seinät ladottiin turvelevyistä kalanruodon kuvioon, ja katolla kasvoi ruoho. Sisällä oli lämmin, mutta pimeä ja kostea. Turvetaloissa asuttiin yleisesti vielä 1800-luvulla ja paikoin 1900-luvun puolelle asti. Glaumbærin museossa niitä on säilynyt kokonainen rivi.
+AIEMPI KYSYMYS: Mikä on saaga?
+AIEMPI VASTAUS (Livia):
+Mmm— saaga. Sen minä tiedän. Saaga on keskiajalla Islannissa ja muualla Pohjolassa kirjoitettu [[proosa]]kertomus, joka kertoo kuninkaista, suvuista ja merkittävistä tapahtumista. Saagat kirjoitettiin pääosin 1200- ja 1300-luvuilla, ja ne ovat tärkeä lähde vanhasta pohjoismaisesta elämästä ja kielestä. [[Islannissa]] niitä on säilynyt runsaasti käsikirjoituksina. Tarinoiden kantaminen on kyllä meidän sukumme alaa.
+KYSYMYS: Kerro lisää: Islannissa
+
+### 285
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flateyjarbók (kulttuuri)
+Tietoruudun teksti: Flateyjarbók on suurin keskiaikainen islantilainen käsikirjoitus, 225 kirjoitettua ja kuvitettua pergamenttilehteä. Lakimies Jón Hákonarson tilasi teoksen, ja papit Jón Þórðarson ja Magnús Þórhallsson kirjoittivat ja kuvittivat sen vuosina 1387-1394. Kirja sisältää pääosin Norjan kuninkaiden saagoja, mutta myös ainoat säilyneet islanninkieliset versiot Orkneyinga-saagasta ja Färsaarelaisten saagasta sekä tärkeän Grænlendinga-saagan Vinlannin siirtokunnasta. Vuonna 1651 piispa Brynjólfur Sveinsson pyysi Tanskan kuninkaan luvalla kaikkia islantilaisia luovuttamaan vanhat käsikirjoituksensa, ja Flateyjarbók päätyi Flatey-saarelta Kööpenhaminaan, jossa se säilyi tanskalaisessa kirjastossa yli kolmesataa vuotta.
+AIEMPI KYSYMYS: Miksi Flateyjarbók on saanut nimensä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Nimessä on saari. Nimi tulee [[Flateyn]] saaresta, jossa käsikirjoitus aikanaan oli. Flatey sijaitsee Islannin länsiosassa [[Breiðafjörðurin]] lahdella. Islanniksi bók tarkoittaa kirjaa, joten nimi on suunnilleen Flateyn kirja. Kirjan nimeen voi sentään luottaa.
+KYSYMYS: Kerro lisää: Breiðafjörðurin
+
+### 286
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flateyjarbók (kulttuuri)
+Tietoruudun teksti: Flateyjarbók on suurin keskiaikainen islantilainen käsikirjoitus, 225 kirjoitettua ja kuvitettua pergamenttilehteä. Lakimies Jón Hákonarson tilasi teoksen, ja papit Jón Þórðarson ja Magnús Þórhallsson kirjoittivat ja kuvittivat sen vuosina 1387-1394. Kirja sisältää pääosin Norjan kuninkaiden saagoja, mutta myös ainoat säilyneet islanninkieliset versiot Orkneyinga-saagasta ja Färsaarelaisten saagasta sekä tärkeän Grænlendinga-saagan Vinlannin siirtokunnasta. Vuonna 1651 piispa Brynjólfur Sveinsson pyysi Tanskan kuninkaan luvalla kaikkia islantilaisia luovuttamaan vanhat käsikirjoituksensa, ja Flateyjarbók päätyi Flatey-saarelta Kööpenhaminaan, jossa se säilyi tanskalaisessa kirjastossa yli kolmesataa vuotta.
+AIEMPI KYSYMYS: Mistä materiaalista pergamentti on tehty?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Pergamentti valmistettiin eläinten nahasta, yleensä vasikan, lampaan tai vuohen. Nahka puhdistettiin, venytettiin ja kaavittiin ohueksi, jolloin siitä tuli kestävä kirjoitusalusta. [[Flateyjarbókin]] 225 lehteä on kirjoitettu ja kuvitettu juuri tällaiselle pohjalle, ja aikakauden [[käsikirjoitukset]] tehtiin yleisesti samalla tavalla.
+
+Joka ikinen lehti on joskus ollut eläimen nahkaa, mikä saa minut katsomaan omia höyheniäni vähän eri silmin. Pehmeä leivonnainen olisi silti ollut parempi kirjoitusalusta.
+KYSYMYS: Kerro lisää: Flateyjarbókin
+
+### 287
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flateyjarbók (kulttuuri)
+Tietoruudun teksti: Flateyjarbók on suurin keskiaikainen islantilainen käsikirjoitus, 225 kirjoitettua ja kuvitettua pergamenttilehteä. Lakimies Jón Hákonarson tilasi teoksen, ja papit Jón Þórðarson ja Magnús Þórhallsson kirjoittivat ja kuvittivat sen vuosina 1387-1394. Kirja sisältää pääosin Norjan kuninkaiden saagoja, mutta myös ainoat säilyneet islanninkieliset versiot Orkneyinga-saagasta ja Färsaarelaisten saagasta sekä tärkeän Grænlendinga-saagan Vinlannin siirtokunnasta. Vuonna 1651 piispa Brynjólfur Sveinsson pyysi Tanskan kuninkaan luvalla kaikkia islantilaisia luovuttamaan vanhat käsikirjoituksensa, ja Flateyjarbók päätyi Flatey-saarelta Kööpenhaminaan, jossa se säilyi tanskalaisessa kirjastossa yli kolmesataa vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — kaupunkilehti / Kirjat: Käsikirjoitukset tuotiin takaisin laivalla] Keskiaikaiset islantilaiset käsikirjoitukset vietiin 1600- ja 1700-luvuilla Tanskaan tutkittaviksi, ja ne jäivät sinne kahdeksi vuosisadaksi. Kun Islanti pyysi niitä takaisin, syntyi pitkä kiista — Tanskan yliopistot vastustivat. Lopulta ensimmäiset niteet palasivat 21. huhtikuuta 1971 laivalla, jota oli vastassa satamassa väkijoukko ja televisiokamerat. Koulut pidettiin kiinni, jotta lapset pääsivät katsomaan. Palautus jatkui vuosikymmeniä.
+AIEMPI KYSYMYS: Mistä materiaalista pergamentti on tehty?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Pergamentti valmistettiin eläinten nahasta, yleensä vasikan, lampaan tai vuohen. Nahka puhdistettiin, venytettiin ja kaavittiin ohueksi, jolloin siitä tuli kestävä kirjoitusalusta. [[Flateyjarbókin]] 225 lehteä on kirjoitettu ja kuvitettu juuri tällaiselle pohjalle, ja aikakauden [[käsikirjoitukset]] tehtiin yleisesti samalla tavalla.
+
+Joka ikinen lehti on joskus ollut eläimen nahkaa, mikä saa minut katsomaan omia höyheniäni vähän eri silmin. Pehmeä leivonnainen olisi silti ollut parempi kirjoitusalusta.
+KYSYMYS: Kerro lisää: käsikirjoitukset
+
+### 288
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Goðafoss (historia)
+Tietoruudun teksti: Goðafoss on putous Pohjois-Islannissa Skjálfandafljót-joessa, pääreitin varrella noin 45 minuutin ajomatkan päässä Akureyrista. Vesi putoaa kaksitoista metriä kolmenkymmenen metrin levyisenä hevosenkengän muotoisena verhona. Nimi voidaan lukea joko jumalten tai goðin, päällikkö-papin, putoukseksi; vuosina 1879-1882 Tanskassa julkaistiin tarina, jonka mukaan lainpuhuja Þorgeir Ljósvetningagoði heitti muinaisten jumalten patsaansa putoukseen palattuaan Alþingiltä, jossa hän oli tehnyt kristinuskosta viralliseksi uskonnoksi vuonna 999 tai 1000. Tarina on todennäköisesti 1800-luvun oma keksintö, sillä vanhin lähde Þorgeirin osuudesta käännytykseen, Ari Þorgilssonin Íslendingabók, ei mainitse patsaiden heittämistä lainkaan — silti tarina on kuvattu myös Akureyrin kirkon ikkunalasiin.
+AIEMPI KYSYMYS: Mitä nimi Goðafoss voi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+No niin, hyvä nimikysymys. Nimi voidaan lukea kahdella tavalla: jumalten putouksena tai [[goðin]], eli päällikkö-papin, putouksena. Putous sijaitsee [[Pohjois-Islannissa]] [[Skjálfandafljót-joessa]], ja vesi putoaa kaksitoista metriä noin kolmenkymmenen metrin levyisenä hevosenkengän muotoisena verhona. Kaksi merkitystä yhdessä sanassa on ihan tehokasta.
+KYSYMYS: Kerro lisää: goðin
+
+### 289
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Goðafoss (historia)
+Tietoruudun teksti: Goðafoss on putous Pohjois-Islannissa Skjálfandafljót-joessa, pääreitin varrella noin 45 minuutin ajomatkan päässä Akureyrista. Vesi putoaa kaksitoista metriä kolmenkymmenen metrin levyisenä hevosenkengän muotoisena verhona. Nimi voidaan lukea joko jumalten tai goðin, päällikkö-papin, putoukseksi; vuosina 1879-1882 Tanskassa julkaistiin tarina, jonka mukaan lainpuhuja Þorgeir Ljósvetningagoði heitti muinaisten jumalten patsaansa putoukseen palattuaan Alþingiltä, jossa hän oli tehnyt kristinuskosta viralliseksi uskonnoksi vuonna 999 tai 1000. Tarina on todennäköisesti 1800-luvun oma keksintö, sillä vanhin lähde Þorgeirin osuudesta käännytykseen, Ari Þorgilssonin Íslendingabók, ei mainitse patsaiden heittämistä lainkaan — silti tarina on kuvattu myös Akureyrin kirkon ikkunalasiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Piispa joka taisteli uskontoaan vastaan ja hävisi] 1550 — Tanska määräsi Islannin luterilaiseksi 1500-luvulla, mutta Hólarin piispa Jón Arason kieltäytyi luopumasta katolisesta uskosta. Hän kokosi miehiä, otti vangiksi kilpailevan luterilaisen piispan ja hallitsi hetken käytännössä koko Pohjois-Islantia. Vuonna 1550 hänet ja hänen kaksi poikaansa vangittiin taistelun jälkeen, ja marraskuun 7. päivänä heidät mestattiin Skálholtissa ilman oikeudenkäyntiä — päätöksen teki kuninkaan kirjuri, koska pelättiin, ettei rauhaa muuten koskaan tulisi. Arasonin kuolema päätti katolisen kirkon vallan Islannissa.
+AIEMPI KYSYMYS: Mitä nimi Goðafoss voi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+No niin, hyvä nimikysymys. Nimi voidaan lukea kahdella tavalla: jumalten putouksena tai [[goðin]], eli päällikkö-papin, putouksena. Putous sijaitsee [[Pohjois-Islannissa]] [[Skjálfandafljót-joessa]], ja vesi putoaa kaksitoista metriä noin kolmenkymmenen metrin levyisenä hevosenkengän muotoisena verhona. Kaksi merkitystä yhdessä sanassa on ihan tehokasta.
+KYSYMYS: Kerro lisää: Pohjois-Islannissa
+
+### 290
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Goðafoss (historia)
+Tietoruudun teksti: Goðafoss on putous Pohjois-Islannissa Skjálfandafljót-joessa, pääreitin varrella noin 45 minuutin ajomatkan päässä Akureyrista. Vesi putoaa kaksitoista metriä kolmenkymmenen metrin levyisenä hevosenkengän muotoisena verhona. Nimi voidaan lukea joko jumalten tai goðin, päällikkö-papin, putoukseksi; vuosina 1879-1882 Tanskassa julkaistiin tarina, jonka mukaan lainpuhuja Þorgeir Ljósvetningagoði heitti muinaisten jumalten patsaansa putoukseen palattuaan Alþingiltä, jossa hän oli tehnyt kristinuskosta viralliseksi uskonnoksi vuonna 999 tai 1000. Tarina on todennäköisesti 1800-luvun oma keksintö, sillä vanhin lähde Þorgeirin osuudesta käännytykseen, Ari Þorgilssonin Íslendingabók, ei mainitse patsaiden heittämistä lainkaan — silti tarina on kuvattu myös Akureyrin kirkon ikkunalasiin.
+AIEMPI KYSYMYS: Mitä nimi Goðafoss voi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+No niin, hyvä nimikysymys. Nimi voidaan lukea kahdella tavalla: jumalten putouksena tai [[goðin]], eli päällikkö-papin, putouksena. Putous sijaitsee [[Pohjois-Islannissa]] [[Skjálfandafljót-joessa]], ja vesi putoaa kaksitoista metriä noin kolmenkymmenen metrin levyisenä hevosenkengän muotoisena verhona. Kaksi merkitystä yhdessä sanassa on ihan tehokasta.
+KYSYMYS: Kerro lisää: Skjálfandafljót-joessa
+
+### 291
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Goðafoss (historia)
+Tietoruudun teksti: Goðafoss on putous Pohjois-Islannissa Skjálfandafljót-joessa, pääreitin varrella noin 45 minuutin ajomatkan päässä Akureyrista. Vesi putoaa kaksitoista metriä kolmenkymmenen metrin levyisenä hevosenkengän muotoisena verhona. Nimi voidaan lukea joko jumalten tai goðin, päällikkö-papin, putoukseksi; vuosina 1879-1882 Tanskassa julkaistiin tarina, jonka mukaan lainpuhuja Þorgeir Ljósvetningagoði heitti muinaisten jumalten patsaansa putoukseen palattuaan Alþingiltä, jossa hän oli tehnyt kristinuskosta viralliseksi uskonnoksi vuonna 999 tai 1000. Tarina on todennäköisesti 1800-luvun oma keksintö, sillä vanhin lähde Þorgeirin osuudesta käännytykseen, Ari Þorgilssonin Íslendingabók, ei mainitse patsaiden heittämistä lainkaan — silti tarina on kuvattu myös Akureyrin kirkon ikkunalasiin.
+AIEMPI KYSYMYS: Miksi patsastarinaa pidetään myöhempänä keksintönä?
+AIEMPI VASTAUS (Livia):
+Ai se tarina. Tästä saa kyl vähän selittää. Vanhin lähde Þorgeirin osuudesta kristinuskon omaksumiseen on [[Ari Þorgilssonin]] [[Íslendingabók]], eikä se mainitse patsaiden heittämistä putoukseen lainkaan. Tarina julkaistiin Tanskassa vasta vuosina 1879-1882, joten sitä pidetään todennäköisesti 1800-luvun keksintönä. Tarina on silti kuvattu myös [[Akureyrin kirkon]] ikkunalasiin. Hyvä tarina elää, vaikka lähteet olisivat toista mieltä.
+KYSYMYS: Kerro lisää: Ari Þorgilssonin
+
+### 292
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Goðafoss (historia)
+Tietoruudun teksti: Goðafoss on putous Pohjois-Islannissa Skjálfandafljót-joessa, pääreitin varrella noin 45 minuutin ajomatkan päässä Akureyrista. Vesi putoaa kaksitoista metriä kolmenkymmenen metrin levyisenä hevosenkengän muotoisena verhona. Nimi voidaan lukea joko jumalten tai goðin, päällikkö-papin, putoukseksi; vuosina 1879-1882 Tanskassa julkaistiin tarina, jonka mukaan lainpuhuja Þorgeir Ljósvetningagoði heitti muinaisten jumalten patsaansa putoukseen palattuaan Alþingiltä, jossa hän oli tehnyt kristinuskosta viralliseksi uskonnoksi vuonna 999 tai 1000. Tarina on todennäköisesti 1800-luvun oma keksintö, sillä vanhin lähde Þorgeirin osuudesta käännytykseen, Ari Þorgilssonin Íslendingabók, ei mainitse patsaiden heittämistä lainkaan — silti tarina on kuvattu myös Akureyrin kirkon ikkunalasiin.
+AIEMPI KYSYMYS: Miksi patsastarinaa pidetään myöhempänä keksintönä?
+AIEMPI VASTAUS (Livia):
+Ai se tarina. Tästä saa kyl vähän selittää. Vanhin lähde Þorgeirin osuudesta kristinuskon omaksumiseen on [[Ari Þorgilssonin]] [[Íslendingabók]], eikä se mainitse patsaiden heittämistä putoukseen lainkaan. Tarina julkaistiin Tanskassa vasta vuosina 1879-1882, joten sitä pidetään todennäköisesti 1800-luvun keksintönä. Tarina on silti kuvattu myös [[Akureyrin kirkon]] ikkunalasiin. Hyvä tarina elää, vaikka lähteet olisivat toista mieltä.
+KYSYMYS: Kerro lisää: Íslendingabók
+
+### 293
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Goðafoss (historia)
+Tietoruudun teksti: Goðafoss on putous Pohjois-Islannissa Skjálfandafljót-joessa, pääreitin varrella noin 45 minuutin ajomatkan päässä Akureyrista. Vesi putoaa kaksitoista metriä kolmenkymmenen metrin levyisenä hevosenkengän muotoisena verhona. Nimi voidaan lukea joko jumalten tai goðin, päällikkö-papin, putoukseksi; vuosina 1879-1882 Tanskassa julkaistiin tarina, jonka mukaan lainpuhuja Þorgeir Ljósvetningagoði heitti muinaisten jumalten patsaansa putoukseen palattuaan Alþingiltä, jossa hän oli tehnyt kristinuskosta viralliseksi uskonnoksi vuonna 999 tai 1000. Tarina on todennäköisesti 1800-luvun oma keksintö, sillä vanhin lähde Þorgeirin osuudesta käännytykseen, Ari Þorgilssonin Íslendingabók, ei mainitse patsaiden heittämistä lainkaan — silti tarina on kuvattu myös Akureyrin kirkon ikkunalasiin.
+AIEMPI KYSYMYS: Miksi patsastarinaa pidetään myöhempänä keksintönä?
+AIEMPI VASTAUS (Livia):
+Ai se tarina. Tästä saa kyl vähän selittää. Vanhin lähde Þorgeirin osuudesta kristinuskon omaksumiseen on [[Ari Þorgilssonin]] [[Íslendingabók]], eikä se mainitse patsaiden heittämistä putoukseen lainkaan. Tarina julkaistiin Tanskassa vasta vuosina 1879-1882, joten sitä pidetään todennäköisesti 1800-luvun keksintönä. Tarina on silti kuvattu myös [[Akureyrin kirkon]] ikkunalasiin. Hyvä tarina elää, vaikka lähteet olisivat toista mieltä.
+KYSYMYS: Kerro lisää: Akureyrin kirkon
+
+### 294
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Goðafoss (historia)
+Tietoruudun teksti: Goðafoss on putous Pohjois-Islannissa Skjálfandafljót-joessa, pääreitin varrella noin 45 minuutin ajomatkan päässä Akureyrista. Vesi putoaa kaksitoista metriä kolmenkymmenen metrin levyisenä hevosenkengän muotoisena verhona. Nimi voidaan lukea joko jumalten tai goðin, päällikkö-papin, putoukseksi; vuosina 1879-1882 Tanskassa julkaistiin tarina, jonka mukaan lainpuhuja Þorgeir Ljósvetningagoði heitti muinaisten jumalten patsaansa putoukseen palattuaan Alþingiltä, jossa hän oli tehnyt kristinuskosta viralliseksi uskonnoksi vuonna 999 tai 1000. Tarina on todennäköisesti 1800-luvun oma keksintö, sillä vanhin lähde Þorgeirin osuudesta käännytykseen, Ari Þorgilssonin Íslendingabók, ei mainitse patsaiden heittämistä lainkaan — silti tarina on kuvattu myös Akureyrin kirkon ikkunalasiin.
+AIEMPI KYSYMYS: Mitä Alþingi oli?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on tärkeä paikka. Alþingi oli Islannin kansankokous, joka perustettiin keskiajalla, perinteisen käsityksen mukaan noin vuonna 930. Siellä sovittiin laeista ja ratkottiin riitoja, ja [[lainpuhuja]] luki lakeja ulkomuistista. Kokous pidettiin [[Þingvellirissä]]. Ulkoa opeteltua lakia, kuulostaa melkein viestinviejän työltä.
+KYSYMYS: Kerro lisää: lainpuhuja
+
+### 295
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Goðafoss (historia)
+Tietoruudun teksti: Goðafoss on putous Pohjois-Islannissa Skjálfandafljót-joessa, pääreitin varrella noin 45 minuutin ajomatkan päässä Akureyrista. Vesi putoaa kaksitoista metriä kolmenkymmenen metrin levyisenä hevosenkengän muotoisena verhona. Nimi voidaan lukea joko jumalten tai goðin, päällikkö-papin, putoukseksi; vuosina 1879-1882 Tanskassa julkaistiin tarina, jonka mukaan lainpuhuja Þorgeir Ljósvetningagoði heitti muinaisten jumalten patsaansa putoukseen palattuaan Alþingiltä, jossa hän oli tehnyt kristinuskosta viralliseksi uskonnoksi vuonna 999 tai 1000. Tarina on todennäköisesti 1800-luvun oma keksintö, sillä vanhin lähde Þorgeirin osuudesta käännytykseen, Ari Þorgilssonin Íslendingabók, ei mainitse patsaiden heittämistä lainkaan — silti tarina on kuvattu myös Akureyrin kirkon ikkunalasiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — kaupunkilehti / Islanti: Käräjät kahden mantereen välissä] Þingvellirissä islantilaiset kokoontuivat käräjille vuodesta 930 alkaen: lait luettiin ääneen kalliolta, koska niitä ei ollut kirjoitettu mihinkään. Paikka sattuu olemaan kohdassa, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat — rotko levenee pari senttiä vuodessa.
+AIEMPI KYSYMYS: Mitä Alþingi oli?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on tärkeä paikka. Alþingi oli Islannin kansankokous, joka perustettiin keskiajalla, perinteisen käsityksen mukaan noin vuonna 930. Siellä sovittiin laeista ja ratkottiin riitoja, ja [[lainpuhuja]] luki lakeja ulkomuistista. Kokous pidettiin [[Þingvellirissä]]. Ulkoa opeteltua lakia, kuulostaa melkein viestinviejän työltä.
+KYSYMYS: Kerro lisää: Þingvellirissä
+
+### 296
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Goðafoss (historia)
+Tietoruudun teksti: Goðafoss on putous Pohjois-Islannissa Skjálfandafljót-joessa, pääreitin varrella noin 45 minuutin ajomatkan päässä Akureyrista. Vesi putoaa kaksitoista metriä kolmenkymmenen metrin levyisenä hevosenkengän muotoisena verhona. Nimi voidaan lukea joko jumalten tai goðin, päällikkö-papin, putoukseksi; vuosina 1879-1882 Tanskassa julkaistiin tarina, jonka mukaan lainpuhuja Þorgeir Ljósvetningagoði heitti muinaisten jumalten patsaansa putoukseen palattuaan Alþingiltä, jossa hän oli tehnyt kristinuskosta viralliseksi uskonnoksi vuonna 999 tai 1000. Tarina on todennäköisesti 1800-luvun oma keksintö, sillä vanhin lähde Þorgeirin osuudesta käännytykseen, Ari Þorgilssonin Íslendingabók, ei mainitse patsaiden heittämistä lainkaan — silti tarina on kuvattu myös Akureyrin kirkon ikkunalasiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Yksi mies ratkaisi koko maan uskonnon yhdessä yössä] 1000 — Vuonna 1000 Alþingillä uhkasi puhjeta sisällissota, kun kristityt ja vanhauskoiset eivät suostuneet enää elämään samojen lakien alla. Ratkaisu jätettiin lainlausuja Þorgeir Ljósvetningagoðille, joka oli itse vanhauskoinen mutta tunnettu puolueettomuudestaan. Hän veti turkin päänsä yli ja makasi hiljaa vuorokauden, ja seuraavana päivänä hän julisti koko maan kristityksi — mutta kompromississa sai yhä uhrata vanhoille jumalille kotona salaa, syödä hevosenlihaa ja jättää vastasyntyneen lapsen heitteille, kuten ennenkin. Verta ei vuodatettu kertaakaan.
+AIEMPI KYSYMYS: Milloin Islanti otti kristinuskon käyttöön?
+AIEMPI VASTAUS (Livia):
+Tuota niin, vuosiluku. Islannin kristinuskon omaksuminen tapahtui [[Alþingillä]] vuonna 999 tai 1000, eivätkä lähteet ole tarkasti yhtä mieltä vuodesta. Päätöksen yhteydessä mainitaan lainpuhuja [[Þorgeir Ljósvetningagoði]], jonka ratkaisun mukaan [[kristinuskosta]] tuli virallinen uskonto. Yhden vuoden heitto, mutta onhan siinä tuhat vuotta.
+KYSYMYS: Kerro lisää: Alþingillä
+
+### 297
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Goðafoss (historia)
+Tietoruudun teksti: Goðafoss on putous Pohjois-Islannissa Skjálfandafljót-joessa, pääreitin varrella noin 45 minuutin ajomatkan päässä Akureyrista. Vesi putoaa kaksitoista metriä kolmenkymmenen metrin levyisenä hevosenkengän muotoisena verhona. Nimi voidaan lukea joko jumalten tai goðin, päällikkö-papin, putoukseksi; vuosina 1879-1882 Tanskassa julkaistiin tarina, jonka mukaan lainpuhuja Þorgeir Ljósvetningagoði heitti muinaisten jumalten patsaansa putoukseen palattuaan Alþingiltä, jossa hän oli tehnyt kristinuskosta viralliseksi uskonnoksi vuonna 999 tai 1000. Tarina on todennäköisesti 1800-luvun oma keksintö, sillä vanhin lähde Þorgeirin osuudesta käännytykseen, Ari Þorgilssonin Íslendingabók, ei mainitse patsaiden heittämistä lainkaan — silti tarina on kuvattu myös Akureyrin kirkon ikkunalasiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Yksi mies ratkaisi koko maan uskonnon yhdessä yössä] 1000 — Vuonna 1000 Alþingillä uhkasi puhjeta sisällissota, kun kristityt ja vanhauskoiset eivät suostuneet enää elämään samojen lakien alla. Ratkaisu jätettiin lainlausuja Þorgeir Ljósvetningagoðille, joka oli itse vanhauskoinen mutta tunnettu puolueettomuudestaan. Hän veti turkin päänsä yli ja makasi hiljaa vuorokauden, ja seuraavana päivänä hän julisti koko maan kristityksi — mutta kompromississa sai yhä uhrata vanhoille jumalille kotona salaa, syödä hevosenlihaa ja jättää vastasyntyneen lapsen heitteille, kuten ennenkin. Verta ei vuodatettu kertaakaan.
+AIEMPI KYSYMYS: Milloin Islanti otti kristinuskon käyttöön?
+AIEMPI VASTAUS (Livia):
+Tuota niin, vuosiluku. Islannin kristinuskon omaksuminen tapahtui [[Alþingillä]] vuonna 999 tai 1000, eivätkä lähteet ole tarkasti yhtä mieltä vuodesta. Päätöksen yhteydessä mainitaan lainpuhuja [[Þorgeir Ljósvetningagoði]], jonka ratkaisun mukaan [[kristinuskosta]] tuli virallinen uskonto. Yhden vuoden heitto, mutta onhan siinä tuhat vuotta.
+KYSYMYS: Kerro lisää: Þorgeir Ljósvetningagoði
+
+### 298
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Goðafoss (historia)
+Tietoruudun teksti: Goðafoss on putous Pohjois-Islannissa Skjálfandafljót-joessa, pääreitin varrella noin 45 minuutin ajomatkan päässä Akureyrista. Vesi putoaa kaksitoista metriä kolmenkymmenen metrin levyisenä hevosenkengän muotoisena verhona. Nimi voidaan lukea joko jumalten tai goðin, päällikkö-papin, putoukseksi; vuosina 1879-1882 Tanskassa julkaistiin tarina, jonka mukaan lainpuhuja Þorgeir Ljósvetningagoði heitti muinaisten jumalten patsaansa putoukseen palattuaan Alþingiltä, jossa hän oli tehnyt kristinuskosta viralliseksi uskonnoksi vuonna 999 tai 1000. Tarina on todennäköisesti 1800-luvun oma keksintö, sillä vanhin lähde Þorgeirin osuudesta käännytykseen, Ari Þorgilssonin Íslendingabók, ei mainitse patsaiden heittämistä lainkaan — silti tarina on kuvattu myös Akureyrin kirkon ikkunalasiin.
+AIEMPI KYSYMYS: Milloin Islanti otti kristinuskon käyttöön?
+AIEMPI VASTAUS (Livia):
+Tuota niin, vuosiluku. Islannin kristinuskon omaksuminen tapahtui [[Alþingillä]] vuonna 999 tai 1000, eivätkä lähteet ole tarkasti yhtä mieltä vuodesta. Päätöksen yhteydessä mainitaan lainpuhuja [[Þorgeir Ljósvetningagoði]], jonka ratkaisun mukaan [[kristinuskosta]] tuli virallinen uskonto. Yhden vuoden heitto, mutta onhan siinä tuhat vuotta.
+KYSYMYS: Kerro lisää: kristinuskosta
+
+### 299
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Goðafoss (historia)
+Tietoruudun teksti: Goðafoss on putous Pohjois-Islannissa Skjálfandafljót-joessa, pääreitin varrella noin 45 minuutin ajomatkan päässä Akureyrista. Vesi putoaa kaksitoista metriä kolmenkymmenen metrin levyisenä hevosenkengän muotoisena verhona. Nimi voidaan lukea joko jumalten tai goðin, päällikkö-papin, putoukseksi; vuosina 1879-1882 Tanskassa julkaistiin tarina, jonka mukaan lainpuhuja Þorgeir Ljósvetningagoði heitti muinaisten jumalten patsaansa putoukseen palattuaan Alþingiltä, jossa hän oli tehnyt kristinuskosta viralliseksi uskonnoksi vuonna 999 tai 1000. Tarina on todennäköisesti 1800-luvun oma keksintö, sillä vanhin lähde Þorgeirin osuudesta käännytykseen, Ari Þorgilssonin Íslendingabók, ei mainitse patsaiden heittämistä lainkaan — silti tarina on kuvattu myös Akureyrin kirkon ikkunalasiin.
+AIEMPI KYSYMYS: Missä Akureyri sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai Akureyri. Joo, tiedän. [[Akureyri]] on kaupunki Pohjois-Islannissa, [[Eyjafjörðurin]] vuonon pohjukassa. [[Goðafoss]] on noin 45 minuutin ajomatkan päässä sieltä. Leipomoita siellä varmasti on, mutta pullan nimeä en tiedä.
+KYSYMYS: Kerro lisää: Akureyri
+
+### 300
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Goðafoss (historia)
+Tietoruudun teksti: Goðafoss on putous Pohjois-Islannissa Skjálfandafljót-joessa, pääreitin varrella noin 45 minuutin ajomatkan päässä Akureyrista. Vesi putoaa kaksitoista metriä kolmenkymmenen metrin levyisenä hevosenkengän muotoisena verhona. Nimi voidaan lukea joko jumalten tai goðin, päällikkö-papin, putoukseksi; vuosina 1879-1882 Tanskassa julkaistiin tarina, jonka mukaan lainpuhuja Þorgeir Ljósvetningagoði heitti muinaisten jumalten patsaansa putoukseen palattuaan Alþingiltä, jossa hän oli tehnyt kristinuskosta viralliseksi uskonnoksi vuonna 999 tai 1000. Tarina on todennäköisesti 1800-luvun oma keksintö, sillä vanhin lähde Þorgeirin osuudesta käännytykseen, Ari Þorgilssonin Íslendingabók, ei mainitse patsaiden heittämistä lainkaan — silti tarina on kuvattu myös Akureyrin kirkon ikkunalasiin.
+AIEMPI KYSYMYS: Missä Akureyri sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai Akureyri. Joo, tiedän. [[Akureyri]] on kaupunki Pohjois-Islannissa, [[Eyjafjörðurin]] vuonon pohjukassa. [[Goðafoss]] on noin 45 minuutin ajomatkan päässä sieltä. Leipomoita siellä varmasti on, mutta pullan nimeä en tiedä.
+KYSYMYS: Kerro lisää: Eyjafjörðurin
+
+### 301
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Goðafoss (historia)
+Tietoruudun teksti: Goðafoss on putous Pohjois-Islannissa Skjálfandafljót-joessa, pääreitin varrella noin 45 minuutin ajomatkan päässä Akureyrista. Vesi putoaa kaksitoista metriä kolmenkymmenen metrin levyisenä hevosenkengän muotoisena verhona. Nimi voidaan lukea joko jumalten tai goðin, päällikkö-papin, putoukseksi; vuosina 1879-1882 Tanskassa julkaistiin tarina, jonka mukaan lainpuhuja Þorgeir Ljósvetningagoði heitti muinaisten jumalten patsaansa putoukseen palattuaan Alþingiltä, jossa hän oli tehnyt kristinuskosta viralliseksi uskonnoksi vuonna 999 tai 1000. Tarina on todennäköisesti 1800-luvun oma keksintö, sillä vanhin lähde Þorgeirin osuudesta käännytykseen, Ari Þorgilssonin Íslendingabók, ei mainitse patsaiden heittämistä lainkaan — silti tarina on kuvattu myös Akureyrin kirkon ikkunalasiin.
+AIEMPI KYSYMYS: Missä Akureyri sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai Akureyri. Joo, tiedän. [[Akureyri]] on kaupunki Pohjois-Islannissa, [[Eyjafjörðurin]] vuonon pohjukassa. [[Goðafoss]] on noin 45 minuutin ajomatkan päässä sieltä. Leipomoita siellä varmasti on, mutta pullan nimeä en tiedä.
+KYSYMYS: Kerro lisää: Goðafoss
+
+### 302
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kirkjufell (luonto · vuori)
+Tietoruudun teksti: Kirkjufell on 463 metriä korkea kukkula Snæfellsnesin pohjoisrannikolla, lähellä Grundarfjörðurin kylää, ja sitä pidetään Islannin kuvatuimpana vuorena. Se on nunatak eli jääkauden aikana jäätikön yläpuolelle kohonnut kallio, ja sen rakenne koostuu vuorottelevista pleistoseenikautisista laavakerroksista ja hiekkakivestä, huipulla tuffikiveä. Vuori tunnetaan myös televisiosta: se toimi Game of Thrones -sarjan kuudennen ja seitsemännen tuotantokauden kuvauspaikkana "nuolenpää"-vuorena, jonka Koira-niminen hahmo näkee Muurin pohjoispuolella. Kiipeäminen on mahdollista kesällä ja syksyllä noin kolmessa tunnissa, mutta jyrkät kohdat ovat vaarallisia sateella, ja vuorella on sattunut kuolemantapauksia useana vuonna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Myanmar — maalehti / Luonto: Järvi, joka putosi maan alle] Indawgyi Kachinin osavaltiossa on suurin kokonaan Myanmarissa sijaitseva järvi: 13 kilometriä idästä länteen ja 24 pohjoisesta etelään. Se ei ole kraatteri eikä jäätikön jälki vaan vajoama-allas, joka syntyi Sagaingin siirroksen sivuaskelmaan — sama repeämä kuin Kalifornian Salton Troughissa. Suullinen perimätieto kertoo hedelmällisestä laaksosta, joka täyttyi äkkiä vedellä maanjäristyksen jälkeen ja hukutti kylän asukkaineen. Järvi on Ramsar-kohde vuodesta 2016 ja Unescon biosfäärialue vuodesta 2017. Sen rannoilla pesii ympäri vuoden kaksi äärimmäisen uhanalaista korppikotkalajia.
+- [Alpit — kaupunkilehti / Luonto: Jää vetäytyy ylöspäin] Alppien jäätiköt ovat kutistuneet nopeasti: 1800-luvun puolivälin jälkeen niistä on sulanut yli puolet, ja pelkästään 2000-luvulla kutistuminen on kiihtynyt. Vuoristomajoja, jotka rakennettiin aikanaan jäätikön reunaan, seisoo nyt satoja metrejä paljaan kiven yllä. Sulaminen ei ole vain maisema-asia: jäätiköt varastoivat talven lumen ja päästävät sen jokiin kesällä, joten niiden kadotessa muuttuu myös se, milloin Euroopan suurissa joissa on vettä.
+- [Sveitsi — maalehti / Vuoret: Jäätikkö, joka virtaa kuin joki] 2001 — Aletschin jäätikkö on Alppien suurin: noin kaksikymmentä kilometriä pitkä ja paksuimmalta kohdalta lähes tuhat metriä syvä jäämassa. Se ei ole paikallaan vaan valuu alaspäin muutamia satoja metrejä vuodessa — niin hitaasti, ettei sitä näe, mutta pinnan tummat juovat kertovat virtauksen suunnan kuin joen pyörteet. Unesco otti jäätikön ympäristöineen maailmanperintöluetteloon vuonna 2001. Jäätikkö on lyhentynyt viime vuosikymmeninä nopeasti.
+AIEMPI KYSYMYS: Mikä on nunatak?
+AIEMPI VASTAUS (Livia):
+Ai se. Sanana hauska. Nunatak on jäätikön tai mannerjään yläpuolelle kohoava kallio, jota jää kiertää mutta ei peitä. Kirkjufell on tällainen: jääkauden aikana se kohosi [[jäätikön]] yläpuolelle, ja sen rakenne koostuu laavakerroksista ja hiekkakivestä, huipulla tuffikiveä. Vuori sijaitsee [[Snæfellsnesin]] pohjoisrannikolla. Kallio keskellä jäätä, kuin kyyhky lumisella katolla.
+KYSYMYS: Kerro lisää: jäätikön
+
+### 303
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kirkjufell (luonto · vuori)
+Tietoruudun teksti: Kirkjufell on 463 metriä korkea kukkula Snæfellsnesin pohjoisrannikolla, lähellä Grundarfjörðurin kylää, ja sitä pidetään Islannin kuvatuimpana vuorena. Se on nunatak eli jääkauden aikana jäätikön yläpuolelle kohonnut kallio, ja sen rakenne koostuu vuorottelevista pleistoseenikautisista laavakerroksista ja hiekkakivestä, huipulla tuffikiveä. Vuori tunnetaan myös televisiosta: se toimi Game of Thrones -sarjan kuudennen ja seitsemännen tuotantokauden kuvauspaikkana "nuolenpää"-vuorena, jonka Koira-niminen hahmo näkee Muurin pohjoispuolella. Kiipeäminen on mahdollista kesällä ja syksyllä noin kolmessa tunnissa, mutta jyrkät kohdat ovat vaarallisia sateella, ja vuorella on sattunut kuolemantapauksia useana vuonna.
+AIEMPI KYSYMYS: Mikä on nunatak?
+AIEMPI VASTAUS (Livia):
+Ai se. Sanana hauska. Nunatak on jäätikön tai mannerjään yläpuolelle kohoava kallio, jota jää kiertää mutta ei peitä. Kirkjufell on tällainen: jääkauden aikana se kohosi [[jäätikön]] yläpuolelle, ja sen rakenne koostuu laavakerroksista ja hiekkakivestä, huipulla tuffikiveä. Vuori sijaitsee [[Snæfellsnesin]] pohjoisrannikolla. Kallio keskellä jäätä, kuin kyyhky lumisella katolla.
+KYSYMYS: Kerro lisää: Snæfellsnesin
+
+### 304
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kirkjufell (luonto · vuori)
+Tietoruudun teksti: Kirkjufell on 463 metriä korkea kukkula Snæfellsnesin pohjoisrannikolla, lähellä Grundarfjörðurin kylää, ja sitä pidetään Islannin kuvatuimpana vuorena. Se on nunatak eli jääkauden aikana jäätikön yläpuolelle kohonnut kallio, ja sen rakenne koostuu vuorottelevista pleistoseenikautisista laavakerroksista ja hiekkakivestä, huipulla tuffikiveä. Vuori tunnetaan myös televisiosta: se toimi Game of Thrones -sarjan kuudennen ja seitsemännen tuotantokauden kuvauspaikkana "nuolenpää"-vuorena, jonka Koira-niminen hahmo näkee Muurin pohjoispuolella. Kiipeäminen on mahdollista kesällä ja syksyllä noin kolmessa tunnissa, mutta jyrkät kohdat ovat vaarallisia sateella, ja vuorella on sattunut kuolemantapauksia useana vuonna.
+AIEMPI KYSYMYS: Missä tv-sarjassa Kirkjufell on esiintynyt kuvauspaikkana?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä on televisiotietoa. Kirkjufell esiintyi [[Game of Thrones]] -sarjan kuudennella ja seitsemännellä tuotantokaudella. Siellä se toimi nuolenpää-vuorena, jonka Koira-niminen hahmo näkee Muurin pohjoispuolella. Vuori sijaitsee [[Snæfellsnesin]] pohjoisrannikolla. Minusta se on silti kaunein ilman kuvausryhmää.
+KYSYMYS: Kerro lisää: Game of Thrones
+
+### 305
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kirkjufell (luonto · vuori)
+Tietoruudun teksti: Kirkjufell on 463 metriä korkea kukkula Snæfellsnesin pohjoisrannikolla, lähellä Grundarfjörðurin kylää, ja sitä pidetään Islannin kuvatuimpana vuorena. Se on nunatak eli jääkauden aikana jäätikön yläpuolelle kohonnut kallio, ja sen rakenne koostuu vuorottelevista pleistoseenikautisista laavakerroksista ja hiekkakivestä, huipulla tuffikiveä. Vuori tunnetaan myös televisiosta: se toimi Game of Thrones -sarjan kuudennen ja seitsemännen tuotantokauden kuvauspaikkana "nuolenpää"-vuorena, jonka Koira-niminen hahmo näkee Muurin pohjoispuolella. Kiipeäminen on mahdollista kesällä ja syksyllä noin kolmessa tunnissa, mutta jyrkät kohdat ovat vaarallisia sateella, ja vuorella on sattunut kuolemantapauksia useana vuonna.
+AIEMPI KYSYMYS: Kuinka korkea Kirkjufell on?
+AIEMPI VASTAUS (Livia):
+No niin, mitat. Kirkjufell on 463 metriä korkea vuori [[Snæfellsnesin]] pohjoisrannikolla, lähellä [[Grundarfjörðurin]] kylää. Se ei ole Islannin korkeimpia huippuja, mutta jyrkkä muoto ja yksittäinen asema tekevät siitä silmiinpistävän. Sitä pidetään Islannin kuvatuimpana vuorena. Neljäsataa kuusikymmentäkolme metriä, ja kaiken sen minä ylitän siivillä.
+KYSYMYS: Kerro lisää: Grundarfjörðurin
+
+### 306
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kirkjufell (luonto · vuori)
+Tietoruudun teksti: Kirkjufell on 463 metriä korkea kukkula Snæfellsnesin pohjoisrannikolla, lähellä Grundarfjörðurin kylää, ja sitä pidetään Islannin kuvatuimpana vuorena. Se on nunatak eli jääkauden aikana jäätikön yläpuolelle kohonnut kallio, ja sen rakenne koostuu vuorottelevista pleistoseenikautisista laavakerroksista ja hiekkakivestä, huipulla tuffikiveä. Vuori tunnetaan myös televisiosta: se toimi Game of Thrones -sarjan kuudennen ja seitsemännen tuotantokauden kuvauspaikkana "nuolenpää"-vuorena, jonka Koira-niminen hahmo näkee Muurin pohjoispuolella. Kiipeäminen on mahdollista kesällä ja syksyllä noin kolmessa tunnissa, mutta jyrkät kohdat ovat vaarallisia sateella, ja vuorella on sattunut kuolemantapauksia useana vuonna.
+AIEMPI KYSYMYS: Voiko Kirkjufellille kiivetä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tähän on varoitus. Kiipeäminen on mahdollista kesällä ja syksyllä, ja se kestää noin kolme tuntia. Jyrkät kohdat ovat kuitenkin vaarallisia sateella, ja vuorella on sattunut kuolemantapauksia useana vuonna. Jyrkkä [[nunatak]] on vaativampi kuin miltä se näyttää kaukaa, ja se sijaitsee [[Snæfellsnesin]] pohjoisrannikolla. Retki kannattaa suunnitella sään ja oman kunnon mukaan. Sää kannattaa katsoa ennen lähtöä.
+KYSYMYS: Kerro lisää: nunatak
+
+### 307
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kirkjufell (luonto · vuori)
+Tietoruudun teksti: Kirkjufell on 463 metriä korkea kukkula Snæfellsnesin pohjoisrannikolla, lähellä Grundarfjörðurin kylää, ja sitä pidetään Islannin kuvatuimpana vuorena. Se on nunatak eli jääkauden aikana jäätikön yläpuolelle kohonnut kallio, ja sen rakenne koostuu vuorottelevista pleistoseenikautisista laavakerroksista ja hiekkakivestä, huipulla tuffikiveä. Vuori tunnetaan myös televisiosta: se toimi Game of Thrones -sarjan kuudennen ja seitsemännen tuotantokauden kuvauspaikkana "nuolenpää"-vuorena, jonka Koira-niminen hahmo näkee Muurin pohjoispuolella. Kiipeäminen on mahdollista kesällä ja syksyllä noin kolmessa tunnissa, mutta jyrkät kohdat ovat vaarallisia sateella, ja vuorella on sattunut kuolemantapauksia useana vuonna.
+AIEMPI KYSYMYS: Mikä on pleistoseeni?
+AIEMPI VASTAUS (Livia):
+Ai tota, geologiaa. Pleistoseeni on geologinen kausi, joka alkoi noin 2,6 miljoonaa vuotta sitten ja päättyi noin 11 700 vuotta sitten. Sen aikana vallitsi toistuvia [[jääkausia]] ja lämpimämpiä jaksoja. [[Kirkjufellin]] laava- ja hiekkakivikerrokset ovat muodostuneet tuona aikana. Miljoonia vuosia on kyyhkyllekin vähän iso luku.
+KYSYMYS: Kerro lisää: jääkausia
+
+### 308
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kirkjufell (luonto · vuori)
+Tietoruudun teksti: Kirkjufell on 463 metriä korkea kukkula Snæfellsnesin pohjoisrannikolla, lähellä Grundarfjörðurin kylää, ja sitä pidetään Islannin kuvatuimpana vuorena. Se on nunatak eli jääkauden aikana jäätikön yläpuolelle kohonnut kallio, ja sen rakenne koostuu vuorottelevista pleistoseenikautisista laavakerroksista ja hiekkakivestä, huipulla tuffikiveä. Vuori tunnetaan myös televisiosta: se toimi Game of Thrones -sarjan kuudennen ja seitsemännen tuotantokauden kuvauspaikkana "nuolenpää"-vuorena, jonka Koira-niminen hahmo näkee Muurin pohjoispuolella. Kiipeäminen on mahdollista kesällä ja syksyllä noin kolmessa tunnissa, mutta jyrkät kohdat ovat vaarallisia sateella, ja vuorella on sattunut kuolemantapauksia useana vuonna.
+AIEMPI KYSYMYS: Mikä on pleistoseeni?
+AIEMPI VASTAUS (Livia):
+Ai tota, geologiaa. Pleistoseeni on geologinen kausi, joka alkoi noin 2,6 miljoonaa vuotta sitten ja päättyi noin 11 700 vuotta sitten. Sen aikana vallitsi toistuvia [[jääkausia]] ja lämpimämpiä jaksoja. [[Kirkjufellin]] laava- ja hiekkakivikerrokset ovat muodostuneet tuona aikana. Miljoonia vuosia on kyyhkyllekin vähän iso luku.
+KYSYMYS: Kerro lisää: Kirkjufellin

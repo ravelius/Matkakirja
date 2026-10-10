@@ -1,0 +1,1172 @@
+### 81
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hólar (kulttuuri)
+Tietoruudun teksti: Hólar on pieni yhteisö Hjaltadalurin laaksossa Skagafjörðurin alueella Pohjois-Islannissa, noin 379 kilometrin päässä Reykjavíkista. Asukkaita on satakunta. Paikalla ovat Hólarin korkeakoulun päärakennukset, katedraali, islanninhevosen historian keskus ja turvetalo Nýibær.
+
+Islannin ensimmäinen kirjapaino tuotiin Hólariin vuonna 1530. Hólar oli Pohjois-Islannin piispanistuin — Skálholt hoiti saman tehtävän etelässä — ja kulttuurin ja opetuksen keskus lähes seitsemän vuosisadan ajan, vuosina 1106–1798. Piispa Jón Ögmundsson perusti hiippakunnan 1106, ja siitä tuli pian toinen maan kahdesta oppineisuuden keskuksesta.
+
+Hólar oli myös katolisen kirkon viimeinen tukikohta Islannissa uskonpuhdistuksen aikana: sen viimeinen katolinen piispa Jón Arason mestattiin Skálholtissa 1550 kahden poikansa kanssa. Tunnetuin luterilainen piispa oli Guðbrandur Þorláksson. Nykyisen kirkon uskotaan valmistun…
+AIEMPI KYSYMYS: Mikä Nýibær on?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on pieni mutta kiva. Nýibær on [[turvetalo]] Hólarin paikalla [[Hjaltadalurin]] laaksossa Pohjois-Islannissa. Paikalla ovat myös korkeakoulun päärakennukset, katedraali ja islanninhevosen historian keskus. Talon tarkasta iästä ja vaiheista en ole varma, joten en arvaile. Pienestä talosta lyhyt selitys, näin se on parempi.
+KYSYMYS: Kerro lisää: turvetalo
+
+### 82
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hólar (kulttuuri)
+Tietoruudun teksti: Hólar on pieni yhteisö Hjaltadalurin laaksossa Skagafjörðurin alueella Pohjois-Islannissa, noin 379 kilometrin päässä Reykjavíkista. Asukkaita on satakunta. Paikalla ovat Hólarin korkeakoulun päärakennukset, katedraali, islanninhevosen historian keskus ja turvetalo Nýibær.
+
+Islannin ensimmäinen kirjapaino tuotiin Hólariin vuonna 1530. Hólar oli Pohjois-Islannin piispanistuin — Skálholt hoiti saman tehtävän etelässä — ja kulttuurin ja opetuksen keskus lähes seitsemän vuosisadan ajan, vuosina 1106–1798. Piispa Jón Ögmundsson perusti hiippakunnan 1106, ja siitä tuli pian toinen maan kahdesta oppineisuuden keskuksesta.
+
+Hólar oli myös katolisen kirkon viimeinen tukikohta Islannissa uskonpuhdistuksen aikana: sen viimeinen katolinen piispa Jón Arason mestattiin Skálholtissa 1550 kahden poikansa kanssa. Tunnetuin luterilainen piispa oli Guðbrandur Þorláksson. Nykyisen kirkon uskotaan valmistun…
+AIEMPI KYSYMYS: Mikä Nýibær on?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on pieni mutta kiva. Nýibær on [[turvetalo]] Hólarin paikalla [[Hjaltadalurin]] laaksossa Pohjois-Islannissa. Paikalla ovat myös korkeakoulun päärakennukset, katedraali ja islanninhevosen historian keskus. Talon tarkasta iästä ja vaiheista en ole varma, joten en arvaile. Pienestä talosta lyhyt selitys, näin se on parempi.
+KYSYMYS: Kerro lisää: Hjaltadalurin
+
+### 83
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hólar (kulttuuri)
+Tietoruudun teksti: Hólar on pieni yhteisö Hjaltadalurin laaksossa Skagafjörðurin alueella Pohjois-Islannissa, noin 379 kilometrin päässä Reykjavíkista. Asukkaita on satakunta. Paikalla ovat Hólarin korkeakoulun päärakennukset, katedraali, islanninhevosen historian keskus ja turvetalo Nýibær.
+
+Islannin ensimmäinen kirjapaino tuotiin Hólariin vuonna 1530. Hólar oli Pohjois-Islannin piispanistuin — Skálholt hoiti saman tehtävän etelässä — ja kulttuurin ja opetuksen keskus lähes seitsemän vuosisadan ajan, vuosina 1106–1798. Piispa Jón Ögmundsson perusti hiippakunnan 1106, ja siitä tuli pian toinen maan kahdesta oppineisuuden keskuksesta.
+
+Hólar oli myös katolisen kirkon viimeinen tukikohta Islannissa uskonpuhdistuksen aikana: sen viimeinen katolinen piispa Jón Arason mestattiin Skálholtissa 1550 kahden poikansa kanssa. Tunnetuin luterilainen piispa oli Guðbrandur Þorláksson. Nykyisen kirkon uskotaan valmistun…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Piispa joka taisteli uskontoaan vastaan ja hävisi] 1550 — Tanska määräsi Islannin luterilaiseksi 1500-luvulla, mutta Hólarin piispa Jón Arason kieltäytyi luopumasta katolisesta uskosta. Hän kokosi miehiä, otti vangiksi kilpailevan luterilaisen piispan ja hallitsi hetken käytännössä koko Pohjois-Islantia. Vuonna 1550 hänet ja hänen kaksi poikaansa vangittiin taistelun jälkeen, ja marraskuun 7. päivänä heidät mestattiin Skálholtissa ilman oikeudenkäyntiä — päätöksen teki kuninkaan kirjuri, koska pelättiin, ettei rauhaa muuten koskaan tulisi. Arasonin kuolema päätti katolisen kirkon vallan Islannissa.
+AIEMPI KYSYMYS: Kuka oli Jón Arason?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Tämä on vakava aihe. Jón Arason oli [[Hólarin]] viimeinen katolinen piispa, ja hänet mestattiin Skálholtissa vuonna 1550 kahden poikansa kanssa uskonpuhdistuksen aikana. Tapahtumasta on kulunut yli 470 vuotta, ja sen ajan Islannissa uskonnon ja vallan kysymykset kietoutuivat tiiviisti yhteen. Hólarista tuli hänen aikanaan [[uskonpuhdistuksen]] aikaisen katolisen kirkon viimeinen tukikohta Islannissa, ja hänet tunnetaan yhä merkittävänä hahmona. Se on onneksi kaukana takana.
+KYSYMYS: Kerro lisää: Hólarin
+
+### 84
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hólar (kulttuuri)
+Tietoruudun teksti: Hólar on pieni yhteisö Hjaltadalurin laaksossa Skagafjörðurin alueella Pohjois-Islannissa, noin 379 kilometrin päässä Reykjavíkista. Asukkaita on satakunta. Paikalla ovat Hólarin korkeakoulun päärakennukset, katedraali, islanninhevosen historian keskus ja turvetalo Nýibær.
+
+Islannin ensimmäinen kirjapaino tuotiin Hólariin vuonna 1530. Hólar oli Pohjois-Islannin piispanistuin — Skálholt hoiti saman tehtävän etelässä — ja kulttuurin ja opetuksen keskus lähes seitsemän vuosisadan ajan, vuosina 1106–1798. Piispa Jón Ögmundsson perusti hiippakunnan 1106, ja siitä tuli pian toinen maan kahdesta oppineisuuden keskuksesta.
+
+Hólar oli myös katolisen kirkon viimeinen tukikohta Islannissa uskonpuhdistuksen aikana: sen viimeinen katolinen piispa Jón Arason mestattiin Skálholtissa 1550 kahden poikansa kanssa. Tunnetuin luterilainen piispa oli Guðbrandur Þorláksson. Nykyisen kirkon uskotaan valmistun…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Riddarholmenin kirkko] 1835 Riddarholmenin kirkko on yksi Tukholman vanhimmista rakennuksista — se rakennettiin fransiskaanimunkkien luostariksi jo 1200-luvun lopulla. Uskonpuhdistuksen jälkeen munkit lähtivät, ja kirkosta tuli vähitellen kuninkaallisten hautakirkko. Melkein kaikki Ruotsin kuninkaat Kustaa II Aadolfista Kustaa V:een lepäävät kirkon holveissa, samoin kaksi keskiaikaista kuningasta. Vain kuningatar Kristiina on haudattu muualle, Roomaan. Alkuperäisen tornin huipun suunnitteli flaamilainen arkkitehti Willem Boy 1500-luvulla, mutta salama tuhosi sen 28. heinäkuuta 1835. Nykyinen valurautahuippu on rakennettu sen tilalle. Seurakunta lakkautettiin jo 1807, joten kirkkoa käytetään enää hautajaisiin ja m…
+AIEMPI KYSYMYS: Kuka oli Jón Arason?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Tämä on vakava aihe. Jón Arason oli [[Hólarin]] viimeinen katolinen piispa, ja hänet mestattiin Skálholtissa vuonna 1550 kahden poikansa kanssa uskonpuhdistuksen aikana. Tapahtumasta on kulunut yli 470 vuotta, ja sen ajan Islannissa uskonnon ja vallan kysymykset kietoutuivat tiiviisti yhteen. Hólarista tuli hänen aikanaan [[uskonpuhdistuksen]] aikaisen katolisen kirkon viimeinen tukikohta Islannissa, ja hänet tunnetaan yhä merkittävänä hahmona. Se on onneksi kaukana takana.
+KYSYMYS: Kerro lisää: uskonpuhdistuksen
+
+### 85
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hólar (kulttuuri)
+Tietoruudun teksti: Hólar on pieni yhteisö Hjaltadalurin laaksossa Skagafjörðurin alueella Pohjois-Islannissa, noin 379 kilometrin päässä Reykjavíkista. Asukkaita on satakunta. Paikalla ovat Hólarin korkeakoulun päärakennukset, katedraali, islanninhevosen historian keskus ja turvetalo Nýibær.
+
+Islannin ensimmäinen kirjapaino tuotiin Hólariin vuonna 1530. Hólar oli Pohjois-Islannin piispanistuin — Skálholt hoiti saman tehtävän etelässä — ja kulttuurin ja opetuksen keskus lähes seitsemän vuosisadan ajan, vuosina 1106–1798. Piispa Jón Ögmundsson perusti hiippakunnan 1106, ja siitä tuli pian toinen maan kahdesta oppineisuuden keskuksesta.
+
+Hólar oli myös katolisen kirkon viimeinen tukikohta Islannissa uskonpuhdistuksen aikana: sen viimeinen katolinen piispa Jón Arason mestattiin Skálholtissa 1550 kahden poikansa kanssa. Tunnetuin luterilainen piispa oli Guðbrandur Þorláksson. Nykyisen kirkon uskotaan valmistun…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Eläimet: Hevonen, joka kulkee viittä tahtia] Vuosisatoja — Islanninhevonen tuotiin saarelle viikinkiaikana, ja muita hevosia ei ole tuotu sen jälkeen — laki on kieltänyt sen tuhat vuotta, jotta taudit eivät pääsisi maahan. Sama laki koskee lähtijöitä: hevonen, joka viedään maasta pois, ei saa enää koskaan palata. Rotu on pieni ja tanakka, ja sillä on viisi askellajia kolmen sijaan. Tunnetuin on tölt, jossa yksi jalka on aina maassa — niin tasainen, että ratsastaja voi kantaa täyttä lasia kaatamatta.
+AIEMPI KYSYMYS: Mikä islanninhevonen on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Islanninhevonen on pienikokoinen mutta vahva hevosrotu, joka on tunnettu erityisestä [[tölt]]-askellajistaan. [[Hólarissa]] on islanninhevosen historian keskus, jossa rodun vaiheisiin voi tutustua. Rotu sopii hyvin Islannin vaativiin oloihin, ja sitä on perinteisesti käytetty niin matkantekoon kuin työhön.
+
+Minä en ole koskaan päässyt hevosen selkään, vaikka ehdotuksia on ollut. Selkä olisi kyllä tukeva paikka kyyhkylle, ja tölt näyttää ylhäältä tasaiselta.
+KYSYMYS: Kerro lisää: tölt
+
+### 86
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hólar (kulttuuri)
+Tietoruudun teksti: Hólar on pieni yhteisö Hjaltadalurin laaksossa Skagafjörðurin alueella Pohjois-Islannissa, noin 379 kilometrin päässä Reykjavíkista. Asukkaita on satakunta. Paikalla ovat Hólarin korkeakoulun päärakennukset, katedraali, islanninhevosen historian keskus ja turvetalo Nýibær.
+
+Islannin ensimmäinen kirjapaino tuotiin Hólariin vuonna 1530. Hólar oli Pohjois-Islannin piispanistuin — Skálholt hoiti saman tehtävän etelässä — ja kulttuurin ja opetuksen keskus lähes seitsemän vuosisadan ajan, vuosina 1106–1798. Piispa Jón Ögmundsson perusti hiippakunnan 1106, ja siitä tuli pian toinen maan kahdesta oppineisuuden keskuksesta.
+
+Hólar oli myös katolisen kirkon viimeinen tukikohta Islannissa uskonpuhdistuksen aikana: sen viimeinen katolinen piispa Jón Arason mestattiin Skálholtissa 1550 kahden poikansa kanssa. Tunnetuin luterilainen piispa oli Guðbrandur Þorláksson. Nykyisen kirkon uskotaan valmistun…
+AIEMPI KYSYMYS: Mikä islanninhevonen on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Islanninhevonen on pienikokoinen mutta vahva hevosrotu, joka on tunnettu erityisestä [[tölt]]-askellajistaan. [[Hólarissa]] on islanninhevosen historian keskus, jossa rodun vaiheisiin voi tutustua. Rotu sopii hyvin Islannin vaativiin oloihin, ja sitä on perinteisesti käytetty niin matkantekoon kuin työhön.
+
+Minä en ole koskaan päässyt hevosen selkään, vaikka ehdotuksia on ollut. Selkä olisi kyllä tukeva paikka kyyhkylle, ja tölt näyttää ylhäältä tasaiselta.
+KYSYMYS: Kerro lisää: Hólarissa
+
+### 87
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hólar (kulttuuri)
+Tietoruudun teksti: Hólar on pieni yhteisö Hjaltadalurin laaksossa Skagafjörðurin alueella Pohjois-Islannissa, noin 379 kilometrin päässä Reykjavíkista. Asukkaita on satakunta. Paikalla ovat Hólarin korkeakoulun päärakennukset, katedraali, islanninhevosen historian keskus ja turvetalo Nýibær.
+
+Islannin ensimmäinen kirjapaino tuotiin Hólariin vuonna 1530. Hólar oli Pohjois-Islannin piispanistuin — Skálholt hoiti saman tehtävän etelässä — ja kulttuurin ja opetuksen keskus lähes seitsemän vuosisadan ajan, vuosina 1106–1798. Piispa Jón Ögmundsson perusti hiippakunnan 1106, ja siitä tuli pian toinen maan kahdesta oppineisuuden keskuksesta.
+
+Hólar oli myös katolisen kirkon viimeinen tukikohta Islannissa uskonpuhdistuksen aikana: sen viimeinen katolinen piispa Jón Arason mestattiin Skálholtissa 1550 kahden poikansa kanssa. Tunnetuin luterilainen piispa oli Guðbrandur Þorláksson. Nykyisen kirkon uskotaan valmistun…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Piispa joka taisteli uskontoaan vastaan ja hävisi] 1550 — Tanska määräsi Islannin luterilaiseksi 1500-luvulla, mutta Hólarin piispa Jón Arason kieltäytyi luopumasta katolisesta uskosta. Hän kokosi miehiä, otti vangiksi kilpailevan luterilaisen piispan ja hallitsi hetken käytännössä koko Pohjois-Islantia. Vuonna 1550 hänet ja hänen kaksi poikaansa vangittiin taistelun jälkeen, ja marraskuun 7. päivänä heidät mestattiin Skálholtissa ilman oikeudenkäyntiä — päätöksen teki kuninkaan kirjuri, koska pelättiin, ettei rauhaa muuten koskaan tulisi. Arasonin kuolema päätti katolisen kirkon vallan Islannissa.
+AIEMPI KYSYMYS: Kuka oli Guðbrandur Þorláksson?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Se on kiva nimi lausuttavaksi. Guðbrandur Þorláksson oli Hólarin tunnetuin luterilainen [[piispa]], joka toimi paikalla uskonpuhdistuksen jälkeisinä aikoina. Hänet tunnetaan islanninkielisen [[Raamatun]] painatuksesta Hólarissa, ja tarkkaa vuosilukua en ole varma, mutta kyse on 1500-luvun lopusta. Tää oli sellainen kysymys, jossa muisti kantoi.
+KYSYMYS: Kerro lisää: piispa
+
+### 88
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hólar (kulttuuri)
+Tietoruudun teksti: Hólar on pieni yhteisö Hjaltadalurin laaksossa Skagafjörðurin alueella Pohjois-Islannissa, noin 379 kilometrin päässä Reykjavíkista. Asukkaita on satakunta. Paikalla ovat Hólarin korkeakoulun päärakennukset, katedraali, islanninhevosen historian keskus ja turvetalo Nýibær.
+
+Islannin ensimmäinen kirjapaino tuotiin Hólariin vuonna 1530. Hólar oli Pohjois-Islannin piispanistuin — Skálholt hoiti saman tehtävän etelässä — ja kulttuurin ja opetuksen keskus lähes seitsemän vuosisadan ajan, vuosina 1106–1798. Piispa Jón Ögmundsson perusti hiippakunnan 1106, ja siitä tuli pian toinen maan kahdesta oppineisuuden keskuksesta.
+
+Hólar oli myös katolisen kirkon viimeinen tukikohta Islannissa uskonpuhdistuksen aikana: sen viimeinen katolinen piispa Jón Arason mestattiin Skálholtissa 1550 kahden poikansa kanssa. Tunnetuin luterilainen piispa oli Guðbrandur Þorláksson. Nykyisen kirkon uskotaan valmistun…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Damaskos — kohdekartta / Kohdekartta: Kisanin portti] Portti seisoo vanhankaupungin muurin kaakkoiskulmassa. Muurin kehä on 4,5 kilometriä ja se rajaa 86 hehtaaria. Muurin rakensivat roomalaiset, ja ajjubidit ja mamelukit vahvistivat sitä myöhemmin; vuoden 634 piirityksen kuvauksissa muuri on 11 metriä korkea. Julkisivu on ladottu suurista vaaleista kivilohkareista, ja kahden ulkonevan tornin väliin jäävä keskiosa on koristeltu hakatuin listoin ja pyörein kivimedaljongein. Roomalaiset omistivat kunkin portin yhdelle taivaankappaleelle, ja Kisanin portti sai Saturnuksen. Porttien lukumäärässä on lähteiden välillä hajontaa: vuoden 634 piirityksestä kertovassa luettelossa niitä on kuusi. Nimensä Kisanin portti sai orjasta, joka tuli tunnetuksi ka…
+- [Salalah — kohdekartta / Kohdekartta: Nabi Umranin hauta] perimätieto, ajoittamaton Salalahia on kutsuttu profeettojen kaupungiksi. Seudulla on neljä hautaa, joita perimätieto pitää islamin profeettojen leposijoina: Nabi Imran, Nabi Ayoub eli Raamatun Job, Nabi Houd ja Nabi Salih. Näistä Imranin hauta on ainoa, joka on kaupungin sisällä — muut ovat vuorilla ja rannikolla kymmenien kilometrien päässä. Kuka Imran oli, siitä ei olla yksimielisiä. Osa pitää häntä Neitsyt Marian isänä eli kristillisen perinteen Joakimina, osa Mooseksen isänä. Koraanin kolmas suura on nimeltään Al Imran, Imranin suku, ja siinä kerrotaan Marian syntymästä. Salalahin oma artikkeli pitää todennäköisimpänä, että kyseessä on paikallinen profeetta, jonka nimi on myöhemmin yhd…
+AIEMPI KYSYMYS: Kuka oli Guðbrandur Þorláksson?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Se on kiva nimi lausuttavaksi. Guðbrandur Þorláksson oli Hólarin tunnetuin luterilainen [[piispa]], joka toimi paikalla uskonpuhdistuksen jälkeisinä aikoina. Hänet tunnetaan islanninkielisen [[Raamatun]] painatuksesta Hólarissa, ja tarkkaa vuosilukua en ole varma, mutta kyse on 1500-luvun lopusta. Tää oli sellainen kysymys, jossa muisti kantoi.
+KYSYMYS: Kerro lisää: Raamatun
+
+### 89
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heimaey (tekniikka)
+Tietoruudun teksti: Heimaey on Vestmannaeyjarin saariston suurin saari, 13,4 neliökilometriä, ja samalla Islannin rannikon suurin ja asutuin saari. Se on neljän meripeninkulman päässä etelärannikolta ja saariston ainoa asuttu saari.
+
+Tammikuussa 1973 laavavirta viereisestä Eldfellistä tuhosi puolet kaupungista ja uhkasi sulkea sataman — saaren tärkeimmän tulonlähteen. Etenevä laava jäähdytettiin merivedellä, ja operaatio pelasti sataman.
+
+Purkaus alkoi 23. tammikuuta 1973 kello yksi yöllä. Maa alkoi täristä, halkeamat kasvoivat 1 600 metrin pituisiksi ja laava alkoi purkautua. Kaupungin päälle satoi puoli miljoonaa kuutiometriä tuhkaa. Saman yön aikana saaren 5 000 asukasta evakuoitiin, useimmat kalastusveneillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Luonto: Kylä puolusti itseään paloletkuilla] 1973 — Tammikuussa 1973 Heimaeyn saarella aukesi kylän laidalle railo, josta purkautui laavaa. Koko väestö, yli viisituhatta ihmistä, vietiin yhdessä yössä turvaan kalastuslaivoilla — sattumalta laivasto oli myrskyn takia satamassa. Laava eteni kohti satamaa, joka oli kylän elinehto. Silloin ryhdyttiin pumppaamaan merivettä laavan päälle: vesi jäähdytti reunan kovaksi ja käänsi virtaa. Satama säilyi, ja lopulta siitä tuli aiempaa suojaisampi.
+AIEMPI KYSYMYS: Miten Heimaeyn satama pelastettiin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Satama pelastettiin jäähdyttämällä etenevä laava merivedellä. Tammikuussa 1973 [[Heimaeyn]] viereisestä [[Eldfellistä]] virtasi laavaa, joka uhkasi sulkea sataman, ja satama oli saaren tärkein tulonlähde. Laavan päälle pumpattiin merivettä, joka jäähdytti reunan kovaksi ja käänsi virtaa. Satama säilyi, ja siitä tuli myöhemmin entistä suojaisampi. Siitä on onneksi jo yli viisikymmentä vuotta.
+KYSYMYS: Kerro lisää: Heimaeyn
+
+### 90
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heimaey (tekniikka)
+Tietoruudun teksti: Heimaey on Vestmannaeyjarin saariston suurin saari, 13,4 neliökilometriä, ja samalla Islannin rannikon suurin ja asutuin saari. Se on neljän meripeninkulman päässä etelärannikolta ja saariston ainoa asuttu saari.
+
+Tammikuussa 1973 laavavirta viereisestä Eldfellistä tuhosi puolet kaupungista ja uhkasi sulkea sataman — saaren tärkeimmän tulonlähteen. Etenevä laava jäähdytettiin merivedellä, ja operaatio pelasti sataman.
+
+Purkaus alkoi 23. tammikuuta 1973 kello yksi yöllä. Maa alkoi täristä, halkeamat kasvoivat 1 600 metrin pituisiksi ja laava alkoi purkautua. Kaupungin päälle satoi puoli miljoonaa kuutiometriä tuhkaa. Saman yön aikana saaren 5 000 asukasta evakuoitiin, useimmat kalastusveneillä.
+AIEMPI KYSYMYS: Miten Heimaeyn satama pelastettiin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Satama pelastettiin jäähdyttämällä etenevä laava merivedellä. Tammikuussa 1973 [[Heimaeyn]] viereisestä [[Eldfellistä]] virtasi laavaa, joka uhkasi sulkea sataman, ja satama oli saaren tärkein tulonlähde. Laavan päälle pumpattiin merivettä, joka jäähdytti reunan kovaksi ja käänsi virtaa. Satama säilyi, ja siitä tuli myöhemmin entistä suojaisampi. Siitä on onneksi jo yli viisikymmentä vuotta.
+KYSYMYS: Kerro lisää: Eldfellistä
+
+### 91
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heimaey (tekniikka)
+Tietoruudun teksti: Heimaey on Vestmannaeyjarin saariston suurin saari, 13,4 neliökilometriä, ja samalla Islannin rannikon suurin ja asutuin saari. Se on neljän meripeninkulman päässä etelärannikolta ja saariston ainoa asuttu saari.
+
+Tammikuussa 1973 laavavirta viereisestä Eldfellistä tuhosi puolet kaupungista ja uhkasi sulkea sataman — saaren tärkeimmän tulonlähteen. Etenevä laava jäähdytettiin merivedellä, ja operaatio pelasti sataman.
+
+Purkaus alkoi 23. tammikuuta 1973 kello yksi yöllä. Maa alkoi täristä, halkeamat kasvoivat 1 600 metrin pituisiksi ja laava alkoi purkautua. Kaupungin päälle satoi puoli miljoonaa kuutiometriä tuhkaa. Saman yön aikana saaren 5 000 asukasta evakuoitiin, useimmat kalastusveneillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Luonto: Kylä puolusti itseään paloletkuilla] 1973 — Tammikuussa 1973 Heimaeyn saarella aukesi kylän laidalle railo, josta purkautui laavaa. Koko väestö, yli viisituhatta ihmistä, vietiin yhdessä yössä turvaan kalastuslaivoilla — sattumalta laivasto oli myrskyn takia satamassa. Laava eteni kohti satamaa, joka oli kylän elinehto. Silloin ryhdyttiin pumppaamaan merivettä laavan päälle: vesi jäähdytti reunan kovaksi ja käänsi virtaa. Satama säilyi, ja lopulta siitä tuli aiempaa suojaisampi.
+AIEMPI KYSYMYS: Miksi asukkaat pääsivät pois saarelta yhdessä yössä?
+AIEMPI VASTAUS (Livia):
+Ai se. Hyvä että kysyt. Koko väestö, yli viisituhatta ihmistä, vietiin yhdessä yössä turvaan [[kalastuslaivoilla]], koska kalastuslaivasto oli sattumalta myrskyn takia satamassa. Näin tarvittavat alukset olivat valmiina heti, kun [[Heimaeyn]] kylän laidalle avautui railo ja siitä alkoi purkautua laavaa. Pieni onni onnettomuudessa.
+KYSYMYS: Kerro lisää: kalastuslaivoilla
+
+### 92
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heimaey (tekniikka)
+Tietoruudun teksti: Heimaey on Vestmannaeyjarin saariston suurin saari, 13,4 neliökilometriä, ja samalla Islannin rannikon suurin ja asutuin saari. Se on neljän meripeninkulman päässä etelärannikolta ja saariston ainoa asuttu saari.
+
+Tammikuussa 1973 laavavirta viereisestä Eldfellistä tuhosi puolet kaupungista ja uhkasi sulkea sataman — saaren tärkeimmän tulonlähteen. Etenevä laava jäähdytettiin merivedellä, ja operaatio pelasti sataman.
+
+Purkaus alkoi 23. tammikuuta 1973 kello yksi yöllä. Maa alkoi täristä, halkeamat kasvoivat 1 600 metrin pituisiksi ja laava alkoi purkautua. Kaupungin päälle satoi puoli miljoonaa kuutiometriä tuhkaa. Saman yön aikana saaren 5 000 asukasta evakuoitiin, useimmat kalastusveneillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Etelä-Korea — maalehti / Luonto: Laava kaivoi itselleen käytävän] Manjanggulin luola on lähes yhdeksän kilometriä pitkä, paikoin 23 metriä leveä ja 30 korkea. Se ei ole veden liuottama vaan laavaputki: laavavirta kaivoi sen itse. Virran pinta jähmettyi katoksi, mutta sisällä kuuma laava jatkoi matkaansa, ja kun purkaus loppui, putki jäi tyhjäksi käytäväksi. Katosta valuneesta laavasta on jäänyt riippuvia tippukiviä, ja luolan perällä seisoo 7,6 metriä korkea laavapylväs, joka on maailman suurin tunnettu. Luola kuuluu Jejun maailmanperintökohteeseen.
+AIEMPI KYSYMYS: Mikä Eldfell on?
+AIEMPI VASTAUS (Livia):
+Just niin, tän minä tiedän. Eldfell on tulivuori [[Heimaeyn]] saarella, ja sen nimi tarkoittaa suunnilleen tulivuorta. Tammikuussa 1973 sen [[laavavirta]] tuhosi puolet kaupungista ja uhkasi sulkea sataman. Purkaus alkoi 23. tammikuuta kello yksi yöllä, ja kaupungin päälle satoi puoli miljoonaa kuutiometriä tuhkaa. Saaren viisituhatta asukasta evakuoitiin saman yön aikana.
+KYSYMYS: Kerro lisää: laavavirta
+
+### 93
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heimaey (tekniikka)
+Tietoruudun teksti: Heimaey on Vestmannaeyjarin saariston suurin saari, 13,4 neliökilometriä, ja samalla Islannin rannikon suurin ja asutuin saari. Se on neljän meripeninkulman päässä etelärannikolta ja saariston ainoa asuttu saari.
+
+Tammikuussa 1973 laavavirta viereisestä Eldfellistä tuhosi puolet kaupungista ja uhkasi sulkea sataman — saaren tärkeimmän tulonlähteen. Etenevä laava jäähdytettiin merivedellä, ja operaatio pelasti sataman.
+
+Purkaus alkoi 23. tammikuuta 1973 kello yksi yöllä. Maa alkoi täristä, halkeamat kasvoivat 1 600 metrin pituisiksi ja laava alkoi purkautua. Kaupungin päälle satoi puoli miljoonaa kuutiometriä tuhkaa. Saman yön aikana saaren 5 000 asukasta evakuoitiin, useimmat kalastusveneillä.
+AIEMPI KYSYMYS: Miksi satama oli Heimaeylle niin tärkeä?
+AIEMPI VASTAUS (Livia):
+No jopas, tähän on selvä vastaus. Satama oli saaren tärkein tulonlähde, ja siksi laavan uhkaama sulkeutuminen oli niin vakava asia. [[Vestmannaeyjarin]] saaristossa Heimaey on ainoa asuttu saari, ja sen [[kalastuslaivasto]] oli satamassa myrskyn aikaan vuonna 1973. Satama on saarelle melkein kuin sydän.
+KYSYMYS: Kerro lisää: Vestmannaeyjarin
+
+### 94
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heimaey (tekniikka)
+Tietoruudun teksti: Heimaey on Vestmannaeyjarin saariston suurin saari, 13,4 neliökilometriä, ja samalla Islannin rannikon suurin ja asutuin saari. Se on neljän meripeninkulman päässä etelärannikolta ja saariston ainoa asuttu saari.
+
+Tammikuussa 1973 laavavirta viereisestä Eldfellistä tuhosi puolet kaupungista ja uhkasi sulkea sataman — saaren tärkeimmän tulonlähteen. Etenevä laava jäähdytettiin merivedellä, ja operaatio pelasti sataman.
+
+Purkaus alkoi 23. tammikuuta 1973 kello yksi yöllä. Maa alkoi täristä, halkeamat kasvoivat 1 600 metrin pituisiksi ja laava alkoi purkautua. Kaupungin päälle satoi puoli miljoonaa kuutiometriä tuhkaa. Saman yön aikana saaren 5 000 asukasta evakuoitiin, useimmat kalastusveneillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Qatar — maalehti / Meri: Kalastuslaivasto lähtee yhä aamuisin] Al Khor oli aikanaan helmenpyynnin keskus, ja nykyään sen satamassa on kalastusveneitä. Lahden pohja on matala ja hiekkainen, ja pyydyksenä käytetään yhä kupumaista mertaa, joka lasketaan pohjaan ja nostetaan seuraavana päivänä. Saaliina on ryhmäkaloja, kuten hamouria ja safia, joita myydään kaupungin kalatorilla samana aamuna. Kalastajat lähtevät ennen auringonnousua, koska keskipäivällä kansi on liian kuuma seistä. Sama lahti on lintujen talvehtimispaikka.
+AIEMPI KYSYMYS: Miksi satama oli Heimaeylle niin tärkeä?
+AIEMPI VASTAUS (Livia):
+No jopas, tähän on selvä vastaus. Satama oli saaren tärkein tulonlähde, ja siksi laavan uhkaama sulkeutuminen oli niin vakava asia. [[Vestmannaeyjarin]] saaristossa Heimaey on ainoa asuttu saari, ja sen [[kalastuslaivasto]] oli satamassa myrskyn aikaan vuonna 1973. Satama on saarelle melkein kuin sydän.
+KYSYMYS: Kerro lisää: kalastuslaivasto
+
+### 95
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heimaey (tekniikka)
+Tietoruudun teksti: Heimaey on Vestmannaeyjarin saariston suurin saari, 13,4 neliökilometriä, ja samalla Islannin rannikon suurin ja asutuin saari. Se on neljän meripeninkulman päässä etelärannikolta ja saariston ainoa asuttu saari.
+
+Tammikuussa 1973 laavavirta viereisestä Eldfellistä tuhosi puolet kaupungista ja uhkasi sulkea sataman — saaren tärkeimmän tulonlähteen. Etenevä laava jäähdytettiin merivedellä, ja operaatio pelasti sataman.
+
+Purkaus alkoi 23. tammikuuta 1973 kello yksi yöllä. Maa alkoi täristä, halkeamat kasvoivat 1 600 metrin pituisiksi ja laava alkoi purkautua. Kaupungin päälle satoi puoli miljoonaa kuutiometriä tuhkaa. Saman yön aikana saaren 5 000 asukasta evakuoitiin, useimmat kalastusveneillä.
+AIEMPI KYSYMYS: Mistä Vestmannaeyjarin saaristo on saanut nimensä?
+AIEMPI VASTAUS (Livia):
+Kato, tästä en ole ihan satavarma. Nimi tarkoittaa suunnilleen länsimiesten saaria, ja länsimiehillä viitattiin vanhassa kielenkäytössä lähteiden mukaan [[irlantilaisiin]]. Tarkkaa tarinaa en ole varma, joten jätän sen tähän. Saariston suurin ja ainoa asuttu saari on [[Heimaey]], noin neljän meripeninkulman päässä Islannin etelärannikolta. Kielitiedettä kyyhkyltä, vähän yllätys itsellekin.
+KYSYMYS: Kerro lisää: irlantilaisiin
+
+### 96
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heimaey (tekniikka)
+Tietoruudun teksti: Heimaey on Vestmannaeyjarin saariston suurin saari, 13,4 neliökilometriä, ja samalla Islannin rannikon suurin ja asutuin saari. Se on neljän meripeninkulman päässä etelärannikolta ja saariston ainoa asuttu saari.
+
+Tammikuussa 1973 laavavirta viereisestä Eldfellistä tuhosi puolet kaupungista ja uhkasi sulkea sataman — saaren tärkeimmän tulonlähteen. Etenevä laava jäähdytettiin merivedellä, ja operaatio pelasti sataman.
+
+Purkaus alkoi 23. tammikuuta 1973 kello yksi yöllä. Maa alkoi täristä, halkeamat kasvoivat 1 600 metrin pituisiksi ja laava alkoi purkautua. Kaupungin päälle satoi puoli miljoonaa kuutiometriä tuhkaa. Saman yön aikana saaren 5 000 asukasta evakuoitiin, useimmat kalastusveneillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Luonto: Kylä puolusti itseään paloletkuilla] 1973 — Tammikuussa 1973 Heimaeyn saarella aukesi kylän laidalle railo, josta purkautui laavaa. Koko väestö, yli viisituhatta ihmistä, vietiin yhdessä yössä turvaan kalastuslaivoilla — sattumalta laivasto oli myrskyn takia satamassa. Laava eteni kohti satamaa, joka oli kylän elinehto. Silloin ryhdyttiin pumppaamaan merivettä laavan päälle: vesi jäähdytti reunan kovaksi ja käänsi virtaa. Satama säilyi, ja lopulta siitä tuli aiempaa suojaisampi.
+AIEMPI KYSYMYS: Mistä Vestmannaeyjarin saaristo on saanut nimensä?
+AIEMPI VASTAUS (Livia):
+Kato, tästä en ole ihan satavarma. Nimi tarkoittaa suunnilleen länsimiesten saaria, ja länsimiehillä viitattiin vanhassa kielenkäytössä lähteiden mukaan [[irlantilaisiin]]. Tarkkaa tarinaa en ole varma, joten jätän sen tähän. Saariston suurin ja ainoa asuttu saari on [[Heimaey]], noin neljän meripeninkulman päässä Islannin etelärannikolta. Kielitiedettä kyyhkyltä, vähän yllätys itsellekin.
+KYSYMYS: Kerro lisää: Heimaey
+
+### 97
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Látrabjarg (eläimet)
+Tietoruudun teksti: Látrabjarg on niemeke Länsivuonoilla ja Islannin läntisin kohta. Jyrkänne on Euroopan suurin lintujyrkänne: neljätoista kilometriä pitkä ja korkeimmillaan 440 metriä.
+
+Kalliolla pesii miljoonia lintuja — lunneja, suulia, kiisloja ja ruokkeja. Paikka on lajien selviytymiselle elintärkeä: jopa neljäkymmentä prosenttia maailman ruokeista pesii täällä.
+AIEMPI KYSYMYS: Kuinka suuri osa maailman ruokeista pesii täällä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Se on kiinnostava luku. Jopa neljäkymmentä prosenttia maailman ruokeista pesii Látrabjargilla. Kalliolla pesii kaikkiaan miljoonia lintuja: [[lunneja]], [[suulia]], [[kiisloja]] ja ruokkeja. Siksi paikka on näiden lajien selviytymiselle elintärkeä. Neljäkymmentä prosenttia kuulostaa kyyhkystä ihan ruuhkalta.
+KYSYMYS: Kerro lisää: lunneja
+
+### 98
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Látrabjarg (eläimet)
+Tietoruudun teksti: Látrabjarg on niemeke Länsivuonoilla ja Islannin läntisin kohta. Jyrkänne on Euroopan suurin lintujyrkänne: neljätoista kilometriä pitkä ja korkeimmillaan 440 metriä.
+
+Kalliolla pesii miljoonia lintuja — lunneja, suulia, kiisloja ja ruokkeja. Paikka on lajien selviytymiselle elintärkeä: jopa neljäkymmentä prosenttia maailman ruokeista pesii täällä.
+AIEMPI KYSYMYS: Kuinka suuri osa maailman ruokeista pesii täällä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Se on kiinnostava luku. Jopa neljäkymmentä prosenttia maailman ruokeista pesii Látrabjargilla. Kalliolla pesii kaikkiaan miljoonia lintuja: [[lunneja]], [[suulia]], [[kiisloja]] ja ruokkeja. Siksi paikka on näiden lajien selviytymiselle elintärkeä. Neljäkymmentä prosenttia kuulostaa kyyhkystä ihan ruuhkalta.
+KYSYMYS: Kerro lisää: suulia
+
+### 99
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Látrabjarg (eläimet)
+Tietoruudun teksti: Látrabjarg on niemeke Länsivuonoilla ja Islannin läntisin kohta. Jyrkänne on Euroopan suurin lintujyrkänne: neljätoista kilometriä pitkä ja korkeimmillaan 440 metriä.
+
+Kalliolla pesii miljoonia lintuja — lunneja, suulia, kiisloja ja ruokkeja. Paikka on lajien selviytymiselle elintärkeä: jopa neljäkymmentä prosenttia maailman ruokeista pesii täällä.
+AIEMPI KYSYMYS: Kuinka suuri osa maailman ruokeista pesii täällä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Se on kiinnostava luku. Jopa neljäkymmentä prosenttia maailman ruokeista pesii Látrabjargilla. Kalliolla pesii kaikkiaan miljoonia lintuja: [[lunneja]], [[suulia]], [[kiisloja]] ja ruokkeja. Siksi paikka on näiden lajien selviytymiselle elintärkeä. Neljäkymmentä prosenttia kuulostaa kyyhkystä ihan ruuhkalta.
+KYSYMYS: Kerro lisää: kiisloja
+
+### 100
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Látrabjarg (eläimet)
+Tietoruudun teksti: Látrabjarg on niemeke Länsivuonoilla ja Islannin läntisin kohta. Jyrkänne on Euroopan suurin lintujyrkänne: neljätoista kilometriä pitkä ja korkeimmillaan 440 metriä.
+
+Kalliolla pesii miljoonia lintuja — lunneja, suulia, kiisloja ja ruokkeja. Paikka on lajien selviytymiselle elintärkeä: jopa neljäkymmentä prosenttia maailman ruokeista pesii täällä.
+AIEMPI KYSYMYS: Mikä on Islannin läntisin kohta?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Se tulee heti. Islannin läntisin kohta on [[Látrabjarg]], niemeke [[Länsivuonoilla]]. Jyrkänne on neljätoista kilometriä pitkä ja korkeimmillaan 440 metriä, ja sitä pidetään Euroopan suurimpana lintujyrkänteenä. Pidemmälle länteen ei Islannissa pääse, ei edes kyyhky.
+KYSYMYS: Kerro lisää: Látrabjarg
+
+### 101
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Látrabjarg (eläimet)
+Tietoruudun teksti: Látrabjarg on niemeke Länsivuonoilla ja Islannin läntisin kohta. Jyrkänne on Euroopan suurin lintujyrkänne: neljätoista kilometriä pitkä ja korkeimmillaan 440 metriä.
+
+Kalliolla pesii miljoonia lintuja — lunneja, suulia, kiisloja ja ruokkeja. Paikka on lajien selviytymiselle elintärkeä: jopa neljäkymmentä prosenttia maailman ruokeista pesii täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Mikä on Islannin läntisin kohta?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Se tulee heti. Islannin läntisin kohta on [[Látrabjarg]], niemeke [[Länsivuonoilla]]. Jyrkänne on neljätoista kilometriä pitkä ja korkeimmillaan 440 metriä, ja sitä pidetään Euroopan suurimpana lintujyrkänteenä. Pidemmälle länteen ei Islannissa pääse, ei edes kyyhky.
+KYSYMYS: Kerro lisää: Länsivuonoilla
+
+### 102
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Látrabjarg (eläimet)
+Tietoruudun teksti: Látrabjarg on niemeke Länsivuonoilla ja Islannin läntisin kohta. Jyrkänne on Euroopan suurin lintujyrkänne: neljätoista kilometriä pitkä ja korkeimmillaan 440 metriä.
+
+Kalliolla pesii miljoonia lintuja — lunneja, suulia, kiisloja ja ruokkeja. Paikka on lajien selviytymiselle elintärkeä: jopa neljäkymmentä prosenttia maailman ruokeista pesii täällä.
+AIEMPI KYSYMYS: Millainen lintu lunni on?
+AIEMPI VASTAUS (Livia):
+Mmm— lunni, kyllä. Lunni on värikäs merilintu, joka tunnistetaan mustavalkoisesta höyhenpuvusta ja kirkkaasta nokasta. Se pesii kallioilla ja kalastaa merellä, ja [[Látrabjargilla]] sitä pesii miljoonien lintujen joukossa yhdessä [[suulien]] ja [[kiisloiden]] kanssa. Lajista on tärkeää tietää, että sen elämä on tiiviisti sidoksissa jyrkänteisiin ja mereen.
+
+Lunni näyttää aina hiukan liian vakavalta noin värikkäälle linnulle. Tunnen sympatiaa, sillä minäkin yritän pysyä vakavana.
+KYSYMYS: Kerro lisää: Látrabjargilla
+
+### 103
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Látrabjarg (eläimet)
+Tietoruudun teksti: Látrabjarg on niemeke Länsivuonoilla ja Islannin läntisin kohta. Jyrkänne on Euroopan suurin lintujyrkänne: neljätoista kilometriä pitkä ja korkeimmillaan 440 metriä.
+
+Kalliolla pesii miljoonia lintuja — lunneja, suulia, kiisloja ja ruokkeja. Paikka on lajien selviytymiselle elintärkeä: jopa neljäkymmentä prosenttia maailman ruokeista pesii täällä.
+AIEMPI KYSYMYS: Millainen lintu lunni on?
+AIEMPI VASTAUS (Livia):
+Mmm— lunni, kyllä. Lunni on värikäs merilintu, joka tunnistetaan mustavalkoisesta höyhenpuvusta ja kirkkaasta nokasta. Se pesii kallioilla ja kalastaa merellä, ja [[Látrabjargilla]] sitä pesii miljoonien lintujen joukossa yhdessä [[suulien]] ja [[kiisloiden]] kanssa. Lajista on tärkeää tietää, että sen elämä on tiiviisti sidoksissa jyrkänteisiin ja mereen.
+
+Lunni näyttää aina hiukan liian vakavalta noin värikkäälle linnulle. Tunnen sympatiaa, sillä minäkin yritän pysyä vakavana.
+KYSYMYS: Kerro lisää: suulien
+
+### 104
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Látrabjarg (eläimet)
+Tietoruudun teksti: Látrabjarg on niemeke Länsivuonoilla ja Islannin läntisin kohta. Jyrkänne on Euroopan suurin lintujyrkänne: neljätoista kilometriä pitkä ja korkeimmillaan 440 metriä.
+
+Kalliolla pesii miljoonia lintuja — lunneja, suulia, kiisloja ja ruokkeja. Paikka on lajien selviytymiselle elintärkeä: jopa neljäkymmentä prosenttia maailman ruokeista pesii täällä.
+AIEMPI KYSYMYS: Millainen lintu lunni on?
+AIEMPI VASTAUS (Livia):
+Mmm— lunni, kyllä. Lunni on värikäs merilintu, joka tunnistetaan mustavalkoisesta höyhenpuvusta ja kirkkaasta nokasta. Se pesii kallioilla ja kalastaa merellä, ja [[Látrabjargilla]] sitä pesii miljoonien lintujen joukossa yhdessä [[suulien]] ja [[kiisloiden]] kanssa. Lajista on tärkeää tietää, että sen elämä on tiiviisti sidoksissa jyrkänteisiin ja mereen.
+
+Lunni näyttää aina hiukan liian vakavalta noin värikkäälle linnulle. Tunnen sympatiaa, sillä minäkin yritän pysyä vakavana.
+KYSYMYS: Kerro lisää: kiisloiden
+
+### 105
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Látrabjarg (eläimet)
+Tietoruudun teksti: Látrabjarg on niemeke Länsivuonoilla ja Islannin läntisin kohta. Jyrkänne on Euroopan suurin lintujyrkänne: neljätoista kilometriä pitkä ja korkeimmillaan 440 metriä.
+
+Kalliolla pesii miljoonia lintuja — lunneja, suulia, kiisloja ja ruokkeja. Paikka on lajien selviytymiselle elintärkeä: jopa neljäkymmentä prosenttia maailman ruokeista pesii täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Eläimet: Lapset pelastavat eksyneet linnut] Elokuussa — Lunni pesii jyrkänteiden koloissa, ja Islannissa on maailman suurimpia yhdyskuntia. Poikanen lähtee pesästä pimeällä elokuun öinä ja suunnistaa kuunvalon mukaan merelle — mutta kylän valot hämäävät, ja moni päätyy kaduille. Vestmannaeyjarissa lapset lähtevät öisin ulos laatikoiden kanssa etsimään niitä, ja aamulla poikaset viedään rantakalliolle ja heitetään ilmaan kohti merta. Tapaa sanotaan lunnipartioksi.
+AIEMPI KYSYMYS: Mikä on ruokki?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuttu lintu. Ruokki on mustavalkoinen merilintu, joka pesii kalliojyrkänteillä. [[Látrabjargilla]] sitä pesii runsaasti: jopa neljäkymmentä prosenttia maailman ruokeista pesii siellä, [[lunnien]] ja suulien rinnalla. Tuttu lintu, vaikka en ole koskaan istunut samalla kielekkeellä.
+KYSYMYS: Kerro lisää: lunnien
+
+### 106
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lakagígar (historia)
+Tietoruudun teksti: Lakagígar on tulivuoren halkeama Vatnajökullin kansallispuiston länsiosassa, lähellä Kirkjubæjarklausturin kylää. Laki on se vuori, jonka halkeama halkaisee kahtia; itse halkeamaa kutsutaan Lakagígariksi. Se kuuluu Grímsvötn-tulivuoren järjestelmään.
+
+Järjestelmä purkautui rajusti kahdeksan kuukauden ajan kesäkuusta 1783 helmikuuhun 1784. Purkaus — Skaftáreldar eli Skaftán tulet — työnsi ulos noin 14 kuutiokilometriä basalttilaavaa sekä pilviä myrkyllistä fluorivetyhappoa ja rikkidioksidiyhdisteitä. Ne saastuttivat maaperän, tappoivat yli puolet Islannin karjasta ja tuhosivat lähes koko sadon. Seurannut nälänhätä tappoi ainakin viidesosan saaren väestöstä.
+
+Vaikutus ei jäänyt Islantiin. Purkaus syöksi pohjoiselle pallonpuoliskolle 120 miljoonaa tonnia rikkidioksidia, mikä laski maapallon lämpötiloja, aiheutti satojen menetyksiä Euroopassa ja on saattanut aiheuttaa kuivuutta Pohjois-Afri…
+AIEMPI KYSYMYS: Kuinka suuri osa islantilaisista kuoli purkauksen jälkeen?
+AIEMPI VASTAUS (Livia):
+Voi, tuo on raskas aihe. Purkauksen jälkeinen nälänhätä, joka liittyy [[Skaftáreldar]]-tapahtumaan, tappoi ainakin viidesosan saaren väestöstä. Syynä ei ollut pelkkä laava vaan myrkyllinen [[fluorivetyhappo]] ja rikkidioksidiyhdisteet, jotka saastuttivat maaperän, tappoivat yli puolet Islannin karjasta ja tuhosivat lähes koko sadon. Tapahtumat sijoittuvat kesästä 1783 helmikuuhun 1784, eli yli kaksisataa vuotta sitten, jolloin Islanti kuului [[Tanskan]] kuninkaan alaisuuteen; nykyään se on itsenäinen tasavalta. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Skaftáreldar
+
+### 107
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lakagígar (historia)
+Tietoruudun teksti: Lakagígar on tulivuoren halkeama Vatnajökullin kansallispuiston länsiosassa, lähellä Kirkjubæjarklausturin kylää. Laki on se vuori, jonka halkeama halkaisee kahtia; itse halkeamaa kutsutaan Lakagígariksi. Se kuuluu Grímsvötn-tulivuoren järjestelmään.
+
+Järjestelmä purkautui rajusti kahdeksan kuukauden ajan kesäkuusta 1783 helmikuuhun 1784. Purkaus — Skaftáreldar eli Skaftán tulet — työnsi ulos noin 14 kuutiokilometriä basalttilaavaa sekä pilviä myrkyllistä fluorivetyhappoa ja rikkidioksidiyhdisteitä. Ne saastuttivat maaperän, tappoivat yli puolet Islannin karjasta ja tuhosivat lähes koko sadon. Seurannut nälänhätä tappoi ainakin viidesosan saaren väestöstä.
+
+Vaikutus ei jäänyt Islantiin. Purkaus syöksi pohjoiselle pallonpuoliskolle 120 miljoonaa tonnia rikkidioksidia, mikä laski maapallon lämpötiloja, aiheutti satojen menetyksiä Euroopassa ja on saattanut aiheuttaa kuivuutta Pohjois-Afri…
+AIEMPI KYSYMYS: Kuinka suuri osa islantilaisista kuoli purkauksen jälkeen?
+AIEMPI VASTAUS (Livia):
+Voi, tuo on raskas aihe. Purkauksen jälkeinen nälänhätä, joka liittyy [[Skaftáreldar]]-tapahtumaan, tappoi ainakin viidesosan saaren väestöstä. Syynä ei ollut pelkkä laava vaan myrkyllinen [[fluorivetyhappo]] ja rikkidioksidiyhdisteet, jotka saastuttivat maaperän, tappoivat yli puolet Islannin karjasta ja tuhosivat lähes koko sadon. Tapahtumat sijoittuvat kesästä 1783 helmikuuhun 1784, eli yli kaksisataa vuotta sitten, jolloin Islanti kuului [[Tanskan]] kuninkaan alaisuuteen; nykyään se on itsenäinen tasavalta. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: fluorivetyhappo
+
+### 108
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lakagígar (historia)
+Tietoruudun teksti: Lakagígar on tulivuoren halkeama Vatnajökullin kansallispuiston länsiosassa, lähellä Kirkjubæjarklausturin kylää. Laki on se vuori, jonka halkeama halkaisee kahtia; itse halkeamaa kutsutaan Lakagígariksi. Se kuuluu Grímsvötn-tulivuoren järjestelmään.
+
+Järjestelmä purkautui rajusti kahdeksan kuukauden ajan kesäkuusta 1783 helmikuuhun 1784. Purkaus — Skaftáreldar eli Skaftán tulet — työnsi ulos noin 14 kuutiokilometriä basalttilaavaa sekä pilviä myrkyllistä fluorivetyhappoa ja rikkidioksidiyhdisteitä. Ne saastuttivat maaperän, tappoivat yli puolet Islannin karjasta ja tuhosivat lähes koko sadon. Seurannut nälänhätä tappoi ainakin viidesosan saaren väestöstä.
+
+Vaikutus ei jäänyt Islantiin. Purkaus syöksi pohjoiselle pallonpuoliskolle 120 miljoonaa tonnia rikkidioksidia, mikä laski maapallon lämpötiloja, aiheutti satojen menetyksiä Euroopassa ja on saattanut aiheuttaa kuivuutta Pohjois-Afri…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Kuinka suuri osa islantilaisista kuoli purkauksen jälkeen?
+AIEMPI VASTAUS (Livia):
+Voi, tuo on raskas aihe. Purkauksen jälkeinen nälänhätä, joka liittyy [[Skaftáreldar]]-tapahtumaan, tappoi ainakin viidesosan saaren väestöstä. Syynä ei ollut pelkkä laava vaan myrkyllinen [[fluorivetyhappo]] ja rikkidioksidiyhdisteet, jotka saastuttivat maaperän, tappoivat yli puolet Islannin karjasta ja tuhosivat lähes koko sadon. Tapahtumat sijoittuvat kesästä 1783 helmikuuhun 1784, eli yli kaksisataa vuotta sitten, jolloin Islanti kuului [[Tanskan]] kuninkaan alaisuuteen; nykyään se on itsenäinen tasavalta. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Tanskan
+
+### 109
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lakagígar (historia)
+Tietoruudun teksti: Lakagígar on tulivuoren halkeama Vatnajökullin kansallispuiston länsiosassa, lähellä Kirkjubæjarklausturin kylää. Laki on se vuori, jonka halkeama halkaisee kahtia; itse halkeamaa kutsutaan Lakagígariksi. Se kuuluu Grímsvötn-tulivuoren järjestelmään.
+
+Järjestelmä purkautui rajusti kahdeksan kuukauden ajan kesäkuusta 1783 helmikuuhun 1784. Purkaus — Skaftáreldar eli Skaftán tulet — työnsi ulos noin 14 kuutiokilometriä basalttilaavaa sekä pilviä myrkyllistä fluorivetyhappoa ja rikkidioksidiyhdisteitä. Ne saastuttivat maaperän, tappoivat yli puolet Islannin karjasta ja tuhosivat lähes koko sadon. Seurannut nälänhätä tappoi ainakin viidesosan saaren väestöstä.
+
+Vaikutus ei jäänyt Islantiin. Purkaus syöksi pohjoiselle pallonpuoliskolle 120 miljoonaa tonnia rikkidioksidia, mikä laski maapallon lämpötiloja, aiheutti satojen menetyksiä Euroopassa ja on saattanut aiheuttaa kuivuutta Pohjois-Afri…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Managua — kaupunkilehti / Järvi ja tulivuoret: Masaya, Helvetin suu jossa linnut pesivät] Noin kaksikymmentä kilometriä Managuasta etelään aukeaa Masayan tulivuori, jonka Santiago-kraatteri savuaa jatkuvasti rikkidioksidia. Espanjalaiset ristivät sen "Helvetin suuksi" ja pystyttivät 1500-luvulla kraatterin reunalle ristin, Cruz de Bobadillan, manaamaan paholaisen pois. Kraatterin seinämillä pesii silti joukko vihreitä papukaijoja, chocoyoja, jotka näyttävät sietävän myrkyllisiä kaasuja siellä missä pedot eivät uskalla käydä. Vuonna 1979 alueesta tuli Nicaraguan ensimmäinen kansallispuisto, ja huhtikuussa 2001 kraatterista singahti räjähdyksessä halkaisijaltaan 60-senttisiä kiviä puolen kilometrin päähän.
+- [Nicaragua — maalehti / Luonto: Kraatteri, joka on savunnut vuosisatoja] 1670 — Masayan tulivuori tunnetaan myös vanhalla nawatinkielisellä nimellään Popogatepe. Nykyinen kaldera syntyi noin 2 500 vuotta sitten purkauksessa, joka syöksi kahdeksan kuutiokilometriä basalttista ainesta. Vuonna 1670 Nindirín kraatterissa oli kilometrin levyinen laavajärvi, joka vuoti yli reunojen, ja 1772 laavaa purkautui kylkihalkeamasta. Sen jälkeen laava on näkynyt vain Santiagon kuilussa, joka savuaa yhä ja päästää suuria määriä rikkidioksidia. Masayasta tuli 1979 Nicaraguan ensimmäinen kansallispuisto.
+AIEMPI KYSYMYS: Miksi purkaus vaikutti satoihin Euroopassa asti?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on tärkeä pointti. Purkaus syöksi pohjoiselle pallonpuoliskolle noin 120 miljoonaa tonnia [[rikkidioksidia]]. Kaasusta muodostuu [[ilmakehässä]] pieniä hiukkasia, jotka heijastavat osan auringonvalosta takaisin avaruuteen, ja siksi lämpötilat laskivat ja kasvukausi muuttui ankaraksi. Seurauksena oli satojen menetyksiä Euroopassa, ja kesällä 1783 mantereen ylle levisi myös poikkeuksellinen sumu, jonka on yhdistetty tähän purkaukseen. Tapahtumista on yli kaksisataa vuotta. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: rikkidioksidia
+
+### 110
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lakagígar (historia)
+Tietoruudun teksti: Lakagígar on tulivuoren halkeama Vatnajökullin kansallispuiston länsiosassa, lähellä Kirkjubæjarklausturin kylää. Laki on se vuori, jonka halkeama halkaisee kahtia; itse halkeamaa kutsutaan Lakagígariksi. Se kuuluu Grímsvötn-tulivuoren järjestelmään.
+
+Järjestelmä purkautui rajusti kahdeksan kuukauden ajan kesäkuusta 1783 helmikuuhun 1784. Purkaus — Skaftáreldar eli Skaftán tulet — työnsi ulos noin 14 kuutiokilometriä basalttilaavaa sekä pilviä myrkyllistä fluorivetyhappoa ja rikkidioksidiyhdisteitä. Ne saastuttivat maaperän, tappoivat yli puolet Islannin karjasta ja tuhosivat lähes koko sadon. Seurannut nälänhätä tappoi ainakin viidesosan saaren väestöstä.
+
+Vaikutus ei jäänyt Islantiin. Purkaus syöksi pohjoiselle pallonpuoliskolle 120 miljoonaa tonnia rikkidioksidia, mikä laski maapallon lämpötiloja, aiheutti satojen menetyksiä Euroopassa ja on saattanut aiheuttaa kuivuutta Pohjois-Afri…
+AIEMPI KYSYMYS: Miksi purkaus vaikutti satoihin Euroopassa asti?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on tärkeä pointti. Purkaus syöksi pohjoiselle pallonpuoliskolle noin 120 miljoonaa tonnia [[rikkidioksidia]]. Kaasusta muodostuu [[ilmakehässä]] pieniä hiukkasia, jotka heijastavat osan auringonvalosta takaisin avaruuteen, ja siksi lämpötilat laskivat ja kasvukausi muuttui ankaraksi. Seurauksena oli satojen menetyksiä Euroopassa, ja kesällä 1783 mantereen ylle levisi myös poikkeuksellinen sumu, jonka on yhdistetty tähän purkaukseen. Tapahtumista on yli kaksisataa vuotta. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: ilmakehässä
+
+### 111
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lakagígar (historia)
+Tietoruudun teksti: Lakagígar on tulivuoren halkeama Vatnajökullin kansallispuiston länsiosassa, lähellä Kirkjubæjarklausturin kylää. Laki on se vuori, jonka halkeama halkaisee kahtia; itse halkeamaa kutsutaan Lakagígariksi. Se kuuluu Grímsvötn-tulivuoren järjestelmään.
+
+Järjestelmä purkautui rajusti kahdeksan kuukauden ajan kesäkuusta 1783 helmikuuhun 1784. Purkaus — Skaftáreldar eli Skaftán tulet — työnsi ulos noin 14 kuutiokilometriä basalttilaavaa sekä pilviä myrkyllistä fluorivetyhappoa ja rikkidioksidiyhdisteitä. Ne saastuttivat maaperän, tappoivat yli puolet Islannin karjasta ja tuhosivat lähes koko sadon. Seurannut nälänhätä tappoi ainakin viidesosan saaren väestöstä.
+
+Vaikutus ei jäänyt Islantiin. Purkaus syöksi pohjoiselle pallonpuoliskolle 120 miljoonaa tonnia rikkidioksidia, mikä laski maapallon lämpötiloja, aiheutti satojen menetyksiä Euroopassa ja on saattanut aiheuttaa kuivuutta Pohjois-Afri…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kaupunkilehti / Historia: Kauppahuone, jolla oli oma laki] Kontorit olivat oikeushenkilöitä: kauppiaiden yhteisöllä oli oma kassa, oma sinetti, oma säännöstö ja valta panna säännöt täytäntöön asukkaidensa keskuudessa. Säännöstö oli kirjoitettu keskisaksaksi, ja se luettiin kauppiasyhteisölle ääneen kerran vuodessa. Sisäistä johtoa hoitivat aldermannit, jotka olivat virassaan tavallisesti vuoden kerrallaan; yhden näkemyksen mukaan Bryggenillä heitä oli alussa kuusi. Bryggen, Brugge ja Lontoo saivat 1400-luvun puolivälissä uuden viran, kirjurin: yliopistossa lakia lukeneen ja latinaa hallitsevan miehen, joka neuvoi aldermanneja ja hoiti kirjeenvaihdon.
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Miten halkeamapurkaus eroaa tavallisesta tulivuoren purkauksesta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tavallisessa tulivuoressa magma nousee yhden keskuskraatterin kautta, ja toistuvista purkauksista kasvaa vähitellen kartiomainen vuori. Halkeamapurkauksessa magma nousee maankuoren pitkää rakoa pitkin, ja laava ja kaasut pursuavat esiin monesta kohdasta rivissä. Lakagígar on tästä hyvä esimerkki: [[Laki]]-vuoren halkaiseva halkeama jätti jälkeensä kraatterijonon, ja purkaus tuotti noin 14 kuutiokilometriä [[basalttilaavaa]]. Islannissa halkeamapurkaukset liittyvät siihen, että saari sijaitsee [[mannerlaattojen]] saumassa.
+
+Ylhäältä katsottuna kraatteririvi näyttää varmaan siltä kuin joku olisi vetänyt maahan vetoketjun auki. Minä en ole ehtinyt sitä itse tarkistaa, mutta kyyhkyn silmällä se olisi näky.
+KYSYMYS: Kerro lisää: Laki
+
+### 112
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lakagígar (historia)
+Tietoruudun teksti: Lakagígar on tulivuoren halkeama Vatnajökullin kansallispuiston länsiosassa, lähellä Kirkjubæjarklausturin kylää. Laki on se vuori, jonka halkeama halkaisee kahtia; itse halkeamaa kutsutaan Lakagígariksi. Se kuuluu Grímsvötn-tulivuoren järjestelmään.
+
+Järjestelmä purkautui rajusti kahdeksan kuukauden ajan kesäkuusta 1783 helmikuuhun 1784. Purkaus — Skaftáreldar eli Skaftán tulet — työnsi ulos noin 14 kuutiokilometriä basalttilaavaa sekä pilviä myrkyllistä fluorivetyhappoa ja rikkidioksidiyhdisteitä. Ne saastuttivat maaperän, tappoivat yli puolet Islannin karjasta ja tuhosivat lähes koko sadon. Seurannut nälänhätä tappoi ainakin viidesosan saaren väestöstä.
+
+Vaikutus ei jäänyt Islantiin. Purkaus syöksi pohjoiselle pallonpuoliskolle 120 miljoonaa tonnia rikkidioksidia, mikä laski maapallon lämpötiloja, aiheutti satojen menetyksiä Euroopassa ja on saattanut aiheuttaa kuivuutta Pohjois-Afri…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+- [NFK — maalehti / Tiede: Saari joka nousi merestä] n. 3,1–2,3 milj. vuotta sitten — Norfolkinsaari ja pieni Phillipinsaari syntyivät, kun merenalainen kilpitulivuori purkautui toistuvasti noin 3,1–2,3 miljoonan vuoden ajan basalttilaavaa. Suurin osa alkuperäisestä tulivuoresta on sittemmin kulunut mereen, ja jäljellä on saaren korkein kohta, 319 metriä merenpinnan yläpuolelle kohoava Mount Bates, sekä rannikon jyrkät basalttikalliot ja irralliset kalliosaarekkeet. Saari on osa Norfolkinharjannetta, tuhat kilometriä pitkää enimmäkseen vedenalaista vuoristoa, joka ulottuu Uuden-Seelannin ja Uuden-Kaledonian väliin – Norfolkinsaari ja Phillipinsaari ovat harvoja kohtia, joissa harjanne kohoaa meren pinnan yläpuolelle.
+AIEMPI KYSYMYS: Miten halkeamapurkaus eroaa tavallisesta tulivuoren purkauksesta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tavallisessa tulivuoressa magma nousee yhden keskuskraatterin kautta, ja toistuvista purkauksista kasvaa vähitellen kartiomainen vuori. Halkeamapurkauksessa magma nousee maankuoren pitkää rakoa pitkin, ja laava ja kaasut pursuavat esiin monesta kohdasta rivissä. Lakagígar on tästä hyvä esimerkki: [[Laki]]-vuoren halkaiseva halkeama jätti jälkeensä kraatterijonon, ja purkaus tuotti noin 14 kuutiokilometriä [[basalttilaavaa]]. Islannissa halkeamapurkaukset liittyvät siihen, että saari sijaitsee [[mannerlaattojen]] saumassa.
+
+Ylhäältä katsottuna kraatteririvi näyttää varmaan siltä kuin joku olisi vetänyt maahan vetoketjun auki. Minä en ole ehtinyt sitä itse tarkistaa, mutta kyyhkyn silmällä se olisi näky.
+KYSYMYS: Kerro lisää: basalttilaavaa
+
+### 113
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lakagígar (historia)
+Tietoruudun teksti: Lakagígar on tulivuoren halkeama Vatnajökullin kansallispuiston länsiosassa, lähellä Kirkjubæjarklausturin kylää. Laki on se vuori, jonka halkeama halkaisee kahtia; itse halkeamaa kutsutaan Lakagígariksi. Se kuuluu Grímsvötn-tulivuoren järjestelmään.
+
+Järjestelmä purkautui rajusti kahdeksan kuukauden ajan kesäkuusta 1783 helmikuuhun 1784. Purkaus — Skaftáreldar eli Skaftán tulet — työnsi ulos noin 14 kuutiokilometriä basalttilaavaa sekä pilviä myrkyllistä fluorivetyhappoa ja rikkidioksidiyhdisteitä. Ne saastuttivat maaperän, tappoivat yli puolet Islannin karjasta ja tuhosivat lähes koko sadon. Seurannut nälänhätä tappoi ainakin viidesosan saaren väestöstä.
+
+Vaikutus ei jäänyt Islantiin. Purkaus syöksi pohjoiselle pallonpuoliskolle 120 miljoonaa tonnia rikkidioksidia, mikä laski maapallon lämpötiloja, aiheutti satojen menetyksiä Euroopassa ja on saattanut aiheuttaa kuivuutta Pohjois-Afri…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uluru — kaupunkilehti / Kivi ja väri: Pystyyn nostettu kerrostuma] Kun hiekkakivi oli kovettunut, se makasi alun perin vaakatasossa muun kerrostuman seassa. Noin 400–300 miljoonaa vuotta sitten alueen maankuori rutistui uudelleen mannerlaattojen liikkeissä, ja kerrokset kääntyivät lähes pystyyn — niin jyrkästi, että alkuperäiset vaakasuorat kerrosrajat näkyvät nykyään kallion kyljessä pystysuorina uurteina ylhäältä alas asti. Juuri nämä pystysuorat urat antavat Ulurulle sen tunnusomaisen ryppyisen ulkonäön kaukaa katsottuna. Samasta liikkeestä ja myöhemmästä rapautumisesta ovat syntyneet myös kallion suuret, kaarevat onkalot, joissa pehmeämpi kivi on kulunut ympäristöään nopeammin.
+- [Oman — maalehti / Vuoret: Merenpohja työntyi maan päälle] Omanin vuoristo ei ole tavallista mannerkalliota. Samailin ofioliitti on pala valtameren pohjaa ja sen alla ollutta vaippaa, joka työntyi mannerlaattojen liikkeessä kuivalle maalle noin sata miljoonaa vuotta sitten. Se on maailman laajimpia ja parhaiten paljastuneita: kalliota on satatuhatta neliökilometriä, ja siitä näkyy koko merenpohjan kerrossarja. Wadi Jizzissä pinta on täynnä tyynylaavaa — pyöreitä pötköjä, joita syntyy kun sula laava purkautuu veden alla ja jähmettyy heti ulkopinnalta. Geologit tulevat tänne katsomaan sitä, mitä muualla pitäisi porata merenpohjasta.
+AIEMPI KYSYMYS: Miten halkeamapurkaus eroaa tavallisesta tulivuoren purkauksesta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tavallisessa tulivuoressa magma nousee yhden keskuskraatterin kautta, ja toistuvista purkauksista kasvaa vähitellen kartiomainen vuori. Halkeamapurkauksessa magma nousee maankuoren pitkää rakoa pitkin, ja laava ja kaasut pursuavat esiin monesta kohdasta rivissä. Lakagígar on tästä hyvä esimerkki: [[Laki]]-vuoren halkaiseva halkeama jätti jälkeensä kraatterijonon, ja purkaus tuotti noin 14 kuutiokilometriä [[basalttilaavaa]]. Islannissa halkeamapurkaukset liittyvät siihen, että saari sijaitsee [[mannerlaattojen]] saumassa.
+
+Ylhäältä katsottuna kraatteririvi näyttää varmaan siltä kuin joku olisi vetänyt maahan vetoketjun auki. Minä en ole ehtinyt sitä itse tarkistaa, mutta kyyhkyn silmällä se olisi näky.
+KYSYMYS: Kerro lisää: mannerlaattojen
+
+### 114
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lakagígar (historia)
+Tietoruudun teksti: Lakagígar on tulivuoren halkeama Vatnajökullin kansallispuiston länsiosassa, lähellä Kirkjubæjarklausturin kylää. Laki on se vuori, jonka halkeama halkaisee kahtia; itse halkeamaa kutsutaan Lakagígariksi. Se kuuluu Grímsvötn-tulivuoren järjestelmään.
+
+Järjestelmä purkautui rajusti kahdeksan kuukauden ajan kesäkuusta 1783 helmikuuhun 1784. Purkaus — Skaftáreldar eli Skaftán tulet — työnsi ulos noin 14 kuutiokilometriä basalttilaavaa sekä pilviä myrkyllistä fluorivetyhappoa ja rikkidioksidiyhdisteitä. Ne saastuttivat maaperän, tappoivat yli puolet Islannin karjasta ja tuhosivat lähes koko sadon. Seurannut nälänhätä tappoi ainakin viidesosan saaren väestöstä.
+
+Vaikutus ei jäänyt Islantiin. Purkaus syöksi pohjoiselle pallonpuoliskolle 120 miljoonaa tonnia rikkidioksidia, mikä laski maapallon lämpötiloja, aiheutti satojen menetyksiä Euroopassa ja on saattanut aiheuttaa kuivuutta Pohjois-Afri…
+AIEMPI KYSYMYS: Mitä fluorivety tekee eläimille ja ihmisille?
+AIEMPI VASTAUS (Livia):
+Hmm, tuo on karu kohta. Fluorivetyhappo ja muut fluoriyhdisteet laskeutuivat kasvillisuuden päälle ja saastuttivat laitumet [[Skaftáreldarin]] aikana. Eläimet saivat [[fluoria]] laiduntaessaan, ja suurina määrinä se vahingoittaa erityisesti luustoa ja hampaita; sen uskotaan olleen keskeinen syy siihen, että yli puolet Islannin karjasta kuoli. Ihmisille vaaraa aiheuttivat rikkipitoinen ilma, joka ärsyttää hengitysteitä, ja ennen kaikkea seurannut ruokapula. Tarkemmista lääketieteellisistä vaikutuksista en ole varma. Tapahtumista on yli kaksisataa vuotta.
+KYSYMYS: Kerro lisää: Skaftáreldarin
+
+### 115
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lakagígar (historia)
+Tietoruudun teksti: Lakagígar on tulivuoren halkeama Vatnajökullin kansallispuiston länsiosassa, lähellä Kirkjubæjarklausturin kylää. Laki on se vuori, jonka halkeama halkaisee kahtia; itse halkeamaa kutsutaan Lakagígariksi. Se kuuluu Grímsvötn-tulivuoren järjestelmään.
+
+Järjestelmä purkautui rajusti kahdeksan kuukauden ajan kesäkuusta 1783 helmikuuhun 1784. Purkaus — Skaftáreldar eli Skaftán tulet — työnsi ulos noin 14 kuutiokilometriä basalttilaavaa sekä pilviä myrkyllistä fluorivetyhappoa ja rikkidioksidiyhdisteitä. Ne saastuttivat maaperän, tappoivat yli puolet Islannin karjasta ja tuhosivat lähes koko sadon. Seurannut nälänhätä tappoi ainakin viidesosan saaren väestöstä.
+
+Vaikutus ei jäänyt Islantiin. Purkaus syöksi pohjoiselle pallonpuoliskolle 120 miljoonaa tonnia rikkidioksidia, mikä laski maapallon lämpötiloja, aiheutti satojen menetyksiä Euroopassa ja on saattanut aiheuttaa kuivuutta Pohjois-Afri…
+AIEMPI KYSYMYS: Mitä fluorivety tekee eläimille ja ihmisille?
+AIEMPI VASTAUS (Livia):
+Hmm, tuo on karu kohta. Fluorivetyhappo ja muut fluoriyhdisteet laskeutuivat kasvillisuuden päälle ja saastuttivat laitumet [[Skaftáreldarin]] aikana. Eläimet saivat [[fluoria]] laiduntaessaan, ja suurina määrinä se vahingoittaa erityisesti luustoa ja hampaita; sen uskotaan olleen keskeinen syy siihen, että yli puolet Islannin karjasta kuoli. Ihmisille vaaraa aiheuttivat rikkipitoinen ilma, joka ärsyttää hengitysteitä, ja ennen kaikkea seurannut ruokapula. Tarkemmista lääketieteellisistä vaikutuksista en ole varma. Tapahtumista on yli kaksisataa vuotta.
+KYSYMYS: Kerro lisää: fluoria
+
+### 116
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lakagígar (historia)
+Tietoruudun teksti: Lakagígar on tulivuoren halkeama Vatnajökullin kansallispuiston länsiosassa, lähellä Kirkjubæjarklausturin kylää. Laki on se vuori, jonka halkeama halkaisee kahtia; itse halkeamaa kutsutaan Lakagígariksi. Se kuuluu Grímsvötn-tulivuoren järjestelmään.
+
+Järjestelmä purkautui rajusti kahdeksan kuukauden ajan kesäkuusta 1783 helmikuuhun 1784. Purkaus — Skaftáreldar eli Skaftán tulet — työnsi ulos noin 14 kuutiokilometriä basalttilaavaa sekä pilviä myrkyllistä fluorivetyhappoa ja rikkidioksidiyhdisteitä. Ne saastuttivat maaperän, tappoivat yli puolet Islannin karjasta ja tuhosivat lähes koko sadon. Seurannut nälänhätä tappoi ainakin viidesosan saaren väestöstä.
+
+Vaikutus ei jäänyt Islantiin. Purkaus syöksi pohjoiselle pallonpuoliskolle 120 miljoonaa tonnia rikkidioksidia, mikä laski maapallon lämpötiloja, aiheutti satojen menetyksiä Euroopassa ja on saattanut aiheuttaa kuivuutta Pohjois-Afri…
+AIEMPI KYSYMYS: Mikä tulivuori Grímsvötn on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Grímsvötn on yksi Islannin aktiivisimmista tulivuorista, ja se sijaitsee [[Vatnajökullin]] jäätikön alla. Se on laajan tulivuorijärjestelmän keskus, ja Lakagígar kuuluu samaan järjestelmään. Jään alla toimiva tulivuori sulattaa jäätä, ja kertynyt sulamisvesi voi purkautua äkillisesti [[jäätikkötulvana]]. Tarkasta purkausmäärästä en ole varma, mutta viime vuosisatoina purkauksia on ollut useita. Ylhäältä näyttää pelkältä jäältä, alla vaan kuumottaa.
+KYSYMYS: Kerro lisää: Vatnajökullin
+
+### 117
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lakagígar (historia)
+Tietoruudun teksti: Lakagígar on tulivuoren halkeama Vatnajökullin kansallispuiston länsiosassa, lähellä Kirkjubæjarklausturin kylää. Laki on se vuori, jonka halkeama halkaisee kahtia; itse halkeamaa kutsutaan Lakagígariksi. Se kuuluu Grímsvötn-tulivuoren järjestelmään.
+
+Järjestelmä purkautui rajusti kahdeksan kuukauden ajan kesäkuusta 1783 helmikuuhun 1784. Purkaus — Skaftáreldar eli Skaftán tulet — työnsi ulos noin 14 kuutiokilometriä basalttilaavaa sekä pilviä myrkyllistä fluorivetyhappoa ja rikkidioksidiyhdisteitä. Ne saastuttivat maaperän, tappoivat yli puolet Islannin karjasta ja tuhosivat lähes koko sadon. Seurannut nälänhätä tappoi ainakin viidesosan saaren väestöstä.
+
+Vaikutus ei jäänyt Islantiin. Purkaus syöksi pohjoiselle pallonpuoliskolle 120 miljoonaa tonnia rikkidioksidia, mikä laski maapallon lämpötiloja, aiheutti satojen menetyksiä Euroopassa ja on saattanut aiheuttaa kuivuutta Pohjois-Afri…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kilimandžaro — kaupunkilehti / Kilimanjaron luonto: Sulava jäätikkö] Kilimanjaron huipulla oli 1900-luvun alussa laaja jääkenttä, mutta lämpötilan nousun ja ilman kuivumisen myötä jäätiköt ovat kutistuneet dramaattisesti: lähes 85 prosenttia jääpeitteestä suli lokakuun 1912 ja kesäkuun 2011 välillä, ja sulaminen on kiihtynyt vuosikymmen vuosikymmeneltä. Tutkijoiden arvioiden mukaan viimeisetkin jäätiköt, kuten huipun läheinen Furtwänglerin jäätikkö, saattavat kadota kokonaan vuosisadan puoliväliin mennessä. Katoava lumi ja jää ovat samalla se ilmiö, jonka Rebmann näki jo 1848 – vain paljon runsaampana.
+- [Sveitsi — maalehti / Vuoret: Jäätikkö, joka virtaa kuin joki] 2001 — Aletschin jäätikkö on Alppien suurin: noin kaksikymmentä kilometriä pitkä ja paksuimmalta kohdalta lähes tuhat metriä syvä jäämassa. Se ei ole paikallaan vaan valuu alaspäin muutamia satoja metrejä vuodessa — niin hitaasti, ettei sitä näe, mutta pinnan tummat juovat kertovat virtauksen suunnan kuin joen pyörteet. Unesco otti jäätikön ympäristöineen maailmanperintöluetteloon vuonna 2001. Jäätikkö on lyhentynyt viime vuosikymmeninä nopeasti.
+AIEMPI KYSYMYS: Mikä tulivuori Grímsvötn on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Grímsvötn on yksi Islannin aktiivisimmista tulivuorista, ja se sijaitsee [[Vatnajökullin]] jäätikön alla. Se on laajan tulivuorijärjestelmän keskus, ja Lakagígar kuuluu samaan järjestelmään. Jään alla toimiva tulivuori sulattaa jäätä, ja kertynyt sulamisvesi voi purkautua äkillisesti [[jäätikkötulvana]]. Tarkasta purkausmäärästä en ole varma, mutta viime vuosisatoina purkauksia on ollut useita. Ylhäältä näyttää pelkältä jäältä, alla vaan kuumottaa.
+KYSYMYS: Kerro lisää: jäätikkötulvana
+
+### 118
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Snæfellsjökull (luonto · vuori)
+Tietoruudun teksti: Snæfellsjökull on 700 000 vuotta vanha kerrostulivuori Länsi-Islannissa, Snæfellsnesin niemen läntisimmässä kärjessä, ja sen huippua peittää jäätikkö. Selkeällä säällä se näkyy Reykjavíkiin Faxaflóin yli 120 kilometrin päähän. Vuori on Islannin tunnetuimpia paikkoja ennen kaikkea yhdestä syystä: Jules Vernen romaanissa Matka maan keskipisteeseen (1864) juuri sen kraatterista alkaa käytävä maapallon sisuksiin. Kirja oli isoisäsi matkan aikaan yhdeksän vuotta vanha ja luettiin kaikkialla. Vuoren kylkiä peittää joukko kuonakekoja, ja viimeisin purkaus huipun kraatterista ajoitetaan noin vuoteen 200 jaa. Vuonna 1939 kapteeni Robert Bartlett näki vuoren arktisen kangastuksen ansiosta yli viidensadan kilometrin päästä. Jäätikkö on kutistunut: pinta-ala oli 16 neliökilometriä 1946, 14 vuonna 1999 ja 10–11 vuonna 2008, ja elokuussa 2012 huippu oli mittaushistorian ensimmäistä kertaa jäätön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kohdekartta / Kohdekartta: Vapahtajan kirkko] 1682–1752 Vapahtajan kirkko (tanskaksi Vor Frelsers Kirke) seisoo Christianshavnissa, Amagerin puolella satamakanavaa. Kun Christian IV kaavaili Christianshavnia vuonna 1617, siitä piti tulla oma kauppiaskaupunkinsa, ja sellainen tarvitsi kirkon. Väliaikainen kirkko vihittiin 1639, mutta nykyisen kirkon rakentaminen alkoi vasta 1682 Lambert van Havenin piirustusten mukaan. Kirkko vihittiin 1695 keskeneräisenä: alttari oli tilapäinen ja tornista puuttui kokonaan huippu. Torni jäi tynkänä yli puoleksi vuosisadaksi. Vasta 1747 Fredrik V:n aikana suunnitelma kaivettiin esiin, ja uusi arkkitehti Lauritz de Thurah hylkäsi van Havenin ehdotuksen ja piirsi oman. Kuningas hyväksyi sen 1749, ja kolme…
+AIEMPI KYSYMYS: Mikä romaani teki vuoresta kuuluisan?
+AIEMPI VASTAUS (Livia):
+No niin, tää on klassikko. Vuoren teki tunnetuksi [[Jules Vernen]] romaani [[Matka maan keskipisteeseen]], joka julkaistiin vuonna 1864. Kirjassa matka maapallon sisuksiin alkaa Snæfellsjökullin [[kraatterista]]. Teos oli isoisän matkan aikaan yhdeksän vuotta vanha, ja sitä luettiin laajalti. Maan sisuksiin minä en lähtis ilman pullaa.
+KYSYMYS: Kerro lisää: Jules Vernen
+
+### 119
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Snæfellsjökull (luonto · vuori)
+Tietoruudun teksti: Snæfellsjökull on 700 000 vuotta vanha kerrostulivuori Länsi-Islannissa, Snæfellsnesin niemen läntisimmässä kärjessä, ja sen huippua peittää jäätikkö. Selkeällä säällä se näkyy Reykjavíkiin Faxaflóin yli 120 kilometrin päähän. Vuori on Islannin tunnetuimpia paikkoja ennen kaikkea yhdestä syystä: Jules Vernen romaanissa Matka maan keskipisteeseen (1864) juuri sen kraatterista alkaa käytävä maapallon sisuksiin. Kirja oli isoisäsi matkan aikaan yhdeksän vuotta vanha ja luettiin kaikkialla. Vuoren kylkiä peittää joukko kuonakekoja, ja viimeisin purkaus huipun kraatterista ajoitetaan noin vuoteen 200 jaa. Vuonna 1939 kapteeni Robert Bartlett näki vuoren arktisen kangastuksen ansiosta yli viidensadan kilometrin päästä. Jäätikkö on kutistunut: pinta-ala oli 16 neliökilometriä 1946, 14 vuonna 1999 ja 10–11 vuonna 2008, ja elokuussa 2012 huippu oli mittaushistorian ensimmäistä kertaa jäätön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+AIEMPI KYSYMYS: Mikä romaani teki vuoresta kuuluisan?
+AIEMPI VASTAUS (Livia):
+No niin, tää on klassikko. Vuoren teki tunnetuksi [[Jules Vernen]] romaani [[Matka maan keskipisteeseen]], joka julkaistiin vuonna 1864. Kirjassa matka maapallon sisuksiin alkaa Snæfellsjökullin [[kraatterista]]. Teos oli isoisän matkan aikaan yhdeksän vuotta vanha, ja sitä luettiin laajalti. Maan sisuksiin minä en lähtis ilman pullaa.
+KYSYMYS: Kerro lisää: Matka maan keskipisteeseen
+
+### 120
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Snæfellsjökull (luonto · vuori)
+Tietoruudun teksti: Snæfellsjökull on 700 000 vuotta vanha kerrostulivuori Länsi-Islannissa, Snæfellsnesin niemen läntisimmässä kärjessä, ja sen huippua peittää jäätikkö. Selkeällä säällä se näkyy Reykjavíkiin Faxaflóin yli 120 kilometrin päähän. Vuori on Islannin tunnetuimpia paikkoja ennen kaikkea yhdestä syystä: Jules Vernen romaanissa Matka maan keskipisteeseen (1864) juuri sen kraatterista alkaa käytävä maapallon sisuksiin. Kirja oli isoisäsi matkan aikaan yhdeksän vuotta vanha ja luettiin kaikkialla. Vuoren kylkiä peittää joukko kuonakekoja, ja viimeisin purkaus huipun kraatterista ajoitetaan noin vuoteen 200 jaa. Vuonna 1939 kapteeni Robert Bartlett näki vuoren arktisen kangastuksen ansiosta yli viidensadan kilometrin päästä. Jäätikkö on kutistunut: pinta-ala oli 16 neliökilometriä 1946, 14 vuonna 1999 ja 10–11 vuonna 2008, ja elokuussa 2012 huippu oli mittaushistorian ensimmäistä kertaa jäätön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Etelä-Korea — maalehti / Luonto: Kraatteri nousi merestä] Seongsan Ilchulbong on Jejun saaren itäkärjessä, ja se syntyi noin viisituhatta vuotta sitten purkauksessa, jossa sula kivi kohtasi matalan meren. Vesi höyrystyi räjähtäen ja sinkosi tuhkaa renkaaksi purkausaukon ympärille; siitä syntyi tuffikartio, jonka laella on avoin kraatteri. Kartio oli aluksi oma saarensa ja liittyi Jejuun vasta myöhemmin, kun hiekka kasautui väliin. Nimi tarkoittaa auringonnousuhuippua: sen laelta katsotaan auringon nousua merestä.
+- [Auckland — kohdekartta / Kohdekartta: Maungawhau] noin 28 000 vuotta sitten Maungawhau eli Mount Eden on kuonakartio ja tūpuna maunga, esivanhempien vuori. Sen huippu on 196 metriä merenpinnasta ja siten kannaksen korkein luonnollinen kohta, ja kraatteri on viidenkymmenen metrin syvyinen. Nimi tarkoittaa whau-puun vuorta, ja kraatteria sanotaan nimellä Te Upu Kai a Mataaho, Mataahon kulho: Mataaho on jumaluus, jonka kerrotaan asuvan kraatterissa ja vartioivan maan sisään kätkettyjä salaisuuksia. Englanninkielisen nimen valitsi kuvernööri William Hobson esimiehensä, Aucklandin jaarlin George Edenin mukaan. Vuori purkautui kolmesta kraatterista noin 28 000 vuotta sitten, ja eteläisimmän viimeiset purkaukset täyttivät pohjoiset kraatterit. Ka…
+AIEMPI KYSYMYS: Mikä romaani teki vuoresta kuuluisan?
+AIEMPI VASTAUS (Livia):
+No niin, tää on klassikko. Vuoren teki tunnetuksi [[Jules Vernen]] romaani [[Matka maan keskipisteeseen]], joka julkaistiin vuonna 1864. Kirjassa matka maapallon sisuksiin alkaa Snæfellsjökullin [[kraatterista]]. Teos oli isoisän matkan aikaan yhdeksän vuotta vanha, ja sitä luettiin laajalti. Maan sisuksiin minä en lähtis ilman pullaa.
+KYSYMYS: Kerro lisää: kraatterista
+
+### 121
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Snæfellsjökull (luonto · vuori)
+Tietoruudun teksti: Snæfellsjökull on 700 000 vuotta vanha kerrostulivuori Länsi-Islannissa, Snæfellsnesin niemen läntisimmässä kärjessä, ja sen huippua peittää jäätikkö. Selkeällä säällä se näkyy Reykjavíkiin Faxaflóin yli 120 kilometrin päähän. Vuori on Islannin tunnetuimpia paikkoja ennen kaikkea yhdestä syystä: Jules Vernen romaanissa Matka maan keskipisteeseen (1864) juuri sen kraatterista alkaa käytävä maapallon sisuksiin. Kirja oli isoisäsi matkan aikaan yhdeksän vuotta vanha ja luettiin kaikkialla. Vuoren kylkiä peittää joukko kuonakekoja, ja viimeisin purkaus huipun kraatterista ajoitetaan noin vuoteen 200 jaa. Vuonna 1939 kapteeni Robert Bartlett näki vuoren arktisen kangastuksen ansiosta yli viidensadan kilometrin päästä. Jäätikkö on kutistunut: pinta-ala oli 16 neliökilometriä 1946, 14 vuonna 1999 ja 10–11 vuonna 2008, ja elokuussa 2012 huippu oli mittaushistorian ensimmäistä kertaa jäätön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Milford Sound — kaupunkilehti / Milford Sound: Piispanhiippa vedestä nousee] Vuonon suulla kohoava Mitre Peak eli māoriksi Rahotu on Milford Soundin tunnetuin maamerkki: se nousee 1 692 metrin korkeuteen lähes suoraan merenpinnasta, mikä tekee siitä yhden maailman jyrkimmistä rannikkovuorista. Englantilaiset nimesivät vuoren sen terävän muodon mukaan - huipun useat lähekkäiset piikit muistuttavat tietystä kulmasta katsottuna piispan päähinettä eli mitraa. Tyynellä säällä huippu peilautuu vuonon liikkumattomaan veteen niin tarkasti, että kuva näyttää lähes symmetriseltä. Vuori on osa samaa jäätiköiden vuosimiljoonien saatossa kuluttamaa kallioperää, josta koko Piopiotahin vuono on veistynyt.
+- [Ruotsi — maalehti / Luonto: Erämaa ilman polkuja] Sarek perustettiin kansallispuistoksi 1909, samana vuonna kuin Euroopan ensimmäiset kansallispuistot ylipäätään. Se on lähes tienotonta ja polutonta tunturimaata: parisataa yli 1800-metristä huippua, kymmeniä jäätiköitä eikä juuri lainkaan siltoja. Sisään mennään omin voimin ja ulos samoin. Kuuluisin näkymä on Rapadalen, jossa jäätiköiden liete on kasannut jokeen suistoja kuin punos — vihreä laakso keskellä harmaita vuoria. Puistossa ei ole majoitusta eikä kioskeja, joten kaikki tarvittava kannetaan selässä.
+- [Bulgaria — maalehti / Vuori ja laakso: Kivijoki, joka ei virtaa] 1895 — Vitosha-vuori alkaa heti Sofian eteläreunalta, ja sen huippu Tšerni Vrah kohoaa 2290 metriin. Rinteillä mutkittelee kivijokia: satojen metrien mittaisia nauhoja jättiläislohkareita, jotka valuvat alaspäin niin hitaasti, ettei liikettä huomaa. Kivet ovat vanhojen jäätiköiden jäänteitä. Elokuussa 1895 kolmesataa sofialaista kiipesi yhtenä joukkona huipulle, ja siitä päivästä lasketaan bulgarialaisen retkeilyn alku.
+AIEMPI KYSYMYS: Mitä huipun jäälle on tapahtunut?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Jäätikkö on kutistunut selvästi: sen pinta-ala oli 16 neliökilometriä vuonna 1946, 14 vuonna 1999 ja enää 10–11 vuonna 2008. Elokuussa 2012 huippu oli mittaushistorian ensimmäistä kertaa kokonaan jäätön. Kehitys on osa laajempaa [[jäätiköiden]] vetäytymistä Islannissa ja muualla [[ilmaston lämpenemisen]] myötä. Lintu huomaa tollasen heti, jos sattuu lentämään ohi.
+KYSYMYS: Kerro lisää: jäätiköiden
+
+### 122
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Snæfellsjökull (luonto · vuori)
+Tietoruudun teksti: Snæfellsjökull on 700 000 vuotta vanha kerrostulivuori Länsi-Islannissa, Snæfellsnesin niemen läntisimmässä kärjessä, ja sen huippua peittää jäätikkö. Selkeällä säällä se näkyy Reykjavíkiin Faxaflóin yli 120 kilometrin päähän. Vuori on Islannin tunnetuimpia paikkoja ennen kaikkea yhdestä syystä: Jules Vernen romaanissa Matka maan keskipisteeseen (1864) juuri sen kraatterista alkaa käytävä maapallon sisuksiin. Kirja oli isoisäsi matkan aikaan yhdeksän vuotta vanha ja luettiin kaikkialla. Vuoren kylkiä peittää joukko kuonakekoja, ja viimeisin purkaus huipun kraatterista ajoitetaan noin vuoteen 200 jaa. Vuonna 1939 kapteeni Robert Bartlett näki vuoren arktisen kangastuksen ansiosta yli viidensadan kilometrin päästä. Jäätikkö on kutistunut: pinta-ala oli 16 neliökilometriä 1946, 14 vuonna 1999 ja 10–11 vuonna 2008, ja elokuussa 2012 huippu oli mittaushistorian ensimmäistä kertaa jäätön.
+AIEMPI KYSYMYS: Mitä huipun jäälle on tapahtunut?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Jäätikkö on kutistunut selvästi: sen pinta-ala oli 16 neliökilometriä vuonna 1946, 14 vuonna 1999 ja enää 10–11 vuonna 2008. Elokuussa 2012 huippu oli mittaushistorian ensimmäistä kertaa kokonaan jäätön. Kehitys on osa laajempaa [[jäätiköiden]] vetäytymistä Islannissa ja muualla [[ilmaston lämpenemisen]] myötä. Lintu huomaa tollasen heti, jos sattuu lentämään ohi.
+KYSYMYS: Kerro lisää: ilmaston lämpenemisen
+
+### 123
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Snæfellsjökull (luonto · vuori)
+Tietoruudun teksti: Snæfellsjökull on 700 000 vuotta vanha kerrostulivuori Länsi-Islannissa, Snæfellsnesin niemen läntisimmässä kärjessä, ja sen huippua peittää jäätikkö. Selkeällä säällä se näkyy Reykjavíkiin Faxaflóin yli 120 kilometrin päähän. Vuori on Islannin tunnetuimpia paikkoja ennen kaikkea yhdestä syystä: Jules Vernen romaanissa Matka maan keskipisteeseen (1864) juuri sen kraatterista alkaa käytävä maapallon sisuksiin. Kirja oli isoisäsi matkan aikaan yhdeksän vuotta vanha ja luettiin kaikkialla. Vuoren kylkiä peittää joukko kuonakekoja, ja viimeisin purkaus huipun kraatterista ajoitetaan noin vuoteen 200 jaa. Vuonna 1939 kapteeni Robert Bartlett näki vuoren arktisen kangastuksen ansiosta yli viidensadan kilometrin päästä. Jäätikkö on kutistunut: pinta-ala oli 16 neliökilometriä 1946, 14 vuonna 1999 ja 10–11 vuonna 2008, ja elokuussa 2012 huippu oli mittaushistorian ensimmäistä kertaa jäätön.
+AIEMPI KYSYMYS: Miten vuori voi näkyä satojen kilometrien päähän?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys. Selkeällä säällä vuori näkyy [[Reykjavíkiin]] yli 120 kilometrin päähän [[Faxaflóin]] yli. Vielä paljon kauempaa se havaittiin vuonna 1939, kun kapteeni Robert Bartlett näki sen yli viidensadan kilometrin päästä arktisen [[kangastuksen]] ansiosta. Kangastuksessa ilmakerrosten lämpötilaerot taivuttavat valonsäteitä niin, että horisontin takana olevat kohteet voivat nousta näkyviin. Tollasen kiikarin minäkin ottaisin.
+KYSYMYS: Kerro lisää: Reykjavíkiin
+
+### 124
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Snæfellsjökull (luonto · vuori)
+Tietoruudun teksti: Snæfellsjökull on 700 000 vuotta vanha kerrostulivuori Länsi-Islannissa, Snæfellsnesin niemen läntisimmässä kärjessä, ja sen huippua peittää jäätikkö. Selkeällä säällä se näkyy Reykjavíkiin Faxaflóin yli 120 kilometrin päähän. Vuori on Islannin tunnetuimpia paikkoja ennen kaikkea yhdestä syystä: Jules Vernen romaanissa Matka maan keskipisteeseen (1864) juuri sen kraatterista alkaa käytävä maapallon sisuksiin. Kirja oli isoisäsi matkan aikaan yhdeksän vuotta vanha ja luettiin kaikkialla. Vuoren kylkiä peittää joukko kuonakekoja, ja viimeisin purkaus huipun kraatterista ajoitetaan noin vuoteen 200 jaa. Vuonna 1939 kapteeni Robert Bartlett näki vuoren arktisen kangastuksen ansiosta yli viidensadan kilometrin päästä. Jäätikkö on kutistunut: pinta-ala oli 16 neliökilometriä 1946, 14 vuonna 1999 ja 10–11 vuonna 2008, ja elokuussa 2012 huippu oli mittaushistorian ensimmäistä kertaa jäätön.
+AIEMPI KYSYMYS: Miten vuori voi näkyä satojen kilometrien päähän?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys. Selkeällä säällä vuori näkyy [[Reykjavíkiin]] yli 120 kilometrin päähän [[Faxaflóin]] yli. Vielä paljon kauempaa se havaittiin vuonna 1939, kun kapteeni Robert Bartlett näki sen yli viidensadan kilometrin päästä arktisen [[kangastuksen]] ansiosta. Kangastuksessa ilmakerrosten lämpötilaerot taivuttavat valonsäteitä niin, että horisontin takana olevat kohteet voivat nousta näkyviin. Tollasen kiikarin minäkin ottaisin.
+KYSYMYS: Kerro lisää: Faxaflóin
+
+### 125
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Snæfellsjökull (luonto · vuori)
+Tietoruudun teksti: Snæfellsjökull on 700 000 vuotta vanha kerrostulivuori Länsi-Islannissa, Snæfellsnesin niemen läntisimmässä kärjessä, ja sen huippua peittää jäätikkö. Selkeällä säällä se näkyy Reykjavíkiin Faxaflóin yli 120 kilometrin päähän. Vuori on Islannin tunnetuimpia paikkoja ennen kaikkea yhdestä syystä: Jules Vernen romaanissa Matka maan keskipisteeseen (1864) juuri sen kraatterista alkaa käytävä maapallon sisuksiin. Kirja oli isoisäsi matkan aikaan yhdeksän vuotta vanha ja luettiin kaikkialla. Vuoren kylkiä peittää joukko kuonakekoja, ja viimeisin purkaus huipun kraatterista ajoitetaan noin vuoteen 200 jaa. Vuonna 1939 kapteeni Robert Bartlett näki vuoren arktisen kangastuksen ansiosta yli viidensadan kilometrin päästä. Jäätikkö on kutistunut: pinta-ala oli 16 neliökilometriä 1946, 14 vuonna 1999 ja 10–11 vuonna 2008, ja elokuussa 2012 huippu oli mittaushistorian ensimmäistä kertaa jäätön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mali — maalehti / Kuvataide: Kangas, joka värjätään mudalla] Bogolanfinin nimi on työohje: bambaraksi bogo on savi, lan välinettä ja fini kangasta. Miehet kutovat viidentoista sentin kaistaleita ja ompelevat niistä kankaan, naiset värjäävät sen. Kangas kastetaan ensin n'gallama-puun lehtiliemeen, jolloin siitä tulee keltainen, ja kuvio maalataan päälle savella, joka on hapantunut saviruukussa jopa vuoden. Saven rauta reagoi lehtiväriin ja jää mustaksi; lopuksi keltainen pestään pois. Metsästäjä käyttää bogolania suojaväritykseen ja arvomerkkinä, ja kuviot kertovat sananlaskuja, krokotiileja ja vanhoja taisteluita.
+- [Itä-Timor — maalehti / Kuvataide: Kangas, jolla maksettiin] Tais on itätimorilainen kudottu kangas, joka on ollut myös vaihdon väline: sillä on maksettu karjasta ja muista arvoista. Seremoniassa tais puetaan yhdessä sulkien, korallin sekä kullan tai hopean kanssa, ja katolinen kirkko on ottanut sen omiin menoihinsa. Kutominen on yksinomaan naisten työtä, ja taito siirtyy suullisena perintönä sukupolvelta toiselle. Kauneimpiin kankaisiin kääritään vainaja hautaan, ja sukujen välisissä avioliittoneuvotteluissa tais on osa sopimusta. Vastasyntyneestä sanotaan, että lapsi tuo mukanaan langan ja puolan.
+AIEMPI KYSYMYS: Miten vuori voi näkyä satojen kilometrien päähän?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys. Selkeällä säällä vuori näkyy [[Reykjavíkiin]] yli 120 kilometrin päähän [[Faxaflóin]] yli. Vielä paljon kauempaa se havaittiin vuonna 1939, kun kapteeni Robert Bartlett näki sen yli viidensadan kilometrin päästä arktisen [[kangastuksen]] ansiosta. Kangastuksessa ilmakerrosten lämpötilaerot taivuttavat valonsäteitä niin, että horisontin takana olevat kohteet voivat nousta näkyviin. Tollasen kiikarin minäkin ottaisin.
+KYSYMYS: Kerro lisää: kangastuksen
+
+### 126
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Snæfellsjökull (luonto · vuori)
+Tietoruudun teksti: Snæfellsjökull on 700 000 vuotta vanha kerrostulivuori Länsi-Islannissa, Snæfellsnesin niemen läntisimmässä kärjessä, ja sen huippua peittää jäätikkö. Selkeällä säällä se näkyy Reykjavíkiin Faxaflóin yli 120 kilometrin päähän. Vuori on Islannin tunnetuimpia paikkoja ennen kaikkea yhdestä syystä: Jules Vernen romaanissa Matka maan keskipisteeseen (1864) juuri sen kraatterista alkaa käytävä maapallon sisuksiin. Kirja oli isoisäsi matkan aikaan yhdeksän vuotta vanha ja luettiin kaikkialla. Vuoren kylkiä peittää joukko kuonakekoja, ja viimeisin purkaus huipun kraatterista ajoitetaan noin vuoteen 200 jaa. Vuonna 1939 kapteeni Robert Bartlett näki vuoren arktisen kangastuksen ansiosta yli viidensadan kilometrin päästä. Jäätikkö on kutistunut: pinta-ala oli 16 neliökilometriä 1946, 14 vuonna 1999 ja 10–11 vuonna 2008, ja elokuussa 2012 huippu oli mittaushistorian ensimmäistä kertaa jäätön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Onko Snæfellsjökull aktiivinen tulivuori?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Snæfellsjökull on noin 700 000 vuotta vanha [[kerrostulivuori]], jonka viimeisin purkaus huipun kraatterista ajoitetaan noin vuoteen 200 jaa. Vuoren kylkiä peittää myös joukko [[kuonakekoja]]. Siitä, miten tutkijat luokittelevat sen nykytilan, en ole varma, mutta pitkä lepo ei yksin tarkoita, ettei tulivuori voisi enää herätä.
+
+Vuodesta 200 on pitkä aika, mutta minun sukuni ehti silloin jo kantaa kirjeitä Roomassa. Siinä mielessä vuori on melkein nuori.
+KYSYMYS: Kerro lisää: kerrostulivuori
+
+### 127
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Snæfellsjökull (luonto · vuori)
+Tietoruudun teksti: Snæfellsjökull on 700 000 vuotta vanha kerrostulivuori Länsi-Islannissa, Snæfellsnesin niemen läntisimmässä kärjessä, ja sen huippua peittää jäätikkö. Selkeällä säällä se näkyy Reykjavíkiin Faxaflóin yli 120 kilometrin päähän. Vuori on Islannin tunnetuimpia paikkoja ennen kaikkea yhdestä syystä: Jules Vernen romaanissa Matka maan keskipisteeseen (1864) juuri sen kraatterista alkaa käytävä maapallon sisuksiin. Kirja oli isoisäsi matkan aikaan yhdeksän vuotta vanha ja luettiin kaikkialla. Vuoren kylkiä peittää joukko kuonakekoja, ja viimeisin purkaus huipun kraatterista ajoitetaan noin vuoteen 200 jaa. Vuonna 1939 kapteeni Robert Bartlett näki vuoren arktisen kangastuksen ansiosta yli viidensadan kilometrin päästä. Jäätikkö on kutistunut: pinta-ala oli 16 neliökilometriä 1946, 14 vuonna 1999 ja 10–11 vuonna 2008, ja elokuussa 2012 huippu oli mittaushistorian ensimmäistä kertaa jäätön.
+AIEMPI KYSYMYS: Onko Snæfellsjökull aktiivinen tulivuori?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Snæfellsjökull on noin 700 000 vuotta vanha [[kerrostulivuori]], jonka viimeisin purkaus huipun kraatterista ajoitetaan noin vuoteen 200 jaa. Vuoren kylkiä peittää myös joukko [[kuonakekoja]]. Siitä, miten tutkijat luokittelevat sen nykytilan, en ole varma, mutta pitkä lepo ei yksin tarkoita, ettei tulivuori voisi enää herätä.
+
+Vuodesta 200 on pitkä aika, mutta minun sukuni ehti silloin jo kantaa kirjeitä Roomassa. Siinä mielessä vuori on melkein nuori.
+KYSYMYS: Kerro lisää: kuonakekoja
+
+### 128
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Snæfellsjökull (luonto · vuori)
+Tietoruudun teksti: Snæfellsjökull on 700 000 vuotta vanha kerrostulivuori Länsi-Islannissa, Snæfellsnesin niemen läntisimmässä kärjessä, ja sen huippua peittää jäätikkö. Selkeällä säällä se näkyy Reykjavíkiin Faxaflóin yli 120 kilometrin päähän. Vuori on Islannin tunnetuimpia paikkoja ennen kaikkea yhdestä syystä: Jules Vernen romaanissa Matka maan keskipisteeseen (1864) juuri sen kraatterista alkaa käytävä maapallon sisuksiin. Kirja oli isoisäsi matkan aikaan yhdeksän vuotta vanha ja luettiin kaikkialla. Vuoren kylkiä peittää joukko kuonakekoja, ja viimeisin purkaus huipun kraatterista ajoitetaan noin vuoteen 200 jaa. Vuonna 1939 kapteeni Robert Bartlett näki vuoren arktisen kangastuksen ansiosta yli viidensadan kilometrin päästä. Jäätikkö on kutistunut: pinta-ala oli 16 neliökilometriä 1946, 14 vuonna 1999 ja 10–11 vuonna 2008, ja elokuussa 2012 huippu oli mittaushistorian ensimmäistä kertaa jäätön.
+AIEMPI KYSYMYS: Mikä on kerrostulivuori?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kerrostulivuori eli [[stratovulkaani]] on jyrkkärinteinen, kartiomainen tulivuori, joka on kasvanut vuosituhansien kuluessa, kun useat purkaukset ovat kerrostaneet laavaa, tuhkaa ja muuta purkausainesta päällekkäin. Snæfellsjökull on tällainen, ja sen huippua peittää jäätikkö. Tunnettu esimerkki tästä vuorityypistä on myös Italiassa sijaitseva [[Vesuvius]]. Ja minä luulin, et kerrokset on vaan pullassa.
+KYSYMYS: Kerro lisää: stratovulkaani
+
+### 129
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Snæfellsjökull (luonto · vuori)
+Tietoruudun teksti: Snæfellsjökull on 700 000 vuotta vanha kerrostulivuori Länsi-Islannissa, Snæfellsnesin niemen läntisimmässä kärjessä, ja sen huippua peittää jäätikkö. Selkeällä säällä se näkyy Reykjavíkiin Faxaflóin yli 120 kilometrin päähän. Vuori on Islannin tunnetuimpia paikkoja ennen kaikkea yhdestä syystä: Jules Vernen romaanissa Matka maan keskipisteeseen (1864) juuri sen kraatterista alkaa käytävä maapallon sisuksiin. Kirja oli isoisäsi matkan aikaan yhdeksän vuotta vanha ja luettiin kaikkialla. Vuoren kylkiä peittää joukko kuonakekoja, ja viimeisin purkaus huipun kraatterista ajoitetaan noin vuoteen 200 jaa. Vuonna 1939 kapteeni Robert Bartlett näki vuoren arktisen kangastuksen ansiosta yli viidensadan kilometrin päästä. Jäätikkö on kutistunut: pinta-ala oli 16 neliökilometriä 1946, 14 vuonna 1999 ja 10–11 vuonna 2008, ja elokuussa 2012 huippu oli mittaushistorian ensimmäistä kertaa jäätön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Pompeji pysähtyi kesken päivän] v. 79 — Kun Vesuvius purkautui vuonna 79, tuhka hautasi Pompejin kaupungin niin nopeasti, että leipomon leivät jäivät uuniin. Sen ansiosta roomalaisten arjesta tiedetään enemmän kuin mistään muualta: kadut vaunujen urineen, pikaruokalat tiskeineen ja seinien vaalimainokset ovat kaikki tallella. Kaivaukset alkoivat 1748 ja jatkuvat yhä — kolmasosa kaupungista on edelleen tuhkan alla. Kadun päässä häämöttää itse tulivuori, joka ei ole sammunut: se on vain tauolla.
+AIEMPI KYSYMYS: Mikä on kerrostulivuori?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kerrostulivuori eli [[stratovulkaani]] on jyrkkärinteinen, kartiomainen tulivuori, joka on kasvanut vuosituhansien kuluessa, kun useat purkaukset ovat kerrostaneet laavaa, tuhkaa ja muuta purkausainesta päällekkäin. Snæfellsjökull on tällainen, ja sen huippua peittää jäätikkö. Tunnettu esimerkki tästä vuorityypistä on myös Italiassa sijaitseva [[Vesuvius]]. Ja minä luulin, et kerrokset on vaan pullassa.
+KYSYMYS: Kerro lisää: Vesuvius
+
+### 130
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dettifoss (luonto · joki)
+Tietoruudun teksti: Dettifoss putoaa Koillis-Islannissa Jökulsá á Fjöllum -joessa, joka tulee Vatnajökullin jäätiköltä ja kerää vetensä laajalta alueelta. Putous on sata metriä leveä ja pudottaa veden 44 metriä alas Jökulsárgljúfur-rotkoon. Virtaamaltaan se on Islannin toiseksi suurin putous Urriðafossin jälkeen, keskimäärin 193 kuutiometriä sekunnissa, ja kun virtaama kerrotaan pudotuskorkeudella, sitä on pidetty Euroopan toiseksi väkevimpänä putouksena heti Reininputousten jälkeen. Vesi ei ole kirkasta vaan harmaanvalkoista: jäätikköjoki kuljettaa mukanaan hienoa kiviainesta. Nimi on suora kuvaus siitä, mitä siinä tapahtuu — islannin detta tarkoittaa putoamista tai romahtamista ja foss putousta. Säveltäjä Jón Leifs teki putouksesta oman orkesteriteoksensa.
+AIEMPI KYSYMYS: Miksi putouksen vesi on harmaata?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Dettifossin]] vesi tulee [[Vatnajökullin]] jäätiköltä, ja jäätikköjoki kuljettaa mukanaan hienoa kiviainesta. Jäätikön liike jauhaa kallioperää, ja syntynyt hieno jauhe sekoittuu jokeen niin, että vesi näyttää kirkkaan sijaan harmaanvalkoiselta. Kyllä se ylhäältä näyttää kahvilta, jossa on liikaa maitoa.
+KYSYMYS: Kerro lisää: Dettifossin
+
+### 131
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dettifoss (luonto · joki)
+Tietoruudun teksti: Dettifoss putoaa Koillis-Islannissa Jökulsá á Fjöllum -joessa, joka tulee Vatnajökullin jäätiköltä ja kerää vetensä laajalta alueelta. Putous on sata metriä leveä ja pudottaa veden 44 metriä alas Jökulsárgljúfur-rotkoon. Virtaamaltaan se on Islannin toiseksi suurin putous Urriðafossin jälkeen, keskimäärin 193 kuutiometriä sekunnissa, ja kun virtaama kerrotaan pudotuskorkeudella, sitä on pidetty Euroopan toiseksi väkevimpänä putouksena heti Reininputousten jälkeen. Vesi ei ole kirkasta vaan harmaanvalkoista: jäätikköjoki kuljettaa mukanaan hienoa kiviainesta. Nimi on suora kuvaus siitä, mitä siinä tapahtuu — islannin detta tarkoittaa putoamista tai romahtamista ja foss putousta. Säveltäjä Jón Leifs teki putouksesta oman orkesteriteoksensa.
+AIEMPI KYSYMYS: Miksi putouksen vesi on harmaata?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Dettifossin]] vesi tulee [[Vatnajökullin]] jäätiköltä, ja jäätikköjoki kuljettaa mukanaan hienoa kiviainesta. Jäätikön liike jauhaa kallioperää, ja syntynyt hieno jauhe sekoittuu jokeen niin, että vesi näyttää kirkkaan sijaan harmaanvalkoiselta. Kyllä se ylhäältä näyttää kahvilta, jossa on liikaa maitoa.
+KYSYMYS: Kerro lisää: Vatnajökullin
+
+### 132
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dettifoss (luonto · joki)
+Tietoruudun teksti: Dettifoss putoaa Koillis-Islannissa Jökulsá á Fjöllum -joessa, joka tulee Vatnajökullin jäätiköltä ja kerää vetensä laajalta alueelta. Putous on sata metriä leveä ja pudottaa veden 44 metriä alas Jökulsárgljúfur-rotkoon. Virtaamaltaan se on Islannin toiseksi suurin putous Urriðafossin jälkeen, keskimäärin 193 kuutiometriä sekunnissa, ja kun virtaama kerrotaan pudotuskorkeudella, sitä on pidetty Euroopan toiseksi väkevimpänä putouksena heti Reininputousten jälkeen. Vesi ei ole kirkasta vaan harmaanvalkoista: jäätikköjoki kuljettaa mukanaan hienoa kiviainesta. Nimi on suora kuvaus siitä, mitä siinä tapahtuu — islannin detta tarkoittaa putoamista tai romahtamista ja foss putousta. Säveltäjä Jón Leifs teki putouksesta oman orkesteriteoksensa.
+AIEMPI KYSYMYS: Mitä nimi Dettifoss tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Pöllö on yhä matkoilla, joten tää tuli minulle. Nimi on suora kuvaus siitä, mitä paikassa tapahtuu: islannin sana detta tarkoittaa putoamista tai romahtamista ja foss putousta, joten nimi merkitsee suunnilleen putoavaa tai romahtavaa putousta. Putous sijaitsee [[Jökulsá á Fjöllum]] -joessa Koillis-Islannissa, ja se on sata metriä leveä ja pudottaa veden 44 metriä [[Jökulsárgljúfur]]-rotkoon. Ei huono kyyhkyltä islanniksi.
+KYSYMYS: Kerro lisää: Jökulsá á Fjöllum
+
+### 133
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dettifoss (luonto · joki)
+Tietoruudun teksti: Dettifoss putoaa Koillis-Islannissa Jökulsá á Fjöllum -joessa, joka tulee Vatnajökullin jäätiköltä ja kerää vetensä laajalta alueelta. Putous on sata metriä leveä ja pudottaa veden 44 metriä alas Jökulsárgljúfur-rotkoon. Virtaamaltaan se on Islannin toiseksi suurin putous Urriðafossin jälkeen, keskimäärin 193 kuutiometriä sekunnissa, ja kun virtaama kerrotaan pudotuskorkeudella, sitä on pidetty Euroopan toiseksi väkevimpänä putouksena heti Reininputousten jälkeen. Vesi ei ole kirkasta vaan harmaanvalkoista: jäätikköjoki kuljettaa mukanaan hienoa kiviainesta. Nimi on suora kuvaus siitä, mitä siinä tapahtuu — islannin detta tarkoittaa putoamista tai romahtamista ja foss putousta. Säveltäjä Jón Leifs teki putouksesta oman orkesteriteoksensa.
+AIEMPI KYSYMYS: Mitä nimi Dettifoss tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Pöllö on yhä matkoilla, joten tää tuli minulle. Nimi on suora kuvaus siitä, mitä paikassa tapahtuu: islannin sana detta tarkoittaa putoamista tai romahtamista ja foss putousta, joten nimi merkitsee suunnilleen putoavaa tai romahtavaa putousta. Putous sijaitsee [[Jökulsá á Fjöllum]] -joessa Koillis-Islannissa, ja se on sata metriä leveä ja pudottaa veden 44 metriä [[Jökulsárgljúfur]]-rotkoon. Ei huono kyyhkyltä islanniksi.
+KYSYMYS: Kerro lisää: Jökulsárgljúfur
+
+### 134
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dettifoss (luonto · joki)
+Tietoruudun teksti: Dettifoss putoaa Koillis-Islannissa Jökulsá á Fjöllum -joessa, joka tulee Vatnajökullin jäätiköltä ja kerää vetensä laajalta alueelta. Putous on sata metriä leveä ja pudottaa veden 44 metriä alas Jökulsárgljúfur-rotkoon. Virtaamaltaan se on Islannin toiseksi suurin putous Urriðafossin jälkeen, keskimäärin 193 kuutiometriä sekunnissa, ja kun virtaama kerrotaan pudotuskorkeudella, sitä on pidetty Euroopan toiseksi väkevimpänä putouksena heti Reininputousten jälkeen. Vesi ei ole kirkasta vaan harmaanvalkoista: jäätikköjoki kuljettaa mukanaan hienoa kiviainesta. Nimi on suora kuvaus siitä, mitä siinä tapahtuu — islannin detta tarkoittaa putoamista tai romahtamista ja foss putousta. Säveltäjä Jón Leifs teki putouksesta oman orkesteriteoksensa.
+AIEMPI KYSYMYS: Onko Dettifoss Euroopan voimakkain putous?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ei aivan. Kun putouksen virtaama kerrotaan pudotuskorkeudella, Dettifossia on pidetty Euroopan toiseksi väkevimpänä putouksena heti [[Reininputousten]] jälkeen. Sen keskivirtaama on 193 kuutiometriä sekunnissa, ja virtaamaltaan se on Islannin toiseksi suurin putous [[Urriðafossin]] jälkeen. Kakkonen on silti ihan kunnioitettava, sen sanoo kyyhky.
+KYSYMYS: Kerro lisää: Reininputousten
+
+### 135
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dettifoss (luonto · joki)
+Tietoruudun teksti: Dettifoss putoaa Koillis-Islannissa Jökulsá á Fjöllum -joessa, joka tulee Vatnajökullin jäätiköltä ja kerää vetensä laajalta alueelta. Putous on sata metriä leveä ja pudottaa veden 44 metriä alas Jökulsárgljúfur-rotkoon. Virtaamaltaan se on Islannin toiseksi suurin putous Urriðafossin jälkeen, keskimäärin 193 kuutiometriä sekunnissa, ja kun virtaama kerrotaan pudotuskorkeudella, sitä on pidetty Euroopan toiseksi väkevimpänä putouksena heti Reininputousten jälkeen. Vesi ei ole kirkasta vaan harmaanvalkoista: jäätikköjoki kuljettaa mukanaan hienoa kiviainesta. Nimi on suora kuvaus siitä, mitä siinä tapahtuu — islannin detta tarkoittaa putoamista tai romahtamista ja foss putousta. Säveltäjä Jón Leifs teki putouksesta oman orkesteriteoksensa.
+AIEMPI KYSYMYS: Onko Dettifoss Euroopan voimakkain putous?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ei aivan. Kun putouksen virtaama kerrotaan pudotuskorkeudella, Dettifossia on pidetty Euroopan toiseksi väkevimpänä putouksena heti [[Reininputousten]] jälkeen. Sen keskivirtaama on 193 kuutiometriä sekunnissa, ja virtaamaltaan se on Islannin toiseksi suurin putous [[Urriðafossin]] jälkeen. Kakkonen on silti ihan kunnioitettava, sen sanoo kyyhky.
+KYSYMYS: Kerro lisää: Urriðafossin
+
+### 136
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dettifoss (luonto · joki)
+Tietoruudun teksti: Dettifoss putoaa Koillis-Islannissa Jökulsá á Fjöllum -joessa, joka tulee Vatnajökullin jäätiköltä ja kerää vetensä laajalta alueelta. Putous on sata metriä leveä ja pudottaa veden 44 metriä alas Jökulsárgljúfur-rotkoon. Virtaamaltaan se on Islannin toiseksi suurin putous Urriðafossin jälkeen, keskimäärin 193 kuutiometriä sekunnissa, ja kun virtaama kerrotaan pudotuskorkeudella, sitä on pidetty Euroopan toiseksi väkevimpänä putouksena heti Reininputousten jälkeen. Vesi ei ole kirkasta vaan harmaanvalkoista: jäätikköjoki kuljettaa mukanaan hienoa kiviainesta. Nimi on suora kuvaus siitä, mitä siinä tapahtuu — islannin detta tarkoittaa putoamista tai romahtamista ja foss putousta. Säveltäjä Jón Leifs teki putouksesta oman orkesteriteoksensa.
+AIEMPI KYSYMYS: Kuka oli säveltäjä Jón Leifs?
+AIEMPI VASTAUS (Livia):
+Mmm— Jón Leifs oli islantilainen säveltäjä, joka teki [[Dettifossista]] oman orkesteriteoksensa. Hänet tunnetaan musiikista, jossa Islannin luonto ja [[kansanmusiikki]] kuuluvat voimakkaasti. Tarkemmista elämänvaiheista ja teosten valmistumisvuosista en ole varma.
+
+Putous on äänekäs, joten orkesteri tuntuu minusta oikealta valinnalta. Pelkkä huilu ei olisi riittänyt, siitä olen varma.
+KYSYMYS: Kerro lisää: Dettifossista
+
+### 137
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dettifoss (luonto · joki)
+Tietoruudun teksti: Dettifoss putoaa Koillis-Islannissa Jökulsá á Fjöllum -joessa, joka tulee Vatnajökullin jäätiköltä ja kerää vetensä laajalta alueelta. Putous on sata metriä leveä ja pudottaa veden 44 metriä alas Jökulsárgljúfur-rotkoon. Virtaamaltaan se on Islannin toiseksi suurin putous Urriðafossin jälkeen, keskimäärin 193 kuutiometriä sekunnissa, ja kun virtaama kerrotaan pudotuskorkeudella, sitä on pidetty Euroopan toiseksi väkevimpänä putouksena heti Reininputousten jälkeen. Vesi ei ole kirkasta vaan harmaanvalkoista: jäätikköjoki kuljettaa mukanaan hienoa kiviainesta. Nimi on suora kuvaus siitä, mitä siinä tapahtuu — islannin detta tarkoittaa putoamista tai romahtamista ja foss putousta. Säveltäjä Jón Leifs teki putouksesta oman orkesteriteoksensa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santarém — kaupunkilehti / Santarém: Tapajós-kansan hautaurna] Kauan ennen Bettendorffin lähetysasemaa Santarémin seudulla asui Tapajós-kansa, jonka kukoistava kulttuuri kukoisti tuhat vuotta ennen eurooppalaisten saapumista. Arkeologien mukaan Tapajós-kansan asutus ulottui laajalle Belterran ylängölle, ja väestöä on arvioitu olleen jokisuulla kymmeniä tuhansia ennen siirtomaa-aikaa. Kansa tunnettiin erityisesti taidokkaasta keramiikastaan: koristelluista astioista ja hautaurnista, joihin muotoiltiin ihmis- ja eläinhahmoja. Osa näistä esineistä on tänään esillä Santarémin museoissa, ja tuoreet ilmakuvaukset ovat paljastaneet lisää muinaisia asuinjälkiä sademetsän alta.
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Kuka oli säveltäjä Jón Leifs?
+AIEMPI VASTAUS (Livia):
+Mmm— Jón Leifs oli islantilainen säveltäjä, joka teki [[Dettifossista]] oman orkesteriteoksensa. Hänet tunnetaan musiikista, jossa Islannin luonto ja [[kansanmusiikki]] kuuluvat voimakkaasti. Tarkemmista elämänvaiheista ja teosten valmistumisvuosista en ole varma.
+
+Putous on äänekäs, joten orkesteri tuntuu minusta oikealta valinnalta. Pelkkä huilu ei olisi riittänyt, siitä olen varma.
+KYSYMYS: Kerro lisää: kansanmusiikki
+
+### 138
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mývatn (meri)
+Tietoruudun teksti: Mývatn on matala järvi Pohjois-Islannissa lähellä Kraflan tulivuorta. Nimi tarkoittaa sanatarkasti sääskijärveä, ja se on rehellinen: kesällä ilma on täynnä surviaissääskiä. Juuri ne selittävät kaiken muunkin. Järveen purkautuu ravinteikasta lähdevettä, hyönteisiä ja vesikirppuja on valtavasti, ja siksi järvi ja sen ympärysuot elättävät enemmän sorsalajeja kuin mikään muu paikka Euroopassa: pesiviä lajeja on viisitoista, ja pelkkiä tukkasotkia on kuusituhatta paria. Järvi syntyi noin 2 300 vuotta sitten suuresta basalttisesta laavapurkauksesta, ja maisema on sen mukainen — laavapatsaita ja valekraattereita, jotka syntyivät laavan valuessa kosteikon päälle. Keskisyvyys on vain 2,5 metriä. Laskujoki Laxá tunnetaan taimenesta ja lohesta, ja joki, järvi ja suot on rauhoitettu 4 400 neliökilometrin suojelualueeksi.
+AIEMPI KYSYMYS: Mistä järvi on saanut nimensä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nimi [[Mývatn]] tarkoittaa sanatarkasti sääskijärveä: islannin mý on sääski ja vatn vesi. Nimi on rehellinen, sillä kesällä ilma on täynnä [[surviaissääskiä]], ja ne ovat koko järven [[ravintoketjun]] perusta. Sääskiä en kaipaa yhtään, pulla kelpaisi paremmin.
+KYSYMYS: Kerro lisää: Mývatn
+
+### 139
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mývatn (meri)
+Tietoruudun teksti: Mývatn on matala järvi Pohjois-Islannissa lähellä Kraflan tulivuorta. Nimi tarkoittaa sanatarkasti sääskijärveä, ja se on rehellinen: kesällä ilma on täynnä surviaissääskiä. Juuri ne selittävät kaiken muunkin. Järveen purkautuu ravinteikasta lähdevettä, hyönteisiä ja vesikirppuja on valtavasti, ja siksi järvi ja sen ympärysuot elättävät enemmän sorsalajeja kuin mikään muu paikka Euroopassa: pesiviä lajeja on viisitoista, ja pelkkiä tukkasotkia on kuusituhatta paria. Järvi syntyi noin 2 300 vuotta sitten suuresta basalttisesta laavapurkauksesta, ja maisema on sen mukainen — laavapatsaita ja valekraattereita, jotka syntyivät laavan valuessa kosteikon päälle. Keskisyvyys on vain 2,5 metriä. Laskujoki Laxá tunnetaan taimenesta ja lohesta, ja joki, järvi ja suot on rauhoitettu 4 400 neliökilometrin suojelualueeksi.
+AIEMPI KYSYMYS: Mistä järvi on saanut nimensä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nimi [[Mývatn]] tarkoittaa sanatarkasti sääskijärveä: islannin mý on sääski ja vatn vesi. Nimi on rehellinen, sillä kesällä ilma on täynnä [[surviaissääskiä]], ja ne ovat koko järven [[ravintoketjun]] perusta. Sääskiä en kaipaa yhtään, pulla kelpaisi paremmin.
+KYSYMYS: Kerro lisää: surviaissääskiä
+
+### 140
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mývatn (meri)
+Tietoruudun teksti: Mývatn on matala järvi Pohjois-Islannissa lähellä Kraflan tulivuorta. Nimi tarkoittaa sanatarkasti sääskijärveä, ja se on rehellinen: kesällä ilma on täynnä surviaissääskiä. Juuri ne selittävät kaiken muunkin. Järveen purkautuu ravinteikasta lähdevettä, hyönteisiä ja vesikirppuja on valtavasti, ja siksi järvi ja sen ympärysuot elättävät enemmän sorsalajeja kuin mikään muu paikka Euroopassa: pesiviä lajeja on viisitoista, ja pelkkiä tukkasotkia on kuusituhatta paria. Järvi syntyi noin 2 300 vuotta sitten suuresta basalttisesta laavapurkauksesta, ja maisema on sen mukainen — laavapatsaita ja valekraattereita, jotka syntyivät laavan valuessa kosteikon päälle. Keskisyvyys on vain 2,5 metriä. Laskujoki Laxá tunnetaan taimenesta ja lohesta, ja joki, järvi ja suot on rauhoitettu 4 400 neliökilometrin suojelualueeksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [GUF — maalehti / Luonto: Sademetsän suurin kissa] nykyään — Jaguaari on Amazonin sademetsän suurin petoeläin ja ravintoketjun huippu myös Ranskan Guayanassa. Se ui mielellään ja saalistaa kaimaaneja ja kapybaroita jokien varsilla. Tutkijat ovat seuranneet jaguaarikantaa riistakameroilla muun muassa Nouraguesin luonnonpuistossa vuodesta 2007 lähtien, sillä laji on hävinnyt yli puolelta entisestä levinneisyys-alueestaan Etelä- ja Keski-Amerikassa. Ranskan Guayanassa jaguaarin metsästys kiellettiin prefektin päätöksellä vuonna 2011. Tämä yksilö on kuvattu Ranskan Guayanan omassa eläintarhassa Macourian kunnassa.
+AIEMPI KYSYMYS: Mistä järvi on saanut nimensä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nimi [[Mývatn]] tarkoittaa sanatarkasti sääskijärveä: islannin mý on sääski ja vatn vesi. Nimi on rehellinen, sillä kesällä ilma on täynnä [[surviaissääskiä]], ja ne ovat koko järven [[ravintoketjun]] perusta. Sääskiä en kaipaa yhtään, pulla kelpaisi paremmin.
+KYSYMYS: Kerro lisää: ravintoketjun
+
+### 141
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mývatn (meri)
+Tietoruudun teksti: Mývatn on matala järvi Pohjois-Islannissa lähellä Kraflan tulivuorta. Nimi tarkoittaa sanatarkasti sääskijärveä, ja se on rehellinen: kesällä ilma on täynnä surviaissääskiä. Juuri ne selittävät kaiken muunkin. Järveen purkautuu ravinteikasta lähdevettä, hyönteisiä ja vesikirppuja on valtavasti, ja siksi järvi ja sen ympärysuot elättävät enemmän sorsalajeja kuin mikään muu paikka Euroopassa: pesiviä lajeja on viisitoista, ja pelkkiä tukkasotkia on kuusituhatta paria. Järvi syntyi noin 2 300 vuotta sitten suuresta basalttisesta laavapurkauksesta, ja maisema on sen mukainen — laavapatsaita ja valekraattereita, jotka syntyivät laavan valuessa kosteikon päälle. Keskisyvyys on vain 2,5 metriä. Laskujoki Laxá tunnetaan taimenesta ja lohesta, ja joki, järvi ja suot on rauhoitettu 4 400 neliökilometrin suojelualueeksi.
+AIEMPI KYSYMYS: Miksi sorsia on juuri täällä niin paljon?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Syy on ravinnossa. Järveen purkautuu ravinteikasta lähdevettä, ja sen ansiosta hyönteisiä ja [[vesikirppuja]] on valtavasti, joten sorsilla on runsaasti syötävää. Lähteiden mukaan järvi ja sen ympärysuot elättävät enemmän [[sorsalajeja]] kuin mikään muu paikka Euroopassa: pesiviä lajeja on viisitoista. Hyvä ruokapaikka vetää väkeä, sama pätee kyyhkyihin.
+KYSYMYS: Kerro lisää: vesikirppuja
+
+### 142
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mývatn (meri)
+Tietoruudun teksti: Mývatn on matala järvi Pohjois-Islannissa lähellä Kraflan tulivuorta. Nimi tarkoittaa sanatarkasti sääskijärveä, ja se on rehellinen: kesällä ilma on täynnä surviaissääskiä. Juuri ne selittävät kaiken muunkin. Järveen purkautuu ravinteikasta lähdevettä, hyönteisiä ja vesikirppuja on valtavasti, ja siksi järvi ja sen ympärysuot elättävät enemmän sorsalajeja kuin mikään muu paikka Euroopassa: pesiviä lajeja on viisitoista, ja pelkkiä tukkasotkia on kuusituhatta paria. Järvi syntyi noin 2 300 vuotta sitten suuresta basalttisesta laavapurkauksesta, ja maisema on sen mukainen — laavapatsaita ja valekraattereita, jotka syntyivät laavan valuessa kosteikon päälle. Keskisyvyys on vain 2,5 metriä. Laskujoki Laxá tunnetaan taimenesta ja lohesta, ja joki, järvi ja suot on rauhoitettu 4 400 neliökilometrin suojelualueeksi.
+AIEMPI KYSYMYS: Miksi sorsia on juuri täällä niin paljon?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Syy on ravinnossa. Järveen purkautuu ravinteikasta lähdevettä, ja sen ansiosta hyönteisiä ja [[vesikirppuja]] on valtavasti, joten sorsilla on runsaasti syötävää. Lähteiden mukaan järvi ja sen ympärysuot elättävät enemmän [[sorsalajeja]] kuin mikään muu paikka Euroopassa: pesiviä lajeja on viisitoista. Hyvä ruokapaikka vetää väkeä, sama pätee kyyhkyihin.
+KYSYMYS: Kerro lisää: sorsalajeja
+
+### 143
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mývatn (meri)
+Tietoruudun teksti: Mývatn on matala järvi Pohjois-Islannissa lähellä Kraflan tulivuorta. Nimi tarkoittaa sanatarkasti sääskijärveä, ja se on rehellinen: kesällä ilma on täynnä surviaissääskiä. Juuri ne selittävät kaiken muunkin. Järveen purkautuu ravinteikasta lähdevettä, hyönteisiä ja vesikirppuja on valtavasti, ja siksi järvi ja sen ympärysuot elättävät enemmän sorsalajeja kuin mikään muu paikka Euroopassa: pesiviä lajeja on viisitoista, ja pelkkiä tukkasotkia on kuusituhatta paria. Järvi syntyi noin 2 300 vuotta sitten suuresta basalttisesta laavapurkauksesta, ja maisema on sen mukainen — laavapatsaita ja valekraattereita, jotka syntyivät laavan valuessa kosteikon päälle. Keskisyvyys on vain 2,5 metriä. Laskujoki Laxá tunnetaan taimenesta ja lohesta, ja joki, järvi ja suot on rauhoitettu 4 400 neliökilometrin suojelualueeksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Pylväät, jotka laava latoi] 60 milj. vuotta sitten — Pohjois-Irlannin rannikolla on noin 40 000 kivipylvästä, jotka nousevat merestä kuin ladotut askelmat. Ne syntyivät, kun paksu laavakerros jäähtyi hyvin hitaasti. Jäähtyessään laava kutistui ja halkeili, ja halkeamat etsivät lyhimmän reitin — siksi useimmista pylväistä tuli kuusikulmaisia. Osassa on kuitenkin neljä, viisi, seitsemän tai kahdeksan sivua. Vanha tarina selittää saman toisin: jättiläinen Fionn mac Cumhaill rakensi kivitien Skotlantiin päästäkseen tappelemaan toisen jättiläisen kanssa.
+- [Tansania — maalehti / Luonto: Laava, jota voi katsoa päivällä kuin mutavirtaa] Ol Doinyo Lengai on maailman ainoa tulivuori, joka purkaa natrokarbonatiittia. Sen laava on 540–593-asteista — tavallinen basalttilaava on satoja asteita kuumempaa — ja niin juoksevaa, että se virtaa yhdestä viiteen metriä sekunnissa ja on tunnetuista laavoista kaikkein ohuinta. Päivänvalossa virta näyttää mudalta tai öljyltä ja hehkuu vasta pimeässä. Tuore laava on musta tai ruskea, mutta se muuttuu tunneissa tai päivissä lumivalkoiseksi. Maasait ja sonjot kutsuvat vuorta Jumalan vuoreksi.
+- [Etelä-Korea — maalehti / Luonto: Laava kaivoi itselleen käytävän] Manjanggulin luola on lähes yhdeksän kilometriä pitkä, paikoin 23 metriä leveä ja 30 korkea. Se ei ole veden liuottama vaan laavaputki: laavavirta kaivoi sen itse. Virran pinta jähmettyi katoksi, mutta sisällä kuuma laava jatkoi matkaansa, ja kun purkaus loppui, putki jäi tyhjäksi käytäväksi. Katosta valuneesta laavasta on jäänyt riippuvia tippukiviä, ja luolan perällä seisoo 7,6 metriä korkea laavapylväs, joka on maailman suurin tunnettu. Luola kuuluu Jejun maailmanperintökohteeseen.
+AIEMPI KYSYMYS: Miten Mývatn syntyi?
+AIEMPI VASTAUS (Livia):
+Ai se. Järvi syntyi noin 2 300 vuotta sitten suuressa basalttisessa [[laavapurkauksessa]], joka sijoittui lähelle [[Kraflan]] tulivuorta. Purkauksen muokkaamaan maastoon jäi matala allas, jonka keskisyvyys on vain 2,5 metriä. Purkaus jätti jälkeensä myös laavapatsaita ja [[valekraattereita]], jotka syntyivät laavan valuessa kosteikon päälle.
+
+Laavan alle jäänyt kosteikko on mielestäni hieno yksityiskohta: tuli ja vesi tulivat samaan aikaan paikalle. Minä pidän kyllä enemmän kuivasta lentosäästä.
+KYSYMYS: Kerro lisää: laavapurkauksessa
+
+### 144
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mývatn (meri)
+Tietoruudun teksti: Mývatn on matala järvi Pohjois-Islannissa lähellä Kraflan tulivuorta. Nimi tarkoittaa sanatarkasti sääskijärveä, ja se on rehellinen: kesällä ilma on täynnä surviaissääskiä. Juuri ne selittävät kaiken muunkin. Järveen purkautuu ravinteikasta lähdevettä, hyönteisiä ja vesikirppuja on valtavasti, ja siksi järvi ja sen ympärysuot elättävät enemmän sorsalajeja kuin mikään muu paikka Euroopassa: pesiviä lajeja on viisitoista, ja pelkkiä tukkasotkia on kuusituhatta paria. Järvi syntyi noin 2 300 vuotta sitten suuresta basalttisesta laavapurkauksesta, ja maisema on sen mukainen — laavapatsaita ja valekraattereita, jotka syntyivät laavan valuessa kosteikon päälle. Keskisyvyys on vain 2,5 metriä. Laskujoki Laxá tunnetaan taimenesta ja lohesta, ja joki, järvi ja suot on rauhoitettu 4 400 neliökilometrin suojelualueeksi.
+AIEMPI KYSYMYS: Miten Mývatn syntyi?
+AIEMPI VASTAUS (Livia):
+Ai se. Järvi syntyi noin 2 300 vuotta sitten suuressa basalttisessa [[laavapurkauksessa]], joka sijoittui lähelle [[Kraflan]] tulivuorta. Purkauksen muokkaamaan maastoon jäi matala allas, jonka keskisyvyys on vain 2,5 metriä. Purkaus jätti jälkeensä myös laavapatsaita ja [[valekraattereita]], jotka syntyivät laavan valuessa kosteikon päälle.
+
+Laavan alle jäänyt kosteikko on mielestäni hieno yksityiskohta: tuli ja vesi tulivat samaan aikaan paikalle. Minä pidän kyllä enemmän kuivasta lentosäästä.
+KYSYMYS: Kerro lisää: Kraflan
+
+### 145
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mývatn (meri)
+Tietoruudun teksti: Mývatn on matala järvi Pohjois-Islannissa lähellä Kraflan tulivuorta. Nimi tarkoittaa sanatarkasti sääskijärveä, ja se on rehellinen: kesällä ilma on täynnä surviaissääskiä. Juuri ne selittävät kaiken muunkin. Järveen purkautuu ravinteikasta lähdevettä, hyönteisiä ja vesikirppuja on valtavasti, ja siksi järvi ja sen ympärysuot elättävät enemmän sorsalajeja kuin mikään muu paikka Euroopassa: pesiviä lajeja on viisitoista, ja pelkkiä tukkasotkia on kuusituhatta paria. Järvi syntyi noin 2 300 vuotta sitten suuresta basalttisesta laavapurkauksesta, ja maisema on sen mukainen — laavapatsaita ja valekraattereita, jotka syntyivät laavan valuessa kosteikon päälle. Keskisyvyys on vain 2,5 metriä. Laskujoki Laxá tunnetaan taimenesta ja lohesta, ja joki, järvi ja suot on rauhoitettu 4 400 neliökilometrin suojelualueeksi.
+AIEMPI KYSYMYS: Miten Mývatn syntyi?
+AIEMPI VASTAUS (Livia):
+Ai se. Järvi syntyi noin 2 300 vuotta sitten suuressa basalttisessa [[laavapurkauksessa]], joka sijoittui lähelle [[Kraflan]] tulivuorta. Purkauksen muokkaamaan maastoon jäi matala allas, jonka keskisyvyys on vain 2,5 metriä. Purkaus jätti jälkeensä myös laavapatsaita ja [[valekraattereita]], jotka syntyivät laavan valuessa kosteikon päälle.
+
+Laavan alle jäänyt kosteikko on mielestäni hieno yksityiskohta: tuli ja vesi tulivat samaan aikaan paikalle. Minä pidän kyllä enemmän kuivasta lentosäästä.
+KYSYMYS: Kerro lisää: valekraattereita
+
+### 146
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mývatn (meri)
+Tietoruudun teksti: Mývatn on matala järvi Pohjois-Islannissa lähellä Kraflan tulivuorta. Nimi tarkoittaa sanatarkasti sääskijärveä, ja se on rehellinen: kesällä ilma on täynnä surviaissääskiä. Juuri ne selittävät kaiken muunkin. Järveen purkautuu ravinteikasta lähdevettä, hyönteisiä ja vesikirppuja on valtavasti, ja siksi järvi ja sen ympärysuot elättävät enemmän sorsalajeja kuin mikään muu paikka Euroopassa: pesiviä lajeja on viisitoista, ja pelkkiä tukkasotkia on kuusituhatta paria. Järvi syntyi noin 2 300 vuotta sitten suuresta basalttisesta laavapurkauksesta, ja maisema on sen mukainen — laavapatsaita ja valekraattereita, jotka syntyivät laavan valuessa kosteikon päälle. Keskisyvyys on vain 2,5 metriä. Laskujoki Laxá tunnetaan taimenesta ja lohesta, ja joki, järvi ja suot on rauhoitettu 4 400 neliökilometrin suojelualueeksi.
+AIEMPI KYSYMYS: Mitä valekraatterit ovat?
+AIEMPI VASTAUS (Livia):
+No jopas. Valekraatterit ovat kraattereita muistuttavia kumpuja, jotka syntyvät, kun laava virtaa kosteikon tai muun märän maan päälle. Alla oleva vesi kuumenee ja höyrystyy, ja höyry räjäyttää laavakerrokseen kraatterin näköisiä aukkoja, vaikka alla ei ole varsinaista tulivuoren purkausaukkoa. [[Mývatnin]] alueella ne syntyivät laavan valuessa [[kosteikon]] päälle. Huijaus, mutta kaunis huijaus.
+KYSYMYS: Kerro lisää: Mývatnin
+
+### 147
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mývatn (meri)
+Tietoruudun teksti: Mývatn on matala järvi Pohjois-Islannissa lähellä Kraflan tulivuorta. Nimi tarkoittaa sanatarkasti sääskijärveä, ja se on rehellinen: kesällä ilma on täynnä surviaissääskiä. Juuri ne selittävät kaiken muunkin. Järveen purkautuu ravinteikasta lähdevettä, hyönteisiä ja vesikirppuja on valtavasti, ja siksi järvi ja sen ympärysuot elättävät enemmän sorsalajeja kuin mikään muu paikka Euroopassa: pesiviä lajeja on viisitoista, ja pelkkiä tukkasotkia on kuusituhatta paria. Järvi syntyi noin 2 300 vuotta sitten suuresta basalttisesta laavapurkauksesta, ja maisema on sen mukainen — laavapatsaita ja valekraattereita, jotka syntyivät laavan valuessa kosteikon päälle. Keskisyvyys on vain 2,5 metriä. Laskujoki Laxá tunnetaan taimenesta ja lohesta, ja joki, järvi ja suot on rauhoitettu 4 400 neliökilometrin suojelualueeksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bogotá — kaupunkilehti / Muiscat: Kansa joka on yhä olemassa] Muiscat eivät ole kadonnut kansa. Neuvostojen jälleenrakennus alkoi 1989, ja tänään toimivia muisca-neuvostoja on viisi: Suba, Bosa, Cota, Chía ja Sesquilé. Ne kokoontuivat Bosassa 20.–22. syyskuuta 2002 ensimmäiseen muiscojen yleiskongressiin ja perustivat yhteisen Cabildo Mayor del Pueblo Muiscan. Cotan yhteisö on ottanut kvinoan uudestaan viljelyyn ja käy tuotteillaan säännöllisesti vaihtokauppaa, ja Suban muiscat ovat vastustaneet Tibabuyesin kosteikon kuivattamista. Maissiolut chicha kiellettiin 1948, mutta kielto kumottiin 1991 – ja siitä lähtien La Perseverancian korttelissa on juhlittu vuosittain chichan, maissin, elämän ja ilon festivaalia.
+- [Namib — kaupunkilehti / Namib: Deadvlei — kuolleiden puiden tasanko] Parin kilometrin päässä Sossusvleistä sijaitsee Deadvlei, valkoinen savitasanne, jolla seisoo mustia, kuolleita kameelipiikkipuita. Puut versoivat noin 900 vuotta sitten, kun Tsauchab-joki tulvi ajoittain ja loi tasangolle hetkellisen kosteikon. Etenevät hiekkadyynit tukkivat lopulta joen reitin, ja puut kuolivat 600–700 vuotta sitten – mutta aavikon äärimmäinen kuivuus on estänyt niitä lahoamasta, joten mustunut puu on säilynyt lähes koskemattomana vuosisatojen ajan. Tulos on omalaatuinen näky: sysimustat rungot kohoavat valkoisesta savesta, ja niitä ympäröivät jyrkät, punaiset dyynit joka puolella horisonttia.
+AIEMPI KYSYMYS: Mitä valekraatterit ovat?
+AIEMPI VASTAUS (Livia):
+No jopas. Valekraatterit ovat kraattereita muistuttavia kumpuja, jotka syntyvät, kun laava virtaa kosteikon tai muun märän maan päälle. Alla oleva vesi kuumenee ja höyrystyy, ja höyry räjäyttää laavakerrokseen kraatterin näköisiä aukkoja, vaikka alla ei ole varsinaista tulivuoren purkausaukkoa. [[Mývatnin]] alueella ne syntyivät laavan valuessa [[kosteikon]] päälle. Huijaus, mutta kaunis huijaus.
+KYSYMYS: Kerro lisää: kosteikon
+
+### 148
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mývatn (meri)
+Tietoruudun teksti: Mývatn on matala järvi Pohjois-Islannissa lähellä Kraflan tulivuorta. Nimi tarkoittaa sanatarkasti sääskijärveä, ja se on rehellinen: kesällä ilma on täynnä surviaissääskiä. Juuri ne selittävät kaiken muunkin. Järveen purkautuu ravinteikasta lähdevettä, hyönteisiä ja vesikirppuja on valtavasti, ja siksi järvi ja sen ympärysuot elättävät enemmän sorsalajeja kuin mikään muu paikka Euroopassa: pesiviä lajeja on viisitoista, ja pelkkiä tukkasotkia on kuusituhatta paria. Järvi syntyi noin 2 300 vuotta sitten suuresta basalttisesta laavapurkauksesta, ja maisema on sen mukainen — laavapatsaita ja valekraattereita, jotka syntyivät laavan valuessa kosteikon päälle. Keskisyvyys on vain 2,5 metriä. Laskujoki Laxá tunnetaan taimenesta ja lohesta, ja joki, järvi ja suot on rauhoitettu 4 400 neliökilometrin suojelualueeksi.
+AIEMPI KYSYMYS: Mikä Laxá on ja mistä se on tunnettu?
+AIEMPI VASTAUS (Livia):
+Kato, Laxá on Mývatnin laskujoki, joka tunnetaan [[taimenestaan]] ja [[lohestaan]]. Nimi viittaa lohijokeen, sillä islannin lax tarkoittaa lohta ja á jokea. Joki, järvi ja ympäröivät suot on rauhoitettu yhdeksi suojelualueeksi. Kalastus on kyllä enemmän kissojen kuin kyyhkyjen alaa.
+KYSYMYS: Kerro lisää: taimenestaan
+
+### 149
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mývatn (meri)
+Tietoruudun teksti: Mývatn on matala järvi Pohjois-Islannissa lähellä Kraflan tulivuorta. Nimi tarkoittaa sanatarkasti sääskijärveä, ja se on rehellinen: kesällä ilma on täynnä surviaissääskiä. Juuri ne selittävät kaiken muunkin. Järveen purkautuu ravinteikasta lähdevettä, hyönteisiä ja vesikirppuja on valtavasti, ja siksi järvi ja sen ympärysuot elättävät enemmän sorsalajeja kuin mikään muu paikka Euroopassa: pesiviä lajeja on viisitoista, ja pelkkiä tukkasotkia on kuusituhatta paria. Järvi syntyi noin 2 300 vuotta sitten suuresta basalttisesta laavapurkauksesta, ja maisema on sen mukainen — laavapatsaita ja valekraattereita, jotka syntyivät laavan valuessa kosteikon päälle. Keskisyvyys on vain 2,5 metriä. Laskujoki Laxá tunnetaan taimenesta ja lohesta, ja joki, järvi ja suot on rauhoitettu 4 400 neliökilometrin suojelualueeksi.
+AIEMPI KYSYMYS: Mikä Laxá on ja mistä se on tunnettu?
+AIEMPI VASTAUS (Livia):
+Kato, Laxá on Mývatnin laskujoki, joka tunnetaan [[taimenestaan]] ja [[lohestaan]]. Nimi viittaa lohijokeen, sillä islannin lax tarkoittaa lohta ja á jokea. Joki, järvi ja ympäröivät suot on rauhoitettu yhdeksi suojelualueeksi. Kalastus on kyllä enemmän kissojen kuin kyyhkyjen alaa.
+KYSYMYS: Kerro lisää: lohestaan
+
+### 150
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vatnajökull (luonto · vuori)
+Tietoruudun teksti: Vatnajökull peittää noin kahdeksan prosenttia koko Islannista. Pinta-alaa on 7 700 neliökilometriä ja tilavuutta noin 3 000 kuutiokilometriä, mikä tekee siitä Euroopan suurimman jäätikön tilavuudeltaan — pinta-alaltaan sitä suurempi on vain Novaja Zemljan Severnyin jääkenttä. Jää on keskimäärin 380 metriä paksua ja paksuimmillaan 950. Islannin korkein huippu Hvannadalshnjúkur on sen eteläreunassa. Jäätikön erikoisuus on se, mitä sen alla on: se makaa kahden mannerlaatan saumalla, ja sen luoteisosan alla on vaipan kuumapisteen keskus. Jään alla purkautuvat tulivuoret sulattavat jäähän vesitaskuja, jotka lopulta murtavat heikentyneen jään ja syöksyvät ulos jäätikkötulvina. Vuoden 1934 tulvassa vettä purkautui 15 kuutiokilometriä muutamassa päivässä. Vanha islantilainen nimi jäätikölle oli Klofajökull.
+AIEMPI KYSYMYS: Kuinka paksua jää on?
+AIEMPI VASTAUS (Livia):
+No niin. Pöllö parantelee yhä siipeään, joten tää on minun. [[Vatnajökullin]] jää on keskimäärin 380 metriä paksua ja paksuimmillaan 950 metriä. Jäätikkö peittää noin kahdeksan prosenttia koko Islannista, ja sen pinta-ala on 7 700 neliökilometriä; tilavuudeltaan se on Euroopan suurin jäätikkö, noin 3 000 kuutiokilometriä. Jään alla on myös [[tulivuoria]]. Sellaisen jään alle ei kyyhkyn katse yllä.
+KYSYMYS: Kerro lisää: Vatnajökullin
+
+### 151
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vatnajökull (luonto · vuori)
+Tietoruudun teksti: Vatnajökull peittää noin kahdeksan prosenttia koko Islannista. Pinta-alaa on 7 700 neliökilometriä ja tilavuutta noin 3 000 kuutiokilometriä, mikä tekee siitä Euroopan suurimman jäätikön tilavuudeltaan — pinta-alaltaan sitä suurempi on vain Novaja Zemljan Severnyin jääkenttä. Jää on keskimäärin 380 metriä paksua ja paksuimmillaan 950. Islannin korkein huippu Hvannadalshnjúkur on sen eteläreunassa. Jäätikön erikoisuus on se, mitä sen alla on: se makaa kahden mannerlaatan saumalla, ja sen luoteisosan alla on vaipan kuumapisteen keskus. Jään alla purkautuvat tulivuoret sulattavat jäähän vesitaskuja, jotka lopulta murtavat heikentyneen jään ja syöksyvät ulos jäätikkötulvina. Vuoden 1934 tulvassa vettä purkautui 15 kuutiokilometriä muutamassa päivässä. Vanha islantilainen nimi jäätikölle oli Klofajökull.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Rivi tulivuoria luultiin kaivosjätteeksi] 1750-luku — Auvergnessa kohoaa neljänkymmenen kilometrin matkalla yli seitsemänkymmentä tulivuorta peräkkäin: 48 kuonakartiota, kahdeksan laavakupolia ja viisitoista räjähdyskraatteria. Korkein on Puy de Dôme, 1 465 metriä. Vielä 1700-luvun puoliväliin asti kummuista kiisteltiin: monet pitivät niitä ihmisen kasaamina kaivoskasoina tai roomalaisten sulattouuneina, kunnes tutkijat tunnistivat ne tulivuoriksi. Viimeisin purkaus tapahtui noin kuusituhatta vuotta sitten. Alue pääsi Unescon maailmanperintöluetteloon 2018.
+- [Guatemala — maalehti / Luonto: Väli-Amerikan korkein vuoristo ilman tulivuoria] Sierra de los Cuchumatanes Länsi-Guatemalassa on Väli-Amerikan korkein vuoristo, jossa ei ole yhtään tulivuorta. Se kohoaa 500 metristä yli 3 800 metriin ja kattaa noin 16 350 neliökilometriä; siitä 1 500 neliökilometriä on yli kolmen kilometrin korkeudessa, mikä tekee siitä koko Väli-Amerikan laajimman ylängön. Kallio on karstia ja sedimenttikiveä mesotsooiselta liitukaudelta. Nimi tulee mamin sanoista cuchuj ja matán, "se joka koottiin ylivoimalla".
+AIEMPI KYSYMYS: Kuinka paksua jää on?
+AIEMPI VASTAUS (Livia):
+No niin. Pöllö parantelee yhä siipeään, joten tää on minun. [[Vatnajökullin]] jää on keskimäärin 380 metriä paksua ja paksuimmillaan 950 metriä. Jäätikkö peittää noin kahdeksan prosenttia koko Islannista, ja sen pinta-ala on 7 700 neliökilometriä; tilavuudeltaan se on Euroopan suurin jäätikkö, noin 3 000 kuutiokilometriä. Jään alla on myös [[tulivuoria]]. Sellaisen jään alle ei kyyhkyn katse yllä.
+KYSYMYS: Kerro lisää: tulivuoria
+
+### 152
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vatnajökull (luonto · vuori)
+Tietoruudun teksti: Vatnajökull peittää noin kahdeksan prosenttia koko Islannista. Pinta-alaa on 7 700 neliökilometriä ja tilavuutta noin 3 000 kuutiokilometriä, mikä tekee siitä Euroopan suurimman jäätikön tilavuudeltaan — pinta-alaltaan sitä suurempi on vain Novaja Zemljan Severnyin jääkenttä. Jää on keskimäärin 380 metriä paksua ja paksuimmillaan 950. Islannin korkein huippu Hvannadalshnjúkur on sen eteläreunassa. Jäätikön erikoisuus on se, mitä sen alla on: se makaa kahden mannerlaatan saumalla, ja sen luoteisosan alla on vaipan kuumapisteen keskus. Jään alla purkautuvat tulivuoret sulattavat jäähän vesitaskuja, jotka lopulta murtavat heikentyneen jään ja syöksyvät ulos jäätikkötulvina. Vuoden 1934 tulvassa vettä purkautui 15 kuutiokilometriä muutamassa päivässä. Vanha islantilainen nimi jäätikölle oli Klofajökull.
+AIEMPI KYSYMYS: Mikä jäätikkötulva on?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Jäätikkötulva, islanniksi [[jökulhlaup]], on äkillinen tulva, jossa jäätikön alle tai sisään kertynyt vesi purkautuu ulos. [[Vatnajökullilla]] se syntyy näin: jään alla purkautuvat tulivuoret sulattavat jäähän vesitaskuja, jotka lopulta murtavat heikentyneen jään ja syöksyvät ulos. Vuoden 1934 tulvassa vettä purkautui 15 kuutiokilometriä muutamassa päivässä.
+
+Sellaisen vesimassan edessä pieni kyyhky pysyy mieluiten korkealla. Siellä on turvallista, ja sieltä näkee hyvin.
+KYSYMYS: Kerro lisää: jökulhlaup
+
+### 153
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vatnajökull (luonto · vuori)
+Tietoruudun teksti: Vatnajökull peittää noin kahdeksan prosenttia koko Islannista. Pinta-alaa on 7 700 neliökilometriä ja tilavuutta noin 3 000 kuutiokilometriä, mikä tekee siitä Euroopan suurimman jäätikön tilavuudeltaan — pinta-alaltaan sitä suurempi on vain Novaja Zemljan Severnyin jääkenttä. Jää on keskimäärin 380 metriä paksua ja paksuimmillaan 950. Islannin korkein huippu Hvannadalshnjúkur on sen eteläreunassa. Jäätikön erikoisuus on se, mitä sen alla on: se makaa kahden mannerlaatan saumalla, ja sen luoteisosan alla on vaipan kuumapisteen keskus. Jään alla purkautuvat tulivuoret sulattavat jäähän vesitaskuja, jotka lopulta murtavat heikentyneen jään ja syöksyvät ulos jäätikkötulvina. Vuoden 1934 tulvassa vettä purkautui 15 kuutiokilometriä muutamassa päivässä. Vanha islantilainen nimi jäätikölle oli Klofajökull.
+AIEMPI KYSYMYS: Mikä jäätikkötulva on?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Jäätikkötulva, islanniksi [[jökulhlaup]], on äkillinen tulva, jossa jäätikön alle tai sisään kertynyt vesi purkautuu ulos. [[Vatnajökullilla]] se syntyy näin: jään alla purkautuvat tulivuoret sulattavat jäähän vesitaskuja, jotka lopulta murtavat heikentyneen jään ja syöksyvät ulos. Vuoden 1934 tulvassa vettä purkautui 15 kuutiokilometriä muutamassa päivässä.
+
+Sellaisen vesimassan edessä pieni kyyhky pysyy mieluiten korkealla. Siellä on turvallista, ja sieltä näkee hyvin.
+KYSYMYS: Kerro lisää: Vatnajökullilla
+
+### 154
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vatnajökull (luonto · vuori)
+Tietoruudun teksti: Vatnajökull peittää noin kahdeksan prosenttia koko Islannista. Pinta-alaa on 7 700 neliökilometriä ja tilavuutta noin 3 000 kuutiokilometriä, mikä tekee siitä Euroopan suurimman jäätikön tilavuudeltaan — pinta-alaltaan sitä suurempi on vain Novaja Zemljan Severnyin jääkenttä. Jää on keskimäärin 380 metriä paksua ja paksuimmillaan 950. Islannin korkein huippu Hvannadalshnjúkur on sen eteläreunassa. Jäätikön erikoisuus on se, mitä sen alla on: se makaa kahden mannerlaatan saumalla, ja sen luoteisosan alla on vaipan kuumapisteen keskus. Jään alla purkautuvat tulivuoret sulattavat jäähän vesitaskuja, jotka lopulta murtavat heikentyneen jään ja syöksyvät ulos jäätikkötulvina. Vuoden 1934 tulvassa vettä purkautui 15 kuutiokilometriä muutamassa päivässä. Vanha islantilainen nimi jäätikölle oli Klofajökull.
+AIEMPI KYSYMYS: Mikä on Islannin korkein huippu?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Hvannadalshnjúkur]]. Se sijaitsee Vatnajökullin eteläreunassa ja on osa [[Öræfajökull]]-tulivuorta. Huippu kohoaa reilun kahden kilometrin korkeuteen, mutta tarkan luvun suhteen en ole varma. Sinne ylös minä en jaksaisi kantaa edes kirjettä.
+KYSYMYS: Kerro lisää: Hvannadalshnjúkur
+
+### 155
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vatnajökull (luonto · vuori)
+Tietoruudun teksti: Vatnajökull peittää noin kahdeksan prosenttia koko Islannista. Pinta-alaa on 7 700 neliökilometriä ja tilavuutta noin 3 000 kuutiokilometriä, mikä tekee siitä Euroopan suurimman jäätikön tilavuudeltaan — pinta-alaltaan sitä suurempi on vain Novaja Zemljan Severnyin jääkenttä. Jää on keskimäärin 380 metriä paksua ja paksuimmillaan 950. Islannin korkein huippu Hvannadalshnjúkur on sen eteläreunassa. Jäätikön erikoisuus on se, mitä sen alla on: se makaa kahden mannerlaatan saumalla, ja sen luoteisosan alla on vaipan kuumapisteen keskus. Jään alla purkautuvat tulivuoret sulattavat jäähän vesitaskuja, jotka lopulta murtavat heikentyneen jään ja syöksyvät ulos jäätikkötulvina. Vuoden 1934 tulvassa vettä purkautui 15 kuutiokilometriä muutamassa päivässä. Vanha islantilainen nimi jäätikölle oli Klofajökull.
+AIEMPI KYSYMYS: Mikä on Islannin korkein huippu?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Hvannadalshnjúkur]]. Se sijaitsee Vatnajökullin eteläreunassa ja on osa [[Öræfajökull]]-tulivuorta. Huippu kohoaa reilun kahden kilometrin korkeuteen, mutta tarkan luvun suhteen en ole varma. Sinne ylös minä en jaksaisi kantaa edes kirjettä.
+KYSYMYS: Kerro lisää: Öræfajökull
+
+### 156
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vatnajökull (luonto · vuori)
+Tietoruudun teksti: Vatnajökull peittää noin kahdeksan prosenttia koko Islannista. Pinta-alaa on 7 700 neliökilometriä ja tilavuutta noin 3 000 kuutiokilometriä, mikä tekee siitä Euroopan suurimman jäätikön tilavuudeltaan — pinta-alaltaan sitä suurempi on vain Novaja Zemljan Severnyin jääkenttä. Jää on keskimäärin 380 metriä paksua ja paksuimmillaan 950. Islannin korkein huippu Hvannadalshnjúkur on sen eteläreunassa. Jäätikön erikoisuus on se, mitä sen alla on: se makaa kahden mannerlaatan saumalla, ja sen luoteisosan alla on vaipan kuumapisteen keskus. Jään alla purkautuvat tulivuoret sulattavat jäähän vesitaskuja, jotka lopulta murtavat heikentyneen jään ja syöksyvät ulos jäätikkötulvina. Vuoden 1934 tulvassa vettä purkautui 15 kuutiokilometriä muutamassa päivässä. Vanha islantilainen nimi jäätikölle oli Klofajökull.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itä-Timor — maalehti / Luonto: Vuoret, jotka nousivat väärässä järjestyksessä] Timor ei syntynyt tulivuorista vaan törmäyksestä. Saari on Bandan kaaren etuosaa, ja sen kivet ovat Australian mannerlaatan reunaa, joka on kaavittu kaaren päälle laattojen työntyessä yhteen; tulivuorten jono jää pohjoiseen toiselle saarikaarelle. Ramelaun vuoriston huippu on permikautista Maubissen muodostumaa, saaren vanhimpia kivilajeja, ja se lepää nuoremman, triaskautisen Aitutun kalkkikiven päällä: vanha kerros työntyi päällimmäiseksi ja jäi siksi korkeimmalle. Lähes puolella maan pinta-alasta rinne on yli neljänkymmenen prosentin kaltevuudessa.
+AIEMPI KYSYMYS: Miksi jäätikön alla on tulivuoria?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Vatnajökull makaa kahden [[mannerlaatan]] saumalla, ja sen luoteisosan alla on myös vaipan [[kuumapisteen]] keskus. Islanti sijaitsee [[Atlantin keskiselänteellä]], jossa mannerlaatat etääntyvät toisistaan ja magma nousee kohti pintaa. Kun kuumapiste lisää magmaa, tuloksena on runsaasti tulivuoria, ja jään alla purkautuessaan ne sulattavat jäätä.
+
+Islanti on siis oikeastaan maapallon saumakohta, jossa vähän väliä repeää jotain. Ylhäältä katsottuna se on kyllä komea näky, vaikka vähän pelottavakin.
+KYSYMYS: Kerro lisää: mannerlaatan
+
+### 157
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vatnajökull (luonto · vuori)
+Tietoruudun teksti: Vatnajökull peittää noin kahdeksan prosenttia koko Islannista. Pinta-alaa on 7 700 neliökilometriä ja tilavuutta noin 3 000 kuutiokilometriä, mikä tekee siitä Euroopan suurimman jäätikön tilavuudeltaan — pinta-alaltaan sitä suurempi on vain Novaja Zemljan Severnyin jääkenttä. Jää on keskimäärin 380 metriä paksua ja paksuimmillaan 950. Islannin korkein huippu Hvannadalshnjúkur on sen eteläreunassa. Jäätikön erikoisuus on se, mitä sen alla on: se makaa kahden mannerlaatan saumalla, ja sen luoteisosan alla on vaipan kuumapisteen keskus. Jään alla purkautuvat tulivuoret sulattavat jäähän vesitaskuja, jotka lopulta murtavat heikentyneen jään ja syöksyvät ulos jäätikkötulvina. Vuoden 1934 tulvassa vettä purkautui 15 kuutiokilometriä muutamassa päivässä. Vanha islantilainen nimi jäätikölle oli Klofajökull.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sahara — kaupunkilehti / Sahara: Maailman suurin kuuma aavikko] Sahara peittää yli 9 miljoonaa neliökilometriä Pohjois-Afrikkaa – alueen kokoinen soisi koko Yhdysvallat. Se on maailman suurin kuuma aavikko, vain Etelämanner ja arktiset seudut ovat sitä laajempia kylminä autiomaina. Yleisestä mielikuvasta poiketen suurin osa Saharasta ei ole hiekkadyynejä vaan kivistä hamada-tasankoa ja paljasta kalliota; hiekkamerten eli ergien osuus koko pinta-alasta on vain murto-osa. Isoisän matkapäiväkirjassa vuodelta 1873 aavikko kuvataan äärettömänä tyhjyytenä, mutta sen halki kulki tuolloinkin vuosisataisia karavaanireittejä kaupungista toiseen.
+- [Marrakech — kaupunkilehti / Vesi, vuoret ja puutarhat: Kuuma tasanko vuorten varjossa] Ilmasto on kuuma puoliaava: heinäkuun keskiylin on 37,7 astetta ja kuumin mitattu lukema 49,6, kun taas tammikuussa on mitattu 3,6 pakkasastetta. Sadetta tulee vain 221 millimetriä ja 29 päivänä vuodessa. Silti seutu ei ole aavikkoa: maantieteilijä Barrows huomautti, että kosteus liikkuu täällä maan alla eikä pintavesinä, ja että sijainti Atlaksen pohjoispuolella erottaa Marrakechin aavikkokaupungeista. Vuoriston keskikorkeus on yli kolme kilometriä, ja se on pääosin jurakauden kalkkikiveä. Pohjaveden pinta on laskenut vuodesta 2002 keskimäärin 0,9 metriä vuodessa.
+AIEMPI KYSYMYS: Miksi jäätikön alla on tulivuoria?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Vatnajökull makaa kahden [[mannerlaatan]] saumalla, ja sen luoteisosan alla on myös vaipan [[kuumapisteen]] keskus. Islanti sijaitsee [[Atlantin keskiselänteellä]], jossa mannerlaatat etääntyvät toisistaan ja magma nousee kohti pintaa. Kun kuumapiste lisää magmaa, tuloksena on runsaasti tulivuoria, ja jään alla purkautuessaan ne sulattavat jäätä.
+
+Islanti on siis oikeastaan maapallon saumakohta, jossa vähän väliä repeää jotain. Ylhäältä katsottuna se on kyllä komea näky, vaikka vähän pelottavakin.
+KYSYMYS: Kerro lisää: kuumapisteen
+
+### 158
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vatnajökull (luonto · vuori)
+Tietoruudun teksti: Vatnajökull peittää noin kahdeksan prosenttia koko Islannista. Pinta-alaa on 7 700 neliökilometriä ja tilavuutta noin 3 000 kuutiokilometriä, mikä tekee siitä Euroopan suurimman jäätikön tilavuudeltaan — pinta-alaltaan sitä suurempi on vain Novaja Zemljan Severnyin jääkenttä. Jää on keskimäärin 380 metriä paksua ja paksuimmillaan 950. Islannin korkein huippu Hvannadalshnjúkur on sen eteläreunassa. Jäätikön erikoisuus on se, mitä sen alla on: se makaa kahden mannerlaatan saumalla, ja sen luoteisosan alla on vaipan kuumapisteen keskus. Jään alla purkautuvat tulivuoret sulattavat jäähän vesitaskuja, jotka lopulta murtavat heikentyneen jään ja syöksyvät ulos jäätikkötulvina. Vuoden 1934 tulvassa vettä purkautui 15 kuutiokilometriä muutamassa päivässä. Vanha islantilainen nimi jäätikölle oli Klofajökull.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Orjarannikko — kaupunkilehti / Orjarannikko: Atlantin ranta, jonne kaikki tiet johtivat] Ouidah sijaitsee kapealla hiekkaharjulla Atlantin valtameren ja sisämaan laguunien välissä. Ranta on leveä ja lähes puuton, sillä avomereltä kohti rantaa kohoavat mahtavat, usein vaaralliset aallot ovat estäneet luonnollisen satama-altaan syntymisen koko rannikolle. Juuri tämä sama karu ranta toimi vuosisatoja sekä kalastajien arkena että sen viimeisenä maakaistaleena, jonka yli kuljettiin ennen merelle lähtöä. Nykyisin rannalla on hiljaista: muutama kalastajakylä, palmuja ja pieniä, valkoisiksi rapattuja majoja hiekalla.
+AIEMPI KYSYMYS: Miksi jäätikön alla on tulivuoria?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Vatnajökull makaa kahden [[mannerlaatan]] saumalla, ja sen luoteisosan alla on myös vaipan [[kuumapisteen]] keskus. Islanti sijaitsee [[Atlantin keskiselänteellä]], jossa mannerlaatat etääntyvät toisistaan ja magma nousee kohti pintaa. Kun kuumapiste lisää magmaa, tuloksena on runsaasti tulivuoria, ja jään alla purkautuessaan ne sulattavat jäätä.
+
+Islanti on siis oikeastaan maapallon saumakohta, jossa vähän väliä repeää jotain. Ylhäältä katsottuna se on kyllä komea näky, vaikka vähän pelottavakin.
+KYSYMYS: Kerro lisää: Atlantin keskiselänteellä
+
+### 159
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vatnajökull (luonto · vuori)
+Tietoruudun teksti: Vatnajökull peittää noin kahdeksan prosenttia koko Islannista. Pinta-alaa on 7 700 neliökilometriä ja tilavuutta noin 3 000 kuutiokilometriä, mikä tekee siitä Euroopan suurimman jäätikön tilavuudeltaan — pinta-alaltaan sitä suurempi on vain Novaja Zemljan Severnyin jääkenttä. Jää on keskimäärin 380 metriä paksua ja paksuimmillaan 950. Islannin korkein huippu Hvannadalshnjúkur on sen eteläreunassa. Jäätikön erikoisuus on se, mitä sen alla on: se makaa kahden mannerlaatan saumalla, ja sen luoteisosan alla on vaipan kuumapisteen keskus. Jään alla purkautuvat tulivuoret sulattavat jäähän vesitaskuja, jotka lopulta murtavat heikentyneen jään ja syöksyvät ulos jäätikkötulvina. Vuoden 1934 tulvassa vettä purkautui 15 kuutiokilometriä muutamassa päivässä. Vanha islantilainen nimi jäätikölle oli Klofajökull.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Zla Kolata, Montenegron korkein huippu] vuodesta 2009 — Zla Kolata kohoaa 2 534 metriin, ja se on Montenegron korkein vuori, vaikka koko vuoriston korkein huippu Maja Jezercë (2 694 m) on Albanian puolella. Se kuuluu Prokletijeen, jonka nimi tarkoittaa kirottuja, ja vuoriston Montenegron puolelle perustettiin kansallispuisto vuonna 2009. Puiston pinta-ala on noin 16 000 hehtaaria. Viimeisen jääkauden aikana laaksoja muovasivat kilometrien mittaiset jäätiköt, ja Ropojanan jäätikkö oli noin 12,5 kilometriä pitkä. Vuoristossa on noin 20 jäätikköjärveä, joista Hridsko jezero on vajaat 300 metriä pitkä.
+- [Kilimandžaro — kaupunkilehti / Kilimanjaron luonto: Sulava jäätikkö] Kilimanjaron huipulla oli 1900-luvun alussa laaja jääkenttä, mutta lämpötilan nousun ja ilman kuivumisen myötä jäätiköt ovat kutistuneet dramaattisesti: lähes 85 prosenttia jääpeitteestä suli lokakuun 1912 ja kesäkuun 2011 välillä, ja sulaminen on kiihtynyt vuosikymmen vuosikymmeneltä. Tutkijoiden arvioiden mukaan viimeisetkin jäätiköt, kuten huipun läheinen Furtwänglerin jäätikkö, saattavat kadota kokonaan vuosisadan puoliväliin mennessä. Katoava lumi ja jää ovat samalla se ilmiö, jonka Rebmann näki jo 1848 – vain paljon runsaampana.
+AIEMPI KYSYMYS: Onko Vatnajökull kutistumassa ilmaston lämmetessä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Islannin [[jäätiköt]] ovat viime vuosikymmeninä kutistuneet, ja sama suunta koskee Vatnajökullia. Täsmällisiä lukuja en ole varma muistavani oikein, joten en kirjoita niitä tähän. Jäätiköiden sulamisvesi nostaa pitkällä aikavälillä myös [[merenpintaa]]. Ei se kivaa luettavaa ole, mutta parempi tietää.
+KYSYMYS: Kerro lisää: jäätiköt
+
+### 160
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vatnajökull (luonto · vuori)
+Tietoruudun teksti: Vatnajökull peittää noin kahdeksan prosenttia koko Islannista. Pinta-alaa on 7 700 neliökilometriä ja tilavuutta noin 3 000 kuutiokilometriä, mikä tekee siitä Euroopan suurimman jäätikön tilavuudeltaan — pinta-alaltaan sitä suurempi on vain Novaja Zemljan Severnyin jääkenttä. Jää on keskimäärin 380 metriä paksua ja paksuimmillaan 950. Islannin korkein huippu Hvannadalshnjúkur on sen eteläreunassa. Jäätikön erikoisuus on se, mitä sen alla on: se makaa kahden mannerlaatan saumalla, ja sen luoteisosan alla on vaipan kuumapisteen keskus. Jään alla purkautuvat tulivuoret sulattavat jäähän vesitaskuja, jotka lopulta murtavat heikentyneen jään ja syöksyvät ulos jäätikkötulvina. Vuoden 1934 tulvassa vettä purkautui 15 kuutiokilometriä muutamassa päivässä. Vanha islantilainen nimi jäätikölle oli Klofajökull.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Onko Vatnajökull kutistumassa ilmaston lämmetessä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Islannin [[jäätiköt]] ovat viime vuosikymmeninä kutistuneet, ja sama suunta koskee Vatnajökullia. Täsmällisiä lukuja en ole varma muistavani oikein, joten en kirjoita niitä tähän. Jäätiköiden sulamisvesi nostaa pitkällä aikavälillä myös [[merenpintaa]]. Ei se kivaa luettavaa ole, mutta parempi tietää.
+KYSYMYS: Kerro lisää: merenpintaa

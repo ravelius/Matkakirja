@@ -1,0 +1,1850 @@
+[
+ {
+  "n": 1,
+  "kohta": "kohde:hvannadalshnukur",
+  "kasite": "Hvannadalshnúkur",
+  "kysymys": "Kerro lisää: Hvannadalshnúkur"
+ },
+ {
+  "n": 2,
+  "kohta": "kohde:hvannadalshnukur",
+  "kasite": "Vatnajökullin",
+  "kysymys": "Kerro lisää: Vatnajökullin"
+ },
+ {
+  "n": 3,
+  "kohta": "kohde:hvannadalshnukur",
+  "kasite": "prominenssi",
+  "kysymys": "Kerro lisää: prominenssi"
+ },
+ {
+  "n": 4,
+  "kohta": "kohde:hvannadalshnukur",
+  "kasite": "Öræfajökull",
+  "kysymys": "Kerro lisää: Öræfajökull"
+ },
+ {
+  "n": 5,
+  "kohta": "kohde:hvannadalshnukur",
+  "kasite": "railot",
+  "kysymys": "Kerro lisää: railot"
+ },
+ {
+  "n": 6,
+  "kohta": "kohde:hvannadalshnukur",
+  "kasite": "Skaftafellin",
+  "kysymys": "Kerro lisää: Skaftafellin"
+ },
+ {
+  "n": 7,
+  "kohta": "kohde:hvannadalshnukur",
+  "kasite": "Litlahérað",
+  "kysymys": "Kerro lisää: Litlahérað"
+ },
+ {
+  "n": 8,
+  "kohta": "kohde:hvannadalshnukur",
+  "kasite": "jökulhlaup",
+  "kysymys": "Kerro lisää: jökulhlaup"
+ },
+ {
+  "n": 9,
+  "kohta": "kohde:gronlanninmeri",
+  "kasite": "Jäämeren",
+  "kysymys": "Kerro lisää: Jäämeren"
+ },
+ {
+  "n": 10,
+  "kohta": "kohde:gronlanninmeri",
+  "kasite": "Norjanmeren",
+  "kysymys": "Kerro lisää: Norjanmeren"
+ },
+ {
+  "n": 11,
+  "kohta": "kohde:gronlanninmeri",
+  "kasite": "Framinsalmen",
+  "kysymys": "Kerro lisää: Framinsalmen"
+ },
+ {
+  "n": 12,
+  "kohta": "kohde:gronlanninmeri",
+  "kasite": "Huippuvuorten",
+  "kysymys": "Kerro lisää: Huippuvuorten"
+ },
+ {
+  "n": 13,
+  "kohta": "kohde:gronlanninmeri",
+  "kasite": "Itä-Grönlannin merivirta",
+  "kysymys": "Kerro lisää: Itä-Grönlannin merivirta"
+ },
+ {
+  "n": 14,
+  "kohta": "kohde:gronlanninmeri",
+  "kasite": "Fridtjof Nansen",
+  "kysymys": "Kerro lisää: Fridtjof Nansen"
+ },
+ {
+  "n": 15,
+  "kohta": "kohde:gronlanninmeri",
+  "kasite": "kapustahylje",
+  "kysymys": "Kerro lisää: kapustahylje"
+ },
+ {
+  "n": 16,
+  "kohta": "kohde:gronlanninmeri",
+  "kasite": "grönlanninhylje",
+  "kysymys": "Kerro lisää: grönlanninhylje"
+ },
+ {
+  "n": 17,
+  "kohta": "kohde:gronlanninmeri",
+  "kasite": "Mohnin selänne",
+  "kysymys": "Kerro lisää: Mohnin selänne"
+ },
+ {
+  "n": 18,
+  "kohta": "kohde:gronlanninmeri",
+  "kasite": "valtamerten pohjavirtoja",
+  "kysymys": "Kerro lisää: valtamerten pohjavirtoja"
+ },
+ {
+  "n": 19,
+  "kohta": "kohde:gronlanninmeri",
+  "kasite": "kapustahyljettä",
+  "kysymys": "Kerro lisää: kapustahyljettä"
+ },
+ {
+  "n": 20,
+  "kohta": "kohde:gronlanninmeri",
+  "kasite": "grönlanninhyljettä",
+  "kysymys": "Kerro lisää: grönlanninhyljettä"
+ },
+ {
+  "n": 21,
+  "kohta": "kohde:gronlanninmeri",
+  "kasite": "grönlanninvalasta",
+  "kysymys": "Kerro lisää: grönlanninvalasta"
+ },
+ {
+  "n": 22,
+  "kohta": "kohde:gronlanninmeri",
+  "kasite": "sarvivalasta",
+  "kysymys": "Kerro lisää: sarvivalasta"
+ },
+ {
+  "n": 23,
+  "kohta": "kohde:jorsa",
+  "kasite": "Þjórsárdalurin",
+  "kysymys": "Kerro lisää: Þjórsárdalurin"
+ },
+ {
+  "n": 24,
+  "kohta": "kohde:jorsa",
+  "kasite": "Heklan",
+  "kysymys": "Kerro lisää: Heklan"
+ },
+ {
+  "n": 25,
+  "kohta": "kohde:jorsa",
+  "kasite": "Þjóðveldisbærinn",
+  "kysymys": "Kerro lisää: Þjóðveldisbærinn"
+ },
+ {
+  "n": 26,
+  "kohta": "kohde:jorsa",
+  "kasite": "Alþingi",
+  "kysymys": "Kerro lisää: Alþingi"
+ },
+ {
+  "n": 27,
+  "kohta": "kohde:jorsa",
+  "kasite": "Þingvellirillä",
+  "kysymys": "Kerro lisää: Þingvellirillä"
+ },
+ {
+  "n": 28,
+  "kohta": "kohde:jorsa",
+  "kasite": "Tynwald",
+  "kysymys": "Kerro lisää: Tynwald"
+ },
+ {
+  "n": 29,
+  "kohta": "kohde:jorsa",
+  "kasite": "Hofsjökullilta",
+  "kysymys": "Kerro lisää: Hofsjökullilta"
+ },
+ {
+  "n": 30,
+  "kohta": "kohde:jorsa",
+  "kasite": "Islannin",
+  "kysymys": "Kerro lisää: Islannin"
+ },
+ {
+  "n": 31,
+  "kohta": "kohde:jorsa",
+  "kasite": "Búrfellin",
+  "kysymys": "Kerro lisää: Búrfellin"
+ },
+ {
+  "n": 32,
+  "kohta": "kohde:jorsa",
+  "kasite": "vesivoimalla",
+  "kysymys": "Kerro lisää: vesivoimalla"
+ },
+ {
+  "n": 33,
+  "kohta": "kohde:jorsa",
+  "kasite": "maalämmöllä",
+  "kysymys": "Kerro lisää: maalämmöllä"
+ },
+ {
+  "n": 34,
+  "kohta": "kohde:jorsa",
+  "kasite": "Islannin ylängöllä",
+  "kysymys": "Kerro lisää: Islannin ylängöllä"
+ },
+ {
+  "n": 35,
+  "kohta": "kohde:jorsa",
+  "kasite": "Þjórsán",
+  "kysymys": "Kerro lisää: Þjórsán"
+ },
+ {
+  "n": 36,
+  "kohta": "kohde:thingvellir",
+  "kasite": "muinaisnorjasta",
+  "kysymys": "Kerro lisää: muinaisnorjasta"
+ },
+ {
+  "n": 37,
+  "kohta": "kohde:thingvellir",
+  "kasite": "Tynwald",
+  "kysymys": "Kerro lisää: Tynwald"
+ },
+ {
+  "n": 38,
+  "kohta": "kohde:thingvellir",
+  "kasite": "Dingwall",
+  "kysymys": "Kerro lisää: Dingwall"
+ },
+ {
+  "n": 39,
+  "kohta": "kohde:thingvellir",
+  "kasite": "Þingvellirillä",
+  "kysymys": "Kerro lisää: Þingvellirillä"
+ },
+ {
+  "n": 40,
+  "kohta": "kohde:thingvellir",
+  "kasite": "Alþingishúsið",
+  "kysymys": "Kerro lisää: Alþingishúsið"
+ },
+ {
+  "n": 41,
+  "kohta": "kohde:thingvellir",
+  "kasite": "Þingvellirin",
+  "kysymys": "Kerro lisää: Þingvellirin"
+ },
+ {
+  "n": 42,
+  "kohta": "kohde:thingvellir",
+  "kasite": "Keski-Atlantin selänteen",
+  "kysymys": "Kerro lisää: Keski-Atlantin selänteen"
+ },
+ {
+  "n": 43,
+  "kohta": "kohde:thingvellir",
+  "kasite": "Silfra",
+  "kysymys": "Kerro lisää: Silfra"
+ },
+ {
+  "n": 44,
+  "kohta": "kohde:thingvellir",
+  "kasite": "Keski-Atlantin selänteellä",
+  "kysymys": "Kerro lisää: Keski-Atlantin selänteellä"
+ },
+ {
+  "n": 45,
+  "kohta": "kohde:thingvellir",
+  "kasite": "Tanskan",
+  "kysymys": "Kerro lisää: Tanskan"
+ },
+ {
+  "n": 46,
+  "kohta": "kohde:thingvellir",
+  "kasite": "tasavallaksi",
+  "kysymys": "Kerro lisää: tasavallaksi"
+ },
+ {
+  "n": 47,
+  "kohta": "kohde:reykholt",
+  "kasite": "Nuorempi Edda",
+  "kysymys": "Kerro lisää: Nuorempi Edda"
+ },
+ {
+  "n": 48,
+  "kohta": "kohde:reykholt",
+  "kasite": "Heimskringla",
+  "kysymys": "Kerro lisää: Heimskringla"
+ },
+ {
+  "n": 49,
+  "kohta": "kohde:reykholt",
+  "kasite": "pohjoisen jumaltaruston",
+  "kysymys": "Kerro lisää: pohjoisen jumaltaruston"
+ },
+ {
+  "n": 50,
+  "kohta": "kohde:reykholt",
+  "kasite": "Borgarnesiin",
+  "kysymys": "Kerro lisää: Borgarnesiin"
+ },
+ {
+  "n": 51,
+  "kohta": "kohde:reykholt",
+  "kasite": "Akranesiin",
+  "kysymys": "Kerro lisää: Akranesiin"
+ },
+ {
+  "n": 52,
+  "kohta": "kohde:reykholt",
+  "kasite": "Odin",
+  "kysymys": "Kerro lisää: Odin"
+ },
+ {
+  "n": 53,
+  "kohta": "kohde:reykholt",
+  "kasite": "Thor",
+  "kysymys": "Kerro lisää: Thor"
+ },
+ {
+  "n": 54,
+  "kohta": "kohde:reykholt",
+  "kasite": "Snorri Sturlusonin",
+  "kysymys": "Kerro lisää: Snorri Sturlusonin"
+ },
+ {
+  "n": 55,
+  "kohta": "kohde:reykholt",
+  "kasite": "Reykholtissa",
+  "kysymys": "Kerro lisää: Reykholtissa"
+ },
+ {
+  "n": 56,
+  "kohta": "kohde:reykholt",
+  "kasite": "saagoista",
+  "kysymys": "Kerro lisää: saagoista"
+ },
+ {
+  "n": 57,
+  "kohta": "kohde:reykholt",
+  "kasite": "Olav Tryggvasonin",
+  "kysymys": "Kerro lisää: Olav Tryggvasonin"
+ },
+ {
+  "n": 58,
+  "kohta": "kohde:reykholt",
+  "kasite": "Pyhän Olavin",
+  "kysymys": "Kerro lisää: Pyhän Olavin"
+ },
+ {
+  "n": 59,
+  "kohta": "kohde:geysir",
+  "kasite": "Haukadalurin",
+  "kysymys": "Kerro lisää: Haukadalurin"
+ },
+ {
+  "n": 60,
+  "kohta": "kohde:geysir",
+  "kasite": "Laugarfjall-laavakupolin",
+  "kysymys": "Kerro lisää: Laugarfjall-laavakupolin"
+ },
+ {
+  "n": 61,
+  "kohta": "kohde:geysir",
+  "kasite": "kuumalähteen",
+  "kysymys": "Kerro lisää: kuumalähteen"
+ },
+ {
+  "n": 62,
+  "kohta": "kohde:geysir",
+  "kasite": "kuumalähde",
+  "kysymys": "Kerro lisää: kuumalähde"
+ },
+ {
+  "n": 63,
+  "kohta": "kohde:geysir",
+  "kasite": "Geysiristä",
+  "kysymys": "Kerro lisää: Geysiristä"
+ },
+ {
+  "n": 64,
+  "kohta": "kohde:geysir",
+  "kasite": "Strokkur",
+  "kysymys": "Kerro lisää: Strokkur"
+ },
+ {
+  "n": 65,
+  "kohta": "kohde:geysir",
+  "kasite": "Laugarfjall-laavakupoli",
+  "kysymys": "Kerro lisää: Laugarfjall-laavakupoli"
+ },
+ {
+  "n": 66,
+  "kohta": "kohde:geysir",
+  "kasite": "Geysir",
+  "kysymys": "Kerro lisää: Geysir"
+ },
+ {
+  "n": 67,
+  "kohta": "kohde:geysir",
+  "kasite": "Geysiriksi",
+  "kysymys": "Kerro lisää: Geysiriksi"
+ },
+ {
+  "n": 68,
+  "kohta": "kohde:eiriksstadir",
+  "kasite": "Leifr Eiríksson",
+  "kysymys": "Kerro lisää: Leifr Eiríksson"
+ },
+ {
+  "n": 69,
+  "kohta": "kohde:eiriksstadir",
+  "kasite": "Punaisen Eirikin",
+  "kysymys": "Kerro lisää: Punaisen Eirikin"
+ },
+ {
+  "n": 70,
+  "kohta": "kohde:eiriksstadir",
+  "kasite": "Haukadalurin",
+  "kysymys": "Kerro lisää: Haukadalurin"
+ },
+ {
+  "n": 71,
+  "kohta": "kohde:eiriksstadir",
+  "kasite": "Landnámabók",
+  "kysymys": "Kerro lisää: Landnámabók"
+ },
+ {
+  "n": 72,
+  "kohta": "kohde:eiriksstadir",
+  "kasite": "Punaisen Eirikin saaga",
+  "kysymys": "Kerro lisää: Punaisen Eirikin saaga"
+ },
+ {
+  "n": 73,
+  "kohta": "kohde:eiriksstadir",
+  "kasite": "pitkätalo",
+  "kysymys": "Kerro lisää: pitkätalo"
+ },
+ {
+  "n": 74,
+  "kohta": "kohde:eiriksstadir",
+  "kasite": "ulkoilmamuseo",
+  "kysymys": "Kerro lisää: ulkoilmamuseo"
+ },
+ {
+  "n": 75,
+  "kohta": "kohde:eiriksstadir",
+  "kasite": "Landnámabókin",
+  "kysymys": "Kerro lisää: Landnámabókin"
+ },
+ {
+  "n": 76,
+  "kohta": "kohde:eiriksstadir",
+  "kasite": "Þjóðhildur Jǫrundardóttirin",
+  "kysymys": "Kerro lisää: Þjóðhildur Jǫrundardóttirin"
+ },
+ {
+  "n": 77,
+  "kohta": "kohde:eiriksstadir",
+  "kasite": "tulisija",
+  "kysymys": "Kerro lisää: tulisija"
+ },
+ {
+  "n": 78,
+  "kohta": "kohde:eiriksstadir",
+  "kasite": "turpeesta",
+  "kysymys": "Kerro lisää: turpeesta"
+ },
+ {
+  "n": 79,
+  "kohta": "kohde:holar",
+  "kasite": "piispanistuin",
+  "kysymys": "Kerro lisää: piispanistuin"
+ },
+ {
+  "n": 80,
+  "kohta": "kohde:holar",
+  "kasite": "Skálholt",
+  "kysymys": "Kerro lisää: Skálholt"
+ },
+ {
+  "n": 81,
+  "kohta": "kohde:holar",
+  "kasite": "turvetalo",
+  "kysymys": "Kerro lisää: turvetalo"
+ },
+ {
+  "n": 82,
+  "kohta": "kohde:holar",
+  "kasite": "Hjaltadalurin",
+  "kysymys": "Kerro lisää: Hjaltadalurin"
+ },
+ {
+  "n": 83,
+  "kohta": "kohde:holar",
+  "kasite": "Hólarin",
+  "kysymys": "Kerro lisää: Hólarin"
+ },
+ {
+  "n": 84,
+  "kohta": "kohde:holar",
+  "kasite": "uskonpuhdistuksen",
+  "kysymys": "Kerro lisää: uskonpuhdistuksen"
+ },
+ {
+  "n": 85,
+  "kohta": "kohde:holar",
+  "kasite": "tölt",
+  "kysymys": "Kerro lisää: tölt"
+ },
+ {
+  "n": 86,
+  "kohta": "kohde:holar",
+  "kasite": "Hólarissa",
+  "kysymys": "Kerro lisää: Hólarissa"
+ },
+ {
+  "n": 87,
+  "kohta": "kohde:holar",
+  "kasite": "piispa",
+  "kysymys": "Kerro lisää: piispa"
+ },
+ {
+  "n": 88,
+  "kohta": "kohde:holar",
+  "kasite": "Raamatun",
+  "kysymys": "Kerro lisää: Raamatun"
+ },
+ {
+  "n": 89,
+  "kohta": "kohde:heimaey",
+  "kasite": "Heimaeyn",
+  "kysymys": "Kerro lisää: Heimaeyn"
+ },
+ {
+  "n": 90,
+  "kohta": "kohde:heimaey",
+  "kasite": "Eldfellistä",
+  "kysymys": "Kerro lisää: Eldfellistä"
+ },
+ {
+  "n": 91,
+  "kohta": "kohde:heimaey",
+  "kasite": "kalastuslaivoilla",
+  "kysymys": "Kerro lisää: kalastuslaivoilla"
+ },
+ {
+  "n": 92,
+  "kohta": "kohde:heimaey",
+  "kasite": "laavavirta",
+  "kysymys": "Kerro lisää: laavavirta"
+ },
+ {
+  "n": 93,
+  "kohta": "kohde:heimaey",
+  "kasite": "Vestmannaeyjarin",
+  "kysymys": "Kerro lisää: Vestmannaeyjarin"
+ },
+ {
+  "n": 94,
+  "kohta": "kohde:heimaey",
+  "kasite": "kalastuslaivasto",
+  "kysymys": "Kerro lisää: kalastuslaivasto"
+ },
+ {
+  "n": 95,
+  "kohta": "kohde:heimaey",
+  "kasite": "irlantilaisiin",
+  "kysymys": "Kerro lisää: irlantilaisiin"
+ },
+ {
+  "n": 96,
+  "kohta": "kohde:heimaey",
+  "kasite": "Heimaey",
+  "kysymys": "Kerro lisää: Heimaey"
+ },
+ {
+  "n": 97,
+  "kohta": "kohde:latrabjarg",
+  "kasite": "lunneja",
+  "kysymys": "Kerro lisää: lunneja"
+ },
+ {
+  "n": 98,
+  "kohta": "kohde:latrabjarg",
+  "kasite": "suulia",
+  "kysymys": "Kerro lisää: suulia"
+ },
+ {
+  "n": 99,
+  "kohta": "kohde:latrabjarg",
+  "kasite": "kiisloja",
+  "kysymys": "Kerro lisää: kiisloja"
+ },
+ {
+  "n": 100,
+  "kohta": "kohde:latrabjarg",
+  "kasite": "Látrabjarg",
+  "kysymys": "Kerro lisää: Látrabjarg"
+ },
+ {
+  "n": 101,
+  "kohta": "kohde:latrabjarg",
+  "kasite": "Länsivuonoilla",
+  "kysymys": "Kerro lisää: Länsivuonoilla"
+ },
+ {
+  "n": 102,
+  "kohta": "kohde:latrabjarg",
+  "kasite": "Látrabjargilla",
+  "kysymys": "Kerro lisää: Látrabjargilla"
+ },
+ {
+  "n": 103,
+  "kohta": "kohde:latrabjarg",
+  "kasite": "suulien",
+  "kysymys": "Kerro lisää: suulien"
+ },
+ {
+  "n": 104,
+  "kohta": "kohde:latrabjarg",
+  "kasite": "kiisloiden",
+  "kysymys": "Kerro lisää: kiisloiden"
+ },
+ {
+  "n": 105,
+  "kohta": "kohde:latrabjarg",
+  "kasite": "lunnien",
+  "kysymys": "Kerro lisää: lunnien"
+ },
+ {
+  "n": 106,
+  "kohta": "kohde:lakagigar",
+  "kasite": "Skaftáreldar",
+  "kysymys": "Kerro lisää: Skaftáreldar"
+ },
+ {
+  "n": 107,
+  "kohta": "kohde:lakagigar",
+  "kasite": "fluorivetyhappo",
+  "kysymys": "Kerro lisää: fluorivetyhappo"
+ },
+ {
+  "n": 108,
+  "kohta": "kohde:lakagigar",
+  "kasite": "Tanskan",
+  "kysymys": "Kerro lisää: Tanskan"
+ },
+ {
+  "n": 109,
+  "kohta": "kohde:lakagigar",
+  "kasite": "rikkidioksidia",
+  "kysymys": "Kerro lisää: rikkidioksidia"
+ },
+ {
+  "n": 110,
+  "kohta": "kohde:lakagigar",
+  "kasite": "ilmakehässä",
+  "kysymys": "Kerro lisää: ilmakehässä"
+ },
+ {
+  "n": 111,
+  "kohta": "kohde:lakagigar",
+  "kasite": "Laki",
+  "kysymys": "Kerro lisää: Laki"
+ },
+ {
+  "n": 112,
+  "kohta": "kohde:lakagigar",
+  "kasite": "basalttilaavaa",
+  "kysymys": "Kerro lisää: basalttilaavaa"
+ },
+ {
+  "n": 113,
+  "kohta": "kohde:lakagigar",
+  "kasite": "mannerlaattojen",
+  "kysymys": "Kerro lisää: mannerlaattojen"
+ },
+ {
+  "n": 114,
+  "kohta": "kohde:lakagigar",
+  "kasite": "Skaftáreldarin",
+  "kysymys": "Kerro lisää: Skaftáreldarin"
+ },
+ {
+  "n": 115,
+  "kohta": "kohde:lakagigar",
+  "kasite": "fluoria",
+  "kysymys": "Kerro lisää: fluoria"
+ },
+ {
+  "n": 116,
+  "kohta": "kohde:lakagigar",
+  "kasite": "Vatnajökullin",
+  "kysymys": "Kerro lisää: Vatnajökullin"
+ },
+ {
+  "n": 117,
+  "kohta": "kohde:lakagigar",
+  "kasite": "jäätikkötulvana",
+  "kysymys": "Kerro lisää: jäätikkötulvana"
+ },
+ {
+  "n": 118,
+  "kohta": "kohde:snaefellsjokull",
+  "kasite": "Jules Vernen",
+  "kysymys": "Kerro lisää: Jules Vernen"
+ },
+ {
+  "n": 119,
+  "kohta": "kohde:snaefellsjokull",
+  "kasite": "Matka maan keskipisteeseen",
+  "kysymys": "Kerro lisää: Matka maan keskipisteeseen"
+ },
+ {
+  "n": 120,
+  "kohta": "kohde:snaefellsjokull",
+  "kasite": "kraatterista",
+  "kysymys": "Kerro lisää: kraatterista"
+ },
+ {
+  "n": 121,
+  "kohta": "kohde:snaefellsjokull",
+  "kasite": "jäätiköiden",
+  "kysymys": "Kerro lisää: jäätiköiden"
+ },
+ {
+  "n": 122,
+  "kohta": "kohde:snaefellsjokull",
+  "kasite": "ilmaston lämpenemisen",
+  "kysymys": "Kerro lisää: ilmaston lämpenemisen"
+ },
+ {
+  "n": 123,
+  "kohta": "kohde:snaefellsjokull",
+  "kasite": "Reykjavíkiin",
+  "kysymys": "Kerro lisää: Reykjavíkiin"
+ },
+ {
+  "n": 124,
+  "kohta": "kohde:snaefellsjokull",
+  "kasite": "Faxaflóin",
+  "kysymys": "Kerro lisää: Faxaflóin"
+ },
+ {
+  "n": 125,
+  "kohta": "kohde:snaefellsjokull",
+  "kasite": "kangastuksen",
+  "kysymys": "Kerro lisää: kangastuksen"
+ },
+ {
+  "n": 126,
+  "kohta": "kohde:snaefellsjokull",
+  "kasite": "kerrostulivuori",
+  "kysymys": "Kerro lisää: kerrostulivuori"
+ },
+ {
+  "n": 127,
+  "kohta": "kohde:snaefellsjokull",
+  "kasite": "kuonakekoja",
+  "kysymys": "Kerro lisää: kuonakekoja"
+ },
+ {
+  "n": 128,
+  "kohta": "kohde:snaefellsjokull",
+  "kasite": "stratovulkaani",
+  "kysymys": "Kerro lisää: stratovulkaani"
+ },
+ {
+  "n": 129,
+  "kohta": "kohde:snaefellsjokull",
+  "kasite": "Vesuvius",
+  "kysymys": "Kerro lisää: Vesuvius"
+ },
+ {
+  "n": 130,
+  "kohta": "kohde:dettifoss",
+  "kasite": "Dettifossin",
+  "kysymys": "Kerro lisää: Dettifossin"
+ },
+ {
+  "n": 131,
+  "kohta": "kohde:dettifoss",
+  "kasite": "Vatnajökullin",
+  "kysymys": "Kerro lisää: Vatnajökullin"
+ },
+ {
+  "n": 132,
+  "kohta": "kohde:dettifoss",
+  "kasite": "Jökulsá á Fjöllum",
+  "kysymys": "Kerro lisää: Jökulsá á Fjöllum"
+ },
+ {
+  "n": 133,
+  "kohta": "kohde:dettifoss",
+  "kasite": "Jökulsárgljúfur",
+  "kysymys": "Kerro lisää: Jökulsárgljúfur"
+ },
+ {
+  "n": 134,
+  "kohta": "kohde:dettifoss",
+  "kasite": "Reininputousten",
+  "kysymys": "Kerro lisää: Reininputousten"
+ },
+ {
+  "n": 135,
+  "kohta": "kohde:dettifoss",
+  "kasite": "Urriðafossin",
+  "kysymys": "Kerro lisää: Urriðafossin"
+ },
+ {
+  "n": 136,
+  "kohta": "kohde:dettifoss",
+  "kasite": "Dettifossista",
+  "kysymys": "Kerro lisää: Dettifossista"
+ },
+ {
+  "n": 137,
+  "kohta": "kohde:dettifoss",
+  "kasite": "kansanmusiikki",
+  "kysymys": "Kerro lisää: kansanmusiikki"
+ },
+ {
+  "n": 138,
+  "kohta": "kohde:myvatn",
+  "kasite": "Mývatn",
+  "kysymys": "Kerro lisää: Mývatn"
+ },
+ {
+  "n": 139,
+  "kohta": "kohde:myvatn",
+  "kasite": "surviaissääskiä",
+  "kysymys": "Kerro lisää: surviaissääskiä"
+ },
+ {
+  "n": 140,
+  "kohta": "kohde:myvatn",
+  "kasite": "ravintoketjun",
+  "kysymys": "Kerro lisää: ravintoketjun"
+ },
+ {
+  "n": 141,
+  "kohta": "kohde:myvatn",
+  "kasite": "vesikirppuja",
+  "kysymys": "Kerro lisää: vesikirppuja"
+ },
+ {
+  "n": 142,
+  "kohta": "kohde:myvatn",
+  "kasite": "sorsalajeja",
+  "kysymys": "Kerro lisää: sorsalajeja"
+ },
+ {
+  "n": 143,
+  "kohta": "kohde:myvatn",
+  "kasite": "laavapurkauksessa",
+  "kysymys": "Kerro lisää: laavapurkauksessa"
+ },
+ {
+  "n": 144,
+  "kohta": "kohde:myvatn",
+  "kasite": "Kraflan",
+  "kysymys": "Kerro lisää: Kraflan"
+ },
+ {
+  "n": 145,
+  "kohta": "kohde:myvatn",
+  "kasite": "valekraattereita",
+  "kysymys": "Kerro lisää: valekraattereita"
+ },
+ {
+  "n": 146,
+  "kohta": "kohde:myvatn",
+  "kasite": "Mývatnin",
+  "kysymys": "Kerro lisää: Mývatnin"
+ },
+ {
+  "n": 147,
+  "kohta": "kohde:myvatn",
+  "kasite": "kosteikon",
+  "kysymys": "Kerro lisää: kosteikon"
+ },
+ {
+  "n": 148,
+  "kohta": "kohde:myvatn",
+  "kasite": "taimenestaan",
+  "kysymys": "Kerro lisää: taimenestaan"
+ },
+ {
+  "n": 149,
+  "kohta": "kohde:myvatn",
+  "kasite": "lohestaan",
+  "kysymys": "Kerro lisää: lohestaan"
+ },
+ {
+  "n": 150,
+  "kohta": "kohde:vatnajokull",
+  "kasite": "Vatnajökullin",
+  "kysymys": "Kerro lisää: Vatnajökullin"
+ },
+ {
+  "n": 151,
+  "kohta": "kohde:vatnajokull",
+  "kasite": "tulivuoria",
+  "kysymys": "Kerro lisää: tulivuoria"
+ },
+ {
+  "n": 152,
+  "kohta": "kohde:vatnajokull",
+  "kasite": "jökulhlaup",
+  "kysymys": "Kerro lisää: jökulhlaup"
+ },
+ {
+  "n": 153,
+  "kohta": "kohde:vatnajokull",
+  "kasite": "Vatnajökullilla",
+  "kysymys": "Kerro lisää: Vatnajökullilla"
+ },
+ {
+  "n": 154,
+  "kohta": "kohde:vatnajokull",
+  "kasite": "Hvannadalshnjúkur",
+  "kysymys": "Kerro lisää: Hvannadalshnjúkur"
+ },
+ {
+  "n": 155,
+  "kohta": "kohde:vatnajokull",
+  "kasite": "Öræfajökull",
+  "kysymys": "Kerro lisää: Öræfajökull"
+ },
+ {
+  "n": 156,
+  "kohta": "kohde:vatnajokull",
+  "kasite": "mannerlaatan",
+  "kysymys": "Kerro lisää: mannerlaatan"
+ },
+ {
+  "n": 157,
+  "kohta": "kohde:vatnajokull",
+  "kasite": "kuumapisteen",
+  "kysymys": "Kerro lisää: kuumapisteen"
+ },
+ {
+  "n": 158,
+  "kohta": "kohde:vatnajokull",
+  "kasite": "Atlantin keskiselänteellä",
+  "kysymys": "Kerro lisää: Atlantin keskiselänteellä"
+ },
+ {
+  "n": 159,
+  "kohta": "kohde:vatnajokull",
+  "kasite": "jäätiköt",
+  "kysymys": "Kerro lisää: jäätiköt"
+ },
+ {
+  "n": 160,
+  "kohta": "kohde:vatnajokull",
+  "kasite": "merenpintaa",
+  "kysymys": "Kerro lisää: merenpintaa"
+ },
+ {
+  "n": 161,
+  "kohta": "kohde:grimsey",
+  "kasite": "Maan akselin kallistuman",
+  "kysymys": "Kerro lisää: Maan akselin kallistuman"
+ },
+ {
+  "n": 162,
+  "kohta": "kohde:grimsey",
+  "kasite": "Grímseyn",
+  "kysymys": "Kerro lisää: Grímseyn"
+ },
+ {
+  "n": 163,
+  "kohta": "kohde:grimsey",
+  "kasite": "Grímseyllä",
+  "kysymys": "Kerro lisää: Grímseyllä"
+ },
+ {
+  "n": 164,
+  "kohta": "kohde:grimsey",
+  "kasite": "Sandvík",
+  "kysymys": "Kerro lisää: Sandvík"
+ },
+ {
+  "n": 165,
+  "kohta": "kohde:grimsey",
+  "kasite": "merilintu",
+  "kysymys": "Kerro lisää: merilintu"
+ },
+ {
+  "n": 166,
+  "kohta": "kohde:grimsey",
+  "kasite": "Islannin",
+  "kysymys": "Kerro lisää: Islannin"
+ },
+ {
+  "n": 167,
+  "kohta": "kohde:grimsey",
+  "kasite": "keskiyön aurinko",
+  "kysymys": "Kerro lisää: keskiyön aurinko"
+ },
+ {
+  "n": 168,
+  "kohta": "kohde:grimsey",
+  "kasite": "kaamos",
+  "kysymys": "Kerro lisää: kaamos"
+ },
+ {
+  "n": 169,
+  "kohta": "kohde:grimsey",
+  "kasite": "Maan akseli",
+  "kysymys": "Kerro lisää: Maan akseli"
+ },
+ {
+  "n": 170,
+  "kohta": "kohde:grimsey",
+  "kasite": "Kuun",
+  "kysymys": "Kerro lisää: Kuun"
+ },
+ {
+  "n": 171,
+  "kohta": "kohde:grimsey",
+  "kasite": "Milankovitchin syklien",
+  "kysymys": "Kerro lisää: Milankovitchin syklien"
+ },
+ {
+  "n": 172,
+  "kohta": "kohde:grimsey",
+  "kasite": "jääkausiin",
+  "kysymys": "Kerro lisää: jääkausiin"
+ },
+ {
+  "n": 173,
+  "kohta": "kohde:skalholt",
+  "kasite": "Hólarin",
+  "kysymys": "Kerro lisää: Hólarin"
+ },
+ {
+  "n": 174,
+  "kohta": "kohde:skalholt",
+  "kasite": "Skálholtsskóli",
+  "kysymys": "Kerro lisää: Skálholtsskóli"
+ },
+ {
+  "n": 175,
+  "kohta": "kohde:skalholt",
+  "kasite": "Jón Arason",
+  "kysymys": "Kerro lisää: Jón Arason"
+ },
+ {
+  "n": 176,
+  "kohta": "kohde:skalholt",
+  "kasite": "Skagafjörðurin",
+  "kysymys": "Kerro lisää: Skagafjörðurin"
+ },
+ {
+  "n": 177,
+  "kohta": "kohde:skalholt",
+  "kasite": "Hampurin ja Bremenin arkkipiispakunnan",
+  "kysymys": "Kerro lisää: Hampurin ja Bremenin arkkipiispakunnan"
+ },
+ {
+  "n": 178,
+  "kohta": "kohde:skalholt",
+  "kasite": "Islanti",
+  "kysymys": "Kerro lisää: Islanti"
+ },
+ {
+  "n": 179,
+  "kohta": "kohde:skalholt",
+  "kasite": "Skálholtin",
+  "kysymys": "Kerro lisää: Skálholtin"
+ },
+ {
+  "n": 180,
+  "kohta": "kohde:skalholt",
+  "kasite": "Uskonpuhdistus",
+  "kysymys": "Kerro lisää: Uskonpuhdistus"
+ },
+ {
+  "n": 181,
+  "kohta": "kohde:skalholt",
+  "kasite": "Tanskan",
+  "kysymys": "Kerro lisää: Tanskan"
+ },
+ {
+  "n": 182,
+  "kohta": "kohde:hahmotelma-reykjavik",
+  "kasite": "kuumien lähteiden",
+  "kysymys": "Kerro lisää: kuumien lähteiden"
+ },
+ {
+  "n": 183,
+  "kohta": "kohde:hahmotelma-reykjavik",
+  "kasite": "Landnámabókin",
+  "kysymys": "Kerro lisää: Landnámabókin"
+ },
+ {
+  "n": 184,
+  "kohta": "kohde:hahmotelma-reykjavik",
+  "kasite": "Norjasta",
+  "kysymys": "Kerro lisää: Norjasta"
+ },
+ {
+  "n": 185,
+  "kohta": "kohde:hahmotelma-reykjavik",
+  "kasite": "Sturlubók",
+  "kysymys": "Kerro lisää: Sturlubók"
+ },
+ {
+  "n": 186,
+  "kohta": "kohde:hahmotelma-reykjavik",
+  "kasite": "Hauksbók",
+  "kysymys": "Kerro lisää: Hauksbók"
+ },
+ {
+  "n": 187,
+  "kohta": "kohde:hahmotelma-reykjavik",
+  "kasite": "Ingólfur Arnarsonin",
+  "kysymys": "Kerro lisää: Ingólfur Arnarsonin"
+ },
+ {
+  "n": 188,
+  "kohta": "kohde:hahmotelma-reykjavik",
+  "kasite": "Atlantin keskiselänteellä",
+  "kysymys": "Kerro lisää: Atlantin keskiselänteellä"
+ },
+ {
+  "n": 189,
+  "kohta": "kohde:hahmotelma-reykjavik",
+  "kasite": "kaukolämmön",
+  "kysymys": "Kerro lisää: kaukolämmön"
+ },
+ {
+  "n": 190,
+  "kohta": "kohde:hahmotelma-reykjavik",
+  "kasite": "Þingvellirin",
+  "kysymys": "Kerro lisää: Þingvellirin"
+ },
+ {
+  "n": 191,
+  "kohta": "kohde:hahmotelma-reykjavik",
+  "kasite": "lakipuhuja",
+  "kysymys": "Kerro lisää: lakipuhuja"
+ },
+ {
+  "n": 192,
+  "kohta": "kohde:hahmotelma-akureyri",
+  "kasite": "Islannin",
+  "kysymys": "Kerro lisää: Islannin"
+ },
+ {
+  "n": 193,
+  "kohta": "kohde:hahmotelma-akureyri",
+  "kasite": "Eyjafjörðurin",
+  "kysymys": "Kerro lisää: Eyjafjörðurin"
+ },
+ {
+  "n": 194,
+  "kohta": "kohde:hahmotelma-akureyri",
+  "kasite": "Pohjois-Islannissa",
+  "kysymys": "Kerro lisää: Pohjois-Islannissa"
+ },
+ {
+  "n": 195,
+  "kohta": "kohde:hahmotelma-akureyri",
+  "kasite": "jäätiköiden",
+  "kysymys": "Kerro lisää: jäätiköiden"
+ },
+ {
+  "n": 196,
+  "kohta": "kohde:hahmotelma-akureyri",
+  "kasite": "Hrísey",
+  "kysymys": "Kerro lisää: Hrísey"
+ },
+ {
+  "n": 197,
+  "kohta": "kohde:hahmotelma-akureyri",
+  "kasite": "Golfvirta",
+  "kysymys": "Kerro lisää: Golfvirta"
+ },
+ {
+  "n": 198,
+  "kohta": "kohde:hahmotelma-akureyri",
+  "kasite": "Irmingerinvirta",
+  "kysymys": "Kerro lisää: Irmingerinvirta"
+ },
+ {
+  "n": 199,
+  "kohta": "kohde:hahmotelma-akureyri",
+  "kasite": "Þorgeir Ljósvetningagoði",
+  "kysymys": "Kerro lisää: Þorgeir Ljósvetningagoði"
+ },
+ {
+  "n": 200,
+  "kohta": "kohde:hahmotelma-akureyri",
+  "kasite": "kristinuskoon",
+  "kysymys": "Kerro lisää: kristinuskoon"
+ },
+ {
+  "n": 201,
+  "kohta": "kohde:hahmotelma-isafjordur",
+  "kasite": "Ísafjörðurin",
+  "kysymys": "Kerro lisää: Ísafjörðurin"
+ },
+ {
+  "n": 202,
+  "kohta": "kohde:hahmotelma-isafjordur",
+  "kasite": "Faktorshús",
+  "kysymys": "Kerro lisää: Faktorshús"
+ },
+ {
+  "n": 203,
+  "kohta": "kohde:hahmotelma-isafjordur",
+  "kasite": "Hornstrandirin",
+  "kysymys": "Kerro lisää: Hornstrandirin"
+ },
+ {
+  "n": 204,
+  "kohta": "kohde:hahmotelma-isafjordur",
+  "kasite": "Hornbjarg",
+  "kysymys": "Kerro lisää: Hornbjarg"
+ },
+ {
+  "n": 205,
+  "kohta": "kohde:hahmotelma-isafjordur",
+  "kasite": "naali",
+  "kysymys": "Kerro lisää: naali"
+ },
+ {
+  "n": 206,
+  "kohta": "kohde:hahmotelma-isafjordur",
+  "kasite": "jääkauden",
+  "kysymys": "Kerro lisää: jääkauden"
+ },
+ {
+  "n": 207,
+  "kohta": "kohde:hahmotelma-isafjordur",
+  "kasite": "basaltista",
+  "kysymys": "Kerro lisää: basaltista"
+ },
+ {
+  "n": 208,
+  "kohta": "kohde:hahmotelma-isafjordur",
+  "kasite": "galdrastafir",
+  "kysymys": "Kerro lisää: galdrastafir"
+ },
+ {
+  "n": 209,
+  "kohta": "kohde:hahmotelma-blaa-lonid",
+  "kasite": "piidioksidipitoisuudesta",
+  "kysymys": "Kerro lisää: piidioksidipitoisuudesta"
+ },
+ {
+  "n": 210,
+  "kohta": "kohde:hahmotelma-blaa-lonid",
+  "kasite": "Svartsengin",
+  "kysymys": "Kerro lisää: Svartsengin"
+ },
+ {
+  "n": 211,
+  "kohta": "kohde:hahmotelma-blaa-lonid",
+  "kasite": "geotermisen",
+  "kysymys": "Kerro lisää: geotermisen"
+ },
+ {
+  "n": 212,
+  "kohta": "kohde:hahmotelma-blaa-lonid",
+  "kasite": "turbiineja",
+  "kysymys": "Kerro lisää: turbiineja"
+ },
+ {
+  "n": 213,
+  "kohta": "kohde:hahmotelma-blaa-lonid",
+  "kasite": "lämmönvaihtimien",
+  "kysymys": "Kerro lisää: lämmönvaihtimien"
+ },
+ {
+  "n": 214,
+  "kohta": "kohde:hahmotelma-blaa-lonid",
+  "kasite": "laavakentän",
+  "kysymys": "Kerro lisää: laavakentän"
+ },
+ {
+  "n": 215,
+  "kohta": "kohde:hahmotelma-blaa-lonid",
+  "kasite": "mineraalipitoisuuden",
+  "kysymys": "Kerro lisää: mineraalipitoisuuden"
+ },
+ {
+  "n": 216,
+  "kohta": "kohde:hahmotelma-blaa-lonid",
+  "kasite": "Reykjanesin",
+  "kysymys": "Kerro lisää: Reykjanesin"
+ },
+ {
+  "n": 217,
+  "kohta": "kohde:hahmotelma-blaa-lonid",
+  "kasite": "Grindavíkista",
+  "kysymys": "Kerro lisää: Grindavíkista"
+ },
+ {
+  "n": 218,
+  "kohta": "kohde:hahmotelma-blaa-lonid",
+  "kasite": "kaukolämpöverkon",
+  "kysymys": "Kerro lisää: kaukolämpöverkon"
+ },
+ {
+  "n": 219,
+  "kohta": "kohde:hahmotelma-blaa-lonid",
+  "kasite": "Svartsengi",
+  "kysymys": "Kerro lisää: Svartsengi"
+ },
+ {
+  "n": 220,
+  "kohta": "kohde:hahmotelma-seydisfjordur",
+  "kasite": "Store Nordiske Telegrafselskab",
+  "kysymys": "Kerro lisää: Store Nordiske Telegrafselskab"
+ },
+ {
+  "n": 221,
+  "kohta": "kohde:hahmotelma-seydisfjordur",
+  "kasite": "Skotlannista",
+  "kysymys": "Kerro lisää: Skotlannista"
+ },
+ {
+  "n": 222,
+  "kohta": "kohde:hahmotelma-seydisfjordur",
+  "kasite": "Färsaarten",
+  "kysymys": "Kerro lisää: Färsaarten"
+ },
+ {
+  "n": 223,
+  "kohta": "kohde:hahmotelma-seydisfjordur",
+  "kasite": "LungA-festivaalistaan",
+  "kysymys": "Kerro lisää: LungA-festivaalistaan"
+ },
+ {
+  "n": 224,
+  "kohta": "kohde:hahmotelma-seydisfjordur",
+  "kasite": "Itä-Islannissa",
+  "kysymys": "Kerro lisää: Itä-Islannissa"
+ },
+ {
+  "n": 225,
+  "kohta": "kohde:hahmotelma-seydisfjordur",
+  "kasite": "Bjólfur",
+  "kysymys": "Kerro lisää: Bjólfur"
+ },
+ {
+  "n": 226,
+  "kohta": "kohde:hahmotelma-seydisfjordur",
+  "kasite": "norjalaiset kalastajat",
+  "kysymys": "Kerro lisää: norjalaiset kalastajat"
+ },
+ {
+  "n": 227,
+  "kohta": "kohde:hahmotelma-seydisfjordur",
+  "kasite": "puutaloista",
+  "kysymys": "Kerro lisää: puutaloista"
+ },
+ {
+  "n": 228,
+  "kohta": "kohde:hahmotelma-seydisfjordur",
+  "kasite": "saagojen",
+  "kysymys": "Kerro lisää: saagojen"
+ },
+ {
+  "n": 229,
+  "kohta": "kohde:hahmotelma-hakarl",
+  "kasite": "Grönlanninhain",
+  "kysymys": "Kerro lisää: Grönlanninhain"
+ },
+ {
+  "n": 230,
+  "kohta": "kohde:hahmotelma-hakarl",
+  "kasite": "unihaikalan",
+  "kysymys": "Kerro lisää: unihaikalan"
+ },
+ {
+  "n": 231,
+  "kohta": "kohde:hahmotelma-hakarl",
+  "kasite": "Bjarnarhöfnin",
+  "kysymys": "Kerro lisää: Bjarnarhöfnin"
+ },
+ {
+  "n": 232,
+  "kohta": "kohde:hahmotelma-hakarl",
+  "kasite": "Snæfellsnesillä",
+  "kysymys": "Kerro lisää: Snæfellsnesillä"
+ },
+ {
+  "n": 233,
+  "kohta": "kohde:hahmotelma-hakarl",
+  "kasite": "þorrablót-juhlassa",
+  "kysymys": "Kerro lisää: þorrablót-juhlassa"
+ },
+ {
+  "n": 234,
+  "kohta": "kohde:hahmotelma-hakarl",
+  "kasite": "ammoniakilta",
+  "kysymys": "Kerro lisää: ammoniakilta"
+ },
+ {
+  "n": 235,
+  "kohta": "kohde:hahmotelma-hakarl",
+  "kasite": "þorramatur",
+  "kysymys": "Kerro lisää: þorramatur"
+ },
+ {
+  "n": 236,
+  "kohta": "kohde:hahmotelma-hakarl",
+  "kasite": "þorrablót",
+  "kysymys": "Kerro lisää: þorrablót"
+ },
+ {
+  "n": 237,
+  "kohta": "kohde:hahmotelma-skyr",
+  "kasite": "lampaanmaidosta",
+  "kysymys": "Kerro lisää: lampaanmaidosta"
+ },
+ {
+  "n": 238,
+  "kohta": "kohde:hahmotelma-skyr",
+  "kasite": "Egilin saagassa",
+  "kysymys": "Kerro lisää: Egilin saagassa"
+ },
+ {
+  "n": 239,
+  "kohta": "kohde:hahmotelma-skyr",
+  "kasite": "hapatettu",
+  "kysymys": "Kerro lisää: hapatettu"
+ },
+ {
+  "n": 240,
+  "kohta": "kohde:hahmotelma-skyr",
+  "kasite": "hapanmaitojuustoksi",
+  "kysymys": "Kerro lisää: hapanmaitojuustoksi"
+ },
+ {
+  "n": 241,
+  "kohta": "kohde:hahmotelma-skyr",
+  "kasite": "Grettis-saagassa",
+  "kysymys": "Kerro lisää: Grettis-saagassa"
+ },
+ {
+  "n": 242,
+  "kohta": "kohde:hahmotelma-skyr",
+  "kasite": "jogurttia",
+  "kysymys": "Kerro lisää: jogurttia"
+ },
+ {
+  "n": 243,
+  "kohta": "kohde:hahmotelma-skyr",
+  "kasite": "hapanmaitojuusto",
+  "kysymys": "Kerro lisää: hapanmaitojuusto"
+ },
+ {
+  "n": 244,
+  "kohta": "kohde:hahmotelma-skyr",
+  "kasite": "Hvanneyrin",
+  "kysymys": "Kerro lisää: Hvanneyrin"
+ },
+ {
+  "n": 245,
+  "kohta": "kohde:hahmotelma-skyr",
+  "kasite": "karjanjalostusta",
+  "kysymys": "Kerro lisää: karjanjalostusta"
+ },
+ {
+  "n": 246,
+  "kohta": "kohde:hahmotelma-reynisfjara",
+  "kasite": "peikkoa",
+  "kysymys": "Kerro lisää: peikkoa"
+ },
+ {
+  "n": 247,
+  "kohta": "kohde:hahmotelma-reynisfjara",
+  "kasite": "basalttikalliot",
+  "kysymys": "Kerro lisää: basalttikalliot"
+ },
+ {
+  "n": 248,
+  "kohta": "kohde:hahmotelma-reynisfjara",
+  "kasite": "Islands-lehti",
+  "kysymys": "Kerro lisää: Islands-lehti"
+ },
+ {
+  "n": 249,
+  "kohta": "kohde:hahmotelma-reynisfjara",
+  "kasite": "Katlan Unesco-geoparkkiin",
+  "kysymys": "Kerro lisää: Katlan Unesco-geoparkkiin"
+ },
+ {
+  "n": 250,
+  "kohta": "kohde:hahmotelma-reynisfjara",
+  "kasite": "basaltista",
+  "kysymys": "Kerro lisää: basaltista"
+ },
+ {
+  "n": 251,
+  "kohta": "kohde:hahmotelma-reynisfjara",
+  "kasite": "basalttipylväiden",
+  "kysymys": "Kerro lisää: basalttipylväiden"
+ },
+ {
+  "n": 252,
+  "kohta": "kohde:hahmotelma-reynisfjara",
+  "kasite": "Hálsanefshellir-luola",
+  "kysymys": "Kerro lisää: Hálsanefshellir-luola"
+ },
+ {
+  "n": 253,
+  "kohta": "kohde:hahmotelma-reynisfjara",
+  "kasite": "laavan",
+  "kysymys": "Kerro lisää: laavan"
+ },
+ {
+  "n": 254,
+  "kohta": "kohde:hahmotelma-reynisfjara",
+  "kasite": "Hálsanefshellir-luolaa",
+  "kysymys": "Kerro lisää: Hálsanefshellir-luolaa"
+ },
+ {
+  "n": 255,
+  "kohta": "kohde:hahmotelma-reynisfjara",
+  "kasite": "Etelä-Islannissa",
+  "kysymys": "Kerro lisää: Etelä-Islannissa"
+ },
+ {
+  "n": 256,
+  "kohta": "kohde:hahmotelma-skogafoss",
+  "kasite": "maankohoaminen",
+  "kysymys": "Kerro lisää: maankohoaminen"
+ },
+ {
+  "n": 257,
+  "kohta": "kohde:hahmotelma-skogafoss",
+  "kasite": "Etelä-Islannin",
+  "kysymys": "Kerro lisää: Etelä-Islannin"
+ },
+ {
+  "n": 258,
+  "kohta": "kohde:hahmotelma-skogafoss",
+  "kasite": "aarrearkun",
+  "kysymys": "Kerro lisää: aarrearkun"
+ },
+ {
+  "n": 259,
+  "kohta": "kohde:hahmotelma-skogafoss",
+  "kasite": "Skógarin museossa",
+  "kysymys": "Kerro lisää: Skógarin museossa"
+ },
+ {
+  "n": 260,
+  "kohta": "kohde:hahmotelma-skogafoss",
+  "kasite": "sateenkaari",
+  "kysymys": "Kerro lisää: sateenkaari"
+ },
+ {
+  "n": 261,
+  "kohta": "kohde:hahmotelma-skogafoss",
+  "kasite": "kaksoiskaarena",
+  "kysymys": "Kerro lisää: kaksoiskaarena"
+ },
+ {
+  "n": 262,
+  "kohta": "kohde:hahmotelma-skogafoss",
+  "kasite": "Islannin",
+  "kysymys": "Kerro lisää: Islannin"
+ },
+ {
+  "n": 263,
+  "kohta": "kohde:hahmotelma-skogafoss",
+  "kasite": "Etelä-Islannissa",
+  "kysymys": "Kerro lisää: Etelä-Islannissa"
+ },
+ {
+  "n": 264,
+  "kohta": "kohde:hahmotelma-skogafoss",
+  "kasite": "Skógarin",
+  "kysymys": "Kerro lisää: Skógarin"
+ },
+ {
+  "n": 265,
+  "kohta": "kohde:hahmotelma-landmannalaugar",
+  "kasite": "tulivuorenpurkauksessa",
+  "kysymys": "Kerro lisää: tulivuorenpurkauksessa"
+ },
+ {
+  "n": 266,
+  "kohta": "kohde:hahmotelma-landmannalaugar",
+  "kasite": "Landmannalaugarin",
+  "kysymys": "Kerro lisää: Landmannalaugarin"
+ },
+ {
+  "n": 267,
+  "kohta": "kohde:hahmotelma-landmannalaugar",
+  "kasite": "Fjallabakin luonnonsuojelualueella",
+  "kysymys": "Kerro lisää: Fjallabakin luonnonsuojelualueella"
+ },
+ {
+  "n": 268,
+  "kohta": "kohde:hahmotelma-landmannalaugar",
+  "kasite": "Landmannalaugar",
+  "kysymys": "Kerro lisää: Landmannalaugar"
+ },
+ {
+  "n": 269,
+  "kohta": "kohde:hahmotelma-landmannalaugar",
+  "kasite": "Þórsmörkissä",
+  "kysymys": "Kerro lisää: Þórsmörkissä"
+ },
+ {
+  "n": 270,
+  "kohta": "kohde:hahmotelma-landmannalaugar",
+  "kasite": "Islannin retkeilyseura",
+  "kysymys": "Kerro lisää: Islannin retkeilyseura"
+ },
+ {
+  "n": 271,
+  "kohta": "kohde:hahmotelma-landmannalaugar",
+  "kasite": "riolittia",
+  "kysymys": "Kerro lisää: riolittia"
+ },
+ {
+  "n": 272,
+  "kohta": "kohde:hahmotelma-landmannalaugar",
+  "kasite": "Etelä-Islannissa",
+  "kysymys": "Kerro lisää: Etelä-Islannissa"
+ },
+ {
+  "n": 273,
+  "kohta": "kohde:hahmotelma-landmannalaugar",
+  "kasite": "Landmannalaugarista",
+  "kysymys": "Kerro lisää: Landmannalaugarista"
+ },
+ {
+  "n": 274,
+  "kohta": "kohde:hahmotelma-landmannalaugar",
+  "kasite": "Pohjavesi",
+  "kysymys": "Kerro lisää: Pohjavesi"
+ },
+ {
+  "n": 275,
+  "kohta": "kohde:hahmotelma-landmannalaugar",
+  "kasite": "Atlantin keskiselänteen",
+  "kysymys": "Kerro lisää: Atlantin keskiselänteen"
+ },
+ {
+  "n": 276,
+  "kohta": "kohde:hahmotelma-landmannalaugar",
+  "kasite": "Landmannalaugarissa",
+  "kysymys": "Kerro lisää: Landmannalaugarissa"
+ },
+ {
+  "n": 277,
+  "kohta": "kohde:hahmotelma-flateyjarbok",
+  "kasite": "Orkneyinga-saagan",
+  "kysymys": "Kerro lisää: Orkneyinga-saagan"
+ },
+ {
+  "n": 278,
+  "kohta": "kohde:hahmotelma-flateyjarbok",
+  "kasite": "Färsaarelaisten saagan",
+  "kysymys": "Kerro lisää: Färsaarelaisten saagan"
+ },
+ {
+  "n": 279,
+  "kohta": "kohde:hahmotelma-flateyjarbok",
+  "kasite": "Norjan kuninkaiden saagoja",
+  "kysymys": "Kerro lisää: Norjan kuninkaiden saagoja"
+ },
+ {
+  "n": 280,
+  "kohta": "kohde:hahmotelma-flateyjarbok",
+  "kasite": "Brynjólfur Sveinsson",
+  "kysymys": "Kerro lisää: Brynjólfur Sveinsson"
+ },
+ {
+  "n": 281,
+  "kohta": "kohde:hahmotelma-flateyjarbok",
+  "kasite": "Flateyn",
+  "kysymys": "Kerro lisää: Flateyn"
+ },
+ {
+  "n": 282,
+  "kohta": "kohde:hahmotelma-flateyjarbok",
+  "kasite": "Kööpenhaminaan",
+  "kysymys": "Kerro lisää: Kööpenhaminaan"
+ },
+ {
+  "n": 283,
+  "kohta": "kohde:hahmotelma-flateyjarbok",
+  "kasite": "proosa",
+  "kysymys": "Kerro lisää: proosa"
+ },
+ {
+  "n": 284,
+  "kohta": "kohde:hahmotelma-flateyjarbok",
+  "kasite": "Islannissa",
+  "kysymys": "Kerro lisää: Islannissa"
+ },
+ {
+  "n": 285,
+  "kohta": "kohde:hahmotelma-flateyjarbok",
+  "kasite": "Breiðafjörðurin",
+  "kysymys": "Kerro lisää: Breiðafjörðurin"
+ },
+ {
+  "n": 286,
+  "kohta": "kohde:hahmotelma-flateyjarbok",
+  "kasite": "Flateyjarbókin",
+  "kysymys": "Kerro lisää: Flateyjarbókin"
+ },
+ {
+  "n": 287,
+  "kohta": "kohde:hahmotelma-flateyjarbok",
+  "kasite": "käsikirjoitukset",
+  "kysymys": "Kerro lisää: käsikirjoitukset"
+ },
+ {
+  "n": 288,
+  "kohta": "kohde:hahmotelma-godafoss",
+  "kasite": "goðin",
+  "kysymys": "Kerro lisää: goðin"
+ },
+ {
+  "n": 289,
+  "kohta": "kohde:hahmotelma-godafoss",
+  "kasite": "Pohjois-Islannissa",
+  "kysymys": "Kerro lisää: Pohjois-Islannissa"
+ },
+ {
+  "n": 290,
+  "kohta": "kohde:hahmotelma-godafoss",
+  "kasite": "Skjálfandafljót-joessa",
+  "kysymys": "Kerro lisää: Skjálfandafljót-joessa"
+ },
+ {
+  "n": 291,
+  "kohta": "kohde:hahmotelma-godafoss",
+  "kasite": "Ari Þorgilssonin",
+  "kysymys": "Kerro lisää: Ari Þorgilssonin"
+ },
+ {
+  "n": 292,
+  "kohta": "kohde:hahmotelma-godafoss",
+  "kasite": "Íslendingabók",
+  "kysymys": "Kerro lisää: Íslendingabók"
+ },
+ {
+  "n": 293,
+  "kohta": "kohde:hahmotelma-godafoss",
+  "kasite": "Akureyrin kirkon",
+  "kysymys": "Kerro lisää: Akureyrin kirkon"
+ },
+ {
+  "n": 294,
+  "kohta": "kohde:hahmotelma-godafoss",
+  "kasite": "lainpuhuja",
+  "kysymys": "Kerro lisää: lainpuhuja"
+ },
+ {
+  "n": 295,
+  "kohta": "kohde:hahmotelma-godafoss",
+  "kasite": "Þingvellirissä",
+  "kysymys": "Kerro lisää: Þingvellirissä"
+ },
+ {
+  "n": 296,
+  "kohta": "kohde:hahmotelma-godafoss",
+  "kasite": "Alþingillä",
+  "kysymys": "Kerro lisää: Alþingillä"
+ },
+ {
+  "n": 297,
+  "kohta": "kohde:hahmotelma-godafoss",
+  "kasite": "Þorgeir Ljósvetningagoði",
+  "kysymys": "Kerro lisää: Þorgeir Ljósvetningagoði"
+ },
+ {
+  "n": 298,
+  "kohta": "kohde:hahmotelma-godafoss",
+  "kasite": "kristinuskosta",
+  "kysymys": "Kerro lisää: kristinuskosta"
+ },
+ {
+  "n": 299,
+  "kohta": "kohde:hahmotelma-godafoss",
+  "kasite": "Akureyri",
+  "kysymys": "Kerro lisää: Akureyri"
+ },
+ {
+  "n": 300,
+  "kohta": "kohde:hahmotelma-godafoss",
+  "kasite": "Eyjafjörðurin",
+  "kysymys": "Kerro lisää: Eyjafjörðurin"
+ },
+ {
+  "n": 301,
+  "kohta": "kohde:hahmotelma-godafoss",
+  "kasite": "Goðafoss",
+  "kysymys": "Kerro lisää: Goðafoss"
+ },
+ {
+  "n": 302,
+  "kohta": "kohde:hahmotelma-kirkjufell",
+  "kasite": "jäätikön",
+  "kysymys": "Kerro lisää: jäätikön"
+ },
+ {
+  "n": 303,
+  "kohta": "kohde:hahmotelma-kirkjufell",
+  "kasite": "Snæfellsnesin",
+  "kysymys": "Kerro lisää: Snæfellsnesin"
+ },
+ {
+  "n": 304,
+  "kohta": "kohde:hahmotelma-kirkjufell",
+  "kasite": "Game of Thrones",
+  "kysymys": "Kerro lisää: Game of Thrones"
+ },
+ {
+  "n": 305,
+  "kohta": "kohde:hahmotelma-kirkjufell",
+  "kasite": "Grundarfjörðurin",
+  "kysymys": "Kerro lisää: Grundarfjörðurin"
+ },
+ {
+  "n": 306,
+  "kohta": "kohde:hahmotelma-kirkjufell",
+  "kasite": "nunatak",
+  "kysymys": "Kerro lisää: nunatak"
+ },
+ {
+  "n": 307,
+  "kohta": "kohde:hahmotelma-kirkjufell",
+  "kasite": "jääkausia",
+  "kysymys": "Kerro lisää: jääkausia"
+ },
+ {
+  "n": 308,
+  "kohta": "kohde:hahmotelma-kirkjufell",
+  "kasite": "Kirkjufellin",
+  "kysymys": "Kerro lisää: Kirkjufellin"
+ }
+]

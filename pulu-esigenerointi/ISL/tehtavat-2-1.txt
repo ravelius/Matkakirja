@@ -1,0 +1,1212 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvannadalshnúkur (luonto · vuori)
+Tietoruudun teksti: Hvannadalshnúkur on pyramidin muotoinen huippu Öræfajökull-tulivuoren huippukraatterin luoteisreunalla Vatnajökullin kansallispuistossa. Se on Islannin korkein kohta ja maan ainoa ultraprominentti huippu — ainoa, joka kohoaa ympäristöstään yli puolentoista kilometrin verran. Huippu ei siis ole oma vuorensa vaan jäätikön peittämän tulivuoren reuna.
+AIEMPI KYSYMYS: Mikä Öræfajökull on?
+AIEMPI VASTAUS (Livia):
+Kato, tää on kiva aloittaa pohjalta. Öræfajökull on Islannin eteläosassa kohoava tulivuori, jonka peittää paksu jäätikkö, ja siksi sen muoto hahmottuu huonosti maasta katsoen. Huipulla on laaja kraatteri, ja sen luoteisreunalla sijaitsee Islannin korkein kohta, [[Hvannadalshnúkur]]. Tulivuori kuuluu [[Vatnajökullin]] kansallispuiston alueeseen, ja sen jäätikköpeite on osa Vatnajökullin laajempaa jäämassaa. Ylhäältä katsottuna se on kyl pelkkä iso valkoinen kumpu.
+KYSYMYS: Kerro lisää: Hvannadalshnúkur
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvannadalshnúkur (luonto · vuori)
+Tietoruudun teksti: Hvannadalshnúkur on pyramidin muotoinen huippu Öræfajökull-tulivuoren huippukraatterin luoteisreunalla Vatnajökullin kansallispuistossa. Se on Islannin korkein kohta ja maan ainoa ultraprominentti huippu — ainoa, joka kohoaa ympäristöstään yli puolentoista kilometrin verran. Huippu ei siis ole oma vuorensa vaan jäätikön peittämän tulivuoren reuna.
+AIEMPI KYSYMYS: Mikä Öræfajökull on?
+AIEMPI VASTAUS (Livia):
+Kato, tää on kiva aloittaa pohjalta. Öræfajökull on Islannin eteläosassa kohoava tulivuori, jonka peittää paksu jäätikkö, ja siksi sen muoto hahmottuu huonosti maasta katsoen. Huipulla on laaja kraatteri, ja sen luoteisreunalla sijaitsee Islannin korkein kohta, [[Hvannadalshnúkur]]. Tulivuori kuuluu [[Vatnajökullin]] kansallispuiston alueeseen, ja sen jäätikköpeite on osa Vatnajökullin laajempaa jäämassaa. Ylhäältä katsottuna se on kyl pelkkä iso valkoinen kumpu.
+KYSYMYS: Kerro lisää: Vatnajökullin
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvannadalshnúkur (luonto · vuori)
+Tietoruudun teksti: Hvannadalshnúkur on pyramidin muotoinen huippu Öræfajökull-tulivuoren huippukraatterin luoteisreunalla Vatnajökullin kansallispuistossa. Se on Islannin korkein kohta ja maan ainoa ultraprominentti huippu — ainoa, joka kohoaa ympäristöstään yli puolentoista kilometrin verran. Huippu ei siis ole oma vuorensa vaan jäätikön peittämän tulivuoren reuna.
+AIEMPI KYSYMYS: Mitä ultraprominentti huippu tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Ultraprominentti huippu on vuori, jonka korostuma eli [[prominenssi]] on vähintään 1 500 metriä. Korostuma tarkoittaa korkeuseroa huipun ja korkeimman sellaisen solan välillä, jonka kautta pääsee seuraavaan korkeampaan huippuun. Mitä suurempi luku on, sitä itsenäisemmin huippu kohoaa ympäristöstään. Islannissa tämän ehdon täyttää vain [[Hvannadalshnúkur]]. Korkeus on kyl kyyhkyn alaa, joten tää meni helposti.
+KYSYMYS: Kerro lisää: prominenssi
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvannadalshnúkur (luonto · vuori)
+Tietoruudun teksti: Hvannadalshnúkur on pyramidin muotoinen huippu Öræfajökull-tulivuoren huippukraatterin luoteisreunalla Vatnajökullin kansallispuistossa. Se on Islannin korkein kohta ja maan ainoa ultraprominentti huippu — ainoa, joka kohoaa ympäristöstään yli puolentoista kilometrin verran. Huippu ei siis ole oma vuorensa vaan jäätikön peittämän tulivuoren reuna.
+AIEMPI KYSYMYS: Kuinka korkea Hvannadalshnúkur on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Hvannadalshnúkur on korkeudeltaan noin 2 110 metriä merenpinnan yläpuolella, ja se on Islannin korkein kohta. Tarkka luku vaihtelee hieman mittaustavan ja ajankohdan mukaan, koska huipun jääpeite muuttuu ja mittauksia on tarkennettu. Huipun korostuma ympäristöstään on silti yli puolitoista kilometriä, sillä [[Öræfajökull]] nousee melko läheltä rannikkoa ja [[Vatnajökullin]] jäämassan yläpuolelle.
+
+Kaksituhatta metriä ei kuulosta kyyhkyn mittapuulla paljolta, mutta nousu alkaa melko läheltä rannikkoa. Siinä vaiheessa jo minäkin ostaisin lipun mieluummin alaspäin.
+KYSYMYS: Kerro lisää: Öræfajökull
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvannadalshnúkur (luonto · vuori)
+Tietoruudun teksti: Hvannadalshnúkur on pyramidin muotoinen huippu Öræfajökull-tulivuoren huippukraatterin luoteisreunalla Vatnajökullin kansallispuistossa. Se on Islannin korkein kohta ja maan ainoa ultraprominentti huippu — ainoa, joka kohoaa ympäristöstään yli puolentoista kilometrin verran. Huippu ei siis ole oma vuorensa vaan jäätikön peittämän tulivuoren reuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Luonto: Kylä puolusti itseään paloletkuilla] 1973 — Tammikuussa 1973 Heimaeyn saarella aukesi kylän laidalle railo, josta purkautui laavaa. Koko väestö, yli viisituhatta ihmistä, vietiin yhdessä yössä turvaan kalastuslaivoilla — sattumalta laivasto oli myrskyn takia satamassa. Laava eteni kohti satamaa, joka oli kylän elinehto. Silloin ryhdyttiin pumppaamaan merivettä laavan päälle: vesi jäähdytti reunan kovaksi ja käänsi virtaa. Satama säilyi, ja lopulta siitä tuli aiempaa suojaisampi.
+AIEMPI KYSYMYS: Miten huipulle noustaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Huipulle noustaan yleensä Öræfajökullin rinteitä pitkin jäätikön yli, ja reitti kulkee tavallisesti köysistössä, jäänaulakengissä ja jääkirveen kanssa. Nousu on pitkä päiväretki, ja moni valitsee oppaan, koska jäätikön [[railot]] voivat olla lumen peitossa. Reitti alkaa tyypillisesti [[Skaftafellin]] tai Sandfellin suunnalta, mutta en ole varma, kumpi on nykyisin tavallisempi lähtöpaikka. Minä otan mieluummin siivet kuin jääkirveen.
+KYSYMYS: Kerro lisää: railot
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvannadalshnúkur (luonto · vuori)
+Tietoruudun teksti: Hvannadalshnúkur on pyramidin muotoinen huippu Öræfajökull-tulivuoren huippukraatterin luoteisreunalla Vatnajökullin kansallispuistossa. Se on Islannin korkein kohta ja maan ainoa ultraprominentti huippu — ainoa, joka kohoaa ympäristöstään yli puolentoista kilometrin verran. Huippu ei siis ole oma vuorensa vaan jäätikön peittämän tulivuoren reuna.
+AIEMPI KYSYMYS: Miten huipulle noustaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Huipulle noustaan yleensä Öræfajökullin rinteitä pitkin jäätikön yli, ja reitti kulkee tavallisesti köysistössä, jäänaulakengissä ja jääkirveen kanssa. Nousu on pitkä päiväretki, ja moni valitsee oppaan, koska jäätikön [[railot]] voivat olla lumen peitossa. Reitti alkaa tyypillisesti [[Skaftafellin]] tai Sandfellin suunnalta, mutta en ole varma, kumpi on nykyisin tavallisempi lähtöpaikka. Minä otan mieluummin siivet kuin jääkirveen.
+KYSYMYS: Kerro lisää: Skaftafellin
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvannadalshnúkur (luonto · vuori)
+Tietoruudun teksti: Hvannadalshnúkur on pyramidin muotoinen huippu Öræfajökull-tulivuoren huippukraatterin luoteisreunalla Vatnajökullin kansallispuistossa. Se on Islannin korkein kohta ja maan ainoa ultraprominentti huippu — ainoa, joka kohoaa ympäristöstään yli puolentoista kilometrin verran. Huippu ei siis ole oma vuorensa vaan jäätikön peittämän tulivuoren reuna.
+AIEMPI KYSYMYS: Milloin Öræfajökull on purkautunut?
+AIEMPI VASTAUS (Livia):
+Hmm. Öræfajökull on purkautunut historiallisella ajalla kahdesti: lähteiden mukaan vuosina 1362 ja 1727. Vuoden 1362 purkaus oli erittäin voimakas, ja se tuhosi ympäröivän asutun seudun, joka tunnettiin nimellä [[Litlahérað]]. Purkaukseen liittyi jäätikön sulamisvesien tulvia eli [[jökulhlaup]]-ilmiö sekä paljon tuhkaa, ja alue sai sen jälkeen nimen Öræfi, joka tarkoittaa autiomaata. Vuoden 1727 purkaus oli pienempi. Seutu on sittemmin asutettu uudelleen. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Litlahérað
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvannadalshnúkur (luonto · vuori)
+Tietoruudun teksti: Hvannadalshnúkur on pyramidin muotoinen huippu Öræfajökull-tulivuoren huippukraatterin luoteisreunalla Vatnajökullin kansallispuistossa. Se on Islannin korkein kohta ja maan ainoa ultraprominentti huippu — ainoa, joka kohoaa ympäristöstään yli puolentoista kilometrin verran. Huippu ei siis ole oma vuorensa vaan jäätikön peittämän tulivuoren reuna.
+AIEMPI KYSYMYS: Milloin Öræfajökull on purkautunut?
+AIEMPI VASTAUS (Livia):
+Hmm. Öræfajökull on purkautunut historiallisella ajalla kahdesti: lähteiden mukaan vuosina 1362 ja 1727. Vuoden 1362 purkaus oli erittäin voimakas, ja se tuhosi ympäröivän asutun seudun, joka tunnettiin nimellä [[Litlahérað]]. Purkaukseen liittyi jäätikön sulamisvesien tulvia eli [[jökulhlaup]]-ilmiö sekä paljon tuhkaa, ja alue sai sen jälkeen nimen Öræfi, joka tarkoittaa autiomaata. Vuoden 1727 purkaus oli pienempi. Seutu on sittemmin asutettu uudelleen. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: jökulhlaup
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grönlanninmeri (meri)
+Tietoruudun teksti: Grönlanninmeri rajautuu lännessä Grönlantiin, idässä Huippuvuoriin, pohjoisessa Framinsalmeen ja Jäämereen sekä etelässä Norjanmereen ja Islantiin. Se määritellään joskus osaksi Jäämerta ja joskus osaksi Atlanttia — Jäämeren ja sen sivumerten rajat ovat epätarkkoja. Merentutkimuksessa se luetaan Norjanmeren kanssa Pohjoisiin meriin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kaupunkilehti / Historia: Kaupunki, josta retkikunnat lähtivät napaa kohti] Tromssan sijainti syvän vuonon suojassa mutta silti lähellä avomerta teki siitä 1800-luvun lopulla luontevan viimeisen pysähdyspaikan napaseuduille suuntaaville retkikunnille — muun muassa Roald Amundsen ja Fridtjof Nansen varustautuivat ja rekrytoivat miehistöä Tromssassa ennen matkojaan Koillisväylälle ja Pohjoisnavan suunnalle. Kaupungin lempinimeksi vakiintui "Jäämeren Pariisi", osin ironisesti ja osin ylpeydestä sen kansainvälisestä merkityksestä napatutkimukselle. Nykyinen Polarmuseet toimii vanhassa tullirakennuksessa satamassa ja kertoo näiden retkikuntien historiasta.
+AIEMPI KYSYMYS: Kuuluuko Grönlanninmeri Jäämereen vai Atlanttiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on hyvä kysymys. Se riippuu määrittelystä: Grönlanninmeri luetaan joskus Jäämeren osaksi ja joskus Atlantin osaksi, koska [[Jäämeren]] ja sen sivumerten rajat ovat epätarkkoja. Merentutkimuksessa se luetaan yleensä yhdessä [[Norjanmeren]] kanssa Pohjoisiin meriin. Meri on yhteydessä Jäämereen [[Framinsalmen]] kautta. Minä en riitele rajoista, minä lennän niiden yli.
+KYSYMYS: Kerro lisää: Jäämeren
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grönlanninmeri (meri)
+Tietoruudun teksti: Grönlanninmeri rajautuu lännessä Grönlantiin, idässä Huippuvuoriin, pohjoisessa Framinsalmeen ja Jäämereen sekä etelässä Norjanmereen ja Islantiin. Se määritellään joskus osaksi Jäämerta ja joskus osaksi Atlanttia — Jäämeren ja sen sivumerten rajat ovat epätarkkoja. Merentutkimuksessa se luetaan Norjanmeren kanssa Pohjoisiin meriin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+AIEMPI KYSYMYS: Kuuluuko Grönlanninmeri Jäämereen vai Atlanttiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on hyvä kysymys. Se riippuu määrittelystä: Grönlanninmeri luetaan joskus Jäämeren osaksi ja joskus Atlantin osaksi, koska [[Jäämeren]] ja sen sivumerten rajat ovat epätarkkoja. Merentutkimuksessa se luetaan yleensä yhdessä [[Norjanmeren]] kanssa Pohjoisiin meriin. Meri on yhteydessä Jäämereen [[Framinsalmen]] kautta. Minä en riitele rajoista, minä lennän niiden yli.
+KYSYMYS: Kerro lisää: Norjanmeren
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grönlanninmeri (meri)
+Tietoruudun teksti: Grönlanninmeri rajautuu lännessä Grönlantiin, idässä Huippuvuoriin, pohjoisessa Framinsalmeen ja Jäämereen sekä etelässä Norjanmereen ja Islantiin. Se määritellään joskus osaksi Jäämerta ja joskus osaksi Atlanttia — Jäämeren ja sen sivumerten rajat ovat epätarkkoja. Merentutkimuksessa se luetaan Norjanmeren kanssa Pohjoisiin meriin.
+AIEMPI KYSYMYS: Kuuluuko Grönlanninmeri Jäämereen vai Atlanttiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on hyvä kysymys. Se riippuu määrittelystä: Grönlanninmeri luetaan joskus Jäämeren osaksi ja joskus Atlantin osaksi, koska [[Jäämeren]] ja sen sivumerten rajat ovat epätarkkoja. Merentutkimuksessa se luetaan yleensä yhdessä [[Norjanmeren]] kanssa Pohjoisiin meriin. Meri on yhteydessä Jäämereen [[Framinsalmen]] kautta. Minä en riitele rajoista, minä lennän niiden yli.
+KYSYMYS: Kerro lisää: Framinsalmen
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grönlanninmeri (meri)
+Tietoruudun teksti: Grönlanninmeri rajautuu lännessä Grönlantiin, idässä Huippuvuoriin, pohjoisessa Framinsalmeen ja Jäämereen sekä etelässä Norjanmereen ja Islantiin. Se määritellään joskus osaksi Jäämerta ja joskus osaksi Atlanttia — Jäämeren ja sen sivumerten rajat ovat epätarkkoja. Merentutkimuksessa se luetaan Norjanmeren kanssa Pohjoisiin meriin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Mikä Framinsalmi on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Framinsalmi on Grönlannin ja [[Huippuvuorten]] välinen merialue, jonka kautta Jäämeri ja Grönlanninmeri ovat yhteydessä toisiinsa. Se on tärkeä väylä, jota pitkin vesi ja jää virtaavat Jäämerestä etelään, ja jäätä kuljettaa kaakkoon [[Itä-Grönlannin merivirta]]. Nimen uskotaan tulevan Fram-laivasta, jota [[Fridtjof Nansen]] käytti retkellään; en ole tästä aivan varma. Jäätä siellä riittää, ja minä pysyn kyl lämpimällä puolella.
+KYSYMYS: Kerro lisää: Huippuvuorten
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grönlanninmeri (meri)
+Tietoruudun teksti: Grönlanninmeri rajautuu lännessä Grönlantiin, idässä Huippuvuoriin, pohjoisessa Framinsalmeen ja Jäämereen sekä etelässä Norjanmereen ja Islantiin. Se määritellään joskus osaksi Jäämerta ja joskus osaksi Atlanttia — Jäämeren ja sen sivumerten rajat ovat epätarkkoja. Merentutkimuksessa se luetaan Norjanmeren kanssa Pohjoisiin meriin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namib — kaupunkilehti / Aavikon selviytyjät: Sumu joka pitää aavikon hengissä] Namibin rannikolla ei sada juuri koskaan, mutta sumu korvaa sadetta yli 180 päivänä vuodessa. Kylmä Benguela-merivirta jäähdyttää lämpimän ilman, ja syntyvä sumupatja työntyy öisin ja aamuisin kymmeniä kilometrejä sisämaahan päin ennen kuin aurinko haihduttaa sen. Tämä näkymätön kosteuslähde pitää elossa kokonaisen ekosysteemin – jäkälistä welwitschioihin ja sumusta juoviin kovakuoriaisiin – alueella, jossa varsinaista sadetta saattaa tulla vain muutaman millimetrin verran vuodessa. Monet tutkijat pitävät sumua koko Namibin eliöstön tärkeimpänä vedenlähteenä, tärkeämpänä kuin harvinaiset joen tulvat.
+- [Lima — kaupunkilehti / Lima: Aavikko jossa ei sada] Lima on maailman kolmanneksi suurin aavikkokaupunki Karachin ja Kairon jälkeen, mutta helteestä ja hiekkadyyneistä ei ole tietoakaan: kylmä Humboldtin merivirta jäähdyttää ilman niin, ettei kosteus tiivisty kunnolliseksi sateeksi. Talvikuukausina kesäkuusta lokakuuhun kaupungin ylle laskeutuu harmaa sumuvaippa, garúa, joka voi peittää auringon viikkokausiksi; rannikkopiireihin sataa silti vain 10–30 millimetriä vuodessa. Kesäisin taivas kirkastuu ja iltarusko värjää sen oranssiksi ja punaiseksi – sitä sanotaan noitien taivaaksi.
+AIEMPI KYSYMYS: Mikä Framinsalmi on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Framinsalmi on Grönlannin ja [[Huippuvuorten]] välinen merialue, jonka kautta Jäämeri ja Grönlanninmeri ovat yhteydessä toisiinsa. Se on tärkeä väylä, jota pitkin vesi ja jää virtaavat Jäämerestä etelään, ja jäätä kuljettaa kaakkoon [[Itä-Grönlannin merivirta]]. Nimen uskotaan tulevan Fram-laivasta, jota [[Fridtjof Nansen]] käytti retkellään; en ole tästä aivan varma. Jäätä siellä riittää, ja minä pysyn kyl lämpimällä puolella.
+KYSYMYS: Kerro lisää: Itä-Grönlannin merivirta
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grönlanninmeri (meri)
+Tietoruudun teksti: Grönlanninmeri rajautuu lännessä Grönlantiin, idässä Huippuvuoriin, pohjoisessa Framinsalmeen ja Jäämereen sekä etelässä Norjanmereen ja Islantiin. Se määritellään joskus osaksi Jäämerta ja joskus osaksi Atlanttia — Jäämeren ja sen sivumerten rajat ovat epätarkkoja. Merentutkimuksessa se luetaan Norjanmeren kanssa Pohjoisiin meriin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Oslo — kaupunkilehti / Historian hetki: Kristiania 1893 — laiva, jonka jää nostaa] 24.6.1893 — Milloin isä tulee takaisin? Sitä ei laiturilla osaa sanoa kukaan. 31-vuotias Fridtjof Nansen jättää rantaan Eva-vaimonsa ja muutaman kuukauden ikäisen Liv-tyttärensä eikä lupaa paluupäivää. Rantakadut ovat mustanaan väkeä, linnoitukselta ammutaan kunnialaukaukset, ja vuonolle liukuu alus, joka näyttää väärin rakennetulta. Fram on matala ja pyöreäpohjainen: Colin Archer suunnitteli sen niin, ettei jäällä ole mistään otetta, vaan ahtojää nostaa laivan ylös eikä murskaa sitä. Runko on kolmea puukerrosta paksu — kuudestakymmenestä seitsemäänkymmeneen senttiä, keulassa runsaan metrin — ja päällystetty greenheart-puulla. Kannella on kolmetoista miestä, ja suunnitelma on se, jota moni …
+- [Oslo — kohdekartta / Kohdekartta: Fram 1893] Milloin isä tulee takaisin? Sitä ei laiturilla osaa sanoa kukaan. 31-vuotias Fridtjof Nansen jättää rantaan Eva-vaimonsa ja muutaman kuukauden ikäisen Liv-tyttärensä eikä lupaa paluupäivää. Rantakadut ovat mustanaan väkeä, linnoitukselta ammutaan kunnialaukaukset, ja vuonolle liukuu alus, joka näyttää väärin rakennetulta. Fram on matala ja pyöreäpohjainen: Colin Archer suunnitteli sen niin, ettei jäällä ole mistään otetta, vaan ahtojää nostaa laivan ylös eikä murskaa sitä. Runko on kolmea puukerrosta paksu — kuudestakymmenestä seitsemäänkymmeneen senttiä, keulassa runsaan metrin — ja päällystetty greenheart-puulla. Kannella on kolmetoista miestä, ja suunnitelma on se, jota moni tutkija on j…
+AIEMPI KYSYMYS: Mikä Framinsalmi on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Framinsalmi on Grönlannin ja [[Huippuvuorten]] välinen merialue, jonka kautta Jäämeri ja Grönlanninmeri ovat yhteydessä toisiinsa. Se on tärkeä väylä, jota pitkin vesi ja jää virtaavat Jäämerestä etelään, ja jäätä kuljettaa kaakkoon [[Itä-Grönlannin merivirta]]. Nimen uskotaan tulevan Fram-laivasta, jota [[Fridtjof Nansen]] käytti retkellään; en ole tästä aivan varma. Jäätä siellä riittää, ja minä pysyn kyl lämpimällä puolella.
+KYSYMYS: Kerro lisää: Fridtjof Nansen
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grönlanninmeri (meri)
+Tietoruudun teksti: Grönlanninmeri rajautuu lännessä Grönlantiin, idässä Huippuvuoriin, pohjoisessa Framinsalmeen ja Jäämereen sekä etelässä Norjanmereen ja Islantiin. Se määritellään joskus osaksi Jäämerta ja joskus osaksi Atlanttia — Jäämeren ja sen sivumerten rajat ovat epätarkkoja. Merentutkimuksessa se luetaan Norjanmeren kanssa Pohjoisiin meriin.
+AIEMPI KYSYMYS: Onko Grönlanninmerellä merijäätä?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä osaan. On, ja jäätä on alueella eniten talvella. Osa jäästä kulkeutuu Jäämerestä [[Framinsalmen]] kautta etelään, ja osa muodostuu meren pinnalle itse. Jäätilanne vaihtelee vuodenajan ja vuoden mukaan, ja viime vuosikymmeninä jään määrä on arktisilla alueilla yleisesti vähentynyt, mutta tarkkoja lukuja en uskalla antaa. Ajelehtivalla jäällä lisääntyvät muun muassa [[kapustahylje]] ja [[grönlanninhylje]]. Ei tunnu paikalta, jonne kannattaa lähettää kirjeitä.
+KYSYMYS: Kerro lisää: kapustahylje
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grönlanninmeri (meri)
+Tietoruudun teksti: Grönlanninmeri rajautuu lännessä Grönlantiin, idässä Huippuvuoriin, pohjoisessa Framinsalmeen ja Jäämereen sekä etelässä Norjanmereen ja Islantiin. Se määritellään joskus osaksi Jäämerta ja joskus osaksi Atlanttia — Jäämeren ja sen sivumerten rajat ovat epätarkkoja. Merentutkimuksessa se luetaan Norjanmeren kanssa Pohjoisiin meriin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kohdekartta / Kohdekartta: Grönlannin kansallismuseo] 1965 Nunatta Katersugaasivia Allagaateqarfialu oli yksi Grönlannin ensimmäisistä museoista. Sen ensimmäinen näyttely avattiin 1965 herrnhutilaisessa lähetystalossa, ja 1970-luvulla se muutti vanhaan siirtomaasatamaan vuonna 1936 rakennettuun varastoon. Muutto ei johtunut tilan puutteesta yksin: kokoelma kasvoi, kun Tanskan kansallismuseo alkoi palauttaa grönlantilaisia esineitä takaisin saarelle. Museon tunnetuin näyttely ovat Qilakitsoqin muumiot. Kaksi metsästäjää, Hans ja Jokum Grønvold, löysivät 9. lokakuuta 1972 riekkojahdissa Uummannaqin lähellä kiviröykkiön, jonka alla oli useita ruumiita. He peittivät haudan uudelleen ja ilmoittivat viranomaisille. Kahdeksan vainajaa oli säilynyt lu…
+- [Nuuk — kohdekartta / Kohdekartta: Grönlannin kansalliskirjasto] Nunatta Atuagaateqarfia on Grönlannin yleinen kirjasto ja kansalliskirjasto samassa laitoksessa. Se on maan suurin käsikirjasto, ja sen tehtävä on säilyttää kansallista kulttuuriperintöä ja historiaa. Kokoelma on jaettu kahteen paikkaan. Keskustan yleinen kirjasto palvelee kaupunkilaisia, ja Ilimmarfikin kampuksella Nuussuaqin kaupunginosassa on Groenlandica — Grönlantia käsittelevän historiallisen aineiston kokoelma. Vuonna 2018 Ilimmarfikin tietokannassa oli 101 824 nimekettä. Kirjasto on maassa, jossa kirjoitettu kieli on nuori ja jossa kirjallisuutta on julkaistu grönlanniksi vasta runsaat sata vuotta, poikkeuksellisen tärkeä laitos: se on käytännössä ainoa paikka, jossa maan oma painet…
+AIEMPI KYSYMYS: Onko Grönlanninmerellä merijäätä?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä osaan. On, ja jäätä on alueella eniten talvella. Osa jäästä kulkeutuu Jäämerestä [[Framinsalmen]] kautta etelään, ja osa muodostuu meren pinnalle itse. Jäätilanne vaihtelee vuodenajan ja vuoden mukaan, ja viime vuosikymmeninä jään määrä on arktisilla alueilla yleisesti vähentynyt, mutta tarkkoja lukuja en uskalla antaa. Ajelehtivalla jäällä lisääntyvät muun muassa [[kapustahylje]] ja [[grönlanninhylje]]. Ei tunnu paikalta, jonne kannattaa lähettää kirjeitä.
+KYSYMYS: Kerro lisää: grönlanninhylje
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grönlanninmeri (meri)
+Tietoruudun teksti: Grönlanninmeri rajautuu lännessä Grönlantiin, idässä Huippuvuoriin, pohjoisessa Framinsalmeen ja Jäämereen sekä etelässä Norjanmereen ja Islantiin. Se määritellään joskus osaksi Jäämerta ja joskus osaksi Atlanttia — Jäämeren ja sen sivumerten rajat ovat epätarkkoja. Merentutkimuksessa se luetaan Norjanmeren kanssa Pohjoisiin meriin.
+AIEMPI KYSYMYS: Kuinka syvä Grönlanninmeri on?
+AIEMPI VASTAUS (Livia):
+Mmm— Grönlanninmeri on syvä merialue, jonka syvimmät kohdat ovat useita tuhansia metrejä merenpinnan alapuolella; tarkkaa suurinta syvyyttä en ole varma, koska lähteet antavat eri lukuja. Meren pohjalla kulkee [[Mohnin selänne]], joka on osa Keski-Atlantin selänteen jatketta. Alueella kylmä ja suolainen pintavesi painuu syvyyksiin, ja tämä on osa [[valtamerten pohjavirtoja]].
+
+Minä pidän syvyyksistä sen verran, että katson niitä mieluummin ylhäältä. Ja ylhäältä ne näyttävät kyllä pelkältä tummalta vedeltä.
+KYSYMYS: Kerro lisää: Mohnin selänne
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grönlanninmeri (meri)
+Tietoruudun teksti: Grönlanninmeri rajautuu lännessä Grönlantiin, idässä Huippuvuoriin, pohjoisessa Framinsalmeen ja Jäämereen sekä etelässä Norjanmereen ja Islantiin. Se määritellään joskus osaksi Jäämerta ja joskus osaksi Atlanttia — Jäämeren ja sen sivumerten rajat ovat epätarkkoja. Merentutkimuksessa se luetaan Norjanmeren kanssa Pohjoisiin meriin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madagaskar — kaupunkilehti / Madagaskar: Hopeapalatsi ja pääministerin valta] Todellinen valta oli 1870-luvun Madagaskarilla pääministerillä, ei kuningattarella. Rainilaiarivony johti hallitusta 31 vuoden ajan ja piti asemansa naimalla peräkkäin kolme hallitsevaa kuningatarta – ensin Rasoherinan, sitten Ranavalona II:n. Hän uudisti maata: pakollinen kouluopetus, englantilaiseen malliin nojaava lakikirja, uudistettu armeija ja oikeuslaitos. Vuonna 1873, samana vuonna kun isoisä matkusti saarella, hän tilasi itselleen Rova-kukkulan alarinteeseen upean Andafiavaratra-palatsin, jota englantilainen arkkitehti William Pool suunnitteli.
+AIEMPI KYSYMYS: Kuinka syvä Grönlanninmeri on?
+AIEMPI VASTAUS (Livia):
+Mmm— Grönlanninmeri on syvä merialue, jonka syvimmät kohdat ovat useita tuhansia metrejä merenpinnan alapuolella; tarkkaa suurinta syvyyttä en ole varma, koska lähteet antavat eri lukuja. Meren pohjalla kulkee [[Mohnin selänne]], joka on osa Keski-Atlantin selänteen jatketta. Alueella kylmä ja suolainen pintavesi painuu syvyyksiin, ja tämä on osa [[valtamerten pohjavirtoja]].
+
+Minä pidän syvyyksistä sen verran, että katson niitä mieluummin ylhäältä. Ja ylhäältä ne näyttävät kyllä pelkältä tummalta vedeltä.
+KYSYMYS: Kerro lisää: valtamerten pohjavirtoja
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grönlanninmeri (meri)
+Tietoruudun teksti: Grönlanninmeri rajautuu lännessä Grönlantiin, idässä Huippuvuoriin, pohjoisessa Framinsalmeen ja Jäämereen sekä etelässä Norjanmereen ja Islantiin. Se määritellään joskus osaksi Jäämerta ja joskus osaksi Atlanttia — Jäämeren ja sen sivumerten rajat ovat epätarkkoja. Merentutkimuksessa se luetaan Norjanmeren kanssa Pohjoisiin meriin.
+AIEMPI KYSYMYS: Elääkö Grönlanninmerellä valaita tai hylkeitä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Elää, sillä Grönlanninmeren ajelehtivan jään seutu on tärkeää aluetta useille merinisäkkäille. Hylkeistä alueella tavataan muun muassa [[kapustahyljettä]] ja [[grönlanninhyljettä]]. Valaista seudulla esiintyy muun muassa [[grönlanninvalasta]] ja [[sarvivalasta]], mutta lajien tarkkoja määriä en ole varma. Minä tapaan lähinnä lokkeja, ja ne ovat huonoa seuraa.
+KYSYMYS: Kerro lisää: kapustahyljettä
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grönlanninmeri (meri)
+Tietoruudun teksti: Grönlanninmeri rajautuu lännessä Grönlantiin, idässä Huippuvuoriin, pohjoisessa Framinsalmeen ja Jäämereen sekä etelässä Norjanmereen ja Islantiin. Se määritellään joskus osaksi Jäämerta ja joskus osaksi Atlanttia — Jäämeren ja sen sivumerten rajat ovat epätarkkoja. Merentutkimuksessa se luetaan Norjanmeren kanssa Pohjoisiin meriin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kohdekartta / Kohdekartta: Grönlannin kansallismuseo] 1965 Nunatta Katersugaasivia Allagaateqarfialu oli yksi Grönlannin ensimmäisistä museoista. Sen ensimmäinen näyttely avattiin 1965 herrnhutilaisessa lähetystalossa, ja 1970-luvulla se muutti vanhaan siirtomaasatamaan vuonna 1936 rakennettuun varastoon. Muutto ei johtunut tilan puutteesta yksin: kokoelma kasvoi, kun Tanskan kansallismuseo alkoi palauttaa grönlantilaisia esineitä takaisin saarelle. Museon tunnetuin näyttely ovat Qilakitsoqin muumiot. Kaksi metsästäjää, Hans ja Jokum Grønvold, löysivät 9. lokakuuta 1972 riekkojahdissa Uummannaqin lähellä kiviröykkiön, jonka alla oli useita ruumiita. He peittivät haudan uudelleen ja ilmoittivat viranomaisille. Kahdeksan vainajaa oli säilynyt lu…
+- [Nuuk — kohdekartta / Kohdekartta: Grönlannin kansalliskirjasto] Nunatta Atuagaateqarfia on Grönlannin yleinen kirjasto ja kansalliskirjasto samassa laitoksessa. Se on maan suurin käsikirjasto, ja sen tehtävä on säilyttää kansallista kulttuuriperintöä ja historiaa. Kokoelma on jaettu kahteen paikkaan. Keskustan yleinen kirjasto palvelee kaupunkilaisia, ja Ilimmarfikin kampuksella Nuussuaqin kaupunginosassa on Groenlandica — Grönlantia käsittelevän historiallisen aineiston kokoelma. Vuonna 2018 Ilimmarfikin tietokannassa oli 101 824 nimekettä. Kirjasto on maassa, jossa kirjoitettu kieli on nuori ja jossa kirjallisuutta on julkaistu grönlanniksi vasta runsaat sata vuotta, poikkeuksellisen tärkeä laitos: se on käytännössä ainoa paikka, jossa maan oma painet…
+AIEMPI KYSYMYS: Elääkö Grönlanninmerellä valaita tai hylkeitä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Elää, sillä Grönlanninmeren ajelehtivan jään seutu on tärkeää aluetta useille merinisäkkäille. Hylkeistä alueella tavataan muun muassa [[kapustahyljettä]] ja [[grönlanninhyljettä]]. Valaista seudulla esiintyy muun muassa [[grönlanninvalasta]] ja [[sarvivalasta]], mutta lajien tarkkoja määriä en ole varma. Minä tapaan lähinnä lokkeja, ja ne ovat huonoa seuraa.
+KYSYMYS: Kerro lisää: grönlanninhyljettä
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grönlanninmeri (meri)
+Tietoruudun teksti: Grönlanninmeri rajautuu lännessä Grönlantiin, idässä Huippuvuoriin, pohjoisessa Framinsalmeen ja Jäämereen sekä etelässä Norjanmereen ja Islantiin. Se määritellään joskus osaksi Jäämerta ja joskus osaksi Atlanttia — Jäämeren ja sen sivumerten rajat ovat epätarkkoja. Merentutkimuksessa se luetaan Norjanmeren kanssa Pohjoisiin meriin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kohdekartta / Kohdekartta: Grönlannin kansallismuseo] 1965 Nunatta Katersugaasivia Allagaateqarfialu oli yksi Grönlannin ensimmäisistä museoista. Sen ensimmäinen näyttely avattiin 1965 herrnhutilaisessa lähetystalossa, ja 1970-luvulla se muutti vanhaan siirtomaasatamaan vuonna 1936 rakennettuun varastoon. Muutto ei johtunut tilan puutteesta yksin: kokoelma kasvoi, kun Tanskan kansallismuseo alkoi palauttaa grönlantilaisia esineitä takaisin saarelle. Museon tunnetuin näyttely ovat Qilakitsoqin muumiot. Kaksi metsästäjää, Hans ja Jokum Grønvold, löysivät 9. lokakuuta 1972 riekkojahdissa Uummannaqin lähellä kiviröykkiön, jonka alla oli useita ruumiita. He peittivät haudan uudelleen ja ilmoittivat viranomaisille. Kahdeksan vainajaa oli säilynyt lu…
+- [Nuuk — kohdekartta / Kohdekartta: Grönlannin kansalliskirjasto] Nunatta Atuagaateqarfia on Grönlannin yleinen kirjasto ja kansalliskirjasto samassa laitoksessa. Se on maan suurin käsikirjasto, ja sen tehtävä on säilyttää kansallista kulttuuriperintöä ja historiaa. Kokoelma on jaettu kahteen paikkaan. Keskustan yleinen kirjasto palvelee kaupunkilaisia, ja Ilimmarfikin kampuksella Nuussuaqin kaupunginosassa on Groenlandica — Grönlantia käsittelevän historiallisen aineiston kokoelma. Vuonna 2018 Ilimmarfikin tietokannassa oli 101 824 nimekettä. Kirjasto on maassa, jossa kirjoitettu kieli on nuori ja jossa kirjallisuutta on julkaistu grönlanniksi vasta runsaat sata vuotta, poikkeuksellisen tärkeä laitos: se on käytännössä ainoa paikka, jossa maan oma painet…
+AIEMPI KYSYMYS: Elääkö Grönlanninmerellä valaita tai hylkeitä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Elää, sillä Grönlanninmeren ajelehtivan jään seutu on tärkeää aluetta useille merinisäkkäille. Hylkeistä alueella tavataan muun muassa [[kapustahyljettä]] ja [[grönlanninhyljettä]]. Valaista seudulla esiintyy muun muassa [[grönlanninvalasta]] ja [[sarvivalasta]], mutta lajien tarkkoja määriä en ole varma. Minä tapaan lähinnä lokkeja, ja ne ovat huonoa seuraa.
+KYSYMYS: Kerro lisää: grönlanninvalasta
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grönlanninmeri (meri)
+Tietoruudun teksti: Grönlanninmeri rajautuu lännessä Grönlantiin, idässä Huippuvuoriin, pohjoisessa Framinsalmeen ja Jäämereen sekä etelässä Norjanmereen ja Islantiin. Se määritellään joskus osaksi Jäämerta ja joskus osaksi Atlanttia — Jäämeren ja sen sivumerten rajat ovat epätarkkoja. Merentutkimuksessa se luetaan Norjanmeren kanssa Pohjoisiin meriin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grönlanti — maalehti / Luonto: Yksisarvisen sarvi tuli Grönlannista] Sarvivalaan koiraan kierteinen torahammas on itse asiassa vasen kulmahammas: se puhkeaa huulen läpi kahden tai kolmen vuoden iässä, kasvaa puolestatoista kolmeen metriin ja painaa jopa 7,45 kiloa. Se ei ole pelkkä ase vaan aistinelin, jossa on miljoonia hermopäätteitä — vuonna 2016 kuvattu droneaineisto näytti valaiden napauttavan sillä turskia tainnoksiin. Keskiajan Euroopassa hampaita myytiin yksisarvisen sarvina myrkkyä ja tauteja vastaan, ja hinnan sanottiin olleen satakertainen kullan painoon nähden. Elisabet I sai Martin Frobisherilta hampaan, jonka arvoksi ilmoitettiin kymmenentuhatta puntaa.
+AIEMPI KYSYMYS: Elääkö Grönlanninmerellä valaita tai hylkeitä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Elää, sillä Grönlanninmeren ajelehtivan jään seutu on tärkeää aluetta useille merinisäkkäille. Hylkeistä alueella tavataan muun muassa [[kapustahyljettä]] ja [[grönlanninhyljettä]]. Valaista seudulla esiintyy muun muassa [[grönlanninvalasta]] ja [[sarvivalasta]], mutta lajien tarkkoja määriä en ole varma. Minä tapaan lähinnä lokkeja, ja ne ovat huonoa seuraa.
+KYSYMYS: Kerro lisää: sarvivalasta
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þjórsá (luonto · joki)
+Tietoruudun teksti: Þjórsá on Islannin pisin joki, 230 kilometriä, ja se virtaa saaren eteläosassa. Se on jäätikköjoki, joka saa alkunsa Hofsjökullilta, kulkee kapeiden rotkojen läpi Islannin ylängöillä ja levenee alangolla. Nimi tulee sanoista á, joki, ja þjór, härkä: Landnámabókin mukaan joki nimettiin erään ensimmäisistä uudisasukaslaivoista keulakuvan mukaan, joka esitti härkää.
+AIEMPI KYSYMYS: Mikä Stöng on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Stöng on viikinkiajan islantilaisen maatilan jäänteistä kaivettu paikka [[Þjórsárdalurin]] laaksossa, ja se on säilynyt hyvin, koska tulivuorenpurkauksen tuhka peitti sen. Perinteisesti tilan tuhoutuminen ajoitetaan [[Heklan]] purkaukseen vuonna 1104, mutta ajoituksesta on esitetty myös muita näkemyksiä. Kaivaukset ovat paljastaneet tilan pitkän asuinrakennuksen, ja lähistölle on rakennettu jäljennös, [[Þjóðveldisbærinn]], joka näyttää, millainen tila saattoi olla. Tuhkan alle jäänyt arki on kyl herkullinen aihe.
+KYSYMYS: Kerro lisää: Þjórsárdalurin
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þjórsá (luonto · joki)
+Tietoruudun teksti: Þjórsá on Islannin pisin joki, 230 kilometriä, ja se virtaa saaren eteläosassa. Se on jäätikköjoki, joka saa alkunsa Hofsjökullilta, kulkee kapeiden rotkojen läpi Islannin ylängöillä ja levenee alangolla. Nimi tulee sanoista á, joki, ja þjór, härkä: Landnámabókin mukaan joki nimettiin erään ensimmäisistä uudisasukaslaivoista keulakuvan mukaan, joka esitti härkää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — kaupunkilehti / Historia: Vuori, jota Eurooppa piti helvetin porttina] Heklan tulivuori purkautui keskiajalla toistuvasti niin näyttävästi, että eurooppalaiset oppineet alkoivat pitää sitä kirjaimellisesti helvetin porttina — 1200-luvun munkkikirjoituksissa Heklan sanottiin olevan paikka, josta kuuluivat kadotettujen sielujen huudot. Maine levisi karttoihin ja kirjoihin ympäri mannerta vuosisatojen ajan. Kartantekijä Abraham Ortelius kuvasi Heklan Islanti-kartassaan 1585 liekkejä syöksevänä vuorena — yksi monista esimerkeistä siitä, miten kaukainen ja tuntematon saari täyttyi eurooppalaisten mielikuvituksen hirviöistä ja helvetinkuvista todellisen tiedon puutteessa.
+AIEMPI KYSYMYS: Mikä Stöng on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Stöng on viikinkiajan islantilaisen maatilan jäänteistä kaivettu paikka [[Þjórsárdalurin]] laaksossa, ja se on säilynyt hyvin, koska tulivuorenpurkauksen tuhka peitti sen. Perinteisesti tilan tuhoutuminen ajoitetaan [[Heklan]] purkaukseen vuonna 1104, mutta ajoituksesta on esitetty myös muita näkemyksiä. Kaivaukset ovat paljastaneet tilan pitkän asuinrakennuksen, ja lähistölle on rakennettu jäljennös, [[Þjóðveldisbærinn]], joka näyttää, millainen tila saattoi olla. Tuhkan alle jäänyt arki on kyl herkullinen aihe.
+KYSYMYS: Kerro lisää: Heklan
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þjórsá (luonto · joki)
+Tietoruudun teksti: Þjórsá on Islannin pisin joki, 230 kilometriä, ja se virtaa saaren eteläosassa. Se on jäätikköjoki, joka saa alkunsa Hofsjökullilta, kulkee kapeiden rotkojen läpi Islannin ylängöillä ja levenee alangolla. Nimi tulee sanoista á, joki, ja þjór, härkä: Landnámabókin mukaan joki nimettiin erään ensimmäisistä uudisasukaslaivoista keulakuvan mukaan, joka esitti härkää.
+AIEMPI KYSYMYS: Mikä Stöng on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Stöng on viikinkiajan islantilaisen maatilan jäänteistä kaivettu paikka [[Þjórsárdalurin]] laaksossa, ja se on säilynyt hyvin, koska tulivuorenpurkauksen tuhka peitti sen. Perinteisesti tilan tuhoutuminen ajoitetaan [[Heklan]] purkaukseen vuonna 1104, mutta ajoituksesta on esitetty myös muita näkemyksiä. Kaivaukset ovat paljastaneet tilan pitkän asuinrakennuksen, ja lähistölle on rakennettu jäljennös, [[Þjóðveldisbærinn]], joka näyttää, millainen tila saattoi olla. Tuhkan alle jäänyt arki on kyl herkullinen aihe.
+KYSYMYS: Kerro lisää: Þjóðveldisbærinn
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þjórsá (luonto · joki)
+Tietoruudun teksti: Þjórsá on Islannin pisin joki, 230 kilometriä, ja se virtaa saaren eteläosassa. Se on jäätikköjoki, joka saa alkunsa Hofsjökullilta, kulkee kapeiden rotkojen läpi Islannin ylängöillä ja levenee alangolla. Nimi tulee sanoista á, joki, ja þjór, härkä: Landnámabókin mukaan joki nimettiin erään ensimmäisistä uudisasukaslaivoista keulakuvan mukaan, joka esitti härkää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — kaupunkilehti / Historia: Parlamentti kalliorotkossa taivasalla] Islannin päällikkömiehet kokoontuivat vuonna 930 Þingvellirin tasangolle, jossa Atlantin ja Euraasian mannerlaatat erkanevat toisistaan, ja perustivat Alþingin — yleiskokouksen, joka sääti lakeja ja ratkaisi riitoja koko saarelle. Kokous pidettiin joka kesä kahden viikon ajan Lögbergillä, "lakikalliolla", josta lakimies julisti maan lait ääneen muistista, sillä niitä ei aluksi kirjoitettu ylös. Alþingi on maailman vanhin yhä toimiva parlamentti — se lakkautettiin väliaikaisesti vain vuosina 1800–1844 Tanskan vallan aikana, mutta perustettiin uudelleen ja toimii Reykjavíkissä nykyäänkin.
+AIEMPI KYSYMYS: Mikä oli þing?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Þing oli muinaisnorjalaisten yhteiskuntien kokous, jossa vapaat miehet kokoontuivat sopimaan laeista ja ratkaisemaan riitoja. Paikallisten kokousten lisäksi islantilaisilla oli koko maata koskeva [[Alþingi]], joka kokoontui [[Þingvellirillä]] vuodesta 930 alkaen. Samaa sanaa kantavia nimiä on muuallakin pohjoisessa, esimerkiksi Mansaarella, jonka parlamentti on nimeltään [[Tynwald]]. Vuonna 1874 Islanti sai Tanskan kuninkaalta perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa. Käräjille olisi kyl kuulunut tarjota edes pullaa.
+KYSYMYS: Kerro lisää: Alþingi
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þjórsá (luonto · joki)
+Tietoruudun teksti: Þjórsá on Islannin pisin joki, 230 kilometriä, ja se virtaa saaren eteläosassa. Se on jäätikköjoki, joka saa alkunsa Hofsjökullilta, kulkee kapeiden rotkojen läpi Islannin ylängöillä ja levenee alangolla. Nimi tulee sanoista á, joki, ja þjór, härkä: Landnámabókin mukaan joki nimettiin erään ensimmäisistä uudisasukaslaivoista keulakuvan mukaan, joka esitti härkää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Mikä oli þing?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Þing oli muinaisnorjalaisten yhteiskuntien kokous, jossa vapaat miehet kokoontuivat sopimaan laeista ja ratkaisemaan riitoja. Paikallisten kokousten lisäksi islantilaisilla oli koko maata koskeva [[Alþingi]], joka kokoontui [[Þingvellirillä]] vuodesta 930 alkaen. Samaa sanaa kantavia nimiä on muuallakin pohjoisessa, esimerkiksi Mansaarella, jonka parlamentti on nimeltään [[Tynwald]]. Vuonna 1874 Islanti sai Tanskan kuninkaalta perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa. Käräjille olisi kyl kuulunut tarjota edes pullaa.
+KYSYMYS: Kerro lisää: Þingvellirillä
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þjórsá (luonto · joki)
+Tietoruudun teksti: Þjórsá on Islannin pisin joki, 230 kilometriä, ja se virtaa saaren eteläosassa. Se on jäätikköjoki, joka saa alkunsa Hofsjökullilta, kulkee kapeiden rotkojen läpi Islannin ylängöillä ja levenee alangolla. Nimi tulee sanoista á, joki, ja þjór, härkä: Landnámabókin mukaan joki nimettiin erään ensimmäisistä uudisasukaslaivoista keulakuvan mukaan, joka esitti härkää.
+AIEMPI KYSYMYS: Mikä oli þing?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Þing oli muinaisnorjalaisten yhteiskuntien kokous, jossa vapaat miehet kokoontuivat sopimaan laeista ja ratkaisemaan riitoja. Paikallisten kokousten lisäksi islantilaisilla oli koko maata koskeva [[Alþingi]], joka kokoontui [[Þingvellirillä]] vuodesta 930 alkaen. Samaa sanaa kantavia nimiä on muuallakin pohjoisessa, esimerkiksi Mansaarella, jonka parlamentti on nimeltään [[Tynwald]]. Vuonna 1874 Islanti sai Tanskan kuninkaalta perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa. Käräjille olisi kyl kuulunut tarjota edes pullaa.
+KYSYMYS: Kerro lisää: Tynwald
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þjórsá (luonto · joki)
+Tietoruudun teksti: Þjórsá on Islannin pisin joki, 230 kilometriä, ja se virtaa saaren eteläosassa. Se on jäätikköjoki, joka saa alkunsa Hofsjökullilta, kulkee kapeiden rotkojen läpi Islannin ylängöillä ja levenee alangolla. Nimi tulee sanoista á, joki, ja þjór, härkä: Landnámabókin mukaan joki nimettiin erään ensimmäisistä uudisasukaslaivoista keulakuvan mukaan, joka esitti härkää.
+AIEMPI KYSYMYS: Mihin Þjórsá laskee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Þjórsá laskee Atlantin valtamereen Islannin eteläosassa. Se saa alkunsa [[Hofsjökullilta]] ja kulkee noin 230 kilometrin matkan kapeiden rotkojen läpi ylängöiltä alangolle, jossa se levenee. Joen vesi on jäätikköjoelle tyypilliseen tapaan sameaa, koska se kuljettaa hienoa kiviainesta. Joki on myös yksi [[Islannin]] vesistöjen tärkeimpiä.
+
+Joen seuraaminen on kyyhkylle helppo temppu, kun vesi kulkee aina alamäkeen ja minä ylhäältä. Suosittelen sitä jokaiselle suunnistajalle.
+KYSYMYS: Kerro lisää: Hofsjökullilta
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þjórsá (luonto · joki)
+Tietoruudun teksti: Þjórsá on Islannin pisin joki, 230 kilometriä, ja se virtaa saaren eteläosassa. Se on jäätikköjoki, joka saa alkunsa Hofsjökullilta, kulkee kapeiden rotkojen läpi Islannin ylängöillä ja levenee alangolla. Nimi tulee sanoista á, joki, ja þjór, härkä: Landnámabókin mukaan joki nimettiin erään ensimmäisistä uudisasukaslaivoista keulakuvan mukaan, joka esitti härkää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kansa kolisteli pankit pois vallasta kattiloilla] 2008–2009 — Lokakuussa 2008 Islannin kolme suurta pankkia kaatuivat muutamassa päivässä, ja koko maan talous romahti — suhteessa väkilukuun suurin pankkikriisi minkään maan historiassa. Ihmiset alkoivat kokoontua joka lauantai Alþingin eteen, ja tammikuussa 2009 mielenosoitus kasvoi tuhansiin: ihmiset toivat mukanaan kattiloita, pannuja ja kauhoja ja hakkasivat niitä yhdessä niin kovaa, että parlamentin istuntoa oli vaikea jatkaa. Meteli sai lempinimen kattilakumous. Hallitus erosi parin viikon sisällä, ja myöhemmin lähes kolmekymmentä pankkiireja ja johtajia tuomittiin vankilaan — Islanti on ainoa maa, joka vangitsi näin monta oman kriisinsä syyllistä.
+- [Islanti — maalehti / Historia: Sota jota käytiin verkonleikkureilla, ei ammuksilla] 1958–1976 — Kun Islanti laajensi kalastusrajaansa 1958, 1972 ja 1975 aina kauemmas rannikolta, Britannian troolarit eivät suostuneet väistymään — eikä Britannian laivasto liioin. Kolmessa niin sanotussa turskasodassa Islannin rannikkovartioston pienet alukset, kuten Óðinn, ajoivat troolareiden perässä ja leikkasivat niiden verkkoketjut irti erityisillä leikkureilla; brittilaivat puolestaan yrittivät väistellä ja jopa törmäillä vastaan. Ainuttakaan ammusta ei ammuttu vihaisessa mielessä, mutta aluksia vaurioitui kymmeniä. Lopulta Islanti voitti: vuonna 1976 Britannia hyväksyi 200 meripeninkulman rajan, ja se levisi pian koko maailmaan.
+AIEMPI KYSYMYS: Mihin Þjórsá laskee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Þjórsá laskee Atlantin valtamereen Islannin eteläosassa. Se saa alkunsa [[Hofsjökullilta]] ja kulkee noin 230 kilometrin matkan kapeiden rotkojen läpi ylängöiltä alangolle, jossa se levenee. Joen vesi on jäätikköjoelle tyypilliseen tapaan sameaa, koska se kuljettaa hienoa kiviainesta. Joki on myös yksi [[Islannin]] vesistöjen tärkeimpiä.
+
+Joen seuraaminen on kyyhkylle helppo temppu, kun vesi kulkee aina alamäkeen ja minä ylhäältä. Suosittelen sitä jokaiselle suunnistajalle.
+KYSYMYS: Kerro lisää: Islannin
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þjórsá (luonto · joki)
+Tietoruudun teksti: Þjórsá on Islannin pisin joki, 230 kilometriä, ja se virtaa saaren eteläosassa. Se on jäätikköjoki, joka saa alkunsa Hofsjökullilta, kulkee kapeiden rotkojen läpi Islannin ylängöillä ja levenee alangolla. Nimi tulee sanoista á, joki, ja þjór, härkä: Landnámabókin mukaan joki nimettiin erään ensimmäisistä uudisasukaslaivoista keulakuvan mukaan, joka esitti härkää.
+AIEMPI KYSYMYS: Onko Þjórsán varrella vesivoimaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. On: joen ja sen sivujokien varrella on useita vesivoimalaitoksia, esimerkiksi [[Búrfellin]] voimalaitos. Islannin sähkö tuotetaan lähes kokonaan uusiutuvilla energialähteillä, pääosin [[vesivoimalla]] ja [[maalämmöllä]]. Tarkkaa Þjórsán osuutta kokonaistuotannosta en ole varma. Sähköä en kyl tarvitse, mutta kiva tietää.
+KYSYMYS: Kerro lisää: Búrfellin
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þjórsá (luonto · joki)
+Tietoruudun teksti: Þjórsá on Islannin pisin joki, 230 kilometriä, ja se virtaa saaren eteläosassa. Se on jäätikköjoki, joka saa alkunsa Hofsjökullilta, kulkee kapeiden rotkojen läpi Islannin ylängöillä ja levenee alangolla. Nimi tulee sanoista á, joki, ja þjór, härkä: Landnámabókin mukaan joki nimettiin erään ensimmäisistä uudisasukaslaivoista keulakuvan mukaan, joka esitti härkää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kaupunkilehti / Historia: Hissi joka nosti kaupungin 1873] Elevador Lacerda rakennettiin 1869–1873 ja avattiin liikenteelle 1873 – samana vuonna, jolta isoisän matkapäiväkirja on. Se oli Brasilian ensimmäinen hissi ja se kulkee 72 metrin korkeuseron Alakaupungin ja Yläkaupungin väliä. Nimi tulee liikemies Antônio de Lacerdalta, joka johti Bahian kauppayhdistystä. Alun perin hissi toimi vesivoimalla, sähköistettiin 1906 ja sai nykyiset art déco -torninsa 1930. Kansallisperinnöksi se listattiin vasta 7. joulukuuta 2006, ja vuonna 2019 sillä kulki yli 33 000 matkustajaa vuorokaudessa.
+AIEMPI KYSYMYS: Onko Þjórsán varrella vesivoimaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. On: joen ja sen sivujokien varrella on useita vesivoimalaitoksia, esimerkiksi [[Búrfellin]] voimalaitos. Islannin sähkö tuotetaan lähes kokonaan uusiutuvilla energialähteillä, pääosin [[vesivoimalla]] ja [[maalämmöllä]]. Tarkkaa Þjórsán osuutta kokonaistuotannosta en ole varma. Sähköä en kyl tarvitse, mutta kiva tietää.
+KYSYMYS: Kerro lisää: vesivoimalla
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þjórsá (luonto · joki)
+Tietoruudun teksti: Þjórsá on Islannin pisin joki, 230 kilometriä, ja se virtaa saaren eteläosassa. Se on jäätikköjoki, joka saa alkunsa Hofsjökullilta, kulkee kapeiden rotkojen läpi Islannin ylängöillä ja levenee alangolla. Nimi tulee sanoista á, joki, ja þjór, härkä: Landnámabókin mukaan joki nimettiin erään ensimmäisistä uudisasukaslaivoista keulakuvan mukaan, joka esitti härkää.
+AIEMPI KYSYMYS: Onko Þjórsán varrella vesivoimaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. On: joen ja sen sivujokien varrella on useita vesivoimalaitoksia, esimerkiksi [[Búrfellin]] voimalaitos. Islannin sähkö tuotetaan lähes kokonaan uusiutuvilla energialähteillä, pääosin [[vesivoimalla]] ja [[maalämmöllä]]. Tarkkaa Þjórsán osuutta kokonaistuotannosta en ole varma. Sähköä en kyl tarvitse, mutta kiva tietää.
+KYSYMYS: Kerro lisää: maalämmöllä
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þjórsá (luonto · joki)
+Tietoruudun teksti: Þjórsá on Islannin pisin joki, 230 kilometriä, ja se virtaa saaren eteläosassa. Se on jäätikköjoki, joka saa alkunsa Hofsjökullilta, kulkee kapeiden rotkojen läpi Islannin ylängöillä ja levenee alangolla. Nimi tulee sanoista á, joki, ja þjór, härkä: Landnámabókin mukaan joki nimettiin erään ensimmäisistä uudisasukaslaivoista keulakuvan mukaan, joka esitti härkää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namibia — maalehti / Tiede: Viisi peiliä ylängöllä] 2002– — Khomasin ylängöllä Gamsbergin kupeessa seisoo viisi peiliä, jotka eivät katso tähtiä vaan hetken välähdystä. Kun gammasäde törmää ilmakehään, syntyy hiukkasryöppy, jonka heikko valo kuvataan maasta; kun useampi teleskooppi näkee saman ryöpyn eri kulmasta, säteen suunta voidaan laskea. Laitteisto sai nimekseen H.E.S.S. Victor Hessin mukaan, joka osoitti kosmisen säteilyn tulevan avaruudesta. Neljä lähes 12-metristä peiliä muodostaa 120 metrin neliön, ja keskelle nousi 2012 lisäksi 28-metrinen. Havainnot alkoivat 2002, ja 2016 ryhmä raportoi Linnunradan keskustan mustan aukon kiihdyttävän protoneja.
+AIEMPI KYSYMYS: Mikä Hofsjökull on?
+AIEMPI VASTAUS (Livia):
+Ai se. Hofsjökull on [[Islannin ylängöllä]] sijaitseva jäätikkö ja yksi maan suurimmista jäätiköistä. Sen alla on tulivuori, jonka kraatteri on jään peitossa. Jäätikön sulamisvedet ruokkivat useita jokia, mukaan lukien [[Þjórsán]]. Ei kovin hyvä paikka kyyhkyn pesälle, kyl.
+KYSYMYS: Kerro lisää: Islannin ylängöllä
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þjórsá (luonto · joki)
+Tietoruudun teksti: Þjórsá on Islannin pisin joki, 230 kilometriä, ja se virtaa saaren eteläosassa. Se on jäätikköjoki, joka saa alkunsa Hofsjökullilta, kulkee kapeiden rotkojen läpi Islannin ylängöillä ja levenee alangolla. Nimi tulee sanoista á, joki, ja þjór, härkä: Landnámabókin mukaan joki nimettiin erään ensimmäisistä uudisasukaslaivoista keulakuvan mukaan, joka esitti härkää.
+AIEMPI KYSYMYS: Mikä Hofsjökull on?
+AIEMPI VASTAUS (Livia):
+Ai se. Hofsjökull on [[Islannin ylängöllä]] sijaitseva jäätikkö ja yksi maan suurimmista jäätiköistä. Sen alla on tulivuori, jonka kraatteri on jään peitossa. Jäätikön sulamisvedet ruokkivat useita jokia, mukaan lukien [[Þjórsán]]. Ei kovin hyvä paikka kyyhkyn pesälle, kyl.
+KYSYMYS: Kerro lisää: Þjórsán
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þingvellir (historia)
+Tietoruudun teksti: Þingvellir oli Alþingin paikka: Islannin vuosittainen käräjäkokous istui täällä vuodesta 930 aina viimeiseen Þingvellirin istuntoon 1798 asti. Vuodesta 1881 parlamentti on kokoontunut Reykjavíkissa Alþingishúsið-talossa.
+
+Nimi on muinaisnorjan Þingvǫllr, sanoista þing eli käräjät ja vǫllr eli kenttä — käräjäkentät. Sama juuri kuuluu kaukana Islannista: Dingwall ja Tingwall Skotlannissa, Thingwall Englannissa, Tynwald Mansaarella, Dinklage Saksassa ja Tingvoll Norjassa kantavat samaa nimeä ja samaa merkitystä.
+
+Paikka on myös geologinen: laakso on repeämälaakso Keski-Atlantin selänteen harjalla, Pohjois-Amerikan ja Euraasian mannerlaattojen rajalla. Etelässä on Þingvallavatn, Islannin suurin luonnonjärvi. Alue suojeltiin vuoden 1928 lailla ja siitä tuli 1930 Islannin ensimmäinen kansallispuisto — juuri tuhat vuotta käräjien perustamisen jälkeen. Maailmanperintökohde siitä tuli 2004.
+AIEMPI KYSYMYS: Miksi sama nimi toistuu Skotlannissa ja Mansaarella?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: nimi on peräisin [[muinaisnorjasta]], jota viikinkiajan norjalaiset puhuivat ja veivät mukanaan asuttaessaan Brittein saaria ja Islantia. Þingvǫllr tarkoittaa käräjäkenttää, ja sama sanajuuri esiintyy paikannimissä, joissa norjalaiset perustivat omia kokouspaikkojaan: Skotlannissa Dingwall ja Tingwall, Englannissa Thingwall ja Mansaarella Tynwald. Mansaaren [[Tynwald]] toimii yhä parlamenttina, ja [[Dingwall]] on kaupunki Skotlannin pohjoisosassa. Laivalla nimi matkasi, ja minä olisin ollut nopeampi.
+KYSYMYS: Kerro lisää: muinaisnorjasta
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þingvellir (historia)
+Tietoruudun teksti: Þingvellir oli Alþingin paikka: Islannin vuosittainen käräjäkokous istui täällä vuodesta 930 aina viimeiseen Þingvellirin istuntoon 1798 asti. Vuodesta 1881 parlamentti on kokoontunut Reykjavíkissa Alþingishúsið-talossa.
+
+Nimi on muinaisnorjan Þingvǫllr, sanoista þing eli käräjät ja vǫllr eli kenttä — käräjäkentät. Sama juuri kuuluu kaukana Islannista: Dingwall ja Tingwall Skotlannissa, Thingwall Englannissa, Tynwald Mansaarella, Dinklage Saksassa ja Tingvoll Norjassa kantavat samaa nimeä ja samaa merkitystä.
+
+Paikka on myös geologinen: laakso on repeämälaakso Keski-Atlantin selänteen harjalla, Pohjois-Amerikan ja Euraasian mannerlaattojen rajalla. Etelässä on Þingvallavatn, Islannin suurin luonnonjärvi. Alue suojeltiin vuoden 1928 lailla ja siitä tuli 1930 Islannin ensimmäinen kansallispuisto — juuri tuhat vuotta käräjien perustamisen jälkeen. Maailmanperintökohde siitä tuli 2004.
+AIEMPI KYSYMYS: Miksi sama nimi toistuu Skotlannissa ja Mansaarella?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: nimi on peräisin [[muinaisnorjasta]], jota viikinkiajan norjalaiset puhuivat ja veivät mukanaan asuttaessaan Brittein saaria ja Islantia. Þingvǫllr tarkoittaa käräjäkenttää, ja sama sanajuuri esiintyy paikannimissä, joissa norjalaiset perustivat omia kokouspaikkojaan: Skotlannissa Dingwall ja Tingwall, Englannissa Thingwall ja Mansaarella Tynwald. Mansaaren [[Tynwald]] toimii yhä parlamenttina, ja [[Dingwall]] on kaupunki Skotlannin pohjoisosassa. Laivalla nimi matkasi, ja minä olisin ollut nopeampi.
+KYSYMYS: Kerro lisää: Tynwald
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þingvellir (historia)
+Tietoruudun teksti: Þingvellir oli Alþingin paikka: Islannin vuosittainen käräjäkokous istui täällä vuodesta 930 aina viimeiseen Þingvellirin istuntoon 1798 asti. Vuodesta 1881 parlamentti on kokoontunut Reykjavíkissa Alþingishúsið-talossa.
+
+Nimi on muinaisnorjan Þingvǫllr, sanoista þing eli käräjät ja vǫllr eli kenttä — käräjäkentät. Sama juuri kuuluu kaukana Islannista: Dingwall ja Tingwall Skotlannissa, Thingwall Englannissa, Tynwald Mansaarella, Dinklage Saksassa ja Tingvoll Norjassa kantavat samaa nimeä ja samaa merkitystä.
+
+Paikka on myös geologinen: laakso on repeämälaakso Keski-Atlantin selänteen harjalla, Pohjois-Amerikan ja Euraasian mannerlaattojen rajalla. Etelässä on Þingvallavatn, Islannin suurin luonnonjärvi. Alue suojeltiin vuoden 1928 lailla ja siitä tuli 1930 Islannin ensimmäinen kansallispuisto — juuri tuhat vuotta käräjien perustamisen jälkeen. Maailmanperintökohde siitä tuli 2004.
+AIEMPI KYSYMYS: Miksi sama nimi toistuu Skotlannissa ja Mansaarella?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: nimi on peräisin [[muinaisnorjasta]], jota viikinkiajan norjalaiset puhuivat ja veivät mukanaan asuttaessaan Brittein saaria ja Islantia. Þingvǫllr tarkoittaa käräjäkenttää, ja sama sanajuuri esiintyy paikannimissä, joissa norjalaiset perustivat omia kokouspaikkojaan: Skotlannissa Dingwall ja Tingwall, Englannissa Thingwall ja Mansaarella Tynwald. Mansaaren [[Tynwald]] toimii yhä parlamenttina, ja [[Dingwall]] on kaupunki Skotlannin pohjoisosassa. Laivalla nimi matkasi, ja minä olisin ollut nopeampi.
+KYSYMYS: Kerro lisää: Dingwall
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þingvellir (historia)
+Tietoruudun teksti: Þingvellir oli Alþingin paikka: Islannin vuosittainen käräjäkokous istui täällä vuodesta 930 aina viimeiseen Þingvellirin istuntoon 1798 asti. Vuodesta 1881 parlamentti on kokoontunut Reykjavíkissa Alþingishúsið-talossa.
+
+Nimi on muinaisnorjan Þingvǫllr, sanoista þing eli käräjät ja vǫllr eli kenttä — käräjäkentät. Sama juuri kuuluu kaukana Islannista: Dingwall ja Tingwall Skotlannissa, Thingwall Englannissa, Tynwald Mansaarella, Dinklage Saksassa ja Tingvoll Norjassa kantavat samaa nimeä ja samaa merkitystä.
+
+Paikka on myös geologinen: laakso on repeämälaakso Keski-Atlantin selänteen harjalla, Pohjois-Amerikan ja Euraasian mannerlaattojen rajalla. Etelässä on Þingvallavatn, Islannin suurin luonnonjärvi. Alue suojeltiin vuoden 1928 lailla ja siitä tuli 1930 Islannin ensimmäinen kansallispuisto — juuri tuhat vuotta käräjien perustamisen jälkeen. Maailmanperintökohde siitä tuli 2004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Miksi käräjät lopetettiin täällä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Alþingi piti viimeisen istuntonsa [[Þingvellirillä]] vuonna 1798, ja sen jälkeen kokoukset siirtyivät Reykjavíkiin. Yksittäistä syytä en ole varma, mutta lähteiden mukaan taustalla olivat kokouspaikan puutteelliset olosuhteet ja Tanskan hallinnon uudistukset, jotka muuttivat Alþingin asemaa. Vuodesta 1881 parlamentti on kokoontunut Reykjavíkissa [[Alþingishúsið]]-talossa. Ulkona kalliolla olisi kyllä kuulunut kokoontua.
+KYSYMYS: Kerro lisää: Þingvellirillä
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þingvellir (historia)
+Tietoruudun teksti: Þingvellir oli Alþingin paikka: Islannin vuosittainen käräjäkokous istui täällä vuodesta 930 aina viimeiseen Þingvellirin istuntoon 1798 asti. Vuodesta 1881 parlamentti on kokoontunut Reykjavíkissa Alþingishúsið-talossa.
+
+Nimi on muinaisnorjan Þingvǫllr, sanoista þing eli käräjät ja vǫllr eli kenttä — käräjäkentät. Sama juuri kuuluu kaukana Islannista: Dingwall ja Tingwall Skotlannissa, Thingwall Englannissa, Tynwald Mansaarella, Dinklage Saksassa ja Tingvoll Norjassa kantavat samaa nimeä ja samaa merkitystä.
+
+Paikka on myös geologinen: laakso on repeämälaakso Keski-Atlantin selänteen harjalla, Pohjois-Amerikan ja Euraasian mannerlaattojen rajalla. Etelässä on Þingvallavatn, Islannin suurin luonnonjärvi. Alue suojeltiin vuoden 1928 lailla ja siitä tuli 1930 Islannin ensimmäinen kansallispuisto — juuri tuhat vuotta käräjien perustamisen jälkeen. Maailmanperintökohde siitä tuli 2004.
+AIEMPI KYSYMYS: Miksi käräjät lopetettiin täällä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Alþingi piti viimeisen istuntonsa [[Þingvellirillä]] vuonna 1798, ja sen jälkeen kokoukset siirtyivät Reykjavíkiin. Yksittäistä syytä en ole varma, mutta lähteiden mukaan taustalla olivat kokouspaikan puutteelliset olosuhteet ja Tanskan hallinnon uudistukset, jotka muuttivat Alþingin asemaa. Vuodesta 1881 parlamentti on kokoontunut Reykjavíkissa [[Alþingishúsið]]-talossa. Ulkona kalliolla olisi kyllä kuulunut kokoontua.
+KYSYMYS: Kerro lisää: Alþingishúsið
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þingvellir (historia)
+Tietoruudun teksti: Þingvellir oli Alþingin paikka: Islannin vuosittainen käräjäkokous istui täällä vuodesta 930 aina viimeiseen Þingvellirin istuntoon 1798 asti. Vuodesta 1881 parlamentti on kokoontunut Reykjavíkissa Alþingishúsið-talossa.
+
+Nimi on muinaisnorjan Þingvǫllr, sanoista þing eli käräjät ja vǫllr eli kenttä — käräjäkentät. Sama juuri kuuluu kaukana Islannista: Dingwall ja Tingwall Skotlannissa, Thingwall Englannissa, Tynwald Mansaarella, Dinklage Saksassa ja Tingvoll Norjassa kantavat samaa nimeä ja samaa merkitystä.
+
+Paikka on myös geologinen: laakso on repeämälaakso Keski-Atlantin selänteen harjalla, Pohjois-Amerikan ja Euraasian mannerlaattojen rajalla. Etelässä on Þingvallavatn, Islannin suurin luonnonjärvi. Alue suojeltiin vuoden 1928 lailla ja siitä tuli 1930 Islannin ensimmäinen kansallispuisto — juuri tuhat vuotta käräjien perustamisen jälkeen. Maailmanperintökohde siitä tuli 2004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — kaupunkilehti / Historia: Parlamentti kalliorotkossa taivasalla] Islannin päällikkömiehet kokoontuivat vuonna 930 Þingvellirin tasangolle, jossa Atlantin ja Euraasian mannerlaatat erkanevat toisistaan, ja perustivat Alþingin — yleiskokouksen, joka sääti lakeja ja ratkaisi riitoja koko saarelle. Kokous pidettiin joka kesä kahden viikon ajan Lögbergillä, "lakikalliolla", josta lakimies julisti maan lait ääneen muistista, sillä niitä ei aluksi kirjoitettu ylös. Alþingi on maailman vanhin yhä toimiva parlamentti — se lakkautettiin väliaikaisesti vain vuosina 1800–1844 Tanskan vallan aikana, mutta perustettiin uudelleen ja toimii Reykjavíkissä nykyäänkin.
+AIEMPI KYSYMYS: Mikä Þingvallavatn on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Þingvallavatn on [[Þingvellirin]] eteläpuolella sijaitseva järvi ja Islannin suurin luonnonjärvi. Se sijaitsee repeämälaaksossa [[Keski-Atlantin selänteen]] harjalla, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan. Järveen avautuvat kirkasvetiset railot ovat tunnettuja sukelluspaikkoja, kuten [[Silfra]]. Kirkas vesi on kyl kyyhkyn mieleen, kunhan en joudu uimaan.
+KYSYMYS: Kerro lisää: Þingvellirin
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þingvellir (historia)
+Tietoruudun teksti: Þingvellir oli Alþingin paikka: Islannin vuosittainen käräjäkokous istui täällä vuodesta 930 aina viimeiseen Þingvellirin istuntoon 1798 asti. Vuodesta 1881 parlamentti on kokoontunut Reykjavíkissa Alþingishúsið-talossa.
+
+Nimi on muinaisnorjan Þingvǫllr, sanoista þing eli käräjät ja vǫllr eli kenttä — käräjäkentät. Sama juuri kuuluu kaukana Islannista: Dingwall ja Tingwall Skotlannissa, Thingwall Englannissa, Tynwald Mansaarella, Dinklage Saksassa ja Tingvoll Norjassa kantavat samaa nimeä ja samaa merkitystä.
+
+Paikka on myös geologinen: laakso on repeämälaakso Keski-Atlantin selänteen harjalla, Pohjois-Amerikan ja Euraasian mannerlaattojen rajalla. Etelässä on Þingvallavatn, Islannin suurin luonnonjärvi. Alue suojeltiin vuoden 1928 lailla ja siitä tuli 1930 Islannin ensimmäinen kansallispuisto — juuri tuhat vuotta käräjien perustamisen jälkeen. Maailmanperintökohde siitä tuli 2004.
+AIEMPI KYSYMYS: Mikä Þingvallavatn on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Þingvallavatn on [[Þingvellirin]] eteläpuolella sijaitseva järvi ja Islannin suurin luonnonjärvi. Se sijaitsee repeämälaaksossa [[Keski-Atlantin selänteen]] harjalla, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan. Järveen avautuvat kirkasvetiset railot ovat tunnettuja sukelluspaikkoja, kuten [[Silfra]]. Kirkas vesi on kyl kyyhkyn mieleen, kunhan en joudu uimaan.
+KYSYMYS: Kerro lisää: Keski-Atlantin selänteen
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þingvellir (historia)
+Tietoruudun teksti: Þingvellir oli Alþingin paikka: Islannin vuosittainen käräjäkokous istui täällä vuodesta 930 aina viimeiseen Þingvellirin istuntoon 1798 asti. Vuodesta 1881 parlamentti on kokoontunut Reykjavíkissa Alþingishúsið-talossa.
+
+Nimi on muinaisnorjan Þingvǫllr, sanoista þing eli käräjät ja vǫllr eli kenttä — käräjäkentät. Sama juuri kuuluu kaukana Islannista: Dingwall ja Tingwall Skotlannissa, Thingwall Englannissa, Tynwald Mansaarella, Dinklage Saksassa ja Tingvoll Norjassa kantavat samaa nimeä ja samaa merkitystä.
+
+Paikka on myös geologinen: laakso on repeämälaakso Keski-Atlantin selänteen harjalla, Pohjois-Amerikan ja Euraasian mannerlaattojen rajalla. Etelässä on Þingvallavatn, Islannin suurin luonnonjärvi. Alue suojeltiin vuoden 1928 lailla ja siitä tuli 1930 Islannin ensimmäinen kansallispuisto — juuri tuhat vuotta käräjien perustamisen jälkeen. Maailmanperintökohde siitä tuli 2004.
+AIEMPI KYSYMYS: Mikä Þingvallavatn on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Þingvallavatn on [[Þingvellirin]] eteläpuolella sijaitseva järvi ja Islannin suurin luonnonjärvi. Se sijaitsee repeämälaaksossa [[Keski-Atlantin selänteen]] harjalla, jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat toisistaan. Järveen avautuvat kirkasvetiset railot ovat tunnettuja sukelluspaikkoja, kuten [[Silfra]]. Kirkas vesi on kyl kyyhkyn mieleen, kunhan en joudu uimaan.
+KYSYMYS: Kerro lisää: Silfra
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þingvellir (historia)
+Tietoruudun teksti: Þingvellir oli Alþingin paikka: Islannin vuosittainen käräjäkokous istui täällä vuodesta 930 aina viimeiseen Þingvellirin istuntoon 1798 asti. Vuodesta 1881 parlamentti on kokoontunut Reykjavíkissa Alþingishúsið-talossa.
+
+Nimi on muinaisnorjan Þingvǫllr, sanoista þing eli käräjät ja vǫllr eli kenttä — käräjäkentät. Sama juuri kuuluu kaukana Islannista: Dingwall ja Tingwall Skotlannissa, Thingwall Englannissa, Tynwald Mansaarella, Dinklage Saksassa ja Tingvoll Norjassa kantavat samaa nimeä ja samaa merkitystä.
+
+Paikka on myös geologinen: laakso on repeämälaakso Keski-Atlantin selänteen harjalla, Pohjois-Amerikan ja Euraasian mannerlaattojen rajalla. Etelässä on Þingvallavatn, Islannin suurin luonnonjärvi. Alue suojeltiin vuoden 1928 lailla ja siitä tuli 1930 Islannin ensimmäinen kansallispuisto — juuri tuhat vuotta käräjien perustamisen jälkeen. Maailmanperintökohde siitä tuli 2004.
+AIEMPI KYSYMYS: Miten mannerlaatat erkanevat Islannissa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Islanti sijaitsee [[Keski-Atlantin selänteellä]], jossa Pohjois-Amerikan ja Euraasian laatat siirtyvät hitaasti poispäin toisistaan, noin parin senttimetrin vuosivauhtia. Erkanevaa vyöhykettä pitkin saarta halkoo repeämävyöhyke, jossa on tulivuoria, railoja ja kuumia lähteitä. Saaren alla on lisäksi kuuma vaippapilvi, minkä vuoksi selänne kohoaa merenpinnan yläpuolelle. [[Þingvellirillä]] repeämä näkyy maastossa selvästi.
+
+Pari senttiä vuodessa on kyyhkyn mielestä todella hidasta, ja silti sen takia Islanti on olemassa. Jotain tästä voisi oppia kärsivällisyydestä.
+KYSYMYS: Kerro lisää: Keski-Atlantin selänteellä
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þingvellir (historia)
+Tietoruudun teksti: Þingvellir oli Alþingin paikka: Islannin vuosittainen käräjäkokous istui täällä vuodesta 930 aina viimeiseen Þingvellirin istuntoon 1798 asti. Vuodesta 1881 parlamentti on kokoontunut Reykjavíkissa Alþingishúsið-talossa.
+
+Nimi on muinaisnorjan Þingvǫllr, sanoista þing eli käräjät ja vǫllr eli kenttä — käräjäkentät. Sama juuri kuuluu kaukana Islannista: Dingwall ja Tingwall Skotlannissa, Thingwall Englannissa, Tynwald Mansaarella, Dinklage Saksassa ja Tingvoll Norjassa kantavat samaa nimeä ja samaa merkitystä.
+
+Paikka on myös geologinen: laakso on repeämälaakso Keski-Atlantin selänteen harjalla, Pohjois-Amerikan ja Euraasian mannerlaattojen rajalla. Etelässä on Þingvallavatn, Islannin suurin luonnonjärvi. Alue suojeltiin vuoden 1928 lailla ja siitä tuli 1930 Islannin ensimmäinen kansallispuisto — juuri tuhat vuotta käräjien perustamisen jälkeen. Maailmanperintökohde siitä tuli 2004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Milloin Islanti itsenäistyi?
+AIEMPI VASTAUS (Livia):
+Just niin, nyt muistan. Islanti sai vuonna 1918 sopimuksella suvereenin valtion aseman yhteisen kuninkaan alaisuudessa [[Tanskan]] kanssa, ja täysin itsenäiseksi [[tasavallaksi]] se julistautui 17. kesäkuuta 1944. Julistus tapahtui Þingvellirillä. Ensimmäisen askeleen oli ottanut jo vuoden 1874 perustuslaki, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa. Kyllä tämä meni hyvin muistista.
+KYSYMYS: Kerro lisää: Tanskan
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Þingvellir (historia)
+Tietoruudun teksti: Þingvellir oli Alþingin paikka: Islannin vuosittainen käräjäkokous istui täällä vuodesta 930 aina viimeiseen Þingvellirin istuntoon 1798 asti. Vuodesta 1881 parlamentti on kokoontunut Reykjavíkissa Alþingishúsið-talossa.
+
+Nimi on muinaisnorjan Þingvǫllr, sanoista þing eli käräjät ja vǫllr eli kenttä — käräjäkentät. Sama juuri kuuluu kaukana Islannista: Dingwall ja Tingwall Skotlannissa, Thingwall Englannissa, Tynwald Mansaarella, Dinklage Saksassa ja Tingvoll Norjassa kantavat samaa nimeä ja samaa merkitystä.
+
+Paikka on myös geologinen: laakso on repeämälaakso Keski-Atlantin selänteen harjalla, Pohjois-Amerikan ja Euraasian mannerlaattojen rajalla. Etelässä on Þingvallavatn, Islannin suurin luonnonjärvi. Alue suojeltiin vuoden 1928 lailla ja siitä tuli 1930 Islannin ensimmäinen kansallispuisto — juuri tuhat vuotta käräjien perustamisen jälkeen. Maailmanperintökohde siitä tuli 2004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dakar — kaupunkilehti / Dakar: Muuri niemen poikki] Kun Cayorin marabuutit nousivat kapinaan hallitsijaansa vastaan, lebut liittyivät mukaan. Kapina kukistettiin, ja lebut vetäytyivät niemelleen. He rakensivat lateriittilohkareista sarjan puolustusmuureja, joista pisin ulottui koko niemen poikki Yoffista Hanniin, ja torjuivat hyökkäyksen. Voiton jälkeen syntyi itsenäinen valtio, jota ranskalaiset kutsuivat Lebu-tasavallaksi. Lähteet ajoittavat tapahtumat eri tavoin: kaupungin oma artikkeli vuoteen 1795, lebu-kansan artikkeli vuosiin 1776–1812. Senegalin valtio tunnustaa Ndakaarun serignen yhä lebujen perinteiseksi auktoriteetiksi.
+- [Kap Palmas — kaupunkilehti / Marylandin oma tasavalta: Oma lippu ja perustuslaki] Marylandin siirtokunta julisti itsensä ensin osavaltioksi helmikuussa 1841 ja lopulta täysin itsenäiseksi tasavallaksi 29. toukokuuta 1854 – nimellä Maryland Liberiassa, pääkaupunkinaan Harper. Tasavallalla oli oma lippu, jonka mustat ja keltaiset raidat viittasivat Marylandin osavaltion väreihin, sekä vuonna 1847 laadittu perustuslaki, joka noudatti pitkälti Yhdysvaltain perustuslain mallia. Itsenäisyys jäi kuitenkin lyhytaikaiseksi: jo kolme vuotta myöhemmin, vuonna 1857, tasavalta liittyi naapurinsa Liberian osaksi Marylandin piirikunnaksi.
+AIEMPI KYSYMYS: Milloin Islanti itsenäistyi?
+AIEMPI VASTAUS (Livia):
+Just niin, nyt muistan. Islanti sai vuonna 1918 sopimuksella suvereenin valtion aseman yhteisen kuninkaan alaisuudessa [[Tanskan]] kanssa, ja täysin itsenäiseksi [[tasavallaksi]] se julistautui 17. kesäkuuta 1944. Julistus tapahtui Þingvellirillä. Ensimmäisen askeleen oli ottanut jo vuoden 1874 perustuslaki, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa. Kyllä tämä meni hyvin muistista.
+KYSYMYS: Kerro lisää: tasavallaksi
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reykholt (sana)
+Tietoruudun teksti: Reykholt on kylä Reykjadalsá-joen laaksossa Länsi-Islannissa. Se oli aikanaan yksi saaren henkisistä keskuksista, ja siellä toimi vuosien ajan yksi maan tärkeimmistä kouluista.
+
+Keskiajalla Reykholtissa asui runoilija ja poliitikko Snorri Sturluson. Hänen muistiinpanonsa muinaisnorjan kielestä ja mytologiasta ovat korvaamattomia nykytutkijoille: ilman niitä pohjoinen jumaltarusto tunnettaisiin paljon huonommin. Hänen tilastaan on yhä jäljellä jäänteet ja kylpyallas kuumine altaineen sekä tunneli, joka johti kylvystä taloon.
+
+Kylässä on nykyään noin kuusikymmentä asukasta, koulukeskus ja kirjasto, joka on keskittynyt Snorrin teoksiin. Lähistöllä on Deildartunguhverin kuuma lähde, joka ohittaa kaikki muut maan lähteet kuuman veden tuotossaan: 180 litraa sekunnissa 97 asteisena.
+AIEMPI KYSYMYS: Kuka Snorri Sturluson oli?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Snorri Sturluson (1179–1241) oli islantilainen runoilija, historioitsija ja merkittävä poliittinen vaikuttaja, joka asui Reykholtissa. Hänelle kuuluvat [[Nuorempi Edda]] ja [[Heimskringla]], jotka ovat keskeisiä lähteitä [[pohjoisen jumaltaruston]] ja Norjan kuningashistorian tuntemukselle. Hänen kirjoituksensa ovat säilyttäneet tietoa, joka olisi muuten voinut kadota. Kirjoittajana hän oli kyllä hurja, minä kanniskelin vain kirjeitä.
+KYSYMYS: Kerro lisää: Nuorempi Edda
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reykholt (sana)
+Tietoruudun teksti: Reykholt on kylä Reykjadalsá-joen laaksossa Länsi-Islannissa. Se oli aikanaan yksi saaren henkisistä keskuksista, ja siellä toimi vuosien ajan yksi maan tärkeimmistä kouluista.
+
+Keskiajalla Reykholtissa asui runoilija ja poliitikko Snorri Sturluson. Hänen muistiinpanonsa muinaisnorjan kielestä ja mytologiasta ovat korvaamattomia nykytutkijoille: ilman niitä pohjoinen jumaltarusto tunnettaisiin paljon huonommin. Hänen tilastaan on yhä jäljellä jäänteet ja kylpyallas kuumine altaineen sekä tunneli, joka johti kylvystä taloon.
+
+Kylässä on nykyään noin kuusikymmentä asukasta, koulukeskus ja kirjasto, joka on keskittynyt Snorrin teoksiin. Lähistöllä on Deildartunguhverin kuuma lähde, joka ohittaa kaikki muut maan lähteet kuuman veden tuotossaan: 180 litraa sekunnissa 97 asteisena.
+AIEMPI KYSYMYS: Kuka Snorri Sturluson oli?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Snorri Sturluson (1179–1241) oli islantilainen runoilija, historioitsija ja merkittävä poliittinen vaikuttaja, joka asui Reykholtissa. Hänelle kuuluvat [[Nuorempi Edda]] ja [[Heimskringla]], jotka ovat keskeisiä lähteitä [[pohjoisen jumaltaruston]] ja Norjan kuningashistorian tuntemukselle. Hänen kirjoituksensa ovat säilyttäneet tietoa, joka olisi muuten voinut kadota. Kirjoittajana hän oli kyllä hurja, minä kanniskelin vain kirjeitä.
+KYSYMYS: Kerro lisää: Heimskringla
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reykholt (sana)
+Tietoruudun teksti: Reykholt on kylä Reykjadalsá-joen laaksossa Länsi-Islannissa. Se oli aikanaan yksi saaren henkisistä keskuksista, ja siellä toimi vuosien ajan yksi maan tärkeimmistä kouluista.
+
+Keskiajalla Reykholtissa asui runoilija ja poliitikko Snorri Sturluson. Hänen muistiinpanonsa muinaisnorjan kielestä ja mytologiasta ovat korvaamattomia nykytutkijoille: ilman niitä pohjoinen jumaltarusto tunnettaisiin paljon huonommin. Hänen tilastaan on yhä jäljellä jäänteet ja kylpyallas kuumine altaineen sekä tunneli, joka johti kylvystä taloon.
+
+Kylässä on nykyään noin kuusikymmentä asukasta, koulukeskus ja kirjasto, joka on keskittynyt Snorrin teoksiin. Lähistöllä on Deildartunguhverin kuuma lähde, joka ohittaa kaikki muut maan lähteet kuuman veden tuotossaan: 180 litraa sekunnissa 97 asteisena.
+AIEMPI KYSYMYS: Kuka Snorri Sturluson oli?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Snorri Sturluson (1179–1241) oli islantilainen runoilija, historioitsija ja merkittävä poliittinen vaikuttaja, joka asui Reykholtissa. Hänelle kuuluvat [[Nuorempi Edda]] ja [[Heimskringla]], jotka ovat keskeisiä lähteitä [[pohjoisen jumaltaruston]] ja Norjan kuningashistorian tuntemukselle. Hänen kirjoituksensa ovat säilyttäneet tietoa, joka olisi muuten voinut kadota. Kirjoittajana hän oli kyllä hurja, minä kanniskelin vain kirjeitä.
+KYSYMYS: Kerro lisää: pohjoisen jumaltaruston
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reykholt (sana)
+Tietoruudun teksti: Reykholt on kylä Reykjadalsá-joen laaksossa Länsi-Islannissa. Se oli aikanaan yksi saaren henkisistä keskuksista, ja siellä toimi vuosien ajan yksi maan tärkeimmistä kouluista.
+
+Keskiajalla Reykholtissa asui runoilija ja poliitikko Snorri Sturluson. Hänen muistiinpanonsa muinaisnorjan kielestä ja mytologiasta ovat korvaamattomia nykytutkijoille: ilman niitä pohjoinen jumaltarusto tunnettaisiin paljon huonommin. Hänen tilastaan on yhä jäljellä jäänteet ja kylpyallas kuumine altaineen sekä tunneli, joka johti kylvystä taloon.
+
+Kylässä on nykyään noin kuusikymmentä asukasta, koulukeskus ja kirjasto, joka on keskittynyt Snorrin teoksiin. Lähistöllä on Deildartunguhverin kuuma lähde, joka ohittaa kaikki muut maan lähteet kuuman veden tuotossaan: 180 litraa sekunnissa 97 asteisena.
+AIEMPI KYSYMYS: Mikä tekee Deildartunguhverista poikkeuksellisen?
+AIEMPI VASTAUS (Livia):
+No jopas. Deildartunguhver on Reykholtin lähistön kuuma lähde, joka tuottaa kuumaa vettä enemmän kuin mikään muu lähde Islannissa: noin 180 litraa sekunnissa, ja veden lämpötila on 97 astetta. Vettä on johdettu putkia pitkin lämmitykseen ainakin [[Borgarnesiin]] ja [[Akranesiin]].
+
+Yhdeksänkymmentäseitsemän astetta tekisi kyyhkystä paistin, joten pysyn kyllä kaukana. Putkella siitä saa onneksi lämpöä talojen seiniin.
+KYSYMYS: Kerro lisää: Borgarnesiin
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reykholt (sana)
+Tietoruudun teksti: Reykholt on kylä Reykjadalsá-joen laaksossa Länsi-Islannissa. Se oli aikanaan yksi saaren henkisistä keskuksista, ja siellä toimi vuosien ajan yksi maan tärkeimmistä kouluista.
+
+Keskiajalla Reykholtissa asui runoilija ja poliitikko Snorri Sturluson. Hänen muistiinpanonsa muinaisnorjan kielestä ja mytologiasta ovat korvaamattomia nykytutkijoille: ilman niitä pohjoinen jumaltarusto tunnettaisiin paljon huonommin. Hänen tilastaan on yhä jäljellä jäänteet ja kylpyallas kuumine altaineen sekä tunneli, joka johti kylvystä taloon.
+
+Kylässä on nykyään noin kuusikymmentä asukasta, koulukeskus ja kirjasto, joka on keskittynyt Snorrin teoksiin. Lähistöllä on Deildartunguhverin kuuma lähde, joka ohittaa kaikki muut maan lähteet kuuman veden tuotossaan: 180 litraa sekunnissa 97 asteisena.
+AIEMPI KYSYMYS: Mikä tekee Deildartunguhverista poikkeuksellisen?
+AIEMPI VASTAUS (Livia):
+No jopas. Deildartunguhver on Reykholtin lähistön kuuma lähde, joka tuottaa kuumaa vettä enemmän kuin mikään muu lähde Islannissa: noin 180 litraa sekunnissa, ja veden lämpötila on 97 astetta. Vettä on johdettu putkia pitkin lämmitykseen ainakin [[Borgarnesiin]] ja [[Akranesiin]].
+
+Yhdeksänkymmentäseitsemän astetta tekisi kyyhkystä paistin, joten pysyn kyllä kaukana. Putkella siitä saa onneksi lämpöä talojen seiniin.
+KYSYMYS: Kerro lisää: Akranesiin
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reykholt (sana)
+Tietoruudun teksti: Reykholt on kylä Reykjadalsá-joen laaksossa Länsi-Islannissa. Se oli aikanaan yksi saaren henkisistä keskuksista, ja siellä toimi vuosien ajan yksi maan tärkeimmistä kouluista.
+
+Keskiajalla Reykholtissa asui runoilija ja poliitikko Snorri Sturluson. Hänen muistiinpanonsa muinaisnorjan kielestä ja mytologiasta ovat korvaamattomia nykytutkijoille: ilman niitä pohjoinen jumaltarusto tunnettaisiin paljon huonommin. Hänen tilastaan on yhä jäljellä jäänteet ja kylpyallas kuumine altaineen sekä tunneli, joka johti kylvystä taloon.
+
+Kylässä on nykyään noin kuusikymmentä asukasta, koulukeskus ja kirjasto, joka on keskittynyt Snorrin teoksiin. Lähistöllä on Deildartunguhverin kuuma lähde, joka ohittaa kaikki muut maan lähteet kuuman veden tuotossaan: 180 litraa sekunnissa 97 asteisena.
+AIEMPI KYSYMYS: Mikä on Snorrin Edda?
+AIEMPI VASTAUS (Livia):
+Ai tota. Snorrin Edda eli [[Nuorempi Edda]] on Snorri Sturlusonin 1200-luvun alkupuolella kirjoittama teos, joka toimi oppaana runoilijoille: se selittää skaldirunouden mittoja ja kielikuvia ja kertoo samalla pohjoisen jumaltaruston tarinat. Teos on yksi tärkeimmistä lähteistä muinaisnorjalaiseen mytologiaan, ja siinä esiintyvät esimerkiksi [[Odin]] ja [[Thor]]. Pitkä vastaus, mut tykkään näistä kyl.
+KYSYMYS: Kerro lisää: Odin
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reykholt (sana)
+Tietoruudun teksti: Reykholt on kylä Reykjadalsá-joen laaksossa Länsi-Islannissa. Se oli aikanaan yksi saaren henkisistä keskuksista, ja siellä toimi vuosien ajan yksi maan tärkeimmistä kouluista.
+
+Keskiajalla Reykholtissa asui runoilija ja poliitikko Snorri Sturluson. Hänen muistiinpanonsa muinaisnorjan kielestä ja mytologiasta ovat korvaamattomia nykytutkijoille: ilman niitä pohjoinen jumaltarusto tunnettaisiin paljon huonommin. Hänen tilastaan on yhä jäljellä jäänteet ja kylpyallas kuumine altaineen sekä tunneli, joka johti kylvystä taloon.
+
+Kylässä on nykyään noin kuusikymmentä asukasta, koulukeskus ja kirjasto, joka on keskittynyt Snorrin teoksiin. Lähistöllä on Deildartunguhverin kuuma lähde, joka ohittaa kaikki muut maan lähteet kuuman veden tuotossaan: 180 litraa sekunnissa 97 asteisena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Munkelivin luostari] n. 1110 Kuningas Øystein I perusti benediktiiniluostarin noin vuonna 1110 ja omisti sen arkkienkeli Mikaelille. Paikka valittiin tarkoituksella: Nordnesin korkein kohta hallitsi juuri perustettua kaupunkia, ja luostarin oli määrä vauhdittaa sen kasvua. Munkeliv oli Norjan vanhimpia, rikkaimpia ja parhaiten dokumentoituja luostareita. Maan päällä siitä ei näy nykyään mitään. Ensimmäiset vuosisadat olivat vauraita, mutta 1300-luvun puolivälin musta surma käänsi suunnan. Vuonna 1393 rakennukset kärsivät pahoin, kun luostarin kimppuun kävivät vitaaliveljiksi kutsutut merirosvot. 1420-luvulla sen otti paavin luvalla haltuunsa birgittalaisjärjestö, ja siitä tuli kaksoisluostari, jossa asui sekä m…
+- [Oslo — kaupunkilehti / Laivat: Lautta balsapuista Tyynenmeren yli] Thor Heyerdahl uskoi, että Etelä-Amerikasta oli voitu purjehtia Tyynenmeren saarille jo kauan sitten. Väitettä ei uskottu, joten hän päätti näyttää sen. Vuonna 1947 hän sitoi yhdeksän balsapuun runkoa yhteen köysillä ilman ainuttakaan naulaa, nosti purjeen ja lähti viiden miehen kanssa Perusta länteen. Matka kesti 101 päivää ja lautta ajelehti lähes seitsemäntuhatta kilometriä, kunnes se ajautui riutalle Tuamotusaarilla. Lautta on nyt museossa Oslossa.
+AIEMPI KYSYMYS: Mikä on Snorrin Edda?
+AIEMPI VASTAUS (Livia):
+Ai tota. Snorrin Edda eli [[Nuorempi Edda]] on Snorri Sturlusonin 1200-luvun alkupuolella kirjoittama teos, joka toimi oppaana runoilijoille: se selittää skaldirunouden mittoja ja kielikuvia ja kertoo samalla pohjoisen jumaltaruston tarinat. Teos on yksi tärkeimmistä lähteistä muinaisnorjalaiseen mytologiaan, ja siinä esiintyvät esimerkiksi [[Odin]] ja [[Thor]]. Pitkä vastaus, mut tykkään näistä kyl.
+KYSYMYS: Kerro lisää: Thor
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reykholt (sana)
+Tietoruudun teksti: Reykholt on kylä Reykjadalsá-joen laaksossa Länsi-Islannissa. Se oli aikanaan yksi saaren henkisistä keskuksista, ja siellä toimi vuosien ajan yksi maan tärkeimmistä kouluista.
+
+Keskiajalla Reykholtissa asui runoilija ja poliitikko Snorri Sturluson. Hänen muistiinpanonsa muinaisnorjan kielestä ja mytologiasta ovat korvaamattomia nykytutkijoille: ilman niitä pohjoinen jumaltarusto tunnettaisiin paljon huonommin. Hänen tilastaan on yhä jäljellä jäänteet ja kylpyallas kuumine altaineen sekä tunneli, joka johti kylvystä taloon.
+
+Kylässä on nykyään noin kuusikymmentä asukasta, koulukeskus ja kirjasto, joka on keskittynyt Snorrin teoksiin. Lähistöllä on Deildartunguhverin kuuma lähde, joka ohittaa kaikki muut maan lähteet kuuman veden tuotossaan: 180 litraa sekunnissa 97 asteisena.
+AIEMPI KYSYMYS: Mikä on Snorralaug?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Snorralaug on Reykholtissa sijaitseva kivetty lämpöallas, jota liitetään Snorri Sturlusonin tilaan. Altaan yhteydessä on tunneli, joka johti kylvystä taloon. Nykyinen rakenne on kunnostettu, joten en osaa sanoa, kuinka suuri osa siitä on alkuperäistä. [[Snorri Sturlusonin]] aikaan kylpeminen oli siis jo tuttua [[Reykholtissa]]. Allas kuulostaa kyllä hyvältä, mutta kastuminen ei ole kyyhkyn lempipuuhaa.
+KYSYMYS: Kerro lisää: Snorri Sturlusonin
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reykholt (sana)
+Tietoruudun teksti: Reykholt on kylä Reykjadalsá-joen laaksossa Länsi-Islannissa. Se oli aikanaan yksi saaren henkisistä keskuksista, ja siellä toimi vuosien ajan yksi maan tärkeimmistä kouluista.
+
+Keskiajalla Reykholtissa asui runoilija ja poliitikko Snorri Sturluson. Hänen muistiinpanonsa muinaisnorjan kielestä ja mytologiasta ovat korvaamattomia nykytutkijoille: ilman niitä pohjoinen jumaltarusto tunnettaisiin paljon huonommin. Hänen tilastaan on yhä jäljellä jäänteet ja kylpyallas kuumine altaineen sekä tunneli, joka johti kylvystä taloon.
+
+Kylässä on nykyään noin kuusikymmentä asukasta, koulukeskus ja kirjasto, joka on keskittynyt Snorrin teoksiin. Lähistöllä on Deildartunguhverin kuuma lähde, joka ohittaa kaikki muut maan lähteet kuuman veden tuotossaan: 180 litraa sekunnissa 97 asteisena.
+AIEMPI KYSYMYS: Mikä on Snorralaug?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Snorralaug on Reykholtissa sijaitseva kivetty lämpöallas, jota liitetään Snorri Sturlusonin tilaan. Altaan yhteydessä on tunneli, joka johti kylvystä taloon. Nykyinen rakenne on kunnostettu, joten en osaa sanoa, kuinka suuri osa siitä on alkuperäistä. [[Snorri Sturlusonin]] aikaan kylpeminen oli siis jo tuttua [[Reykholtissa]]. Allas kuulostaa kyllä hyvältä, mutta kastuminen ei ole kyyhkyn lempipuuhaa.
+KYSYMYS: Kerro lisää: Reykholtissa
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reykholt (sana)
+Tietoruudun teksti: Reykholt on kylä Reykjadalsá-joen laaksossa Länsi-Islannissa. Se oli aikanaan yksi saaren henkisistä keskuksista, ja siellä toimi vuosien ajan yksi maan tärkeimmistä kouluista.
+
+Keskiajalla Reykholtissa asui runoilija ja poliitikko Snorri Sturluson. Hänen muistiinpanonsa muinaisnorjan kielestä ja mytologiasta ovat korvaamattomia nykytutkijoille: ilman niitä pohjoinen jumaltarusto tunnettaisiin paljon huonommin. Hänen tilastaan on yhä jäljellä jäänteet ja kylpyallas kuumine altaineen sekä tunneli, joka johti kylvystä taloon.
+
+Kylässä on nykyään noin kuusikymmentä asukasta, koulukeskus ja kirjasto, joka on keskittynyt Snorrin teoksiin. Lähistöllä on Deildartunguhverin kuuma lähde, joka ohittaa kaikki muut maan lähteet kuuman veden tuotossaan: 180 litraa sekunnissa 97 asteisena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Menovinkit] Islanti on pieni maa, joka on avannut verkkoon paljon: melkein miljoona kuvaa nahalle kirjoitetuista saagoista, karttoja joiden merissä ui hirviöitä, 32 suoraa kameraa ja maanjäristyslistan, joka päivittyy koko ajan.
+AIEMPI KYSYMYS: Mikä Heimskringla on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Heimskringla on Snorri Sturlusonin kokoama kokoelma Norjan kuninkaiden [[saagoista]]. Se kertoo hallitsijoista muinaisista legendaarisista ajoista aina 1100-luvulle asti, ja sen tunnetuimpia osia ovat [[Olav Tryggvasonin]] ja [[Pyhän Olavin]] saagat. Kuninkaita riittää, mutta kukaan ei kirjoita kyyhkyistä.
+KYSYMYS: Kerro lisää: saagoista
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reykholt (sana)
+Tietoruudun teksti: Reykholt on kylä Reykjadalsá-joen laaksossa Länsi-Islannissa. Se oli aikanaan yksi saaren henkisistä keskuksista, ja siellä toimi vuosien ajan yksi maan tärkeimmistä kouluista.
+
+Keskiajalla Reykholtissa asui runoilija ja poliitikko Snorri Sturluson. Hänen muistiinpanonsa muinaisnorjan kielestä ja mytologiasta ovat korvaamattomia nykytutkijoille: ilman niitä pohjoinen jumaltarusto tunnettaisiin paljon huonommin. Hänen tilastaan on yhä jäljellä jäänteet ja kylpyallas kuumine altaineen sekä tunneli, joka johti kylvystä taloon.
+
+Kylässä on nykyään noin kuusikymmentä asukasta, koulukeskus ja kirjasto, joka on keskittynyt Snorrin teoksiin. Lähistöllä on Deildartunguhverin kuuma lähde, joka ohittaa kaikki muut maan lähteet kuuman veden tuotossaan: 180 litraa sekunnissa 97 asteisena.
+AIEMPI KYSYMYS: Mikä Heimskringla on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Heimskringla on Snorri Sturlusonin kokoama kokoelma Norjan kuninkaiden [[saagoista]]. Se kertoo hallitsijoista muinaisista legendaarisista ajoista aina 1100-luvulle asti, ja sen tunnetuimpia osia ovat [[Olav Tryggvasonin]] ja [[Pyhän Olavin]] saagat. Kuninkaita riittää, mutta kukaan ei kirjoita kyyhkyistä.
+KYSYMYS: Kerro lisää: Olav Tryggvasonin
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reykholt (sana)
+Tietoruudun teksti: Reykholt on kylä Reykjadalsá-joen laaksossa Länsi-Islannissa. Se oli aikanaan yksi saaren henkisistä keskuksista, ja siellä toimi vuosien ajan yksi maan tärkeimmistä kouluista.
+
+Keskiajalla Reykholtissa asui runoilija ja poliitikko Snorri Sturluson. Hänen muistiinpanonsa muinaisnorjan kielestä ja mytologiasta ovat korvaamattomia nykytutkijoille: ilman niitä pohjoinen jumaltarusto tunnettaisiin paljon huonommin. Hänen tilastaan on yhä jäljellä jäänteet ja kylpyallas kuumine altaineen sekä tunneli, joka johti kylvystä taloon.
+
+Kylässä on nykyään noin kuusikymmentä asukasta, koulukeskus ja kirjasto, joka on keskittynyt Snorrin teoksiin. Lähistöllä on Deildartunguhverin kuuma lähde, joka ohittaa kaikki muut maan lähteet kuuman veden tuotossaan: 180 litraa sekunnissa 97 asteisena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kohdekartta / Kohdekartta: Olevisten kirkko] 1267 Olevisten kirkko on nimetty Norjan kuningas Olavin mukaan, joka oli merenkulkijoiden suojeluspyhimys. Kirkosta on maininta jo vuodelta 1267, jolloin sen perustivat alueelle asettuneet skandinaaviset kauppiaat. Kirkon torni puolestaan mainitaan asiakirjoissa ensimmäisen kerran vuonna 1364, ja vuosisatojen kuluessa kirkkoa laajennettiin useaan otteeseen goottilaiseen tyyliin. Torni on kokenut paljon: salamat ovat iskeneet siihen noin kymmenen kertaa, ja koko kirkko on palanut maan tasalle jopa kolme kertaa tunnetun historiansa aikana. Erään keskiaikaisen tarinan mukaan kirkon rakentaja kertoi tornin olevan 84 syltä korkea - jos hän tarkoitti Rein-joen seudun syltä, se tarkoittaisi lähes …
+AIEMPI KYSYMYS: Mikä Heimskringla on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Heimskringla on Snorri Sturlusonin kokoama kokoelma Norjan kuninkaiden [[saagoista]]. Se kertoo hallitsijoista muinaisista legendaarisista ajoista aina 1100-luvulle asti, ja sen tunnetuimpia osia ovat [[Olav Tryggvasonin]] ja [[Pyhän Olavin]] saagat. Kuninkaita riittää, mutta kukaan ei kirjoita kyyhkyistä.
+KYSYMYS: Kerro lisää: Pyhän Olavin
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geysir (sana)
+Tietoruudun teksti: Geysir — joskus Suuri Geysir — on kuumalähde Lounais-Islannissa. Geologisten tutkimusten mukaan se alkoi muodostua noin vuonna 1150.
+
+Englannin sana geyser on peräisin juuri tästä lähteestä, ja nimi Geysir itse tulee islannin verbistä geysa. Yksi islantilainen lähde on siis antanut nimen koko ilmiölle kaikkialla maailmassa.
+
+Geysir sijaitsee Haukadalurin laaksossa Laugarfjall-laavakupolin rinteellä. Noin viidenkymmenen metrin päässä etelässä on Strokkur, toinen kuumalähde, johon Geysir usein sekoitetaan. Koko geotermistä kenttää kutsutaan tavallisesti joko Geysiriksi tai Haukadaluriksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Luonto: Vesi purskahtaa muutaman minuutin välein] Nykyisin — Haukadalurin laaksossa maan alla on kuumaa vettä, joka kiehuu paineen alla. Kun paine kasvaa liian suureksi, vesi purskahtaa ilmaan pylvääksi. Strokkur tekee sen viiden tai kymmenen minuutin välein ja nostaa vettä parikymmentä metriä. Sen naapuri Geysir oli aikanaan vielä isompi, ja juuri siitä koko ilmiö sai maailmalla nimensä: sana geysir tulee islannin verbistä gjósa eli purskahtaa. Ennen purkausta vesi kohoaa hetkeksi siniseksi kuplaksi.
+AIEMPI KYSYMYS: Mistä sana geysir tulee?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä tiedän. Sana on peräisin [[Haukadalurin]] laakson kuumalähteestä, joka sijaitsee [[Laugarfjall-laavakupolin]] rinteellä, ja englannin sana geyser on lainattu juuri sieltä. Lähteen nimi taas palautuu islannin verbiin, jonka muodoksi esitetään sekä geysa että gjósa; molemmat liittyvät purskahtamiseen, mutta en ole varma, kumpi on alkuperäisempi. Yhden [[kuumalähteen]] nimestä tuli siten nimi kaikille samanlaisille lähteille ympäri maailmaa.
+
+Kyyhkynä pysyn tuollaisista mieluummin kaukana, sillä kuuma höyry ei ole kenenkään siipien ystävä. Mut kyllä sieltä ylhäältä näkisi hyvin, kun vesi alkaa nousta.
+KYSYMYS: Kerro lisää: Haukadalurin
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geysir (sana)
+Tietoruudun teksti: Geysir — joskus Suuri Geysir — on kuumalähde Lounais-Islannissa. Geologisten tutkimusten mukaan se alkoi muodostua noin vuonna 1150.
+
+Englannin sana geyser on peräisin juuri tästä lähteestä, ja nimi Geysir itse tulee islannin verbistä geysa. Yksi islantilainen lähde on siis antanut nimen koko ilmiölle kaikkialla maailmassa.
+
+Geysir sijaitsee Haukadalurin laaksossa Laugarfjall-laavakupolin rinteellä. Noin viidenkymmenen metrin päässä etelässä on Strokkur, toinen kuumalähde, johon Geysir usein sekoitetaan. Koko geotermistä kenttää kutsutaan tavallisesti joko Geysiriksi tai Haukadaluriksi.
+AIEMPI KYSYMYS: Mistä sana geysir tulee?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä tiedän. Sana on peräisin [[Haukadalurin]] laakson kuumalähteestä, joka sijaitsee [[Laugarfjall-laavakupolin]] rinteellä, ja englannin sana geyser on lainattu juuri sieltä. Lähteen nimi taas palautuu islannin verbiin, jonka muodoksi esitetään sekä geysa että gjósa; molemmat liittyvät purskahtamiseen, mutta en ole varma, kumpi on alkuperäisempi. Yhden [[kuumalähteen]] nimestä tuli siten nimi kaikille samanlaisille lähteille ympäri maailmaa.
+
+Kyyhkynä pysyn tuollaisista mieluummin kaukana, sillä kuuma höyry ei ole kenenkään siipien ystävä. Mut kyllä sieltä ylhäältä näkisi hyvin, kun vesi alkaa nousta.
+KYSYMYS: Kerro lisää: Laugarfjall-laavakupolin
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geysir (sana)
+Tietoruudun teksti: Geysir — joskus Suuri Geysir — on kuumalähde Lounais-Islannissa. Geologisten tutkimusten mukaan se alkoi muodostua noin vuonna 1150.
+
+Englannin sana geyser on peräisin juuri tästä lähteestä, ja nimi Geysir itse tulee islannin verbistä geysa. Yksi islantilainen lähde on siis antanut nimen koko ilmiölle kaikkialla maailmassa.
+
+Geysir sijaitsee Haukadalurin laaksossa Laugarfjall-laavakupolin rinteellä. Noin viidenkymmenen metrin päässä etelässä on Strokkur, toinen kuumalähde, johon Geysir usein sekoitetaan. Koko geotermistä kenttää kutsutaan tavallisesti joko Geysiriksi tai Haukadaluriksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sahara — kaupunkilehti / Sahara: Maailman suurin kuuma aavikko] Sahara peittää yli 9 miljoonaa neliökilometriä Pohjois-Afrikkaa – alueen kokoinen soisi koko Yhdysvallat. Se on maailman suurin kuuma aavikko, vain Etelämanner ja arktiset seudut ovat sitä laajempia kylminä autiomaina. Yleisestä mielikuvasta poiketen suurin osa Saharasta ei ole hiekkadyynejä vaan kivistä hamada-tasankoa ja paljasta kalliota; hiekkamerten eli ergien osuus koko pinta-alasta on vain murto-osa. Isoisän matkapäiväkirjassa vuodelta 1873 aavikko kuvataan äärettömänä tyhjyytenä, mutta sen halki kulki tuolloinkin vuosisataisia karavaanireittejä kaupungista toiseen.
+- [Marrakech — kaupunkilehti / Vesi, vuoret ja puutarhat: Kuuma tasanko vuorten varjossa] Ilmasto on kuuma puoliaava: heinäkuun keskiylin on 37,7 astetta ja kuumin mitattu lukema 49,6, kun taas tammikuussa on mitattu 3,6 pakkasastetta. Sadetta tulee vain 221 millimetriä ja 29 päivänä vuodessa. Silti seutu ei ole aavikkoa: maantieteilijä Barrows huomautti, että kosteus liikkuu täällä maan alla eikä pintavesinä, ja että sijainti Atlaksen pohjoispuolella erottaa Marrakechin aavikkokaupungeista. Vuoriston keskikorkeus on yli kolme kilometriä, ja se on pääosin jurakauden kalkkikiveä. Pohjaveden pinta on laskenut vuodesta 2002 keskimäärin 0,9 metriä vuodessa.
+AIEMPI KYSYMYS: Mistä sana geysir tulee?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä tiedän. Sana on peräisin [[Haukadalurin]] laakson kuumalähteestä, joka sijaitsee [[Laugarfjall-laavakupolin]] rinteellä, ja englannin sana geyser on lainattu juuri sieltä. Lähteen nimi taas palautuu islannin verbiin, jonka muodoksi esitetään sekä geysa että gjósa; molemmat liittyvät purskahtamiseen, mutta en ole varma, kumpi on alkuperäisempi. Yhden [[kuumalähteen]] nimestä tuli siten nimi kaikille samanlaisille lähteille ympäri maailmaa.
+
+Kyyhkynä pysyn tuollaisista mieluummin kaukana, sillä kuuma höyry ei ole kenenkään siipien ystävä. Mut kyllä sieltä ylhäältä näkisi hyvin, kun vesi alkaa nousta.
+KYSYMYS: Kerro lisää: kuumalähteen
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geysir (sana)
+Tietoruudun teksti: Geysir — joskus Suuri Geysir — on kuumalähde Lounais-Islannissa. Geologisten tutkimusten mukaan se alkoi muodostua noin vuonna 1150.
+
+Englannin sana geyser on peräisin juuri tästä lähteestä, ja nimi Geysir itse tulee islannin verbistä geysa. Yksi islantilainen lähde on siis antanut nimen koko ilmiölle kaikkialla maailmassa.
+
+Geysir sijaitsee Haukadalurin laaksossa Laugarfjall-laavakupolin rinteellä. Noin viidenkymmenen metrin päässä etelässä on Strokkur, toinen kuumalähde, johon Geysir usein sekoitetaan. Koko geotermistä kenttää kutsutaan tavallisesti joko Geysiriksi tai Haukadaluriksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sahara — kaupunkilehti / Sahara: Maailman suurin kuuma aavikko] Sahara peittää yli 9 miljoonaa neliökilometriä Pohjois-Afrikkaa – alueen kokoinen soisi koko Yhdysvallat. Se on maailman suurin kuuma aavikko, vain Etelämanner ja arktiset seudut ovat sitä laajempia kylminä autiomaina. Yleisestä mielikuvasta poiketen suurin osa Saharasta ei ole hiekkadyynejä vaan kivistä hamada-tasankoa ja paljasta kalliota; hiekkamerten eli ergien osuus koko pinta-alasta on vain murto-osa. Isoisän matkapäiväkirjassa vuodelta 1873 aavikko kuvataan äärettömänä tyhjyytenä, mutta sen halki kulki tuolloinkin vuosisataisia karavaanireittejä kaupungista toiseen.
+- [Marrakech — kaupunkilehti / Vesi, vuoret ja puutarhat: Kuuma tasanko vuorten varjossa] Ilmasto on kuuma puoliaava: heinäkuun keskiylin on 37,7 astetta ja kuumin mitattu lukema 49,6, kun taas tammikuussa on mitattu 3,6 pakkasastetta. Sadetta tulee vain 221 millimetriä ja 29 päivänä vuodessa. Silti seutu ei ole aavikkoa: maantieteilijä Barrows huomautti, että kosteus liikkuu täällä maan alla eikä pintavesinä, ja että sijainti Atlaksen pohjoispuolella erottaa Marrakechin aavikkokaupungeista. Vuoriston keskikorkeus on yli kolme kilometriä, ja se on pääosin jurakauden kalkkikiveä. Pohjaveden pinta on laskenut vuodesta 2002 keskimäärin 0,9 metriä vuodessa.
+AIEMPI KYSYMYS: Mikä Strokkur on?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä muistan. Strokkur on [[kuumalähde]] Haukadalurin geotermisellä alueella, noin viidenkymmenen metrin päässä [[Geysiristä]] etelään, ja sitä sekoitetaan usein Geysiriin. Sen alla oleva vesi on kuumaa ja kiehuu paineen alla, ja kun paine kasvaa liian suureksi, vesi purskahtaa ilmaan pylväänä. Purkaus tapahtuu viiden tai kymmenen minuutin välein ja nostaa vettä parikymmentä metriä, ja ennen sitä vesi kohoaa hetkeksi siniseksi kuplaksi. Aika näyttävä tapa päästää höyryä, sanon minä.
+KYSYMYS: Kerro lisää: kuumalähde
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geysir (sana)
+Tietoruudun teksti: Geysir — joskus Suuri Geysir — on kuumalähde Lounais-Islannissa. Geologisten tutkimusten mukaan se alkoi muodostua noin vuonna 1150.
+
+Englannin sana geyser on peräisin juuri tästä lähteestä, ja nimi Geysir itse tulee islannin verbistä geysa. Yksi islantilainen lähde on siis antanut nimen koko ilmiölle kaikkialla maailmassa.
+
+Geysir sijaitsee Haukadalurin laaksossa Laugarfjall-laavakupolin rinteellä. Noin viidenkymmenen metrin päässä etelässä on Strokkur, toinen kuumalähde, johon Geysir usein sekoitetaan. Koko geotermistä kenttää kutsutaan tavallisesti joko Geysiriksi tai Haukadaluriksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Luonto: Vesi purskahtaa muutaman minuutin välein] Nykyisin — Haukadalurin laaksossa maan alla on kuumaa vettä, joka kiehuu paineen alla. Kun paine kasvaa liian suureksi, vesi purskahtaa ilmaan pylvääksi. Strokkur tekee sen viiden tai kymmenen minuutin välein ja nostaa vettä parikymmentä metriä. Sen naapuri Geysir oli aikanaan vielä isompi, ja juuri siitä koko ilmiö sai maailmalla nimensä: sana geysir tulee islannin verbistä gjósa eli purskahtaa. Ennen purkausta vesi kohoaa hetkeksi siniseksi kuplaksi.
+AIEMPI KYSYMYS: Mikä Strokkur on?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä muistan. Strokkur on [[kuumalähde]] Haukadalurin geotermisellä alueella, noin viidenkymmenen metrin päässä [[Geysiristä]] etelään, ja sitä sekoitetaan usein Geysiriin. Sen alla oleva vesi on kuumaa ja kiehuu paineen alla, ja kun paine kasvaa liian suureksi, vesi purskahtaa ilmaan pylväänä. Purkaus tapahtuu viiden tai kymmenen minuutin välein ja nostaa vettä parikymmentä metriä, ja ennen sitä vesi kohoaa hetkeksi siniseksi kuplaksi. Aika näyttävä tapa päästää höyryä, sanon minä.
+KYSYMYS: Kerro lisää: Geysiristä
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geysir (sana)
+Tietoruudun teksti: Geysir — joskus Suuri Geysir — on kuumalähde Lounais-Islannissa. Geologisten tutkimusten mukaan se alkoi muodostua noin vuonna 1150.
+
+Englannin sana geyser on peräisin juuri tästä lähteestä, ja nimi Geysir itse tulee islannin verbistä geysa. Yksi islantilainen lähde on siis antanut nimen koko ilmiölle kaikkialla maailmassa.
+
+Geysir sijaitsee Haukadalurin laaksossa Laugarfjall-laavakupolin rinteellä. Noin viidenkymmenen metrin päässä etelässä on Strokkur, toinen kuumalähde, johon Geysir usein sekoitetaan. Koko geotermistä kenttää kutsutaan tavallisesti joko Geysiriksi tai Haukadaluriksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Luonto: Vesi purskahtaa muutaman minuutin välein] Nykyisin — Haukadalurin laaksossa maan alla on kuumaa vettä, joka kiehuu paineen alla. Kun paine kasvaa liian suureksi, vesi purskahtaa ilmaan pylvääksi. Strokkur tekee sen viiden tai kymmenen minuutin välein ja nostaa vettä parikymmentä metriä. Sen naapuri Geysir oli aikanaan vielä isompi, ja juuri siitä koko ilmiö sai maailmalla nimensä: sana geysir tulee islannin verbistä gjósa eli purskahtaa. Ennen purkausta vesi kohoaa hetkeksi siniseksi kuplaksi.
+AIEMPI KYSYMYS: Miksi geysirin vesi purskahtaa ilmaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tost voisi kertoo vaikka koko päivän. Maan alla on kuumaa vettä, joka kiehuu paineen alla. Kun paine kasvaa liian suureksi, vesi purskahtaa ilmaan pylvääksi, ja sama toistuu [[Haukadalurin]] laaksossa yhä uudelleen. Esimerkiksi [[Strokkur]] tekee sen viiden tai kymmenen minuutin välein, ja ennen purkausta vesi kohoaa hetkeksi siniseksi kuplaksi. Ja tän kaiken minä kannoin päässäni ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Strokkur
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geysir (sana)
+Tietoruudun teksti: Geysir — joskus Suuri Geysir — on kuumalähde Lounais-Islannissa. Geologisten tutkimusten mukaan se alkoi muodostua noin vuonna 1150.
+
+Englannin sana geyser on peräisin juuri tästä lähteestä, ja nimi Geysir itse tulee islannin verbistä geysa. Yksi islantilainen lähde on siis antanut nimen koko ilmiölle kaikkialla maailmassa.
+
+Geysir sijaitsee Haukadalurin laaksossa Laugarfjall-laavakupolin rinteellä. Noin viidenkymmenen metrin päässä etelässä on Strokkur, toinen kuumalähde, johon Geysir usein sekoitetaan. Koko geotermistä kenttää kutsutaan tavallisesti joko Geysiriksi tai Haukadaluriksi.
+AIEMPI KYSYMYS: Mikä on Haukadalur?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tää on kyl hyvä paikka aloittaa. Haukadalur on laakso Lounais-Islannissa, jonka rinteellä sijaitsee [[Laugarfjall-laavakupoli]]. Laaksossa on geotermisiä kuumalähteitä, muun muassa [[Geysir]] ja noin viidenkymmenen metrin päässä etelässä [[Strokkur]]. Koko aluetta kutsutaan tavallisesti joko Geysiriksi tai Haukadaluriksi. Pitkä lista yhdelle laaksolle, mutta kyyhky kestää.
+KYSYMYS: Kerro lisää: Laugarfjall-laavakupoli
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geysir (sana)
+Tietoruudun teksti: Geysir — joskus Suuri Geysir — on kuumalähde Lounais-Islannissa. Geologisten tutkimusten mukaan se alkoi muodostua noin vuonna 1150.
+
+Englannin sana geyser on peräisin juuri tästä lähteestä, ja nimi Geysir itse tulee islannin verbistä geysa. Yksi islantilainen lähde on siis antanut nimen koko ilmiölle kaikkialla maailmassa.
+
+Geysir sijaitsee Haukadalurin laaksossa Laugarfjall-laavakupolin rinteellä. Noin viidenkymmenen metrin päässä etelässä on Strokkur, toinen kuumalähde, johon Geysir usein sekoitetaan. Koko geotermistä kenttää kutsutaan tavallisesti joko Geysiriksi tai Haukadaluriksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Luonto: Vesi purskahtaa muutaman minuutin välein] Nykyisin — Haukadalurin laaksossa maan alla on kuumaa vettä, joka kiehuu paineen alla. Kun paine kasvaa liian suureksi, vesi purskahtaa ilmaan pylvääksi. Strokkur tekee sen viiden tai kymmenen minuutin välein ja nostaa vettä parikymmentä metriä. Sen naapuri Geysir oli aikanaan vielä isompi, ja juuri siitä koko ilmiö sai maailmalla nimensä: sana geysir tulee islannin verbistä gjósa eli purskahtaa. Ennen purkausta vesi kohoaa hetkeksi siniseksi kuplaksi.
+AIEMPI KYSYMYS: Mikä on Haukadalur?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tää on kyl hyvä paikka aloittaa. Haukadalur on laakso Lounais-Islannissa, jonka rinteellä sijaitsee [[Laugarfjall-laavakupoli]]. Laaksossa on geotermisiä kuumalähteitä, muun muassa [[Geysir]] ja noin viidenkymmenen metrin päässä etelässä [[Strokkur]]. Koko aluetta kutsutaan tavallisesti joko Geysiriksi tai Haukadaluriksi. Pitkä lista yhdelle laaksolle, mutta kyyhky kestää.
+KYSYMYS: Kerro lisää: Geysir
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geysir (sana)
+Tietoruudun teksti: Geysir — joskus Suuri Geysir — on kuumalähde Lounais-Islannissa. Geologisten tutkimusten mukaan se alkoi muodostua noin vuonna 1150.
+
+Englannin sana geyser on peräisin juuri tästä lähteestä, ja nimi Geysir itse tulee islannin verbistä geysa. Yksi islantilainen lähde on siis antanut nimen koko ilmiölle kaikkialla maailmassa.
+
+Geysir sijaitsee Haukadalurin laaksossa Laugarfjall-laavakupolin rinteellä. Noin viidenkymmenen metrin päässä etelässä on Strokkur, toinen kuumalähde, johon Geysir usein sekoitetaan. Koko geotermistä kenttää kutsutaan tavallisesti joko Geysiriksi tai Haukadaluriksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Luonto: Vesi purskahtaa muutaman minuutin välein] Nykyisin — Haukadalurin laaksossa maan alla on kuumaa vettä, joka kiehuu paineen alla. Kun paine kasvaa liian suureksi, vesi purskahtaa ilmaan pylvääksi. Strokkur tekee sen viiden tai kymmenen minuutin välein ja nostaa vettä parikymmentä metriä. Sen naapuri Geysir oli aikanaan vielä isompi, ja juuri siitä koko ilmiö sai maailmalla nimensä: sana geysir tulee islannin verbistä gjósa eli purskahtaa. Ennen purkausta vesi kohoaa hetkeksi siniseksi kuplaksi.
+AIEMPI KYSYMYS: Mitä geotermisellä kentällä tarkoitetaan?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Nyt se tulee. Geotermisellä kentällä tarkoitetaan aluetta, jolla maan sisäinen lämpö nousee pintaan kuumana vetenä ja höyrynä, esimerkiksi kuumina lähteinä. [[Haukadalurin]] laaksossa maan alla on kuumaa vettä, joka kiehuu paineen alla ja purskahtaa ajoittain ilmaan. Koko tätä aluetta kutsutaan tavallisesti joko [[Geysiriksi]] tai Haukadaluriksi. Selitin sen vähemmän kuin ajattelin, mikä on kyyhkyltä harvinaista.
+KYSYMYS: Kerro lisää: Geysiriksi
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eiríksstaðir (merenkulku)
+Tietoruudun teksti: Eiríksstaðir on Eiríkr Þorvaldssonin — Punaisen Eirikin — entinen tila Haukadalurin laaksossa Dalasýslassa. Se on todennäköisesti hänen poikansa Leifr Eiríkssonin syntymäpaikka, ja Leifr on ensimmäinen tunnettu eurooppalainen, joka löysi Amerikan.
+
+Landnámabókin ja Punaisen Eirikin saagan mukaan Eiríkr asettui ensin Vestfirðiriin, nai Þjóðhildur Jǫrundardóttirin ja perusti tilan Vatnshornin lähelle Haukadaluriin. Sieltä hänen oli lähdettävä, kun hän oli tappanut kaksi miestä kostoksi omien orjiensa kuolemasta.
+
+Arkeologit ovat tutkineet paikkaa monta kertaa vuodesta 1894 alkaen, ja kaivauksissa on tunnistettu kahden rakennuksen jäänteet 800–900-luvuilta. Päärakennus oli pitkätalo, noin viisikymmentä neliömetriä ja neljätoista metriä pitkä, keskellä pitkä tulisija. Seinät olivat turvetta kiviperustan päällä, paksuudeltaan metrin verran. Lähistölle on rakennettu ulkoilmamuseo.
+AIEMPI KYSYMYS: Kuka syntyi todennäköisesti tällä tilalla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Hyvä tarina. Tilalla syntyi todennäköisesti [[Leifr Eiríksson]], tilan perustaneen [[Punaisen Eirikin]] poika. Hänet tunnetaan ensimmäisenä tunnettuna eurooppalaisena, joka löysi Amerikan. Syntymäpaikka on kuitenkin vain todennäköinen, ei varma, ja Eiríksstaðir sijaitsee [[Haukadalurin]] laaksossa Dalasýslassa. Todennäköisesti, sanon minä, enkä lupaa enempää.
+KYSYMYS: Kerro lisää: Leifr Eiríksson
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eiríksstaðir (merenkulku)
+Tietoruudun teksti: Eiríksstaðir on Eiríkr Þorvaldssonin — Punaisen Eirikin — entinen tila Haukadalurin laaksossa Dalasýslassa. Se on todennäköisesti hänen poikansa Leifr Eiríkssonin syntymäpaikka, ja Leifr on ensimmäinen tunnettu eurooppalainen, joka löysi Amerikan.
+
+Landnámabókin ja Punaisen Eirikin saagan mukaan Eiríkr asettui ensin Vestfirðiriin, nai Þjóðhildur Jǫrundardóttirin ja perusti tilan Vatnshornin lähelle Haukadaluriin. Sieltä hänen oli lähdettävä, kun hän oli tappanut kaksi miestä kostoksi omien orjiensa kuolemasta.
+
+Arkeologit ovat tutkineet paikkaa monta kertaa vuodesta 1894 alkaen, ja kaivauksissa on tunnistettu kahden rakennuksen jäänteet 800–900-luvuilta. Päärakennus oli pitkätalo, noin viisikymmentä neliömetriä ja neljätoista metriä pitkä, keskellä pitkä tulisija. Seinät olivat turvetta kiviperustan päällä, paksuudeltaan metrin verran. Lähistölle on rakennettu ulkoilmamuseo.
+AIEMPI KYSYMYS: Kuka syntyi todennäköisesti tällä tilalla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Hyvä tarina. Tilalla syntyi todennäköisesti [[Leifr Eiríksson]], tilan perustaneen [[Punaisen Eirikin]] poika. Hänet tunnetaan ensimmäisenä tunnettuna eurooppalaisena, joka löysi Amerikan. Syntymäpaikka on kuitenkin vain todennäköinen, ei varma, ja Eiríksstaðir sijaitsee [[Haukadalurin]] laaksossa Dalasýslassa. Todennäköisesti, sanon minä, enkä lupaa enempää.
+KYSYMYS: Kerro lisää: Punaisen Eirikin
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eiríksstaðir (merenkulku)
+Tietoruudun teksti: Eiríksstaðir on Eiríkr Þorvaldssonin — Punaisen Eirikin — entinen tila Haukadalurin laaksossa Dalasýslassa. Se on todennäköisesti hänen poikansa Leifr Eiríkssonin syntymäpaikka, ja Leifr on ensimmäinen tunnettu eurooppalainen, joka löysi Amerikan.
+
+Landnámabókin ja Punaisen Eirikin saagan mukaan Eiríkr asettui ensin Vestfirðiriin, nai Þjóðhildur Jǫrundardóttirin ja perusti tilan Vatnshornin lähelle Haukadaluriin. Sieltä hänen oli lähdettävä, kun hän oli tappanut kaksi miestä kostoksi omien orjiensa kuolemasta.
+
+Arkeologit ovat tutkineet paikkaa monta kertaa vuodesta 1894 alkaen, ja kaivauksissa on tunnistettu kahden rakennuksen jäänteet 800–900-luvuilta. Päärakennus oli pitkätalo, noin viisikymmentä neliömetriä ja neljätoista metriä pitkä, keskellä pitkä tulisija. Seinät olivat turvetta kiviperustan päällä, paksuudeltaan metrin verran. Lähistölle on rakennettu ulkoilmamuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Luonto: Vesi purskahtaa muutaman minuutin välein] Nykyisin — Haukadalurin laaksossa maan alla on kuumaa vettä, joka kiehuu paineen alla. Kun paine kasvaa liian suureksi, vesi purskahtaa ilmaan pylvääksi. Strokkur tekee sen viiden tai kymmenen minuutin välein ja nostaa vettä parikymmentä metriä. Sen naapuri Geysir oli aikanaan vielä isompi, ja juuri siitä koko ilmiö sai maailmalla nimensä: sana geysir tulee islannin verbistä gjósa eli purskahtaa. Ennen purkausta vesi kohoaa hetkeksi siniseksi kuplaksi.
+AIEMPI KYSYMYS: Kuka syntyi todennäköisesti tällä tilalla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Hyvä tarina. Tilalla syntyi todennäköisesti [[Leifr Eiríksson]], tilan perustaneen [[Punaisen Eirikin]] poika. Hänet tunnetaan ensimmäisenä tunnettuna eurooppalaisena, joka löysi Amerikan. Syntymäpaikka on kuitenkin vain todennäköinen, ei varma, ja Eiríksstaðir sijaitsee [[Haukadalurin]] laaksossa Dalasýslassa. Todennäköisesti, sanon minä, enkä lupaa enempää.
+KYSYMYS: Kerro lisää: Haukadalurin
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eiríksstaðir (merenkulku)
+Tietoruudun teksti: Eiríksstaðir on Eiríkr Þorvaldssonin — Punaisen Eirikin — entinen tila Haukadalurin laaksossa Dalasýslassa. Se on todennäköisesti hänen poikansa Leifr Eiríkssonin syntymäpaikka, ja Leifr on ensimmäinen tunnettu eurooppalainen, joka löysi Amerikan.
+
+Landnámabókin ja Punaisen Eirikin saagan mukaan Eiríkr asettui ensin Vestfirðiriin, nai Þjóðhildur Jǫrundardóttirin ja perusti tilan Vatnshornin lähelle Haukadaluriin. Sieltä hänen oli lähdettävä, kun hän oli tappanut kaksi miestä kostoksi omien orjiensa kuolemasta.
+
+Arkeologit ovat tutkineet paikkaa monta kertaa vuodesta 1894 alkaen, ja kaivauksissa on tunnistettu kahden rakennuksen jäänteet 800–900-luvuilta. Päärakennus oli pitkätalo, noin viisikymmentä neliömetriä ja neljätoista metriä pitkä, keskellä pitkä tulisija. Seinät olivat turvetta kiviperustan päällä, paksuudeltaan metrin verran. Lähistölle on rakennettu ulkoilmamuseo.
+AIEMPI KYSYMYS: Miksi Eiríkr joutui lähtemään Haukadalurista?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Se on vakava juttu. Eiríkr oli tappanut kaksi miestä kostoksi omien orjiensa kuolemasta, ja siksi hänen oli lähdettävä; näin kertovat [[Landnámabók]] ja [[Punaisen Eirikin saaga]]. Tapahtumat sijoittuvat viikinkiaikaan, yli tuhat vuotta sitten, jolloin Islannissa riidat ratkaistiin sukujen ja kansankokousten kesken, eikä nykyisenlaista oikeuslaitosta ollut, joten surma johti usein pakoon tai karkotukseen. Sellainen aika oli, ja onneksi siitä on kulunut pitkä aika.
+KYSYMYS: Kerro lisää: Landnámabók
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eiríksstaðir (merenkulku)
+Tietoruudun teksti: Eiríksstaðir on Eiríkr Þorvaldssonin — Punaisen Eirikin — entinen tila Haukadalurin laaksossa Dalasýslassa. Se on todennäköisesti hänen poikansa Leifr Eiríkssonin syntymäpaikka, ja Leifr on ensimmäinen tunnettu eurooppalainen, joka löysi Amerikan.
+
+Landnámabókin ja Punaisen Eirikin saagan mukaan Eiríkr asettui ensin Vestfirðiriin, nai Þjóðhildur Jǫrundardóttirin ja perusti tilan Vatnshornin lähelle Haukadaluriin. Sieltä hänen oli lähdettävä, kun hän oli tappanut kaksi miestä kostoksi omien orjiensa kuolemasta.
+
+Arkeologit ovat tutkineet paikkaa monta kertaa vuodesta 1894 alkaen, ja kaivauksissa on tunnistettu kahden rakennuksen jäänteet 800–900-luvuilta. Päärakennus oli pitkätalo, noin viisikymmentä neliömetriä ja neljätoista metriä pitkä, keskellä pitkä tulisija. Seinät olivat turvetta kiviperustan päällä, paksuudeltaan metrin verran. Lähistölle on rakennettu ulkoilmamuseo.
+AIEMPI KYSYMYS: Miksi Eiríkr joutui lähtemään Haukadalurista?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Se on vakava juttu. Eiríkr oli tappanut kaksi miestä kostoksi omien orjiensa kuolemasta, ja siksi hänen oli lähdettävä; näin kertovat [[Landnámabók]] ja [[Punaisen Eirikin saaga]]. Tapahtumat sijoittuvat viikinkiaikaan, yli tuhat vuotta sitten, jolloin Islannissa riidat ratkaistiin sukujen ja kansankokousten kesken, eikä nykyisenlaista oikeuslaitosta ollut, joten surma johti usein pakoon tai karkotukseen. Sellainen aika oli, ja onneksi siitä on kulunut pitkä aika.
+KYSYMYS: Kerro lisää: Punaisen Eirikin saaga
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eiríksstaðir (merenkulku)
+Tietoruudun teksti: Eiríksstaðir on Eiríkr Þorvaldssonin — Punaisen Eirikin — entinen tila Haukadalurin laaksossa Dalasýslassa. Se on todennäköisesti hänen poikansa Leifr Eiríkssonin syntymäpaikka, ja Leifr on ensimmäinen tunnettu eurooppalainen, joka löysi Amerikan.
+
+Landnámabókin ja Punaisen Eirikin saagan mukaan Eiríkr asettui ensin Vestfirðiriin, nai Þjóðhildur Jǫrundardóttirin ja perusti tilan Vatnshornin lähelle Haukadaluriin. Sieltä hänen oli lähdettävä, kun hän oli tappanut kaksi miestä kostoksi omien orjiensa kuolemasta.
+
+Arkeologit ovat tutkineet paikkaa monta kertaa vuodesta 1894 alkaen, ja kaivauksissa on tunnistettu kahden rakennuksen jäänteet 800–900-luvuilta. Päärakennus oli pitkätalo, noin viisikymmentä neliömetriä ja neljätoista metriä pitkä, keskellä pitkä tulisija. Seinät olivat turvetta kiviperustan päällä, paksuudeltaan metrin verran. Lähistölle on rakennettu ulkoilmamuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Mitä arkeologit ovat löytäneet Eiríksstaðirilta?
+AIEMPI VASTAUS (Livia):
+Ai tota. Hyvä kysymys. Paikkaa on tutkittu monta kertaa vuodesta 1894 alkaen, ja kaivauksissa on tunnistettu kahden rakennuksen jäänteet 800–900-luvuilta. Päärakennus oli [[pitkätalo]], noin viisikymmentä neliömetriä ja neljätoista metriä pitkä, ja sen keskellä oli pitkä tulisija. Seinät tehtiin turpeesta kiviperustan päälle, ja lähistölle on rakennettu [[ulkoilmamuseo]]. Paljon kaivettavaa yhdelle tilalle, sanoisin minä.
+KYSYMYS: Kerro lisää: pitkätalo
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eiríksstaðir (merenkulku)
+Tietoruudun teksti: Eiríksstaðir on Eiríkr Þorvaldssonin — Punaisen Eirikin — entinen tila Haukadalurin laaksossa Dalasýslassa. Se on todennäköisesti hänen poikansa Leifr Eiríkssonin syntymäpaikka, ja Leifr on ensimmäinen tunnettu eurooppalainen, joka löysi Amerikan.
+
+Landnámabókin ja Punaisen Eirikin saagan mukaan Eiríkr asettui ensin Vestfirðiriin, nai Þjóðhildur Jǫrundardóttirin ja perusti tilan Vatnshornin lähelle Haukadaluriin. Sieltä hänen oli lähdettävä, kun hän oli tappanut kaksi miestä kostoksi omien orjiensa kuolemasta.
+
+Arkeologit ovat tutkineet paikkaa monta kertaa vuodesta 1894 alkaen, ja kaivauksissa on tunnistettu kahden rakennuksen jäänteet 800–900-luvuilta. Päärakennus oli pitkätalo, noin viisikymmentä neliömetriä ja neljätoista metriä pitkä, keskellä pitkä tulisija. Seinät olivat turvetta kiviperustan päällä, paksuudeltaan metrin verran. Lähistölle on rakennettu ulkoilmamuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Roomalainen kylpylä] Kylpylän lattiat ovat poissa, mutta niiden kannattimet ovat tallella: nurmella seisoo satoja tiilipinoja tasaisissa riveissä. Ne ovat hypokaustin pilareita. Pinojen päälle ladottiin tiililaatta, sen päälle betonikerros ja vasta ylimmäksi huoneen lattia, joten lattian ja maan väliin jäi yhtenäinen ontelo. Uunista tuleva kuuma ilma ja savu kiersivät pilareiden välissä ja nousivat seinien sisään muurattuja tiiliputkia pitkin katolle, joten lämpöä tuli sekä lattiasta että seinistä. Kylpylä rakennettiin 200-luvulla keisari Caracallan (hallitsi 198–217) aikana ja omistettiin lääketieteen jumalalle Asklepiokselle. Kolikkolöydöt ajoittivat rakentamisen ja osoittivat noin viidensadan vuoden käytön. …
+- [Manila — kohdekartta / Kohdekartta: San Agustinin kirkko] valmistui 1607 Kivikirkon suunnitteli Juan Macías, ja kivi hakattiin Meycauayanin, Binangonanin ja San Mateon adobelouhoksista. Työ eteni hitaasti, koska rahaa, rakennusaineita ja kivenveistäjiä oli niukasti. Luostari saatiin käyttöön 1604 ja kirkko julistettiin valmiiksi 19. tammikuuta 1607 nimellä Manilan Pyhän Paavalin kirkko. Macías itse ei nähnyt sitä valmiina. Sisätilan maalasi kaksi italialaista, jotka tekivät holveihin ja seiniin kohokuvia jäljittelevän silmänlumemaalauksen. Saarnastuoli on barokkia, ja sen aiheena on paikallinen ananas. Kuoripenkit on veistetty molave-puusta ja upotukset ovat 1600-luvun norsunluuta, kuoriaulassa on 1500-luvun krusifiksi, ja katosta riippuu kuusitoi…
+AIEMPI KYSYMYS: Mitä arkeologit ovat löytäneet Eiríksstaðirilta?
+AIEMPI VASTAUS (Livia):
+Ai tota. Hyvä kysymys. Paikkaa on tutkittu monta kertaa vuodesta 1894 alkaen, ja kaivauksissa on tunnistettu kahden rakennuksen jäänteet 800–900-luvuilta. Päärakennus oli [[pitkätalo]], noin viisikymmentä neliömetriä ja neljätoista metriä pitkä, ja sen keskellä oli pitkä tulisija. Seinät tehtiin turpeesta kiviperustan päälle, ja lähistölle on rakennettu [[ulkoilmamuseo]]. Paljon kaivettavaa yhdelle tilalle, sanoisin minä.
+KYSYMYS: Kerro lisää: ulkoilmamuseo
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eiríksstaðir (merenkulku)
+Tietoruudun teksti: Eiríksstaðir on Eiríkr Þorvaldssonin — Punaisen Eirikin — entinen tila Haukadalurin laaksossa Dalasýslassa. Se on todennäköisesti hänen poikansa Leifr Eiríkssonin syntymäpaikka, ja Leifr on ensimmäinen tunnettu eurooppalainen, joka löysi Amerikan.
+
+Landnámabókin ja Punaisen Eirikin saagan mukaan Eiríkr asettui ensin Vestfirðiriin, nai Þjóðhildur Jǫrundardóttirin ja perusti tilan Vatnshornin lähelle Haukadaluriin. Sieltä hänen oli lähdettävä, kun hän oli tappanut kaksi miestä kostoksi omien orjiensa kuolemasta.
+
+Arkeologit ovat tutkineet paikkaa monta kertaa vuodesta 1894 alkaen, ja kaivauksissa on tunnistettu kahden rakennuksen jäänteet 800–900-luvuilta. Päärakennus oli pitkätalo, noin viisikymmentä neliömetriä ja neljätoista metriä pitkä, keskellä pitkä tulisija. Seinät olivat turvetta kiviperustan päällä, paksuudeltaan metrin verran. Lähistölle on rakennettu ulkoilmamuseo.
+AIEMPI KYSYMYS: Mitä Punaisen Eirikin saaga on?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tost minä osaan kertoo vähän. Punaisen Eirikin saaga on keskiajalla kirjattu islantilainen kertomus, joka kertoo Eirikistä ja hänen perheestään. Sen ja [[Landnámabókin]] mukaan Eirikr asettui ensin Vestfirðiriin, nai [[Þjóðhildur Jǫrundardóttirin]] ja perusti tilan Haukadalurin lähelle. Saagan tarkasta kirjoitusajasta en ole varma, joten jätän vuosiluvun pois. Ei paha tiivistys kyyhkyltä.
+KYSYMYS: Kerro lisää: Landnámabókin
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eiríksstaðir (merenkulku)
+Tietoruudun teksti: Eiríksstaðir on Eiríkr Þorvaldssonin — Punaisen Eirikin — entinen tila Haukadalurin laaksossa Dalasýslassa. Se on todennäköisesti hänen poikansa Leifr Eiríkssonin syntymäpaikka, ja Leifr on ensimmäinen tunnettu eurooppalainen, joka löysi Amerikan.
+
+Landnámabókin ja Punaisen Eirikin saagan mukaan Eiríkr asettui ensin Vestfirðiriin, nai Þjóðhildur Jǫrundardóttirin ja perusti tilan Vatnshornin lähelle Haukadaluriin. Sieltä hänen oli lähdettävä, kun hän oli tappanut kaksi miestä kostoksi omien orjiensa kuolemasta.
+
+Arkeologit ovat tutkineet paikkaa monta kertaa vuodesta 1894 alkaen, ja kaivauksissa on tunnistettu kahden rakennuksen jäänteet 800–900-luvuilta. Päärakennus oli pitkätalo, noin viisikymmentä neliömetriä ja neljätoista metriä pitkä, keskellä pitkä tulisija. Seinät olivat turvetta kiviperustan päällä, paksuudeltaan metrin verran. Lähistölle on rakennettu ulkoilmamuseo.
+AIEMPI KYSYMYS: Mitä Punaisen Eirikin saaga on?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tost minä osaan kertoo vähän. Punaisen Eirikin saaga on keskiajalla kirjattu islantilainen kertomus, joka kertoo Eirikistä ja hänen perheestään. Sen ja [[Landnámabókin]] mukaan Eirikr asettui ensin Vestfirðiriin, nai [[Þjóðhildur Jǫrundardóttirin]] ja perusti tilan Haukadalurin lähelle. Saagan tarkasta kirjoitusajasta en ole varma, joten jätän vuosiluvun pois. Ei paha tiivistys kyyhkyltä.
+KYSYMYS: Kerro lisää: Þjóðhildur Jǫrundardóttirin
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eiríksstaðir (merenkulku)
+Tietoruudun teksti: Eiríksstaðir on Eiríkr Þorvaldssonin — Punaisen Eirikin — entinen tila Haukadalurin laaksossa Dalasýslassa. Se on todennäköisesti hänen poikansa Leifr Eiríkssonin syntymäpaikka, ja Leifr on ensimmäinen tunnettu eurooppalainen, joka löysi Amerikan.
+
+Landnámabókin ja Punaisen Eirikin saagan mukaan Eiríkr asettui ensin Vestfirðiriin, nai Þjóðhildur Jǫrundardóttirin ja perusti tilan Vatnshornin lähelle Haukadaluriin. Sieltä hänen oli lähdettävä, kun hän oli tappanut kaksi miestä kostoksi omien orjiensa kuolemasta.
+
+Arkeologit ovat tutkineet paikkaa monta kertaa vuodesta 1894 alkaen, ja kaivauksissa on tunnistettu kahden rakennuksen jäänteet 800–900-luvuilta. Päärakennus oli pitkätalo, noin viisikymmentä neliömetriä ja neljätoista metriä pitkä, keskellä pitkä tulisija. Seinät olivat turvetta kiviperustan päällä, paksuudeltaan metrin verran. Lähistölle on rakennettu ulkoilmamuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kohdekartta / Kohdekartta: Büyük Han] 1572 Kyproksen suurin karavaaniseraaji mittaa ulkoa 50,67 × 45,25 metriä, ja sen sisään jää 27,68 × 26,21 metrin piha. Ovia on kaksi, idässä ja lännessä, vaikka tämän tyypin majatalossa on tavallisesti yksi. Pääovi on itäsivulla, ja sen yllä oleva piirtokirjoituksen kehys jäi tyhjäksi. Alakerran ristiholvatun kaarikäytävän takana ovat holvatut huoneet, ja niiden edessä oli kaukalot, joihin matkustajan eläimet kytkettiin: tavara ja juhdat jäivät maan tasalle. Yläkertaan noustaan kahta kiviportaikkoa myöten pihan kaakkois- ja luoteiskulmasta. Huoneita on kahdessa kerroksessa yhteensä 68, ja yläkerran huone on tehty nukkumista varten: matalakaarinen ovi, tulisija, kaappina käytetty seinäsyvenn…
+- [Kypros — maalehti / Muinaisuus: Pyöreitä taloja muurin sisällä] Khirokitia on kukkulan rinteellä noin kuuden kilometrin päässä etelärannikolta, Maroni-joen mutkan sisällä. Kylässä asuttiin 7.–5. vuosituhannella eaa., ja laajimmillaan se peitti kolme hehtaaria. Talot olivat pyöreitä ja ne muurattiin savitiilestä ja kivestä; katto oli litteä. Yhteen asumukseen kuului useita pyöreitä rakennuksia pienen pihan ympärillä, ja pihalla oli tulisija ja altaita. Vainajat haudattiin talon sisään, poljetun lattian alle kaivettuihin kuoppiin, eikä taloa jätetty sen takia. Kylää suojasivat peräkkäiset muurit, ja kukkulan laelta on kaivettu esiin monimutkainen kulkujärjestely. Khirokitia otettiin maailmanperintöluetteloon 1998. Ranskalainen tutkimusryhmä on kaivanut pa…
+AIEMPI KYSYMYS: Millainen oli viikinkiajan pitkätalo?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tästä on sentään jotain tallessa. Eiríksstaðirin päärakennus oli pitkätalo, noin viisikymmentä neliömetriä ja neljätoista metriä pitkä. Sen keskellä oli pitkä [[tulisija]], ja seinät tehtiin [[turpeesta]] kiviperustan päälle, joten niiden paksuus oli metrin verran. Kaivauksissa on tunnistettu rakennuksen jäänteet 800–900-luvuilta.
+
+Turveseinä on minusta nerokas: ylhäältä katsottuna talo näyttää melkein kukkulan kyljestä kasvaneelta. Ei ihme, että sinne tehtiin museo.
+KYSYMYS: Kerro lisää: tulisija
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eiríksstaðir (merenkulku)
+Tietoruudun teksti: Eiríksstaðir on Eiríkr Þorvaldssonin — Punaisen Eirikin — entinen tila Haukadalurin laaksossa Dalasýslassa. Se on todennäköisesti hänen poikansa Leifr Eiríkssonin syntymäpaikka, ja Leifr on ensimmäinen tunnettu eurooppalainen, joka löysi Amerikan.
+
+Landnámabókin ja Punaisen Eirikin saagan mukaan Eiríkr asettui ensin Vestfirðiriin, nai Þjóðhildur Jǫrundardóttirin ja perusti tilan Vatnshornin lähelle Haukadaluriin. Sieltä hänen oli lähdettävä, kun hän oli tappanut kaksi miestä kostoksi omien orjiensa kuolemasta.
+
+Arkeologit ovat tutkineet paikkaa monta kertaa vuodesta 1894 alkaen, ja kaivauksissa on tunnistettu kahden rakennuksen jäänteet 800–900-luvuilta. Päärakennus oli pitkätalo, noin viisikymmentä neliömetriä ja neljätoista metriä pitkä, keskellä pitkä tulisija. Seinät olivat turvetta kiviperustan päällä, paksuudeltaan metrin verran. Lähistölle on rakennettu ulkoilmamuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Arki] Islantilainen arki pyörii kuuman veden, lampaiden ja sään ympärillä: uimala on kylän olohuone, syksyllä koko kylä lähtee vuorille, ja talot tehtiin ennen turpeesta.
+AIEMPI KYSYMYS: Millainen oli viikinkiajan pitkätalo?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tästä on sentään jotain tallessa. Eiríksstaðirin päärakennus oli pitkätalo, noin viisikymmentä neliömetriä ja neljätoista metriä pitkä. Sen keskellä oli pitkä [[tulisija]], ja seinät tehtiin [[turpeesta]] kiviperustan päälle, joten niiden paksuus oli metrin verran. Kaivauksissa on tunnistettu rakennuksen jäänteet 800–900-luvuilta.
+
+Turveseinä on minusta nerokas: ylhäältä katsottuna talo näyttää melkein kukkulan kyljestä kasvaneelta. Ei ihme, että sinne tehtiin museo.
+KYSYMYS: Kerro lisää: turpeesta
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hólar (kulttuuri)
+Tietoruudun teksti: Hólar on pieni yhteisö Hjaltadalurin laaksossa Skagafjörðurin alueella Pohjois-Islannissa, noin 379 kilometrin päässä Reykjavíkista. Asukkaita on satakunta. Paikalla ovat Hólarin korkeakoulun päärakennukset, katedraali, islanninhevosen historian keskus ja turvetalo Nýibær.
+
+Islannin ensimmäinen kirjapaino tuotiin Hólariin vuonna 1530. Hólar oli Pohjois-Islannin piispanistuin — Skálholt hoiti saman tehtävän etelässä — ja kulttuurin ja opetuksen keskus lähes seitsemän vuosisadan ajan, vuosina 1106–1798. Piispa Jón Ögmundsson perusti hiippakunnan 1106, ja siitä tuli pian toinen maan kahdesta oppineisuuden keskuksesta.
+
+Hólar oli myös katolisen kirkon viimeinen tukikohta Islannissa uskonpuhdistuksen aikana: sen viimeinen katolinen piispa Jón Arason mestattiin Skálholtissa 1550 kahden poikansa kanssa. Tunnetuin luterilainen piispa oli Guðbrandur Þorláksson. Nykyisen kirkon uskotaan valmistun…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Piispa joka taisteli uskontoaan vastaan ja hävisi] 1550 — Tanska määräsi Islannin luterilaiseksi 1500-luvulla, mutta Hólarin piispa Jón Arason kieltäytyi luopumasta katolisesta uskosta. Hän kokosi miehiä, otti vangiksi kilpailevan luterilaisen piispan ja hallitsi hetken käytännössä koko Pohjois-Islantia. Vuonna 1550 hänet ja hänen kaksi poikaansa vangittiin taistelun jälkeen, ja marraskuun 7. päivänä heidät mestattiin Skálholtissa ilman oikeudenkäyntiä — päätöksen teki kuninkaan kirjuri, koska pelättiin, ettei rauhaa muuten koskaan tulisi. Arasonin kuolema päätti katolisen kirkon vallan Islannissa.
+AIEMPI KYSYMYS: Milloin Islannin ensimmäinen kirjapaino tuli Hólariin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: se oli tärkeä vuosi. Kirjapaino tuotiin Hólariin vuonna 1530. Paikka oli Pohjois-Islannin [[piispanistuin]], kun [[Skálholt]] hoiti saman tehtävän etelässä, ja se oli kulttuurin ja opetuksen keskus lähes seitsemän vuosisadan ajan, vuosina 1106–1798. Kirjapainon tulo tuki siis jo vakiintunutta oppineisuuden keskusta. Hyvin muistin, vaikka lukuja oli paljon.
+KYSYMYS: Kerro lisää: piispanistuin
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hólar (kulttuuri)
+Tietoruudun teksti: Hólar on pieni yhteisö Hjaltadalurin laaksossa Skagafjörðurin alueella Pohjois-Islannissa, noin 379 kilometrin päässä Reykjavíkista. Asukkaita on satakunta. Paikalla ovat Hólarin korkeakoulun päärakennukset, katedraali, islanninhevosen historian keskus ja turvetalo Nýibær.
+
+Islannin ensimmäinen kirjapaino tuotiin Hólariin vuonna 1530. Hólar oli Pohjois-Islannin piispanistuin — Skálholt hoiti saman tehtävän etelässä — ja kulttuurin ja opetuksen keskus lähes seitsemän vuosisadan ajan, vuosina 1106–1798. Piispa Jón Ögmundsson perusti hiippakunnan 1106, ja siitä tuli pian toinen maan kahdesta oppineisuuden keskuksesta.
+
+Hólar oli myös katolisen kirkon viimeinen tukikohta Islannissa uskonpuhdistuksen aikana: sen viimeinen katolinen piispa Jón Arason mestattiin Skálholtissa 1550 kahden poikansa kanssa. Tunnetuin luterilainen piispa oli Guðbrandur Þorláksson. Nykyisen kirkon uskotaan valmistun…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Piispa joka taisteli uskontoaan vastaan ja hävisi] 1550 — Tanska määräsi Islannin luterilaiseksi 1500-luvulla, mutta Hólarin piispa Jón Arason kieltäytyi luopumasta katolisesta uskosta. Hän kokosi miehiä, otti vangiksi kilpailevan luterilaisen piispan ja hallitsi hetken käytännössä koko Pohjois-Islantia. Vuonna 1550 hänet ja hänen kaksi poikaansa vangittiin taistelun jälkeen, ja marraskuun 7. päivänä heidät mestattiin Skálholtissa ilman oikeudenkäyntiä — päätöksen teki kuninkaan kirjuri, koska pelättiin, ettei rauhaa muuten koskaan tulisi. Arasonin kuolema päätti katolisen kirkon vallan Islannissa.
+AIEMPI KYSYMYS: Milloin Islannin ensimmäinen kirjapaino tuli Hólariin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: se oli tärkeä vuosi. Kirjapaino tuotiin Hólariin vuonna 1530. Paikka oli Pohjois-Islannin [[piispanistuin]], kun [[Skálholt]] hoiti saman tehtävän etelässä, ja se oli kulttuurin ja opetuksen keskus lähes seitsemän vuosisadan ajan, vuosina 1106–1798. Kirjapainon tulo tuki siis jo vakiintunutta oppineisuuden keskusta. Hyvin muistin, vaikka lukuja oli paljon.
+KYSYMYS: Kerro lisää: Skálholt
