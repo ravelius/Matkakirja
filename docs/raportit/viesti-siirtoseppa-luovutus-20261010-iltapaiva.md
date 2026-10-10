@@ -12,7 +12,10 @@ Unity 6.7 on päälinja. Ei uusia GetInstanceID-kutsuja (CS0619).
 
 **Taustalla ei ole käynnissä olevia ajoja** (ei käännöstä, ei todistusajoa; simu 8362879F sammutettu 12.29).
 
-**Ensimmäinen tehtävä (erä 2, PT hyväksynyt):** kun LR lähettää palatsirajan korjauksen (LR:n jonossa ND v4:n ja NL-sali v2:n jälkeen),
+**TAUKO (omistaja 10.10. 12.5x, PT):** vain bugikorjaukset (myös Natiivisepän junan 177 korjauspyynnöt), kunnes bugikorjausjulkaisu (build 177)
+ja tilinvaihto on tehty. Erä 2 aloitetaan vasta tauon jälkeen PT:n luvalla. LR:n palatsi 1499 on VALMIS: PALA cf16ad94ef3c76bc.
+
+**Ensimmäinen tehtävä tauon jälkeen (erä 2, PT hyväksynyt):** LR:n palatsirajan korjaus (PALA cf16ad94ef3c76bc):
 kytke uusi paketti (PelattavaPala.Hash/Versio + kultaiset osat/merkit/rakennus/liekit ämpäristä
 `https://media.matkakirja.app/dioraama/olavinlinna/<hash>/rakennus.json` ja `blender/kavely/{osat,merkit}.json`; liekit eivät ole paketissa,
 kopioi edellinen kultainen nimellä), poista `Linssit-testit/Testit/OsaviipaleetTestit.cs`:n `OdottaaKorjausta`-rivit (testi kaatuu, kun viipale
