@@ -174,6 +174,32 @@ namespace Matkakirja.Peli
         string odottaaPuhetta, puheEnnenJaksoa;
         Soitin odottavaNopea;
         bool esitysSoi;
+        /// <summary>Esityksen korotus päättyi (EsitysLoppui), vaikka nopea soisi vielä; nollautuu, kun uusi esitys alkaa.</summary>
+        bool esitysKorotusPois;
+
+        /// <summary>
+        /// SAAPUMISESITYKSEN KOROTUS (PT 11.10., simu 8aaca5953: väistö 0,8 voimassa, mutta musiikki −55…−61 dB puheen tauossa):
+        /// saapumisesityksen nopea (traileri + nykyintro C1–C5) soi EsitysMusiikinKerroin-kertaisena (oletus 6,8 ≈ +16 dB), puheen
+        /// alla väistö EsitysVaistoPuhe päälle. Ei koske muita kappaleita, linssin pitoa (introPito), visaa, hiljennyksiä (lehti,
+        /// linssi, pollo …) eikä näytteen tai visan väistöä: silloin taso on tavallinen. Päättyy EsitysLoppui-kutsusta (EsitysLaskuMs),
+        /// katkosta (nopea häipyy), paikan vaihdosta ja nopean lopusta.
+        /// </summary>
+        public double EsitysKorotus =>
+            esitysSoi && !esitysKorotusPois && jaksoVaihe == 0 && !introPito && hiljennykset.Count == 0 && !VisaAuki
+            && pyydetty >= AaniVakiot.VaistoPuhe - 1e-9
+                ? Math.Max(1, AaniVakiot.EsitysMusiikinKerroin) : 1;
+
+        /// <summary>
+        /// Esitys loppui (nykyintro loppui, Ohita, lähtö): korotus pois, ja yhä soiva nopea laskee tavalliselle tasolle
+        /// laskuMs:ssä (EsitysLaskuMs 3 s). Ilman korotusta ei tee mitään.
+        /// </summary>
+        public void EsitysLoppui(int laskuMs) => Tee(() =>
+        {
+            if (!esitysSoi || esitysKorotusPois) return;
+            bool korotettu = EsitysKorotus > 1;
+            esitysKorotusPois = true;
+            if (korotettu && pohja != null && pohja != odottavaNopea && jaksoVaihe == 0) Ramppi(pohja, PohjaTaso(Voimassa), laskuMs);
+        });
 
         /// <summary>Testeille ja lokiin: "pariisi:nopea" tms. tai null (ei jaksoa).</summary>
         public string Jakso => jaksoKaupunki == null ? null : jaksoKaupunki + ":" + new[] { "nopea", "tauko", "hidas", "tausta" }[jaksoVaihe];
@@ -584,7 +610,7 @@ namespace Matkakirja.Peli
             if (odottaaPuhetta != kaupunki) return;
             odottaaPuhetta = null;
             if (jaksoVaihe != 0) { odottavaNopea = null; return; }
-            esitysSoi = true;
+            esitysSoi = true; esitysKorotusPois = false;
             JatkaOdottanutta(AaniVakiot.EsitysNousuMs);
         });
 
@@ -620,7 +646,7 @@ namespace Matkakirja.Peli
             esitysSoi = false;
             odottavaNopea = null;
             odottaaPuhetta = null;
-            if (puheEnnenJaksoa == kaupunki) { puheEnnenJaksoa = null; esitysSoi = true; return; }
+            if (puheEnnenJaksoa == kaupunki) { puheEnnenJaksoa = null; esitysSoi = true; esitysKorotusPois = false; return; }
             if (NopeaOdottaaPuhetta?.Invoke(kaupunki) == true) odottaaPuhetta = kaupunki;
         }
 
@@ -950,16 +976,17 @@ namespace Matkakirja.Peli
 
         // --- tasot ----------------------------------------------------------------
 
-        double PohjaTaso(double kerroin) =>
-            AaniVakiot.MusiikinPerustaso * (introPito ? 1 : EsityksenKerroin(kerroin)) * MusiikinKerroin * (AvausKaynnissa ? AaniVakiot.AvauksenMusiikki : 1);
+        double PohjaTaso(double kerroin) => Math.Min(1,
+            AaniVakiot.MusiikinPerustaso * (introPito ? 1 : EsityksenKerroin(kerroin)) * MusiikinKerroin * (AvausKaynnissa ? AaniVakiot.AvauksenMusiikki : 1)
+            * EsitysKorotus);
 
         /// <summary>
         /// Saapumisesityksen nopea puheen alla: aina EsitysVaistoPuhe (hiljennykset ennallaan, 0,45), ei koskaan tavallista 0,25:tä.
-        /// Ehto ei vaadi pyydetty == VaistoPuhe (liukulukuvertailu ja muu pyyntö, esim. toinen puhuja tai näyte, pudottaisivat
-        /// esityksen 0,25:een); muuten kerroin sellaisenaan.
+        /// Ehto ei vaadi pyydetty == VaistoPuhe (liukulukuvertailu, toinen puhuja); näytteen ja visan syvempi väistö (0,15)
+        /// pätee kuten muualla. Muuten kerroin sellaisenaan.
         /// </summary>
         double EsityksenKerroin(double kerroin) =>
-            esitysSoi && jaksoVaihe == 0 && puhujia > 0
+            esitysSoi && jaksoVaihe == 0 && puhujia > 0 && pyydetty >= AaniVakiot.VaistoPuhe - 1e-9
                 ? Math.Max(kerroin, Vaisto.Voimassa(AaniVakiot.EsitysVaistoPuhe, hiljennykset)) : kerroin;
 
         double VisaTaso(double kerroin) =>

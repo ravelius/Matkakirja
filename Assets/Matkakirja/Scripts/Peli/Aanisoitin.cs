@@ -722,6 +722,7 @@ namespace Matkakirja.Natiivi
                 Debug.Log("MATKAKIRJA ui saapuminen: musiikki taso"
                     + $" t={(Time.unscaledTime - t0).ToString("0.00", ic)} lahde={a.volume.ToString("0.0000", ic)}"
                     + $" tavoite={tavoite.ToString("0.0000", ic)} kerroin={(perus > 0 ? tavoite / perus : double.NaN).ToString("0.00", ic)}"
+                    + $" korotus={Tila.EsitysKorotus.ToString("0.00", ic)}"
                     + $" aika={a.time.ToString("0.00", ic)} soi={a.isPlaying} puhujia={Tila.Puhujia}"
                     + $" pyydetty={Tila.Pyydetty.ToString("0.00", ic)} voimassa={Tila.Voimassa.ToString("0.00", ic)}"
                     + $" syyt={(Tila.Hiljennykset.Count > 0 ? string.Join(",", Tila.Hiljennykset) : "-")} jakso={Tila.Jakso ?? "-"}"
@@ -743,6 +744,18 @@ namespace Matkakirja.Natiivi
             s.esitysPuheAika = Time.unscaledTime + Mathf.Max(0f, viiveS);
             if (viiveS > 0f) { s.esitysViiveKaupunki = kaupunki; s.esitysViiveAika = Time.unscaledTime + viiveS; return; }
             s.AloitaEsitysMusiikki(kaupunki);
+        }
+
+        /// <summary>
+        /// Saapumisesitys loppui (Saapumisesitys: nykyintro loppui, Ohita, lähtö): esityksen korotus pois, ja yhä soiva nopea laskee
+        /// tavalliselle tasolle EsitysLaskuMs:ssä (3 s).
+        /// </summary>
+        public static void EsitysMusiikkiLoppui(string syy)
+        {
+            var s = Instanssi;
+            if (s?.Tila == null) return;
+            if (s.Tila.EsitysKorotus > 1) Debug.Log($"MATKAKIRJA ui saapuminen: musiikin korotus päättyy ({syy}), lasku {AaniVakiot.EsitysLaskuMs} ms");
+            s.Tila.EsitysLoppui(AaniVakiot.EsitysLaskuMs);
         }
 
         /// <summary>Traileri päättyi tai ohitettiin ennen puhetta (tai sitä ei näytetty): odottava nopea alkaa tavallisesti.</summary>

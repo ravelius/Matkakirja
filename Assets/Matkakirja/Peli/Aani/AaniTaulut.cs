@@ -39,6 +39,13 @@ namespace Matkakirja.Peli
         /// vaatimus ≥ −40 dB (perustaso kaappauksessa ~−37 dB, 0,8 → ~−39 dB).
         /// </summary>
         public static double EsitysVaistoPuhe => Asetus.Luku("aanet.EsitysVaistoPuhe", 0.8);
+        /// <summary>
+        /// Saapumisesityksen nopean korotus koko esityksen ajan (PT 11.10., simu 8aaca5953: puheen tauossa −55…−61 dB): 6,8 ≈ +16 dB
+        /// PohjaTasoon (AaniTila.EsitysKorotus); taso rajataan 1,0:aan. Asetus-avain, säädettävä osoitinvaihdolla.
+        /// </summary>
+        public static double EsitysMusiikinKerroin => Asetus.Luku("aanet.EsitysMusiikinKerroin", 6.8);
+        /// <summary>Esityksen loputtua (nykyintro loppui, Ohita, lähtö) yhä soiva nopea laskee tavalliselle tasolle tässä ajassa.</summary>
+        public static int EsitysLaskuMs => Asetus.Kokonais("aanet.EsitysLaskuMs", 3000);
 
         // --- visamusiikki (MUSIIKKI_VOIMA = perustaso × 1,3) ---
         public static double VisanKerroin => Asetus.Luku("aanet.VisanKerroin", 1.3);

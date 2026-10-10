@@ -528,6 +528,9 @@ namespace Matkakirja.Natiivi
             introAjo?.Pause(); introAjo = null;
             introLopetus?.Invoke(); introLopetus = null;
             if (vaienna) { Aanisoitin.Instanssi?.KaupunkiIntroOhita(); UnityEngine.Debug.Log($"MATKAKIRJA ui saapuminen: {introKaupunki} nykyintro ohitettu"); }
+            // Esityksen musiikin korotus (PT 11.10.) päättyy intron mukana: yhä soiva nopea laskee tavalliselle tasolle 3 s:ssä
+            // (Ohitassa ja lähdössä katko häivyttää nopean joka tapauksessa).
+            Aanisoitin.EsitysMusiikkiLoppui(vaienna ? "ohitus tai lähtö" : "nykyintro loppui");
             introKaupunki = null;
         }
 

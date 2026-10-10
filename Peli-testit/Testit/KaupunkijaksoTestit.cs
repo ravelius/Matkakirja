@@ -364,11 +364,20 @@ namespace Matkakirja.Peli.Testit
 
         /// <summary>Pohjan tavoite suhteessa täyteen tasoon (perustaso × liukukerroin): 1 = täysi, EsitysVaistoPuhe, 0,25 = tavallinen.</summary>
         static double Kerroin(AaniTila s) => s.Toive(Kanava.Pohja).Tavoite / (AaniVakiot.MusiikinPerustaso * s.MusiikinKerroin);
+        /// <summary>Odotettu kerroin: väistö × esityksen korotus (PT 11.10.), taso rajattuna 1,0:aan.</summary>
+        static double Odotettu(AaniTila s, double vaisto, bool korotus = true)
+        {
+            double perus = AaniVakiot.MusiikinPerustaso * s.MusiikinKerroin;
+            return System.Math.Min(1, perus * vaisto * (korotus ? AaniVakiot.EsitysMusiikinKerroin : 1)) / perus;
+        }
+        static void Lahella(AaniTila s, double odotettu, string missa) =>
+            Oleta.Tosi(System.Math.Abs(Kerroin(s) - odotettu) < 1e-9, $"{missa}: kerroin {Kerroin(s):0.000}, odotettu {odotettu:0.000}");
         static void EsitysTasolla(AaniTila s, string missa)
         {
             var w = s.Toive(Kanava.Pohja);
             Oleta.Tosi(!w.Tauko && Soi(s, "musa-kaupunki-pariisi-nopea"), missa + ": nopea soi: " + Pohja(s));
-            Oleta.Tosi(System.Math.Abs(Kerroin(s) - AaniVakiot.EsitysVaistoPuhe) < 1e-9, $"{missa}: kerroin {Kerroin(s):0.000}, odotettu {AaniVakiot.EsitysVaistoPuhe}");
+            Lahella(s, Odotettu(s, AaniVakiot.EsitysVaistoPuhe), missa);
+            Oleta.Sama(AaniVakiot.EsitysMusiikinKerroin, s.EsitysKorotus, missa + ": korotus");
         }
 
         [Testi] static void EsitysVaistoOnPuheenAllaVahintaanKahdeksanKymmenesta()
@@ -395,7 +404,7 @@ namespace Matkakirja.Peli.Testit
             s.AsetaLiuku(80);
             EsitysTasolla(s, "liuku muuttui");
             s.Puhe(false);
-            Oleta.Tosi(System.Math.Abs(Kerroin(s) - 1) < 1e-9, $"puhe loppui: täysi ({Kerroin(s):0.000})");
+            Lahella(s, Odotettu(s, 1), "puhe loppui: täysi korotettuna");
             s.Puhe(true); // uusi puhe (esim. seuraava klippi) esityksen aikana
             EsitysTasolla(s, "uusi puhe");
         }
@@ -406,7 +415,7 @@ namespace Matkakirja.Peli.Testit
             var s = Esitys();
             s.Paikka("pariisi", "kaupunki");
             s.JaksonNopeaAlkaa("pariisi");
-            Oleta.Tosi(System.Math.Abs(Kerroin(s) - 1) < 1e-9, "ilman puhetta täysi");
+            Lahella(s, Odotettu(s, 1), "ilman puhetta täysi korotettuna");
             s.Puhe(true);
             EsitysTasolla(s, "puhe alkoi");
             Oleta.Sama(AaniVakiot.VaistoLiukuMs, s.Toive(Kanava.Pohja).KestoMs);
@@ -426,13 +435,102 @@ namespace Matkakirja.Peli.Testit
             s.Paikka("pariisi", "kaupunki");
             s.Puhe(true);
             s.JaksonNopeaAlkaa("pariisi");
-            s.Nayte(true); // muu väistöpyyntö puheen aikana
-            EsitysTasolla(s, "näyte");
+            s.Nayte(true); // näytteen syvempi väistö (0,15) pätee kuten muualla, korotus pois
+            Lahella(s, AaniVakiot.VaistoNayte, "näyte");
+            Oleta.Sama(1.0, s.EsitysKorotus, "näytteen aikana ei korotusta");
             s.Nayte(false); // web: pyydetty = viimeisin kirjoitus (1) → täysi, ei koskaan alle esitystason
-            Oleta.Tosi(Kerroin(s) >= AaniVakiot.EsitysVaistoPuhe - 1e-9, "näyte loppui: " + Kerroin(s));
-            // Hiljennys rajaa kuten ennen: min(esitys, 0,45).
+            Oleta.Tosi(Kerroin(s) >= Odotettu(s, AaniVakiot.EsitysVaistoPuhe) - 1e-9, "näyte loppui: " + Kerroin(s));
+            s.Puhe(false); s.Puhe(true);
+            EsitysTasolla(s, "puhe taas");
+            // Hiljennys rajaa kuten ennen: min(esitys, 0,45), eikä korotusta.
             s.Hiljennys("testi", true); // ei tilaraitaa: vain hiljennys
-            Oleta.Tosi(System.Math.Abs(Kerroin(s) - System.Math.Min(AaniVakiot.EsitysVaistoPuhe, AaniVakiot.VaistoHiljennys)) < 1e-9, "hiljennys: " + Kerroin(s));
+            Lahella(s, System.Math.Min(AaniVakiot.EsitysVaistoPuhe, AaniVakiot.VaistoHiljennys), "hiljennys");
+            Oleta.Sama(1.0, s.EsitysKorotus, "hiljennys: ei korotusta");
+            s.Hiljennys("testi", false);
+            EsitysTasolla(s, "hiljennys ohi");
+        }
+
+        // --- ESITYKSEN KOROTUS (PT 11.10., simu 8aaca5953: puheen tauossa −55…−61 dB; aanet.EsitysMusiikinKerroin 6,8) ---------
+
+        [Testi] static void EsitysKorotusVainEsityksenNopealle()
+        {
+            Oleta.Tosi(System.Math.Abs(AaniVakiot.EsitysMusiikinKerroin - 6.8) < 1e-9, "oletus 6,8 (≈ +16 dB)");
+            Oleta.Sama(3000, AaniVakiot.EsitysLaskuMs, "lasku 3 s");
+            // Muut kappaleet ja tavallinen nopea (ei esitystä) ilman korotusta.
+            var s = Esitys();
+            s.Paikka("lontoo", "kaupunki");
+            Oleta.Sama(1.0, s.EsitysKorotus, "Lontoo");
+            Lahella(s, 1, "Lontoo tavallisella tasolla");
+            var e = Uusi();
+            e.NopeaOdottaaPuhetta = k => false;
+            e.Paikka("pariisi", "kaupunki");
+            Oleta.Sama(1.0, e.EsitysKorotus, "nopea ilman esitystä");
+            Lahella(e, 1, "nopea ilman esitystä tavallisella tasolla");
+            // Esitys: odottava ei vielä korota, puheen kanssa korotus ja väistö.
+            s.Paikka("pariisi", "kaupunki");
+            s.Puhe(true);
+            s.JaksonNopeaAlkaa("pariisi");
+            EsitysTasolla(s, "esitys");
+            Oleta.Tosi(s.Toive(Kanava.Pohja).Tavoite <= 1, "taso ≤ 1");
+            // Visa ja linssin pito: ei korotusta.
+            s.Visa(true);
+            Oleta.Sama(1.0, s.EsitysKorotus, "visa");
+            Oleta.Tosi(s.Toive(Kanava.Pohja).Url == null || Kerroin(s) <= AaniVakiot.EsitysVaistoPuhe + 1e-9, "visa: ei korotettua pohjaa: " + Kerroin(s));
+            s.Visa(false);
+        }
+
+        [Testi] static void EsitysKorotusRajataanYkkoseen()
+        {
+            var s = Esitys();
+            s.AsetaLiuku(100);
+            Asetus.Lue("{\"skeema\":1,\"aanet\":{\"EsitysMusiikinKerroin\":1000}}", "testi");
+            try
+            {
+                s.Paikka("pariisi", "kaupunki");
+                s.JaksonNopeaAlkaa("pariisi");
+                Oleta.Sama(1.0, s.Toive(Kanava.Pohja).Tavoite, "taso rajattu 1,0:aan");
+            }
+            finally { Asetus.Tyhjenna(); }
+            Oleta.Tosi(System.Math.Abs(AaniVakiot.EsitysMusiikinKerroin - 6.8) < 1e-9, "oletus palasi");
+        }
+
+        [Testi] static void EsitysKorotusPaattyyKolmenSekunninRampilla()
+        {
+            // Nykyintro loppui / Ohita / lähtö (Saapumisesitys.LopetaIntro → Aanisoitin.EsitysMusiikkiLoppui): soiva nopea laskee 3 s:ssä.
+            var s = Esitys();
+            s.Paikka("pariisi", "kaupunki");
+            s.Puhe(true);
+            s.JaksonNopeaAlkaa("pariisi");
+            s.Puhe(false);
+            Lahella(s, Odotettu(s, 1), "korotettu");
+            s.EsitysLoppui(AaniVakiot.EsitysLaskuMs);
+            Oleta.Sama(1.0, s.EsitysKorotus, "korotus pois");
+            Lahella(s, 1, "tavallinen taso");
+            Oleta.Sama(AaniVakiot.EsitysLaskuMs, s.Toive(Kanava.Pohja).KestoMs, "3 s:n ramppi");
+            Oleta.Tosi(Soi(s, "musa-kaupunki-pariisi-nopea"), "nopea soi edelleen");
+            s.EsitysLoppui(AaniVakiot.EsitysLaskuMs);
+            Oleta.Sama(null, s.Toive(Kanava.Pohja).KestoMs, "toinen kutsu ei tee mitään");
+            s.Puhe(true);
+            Lahella(s, AaniVakiot.EsitysVaistoPuhe, "korotus ei palaa puheen myötä, väistö ennallaan");
+            // Katko (intron 31 s / Ohita): nopea häipyy, hidas tavallisella tasolla.
+            var k = Esitys();
+            k.Paikka("pariisi", "kaupunki");
+            k.JaksonNopeaAlkaa("pariisi");
+            k.JaksonIntroKatko(2000);
+            k.JaksonIntroHidas();
+            Oleta.Tosi(Soi(k, "musa-kaupunki-pariisi") && !Soi(k, "musa-kaupunki-pariisi-nopea"), "hidas: " + Pohja(k));
+            Oleta.Sama(1.0, k.EsitysKorotus, "hitaassa ei korotusta");
+            Lahella(k, 1, "hidas tavallisella tasolla");
+            // Paikan vaihto: uusi kaupunki ilman korotusta; uusi esitys korottaa taas.
+            var p = Esitys();
+            p.Paikka("pariisi", "kaupunki");
+            p.JaksonNopeaAlkaa("pariisi");
+            p.EsitysLoppui(AaniVakiot.EsitysLaskuMs);
+            p.Paikka("lontoo", "kaupunki");
+            Oleta.Sama(1.0, p.EsitysKorotus);
+            p.Paikka("pariisi", "kaupunki");
+            p.JaksonNopeaAlkaa("pariisi");
+            Oleta.Sama(AaniVakiot.EsitysMusiikinKerroin, p.EsitysKorotus, "uusi esitys korottaa");
         }
     }
 }
