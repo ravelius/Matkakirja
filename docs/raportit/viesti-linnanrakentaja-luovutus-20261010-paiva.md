@@ -205,3 +205,7 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
   (ei valkoinen), portaalit porrastettuina syvennyksinä geometriana + AO (tummat 70 m:stä), tornien aukot ja kuninkaiden galleria tummina, ruusuikkuna
   tumma; onnistuessa porttiin edestä-vyöhyke (länteen katsovat pystypinnat). 2) Peking: portti laattoihin vertailu/peking-ortoa vasten ND v4c:n
   jälkeen; katot kylläisen oranssit (oikea kullankeltainen lasite), Kansan suuri halli ja museo litteinä harmaina laattoina 500–1 500 m:stä.
+- **PT (saapui tauon aikana, kirjoitettu ennen TAUKOa):** vertailuportti SITOVA uusille versioille (hyväksytty). Pyydetty kalibrointi ±5 %:iin
+  ortokuvasta teksturoidulla pinnalla — JO TOTEUTUU: ND:n parvis (IGN 2018 -orto) maa −4 % (v4b-ks), Eiffelin maa −1 %. Préfecturen (−19 %) ja
+  KL:n (−27 %) maa EI ole ortokuvasta (synteettinen asfaltti/jalkakäytävä, KL Copernicus 2 m) → ero on mallissa, ei renderissä. Kerrottu PT:lle.
+  Tauon jälkeen järjestys: ND v4c → LS2 (Eiffel v2 peruttu 12.3x).
