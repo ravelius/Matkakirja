@@ -404,7 +404,8 @@ namespace Matkakirja.Peli
         });
 
         /// <summary>Aloituslennon aihe (Lontoosta ensimmäiseen kaupunkiin, 26 s; päättyy perillä laskuun).</summary>
-        public void AloituslentoAlkoi() => Aihe(t.AloituslentoAihe);
+        /// Kartalla vain kaupungin oma kappale (KarttaVainKaupunki, omistaja 10.10.2026; PT 11.4x): lento ilman musiikkia.
+        public void AloituslentoAlkoi() { if (!t.KarttaVainKaupunki) Aihe(t.AloituslentoAihe); }
 
         /// <summary>Kaikki aarteet löytyivät: matkan loppu (johtoaihe täytenä).</summary>
         public void MatkaLoppui() => Aihe(t.LoppuAihe);
