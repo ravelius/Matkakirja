@@ -17,7 +17,7 @@
   "kohde": "kohde:ohridinjarvi",
   "kasite": "endeemisiä",
   "kysymys": "Kerro lisää: endeemisiä",
-  "vastaus": "Endeeminen laji tarkoittaa lajia, jota tavataan luonnossa vain tietyllä rajatulla alueella eikä missään muualla. [[Ohridinjärvessä]] tällaisia lajeja on yli 200. Järven pitkä ikä, noin 3–5 miljoonaa vuotta, ja sen eristynyt sijainti vuorten ympäröimänä ovat antaneet eliöille aikaa kehittyä omiksi muodoikseen. Ilmiö on tyypillinen [[vanhoille järville]] ja saarille, joissa eliökannat ovat jääneet erilleen muista.",
+  "vastaus": "Endeeminen laji tarkoittaa lajia, jota tavataan luonnossa vain tietyllä rajatulla alueella eikä missään muualla. [[Ohridinjärvessä]] tällaisia lajeja on yli 200. Ohridinjärvi on yksi Euroopan vanhimmista ja syvimmistä järvistä; porausten mukaan nykyinen järvi on syntynyt noin 1,4 miljoonaa vuotta sitten. Sen pitkä ikä ja eristynyt sijainti vuorten ympäröimänä ovat antaneet eliöille aikaa kehittyä omiksi muodoikseen. Ilmiö on tyypillinen [[vanhoille järville]] ja saarille, joissa eliökannat ovat jääneet erilleen muista.",
   "linkit": [
    "Ohridinjärvessä",
    "vanhoille järville"
@@ -45,10 +45,10 @@
   "kohde": "kohde:ohridinjarvi",
   "kasite": "Unescon",
   "kysymys": "Kerro lisää: Unescon",
-  "vastaus": "Unesco on Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö, joka perustettiin vuonna 1945 ja jonka pääkonttori on Pariisissa. Se ylläpitää maailmanperintöluetteloa, johon otetaan kohteita, joilla katsotaan olevan koko ihmiskunnalle poikkeuksellista kulttuurista tai luonnonarvoa. Luettelon perustana on vuonna 1972 hyväksytty [[maailmanperintösopimus]]. [[Ohridinjärvi]] merkittiin luetteloon vuonna 1979, ja Albanian puoli liitettiin siihen vuonna 2019, joten suojelu kattaa nykyään järven molemmat rannat.",
+  "vastaus": "Unesco on Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö, joka perustettiin vuonna 1945 ja jonka pääkonttori on Pariisissa. Se ylläpitää maailmanperintöluetteloa, johon otetaan kohteita, joilla katsotaan olevan koko ihmiskunnalle poikkeuksellista kulttuurista tai luonnonarvoa. Luettelon perustana on vuonna 1972 hyväksytty [[maailmanperintösopimus]]. [[Unesco]] merkitsi Ohridinjärven maailmanperintökohteeksi vuonna 1979 sen luonnonarvojen vuoksi, ja Ohridin kaupungin kulttuuriperintö liitettiin kohteeseen vuonna 1980. Albanian puoli liitettiin kohteeseen vuonna 2019, joten suojelu kattaa nykyään järven molemmat rannat.",
   "linkit": [
    "maailmanperintösopimus",
-   "Ohridinjärvi"
+   "Unesco"
   ],
   "jatkot": [
    "Milloin ensimmäiset kohteet merkittiin maailmanperintöluetteloon?",
@@ -73,12 +73,12 @@
   "kohde": "kohde:ohridinjarvi",
   "kasite": "Ohrid",
   "kysymys": "Kerro lisää: Ohrid",
-  "vastaus": "Ohrid on Pohjois-Makedonian kaupunki Ohridinjärven rannalla. Se oli 800-luvun lopulla [[Kliment Ohridilaisen]] koulun ansiosta yksi Euroopan tärkeimmistä slaavilaisen kirjallisuuden ja [[kyrillisen kirjaimiston]] keskuksista. Keskiajalla kaupungissa kerrotaan olleen 365 kirkkoa, yksi jokaiselle päivälle, mutta luku on liioittelua. Kuuluisin jäljellä olevista on kalliolle Kaneon niemelle rakennettu [[Pyhän Johanneksen kirkko]] 1200-luvulta. Kaupunki ja järvi merkittiin [[Unescon]] maailmanperintöluetteloon vuonna 1979.",
+  "vastaus": "Ohrid on Pohjois-Makedonian kaupunki Ohridinjärven rannalla. Se oli 800-luvun lopulla [[Kliment Ohridilaisen]] koulun ansiosta yksi Euroopan tärkeimmistä slaavilaisen kirjallisuuden ja [[kyrillisen kirjaimiston]] keskuksista. Keskiajalla kaupungissa kerrotaan olleen 365 kirkkoa, yksi jokaiselle päivälle, mutta luku on liioittelua. Kuuluisin jäljellä olevista on kalliolle Kaneon niemelle rakennettu [[Pyhän Johanneksen kirkko]] 1200-luvulta. [[Unesco]] merkitsi Ohridinjärven maailmanperintökohteeksi vuonna 1979 sen luonnonarvojen vuoksi, ja Ohridin kaupungin kulttuuriperintö liitettiin kohteeseen vuonna 1980.",
   "linkit": [
    "Kliment Ohridilaisen",
    "kyrillisen kirjaimiston",
    "Pyhän Johanneksen kirkko",
-   "Unescon"
+   "Unesco"
   ],
   "jatkot": [
    "Kuka oli Kliment Ohridilainen ja mitä hän opetti?",
@@ -118,7 +118,7 @@
   "kohde": "kohde:ohridinjarvi",
   "kasite": "Unesco",
   "kysymys": "Kerro lisää: Unesco",
-  "vastaus": "Unesco on Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö, joka perustettiin vuonna 1945. Sen tunnetuin tehtävä on [[maailmanperintöluettelo]], jossa kohteet jaetaan kulttuurikohteisiin, luontokohteisiin ja molempia arvoja yhdistäviin sekakohteisiin. Ohridin alueella on tunnustettu sekä järven luonto että kaupungin kulttuuriperintö. Unesco vaalii myös [[aineetonta kulttuuriperintöä]], kuten perinteitä, käsityötaitoja ja suullista kerrontaa. Ohridin kohde merkittiin luetteloon vuonna 1979 ja Albanian puoli lisättiin vuonna 2019.",
+  "vastaus": "Unesco on Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö, joka perustettiin vuonna 1945. Sen tunnetuin tehtävä on [[maailmanperintöluettelo]], jossa kohteet jaetaan kulttuurikohteisiin, luontokohteisiin ja molempia arvoja yhdistäviin sekakohteisiin. Ohridin alueella on tunnustettu sekä järven luonto että kaupungin kulttuuriperintö. Unesco vaalii myös [[aineetonta kulttuuriperintöä]], kuten perinteitä, käsityötaitoja ja suullista kerrontaa. Unesco merkitsi Ohridinjärven maailmanperintökohteeksi vuonna 1979 sen luonnonarvojen vuoksi, ja Ohridin kaupungin kulttuuriperintö liitettiin kohteeseen vuonna 1980. Albanian puoli liitettiin kohteeseen vuonna 2019.",
   "linkit": [
    "maailmanperintöluettelo",
    "aineetonta kulttuuriperintöä"
@@ -161,7 +161,7 @@
   "kohde": "kohde:matkan-kanjoni",
   "kasite": "Treskan",
   "kysymys": "Kerro lisää: Treskan",
-  "vastaus": "Treska on Pohjois-Makedonian länsiosassa virtaava joki, joka laskee Skopjen lähellä [[Vardar]]-jokeen. Matkan kanjonissa se on uurtanut jyrkät kalliorinteet, joiden varrella on kymmenen luolaa ja kolme luostaria. Jokea on padottu, ja kanjonissa vaelletaan ja melotaan. Kanjonin rinteillä sijaitseva [[Pyhän Andreaksen luostari]] perustettiin noin vuonna 1388.",
+  "vastaus": "Treska on Pohjois-Makedonian länsiosassa virtaava joki, joka laskee Skopjen lähellä [[Vardar]]-jokeen. Matkan kanjonissa se on uurtanut jyrkät kalliorinteet, joiden varrella on kymmenen luolaa ja kolme luostaria. Jokea on padottu, ja kanjonissa vaelletaan ja melotaan. Kanjonin rinteillä sijaitseva [[Pyhän Andreaksen luostari]] perustettiin 1300-luvun lopulla (lähteet antavat vuodeksi 1388 tai 1389), joten se on yli kuusisataa vuotta vanha.",
   "linkit": [
    "Vardar",
    "Pyhän Andreaksen luostari"
@@ -175,7 +175,7 @@
   "kohde": "kohde:matkan-kanjoni",
   "kasite": "luostaria",
   "kysymys": "Kerro lisää: luostaria",
-  "vastaus": "Matkan kanjonin rinteillä on kolme luostaria, joista tunnetaan Pyhän Andreaksen luostari, jonka perustamisajaksi mainitaan noin vuosi 1388. Luostarit ovat kristillisen perinteen jäänteitä alueella, joka kuuluu [[ortodoksisen kirkon]] vanhaan vaikutuspiiriin. Kanjoni sijaitsee [[Skopjen]] länsipuolella, ja nykyään sen rauhallisilla rinteillä vaelletaan ja joella melotaan.",
+  "vastaus": "Matkan kanjonin rinteillä on kolme luostaria, joista tunnetaan Pyhän Andreaksen luostari, joka perustettiin 1300-luvun lopulla (lähteet antavat vuodeksi 1388 tai 1389), joten se on yli kuusisataa vuotta vanha. Luostarit ovat kristillisen perinteen jäänteitä alueella, joka kuuluu [[ortodoksisen kirkon]] vanhaan vaikutuspiiriin. Kanjoni sijaitsee [[Skopjen]] länsipuolella, ja nykyään sen rauhallisilla rinteillä vaelletaan ja joella melotaan.",
   "linkit": [
    "ortodoksisen kirkon",
    "Skopjen"
@@ -189,11 +189,11 @@
   "kohde": "kohde:matkan-kanjoni",
   "kasite": "Skopjen",
   "kysymys": "Kerro lisää: Skopjen",
-  "vastaus": "Skopje on Pohjois-Makedonian pääkaupunki, ja se sijaitsee [[Vardar]]-joen varrella. Roomalaiset perustivat joen mutkaan [[Scupin]] kaupungin, jonka maanjäristys tuhosi lähes kokonaan vuonna 518. Keisari Justinianus I käski rakentaa läheiselle kukkulalle uuden linnoituksen, nykyisen [[Kalen]], osin raunioituneen kaupungin kivistä. Kaupunkia koetteli uusi suuri maanjäristys vuonna 1963. Nykyään pääaukiolla on vuonna 2011 paljastettu pronssipatsas Ratsastava soturi, joka kuuluu [[Skopje 2014]] -hankkeeseen.",
+  "vastaus": "Skopje on Pohjois-Makedonian pääkaupunki, ja se sijaitsee [[Vardar]]-joen varrella. Sen lähelle roomalaiset perustivat [[Scupin]] kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus. Vuonna 518 maanjäristys tuhosi Scupin, ja läheiselle kukkulalle rakennettiin [[Kale]]-linnoitus, johon arkeologien mukaan siirrettiin kiveä kaupungin raunioista. Kaupunkia koetteli uusi suuri maanjäristys vuonna 1963. Nykyään pääaukiolla on vuonna 2011 paljastettu pronssipatsas Ratsastava soturi, joka kuuluu [[Skopje 2014]] -hankkeeseen.",
   "linkit": [
    "Vardar",
    "Scupin",
-   "Kalen",
+   "Kale",
    "Skopje 2014"
   ],
   "jatkot": [
@@ -337,7 +337,7 @@
   "kohde": "kohde:stobi",
   "kasite": "municipiumin",
   "kysymys": "Kerro lisää: municipiumin",
-  "vastaus": "Municipium oli roomalainen kaupunki, jolla oli oma itsehallinto mutta joka kuului Rooman valtaan. Asukkaat saivat usein [[Rooman kansalaisoikeudet]] joko kokonaan tai osittain, ja kaupunki hallitsi itseään omien virkamiestensä ja neuvostonsa avulla. Stobi sai tämän aseman vuonna 69 eaa., ja myöhemmin siitä tuli [[Macedonia Salutaris]] -provinssin pääkaupunki.",
+  "vastaus": "Municipium oli roomalainen kaupunki, jolla oli oma itsehallinto mutta joka kuului Rooman valtaan. Asukkaat saivat usein [[Rooman kansalaisoikeudet]] joko kokonaan tai osittain, ja kaupunki hallitsi itseään omien virkamiestensä ja neuvostonsa avulla. Stobi sai vuonna 69 jaa., keisari Vespasianuksen aikana, tämän aseman. Myöhemmin se oli [[Macedonia Salutaris]] -provinssin pääkaupunki.",
   "linkit": [
    "Rooman kansalaisoikeudet",
    "Macedonia Salutaris"
@@ -365,7 +365,7 @@
   "kohde": "kohde:stobi",
   "kasite": "maanjäristys",
   "kysymys": "Kerro lisää: maanjäristys",
-  "vastaus": "Maanjäristys on maankuoren äkillinen tärähdys, jossa kallioperään kertynyt jännitys purkautuu. [[Balkanin]] niemimaa on seismisesti aktiivinen alue, koska [[mannerlaattojen]] liikkeet kohdistavat kallioperään jännitystä. Vuonna 518 voimakas maanjäristys tuhosi läheisen Scupin lähes kokonaan ja koetteli myös Stobia. Tapahtumasta on yli tuhat viisisataa vuotta, ja nykyään paikka on arkeologinen kohde. Myös Skopjea koetteli vuonna 1963 suuri maanjäristys, jonka jäljet ovat yhä osa kaupungin muistia.",
+  "vastaus": "Maanjäristys on maankuoren äkillinen tärähdys, jossa kallioperään kertynyt jännitys purkautuu. [[Balkanin]] niemimaa on seismisesti aktiivinen alue, koska [[mannerlaattojen]] liikkeet kohdistavat kallioperään jännitystä. Vuonna 518 voimakas maanjäristys tuhosi läheisen Scupin ja koetteli myös Stobia. Tapahtumasta on yli tuhat viisisataa vuotta, ja nykyään paikka on arkeologinen kohde. Myös Skopjea koetteli vuonna 1963 suuri maanjäristys, jonka jäljet ovat yhä osa kaupungin muistia.",
   "linkit": [
    "Balkanin",
    "mannerlaattojen"
@@ -537,7 +537,7 @@
   "kohde": "kohde:herakleia-lynkestis",
   "kasite": "basilika",
   "kysymys": "Kerro lisää: basilika",
-  "vastaus": "Basilika on pitkänomainen rakennustyyppi, jonka varhaiset kristityt omaksuivat kirkkorakennuksiksi. Herakleia Lynkestiksessä on pieni ja suuri basilika, jotka ovat [[varhaiskristillisen]] ajan kirkkorakennuksia. Suuren basilikan [[narteksin]] lattiamosaiikki on 500-luvulta. Nartex on kirkon sisäänkäyntitila, esikartano pääsalin edessä. Kaupunki autioitui vähitellen vuoden 518 maanjäristyksen ja noin vuoden 585 [[slaavien]] hyökkäysten jälkeen.",
+  "vastaus": "Basilika on pitkänomainen rakennustyyppi, jonka varhaiset kristityt omaksuivat kirkkorakennuksiksi. Herakleia Lynkestiksessä on pieni ja suuri basilika, jotka ovat [[varhaiskristillisen]] ajan kirkkorakennuksia. Suuren basilikan [[narteksin]] lattiamosaiikki on varhaiskristillisen ajan taidetta, joka ajoitetaan 400-luvun lopulta 500-luvun loppuun. Nartex on kirkon sisäänkäyntitila, esikartano pääsalin edessä. Kaupunki autioitui vähitellen vuoden 518 maanjäristyksen ja noin vuoden 585 [[slaavien]] hyökkäysten jälkeen.",
   "linkit": [
    "varhaiskristillisen",
    "narteksin",
@@ -552,7 +552,7 @@
   "kohde": "kohde:herakleia-lynkestis",
   "kasite": "lattiamosaiikki",
   "kysymys": "Kerro lisää: lattiamosaiikki",
-  "vastaus": "Lattiamosaiikki on kuva, joka on koottu lattiaan pienistä kivi- tai lasipaloista. [[Herakleia Lynkestiksessä]] suuren basilikan [[narteksin]] lattiamosaiikki on 500-luvulta. Varhaiskristillisissä kirkoissa mosaiikkien aiheina olivat usein kasvit, eläimet ja symbolit, ja värit saatiin eri kivilajeista. Mosaiikit ovat säilyneet vuosisatoja, koska ne on tehty kestävistä materiaaleista.",
+  "vastaus": "Lattiamosaiikki on kuva, joka on koottu lattiaan pienistä kivi- tai lasipaloista. [[Herakleia Lynkestiksessä]] suuren basilikan [[narteksin]] lattiamosaiikki on varhaiskristillisen ajan taidetta, joka ajoitetaan 400-luvun lopulta 500-luvun loppuun. Varhaiskristillisissä kirkoissa mosaiikkien aiheina olivat usein kasvit, eläimet ja symbolit, ja värit saatiin eri kivilajeista. Mosaiikit ovat säilyneet vuosisatoja, koska ne on tehty kestävistä materiaaleista.",
   "linkit": [
    "Herakleia Lynkestiksessä",
    "narteksin"
@@ -566,13 +566,13 @@
   "kohde": "kohde:herakleia-lynkestis",
   "kasite": "maanjäristyksen",
   "kysymys": "Kerro lisää: maanjäristyksen",
-  "vastaus": "Vuoden 518 maanjäristys oli myöhäisantiikin suuri luonnonkatastrofi, joka tuhosi Skopjen edeltäjän [[Scupin]] lähes kokonaan. Myös Stobia ja Herakleia Lynkestistä koeteltiin, ja jälkimmäinen autioitui vähitellen järistyksen ja noin vuoden 585 slaavien hyökkäysten jälkeen. Keisari [[Justinianus I]] käski rakentaa läheiselle kukkulalle uuden linnoituksen osin raunioituneen kaupungin kivistä. Tapahtumasta on kulunut yli tuhat viisisataa vuotta, ja nykyään paikat ovat arkeologisia kohteita.",
+  "vastaus": "Vuoden 518 maanjäristys oli myöhäisantiikin suuri luonnonkatastrofi, joka tuhosi Skopjen edeltäjän [[Scupin]]. Myös Stobia ja Herakleia Lynkestistä koeteltiin, ja jälkimmäinen autioitui vähitellen järistyksen ja noin vuoden 585 slaavien hyökkäysten jälkeen. Läheiselle kukkulalle rakennettiin [[Kale]]-linnoitus, johon arkeologien mukaan siirrettiin kiveä Scupin raunioista. Tapahtumasta on kulunut yli tuhat viisisataa vuotta, ja nykyään paikat ovat arkeologisia kohteita.",
   "linkit": [
    "Scupin",
-   "Justinianus I"
+   "Kale"
   ],
   "jatkot": [
-   "Millainen oli Justinianus I:n hallitus?",
+   "Mitä Scupista tiedetään?",
    "Miten Kale-linnoitus rakennettiin?"
   ]
  },
@@ -608,7 +608,7 @@
   "kohde": "kohde:mavrovon-jarvi",
   "kasite": "Šar-vuoret",
   "kysymys": "Kerro lisää: Šar-vuoret",
-  "vastaus": "Šar-vuoret sijaitsevat Pohjois-Makedonian ja [[Kosovon]] rajaseudulla, ja niiden rinteet kohoavat Mavrovon järven pohjoispuolella. Mavrovon alueen vuorten huiput ylittävät 2 500 metriä. Vuoristo tunnetaan laajoista laidunmaista ja talvihiihtokohteista, joista yksi on [[Popova Šapka]]. Vuoriston mukaan on nimetty myös [[šarplaninac]]-karjanvartijakoira.",
+  "vastaus": "Šar-vuoret sijaitsevat Pohjois-Makedonian ja [[Kosovon]] rajaseudulla, ja niiden rinteet kohoavat Mavrovon järven pohjoispuolella. Mavrovon järven eteläpuolella kohoavat Bistran vuoret, joiden korkein huippu Medenica on noin 2 160 metriä. Vuoristo tunnetaan laajoista laidunmaista ja talvihiihtokohteista, joista yksi on [[Popova Šapka]]. Vuoriston mukaan on nimetty myös [[šarplaninac]]-karjanvartijakoira.",
   "linkit": [
    "Kosovon",
    "Popova Šapka",
@@ -637,7 +637,7 @@
   "kohde": "kohde:mavrovon-jarvi",
   "kasite": "Mavrovon kansallispuistoon",
   "kysymys": "Kerro lisää: Mavrovon kansallispuistoon",
-  "vastaus": "Mavrovon kansallispuisto on yksi Pohjois-Makedonian kolmesta kansallispuistosta; muut kaksi ovat [[Pelister]] ja [[Galičica]]. Alue on kuulunut puistoon vuodesta 1952, ja sen alueella ovat Mavrovon järvi sekä osia Šar-vuorista ja Bistran vuorista. Puiston metsät ja vuoristoniityt ovat monien eläinlajien elinympäristöä. Alueella elää muun muassa uhanalainen [[Balkanin ilves]].",
+  "vastaus": "Mavrovon kansallispuisto on yksi Pohjois-Makedonian kolmesta kansallispuistosta; muut kaksi ovat [[Pelister]] ja [[Galičica]]. Puisto perustettiin vuonna 1949, ja sitä laajennettiin 1952, jolloin tekojärven täyttö alkoi. Sen alueella ovat Mavrovon järvi sekä osia Šar-vuorista ja Bistran vuorista. Puiston metsät ja vuoristoniityt ovat monien eläinlajien elinympäristöä. Alueella elää muun muassa uhanalainen [[Balkanin ilves]].",
   "linkit": [
    "Pelister",
    "Galičica",
@@ -652,7 +652,7 @@
   "kohde": "kohde:mavrovon-jarvi",
   "kasite": "Skopjesta",
   "kysymys": "Kerro lisää: Skopjesta",
-  "vastaus": "Skopje on Pohjois-Makedonian pääkaupunki. Sen historia ulottuu roomalaiseen [[Scupiin]], jonka maanjäristys tuhosi lähes kokonaan vuonna 518, ja kaupunkia koetteli uusi suuri maanjäristys vuonna 1963. Pääaukiolle nousi syyskuussa 2011 lähes 25 metriä korkea pronssipatsas, joka kuuluu [[Skopje 2014]] -hankkeeseen. Patsas ristittiin virallisesti vain Ratsastavaksi soturiksi, koska Kreikka piti Aleksanteri Suuren nimen käyttöä oman historiansa omimisena, ja nimikiista ratkesi vasta [[Prespan sopimuksella]] vuonna 2018.",
+  "vastaus": "Skopje on Pohjois-Makedonian pääkaupunki. Sen historia ulottuu roomalaiseen [[Scupiin]], jonka maanjäristys tuhosi vuonna 518, ja kaupunkia koetteli uusi suuri maanjäristys vuonna 1963. Pääaukiolle nousi syyskuussa 2011 lähes 25 metriä korkea pronssipatsas, joka kuuluu [[Skopje 2014]] -hankkeeseen. Patsas ristittiin virallisesti vain Ratsastavaksi soturiksi, koska Kreikka piti Aleksanteri Suuren nimen käyttöä oman historiansa omimisena, ja nimikiista ratkesi vasta [[Prespan sopimuksella]] vuonna 2018.",
   "linkit": [
    "Scupiin",
    "Skopje 2014",
@@ -695,7 +695,7 @@
   "kohde": "kohde:kokinon-observatorio",
   "kasite": "Tatićev Kamen",
   "kysymys": "Kerro lisää: Tatićev Kamen",
-  "vastaus": "Tatićev Kamen on Pohjois-Makedonian koillisosassa sijaitseva huippu, jonka laella on [[Kokinon]] pronssikautinen kalliokohde. Kohde on 1 010–1 030 metrin korkeudessa noin 30 kilometrin päässä [[Kumanovosta]]. Kalliossa on kaksi tasannetta, ja alemmalla on neljä kiviistuinta. Paikan löydöt ulottuvat 1800-luvulta eaa. 600-luvulle eaa., ja kohteen tulkinta aurinko-observatorioksi on kiistanalainen.",
+  "vastaus": "Tatićev Kamen on Pohjois-Makedonian koillisosassa sijaitseva huippu, jonka laella on [[Kokinon]] pronssikautinen kalliokohde. Kohde sijaitsee [[Kumanovosta]] koilliseen noin 1 013 metrin korkeudessa. Kalliossa on kaksi tasannetta, ja alemmalla on neljä kiviistuinta. Paikan löydöt ulottuvat 1800-luvulta eaa. 600-luvulle eaa., ja kohteen tulkinta aurinko-observatorioksi on kiistanalainen.",
   "linkit": [
    "Kokinon",
    "Kumanovosta"
@@ -946,9 +946,9 @@
   "kohde": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
   "kasite": "Kale",
   "kysymys": "Kerro lisää: Kale",
-  "vastaus": "Kale on Skopjen linnoitus Vardar-joen yläpuolella kohoavalla kukkulalla. Keisari [[Justinianus I]] käski rakentaa sen 500-luvulla maanjäristyksen tuhoaman [[Scupin]] kaupungin läheisyyteen, osin raunioituneen kaupungin kivistä. Muureja on sittemmin rakennettu uudelleen bysanttilaisten, slaavien ja osmanien aikana, ja ne kestivät myös Skopjen vuoden 1963 maanjäristyksen. Kaivauksissa linnoituksen alta on paljastunut Scupin asukkaiden taloja. Nimi Kale tarkoittaa turkin kielessä linnoitusta.",
+  "vastaus": "Kale on Skopjen linnoitus [[Vardar]]-joen yläpuolella kohoavalla kukkulalla. Vuonna 518 maanjäristys tuhosi [[Scupin]], ja läheiselle kukkulalle rakennettiin Kale-linnoitus, johon arkeologien mukaan siirrettiin kiveä kaupungin raunioista. Muureja on sittemmin rakennettu uudelleen bysanttilaisten, slaavien ja osmanien aikana, ja ne kestivät myös Skopjen vuoden 1963 maanjäristyksen. Kaivauksissa linnoituksen alta on paljastunut Scupin asukkaiden taloja. Nimi Kale tarkoittaa turkin kielessä linnoitusta.",
   "linkit": [
-   "Justinianus I",
+   "Vardar",
    "Scupin"
   ],
   "jatkot": [

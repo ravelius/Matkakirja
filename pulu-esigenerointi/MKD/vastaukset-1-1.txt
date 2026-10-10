@@ -1,6 +1,6 @@
 ### 1.1
 KYSYMYS: Kuinka vanha Ohridinjärvi on?
-Annas ku mietin. Tää on kyl hyvä kysymys. Ohridinjärven arvioidaan syntyneen 3–5 miljoonaa vuotta sitten, ja se on yksi Euroopan vanhimmista ja syvimmistä järvistä. Sen vesi tulee osin maanalaisten kanavien kautta [[Prespajärveltä]], ja järvessä elää [[endeemisiä]] lajeja, joita ei tavata muualla maailmassa. Melkoinen ikä, vaikka suku on vanhaa sekin.
+Annas ku mietin. Tää on kyl hyvä kysymys. Ohridinjärvi on yksi Euroopan vanhimmista ja syvimmistä järvistä; porausten mukaan nykyinen järvi on syntynyt noin 1,4 miljoonaa vuotta sitten. Sen vesi tulee osin maanalaisten kanavien kautta [[Prespajärveltä]], ja järvessä elää [[endeemisiä]] lajeja, joita ei tavata muualla maailmassa. Melkoinen ikä, vaikka suku on vanhaa sekin.
 JATKOT:
 Mitä endeeminen laji tarkoittaa?
 Kuinka syvä Ohridinjärvi on enimmillään?
@@ -28,7 +28,7 @@ Milloin Albanian puoli liitettiin Unescon perintöluetteloon?
 
 ### 1.5
 KYSYMYS: Milloin Ohridinjärvi liitettiin Unescon maailmanperintöluetteloon?
-Ai se, muistan. Joo, tää oli iso juttu. [[Unesco]] merkitsi järven [[maailmanperintökohteeksi]] vuonna 1979 yhdessä Ohridin vanhankaupungin kanssa. Albanian puoli liitettiin kohteeseen vuonna 2019, joten nykyään suojelu kattaa järven molemmat rannat. Melkein viiskyt vuotta, ei paha.
+Ai se, muistan. Joo, tää oli iso juttu. [[Unesco]] merkitsi Ohridinjärven [[maailmanperintökohteeksi]] vuonna 1979 sen luonnonarvojen vuoksi, ja Ohridin kaupungin kulttuuriperintö liitettiin kohteeseen vuonna 1980. Albanian puoli liitettiin kohteeseen vuonna 2019, joten nykyään suojelu kattaa järven molemmat rannat. Melkein viiskyt vuotta, ei paha.
 JATKOT:
 Mitä maailmanperintökohde tarkoittaa?
 Mitä Ohridin vanhassakaupungissa on nähtävää?
@@ -42,7 +42,7 @@ Mitä New7Wonders-kilpailu oli?
 
 ### 2.2
 KYSYMYS: Kuinka vanha on kanjonin Pyhän Andreaksen luostari?
-Katotaas. Tää menee vuosiluvuilla. Pyhän Andreaksen luostari perustettiin noin vuonna 1388, joten se on yli kuusisataa vuotta vanha. Rinteillä on yhteensä kolme [[luostaria]], ja kanjoni sijaitsee [[Skopjen]] länsipuolella Pohjois-Makedoniassa. Vanhempi kuin kaikki minun pesäni.
+Katotaas. Tää menee vuosiluvuilla. Pyhän Andreaksen luostari perustettiin 1300-luvun lopulla (lähteet antavat vuodeksi 1388 tai 1389), joten se on yli kuusisataa vuotta vanha. Rinteillä on yhteensä kolme [[luostaria]], ja kanjoni sijaitsee [[Skopjen]] länsipuolella Pohjois-Makedoniassa. Vanhempi kuin kaikki minun pesäni.
 JATKOT:
 Mikä on luostari ja keitä siellä asuu?
 Miten kanjoni muodostuu?
@@ -83,8 +83,8 @@ Mikä on synagoga ja mihin sitä käytetään?
 Mitä basilika-sana tarkoittaa?
 
 ### 3.3
-KYSYMYS: Minkä aseman Stobi sai Rooman valtakunnassa vuonna 69 eaa.?
-Kas vaan. Hyvä kysymys tuo. Stobi sai vuonna 69 eaa. [[Rooman]] valtakunnassa [[municipiumin]] aseman. Myöhemmin se oli [[Macedonia Salutaris]] -provinssin pääkaupunki. Arvonimiä riitti roomalaisilla kyl.
+KYSYMYS: Minkä aseman Stobi sai Rooman valtakunnassa vuonna 69 jaa.?
+Kas vaan. Hyvä kysymys tuo. Stobi sai vuonna 69 jaa., keisari Vespasianuksen aikana, [[Rooman]] valtakunnassa [[municipiumin]] aseman. Myöhemmin se oli [[Macedonia Salutaris]] -provinssin pääkaupunki. Arvonimiä riitti roomalaisilla kyl.
 JATKOT:
 Mitä municipium tarkoitti?
 Mikä oli Rooman valtakunnan provinssi?
@@ -126,7 +126,7 @@ Kuka oli Filippos II:n poika?
 
 ### 4.4
 KYSYMYS: Mitä nähtävää Herakleia Lynkestiksen kohteessa on?
-Mmm— kato. Kohteessa on [[teatteri]] sekä pieni ja suuri [[basilika]]. Suuren basilikan narteksin [[lattiamosaiikki]] on 500-luvulta. Kyllä minä istuisin mieluusti teatterin kaiteella.
+Mmm— kato. Kohteessa on [[teatteri]] sekä pieni ja suuri [[basilika]]. Suuren basilikan narteksin [[lattiamosaiikki]] on varhaiskristillisen ajan taidetta, joka ajoitetaan 400-luvun lopulta 500-luvun loppuun. Kyllä minä istuisin mieluusti teatterin kaiteella.
 JATKOT:
 Mikä on narteksi kirkossa?
 Miten antiikin teatteri toimi?
@@ -154,21 +154,21 @@ Mitä kansallispuisto tarkoittaa?
 
 ### 5.3
 KYSYMYS: Onko Mavrovon järvi luonnonjärvi vai tekojärvi?
-Selvä juttu. Mavrovon järvi on [[tekojärvi]] Pohjois-Makedonian länsiosassa, alle sadan kilometrin päässä [[Skopjesta]]. Sen pinta-ala on 1 370 hehtaaria, ja alue on kuulunut [[Mavrovon kansallispuistoon]] vuodesta 1952. Ihmisen tekemä järvi, ja silti kaunis.
+Selvä juttu. Mavrovon järvi on [[tekojärvi]] Pohjois-Makedonian länsiosassa, alle sadan kilometrin päässä [[Skopjesta]]. Sen pinta-ala on 1 370 hehtaaria. Alue kuuluu [[Mavrovon kansallispuistoon]], joka perustettiin vuonna 1949, ja sitä laajennettiin 1952, jolloin tekojärven täyttö alkoi. Ihmisen tekemä järvi, ja silti kaunis.
 JATKOT:
 Miten tekojärvi rakennetaan?
 Mitä kansallispuisto tarkoittaa?
 
 ### 5.4
 KYSYMYS: Mitkä vuoret ympäröivät Mavrovon järveä?
-Sepä sattui. Pohjoisessa kohoavat [[Šar-vuoret]] ja etelässä [[Bistran vuoret]], joiden huiput ylittävät 2 500 metriä. Siellä yläilmoissa minä viihtyisin.
+Sepä sattui. Pohjoisessa kohoavat [[Šar-vuoret]] ja etelässä [[Bistran vuoret]], joiden korkein huippu Medenica on noin 2 160 metriä. Siellä yläilmoissa minä viihtyisin.
 JATKOT:
 Mikä on Euroopan korkein vuori?
 Miten vuoristot syntyvät?
 
 ### 5.5
 KYSYMYS: Mitä kesällä voi tehdä Mavrovon järvellä?
-Ai niin, kesä. Kesällä Mavrovon järvellä uidaan, soudetaan ja kalastetaan [[taimenia]]. Järvi sijaitsee alueella, joka on kuulunut [[Mavrovon kansallispuistoon]] vuodesta 1952. Kesällä kaipaisin kyl pullaa laiturille.
+Ai niin, kesä. Kesällä Mavrovon järvellä uidaan, soudetaan ja kalastetaan [[taimenia]]. Järvi sijaitsee [[Mavrovon kansallispuistoon]] kuuluvalla alueella; puisto perustettiin vuonna 1949 ja sitä laajennettiin 1952, jolloin tekojärven täyttö alkoi. Kesällä kaipaisin kyl pullaa laiturille.
 JATKOT:
 Millainen kala taimen on?
 Mitä kansallispuistossa saa tehdä?

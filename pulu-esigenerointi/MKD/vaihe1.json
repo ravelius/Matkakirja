@@ -3,7 +3,7 @@
   "kohde": "kohde:ohridinjarvi",
   "kysymys": "Kuinka vanha Ohridinjärvi on?",
   "uusi": false,
-  "vastaus": "Annas ku mietin. Tää on kyl hyvä kysymys. Ohridinjärven arvioidaan syntyneen 3–5 miljoonaa vuotta sitten, ja se on yksi Euroopan vanhimmista ja syvimmistä järvistä. Sen vesi tulee osin maanalaisten kanavien kautta [[Prespajärveltä]], ja järvessä elää [[endeemisiä]] lajeja, joita ei tavata muualla maailmassa. Melkoinen ikä, vaikka suku on vanhaa sekin.",
+  "vastaus": "Annas ku mietin. Tää on kyl hyvä kysymys. Ohridinjärvi on yksi Euroopan vanhimmista ja syvimmistä järvistä; porausten mukaan nykyinen järvi on syntynyt noin 1,4 miljoonaa vuotta sitten. Sen vesi tulee osin maanalaisten kanavien kautta [[Prespajärveltä]], ja järvessä elää [[endeemisiä]] lajeja, joita ei tavata muualla maailmassa. Melkoinen ikä, vaikka suku on vanhaa sekin.",
   "linkit": [
    "Prespajärveltä",
    "endeemisiä"
@@ -60,7 +60,7 @@
   "kohde": "kohde:ohridinjarvi",
   "kysymys": "Milloin Ohridinjärvi liitettiin Unescon maailmanperintöluetteloon?",
   "uusi": true,
-  "vastaus": "Ai se, muistan. Joo, tää oli iso juttu. [[Unesco]] merkitsi järven [[maailmanperintökohteeksi]] vuonna 1979 yhdessä Ohridin vanhankaupungin kanssa. Albanian puoli liitettiin kohteeseen vuonna 2019, joten nykyään suojelu kattaa järven molemmat rannat. Melkein viiskyt vuotta, ei paha.",
+  "vastaus": "Ai se, muistan. Joo, tää oli iso juttu. [[Unesco]] merkitsi Ohridinjärven [[maailmanperintökohteeksi]] vuonna 1979 sen luonnonarvojen vuoksi, ja Ohridin kaupungin kulttuuriperintö liitettiin kohteeseen vuonna 1980. Albanian puoli liitettiin kohteeseen vuonna 2019, joten nykyään suojelu kattaa järven molemmat rannat. Melkein viiskyt vuotta, ei paha.",
   "linkit": [
    "Unesco",
    "maailmanperintökohteeksi"
@@ -88,7 +88,7 @@
   "kohde": "kohde:matkan-kanjoni",
   "kysymys": "Kuinka vanha on kanjonin Pyhän Andreaksen luostari?",
   "uusi": false,
-  "vastaus": "Katotaas. Tää menee vuosiluvuilla. Pyhän Andreaksen luostari perustettiin noin vuonna 1388, joten se on yli kuusisataa vuotta vanha. Rinteillä on yhteensä kolme [[luostaria]], ja kanjoni sijaitsee [[Skopjen]] länsipuolella Pohjois-Makedoniassa. Vanhempi kuin kaikki minun pesäni.",
+  "vastaus": "Katotaas. Tää menee vuosiluvuilla. Pyhän Andreaksen luostari perustettiin 1300-luvun lopulla (lähteet antavat vuodeksi 1388 tai 1389), joten se on yli kuusisataa vuotta vanha. Rinteillä on yhteensä kolme [[luostaria]], ja kanjoni sijaitsee [[Skopjen]] länsipuolella Pohjois-Makedoniassa. Vanhempi kuin kaikki minun pesäni.",
   "linkit": [
    "luostaria",
    "Skopjen"
@@ -171,9 +171,9 @@
  },
  {
   "kohde": "kohde:stobi",
-  "kysymys": "Minkä aseman Stobi sai Rooman valtakunnassa vuonna 69 eaa.?",
+  "kysymys": "Minkä aseman Stobi sai Rooman valtakunnassa vuonna 69 jaa.?",
   "uusi": true,
-  "vastaus": "Kas vaan. Hyvä kysymys tuo. Stobi sai vuonna 69 eaa. [[Rooman]] valtakunnassa [[municipiumin]] aseman. Myöhemmin se oli [[Macedonia Salutaris]] -provinssin pääkaupunki. Arvonimiä riitti roomalaisilla kyl.",
+  "vastaus": "Kas vaan. Hyvä kysymys tuo. Stobi sai vuonna 69 jaa., keisari Vespasianuksen aikana, [[Rooman]] valtakunnassa [[municipiumin]] aseman. Myöhemmin se oli [[Macedonia Salutaris]] -provinssin pääkaupunki. Arvonimiä riitti roomalaisilla kyl.",
   "linkit": [
    "Rooman",
    "municipiumin",
@@ -262,7 +262,7 @@
   "kohde": "kohde:herakleia-lynkestis",
   "kysymys": "Mitä nähtävää Herakleia Lynkestiksen kohteessa on?",
   "uusi": true,
-  "vastaus": "Mmm— kato. Kohteessa on [[teatteri]] sekä pieni ja suuri [[basilika]]. Suuren basilikan narteksin [[lattiamosaiikki]] on 500-luvulta. Kyllä minä istuisin mieluusti teatterin kaiteella.",
+  "vastaus": "Mmm— kato. Kohteessa on [[teatteri]] sekä pieni ja suuri [[basilika]]. Suuren basilikan narteksin [[lattiamosaiikki]] on varhaiskristillisen ajan taidetta, joka ajoitetaan 400-luvun lopulta 500-luvun loppuun. Kyllä minä istuisin mieluusti teatterin kaiteella.",
   "linkit": [
    "teatteri",
    "basilika",
@@ -319,7 +319,7 @@
   "kohde": "kohde:mavrovon-jarvi",
   "kysymys": "Onko Mavrovon järvi luonnonjärvi vai tekojärvi?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Mavrovon järvi on [[tekojärvi]] Pohjois-Makedonian länsiosassa, alle sadan kilometrin päässä [[Skopjesta]]. Sen pinta-ala on 1 370 hehtaaria, ja alue on kuulunut [[Mavrovon kansallispuistoon]] vuodesta 1952. Ihmisen tekemä järvi, ja silti kaunis.",
+  "vastaus": "Selvä juttu. Mavrovon järvi on [[tekojärvi]] Pohjois-Makedonian länsiosassa, alle sadan kilometrin päässä [[Skopjesta]]. Sen pinta-ala on 1 370 hehtaaria. Alue kuuluu [[Mavrovon kansallispuistoon]], joka perustettiin vuonna 1949, ja sitä laajennettiin 1952, jolloin tekojärven täyttö alkoi. Ihmisen tekemä järvi, ja silti kaunis.",
   "linkit": [
    "tekojärvi",
    "Skopjesta",
@@ -334,7 +334,7 @@
   "kohde": "kohde:mavrovon-jarvi",
   "kysymys": "Mitkä vuoret ympäröivät Mavrovon järveä?",
   "uusi": true,
-  "vastaus": "Sepä sattui. Pohjoisessa kohoavat [[Šar-vuoret]] ja etelässä [[Bistran vuoret]], joiden huiput ylittävät 2 500 metriä. Siellä yläilmoissa minä viihtyisin.",
+  "vastaus": "Sepä sattui. Pohjoisessa kohoavat [[Šar-vuoret]] ja etelässä [[Bistran vuoret]], joiden korkein huippu Medenica on noin 2 160 metriä. Siellä yläilmoissa minä viihtyisin.",
   "linkit": [
    "Šar-vuoret",
    "Bistran vuoret"
@@ -348,7 +348,7 @@
   "kohde": "kohde:mavrovon-jarvi",
   "kysymys": "Mitä kesällä voi tehdä Mavrovon järvellä?",
   "uusi": true,
-  "vastaus": "Ai niin, kesä. Kesällä Mavrovon järvellä uidaan, soudetaan ja kalastetaan [[taimenia]]. Järvi sijaitsee alueella, joka on kuulunut [[Mavrovon kansallispuistoon]] vuodesta 1952. Kesällä kaipaisin kyl pullaa laiturille.",
+  "vastaus": "Ai niin, kesä. Kesällä Mavrovon järvellä uidaan, soudetaan ja kalastetaan [[taimenia]]. Järvi sijaitsee [[Mavrovon kansallispuistoon]] kuuluvalla alueella; puisto perustettiin vuonna 1949 ja sitä laajennettiin 1952, jolloin tekojärven täyttö alkoi. Kesällä kaipaisin kyl pullaa laiturille.",
   "linkit": [
    "taimenia",
    "Mavrovon kansallispuistoon"
@@ -391,10 +391,10 @@
   "kohde": "kohde:kokinon-observatorio",
   "kysymys": "Miten korkealla Kokino sijaitsee?",
   "uusi": true,
-  "vastaus": "Kato, tää on helppo. Siivin tän mittaa nopeasti. Kokino sijaitsee noin 1 010–1 030 metrin korkeudessa [[Tatićev Kamen]] -huipulla, noin 30 kilometrin päässä [[Kumanovosta]]. Kohde on jaettu kahteen tasanteeseen, ja alemmalla tasanteella on neljä kiviistuinta. Ylhäältä katsoen se on ihan mukava lepopaikka.",
+  "vastaus": "Kato, tää on helppo. Siivin tän mittaa nopeasti. Kokino sijaitsee [[Kumanovosta]] koilliseen [[Tatićev Kamen]] -huipulla noin 1 013 metrin korkeudessa. Kohde on jaettu kahteen tasanteeseen, ja alemmalla tasanteella on neljä kiviistuinta. Ylhäältä katsoen se on ihan mukava lepopaikka.",
   "linkit": [
-   "Tatićev Kamen",
-   "Kumanovosta"
+   "Kumanovosta",
+   "Tatićev Kamen"
   ],
   "jatkot": [
    "Mikä on pronssikausi?",
@@ -433,10 +433,10 @@
   "kohde": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
   "kysymys": "Miltä Skopjen vanha rautatieasema näytti loistoaikanaan?",
   "uusi": false,
-  "vastaus": "Kato, katotaas. Tän aseman minä tunnen ylhäältä päin. Skopjen keskusasema oli 1900-luvun puolivälissä yksi [[Jugoslavian]] vilkkaimmista rautatieasemista. Se oli tyylikäs kivirakennus, jossa oli kellotorni. Rakennus kuului kaupungin tärkeimpiin paikkoihin, kunnes [[Skopjen maanjäristys]] vuonna 1963 muutti kaupungin ilmeen. Nykyään osittain sortunut rakennus toimii kaupunginmuseona. Onpas siinä kellotorni, jonka vierestä olis ollut mukava lähteä matkaan.",
+  "vastaus": "Kato, katotaas. Tän aseman minä tunnen ylhäältä päin. Skopjen vanha rautatieasema valmistui vuonna 1940. Se oli kaupungin kasvun symboli: monumentaalinen travertiinijulkisivuinen rakennus, jonka yläkerrassa oli pylväikkö. Vuoden 1963 [[Skopjen maanjäristys]] tuhosi osan siitä, ja nykyään rakennuksessa toimii kaupunginmuseo. Pylväikön vierestä olis ollut mukava lähteä [[Jugoslavian]] junalla matkaan.",
   "linkit": [
-   "Jugoslavian",
-   "Skopjen maanjäristys"
+   "Skopjen maanjäristys",
+   "Jugoslavian"
   ],
   "jatkot": [
    "Miksi Skopjen vanha rautatieasema on nykyään raunioina?",
@@ -489,7 +489,7 @@
   "kohde": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
   "kysymys": "Mikä joki virtaa Skopjen halki?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Joo, tää on helppo. Skopjen halki virtaa [[Vardar]]-joki. Roomalaiset perustivat sen mutkaan Scupin kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus. Vuonna 518 maanjäristys tuhosi Scupin lähes kokonaan, ja uusi linnoitus, [[Kale]], rakennettiin läheiselle kukkulalle osin raunioituneen kaupungin kivistä. Joki on siis nähnyt kaupungin kahdesti hajoavan. Hyvä joki, vaikkei se kyyhkyjen reitti olekaan.",
+  "vastaus": "Odotas vähän. Joo, tää on helppo. Skopjen halki virtaa [[Vardar]]-joki. Sen lähelle roomalaiset perustivat Scupin kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus. Vuonna 518 maanjäristys tuhosi Scupin, ja läheiselle kukkulalle rakennettiin [[Kale]]-linnoitus, johon arkeologien mukaan siirrettiin kiveä kaupungin raunioista. Joki on nähnyt kaupungin hajoavan ja nousevan uudelleen. Hyvä joki, vaikkei se kyyhkyjen reitti olekaan.",
   "linkit": [
    "Vardar",
    "Kale"
