@@ -46,3 +46,12 @@ Taustalla EI omia ajoja (cron 440f4d6d katoaa nollauksessa).
 ## TILA 10.10. 20.28
 - Juna 180 = 8f8a93acb (+ LS1 intro-luenta-180 87f1dd8a0, PT kuittasi 20.3x; sis. 9cdc17616 + b5f8a9d8a). L1347/P456/K461, unity 0, tarkista ok; peilattu.
 - Odottaa: Siirtosepän laituri-KIIRE (tappi), dc53ccd54:n vesipohja, Pelikoodarin latausmusiikki (+ kippikorjaukset), yön iPad-muistiajo; ajoitus omistajalta.
+
+## TILA 10.10. 21.25
+- Juna 180 = 56edcb296 (+ Siirtoseppä repliikit-v5 c9da3b20d). MUISTIAJO-180 OK rungolla 8f8a93acb ilman Macin uudelleenkäynnistystä (PT 20.4x):
+  vapaa min Pariisi A/B 0,75/0,84, Olavinlinna 0,63, museo 2,76 Gt; jetsam 0, Exception 0. Lokit natiiviseppa-ab180, -r32/r33-180, -museomuisti-…-m4-180.
+- Kaava 180: scratchpad d669b7e8-ea9b-4d78-804d-673f1bef6617/{laite180.sh, muisti180.sh, ketju180.sh, odota180.sh, ab67/}.
+- Lukitus odottaa PT:n kuittausta Siirtosepän a1a5925d7:lle (sis. b3dd4d6e7). Latausmusiikki ja kippikorjaukset tulevat mukaan vain, jos ne kuitataan ennen lukitusta; vene-kuiva 5349a1fae → 181.
+  Muutoslokin luonnos: scratchpad muutosloki-180-luonnos.txt.
+- JONOSSA VIE 180:n jälkeen (PT 21.0x): akku- ja lämpömittaus iPad Pro 13:lla TF 180:llä, 15 min (kartta / Pariisin pallo / Olavinlinna, 5 min kukin).
+  Mitataan thermalState, akun %, fps sekä CPU- ja GPU-aika, ja tehdään säästöehdotus vaikutusarvioineen. Akkulokia ei vielä ole. Ei muutoksia ennen PT:n kuittausta.
