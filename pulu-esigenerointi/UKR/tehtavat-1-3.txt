@@ -1,0 +1,238 @@
+================ KOHTA 11 (kohde:poltavan-taistelu) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Poltavan taistelu (historia)
+Tietoruudun teksti: Poltavan taistelu käytiin 8. heinäkuuta 1709, ja se oli suuren Pohjan sodan ratkaiseva ja suurin taistelu. Pietari I:n johtama venäläisarmeija löi Carl Gustaf Rehnskiöldin komentaman ruotsalaisarmeijan. Tappio vei Ruotsilta suurvalta-aseman ja aloitti Venäjän ylivallan Itä-Euroopassa.
+
+Kaarle XII oli hyökännyt Venäjälle syksyllä 1707 ja marssinut kohti Moskovaa. Sää, venäläisten poltetun maan taktiikka ja yllätyshyökkäykset pakottivat hänet kääntymään etelään talvimajoihin, joita järjesti kasakkahetmani Ivan Mazepa. Euroopan kylmimmän mitatun talven jälkeen heikentynyt armeija piiritti keväällä 1709 Poltavan linnoitusta, joka oli tärkeä kauppapaikka ja varikko Vorsklan varrella.
+
+Pietarin 75 000–80 000 miehen armeija saapui purkamaan piirityksen. Ruotsalaiset lyötiin, ja he pakenivat kentältä. Kaarle ja Mazepa vetäytyivät 1 500 miehen kanssa Dneprille ja pääsivät sen yli osmanien puolel…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Colțean torni] Isoisäsi kiipesi Bukarestin korkeimpaan rakennukseen: Colțean torni kohosi arviolta 54 metriin ja oli kaupungin korkein yli vuosisadan ajan. Sen rakentamisessa vuosina 1709–1714 auttoivat Ruotsin kuninkaan Kaarle XII:n sotilaat, jotka olivat paenneet Valakiaan Poltavan tappion jälkeen; ruhtinas Constantin Brâncoveanu majoitti heidät. Sisäänkäynnin molemmin puolin oli maalattuna kaksi ruotsalaista sotilasta, jalkaväkimies ja ratsumies, kiväärit olalla — juuri ne, jotka isoisäsi näki. Tornissa oli myös kirjoitus ruotsalaisten muuraustöiden muistoksi; se on kadonnut. Vuoden 1802 maanjäristys pudotti tornin huipun ja kellon, ja kun torni 1888 purettiin kokonaan, sen 1 700 kilon kello vietiin Si…
+- [Ruotsi — maalehti / Ruoka: Lihapullat ja punainen marja] Ruotsalaiselle lautaselle kuuluu kolme asiaa: lihapullat, perunamuusi ja lusikallinen puolukkahilloa. Makea marja hapan lihan vieressä hämmästyttää monta vierasta, mutta yhdistelmä on vanha keino: ennen jääkaappeja happamat ja sokeriset säilykkeet pitivät ruoan syömäkelpoisena talven yli. Ruotsin virallinen somekin on kertonut, että lihapullan resepti tuotiin maahan Turkista kuningas Kaarle XII:n mukana 1700-luvun alussa — asiaa on sen jälkeen kiistelty innokkaasti.
+
+### 11.1
+KYSYMYS: Kuka johti Ruotsin armeijaa Poltavassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Poltavan taistelu (historia)
+Tietoruudun teksti: Poltavan taistelu käytiin 8. heinäkuuta 1709, ja se oli suuren Pohjan sodan ratkaiseva ja suurin taistelu. Pietari I:n johtama venäläisarmeija löi Carl Gustaf Rehnskiöldin komentaman ruotsalaisarmeijan. Tappio vei Ruotsilta suurvalta-aseman ja aloitti Venäjän ylivallan Itä-Euroopassa.
+
+Kaarle XII oli hyökännyt Venäjälle syksyllä 1707 ja marssinut kohti Moskovaa. Sää, venäläisten poltetun maan taktiikka ja yllätyshyökkäykset pakottivat hänet kääntymään etelään talvimajoihin, joita järjesti kasakkahetmani Ivan Mazepa. Euroopan kylmimmän mitatun talven jälkeen heikentynyt armeija piiritti keväällä 1709 Poltavan linnoitusta, joka oli tärkeä kauppapaikka ja varikko Vorsklan varrella.
+
+Pietarin 75 000–80 000 miehen armeija saapui purkamaan piirityksen. Ruotsalaiset lyötiin, ja he pakenivat kentältä. Kaarle ja Mazepa vetäytyivät 1 500 miehen kanssa Dneprille ja pääsivät sen yli osmanien puolel…
+
+### 11.2
+KYSYMYS: Miksi Kaarle XII kääntyi etelään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Poltavan taistelu (historia)
+Tietoruudun teksti: Poltavan taistelu käytiin 8. heinäkuuta 1709, ja se oli suuren Pohjan sodan ratkaiseva ja suurin taistelu. Pietari I:n johtama venäläisarmeija löi Carl Gustaf Rehnskiöldin komentaman ruotsalaisarmeijan. Tappio vei Ruotsilta suurvalta-aseman ja aloitti Venäjän ylivallan Itä-Euroopassa.
+
+Kaarle XII oli hyökännyt Venäjälle syksyllä 1707 ja marssinut kohti Moskovaa. Sää, venäläisten poltetun maan taktiikka ja yllätyshyökkäykset pakottivat hänet kääntymään etelään talvimajoihin, joita järjesti kasakkahetmani Ivan Mazepa. Euroopan kylmimmän mitatun talven jälkeen heikentynyt armeija piiritti keväällä 1709 Poltavan linnoitusta, joka oli tärkeä kauppapaikka ja varikko Vorsklan varrella.
+
+Pietarin 75 000–80 000 miehen armeija saapui purkamaan piirityksen. Ruotsalaiset lyötiin, ja he pakenivat kentältä. Kaarle ja Mazepa vetäytyivät 1 500 miehen kanssa Dneprille ja pääsivät sen yli osmanien puolel…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Colțean torni] Isoisäsi kiipesi Bukarestin korkeimpaan rakennukseen: Colțean torni kohosi arviolta 54 metriin ja oli kaupungin korkein yli vuosisadan ajan. Sen rakentamisessa vuosina 1709–1714 auttoivat Ruotsin kuninkaan Kaarle XII:n sotilaat, jotka olivat paenneet Valakiaan Poltavan tappion jälkeen; ruhtinas Constantin Brâncoveanu majoitti heidät. Sisäänkäynnin molemmin puolin oli maalattuna kaksi ruotsalaista sotilasta, jalkaväkimies ja ratsumies, kiväärit olalla — juuri ne, jotka isoisäsi näki. Tornissa oli myös kirjoitus ruotsalaisten muuraustöiden muistoksi; se on kadonnut. Vuoden 1802 maanjäristys pudotti tornin huipun ja kellon, ja kun torni 1888 purettiin kokonaan, sen 1 700 kilon kello vietiin Si…
+- [Ruotsi — maalehti / Ruoka: Lihapullat ja punainen marja] Ruotsalaiselle lautaselle kuuluu kolme asiaa: lihapullat, perunamuusi ja lusikallinen puolukkahilloa. Makea marja hapan lihan vieressä hämmästyttää monta vierasta, mutta yhdistelmä on vanha keino: ennen jääkaappeja happamat ja sokeriset säilykkeet pitivät ruoan syömäkelpoisena talven yli. Ruotsin virallinen somekin on kertonut, että lihapullan resepti tuotiin maahan Turkista kuningas Kaarle XII:n mukana 1700-luvun alussa — asiaa on sen jälkeen kiistelty innokkaasti.
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:sofijivkan-puisto) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sofijivkan puisto (kulttuuri)
+Tietoruudun teksti: Sofijivkan puisto on arboretum ja tutkimuslaitos Umanin kaupungin pohjoisosassa Tšerkasyn alueella, Kamjanka-joen varrella. Puistossa kasvaa yli 2 000 puu- ja pensaslajia, niiden joukossa suokypressi, strobusmänty, tulppaanipuu, plataani ja neidonhiuspuu. Vuosittain sen läpi kulkee noin 300 000 kävijää.
+
+Englantilaistyylisen puiston perusti vuonna 1796 kreivi Stanisław Szczęsny Potocki, puolalainen aatelismies, joka rakensi Umanin uudelleen talonpoikaiskapinan jälkeen. Puisto sai nimensä hänen kreikkalaissyntyisen vaimonsa Sofian mukaan ja oli tälle syntymäpäivälahja. Sen hinnaksi arvioitiin viisitoista miljoonaa zlotya — aikanaan omaisuus.
+
+Työtä johti puolalainen sotilasinsinööri Ludwik Metzel, joka toi harvinaisia kasveja eri puolilta Eurooppaa ja käytti työvoimana paikallisia maaorjia. Maasto oli rosoista ja rotkoista, ja siihen rakennettiin altaita ja lampia, vesiputouksia — korkei…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kohdekartta / Kohdekartta: Jorge Amadon talo] 1987 Kysymys kuului, kenelle kirjailijan paperit kuuluvat. Vuonna 1982 Jorge Amado täytti 70 vuotta ja oli kirjoittanut viisikymmentä vuotta, ja monet laitokset Brasiliassa ja ulkomailla painostivat häntä lahjoittamaan kokoelmansa. Hänen vaimonsa, kirjailija Zélia Gattai, vastusti: kokoelma kuului Bahian ihmisille ja sen oli jäätävä Bahiaan. Kaksi vuotta myöhemmin kirjailija Myriam Fraga otti asian uudelleen esiin, ja Bahian liittovaltionyliopisto ryhtyi luetteloimaan papereita, joita oli siihen asti säilytetty Amadon kotona Rio Vermelhon kaupunginosassa. Ennen vuotta 1950 syntyneistä asiakirjoista suuri osa oli jo mennyttä: osa tuhoutui Estado Novon vainoissa, osa hajosi maanpakovuosina, k…
+- [Asunción — kohdekartta / Kohdekartta: Defensores del Chacon stadion] 1916–1917 Paraguayn kansallisstadion rakennettiin Sajonian kaupunginosaan. Työ alkoi helmikuussa 1916, ja marraskuussa 1917 avattiin Stadium de Sajonia. Ensimmäisessä ottelussa kohtasivat Olimpia ja Libertad, ja Libertad voitti 1–0. Vuonna 1919 maajoukkue pelasi kentällä ensimmäisen ottelunsa, ja Faustino Casado teki Paraguayn ensimmäisen maalin stadionilla. Kun Uruguay voitti 1924 olympiakullan, jalkapalloliitto nimesi stadionin hetkeksi Uruguayksi naapurin kunniaksi. Chacon sodassa stadion oli sijaintinsa vuoksi ammusvarasto ja joukkojen kokoontumispaikka. Sodan jälkeen se sai nykyisen nimensä Chacon puolustajien mukaan. Vuoden 1953 Copa Américan voittorahoilla rakennettiin betonikatsomo …
+
+### 12.1
+KYSYMYS: Kenelle puisto oli syntymäpäivälahja?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sofijivkan puisto (kulttuuri)
+Tietoruudun teksti: Sofijivkan puisto on arboretum ja tutkimuslaitos Umanin kaupungin pohjoisosassa Tšerkasyn alueella, Kamjanka-joen varrella. Puistossa kasvaa yli 2 000 puu- ja pensaslajia, niiden joukossa suokypressi, strobusmänty, tulppaanipuu, plataani ja neidonhiuspuu. Vuosittain sen läpi kulkee noin 300 000 kävijää.
+
+Englantilaistyylisen puiston perusti vuonna 1796 kreivi Stanisław Szczęsny Potocki, puolalainen aatelismies, joka rakensi Umanin uudelleen talonpoikaiskapinan jälkeen. Puisto sai nimensä hänen kreikkalaissyntyisen vaimonsa Sofian mukaan ja oli tälle syntymäpäivälahja. Sen hinnaksi arvioitiin viisitoista miljoonaa zlotya — aikanaan omaisuus.
+
+Työtä johti puolalainen sotilasinsinööri Ludwik Metzel, joka toi harvinaisia kasveja eri puolilta Eurooppaa ja käytti työvoimana paikallisia maaorjia. Maasto oli rosoista ja rotkoista, ja siihen rakennettiin altaita ja lampia, vesiputouksia — korkei…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kohdekartta / Kohdekartta: Jorge Amadon talo] 1987 Kysymys kuului, kenelle kirjailijan paperit kuuluvat. Vuonna 1982 Jorge Amado täytti 70 vuotta ja oli kirjoittanut viisikymmentä vuotta, ja monet laitokset Brasiliassa ja ulkomailla painostivat häntä lahjoittamaan kokoelmansa. Hänen vaimonsa, kirjailija Zélia Gattai, vastusti: kokoelma kuului Bahian ihmisille ja sen oli jäätävä Bahiaan. Kaksi vuotta myöhemmin kirjailija Myriam Fraga otti asian uudelleen esiin, ja Bahian liittovaltionyliopisto ryhtyi luetteloimaan papereita, joita oli siihen asti säilytetty Amadon kotona Rio Vermelhon kaupunginosassa. Ennen vuotta 1950 syntyneistä asiakirjoista suuri osa oli jo mennyttä: osa tuhoutui Estado Novon vainoissa, osa hajosi maanpakovuosina, k…
+- [Asunción — kohdekartta / Kohdekartta: Defensores del Chacon stadion] 1916–1917 Paraguayn kansallisstadion rakennettiin Sajonian kaupunginosaan. Työ alkoi helmikuussa 1916, ja marraskuussa 1917 avattiin Stadium de Sajonia. Ensimmäisessä ottelussa kohtasivat Olimpia ja Libertad, ja Libertad voitti 1–0. Vuonna 1919 maajoukkue pelasi kentällä ensimmäisen ottelunsa, ja Faustino Casado teki Paraguayn ensimmäisen maalin stadionilla. Kun Uruguay voitti 1924 olympiakullan, jalkapalloliitto nimesi stadionin hetkeksi Uruguayksi naapurin kunniaksi. Chacon sodassa stadion oli sijaintinsa vuoksi ammusvarasto ja joukkojen kokoontumispaikka. Sodan jälkeen se sai nykyisen nimensä Chacon puolustajien mukaan. Vuoden 1953 Copa Américan voittorahoilla rakennettiin betonikatsomo …
+
+### 12.2
+KYSYMYS: Mikä Acheron on tässä puistossa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sofijivkan puisto (kulttuuri)
+Tietoruudun teksti: Sofijivkan puisto on arboretum ja tutkimuslaitos Umanin kaupungin pohjoisosassa Tšerkasyn alueella, Kamjanka-joen varrella. Puistossa kasvaa yli 2 000 puu- ja pensaslajia, niiden joukossa suokypressi, strobusmänty, tulppaanipuu, plataani ja neidonhiuspuu. Vuosittain sen läpi kulkee noin 300 000 kävijää.
+
+Englantilaistyylisen puiston perusti vuonna 1796 kreivi Stanisław Szczęsny Potocki, puolalainen aatelismies, joka rakensi Umanin uudelleen talonpoikaiskapinan jälkeen. Puisto sai nimensä hänen kreikkalaissyntyisen vaimonsa Sofian mukaan ja oli tälle syntymäpäivälahja. Sen hinnaksi arvioitiin viisitoista miljoonaa zlotya — aikanaan omaisuus.
+
+Työtä johti puolalainen sotilasinsinööri Ludwik Metzel, joka toi harvinaisia kasveja eri puolilta Eurooppaa ja käytti työvoimana paikallisia maaorjia. Maasto oli rosoista ja rotkoista, ja siihen rakennettiin altaita ja lampia, vesiputouksia — korkei…
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:derzhprom) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Derzhprom (tekniikka)
+Tietoruudun teksti: Derzhprom on toimistorakennus Harkovan Vapaudenaukion laidalla. Se valmistui 1928 ja oli Neuvostoliiton ensimmäinen moderni pilvenpiirtäjä sekä konstruktivismin pääteoksia. Nimi on lyhenne kahdesta sanasta, jotka yhdessä tarkoittavat valtion teollisuutta.
+
+Arkkitehdit Sergei Serafimov, Samuil Kravets ja Mark Felger saivat rakennuksen pystyyn kolmessa vuodessa, ja avajaiset pidettiin 7. marraskuuta 1928. Valmistuessaan se oli maailman tilavin yksittäinen rakennus, eikä sitä ohitettu ennen 1930-lukua. Erikoisin piirre on symmetria, jonka näkee vain yhdestä pisteestä: aukion keskeltä.
+
+Betoni, toisiinsa kytketyt tornit ja niiden väliset yläkulkusillat tekivät talosta poikkeuksellisen. Sisällä oli ilmastointi, sähkövalot ja radiopisteet sekä Ukrainan ensimmäinen jätekuilujärjestelmä. Arkkitehtuurikriitikko Reyner Banham piti taloa 1920-luvun merkittävimpien saavutusten joukossa — mittakaava…
+
+### 13.1
+KYSYMYS: Mitä nimi Derzhprom tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Derzhprom (tekniikka)
+Tietoruudun teksti: Derzhprom on toimistorakennus Harkovan Vapaudenaukion laidalla. Se valmistui 1928 ja oli Neuvostoliiton ensimmäinen moderni pilvenpiirtäjä sekä konstruktivismin pääteoksia. Nimi on lyhenne kahdesta sanasta, jotka yhdessä tarkoittavat valtion teollisuutta.
+
+Arkkitehdit Sergei Serafimov, Samuil Kravets ja Mark Felger saivat rakennuksen pystyyn kolmessa vuodessa, ja avajaiset pidettiin 7. marraskuuta 1928. Valmistuessaan se oli maailman tilavin yksittäinen rakennus, eikä sitä ohitettu ennen 1930-lukua. Erikoisin piirre on symmetria, jonka näkee vain yhdestä pisteestä: aukion keskeltä.
+
+Betoni, toisiinsa kytketyt tornit ja niiden väliset yläkulkusillat tekivät talosta poikkeuksellisen. Sisällä oli ilmastointi, sähkövalot ja radiopisteet sekä Ukrainan ensimmäinen jätekuilujärjestelmä. Arkkitehtuurikriitikko Reyner Banham piti taloa 1920-luvun merkittävimpien saavutusten joukossa — mittakaava…
+
+### 13.2
+KYSYMYS: Mistä kohtaa rakennuksen symmetrian näkee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Derzhprom (tekniikka)
+Tietoruudun teksti: Derzhprom on toimistorakennus Harkovan Vapaudenaukion laidalla. Se valmistui 1928 ja oli Neuvostoliiton ensimmäinen moderni pilvenpiirtäjä sekä konstruktivismin pääteoksia. Nimi on lyhenne kahdesta sanasta, jotka yhdessä tarkoittavat valtion teollisuutta.
+
+Arkkitehdit Sergei Serafimov, Samuil Kravets ja Mark Felger saivat rakennuksen pystyyn kolmessa vuodessa, ja avajaiset pidettiin 7. marraskuuta 1928. Valmistuessaan se oli maailman tilavin yksittäinen rakennus, eikä sitä ohitettu ennen 1930-lukua. Erikoisin piirre on symmetria, jonka näkee vain yhdestä pisteestä: aukion keskeltä.
+
+Betoni, toisiinsa kytketyt tornit ja niiden väliset yläkulkusillat tekivät talosta poikkeuksellisen. Sisällä oli ilmastointi, sähkövalot ja radiopisteet sekä Ukrainan ensimmäinen jätekuilujärjestelmä. Arkkitehtuurikriitikko Reyner Banham piti taloa 1920-luvun merkittävimpien saavutusten joukossa — mittakaava…
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:tsernivtsin-yliopisto) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bukovinan metropoliittojen residenssi (Tšernivtsin yliopisto) (kulttuuri)
+Tietoruudun teksti: Tšernivtsin yliopiston päärakennus on entinen Bukovinan ja Dalmatian metropoliittojen residenssi, jonka suunnitteli tsekkiläinen Josef Hlávka. Kompleksi rakennettiin vuosina 1864–1882 bysanttilaista ja mauritanialaista tyyliä yhdistellen, ja yhtenä esikuvana oli Alhambra. Rakennukset ryhmittyvät noin 100 × 70 metrin sisäpihan ympärille. UNESCO kirjasi residenssin maailmanperintökohteeksi vuonna 2011. Yliopisto on perustettu vuonna 1875, ja se toimii nykyään residenssin tiloissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Kulttuuri: Kuvio kertoi kotiseudun] 1800-luku — Kirjottu paita eli vyšyvanka on osa ukrainalaista kansallispukua, ja kirjonnan juuret ulottuvat skyyttalaiseen taiteeseen 400-luvulle eaa. asti. Perinteisiä värejä ovat punainen, musta ja valkoinen, ja jokaisella seudulla oli omat kuvionsa ja ompelutekniikkansa: tuntija saattoi katsoa paidasta, mistä kylästä sen käyttäjä oli kotoisin. Langat värjättiin ennen kasvien kuorella, lehdillä ja marjoilla. Vuonna 2006 opiskelija Lesia Voroniuk perusti Tšernivtsin yliopistossa Vyšyvanka-päivän, josta on kasvanut toukokuun kolmantena torstaina vietettävä kansainvälinen juhla, jolloin ukrainalaiset ympäri maailmaa pukevat ylleen kirjontapaidan.
+
+### 14.1
+KYSYMYS: Mikä ulkomainen rakennus toimi esikuvana Tšernivtsin residenssille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bukovinan metropoliittojen residenssi (Tšernivtsin yliopisto) (kulttuuri)
+Tietoruudun teksti: Tšernivtsin yliopiston päärakennus on entinen Bukovinan ja Dalmatian metropoliittojen residenssi, jonka suunnitteli tsekkiläinen Josef Hlávka. Kompleksi rakennettiin vuosina 1864–1882 bysanttilaista ja mauritanialaista tyyliä yhdistellen, ja yhtenä esikuvana oli Alhambra. Rakennukset ryhmittyvät noin 100 × 70 metrin sisäpihan ympärille. UNESCO kirjasi residenssin maailmanperintökohteeksi vuonna 2011. Yliopisto on perustettu vuonna 1875, ja se toimii nykyään residenssin tiloissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Kulttuuri: Kuvio kertoi kotiseudun] 1800-luku — Kirjottu paita eli vyšyvanka on osa ukrainalaista kansallispukua, ja kirjonnan juuret ulottuvat skyyttalaiseen taiteeseen 400-luvulle eaa. asti. Perinteisiä värejä ovat punainen, musta ja valkoinen, ja jokaisella seudulla oli omat kuvionsa ja ompelutekniikkansa: tuntija saattoi katsoa paidasta, mistä kylästä sen käyttäjä oli kotoisin. Langat värjättiin ennen kasvien kuorella, lehdillä ja marjoilla. Vuonna 2006 opiskelija Lesia Voroniuk perusti Tšernivtsin yliopistossa Vyšyvanka-päivän, josta on kasvanut toukokuun kolmantena torstaina vietettävä kansainvälinen juhla, jolloin ukrainalaiset ympäri maailmaa pukevat ylleen kirjontapaidan.
+
+### 14.2
+KYSYMYS: Kuka suunnitteli Bukovinan metropoliittojen residenssin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bukovinan metropoliittojen residenssi (Tšernivtsin yliopisto) (kulttuuri)
+Tietoruudun teksti: Tšernivtsin yliopiston päärakennus on entinen Bukovinan ja Dalmatian metropoliittojen residenssi, jonka suunnitteli tsekkiläinen Josef Hlávka. Kompleksi rakennettiin vuosina 1864–1882 bysanttilaista ja mauritanialaista tyyliä yhdistellen, ja yhtenä esikuvana oli Alhambra. Rakennukset ryhmittyvät noin 100 × 70 metrin sisäpihan ympärille. UNESCO kirjasi residenssin maailmanperintökohteeksi vuonna 2011. Yliopisto on perustettu vuonna 1875, ja se toimii nykyään residenssin tiloissa.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:klevanin-rakkaudentunneli) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klevanin rakkaudentunneli (kulttuuri)
+Tietoruudun teksti: Klevanin rakkaudentunneli on teollisuusradan osuus Rivnen alueella Ukrainassa, ja rata yhdistää Klevanin Orzhivin kaupunkiin. Se päättyy Orzhivin pohjoisosan kuitulevytehtaalle. Koko yksiraiteinen rata on noin 6,4 kilometriä pitkä, ja metsän halki kulkeva osuus on noin 4,9 kilometriä. Puut kaartuvat raiteen ylle vihreiksi holveiksi, jotka muodostavat luonnollisen tunnelin. Rata on Ukrainan rautatieyhtiö UZ:n liikennöimä, mutta junia kulkee vain kolme päivässä, joten radalla kävelevät myös pariskunnat ja valokuvaajat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Paulo — kohdekartta / Kohdekartta: Sala São Paulo] 1999 Konserttisali asuu rautatieasemassa. Júlio Prestesin asema rakennettiin 1926–1938 Sorocabanan radan pääkonttoriksi ja päätepysäkiksi; radan olivat perustaneet kahviparonit viedäkseen satonsa osavaltion lounaisosasta ja Paranásta Santosin satamaan. Arkkitehti Christiano Stockler das Neves piirsi eklektisen talon, jonka tyyliä on kuvattu uusklassiseksi Ludvig XVI:ksi, ja otti mallia New Yorkin vanhasta Pennsylvania-asemasta, joka on sittemmin purettu. Suuren hallin läpi kulki työmaan ajan pieni rata, jota pitkin Euroopasta tuodut rakennusaineet saatiin sisälle. Sitten juna hävisi kilpailun. Maanteiden ja linja-autojen jälkeen kaukoliikenne loppui, ja 1980-luvulta lähtien radalla ajoi vai…
+
+### 15.1
+KYSYMYS: Minkä kaupungin kanssa rata yhdistää Klevanin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klevanin rakkaudentunneli (kulttuuri)
+Tietoruudun teksti: Klevanin rakkaudentunneli on teollisuusradan osuus Rivnen alueella Ukrainassa, ja rata yhdistää Klevanin Orzhivin kaupunkiin. Se päättyy Orzhivin pohjoisosan kuitulevytehtaalle. Koko yksiraiteinen rata on noin 6,4 kilometriä pitkä, ja metsän halki kulkeva osuus on noin 4,9 kilometriä. Puut kaartuvat raiteen ylle vihreiksi holveiksi, jotka muodostavat luonnollisen tunnelin. Rata on Ukrainan rautatieyhtiö UZ:n liikennöimä, mutta junia kulkee vain kolme päivässä, joten radalla kävelevät myös pariskunnat ja valokuvaajat.
+
+### 15.2
+KYSYMYS: Kuinka monta kertaa päivässä junat kulkevat radalla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klevanin rakkaudentunneli (kulttuuri)
+Tietoruudun teksti: Klevanin rakkaudentunneli on teollisuusradan osuus Rivnen alueella Ukrainassa, ja rata yhdistää Klevanin Orzhivin kaupunkiin. Se päättyy Orzhivin pohjoisosan kuitulevytehtaalle. Koko yksiraiteinen rata on noin 6,4 kilometriä pitkä, ja metsän halki kulkeva osuus on noin 4,9 kilometriä. Puut kaartuvat raiteen ylle vihreiksi holveiksi, jotka muodostavat luonnollisen tunnelin. Rata on Ukrainan rautatieyhtiö UZ:n liikennöimä, mutta junia kulkee vain kolme päivässä, joten radalla kävelevät myös pariskunnat ja valokuvaajat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Paulo — kohdekartta / Kohdekartta: Sala São Paulo] 1999 Konserttisali asuu rautatieasemassa. Júlio Prestesin asema rakennettiin 1926–1938 Sorocabanan radan pääkonttoriksi ja päätepysäkiksi; radan olivat perustaneet kahviparonit viedäkseen satonsa osavaltion lounaisosasta ja Paranásta Santosin satamaan. Arkkitehti Christiano Stockler das Neves piirsi eklektisen talon, jonka tyyliä on kuvattu uusklassiseksi Ludvig XVI:ksi, ja otti mallia New Yorkin vanhasta Pennsylvania-asemasta, joka on sittemmin purettu. Suuren hallin läpi kulki työmaan ajan pieni rata, jota pitkin Euroopasta tuodut rakennusaineet saatiin sisälle. Sitten juna hävisi kilpailun. Maanteiden ja linja-autojen jälkeen kaukoliikenne loppui, ja 1980-luvulta lähtien radalla ajoi vai…
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

@@ -1,0 +1,195 @@
+================ KOHTA 1 (kohde:hoverla) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoverla (luonto · vuori)
+Tietoruudun teksti: Hoverla on 2 061 metriä korkea ja Ukrainan korkein vuori sekä osa Ukrainan Karpaatteja. Se sijaitsee Itä-Beskideilla Tšornohoran alueella. Rinteitä peittävät pyökki- ja kuusimetsät, joiden yläpuolelle jää subalpiinisten niittyjen vyöhyke, jota ukrainaksi kutsutaan nimellä polonyna. Prut-joen päälähde on vuoren itärinteellä.
+
+### 1.1
+KYSYMYS: Mikä polonyna on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoverla (luonto · vuori)
+Tietoruudun teksti: Hoverla on 2 061 metriä korkea ja Ukrainan korkein vuori sekä osa Ukrainan Karpaatteja. Se sijaitsee Itä-Beskideilla Tšornohoran alueella. Rinteitä peittävät pyökki- ja kuusimetsät, joiden yläpuolelle jää subalpiinisten niittyjen vyöhyke, jota ukrainaksi kutsutaan nimellä polonyna. Prut-joen päälähde on vuoren itärinteellä.
+
+### 1.2
+KYSYMYS: Mikä joki saa alkunsa Hoverlalta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoverla (luonto · vuori)
+Tietoruudun teksti: Hoverla on 2 061 metriä korkea ja Ukrainan korkein vuori sekä osa Ukrainan Karpaatteja. Se sijaitsee Itä-Beskideilla Tšornohoran alueella. Rinteitä peittävät pyökki- ja kuusimetsät, joiden yläpuolelle jää subalpiinisten niittyjen vyöhyke, jota ukrainaksi kutsutaan nimellä polonyna. Prut-joen päälähde on vuoren itärinteellä.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:mustameri~3) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Galápagos — kaupunkilehti / Luonto: Meri-iguaanit — ainoat sukeltavat liskot] Meri-iguaani on maailman ainoa lisko, joka hakee ravintonsa merestä. Se ui litteän, sivuttain puristuneen häntänsä avulla ja raapii tylpällä kuonollaan levää vedenalaisilta kiviltä — lähes koko ruokavalio on punaista ja vihreää levää. Suurimmat urokset sukeltavat jopa 30 metrin syvyyteen ja pysyvät veden alla lähes tunnin, naaraat ja pienemmät yksilöt tyytyvät matalan veden paljastamiin levämattoihin. Ylimääräinen suola erittyy sieraimista pieninä aivastuksina, mikä jättää päälaelle valkoisen suolakuorrutuksen. Koko vaihtelee saarittain: Genovesan pienet yksilöt ovat reilut 19 senttiä, Santa Cruzin ja Fernandinan iguaanit lähes kaksinkertaisia.
+- [Odessa — kaupunkilehti / Odessa: Lahti, joka on suolaisempi kuin meri] Kahdeksan kilometrin päässä keskustasta pohjoiseen on vesi, joka ei ole meri eikä järvi. Kuyalnykin lahti on kaksikymmentäkahdeksan kilometriä pitkä ja keskimäärin metrin syvyinen. Se oli aikoinaan joen suu, sitten merenlahti, ja noin 1300-luvulla hiekka kasautui sen ja meren väliin kannakseksi. Siitä lähtien vesi on haihtunut pääsemättä minnekään: suolapitoisuus on mittausten mukaan vaihdellut 29 ja 269 promillen välillä. Näin suolaisessa vedessä elää bakteerien lisäksi vain kaksi lajia, ja lisääntymisaikaan pikkuäyriäisiä on niin paljon, että koko veden sävy kääntyy punertavaksi. Kylpylä perustettiin rannalle jo 1834.
+
+### 2.1
+KYSYMYS: Miksi Mustameren syvyys on hapeton?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+
+### 2.2
+KYSYMYS: Mistä meri sai nimensä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Galápagos — kaupunkilehti / Luonto: Meri-iguaanit — ainoat sukeltavat liskot] Meri-iguaani on maailman ainoa lisko, joka hakee ravintonsa merestä. Se ui litteän, sivuttain puristuneen häntänsä avulla ja raapii tylpällä kuonollaan levää vedenalaisilta kiviltä — lähes koko ruokavalio on punaista ja vihreää levää. Suurimmat urokset sukeltavat jopa 30 metrin syvyyteen ja pysyvät veden alla lähes tunnin, naaraat ja pienemmät yksilöt tyytyvät matalan veden paljastamiin levämattoihin. Ylimääräinen suola erittyy sieraimista pieninä aivastuksina, mikä jättää päälaelle valkoisen suolakuorrutuksen. Koko vaihtelee saarittain: Genovesan pienet yksilöt ovat reilut 19 senttiä, Santa Cruzin ja Fernandinan iguaanit lähes kaksinkertaisia.
+- [Odessa — kaupunkilehti / Odessa: Lahti, joka on suolaisempi kuin meri] Kahdeksan kilometrin päässä keskustasta pohjoiseen on vesi, joka ei ole meri eikä järvi. Kuyalnykin lahti on kaksikymmentäkahdeksan kilometriä pitkä ja keskimäärin metrin syvyinen. Se oli aikoinaan joen suu, sitten merenlahti, ja noin 1300-luvulla hiekka kasautui sen ja meren väliin kannakseksi. Siitä lähtien vesi on haihtunut pääsemättä minnekään: suolapitoisuus on mittausten mukaan vaihdellut 29 ja 269 promillen välillä. Näin suolaisessa vedessä elää bakteerien lisäksi vain kaksi lajia, ja lisääntymisaikaan pikkuäyriäisiä on niin paljon, että koko veden sävy kääntyy punertavaksi. Kylpylä perustettiin rannalle jo 1834.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:asovanmeri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asovanmeri (meri)
+Tietoruudun teksti: Asovanmeri on Itä-Euroopan sisämannerjalustameri, joka yhtyy Mustaanmereen kapean Kertšinsalmen kautta ja jota pidetään toisinaan Mustanmeren pohjoisena jatkeena. Sitä rajaavat idässä Venäjä sekä luoteessa ja lounaassa Ukraina. Se on tärkeä kulkureitti Keski-Aasiaan Kaspianmereltä Volga–Don-kanavan kautta.
+
+### 3.1
+KYSYMYS: Mikä Kertšinsalmi on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asovanmeri (meri)
+Tietoruudun teksti: Asovanmeri on Itä-Euroopan sisämannerjalustameri, joka yhtyy Mustaanmereen kapean Kertšinsalmen kautta ja jota pidetään toisinaan Mustanmeren pohjoisena jatkeena. Sitä rajaavat idässä Venäjä sekä luoteessa ja lounaassa Ukraina. Se on tärkeä kulkureitti Keski-Aasiaan Kaspianmereltä Volga–Don-kanavan kautta.
+
+### 3.2
+KYSYMYS: Miksi Asovanmeri on niin matala?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asovanmeri (meri)
+Tietoruudun teksti: Asovanmeri on Itä-Euroopan sisämannerjalustameri, joka yhtyy Mustaanmereen kapean Kertšinsalmen kautta ja jota pidetään toisinaan Mustanmeren pohjoisena jatkeena. Sitä rajaavat idässä Venäjä sekä luoteessa ja lounaassa Ukraina. Se on tärkeä kulkureitti Keski-Aasiaan Kaspianmereltä Volga–Don-kanavan kautta.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:dnepr) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnepr (luonto · joki)
+Tietoruudun teksti: Dnepr on yksi Euroopan suurista rajat ylittävistä joista. Se nousee Valdain kukkuloilta Smolenskin luota Venäjältä ja virtaa Valko-Venäjän ja Ukrainan halki Mustaanmereen. Pituutta sillä on noin 2 200 kilometriä ja valuma-alueella 504 000 neliökilometriä, joten se on sekä Ukrainan että Valko-Venäjän pisin joki ja Euroopan neljänneksi pisin Volgan, Tonavan ja Uralin jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kaupunkilehti / Kiova: Sata metriä alas ja takaisin] Kiovan Arsenalnan metroasema on 105,5 metriä maanpinnan alapuolella. Se oli maailman syvin asema vuoteen 2022 asti, jolloin Kiinan Chongqingiin avattiin 116 metrin syvyyteen ulottuva Hongyancunin asema. Liukuportaita on kaksi peräkkäin, 55,8 ja 46,6 metriä, ja niiden välissä on oma väliaula. Syvyys ei ole kikkailua: Kiova on Dneprin jyrkällä rantatörmällä, ja asema on kaivettu törmän sisään.
+- [Kiova — kaupunkilehti / Kiova: Kilpi vaihdettiin kesken sodan] Dneprin rinteellä seisoo 62 metriä korkea teräksinen naispatsas, kädessään 16 metrin miekka ja 13 metriä leveä kilpi. Patsas paljastettiin vuonna 1981, ja kilvessä oli silloin Neuvostoliiton vaakuna. Elokuussa 2023 vaakuna irrotettiin ja tilalle nostettiin Ukrainan kolmikärki. Työ tehtiin kovassa tuulessa ja sateessa ja keskeytyi ilmahälytyksiin, mutta kilpi oli valmis ennen itsenäisyyspäivää 24. elokuuta.
+- [Nairobi — kohdekartta / Kohdekartta: Nairobin arboretum] 1907 Nairobin arboretum perustettiin 1907, kahdeksan vuotta sen jälkeen kun juna oli saapunut kaupunkiin. Perustaja oli Batiscombe, ja tarkoitus oli hyvin käytännöllinen: kokeilla, mitkä metsäpuulajit kasvavat Nairobin ylängöllä. Puisto oli siis alun perin koeasema, ei virkistysalue. Alue julistettiin luonnonsuojelualueeksi 1932, ja omistuskirja siirtyi valtiolle 1996. Kokeilu jätti jälkeensä poikkeuksellisen kokoelman: kolmenkymmenen hehtaarin alueella kasvaa yli 350 puulajia, sekä kotimaisia että tuotuja. Alue toimii yhä sekä tutkimuspaikkana että kaupunkilaisten ulkoilualueena. Arboretum on State House Roadin varrella Kilimanin kaupunginosassa, aivan presidentin virka-asunnon naapurissa.…
+
+### 4.1
+KYSYMYS: Miksi Kiova rakennettiin Dneprin varrelle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnepr (luonto · joki)
+Tietoruudun teksti: Dnepr on yksi Euroopan suurista rajat ylittävistä joista. Se nousee Valdain kukkuloilta Smolenskin luota Venäjältä ja virtaa Valko-Venäjän ja Ukrainan halki Mustaanmereen. Pituutta sillä on noin 2 200 kilometriä ja valuma-alueella 504 000 neliökilometriä, joten se on sekä Ukrainan että Valko-Venäjän pisin joki ja Euroopan neljänneksi pisin Volgan, Tonavan ja Uralin jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kaupunkilehti / Kiova: Sata metriä alas ja takaisin] Kiovan Arsenalnan metroasema on 105,5 metriä maanpinnan alapuolella. Se oli maailman syvin asema vuoteen 2022 asti, jolloin Kiinan Chongqingiin avattiin 116 metrin syvyyteen ulottuva Hongyancunin asema. Liukuportaita on kaksi peräkkäin, 55,8 ja 46,6 metriä, ja niiden välissä on oma väliaula. Syvyys ei ole kikkailua: Kiova on Dneprin jyrkällä rantatörmällä, ja asema on kaivettu törmän sisään.
+
+### 4.2
+KYSYMYS: Mitkä olivat Dneprin kosket?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnepr (luonto · joki)
+Tietoruudun teksti: Dnepr on yksi Euroopan suurista rajat ylittävistä joista. Se nousee Valdain kukkuloilta Smolenskin luota Venäjältä ja virtaa Valko-Venäjän ja Ukrainan halki Mustaanmereen. Pituutta sillä on noin 2 200 kilometriä ja valuma-alueella 504 000 neliökilometriä, joten se on sekä Ukrainan että Valko-Venäjän pisin joki ja Euroopan neljänneksi pisin Volgan, Tonavan ja Uralin jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kaupunkilehti / Kiova: Kilpi vaihdettiin kesken sodan] Dneprin rinteellä seisoo 62 metriä korkea teräksinen naispatsas, kädessään 16 metrin miekka ja 13 metriä leveä kilpi. Patsas paljastettiin vuonna 1981, ja kilvessä oli silloin Neuvostoliiton vaakuna. Elokuussa 2023 vaakuna irrotettiin ja tilalle nostettiin Ukrainan kolmikärki. Työ tehtiin kovassa tuulessa ja sateessa ja keskeytyi ilmahälytyksiin, mutta kilpi oli valmis ennen itsenäisyyspäivää 24. elokuuta.
+- [Kiova — kaupunkilehti / Kiova: Sata metriä alas ja takaisin] Kiovan Arsenalnan metroasema on 105,5 metriä maanpinnan alapuolella. Se oli maailman syvin asema vuoteen 2022 asti, jolloin Kiinan Chongqingiin avattiin 116 metrin syvyyteen ulottuva Hongyancunin asema. Liukuportaita on kaksi peräkkäin, 55,8 ja 46,6 metriä, ja niiden välissä on oma väliaula. Syvyys ei ole kikkailua: Kiova on Dneprin jyrkällä rantatörmällä, ja asema on kaivettu törmän sisään.
+- [Nairobi — kohdekartta / Kohdekartta: Nairobin arboretum] 1907 Nairobin arboretum perustettiin 1907, kahdeksan vuotta sen jälkeen kun juna oli saapunut kaupunkiin. Perustaja oli Batiscombe, ja tarkoitus oli hyvin käytännöllinen: kokeilla, mitkä metsäpuulajit kasvavat Nairobin ylängöllä. Puisto oli siis alun perin koeasema, ei virkistysalue. Alue julistettiin luonnonsuojelualueeksi 1932, ja omistuskirja siirtyi valtiolle 1996. Kokeilu jätti jälkeensä poikkeuksellisen kokoelman: kolmenkymmenen hehtaarin alueella kasvaa yli 350 puulajia, sekä kotimaisia että tuotuja. Alue toimii yhä sekä tutkimuspaikkana että kaupunkilaisten ulkoilualueena. Arboretum on State House Roadin varrella Kilimanin kaupunginosassa, aivan presidentin virka-asunnon naapurissa.…
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:dnestr) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnestr (luonto · joki)
+Tietoruudun teksti: Dnestrin ja Dneprin nimet ovat toistensa vastakohdat. Molemmat ovat sarmatialaista perua: Dnestr on dānu nazdya, lähellä oleva joki, ja Dnepr taas kaukana virtaava — nimet on annettu jostakin niiden välistä. Kreikkalaisille joki oli Tyras, skyyttien sanasta tūra, nopea. Ottomaanit kutsuivat sitä vielä 1800-luvulla Turlaksi. Nimiä on muitakin: Nistru romaniaksi, Nester jiddišiksi. Joki nousee Ukrainassa Turkan tienoilla aivan Puolan rajan tuntumassa, virtaa Moldovan halki 398 kilometriä ja erottaa siellä maan pääosan irtautuneesta Transnistriasta, palaa Ukrainaan ja laskee Mustaanmereen leveään liman-laguuniin.
+
+### 5.1
+KYSYMYS: Mitä nimi Dnestr tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnestr (luonto · joki)
+Tietoruudun teksti: Dnestrin ja Dneprin nimet ovat toistensa vastakohdat. Molemmat ovat sarmatialaista perua: Dnestr on dānu nazdya, lähellä oleva joki, ja Dnepr taas kaukana virtaava — nimet on annettu jostakin niiden välistä. Kreikkalaisille joki oli Tyras, skyyttien sanasta tūra, nopea. Ottomaanit kutsuivat sitä vielä 1800-luvulla Turlaksi. Nimiä on muitakin: Nistru romaniaksi, Nester jiddišiksi. Joki nousee Ukrainassa Turkan tienoilla aivan Puolan rajan tuntumassa, virtaa Moldovan halki 398 kilometriä ja erottaa siellä maan pääosan irtautuneesta Transnistriasta, palaa Ukrainaan ja laskee Mustaanmereen leveään liman-laguuniin.
+
+### 5.2
+KYSYMYS: Mikä Transnistria on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnestr (luonto · joki)
+Tietoruudun teksti: Dnestrin ja Dneprin nimet ovat toistensa vastakohdat. Molemmat ovat sarmatialaista perua: Dnestr on dānu nazdya, lähellä oleva joki, ja Dnepr taas kaukana virtaava — nimet on annettu jostakin niiden välistä. Kreikkalaisille joki oli Tyras, skyyttien sanasta tūra, nopea. Ottomaanit kutsuivat sitä vielä 1800-luvulla Turlaksi. Nimiä on muitakin: Nistru romaniaksi, Nester jiddišiksi. Joki nousee Ukrainassa Turkan tienoilla aivan Puolan rajan tuntumassa, virtaa Moldovan halki 398 kilometriä ja erottaa siellä maan pääosan irtautuneesta Transnistriasta, palaa Ukrainaan ja laskee Mustaanmereen leveään liman-laguuniin.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

@@ -1,0 +1,198 @@
+================ KOHTA 16 (kohde:berdytsivin-karmeliittaluostari) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berdytšivin karmeliittaluostari (kulttuuri)
+Tietoruudun teksti: Berdytšivin karmeliittaluostari on paljasjalkaisten karmeliittojen luostari Zhytomyrin alueella Ukrainassa. Voivoda Janusz Tyszkiewicz Łohojski lahjoitti Berdytšivin linnoituksen karmeliitoille vuonna 1630, ja luostarin rakennustyöt alkoivat 1634 ja valmistuivat 1642. Luostari tuli tunnetuksi Berdyczówin Neitsyt Marian ikonista, jolle paavi Benedictus XIV antoi kultaiset kruunut vuonna 1756. Ikoni veti puoleensa pyhiinvaeltajia. Luostari palautettiin roomalaiskatoliselle kirkolle vuonna 1991.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kaupunkilehti / Ruoka: Pastel de nata on luostarin resepti] Jerónimosin luostarin munkit paistoivat lehtitaikinakuppeja, joissa on munakermatäyte. Kun luostarit suljettiin 1834, resepti päätyi viereiselle sokerikaupalle, ja Pastéis de Belém on myynyt leivoksia vuodesta 1837. Kahvila kertoo paistavansa niitä yli 20 000 päivässä. Vain siellä ne saa nimittää pastéis de belém — muualla ne ovat pastel de nata.
+
+### 16.1
+KYSYMYS: Milloin luostarin rakennustyöt valmistuivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berdytšivin karmeliittaluostari (kulttuuri)
+Tietoruudun teksti: Berdytšivin karmeliittaluostari on paljasjalkaisten karmeliittojen luostari Zhytomyrin alueella Ukrainassa. Voivoda Janusz Tyszkiewicz Łohojski lahjoitti Berdytšivin linnoituksen karmeliitoille vuonna 1630, ja luostarin rakennustyöt alkoivat 1634 ja valmistuivat 1642. Luostari tuli tunnetuksi Berdyczówin Neitsyt Marian ikonista, jolle paavi Benedictus XIV antoi kultaiset kruunut vuonna 1756. Ikoni veti puoleensa pyhiinvaeltajia. Luostari palautettiin roomalaiskatoliselle kirkolle vuonna 1991.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kaupunkilehti / Ruoka: Pastel de nata on luostarin resepti] Jerónimosin luostarin munkit paistoivat lehtitaikinakuppeja, joissa on munakermatäyte. Kun luostarit suljettiin 1834, resepti päätyi viereiselle sokerikaupalle, ja Pastéis de Belém on myynyt leivoksia vuodesta 1837. Kahvila kertoo paistavansa niitä yli 20 000 päivässä. Vain siellä ne saa nimittää pastéis de belém — muualla ne ovat pastel de nata.
+
+### 16.2
+KYSYMYS: Minkä ikonin ansiosta luostari tuli tunnetuksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berdytšivin karmeliittaluostari (kulttuuri)
+Tietoruudun teksti: Berdytšivin karmeliittaluostari on paljasjalkaisten karmeliittojen luostari Zhytomyrin alueella Ukrainassa. Voivoda Janusz Tyszkiewicz Łohojski lahjoitti Berdytšivin linnoituksen karmeliitoille vuonna 1630, ja luostarin rakennustyöt alkoivat 1634 ja valmistuivat 1642. Luostari tuli tunnetuksi Berdyczówin Neitsyt Marian ikonista, jolle paavi Benedictus XIV antoi kultaiset kruunut vuonna 1756. Ikoni veti puoleensa pyhiinvaeltajia. Luostari palautettiin roomalaiskatoliselle kirkolle vuonna 1991.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:trostjanetsin-dendropuisto) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trostjanetsin dendropuisto (luonto · vuori)
+Tietoruudun teksti: Trostjanetsin dendropuisto on 205 hehtaarin puisto Tšernihivin alueella Ukrainassa. Tilanomistaja Ivan Skoropadski (1804–1887) aloitti sen rakentamisen vuonna 1834 tasaiselle ja puuttomalle aromaan jokilaaksolle. Ensin istutettiin paikallisia puita, ja vuodesta 1840 alkaen puistoon tuotiin ulkomaisia lajeja. Sveitsi-nimistä osaa varten kasattiin vuodesta 1858 tekokukkuloita, joiden korkeus on 20–30 metriä. Työt olivat pääosin valmiit vuoteen 1890 mennessä, ja puistossa kasvaa noin 520 puu- ja kasvilajia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bagdad — kohdekartta / Kohdekartta: Qushlan kellotorni] 1871 Kasarmipiha on nykyään julkinen puisto. Nurmen halki kulkee hiekkakäytäviä, niiden yllä puisia pergoloita, ja lehtimajat ovat istumista varten. Bagdadilaiset tulevat aukiolle viettämään aikaa: majoissa luetaan runoja ääneen, ja alueella pidetään näyttelyitä ja muita kulttuuritilaisuuksia. Sisään tullaan Mutanabbin kadun päästä, kirjakauppojen kadulta, ja aukion takaa avautuu Tigris. Aukio oli aiemmin kasarmialue. Ottomaanien kuvernööri Mehmed Namık Pasha aloitti rakentamisen vuonna 1861 Rusafan puolelle: paikalle tulivat maakunnan virastot ja kasarmit, joissa asui tuhansia sotilaita. Kellotorni siirtyi Taqi al-Din Pashan vastuulle ja valmistui Midhat Pashan kaudella vuonna 1871. Se her…
+- [Romania — maalehti / Luonto: Suisto, jossa asuu 5500 lajia] 1991 — Tonavan suisto on Euroopan suurin säilynyt kosteikko, ja se levittäytyy yli 4100 neliökilometrille Romanian ja Ukrainan rajalla. Alueella elää yli 5500 kasvi- ja eläinlajia — enemmän kuin missään muualla Euroopassa — ja monimuotoisuudessa sen ohittavat maailmassa vain Australian Suuri valliriutta ja Galapagossaaret. Suistossa pesii yli 300 lintulajia, muun muassa suurin osa Euroopan pelikaaneista ja punakaulahanhista, ja vesissä ui lähes 90 kalalajia, joukossa sampia. Unesco otti suiston maailmanperintöluetteloon vuonna 1991, vuosi sen jälkeen kun siitä oli tehty biosfäärialue.
+
+### 17.1
+KYSYMYS: Kuka aloitti puiston rakentamisen ja milloin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trostjanetsin dendropuisto (luonto · vuori)
+Tietoruudun teksti: Trostjanetsin dendropuisto on 205 hehtaarin puisto Tšernihivin alueella Ukrainassa. Tilanomistaja Ivan Skoropadski (1804–1887) aloitti sen rakentamisen vuonna 1834 tasaiselle ja puuttomalle aromaan jokilaaksolle. Ensin istutettiin paikallisia puita, ja vuodesta 1840 alkaen puistoon tuotiin ulkomaisia lajeja. Sveitsi-nimistä osaa varten kasattiin vuodesta 1858 tekokukkuloita, joiden korkeus on 20–30 metriä. Työt olivat pääosin valmiit vuoteen 1890 mennessä, ja puistossa kasvaa noin 520 puu- ja kasvilajia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bagdad — kohdekartta / Kohdekartta: Qushlan kellotorni] 1871 Kasarmipiha on nykyään julkinen puisto. Nurmen halki kulkee hiekkakäytäviä, niiden yllä puisia pergoloita, ja lehtimajat ovat istumista varten. Bagdadilaiset tulevat aukiolle viettämään aikaa: majoissa luetaan runoja ääneen, ja alueella pidetään näyttelyitä ja muita kulttuuritilaisuuksia. Sisään tullaan Mutanabbin kadun päästä, kirjakauppojen kadulta, ja aukion takaa avautuu Tigris. Aukio oli aiemmin kasarmialue. Ottomaanien kuvernööri Mehmed Namık Pasha aloitti rakentamisen vuonna 1861 Rusafan puolelle: paikalle tulivat maakunnan virastot ja kasarmit, joissa asui tuhansia sotilaita. Kellotorni siirtyi Taqi al-Din Pashan vastuulle ja valmistui Midhat Pashan kaudella vuonna 1871. Se her…
+- [San Francisco — kohdekartta / Kohdekartta: Ghirardelli Square] 1852–1964 Domenico Ghirardelli syntyi 1817 Rapallossa ja oppi suklaantekijän ammatin Romanengon liikkeessä Genovassa. Parikymppisenä hän muutti Uruguayhin ja sieltä Limaan, jossa hän piti makeiskauppaa ja alkoi käyttää nimensä espanjalaista muotoa Domingo. Vuonna 1849 hän lähti Kaliforniaan entisen naapurinsa James Lickin kehotuksesta — Lick oli vienyt San Franciscoon vuotta aiemmin 600 naulaa suklaata — ja avasi ensimmäisen kauppansa kaivosleiriin myydäkseen makeisia kullankaivajille. Vuoden 1851 tulipalo tuhosi hänen San Franciscon liikkeensä ja muutamaa päivää myöhemmin myös Stocktonin kaupan. Ghirardelli aloitti alusta ja perusti 1852 yhtiönsä, joka on Yhdysvaltain kolmanneksi vanhin su…
+
+### 17.2
+KYSYMYS: Kuinka monta lajia puistossa kasvaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trostjanetsin dendropuisto (luonto · vuori)
+Tietoruudun teksti: Trostjanetsin dendropuisto on 205 hehtaarin puisto Tšernihivin alueella Ukrainassa. Tilanomistaja Ivan Skoropadski (1804–1887) aloitti sen rakentamisen vuonna 1834 tasaiselle ja puuttomalle aromaan jokilaaksolle. Ensin istutettiin paikallisia puita, ja vuodesta 1840 alkaen puistoon tuotiin ulkomaisia lajeja. Sveitsi-nimistä osaa varten kasattiin vuodesta 1858 tekokukkuloita, joiden korkeus on 20–30 metriä. Työt olivat pääosin valmiit vuoteen 1890 mennessä, ja puistossa kasvaa noin 520 puu- ja kasvilajia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Suisto, jossa asuu 5500 lajia] 1991 — Tonavan suisto on Euroopan suurin säilynyt kosteikko, ja se levittäytyy yli 4100 neliökilometrille Romanian ja Ukrainan rajalla. Alueella elää yli 5500 kasvi- ja eläinlajia — enemmän kuin missään muualla Euroopassa — ja monimuotoisuudessa sen ohittavat maailmassa vain Australian Suuri valliriutta ja Galapagossaaret. Suistossa pesii yli 300 lintulajia, muun muassa suurin osa Euroopan pelikaaneista ja punakaulahanhista, ja vesissä ui lähes 90 kalalajia, joukossa sampia. Unesco otti suiston maailmanperintöluetteloon vuonna 1991, vuosi sen jälkeen kun siitä oli tehty biosfäärialue.
+- [Itä-Timor — maalehti / Musiikki: Neljä lajia, ei yhtään nuottia] Timorilainen esitysohjelmisto jakautuu neljään selvärajaiseen lajiin: tebe, tebedai, dansa ja cansaun. Kaikki lepäävät suullisen perinteen varassa ja ovat siirtyneet sukupolvelta toiselle ilman kirjoitettua nuottia. Musiikki ja tanssi eivät ole erillisiä taiteita vaan saman esityksen kaksi puolta, ja samaan kokonaisuuteen kuuluvat puku ja korut. Laulun sanat ovat tetumiksi tai portugaliksi, maan kahdella virallisella kielellä. Päälle on kertynyt uudempia kerroksia radiosta ja siirtolaisilta: rock, hiphop ja reggae kuuluvat Dilissä siinä missä muuallakin.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:hahmotelma-kymmenyskirkko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiovan Kymmenyskirkko (historia)
+Tietoruudun teksti: Vladimir Suuri rakennutti Kymmenyskirkon vuosina 989–996 Kiovan Venäjän ensimmäiseksi kivikirkoksi ja ruhtinaiden mausoleumiksi. Se romahti Batu-kaanin piirityksessä joulukuussa 1240, kun asukkaat pakenivat sinne turvaan.
+
+### 18.1
+KYSYMYS: Miltä Kiovan Kymmenyskirkko näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiovan Kymmenyskirkko (historia)
+Tietoruudun teksti: Vladimir Suuri rakennutti Kymmenyskirkon vuosina 989–996 Kiovan Venäjän ensimmäiseksi kivikirkoksi ja ruhtinaiden mausoleumiksi. Se romahti Batu-kaanin piirityksessä joulukuussa 1240, kun asukkaat pakenivat sinne turvaan.
+
+### 18.2
+KYSYMYS: Miksi Kiovan Kymmenyskirkko katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiovan Kymmenyskirkko (historia)
+Tietoruudun teksti: Vladimir Suuri rakennutti Kymmenyskirkon vuosina 989–996 Kiovan Venäjän ensimmäiseksi kivikirkoksi ja ruhtinaiden mausoleumiksi. Se romahti Batu-kaanin piirityksessä joulukuussa 1240, kun asukkaat pakenivat sinne turvaan.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:hahmotelma-kiova) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiova (kaupungit)
+Tietoruudun teksti: Kiova on Ukrainan pääkaupunki ja suurin kaupunki, joka levittäytyy Dnepr-joen molemmille rannoille. Se oli jo 800-luvulla vilkas kauppapaikka Skandinavian ja Konstantinopolin välisellä reitillä, ja varjagien vallattua kaupungin siitä tuli Kiovan Rusin pääkaupunki – Itä-Euroopan ensimmäisen valtion sydän. Kaupungin rinteellä kohoava Petšerskin luostari perustettiin 1000-luvun puolivälissä, kun munkki Anthonios palasi Athos-vuorelta ja asettui luolaan Dneprin yläpuolelle; luostarista kasvoi itäisen kristikunnan tärkein oppineisuuden keskus ja Ukrainan varhaisimman kirjapainon koti. Vuosisatoja myöhemmin, Venäjän keisarikunnan teollistuessa 1800-luvun lopulla, Kiovasta tuli jälleen kukoistava kaupan ja teollisuuden keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Kiovan kultainen portti] 1017–1024 Ruhtinas Jaroslav Viisas rakennutti Kiovan kultaisen portin vuosina 1017–1024 kaupungin muurien pääsisäänkäynniksi. Portti sai nimensä ja mallinsa Konstantinopolin kuuluisasta Kultaisesta portista, ja se toimi lähes 500 vuoden ajan sekä puolustusrakenteena että voitokkaana riemuporttina, josta ruhtinaat ratsastivat kaupunkiin. Läpikulkuaukko oli noin 12 metriä korkea ja 6 metriä leveä, ja sen päälle rakennettiin pieni kirkko suojelemaan kaupunkia taivaallisin voimin. Vuonna 1240 Batu-kaanin mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin. Seuraavien vuosisatojen aikana rakennus rapistui hiljalleen lähes raunioksi: 1970-luvulle tultaessa maan päällä oli enää näkyv…
+
+### 19.1
+KYSYMYS: Mistä munkki Anthonios palasi perustaakseen Petšerskin luostarin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiova (kaupungit)
+Tietoruudun teksti: Kiova on Ukrainan pääkaupunki ja suurin kaupunki, joka levittäytyy Dnepr-joen molemmille rannoille. Se oli jo 800-luvulla vilkas kauppapaikka Skandinavian ja Konstantinopolin välisellä reitillä, ja varjagien vallattua kaupungin siitä tuli Kiovan Rusin pääkaupunki – Itä-Euroopan ensimmäisen valtion sydän. Kaupungin rinteellä kohoava Petšerskin luostari perustettiin 1000-luvun puolivälissä, kun munkki Anthonios palasi Athos-vuorelta ja asettui luolaan Dneprin yläpuolelle; luostarista kasvoi itäisen kristikunnan tärkein oppineisuuden keskus ja Ukrainan varhaisimman kirjapainon koti. Vuosisatoja myöhemmin, Venäjän keisarikunnan teollistuessa 1800-luvun lopulla, Kiovasta tuli jälleen kukoistava kaupan ja teollisuuden keskus.
+
+### 19.2
+KYSYMYS: Miksi Kiovaa kutsutaan Kiovan Rusin sydämeksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiova (kaupungit)
+Tietoruudun teksti: Kiova on Ukrainan pääkaupunki ja suurin kaupunki, joka levittäytyy Dnepr-joen molemmille rannoille. Se oli jo 800-luvulla vilkas kauppapaikka Skandinavian ja Konstantinopolin välisellä reitillä, ja varjagien vallattua kaupungin siitä tuli Kiovan Rusin pääkaupunki – Itä-Euroopan ensimmäisen valtion sydän. Kaupungin rinteellä kohoava Petšerskin luostari perustettiin 1000-luvun puolivälissä, kun munkki Anthonios palasi Athos-vuorelta ja asettui luolaan Dneprin yläpuolelle; luostarista kasvoi itäisen kristikunnan tärkein oppineisuuden keskus ja Ukrainan varhaisimman kirjapainon koti. Vuosisatoja myöhemmin, Venäjän keisarikunnan teollistuessa 1800-luvun lopulla, Kiovasta tuli jälleen kukoistava kaupan ja teollisuuden keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Kiovan kultainen portti] 1017–1024 Ruhtinas Jaroslav Viisas rakennutti Kiovan kultaisen portin vuosina 1017–1024 kaupungin muurien pääsisäänkäynniksi. Portti sai nimensä ja mallinsa Konstantinopolin kuuluisasta Kultaisesta portista, ja se toimi lähes 500 vuoden ajan sekä puolustusrakenteena että voitokkaana riemuporttina, josta ruhtinaat ratsastivat kaupunkiin. Läpikulkuaukko oli noin 12 metriä korkea ja 6 metriä leveä, ja sen päälle rakennettiin pieni kirkko suojelemaan kaupunkia taivaallisin voimin. Vuonna 1240 Batu-kaanin mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin. Seuraavien vuosisatojen aikana rakennus rapistui hiljalleen lähes raunioksi: 1970-luvulle tultaessa maan päällä oli enää näkyv…
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-odesa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Odesa (kaupungit)
+Tietoruudun teksti: Odesa on Ukrainan kolmanneksi suurin kaupunki ja tärkeä satama Mustanmeren luoteisrannalla. Paikalla on ollut asutusta antiikin ajoista lähtien, ja keskiajalla siellä toimi liettualaisten hallitsema satama Kotsiubijiv, joka siirtyi osmanien haltuun 1500-luvulla nimellä Hacibey. Venäjä valtasi alueen 1792, ja keisarinna Katariina II:n käskykirje perusti 1794 sataman ja kauppapaikan, joka sai pian nimekseen Odessa. 1800-luvulla kaupungista kasvoi Venäjän keisarikunnan neljänneksi suurin – Moskovan, Pietarin ja Varsovan jälkeen – ja sen arkkitehtuuri muistuttaa enemmän Ranskan ja Italian kaupunkeja kuin Venäjää. Kaupungin tunnetuin maamerkki on merelle avautuva jättiläisportaikko, jonka leveys kapenee ylöspäin mentäessä niin, että se näyttää todellista pidemmältä.
+
+### 20.1
+KYSYMYS: Minkä keisarinnan käskystä Odesan satama perustettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Odesa (kaupungit)
+Tietoruudun teksti: Odesa on Ukrainan kolmanneksi suurin kaupunki ja tärkeä satama Mustanmeren luoteisrannalla. Paikalla on ollut asutusta antiikin ajoista lähtien, ja keskiajalla siellä toimi liettualaisten hallitsema satama Kotsiubijiv, joka siirtyi osmanien haltuun 1500-luvulla nimellä Hacibey. Venäjä valtasi alueen 1792, ja keisarinna Katariina II:n käskykirje perusti 1794 sataman ja kauppapaikan, joka sai pian nimekseen Odessa. 1800-luvulla kaupungista kasvoi Venäjän keisarikunnan neljänneksi suurin – Moskovan, Pietarin ja Varsovan jälkeen – ja sen arkkitehtuuri muistuttaa enemmän Ranskan ja Italian kaupunkeja kuin Venäjää. Kaupungin tunnetuin maamerkki on merelle avautuva jättiläisportaikko, jonka leveys kapenee ylöspäin mentäessä niin, että se näyttää todellista pidemmältä.
+
+### 20.2
+KYSYMYS: Mikä optinen harha portaikossa syntyy?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Odesa (kaupungit)
+Tietoruudun teksti: Odesa on Ukrainan kolmanneksi suurin kaupunki ja tärkeä satama Mustanmeren luoteisrannalla. Paikalla on ollut asutusta antiikin ajoista lähtien, ja keskiajalla siellä toimi liettualaisten hallitsema satama Kotsiubijiv, joka siirtyi osmanien haltuun 1500-luvulla nimellä Hacibey. Venäjä valtasi alueen 1792, ja keisarinna Katariina II:n käskykirje perusti 1794 sataman ja kauppapaikan, joka sai pian nimekseen Odessa. 1800-luvulla kaupungista kasvoi Venäjän keisarikunnan neljänneksi suurin – Moskovan, Pietarin ja Varsovan jälkeen – ja sen arkkitehtuuri muistuttaa enemmän Ranskan ja Italian kaupunkeja kuin Venäjää. Kaupungin tunnetuin maamerkki on merelle avautuva jättiläisportaikko, jonka leveys kapenee ylöspäin mentäessä niin, että se näyttää todellista pidemmältä.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

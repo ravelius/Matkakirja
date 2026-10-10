@@ -1,0 +1,217 @@
+================ KOHTA 31 (kohde:hahmotelma-medzhybizh) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Medzhybižin linnoitus (historia)
+Tietoruudun teksti: Medzhybižin linnoitus seisoo Etelä-Bug- ja Buzhok-jokien yhtymäkohdassa Länsi-Ukrainan Podoliassa, ja ensimmäinen linnoitus samalla niemekkeellä mainitaan jo Kiovan Rusin kronikoissa vuonna 1146. Nykyinen kivilinna nousi 1500-luvulla puolalaisten Sieniawski- ja myöhemmin Czartoryski-sukujen hallinnassa, ja siitä tuli yksi alueen vahvimmista linnoituksista osmanien ja Krimin tataarien hyökkäyksiä vastaan. Kaupunki tunnetaan myös juutalaisen hasidismin syntypaikkana: liikkeen perustaja, mystikko ja parantaja Israel ben Eliezer eli Baal Shem Tov, asui Medzhybižissä vuodesta 1742 kuolemaansa 1760 asti, ja hänen hautansa vanhalla juutalaisella hautausmaalla on yhä hasidijuutalaisten pyhiinvaelluskohde. Puolan jaon jälkeen 1793 kaupunki siirtyi Venäjän keisarikunnalle, mutta linna pysyi Czartoryskien omaisuutena aina vuoteen 1830 saakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Egypti — maalehti / Historia: Poikakuninkaan koskematon hauta] 1922 — Tutankhamon nousi valtaistuimelle noin yhdeksänvuotiaana ja kuoli alle kaksikymppisenä — vähäpätöinen faarao, jonka nimen historia melkein unohti. Juuri siksi hänen hautansa säilyi: kun Howard Carter vuonna 1922 avasi reiän hautakammion oveen ja häneltä kysyttiin, näkyykö mitään, hän vastasi: "Näkyy — ihmeellisiä asioita." Hauta oli ainoa lähes koskemattomana löydetty faaraonhauta: yli 5 000 esinettä, ja niiden joukossa 11-kiloinen kultainen kasvonaamio.
+- [Tanger — kaupunkilehti / Tanger: Tingi, suon kaupunki] Tanger perustettiin foinikialaiseksi siirtokunnaksi mahdollisesti jo 1000-luvulla eKr. ja lähes varmasti 700-luvulla eKr. Vanha berberinimi Tingi liittyy sanaan tingis, suo. Kreikkalaiset selittivät nimen toisin: heidän mukaansa Tinjis, titaani Atlaksen tytär, sai Herakleen kanssa pojan Syfaksin, joka perusti sataman ja nimesi sen äitinsä muistoksi. Karthagolaiset tekivät paikasta tärkeän sataman 400-luvulla eKr., ja foinikialaiset tavat pitivät pintansa pitkään: roomalaisajan rahoissa on etupuolella Augustus latinaksi ja kääntöpuolella kanaanilainen jumala Baal. Claudiuksen aikana Tingiksestä tuli roomalainen siirtokunta ja Mauretania Tingitanan pääkaupunki.
+
+### 31.1
+KYSYMYS: Kuka oli Baal Shem Tov?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Medzhybižin linnoitus (historia)
+Tietoruudun teksti: Medzhybižin linnoitus seisoo Etelä-Bug- ja Buzhok-jokien yhtymäkohdassa Länsi-Ukrainan Podoliassa, ja ensimmäinen linnoitus samalla niemekkeellä mainitaan jo Kiovan Rusin kronikoissa vuonna 1146. Nykyinen kivilinna nousi 1500-luvulla puolalaisten Sieniawski- ja myöhemmin Czartoryski-sukujen hallinnassa, ja siitä tuli yksi alueen vahvimmista linnoituksista osmanien ja Krimin tataarien hyökkäyksiä vastaan. Kaupunki tunnetaan myös juutalaisen hasidismin syntypaikkana: liikkeen perustaja, mystikko ja parantaja Israel ben Eliezer eli Baal Shem Tov, asui Medzhybižissä vuodesta 1742 kuolemaansa 1760 asti, ja hänen hautansa vanhalla juutalaisella hautausmaalla on yhä hasidijuutalaisten pyhiinvaelluskohde. Puolan jaon jälkeen 1793 kaupunki siirtyi Venäjän keisarikunnalle, mutta linna pysyi Czartoryskien omaisuutena aina vuoteen 1830 saakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanger — kaupunkilehti / Tanger: Tingi, suon kaupunki] Tanger perustettiin foinikialaiseksi siirtokunnaksi mahdollisesti jo 1000-luvulla eKr. ja lähes varmasti 700-luvulla eKr. Vanha berberinimi Tingi liittyy sanaan tingis, suo. Kreikkalaiset selittivät nimen toisin: heidän mukaansa Tinjis, titaani Atlaksen tytär, sai Herakleen kanssa pojan Syfaksin, joka perusti sataman ja nimesi sen äitinsä muistoksi. Karthagolaiset tekivät paikasta tärkeän sataman 400-luvulla eKr., ja foinikialaiset tavat pitivät pintansa pitkään: roomalaisajan rahoissa on etupuolella Augustus latinaksi ja kääntöpuolella kanaanilainen jumala Baal. Claudiuksen aikana Tingiksestä tuli roomalainen siirtokunta ja Mauretania Tingitanan pääkaupunki.
+
+### 31.2
+KYSYMYS: Missä hänen hautansa sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Medzhybižin linnoitus (historia)
+Tietoruudun teksti: Medzhybižin linnoitus seisoo Etelä-Bug- ja Buzhok-jokien yhtymäkohdassa Länsi-Ukrainan Podoliassa, ja ensimmäinen linnoitus samalla niemekkeellä mainitaan jo Kiovan Rusin kronikoissa vuonna 1146. Nykyinen kivilinna nousi 1500-luvulla puolalaisten Sieniawski- ja myöhemmin Czartoryski-sukujen hallinnassa, ja siitä tuli yksi alueen vahvimmista linnoituksista osmanien ja Krimin tataarien hyökkäyksiä vastaan. Kaupunki tunnetaan myös juutalaisen hasidismin syntypaikkana: liikkeen perustaja, mystikko ja parantaja Israel ben Eliezer eli Baal Shem Tov, asui Medzhybižissä vuodesta 1742 kuolemaansa 1760 asti, ja hänen hautansa vanhalla juutalaisella hautausmaalla on yhä hasidijuutalaisten pyhiinvaelluskohde. Puolan jaon jälkeen 1793 kaupunki siirtyi Venäjän keisarikunnalle, mutta linna pysyi Czartoryskien omaisuutena aina vuoteen 1830 saakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Egypti — maalehti / Historia: Poikakuninkaan koskematon hauta] 1922 — Tutankhamon nousi valtaistuimelle noin yhdeksänvuotiaana ja kuoli alle kaksikymppisenä — vähäpätöinen faarao, jonka nimen historia melkein unohti. Juuri siksi hänen hautansa säilyi: kun Howard Carter vuonna 1922 avasi reiän hautakammion oveen ja häneltä kysyttiin, näkyykö mitään, hän vastasi: "Näkyy — ihmeellisiä asioita." Hauta oli ainoa lähes koskemattomana löydetty faaraonhauta: yli 5 000 esinettä, ja niiden joukossa 11-kiloinen kultainen kasvonaamio.
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-volodymyr-volynskyi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volodymyr (historia)
+Tietoruudun teksti: Volodymyr on yksi Ukrainan vanhimmista kaupungeista ja koko Volynian alueen historiallinen keskus: se oli Volynian ruhtinaskunnan pääkaupunki ja myöhemmin yksi Galitsia-Volhynian kuningaskunnan pääkaupungeista. Kaupungin keskiaikainen latinankielinen nimi Lodomeria antoi nimensä 1800-luvun Itävalta-Unkarin Galitsian ja Lodomerian kuningaskunnalle – mutta itse kaupunki ei koskaan kuulunut tähän kuningaskuntaan, vaan jäi rajan väärälle puolelle Venäjän keisarikuntaan. Viisi kilometriä kaupungista etelään sijaitsee Zymne, Volynian vanhin ortodoksiluostari. Isoisän matkan aikaan 1873 Volodymyr on siis vaatimaton Venäjän kuvernementin kaupunki, vaikka sen nimi elää yhä naapurimaakunnan virallisessa nimessä rajan toisella puolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawel] Isoisäsi kirjasi, että kuninkaat nukkuvat kirkon lattian alla ja että kaupunki kuuluu nyt keisarille. Molemmat pitivät paikkansa yhtä aikaa, ja juuri se oli kukkulan kipeä kohta. Wawel on jurakautista kalkkikiveä, karstiutunut ja luolia täynnä — yksi niistä on lohikäärmeluola — ja linna seisoo 228 metrissä Veikselin rannalla. Katedraalissa kruunattiin ja haudattiin Puolan hallitsijat, vaikka pääkaupunki siirtyi Varsovaan jo 1596. Sitten kukkula vaihtoi omistajaa. Vuoden 1795 jaon jälkeen Wawel joutui Itävallalle, ja sotilaat muuttivat sen kasarmiksi: sisäpihan renessanssikaarikäytävät muurattiin umpeen, sisätiloja muutettiin ja rakennuksia purettiin, kahden kirkon verran. 1800-luvun jälkipu…
+
+### 32.1
+KYSYMYS: Mistä nimestä Itävalta-Unkarin "Lodomerian kuningaskunta" on peräisin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volodymyr (historia)
+Tietoruudun teksti: Volodymyr on yksi Ukrainan vanhimmista kaupungeista ja koko Volynian alueen historiallinen keskus: se oli Volynian ruhtinaskunnan pääkaupunki ja myöhemmin yksi Galitsia-Volhynian kuningaskunnan pääkaupungeista. Kaupungin keskiaikainen latinankielinen nimi Lodomeria antoi nimensä 1800-luvun Itävalta-Unkarin Galitsian ja Lodomerian kuningaskunnalle – mutta itse kaupunki ei koskaan kuulunut tähän kuningaskuntaan, vaan jäi rajan väärälle puolelle Venäjän keisarikuntaan. Viisi kilometriä kaupungista etelään sijaitsee Zymne, Volynian vanhin ortodoksiluostari. Isoisän matkan aikaan 1873 Volodymyr on siis vaatimaton Venäjän kuvernementin kaupunki, vaikka sen nimi elää yhä naapurimaakunnan virallisessa nimessä rajan toisella puolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawel] Isoisäsi kirjasi, että kuninkaat nukkuvat kirkon lattian alla ja että kaupunki kuuluu nyt keisarille. Molemmat pitivät paikkansa yhtä aikaa, ja juuri se oli kukkulan kipeä kohta. Wawel on jurakautista kalkkikiveä, karstiutunut ja luolia täynnä — yksi niistä on lohikäärmeluola — ja linna seisoo 228 metrissä Veikselin rannalla. Katedraalissa kruunattiin ja haudattiin Puolan hallitsijat, vaikka pääkaupunki siirtyi Varsovaan jo 1596. Sitten kukkula vaihtoi omistajaa. Vuoden 1795 jaon jälkeen Wawel joutui Itävallalle, ja sotilaat muuttivat sen kasarmiksi: sisäpihan renessanssikaarikäytävät muurattiin umpeen, sisätiloja muutettiin ja rakennuksia purettiin, kahden kirkon verran. 1800-luvun jälkipu…
+
+### 32.2
+KYSYMYS: Kuuluiko Volodymyrin kaupunki itse tähän kuningaskuntaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volodymyr (historia)
+Tietoruudun teksti: Volodymyr on yksi Ukrainan vanhimmista kaupungeista ja koko Volynian alueen historiallinen keskus: se oli Volynian ruhtinaskunnan pääkaupunki ja myöhemmin yksi Galitsia-Volhynian kuningaskunnan pääkaupungeista. Kaupungin keskiaikainen latinankielinen nimi Lodomeria antoi nimensä 1800-luvun Itävalta-Unkarin Galitsian ja Lodomerian kuningaskunnalle – mutta itse kaupunki ei koskaan kuulunut tähän kuningaskuntaan, vaan jäi rajan väärälle puolelle Venäjän keisarikuntaan. Viisi kilometriä kaupungista etelään sijaitsee Zymne, Volynian vanhin ortodoksiluostari. Isoisän matkan aikaan 1873 Volodymyr on siis vaatimaton Venäjän kuvernementin kaupunki, vaikka sen nimi elää yhä naapurimaakunnan virallisessa nimessä rajan toisella puolella.
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kohde:hahmotelma-etela-bug) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Etelä-Bug (luonto · joki)
+Tietoruudun teksti: Etelä-Bug on Ukrainan pisin joki, joka virtaa kokonaan maan alueella lukuun ottamatta Dnepriä – sen pituus on 806 kilometriä ja valuma-alue lähes 64 000 neliökilometriä. Joki saa alkunsa Volynian-Podolian ylängöltä lähellä Puolan rajaa ja virtaa kaakkoon eteläisten arojen halki Bugin lahteen Mustallemerelle. Sen varrella sijaitsevat muun muassa Hmelnytskyin, Vinnytsian ja Mykolaivin kaupungit. Vielä 1700-luvun lopulla joki oli rajajoki Venäjän ja Osmanien valtakunnan välillä, mutta isoisän matkan aikaan 1873 se virtaa jo kokonaan Venäjän keisarikunnan sisällä, kun raja on siirtynyt kauas etelään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Historia: Tasavalta eli neljä vuotta ennen kuin se hävisi] 1918 — Historioitsija Mychailo Hruševskyin johtama Keskusrada julisti Ukrainan autonomiaksi kesäkuussa 1917 ja täysin itsenäiseksi kansantasavallaksi 22. tammikuuta 1918, kun Venäjällä riehui vallankumous. Nuori tasavalta ehti saada oman lipun, vaakunan – kultaisen kolmikärjen eli tryzubin – ja kansallislaulun, joka on Ukrainan hymni yhä tänään. Se kuitenkin joutui heti sotaan bolševikkeja vastaan, ja vuoteen 1921 mennessä Puna-armeija oli vallannut sen alueet. Hallitus jatkoi maanpaossa aina vuoteen 1992, jolloin se luovutti valtuutensa itsenäistyneelle Ukrainalle.
+- [Ukraina — maalehti / Historia: Nälänhätä jota valtio yritti salata] 1932–1933 — Neuvostojohtaja Josif Stalinin vuonna 1929 käynnistämä maatalouden pakkokollektivisointi ajoi ukrainalaiset talonpojat luopumaan maastaan ja omaisuudestaan, ja vastarintaa yritettiin murtaa kiristämällä viljan pakko-otot äärimmilleen. Elokuussa 1932 Stalin kirjoitti, että "jos emme nyt toimi, voimme menettää Ukrainan" – ja syksyllä tehdyt päätökset syvensivät nälänhätää nimenomaan Ukrainassa. Arviot uhrien määrästä vaihtelevat muutamasta miljoonasta yli kymmeneen miljoonaan, eikä yksimielisyyttä ole saavutettu, mutta parikymmentä valtiota on tunnustanut tapahtuman kansanmurhaksi. Neuvostoliitossa nälänhädästä vaiettiin aina perestroikaan asti.
+
+### 33.1
+KYSYMYS: Mikä on Ukrainan pisin kokonaan maan sisällä virtaava joki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Etelä-Bug (luonto · joki)
+Tietoruudun teksti: Etelä-Bug on Ukrainan pisin joki, joka virtaa kokonaan maan alueella lukuun ottamatta Dnepriä – sen pituus on 806 kilometriä ja valuma-alue lähes 64 000 neliökilometriä. Joki saa alkunsa Volynian-Podolian ylängöltä lähellä Puolan rajaa ja virtaa kaakkoon eteläisten arojen halki Bugin lahteen Mustallemerelle. Sen varrella sijaitsevat muun muassa Hmelnytskyin, Vinnytsian ja Mykolaivin kaupungit. Vielä 1700-luvun lopulla joki oli rajajoki Venäjän ja Osmanien valtakunnan välillä, mutta isoisän matkan aikaan 1873 se virtaa jo kokonaan Venäjän keisarikunnan sisällä, kun raja on siirtynyt kauas etelään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Historia: Tasavalta eli neljä vuotta ennen kuin se hävisi] 1918 — Historioitsija Mychailo Hruševskyin johtama Keskusrada julisti Ukrainan autonomiaksi kesäkuussa 1917 ja täysin itsenäiseksi kansantasavallaksi 22. tammikuuta 1918, kun Venäjällä riehui vallankumous. Nuori tasavalta ehti saada oman lipun, vaakunan – kultaisen kolmikärjen eli tryzubin – ja kansallislaulun, joka on Ukrainan hymni yhä tänään. Se kuitenkin joutui heti sotaan bolševikkeja vastaan, ja vuoteen 1921 mennessä Puna-armeija oli vallannut sen alueet. Hallitus jatkoi maanpaossa aina vuoteen 1992, jolloin se luovutti valtuutensa itsenäistyneelle Ukrainalle.
+- [Ukraina — maalehti / Historia: Nälänhätä jota valtio yritti salata] 1932–1933 — Neuvostojohtaja Josif Stalinin vuonna 1929 käynnistämä maatalouden pakkokollektivisointi ajoi ukrainalaiset talonpojat luopumaan maastaan ja omaisuudestaan, ja vastarintaa yritettiin murtaa kiristämällä viljan pakko-otot äärimmilleen. Elokuussa 1932 Stalin kirjoitti, että "jos emme nyt toimi, voimme menettää Ukrainan" – ja syksyllä tehdyt päätökset syvensivät nälänhätää nimenomaan Ukrainassa. Arviot uhrien määrästä vaihtelevat muutamasta miljoonasta yli kymmeneen miljoonaan, eikä yksimielisyyttä ole saavutettu, mutta parikymmentä valtiota on tunnustanut tapahtuman kansanmurhaksi. Neuvostoliitossa nälänhädästä vaiettiin aina perestroikaan asti.
+
+### 33.2
+KYSYMYS: Minkä kahden valtakunnan rajana Etelä-Bug toimi 1700-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Etelä-Bug (luonto · joki)
+Tietoruudun teksti: Etelä-Bug on Ukrainan pisin joki, joka virtaa kokonaan maan alueella lukuun ottamatta Dnepriä – sen pituus on 806 kilometriä ja valuma-alue lähes 64 000 neliökilometriä. Joki saa alkunsa Volynian-Podolian ylängöltä lähellä Puolan rajaa ja virtaa kaakkoon eteläisten arojen halki Bugin lahteen Mustallemerelle. Sen varrella sijaitsevat muun muassa Hmelnytskyin, Vinnytsian ja Mykolaivin kaupungit. Vielä 1700-luvun lopulla joki oli rajajoki Venäjän ja Osmanien valtakunnan välillä, mutta isoisän matkan aikaan 1873 se virtaa jo kokonaan Venäjän keisarikunnan sisällä, kun raja on siirtynyt kauas etelään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uganda — maalehti / Historia: Maa, joka nimettiin yhden kuningaskunnan mukaan] 1300-luku– — Bugandan perimätiedon mukaan kuningaskunnan yhdisti Kato Kintu, ensimmäinen kabaka, ja valtakunta kasvoi 1700- ja 1800-luvuilla Itä-Afrikan mahtavimpiin. Hallitsijan rinnalla toimivat lukiiko eli parlamentti ja katikkiro eli pääministeri, jonka virka syntyi noin vuonna 1800. Vallanperimys kulki veljeltä veljelle, ja koska seuraaja valittiin äidin klaanin mukaan, kuninkaan pojat ottivat äitinsä eivätkä isänsä klaanitunnuksen. Kun britit ottivat alueen hallintaansa, he käyttivät kuningaskunnasta sen swahilinkielistä nimeä Uganda — ja siitä tuli koko maan nimi.
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+================ KOHTA 34 (kohde:hahmotelma-askania-nova) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Askanija-Nova (eläimet)
+Tietoruudun teksti: Askanija-Nova on luonnonsuojelualue Etelä-Ukrainan kuivalla Taurian arolla lähellä Oleshkyn hiekka-aavikkoa, ja se on Unescon ihminen ja biosfääri -ohjelman jäsen. Alueella on sekä eläintarha että yli 33 000 hehtaaria koskematonta aroa laiduntavien sorkkaeläinten – muun muassa harvinaisten Przewalskinhevosten – elinympäristönä, sekä satoja kasvilajeja kasvava kasvitieteellinen puutarha. Isoisän matkan aikaan 1873 mitään tästä ei vielä ole olemassa: Askanija-Novan saksalaissiirtokunta järjestäytyi kylänä vasta 1890, ja koko luonnonsuojelualueen perusti vuonna 1898 Friedrich Falz-Fein, joka vuonna 1873 on vasta kymmenvuotias poika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Shanghai — kaupunkilehti / Arki: Aamiainen kääritään riisiin] Shanghain aamiainen ostetaan kadunkulman luukulta. Cifantuan tehdään käsissä: tahmea riisi taputellaan levyksi, keskelle pannaan pätkä youtiaoa eli rapeaa uppopaistettua taikinatankoa ja suolakasvista tai sokeria, ja paketti kierretään tiukaksi pötköksi. Kylkeen otetaan kulhollinen soijamaitoa, makeana tai suolaisena. Youtiaoon liittyy tarina: tangot paistetaan pareittain, koska parin sanotaan esittävän 1100-luvun virkamiestä ja hänen vaimoaan, joiden juoni koitui kansallissankarina pidetyn kenraali Yue Fein tuhoksi. Kansa on siitä asti paistanut petturit öljyssä joka aamu uudelleen.
+
+### 34.1
+KYSYMYS: Minä vuonna Askanija-Novan luonnonsuojelualue perustettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Askanija-Nova (eläimet)
+Tietoruudun teksti: Askanija-Nova on luonnonsuojelualue Etelä-Ukrainan kuivalla Taurian arolla lähellä Oleshkyn hiekka-aavikkoa, ja se on Unescon ihminen ja biosfääri -ohjelman jäsen. Alueella on sekä eläintarha että yli 33 000 hehtaaria koskematonta aroa laiduntavien sorkkaeläinten – muun muassa harvinaisten Przewalskinhevosten – elinympäristönä, sekä satoja kasvilajeja kasvava kasvitieteellinen puutarha. Isoisän matkan aikaan 1873 mitään tästä ei vielä ole olemassa: Askanija-Novan saksalaissiirtokunta järjestäytyi kylänä vasta 1890, ja koko luonnonsuojelualueen perusti vuonna 1898 Friedrich Falz-Fein, joka vuonna 1873 on vasta kymmenvuotias poika.
+
+### 34.2
+KYSYMYS: Kuinka vanha Friedrich Falz-Fein oli isoisän matkan aikaan 1873?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Askanija-Nova (eläimet)
+Tietoruudun teksti: Askanija-Nova on luonnonsuojelualue Etelä-Ukrainan kuivalla Taurian arolla lähellä Oleshkyn hiekka-aavikkoa, ja se on Unescon ihminen ja biosfääri -ohjelman jäsen. Alueella on sekä eläintarha että yli 33 000 hehtaaria koskematonta aroa laiduntavien sorkkaeläinten – muun muassa harvinaisten Przewalskinhevosten – elinympäristönä, sekä satoja kasvilajeja kasvava kasvitieteellinen puutarha. Isoisän matkan aikaan 1873 mitään tästä ei vielä ole olemassa: Askanija-Novan saksalaissiirtokunta järjestäytyi kylänä vasta 1890, ja koko luonnonsuojelualueen perusti vuonna 1898 Friedrich Falz-Fein, joka vuonna 1873 on vasta kymmenvuotias poika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Shanghai — kaupunkilehti / Arki: Aamiainen kääritään riisiin] Shanghain aamiainen ostetaan kadunkulman luukulta. Cifantuan tehdään käsissä: tahmea riisi taputellaan levyksi, keskelle pannaan pätkä youtiaoa eli rapeaa uppopaistettua taikinatankoa ja suolakasvista tai sokeria, ja paketti kierretään tiukaksi pötköksi. Kylkeen otetaan kulhollinen soijamaitoa, makeana tai suolaisena. Youtiaoon liittyy tarina: tangot paistetaan pareittain, koska parin sanotaan esittävän 1100-luvun virkamiestä ja hänen vaimoaan, joiden juoni koitui kansallissankarina pidetyn kenraali Yue Fein tuhoksi. Kansa on siitä asti paistanut petturit öljyssä joka aamu uudelleen.
+
+### 34.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+================ KOHTA 35 (kohde:hahmotelma-synevyr) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Synevyr (luonto · järvi)
+Tietoruudun teksti: Synevyr on Ukrainan Karpaattien suurin järvi, joka sijaitsee Zakarpattian alueella 980 metrin korkeudessa Ozerna-vuoren juurella. Se syntyi jääkauden jälkeen noin kymmenen tuhatta vuotta sitten, kun voimakas maanjäristys irrotti hiekkakiveä vuorenrinteeltä ja patosi kapean laakson; vesi valuu yhä huokoisen luonnonpadon läpi ja nousee pintaan vasta 350 metrin päässä järvestä. Järven keskellä on pieni saari, jota kutsutaan Merensilmäksi, ja kansantarun mukaan koko järvi syntyi kreivin tyttären Synin kyynelistä, kun tämän rakastettu, paimenpoika Vyr, surmattiin isän käskystä – ja järven nimikin, Synevyr, on syntynyt näiden kahden nimen yhdistelmästä. Järvi julistettiin kansallispuistoksi 1989 ja valittiin 2008 yhdeksi Ukrainan seitsemästä luonnonihmeestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kohdekartta / Kohdekartta: Finlandia] Isoisäsi näki kukkulalla keisarin allekirjoituksen. Kaksikymmentäkuusi vuotta hänen käyntinsä jälkeen samassa kaupungissa tehtiin allekirjoitus toiseen suuntaan. Marraskuussa 1899 Helsingissä järjestettiin sanomalehtien juhla vastalauseeksi Venäjän sortotoimille. Ruotsalaisessa teatterissa esitettiin kuvaelmia Suomen historiasta, ja Jean Sibelius johti itse viimeisen osan, jonka nimi oli Suomi herää. Se kiihotti kuulijoita niin, että kappaletta soitettiin sen jälkeen vaihtuvilla nimillä — yksi niistä oli pelkkä Impromptu, joka tarkoittaa suunnilleen "jotain, mitä nyt sattui syntymään". Nimen Finlandia teos sai vasta vuonna 1900. Se kestää noin kahdeksan minuuttia, ja siinä ajassa se ehti te…
+- [Slovenia — maalehti / Rakennukset: Satama joka muuttui toriksi] 1894 — Piranin Tartinin aukio oli ennen kaupungin sisäsatama, jossa pienet kalastusveneet lepäsivät muurien ulkopuolella. Satama ympäröitiin keskiajalla tärkeillä rakennuksilla, mutta viemärin takia viranomaiset päättivät täyttää sen, ja tori rakennettiin vuonna 1894. Aukio sai nimensä viulisti ja säveltäjä Giuseppe Tartinin mukaan, jonka pronssinen patsas paljastettiin 1896 kuvanveistäjä Antonio Dal Zòtton tekemänä. Ainoa alkuperäisen ulkoasunsa säilyttänyt rakennus on 1400-luvun goottilainen Venetsialainen talo. Myöhemmin torin lattiaksi tehtiin arkkitehti Boris Podrecan suunnittelema valkoisesta kivestä muodostettu ellipsi.
+
+### 35.1
+KYSYMYS: Mistä kahdesta nimestä järven nimi Synevyr on muodostettu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Synevyr (luonto · järvi)
+Tietoruudun teksti: Synevyr on Ukrainan Karpaattien suurin järvi, joka sijaitsee Zakarpattian alueella 980 metrin korkeudessa Ozerna-vuoren juurella. Se syntyi jääkauden jälkeen noin kymmenen tuhatta vuotta sitten, kun voimakas maanjäristys irrotti hiekkakiveä vuorenrinteeltä ja patosi kapean laakson; vesi valuu yhä huokoisen luonnonpadon läpi ja nousee pintaan vasta 350 metrin päässä järvestä. Järven keskellä on pieni saari, jota kutsutaan Merensilmäksi, ja kansantarun mukaan koko järvi syntyi kreivin tyttären Synin kyynelistä, kun tämän rakastettu, paimenpoika Vyr, surmattiin isän käskystä – ja järven nimikin, Synevyr, on syntynyt näiden kahden nimen yhdistelmästä. Järvi julistettiin kansallispuistoksi 1989 ja valittiin 2008 yhdeksi Ukrainan seitsemästä luonnonihmeestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Rakennukset: Satama joka muuttui toriksi] 1894 — Piranin Tartinin aukio oli ennen kaupungin sisäsatama, jossa pienet kalastusveneet lepäsivät muurien ulkopuolella. Satama ympäröitiin keskiajalla tärkeillä rakennuksilla, mutta viemärin takia viranomaiset päättivät täyttää sen, ja tori rakennettiin vuonna 1894. Aukio sai nimensä viulisti ja säveltäjä Giuseppe Tartinin mukaan, jonka pronssinen patsas paljastettiin 1896 kuvanveistäjä Antonio Dal Zòtton tekemänä. Ainoa alkuperäisen ulkoasunsa säilyttänyt rakennus on 1400-luvun goottilainen Venetsialainen talo. Myöhemmin torin lattiaksi tehtiin arkkitehti Boris Podrecan suunnittelema valkoisesta kivestä muodostettu ellipsi.
+
+### 35.2
+KYSYMYS: Mikä sai järven syntymään noin 10 000 vuotta sitten?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Synevyr (luonto · järvi)
+Tietoruudun teksti: Synevyr on Ukrainan Karpaattien suurin järvi, joka sijaitsee Zakarpattian alueella 980 metrin korkeudessa Ozerna-vuoren juurella. Se syntyi jääkauden jälkeen noin kymmenen tuhatta vuotta sitten, kun voimakas maanjäristys irrotti hiekkakiveä vuorenrinteeltä ja patosi kapean laakson; vesi valuu yhä huokoisen luonnonpadon läpi ja nousee pintaan vasta 350 metrin päässä järvestä. Järven keskellä on pieni saari, jota kutsutaan Merensilmäksi, ja kansantarun mukaan koko järvi syntyi kreivin tyttären Synin kyynelistä, kun tämän rakastettu, paimenpoika Vyr, surmattiin isän käskystä – ja järven nimikin, Synevyr, on syntynyt näiden kahden nimen yhdistelmästä. Järvi julistettiin kansallispuistoksi 1989 ja valittiin 2008 yhdeksi Ukrainan seitsemästä luonnonihmeestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kohdekartta / Kohdekartta: Finlandia] Isoisäsi näki kukkulalla keisarin allekirjoituksen. Kaksikymmentäkuusi vuotta hänen käyntinsä jälkeen samassa kaupungissa tehtiin allekirjoitus toiseen suuntaan. Marraskuussa 1899 Helsingissä järjestettiin sanomalehtien juhla vastalauseeksi Venäjän sortotoimille. Ruotsalaisessa teatterissa esitettiin kuvaelmia Suomen historiasta, ja Jean Sibelius johti itse viimeisen osan, jonka nimi oli Suomi herää. Se kiihotti kuulijoita niin, että kappaletta soitettiin sen jälkeen vaihtuvilla nimillä — yksi niistä oli pelkkä Impromptu, joka tarkoittaa suunnilleen "jotain, mitä nyt sattui syntymään". Nimen Finlandia teos sai vasta vuonna 1900. Se kestää noin kahdeksan minuuttia, ja siinä ajassa se ehti te…
+
+### 35.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI

@@ -1,0 +1,254 @@
+================ KOHTA 36 (kohde:hahmotelma-kultainen-portti) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiovan Kultainen portti (historia)
+Tietoruudun teksti: Kiovan Kultainen portti oli ruhtinas Jaroslav Viisaan 1030-luvulla rakennuttama Kiovan Rusin pääkaupungin pääpuolustusportti ja voittosaatoille tarkoitettu juhlaportti, joka sai nimensä lähellä kohonneen Neitsyt Marian ilmestyskirkon kultaisista kupoleista. Batu-kaanin joukot vaurioittivat sitä pahoin Kiovan piirityksessä 1240, ja seuraavien vuosisatojen aikana portti rapistui yhä pahemmin raunioiksi. Vuonna 1832 metropoliitta Eugenios käynnistytti raunioiden kaivaukset ja ensimmäiset säilytystoimet. Koska yhtään aikalaiskuvaa alkuperäisestä portista ei ole säilynyt, Kiovan 1500-vuotisjuhlaa varten 1982 rakennettu täysimittainen rekonstruktio jäi historioitsijoiden mielestä osin arvailuksi, ja osa heistä on vaatinut sen purkamista säilyneiden aitojen muurinpätkien esiin saamiseksi. Nykyään paviljongin sisällä on nähtävillä kaksi alkuperäistä 1000-luvun muurinpätkää, jotka ovat jälleenra…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riad — kaupunkilehti / Riad: Portin nimi on lainattu persiasta] Vanhaa Riadia kiersi savesta rakennettu muuri, jossa oli vartiotorneja ja portteja. Sen pystytti 1740-luvun tienoilla kaupungin hallitsija Daham bin Dawas, ja Turki al-Saud rakennutti sen uudelleen vuoden 1824 jälkeen; viimeisen kerran muuri uusittiin vuoden 1902 Riadin taistelun jälkeen. Portteja luetellaan nimeltä yhdeksän ja vartiotorneja noin kaksikymmentä, mutta portteja sanotaan olleen myös kymmenkunta. Niitä kutsuttiin sanalla darawiz, joka on persian portin darvaza arabialaistettu monikko. Muuri purettiin vuonna 1950, jotta kaupunki pääsi kasvamaan sen ulkopuolelle.
+- [Hanoi — kohdekartta / Kohdekartta: Kirjallisuuden temppeli] 1070 Văn Miếu perustettiin vuonna 1070 Lý Thánh Tôngin aikana Konfutsen, hänen neljän parhaan oppilaansa ja Zhoun herttuan kunniaksi; lisäksi maalattiin 72 kungfutselaisen oppineen kuvaa. Vuonna 1076 temppelin yhteyteen perustettiin Quốc Tử Giám, maan ensimmäinen yliopisto, joka koulutti virkamiehiä ja aatelisia vuoteen 1779 asti. Kun Nguyễn-suku siirsi pääkaupungin Huếhen, akatemiakin siirtyi sinne, ja Hanoin temppelistä tuli paikallinen koulu. Pohjakaava seuraa Konfutsen syntymäkaupungin Qufun temppeliä. Aluetta on yli 54 000 neliömetriä, kun mukaan lasketaan Vănin lampi ja Giámin puisto; pelkkä muurien ympäröimä pihakokonaisuus on paljon pienempi. Pihoja on viisi, ja kolme kulkuväylää ja…
+
+### 36.1
+KYSYMYS: Kuka Kultaisen portin rakennutti ja miksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiovan Kultainen portti (historia)
+Tietoruudun teksti: Kiovan Kultainen portti oli ruhtinas Jaroslav Viisaan 1030-luvulla rakennuttama Kiovan Rusin pääkaupungin pääpuolustusportti ja voittosaatoille tarkoitettu juhlaportti, joka sai nimensä lähellä kohonneen Neitsyt Marian ilmestyskirkon kultaisista kupoleista. Batu-kaanin joukot vaurioittivat sitä pahoin Kiovan piirityksessä 1240, ja seuraavien vuosisatojen aikana portti rapistui yhä pahemmin raunioiksi. Vuonna 1832 metropoliitta Eugenios käynnistytti raunioiden kaivaukset ja ensimmäiset säilytystoimet. Koska yhtään aikalaiskuvaa alkuperäisestä portista ei ole säilynyt, Kiovan 1500-vuotisjuhlaa varten 1982 rakennettu täysimittainen rekonstruktio jäi historioitsijoiden mielestä osin arvailuksi, ja osa heistä on vaatinut sen purkamista säilyneiden aitojen muurinpätkien esiin saamiseksi. Nykyään paviljongin sisällä on nähtävillä kaksi alkuperäistä 1000-luvun muurinpätkää, jotka ovat jälleenra…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riad — kaupunkilehti / Riad: Portin nimi on lainattu persiasta] Vanhaa Riadia kiersi savesta rakennettu muuri, jossa oli vartiotorneja ja portteja. Sen pystytti 1740-luvun tienoilla kaupungin hallitsija Daham bin Dawas, ja Turki al-Saud rakennutti sen uudelleen vuoden 1824 jälkeen; viimeisen kerran muuri uusittiin vuoden 1902 Riadin taistelun jälkeen. Portteja luetellaan nimeltä yhdeksän ja vartiotorneja noin kaksikymmentä, mutta portteja sanotaan olleen myös kymmenkunta. Niitä kutsuttiin sanalla darawiz, joka on persian portin darvaza arabialaistettu monikko. Muuri purettiin vuonna 1950, jotta kaupunki pääsi kasvamaan sen ulkopuolelle.
+- [Vladivostok — kohdekartta / Kohdekartta: Kultaisen sarven silta] avattu 2012 Kultaisen sarven lahti teki Vladivostokista sataman, mutta se myös halkaisi kaupungin: Tšurkinin puolelle pääsi vuosikymmenten ajan vain lautalla tai pitkällä kierrolla lahden pohjukan kautta, pahimmillaan puolentoista–kahden tunnin matkalla. Silta tilattiin 2006, rakennustyöt alkoivat heinäkuussa 2008, ja elokuussa 2012 vuoden 2012 APEC-huippukokouksen alla lahden yli avattiin 1 387 metrin vinoköysisilta. Ylitys kestää nyt viidestä kymmeneen minuuttia. Mitat ovat kaupungin mittakaavassa valtavat: pääjänne on 737 metriä, V-kirjaimen muotoiset pylonit nousevat 222 metriin ja kannen alla on kuusikymmentä metriä vapaata korkeutta laivoille. Samana kesänä valmistui toinenkin jättilä…
+
+### 36.2
+KYSYMYS: Miten paljon alkuperäisestä portista on oikeasti jäljellä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiovan Kultainen portti (historia)
+Tietoruudun teksti: Kiovan Kultainen portti oli ruhtinas Jaroslav Viisaan 1030-luvulla rakennuttama Kiovan Rusin pääkaupungin pääpuolustusportti ja voittosaatoille tarkoitettu juhlaportti, joka sai nimensä lähellä kohonneen Neitsyt Marian ilmestyskirkon kultaisista kupoleista. Batu-kaanin joukot vaurioittivat sitä pahoin Kiovan piirityksessä 1240, ja seuraavien vuosisatojen aikana portti rapistui yhä pahemmin raunioiksi. Vuonna 1832 metropoliitta Eugenios käynnistytti raunioiden kaivaukset ja ensimmäiset säilytystoimet. Koska yhtään aikalaiskuvaa alkuperäisestä portista ei ole säilynyt, Kiovan 1500-vuotisjuhlaa varten 1982 rakennettu täysimittainen rekonstruktio jäi historioitsijoiden mielestä osin arvailuksi, ja osa heistä on vaatinut sen purkamista säilyneiden aitojen muurinpätkien esiin saamiseksi. Nykyään paviljongin sisällä on nähtävillä kaksi alkuperäistä 1000-luvun muurinpätkää, jotka ovat jälleenra…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hanoi — kohdekartta / Kohdekartta: Kirjallisuuden temppeli] 1070 Văn Miếu perustettiin vuonna 1070 Lý Thánh Tôngin aikana Konfutsen, hänen neljän parhaan oppilaansa ja Zhoun herttuan kunniaksi; lisäksi maalattiin 72 kungfutselaisen oppineen kuvaa. Vuonna 1076 temppelin yhteyteen perustettiin Quốc Tử Giám, maan ensimmäinen yliopisto, joka koulutti virkamiehiä ja aatelisia vuoteen 1779 asti. Kun Nguyễn-suku siirsi pääkaupungin Huếhen, akatemiakin siirtyi sinne, ja Hanoin temppelistä tuli paikallinen koulu. Pohjakaava seuraa Konfutsen syntymäkaupungin Qufun temppeliä. Aluetta on yli 54 000 neliömetriä, kun mukaan lasketaan Vănin lampi ja Giámin puisto; pelkkä muurien ympäröimä pihakokonaisuus on paljon pienempi. Pihoja on viisi, ja kolme kulkuväylää ja…
+- [Kiova — kohdekartta / Kohdekartta: Kiovan kultainen portti] 1017–1024 Ruhtinas Jaroslav Viisas rakennutti Kiovan kultaisen portin vuosina 1017–1024 kaupungin muurien pääsisäänkäynniksi. Portti sai nimensä ja mallinsa Konstantinopolin kuuluisasta Kultaisesta portista, ja se toimi lähes 500 vuoden ajan sekä puolustusrakenteena että voitokkaana riemuporttina, josta ruhtinaat ratsastivat kaupunkiin. Läpikulkuaukko oli noin 12 metriä korkea ja 6 metriä leveä, ja sen päälle rakennettiin pieni kirkko suojelemaan kaupunkia taivaallisin voimin. Vuonna 1240 Batu-kaanin mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin. Seuraavien vuosisatojen aikana rakennus rapistui hiljalleen lähes raunioksi: 1970-luvulle tultaessa maan päällä oli enää näkyv…
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (nosto:trypillia) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan suurimmat kylät rakennettiin kuusituhatta vuotta sitten — ja poltettiin joka kolmas sukupolvi
+Tietoruudun teksti: Neljänkymmenen kilometrin päässä Kiovasta, Dneprin varrella, on kylä nimeltä Trypillia. Sen mukaan on nimetty kulttuuri, joka eli näillä main noin vuosina 5050–2950 ennen ajanlaskua ja levisi Karpaateilta Dnesterille ja Dneprille, noin 350 000 neliökilometrin alalle. Keskikaudellaan, runsaat neljätuhatta vuotta ennen ajanlaskua, sen asutukset olivat Euraasian suurimpia: isoimmissa oli jopa kolmetuhatta rakennusta ja arvioiden mukaan kahdestakymmenestä neljäänkymmeneenkuuteen tuhanteen asukasta. Se on kaupungin kokoinen luku aikana, jolta ei tunneta kaupunkeja. Saviastiat poltettiin kehittyneissä uuneissa, ja samalta alueelta on löytynyt maailman vanhin tunnettu savenvalajan pyörä ja vanhimmat pienoismallit pyörällisistä ajoneuvoista.
+
+Ja sitten se piirre, jota kukaan ei osaa selittää: kylät poltettiin. Yksi asuinvaihe kesti noin kuusikymmentä tai kahdeksankymmentä vuotta, minkä jälkeen …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Melbourne — kaupunkilehti / Kuvataide: Wieniläinen, joka opetti sukupolven] Eugene von Guérard tuli Victoriaan 1852 kokeilemaan onneaan kultakentillä. Kaivajana hän epäonnistui, mutta piirsi kenttien elämää tarkasti, ja 1860-luvun alkuun mennessä häntä pidettiin siirtokuntien parhaana maisemamaalarina. Vuonna 1870 hänestä tuli Victorian gallerian maalauskoulun ensimmäinen johtaja, ja hän opetti yksitoista vuotta; oppilaita olivat muun muassa Frederick McCubbin ja Tom Roberts. Düsseldorfissa opittu tarkkuus meni niin pitkälle, että hänen Tower Hill -maalaustaan käytettiin sata vuotta myöhemmin kasvillisuuden ennallistamisen mallina.
+- [Varanasi — kaupunkilehti / Varanasi: Aurinkokello ghatin päällä] Man Mandir -ghatin yläpuolella, aivan Dashashwamedhin naapurissa, seisoo kivinen tähtitorni. Sen rakennutti vuonna 1737 mogulihallitsija Muhammad Shah, ja tehtävä oli tarkka: löytää kalenterista virheet ja korjata käytössä olleet tähtitieteelliset taulukot. Rakennus on Jaipurin maharadžan Jai Singh II:n palatsin kupeessa, ja se on varustukseltaan vaatimattomampi kuin observatoriot Jaipurissa ja Delhissä. Yksi laite on silti ainutlaatuinen: päiväntasaajan tasoon asetettu aurinkokello, joka toimii yhä ja jonka lukemat yksi ihminen ehtii seurata ja kirjata.
+
+### 37.1
+KYSYMYS: Miksi kokonainen kylä poltettiin parin sukupolven välein?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan suurimmat kylät rakennettiin kuusituhatta vuotta sitten — ja poltettiin joka kolmas sukupolvi
+Tietoruudun teksti: Neljänkymmenen kilometrin päässä Kiovasta, Dneprin varrella, on kylä nimeltä Trypillia. Sen mukaan on nimetty kulttuuri, joka eli näillä main noin vuosina 5050–2950 ennen ajanlaskua ja levisi Karpaateilta Dnesterille ja Dneprille, noin 350 000 neliökilometrin alalle. Keskikaudellaan, runsaat neljätuhatta vuotta ennen ajanlaskua, sen asutukset olivat Euraasian suurimpia: isoimmissa oli jopa kolmetuhatta rakennusta ja arvioiden mukaan kahdestakymmenestä neljäänkymmeneenkuuteen tuhanteen asukasta. Se on kaupungin kokoinen luku aikana, jolta ei tunneta kaupunkeja. Saviastiat poltettiin kehittyneissä uuneissa, ja samalta alueelta on löytynyt maailman vanhin tunnettu savenvalajan pyörä ja vanhimmat pienoismallit pyörällisistä ajoneuvoista.
+
+Ja sitten se piirre, jota kukaan ei osaa selittää: kylät poltettiin. Yksi asuinvaihe kesti noin kuusikymmentä tai kahdeksankymmentä vuotta, minkä jälkeen …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Melbourne — kaupunkilehti / Kuvataide: Wieniläinen, joka opetti sukupolven] Eugene von Guérard tuli Victoriaan 1852 kokeilemaan onneaan kultakentillä. Kaivajana hän epäonnistui, mutta piirsi kenttien elämää tarkasti, ja 1860-luvun alkuun mennessä häntä pidettiin siirtokuntien parhaana maisemamaalarina. Vuonna 1870 hänestä tuli Victorian gallerian maalauskoulun ensimmäinen johtaja, ja hän opetti yksitoista vuotta; oppilaita olivat muun muassa Frederick McCubbin ja Tom Roberts. Düsseldorfissa opittu tarkkuus meni niin pitkälle, että hänen Tower Hill -maalaustaan käytettiin sata vuotta myöhemmin kasvillisuuden ennallistamisen mallina.
+
+### 37.2
+KYSYMYS: Voiko kuusituhatta vuotta vanhaa asutusta sanoa kaupungiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan suurimmat kylät rakennettiin kuusituhatta vuotta sitten — ja poltettiin joka kolmas sukupolvi
+Tietoruudun teksti: Neljänkymmenen kilometrin päässä Kiovasta, Dneprin varrella, on kylä nimeltä Trypillia. Sen mukaan on nimetty kulttuuri, joka eli näillä main noin vuosina 5050–2950 ennen ajanlaskua ja levisi Karpaateilta Dnesterille ja Dneprille, noin 350 000 neliökilometrin alalle. Keskikaudellaan, runsaat neljätuhatta vuotta ennen ajanlaskua, sen asutukset olivat Euraasian suurimpia: isoimmissa oli jopa kolmetuhatta rakennusta ja arvioiden mukaan kahdestakymmenestä neljäänkymmeneenkuuteen tuhanteen asukasta. Se on kaupungin kokoinen luku aikana, jolta ei tunneta kaupunkeja. Saviastiat poltettiin kehittyneissä uuneissa, ja samalta alueelta on löytynyt maailman vanhin tunnettu savenvalajan pyörä ja vanhimmat pienoismallit pyörällisistä ajoneuvoista.
+
+Ja sitten se piirre, jota kukaan ei osaa selittää: kylät poltettiin. Yksi asuinvaihe kesti noin kuusikymmentä tai kahdeksankymmentä vuotta, minkä jälkeen …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+### 37.3
+KYSYMYS: Miten arkeologi löytää kylän, josta ei ole mitään maan päällä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan suurimmat kylät rakennettiin kuusituhatta vuotta sitten — ja poltettiin joka kolmas sukupolvi
+Tietoruudun teksti: Neljänkymmenen kilometrin päässä Kiovasta, Dneprin varrella, on kylä nimeltä Trypillia. Sen mukaan on nimetty kulttuuri, joka eli näillä main noin vuosina 5050–2950 ennen ajanlaskua ja levisi Karpaateilta Dnesterille ja Dneprille, noin 350 000 neliökilometrin alalle. Keskikaudellaan, runsaat neljätuhatta vuotta ennen ajanlaskua, sen asutukset olivat Euraasian suurimpia: isoimmissa oli jopa kolmetuhatta rakennusta ja arvioiden mukaan kahdestakymmenestä neljäänkymmeneenkuuteen tuhanteen asukasta. Se on kaupungin kokoinen luku aikana, jolta ei tunneta kaupunkeja. Saviastiat poltettiin kehittyneissä uuneissa, ja samalta alueelta on löytynyt maailman vanhin tunnettu savenvalajan pyörä ja vanhimmat pienoismallit pyörällisistä ajoneuvoista.
+
+Ja sitten se piirre, jota kukaan ei osaa selittää: kylät poltettiin. Yksi asuinvaihe kesti noin kuusikymmentä tai kahdeksankymmentä vuotta, minkä jälkeen …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varanasi — kaupunkilehti / Varanasi: Aurinkokello ghatin päällä] Man Mandir -ghatin yläpuolella, aivan Dashashwamedhin naapurissa, seisoo kivinen tähtitorni. Sen rakennutti vuonna 1737 mogulihallitsija Muhammad Shah, ja tehtävä oli tarkka: löytää kalenterista virheet ja korjata käytössä olleet tähtitieteelliset taulukot. Rakennus on Jaipurin maharadžan Jai Singh II:n palatsin kupeessa, ja se on varustukseltaan vaatimattomampi kuin observatoriot Jaipurissa ja Delhissä. Yksi laite on silti ainutlaatuinen: päiväntasaajan tasoon asetettu aurinkokello, joka toimii yhä ja jonka lukemat yksi ihminen ehtii seurata ja kirjata.
+- [Mumbai — kaupunkilehti / Mumbai: Lounasrasia, joka löytää perille] 1800-luvun lopulla kaupunkiin muutti väkeä joka puolelta Intiaa, pikaruokaloita ei ollut, ja jokainen halusi syödä oman yhteisönsä ruokaa. Vuonna 1890 Mahadeo Havaji Bachche perusti noin sadan miehen voimin palvelun, joka nouti kotona keitetyt ateriat aamupäivällä ja vei ne konttoreihin ennen lounasaikaa. Rasiaan merkitään keräyspisteen lyhenne, lähtöaseman väri ja määräaseman numero, ja loput merkit kertovat kantajan, talon ja kerroksen. Kuljetus kulkee junilla ja polkupyörillä, ja jokainen kantaja hankkii itse kaksi pyörää, puisen laatikon, valkoisen puvun ja lakin. Nykyään noin viisituhatta miestä liikuttaa lähes kaksisataatuhatta rasiaa päivässä.
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (nosto:dneprin-kosket) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhdeksän koskea, joiden kohina kuului kilometrien päähän — ja jotka ovat nyt järven pohjassa
+Tietoruudun teksti: Kiovan alapuolella Dnepr näyttää leveältä ja rauhalliselta, ja niin se on — kolmesataa kilometriä. Sitten tuli kalliota. Ukrainan kilven graniitti ja gneissi työntyivät joen uomaan, ja kuudenkymmenenkuuden kilometrin matkalla vesi putosi viisikymmentä metriä. Suuria koskia oli yhdeksän, pienempiä kolmestakymmenestä neljäänkymmeneen ja saaria ja luotoja kuusikymmentä. Laivaliikenne loppui käytännössä siihen. Suurin niistä oli Nenasytets, Kyltymätön: kaksi ja puoli kilometriä pitkä, yli kilometrin levyinen, ja sen kohina kuului useiden kilometrien päähän. Paikalliset sanoivat sitä Helvetiksi. Alavirran kaupungin nimi Zaporižžja tarkoittaa yksinkertaisesti koskien takaista — nimi kertoo, kummalta puolen sitä katsottiin.
+
+Kosket näkyvät kirjoitetussa historiassa niin kauas kuin sitä on. Ne ovat Nestorin kronikan reitillä varjageilta kreikkalaisille, ja matkalaiset kantoivat veneensä maitse …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tampere — kaupunkilehti / Historia: Skotlantilainen, joka osti kosken] James Finlayson oli skotlantilainen konepajamies, joka oli työskennellyt Pietarissa ennen kuin hän vuonna 1820 perusti konepajan Tammerkosken yläjuoksulle. Paikka oli valittu kosken takia: se antoi voiman, jota Suomessa ei muualta saanut. Finlayson myi tehtaan 1836, ja uudet omistajat käänsivät sen puuvillatehtaaksi. Vuosisadan lopulla se oli Pohjoismaiden suurin teollisuuslaitos ja työllisti tuhansia — enimmäkseen naisia ja lapsia.
+- [Tabriz — kaupunkilehti / Tabriz: Allas näyttää kelluvan laakson yllä] Kaupungin kaakkoisosassa on laaja puisto, jonka keskellä on tekoallas. Pinta-alaa sillä on noin 55 000 neliömetriä. Perimätiedon mukaan puisto on 1700-luvun lopulta, mutta osa lähteistä ajoittaa sen jo 1300-luvulle. Qajar-kaudella puistoon lisättiin korkeat terassit, ja altaan pohjoispuoli on rakennettu korkeammaksi: puutarhahistorioitsija Penelope Hobhousen mukaan allas näyttää siksi kelluvan laakson yllä. Altaalle johtaa pengertie, jonka päässä on paviljonki, ja siinä toimii nykyään ravintola. Länsirinteen lähde syöttää altaaseen vettä viittä terassia pitkin. Puistolla on kaksi nimeä: Shah Goli on kuninkaan lampi, El Goli kansan järvi.
+- [Tabriz — kaupunkilehti / Tabriz] Tabrizin Surkhabissa on hautausmaa, jonne on haudattu runoilijoita 1000-luvulta 2000-luvulle, ja kaupungin kaakkoislaidalla on 55 000 neliömetrin tekoallas, jonka paviljonkiin johtaa pengertie.
+
+### 38.1
+KYSYMYS: Miten vene vietiin kosken ohi ennen kanavia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhdeksän koskea, joiden kohina kuului kilometrien päähän — ja jotka ovat nyt järven pohjassa
+Tietoruudun teksti: Kiovan alapuolella Dnepr näyttää leveältä ja rauhalliselta, ja niin se on — kolmesataa kilometriä. Sitten tuli kalliota. Ukrainan kilven graniitti ja gneissi työntyivät joen uomaan, ja kuudenkymmenenkuuden kilometrin matkalla vesi putosi viisikymmentä metriä. Suuria koskia oli yhdeksän, pienempiä kolmestakymmenestä neljäänkymmeneen ja saaria ja luotoja kuusikymmentä. Laivaliikenne loppui käytännössä siihen. Suurin niistä oli Nenasytets, Kyltymätön: kaksi ja puoli kilometriä pitkä, yli kilometrin levyinen, ja sen kohina kuului useiden kilometrien päähän. Paikalliset sanoivat sitä Helvetiksi. Alavirran kaupungin nimi Zaporižžja tarkoittaa yksinkertaisesti koskien takaista — nimi kertoo, kummalta puolen sitä katsottiin.
+
+Kosket näkyvät kirjoitetussa historiassa niin kauas kuin sitä on. Ne ovat Nestorin kronikan reitillä varjageilta kreikkalaisille, ja matkalaiset kantoivat veneensä maitse …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tampere — kaupunkilehti / Historia: Skotlantilainen, joka osti kosken] James Finlayson oli skotlantilainen konepajamies, joka oli työskennellyt Pietarissa ennen kuin hän vuonna 1820 perusti konepajan Tammerkosken yläjuoksulle. Paikka oli valittu kosken takia: se antoi voiman, jota Suomessa ei muualta saanut. Finlayson myi tehtaan 1836, ja uudet omistajat käänsivät sen puuvillatehtaaksi. Vuosisadan lopulla se oli Pohjoismaiden suurin teollisuuslaitos ja työllisti tuhansia — enimmäkseen naisia ja lapsia.
+
+### 38.2
+KYSYMYS: Mitä tapahtuu maisemalle, kun tekoallas nousee sen päälle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhdeksän koskea, joiden kohina kuului kilometrien päähän — ja jotka ovat nyt järven pohjassa
+Tietoruudun teksti: Kiovan alapuolella Dnepr näyttää leveältä ja rauhalliselta, ja niin se on — kolmesataa kilometriä. Sitten tuli kalliota. Ukrainan kilven graniitti ja gneissi työntyivät joen uomaan, ja kuudenkymmenenkuuden kilometrin matkalla vesi putosi viisikymmentä metriä. Suuria koskia oli yhdeksän, pienempiä kolmestakymmenestä neljäänkymmeneen ja saaria ja luotoja kuusikymmentä. Laivaliikenne loppui käytännössä siihen. Suurin niistä oli Nenasytets, Kyltymätön: kaksi ja puoli kilometriä pitkä, yli kilometrin levyinen, ja sen kohina kuului useiden kilometrien päähän. Paikalliset sanoivat sitä Helvetiksi. Alavirran kaupungin nimi Zaporižžja tarkoittaa yksinkertaisesti koskien takaista — nimi kertoo, kummalta puolen sitä katsottiin.
+
+Kosket näkyvät kirjoitetussa historiassa niin kauas kuin sitä on. Ne ovat Nestorin kronikan reitillä varjageilta kreikkalaisille, ja matkalaiset kantoivat veneensä maitse …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tabriz — kaupunkilehti / Tabriz: Allas näyttää kelluvan laakson yllä] Kaupungin kaakkoisosassa on laaja puisto, jonka keskellä on tekoallas. Pinta-alaa sillä on noin 55 000 neliömetriä. Perimätiedon mukaan puisto on 1700-luvun lopulta, mutta osa lähteistä ajoittaa sen jo 1300-luvulle. Qajar-kaudella puistoon lisättiin korkeat terassit, ja altaan pohjoispuoli on rakennettu korkeammaksi: puutarhahistorioitsija Penelope Hobhousen mukaan allas näyttää siksi kelluvan laakson yllä. Altaalle johtaa pengertie, jonka päässä on paviljonki, ja siinä toimii nykyään ravintola. Länsirinteen lähde syöttää altaaseen vettä viittä terassia pitkin. Puistolla on kaksi nimeä: Shah Goli on kuninkaan lampi, El Goli kansan järvi.
+- [Tabriz — kaupunkilehti / Tabriz] Tabrizin Surkhabissa on hautausmaa, jonne on haudattu runoilijoita 1000-luvulta 2000-luvulle, ja kaupungin kaakkoislaidalla on 55 000 neliömetrin tekoallas, jonka paviljonkiin johtaa pengertie.
+
+### 38.3
+KYSYMYS: Miksi joki putoaa juuri tietyissä kohdissa jyrkästi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhdeksän koskea, joiden kohina kuului kilometrien päähän — ja jotka ovat nyt järven pohjassa
+Tietoruudun teksti: Kiovan alapuolella Dnepr näyttää leveältä ja rauhalliselta, ja niin se on — kolmesataa kilometriä. Sitten tuli kalliota. Ukrainan kilven graniitti ja gneissi työntyivät joen uomaan, ja kuudenkymmenenkuuden kilometrin matkalla vesi putosi viisikymmentä metriä. Suuria koskia oli yhdeksän, pienempiä kolmestakymmenestä neljäänkymmeneen ja saaria ja luotoja kuusikymmentä. Laivaliikenne loppui käytännössä siihen. Suurin niistä oli Nenasytets, Kyltymätön: kaksi ja puoli kilometriä pitkä, yli kilometrin levyinen, ja sen kohina kuului useiden kilometrien päähän. Paikalliset sanoivat sitä Helvetiksi. Alavirran kaupungin nimi Zaporižžja tarkoittaa yksinkertaisesti koskien takaista — nimi kertoo, kummalta puolen sitä katsottiin.
+
+Kosket näkyvät kirjoitetussa historiassa niin kauas kuin sitä on. Ne ovat Nestorin kronikan reitillä varjageilta kreikkalaisille, ja matkalaiset kantoivat veneensä maitse …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (nosto:sofian-mosaiikit) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kävi kaupungissa, maailman suurin varhainen mosaiikkikokoelma oli kalkittu piiloon
+Tietoruudun teksti: Pyhän Sofian katedraalin seinillä on jotain, mitä ei ole missään muualla samassa mitassa: 1000-luvun alkupuolen mosaiikkia 260 neliömetriä ja freskoa kolmetuhatta neliömetriä, samasta vuosisadasta kuin talo itse. Pohja on kultainen, päävärit sinistä, harmaanvalkoista ja purppuraa, ja sävyjä on niin monta, ettei niitä ole pystytty toistamaan nykykeinoin. Smaltin latomistavasta on päätelty, että seinät teki kahdeksan miehen ryhmä, ja jokaisen kuvan vieressä on selitys keskiaikaisella kreikalla. Keskusapsidia hallitsee kuusimetrinen rukoileva Neitsyt, jota sanotaan Orantaksi, ja kupolin laesta katsoo alas Kristus neljän arkkienkelin ympäröimänä.
+
+Isoisäsi ei nähnyt niistä yhtäkään. Koko sisustus oli kalkittu umpeen vuoteen 1701 mennessä, ja valkoista se oli vielä silloin kun hän seisoi kaupungissa. Freskot olivat kyllä tulleet esiin vuosien 1843–1853 korjauksissa, mutta ne maalattiin luvan…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kohdekartta / Kohdekartta: Zeuksen temppeli] 561 eaa. – 131 jaa. Zeuksen temppeli on yksi antiikin ajan suurimmista rakennushankkeista — ja hitaimmista. Sen rakentaminen aloitettiin jo 500-luvulla eaa., mutta työt keskeytyivät moneen kertaan. Temppeli valmistui vasta vuonna 131 jaa., kun Rooman keisari Hadrianus vihki sen käyttöön — rakentamiseen meni siis yli 600 vuotta! Valmiina temppeli oli valtava: yli 110 metriä pitkä, ja sitä ympäröi 104 jättimäistä korinttilaista pylvästä, joista jokainen oli 17 metriä korkea. Sisällä seisoi kultaa ja norsunluuta oleva jättipatsas itse Zeuksesta. Nykyään pystyssä on enää 15 pylvästä. Yhden pylvään ottomaanihallitsija tuhotti vuonna 1759 kalkin polttamista varten, ja toinen kaatui myrskyssä vuon…
+- [Sevilla — kaupunkilehti / Sevilla: Torni, jonka kulta oli laastia] Kaksitoistasivuinen vartiotorni nousi joen rantaan 1220–1221 Sevillan almohadikuvernöörin Abu l-Ulàn käskystä valvomaan jokea pitkin tulevaa liikennettä. Nimi Torre del Oro eli Kultatorni tulee kultaisesta hohteesta, jonka laastin, kalkin ja puristetun heinän seos loi — kultaa tornissa ei ole koskaan ollut. Tornista lähti joen poikki ketju, jonka toinen ankkuripiste vastarannalla on sittemmin kadonnut; sillä yritettiin sulkea satama kastilialaislaivastolta 1248. Ylin, pyöreä kerros on vasta vuodelta 1760: sen rakensi Lissabonin maanjäristyksen jäljiltä sama sotilasinsinööri Sebastian Van der Borcht, joka suunnitteli tupakkatehtaan.
+
+### 39.1
+KYSYMYS: Miksi kirkon seinät kalkittiin umpeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kävi kaupungissa, maailman suurin varhainen mosaiikkikokoelma oli kalkittu piiloon
+Tietoruudun teksti: Pyhän Sofian katedraalin seinillä on jotain, mitä ei ole missään muualla samassa mitassa: 1000-luvun alkupuolen mosaiikkia 260 neliömetriä ja freskoa kolmetuhatta neliömetriä, samasta vuosisadasta kuin talo itse. Pohja on kultainen, päävärit sinistä, harmaanvalkoista ja purppuraa, ja sävyjä on niin monta, ettei niitä ole pystytty toistamaan nykykeinoin. Smaltin latomistavasta on päätelty, että seinät teki kahdeksan miehen ryhmä, ja jokaisen kuvan vieressä on selitys keskiaikaisella kreikalla. Keskusapsidia hallitsee kuusimetrinen rukoileva Neitsyt, jota sanotaan Orantaksi, ja kupolin laesta katsoo alas Kristus neljän arkkienkelin ympäröimänä.
+
+Isoisäsi ei nähnyt niistä yhtäkään. Koko sisustus oli kalkittu umpeen vuoteen 1701 mennessä, ja valkoista se oli vielä silloin kun hän seisoi kaupungissa. Freskot olivat kyllä tulleet esiin vuosien 1843–1853 korjauksissa, mutta ne maalattiin luvan…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+### 39.2
+KYSYMYS: Miten kalkin alle jäänyt mosaiikki saadaan esiin ehjänä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kävi kaupungissa, maailman suurin varhainen mosaiikkikokoelma oli kalkittu piiloon
+Tietoruudun teksti: Pyhän Sofian katedraalin seinillä on jotain, mitä ei ole missään muualla samassa mitassa: 1000-luvun alkupuolen mosaiikkia 260 neliömetriä ja freskoa kolmetuhatta neliömetriä, samasta vuosisadasta kuin talo itse. Pohja on kultainen, päävärit sinistä, harmaanvalkoista ja purppuraa, ja sävyjä on niin monta, ettei niitä ole pystytty toistamaan nykykeinoin. Smaltin latomistavasta on päätelty, että seinät teki kahdeksan miehen ryhmä, ja jokaisen kuvan vieressä on selitys keskiaikaisella kreikalla. Keskusapsidia hallitsee kuusimetrinen rukoileva Neitsyt, jota sanotaan Orantaksi, ja kupolin laesta katsoo alas Kristus neljän arkkienkelin ympäröimänä.
+
+Isoisäsi ei nähnyt niistä yhtäkään. Koko sisustus oli kalkittu umpeen vuoteen 1701 mennessä, ja valkoista se oli vielä silloin kun hän seisoi kaupungissa. Freskot olivat kyllä tulleet esiin vuosien 1843–1853 korjauksissa, mutta ne maalattiin luvan…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kohdekartta / Kohdekartta: Zeuksen temppeli] 561 eaa. – 131 jaa. Zeuksen temppeli on yksi antiikin ajan suurimmista rakennushankkeista — ja hitaimmista. Sen rakentaminen aloitettiin jo 500-luvulla eaa., mutta työt keskeytyivät moneen kertaan. Temppeli valmistui vasta vuonna 131 jaa., kun Rooman keisari Hadrianus vihki sen käyttöön — rakentamiseen meni siis yli 600 vuotta! Valmiina temppeli oli valtava: yli 110 metriä pitkä, ja sitä ympäröi 104 jättimäistä korinttilaista pylvästä, joista jokainen oli 17 metriä korkea. Sisällä seisoi kultaa ja norsunluuta oleva jättipatsas itse Zeuksesta. Nykyään pystyssä on enää 15 pylvästä. Yhden pylvään ottomaanihallitsija tuhotti vuonna 1759 kalkin polttamista varten, ja toinen kaatui myrskyssä vuon…
+- [Sevilla — kaupunkilehti / Sevilla: Torni, jonka kulta oli laastia] Kaksitoistasivuinen vartiotorni nousi joen rantaan 1220–1221 Sevillan almohadikuvernöörin Abu l-Ulàn käskystä valvomaan jokea pitkin tulevaa liikennettä. Nimi Torre del Oro eli Kultatorni tulee kultaisesta hohteesta, jonka laastin, kalkin ja puristetun heinän seos loi — kultaa tornissa ei ole koskaan ollut. Tornista lähti joen poikki ketju, jonka toinen ankkuripiste vastarannalla on sittemmin kadonnut; sillä yritettiin sulkea satama kastilialaislaivastolta 1248. Ylin, pyöreä kerros on vasta vuodelta 1760: sen rakensi Lissabonin maanjäristyksen jäljiltä sama sotilasinsinööri Sebastian Van der Borcht, joka suunnitteli tupakkatehtaan.
+
+### 39.3
+KYSYMYS: Miksi nykytutkijat eivät osaa toistaa vanhoja lasivärejä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kävi kaupungissa, maailman suurin varhainen mosaiikkikokoelma oli kalkittu piiloon
+Tietoruudun teksti: Pyhän Sofian katedraalin seinillä on jotain, mitä ei ole missään muualla samassa mitassa: 1000-luvun alkupuolen mosaiikkia 260 neliömetriä ja freskoa kolmetuhatta neliömetriä, samasta vuosisadasta kuin talo itse. Pohja on kultainen, päävärit sinistä, harmaanvalkoista ja purppuraa, ja sävyjä on niin monta, ettei niitä ole pystytty toistamaan nykykeinoin. Smaltin latomistavasta on päätelty, että seinät teki kahdeksan miehen ryhmä, ja jokaisen kuvan vieressä on selitys keskiaikaisella kreikalla. Keskusapsidia hallitsee kuusimetrinen rukoileva Neitsyt, jota sanotaan Orantaksi, ja kupolin laesta katsoo alas Kristus neljän arkkienkelin ympäröimänä.
+
+Isoisäsi ei nähnyt niistä yhtäkään. Koko sisustus oli kalkittu umpeen vuoteen 1701 mennessä, ja valkoista se oli vielä silloin kun hän seisoi kaupungissa. Freskot olivat kyllä tulleet esiin vuosien 1843–1853 korjauksissa, mutta ne maalattiin luvan…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI

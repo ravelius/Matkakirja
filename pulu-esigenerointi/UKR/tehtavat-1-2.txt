@@ -1,0 +1,274 @@
+================ KOHTA 6 (kohde:kamjanets-podilskyin-linna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamjanets-Podilskyin linna (historia)
+Tietoruudun teksti: Kamjanets-Podilskyin linna oli ensin ruteeni-liettualainen linna ja myöhemmin kolmiosainen puolalainen linnoitus Podolian alueella Länsi-Ukrainassa. Nimi juontuu slaavilaisesta sanasta kamin, kivi. Linna seisoo niemellä, jonka mutkitteleva Smotrytš-joki on kaivertanut, ja se rakennettiin alun perin suojaamaan siltaa, joka yhdisti kaupungin mantereeseen.
+
+Kirjalliset lähteet ajoittavat linnan 1300-luvun alkuun, mutta 1960-luvun kaivaukset viittaavat siihen, että paikalla on ollut asutusta jo 1100–1200-luvuilla. Sijainti Podolian kauppateiden risteyksessä teki linnasta houkuttelevan maalin: 1400–1600-luvuilla tataarilaumat hyökkäsivät sen kimppuun kaikkiaan 51 kertaa.
+
+Elokuussa 1672 sulttaani Mehmed IV:n johtama osmanijoukko piiritti linnaa, ja kaupungin johto antautui 18. elokuuta. Seuraavat 27 vuotta linna toimi osmanivallan tukikohtana Podoliassa, kunnes vuoden 1699 rauhansopimus pala…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aden — kaupunkilehti / Meri ja satama: Satama siirtyi niemen toiselle puolelle] Vanha satama oli kraatterin puolella, mutta se mataloitui liettymällä, ja kaupan painopiste siirtyi niemen toiselle puolelle Steamer Pointiin. Sinne tuli hiiliasema, ja siellä matkustajat nousivat maihin. Matka Suezin kanavalle, Bombayhin ja Sansibariin on Adenista suunnilleen yhtä pitkä, ja kaupunki itse on vain kuuden metrin korkeudella merenpinnasta. 1950-luvulla satama oli maailman toiseksi vilkkain polttoainetäydennyspaikka, ja edellä oli vain New York. Raha vaihtui sataman mukana: kun Intia itsenäistyi vuonna 1947, Adenissa käytetyt Intian rupiat korvattiin Itä-Afrikan shillingeillä.
+- [Dakar — kaupunkilehti / Dakar: Muuri niemen poikki] Kun Cayorin marabuutit nousivat kapinaan hallitsijaansa vastaan, lebut liittyivät mukaan. Kapina kukistettiin, ja lebut vetäytyivät niemelleen. He rakensivat lateriittilohkareista sarjan puolustusmuureja, joista pisin ulottui koko niemen poikki Yoffista Hanniin, ja torjuivat hyökkäyksen. Voiton jälkeen syntyi itsenäinen valtio, jota ranskalaiset kutsuivat Lebu-tasavallaksi. Lähteet ajoittavat tapahtumat eri tavoin: kaupungin oma artikkeli vuoteen 1795, lebu-kansan artikkeli vuosiin 1776–1812. Senegalin valtio tunnustaa Ndakaarun serignen yhä lebujen perinteiseksi auktoriteetiksi.
+
+### 6.1
+KYSYMYS: Mikä joki tekee linnasta niemen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamjanets-Podilskyin linna (historia)
+Tietoruudun teksti: Kamjanets-Podilskyin linna oli ensin ruteeni-liettualainen linna ja myöhemmin kolmiosainen puolalainen linnoitus Podolian alueella Länsi-Ukrainassa. Nimi juontuu slaavilaisesta sanasta kamin, kivi. Linna seisoo niemellä, jonka mutkitteleva Smotrytš-joki on kaivertanut, ja se rakennettiin alun perin suojaamaan siltaa, joka yhdisti kaupungin mantereeseen.
+
+Kirjalliset lähteet ajoittavat linnan 1300-luvun alkuun, mutta 1960-luvun kaivaukset viittaavat siihen, että paikalla on ollut asutusta jo 1100–1200-luvuilla. Sijainti Podolian kauppateiden risteyksessä teki linnasta houkuttelevan maalin: 1400–1600-luvuilla tataarilaumat hyökkäsivät sen kimppuun kaikkiaan 51 kertaa.
+
+Elokuussa 1672 sulttaani Mehmed IV:n johtama osmanijoukko piiritti linnaa, ja kaupungin johto antautui 18. elokuuta. Seuraavat 27 vuotta linna toimi osmanivallan tukikohtana Podoliassa, kunnes vuoden 1699 rauhansopimus pala…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aden — kaupunkilehti / Meri ja satama: Satama siirtyi niemen toiselle puolelle] Vanha satama oli kraatterin puolella, mutta se mataloitui liettymällä, ja kaupan painopiste siirtyi niemen toiselle puolelle Steamer Pointiin. Sinne tuli hiiliasema, ja siellä matkustajat nousivat maihin. Matka Suezin kanavalle, Bombayhin ja Sansibariin on Adenista suunnilleen yhtä pitkä, ja kaupunki itse on vain kuuden metrin korkeudella merenpinnasta. 1950-luvulla satama oli maailman toiseksi vilkkain polttoainetäydennyspaikka, ja edellä oli vain New York. Raha vaihtui sataman mukana: kun Intia itsenäistyi vuonna 1947, Adenissa käytetyt Intian rupiat korvattiin Itä-Afrikan shillingeillä.
+- [Dakar — kaupunkilehti / Dakar: Muuri niemen poikki] Kun Cayorin marabuutit nousivat kapinaan hallitsijaansa vastaan, lebut liittyivät mukaan. Kapina kukistettiin, ja lebut vetäytyivät niemelleen. He rakensivat lateriittilohkareista sarjan puolustusmuureja, joista pisin ulottui koko niemen poikki Yoffista Hanniin, ja torjuivat hyökkäyksen. Voiton jälkeen syntyi itsenäinen valtio, jota ranskalaiset kutsuivat Lebu-tasavallaksi. Lähteet ajoittavat tapahtumat eri tavoin: kaupungin oma artikkeli vuoteen 1795, lebu-kansan artikkeli vuosiin 1776–1812. Senegalin valtio tunnustaa Ndakaarun serignen yhä lebujen perinteiseksi auktoriteetiksi.
+
+### 6.2
+KYSYMYS: Kuka valtasi linnan vuonna 1672?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamjanets-Podilskyin linna (historia)
+Tietoruudun teksti: Kamjanets-Podilskyin linna oli ensin ruteeni-liettualainen linna ja myöhemmin kolmiosainen puolalainen linnoitus Podolian alueella Länsi-Ukrainassa. Nimi juontuu slaavilaisesta sanasta kamin, kivi. Linna seisoo niemellä, jonka mutkitteleva Smotrytš-joki on kaivertanut, ja se rakennettiin alun perin suojaamaan siltaa, joka yhdisti kaupungin mantereeseen.
+
+Kirjalliset lähteet ajoittavat linnan 1300-luvun alkuun, mutta 1960-luvun kaivaukset viittaavat siihen, että paikalla on ollut asutusta jo 1100–1200-luvuilla. Sijainti Podolian kauppateiden risteyksessä teki linnasta houkuttelevan maalin: 1400–1600-luvuilla tataarilaumat hyökkäsivät sen kimppuun kaikkiaan 51 kertaa.
+
+Elokuussa 1672 sulttaani Mehmed IV:n johtama osmanijoukko piiritti linnaa, ja kaupungin johto antautui 18. elokuuta. Seuraavat 27 vuotta linna toimi osmanivallan tukikohtana Podoliassa, kunnes vuoden 1699 rauhansopimus pala…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saint Helena — maalehti / Historia: Britannian toiseksi vanhin siirtomaa] 1657–1673 — Oliver Cromwell antoi Itä-Intian kauppakomppanialle 1657 luvan hallita saarta, ja kapteeni John Dutton saapui 1659 ensimmäisenä kuvernöörinä. Linnake valmistui kuukaudessa, ja sen viereen nousi kaupunki, joka sai kuninkuuden palauduttua nimen Jamestown Yorkin herttuan mukaan. Uudisasukkaille luvattiin oma palsta sadastakolmestakymmenestä, mutta väkeä ei saatu: vuonna 1670 saarella asui 66 ihmistä, heistä 18 orjaa. Jouluna 1672 hollantilaiset valtasivat saaren, mutta kuvernööri pakeni Brasiliaan, vuokrasi nopean laivan ja löysi komppanian laivaston, joka otti saaren takaisin toukokuussa 1673 ilman ihmishenkien menetystä.
+- [Montreal — kaupunkilehti / Historia: Kaupungintalo jesuiittojen puutarhamaalla] Sulpitiaanimunkit toimivat Montrealin saaren seigneureina vuodesta 1663, ja François Dollier de Casson veti siirtokunnan ensimmäisen katuverkon. Hän saapui Uuteen Ranskaan 1666 ja nousi sulpitiaanien esimieheksi 1671; hänen katusuunnitelmansa on päivätty vuoteen 1672. Rue Notre-Dame, Rue Saint-Paul ja Rue Saint-Jacques ohjaavat Vanhan Montrealin liikennettä yhä. Kaksisataa vuotta myöhemmin, samana vuonna kun isoisä matkusti, kaupunki rakensi oman kaupungintalonsa vanhalle jesuiittapuutarhan paikalle 1873 — viereen, entisen jesuiittakirkon tontille, jäi Place Vauquelin.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:tsernobylin-ydinvoimala) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tšernobylin ydinvoimala (tekniikka)
+Tietoruudun teksti: Tšernobylin ydinvoimala seisoo Pohjois-Ukrainassa hylätyn Prypjatin kaupungin vieressä, noin sata kilometriä Kiovasta pohjoiseen ja kuusitoista kilometriä Valko-Venäjän rajalta. Sen neljä reaktoria otettiin käyttöön vuosina 1978–1984. Käytössä ollut RBMK-reaktori on grafiittihidasteinen ja poikkeuksellinen malli: se asettaa kustannustehokkuuden turvallisuuden edelle esimerkiksi VVER-painevesireaktoriin verrattuna.
+
+26. huhtikuuta 1986 nelosreaktori räjähti ja suli. Voimala jäi laajan suljetun alueen sisään, jota kutsutaan Tšernobylin suoja-alueeksi. Kolme muuta reaktoria jatkoivat silti käyntiään: kakkonen pysäytettiin lopullisesti 1991 turbiinipalon jälkeen, ykkönen 1996 ja kolmonen 2000.
+
+Vuonna 2013 voimalan haltija ilmoitti reaktorien 1–3 olevan tyhjennetty polttoaineesta, ja 2015 alkoi purkuvaihe, jossa käytön aikana saastunut laitteisto poistetaan. Työn arvioidaan kestävän vuoteen…
+
+### 7.1
+KYSYMYS: Millainen reaktori RBMK on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tšernobylin ydinvoimala (tekniikka)
+Tietoruudun teksti: Tšernobylin ydinvoimala seisoo Pohjois-Ukrainassa hylätyn Prypjatin kaupungin vieressä, noin sata kilometriä Kiovasta pohjoiseen ja kuusitoista kilometriä Valko-Venäjän rajalta. Sen neljä reaktoria otettiin käyttöön vuosina 1978–1984. Käytössä ollut RBMK-reaktori on grafiittihidasteinen ja poikkeuksellinen malli: se asettaa kustannustehokkuuden turvallisuuden edelle esimerkiksi VVER-painevesireaktoriin verrattuna.
+
+26. huhtikuuta 1986 nelosreaktori räjähti ja suli. Voimala jäi laajan suljetun alueen sisään, jota kutsutaan Tšernobylin suoja-alueeksi. Kolme muuta reaktoria jatkoivat silti käyntiään: kakkonen pysäytettiin lopullisesti 1991 turbiinipalon jälkeen, ykkönen 1996 ja kolmonen 2000.
+
+Vuonna 2013 voimalan haltija ilmoitti reaktorien 1–3 olevan tyhjennetty polttoaineesta, ja 2015 alkoi purkuvaihe, jossa käytön aikana saastunut laitteisto poistetaan. Työn arvioidaan kestävän vuoteen…
+
+### 7.2
+KYSYMYS: Miksi Prypjatin kaupunki rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tšernobylin ydinvoimala (tekniikka)
+Tietoruudun teksti: Tšernobylin ydinvoimala seisoo Pohjois-Ukrainassa hylätyn Prypjatin kaupungin vieressä, noin sata kilometriä Kiovasta pohjoiseen ja kuusitoista kilometriä Valko-Venäjän rajalta. Sen neljä reaktoria otettiin käyttöön vuosina 1978–1984. Käytössä ollut RBMK-reaktori on grafiittihidasteinen ja poikkeuksellinen malli: se asettaa kustannustehokkuuden turvallisuuden edelle esimerkiksi VVER-painevesireaktoriin verrattuna.
+
+26. huhtikuuta 1986 nelosreaktori räjähti ja suli. Voimala jäi laajan suljetun alueen sisään, jota kutsutaan Tšernobylin suoja-alueeksi. Kolme muuta reaktoria jatkoivat silti käyntiään: kakkonen pysäytettiin lopullisesti 1991 turbiinipalon jälkeen, ykkönen 1996 ja kolmonen 2000.
+
+Vuonna 2013 voimalan haltija ilmoitti reaktorien 1–3 olevan tyhjennetty polttoaineesta, ja 2015 alkoi purkuvaihe, jossa käytön aikana saastunut laitteisto poistetaan. Työn arvioidaan kestävän vuoteen…
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:hersonesos) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hersonesos (historia)
+Tietoruudun teksti: Hersonesos oli antiikin kreikkalainen siirtokunta Krimin niemimaan lounaisosassa, nykyisen Sevastopolin laitamilla. Sen perustivat doorilaiset uudisasukkaat Herakleia Pontikesta noin 2 500 vuotta sitten. Nimi tarkoittaa kreikaksi niemimaata ja kuvaa tarkasti paikkaa, jolle kaupunki nousi.
+
+Suuren osan antiikin ajasta Hersonesos oli demokratia: sitä johtivat vaaleilla valitut arkontit ja damiurgeiksi kutsuttu neuvosto. Kaupunkilaisten vala 200-luvulta eaa. on säilynyt meidän päiviimme asti. Rooma piti paikalla varuskuntaa 100-luvulta eaa. aina 370-luvulle jaa., jolloin hunnit valtasivat kaupungin.
+
+Bysantin aikana Hersonesos oli tarkkailupaikka arojen kansoja varten ja syrjäisyytensä vuoksi suosittu karkotuspaikka: sinne lähetettiin muun muassa paavit Klemens I ja Martinus I sekä syrjäytetty keisari Justinianos II. Vuonna 988 Kiovan Vladimir kastettiin täällä, ja siitä alkoi Kiovan Rusin…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+
+### 8.1
+KYSYMYS: Mitä nimi Hersonesos tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hersonesos (historia)
+Tietoruudun teksti: Hersonesos oli antiikin kreikkalainen siirtokunta Krimin niemimaan lounaisosassa, nykyisen Sevastopolin laitamilla. Sen perustivat doorilaiset uudisasukkaat Herakleia Pontikesta noin 2 500 vuotta sitten. Nimi tarkoittaa kreikaksi niemimaata ja kuvaa tarkasti paikkaa, jolle kaupunki nousi.
+
+Suuren osan antiikin ajasta Hersonesos oli demokratia: sitä johtivat vaaleilla valitut arkontit ja damiurgeiksi kutsuttu neuvosto. Kaupunkilaisten vala 200-luvulta eaa. on säilynyt meidän päiviimme asti. Rooma piti paikalla varuskuntaa 100-luvulta eaa. aina 370-luvulle jaa., jolloin hunnit valtasivat kaupungin.
+
+Bysantin aikana Hersonesos oli tarkkailupaikka arojen kansoja varten ja syrjäisyytensä vuoksi suosittu karkotuspaikka: sinne lähetettiin muun muassa paavit Klemens I ja Martinus I sekä syrjäytetty keisari Justinianos II. Vuonna 988 Kiovan Vladimir kastettiin täällä, ja siitä alkoi Kiovan Rusin…
+
+### 8.2
+KYSYMYS: Kuka kastettiin täällä vuonna 988?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hersonesos (historia)
+Tietoruudun teksti: Hersonesos oli antiikin kreikkalainen siirtokunta Krimin niemimaan lounaisosassa, nykyisen Sevastopolin laitamilla. Sen perustivat doorilaiset uudisasukkaat Herakleia Pontikesta noin 2 500 vuotta sitten. Nimi tarkoittaa kreikaksi niemimaata ja kuvaa tarkasti paikkaa, jolle kaupunki nousi.
+
+Suuren osan antiikin ajasta Hersonesos oli demokratia: sitä johtivat vaaleilla valitut arkontit ja damiurgeiksi kutsuttu neuvosto. Kaupunkilaisten vala 200-luvulta eaa. on säilynyt meidän päiviimme asti. Rooma piti paikalla varuskuntaa 100-luvulta eaa. aina 370-luvulle jaa., jolloin hunnit valtasivat kaupungin.
+
+Bysantin aikana Hersonesos oli tarkkailupaikka arojen kansoja varten ja syrjäisyytensä vuoksi suosittu karkotuspaikka: sinne lähetettiin muun muassa paavit Klemens I ja Martinus I sekä syrjäytetty keisari Justinianos II. Vuonna 988 Kiovan Vladimir kastettiin täällä, ja siitä alkoi Kiovan Rusin…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:lviv) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lviv (kaupungit)
+Tietoruudun teksti: Lviv on Ukrainan viidenneksi suurin kaupunki ja maan länsiosan suurin; asukkaita on arviolta 723 000. Nimi tulee Leo I:stä, ruteenien kuninkaan Danielin vanhimmasta pojasta. Historiansa aikana kaupungilla on ollut monta nimeä: ukrainaksi Lviv, puolaksi Lwów, saksaksi Lemberg ja jiddišiksi Lemberik.
+
+Kaupunki nousi Punaisen Ruteenian ja Galitsian keskukseksi 1300-luvulla. Se oli Galitsia-Volhynian kuningaskunnan pääkaupunki 1272–1340, sai kaupunkioikeudet Puolan Kasimir Suurelta 1356 ja toimi vuodesta 1434 Ruteenian vojevodakunnan pääkaupunkina. Puolan ensimmäisen jaon jälkeen 1772 siitä tuli Habsburgien Galitsian ja Lodomerian kuningaskunnan pääkaupunki, ja vuosina 1918–1939 se oli Lwówin vojevodakunnan keskus toisessa Puolan tasavallassa.
+
+Historiallinen keskusta on mukulakivikatuja ja sekoitus renessanssia, barokkia, uusklassismia ja jugendia. Se kuuluu Unescon maailmanperintöluettelo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Shanghai — kaupunkilehti / Arki: Kaupungilla on oma kieli] Kujilla ja toreilla puhutaan shanghainkieltä, joka kuuluu wu-kieliin eikä aukea mandariinia osaavalle. Puhujia on noin 14 miljoonaa, ja kieli muotoutui sataman mukana: kun kaupunki avattiin kaupalle 1850-luvulla, muuttajat toivat Suzhousta ja Ningbosta murteensa, jotka sulautuivat paikalliseen puheeseen. Yleiskielen opetus työnsi shanghain syrjään, ja kouluissa sen käyttöä hillittiin vuodesta 1992, mutta 2010-luvulla suunta kääntyi: ensimmäinen shanghainkielinen romaani ilmestyi 2011, bussit alkoivat kuuluttaa pysäkkejä shanghaiksi 2013, ja 2017 kieltä oppi myös puhelimen ääniavustaja.
+- [Ukraina — maalehti / Historia: Nuorisoseurasta syntyi armeijan siemen] 1914 — Galitsian ukrainalaiset olivat 1900-luvun alussa perustaneet satoja Sitš-nimisiä liikunta- ja palokuntaseuroja, jotka hakivat innoituksensa kasakoiden Zaporižžjan Sitšistä. Elokuussa 1914 näistä seuroista koottiin Itävalta-Unkarin armeijaan noin 5 000 miehen vapaaehtoislegioona, Ukrainalaiset sitšiläisampujat, joka taisteli Venäjää vastaan Karpaateilla ja Galitsiassa. Sodan päätyttyä legioonan sotilaat muodostivat Länsi-Ukrainan kansantasavallan armeijan ytimen ja taistelivat vielä Puolaa vastaan, kunnes yksikkö hajotettiin toukokuussa 1920. Lvivin Lytšakivin hautausmaalle pystytettiin heille muistomerkki.
+
+### 9.1
+KYSYMYS: Kenen mukaan Lviv on nimetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lviv (kaupungit)
+Tietoruudun teksti: Lviv on Ukrainan viidenneksi suurin kaupunki ja maan länsiosan suurin; asukkaita on arviolta 723 000. Nimi tulee Leo I:stä, ruteenien kuninkaan Danielin vanhimmasta pojasta. Historiansa aikana kaupungilla on ollut monta nimeä: ukrainaksi Lviv, puolaksi Lwów, saksaksi Lemberg ja jiddišiksi Lemberik.
+
+Kaupunki nousi Punaisen Ruteenian ja Galitsian keskukseksi 1300-luvulla. Se oli Galitsia-Volhynian kuningaskunnan pääkaupunki 1272–1340, sai kaupunkioikeudet Puolan Kasimir Suurelta 1356 ja toimi vuodesta 1434 Ruteenian vojevodakunnan pääkaupunkina. Puolan ensimmäisen jaon jälkeen 1772 siitä tuli Habsburgien Galitsian ja Lodomerian kuningaskunnan pääkaupunki, ja vuosina 1918–1939 se oli Lwówin vojevodakunnan keskus toisessa Puolan tasavallassa.
+
+Historiallinen keskusta on mukulakivikatuja ja sekoitus renessanssia, barokkia, uusklassismia ja jugendia. Se kuuluu Unescon maailmanperintöluettelo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Historia: Nuorisoseurasta syntyi armeijan siemen] 1914 — Galitsian ukrainalaiset olivat 1900-luvun alussa perustaneet satoja Sitš-nimisiä liikunta- ja palokuntaseuroja, jotka hakivat innoituksensa kasakoiden Zaporižžjan Sitšistä. Elokuussa 1914 näistä seuroista koottiin Itävalta-Unkarin armeijaan noin 5 000 miehen vapaaehtoislegioona, Ukrainalaiset sitšiläisampujat, joka taisteli Venäjää vastaan Karpaateilla ja Galitsiassa. Sodan päätyttyä legioonan sotilaat muodostivat Länsi-Ukrainan kansantasavallan armeijan ytimen ja taistelivat vielä Puolaa vastaan, kunnes yksikkö hajotettiin toukokuussa 1920. Lvivin Lytšakivin hautausmaalle pystytettiin heille muistomerkki.
+
+### 9.2
+KYSYMYS: Miksi kaupungilla on monta nimeä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lviv (kaupungit)
+Tietoruudun teksti: Lviv on Ukrainan viidenneksi suurin kaupunki ja maan länsiosan suurin; asukkaita on arviolta 723 000. Nimi tulee Leo I:stä, ruteenien kuninkaan Danielin vanhimmasta pojasta. Historiansa aikana kaupungilla on ollut monta nimeä: ukrainaksi Lviv, puolaksi Lwów, saksaksi Lemberg ja jiddišiksi Lemberik.
+
+Kaupunki nousi Punaisen Ruteenian ja Galitsian keskukseksi 1300-luvulla. Se oli Galitsia-Volhynian kuningaskunnan pääkaupunki 1272–1340, sai kaupunkioikeudet Puolan Kasimir Suurelta 1356 ja toimi vuodesta 1434 Ruteenian vojevodakunnan pääkaupunkina. Puolan ensimmäisen jaon jälkeen 1772 siitä tuli Habsburgien Galitsian ja Lodomerian kuningaskunnan pääkaupunki, ja vuosina 1918–1939 se oli Lwówin vojevodakunnan keskus toisessa Puolan tasavallassa.
+
+Historiallinen keskusta on mukulakivikatuja ja sekoitus renessanssia, barokkia, uusklassismia ja jugendia. Se kuuluu Unescon maailmanperintöluettelo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Shanghai — kaupunkilehti / Arki: Kaupungilla on oma kieli] Kujilla ja toreilla puhutaan shanghainkieltä, joka kuuluu wu-kieliin eikä aukea mandariinia osaavalle. Puhujia on noin 14 miljoonaa, ja kieli muotoutui sataman mukana: kun kaupunki avattiin kaupalle 1850-luvulla, muuttajat toivat Suzhousta ja Ningbosta murteensa, jotka sulautuivat paikalliseen puheeseen. Yleiskielen opetus työnsi shanghain syrjään, ja kouluissa sen käyttöä hillittiin vuodesta 1992, mutta 2010-luvulla suunta kääntyi: ensimmäinen shanghainkielinen romaani ilmestyi 2011, bussit alkoivat kuuluttaa pysäkkejä shanghaiksi 2013, ja 2017 kieltä oppi myös puhelimen ääniavustaja.
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:hortytsja) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortytsja (historia)
+Tietoruudun teksti: Hortytsja on Dneprin suurin saari: 12,5 kilometriä pitkä ja enimmillään 2,5 kilometriä leveä. Se kuuluu Hortytsjan kansallispuistoon ja sijaitsee Zaporižžjan kaupungin rajojen sisällä. Saaren pohjoisosa on kallioinen ja kohoaa kolmisenkymmentä metriä joenuoman yläpuolelle, eteläosa taas on matala ja jää usein tulvan alle.
+
+Saarella on ollut asutusta viiden vuosituhannen ajan, ja sillä on oma osansa Zaporožjen kasakoiden historiassa. Nimen alkuperästä on useita selityksiä; todennäköisimpiä on, että se juontuu muinaisslaavilaisesta jumalasta Horsista.
+
+Zaporižžjan nimi tarkoittaa koskien takaista maata. Keisari Konstantinos VII mainitsee noin vuonna 950 kirjoittamassaan teoksessa saaren heti koskien alapuolella ja kertoo, että koskia ylittävät Rusin miehet olivat helppoa saalista paimentolaisille petšenegeille. Kiovan Rusin ruhtinas Svjatoslav I kuoli juuri koskia ylittäessään vuonna 972.…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Kulttuuri: Sotatanssista tuli kansallistanssi] 1500-luku — Hopakin nimi tulee sanasta hopaty, hypätä, ja huudahduksesta "hop!". Tanssi syntyi 1500-luvulla Zaporižžjan kasakoiden juhlana: kun sotaretkeltä palattiin voittajina, miehet tanssivat improvisoiden akrobaattisia hyppyjä ja lavastivat taisteluliikkeitä oikeilla miekoilla. Alun perin vain miehet tanssivat hopakia, mutta myöhemmin siitä tuli pari- ja ryhmätanssi. 1900-luvulla koreografit, muun muassa Pavlo Virskyin nimeä kantava kansantanssiyhtye, muokkasivat siitä näyttämölle sovitetun esitystanssin, jota ukrainalaisyhteisöt esittävät nykyään ympäri maailmaa – myös maastamuuttajien juhlissa Kanadassa ja Yhdysvalloissa.
+- [Ukraina — maalehti / Historia: Nuorisoseurasta syntyi armeijan siemen] 1914 — Galitsian ukrainalaiset olivat 1900-luvun alussa perustaneet satoja Sitš-nimisiä liikunta- ja palokuntaseuroja, jotka hakivat innoituksensa kasakoiden Zaporižžjan Sitšistä. Elokuussa 1914 näistä seuroista koottiin Itävalta-Unkarin armeijaan noin 5 000 miehen vapaaehtoislegioona, Ukrainalaiset sitšiläisampujat, joka taisteli Venäjää vastaan Karpaateilla ja Galitsiassa. Sodan päätyttyä legioonan sotilaat muodostivat Länsi-Ukrainan kansantasavallan armeijan ytimen ja taistelivat vielä Puolaa vastaan, kunnes yksikkö hajotettiin toukokuussa 1920. Lvivin Lytšakivin hautausmaalle pystytettiin heille muistomerkki.
+
+### 10.1
+KYSYMYS: Mitä nimi Zaporižžja tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortytsja (historia)
+Tietoruudun teksti: Hortytsja on Dneprin suurin saari: 12,5 kilometriä pitkä ja enimmillään 2,5 kilometriä leveä. Se kuuluu Hortytsjan kansallispuistoon ja sijaitsee Zaporižžjan kaupungin rajojen sisällä. Saaren pohjoisosa on kallioinen ja kohoaa kolmisenkymmentä metriä joenuoman yläpuolelle, eteläosa taas on matala ja jää usein tulvan alle.
+
+Saarella on ollut asutusta viiden vuosituhannen ajan, ja sillä on oma osansa Zaporožjen kasakoiden historiassa. Nimen alkuperästä on useita selityksiä; todennäköisimpiä on, että se juontuu muinaisslaavilaisesta jumalasta Horsista.
+
+Zaporižžjan nimi tarkoittaa koskien takaista maata. Keisari Konstantinos VII mainitsee noin vuonna 950 kirjoittamassaan teoksessa saaren heti koskien alapuolella ja kertoo, että koskia ylittävät Rusin miehet olivat helppoa saalista paimentolaisille petšenegeille. Kiovan Rusin ruhtinas Svjatoslav I kuoli juuri koskia ylittäessään vuonna 972.…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Kulttuuri: Sotatanssista tuli kansallistanssi] 1500-luku — Hopakin nimi tulee sanasta hopaty, hypätä, ja huudahduksesta "hop!". Tanssi syntyi 1500-luvulla Zaporižžjan kasakoiden juhlana: kun sotaretkeltä palattiin voittajina, miehet tanssivat improvisoiden akrobaattisia hyppyjä ja lavastivat taisteluliikkeitä oikeilla miekoilla. Alun perin vain miehet tanssivat hopakia, mutta myöhemmin siitä tuli pari- ja ryhmätanssi. 1900-luvulla koreografit, muun muassa Pavlo Virskyin nimeä kantava kansantanssiyhtye, muokkasivat siitä näyttämölle sovitetun esitystanssin, jota ukrainalaisyhteisöt esittävät nykyään ympäri maailmaa – myös maastamuuttajien juhlissa Kanadassa ja Yhdysvalloissa.
+- [Ukraina — maalehti / Historia: Nuorisoseurasta syntyi armeijan siemen] 1914 — Galitsian ukrainalaiset olivat 1900-luvun alussa perustaneet satoja Sitš-nimisiä liikunta- ja palokuntaseuroja, jotka hakivat innoituksensa kasakoiden Zaporižžjan Sitšistä. Elokuussa 1914 näistä seuroista koottiin Itävalta-Unkarin armeijaan noin 5 000 miehen vapaaehtoislegioona, Ukrainalaiset sitšiläisampujat, joka taisteli Venäjää vastaan Karpaateilla ja Galitsiassa. Sodan päätyttyä legioonan sotilaat muodostivat Länsi-Ukrainan kansantasavallan armeijan ytimen ja taistelivat vielä Puolaa vastaan, kunnes yksikkö hajotettiin toukokuussa 1920. Lvivin Lytšakivin hautausmaalle pystytettiin heille muistomerkki.
+
+### 10.2
+KYSYMYS: Mihin Dneprin kosket katosivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortytsja (historia)
+Tietoruudun teksti: Hortytsja on Dneprin suurin saari: 12,5 kilometriä pitkä ja enimmillään 2,5 kilometriä leveä. Se kuuluu Hortytsjan kansallispuistoon ja sijaitsee Zaporižžjan kaupungin rajojen sisällä. Saaren pohjoisosa on kallioinen ja kohoaa kolmisenkymmentä metriä joenuoman yläpuolelle, eteläosa taas on matala ja jää usein tulvan alle.
+
+Saarella on ollut asutusta viiden vuosituhannen ajan, ja sillä on oma osansa Zaporožjen kasakoiden historiassa. Nimen alkuperästä on useita selityksiä; todennäköisimpiä on, että se juontuu muinaisslaavilaisesta jumalasta Horsista.
+
+Zaporižžjan nimi tarkoittaa koskien takaista maata. Keisari Konstantinos VII mainitsee noin vuonna 950 kirjoittamassaan teoksessa saaren heti koskien alapuolella ja kertoo, että koskia ylittävät Rusin miehet olivat helppoa saalista paimentolaisille petšenegeille. Kiovan Rusin ruhtinas Svjatoslav I kuoli juuri koskia ylittäessään vuonna 972.…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kaupunkilehti / Kiova: Kilpi vaihdettiin kesken sodan] Dneprin rinteellä seisoo 62 metriä korkea teräksinen naispatsas, kädessään 16 metrin miekka ja 13 metriä leveä kilpi. Patsas paljastettiin vuonna 1981, ja kilvessä oli silloin Neuvostoliiton vaakuna. Elokuussa 2023 vaakuna irrotettiin ja tilalle nostettiin Ukrainan kolmikärki. Työ tehtiin kovassa tuulessa ja sateessa ja keskeytyi ilmahälytyksiin, mutta kilpi oli valmis ennen itsenäisyyspäivää 24. elokuuta.
+- [Kiova — kaupunkilehti / Kiova: Sata metriä alas ja takaisin] Kiovan Arsenalnan metroasema on 105,5 metriä maanpinnan alapuolella. Se oli maailman syvin asema vuoteen 2022 asti, jolloin Kiinan Chongqingiin avattiin 116 metrin syvyyteen ulottuva Hongyancunin asema. Liukuportaita on kaksi peräkkäin, 55,8 ja 46,6 metriä, ja niiden välissä on oma väliaula. Syvyys ei ole kikkailua: Kiova on Dneprin jyrkällä rantatörmällä, ja asema on kaivettu törmän sisään.
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

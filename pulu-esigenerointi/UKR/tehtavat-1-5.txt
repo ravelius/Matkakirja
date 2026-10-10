@@ -1,0 +1,174 @@
+================ KOHTA 21 (kohde:hahmotelma-bakhchysarai) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bakhchysarain palatsi (kulttuuri)
+Tietoruudun teksti: Bakhchysarain khaanien palatsi eli Hansaray on Krimin niemimaan tunnetuin islamilainen rakennus ja oli satojen vuosien ajan Krimin khaanikunnan hallitsijoiden koti. Se rakennettiin 1500-luvulla, ja muurattu palatsialue käsittää moskeijan, haaremin, hautausmaan, asuinsiipiä ja puutarhoja. Palatsi kuuluu Euroopan tunnetuimpiin muslimipalatseihin Istanbulin sulttaanipalatsien ja Espanjan Alhambran rinnalla. Sisäpihan kuuluisa Kyynelten suihkulähde on niin koskettava nähtävyys, että se innoitti runoilija Aleksandr Puškinia kirjoittamaan siitä oman runonsa. Vuonna 1873 palatsi on jo museo Venäjän keisarikunnan Taurian kuvernementissa – Krimin khaanikunta itsenäisenä valtiona kukistui Katariina II:n valloitukseen jo 1783.
+
+### 21.1
+KYSYMYS: Kenen puolesta suru synnytti Kyynelten suihkulähteen tarinan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bakhchysarain palatsi (kulttuuri)
+Tietoruudun teksti: Bakhchysarain khaanien palatsi eli Hansaray on Krimin niemimaan tunnetuin islamilainen rakennus ja oli satojen vuosien ajan Krimin khaanikunnan hallitsijoiden koti. Se rakennettiin 1500-luvulla, ja muurattu palatsialue käsittää moskeijan, haaremin, hautausmaan, asuinsiipiä ja puutarhoja. Palatsi kuuluu Euroopan tunnetuimpiin muslimipalatseihin Istanbulin sulttaanipalatsien ja Espanjan Alhambran rinnalla. Sisäpihan kuuluisa Kyynelten suihkulähde on niin koskettava nähtävyys, että se innoitti runoilija Aleksandr Puškinia kirjoittamaan siitä oman runonsa. Vuonna 1873 palatsi on jo museo Venäjän keisarikunnan Taurian kuvernementissa – Krimin khaanikunta itsenäisenä valtiona kukistui Katariina II:n valloitukseen jo 1783.
+
+### 21.2
+KYSYMYS: Mihin muihin palatseihin Bakhchysarain palatsia verrataan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bakhchysarain palatsi (kulttuuri)
+Tietoruudun teksti: Bakhchysarain khaanien palatsi eli Hansaray on Krimin niemimaan tunnetuin islamilainen rakennus ja oli satojen vuosien ajan Krimin khaanikunnan hallitsijoiden koti. Se rakennettiin 1500-luvulla, ja muurattu palatsialue käsittää moskeijan, haaremin, hautausmaan, asuinsiipiä ja puutarhoja. Palatsi kuuluu Euroopan tunnetuimpiin muslimipalatseihin Istanbulin sulttaanipalatsien ja Espanjan Alhambran rinnalla. Sisäpihan kuuluisa Kyynelten suihkulähde on niin koskettava nähtävyys, että se innoitti runoilija Aleksandr Puškinia kirjoittamaan siitä oman runonsa. Vuonna 1873 palatsi on jo museo Venäjän keisarikunnan Taurian kuvernementissa – Krimin khaanikunta itsenäisenä valtiona kukistui Katariina II:n valloitukseen jo 1783.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-kolomyia) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pysanka-museo, Kolomyia (kulttuuri)
+Tietoruudun teksti: Kolomyia on Hutsulien alueen pääkaupunkina tunnettu kaupunki Länsi-Ukrainan Karpaateilla, ja hutsulit ovat itäslaavilainen kansanryhmä, joka asuu sekä Ukrainan että Romanian puolella vuoristoa. Kaupungissa toimii maailman ainoa yksinomaan pysankalle – perinteiselle koristellulle pääsiäismunalle – omistettu museo, joka avattiin ensin vuonna 1987 Kolomyian ilmestyskirkossa. Uusi rakennus valmistui vuonna 2000 kymmenennen kansainvälisen Hutsuli-festivaalin aikaan, ja museonjohtaja Jaroslava Tkatšukin ideasta se on muotoiltu itse valtavaksi pysankaksi: 14 metriä korkea ja 10 metriä leveä kupu, jonka pintaan on maalattu perinteisiä kuvioita. Museo tunnustettiin nykyajan Ukrainan maamerkiksi vuonna 2007, ja siitä on tullut koko kaupungin tunnuskuva.
+
+### 22.1
+KYSYMYS: Missä pysanka-museon kokoelma oli ennen vuotta 2000?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pysanka-museo, Kolomyia (kulttuuri)
+Tietoruudun teksti: Kolomyia on Hutsulien alueen pääkaupunkina tunnettu kaupunki Länsi-Ukrainan Karpaateilla, ja hutsulit ovat itäslaavilainen kansanryhmä, joka asuu sekä Ukrainan että Romanian puolella vuoristoa. Kaupungissa toimii maailman ainoa yksinomaan pysankalle – perinteiselle koristellulle pääsiäismunalle – omistettu museo, joka avattiin ensin vuonna 1987 Kolomyian ilmestyskirkossa. Uusi rakennus valmistui vuonna 2000 kymmenennen kansainvälisen Hutsuli-festivaalin aikaan, ja museonjohtaja Jaroslava Tkatšukin ideasta se on muotoiltu itse valtavaksi pysankaksi: 14 metriä korkea ja 10 metriä leveä kupu, jonka pintaan on maalattu perinteisiä kuvioita. Museo tunnustettiin nykyajan Ukrainan maamerkiksi vuonna 2007, ja siitä on tullut koko kaupungin tunnuskuva.
+
+### 22.2
+KYSYMYS: Ketkä ovat hutsulit?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pysanka-museo, Kolomyia (kulttuuri)
+Tietoruudun teksti: Kolomyia on Hutsulien alueen pääkaupunkina tunnettu kaupunki Länsi-Ukrainan Karpaateilla, ja hutsulit ovat itäslaavilainen kansanryhmä, joka asuu sekä Ukrainan että Romanian puolella vuoristoa. Kaupungissa toimii maailman ainoa yksinomaan pysankalle – perinteiselle koristellulle pääsiäismunalle – omistettu museo, joka avattiin ensin vuonna 1987 Kolomyian ilmestyskirkossa. Uusi rakennus valmistui vuonna 2000 kymmenennen kansainvälisen Hutsuli-festivaalin aikaan, ja museonjohtaja Jaroslava Tkatšukin ideasta se on muotoiltu itse valtavaksi pysankaksi: 14 metriä korkea ja 10 metriä leveä kupu, jonka pintaan on maalattu perinteisiä kuvioita. Museo tunnustettiin nykyajan Ukrainan maamerkiksi vuonna 2007, ja siitä on tullut koko kaupungin tunnuskuva.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-kherson) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kherson (ruoka)
+Tietoruudun teksti: Kherson on satamakaupunki Etelä-Ukrainassa Mustanmeren ja Dneprin äärellä, ja se perustettiin Venäjän keisarikunnan Mustanmeren laivaston tukikohdaksi paikalle, jossa oli aiemmin ollut Zaporožjen kasakoiden linnoitus. 1800- ja 1900-luvun alussa kaupunki toimi oman kuvernementtinsa pääkaupunkina ja kasvoi merkittäväksi kaupan ja liikenteen keskukseksi. Neuvostoaikana Khersonista tuli tunnettu erityisesti laivanrakennusteollisuudestaan. Nykyään kaupunki tunnetaan ympäri Ukrainaa etenkin vesimeloneistaan, joita kasvatetaan alueen aurinkoisilla arostepeillä ja joita myydään pinoittain kesäisin torien laidoilla.
+
+### 23.1
+KYSYMYS: Minkä joukon linnoituksen paikalle Kherson perustettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kherson (ruoka)
+Tietoruudun teksti: Kherson on satamakaupunki Etelä-Ukrainassa Mustanmeren ja Dneprin äärellä, ja se perustettiin Venäjän keisarikunnan Mustanmeren laivaston tukikohdaksi paikalle, jossa oli aiemmin ollut Zaporožjen kasakoiden linnoitus. 1800- ja 1900-luvun alussa kaupunki toimi oman kuvernementtinsa pääkaupunkina ja kasvoi merkittäväksi kaupan ja liikenteen keskukseksi. Neuvostoaikana Khersonista tuli tunnettu erityisesti laivanrakennusteollisuudestaan. Nykyään kaupunki tunnetaan ympäri Ukrainaa etenkin vesimeloneistaan, joita kasvatetaan alueen aurinkoisilla arostepeillä ja joita myydään pinoittain kesäisin torien laidoilla.
+
+### 23.2
+KYSYMYS: Mistä hedelmästä Kherson on nykyään kuuluisa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kherson (ruoka)
+Tietoruudun teksti: Kherson on satamakaupunki Etelä-Ukrainassa Mustanmeren ja Dneprin äärellä, ja se perustettiin Venäjän keisarikunnan Mustanmeren laivaston tukikohdaksi paikalle, jossa oli aiemmin ollut Zaporožjen kasakoiden linnoitus. 1800- ja 1900-luvun alussa kaupunki toimi oman kuvernementtinsa pääkaupunkina ja kasvoi merkittäväksi kaupan ja liikenteen keskukseksi. Neuvostoaikana Khersonista tuli tunnettu erityisesti laivanrakennusteollisuudestaan. Nykyään kaupunki tunnetaan ympäri Ukrainaa etenkin vesimeloneistaan, joita kasvatetaan alueen aurinkoisilla arostepeillä ja joita myydään pinoittain kesäisin torien laidoilla.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-myrhorod) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Myrhorod (ruoka)
+Tietoruudun teksti: Myrhorod on kaupunki Keski-Ukrainan Poltavan alueella Khorol-joen varrella, ja se perustettiin jo 1100- tai 1200-luvulla Kiovan Rusin itärajan linnoitukseksi. Legendan mukaan nimi – kirjaimellisesti Rauhan kaupunki – juontuu paikalla käydyistä rauhanneuvotteluista. Myrhorodin kasakkarykmentti oli yksi hetmani Bohdan Hmelnytskyin armeijan parhaista yksiköistä 1600-luvun kapinassa Puolaa vastaan. Vuodesta 1912 kaupunki on tunnettu maanalaisista kivennäisvesilähteistään, ja vuodesta 1920 se on ollut virallinen kylpyläkaupunki: lievästi mineralisoitunutta Myrhorodska-vettä suositellaan yhä vatsavaivojen hoitoon.
+
+### 24.1
+KYSYMYS: Mitä Myrhorodin nimi tarkoittaa kirjaimellisesti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Myrhorod (ruoka)
+Tietoruudun teksti: Myrhorod on kaupunki Keski-Ukrainan Poltavan alueella Khorol-joen varrella, ja se perustettiin jo 1100- tai 1200-luvulla Kiovan Rusin itärajan linnoitukseksi. Legendan mukaan nimi – kirjaimellisesti Rauhan kaupunki – juontuu paikalla käydyistä rauhanneuvotteluista. Myrhorodin kasakkarykmentti oli yksi hetmani Bohdan Hmelnytskyin armeijan parhaista yksiköistä 1600-luvun kapinassa Puolaa vastaan. Vuodesta 1912 kaupunki on tunnettu maanalaisista kivennäisvesilähteistään, ja vuodesta 1920 se on ollut virallinen kylpyläkaupunki: lievästi mineralisoitunutta Myrhorodska-vettä suositellaan yhä vatsavaivojen hoitoon.
+
+### 24.2
+KYSYMYS: Mistä vuodesta lähtien Myrhorod on ollut virallinen kylpyläkaupunki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Myrhorod (ruoka)
+Tietoruudun teksti: Myrhorod on kaupunki Keski-Ukrainan Poltavan alueella Khorol-joen varrella, ja se perustettiin jo 1100- tai 1200-luvulla Kiovan Rusin itärajan linnoitukseksi. Legendan mukaan nimi – kirjaimellisesti Rauhan kaupunki – juontuu paikalla käydyistä rauhanneuvotteluista. Myrhorodin kasakkarykmentti oli yksi hetmani Bohdan Hmelnytskyin armeijan parhaista yksiköistä 1600-luvun kapinassa Puolaa vastaan. Vuodesta 1912 kaupunki on tunnettu maanalaisista kivennäisvesilähteistään, ja vuodesta 1920 se on ollut virallinen kylpyläkaupunki: lievästi mineralisoitunutta Myrhorodska-vettä suositellaan yhä vatsavaivojen hoitoon.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-kryvyi-rih) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kryvyi Rih (tekniikka)
+Tietoruudun teksti: Kryvyi Rih on Keski-Ukrainan teollisuuskaupunki Saksahan- ja Inhulets-jokien yhtymäkohdassa, ja sitä pidetään Euroopan pituudeltaan mittavimpana kaupunkina – se venyy kymmeniä kilometrejä rautamalmiesiintymän suuntaisesti. Paikka perustettiin alun perin 1775 sotilaalliseksi etuvartioksi, eikä sillä vielä 1870-luvulla ollut mitään tekemistä teollisuuden kanssa. Vasta 1880-luvulla belgialainen, ranskalainen ja brittiläinen pääoma löysi alueen rikkaat rautamalmivarat, ja niiden ympärille kasvoi nopeasti kaivos- ja teollisuuskaupunki. Stalinin teollistamiskaudella 1934 alueelle rakennettiin Kryvorizhstal, joka oli aikanaan koko Neuvostoliiton suurin integroitu metallurginen tehdaslaitos.
+
+### 25.1
+KYSYMYS: Minä vuosikymmenellä ulkomainen pääoma löysi Kryvyi Rihin rautamalmivarat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kryvyi Rih (tekniikka)
+Tietoruudun teksti: Kryvyi Rih on Keski-Ukrainan teollisuuskaupunki Saksahan- ja Inhulets-jokien yhtymäkohdassa, ja sitä pidetään Euroopan pituudeltaan mittavimpana kaupunkina – se venyy kymmeniä kilometrejä rautamalmiesiintymän suuntaisesti. Paikka perustettiin alun perin 1775 sotilaalliseksi etuvartioksi, eikä sillä vielä 1870-luvulla ollut mitään tekemistä teollisuuden kanssa. Vasta 1880-luvulla belgialainen, ranskalainen ja brittiläinen pääoma löysi alueen rikkaat rautamalmivarat, ja niiden ympärille kasvoi nopeasti kaivos- ja teollisuuskaupunki. Stalinin teollistamiskaudella 1934 alueelle rakennettiin Kryvorizhstal, joka oli aikanaan koko Neuvostoliiton suurin integroitu metallurginen tehdaslaitos.
+
+### 25.2
+KYSYMYS: Mikä teki Kryvyi Rihistä Euroopan pisimmän kaupungin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kryvyi Rih (tekniikka)
+Tietoruudun teksti: Kryvyi Rih on Keski-Ukrainan teollisuuskaupunki Saksahan- ja Inhulets-jokien yhtymäkohdassa, ja sitä pidetään Euroopan pituudeltaan mittavimpana kaupunkina – se venyy kymmeniä kilometrejä rautamalmiesiintymän suuntaisesti. Paikka perustettiin alun perin 1775 sotilaalliseksi etuvartioksi, eikä sillä vielä 1870-luvulla ollut mitään tekemistä teollisuuden kanssa. Vasta 1880-luvulla belgialainen, ranskalainen ja brittiläinen pääoma löysi alueen rikkaat rautamalmivarat, ja niiden ympärille kasvoi nopeasti kaivos- ja teollisuuskaupunki. Stalinin teollistamiskaudella 1934 alueelle rakennettiin Kryvorizhstal, joka oli aikanaan koko Neuvostoliiton suurin integroitu metallurginen tehdaslaitos.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

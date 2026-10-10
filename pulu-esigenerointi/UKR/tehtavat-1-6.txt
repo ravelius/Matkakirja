@@ -1,0 +1,174 @@
+================ KOHTA 26 (kohde:hahmotelma-kremenchuk) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremenchuk (tekniikka)
+Tietoruudun teksti: Kremenchuk on Dneprin varrella sijaitseva teollisuuskaupunki Poltavan alueella. Ranskalainen insinööri Guillaume Le Vasseur de Beauplan rakensi sinne pienen linnoituksen 1635, ja samana vuonna kaupunki sai Magdeburgin oikeudet; myöhemmin se toimi hetkeksi Novorossijan kuvernementin pääkaupunkina Venäjän vallan alla. Kaupungin nykyinen maine perustuu kuitenkin raskaaseen ajoneuvoteollisuuteen: paikallinen tehdas, joka tunnetaan nimellä KrAZ, perustettiin 1945 siltarakennustehtaaksi ja valmisti aluksi satoja siltoja Dneprin, Volgan ja muiden jokien yli. Vuonna 1958 tehdas muutettiin raskaiden maastokuorma-autojen valmistajaksi, ja jo parin vuoden kuluttua sen autoja vietiin kymmeniin maihin ympäri maailmaa.
+
+### 26.1
+KYSYMYS: Mitä KrAZ-tehdas valmisti ennen kuorma-autoja?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremenchuk (tekniikka)
+Tietoruudun teksti: Kremenchuk on Dneprin varrella sijaitseva teollisuuskaupunki Poltavan alueella. Ranskalainen insinööri Guillaume Le Vasseur de Beauplan rakensi sinne pienen linnoituksen 1635, ja samana vuonna kaupunki sai Magdeburgin oikeudet; myöhemmin se toimi hetkeksi Novorossijan kuvernementin pääkaupunkina Venäjän vallan alla. Kaupungin nykyinen maine perustuu kuitenkin raskaaseen ajoneuvoteollisuuteen: paikallinen tehdas, joka tunnetaan nimellä KrAZ, perustettiin 1945 siltarakennustehtaaksi ja valmisti aluksi satoja siltoja Dneprin, Volgan ja muiden jokien yli. Vuonna 1958 tehdas muutettiin raskaiden maastokuorma-autojen valmistajaksi, ja jo parin vuoden kuluttua sen autoja vietiin kymmeniin maihin ympäri maailmaa.
+
+### 26.2
+KYSYMYS: Mistä maasta Kremenchukin linnoituksen rakentanut insinööri oli kotoisin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremenchuk (tekniikka)
+Tietoruudun teksti: Kremenchuk on Dneprin varrella sijaitseva teollisuuskaupunki Poltavan alueella. Ranskalainen insinööri Guillaume Le Vasseur de Beauplan rakensi sinne pienen linnoituksen 1635, ja samana vuonna kaupunki sai Magdeburgin oikeudet; myöhemmin se toimi hetkeksi Novorossijan kuvernementin pääkaupunkina Venäjän vallan alla. Kaupungin nykyinen maine perustuu kuitenkin raskaaseen ajoneuvoteollisuuteen: paikallinen tehdas, joka tunnetaan nimellä KrAZ, perustettiin 1945 siltarakennustehtaaksi ja valmisti aluksi satoja siltoja Dneprin, Volgan ja muiden jokien yli. Vuonna 1958 tehdas muutettiin raskaiden maastokuorma-autojen valmistajaksi, ja jo parin vuoden kuluttua sen autoja vietiin kymmeniin maihin ympäri maailmaa.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-kovel) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kovel (tekniikka)
+Tietoruudun teksti: Kovel on rautatiekaupunki Luoteis-Ukrainan Volynin alueella. Sen läpi kulkeva Chełmin ja Kovelin välinen rata on nykyään pisin Ukrainan ja muun Euroopan yhdistävä normaaliraiteinen rautatie, ja se on rakennettu sekä eurooppalaiselle 1435 mm:n että venäläiselle 1520 mm:n raideleveydelle. Kaupungin läheltä löytyi 1858 niin sanottu Kovelin keihäänkärki, jonka terässä on yksi maailman vanhimmista tunnetuista riimukirjoituksista – goottia, joka hämmästytti aikansa tutkijoita. Alkuperäinen keihäänkärki katosi toisen maailmansodan aikana, mutta löytö teki pienestä Kovelista tunnetun arkeologien keskuudessa jo isoisän omana aikana.
+
+### 27.1
+KYSYMYS: Minä vuonna Kovelin keihäänkärki löydettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kovel (tekniikka)
+Tietoruudun teksti: Kovel on rautatiekaupunki Luoteis-Ukrainan Volynin alueella. Sen läpi kulkeva Chełmin ja Kovelin välinen rata on nykyään pisin Ukrainan ja muun Euroopan yhdistävä normaaliraiteinen rautatie, ja se on rakennettu sekä eurooppalaiselle 1435 mm:n että venäläiselle 1520 mm:n raideleveydelle. Kaupungin läheltä löytyi 1858 niin sanottu Kovelin keihäänkärki, jonka terässä on yksi maailman vanhimmista tunnetuista riimukirjoituksista – goottia, joka hämmästytti aikansa tutkijoita. Alkuperäinen keihäänkärki katosi toisen maailmansodan aikana, mutta löytö teki pienestä Kovelista tunnetun arkeologien keskuudessa jo isoisän omana aikana.
+
+### 27.2
+KYSYMYS: Mitä keihäänkärjelle tapahtui toisen maailmansodan aikana?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kovel (tekniikka)
+Tietoruudun teksti: Kovel on rautatiekaupunki Luoteis-Ukrainan Volynin alueella. Sen läpi kulkeva Chełmin ja Kovelin välinen rata on nykyään pisin Ukrainan ja muun Euroopan yhdistävä normaaliraiteinen rautatie, ja se on rakennettu sekä eurooppalaiselle 1435 mm:n että venäläiselle 1520 mm:n raideleveydelle. Kaupungin läheltä löytyi 1858 niin sanottu Kovelin keihäänkärki, jonka terässä on yksi maailman vanhimmista tunnetuista riimukirjoituksista – goottia, joka hämmästytti aikansa tutkijoita. Alkuperäinen keihäänkärki katosi toisen maailmansodan aikana, mutta löytö teki pienestä Kovelista tunnetun arkeologien keskuudessa jo isoisän omana aikana.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-uzhhorod) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uzhhorod (historia)
+Tietoruudun teksti: Uzhhorod on Länsi-Ukrainan sisämaan kaupunki Uzh-joen varrella, niin lähellä Slovakian ja Unkarin rajoja, että se on tämän Euroopan kolkan sisämaisin kaupunki: Itämerelle, Aadrianmerelle ja Mustallemerelle on kaikkiin suunnilleen sama 650–690 kilometrin matka. Unkarilaiset valloittivat paikan jo vuonna 895 Gesta Hungarorum -kronikan mukaan, ja siitä lähtien kaupunki oli osa Unkarin kuningaskuntaa Ung-läänin keskuksena. Nimi Uzhhorod on 1800-luvun alun slaavimielisten piirien kääntämä muoto vanhasta unkarilaisesta nimestä Ungvár, mutta virallisesti se otettiin käyttöön vasta 1920-luvulla tšekkoslovakialaisen hallinnon aikana. Isoisän matkan aikaan 1873 kaupunki on siis vielä Ungvár, osa Unkarin kuningaskuntaa ja Itävalta-Unkarin keisarikuntaa – kaukana Venäjän vallan alaisesta muusta Ukrainasta.
+
+### 28.1
+KYSYMYS: Millä nimellä Uzhhorodia kutsuttiin vuonna 1873?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uzhhorod (historia)
+Tietoruudun teksti: Uzhhorod on Länsi-Ukrainan sisämaan kaupunki Uzh-joen varrella, niin lähellä Slovakian ja Unkarin rajoja, että se on tämän Euroopan kolkan sisämaisin kaupunki: Itämerelle, Aadrianmerelle ja Mustallemerelle on kaikkiin suunnilleen sama 650–690 kilometrin matka. Unkarilaiset valloittivat paikan jo vuonna 895 Gesta Hungarorum -kronikan mukaan, ja siitä lähtien kaupunki oli osa Unkarin kuningaskuntaa Ung-läänin keskuksena. Nimi Uzhhorod on 1800-luvun alun slaavimielisten piirien kääntämä muoto vanhasta unkarilaisesta nimestä Ungvár, mutta virallisesti se otettiin käyttöön vasta 1920-luvulla tšekkoslovakialaisen hallinnon aikana. Isoisän matkan aikaan 1873 kaupunki on siis vielä Ungvár, osa Unkarin kuningaskuntaa ja Itävalta-Unkarin keisarikuntaa – kaukana Venäjän vallan alaisesta muusta Ukrainasta.
+
+### 28.2
+KYSYMYS: Mihin valtioon Uzhhorod kuului 1800-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uzhhorod (historia)
+Tietoruudun teksti: Uzhhorod on Länsi-Ukrainan sisämaan kaupunki Uzh-joen varrella, niin lähellä Slovakian ja Unkarin rajoja, että se on tämän Euroopan kolkan sisämaisin kaupunki: Itämerelle, Aadrianmerelle ja Mustallemerelle on kaikkiin suunnilleen sama 650–690 kilometrin matka. Unkarilaiset valloittivat paikan jo vuonna 895 Gesta Hungarorum -kronikan mukaan, ja siitä lähtien kaupunki oli osa Unkarin kuningaskuntaa Ung-läänin keskuksena. Nimi Uzhhorod on 1800-luvun alun slaavimielisten piirien kääntämä muoto vanhasta unkarilaisesta nimestä Ungvár, mutta virallisesti se otettiin käyttöön vasta 1920-luvulla tšekkoslovakialaisen hallinnon aikana. Isoisän matkan aikaan 1873 kaupunki on siis vielä Ungvár, osa Unkarin kuningaskuntaa ja Itävalta-Unkarin keisarikuntaa – kaukana Venäjän vallan alaisesta muusta Ukrainasta.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-chernihiv) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tšernihiv (historia)
+Tietoruudun teksti: Tšernihiv on Pohjois-Ukrainan kaupunki, joka oli jo 800-luvulla siiveriläisten heimon keskus ja liittyi pian sen jälkeen Kiovan Rusiin sen toiseksi tärkeimmäksi kaupungiksi Kiovan jälkeen. 1000–1200-luvuilla se oli oman ruhtinaskuntansa ja piispanistuimensa keskus, ja kaupungissa säilyy yhä useita tuolta ajalta peräisin olevia kirkkoja – niistä vanhin on Vapahtajan katedraali, yksi harvoista säilyneistä mongolivalloitusta edeltävistä Rusin rakennuksista. Puolan vallan ja kasakkahetmanaatin vuosien jälkeen Tšernihivistä tuli 1782 oman kuvernementtinsa pääkaupunki Venäjän keisarikunnassa, ja 1800-luvulla siellä toimi ukrainalainen itsehallintopiiri ja radikaali Hromada-liike. Isoisän matkan aikaan 1873 kaupunki on siis Venäjän hallinnon keskus, jossa Ukrainan kansallinen herääminen kytee siinä missä Lvivissäkin, vain toisen vallan alla.
+
+### 29.1
+KYSYMYS: Mikä Tšernihivin vanhin säilynyt rakennus on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tšernihiv (historia)
+Tietoruudun teksti: Tšernihiv on Pohjois-Ukrainan kaupunki, joka oli jo 800-luvulla siiveriläisten heimon keskus ja liittyi pian sen jälkeen Kiovan Rusiin sen toiseksi tärkeimmäksi kaupungiksi Kiovan jälkeen. 1000–1200-luvuilla se oli oman ruhtinaskuntansa ja piispanistuimensa keskus, ja kaupungissa säilyy yhä useita tuolta ajalta peräisin olevia kirkkoja – niistä vanhin on Vapahtajan katedraali, yksi harvoista säilyneistä mongolivalloitusta edeltävistä Rusin rakennuksista. Puolan vallan ja kasakkahetmanaatin vuosien jälkeen Tšernihivistä tuli 1782 oman kuvernementtinsa pääkaupunki Venäjän keisarikunnassa, ja 1800-luvulla siellä toimi ukrainalainen itsehallintopiiri ja radikaali Hromada-liike. Isoisän matkan aikaan 1873 kaupunki on siis Venäjän hallinnon keskus, jossa Ukrainan kansallinen herääminen kytee siinä missä Lvivissäkin, vain toisen vallan alla.
+
+### 29.2
+KYSYMYS: Mikä liike toimi Tšernihivissä 1800-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tšernihiv (historia)
+Tietoruudun teksti: Tšernihiv on Pohjois-Ukrainan kaupunki, joka oli jo 800-luvulla siiveriläisten heimon keskus ja liittyi pian sen jälkeen Kiovan Rusiin sen toiseksi tärkeimmäksi kaupungiksi Kiovan jälkeen. 1000–1200-luvuilla se oli oman ruhtinaskuntansa ja piispanistuimensa keskus, ja kaupungissa säilyy yhä useita tuolta ajalta peräisin olevia kirkkoja – niistä vanhin on Vapahtajan katedraali, yksi harvoista säilyneistä mongolivalloitusta edeltävistä Rusin rakennuksista. Puolan vallan ja kasakkahetmanaatin vuosien jälkeen Tšernihivistä tuli 1782 oman kuvernementtinsa pääkaupunki Venäjän keisarikunnassa, ja 1800-luvulla siellä toimi ukrainalainen itsehallintopiiri ja radikaali Hromada-liike. Isoisän matkan aikaan 1873 kaupunki on siis Venäjän hallinnon keskus, jossa Ukrainan kansallinen herääminen kytee siinä missä Lvivissäkin, vain toisen vallan alla.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-pochayiv) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Počajivin luostari (kulttuuri)
+Tietoruudun teksti: Počajivin luostari eli Pyhän Nukkumisen laavra kohoaa 60 metriä korkealla kukkulalla Ternopilin alueella, kahdeksantoista kilometriä lounaaseen Kremenetsistä. Se on ollut vuosisatojen ajan yksi itäisen kristikunnan tärkeimmistä hengellisistä keskuksista, mutta sen kirkkokunta on vaihdellut vallanpitäjien mukana: ortodoksinen vuoteen 1720 asti, sitten kreikkalaiskatolinen vuoteen 1831, jolloin se palautettiin jälleen ortodoksiseksi. Luostarin päärakennuksen kultaiset kupolit ja kellotorni näkyvät kauas ympäröivälle tasangolle, ja se on edelleen yksi Ukrainan vilkkaimmista pyhiinvaelluskohteista. Isoisän matkan aikaan 1873 luostari on siis ollut ortodoksinen jo neljä vuosikymmentä, osana Venäjän keisarikunnan Volynian kuvernementtia – samaa aluetta, joka aiemmin kuului Puola-Liettualle.
+
+### 30.1
+KYSYMYS: Minä vuonna luostari palautettiin ortodoksiseksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Počajivin luostari (kulttuuri)
+Tietoruudun teksti: Počajivin luostari eli Pyhän Nukkumisen laavra kohoaa 60 metriä korkealla kukkulalla Ternopilin alueella, kahdeksantoista kilometriä lounaaseen Kremenetsistä. Se on ollut vuosisatojen ajan yksi itäisen kristikunnan tärkeimmistä hengellisistä keskuksista, mutta sen kirkkokunta on vaihdellut vallanpitäjien mukana: ortodoksinen vuoteen 1720 asti, sitten kreikkalaiskatolinen vuoteen 1831, jolloin se palautettiin jälleen ortodoksiseksi. Luostarin päärakennuksen kultaiset kupolit ja kellotorni näkyvät kauas ympäröivälle tasangolle, ja se on edelleen yksi Ukrainan vilkkaimmista pyhiinvaelluskohteista. Isoisän matkan aikaan 1873 luostari on siis ollut ortodoksinen jo neljä vuosikymmentä, osana Venäjän keisarikunnan Volynian kuvernementtia – samaa aluetta, joka aiemmin kuului Puola-Liettualle.
+
+### 30.2
+KYSYMYS: Missä kuvernementissa Počajiv sijaitsi vuonna 1873?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Počajivin luostari (kulttuuri)
+Tietoruudun teksti: Počajivin luostari eli Pyhän Nukkumisen laavra kohoaa 60 metriä korkealla kukkulalla Ternopilin alueella, kahdeksantoista kilometriä lounaaseen Kremenetsistä. Se on ollut vuosisatojen ajan yksi itäisen kristikunnan tärkeimmistä hengellisistä keskuksista, mutta sen kirkkokunta on vaihdellut vallanpitäjien mukana: ortodoksinen vuoteen 1720 asti, sitten kreikkalaiskatolinen vuoteen 1831, jolloin se palautettiin jälleen ortodoksiseksi. Luostarin päärakennuksen kultaiset kupolit ja kellotorni näkyvät kauas ympäröivälle tasangolle, ja se on edelleen yksi Ukrainan vilkkaimmista pyhiinvaelluskohteista. Isoisän matkan aikaan 1873 luostari on siis ollut ortodoksinen jo neljä vuosikymmentä, osana Venäjän keisarikunnan Volynian kuvernementtia – samaa aluetta, joka aiemmin kuului Puola-Liettualle.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
