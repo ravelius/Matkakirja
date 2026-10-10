@@ -118,6 +118,7 @@ namespace Matkakirja.Peli.Testit
         static AaniTaulut Taulut()
         {
             var t = AaniTaulut.Oletus();
+            t.KarttaVainKaupunki = false; // koukkujen logiikka vanhalla ketjulla (siirtymäraidat); uusi sääntö KarttaVainKaupunkiTestit
             t.Tyypit["pariisi"] = "kaupunki"; t.Maat["pariisi"] = "FRA";
             t.Tyypit["ateena"] = "satama"; t.Maat["ateena"] = "GRC";
             t.Tyypit["kairo"] = "basaari"; t.Maat["kairo"] = "EGY";

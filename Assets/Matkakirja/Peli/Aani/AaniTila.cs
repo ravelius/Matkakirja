@@ -416,6 +416,7 @@ namespace Matkakirja.Peli
         /// </summary>
         public void UusiKaupunki(string kaupunki)
         {
+            if (t.KarttaVainKaupunki) return; // tulomusiikit pois kartalta (omistaja 10.10.2026)
             var maanosa = valitsin.Maanosa(kaupunki, t.Maa(kaupunki));
             if (maanosa != null && t.Saapumistunnukset.TryGetValue(maanosa, out var polku)) Aihe(polku, keskeyta: false);
         }
@@ -733,6 +734,8 @@ namespace Matkakirja.Peli
             musiikinMaa = maa;
             if (!Aanimaisema || !Musiikki || pito) { LopetaPohja(); return; }
             var polku = Musiikkivalitsin.Valitse(valitsin.Ketju(tilat, cityId, maa, VisaAuki), puuttuvat);
+            // Ei raitaa (kaupungin ulkopuolella kartalla, KarttaVainKaupunki): edellinen kappale häivytetään pois (web sama).
+            if (polku == null) { LopetaPohja(); return; }
             if (KerranLapi && cityId != null && t.Jaksot.TryGetValue(cityId, out var jakso))
             {
                 var oma = Musiikkivalitsin.Valitse(valitsin.Ketju(null, cityId, maa), puuttuvat);
@@ -740,7 +743,7 @@ namespace Matkakirja.Peli
                 // Tilaraita (lehti, kohtaaminen …) keskeyttää: saapumisen nopea ja tauko jäävät väliin, paluussa hidas.
                 if (jaksoKaupunki == cityId && jaksoVaihe < 2) jaksoVaihe = 2;
             }
-            if (polku == null || (pohja != null && pohjaPolku == polku)) return;
+            if (pohja != null && pohjaPolku == polku) return;
             if (pohja == null && polku == soinutPolku) return; // soi jo kerran läpi tässä laukaisussa
             var vaistyva = pohja;
             pohja = null;
@@ -762,7 +765,9 @@ namespace Matkakirja.Peli
         void SoitaJakso(KaupunkiJakso j, string oma)
         {
             if (jaksoVaihe == 1) { LopetaPohja(); return; }
-            string Polku(int v) => v == 0 ? t.MusaPolku(j.Nopea) : v == 2 ? (j.Hidas != null ? t.MusaPolku(j.Hidas) : oma) : t.MusaPolku(j.Tausta ?? t.Pohjaraita);
+            // Tausta ilman omaa raitaa: pohjavire vain vanhassa ketjussa (KarttaVainKaupunki → hiljaisuus hitaan jälkeen).
+            string Polku(int v) => v == 0 ? t.MusaPolku(j.Nopea) : v == 2 ? (j.Hidas != null ? t.MusaPolku(j.Hidas) : oma)
+                : j.Tausta != null ? t.MusaPolku(j.Tausta) : t.KarttaVainKaupunki ? null : t.MusaPolku(t.Pohjaraita);
             var polku = Polku(jaksoVaihe);
             while (polku != null && puuttuvat.Contains(polku) && jaksoVaihe < 3) { jaksoVaihe = jaksoVaihe == 0 ? 2 : 3; polku = Polku(jaksoVaihe); }
             if (polku == null || puuttuvat.Contains(polku)) { LopetaPohja(); return; }
@@ -967,6 +972,8 @@ namespace Matkakirja.Peli
         void AloitaSiirtyma(string laji)
         {
             var raita = t.Siirtyma(laji);
+            // Matkan siirtymäraidat pois kartalta (KarttaVainKaupunki, omistaja 10.10.2026); linssien raidat soivat kuten ennen.
+            if (raita != null && t.KarttaVainKaupunki && raita.Ryhma == "siirtyma") return;
             if (raita == null || !Aanimaisema || !Musiikki || puuttuvatLajit.Contains(laji)) return;
             if (siirtyma != null && siirtymaLaji == laji) return;
             if (siirtyma != null) LopetaSiirtyma();

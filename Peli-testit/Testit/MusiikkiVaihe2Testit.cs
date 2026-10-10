@@ -90,6 +90,7 @@ namespace Matkakirja.Peli.Testit
         [Testi] static void SaapumistunnusMaanosittain()
         {
             var t = AaniTaulut.Oletus();
+            t.KarttaVainKaupunki = false; // vanha kartan ketju (alue → maanosa → pohja, tunnukset); uusi sääntö KarttaVainKaupunkiTestit
             Oleta.Sama(10, t.Saapumistunnukset.Count, "tunnuksia");
             foreach (var m in AaniTaulut.Maanosat) Oleta.Sama(P("musa-saapuminen-" + m), t.Saapumistunnukset[m], m);
             // Edustaja jokaisesta maanosasta: UusiKaupunki soittaa maanosan tunnuksen aihekanavalle.
@@ -121,7 +122,9 @@ namespace Matkakirja.Peli.Testit
 
         [Testi] static void KetjunJarjestysMaanosaAlueenJalkeen()
         {
-            var v = new Musiikkivalitsin(AaniTaulut.Oletus());
+            var vt = AaniTaulut.Oletus();
+            vt.KarttaVainKaupunki = false; // vanha kartan ketju; uusi sääntö KarttaVainKaupunkiTestit
+            var v = new Musiikkivalitsin(vt);
             string K(string paikka, string maa, params string[] tilat) => Yhdista(v.Ketju(tilat, paikka, maa));
             Oleta.Sama(Yhdista(new[] { P("musa-kaupunki-ateena"), P("musa-kaupunki-valimeri"), P("musa-maanosa-valimeri"), P("musa-pohja") }),
                 K("ateena", "GRC"), "kaupunki → alue → maanosa → pohja");
@@ -144,6 +147,7 @@ namespace Matkakirja.Peli.Testit
         [Testi] static void KohtaaminenTilaraitanaVisaVoittaa()
         {
             var t = AaniTaulut.Oletus();
+            t.KarttaVainKaupunki = false; // vanha kartan ketju (alue → maanosa → pohja, tunnukset); uusi sääntö KarttaVainKaupunkiTestit
             t.Maat["wien"] = "AUT";
             var tila = new AaniTila(t, new Satunnainen(1).Seuraava);
             tila.Paikka("wien", "kaupunki");
