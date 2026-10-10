@@ -1,0 +1,1050 @@
+### 81
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banská Štiavnica (tekniikka)
+Tietoruudun teksti: Banská Štiavnica on kaupunki Keski-Slovakiassa muinaisen tulivuoren romahtamisen synnyttämän valtavan kalderan keskellä, ja sen asukasluku on alle 10 000. Se oli tärkeä keskiaikainen kaivoskeskus, jonka kohtalo oli sidoksissa runsaisiin hopeamalmivaroihin, ja se sai kuninkaallisen kaupungin aseman vuonna 1238. Vuonna 1627 siellä käytettiin ruutia kaivoksessa yhtenä ensimmäisistä maailmassa, ja 1700-luvulla paikalliset tutkijat rakensivat tulvivien kaivosten kuivattamiseksi kehittyneen tajchy-nimisen vesialtaiden ja kanavien järjestelmän. Vuonna 1735 perustettu kaivoskoulu, Unkarin kuningaskunnan ensimmäinen, muutettiin vuodesta 1763 kaivosakatemiaksi, ja vuonna 1848 siitä tuli kaivos- ja metsäakatemia, jota kutsutaan maailman ensimmäiseksi teknilliseksi yliopistoksi. Kaupunki ja sen ympäristö julistettiin Unescon maailmanperintökohteeksi 11. joulukuuta 1993.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Geraldton — kaupunkilehti / Geraldton: Lyijyä ja lahden satama] Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.
+- [Mekka — kaupunkilehti / Mekka: Kaivo, jolla oli oma ammattikunta] Kaksikymmentä metriä Kaabasta itään on Zamzamin kaivo, jonka varassa kaupunki eli ennen vesijohtoja. Se on noin kolmekymmentä metriä syvä ja halkaisijaltaan runsaasta metristä kahteen ja puoleen; yläpuolisko on hiekkakerroksissa kivimuurattuna, alapuolisko louhittu kallioon. Perimätiedon mukaan kaivo avautui, kun Hagar etsi vettä pojalleen Ismailille. Vettä nostettiin köydellä ja ämpärillä, ja jakelua hoiti oma ammattikunta, zamzamit: 1800-luvulla tulijalle osoitettiin oma zamzami, joka säilytti hänen nimellään merkittyä ruukkua ja kantoi vettä koko matkan. Vuonna 1964 kaivon suu siirrettiin kellariin, ja nyt sitä katsellaan lasin takaa.
+AIEMPI KYSYMYS: Milloin kaupungin kaivoskoulu perustettiin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kaivoskoulu perustettiin vuonna 1735, ja vuodesta 1763 se toimi [[kaivosakatemiana]]. Vuonna 1848 siitä tuli [[kaivos- ja metsäakatemia]], jota on kutsuttu maailman ensimmäiseksi teknilliseksi yliopistoksi. Opiskelu ei kuulu kyyhkyn toimenkuvaan, mut ihailen silti.
+KYSYMYS: Kerro lisää: kaivosakatemiana
+
+### 82
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banská Štiavnica (tekniikka)
+Tietoruudun teksti: Banská Štiavnica on kaupunki Keski-Slovakiassa muinaisen tulivuoren romahtamisen synnyttämän valtavan kalderan keskellä, ja sen asukasluku on alle 10 000. Se oli tärkeä keskiaikainen kaivoskeskus, jonka kohtalo oli sidoksissa runsaisiin hopeamalmivaroihin, ja se sai kuninkaallisen kaupungin aseman vuonna 1238. Vuonna 1627 siellä käytettiin ruutia kaivoksessa yhtenä ensimmäisistä maailmassa, ja 1700-luvulla paikalliset tutkijat rakensivat tulvivien kaivosten kuivattamiseksi kehittyneen tajchy-nimisen vesialtaiden ja kanavien järjestelmän. Vuonna 1735 perustettu kaivoskoulu, Unkarin kuningaskunnan ensimmäinen, muutettiin vuodesta 1763 kaivosakatemiaksi, ja vuonna 1848 siitä tuli kaivos- ja metsäakatemia, jota kutsutaan maailman ensimmäiseksi teknilliseksi yliopistoksi. Kaupunki ja sen ympäristö julistettiin Unescon maailmanperintökohteeksi 11. joulukuuta 1993.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sumatra — kaupunkilehti / Luonto: Metsä, joka kutistuu] Sumatra on menettänyt lähes puolet trooppisesta sademetsästään vuoden 1980 jälkeen, kun maata on raivattu viljelmiksi. Metsässä elää 201 nisäkäslajia, 580 lintulajia ja noin 300 makean veden kalalajia; yhdeksän nisäkäslajia esiintyy vain Sumatralla ja neljätoista lisää lähisaarilla Mentawaiden ryhmässä. Saarella on yli kymmenen kansallispuistoa, ja kolme niistä — Gunung Leuser, Kerinci Seblat ja Bukit Barisan Selatan — otettiin vuonna 2004 maailmanperintöön 25 000 neliökilometrin kokonaisuutena. Kohde on ollut vuodesta 2011 uhanalaisten listalla.
+- [Arabiemiirikunnat — maalehti / Ranta ja rata: Metsä, joka kasvaa suolavedessä] Emiraattien matalilla rannoilla kasvaa mangrovemetsää. Harmaamangrove on ainoa puu, joka kestää täällä suolaista vettä: se erittää ylimääräisen suolan lehtiensä läpi, ja sen juuret työntävät mudasta ylös ohuita hengitysputkia, jotta puu saa happea vuoroveden alla. Mangrovikot ovat kalojen kutupaikkoja ja lintujen suojaa, ja ne pitävät rantaa kasassa myrskyssä. Maa on istuttanut niitä miljoonia lisää, ja Abu Dhabin rannalle on rakennettu puisia kävelysiltoja, joilta metsää voi katsella.
+- [Saint Helena — maalehti / Luonto: Suuri metsä istutetaan takaisin] Saaren yli kulki ennen laaja metsä, Great Wood, joka ulottui Deadwoodin tasangolta Prosperous Bayn tasangolle. Puut kaadettiin polttopuuksi, viinanpolttoon ja nahan parkitsemiseen, ja vuohet söivät taimet: vuonna 1710 raportoitiin, ettei metsästä ollut jäljellä yhtään pystyssä olevaa puuta. Rotat ja vuohet olivat siihen mennessä lisääntyneet vitsauksen mitoin, ja vuonna 1731 säädettiin asetus vuohikannan vähentämiseksi. Vuodesta 2000 saaren koillisosaan on istutettu Millennium Forestia, jonka tarkoitus on kasvattaa Great Wood takaisin kotoperäisistä lajeista.
+AIEMPI KYSYMYS: Milloin kaupungin kaivoskoulu perustettiin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kaivoskoulu perustettiin vuonna 1735, ja vuodesta 1763 se toimi [[kaivosakatemiana]]. Vuonna 1848 siitä tuli [[kaivos- ja metsäakatemia]], jota on kutsuttu maailman ensimmäiseksi teknilliseksi yliopistoksi. Opiskelu ei kuulu kyyhkyn toimenkuvaan, mut ihailen silti.
+KYSYMYS: Kerro lisää: kaivos- ja metsäakatemia
+
+### 83
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banská Štiavnica (tekniikka)
+Tietoruudun teksti: Banská Štiavnica on kaupunki Keski-Slovakiassa muinaisen tulivuoren romahtamisen synnyttämän valtavan kalderan keskellä, ja sen asukasluku on alle 10 000. Se oli tärkeä keskiaikainen kaivoskeskus, jonka kohtalo oli sidoksissa runsaisiin hopeamalmivaroihin, ja se sai kuninkaallisen kaupungin aseman vuonna 1238. Vuonna 1627 siellä käytettiin ruutia kaivoksessa yhtenä ensimmäisistä maailmassa, ja 1700-luvulla paikalliset tutkijat rakensivat tulvivien kaivosten kuivattamiseksi kehittyneen tajchy-nimisen vesialtaiden ja kanavien järjestelmän. Vuonna 1735 perustettu kaivoskoulu, Unkarin kuningaskunnan ensimmäinen, muutettiin vuodesta 1763 kaivosakatemiaksi, ja vuonna 1848 siitä tuli kaivos- ja metsäakatemia, jota kutsutaan maailman ensimmäiseksi teknilliseksi yliopistoksi. Kaupunki ja sen ympäristö julistettiin Unescon maailmanperintökohteeksi 11. joulukuuta 1993.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Ruoka: Kellarit, jotka pelastivat viinit] n. 1500-luku — Slovakian Tokajin viinialue on pieni: vain noin 908 hehtaaria seitsemässä kylässä Trebišovin seudulla aivan Unkarin rajan tuntumassa. Alueen kellarit ovat suurimmaksi osaksi peräisin siltä ajalta, jolloin seutu oli yli 170 vuotta turkkilaisten vallan alla. Ne rakennettiin piilopaikoiksi, joihin ihmiset ja omaisuus saatiin turvaan ryöstäjiltä. Tokajin olosuhteet suosivat rypäleitä, joista saadaan luonnostaan makeita viinejä. Slovakiassa tämä on kuudesta viinialueesta pienin. Sekä unkarilaiset että slovakialaiset tuottajat saavat käyttää Tokaj-nimeä: EU:n tuomioistuimet hylkäsivät Unkarin valituksen vuonna 2013.
+- [Slovakia — maalehti / Ruoka: Hapankaalikeitto joulupöytään] Joulupöydässä — Kapustnica on hapankaalista keitettävä keitto, joka tunnetaan Tšekissä ja Slovakiassa joulun kaalikeittona. Slovakialaisessa keittiössä siihen kuuluu usein sieniä, lihaa ja makkaraa, ja joskus se tarjoillaan leipäkulhossa. Perinteinen slovakialainen ruoka rakentui aineksille, jotka kestivät kuumat kesät ja kylmät talvet, sillä nykyaikaisia säilytyskeinoja ei ollut: hapankaali oli sianlihan, perunan ja maitotuotteiden rinnalla yksi peruselintarvikkeista. Kaalikeittoja syödään myös Puolassa, Ukrainassa ja Venäjällä.
+AIEMPI KYSYMYS: Mikä on kaldera, jonka keskellä Banská Štiavnica on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Kaldera on tulivuoren romahtamisen tai purkauksen jälkeen syntynyt laaja painauma. Banská Štiavnica sijaitsee [[Keski-Slovakiassa]] muinaisen [[tulivuoren]] romahtamisen synnyttämän valtavan kalderan keskellä. Tarkkaa ikää en ole varma, joten jätän sen sanomatta. Maisema on varmaan komea ylhäältä päin.
+KYSYMYS: Kerro lisää: Keski-Slovakiassa
+
+### 84
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banská Štiavnica (tekniikka)
+Tietoruudun teksti: Banská Štiavnica on kaupunki Keski-Slovakiassa muinaisen tulivuoren romahtamisen synnyttämän valtavan kalderan keskellä, ja sen asukasluku on alle 10 000. Se oli tärkeä keskiaikainen kaivoskeskus, jonka kohtalo oli sidoksissa runsaisiin hopeamalmivaroihin, ja se sai kuninkaallisen kaupungin aseman vuonna 1238. Vuonna 1627 siellä käytettiin ruutia kaivoksessa yhtenä ensimmäisistä maailmassa, ja 1700-luvulla paikalliset tutkijat rakensivat tulvivien kaivosten kuivattamiseksi kehittyneen tajchy-nimisen vesialtaiden ja kanavien järjestelmän. Vuonna 1735 perustettu kaivoskoulu, Unkarin kuningaskunnan ensimmäinen, muutettiin vuodesta 1763 kaivosakatemiaksi, ja vuonna 1848 siitä tuli kaivos- ja metsäakatemia, jota kutsutaan maailman ensimmäiseksi teknilliseksi yliopistoksi. Kaupunki ja sen ympäristö julistettiin Unescon maailmanperintökohteeksi 11. joulukuuta 1993.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bali — kaupunkilehti / Riisipellot ja jumalten temppelit: Äititemppeli tulivuoren kupeessa] Yli tuhannen metrin korkeudessa Agung-tulivuoren rinteellä kohoaa Pura Besakih, yli kahdeksankymmenen temppelin kokonaisuus, jota balilaiset kutsuvat äititempeliksi. Vanhin maininta paikasta on kivipiirtoon kirjoitettu vuodelta 1007, ja legendan mukaan paikka valittiin, kun tietäjä Rsi Markandeya näki unessa käskyn rakentaa sinne temppeli. 1400-luvulta lähtien Besakihia on pidetty Balin hindulaisuuden keskuksena, ja sen kerroksittaiset meru-tornit näkyvät kauas: mitä useampi kerros, sitä korkea-arvoisempi jumaluus tornissa asuu. Temppeli selvisi myös Agungin purkauksesta vuonna 1963, jolloin laava pysähtyi ihmeenomaisesti porttien viereen.
+- [Aden — kaupunkilehti / Aden: Kaupunki tulivuoren pohjalla] Adenin vanhin kaupunginosa on nimeltään Crater, ja nimi on kirjaimellinen: korttelit ovat sammuneen tulivuoren kraatterin pohjalla. Nimen antoivat britit, ja virallinen nimi on Seera. Kraatteria ympäröi Jabal Shamsanin vuoristo, jonka korkeimmat huiput ylittävät 500 metriä, ja koko Adenin kallioperä on tulivuoriperäistä. Vuoden 2003 laskennassa kaupunginosassa asui 76 723 ihmistä. Kaupunki muodostuu kahdesta niemestä, ja meri molemmin puolin tasoittaa lämpötilaa: vuoden keskilämpötila on 29,1 astetta ja ilma on kostea ympäri vuoden.
+AIEMPI KYSYMYS: Mikä on kaldera, jonka keskellä Banská Štiavnica on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Kaldera on tulivuoren romahtamisen tai purkauksen jälkeen syntynyt laaja painauma. Banská Štiavnica sijaitsee [[Keski-Slovakiassa]] muinaisen [[tulivuoren]] romahtamisen synnyttämän valtavan kalderan keskellä. Tarkkaa ikää en ole varma, joten jätän sen sanomatta. Maisema on varmaan komea ylhäältä päin.
+KYSYMYS: Kerro lisää: tulivuoren
+
+### 85
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banská Štiavnica (tekniikka)
+Tietoruudun teksti: Banská Štiavnica on kaupunki Keski-Slovakiassa muinaisen tulivuoren romahtamisen synnyttämän valtavan kalderan keskellä, ja sen asukasluku on alle 10 000. Se oli tärkeä keskiaikainen kaivoskeskus, jonka kohtalo oli sidoksissa runsaisiin hopeamalmivaroihin, ja se sai kuninkaallisen kaupungin aseman vuonna 1238. Vuonna 1627 siellä käytettiin ruutia kaivoksessa yhtenä ensimmäisistä maailmassa, ja 1700-luvulla paikalliset tutkijat rakensivat tulvivien kaivosten kuivattamiseksi kehittyneen tajchy-nimisen vesialtaiden ja kanavien järjestelmän. Vuonna 1735 perustettu kaivoskoulu, Unkarin kuningaskunnan ensimmäinen, muutettiin vuodesta 1763 kaivosakatemiaksi, ja vuonna 1848 siitä tuli kaivos- ja metsäakatemia, jota kutsutaan maailman ensimmäiseksi teknilliseksi yliopistoksi. Kaupunki ja sen ympäristö julistettiin Unescon maailmanperintökohteeksi 11. joulukuuta 1993.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Historia: Kaupunki hopeavuoren päällä] 1735 — Banská Štiavnica kasvoi hopean ja kullan varaan: vuonna 1782 se oli Unkarin kuningaskunnan kolmanneksi suurin kaupunki Bratislavan ja Debrecenin jälkeen. Kun kaivokset tulvivat, 1400–1700-luvuilla rakennettiin kuusikymmentä tekojärveä eli tajchya, jotka yhdistettiin yli sadan kilometrin kanavaverkolla. Kaupungissa toimi vuonna 1735 perustettu kaivoskoulu, josta tuli myöhemmin kaivosakatemia, jota on kutsuttu maailman ensimmäiseksi teknilliseksi yliopistoksi. Jo 1627 täällä käytettiin ruutia kaivoksessa yhtenä maailman ensimmäisistä.
+AIEMPI KYSYMYS: Milloin kaupunki sai kuninkaallisen kaupungin aseman?
+AIEMPI VASTAUS (Livia):
+Just niin, vuosilukuja. [[Banská Štiavnica]] sai kuninkaallisen kaupungin aseman vuonna 1238, kun se oli jo tärkeä keskiaikainen kaivoskeskus. Sen vauraus perustui runsaisiin hopeavaroihin, ja paikalla toimi myöhemmin [[kaivoskoulu]] vuodesta 1735 alkaen. Kyl tää oli taas yksi kunnon vuosiluku.
+KYSYMYS: Kerro lisää: Banská Štiavnica
+
+### 86
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banská Štiavnica (tekniikka)
+Tietoruudun teksti: Banská Štiavnica on kaupunki Keski-Slovakiassa muinaisen tulivuoren romahtamisen synnyttämän valtavan kalderan keskellä, ja sen asukasluku on alle 10 000. Se oli tärkeä keskiaikainen kaivoskeskus, jonka kohtalo oli sidoksissa runsaisiin hopeamalmivaroihin, ja se sai kuninkaallisen kaupungin aseman vuonna 1238. Vuonna 1627 siellä käytettiin ruutia kaivoksessa yhtenä ensimmäisistä maailmassa, ja 1700-luvulla paikalliset tutkijat rakensivat tulvivien kaivosten kuivattamiseksi kehittyneen tajchy-nimisen vesialtaiden ja kanavien järjestelmän. Vuonna 1735 perustettu kaivoskoulu, Unkarin kuningaskunnan ensimmäinen, muutettiin vuodesta 1763 kaivosakatemiaksi, ja vuonna 1848 siitä tuli kaivos- ja metsäakatemia, jota kutsutaan maailman ensimmäiseksi teknilliseksi yliopistoksi. Kaupunki ja sen ympäristö julistettiin Unescon maailmanperintökohteeksi 11. joulukuuta 1993.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Historia: Kaupunki hopeavuoren päällä] 1735 — Banská Štiavnica kasvoi hopean ja kullan varaan: vuonna 1782 se oli Unkarin kuningaskunnan kolmanneksi suurin kaupunki Bratislavan ja Debrecenin jälkeen. Kun kaivokset tulvivat, 1400–1700-luvuilla rakennettiin kuusikymmentä tekojärveä eli tajchya, jotka yhdistettiin yli sadan kilometrin kanavaverkolla. Kaupungissa toimi vuonna 1735 perustettu kaivoskoulu, josta tuli myöhemmin kaivosakatemia, jota on kutsuttu maailman ensimmäiseksi teknilliseksi yliopistoksi. Jo 1627 täällä käytettiin ruutia kaivoksessa yhtenä maailman ensimmäisistä.
+AIEMPI KYSYMYS: Milloin kaupunki sai kuninkaallisen kaupungin aseman?
+AIEMPI VASTAUS (Livia):
+Just niin, vuosilukuja. [[Banská Štiavnica]] sai kuninkaallisen kaupungin aseman vuonna 1238, kun se oli jo tärkeä keskiaikainen kaivoskeskus. Sen vauraus perustui runsaisiin hopeavaroihin, ja paikalla toimi myöhemmin [[kaivoskoulu]] vuodesta 1735 alkaen. Kyl tää oli taas yksi kunnon vuosiluku.
+KYSYMYS: Kerro lisää: kaivoskoulu
+
+### 87
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremnica (kauppa)
+Tietoruudun teksti: Kremnica on noin 5 300 asukkaan kaupunki Keski-Slovakiassa, jonka hyvin säilynyt keskiaikainen keskusta on rakennettu tärkeiden kultakaivosten yläpuolelle. Kaupungissa on maailman vanhin yhä toimiva rahapaja. Kremnica sai kuninkaalliset kaupunkioikeutensa vuonna 1328 kuningas Kaarle I:ltä, ja rahapaja oli jo silloin toiminnassa; vuodesta 1335 se löi kultaflorineja ja myöhemmin kuuluisia Kremnican dukaatteja, jotka olivat kansainvälinen maksuväline niiden tasaisen kultapuhtauden ansiosta. Rahapajan tuoman vaurauden vuoksi kaupunki sai lempinimen Kultainen Kremnica, ja 1400-luvulla se oli Unkarin kuningaskunnan toiseksi tärkein kaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Paulo — kohdekartta / Kohdekartta: Mustien veljeskunnan kirkko] 1906 Mustien veljeskunnat syntyivät orjuuden aikana yhdessäolon, avunannon ja vastarinnan muodoksi. Ruusukon Neitsyen veljeskunta anoi Portugalin kuninkaalta Juhana V:ltä lupaa omaan kirkkoon 1721. Vastausta ei ole tallella, mutta rahankeruu alkoi: erakko Domingo de Melo Tavares kiersi 1725 Minas Geraisin keräämässä almuja. Kaupunginvaltuusto lahjoitti tontin 10. heinäkuuta 1728, ja kirkko valmistui 1737. Sitä ennen orjat, joita ei päästetty valkoisten kirkkoihin, olivat kokoontuneet pieneen kappeliin Anhangabaú-joen rannalla. Kirkossa katolinen ja bantulainen perinne sekoittuivat. Pyhää Benedictusta kutsuttiin nimellä Lingongo, pyhää Antoniusta nimellä Vereque ja Murheellista Neitsyttä nim…
+- [Marokko — maalehti / Historia: Taistelu, jossa kuoli kolme kuningasta] 4.8.1578 — Syrjäytetty sulttaani Abu Abdallah Mohammed II pyysi apua Portugalin kuninkaalta Sebastian I:ltä saadakseen valtaistuimensa takaisin sedältään Abd al-Malikilta. Armeijat kohtasivat Ksar el-Kebirin lähellä 4. elokuuta 1578. Päivä päättyi niin, että kaikki kolme johtajaa olivat kuolleet: Abd al-Malik kuoli kesken taistelun, Abu Abdallah hukkui jokeen paetessaan ja 24-vuotias Sebastian kaatui kentälle jättämättä perillistä. Marokossa taistelua sanotaan kolmen kuninkaan taisteluksi. Vangituista portugalilaisaatelisista maksetut lunnaat veivät Portugalin lähes vararikkoon, ja kaksi vuotta myöhemmin Espanjan Filip II otti maan haltuunsa.
+AIEMPI KYSYMYS: Minä vuonna Kremnica sai kuninkaalliset kaupunkioikeudet?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on helppo. Kremnica sai kuninkaalliset kaupunkioikeutensa vuonna 1328 kuningas [[Kaarle I:ltä]], ja [[rahapaja]] oli tuolloin jo toiminnassa. Vuodesta 1335 se löi kultaflorineja, ja kaupungin vauraus perustui kultakaivoksiin. Pientä kultaa minäkin haluaisin, mut pullalla pärjään.
+KYSYMYS: Kerro lisää: Kaarle I:ltä
+
+### 88
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremnica (kauppa)
+Tietoruudun teksti: Kremnica on noin 5 300 asukkaan kaupunki Keski-Slovakiassa, jonka hyvin säilynyt keskiaikainen keskusta on rakennettu tärkeiden kultakaivosten yläpuolelle. Kaupungissa on maailman vanhin yhä toimiva rahapaja. Kremnica sai kuninkaalliset kaupunkioikeutensa vuonna 1328 kuningas Kaarle I:ltä, ja rahapaja oli jo silloin toiminnassa; vuodesta 1335 se löi kultaflorineja ja myöhemmin kuuluisia Kremnican dukaatteja, jotka olivat kansainvälinen maksuväline niiden tasaisen kultapuhtauden ansiosta. Rahapajan tuoman vaurauden vuoksi kaupunki sai lempinimen Kultainen Kremnica, ja 1400-luvulla se oli Unkarin kuningaskunnan toiseksi tärkein kaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New Orleans — kohdekartta / Kohdekartta: Vanha rahapaja] 1838–1909 Rahapaja toimi kahdessa jaksossa, 1838–1861 ja 1879–1909, ja löi niiden aikana yli 427 miljoonaa kulta- ja hopearahaa, nimellisarvoltaan yli 307 miljoonaa dollaria. Kongressi perusti 1835 kolme haararahapajaa; Charlotte ja Dahlonega olivat kultakenttien vieressä, mutta New Orleans valittiin sataman takia: 1800-luvun alkupuolella kaupungin kautta kulki enemmän ulkomaankauppaa kuin minkään muun yhdysvaltalaiskaupungin, ja Meksikon kultaa saapui satamaan joka vuosi suuria määriä. Talon piirsi William Strickland, saman miehen käsialaa ovat maan neljän ensimmäisen rahapajan rakennukset. Ensimmäiset rahat, kolmekymmentä kymmensenttistä, lyötiin 7. toukokuuta 1838. Sisällissota katkaisi …
+- [Melbourne — kohdekartta / Kohdekartta: Rahapaja] 1872 Rahapaja avattiin Williamin ja La Troben katujen kulmassa 12. kesäkuuta 1872 — vuosi ennen isoisän matkaa — Britannian kuninkaallisen rahapajan haaraosastona. Se toimi kuninkaallisena Melbournen rahapajana vuoteen 1968. Päärakennuksessa olivat hallinto-osasto ja oikeassa siivessä varamestarin, hänen perheensä ja palvelusväkensä asunnot; molemmilla porteilla oli oma vartijarakennus, ja takana sijaitsivat pitoisuusmääritys- ja sulattotilat. Talo on hillittyä uusrenessanssia ja pidetään yhtenä Australian hienoimmista 1800-luvun virastorakennuksista. Sen suunnitteli julkisten töiden viraston arkkitehti J. J. Clark. Julkisivun on sanottu nojaavan renessanssin palatseihin, muun muassa Rooman…
+AIEMPI KYSYMYS: Minä vuonna Kremnica sai kuninkaalliset kaupunkioikeudet?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on helppo. Kremnica sai kuninkaalliset kaupunkioikeutensa vuonna 1328 kuningas [[Kaarle I:ltä]], ja [[rahapaja]] oli tuolloin jo toiminnassa. Vuodesta 1335 se löi kultaflorineja, ja kaupungin vauraus perustui kultakaivoksiin. Pientä kultaa minäkin haluaisin, mut pullalla pärjään.
+KYSYMYS: Kerro lisää: rahapaja
+
+### 89
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremnica (kauppa)
+Tietoruudun teksti: Kremnica on noin 5 300 asukkaan kaupunki Keski-Slovakiassa, jonka hyvin säilynyt keskiaikainen keskusta on rakennettu tärkeiden kultakaivosten yläpuolelle. Kaupungissa on maailman vanhin yhä toimiva rahapaja. Kremnica sai kuninkaalliset kaupunkioikeutensa vuonna 1328 kuningas Kaarle I:ltä, ja rahapaja oli jo silloin toiminnassa; vuodesta 1335 se löi kultaflorineja ja myöhemmin kuuluisia Kremnican dukaatteja, jotka olivat kansainvälinen maksuväline niiden tasaisen kultapuhtauden ansiosta. Rahapajan tuoman vaurauden vuoksi kaupunki sai lempinimen Kultainen Kremnica, ja 1400-luvulla se oli Unkarin kuningaskunnan toiseksi tärkein kaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubai — kohdekartta / Kohdekartta: Tekstiilisuuk] 1890-luku Bur Dubain puolella creekiä, vastapäätä Deiran kulta- ja maustesuukia, on kankaiden suuk. Sen syntyaikana Dubaita hallitsi Maktoum bin Hashar, joka nousi valtaan 1894 ja suosi kauppaa avokätisesti. Vuonna 1902 kaupunkiin muutti suuri joukko iranilaiskauppiaita, ja Dubai saattoi ylpeillä Arabian suurimmilla suukeilla. Katto on tässä osa arkkitehtuuria eikä vain varjo. Kujat ovat perinteisiä sikkoja, ja niiden yllä kaartuu korkea puukaarikäytävä, joka on suunniteltu tuulettamaan kuumuutta: kuuma ilma nousee kaarien rakojen kautta ulos ja veto pääsee kujalle tilalle. Kaarissa roikkuvat perinteiset arabialaislamput; teräspilarit ovat myöhempi lisä, kun alkuperäinen rakenne heikkeni. K…
+AIEMPI KYSYMYS: Mitä Kremnican dukaatit olivat?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Dukaatit olivat kultakolikoita, jotka Kremnican rahapaja löi, ja niistä tuli kansainvälinen maksuväline niiden tasaisen kultapuhtauden ansiosta. [[Rahapaja]] oli kaupungin vaurauden perusta, ja aiemmin siellä lyötiin myös [[kultaflorineja]] vuodesta 1335. Kauppiaat luottivat siihen, mikä oli painoltaan tarkkaa. Tarkkuus on kyyhkynkin hyve.
+KYSYMYS: Kerro lisää: kultaflorineja
+
+### 90
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremnica (kauppa)
+Tietoruudun teksti: Kremnica on noin 5 300 asukkaan kaupunki Keski-Slovakiassa, jonka hyvin säilynyt keskiaikainen keskusta on rakennettu tärkeiden kultakaivosten yläpuolelle. Kaupungissa on maailman vanhin yhä toimiva rahapaja. Kremnica sai kuninkaalliset kaupunkioikeutensa vuonna 1328 kuningas Kaarle I:ltä, ja rahapaja oli jo silloin toiminnassa; vuodesta 1335 se löi kultaflorineja ja myöhemmin kuuluisia Kremnican dukaatteja, jotka olivat kansainvälinen maksuväline niiden tasaisen kultapuhtauden ansiosta. Rahapajan tuoman vaurauden vuoksi kaupunki sai lempinimen Kultainen Kremnica, ja 1400-luvulla se oli Unkarin kuningaskunnan toiseksi tärkein kaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Perth — kaupunkilehti / Perth: Kulta toi rahapajan] Isoisän matkan aikoihin koko Länsi-Australiassa asui noin 23 000 ihmistä. Kun Coolgardiesta, Kalgoorliesta ja Murchisonista löytyi kultaa 1890-luvulla, luku oli vuosisadan vaihteessa 180 000, ja Perthistä tuli kultakenttien huoltokeskus. John Forrest muurasi 1896 peruskiven rahapajalle, joka avattiin 20. kesäkuuta 1899 Lontoon kuninkaallisen rahapajan sivutoimipisteenä. Vuoteen 1931 mennessä se oli lyönyt yli 106 miljoonaa kultasovereignia imperiumin käyttöön.
+AIEMPI KYSYMYS: Mistä Kremnica sai lempinimen Kultainen Kremnica?
+AIEMPI VASTAUS (Livia):
+Ai tota. Lempinimi tuli rahapajan tuomasta vauraudesta, sillä Kremnican [[rahapajan]] kultakolikot tekivät kaupungista rikkaan. Kaupunki sai kuninkaalliset kaupunkioikeutensa vuonna 1328, ja 1400-luvulla se oli lähteiden mukaan [[Unkarin kuningaskunnan]] toiseksi tärkein kaupunki. Kultaa riitti, pullaa en vaan tiedä.
+KYSYMYS: Kerro lisää: rahapajan
+
+### 91
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremnica (kauppa)
+Tietoruudun teksti: Kremnica on noin 5 300 asukkaan kaupunki Keski-Slovakiassa, jonka hyvin säilynyt keskiaikainen keskusta on rakennettu tärkeiden kultakaivosten yläpuolelle. Kaupungissa on maailman vanhin yhä toimiva rahapaja. Kremnica sai kuninkaalliset kaupunkioikeutensa vuonna 1328 kuningas Kaarle I:ltä, ja rahapaja oli jo silloin toiminnassa; vuodesta 1335 se löi kultaflorineja ja myöhemmin kuuluisia Kremnican dukaatteja, jotka olivat kansainvälinen maksuväline niiden tasaisen kultapuhtauden ansiosta. Rahapajan tuoman vaurauden vuoksi kaupunki sai lempinimen Kultainen Kremnica, ja 1400-luvulla se oli Unkarin kuningaskunnan toiseksi tärkein kaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Historia: Kaupunki hopeavuoren päällä] 1735 — Banská Štiavnica kasvoi hopean ja kullan varaan: vuonna 1782 se oli Unkarin kuningaskunnan kolmanneksi suurin kaupunki Bratislavan ja Debrecenin jälkeen. Kun kaivokset tulvivat, 1400–1700-luvuilla rakennettiin kuusikymmentä tekojärveä eli tajchya, jotka yhdistettiin yli sadan kilometrin kanavaverkolla. Kaupungissa toimi vuonna 1735 perustettu kaivoskoulu, josta tuli myöhemmin kaivosakatemia, jota on kutsuttu maailman ensimmäiseksi teknilliseksi yliopistoksi. Jo 1627 täällä käytettiin ruutia kaivoksessa yhtenä maailman ensimmäisistä.
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Mistä Kremnica sai lempinimen Kultainen Kremnica?
+AIEMPI VASTAUS (Livia):
+Ai tota. Lempinimi tuli rahapajan tuomasta vauraudesta, sillä Kremnican [[rahapajan]] kultakolikot tekivät kaupungista rikkaan. Kaupunki sai kuninkaalliset kaupunkioikeutensa vuonna 1328, ja 1400-luvulla se oli lähteiden mukaan [[Unkarin kuningaskunnan]] toiseksi tärkein kaupunki. Kultaa riitti, pullaa en vaan tiedä.
+KYSYMYS: Kerro lisää: Unkarin kuningaskunnan
+
+### 92
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremnica (kauppa)
+Tietoruudun teksti: Kremnica on noin 5 300 asukkaan kaupunki Keski-Slovakiassa, jonka hyvin säilynyt keskiaikainen keskusta on rakennettu tärkeiden kultakaivosten yläpuolelle. Kaupungissa on maailman vanhin yhä toimiva rahapaja. Kremnica sai kuninkaalliset kaupunkioikeutensa vuonna 1328 kuningas Kaarle I:ltä, ja rahapaja oli jo silloin toiminnassa; vuodesta 1335 se löi kultaflorineja ja myöhemmin kuuluisia Kremnican dukaatteja, jotka olivat kansainvälinen maksuväline niiden tasaisen kultapuhtauden ansiosta. Rahapajan tuoman vaurauden vuoksi kaupunki sai lempinimen Kultainen Kremnica, ja 1400-luvulla se oli Unkarin kuningaskunnan toiseksi tärkein kaupunki.
+AIEMPI KYSYMYS: Mikä asema Kremnicalla oli Unkarin kuningaskunnassa 1400-luvulla?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Lähteiden mukaan Kremnica oli 1400-luvulla [[Unkarin kuningaskunnan]] toiseksi tärkein kaupunki. Asema perustui rahapajan tuomaan vaurauteen, ja kaupunki tunnettiin lempinimellä [[Kultainen Kremnica]]. Kaupungin keskiaikainen keskusta on säilynyt hyvin tähän päivään. Kyllä se pysyi tärkeänä kauan.
+KYSYMYS: Kerro lisää: Kultainen Kremnica
+
+### 93
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremnica (kauppa)
+Tietoruudun teksti: Kremnica on noin 5 300 asukkaan kaupunki Keski-Slovakiassa, jonka hyvin säilynyt keskiaikainen keskusta on rakennettu tärkeiden kultakaivosten yläpuolelle. Kaupungissa on maailman vanhin yhä toimiva rahapaja. Kremnica sai kuninkaalliset kaupunkioikeutensa vuonna 1328 kuningas Kaarle I:ltä, ja rahapaja oli jo silloin toiminnassa; vuodesta 1335 se löi kultaflorineja ja myöhemmin kuuluisia Kremnican dukaatteja, jotka olivat kansainvälinen maksuväline niiden tasaisen kultapuhtauden ansiosta. Rahapajan tuoman vaurauden vuoksi kaupunki sai lempinimen Kultainen Kremnica, ja 1400-luvulla se oli Unkarin kuningaskunnan toiseksi tärkein kaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubai — kohdekartta / Kohdekartta: Tekstiilisuuk] 1890-luku Bur Dubain puolella creekiä, vastapäätä Deiran kulta- ja maustesuukia, on kankaiden suuk. Sen syntyaikana Dubaita hallitsi Maktoum bin Hashar, joka nousi valtaan 1894 ja suosi kauppaa avokätisesti. Vuonna 1902 kaupunkiin muutti suuri joukko iranilaiskauppiaita, ja Dubai saattoi ylpeillä Arabian suurimmilla suukeilla. Katto on tässä osa arkkitehtuuria eikä vain varjo. Kujat ovat perinteisiä sikkoja, ja niiden yllä kaartuu korkea puukaarikäytävä, joka on suunniteltu tuulettamaan kuumuutta: kuuma ilma nousee kaarien rakojen kautta ulos ja veto pääsee kujalle tilalle. Kaarissa roikkuvat perinteiset arabialaislamput; teräspilarit ovat myöhempi lisä, kun alkuperäinen rakenne heikkeni. K…
+AIEMPI KYSYMYS: Mitä Kremnican keskiaikaisen keskustan alla on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kremnican hyvin säilynyt keskiaikainen keskusta on rakennettu tärkeiden [[kultakaivosten]] päälle. Kaupunki sijaitsee [[Keski-Slovakiassa]], ja sen kultavarat olivat rahapajan vaurauden perusta. Kaivokset ovat siis kaupungin juurilla, ei vain sen historiassa. Tästä tulee maanalainen olo, vaikka lensin vain pinnalla.
+KYSYMYS: Kerro lisää: kultakaivosten
+
+### 94
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremnica (kauppa)
+Tietoruudun teksti: Kremnica on noin 5 300 asukkaan kaupunki Keski-Slovakiassa, jonka hyvin säilynyt keskiaikainen keskusta on rakennettu tärkeiden kultakaivosten yläpuolelle. Kaupungissa on maailman vanhin yhä toimiva rahapaja. Kremnica sai kuninkaalliset kaupunkioikeutensa vuonna 1328 kuningas Kaarle I:ltä, ja rahapaja oli jo silloin toiminnassa; vuodesta 1335 se löi kultaflorineja ja myöhemmin kuuluisia Kremnican dukaatteja, jotka olivat kansainvälinen maksuväline niiden tasaisen kultapuhtauden ansiosta. Rahapajan tuoman vaurauden vuoksi kaupunki sai lempinimen Kultainen Kremnica, ja 1400-luvulla se oli Unkarin kuningaskunnan toiseksi tärkein kaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Ruoka: Kellarit, jotka pelastivat viinit] n. 1500-luku — Slovakian Tokajin viinialue on pieni: vain noin 908 hehtaaria seitsemässä kylässä Trebišovin seudulla aivan Unkarin rajan tuntumassa. Alueen kellarit ovat suurimmaksi osaksi peräisin siltä ajalta, jolloin seutu oli yli 170 vuotta turkkilaisten vallan alla. Ne rakennettiin piilopaikoiksi, joihin ihmiset ja omaisuus saatiin turvaan ryöstäjiltä. Tokajin olosuhteet suosivat rypäleitä, joista saadaan luonnostaan makeita viinejä. Slovakiassa tämä on kuudesta viinialueesta pienin. Sekä unkarilaiset että slovakialaiset tuottajat saavat käyttää Tokaj-nimeä: EU:n tuomioistuimet hylkäsivät Unkarin valituksen vuonna 2013.
+- [Slovakia — maalehti / Ruoka: Hapankaalikeitto joulupöytään] Joulupöydässä — Kapustnica on hapankaalista keitettävä keitto, joka tunnetaan Tšekissä ja Slovakiassa joulun kaalikeittona. Slovakialaisessa keittiössä siihen kuuluu usein sieniä, lihaa ja makkaraa, ja joskus se tarjoillaan leipäkulhossa. Perinteinen slovakialainen ruoka rakentui aineksille, jotka kestivät kuumat kesät ja kylmät talvet, sillä nykyaikaisia säilytyskeinoja ei ollut: hapankaali oli sianlihan, perunan ja maitotuotteiden rinnalla yksi peruselintarvikkeista. Kaalikeittoja syödään myös Puolassa, Ukrainassa ja Venäjällä.
+AIEMPI KYSYMYS: Mitä Kremnican keskiaikaisen keskustan alla on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kremnican hyvin säilynyt keskiaikainen keskusta on rakennettu tärkeiden [[kultakaivosten]] päälle. Kaupunki sijaitsee [[Keski-Slovakiassa]], ja sen kultavarat olivat rahapajan vaurauden perusta. Kaivokset ovat siis kaupungin juurilla, ei vain sen historiassa. Tästä tulee maanalainen olo, vaikka lensin vain pinnalla.
+KYSYMYS: Kerro lisää: Keski-Slovakiassa
+
+### 95
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bojnicen linna (historia)
+Tietoruudun teksti: Bojnicen linna on keskiaikainen linna Bojnicen kaupungissa Slovakiassa: romaaninen linna, jossa on säilynyt goottilaisia ja renessanssin osia, ja se rakennettiin 1100-luvulla. Se mainitaan ensi kerran vuonna 1113, ja aluksi se oli puulinnake, joka korvattiin vähitellen kivellä. Kuningas Matthias Corvinus antoi sen vuonna 1489 avioton poikansa Johnin haltuun; Thurzo-suku muutti sen renessanssilinnaksi vuodesta 1528, ja vuodesta 1646 omistajina olivat Pálffyt. Kreivi János Ferenc Pálffy toteutti vuosina 1888–1910 kokonaisen romanttisen jälleenrakennuksen ja loi nykyisen, Loiren laakson linnoja jäljittelevän ulkoasun. Nykyään linna on yksi Slovakian vierailluimmista, ja sitä on käytetty fantasia- ja satuelokuvien kuvauspaikkana.
+AIEMPI KYSYMYS: Minä vuonna Bojnicen linna mainitaan ensi kerran?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Linna mainitaan ensi kerran vuonna 1113, ja se rakennettiin 1100-luvulla. Aluksi se oli puulinnake, joka korvattiin vähitellen kivellä, ja nykyään siinä on säilynyt [[goottilaisia]] ja [[renessanssin]] osia. Linna on romaaninen perusrakenteeltaan ja nykyisen ulkoasunsa romanttinen jälleenrakennus on antanut. Kyl se kantoi hyvin tähän päivään.
+KYSYMYS: Kerro lisää: goottilaisia
+
+### 96
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bojnicen linna (historia)
+Tietoruudun teksti: Bojnicen linna on keskiaikainen linna Bojnicen kaupungissa Slovakiassa: romaaninen linna, jossa on säilynyt goottilaisia ja renessanssin osia, ja se rakennettiin 1100-luvulla. Se mainitaan ensi kerran vuonna 1113, ja aluksi se oli puulinnake, joka korvattiin vähitellen kivellä. Kuningas Matthias Corvinus antoi sen vuonna 1489 avioton poikansa Johnin haltuun; Thurzo-suku muutti sen renessanssilinnaksi vuodesta 1528, ja vuodesta 1646 omistajina olivat Pálffyt. Kreivi János Ferenc Pálffy toteutti vuosina 1888–1910 kokonaisen romanttisen jälleenrakennuksen ja loi nykyisen, Loiren laakson linnoja jäljittelevän ulkoasun. Nykyään linna on yksi Slovakian vierailluimmista, ja sitä on käytetty fantasia- ja satuelokuvien kuvauspaikkana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+- [Auckland — kohdekartta / Kohdekartta: Aucklandin kaupungintalo] 1909–1911 Kaupungintaloa suunniteltiin Aucklandiin jo 1872, vuosi ennen isoisän käyntiä. Paikaksi valittiin 1880 Greys Avenuen ja Queen Streetin kulma, joka lunastettiin omalla parlamenttilailla 1881, ja kun tontti osoittautui liian pieneksi, kaupunki osti naapurikiinteistöt 1883. Suunnittelukilpailu järjestettiin vasta 1908, ja sen voittivat melbournelaiset arkkitehdit JJ & EJ Clark. Peruskiven muurasi pormestari Arthur Myers 24. helmikuuta 1909, ja kenraalikuvernööri lordi Islington vihki talon 14. joulukuuta 1911. Hinta oli 126 000 puntaa. Julkisivun alaosa on tummaa melbournelaista basalttia ja yläosa vaaleaa Oamarun kalkkikiveä, ja kellotorni nousee 40 metriin. Viisikerroksinen italial…
+AIEMPI KYSYMYS: Minä vuonna Bojnicen linna mainitaan ensi kerran?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Linna mainitaan ensi kerran vuonna 1113, ja se rakennettiin 1100-luvulla. Aluksi se oli puulinnake, joka korvattiin vähitellen kivellä, ja nykyään siinä on säilynyt [[goottilaisia]] ja [[renessanssin]] osia. Linna on romaaninen perusrakenteeltaan ja nykyisen ulkoasunsa romanttinen jälleenrakennus on antanut. Kyl se kantoi hyvin tähän päivään.
+KYSYMYS: Kerro lisää: renessanssin
+
+### 97
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bojnicen linna (historia)
+Tietoruudun teksti: Bojnicen linna on keskiaikainen linna Bojnicen kaupungissa Slovakiassa: romaaninen linna, jossa on säilynyt goottilaisia ja renessanssin osia, ja se rakennettiin 1100-luvulla. Se mainitaan ensi kerran vuonna 1113, ja aluksi se oli puulinnake, joka korvattiin vähitellen kivellä. Kuningas Matthias Corvinus antoi sen vuonna 1489 avioton poikansa Johnin haltuun; Thurzo-suku muutti sen renessanssilinnaksi vuodesta 1528, ja vuodesta 1646 omistajina olivat Pálffyt. Kreivi János Ferenc Pálffy toteutti vuosina 1888–1910 kokonaisen romanttisen jälleenrakennuksen ja loi nykyisen, Loiren laakson linnoja jäljittelevän ulkoasun. Nykyään linna on yksi Slovakian vierailluimmista, ja sitä on käytetty fantasia- ja satuelokuvien kuvauspaikkana.
+AIEMPI KYSYMYS: Minkä sukuun kuulunut kreivi toteutti romanttisen jälleenrakennuksen?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Romanttisen jälleenrakennuksen toteutti kreivi [[János Ferenc Pálffy]], joka kuului Pálffy-sukuun. Työ tehtiin vuosina 1888–1910, ja sen tuloksena linna sai nykyisen ulkoasunsa, joka jäljittelee [[Loiren laakson]] linnoja. Pálffyt omistivat linnan vuodesta 1646. Muuttui linna melkoisesti.
+KYSYMYS: Kerro lisää: János Ferenc Pálffy
+
+### 98
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bojnicen linna (historia)
+Tietoruudun teksti: Bojnicen linna on keskiaikainen linna Bojnicen kaupungissa Slovakiassa: romaaninen linna, jossa on säilynyt goottilaisia ja renessanssin osia, ja se rakennettiin 1100-luvulla. Se mainitaan ensi kerran vuonna 1113, ja aluksi se oli puulinnake, joka korvattiin vähitellen kivellä. Kuningas Matthias Corvinus antoi sen vuonna 1489 avioton poikansa Johnin haltuun; Thurzo-suku muutti sen renessanssilinnaksi vuodesta 1528, ja vuodesta 1646 omistajina olivat Pálffyt. Kreivi János Ferenc Pálffy toteutti vuosina 1888–1910 kokonaisen romanttisen jälleenrakennuksen ja loi nykyisen, Loiren laakson linnoja jäljittelevän ulkoasun. Nykyään linna on yksi Slovakian vierailluimmista, ja sitä on käytetty fantasia- ja satuelokuvien kuvauspaikkana.
+AIEMPI KYSYMYS: Minkä sukuun kuulunut kreivi toteutti romanttisen jälleenrakennuksen?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Romanttisen jälleenrakennuksen toteutti kreivi [[János Ferenc Pálffy]], joka kuului Pálffy-sukuun. Työ tehtiin vuosina 1888–1910, ja sen tuloksena linna sai nykyisen ulkoasunsa, joka jäljittelee [[Loiren laakson]] linnoja. Pálffyt omistivat linnan vuodesta 1646. Muuttui linna melkoisesti.
+KYSYMYS: Kerro lisää: Loiren laakson
+
+### 99
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bojnicen linna (historia)
+Tietoruudun teksti: Bojnicen linna on keskiaikainen linna Bojnicen kaupungissa Slovakiassa: romaaninen linna, jossa on säilynyt goottilaisia ja renessanssin osia, ja se rakennettiin 1100-luvulla. Se mainitaan ensi kerran vuonna 1113, ja aluksi se oli puulinnake, joka korvattiin vähitellen kivellä. Kuningas Matthias Corvinus antoi sen vuonna 1489 avioton poikansa Johnin haltuun; Thurzo-suku muutti sen renessanssilinnaksi vuodesta 1528, ja vuodesta 1646 omistajina olivat Pálffyt. Kreivi János Ferenc Pálffy toteutti vuosina 1888–1910 kokonaisen romanttisen jälleenrakennuksen ja loi nykyisen, Loiren laakson linnoja jäljittelevän ulkoasun. Nykyään linna on yksi Slovakian vierailluimmista, ja sitä on käytetty fantasia- ja satuelokuvien kuvauspaikkana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Ruoka: Kellarit, jotka pelastivat viinit] n. 1500-luku — Slovakian Tokajin viinialue on pieni: vain noin 908 hehtaaria seitsemässä kylässä Trebišovin seudulla aivan Unkarin rajan tuntumassa. Alueen kellarit ovat suurimmaksi osaksi peräisin siltä ajalta, jolloin seutu oli yli 170 vuotta turkkilaisten vallan alla. Ne rakennettiin piilopaikoiksi, joihin ihmiset ja omaisuus saatiin turvaan ryöstäjiltä. Tokajin olosuhteet suosivat rypäleitä, joista saadaan luonnostaan makeita viinejä. Slovakiassa tämä on kuudesta viinialueesta pienin. Sekä unkarilaiset että slovakialaiset tuottajat saavat käyttää Tokaj-nimeä: EU:n tuomioistuimet hylkäsivät Unkarin valituksen vuonna 2013.
+- [Slovakia — maalehti / Luonto: Luola, jonka läpi virtasi Styx] 1926 — Domican luola Etelä-Slovakiassa löytyi vuonna 1926, kun Ján Majko osoitti, että useat paikalliset luolat kuuluvat samaan verkostoon. Luolan käytävät on muovannut maanalainen joki nimeltä Styx, ja seinillä on tippukivilampia sekä lepakoiden ulosteesta syntyneitä kuoria. Jo neoliittiset ihmiset asuivat täällä, ja kaivauksissa on löydetty asumusten paaluaukkoja ja tulisijoja. Yleisölle on avattu 1600 metriä vuodesta 1932. Luola on osa Aggtelekin ja Slovakian karstin luolastoa, joka sai Unescon maailmanperintöstatuksen 1995.
+AIEMPI KYSYMYS: Millaisten elokuvien kuvauspaikkana Bojnicen linna on ollut?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Linnaa on käytetty fantasia- ja satuelokuvien kuvauspaikkana, ja se on nykyään yksi [[Slovakian]] vierailluimmista linnoista. Sen romanttinen ulkoasu syntyi [[Pálffy-suvun]] jälleenrakennuksessa vuosina 1888–1910. Yksittäisiä elokuvia en ole varma, joten jätän ne mainitsematta. Kyllä satulinna on hyvä ympäristö kyyhkyllekin.
+KYSYMYS: Kerro lisää: Slovakian
+
+### 100
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bojnicen linna (historia)
+Tietoruudun teksti: Bojnicen linna on keskiaikainen linna Bojnicen kaupungissa Slovakiassa: romaaninen linna, jossa on säilynyt goottilaisia ja renessanssin osia, ja se rakennettiin 1100-luvulla. Se mainitaan ensi kerran vuonna 1113, ja aluksi se oli puulinnake, joka korvattiin vähitellen kivellä. Kuningas Matthias Corvinus antoi sen vuonna 1489 avioton poikansa Johnin haltuun; Thurzo-suku muutti sen renessanssilinnaksi vuodesta 1528, ja vuodesta 1646 omistajina olivat Pálffyt. Kreivi János Ferenc Pálffy toteutti vuosina 1888–1910 kokonaisen romanttisen jälleenrakennuksen ja loi nykyisen, Loiren laakson linnoja jäljittelevän ulkoasun. Nykyään linna on yksi Slovakian vierailluimmista, ja sitä on käytetty fantasia- ja satuelokuvien kuvauspaikkana.
+AIEMPI KYSYMYS: Millaisten elokuvien kuvauspaikkana Bojnicen linna on ollut?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Linnaa on käytetty fantasia- ja satuelokuvien kuvauspaikkana, ja se on nykyään yksi [[Slovakian]] vierailluimmista linnoista. Sen romanttinen ulkoasu syntyi [[Pálffy-suvun]] jälleenrakennuksessa vuosina 1888–1910. Yksittäisiä elokuvia en ole varma, joten jätän ne mainitsematta. Kyllä satulinna on hyvä ympäristö kyyhkyllekin.
+KYSYMYS: Kerro lisää: Pálffy-suvun
+
+### 101
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bojnicen linna (historia)
+Tietoruudun teksti: Bojnicen linna on keskiaikainen linna Bojnicen kaupungissa Slovakiassa: romaaninen linna, jossa on säilynyt goottilaisia ja renessanssin osia, ja se rakennettiin 1100-luvulla. Se mainitaan ensi kerran vuonna 1113, ja aluksi se oli puulinnake, joka korvattiin vähitellen kivellä. Kuningas Matthias Corvinus antoi sen vuonna 1489 avioton poikansa Johnin haltuun; Thurzo-suku muutti sen renessanssilinnaksi vuodesta 1528, ja vuodesta 1646 omistajina olivat Pálffyt. Kreivi János Ferenc Pálffy toteutti vuosina 1888–1910 kokonaisen romanttisen jälleenrakennuksen ja loi nykyisen, Loiren laakson linnoja jäljittelevän ulkoasun. Nykyään linna on yksi Slovakian vierailluimmista, ja sitä on käytetty fantasia- ja satuelokuvien kuvauspaikkana.
+AIEMPI KYSYMYS: Kuka muutti Bojnicen linnan renessanssilinnaksi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Linnan muutti renessanssilinnaksi [[Thurzo-suku]] vuodesta 1528 alkaen. Aiemmin kuningas Matthias Corvinus oli antanut linnan vuonna 1489 avioton poikansa haltuun, ja vuodesta 1646 omistajina olivat [[Pálffyt]]. Kyl tää suvusta toiseen meni.
+KYSYMYS: Kerro lisää: Thurzo-suku
+
+### 102
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bojnicen linna (historia)
+Tietoruudun teksti: Bojnicen linna on keskiaikainen linna Bojnicen kaupungissa Slovakiassa: romaaninen linna, jossa on säilynyt goottilaisia ja renessanssin osia, ja se rakennettiin 1100-luvulla. Se mainitaan ensi kerran vuonna 1113, ja aluksi se oli puulinnake, joka korvattiin vähitellen kivellä. Kuningas Matthias Corvinus antoi sen vuonna 1489 avioton poikansa Johnin haltuun; Thurzo-suku muutti sen renessanssilinnaksi vuodesta 1528, ja vuodesta 1646 omistajina olivat Pálffyt. Kreivi János Ferenc Pálffy toteutti vuosina 1888–1910 kokonaisen romanttisen jälleenrakennuksen ja loi nykyisen, Loiren laakson linnoja jäljittelevän ulkoasun. Nykyään linna on yksi Slovakian vierailluimmista, ja sitä on käytetty fantasia- ja satuelokuvien kuvauspaikkana.
+AIEMPI KYSYMYS: Kuka muutti Bojnicen linnan renessanssilinnaksi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Linnan muutti renessanssilinnaksi [[Thurzo-suku]] vuodesta 1528 alkaen. Aiemmin kuningas Matthias Corvinus oli antanut linnan vuonna 1489 avioton poikansa haltuun, ja vuodesta 1646 omistajina olivat [[Pálffyt]]. Kyl tää suvusta toiseen meni.
+KYSYMYS: Kerro lisää: Pálffyt
+
+### 103
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bojnicen linna (historia)
+Tietoruudun teksti: Bojnicen linna on keskiaikainen linna Bojnicen kaupungissa Slovakiassa: romaaninen linna, jossa on säilynyt goottilaisia ja renessanssin osia, ja se rakennettiin 1100-luvulla. Se mainitaan ensi kerran vuonna 1113, ja aluksi se oli puulinnake, joka korvattiin vähitellen kivellä. Kuningas Matthias Corvinus antoi sen vuonna 1489 avioton poikansa Johnin haltuun; Thurzo-suku muutti sen renessanssilinnaksi vuodesta 1528, ja vuodesta 1646 omistajina olivat Pálffyt. Kreivi János Ferenc Pálffy toteutti vuosina 1888–1910 kokonaisen romanttisen jälleenrakennuksen ja loi nykyisen, Loiren laakson linnoja jäljittelevän ulkoasun. Nykyään linna on yksi Slovakian vierailluimmista, ja sitä on käytetty fantasia- ja satuelokuvien kuvauspaikkana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+AIEMPI KYSYMYS: Kenelle Matthias Corvinus antoi Bojnicen linnan vuonna 1489?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kuningas Matthias Corvinus antoi linnan vuonna 1489 avioton poikansa [[Johnin]] haltuun. Myöhemmin [[Thurzo-suku]] muutti linnan renessanssilinnaksi vuodesta 1528. Hyvä muistaa, ketä kuningas oli suosimassa. Kuninkaiden sukusotkut vaativat kyyhkyltä hermoja.
+KYSYMYS: Kerro lisää: Johnin
+
+### 104
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oravan linna (historia)
+Tietoruudun teksti: Oravan linna, slovakiaksi Oravský hrad, on korkealla kalliolla Orava-joen yllä Oravský Podzámokin kylässä. Linna rakennettiin Unkarin kuningaskunnassa; vanhimmat osat ovat 1200-luvulta ja uusimmat 1600-luvun alusta. Se nousee kalkkikivisen, 112 metriä korkean kalliokielekkeen päällä, jota ympäröivät Orava-joki ja sen sivupuro Račová; ensimmäinen kirjallinen maininta on vuodelta 1267, ja vuonna 1370 linnasta tuli Árvan komitaatin keskus. Kaivosmagnaatti Thurzo-suku uudisti linnaa laajasti 1500-luvun puolivälistä alkaen, ja nykyisen muotonsa se sai vuoteen 1611 mennessä. Vuonna 1800 linna paloi eikä sitä sen jälkeen käytetty asuntona; siellä kuvattiin vuonna 1922 monia Nosferatu-elokuvan kohtauksia, joissa se esittää kreivi Orlokin linnaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grand Canyon — kaupunkilehti / Kivi, joki ja eliöt: Orava jonka kanjoni erotti serkuistaan] Kaibab-orava elää vain yhdessä paikassa maailmassa: Grand Canyonin pohjoisreunan mäntymetsissä. Se on läheistä sukua etelärannan Abert-oravalle, mutta kanjoni on erottanut kannat toisistaan niin kauan – luultavasti tuhansia vuosia – että niistä on kehittynyt eri näköisiä: Kaibab-oravalla on tumma, lähes musta vatsanpuoli ja täysin valkoinen, tuuhea häntä, kun taas Abert-oravan häntä on kaksivärinen. Syvä rotko ja sen pohjalla polttava kuumuus ovat este puissa liikkuvalle jyrsijälle, joten kannat eivät ole koskaan sekoittuneet keskenään – kanjonista on tullut elävä esimerkki siitä, miten maantiede voi ohjata lajien kehitystä erilleen.
+- [Slovakia — maalehti / Historia: Kreivi Orlokin kotilinna] 1267 — Oravan linna nojaa 112 metriä korkeaan kallioon Orava-joen rannalla. Ensimmäinen kirjallinen maininta on vuodelta 1267, ja silloin vain alakerros oli kiveä, yläkerrokset puuta. Rikas Thurzón suku rakennutti linnaa 1500-luvun puolivälistä alkaen, ja nykyinen muoto valmistui vuonna 1611. Vuonna 1800 valtava tulipalo tuhosi kaikki puuosat, eikä linnaa enää asuttu. Sen jälkeen siitä tuli museo. Vuoden 1922 Nosferatu-elokuvassa linna esitti kreivi Orlokin kartanoa, ja myös 2020 tehty Dracula-sarja kuvasi täällä.
+AIEMPI KYSYMYS: Kuinka korkea linnan kallio on?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Linnan kalkkikivinen kalliokieleke on noin 112 metriä korkea. Kallio kohoaa [[Orava-joen]] yllä, ja sitä ympäröivät joki sekä sen sivupuro Račová. Linnan vanhimmat osat ovat peräisin 1200-luvulta, ja se rakennettiin [[Unkarin kuningaskunnan]] aikana. Korkealta katsottuna se on kyllä kyyhkyn mieleen.
+KYSYMYS: Kerro lisää: Orava-joen
+
+### 105
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oravan linna (historia)
+Tietoruudun teksti: Oravan linna, slovakiaksi Oravský hrad, on korkealla kalliolla Orava-joen yllä Oravský Podzámokin kylässä. Linna rakennettiin Unkarin kuningaskunnassa; vanhimmat osat ovat 1200-luvulta ja uusimmat 1600-luvun alusta. Se nousee kalkkikivisen, 112 metriä korkean kalliokielekkeen päällä, jota ympäröivät Orava-joki ja sen sivupuro Račová; ensimmäinen kirjallinen maininta on vuodelta 1267, ja vuonna 1370 linnasta tuli Árvan komitaatin keskus. Kaivosmagnaatti Thurzo-suku uudisti linnaa laajasti 1500-luvun puolivälistä alkaen, ja nykyisen muotonsa se sai vuoteen 1611 mennessä. Vuonna 1800 linna paloi eikä sitä sen jälkeen käytetty asuntona; siellä kuvattiin vuonna 1922 monia Nosferatu-elokuvan kohtauksia, joissa se esittää kreivi Orlokin linnaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Historia: Kaupunki hopeavuoren päällä] 1735 — Banská Štiavnica kasvoi hopean ja kullan varaan: vuonna 1782 se oli Unkarin kuningaskunnan kolmanneksi suurin kaupunki Bratislavan ja Debrecenin jälkeen. Kun kaivokset tulvivat, 1400–1700-luvuilla rakennettiin kuusikymmentä tekojärveä eli tajchya, jotka yhdistettiin yli sadan kilometrin kanavaverkolla. Kaupungissa toimi vuonna 1735 perustettu kaivoskoulu, josta tuli myöhemmin kaivosakatemia, jota on kutsuttu maailman ensimmäiseksi teknilliseksi yliopistoksi. Jo 1627 täällä käytettiin ruutia kaivoksessa yhtenä maailman ensimmäisistä.
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Kuinka korkea linnan kallio on?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Linnan kalkkikivinen kalliokieleke on noin 112 metriä korkea. Kallio kohoaa [[Orava-joen]] yllä, ja sitä ympäröivät joki sekä sen sivupuro Račová. Linnan vanhimmat osat ovat peräisin 1200-luvulta, ja se rakennettiin [[Unkarin kuningaskunnan]] aikana. Korkealta katsottuna se on kyllä kyyhkyn mieleen.
+KYSYMYS: Kerro lisää: Unkarin kuningaskunnan
+
+### 106
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oravan linna (historia)
+Tietoruudun teksti: Oravan linna, slovakiaksi Oravský hrad, on korkealla kalliolla Orava-joen yllä Oravský Podzámokin kylässä. Linna rakennettiin Unkarin kuningaskunnassa; vanhimmat osat ovat 1200-luvulta ja uusimmat 1600-luvun alusta. Se nousee kalkkikivisen, 112 metriä korkean kalliokielekkeen päällä, jota ympäröivät Orava-joki ja sen sivupuro Račová; ensimmäinen kirjallinen maininta on vuodelta 1267, ja vuonna 1370 linnasta tuli Árvan komitaatin keskus. Kaivosmagnaatti Thurzo-suku uudisti linnaa laajasti 1500-luvun puolivälistä alkaen, ja nykyisen muotonsa se sai vuoteen 1611 mennessä. Vuonna 1800 linna paloi eikä sitä sen jälkeen käytetty asuntona; siellä kuvattiin vuonna 1922 monia Nosferatu-elokuvan kohtauksia, joissa se esittää kreivi Orlokin linnaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Historia: Kreivi Orlokin kotilinna] 1267 — Oravan linna nojaa 112 metriä korkeaan kallioon Orava-joen rannalla. Ensimmäinen kirjallinen maininta on vuodelta 1267, ja silloin vain alakerros oli kiveä, yläkerrokset puuta. Rikas Thurzón suku rakennutti linnaa 1500-luvun puolivälistä alkaen, ja nykyinen muoto valmistui vuonna 1611. Vuonna 1800 valtava tulipalo tuhosi kaikki puuosat, eikä linnaa enää asuttu. Sen jälkeen siitä tuli museo. Vuoden 1922 Nosferatu-elokuvassa linna esitti kreivi Orlokin kartanoa, ja myös 2020 tehty Dracula-sarja kuvasi täällä.
+AIEMPI KYSYMYS: Minkä elokuvan kohtauksia linnassa kuvattiin vuonna 1922?
+AIEMPI VASTAUS (Livia):
+No niin, tän muistan hyvin. Linnassa kuvattiin vuonna 1922 monia [[Nosferatu]]-elokuvan kohtauksia, joissa linna esittää kreivi Orlokin linnaa. Mykkäkauden kauhuklassikon ohjasi [[F. W. Murnau]], ja elokuva perustuu löyhästi [[Bram Stokerin]] romaaniin Dracula. Linnasta tuli siis elokuvatähti, vaikkei se itse osannut näytellä.
+KYSYMYS: Kerro lisää: Nosferatu
+
+### 107
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oravan linna (historia)
+Tietoruudun teksti: Oravan linna, slovakiaksi Oravský hrad, on korkealla kalliolla Orava-joen yllä Oravský Podzámokin kylässä. Linna rakennettiin Unkarin kuningaskunnassa; vanhimmat osat ovat 1200-luvulta ja uusimmat 1600-luvun alusta. Se nousee kalkkikivisen, 112 metriä korkean kalliokielekkeen päällä, jota ympäröivät Orava-joki ja sen sivupuro Račová; ensimmäinen kirjallinen maininta on vuodelta 1267, ja vuonna 1370 linnasta tuli Árvan komitaatin keskus. Kaivosmagnaatti Thurzo-suku uudisti linnaa laajasti 1500-luvun puolivälistä alkaen, ja nykyisen muotonsa se sai vuoteen 1611 mennessä. Vuonna 1800 linna paloi eikä sitä sen jälkeen käytetty asuntona; siellä kuvattiin vuonna 1922 monia Nosferatu-elokuvan kohtauksia, joissa se esittää kreivi Orlokin linnaa.
+AIEMPI KYSYMYS: Minkä elokuvan kohtauksia linnassa kuvattiin vuonna 1922?
+AIEMPI VASTAUS (Livia):
+No niin, tän muistan hyvin. Linnassa kuvattiin vuonna 1922 monia [[Nosferatu]]-elokuvan kohtauksia, joissa linna esittää kreivi Orlokin linnaa. Mykkäkauden kauhuklassikon ohjasi [[F. W. Murnau]], ja elokuva perustuu löyhästi [[Bram Stokerin]] romaaniin Dracula. Linnasta tuli siis elokuvatähti, vaikkei se itse osannut näytellä.
+KYSYMYS: Kerro lisää: F. W. Murnau
+
+### 108
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oravan linna (historia)
+Tietoruudun teksti: Oravan linna, slovakiaksi Oravský hrad, on korkealla kalliolla Orava-joen yllä Oravský Podzámokin kylässä. Linna rakennettiin Unkarin kuningaskunnassa; vanhimmat osat ovat 1200-luvulta ja uusimmat 1600-luvun alusta. Se nousee kalkkikivisen, 112 metriä korkean kalliokielekkeen päällä, jota ympäröivät Orava-joki ja sen sivupuro Račová; ensimmäinen kirjallinen maininta on vuodelta 1267, ja vuonna 1370 linnasta tuli Árvan komitaatin keskus. Kaivosmagnaatti Thurzo-suku uudisti linnaa laajasti 1500-luvun puolivälistä alkaen, ja nykyisen muotonsa se sai vuoteen 1611 mennessä. Vuonna 1800 linna paloi eikä sitä sen jälkeen käytetty asuntona; siellä kuvattiin vuonna 1922 monia Nosferatu-elokuvan kohtauksia, joissa se esittää kreivi Orlokin linnaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kaupunkilehti / Bukarest: Dracula syntyi alaviitteestä] Bram Stoker kiersi teatterikiertueilla maailmaa muttei koskaan käynyt Itä-Euroopassa. Muistiinpanoissa romaani oli sijoitettu Styriaan ja kreivin nimi oli Count Wampyr. Nimen Dracula hän poimi William Wilkinsonin vuoden 1820 Valakian ja Moldavian historiasta ja kopioi kirjasta alaviitteen, jonka mukaan Dracula tarkoittaa paholaista. Vlad Seivästäjää ei mainita muistiinpanoissa lainkaan.
+AIEMPI KYSYMYS: Minkä elokuvan kohtauksia linnassa kuvattiin vuonna 1922?
+AIEMPI VASTAUS (Livia):
+No niin, tän muistan hyvin. Linnassa kuvattiin vuonna 1922 monia [[Nosferatu]]-elokuvan kohtauksia, joissa linna esittää kreivi Orlokin linnaa. Mykkäkauden kauhuklassikon ohjasi [[F. W. Murnau]], ja elokuva perustuu löyhästi [[Bram Stokerin]] romaaniin Dracula. Linnasta tuli siis elokuvatähti, vaikkei se itse osannut näytellä.
+KYSYMYS: Kerro lisää: Bram Stokerin
+
+### 109
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oravan linna (historia)
+Tietoruudun teksti: Oravan linna, slovakiaksi Oravský hrad, on korkealla kalliolla Orava-joen yllä Oravský Podzámokin kylässä. Linna rakennettiin Unkarin kuningaskunnassa; vanhimmat osat ovat 1200-luvulta ja uusimmat 1600-luvun alusta. Se nousee kalkkikivisen, 112 metriä korkean kalliokielekkeen päällä, jota ympäröivät Orava-joki ja sen sivupuro Račová; ensimmäinen kirjallinen maininta on vuodelta 1267, ja vuonna 1370 linnasta tuli Árvan komitaatin keskus. Kaivosmagnaatti Thurzo-suku uudisti linnaa laajasti 1500-luvun puolivälistä alkaen, ja nykyisen muotonsa se sai vuoteen 1611 mennessä. Vuonna 1800 linna paloi eikä sitä sen jälkeen käytetty asuntona; siellä kuvattiin vuonna 1922 monia Nosferatu-elokuvan kohtauksia, joissa se esittää kreivi Orlokin linnaa.
+AIEMPI KYSYMYS: Mikä oli komitaatti Unkarin kuningaskunnassa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Komitaatti oli Unkarin kuningaskunnan hallinnollinen alue, joka vastasi suunnilleen läänin tai kreivikunnan kaltaista aluetta, ja sen johdossa oli yleensä kuninkaan nimittämä ylikreivi. Oravan linnasta tuli vuonna 1370 [[Árvan komitaatin]] keskus, joten linna toimi alueen hallintopaikkana. [[Unkarin kuningaskunnan]] komitaattijako säilyi satoja vuosia. Hallintojuttuja, mut ne pitävät maailman koossa.
+KYSYMYS: Kerro lisää: Árvan komitaatin
+
+### 110
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oravan linna (historia)
+Tietoruudun teksti: Oravan linna, slovakiaksi Oravský hrad, on korkealla kalliolla Orava-joen yllä Oravský Podzámokin kylässä. Linna rakennettiin Unkarin kuningaskunnassa; vanhimmat osat ovat 1200-luvulta ja uusimmat 1600-luvun alusta. Se nousee kalkkikivisen, 112 metriä korkean kalliokielekkeen päällä, jota ympäröivät Orava-joki ja sen sivupuro Račová; ensimmäinen kirjallinen maininta on vuodelta 1267, ja vuonna 1370 linnasta tuli Árvan komitaatin keskus. Kaivosmagnaatti Thurzo-suku uudisti linnaa laajasti 1500-luvun puolivälistä alkaen, ja nykyisen muotonsa se sai vuoteen 1611 mennessä. Vuonna 1800 linna paloi eikä sitä sen jälkeen käytetty asuntona; siellä kuvattiin vuonna 1922 monia Nosferatu-elokuvan kohtauksia, joissa se esittää kreivi Orlokin linnaa.
+AIEMPI KYSYMYS: Kuka oli Thurzo-suku, joka uudisti linnaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Thurzo oli unkarilainen ylhäissuku, joka vaurastui kaivostoiminnalla, ja suvun nimi liitetään erityisesti kuparikauppaan. Lähteiden mukaan suku teki kuparikaupassa yhteistyötä augsburgilaisen [[Fugger-suvun]] kanssa. [[Oravan linnaa]] uudistettiin laajasti 1500-luvun puolivälistä alkaen, ja linna sai nykyisen muotonsa vuoteen 1611 mennessä. Rahasta kaikki lähtee, sen minä olen kirjeistä oppinut.
+KYSYMYS: Kerro lisää: Fugger-suvun
+
+### 111
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oravan linna (historia)
+Tietoruudun teksti: Oravan linna, slovakiaksi Oravský hrad, on korkealla kalliolla Orava-joen yllä Oravský Podzámokin kylässä. Linna rakennettiin Unkarin kuningaskunnassa; vanhimmat osat ovat 1200-luvulta ja uusimmat 1600-luvun alusta. Se nousee kalkkikivisen, 112 metriä korkean kalliokielekkeen päällä, jota ympäröivät Orava-joki ja sen sivupuro Račová; ensimmäinen kirjallinen maininta on vuodelta 1267, ja vuonna 1370 linnasta tuli Árvan komitaatin keskus. Kaivosmagnaatti Thurzo-suku uudisti linnaa laajasti 1500-luvun puolivälistä alkaen, ja nykyisen muotonsa se sai vuoteen 1611 mennessä. Vuonna 1800 linna paloi eikä sitä sen jälkeen käytetty asuntona; siellä kuvattiin vuonna 1922 monia Nosferatu-elokuvan kohtauksia, joissa se esittää kreivi Orlokin linnaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Historia: Kreivi Orlokin kotilinna] 1267 — Oravan linna nojaa 112 metriä korkeaan kallioon Orava-joen rannalla. Ensimmäinen kirjallinen maininta on vuodelta 1267, ja silloin vain alakerros oli kiveä, yläkerrokset puuta. Rikas Thurzón suku rakennutti linnaa 1500-luvun puolivälistä alkaen, ja nykyinen muoto valmistui vuonna 1611. Vuonna 1800 valtava tulipalo tuhosi kaikki puuosat, eikä linnaa enää asuttu. Sen jälkeen siitä tuli museo. Vuoden 1922 Nosferatu-elokuvassa linna esitti kreivi Orlokin kartanoa, ja myös 2020 tehty Dracula-sarja kuvasi täällä.
+AIEMPI KYSYMYS: Kuka oli Thurzo-suku, joka uudisti linnaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Thurzo oli unkarilainen ylhäissuku, joka vaurastui kaivostoiminnalla, ja suvun nimi liitetään erityisesti kuparikauppaan. Lähteiden mukaan suku teki kuparikaupassa yhteistyötä augsburgilaisen [[Fugger-suvun]] kanssa. [[Oravan linnaa]] uudistettiin laajasti 1500-luvun puolivälistä alkaen, ja linna sai nykyisen muotonsa vuoteen 1611 mennessä. Rahasta kaikki lähtee, sen minä olen kirjeistä oppinut.
+KYSYMYS: Kerro lisää: Oravan linnaa
+
+### 112
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oravan linna (historia)
+Tietoruudun teksti: Oravan linna, slovakiaksi Oravský hrad, on korkealla kalliolla Orava-joen yllä Oravský Podzámokin kylässä. Linna rakennettiin Unkarin kuningaskunnassa; vanhimmat osat ovat 1200-luvulta ja uusimmat 1600-luvun alusta. Se nousee kalkkikivisen, 112 metriä korkean kalliokielekkeen päällä, jota ympäröivät Orava-joki ja sen sivupuro Račová; ensimmäinen kirjallinen maininta on vuodelta 1267, ja vuonna 1370 linnasta tuli Árvan komitaatin keskus. Kaivosmagnaatti Thurzo-suku uudisti linnaa laajasti 1500-luvun puolivälistä alkaen, ja nykyisen muotonsa se sai vuoteen 1611 mennessä. Vuonna 1800 linna paloi eikä sitä sen jälkeen käytetty asuntona; siellä kuvattiin vuonna 1922 monia Nosferatu-elokuvan kohtauksia, joissa se esittää kreivi Orlokin linnaa.
+AIEMPI KYSYMYS: Minne Orava-joki laskee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Orava-joki laskee [[Váh-joen]] sivujokena Váhiin, ja Váh jatkaa matkaansa kohti [[Tonavaa]]. Joen laaksossa on sijainnut Oravan linna, joka kohoaa joen yllä kalliolla. Joet ovat meikäläisille parasta karttaa.
+KYSYMYS: Kerro lisää: Váh-joen
+
+### 113
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oravan linna (historia)
+Tietoruudun teksti: Oravan linna, slovakiaksi Oravský hrad, on korkealla kalliolla Orava-joen yllä Oravský Podzámokin kylässä. Linna rakennettiin Unkarin kuningaskunnassa; vanhimmat osat ovat 1200-luvulta ja uusimmat 1600-luvun alusta. Se nousee kalkkikivisen, 112 metriä korkean kalliokielekkeen päällä, jota ympäröivät Orava-joki ja sen sivupuro Račová; ensimmäinen kirjallinen maininta on vuodelta 1267, ja vuonna 1370 linnasta tuli Árvan komitaatin keskus. Kaivosmagnaatti Thurzo-suku uudisti linnaa laajasti 1500-luvun puolivälistä alkaen, ja nykyisen muotonsa se sai vuoteen 1611 mennessä. Vuonna 1800 linna paloi eikä sitä sen jälkeen käytetty asuntona; siellä kuvattiin vuonna 1922 monia Nosferatu-elokuvan kohtauksia, joissa se esittää kreivi Orlokin linnaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Minne Orava-joki laskee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Orava-joki laskee [[Váh-joen]] sivujokena Váhiin, ja Váh jatkaa matkaansa kohti [[Tonavaa]]. Joen laaksossa on sijainnut Oravan linna, joka kohoaa joen yllä kalliolla. Joet ovat meikäläisille parasta karttaa.
+KYSYMYS: Kerro lisää: Tonavaa
+
+### 114
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trenčín (historia)
+Tietoruudun teksti: Trenčín on Länsi-Slovakian kaupunki Váh-joen laaksossa lähellä Tšekin rajaa, noin 95 kilometriä Bratislavasta; siellä on yli 55 000 asukasta. Kaupungin yllä kalliolla kohoaa keskiaikainen Trenčínin linna. Kaupunki tunnetaan kalliokirjoituksesta linnan alla: roomalaiset kaivertivat vuonna 179 Marcomannisotien aikana kallioon kirjoituksen, joka mainitsee paikan nimellä Laugaricio ja joka oli pitkään Keski-Euroopan pohjoisin tunnettu todiste roomalaisten sotilaiden läsnäolosta. Vuonna 1017 Unkarin Tapani I valloitti alueen, joka pysyi osana Unkaria vuoteen 1918, ja 1000-luvun lopulla linnasta tuli Trencsénin komitaatin hallinnollinen keskus. Linna kesti yhtenä harvoista kivilinnoista vuoden 1241 mongolien hyökkäyksen, ja vuonna 1335 kaupungissa allekirjoitettiin Böömin, Unkarin ja Puolan Trentschinin sopimus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Macapá — kaupunkilehti / Macapá: Nollapiiri keskellä kaupunkia] Macapá on ottanut sijaintinsa ylpeydenaiheekseen: vuonna 1987 avattu Marco Zero -muistomerkki on 30-metrinen betoniobeliski, joka merkitsee tarkasti pisteen 0°0′0″, jossa voi seisoa yhtä aikaa pohjoisella ja eteläisellä pallonpuoliskolla. Tornin läpi on porattu pyöreä aukko, jonka läpi aurinko paistaa suoraan alas kevät- ja syyspäiväntasauksina maaliskuussa ja syyskuussa, kilometrin pituisen Avenida Equatorialin suuntaisesti. Kaupunkia kutsutaankin lempinimellä "Keskimaailman pääkaupunki".
+AIEMPI KYSYMYS: Minä vuonna roomalaiset kaivertivat kirjoituksen Trenčínin linnan alla olevaan kallioon?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Roomalaiset kaivertivat kirjoituksen kallioon vuonna 179 [[Marcomannisotien]] aikana. Kirjoitus mainitsee paikan nimellä [[Laugaricio]], ja se oli lähteiden mukaan pitkään Keski-Euroopan pohjoisin tunnettu todiste roomalaisten sotilaiden läsnäolosta. Kallio sijaitsee [[Trenčínin linnan]] alla. Kallioon kaiverrettu viesti, sellaisesta minä pidän.
+KYSYMYS: Kerro lisää: Marcomannisotien
+
+### 115
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trenčín (historia)
+Tietoruudun teksti: Trenčín on Länsi-Slovakian kaupunki Váh-joen laaksossa lähellä Tšekin rajaa, noin 95 kilometriä Bratislavasta; siellä on yli 55 000 asukasta. Kaupungin yllä kalliolla kohoaa keskiaikainen Trenčínin linna. Kaupunki tunnetaan kalliokirjoituksesta linnan alla: roomalaiset kaivertivat vuonna 179 Marcomannisotien aikana kallioon kirjoituksen, joka mainitsee paikan nimellä Laugaricio ja joka oli pitkään Keski-Euroopan pohjoisin tunnettu todiste roomalaisten sotilaiden läsnäolosta. Vuonna 1017 Unkarin Tapani I valloitti alueen, joka pysyi osana Unkaria vuoteen 1918, ja 1000-luvun lopulla linnasta tuli Trencsénin komitaatin hallinnollinen keskus. Linna kesti yhtenä harvoista kivilinnoista vuoden 1241 mongolien hyökkäyksen, ja vuonna 1335 kaupungissa allekirjoitettiin Böömin, Unkarin ja Puolan Trentschinin sopimus.
+AIEMPI KYSYMYS: Minä vuonna roomalaiset kaivertivat kirjoituksen Trenčínin linnan alla olevaan kallioon?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Roomalaiset kaivertivat kirjoituksen kallioon vuonna 179 [[Marcomannisotien]] aikana. Kirjoitus mainitsee paikan nimellä [[Laugaricio]], ja se oli lähteiden mukaan pitkään Keski-Euroopan pohjoisin tunnettu todiste roomalaisten sotilaiden läsnäolosta. Kallio sijaitsee [[Trenčínin linnan]] alla. Kallioon kaiverrettu viesti, sellaisesta minä pidän.
+KYSYMYS: Kerro lisää: Laugaricio
+
+### 116
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trenčín (historia)
+Tietoruudun teksti: Trenčín on Länsi-Slovakian kaupunki Váh-joen laaksossa lähellä Tšekin rajaa, noin 95 kilometriä Bratislavasta; siellä on yli 55 000 asukasta. Kaupungin yllä kalliolla kohoaa keskiaikainen Trenčínin linna. Kaupunki tunnetaan kalliokirjoituksesta linnan alla: roomalaiset kaivertivat vuonna 179 Marcomannisotien aikana kallioon kirjoituksen, joka mainitsee paikan nimellä Laugaricio ja joka oli pitkään Keski-Euroopan pohjoisin tunnettu todiste roomalaisten sotilaiden läsnäolosta. Vuonna 1017 Unkarin Tapani I valloitti alueen, joka pysyi osana Unkaria vuoteen 1918, ja 1000-luvun lopulla linnasta tuli Trencsénin komitaatin hallinnollinen keskus. Linna kesti yhtenä harvoista kivilinnoista vuoden 1241 mongolien hyökkäyksen, ja vuonna 1335 kaupungissa allekirjoitettiin Böömin, Unkarin ja Puolan Trentschinin sopimus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Petřínin näkötorni] 1891 Kun prahalaiset turistiseuran jäsenet kävivät Pariisin maailmannäyttelyssä vuonna 1889 ja näkivät vastavalmistuneen Eiffel-tornin, he innostuivat niin, että päättivät rakentaa Prahaan oman pienoisversion. Rahat kerättiin nopeasti, ja torni nousi Petřínin kukkulalle vain neljässä kuukaudessa vuonna 1891 suurta juhlanäyttelyä varten. Petřínin torni on 63,5 metriä korkea, mutta toisin kuin Eiffel-torni, sen jalusta on kahdeksankulmainen eikä neliönmuotoinen. Torniin nousee 299 porrasaskelmaa, jotka on rakennettu kaksoiskierteeksi: yksi kierre vie ylös ja toinen alas, joten kiipeäjät eivät koskaan törmää vastaantulijoihin. Alun perin tornissa oli kaasukäyttöinen hissi kuudelle hengelle, mu…
+AIEMPI KYSYMYS: Minä vuonna roomalaiset kaivertivat kirjoituksen Trenčínin linnan alla olevaan kallioon?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Roomalaiset kaivertivat kirjoituksen kallioon vuonna 179 [[Marcomannisotien]] aikana. Kirjoitus mainitsee paikan nimellä [[Laugaricio]], ja se oli lähteiden mukaan pitkään Keski-Euroopan pohjoisin tunnettu todiste roomalaisten sotilaiden läsnäolosta. Kallio sijaitsee [[Trenčínin linnan]] alla. Kallioon kaiverrettu viesti, sellaisesta minä pidän.
+KYSYMYS: Kerro lisää: Trenčínin linnan
+
+### 117
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trenčín (historia)
+Tietoruudun teksti: Trenčín on Länsi-Slovakian kaupunki Váh-joen laaksossa lähellä Tšekin rajaa, noin 95 kilometriä Bratislavasta; siellä on yli 55 000 asukasta. Kaupungin yllä kalliolla kohoaa keskiaikainen Trenčínin linna. Kaupunki tunnetaan kalliokirjoituksesta linnan alla: roomalaiset kaivertivat vuonna 179 Marcomannisotien aikana kallioon kirjoituksen, joka mainitsee paikan nimellä Laugaricio ja joka oli pitkään Keski-Euroopan pohjoisin tunnettu todiste roomalaisten sotilaiden läsnäolosta. Vuonna 1017 Unkarin Tapani I valloitti alueen, joka pysyi osana Unkaria vuoteen 1918, ja 1000-luvun lopulla linnasta tuli Trencsénin komitaatin hallinnollinen keskus. Linna kesti yhtenä harvoista kivilinnoista vuoden 1241 mongolien hyökkäyksen, ja vuonna 1335 kaupungissa allekirjoitettiin Böömin, Unkarin ja Puolan Trentschinin sopimus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Kulttuuri: Sokea laulaja kantoi kansan muistia] 1441 — Puolalaisessa kronikassa mainitaan jo vuonna 1441 hovissa soittanut bandura, luuttumainen kielisoitin, jossa oli aluksi vain 5–12 kieltä. Soitinta soittivat usein sokeat kiertelevät muusikot, kobzarit, jotka lauloivat dumeiksi kutsuttuja kertovia balladeja kasakoiden taisteluista ja sankareista – he olivat kansan elävä historiankirja aikana, jolloin harva osasi lukea. Neuvostovalta lopetti kiertelevän kobzariperinteen 1930-luvulla vangitsemalla ja karkottamalla soittajia Siperiaan. Bandurassa on nykyisin 56–68 kieltä, ja soitin näkyy usein "kasakka Mamai" -kansantaiteessa, jossa kasakka istuu hevosensa vierellä bandura sylissään.
+AIEMPI KYSYMYS: Mitä Trentschinin sopimuksessa vuonna 1335 sovittiin?
+AIEMPI VASTAUS (Livia):
+Mmm— Trenčínissä allekirjoitettiin vuonna 1335 sopimus, jolla Böömin, Unkarin ja Puolan kuninkaat sovittelivat kiistojaan. Lähteiden mukaan Böömin kuningas [[Johannes Sokea]] luopui vaatimuksistaan Puolan kruunuun, ja Puolan kuningas [[Kasimir III]] luopui vaatimuksistaan [[Sleesian]] alueeseen. Unkarin kuningas toimi sovittelijana. Kolmen kuninkaan neuvotteluista olisin kyllä kantanut kirjeet.
+KYSYMYS: Kerro lisää: Johannes Sokea
+
+### 118
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trenčín (historia)
+Tietoruudun teksti: Trenčín on Länsi-Slovakian kaupunki Váh-joen laaksossa lähellä Tšekin rajaa, noin 95 kilometriä Bratislavasta; siellä on yli 55 000 asukasta. Kaupungin yllä kalliolla kohoaa keskiaikainen Trenčínin linna. Kaupunki tunnetaan kalliokirjoituksesta linnan alla: roomalaiset kaivertivat vuonna 179 Marcomannisotien aikana kallioon kirjoituksen, joka mainitsee paikan nimellä Laugaricio ja joka oli pitkään Keski-Euroopan pohjoisin tunnettu todiste roomalaisten sotilaiden läsnäolosta. Vuonna 1017 Unkarin Tapani I valloitti alueen, joka pysyi osana Unkaria vuoteen 1918, ja 1000-luvun lopulla linnasta tuli Trencsénin komitaatin hallinnollinen keskus. Linna kesti yhtenä harvoista kivilinnoista vuoden 1241 mongolien hyökkäyksen, ja vuonna 1335 kaupungissa allekirjoitettiin Böömin, Unkarin ja Puolan Trentschinin sopimus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawelin linna] 1507–1536 Vistula-joen yllä kohoavalla kalkkikivikukkulalla sijaitseva Wawelin linna oli Puolan kuninkaiden koti ja kruunajaispaikka satojen vuosien ajan. Kuningas Kasimir Suuri rakennutti ensimmäisen kivilinnan 1300-luvulla, ja tulipalon jälkeen kuningas Sigismund I rakennutti sen uudelleen upeaksi renessanssilinnaksi vuosina 1507-1536. Linnan tornissa riippuu Sigismund-kello, joka painaa lähes 13 tonnia ja jota soittamaan tarvitaan 12 miestä - sitä kumautetaan vain aivan erityisinä hetkinä. Aarrekammiossa säilytetään muun muassa Szczerbiec-nimistä kruunajaismiekkaa, ja linnan alla piilee tunnettu lohikäärmeen luola. Linna on kokenut sekä loistoa että tuhoa: vuonna 1794 Preussi vei kruunun…
+- [Krakova — kohdekartta / Kohdekartta: Kazimierz] 1335 Vuonna 1335 kuningas Kasimir Suuri perusti Krakovan viereen aivan oman kaupungin ja nimesi sen itsensä mukaan Kazimierziksi. Sen keskusaukio Wolnica oli valtava, 195 x 195 metriä - lähes yhtä iso kuin Krakovan oma tori. Vuonna 1495 juutalaiset asukkaat käskettiin muuttamaan pois Krakovan vanhastakaupungista Kazimierziin, ja alueesta kasvoi vuosisatojen kuluessa vilkas juutalaiskortteli lukuisine synagogineen. Vanha synagoga on Puolan vanhin yhä pystyssä seisova synagogarakennus. Toisen maailmansodan aikana korttelin juutalaisväestöä kohtasi julma kohtalo, mutta nykyään Kazimierz on jälleen täynnä elämää: kahviloita, kirjakauppoja ja vuotuinen juutalaisen kulttuurin festivaali vuodesta …
+AIEMPI KYSYMYS: Mitä Trentschinin sopimuksessa vuonna 1335 sovittiin?
+AIEMPI VASTAUS (Livia):
+Mmm— Trenčínissä allekirjoitettiin vuonna 1335 sopimus, jolla Böömin, Unkarin ja Puolan kuninkaat sovittelivat kiistojaan. Lähteiden mukaan Böömin kuningas [[Johannes Sokea]] luopui vaatimuksistaan Puolan kruunuun, ja Puolan kuningas [[Kasimir III]] luopui vaatimuksistaan [[Sleesian]] alueeseen. Unkarin kuningas toimi sovittelijana. Kolmen kuninkaan neuvotteluista olisin kyllä kantanut kirjeet.
+KYSYMYS: Kerro lisää: Kasimir III
+
+### 119
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trenčín (historia)
+Tietoruudun teksti: Trenčín on Länsi-Slovakian kaupunki Váh-joen laaksossa lähellä Tšekin rajaa, noin 95 kilometriä Bratislavasta; siellä on yli 55 000 asukasta. Kaupungin yllä kalliolla kohoaa keskiaikainen Trenčínin linna. Kaupunki tunnetaan kalliokirjoituksesta linnan alla: roomalaiset kaivertivat vuonna 179 Marcomannisotien aikana kallioon kirjoituksen, joka mainitsee paikan nimellä Laugaricio ja joka oli pitkään Keski-Euroopan pohjoisin tunnettu todiste roomalaisten sotilaiden läsnäolosta. Vuonna 1017 Unkarin Tapani I valloitti alueen, joka pysyi osana Unkaria vuoteen 1918, ja 1000-luvun lopulla linnasta tuli Trencsénin komitaatin hallinnollinen keskus. Linna kesti yhtenä harvoista kivilinnoista vuoden 1241 mongolien hyökkäyksen, ja vuonna 1335 kaupungissa allekirjoitettiin Böömin, Unkarin ja Puolan Trentschinin sopimus.
+AIEMPI KYSYMYS: Mitä Trentschinin sopimuksessa vuonna 1335 sovittiin?
+AIEMPI VASTAUS (Livia):
+Mmm— Trenčínissä allekirjoitettiin vuonna 1335 sopimus, jolla Böömin, Unkarin ja Puolan kuninkaat sovittelivat kiistojaan. Lähteiden mukaan Böömin kuningas [[Johannes Sokea]] luopui vaatimuksistaan Puolan kruunuun, ja Puolan kuningas [[Kasimir III]] luopui vaatimuksistaan [[Sleesian]] alueeseen. Unkarin kuningas toimi sovittelijana. Kolmen kuninkaan neuvotteluista olisin kyllä kantanut kirjeet.
+KYSYMYS: Kerro lisää: Sleesian
+
+### 120
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trenčín (historia)
+Tietoruudun teksti: Trenčín on Länsi-Slovakian kaupunki Váh-joen laaksossa lähellä Tšekin rajaa, noin 95 kilometriä Bratislavasta; siellä on yli 55 000 asukasta. Kaupungin yllä kalliolla kohoaa keskiaikainen Trenčínin linna. Kaupunki tunnetaan kalliokirjoituksesta linnan alla: roomalaiset kaivertivat vuonna 179 Marcomannisotien aikana kallioon kirjoituksen, joka mainitsee paikan nimellä Laugaricio ja joka oli pitkään Keski-Euroopan pohjoisin tunnettu todiste roomalaisten sotilaiden läsnäolosta. Vuonna 1017 Unkarin Tapani I valloitti alueen, joka pysyi osana Unkaria vuoteen 1918, ja 1000-luvun lopulla linnasta tuli Trencsénin komitaatin hallinnollinen keskus. Linna kesti yhtenä harvoista kivilinnoista vuoden 1241 mongolien hyökkäyksen, ja vuonna 1335 kaupungissa allekirjoitettiin Böömin, Unkarin ja Puolan Trentschinin sopimus.
+AIEMPI KYSYMYS: Mitä mongolien hyökkäys vuonna 1241 tarkoitti Unkarille?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Mongolien hyökkäys Unkariin 1241–1242 oli maan historian raskaimpia käänteitä: [[Mohin taistelussa]] Unkarin armeija kärsi tappion, ja maa joutui laajan hävityksen kohteeksi. Kuningas [[Béla IV]] pakeni maasta, mutta palasi myöhemmin ja uudisti valtakunnan puolustusta, muun muassa rakennuttamalla kivilinnoja. Trenčínin linna kuului harvoihin kivilinnoihin, jotka kestivät hyökkäyksen. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Mohin taistelussa
+
+### 121
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trenčín (historia)
+Tietoruudun teksti: Trenčín on Länsi-Slovakian kaupunki Váh-joen laaksossa lähellä Tšekin rajaa, noin 95 kilometriä Bratislavasta; siellä on yli 55 000 asukasta. Kaupungin yllä kalliolla kohoaa keskiaikainen Trenčínin linna. Kaupunki tunnetaan kalliokirjoituksesta linnan alla: roomalaiset kaivertivat vuonna 179 Marcomannisotien aikana kallioon kirjoituksen, joka mainitsee paikan nimellä Laugaricio ja joka oli pitkään Keski-Euroopan pohjoisin tunnettu todiste roomalaisten sotilaiden läsnäolosta. Vuonna 1017 Unkarin Tapani I valloitti alueen, joka pysyi osana Unkaria vuoteen 1918, ja 1000-luvun lopulla linnasta tuli Trencsénin komitaatin hallinnollinen keskus. Linna kesti yhtenä harvoista kivilinnoista vuoden 1241 mongolien hyökkäyksen, ja vuonna 1335 kaupungissa allekirjoitettiin Böömin, Unkarin ja Puolan Trentschinin sopimus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Musiikki: Paroni, joka kirjoitti musiikin kuuteen niteeseen] 1932–1934 — Rodolphe d’Erlanger kokosi maloufin säännöt ja historian kuuteen niteeseen ja perusti Rachidian, konservatorion, joka toimii yhä. Hänen ehdotuksestaan kuningas Fuad I kutsui koolle arabialaisen musiikin kongressin Kairoon 14. maaliskuuta – 3. huhtikuuta 1932, ja d’Erlanger toimi sen varapuheenjohtajana. Paikalla olivat muun muassa Béla Bartók ja Paul Hindemith, ja delegaatioita tuli Algeriasta, Egyptistä, Irakista, Marokosta, Syyriasta, Tunisiasta ja Turkista. Kongressissa äänitettiin 360 esitystä, joista 162 julkaistiin levyinä; äänitteitä säilytetään Pariisissa, Lontoossa ja Berliinissä.
+AIEMPI KYSYMYS: Mitä mongolien hyökkäys vuonna 1241 tarkoitti Unkarille?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Mongolien hyökkäys Unkariin 1241–1242 oli maan historian raskaimpia käänteitä: [[Mohin taistelussa]] Unkarin armeija kärsi tappion, ja maa joutui laajan hävityksen kohteeksi. Kuningas [[Béla IV]] pakeni maasta, mutta palasi myöhemmin ja uudisti valtakunnan puolustusta, muun muassa rakennuttamalla kivilinnoja. Trenčínin linna kuului harvoihin kivilinnoihin, jotka kestivät hyökkäyksen. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Béla IV
+
+### 122
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trenčín (historia)
+Tietoruudun teksti: Trenčín on Länsi-Slovakian kaupunki Váh-joen laaksossa lähellä Tšekin rajaa, noin 95 kilometriä Bratislavasta; siellä on yli 55 000 asukasta. Kaupungin yllä kalliolla kohoaa keskiaikainen Trenčínin linna. Kaupunki tunnetaan kalliokirjoituksesta linnan alla: roomalaiset kaivertivat vuonna 179 Marcomannisotien aikana kallioon kirjoituksen, joka mainitsee paikan nimellä Laugaricio ja joka oli pitkään Keski-Euroopan pohjoisin tunnettu todiste roomalaisten sotilaiden läsnäolosta. Vuonna 1017 Unkarin Tapani I valloitti alueen, joka pysyi osana Unkaria vuoteen 1918, ja 1000-luvun lopulla linnasta tuli Trencsénin komitaatin hallinnollinen keskus. Linna kesti yhtenä harvoista kivilinnoista vuoden 1241 mongolien hyökkäyksen, ja vuonna 1335 kaupungissa allekirjoitettiin Böömin, Unkarin ja Puolan Trentschinin sopimus.
+AIEMPI KYSYMYS: Mitä Marcomannisodat olivat?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Marcomannisodat olivat noin vuosina 166–180 käytyjä sotia, joissa Rooman valtakunta taisteli Tonavan rajaseudulla germaanisia heimoja, erityisesti [[markomanneja]] ja kvadeja, vastaan. Sotia johti keisari [[Marcus Aurelius]], joka kuoli vuonna 180 sotaretkien aikana. Trenčínin kalliossa oleva kirjoitus on yksi roomalaisten läsnäolon todisteista alueella. Kirjoitus kalliossa on sentään säilynyt paremmin kuin useimmat kirjeet.
+KYSYMYS: Kerro lisää: markomanneja
+
+### 123
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trenčín (historia)
+Tietoruudun teksti: Trenčín on Länsi-Slovakian kaupunki Váh-joen laaksossa lähellä Tšekin rajaa, noin 95 kilometriä Bratislavasta; siellä on yli 55 000 asukasta. Kaupungin yllä kalliolla kohoaa keskiaikainen Trenčínin linna. Kaupunki tunnetaan kalliokirjoituksesta linnan alla: roomalaiset kaivertivat vuonna 179 Marcomannisotien aikana kallioon kirjoituksen, joka mainitsee paikan nimellä Laugaricio ja joka oli pitkään Keski-Euroopan pohjoisin tunnettu todiste roomalaisten sotilaiden läsnäolosta. Vuonna 1017 Unkarin Tapani I valloitti alueen, joka pysyi osana Unkaria vuoteen 1918, ja 1000-luvun lopulla linnasta tuli Trencsénin komitaatin hallinnollinen keskus. Linna kesti yhtenä harvoista kivilinnoista vuoden 1241 mongolien hyökkäyksen, ja vuonna 1335 kaupungissa allekirjoitettiin Böömin, Unkarin ja Puolan Trentschinin sopimus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Tripoli: Kolmesta kaupungista jäi yksi] Nimi Tripoli tulee kreikan sanoista treis poleis, kolme kaupunkia: Oea, Sabratha ja Leptis Magna. Foinikialaiset perustivat Oean 600-luvulla eaa., ja se on niistä ainoa, joka on ollut asuttu keskeytyksettä tähän päivään asti. Juuri siksi sen roomalaisesta ajasta on jäljellä niin vähän: kahden muun kaupungin rauniot säilyivät, koska niissä ei enää asuttu, mutta Oeassa vanhat rakennukset purettiin rakennusaineeksi tai jäivät uusien alle. Pystyssä on enää Marcus Aureliuksen riemukaari vuodelta 165. Arabiaksi kaupunkia sanotaan Tarabulus al-Gharbiksi, Lännen Tripoliksi, jotta se erottuu Libanonin Tripolista.
+AIEMPI KYSYMYS: Mitä Marcomannisodat olivat?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Marcomannisodat olivat noin vuosina 166–180 käytyjä sotia, joissa Rooman valtakunta taisteli Tonavan rajaseudulla germaanisia heimoja, erityisesti [[markomanneja]] ja kvadeja, vastaan. Sotia johti keisari [[Marcus Aurelius]], joka kuoli vuonna 180 sotaretkien aikana. Trenčínin kalliossa oleva kirjoitus on yksi roomalaisten läsnäolon todisteista alueella. Kirjoitus kalliossa on sentään säilynyt paremmin kuin useimmat kirjeet.
+KYSYMYS: Kerro lisää: Marcus Aurelius
+
+### 124
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bratislava (Pozsony) (historia)
+Tietoruudun teksti: Bratislava, unkariksi Pozsony ja saksaksi Pressburg, on Slovakian nykyinen pääkaupunki, Tonavan varrella lounaisessa Slovakiassa Pienten Karpaattien juurella. Se on Wienin vieressä: kaupungit ovat vain 50 kilometrin päässä toisistaan, mikä tekee niistä Euroopan lähimmät pääkaupungit. Vuosina 1536–1783 kaupunki oli Unkarin kuningaskunnan kruunajaispaikka, lainsäädäntökeskus ja pääkaupunki, ja Pyhän Martinin tuomiokirkossa kruunattiin yksitoista kuningasta ja kahdeksan kuningatarta; useimmat Unkarin valtiopäivät pidettiin siellä 1600-luvulta uudistuskauteen asti. 1800-luvun teollistumisen aikana kaupunkiin rakennettiin Unkarin kuningaskunnan ensimmäinen hevosrautatie Pressburgista Szentgyörgyyn (1840), höyryveturirata Wieniin vuonna 1848 ja Pestiin 1850, mutta kaupungin ensimmäinen pysyvä silta Tonavan yli, Starý most, valmistui vasta vuonna 1891. Kaupungin yllä kohoaa linna tasanteella 8…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Historia: Kaupunki hopeavuoren päällä] 1735 — Banská Štiavnica kasvoi hopean ja kullan varaan: vuonna 1782 se oli Unkarin kuningaskunnan kolmanneksi suurin kaupunki Bratislavan ja Debrecenin jälkeen. Kun kaivokset tulvivat, 1400–1700-luvuilla rakennettiin kuusikymmentä tekojärveä eli tajchya, jotka yhdistettiin yli sadan kilometrin kanavaverkolla. Kaupungissa toimi vuonna 1735 perustettu kaivoskoulu, josta tuli myöhemmin kaivosakatemia, jota on kutsuttu maailman ensimmäiseksi teknilliseksi yliopistoksi. Jo 1627 täällä käytettiin ruutia kaivoksessa yhtenä maailman ensimmäisistä.
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Kuinka monta kuningasta ja kuningatarta kruunattiin Pyhän Martinin tuomiokirkossa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Pyhän Martinin tuomiokirkossa kruunattiin yksitoista kuningasta ja kahdeksan kuningatarta, siis yhteensä yhdeksäntoista kruunausta. Kaupunki toimi 1500-luvun puolivälistä 1700-luvun loppuun [[Unkarin kuningaskunnan]] kruunajaispaikkana, lainsäädäntökeskuksena ja pääkaupunkina. Useimmat Unkarin valtiopäivät pidettiin Pozsonyssa eli nykyisessä [[Bratislavassa]] 1600-luvulta uudistuskauteen asti. Yhdeksäntoista kruunausta, eikä kukaan tarjonnut minulle edes pullaa.
+KYSYMYS: Kerro lisää: Unkarin kuningaskunnan
+
+### 125
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bratislava (Pozsony) (historia)
+Tietoruudun teksti: Bratislava, unkariksi Pozsony ja saksaksi Pressburg, on Slovakian nykyinen pääkaupunki, Tonavan varrella lounaisessa Slovakiassa Pienten Karpaattien juurella. Se on Wienin vieressä: kaupungit ovat vain 50 kilometrin päässä toisistaan, mikä tekee niistä Euroopan lähimmät pääkaupungit. Vuosina 1536–1783 kaupunki oli Unkarin kuningaskunnan kruunajaispaikka, lainsäädäntökeskus ja pääkaupunki, ja Pyhän Martinin tuomiokirkossa kruunattiin yksitoista kuningasta ja kahdeksan kuningatarta; useimmat Unkarin valtiopäivät pidettiin siellä 1600-luvulta uudistuskauteen asti. 1800-luvun teollistumisen aikana kaupunkiin rakennettiin Unkarin kuningaskunnan ensimmäinen hevosrautatie Pressburgista Szentgyörgyyn (1840), höyryveturirata Wieniin vuonna 1848 ja Pestiin 1850, mutta kaupungin ensimmäinen pysyvä silta Tonavan yli, Starý most, valmistui vasta vuonna 1891. Kaupungin yllä kohoaa linna tasanteella 8…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Keksinnöt: Shakkikone, jonka sisällä istui ihminen] 1770 — Presburgissa eli nykyisessä Bratislavassa syntynyt Wolfgang von Kempelen esitteli vuonna 1770 keisarinna Maria Teresialle turbaanipäisen shakkiautomaatin. Turkkilaiseksi nimetty kone voitti useimmat pelinsä, jopa Napoleonin ja Benjamin Franklinin, ja se kiersi Eurooppaa 84 vuotta. Laatikossa piileskeli kuitenkin ihminen, joka liikutti nukkea vipujen ja magneettien avulla. Kuvan piirros on vuodelta 1789: Joseph Racknitz yritti siinä arvata salaisuuden. Kone tuhoutui tulipalossa 1854, ja täydellinen selitys julkaistiin vasta 1857.
+AIEMPI KYSYMYS: Kuinka monta kuningasta ja kuningatarta kruunattiin Pyhän Martinin tuomiokirkossa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Pyhän Martinin tuomiokirkossa kruunattiin yksitoista kuningasta ja kahdeksan kuningatarta, siis yhteensä yhdeksäntoista kruunausta. Kaupunki toimi 1500-luvun puolivälistä 1700-luvun loppuun [[Unkarin kuningaskunnan]] kruunajaispaikkana, lainsäädäntökeskuksena ja pääkaupunkina. Useimmat Unkarin valtiopäivät pidettiin Pozsonyssa eli nykyisessä [[Bratislavassa]] 1600-luvulta uudistuskauteen asti. Yhdeksäntoista kruunausta, eikä kukaan tarjonnut minulle edes pullaa.
+KYSYMYS: Kerro lisää: Bratislavassa
+
+### 126
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bratislava (Pozsony) (historia)
+Tietoruudun teksti: Bratislava, unkariksi Pozsony ja saksaksi Pressburg, on Slovakian nykyinen pääkaupunki, Tonavan varrella lounaisessa Slovakiassa Pienten Karpaattien juurella. Se on Wienin vieressä: kaupungit ovat vain 50 kilometrin päässä toisistaan, mikä tekee niistä Euroopan lähimmät pääkaupungit. Vuosina 1536–1783 kaupunki oli Unkarin kuningaskunnan kruunajaispaikka, lainsäädäntökeskus ja pääkaupunki, ja Pyhän Martinin tuomiokirkossa kruunattiin yksitoista kuningasta ja kahdeksan kuningatarta; useimmat Unkarin valtiopäivät pidettiin siellä 1600-luvulta uudistuskauteen asti. 1800-luvun teollistumisen aikana kaupunkiin rakennettiin Unkarin kuningaskunnan ensimmäinen hevosrautatie Pressburgista Szentgyörgyyn (1840), höyryveturirata Wieniin vuonna 1848 ja Pestiin 1850, mutta kaupungin ensimmäinen pysyvä silta Tonavan yli, Starý most, valmistui vasta vuonna 1891. Kaupungin yllä kohoaa linna tasanteella 8…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Minä vuonna kaupungin ensimmäinen pysyvä Tonavan silta valmistui?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kaupungin ensimmäinen pysyvä silta [[Tonavan]] yli, [[Starý most]], valmistui vuonna 1891. Sitä ennen kaupunkiin oli ehditty rakentaa hevosrautatie vuonna 1840 sekä höyryveturirata [[Wieniin]] vuonna 1848. Siivillä sen ylittää yhä ilman siltamaksua.
+KYSYMYS: Kerro lisää: Tonavan
+
+### 127
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bratislava (Pozsony) (historia)
+Tietoruudun teksti: Bratislava, unkariksi Pozsony ja saksaksi Pressburg, on Slovakian nykyinen pääkaupunki, Tonavan varrella lounaisessa Slovakiassa Pienten Karpaattien juurella. Se on Wienin vieressä: kaupungit ovat vain 50 kilometrin päässä toisistaan, mikä tekee niistä Euroopan lähimmät pääkaupungit. Vuosina 1536–1783 kaupunki oli Unkarin kuningaskunnan kruunajaispaikka, lainsäädäntökeskus ja pääkaupunki, ja Pyhän Martinin tuomiokirkossa kruunattiin yksitoista kuningasta ja kahdeksan kuningatarta; useimmat Unkarin valtiopäivät pidettiin siellä 1600-luvulta uudistuskauteen asti. 1800-luvun teollistumisen aikana kaupunkiin rakennettiin Unkarin kuningaskunnan ensimmäinen hevosrautatie Pressburgista Szentgyörgyyn (1840), höyryveturirata Wieniin vuonna 1848 ja Pestiin 1850, mutta kaupungin ensimmäinen pysyvä silta Tonavan yli, Starý most, valmistui vasta vuonna 1891. Kaupungin yllä kohoaa linna tasanteella 8…
+AIEMPI KYSYMYS: Minä vuonna kaupungin ensimmäinen pysyvä Tonavan silta valmistui?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kaupungin ensimmäinen pysyvä silta [[Tonavan]] yli, [[Starý most]], valmistui vuonna 1891. Sitä ennen kaupunkiin oli ehditty rakentaa hevosrautatie vuonna 1840 sekä höyryveturirata [[Wieniin]] vuonna 1848. Siivillä sen ylittää yhä ilman siltamaksua.
+KYSYMYS: Kerro lisää: Starý most
+
+### 128
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bratislava (Pozsony) (historia)
+Tietoruudun teksti: Bratislava, unkariksi Pozsony ja saksaksi Pressburg, on Slovakian nykyinen pääkaupunki, Tonavan varrella lounaisessa Slovakiassa Pienten Karpaattien juurella. Se on Wienin vieressä: kaupungit ovat vain 50 kilometrin päässä toisistaan, mikä tekee niistä Euroopan lähimmät pääkaupungit. Vuosina 1536–1783 kaupunki oli Unkarin kuningaskunnan kruunajaispaikka, lainsäädäntökeskus ja pääkaupunki, ja Pyhän Martinin tuomiokirkossa kruunattiin yksitoista kuningasta ja kahdeksan kuningatarta; useimmat Unkarin valtiopäivät pidettiin siellä 1600-luvulta uudistuskauteen asti. 1800-luvun teollistumisen aikana kaupunkiin rakennettiin Unkarin kuningaskunnan ensimmäinen hevosrautatie Pressburgista Szentgyörgyyn (1840), höyryveturirata Wieniin vuonna 1848 ja Pestiin 1850, mutta kaupungin ensimmäinen pysyvä silta Tonavan yli, Starý most, valmistui vasta vuonna 1891. Kaupungin yllä kohoaa linna tasanteella 8…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Historian hetki: Sarajevo 1914 — auto pysähtyy väärään paikkaan] 28.6.1914 — Kuljettaja tajuaa virheen vasta, kun on jo kääntynyt väärään kujaan: reitti piti muuttaa sairaalavierailun vuoksi, mutta kukaan ei ehtinyt kertoa sitä hänelle. Se on sunnuntai 28. kesäkuuta 1914, ja arkkiherttua Franz Ferdinand istuu avoautossa vaimonsa Sophien vierellä Sarajevossa, missä joku on jo aiemmin samana aamuna heittänyt pommin heidän saattueensa kohti. Kuljettaja yrittää perua autoa takaisin Latin-sillan kupeessa, mutta moottori sammuu juuri siinä kohtaa, missä nuori Gavrilo Princip seisoo katukahvilan edessä — yksi kuudesta salamurhaajasta, joka oli jo luullut suunnitelman epäonnistuneen. Princip ampuu kahdesti muutaman metrin päästä. Hän yrittää vielä nielaista syan…
+- [Slovenia — maalehti / Ruoka: Mehiläisten opettaja maalasi pesät] 1770 — Anton Janša syntyi noin vuonna 1734 Breznican kylässä ja lähti lukutaidottomana opiskelemaan maalariksi Wieniin. Isän yli sadan pesän parissa kasvanut mies valitsi lopulta mehiläiset, ja vuonna 1770 hänestä tuli kaikkien Itävallan maiden ensimmäinen keisarillinen mehiläishoidon opettaja. Hän muotoili pesät niin, että ne voi pinota kuin palikat, koristi niiden etupuolet maalauksilla ja neuvoi viemään pesät kukkivien niittyjen luo. Seudun oma krainilainen mehiläinen on tunnettu rauhallisuudestaan ja hunajavarastoistaan. Maria Teresia määräsi hänen kuolemansa jälkeen kaikki opettajat käyttämään hänen kirjojaan.
+AIEMPI KYSYMYS: Minä vuonna kaupungin ensimmäinen pysyvä Tonavan silta valmistui?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kaupungin ensimmäinen pysyvä silta [[Tonavan]] yli, [[Starý most]], valmistui vuonna 1891. Sitä ennen kaupunkiin oli ehditty rakentaa hevosrautatie vuonna 1840 sekä höyryveturirata [[Wieniin]] vuonna 1848. Siivillä sen ylittää yhä ilman siltamaksua.
+KYSYMYS: Kerro lisää: Wieniin
+
+### 129
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bratislava (Pozsony) (historia)
+Tietoruudun teksti: Bratislava, unkariksi Pozsony ja saksaksi Pressburg, on Slovakian nykyinen pääkaupunki, Tonavan varrella lounaisessa Slovakiassa Pienten Karpaattien juurella. Se on Wienin vieressä: kaupungit ovat vain 50 kilometrin päässä toisistaan, mikä tekee niistä Euroopan lähimmät pääkaupungit. Vuosina 1536–1783 kaupunki oli Unkarin kuningaskunnan kruunajaispaikka, lainsäädäntökeskus ja pääkaupunki, ja Pyhän Martinin tuomiokirkossa kruunattiin yksitoista kuningasta ja kahdeksan kuningatarta; useimmat Unkarin valtiopäivät pidettiin siellä 1600-luvulta uudistuskauteen asti. 1800-luvun teollistumisen aikana kaupunkiin rakennettiin Unkarin kuningaskunnan ensimmäinen hevosrautatie Pressburgista Szentgyörgyyn (1840), höyryveturirata Wieniin vuonna 1848 ja Pestiin 1850, mutta kaupungin ensimmäinen pysyvä silta Tonavan yli, Starý most, valmistui vasta vuonna 1891. Kaupungin yllä kohoaa linna tasanteella 8…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Historian hetki: Wien 1873 — kun huudot vaihtuvat hiljaisuudeksi] 9.5.1873 — Joku huutaa myyntitarjouksen, ja hetken päästä kymmenet huutavat perässä — kukaan ei enää kuuntele ostajia, vain toisiaan. Wienin väliaikaisessa pörssitalossa Schottenringillä on perjantai 9. toukokuuta 1873, ja kurssit ovat pudonneet aamupäivällä niin jyrkästi, että pörssimeklari tarraa pöydän reunaan tunteakseen edes jonkin pysyvän. Vain kahdeksan päivää sitten keisari Franz Joseph avasi maailmannäyttelyn Praterissa, ja koko Eurooppa oli tullut katsomaan Itävalta-Unkarin nousua — rautatie- ja rakennusosakkeiden hinnat olivat kohonneet vuosia pelkällä lupauksella. Nyt lupaus loppuu yhtä äkkiä kuin se alkoi: pankki toisensa jälkeen ilmoittaa maksukyvyttömyydestä, ja poliisi joutu…
+- [Wien — kaupunkilehti / Wien] Kaupunki, jossa keisari söi aamiaista eläintarhan keskellä ja jonka kuuluisin ratas kulkee hitaammin kuin sinä kävelet.
+AIEMPI KYSYMYS: Kuinka kaukana Bratislava on Wienistä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Bratislava ja [[Wien]] ovat noin viidenkymmenen kilometrin päässä toisistaan, joten ne ovat yksiä Euroopan lähimpiä pääkaupunkeja. Molemmat sijaitsevat [[Tonavan]] varrella. Siivin se on lyhyt lenkki, jalan vähän pidempi.
+KYSYMYS: Kerro lisää: Wien
+
+### 130
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bratislava (Pozsony) (historia)
+Tietoruudun teksti: Bratislava, unkariksi Pozsony ja saksaksi Pressburg, on Slovakian nykyinen pääkaupunki, Tonavan varrella lounaisessa Slovakiassa Pienten Karpaattien juurella. Se on Wienin vieressä: kaupungit ovat vain 50 kilometrin päässä toisistaan, mikä tekee niistä Euroopan lähimmät pääkaupungit. Vuosina 1536–1783 kaupunki oli Unkarin kuningaskunnan kruunajaispaikka, lainsäädäntökeskus ja pääkaupunki, ja Pyhän Martinin tuomiokirkossa kruunattiin yksitoista kuningasta ja kahdeksan kuningatarta; useimmat Unkarin valtiopäivät pidettiin siellä 1600-luvulta uudistuskauteen asti. 1800-luvun teollistumisen aikana kaupunkiin rakennettiin Unkarin kuningaskunnan ensimmäinen hevosrautatie Pressburgista Szentgyörgyyn (1840), höyryveturirata Wieniin vuonna 1848 ja Pestiin 1850, mutta kaupungin ensimmäinen pysyvä silta Tonavan yli, Starý most, valmistui vasta vuonna 1891. Kaupungin yllä kohoaa linna tasanteella 8…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kohdekartta / Kohdekartta: Hlavná-katu] keskiaika Hlavná eli Pääkatu syntyi keskiajalla toriaukioksi, ja siksi se on karan muotoinen: keskeltä leveä, päistä kapea. Keskiajan asiakirjoissa sen nimi vaihteli, ja nimet Circulus, Ring ja Theatrum kertovat, että sitä pidettiin aukiona eikä katuna. 1700-luvun kartoissa se on Platea principalis. Isoisän aikaan kadun nimi on saksaksi Haupt Gasse ja unkariksi Fő utcza. Slovakiksi käännetty nimi Hlavná ulica otettiin käyttöön vasta, kun kaupunki siirtyi Tšekkoslovakialle. Myöhemmin nimi vaihtui politiikan mukana: 1933 kadusta tuli kenraali Štefánikin katu, ja vuodesta 1949 se oli 41 vuotta Leninin katu. Vanha nimi palautettiin 1. heinäkuuta 1990. Vuonna 1984 Hlavnásta tuli koko Tšekkoslova…
+- [Praha — kohdekartta / Kohdekartta: Kansallismuseo] 1885–1891 Prahan kansallismuseo perustettiin jo vuonna 1818, mutta nykyinen komea rakennus Vaclavin aukion päässä valmistui vasta vuosina 1885–1891 arkkitehti Josef Schulzin suunnitelmien mukaan. Museon kokoelmissa on nykyään noin 14 miljoonaa esinettä — kivennäisistä ja eläimistä keskiaikaisiin käsikirjoituksiin. Elokuussa 1968, kun Varsovan liiton joukot miehittivät Tšekkoslovakian, museon julkisivuun ammuttiin lukuisia luoteja neuvostosotilaiden konekivääreistä. Reiät paikattiin, mutta koska korjauksiin käytettiin hieman vaaleampaa hiekkakiveä kuin alkuperäisessä julkisivussa, luodinreikien paikat erottuvat seinästä yhä tänäkin päivänä. Vuosina 2011–2018 koko museo remontoitiin perusteel…
+AIEMPI KYSYMYS: Mistä Bratislavan nimi Pressburg tulee?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Nimi Bratislava vakiintui virallisesti vuonna 1919 [[Tšekkoslovakian]] synnyttyä, ja sitä ennen slovakiksi käytettiin muotoa [[Prešporok]]. Saksankielinen nimi Pressburg ja unkarilainen [[Pozsony]] ovat saman paikan vanhoja nimiä. Nimen alkuperää selitetään varhaiskeskiajan hallitsijan nimellä, mutta en ole varma tarkasta etymologiasta. Nimiä oli kaupungilla niin monta, että kirje olisi helposti mennyt väärään osoitteeseen.
+KYSYMYS: Kerro lisää: Tšekkoslovakian
+
+### 131
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bratislava (Pozsony) (historia)
+Tietoruudun teksti: Bratislava, unkariksi Pozsony ja saksaksi Pressburg, on Slovakian nykyinen pääkaupunki, Tonavan varrella lounaisessa Slovakiassa Pienten Karpaattien juurella. Se on Wienin vieressä: kaupungit ovat vain 50 kilometrin päässä toisistaan, mikä tekee niistä Euroopan lähimmät pääkaupungit. Vuosina 1536–1783 kaupunki oli Unkarin kuningaskunnan kruunajaispaikka, lainsäädäntökeskus ja pääkaupunki, ja Pyhän Martinin tuomiokirkossa kruunattiin yksitoista kuningasta ja kahdeksan kuningatarta; useimmat Unkarin valtiopäivät pidettiin siellä 1600-luvulta uudistuskauteen asti. 1800-luvun teollistumisen aikana kaupunkiin rakennettiin Unkarin kuningaskunnan ensimmäinen hevosrautatie Pressburgista Szentgyörgyyn (1840), höyryveturirata Wieniin vuonna 1848 ja Pestiin 1850, mutta kaupungin ensimmäinen pysyvä silta Tonavan yli, Starý most, valmistui vasta vuonna 1891. Kaupungin yllä kohoaa linna tasanteella 8…
+AIEMPI KYSYMYS: Mistä Bratislavan nimi Pressburg tulee?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Nimi Bratislava vakiintui virallisesti vuonna 1919 [[Tšekkoslovakian]] synnyttyä, ja sitä ennen slovakiksi käytettiin muotoa [[Prešporok]]. Saksankielinen nimi Pressburg ja unkarilainen [[Pozsony]] ovat saman paikan vanhoja nimiä. Nimen alkuperää selitetään varhaiskeskiajan hallitsijan nimellä, mutta en ole varma tarkasta etymologiasta. Nimiä oli kaupungilla niin monta, että kirje olisi helposti mennyt väärään osoitteeseen.
+KYSYMYS: Kerro lisää: Prešporok
+
+### 132
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bratislava (Pozsony) (historia)
+Tietoruudun teksti: Bratislava, unkariksi Pozsony ja saksaksi Pressburg, on Slovakian nykyinen pääkaupunki, Tonavan varrella lounaisessa Slovakiassa Pienten Karpaattien juurella. Se on Wienin vieressä: kaupungit ovat vain 50 kilometrin päässä toisistaan, mikä tekee niistä Euroopan lähimmät pääkaupungit. Vuosina 1536–1783 kaupunki oli Unkarin kuningaskunnan kruunajaispaikka, lainsäädäntökeskus ja pääkaupunki, ja Pyhän Martinin tuomiokirkossa kruunattiin yksitoista kuningasta ja kahdeksan kuningatarta; useimmat Unkarin valtiopäivät pidettiin siellä 1600-luvulta uudistuskauteen asti. 1800-luvun teollistumisen aikana kaupunkiin rakennettiin Unkarin kuningaskunnan ensimmäinen hevosrautatie Pressburgista Szentgyörgyyn (1840), höyryveturirata Wieniin vuonna 1848 ja Pestiin 1850, mutta kaupungin ensimmäinen pysyvä silta Tonavan yli, Starý most, valmistui vasta vuonna 1891. Kaupungin yllä kohoaa linna tasanteella 8…
+AIEMPI KYSYMYS: Mistä Bratislavan nimi Pressburg tulee?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Nimi Bratislava vakiintui virallisesti vuonna 1919 [[Tšekkoslovakian]] synnyttyä, ja sitä ennen slovakiksi käytettiin muotoa [[Prešporok]]. Saksankielinen nimi Pressburg ja unkarilainen [[Pozsony]] ovat saman paikan vanhoja nimiä. Nimen alkuperää selitetään varhaiskeskiajan hallitsijan nimellä, mutta en ole varma tarkasta etymologiasta. Nimiä oli kaupungilla niin monta, että kirje olisi helposti mennyt väärään osoitteeseen.
+KYSYMYS: Kerro lisää: Pozsony
+
+### 133
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bratislava (Pozsony) (historia)
+Tietoruudun teksti: Bratislava, unkariksi Pozsony ja saksaksi Pressburg, on Slovakian nykyinen pääkaupunki, Tonavan varrella lounaisessa Slovakiassa Pienten Karpaattien juurella. Se on Wienin vieressä: kaupungit ovat vain 50 kilometrin päässä toisistaan, mikä tekee niistä Euroopan lähimmät pääkaupungit. Vuosina 1536–1783 kaupunki oli Unkarin kuningaskunnan kruunajaispaikka, lainsäädäntökeskus ja pääkaupunki, ja Pyhän Martinin tuomiokirkossa kruunattiin yksitoista kuningasta ja kahdeksan kuningatarta; useimmat Unkarin valtiopäivät pidettiin siellä 1600-luvulta uudistuskauteen asti. 1800-luvun teollistumisen aikana kaupunkiin rakennettiin Unkarin kuningaskunnan ensimmäinen hevosrautatie Pressburgista Szentgyörgyyn (1840), höyryveturirata Wieniin vuonna 1848 ja Pestiin 1850, mutta kaupungin ensimmäinen pysyvä silta Tonavan yli, Starý most, valmistui vasta vuonna 1891. Kaupungin yllä kohoaa linna tasanteella 8…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Rakennukset: Kylä, jossa aika pysähtyi] 1376 — Vlkolínec Ružomberokin lähellä mainitaan ensimmäisen kerran vuonna 1376, ja sen nimi tulee luultavasti sanasta vlk eli susi. Kylässä on yli 45 hirsitaloa, joissa jokaisessa on kaksi tai kolme huonetta, sekä 1700-luvulta peräisin oleva puinen kellotorni ja barokkikappeli. Talot numero 16 ja 17 on muutettu kansanelämän museoksi, jossa on arjen ja työn esineitä. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on Pohjois-Karpaattien kansanarkkitehtuurin ehjimpiä esimerkkejä.
+- [Slovakia — maalehti / Luonto: Huippu, jolla oli monta nimeä] 1838 — Gerlachovský štít eli Gerlach on Korkeiden Tatrojen ja koko Karpaattien korkein huippu, 2654 metriä. Vanhimman tunnetun nimen, Kösselberg eli Kattilavuori, se sai kartalla 1762, ja slovakiaksi sitä kutsuttiin Kotoliksi eli kattilaksi. Korkeimmaksi huipuksi sen tunnisti vasta 1838 eräs tutkija. Sen jälkeen nimeä vaihdettiin aina vallanpitäjän mukaan: 1896 se sai keisari Frans Joosefin nimen. Kaikkiaan nimiä oli neljä ja nimenmuutoksia kuusi. Pääsy huipulle on nykyään rajoitettu.
+AIEMPI KYSYMYS: Millainen Bratislavan linna on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Bratislavan linna kohoaa kaupungin yllä kukkulan tasanteella [[Tonavan]] ja [[Pienten Karpaattien]] tuntumassa. Rakennus on suorakaiteen muotoinen, ja sen kulmissa on torneja. Linna paloi 1800-luvun alussa, ja sitä on rakennettu uudelleen vielä 1900-luvulla. Korkealta katsottuna kaupunki on kyllä kyyhkyn mieleen.
+KYSYMYS: Kerro lisää: Pienten Karpaattien
+
+### 134
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bardejov (historia)
+Tietoruudun teksti: Bardejov, unkariksi Bártfa ja saksaksi Bartfeld, on kaupunki Koillis-Slovakiassa Šarišin alueella Topľa-joen tulvatasanteella Beskydien kukkuloilla. Sen täysin ehjänä säilynyt keskiaikainen keskusta sisältää lukuisia kulttuurimuistomerkkejä, ja kaupunki on Unescon maailmanperintökohde. Ensimmäinen kirjallinen maininta on 1240-luvulta, jolloin Pyhän Egidiuksen basilika oli jo rakennettu; vuonna 1376 kaupunki sai kuninkaallisen kaupungin aseman. Vahvasti linnoitettu kaupunki oli 1300-luvulla Puolan-kaupan keskus, ja yli 50 kiltaa hallitsi sen vilkasta taloutta. Lokakuussa 1410 Bardejovin taistelussa Puolan kuningas Władysław II Jagiełło voitti Unkarin ja Kroatian kuninkaan Sigismundin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Boratynka] 1659–1668 Kun kassa on tyhjä, voi aina lyödä lisää rahaa — kunhan ei kysy, mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä 1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka on kestänyt pidempään kuin kolikon ostovoima.
+AIEMPI KYSYMYS: Kuinka moni kilta hallitsi kaupungin taloutta?
+AIEMPI VASTAUS (Livia):
+Katotaas. Bardejovin vilkasta taloutta hallitsi yli viisikymmentä kiltaa. Vahvasti linnoitettu kaupunki oli 1300-luvulla [[Puolan-kaupan]] keskus, ja kaupungin sijainti [[Topľa-joen]] tulvatasanteella Koillis-Slovakiassa oli kaupankäynnille edullinen. Viisikymmentä kiltaa, ja jokaisella varmasti oma mielipide hinnoista.
+KYSYMYS: Kerro lisää: Puolan-kaupan
+
+### 135
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bardejov (historia)
+Tietoruudun teksti: Bardejov, unkariksi Bártfa ja saksaksi Bartfeld, on kaupunki Koillis-Slovakiassa Šarišin alueella Topľa-joen tulvatasanteella Beskydien kukkuloilla. Sen täysin ehjänä säilynyt keskiaikainen keskusta sisältää lukuisia kulttuurimuistomerkkejä, ja kaupunki on Unescon maailmanperintökohde. Ensimmäinen kirjallinen maininta on 1240-luvulta, jolloin Pyhän Egidiuksen basilika oli jo rakennettu; vuonna 1376 kaupunki sai kuninkaallisen kaupungin aseman. Vahvasti linnoitettu kaupunki oli 1300-luvulla Puolan-kaupan keskus, ja yli 50 kiltaa hallitsi sen vilkasta taloutta. Lokakuussa 1410 Bardejovin taistelussa Puolan kuningas Władysław II Jagiełło voitti Unkarin ja Kroatian kuninkaan Sigismundin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namib — kaupunkilehti / Namib: Kuiseb-joen näkymätön raja] Kuiseb-joki on Namibin näkymätön raja: sen eteläpuolella leviää valtava hiekkameri punertavine dyyneineen, kun taas pohjoispuolella maasto muuttuu karuksi soratasangoksi. Joki itse virtaa harvoin pintavettä – suurimman osan vuodesta sen uoma on kuiva hiekkajuova syvän kanjonin pohjalla – mutta maan alla kulkeva vesi riittää ylläpitämään kapean vihreän käytävän akaasioita joen varrella. Vuosisatojen ajan alueen paimentolaiset, topnaar-namat, ovat laiduntaneet karjaansa juuri tällä kapealla vyöhykkeellä, ainoalla paikalla, jossa aavikko tarjoaa edes vähän vettä ja varjoa.
+AIEMPI KYSYMYS: Kuinka moni kilta hallitsi kaupungin taloutta?
+AIEMPI VASTAUS (Livia):
+Katotaas. Bardejovin vilkasta taloutta hallitsi yli viisikymmentä kiltaa. Vahvasti linnoitettu kaupunki oli 1300-luvulla [[Puolan-kaupan]] keskus, ja kaupungin sijainti [[Topľa-joen]] tulvatasanteella Koillis-Slovakiassa oli kaupankäynnille edullinen. Viisikymmentä kiltaa, ja jokaisella varmasti oma mielipide hinnoista.
+KYSYMYS: Kerro lisää: Topľa-joen
+
+### 136
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bardejov (historia)
+Tietoruudun teksti: Bardejov, unkariksi Bártfa ja saksaksi Bartfeld, on kaupunki Koillis-Slovakiassa Šarišin alueella Topľa-joen tulvatasanteella Beskydien kukkuloilla. Sen täysin ehjänä säilynyt keskiaikainen keskusta sisältää lukuisia kulttuurimuistomerkkejä, ja kaupunki on Unescon maailmanperintökohde. Ensimmäinen kirjallinen maininta on 1240-luvulta, jolloin Pyhän Egidiuksen basilika oli jo rakennettu; vuonna 1376 kaupunki sai kuninkaallisen kaupungin aseman. Vahvasti linnoitettu kaupunki oli 1300-luvulla Puolan-kaupan keskus, ja yli 50 kiltaa hallitsi sen vilkasta taloutta. Lokakuussa 1410 Bardejovin taistelussa Puolan kuningas Władysław II Jagiełło voitti Unkarin ja Kroatian kuninkaan Sigismundin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Viiden kaupungin liiton johtaja] Kassa oli keskiajalla Unkarin kuningaskunnan vapaa kuninkaallinen kaupunki, jolla oli omat oikeutensa ja suora yhteys kuninkaaseen. Vuonna 1347 se nousi kuninkaallisten vapaakaupunkien arvojärjestyksessä toiseksi heti pääkaupunki Budan jälkeen. 1400-luvun alusta se johti Pentapolitanaa, Ylä-Unkarin viiden tärkeimmän kaupungin liittoa, johon kuuluivat myös Bardejov, Levoča, Prešov ja Sabinov. Liitto valvoi ja kehitti kauppaa alueen vanhoilla reiteillä.
+AIEMPI KYSYMYS: Minä vuonna kaupunki sai kuninkaallisen kaupungin aseman?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Bardejov]] sai kuninkaallisen kaupungin aseman vuonna 1376. Asema merkitsi yleensä sitä, että kaupunki oli suoraan kuninkaan alainen ja sillä oli laajoja etuoikeuksia. Kaupungissa oli tuolloin jo [[Pyhän Egidiuksen basilika]], jonka kerrotaan olleen rakennettuna 1240-luvulla. Kuninkaan oma kaupunki, siinä vasta arvonimi.
+KYSYMYS: Kerro lisää: Bardejov
+
+### 137
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bardejov (historia)
+Tietoruudun teksti: Bardejov, unkariksi Bártfa ja saksaksi Bartfeld, on kaupunki Koillis-Slovakiassa Šarišin alueella Topľa-joen tulvatasanteella Beskydien kukkuloilla. Sen täysin ehjänä säilynyt keskiaikainen keskusta sisältää lukuisia kulttuurimuistomerkkejä, ja kaupunki on Unescon maailmanperintökohde. Ensimmäinen kirjallinen maininta on 1240-luvulta, jolloin Pyhän Egidiuksen basilika oli jo rakennettu; vuonna 1376 kaupunki sai kuninkaallisen kaupungin aseman. Vahvasti linnoitettu kaupunki oli 1300-luvulla Puolan-kaupan keskus, ja yli 50 kiltaa hallitsi sen vilkasta taloutta. Lokakuussa 1410 Bardejovin taistelussa Puolan kuningas Władysław II Jagiełło voitti Unkarin ja Kroatian kuninkaan Sigismundin.
+AIEMPI KYSYMYS: Minä vuonna kaupunki sai kuninkaallisen kaupungin aseman?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Bardejov]] sai kuninkaallisen kaupungin aseman vuonna 1376. Asema merkitsi yleensä sitä, että kaupunki oli suoraan kuninkaan alainen ja sillä oli laajoja etuoikeuksia. Kaupungissa oli tuolloin jo [[Pyhän Egidiuksen basilika]], jonka kerrotaan olleen rakennettuna 1240-luvulla. Kuninkaan oma kaupunki, siinä vasta arvonimi.
+KYSYMYS: Kerro lisää: Pyhän Egidiuksen basilika
+
+### 138
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bardejov (historia)
+Tietoruudun teksti: Bardejov, unkariksi Bártfa ja saksaksi Bartfeld, on kaupunki Koillis-Slovakiassa Šarišin alueella Topľa-joen tulvatasanteella Beskydien kukkuloilla. Sen täysin ehjänä säilynyt keskiaikainen keskusta sisältää lukuisia kulttuurimuistomerkkejä, ja kaupunki on Unescon maailmanperintökohde. Ensimmäinen kirjallinen maininta on 1240-luvulta, jolloin Pyhän Egidiuksen basilika oli jo rakennettu; vuonna 1376 kaupunki sai kuninkaallisen kaupungin aseman. Vahvasti linnoitettu kaupunki oli 1300-luvulla Puolan-kaupan keskus, ja yli 50 kiltaa hallitsi sen vilkasta taloutta. Lokakuussa 1410 Bardejovin taistelussa Puolan kuningas Władysław II Jagiełło voitti Unkarin ja Kroatian kuninkaan Sigismundin.
+AIEMPI KYSYMYS: Miksi Bardejovin keskusta on maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+No jopas. Bardejovin keskiaikainen keskusta on säilynyt poikkeuksellisen ehjänä, ja siinä on lukuisia kulttuurimuistomerkkejä. Kaupunkikeskusta rakentui kuninkaallisen kaupungin ja Puolan-kaupan keskuksen kukoistuskaudella, ja sen sydämessä on [[Pyhän Egidiuksen basilika]]. Kaupunki sijaitsee [[Beskydien]] kukkuloilla Koillis-Slovakiassa. Ehjä keskiaikainen kaupunki, harvinaista herkkua.
+KYSYMYS: Kerro lisää: Beskydien
+
+### 139
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bardejov (historia)
+Tietoruudun teksti: Bardejov, unkariksi Bártfa ja saksaksi Bartfeld, on kaupunki Koillis-Slovakiassa Šarišin alueella Topľa-joen tulvatasanteella Beskydien kukkuloilla. Sen täysin ehjänä säilynyt keskiaikainen keskusta sisältää lukuisia kulttuurimuistomerkkejä, ja kaupunki on Unescon maailmanperintökohde. Ensimmäinen kirjallinen maininta on 1240-luvulta, jolloin Pyhän Egidiuksen basilika oli jo rakennettu; vuonna 1376 kaupunki sai kuninkaallisen kaupungin aseman. Vahvasti linnoitettu kaupunki oli 1300-luvulla Puolan-kaupan keskus, ja yli 50 kiltaa hallitsi sen vilkasta taloutta. Lokakuussa 1410 Bardejovin taistelussa Puolan kuningas Władysław II Jagiełło voitti Unkarin ja Kroatian kuninkaan Sigismundin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Miten Bardejov on kirjoitettu unkariksi ja saksaksi?
+AIEMPI VASTAUS (Livia):
+Ai se. Unkariksi Bardejov on Bártfa ja saksaksi Bartfeld. Nimet kertovat alueen monikielisestä historiasta: kaupunki kuului pitkään [[Unkarin kuningaskuntaan]], ja [[Šarišin]] alueen kaupungeissa asui lähteiden mukaan myös saksankielisiä porvareita. Kolme nimeä yhdelle kaupungille, kirjeenkantajalle ihan painajainen.
+KYSYMYS: Kerro lisää: Unkarin kuningaskuntaan
+
+### 140
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bardejov (historia)
+Tietoruudun teksti: Bardejov, unkariksi Bártfa ja saksaksi Bartfeld, on kaupunki Koillis-Slovakiassa Šarišin alueella Topľa-joen tulvatasanteella Beskydien kukkuloilla. Sen täysin ehjänä säilynyt keskiaikainen keskusta sisältää lukuisia kulttuurimuistomerkkejä, ja kaupunki on Unescon maailmanperintökohde. Ensimmäinen kirjallinen maininta on 1240-luvulta, jolloin Pyhän Egidiuksen basilika oli jo rakennettu; vuonna 1376 kaupunki sai kuninkaallisen kaupungin aseman. Vahvasti linnoitettu kaupunki oli 1300-luvulla Puolan-kaupan keskus, ja yli 50 kiltaa hallitsi sen vilkasta taloutta. Lokakuussa 1410 Bardejovin taistelussa Puolan kuningas Władysław II Jagiełło voitti Unkarin ja Kroatian kuninkaan Sigismundin.
+AIEMPI KYSYMYS: Miten Bardejov on kirjoitettu unkariksi ja saksaksi?
+AIEMPI VASTAUS (Livia):
+Ai se. Unkariksi Bardejov on Bártfa ja saksaksi Bartfeld. Nimet kertovat alueen monikielisestä historiasta: kaupunki kuului pitkään [[Unkarin kuningaskuntaan]], ja [[Šarišin]] alueen kaupungeissa asui lähteiden mukaan myös saksankielisiä porvareita. Kolme nimeä yhdelle kaupungille, kirjeenkantajalle ihan painajainen.
+KYSYMYS: Kerro lisää: Šarišin
+
+### 141
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bardejov (historia)
+Tietoruudun teksti: Bardejov, unkariksi Bártfa ja saksaksi Bartfeld, on kaupunki Koillis-Slovakiassa Šarišin alueella Topľa-joen tulvatasanteella Beskydien kukkuloilla. Sen täysin ehjänä säilynyt keskiaikainen keskusta sisältää lukuisia kulttuurimuistomerkkejä, ja kaupunki on Unescon maailmanperintökohde. Ensimmäinen kirjallinen maininta on 1240-luvulta, jolloin Pyhän Egidiuksen basilika oli jo rakennettu; vuonna 1376 kaupunki sai kuninkaallisen kaupungin aseman. Vahvasti linnoitettu kaupunki oli 1300-luvulla Puolan-kaupan keskus, ja yli 50 kiltaa hallitsi sen vilkasta taloutta. Lokakuussa 1410 Bardejovin taistelussa Puolan kuningas Władysław II Jagiełło voitti Unkarin ja Kroatian kuninkaan Sigismundin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Rakennukset: Kylä, jossa aika pysähtyi] 1376 — Vlkolínec Ružomberokin lähellä mainitaan ensimmäisen kerran vuonna 1376, ja sen nimi tulee luultavasti sanasta vlk eli susi. Kylässä on yli 45 hirsitaloa, joissa jokaisessa on kaksi tai kolme huonetta, sekä 1700-luvulta peräisin oleva puinen kellotorni ja barokkikappeli. Talot numero 16 ja 17 on muutettu kansanelämän museoksi, jossa on arjen ja työn esineitä. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on Pohjois-Karpaattien kansanarkkitehtuurin ehjimpiä esimerkkejä.
+- [Slovakia — maalehti / Luonto: Huippu, jolla oli monta nimeä] 1838 — Gerlachovský štít eli Gerlach on Korkeiden Tatrojen ja koko Karpaattien korkein huippu, 2654 metriä. Vanhimman tunnetun nimen, Kösselberg eli Kattilavuori, se sai kartalla 1762, ja slovakiaksi sitä kutsuttiin Kotoliksi eli kattilaksi. Korkeimmaksi huipuksi sen tunnisti vasta 1838 eräs tutkija. Sen jälkeen nimeä vaihdettiin aina vallanpitäjän mukaan: 1896 se sai keisari Frans Joosefin nimen. Kaikkiaan nimiä oli neljä ja nimenmuutoksia kuusi. Pääsy huipulle on nykyään rajoitettu.
+AIEMPI KYSYMYS: Millainen vuoristo Beskydit ovat?
+AIEMPI VASTAUS (Livia):
+Mmm— Beskydit ovat metsäisten vuorten ryhmä, joka kuuluu [[Karpaattien]] vuoristoon ja ulottuu Tšekin, Slovakian, Puolan ja Ukrainan alueille. Bardejov sijaitsee Koillis-Slovakiassa Beskydien kukkuloilla, ja kaupungin halki virtaa [[Topľa-joki]]. Vuoria on mukava katsoa ylhäältä, ne eivät liiku mihinkään.
+KYSYMYS: Kerro lisää: Karpaattien
+
+### 142
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bardejov (historia)
+Tietoruudun teksti: Bardejov, unkariksi Bártfa ja saksaksi Bartfeld, on kaupunki Koillis-Slovakiassa Šarišin alueella Topľa-joen tulvatasanteella Beskydien kukkuloilla. Sen täysin ehjänä säilynyt keskiaikainen keskusta sisältää lukuisia kulttuurimuistomerkkejä, ja kaupunki on Unescon maailmanperintökohde. Ensimmäinen kirjallinen maininta on 1240-luvulta, jolloin Pyhän Egidiuksen basilika oli jo rakennettu; vuonna 1376 kaupunki sai kuninkaallisen kaupungin aseman. Vahvasti linnoitettu kaupunki oli 1300-luvulla Puolan-kaupan keskus, ja yli 50 kiltaa hallitsi sen vilkasta taloutta. Lokakuussa 1410 Bardejovin taistelussa Puolan kuningas Władysław II Jagiełło voitti Unkarin ja Kroatian kuninkaan Sigismundin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Topkapın palatsi] 1459–1465 Sulttaani Mehmed II aloitti palatsin rakentamisen vuonna 1459, ja se oli valmis noin vuonna 1465. Seuraavat lähes 400 vuotta se oli Osmannien sulttaanien koti ja valtakunnan hallintokeskus, kunnes hovi muutti Dolmabahçen palatsiin 1850-luvulla. Palatsin haaremissa asuivat sulttaanin äiti, vaimot ja loppu perhe — tiloja oli yli 400 huonetta. Keittiöt puolestaan valmistivat ruokaa jopa 4000 hengelle päivittäin, ja siellä työskenteli yli 800 kokkia ja apulaista. Aarrekammiossa säilytetään yhä sulttaanien kalleuksia, kuten Lusikkamestarin timanttia ja Topkapin tikaria. Vuodesta 1924 palatsi on ollut museo, jossa kuka tahansa voi käydä katsomassa, miten sulttaanit elivät.
+AIEMPI KYSYMYS: Millainen vuoristo Beskydit ovat?
+AIEMPI VASTAUS (Livia):
+Mmm— Beskydit ovat metsäisten vuorten ryhmä, joka kuuluu [[Karpaattien]] vuoristoon ja ulottuu Tšekin, Slovakian, Puolan ja Ukrainan alueille. Bardejov sijaitsee Koillis-Slovakiassa Beskydien kukkuloilla, ja kaupungin halki virtaa [[Topľa-joki]]. Vuoria on mukava katsoa ylhäältä, ne eivät liiku mihinkään.
+KYSYMYS: Kerro lisää: Topľa-joki
+
+### 143
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nitra (historia)
+Tietoruudun teksti: Nitra, unkariksi Nyitra, on Lounais-Slovakian kaupunki Zobor-vuoren juurella Nitra-joen laaksossa noin 90 kilometriä Bratislavasta koilliseen; asukkaita on noin 78 000. Se on yksi Slovakian vanhimmista kaupungeista ja oli historiallisesti merkittävän Nitran ruhtinaskunnan keskus; ensimmäinen maininta on 800-luvulta. Kaupunki on Slovakian maatalouden pääkaupunki pitkän viljelyperinteensä, edullisen ilmastonsa ja maantieteellisen sijaintinsa ansiosta. Nähtävyyksiin kuuluvat Nitran linna, vanhakaupunki ja Zobor-kukkula sekä linnan Pyhän Emmeramin tuomiokirkko; kaupungin vanhin kirkko, Pyhän Tapanin kirkko, on rakennettu 1000–1100-luvulla, vaikka sen perusta on 800-luvulta.
+AIEMPI KYSYMYS: Minkä vuoren juurella Nitra sijaitsee?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Nitra sijaitsee Zobor-vuoren juurella [[Nitra-joen]] laaksossa Lounais-Slovakiassa, noin 90 kilometriä Bratislavasta koilliseen. Kaupungin nähtävyyksiin kuuluvat linna, vanhakaupunki ja linnan [[Pyhän Emmeramin tuomiokirkko]]. Vuoren juurella on aina hyvä laskeutua.
+KYSYMYS: Kerro lisää: Nitra-joen
+
+### 144
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nitra (historia)
+Tietoruudun teksti: Nitra, unkariksi Nyitra, on Lounais-Slovakian kaupunki Zobor-vuoren juurella Nitra-joen laaksossa noin 90 kilometriä Bratislavasta koilliseen; asukkaita on noin 78 000. Se on yksi Slovakian vanhimmista kaupungeista ja oli historiallisesti merkittävän Nitran ruhtinaskunnan keskus; ensimmäinen maininta on 800-luvulta. Kaupunki on Slovakian maatalouden pääkaupunki pitkän viljelyperinteensä, edullisen ilmastonsa ja maantieteellisen sijaintinsa ansiosta. Nähtävyyksiin kuuluvat Nitran linna, vanhakaupunki ja Zobor-kukkula sekä linnan Pyhän Emmeramin tuomiokirkko; kaupungin vanhin kirkko, Pyhän Tapanin kirkko, on rakennettu 1000–1100-luvulla, vaikka sen perusta on 800-luvulta.
+AIEMPI KYSYMYS: Minkä vuoren juurella Nitra sijaitsee?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Nitra sijaitsee Zobor-vuoren juurella [[Nitra-joen]] laaksossa Lounais-Slovakiassa, noin 90 kilometriä Bratislavasta koilliseen. Kaupungin nähtävyyksiin kuuluvat linna, vanhakaupunki ja linnan [[Pyhän Emmeramin tuomiokirkko]]. Vuoren juurella on aina hyvä laskeutua.
+KYSYMYS: Kerro lisää: Pyhän Emmeramin tuomiokirkko
+
+### 145
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nitra (historia)
+Tietoruudun teksti: Nitra, unkariksi Nyitra, on Lounais-Slovakian kaupunki Zobor-vuoren juurella Nitra-joen laaksossa noin 90 kilometriä Bratislavasta koilliseen; asukkaita on noin 78 000. Se on yksi Slovakian vanhimmista kaupungeista ja oli historiallisesti merkittävän Nitran ruhtinaskunnan keskus; ensimmäinen maininta on 800-luvulta. Kaupunki on Slovakian maatalouden pääkaupunki pitkän viljelyperinteensä, edullisen ilmastonsa ja maantieteellisen sijaintinsa ansiosta. Nähtävyyksiin kuuluvat Nitran linna, vanhakaupunki ja Zobor-kukkula sekä linnan Pyhän Emmeramin tuomiokirkko; kaupungin vanhin kirkko, Pyhän Tapanin kirkko, on rakennettu 1000–1100-luvulla, vaikka sen perusta on 800-luvulta.
+AIEMPI KYSYMYS: Minkä ruhtinaskunnan keskus Nitra oli?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Nitra oli Nitran ruhtinaskunnan keskus, ja kaupungin ensimmäinen maininta on peräisin 800-luvulta. Ruhtinaskunta oli yksi varhaisimmista slaavilaisten valtioista nykyisen Slovakian alueella, ja sen tunnetuimpia hallitsijoita oli [[Pribina]]. Myöhemmin alue liittyi osaksi [[Suur-Määriä]]. Ruhtinaita oli monta, mutta yksikään ei lähettänyt minulle kirjettä.
+KYSYMYS: Kerro lisää: Pribina
+
+### 146
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nitra (historia)
+Tietoruudun teksti: Nitra, unkariksi Nyitra, on Lounais-Slovakian kaupunki Zobor-vuoren juurella Nitra-joen laaksossa noin 90 kilometriä Bratislavasta koilliseen; asukkaita on noin 78 000. Se on yksi Slovakian vanhimmista kaupungeista ja oli historiallisesti merkittävän Nitran ruhtinaskunnan keskus; ensimmäinen maininta on 800-luvulta. Kaupunki on Slovakian maatalouden pääkaupunki pitkän viljelyperinteensä, edullisen ilmastonsa ja maantieteellisen sijaintinsa ansiosta. Nähtävyyksiin kuuluvat Nitran linna, vanhakaupunki ja Zobor-kukkula sekä linnan Pyhän Emmeramin tuomiokirkko; kaupungin vanhin kirkko, Pyhän Tapanin kirkko, on rakennettu 1000–1100-luvulla, vaikka sen perusta on 800-luvulta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New Orleans — kohdekartta / Kohdekartta: Vanha rahapaja] 1838–1909 Rahapaja toimi kahdessa jaksossa, 1838–1861 ja 1879–1909, ja löi niiden aikana yli 427 miljoonaa kulta- ja hopearahaa, nimellisarvoltaan yli 307 miljoonaa dollaria. Kongressi perusti 1835 kolme haararahapajaa; Charlotte ja Dahlonega olivat kultakenttien vieressä, mutta New Orleans valittiin sataman takia: 1800-luvun alkupuolella kaupungin kautta kulki enemmän ulkomaankauppaa kuin minkään muun yhdysvaltalaiskaupungin, ja Meksikon kultaa saapui satamaan joka vuosi suuria määriä. Talon piirsi William Strickland, saman miehen käsialaa ovat maan neljän ensimmäisen rahapajan rakennukset. Ensimmäiset rahat, kolmekymmentä kymmensenttistä, lyötiin 7. toukokuuta 1838. Sisällissota katkaisi …
+- [Grand Canyon — kaupunkilehti / Kivi, joki ja eliöt: Kiipeilijä jolle jyrkänne ei ole este] Aavikonlampaat liikkuvat Grand Canyonin pystysuorilla kallioseinämillä yhtä varmasti kuin muut eläimet tasamaalla: niiden sorkkien kumimaiset alustat tarttuvat kapeisiinkin kielekkeisiin, ja ne osaavat hypätä useiden metrien pudotuksia vahingoittumatta. Pässien kierteiset sarvet voivat painaa yli 13 kiloa – enemmän kuin niiden kaikkien muiden luiden yhteispaino – ja niitä käytetään sekä puolustukseen että kilpataisteluissa toisia pässejä vastaan kiima-aikana. Lampaat selviävät myös ilman juomavettä pitkiä aikoja, sillä ne saavat nesteestään kasveista ja voivat juoda kerralla suuria määriä löytäessään lähteen tai sadeveden täyttämän kalliokuopan.
+AIEMPI KYSYMYS: Minkä ruhtinaskunnan keskus Nitra oli?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Nitra oli Nitran ruhtinaskunnan keskus, ja kaupungin ensimmäinen maininta on peräisin 800-luvulta. Ruhtinaskunta oli yksi varhaisimmista slaavilaisten valtioista nykyisen Slovakian alueella, ja sen tunnetuimpia hallitsijoita oli [[Pribina]]. Myöhemmin alue liittyi osaksi [[Suur-Määriä]]. Ruhtinaita oli monta, mutta yksikään ei lähettänyt minulle kirjettä.
+KYSYMYS: Kerro lisää: Suur-Määriä
+
+### 147
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nitra (historia)
+Tietoruudun teksti: Nitra, unkariksi Nyitra, on Lounais-Slovakian kaupunki Zobor-vuoren juurella Nitra-joen laaksossa noin 90 kilometriä Bratislavasta koilliseen; asukkaita on noin 78 000. Se on yksi Slovakian vanhimmista kaupungeista ja oli historiallisesti merkittävän Nitran ruhtinaskunnan keskus; ensimmäinen maininta on 800-luvulta. Kaupunki on Slovakian maatalouden pääkaupunki pitkän viljelyperinteensä, edullisen ilmastonsa ja maantieteellisen sijaintinsa ansiosta. Nähtävyyksiin kuuluvat Nitran linna, vanhakaupunki ja Zobor-kukkula sekä linnan Pyhän Emmeramin tuomiokirkko; kaupungin vanhin kirkko, Pyhän Tapanin kirkko, on rakennettu 1000–1100-luvulla, vaikka sen perusta on 800-luvulta.
+AIEMPI KYSYMYS: Kuka oli pyhä Emmeram?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Pyhä Emmeram oli 600-luvulla Baijerin alueella vaikuttanut lähetyssaarnaaja ja piispa, jota kunnioitetaan erityisesti [[Regensburgin]] pyhimyksenä. Nitran linnan tuomiokirkko on omistettu hänelle. Yhteys Nitraan juontuu todennäköisesti varhaiskeskiajan [[Baijerin]] kristillisestä lähetystyöstä, mutta en ole varma tästä. Pyhimyksiä on paljon, ja jokaisella oma ikkunalautansa.
+KYSYMYS: Kerro lisää: Regensburgin
+
+### 148
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nitra (historia)
+Tietoruudun teksti: Nitra, unkariksi Nyitra, on Lounais-Slovakian kaupunki Zobor-vuoren juurella Nitra-joen laaksossa noin 90 kilometriä Bratislavasta koilliseen; asukkaita on noin 78 000. Se on yksi Slovakian vanhimmista kaupungeista ja oli historiallisesti merkittävän Nitran ruhtinaskunnan keskus; ensimmäinen maininta on 800-luvulta. Kaupunki on Slovakian maatalouden pääkaupunki pitkän viljelyperinteensä, edullisen ilmastonsa ja maantieteellisen sijaintinsa ansiosta. Nähtävyyksiin kuuluvat Nitran linna, vanhakaupunki ja Zobor-kukkula sekä linnan Pyhän Emmeramin tuomiokirkko; kaupungin vanhin kirkko, Pyhän Tapanin kirkko, on rakennettu 1000–1100-luvulla, vaikka sen perusta on 800-luvulta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: Haas–Lilienthalin talo] 1886–1973 Talon rakennutti kauppias William Haas (1849–1916), joka syntyi juutalaiseen perheeseen Baijerin Reckendorfissa ja saapui San Franciscoon lokakuussa 1868. Hän menestyi nopeasti tukkukauppiaana ja meni 1880 naimisiin Bertha Greenebaumin kanssa, jonka isä oli niin ikään baijerilainen ja omisti kalifornialaisen kauppahuoneen. Perhe asui useissa vuokra-asunnoissa, kunnes rakennutti 1886 oman talon Franklin Streetille. Suunnittelijaksi tuli baijerilainen arkkitehti Peter R. Schmidt. Talo on punapuuta, tyyliltään Queen Anne ja Eastlake, ja sen kulmassa on tornihuone noitalakin muotoisine kattoineen. Pohjaratkaisu on kaupungille tyypillinen rivitalokaava, joka kehitettiin syvien ja kapei…
+- [Saksa — maalehti / Historia: Kuningas rakensi itselleen satulinnan] 1869 — Baijerin kuningas Ludvig II ei viihtynyt hallitsijana vaan saduissa. Vuonna 1869 hän alkoi rakennuttaa vuorenrinteelle linnaa, joka näyttää keskiaikaiselta mutta oli sisältä aikansa uusinta tekniikkaa: keskuslämmitys, juokseva vesi ja jopa sähkökelloilla kutsuttava palveluskunta. Ludvig ehti asua Neuschwansteinissa vain 172 päivää, ja rahat loppuivat kesken — torneja jäi rakentamatta. Nykyään linnassa käy 1,4 miljoonaa vierasta vuodessa, ja sen sanotaan olleen Disneyn satulinnan esikuva.
+AIEMPI KYSYMYS: Kuka oli pyhä Emmeram?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Pyhä Emmeram oli 600-luvulla Baijerin alueella vaikuttanut lähetyssaarnaaja ja piispa, jota kunnioitetaan erityisesti [[Regensburgin]] pyhimyksenä. Nitran linnan tuomiokirkko on omistettu hänelle. Yhteys Nitraan juontuu todennäköisesti varhaiskeskiajan [[Baijerin]] kristillisestä lähetystyöstä, mutta en ole varma tästä. Pyhimyksiä on paljon, ja jokaisella oma ikkunalautansa.
+KYSYMYS: Kerro lisää: Baijerin
+
+### 149
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nitra (historia)
+Tietoruudun teksti: Nitra, unkariksi Nyitra, on Lounais-Slovakian kaupunki Zobor-vuoren juurella Nitra-joen laaksossa noin 90 kilometriä Bratislavasta koilliseen; asukkaita on noin 78 000. Se on yksi Slovakian vanhimmista kaupungeista ja oli historiallisesti merkittävän Nitran ruhtinaskunnan keskus; ensimmäinen maininta on 800-luvulta. Kaupunki on Slovakian maatalouden pääkaupunki pitkän viljelyperinteensä, edullisen ilmastonsa ja maantieteellisen sijaintinsa ansiosta. Nähtävyyksiin kuuluvat Nitran linna, vanhakaupunki ja Zobor-kukkula sekä linnan Pyhän Emmeramin tuomiokirkko; kaupungin vanhin kirkko, Pyhän Tapanin kirkko, on rakennettu 1000–1100-luvulla, vaikka sen perusta on 800-luvulta.
+AIEMPI KYSYMYS: Miksi Nitraa sanotaan maatalouden pääkaupungiksi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Nitraa kutsutaan Slovakian maatalouden pääkaupungiksi pitkän viljelyperinteen, edullisen ilmaston ja sijainnin vuoksi. Kaupunki sijaitsee hedelmällisen [[Nitra-joen]] laaksossa, siellä toimii maatalousyliopisto, ja kaupungissa järjestetään maataloustapahtuma [[Agrokomplex]]. Viljelystä tulee viljaa ja viljasta pullaa, joten kannatan.
+KYSYMYS: Kerro lisää: Agrokomplex
+
+### 150
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nitra (historia)
+Tietoruudun teksti: Nitra, unkariksi Nyitra, on Lounais-Slovakian kaupunki Zobor-vuoren juurella Nitra-joen laaksossa noin 90 kilometriä Bratislavasta koilliseen; asukkaita on noin 78 000. Se on yksi Slovakian vanhimmista kaupungeista ja oli historiallisesti merkittävän Nitran ruhtinaskunnan keskus; ensimmäinen maininta on 800-luvulta. Kaupunki on Slovakian maatalouden pääkaupunki pitkän viljelyperinteensä, edullisen ilmastonsa ja maantieteellisen sijaintinsa ansiosta. Nähtävyyksiin kuuluvat Nitran linna, vanhakaupunki ja Zobor-kukkula sekä linnan Pyhän Emmeramin tuomiokirkko; kaupungin vanhin kirkko, Pyhän Tapanin kirkko, on rakennettu 1000–1100-luvulla, vaikka sen perusta on 800-luvulta.
+AIEMPI KYSYMYS: Mikä oli Suur-Määri?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Suur-Määri oli 800-luvulla vaikuttanut slaavilainen valtio Keski-Euroopassa, jonka alueeseen kuului nykyisen Slovakian lounaisosa. Nitran ruhtinaskunta liittyi siihen 800-luvun alkupuoliskolla. Vuonna 863 valtakuntaan saapuivat lähetyssaarnaajat [[Kyrillos ja Metodios]], jotka loivat [[glagoliittisen]] aakkoston slaavin kielen kirjoittamiseksi. Aakkoset ovat kyllä kyyhkyn ystävä, koska ne tekevät kirjeistä luettavia.
+KYSYMYS: Kerro lisää: Kyrillos ja Metodios
+
+### 151
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nitra (historia)
+Tietoruudun teksti: Nitra, unkariksi Nyitra, on Lounais-Slovakian kaupunki Zobor-vuoren juurella Nitra-joen laaksossa noin 90 kilometriä Bratislavasta koilliseen; asukkaita on noin 78 000. Se on yksi Slovakian vanhimmista kaupungeista ja oli historiallisesti merkittävän Nitran ruhtinaskunnan keskus; ensimmäinen maininta on 800-luvulta. Kaupunki on Slovakian maatalouden pääkaupunki pitkän viljelyperinteensä, edullisen ilmastonsa ja maantieteellisen sijaintinsa ansiosta. Nähtävyyksiin kuuluvat Nitran linna, vanhakaupunki ja Zobor-kukkula sekä linnan Pyhän Emmeramin tuomiokirkko; kaupungin vanhin kirkko, Pyhän Tapanin kirkko, on rakennettu 1000–1100-luvulla, vaikka sen perusta on 800-luvulta.
+AIEMPI KYSYMYS: Mikä oli Suur-Määri?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Suur-Määri oli 800-luvulla vaikuttanut slaavilainen valtio Keski-Euroopassa, jonka alueeseen kuului nykyisen Slovakian lounaisosa. Nitran ruhtinaskunta liittyi siihen 800-luvun alkupuoliskolla. Vuonna 863 valtakuntaan saapuivat lähetyssaarnaajat [[Kyrillos ja Metodios]], jotka loivat [[glagoliittisen]] aakkoston slaavin kielen kirjoittamiseksi. Aakkoset ovat kyllä kyyhkyn ystävä, koska ne tekevät kirjeistä luettavia.
+KYSYMYS: Kerro lisää: glagoliittisen
+
+### 152
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trnava (historia)
+Tietoruudun teksti: Trnava, unkariksi Nagyszombat ja saksaksi Tyrnau, on Länsi-Slovakian kaupunki 47 kilometriä Bratislavasta koilliseen Trnávka-joen varrella. Se on roomalaiskatolisen arkkipiispan istuin (1541–1820 ja uudelleen vuodesta 1977), ja monien muurien sisällä olevien kirkkojensa vuoksi sitä on kutsuttu Pieneksi Roomaksi eli Slovakian Roomaksi. Vuonna 1238 Trnavasta tuli ensimmäinen nykyisen Slovakian alueen kaupunki, jolle kuningas myönsi kaupunkioikeudet. Arkkipiispa Péter Pázmány perusti Trnavaan jesuiittayliopiston (1635–1777), joka oli tuolloin Unkarin kuningaskunnan ainoa yliopisto ja josta tuli slovakialaisen sivistyksen ja kirjallisuuden keskus; 1700-luvun lopulta kaupungista tuli myös slovakialaisen kansallisen herätyksen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kaupunkilehti / Musta Rooma] Salvadoria kutsutaan Mustaksi Roomaksi, koska candomblé, capoeira ja karnevaali eivät ole täällä museoesineitä vaan arkea. Temppelit toimivat, mestarit opettavat ja kadut täyttyvät joka vuosi uudelleen.
+AIEMPI KYSYMYS: Millä lempinimellä Trnavaa kutsutaan monien kirkkojensa vuoksi?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan. Trnavaa kutsutaan monien muurien sisällä olevien kirkkojensa vuoksi [[Pieneksi Roomaksi]] eli Slovakian Roomaksi. Lempinimi viittaa kaupungin asemaan kirkollisena keskuksena, sillä se on roomalaiskatolisen [[arkkipiispan]] istuin: se oli sitä vuosina 1541–1820 ja on taas ollut vuodesta 1977. Pieni Rooma, mut kyllä siellä kirkkoja riittää.
+KYSYMYS: Kerro lisää: Pieneksi Roomaksi
+
+### 153
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trnava (historia)
+Tietoruudun teksti: Trnava, unkariksi Nagyszombat ja saksaksi Tyrnau, on Länsi-Slovakian kaupunki 47 kilometriä Bratislavasta koilliseen Trnávka-joen varrella. Se on roomalaiskatolisen arkkipiispan istuin (1541–1820 ja uudelleen vuodesta 1977), ja monien muurien sisällä olevien kirkkojensa vuoksi sitä on kutsuttu Pieneksi Roomaksi eli Slovakian Roomaksi. Vuonna 1238 Trnavasta tuli ensimmäinen nykyisen Slovakian alueen kaupunki, jolle kuningas myönsi kaupunkioikeudet. Arkkipiispa Péter Pázmány perusti Trnavaan jesuiittayliopiston (1635–1777), joka oli tuolloin Unkarin kuningaskunnan ainoa yliopisto ja josta tuli slovakialaisen sivistyksen ja kirjallisuuden keskus; 1700-luvun lopulta kaupungista tuli myös slovakialaisen kansallisen herätyksen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kaupunkilehti / Puisto kaupungin rajalla: Sarvikuonon arkki] Puistoa kutsutaan joskus nimellä Kifaru Ark, sarvikuonon arkki. Se on yksi Kenian onnistuneimmista mustasarvikuonon turvapaikoista ja harvoja paikkoja, joissa kävijä näkee mustasarvikuonon luonnossa lähes varmasti. Puiston pääportin lähellä toimii 1963 perustettu turvakoti, joka hoitaa orpoja norsun- ja sarvikuononpoikasia ja palauttaa ne myöhemmin suojelualueille. Vuodesta 2005 alue on luokiteltu myös leijonien suojeluyksiköksi. Puiston pohjoisrajalla olevien tehtaiden jätevedet kuormittavat sen vesiä.
+- [Krakova — kaupunkilehti / Uskonto: Arkkipiispa, josta tuli paavi] Wojtyła syntyi Wadowicessa, viisikymmentä kilometriä Krakovasta, ja toimi Krakovan arkkipiispana neljätoista vuotta ennen paaviksi valintaansa. Hänet muistetaan Wawelin katedraalin patsaassa juuri tässä roolissa, ennen kuin maailma tunsi hänet Johannes Paavali II:na. Patsas on yksi lukuisista Krakovassa, jotka kertovat kaupungin ylpeydestä omasta paavistaan.
+AIEMPI KYSYMYS: Millä lempinimellä Trnavaa kutsutaan monien kirkkojensa vuoksi?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan. Trnavaa kutsutaan monien muurien sisällä olevien kirkkojensa vuoksi [[Pieneksi Roomaksi]] eli Slovakian Roomaksi. Lempinimi viittaa kaupungin asemaan kirkollisena keskuksena, sillä se on roomalaiskatolisen [[arkkipiispan]] istuin: se oli sitä vuosina 1541–1820 ja on taas ollut vuodesta 1977. Pieni Rooma, mut kyllä siellä kirkkoja riittää.
+KYSYMYS: Kerro lisää: arkkipiispan
+
+### 154
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trnava (historia)
+Tietoruudun teksti: Trnava, unkariksi Nagyszombat ja saksaksi Tyrnau, on Länsi-Slovakian kaupunki 47 kilometriä Bratislavasta koilliseen Trnávka-joen varrella. Se on roomalaiskatolisen arkkipiispan istuin (1541–1820 ja uudelleen vuodesta 1977), ja monien muurien sisällä olevien kirkkojensa vuoksi sitä on kutsuttu Pieneksi Roomaksi eli Slovakian Roomaksi. Vuonna 1238 Trnavasta tuli ensimmäinen nykyisen Slovakian alueen kaupunki, jolle kuningas myönsi kaupunkioikeudet. Arkkipiispa Péter Pázmány perusti Trnavaan jesuiittayliopiston (1635–1777), joka oli tuolloin Unkarin kuningaskunnan ainoa yliopisto ja josta tuli slovakialaisen sivistyksen ja kirjallisuuden keskus; 1700-luvun lopulta kaupungista tuli myös slovakialaisen kansallisen herätyksen keskus.
+AIEMPI KYSYMYS: Minä vuosina Trnavan jesuiittayliopisto toimi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Trnavan jesuiittayliopisto toimi vuosina 1635–1777, ja sen perusti arkkipiispa [[Péter Pázmány]]. Se oli tuolloin [[Unkarin kuningaskunnan]] ainoa yliopisto, ja siitä tuli slovakialaisen sivistyksen ja kirjallisuuden keskus. Kaupungista tuli 1700-luvun lopulta myös slovakialaisen [[kansallisen herätyksen]] keskus. Pitkä tarina, eikä pullasta puhuttu sanaakaan.
+KYSYMYS: Kerro lisää: Péter Pázmány
+
+### 155
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trnava (historia)
+Tietoruudun teksti: Trnava, unkariksi Nagyszombat ja saksaksi Tyrnau, on Länsi-Slovakian kaupunki 47 kilometriä Bratislavasta koilliseen Trnávka-joen varrella. Se on roomalaiskatolisen arkkipiispan istuin (1541–1820 ja uudelleen vuodesta 1977), ja monien muurien sisällä olevien kirkkojensa vuoksi sitä on kutsuttu Pieneksi Roomaksi eli Slovakian Roomaksi. Vuonna 1238 Trnavasta tuli ensimmäinen nykyisen Slovakian alueen kaupunki, jolle kuningas myönsi kaupunkioikeudet. Arkkipiispa Péter Pázmány perusti Trnavaan jesuiittayliopiston (1635–1777), joka oli tuolloin Unkarin kuningaskunnan ainoa yliopisto ja josta tuli slovakialaisen sivistyksen ja kirjallisuuden keskus; 1700-luvun lopulta kaupungista tuli myös slovakialaisen kansallisen herätyksen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Historia: Kaupunki hopeavuoren päällä] 1735 — Banská Štiavnica kasvoi hopean ja kullan varaan: vuonna 1782 se oli Unkarin kuningaskunnan kolmanneksi suurin kaupunki Bratislavan ja Debrecenin jälkeen. Kun kaivokset tulvivat, 1400–1700-luvuilla rakennettiin kuusikymmentä tekojärveä eli tajchya, jotka yhdistettiin yli sadan kilometrin kanavaverkolla. Kaupungissa toimi vuonna 1735 perustettu kaivoskoulu, josta tuli myöhemmin kaivosakatemia, jota on kutsuttu maailman ensimmäiseksi teknilliseksi yliopistoksi. Jo 1627 täällä käytettiin ruutia kaivoksessa yhtenä maailman ensimmäisistä.
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Minä vuosina Trnavan jesuiittayliopisto toimi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Trnavan jesuiittayliopisto toimi vuosina 1635–1777, ja sen perusti arkkipiispa [[Péter Pázmány]]. Se oli tuolloin [[Unkarin kuningaskunnan]] ainoa yliopisto, ja siitä tuli slovakialaisen sivistyksen ja kirjallisuuden keskus. Kaupungista tuli 1700-luvun lopulta myös slovakialaisen [[kansallisen herätyksen]] keskus. Pitkä tarina, eikä pullasta puhuttu sanaakaan.
+KYSYMYS: Kerro lisää: Unkarin kuningaskunnan
+
+### 156
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trnava (historia)
+Tietoruudun teksti: Trnava, unkariksi Nagyszombat ja saksaksi Tyrnau, on Länsi-Slovakian kaupunki 47 kilometriä Bratislavasta koilliseen Trnávka-joen varrella. Se on roomalaiskatolisen arkkipiispan istuin (1541–1820 ja uudelleen vuodesta 1977), ja monien muurien sisällä olevien kirkkojensa vuoksi sitä on kutsuttu Pieneksi Roomaksi eli Slovakian Roomaksi. Vuonna 1238 Trnavasta tuli ensimmäinen nykyisen Slovakian alueen kaupunki, jolle kuningas myönsi kaupunkioikeudet. Arkkipiispa Péter Pázmány perusti Trnavaan jesuiittayliopiston (1635–1777), joka oli tuolloin Unkarin kuningaskunnan ainoa yliopisto ja josta tuli slovakialaisen sivistyksen ja kirjallisuuden keskus; 1700-luvun lopulta kaupungista tuli myös slovakialaisen kansallisen herätyksen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kaupunkilehti / Musiikki: Perinne, jonka Unesco otti suojaansa] Unesco lisäsi Latvian, Viron ja Liettuan yhteiset laulu- ja tanssijuhlat ihmiskunnan aineettoman kulttuuriperinnön luetteloonsa vuonna 2003 — tunnustuksena siitä, että perinne on säilyttänyt kolmen maan kansanmusiikkia elävänä sukupolvesta toiseen kirjoitetun nuotin ja suullisen opetuksen yhdistelmällä. Kolmen Baltian maan juhlat kehittyivät toisistaan erillään 1800-luvun kansallisen herätyksen aikana, mutta niitä yhdistää sama perusidea: tavalliset ihmiset, ei ammattilaiset, laulavat yhdessä isoina joukkoina oman kielensä ja kulttuurinsa kunniaksi.
+AIEMPI KYSYMYS: Minä vuosina Trnavan jesuiittayliopisto toimi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Trnavan jesuiittayliopisto toimi vuosina 1635–1777, ja sen perusti arkkipiispa [[Péter Pázmány]]. Se oli tuolloin [[Unkarin kuningaskunnan]] ainoa yliopisto, ja siitä tuli slovakialaisen sivistyksen ja kirjallisuuden keskus. Kaupungista tuli 1700-luvun lopulta myös slovakialaisen [[kansallisen herätyksen]] keskus. Pitkä tarina, eikä pullasta puhuttu sanaakaan.
+KYSYMYS: Kerro lisää: kansallisen herätyksen
+
+### 157
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trnava (historia)
+Tietoruudun teksti: Trnava, unkariksi Nagyszombat ja saksaksi Tyrnau, on Länsi-Slovakian kaupunki 47 kilometriä Bratislavasta koilliseen Trnávka-joen varrella. Se on roomalaiskatolisen arkkipiispan istuin (1541–1820 ja uudelleen vuodesta 1977), ja monien muurien sisällä olevien kirkkojensa vuoksi sitä on kutsuttu Pieneksi Roomaksi eli Slovakian Roomaksi. Vuonna 1238 Trnavasta tuli ensimmäinen nykyisen Slovakian alueen kaupunki, jolle kuningas myönsi kaupunkioikeudet. Arkkipiispa Péter Pázmány perusti Trnavaan jesuiittayliopiston (1635–1777), joka oli tuolloin Unkarin kuningaskunnan ainoa yliopisto ja josta tuli slovakialaisen sivistyksen ja kirjallisuuden keskus; 1700-luvun lopulta kaupungista tuli myös slovakialaisen kansallisen herätyksen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+AIEMPI KYSYMYS: Mitä tarkoittaa arkkipiispan istuin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Arkkipiispan istuin on kaupunki, jossa arkkipiispa toimii ja jossa hänen [[tuomiokirkkonsa]] sijaitsee. Arkkipiispa johtaa [[arkkihiippakuntaa]], joka on yleensä tavallista hiippakuntaa keskeisemmässä asemassa oleva kirkollinen alue, ja istuinkaupunki on sen hallinnollinen keskus. Trnava on ollut roomalaiskatolisen kirkon arkkipiispan istuin vuosina 1541–1820 ja uudelleen vuodesta 1977. Minä tunnen paremmin tornit kuin virat, mut kyllä tämä meni.
+KYSYMYS: Kerro lisää: tuomiokirkkonsa
+
+### 158
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trnava (historia)
+Tietoruudun teksti: Trnava, unkariksi Nagyszombat ja saksaksi Tyrnau, on Länsi-Slovakian kaupunki 47 kilometriä Bratislavasta koilliseen Trnávka-joen varrella. Se on roomalaiskatolisen arkkipiispan istuin (1541–1820 ja uudelleen vuodesta 1977), ja monien muurien sisällä olevien kirkkojensa vuoksi sitä on kutsuttu Pieneksi Roomaksi eli Slovakian Roomaksi. Vuonna 1238 Trnavasta tuli ensimmäinen nykyisen Slovakian alueen kaupunki, jolle kuningas myönsi kaupunkioikeudet. Arkkipiispa Péter Pázmány perusti Trnavaan jesuiittayliopiston (1635–1777), joka oli tuolloin Unkarin kuningaskunnan ainoa yliopisto ja josta tuli slovakialaisen sivistyksen ja kirjallisuuden keskus; 1700-luvun lopulta kaupungista tuli myös slovakialaisen kansallisen herätyksen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kaupunkilehti / Puisto kaupungin rajalla: Sarvikuonon arkki] Puistoa kutsutaan joskus nimellä Kifaru Ark, sarvikuonon arkki. Se on yksi Kenian onnistuneimmista mustasarvikuonon turvapaikoista ja harvoja paikkoja, joissa kävijä näkee mustasarvikuonon luonnossa lähes varmasti. Puiston pääportin lähellä toimii 1963 perustettu turvakoti, joka hoitaa orpoja norsun- ja sarvikuononpoikasia ja palauttaa ne myöhemmin suojelualueille. Vuodesta 2005 alue on luokiteltu myös leijonien suojeluyksiköksi. Puiston pohjoisrajalla olevien tehtaiden jätevedet kuormittavat sen vesiä.
+AIEMPI KYSYMYS: Mitä tarkoittaa arkkipiispan istuin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Arkkipiispan istuin on kaupunki, jossa arkkipiispa toimii ja jossa hänen [[tuomiokirkkonsa]] sijaitsee. Arkkipiispa johtaa [[arkkihiippakuntaa]], joka on yleensä tavallista hiippakuntaa keskeisemmässä asemassa oleva kirkollinen alue, ja istuinkaupunki on sen hallinnollinen keskus. Trnava on ollut roomalaiskatolisen kirkon arkkipiispan istuin vuosina 1541–1820 ja uudelleen vuodesta 1977. Minä tunnen paremmin tornit kuin virat, mut kyllä tämä meni.
+KYSYMYS: Kerro lisää: arkkihiippakuntaa
+
+### 159
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trnava (historia)
+Tietoruudun teksti: Trnava, unkariksi Nagyszombat ja saksaksi Tyrnau, on Länsi-Slovakian kaupunki 47 kilometriä Bratislavasta koilliseen Trnávka-joen varrella. Se on roomalaiskatolisen arkkipiispan istuin (1541–1820 ja uudelleen vuodesta 1977), ja monien muurien sisällä olevien kirkkojensa vuoksi sitä on kutsuttu Pieneksi Roomaksi eli Slovakian Roomaksi. Vuonna 1238 Trnavasta tuli ensimmäinen nykyisen Slovakian alueen kaupunki, jolle kuningas myönsi kaupunkioikeudet. Arkkipiispa Péter Pázmány perusti Trnavaan jesuiittayliopiston (1635–1777), joka oli tuolloin Unkarin kuningaskunnan ainoa yliopisto ja josta tuli slovakialaisen sivistyksen ja kirjallisuuden keskus; 1700-luvun lopulta kaupungista tuli myös slovakialaisen kansallisen herätyksen keskus.
+AIEMPI KYSYMYS: Mitä nimiä Trnavalla on unkariksi ja saksaksi?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Unkariksi Trnavan nimi on [[Nagyszombat]] ja saksaksi [[Tyrnau]]. Useat nimet kertovat kaupungin historiasta, sillä se kuului pitkään [[Unkarin kuningaskuntaan]], ja Keski-Euroopassa kaupungeilla on usein ollut eri nimi jokaisella alueen kielellä. Kolme nimeä yhdelle kaupungille, ja minä vaivun jo yhteen.
+KYSYMYS: Kerro lisää: Nagyszombat
+
+### 160
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trnava (historia)
+Tietoruudun teksti: Trnava, unkariksi Nagyszombat ja saksaksi Tyrnau, on Länsi-Slovakian kaupunki 47 kilometriä Bratislavasta koilliseen Trnávka-joen varrella. Se on roomalaiskatolisen arkkipiispan istuin (1541–1820 ja uudelleen vuodesta 1977), ja monien muurien sisällä olevien kirkkojensa vuoksi sitä on kutsuttu Pieneksi Roomaksi eli Slovakian Roomaksi. Vuonna 1238 Trnavasta tuli ensimmäinen nykyisen Slovakian alueen kaupunki, jolle kuningas myönsi kaupunkioikeudet. Arkkipiispa Péter Pázmány perusti Trnavaan jesuiittayliopiston (1635–1777), joka oli tuolloin Unkarin kuningaskunnan ainoa yliopisto ja josta tuli slovakialaisen sivistyksen ja kirjallisuuden keskus; 1700-luvun lopulta kaupungista tuli myös slovakialaisen kansallisen herätyksen keskus.
+AIEMPI KYSYMYS: Mitä nimiä Trnavalla on unkariksi ja saksaksi?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Unkariksi Trnavan nimi on [[Nagyszombat]] ja saksaksi [[Tyrnau]]. Useat nimet kertovat kaupungin historiasta, sillä se kuului pitkään [[Unkarin kuningaskuntaan]], ja Keski-Euroopassa kaupungeilla on usein ollut eri nimi jokaisella alueen kielellä. Kolme nimeä yhdelle kaupungille, ja minä vaivun jo yhteen.
+KYSYMYS: Kerro lisää: Tyrnau

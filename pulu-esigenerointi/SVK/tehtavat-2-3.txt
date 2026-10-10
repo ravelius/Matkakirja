@@ -1,0 +1,1050 @@
+### 161
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trnava (historia)
+Tietoruudun teksti: Trnava, unkariksi Nagyszombat ja saksaksi Tyrnau, on Länsi-Slovakian kaupunki 47 kilometriä Bratislavasta koilliseen Trnávka-joen varrella. Se on roomalaiskatolisen arkkipiispan istuin (1541–1820 ja uudelleen vuodesta 1977), ja monien muurien sisällä olevien kirkkojensa vuoksi sitä on kutsuttu Pieneksi Roomaksi eli Slovakian Roomaksi. Vuonna 1238 Trnavasta tuli ensimmäinen nykyisen Slovakian alueen kaupunki, jolle kuningas myönsi kaupunkioikeudet. Arkkipiispa Péter Pázmány perusti Trnavaan jesuiittayliopiston (1635–1777), joka oli tuolloin Unkarin kuningaskunnan ainoa yliopisto ja josta tuli slovakialaisen sivistyksen ja kirjallisuuden keskus; 1700-luvun lopulta kaupungista tuli myös slovakialaisen kansallisen herätyksen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Mitä nimiä Trnavalla on unkariksi ja saksaksi?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Unkariksi Trnavan nimi on [[Nagyszombat]] ja saksaksi [[Tyrnau]]. Useat nimet kertovat kaupungin historiasta, sillä se kuului pitkään [[Unkarin kuningaskuntaan]], ja Keski-Euroopassa kaupungeilla on usein ollut eri nimi jokaisella alueen kielellä. Kolme nimeä yhdelle kaupungille, ja minä vaivun jo yhteen.
+KYSYMYS: Kerro lisää: Unkarin kuningaskuntaan
+
+### 162
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trnava (historia)
+Tietoruudun teksti: Trnava, unkariksi Nagyszombat ja saksaksi Tyrnau, on Länsi-Slovakian kaupunki 47 kilometriä Bratislavasta koilliseen Trnávka-joen varrella. Se on roomalaiskatolisen arkkipiispan istuin (1541–1820 ja uudelleen vuodesta 1977), ja monien muurien sisällä olevien kirkkojensa vuoksi sitä on kutsuttu Pieneksi Roomaksi eli Slovakian Roomaksi. Vuonna 1238 Trnavasta tuli ensimmäinen nykyisen Slovakian alueen kaupunki, jolle kuningas myönsi kaupunkioikeudet. Arkkipiispa Péter Pázmány perusti Trnavaan jesuiittayliopiston (1635–1777), joka oli tuolloin Unkarin kuningaskunnan ainoa yliopisto ja josta tuli slovakialaisen sivistyksen ja kirjallisuuden keskus; 1700-luvun lopulta kaupungista tuli myös slovakialaisen kansallisen herätyksen keskus.
+AIEMPI KYSYMYS: Missä päin Slovakiaa Trnava sijaitsee?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Trnava on Länsi-Slovakian kaupunki, joka sijaitsee 47 kilometriä [[Bratislavasta]] koilliseen [[Trnávka-joen]] varrella. Etäisyys pääkaupunkiin on siis lyhyt, ja kaupunki kuuluu Slovakian läntiseen osaan. Siivin tuo on hyppy vain, mut jalan se on pidempi matka.
+KYSYMYS: Kerro lisää: Bratislavasta
+
+### 163
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trnava (historia)
+Tietoruudun teksti: Trnava, unkariksi Nagyszombat ja saksaksi Tyrnau, on Länsi-Slovakian kaupunki 47 kilometriä Bratislavasta koilliseen Trnávka-joen varrella. Se on roomalaiskatolisen arkkipiispan istuin (1541–1820 ja uudelleen vuodesta 1977), ja monien muurien sisällä olevien kirkkojensa vuoksi sitä on kutsuttu Pieneksi Roomaksi eli Slovakian Roomaksi. Vuonna 1238 Trnavasta tuli ensimmäinen nykyisen Slovakian alueen kaupunki, jolle kuningas myönsi kaupunkioikeudet. Arkkipiispa Péter Pázmány perusti Trnavaan jesuiittayliopiston (1635–1777), joka oli tuolloin Unkarin kuningaskunnan ainoa yliopisto ja josta tuli slovakialaisen sivistyksen ja kirjallisuuden keskus; 1700-luvun lopulta kaupungista tuli myös slovakialaisen kansallisen herätyksen keskus.
+AIEMPI KYSYMYS: Missä päin Slovakiaa Trnava sijaitsee?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Trnava on Länsi-Slovakian kaupunki, joka sijaitsee 47 kilometriä [[Bratislavasta]] koilliseen [[Trnávka-joen]] varrella. Etäisyys pääkaupunkiin on siis lyhyt, ja kaupunki kuuluu Slovakian läntiseen osaan. Siivin tuo on hyppy vain, mut jalan se on pidempi matka.
+KYSYMYS: Kerro lisää: Trnávka-joen
+
+### 164
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvolenin linna (historia)
+Tietoruudun teksti: Zvolenin linna on keskiaikainen linna Zvolenin keskustan lähellä olevalla kukkulalla Keski-Slovakiassa. Alueen alkuperäinen keskus oli Slatina- ja Hron-jokien yhtymäkohdan yläpuolella kalliolla 1100-luvun linnassa, jota nykyään kutsutaan nimellä Pustý hrad eli autio linna; vaikean saavutettavuutensa vuoksi hallintokeskus siirrettiin uudelle linnalle, jonka Ludvig Suuri rakennutti metsästysasunnokseen. Gotiikkaa, jonka esikuvana olivat 1300-luvun italialaiset linnat, rakennettiin vuosina 1360–1382, ja tuleva kuningatar Maria Anjoulainen ja keisari Sigismund viettivät siellä häänsä vuonna 1385; renessanssiuudistus tehtiin 1548 ja viimeinen suuri uudistus vuonna 1784, jolloin kappeli muutettiin barokkityyliseksi. Nykyään linnassa on Slovakian kansallisgallerian alueosasto, jossa on vanhojen eurooppalaisten mestarien teoksia, muun muassa Rubensilta ja Veronesen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji 1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestäv…
+AIEMPI KYSYMYS: Kuka rakennutti Zvolenin linnan metsästysasunnokseen?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tän tiedän. Zvolenin uuden linnan rakennutti metsästysasunnokseen [[Ludvig Suuri]], Unkarin ja Puolan kuningas. Alkuperäinen hallintokeskus oli vanhemmassa [[Pustý hradissa]], mutta sen vaikean saavutettavuuden vuoksi hallinto siirrettiin uudelle linnalle. Gotiikkaa edustava rakennusvaihe ajoittuu vuosiin 1360–1382. Kuninkaalla oli siis metsästysmaja, jollaisesta minä vain haaveilen.
+KYSYMYS: Kerro lisää: Ludvig Suuri
+
+### 165
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvolenin linna (historia)
+Tietoruudun teksti: Zvolenin linna on keskiaikainen linna Zvolenin keskustan lähellä olevalla kukkulalla Keski-Slovakiassa. Alueen alkuperäinen keskus oli Slatina- ja Hron-jokien yhtymäkohdan yläpuolella kalliolla 1100-luvun linnassa, jota nykyään kutsutaan nimellä Pustý hrad eli autio linna; vaikean saavutettavuutensa vuoksi hallintokeskus siirrettiin uudelle linnalle, jonka Ludvig Suuri rakennutti metsästysasunnokseen. Gotiikkaa, jonka esikuvana olivat 1300-luvun italialaiset linnat, rakennettiin vuosina 1360–1382, ja tuleva kuningatar Maria Anjoulainen ja keisari Sigismund viettivät siellä häänsä vuonna 1385; renessanssiuudistus tehtiin 1548 ja viimeinen suuri uudistus vuonna 1784, jolloin kappeli muutettiin barokkityyliseksi. Nykyään linnassa on Slovakian kansallisgallerian alueosasto, jossa on vanhojen eurooppalaisten mestarien teoksia, muun muassa Rubensilta ja Veronesen.
+AIEMPI KYSYMYS: Kuka rakennutti Zvolenin linnan metsästysasunnokseen?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tän tiedän. Zvolenin uuden linnan rakennutti metsästysasunnokseen [[Ludvig Suuri]], Unkarin ja Puolan kuningas. Alkuperäinen hallintokeskus oli vanhemmassa [[Pustý hradissa]], mutta sen vaikean saavutettavuuden vuoksi hallinto siirrettiin uudelle linnalle. Gotiikkaa edustava rakennusvaihe ajoittuu vuosiin 1360–1382. Kuninkaalla oli siis metsästysmaja, jollaisesta minä vain haaveilen.
+KYSYMYS: Kerro lisää: Pustý hradissa
+
+### 166
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvolenin linna (historia)
+Tietoruudun teksti: Zvolenin linna on keskiaikainen linna Zvolenin keskustan lähellä olevalla kukkulalla Keski-Slovakiassa. Alueen alkuperäinen keskus oli Slatina- ja Hron-jokien yhtymäkohdan yläpuolella kalliolla 1100-luvun linnassa, jota nykyään kutsutaan nimellä Pustý hrad eli autio linna; vaikean saavutettavuutensa vuoksi hallintokeskus siirrettiin uudelle linnalle, jonka Ludvig Suuri rakennutti metsästysasunnokseen. Gotiikkaa, jonka esikuvana olivat 1300-luvun italialaiset linnat, rakennettiin vuosina 1360–1382, ja tuleva kuningatar Maria Anjoulainen ja keisari Sigismund viettivät siellä häänsä vuonna 1385; renessanssiuudistus tehtiin 1548 ja viimeinen suuri uudistus vuonna 1784, jolloin kappeli muutettiin barokkityyliseksi. Nykyään linnassa on Slovakian kansallisgallerian alueosasto, jossa on vanhojen eurooppalaisten mestarien teoksia, muun muassa Rubensilta ja Veronesen.
+AIEMPI KYSYMYS: Mikä on Pustý hrad?
+AIEMPI VASTAUS (Livia):
+Ai se. Pustý hrad on Zvolenin alueen vanha linna, jonka nimi tarkoittaa autiota linnaa. Se on rakennettu 1100-luvulla kalliolle [[Slatina-joen]] ja [[Hron-joen]] yhtymäkohdan yläpuolelle, ja se oli alueen alkuperäinen keskus. Linnan vaikean saavutettavuuden vuoksi hallintokeskus siirrettiin myöhemmin uudelle linnalle lähemmäs nykyistä Zvolenin keskustaa. Autio linna kuulostaa surulliselta, mut kalliolta näkyy varmasti kauas.
+KYSYMYS: Kerro lisää: Slatina-joen
+
+### 167
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvolenin linna (historia)
+Tietoruudun teksti: Zvolenin linna on keskiaikainen linna Zvolenin keskustan lähellä olevalla kukkulalla Keski-Slovakiassa. Alueen alkuperäinen keskus oli Slatina- ja Hron-jokien yhtymäkohdan yläpuolella kalliolla 1100-luvun linnassa, jota nykyään kutsutaan nimellä Pustý hrad eli autio linna; vaikean saavutettavuutensa vuoksi hallintokeskus siirrettiin uudelle linnalle, jonka Ludvig Suuri rakennutti metsästysasunnokseen. Gotiikkaa, jonka esikuvana olivat 1300-luvun italialaiset linnat, rakennettiin vuosina 1360–1382, ja tuleva kuningatar Maria Anjoulainen ja keisari Sigismund viettivät siellä häänsä vuonna 1385; renessanssiuudistus tehtiin 1548 ja viimeinen suuri uudistus vuonna 1784, jolloin kappeli muutettiin barokkityyliseksi. Nykyään linnassa on Slovakian kansallisgallerian alueosasto, jossa on vanhojen eurooppalaisten mestarien teoksia, muun muassa Rubensilta ja Veronesen.
+AIEMPI KYSYMYS: Mikä on Pustý hrad?
+AIEMPI VASTAUS (Livia):
+Ai se. Pustý hrad on Zvolenin alueen vanha linna, jonka nimi tarkoittaa autiota linnaa. Se on rakennettu 1100-luvulla kalliolle [[Slatina-joen]] ja [[Hron-joen]] yhtymäkohdan yläpuolelle, ja se oli alueen alkuperäinen keskus. Linnan vaikean saavutettavuuden vuoksi hallintokeskus siirrettiin myöhemmin uudelle linnalle lähemmäs nykyistä Zvolenin keskustaa. Autio linna kuulostaa surulliselta, mut kalliolta näkyy varmasti kauas.
+KYSYMYS: Kerro lisää: Hron-joen
+
+### 168
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvolenin linna (historia)
+Tietoruudun teksti: Zvolenin linna on keskiaikainen linna Zvolenin keskustan lähellä olevalla kukkulalla Keski-Slovakiassa. Alueen alkuperäinen keskus oli Slatina- ja Hron-jokien yhtymäkohdan yläpuolella kalliolla 1100-luvun linnassa, jota nykyään kutsutaan nimellä Pustý hrad eli autio linna; vaikean saavutettavuutensa vuoksi hallintokeskus siirrettiin uudelle linnalle, jonka Ludvig Suuri rakennutti metsästysasunnokseen. Gotiikkaa, jonka esikuvana olivat 1300-luvun italialaiset linnat, rakennettiin vuosina 1360–1382, ja tuleva kuningatar Maria Anjoulainen ja keisari Sigismund viettivät siellä häänsä vuonna 1385; renessanssiuudistus tehtiin 1548 ja viimeinen suuri uudistus vuonna 1784, jolloin kappeli muutettiin barokkityyliseksi. Nykyään linnassa on Slovakian kansallisgallerian alueosasto, jossa on vanhojen eurooppalaisten mestarien teoksia, muun muassa Rubensilta ja Veronesen.
+AIEMPI KYSYMYS: Mitä tarkoittaa gotiikka rakennustyylinä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Gotiikka on keskiajan lopun eurooppalainen rakennustyyli, jolle ovat ominaisia [[suippokaaret]], [[ristiholvit]] ja korkeat ikkunat. Linnarakentamisessa tyyli näkyi tilojen jäsentelyssä ja koristeluissa, ja Zvolenin linnan gotiikan esikuvina olivat 1300-luvun italialaiset linnat. Linnan gotiikkaosa rakennettiin vuosina 1360–1382. Pitkä oppitunti, mutta kyllä minä sen pidin kasassa.
+KYSYMYS: Kerro lisää: suippokaaret
+
+### 169
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvolenin linna (historia)
+Tietoruudun teksti: Zvolenin linna on keskiaikainen linna Zvolenin keskustan lähellä olevalla kukkulalla Keski-Slovakiassa. Alueen alkuperäinen keskus oli Slatina- ja Hron-jokien yhtymäkohdan yläpuolella kalliolla 1100-luvun linnassa, jota nykyään kutsutaan nimellä Pustý hrad eli autio linna; vaikean saavutettavuutensa vuoksi hallintokeskus siirrettiin uudelle linnalle, jonka Ludvig Suuri rakennutti metsästysasunnokseen. Gotiikkaa, jonka esikuvana olivat 1300-luvun italialaiset linnat, rakennettiin vuosina 1360–1382, ja tuleva kuningatar Maria Anjoulainen ja keisari Sigismund viettivät siellä häänsä vuonna 1385; renessanssiuudistus tehtiin 1548 ja viimeinen suuri uudistus vuonna 1784, jolloin kappeli muutettiin barokkityyliseksi. Nykyään linnassa on Slovakian kansallisgallerian alueosasto, jossa on vanhojen eurooppalaisten mestarien teoksia, muun muassa Rubensilta ja Veronesen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Puerto Montt: Risti saaren laella] Kapean, vain muutaman sadan metrin levyisen salmen takana kohoaa Isla Tenglo, pieni saari jonka harjanteella seisoo valkoinen risti - kaupungin tunnetuimpia maamerkkejä, joka näkyy laajalle Reloncavín selälle. Saarella asuu enää harvoja kalastajaperheitä, sillä maaperä on niukkaa eikä sähköverkko yllä joka taloon. Vene kuljettaa matkan minuutissa, ja saarelaiset tunnetaan erityisesti curanto-perinteestään: samaa ruokaa kuin Angelmón torillakin, mutta täällä valmistettuna vanhalla tavalla kuumennettujen kivien päällä maakuopassa. Rannalla siintävät kaupungin kerrostalot muistuttavat, miten lähellä saari todellisuudessa on.
+- [Lalibela — kaupunkilehti / Kivi ja kuva: Risti, joka kävi Belgiassa] Lalibelan risti on suuri koristeltu kulkueristi ja yksi Etiopian arvokkaimmista perintöesineistä. Sitä säilytetään Biete Medhane Alemissa. Risti on arviolta 1100-luvulta, noin kuusikymmentä senttiä pitkä ja seitsemän kilon painoinen, ja se on tehty yhdestä metallikappaleesta — joko kullasta tai pronssista ja kullasta. Alaosaa kannattavat Aadamin kädet, aihe joka toistuu etiopialaisissa kulkueristeissä; juhlapäivinä ne verhotaan kirkkaanvärisin kankain. Pappi voi hangata uskovia rististillä siunatakseen heidät.
+- [Unkari — maalehti / Historia: Kruunu, jonka risti on vinossa] 1000 — Unkarin pyhä kruunu on kahdesta osasta: alempi vanne on tehty Bysantissa ja ylempi kaariosa lännessä, ja ne on liitetty yhteen. Kruunua kiertää rivi emalikuvia pyhimyksistä, ja reunasta riippuu ketjuja. Huipulla oleva risti on kallellaan, ja arvellaan että se vääntyi, kun kruunua tungettiin liian pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, ellei häntä kruunattu juuri tällä esineellä.
+AIEMPI KYSYMYS: Mitä tarkoittaa gotiikka rakennustyylinä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Gotiikka on keskiajan lopun eurooppalainen rakennustyyli, jolle ovat ominaisia [[suippokaaret]], [[ristiholvit]] ja korkeat ikkunat. Linnarakentamisessa tyyli näkyi tilojen jäsentelyssä ja koristeluissa, ja Zvolenin linnan gotiikan esikuvina olivat 1300-luvun italialaiset linnat. Linnan gotiikkaosa rakennettiin vuosina 1360–1382. Pitkä oppitunti, mutta kyllä minä sen pidin kasassa.
+KYSYMYS: Kerro lisää: ristiholvit
+
+### 170
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvolenin linna (historia)
+Tietoruudun teksti: Zvolenin linna on keskiaikainen linna Zvolenin keskustan lähellä olevalla kukkulalla Keski-Slovakiassa. Alueen alkuperäinen keskus oli Slatina- ja Hron-jokien yhtymäkohdan yläpuolella kalliolla 1100-luvun linnassa, jota nykyään kutsutaan nimellä Pustý hrad eli autio linna; vaikean saavutettavuutensa vuoksi hallintokeskus siirrettiin uudelle linnalle, jonka Ludvig Suuri rakennutti metsästysasunnokseen. Gotiikkaa, jonka esikuvana olivat 1300-luvun italialaiset linnat, rakennettiin vuosina 1360–1382, ja tuleva kuningatar Maria Anjoulainen ja keisari Sigismund viettivät siellä häänsä vuonna 1385; renessanssiuudistus tehtiin 1548 ja viimeinen suuri uudistus vuonna 1784, jolloin kappeli muutettiin barokkityyliseksi. Nykyään linnassa on Slovakian kansallisgallerian alueosasto, jossa on vanhojen eurooppalaisten mestarien teoksia, muun muassa Rubensilta ja Veronesen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolkata — kohdekartta / Kohdekartta: Marble Palace] 1835 Pohjois-Kolkatan kapeiden katujen varrella seisoo marmoritalo, jonka rakennutti 1835 varakas bengalilainen kauppias Raja Rajendra Mullick. Hän oli intohimoinen taiteen keräilijä, ja talo on säilynyt suvun kotina tähän päivään asti. Pihapiirissä on myös vanhempi Jagannath-temppeli, jonka rakennutti Mullickin kasvatusisä Nilmoni Mullick ennen palatsia. Talo on tyyliltään uusklassinen, mutta pohjakaava on perinteinen bengalilainen: avoimia sisäpihoja peräkkäin, ja yhden laidalla thakur-dalan eli suvun oma rukoushuone. Kolmikerroksisessa rakennuksessa on korkeat uurretut korinttilaiset pylväät ja koristeellisilla ristikoilla varustetut kuistit, joiden viistot katot on tehty kiinalaisen pav…
+AIEMPI KYSYMYS: Mitä Zvolenin linnassa nykyään on esillä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Linnassa toimii nykyään Slovakian kansallisgallerian alueosasto, jossa on vanhojen eurooppalaisten mestarien teoksia, muun muassa [[Rubensin]] ja [[Veronesen]] maalauksia. Linna on siis keskiaikaisesta hallintopaikastaan muuttunut taidekokoelman kodiksi. Taide on pysynyt, vaikka vallanpitäjät ovat vaihtuneet. Kyl minä tauluja katon mielelläni, kun ne eivät lennä pois.
+KYSYMYS: Kerro lisää: Rubensin
+
+### 171
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvolenin linna (historia)
+Tietoruudun teksti: Zvolenin linna on keskiaikainen linna Zvolenin keskustan lähellä olevalla kukkulalla Keski-Slovakiassa. Alueen alkuperäinen keskus oli Slatina- ja Hron-jokien yhtymäkohdan yläpuolella kalliolla 1100-luvun linnassa, jota nykyään kutsutaan nimellä Pustý hrad eli autio linna; vaikean saavutettavuutensa vuoksi hallintokeskus siirrettiin uudelle linnalle, jonka Ludvig Suuri rakennutti metsästysasunnokseen. Gotiikkaa, jonka esikuvana olivat 1300-luvun italialaiset linnat, rakennettiin vuosina 1360–1382, ja tuleva kuningatar Maria Anjoulainen ja keisari Sigismund viettivät siellä häänsä vuonna 1385; renessanssiuudistus tehtiin 1548 ja viimeinen suuri uudistus vuonna 1784, jolloin kappeli muutettiin barokkityyliseksi. Nykyään linnassa on Slovakian kansallisgallerian alueosasto, jossa on vanhojen eurooppalaisten mestarien teoksia, muun muassa Rubensilta ja Veronesen.
+AIEMPI KYSYMYS: Mitä Zvolenin linnassa nykyään on esillä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Linnassa toimii nykyään Slovakian kansallisgallerian alueosasto, jossa on vanhojen eurooppalaisten mestarien teoksia, muun muassa [[Rubensin]] ja [[Veronesen]] maalauksia. Linna on siis keskiaikaisesta hallintopaikastaan muuttunut taidekokoelman kodiksi. Taide on pysynyt, vaikka vallanpitäjät ovat vaihtuneet. Kyl minä tauluja katon mielelläni, kun ne eivät lennä pois.
+KYSYMYS: Kerro lisää: Veronesen
+
+### 172
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvolenin linna (historia)
+Tietoruudun teksti: Zvolenin linna on keskiaikainen linna Zvolenin keskustan lähellä olevalla kukkulalla Keski-Slovakiassa. Alueen alkuperäinen keskus oli Slatina- ja Hron-jokien yhtymäkohdan yläpuolella kalliolla 1100-luvun linnassa, jota nykyään kutsutaan nimellä Pustý hrad eli autio linna; vaikean saavutettavuutensa vuoksi hallintokeskus siirrettiin uudelle linnalle, jonka Ludvig Suuri rakennutti metsästysasunnokseen. Gotiikkaa, jonka esikuvana olivat 1300-luvun italialaiset linnat, rakennettiin vuosina 1360–1382, ja tuleva kuningatar Maria Anjoulainen ja keisari Sigismund viettivät siellä häänsä vuonna 1385; renessanssiuudistus tehtiin 1548 ja viimeinen suuri uudistus vuonna 1784, jolloin kappeli muutettiin barokkityyliseksi. Nykyään linnassa on Slovakian kansallisgallerian alueosasto, jossa on vanhojen eurooppalaisten mestarien teoksia, muun muassa Rubensilta ja Veronesen.
+AIEMPI KYSYMYS: Milloin Zvolenin linnassa vietettiin häitä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Zvolenin linnassa viettivät häänsä vuonna 1385 tuleva kuningatar [[Maria Anjoulainen]] ja keisari [[Sigismund]]. Linna oli tuolloin uusi ja kuninkaallinen, ja gotiikan rakennusvaihe oli juuri valmistunut. Häät keskiaikaisessa kuninkaanlinnassa olivat varmasti näyttävä tapahtuma. Minä olisin kyllä tullut paikalle, mut vain pullan perässä.
+KYSYMYS: Kerro lisää: Maria Anjoulainen
+
+### 173
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvolenin linna (historia)
+Tietoruudun teksti: Zvolenin linna on keskiaikainen linna Zvolenin keskustan lähellä olevalla kukkulalla Keski-Slovakiassa. Alueen alkuperäinen keskus oli Slatina- ja Hron-jokien yhtymäkohdan yläpuolella kalliolla 1100-luvun linnassa, jota nykyään kutsutaan nimellä Pustý hrad eli autio linna; vaikean saavutettavuutensa vuoksi hallintokeskus siirrettiin uudelle linnalle, jonka Ludvig Suuri rakennutti metsästysasunnokseen. Gotiikkaa, jonka esikuvana olivat 1300-luvun italialaiset linnat, rakennettiin vuosina 1360–1382, ja tuleva kuningatar Maria Anjoulainen ja keisari Sigismund viettivät siellä häänsä vuonna 1385; renessanssiuudistus tehtiin 1548 ja viimeinen suuri uudistus vuonna 1784, jolloin kappeli muutettiin barokkityyliseksi. Nykyään linnassa on Slovakian kansallisgallerian alueosasto, jossa on vanhojen eurooppalaisten mestarien teoksia, muun muassa Rubensilta ja Veronesen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawelin linna] 1507–1536 Vistula-joen yllä kohoavalla kalkkikivikukkulalla sijaitseva Wawelin linna oli Puolan kuninkaiden koti ja kruunajaispaikka satojen vuosien ajan. Kuningas Kasimir Suuri rakennutti ensimmäisen kivilinnan 1300-luvulla, ja tulipalon jälkeen kuningas Sigismund I rakennutti sen uudelleen upeaksi renessanssilinnaksi vuosina 1507-1536. Linnan tornissa riippuu Sigismund-kello, joka painaa lähes 13 tonnia ja jota soittamaan tarvitaan 12 miestä - sitä kumautetaan vain aivan erityisinä hetkinä. Aarrekammiossa säilytetään muun muassa Szczerbiec-nimistä kruunajaismiekkaa, ja linnan alla piilee tunnettu lohikäärmeen luola. Linna on kokenut sekä loistoa että tuhoa: vuonna 1794 Preussi vei kruunun…
+- [Vilna — kohdekartta / Kohdekartta: Salattu avioliitto] 1547–1551 Kuningas voi julistaa sotia ja säätää lakeja, mutta salaa solmittu avioliitto osoittautui vaikeimmaksi asiaksi puolustaa. Sigismund August valitsi Barboran ja piti valintansa — vaikka koko valtakunta, oma äiti etunenässä, oli toista mieltä. Myrkkyhuhut elävät Vilnassa yhä.
+AIEMPI KYSYMYS: Milloin Zvolenin linnassa vietettiin häitä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Zvolenin linnassa viettivät häänsä vuonna 1385 tuleva kuningatar [[Maria Anjoulainen]] ja keisari [[Sigismund]]. Linna oli tuolloin uusi ja kuninkaallinen, ja gotiikan rakennusvaihe oli juuri valmistunut. Häät keskiaikaisessa kuninkaanlinnassa olivat varmasti näyttävä tapahtuma. Minä olisin kyllä tullut paikalle, mut vain pullan perässä.
+KYSYMYS: Kerro lisää: Sigismund
+
+### 174
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolenicen linna (historia)
+Tietoruudun teksti: Smolenicen linna on linna Pienten Karpaattien itärinteellä Smolenicen kaupungin lähellä Slovakiassa. Se rakennettiin 1400-luvulla, mutta se tuhoutui Rákóczin vapaussodan ja Napoleonin sotien aikana. Vuonna 1777 kreivi János Pálffy peri Smolenicen, mutta ei asunut linnassa sen huonon kunnon ja rahapulan vuoksi. Linna rakennettiin uudelleen vasta 1900-luvulla kreivi József Pálffyn käskystä; arkkitehti Jozef Hubert suunnitteli uuden linnan Wienin lähellä olevan Kreuzensteinin linnan mallin mukaan, ja päärakennus on tehty raudoitetusta betonista. Vuodesta 1953 linna on ollut Slovakian tiedeakatemian omaisuutta, ja nykyään se toimii kongressikeskuksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Juan — kaupunkilehti / San Juan: Vapaus vuonna 1873] Isoisän matkavuonna 1873 Espanjan kansalliskokous päätti 22. maaliskuuta lakkauttaa orjuuden Puerto Ricossa. Päätös vapautti noin 29 000 orjaa, mikä oli tuolloin noin viisi prosenttia koko saaren väestöstä. Vapaus ei ollut ehdoton: entiset omistajat saivat korvauksen, ja vapautetut velvoitettiin jatkamaan työtä entisillä tiloillaan vielä kolme vuotta, minkä lisäksi täysiä kansalaisoikeuksia sai odottaa viisi vuotta. Päätöstä ajoi pitkäjänteinen orjuudenvastainen liike, ja lopullinen sysäys tuli, kun Espanjaan julistettiin tasavalta pari kuukautta aiemmin. Puerto Rico on sittemmin muistanut tapahtumaa vuosittaisena juhlapäivänä.
+- [Košice — kohdekartta / Kohdekartta: Pyövelin bastioni] 1400-luku Pyövelin bastioni on Slovakian suurin ja parhaiten säilynyt osa keskiaikaisia kaupunginmuureja. Alun perin se ei ollut bastioni vaan barbakaani eli portin eteen rakennettu puolustusvarustus. Nimen se sai lähellä sijainneesta pyövelin talosta, ja nimi on vasta 1800-luvulta. Varustuksen rakennutti vuoden 1441 jälkeen Košicen kapteeni Jan Jiskra suojaamaan kaupungin Maalattua porttia. Aluksi se oli yksinkertainen puolipyöreä rakennus, mutta noin 1461–1471 se muutettiin tykkikammioilla varustetuksi tykistölinnoitteeksi, jonka ympärillä oli iskuja vaimentava maavalli. Kasemateissa toimi myöhemmin Friedrich Gebrechtin hattumanufaktuuri, ja sen jälkeen niissä asuttiin. Itä-Slovakian muse…
+AIEMPI KYSYMYS: Minä vuonna kreivi János Pálffy peri Smolenicen?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kreivi János Pálffy peri Smolenicen vuonna 1777. Hän ei kuitenkaan asunut linnassa, koska se oli huonossa kunnossa ja häneltä puuttui rahaa korjauksiin. Linna oli tuhoutunut jo [[Rákóczin vapaussodan]] ja [[Napoleonin sotien]] aikana, ja uudelleen se rakennettiin vasta 1900-luvulla. Perintö ilman rahaa, mut sellaista sattuu.
+KYSYMYS: Kerro lisää: Rákóczin vapaussodan
+
+### 175
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolenicen linna (historia)
+Tietoruudun teksti: Smolenicen linna on linna Pienten Karpaattien itärinteellä Smolenicen kaupungin lähellä Slovakiassa. Se rakennettiin 1400-luvulla, mutta se tuhoutui Rákóczin vapaussodan ja Napoleonin sotien aikana. Vuonna 1777 kreivi János Pálffy peri Smolenicen, mutta ei asunut linnassa sen huonon kunnon ja rahapulan vuoksi. Linna rakennettiin uudelleen vasta 1900-luvulla kreivi József Pálffyn käskystä; arkkitehti Jozef Hubert suunnitteli uuden linnan Wienin lähellä olevan Kreuzensteinin linnan mallin mukaan, ja päärakennus on tehty raudoitetusta betonista. Vuodesta 1953 linna on ollut Slovakian tiedeakatemian omaisuutta, ja nykyään se toimii kongressikeskuksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dunedin — kaupunkilehti / Dunedin: Uusi Edinburgh maailman toisella laidalla] Skotlannin vapaakirkon maallikkojärjestö perusti Dunedinin 1848 Otago Harbourin perukkaan, ja nimi on gaelia: Dùn Èideann on Edinburgh. Kaupunginmittaaja Charles Kettle sai ohjeekseen jäljitellä emokaupunkia ja piirsi komean, romanttisen katuverkon, jonka rakentajat sitten taistelivat läpi mäkisen maaston. Maallisena johtajana toimi Napoleonin sotien veteraani William Cargill ja hengellisenä pastori Thomas Burns, runoilija Robert Burnsin veljenpoika. 1850-luvun loppuun mennessä kaupunkiin oli muuttanut noin 12 000 skottia, monet teollistuneelta Lowlandsin alueelta.
+AIEMPI KYSYMYS: Minä vuonna kreivi János Pálffy peri Smolenicen?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kreivi János Pálffy peri Smolenicen vuonna 1777. Hän ei kuitenkaan asunut linnassa, koska se oli huonossa kunnossa ja häneltä puuttui rahaa korjauksiin. Linna oli tuhoutunut jo [[Rákóczin vapaussodan]] ja [[Napoleonin sotien]] aikana, ja uudelleen se rakennettiin vasta 1900-luvulla. Perintö ilman rahaa, mut sellaista sattuu.
+KYSYMYS: Kerro lisää: Napoleonin sotien
+
+### 176
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolenicen linna (historia)
+Tietoruudun teksti: Smolenicen linna on linna Pienten Karpaattien itärinteellä Smolenicen kaupungin lähellä Slovakiassa. Se rakennettiin 1400-luvulla, mutta se tuhoutui Rákóczin vapaussodan ja Napoleonin sotien aikana. Vuonna 1777 kreivi János Pálffy peri Smolenicen, mutta ei asunut linnassa sen huonon kunnon ja rahapulan vuoksi. Linna rakennettiin uudelleen vasta 1900-luvulla kreivi József Pálffyn käskystä; arkkitehti Jozef Hubert suunnitteli uuden linnan Wienin lähellä olevan Kreuzensteinin linnan mallin mukaan, ja päärakennus on tehty raudoitetusta betonista. Vuodesta 1953 linna on ollut Slovakian tiedeakatemian omaisuutta, ja nykyään se toimii kongressikeskuksena.
+AIEMPI KYSYMYS: Minkä linnan mallin mukaan uusi linna rakennettiin?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hetkinen. Smolenicen uusi linna suunniteltiin Wienin lähellä sijaitsevan [[Kreuzensteinin linnan]] mallin mukaan. Suunnittelijana oli arkkitehti [[Jozef Hubert]], ja rakennuttajana kreivi József Pálffy. Päärakennus tehtiin raudoitetusta betonista, vaikka ulkoasu jäljittelee keskiaikaista linnaa. Mallilinna Wienin liepeiltä, ja minä muistin sen heti.
+KYSYMYS: Kerro lisää: Kreuzensteinin linnan
+
+### 177
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolenicen linna (historia)
+Tietoruudun teksti: Smolenicen linna on linna Pienten Karpaattien itärinteellä Smolenicen kaupungin lähellä Slovakiassa. Se rakennettiin 1400-luvulla, mutta se tuhoutui Rákóczin vapaussodan ja Napoleonin sotien aikana. Vuonna 1777 kreivi János Pálffy peri Smolenicen, mutta ei asunut linnassa sen huonon kunnon ja rahapulan vuoksi. Linna rakennettiin uudelleen vasta 1900-luvulla kreivi József Pálffyn käskystä; arkkitehti Jozef Hubert suunnitteli uuden linnan Wienin lähellä olevan Kreuzensteinin linnan mallin mukaan, ja päärakennus on tehty raudoitetusta betonista. Vuodesta 1953 linna on ollut Slovakian tiedeakatemian omaisuutta, ja nykyään se toimii kongressikeskuksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Keksinnöt: Pappi, joka lähetti viestejä ilmassa] 1905 — Jozef Murgaš syntyi 1864 Tajovin kylässä, opiskeli papiksi ja maalasi kirkkoihin alttaritauluja. Vuonna 1896 hän muutti Yhdysvaltoihin Wilkes-Barren slovakkiseurakuntaan, rakensi laboratorion ja alkoi tutkia langatonta lennätintä. Ensimmäiset kaksi patenttia hän sai 1904. Vuonna 1905 viesti kulki Wilkes-Barresta Scrantoniin, noin 32 kilometrin matkan. Pisteet ja viivat hän erotti toisistaan äänenkorkeudella: pisteet korkealla ja viivat matalalla sävelellä. Laboratoriossa kävi vieraana myös presidentti Theodore Roosevelt.
+AIEMPI KYSYMYS: Minkä linnan mallin mukaan uusi linna rakennettiin?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hetkinen. Smolenicen uusi linna suunniteltiin Wienin lähellä sijaitsevan [[Kreuzensteinin linnan]] mallin mukaan. Suunnittelijana oli arkkitehti [[Jozef Hubert]], ja rakennuttajana kreivi József Pálffy. Päärakennus tehtiin raudoitetusta betonista, vaikka ulkoasu jäljittelee keskiaikaista linnaa. Mallilinna Wienin liepeiltä, ja minä muistin sen heti.
+KYSYMYS: Kerro lisää: Jozef Hubert
+
+### 178
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolenicen linna (historia)
+Tietoruudun teksti: Smolenicen linna on linna Pienten Karpaattien itärinteellä Smolenicen kaupungin lähellä Slovakiassa. Se rakennettiin 1400-luvulla, mutta se tuhoutui Rákóczin vapaussodan ja Napoleonin sotien aikana. Vuonna 1777 kreivi János Pálffy peri Smolenicen, mutta ei asunut linnassa sen huonon kunnon ja rahapulan vuoksi. Linna rakennettiin uudelleen vasta 1900-luvulla kreivi József Pálffyn käskystä; arkkitehti Jozef Hubert suunnitteli uuden linnan Wienin lähellä olevan Kreuzensteinin linnan mallin mukaan, ja päärakennus on tehty raudoitetusta betonista. Vuodesta 1953 linna on ollut Slovakian tiedeakatemian omaisuutta, ja nykyään se toimii kongressikeskuksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Ruoka: Juusto, jota kutsuttiin Liptaueriksi] 1470 — Bryndza on pehmeää, kirpeää ja voimakkaanhajuista lampaanmaitojuustoa. Slovakiassa se mainitaan ensimmäisen kerran vuonna 1470. Nykyisen sivelykelpoisen version uskotaan syntyneen 1700-luvun lopulla, kun Stará Turán yrittäjät perustivat juustolaitoksia vuoristoon ja kauppasivat tuotetta ympäri Habsburgien valtakuntaa. Itävallassa sitä kutsuttiin Liptovin alueen mukaan nimellä Liptauer. Slovenská bryndza sai EU:n suojatun maantieteellisen merkinnän 16. heinäkuuta 2008, ja siitä vähintään puolet on oltava lampaanmaitoa.
+AIEMPI KYSYMYS: Mikä oli Rákóczin vapaussota?
+AIEMPI VASTAUS (Livia):
+Kas, sepä historiaa. Rákóczin vapaussota oli noin vuosina 1703–1711 käyty kapina [[Habsburgien]] valtaa vastaan Unkarin kuningaskunnassa. Kapinaa johti ruhtinas [[Ferenc II Rákóczi]], ja sota päättyi [[Szatmárin rauhaan]] vuonna 1711. Sodan aikana tuhoutui useita linnoja, myös Smolenicen linna kärsi vahinkoa. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Habsburgien
+
+### 179
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolenicen linna (historia)
+Tietoruudun teksti: Smolenicen linna on linna Pienten Karpaattien itärinteellä Smolenicen kaupungin lähellä Slovakiassa. Se rakennettiin 1400-luvulla, mutta se tuhoutui Rákóczin vapaussodan ja Napoleonin sotien aikana. Vuonna 1777 kreivi János Pálffy peri Smolenicen, mutta ei asunut linnassa sen huonon kunnon ja rahapulan vuoksi. Linna rakennettiin uudelleen vasta 1900-luvulla kreivi József Pálffyn käskystä; arkkitehti Jozef Hubert suunnitteli uuden linnan Wienin lähellä olevan Kreuzensteinin linnan mallin mukaan, ja päärakennus on tehty raudoitetusta betonista. Vuodesta 1953 linna on ollut Slovakian tiedeakatemian omaisuutta, ja nykyään se toimii kongressikeskuksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Rákóczit ja kotiinpaluu Kassaan] Rákóczi-suku kuuluu Kassan historiaan kahdesti. Tammikuussa 1644 Kassan valtiopäivät valitsivat György I Rákóczin Unkarin ruhtinaaksi. Vuosina 1704–1711 Transilvanian ruhtinas Ferenc II Rákóczi teki Kassasta pääasemansa vapaussodassaan. Hän kuoli maanpaossa Tekirdağissa 1735, ja hänen jäänteensä siirrettiin 29. lokakuuta 1906 Pyhän Elisabetin tuomiokirkkoon, jossa hän lepää äitinsä Ilona Zrínyin ja poikansa vieressä.
+AIEMPI KYSYMYS: Mikä oli Rákóczin vapaussota?
+AIEMPI VASTAUS (Livia):
+Kas, sepä historiaa. Rákóczin vapaussota oli noin vuosina 1703–1711 käyty kapina [[Habsburgien]] valtaa vastaan Unkarin kuningaskunnassa. Kapinaa johti ruhtinas [[Ferenc II Rákóczi]], ja sota päättyi [[Szatmárin rauhaan]] vuonna 1711. Sodan aikana tuhoutui useita linnoja, myös Smolenicen linna kärsi vahinkoa. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Ferenc II Rákóczi
+
+### 180
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolenicen linna (historia)
+Tietoruudun teksti: Smolenicen linna on linna Pienten Karpaattien itärinteellä Smolenicen kaupungin lähellä Slovakiassa. Se rakennettiin 1400-luvulla, mutta se tuhoutui Rákóczin vapaussodan ja Napoleonin sotien aikana. Vuonna 1777 kreivi János Pálffy peri Smolenicen, mutta ei asunut linnassa sen huonon kunnon ja rahapulan vuoksi. Linna rakennettiin uudelleen vasta 1900-luvulla kreivi József Pálffyn käskystä; arkkitehti Jozef Hubert suunnitteli uuden linnan Wienin lähellä olevan Kreuzensteinin linnan mallin mukaan, ja päärakennus on tehty raudoitetusta betonista. Vuodesta 1953 linna on ollut Slovakian tiedeakatemian omaisuutta, ja nykyään se toimii kongressikeskuksena.
+AIEMPI KYSYMYS: Mikä oli Rákóczin vapaussota?
+AIEMPI VASTAUS (Livia):
+Kas, sepä historiaa. Rákóczin vapaussota oli noin vuosina 1703–1711 käyty kapina [[Habsburgien]] valtaa vastaan Unkarin kuningaskunnassa. Kapinaa johti ruhtinas [[Ferenc II Rákóczi]], ja sota päättyi [[Szatmárin rauhaan]] vuonna 1711. Sodan aikana tuhoutui useita linnoja, myös Smolenicen linna kärsi vahinkoa. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Szatmárin rauhaan
+
+### 181
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolenicen linna (historia)
+Tietoruudun teksti: Smolenicen linna on linna Pienten Karpaattien itärinteellä Smolenicen kaupungin lähellä Slovakiassa. Se rakennettiin 1400-luvulla, mutta se tuhoutui Rákóczin vapaussodan ja Napoleonin sotien aikana. Vuonna 1777 kreivi János Pálffy peri Smolenicen, mutta ei asunut linnassa sen huonon kunnon ja rahapulan vuoksi. Linna rakennettiin uudelleen vasta 1900-luvulla kreivi József Pálffyn käskystä; arkkitehti Jozef Hubert suunnitteli uuden linnan Wienin lähellä olevan Kreuzensteinin linnan mallin mukaan, ja päärakennus on tehty raudoitetusta betonista. Vuodesta 1953 linna on ollut Slovakian tiedeakatemian omaisuutta, ja nykyään se toimii kongressikeskuksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Denver — kohdekartta / Kohdekartta: Kasvitieteellinen puutarha] 1951 Denverin kasvitieteellinen puutarha perustettiin 1951 Cheesman Parkin naapuriin. Paikalla oli aiemmin Prospect Hillin hautausmaa: valtaosa vainajista siirrettiin pois 1893, mutta siirtoja tehtiin vielä 1950-luvulla, ja niin myöhään kuin 2008 kasteluputkia uusittaessa löytyi lisää hautoja. Puutarhan erikoisuus on Pohjois-Amerikan laajin kokoelma viileän lauhkean vyöhykkeen kasveja eri puolilta maailmaa. Sen lisäksi seitsemän puutarhaa esittelee Coloradon ja naapurivaltioiden omaa kasvillisuutta. Maailman ensimmäinen kuivapuutarhan mallialue avattiin täällä 1986, ja kahta vuotta myöhemmin se sai nimen Dryland Mesa. Boettcherin trooppinen kasvihuone oli Amerikan ensimmäinen kokonaan beton…
+AIEMPI KYSYMYS: Mitä tarkoittaa raudoitettu betoni?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on helppo. [[Betoni]] kestää hyvin puristusta mutta huonosti vetoa, joten sen sisään valetaan [[teräksisiä tankoja]], jotka kantavat vetorasitukset. Näin syntyvä raudoitettu betoni on kestävä ja muotoiltavissa lähes mihin tahansa muotoon. Se on edelleen yksi yleisimmistä rakennusmateriaaleista. Smolenicen päärakennus on rakennettu juuri tällä tavalla. Kivilinnalta näyttävä mutta betonista tehty, ei se mikään kunnon pönkä minusta.
+KYSYMYS: Kerro lisää: Betoni
+
+### 182
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolenicen linna (historia)
+Tietoruudun teksti: Smolenicen linna on linna Pienten Karpaattien itärinteellä Smolenicen kaupungin lähellä Slovakiassa. Se rakennettiin 1400-luvulla, mutta se tuhoutui Rákóczin vapaussodan ja Napoleonin sotien aikana. Vuonna 1777 kreivi János Pálffy peri Smolenicen, mutta ei asunut linnassa sen huonon kunnon ja rahapulan vuoksi. Linna rakennettiin uudelleen vasta 1900-luvulla kreivi József Pálffyn käskystä; arkkitehti Jozef Hubert suunnitteli uuden linnan Wienin lähellä olevan Kreuzensteinin linnan mallin mukaan, ja päärakennus on tehty raudoitetusta betonista. Vuodesta 1953 linna on ollut Slovakian tiedeakatemian omaisuutta, ja nykyään se toimii kongressikeskuksena.
+AIEMPI KYSYMYS: Mitä tarkoittaa raudoitettu betoni?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on helppo. [[Betoni]] kestää hyvin puristusta mutta huonosti vetoa, joten sen sisään valetaan [[teräksisiä tankoja]], jotka kantavat vetorasitukset. Näin syntyvä raudoitettu betoni on kestävä ja muotoiltavissa lähes mihin tahansa muotoon. Se on edelleen yksi yleisimmistä rakennusmateriaaleista. Smolenicen päärakennus on rakennettu juuri tällä tavalla. Kivilinnalta näyttävä mutta betonista tehty, ei se mikään kunnon pönkä minusta.
+KYSYMYS: Kerro lisää: teräksisiä tankoja
+
+### 183
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolenicen linna (historia)
+Tietoruudun teksti: Smolenicen linna on linna Pienten Karpaattien itärinteellä Smolenicen kaupungin lähellä Slovakiassa. Se rakennettiin 1400-luvulla, mutta se tuhoutui Rákóczin vapaussodan ja Napoleonin sotien aikana. Vuonna 1777 kreivi János Pálffy peri Smolenicen, mutta ei asunut linnassa sen huonon kunnon ja rahapulan vuoksi. Linna rakennettiin uudelleen vasta 1900-luvulla kreivi József Pálffyn käskystä; arkkitehti Jozef Hubert suunnitteli uuden linnan Wienin lähellä olevan Kreuzensteinin linnan mallin mukaan, ja päärakennus on tehty raudoitetusta betonista. Vuodesta 1953 linna on ollut Slovakian tiedeakatemian omaisuutta, ja nykyään se toimii kongressikeskuksena.
+AIEMPI KYSYMYS: Mitä tiedeakatemia tekee?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tiedeakatemia on tieteellinen yhteisö tai laitos, joka edistää tutkimusta ja kokoaa yhteen tutkijoita. Monissa maissa akatemialla on omia [[tutkimuslaitoksia]], ja se voi myös järjestää kokouksia ja konferensseja. [[Slovakian tiedeakatemia]] on omistanut Smolenicen linnan vuodesta 1953, ja linna toimii nykyään [[kongressikeskuksena]]. Tutkijat saavat linnan, ja minä vain kaiteen.
+KYSYMYS: Kerro lisää: tutkimuslaitoksia
+
+### 184
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolenicen linna (historia)
+Tietoruudun teksti: Smolenicen linna on linna Pienten Karpaattien itärinteellä Smolenicen kaupungin lähellä Slovakiassa. Se rakennettiin 1400-luvulla, mutta se tuhoutui Rákóczin vapaussodan ja Napoleonin sotien aikana. Vuonna 1777 kreivi János Pálffy peri Smolenicen, mutta ei asunut linnassa sen huonon kunnon ja rahapulan vuoksi. Linna rakennettiin uudelleen vasta 1900-luvulla kreivi József Pálffyn käskystä; arkkitehti Jozef Hubert suunnitteli uuden linnan Wienin lähellä olevan Kreuzensteinin linnan mallin mukaan, ja päärakennus on tehty raudoitetusta betonista. Vuodesta 1953 linna on ollut Slovakian tiedeakatemian omaisuutta, ja nykyään se toimii kongressikeskuksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Ruoka: Kellarit, jotka pelastivat viinit] n. 1500-luku — Slovakian Tokajin viinialue on pieni: vain noin 908 hehtaaria seitsemässä kylässä Trebišovin seudulla aivan Unkarin rajan tuntumassa. Alueen kellarit ovat suurimmaksi osaksi peräisin siltä ajalta, jolloin seutu oli yli 170 vuotta turkkilaisten vallan alla. Ne rakennettiin piilopaikoiksi, joihin ihmiset ja omaisuus saatiin turvaan ryöstäjiltä. Tokajin olosuhteet suosivat rypäleitä, joista saadaan luonnostaan makeita viinejä. Slovakiassa tämä on kuudesta viinialueesta pienin. Sekä unkarilaiset että slovakialaiset tuottajat saavat käyttää Tokaj-nimeä: EU:n tuomioistuimet hylkäsivät Unkarin valituksen vuonna 2013.
+- [Slovakia — maalehti / Luonto: Luola, jonka läpi virtasi Styx] 1926 — Domican luola Etelä-Slovakiassa löytyi vuonna 1926, kun Ján Majko osoitti, että useat paikalliset luolat kuuluvat samaan verkostoon. Luolan käytävät on muovannut maanalainen joki nimeltä Styx, ja seinillä on tippukivilampia sekä lepakoiden ulosteesta syntyneitä kuoria. Jo neoliittiset ihmiset asuivat täällä, ja kaivauksissa on löydetty asumusten paaluaukkoja ja tulisijoja. Yleisölle on avattu 1600 metriä vuodesta 1932. Luola on osa Aggtelekin ja Slovakian karstin luolastoa, joka sai Unescon maailmanperintöstatuksen 1995.
+AIEMPI KYSYMYS: Mitä tiedeakatemia tekee?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tiedeakatemia on tieteellinen yhteisö tai laitos, joka edistää tutkimusta ja kokoaa yhteen tutkijoita. Monissa maissa akatemialla on omia [[tutkimuslaitoksia]], ja se voi myös järjestää kokouksia ja konferensseja. [[Slovakian tiedeakatemia]] on omistanut Smolenicen linnan vuodesta 1953, ja linna toimii nykyään [[kongressikeskuksena]]. Tutkijat saavat linnan, ja minä vain kaiteen.
+KYSYMYS: Kerro lisää: Slovakian tiedeakatemia
+
+### 185
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolenicen linna (historia)
+Tietoruudun teksti: Smolenicen linna on linna Pienten Karpaattien itärinteellä Smolenicen kaupungin lähellä Slovakiassa. Se rakennettiin 1400-luvulla, mutta se tuhoutui Rákóczin vapaussodan ja Napoleonin sotien aikana. Vuonna 1777 kreivi János Pálffy peri Smolenicen, mutta ei asunut linnassa sen huonon kunnon ja rahapulan vuoksi. Linna rakennettiin uudelleen vasta 1900-luvulla kreivi József Pálffyn käskystä; arkkitehti Jozef Hubert suunnitteli uuden linnan Wienin lähellä olevan Kreuzensteinin linnan mallin mukaan, ja päärakennus on tehty raudoitetusta betonista. Vuodesta 1953 linna on ollut Slovakian tiedeakatemian omaisuutta, ja nykyään se toimii kongressikeskuksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Historia: Ranskalaisten Illyria ja kongressi, jossa Laibach oli maailman keskus] Vuonna 1809 Napoleon voitti Itävallan, ja Schönbrunnin rauhassa Itävalta luovutti Ranskalle Krainin ja muita alueita. Niistä muodostettiin Illyrian maakunnat, joiden hallinnon pääkaupungiksi tuli Ljubljana, ranskaksi Laybach. Vuonna 1810 perustettu École centrale pidetään nykyään Ljubljanan yliopiston perustamisasiakirjana. Itävalta sai alueen takaisin 1813–1814, ja vuonna 1821 kaupungissa, silloin Laibachissa, kokoontui kongressi, joka antoi Itävallalle luvan tukahduttaa kapina Napolissa.
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Mitä tiedeakatemia tekee?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tiedeakatemia on tieteellinen yhteisö tai laitos, joka edistää tutkimusta ja kokoaa yhteen tutkijoita. Monissa maissa akatemialla on omia [[tutkimuslaitoksia]], ja se voi myös järjestää kokouksia ja konferensseja. [[Slovakian tiedeakatemia]] on omistanut Smolenicen linnan vuodesta 1953, ja linna toimii nykyään [[kongressikeskuksena]]. Tutkijat saavat linnan, ja minä vain kaiteen.
+KYSYMYS: Kerro lisää: kongressikeskuksena
+
+### 186
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stará Ľubovňa (historia)
+Tietoruudun teksti: Stará Ľubovňa on noin 16 000 asukkaan kaupunki Koillis-Slovakiassa Poprad-joen varrella 15 kilometriä Puolan rajalta ja 30 kilometriä Korkeista Tatroista itään. Se on yksi Spišin vanhimmista kaupungeista; ensimmäinen maininta on vuodelta 1292, linna mainitaan vuonna 1311, ja Ludvig Suuri myönsi asutukselle kaupunkioikeudet vuonna 1342. Vuonna 1412 Sigismund Luxemburgilainen antoi Ľubovňan ja 15 muuta Spišin kaupunkia pantiksi Puolan kuninkaalle Władysław II:lle; panttaus, jonka piti kestää vain lyhyen aikaa, kesti lopulta 360 vuotta ja päättyi vasta vuoden 1772 Puolan ensimmäisen jaon yhteydessä. Panttaus oli itse asiassa kaupungeille eduksi, koska ne eivät joutuneet alistumaan komitaatille tai aatelistolle ja olivat neutraalissa asemassa Puolan ja Unkarin välisissä levottomuuksissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji 1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestäv…
+AIEMPI KYSYMYS: Minä vuonna Ľubovňan linna mainitaan ensi kerran?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on helppo. Ľubovňan linna mainitaan vuonna 1311, kun taas itse asutuksen ensimmäinen maininta on vuodelta 1292. [[Ludvig Suuri]] myönsi asutukselle kaupunkioikeudet vuonna 1342. Stará Ľubovňa on yksi [[Spišin]] vanhimmista kaupungeista. Siinä kolme vuosilukua, ja minä muistin kaikki.
+KYSYMYS: Kerro lisää: Ludvig Suuri
+
+### 187
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stará Ľubovňa (historia)
+Tietoruudun teksti: Stará Ľubovňa on noin 16 000 asukkaan kaupunki Koillis-Slovakiassa Poprad-joen varrella 15 kilometriä Puolan rajalta ja 30 kilometriä Korkeista Tatroista itään. Se on yksi Spišin vanhimmista kaupungeista; ensimmäinen maininta on vuodelta 1292, linna mainitaan vuonna 1311, ja Ludvig Suuri myönsi asutukselle kaupunkioikeudet vuonna 1342. Vuonna 1412 Sigismund Luxemburgilainen antoi Ľubovňan ja 15 muuta Spišin kaupunkia pantiksi Puolan kuninkaalle Władysław II:lle; panttaus, jonka piti kestää vain lyhyen aikaa, kesti lopulta 360 vuotta ja päättyi vasta vuoden 1772 Puolan ensimmäisen jaon yhteydessä. Panttaus oli itse asiassa kaupungeille eduksi, koska ne eivät joutuneet alistumaan komitaatille tai aatelistolle ja olivat neutraalissa asemassa Puolan ja Unkarin välisissä levottomuuksissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Historia: Kuka sytytti Spišin linnan?] 1780 — Spišin linna kohoaa kalkkikivikukkulalla, ja sen vanhin kirjallinen maininta on vuodelta 1120. Aluksi se vartioi Unkarin pohjoisrajaa, myöhemmin siitä tuli koko Spišin läänin hallinnon ja kulttuurin keskus. Viimeiset omistajat, Csákyn suku, muuttivat pois 1700-luvun alussa, koska linna oli liian epämukava asua. Vuonna 1780 se paloi, eikä syytä tiedetä. Yksi tarina kertoo, että katetuista rakennuksista peritty lisävero houkutteli polttamaan katon, toinen väittää sotilaiden keittäneen salaa viinaa. Linna kuuluu Unescon maailmanperintöön vuodesta 1993.
+AIEMPI KYSYMYS: Minä vuonna Ľubovňan linna mainitaan ensi kerran?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on helppo. Ľubovňan linna mainitaan vuonna 1311, kun taas itse asutuksen ensimmäinen maininta on vuodelta 1292. [[Ludvig Suuri]] myönsi asutukselle kaupunkioikeudet vuonna 1342. Stará Ľubovňa on yksi [[Spišin]] vanhimmista kaupungeista. Siinä kolme vuosilukua, ja minä muistin kaikki.
+KYSYMYS: Kerro lisää: Spišin
+
+### 188
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stará Ľubovňa (historia)
+Tietoruudun teksti: Stará Ľubovňa on noin 16 000 asukkaan kaupunki Koillis-Slovakiassa Poprad-joen varrella 15 kilometriä Puolan rajalta ja 30 kilometriä Korkeista Tatroista itään. Se on yksi Spišin vanhimmista kaupungeista; ensimmäinen maininta on vuodelta 1292, linna mainitaan vuonna 1311, ja Ludvig Suuri myönsi asutukselle kaupunkioikeudet vuonna 1342. Vuonna 1412 Sigismund Luxemburgilainen antoi Ľubovňan ja 15 muuta Spišin kaupunkia pantiksi Puolan kuninkaalle Władysław II:lle; panttaus, jonka piti kestää vain lyhyen aikaa, kesti lopulta 360 vuotta ja päättyi vasta vuoden 1772 Puolan ensimmäisen jaon yhteydessä. Panttaus oli itse asiassa kaupungeille eduksi, koska ne eivät joutuneet alistumaan komitaatille tai aatelistolle ja olivat neutraalissa asemassa Puolan ja Unkarin välisissä levottomuuksissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawel] Isoisäsi kirjasi, että kuninkaat nukkuvat kirkon lattian alla ja että kaupunki kuuluu nyt keisarille. Molemmat pitivät paikkansa yhtä aikaa, ja juuri se oli kukkulan kipeä kohta. Wawel on jurakautista kalkkikiveä, karstiutunut ja luolia täynnä — yksi niistä on lohikäärmeluola — ja linna seisoo 228 metrissä Veikselin rannalla. Katedraalissa kruunattiin ja haudattiin Puolan hallitsijat, vaikka pääkaupunki siirtyi Varsovaan jo 1596. Sitten kukkula vaihtoi omistajaa. Vuoden 1795 jaon jälkeen Wawel joutui Itävallalle, ja sotilaat muuttivat sen kasarmiksi: sisäpihan renessanssikaarikäytävät muurattiin umpeen, sisätiloja muutettiin ja rakennuksia purettiin, kahden kirkon verran. 1800-luvun jälkipu…
+- [Krakova — kaupunkilehti / Historia: Wawel oli kasarmi ennen kuin siitä tuli museo] Wawel on jurakautista kalkkikiveä, karstiutunut ja luolia täynnä, ja linna seisoo 228 metrissä Veikselin rannalla. Katedraalissa kruunattiin ja haudattiin Puolan hallitsijat, vaikka pääkaupunki siirtyi Varsovaan jo 1596. Vuoden 1795 jaon jälkeen kukkula joutui Itävallalle, ja sotilaat muuttivat sen kasarmiksi: sisäpihan renessanssikaarikäytävät muurattiin umpeen ja rakennuksia purettiin. Vasta vuonna 1905 keisari Frans Joosef käski joukkonsa pois. Kunnostus rahoitettiin yleisellä keräyksellä, ja lahjoittajien nimet kaiverrettiin tiiliin, joista muurattiin muuri pohjoisen portin lähelle. Ne ovat siellä yhä ja niitä voi lukea.
+AIEMPI KYSYMYS: Minä vuonna Spišin kaupunkien pantti päättyi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pantti päättyi vuonna 1772 [[Puolan ensimmäisen jaon]] yhteydessä. [[Sigismund Luxemburgilainen]] oli antanut vuonna 1412 Ľubovňan ja 15 muuta Spišin kaupunkia pantiksi Puolan kuninkaalle [[Władysław II:lle]]. Panttauksen piti kestää vain lyhyen aikaa, mutta se kesti lopulta 360 vuotta. Lyhyeksi suunniteltu pantti, ja kolmesataa vuotta sitä ehdittiin vielä pidentää.
+KYSYMYS: Kerro lisää: Puolan ensimmäisen jaon
+
+### 189
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stará Ľubovňa (historia)
+Tietoruudun teksti: Stará Ľubovňa on noin 16 000 asukkaan kaupunki Koillis-Slovakiassa Poprad-joen varrella 15 kilometriä Puolan rajalta ja 30 kilometriä Korkeista Tatroista itään. Se on yksi Spišin vanhimmista kaupungeista; ensimmäinen maininta on vuodelta 1292, linna mainitaan vuonna 1311, ja Ludvig Suuri myönsi asutukselle kaupunkioikeudet vuonna 1342. Vuonna 1412 Sigismund Luxemburgilainen antoi Ľubovňan ja 15 muuta Spišin kaupunkia pantiksi Puolan kuninkaalle Władysław II:lle; panttaus, jonka piti kestää vain lyhyen aikaa, kesti lopulta 360 vuotta ja päättyi vasta vuoden 1772 Puolan ensimmäisen jaon yhteydessä. Panttaus oli itse asiassa kaupungeille eduksi, koska ne eivät joutuneet alistumaan komitaatille tai aatelistolle ja olivat neutraalissa asemassa Puolan ja Unkarin välisissä levottomuuksissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawelin linna] 1507–1536 Vistula-joen yllä kohoavalla kalkkikivikukkulalla sijaitseva Wawelin linna oli Puolan kuninkaiden koti ja kruunajaispaikka satojen vuosien ajan. Kuningas Kasimir Suuri rakennutti ensimmäisen kivilinnan 1300-luvulla, ja tulipalon jälkeen kuningas Sigismund I rakennutti sen uudelleen upeaksi renessanssilinnaksi vuosina 1507-1536. Linnan tornissa riippuu Sigismund-kello, joka painaa lähes 13 tonnia ja jota soittamaan tarvitaan 12 miestä - sitä kumautetaan vain aivan erityisinä hetkinä. Aarrekammiossa säilytetään muun muassa Szczerbiec-nimistä kruunajaismiekkaa, ja linnan alla piilee tunnettu lohikäärmeen luola. Linna on kokenut sekä loistoa että tuhoa: vuonna 1794 Preussi vei kruunun…
+- [Luxemburg — kaupunkilehti / Eurooppa: Clausenin poika, joka ehdotti yhteistä Eurooppaa] Robert Schuman syntyi 29. kesäkuuta 1886 Luxemburgin Clausenissa, talossa, jota hänen vanhempansa vuokrasivat rue Jules Wilhelmin varrelta. Isä oli kotoisin Lotaringiasta ja äiti luxemburgilainen; poika puhui äidinkielenään luxemburgia ja kävi koulua Luxemburgin Athénée-lyseossa. Ranskan ulkoministerinä hän ehdotti 9. toukokuuta 1950, että Ranskan ja Länsi-Saksan hiili ja teräs asetetaan yhteisen viranomaisen alle, jotta sota maiden välillä kävisi aineellisesti mahdottomaksi. Päivää juhlitaan nykyään EU:ssa Eurooppa-päivänä. Valtio osti syntymätalon 1985, ja Euroopan parlamentti on kunnostanut sen.
+AIEMPI KYSYMYS: Minä vuonna Spišin kaupunkien pantti päättyi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pantti päättyi vuonna 1772 [[Puolan ensimmäisen jaon]] yhteydessä. [[Sigismund Luxemburgilainen]] oli antanut vuonna 1412 Ľubovňan ja 15 muuta Spišin kaupunkia pantiksi Puolan kuninkaalle [[Władysław II:lle]]. Panttauksen piti kestää vain lyhyen aikaa, mutta se kesti lopulta 360 vuotta. Lyhyeksi suunniteltu pantti, ja kolmesataa vuotta sitä ehdittiin vielä pidentää.
+KYSYMYS: Kerro lisää: Sigismund Luxemburgilainen
+
+### 190
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stará Ľubovňa (historia)
+Tietoruudun teksti: Stará Ľubovňa on noin 16 000 asukkaan kaupunki Koillis-Slovakiassa Poprad-joen varrella 15 kilometriä Puolan rajalta ja 30 kilometriä Korkeista Tatroista itään. Se on yksi Spišin vanhimmista kaupungeista; ensimmäinen maininta on vuodelta 1292, linna mainitaan vuonna 1311, ja Ludvig Suuri myönsi asutukselle kaupunkioikeudet vuonna 1342. Vuonna 1412 Sigismund Luxemburgilainen antoi Ľubovňan ja 15 muuta Spišin kaupunkia pantiksi Puolan kuninkaalle Władysław II:lle; panttaus, jonka piti kestää vain lyhyen aikaa, kesti lopulta 360 vuotta ja päättyi vasta vuoden 1772 Puolan ensimmäisen jaon yhteydessä. Panttaus oli itse asiassa kaupungeille eduksi, koska ne eivät joutuneet alistumaan komitaatille tai aatelistolle ja olivat neutraalissa asemassa Puolan ja Unkarin välisissä levottomuuksissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Collegium Maius] 1400-luvun loppu Jagellonin yliopiston vanhin rakennus Collegium Maius sai nykyisen goottilaisen ilmeensä 1400-luvun lopulla, vaikka talo on osittain jo 1300-luvulta. Kuningas Władysław Jagiełło osti rakennuksen yliopiston käyttöön rahoilla, jotka olivat jääneet hänen edesmenneeltä puolisoltaan kuningatar Jadwigalta. Sisäpihaa kiertävät kivikaaret, ja pihan keskellä on kaivo vuodelta 1517. Talossa opiskeli 1490-luvulla nuori Mikael Kopernikus, josta tuli myöhemmin tähtitieteilijä, joka osoitti Maan kiertävän Aurinkoa eikä toisin päin. Nykyään rakennuksessa toimii yliopiston museo. Aarrekammiossa säilytetään muun muassa vanha Jagellonin maapallo, jossa näkyy jo äskettäin löydetty Amerikka, s…
+AIEMPI KYSYMYS: Minä vuonna Spišin kaupunkien pantti päättyi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pantti päättyi vuonna 1772 [[Puolan ensimmäisen jaon]] yhteydessä. [[Sigismund Luxemburgilainen]] oli antanut vuonna 1412 Ľubovňan ja 15 muuta Spišin kaupunkia pantiksi Puolan kuninkaalle [[Władysław II:lle]]. Panttauksen piti kestää vain lyhyen aikaa, mutta se kesti lopulta 360 vuotta. Lyhyeksi suunniteltu pantti, ja kolmesataa vuotta sitä ehdittiin vielä pidentää.
+KYSYMYS: Kerro lisää: Władysław II:lle
+
+### 191
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stará Ľubovňa (historia)
+Tietoruudun teksti: Stará Ľubovňa on noin 16 000 asukkaan kaupunki Koillis-Slovakiassa Poprad-joen varrella 15 kilometriä Puolan rajalta ja 30 kilometriä Korkeista Tatroista itään. Se on yksi Spišin vanhimmista kaupungeista; ensimmäinen maininta on vuodelta 1292, linna mainitaan vuonna 1311, ja Ludvig Suuri myönsi asutukselle kaupunkioikeudet vuonna 1342. Vuonna 1412 Sigismund Luxemburgilainen antoi Ľubovňan ja 15 muuta Spišin kaupunkia pantiksi Puolan kuninkaalle Władysław II:lle; panttaus, jonka piti kestää vain lyhyen aikaa, kesti lopulta 360 vuotta ja päättyi vasta vuoden 1772 Puolan ensimmäisen jaon yhteydessä. Panttaus oli itse asiassa kaupungeille eduksi, koska ne eivät joutuneet alistumaan komitaatille tai aatelistolle ja olivat neutraalissa asemassa Puolan ja Unkarin välisissä levottomuuksissa.
+AIEMPI KYSYMYS: Mitä Puolan ensimmäinen jako vuonna 1772 tarkoitti?
+AIEMPI VASTAUS (Livia):
+No niin. Puolan ensimmäisessä jaossa vuonna 1772 [[Venäjä]], [[Preussi]] ja [[Itävalta]] ottivat haltuunsa osia Puola-Liettuan valtiosta. Maa menetti tuolloin merkittävän osan alueestaan, ja jakoja seurasi vielä kaksi lisää ennen valtion katoamista kartalta. Spišin kaupunkien panttaus päättyi tämän jaon yhteydessä. Onpas siitä jo pitkä aika.
+KYSYMYS: Kerro lisää: Venäjä
+
+### 192
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stará Ľubovňa (historia)
+Tietoruudun teksti: Stará Ľubovňa on noin 16 000 asukkaan kaupunki Koillis-Slovakiassa Poprad-joen varrella 15 kilometriä Puolan rajalta ja 30 kilometriä Korkeista Tatroista itään. Se on yksi Spišin vanhimmista kaupungeista; ensimmäinen maininta on vuodelta 1292, linna mainitaan vuonna 1311, ja Ludvig Suuri myönsi asutukselle kaupunkioikeudet vuonna 1342. Vuonna 1412 Sigismund Luxemburgilainen antoi Ľubovňan ja 15 muuta Spišin kaupunkia pantiksi Puolan kuninkaalle Władysław II:lle; panttaus, jonka piti kestää vain lyhyen aikaa, kesti lopulta 360 vuotta ja päättyi vasta vuoden 1772 Puolan ensimmäisen jaon yhteydessä. Panttaus oli itse asiassa kaupungeille eduksi, koska ne eivät joutuneet alistumaan komitaatille tai aatelistolle ja olivat neutraalissa asemassa Puolan ja Unkarin välisissä levottomuuksissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad-järvi — kaupunkilehti / Bornun valtakunta: Preussin lahjat sheikille] Preussin kuningas Wilhelm I lähetti tutkimusmatkailija Gustav Nachtigalin viemään lahjoja Bornun hallitsijalle kiitokseksi saksalaisille matkaajille osoitetusta vieraanvaraisuudesta. Nachtigal lähti Tripolista helmikuussa 1869 ja saapui Bornun pääkaupunkiin Kukawaan 6. kesäkuuta 1870, missä sheikki Umar otti hänet ystävällisesti vastaan. Hovin virkamies Ahmed ibn Brahim antoi Nachtigalille vanhoja asiakirjoja, joiden pohjalta tämä kokosi luettelon Bornun hallitsijoista vuosisatojen ajalta. Sheikin luvalla Nachtigal teki myöhemmin tutkimusmatkoja Kanemiin ja Bagirmiin ja osoitti Bahr-el-Ghazalin toimivan ajoittain järven laskujokena.
+- [Pietari — kaupunkilehti / Taide: Preussin kuninkaalta jääneet maalaukset päätyivät keisarinnalle] 1764 — Berliiniläinen kauppias Johann Ernst Gotzkowsky oli koonnut 225 maalauksen kokoelman Preussin kuningas Fredrik Suurelle, mutta seitsenvuotisen sodan jälkeen kuninkaan kassa oli tyhjä eikä hän voinut maksaa niistä. Vuonna 1764 Venäjän keisarinna Katariina Suuri osti koko kokoelman velan kuittaukseksi ja ripusti taulut yksityiseen siipirakennukseensa Talvipalatsin vieressä — rakennus sai nimen Eremitaasi, erakon asunto, koska sinne pääsivät vain harvat kutsutut. Tästä ostosta syntyi kokoelma, joka on nykyään yksi maailman suurimpia taidemuseoita.
+AIEMPI KYSYMYS: Mitä Puolan ensimmäinen jako vuonna 1772 tarkoitti?
+AIEMPI VASTAUS (Livia):
+No niin. Puolan ensimmäisessä jaossa vuonna 1772 [[Venäjä]], [[Preussi]] ja [[Itävalta]] ottivat haltuunsa osia Puola-Liettuan valtiosta. Maa menetti tuolloin merkittävän osan alueestaan, ja jakoja seurasi vielä kaksi lisää ennen valtion katoamista kartalta. Spišin kaupunkien panttaus päättyi tämän jaon yhteydessä. Onpas siitä jo pitkä aika.
+KYSYMYS: Kerro lisää: Preussi
+
+### 193
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stará Ľubovňa (historia)
+Tietoruudun teksti: Stará Ľubovňa on noin 16 000 asukkaan kaupunki Koillis-Slovakiassa Poprad-joen varrella 15 kilometriä Puolan rajalta ja 30 kilometriä Korkeista Tatroista itään. Se on yksi Spišin vanhimmista kaupungeista; ensimmäinen maininta on vuodelta 1292, linna mainitaan vuonna 1311, ja Ludvig Suuri myönsi asutukselle kaupunkioikeudet vuonna 1342. Vuonna 1412 Sigismund Luxemburgilainen antoi Ľubovňan ja 15 muuta Spišin kaupunkia pantiksi Puolan kuninkaalle Władysław II:lle; panttaus, jonka piti kestää vain lyhyen aikaa, kesti lopulta 360 vuotta ja päättyi vasta vuoden 1772 Puolan ensimmäisen jaon yhteydessä. Panttaus oli itse asiassa kaupungeille eduksi, koska ne eivät joutuneet alistumaan komitaatille tai aatelistolle ja olivat neutraalissa asemassa Puolan ja Unkarin välisissä levottomuuksissa.
+AIEMPI KYSYMYS: Mitä Puolan ensimmäinen jako vuonna 1772 tarkoitti?
+AIEMPI VASTAUS (Livia):
+No niin. Puolan ensimmäisessä jaossa vuonna 1772 [[Venäjä]], [[Preussi]] ja [[Itävalta]] ottivat haltuunsa osia Puola-Liettuan valtiosta. Maa menetti tuolloin merkittävän osan alueestaan, ja jakoja seurasi vielä kaksi lisää ennen valtion katoamista kartalta. Spišin kaupunkien panttaus päättyi tämän jaon yhteydessä. Onpas siitä jo pitkä aika.
+KYSYMYS: Kerro lisää: Itävalta
+
+### 194
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stará Ľubovňa (historia)
+Tietoruudun teksti: Stará Ľubovňa on noin 16 000 asukkaan kaupunki Koillis-Slovakiassa Poprad-joen varrella 15 kilometriä Puolan rajalta ja 30 kilometriä Korkeista Tatroista itään. Se on yksi Spišin vanhimmista kaupungeista; ensimmäinen maininta on vuodelta 1292, linna mainitaan vuonna 1311, ja Ludvig Suuri myönsi asutukselle kaupunkioikeudet vuonna 1342. Vuonna 1412 Sigismund Luxemburgilainen antoi Ľubovňan ja 15 muuta Spišin kaupunkia pantiksi Puolan kuninkaalle Władysław II:lle; panttaus, jonka piti kestää vain lyhyen aikaa, kesti lopulta 360 vuotta ja päättyi vasta vuoden 1772 Puolan ensimmäisen jaon yhteydessä. Panttaus oli itse asiassa kaupungeille eduksi, koska ne eivät joutuneet alistumaan komitaatille tai aatelistolle ja olivat neutraalissa asemassa Puolan ja Unkarin välisissä levottomuuksissa.
+AIEMPI KYSYMYS: Miksi panttaus oli Spišin kaupungeille eduksi?
+AIEMPI VASTAUS (Livia):
+Hmm, sepä on mielenkiintoinen. Panttaus oli kaupungeille eduksi, koska ne eivät joutuneet alistumaan [[komitaatin]] hallintoon eivätkä [[aatelistolle]]. Lisäksi ne olivat neutraalissa asemassa Puolan ja Unkarin välisissä levottomuuksissa. Kaupungit saivat siis elää tavallista itsenäisemmin, vaikka pantti oli alun perin tarkoitettu lyhytaikaiseksi. Pantti joka onkin etu, kyllä kelpaa.
+KYSYMYS: Kerro lisää: komitaatin
+
+### 195
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stará Ľubovňa (historia)
+Tietoruudun teksti: Stará Ľubovňa on noin 16 000 asukkaan kaupunki Koillis-Slovakiassa Poprad-joen varrella 15 kilometriä Puolan rajalta ja 30 kilometriä Korkeista Tatroista itään. Se on yksi Spišin vanhimmista kaupungeista; ensimmäinen maininta on vuodelta 1292, linna mainitaan vuonna 1311, ja Ludvig Suuri myönsi asutukselle kaupunkioikeudet vuonna 1342. Vuonna 1412 Sigismund Luxemburgilainen antoi Ľubovňan ja 15 muuta Spišin kaupunkia pantiksi Puolan kuninkaalle Władysław II:lle; panttaus, jonka piti kestää vain lyhyen aikaa, kesti lopulta 360 vuotta ja päättyi vasta vuoden 1772 Puolan ensimmäisen jaon yhteydessä. Panttaus oli itse asiassa kaupungeille eduksi, koska ne eivät joutuneet alistumaan komitaatille tai aatelistolle ja olivat neutraalissa asemassa Puolan ja Unkarin välisissä levottomuuksissa.
+AIEMPI KYSYMYS: Miksi panttaus oli Spišin kaupungeille eduksi?
+AIEMPI VASTAUS (Livia):
+Hmm, sepä on mielenkiintoinen. Panttaus oli kaupungeille eduksi, koska ne eivät joutuneet alistumaan [[komitaatin]] hallintoon eivätkä [[aatelistolle]]. Lisäksi ne olivat neutraalissa asemassa Puolan ja Unkarin välisissä levottomuuksissa. Kaupungit saivat siis elää tavallista itsenäisemmin, vaikka pantti oli alun perin tarkoitettu lyhytaikaiseksi. Pantti joka onkin etu, kyllä kelpaa.
+KYSYMYS: Kerro lisää: aatelistolle
+
+### 196
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stará Ľubovňa (historia)
+Tietoruudun teksti: Stará Ľubovňa on noin 16 000 asukkaan kaupunki Koillis-Slovakiassa Poprad-joen varrella 15 kilometriä Puolan rajalta ja 30 kilometriä Korkeista Tatroista itään. Se on yksi Spišin vanhimmista kaupungeista; ensimmäinen maininta on vuodelta 1292, linna mainitaan vuonna 1311, ja Ludvig Suuri myönsi asutukselle kaupunkioikeudet vuonna 1342. Vuonna 1412 Sigismund Luxemburgilainen antoi Ľubovňan ja 15 muuta Spišin kaupunkia pantiksi Puolan kuninkaalle Władysław II:lle; panttaus, jonka piti kestää vain lyhyen aikaa, kesti lopulta 360 vuotta ja päättyi vasta vuoden 1772 Puolan ensimmäisen jaon yhteydessä. Panttaus oli itse asiassa kaupungeille eduksi, koska ne eivät joutuneet alistumaan komitaatille tai aatelistolle ja olivat neutraalissa asemassa Puolan ja Unkarin välisissä levottomuuksissa.
+AIEMPI KYSYMYS: Missä päin Slovakiaa Stará Ľubovňa sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota, Itä-Slovakiassa. Stará Ľubovňa on noin 16 000 asukkaan kaupunki Koillis-Slovakiassa [[Poprad-joen]] varrella. Se sijaitsee 15 kilometriä [[Puolan]] rajalta ja 30 kilometriä [[Korkeista Tatroista]] itään. Siivin tuo on aika pieni hyppy, mut jalan se vie jo päivän.
+KYSYMYS: Kerro lisää: Poprad-joen
+
+### 197
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stará Ľubovňa (historia)
+Tietoruudun teksti: Stará Ľubovňa on noin 16 000 asukkaan kaupunki Koillis-Slovakiassa Poprad-joen varrella 15 kilometriä Puolan rajalta ja 30 kilometriä Korkeista Tatroista itään. Se on yksi Spišin vanhimmista kaupungeista; ensimmäinen maininta on vuodelta 1292, linna mainitaan vuonna 1311, ja Ludvig Suuri myönsi asutukselle kaupunkioikeudet vuonna 1342. Vuonna 1412 Sigismund Luxemburgilainen antoi Ľubovňan ja 15 muuta Spišin kaupunkia pantiksi Puolan kuninkaalle Władysław II:lle; panttaus, jonka piti kestää vain lyhyen aikaa, kesti lopulta 360 vuotta ja päättyi vasta vuoden 1772 Puolan ensimmäisen jaon yhteydessä. Panttaus oli itse asiassa kaupungeille eduksi, koska ne eivät joutuneet alistumaan komitaatille tai aatelistolle ja olivat neutraalissa asemassa Puolan ja Unkarin välisissä levottomuuksissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Boratynka] 1659–1668 Kun kassa on tyhjä, voi aina lyödä lisää rahaa — kunhan ei kysy, mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä 1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka on kestänyt pidempään kuin kolikon ostovoima.
+AIEMPI KYSYMYS: Missä päin Slovakiaa Stará Ľubovňa sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota, Itä-Slovakiassa. Stará Ľubovňa on noin 16 000 asukkaan kaupunki Koillis-Slovakiassa [[Poprad-joen]] varrella. Se sijaitsee 15 kilometriä [[Puolan]] rajalta ja 30 kilometriä [[Korkeista Tatroista]] itään. Siivin tuo on aika pieni hyppy, mut jalan se vie jo päivän.
+KYSYMYS: Kerro lisää: Puolan
+
+### 198
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stará Ľubovňa (historia)
+Tietoruudun teksti: Stará Ľubovňa on noin 16 000 asukkaan kaupunki Koillis-Slovakiassa Poprad-joen varrella 15 kilometriä Puolan rajalta ja 30 kilometriä Korkeista Tatroista itään. Se on yksi Spišin vanhimmista kaupungeista; ensimmäinen maininta on vuodelta 1292, linna mainitaan vuonna 1311, ja Ludvig Suuri myönsi asutukselle kaupunkioikeudet vuonna 1342. Vuonna 1412 Sigismund Luxemburgilainen antoi Ľubovňan ja 15 muuta Spišin kaupunkia pantiksi Puolan kuninkaalle Władysław II:lle; panttaus, jonka piti kestää vain lyhyen aikaa, kesti lopulta 360 vuotta ja päättyi vasta vuoden 1772 Puolan ensimmäisen jaon yhteydessä. Panttaus oli itse asiassa kaupungeille eduksi, koska ne eivät joutuneet alistumaan komitaatille tai aatelistolle ja olivat neutraalissa asemassa Puolan ja Unkarin välisissä levottomuuksissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Shanghai — kohdekartta / Kohdekartta: Rauhanhotelli] 1929 Talon rakennutti Victor Sassoon, brittiläinen liikemies, jonka suku oli irakilaisia sefardijuutalaisia ja jonka kauppahuone E.D. Sassoon & Co. teki liiketoimia ympäri Aasiaa. Hän osti Bundilta kokonaisen korttelin, jolla oli pitkä julkisivu kahteen suuntaan, ja rakennutti sille ensimmäisen korkean talonsa. Suunnittelijat olivat arkkitehtitoimisto Palmer and Turner, runko teräsbetonia. Työ alkoi 1926 ja valmistui 1929. Sassoon House oli 77 metriä korkea kattolinjaan ja 83 metriä huippuun — viisitoista metriä korkeampi kuin seuraavaksi korkein talo Bundilla ja yksi Kaukoidän ensimmäisistä korkeista rakennuksista. Julkisivu on graniittia, yhdeksäs kerros ja katto terrakottaa. Joelle päin …
+AIEMPI KYSYMYS: Missä päin Slovakiaa Stará Ľubovňa sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota, Itä-Slovakiassa. Stará Ľubovňa on noin 16 000 asukkaan kaupunki Koillis-Slovakiassa [[Poprad-joen]] varrella. Se sijaitsee 15 kilometriä [[Puolan]] rajalta ja 30 kilometriä [[Korkeista Tatroista]] itään. Siivin tuo on aika pieni hyppy, mut jalan se vie jo päivän.
+KYSYMYS: Kerro lisää: Korkeista Tatroista
+
+### 199
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vlkolínec (kulttuuri)
+Tietoruudun teksti: Vlkolínec on Ružomberokin kaupungin hallintoon kuuluva kylä Slovakiassa, vaikka se oli historiallisesti erillinen kylä. Ensimmäinen kirjallinen maininta on vuodelta 1376, ja vuoden 1882 jälkeen siitä tuli osa Ružomberokia; nimi tulee luultavasti sanasta vlk eli susi. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on yksi Slovakian kymmenestä kansanrakennuskohteesta, koska se on koskematon ja monipuolinen esimerkki Pohjoisten Karpaattien kansanomaisesta maalaisarkkitehtuurista. Kylässä on yli 45 hirsitaloa, joissa kussakin on kaksi tai kolme huonetta, sekä 1700-luvun puinen kellotorni ja barokkikappeli; talot 16 ja 17 on muutettu kansanmuseoksi.
+AIEMPI KYSYMYS: Mistä sanasta kylän nimen arvellaan tulevan?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: susi. Vlkolínecin nimen arvellaan tulevan sanasta vlk, joka tarkoittaa sutta. Ensimmäinen kirjallinen maininta kylästä on vuodelta 1376, ja vuoden 1882 jälkeen siitä tuli osa [[Ružomberokia]]. Kylä on ollut [[Unescon maailmanperintökohde]] vuodesta 1993. Susi kylän nimessä, ja minä pidän siitä kyllä enemmän kuin ihan oikeasta sudesta.
+KYSYMYS: Kerro lisää: Ružomberokia
+
+### 200
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vlkolínec (kulttuuri)
+Tietoruudun teksti: Vlkolínec on Ružomberokin kaupungin hallintoon kuuluva kylä Slovakiassa, vaikka se oli historiallisesti erillinen kylä. Ensimmäinen kirjallinen maininta on vuodelta 1376, ja vuoden 1882 jälkeen siitä tuli osa Ružomberokia; nimi tulee luultavasti sanasta vlk eli susi. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on yksi Slovakian kymmenestä kansanrakennuskohteesta, koska se on koskematon ja monipuolinen esimerkki Pohjoisten Karpaattien kansanomaisesta maalaisarkkitehtuurista. Kylässä on yli 45 hirsitaloa, joissa kussakin on kaksi tai kolme huonetta, sekä 1700-luvun puinen kellotorni ja barokkikappeli; talot 16 ja 17 on muutettu kansanmuseoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mistä sanasta kylän nimen arvellaan tulevan?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: susi. Vlkolínecin nimen arvellaan tulevan sanasta vlk, joka tarkoittaa sutta. Ensimmäinen kirjallinen maininta kylästä on vuodelta 1376, ja vuoden 1882 jälkeen siitä tuli osa [[Ružomberokia]]. Kylä on ollut [[Unescon maailmanperintökohde]] vuodesta 1993. Susi kylän nimessä, ja minä pidän siitä kyllä enemmän kuin ihan oikeasta sudesta.
+KYSYMYS: Kerro lisää: Unescon maailmanperintökohde
+
+### 201
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vlkolínec (kulttuuri)
+Tietoruudun teksti: Vlkolínec on Ružomberokin kaupungin hallintoon kuuluva kylä Slovakiassa, vaikka se oli historiallisesti erillinen kylä. Ensimmäinen kirjallinen maininta on vuodelta 1376, ja vuoden 1882 jälkeen siitä tuli osa Ružomberokia; nimi tulee luultavasti sanasta vlk eli susi. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on yksi Slovakian kymmenestä kansanrakennuskohteesta, koska se on koskematon ja monipuolinen esimerkki Pohjoisten Karpaattien kansanomaisesta maalaisarkkitehtuurista. Kylässä on yli 45 hirsitaloa, joissa kussakin on kaksi tai kolme huonetta, sekä 1700-luvun puinen kellotorni ja barokkikappeli; talot 16 ja 17 on muutettu kansanmuseoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+AIEMPI KYSYMYS: Kuinka monta hirsitaloa kylässä on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Vlkolínecissa on yli 45 hirsitaloa, joissa kussakin on kaksi tai kolme huonetta. Kylässä on lisäksi 1700-luvulta peräisin oleva puinen [[kellotorni]] ja [[barokkikappeli]]. Talot numero 16 ja 17 on muutettu kansanmuseoksi. Kylä on esimerkki [[Pohjoisten Karpaattien]] kansanomaisesta maalaisarkkitehtuurista. Sen verran taloja, ettei harjalta tarvitse etsiä pitkään.
+KYSYMYS: Kerro lisää: kellotorni
+
+### 202
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vlkolínec (kulttuuri)
+Tietoruudun teksti: Vlkolínec on Ružomberokin kaupungin hallintoon kuuluva kylä Slovakiassa, vaikka se oli historiallisesti erillinen kylä. Ensimmäinen kirjallinen maininta on vuodelta 1376, ja vuoden 1882 jälkeen siitä tuli osa Ružomberokia; nimi tulee luultavasti sanasta vlk eli susi. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on yksi Slovakian kymmenestä kansanrakennuskohteesta, koska se on koskematon ja monipuolinen esimerkki Pohjoisten Karpaattien kansanomaisesta maalaisarkkitehtuurista. Kylässä on yli 45 hirsitaloa, joissa kussakin on kaksi tai kolme huonetta, sekä 1700-luvun puinen kellotorni ja barokkikappeli; talot 16 ja 17 on muutettu kansanmuseoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Rakennukset: Kylä, jossa aika pysähtyi] 1376 — Vlkolínec Ružomberokin lähellä mainitaan ensimmäisen kerran vuonna 1376, ja sen nimi tulee luultavasti sanasta vlk eli susi. Kylässä on yli 45 hirsitaloa, joissa jokaisessa on kaksi tai kolme huonetta, sekä 1700-luvulta peräisin oleva puinen kellotorni ja barokkikappeli. Talot numero 16 ja 17 on muutettu kansanelämän museoksi, jossa on arjen ja työn esineitä. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on Pohjois-Karpaattien kansanarkkitehtuurin ehjimpiä esimerkkejä.
+AIEMPI KYSYMYS: Kuinka monta hirsitaloa kylässä on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Vlkolínecissa on yli 45 hirsitaloa, joissa kussakin on kaksi tai kolme huonetta. Kylässä on lisäksi 1700-luvulta peräisin oleva puinen [[kellotorni]] ja [[barokkikappeli]]. Talot numero 16 ja 17 on muutettu kansanmuseoksi. Kylä on esimerkki [[Pohjoisten Karpaattien]] kansanomaisesta maalaisarkkitehtuurista. Sen verran taloja, ettei harjalta tarvitse etsiä pitkään.
+KYSYMYS: Kerro lisää: barokkikappeli
+
+### 203
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vlkolínec (kulttuuri)
+Tietoruudun teksti: Vlkolínec on Ružomberokin kaupungin hallintoon kuuluva kylä Slovakiassa, vaikka se oli historiallisesti erillinen kylä. Ensimmäinen kirjallinen maininta on vuodelta 1376, ja vuoden 1882 jälkeen siitä tuli osa Ružomberokia; nimi tulee luultavasti sanasta vlk eli susi. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on yksi Slovakian kymmenestä kansanrakennuskohteesta, koska se on koskematon ja monipuolinen esimerkki Pohjoisten Karpaattien kansanomaisesta maalaisarkkitehtuurista. Kylässä on yli 45 hirsitaloa, joissa kussakin on kaksi tai kolme huonetta, sekä 1700-luvun puinen kellotorni ja barokkikappeli; talot 16 ja 17 on muutettu kansanmuseoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Rakennukset: Kylä, jossa aika pysähtyi] 1376 — Vlkolínec Ružomberokin lähellä mainitaan ensimmäisen kerran vuonna 1376, ja sen nimi tulee luultavasti sanasta vlk eli susi. Kylässä on yli 45 hirsitaloa, joissa jokaisessa on kaksi tai kolme huonetta, sekä 1700-luvulta peräisin oleva puinen kellotorni ja barokkikappeli. Talot numero 16 ja 17 on muutettu kansanelämän museoksi, jossa on arjen ja työn esineitä. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on Pohjois-Karpaattien kansanarkkitehtuurin ehjimpiä esimerkkejä.
+- [Slovakia — maalehti / Luonto: Huippu, jolla oli monta nimeä] 1838 — Gerlachovský štít eli Gerlach on Korkeiden Tatrojen ja koko Karpaattien korkein huippu, 2654 metriä. Vanhimman tunnetun nimen, Kösselberg eli Kattilavuori, se sai kartalla 1762, ja slovakiaksi sitä kutsuttiin Kotoliksi eli kattilaksi. Korkeimmaksi huipuksi sen tunnisti vasta 1838 eräs tutkija. Sen jälkeen nimeä vaihdettiin aina vallanpitäjän mukaan: 1896 se sai keisari Frans Joosefin nimen. Kaikkiaan nimiä oli neljä ja nimenmuutoksia kuusi. Pääsy huipulle on nykyään rajoitettu.
+AIEMPI KYSYMYS: Kuinka monta hirsitaloa kylässä on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Vlkolínecissa on yli 45 hirsitaloa, joissa kussakin on kaksi tai kolme huonetta. Kylässä on lisäksi 1700-luvulta peräisin oleva puinen [[kellotorni]] ja [[barokkikappeli]]. Talot numero 16 ja 17 on muutettu kansanmuseoksi. Kylä on esimerkki [[Pohjoisten Karpaattien]] kansanomaisesta maalaisarkkitehtuurista. Sen verran taloja, ettei harjalta tarvitse etsiä pitkään.
+KYSYMYS: Kerro lisää: Pohjoisten Karpaattien
+
+### 204
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vlkolínec (kulttuuri)
+Tietoruudun teksti: Vlkolínec on Ružomberokin kaupungin hallintoon kuuluva kylä Slovakiassa, vaikka se oli historiallisesti erillinen kylä. Ensimmäinen kirjallinen maininta on vuodelta 1376, ja vuoden 1882 jälkeen siitä tuli osa Ružomberokia; nimi tulee luultavasti sanasta vlk eli susi. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on yksi Slovakian kymmenestä kansanrakennuskohteesta, koska se on koskematon ja monipuolinen esimerkki Pohjoisten Karpaattien kansanomaisesta maalaisarkkitehtuurista. Kylässä on yli 45 hirsitaloa, joissa kussakin on kaksi tai kolme huonetta, sekä 1700-luvun puinen kellotorni ja barokkikappeli; talot 16 ja 17 on muutettu kansanmuseoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Rakennukset: Kylä, jossa aika pysähtyi] 1376 — Vlkolínec Ružomberokin lähellä mainitaan ensimmäisen kerran vuonna 1376, ja sen nimi tulee luultavasti sanasta vlk eli susi. Kylässä on yli 45 hirsitaloa, joissa jokaisessa on kaksi tai kolme huonetta, sekä 1700-luvulta peräisin oleva puinen kellotorni ja barokkikappeli. Talot numero 16 ja 17 on muutettu kansanelämän museoksi, jossa on arjen ja työn esineitä. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on Pohjois-Karpaattien kansanarkkitehtuurin ehjimpiä esimerkkejä.
+- [Slovakia — maalehti / Luonto: Huippu, jolla oli monta nimeä] 1838 — Gerlachovský štít eli Gerlach on Korkeiden Tatrojen ja koko Karpaattien korkein huippu, 2654 metriä. Vanhimman tunnetun nimen, Kösselberg eli Kattilavuori, se sai kartalla 1762, ja slovakiaksi sitä kutsuttiin Kotoliksi eli kattilaksi. Korkeimmaksi huipuksi sen tunnisti vasta 1838 eräs tutkija. Sen jälkeen nimeä vaihdettiin aina vallanpitäjän mukaan: 1896 se sai keisari Frans Joosefin nimen. Kaikkiaan nimiä oli neljä ja nimenmuutoksia kuusi. Pääsy huipulle on nykyään rajoitettu.
+AIEMPI KYSYMYS: Mitä tarkoittaa kansanomainen maalaisarkkitehtuuri?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kansanomainen maalaisarkkitehtuuri tarkoittaa rakennuksia, jotka paikalliset asukkaat ovat tehneet itse perinteisin menetelmin ja paikallisista materiaaleista ilman ammattiarkkitehtia. Rakennustapa heijastaa alueen ilmastoa, elinkeinoja ja tapoja, ja [[Karpaattien]] alueella hirsirakentaminen on ollut tyypillistä. Vlkolínec on esimerkki tällaisesta rakennuskulttuurista, jossa [[hirsirakentamisen]] perinne on säilynyt poikkeuksellisen hyvin. Rakennetaan sitä, mitä käsillä on, mut minusta se on aika järkevää.
+KYSYMYS: Kerro lisää: Karpaattien
+
+### 205
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vlkolínec (kulttuuri)
+Tietoruudun teksti: Vlkolínec on Ružomberokin kaupungin hallintoon kuuluva kylä Slovakiassa, vaikka se oli historiallisesti erillinen kylä. Ensimmäinen kirjallinen maininta on vuodelta 1376, ja vuoden 1882 jälkeen siitä tuli osa Ružomberokia; nimi tulee luultavasti sanasta vlk eli susi. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on yksi Slovakian kymmenestä kansanrakennuskohteesta, koska se on koskematon ja monipuolinen esimerkki Pohjoisten Karpaattien kansanomaisesta maalaisarkkitehtuurista. Kylässä on yli 45 hirsitaloa, joissa kussakin on kaksi tai kolme huonetta, sekä 1700-luvun puinen kellotorni ja barokkikappeli; talot 16 ja 17 on muutettu kansanmuseoksi.
+AIEMPI KYSYMYS: Mitä tarkoittaa kansanomainen maalaisarkkitehtuuri?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kansanomainen maalaisarkkitehtuuri tarkoittaa rakennuksia, jotka paikalliset asukkaat ovat tehneet itse perinteisin menetelmin ja paikallisista materiaaleista ilman ammattiarkkitehtia. Rakennustapa heijastaa alueen ilmastoa, elinkeinoja ja tapoja, ja [[Karpaattien]] alueella hirsirakentaminen on ollut tyypillistä. Vlkolínec on esimerkki tällaisesta rakennuskulttuurista, jossa [[hirsirakentamisen]] perinne on säilynyt poikkeuksellisen hyvin. Rakennetaan sitä, mitä käsillä on, mut minusta se on aika järkevää.
+KYSYMYS: Kerro lisää: hirsirakentamisen
+
+### 206
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vlkolínec (kulttuuri)
+Tietoruudun teksti: Vlkolínec on Ružomberokin kaupungin hallintoon kuuluva kylä Slovakiassa, vaikka se oli historiallisesti erillinen kylä. Ensimmäinen kirjallinen maininta on vuodelta 1376, ja vuoden 1882 jälkeen siitä tuli osa Ružomberokia; nimi tulee luultavasti sanasta vlk eli susi. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on yksi Slovakian kymmenestä kansanrakennuskohteesta, koska se on koskematon ja monipuolinen esimerkki Pohjoisten Karpaattien kansanomaisesta maalaisarkkitehtuurista. Kylässä on yli 45 hirsitaloa, joissa kussakin on kaksi tai kolme huonetta, sekä 1700-luvun puinen kellotorni ja barokkikappeli; talot 16 ja 17 on muutettu kansanmuseoksi.
+AIEMPI KYSYMYS: Miten kohteesta tulee Unescon maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Valtio ehdottaa kohdetta maailmanperintöluetteloon, ja ehdotus arvioidaan [[Unescon]] neuvoa-antavissa asiantuntijaelimissä. Lopullisen päätöksen tekee [[maailmanperintökomitea]], ja kohteen täytyy täyttää kriteerit, joiden ytimessä on poikkeuksellinen yleismaailmallinen arvo. Järjestelmä perustuu vuoden 1972 maailmanperintösopimukseen. Vlkolínec on kuulunut luetteloon vuodesta 1993. Byrokratiaa nähdään, mut onneksi minä lennän sen yli.
+KYSYMYS: Kerro lisää: Unescon
+
+### 207
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vlkolínec (kulttuuri)
+Tietoruudun teksti: Vlkolínec on Ružomberokin kaupungin hallintoon kuuluva kylä Slovakiassa, vaikka se oli historiallisesti erillinen kylä. Ensimmäinen kirjallinen maininta on vuodelta 1376, ja vuoden 1882 jälkeen siitä tuli osa Ružomberokia; nimi tulee luultavasti sanasta vlk eli susi. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on yksi Slovakian kymmenestä kansanrakennuskohteesta, koska se on koskematon ja monipuolinen esimerkki Pohjoisten Karpaattien kansanomaisesta maalaisarkkitehtuurista. Kylässä on yli 45 hirsitaloa, joissa kussakin on kaksi tai kolme huonetta, sekä 1700-luvun puinen kellotorni ja barokkikappeli; talot 16 ja 17 on muutettu kansanmuseoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Miten kohteesta tulee Unescon maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Valtio ehdottaa kohdetta maailmanperintöluetteloon, ja ehdotus arvioidaan [[Unescon]] neuvoa-antavissa asiantuntijaelimissä. Lopullisen päätöksen tekee [[maailmanperintökomitea]], ja kohteen täytyy täyttää kriteerit, joiden ytimessä on poikkeuksellinen yleismaailmallinen arvo. Järjestelmä perustuu vuoden 1972 maailmanperintösopimukseen. Vlkolínec on kuulunut luetteloon vuodesta 1993. Byrokratiaa nähdään, mut onneksi minä lennän sen yli.
+KYSYMYS: Kerro lisää: maailmanperintökomitea
+
+### 208
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vlkolínec (kulttuuri)
+Tietoruudun teksti: Vlkolínec on Ružomberokin kaupungin hallintoon kuuluva kylä Slovakiassa, vaikka se oli historiallisesti erillinen kylä. Ensimmäinen kirjallinen maininta on vuodelta 1376, ja vuoden 1882 jälkeen siitä tuli osa Ružomberokia; nimi tulee luultavasti sanasta vlk eli susi. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on yksi Slovakian kymmenestä kansanrakennuskohteesta, koska se on koskematon ja monipuolinen esimerkki Pohjoisten Karpaattien kansanomaisesta maalaisarkkitehtuurista. Kylässä on yli 45 hirsitaloa, joissa kussakin on kaksi tai kolme huonetta, sekä 1700-luvun puinen kellotorni ja barokkikappeli; talot 16 ja 17 on muutettu kansanmuseoksi.
+AIEMPI KYSYMYS: Elääkö Karpaateilla nykyään susia?
+AIEMPI VASTAUS (Livia):
+Ai se, mitä sudet tekevät. Kyllä, Karpaateilla elää susia, ja vuoristometsissä elää myös [[ruskeakarhuja]] ja [[ilveksiä]]. Tarkkoja määriä en ole varma, mutta [[Karpaattien]] laaja metsäalue kuuluu Euroopan tärkeimpiin petoeläinten elinalueisiin. Susi on nimennyt Vlkolínecin kylänkin, sillä nimen arvellaan tulevan sanasta vlk. Hyvä että ne pysyvät metsässä, ja minä katolla.
+KYSYMYS: Kerro lisää: ruskeakarhuja
+
+### 209
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vlkolínec (kulttuuri)
+Tietoruudun teksti: Vlkolínec on Ružomberokin kaupungin hallintoon kuuluva kylä Slovakiassa, vaikka se oli historiallisesti erillinen kylä. Ensimmäinen kirjallinen maininta on vuodelta 1376, ja vuoden 1882 jälkeen siitä tuli osa Ružomberokia; nimi tulee luultavasti sanasta vlk eli susi. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on yksi Slovakian kymmenestä kansanrakennuskohteesta, koska se on koskematon ja monipuolinen esimerkki Pohjoisten Karpaattien kansanomaisesta maalaisarkkitehtuurista. Kylässä on yli 45 hirsitaloa, joissa kussakin on kaksi tai kolme huonetta, sekä 1700-luvun puinen kellotorni ja barokkikappeli; talot 16 ja 17 on muutettu kansanmuseoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Skansen] 1891 Artur Hazelius perusti Skansenin 11. lokakuuta 1891. Se on Ruotsin vanhin ulkoilmamuseo, ja sinne koottiin taloja, myllyjä ja pihoja eri puolilta Ruotsia — lähes 150 rakennusta, joista vain kolme on jälkeenpäin rakennettuja jäljennöksiä. Skansenilla asuu myös eläimiä: karhuja, hirviä, ilveksiä, poroja ja hylkeitä pääsee katsomaan aivan läheltä. Alue on 30 hehtaarin kokoinen, ja sinne pääsee muun muassa pienellä köysiradalla. Nykyään Skansenissa käy yli 1,3 miljoonaa vierasta joka vuosi. Suosituin perinne on Allsång på Skansen eli yhteislaulutilaisuus, joka on jatkunut jo vuosikymmenten ajan.
+- [Espanja — maalehti / Luonto: Kissa, joka melkein hävisi] Iberianilves syö melkein pelkkiä kaneja, ja kun kanitauti kaatoi saaliskannan 1900-luvun lopulla, ilves seurasi perässä. Vuonna 2002 niitä laskettiin koko maailmassa alle sata yksilöä — se oli maailman uhanalaisin kissaeläin. Pelastus tehtiin kolmella asialla: kanikantoja hoidettiin, ilveksiä kasvatettiin tarhoissa ja päästettiin luontoon, ja teille rakennettiin alikulkuja. Nyt niitä on yli kaksituhatta, ja laji siirrettiin luokasta "äärimmäisen uhanalainen" luokkaan "vaarantunut".
+AIEMPI KYSYMYS: Elääkö Karpaateilla nykyään susia?
+AIEMPI VASTAUS (Livia):
+Ai se, mitä sudet tekevät. Kyllä, Karpaateilla elää susia, ja vuoristometsissä elää myös [[ruskeakarhuja]] ja [[ilveksiä]]. Tarkkoja määriä en ole varma, mutta [[Karpaattien]] laaja metsäalue kuuluu Euroopan tärkeimpiin petoeläinten elinalueisiin. Susi on nimennyt Vlkolínecin kylänkin, sillä nimen arvellaan tulevan sanasta vlk. Hyvä että ne pysyvät metsässä, ja minä katolla.
+KYSYMYS: Kerro lisää: ilveksiä
+
+### 210
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čičmany (kulttuuri)
+Tietoruudun teksti: Čičmany on kylä ja kunta Žilinan läänissä Pohjois-Slovakiassa, ja sen kansanarkkitehtuurialue perustettiin vuonna 1977. Nimi tulee slovakian sanasta čičman, joka tarkoittaa melua pitävää puunkaatajaa. Ensimmäinen säilynyt maininta kylästä on vuodelta 1272, ja vielä 1900-luvun puoliväliin asti kylä oli lampaankasvatuksen keskus. Vuoden 1921 suuren tulipalon jälkeen kylä kunnostettiin alkuperäiseen asuunsa valtion runsaiden avustusten turvin. Kylässä on säilynyt puisia taloja, joissa on harjakatot, parvekkeet ja piikikkäät tai suorat seinäkoristeet; erityisen kiinnostavia ovat talojen ulkoseiniin maalatut valkoiset kuviot.
+AIEMPI KYSYMYS: Mitä slovakian sana čičman tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Slovakian sana čičman tarkoittaa melua pitävää puunkaatajaa, ja Čičmanyn kylän nimi tulee juuri siitä. Kylä sijaitsee [[Žilinan läänissä]] Pohjois-Slovakiassa, ja sen [[kansanarkkitehtuurialue]] perustettiin vuonna 1977.
+
+Melua pitävä puunkaataja on minusta täydellinen kylännimi. Itse pidän kyllä enemmän hiljaisista oksista.
+KYSYMYS: Kerro lisää: Žilinan läänissä
+
+### 211
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čičmany (kulttuuri)
+Tietoruudun teksti: Čičmany on kylä ja kunta Žilinan läänissä Pohjois-Slovakiassa, ja sen kansanarkkitehtuurialue perustettiin vuonna 1977. Nimi tulee slovakian sanasta čičman, joka tarkoittaa melua pitävää puunkaatajaa. Ensimmäinen säilynyt maininta kylästä on vuodelta 1272, ja vielä 1900-luvun puoliväliin asti kylä oli lampaankasvatuksen keskus. Vuoden 1921 suuren tulipalon jälkeen kylä kunnostettiin alkuperäiseen asuunsa valtion runsaiden avustusten turvin. Kylässä on säilynyt puisia taloja, joissa on harjakatot, parvekkeet ja piikikkäät tai suorat seinäkoristeet; erityisen kiinnostavia ovat talojen ulkoseiniin maalatut valkoiset kuviot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santarém — kaupunkilehti / Santarém: Tapajós-kansan hautaurna] Kauan ennen Bettendorffin lähetysasemaa Santarémin seudulla asui Tapajós-kansa, jonka kukoistava kulttuuri kukoisti tuhat vuotta ennen eurooppalaisten saapumista. Arkeologien mukaan Tapajós-kansan asutus ulottui laajalle Belterran ylängölle, ja väestöä on arvioitu olleen jokisuulla kymmeniä tuhansia ennen siirtomaa-aikaa. Kansa tunnettiin erityisesti taidokkaasta keramiikastaan: koristelluista astioista ja hautaurnista, joihin muotoiltiin ihmis- ja eläinhahmoja. Osa näistä esineistä on tänään esillä Santarémin museoissa, ja tuoreet ilmakuvaukset ovat paljastaneet lisää muinaisia asuinjälkiä sademetsän alta.
+AIEMPI KYSYMYS: Mitä slovakian sana čičman tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Slovakian sana čičman tarkoittaa melua pitävää puunkaatajaa, ja Čičmanyn kylän nimi tulee juuri siitä. Kylä sijaitsee [[Žilinan läänissä]] Pohjois-Slovakiassa, ja sen [[kansanarkkitehtuurialue]] perustettiin vuonna 1977.
+
+Melua pitävä puunkaataja on minusta täydellinen kylännimi. Itse pidän kyllä enemmän hiljaisista oksista.
+KYSYMYS: Kerro lisää: kansanarkkitehtuurialue
+
+### 212
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čičmany (kulttuuri)
+Tietoruudun teksti: Čičmany on kylä ja kunta Žilinan läänissä Pohjois-Slovakiassa, ja sen kansanarkkitehtuurialue perustettiin vuonna 1977. Nimi tulee slovakian sanasta čičman, joka tarkoittaa melua pitävää puunkaatajaa. Ensimmäinen säilynyt maininta kylästä on vuodelta 1272, ja vielä 1900-luvun puoliväliin asti kylä oli lampaankasvatuksen keskus. Vuoden 1921 suuren tulipalon jälkeen kylä kunnostettiin alkuperäiseen asuunsa valtion runsaiden avustusten turvin. Kylässä on säilynyt puisia taloja, joissa on harjakatot, parvekkeet ja piikikkäät tai suorat seinäkoristeet; erityisen kiinnostavia ovat talojen ulkoseiniin maalatut valkoiset kuviot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Petra — kaupunkilehti / Tiede ja kivi: Tulipalo tuhosi kirjaston ja säilytti sen] Vuonna 1993 Petran bysanttilaisesta kirkosta löytyi noin 140 papyruskääröä, Jordanian suurin muinaisten asiakirjojen kokoelma. Kääröt ovat kreikankielisiä ja 500-luvulta, ja ne säilyivät samasta syystä kuin Herculaneumin papyrukset: ne hiiltyivät tulipalossa. Suurin osa vaurioitui lukukelvottomaksi, mutta muutamista kymmenistä saa yhä selvää. Ne kertovat kirkon diakonin Theodoroksen varakkaan suvun arjesta — avioliitoista, perinnöistä ja maakaupoista. Kirkko rakennettiin 400-luvun jälkipuoliskolla, ja se paloi 600-luvun alussa. Sivulaivojen mosaiikeissa on vuodenaikoja, eläimiä, ihmisiä, saviastioita ja kasveja.
+- [Tokio — kaupunkilehti / Arki ja alakaupunki: Tulipalo pysäytettiin purkamalla taloja] Edon talot olivat puuta ja paperia, ja tuli pysäytettiin purkamalla: hikeshi-miehet repivät tieltä ne rakennukset, joihin liekki olisi tarttunut. Vuosina 1601–1867 Edossa oli 49 suurta paloa, Osakassa kuusi; siellä talot oli rapattu ja katot tehty tiilestä. Vuoden 1657 Meirekin palon jälkeen shogunaatti perusti pysyvän palokunnan, maailman ensimmäisen; toinen oli Lontoon palokunta vuoden 1666 palon jälkeen. Vapaaehtoisia ryhmiä oli 47, ja kullakin oli oma matoi: pitkä tanko, jonka päässä on ryhmän tunnus ja nippu nauhoja. Se nostettiin katolle palavan talon viereen.
+AIEMPI KYSYMYS: Minä vuonna kylä kunnostettiin suuren tulipalon jälkeen?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tässä on kaksi vuosilukua. Kylän suuri [[tulipalo]] sattui vuonna 1921, ja sen jälkeen kylä kunnostettiin alkuperäiseen asuunsa valtion runsaiden avustusten turvin. Tarkkaa kunnostusvuotta minulla ei ole, mutta työ tehtiin palon jälkeen, ja lopputuloksena on [[kansanarkkitehtuurialue]], joka perustettiin vuonna 1977. Lyhyt vastaus, mutta rehellinen.
+KYSYMYS: Kerro lisää: tulipalo
+
+### 213
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čičmany (kulttuuri)
+Tietoruudun teksti: Čičmany on kylä ja kunta Žilinan läänissä Pohjois-Slovakiassa, ja sen kansanarkkitehtuurialue perustettiin vuonna 1977. Nimi tulee slovakian sanasta čičman, joka tarkoittaa melua pitävää puunkaatajaa. Ensimmäinen säilynyt maininta kylästä on vuodelta 1272, ja vielä 1900-luvun puoliväliin asti kylä oli lampaankasvatuksen keskus. Vuoden 1921 suuren tulipalon jälkeen kylä kunnostettiin alkuperäiseen asuunsa valtion runsaiden avustusten turvin. Kylässä on säilynyt puisia taloja, joissa on harjakatot, parvekkeet ja piikikkäät tai suorat seinäkoristeet; erityisen kiinnostavia ovat talojen ulkoseiniin maalatut valkoiset kuviot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — maalehti / Aavikko: Teltta kudotaan lampaan ja vuohen villasta] Beduiinien teltta on nimeltään bait al-shaar. Se kudotaan lampaan ja vuohen villasta ja kamelinkarvasta. Kangaspuut levitetään maahan: kaksi puuta päihin, loimilangat niiden väliin, ja kutoja istuu maassa työnsä vieressä ja siirtyy eteenpäin sitä mukaa kun kangas valmistuu. Kuviot ovat kolmioita ja vinoneliöitä, ja jokainen suku tunnisti omansa. Samalla tavalla tehtiin telttaa jakavat väliverhot ja kamelin selkään sidottavat säkit. Kuwaitissa perustettiin vuonna 1978 yhdistys ja pari vuotta myöhemmin Sadu-talo, jotta taito ei katoaisi, ja vuonna 2020 sadu-kudonta otettiin Unescon perintöluetteloon.
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+AIEMPI KYSYMYS: Mikä oli Čičmanyn pääelinkeino 1900-luvun puoliväliin asti?
+AIEMPI VASTAUS (Livia):
+Joo, selvä pyykki. Kylä oli vielä 1900-luvun puoliväliin asti [[lampaankasvatuksen]] keskus. Myöhemmin sen puutalot ja niiden maalatut seinät tekivät siitä [[kansanarkkitehtuurialueen]], joka perustettiin vuonna 1977. Lampaat näyttävät ylhäältä pieniltä pilviltä.
+KYSYMYS: Kerro lisää: lampaankasvatuksen
+
+### 214
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čičmany (kulttuuri)
+Tietoruudun teksti: Čičmany on kylä ja kunta Žilinan läänissä Pohjois-Slovakiassa, ja sen kansanarkkitehtuurialue perustettiin vuonna 1977. Nimi tulee slovakian sanasta čičman, joka tarkoittaa melua pitävää puunkaatajaa. Ensimmäinen säilynyt maininta kylästä on vuodelta 1272, ja vielä 1900-luvun puoliväliin asti kylä oli lampaankasvatuksen keskus. Vuoden 1921 suuren tulipalon jälkeen kylä kunnostettiin alkuperäiseen asuunsa valtion runsaiden avustusten turvin. Kylässä on säilynyt puisia taloja, joissa on harjakatot, parvekkeet ja piikikkäät tai suorat seinäkoristeet; erityisen kiinnostavia ovat talojen ulkoseiniin maalatut valkoiset kuviot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santarém — kaupunkilehti / Santarém: Tapajós-kansan hautaurna] Kauan ennen Bettendorffin lähetysasemaa Santarémin seudulla asui Tapajós-kansa, jonka kukoistava kulttuuri kukoisti tuhat vuotta ennen eurooppalaisten saapumista. Arkeologien mukaan Tapajós-kansan asutus ulottui laajalle Belterran ylängölle, ja väestöä on arvioitu olleen jokisuulla kymmeniä tuhansia ennen siirtomaa-aikaa. Kansa tunnettiin erityisesti taidokkaasta keramiikastaan: koristelluista astioista ja hautaurnista, joihin muotoiltiin ihmis- ja eläinhahmoja. Osa näistä esineistä on tänään esillä Santarémin museoissa, ja tuoreet ilmakuvaukset ovat paljastaneet lisää muinaisia asuinjälkiä sademetsän alta.
+AIEMPI KYSYMYS: Mikä oli Čičmanyn pääelinkeino 1900-luvun puoliväliin asti?
+AIEMPI VASTAUS (Livia):
+Joo, selvä pyykki. Kylä oli vielä 1900-luvun puoliväliin asti [[lampaankasvatuksen]] keskus. Myöhemmin sen puutalot ja niiden maalatut seinät tekivät siitä [[kansanarkkitehtuurialueen]], joka perustettiin vuonna 1977. Lampaat näyttävät ylhäältä pieniltä pilviltä.
+KYSYMYS: Kerro lisää: kansanarkkitehtuurialueen
+
+### 215
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čičmany (kulttuuri)
+Tietoruudun teksti: Čičmany on kylä ja kunta Žilinan läänissä Pohjois-Slovakiassa, ja sen kansanarkkitehtuurialue perustettiin vuonna 1977. Nimi tulee slovakian sanasta čičman, joka tarkoittaa melua pitävää puunkaatajaa. Ensimmäinen säilynyt maininta kylästä on vuodelta 1272, ja vielä 1900-luvun puoliväliin asti kylä oli lampaankasvatuksen keskus. Vuoden 1921 suuren tulipalon jälkeen kylä kunnostettiin alkuperäiseen asuunsa valtion runsaiden avustusten turvin. Kylässä on säilynyt puisia taloja, joissa on harjakatot, parvekkeet ja piikikkäät tai suorat seinäkoristeet; erityisen kiinnostavia ovat talojen ulkoseiniin maalatut valkoiset kuviot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Ruoka: Kellarit, jotka pelastivat viinit] n. 1500-luku — Slovakian Tokajin viinialue on pieni: vain noin 908 hehtaaria seitsemässä kylässä Trebišovin seudulla aivan Unkarin rajan tuntumassa. Alueen kellarit ovat suurimmaksi osaksi peräisin siltä ajalta, jolloin seutu oli yli 170 vuotta turkkilaisten vallan alla. Ne rakennettiin piilopaikoiksi, joihin ihmiset ja omaisuus saatiin turvaan ryöstäjiltä. Tokajin olosuhteet suosivat rypäleitä, joista saadaan luonnostaan makeita viinejä. Slovakiassa tämä on kuudesta viinialueesta pienin. Sekä unkarilaiset että slovakialaiset tuottajat saavat käyttää Tokaj-nimeä: EU:n tuomioistuimet hylkäsivät Unkarin valituksen vuonna 2013.
+- [Slovakia — maalehti / Ruoka: Hapankaalikeitto joulupöytään] Joulupöydässä — Kapustnica on hapankaalista keitettävä keitto, joka tunnetaan Tšekissä ja Slovakiassa joulun kaalikeittona. Slovakialaisessa keittiössä siihen kuuluu usein sieniä, lihaa ja makkaraa, ja joskus se tarjoillaan leipäkulhossa. Perinteinen slovakialainen ruoka rakentui aineksille, jotka kestivät kuumat kesät ja kylmät talvet, sillä nykyaikaisia säilytyskeinoja ei ollut: hapankaali oli sianlihan, perunan ja maitotuotteiden rinnalla yksi peruselintarvikkeista. Kaalikeittoja syödään myös Puolassa, Ukrainassa ja Venäjällä.
+AIEMPI KYSYMYS: Milloin Čičmany mainitaan ensimmäisen kerran?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Ensimmäinen säilynyt maininta Čičmanyn kylästä on vuodelta 1272. Kylä on siis vanha, ja nykyään se tunnetaan [[Slovakiassa]] [[kansanarkkitehtuurialueena]], joka perustettiin vuonna 1977. Yli seitsemänsataa vuotta, ja minä muistin sen ihan ensi yrittämällä.
+KYSYMYS: Kerro lisää: Slovakiassa
+
+### 216
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čičmany (kulttuuri)
+Tietoruudun teksti: Čičmany on kylä ja kunta Žilinan läänissä Pohjois-Slovakiassa, ja sen kansanarkkitehtuurialue perustettiin vuonna 1977. Nimi tulee slovakian sanasta čičman, joka tarkoittaa melua pitävää puunkaatajaa. Ensimmäinen säilynyt maininta kylästä on vuodelta 1272, ja vielä 1900-luvun puoliväliin asti kylä oli lampaankasvatuksen keskus. Vuoden 1921 suuren tulipalon jälkeen kylä kunnostettiin alkuperäiseen asuunsa valtion runsaiden avustusten turvin. Kylässä on säilynyt puisia taloja, joissa on harjakatot, parvekkeet ja piikikkäät tai suorat seinäkoristeet; erityisen kiinnostavia ovat talojen ulkoseiniin maalatut valkoiset kuviot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santarém — kaupunkilehti / Santarém: Tapajós-kansan hautaurna] Kauan ennen Bettendorffin lähetysasemaa Santarémin seudulla asui Tapajós-kansa, jonka kukoistava kulttuuri kukoisti tuhat vuotta ennen eurooppalaisten saapumista. Arkeologien mukaan Tapajós-kansan asutus ulottui laajalle Belterran ylängölle, ja väestöä on arvioitu olleen jokisuulla kymmeniä tuhansia ennen siirtomaa-aikaa. Kansa tunnettiin erityisesti taidokkaasta keramiikastaan: koristelluista astioista ja hautaurnista, joihin muotoiltiin ihmis- ja eläinhahmoja. Osa näistä esineistä on tänään esillä Santarémin museoissa, ja tuoreet ilmakuvaukset ovat paljastaneet lisää muinaisia asuinjälkiä sademetsän alta.
+AIEMPI KYSYMYS: Milloin Čičmany mainitaan ensimmäisen kerran?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Ensimmäinen säilynyt maininta Čičmanyn kylästä on vuodelta 1272. Kylä on siis vanha, ja nykyään se tunnetaan [[Slovakiassa]] [[kansanarkkitehtuurialueena]], joka perustettiin vuonna 1977. Yli seitsemänsataa vuotta, ja minä muistin sen ihan ensi yrittämällä.
+KYSYMYS: Kerro lisää: kansanarkkitehtuurialueena
+
+### 217
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čičmany (kulttuuri)
+Tietoruudun teksti: Čičmany on kylä ja kunta Žilinan läänissä Pohjois-Slovakiassa, ja sen kansanarkkitehtuurialue perustettiin vuonna 1977. Nimi tulee slovakian sanasta čičman, joka tarkoittaa melua pitävää puunkaatajaa. Ensimmäinen säilynyt maininta kylästä on vuodelta 1272, ja vielä 1900-luvun puoliväliin asti kylä oli lampaankasvatuksen keskus. Vuoden 1921 suuren tulipalon jälkeen kylä kunnostettiin alkuperäiseen asuunsa valtion runsaiden avustusten turvin. Kylässä on säilynyt puisia taloja, joissa on harjakatot, parvekkeet ja piikikkäät tai suorat seinäkoristeet; erityisen kiinnostavia ovat talojen ulkoseiniin maalatut valkoiset kuviot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marokko — maalehti / Luonto: Leijona, jonka harja ulottui kyynärpäihin] 1960-luku — Atlasleijona eli Pohjois-Afrikassa Marokosta Egyptiin. Metsästys- ja havaintotietojen läpikäynti osoitti, että pieniä ryhmiä saattoi säilyä Algeriassa 1960-luvun alkuun ja Marokossa 1960-luvun puoliväliin; sen jälkeen laji on luonnosta hävinnyt. Museoiden täytetyt urokset ovat kuonosta hännänpäähän 2,35–2,8-metrisiä, ja harjan karvat ovat 8–22 senttimetriä pitkiä; osalla harja jatkui hartioiden yli ja vatsan alta kyynärpäihin asti. Selitykseksi on tarjottu Atlaksen muuta Afrikkaa kylmempää talvea. Rabatin eläintarhan leijonat olivat aatelisten ja berberien lahjoja kuningasperheelle: kun perhe joutui 1953 maanpakoon, niitä oli 21.
+AIEMPI KYSYMYS: Millaisia taloja Čičmanyssa on säilynyt?
+AIEMPI VASTAUS (Livia):
+No niin, nyt mennään taloihin. Kylässä on säilynyt puisia taloja, joissa on [[harjakatot]], parvekkeet ja piikikkäät tai suorat seinäkoristeet. Erityisen kiinnostavia ovat ulkoseiniin maalatut [[valkoiset kuviot]]. Harjakatot ovat kyyhkyn mielestä erinomaisia tarkastuspaikkoja.
+KYSYMYS: Kerro lisää: harjakatot
+
+### 218
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čičmany (kulttuuri)
+Tietoruudun teksti: Čičmany on kylä ja kunta Žilinan läänissä Pohjois-Slovakiassa, ja sen kansanarkkitehtuurialue perustettiin vuonna 1977. Nimi tulee slovakian sanasta čičman, joka tarkoittaa melua pitävää puunkaatajaa. Ensimmäinen säilynyt maininta kylästä on vuodelta 1272, ja vielä 1900-luvun puoliväliin asti kylä oli lampaankasvatuksen keskus. Vuoden 1921 suuren tulipalon jälkeen kylä kunnostettiin alkuperäiseen asuunsa valtion runsaiden avustusten turvin. Kylässä on säilynyt puisia taloja, joissa on harjakatot, parvekkeet ja piikikkäät tai suorat seinäkoristeet; erityisen kiinnostavia ovat talojen ulkoseiniin maalatut valkoiset kuviot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Borneo — kaupunkilehti / Borneo: Valkoiset radžat] Brunein sulttaani luovutti suuren osan Sarawakia englantilaiselle James Brookelle palkkioksi kapinan kukistamisesta, ja Brooke otti itselleen radžan arvon. Vuosiluvusta on kaksi versiota: Borneon yleisartikkeli sanoo 1842, mutta sekä Sarawakin rajakunnan että Brooken oma artikkeli antavat luovutukselle päivän 24. syyskuuta 1841 ja kertovat virallisen julistuksen tulleen vasta 18. elokuuta 1842. Yhdysvallat tunnusti rajakunnan itsenäiseksi valtioksi 1850 ja Britannia 1864. Brooken suku — veljenpoika ja tämän poika — hallitsi Sarawakia sata vuotta valkoisina radžoina.
+AIEMPI KYSYMYS: Millaisia taloja Čičmanyssa on säilynyt?
+AIEMPI VASTAUS (Livia):
+No niin, nyt mennään taloihin. Kylässä on säilynyt puisia taloja, joissa on [[harjakatot]], parvekkeet ja piikikkäät tai suorat seinäkoristeet. Erityisen kiinnostavia ovat ulkoseiniin maalatut [[valkoiset kuviot]]. Harjakatot ovat kyyhkyn mielestä erinomaisia tarkastuspaikkoja.
+KYSYMYS: Kerro lisää: valkoiset kuviot
+
+### 219
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Terchová (kulttuuri)
+Tietoruudun teksti: Terchová on suuri kylä ja kunta (4 073 asukasta) Malá Fatran vuorilla Žilinan alueella Pohjois-Slovakiassa, noin 25 kilometriä Žilinasta itään. Kylä perustettiin vuonna 1580, mutta seutu oli asuttu jo aiemmin; alun perin se oli valakkien asutus, joka muuttui vähitellen maanviljelysasutukseksi. Kylä on kuuluisin siitä, että se on Juraj Jánošíkin, jota kutsutaan slovakialaiseksi Robin Hoodiksi, syntymäpaikka ja kasvupaikka. 1800-luvulla useat kuivuudet ja taudit autioittivat kylää, kun monet muuttivat Yhdysvaltoihin, Kanadaan ja Argentiinaan. Terchován musiikki on merkitty Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2013.
+AIEMPI KYSYMYS: Kuka on Terchován kuuluisin poika?
+AIEMPI VASTAUS (Livia):
+Ai se. Hyvä tuttu. Terchován kuuluisin poika on [[Juraj Jánošík]], jota kutsutaan slovakialaiseksi [[Robin Hoodiksi]]. Hän syntyi ja kasvoi kylässä, joka sijaitsee [[Malá Fatran]] vuorilla Žilinan alueella. Aika iso nimi vuoristokylälle.
+KYSYMYS: Kerro lisää: Juraj Jánošík
+
+### 220
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Terchová (kulttuuri)
+Tietoruudun teksti: Terchová on suuri kylä ja kunta (4 073 asukasta) Malá Fatran vuorilla Žilinan alueella Pohjois-Slovakiassa, noin 25 kilometriä Žilinasta itään. Kylä perustettiin vuonna 1580, mutta seutu oli asuttu jo aiemmin; alun perin se oli valakkien asutus, joka muuttui vähitellen maanviljelysasutukseksi. Kylä on kuuluisin siitä, että se on Juraj Jánošíkin, jota kutsutaan slovakialaiseksi Robin Hoodiksi, syntymäpaikka ja kasvupaikka. 1800-luvulla useat kuivuudet ja taudit autioittivat kylää, kun monet muuttivat Yhdysvaltoihin, Kanadaan ja Argentiinaan. Terchován musiikki on merkitty Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2013.
+AIEMPI KYSYMYS: Kuka on Terchován kuuluisin poika?
+AIEMPI VASTAUS (Livia):
+Ai se. Hyvä tuttu. Terchován kuuluisin poika on [[Juraj Jánošík]], jota kutsutaan slovakialaiseksi [[Robin Hoodiksi]]. Hän syntyi ja kasvoi kylässä, joka sijaitsee [[Malá Fatran]] vuorilla Žilinan alueella. Aika iso nimi vuoristokylälle.
+KYSYMYS: Kerro lisää: Robin Hoodiksi
+
+### 221
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Terchová (kulttuuri)
+Tietoruudun teksti: Terchová on suuri kylä ja kunta (4 073 asukasta) Malá Fatran vuorilla Žilinan alueella Pohjois-Slovakiassa, noin 25 kilometriä Žilinasta itään. Kylä perustettiin vuonna 1580, mutta seutu oli asuttu jo aiemmin; alun perin se oli valakkien asutus, joka muuttui vähitellen maanviljelysasutukseksi. Kylä on kuuluisin siitä, että se on Juraj Jánošíkin, jota kutsutaan slovakialaiseksi Robin Hoodiksi, syntymäpaikka ja kasvupaikka. 1800-luvulla useat kuivuudet ja taudit autioittivat kylää, kun monet muuttivat Yhdysvaltoihin, Kanadaan ja Argentiinaan. Terchován musiikki on merkitty Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2013.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Kirjallisuus: Museo hämärässä kartanossa] Kafkan museo sijaitsee 1500-luvun Herget-tiilitehtaan rakennuksessa Malá Strana -kaupunginosassa, lähellä Kaarlensiltaa. Näyttely on tietoisesti ahdistavan hämärä ja sokkeloinen — tila itsessään on suunniteltu heijastamaan Kafkan tuotannon tunnelmaa. Kafka ei koskaan asunut tässä rakennuksessa, mutta hän vietti suuren osan elämästään kävellen samoja Prahan katuja, joita museon ikkunoista näkyy.
+AIEMPI KYSYMYS: Kuka on Terchován kuuluisin poika?
+AIEMPI VASTAUS (Livia):
+Ai se. Hyvä tuttu. Terchován kuuluisin poika on [[Juraj Jánošík]], jota kutsutaan slovakialaiseksi [[Robin Hoodiksi]]. Hän syntyi ja kasvoi kylässä, joka sijaitsee [[Malá Fatran]] vuorilla Žilinan alueella. Aika iso nimi vuoristokylälle.
+KYSYMYS: Kerro lisää: Malá Fatran
+
+### 222
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Terchová (kulttuuri)
+Tietoruudun teksti: Terchová on suuri kylä ja kunta (4 073 asukasta) Malá Fatran vuorilla Žilinan alueella Pohjois-Slovakiassa, noin 25 kilometriä Žilinasta itään. Kylä perustettiin vuonna 1580, mutta seutu oli asuttu jo aiemmin; alun perin se oli valakkien asutus, joka muuttui vähitellen maanviljelysasutukseksi. Kylä on kuuluisin siitä, että se on Juraj Jánošíkin, jota kutsutaan slovakialaiseksi Robin Hoodiksi, syntymäpaikka ja kasvupaikka. 1800-luvulla useat kuivuudet ja taudit autioittivat kylää, kun monet muuttivat Yhdysvaltoihin, Kanadaan ja Argentiinaan. Terchován musiikki on merkitty Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2013.
+AIEMPI KYSYMYS: Minä vuonna Terchován musiikki merkittiin Unescon luetteloon?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Terchován musiikki merkittiin vuonna 2013 [[Unescon]] [[aineettoman kulttuuriperinnön]] luetteloon. Luettelo kokoaa eläviä perinteitä, kuten musiikkia, jotka siirtyvät sukupolvelta toiselle, ja Terchová on seudullaan tunnettu juuri musiikistaan. Kolmetoista vuotta sitten, kuka olisi uskonut.
+KYSYMYS: Kerro lisää: Unescon
+
+### 223
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Terchová (kulttuuri)
+Tietoruudun teksti: Terchová on suuri kylä ja kunta (4 073 asukasta) Malá Fatran vuorilla Žilinan alueella Pohjois-Slovakiassa, noin 25 kilometriä Žilinasta itään. Kylä perustettiin vuonna 1580, mutta seutu oli asuttu jo aiemmin; alun perin se oli valakkien asutus, joka muuttui vähitellen maanviljelysasutukseksi. Kylä on kuuluisin siitä, että se on Juraj Jánošíkin, jota kutsutaan slovakialaiseksi Robin Hoodiksi, syntymäpaikka ja kasvupaikka. 1800-luvulla useat kuivuudet ja taudit autioittivat kylää, kun monet muuttivat Yhdysvaltoihin, Kanadaan ja Argentiinaan. Terchován musiikki on merkitty Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2013.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Minä vuonna Terchován musiikki merkittiin Unescon luetteloon?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Terchován musiikki merkittiin vuonna 2013 [[Unescon]] [[aineettoman kulttuuriperinnön]] luetteloon. Luettelo kokoaa eläviä perinteitä, kuten musiikkia, jotka siirtyvät sukupolvelta toiselle, ja Terchová on seudullaan tunnettu juuri musiikistaan. Kolmetoista vuotta sitten, kuka olisi uskonut.
+KYSYMYS: Kerro lisää: aineettoman kulttuuriperinnön
+
+### 224
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Terchová (kulttuuri)
+Tietoruudun teksti: Terchová on suuri kylä ja kunta (4 073 asukasta) Malá Fatran vuorilla Žilinan alueella Pohjois-Slovakiassa, noin 25 kilometriä Žilinasta itään. Kylä perustettiin vuonna 1580, mutta seutu oli asuttu jo aiemmin; alun perin se oli valakkien asutus, joka muuttui vähitellen maanviljelysasutukseksi. Kylä on kuuluisin siitä, että se on Juraj Jánošíkin, jota kutsutaan slovakialaiseksi Robin Hoodiksi, syntymäpaikka ja kasvupaikka. 1800-luvulla useat kuivuudet ja taudit autioittivat kylää, kun monet muuttivat Yhdysvaltoihin, Kanadaan ja Argentiinaan. Terchován musiikki on merkitty Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2013.
+AIEMPI KYSYMYS: Milloin Terchován kylä perustettiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Terchován kylä perustettiin vuonna 1580, mutta seutu oli asuttu jo aiemmin. Alun perin se oli [[valakkien]] asutus, joka muuttui vähitellen maanviljelysasutukseksi. Kylä sijaitsee [[Malá Fatran]] vuorilla noin 25 kilometriä Žilinasta itään. Yli neljäsataa vuotta, ei paha ikä kylälle.
+KYSYMYS: Kerro lisää: valakkien
+
+### 225
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Terchová (kulttuuri)
+Tietoruudun teksti: Terchová on suuri kylä ja kunta (4 073 asukasta) Malá Fatran vuorilla Žilinan alueella Pohjois-Slovakiassa, noin 25 kilometriä Žilinasta itään. Kylä perustettiin vuonna 1580, mutta seutu oli asuttu jo aiemmin; alun perin se oli valakkien asutus, joka muuttui vähitellen maanviljelysasutukseksi. Kylä on kuuluisin siitä, että se on Juraj Jánošíkin, jota kutsutaan slovakialaiseksi Robin Hoodiksi, syntymäpaikka ja kasvupaikka. 1800-luvulla useat kuivuudet ja taudit autioittivat kylää, kun monet muuttivat Yhdysvaltoihin, Kanadaan ja Argentiinaan. Terchován musiikki on merkitty Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2013.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grönlanti — maalehti / Ruoka: Mikä kuivuu, se säilyy] Ammassat eli villakuore on arkiruokaa, koska se kuivuu vaivatta. Länsirannikolta nostetaan ruijanpallasta, grönlanninpallasta, puna-ahventa ja rasvakalaa, itärannikolta nieriää; grönlanninturskaa ja isosimppua syödään vain hätävarana. Sarvivalaan ja valkovalaan raaka nahka eli mattak on tärkeä C-vitamiinin lähde. Merilevää säilötään talveksi, syksyllä poimitaan mustikat ja variksenmarjat, kesällä ruusujuuri ja horsman lehdet. Kaksikymmentäyksi lintulajia on luvallista metsästää, ja lämpenevä ilmasto on pidentänyt kasvukautta niin, että osa viljelijöistä kokeilee parsakaalia.
+AIEMPI KYSYMYS: Miksi monet muuttivat Terchovásta 1800-luvulla ulkomaille?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Terchovaa koettelivat 1800-luvulla useat [[kuivuudet]] ja [[taudit]], jotka autioittivat kylää. Monet muuttivat silloin Yhdysvaltoihin, Kanadaan ja Argentiinaan. Pitkä matka monelle.
+KYSYMYS: Kerro lisää: kuivuudet
+
+### 226
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Terchová (kulttuuri)
+Tietoruudun teksti: Terchová on suuri kylä ja kunta (4 073 asukasta) Malá Fatran vuorilla Žilinan alueella Pohjois-Slovakiassa, noin 25 kilometriä Žilinasta itään. Kylä perustettiin vuonna 1580, mutta seutu oli asuttu jo aiemmin; alun perin se oli valakkien asutus, joka muuttui vähitellen maanviljelysasutukseksi. Kylä on kuuluisin siitä, että se on Juraj Jánošíkin, jota kutsutaan slovakialaiseksi Robin Hoodiksi, syntymäpaikka ja kasvupaikka. 1800-luvulla useat kuivuudet ja taudit autioittivat kylää, kun monet muuttivat Yhdysvaltoihin, Kanadaan ja Argentiinaan. Terchován musiikki on merkitty Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2013.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kimberley — kaupunkilehti / Timanttiryntäys: Ahtaus ja taudit rynnistyksen kaupungissa] Kaivoskaupungin arki ei ollut vain jännittävää aarteenetsintää. Vesi oli niukkaa, kesät polttavan kuumia, ja telttoihin sekä hökkeleihin ahtautunut väestö altisti itsensä tarttuville taudeille. Kimberleyn sairaalan omista tiedoista käy ilmi, että vuosina 1897–1899 hoidettiin 5 368 mustaa potilasta, joista 1 144 kuoli – syinä muun muassa tuberkuloosi, keuhkokuume, keripukki, ripuli ja kaivosonnettomuudet. Suurin osa kaivosten mustista työntekijöistä asui erillisissä, valvotuissa työläisleireissä, joista käsin heidät kuljetettiin päivittäin louhokselle ja takaisin, usein ilman mahdollisuutta poistua alueelta koko sopimuskauden aikana.
+AIEMPI KYSYMYS: Miksi monet muuttivat Terchovásta 1800-luvulla ulkomaille?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Terchovaa koettelivat 1800-luvulla useat [[kuivuudet]] ja [[taudit]], jotka autioittivat kylää. Monet muuttivat silloin Yhdysvaltoihin, Kanadaan ja Argentiinaan. Pitkä matka monelle.
+KYSYMYS: Kerro lisää: taudit
+
+### 227
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Terchová (kulttuuri)
+Tietoruudun teksti: Terchová on suuri kylä ja kunta (4 073 asukasta) Malá Fatran vuorilla Žilinan alueella Pohjois-Slovakiassa, noin 25 kilometriä Žilinasta itään. Kylä perustettiin vuonna 1580, mutta seutu oli asuttu jo aiemmin; alun perin se oli valakkien asutus, joka muuttui vähitellen maanviljelysasutukseksi. Kylä on kuuluisin siitä, että se on Juraj Jánošíkin, jota kutsutaan slovakialaiseksi Robin Hoodiksi, syntymäpaikka ja kasvupaikka. 1800-luvulla useat kuivuudet ja taudit autioittivat kylää, kun monet muuttivat Yhdysvaltoihin, Kanadaan ja Argentiinaan. Terchován musiikki on merkitty Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2013.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Rakennukset: Kylä, jossa aika pysähtyi] 1376 — Vlkolínec Ružomberokin lähellä mainitaan ensimmäisen kerran vuonna 1376, ja sen nimi tulee luultavasti sanasta vlk eli susi. Kylässä on yli 45 hirsitaloa, joissa jokaisessa on kaksi tai kolme huonetta, sekä 1700-luvulta peräisin oleva puinen kellotorni ja barokkikappeli. Talot numero 16 ja 17 on muutettu kansanelämän museoksi, jossa on arjen ja työn esineitä. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on Pohjois-Karpaattien kansanarkkitehtuurin ehjimpiä esimerkkejä.
+- [Slovakia — maalehti / Luonto: Huippu, jolla oli monta nimeä] 1838 — Gerlachovský štít eli Gerlach on Korkeiden Tatrojen ja koko Karpaattien korkein huippu, 2654 metriä. Vanhimman tunnetun nimen, Kösselberg eli Kattilavuori, se sai kartalla 1762, ja slovakiaksi sitä kutsuttiin Kotoliksi eli kattilaksi. Korkeimmaksi huipuksi sen tunnisti vasta 1838 eräs tutkija. Sen jälkeen nimeä vaihdettiin aina vallanpitäjän mukaan: 1896 se sai keisari Frans Joosefin nimen. Kaikkiaan nimiä oli neljä ja nimenmuutoksia kuusi. Pääsy huipulle on nykyään rajoitettu.
+AIEMPI KYSYMYS: Keitä valakit olivat, jotka asuttivat Terchován alun perin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Valakit olivat Karpaattien alueella vuosisatojen ajan elänyttä paimenväestöä, jonka asutus muuttui monin paikoin vähitellen maanviljelysasutukseksi, kuten Terchovássa tapahtui. Terchová on kuitenkin nykyisin tunnettu [[Karpaattien]] vuoristokylänä, jonka musiikki on [[Unescon]] luettelossa. Tämän tarkemmin en ole varma, ja sanon sen suoraan.
+KYSYMYS: Kerro lisää: Karpaattien
+
+### 228
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Liptovský Mikuláš (kulttuuri)
+Tietoruudun teksti: Liptovský Mikuláš on kaupunki Pohjois-Slovakiassa Váh-joen varrella Liptovin altaassa Matalien Tatrojen ja Tatrojen lähellä; se tunnetaan kiltojen ja kulttuurin kaupunkina. Kaupunki mainitaan ensi kerran kuningas Ladislaus IV:n asiakirjassa vuonna 1286, ja Pyhän Nikolauksen kirkko vuodelta 1299 on sen vanhin rakennus. Käsityöläiset perustivat kiltoja, joista vanhin oli suutarien kilta vuonna 1508, ja vuonna 1677 kaupungista tuli Liptovin komitaatin hallintokeskus. Legendaarinen slovakialainen Robin Hood, Juraj Jánošík, tuomittiin ja teloitettiin täällä vuonna 1713. 1800-luvulla kaupunki oli yksi slovakialaisen kansallisen liikkeen keskuksista: ensimmäinen slovakialainen teatteri perustettiin siellä vuonna 1830, ja Ľudovít Štúr julkaisi täällä vuonna 1848 asiakirjan Slovakian kansan vaatimukset.
+AIEMPI KYSYMYS: Minä vuonna ensimmäinen slovakialainen teatteri perustettiin Liptovský Mikulášiin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Ensimmäinen slovakialainen teatteri perustettiin Liptovský Mikulášiin vuonna 1830. Kaupunki oli 1800-luvulla yksi slovakialaisen [[kansallisen liikkeen]] keskuksista, ja vuonna 1848 siellä julkaistiin Slovakian kansan vaatimukset [[Ľudovít Štúrin]] toimesta. Teatteria minäkin arvostan, kunhan parvelle saa lentää.
+KYSYMYS: Kerro lisää: kansallisen liikkeen
+
+### 229
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Liptovský Mikuláš (kulttuuri)
+Tietoruudun teksti: Liptovský Mikuláš on kaupunki Pohjois-Slovakiassa Váh-joen varrella Liptovin altaassa Matalien Tatrojen ja Tatrojen lähellä; se tunnetaan kiltojen ja kulttuurin kaupunkina. Kaupunki mainitaan ensi kerran kuningas Ladislaus IV:n asiakirjassa vuonna 1286, ja Pyhän Nikolauksen kirkko vuodelta 1299 on sen vanhin rakennus. Käsityöläiset perustivat kiltoja, joista vanhin oli suutarien kilta vuonna 1508, ja vuonna 1677 kaupungista tuli Liptovin komitaatin hallintokeskus. Legendaarinen slovakialainen Robin Hood, Juraj Jánošík, tuomittiin ja teloitettiin täällä vuonna 1713. 1800-luvulla kaupunki oli yksi slovakialaisen kansallisen liikkeen keskuksista: ensimmäinen slovakialainen teatteri perustettiin siellä vuonna 1830, ja Ľudovít Štúr julkaisi täällä vuonna 1848 asiakirjan Slovakian kansan vaatimukset.
+AIEMPI KYSYMYS: Minä vuonna ensimmäinen slovakialainen teatteri perustettiin Liptovský Mikulášiin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Ensimmäinen slovakialainen teatteri perustettiin Liptovský Mikulášiin vuonna 1830. Kaupunki oli 1800-luvulla yksi slovakialaisen [[kansallisen liikkeen]] keskuksista, ja vuonna 1848 siellä julkaistiin Slovakian kansan vaatimukset [[Ľudovít Štúrin]] toimesta. Teatteria minäkin arvostan, kunhan parvelle saa lentää.
+KYSYMYS: Kerro lisää: Ľudovít Štúrin
+
+### 230
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Liptovský Mikuláš (kulttuuri)
+Tietoruudun teksti: Liptovský Mikuláš on kaupunki Pohjois-Slovakiassa Váh-joen varrella Liptovin altaassa Matalien Tatrojen ja Tatrojen lähellä; se tunnetaan kiltojen ja kulttuurin kaupunkina. Kaupunki mainitaan ensi kerran kuningas Ladislaus IV:n asiakirjassa vuonna 1286, ja Pyhän Nikolauksen kirkko vuodelta 1299 on sen vanhin rakennus. Käsityöläiset perustivat kiltoja, joista vanhin oli suutarien kilta vuonna 1508, ja vuonna 1677 kaupungista tuli Liptovin komitaatin hallintokeskus. Legendaarinen slovakialainen Robin Hood, Juraj Jánošík, tuomittiin ja teloitettiin täällä vuonna 1713. 1800-luvulla kaupunki oli yksi slovakialaisen kansallisen liikkeen keskuksista: ensimmäinen slovakialainen teatteri perustettiin siellä vuonna 1830, ja Ľudovít Štúr julkaisi täällä vuonna 1848 asiakirjan Slovakian kansan vaatimukset.
+AIEMPI KYSYMYS: Kuka julkaisi täällä vuonna 1848 Slovakian kansan vaatimukset?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: asiakirjan Slovakian kansan vaatimukset julkaisi Liptovský Mikulášissa vuonna 1848 [[Ľudovít Štúr]]. Hän oli keskeinen hahmo slovakialaisessa [[kansallisessa liikkeessä]], ja hänet tunnetaan myös slovakin kirjakielen kodifioijana. Kirjakielestä puheen ollen, minä olen sen kanssa vähän niin ja näin.
+KYSYMYS: Kerro lisää: Ľudovít Štúr
+
+### 231
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Liptovský Mikuláš (kulttuuri)
+Tietoruudun teksti: Liptovský Mikuláš on kaupunki Pohjois-Slovakiassa Váh-joen varrella Liptovin altaassa Matalien Tatrojen ja Tatrojen lähellä; se tunnetaan kiltojen ja kulttuurin kaupunkina. Kaupunki mainitaan ensi kerran kuningas Ladislaus IV:n asiakirjassa vuonna 1286, ja Pyhän Nikolauksen kirkko vuodelta 1299 on sen vanhin rakennus. Käsityöläiset perustivat kiltoja, joista vanhin oli suutarien kilta vuonna 1508, ja vuonna 1677 kaupungista tuli Liptovin komitaatin hallintokeskus. Legendaarinen slovakialainen Robin Hood, Juraj Jánošík, tuomittiin ja teloitettiin täällä vuonna 1713. 1800-luvulla kaupunki oli yksi slovakialaisen kansallisen liikkeen keskuksista: ensimmäinen slovakialainen teatteri perustettiin siellä vuonna 1830, ja Ľudovít Štúr julkaisi täällä vuonna 1848 asiakirjan Slovakian kansan vaatimukset.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: Ghirardelli Square] 1852–1964 Domenico Ghirardelli syntyi 1817 Rapallossa ja oppi suklaantekijän ammatin Romanengon liikkeessä Genovassa. Parikymppisenä hän muutti Uruguayhin ja sieltä Limaan, jossa hän piti makeiskauppaa ja alkoi käyttää nimensä espanjalaista muotoa Domingo. Vuonna 1849 hän lähti Kaliforniaan entisen naapurinsa James Lickin kehotuksesta — Lick oli vienyt San Franciscoon vuotta aiemmin 600 naulaa suklaata — ja avasi ensimmäisen kauppansa kaivosleiriin myydäkseen makeisia kullankaivajille. Vuoden 1851 tulipalo tuhosi hänen San Franciscon liikkeensä ja muutamaa päivää myöhemmin myös Stocktonin kaupan. Ghirardelli aloitti alusta ja perusti 1852 yhtiönsä, joka on Yhdysvaltain kolmanneksi vanhin su…
+- [Quito — kohdekartta / Kohdekartta: El Panecillo] 1975 Kukkula on tulivuoriperäinen ja kohoaa kaupungin kattojen yli kaksisataa metriä; sen laki on 3 016 metriä merenpinnasta. Espanjalaiset antoivat sille nimen Panecillo, "pieni leipä", muodon mukaan. Vanha nimi oli Yavirac, ja jesuiittahistorioitsija Juan de Velascon mukaan sen laella oli temppeli, jossa palvottiin aurinkoa, kunnes valloittajat hävittivät sen. Kukkulalle nouseva katu on nimetty Melchor Aymerichin mukaan. Laella seisoo 45 metriä korkea Neitsyt Marian patsas. Oblaattien sääntökunta tilasi sen espanjalaiselta taiteilijalta Agustín de la Herrán Matorrasilta, ja se on koottu seitsemästätuhannesta alumiiniosasta; pystytyksen suunnitteli quitolainen Aníbal López. Patsas paljaste…
+AIEMPI KYSYMYS: Kuka julkaisi täällä vuonna 1848 Slovakian kansan vaatimukset?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: asiakirjan Slovakian kansan vaatimukset julkaisi Liptovský Mikulášissa vuonna 1848 [[Ľudovít Štúr]]. Hän oli keskeinen hahmo slovakialaisessa [[kansallisessa liikkeessä]], ja hänet tunnetaan myös slovakin kirjakielen kodifioijana. Kirjakielestä puheen ollen, minä olen sen kanssa vähän niin ja näin.
+KYSYMYS: Kerro lisää: kansallisessa liikkeessä
+
+### 232
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Liptovský Mikuláš (kulttuuri)
+Tietoruudun teksti: Liptovský Mikuláš on kaupunki Pohjois-Slovakiassa Váh-joen varrella Liptovin altaassa Matalien Tatrojen ja Tatrojen lähellä; se tunnetaan kiltojen ja kulttuurin kaupunkina. Kaupunki mainitaan ensi kerran kuningas Ladislaus IV:n asiakirjassa vuonna 1286, ja Pyhän Nikolauksen kirkko vuodelta 1299 on sen vanhin rakennus. Käsityöläiset perustivat kiltoja, joista vanhin oli suutarien kilta vuonna 1508, ja vuonna 1677 kaupungista tuli Liptovin komitaatin hallintokeskus. Legendaarinen slovakialainen Robin Hood, Juraj Jánošík, tuomittiin ja teloitettiin täällä vuonna 1713. 1800-luvulla kaupunki oli yksi slovakialaisen kansallisen liikkeen keskuksista: ensimmäinen slovakialainen teatteri perustettiin siellä vuonna 1830, ja Ľudovít Štúr julkaisi täällä vuonna 1848 asiakirjan Slovakian kansan vaatimukset.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakutsk — kohdekartta / Kohdekartta: Nikolskin kirkko] suojeltu kohde 1400036000 Nikolskin eli Pyhän Nikolauksen kirkko on kartan läntisin kohde ja Jakutskin ortodoksisista kirkoista sirointi. Se on kivestä, valkoiseksi rapattu, ja sen kolmiportaisesta kellotornista kohoaa kullattu kupoli ja sen päältä pitkä terävä huippu. Rakennus kuuluu Venäjän kulttuuriperintökohteisiin tunnuksella 1400036000. Kirkko kertoo siitä, miten Jakutskin uskonnollinen kartta on kerroksellinen. Ortodoksisuus tuli kaupunkiin linnoituksen mukana 1600-luvulla, ja sen laitokset ovat yhä näkyvissä: Preobraženskin katedraali, hengellinen seminaari ja Spasskin luostari. Niiden rinnalla elävät kuitenkin vanhemmat käsitykset. Jakuuttien perinteinen usko tuntee kolme maailmaa …
+AIEMPI KYSYMYS: Mikä on Liptovský Mikulášin vanhin rakennus?
+AIEMPI VASTAUS (Livia):
+Mmm— Kaupungin vanhin rakennus on [[Pyhän Nikolauksen kirkko]] vuodelta 1299. Itse kaupunki mainitaan ensi kerran kuningas [[Ladislaus IV:n]] asiakirjassa vuonna 1286. Vanhat kirkot ovat hyviä kyyhkyn pesäpaikkoja, tai niin minulle on kerrottu.
+KYSYMYS: Kerro lisää: Pyhän Nikolauksen kirkko
+
+### 233
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Liptovský Mikuláš (kulttuuri)
+Tietoruudun teksti: Liptovský Mikuláš on kaupunki Pohjois-Slovakiassa Váh-joen varrella Liptovin altaassa Matalien Tatrojen ja Tatrojen lähellä; se tunnetaan kiltojen ja kulttuurin kaupunkina. Kaupunki mainitaan ensi kerran kuningas Ladislaus IV:n asiakirjassa vuonna 1286, ja Pyhän Nikolauksen kirkko vuodelta 1299 on sen vanhin rakennus. Käsityöläiset perustivat kiltoja, joista vanhin oli suutarien kilta vuonna 1508, ja vuonna 1677 kaupungista tuli Liptovin komitaatin hallintokeskus. Legendaarinen slovakialainen Robin Hood, Juraj Jánošík, tuomittiin ja teloitettiin täällä vuonna 1713. 1800-luvulla kaupunki oli yksi slovakialaisen kansallisen liikkeen keskuksista: ensimmäinen slovakialainen teatteri perustettiin siellä vuonna 1830, ja Ľudovít Štúr julkaisi täällä vuonna 1848 asiakirjan Slovakian kansan vaatimukset.
+AIEMPI KYSYMYS: Mikä on Liptovský Mikulášin vanhin rakennus?
+AIEMPI VASTAUS (Livia):
+Mmm— Kaupungin vanhin rakennus on [[Pyhän Nikolauksen kirkko]] vuodelta 1299. Itse kaupunki mainitaan ensi kerran kuningas [[Ladislaus IV:n]] asiakirjassa vuonna 1286. Vanhat kirkot ovat hyviä kyyhkyn pesäpaikkoja, tai niin minulle on kerrottu.
+KYSYMYS: Kerro lisää: Ladislaus IV:n
+
+### 234
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Liptovský Mikuláš (kulttuuri)
+Tietoruudun teksti: Liptovský Mikuláš on kaupunki Pohjois-Slovakiassa Váh-joen varrella Liptovin altaassa Matalien Tatrojen ja Tatrojen lähellä; se tunnetaan kiltojen ja kulttuurin kaupunkina. Kaupunki mainitaan ensi kerran kuningas Ladislaus IV:n asiakirjassa vuonna 1286, ja Pyhän Nikolauksen kirkko vuodelta 1299 on sen vanhin rakennus. Käsityöläiset perustivat kiltoja, joista vanhin oli suutarien kilta vuonna 1508, ja vuonna 1677 kaupungista tuli Liptovin komitaatin hallintokeskus. Legendaarinen slovakialainen Robin Hood, Juraj Jánošík, tuomittiin ja teloitettiin täällä vuonna 1713. 1800-luvulla kaupunki oli yksi slovakialaisen kansallisen liikkeen keskuksista: ensimmäinen slovakialainen teatteri perustettiin siellä vuonna 1830, ja Ľudovít Štúr julkaisi täällä vuonna 1848 asiakirjan Slovakian kansan vaatimukset.
+AIEMPI KYSYMYS: Miksi Liptovský Mikulášia kutsutaan kiltojen kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Just niin, tämä on kaupungin kunnia-asia. Liptovský Mikulášia kutsutaan kiltojen ja kulttuurin kaupungiksi, koska käsityöläiset perustivat siellä [[kiltoja]]. Vanhin niistä oli [[suutarien kilta]] vuodelta 1508, ja vuonna 1677 kaupungista tuli [[Liptovin komitaatin]] hallintokeskus. Suutarit ensin, ja kyyhkyn jaloille ei ole tehty kenkiä vieläkään.
+KYSYMYS: Kerro lisää: kiltoja
+
+### 235
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Liptovský Mikuláš (kulttuuri)
+Tietoruudun teksti: Liptovský Mikuláš on kaupunki Pohjois-Slovakiassa Váh-joen varrella Liptovin altaassa Matalien Tatrojen ja Tatrojen lähellä; se tunnetaan kiltojen ja kulttuurin kaupunkina. Kaupunki mainitaan ensi kerran kuningas Ladislaus IV:n asiakirjassa vuonna 1286, ja Pyhän Nikolauksen kirkko vuodelta 1299 on sen vanhin rakennus. Käsityöläiset perustivat kiltoja, joista vanhin oli suutarien kilta vuonna 1508, ja vuonna 1677 kaupungista tuli Liptovin komitaatin hallintokeskus. Legendaarinen slovakialainen Robin Hood, Juraj Jánošík, tuomittiin ja teloitettiin täällä vuonna 1713. 1800-luvulla kaupunki oli yksi slovakialaisen kansallisen liikkeen keskuksista: ensimmäinen slovakialainen teatteri perustettiin siellä vuonna 1830, ja Ľudovít Štúr julkaisi täällä vuonna 1848 asiakirjan Slovakian kansan vaatimukset.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+- [Riika — kohdekartta / Kohdekartta: Mustapäiden talo] 1334 (jälleenrakennettu 1999) Mustapäiden talo rakennettiin Riian vanhaan kaupunkiin jo vuonna 1334 kauppiaiden varastoksi ja kokoontumispaikaksi. 1400-luvun puolivälistä lähtien taloa käytti myös Mustapäiden veljeskunta – naimattomien kauppiaiden, laivanomistajien ja ulkomaalaisten kilta, joka piti talossa juhlia ja kokouksia. Talon kerrotaan olevan paikka, jonne pystytettiin ensimmäinen koristeltu joulukuusi vuonna 1510! Talo säilyi näyttävänä satoja vuosia, kunnes toinen maailmansota pommitti sen raunioiksi kesäkuussa 1941. Neuvostoviranomaiset purkivat jäljellä olleet seinät kokonaan vuonna 1948, vaikka riikalaiset vastustivat sitä voimakkaasti. Talo rakennettiin kokonaan uudelleen vuos…
+AIEMPI KYSYMYS: Miksi Liptovský Mikulášia kutsutaan kiltojen kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Just niin, tämä on kaupungin kunnia-asia. Liptovský Mikulášia kutsutaan kiltojen ja kulttuurin kaupungiksi, koska käsityöläiset perustivat siellä [[kiltoja]]. Vanhin niistä oli [[suutarien kilta]] vuodelta 1508, ja vuonna 1677 kaupungista tuli [[Liptovin komitaatin]] hallintokeskus. Suutarit ensin, ja kyyhkyn jaloille ei ole tehty kenkiä vieläkään.
+KYSYMYS: Kerro lisää: suutarien kilta
+
+### 236
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Liptovský Mikuláš (kulttuuri)
+Tietoruudun teksti: Liptovský Mikuláš on kaupunki Pohjois-Slovakiassa Váh-joen varrella Liptovin altaassa Matalien Tatrojen ja Tatrojen lähellä; se tunnetaan kiltojen ja kulttuurin kaupunkina. Kaupunki mainitaan ensi kerran kuningas Ladislaus IV:n asiakirjassa vuonna 1286, ja Pyhän Nikolauksen kirkko vuodelta 1299 on sen vanhin rakennus. Käsityöläiset perustivat kiltoja, joista vanhin oli suutarien kilta vuonna 1508, ja vuonna 1677 kaupungista tuli Liptovin komitaatin hallintokeskus. Legendaarinen slovakialainen Robin Hood, Juraj Jánošík, tuomittiin ja teloitettiin täällä vuonna 1713. 1800-luvulla kaupunki oli yksi slovakialaisen kansallisen liikkeen keskuksista: ensimmäinen slovakialainen teatteri perustettiin siellä vuonna 1830, ja Ľudovít Štúr julkaisi täällä vuonna 1848 asiakirjan Slovakian kansan vaatimukset.
+AIEMPI KYSYMYS: Miksi Liptovský Mikulášia kutsutaan kiltojen kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Just niin, tämä on kaupungin kunnia-asia. Liptovský Mikulášia kutsutaan kiltojen ja kulttuurin kaupungiksi, koska käsityöläiset perustivat siellä [[kiltoja]]. Vanhin niistä oli [[suutarien kilta]] vuodelta 1508, ja vuonna 1677 kaupungista tuli [[Liptovin komitaatin]] hallintokeskus. Suutarit ensin, ja kyyhkyn jaloille ei ole tehty kenkiä vieläkään.
+KYSYMYS: Kerro lisää: Liptovin komitaatin
+
+### 237
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Liptovský Mikuláš (kulttuuri)
+Tietoruudun teksti: Liptovský Mikuláš on kaupunki Pohjois-Slovakiassa Váh-joen varrella Liptovin altaassa Matalien Tatrojen ja Tatrojen lähellä; se tunnetaan kiltojen ja kulttuurin kaupunkina. Kaupunki mainitaan ensi kerran kuningas Ladislaus IV:n asiakirjassa vuonna 1286, ja Pyhän Nikolauksen kirkko vuodelta 1299 on sen vanhin rakennus. Käsityöläiset perustivat kiltoja, joista vanhin oli suutarien kilta vuonna 1508, ja vuonna 1677 kaupungista tuli Liptovin komitaatin hallintokeskus. Legendaarinen slovakialainen Robin Hood, Juraj Jánošík, tuomittiin ja teloitettiin täällä vuonna 1713. 1800-luvulla kaupunki oli yksi slovakialaisen kansallisen liikkeen keskuksista: ensimmäinen slovakialainen teatteri perustettiin siellä vuonna 1830, ja Ľudovít Štúr julkaisi täällä vuonna 1848 asiakirjan Slovakian kansan vaatimukset.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Historia: Kaupunki hopeavuoren päällä] 1735 — Banská Štiavnica kasvoi hopean ja kullan varaan: vuonna 1782 se oli Unkarin kuningaskunnan kolmanneksi suurin kaupunki Bratislavan ja Debrecenin jälkeen. Kun kaivokset tulvivat, 1400–1700-luvuilla rakennettiin kuusikymmentä tekojärveä eli tajchya, jotka yhdistettiin yli sadan kilometrin kanavaverkolla. Kaupungissa toimi vuonna 1735 perustettu kaivoskoulu, josta tuli myöhemmin kaivosakatemia, jota on kutsuttu maailman ensimmäiseksi teknilliseksi yliopistoksi. Jo 1627 täällä käytettiin ruutia kaivoksessa yhtenä maailman ensimmäisistä.
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Mikä on komitaatti?
+AIEMPI VASTAUS (Livia):
+Ai tota. Komitaatti oli [[Unkarin kuningaskunnan]] perinteinen hallintoalue, ja Liptovkin kuului siihen. Liptovský Mikulášista tuli [[Liptovin komitaatin]] hallintokeskus vuonna 1677. Hallintoalueissa minä en luota arvaukseen, joten pidin sen lyhyenä.
+KYSYMYS: Kerro lisää: Unkarin kuningaskunnan
+
+### 238
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piešťany (kulttuuri)
+Tietoruudun teksti: Piešťany, unkariksi Pöstyén ja saksaksi Pistyan, on Länsi-Slovakian kylpyläkaupunki, Slovakian suurin ja tunnetuin, ja siellä on noin 28 000 asukasta. Lämpölähteet, jotka eivät jäätyneet talvella, houkuttelivat ihmisiä alueelle jo esihistoriallisina aikoina, ja läheisestä Moravanyn kylästä on löydetty mammutinhampaasta tehty hedelmällisyyttä esittävä Moravanyn Venus. Parantavat lähteet olivat suosittuja jo keskiajalla, ja niissä vieraili muun muassa kuningas Matthias Corvinus. Erdődyn suku omisti alueen vuosina 1720–1848 ja kylpylän vuoteen 1940; se rakensi ensimmäiset kylpylärakennukset vuonna 1778, ja vuonna 1820 ne laajennettiin uusklassiseen tyyliin nimellä Napoleon-kylpylä. Kylpylä käyttää sulfaatti-karbonaattivettä ja joen sivu-uomasta louhittua rikkipitoista mutaa, ja sen vieraisiin on kuulunut Ludwig van Beethoven.
+AIEMPI KYSYMYS: Minkä suvun omistuksessa kylpylä oli vuoteen 1940?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämän tiedän. Piešťanyn kylpylä oli [[Erdődyn]] suvun omistuksessa vuoteen 1940 asti. Suku omisti alueen jo vuosina 1720–1848 ja rakensi ensimmäiset [[kylpylärakennukset]] vuonna 1778. Aika pitkä isännyys, sanon minä.
+KYSYMYS: Kerro lisää: Erdődyn
+
+### 239
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piešťany (kulttuuri)
+Tietoruudun teksti: Piešťany, unkariksi Pöstyén ja saksaksi Pistyan, on Länsi-Slovakian kylpyläkaupunki, Slovakian suurin ja tunnetuin, ja siellä on noin 28 000 asukasta. Lämpölähteet, jotka eivät jäätyneet talvella, houkuttelivat ihmisiä alueelle jo esihistoriallisina aikoina, ja läheisestä Moravanyn kylästä on löydetty mammutinhampaasta tehty hedelmällisyyttä esittävä Moravanyn Venus. Parantavat lähteet olivat suosittuja jo keskiajalla, ja niissä vieraili muun muassa kuningas Matthias Corvinus. Erdődyn suku omisti alueen vuosina 1720–1848 ja kylpylän vuoteen 1940; se rakensi ensimmäiset kylpylärakennukset vuonna 1778, ja vuonna 1820 ne laajennettiin uusklassiseen tyyliin nimellä Napoleon-kylpylä. Kylpylä käyttää sulfaatti-karbonaattivettä ja joen sivu-uomasta louhittua rikkipitoista mutaa, ja sen vieraisiin on kuulunut Ludwig van Beethoven.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Roomalainen kylpylä] Kylpylän lattiat ovat poissa, mutta niiden kannattimet ovat tallella: nurmella seisoo satoja tiilipinoja tasaisissa riveissä. Ne ovat hypokaustin pilareita. Pinojen päälle ladottiin tiililaatta, sen päälle betonikerros ja vasta ylimmäksi huoneen lattia, joten lattian ja maan väliin jäi yhtenäinen ontelo. Uunista tuleva kuuma ilma ja savu kiersivät pilareiden välissä ja nousivat seinien sisään muurattuja tiiliputkia pitkin katolle, joten lämpöä tuli sekä lattiasta että seinistä. Kylpylä rakennettiin 200-luvulla keisari Caracallan (hallitsi 198–217) aikana ja omistettiin lääketieteen jumalalle Asklepiokselle. Kolikkolöydöt ajoittivat rakentamisen ja osoittivat noin viidensadan vuoden käytön. …
+- [Sansibar — kohdekartta / Kohdekartta: Hamamnin kylpylä] 1870–1888 Sulttaani Barghash bin Said rakennutti kaupunkiin yleisen kylpylän vuosina 1870–1888. Se toimi kylpylänä vuoteen 1920 asti. Persialaiseksi sitä kutsutaan siksi, että rakentaminen tilattiin shiraziarkkitehdeilta. Sana hamamni tarkoittaa kylpyjen paikkaa, ja siitä on tullut myös koko korttelin nimi. Sisällä oli monimutkainen tilasarja: kuumia ja kylmiä altaita, käymälöitä, parranajotiloja ja ravintola. Kuuma vesi tuotiin maanalaisia akvedukteja pitkin. Sisäänpääsy oli maksullinen, joten säännöllisesti kylpylää käyttivät vain varakkaat sansibarilaiset. Kylpylä oli avoinna sekä miehille että naisille, mutta eri aikoina. Kylpylä ei ole enää toiminnassa, mutta se on avoinna kävijöille j…
+AIEMPI KYSYMYS: Minkä suvun omistuksessa kylpylä oli vuoteen 1940?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämän tiedän. Piešťanyn kylpylä oli [[Erdődyn]] suvun omistuksessa vuoteen 1940 asti. Suku omisti alueen jo vuosina 1720–1848 ja rakensi ensimmäiset [[kylpylärakennukset]] vuonna 1778. Aika pitkä isännyys, sanon minä.
+KYSYMYS: Kerro lisää: kylpylärakennukset
+
+### 240
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piešťany (kulttuuri)
+Tietoruudun teksti: Piešťany, unkariksi Pöstyén ja saksaksi Pistyan, on Länsi-Slovakian kylpyläkaupunki, Slovakian suurin ja tunnetuin, ja siellä on noin 28 000 asukasta. Lämpölähteet, jotka eivät jäätyneet talvella, houkuttelivat ihmisiä alueelle jo esihistoriallisina aikoina, ja läheisestä Moravanyn kylästä on löydetty mammutinhampaasta tehty hedelmällisyyttä esittävä Moravanyn Venus. Parantavat lähteet olivat suosittuja jo keskiajalla, ja niissä vieraili muun muassa kuningas Matthias Corvinus. Erdődyn suku omisti alueen vuosina 1720–1848 ja kylpylän vuoteen 1940; se rakensi ensimmäiset kylpylärakennukset vuonna 1778, ja vuonna 1820 ne laajennettiin uusklassiseen tyyliin nimellä Napoleon-kylpylä. Kylpylä käyttää sulfaatti-karbonaattivettä ja joen sivu-uomasta louhittua rikkipitoista mutaa, ja sen vieraisiin on kuulunut Ludwig van Beethoven.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grand Canyon — kaupunkilehti / Kivi, joki ja eliöt: Joki joka kaivoi vuoren sisältä pois] Coloradojoki virtaa nykyään kanjonin pohjalla vain murto-osan siitä voimasta, joka sen alun perin kaivoi – padot ylävirrassa ovat hillinneet sekä tulvia että mukana kulkevaa hiekkaa ja mutaa. Silti juuri tämä joki, yhdessä sivupurojen ja pakkasen halkaisemien kallioiden kanssa, on kuluttanut kanjonin syvyyden yli 1,8 kilometriin miljoonien vuosien aikana. Tutkijoiden mukaan koko kanjoni ei ole syntynyt kerralla, vaan eri osat ovat muotoutuneet eri aikoina: jotkin osuudet ehkä jo 50–70 miljoonaa vuotta sitten, toiset vasta 5–6 miljoonaa vuotta sitten, kun joki lopulta yhdisti erilliset laaksot yhtenäiseksi väyläksi kohti Kalifornianlahtea.
+- [Qatar — maalehti / Luonto: Ainoa metsä kasvaa rantavedessä] Qatarin ainoa varsinainen metsä on mangrove. Al Thakiran matalassa lahdessa kasvaa harmaamangrovea, ja se on maan laajin yhtenäinen kasvusto. Puiden juuristo pidättää mutaa ja hidastaa aallokkoa, ja juurten suojassa kasvaa kalanpoikasia ja katkarapuja — sama saalis, jota kalastajat myöhemmin nostavat lahdelta. Rantavedessä ruokailee lintuja: haikaroita, kahlaajia ja talvisin flamingoja. Alue on suojeltu, ja siellä liikutaan kajakilla, koska vettä on paikoin vain vaaksan verran.
+AIEMPI KYSYMYS: Mistä kylpylä käyttää parantavaa mutaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kylpylä käyttää [[rikkipitoista mutaa]], jota louhitaan Váh-joen sivu-uomasta. Sen lisäksi kylpylässä käytetään [[sulfaatti-karbonaattivettä]], ja lämpölähteet eivät jäätyneet talvella.
+
+Minä kylpisin mieluummin tavallisessa lätäkössä, mutta tiedän, että ihmiset maksavat mudasta. Kyyhkyt eivät ole koskaan ymmärtäneet sitä.
+KYSYMYS: Kerro lisää: rikkipitoista mutaa

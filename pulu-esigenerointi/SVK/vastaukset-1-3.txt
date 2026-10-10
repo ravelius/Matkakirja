@@ -21,7 +21,7 @@ Millainen Unkarin kuningaskunta oli Slovakian alueella?
 
 ### 11.4
 KYSYMYS: Kuka oli Thurzo-suku, joka uudisti linnaa?
-Ai tota. Thurzo oli unkarilainen ylhäissuku, joka vaurastui kaivostoiminnalla, ja suvun nimi liitetään erityisesti kuparikauppaan. Lähteiden mukaan suku teki kuparikaupassa yhteistyötä augsburgilaisen [[Fugger-suvun]] kanssa. Oravan linnaa uudistettiin laajasti 1500-luvun puolivälistä alkaen, ja linna sai nykyisen muotonsa vuoteen 1611 mennessä. Rahasta kaikki lähtee, sen minä olen kirjeistä oppinut.
+Ai tota. Thurzo oli unkarilainen ylhäissuku, joka vaurastui kaivostoiminnalla, ja suvun nimi liitetään erityisesti kuparikauppaan. Lähteiden mukaan suku teki kuparikaupassa yhteistyötä augsburgilaisen [[Fugger-suvun]] kanssa. [[Oravan linnaa]] uudistettiin laajasti 1500-luvun puolivälistä alkaen, ja linna sai nykyisen muotonsa vuoteen 1611 mennessä. Rahasta kaikki lähtee, sen minä olen kirjeistä oppinut.
 JATKOT:
 Mikä oli Fugger-suku?
 Milloin Oravan linna sai nykyisen muotonsa?
@@ -112,7 +112,7 @@ Mitä kauppaa Puolan kanssa käytiin keskiajalla?
 
 ### 14.2
 KYSYMYS: Minä vuonna kaupunki sai kuninkaallisen kaupungin aseman?
-Selvä juttu. Bardejov sai kuninkaallisen kaupungin aseman vuonna 1376. Asema merkitsi yleensä sitä, että kaupunki oli suoraan kuninkaan alainen ja sillä oli laajoja etuoikeuksia. Kaupungissa oli tuolloin jo [[Pyhän Egidiuksen basilika]], jonka kerrotaan olleen rakennettuna 1240-luvulla. Kuninkaan oma kaupunki, siinä vasta arvonimi.
+Selvä juttu. [[Bardejov]] sai kuninkaallisen kaupungin aseman vuonna 1376. Asema merkitsi yleensä sitä, että kaupunki oli suoraan kuninkaan alainen ja sillä oli laajoja etuoikeuksia. Kaupungissa oli tuolloin jo [[Pyhän Egidiuksen basilika]], jonka kerrotaan olleen rakennettuna 1240-luvulla. Kuninkaan oma kaupunki, siinä vasta arvonimi.
 JATKOT:
 Mitä kuninkaallinen vapaakaupunki tarkoitti?
 Milloin Pyhän Egidiuksen basilika rakennettiin?
@@ -126,7 +126,7 @@ Miten keskiaikaiset kaupunkimuurit suojasivat kaupunkia?
 
 ### 14.4
 KYSYMYS: Miten Bardejov on kirjoitettu unkariksi ja saksaksi?
-Ai se. Unkariksi Bardejov on Bártfa ja saksaksi Bartfeld. Nimet kertovat alueen monikielisestä historiasta: kaupunki kuului pitkään [[Unkarin kuningaskuntaan]], ja Šarišin alueen kaupungeissa asui lähteiden mukaan myös saksankielisiä porvareita. Kolme nimeä yhdelle kaupungille, kirjeenkantajalle ihan painajainen.
+Ai se. Unkariksi Bardejov on Bártfa ja saksaksi Bartfeld. Nimet kertovat alueen monikielisestä historiasta: kaupunki kuului pitkään [[Unkarin kuningaskuntaan]], ja [[Šarišin]] alueen kaupungeissa asui lähteiden mukaan myös saksankielisiä porvareita. Kolme nimeä yhdelle kaupungille, kirjeenkantajalle ihan painajainen.
 JATKOT:
 Mitä kieliä Slovakiassa puhutaan?
 Miksi saksalaisia asettui Slovakian kaupunkeihin?
