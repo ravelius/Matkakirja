@@ -359,7 +359,7 @@ Miten collegeihin pääsee opiskelemaan?
 Mitä eroa on collegella ja yliopistolla?
 
 ### 221
-Vanha Bodleian-kirjasto on Oxfordin yliopiston alkuperäinen kirjastorakennus, jonka rakennustyöt tehtiin 1600-luvun alussa. Sen vanhimmat osat ovat keskiaikaisia: [[Divinity School]], jossa pidettiin teologian opetusta, valmistui 1400-luvun lopulla, ja sen yläpuolella on Duke Humfrey's Library. Rakennus ympäröi sisäpihaa, ja sen julkisivussa on antiikin pylväsjärjestelmiä esittelevä torni. Kirjasto on lukusali, jossa lukijat tekevät työtä tutkimusaineiston parissa, eivätkä kirjat poistu rakennuksesta. Rakennus kuuluu Oxfordin vanhimpiin ja arvokkaimpiin yliopistorakennuksiin.
+Vanha Bodleian-kirjasto on [[Oxfordin yliopiston]] alkuperäinen kirjastorakennus, ja sen vanhimmat osat ovat keskiaikaisia. [[Divinity School]], jossa pidettiin teologian opetusta, valmistui 1400-luvun lopulla, ja sen yläpuolella on [[Duke Humfrey's Library]]. Rakennus ympäröi sisäpihaa. Kirjasto on lukusali, jossa lukijat tekevät työtä tutkimusaineiston parissa, eivätkä kirjat poistu rakennuksesta.
 JATKOT:
 Mikä Divinity School on?
 Miten kirjasto säilyttää vanhimmat kirjansa?
@@ -401,7 +401,7 @@ Mitä Oliver Twist kertoo?
 Miksi Dickensin romaanit ilmestyivät jatkokertomuksina?
 
 ### 228
-Joseph Malinin kauppaa pidetään usein yhtenä varhaisimmista fish and chips -kaupoista, ja se sijaitsi Lontoossa 1860-luvulla. Väite perustuu pitkälti myöhempiin kertomuksiin, ja sen tarkkaa vuotta ja paikkaa ei voida varmuudella todentaa. Siksi myös Lancashiren Mossleyn [[John Leesin]] kauppa kilpailee samasta asemasta. Kiista siitä, kumpi oli ensimmäinen, ei ole ratkennut, eikä sitä välttämättä voida ratkaista, koska ruoan synty oli pitkä prosessi. Joseph Malinista tarkempia henkilötietoja en ole varma.
+Joseph Malinin kauppaa pidetään usein yhtenä varhaisimmista fish and chips -kaupoista, ja se sijaitsi [[Lontoossa]] 1860-luvulla. Väite perustuu pitkälti myöhempiin kertomuksiin, eikä sen tarkkaa vuotta ja paikkaa voida varmuudella todentaa. Siksi myös Lancashiren [[Mossleyn]] [[John Leesin]] kauppa kilpailee samasta asemasta. Kiista siitä, kumpi oli ensimmäinen, ei ole ratkennut, eikä sitä välttämättä voida ratkaista, koska ruoan synty oli pitkä prosessi. Joseph Malinista tarkempia henkilötietoja en ole varma.
 JATKOT:
 Miksi ensimmäisen fish and chips -kaupan paikasta kiistellään?
 Mikä on fish and chips -kauppojen historia Lancashiressa?
@@ -413,7 +413,7 @@ Millainen kaupunki Mossley on?
 Miten puuvillatehtaiden työläiset söivät?
 
 ### 230
-Mossley on pieni kaupunki Pennien juurella Tame-joen laaksossa, nykyisin [[Greater Manchesterin]] alueella mutta historiallisesti Lancashiressa. 1800-luvulla se kasvoi puuvillateollisuuden ympärille, ja jokilaakson rinteille nousi tehtaita ja työläisten asuntoja. Maisema on jyrkkää ja laaksomaista, ja rautatie sekä kanava seurasivat laaksoa. Nykyään Mossleyn tunnetuin yhteys fish and chipsiin on John Leesin kauppa, jonka sanotaan olleen yksi ensimmäisistä. Tarkempia väkilukutietoja tai muita yksityiskohtia en ole varma.
+Mossley on pieni kaupunki [[Pennien]] juurella [[Tame-joen]] laaksossa, nykyisin [[Greater Manchesterin]] alueella mutta historiallisesti [[Lancashiressa]]. 1800-luvulla se kasvoi puuvillateollisuuden ympärille, ja jokilaakson rinteille nousi tehtaita ja työläisten asuntoja. Maisema on jyrkkää ja laaksomaista, ja rautatie sekä kanava seurasivat laaksoa. Nykyään Mossleyn tunnetuin yhteys fish and chipsiin on [[John Leesin]] kauppa, jonka sanotaan olleen yksi ensimmäisistä. Tarkempia väkilukutietoja tai muita yksityiskohtia en ole varma.
 JATKOT:
 Mitä Pennien vuoristo on?
 Miksi Lancashire oli puuvillateollisuuden keskus?
@@ -437,7 +437,7 @@ Miten rautatiet muuttivat ajan käsitystä Britanniassa?
 Miten ensimmäinen höyryveturi toimi?
 
 ### 234
-Oliver Twist on Charles Dickensin romaani, joka ilmestyi ensin jatkokertomuksena ja kirjana vuonna 1838. Se kertoo orvosta pojasta, joka kasvaa työlaitoksessa ja pakenee Lontooseen, jossa hän joutuu rikollisjoukon pariin. Kirjan tunnettuihin hahmoihin kuuluvat taskuvaras [[Fagin]] ja hänen oppipoikansa, ovela Dodger. Romaani kritisoi aikansa [[köyhäinlakia]] ja tapaa kohdella köyhiä lapsia, ja se kuvasi Lontoon köyhiä kortteleita tarkasti. Kirjasta on tehty useita elokuvia ja [[Oliver!]]-niminen musikaali.
+Oliver Twist on Charles Dickensin romaani, joka ilmestyi ensin jatkokertomuksena ja kirjana vuonna 1838. Se kertoo orvosta pojasta, joka kasvaa työlaitoksessa ja pakenee Lontooseen, jossa hän joutuu rikollisjoukon pariin. Kirjan tunnettuihin hahmoihin kuuluvat taskuvaras [[Fagin]] ja hänen oppipoikansa, ovela Dodger. Romaani kritisoi aikansa [[köyhäinlakia]] ja tapaa kohdella köyhiä lapsia, ja se kuvasi Lontoon köyhiä kortteleita tarkasti. Kirjasta on tehty useita elokuvia sekä siihen perustuva musikaali.
 JATKOT:
 Mikä oli 1800-luvun köyhäinlaki?
 Miten Dickens kuvasi Lontoota romaaneissaan?
@@ -455,13 +455,13 @@ Miten Britannian parlamentti toimii?
 Mitä elintarvikeministeriö teki sodan aikana?
 
 ### 237
-Ruokasäännöstely tarkoittaa, että viranomaiset rajoittavat tiettyjen elintarvikkeiden määrää, jonka kukin ihminen saa ostaa. Britanniassa se alkoi tammikuussa 1940, ja kansalaisille jaettiin [[ruokakortit]], joilla tuotteita sai ostaa vain tietyn määrän; säännösteltyjä olivat muun muassa liha, voi, sokeri ja juusto. Kala ei kuulunut varsinaiseen säännöstelyyn, vaikka sitä oli vaikea saada, koska kalastus oli sodan aikana vaarallista. Elintarvikeministeriö ohjasi järjestelmää, ja säännöstely jatkui pitkälle sodan jälkeiseen aikaan: viimeiset rajoitukset poistuivat vasta vuonna 1954.
+Ruokasäännöstely tarkoittaa, että viranomaiset rajoittavat tiettyjen elintarvikkeiden määrää, jonka kukin ihminen saa ostaa. Britanniassa se alkoi tammikuussa 1940 [[toisen maailmansodan]] aikana, ja kansalaisille jaettiin [[ruokakortit]], joilla tuotteita sai ostaa vain tietyn määrän; säännösteltyjä olivat muun muassa liha, voi, sokeri ja juusto. Kala ei kuulunut varsinaiseen säännöstelyyn, vaikka sitä oli vaikea saada, koska kalastus oli sodan aikana vaarallista. [[Elintarvikeministeriö]] ohjasi järjestelmää, ja säännöstely jatkui pitkälle sodan jälkeiseen aikaan: viimeiset rajoitukset poistuivat vasta vuonna 1954.
 JATKOT:
 Miksi säännöstely jatkui vielä sodan jälkeen?
 Mitä ruokia Britanniassa säännösteltiin?
 
 ### 238
-Anna Russell, Bedfordin herttuatar, eli vuosina 1783–1857 ja oli Bedfordin seitsemännen herttuan puoliso. Perheen kartano oli [[Woburn Abbey]], ja hän toimi kuningatar Viktorian hovineitona. Hänen kerrotaan alkaneen kutsua ystäviään teelle iltapäivisin, ja tapa levisi seurapiireissä kutsuina, joilla tarjottiin teetä, leivonnaisia ja pieniä voileipiä. Tarinan tarkkoja yksityiskohtia ei voi todentaa, ja on mahdollista, että muutkin aatelisnaiset ottivat vastaavan tavan käyttöön samoihin aikoihin. Hänen nimensä on silti jäänyt iltapäiväteen historiaan.
+Anna Russell, Bedfordin herttuatar, eli vuosina 1783–1857 ja oli [[Bedfordin seitsemännen herttuan]] puoliso. Perheen kartano oli [[Woburn Abbey]], ja hän toimi kuningatar [[Viktorian]] hovineitona. Hänen kerrotaan alkaneen kutsua ystäviään teelle iltapäivisin, ja tapa levisi seurapiireissä kutsuina, joilla tarjottiin teetä, leivonnaisia ja pieniä voileipiä. Tarinan tarkkoja yksityiskohtia ei voi todentaa, ja on mahdollista, että muutkin aatelisnaiset ottivat vastaavan tavan käyttöön samoihin aikoihin. Hänen nimensä on silti jäänyt iltapäiväteen historiaan.
 JATKOT:
 Millainen paikka Woburn Abbey on?
 Mitä iltapäiväteellä perinteisesti syödään?

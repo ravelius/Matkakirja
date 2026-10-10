@@ -2468,8 +2468,11 @@
   "kohde": "kohde:hahmotelma-giants-causeway",
   "kasite": "Titanic",
   "kysymys": "Kerro lisää: Titanic",
-  "vastaus": "RMS Titanic oli White Star Line -varustamon valtamerilaiva, joka rakennettiin Belfastissa Harland and Wolffin telakalla. Se lähti neitsytmatkalleen Southamptonista huhtikuussa 1912 ja upposi Pohjois-Atlantilla jäävuoreen törmättyään saman kuun puolivälissä. Onnettomuudessa menehtyi noin 1 500 ihmistä, ja pelastusveneitä oli aluksella liian vähän suhteessa matkustajamäärään. Tapahtuma on yli sata vuotta vanha, ja se johti merenkulun turvallisuussääntöjen uudistamiseen: ensimmäinen kansainvälinen [[SOLAS-sopimus]] syntyi vuonna 1914. Laivan muisto elää yhä Belfastin telakka-alueella ja kaupungin museossa.",
+  "vastaus": "RMS Titanic oli [[White Star Line]] -varustamon valtamerilaiva, joka rakennettiin Belfastissa [[Harland and Wolffin]] telakalla. Se lähti neitsytmatkalleen [[Southamptonista]] huhtikuussa 1912 ja upposi Pohjois-Atlantilla jäävuoreen törmättyään saman kuun puolivälissä. Onnettomuudessa menehtyi noin 1 500 ihmistä, ja pelastusveneitä oli aluksella liian vähän matkustajamäärään nähden. Tapahtuma johti merenkulun turvallisuussääntöjen uudistamiseen: ensimmäinen kansainvälinen [[SOLAS-sopimus]] syntyi vuonna 1914. Laivan muisto elää yhä Belfastin telakka-alueella ja kaupungin museossa.",
   "linkit": [
+   "White Star Line",
+   "Harland and Wolffin",
+   "Southamptonista",
    "SOLAS-sopimus"
   ],
   "jatkot": [
@@ -2524,9 +2527,12 @@
   "kohde": "kohde:hahmotelma-windermere",
   "kasite": "Morecamben lahteen",
   "kysymys": "Kerro lisää: Morecamben lahteen",
-  "vastaus": "Morecamben lahti on Irlanninmeren lahti Luoteis-Englannissa, Cumbrian ja Lancashiren rannikolla. Lahden vuorovesi on nopeaa ja laajat hiekka- ja mutasärkät paljastuvat vuoroveden vetäytyessä, mikä tekee alueesta vaarallisen tuntemattomille kulkijoille; perinteisesti sen yli on kulkenut oppaiden johdolla. Alue on myös tärkeä [[kahlaajalinnuille]]: tuhannet linnut levähtävät ja talvehtivat lahden rannoilla. Lahden eteläpuolella sijaitsee Morecamben kaupunki, joka on ollut suosittu merenrantakaupunki. Lahden rannoilla on pitkä historia vilkkaana kauppa- ja kalastusreittinä.",
+  "vastaus": "Morecamben lahti on [[Irlanninmeren]] lahti Luoteis-Englannissa, Cumbrian ja [[Lancashiren]] rannikolla. Lahden vuorovesi on nopeaa ja laajat hiekka- ja mutasärkät paljastuvat vuoroveden vetäytyessä, mikä tekee alueesta vaarallisen tuntemattomille kulkijoille; perinteisesti sen yli on kulkenut oppaiden johdolla. Alue on myös tärkeä [[kahlaajalinnuille]]: tuhannet linnut levähtävät ja talvehtivat lahden rannoilla. Lahden eteläpuolella sijaitsee [[Morecamben]] kaupunki, joka on ollut suosittu merenrantakaupunki. Lahden rannoilla on pitkä historia vilkkaana kauppa- ja kalastusreittinä.",
   "linkit": [
-   "kahlaajalinnuille"
+   "Irlanninmeren",
+   "Lancashiren",
+   "kahlaajalinnuille",
+   "Morecamben"
   ],
   "jatkot": [
    "Miksi vuorovesi on Morecamben lahdella niin vaarallista?",
@@ -2596,9 +2602,11 @@
   "kohde": "kohde:hahmotelma-windermere",
   "kasite": "Peter Rabbit",
   "kysymys": "Kerro lisää: Peter Rabbit",
-  "vastaus": "Peter Rabbit eli Pekka Kaniini on Beatrix Potterin luoma kaniinihahmo. Tarina sai alkunsa vuonna 1893 kuvakirjeenä, jonka Potter kirjoitti entisen kotiopettajattarensa pojalle, ja se julkaistiin kirjana vuonna 1902. Kertomuksessa Peter kurittomana kaniininpoikana livahtaa herra [[McGregorin]] vihannespuutarhaan, vaikka äiti on kieltänyt sen, ja joutuu pakenemaan. Kirja menestyi heti, ja Potter kirjoitti siihen perustuen runsaasti jatko-osia. Kirjan hahmot, kuten Peterin sisarukset Flopsy, Mopsy ja Cotton-tail, ovat edelleen rakastettuja, ja tarinoista on tehty myös elokuvia ja televisiosarjoja.",
+  "vastaus": "Peter Rabbit eli Pekka Kaniini on [[Beatrix Potterin]] luoma kaniinihahmo. Tarina sai alkunsa vuonna 1893 kuvakirjeenä, jonka Potter kirjoitti entisen kotiopettajattarensa pojalle, ja se julkaistiin kirjana vuonna 1902. Kertomuksessa Peter kurittomana kaniininpoikana livahtaa herra [[McGregorin]] vihannespuutarhaan, vaikka äiti on kieltänyt sen, ja joutuu pakenemaan. Kirja menestyi heti, ja Potter kirjoitti siihen perustuen runsaasti jatko-osia. Potter asui myöhemmin [[Lake Districtissä]], ja sen maisemat tulivat osaksi hänen myöhempiä kirjojaan. Peterin sisarukset Flopsy, Mopsy ja Cotton-tail ovat edelleen rakastettuja, ja tarinoista on tehty myös elokuvia ja televisiosarjoja.",
   "linkit": [
-   "McGregorin"
+   "Beatrix Potterin",
+   "McGregorin",
+   "Lake Districtissä"
   ],
   "jatkot": [
    "Millaisia muita hahmoja Beatrix Potter loi?",
@@ -2694,9 +2702,11 @@
   "kohde": "kohde:hahmotelma-geevor-tin",
   "kasite": "Cornwallin ja Länsi-Devonin kaivosmaiseman",
   "kysymys": "Kerro lisää: Cornwallin ja Länsi-Devonin kaivosmaiseman",
-  "vastaus": "Cornwallin ja Länsi-Devonin kaivosmaisema kirjattiin UNESCOn maailmanperintöluetteloon vuonna 2006. Se koostuu useista erillisistä alueista, joissa tinan ja kuparin louhinta muovasi maisemaa 1700-luvulta 1900-luvun alkuun: kaivostorneja, konehuoneita, kaivosyhdyskuntia ja satamia. Alueen merkitys on siinä, että kornilaiset kaivostekniikat, kuten [[Cornish-höyrykone]], levisivät sieltä ympäri maailmaa, ja kornilaiset kaivostyöläiset muuttivat kaivosalueille muihinkin maanosiin. Kohde kertoo siis sekä teollisen vallankumouksen tekniikasta että ihmisten liikkuvuudesta.",
+  "vastaus": "Cornwallin ja Länsi-Devonin kaivosmaisema kirjattiin [[UNESCOn]] maailmanperintöluetteloon vuonna 2006. Se koostuu useista erillisistä alueista, joissa tinan ja kuparin louhinta muovasi maisemaa 1700-luvulta 1900-luvun alkuun: kaivostorneja, konehuoneita, kaivosyhdyskuntia ja satamia. Alueen merkitys on siinä, että kornilaiset kaivostekniikat, kuten [[Cornish-höyrykone]], levisivät sieltä ympäri maailmaa, ja kornilaiset kaivostyöläiset muuttivat kaivosalueille muihinkin maanosiin. Kohde kertoo siis sekä [[teollisen vallankumouksen]] tekniikasta että ihmisten liikkuvuudesta.",
   "linkit": [
-   "Cornish-höyrykone"
+   "UNESCOn",
+   "Cornish-höyrykone",
+   "teollisen vallankumouksen"
   ],
   "jatkot": [
    "Miten kornilaisten kaivosmiesten tekniikka levisi maailmalle?",
@@ -2722,8 +2732,11 @@
   "kohde": "kohde:hahmotelma-geevor-tin",
   "kasite": "Pendeenin",
   "kysymys": "Kerro lisää: Pendeenin",
-  "vastaus": "Pendeen on kylä Cornwallin länsirannikolla, Penwithin niemimaalla lähellä St Justia. Alue on tunnettu kaivosperinteestään, ja kylän lähellä sijaitsevat sekä Geevorin että Levantin kaivosalueet. Rannikolla seisoo [[Pendeen Watch]] -majakka, joka varoittaa laivoja vaarallisista karikoista. Kyläympäristö ja jyrkät rannikkokalliot ovat osa Cornwallin ja Länsi-Devonin kaivosmaiseman maailmanperintökohdetta. Seudun asukkaat työskentelivät pitkään kaivoksissa, ja kaivoskulttuuri näkyy yhä paikallisessa elämässä.",
+  "vastaus": "Pendeen on kylä Cornwallin länsirannikolla, [[Penwithin]] niemimaalla lähellä [[St Justia]]. Alue on tunnettu kaivosperinteestään, ja kylän lähellä sijaitsevat sekä [[Geevorin]] että Levantin kaivosalueet. Rannikolla seisoo [[Pendeen Watch]] -majakka, joka varoittaa laivoja vaarallisista karikoista. Kyläympäristö ja jyrkät rannikkokalliot ovat osa Cornwallin ja Länsi-Devonin kaivosmaiseman maailmanperintökohdetta. Seudun asukkaat työskentelivät pitkään kaivoksissa, ja kaivoskulttuuri näkyy yhä paikallisessa elämässä.",
   "linkit": [
+   "Penwithin",
+   "St Justia",
+   "Geevorin",
    "Pendeen Watch"
   ],
   "jatkot": [
@@ -2735,8 +2748,12 @@
   "kohde": "kohde:hahmotelma-geevor-tin",
   "kasite": "Trewellardin",
   "kysymys": "Kerro lisää: Trewellardin",
-  "vastaus": "Trewellard on pieni kylä Cornwallin länsiosassa, Pendeenin ja St Justin välissä, osa seutua, jonka asukkaat elivät pitkään kaivostyöstä. Kylä sijaitsee samalla kaivosmaisemalla, jonka tinan- ja kuparinlouhinta muovasi. Tarkempia tietoja kylästä en ole varma, enkä halua arvailla sen väkilukua tai historian yksityiskohtia. Seudun yhteinen tarina on kuitenkin selvä: kylät kasvoivat kaivosten ympärille ja pienenivät, kun kaivokset sulkeutuivat.",
-  "linkit": [],
+  "vastaus": "Trewellard on pieni kylä [[Cornwallin]] länsiosassa, [[Pendeenin]] ja [[St Justin]] välissä, osa seutua, jonka asukkaat elivät pitkään kaivostyöstä. Kylä sijaitsee samalla kaivosmaisemalla, jonka tinan- ja kuparinlouhinta muovasi. Tarkempia tietoja kylästä en ole varma, enkä halua arvailla sen väkilukua tai historian yksityiskohtia. Seudun yhteinen tarina on kuitenkin selvä: kylät kasvoivat kaivosten ympärille ja pienenivät, kun kaivokset sulkeutuivat.",
+  "linkit": [
+   "Cornwallin",
+   "Pendeenin",
+   "St Justin"
+  ],
   "jatkot": [
    "Miten kaivosten sulkeutuminen vaikutti Cornwallin kyliin?",
    "Miten Cornwallin kaivosyhdyskunnat elivät?"
@@ -2746,9 +2763,11 @@
   "kohde": "kohde:hahmotelma-geevor-tin",
   "kasite": "Geevor",
   "kysymys": "Kerro lisää: Geevor",
-  "vastaus": "Geevor Tin Mines toimi Pendeenissä vuoteen 1990 asti, ja se oli yksi viimeisistä Cornwallin toimivista tinakaivoksista. Kaivoksen sulkeutumiseen vaikutti tinan hinnan romahdus 1980-luvun puolivälissä. Nykyään alue on kaivosmuseo, ja kävijät voivat nähdä kaivoksen rakennuksia, malmin käsittelylaitteita ja päästä tutustumaan maanalaiseen kaivostunneliin. Alueella toimii myös [[Hard Rock Museum]], joka kertoo kaivostyöläisten arjesta. Geevor kuuluu Cornwallin ja Länsi-Devonin kaivosmaiseman maailmanperintökohteeseen.",
+  "vastaus": "Geevor Tin Mines toimi [[Pendeenissä]] vuoteen 1990 asti, ja se oli yksi viimeisistä Cornwallin toimivista tinakaivoksista. Kaivoksen sulkeutumiseen vaikutti tinan hinnan romahdus 1980-luvun puolivälissä. Nykyään alue on kaivosmuseo, ja kävijät voivat nähdä kaivoksen rakennuksia, malmin käsittelylaitteita ja päästä tutustumaan maanalaiseen kaivostunneliin. Alueella toimii myös [[Hard Rock Museum]], joka kertoo kaivostyöläisten arjesta. Geevor kuuluu [[Cornwallin ja Länsi-Devonin kaivosmaiseman]] maailmanperintökohteeseen.",
   "linkit": [
-   "Hard Rock Museum"
+   "Pendeenissä",
+   "Hard Rock Museum",
+   "Cornwallin ja Länsi-Devonin kaivosmaiseman"
   ],
   "jatkot": [
    "Millaista työ Geevorin maanalaisessa kaivoksessa oli?",
@@ -2774,9 +2793,11 @@
   "kohde": "kohde:hahmotelma-geevor-tin",
   "kasite": "Geevorin",
   "kysymys": "Kerro lisää: Geevorin",
-  "vastaus": "Geevor on Pendeenin lähellä Cornwallin länsirannikolla sijainnut tinakaivos, joka toimi nykyisenä yhtiönä vuodesta 1911 vuoteen 1990. Sen louhinta-alue ulottui rannikon alle, ja tinamalmia louhittiin kallioperästä tunneleista käsin. Kaivoksen sulkemiseen vaikutti tinan hinnan romahtaminen 1980-luvun puolivälissä, joka ajoi monet Cornwallin kaivokset vaikeuksiin. Nykyään Geevor on museo, jossa kävijät voivat tutustua kaivosrakennuksiin ja maanalaiseen kaivostunneliin, ja se kuuluu Cornwallin ja Länsi-Devonin kaivosmaiseman [[maailmanperintökohteeseen]]. Museo säilyttää sekä kaivoksen tekniikan että kaivosmiesten perinteen.",
+  "vastaus": "Geevor on [[Pendeenin]] lähellä Cornwallin länsirannikolla sijainnut [[tinakaivos]], joka toimi nykyisenä yhtiönä vuodesta 1911 vuoteen 1990. Sen louhinta-alue ulottui rannikon alle, ja tinamalmia louhittiin kallioperästä tunneleista käsin. Kaivoksen sulkemiseen vaikutti tinan hinnan romahtaminen 1980-luvun puolivälissä, joka ajoi monet Cornwallin kaivokset vaikeuksiin. Nykyään Geevor on museo, jossa kävijät voivat tutustua kaivosrakennuksiin ja maanalaiseen kaivostunneliin, ja se kuuluu [[Cornwallin ja Länsi-Devonin kaivosmaiseman]] maailmanperintökohteeseen. Museo säilyttää sekä kaivoksen tekniikan että kaivosmiesten perinteen.",
   "linkit": [
-   "maailmanperintökohteeseen"
+   "Pendeenin",
+   "tinakaivos",
+   "Cornwallin ja Länsi-Devonin kaivosmaiseman"
   ],
   "jatkot": [
    "Millaista Geevorin museossa voi nähdä?",
@@ -2817,9 +2838,12 @@
   "kohde": "kohde:hahmotelma-quarry-bank-mill",
   "kasite": "Bollin-joen",
   "kysymys": "Kerro lisää: Bollin-joen",
-  "vastaus": "Bollin on Cheshiren läpi virtaava joki, joka saa alkunsa Pennien vuoriston reunalta Macclesfieldin seudulta ja kulkee muun muassa Wilmslow'n ja Styalin ohi. Joki laskee lopulta [[Mersey-jokeen]], ja sen laaksossa on kauniita metsiä, joita nykyään hoitaa osittain National Trust. Quarry Bank Millin vesivoima perustui juuri Bollin-joen virtaukseen: vesi ohjattiin tehtaan vesipyörälle, joka antoi koneille niiden tarvitseman voiman. Joen tarkkaa pituutta en ole varma, mutta sen merkitys seudun teollisuudelle on selvä.",
+  "vastaus": "Bollin on [[Cheshiren]] läpi virtaava joki, joka saa alkunsa [[Pennien vuoriston]] reunalta Macclesfieldin seudulta ja kulkee muun muassa Wilmslow'n ja Styalin ohi. Joki laskee lopulta [[Mersey-jokeen]], ja sen laaksossa on kauniita metsiä, joita nykyään hoitaa osittain [[National Trust]]. Quarry Bank Millin vesivoima perustui juuri Bollin-joen virtaukseen: vesi ohjattiin tehtaan vesipyörälle, joka antoi koneille niiden tarvitseman voiman. Joen tarkkaa pituutta en ole varma, mutta sen merkitys seudun teollisuudelle on selvä.",
   "linkit": [
-   "Mersey-jokeen"
+   "Cheshiren",
+   "Pennien vuoriston",
+   "Mersey-jokeen",
+   "National Trust"
   ],
   "jatkot": [
    "Miten vesipyörä muuttaa virtaavan veden voimaksi?",
@@ -2830,9 +2854,12 @@
   "kohde": "kohde:hahmotelma-quarry-bank-mill",
   "kasite": "Styal Estaten",
   "kysymys": "Kerro lisää: Styal Estaten",
-  "vastaus": "Styal Estate on Quarry Bank Millin ympärille syntynyt työläiskylä Cheshiressä, jonka Samuel Greg rakennutti tehtaan väestä huolehtiakseen. Kylään kuului asuntoja työläisille, ja sen yhteyteen kuului myös [[Apprentice House]], oppipoikatalo, jossa asuivat tehtaan lapsityöntekijät, jotka oli tuotu tehtaaseen köyhäintaloista. Lapsityö oli tuolloin tavallista tehdasteollisuudessa, ja vasta lainsäädäntö rajoitti sitä vähitellen. Nykyään Styal Estate on National Trustin hoitama kokonaisuus, joka antaa harvinaisen kuvan siitä, miltä teollisen vallankumouksen aikainen tehdasyhteisö näytti.",
+  "vastaus": "Styal Estate on [[Quarry Bank Millin]] ympärille syntynyt työläiskylä Cheshiressä, jonka [[Samuel Greg]] rakennutti tehtaan väestä huolehtiakseen. Kylään kuului asuntoja työläisille, ja sen yhteyteen kuului myös [[Apprentice House]], oppipoikatalo, jossa asuivat tehtaan lapsityöntekijät, jotka oli tuotu tehtaaseen köyhäintaloista. Lapsityö oli tuolloin tavallista tehdasteollisuudessa, ja vasta lainsäädäntö rajoitti sitä vähitellen. Nykyään Styal Estate on [[National Trustin]] hoitama kokonaisuus, joka antaa harvinaisen kuvan siitä, miltä teollisen vallankumouksen aikainen tehdasyhteisö näytti.",
   "linkit": [
-   "Apprentice House"
+   "Quarry Bank Millin",
+   "Samuel Greg",
+   "Apprentice House",
+   "National Trustin"
   ],
   "jatkot": [
    "Miten lapsityötä rajoitettiin Britanniassa?",
@@ -2900,8 +2927,10 @@
   "kohde": "kohde:hahmotelma-quarry-bank-mill",
   "kasite": "Styal Estate",
   "kysymys": "Kerro lisää: Styal Estate",
-  "vastaus": "Styal Estate on tehtaan ympärille rakennettu yritysyhdyskunta, jossa tehtaan omistajaperhe huolehti työläisten asumisesta, koulutuksesta ja uskonnollisesta elämästä. Gregin perhe kuului [[unitaareihin]], ja kylässä oli lähteiden mukaan oma kappeli ja koulu sekä asuntoja työläisille. Tämä malli oli yleinen 1800-luvun tehdasyhteisöissä: työnantaja tarjosi sekä asunnon että työn, mikä sitoi työläiset tiiviisti tehtaaseen. Nykyään kylä on säilynyt harvinaisen ehjänä, ja sitä pidetään yhtenä Britannian parhaiten säilyneistä teollisen ajan työläiskylistä.",
+  "vastaus": "Styal Estate on [[Quarry Bank Millin]] ympärille rakennettu yritysyhdyskunta, jossa tehtaan omistajaperhe huolehti työläisten asumisesta, koulutuksesta ja uskonnollisesta elämästä. [[Samuel Gregin]] perhe kuului [[unitaareihin]], ja kylässä oli oma kappeli ja koulu sekä asuntoja työläisille. Tämä malli oli yleinen 1800-luvun tehdasyhteisöissä: työnantaja tarjosi sekä asunnon että työn, mikä sitoi työläiset tiiviisti tehtaaseen. Nykyään kylä on säilynyt harvinaisen ehjänä, ja sitä pidetään yhtenä Britannian parhaiten säilyneistä teollisen ajan työläiskylistä.",
   "linkit": [
+   "Quarry Bank Millin",
+   "Samuel Gregin",
    "unitaareihin"
   ],
   "jatkot": [
@@ -2913,8 +2942,12 @@
   "kohde": "kohde:hahmotelma-quarry-bank-mill",
   "kasite": "Hannah Lightbodyn",
   "kysymys": "Kerro lisää: Hannah Lightbodyn",
-  "vastaus": "Hannah Lightbody oli Samuel Gregin vaimo ja lähteiden mukaan liverpoolilaista kauppiassukua. Hänen ansiostaan perheen tehtaassa kiinnitettiin tavanomaista enemmän huomiota työntekijöiden hyvinvointiin, ja tehdasyhteisössä järjestettiin muun muassa terveydenhoitoa. Hän huolehti erityisesti tehtaan oppipoikina työskennelleiden lasten arjesta, kuten ruoasta ja asumisesta. Tämä huolenpito ei poistanut sitä, että työpäivät olivat pitkiä, mutta se erotti Quarry Bankin monista aikansa tehtaista. Tarkkoja elämänvaiheita en ole varma, joten jätän ne mainitsematta.",
-  "linkit": [],
+  "vastaus": "Hannah Lightbody oli [[Samuel Gregin]] vaimo ja kotoisin [[Liverpoolin]] kauppiassuvusta. Hänen ansiostaan perheen tehtaassa kiinnitettiin tavanomaista enemmän huomiota työntekijöiden hyvinvointiin, ja tehdasyhteisössä järjestettiin muun muassa terveydenhoitoa. Hän huolehti erityisesti tehtaan oppipoikina työskennelleiden lasten arjesta, kuten ruoasta ja asumisesta. Tämä huolenpito ei poistanut sitä, että työpäivät olivat pitkiä, mutta se erotti [[Quarry Bankin]] monista aikansa tehtaista. Tarkkoja elämänvaiheita en tunne varmasti, joten jätän ne mainitsematta.",
+  "linkit": [
+   "Samuel Gregin",
+   "Liverpoolin",
+   "Quarry Bankin"
+  ],
   "jatkot": [
    "Miten tehtaan oppipoikien elämä oli järjestetty?",
    "Millaisia muita tehtaita Britanniassa oli samoihin aikoihin?"
@@ -2954,8 +2987,11 @@
   "kohde": "kohde:hahmotelma-liverpool-docks",
   "kasite": "Jesse Hartley",
   "kysymys": "Kerro lisää: Jesse Hartley",
-  "vastaus": "Jesse Hartley oli Liverpoolin satamainsinööri 1800-luvun alkupuolelta 1860-luvulle, ja hän vastasi suuresta osasta kaupungin telakkarakennuksia. Hänen tunnusomaisia töitään olivat massiiviset graniittiset satamamuurit, jotka kestivät sekä aaltoja että raskasta liikennettä. Albert Dockin hän suunnitteli yhdessä arkkitehti Philip Hardwickin kanssa, ja muita hänen töitään ovat [[Stanley Dock]] ja Liverpoolin satamien laajennukset. Hartleyn työ rakensi Liverpoolista yhden aikansa suurimmista kauppasatamista, ja hänen jälkensä näkyy kaupungin vesirajassa yhä.",
+  "vastaus": "Jesse Hartley oli [[Liverpoolin]] satamainsinööri 1800-luvun alkupuoliskolla, ja hän vastasi suuresta osasta kaupungin telakkarakennuksia. Hänen tunnusomaisia töitään olivat massiiviset graniittiset satamamuurit, jotka kestivät sekä aaltoja että raskasta liikennettä. [[Albert Dockin]] hän suunnitteli yhdessä arkkitehti [[Philip Hardwickin]] kanssa, ja muita hänen töitään ovat [[Stanley Dock]] ja Liverpoolin satamien laajennukset. Hartleyn työ rakensi Liverpoolista yhden aikansa suurimmista kauppasatamista, ja hänen jälkensä näkyy kaupungin vesirajassa yhä.",
   "linkit": [
+   "Liverpoolin",
+   "Albert Dockin",
+   "Philip Hardwickin",
    "Stanley Dock"
   ],
   "jatkot": [
@@ -3154,9 +3190,11 @@
   "kohde": "kohde:hahmotelma-oxford",
   "kasite": "Vanhan Bodleian-kirjaston",
   "kysymys": "Kerro lisää: Vanhan Bodleian-kirjaston",
-  "vastaus": "Vanha Bodleian-kirjasto on Oxfordin yliopiston alkuperäinen kirjastorakennus, jonka rakennustyöt tehtiin 1600-luvun alussa. Sen vanhimmat osat ovat keskiaikaisia: [[Divinity School]], jossa pidettiin teologian opetusta, valmistui 1400-luvun lopulla, ja sen yläpuolella on Duke Humfrey's Library. Rakennus ympäröi sisäpihaa, ja sen julkisivussa on antiikin pylväsjärjestelmiä esittelevä torni. Kirjasto on lukusali, jossa lukijat tekevät työtä tutkimusaineiston parissa, eivätkä kirjat poistu rakennuksesta. Rakennus kuuluu Oxfordin vanhimpiin ja arvokkaimpiin yliopistorakennuksiin.",
+  "vastaus": "Vanha Bodleian-kirjasto on [[Oxfordin yliopiston]] alkuperäinen kirjastorakennus, ja sen vanhimmat osat ovat keskiaikaisia. [[Divinity School]], jossa pidettiin teologian opetusta, valmistui 1400-luvun lopulla, ja sen yläpuolella on [[Duke Humfrey's Library]]. Rakennus ympäröi sisäpihaa. Kirjasto on lukusali, jossa lukijat tekevät työtä tutkimusaineiston parissa, eivätkä kirjat poistu rakennuksesta.",
   "linkit": [
-   "Divinity School"
+   "Oxfordin yliopiston",
+   "Divinity School",
+   "Duke Humfrey's Library"
   ],
   "jatkot": [
    "Mikä Divinity School on?",
@@ -3254,8 +3292,10 @@
   "kohde": "kohde:hahmotelma-fish-and-chips",
   "kasite": "Joseph Malinin",
   "kysymys": "Kerro lisää: Joseph Malinin",
-  "vastaus": "Joseph Malinin kauppaa pidetään usein yhtenä varhaisimmista fish and chips -kaupoista, ja se sijaitsi Lontoossa 1860-luvulla. Väite perustuu pitkälti myöhempiin kertomuksiin, ja sen tarkkaa vuotta ja paikkaa ei voida varmuudella todentaa. Siksi myös Lancashiren Mossleyn [[John Leesin]] kauppa kilpailee samasta asemasta. Kiista siitä, kumpi oli ensimmäinen, ei ole ratkennut, eikä sitä välttämättä voida ratkaista, koska ruoan synty oli pitkä prosessi. Joseph Malinista tarkempia henkilötietoja en ole varma.",
+  "vastaus": "Joseph Malinin kauppaa pidetään usein yhtenä varhaisimmista fish and chips -kaupoista, ja se sijaitsi [[Lontoossa]] 1860-luvulla. Väite perustuu pitkälti myöhempiin kertomuksiin, eikä sen tarkkaa vuotta ja paikkaa voida varmuudella todentaa. Siksi myös Lancashiren [[Mossleyn]] [[John Leesin]] kauppa kilpailee samasta asemasta. Kiista siitä, kumpi oli ensimmäinen, ei ole ratkennut, eikä sitä välttämättä voida ratkaista, koska ruoan synty oli pitkä prosessi. Joseph Malinista tarkempia henkilötietoja en ole varma.",
   "linkit": [
+   "Lontoossa",
+   "Mossleyn",
    "John Leesin"
   ],
   "jatkot": [
@@ -3281,9 +3321,13 @@
   "kohde": "kohde:hahmotelma-fish-and-chips",
   "kasite": "Mossleyssä",
   "kysymys": "Kerro lisää: Mossleyssä",
-  "vastaus": "Mossley on pieni kaupunki Pennien juurella Tame-joen laaksossa, nykyisin [[Greater Manchesterin]] alueella mutta historiallisesti Lancashiressa. 1800-luvulla se kasvoi puuvillateollisuuden ympärille, ja jokilaakson rinteille nousi tehtaita ja työläisten asuntoja. Maisema on jyrkkää ja laaksomaista, ja rautatie sekä kanava seurasivat laaksoa. Nykyään Mossleyn tunnetuin yhteys fish and chipsiin on John Leesin kauppa, jonka sanotaan olleen yksi ensimmäisistä. Tarkempia väkilukutietoja tai muita yksityiskohtia en ole varma.",
+  "vastaus": "Mossley on pieni kaupunki [[Pennien]] juurella [[Tame-joen]] laaksossa, nykyisin [[Greater Manchesterin]] alueella mutta historiallisesti [[Lancashiressa]]. 1800-luvulla se kasvoi puuvillateollisuuden ympärille, ja jokilaakson rinteille nousi tehtaita ja työläisten asuntoja. Maisema on jyrkkää ja laaksomaista, ja rautatie sekä kanava seurasivat laaksoa. Nykyään Mossleyn tunnetuin yhteys fish and chipsiin on [[John Leesin]] kauppa, jonka sanotaan olleen yksi ensimmäisistä. Tarkempia väkilukutietoja tai muita yksityiskohtia en ole varma.",
   "linkit": [
-   "Greater Manchesterin"
+   "Pennien",
+   "Tame-joen",
+   "Greater Manchesterin",
+   "Lancashiressa",
+   "John Leesin"
   ],
   "jatkot": [
    "Mitä Pennien vuoristo on?",
@@ -3337,11 +3381,10 @@
   "kohde": "kohde:hahmotelma-fish-and-chips",
   "kasite": "Oliver Twist",
   "kysymys": "Kerro lisää: Oliver Twist",
-  "vastaus": "Oliver Twist on Charles Dickensin romaani, joka ilmestyi ensin jatkokertomuksena ja kirjana vuonna 1838. Se kertoo orvosta pojasta, joka kasvaa työlaitoksessa ja pakenee Lontooseen, jossa hän joutuu rikollisjoukon pariin. Kirjan tunnettuihin hahmoihin kuuluvat taskuvaras [[Fagin]] ja hänen oppipoikansa, ovela Dodger. Romaani kritisoi aikansa [[köyhäinlakia]] ja tapaa kohdella köyhiä lapsia, ja se kuvasi Lontoon köyhiä kortteleita tarkasti. Kirjasta on tehty useita elokuvia ja [[Oliver!]]-niminen musikaali.",
+  "vastaus": "Oliver Twist on Charles Dickensin romaani, joka ilmestyi ensin jatkokertomuksena ja kirjana vuonna 1838. Se kertoo orvosta pojasta, joka kasvaa työlaitoksessa ja pakenee Lontooseen, jossa hän joutuu rikollisjoukon pariin. Kirjan tunnettuihin hahmoihin kuuluvat taskuvaras [[Fagin]] ja hänen oppipoikansa, ovela Dodger. Romaani kritisoi aikansa [[köyhäinlakia]] ja tapaa kohdella köyhiä lapsia, ja se kuvasi Lontoon köyhiä kortteleita tarkasti. Kirjasta on tehty useita elokuvia sekä siihen perustuva musikaali.",
   "linkit": [
    "Fagin",
-   "köyhäinlakia",
-   "Oliver!"
+   "köyhäinlakia"
   ],
   "jatkot": [
    "Mikä oli 1800-luvun köyhäinlaki?",
@@ -3380,9 +3423,11 @@
   "kohde": "kohde:hahmotelma-fish-and-chips",
   "kasite": "ruokasäännöstelyn",
   "kysymys": "Kerro lisää: ruokasäännöstelyn",
-  "vastaus": "Ruokasäännöstely tarkoittaa, että viranomaiset rajoittavat tiettyjen elintarvikkeiden määrää, jonka kukin ihminen saa ostaa. Britanniassa se alkoi tammikuussa 1940, ja kansalaisille jaettiin [[ruokakortit]], joilla tuotteita sai ostaa vain tietyn määrän; säännösteltyjä olivat muun muassa liha, voi, sokeri ja juusto. Kala ei kuulunut varsinaiseen säännöstelyyn, vaikka sitä oli vaikea saada, koska kalastus oli sodan aikana vaarallista. Elintarvikeministeriö ohjasi järjestelmää, ja säännöstely jatkui pitkälle sodan jälkeiseen aikaan: viimeiset rajoitukset poistuivat vasta vuonna 1954.",
+  "vastaus": "Ruokasäännöstely tarkoittaa, että viranomaiset rajoittavat tiettyjen elintarvikkeiden määrää, jonka kukin ihminen saa ostaa. Britanniassa se alkoi tammikuussa 1940 [[toisen maailmansodan]] aikana, ja kansalaisille jaettiin [[ruokakortit]], joilla tuotteita sai ostaa vain tietyn määrän; säännösteltyjä olivat muun muassa liha, voi, sokeri ja juusto. Kala ei kuulunut varsinaiseen säännöstelyyn, vaikka sitä oli vaikea saada, koska kalastus oli sodan aikana vaarallista. [[Elintarvikeministeriö]] ohjasi järjestelmää, ja säännöstely jatkui pitkälle sodan jälkeiseen aikaan: viimeiset rajoitukset poistuivat vasta vuonna 1954.",
   "linkit": [
-   "ruokakortit"
+   "toisen maailmansodan",
+   "ruokakortit",
+   "Elintarvikeministeriö"
   ],
   "jatkot": [
    "Miksi säännöstely jatkui vielä sodan jälkeen?",
@@ -3393,9 +3438,11 @@
   "kohde": "kohde:hahmotelma-afternoon-tea",
   "kasite": "Bedfordin herttuattaren",
   "kysymys": "Kerro lisää: Bedfordin herttuattaren",
-  "vastaus": "Anna Russell, Bedfordin herttuatar, eli vuosina 1783–1857 ja oli Bedfordin seitsemännen herttuan puoliso. Perheen kartano oli [[Woburn Abbey]], ja hän toimi kuningatar Viktorian hovineitona. Hänen kerrotaan alkaneen kutsua ystäviään teelle iltapäivisin, ja tapa levisi seurapiireissä kutsuina, joilla tarjottiin teetä, leivonnaisia ja pieniä voileipiä. Tarinan tarkkoja yksityiskohtia ei voi todentaa, ja on mahdollista, että muutkin aatelisnaiset ottivat vastaavan tavan käyttöön samoihin aikoihin. Hänen nimensä on silti jäänyt iltapäiväteen historiaan.",
+  "vastaus": "Anna Russell, Bedfordin herttuatar, eli vuosina 1783–1857 ja oli [[Bedfordin seitsemännen herttuan]] puoliso. Perheen kartano oli [[Woburn Abbey]], ja hän toimi kuningatar [[Viktorian]] hovineitona. Hänen kerrotaan alkaneen kutsua ystäviään teelle iltapäivisin, ja tapa levisi seurapiireissä kutsuina, joilla tarjottiin teetä, leivonnaisia ja pieniä voileipiä. Tarinan tarkkoja yksityiskohtia ei voi todentaa, ja on mahdollista, että muutkin aatelisnaiset ottivat vastaavan tavan käyttöön samoihin aikoihin. Hänen nimensä on silti jäänyt iltapäiväteen historiaan.",
   "linkit": [
-   "Woburn Abbey"
+   "Bedfordin seitsemännen herttuan",
+   "Woburn Abbey",
+   "Viktorian"
   ],
   "jatkot": [
    "Millainen paikka Woburn Abbey on?",
@@ -3504,9 +3551,11 @@
   "kohde": "kohde:hahmotelma-afternoon-tea",
   "kasite": "high tea",
   "kysymys": "Kerro lisää: high tea",
-  "vastaus": "High tea eli korkea tee oli työväestön kunnon iltaruoka, joka syötiin noin viiden ja seitsemän välillä korkean ruokapöydän ääressä. Nimi viittaa siis pöydän korkeuteen eikä aterian arvostukseen, ja ateria oli runsaampi kuin kevyt iltapäivätee. Se eroaa [[iltapäiväteestä]], jota kutsutaan matalaksi teeksi, koska se nautittiin salongin matalien sivupöytien ääressä. Nykyisin sanaa high tea käytetään usein virheellisesti hienosta iltapäiväteestä, vaikka alkuperäinen merkitys oli päinvastainen.",
+  "vastaus": "High tea eli korkea tee oli [[työväestön]] kunnon iltaruoka, joka syötiin noin viiden ja seitsemän välillä korkean ruokapöydän ääressä. Nimi viittaa siis pöydän korkeuteen eikä aterian arvostukseen, ja ateria oli runsaampi kuin kevyt iltapäivätee. Se eroaa [[iltapäiväteestä]], jota kutsutaan matalaksi teeksi, koska se nautittiin salongin matalien sivupöytien ääressä ja jonka yleistymistä pidetään [[Bedfordin herttuattaren]] ansiona. Nykyisin sanaa high tea käytetään usein virheellisesti hienosta iltapäiväteestä, vaikka alkuperäinen merkitys oli päinvastainen.",
   "linkit": [
-   "iltapäiväteestä"
+   "työväestön",
+   "iltapäiväteestä",
+   "Bedfordin herttuattaren"
   ],
   "jatkot": [
    "Mitä korkealla teellä syötiin?",
@@ -3531,8 +3580,10 @@
   "kohde": "kohde:hahmotelma-afternoon-tea",
   "kasite": "seurapiireihin",
   "kysymys": "Kerro lisää: seurapiireihin",
-  "vastaus": "Seurapiirit tarkoittavat yläluokan ja varakkaan väestön sosiaalista elämää: vierailuja, kutsuja, tanssiaisia ja yhteisiä illanviettoja, joissa asema ja suhteet näkyivät. Iltapäivätee sopi tähän elämään, koska sen avulla vieraat voitiin kutsua kotiin keskustelemaan ja seurustelemaan ennen illallista. Siksi tapa levisi Anna Russellin ystäväpiiristä laajemmin aatelin ja varakkaiden perheiden keskuuteen. Salongin matalat sivupöydät olivat tämän seurustelun luonteva paikka. Myöhemmin tapa tavoitti myös [[keskiluokan]], joka omaksui sen osaksi arkea.",
+  "vastaus": "Seurapiirit tarkoittavat yläluokan ja varakkaan väestön sosiaalista elämää: vierailuja, kutsuja, tanssiaisia ja yhteisiä illanviettoja, joissa asema ja suhteet näkyivät. Seurapiirien tapoihin sopi [[iltapäivätee]], koska sen avulla vieraat voitiin kutsua kotiin keskustelemaan ennen illallista. Siksi tapa levisi [[Anna Russellin]] ystäväpiiristä laajemmin aatelin ja varakkaiden perheiden keskuuteen. Salongin matalat sivupöydät olivat tämän seurustelun luonteva paikka. Myöhemmin tapa tavoitti myös [[keskiluokan]], joka omaksui sen osaksi arkea.",
   "linkit": [
+   "iltapäivätee",
+   "Anna Russellin",
    "keskiluokan"
   ],
   "jatkot": [
@@ -3648,9 +3699,11 @@
   "kohde": "kohde:hahmotelma-haggis",
   "kasite": "munuaisrasvasta",
   "kysymys": "Kerro lisää: munuaisrasvasta",
-  "vastaus": "Munuaisrasva on lampaan tai naudan munuaisten ympärillä oleva kova rasva, jota englanniksi kutsutaan nimellä suet. Haggiksessa se tekee seoksesta mehevämmän ja pitää sen koossa kypsennyksen aikana. Rasvaa käytetään perinteisesti myös muissa brittiläisissä ruoissa, kuten [[suet pudding]] -vanukkaissa ja joulupuding-perinteessä. Munuaisrasva sulaa korkeassa lämpötilassa ja antaa ruoalle täyteläisen rakenteen.",
+  "vastaus": "Munuaisrasva on lampaan tai naudan munuaisten ympärillä oleva kova rasva, jota englanniksi kutsutaan nimellä suet. Haggiksessa se tekee seoksesta mehevämmän ja pitää sen koossa kypsennyksen aikana. Rasvaa käytetään perinteisesti myös [[Britannian]] keittiössä, esimerkiksi [[suet pudding]] -vanukkaissa ja [[joulupuding]]-perinteessä. Munuaisrasva sulaa korkeassa lämpötilassa ja antaa ruoalle täyteläisen rakenteen.",
   "linkit": [
-   "suet pudding"
+   "Britannian",
+   "suet pudding",
+   "joulupuding"
   ],
   "jatkot": [
    "Millaisia suet-vanukkaita Britanniassa valmistetaan?",
@@ -3661,8 +3714,10 @@
   "kohde": "kohde:hahmotelma-haggis",
   "kasite": "neeps and tatties",
   "kysymys": "Kerro lisää: neeps and tatties",
-  "vastaus": "Neeps and tatties tarkoittaa lanttusosetta ja perunasosetta. Skotlannissa sana neeps viittaa lanttuun, ja tatties on puhekielinen sana perunoille. Molemmat soseutetaan, ja lanttuun lisätään usein voita ja mustapippuria. Lantun mieto makeus ja perunan pehmeys sopivat haggiksen voimakkaaseen makuun, ja yhdistelmä on perinteinen erityisesti [[Burns Supper]] -illallisilla. Sosepari on nykyään myös yleinen lisuke skotlantilaisissa ravintoloissa.",
+  "vastaus": "Neeps and tatties tarkoittaa lanttusosetta ja perunasosetta. [[Skotlannissa]] sana neeps viittaa [[lanttuun]], ja tatties on puhekielinen sana perunoille. Molemmat soseutetaan, ja lanttuun lisätään usein voita ja mustapippuria. Lantun mieto makeus ja perunan pehmeys sopivat haggiksen voimakkaaseen makuun, ja yhdistelmä on perinteinen erityisesti [[Burns Supper]] -illallisilla. Sosepari on nykyään myös yleinen lisuke skotlantilaisissa ravintoloissa.",
   "linkit": [
+   "Skotlannissa",
+   "lanttuun",
    "Burns Supper"
   ],
   "jatkot": [
@@ -3688,9 +3743,11 @@
   "kohde": "kohde:hahmotelma-haggis",
   "kasite": "säkkipillin",
   "kysymys": "Kerro lisää: säkkipillin",
-  "vastaus": "Säkkipilli on soitin, jonka ääni syntyy ilmasäkistä, jota soittaja täyttää suullaan ja puristaa kainalossaan. Skotlannin tunnetuin muoto on [[Highland-säkkipilli]], jossa on melodiaputki ja kolme bordunapilliä. Melodiaputkella soitetaan sävelmä, ja bordunapillit tuottavat jatkuvan taustasävelen. Säkkipilliä soitetaan Skotlannissa juhlissa, paraateissa ja sotilasmusiikissa, ja burnsilaisilla illallisilla sen soitto kuuluu haggiksen saapumiseen.",
+  "vastaus": "Säkkipilli on soitin, jonka ääni syntyy ilmasäkistä, jota soittaja täyttää suullaan ja puristaa kainalossaan. [[Skotlannin]] tunnetuin muoto on [[Highland-säkkipilli]], jossa on melodiaputki ja kolme bordunapilliä. Melodiaputkella soitetaan sävelmä, ja bordunapillit tuottavat jatkuvan taustasävelen. Säkkipilliä soitetaan Skotlannissa juhlissa, paraateissa ja sotilasmusiikissa, ja [[Burns Supper]] -illallisilla sen soitto kuuluu haggiksen saapumiseen.",
   "linkit": [
-   "Highland-säkkipilli"
+   "Skotlannin",
+   "Highland-säkkipilli",
+   "Burns Supper"
   ],
   "jatkot": [
    "Miten säkkipillin ääni syntyy?",
@@ -3715,9 +3772,12 @@
   "kohde": "kohde:hahmotelma-stockton-darlington",
   "kasite": "Stephensonin",
   "kysymys": "Kerro lisää: Stephensonin",
-  "vastaus": "George Stephenson syntyi vuonna 1781 ja kuoli vuonna 1848, ja hänen poikansa Robert oli syntynyt vuonna 1803. Isä ja poika rakensivat veturit, joilla höyryrautatie vakiintui, ja heidän yrityksensä valmisti muun muassa Locomotion No. 1:n. Vuonna 1829 heidän [[Rocket]]-veturinsa voitti Rainhillin kilpailun noin 46 kilometrin tuntivauhdilla. Robert Stephenson suunnitteli myöhemmin myös siltoja, kuten Menai-salmen Britannia-sillan Walesissa. Stephensonien käyttämä raideleveys on tänä päivänä laajasti käytetty normaaliraide.",
+  "vastaus": "George Stephenson syntyi vuonna 1781 ja kuoli vuonna 1848, ja hänen poikansa Robert oli syntynyt vuonna 1803. Isä ja poika rakensivat veturit, joilla höyryrautatie vakiintui, ja heidän yrityksensä valmisti muun muassa veturin [[Locomotion No. 1]]. Vuonna 1829 heidän [[Rocket]]-veturinsa voitti [[Rainhillin kilpailun]]. Robert Stephenson suunnitteli myöhemmin myös siltoja, kuten Menai-salmen [[Britannia-sillan]] Walesissa. Stephensonien käyttämä 1435 millimetrin raideleveys on nykyisin laajasti käytetty normaaliraide.",
   "linkit": [
-   "Rocket"
+   "Locomotion No. 1",
+   "Rocket",
+   "Rainhillin kilpailun",
+   "Britannia-sillan"
   ],
   "jatkot": [
    "Miten Rocket-veturi voitti Rainhillin kilpailun?",
@@ -3728,8 +3788,10 @@
   "kohde": "kohde:hahmotelma-stockton-darlington",
   "kasite": "Locomotion No. 1",
   "kysymys": "Kerro lisää: Locomotion No. 1",
-  "vastaus": "Locomotion No. 1 oli George ja Robert Stephensonin rakentama höyryveturi, joka tilattiin vuonna 1824 ja joka veti Stocktonin ja Darlingtonin rautatien avajaisjunaa 27. syyskuuta 1825. Veturi oli ensimmäinen, joka veti matkustajajunaa yleisellä rautatiellä. Sen hinnaksi mainitaan 550 puntaa. Veturin rakensi [[Robert Stephenson and Company]], ja se on säilynyt museokappaleena. Locomotion No. 1 oli varhainen esimerkki höyryvoimasta, joka siirsi hiiltä ja ihmisiä rautateillä.",
+  "vastaus": "Locomotion No. 1 oli [[George Stephensonin]] ja hänen poikansa Robertin rakentama höyryveturi, joka tilattiin vuonna 1824 ja joka veti [[Stocktonin ja Darlingtonin rautatien]] avajaisjunaa 27. syyskuuta 1825. Veturi oli ensimmäinen, joka veti matkustajajunaa yleisellä rautatiellä. Sen hinnaksi mainitaan 550 puntaa. Veturin rakensi [[Robert Stephenson and Company]], ja se on säilynyt museokappaleena. Locomotion No. 1 oli varhainen esimerkki höyryvoimasta, joka siirsi hiiltä ja ihmisiä rautateillä.",
   "linkit": [
+   "George Stephensonin",
+   "Stocktonin ja Darlingtonin rautatien",
    "Robert Stephenson and Company"
   ],
   "jatkot": [
@@ -3741,8 +3803,10 @@
   "kohde": "kohde:hahmotelma-stockton-darlington",
   "kasite": "hiilikaivokset",
   "kysymys": "Kerro lisää: hiilikaivokset",
-  "vastaus": "Stocktonin ja Darlingtonin rautatien hiilikaivokset sijaitsivat Shildonin lähellä Koillis-Englannissa. Hiili oli 1800-luvun Britanniassa keskeinen energianlähde: sillä lämmitettiin koteja, ja sitä poltettiin höyrykoneissa ja tehtaissa. Rautatie mahdollisti hiilen kuljetuksen kaivoksilta Darlingtoniin ja Stocktoniin ja sieltä laivoihin, mikä teki kaupasta tuottoisaa. [[Koillis-Englannin]] hiilikentät olivat pitkään alueen talouden perusta, ja kaivostyö muovasi seudun yhteisöjä. Hiilen tarve kasvatti rautateiden rakentamista kaikkialla maassa.",
+  "vastaus": "Stocktonin ja Darlingtonin rautatien hiilikaivokset sijaitsivat [[Shildonin]] lähellä Koillis-Englannissa. Hiili oli 1800-luvun Britanniassa keskeinen energianlähde: sillä lämmitettiin koteja, ja sitä poltettiin [[höyrykoneissa]] ja tehtaissa. Rautatie mahdollisti hiilen kuljetuksen kaivoksilta Darlingtoniin ja Stocktoniin ja sieltä laivoihin, mikä teki kaupasta tuottoisaa. [[Koillis-Englannin]] hiilikentät olivat pitkään alueen talouden perusta, ja kaivostyö muovasi seudun yhteisöjä. Hiilen tarve kasvatti rautateiden rakentamista kaikkialla maassa.",
   "linkit": [
+   "Shildonin",
+   "höyrykoneissa",
    "Koillis-Englannin"
   ],
   "jatkot": [
@@ -3754,8 +3818,10 @@
   "kohde": "kohde:hahmotelma-stockton-darlington",
   "kasite": "höyryrautatiet",
   "kysymys": "Kerro lisää: höyryrautatiet",
-  "vastaus": "Höyryrautatie on rautatie, jolla junia vetävät höyryvetureita. Veturin kattilassa hiilellä kuumennettu vesi muuttuu höyryksi, ja höyryn paine liikuttaa mäntiä, jotka pyörittävät veturin pyöriä. Stocktonin ja Darlingtonin rautatie avattiin vuonna 1825, ja Liverpoolin ja Manchesterin rautatietä varten järjestettiin Rainhillin kilpailu vuonna 1829, jossa ratkaistiin, vedetäänkö vaunuja veturilla vai paikallaan seisovalla koneella ja köydellä. [[Rocket]]-veturi voitti kilpailun. Höyryrautatiet nopeuttivat kuljetuksia ja muuttivat matkustamisen mittakaavaa.",
+  "vastaus": "Höyryrautatie on rautatie, jolla junia vetävät höyryveturit. Veturin kattilassa hiilellä kuumennettu vesi muuttuu höyryksi, ja höyryn paine liikuttaa mäntiä, jotka pyörittävät veturin pyöriä. Stocktonin ja Darlingtonin rautatie avattiin vuonna 1825, ja [[Liverpoolin ja Manchesterin rautatietä]] varten järjestettiin vuonna 1829 [[Rainhillin kilpailu]], jossa ratkaistiin, vedetäänkö vaunuja veturilla vai paikallaan seisovalla koneella ja köydellä. [[Rocket]]-veturi voitti kilpailun. Höyryrautatiet nopeuttivat kuljetuksia ja muuttivat matkustamisen mittakaavaa.",
   "linkit": [
+   "Liverpoolin ja Manchesterin rautatietä",
+   "Rainhillin kilpailu",
    "Rocket"
   ],
   "jatkot": [
@@ -3781,9 +3847,12 @@
   "kohde": "kohde:hahmotelma-stockton-darlington",
   "kasite": "höyryvetureita",
   "kysymys": "Kerro lisää: höyryvetureita",
-  "vastaus": "Höyryveturi toimii höyryn paineella. Kattilassa poltetaan hiiltä tai puuta, ja kuumentunut vesi muuttuu höyryksi, joka johdetaan sylintereihin. Höyry työntää mäntiä edestakaisin, ja liike siirretään kiertokangen avulla veturin pyöriin. Vuonna 1829 Rainhillin kilpailun voittanut [[Rocket]] sai nopeutensa kattilasta, jonka läpi kulki 25 kuparista putkea ja joka lisäsi lämmönsiirtopinta-alaa. Sen jälkeen höyryveturit rakennettiin samalla periaatteella. Höyryveturit palvelivat rautateillä pitkälle 1900-luvulle, kunnes sähkö- ja dieselveturit syrjäyttivät ne.",
+  "vastaus": "Höyryveturi toimii höyryn paineella. Kattilassa poltetaan hiiltä tai puuta, ja kuumentunut vesi muuttuu höyryksi, joka johdetaan sylintereihin. Höyry työntää mäntiä edestakaisin, ja liike siirretään kiertokangen avulla veturin pyöriin. Vuonna 1829 [[Rainhillin kilpailun]] voittanut [[Rocket]] sai nopeutensa kattilasta, jonka läpi kulki 25 kuparista putkea ja joka lisäsi lämmönsiirtopinta-alaa. Sen jälkeen höyryveturit rakennettiin samalla periaatteella. Höyryveturit palvelivat rautateillä pitkälle 1900-luvulle, kunnes [[sähköveturit]] ja [[dieselveturit]] syrjäyttivät ne.",
   "linkit": [
-   "Rocket"
+   "Rainhillin kilpailun",
+   "Rocket",
+   "sähköveturit",
+   "dieselveturit"
   ],
   "jatkot": [
    "Miksi kattilan putket nopeuttivat höyryn muodostumista?",
@@ -3794,8 +3863,10 @@
   "kohde": "kohde:hahmotelma-stockton-darlington",
   "kasite": "rautatieaikakaudelle",
   "kysymys": "Kerro lisää: rautatieaikakaudelle",
-  "vastaus": "Rautatieaikakausi tarkoittaa 1800-lukua, jolloin rautateiden rakentaminen mullisti liikenteen ja talouden. Britanniassa 1840-luvulla koettiin niin sanottu rautatiekuume, jonka aikana yhtiöitä perustettiin ja ratoja suunniteltiin ennätysvauhtia. Rautatiet nopeuttivat matkustamista ja tavarankuljetusta, laajensivat markkinoita ja saivat ihmiset liikkumaan entistä enemmän. Ne myös yhtenäistivät aikaa, sillä junien aikataulut vaativat saman kellonajan eri paikkakunnille, ja Britanniassa otettiin käyttöön Greenwichin aika. [[Railway Mania]] oli aikakauden sijoitusbuumi.",
+  "vastaus": "Rautatieaikakausi tarkoittaa 1800-lukua, jolloin rautateiden rakentaminen mullisti liikenteen ja talouden. [[Britanniassa]] 1840-luvulla koettiin niin sanottu rautatiekuume, jonka aikana yhtiöitä perustettiin ja ratoja suunniteltiin ennätysvauhtia. Rautatiet nopeuttivat matkustamista ja tavarankuljetusta, laajensivat markkinoita ja saivat ihmiset liikkumaan entistä enemmän. Ne myös yhtenäistivät aikaa, sillä junien aikataulut vaativat saman kellonajan eri paikkakunnille, ja Britanniassa otettiin käyttöön [[Greenwichin aika]]. [[Railway Mania]] oli aikakauden sijoitusbuumi.",
   "linkit": [
+   "Britanniassa",
+   "Greenwichin aika",
    "Railway Mania"
   ],
   "jatkot": [
@@ -3821,8 +3892,10 @@
   "kohde": "kohde:hahmotelma-stockton-darlington",
   "kasite": "Stocktonin ja Darlingtonin rautatien",
   "kysymys": "Kerro lisää: Stocktonin ja Darlingtonin rautatien",
-  "vastaus": "Stocktonin ja Darlingtonin rautatie avattiin 27. syyskuuta 1825 Koillis-Englannissa. Se yhdisti Shildonin lähellä sijainneet hiilikaivokset Darlingtoniin ja Stocktoniin, ja hiili kuljetettiin radan kautta laivoihin. Rataa pidetään maailman ensimmäisenä yleisenä rautatienä, jolla käytettiin höyryvetureita. Pääinsinöörinä toimi George Stephenson, ja avajaisjunaa veti [[Locomotion No. 1]]. Radalla käytettiin alkuvuosina myös hevosvoimaa, ja sen 50-vuotisjuhlaa vietettiin vuonna 1875. Rautatie osoitti, että höyryveturi voi olla tuottoisa liikenteen väline.",
+  "vastaus": "Stocktonin ja Darlingtonin rautatie avattiin 27. syyskuuta 1825 Koillis-Englannissa. Se yhdisti [[Shildonin]] lähellä sijainneet hiilikaivokset Darlingtoniin ja Stocktoniin, ja hiili kuljetettiin radan kautta laivoihin. Rataa pidetään maailman ensimmäisenä yleisenä rautatienä, jolla käytettiin höyryvetureita. Insinöörinä toimi [[George Stephenson]], ja avajaisjunaa veti [[Locomotion No. 1]]. Radalla käytettiin alkuvuosina myös hevosvoimaa. Rautatie osoitti, että höyryveturi voi olla tuottoisa liikenteen väline.",
   "linkit": [
+   "Shildonin",
+   "George Stephenson",
    "Locomotion No. 1"
   ],
   "jatkot": [
@@ -3862,8 +3935,12 @@
   "kohde": "kohde:hahmotelma-watt-soho",
   "kasite": "hopeaesineitä",
   "kysymys": "Kerro lisää: hopeaesineitä",
-  "vastaus": "Hopeaesineet olivat 1700-luvulla arvostettuja ylellisyystuotteita, ja Sohon manufaktuurissa niitä alettiin valmistaa nappien, solkien ja koriste-esineiden jälkeen. Birmingham kehittyi merkittäväksi metalliesineiden valmistuskaupungiksi, ja hopeatuotteiden laatua valvottiin leimoilla. Boultonin kerrotaan olleen mukana siinä, että kaupunkiin saatiin oma leimaustoimisto. Hopeaesineiden muotoilu seurasi aikansa uusklassista makua. Valmistus tapahtui osin koneellisesti, mikä erotti sen vanhoista kultasepän verstaista.",
-  "linkit": [],
+  "vastaus": "Hopeaesineet olivat 1700-luvulla arvostettuja ylellisyystuotteita, ja Sohon manufaktuurissa niitä alettiin valmistaa nappien, solkien ja koriste-esineiden jälkeen. [[Birminghamista]] kehittyi merkittävä metalliesineiden valmistuskaupunki, ja hopeatuotteiden laatua valvottiin leimoilla. [[Matthew Boulton]] oli mukana ajamassa kaupunkiin omaa leimaustoimistoa. Hopeaesineiden muotoilu seurasi aikansa [[uusklassista]] makua. Valmistus tapahtui osin koneellisesti, mikä erotti sen vanhoista kultasepän verstaista.",
+  "linkit": [
+   "Birminghamista",
+   "Matthew Boulton",
+   "uusklassista"
+  ],
   "jatkot": [
    "Miten hopeaesineiden leimausjärjestelmä toimi?",
    "Mitä uusklassinen tyyli tarkoittaa?"
@@ -3958,8 +4035,10 @@
   "kohde": "kohde:hahmotelma-watt-soho",
   "kasite": "höyryvoimalla",
   "kysymys": "Kerro lisää: höyryvoimalla",
-  "vastaus": "Soho Mint oli Matthew Boultonin Sohon manufaktuuriin perustama rahapaja, jota pidetään maailman ensimmäisenä höyryvoimalla käyvänä rahapajana. Höyrykone käytti painokoneita, joilla kolikot lyötiin tasaisemmin ja nopeammin kuin käsityönä. Rahapajassa valmistettiin kolikoita Britannialle ja muille tilaajille. Myöhemmin [[Royal Mint]] otti käyttöön höyryvoimalla toimivia koneita, ja kolikoiden valmistus siirtyi koneelliseksi.",
+  "vastaus": "Soho Mint oli [[Matthew Boultonin]] Sohon manufaktuuriin perustama rahapaja, jota pidetään maailman ensimmäisenä höyryvoimalla käyvänä rahapajana. [[James Wattin]] höyrykone käytti painokoneita, joilla kolikot lyötiin tasaisemmin ja nopeammin kuin käsityönä. Rahapajassa valmistettiin kolikoita Britannialle ja muille tilaajille. Myöhemmin [[Royal Mint]] otti käyttöön höyryvoimalla toimivia koneita, ja kolikoiden valmistus siirtyi koneelliseksi.",
   "linkit": [
+   "Matthew Boultonin",
+   "James Wattin",
    "Royal Mint"
   ],
   "jatkot": [
@@ -3985,8 +4064,12 @@
   "kohde": "kohde:hahmotelma-watt-soho",
   "kasite": "Wattin",
   "kysymys": "Kerro lisää: Wattin",
-  "vastaus": "James Watt syntyi vuonna 1736 Skotlannissa Greenockin satamakaupungissa ja eli vuoteen 1819. Hän työskenteli aluksi mittausvälineiden valmistajana Glasgowissa, ja siellä hän perehtyi Newcomenin höyrykoneeseen, jonka tehottomuus johti hänet kehittämään erillisen lauhduttimen. Keksinnölle myönnettiin patentti vuonna 1769. Yhteistyö Matthew Boultonin kanssa alkoi 1770-luvulla ja toi koneen laajaan käyttöön. Watt keksi lisäksi kirjeiden jäljentämiseen tarkoitetun [[kopiointipuristimen]]. Hänen mukaansa nimettiin tehon yksikkö watti.",
+  "vastaus": "James Watt syntyi vuonna 1736 Skotlannissa [[Greenockin]] satamakaupungissa ja eli vuoteen 1819. Hän työskenteli aluksi mittausvälineiden valmistajana [[Glasgowissa]], ja siellä hän perehtyi [[Newcomenin höyrykoneeseen]], jonka tehottomuus johti hänet kehittämään erillisen lauhduttimen. Keksinnölle myönnettiin patentti vuonna 1769. Yhteistyö [[Matthew Boultonin]] kanssa alkoi 1770-luvulla ja toi koneen laajaan käyttöön. Watt keksi lisäksi kirjeiden jäljentämiseen tarkoitetun [[kopiointipuristimen]]. Hänen mukaansa nimettiin tehon yksikkö watti.",
   "linkit": [
+   "Greenockin",
+   "Glasgowissa",
+   "Newcomenin höyrykoneeseen",
+   "Matthew Boultonin",
    "kopiointipuristimen"
   ],
   "jatkot": [
@@ -4171,9 +4254,11 @@
   "kohde": "kohde:hahmotelma-loch-lomond",
   "kasite": "Irlannista",
   "kysymys": "Kerro lisää: Irlannista",
-  "vastaus": "Irlanti on saari Britannian länsipuolella, ja sen alueeseen kuuluvat Irlannin tasavalta, jonka pääkaupunki on [[Dublin]], sekä Pohjois-Irlanti, joka kuuluu Yhdistyneeseen kuningaskuntaan. Krannogeja eli keinotekoisia asumussaaria tunnetaan Irlannissa runsaasti, ja niitä käytettiin esihistoriallisista ajoista keskiajalle asti. Rakenne oli samankaltainen kuin Skotlannissa: järveen tehtiin tukkien, kivien ja maan avulla pieni saari, jonka päälle rakennettiin talo. Irlannin kielessä asumussaarta sanotaan nimellä crannóg.",
+  "vastaus": "Irlanti on saari Britannian länsipuolella, ja sen alueeseen kuuluvat [[Irlannin tasavalta]], jonka pääkaupunki on [[Dublin]], sekä [[Pohjois-Irlanti]], joka kuuluu Yhdistyneeseen kuningaskuntaan. Krannogeja eli keinotekoisia asumussaaria tunnetaan Irlannissa runsaasti, ja niitä käytettiin esihistoriallisista ajoista keskiajalle asti. Rakenne oli samankaltainen kuin Skotlannissa: järveen tehtiin tukkien, kivien ja maan avulla pieni saari, jonka päälle rakennettiin talo. Irlannin kielessä asumussaarta sanotaan nimellä crannóg.",
   "linkit": [
-   "Dublin"
+   "Irlannin tasavalta",
+   "Dublin",
+   "Pohjois-Irlanti"
   ],
   "jatkot": [
    "Miksi krannogeja rakennettiin järviin?",
