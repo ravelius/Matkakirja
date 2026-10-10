@@ -381,6 +381,9 @@ namespace Matkakirja.Natiivi
             l.style.fontSize = Tyylikirja.Koko.Apuri + 2f;
             l.style.whiteSpace = WhiteSpace.Normal;
             l.style.textOverflow = TextOverflow.Clip;
+            // Ei kutistu (simu 19.3x: selite 0 pt korkea, kun nimen korostus ei tuonut lisätilaa): linjan korkeus luetaan selitteen
+            // korkeudesta (Paivita), joten kutistunut selite ei olisi koskaan saanut tilaa; pohjan overflow: hidden leikkasi sen pois.
+            l.style.flexShrink = 0;
             l.style.textShadow = new TextShadow { offset = new Vector2(0, 2), blurRadius = 14, color = Tyylikirja.Himmennys.Kuva };
             l.style.unityTextOutlineWidth = 0.8f;
             l.style.unityTextOutlineColor = (Color)Tyylikirja.Himmennys.Tumma;
