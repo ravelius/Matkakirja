@@ -2874,7 +2874,13 @@ namespace Matkakirja.Natiivi
                     return $"opas: kaupungit {maanosa} / {maa}";
                 case "metro":
                     // `ui opasvalikko metro selite <teksti>|selite`: testiselite nykyisen aseman alle (tyhjä = pois).
-                    if (o.Length > 1 && o[1] == "selite") { metro.TestiSelite = o.Length > 2 ? string.Join(" ", o.Skip(2)) : null; return "opas: " + metro.Kuvaus(); }
+                    // Komento jakaa rivin kahteen osaan (komento, loput): selitteen teksti on loppujen toinen osa.
+                    if (o.Length > 1 && (o[1] == "selite" || o[1].StartsWith("selite ")))
+                    {
+                        var st = o[1].Split(new[] { ' ' }, 2, StringSplitOptions.RemoveEmptyEntries);
+                        metro.TestiSelite = st.Length > 1 ? st[1] : null;
+                        return "opas: " + metro.Kuvaus();
+                    }
                     // `ui opasvalikko metro <i>|auto`: testilinja Pariisin kohteilla ilman kierrosta.
                     metro.Testi = o.Length > 1 && o[1] != "auto";
                     if (metro.Testi && int.TryParse(o[1], out int mi)) metro.TestiIndeksi = mi;
