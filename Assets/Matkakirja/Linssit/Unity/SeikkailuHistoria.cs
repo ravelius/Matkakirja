@@ -62,8 +62,9 @@ namespace Matkakirja.Natiivi
 
         static string KertojaUrl(HistoriaVaihe v)
         {
-            if (v?.Avain == null) return null;
-            string sha = Kieli.T("olavinlinna.historia." + v.Avain + ".kertoja.aani");   // puuttuva → avain itse (≠ 32 merkkiä)
+            string avain = v?.KertojaAvain ?? v?.Avain;
+            if (avain == null) return null;
+            string sha = Kieli.T("olavinlinna.historia." + avain + ".kertoja.aani");   // puuttuva → avain itse (≠ 32 merkkiä)
             return sha.Length == 32 ? PuluChat.Palvelin + "/opas/aani/" + sha + ".mp3" : null;
         }
 

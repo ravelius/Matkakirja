@@ -315,7 +315,9 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("esittely", h.Nimi);
             foreach (var v in h.Vaiheet)
             {
-                Oleta.Tosi(!v.Kertoja, $"{v.Vuosi}: ei kertojaa ilman omistajan lupaa");
+                string ka = v.Kertoja ? v.KertojaAvain : null;   // omistajan luvalla vain 4 riviä (10.10. 07.3x)
+                Oleta.Tosi(!v.Kertoja || v.KertojaAvain != null, $"{v.Vuosi}: ei historian kertojariviä esittelyssä");
+                Oleta.Tosi(ka == null || Array.IndexOf(new[] { "esi-saimaa", "esi-1323", "vaihe-1475", "vaihe-nyky" }, ka) >= 0, $"{v.Vuosi}: kertoja {ka}");
                 if (v.Avain != null) Oleta.Tosi(!string.IsNullOrEmpty(v.VuosiTeksti) && !string.IsNullOrEmpty(v.Sanat), $"{v.Avain}: tarkistettu teksti");
             }
             int i1475 = 0; while (h.Vaiheet[i1475].Vuosi < 1475) i1475++;
@@ -328,6 +330,8 @@ namespace Matkakirja.Linssit.Testit
             }
             Oleta.Tosi(h.Vuosi(h.VaiheenAlku(i1475 - 1) + 1) is >= 1323 and < 1400, "1323 näkyy vuotena");
             Oleta.Tosi(h.Vuosi(h.Kesto - 0.01) >= 1976, "lopussa nykyasu");
+            int rivit = 0; foreach (var v in h.Vaiheet) if (v.Kertoja && v.KertojaAvain != null) rivit++;
+            Oleta.Sama(4, rivit);
             double Kesto(HistoriaOsa o) { double a = -1, b = -1; for (double t = 0; t < h.Kesto; t += 0.05) { double k = Historiajana.Kasvu(h.Vuosi(t), o); if (k > 0 && a < 0) a = t; if (k >= 1 && b < 0) b = t; } return b - a; }
             Oleta.Tosi(Kesto(Historiajana.Osa("b1499-paksu-bastioni")) >= 1.0, $"Paksu bastioni kasvaa näkyvästi ({Kesto(Historiajana.Osa("b1499-paksu-bastioni")):F1} s)");
             for (double t = 0, ed = double.MinValue; t < h.Kesto; t += 0.1) { double y = h.Vuosi(t); Oleta.Tosi(y >= ed - 1e-9, "vuosi ei palaa taaksepäin"); ed = y; }

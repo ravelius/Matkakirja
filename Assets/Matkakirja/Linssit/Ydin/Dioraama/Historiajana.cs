@@ -40,6 +40,9 @@ namespace Matkakirja.Linssit.Dioraama
         public (double S, double Vuosi)[] Ankkurit;
         /// <summary>Kertojan rivi alkaa kohtauksen alusta tämän viiveen jälkeen (Historiajana.KertojaViiveS).</summary>
         public bool Kertoja = true;
+        /// <summary>Kertojan rivin tekstiavain (olavinlinna.historia.&lt;KertojaAvain&gt;.kertoja.aani), jos eri kuin avainsanan (esittely:
+        /// rivi esi-1323 alkaa rautakauden kohtauksesta); null = Avain.</summary>
+        public string KertojaAvain;
     }
 
     public sealed class HistoriaOsa
@@ -369,12 +372,13 @@ namespace Matkakirja.Linssit.Dioraama
             // ESIHISTORIA (omistaja 10.10. 07.1x, PT:n hyväksymä; faktapohja docs/raportit/olavinlinna-esihistoria-faktapohja-20261010.md):
             // tyhjä saari, vuosi pysyy ankkurilla aikakaudessa (LR:n vaihemallit vuodesta/vuoteen: kota, nuotio ja kalliomaalaus kivikaudella,
             // haapiot ja kaskisavu rautakaudella) ja hyppää lopussa seuraavaan. Ei Savonlinnaa koskevia väitteitä (faktapohjan aukot);
-            // 1323 ilman rajaviivaa, drone korkealla. Kertoja (rivit 3–4) vasta omistajan luvalla.
-            new HistoriaVaihe(-7500, 7, 34, 3.0, "esi-saimaa") { Atsimuutti = -60, Kertoja = false, Ankkurit = new[] { (6.5, -7000.0) } },
+            // 1323 ilman rajaviivaa, drone korkealla. Kertoja (omistaja 10.10. 07.3x, 4 riviä Williamilla): esi-saimaa (Saimaa + kivikausi),
+            // esi-1323 (rautakausi + 1323), vaihe-1475 ja vaihe-nyky; rivi soi kohtauksen alusta ja jatkuu seuraavan kohtauksen yli.
+            new HistoriaVaihe(-7500, 7, 34, 3.0, "esi-saimaa") { Atsimuutti = -60, KertojaAvain = "esi-saimaa", Ankkurit = new[] { (6.5, -7000.0) } },
             new HistoriaVaihe(-3900, 7, 26, 2.4, "esi-kalliomaalaukset") { Atsimuutti = -40, Kertoja = false, Ankkurit = new[] { (6.5, -3000.0) } },
-            new HistoriaVaihe(500, 6, 24, 2.4, "esi-rautakausi") { Atsimuutti = -20, Kertoja = false, Ankkurit = new[] { (5.5, 900.0) } },
+            new HistoriaVaihe(500, 6, 24, 2.4, "esi-rautakausi") { Atsimuutti = -20, KertojaAvain = "esi-1323", Ankkurit = new[] { (5.5, 900.0) } },
             new HistoriaVaihe(1323, 6, 52, 4.0, "esi-1323") { Atsimuutti = 0, Kertoja = false, Ankkurit = new[] { (5.5, 1400.0) } },
-            new HistoriaVaihe(1475, 8, 24, 2.2, "1475") { Atsimuutti = 20, Kertoja = false },   // puuvarustus; kivilinna nousee RakennusS:ssä
+            new HistoriaVaihe(1475, 8, 24, 2.2, "1475") { Atsimuutti = 20, KertojaAvain = "vaihe-1475" },   // puuvarustus; kivilinna nousee RakennusS:ssä
             new HistoriaVaihe(1477, 6, 20, 1.9, "1477") { Atsimuutti = 45, Kertoja = false },
             new HistoriaVaihe(1499, 5, 16, 1.7, "1499") { Atsimuutti = 70, Kertoja = false },
             new HistoriaVaihe(1550, 5, 22, 1.9, "1500") { Atsimuutti = 95, Kertoja = false },
@@ -383,7 +387,7 @@ namespace Matkakirja.Linssit.Dioraama
             new HistoriaVaihe(1788, 4, 24, 2.0) { Atsimuutti = 145, Kertoja = false, Ankkurit = new[] { (3.0, 1800.0) } },   // Paksu bastioni 1791 (LR v46t)
             new HistoriaVaihe(1847, 5, 30, 2.0, "1847") { Atsimuutti = 170, Kertoja = false, Ankkurit = new[] { (2.5, 1868.0) } },
             new HistoriaVaihe(1961, 5, 20, 1.8, "1961") { Atsimuutti = 195, Kertoja = false },
-            new HistoriaVaihe(1976, 4, 16, 1.8) { Atsimuutti = 215, Kertoja = false },   // nykyasu (ponttonisilta)
+            new HistoriaVaihe(1976, 4, 16, 1.8) { Atsimuutti = 215, KertojaAvain = "vaihe-nyky" },   // nykyasu (ponttonisilta)
         }, 1985) { Nimi = "esittely", AlkuAtsimuutti = -80, AlkuKorkeus = 20, AlkuEtaisyysKerroin = 2.0 };
 
         /// <summary>K2-lyhennys (8 s): vuoden 1499 linna → 1740–50-luvun varustukset kasvavat → ponttonisilta. Ei avainsanoja.</summary>
