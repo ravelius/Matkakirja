@@ -1,5 +1,363 @@
 [
  {
+  "kohde": "kohde:suurmunamagi",
+  "kysymys": "Mitä nimi Suur Munamägi tarkoittaa?",
+  "uusi": false,
+  "vastaus": "Kato, tän minä osaan. Nimi tarkoittaa suomeksi suurta munamäkeä: viron kielessä suur on suuri, muna on muna ja mägi on mäki. Se on [[Viron]] ja koko [[Baltian]] korkein kohta, 318 metriä merenpinnasta, ja se sijaitsee [[Haanjan]] kylän lähellä Võrumaalla Viron kaakkoiskolkassa. Siitä, miksi juuri muna on päätynyt mäen nimeen, en ole varma. Mut onhan se hauska nimi.",
+  "linkit": [
+   "Viron",
+   "Baltian",
+   "Haanjan"
+  ],
+  "jatkot": [
+   "Mistä sana Baltia on peräisin?",
+   "Mitkä maat ovat Viron naapureita?"
+  ]
+ },
+ {
+  "kohde": "kohde:suurmunamagi",
+  "kysymys": "Millainen on Haanjan ylänkö?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Haanjan ylänkö on loivasti kumpuilevaa maastoa Viron kaakkoisosassa, ja sen korkeimpana kohtana kohoaa [[Suur Munamägi]]. Seutu on mäkistä, metsäistä ja järvistä, ja se poikkeaa selvästi suuresta osasta maata, joka on tasaista tai matalaa. Tarkkoja lukuja alueen koosta en ole varma, joten jätän ne mainitsematta; [[Võrumaan]] ja [[Latvian]] rajan tuntumassa maisema on kuitenkin juuri tällaista. Ylhäältä katsottuna se näyttää lähinnä vähän rypistyneeltä peitolta.",
+  "linkit": [
+   "Suur Munamägi",
+   "Võrumaan",
+   "Latvian"
+  ],
+  "jatkot": [
+   "Millaisia järviä Etelä-Virossa on?",
+   "Miten Viron maasto muuten on muotoutunut?"
+  ]
+ },
+ {
+  "kohde": "kohde:suurmunamagi",
+  "kysymys": "Voiko Suur Munamäen huipulle nousta näkötorniin?",
+  "uusi": true,
+  "vastaus": "Ai tota. Kyllä, huipulla on [[näkötorni]], jonka ylätasanteelta avautuu näkymä ympäröivän [[Haanjan]] ylängön metsien ja järvien yli. Torni sopii kävijälle, joka haluaa nähdä Viron kaakkoiskolkan ylhäältä. Aukioloajoista ja pääsymaksusta en ole varma, joten ne kannattaa tarkistaa ennen matkaa.\n\nMinä en tornia tarvitse, mutta ymmärrän kyllä niitä, joilla ei ole siipiä. Aika pitkälle sieltä silti näkee, sanotaan.",
+  "linkit": [
+   "näkötorni",
+   "Haanjan"
+  ],
+  "jatkot": [
+   "Mitä Viron muita näköalapaikkoja kannattaa katsoa?",
+   "Milloin Viron luonto on kauneimmillaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:suurmunamagi",
+  "kysymys": "Mitä kieltä Võrumaalla puhutaan?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Võrumaalla puhutaan viroa, kuten muuallakin Virossa, mutta alueella on myös oma kielensä: [[võron kieli]] on etelävirolainen kieli tai kielimuoto, joka eroaa selvästi [[yleisvirosta]]. Sitä käytetään edelleen Etelä-Virossa, ja siitä on julkaistu kirjoja ja lehtiä. Puhujien tarkasta määrästä en ole varma. Minä osaan vaan kuhertaa, joten muut kielet jää asiantuntijoille.",
+  "linkit": [
+   "võron kieli",
+   "yleisvirosta"
+  ],
+  "jatkot": [
+   "Miten viron ja suomen kielet ovat sukua toisilleen?",
+   "Mitä muita vähemmistökieliä Virossa puhutaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:suurmunamagi",
+  "kysymys": "Mitkä kolme maata muodostavat Baltian?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Baltiaksi kutsutaan yleensä kolmea Itämeren itärannan maata: Viroa, [[Latviaa]] ja [[Liettuaa]]. Ne ovat naapureita pohjoisesta etelään siinä järjestyksessä, ja Viron korkein kohta Suur Munamägi on aivan Latvian rajan tuntumassa. Kaikki kolme maata kuuluvat [[Euroopan unioniin]]. Kolme maata, ja minä olen lentänyt niiden kaikkien yli.",
+  "linkit": [
+   "Latviaa",
+   "Liettuaa",
+   "Euroopan unioniin"
+  ],
+  "jatkot": [
+   "Milloin Baltian maat itsenäistyivät uudelleen?",
+   "Miten Viron, Latvian ja Liettuan kielet eroavat toisistaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:itameri~3",
+  "kysymys": "Miksi Itämeren vesi on murtovettä?",
+  "uusi": false,
+  "vastaus": "Mmm— Itämeri on lähes suljettu allas, joka yhdistyy valtamereen vain kapeiden ja matalien [[Tanskan salmien]] kautta [[Pohjanmereen]], joten suolaista vettä virtaa sisään vähän. Samaan aikaan joet ja sadevesi tuovat mereen runsaasti makeaa vettä, ja siksi suolapitoisuus on selvästi valtamerten arvoa pienempi. Suolaisuus laskee yleensä mentäessä pohjoiseen ja itään, ja Itämeri on yksi maailman suurimmista murtovesialtaista. Meri, joka ei osaa päättää, kumpaa se on.",
+  "linkit": [
+   "Tanskan salmien",
+   "Pohjanmereen"
+  ],
+  "jatkot": [
+   "Millaisia eläimiä Itämeressä elää?",
+   "Miksi Itämeri on niin herkkä ympäristömuutoksille?"
+  ]
+ },
+ {
+  "kohde": "kohde:itameri~3",
+  "kysymys": "Miksi Viron saaret ovat niin matalia?",
+  "uusi": false,
+  "vastaus": "Katotaas. Viron länsipuolisen saariston, esimerkiksi [[Saaremaan]] ja [[Hiiumaan]], mataluus johtuu pitkälti siitä, että maa on jääkauden jälkeen kohonnut ja nousee yhä. [[Maannousu]] on Virossa lähteiden mukaan muutaman millimetrin vuodessa, mutta tarkasta luvusta en ole varma. Pohjana on loivasti kaltevaa kalkkikiveä, joten maasto ei kohoa jyrkiksi mäiksi, ja matala vesi jäätyy tavallisenakin talvena helposti. Saaret ovat siis tavallaan yhä nousemassa merestä [[jääkauden]] jäljiltä.\n\nSaaret ovat siis yhä nousemassa merestä, ja se on minusta rohkaisevaa. Joskus pitää vain odottaa.",
+  "linkit": [
+   "Saaremaan",
+   "Hiiumaan",
+   "Maannousu",
+   "jääkauden"
+  ],
+  "jatkot": [
+   "Mikä on Saaremaan tunnetuin nähtävyys?",
+   "Mitä jääkauden jälkeinen maannousu tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:itameri~3",
+  "kysymys": "Mikä on laivamato?",
+  "uusi": true,
+  "vastaus": "Ai se. Laivamato on nimestään huolimatta simpukka, ei mato. Se porautuu puuhun ja syö sitä, ja se on tuhonnut puulaivoja ja satamarakenteita yleensä suolaisemmissa vesissä. Itämeren vähäsuolainen vesi ei sovi sille, ja se on yksi syy siihen, että vanhat [[puuhylyt]] säilyvät meren pohjassa paremmin kuin valtamerissä. Harhaanjohtava nimi, mut onneksi laivamato pysyy poissa [[Itämeren]] kylmistä vesistä.",
+  "linkit": [
+   "puuhylyt",
+   "Itämeren"
+  ],
+  "jatkot": [
+   "Miten vanhat laivanhylyt löydetään merenpohjasta?",
+   "Mitä muita laivoja Itämeren pohjassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:itameri~3",
+  "kysymys": "Miksi Vasa kaatui neitsytmatkallaan?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. [[Vasa]] kaatui 10. elokuuta 1628 Tukholman edustalla vain reilun kilometrin purjehduksen jälkeen. Lähteiden mukaan laiva oli liian kapea ja yläpainoinen: runko oli korkea, tykkikansia oli kaksi ja painolastia liian vähän, joten tuulenpuuska kallisti sen vaaraan. Tapahtuma oli yli nelisataa vuotta sitten, ja laiva nostettiin pohjasta 333 vuotta myöhemmin lähes ehjänä [[Tukholman]] satamassa. Onpas siitä onneksi pitkä aika.",
+  "linkit": [
+   "Vasa",
+   "Tukholman"
+  ],
+  "jatkot": [
+   "Missä Vasa-laivaa voi nykyään katsoa?",
+   "Miten Vasa saatiin nostettua pohjasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:itameri~3",
+  "kysymys": "Kuka oli Kalevipoeg?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: Kalevipoeg on Viron kansalliseepoksen jättiläiskuningas. Lääkäri ja kansanrunouden kerääjä [[Friedrich Reinhold Kreutzwald]] kokosi eepoksen kansantarinoista ja julkaisi sen jaksoina vuosina 1857–1861. Yli 19 000 säkeen mittaisessa runoelmassa sankari kyntää, taistelee ja joutuu lopulta manalan portille kätensä juuttuessa kiveen. Teos syntyi samaan aikaan kuin Suomen [[Kalevala]] ja samasta kansallisen heräämisen hengestä. Jättiläisen kanssa en kilpaile edes siivenkärjissä.",
+  "linkit": [
+   "Friedrich Reinhold Kreutzwald",
+   "Kalevala"
+  ],
+  "jatkot": [
+   "Mikä Kalevala on ja kuka sen kokosi?",
+   "Mitä Viron kansallisromantiikka tarkoitti?"
+  ]
+ },
+ {
+  "kohde": "kohde:suomenlahti",
+  "kysymys": "Miksi Tallinnasta tuli hansakaupunki?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Tallinna sijaitsee Suomenlahden etelärannalla hyvän sataman äärellä, kauppareitin varrella Länsi-Euroopan ja Venäjän kaupunkien välillä. [[Hansa]] oli pohjoissaksalaisten kauppakaupunkien ja kauppiaiden verkosto, ja Tallinna toimi sen välittäjänä: länsimaisia tavaroita vaihdettiin itäisiin tuotteisiin, kuten turkiksiin ja vahaan, ja kauppiaat tulivat muun muassa [[Lyypekistä]] ja [[Novgorodista]]. Kaupunki käytti Lyypekin kaupunkioikeutta, ja tarkasta Hansaan liittymisen ajankohdasta en ole varma. Ylhäältä katsoen sijainti on kyllä hyvä, sen minä myönnän.",
+  "linkit": [
+   "Hansa",
+   "Lyypekistä",
+   "Novgorodista"
+  ],
+  "jatkot": [
+   "Mikä Hansa oli ja ketkä siihen kuuluivat?",
+   "Miltä Tallinnan vanhakaupunki nykyään näyttää?"
+  ]
+ },
+ {
+  "kohde": "kohde:suomenlahti",
+  "kysymys": "Kuinka syvä Suomenlahti on?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Suomenlahti on [[Itämeren]] muihin osiin verrattuna matala: keskisyvyys on lähteiden mukaan noin neljäkymmentä metriä, ja itäosa [[Nevan]] suun lähellä on selvästi matalampi kuin läntinen osa. Tarkasta syvimmästä kohdasta en ole varma. Matalan lahden vesi vaihtuu hitaasti, ja siksi Itämeren ympäristöongelmat näkyvät siinä erityisen selvästi. Syvyyksiin minä en oo koskaan sukeltanut, ylhäältä näkee kyl riittävästi.",
+  "linkit": [
+   "Itämeren",
+   "Nevan"
+  ],
+  "jatkot": [
+   "Miksi Suomenlahden ympäristöongelmat ovat niin vakavia?",
+   "Mitkä kaupungit sijaitsevat Suomenlahden rannalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:suomenlahti",
+  "kysymys": "Mikä oli Baltian ketju?",
+  "uusi": true,
+  "vastaus": "No niin, tämä on tärkeä. Baltian ketju oli rauhanomainen mielenilmaus 23. elokuuta 1989, jossa noin kaksi miljoonaa ihmistä tarttui toisiaan käsistä Tallinnasta [[Riian]] kautta Vilnaan, yli kuudensadan kilometrin matkalla. Se järjestettiin täsmälleen viisikymmentä vuotta sen jälkeen, kun [[Neuvostoliitto]] ja natsi-Saksa olivat salaisessa sopimuksessa jakaneet Baltian maat keskenään. Ketju vaati Viron, Latvian ja Liettuan miehitysten päättämistä, ja tapahtuma näkyi televisiossa kaikkialla maailmassa. Kaksi vuotta myöhemmin kaikki kolme maata olivat jälleen itsenäisiä. Rauhanomainen mielenilmaus, siinä serkkuni olisi ollut kotonaan — kaukainen serkku, mut silti.",
+  "linkit": [
+   "Riian",
+   "Neuvostoliitto"
+  ],
+  "jatkot": [
+   "Milloin Viro, Latvia ja Liettua itsenäistyivät uudelleen?",
+   "Mikä oli Molotov–Ribbentrop-sopimus?"
+  ]
+ },
+ {
+  "kohde": "kohde:suomenlahti",
+  "kysymys": "Jäätyykö Suomenlahti talvisin?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Suomenlahti jäätyy talvisin ainakin osittain: rannikon edustat ja matalat lahdenperukat jäätyvät lähes joka talvi, ja ankarina talvina jää voi peittää suuren osan lahdesta. Jään määrä vaihtelee paljon vuodesta toiseen, ja leutoina talvina avovettä on enemmän. Talviliikenne pidetään käynnissä [[jäänmurtajien]] avulla, ja jäätä esiintyy myös muualla [[Itämeren]] pohjoisilla ja itäisillä osilla.\n\nJäällä kävely on ihmisten laji, minä lennän mieluummin. Pakkasella siivet kyllä jäätyvät, mutta lämmin pulla auttaa aika pitkälle.",
+  "linkit": [
+   "jäänmurtajien",
+   "Itämeren"
+  ],
+  "jatkot": [
+   "Miten jäänmurtajat pitävät talviliikenteen käynnissä?",
+   "Mitä Suomenlahden jäällä voi talvella tehdä?"
+  ]
+ },
+ {
+  "kohde": "kohde:suomenlahti",
+  "kysymys": "Mistä Neva-joki virtaa Suomenlahteen?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Neva virtaa [[Laatokasta]] Suomenlahteen ja laskee lahden itäpäähän [[Pietarin]] kohdalla. Joki on lyhyt mutta vesirikas, koska Laatoka kerää vetensä laajalta alueelta. Pietari perustettiin Nevan suistoon 1700-luvun alussa, ja kaupunki on yhä lahden itäisin suurkaupunki. Pöllö on matkoilla, mut lyhyen joen minä kyllä kerron.",
+  "linkit": [
+   "Laatokasta",
+   "Pietarin"
+  ],
+  "jatkot": [
+   "Kuka perusti Pietarin ja miksi?",
+   "Kuinka suuri järvi Laatokka on?"
+  ]
+ },
+ {
+  "kohde": "kohde:tartu-ulikool",
+  "kysymys": "Kuka perusti yliopiston ja milloin?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: Tartun yliopiston perusti Ruotsin kuningas [[Kustaa II Aadolf]], joka allekirjoitti perustamiskirjan 30. kesäkuuta 1632 kesken kolmikymmenvuotisen sodan. Ensimmäinen kansleri oli vapaaherra [[Johan Skytte]]. Ensimmäiset ylioppilaat kirjoittautuivat huhtikuussa ja avajaisia vietettiin saman vuoden lokakuussa, ja yliopisto tunnettiin myös nimellä [[Academia Gustaviana]]. Kirjeitä minä kannan, en yliopistoja, mutta tuo on kyllä vaikuttava allekirjoitus.",
+  "linkit": [
+   "Kustaa II Aadolf",
+   "Johan Skytte",
+   "Academia Gustaviana"
+  ],
+  "jatkot": [
+   "Miksi yliopistolla oli kaksi nimeä?",
+   "Milloin Tartun yliopiston päärakennus valmistui?"
+  ]
+ },
+ {
+  "kohde": "kohde:tartu-ulikool",
+  "kysymys": "Miksi yliopisto siirrettiin Tallinnaan?",
+  "uusi": false,
+  "vastaus": "Annas ku muistelen. Venäjää vastaan käyty sota pakotti yliopiston siirtymään välillä [[Tallinnaan]], ja toiminta pysähtyi kokonaan vuosiksi. Tarkoista vuosista en ole varma. Nykyinen pylväikköinen päärakennus valmistui vasta vuonna 1809 arkkitehti [[Johann Wilhelm Krausen]] piirustuksin, ja yliopisto on yhä Viron vanhin. Onneksi opiskelu pääsi sentään jatkumaan.",
+  "linkit": [
+   "Tallinnaan",
+   "Johann Wilhelm Krausen"
+  ],
+  "jatkot": [
+   "Milloin Tartun yliopisto aloitti uudelleen?",
+   "Miten opiskelijaelämä Tartossa nykyään toimii?"
+  ]
+ },
+ {
+  "kohde": "kohde:tartu-ulikool",
+  "kysymys": "Mitä Gymnasium Dorpatense oli?",
+  "uusi": true,
+  "vastaus": "Just niin, siitä kannattaa kysyä. Gymnasium Dorpatense oli [[jesuiittojen]] latinakoulu, jonka Puola-Liettuan kuningas [[Stefan Batory]] perusti vuonna 1583 ja joka toimi vuoteen 1601. Sitä pidetään Tartun yliopiston edeltäjänä. Varsinainen yliopisto perustettiin vasta vuonna 1632 Ruotsin vallan aikana. Pitkä nimi, lyhyt ura.",
+  "linkit": [
+   "jesuiittojen",
+   "Stefan Batory"
+  ],
+  "jatkot": [
+   "Keitä jesuiitat olivat?",
+   "Kuka oli Stefan Batory?"
+  ]
+ },
+ {
+  "kohde": "kohde:tartu-ulikool",
+  "kysymys": "Kuka oli Kustaa II Aadolf?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Kustaa II Aadolf oli Ruotsin kuningas 1600-luvun alusta kuolemaansa vuonna 1632 saakka, ja hän johti Ruotsin mukaan [[kolmikymmenvuotiseen sotaan]]. Hän kaatui Lützenin taistelussa muutama kuukausi sen jälkeen, kun oli allekirjoittanut Tartun yliopiston perustamiskirjan. Hänen armeijassaan palveli myös suomalaisia ratsumiehiä, joita kutsuttiin [[hakkapeliitoiksi]]. Hänen aikanaan Ruotsista kehittyi suurvalta, ja kuninkaan perintö näkyy yhä Tartossa. Onpas siitä jo pitkä aika.",
+  "linkit": [
+   "kolmikymmenvuotiseen sotaan",
+   "hakkapeliitoiksi"
+  ],
+  "jatkot": [
+   "Mikä oli kolmikymmenvuotinen sota?",
+   "Keitä hakkapeliitat olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:tartu-ulikool",
+  "kysymys": "Millainen kaupunki Tarto on?",
+  "uusi": true,
+  "vastaus": "No jopas. Tarto on Etelä-Viron yliopistokaupunki [[Emajoen]] varrella, ja lähteiden mukaan se on Viron toiseksi suurin kaupunki. Yliopisto on kaupungin tunnetuin laitos ja iso osa sen elämää, ja pylväikköinen päärakennus valmistui vuonna 1809. Saksaksi kaupunkia on kutsuttu nimellä [[Dorpat]].\n\nYliopistokaupungeissa tuoksuu usein kahvi ja keskiyön kirjat, ja se on minusta hyvä yhdistelmä. Tartossa on varmasti oma pullansa, en vain tiedä sen nimeä.",
+  "linkit": [
+   "Emajoen",
+   "Dorpat"
+  ],
+  "jatkot": [
+   "Mitä Tartossa voi nähdä matkailijana?",
+   "Miten Tarto ja Tallinna eroavat toisistaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:narvan-linnus",
+  "kysymys": "Miksi Hermannin torni rakennettiin valmiiksi?",
+  "uusi": false,
+  "vastaus": "Joo, katotaan. Hermannin tornin viimeisteli [[ritarikunta]], ja syy oli vastarannalla: [[Moskovan Venäjä]] oli perustanut oman linnoituksensa [[Narvajoen]] toiselle puolelle 1400-luvun lopulla. Joki oli rajalinja, jossa kumpikin puoli halusi näyttää vahvuutensa, ja linna sai tornin myötä nykyisen ilmeensä. Tornin tarkasta valmistumisvuodesta en ole varma. Linnat ovat kyyhkyn silmin ihan hyviä katseluasemia.",
+  "linkit": [
+   "ritarikunta",
+   "Moskovan Venäjä",
+   "Narvajoen"
+  ],
+  "jatkot": [
+   "Miten Narvan kaupunki on muuttunut linnan ympärillä?",
+   "Mikä oli Liivinmaan ritarikunta?"
+  ]
+ },
+ {
+  "kohde": "kohde:narvan-linnus",
+  "kysymys": "Kuka myi Narvan Liivinmaan ritarikunnalle?",
+  "uusi": false,
+  "vastaus": "Ai niin, se. Pohjois-Viron ja sen mukana Narvan myi Liivinmaan ritarikunnalle Tanskan kuningas [[Valdemar IV]] vuonna 1346. Tanskalaiset olivat valloittaneet [[Pohjois-Viron]] 1200-luvulla, ja Narvan linna oli ollut Tanskan rajalinnoitus. Ritarikunta rakensi linnasta konventtitalon omiin tarpeisiinsa. Myynnin tarkoista syistä en ole varma. Tuollainen kauppakirja olisi mennyt perille nopeammin kyyhkyn kanssa.",
+  "linkit": [
+   "Valdemar IV",
+   "Pohjois-Viron"
+  ],
+  "jatkot": [
+   "Mikä Liivinmaan ritarikunta oli ja keitä siihen kuului?",
+   "Mikä oli Pohjois-Viron asema Tanskan vallan aikana?"
+  ]
+ },
+ {
+  "kohde": "kohde:narvan-linnus",
+  "kysymys": "Mikä on Narvajoki?",
+  "uusi": true,
+  "vastaus": "Aijaa. Narvajoki virtaa [[Peipsijärvestä]] Suomenlahteen, ja se on pitkälti Viron ja Venäjän välinen rajajoki. Narvan kaupunki on joen länsirannalla, ja vastarannalla on venäläinen [[Ivangorodin]] linnoitus. Joki on aina ollut tärkeä kulkureitti ja rajalinja, ja sen ylityskohdan äärelle syntyi jo 1200-luvulla Tanskan rajalinnoitus. Kaksi linnaa vastakkain, ja minä lennän yli kuin ei mitään.",
+  "linkit": [
+   "Peipsijärvestä",
+   "Ivangorodin"
+  ],
+  "jatkot": [
+   "Mikä Ivangorodin linnoitus on?",
+   "Miten Narvan kaupunki sai Lyypekin kaupunkioikeudet?"
+  ]
+ },
+ {
+  "kohde": "kohde:narvan-linnus",
+  "kysymys": "Mikä oli Liivinmaan ritarikunta?",
+  "uusi": true,
+  "vastaus": "Kato vaan, historiaa. Liivinmaan ritarikunta oli keskiajalla [[Saksalaisen ritarikunnan]] haara, joka hallitsi suurta osaa nykyisen Latvian ja Viron alueesta. Se osti Pohjois-Viron Tanskan kuninkaalta vuonna 1346 ja sai samalla haltuunsa Narvan linnan. Ritarikunnan valta päättyi 1500-luvulla [[Liivinmaan sodan]] seurauksena, mutta tarkasta ajankohdasta en ole varma.\n\nRitarit ovat ilmeisesti rakastaneet muureja, ja minä rakastan muureja, joilla on hyvä näköala. Siinä suhteessa meillä on jotain yhteistä.",
+  "linkit": [
+   "Saksalaisen ritarikunnan",
+   "Liivinmaan sodan"
+  ],
+  "jatkot": [
+   "Mikä oli Liivinmaan sota?",
+   "Mitä Saksalainen ritarikunta oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:narvan-linnus",
+  "kysymys": "Mitä Lyypekin kaupunkioikeus tarkoitti?",
+  "uusi": true,
+  "vastaus": "Hei, tota minä tiedän. Lyypekin kaupunkioikeus oli [[Lyypekin]] kaupungista lähtenyt kaupunkilaki, jonka monet Itämeren rannan kauppakaupungit omaksuivat. Se säänteli kaupunkien itsehallintoa, kauppaa ja oikeudenkäyttöä. Narva sai Lyypekin oikeudet 1300-luvun alkupuolella, ja sama laki yhdisti sen muihin [[Itämeren]] kauppakaupunkeihin. Tarkasta sisällöstä yksityiskohtia en ole varma. Kaupungilla on lakinsa, minulla vain sukuni perinteet.",
+  "linkit": [
+   "Lyypekin",
+   "Itämeren"
+  ],
+  "jatkot": [
+   "Mitä Hansa oli?",
+   "Mitkä muut kaupungit käyttivät Lyypekin oikeutta?"
+  ]
+ },
+ {
   "kohde": "kohde:kuressaaren-linna",
   "kysymys": "Miksi linna rakennettiin juuri Saarenmaalle?",
   "uusi": false,
@@ -330,6 +688,2546 @@
   "jatkot": [
    "Mikä on vähäsuolainen vesi?",
    "Miksi matala vesi sopii linnuille?"
+  ]
+ },
+ {
+  "kohde": "kohde:struven-kaari",
+  "kysymys": "Mitä Struven kaarella mitattiin?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Struven kaarella mitattiin maapallon tarkkaa kokoa ja muotoa. Kaari on [[kolmiomittausten]] ketju, joka ulottuu Norjan Hammerfestista Mustallemerelle, ja se tuotti tietojen mukaan ensimmäisen tarkan [[meridiaanikaaren]] mittauksen. Kun tiedetään, kuinka pitkä matka vastaa yhtä leveysastetta eri kohdissa, voidaan päätellä, kuinka pallomainen Maa on. Ketjun rakensi ja mittasi saksalaissyntyinen venäläinen tiedemies [[Friedrich Georg Wilhelm von Struve]] vuosina 1816–1855. No olipa pitkä matka, onneks lentäen se sujuu.",
+  "linkit": [
+   "kolmiomittausten",
+   "meridiaanikaaren",
+   "Friedrich Georg Wilhelm von Struve"
+  ],
+  "jatkot": [
+   "Miksi Maan muoto haluttiin selvittää tarkasti?",
+   "Mitkä maat Struven kaari nykyään kulkee läpi?"
+  ]
+ },
+ {
+  "kohde": "kohde:struven-kaari",
+  "kysymys": "Miten mittauspisteet on merkitty maastoon?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Mittauspisteet on merkitty maastoon vaatimattomasti: kallioon porattuina reikinä, rautaristeinä ja kivikasoina. Ketjussa on 265 mittauspistettä ja 258 päämittauskolmiota. Vuonna 2005 ketju otettiin [[maailmanperintöluetteloon]] geodesian merkityksensä ja kansainvälisen tieteellisen yhteistyön todistuskappaleena, ja luetteloon on valittu 34 pistettä. Merkinnät ovat siis yksinkertaisia, mutta [[geodesian]] historiassa niillä on suuri paino.\n\nReikä kalliossa. Minä olisin merkinnyt pisteet leivoksilla, mutta ne eivät olisi kestäneet yli kahtasataa vuotta, koska kyyhkyt ovat ahneita.",
+  "linkit": [
+   "maailmanperintöluetteloon",
+   "geodesian"
+  ],
+  "jatkot": [
+   "Mitä geodesia tutkii?",
+   "Mitä UNESCOn maailmanperintöluettelo on?"
+  ]
+ },
+ {
+  "kohde": "kohde:struven-kaari",
+  "kysymys": "Kuinka pitkä Struven kaari on?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Struven kaari on yli 2 820 kilometriä pitkä ja ulottuu Norjan [[Hammerfestista]] Mustallemerelle. Nykyisin ketju kulkee kymmenen maan halki, mutta Struven aikaan se kulki vain kolmen maan: Norjan, Ruotsin ja Venäjän keisarikunnan. Ketjussa on 258 päämittauskolmiota ja 265 mittauspistettä, ja kaaren ensimmäinen piste on [[Tartossa]] observatoriolla. Ja minä kun valitan viiden kilometrin lennoista.",
+  "linkit": [
+   "Hammerfestista",
+   "Tartossa"
+  ],
+  "jatkot": [
+   "Mitkä kymmenen maata kaari nykyään kulkee?",
+   "Mikä on Tarton observatorio?"
+  ]
+ },
+ {
+  "kohde": "kohde:struven-kaari",
+  "kysymys": "Kuka Struve oli?",
+  "uusi": true,
+  "vastaus": "Kas, tuttu nimi. Friedrich Georg Wilhelm von Struve oli saksalaissyntyinen venäläinen tiedemies, tähtitieteilijä ja geodeetti. Hän rakensi ja mittasi kolmiomittausten ketjun vuosina 1816–1855 selvittääkseen maapallon tarkan koon ja muodon. Kaaren ensimmäinen piste on [[Tartossa]] observatoriolla, jossa hän teki suuren osan tutkimuksistaan, ja myöhemmin hän johti [[Pulkovon]] observatoriota. Kyllä minä ton nimen osaan, vaikka se on pitkä.",
+  "linkit": [
+   "Tartossa",
+   "Pulkovon"
+  ],
+  "jatkot": [
+   "Mikä on Pulkovon observatorio?",
+   "Miten Maan muoto selvitettiin ennen satelliitteja?"
+  ]
+ },
+ {
+  "kohde": "kohde:struven-kaari",
+  "kysymys": "Miten kolmiomittaus toimii?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Kolmiomittauksessa mitataan ensin yksi matka, [[perusviiva]], maastossa mahdollisimman tarkasti. Sen päistä tähdätään kaukaiseen kolmanteen pisteeseen ja mitataan kulmat. Kun yhden sivun pituus ja kulmat tunnetaan, kolmion muut sivut voidaan laskea [[trigonometrialla]], ja siitä edetään kolmio kerrallaan. Näin pitkä ketju saadaan laskettua ilman, että jokaista väliä tarvitsee kulkea, ja [[Struven kaaressa]] päämittauskolmioita on 258.\n\nMinä mittaan matkat omalla tavallani, yhdellä siiveniskulla kerrallaan. Se ei ole yhtä tarkka, mutta se pääsee perille.",
+  "linkit": [
+   "perusviiva",
+   "trigonometrialla",
+   "Struven kaaressa"
+  ],
+  "jatkot": [
+   "Mikä on meridiaani?",
+   "Miten satelliitit ovat muuttaneet maanmittausta?"
+  ]
+ },
+ {
+  "kohde": "kohde:peipsi",
+  "kysymys": "Mitä järven jäällä tapahtui vuonna 1242?",
+  "uusi": false,
+  "vastaus": "No niin. Peipsijärven jäällä käytiin 5. huhtikuuta 1242 jäätaistelu Novgorodin tasavallan ja Saksalaisen ritarikunnan välillä. Novgorodin joukkoja johti ruhtinas [[Aleksanteri Nevski]], ja taistelun voittivat novgorodilaiset. Kuuluisa kertomus siitä, että ritarit olisivat vajonneet jään läpi, on elänyt vahvana, mutta historiantutkijat suhtautuvat siihen varauksellisesti. Tapahtumasta on yli seitsemänsataa vuotta, ja alue kuului silloin aivan toisenlaisiin valtapiireihin kuin nykyisin, jolloin järven halki kulkee Viron ja Venäjän välinen raja. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Aleksanteri Nevski"
+  ],
+  "jatkot": [
+   "Kuka oli Aleksanteri Nevski?",
+   "Mitä Saksalainen ritarikunta oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:peipsi",
+  "kysymys": "Mihin Peipsin vedet lopulta laskevat?",
+  "uusi": false,
+  "vastaus": "Katotaas. Peipsin vedet lähtevät [[Narvajokea]] myöten Suomenlahteen. Järveen laskee noin kolmekymmentä jokea, joista suurimmat ovat [[Velikaja]] ja [[Emajoki]], ja ne kaikki päätyvät Narvajoen kautta [[Suomenlahteen]], Itämeren itäiseen lahteen. Narvajoki kulkee suurelta osin Viron ja Venäjän rajana. No, vesi ei ainakaan eksy, toisin kuin minä joskus.",
+  "linkit": [
+   "Narvajokea",
+   "Velikaja",
+   "Emajoki",
+   "Suomenlahteen"
+  ],
+  "jatkot": [
+   "Mikä on Narvajoki?",
+   "Mikä on Suomenlahti?"
+  ]
+ },
+ {
+  "kohde": "kohde:peipsi",
+  "kysymys": "Kuinka syvä Peipsijärvi on?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Peipsijärven keskisyvyys on vain 7,1 metriä ja syvin kohta 15 metriä, vaikka pinta-ala on 3 555 neliökilometriä. Järvi on siis valtava mutta matala. Se sijaitsee [[Viron]] ja [[Venäjän]] välisellä rajalla. Matala järvi, mut kyl kyyhky uisi siinä silti huonosti.",
+  "linkit": [
+   "Viron",
+   "Venäjän"
+  ],
+  "jatkot": [
+   "Miksi matalat järvet jäätyvät nopeasti?",
+   "Mitä kalalajeja Peipsissä elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:peipsi",
+  "kysymys": "Mitä tšuudi tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Tšuudi on vanha nimitys näillä mailla asuneille itämerensuomalaisille kansoille. Venäjänkielinen nimi [[Tšudskoje ozero]] tarkoittaa tšuudien järveä, ja se viittaa siis [[itämerensuomalaisiin]] kansoihin, joihin kuuluvat esimerkiksi [[virolaiset]] ja suomalaiset. Pitkä nimi, lyhyt selitys, minulle sopii.",
+  "linkit": [
+   "Tšudskoje ozero",
+   "itämerensuomalaisiin",
+   "virolaiset"
+  ],
+  "jatkot": [
+   "Mitä itämerensuomalaiset kielet ovat?",
+   "Miten Peipsi-nimi on syntynyt?"
+  ]
+ },
+ {
+  "kohde": "kohde:peipsi",
+  "kysymys": "Mistä osista Peipsijärvi koostuu?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Peipsijärvi on oikeastaan kolme järveä: pohjoinen Peipsi, jonka pinta-ala on 2 611 neliökilometriä, eteläinen Pihkvan järvi, jonka pinta-ala on 708 neliökilometriä, ja niitä yhdistävä [[Lämmijärvi]], joka on 236 neliökilometriä. Yhteensä pinta-ala on 3 555 neliökilometriä. Pohjoinen osa on siis selvästi suurin, ja Pihkvan järvi on sen eteläpuolella oleva toinen suuri osa. Mukaan tulee vielä noin kolmekymmentä jokea, joiden vedet kerääntyvät yhteen.\n\nKolme järveä yhden nimen alla. Minä olisin antanut jokaiselle oman pullan.",
+  "linkit": [
+   "Lämmijärvi"
+  ],
+  "jatkot": [
+   "Mikä on Pihkva?",
+   "Miten Lämmijärvi on syntynyt?"
+  ]
+ },
+ {
+  "kohde": "kohde:emajogi",
+  "kysymys": "Miksi Tartto syntyi juuri tähän kohtaan?",
+  "uusi": false,
+  "vastaus": "Mmm— Viisas Pöllö olisi kertonut tämän paremmin, mut hän parantelee siipirikkoa. Jokilaakson soisuus teki [[Emajoesta]] esteen, sillä Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja. Paras niistä oli Tarton kohdalla, ja siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Risteyskaupunki, siis ihan kyyhkyn makuun.",
+  "linkit": [
+   "Emajoesta"
+  ],
+  "jatkot": [
+   "Mikä on Tarton yliopisto?",
+   "Mitä Tartossa kannattaa nykyään katsoa?"
+  ]
+ },
+ {
+  "kohde": "kohde:emajogi",
+  "kysymys": "Mikä lodi oli?",
+  "uusi": false,
+  "vastaus": "Ai se. Lodi oli pieni jokiproomu tai purjealus, joka kesti myös Peipsin aallot. Isoisän aikaan, 1800-luvulla, jokea käytettiin ahkerasti tavaraliikenteeseen, ja lodit toivat [[Emajokea]] pitkin Tarttoon polttopuuta, hirsiä, heinää ja kalaa. Tietojen mukaan Emajoki on ainoa koko matkaltaan purjehduskelpoinen joki Virossa, joten vesiliikenteelle oli hyvä paikka. Pieni laiva, iso työ, kuten kyyhkyllä.",
+  "linkit": [
+   "Emajokea"
+  ],
+  "jatkot": [
+   "Miten jokiliikenne on muuttunut Virossa?",
+   "Millaisia laivoja Peipsillä on liikennöinyt?"
+  ]
+ },
+ {
+  "kohde": "kohde:emajogi",
+  "kysymys": "Kuinka pitkä Emajoki on?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Emajoki on sata kilometriä pitkä, ja Tarton läpi sitä kulkee kymmenen kilometriä. Joki virtaa [[Võrtsjärvestä]] [[Tarton]] kautta [[Peipsijärveen]]. Yläjuoksulla se mutkittelee laajojen soiden ja tulvamaiden halki, joten sillä ei ole selvää tulvatasannetta lainkaan.\n\nSata kilometriä on minulle yksi aamupäivä lentäen. Joki tekee saman matkan mutkitellen, ja siinä on kyllä oma viehätyksensä.",
+  "linkit": [
+   "Võrtsjärvestä",
+   "Tarton",
+   "Peipsijärveen"
+  ],
+  "jatkot": [
+   "Mikä on Võrtsjärvi?",
+   "Miksi joet mutkittelevat?"
+  ]
+ },
+ {
+  "kohde": "kohde:emajogi",
+  "kysymys": "Mitä Emajoen nimi tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Ai tota. Emajoki tarkoittaa äitijokea: viron kielessä ema on äiti ja jõgi joki. Se on Virossa toiseksi suurin joki virtaamaltaan, ja alajuoksulla se laskee [[Peipsiin]] [[Praagassa]]. Äitijoki, joten ehkä se pitää huolta myös kyyhkyistä.",
+  "linkit": [
+   "Peipsiin",
+   "Praagassa"
+  ],
+  "jatkot": [
+   "Mitkä muut joet Virossa ovat suuria?",
+   "Miten viro ja suomi muistuttavat toisiaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:emajogi",
+  "kysymys": "Mistä Emajoki alkaa ja mihin se laskee?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Emajoki alkaa [[Võrtsjärvestä]], virtaa [[Tarton]] halki ja laskee [[Peipsijärveen]] Praagassa. Yläjuoksulla joki mutkittelee laajojen soiden ja tulvamaiden halki, ja alajuoksulla se kulkee [[Emajõe Suursoon]] läpi ennen Peipsiä. Ja koko matkan minä olisin lentänyt suoraan.",
+  "linkit": [
+   "Võrtsjärvestä",
+   "Tarton",
+   "Peipsijärveen",
+   "Emajõe Suursoon"
+  ],
+  "jatkot": [
+   "Mikä suo on?",
+   "Miksi suot ovat tärkeitä luonnolle?"
+  ]
+ },
+ {
+  "kohde": "kohde:kaali",
+  "kysymys": "Kuka todisti kraatterin syntytavan?",
+  "uusi": false,
+  "vastaus": "Sepä sattui. Meteoriittialkuperän osoitti [[Ivan Reinvald]] tutkimuksillaan vuosina 1928, 1933 ja 1937. Ennen 1930-lukua kraatterien syntytavasta oli monta selitystä, esimerkiksi [[tulivuorenpurkauksesta]] ja [[karstista]] lähtevät. Vasta tutkimukset osoittivat, että kyseessä olivat meteoriitin tekemät kuopat. Tiede on hidasta, mut kyl se perille lentää.",
+  "linkit": [
+   "Ivan Reinvald",
+   "tulivuorenpurkauksesta",
+   "karstista"
+  ],
+  "jatkot": [
+   "Mikä karsti on?",
+   "Miten meteoriittikraatteri tunnistetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:kaali",
+  "kysymys": "Kuinka kova isku oli?",
+  "uusi": false,
+  "vastaus": "No jopas. Iskun energia oli noin 80 terajoulea eli suunnilleen Hiroshiman pommin verran. [[Meteoriitti]] hajosi viiden ja kymmenen kilometrin korkeuden välillä, ja metsä paloi kuuden kilometrin säteellä. Suurin pala teki kraatterin, jonka halkaisija on 110 metriä ja syvyys 22 metriä ja jonka pohjalla on nyt [[Kaalin järvi]]. Onneksi siitä on jo tuhansia vuosia.",
+  "linkit": [
+   "Meteoriitti",
+   "Kaalin järvi"
+  ],
+  "jatkot": [
+   "Mitä meteoriitit ovat tehty?",
+   "Kuinka usein meteoriitteja putoaa Maahan?"
+  ]
+ },
+ {
+  "kohde": "kohde:kaali",
+  "kysymys": "Kuinka suuri Kaalin pääkraatteri on?",
+  "uusi": true,
+  "vastaus": "Kas, siitä minä tiedän. Kaalin pääkraatterin halkaisija on 110 metriä ja syvyys 22 metriä, ja sen pohjalla on nyt Kaalin järvi. Kahdeksan pienempää kraatteria, joiden halkaisija on 12–40 metriä, sijaitsee kilometrin säteellä, joten kraattereita on yhteensä yhdeksän. Ne sijaitsevat [[Saarenmaalla]] Kaalin kylässä. Pieniä kuoppia, mut kyl ne kyyhkyn silmään erottuu.",
+  "linkit": [
+   "Saarenmaalla"
+  ],
+  "jatkot": [
+   "Millainen Saarenmaa on saarena?",
+   "Miten meteoriittikraatterit eroavat tulivuorikraattereista?"
+  ]
+ },
+ {
+  "kohde": "kohde:kaali",
+  "kysymys": "Milloin Kaalin meteoriitti iski?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Tuoreimpien arvioiden mukaan isku tapahtui pian vuosien 1530–1450 eaa. jälkeen, mutta ajoitukset vaihtelevat tutkijasta toiseen tuhansia vuosia, joten tarkkaa vuotta ei voi antaa. Se on yksi harvoista tunnetuista [[meteoriittitörmäyksistä]], jotka ovat osuneet asuttuun seutuun. Meteoriittialkuperän osoitti vasta [[Ivan Reinvald]] 1900-luvun alkupuolella.\n\nTuhansien vuosien heitto ajoituksessa on aika paljon, kun minä itse muistan vain eilisen aamupalan. Mutta tiedemiehet pääsevät kyllä tarkemmaksi, kun ehtivät.",
+  "linkit": [
+   "meteoriittitörmäyksistä",
+   "Ivan Reinvald"
+  ],
+  "jatkot": [
+   "Miten kraatterin ikä voidaan määrittää?",
+   "Miten ihmiset asuivat Virossa pronssikaudella?"
+  ]
+ },
+ {
+  "kohde": "kohde:kaali",
+  "kysymys": "Miksi Kaalin iskua pidetään harvinaisena?",
+  "uusi": true,
+  "vastaus": "Kato, tän minä muistan. Kaalin isku on yksi harvoista tunnetuista törmäyksistä, jotka ovat osuneet asuttuun seutuun. Useimmat meteoriitit putoavat asumattomille alueille tai mereen, koska suuri osa Maan pinnasta on merta. Metsä paloi kuuden kilometrin säteellä, ja tuoreimpien arvioiden mukaan isku sattui pian vuosien 1530–1450 eaa. jälkeen, tosin ajoitukset vaihtelevat paljon. Kraatterit sijaitsevat [[Saarenmaan]] [[Kaalin kylässä]]. Hyvä että ei sattunut kyyhkyn kohdalle.",
+  "linkit": [
+   "Saarenmaan",
+   "Kaalin kylässä"
+  ],
+  "jatkot": [
+   "Mistä muualla Euroopassa löytyy meteoriittikraattereita?",
+   "Miten tutkijat löytävät vanhoja kraattereita?"
+  ]
+ },
+ {
+  "kohde": "kohde:haapsalu",
+  "kysymys": "Kuka perusti mutakylpylän?",
+  "uusi": false,
+  "vastaus": "Nyt muistan. Sotilaslääkäri [[Carl Abraham Hunnius]] perusti vuonna 1825 Haapsalun ensimmäisen mutahoitolan. Tieto parantavasta [[merimudasta]] levisi nopeasti Pietarin varakkaaseen väkeen ja muualle keisarikuntaan, ja hoidoissa kävi myös keisarillinen [[Romanovien]] perhe. Mutaa, mutaa, ja minä haaveilen pullasta.",
+  "linkit": [
+   "Carl Abraham Hunnius",
+   "merimudasta",
+   "Romanovien"
+  ],
+  "jatkot": [
+   "Mitä merimutahoito on?",
+   "Mitä muita kylpyläkaupunkeja Itämeren rannalla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:haapsalu",
+  "kysymys": "Mistä Haapsalun nimi tulee?",
+  "uusi": false,
+  "vastaus": "No niin, nimi. Haapsalun nimi tulee sanoista haab eli haapa ja salu, joka vanhassa merkityksessään tarkoitti metsäistä saarta. Ruotsiksi ja saksaksi kaupunki oli pitkään [[Hapsal]], ja se oli 1200-luvulta 1900-luvun alkupuolelle asti [[rannikkoruotsalaisten]] keskuspaikka.\n\nHaapametsäinen saari kuulostaa minusta kyyhkyn unelmalta. Siellä olisi varmasti oma pullansa, en vain tiedä sen nimeä.",
+  "linkit": [
+   "Hapsal",
+   "rannikkoruotsalaisten"
+  ],
+  "jatkot": [
+   "Keitä rannikkoruotsalaiset ovat?",
+   "Mitä muita vanhoja nimiä viron kaupungeilla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:haapsalu",
+  "kysymys": "Mikä rooli Haapsalulla oli piispakunnassa?",
+  "uusi": true,
+  "vastaus": "Joo, hetkinen. Lähteiden mukaan ensimmäinen maininta Haapsalusta on vuodelta 1279, jolloin kaupunki sai oikeutensa ja siitä tuli [[Saare-Lääne piispakunnan]] pääpaikka seuraavaksi kolmeksi vuosisadaksi. Haapsalun [[piispanlinna]] on yhä pystyssä, ja sen kirkon kerrotaan olevan Viron suurin yksilaivainen. Vanhoja seiniä, hyviä istuinpaikkoja kyl kyyhkyllekin.",
+  "linkit": [
+   "Saare-Lääne piispakunnan",
+   "piispanlinna"
+  ],
+  "jatkot": [
+   "Mikä piispakunta on?",
+   "Mitä keskiaikaisia linnoja Virossa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:haapsalu",
+  "kysymys": "Keitä rannikkoruotsalaiset ovat?",
+  "uusi": true,
+  "vastaus": "Ai tota, tästä tiedän vähän. Rannikkoruotsalaiset ovat ruotsinkielistä väestöä, joka on asunut Viron rannikoilla ja saarilla. [[Haapsalu]] oli heidän keskuspaikkansa 1200-luvulta 1900-luvun alkupuolelle asti, ja kaupungin ruotsinkielinen nimi oli [[Hapsal]]. Tarkempia lukuja en kyl tiedä, ne jääkööt viisaammille.",
+  "linkit": [
+   "Haapsalu",
+   "Hapsal"
+  ],
+  "jatkot": [
+   "Miten ruotsinkielinen väestö päätyi Viron rannikolle?",
+   "Mitä ruotsinkielisiä paikannimiä Virossa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:haapsalu",
+  "kysymys": "Keitä kylpylävieraita Haapsalussa kävi 1800-luvulla?",
+  "uusi": true,
+  "vastaus": "Kas vaan, vieraslista. Sotilaslääkäri [[Carl Abraham Hunnius]] perusti Haapsaluun ensimmäisen mutahoitolan vuonna 1825. Tieto parantavasta merimudasta levisi nopeasti [[Pietarin]] varakkaaseen väkeen ja muualle keisarikuntaan, ja hoidoissa kävi myös keisarillinen [[Romanovien]] perhe.\n\nKeisarillinen perhe mudassa. Minä olisin halunnut nähdä sen ylhäältä, mutta pullakin olisi riittänyt.",
+  "linkit": [
+   "Carl Abraham Hunnius",
+   "Pietarin",
+   "Romanovien"
+  ],
+  "jatkot": [
+   "Miten Pietari ja Viro liittyivät 1800-luvulla toisiinsa?",
+   "Millaista oli kylpylämatkailu 1800-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:rakvere",
+  "kysymys": "Mitä Tarvanpea tarkoittaa?",
+  "uusi": false,
+  "vastaus": "Ai tota, tän minä tiedän. Tarvanpea tarkoittaa uroshärän päätä, ja se on Rakveren vanhin tunnettu nimi. Nimi mainitaan ensimmäisen kerran vuonna 1226 [[Henrikin Liivinmaan kronikassa]]. Tanskalaiset kirjasivat paikan vuonna 1252 muotoon [[Wesenbergh]], ja sillä nimellä kaupunki tunnettiin 1900-luvun alkuun asti. [[Novgorodin]] ensimmäinen kronikka puhuu vuonna 1268 Rakovorista. Härän pää kuulostaa kyl isommalta kuin kyyhkyn pää.",
+  "linkit": [
+   "Henrikin Liivinmaan kronikassa",
+   "Wesenbergh",
+   "Novgorodin"
+  ],
+  "jatkot": [
+   "Mitä Wesenbergin taistelussa vuonna 1268 tapahtui?",
+   "Milloin Rakvere sai Lyypekin oikeudet?"
+  ]
+ },
+ {
+  "kohde": "kohde:rakvere",
+  "kysymys": "Kuka rakensi Vallimäen kivilinnan?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Annas ku mietin. Vallimäen vanhan linnavuoren päälle nousi suuri kivilinna torneineen ja pihoineen sen jälkeen, kun Tanskan kuningas myi Tanskan Viron [[Liivinmaan ritarikunnalle]] vuonna 1346. Rakennuttajana pidetään siksi yleensä ritarikuntaa, mutta yksittäisestä rakentajasta tai tarkoista rakennusvuosista en ole varma. [[Vallimäen]] linnavuori on kuitenkin ollut paikan puolustuksen sydän jo ennen kivilinnaa. Linnan rakentajista kyyhky ei tiedä enempää, vaikka kuinka tuijottaisi katolta.",
+  "linkit": [
+   "Liivinmaan ritarikunnalle",
+   "Vallimäen"
+  ],
+  "jatkot": [
+   "Mikä oli Liivinmaan ritarikunta?",
+   "Miksi Tanskan kuningas myi Viron alueensa vuonna 1346?"
+  ]
+ },
+ {
+  "kohde": "kohde:rakvere",
+  "kysymys": "Mitä Lyypekin oikeus tarkoitti kaupungille?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Lyypekin oikeus oli kaupunkioikeus, joka sai nimensä Pohjois-Saksan Lyypekin kaupungista ja jota käytettiin mallina monissa [[Itämeren]] rannan kaupungeissa. Se määritteli kaupunkilaisten oikeuksia ja kaupankäyntiä sekä loi pohjan kaupungin omalle hallinnolle, jota johti yleensä [[raati]]. Kuningas [[Erik VI Menved]] antoi Rakverelle tämän oikeuden 12. kesäkuuta 1302. Oikeuden tarkasta sisällöstä Rakveren kohdalla en ole täysin varma, mutta pääpiirteissään se oli kaupunkilaisten itsehallinnon perusta.\n\nKauppakaupungit pitivät säännöistä, jotka muutkin tunsivat, ja sen ymmärtää kyyhkykin: kukaan ei halua neuvotella reittiään joka kerta alusta. Minä pidän vakiintuneista lentoreiteistä.",
+  "linkit": [
+   "Itämeren",
+   "raati",
+   "Erik VI Menved"
+  ],
+  "jatkot": [
+   "Mikä oli Hansa ja mitä kaupunkeja siihen kuului?",
+   "Millainen kaupunki Lyypekki oli keskiajalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:rakvere",
+  "kysymys": "Keitä Wesenbergin taistelussa oli vastakkain vuonna 1268?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: taistelu käytiin 18. helmikuuta 1268 Rakveren lähellä. Vastakkain olivat tanskalaiset ja [[saksalaiset ritarit]] paikallisine joukkoineen sekä [[Novgorodin]] ja [[Pihkvan]] voimat. Taistelun kulusta ja lopputuloksesta en ole varma, joten en halua väittää niistä mitään. Tapahtumasta on kulunut yli seitsemänsataa vuotta, ja sen ajan sotaisa Itämeren ranta oli kaukana nykyisestä Euroopasta. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "saksalaiset ritarit",
+   "Novgorodin",
+   "Pihkvan"
+  ],
+  "jatkot": [
+   "Millainen valtakeskus Novgorod oli keskiajalla?",
+   "Keitä saksalaiset ritarit keskiajan Virossa olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:rakvere",
+  "kysymys": "Millä nimillä Rakvere on tunnettu eri aikoina?",
+  "uusi": true,
+  "vastaus": "Katotaas. Vanhin tunnettu nimi on Tarvanpea, \"uroshärän pää\", ja se mainitaan ensimmäisen kerran vuonna 1226. Tanskalaiset kirjasivat paikan vuonna 1252 muotoon [[Wesenbergh]], ja sillä nimellä kaupunki tunnettiin 1900-luvun alkuun asti. [[Novgorodin ensimmäinen kronikka]] puhuu vuonna 1268 [[Rakovorista]]. Nykyinen nimi Rakvere näyttää olevan sille sukua, mutta nimen kehityksen yksityiskohdista en ole varma. Neljä nimeä yhdelle kaupungille, ja minä pärjään sentään yhdellä.",
+  "linkit": [
+   "Wesenbergh",
+   "Novgorodin ensimmäinen kronikka",
+   "Rakovorista"
+  ],
+  "jatkot": [
+   "Miksi kaupungeilla on usein eri nimet eri kielillä?",
+   "Mikä Rakvere on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:ontika",
+  "kysymys": "Kuinka pitkälle Baltian klintti ulottuu?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Baltian klintti ulottuu noin 1 200 kilometrin matkan. Se alkaa Ruotsin [[Öölannista]], jatkuu mannerjalustan sekä Viron [[Osmussaaren]] ja Suur-Pakrin kautta [[Paldiskiin]], sieltä Suomenlahden etelärantaa ja Nevaa myöten [[Laatokan]] eteläpuolelle, missä se katoaa nuorempien kerrostumien alle. Tuo on kyl lintuperspektiivistä aika kaunis viiva.",
+  "linkit": [
+   "Öölannista",
+   "Osmussaaren",
+   "Paldiskiin",
+   "Laatokan"
+  ],
+  "jatkot": [
+   "Missä Baltian klintti on korkeimmillaan?",
+   "Miten Baltian klintti on syntynyt?"
+  ]
+ },
+ {
+  "kohde": "kohde:ontika",
+  "kysymys": "Mikä on Viron korkein vesiputous?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: [[Valasten putous]] on Viron korkein vesiputous, korkeudeltaan 25 metriä. Se sijaitsee [[Baltian klintin]] reunalla, jonka yli moni jyrkänteen halkovista joista putoaa. Putous on siis osa samaa kalkkikivistä porrasta, joka reunustaa Viron pohjoisrannikkoa. Kaksikymmentäviisi metriä on minusta sellainen pudotus, jonka mieluummin lennän kuin putoan.",
+  "linkit": [
+   "Valasten putous",
+   "Baltian klintin"
+  ],
+  "jatkot": [
+   "Missä Baltian klintti on korkeimmillaan?",
+   "Mitä kalkkikivi on?"
+  ]
+ },
+ {
+  "kohde": "kohde:ontika",
+  "kysymys": "Miten Baltian klintti on syntynyt?",
+  "uusi": true,
+  "vastaus": "Ai se. Tost minä osaan kertoa vähän. Baltian klintti on [[eroosion]] paljastama [[kalkkikivinen]] porras, eli kalliokerrokset ovat tulleet näkyviin, kun maanpinta on kulunut vuosien mittaan pois. Kalkkikivi on peräisin muinaisen meren pohjalle kerrostuneesta aineksesta. Korkeimmillaan jyrkänne on [[Ontikassa]], 55,6 metriä merenpinnasta. Tarkemmasta geologisesta ajoituksesta en ole varma, joten jätän sen asiantuntijoille. Geologia on kyl pitkää tavaraa jopa kyyhkylle.",
+  "linkit": [
+   "eroosion",
+   "kalkkikivinen",
+   "Ontikassa"
+  ],
+  "jatkot": [
+   "Perääntyykö Baltian klintti vielä nykyään?",
+   "Mitä eroosio tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:ontika",
+  "kysymys": "Perääntyykö Baltian klintti vielä nykyäänkin?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Kyllä, klintti perääntyy yhä. [[Gotlannissa]] peräytymisvauhdiksi on 1900-luvulla mitattu 0,15–0,78 senttiä vuodessa, joten muutos on hyvin hidasta. Viron osalta vastaavista mittaustuloksista en ole varma. Korkeimmillaan jyrkänne on [[Ontikassa]], 55,6 metriä merenpinnasta, ja moni joki putoaa sen reunan yli.\n\nSenttejä vuodessa. Minä ehdin rakentaa pesän ja hylätä sen nopeammin.",
+  "linkit": [
+   "Gotlannissa",
+   "Ontikassa"
+  ],
+  "jatkot": [
+   "Mikä on Viron korkein vesiputous?",
+   "Miten eroosio muokkaa rannikkoa?"
+  ]
+ },
+ {
+  "kohde": "kohde:ontika",
+  "kysymys": "Millaisissa Viron seteleissä Baltian klintti on ollut?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Baltian klintti on ollut Viron rahassa kahdesti: vuoden 1928 50 [[kroonin]] ja vuoden 1992 100 kroonin setelin kääntöpuolella. Kroon oli Viron rahayksikkö ennen [[euron]] käyttöönottoa. Setelin kuvana jyrkänne on sopiva valinta, sillä se on yksi Viron tunnetuimmista luonnonmuodostumista. Setelissä on kyl hyvä paikka istua, jos klintti vain pysyy paikallaan.",
+  "linkit": [
+   "kroonin",
+   "euron"
+  ],
+  "jatkot": [
+   "Milloin Viro otti euron käyttöön?",
+   "Kuinka pitkä Baltian klintti on?"
+  ]
+ },
+ {
+  "kohde": "kohde:lahemaa",
+  "kysymys": "Mistä Lahemaa on saanut nimensä?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Lahemaa tarkoittaa lahtien maata, ja nimi on ansaittu: rannikolta työntyy mereen neljä niemeä, [[Juminda]], [[Pärispea]], [[Käsmu]] ja [[Vergi]], ja niiden väliin jää neljä lahtea. Alue perustettiin kansallispuistoksi vuonna 1971. Lahtia ja niemiä, ylhäältä katsoen tuo näyttää kyl hammaskamman reunalta.",
+  "linkit": [
+   "Juminda",
+   "Pärispea",
+   "Käsmu",
+   "Vergi"
+  ],
+  "jatkot": [
+   "Kuinka suuri Lahemaan kansallispuisto on?",
+   "Mitä eläimiä Lahemaalla elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:lahemaa",
+  "kysymys": "Mitä eläimiä metsissä elää?",
+  "uusi": false,
+  "vastaus": "No niin, tää on helppo. Lahemaan puistossa elää [[villisikoja]], [[saksanhirviä]], [[susia]], [[karhuja]] ja [[ilveksiä]]. Metsää on alueesta yli seitsemänkymmentä prosenttia. Lisäksi kivinen rantaviiva on kurkien vuosittainen levähdyspaikka matkalla kohti Bosporia. Minä pysyn mieluummin katolla, jos ilves liikkuu.",
+  "linkit": [
+   "villisikoja",
+   "saksanhirviä",
+   "susia",
+   "karhuja",
+   "ilveksiä"
+  ],
+  "jatkot": [
+   "Miksi kurjet pysähtyvät Lahemaan rannikolle?",
+   "Mitä kartanoita Lahemaalla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:lahemaa",
+  "kysymys": "Kuinka suuri Lahemaan kansallispuisto on?",
+  "uusi": true,
+  "vastaus": "Just niin, lukuja löytyy. Lahemaan alue on 747 neliökilometriä, josta lähes 275 on merta. Se on Viron suurin puisto ja yksi [[Euroopan]] suurimmista kansallispuistoista. Metsää on yli seitsemänkymmentä prosenttia, ja metsän seassa on [[keidassoita]], joista [[Laukasoon]] suojelualue on noin seitsemäntuhatta vuotta vanha. Ei paha kyyhkyltä, että luvut pysyivät päässä.",
+  "linkit": [
+   "Euroopan",
+   "keidassoita",
+   "Laukasoon"
+  ],
+  "jatkot": [
+   "Milloin Lahemaan kansallispuisto perustettiin?",
+   "Mikä on keidassuo?"
+  ]
+ },
+ {
+  "kohde": "kohde:lahemaa",
+  "kysymys": "Mitä kartanoita Lahemaan kansallispuistossa on?",
+  "uusi": true,
+  "vastaus": "Mmm— tämän tiedän. Alueella on neljä kartanoa: [[Palmse]], [[Vihula]], [[Kolga]] ja barokkinen [[Sagadi]]. Ne kuuluvat puiston rannikkoa ja metsiä täydentävään kulttuuriperintöön, ja kartanoiden pihapiirit ovat tavallisesti osa alueen tunnettuja nähtävyyksiä. Yksittäisten kartanoiden rakennusvuosista en ole varma, joten en kerro niitä.\n\nKartanon keittiöstä on varmasti tullut aikoinaan hyvää tuoksua, enkä tiedä, mitä siellä on leivottu. Se vaivaa minua enemmän kuin pitäisi.",
+  "linkit": [
+   "Palmse",
+   "Vihula",
+   "Kolga",
+   "Sagadi"
+  ],
+  "jatkot": [
+   "Mitä barokki tarkoittaa rakennustyylinä?",
+   "Millaiseen elämään kartanoissa aikanaan kuului?"
+  ]
+ },
+ {
+  "kohde": "kohde:lahemaa",
+  "kysymys": "Miksi kurjet pysähtyvät Lahemaan rannikolla?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Lahemaan kivinen rantaviiva on kurkien vuosittainen levähdyspaikka muuttomatkalla kohti [[Bosporia]]. Syytä juuri tähän paikkaan en ole täysin varma, mutta rauhallinen, metsäinen ja soinen rannikko tarjoaa lintuparville luultavasti tilaa levätä. Alueella on laajoja [[metsiä]] ja keidassoita, joten häiriötöntä ympäristöä riittää. Ihan hyviä lentäjiä ne kurjet, mut minä olen silti nopeampi.",
+  "linkit": [
+   "Bosporia",
+   "metsiä"
+  ],
+  "jatkot": [
+   "Miten linnut löytävät muuttoreittinsä?",
+   "Millaisia lintuja Viron rannikolla tavataan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-narvan-vanhakaupunki",
+  "kysymys": "Miltä Narvan barokkinen vanhakaupunki näytti loistoaikanaan?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Narvan vanhakaupunki oli [[Pohjois-Euroopan]] parhaiten säilyneitä [[barokkikaupunkeja]], eli kaupunkikuva oli yhtenäinen barokin ajalta. Barokille tyypillisiä piirteitä ovat koristeellisuus ja suunnitelmallinen, symmetrinen muotokieli. Yksittäisistä rakennuksista ja katujen ulkoasusta en ole varma, joten en halua kuvailla niitä tarkemmin. Harmi, ettei sitä voi enää katsoa katolta.",
+  "linkit": [
+   "Pohjois-Euroopan",
+   "barokkikaupunkeja"
+  ],
+  "jatkot": [
+   "Mikä on barokki?",
+   "Miksi vanhakaupunki tuhoutui?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-narvan-vanhakaupunki",
+  "kysymys": "Miksi Narvan barokkinen vanhakaupunki katosi?",
+  "uusi": false,
+  "vastaus": "Voi, tuo on surullinen juttu. Narvan vanhakaupunki tuhoutui pommituksissa maaliskuussa 1944, [[toisen maailmansodan]] loppuvaiheessa. Jäljelle jääneet rauniot purettiin 1950-luvulla neuvostoviranomaisten toimesta kerrostalojen tieltä, ja Viro kuului tuolloin [[Neuvostoliittoon]]. Menetys oli suuri, ja kaupunki on sen jälkeen kasvanut uuteen suuntaan. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "toisen maailmansodan",
+   "Neuvostoliittoon"
+  ],
+  "jatkot": [
+   "Mitä vanhakaupungin paikalla on nykyään?",
+   "Missä Narva sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-narvan-vanhakaupunki",
+  "kysymys": "Mitä vanhakaupungin paikalla on nykyään?",
+  "uusi": true,
+  "vastaus": "Niin, tuo on surullinen kohta. Neuvostoviranomaiset purkivat jäljelle jääneet rauniot 1950-luvulla [[kerrostalojen]] tieltä, joten alueelle rakennettiin asuinkerrostaloja. Nykyisestä asemakaavasta ja siitä, mitä vanhastakaupungista on mahdollisesti säilynyt, en ole varma. Tapahtumista on yli kahdeksankymmentä vuotta, ja moni muistaa kaupungin vain valokuvista. Aika on onneksi tehnyt etäisyyttä.",
+  "linkit": [
+   "kerrostalojen"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Narva on nykyään?",
+   "Miten sodan tuhoamia kaupunkeja on jälleenrakennettu Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-narvan-vanhakaupunki",
+  "kysymys": "Mitä barokki tarkoittaa rakennustyylinä?",
+  "uusi": true,
+  "vastaus": "No niin, tost minä osaan kertoa. Barokki on 1600- ja 1700-lukujen eurooppalainen tyylisuunta, joka sai alkunsa [[Italiassa]]. Rakennustaiteessa sille ovat tyypillisiä koristeellisuus, voimakkaat muodot ja näyttävät julkisivut. Kaupunkirakentamisessa tyyliin liittyy usein suunnitelmallisuus ja [[symmetria]]. Koristeita siinä ainakin riitti, mut minä arvostan sileää siipeä.",
+  "linkit": [
+   "Italiassa",
+   "symmetria"
+  ],
+  "jatkot": [
+   "Mitä muita rakennustyylejä Euroopassa on ollut?",
+   "Mikä on renessanssi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-narvan-vanhakaupunki",
+  "kysymys": "Missä Narva sijaitsee?",
+  "uusi": true,
+  "vastaus": "Ai tota. Narva on kaupunki Viron itärajalla [[Narvajoen]] rannalla, [[Ida-Virumaalla]]. Joen toisella puolella on Venäjä, joten kaupunki on myös rajakaupunki. Sijainti on pitkään tehnyt siitä tärkeän kauppa- ja kulkureittien solmukohdan. Katolta tuo raja näyttää kyl ihan tavalliselta joelta.",
+  "linkit": [
+   "Narvajoen",
+   "Ida-Virumaalla"
+  ],
+  "jatkot": [
+   "Mikä on Narvajoki?",
+   "Kuinka paljon Narvassa asuu ihmisiä?"
+  ],
+  "paikka": {
+   "nimi": "Narva",
+   "lat": 59.38,
+   "lon": 28.18,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-soomaa",
+  "kysymys": "Miksi Soomaalla puhutaan viidennestä vuodenajasta?",
+  "uusi": false,
+  "vastaus": "Ai se. Soomaalla keväinen tulva-aika, yleensä maalis–huhtikuun vaihteessa, saa nimekseen viides vuodenaika. Silloin [[Sakalan ylängöltä]] valuva vesi nostaa joet yli äyräidensä ja peittää tiet. [[Riisan tulva-alue]] voi laajimmillaan olla 175 neliökilometrin kokoinen. Alueen joet kuuluvat Pärnun vesistöön. Tuollaisessa tulvassa minä pysyisin kyl korkealla oksalla.",
+  "linkit": [
+   "Sakalan ylängöltä",
+   "Riisan tulva-alue"
+  ],
+  "jatkot": [
+   "Mitä kohosuo tarkoittaa?",
+   "Mikä on haabja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-soomaa",
+  "kysymys": "Miksi koverretun kanootin tekotaito on säilynyt juuri Soomaalla?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Soomaalla on säilynyt syrjäisyyden ansiosta [[haabjaksi]] kutsuttujen koverrettujen [[kanoottien]] tekoperinne. Keväällä tulva peittää tiet, jolloin veneellä liikkuminen on ollut luonteva tapa kulkea, ja se on luultavasti osaltaan pitänyt taidon elossa. Tarkemmista syistä en ole varma. Taito on siis säilynyt siellä, missä uusi ei ole syrjäyttänyt vanhaa.",
+  "linkit": [
+   "haabjaksi",
+   "kanoottien"
+  ],
+  "jatkot": [
+   "Mikä on haabja?",
+   "Milloin Soomaan tulva-aika alkaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-soomaa",
+  "kysymys": "Mikä on kohosuo?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Kohosuo on suotyyppi, jossa [[turve]] kerrostuu vuosisatojen ja vuosituhansien kuluessa niin paksuksi, että suon keskusta kohoaa ympäristöään korkeammalle. Vetensä se saa pääosin sadevedestä. Soomaan tunnetuin suo on [[Kuresoo]], ja alueen kansallispuisto suojelee laajoja kohosoita. Viisas Pöllö selittäisi tämän vielä paremmin, mut hän on yhä matkoilla.",
+  "linkit": [
+   "turve",
+   "Kuresoo"
+  ],
+  "jatkot": [
+   "Mikä on turve?",
+   "Mitä eläimiä soilla elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-soomaa",
+  "kysymys": "Mikä on haabja?",
+  "uusi": true,
+  "vastaus": "No jopas. Haabja on koverrettu kanootti, jollaisten tekoperinne on säilynyt [[Soomaalla]] syrjäisyyden ansiosta. Nimi viittaa luultavasti [[haapaan]], josta kanootit on perinteisesti koverrettu, mutta en ole varma tästä. Kanootti tehdään kovertamalla eli onkaloimalla runko sisältä. Minä kuljen mieluummin ilmassa, mut vedessä kulkeminen kuulostaa viehättävältä.",
+  "linkit": [
+   "Soomaalla",
+   "haapaan"
+  ],
+  "jatkot": [
+   "Miten kanootti eroaa soutuveneestä?",
+   "Miksi Soomaalla tulvii keväisin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-soomaa",
+  "kysymys": "Kuinka suuri Soomaan kansallispuisto on?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Soomaan kansallispuisto on 390 neliökilometrin kokoinen ja sijaitsee [[Lounais-Virossa]]. Se suojelee laajoja [[kohosoita]], [[tulvaniittyjä]] ja [[rämemetsiä]], joita halkovat Pärnun vesistöön kuuluvat joet. Tunnetuin soista on Kuresoo. Ei paha kyyhkyltä, ettei yksikään luku livennyt.",
+  "linkit": [
+   "Lounais-Virossa",
+   "kohosoita",
+   "tulvaniittyjä",
+   "rämemetsiä"
+  ],
+  "jatkot": [
+   "Miksi Soomaalla puhutaan viidennestä vuodenajasta?",
+   "Mikä on rämemetsä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vilsandi",
+  "kysymys": "Miksi Vilsandin saaristo on niin tärkeä muuttolinnuille?",
+  "uusi": false,
+  "vastaus": "Kato, saaristo on lintujen silmin kuin hyvin hoidettu huoltoasema. Vilsandin kansallispuisto sijaitsee [[Saarenmaan]] länsirannikolla, ja siihen kuuluu Vilsandin saaren lisäksi noin sata pienempää saarta ja luotoa sekä rannikkoa [[Harilaidin]] niemimaalla. Tällaiset suojaiset vedet ja pienet saaret tarjoavat muuttolinnuille rauhallisia levähdyspaikkoja pitkän lennon varrella: esimerkiksi [[valkoposkihanhet]] pysähtyvät alueen vesillä lepäämään. Puistossa on havaittu yli 250 lintulajia, yleisin pesijä on [[haahka]], ja metsästys on alueella kokonaan kielletty, mikä tekee siitä turvallisen pysähdyspaikan. Melkein tuli itsellekin lepotauon tarve.",
+  "linkit": [
+   "Saarenmaan",
+   "Harilaidin",
+   "valkoposkihanhet",
+   "haahka"
+  ],
+  "jatkot": [
+   "Mitä haahka syö ja missä se talvehtii?",
+   "Miten Saarenmaan rannikko on muotoutunut?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vilsandi",
+  "kysymys": "Miksi alueen suojelu aloitettiin jo vuonna 1910 lintujen suojelualueena?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Tarkkaa syytä siihen, miksi suojelu aloitettiin juuri vuonna 1910, en ole varma, ja sellaista en rupea arvaamaan. Tiedossa on, että nykyinen [[Vilsandin]] kansallispuisto on kasvanut vuonna 1910 perustetusta lintujen suojelualueesta ja että sitä pidetään Baltian vanhimpana suojelualueena. Alue on lintujen kannalta poikkeuksellinen: siellä on havaittu yli 250 lintulajia, yleisin pesijä on [[haahka]], ja [[muuttolinnut]] levähtävät sen vesillä. Yleensä tällaisen rannikon suojelun taustalla on huoli pesivistä linnuista ja niiden rauhasta, mutta tämän paikan tarkkaa historiaa en osaa kertoa. Parempi myöntää kuin keksiä, sanoo kyyhky.",
+  "linkit": [
+   "Vilsandin",
+   "haahka",
+   "muuttolinnut"
+  ],
+  "jatkot": [
+   "Mitä on ollut lintujen suojelu Itämeren alueella 1900-luvun alussa?",
+   "Mitä kansallispuisto tarkoittaa Virossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vilsandi",
+  "kysymys": "Mikä lintu haahka on ja miksi se pesii luodoilla?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Haahka on suurikokoinen merellä elävä ankkalintu, joka viettää suuren osan elämästään rannikon ja avomeren tuntumassa. Se pesii mielellään pienillä saarilla ja luodoilla, koska niillä pesä on yleensä turvassa maalla liikkuvilta pedoilta ja häiriöiltä. [[Vilsandin]] kansallispuistossa haahka on yleisin pesijä, ja puiston noin sata pienempää saarta ja luotoa tarjoavat sille runsaasti sopivia paikkoja. Naaras tunnetaan siitä, että se vuoraa pesänsä omalla pehmeällä [[untuvallaan]], jota on perinteisesti kerätty myös ihmisten käyttöön.\n\nMinun sukuni kantaa kirjeitä ja haahkan suku tekee tyynyjä, ja eipä siinä, kumpikin on hyödyllistä. Minä silti pidän omaa työtäni vähän jännittävämpänä.",
+  "linkit": [
+   "Vilsandin",
+   "untuvallaan"
+  ],
+  "jatkot": [
+   "Miten haahkan untuvaa on käytetty ihmisten pukeutumisessa?",
+   "Missä muualla Euroopassa haahkat pesivät?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vilsandi",
+  "kysymys": "Mistä ja minne valkoposkihanhet muuttavat Viron kautta?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Valkoposkihanhet ovat arktisilla alueilla pesiviä hanhia, ja lähteiden mukaan ne talvehtivat Pohjanmeren rannikon seuduilla, esimerkiksi Alankomaissa ja Saksassa. Keväällä ja syksyllä niiden reitti kulkee Itämeren yli ja rannikoita pitkin, ja [[Länsi-Viron]] saaristo on niille tärkeä pysähdyspaikka. [[Vilsandin]] kansallispuiston vesillä hanhet pysähtyvät levähtämään ennen matkan jatkumista, ja metsästyskielto tekee levosta rauhallisempaa. Tarkkoja reittejä ja päivämääriä en lähde luettelemaan, koska ne vaihtelevat vuodesta toiseen. Reitti on pitkä, ja minä olen kyllä sen verran kateellinen, että tuntuu.",
+  "linkit": [
+   "Länsi-Viron",
+   "Vilsandin"
+  ],
+  "jatkot": [
+   "Miten muuttolinnut osaavat löytää oikean reitin?",
+   "Mitkä muut linnut pysähtyvät Viron rannikolla muuton aikana?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vilsandi",
+  "kysymys": "Miksi Saarenmaan rannikolla on niin paljon pieniä luotoja?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Yksi tärkeä syy on [[maankohoaminen]]: viimeisen jääkauden jälkeen maankuori on noussut, ja Itämeren rannoilla matalat merenpohjan kohdat ovat vähitellen paljastuneet saariksi ja luodoiksi. Länsi-Virossa tämä kohoaminen jatkuu edelleen, joten rannikon muoto muuttuu hitaasti. Saarenmaan länsiosan rannikko on matala ja sen edustalla on paljon pieniä saaria, mikä näkyy myös [[Vilsandin]] kansallispuiston noin sadassa pienemmässä saaressa ja luodossa. Tarkkaa selitystä jokaiselle yksittäiselle luodolle en osaa antaa, sillä siihen vaikuttavat myös kallioperä ja aallokko. Ylhäältä katsottuna ne näyttävät kyllä ihan kuin joku olisi sirotellut leivänmuruja.",
+  "linkit": [
+   "maankohoaminen",
+   "Vilsandin"
+  ],
+  "jatkot": [
+   "Mitä maankohoaminen tarkoittaa ja missä se on nopeinta?",
+   "Millaisia kasveja kasvaa Viron rannikkoniityillä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-endla",
+  "kysymys": "Miksi suot ja lähteet ovat tärkeitä Põltsamaa-joen vesille?",
+  "uusi": false,
+  "vastaus": "Mmm— Endlan luonnonsuojelualue sijaitsee Keski-Virossa [[Pandiveren]] ylängön eteläosassa, ja se suojelee makean veden järjestelmää, johon kuuluu soita, rämeitä, lähteitä ja puroja. Alueella on tärkeä osa [[Põltsamaa-joen]] vesien uusiutumisessa. Suot toimivat hyvin pitkälti vesivarastoina: turvekerros pidättää sade- ja sulamisvettä ja luovuttaa sitä vähitellen puroihin, kun taas lähteet tuovat pohjavettä pintaan. Näin vesi pysyy liikkeessä ja joen vedenkorkeus tasaantuu eri vuodenaikoina. Tarkkoja virtaamalukuja en tunne, mutta periaate on tämä.\n\nYlhäältä suo näyttää tummalta läiskältä, jonka ympärillä kaikki muu on kuivaa. Minä pidän siitä, että läiskä tekee työtä ja pitää joen hengissä.",
+  "linkit": [
+   "Pandiveren",
+   "Põltsamaa-joen"
+  ],
+  "jatkot": [
+   "Miten turvekerros pidättää vettä?",
+   "Mitä suon ojittaminen vaikuttaa vesistöihin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-endla",
+  "kysymys": "Mitä suon paksu turvekerros kertoo alueen historiasta?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: Endlan soiden turvekerros voi olla jopa kahdeksan metriä paksu, ja se kertoo pitkästä, hitaasta kehityksestä. [[Turve]] syntyy, kun kuolleet kasvit eivät happivajeisessa ja märässä ympäristössä lahoa kokonaan vaan kerrostuvat vähitellen toistensa päälle. Kasvu on yleensä hyvin hidasta, suunnilleen millimetrin vuodessa, joten kahdeksan metriä viittaa ainakin useisiin tuhansiin vuosiin, vaikka tarkka luku riippuu suosta. Alueella on myös monia [[jäännejärviä]], ja niiden perusteella vesistöt ovat muuttuneet ajan mittaan. Monin paikoin suot ovat syntyneet järvien umpeenkasvun tai maan soistumisen kautta. Tarkkaa ajoitusta Endlan turpeelle en tiedä. Hitaus on minulle henkilökohtaisesti vierasta, mutta kunnioitan sitä.",
+  "linkit": [
+   "Turve",
+   "jäännejärviä"
+  ],
+  "jatkot": [
+   "Voiko turvekerroksesta lukea menneitä ilmastoja?",
+   "Miten jäännejärvi eroaa tavallisesta järvestä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-endla",
+  "kysymys": "Miksi kämmekät ovat usein uhanalaisia soilla ja niityillä?",
+  "uusi": true,
+  "vastaus": "Ai se. [[Kämmekät]] ovat [[orkideoihin]] kuuluva kasviryhmä, ja monet lajit ovat hyvin vaativia kasvupaikkansa suhteen. Endlan alueella on useita uhanalaisia kämmekkälajeja, ja kasveja on alueella löydetty noin 450. Kämmekät kasvavat usein vain tietynlaisessa maaperässä, kosteudessa ja ravinteisuudessa, ja ne ovat riippuvaisia maaperän sienistä, joiden avulla siemenet itävät. Kuivatus, ojitus, metsätalous, rakentaminen ja kasvupaikan umpeenkasvu voivat kaikki heikentää niiden elinympäristöä. Siksi suojelualueet ovat niille tärkeitä, vaikka tarkkoja lajikohtaisia syitä Endlassa en osaa luetella. Kukkia minä en syö, mutta nämä kyllä ihailen ylhäältä.",
+  "linkit": [
+   "Kämmekät",
+   "orkideoihin"
+  ],
+  "jatkot": [
+   "Miten orkideat lisääntyvät ja miten siemenet itävät?",
+   "Mitä ovat uhanalaisuusluokat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-endla",
+  "kysymys": "Millaiset linnut viihtyvät soilla?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Suot ovat monille linnuille tärkeitä pesimä- ja ruokailupaikkoja, koska ne ovat laajoja, märkiä ja ihmisten kulkemia vähän. Endlan alueella pesii noin 180 lintulajia, ja suojelualueella on näkötorneja ja luontopolkuja, joilta lintuja voi tarkkailla. Yleisesti soilla viihtyvät esimerkiksi [[kurjet]] ja muut kosteikkojen lajit, mutta tarkkaa luetteloa Endlan lajeista en ole varma antamaan. Linnuille suot tarjoavat suojaa maapedoilta, hyönteisiä ja marjoja ruoaksi sekä rauhaa pesimiseen. Pitkä lista lajeja olisi ollut hauska, mutta kyyhky ei osaa kaikkea ulkoa.",
+  "linkit": [
+   "kurjet"
+  ],
+  "jatkot": [
+   "Miksi kurjet kerääntyvät syksyllä suurina parvina?",
+   "Mitä näkötornista voi havaita aamulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-endla",
+  "kysymys": "Mitä eroa on suolla, rämeellä ja lähteellä?",
+  "uusi": true,
+  "vastaus": "Tuota niin. [[Suo]] on yleisnimi märälle, turvetta muodostavalle alueelle. [[Räme]] on suotyyppi, jossa kasvaa puita, tavallisesti mäntyjä, ja se on yleensä ravinteista köyhä. [[Lähde]] taas on paikka, jossa pohjavesi nousee maan pinnalle ja muodostaa usein puron alun. Endlan alueen makean veden järjestelmään kuuluvat kaikki nämä: suot, rämeet, lähteet ja puro. Ne ovat osa samaa kokonaisuutta, jossa vesi kulkee maan alla, suon läpi ja puroina kohti jokea. Tarkat suotyyppien rajat voivat vaihdella luokittelun mukaan. Minä muistan nämä parhaiten siitä, että kastuu.",
+  "linkit": [
+   "Suo",
+   "Räme",
+   "Lähde"
+  ],
+  "jatkot": [
+   "Mitä ovat korpi ja neva?",
+   "Miten lähteet syntyvät?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-taevaskoja",
+  "kysymys": "Miksi Ahja-joen rannoilla kohoaa korkeita punertavia hiekkakivikallioita?",
+  "uusi": false,
+  "vastaus": "No niin, kivi on tässä pääosassa. Taevaskojan kalliot ovat [[devonikautista]] hiekkakiveä, joka on kerrostunut satoja miljoonia vuosia sitten, kun alueella oli vettä ja hiekkaa kerääntyi kerroksiksi. Punertava väri tulee yleensä hiekkakiven sisältämistä rautayhdisteistä, vaikka tarkkaa kemiaa tämän paikan kivestä en ole varma. [[Ahja-joki]] on kaivanut ikivanhaan jokilaaksoonsa niin, että kalliot ovat tulleet esiin, ja kallioita kutsutaan taevaskodiksi. Jokilaakson maisemansuojelualueella sijaitsevat [[Suur Taevaskoda]] ja Väike Taevaskoda ovat Etelä-Viron vierailluimpia matkailukohteita. Ylhäältä ne näyttävät kyllä enemmän punaiselta haavalta kuin kivilöydöltä.",
+  "linkit": [
+   "devonikautista",
+   "Ahja-joki",
+   "Suur Taevaskoda"
+  ],
+  "jatkot": [
+   "Miten jokivesi kaivaa kalliota ajan kuluessa?",
+   "Millaisia fossiileja devonikauden kivistä löytyy?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-taevaskoja",
+  "kysymys": "Mikä sai Taevaskojan kylän syntymään vasta 1930-luvulla?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: nykyinen kylä syntyi vasta 1930-luvulla [[Tartto–Petseri-rautatien]] rakentamisen jälkeen. Sitä ennen kylän pohjoisosa kuului [[Ahjan kartanolle]] ja eteläosa Vana-Koiolan kartanolle. Ahjan kartanon vuoden 1873 metsäkartalla mainitaan jo paikannimi Taiwaskodda pallo, joten paikka tunnettiin nimeltä, vaikka varsinaista kylää ei vielä ollut. Rautatie toi alueelle liikennettä ja rakentamista, ja sen mukana syntyi asutus. Tarkempia yksityiskohtia kylän perustamisesta en tiedä.\n\nRautatie vei kyyhkyiltä leivän monessa paikassa, mutta tässä se sentään sai kokonaisen kylän syntymään. Sen minä myönnän.",
+  "linkit": [
+   "Tartto–Petseri-rautatien",
+   "Ahjan kartanolle"
+  ],
+  "jatkot": [
+   "Miten rautatie muutti maaseudun asutusta Euroopassa?",
+   "Mikä oli kartano ja mikä sen asema kylässä oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-taevaskoja",
+  "kysymys": "Mitä Taevaskojan nimi tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Katotaas. Viron kielessä sana taevas tarkoittaa taivasta, ja nimen jälkiosa koda viittaa suunnilleen kotiin, kammioon tai majaan, joten nimen voi tulkita karkeasti taivaan kodiksi. Tarkasta etymologiasta en ole varma, ja nimen merkitystä voi selittää muillakin tavoilla. Kylä on saanut nimensä [[Ahja-joen]] ikivanhan jokilaakson hiekkakivikallioista, joita kutsutaan taevaskodiksi. Kallioita on kaksi tunnetuinta, [[Suur Taevaskoda]] ja [[Väike Taevaskoda]]. Vuoden 1873 metsäkartalla nimi esiintyy muodossa Taiwaskodda pallo. Nimeä on hyvä katsoa kahdelta puolelta, ja minä katson sitä taivaan puolelta, ihan ammatillisista syistä.",
+  "linkit": [
+   "Ahja-joen",
+   "Suur Taevaskoda",
+   "Väike Taevaskoda"
+  ],
+  "jatkot": [
+   "Miksi kalliot ovat saaneet paikallisia nimiä?",
+   "Miten Viron paikannimiä on tutkittu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-taevaskoja",
+  "kysymys": "Miten hiekkakivi syntyy ja miksi se murenee helposti?",
+  "uusi": true,
+  "vastaus": "Kas vaan. [[Hiekkakivi]] syntyy, kun hiekkajyvät kerrostuvat esimerkiksi meren, joen tai järven pohjaan ja liittyvät ajan mittaan toisiinsa paineen ja sementoivien aineiden vaikutuksesta. Taevaskojan kalliot ovat devonikautista hiekkakiveä. Hiekkakivi voi murentua helposti, koska jyvät ovat sidottu toisiinsa vain löyhästi ja vesi, jää ja tuuli irrottavat niitä vähitellen. Joen läheisyys, sulamis- ja jäätymiskierto sekä kosteus nopeuttavat rapautumista. Murenemisen vauhti vaihtelee kivestä toiseen, ja tästä paikasta en tunne tarkkoja lukuja. Vierailijan kannattaa pitäytyä merkityillä poluilla. Itse pysyn ilmassa, enkä murene.",
+  "linkit": [
+   "Hiekkakivi"
+  ],
+  "jatkot": [
+   "Miten rapautuminen muuttaa kallioita vuosisatojen kuluessa?",
+   "Millaisia rakennuksia hiekkakivestä on tehty Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-taevaskoja",
+  "kysymys": "Mitä devonikausi tarkoittaa ja millainen maailma silloin oli?",
+  "uusi": true,
+  "vastaus": "Just niin, devonikausi. [[Devonikausi]] on geologinen kausi, joka sijoittuu noin 420–360 miljoonan vuoden taakse. Sitä kutsutaan usein kalojen ajaksi, koska kalat monipuolistuivat silloin voimakkaasti, ja samaan aikaan kasvit ja eläimet alkoivat vallata maata. Nykyisen Viron seudulla oli matalia meriä ja rannikoita, joihin kerrostui hiekkaa ja savea; niistä ovat peräisin esimerkiksi [[Taevaskojan]] hiekkakivet. Tarkkoja ajankohtia ja paikallisia olosuhteita on tutkittu paljon, mutta yksityiskohdat minulta ovat epävarmoja. Pitkältä kuulostaa, mutta kauan se oli kuitenkin kestänyt.",
+  "linkit": [
+   "Devonikausi",
+   "Taevaskojan"
+  ],
+  "jatkot": [
+   "Millaisia kaloja devonikaudella eli?",
+   "Miten kalat kehittyivät maaeläimiksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vortsjarv",
+  "kysymys": "Miksi Võrtsjärven vedenpinta nousee ja laskee joka vuosi näin paljon?",
+  "uusi": false,
+  "vastaus": "Ai tota. [[Võrtsjärv]] on matala järvi, jonka pinta-ala on 270 neliökilometriä, ja veden korkeus vaihtelee vuosittain keskimäärin 1,4 metriä eli noin puolet järven keskisyvyydestä. Kun järvi on matala ja laaja, jo suhteellisen pieni vesimäärän muutos näkyy selvästi pinnan korkeudessa. Vedenkorkeuteen vaikuttavat tulvat, sateet ja haihdunta sekä virtaaminen järvestä [[Emajõgi-jokeen]], mutta kaikkia tekijöitä en ole varma pystyväni erottamaan. Järvi on jään peitossa suunnilleen marraskuusta huhtikuuhun, ja kevät tuo sulamisvedet.\n\nYlhäältä katsottuna vedenpinnan vaihtelu on minulle mukavaa kuin kellonaika: kun järvi on korkealla, rannat ovat lähempänä. Matala järvi kuulostaa kyyhkyn korvaan oikeastaan hyvältä ajatukselta, sillä uimaan en silti lähtisi.",
+  "linkit": [
+   "Võrtsjärv",
+   "Emajõgi-jokeen"
+  ],
+  "jatkot": [
+   "Miten tulvat vaikuttavat rantojen kasvillisuuteen?",
+   "Mitä tarkoittaa järven keskisyvyys?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vortsjarv",
+  "kysymys": "Miten devonikauden kalojen fossiileja päätyi järven rannan jyrkänteisiin?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Devonikaudella, joka oli noin 420–360 miljoonaa vuotta sitten, nykyisen Viron seudulla oli matalia vesialueita, joissa eli kaloja. Kun kalat kuolivat, niiden jäänteet saattoivat hautautua hiekkaan tai saveen. Kerrokset muuttuivat ajan kuluessa kiveksi ja säilyttivät [[fossiileja]]. Myöhemmin virtaava vesi, jää ja rapautuminen ovat paljastaneet kerrostumia, ja niin kalojen jäänteitä on löytynyt Võrtsjärven itärannalla [[Tammen]] kylän lähellä olevista jyrkänteistä. Tarkkaa tietoa yksittäisten löytöjen syntytavasta tai ikävuosista en ole varma antamaan. Kala kivessä on kyyhkyn mielestä vähän kuvottava, mutta tiede on tiedettä.",
+  "linkit": [
+   "fossiileja",
+   "Tammen"
+  ],
+  "jatkot": [
+   "Millaisia fossiileja devonikauden kivistä on löydetty?",
+   "Miten fossiili syntyy?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vortsjarv",
+  "kysymys": "Mikä on Emajõgi ja minne se virtaa?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. [[Emajõgi]] on joki, joka laskee Etelä-Virossa [[Võrtsjärvestä]] [[Peipsijärveen]]. Nimen voi suomentaa äidiksi jokea, sillä ema tarkoittaa viroksi äitiä ja jõgi jokea. Joen varrella sijaitsee lähteiden mukaan [[Tartto]], Viron suuria kaupunkeja. Joen pituuden ja virtaaman tarkat luvut jätän sanomatta, koska en ole niistä varma. Emajõgi yhdistää kaksi Viron suurta järveä, ja Võrtsjärven vedenpinnan vaihtelu näkyy myös joessa. Äiti-joki on kyllä kaunis nimi, ja minä viihdyn sen yllä.",
+  "linkit": [
+   "Emajõgi",
+   "Võrtsjärvestä",
+   "Peipsijärveen",
+   "Tartto"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Tartto on ja mistä se tunnetaan?",
+   "Mikä on Peipsijärvi ja kuka sen rannoilla asuu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vortsjarv",
+  "kysymys": "Miksi matala järvi lämpenee ja jäätyy nopeasti?",
+  "uusi": true,
+  "vastaus": "No jopas. Matalassa järvessä vettä on vähän verrattuna pinta-alaan, joten aurinko lämmittää sen nopeasti ja vastaavasti kylmä ilma jäähdyttää sen nopeasti. Syvässä järvessä suuri vesimassa varastoi lämpöä ja hidastaa muutosta. [[Võrtsjärvi]] on matala järvi, jonka pinta-ala on 270 neliökilometriä, ja se on jään peitossa suunnilleen marraskuusta huhtikuuhun. Tuuli sekoittaa vettä, mikä auttaa lämpöä leviämään pohjaa myöten. Tarkkoja veden lämpötiloja en tässä yhteydessä väitä, koska ne vaihtelevat vuodesta toiseen.\n\nKesällä matala järvi lämpiää kuin lämmin kylpyvesi, mutta jos minulta kysytään, se on silti liian märkä. Talvella taas ylhäältä katsottuna koko järvi on yksi iso valkoinen levy.",
+  "linkit": [
+   "Võrtsjärvi"
+  ],
+  "jatkot": [
+   "Miten järven jää vaikuttaa kaloihin?",
+   "Milloin järviä aletaan pitää syvinä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vortsjarv",
+  "kysymys": "Mitä kaloja Võrtsjärvessä elää?",
+  "uusi": true,
+  "vastaus": "Mmm, kalat. Tarkkaa lajiluetteloa [[Võrtsjärven]] kalastosta en ole varma antamaan. Yleisesti matalissa ja ravinteisissa järvissä Itämeren maissa viihtyvät esimerkiksi [[ahven]], [[hauki]] ja lahna, ja järvi voi olla tärkeä myös kalastukselle. Võrtsjärv on Etelä-Viron matala järvi, josta laskee Emajõgi-joki Peipsijärveen, ja veden korkeuden vaihtelu sekä matala vesi vaikuttavat kaloihin. Lintuja järven rannoilla pesii ja levähtää runsaasti, joten kaloilla on todennäköisesti paljon seuraa. Kalastajalta saisi parempaa tietoa kuin kyyhkyltä. Minä olen enemmän jyvän ja leivänmurun ystävä.",
+  "linkit": [
+   "Võrtsjärven",
+   "ahven",
+   "hauki"
+  ],
+  "jatkot": [
+   "Miten kalat selviävät talven jään alla?",
+   "Millaista kalastus on Viron sisävesillä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-muhu",
+  "kysymys": "Miksi Muhun Mona-linnakkeen antautuminen päätti Viron ristiretken?",
+  "uusi": false,
+  "vastaus": "Mmm— Vuonna 1227 Liivinmaan Kalparitarikunnan joukot ylittivät jäätä pitkin [[Saarenmaalle]], ja viimeiset pakanalliset virolaiset antautuivat [[Muhussa]] Mona-nimisessä pyöreässä linnakkeessa, jonka valleja on yhä jäljellä. Saarenmaa oli yksi viimeisistä alueista, joita ei ollut vielä alistettu, joten antautumista pidetään yleensä Viron valloituksen ja kristillistämisen loppuvaiheena. Tarkat yksityiskohdat tapahtumista ja sen merkityksestä historioitsijat tulkitsevat eri tavoin, enkä lähde väittämään enempää. Tapahtumasta on yli seitsemänsataa vuotta, ja Viron alue on sen jälkeen kuulunut monille eri vallanpitäjille. Onneksi siitä on jo kauan.",
+  "linkit": [
+   "Saarenmaalle",
+   "Muhussa"
+  ],
+  "jatkot": [
+   "Mikä Liivinmaan Kalparitarikunta oli?",
+   "Miten Viro kristillistettiin 1200-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-muhu",
+  "kysymys": "Miten Muhusta pääsi Saarenmaalle ja mantereelle ennen kuin Väinatamm-pengertie valmistui?",
+  "uusi": false,
+  "vastaus": "Kato, lauttoja ja jäätä. [[Muhu]] on saari, jonka erottavat mantereesta Suuri väin ja Saarenmaasta Pieni väin, joten ennen pengertietä liikuttiin veneillä ja laivoilla sekä talvella jäätä pitkin. Jääreitti oli tuttu jo 1200-luvulla, jolloin ritarikunnan joukot ylittivät jäätä Saarenmaalle. Nykyään Muhun ja mantereen välillä kulkevat lautat. Tarkkaa tietoa vanhoista reiteistä, aikatauluista ja kuljetusvälineistä en ole varma antamaan, ja ne ovat vaihdelleet aikakausittain. Tienä pengertie on tietysti helpompi, mutta minulle ilma on aina auki. Siinä on oma etunsa.",
+  "linkit": [
+   "Muhu"
+  ],
+  "jatkot": [
+   "Milloin Väinatamm rakennettiin ja miksi?",
+   "Miten Viron saarten lauttaliikenne toimii nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-muhu",
+  "kysymys": "Miten tuulimylly toimii ja miksi niitä rakennettiin saarille?",
+  "uusi": true,
+  "vastaus": "Joo, tuulimylly on mukavan yksinkertainen kone. [[Tuulimylly]] muuttaa tuulen voiman pyöriviksi lavoiksi, jotka siirtävät liikkeen akselin ja hammaspyörien kautta myllykivelle, ja siinä jauhetaan viljaa jauhoiksi. Saarilla on usein tuulista ja virtaavaa vettä on vähän, joten tuulivoima sopi hyvin viljan jauhamiseen. [[Muhu]] tunnetaan toimivista perinteisistä tuulimyllyistään, jotka kertovat saaren elinkeinoista. Tarkkaa myllyjen määrää tai ikää en ole varma, joten jätän ne mainitsematta.\n\nMylly pyörii vain, kun tuuli sitä työntää, ja se on minusta kunnioitettavaa. Minun sukuni ei ole koskaan tarvinnut tuulta, ja minulla on siitä sekä helpotus että pieni kateus.",
+  "linkit": [
+   "Tuulimylly",
+   "Muhu"
+  ],
+  "jatkot": [
+   "Mitä muita myllytyyppejä on kuin tuulimylly?",
+   "Miten vilja muuttuu jauhoiksi ja leiväksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-muhu",
+  "kysymys": "Miksi villa ja neulotut sukat olivat tärkeitä pohjoisilla saarilla?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Pohjoisilla saarilla on usein kosteaa, tuulista ja viileää, joten lämpimät villavaatteet ovat olleet arkea. Villa eristää hyvin myös kosteana, ja siksi se on sopinut merenläheiseen ilmastoon. [[Muhu]] tunnetaan neulotuista sukistaan, ja virolaisessa kansanpuvussa pitäjät erottuvat omilla raidoillaan, väriyhdistelmillään ja koruillaan niin, että tunteva silmä näkee kantajan kotipitäjän. Puvut ommeltiin käsin kotikutoisesta villakankaasta, ja yksityiskohdat periytyivät äidiltä tyttärelle. Tarkkoja Muhun kuvioita tai värejä en ole varma luettelemaan. Kuvailen vain, en arvostele, ja tämä on kauniisti tehty perinne.",
+  "linkit": [
+   "Muhu"
+  ],
+  "jatkot": [
+   "Miten villa kehrätään langaksi ja värjätään?",
+   "Mitä Kihnun saaren kulttuuriperintö sisältää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-muhu",
+  "kysymys": "Mitä sana väin tarkoittaa ja miten väinä on syntynyt?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Sana väin tarkoittaa viroksi salmea, kapeaa vesiväylää saarten tai saaren ja mantereen välillä. [[Muhun]] ympärillä on kaksi väintä: Suuri väin erottaa saaren mantereesta ja Pieni väin Saarenmaasta. Väinät ovat syntyneet merenpinnan, maankohoamisen ja jääkauden jälkeisen kehityksen yhteisvaikutuksesta, mutta kunkin yksittäisen väinän tarkkaa historiaa en ole varma. [[Itämeren]] vesi virtaa niissä, ja väinät ovat olleet tärkeitä kulkureittejä veneille, laivoille ja talvella jäälle.\n\nSalmi on kyyhkyn mielestä helppo asia: se on vain paikka, jossa lentää pitää vähän matalammalla. Minä kunnioitan sitä, että vesi on kuitenkin vielä leveä, vaikka se onkin kapea.",
+  "linkit": [
+   "Muhun",
+   "Itämeren"
+  ],
+  "jatkot": [
+   "Miten Itämeri on muuttunut jääkauden jälkeen?",
+   "Mitä eroa on salmella ja lahdella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-otepaa",
+  "kysymys": "Miksi Otepään linnan raunioista löytynyt tuliase on niin merkittävä?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Tost minä osaan kertoo. Löytöä pidetään lähteiden mukaan Euroopan vanhimpana säilyneenä [[tuliaseena]], ja sen ajoitetaan vuoteen 1396 tai sitä aiemmaksi. Merkitys on siinä, että niin varhaisia tuliaseita on säilynyt hyvin vähän, ja esine osoittaa ruutiaseiden ehtineen Liivinmaan linnoihin jo keskiajalla. Paikalla oli aiemmin muinaislinnake, jonka [[ristiretkeläiset]] valloittivat vuonna 1224, ja [[piispa Hermann]] rakennutti sinne Viron ensimmäisen kivilinnan. Aseen tarkasta tyypistä en ole varma, joten sen yksityiskohdat kannattaa tarkistaa museosta. Siinä oli sentään aika paljon vuosilukuja yhdelle kyyhkylle.",
+  "linkit": [
+   "tuliaseena",
+   "ristiretkeläiset",
+   "piispa Hermann"
+  ],
+  "jatkot": [
+   "Milloin tuliaseet yleistyivät Euroopan sodankäynnissä?",
+   "Millaisia aseita linnoissa käytettiin ennen ruutia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-otepaa",
+  "kysymys": "Miksi Otepäätä kutsutaan Viron talvipääkaupungiksi?",
+  "uusi": false,
+  "vastaus": "Mmm— Joo, tän minä tiedän. Otepäätä kutsutaan Viron talvipääkaupungiksi, koska se on maan tunnetuimpia hiihdon ja talviurheilun keskuksia. Kumpuileva [[Otepään ylänkö]] saa talvisin lunta, ja alueella toimii urheilukeskus [[Tehvandi]], jossa on järjestetty muun muassa maastohiihdon kansainvälisiä kilpailuja. Lisäksi [[Pühajärven]] ja muiden järvien maisemissa on talvella latuja ja laskettelumahdollisuuksia. Tarkoista kisavuosista en ole varma.\n\nMinä katson talvea kyl mieluummin lämpimältä ikkunalaudalta, pulla kädessä, jos joku sellaisen jättää.",
+  "linkit": [
+   "Otepään ylänkö",
+   "Tehvandi",
+   "Pühajärven"
+  ],
+  "jatkot": [
+   "Miten maastohiihdon maailmancup toimii?",
+   "Mitä muita talviurheilupaikkoja Baltiassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-otepaa",
+  "kysymys": "Miksi karhua kutsuttiin kiertoilmauksella eikä oikealla nimellä?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Karhun oikeaa nimeä ei haluttu sanoa ääneen, koska uskottiin, että nimen mainitseminen houkuttelisi eläimen paikalle tai tuottaisi onnettomuutta. Siksi syntyi kiertoilmauksia, joilla karhusta puhuttiin ilman sen varsinaista nimeä. Suomessa tunnetaan esimerkiksi [[otso]] ja [[mesikämmen]], ja ilmiö on tuttu muissakin kielissä: venäjän [[medved]] tarkoittaa hunajan syöjää, ja englannin bear tulkitaan tarkoittavan ruskeaa. Sanojen alkuperistä tutkijat ovat osin eri mieltä, joten en ole varma kaikista yksityiskohdista. Ja tuo oli kyl kunnon kielitieteellinen lento.",
+  "linkit": [
+   "otso",
+   "mesikämmen",
+   "medved"
+  ],
+  "jatkot": [
+   "Mitä muita kiertoilmauksia suomessa on karhulle?",
+   "Missä päin Eurooppaa karhuja elää nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-otepaa",
+  "kysymys": "Mitä Pühajärven nimi tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Ai se. Hyvä kysymys tuo. Pühajärv on nimi, jonka osat ovat tuttuja suomesta: püha tarkoittaa pyhää ja järv järveä, eli nimi on suomeksi Pyhäjärvi. [[Viron kielessä]] ja suomessa on paljon yhteisiä sukukielen sanoja, vaikka ne lausutaan eri tavoin. Järvi sijaitsee [[Otepään ylängön]] kumpuilevassa maastossa, jossa on lukuisia muitakin järviä. Siitä, miksi järvi on saanut pyhän nimen, en ole varma. Pyhä järvi, sehän kuulostaa melkein kotoisalta.",
+  "linkit": [
+   "Viron kielessä",
+   "Otepään ylängön"
+  ],
+  "jatkot": [
+   "Mitä viron ja suomen kielen sanat kertovat sukulaisuudesta?",
+   "Miten järvet ovat syntyneet Etelä-Viron ylängöllä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-otepaa",
+  "kysymys": "Mistä sinimustavalkoinen Viron lippu sai alkunsa?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Viron sinimustavalkoinen lippu vihittiin vuonna 1884 [[Nuustakun kirkossa]], joka sijaitsi nykyisen Otepään kohdalla, ja siitä tuli myöhemmin Viron kansallislippu. Lippu liittyy mikäli muistan oikein [[opiskelijaseuraan]], joka toimi [[Tartossa]], mutta tarkemmista vaiheista en ole varma. Värien merkitykset tulkitaan eri tavoin: sinisen on usein sanottu viittaavan taivaaseen ja järviin, mustan maahan ja valkoisen pyrkimykseen kohti valoa. Asutus sai nimen Nuustaku vuonna 1862 ja nykyisen nimensä Otepää vasta 1922. Sinä, musta ja valkoinen, mutta harmaa pulu ei mahtunut mukaan.",
+  "linkit": [
+   "Nuustakun kirkossa",
+   "opiskelijaseuraan",
+   "Tartossa"
+  ],
+  "jatkot": [
+   "Milloin Viro julistautui itsenäiseksi?",
+   "Millainen kaupunki Tartto on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-viljandi",
+  "kysymys": "Millaiset sodat jättivät Viljandin suuren linnan raunioiksi?",
+  "uusi": false,
+  "vastaus": "Katotaas. Linna ja kaupunki tuhoutuivat sodissa, joten asiaa ei voi sitoa yhteen ainoaan sotaan. Tietojeni mukaan alue koki vuosisatojen aikana useita sotia: [[Liivinmaan sota]] 1500-luvulla, sitä seuranneet Ruotsin, Puolan ja Venäjän väliset taistelut sekä [[Pohjan sota]] 1700-luvun alussa koettelivat koko seutua. En ole varma, mikä niistä lopulta jätti ritarikunnan rakentaman linnan raunioiksi. Nykyään raunioissa toimii [[perinnemusiikin keskus]], eli paikka on saanut uuden elämän. Onpa se aika kaukana jo.",
+  "linkit": [
+   "Liivinmaan sota",
+   "Pohjan sota",
+   "perinnemusiikin keskus"
+  ],
+  "jatkot": [
+   "Miten Liivinmaan sota päättyi?",
+   "Mikä Kalparitarikunta oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-viljandi",
+  "kysymys": "Miksi Viljandi oli pitkään ilman kaupunkioikeuksia, ja mikä muuttui vuonna 1783?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Täysin vailla kaupunkiasemaa Viljandi ei ollut, sillä se liittyi jo 1300-luvulla [[Hansaliittoon]] ja oli kauppiaiden pysähdyspaikka matkalla Venäjälle. Linna ja kaupunki tuhoutuivat kuitenkin sodissa. En ole varma, millaisia kaupunkioikeuksia sillä kulloinkin oli tai milloin ne olivat voimassa. Vuonna 1783 [[Katariina II:n]] uudistusten myötä Viljandista tuli [[piirikuntakaupunki]], eli oman piirikuntansa hallinnollinen keskus. Papereita ja leimoja, kyl kyyhky olisi hoitanut asian nopeammin.",
+  "linkit": [
+   "Hansaliittoon",
+   "Katariina II:n",
+   "piirikuntakaupunki"
+  ],
+  "jatkot": [
+   "Mikä Hansaliitto oli?",
+   "Mitä Katariina II uudisti Venäjällä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-viljandi",
+  "kysymys": "Mikä on Viljandin perinnemusiikkifestivaali?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: Viljandissa järjestetään vuosittain, yleensä heinäkuussa, perinnemusiikkifestivaali, jolla esiintyy virolaisia ja kansainvälisiä muusikoita. [[Viljandin linnan]] raunioissa toimii [[perinnemusiikin]] keskus, joten kaupungilla on vahva yhteys aiheeseen myös ympäri vuoden. Tarkoista esityspaikoista ja vuosiluvuista en ole varma.\n\nSuvussani on aina arvostettu hyvää viestiä, ja musiikki on kyllä viesti sekin. Pulla sopisi tosin väliajalle.",
+  "linkit": [
+   "Viljandin linnan",
+   "perinnemusiikin"
+  ],
+  "jatkot": [
+   "Millaista on virolainen perinnemusiikki?",
+   "Mitä soittimia virolaisessa kansanmusiikissa käytetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-viljandi",
+  "kysymys": "Missä päin Viroa Viljandi sijaitsee?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Viljandi sijaitsee Etelä-Virossa [[Viljandi-järven]] luoteisrannalla, [[Pärnun]] ja [[Tartun]] välissä. Se on siis sisämaan kaupunki, jolla ei ole omaa merirantaa. Tarkkoja etäisyyksiä muihin kaupunkeihin en ole varma kertomaan. Lyhyt vastaus, mut ei kaikkea tarvii venyttää.",
+  "linkit": [
+   "Viljandi-järven",
+   "Pärnun",
+   "Tartun"
+  ],
+  "jatkot": [
+   "Mistä Pärnu on tunnettu?",
+   "Kuinka kaukana Viljandi on Tallinnasta?"
+  ],
+  "paikka": {
+   "nimi": "Viljandi",
+   "lat": 58.36,
+   "lon": 25.59,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-viljandi",
+  "kysymys": "Mitä saksankielinen nimi Fellin kertoo Viljandin historiasta?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Fellin on Viljandin saksankielinen nimi, ja se on peruja ajalta, jolloin alueen hallinto, kauppa ja kirkko olivat pitkälti saksankielisten käsissä. [[Kalparitarikunta]] valtasi muinaislinnakkeen vuonna 1223, ja sen paikalle rakennettiin linna, josta tuli ritarikunnan tärkeä tukikohta. Myöhemmin [[baltiansaksalaiset]] pysyivät vaikutusvaltaisina vuosisatoja. Samoin Tallinnalla oli saksankielinen nimi Reval, Tartolla Dorpat ja Pärnulla Pernau. Nimien tarkasta syntyhistoriasta en ole varma. Ja tällaisia nimiä minä muistan loputtomasti.",
+  "linkit": [
+   "Kalparitarikunta",
+   "baltiansaksalaiset"
+  ],
+  "jatkot": [
+   "Keitä baltiansaksalaiset olivat?",
+   "Milloin baltiansaksalaisten asema Virossa päättyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-paldiski",
+  "kysymys": "Miksi Paldiskin linnoitus ja satama jäivät kesken Pietari Suuren kuoleman jälkeen?",
+  "uusi": false,
+  "vastaus": "No jopas. Tarkkaa syytä en ole varma, mutta hanke oli Pietari Suuren oma hanke, ja työt hidastuivat keisarin kuoleman jälkeen ja pysähtyivät 1730-luvun alkuun mennessä. Keisari kuoli vuonna 1725, ja suuri Pohjan sota oli päättynyt jo vuonna 1721 [[Uudenkaupungin rauhaan]], joten kiire uuden [[sotalaivastosataman]] rakentamiseen oli luultavasti vähentynyt. Raha ja huomio siirtyivät todennäköisesti muualle. Satama sai myöhemmin Katariina Suuren aikana nimen [[Baltiiski Port]]. Kyl minä ymmärrän: kaikkea ei ehdi valmiiksi.",
+  "linkit": [
+   "Uudenkaupungin rauhaan",
+   "sotalaivastosataman",
+   "Baltiiski Port"
+  ],
+  "jatkot": [
+   "Miksi Pietari Suuri perusti Pietarin kaupungin?",
+   "Mikä oli suuri Pohjan sota?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-paldiski",
+  "kysymys": "Miksi Pietari Suuri valitsi uuden sotasatamansa paikaksi juuri Rågervikin lahden?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Varmaa syytä en tiedä, mutta sijainti puhuu puolestaan: lahti on [[Suomenlahden]] rannalla [[Pakrin niemimaan]] tuntumassa, ja sieltä on suora yhteys Itämerelle. Myöhemmin satama tunnettiin siitä, että se pysyi talvella sulana, minkä vuoksi vuonna 1870 valmistui rautatie tavaroiden kuljetukseen Pietariin. Lahden suojaisuus ja syvyys ovat tavallisia syitä satamapaikan valintaan, mutta en ole varma, mitkä tekijät juuri Pietarin päätökseen vaikuttivat. Sijainti, sijainti, sijainti, sen minä tiedän ylhäältäkin.",
+  "linkit": [
+   "Suomenlahden",
+   "Pakrin niemimaan"
+  ],
+  "jatkot": [
+   "Miksi jäätyminen on ongelma Itämeren satamille?",
+   "Mitä sotalaivastosatama tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-paldiski",
+  "kysymys": "Mihin Ruotsin satamaan Paldiskista lähtee lauttoja?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Tietääkseni Paldiskin satamasta kulkee lauttayhteys [[Kapellskäriin]], joka sijaitsee [[Tukholman]] pohjoispuolella, mutta en ole varma, mitkä reitit ovat nykyään liikenteessä. Aikataulu ja varustamo kannattaa siksi tarkistaa ennen matkaa. Satamista lähtee lauttoja Ruotsiin, joten yhteys on olemassa.\n\nMinä en ole ikinä ottanut lauttaa, koska oma siipi tuntuu halvemmalta. Lautan kahvilan pulla kiinnostaisi silti.",
+  "linkit": [
+   "Kapellskäriin",
+   "Tukholman"
+  ],
+  "jatkot": [
+   "Kuinka kauan lauttamatka Ruotsiin kestää?",
+   "Mitä Tukholmassa kannattaa nähdä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-paldiski",
+  "kysymys": "Miksi Paldiski oli neuvostoaikana suljettu kaupunki?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo vähän. Neuvostoaikana Paldiski oli [[Neuvostoliiton]] merivoimien tukikohta, ja kaupunki suljettiin ulkopuolisilta; siellä toimi muun muassa [[ydinsukellusveneiden]] miehistöjen koulutuskeskus. Venäjän joukot poistuivat Virosta 1990-luvun alkupuoliskolla, ja Paldiski palasi siviilikäyttöön. Tarkoista yksityiskohdista, esimerkiksi ydinlaitteiston purkamisesta, en ole varma. Onpas siit onneksi jo aikaa.",
+  "linkit": [
+   "Neuvostoliiton",
+   "ydinsukellusveneiden"
+  ],
+  "jatkot": [
+   "Milloin Viro itsenäistyi uudelleen?",
+   "Mitä suljettu kaupunki tarkoitti Neuvostoliitossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-paldiski",
+  "kysymys": "Mikä on Pohjois-Viron klintti?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Pohjois-Viron [[klintti]] on pitkä, kalkkikivestä ja sen kaltaisista kivilajeista muodostunut jyrkänne, joka kulkee Suomenlahden eteläpuolella. Tietääkseni se näkyy hyvin [[Pakrin niemimaalla]] Paldiskin lähellä, ja sen uskotaan jatkuvan idässä kohti Venäjää ja lännessä Ruotsin suuntaan, mutta en ole varma sen koko pituudesta enkä korkeuksista. [[Kalkkikivi]] on sedimenttikivi, joka syntyy pääosin meren pohjalle kerrostuneesta aineksesta. Ylhäältä se näyttää kyl aika komealta reunalta.",
+  "linkit": [
+   "klintti",
+   "Pakrin niemimaalla",
+   "Kalkkikivi"
+  ],
+  "jatkot": [
+   "Mitä kalkkikivi on?",
+   "Missä muualla Itämeren alueella on klinttejä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-padise",
+  "kysymys": "Miksi Padisen luostari muutettiin linnoitukseksi vuonna 1559?",
+  "uusi": false,
+  "vastaus": "Katotaas. Syy oli pelko: [[Liivinmaan sodan]] aikana ritarikunnan mestari [[Gotthard Kettler]] lakkautti luostarin vuonna 1559 ja muutti sen linnoitukseksi, koska hän pelkäsi [[ruotsalaisten]] valtaavan sen. Sota oli alkanut edellisenä vuonna, ja luostarin vahvat kivirakennukset sopivat luultavasti hyvin puolustukseen. Rakennusten muuttaminen oli todennäköisesti nopeampaa kuin uuden linnan rakentaminen. Onpa se aika kaukana jo.",
+  "linkit": [
+   "Liivinmaan sodan",
+   "Gotthard Kettler",
+   "ruotsalaisten"
+  ],
+  "jatkot": [
+   "Mistä Ruotsi ja Venäjä kiistelivät Liivinmaalla?",
+   "Kuka Gotthard Kettler oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-padise",
+  "kysymys": "Miksi Padisen munkit muuttivat Latviasta Viroon?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: munkit eivät lähteneet vapaaehtoisesti. Heidän aiempi luostarinsa [[Dünamündessä]] Latviassa joutui vuonna 1305 [[Saksalaisen ritarikunnan]] haltuun, ja munkit menettivät sen. He asettuivat Padiseen vuonna 1310 [[Tanskan kuninkaan]] luvalla. Kivirakennusten työt alkoivat vasta vuonna 1317, ja luostarista tuli 1400-luvulla yksi Viron tärkeimmistä hengellisistä keskuksista. Syistä, miksi ritarikunta otti luostarin haltuunsa, en ole varma. Kotia ei aina saa pitää, sen tietää kyyhkykin.",
+  "linkit": [
+   "Dünamündessä",
+   "Saksalaisen ritarikunnan",
+   "Tanskan kuninkaan"
+  ],
+  "jatkot": [
+   "Keitä kistersiläiset olivat?",
+   "Mikä Saksalainen ritarikunta oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-padise",
+  "kysymys": "Mitä kistersiläismunkit tekivät luostareissaan?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. [[Kistersiläiset]] noudattivat [[Benedictuksen]] sääntöä, jonka tunnetuin periaate on [[ora et labora]], eli rukoile ja tee työtä. Munkit viljelivät maata, hoitivat tiloja ja rakensivat luostareita usein syrjäisille paikoille. Padisen luostarilla oli maita myös Etelä-Suomessa. Päivä rakentui rukoushetkien ympärille, mutta tarkasta päivärytmistä en ole varma. Minä olisin kyl valinnut vain ne leivonta-aamut.",
+  "linkit": [
+   "Kistersiläiset",
+   "Benedictuksen",
+   "ora et labora"
+  ],
+  "jatkot": [
+   "Miksi luostareita perustettiin syrjäisille paikoille?",
+   "Mitä muita luostareita Virossa on ollut?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-padise",
+  "kysymys": "Mikä on Harjumaa, jossa Padise sijaitsee?",
+  "uusi": true,
+  "vastaus": "Ai tota. Harjumaa on Pohjois-Viron maakunta, joka ulottuu [[Suomenlahden]] rannalle. [[Tallinna]] sijaitsee Harjumaalla, ja maakunta on Viron suurimpia asukasmäärältään, koska pääkaupunki on sen alueella. Padise sijaitsee maakunnan länsiosassa, mutta tarkkaa etäisyyttä Tallinnasta en ole varma. Harjumaa on siis lähellä Suomea, vain Suomenlahden toisella puolella. Lyhyt matka lentäen, vaikka laiva on tietysti mukavampi.",
+  "linkit": [
+   "Suomenlahden",
+   "Tallinna"
+  ],
+  "jatkot": [
+   "Montako maakuntaa Virossa on?",
+   "Mitä Tallinnan vanhassakaupungissa on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-padise",
+  "kysymys": "Mitä Liivinmaa tarkoitti keskiajalla?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Liivinmaa oli keskiajalla nimitys alueelle, joka kattoi suurelta osin nykyisen Viron ja Latvian. Aluetta hallitsivat yhdessä ja usein kilpaillen [[Liivinmaan ritarikunta]], piispat ja Hansa-kaupungit. Ritarikunta oli [[Saksalaisen ritarikunnan]] haara. Tanskalla oli aikanaan hallussaan Pohjois-Viroa, kuten Padisen luostarin perustaminen Tanskan kuninkaan luvalla osoittaa. Tarkkoja rajoja ja vuosilukuja en ole varma kertomaan. Aika iso alue yhdelle nimelle.",
+  "linkit": [
+   "Liivinmaan ritarikunta",
+   "Saksalaisen ritarikunnan"
+  ],
+  "jatkot": [
+   "Milloin Latvia itsenäistyi?",
+   "Mistä Riika on tunnettu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-koluvere",
+  "kysymys": "Miksi Koluveren linna on rakennettu tekosaarelle joen keskelle?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Varmaa syytä en tiedä, mutta ratkaisu on puolustuksellisesti järkevä: ympäröivä vesi teki linnaan pääsemisen vaikeaksi. Linna rakennettiin tekosaarelle, joka syntyi [[Liivi-joen]] padotun osan keskelle, ja vesi toimi luultavasti samalla vallihautana. Paikalla on ollut linnoitus jo 1200-luvulta, ja vuonna 1439 se siirtyi [[Saare-Läänen piispalle]]. Tarkemmista rakennusvaiheista en ole varma. Siipiä ei tarvitse kastella, jos pysyy ilmassa.",
+  "linkit": [
+   "Liivi-joen",
+   "Saare-Läänen piispalle"
+  ],
+  "jatkot": [
+   "Miten vallihaudat suojasivat linnoja?",
+   "Mikä Saare-Lääne oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-koluvere",
+  "kysymys": "Miksi linnaan lisättiin 1500-luvulla suuri pyöreä tykkitorni vanhan tornin viereen?",
+  "uusi": false,
+  "vastaus": "Katotaas. [[Tuliaseiden]] yleistyttyä vanhat korkeat ja nelikulmaiset tornit eivät enää riittäneet, koska tykinkuulat voivat murtaa suorat seinät ja kulmat. Pyöreä ja paksu [[tykkitorni]] kestää tulta paremmin, koska kuulat osuvat kaarevaan pintaan viistosti, ja sieltä voitiin myös ampua tykeillä lähestyviä hyökkääjiä. Vanha [[nelikulmainen torni]] on luultavasti 1200-luvun alusta, joten linna sai uuden osan eikä vanhaa korvattu. Linnan vaiheiden tarkoista vuosista en ole varma. Kyl se vanha torni sentään seisoo yhä.",
+  "linkit": [
+   "Tuliaseiden",
+   "tykkitorni",
+   "nelikulmainen torni"
+  ],
+  "jatkot": [
+   "Miten ruuti muutti linnojen rakentamista?",
+   "Milloin tykit tulivat Eurooppaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-koluvere",
+  "kysymys": "Mikä on rokokoo-tyyli?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Rokokoo on 1700-luvun koristeellinen ja kevyt tyyli, joka syntyi [[Ranskassa]] ja kehittyi [[barokin]] jälkeen. Sille ovat tyypillisiä kaarevat linjat, pastellivärit, kullatut koristeet ja leikkisät yksityiskohdat, usein yläluokan sisätiloissa. Koluveren linnan sisätilat sisustettiin rokokoo-tyyliin noin vuonna 1770, kun linnasta tehtiin mukava aatelisasunto. Tarkoista yksityiskohdista en ole varma.\n\nMinä pidän tyylistä, jossa on kaarta ja kevyyttä, vähän kuin lennossa. Pastellisävyt sopivat sitä paitsi hyvin pullataikinan väriin.",
+  "linkit": [
+   "Ranskassa",
+   "barokin"
+  ],
+  "jatkot": [
+   "Mikä on barokki?",
+   "Mikä Versailles'n linna on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-koluvere",
+  "kysymys": "Miksi uusgoottilainen tyyli oli suosittu 1800-luvulla?",
+  "uusi": true,
+  "vastaus": "Kas vaan. 1800-luvulla keskiajasta kiinnostuttiin uudella tavalla, ja se liittyi [[romantiikkaan]]: menneisyyttä ihailtiin, ja sen tunnelmaa haluttiin tuoda arkeen ja rakennuksiin. Kansallistunto lisäsi kiinnostusta omaan historiaan, ja goottilaiset muodot, kuten suippokaaret ja koristeelliset yksityiskohdat, tuntuivat arvokkailta. Aatelissukujen kartanoissa ja linnoissa tyyliä käytettiin, kun vanhaa asuntoa haluttiin uudistaa muodikkaaseen asuun. [[Lontoon parlamenttitalo]] on tunnettu esimerkki samasta tyylistä. En ole varma, mitkä tekijät vaikuttivat juuri Koluveren sisustukseen. Keskiaika oli siis taas muotia, ja vanhat kyyhkyt hymyilevät.",
+  "linkit": [
+   "romantiikkaan",
+   "Lontoon parlamenttitalo"
+  ],
+  "jatkot": [
+   "Mitä goottilainen arkkitehtuuri tarkoittaa?",
+   "Mikä romantiikka oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-koluvere",
+  "kysymys": "Missä Saare-Läänen piispa asui?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Tietääkseni Saare-Läänen piispan pääasuinpaikka oli [[Haapsalun]] piispanlinna Länsi-Virossa. Koluvere oli yksi hänen pääasunnoistaan sen jälkeen, kun linna siirtyi piispalle vuonna 1439. Piispa hallitsi hiippakuntaa, johon kuuluivat muun muassa [[Saarenmaa]] ja Läänemaa, ja hänellä oli sekä hengellistä että maallista valtaa omalla alueellaan. Tarkoista rajoista ja vuosiluvuista en ole varma.\n\nPari asuntoa on hyvä juttu, sen minä tiedän: minullakin on useampi kaide, jolla pidän taukoa.",
+  "linkit": [
+   "Haapsalun",
+   "Saarenmaa"
+  ],
+  "jatkot": [
+   "Mitä Haapsalussa on nähtävää?",
+   "Missä Saarenmaa sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-alatskivi",
+  "kysymys": "Miksi baltiansaksalainen paroni rakennutti virolaiseen kartanoon linnan Skotlannin Balmoralin mallin mukaan?",
+  "uusi": false,
+  "vastaus": "Ai tota. Tän minä tiedän ainakin puoliksi. Paroni [[Arved von Nolcken]] kävi Skotlannissa vuonna 1875 ja rakennutti kartanon linnan uudelleen vuosina 1876–1885 omien suunnitelmiensa mukaan Skotlannin [[Balmoralin]] linnan tyyliin. Tarkkaa syytä siihen, miksi hän valitsi juuri sen esikuvakseen, en tiedä varmasti. Tiedossa on, että aikakauden [[uusgoottilainen]] rakennustyyli ihaili keskiaikaisia linnoja, ja Alatskivin rakennus onkin epäsymmetrinen: siinä on torneja ja liuskekatto. Ei paha kyyhkyltä, vaikka loppu jäi arvailuksi.",
+  "linkit": [
+   "Arved von Nolcken",
+   "Balmoralin",
+   "uusgoottilainen"
+  ],
+  "jatkot": [
+   "Millainen linna Balmoral on Skotlannissa?",
+   "Mitä uusgoottilainen rakennustyyli tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-alatskivi",
+  "kysymys": "Mitä kaikkea suuren kartanon alueella oli linnan lisäksi?",
+  "uusi": false,
+  "vastaus": "Tost minä osaan kertoo. Kartanoalue oli 1800-luvulla laaja: siellä oli 57 rakennusta, joista 41 on säilynyt nykypäivään. Linnaa ympäröi 130 hehtaarin [[puisto]], ja kartano sijaitsee [[Alatskivi-järven]] korkealla rannalla. Millaisia kaikki rakennukset olivat, en tiedä varmasti, mutta kartanoalueella oli yleensä asuin- ja talousrakennuksia. Linnan ensimmäisessä kerroksessa toimii nykyisin säveltäjä [[Eduard Tubinin]] museo.\n\nSataankolmeenkymmeneen hehtaariin mahtuu minun silmääni monta hyvää kaidetta. Jos siellä vielä tarjoiltaisiin pullaa, jäisin sinne vuodeksi.",
+  "linkit": [
+   "puisto",
+   "Alatskivi-järven",
+   "Eduard Tubinin"
+  ],
+  "jatkot": [
+   "Kuka oli säveltäjä Eduard Tubin?",
+   "Millainen on Alatskivi-järven ympäristö?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-alatskivi",
+  "kysymys": "Kuka oli säveltäjä Eduard Tubin, jonka museo linnassa on?",
+  "uusi": true,
+  "vastaus": "Mmm— hyvä kysymys tuo. [[Eduard Tubin]] oli virolainen säveltäjä, joka tunnetaan erityisesti [[sinfonioistaan]]. Toisen maailmansodan lopulla hän lähti [[Ruotsiin]] ja asui siellä loppuelämänsä. Alatskivin linnan ensimmäisessä kerroksessa on hänelle omistettu museo. Ihan hyvin muistin, vaikka nuotteja en lue.",
+  "linkit": [
+   "Eduard Tubin",
+   "sinfonioistaan",
+   "Ruotsiin"
+  ],
+  "jatkot": [
+   "Mitä sinfonia tarkoittaa musiikissa?",
+   "Millaista musiikkia virolaiset säveltäjät ovat tehneet?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-alatskivi",
+  "kysymys": "Millainen kaupunki Tartto on, jonka lähellä linna sijaitsee?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Tartto on Viron toiseksi suurin kaupunki ja tunnettu yliopistokaupunki. Se sijaitsee [[Emajoen]] varrella, ja [[Alatskivin linna]] on noin 40 kilometrin päässä kaupungista pohjoiseen. [[Tarton yliopisto]] perustettiin vuonna 1632, ja yliopisto on pitkään ollut kaupungin tärkeimpiä tunnusmerkkejä. Onpas tässä jo kuljettu pitkä matka.",
+  "linkit": [
+   "Emajoen",
+   "Alatskivin linna",
+   "Tarton yliopisto"
+  ],
+  "jatkot": [
+   "Mitä Tarton yliopiston historiasta tiedetään?",
+   "Mitä Tartossa voi nähdä kävelykierroksella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-alatskivi",
+  "kysymys": "Keitä baltiansaksalaiset olivat ja miksi heillä oli kartanoita?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Baltiansaksalaiset olivat saksankielinen yläluokka, jonka juuret ulottuvat keskiaikaan [[Liivinmaan ritarikunnan]] aikaan. Vuosisatojen ajan he omistivat suuren osan Viron ja Latvian maaomaisuudesta, ja kartanot olivat heidän taloutensa ja vaikutusvaltansa keskuksia. Itsenäinen Viro toteutti vuonna 1919 [[maareformin]], jossa kartanomaata otettiin valtiolle, ja toisen maailmansodan alla suuri osa baltiansaksalaisista siirtyi Saksaan. Historiaa riittää, ja tää oli vasta pintaa.",
+  "linkit": [
+   "Liivinmaan ritarikunnan",
+   "maareformin"
+  ],
+  "jatkot": [
+   "Mitä maareformi Virossa vuonna 1919 muutti?",
+   "Mitä Liivinmaan ritarikunta oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kuremae",
+  "kysymys": "Miksi paikkaa kutsutaan nimellä Pühitsetud eli siunattu?",
+  "uusi": false,
+  "vastaus": "Ai se, siunattu paikka. Nimi Pühitsetud tarkoittaa siunattua tai pyhitettyä. Legendan mukaan kuremäkeläinen paimen näki [[lähteen]] luona jumalallisen ilmestyksen, mikä selittää paikan pyhän maineen. Myöhemmin 1500-luvulla paikalliset löysivät valtavan tammen alta [[Jumalanäidin]] kuolonuneen kuvaavan [[ikonin]], joka on yhä luostarin hallussa. Paikalle perustettiin vuonna 1891 [[Pühtitsan luostari]]. Hyvä nimi, sanon minä kyyhkynä.",
+  "linkit": [
+   "lähteen",
+   "Jumalanäidin",
+   "ikonin",
+   "Pühtitsan luostari"
+  ],
+  "jatkot": [
+   "Miten ortodoksinen luostari perustetaan?",
+   "Mitä Jumalanäidin kuolonuni tarkoittaa ortodoksisessa kirkossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kuremae",
+  "kysymys": "Miksi Kostroman luostarista lähetettiin nunna perustamaan luostaria Viroon?",
+  "uusi": false,
+  "vastaus": "Katotaas. Syytä tähän en tiedä varmasti, mutta tausta on selvä: vuonna 1888 Viro kuului [[Venäjän keisarikuntaan]], ja Venäjän ortodoksinen kirkko lähetti nunnan Kostroman [[Ipatjevin luostarista]] perustamaan luostaria. Tällaisessa perustamisessa on tavallista, että vakiintuneen luostarin kokenut nunna johtaa uuden yhteisön alkuvaiheita. Luostari perustettiin vuonna 1891, ja siinä on nykyään kuusi kirkkoa. Jäi syy vähän auki, sen myönnän.",
+  "linkit": [
+   "Venäjän keisarikuntaan",
+   "Ipatjevin luostarista"
+  ],
+  "jatkot": [
+   "Millainen luostari Kostromassa on?",
+   "Miten ortodoksinen kirkko levisi Viroon?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kuremae",
+  "kysymys": "Millaista on venäläinen herätystyyli kirkkoarkkitehtuurissa?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Venäläinen herätystyyli oli 1800-luvun rakennustaiteen suuntaus, joka haki esikuvansa keskiaikaisesta venäläisestä ja bysanttilaisesta perinteestä. Tyypillisiä piirteitä ovat yleensä [[sipulikupolit]], runsaat koristeet ja värikkäät pinnat. Pühtitsan pääkirkko rakennettiin arkkitehti [[Mihail Preobraženskin]] piirustusten mukaan tähän tyyliin ja vihittiin vuonna 1910. Kupolit näyttävät ylhäältä ihan hyviltä.",
+  "linkit": [
+   "sipulikupolit",
+   "Mihail Preobraženskin"
+  ],
+  "jatkot": [
+   "Miksi ortodoksikirkoissa on sipulikupoleita?",
+   "Kuka oli arkkitehti Mihail Preobraženski?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kuremae",
+  "kysymys": "Mikä ikoni on ja miksi ortodoksit kunnioittavat sitä?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Ikoni on pyhää henkilöä tai tapahtumaa esittävä kuva, joka maalataan perinteisesti puutaululle ja jolla on [[ortodoksisessa kirkossa]] tärkeä asema. Sitä ei pidetä pelkkänä taideteoksena vaan rukouksen apuna: kunnioitus kohdistuu kuvattuun henkilöön, ei esineeseen itseensä. Ikoneja pidetään kirkoissa ja kodeissa, ja kirkossa [[ikonostaasi]] erottaa alttaritilan muusta kirkkosalista. Pühtitsan luostarissa säilytetään 1500-luvulla löydettyä [[Jumalanäidin]] ikonia. Ei ne mitään seinäkoristeita ole, sen minä tiedän.",
+  "linkit": [
+   "ortodoksisessa kirkossa",
+   "ikonostaasi",
+   "Jumalanäidin"
+  ],
+  "jatkot": [
+   "Mikä on ikonostaasi ortodoksisessa kirkossa?",
+   "Miten ikoneja maalataan perinteisesti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kuremae",
+  "kysymys": "Millaista elämä on ortodoksisessa naisluostarissa?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Ortodoksisessa naisluostarissa elämä rytmittyy yhteisen [[rukouksen]] ja [[jumalanpalvelusten]] ympärille, ja niiden lomassa nunnat tekevät luostarin töitä. Luostariin liittyvä nunna antaa [[luostarilupaukset]] ja sitoutuu yhteisön elämään. Pühtitsan luostarin tarkkaa päiväjärjestystä en tiedä, mutta luostarissa on kuusi kirkkoa. Rauhallista se kuulostaa, mutta minä en pysyisi paikallani.",
+  "linkit": [
+   "rukouksen",
+   "jumalanpalvelusten",
+   "luostarilupaukset"
+  ],
+  "jatkot": [
+   "Mitä luostarilupaukset sisältävät?",
+   "Miten ortodoksinen jumalanpalvelus etenee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-keila-joa",
+  "kysymys": "Miksi pieni kylä on saanut nimensä Keilan putouksen mukaan?",
+  "uusi": false,
+  "vastaus": "Ai tota. Joo, tän minä tiedän. Nimi on syntynyt suoraan paikan luonnosta: Keila-Joa tarkoittaa kirjaimellisesti Keilan putousta. [[Keila-joen]] putous on Viron kolmanneksi voimakkain vesiputous, ja sen äärellä on ollut kartano 1600-luvulta lähtien; saksaksi paikkaa kutsuttiin nimellä Schloss Fall. Kartano oli [[Benckendorffin]] perheen, ja putouksen vieressä on myös pieni [[vesivoimala]]. Putous kuulostaa hyvältä paikalta kaiteelle.",
+  "linkit": [
+   "Keila-joen",
+   "Benckendorffin",
+   "vesivoimala"
+  ],
+  "jatkot": [
+   "Mikä on Keila-joki ja mihin se laskee?",
+   "Millaisia vesiputouksia Virossa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-keila-joa",
+  "kysymys": "Mitä uusgoottilainen tyyli tarkoittaa ja miksi se oli 1830-luvulla uutta Virossa?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Uusgoottilainen tyyli oli 1700-luvulla Englannissa syntynyt ja 1800-luvulla Euroopassa levinnyt suuntaus, joka elvytti keskiaikaisen [[goottilaisen]] arkkitehtuurin muotoja, kuten suippokaaria, torneja ja jyrkkiä katonlinjoja. Keila-Joan päärakennus rakennettiin vuosina 1831–1833 pietarilaisen arkkitehdin [[Andrei Stackenschneiderin]] piirustusten mukaan, ja se on yksi Viron varhaisimmista uusgoottilaisista rakennuksista. Uutuus johtui siitä, että tyyli oli vasta leviämässä, ja kartanoita rakennettiin tuohon aikaan yleensä [[klassismin]] tyyliin. Tuli taas vähän luennoitua.",
+  "linkit": [
+   "goottilaisen",
+   "Andrei Stackenschneiderin",
+   "klassismin"
+  ],
+  "jatkot": [
+   "Kuka oli arkkitehti Andrei Stackenschneider?",
+   "Mitä klassismi rakennustaiteessa tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-keila-joa",
+  "kysymys": "Kuka oli kreivi Alexander von Benckendorff?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Kreivi Alexander von Benckendorff oli keisari [[Nikolai I:n]] aikana vaikutusvaltainen venäläinen kenraali, joka johti keisarillista [[Kolmatta osastoa]], poliittisesta poliisitoiminnasta vastannutta virastoa. [[Keila-Joan]] kartano oli hänen perheensä omistuksessa, ja kartanon vieraisiin kuului keisarillisen ajan Venäjän keisarillinen perhe. Kyyhkynä pysyisin kyllä kohteliaana.",
+  "linkit": [
+   "Nikolai I:n",
+   "Kolmatta osastoa",
+   "Keila-Joan"
+  ],
+  "jatkot": [
+   "Mikä oli Venäjän keisarillinen Kolmas osasto?",
+   "Mitä keisari Nikolai I teki hallitsijana?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-keila-joa",
+  "kysymys": "Kuka oli sopraano Henriette Sontag?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: Henriette Sontag oli 1800-luvun alkupuolella tunnettu saksalainen sopraano. Lähteiden mukaan hän lauloi vuonna 1824 [[Wienissä]] [[Beethovenin]] yhdeksännen sinfonian kantaesityksessä, ja hän esiintyi eri puolilla Eurooppaa. Keila-Joan kartanossa hän kuului keisarillisen ajan vieraisiin.\n\nMinun ääneni on enemmän kurrutusta kuin koloratuuria. Mutta hyvää laulua kuuntelee silti mielellään.",
+  "linkit": [
+   "Wienissä",
+   "Beethovenin"
+  ],
+  "jatkot": [
+   "Mikä on Beethovenin yhdeksäs sinfonia?",
+   "Mitä sopraano tarkoittaa laulussa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-keila-joa",
+  "kysymys": "Miten pieni vesivoimala tuottaa sähköä putouksen vedellä?",
+  "uusi": true,
+  "vastaus": "No niin, sähköstä. Vesivoimalassa putoava tai virtaava vesi ohjataan [[turbiinin]] siipien päälle, ja vesi pyörittää turbiinia. Turbiini on kytketty [[generaattoriin]], joka muuttaa pyörimisliikkeen sähköksi. Mitä suurempi on veden korkeusero ja virtaama, sitä enemmän sähköä voidaan tuottaa, ja siksi putous on hyvä paikka voimalalle. Pyöriminen on kyllä kyyhkylle tuttua.",
+  "linkit": [
+   "turbiinin",
+   "generaattoriin"
+  ],
+  "jatkot": [
+   "Mikä on turbiini?",
+   "Mitä muita uusiutuvan energian muotoja on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vasknarva",
+  "kysymys": "Miksi Vasknarvan nimeen liittyy vask eli kupari?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Vask on viron kielen sana kuparille. Yhden selityksen mukaan kylän nimi viittaa linnan kuparikattoon, joten nimi tarkoittaisi vapaasti kuparista Narvaa. Narva viittaa [[Narva-joen]] nimeen, jonka alkulähteellä kylä sijaitsee, ja linna rakennettiin [[Liivinmaan ritarikunnan]] aikana vuosina 1427–1442. En ole varma, onko kuparikatto ainoa selitys. Kuparikaton olisin halunnut nähdä auringossa.",
+  "linkit": [
+   "Narva-joen",
+   "Liivinmaan ritarikunnan"
+  ],
+  "jatkot": [
+   "Mikä Narva-joki on?",
+   "Mitä Liivinmaan ritarikunta oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vasknarva",
+  "kysymys": "Miksi Vasknarvan linna oli rajaseudulla niin tärkeä paikka?",
+  "uusi": false,
+  "vastaus": "Ai se linna. Vasknarva sijaitsee [[Peipsijärven]] pohjoisrannalla [[Narva-joen]] alkulähteellä, jossa joki muodostaa rajan Venäjän kanssa. Siksi linna oli luonteva paikka valvoa sekä rajaa että vesireittiä, ja 1400-luvulla rakennettu uusi linna toimi alueen hallintokeskuksena. Ruotsin vallan aikana linnoitus rakennettiin uudelleen, mutta Venäjän ja Ruotsin sodassa 1610–1617 se tuhoutui kokonaan. Rajaseutu on kyyhkylle onneksi helpompi kuin ihmiselle.",
+  "linkit": [
+   "Peipsijärven",
+   "Narva-joen"
+  ],
+  "jatkot": [
+   "Miten Venäjän ja Ruotsin välinen raja on muuttunut?",
+   "Mikä on Narvan linnoituksen historia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vasknarva",
+  "kysymys": "Keitä vanhauskoiset ovat ja miksi heitä asuu Peipsin rannalla?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Vanhauskoiset ovat venäläisen ortodoksisen kirkon uudistuksia vastustaneiden ryhmä, joka erosi valtakirkosta 1600-luvun puolivälissä patriarkka [[Nikonin]] kirkonuudistusten jälkeen. Heitä vainottiin, ja monet siirtyivät kaukaisille rajaseuduille, joihin kuuluivat myös [[Peipsijärven]] rannat. Vasknarvassa nykyisistä asukkaista suurin osa on vanhauskoisia ortodokseja. Tiivistin tän ihan kohtuullisen hyvin.",
+  "linkit": [
+   "Nikonin",
+   "Peipsijärven"
+  ],
+  "jatkot": [
+   "Mitä Nikonin kirkonuudistus muutti?",
+   "Miten vanhauskoiset elävät nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vasknarva",
+  "kysymys": "Mistä Narva-joki virtaa ja mitä rajaa se kulkee?",
+  "uusi": true,
+  "vastaus": "Katotaas. Narva-joki virtaa [[Peipsijärvestä]] Suomenlahteen, ja suuri osa sen kulusta muodostaa Viron ja Venäjän välisen rajan. Joen alkulähteellä sijaitsee Vasknarva ja suulla [[Narvan]] kaupunki.\n\nHopeinen lanka järvestä mereen — sellaiselta joki näyttää, kun sitä katsoo ylhäältä. Minulle se on kätevä suunnistusmerkki.",
+  "linkit": [
+   "Peipsijärvestä",
+   "Narvan"
+  ],
+  "jatkot": [
+   "Mikä on Peipsijärvi?",
+   "Millainen kaupunki Narva on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vasknarva",
+  "kysymys": "Mistä Peipsijärven rannan asukkaat ovat perinteisesti eläneet?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. [[Peipsijärven]] rannoilla on perinteisesti eletty kalastuksella, ja Vasknarvan kalastajakylä rakennettiin linnan kivistä. Lähteiden mukaan alueen rannoilla tunnetaan myös [[sipulinviljelystä]], jota harjoittavat perinteisesti erityisesti vanhauskoiset. Sipuli ei ole ihan kyyhkyn herkkua.",
+  "linkit": [
+   "Peipsijärven",
+   "sipulinviljelystä"
+  ],
+  "jatkot": [
+   "Miten sipulia viljellään Peipsijärven rannalla?",
+   "Millaisia kaloja Peipsijärvessä on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-setomaa",
+  "kysymys": "Miksi setojen laulutapa leelo on niin erityinen, että UNESCO otti sen aineettoman kulttuuriperinnön luetteloonsa?",
+  "uusi": false,
+  "vastaus": "Mmm— selvä juttu. Setojen laulutapa on monikuoroista, [[moniäänistä]] kansanlaulua, jossa laulu rakentuu yhteislaulun varaan. Lähteiden mukaan yksi laulaja johdattelee laulun ja kuoro vastaa siihen. Tämä elävä perinne on säilynyt [[Setomaalla]] sukupolvelta toiselle, ja siksi UNESCO merkitsi sen vuonna 2009 aineettoman kulttuuriperinnön luetteloon.\n\nMinä olen kuullut aika monta kuoroa katoilta, ja kyyhkyjen aamukurnutus ei kyllä yllä samalle tasolle. Se on tosin ihan oma taiteenlajinsa.",
+  "linkit": [
+   "moniäänistä",
+   "Setomaalla"
+  ],
+  "jatkot": [
+   "Miten moniäänistä laulua esitetään?",
+   "Mitä on UNESCOn aineeton kulttuuriperintö?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-setomaa",
+  "kysymys": "Mitä ihmettä on Setomaan \"kuningaskunta\", ja kuka on kuningas Peko?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: kuningaskunta ei ole valtio vaan setojen kulttuurinen ja perinteinen yhteisö, jonka merkitystä vaalitaan vuosittain [[Kuningaskunnan päivässä]]. Perimätiedon mukaan Peko on setojen perinteisessä uskomusmaailmassa hedelmällisyyden ja viljasadon jumala eikä tavallinen hallitsija, ja siinä näkyy vanhemman [[kansanuskon]] perintöä. Kuningaskunnan päivänä setot valitsevat Pekon kuningaskunnalle seremoniallisen hoitajan. Kuningaskunta ilman rajoja kuulostaa kyyhkyn mielestä hyvältä.",
+  "linkit": [
+   "Kuningaskunnan päivässä",
+   "kansanuskon"
+  ],
+  "jatkot": [
+   "Mitä kansanusko tarkoittaa?",
+   "Keitä setot ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-setomaa",
+  "kysymys": "Mikä Petserin luostari on ja miksi se on setoille tärkeä?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Petserin luostari on vanha ortodoksinen luostari, joka on ollut setojen historiallinen ja hengellinen keskus. Se tunnetaan myös [[luolaluostarina]], ja se sijaitsee nykyisin Venäjän puolella [[Pihkovan]] alueella lähellä Viron rajaa, sillä Setomaa on jaettu Viron ja Venäjän kesken. Luolissa ei kyyhkyn siivet oikein mahtuisi.",
+  "linkit": [
+   "luolaluostarina",
+   "Pihkovan"
+  ],
+  "jatkot": [
+   "Miksi luostareita on rakennettu luoliin?",
+   "Milloin Setomaa jaettiin Viron ja Venäjän kesken?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-setomaa",
+  "kysymys": "Miten eteläviron kieli eroaa tavallisesta viron kielestä?",
+  "uusi": true,
+  "vastaus": "Ai tota. Eteläviro on viron kielen eteläinen murre- tai kieliryhmä, johon kuuluvat [[võron]] kieli ja setojen kieli. Se on kehittynyt erillään pohjoisviroon pohjautuvasta [[kirjaviron]] kielestä, ja sen sanasto ja ääntäminen poikkeavat siitä selvästi. Asiantuntijat suhtautuvat sen asemaan eri tavoin: osa pitää sitä omana kielenään, osa viron murteena. Kielet ovat kyyhkylle mysteeri, kunhan kirje on suomeksi.",
+  "linkit": [
+   "võron",
+   "kirjaviron"
+  ],
+  "jatkot": [
+   "Mikä on võron kieli?",
+   "Mitkä kielet kuuluvat itämerensuomalaisiin kieliin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-setomaa",
+  "kysymys": "Millainen on setojen perinteinen juhlapuku ja koristeet?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Setonaiset ovat tunnettuja runsaista [[hopeakoruistaan]], joista näkyvin on suuri [[rintasolki]]. Juhla-asu eroaa arkivaatteesta, ja koristeet ovat yleensä juhlissa runsaampia. Tarkempia yksityiskohtia, kuten värejä ja kuvioiden merkityksiä, en ole varma, joten jätän ne arvailematta. Kiiltävää tavaraa, kyl se kyyhkyn silmää miellyttää.",
+  "linkit": [
+   "hopeakoruistaan",
+   "rintasolki"
+  ],
+  "jatkot": [
+   "Millaisia kansanpukuja Virossa on alueittain?",
+   "Miten hopeakoruja on perinteisesti valmistettu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-voru",
+  "kysymys": "Miksi vironkielinen kansalliseepos syntyi juuri pienessä Võrun kaupungissa?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Ja vastaus on kyl aika arkinen. Vironkielinen kansalliseepos [[Kalevipoeg]] syntyi Võrussa, koska sen kirjoittaja, lääkäri [[Friedrich Reinhold Kreutzwald]], asui ja työskenteli kaupungissa vuosina 1833–1877. Kaupunki ei siis ollut eepoksen aihe vaan sen tekijän kotipaikka. Võru on Kaakkois-Virossa [[Tamula-järven]] rannalla sijaitseva Võrumaan maakunnan keskus, ja Kreutzwaldin muistoa vaalii nykyään kaupungin muistomuseo. Pieni kaupunki, iso kirja, ja ylhäältä se näyttää ihan reilulta diililtä.",
+  "linkit": [
+   "Kalevipoeg",
+   "Friedrich Reinhold Kreutzwald",
+   "Tamula-järven"
+  ],
+  "jatkot": [
+   "Kuka Friedrich Reinhold Kreutzwald oli?",
+   "Millainen on võron kieli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-voru",
+  "kysymys": "Miksi Võru perustettiin vasta vuonna 1784, ja kenen käskystä?",
+  "uusi": false,
+  "vastaus": "Ai tota. Siinä on oikeastaan kaksi kysymystä yhdessä. Võru perustettiin elokuussa 1784 keisarinna [[Katariina II:n]] pyynnöstä uuden piirikunnan keskukseksi, joten kyse oli pyynnöstä eikä varsinaisesta käskystä. Viro kuului tuolloin [[Venäjän keisarikuntaan]], ja uudelle piirikunnalle tarvittiin hallinnollinen keskus. Vuodesta 1797 lähtien kaupunki on ollut ympäristönsä hallintokeskus.\n\nKaupunki tilauksesta kuulostaa minun korvaani oudolta, mutta ylhäältä katsoen jokaisen kaupungin on kai joku joskus päättänyt aloittaa. Kyyhkyntornissakin on aina joku, joka sanoi, että tähän.",
+  "linkit": [
+   "Katariina II:n",
+   "Venäjän keisarikuntaan"
+  ],
+  "jatkot": [
+   "Kuka Katariina II oli?",
+   "Millainen kaupunki Võru on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-voru",
+  "kysymys": "Onko võro oma kieli vai viron kielen murre?",
+  "uusi": true,
+  "vastaus": "No niin, tästä kiistellään vähän. Võro on Kaakkois-Virossa, [[Võrumaan]] maakunnassa, puhuttu kielimuoto, joka kuuluu viron kielen eteläiseen ryhmään. Asiasta esitetään kaksi vakiintunutta kantaa: toisten mukaan võro on oma kielensä, toisten mukaan se on viron kielen murre. Kaupungin nimi on võron kielellä Võro, ja kielen asemaa tukee Võrussa toimiva [[Võro-instituutti]]. Minä en ota kantaa, minä vain kuherran.",
+  "linkit": [
+   "Võrumaan",
+   "Võro-instituutti"
+  ],
+  "jatkot": [
+   "Mihin kieliperheeseen viron kieli kuuluu?",
+   "Mitä muita murteita virossa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-voru",
+  "kysymys": "Mistä Kalevipoeg-eepos kertoo?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Tän pitäis löytyä päästä. [[Kalevipoeg]] on Viron kansalliseepos, jonka [[Kreutzwald]] kokosi ja kirjoitti 1800-luvun puolivälin tienoilla vironkielisen kansanperinteen pohjalta. Päähenkilö on jättiläissankari, Kalevin poika, ja runo kertoo hänen seikkailuistaan ja taisteluistaan; tarina on lähellä kansansatuja ja myyttejä. Teos syntyi aikana, jolloin virolaiset alkoivat rakentaa omaa kirjallista kulttuuriaan, ja sen esikuvana pidetään usein suomalaista [[Kalevalaa]]. Ja tämän minä muistin ilman yhtään lunttilappua.",
+  "linkit": [
+   "Kalevipoeg",
+   "Kreutzwald",
+   "Kalevalaa"
+  ],
+  "jatkot": [
+   "Mikä on Kalevala?",
+   "Mitä muita kansalliseepoksia Euroopassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-voru",
+  "kysymys": "Kuka Katariina II oli?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Tässä pitää olla tarkkana. Katariina II, jota kutsutaan myös Katariina Suureksi, oli [[Venäjän]] keisarinna 1700-luvun jälkipuoliskolla. Hän syntyi saksalaiseen ruhtinassukuun ja nousi valtaan vuonna 1762 miehensä [[Pietari III:n]] syrjäytyksen jälkeen; hän hallitsi kuolemaansa saakka vuoteen 1796. Hänen aikanaan Venäjän alue laajeni ja hallintoa uudistettiin, ja hän kävi kirjeenvaihtoa valistusajan ajattelijoiden, kuten [[Voltairen]], kanssa. Tähän uudistusten aikaan liittyy myös Võrun perustaminen uuden piirikunnan keskukseksi. No olipa tuhti paketti yhdestä keisarinnasta.",
+  "linkit": [
+   "Venäjän",
+   "Pietari III:n",
+   "Voltairen"
+  ],
+  "jatkot": [
+   "Mikä oli valistusaika?",
+   "Miten Viro päätyi Venäjän keisarikunnan osaksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-suure-jaani",
+  "kysymys": "Miksi pieni Suure-Jaani tunnetaan musiikista?",
+  "uusi": false,
+  "vastaus": "Mmm— tost minä osaan kertoo. Suure-Jaanin musiikkiperinne liittyy 1800-luvun kansallisen heräämisen aikaan, jolloin pitäjä oli kulttuurin ja sivistyksen keskus. Keskeinen hahmo oli koulumestari ja muusikko [[Joosep Kappin]] ansiosta, hänen työnsä nosti pienen paikkakunnan merkittäväksi. Paikkakunnalta oli kotoisin myös Viron ensimmäinen ammattimaalari [[Johann Köler]]. Nykyään Suure-Jaanissa järjestetään kesäisin klassisen musiikin festivaali, joka on omistettu säveltäjäsuku [[Kappien]] muistolle. Pienessä paikassa voi olla suuri sävel, sen minä sanon.",
+  "linkit": [
+   "Joosep Kappin",
+   "Johann Köler",
+   "Kappien"
+  ],
+  "jatkot": [
+   "Kuka Johann Köler oli?",
+   "Millainen kaupunki Viljandi on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-suure-jaani",
+  "kysymys": "Mistä nimi Suure-Jaani tulee, ja miksi se vakiintui koko asutukselle vasta 1880-luvulla?",
+  "uusi": false,
+  "vastaus": "Ai se. Nimi on peräisin paikan kirkosta. Suure-Jaani tarkoittaa suunnilleen Suuren Juhanan paikkaa, ja asutus kasvoi [[Suuren Johanneksen evankeliumin kirkon]] ympärille. Kirkko on rakennettu ennen vuotta 1300, ja se paloi [[Pohjan sodassa]] vuonna 1703; sen korjaus valmistui vasta vuonna 1767. Nimi vakiintui koko asutukselle vasta 1880-luvulla, mutta tarkkaa syytä juuri siihen ajankohtaan en tiedä.\n\nNimet vakiintuvat harvoin päätöksellä, useammin sillä, että kaikki alkavat käyttää samaa sanaa. Niin on käynyt monelle pullannimellekin, uskoisin.",
+  "linkit": [
+   "Suuren Johanneksen evankeliumin kirkon",
+   "Pohjan sodassa"
+  ],
+  "jatkot": [
+   "Mikä oli Pohjan sota?",
+   "Kuka Joosep Kapp oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-suure-jaani",
+  "kysymys": "Mikä Pohjan sota oli ja miten se vaikutti Viroon?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Tämä on raskaampi aihe, mutta kerron sen. Pohjan sota käytiin vuosina 1700–1721, ja sen osapuolina olivat yhtäältä [[Ruotsin]] valtakunta ja toisaalta Venäjä liittolaisineen; kyse oli herruudesta [[Itämeren]] alueella. Viro oli tuolloin Ruotsin vallan alla, joten sotatoimet ulottuivat myös sinne. Venäjän joukot valtasivat alueen vuonna 1710, ja sodan päättänyt [[Uudenkaupungin rauha]] vuonna 1721 vahvisti alueen siirtymisen Venäjälle. Sodan aikana alueella koettiin tuhoa, nälkää ja tauteja, ja esimerkiksi Suure-Jaanin kirkko paloi vuonna 1703. Tapahtumista on yli kolmesataa vuotta. Onpas siitä onneksi pitkä aika.",
+  "linkit": [
+   "Ruotsin",
+   "Itämeren",
+   "Uudenkaupungin rauha"
+  ],
+  "jatkot": [
+   "Mikä oli Uudenkaupungin rauha?",
+   "Millainen Viro oli Ruotsin vallan aikana?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-suure-jaani",
+  "kysymys": "Mikä oli Viron kansallinen herääminen 1800-luvulla?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Viron kansallinen herääminen oli noin 1800-luvun puolivälistä alkanut ajanjakso, jolloin virolaiset alkoivat entistä enemmän arvostaa omaa kieltään ja kulttuuriaan ja järjestäytyä sen ympärille. Sen merkkejä olivat vironkielinen kirjallisuus ja lehdistö, koulut ja seurat sekä yhteislaulu. Runoilija [[Lydia Koidula]] ja eepos [[Kalevipoeg]] kuuluvat ajan tunnetuimpiin nimiin, ja ensimmäiset yleiset [[laulujuhlat]] pidettiin Tartossa vuonna 1869. Suure-Jaanin pitäjä oli yksi tämän liikkeen kulttuurikeskuksista. Kyyhky kuhertaa yksin, mut ymmärrän kyl ajatuksen yhteislaulusta.",
+  "linkit": [
+   "Lydia Koidula",
+   "Kalevipoeg",
+   "laulujuhlat"
+  ],
+  "jatkot": [
+   "Mikä on Viron laulujuhla ja miksi se on tärkeä?",
+   "Kuka oli Lydia Koidula?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-suure-jaani",
+  "kysymys": "Mitä nähtävää Viljandissa on?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Viljandi on lähellä, noin 25 kilometriä Suure-Jaanista etelään. Viljandi on Viljandimaan keskus, ja sen nähtävyyksiin kuuluvat järven rannalla olevat [[Liivinmaan ritarikunnan linnan rauniot]] sekä kesäisin järjestettävä [[kansanmusiikkifestivaali]]. Kaupungin maisemaa leimaavat järvi ja kukkulat, ja sen vanha linnan paikka on suosittu kävelykohde. Täällä on varmasti oma pullansa, en vaan tiedä sen nimee.",
+  "linkit": [
+   "Liivinmaan ritarikunnan linnan rauniot",
+   "kansanmusiikkifestivaali"
+  ],
+  "jatkot": [
+   "Mikä Liivinmaan ritarikunta oli?",
+   "Millaista kansanmusiikkia Virossa soitetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vormsi",
+  "kysymys": "Miksi Vormsin saarella asui vuosisatoja ruotsinkielisiä?",
+  "uusi": false,
+  "vastaus": "Nyt muistan. Tost saaresta minä olen kuullut. Vormsin asukkaat olivat suurimman osan tunnetusta historiasta [[rannikkoruotsalaisia]], ja saaren asutus tunnetaan asiakirjoista 1200-luvulta lähtien. En ole varma, milloin ja miten ensimmäiset ruotsinkieliset asukkaat saapuivat saarelle, mutta kieli säilyi vuosisatoja todennäköisesti siksi, että saari sijaitsee [[Itämerellä]] erillään mantereesta ja yhteisö pysyi tiiviinä. Saaren ruotsinkielinen nimi on [[Ormsö]]. Merellä kaikki kulkee vähän hitaammin, sen olen huomannut.",
+  "linkit": [
+   "rannikkoruotsalaisia",
+   "Itämerellä",
+   "Ormsö"
+  ],
+  "jatkot": [
+   "Mitä ruotsin kieltä Virossa on puhuttu?",
+   "Millainen on Vormsin luonto?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vormsi",
+  "kysymys": "Mitä tapahtui saaren ruotsinkieliselle väestölle toisen maailmansodan lopulla?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Tämä on vakava asia. [[Toisen maailmansodan]] loppuvaiheessa lähes koko saaren väestö evakuoitiin tai pakeni [[Ruotsiin]]; asukasluku oli noussut noin kolmeentuhanteen ennen sotaa. Tapahtumista on yli kahdeksankymmentä vuotta. Sodan jälkeen Viro oli osa [[Neuvostoliittoa]], eikä ruotsinkielinen asutus palannut saarelle entiselleen. Nykyisin Vormsilla asuu noin 400 rekisteröityä asukasta. Hyvä, että siitä on jo pitkä aika.",
+  "linkit": [
+   "Toisen maailmansodan",
+   "Ruotsiin",
+   "Neuvostoliittoa"
+  ],
+  "jatkot": [
+   "Mistä ruotsinkielinen asutus Viroon tuli?",
+   "Miten Vormsille pääsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vormsi",
+  "kysymys": "Mitä saaren nimi Ormsö tarkoittaa ja mistä se tulee?",
+  "uusi": true,
+  "vastaus": "Katotaas. Ruotsinkielinen nimi Ormsö tarkoittaa Ormin saarta tai käärmesaarta, sillä ruotsin sana orm voi tarkoittaa käärmettä. Siitä on johdettu sekä vironkielinen nimi [[Vormsi]] että saksankielinen nimi. Nimi on siis peräisin [[rannikkoruotsalaisten]] pitkään puhumasta ruotsin kielestä eikä viron kielestä. Käärmesaari kuulostaa pelottavammalta kuin kyyhkyn silmin katsottuna.",
+  "linkit": [
+   "Vormsi",
+   "rannikkoruotsalaisten"
+  ],
+  "jatkot": [
+   "Mitä ruotsin kieltä Virossa on puhuttu?",
+   "Mistä saksankielinen nimi on peräisin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vormsi",
+  "kysymys": "Keitä rannikkoruotsalaiset ovat?",
+  "uusi": true,
+  "vastaus": "Sepä sattui, tost minä tiedän jotain. Rannikkoruotsalaiset ovat ruotsinkielinen väestö, joka on asunut Viron länsirannikolla ja saarilla, esimerkiksi [[Vormsilla]], vuosisatojen ajan. Heidän asutuksensa ulottuu ainakin keskiajalle, ja he säilyttivät oman kielensä ja tapansa, vaikka ympärillä puhuttiin pääosin viroa. Suurin osa heistä lähti Ruotsiin [[toisen maailmansodan]] lopulla, ja nykyään yhteisö on pieni. Vormsilla asuu nykyisin noin 400 rekisteröityä asukasta. Onpas siitä onneksi pitkä aika.",
+  "linkit": [
+   "Vormsilla",
+   "toisen maailmansodan"
+  ],
+  "jatkot": [
+   "Mistä ruotsinkielinen asutus Viroon tuli?",
+   "Kuinka monta rannikkoruotsalaista nykyään on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vormsi",
+  "kysymys": "Mitä muita saaria Länsi-Viron saaristoon kuuluu?",
+  "uusi": true,
+  "vastaus": "No jopas. Tähän osaan vastata. Länsi-Viron saaristoon kuuluvat muun muassa [[Saarenmaa]], [[Hiidenmaa]], [[Muhu]] ja Vormsi. Saarenmaa on Viron suurin saari ja Hiidenmaa toiseksi suurin, ja Vormsi on neljänneksi suurin. Lisäksi Riianlahden puolella ovat pienemmät [[Kihnu]] ja Ruhnu, jotka lasketaan usein samaan saaristoon.\n\nYlhäältä katsoen saaret näyttävät pullilta pellillä, ja se on kyllä kiistaton asiantuntijahavainto.",
+  "linkit": [
+   "Saarenmaa",
+   "Hiidenmaa",
+   "Muhu",
+   "Kihnu"
+  ],
+  "jatkot": [
+   "Millainen saari Saarenmaa on?",
+   "Miten Hiidenmaalle pääsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-poltsamaa",
+  "kysymys": "Miksi Põltsamaasta tuli 1500-luvulla hetkeksi kuningaskunnan pääkaupunki?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Põltsamaa oli vuosina 1570–1578 Liivinmaan kuningaskunnan pääkaupunki [[Liivinmaan sodan]] aikana. Kuningaskunta oli lyhytikäinen vasallivaltio: herttua [[Magnus]], [[Tanskan]] kuninkaan veli, hallitsi sitä Põltsamaasta käsin Venäjän tsaarin suojeluksessa. Tapahtumista on yli neljäsataa vuotta. Onpas siitä aikaa.",
+  "linkit": [
+   "Liivinmaan sodan",
+   "Magnus",
+   "Tanskan"
+  ],
+  "jatkot": [
+   "Mikä Liivinmaan sota oli?",
+   "Kuka herttua Magnus oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-poltsamaa",
+  "kysymys": "Miten ensimmäinen vironkielinen aikakauslehti syntyi pienellä paikkakunnalla?",
+  "uusi": false,
+  "vastaus": "Tost minä osaan kertoo. Põltsamaasta tuli 1700-luvun jälkipuoliskolla Pohjois-Liivinmaan [[valistusliikkeen]] keskus, ja lähelle perustettiin ensimmäinen yksityinen [[kirjapaino]] Venäjän keisarikunnassa. Kun painokone oli lähellä, vironkielistä luettavaa saattoi julkaista paikan päällä, ja vuonna 1766 siellä alettiin julkaista ensimmäistä vironkielistä aikakauslehteä nimeltä [[Lühhike öppetus]]. Nimi tarkoittaa suunnilleen lyhyttä opetusta, mikä kertoo lehden valistavasta luonteesta. Tarkemmin siitä, kuka lehden takana oli, en ole varma.\n\nSukuni on aina kunnioittanut kaikkea, mikä kuljettaa sanoja eteenpäin, vaikka painokone veikin meiltä osan töistä. Kunnioitus on silti aitoa.",
+  "linkit": [
+   "valistusliikkeen",
+   "kirjapaino",
+   "Lühhike öppetus"
+  ],
+  "jatkot": [
+   "Milloin ensimmäinen suomenkielinen lehti ilmestyi?",
+   "Mikä oli valistusaika?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-poltsamaa",
+  "kysymys": "Mitä valistusaika tarkoittaa ja mistä se levisi?",
+  "uusi": true,
+  "vastaus": "Kato, tää on tuttu juttu. Valistusaika oli 1700-luvun Euroopassa vaikuttanut aate- ja kulttuurisuuntaus, joka korosti järkeä, tiedettä ja kasvatusta. Sen ajattelijat, kuten [[Voltaire]] ja [[Immanuel Kant]], kehottivat ihmisiä käyttämään omaa ymmärrystään. Aate levisi kirjojen, lehtien ja kirjeenvaihdon kautta, ja sen vaikutus ulottui myös hallitsijoihin: keisarinna [[Katariina II]] kävi kirjeenvaihtoa valistusajattelijoiden kanssa. Põltsamaalla se näkyi kirjapainona ja ensimmäisenä vironkielisenä aikakauslehtenä. Viesti on kyllä aina ollut tärkeämpi kuin viestinviejä, sen olen oppinut.",
+  "linkit": [
+   "Voltaire",
+   "Immanuel Kant",
+   "Katariina II"
+  ],
+  "jatkot": [
+   "Kuka oli Voltaire?",
+   "Mikä oli Kantin ajatus valistuksesta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-poltsamaa",
+  "kysymys": "Mikä Liivinmaa oli historiassa?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Liivinmaa oli historiallinen alue Itämeren itärannalla, joka kattoi karkeasti nykyisen [[Latvian]] ja Etelä-Viron alueita. Keskiajalla aluetta hallitsivat Saksalaisen ritarikunnan haara ja piispat, ja 1500-luvulla [[Liivinmaan sodassa]] alueesta kilpailivat monet vallat. Myöhemmin alue oli Puola-Liettuan, [[Ruotsin]] ja lopulta Venäjän vallan alla. Rajat ovat kyllä liikkuneet enemmän kuin yksikään kyyhky.",
+  "linkit": [
+   "Latvian",
+   "Liivinmaan sodassa",
+   "Ruotsin"
+  ],
+  "jatkot": [
+   "Mikä oli Saksalainen ritarikunta?",
+   "Miten Latvia itsenäistyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-poltsamaa",
+  "kysymys": "Miten kirjapaino muutti tiedon leviämistä Euroopassa?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Tämä on tärkeä. Saksalainen [[Johannes Gutenberg]] kehitti [[Mainzissa]] 1400-luvun puolivälissä irtokirjaimiin perustuvan painotekniikan Euroopassa. Kirjojen valmistaminen nopeutui ja halpeni, kun käsin kopioinnin sijaan voitiin painaa monta samanlaista kappaletta. Tieto, uskonnolliset kirjoitukset ja myöhemmin [[sanomalehdet]] levisivät laajemmalle lukijakunnalle, ja lukutaito yleistyi vähitellen. Põltsamaan 1700-luvun kirjapaino on tästä kehityksestä pieni mutta tärkeä esimerkki Virossa. Ja minä kuljetan yhä vain yhden kirjeen kerrallaan.",
+  "linkit": [
+   "Johannes Gutenberg",
+   "Mainzissa",
+   "sanomalehdet"
+  ],
+  "jatkot": [
+   "Milloin ensimmäinen suomenkielinen kirja painettiin?",
+   "Miten sanomalehdet ovat kehittyneet?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sindi",
+  "kysymys": "Miksi kokonainen asutus syntyi juuri yhden tehtaan ympärille?",
+  "uusi": false,
+  "vastaus": "Katotaas. Kokonainen asutus syntyi tehtaan ympärille, koska tehdas toi mukanaan työpaikkoja ja työntekijät tarvitsivat asuntoja läheltä. Sindissä tehdas oli vuonna 1833 kartanon maille perustettu [[tekstiilitehdas]], jonka perusti riikalainen kauppias ja teollisuudenharjoittaja [[Johann Christoph Wöhrmann]]. Tehdas rakennettiin [[Pärnun joen]] rannalle, työläisten talot sen itäpuolelle ja työnjohtajien talot etelään, ja vuoteen 1841 mennessä alueelle oli valmistunut 57 taloa. Tehtaasta tuli yksi Liivinmaan ja Viron kuvernementtien suurimmista. Yksi tehdas ja pian kokonainen kylä, ylhäältä sen näkee heti.",
+  "linkit": [
+   "tekstiilitehdas",
+   "Johann Christoph Wöhrmann",
+   "Pärnun joen"
+  ],
+  "jatkot": [
+   "Mitä tekstiilitehtaassa valmistettiin 1800-luvulla?",
+   "Kuka Johann Christoph Wöhrmann oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sindi",
+  "kysymys": "Miksi pato haittasi kalojen nousua joessa?",
+  "uusi": false,
+  "vastaus": "Ai tota. Tässä on kalojen kannalta tärkeä asia. Pato haittasi kalojen nousua [[Pärnun joessa]], koska monet joen kalalajit vaeltavat lisääntymisaikaan ylävirtaan kutupaikoilleen. Betoninen pato sulki tämän reitin, joten kalat eivät päässeet joen yläjuoksulle. Tällaisia [[vaelluskaloja]] ovat esimerkiksi [[lohikalat]]. Sindin pato purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella, jotta kalat pääsevät taas nousemaan. Kalat eivät ainakaan valita.",
+  "linkit": [
+   "Pärnun joessa",
+   "vaelluskaloja",
+   "lohikalat"
+  ],
+  "jatkot": [
+   "Miksi lohi vaeltaa kutemaan jokeen?",
+   "Mitä muita kaloja Itämeressä elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sindi",
+  "kysymys": "Millaista oli työ tekstiilitehtaassa 1800-luvulla?",
+  "uusi": true,
+  "vastaus": "No niin, tämä oli kovaa työtä. Tekstiilitehtaassa kehrättiin lankaa ja kudottiin kangasta, usein koneilla, joita käytettiin vesivoimalla tai myöhemmin höyryllä. Työpäivät olivat yleensä pitkiä, palkat pieniä ja olosuhteet usein kovat, ja työntekijöinä oli myös lapsia. Työläiset asuivat tavallisesti tehtaan lähellä, kuten Sindissä, jossa työläisten talot rakennettiin tehtaan itäpuolelle. Euroopassa tällaiset tehtaat olivat osa [[teollisen vallankumouksen]] muutosta, joka siirsi työtä kodeista ja pelloilta tehtaisiin. Kyl minä kunnioitan ketä tahansa, joka tekee töitä vaikka sataa.",
+  "linkit": [
+   "teollisen vallankumouksen"
+  ],
+  "jatkot": [
+   "Mikä oli teollinen vallankumous?",
+   "Miten työläisten asuminen järjestettiin tehdaskylissä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sindi",
+  "kysymys": "Miksi Pärnu on tunnettu kylpyläkaupunkina?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Tän minä saan kasaan. Pärnu on Lounais-Viron rannikkokaupunki, joka sijaitsee [[Riianlahden]] rannalla [[Pärnun joen]] suulla. Se tunnetaan kylpyläkaupunkina: sinne perustettiin kylpylätoimintaa 1800-luvulla, ja laaja hiekkaranta sekä hoitomuodot, kuten [[mutakylpylät]], ovat vetäneet vieraita kesäisin. Sindin tehdaskylä sijaitsee noin 14 kilometrin päässä Pärnusta. Hiekkaranta kuulostaa kyyhkyn korvaan hyvältä, jalat kiittävät.",
+  "linkit": [
+   "Riianlahden",
+   "Pärnun joen",
+   "mutakylpylät"
+  ],
+  "jatkot": [
+   "Mitä mutakylpy tarkoittaa?",
+   "Mitä muita kylpyläkaupunkeja Itämeren rannalla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sindi",
+  "kysymys": "Miksi jokien patoja puretaan nykyään Euroopassa?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Jokien patoja puretaan nykyään monessa Euroopan maassa, koska ne katkaisevat joen luonnollisen virtauksen ja sulkevat [[vaelluskaloilta]] reitin kutupaikoille. Monet padot ovat myös vanhentuneita: ne on rakennettu aikoinaan esimerkiksi myllyjen ja tehtaiden käyttövoimaksi, eivätkä ne enää palvele alkuperäistä tarkoitustaan. Kun pato puretaan ja jokeen palautetaan [[koskia]] ja luonnollisia uomia, joen eliöstö voi elpyä. [[Sindin]] patokin purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella. Kyyhky lentää padon yli, joten minä en ole koskaan huomannut koko asiaa.",
+  "linkit": [
+   "vaelluskaloilta",
+   "koskia",
+   "Sindin"
+  ],
+  "jatkot": [
+   "Mikä on kalatie ja miten se toimii?",
+   "Miten vesivoimaa tuotetaan joella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kunda",
+  "kysymys": "Miksi sementtitehdas rakennettiin juuri meren rannalle?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Tost minä osaan kertoo jotain. Sementti on painavaa ja tilaa vievää tavaraa, joten sen kuljettaminen maitse oli 1800-luvulla hidasta ja kallista, kun laivalla suuria määriä sai liikkumaan edullisemmin. Rannalla sijaitseva tehdas pääsi lastaamaan tuotteensa suoraan satamaan, ja Kundassa sataman rakennuslupa oli myönnetty jo vuonna 1805, kauan ennen tehtaan perustamista vuonna 1870. Sementin raaka-aineita ovat kalkkikivi ja savi, joita Pohjois-Viron maaperässä on, mutta en ole varma, mistä Kundan tehdas ne tarkalleen sai. Näin tehdas, satama ja kaupunki kasvoivat yhdessä [[Suomenlahden]] rannalle ja [[kalkkikiveä]] hyödyntävä teollisuus sai oman väylänsä merelle. Minä kuljen kyl mieluummin ilmateitse.",
+  "linkit": [
+   "Suomenlahden",
+   "kalkkikiveä"
+  ],
+  "jatkot": [
+   "Miten sementti valmistetaan kalkkikivestä?",
+   "Mihin sementtiä käytetään rakentamisessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kunda",
+  "kysymys": "Mitä ihmiset elivät täällä noin 6500 eaa. ja mistä se tiedetään?",
+  "uusi": false,
+  "vastaus": "Ai tota. Tost on aikaa melko lailla. Kundan lähistöltä löydetyt jäänteet kertovat metsästäjä-kalastajayhteisöistä, jotka elivät alueella noin vuonna 6500 eaa., siis [[jääkauden]] jälkeisellä kivikaudella. Heidän elämänsä perustui luonnosta saatavaan ravintoon: he metsästivät ja kalastivat ja luultavasti keräsivät myös kasveja, ja asuinpaikat sijaitsivat vesistöjen lähellä. Tieto perustuu arkeologisiin löytöihin, esimerkiksi asuinpaikoilta kaivettuihin työkaluihin ja muihin esineisiin, ja niiden mukaan on nimetty [[Kundan kulttuuri]], joka kuuluu Viron vanhimpiin tunnettuihin esihistoriallisiin yhteisöihin.\n\nJoku istui silloin tällä rannalla odottamassa kalaa, ihan niin kuin ihmiset istuvat satamalaitureilla vieläkin. Minä ymmärrän kärsivällisyyden, vaikka lokit eivät sitä osaa.",
+  "linkit": [
+   "jääkauden",
+   "Kundan kulttuuri"
+  ],
+  "jatkot": [
+   "Miten arkeologit ajoittavat kivikauden löytöjä?",
+   "Millaisia työkaluja kivikauden kalastajat käyttivät?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kunda",
+  "kysymys": "Miten sementti eroaa betonista?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Tää on kyl kemiaa. Sementti on sideaine, joka toimii betonin liimana, kun taas betoni on valmis rakennusmateriaali, joka syntyy sekoittamalla sementtiä, vettä, hiekkaa ja sorakiviainesta. Sementti valmistetaan polttamalla [[kalkkikivestä]] ja savesta koostuvaa seosta erittäin korkeassa lämpötilassa, jolloin syntyy [[klinkkeriä]]. Klinkkeri jauhetaan hienoksi jauheeksi, ja siihen lisätään tavallisesti [[kipsiä]], joka hidastaa kovettumista. Kun sementti sekoitetaan veteen, se alkaa kemiallisesti sitoutua ja kovettua, ja kiviaines tekee betonista lujan ja edullisen. Kuiva aihe, mut hyvä tietää.",
+  "linkit": [
+   "kalkkikivestä",
+   "klinkkeriä",
+   "kipsiä"
+  ],
+  "jatkot": [
+   "Miksi betoni kovettuu veden vaikutuksesta?",
+   "Mistä roomalainen betoni oli tehty?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kunda",
+  "kysymys": "Mikä on Suomenlahti ja minkä maiden rannat sen ympäröivät?",
+  "uusi": true,
+  "vastaus": "No niin, Suomenlahti. Se näkyy ylhäältä kyl hyvin. Suomenlahti on [[Itämeren]] itäinen, pitkä ja kapea lahti, jota rajaavat pohjoisessa ja idässä Suomi, etelässä Viro ja itäpäässä Venäjä. Lahden poikki kulkee vilkas laivaliikenne, ja esimerkiksi [[Helsingin]] ja Tallinnan välillä liikennöi lauttoja tiheään. Itäpäässä lahti avautuu kohti [[Pietarin]] seutua. Kundan satama on yksi lahden monista rannoista, ja niin on moni muukin Pohjois-Viron kaupunki. Siivin lahden ylittää nopeammin kuin lautalla, ainakin minun kokemukseni mukaan.",
+  "linkit": [
+   "Itämeren",
+   "Helsingin",
+   "Pietarin"
+  ],
+  "jatkot": [
+   "Miksi Suomenlahti jäätyy talvisin?",
+   "Millaisia laivoja Suomenlahdella liikennöi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kunda",
+  "kysymys": "Mitä tulli on ja miksi satamissa kerättiin tulleja?",
+  "uusi": true,
+  "vastaus": "Kas vaan, tullia. Siitä kyl riittää juttua. Tulli on maksu, jota valtio perii tavaroista, kun ne tuodaan maahan tai viedään maasta. Satamat olivat luonteva paikka valvoa tavaraliikennettä, koska suuret tavaramäärät saapuivat laivoilla ja ne oli helppo tarkastaa yhdessä paikassa. Tullien tuotoilla rahoitettiin valtion menoja, ja niillä saatettiin myös suojata kotimaista tuotantoa ulkomaiselta kilpailulta. Kundan tullipiste avattiin vuonna 1812, jolloin Viro kuului [[Venäjän keisarikuntaan]]. Tullipisteet liittyivät usein myös [[salakuljetuksen]] torjuntaan. Tästä riittäisi juttua vielä pitkäksi aikaa, mut tähän se jäi.",
+  "linkit": [
+   "Venäjän keisarikuntaan",
+   "salakuljetuksen"
+  ],
+  "jatkot": [
+   "Mikä on salakuljetus ja miten sitä on torjuttu?",
+   "Miten tulli toimii nykyään EU:n sisärajoilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rapina",
+  "kysymys": "Miksi paperitehtaat rakennettiin yleensä jokien varrelle?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Joki oli tehtaalle kyl ykkösjuttu. Paperin valmistus vaati paljon puhdasta vettä: [[lumput]] ja muu raaka-aine liotettiin, murskattiin ja huuhdeltiin vedessä, ja massa laimennettiin vedellä ennen arkkien muotoilua. Lisäksi joen virtaus tarjosi voimaa, sillä [[vesipyörä]] käytti vanhoissa tehtaissa jauhavia vasaroita ja muita koneita. Joki toimi myös kuljetusreittinä raaka-aineille ja valmiille tuotteille. Räpinassa paperitehdas on toiminut [[Võhandu-joen]] varrella vuodesta 1734, ja se on toiminnassa edelleen. Onpas tästä tullu pitkä vesijuttu.",
+  "linkit": [
+   "lumput",
+   "vesipyörä",
+   "Võhandu-joen"
+  ],
+  "jatkot": [
+   "Miten vesipyörä muuttaa virran voimaksi?",
+   "Mistä raaka-aineesta paperi tehtiin 1700-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rapina",
+  "kysymys": "Millä tavalla paperia valmistettiin ennen nykyaikaisia koneita?",
+  "uusi": false,
+  "vastaus": "No niin, tämä on kyl käsityötä. Ennen koneellista valmistusta paperi tehtiin käsin arkki kerrallaan. Raaka-aineena käytettiin Euroopassa pääasiassa hamppu- ja [[pellavalumppuja]], jotka lahotettiin ja jauhettiin vedessä massaksi. Työntekijä upotti massakaukaloon kehikon, jonka pohjana oli seula, ja nosti siitä ohuen kerroksen massaa; vesi valui pois ja jäljelle jäi kostea kuitukerros. Arkit siirrettiin huopien väliin, puristettiin ja kuivatettiin, ja usein ne vielä liimattiin, jotta muste ei levinnyt. Paperi tuli Euroopassa vähitellen [[pergamentin]] rinnalle, koska se oli edullisempaa. Ja minä kun luulin, että paperi vain kasvaa postilaatikkoon.",
+  "linkit": [
+   "pellavalumppuja",
+   "pergamentin"
+  ],
+  "jatkot": [
+   "Mitä pergamentti on ja mistä se tehtiin?",
+   "Miten paperikone muutti paperin valmistusta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rapina",
+  "kysymys": "Miten kirjapaino muutti paperin käyttöä Euroopassa?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Tost alkoi iso käänne. Painotaito, jota [[Johannes Gutenberg]] kehitti [[Mainzissa]] noin 1450-luvulla, teki kirjojen monistamisesta paljon nopeampaa kuin käsin kopioiminen. Kun painokoneet tuottivat suuria määriä sivuja, tarvittiin runsaasti paperia, ja se oli [[pergamenttia]] huomattavasti edullisempaa, joten kysyntä kasvoi voimakkaasti. Paperitehtaita perustettiin lisää, ja kirjojen, esitteiden ja lentokirjasten määrä kasvoi, mikä nopeutti tiedon leviämistä Euroopassa.\n\nPainettu sana kulkee kyllä nopeammin kuin kyyhky, sen myönnän ilman katkeruutta. Silti käsin kirjoitettu kirje on minusta aina lämpimämpi.",
+  "linkit": [
+   "Johannes Gutenberg",
+   "Mainzissa",
+   "pergamenttia"
+  ],
+  "jatkot": [
+   "Kuka oli Johannes Gutenberg?",
+   "Miten ensimmäiset painetut kirjat tehtiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rapina",
+  "kysymys": "Mikä on võron kieli ja missä sitä puhutaan?",
+  "uusi": true,
+  "vastaus": "Ai se. Siit voisi puhua pitkäänkin. Võron kieli on itämerensuomalainen kieli, joka on läheistä sukua [[viron kielen]] kanssa. Sitä on perinteisesti puhuttu Kaakkois-Virossa, erityisesti [[Võrumaalla]], ja Räpinan seutu sijaitsee lähellä tätä aluetta, vaikka en ole varma, kuinka vahvasti kieli siellä nykyään kuuluu. Kielen asemasta on kaksi vakiintunutta näkemystä: toisten mukaan võro on oma kielensä, toisten mukaan se on viron kielen murre tai murreryhmä. Puhujamäärä on pieni, ja kieltä on pyritty vaalimaan koulutuksen ja kulttuurityön avulla. Minä kun en osaa sitä lausua, joten siivet vain heiluvat.",
+  "linkit": [
+   "viron kielen",
+   "Võrumaalla"
+  ],
+  "jatkot": [
+   "Mitä eroa viron ja suomen kielellä on?",
+   "Mitkä kielet kuuluvat itämerensuomalaisiin kieliin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rapina",
+  "kysymys": "Keitä olivat Sakarias ja Elisabet, joiden mukaan kirkko on nimetty?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Raamattu on tosin pöllön tontti. Luukkaan evankeliumin mukaan Sakarias oli pappi ja Elisabet hänen vaimonsa, ja heille syntyi vanhoilla päivillä poika, [[Johannes Kastaja]]. Elisabet kuvataan [[Marian]] sukulaiseksi, ja hänen ja Marian kohtaaminen on yksi evankeliumin tunnetuista kohtauksista. Kristillisessä perinteessä Sakarias ja Elisabet ovat arvostettuja hahmoja, joten kirkko voidaan nimetä heidän mukaansa. Kirkkojen nimet kertovat usein, millaista pyhimys- tai Raamattu-perinnettä seudulla on arvostettu. Hyvin meni, vaikka raamattu ei oo ihan minun alaani.",
+  "linkit": [
+   "Johannes Kastaja",
+   "Marian"
+  ],
+  "jatkot": [
+   "Mitä Luukkaan evankeliumi kertoo Johannes Kastajasta?",
+   "Miten kirkot saavat nimensä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kardla",
+  "kysymys": "Mistä ruotsalaiset päätyivät Hiidenmaalle jo 1500-luvulla?",
+  "uusi": false,
+  "vastaus": "Mmm— ai että. Hiidenmaan ruotsinkielinen asutus kuuluu laajempaan [[rannikkoruotsalaiseen]] asutukseen, jota Viron länsirannikolla ja saarilla on ollut keskiajalta lähtien. Asukkaat saapuivat meritse Ruotsin suunnalta, mutta tarkasta lähtöalueesta ja saapumisajasta en ole varma. Kärdla mainitaan ensi kertaa vuonna 1564 ruotsalaisten asuttamana kylänä, ja sen ruotsinkielinen nimi Kärrdal tarkoittaa suolaaksoa, sillä kaupunki sijaitsee matalassa laaksossa. [[Itämeren]] rannikot ovat pitkään olleet kielten ja kulttuurien sekoittumisen aluetta, ja Hiidenmaa on yksi esimerkki siitä. Meriä pitkin sinnekin, vaikka siivet ois ollu nopeammat.",
+  "linkit": [
+   "rannikkoruotsalaiseen",
+   "Itämeren"
+  ],
+  "jatkot": [
+   "Keitä ovat rannikkoruotsalaiset Virossa?",
+   "Miten Hiidenmaan nimi on syntynyt?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kardla",
+  "kysymys": "Miksi 455 miljoonaa vuotta vanha kraatteri ei näy maisemassa selvästi?",
+  "uusi": false,
+  "vastaus": "Kato, ikää on kyl riittävästi. Kraatteri syntyi [[ordovikikaudella]], kun alue oli matalan meren peitossa, ja sen jälkeen kuluneiden noin 455 miljoonan vuoden aikana se on peittynyt ja täyttynyt [[sedimenttikerroksiin]]. Myöhemmin [[jääkausien]] mannerjäätiköt ja eroosio ovat muokanneet maanpintaa, joten kraatterin reuna erottuu nykyään maisemassa vain heikosti. Rakenne tunnetaan ennen kaikkea geologisten tutkimusten ja porausten avulla, eikä se näy tavallisena selvänä kuoppana. Tämä kuvaus on yleispiirteinen, ja tarkat vaiheet tutkijat tuntevat paremmin kuin minä. Hiljainen maisema on kyllä minulle mieleen.",
+  "linkit": [
+   "ordovikikaudella",
+   "sedimenttikerroksiin",
+   "jääkausien"
+  ],
+  "jatkot": [
+   "Miten porauksilla tutkitaan kraatterin rakennetta?",
+   "Mitä jääkausi jätti jälkeensä Viron maisemaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kardla",
+  "kysymys": "Miten Hiidenmaalle pääsee mantereelta?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Minä lennän, mut muut menevät lautalla. Hiidenmaa on Viron toiseksi suurin saari [[Saarenmaan]] jälkeen. Mantereelta saarelle pääsee lautalla, joka kulkee [[Rohukülasta]] [[Heltermaahan]] [[Väinameren]] yli. Aikataulut vaihtelevat vuodenajan mukaan, joten ne kannattaa tarkistaa ennen matkaa, ja ruuhka-aikoina kannattaa varata paikka ajoissa. Toivottavasti lautalla on pullaa, mut en tiedä sen nimee.",
+  "linkit": [
+   "Saarenmaan",
+   "Rohukülasta",
+   "Heltermaahan",
+   "Väinameren"
+  ],
+  "jatkot": [
+   "Millainen saari Hiidenmaa on luonnoltaan?",
+   "Miten Viron saaret liittyvät toisiinsa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kardla",
+  "kysymys": "Miten meteoriitti eroaa meteorista ja meteoroidista?",
+  "uusi": true,
+  "vastaus": "Tuota niin, sekava kolmikko. Meteoroidi on avaruudessa liikkuva pieni kivi- tai metallikappale. Kun se törmää [[ilmakehään]] ja alkaa hehkua kitkan ja kuumenemisen vuoksi, ilmiötä kutsutaan meteoriksi eli [[tähdenlennoksi]]. Jos kappale ei pala kokonaan loppuun vaan putoaa maahan, sitä kutsutaan meteoriitiksi. Useimmat taivaalla nähtävät tähdenlennot ovat usein hiekanjyvän kokoisten hiukkasten aiheuttamia.\n\nKatolta katsoen taivas on minulle työpaikka, mutta tähdenlento saa silti aina vilkaisemaan ylös. Onneksi ne ovat yleensä paljon vaaratonta näytöstä.",
+  "linkit": [
+   "ilmakehään",
+   "tähdenlennoksi"
+  ],
+  "jatkot": [
+   "Miksi tähdenlentoja näkyy enemmän elokuussa?",
+   "Mistä meteoroidit ovat peräisin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kardla",
+  "kysymys": "Mikä on Väinameri ja miksi se on tärkeä linnuille?",
+  "uusi": true,
+  "vastaus": "Just niin, Väinameri. Siellä ne linnut kyl viihtyvät. Väinameri on Viron länsirannikon sekä [[Hiidenmaan]] ja Saarenmaan välinen matala merialue, jonka rannat ovat monin paikoin lintuvettä. Alue on tärkeä erityisesti [[muuttolinnuille]], jotka käyttävät sitä levähdys- ja ruokailupaikkana muuttomatkallaan, ja aluetta on suojeltu luontoarvojensa vuoksi. Matala vesi, rantaniityt ja saaret tarjoavat ravintoa ja suojaa monille lajeille, mutta tarkkoja lajimääriä en ole varma.\n\nKatolta katsoen muuttoaika näyttää kaupunkiliikenteeltä, vain äänekkäämpää ja ilman liikennevaloja. Linnut tietävät kyllä, missä on hyvä levähdyspaikka, ja sen taidon jaan heidän kanssaan.",
+  "linkit": [
+   "Hiidenmaan",
+   "muuttolinnuille"
+  ],
+  "jatkot": [
+   "Miksi linnut muuttavat syksyllä etelään?",
+   "Mitä kansallispuistoja Virossa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dominikaaniluostari",
+  "kysymys": "Mille vuosisadoille luostarin maine oppineisuuden keskuksena ajoittui?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: tämä on aika pitkä jakso. Tallinnan dominikaaniluostari toimi vanhassakaupungissa ainakin vuodesta 1246 ja oli koko [[keskiajan]] ajan kaupungin tärkein oppineisuuden keskus. Maine ajoittui siis 1200-luvulta 1500-luvun alkuun, ja vuoden 1524 tapahtumat [[uskonpuhdistuksen]] myllerryksessä vaikuttivat luostariin raskaasti. Tarkkaa vuosikymmentä, jolloin oppineisuus oli korkeimmillaan, en ole varma. Luostari sijaitsi [[Tallinnan]] vanhassakaupungissa, jossa sen jäänteitä on yhä nähtävissä. Aika monta sataa vuotta, ja minä kun jaksan muistaa vain eilisen reitin.",
+  "linkit": [
+   "keskiajan",
+   "uskonpuhdistuksen",
+   "Tallinnan"
+  ],
+  "jatkot": [
+   "Miten keskiajan luostarikoulut toimivat?",
+   "Mitä luostarin jäänteitä on nähtävissä vanhassakaupungissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dominikaaniluostari",
+  "kysymys": "Mikä kuvainraastona tunnettu tapahtuma tuhosi kirkon sisustuksen 1524?",
+  "uusi": false,
+  "vastaus": "Hetkinen. Kyse oli uskonpuhdistuksen aikaisesta kuvainraastosta eli ikonoklasmista. [[Uskonpuhdistus]] oli alkanut Saksassa vuonna 1517 [[Martti Lutherin]] vaikutuksesta, ja 1520-luvulla se oli levinnyt myös [[Itämeren]] alueen kaupunkeihin. Tallinnassa vuonna 1524 protestanttinen väkijoukko teki luostarin kirkossa kuvainraastoa, ja tuho levisi pian luostarin muihinkin osiin. Tapahtumasta on yli viisisataa vuotta, ja se kuuluu Euroopan laajempaan murrokseen, jossa kirkon ja kaupunkien suhteet muuttuivat. Siit on onneksi jo pitkä aika.",
+  "linkit": [
+   "Uskonpuhdistus",
+   "Martti Lutherin",
+   "Itämeren"
+  ],
+  "jatkot": [
+   "Miten uskonpuhdistus levisi Itämeren alueelle?",
+   "Mitä kuvainraasto tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dominikaaniluostari",
+  "kysymys": "Keitä dominikaanit olivat ja mitä he tekivät?",
+  "uusi": true,
+  "vastaus": "Katotaas. Vähän taustaa tarvitaan. Dominikaanit eli saarnaajaveljet muodostavat katolisen kirkon kerjäläisveljestön, jonka espanjalainen [[Dominicus]] perusti 1200-luvun alussa. Heidän tehtävänsä oli saarnaaminen ja opetus, ja he panostivat vahvasti koulutukseen ja [[teologiaan]], minkä vuoksi heidän luostareistaan tuli usein oppineisuuden keskuksia. Veljet eivät asuneet eristäytyneinä maaseudulla vaan kaupungeissa, joissa he saarnasivat ja opettivat. Tallinnan luostari on tästä esimerkki. Meikäläiset kantoivat vain kirjeitä, ei saarnoja.",
+  "linkit": [
+   "Dominicus",
+   "teologiaan"
+  ],
+  "jatkot": [
+   "Mikä erottaa fransiskaanit dominikaaneista?",
+   "Miten keskiajan yliopistot syntyivät?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dominikaaniluostari",
+  "kysymys": "Miksi luostarit pitivät keskiajalla panimoita?",
+  "uusi": true,
+  "vastaus": "Sepä sattui. Olut ja luostari kuuluvat yhteen. Keskiajalla olut oli yleinen päivittäinen juoma, ja sen valmistuksessa vesi keitettiin, mikä saattoi tehdä siitä juomavettä turvallisemman. Luostarissa tarvittiin ruokaa ja juomaa veljille ja vieraille, ja olut oli ravitsevaa myös [[paaston]] aikana. Ylijäämää voitiin myydä, joten panimo toi tuloja. Tallinnan dominikaaniluostarin panimo valmisti useita oluttyyppejä, ja veljet kävivät myös kalakauppaa. Tallinna kuului keskiajalla [[Hansaliittoon]], joten kauppa oli seudulla vilkasta. Olut ei oo kyyhkyn ala, mut pulla olisi.",
+  "linkit": [
+   "paaston",
+   "Hansaliittoon"
+  ],
+  "jatkot": [
+   "Mikä oli Hansaliitto ja mitä se kauppasi?",
+   "Miksi keskiajalla paastottiin ja miten?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dominikaaniluostari",
+  "kysymys": "Miksi Tallinnan vanhakaupunki kuuluu UNESCOn maailmanperintöön?",
+  "uusi": true,
+  "vastaus": "Ai että, vanhakaupunki. Katolta se näyttää hienolta. Tallinnan vanhakaupunki kuuluu UNESCOn maailmanperintöluetteloon, koska sitä pidetään yhtenä Pohjois-Euroopan parhaiten säilyneistä keskiaikaisista kauppakaupungeista. Siellä on säilynyt keskiaikainen katuverkko, kaupunginmuuria torneineen sekä [[Toompean]] ylä- ja alakaupungin kokonaisuus. Kaupunki kuului keskiajalla [[Hansaliiton]] kauppaverkostoon, ja se näkyy yhä rakennuksissa ja kaduissa. Luetteloon kaupunki otettiin 1990-luvun lopulla.\n\nYlhäältä Toompea ja alakaupunki erottuvat kuin kaksi eri kaupunkia, ja sellaisia ne keskiajalla olivatkin. Se on aika hieno näky siivekkäälle.",
+  "linkit": [
+   "Toompean",
+   "Hansaliiton"
+  ],
+  "jatkot": [
+   "Mitä muita Euroopan kaupunkeja on maailmanperintöluettelossa?",
+   "Miten Tallinnan kaupunginmuuri rakennettiin?"
+  ]
+ },
+ {
+  "kohde": "nosto:kaali",
+  "kysymys": "Miksi Kaalin kraatteri on poikkeuksellinen?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Kaalin erikoisuus ei ole pelkästään kraatterin koko, vaan se, että meteoriitti iski alueelle, jossa asuttiin. Useimmat [[törmäykset]] osuvat aavikolle, merelle tai jäätikölle, joten niistä ei ole jäänyt silminnäkijöitä, mutta [[Saarenmaalla]] iskun aikaan seudulla oli asukkaita, ja osa heistä selvisi. Pääkraatteri on 110 metriä leveä ja 22 metriä syvä, ja sen ympärillä on kahdeksan pienempää kraatteria kilometrin säteellä. Ne syntyivät samalla hetkellä, kun meteori hajosi ilmassa. Ajankohdan arviot vaihtelevat tuhansia vuosia, joten tarkkaa vuotta ei voi sanoa, mutta paikka on ollut pitkään pyhä. Onpas siit pitkä aika, onneksi.",
+  "linkit": [
+   "törmäykset",
+   "Saarenmaalla"
+  ],
+  "jatkot": [
+   "Miksi Kaalin kraatteri on täynnä vettä?",
+   "Miten tutkijat selvittävät muinaisten ihmisten uskomuksia?"
+  ]
+ },
+ {
+  "kohde": "nosto:kaali",
+  "kysymys": "Miten meteoriitin törmäys voidaan tunnistaa jälkeenpäin?",
+  "uusi": false,
+  "vastaus": "Katotaas. Törmäyskraatterin tunnistaa useista merkeistä. Muoto on tyypillisesti pyöreä, ja ympäristössä voi olla äärimmäisen paineen ja kuumuuden muuttamia kiviaineksia, kuten [[sulaneita kivilajeja]] ja erityisellä tavalla vaurioituneita [[kvartsirakeita]], jotka eivät synny tavallisissa maanpäällisissä prosesseissa. Joskus löytyy myös itse meteoriitin kappaleita, ja pienten kraatterien joukko samalla alueella voi viitata siihen, että kappale hajosi ennen iskua. Tunnistamiseen tarvitaan yleensä sekä maastotutkimuksia että laboratoriotutkimuksia. Siis ihan oikeaa salapoliisityötä, ja minä pidän siitä.",
+  "linkit": [
+   "sulaneita kivilajeja",
+   "kvartsirakeita"
+  ],
+  "jatkot": [
+   "Mitkä ovat Euroopan tunnetuimmat törmäyskraatterit?",
+   "Mitä kvartsi on ja missä sitä esiintyy?"
+  ]
+ },
+ {
+  "kohde": "nosto:kaali",
+  "kysymys": "Miksi kraatterin ikää ei tiedetä tarkasti?",
+  "uusi": false,
+  "vastaus": "Ai se. Tost on arvioitu eri tavoin. Ikä on vaikea määrittää, koska iskusta ei ole suoraa kirjallista tietoa, joten ajoitus perustuu epäsuoriin jälkiin. Tutkijat ovat käyttäneet esimerkiksi [[radiohiiliajoitusta]] hiiltyneestä puusta tai muusta orgaanisesta aineksesta sekä [[sedimenttikerrosten]] ja arkeologisten löytöjen tutkimista, mutta tulokset vaihtelevat ja virhemarginaalit ovat suuria. Siksi arviot eroavat toisistaan tuhansia vuosia, eikä tarkkaa vuosilukua kannata antaa. Tarkka vuosi jäi arvoitukseksi, ja arvoituksista minä kyl pidän.",
+  "linkit": [
+   "radiohiiliajoitusta",
+   "sedimenttikerrosten"
+  ],
+  "jatkot": [
+   "Miten radiohiiliajoitus toimii?",
+   "Miten sedimenttikerrokset kertovat menneisyydestä?"
+  ]
+ },
+ {
+  "kohde": "nosto:kaali",
+  "kysymys": "Kuinka usein meteoriitit osuvat Maahan?",
+  "uusi": true,
+  "vastaus": "Tuota niin, taivas on vilkkaampi kuin luulisi. Avaruudesta putoaa Maahan jatkuvasti pientä ainesta: pölyä ja hiekanjyvän kokoisia hiukkasia, jotka palavat [[ilmakehässä]] ja näkyvät [[tähdenlentoina]]. Suurempia kappaleita, jotka selviävät maahan asti meteoriitteina, löydetään harvemmin, ja kraatterin muodostavia suuria iskuja tapahtuu paljon harvemmin vielä. Tarkkaa lukua en ole varma, eikä sellaista kannata arvailla. Taivas on siis vilkkaampi kuin miltä alhaalta näyttää.",
+  "linkit": [
+   "ilmakehässä",
+   "tähdenlentoina"
+  ],
+  "jatkot": [
+   "Miten asteroideja seurataan?",
+   "Mistä suurin osa meteoriiteista on peräisin?"
+  ]
+ },
+ {
+  "kohde": "nosto:kaali",
+  "kysymys": "Mistä marsipaani tehdään ja mistä se on lähtöisin?",
+  "uusi": true,
+  "vastaus": "Joo, makeaa asiaa. Marsipaani valmistetaan pääasiassa jauhetuista [[manteleista]] ja sokerista, joskus munanvalkuaisen tai sokerisiirapin kanssa. Alkuperästä ei olla yksimielisiä: [[Lyypekin]], [[Italian]] ja Espanjan on kaikkien esitetty olleen marsipaanin syntysija, eikä asiaa ole varmasti ratkaistu. Tallinnassa kerrotaan marsipaanin syntyneen vanhassa apteekissa, mutta se on pikemminkin paikallinen tarina kuin vahvistettu tieto.\n\nMarsipaani ei ole pulla, mutta minä en ole tässä niin tarkka. Tallinnan apteekeissa sitä on kuulemma myyty lääkkeeksi, ja parempaa reseptiä minä en tunne.",
+  "linkit": [
+   "manteleista",
+   "Lyypekin",
+   "Italian"
+  ],
+  "jatkot": [
+   "Mitä muita herkkuja Viron perinneruokiin kuuluu?",
+   "Miten mantelit kasvavat ja mistä niitä saadaan?"
   ]
  }
 ]
