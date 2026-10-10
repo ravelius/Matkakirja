@@ -10,6 +10,10 @@
 //    nostoissa). Kaiutin (KortinLukija) lukee esittelyn kertojan äänellä, ja Esittele-nappi aloittaa luennan heti: esittely
 //    kuuluu napista. Paikka kuten NOSTOKORTTI: KAPEA alareunaan ohjausnappien yläpuolelle (enintään Peitto.Max %), muuten
 //    sivukortti oikealle (Pohja.Sivukortti). Sulku KORTTI-pohjan mukaan: ohinapautus ja Esc (kierros on tauolla kortin ajan).
+//  - Huone (PT 10.10. 10.5x, Raamattu NIMIKYLTIT HETKEN, INFO NAPAUTUKSESTA; kuten linnan huonekortti DioraamaTaulussa): huoneeseen
+//    tultaessa huonekortti näkyy tiiviinä (vain nimi) Nimikyltti.NakyyMs ja häivytetään. Teksti (2–3 virkettä) vain napautuksesta:
+//    kyltin napautus tai Esittele-nappi, kun teosta ei ole (MuseoSovitin.HuoneKortti). Sama paikka, sulku ja kierroksen tauko
+//    kuin esittelyssä; kortit sulkevat toisensa (MuseoSovitin).
 using System.Linq;
 using Matkakirja.Linssit.Museo;
 using UnityEngine;
@@ -23,9 +27,11 @@ namespace Matkakirja.Natiivi
         readonly VisualElement nakyma, otsikko, ryhma, korttiJuuri;
         readonly Label nimi, alarivi, kKapiteeli, kNimi, kAlkuperainen, kTekniikka, kKuvateksti, kLahde;
         readonly Button tauko, vapaa, esittele, edellinen, seuraava;
-        readonly Kortti kortti;
+        readonly Kortti kortti, huoneKortti;
+        readonly Label hNimi, hTeksti;
+        readonly Nimikyltti huoneKyltti;
         readonly KortinLukija lukija;
-        bool auki, korttiNakyy, luennalla;
+        bool auki, korttiNakyy, luennalla, huoneAuki;
         string korttiTeos;
         EventCallback<PointerDownEvent> ohi;
 
@@ -70,6 +76,8 @@ namespace Matkakirja.Natiivi
             esittele = Ohjausnappi.Nappi(Ikonit.Viiva["kirja"], Kieli.T("ui.museo.esittele"), () =>
             {
                 // Esittely kuuluu napista: avaus aloittaa luennan (kaiutin keskeyttää), toinen painallus sulkee.
+                // Ei teosta (vapaa kulku käytävällä): sama nappi avaa huoneen kortin.
+                if (MuseoSovitin.Aktiivinen?.Teos == null && MuseoSovitin.Aktiivinen?.NykyinenHuone != null) { MuseoSovitin.HuoneKortti(); return; }
                 luennalla = !MuseoSovitin.EsittelyAuki;
                 MuseoSovitin.Esittele();
             }, ryhma);
@@ -80,6 +88,7 @@ namespace Matkakirja.Natiivi
             korttiJuuri.style.display = DisplayStyle.None;
             kortti = new Kortti(null, pohja: true);
             korttiJuuri.Add(kortti);
+            kortti.style.display = DisplayStyle.None;
             kortti.Sisus.pickingMode = PickingMode.Position;
             var ylarivi = Rakenne.El(null, kortti.Sisus, PickingMode.Ignore);
             ylarivi.style.flexDirection = FlexDirection.Row;
@@ -101,6 +110,19 @@ namespace Matkakirja.Natiivi
             kLahde = Rakenne.Teksti("", "mk-kortti__teksti", kortti.Sisus); kLahde.style.whiteSpace = WhiteSpace.Normal;
             Kirjasimet.Aseta(kLahde, Kirjasin.Kone);
             Nappaimisto.Rekisteroi("museo-esittely", 60, () => MuseoSovitin.EsittelyAuki, null, null, () => MuseoSovitin.Esittele(false));
+
+            huoneKortti = new Kortti(null, pohja: true);
+            korttiJuuri.Add(huoneKortti);
+            huoneKortti.Sisus.pickingMode = PickingMode.Position;
+            hNimi = Rakenne.Teksti("", "mk-kortti__otsikko", huoneKortti.Sisus); hNimi.style.whiteSpace = WhiteSpace.Normal;
+            Kirjasimet.Aseta(hNimi, Tyylikirja.Kirjain.Otsikko);
+            hTeksti = Rakenne.Teksti("", "mk-kortti__teksti", huoneKortti.Sisus); hTeksti.style.whiteSpace = WhiteSpace.Normal;
+            Kirjasimet.Aseta(hTeksti, Tyylikirja.Kirjain.Leipa);
+            huoneKortti.style.display = DisplayStyle.None;
+            huoneKortti.Sisus.RegisterCallback<ClickEvent>(_ => { if (!MuseoSovitin.HuoneKorttiAuki) MuseoSovitin.HuoneKortti(true); });
+            huoneKyltti = new Nimikyltti(huoneKortti);
+            MuseoSovitin.HuoneVaihtui += HuoneVaihtui;
+            Nappaimisto.Rekisteroi("museo-huone", 60, () => MuseoSovitin.HuoneKorttiAuki, null, null, () => MuseoSovitin.HuoneKortti(false));
 
             MuseoSovitin.Vaihtui += Paivita;
             kerros.JokaRuutu += () => { if (auki) AsetteleKortti(); };
@@ -130,7 +152,7 @@ namespace Matkakirja.Natiivi
                 korttiJuuri.style.left = StyleKeyword.Auto; korttiJuuri.style.right = m; korttiJuuri.style.width = Pohja.Sivukortti(W);
                 korttiJuuri.style.top = yla; korttiJuuri.style.bottom = napit;
                 korttiJuuri.style.maxHeight = StyleKeyword.None;
-                korttiJuuri.style.justifyContent = Justify.Center;
+                korttiJuuri.style.justifyContent = Justify.FlexStart;   // sivukortti yläpalkin alta (NOSTOKORTTI)
             }
         }
 
@@ -142,16 +164,16 @@ namespace Matkakirja.Natiivi
             if (!paalle || puu == null) return;
             korttiJuuri.schedule.Execute(() =>
             {
-                if (!MuseoSovitin.EsittelyAuki || ohi != null) return;
+                if (!(MuseoSovitin.EsittelyAuki || MuseoSovitin.HuoneKorttiAuki) || ohi != null) return;
                 ohi = e =>
                 {
                     var t = e.target as VisualElement;
-                    if (t != null && (korttiJuuri.Contains(t) || esittele.Contains(t) || lukija.Juuri.Contains(t))) return;
+                    if (t != null && ((korttiNakyy && kortti.Contains(t)) || (huoneAuki && huoneKortti.Contains(t)) || esittele.Contains(t) || lukija.Juuri.Contains(t))) return;
                     if (t != null && t.panel != korttiJuuri.panel) return;
                     // Lukijan valikko auki: ohinapautus sulkee vain valikon (KortinLukija), ei korttia.
                     if (puu.Q(className: "mk-lukija-valikko") != null) return;
                     UiKerros.OhiSulki();
-                    MuseoSovitin.Esittele(false);
+                    if (MuseoSovitin.HuoneKorttiAuki) MuseoSovitin.HuoneKortti(false); else MuseoSovitin.Esittele(false);
                 };
                 puu.RegisterCallback(ohi, TrickleDown.TrickleDown);
             });
@@ -163,7 +185,7 @@ namespace Matkakirja.Natiivi
             auki = s != null && s.Auki;
             nakyma.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
             ryhma.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
-            if (!auki) { otsikko.style.display = DisplayStyle.None; NaytaKortti(false); return; }
+            if (!auki) { otsikko.style.display = DisplayStyle.None; NaytaKortti(false); NaytaHuone(false); return; }
             var k = s.Kierros;
             bool vapaana = k != null && k.Vaihe == MuseoVaihe.Vapaa;
             nakyma.pickingMode = vapaana ? PickingMode.Ignore : PickingMode.Position;
@@ -183,7 +205,7 @@ namespace Matkakirja.Natiivi
                 if (korttiTeos != t.Id)
                 {
                     korttiTeos = t.Id;
-                    kKapiteeli.text = $"{t.Taiteilija} · {t.Vuosi}".ToUpperInvariant();
+                    kKapiteeli.text = $"{t.Taiteilija} · {t.Vuosi}";
                     kNimi.text = t.Otsikko;
                     Rivi(kAlkuperainen, t.Alkuperainen);
                     Rivi(kTekniikka, string.IsNullOrEmpty(t.Tekniikka) ? t.Mitat : $"{Isolla(t.Tekniikka)}, {t.Mitat}");
@@ -196,17 +218,50 @@ namespace Matkakirja.Natiivi
                 }
             }
             NaytaKortti(MuseoSovitin.EsittelyAuki && r != null);
+            NaytaHuone(MuseoSovitin.HuoneKorttiAuki && s.NykyinenHuone != null);
+        }
+
+        void HuoneVaihtui(Huone h)
+        {
+            if (h == null) { huoneKortti.style.display = DisplayStyle.None; PaivitaJuuri(); return; }
+            hNimi.text = h.Nimi;
+            hTeksti.text = h.Teksti ?? "";
+            hTeksti.style.display = DisplayStyle.None;
+            huoneKortti.style.display = korttiNakyy ? DisplayStyle.None : DisplayStyle.Flex;
+            huoneKyltti.Nayta(h.Id);   // tiivis kyltti ~3 s ja häivytys (Nimikyltti)
+            PaivitaJuuri();
+        }
+
+        void NaytaHuone(bool nakyy)
+        {
+            if (nakyy == huoneAuki) { if (nakyy) AsetteleKortti(); return; }
+            huoneAuki = nakyy;
+            hTeksti.style.display = nakyy && hTeksti.text.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+            if (nakyy) { huoneKortti.style.display = DisplayStyle.Flex; huoneKyltti.Nayta(); }
+            huoneKyltti.Pida(nakyy);
+            Ohinapautus(nakyy || korttiNakyy);
+            PaivitaJuuri();
+            if (nakyy) Rakenne.Nayta(huoneKortti, true, Tyylikirja.Kesto.Avaus);
+        }
+
+        /// <summary>Juuri näkyy, kun esittely, huonekortti tai huoneen kyltti on esillä (kyltti häivyttää itsensä).</summary>
+        void PaivitaJuuri()
+        {
+            bool jokin = auki && (korttiNakyy || huoneKortti.style.display == DisplayStyle.Flex);
+            korttiJuuri.style.display = jokin ? DisplayStyle.Flex : DisplayStyle.None;
+            if (jokin) AsetteleKortti();
         }
 
         void NaytaKortti(bool nakyy)
         {
             if (nakyy == korttiNakyy) { if (nakyy) AsetteleKortti(); return; }
             korttiNakyy = nakyy;
-            korttiJuuri.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
-            Ohinapautus(nakyy);
+            kortti.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            if (nakyy) huoneKortti.style.display = DisplayStyle.None;   // kortit sulkevat toisensa
+            Ohinapautus(nakyy || huoneAuki);
+            PaivitaJuuri();
             if (!nakyy) { lukija.Pysayta(); luennalla = false; return; }
-            AsetteleKortti();
-            Rakenne.Nayta(korttiJuuri, true, Tyylikirja.Kesto.Avaus);
+            Rakenne.Nayta(kortti, true, Tyylikirja.Kesto.Avaus);
             if (luennalla) { luennalla = false; if (lukija.Juuri.style.display == DisplayStyle.Flex && !lukija.Lukee) lukija.Paina(); }
         }
 
