@@ -159,8 +159,8 @@ namespace Matkakirja.Linssit.Testit
         /// ei voi rikkoa yhtäkään kohtaa huomaamatta. Tarkistuspisteestä ajetaan kiinnijäännin kohdan ohi, kunnes kukaan ei ole enää valpas
         /// (sen jälkeen tilanne on sama kuin ilman kiinnijääntiä), ilman uutta kiinnijääntiä; tarkistuspiste enintään PaluuMax pistettä taaempana
         /// ja menetetty aika ≤ LisaMaxS (malli 4.3: kiinnijäänti lisää 1–1,5 min tyrmän kanssa). v47a: pahin 99 s (kiinni 68: valppaus 60 s
-        /// pisteen 67 torkkujan vieressä), pisin paluu 19 (huone 6: kaari-ovi 22 ja voudin sali 46). Harjalla (89–91) ei ole omaa tarkistuspistettä:
-        /// paluu muurikäytävän pisteeseen 85 (menetys ~17 s).</summary>
+        /// pisteen 67 torkkujan vieressä), pisin paluu 19 (huone 6: kaari-ovi 22 ja voudin sali 46). Harjalla (89–91) paluu tikkaiden
+        /// yläpäähän 88 (TikkaidenYlapaaTekeeTarkistuspisteen; ennen muurikäytävän pisteeseen 85).</summary>
         public const double LisaMaxS = 120; public const int PaluuMax = 20;
         /// AJETAAN VAIN PYYDETTÄESSÄ (PT 10.10.: ~150 s): `OLAVINLINNA_LAAJA=1 ./kaanna.sh KiinniJokaPisteessa` aina, kun Olavinlinnan paketti,
         /// reitti tai vartijat muuttuvat.
@@ -200,6 +200,18 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Tosi(lisa <= LisaMaxS, $"kiinni {k + 1}: menetetty aika {lisa:F0} s ≤ {LisaMaxS:F0} s");
             }
             Console.WriteLine($"      {loppuK - alku} kohtaa: pahin menetys {pahin:F0} s (kiinni {pahinK + 1}), pisin paluu {pisinPaluu} pistettä");
+        }
+
+        /// <summary>Tikkaiden yläpää tekee tarkistuspisteen (PT 10.10., SeikkailuVartijat): harja on samaa osaa kuin muurikäytävä, joten
+        /// harjalla (89–91) kiinni jäänyt palasi ennen muurikäytävän pisteeseen 85; nyt tikkaiden yläpäähän 88.</summary>
+        [Testi] static void TikkaidenYlapaaTekeeTarkistuspisteen()
+        {
+            for (int k = TikkaatAla + 2; k < KiipeilyAlku; k++)
+            {
+                var w = Tila(k); w.Kiinnijaanti();
+                Console.WriteLine($"      kiinni {k + 1} → tarkistus {w.Seuraava + 1} ({w.PX:F1}, {w.PY:F1}, {w.PZ:F1})");
+                Oleta.Tosi(w.Seuraava == TikkaatAla + 1 && w.PY > 16, $"kiinni {k + 1}: tarkistus tikkaiden yläpäässä {TikkaatAla + 2} (nyt {w.Seuraava + 1}, y {w.PY:F1})");
+            }
         }
 
         /// <summary>Piiloon meno tekee tarkistuspisteen (SeikkailuVartijat, Siirtoseppä juna 167): muuriportailla (69, tarkistus vielä
