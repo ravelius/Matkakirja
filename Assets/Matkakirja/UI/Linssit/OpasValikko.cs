@@ -210,9 +210,10 @@ namespace Matkakirja.Natiivi
             {
                 float lyhyt = Mathf.Min(Juuri.layout.width, Juuri.layout.height);
                 // Omistaja 7.10. 21.4x ("vievät nyt liikaa huomiota"): pienemmäksi, iPadilla enintään 1,15 × (ennen ruudun suhteessa ~2 ×),
-                // puhelimella nappi.ohjaus (40) iso-koon (56) sijaan.
+                // puhelimella nappi.ohjaus (40) iso-koon (56) sijaan. Omistaja TF 180 (11.10. 00.0x: "Kuvat näkyvät nyt asteen liian pieninä
+                // ainakin iphonella"): puhelimella pykälä isommaksi eli iso-koko (56); iPad ennallaan (iso × enintään 1,15).
                 float suhde = UiKerros.Tabletti && lyhyt > 0f && !float.IsNaN(lyhyt) ? Mathf.Clamp(lyhyt / KuvaViiteLyhyt, 1f, 1.15f) : 1f;
-                return Mathf.Round((UiKerros.Tabletti ? Tyylikirja.Nappi.OhjausIso : Tyylikirja.Nappi.Ohjaus) * suhde);
+                return Mathf.Round(Tyylikirja.Nappi.OhjausIso * suhde);
             }
         }
         readonly VisualElement kuvaKortti, kuvaEl;
