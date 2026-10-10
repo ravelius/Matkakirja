@@ -39,7 +39,7 @@
 ## 4. Muut tämän päivän toimitukset
 
 - **s5 v3/v3b (05.0x):** v3 (img2img 0,5) jäi yliteräväksi, joten **v3b suositeltu** (v1:n värit + v3:n luminanssin ylipäästö). LR valitsee.
-- **PILVET (05.1x, LS2:lle):** `_tyo/karttaseppa/pilvet-kaudet-20261010/pilvet-kaudet.json`. METAR IEM 2016–2025 (Orly, Bromma): peitto, pohja, matala-osuus, paksuus (arvio) kaupunki × kausi. Vienti ilmakeha/pilvet-v1/ LS2:n kuittauksen jälkeen. Data T7 `pilvet-metar/`.
+- **PILVET (05.1x, LS2:lle):** `_tyo/karttaseppa/pilvet-kaudet-20261010/pilvet-kaudet.json`. METAR IEM 2016–2025 (Orly, Bromma): peitto, pohja, matala-osuus, paksuus (arvio) kaupunki × kausi. **ÄMPÄRISSÄ 04.58** (ilmakeha/pilvet-v1/, paksuus = ilmastollinen arvio LS2:n mukaan). Data T7 `pilvet-metar/`.
 
 - **KORKEUS v1 ÄMPÄRISSÄ 04.40:** kartta/korkeus/v1/maa-pariisi{.json,-lahi.png} (4 m, LS1:n koodi maa-dtm-175). Tukholma odottaa PT:n päätöstä.
 - **MAANPINTA (04.4x, LS1:lle):** `_tyo/karttaseppa/maa-20261010/` (LUEMINUT.md): Pariisi IGN MNT 2 m (+ kauko), Tukholma GLO ilman rakennuksia (pieni hyöty, Lantmäteriet tunnuksen jälkeen). Työkalu T7 `vesimaski/korkeus-maa.mjs`. pp v1 ja co v2 on projisoitu (LR, portti 0) ja ovat LS2:lla.
