@@ -36,3 +36,9 @@ lokit/natiiviseppa-mac-tf-180-<sha> → simu-.app vahdin jälkeen `kopioi-juna-a
 BUILD 178 = 9e10d4d33 ja BUILD 179 = 75fcc2b1b (TF iOS + Mac, Julkaisija vei). Museon muistikorjaukset 378daacc3 + a52df1672 (Yövartion rajaton ruutuhaku,
 keko 1126 → 592 Mt) junassa 179. Todistusajo-kuittaus 80d418513 (todiste lokit/todistus-todistusajo-kuittaus-2-20261010-1924). Levy 81 Gi.
 Taustalla EI omia ajoja (cron 440f4d6d katoaa nollauksessa).
+
+## TILA 10.10. 20.05 (uusi sessio, PT 20.0x)
+- Unity-beetaseuranta: cron 3d91c360 "4 9 * * *" (session oma, vanhenee 7 pv / nollauksessa); ajo 20.04 tyhjä (ei uutta, nähdyt b1–b4).
+- Juna 180 = 420bc0af7 (sis. Pelikoodari 65975137e, PT kuittasi 20.0x). Lukitusportit: LS1 intro-luenta-180 87f1dd8a0 (KIIRE, korvaa 9cdc17616),
+  Siirtosepän Olavinlinnan laiturin ohjainkorjaus (KIIRE), Pelikoodarin latausmusiikki + kippikorjaukset, dc53ccd54:n vesipohjan tarkistus,
+  iPad-muistiajo yön uudelleenkäynnistyksen jälkeen (Julkaisijan NYT).
