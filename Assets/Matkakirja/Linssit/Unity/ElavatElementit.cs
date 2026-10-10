@@ -3,7 +3,8 @@
 // kohden, ja kukin aihe on yksi Aihe-määrittely: paikka, yksilöt ruudulla, runko, pyörivä osa ja animaatio.
 //   kokeilu 1  Zaandamin kolme tuulimyllyä (vain siivet pyörivät, 7–9 s/kierros)
 //   kokeilu 2  Tivolin ketjukaruselli Kööpenhaminassa (katos 10 s/kierros, istuimet keinuvat ulospäin aaltoillen, lamput)
-//   kokeilu 3  Pariisin kiinnitetty ilmapallo Tuileries'ssa (nousu ja lasku 24 s, kori heiluu 5 s, köysi vintturiin)
+//   kokeilu 3  Pariisin kiinnitetty ilmapallo Tuileries'ssa (nousu ja lasku 24 s, kori heiluu 5 s, köysi vintturiin);
+//              pois kartalta 10.10.2026 (omistaja: kaupunkipallo korvaa), malli säilyy
 //   kokeilu 4  Venetsian gondolit Canal Grandella (kaksi vastakkaisiin suuntiin, matka 30 s airon tahdissa, odotus päissä)
 //   kokeilu 5  Lontoon maailmanpyörä (kierros 40 s, 16 koria pysyvät pystyssä, pysähtyy välillä koreja täyttämään)
 //              ja Thamesin siipiratashöyry (matka 22–30 s, odottaa laiturissa 25–45 s, rattaat ja savu)
@@ -122,21 +123,9 @@ namespace Matkakirja.Natiivi
                 LastenPaikat = KaruselliGeometria.Ripustukset(),
                 Animoi = KaruselliGeometria.Animoi,
             },
-            new Aihe
-            {
-                // Ilmapallo: ajaa 50–130 s (2–5 nousua), ja vintturi pysähtyy välillä 15–45 s (pallo jää paikalleen
-                // ilmaan tai maahan, kori asettuu pystyyn); vintturin tahti vaihtelee ±8 %.
-                Vaihtelu = i => new Vaihtelu(307 + i) { KayMinS = 50, KayMaxS = 130, SeisooMinS = 15, SeisooMaxS = 45, TaukoTod = 0.7, Puuska = 0.08 },
-                Nimi = "ilmapallo", Paikka = new LatLon(48.8634, 2.3275), KokoPt = 40f,   // Jardin des Tuileries, Pariisi
-                // 40 pt ruudulla ylös (kallistettaessa taakse): Tuileries on vain 2 km Pariisin pisteestä, ja simulaattorissa
-                // 26.9. pallo peitti pisteen.
-                Yksilot = new[] { (0f, 40f, 0f) },
-                Runko = IlmapalloGeometria.Asema, Roottori = IlmapalloGeometria.Pallo, Lapsi = IlmapalloGeometria.Koysi,
-                LastenPaikat = new[] { Vector3.zero },
-                // Suunta: tuuli lounaasta, joten pallo nojaa koilliseen (+z).
-                PohjaSade = 0.7f, Haalistus = 0.25f, Suunta = 45f,
-                Animoi = IlmapalloGeometria.Animoi,
-            },
+            // Pariisin kiinnitetty ilmapallo (kokeilu 3, Tuileries) pois kartalta (omistaja 10.10.2026 TF 177, kortti "Pois kartalta"):
+            // kaupunkipallo (kippi) on samassa kohdassa, ja Tuileries'n pallo näkyi sen ja nappulan alla harmaana mönttinä.
+            // Malli säilyy (IlmapalloGeometria).
             new Aihe
             {
                 // Gondolit: soutavat 90–200 s, ja joskus molemmat lepäävät 10–25 s; soututahti vaihtelee ±10 %. Omat
