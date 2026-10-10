@@ -1,4 +1,4 @@
-# Karttavalot (kohde:<id>) ja täkynostot (nosto:<id>) maittain sisältöpaketista v656 (ALB, AUT, BEL, BGR, BIH, BLR, CHE, CZE, DEU, DNK, ESP, EST, FIN, FRA, GBR, GRC, HRV, HUN, IRL, ISL, ITA, LTU, LUX, LVA, MDA, MKD, MLT, MNE, NLD, NOR, POL, PRT, ROU, RUS, SRB, SVK, SVN, SWE, UKR), Pulun valmiiden vastausten testiin (pulu-kultaiset.py)
+# Karttavalot (kohde:<id>) ja täkynostot (nosto:<id>) maittain sisältöpaketista v656 (ALB, AUT, BEL, BGR, BIH, BLR, CHE, CZE, DEU, DNK, ESP, EST, FIN, FRA, GBR, GRC, HRV, HUN, IRL, ISL, ITA, LTU, LUX, LVA, MDA, MKD, MLT, MNE, NLD, NOR, POL, PRT, ROU, RUS, SRB, SVK, SVN, SWE, TUR, UKR), Pulun valmiiden vastausten testiin (pulu-kultaiset.py)
 elaintaky:AUT	AUT
 elaintaky:BGR	BGR
 elaintaky:BIH	BIH
@@ -26,6 +26,7 @@ elaintaky:PRT	PRT
 elaintaky:ROU	ROU
 elaintaky:RUS	RUS
 elaintaky:SWE	SWE
+elaintaky:TUR	TUR
 elaintaky:UKR	UKR
 hetki:afsluitdijkin-viimeinen-aukko-1932	NLD
 hetki:arkadin-luostarin-rajahdys-1866	GRC
@@ -50,6 +51,7 @@ hetki:jenner-rokotus-1796	GBR
 hetki:kolumbus-palos-1492	ESP
 hetki:kolumbus-portugali-1484	PRT
 hetki:kolumbus-santa-fe-1492	ESP
+hetki:konstantinopoli-1453	TUR
 hetki:krusevon-tasavalta-1903	MKD
 hetki:lavoisier-laboratorio-1780	FRA
 hetki:lontoon-palo-1666	GBR
@@ -70,6 +72,7 @@ hetki:pyhan-elmon-linnake-1565	MLT
 hetki:ranskan-vallankumous-bastilji-1789	FRA
 hetki:roger-ii-cefalu-lupaus-1131	ITA
 hetki:rontgen-kasi-1895	DEU
+hetki:schliemann-troija-1873	TUR
 hetki:shakespeare-globe-1599	GBR
 hetki:sibelius-finlandia-1899	FIN
 hetki:siegfried-ostaa-bockin-963	LUX
@@ -96,11 +99,13 @@ kohde:altamiran-luola	ESP
 kohde:altankalliopiirrokset	NOR
 kohde:amalfin-rannikko	ITA
 kohde:aneto	ESP
+kohde:ankara	TUR
 kohde:antiikin-agora	GRC
 kohde:antikythera	GRC
 kohde:apollonia	ALB
 kohde:aquileia	ITA
 kohde:aradin-linnoitus	ROU
+kohde:ararat	TUR
 kohde:arenenberg	CHE
 kohde:asovanmeri	UKR
 kohde:atlantti	PRT
@@ -147,6 +152,7 @@ kohde:bremenin-raatihuone	DEU
 kohde:brestin-linnoitus	BLR
 kohde:brocken	DEU
 kohde:brownshillin-dolmen	IRL
+kohde:bursa	TUR
 kohde:camargue	FRA
 kohde:canterburyn-katedraali	GBR
 kohde:capri	ITA
@@ -187,6 +193,7 @@ kohde:dinara	HRV
 kohde:djavolja-varos	SRB
 kohde:dnepr	UKR
 kohde:dnestr	UKR
+kohde:dolmabahce	TUR
 kohde:dolomiitit	ITA
 kohde:domtoren	NLD
 kohde:douaumont	FRA
@@ -200,6 +207,7 @@ kohde:dune-du-pilat	FRA
 kohde:durnstein	AUT
 kohde:ebenalp-wildkirchli	CHE
 kohde:ebro	ESP
+kohde:efesos	TUR
 kohde:egeanmeri	GRC
 kohde:eger	HUN
 kohde:egeskov	DNK
@@ -221,11 +229,14 @@ kohde:falunin-kaivos	SWE
 kohde:feldberg	DEU
 kohde:flamsbana	NOR
 kohde:forum-romanum	ITA
+kohde:frat	TUR
 kohde:frederiksborgin-linna	DNK
 kohde:gaizinkalns	LVA
 kohde:galdhpiggen	NOR
 kohde:gamla-uppsala	SWE
 kohde:gamzigrad	SRB
+kohde:gaziantep	TUR
+kohde:gelibolu	TUR
 kohde:gerace	ITA
 kohde:geysir	ISL
 kohde:giethoorn	NLD
@@ -235,6 +246,7 @@ kohde:glendalough	IRL
 kohde:glomma	NOR
 kohde:gluckin-raamattumuseo	LVA
 kohde:gniezno	POL
+kohde:gobeklitepe	TUR
 kohde:golubacin-linnoitus	SRB
 kohde:gomelin-palatsi	BLR
 kohde:gota-kanava	SWE
@@ -761,6 +773,7 @@ kohde:hahmotelma-navagio	GRC
 kohde:hahmotelma-navarino	GRC
 kohde:hahmotelma-neamt	ROU
 kohde:hahmotelma-nekromanteion	GRC
+kohde:hahmotelma-nemrut	TUR
 kohde:hahmotelma-neretva	HRV
 kohde:hahmotelma-neusiedl	AUT
 kohde:hahmotelma-new-ross	IRL
@@ -905,6 +918,7 @@ kohde:hahmotelma-saalburg	DEU
 kohde:hahmotelma-saamelaiset	NOR
 kohde:hahmotelma-sabugal	PRT
 kohde:hahmotelma-saechsische-schweiz	DEU
+kohde:hahmotelma-safranbolu	TUR
 kohde:hahmotelma-saint-cloud	FRA
 kohde:hahmotelma-saint-emilion	FRA
 kohde:hahmotelma-saint-malo	FRA
@@ -1143,6 +1157,7 @@ kohde:hahmotelma-zvikov	CZE
 kohde:hahmotelma-zvolen	SVK
 kohde:hahmotelma-zwin	BEL
 kohde:hahmotelma-zywiec	POL
+kohde:halikarnassos	TUR
 kohde:hallstatt	AUT
 kohde:halti	FIN
 kohde:hameenlinna	FIN
@@ -1151,6 +1166,7 @@ kohde:heimaey	ISL
 kohde:herakleia-lynkestis	MKD
 kohde:hersonesos	UKR
 kohde:hill-of-uisneach	IRL
+kohde:hippodromi	TUR
 kohde:hohensalzburg	AUT
 kohde:holar	ISL
 kohde:holloko	HUN
@@ -1177,6 +1193,7 @@ kohde:itameri~4	LTU
 kohde:itameri~5	LVA
 kohde:itameri~6	POL
 kohde:itameri~7	SWE
+kohde:izmir	TUR
 kohde:jaameri	RUS
 kohde:jablonec	CZE
 kohde:jachymov	CZE
@@ -1195,7 +1212,9 @@ kohde:kalamata	GRC
 kohde:kaliningradin-tuomiokirkko	RUS
 kohde:kalmarinlinna	SWE
 kohde:kamjanets-podilskyin-linna	UKR
+kohde:kapalicarsi	TUR
 kohde:kapellbrucke	CHE
+kohde:kappadokia	TUR
 kohde:karlskrona	SWE
 kohde:kazanin-kreml	RUS
 kohde:kebnekaise	SWE
@@ -1205,8 +1224,10 @@ kohde:kerimaenkirkko	FIN
 kohde:kernave	LTU
 kohde:kihnu	EST
 kohde:kilkennyn-linna	IRL
+kohde:kirkpinar	TUR
 kohde:kiruna	SWE
 kohde:kizhin-pogosta	RUS
+kohde:kizilirmak	TUR
 kohde:kjerag	NOR
 kohde:klaipeda	LTU
 kohde:klevanin-rakkaudentunneli	UKR
@@ -1217,6 +1238,7 @@ kohde:koli	FIN
 kohde:kolkan-niemi	LVA
 kohde:kolnin-tuomiokirkko	DEU
 kohde:konesprezna-draha	CZE
+kohde:konya	TUR
 kohde:kopu-tuletorn	EST
 kohde:korcula	HRV
 kohde:korintin-kanava	GRC
@@ -1257,6 +1279,7 @@ kohde:malbork	POL
 kohde:manasijan-luostari	SRB
 kohde:marathon	GRC
 kohde:marbacka	SWE
+kohde:marmaranmeri	TUR
 kohde:matera	ITA
 kohde:matkan-kanjoni	MKD
 kohde:matsalu	EST
@@ -1285,6 +1308,7 @@ kohde:mulhacen	ESP
 kohde:munchen	DEU
 kohde:musala	BGR
 kohde:mustameri	ROU
+kohde:mustameri~2	TUR
 kohde:mustameri~3	UKR
 kohde:myvatn	ISL
 kohde:nafplio	GRC
@@ -1326,6 +1350,7 @@ kohde:oradean-linnoitus	ROU
 kohde:osijek	HRV
 kohde:ostrogin-luostari	MNE
 kohde:palangan-meripihkamuseo	LTU
+kohde:pamukkale	TUR
 kohde:pannonhalma	HUN
 kohde:parnassos	GRC
 kohde:parnu	EST
@@ -1333,6 +1358,7 @@ kohde:patras	GRC
 kohde:pecs	HUN
 kohde:peipsi	EST
 kohde:peles	ROU
+kohde:pergamonin-alttari	TUR
 kohde:pernik	BGR
 kohde:petajavedenvanhakirkko	FIN
 kohde:petrovaradinin-linnoitus	SRB
@@ -1405,6 +1431,7 @@ kohde:sarmizegetusa	ROU
 kohde:sava	HRV
 kohde:schwerinin-linna	DEU
 kohde:segovian-akvedukti	ESP
+kohde:selimiyen-moskeija	TUR
 kohde:semmeringin-rata	AUT
 kohde:serra-de-tramuntana	ESP
 kohde:shannon	IRL
@@ -1454,6 +1481,7 @@ kohde:taygetos	GRC
 kohde:tejo	PRT
 kohde:termolin-linna	ITA
 kohde:thames	GBR
+kohde:theodosiuksen-muurit	TUR
 kohde:thessaloniki	GRC
 kohde:thingvellir	ISL
 kohde:timisoaran-vanhakaupunki	ROU
@@ -1476,9 +1504,11 @@ kohde:torino	ITA
 kohde:tornionjoki	SWE
 kohde:torre	PRT
 kohde:traakianmeri	GRC
+kohde:trabzon	TUR
 kohde:trakain-saarilinna	LTU
 kohde:transfagarasan	ROU
 kohde:travnik	BIH
+kohde:troija	TUR
 kohde:tropea	ITA
 kohde:trostjanetsin-dendropuisto	UKR
 kohde:tsernivtsin-yliopisto	UKR
@@ -1498,9 +1528,12 @@ kohde:vainajoki	LVA
 kohde:valbonan-laakso	ALB
 kohde:valimeri	ESP
 kohde:valimeri~2	FRA
+kohde:valimeri~3	TUR
 kohde:vanern	SWE
 kohde:vanha-london-bridge	GBR
 kohde:vanharauma	FIN
+kohde:vanin-kissa	TUR
+kohde:vanjarvi	TUR
 kohde:varna	BGR
 kohde:vatnajokull	ISL
 kohde:veiksel	POL
@@ -1527,6 +1560,7 @@ kohde:weser	DEU
 kohde:westerplatte	POL
 kohde:wildspitze	AUT
 kohde:woudagemaal	NLD
+kohde:yaren	TUR
 kohde:yhdeksas-fortti	LTU
 kohde:zadar	HRV
 kohde:zagreb	HRV
@@ -1626,6 +1660,7 @@ nosto:pyramidi	BIH
 nosto:rooman-kolikko	ITA
 nosto:rooman-nasone	ITA
 nosto:saobento	PRT
+nosto:schliemann	TUR
 nosto:sofia-korut	GRC
 nosto:sofian-mosaiikit	UKR
 nosto:suovoi	IRL
@@ -1671,6 +1706,8 @@ skandaali:hitlerin-paivakirjat	DEU
 skandaali:huudon-varkaus	NOR
 skandaali:iivanan-kadonnut-kirjasto	RUS
 skandaali:kansallisteatterin-vihellyskohu	BGR
+skandaali:karun-aarre	TUR
+skandaali:kasikci-elmasi-legenda	TUR
 skandaali:kaulanauhajuttu-1785	FRA
 skandaali:kelley-alkemistihuijari	CZE
 skandaali:kieltolaki-ja-pirtukuningas	FIN
@@ -1690,6 +1727,7 @@ skandaali:napoleonin-kirkkohopean-ryosto-1798	MLT
 skandaali:naundorff-delftin-valekuningas	NLD
 skandaali:nurmen-amatoorikohu	FIN
 skandaali:oera-linda-kasikirjoitus	NLD
+skandaali:osmanien-vararikko-1875	TUR
 skandaali:ouzel-galleyn-mysteeri	IRL
 skandaali:pacta-conventa-vaarennosepaily	HRV
 skandaali:palmstruchin-setelipankki	SWE
@@ -1769,6 +1807,9 @@ syvennys:granada-kupoli	ESP
 syvennys:helsinki-finlandia	FIN
 syvennys:helsinki-kantele	FIN
 syvennys:helsinki-sauna	FIN
+syvennys:istanbul-camondo	TUR
+syvennys:istanbul-kaarmepylvas	TUR
+syvennys:istanbul-kissat	TUR
 syvennys:kiova-mehilaiset	UKR
 syvennys:kiova-mustamulta	UKR
 syvennys:kiova-tsumakit	UKR
