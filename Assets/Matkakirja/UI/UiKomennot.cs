@@ -1119,6 +1119,8 @@ namespace Matkakirja.Natiivi
                     return ui.Paljastus.Testaa(loput);
                 case "reaktio":
                     return Reaktio(ui, loput);
+                case "ikaraja":
+                    return Ikaraja.Testi(loput.Trim());
                 case "huipennus":
                     ui.Huipennus.Nayta(new MatkanYhteenveto { Paivat = 83, Kaupungit = 41, Aarteet = 6, AarteitaKaikkiaan = 6 },
                         () => ui.Aloitus.NaytaAvaus(id => ui.Tilarivi.Viesti("Lähtö: " + id)));
