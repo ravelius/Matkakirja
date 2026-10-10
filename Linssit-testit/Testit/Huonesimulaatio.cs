@@ -87,6 +87,7 @@ namespace Matkakirja.Linssit.Testit
         public List<Aanilahde> Jono = new List<Aanilahde>();
         public const double TarkistusPiiloM = 6;
         bool oliPiilossa, paljastui, riitaKaynnissa; double riitaAsti = 20, riitaAlkaa = -1; string pelaajanOsa;
+        public string PelaajanOsa => pelaajanOsa;
 
         public static Huonesimulaatio Uusi()
         {
