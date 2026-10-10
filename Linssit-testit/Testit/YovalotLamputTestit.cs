@@ -49,6 +49,23 @@ namespace Matkakirja.Linssit.Testit
             }
         }
 
+        [Testi] static void IkkunadataR8()
+        {
+            // v13 (Karttasepän OSM-rakennukset): gzip R8 1536², ylänelikko osuus, alanelikko värilämpö; rakennuksissa osuus > 0.
+            foreach (var (id, vahintaan) in new[] { ("pariisi", 0.5), ("tukholma", 0.2) })
+            {
+                var b = File.ReadAllBytes(Polku("Assets", "Matkakirja", "Linssit", "Resources", "Elava", $"ikkunat-{id}.bytes"));
+                using var z = new GZipStream(new MemoryStream(b), CompressionMode.Decompress); var m = new MemoryStream(); z.CopyTo(m);
+                var r = m.ToArray();
+                Oleta.Tosi(r.Length == 1536 * 1536, id + ": R8 1536² (KaupunkiYovalot lukee täsmälleen tämän)");
+                int rak = 0, lamminta = 0; foreach (var v in r) { if (v >> 4 > 0) { rak++; if ((v & 15) <= 3) lamminta++; } else Oleta.Tosi(v == 0, "ei osuutta = 0"); }
+                Oleta.Tosi(rak > r.Length * vahintaan * 0.5, $"{id}: rakennussoluja {rak}");
+                Oleta.Tosi(lamminta > rak / 3, $"{id}: asuinkorttelit lämpimiä (≤ 2900 K) {lamminta}/{rak}");
+            }
+            string s = File.ReadAllText(Polku("Assets", "Matkakirja", "Linssit", "Unity", "KaupunkiYovalot.cs"));
+            Oleta.Tosi(s.Contains("TextureFormat.R8, false, true") && s.Contains("ikkunat.Apply(false, true)"), "R8 ilman mippejä ja CPU-kopiota (2,36 Mt)");
+        }
+
         [Testi] static void VarjostinJaTunnistus()
         {
             string s = File.ReadAllText(Polku("Assets", "Matkakirja", "Linssit", "Resources", "Varjostimet", "KaupunkiYovalot.shader"));
