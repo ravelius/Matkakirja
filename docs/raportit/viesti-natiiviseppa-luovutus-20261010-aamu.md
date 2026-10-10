@@ -32,6 +32,8 @@ tai devicectl device install app (bundle fi.matkakirja.peli.kehitys), sitten mui
   tarvittaessa aja uudelleen lukko varattuna (sovi väli Julkaisijan kanssa).
 - 07.5x Pelikoodari (PT kuittasi 175): pelikoodari/kaupunki-pisteet-175 d02226c68 (kahvilan astiat + pyörän kellot; Ydin + 2 riviä
   ElavaKaupunki; LISÄÄ MUISTIA +0,3 Mt) → 175/6.7-runkoon (EI vielä mergetty). pulu-maat-23 078f8e8a4 on jo 175-rungossa.
+- Pelikoodari: pelikoodari/pulu-maat-25 c191dd31d (proto; LTU+RUS, 25 maata, sisältö v638; vain kultaiset/odotukset, Peli 449/449)
+  ⊇ pulu-automaatti 267413e08 ja pulu-maat-23 078f8e8a4 → merge 175/6.7-runkoon (EI vielä mergetty).
 - TF 175 TÄNÄÄN 6.7:llä (omistaja): ehdot testit 6.7 + käännös + iPad Release-muistiajo läpi; muutosloki 175 (maininta Unity 6.7:stä
   pelaajan kielellä) PT:lle; LR:n kartiokuori vain jos ehtii.
 
