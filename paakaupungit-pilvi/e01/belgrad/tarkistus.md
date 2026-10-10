@@ -68,3 +68,17 @@ Yhteenveto: VÄÄRIN 7, EPÄVARMA 10.
 | kaupunki.pallo ja kohdekartta | Linnoitus, Kalemegdanin puisto, Nebojšan torni, Mikaelin katedraali (44.81806, 20.45216), Tasavallan aukio, Skadarlija, Pyhän Savan temppeli (44.79806, 20.46854), Suuri sotasaari (44.83163, 20.4358); rajat kattavat kaikki | tunnetut sijainnit; Skadarlija ja katedraali sijoittuvat oikeisiin kortteleihin | OK | |
 | kaikki kuvatekstit | lyhyt ≤ 100 merkkiä, yksi virke, piste; selite 1–2 virkettä; ei lähdeviittauksia; kertovat kohteesta | PILVIOHJE 4.11; kuvat.md | OK lukuun ottamatta Pobednik- ja Zindan-kuvia (yllä). Huomio: valokuva.lahde "Imeao, Commons (CC0)" ei ole muotoa "..., Wikimedia Commons (...)" | |
 | 1873-väitteet, nykypolitiikka, sota | ei nykypolitiikkaa eikä nykysotaa; 1873-väitteet pidetty lähteissä paitsi yllä mainitut | PILVIOHJE 4.5–4.6 | OK | |
+
+## Korjattu
+
+- Suuri sotasaari: 1873-nimiväite (Babalık) korvattu "useita nimiä" -muotoilulla; 1741 jako "rajasopimuksella" (ei "hyökkäysten varalta").
+- Kalemegdanin puisto: "ruhtinas Milan" -> Milan Obrenović (nosto, kohdeteksti, selite); 1873-kappale uusittu lähteen mukaan (istutusvaihe 1875 asti, polut 1891).
+- tiedot[2]: mammuttien luut ja neandertalinihmisen kallo (panimon perustukset 1892).
+- Silta-lause korjattu ("Kaupungissa on lähteen mukaan 11 siltaa"); Ada Ciganlija: penger 1974 ja Sava-järvi padoilla 1967 (teksti ja lyhyt).
+- Pobednik-kuvan selite ei enää väitä profiilin näkyvän; Zindan-kuvan lyhyt kertoo portista.
+- Kalemegdan "eniten käytetty" -> linnoitus eniten vierailtu nähtävyys, Kalemegdan suosituin puisto (opas ja selite).
+- Skadarlija: aika, 1873-kappale ja selite pehmennetty (boheemi erityisesti 1901 jälkeen); mammuttien luut.
+- Intro: Knez Mihailovan rakennustyöt alkaneet 1869; Pyhän Savan "suurimpia rakennuksia"; asukasluku konteksti.json:n mukaan (1 681 405, 2022).
+- Vinča-ajoitus "noin 5400–4500 eaa." kaikissa kohdissa; Pyhän Savan pyhäinjäännösten poltto "1594 tai 1595" ja hanke "noin kolmensadan vuoden" kuluttua.
+- Sääjakso ja luonnehdinta: luvut "mallinnettujen kuukausinormaalien mukaan", pysyvät saa.json-luvuissa; ristiriita Wikipediaan kirjattu ehdotukset.huomiot-kenttään.
+- Kuvat: ei vaihdettu. CC BY-SA 3.0 rs -varoitukset (Ada Ciganlija, Suuri sotasaari) jätetty: lähderivillä CC BY-SA 3.0.
