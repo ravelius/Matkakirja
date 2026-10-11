@@ -81,7 +81,7 @@ namespace Matkakirja.Linssit.Kierros
             ("Q1537446", "Cibeleen aukio: Cibeleen suihkulähde (Q2736564), P625, 18 m", 40.41917, -3.69306, 40.419331, -3.693093),
             ("Q1326261", "Plaza de España: Cervantesin muistomerkki (Q4343253), P625, 47 m", 40.423391666667, -3.7122333333333, 40.42314, -3.712677),
             ("Q3048023", "Stortorget: Stortorgetin kaivo (Q10681422), P625, 4 m", 59.325, 18.07083333, 59.324975, 18.07088056),
-            ("Q844426", "Sergelin tori: Kristallvertikalaccent (lasiobeliski) (Q10549136), P625, 44 m", 59.3325, 18.064444444444, 59.332583333333, 18.065194444444),
+            // Sergelin tori (Q844426) POIS (PT 11.10. 15.4x): Kristallvertikalaccent (Edvin Öhrström, k. 1994) on suojattu teos, aukio ei kierroksella.
         };
         public const double MonumenttiSadeM = 60;
 
