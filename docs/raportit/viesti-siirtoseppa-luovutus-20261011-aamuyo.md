@@ -78,3 +78,15 @@ appit proto-3d/lokit/olavinlinna-yhdistetty-181{b,c,d,e}). Simuvuorot Julkaisija
   d238b68be vesiportin pielet + kynnys (Ydin KavelyPielet, testit KavelyPieletTestit, kultainen vesiportti-tormays.glb). Linssit 1361/1361.
 - Julkaisija: v9 Laitetestaajan 4. kierroksen (v8) jälkeiseen kohdennettuun tarkistukseen (laituri-a1 alku + 2. kiinnijäänti).
 - LR:lle: ulkoalue ilman tiedostot-kenttää (paketti b257fdf63e18f222), vesiportin rako/kolmioaukko; mustat levyt = tyrmän kuori.
+
+## PÄIVITYS 06.3x: v9 todennettu (SIMU VAPAA 05.52), v10-kärki be3a8bdf1 Julkaisijalle (+ Pelikoodari 0391b4701)
+- v9 6941c135 (todistus-laituri-a1-20261011-0540): pielet 4, tatti eteen etenee sillalle ja vesiportista porttikäytävään;
+  kiinnijäänti kirjataan vesiporttiin (ei tyrmään); 2. kierroksen nollaus oikein (uusi tarkistuspiste porttikäytävässä).
+- v10 (PT:n v8-arkit + Laitetestaajan 4. kierros laitetestaaja-olavinlinna-neljas-20261011.md):
+  1b33ed485 paluussa katse vaakaan kulkusuuntaan; dbd7256e0 SILMISTÄ LÄHITASO 0,05 m (DioraamaNayttamo pakotti 0,5 m joka kehys →
+  holvi/nurkat/muuri leikkautuivat; kattaa C-portin kohdat 3, 5, holvi, muunnelma 3:n "karmit"); 47e55d4ba NUI kynttilä tyrmään;
+  be3a8bdf1 muunnelma 3 oven vihje 20 s välein + kivi myös lukon jälkeen (testit TyrmaOviaukkoTestit oikealla törmäyksellä).
+  Paluuvene = ei venettä (katse järvelle, korjattu 1b33ed485). Linssit 1367/1367.
+- v10-ajossa varmistettava: laiturin valkopaitainen = renki-1500 vai Fogg (`linssi poikki vartijat` laituri-a1:ssä a1-00 jälkeen),
+  kaukonäkymän syvyystarkkuus 0,05 m:n lähitasolla, keittiö piilossa tyrmässä, muunnelma 2 katse kääntyy.
+- Skenaario laituri-a1: tapit katse alas 0,77 s (oli 1,5 s → +72° alas).
