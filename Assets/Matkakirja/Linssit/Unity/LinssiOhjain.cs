@@ -181,12 +181,19 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Kehittäjävalikko "Olavinlinna – pelattava pala (kokeilu)" (Päätoimittaja 7.10.): avaa Olavinlinnan ja käynnistää
         /// historiamoottorin E1:n (venesaapuminen → laituri → vapaa kävely, vartijat). Omistaja pelaa TF:ssä kehittäjäkoodilla.</summary>
-        public static void AvaaPelattavaPala()
+        public static void AvaaPelattavaPala() => AvaaPelattavaPala(false);
+
+        /// <param name="ohitaSaatavuus">Pelaajan avaus (Natiivi-UI, Suomen kartan Olavinlinna-nosto "Pelaa"/"Jatka", juna 182): poikkileikkaus
+        /// ei ole pelaajalle Saatavilla (ei Valmiit-listalla eikä omistettu), jolloin Valitse palasi hiljaa ja PelattavaPalaPyydetty jäi
+        /// roikkumaan. true = avataan kuten kartan kaupunkipallo (Linssirekisteri.Valitse ohitaSaatavuus); kutsuja vastaa maksusta.
+        /// Parametriton ylikuormitus säilyy (SeikkailuTapit hakee sen heijastuksella Type.EmptyTypes-allekirjoituksella).</param>
+        public static void AvaaPelattavaPala(bool ohitaSaatavuus)
         {
             var o = Instanssi; if (o == null) return;
             Matkakirja.Natiivi.DioraamaSovitin.PelattavaPalaPyydetty = true;
-            if (!AineistoValmis && o.rekisteri.Kaikki.All(l => l.Tiedot.Id != "poikkileikkaus")) o.StartCoroutine(o.ValitseKunValmis("poikkileikkaus"));
-            else o.rekisteri.Valitse("poikkileikkaus");
+            if (!AineistoValmis && o.rekisteri.Kaikki.All(l => l.Tiedot.Id != "poikkileikkaus")) o.StartCoroutine(o.ValitseKunValmis("poikkileikkaus", ohitaSaatavuus));
+            else if (!o.rekisteri.Valitse("poikkileikkaus", ohitaSaatavuus) && o.rekisteri.Auki?.Tiedot.Id != "poikkileikkaus")
+                Matkakirja.Natiivi.DioraamaSovitin.PelattavaPalaPyydetty = false;   // ei avautunut (ei saatavilla): pyyntö ei jää roikkumaan
         }
 
         public static bool ValmiitLinssitAuki => Linssirekisteri.Valmiit.Count > 0;
@@ -441,12 +448,12 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Linssi-komento ennen aineistoa: haku heti, ja valinta, kun linssi on rekisteröity (enintään 30 s).</summary>
-        System.Collections.IEnumerator ValitseKunValmis(string id)
+        System.Collections.IEnumerator ValitseKunValmis(string id, bool ohitaSaatavuus = false)
         {
             LataaAineistoHeti();
             float alku = Time.realtimeSinceStartup;
             while (!AineistoValmis && rekisteri.Kaikki.All(l => l.Tiedot.Id != id) && Time.realtimeSinceStartup - alku < 30f) yield return null;
-            rekisteri.Valitse(id);
+            rekisteri.Valitse(id, ohitaSaatavuus);
         }
 
         System.Collections.IEnumerator LataaAstronautti()
