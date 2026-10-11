@@ -72,3 +72,11 @@ Lähteet tarkistettu itse (en-Wikipedia, haettu 10.-11.10.2026): Reykjavík, Hal
 ## Yhteenveto
 
 VÄÄRIN 11 (rivit osiossa A), EPÄVARMA 12 (rivit osiossa B ilman koordinaatti-OK-riviä).
+
+## Korjattu
+
+- Kaikki 11 VÄÄRIN-kohtaa (A) korjattu sanatarkasti: Tjörnin-sillat (teksti, aika), Perlan-säiliölause, kuvatekstien "lähteen mukaan" poistettu (Harpa, Hafnarhús, Áfangar, Austurvöllur), 2.12.–10.1. (kappale, jakso 3), satamat, Áfangar-sijainti (nosto) ja tehtävän fakta.
+- Epävarmat (B): Harpan rakennusvaihe (nosto + kohde), Harpa- ja Perlan-vihjeet, Keflavík (teksti + lyhyt), Hallgrímskirkjan kuvateksti, sääluonnehdinta, Laugardalslaug (superlatiivi poistettu), artikkeli.intro, tiedot[0] (uusi tieto Alþingi 1845), Austurvöllin aika.
+- Oikeat vastaukset sekoitettu: kysymysten correct 0/1/2/3/1 ja tehtävän oikea 1; Perlan-väärä vaihtoehto "Tulivuoren purkauskraatteri" (oikea ei enää pisin tai jaettu pisin).
+- Viðey 64.1639, −21.8500; kartan rajat.ita −21.8300 (kohde rajojen sisällä).
+- Tarkistus: `tarkista e02 reykjavik --verkko` 0 virhettä, 1 varoitus (Viðey-tekstin "noin kaksi miljoonaa vuotta", jo pehmennetty "noin" + "lähteen mukaan").
