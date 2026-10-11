@@ -6123,7 +6123,7 @@ const KAUPUNGIT = {
    * PÄÄKAUPUNKIPISTEET e03 (Päätoimittaja 11.10.2026, Kaukasus ja Lähi-itä): rajat sisalto.json:n kohdekartasta. Rannikolla meri-lippu.
    */
   abudhabi: {
-    rajat: { pohjoinen: 24.4851, etela: 24.4566, lansi: 54.3025, ita: 54.3578 },
+    rajat: { pohjoinen: 24.4875, etela: 24.4545, lansi: 54.3, ita: 54.361 },
     meri: true,
   },
   amman: {
@@ -6134,7 +6134,7 @@ const KAUPUNGIT = {
     meri: true,
   },
   beirut: {
-    rajat: { pohjoinen: 33.8993, etela: 33.8755, lansi: 35.467, ita: 35.5194 },
+    rajat: { pohjoinen: 33.903, etela: 33.8755, lansi: 35.4945, ita: 35.5225 },
     meri: true,
   },
   jerevan: {

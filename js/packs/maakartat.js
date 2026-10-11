@@ -17198,10 +17198,10 @@ export const KAUPUNKIKARTAT = {
     numeroympyrat: true,
     esittely: 'Abu Dhabin länsiranta on kaupungin nykyinen julkinen kasvo. Vanha linnake kertoo asutuksen alusta, ja rantakadun palatsit, hotelli ja tornit kertovat, kuinka nopeasti kaupunki on kasvanut.',
     rajat: {
-      pohjoinen: 24.4851,
-      etela: 24.4566,
-      lansi: 54.3025,
-      ita: 54.3578,
+      pohjoinen: 24.4875,
+      etela: 24.4545,
+      lansi: 54.3,
+      ita: 54.361,
     },
     kohteet: [
       {
@@ -17326,18 +17326,12 @@ export const KAUPUNKIKARTAT = {
     numeroympyrat: true,
     esittely: 'Beirutin historiallinen ydin ulottuu niemen kärjestä kukkuloille, ja Rooman, osmanien ja ranskalaisen mandaatin ajan kerrostumat ovat vierekkäin. Rantakalliot, kirkot ja moskeijat, aukiot ja museot kertovat, miten kaupunki on elänyt Välimeren kauppasatamana.',
     rajat: {
-      pohjoinen: 33.8993,
+      pohjoinen: 33.903,
       etela: 33.8755,
-      lansi: 35.467,
-      ita: 35.5194,
+      lansi: 35.4945,
+      ita: 35.5225,
     },
     kohteet: [
-      {
-        nimi: 'Raouchén Kyyhkyskalliot',
-        tyyppi: 'luonto',
-        lat: 33.88986,
-        lon: 35.47033,
-      },
       {
         nimi: 'Beirutin kansallismuseo',
         lat: 33.87822,
