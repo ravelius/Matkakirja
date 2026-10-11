@@ -42,5 +42,26 @@ namespace Matkakirja.Linssit.Testit
             Aja(t, Tyrma.PuluAvaaS);
             Oleta.Tosi(t.PuluAvasi && t.Vaihe == TyrmanVaihe.OviAuki, "60 s → Pulu avaa oven");
         }
+    
+        [Testi] static void OvenVihjeLukonAuettuaJaToistuen()
+        {
+            // PT 06.0x, Laitetestaaja 4. kierros (v8): muunnelma 3 lukko auki 630 s, ilman vihjettä ulos vasta 1015 s.
+            var t = new Tyrma(3);
+            Aja(t, Tyrma.PuluAvaaS + 0.05);
+            Oleta.Tosi(t.PuluAvasi && t.OviVihje, "Pulu avaa → oven vihje heti");
+            t.OviVihje = false; Aja(t, Tyrma.OviVihjeValiS - 1); Oleta.Tosi(!t.OviVihje, "ei ennen väliä");
+            Aja(t, 1.5); Oleta.Tosi(t.OviVihje, "toistuu 20 s:n välein, kunnes ulkona");
+            t.OviVihje = false; Oleta.Tosi(t.Ulos(), "ulos"); Aja(t, 30); Oleta.Tosi(!t.OviVihje, "ulkona ei vihjettä");
+        }
+
+        [Testi] static void IrtokiviAvaaAukonMyosLukonJalkeen()
+        {
+            var t = new Tyrma(3);
+            Aja(t, Tyrma.PuluAvaaS + 1);
+            Oleta.Tosi(t.Vaihe == TyrmanVaihe.OviAuki && !t.AukkoAuki, "ovi auki, aukko kiinni");
+            Oleta.Tosi(t.KiviIrti() && t.AukkoAuki, "kivi irti lukon jälkeen → aukko kelpaa (v8: kivi ei enää avannut aukkoa)");
+            Oleta.Tosi(!t.KiviIrti(), "kerran");
+            Oleta.Tosi(!new Tyrma(1).KiviIrti(), "vain muunnelma 3");
+        }
     }
 }

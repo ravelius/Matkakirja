@@ -112,6 +112,9 @@ namespace Matkakirja.Natiivi
                 kirjaa?.Invoke("seikkailu: tyrmä: vesipoika jätti oven raolleen");
             }
             if (ydin.Vihje) { ydin.Vihje = false; SeikkailuVihjeet.Aktiivinen?.Pakota(2, "tyrmä 20 s"); }   // kieli: ei (tekninen)
+            // Oven vihje (PT 06.0x, Laitetestaaja 4. kierros: muunnelma 3 lukko auki 630 s, ilman vihjettä ulos vasta 1015 s; pyydetty
+            // vihje vei ulos 14 s:ssa): heti Pulun avatessa ja 20 s:n välein, kunnes pelaaja on ulkona.
+            if (ydin.OviVihje) { ydin.OviVihje = false; SeikkailuVihjeet.Aktiivinen?.Pakota(2, "tyrma-ovi-auki"); }   // kieli: ei (tekninen)
             if (ydin.Vaihe == TyrmanVaihe.AvaimetOlissa && avainId != null && SeikkailuEsineet.Aktiivinen?.Kadessa == avainId) ydin.Poimi();
             if (ydin.PuluAvasi)
             {
@@ -133,11 +136,12 @@ namespace Matkakirja.Natiivi
             { rotatKuultu = true; SeikkailuRepliikit.SoitaTaiVara("tyrma-vartija-rotat-1", null, ovi + Vector3.up * 1.6f); }
             // Muunnelma 3: ryömintä alkaa aukon suulta (irtokiven paikka); merkin ovi:tyrma-ryomi pää on seinän takana (~2 m), jonne
             // kävellen ei pääse (A3, Laitetestaaja TF 180: irtokiven pakoa ei saatu tehtyä).
-            bool ryomii = ydin.Muunnelma == 3 && ryomiOn && !puluAvasi;
-            var maali = ryomii ? aukonSuu : ulos;
+            // Aukko kelpaa aina, kun kivi on irti (myös Pulun avattua oven); ennen avausta ovi on kiinni, joten ulos ja ovi eivät täyty.
+            bool aukko = ydin.Muunnelma == 3 && ryomiOn && ydin.AukkoAuki;
             // Oviaukko riittää (Laitetestaaja 181d, HID-toisto 03.51: liike toimii, mutta auki oleva ovi ja käytävä näkyivät mustina aukkoina).
-            bool perilla = Vector3.Distance(p.transform.position, maali) < (ryomii ? RyomiM : UlosM)
-                || !ryomii && Vector3.Distance(p.transform.position, ovi) < OviLapiM && oviAukesi >= 0 && Time.unscaledTime - oviAukesi >= OviNakyyS;
+            var pp = p.transform.position;
+            bool perilla = aukko && Vector3.Distance(pp, aukonSuu) < RyomiM || Vector3.Distance(pp, ulos) < UlosM
+                || Vector3.Distance(pp, ovi) < OviLapiM && oviAukesi >= 0 && Time.unscaledTime - oviAukesi >= OviNakyyS;
             if (ydin.Vaihe == TyrmanVaihe.OviAuki && perilla && ydin.Ulos()) StartCoroutine(Ulos());
         }
 
@@ -176,8 +180,11 @@ namespace Matkakirja.Natiivi
             if (ydin.Vaihe == TyrmanVaihe.AvaimetKadessa) return ovi;
             if (ydin.Vaihe == TyrmanVaihe.Istuu && ydin.Muunnelma == 3) return SeikkailuEsineet.Aktiivinen?.Irrottamaton(ryomi) ?? ryomi;
             // Muunnelma 3: kivi irti → aukon suu (ryömintä alkaa siitä); Pulun 60 s:n avauksen jälkeen ulos oven kautta (A3).
-            if (ydin.Muunnelma == 3 && ryomiOn && !puluAvasi) return aukonSuu;
-            return ydin.Vaihe == TyrmanVaihe.OviAuki ? ulos : ovi;
+            if (ydin.Muunnelma == 3 && ryomiOn && ydin.AukkoAuki && !puluAvasi) return aukonSuu;
+            // Ovi auki: ensin itse ovi huoneesta näkyvänä (v8: kohde käytävän päässä seinän takana), oven luona käytävän pää.
+            var pl = SeikkailuPelaaja.Aktiivinen;
+            if (ydin.Vaihe == TyrmanVaihe.OviAuki) return pl != null && Vector3.Distance(pl.transform.position, ovi) > OviVihjeM ? ovi : ulos;
+            return ovi;
         }
 
         void KiviIrti(string id) { if (id.StartsWith("irtokivi", StringComparison.Ordinal) && ydin.KiviIrti()) { kirjaa?.Invoke("seikkailu: tyrmä: irtokivi irti, aukko auki"); Kolina(ovi); } }
@@ -185,7 +192,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Kova ääni tyrmässä (muunnelmat 2–3): käytävän vartija vain mutisee (malli 4.1), enintään 12 s:n välein.</summary>
         float kolinaAsti; bool rotatKuultu, puluAvasi, tyonnetty;
         // Oviaukko vasta, kun ovi on ollut auki OviNakyyS (v6 laituri-a1 04.11: avain lukkoon ovella → ulos samalla sekunnilla, ovea ei nähty).
-        const float TyontoM = 1.3f, RyomiM = 1.0f, OviLapiM = 0.8f, OviNakyyS = 1.2f;
+        const float TyontoM = 1.3f, RyomiM = 1.0f, OviLapiM = 0.8f, OviNakyyS = 1.2f, OviVihjeM = 1.5f;
         Light oviValo; float oviAukesi = -1f;
         /// <summary>Käytävän lämmin valo oven avautuessa (soihtu käytävän päässä): auki oleva ovi erottuu pimeästä tyrmästä.</summary>
         void OviValo()
