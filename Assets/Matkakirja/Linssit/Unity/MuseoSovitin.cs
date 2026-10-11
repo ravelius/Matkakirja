@@ -202,6 +202,9 @@ namespace Matkakirja.Natiivi
             else Kierros.Paivita(dt);
             if (nayttamo.Kamera != null) Kierros.SovitaPysahdykset(nayttamo.Kamera.aspect);   // vain muuttuessa (kierto, avaus)
             nayttamo.Paivita(sali, Kierros.Nykyinen, dt);
+            var korostus = Kierros.Vaihe == MuseoVaihe.Pysahtyy ? Kierros.NykyinenTeos : null;
+            var (kw, kh) = korostus != null ? Kierros.Ulkomitat(korostus) : (0, 0);
+            nayttamo.Korosta(korostus, kw / 2, kh / 2, dt);
             tekstuurit?.Paivita(nayttamo.Kamera, Kierros.NykyinenTeos?.Teos.Id, teosjarjestys, Kierros.Kohta);
             veistokset?.Paivita(nayttamo.Kamera);
             // Kertoja: kierroksen pysähdys soittaa teoksen äänitteen kerran saapuessa ja kestää vähintään sen ajan; matkaan lähtö pysäyttää.
@@ -380,6 +383,7 @@ namespace Matkakirja.Natiivi
                 case "seuraava": Kierros.Seuraava(); break;
                 case "edellinen": Kierros.Edellinen(); break;
                 case "tauko": Kierros.Tauko(osat.Length < 3 || osat[2] != "0"); break;
+                case "himmennys" when osat.Length > 2: MuseoNayttamo.HimmennysPaalla = osat[2] != "0"; o.Kirjaa("museo: himmennys " + (MuseoNayttamo.HimmennysPaalla ? "päällä" : "pois")); break;
                 case "tekstitys" when osat.Length > 2: AsetaTekstitys(osat[2] == "1" || osat[2] == "paalla"); break;
                 case "siirry" when osat.Length > 2: Kierros.Siirry(int.Parse(osat[2], CultureInfo.InvariantCulture) - 1); break;
                 case "esittele": Esittele(osat.Length > 2 ? osat[2] != "0" : (bool?)null); break;

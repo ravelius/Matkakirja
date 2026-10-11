@@ -41,6 +41,30 @@ namespace Matkakirja.Natiivi
         static readonly int IdMaara = Shader.PropertyToID("_MuseoSpotMaara"), IdP = Shader.PropertyToID("_MuseoSpotP"),
             IdD = Shader.PropertyToID("_MuseoSpotD"), IdV = Shader.PropertyToID("_MuseoSpotV"),
             IdHaja = Shader.PropertyToID("_MuseoHaja"), IdValotus = Shader.PropertyToID("_MuseoValotus");
+        static readonly int IdHimm = Shader.PropertyToID("_MuseoHimmennys"), IdKC = Shader.PropertyToID("_MuseoKorostusC"),
+            IdKN = Shader.PropertyToID("_MuseoKorostusN"), IdKX = Shader.PropertyToID("_MuseoKorostusX");
+        /// <summary>Salin himmennys pysähdyksessä (PT 11.10. 10.0x); QA: "museo himmennys 0|1".</summary>
+        public static bool HimmennysPaalla = true;
+        public const float HimmennysS = 0.6f;
+        float himmennys;
+
+        /// <summary>Pysähdyksen teos korostetuksi (muu sali himmenee pehmeästi ~HimmennysS); null = valot palaavat (laatikko jää edelliseen,
+        /// jotta häivytys ei hyppää). puoliW/puoliH = teoksen ulkomitat kehyksineen / 2.</summary>
+        public void Korosta(Linssit.Museo.Ripustus r, double puoliW, double puoliH, float dt)
+        {
+            if (r != null)
+            {
+                var n = U(r.Paikka.Normaali); n.y = 0; n.Normalize();
+                var x = new Vector3(-n.z, 0, n.x);
+                var c = U(r.Paikka.Keskipiste);
+                Shader.SetGlobalVector(IdKC, new Vector4(c.x, c.y, c.z, (float)puoliH));
+                Shader.SetGlobalVector(IdKN, new Vector4(n.x, n.y, n.z, 0));
+                Shader.SetGlobalVector(IdKX, new Vector4(x.x, x.y, x.z, (float)puoliW));
+            }
+            float tavoite = r != null && HimmennysPaalla ? 1f : 0f;
+            himmennys = Mathf.MoveTowards(himmennys, tavoite, dt / HimmennysS);
+            Shader.SetGlobalFloat(IdHimm, Mathf.SmoothStep(0f, 1f, himmennys));
+        }
 
         public Camera Kamera { get; private set; }
         public RenderTexture Kuva { get; private set; }
@@ -250,6 +274,7 @@ namespace Matkakirja.Natiivi
         {
             RenderPipelineManager.beginCameraRendering -= KameraAlkaa;
             Shader.SetGlobalFloat(IdHMaara, 0f);
+            Shader.SetGlobalFloat(IdHimm, 0f);
             VapautaKuva();
             NykyinenKuva = null;
             KuvaVaihtui?.Invoke(null);

@@ -20,6 +20,9 @@
 //  - _MetalliHaja: kulunut lehtikulta sirottaa laajasti (karhea mikropinta) → osa metallista heijastuu kuin hajapinta albedon
 //    värisenä; ilman tätä kultakehys näkyi kohdevalossakin tummanruskeana (vain kapea peiliheijastus).
 //  - _Valokerroin: materiaalin valon kerroin (teokset > 1, seinät ja lattiat < 1): teos hehkuu seinää kirkkaampana.
+//  - SALIN HIMMENNYS PYSÄHDYKSESSÄ (PT 11.10. 10.0x, omistajan "teos läheltä"): _MuseoHimmennys 0…1 (MuseoNayttamo häivyttää ~0,6 s)
+//    himmentää kaiken paitsi pysähdyksen teoksen kehyksineen (_MuseoKorostus*-laatikko seinän tasossa, 3 cm:n pehmeä reuna)
+//    lähes mustaksi (6 %): pystyssä vaakateoksen ylä- ja alapuolinen seinä ja lattia eivät vie huomiota. 0 = ei himmennystä.
 Shader "Matkakirja/MuseoValaistu"
 {
     Properties
@@ -77,6 +80,10 @@ Shader "Matkakirja/MuseoValaistu"
             float4 _MuseoSpotV[SPOTTEJA];   // väri × voimakkuus (cd)
             float4 _MuseoHaja;              // hajavalo lx (rgb)
             float _MuseoValotus;            // 1 / Lmax
+            float _MuseoHimmennys;          // 0 = ei, 1 = sali himmeä korostusta lukuun ottamatta
+            float4 _MuseoKorostusC;         // teoksen keskipiste.xyz, puolikorkeus (kehyksineen)
+            float4 _MuseoKorostusN;         // seinän normaali.xyz (teoksesta ulos)
+            float4 _MuseoKorostusX;         // vaaka-akseli seinän tasossa.xyz, puolileveys (kehyksineen)
 
             struct Tulo { float4 paikka : POSITION; float3 normaali : NORMAL; float4 vari : COLOR; float2 uv : TEXCOORD0; float2 uv1 : TEXCOORD1; };
             struct Ulos
@@ -166,6 +173,14 @@ Shader "Matkakirja/MuseoValaistu"
                     // vahattu lattia näyttää heijastuksen myös jyrkemmin).
                     float fr = lerp(0.25, 1, pow(1 - saturate(dot(n, v)), 5));
                     c = lerp(c, r, saturate(_Heijastus * fr * _MuseoHeijastusMaara));
+                }
+                if (_MuseoHimmennys > 0)
+                {
+                    float3 dk = i.maailma - _MuseoKorostusC.xyz;
+                    float u = abs(dot(dk, _MuseoKorostusX.xyz)), w = abs(dk.y), sy = dot(dk, _MuseoKorostusN.xyz);
+                    float sisalla = (1 - smoothstep(_MuseoKorostusX.w, _MuseoKorostusX.w + 0.03, u)) * (1 - smoothstep(_MuseoKorostusC.w, _MuseoKorostusC.w + 0.03, w))
+                                  * step(-0.05, sy) * step(sy, 0.4);
+                    c *= 1 - _MuseoHimmennys * 0.94 * (1 - sisalla);
                 }
                 return float4(c, 1);
             }
