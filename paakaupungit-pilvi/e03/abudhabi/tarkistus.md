@@ -76,3 +76,7 @@ Yhteenveto: VÄÄRIN 10, EPÄVARMA 8.
 - Toisto: Dubain pelilehti (helmenpyynti-nosto, juomavesi, torni, saari), maalehden aiheet (aavikko, keidas, ranta, rakennukset) ja lähinostot: ainoa toisto on Qasr Al Hosn (yllä). Sisäinen toisto: Cornichen dhow-ranta esiintyy kolmesti (teksti, tiedot, Emirates Palace); sallittu mutta kannattaa tiivistää.
 - Nykyaika/1873: kaikki 1873-väitteet käyty; Qasr Al Watan, Emirates Palace, Etihad Towers, sillat ja rantakatu OK, kaksi päättelyväitettä merkitty EPÄVARMA.
 - Keksimättömät isoisän tekemiset: ei löytynyt.
+
+## Korjattu
+
+Kaikki VÄÄRIN-kohdat korjattu sanatarkasti sisalto.json:iin (T-muoto pois, mitoituslause pois ja nosto "Saari, joka kasvoi sillan jälkeen" satojatuhansiksi, gaselli-nosto, moskeijan selite "monista eri maista", kysymysten 1 ja 2 vihjeet, Hosnin valkoiseksi maalaus 1900-luvun lopulle, synagogan pyhäkkö/mikveh/opintosali, Qasr Al Hosnin ensimmäinen kappale kirjoitettu uudelleen ilman 1761/1793/"vanhin kivirakennus" -toistoa). EPÄVARMA-kohdat pehmennetty tai poistettu (3000 työntekijää -> "tuhansia", 1873-päätelmät, Etihad "2010-luvun alussa otettiin käyttöön", Qasr Al Watanin ilmelause pois, minitehtävän fakta -> Ralph Helmick, kansikuvan 1 selite). "Lähteen mukaan" poistettu kuvateksteistä (valokuva, kansikuva 3, Hosnin kuva, ruokakuva, Corniche-kuva), jätetty leipätekstiin. Kuvia ei vaihdettu. Tarkista --verkko: 0 virhettä, 2 varoitusta (kohteita 4, saatiedot null; entiset perustelut).

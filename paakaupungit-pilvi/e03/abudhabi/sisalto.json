@@ -14,8 +14,8 @@
   }
  },
  "artikkeli": {
-  "intro": "Abu Dhabi on Arabiemiirikuntien pääkaupunki ja samannimisen emiirikunnan hallintokeskus. Kaupunki seisoo T-muotoisella **saarella Persianlahden rannalla**, alle 250 metrin päässä mantereesta. Nimi on arabiaa ja tarkoittaa ”gasellin isää”, ja suosittu kertomus selittää sen metsästäjillä, jotka seurasivat gasellia rannikon makean veden luo.\n\nIsoisän matkavuonna 1873 tässä oli pieni rannikkoasutus linnakkeineen, ja helmenpyynti oli öljyä edeltänyt pääelinkeino. Öljy ja ensimmäinen silta saarelle tulivat vasta 1900-luvun jälkipuoliskolla. Nykyään Abu Dhabin alueella asuu Abu Dhabin tilastokeskuksen mukaan 2 823 340 ihmistä (2024).\n\nKaupungin tunnetuimpia nähtävyyksiä ovat **Sheikh Zayedin suurmoskeija**, Qasr Al Watanin palatsi ja Saadiyat-saaren museot. Keskustassa seisova vanha **Qasr Al Hosn** muistuttaa, mistä kaupunki on kasvanut.",
-  "teksti": "Lähteen mukaan Bani Yas -heimo asui ensin Liwan keitaalla sisämaassa. Makean veden löytö rannikolta metsästysretkellä johti asutuksen perustamiseen saarelle 1700-luvulla, ja heimon Al Bu Falah -osa asettui sinne. Hallitsijasuku Al Nahyan polveutuu tästä osasta, ja asutuksen ytimessä oli linnake, joka seisoo kaupungin keskustassa yhä.\n\nKaupunki kasvoi nopeasti 1900-luvun jälkipuoliskolla. Lähteen mukaan ensimmäinen silta saarelta mantereelle rakennettiin 1960-luvun lopulla aiemmin pieneen kalastajakylään. Kaupunkisuunnitelma tehtiin samoihin aikoihin, ja sen mitoitus oli aluksi kymmeniä tuhansia asukkaita. Sittemmin saaria, siltoja ja rantakatuja on lisätty, ja Cornichen paikalla oli ennen 1970-lukua ranta, jolla dhow-alukset ankkuroituivat.\n\nArabiemiirikunnat perustettiin 2. joulukuuta 1971, kun Abu Dhabi ja viisi muuta emiirikuntaa liittyivät yhteen. Abu Dhabista tuli liiton pääkaupunki, ja Sheikh Zayed bin Sultan Al Nahyan oli maan ensimmäinen presidentti. Nykyään kaupunki tunnetaan moskeijoistaan, palatseistaan ja museoistaan."
+  "intro": "Abu Dhabi on Arabiemiirikuntien pääkaupunki ja samannimisen emiirikunnan hallintokeskus. Kaupunki seisoo **saarella Persianlahden rannalla**, alle 250 metrin päässä mantereesta. Nimi on arabiaa ja tarkoittaa ”gasellin isää”, ja suosittu kertomus selittää sen metsästäjillä, jotka seurasivat gasellia rannikon makean veden luo.\n\nIsoisän matkavuonna 1873 rannikolla oli asutus linnakkeineen, ja helmenpyynti oli öljyä edeltänyt keskeinen elinkeino. Öljy ja ensimmäinen silta saarelle tulivat vasta 1900-luvun jälkipuoliskolla. Nykyään Abu Dhabin alueella asuu Abu Dhabin tilastokeskuksen mukaan 2 823 340 ihmistä (2024).\n\nKaupungin tunnetuimpia nähtävyyksiä ovat **Sheikh Zayedin suurmoskeija**, Qasr Al Watanin palatsi ja Saadiyat-saaren museot. Keskustassa seisova vanha **Qasr Al Hosn** muistuttaa, mistä kaupunki on kasvanut.",
+  "teksti": "Lähteen mukaan Bani Yas -heimo asui ensin Liwan keitaalla sisämaassa. Makean veden löytö rannikolta metsästysretkellä johti asutuksen perustamiseen saarelle 1700-luvulla, ja heimon Al Bu Falah -osa asettui sinne. Hallitsijasuku Al Nahyan polveutuu tästä osasta, ja asutuksen ytimessä oli linnake, joka seisoo kaupungin keskustassa yhä.\n\nKaupunki kasvoi nopeasti 1900-luvun jälkipuoliskolla. Lähteen mukaan ensimmäinen silta saarelta mantereelle rakennettiin 1960-luvun lopulla aiemmin pieneen kalastajakylään. Kaupunkisuunnitelma tehtiin samoihin aikoihin 1960- ja 1970-luvuilla. Sittemmin saaria, siltoja ja rantakatuja on lisätty, ja Cornichen paikalla oli ennen 1970-lukua ranta, jolla dhow-alukset ankkuroituivat.\n\nArabiemiirikunnat perustettiin 2. joulukuuta 1971, kun Abu Dhabi ja viisi muuta emiirikuntaa liittyivät yhteen. Abu Dhabista tuli liiton pääkaupunki, ja Sheikh Zayed bin Sultan Al Nahyan oli maan ensimmäinen presidentti. Nykyään kaupunki tunnetaan moskeijoistaan, palatseistaan ja museoistaan."
  },
  "kysymykset": [
   {
@@ -28,7 +28,7 @@
    ],
    "correct": 2,
    "level": 1,
-   "hint": "Nimi liittyy eläimeen, jonka metsästäjät kertoman mukaan seurasivat rannikolle.",
+   "hint": "Suosittu kertomus liittyy metsästysretkeen, joka päättyi rannikolta löytyneeseen makeaan veteen.",
    "fact": "Arabian sana ”abu” tarkoittaa isää ja ”dhabi” gasellia.",
    "source": "https://en.wikipedia.org/wiki/Abu_Dhabi"
   },
@@ -42,7 +42,7 @@
    ],
    "correct": 3,
    "level": 1,
-   "hint": "Sukeltajat hakivat sitä merenpohjasta hengitystä pidätellen.",
+   "hint": "Elinkeino kukoisti Persianlahdella 1800-luvun lopulta, ennen kuin öljy muutti alueen talouden.",
    "fact": "Helmenpyynti oli kaupungin avainelinkeino ennen öljyvarojen löytymistä.",
    "source": "https://en.wikipedia.org/wiki/Abu_Dhabi"
   },
@@ -97,18 +97,18 @@
  "valokuva": {
   "tiedosto": "Qasr al Hosn.jpg",
   "lahde": "Darthjipsu, Commons (CC BY-SA 4.0)",
-  "lyhyt": "Qasr Al Hosn on lähteen mukaan Abu Dhabin vanhin kivirakennus ja nykyään museo.",
-  "selite": "Qasr Al Hosn on lähteen mukaan Abu Dhabin vanhin kivirakennus. Linnake oli emiirin palatsi ja hallituspaikka vuoteen 1966, ja nykyään se on museo ja kulttuurikohde."
+  "lyhyt": "Qasr Al Hosn on Abu Dhabin vanhin kivirakennus ja nykyään museo.",
+  "selite": "Qasr Al Hosn on Abu Dhabin vanhin kivirakennus. Linnake oli emiirin palatsi ja hallituspaikka vuoteen 1966, ja nykyään se on museo ja kulttuurikohde."
  },
  "kaupunkilehti": [
   {
    "id": "kaupunki",
    "nimi": "Abu Dhabi",
-   "johdanto": "Abu Dhabi on saarikaupunki Persianlahdella, ja sen nimi tarkoittaa gasellin isää. Isoisän matkavuonna 1873 täällä seisoi linnake ja helmenpyynti oli elinkeino; moskeijat, sillat ja museot tulivat vasta myöhemmin.",
+   "johdanto": "Abu Dhabi on saarikaupunki Persianlahdella, ja sen nimi tarkoittaa gasellin isää. Isoisän matkavuonna 1873 rannikolla oli asutus linnakkeineen ja helmenpyynti oli keskeinen elinkeino; moskeijat, sillat ja museot tulivat vasta myöhemmin.",
    "kansikuvat": [
     {
      "tiedosto": "Skyline of Abu Dhabi at sunset.jpg",
-     "selite": "Abu Dhabin länsiranta Persianlahden äärellä, vastarannalla Emirates Palace.",
+     "selite": "Abu Dhabin länsiranta Persianlahden äärellä; rantakadun eteläpäässä on Emirates Palace -hotelli.",
      "lahde": "Robert Haandrikman, Wikimedia Commons (CC BY 2.0)"
     },
     {
@@ -118,22 +118,22 @@
     },
     {
      "tiedosto": "Sheikh Zayed Grand Mosque @ Abu Dhabi (15856602738).jpg",
-     "selite": "Sheikh Zayedin suurmoskeija valmistui joulukuussa 2007 ja on lähteen mukaan maan suurin.",
+     "selite": "Sheikh Zayedin suurmoskeija valmistui joulukuussa 2007 ja on maan suurin.",
      "lahde": "Guilhem Vellut from Annecy, France, Wikimedia Commons (CC BY 2.0)"
     }
    ],
    "nostot": [
     {
      "otsikko": "Gasellin isä",
-     "teksti": "Nimi on arabiaa: ”abu” tarkoittaa isää ja ”dhabi” gasellia. Suosittu kertomus kuvaa, miten metsästäjät seurasivat gasellia rannikolle ja löysivät makeaa vettä; lähteen mukaan kyse on kansantarinasta eikä tarkasti todennetusta tapahtumasta. Bani Yas -heimo oli asunut ensin Liwan keitaalla, ja sen Al Bu Falah -osa perusti asutuksen saarelle 1700-luvulla. Hallitsijasuku Al Nahyan polveutuu tästä osasta. Kaupungin keskustassa seisoo yhä linnake, joka muistuttaa asutuksen ensimmäisistä vuosista.",
+     "teksti": "Nimi on arabiaa: ”abu” tarkoittaa isää ja ”dhabi” gasellia. Suosittu kertomus kuvaa, miten metsästäjät seurasivat gasellia rannikolle ja löysivät makeaa vettä; lähteen mukaan asutus syntyi makean veden löydön ympärille. Bani Yas -heimo oli asunut ensin Liwan keitaalla, ja sen Al Bu Falah -osa perusti asutuksen saarelle 1700-luvulla. Hallitsijasuku Al Nahyan polveutuu tästä osasta. Kaupungin keskustassa seisoo yhä linnake, joka muistuttaa asutuksen ensimmäisistä vuosista.",
      "tiedosto": "Arabian Gazelle.jpg",
      "selite": "Abu Dhabin nimi tarkoittaa arabiaksi gasellin isää.",
      "lahde": "Ubm007, Wikimedia Commons (CC BY-SA 4.0)",
      "wiki": "Abu Dhabi"
     },
     {
-     "otsikko": "Saari, jonka piti olla pieni",
-     "teksti": "Abu Dhabin saari on vain lyhyen salmen päässä mantereesta, alle 250 metrin etäisyydellä. Lähteen mukaan ensimmäinen silta rakennettiin 1960-luvun lopulla yhdistämään manner aiemmin pieneen kalastajakylään. Kaupunkisuunnitelma tehtiin samoihin aikoihin, ja sen mitoitus oli aluksi kymmeniä tuhansia asukkaita. Sittemmin saaria ja siltoja on lisätty, ja Zaha Hadidin suunnittelema Sheikh Zayed -silta avattiin vuonna 2010. Isoisän matkavuonna 1873 rannikolla oli pieni asutus, ei siltoja eikä rantakatua.",
+     "otsikko": "Saari, joka kasvoi sillan jälkeen",
+     "teksti": "Abu Dhabin saari on vain lyhyen salmen päässä mantereesta, alle 250 metrin etäisyydellä. Lähteen mukaan ensimmäinen silta rakennettiin 1960-luvun lopulla yhdistämään manner aiemmin pieneen kalastajakylään. Kaupunkisuunnitelma tehtiin samoihin aikoihin 1960- ja 1970-luvuilla, ja lähteen mukaan se mitoitettiin satojentuhansien asukkaiden kaupungiksi. Sittemmin saaria ja siltoja on lisätty, ja Zaha Hadidin suunnittelema Sheikh Zayed -silta avattiin vuonna 2010.",
      "tiedosto": "Abu Dhabi 2013 - panoramio.jpg",
      "selite": "Sheikh Zayed -silta avattiin vuonna 2010 yhdistämään saari mantereeseen; sen suunnitteli Zaha Hadid.",
      "lahde": "Валерий Дед, Wikimedia Commons (CC BY 3.0)",
@@ -149,9 +149,9 @@
     },
     {
      "otsikko": "Moskeija, joka kokosi aineet kaikkialta",
-     "teksti": "Sheikh Zayedin suurmoskeija on lähteen mukaan maan suurin moskeija. Rakennustyö aloitettiin 1990-luvulla, ja rukoussalit otettiin käyttöön joulukuussa 2007. Hankkeessa oli mukana yli kolme tuhatta työntekijää, ja materiaaleja ja tekijöitä tuli muun muassa Italiasta, Saksasta, Intiasta, Turkista, Iranista, Kiinasta, Britanniasta ja Uudesta-Seelannista. Moskeijassa on 82 kupolia, ja siihen mahtuu noin neljäkymmentä tuhatta rukoilijaa. Lähteen mukaan pihan kukkakuvioista marmorimosaiikkia pidetään maailman suurimpana.",
+     "teksti": "Sheikh Zayedin suurmoskeija on lähteen mukaan maan suurin moskeija. Rakennustyö aloitettiin 1990-luvulla, ja rukoussalit otettiin käyttöön joulukuussa 2007. Hankkeessa oli lähteen mukaan mukana tuhansia työntekijöitä, ja materiaaleja ja tekijöitä tuli muun muassa Italiasta, Saksasta, Intiasta, Turkista, Iranista, Kiinasta, Britanniasta ja Uudesta-Seelannista. Moskeijassa on 82 kupolia, ja siihen mahtuu noin neljäkymmentä tuhatta rukoilijaa. Lähteen mukaan pihan kukkakuvioista marmorimosaiikkia pidetään maailman suurimpana.",
      "tiedosto": "Abu dhabi, Moschea dello Sceicco Zayed, loggiati, pilastri, capitelli dorati 01 a palmizio.jpg",
-     "selite": "Sheikh Zayedin suurmoskeijaan tuotiin materiaaleja ja tekijöitä kahdeksasta eri maasta.",
+     "selite": "Sheikh Zayedin suurmoskeijaan tuotiin materiaaleja ja tekijöitä monista eri maista.",
      "lahde": "Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)",
      "wiki": "Sheikh Zayed Grand Mosque"
     }
@@ -201,7 +201,7 @@
        "teksti": "Suurin osa ruoasta on halal, ja arabialaista ruokaa saa kaikkialta pienistä shawarma-paikoista hotellien ravintoloihin. Myös eteläaasialainen ruoka on yleistä. Perinteistä emiirikuntien ruokaa tarjoavia paikkoja on vähän; lähteen mukaan esimerkiksi harees ja lugaimat-jälkiruoka kuuluvat siihen. Arabialaisen kahvin kahvilat ovat suosittuja, ja alkoholia tarjoillaan vain lisensoiduissa paikoissa.",
        "kuva": {
         "tiedosto": "Dallah in north garden.jpg",
-        "selite": "Arabialainen kahvi kuuluu Abu Dhabin ruokakulttuuriin, ja kahvilat ovat lähteen mukaan suosittuja.",
+        "selite": "Arabialainen kahvi kuuluu Abu Dhabin ruokakulttuuriin, ja kahvilat ovat suosittuja.",
         "lahde": "Hamzabilal.3093, Wikimedia Commons (CC BY-SA 4.0)"
        }
       },
@@ -210,7 +210,7 @@
        "teksti": "Ilmasto on kuuma aavikkoilmasto. Toukokuusta syyskuuhun on erittäin kuumaa ja kosteaa, ja heinä–elokuussa ylin päivälämpötila on keskimäärin yli 40 astetta. Kuukausien keskilämpötilat vaihtelevat tammikuun noin 19 asteesta elokuun noin 36 asteeseen. Viileämpi kausi kestää marraskuusta maaliskuuhun, ja silloin sataa muutamana päivänä. Vuosisade on alle 60 millimetriä, ja aurinko paistaa lähes aina. Hiekka- ja pölymyrskyjä esiintyy ajoittain kuumina kuivina kuukausina.",
        "kuva": {
         "tiedosto": "Beach @ Corniche @ Abu Dhabi (15421876734).jpg",
-        "selite": "Corniche on lähteen mukaan suosittu iltakävelypaikka.",
+        "selite": "Corniche on suosittu iltakävelypaikka.",
         "lahde": "Guilhem Vellut from Annecy, France, Wikimedia Commons (CC BY 2.0)"
        }
       }
@@ -279,7 +279,7 @@
      "Käsin veistetyistä marmorilaatoista"
     ],
     "oikea": 2,
-    "fakta": "Teoksen muodot kuuluvat Platonin kappaleiksi kutsuttuun viiden muodon joukkoon."
+    "fakta": "Teoksen on suunnitellut yhdysvaltalainen taiteilija Ralph Helmick."
    },
    "nostot": [
     {
@@ -308,7 +308,7 @@
     },
     {
      "otsikko": "Kolme taloa yhdellä jalustalla",
-     "teksti": "Abrahamic Family House on Saadiyat-saarella, ja siinä on moskeija, kirkko ja synagoga erillisissä rakennuksissa. Kompleksi vihittiin käyttöön helmikuussa 2023. Hanke sai alkunsa asiakirjasta, jonka paavi Franciscus ja al-Azharin suurimaami Ahmed El-Tayeb allekirjoittivat Abu Dhabissa 2010-luvun lopulla. Moskeija on nimeltään Imam Al-Tayeb, kirkko on nimetty Franciscus Assisilaisen mukaan ja synagoga on Moses Ben Maimon. Lähteen mukaan synagoga on Arabiemiirikuntien ensimmäinen tarkoitusta varten rakennettu. Kompleksi on kaikille avoin.",
+     "teksti": "Abrahamic Family House on Saadiyat-saarella, ja siinä on moskeija, kirkko ja synagoga erillisissä rakennuksissa. Kompleksi vihittiin käyttöön helmikuussa 2023. Hanke sai alkunsa asiakirjasta, jonka paavi Franciscus ja al-Azharin suurimaami Ahmed El-Tayeb allekirjoittivat Abu Dhabissa 2010-luvun lopulla. Moskeija on nimeltään Imam Al-Tayeb, kirkko on nimetty Franciscus Assisilaisen mukaan ja synagoga on Moses Ben Maimon. Lähteen mukaan synagogassa on Arabiemiirikuntien ensimmäinen pyhäkkö, rituaalikylpy (mikveh) ja opintosali. Kompleksi on kaikille avoin.",
      "tiedosto": "Moses Ben Maimon Synagogue interior - june 28 2025.jpg",
      "selite": "Moses Ben Maimon -synagoga on yksi Abrahamic Family Housen kolmesta rakennuksesta.",
      "lahde": "Blahajsdm2025, Wikimedia Commons (CC0)",
@@ -352,11 +352,11 @@
  "nahtavyydet": {
   "Qasr Al Hosn": {
    "aika": "1700-luvulta",
-   "teksti": "Qasr Al Hosn on linnake ja museo Abu Dhabin keskustassa. Lähteen mukaan se on kaupungin vanhin kivirakennus. Alun perin se oli vartiotorni, josta kasvoi 1700-luvun lopulla pieni linnake ja hallitsijan pysyvä asuinpaikka.\n\nIsoisän matkavuonna 1873 linnake oli pienempi ja toisenlainen kuin nykyään: nykyinen muotonsa on peräisin 1930-luvun lopun laajennuksesta, joka lähteen mukaan rahoitettiin öljylupasopimuksen tuloilla. Rakennus oli emiirin palatsi ja hallituspaikka vuoteen 1966 saakka. Nimi Valkoinen linnake ei ole alkuperäinen: linnake maalattiin valkoiseksi vasta kunnostuksessa 1970- ja 1980-lukujen vaihteessa.\n\nNykyään Qasr Al Hosn on museo ja kulttuurikohde, joka avattiin uudelleen 2010-luvun lopulla pitkän entisöinnin jälkeen. Sen vieressä on Abu Dhabin kulttuurisäätiö, ja koko alueeseen kuuluu myös käsityöpaja House of Artisans.",
+   "teksti": "Qasr Al Hosn on linnake ja museo Abu Dhabin keskustassa. Nykyinen muotonsa on peräisin 1930-luvun lopun laajennuksesta, joka lähteen mukaan rahoitettiin ensimmäisen öljylupasopimuksen tuloilla. Se oli emiirin palatsi ja hallituspaikka vuoteen 1966.\n\nKoska nykyinen muoto syntyi vasta 1930-luvun lopun laajennuksessa, isoisän matkavuonna 1873 linnake oli pienempi. Nimi Valkoinen linnake ei ole alkuperäinen: linnake maalattiin kirkkaan valkoiseksi vasta 1900-luvun lopun kunnostuksissa.\n\nNykyään Qasr Al Hosn on museo ja kulttuurikohde, joka avattiin uudelleen 2010-luvun lopulla pitkän entisöinnin jälkeen. Sen vieressä on Abu Dhabin kulttuurisäätiö, ja koko alueeseen kuuluu myös käsityöpaja House of Artisans.",
    "kuvat": [
     {
      "tiedosto": "Qasr al Hosn.jpg",
-     "selite": "Qasr Al Hosn on lähteen mukaan Abu Dhabin vanhin kivirakennus ja nykyään museo.",
+     "selite": "Qasr Al Hosn on Abu Dhabin vanhin kivirakennus ja nykyään museo.",
      "lahde": "Darthjipsu, Wikimedia Commons (CC BY-SA 4.0)"
     }
    ],
@@ -364,7 +364,7 @@
   },
   "Qasr Al Watan": {
    "aika": "2010-luvun loppu",
-   "teksti": "Qasr Al Watan eli Kansakunnan palatsi on Arabiemiirikuntien presidentin palatsi. Sitä käytetään juhla- ja valtiovierailuihin sekä ministerineuvoston tarpeisiin, eikä se ole asuinkäytössä.\n\nRakennus valmistui 2010-luvun lopulla ja avattiin yleisölle maaliskuussa 2019. Julkisivu on valkoista graniittia ja kalkkikiveä, ja sisällä on iso kupoli sekä kristallikruunu. Palatsin Great Hallin itäsiivessä on House of Knowledge, jossa on esillä diplomaattilahjoja ja jonka kirjastossa on tuhansia teoksia.\n\nIsoisän matkavuonna 1873 palatsia ei vielä ollut. Lähteen mukaan hallitsijan pysyvä asuinpaikka oli tuolloin linnake Qasr Al Hosn, ja nykyinen palatsi kuuluu 2000-luvun rakennuksiin, jotka ovat muuttaneet saaren länsirannan ilmettä.",
+   "teksti": "Qasr Al Watan eli Kansakunnan palatsi on Arabiemiirikuntien presidentin palatsi. Sitä käytetään juhla- ja valtiovierailuihin sekä ministerineuvoston tarpeisiin, eikä se ole asuinkäytössä.\n\nRakennus valmistui 2010-luvun lopulla ja avattiin yleisölle maaliskuussa 2019. Julkisivu on valkoista graniittia ja kalkkikiveä, ja sisällä on iso kupoli sekä kristallikruunu. Palatsin Great Hallin itäsiivessä on House of Knowledge, jossa on esillä diplomaattilahjoja ja jonka kirjastossa on tuhansia teoksia.\n\nIsoisän matkavuonna 1873 palatsia ei vielä ollut. Lähteen mukaan hallitsijan pysyvä asuinpaikka oli tuolloin linnake Qasr Al Hosn,.",
    "kuvat": [
     {
      "tiedosto": "Qasr Al Watan 13.jpg",
@@ -388,7 +388,7 @@
   },
   "Etihad Towers": {
    "aika": "2010-luku",
-   "teksti": "Etihad Towers on viiden tornin kokonaisuus Emirates Palacea vastapäätä. Tornien korkeudet ovat suunnilleen 200–300 metriä, ja niissä on toimistoja, asuntoja ja hotelli. Lähteen mukaan toinen torneista on yksi kaupungin korkeimmista, ja sen yläkerroksessa on katselutaso.\n\nTornit valmistuivat 2010-luvun alussa, ja hotelli avattiin pian sen jälkeen. Kokonaisuus kuuluu siihen rakennusryhmään, joka on antanut Abu Dhabin länsirannalle sen tämänhetkisen siluetin. Tornit ovat esiintyneet myös elokuvassa Furious 7, jossa autolla ajetaan tornien läpi.\n\nIsoisän matkavuonna 1873 tällä kohdalla ei seissyt yhtään tällaista rakennusta: Abu Dhabi oli pieni rannikkoasutus, ja korkeat tornit kuuluvat öljyn jälkeiseen aikaan.",
+   "teksti": "Etihad Towers on viiden tornin kokonaisuus Emirates Palacea vastapäätä. Tornien korkeudet ovat suunnilleen 200–300 metriä, ja niissä on toimistoja, asuntoja ja hotelli. Lähteen mukaan toinen torneista on yksi kaupungin korkeimmista, ja sen yläkerroksessa on katselutaso.\n\n2010-luvun alussa tornit otettiin käyttöön, ja hotelli avattiin pian sen jälkeen. Kokonaisuus kuuluu siihen rakennusryhmään, joka on antanut Abu Dhabin länsirannalle sen tämänhetkisen siluetin. Tornit ovat esiintyneet myös elokuvassa Furious 7, jossa autolla ajetaan tornien läpi.\n\nIsoisän matkavuonna 1873 tällä kohdalla ei seissyt yhtään tällaista rakennusta: rannikolla oli asutus, ja korkeat tornit kuuluvat öljyn jälkeiseen aikaan.",
    "kuvat": [
     {
      "tiedosto": "The Big Six in Abu Dhabi.jpg",
