@@ -377,6 +377,18 @@ export function asetaFokusvirtaTila(game, city, tila) {
 /* ==================== KYTKENTÄ PELIIN ==================== */
 
 /**
+ * Onko pelaaja matkansa alussa aloituskaupungissa: kaupunki on pelaajan
+ * lähtökaupunki (game.js actionPickStart, player.start), eikä laudalla ole
+ * vielä käyty missään muualla.
+ */
+export function aloituskaupungissa(ui, city) {
+  const pelaaja = ui?.game?.player;
+  const kaydyt = ui?.game?.world?.visited;
+  if (!city || !pelaaja || pelaaja.start !== city.id || !kaydyt) return false;
+  return [...kaydyt].every((id) => id === city.id);
+}
+
+/**
  * Onko tällä kaupungilla fokusvirta juuri nyt käytössä?
  *
  * Kolme ehtoa, kaikki pakolliset: fokusmoodi päällä (laitekohtainen
@@ -1166,6 +1178,14 @@ function soitaLivianKaupunkiSarja(ui, kaupunkiId, kentta, kuplat, i = 0) {
 export function fokusvirtaSaapumiskupla(ui, city) {
   if (!city || SAAPUMISKUPLA_VAITI.has(city.id)) return false;
   if (!ui?.game?.pack) return false;
+  /*
+   * ALOITUSKAUPUNGISSA EI PULUN KOMMENTTIA EIKÄ KUVIA (omistaja 11.10.2026
+   * klo 11.5x, natiivi on malli): matkan alussa pelaaja kuulee jo
+   * tuurauspaljastuksen ja isoisän luennan, joten kommentti ja PULU-CAM-
+   * pakka (naytaPulunKuvapakka alla) jäävät pois. Paluu aloituskaupunkiin
+   * myöhemmin kommentoidaan kuten muutkin saapumiset.
+   */
+  if (aloituskaupungissa(ui, city)) return false;
   /*
    * ENSISAAPUMISEN TUURAUSPALJASTUS ENSIN, KOMMENTTI SEN JÄLKEEN.
    * 29.8.2026 paljastus VOITTI ja maadoitus jäi ensimmäisessä
