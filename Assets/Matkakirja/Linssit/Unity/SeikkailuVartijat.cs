@@ -125,6 +125,7 @@ namespace Matkakirja.Natiivi
         DioraamaHahmot3D hahmot;
         Action<string> kirjaa;
         Vector3 tarkistus; SeikkailuPelaaja tarkistusPelaaja;
+        double tarkistusYaw = double.NaN;   // kulkusuunta tarkistuspisteessä (paluussa katse siihen, vaakatasoon)
         string pelaajanOsa; float osaTarkistus, hehkuTarkistus; string kiinniOsa; int kiinniOsassa;
         bool oliKiipeily; float kiipeilyAlkuY;
         /// <summary>Viimeisimmän tarkistuspisteen osa ja tapahtuma (V6 tallennus kuuntelee).</summary>
@@ -161,7 +162,7 @@ namespace Matkakirja.Natiivi
         {
             var a = Aktiivinen; var p = SeikkailuPelaaja.Aktiivinen; if (a == null || p == null || p.Otteessa) return;
             var pp = p.transform.position; if (EpaileePelaajaa(pp)) return;
-            a.tarkistus = pp; TarkistusOsa = Askelaani.Osa(SeikkailuKavely.Data, pp.x, pp.y, -pp.z) ?? TarkistusOsa;
+            a.tarkistus = pp; a.tarkistusYaw = p.Tila.KameraYaw; TarkistusOsa = Askelaani.Osa(SeikkailuKavely.Data, pp.x, pp.y, -pp.z) ?? TarkistusOsa;
             a.kirjaa?.Invoke($"seikkailu: tarkistuspiste {esine} ({pp})");
             Tarkistuspiste?.Invoke(TarkistusOsa, pp);
         }
@@ -290,7 +291,7 @@ namespace Matkakirja.Natiivi
             if (Time.unscaledTime > hehkuTarkistus) { hehkuTarkistus = Time.unscaledTime + 2f; SeikkailuValot.HehkuIsoihinLiekkeihin(Liekit, DioraamaNayttamo.Kerros); }
             if (ote != null) return;   // kiinnijäänti käynnissä (Ote-kulku)
             if (p != null && !riitaKaynnissa && (riitaAsti -= dt) <= 0) { riitaAsti = RiitaValiS; StartCoroutine(Riita(p)); }
-            if (p != null && p != tarkistusPelaaja) { tarkistus = p.transform.position; tarkistusPelaaja = p; }   // uusi pelaaja = uusi tarkistuspiste
+            if (p != null && p != tarkistusPelaaja) { tarkistus = p.transform.position; tarkistusYaw = p.Tila.KameraYaw; tarkistusPelaaja = p; }   // uusi pelaaja = uusi tarkistuspiste
             // Turvallinen alku (A1, PT 11.10.): ensimmäiset 60 s pelaajan saatua ohjauksen kukaan ei jahtaa eikä ota kiinni; huomaaminen ja
             // kääntyminen äänen suuntaan opettavat. Kerran per peli (ei tyrmän tai tarkistuspisteen jälkeen).
             if (p != null && !turvaAnnettu)
@@ -309,7 +310,7 @@ namespace Matkakirja.Natiivi
                 {
                     if (pelaajanOsa != null && !Vaara(pp1, 0f) && !p.Eleessa && !p.Otteessa)
                     {
-                        tarkistus = pp1; TarkistusOsa = osaNyt;
+                        tarkistus = pp1; tarkistusYaw = p.Tila.KameraYaw; TarkistusOsa = osaNyt;
                         kirjaa?.Invoke($"seikkailu: tarkistuspiste {pelaajanOsa} → {osaNyt} ({pp1})");
                         Tarkistuspiste?.Invoke(osaNyt, pp1);
                     }
@@ -324,7 +325,7 @@ namespace Matkakirja.Natiivi
             if (!kiipeileeNyt && oliKiipeily && p != null && p.transform.position.y > kiipeilyAlkuY + 1.5f && !Vaara(p.transform.position, 0f) && !p.Otteessa)
             {
                 var pp3 = p.transform.position;
-                tarkistus = pp3; TarkistusOsa = Askelaani.Osa(SeikkailuKavely.Data, pp3.x, pp3.y, -pp3.z) ?? TarkistusOsa;
+                tarkistus = pp3; tarkistusYaw = p.Tila.KameraYaw; TarkistusOsa = Askelaani.Osa(SeikkailuKavely.Data, pp3.x, pp3.y, -pp3.z) ?? TarkistusOsa;
                 kirjaa?.Invoke($"seikkailu: tarkistuspiste tikkaiden yläpäässä ({pp3})");
                 Tarkistuspiste?.Invoke(TarkistusOsa, pp3);
             }
@@ -359,7 +360,7 @@ namespace Matkakirja.Natiivi
                 if (piilossa && p != null && !Vaara(p.transform.position, 0f) && (p.transform.position - tarkistus).sqrMagnitude > 6f * 6f)
                 {
                     var pp2 = p.transform.position;
-                    tarkistus = pp2; TarkistusOsa = Askelaani.Osa(SeikkailuKavely.Data, pp2.x, pp2.y, -pp2.z) ?? TarkistusOsa;
+                    tarkistus = pp2; tarkistusYaw = p.Tila.KameraYaw; TarkistusOsa = Askelaani.Osa(SeikkailuKavely.Data, pp2.x, pp2.y, -pp2.z) ?? TarkistusOsa;
                     kirjaa?.Invoke($"seikkailu: tarkistuspiste piilossa ({pp2})");
                     Tarkistuspiste?.Invoke(TarkistusOsa, pp2);
                 }
@@ -733,6 +734,8 @@ namespace Matkakirja.Natiivi
             }
             // Tarkistuspisteen osa nykyiseksi (kuten Huonesimulaatio.Kiinnijaanti): paluu ei ole osanvaihto, joka päättäisi helpotuksen.
             if (p != null) { p.Siirra(tarkistus); pelaajanOsa = Askelaani.Osa(SeikkailuKavely.Data, tarkistus.x, tarkistus.y, -tarkistus.z) ?? pelaajanOsa; }
+            // Paluussa katse vaakatasoon kulkusuuntaan (PT 05.4x, v8 laituri-a1 a1-08: katse 60–70° alas lankkuihin ja veneeseen).
+            if (p != null) { if (!double.IsNaN(tarkistusYaw)) p.Tila.KameraYaw = p.Tila.HahmoYaw = tarkistusYaw; p.Tila.KameraPitch = 0; }
             armoAsti = Time.unscaledTime + ArmoS;   // E1-ajo 7.10.: tarkistuspiste vartijan näkyvissä → kiinni uudelleen heti
             // Torkkuva vartija ei valpastu muiden kiinniotosta (Siirtoseppä 10.10., PT): valppaana hän näki Tott-kammion reitin 0,7 m:n päästä,
             // ja kiinni muuriportailla (68) maksoi ~100 s odotusta; nyt 63 s (OlavinlinnaMOsaTestit.KiinniJokaPisteessa).
