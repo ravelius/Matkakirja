@@ -1,6 +1,6 @@
 # Pääkaupungit e04 — toimeksiannot #72 ja #73
 
-Päivitetty 2026-10-11T16:52:18.026550+00:00
+Päivitetty 2026-10-11T18:22:27.384073+00:00
 
 Haara `paakaupungit-e04-codex`, pohja `e4f2845b3a82874550481fda26528df065820232`. Uusi työ, vain e04–e14; aiemmat #70/#71-kuvatilaukset pysyvät palauteportissa. Ei generointia, R2-toimitusta, pelikytkentää tai julkaisua. Kaikki tämän työn tiedostot ja väliaineisto NASilla.
 
@@ -15,10 +15,10 @@ Aiempi Sää/Commons-rajapintaeste: 11.10.2026 robots.txt kieltää en/fi-Wikipe
 | rabat | valmis | valmis | valmis | valmis | valmis | valmis | F0virhetta1varoitus23kuvaa; aineistopaketti valmis |
 | alger | valmis | poikkeama avoin | — | — | — | — | B4hyvaksyttya/19puuttuvaa; kaupalliset oikeudet avoin; säänull |
 | nouakchott | poikkeama avoin | — | — | — | — | — | Faktat koottu, kartta2WPpistetta; A ei vielä valmis |
-| praia | valmis | kesken | — | — | — | — | A5kohdetta perustellen; B työnalla |
-| banjul | kesken | — | — | — | — | — | A työnalla |
-| bissau | kesken | — | — | — | — | — |  |
-| conakry | kesken | — | — | — | — | — |  |
+| praia | valmis | poikkeama avoin | — | — | — | — | A: 5 kohdetta perustellen; B: 13 kuvaa, 8 puuttuu |
+| banjul | valmis | kesken | — | — | — | — | A: 3 kohdetta pienen kaupungin perustelulla; B työn alla |
+| bissau | valmis | — | — | — | — | — | A: 3 kohdetta kompaktin vanhan satamaytimen perustelulla |
+| conakry | valmis | — | — | — | — | — | A: 6 lähdekoordinaattikohdetta; UM-puute korvattu FCDO-lähteellä |
 | monrovia | kesken | — | — | — | — | — |  |
 | tunis | kesken | — | — | — | — | — | kevyt; ei Karthagon toistoa |
 
@@ -27,15 +27,15 @@ Vastaanotto ei tarkoita valmista erää, Sisältökirjurin hyväksyntää, pelik
 
 ## Tarkennus #74 — kaupalliset Commons-kuvat
 
-Lähde c046a5646f63d5977f105edde637fd3ddc042c25, blob 2bbea68faeb4f6e8df760bbe30be9045596c6f1f, luettu 2026-10-11T16:22:14.812623+00:00. Peli on kaupallinen: rakennuksen tai julkisen taideteoksen kuva hyväksytään vain, jos kuvausmaan panoraamavapaus sallii kaupallisen käytön juuri teostyypille (Commons COM:FOP). Ei-kaupallinen panoraamavapaus ei riitä. Epävarma kuva korvataan vapaalla kuvalla tai kohde jätetään kuvattomaksi ja kirjataan RAPORTTI.md:hen. Kuvia ei ole vielä valittu; sääntö sovelletaan kaikkiin ehdokkaisiin ennen toimitusta. #73, vanhojen #70/#71-kuvajonojen palauteportti ja NAS-tallennus säilyvät.
+Lähde c046a5646f63d5977f105edde637fd3ddc042c25, blob 2bbea68faeb4f6e8df760bbe30be9045596c6f1f, luettu 2026-10-11T16:22:14.812623+00:00. Peli on kaupallinen: rakennuksen tai julkisen taideteoksen kuva hyväksytään vain, jos kuvausmaan panoraamavapaus sallii kaupallisen käytön juuri teostyypille (Commons COM:FOP). Ei-kaupallinen panoraamavapaus ei riitä. Epävarma kuva korvataan vapaalla kuvalla tai kohde jätetään kuvattomaksi ja kirjataan RAPORTTI.md:hen. Sääntö sovelletaan kaikkiin ehdokkaisiin ennen toimitusta. Rabatin 23 kuvaa läpäisivät B/C/D-katselut ja F-tarkistuksen; Algerin ja Praian avoimet kuvaoikeudet kirjattu kuvat.md-tiedostoihin ja oikeustulkinnan muistiinpanoon. #73, vanhojen #70/#71-kuvajonojen palauteportti ja NAS-tallennus säilyvät.
 
 
 ## Omistajan nopeutusohjaus ja edistyminen
 
-11.10. omistaja hyväksyi kolme samanaikaista työagenttia ja pyysi lisäksi apusessioita; kulutuksella ei väliä. e05/e06 faktasessiot luotu omille NAS-klooneille, toimitusjärjestys e04→e14 säilyy. Ensimmäiset komennot odottavat sovelluksen hyväksyntää: saved project writable root sisältää Documents/ChatGPT-symlinkin, Seatbelt-valmistelu epäonnistui. Pääsession kolme työagenttia toimivat.
+11.10. omistaja hyväksyi kolme samanaikaista työagenttia ja pyysi lisäksi apusessioita; kulutuksella ei väliä. e05/e06 faktasessiot luotu omille NAS-klooneille, toimitusjärjestys e04→e14 säilyy. Ensimmäiset e05/e06-vuorot pysähtyivät symbolisen projektipolun Seatbelt-valmisteluun. Omistaja pysäytti niiden vuorot ja lähetti Jatka; uudet vuorot toimivat, lukevat lähteitä ja pushaavat omille haaroilleen. Sovellusrestartia ei tarvittu. Pääsession kolme työagenttia toimivat.
 
 Yhteinen NAS-lähdevarasto ja robots-tarkistava hakuapuri: valiaikainen/sallittu_haku.py; haku enintään1/s yhteisellä lukolla, pyynnöt ja SHA-256 lähdelokiin. Omistajan hyväksytty lähdekanavapoikkeus ei poista lisenssi/faktakuria eikä kaupallisia FOP-ehtoja.
 
 Säädata tuotettu alkuperäisellä tyokalu.mjs saa -komennolla; vain verkkosyöte sovitettu sallittuun Wikipedia-lähdesivuun (valiaikainen/saa-lahdesovitus.mjs). Alkuperäinen numeropoiminta ja tarkistusalgoritmi säilyvät muuttumattomina. 8/9 saa.json syntyi; Algerin taulukko hylätty: vuosisarake685mm, kuukausien summa603mm. Alger saatiedot:null, ei tekstiin aste/mm-lukuja. saa-syote.json:ssa artikkeli rajattu kaupungin en-artikkeliin, jotta maa-fallback ei valitse muun kaupungin asemaa.
 
-Edistyminen: varmennetut A–F-vaiheet /558 (93×6), ei käytetyn ajan arvio. Rabat A valmis; ei vielä kokonaan valmista kaupunkia tai erää.
+Edistyminen: varmennetut A–F-vaiheet /558 (93×6), ei käytetyn ajan arvio. Rabat A–F valmis: 0 virhettä, 1 perusteltu varoitus, 23 kuvaa. Valmis aineistopaketti 1/93, koko e04-erä vielä kesken. Pääsession ledgerissä 11/558 vaihetta eli 2,0 %; e05/e06:n osittaisia lähdekoosteita ei lasketa valmistuneiksi.
