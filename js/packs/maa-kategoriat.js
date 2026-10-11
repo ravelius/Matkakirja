@@ -16285,7 +16285,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Uimala on kylän olohuone',
           aika: 'Ympäri vuoden',
-          tiedosto: 'Laugardalslaug.JPG',
+          tiedosto: "Krossnes swimming pool.jpg",
           teksti: 'Islannissa maan alta saa kuumaa vettä, ja sillä lämmitetään '
             + 'sekä talot että uima-altaat. Lähes joka kylässä on uimala, '
             + 'joka on auki ympäri vuoden ja myös pakkasella. Varsinaisen '
@@ -16294,11 +16294,9 @@ export const MAA_KATEGORIAT = {
             + 'politiikasta ja naapureista. Yksi sääntö on ehdoton: ennen '
             + 'altaaseen menoa peseydytään ilman uimapukua, ja siitä '
             + 'muistuttavat kyltit pukuhuoneen seinällä.',
-          lyhyt: 'Laugardalslaug on Reykjavíkin suurin uimalakokonaisuus altaineen ja höyrysaunoineen.',
-          selite: 'Laugardalslaug on Reykjavíkin suurin uimalakokonaisuus: '
-            + 'siinä on sisä- ja ulkoallas, kahdeksan eri lämpöistä '
-            + 'porealtaista ja höyrysauna.',
-          lahde: '(WT-en) Meltwaterfalls, Wikimedia Commons (CC BY-SA 1.0)',
+          lyhyt: "Krossneslaug on merenrantauimala Länsivuonoilla.",
+          selite: "Krossneslaug on merenrannalla Strandirin alueella Länsivuonoilla, ja sen altaita lämmittää kuuma lähde.",
+          lahde: "Smiley.toerist, Wikimedia Commons (CC BY-SA 4.0)",
         },
         {
           otsikko: 'Syksyllä koko kylä lähtee vuorille',
@@ -16381,7 +16379,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Piispa joka taisteli uskontoaan vastaan ja hävisi',
           aika: '1550',
-          tiedosto: 'Jón Arason.jpg',
+          tiedosto: "Munkaþverá.jpg",
           teksti: 'Tanska määräsi Islannin luterilaiseksi 1500-luvulla, mutta '
             + 'Hólarin piispa Jón Arason kieltäytyi luopumasta katolisesta '
             + 'uskosta. Hän kokosi miehiä, otti vangiksi kilpailevan '
@@ -16392,11 +16390,9 @@ export const MAA_KATEGORIAT = {
             + 'teki kuninkaan kirjuri, koska pelättiin, ettei rauhaa muuten '
             + 'koskaan tulisi. Arasonin kuolema päätti katolisen kirkon '
             + 'vallan Islannissa.',
-          lyhyt: 'Jón Arason oli Islannin viimeinen katolinen piispa, ja hänet mestattiin Skálholtissa 1550.',
-          selite: 'Patsas kuvaa Jón Arasonia, Islannin viimeistä katolista '
-            + 'piispaa, joka mestattiin poikineen vuonna 1550. Patsaan on '
-            + 'veistänyt Guðmundur Einarsson, ja se seisoo Munkaþverássa.',
-          lahde: 'Pietro, Wikimedia Commons (CC BY-SA 3.0)',
+          lyhyt: "Munkaþverán puukirkko Pohjois-Islannissa.",
+          selite: "Munkaþverán musta puukirkko Pohjois-Islannissa; samalla paikkakunnalla seisoo Jón Arasonin patsas.",
+          lahde: "Pietro, Wikimedia Commons (CC BY-SA 3.0)",
           wiki: 'Jón Arason',
         },
         {
