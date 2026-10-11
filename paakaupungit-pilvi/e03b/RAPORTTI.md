@@ -15,3 +15,8 @@
 - Tarkistimen paikkamerkkitarkistus (TODO) hälyttää sanasta "ortodoksi" → tekstissä "kreikkalaisen riituksen kristityt".
 - Al Manara Square.jpg:n takana pieni lippu rakennuksen seinällä (ehdotukset.huomiot).
 - Robots.txt: A-agentti teki yhden Wikidata SPARQL -kyselyn ennen robots.txt-tarkistusta ja B-agentti haki kerran Commonsin `Special:FilePath`-polun (kielletty), kumpikaan tieto ei päätynyt sisältöön (hylätty kuva). Pilviohjeeseen: robots.txt ensin jokaiselle osoitteelle.
+
+## Päivitys 11.10.2026 (PT:n päätökset)
+- Matkustusturvallisuus: yksityiskohdat (tarkastuspiste, liikkumisen rajoitukset) poistettu kolmesta paikasta; oppaassa vain "Tarkista ennen matkaa ulkoministeriön matkustustiedote." (um.fi-avoin kohta ratkaistu).
+- Wikidata SPARQL ja Commonsin Special:FilePath ovat sallittuja rajapintoja PT:n 05.0x-linjauksella (VERKKOLÄHTEET) kuvaavalla User-Agentilla ja peräkkäin; robots.txt ensin muille verkkotunnuksille.
+- Tarkistimen TODO-tarkistus korjattu sanarajaan (`\bTODO\b`): "ortodoksi" ei enää hälytä (tyokalu.mjs rivi 657).

@@ -177,7 +177,7 @@
      "selite": "Ramallah Tahta tarkoittaa alempaa Ramallahia, ja alue tunnetaan vanhana kaupunkina kirkkoineen ja moskeijoineen.",
      "lahde": "Yousef Odeh Photos, Wikimedia Commons (CC BY-SA 4.0)"
     },
-    "kappale": "Ramallahiin ei lennetä, vaan sinne tullaan Jerusalemista bussilla tai yhteistaksilla. Matka kulkee tarkastuspisteen kautta, ja liikkuminen voi olla rajoitettua; tilanne vaihtelee, joten selvitä ajankohtainen turvallisuustilanne ennen lähtöä. Keskusta on pieni ja kävelyyn sopiva, ja Al-Manaran aukio on sen sydän. Kaupungissa puhutaan arabiaa, ja monet osaavat englantia. Ilmasto on Välimeren tyyppinen: kesä on kuiva ja talvi leuto ja sateinen.",
+    "kappale": "Ramallahiin ei lennetä, vaan sinne tullaan Jerusalemista bussilla tai yhteistaksilla. Tarkista ennen matkaa ulkoministeriön matkustustiedote. Keskusta on pieni ja kävelyyn sopiva, ja Al-Manaran aukio on sen sydän. Kaupungissa puhutaan arabiaa, ja monet osaavat englantia. Ilmasto on Välimeren tyyppinen: kesä on kuiva ja talvi leuto ja sateinen.",
     "artikkeli": {
      "nimi": "Matkailijan Ramallah",
      "taitto": "opas",
@@ -186,7 +186,7 @@
      "jaksot": [
       {
        "otsikko": "Perille ja liikkeelle",
-       "teksti": "Ramallahissa ei ole matkustajalentoja liikennöivää lentoasemaa. Lähimmät kansainväliset kentät ovat Ben Gurionin kansainvälinen lentoasema (TLV) Lodissa ja Queen Alia -lentoasema (AMM) Jordanian Ammanissa. Perille tullaan Jerusalemista bussilla tai yhteistaksilla, ja matka on noin 10–15 kilometriä. Matka kulkee tarkastuspisteen kautta, ja liikkuminen voi olla rajoitettua; tilanne vaihtelee, joten selvitä ajankohtainen turvallisuustilanne ennen lähtöä. Jerusalemista tulevat bussit päättyvät Al-Manaran aukion lähelle, ja kaupungissa on useita linja-autoasemia. Keskusta on pieni ja kävelyyn sopiva. Taksilla ja yhteistaksilla (serviis) pääsee lähiöihin ja ympäryskyliin, ja hinta kannattaa sopia ennen kyytiin nousua.",
+       "teksti": "Ramallahissa ei ole matkustajalentoja liikennöivää lentoasemaa. Lähimmät kansainväliset kentät ovat Ben Gurionin kansainvälinen lentoasema (TLV) Lodissa ja Queen Alia -lentoasema (AMM) Jordanian Ammanissa. Perille tullaan Jerusalemista bussilla tai yhteistaksilla, ja matka on noin 10–15 kilometriä. Tarkista ennen matkaa ulkoministeriön matkustustiedote. Jerusalemista tulevat bussit päättyvät Al-Manaran aukion lähelle, ja kaupungissa on useita linja-autoasemia. Keskusta on pieni ja kävelyyn sopiva. Taksilla ja yhteistaksilla (serviis) pääsee lähiöihin ja ympäryskyliin, ja hinta kannattaa sopia ennen kyytiin nousua.",
        "kuva": {
         "tiedosto": "Streets in Ramallah 01.jpg",
         "lyhyt": "Kerrostalojen reunustama katu Ramallahissa.",
@@ -260,7 +260,7 @@
       "hyvaTietaa": [
        {
         "otsikko": "Tarkastuspiste matkalla",
-        "teksti": "Matka Ramallahiin kulkee tarkastuspisteen kautta, ja liikkuminen voi olla rajoitettua. Tilanne vaihtelee, joten selvitä ajankohtainen turvallisuustilanne ennen lähtöä."
+        "teksti": "Tarkista ennen matkaa ulkoministeriön matkustustiedote."
        },
        {
         "otsikko": "Ei omaa valuuttaa",
@@ -465,7 +465,7 @@
   "huomiot": [
    "Sää: Ramallahille ei ole saa.json:ia (en-Wikipedian ilmastotaulukossa ei normaalikautta), joten saatiedot on null ja oppaan sääjakso on laadullinen ilman lukuja. Päätoimittaja päättää, ajetaanko saa-komento Jerusalemin sääasemalle.",
    "Lentoasema: Ramallahissa ei ole reittiliikenteen lentoasemaa; ehdotettu TLV on lähin kansainvälinen kenttä, ja direct-lentoa ei ole.",
-   "Matkustustiedote: um.fi ei auennut faktapohjan haussa (403), joten oppaan lause tarkastuspisteestä ja ajantasaisesta matkustustiedotteesta perustuu vain Wikivoyagen vanhempaan tietoon; tarkistettava um.fi:stä ennen julkaisua.",
+   "Matkustusturvallisuus: yksityiskohdat (tarkastuspiste, liikkumisen rajoitukset) poistettu PT:n päätöksellä 11.10.; oppaassa vain yleinen ohje: Tarkista ennen matkaa ulkoministeriön matkustustiedote.",
    "Kuvat: Matson-kokoelman kuvat (K1, valokuva) korvattu (PT:n 70 v -sääntö) ja Willem van de Poll -kuva (K2, tekijä k. 1982) korvattu nykykuvalla (Ralf Lotys, CC BY 3.0). Valokuvana on Underwood & Underwoodin stereokuva noin vuodelta 1900 (PD; Commons-sivu kuuluu DPLA-aineistoon, vedos rajattava yhteen puoliskoon ilman korttikehystä; Ramallah-paikannus tulee vain kuvan luettelotiedosta).",
    "Kohdekartta on 6 kohteen kartta: Mukataalle ja Kirkastuksen kirkolle ei löytynyt kelvollista Commons-kuvaa, ja Sakakini-keskuksen ainoa kelvollinen kuva on käytetty teemasivun nostossa L4 (sama tiedosto ei saa olla kahdesti). Kuudenneksi kohteeksi lisättiin Al-Kasaba-teatteri (koordinaatti en-Wikipedia ja Wikidata Q3527423; kuva Djex93). Dar Zahranille ei ole kuvaa eikä Wikipedia-artikkelia. Friends-koulujen pinni on siirretty yläkoulun kampukselle (en-Wikipedia 31.9054, 35.2081), koska kohteen kuva näyttää Friends Boys School -rakennuksen; alakoulun (ent. tyttökoulu) kampus on 31.9037, 35.1993.",
    "Kuvat: Al-Manaran poliisiautot ja Arafat-juliste sisältävät kuvat (Al-Manara Square 01-08, Al-Manara.jpg) on vaihdettu kuviin ilman poliisiautoja ja julisteita (Al Manara Square.jpg ja 2010-08 Ramallah 22.jpg); L1 vaihdettu Darwish-museon sisäkuvaan (pöytä), jolloin lippu poistui. Al Manara Square.jpg:ssä (kansi 3) näkyy aukion takana pieni lippu rakennuksen seinällä.",

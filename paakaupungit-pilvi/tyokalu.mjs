@@ -654,7 +654,7 @@ async function tarkista(era, rajaus, { verkko, malliTila, lyhyt }) {
       if (typeof o === 'string') {
         const avain = polku.split('.').pop();
         if (ohita.has(avain)) return;
-        if (/(TÄYTÄ|TODO|XXX|lorem ipsum)/i.test(o)) virhe(`${polku}: paikkamerkki jäi`);
+        if (/(TÄYTÄ|\bTODO\b|XXX|lorem ipsum)/i.test(o)) virhe(`${polku}: paikkamerkki jäi`);
         if (!polku.startsWith('ehdotukset') && /(wikipedi|open-meteo|mallinnettujen|säädatan mukaan|sääaineiston mukaan)/i.test(o)) virhe(`${polku}: lähde- tai aineistomaininta lukijan tekstissä (metateksti, luku 4.10)`);
         if (o.length > 200 && !/[äö]/i.test(o)) virhe(`${polku}: ei ä- eikä ö-kirjaimia (ascii-suomi?)`);
         for (const m of o.matchAll(/\b(\d{1,3})((?:\s000)+)\b/g)) {
