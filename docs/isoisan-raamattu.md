@@ -351,8 +351,9 @@ saavat jäädä legendoiksi kaupungin oman aarteen kohdalla.
 - **Euroopan mysteeri on tuntematon kulkija:** joku kiertää
   Eurooppaa ja pitää isoisän jälkiä kunnossa — kiillottaa, täyttää,
   sytyttää, ruokkii. Kevätkulkija-lanka (yllä) on saman mysteerin
-  ydin. Ratkaisu kirjoitetaan Meripihkahuoneen aarteen
-  löytymishetkeen; kulkijan henkilöllisyys päätetään omistajan
+  ydin. Ratkaisu kirjoitetaan Kolme veljestä -riipuksen
+  löytymishetkeen (Euroopan unohdettu aarre 11.10.2026 alkaen);
+  kulkijan henkilöllisyys päätetään omistajan
   kanssa erikseen (sateenvarjolinjaus, ks. Vastavoima-luku) —
   siihen asti kukaan teksti ei nimeä eikä näytä kulkijaa.
 - **Päiväkirjan taitettu sivu** on tarinamotiivi, ei enää

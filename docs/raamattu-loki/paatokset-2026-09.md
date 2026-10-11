@@ -13628,3 +13628,141 @@ Raamattuun (docs-PR 11.10. ilta 3): Ydinajatus, ASEMATAULU, PIENENNETTÄVÄT OSI
 11.10. 19.57 PT (tarkennus, Asemataulun työkopio päivitetty): tila-kenttä on vapaa teksti (esim. "TF-lataus"); etenemispalkit näkyvät aina, kun edistys on annettu eikä juna ole valmis (aiemmin vain tilalla "käännöksessä" tai "lähtee", joten junan 182 tila "TF-lataus" piilotti palkit).
 
 Raamattuun (docs-PR 11.10. ilta 3): Ydinajatus, POSTIVAHDIN KIERROS kohta 4 (Postivahti ei kirjoita muihin Asemataulun dokumentteihin; Postivahdin ajastuksen kehote uusitaan), ASEMATAULU: ASEMATAULUN DOKUMENTIT JA KIRJOITTAJAT (poikkeuksina vain Päivitä-napin vienti ja etenemisen tyhjennys), JUNAN ETENEMINEN korvaa kohdan JUNAN ETENEMINEN 5 MIN VÄLEIN, vanhat vaihelistat pois, luvan pyyntö Päätoimittajan kautta koskee kaikkia kirjoittavia rooleja. Työkopiot repoon: tools/asemataulu/asemataulu.html (eteneminen, pienennettävät osiot) ja tools/asemataulu/laitteet.py (Googlen musiikki 15.3x).
+
+## KAUPUNKIMUSIIKIT: KAIKKI UUDET PELIIN JUNASSA 183, EUROOPAN ÄÄNI-INVENTAARIO JA VIISI PUUTTUVAA NOPEAA INTROA (11.10.2026 klo 22.42)
+
+11.10. 18.4x OMISTAJA (chat) sanatarkasti: "kaikki uudet kuunneltavat musiikit olivat hyviä ja ne voi laittaa peliin. puuttuuko enää ääniä mistään euroopassa?" → PT: kaikki 43 (Wien v2, 5 hidasta, 37 nopeaa; Moskovan uusi korvaa vanhan) peliin junassa 183: Äänittäjä vie (vie-paketti.sh) → Pelikoodari kytkee (nopeat Jaksot TaukoMs 3000, hitaat arvontaan a5995394f:n päälle); Äänittäjä tekee Euroopan ääni-inventaarion (nopea, hidas, äänimaisema, saapumisluenta, kipin/3D-äänet) → docs/raportit/aanet-eurooppa-inventaario-20261011.md; ei generointia ennen omistajan lupaa. Pelikoodarin a5995394f (arvonta) KUITATTU 183.
+
+11.10. 18.4x OMISTAJA: Äänittäjän lupatila → ohitustila (omistajan lupa "saat vaihtaa äänittäjän lupatilan").
+
+11.10. 18.5x ÄÄNITTÄJÄ: 36 nopeaa viety (vie-paketti.sh 0 virhettä), Moskova uudella nimellä -lyria-v3 (PT: ei ylikirjoitusta ämpärissä); inventaario 88cfa5df7 docs/raportit/aanet-eurooppa-inventaario-20261011.md: nopea puuttuu Bryssel, Košice, Ljubljana, Luxemburg, Valletta (+ niiltä luennat), luenta + kaari puuttuu Bergen, Firenze, Sevilla, Tampere, 15 pääkaupunkipistettä + Vatikaani ilman ääntä, 3D-äänet vain Pariisi/Tukholma → omistajalle: 5 nopeaa lupa?; luennat vaativat ensin tekstit (tarinakaari).
+
+11.10. 18.5x OMISTAJA (chat) sanatarkasti: "kyllä äänittäjälle. …" → PT: Äänittäjälle lupa 5 puuttuvaan nopeaan introon (Bryssel, Košice, Ljubljana, Luxemburg, Valletta; yksi otto). #4430 (inventaario) Julkaisijalle merge-luvalla.
+
+11.10. 18.5x OMISTAJA (chat) sanatarkasti: "kaikki viisi hyviä, laita peliin" → Äänittäjä vie Bryssel, Košice, Ljubljana, Luxemburg, Valletta → Pelikoodari kytkee 183 (yhteensä 48 uutta kappaletta).
+
+## GOOGLEN 3D-LAATAT: 429-KATKO, CESIUM ION PYSYY, EI OMAA GOOGLE-AVAINTA EIKÄ LAATTOJA OMAAN ÄMPÄRIIN (11.10.2026 klo 22.42)
+
+11.10. 18.4x LS2: Googlen 3D-laatat HTTP 429 (root.json) 18.2x alkaen → kaupunkiajot putoavat Cesium Ion -varalle (valkoiset massat); Google-riippuvaiset simuajot tauolle (Pariisi v6k19, Madridin Sol 589aecae0 odottavat), mahdollinen päiväraja nollautuu klo 10 Suomen aikaa → PT: NS selvittää, onko TF-buildeilla sama avain (pelaajavaikutus), mikä raja ylittyi ja erillisen kehitysavaimen tarpeen.
+
+11.10. 18.4x NS (429-selvitys): Googlen 3D-laatat tulevat Cesium ionin assetin 2275207 kautta Cesiumin jaetulla Google-projektilla (584945306220) → RATE_LIMIT_EXCEEDED "3D Tiles root requests per minute" koskee kaikkia ion-käyttäjiä, myös TF-pelaajia (valkoiset massat); ei omaa avainta. Korjaus: oma Google Cloud -projekti + Map Tiles API -avain (bundle-rajattu), avain workeriin, natiivi lataa tile.googleapis.com suoraan (ion varana) – OMISTAJAN TOIMI (tili + laskutus + API päälle ~10 min), koodi 183 (~½ pv). PT: Pariisi v6k19 013625a76 KUITATTU (vienti + osoitin Julkaisijalle).
+
+11.10. 18.5x PT kertoi omistajalle Googlen 429:stä ja oman avaimen tarpeesta (kysytty).
+
+11.10. 18.5x OMISTAJA (chat) sanatarkasti: "kyllä äänittäjälle. mutta en ole varma tuosta googlesta. onko cesiumin katko miten pitkä?" → PT: Google-avain ODOTTAA: status.cesium.com ei näytä häiriötä (ei seuraa Googlen laattoja) → LS2 mittaa 2 h (5 min välein root.json ion-reitin kautta) → yhteenveto ~21 → omistaja päättää.
+
+11.10. 18.5x OMISTAJA (chat) sanatarkasti: "cesium on parempi koska se on jenkki yhtiö ja käyttää omaa apia, niin ei tule ongelmia sen google eu säännön kanssa" → RAAMATTUUN: Googlen 3D-laatat haetaan jatkossakin Cesium ionin kautta, EI omaa Google Cloud -avainta (Googlen EU-ehdot). PT: junaan 183 uusintayritys viiveellä 429:ssä ennen ion-varaa + pehmeämpi vara (ei valkoisia massoja) → LS2 (+ NS); LS2:n 2 h mittaus jatkuu tiedoksi.
+
+11.10. 18.5x OMISTAJA (chat) sanatarkasti: "voisiko noita pariisin ja tukholman tietoja ladata omaan ämpäriin ja ohittaa googlen?" → PT: ei Googlen laattoja omaan ämpäriin (Googlen ehdot kieltävät tallennuksen ja johdannaiset, myös ionin kautta); vaihtoehto oma 3D avoimesta datasta (Pariisi: IGN:n avoimet 3D-rakennukset + 20 cm ilmakuvat, Etalab, kaupallinen ok; Tukholma: Lantmäteriet, vaatii omistajan Geotorget-tunnuksen) – iso työ (KS + LR + LS2, päiviä/kaupunki); suositus: Pekingin Codex-koe ensin mittariksi + 183:n 429-uusintayritys, sitten päätös.
+
+11.10. 18.5x OMISTAJA (chat) sanatarkasti: "lähinnä tuon valmiin lentoreitin osalta" (Google-laatat omaan ämpäriin) → PT: ei sallittu reitinkään osalta; 183:n uusintayritys + tarvittaessa oma 3D reittikaistalle avoimesta datasta (Pariisi ensin).
+
+11.10. 20.5x TIEDOKSI: LS2:n Google-laattojen 429-mittaus 18.51–20.52 (25 × 5 min, ion → Googlen root.json): 8/25 = 429, katko n. 45–60 min (~18.2x–19.31), sen jälkeen 17/17 OK; Cesiumin oma palvelu kunnossa → raja Googlen puolella ionin jaetussa projektissa. Omistajalle kerrottu; päätös pysyy (Cesium, ei omaa avainta), 429-vara junaan 183 kun paluu Googleen todistettu.
+
+11.10. 20.5x KUITATTU 183: LS2 Madrid Sol 589aecae0 + Google 429 -vara d56415983 (pehmeä vara = ilmakuva maastolla, paluu Googleen lennossa).
+
+Raamattuun (docs-PR 11.10. yö, Kolme veljestä): Karttalinssit, ELÄVÄ OPAS (Googlen laatat haetaan aina Cesium ionin kautta, ei omalla Google Cloud -avaimella). 429-mittaus, uusintayritys ja pehmeä vara vain tässä lokissa.
+
+## JUNA 182 ILMAN OLAVINLINNAA, OLAVINLINNAN KAIKKI TYÖ JUNAAN 183 (11.10.2026 klo 22.42)
+
+11.10. 18.4x OMISTAJA (chat) sanatarkasti: "olavin linnan voi jättää kesken ja julkaista 182 nyt. olavinlinnaan on kuitenkin niin paljon kesken kun pitää tehdä uudet hahmot myös niin jätetään ne kaikki 183 junaan" + "käynnistetään claude uudestaan sitten junan jälkeen" → PT: LUKITSE 182 ilman Olavinlinna-yhdistelmää; NS valitsi f2bae0ac6:n (LinssiOhjain.cs, 12 riviä) yksin junaan → runko 549bb6a89, simuajo Pelaa £20 181:n paketilla, iPad-muistiajo (museo lisää muistia, ~25 min) → BUILD 182 → TF iOS + Mac; visa cea99d656 → 183; Olavinlinnan kaikki työ (jumit, v47v, hahmot, totuuskorjaukset, keittiögrafiikka) → 183; uudelleenkäynnistysviesti rooleille TF:n jälkeen.
+
+## VAIN EUROOPPA KOSKEE MYÖS KOHDEKAUPUNKEJA; TF 182 BETA-ARVIO HYVÄKSYTTY (11.10.2026 klo 22.42)
+
+11.10. 20.3x OMISTAJA (TF 182 -kuva: Lontoosta kohteina Moskova, Istanbul, Ateena, Tanger, Kairo, Dubai) sanatarkasti: "piti näkyä vain euroopan kohteet. pitäisikö 182 näkyä myös beta testaajille?" → RAAMATTUUN: VAIN EUROOPPA koskee myös kohdekaupunkeja (vain Euroopan 50, Istanbul mukaan) → Pelikoodari KIIRE 183; Julkaisija selvittää ulkoisen jakelun tilan (Arvioijat + Beta-testaajat + beta-arvio) – ei pidätetä.
+
+11.10. 20.5x TIEDOKSI: TF 182 beta-arvio hyväksytty 20.42 (raati + beta-testaajat).
+
+Raamattuun (docs-PR 11.10. yö, Kolme veljestä): Ydinajatus, VAIN EUROOPPA (pelaajalle tarjotaan kohteiksi vain Euroopan 50 kaupunkia, Istanbul mukaan lukien).
+
+## SUOJATUT TEOKSET: MAAILMAN PAKKOJEN SUOJAKORJAUKSET JA RIKKINÄISET COMMONS-KUVAT (11.10.2026 klo 22.42)
+
+11.10. 20.5x PT (SK:n maailman suojakorjaukset #4442–#4446): Iran/Myanmar-kuvat pois varovaisuudesta, Kuwait + Masqat pieniAlue, Managua jää; paluupäivät Sam Houston -patsas 1.1.2027, Plečnik 1.1.2028; 289 rikkinäistä Commons-kuvaa: Eurooppa korjataan (uudelleenohjaus/vapaa korvaaja), muut maanosat vain viittaukset pois (VAIN EUROOPPA).
+
+## KARTTA JA NOSTOT JUNAAN 183: ALOITUSMAAN NOSTOT, MAAKUNTA TUPLANAPAUTUKSELLA, ETSITYT KAUPUNGIT, LAUTAPELINAPPI, AUTO JA LIIKU (11.10.2026 klo 22.42)
+
+11.10. 20.5x OMISTAJA (chat, kuva kaupunkikierroksen napeista) sanatarkasti: "siirrä kolme neliö nappia samaan riviin alas kysy yms. nappien kanssa / Ensimmäisessä maassa johon pelaaja tulee, pitää piilottaa kaikki muut karttanostot, joissa ei ole visaa, jotta pelaaja voi yrittää heti etsiä aarretta oikean vastauksen jälkeen. Kun oikea vastaus on tullut ensimmäiseen kysymykseen niin vihreä piste syttyy kartalle. Sen jälkeen myös muut karttanostot voivat syttyä. / Muuta maakuntien aktivoiminen tupla klikkaamisen taakse. eli pelkällä yhdellä klikkauksella ei tapahtu mitään mutta tuplaklikkaamalla tyhjästä kohdasta karttaa aukeaa maakunta. sulkeminen tapahtuu edelleen yhdellä napautuksella. / etsityt kaupungit teksti voisi näkyä vain 7sek aina jokaisen maan alussa sen jälkeen kun luennat ovat ohi isoisän ja pulun osalta. lisäksi se voisi näkyä kokoajan matkalaukussa avatarin ja rahatietojen alla omalla rivillään / lautapelinappi voisi tulla myöskin vasta siinä vaiheessa näkyville kun aarteen sijainti paljastuu / nostoissa auto nappi ja ääneen luku pitää olla oletuksena pois päältä. lisäksi auto tila ilmestyy vasta sitten näkyville kun sen on ensimmäisen kerran kytkenyt minihampurilaisesta päälle. Auto napin voisi laittaa minihampurilaisen pohjalle ja sen oikealle puolelle lyhyen selityksen mitä se tekee. kun napin on kerran laittanut päälle se ilmestyy autonapin nykyiselle paikalle ja on siellä käytettävissä sen jälkeen normaalisti. nyt se menee liian helposti alussa päälle ja pelaajan on vaikea hahmottaa mitä tapahtuu. pin napin voisi tuoda vasta auto napin kanssa näkyville. sillä ei siis ole omaa aktivointi nappia vaan tulee yhdessä autonapin kanssa ja on sen jälkeen aina käytettävissä. / Liiku nappi saa tulla paremmin erottuvaksi sen jälkeen kun aarre on avattu kaupungissa. seuraavassa kaupungissa se on taas himmeänä kunnes aarre on löydetty. / pulun aloitusrepliikissä pitää olla ohje lopussa: \"napauta kohteita kartalta ja vastaa oikein kysymykseen niin löydät aarteen\". myös sama ohjeteksti saisi tulla näkyviin vasta tässä kohtaa. / anna vielä pulun kaikki tekstit ensimmäisessä kohdekaupungissa niin luen ne läpi, kun nyt tuli lisää tekstiä. generoidaan uusi ääni vasta sen jälkeen kun olen miettinyt kokonaisuuden läpi" → PT: NUI kohdat 1, 4, 5, 6, 7 + ohjetilarivin ajoitus; Pelikoodari: ensimmäisen maan nostot + vihreä piste, maakunnat tuplanapautuksella, Pulun ohjelause (teksti ja ääni vasta omistajan läpiluvun jälkeen); Pulun aloituskaupungin tekstit omistajalle. Junaan 183. RAAMATTUUN: aloitusmaan nostojärjestys, maakunta tuplanapautuksella, Auto/ääneen luku oletuksena pois.
+
+Raamattuun (docs-PR 11.10. yö, Kolme veljestä): Kaupungit, ALOITUSKAUPUNKI JA KAUPUNGIN INTRO (ALOITUSMAAN NOSTOT, ETSITYT KAUPUNGIT 7 s ja matkalaukussa, Pulun ohjelause); Ydinajatus, PELIT, TALOUS JA LUENTA (kohta 4 KARTTA: poikkeus aloitusmaalle ja MAAKUNTA TUPLANAPAUTUKSELLA; LAUTAPELEIHIN EI VÄRIKOROSTUSTA: lautapelin nappi vasta, kun aarteen sijainti on paljastunut); Äänet ja luennat, STRIIMILUKIJAN KAKSI NAPPIA (AUTO JA ÄÄNEEN LUKU OLETUKSENA POIS, pin Auton mukana) ja viite PIN-KUVAKE JA PINNATTU PALKKI -kohdasta; Kaupungit, LIIKKUMINEN (LIIKU AARTEEN MUKAAN). Kierroksen kolmen neliönapin siirto alariviin vain tässä lokissa.
+
+## ALOITUSKAUPUNKI: PULUN KUUDES REPLIIKKI POIS, OHJELAUSE PULUN VIIMEISENÄ JA RUUDULLA (11.10.2026 klo 22.42)
+
+11.10. 21.1x OMISTAJA (chat) sanatarkasti: "ota pulun 6. luenta pois ja toista 7. luenta myös tekstimuodossa ruudun ohjeina ja ota aiemmat ruudun ohjeet pois. ruudun ohje saa tulla samaan aikaan kuin pulun luenta siitä kohdasta. näytä seuraavaksi isoisän teksti ja anna siitä lyhennetty versio ehdotus aloituskaupungista" → RAAMATTUUN (aloituskaupunki): Pulun luennan jälkeiset repliikit = aarre-1, tuuraus-3, tuuraus-4, UUSI "Napauta kohteita kartalta ja vastaa oikein kysymykseen, niin löydät aarteen." (sama teksti ruudulle samalla hetkellä); "Onnea aarteen etsintään!" ja vanhat ohjerivit 1–2 pois. NUI toteuttaa, ääni vasta omistajan luvalla. KUITATTU 183: NUI laskuri 909d0397a (+ häivytys kaupunkipallon kohdalla).
+
+Raamattuun (docs-PR 11.10. yö, Kolme veljestä): Kaupungit, ALOITUSKAUPUNKI JA KAUPUNGIN INTRO (kohta 3 ja ENSIMMÄINEN SAAPUMINEN: Pulun repliikit luennan jälkeen, ohjelause ruudulla samalla hetkellä, vanhat ohjerivit ja "Onnea aarteen etsintään!" pois).
+
+## ALOITUKSEN LUENTA ILMAN OHITUSTA, LUENNAN KUVAT, SULKUTAPA-ASETUS, IPADIN CHAT JA NOSTOIKKUNAN (LAAJENNA) (11.10.2026 klo 22.42)
+
+11.10. 21.3x OMISTAJA (chat) sanatarkasti: "isoisän kuva euroopan aarteesta pitää olla tehtynä samalla mustavalkoisella tyylillä kuin ne muutkin kuvat ja siinä saa olla vinjetti valkoiseen. / kuvat eivät saa tulla matkakirjan alareunaan ennen kuin teksti on luettu ja isompi kuva häviää näkyvistä lentämällä matkakirjan alareunaan. / tätä ensimmäistä isoisän ja pulun luentaa ei voi ohittaa, eli ota siitä nappi pois. seuraavat kaupungit voi ohittaa normaalisti. / isoisän ja pulun kuvia pitää pystyä klikkaamaan isommaksi jo siinä vaiheessa kun ne tulevat ruudulle näkyviin. / ipadilla kun haluaa kysyä pululta näppäimistöllä, niin näppäimistö peittää pulun laatikon. saisiko chat ikkunaa silloin nostettua yläreunaan? / lisätään asetuksiin vaihtoehto jolla voi valita sulkeutuuko chat ikkunat ja nostot karttaa klikkaamalla vai painamalla x nappia ikkunan oikeasta yläkulmasta. sulkunappi tulisi siis ikkunan yläpuolelle oikeaan yläreunaan, jolloin ikkunan asettelua ei tarvitse muuttaa. sulje nappi voisi olla oletuksena käytössä ja se pitäisi asetuksista muuttaa itse jos haluaa että ikkuna sulkeutuu painamalla mitä tahansa kohtaa kartalla. / nostoikkuna ilmestyy nyt puolikkaan kokoisena. ikkunan yläreunassa saisi olla väkäset ylöspäin ja sen oikealla puolella teksti (laajenna) pienellä, jolloin pelaajan on helpompi hahmottaa miten laatikko laajentuu isommaksi. saitko kiinni?" → PT: Pelikoodari aarrekuva mustavalkoiseksi + vinjetti valkoiseen; NUI luennan kuvat (iso kuva lentää matkakirjan alareunaan vasta luennan jälkeen), aloituskaupungin ensimmäinen luenta ilman Ohita-nappia, kuvat napautettavissa heti; LS1 iPadin chat yläreunaan näppäimistön ajaksi, X-sulkunappi ikkunan yläpuolelle oikealle (oletus) + asetus "sulje napauttamalla karttaa", nostoikkunaan väkäset + "(laajenna)", Auto/pin (siirretty NUI:lta). RAAMATTUUN: sulkutapa-asetus (oletus X), aloituskaupungin ensimmäinen luenta ei ohitettavissa, isoisän kuvat mustavalkoisia + valkoinen vinjetti.
+
+Raamattuun (docs-PR 11.10. yö, Kolme veljestä): Kaupungit, ALOITUSKAUPUNKI JA KAUPUNGIN INTRO (ensimmäistä luentaa ei voi ohittaa); Arkkikirjasto, SULKEMISSOPIMUS SEURAA ASTETTA (SULKUTAPA-ASETUS); Kaupungit, NOSTOT KARTALLA ((laajenna)-merkki); Tarina ja hahmot, ISOISÄ ON PIIRTÄJÄ (mustavalkoinen tyyli, vinjetti valkoiseen). Luennan kuvien ajoitus, kuvien suurennus heti ja iPadin chat näppäimistön ajaksi yläreunaan vain tässä lokissa.
+
+## ALOITUKSEN AARRETEKSTI: AARNIN LUETTELO ESITELLÄÄN VASTA MYÖHEMMIN, TEKSTI PÄIVÄKIRJAN TYYLIIN (11.10.2026 klo 22.42)
+
+11.10. 21.3x OMISTAJA (chat) sanatarkasti: "pelaaja ei vielä tiedä mitään koko aarnin luettelosta" / "Mikä tuo meripihkahuoneen aarre oikein on?" / "voisiko aarre olla ennemmin isoisän luonnostelma kynällä matkakirjan sivuille? onko aarre siis pienoismalli, se ei selviä tuosta nimestä. isoisä voisi vaikka kuvailla aarretta enemmän ja sitten vain vannoa löytävänsä sen vielä tältä mantereelta. pulu jatkaa sitten siihen että isoisä ei tainnut onnistua. mitä mieltä? anna uusi teksti" / "pitäisikö pulun vähän täydentää miksi isoisä etsi sitä turhaan? jos ei kasvata paljon mittaa niin ehkä voisi" → PT: aloituskaupungin aarrekuva = isoisän kynäluonnos Meripihkahuoneesta (Pelikoodari vanhasta PD-kuvasta, ei generointia); ehdotettu isoisän teksti (kuvailu + vala, ei Aarnia) ja Pulun aarre-1 uusiksi (huone oli 1873 tsaarin palatsissa, purettiin laatikoihin vasta toisessa maailmansodassa ja katosi) → odottaa omistajan hyväksyntää, äänet vasta sen jälkeen. RAAMATTUUN hyväksynnän jälkeen: Aarnin luettelo esitellään vasta myöhemmin; aloituksessa aarre kuvataan huoneena.
+
+11.10. 21.6x OMISTAJA (chat) sanatarkasti: "olisiko isoisä oikeasti kirjoittanut noin matkakirjaansa? pulun kommenttia ei nyt minun mielestäni tarvitse muuttaa, ei tarvitse selittää miksi isoisä ei löytänyt" → PT: aloitusteksti päiväkirjamaiseksi (ehdotus omistajalla), Pulun aarre-1 ennallaan.
+
+Raamattuun (docs-PR 11.10. yö, Kolme veljestä): Tarina ja hahmot, AARNI (AARNIN LUETTELO ESITELLÄÄN VASTA MYÖHEMMIN); Kaupungit, ALOITUSKAUPUNKI JA KAUPUNGIN INTRO (aarreteksti päiväkirjamerkinnän tyyliin, Pulun aarre-1 ennallaan). Klo 21.3x:n huone-kuvaus ja meripihkaluonnos raukesivat aarteen vaihtuessa (21.5x).
+
+## EUROOPAN UNOHDETTU AARRE ON KOLME VELJESTÄ -RIIPUS; MITTASÄÄNTÖ: AARRE ON YHDEN IHMISEN KANNETTAVISSA (11.10.2026 klo 22.42)
+
+11.10. 21.5x OMISTAJA (chat) sanatarkasti: "minkä kokoinen tuo aarre on oikeasti?" → PT: n. 100 m² sali, yli 6 t meripihkaa. OMISTAJA: "ok, tuo aarre ei sovi peliin, koska se ei mahdu matkalaukkuun. pitää vaihtaa aarre. onko muissa maanosissa liian isoja aarteita myös?" → RAAMATTUUN: EUROOPAN UNOHDETTU AARRE VAIHTUU (Meripihkahuone pois; sääntö: aarteen pitää mahtua matkalaukkuun). PT:n suositus "Kolme veljestä" (riipus 1389, kadonnut 1640-luvulla) odottaa omistajan valintaa. Muut laudat: Afrikan kivilintu liian iso (vain Eurooppa nyt → myöhemmin), Montezuman ja El Doradon aarre rajatapauksia (teksteissä yksittäinen esine). Meripihkaluonnos + SK:n kaarien aarreosat tauolla.
+
+11.10. 21.5x OMISTAJA (chat) sanatarkasti: "kivilintu on ok kooltaan, on kuitenkin vielä yhden ihmisen hallittavissa. vaihdetaan tuohon riipukseen. näytä muutama vedos uusista aarremerkinnöistä" → RAAMATTUUN + tarina.md + isoisan-raamattu.md: EUROOPAN UNOHDETTU AARRE = KOLME VELJESTÄ (riipus 1389, Juhana Peloton; kateissa 1640-luvulta) Meripihkahuoneen tilalle; mittasääntö: aarre on yhden ihmisen kannettavissa (kivilintu OK). Pikkuaarre Itämeren meripihka jää. SK: europe.js/maailmankartta/index-tekstit nyt, 50 aarremerkintää omistajan mallihyväksynnän jälkeen; Pelikoodari: PD-kuvalähteet (kynäluonnos + diplomikuva). LS1: Saint-Michel poikkeuskorkeudella (n. 30 m) ennen poistoehdotusta.
+
+Raamattuun (docs-PR 11.10. yö, Kolme veljestä): Tarina ja hahmot, AARNI (EUROOPAN UNOHDETTU AARRE, MITTASÄÄNTÖ); Kaupungit, ALOITUSKAUPUNKI JA KAUPUNGIN INTRO (Meripihkahuone pois); docs/tarina.md (Aarni ja unohdetut aarteet), docs/isoisan-raamattu.md (Euroopan mysteerin ratkaisu Kolme veljestä -riipuksen löytymishetkeen) sekä CONTRIBUTING.md:n esimerkki ja viite mittasääntöön.
+
+## AARREMERKINNÄT POISTETTU PELISTÄ; POISTETTUJA TEKSTEJÄ EI ARKISTOIDA REPOON (11.10.2026 klo 22.42)
+
+11.10. 21.6x OMISTAJA (chat) sanatarkasti: "onko nuo aarremerkinnät ollut tarkoitus tulla jokaisen aarteen etsinnän jälkeen vai milloin?" / "minusta nuo aarremerkinnät eivät ole loogisia lukea siinä kohtaa. minusta ne voi jättää kokonaan pois, koska peli ei tarvitse niitä. mitä olet mieltä?" → PT samaa mieltä → RAAMATTUUN: AARREMERKINNÄT POISTETTU PELISTÄ (korvaa 11.10. 13.5x AARREMERKINNÄT-linjauksen); tekstit arkistossa docs/raportit/aarremerkinnat-182.md; SK poistaa datasta, NUI tarkistaa matkakirjan.
+
+11.10. 21.7x OMISTAJA (chat) sanatarkasti: "… älä jätä tekstejä arkistoon ettei ne ala kummittelemaan peliin takaisin vahingossa" → SK poistaa aarremerkinnät myös arkistosta (ei kopioita repoon). RAAMATTUUN: poistettuja tekstejä ei arkistoida repoon.
+
+Raamattuun (docs-PR 11.10. yö, Kolme veljestä): Aarteet ja eteneminen (AARREMERKINNÄT-linjaus poistettu), Kaupungit, UUSI TARINAKAARI ON FOKUSVIRTA (aarremerkintä pois kaanonin osista), Poistetut ideat (aarremerkinnät; TOIMINTATAPA: poistettuja pelitekstejä ei arkistoida repoon).
+
+## ISOISÄN AARREKUVA: CODEXIN NOPEA KYNÄLUONNOS VANHALLA PAPERILLA (11.10.2026 klo 22.42)
+
+11.10. 21.7x OMISTAJA (chat) sanatarkasti: "tilaa suoraan codexilta se isoisän piirros matkakirjasta, niin verrataan kumpi on parempi. …" + "tuo on aivan kamala. tilataan codexilta kynäpiirros" → Codex-tilaus postilaatikkoon b72605ba3 (isoisän kynäpiirros Kolmesta veljeksestä, aloitus-aarre-v3); Pelikoodarin luonnoskäsittely lopetettu.
+
+11.10. 22.1x OMISTAJA (chat) sanatarkasti Codexin kynäpiirroksesta: "piirros on liian hieno. pitäisi olla kynällä luonnosteltu ja vanha paperi pitäisi näkyä pohjalla" → uusi Codex-tilaus v2 (posti 109d68248): nopea kynäluonnos, kellastunut päiväkirjan paperi näkyvissä, riipus 60–70 % korkeudesta. RAAMATTUUN (isoisän kuvat): isoisän piirrokset ovat nopeita kynäluonnoksia vanhalla paperilla, eivät viimeisteltyjä kaiverruksia.
+
+Raamattuun (docs-PR 11.10. yö, Kolme veljestä): Tarina ja hahmot, ISOISÄ ON PIIRTÄJÄ (ISOISÄN PIIRROKSET OVAT NOPEITA KYNÄLUONNOKSIA); Kaupungit, ALOITUSKAUPUNKI JA KAUPUNGIN INTRO (aarrekuvana isoisän kynäluonnos riipuksesta).
+
+## PELIN NIMI KAIKKIALLA MATKAKIRJA, EI MATKAKIRJA 3D (11.10.2026 klo 22.42)
+
+11.10. 22.2x OMISTAJA (chat) sanatarkasti: "miksi beta testaajille näkyi vielä matkakirja 3d, vaikka nimen pitäisi olla kaikkialla pelkkä \"Matkakirja\". saako tätä korjattua perusteellisesti?" → PT: syy: 9.10. vaihdettiin vain kotinäytön nimi (Info.plist); App Store Connectin sovellusnimi, Macin .app-nimi ja productName jäivät "Matkakirja 3D". Julkaisija: ASC-nimet + TF-lokalisaatiot; NS: Mac .app + kaikki näkyvät nimet + testi (183). RAAMATTUUN: pelin nimi kaikkialla pelaajalle "Matkakirja" (ei "3D"), valvotaan testillä.
+
+Raamattuun (docs-PR 11.10. yö, Kolme veljestä): Ydinajatus, PELIN NIMI PELAAJALLE ON MATKAKIRJA.
+
+## TESTFLIGHTISSA VAIN UUSIN BUILD; PELI EI KÄYTÄ VANHEMPAA SISÄLTÖPAKETTIA (11.10.2026 klo 22.42)
+
+11.10. 22.2x OMISTAJA (chat) sanatarkasti: "saako jotenkin estettyä että test flightista ei voi ladata kuin uusimman version?" → PT: kyllä, vanhemmat buildit vanhennetaan automaattisesti, kun uusi on hyväksytty testaajille (haitta: ei paluuta edelliseen) → kysytty "laitetaanko käyttöön?". "ja että ei tule välimuistista jotenkin ehdotusta vanhemmasta versiosta?" → TestFlight ei tarjoa vanhennettua; pelin oma välimuisti: Pelikoodari 183 – build hylkää testattua vanhemman sisältöpaketin (ei koskaan vanhempaa dataa). RAAMATTUUN: pelaaja näkee aina vain uusimman version ja sitä vastaavan datan.
+
+11.10. 22.2x OMISTAJA (chat): "kyllä" (vanhat TestFlight-buildit vanhennetaan) → Julkaisija: buildit < 182 vanhennetaan nyt (iOS + Mac) + TF-ketjuun pysyvä vaihe: uuden hyväksynnän jälkeen kaikki vanhemmat vanhennetaan. RAAMATTUUN (julkaisusäännöt): TestFlightissa vain uusin hyväksytty build on asennettavissa.
+
+Raamattuun (docs-PR 11.10. yö, Kolme veljestä): Ydinajatus, NATIIVI PELI ETUSIJALLE: TESTFLIGHT-BUILDIT KEHITYKSEN AIKANA (VAIN UUSIN VERSIO PELAAJALLE).
+
+## JUNA 183 OMISTAJAN LUVALLA, KUN ILLAN ERÄT OVAT VALMIIT (11.10.2026 klo 22.44)
+
+11.10. 22.3x OMISTAJA (chat) sanatarkasti: "tee kaikki mahdollinen loppuun mitä olet nyt saanut tehtäviä ja julkaise lopuksi 183." → JUNA 183 OMISTAJAN LUVALLA: kaikki kuitattu + illan erät; Olavinlinna jos botti 17/17 + LT 8. kierros ehtivät; MetaHuman vain omistajan hyväksynnällä; isoisän + Pulun uudet äänet (yksi otto) tehdään lopullisista teksteistä.
+
+## YÖN VALTUUTUS PÄÄTOIMITTAJALLE 11.–12.10.2026 (11.10.2026 klo 22.44)
+
+11.10. 22.4x OMISTAJA (chat) sanatarkasti: "haluan antaa yötä vasten kaikki mahdolliset oikeudet etukäteen" → YÖN VALTUUTUS PT:lle (päätökset ja junan 183 julkaisu ilman odotusta; turvasäännöt ennallaan).
+
+11.10. 22.4x OMISTAJA (chat) sanatarkasti: "näytä heti kuvia raketista ja hahmoista kun valmistuu" + "minulta ei tarvitse odottaa hyväksyntää. voit jatkaa kokoajan eteenpäin. näytä silti kuvia, reagoin niihin tarvittaessa" → yövaltuutus (muisti yovaltuutus-20261011).
+
+## ALKURAHA £300; PELKÄLLÄ ALKURAHALLA EI PÄÄSE EUROOPAN TOISELLE LAIDALLE (11.10.2026 klo 22.44)
+
+11.10. 22.3x OMISTAJA (chat) sanatarkasti: "paljonko yksi päivä kuluttaa tällä hetkellä rahaa? ruokaan ja juomaan ja miten ne näkyvät pelaajalle?" → vastattu (ruoka 8 + majoitus 12 £ × hintataso 0,6/1,0/1,6).
+
+11.10. 22.4x OMISTAJA (chat) sanatarkasti: "400 puntaa on liian iso alkuraha. pienennetään se 300 puntaan. nyt ateenasta pääsee pariisiin ratkaisematta yhtään pulmaa, mikä on ongelma. rahaa voisi mennä vähän enemmän matkustamiseen myös, jotta pelaaja ei voisi liikkua liian pitkää matkaa tekemättä mitään." → RAAMATTUUN (talous): alkuraha £300; ilman tuloja ei pääse aloituskaupungista Euroopan toiselle laidalle (Pelikoodari 183).
+
+Raamattuun (docs-PR 11.10. yö, Kolme veljestä): Ydinajatus, PELIT, TALOUS JA LUENTA (kohta 2 TALOUS: aloitusraha £300 ja matkustamisen hinta).
+
+## METAHUMAN HYVÄKSYTTY OLAVINLINNAN HAHMOIHIN (11.10.2026 klo 22.44)
+
+11.10. 22.4x OMISTAJA (chat) sanatarkasti: "ei kun tee meta human, se on tärkeää saada huomiseksi" → RAAMATTUUN: METAHUMAN HYVÄKSYTTY Olavinlinnan hahmoihin (soutaja v1c junaan 183, muut puhuvat hahmot LR:ltä yön aikana); muistiraja NS:n mittauksella.
+
+Raamattuun (docs-PR 11.10. yö, Kolme veljestä): Ydinajatus, HISTORIALLISET KOHTEET SEIKKAILUINA MAAN TASALTA (HAHMOT: MetaHuman hyväksytty Olavinlinnan puhuviin hahmoihin).
