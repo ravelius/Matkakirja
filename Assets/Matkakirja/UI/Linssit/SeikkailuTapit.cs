@@ -361,6 +361,8 @@ namespace Matkakirja.Natiivi
             oikea.Nayta(oikeaNakyy);
             // Alareuna ja sivureuna kuten oppaan tapeilla (krediittien yläpuolella, reunasta OpasTapit.Reuna).
             vasen.Juuri.style.bottom = TappiAla; oikea.Juuri.style.bottom = TappiAla; vasen.alkuAla = TappiAla;
+            // Levossa ei tappia (omistaja 11.10. 00.4x "ota … mini kartta pois"): kelluva tappi ilmestyy sormen alle vasemmalla puoliskolla.
+            vasen.PiiloLevossa = nayta; vasen.Juuri.style.visibility = nayta && !vasen.Kelluu ? Visibility.Hidden : StyleKeyword.Null;
             Debug.Log("MATKAKIRJA seikkailutapit: " + (nayta ? "näkyvät" : "piilossa"));
         }
 

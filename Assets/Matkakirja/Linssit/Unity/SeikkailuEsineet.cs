@@ -241,7 +241,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Ovilehti auki tai raolleen koodista (tyrmä: avaimella auki, vesipoika jättää raolleen); vain näkymä.</summary>
         public void OviLehti(string tunnus, bool raollaan)
         {
-            foreach (var o in ovet) if (o.M.Tunnus == tunnus) KaannaLehti(o, raollaan ? OviRaollaanAste : OviAukiAste, OviHidasS);
+            // Myös raollaan oleva ovi päästää läpi (A3, Laitetestaaja TF 180: tyrmän ovi "raolleen" ja "lukko aukesi", mutta aukon
+            // törmäyslaatikko jäi paikalleen eikä ovesta päässyt kävellen).
+            foreach (var o in ovet) if (o.M.Tunnus == tunnus) { o.Auki = true; if (o.Go != null) o.Go.SetActive(false); KaannaLehti(o, raollaan ? OviRaollaanAste : OviAukiAste, OviHidasS); }
         }
 
         /// <summary>Onko lukittu ovi (ovi:&lt;tunnus&gt;) auki (LS2:n vihjeportaat).</summary>
@@ -856,7 +858,15 @@ namespace Matkakirja.Natiivi
                 if (SeikkailuPelaaja.Ensimmainen && p.Silmat != null)
                 {
                     // Valitsin (pelattavuusmalli 2.4): katseen suunnassa ±30°, lähin kulma voittaa (ei pelkkä etäisyys).
-                    float kulma = Vector3.Angle(p.Silmat.forward, e.Go.transform.position - p.Silmat.position);
+                    var kohti = e.Go.transform.position - p.Silmat.position;
+                    float kulma = Vector3.Angle(p.Silmat.forward, kohti);
+                    // Lattialla (yli 0,5 m silmien alapuolella, esim. avaimet tyrmän oljissa): vaakasuunta riittää, kameraa ei tarvitse
+                    // kallistaa alas (tyrmä-pako 11.10.: kosketuspelaaja katsoo eteenpäin; jalkojen juuressa = suoraan edessä).
+                    if (kohti.y < -0.5f)
+                    {
+                        var kv = new Vector3(kohti.x, 0f, kohti.z); var ev = new Vector3(p.Silmat.forward.x, 0f, p.Silmat.forward.z);
+                        kulma = kv.sqrMagnitude < 0.09f ? 0f : Mathf.Min(kulma, Vector3.Angle(ev, kv));
+                    }
                     if (kulma > ValitsinAste) continue;
                     d = kulma;
                 }

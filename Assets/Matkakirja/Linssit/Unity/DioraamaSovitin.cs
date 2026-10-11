@@ -526,7 +526,10 @@ namespace Matkakirja.Natiivi
             nayttamo.Hahmot3D?.Paivita(rakennus, nakyma, t);
             // Olavinlinna: kuoren leikkausikkuna kohdistetun tilan kohdalle (kasvaa kaarilennon jälkipuoliskolla).
             nayttamo.Ulkokuori?.PaivitaLeikkaus(rakennus, linssi.LeikkausHetkella(t), nayttamo.Kamera);
-            syote.Paivita(rakennus, t);
+            // Pelattava pala (omistaja TF 180, 11.10. 00.2x: tyrmässä "eri linnan osien nimiä" ja musta tyhjä): pelaajan napautus kuuluu
+            // SeikkailuTapeille. Dioraaman syöte kohdisti linssin napautettuun huoneeseen (tyrmä on keittiön rajojen sisällä → "Keittiö"
+            // ja kuoren leikkausikkuna keittiön kohdalle), joten se ei lue kosketuksia pelaajan tai veneen aikana.
+            if (SeikkailuPelaaja.Aktiivinen == null && SeikkailuVene.Aktiivinen == null) syote.Paivita(rakennus, t);
             aanet?.Paivita(rakennus, nakyma, t, SeikkailuPelaaja.Aktiivinen != null, PelaajanHuone());
         }
 
@@ -1114,7 +1117,7 @@ namespace Matkakirja.Natiivi
                 () => { if (!oli) SeikkailuKavely.Leikkaukset(false); valmis?.Invoke(); }, o.Kirjaa, vaiheJuuri, peili, jana, jatkaKamerasta);
         }
 
-        IEnumerator Botti(int alkuN)
+        IEnumerator Botti(int alkuN, float tauko = 0f)
         {
             var d = SeikkailuKavely.Data; var p = SeikkailuPelaaja.Aktiivinen;
             if (d == null || p == null) { o.Kirjaa("botti: ei pelaajaa tai kävelydataa"); yield break; }
@@ -1135,7 +1138,7 @@ namespace Matkakirja.Natiivi
                 while (p != null && p.Napautuskavely && Time.unscaledTime - t0 < 40f) { yield return null; p = SeikkailuPelaaja.Aktiivinen; }
                 float etaisyys = p != null ? Vector3.Distance(p.transform.position, kohde) : -1;
                 bool okP = etaisyys >= 0 && etaisyys < 1.0f;
-                o.Kirjaa($"botti: pelaaja-{kv.Key} {(okP ? "OK" : "VIRHE")} {etaisyys:F1} m, {Time.unscaledTime - t0:F1} s{(reitti ? "" : " (ei NavMesh-reittiä)")}, kiinni {kiinni}");
+                o.Kirjaa($"botti: pelaaja-{kv.Key} {(okP ? "OK" : "VIRHE")} {etaisyys:F1} m, {Time.unscaledTime - t0:F1} s{(reitti ? "" : " (ei NavMesh-reittiä)")}, kiinni {kiinni}{(!okP && p != null && p.ReittiLoppui != null ? ", reitti päättyi: " + p.ReittiLoppui : "")}{(p != null && p.Ohjattu != null ? ", ohjattu" : "")}{(SeikkailuNakyvyys.Himmennys > 0.5f ? ", himmennys" : "")}");
                 // Äänivahti (Natiivi-UI 9.10., ui aanet vahti): rekisteröimättömät soivat klipit jokaisessa pisteessä, uusi tulos lokiin.
                 string av = MikseriPalvelin.Vahti();
                 if (av != aaniVahti) { aaniVahti = av; if (av.StartsWith("äänivahti VIKA", StringComparison.Ordinal)) { aaniVikoja++; o.Kirjaa($"botti: pelaaja-{kv.Key} {av}"); } }
@@ -1148,6 +1151,12 @@ namespace Matkakirja.Natiivi
                     o.Kirjaa($"botti: pelaaja-{kv.Key} jumi ({pp.x:F2}, {pp.y:F2}, {pp.z:F2}) osa {osa}, reitti {p.BottiReitti}, kohde osa {kv.Value.Osa ?? "-"}; siirretään kohteeseen");
                     p.Siirra(kohde + Vector3.up * 0.1f);
                     yield return null;
+                }
+                if (tauko > 0f && p != null)
+                {
+                    // Katse seuraavaan pisteeseen (kuva näyttää, minne mennään), sitten tauko kuvaa varten.
+                    o.Kirjaa($"botti: perillä pelaaja-{kv.Key} ({kv.Value.Osa ?? "-"})");
+                    for (float w = 0; w < tauko; w += Time.unscaledDeltaTime) yield return null;
                 }
             }
             SeikkailuVartijat.Kiinnijaatiin -= Laske;
@@ -2067,6 +2076,17 @@ namespace Matkakirja.Natiivi
                     if (kohde is Vector3 kv) { sps.Siirra(kv); o.Kirjaa($"poikki: kävely siirretty {osat[3]} {kv}"); } else o.Kirjaa($"poikki: kävely: merkkiä {osat[3]} ei löydy");
                     return;
                 }
+                // "poikki kavely kohti <merkki>": pelaaja kävelee merkkiin napautuskävelyn tavoin (NavMesh-reitti, törmäykset kuten pelissä;
+                // A3 11.10.: tyrmän oven läpi kävely, siirto ohitti oven törmäyksen).
+                if (arvo == "kohti" && osat.Length > 3 && SeikkailuPelaaja.Aktiivinen is SeikkailuPelaaja kps)
+                {
+                    Matkakirja.Linssit.Seikkailu.KavelyMerkki km = null;
+                    if (SeikkailuKavely.Data != null) foreach (var mk in SeikkailuKavely.Data.Merkit) if (mk.Nimi == osat[3]) { km = mk; break; }
+                    if (km == null) { o.Kirjaa($"poikki: kävely: merkkiä {osat[3]} ei löydy"); return; }
+                    bool reitti = kps.KaveleKohti(new Vector3((float)km.X, (float)km.Y, (float)-km.Z));
+                    o.Kirjaa($"poikki: kävely kohti {osat[3]} ({kps.BottiReitti}{(reitti ? "" : ", suoraan")})");
+                    return;
+                }
                 if (arvo == "tapit" && osat.Length > 7)
                 {
                     string tapa = osat.Length > 8 ? osat[8] : "";
@@ -2121,7 +2141,9 @@ namespace Matkakirja.Natiivi
             if (mita == "seikkailu" && arvo == "botti")
             {
                 int alkuN = osat.Length > 3 && int.TryParse(osat[3], out int an) ? an : 1;
-                o.StartCoroutine(Botti(alkuN));
+                // "poikki seikkailu botti [alku-N] [tauko_s]": tauko jokaisessa pisteessä (kuva-arkki: skenaario kuvaa "perillä"-rivistä).
+                float tauko = osat.Length > 4 && float.TryParse(osat[4], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float ts) ? ts : 0f;
+                o.StartCoroutine(Botti(alkuN, tauko));
                 return;
             }
             // "poikki vartijat 1 | 0 | tila": historiamoottori V3 — vartijat partioreiteille (merkit partio:*), NavMesh kävelypinnoista.

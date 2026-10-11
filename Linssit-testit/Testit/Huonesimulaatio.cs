@@ -9,8 +9,9 @@
 // rannan vartijat odottavat (Aktivoi/Odottamaan), naamio naulakosta (kulkulupa; pukeutuminen 2 s; ei kelpaa hahmoille, joiden merkki on
 // osassa muurikaytava: SeikkailuVartijat.NaamioEiKelpaaOsa, PT 8.10.), harjan hahmot uppoutuneina (ei selkäaistia) ja talonpoika
 // kääntyy kerran (kaantyy_s) 5 s pelaajan tultua 8 m:iin, kuulo: yli 2,5 m:n korkeusero puolittaa (Aanilahde.Y),
-// kiinni → tarkistuspiste (portaalin ylitys ilman vaaraa), armo 4 s, kaikki valppaiksi; anteeksianto (kohta 4.2): 2. kiinnijäänti samassa
-// osassa → kaikki helpotetuiksi, 3. → Pulun taso 2 (PuluPakotettu); helpotus päättyy osan vaihtuessa.
+// kiinni → tarkistuspiste (portaalin ylitys ilman vaaraa), armo 4 s, vapautus (Vartija.Vapauta: rauhallisina, turva 60 s; paluupaikan
+// lähellä ≤ 6 m oleva hahmo vartiopaikalleen; PT 07.0x 11.10.); anteeksianto portaittain (kohta 4.2): Helpotus = kiinnijäännit samassa
+// osassa − 1, 3. → Pulun taso 2 (PuluPakotettu); helpotus päättyy osaan, joka ei ole otteen eikä paluupaikan osa.
 // Yksinkertaistukset: hahmot ja pelaaja kulkevat suoraan (ei NavMeshiä); näkölinja vapaa samassa osassa ja naapuriosaan vain
 // portaalin (ovi:-merkki) kautta, kerrosero ≤ 2 m; mukana vain hahmot, joiden reitti on alle 25 m:n päässä pelaajan reitistä.
 // Kopioi() kloonaa koko tilan (myös Vartijan yksityiset kentät), jotta testiajuri voi kokeilla ajoituksia etukäteen.
@@ -80,7 +81,8 @@ namespace Matkakirja.Linssit.Testit
         public static readonly string[] Odottavat = { "ranta", "seisoo-ranta-vartija" };
         public const string NaamioEiKelpaaOsa = "muurikaytava";
         public int Kiinni, Seuraava = 1, TarkistusSeuraava = 1, PuluPakotettu;
-        string kiinniOsa; int kiinniOsassa;
+        string kiinniOsa, paluuOsa; int kiinniOsassa;
+        public const double RauhaM = 6;
         public bool VaroitusRikki;
         public (double X, double Y, double Z) Tarkistus;
         public HashSet<string> Kaytetyt = new HashSet<string>();
@@ -180,9 +182,11 @@ namespace Matkakirja.Linssit.Testit
         }
 
         /// <summary>Pelaajan valoisuus (SeikkailuVartijat.PelaajanValoisuus): liekit 1 m jalkojen yllä, valo:-merkit, kynttilä, kannetut valot.</summary>
+        /// <summary>Valoisuuden alaraja (testit: laiturin päivänvalo 0,7 kuten SeikkailuVartijat.ValoisuusOletus); 0 = ei.</summary>
+        public double ValoVahintaan;
         public double Valoisuus()
         {
-            double v = 0.25;
+            double v = Math.Max(0.25, ValoVahintaan);
             foreach (var l in valot) { double d = Etaisyys3(l.X, l.Y, l.Z, PX, PY + 1, PZ); if (d < l.Sade) v = Math.Max(v, l.Voima * (1 - d / l.Sade)); }
             if (Kynttila) v = Math.Max(v, Hiipii ? 0.45 : 0.9);
             foreach (var h in Hahmot) if (h.ValoM > 0 && h.Aktiivinen) v = Math.Max(v, 1 - Etaisyys3(h.X, h.Y, h.Z, PX, PY, PZ) / h.ValoM);
@@ -293,7 +297,7 @@ namespace Matkakirja.Linssit.Testit
             {
                 if (pelaajanOsa != null && !Vaara()) { Tarkistus = (PX, PY, PZ); TarkistusSeuraava = Seuraava; }
                 pelaajanOsa = osa;
-                if (kiinniOsa != null && osa != kiinniOsa) { kiinniOsa = null; kiinniOsassa = 0; foreach (var x in Hahmot) x.Aivot.Helpotettu = false; }   // helpotus päättyy
+                if (kiinniOsa != null && osa != kiinniOsa && osa != paluuOsa) { kiinniOsa = null; paluuOsa = null; kiinniOsassa = 0; foreach (var x in Hahmot) x.Aivot.Helpotus = 0; }   // helpotus päättyy
             }
             // Tarkistuspiste tikkaiden yläpäähän (SeikkailuVartijat, PT 10.10.): kiipeily:-merkin alapäästä (≤ 1 m vaaka, 1,2 m pysty) yläpäähän
             // noustessa (≥ 1,5 m) kenenkään epäilemättä; harja on samaa osaa kuin muurikäytävä.
@@ -378,16 +382,23 @@ namespace Matkakirja.Linssit.Testit
 
         public void Kiinnijaanti()
         {
-            KiinniAlkaa?.Invoke(this);
             var d = Data; Kiinni++;
-            string osa = Askelaani.Osa(d, PX, PY, PZ);
+            string osa = Askelaani.Osa(d, PX, PY, PZ);   // otteen paikka ennen tyrmää (SeikkailuVartijat.Vie: otePaikka)
+            KiinniAlkaa?.Invoke(this);
             kiinniOsassa = osa == kiinniOsa ? kiinniOsassa + 1 : 1; kiinniOsa = osa;
-            (PX, PY, PZ) = Tarkistus; Seuraava = TarkistusSeuraava; ArmoAsti = T + ArmoS; Tarjotin = false; pelaajanOsa = Askelaani.Osa(d, PX, PY, PZ);
-            foreach (var w in Hahmot) if (w.Aktiivinen) { w.Aivot.Nollaa(w.X, w.Z, valpas: !w.Aivot.Torkkuu);   // torkkuva ei valpastu (SeikkailuVartijat.Kiinni)
-                 if (kiinniOsassa >= 2) w.Aivot.Helpotettu = true; }
+            (PX, PY, PZ) = Tarkistus; Seuraava = TarkistusSeuraava; ArmoAsti = T + ArmoS; Tarjotin = false; pelaajanOsa = paluuOsa = Askelaani.Osa(d, PX, PY, PZ);
+            Jono.Clear();
+            foreach (var w in Hahmot)
+            {
+                if (!w.Aktiivinen) continue;
+                double nyt = Etaisyys2(w.X, w.Z, PX, PZ);
+                if (nyt < RauhaM && Etaisyys2(w.AlkuX, w.AlkuZ, PX, PZ) > nyt) (w.X, w.Y, w.Z) = (w.AlkuX, w.AlkuY, w.AlkuZ);   // vartiopaikalle
+                w.Aivot.Vapauta(w.X, w.Z); w.Aivot.Helpotus = kiinniOsassa - 1;
+            }
             if (kiinniOsassa >= 3) PuluPakotettu++;
         }
         public int KiinniOsassa => kiinniOsassa;
+        public string KiinniOsa => kiinniOsa;
 
         /// <summary>Hahmon korkeus lähimmältä reittiosuudelta (portaat nousevat tasaisesti).</summary>
         static double YReitilla(Hahmo h)

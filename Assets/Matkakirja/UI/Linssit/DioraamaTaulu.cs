@@ -661,6 +661,39 @@ namespace Matkakirja.Natiivi
 
         void Paivita()
         {
+            PaivitaRunko();
+            PaivitaSeikkailunNimi();
+        }
+
+        /// <summary>Pelattavan palan paikan nimi (Siirtoseppä 11.10., omistaja TF 180 tyrmästä): kerran saapuessa NimiS ja häivytys
+        /// NimiHaivytysS huonekortin tiiviillä otsikkorivillä (sama pohja kuin huoneen nimi saapuessa, NIMIKYLTIT HETKEN). Pelissä
+        /// huonekortteja ei muuten näytetä (napautus kuuluu pelaajalle).</summary>
+        public static void NaytaSeikkailunNimi(string nimi) { seikkailunNimi = nimi; seikkailunNimiAlku = Time.unscaledTime; }
+        static string seikkailunNimi; static float seikkailunNimiAlku;
+
+        void PaivitaSeikkailunNimi()
+        {
+            if (seikkailunNimi == null) return;
+            float ika = Time.unscaledTime - seikkailunNimiAlku;
+            if (SeikkailuPelaaja.Aktiivinen == null || ika > NimiS + NimiHaivytysS) { seikkailunNimi = null; lauta.style.display = DisplayStyle.None; return; }
+            otsikko.text = seikkailunNimi;
+            teksti.style.display = lainaus.style.display = puhuja.style.display = kuunteleNappi.style.display = DisplayStyle.None;
+            if (initiaaliEl != null) initiaaliEl.style.display = DisplayStyle.None;
+            if (korttiViiva != null) korttiViiva.style.display = korttiNasta.style.display = DisplayStyle.None;
+            lauta.style.display = DisplayStyle.Flex;
+            lauta.style.visibility = StyleKeyword.Null;
+            lauta.style.width = StyleKeyword.Auto;
+            lauta.style.translate = new Translate(0, 0);
+            float pw = juuri.layout.width; if (float.IsNaN(pw) || pw <= 0) pw = Screen.width;
+            float tl = float.IsNaN(lauta.layout.width) || lauta.layout.width <= 0 ? 160f : lauta.layout.width;
+            float sk = Screen.width > 0 ? pw / Screen.width : 1f;
+            lauta.style.left = (pw - tl) * 0.5f; lauta.style.top = 12f + (Screen.height - Screen.safeArea.yMax) * sk;
+            lauta.style.opacity = 1f - Mathf.Clamp01((ika - NimiS) / NimiHaivytysS);
+            Matkakirja.Ruudunpaivitys.Herata(0.25f);
+        }
+
+        void PaivitaRunko()
+        {
             PaivitaNimiruutu();
             // Natiivisepän itsetarkistus 4.10. (juna 141, vaaka): auki olevan linnan valikon läpi näkyi huonekortti ja Kuuntele
             // piirtyi rivien päälle → kortti, Kuuntele, Pulu ja nimilaput piiloon valikon ajaksi (näkyvyys; asettelu jatkuu).

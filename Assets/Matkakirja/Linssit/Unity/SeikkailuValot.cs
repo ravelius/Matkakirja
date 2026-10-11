@@ -132,7 +132,9 @@ namespace Matkakirja.Natiivi
             go.transform.localPosition = paikallinen;
             var l = go.AddComponent<Light>();
             l.type = LightType.Point; l.color = vari; l.intensity = voima; l.range = kantama; l.shadows = LightShadows.None;
-            if (tyyppiValo != null)
+            // Volumetrinen pallo pois (PT 11.10.: laiturin keskellä himmeä ruskea pallo joka kuvassa = muurin takaisen liekin hehku
+            // seinän läpi; MSAA-syvyystekstuuri ei sido "Texture2DMS"-varoituksen takia, joten pallo ei peity geometriaan). Pistevalo jää.
+            if (tyyppiValo != null && PalloHehku)
             {
                 var vl = go.AddComponent(tyyppiValo);
                 // Tiheämpi ja lyhyempi kuin kuunsäteessä: savuinen pallo liekin ympärillä, ei pölyä.
@@ -144,6 +146,8 @@ namespace Matkakirja.Natiivi
             return l;
         }
 
+        /// <summary>Volumetrinen pallo liekin ja kannetun valon ympärillä (pois 11.10.: piirtyy seinien läpi, ks. Hehku).</summary>
+        public static bool PalloHehku;
         static readonly HashSet<int> hehkuLiekit = new HashSet<int>();
         static readonly List<GameObject> isot = new List<GameObject>();
         /// <summary>Soihtujen ja tulisijojen volumetrinen hehku (laatutaso): lisää hehkun isoihin liekkeihin, joilla sitä ei vielä ole

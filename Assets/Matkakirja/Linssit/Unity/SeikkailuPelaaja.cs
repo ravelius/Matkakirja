@@ -243,9 +243,13 @@ namespace Matkakirja.Natiivi
         /// <summary>Botti (vianselvitys): kävele pisteeseen napautuskävelyn tavoin (reitti NavMeshillä). Palauttaa, löytyikö reitti.</summary>
         /// <summary>Botin viimeisimmän reitin tila (PathComplete / PathPartial = pelaaja NavMesh-saarella / ei reittiä).</summary>
         public string BottiReitti { get; private set; }
+        /// <summary>Miksi napautusreitti päättyi viimeksi ennen perille pääsyä (botin loki; perillä = null).</summary>
+        public string ReittiLoppui;
+        /// <summary>Liike (tappi, näppäimet) ohitetaan tähän hetkeen asti; katse toimii (tyrmän herätys, omistaja TF 180).</summary>
+        public float LiikeEstettyAsti;
         public bool KaveleKohti(Vector3 kohde)
         {
-            napautusReitti.Clear();
+            napautusReitti.Clear(); ReittiLoppui = null;
             var polku = new NavMeshPath();
             bool ok = NavMesh.SamplePosition(kohde, out var k, 1.0f, NavMesh.AllAreas) && NavMesh.CalculatePath(transform.position, k.position, NavMesh.AllAreas, polku)
                 && polku.status != NavMeshPathStatus.PathInvalid && polku.corners.Length > 1;
@@ -259,11 +263,11 @@ namespace Matkakirja.Natiivi
         void NapautusSyote(ref KavelySyote s, float dt)
         {
             if (napautusReitti.Count == 0) return;
-            if (Math.Abs(s.LiikeX) > Kavely.KuolleAlue || Math.Abs(s.LiikeY) > Kavely.KuolleAlue) { napautusReitti.Clear(); return; }   // oma ohjaus
+            if (Math.Abs(s.LiikeX) > Kavely.KuolleAlue || Math.Abs(s.LiikeY) > Kavely.KuolleAlue) { napautusReitti.Clear(); ReittiLoppui = $"oma ohjaus ({s.LiikeX:F2}, {s.LiikeY:F2})"; return; }   // oma ohjaus; kieli: ei (tekninen)
             var d = napautusReitti[0] - transform.position; d.y = 0;
             while (d.magnitude < PerillaM) { napautusReitti.RemoveAt(0); if (napautusReitti.Count == 0) return; d = napautusReitti[0] - transform.position; d.y = 0; }
             jumiAika += dt;
-            if (jumiAika > JumiS) { if ((transform.position - jumiPaikka).magnitude < 0.1f) { napautusReitti.Clear(); return; } jumiAika = 0; jumiPaikka = transform.position; }
+            if (jumiAika > JumiS) { if ((transform.position - jumiPaikka).magnitude < 0.1f) { napautusReitti.Clear(); ReittiLoppui = "jumi (ei liikettä " + JumiS + " s)"; return; } jumiAika = 0; jumiPaikka = transform.position; }   // kieli: ei (tekninen)
             d.Normalize();
             double y = kavely.KameraYaw * Math.PI / 180, sy = Math.Sin(y), cy = Math.Cos(y);
             s.LiikeY = d.x * sy + d.z * cy; s.LiikeX = d.x * cy - d.z * sy;
@@ -402,7 +406,7 @@ namespace Matkakirja.Natiivi
             {
                 // Silmät: kamera lukittu silmäpisteeseen ja sen kiertoon (Ytimen kulmat), ei vaimennusta eikä heiluntaa.
                 p.KapseliPiiloon();
-                var fl = LensSettings.Default; fl.FieldOfView = FpFov; fl.NearClipPlane = 0.05f; fl.FarClipPlane = 4000f;
+                var fl = LensSettings.Default; fl.FieldOfView = FpFov; fl.NearClipPlane = (float)Kameraliike.SilmaLahitasoM; fl.FarClipPlane = 4000f;   // DioraamaNayttamo.Paivita pitää saman (Kameraliike.Lahitaso)
                 p.kamera.Lens = fl;
                 cg.AddComponent<CinemachineHardLockToTarget>();
                 cg.AddComponent<CinemachineRotateWithFollowTarget>();
@@ -434,7 +438,7 @@ namespace Matkakirja.Natiivi
         public void Siirra(Vector3 paikka)
         {
             cc.enabled = false; transform.position = paikka; cc.enabled = true; pysty = 0; viimeMaassa = paikka;
-            kavely.NopeusX = kavely.NopeusZ = 0; napautusReitti.Clear(); silmaMaailma = float.NaN;
+            kavely.NopeusX = kavely.NopeusZ = 0; if (napautusReitti.Count > 0) ReittiLoppui = "siirto"; napautusReitti.Clear(); silmaMaailma = float.NaN;
         }
 
         static void LisaaTaytevalo(Transform isa, int kerros, Vector3 paikka)
@@ -521,9 +525,10 @@ namespace Matkakirja.Natiivi
         {
             float dt = Mathf.Min(Time.unscaledDeltaTime, 0.05f);
             var s = LueSyote();
+            if (Time.unscaledTime < LiikeEstettyAsti) { s.LiikeX = s.LiikeY = 0; s.Juoksu = false; }   // herätys tyrmässä: pidetty tappi ei kävelytä
             NapautusSyote(ref s, dt);
             if (Time.unscaledTime > leikkausTarkistus) { leikkausTarkistus = Time.unscaledTime + 0.5f; SeikkailuKavely.PaivitaLeikkaukset(transform.position); }
-            if (Otteessa) { s.LiikeX = s.LiikeY = 0; s.Juoksu = false; napautusReitti.Clear(); }
+            if (Otteessa) { s.LiikeX = s.LiikeY = 0; s.Juoksu = false; if (napautusReitti.Count > 0) ReittiLoppui = "otteessa"; napautusReitti.Clear(); }
             if (PaivitaOteKiipeily(dt, s)) { PaivitaKadet(dt); return; }
             if (Ohjattu != null)
             {
@@ -569,6 +574,7 @@ namespace Matkakirja.Natiivi
                 if (float.IsNaN(silmaMaailma)) { silmaMaailma = tavoite; silmaNopeus = 0f; }
                 silmaMaailma = Mathf.SmoothDamp(silmaMaailma, tavoite, ref silmaNopeus, PortaatViive, Mathf.Infinity, dt);
                 silmaMaailma = Mathf.Clamp(silmaMaailma, tavoite - PortaatMaxJalki, tavoite + PortaatMaxJalki);
+                silmaMaailma = NakyvaRaja(KattoRaja(silmaMaailma));
                 olka.localPosition = new Vector3(0f, silmaMaailma - transform.position.y, 0f);
                 AsetaTakakuva(olka.position, olka.rotation);   // paluu takakuvasta silmiin
             }
@@ -581,6 +587,38 @@ namespace Matkakirja.Natiivi
                 Debug.Log($"MATKAKIRJA seikkailu: putosi, palautus {paluu}");
                 cc.enabled = false; transform.position = paluu; cc.enabled = true; pysty = 0;
             }
+        }
+
+        // KATTORAJA (A2, PT:n yösuunnitelma 11.10.; botti-kävely b044/b059 lähes mustat portaissa): alas mentäessä jäljessä tuleva silmä
+        // (≤ PortaatMaxJalki) tai matala holvi vei kameran katon sisään. Pallo (KattoVaraM) pyyhkäistään kapselin keskeltä silmään;
+        // osuma kiinteään törmäykseen (ei esineitä eikä pelaajaa) laskee silmän sen alle.
+        public const float KattoVaraM = 0.12f;
+        readonly RaycastHit[] kattoOsumat = new RaycastHit[8];
+        float KattoRaja(float silmaY)
+        {
+            var pp = transform.position; float alaY = pp.y + 1.0f;
+            if (silmaY <= alaY) return silmaY;
+            int n = Physics.SphereCastNonAlloc(new Vector3(pp.x, alaY, pp.z), KattoVaraM, Vector3.up, kattoOsumat, silmaY - alaY, 1 << gameObject.layer, QueryTriggerInteraction.Ignore);
+            float raja = silmaY;
+            for (int i = 0; i < n; i++)
+            {
+                var o = kattoOsumat[i];
+                if (o.distance <= 0f || o.collider == cc || o.collider.attachedRigidbody != null || o.collider.CompareTag("Player")) continue;
+                raja = Mathf.Min(raja, alaY + o.distance);
+            }
+            return raja;
+        }
+
+        // NÄKYVÄ RAJA (11.10., PT 07.0x, Laitetestaaja 5. kierros v10-30/60/76): tyrmän näkyvä holvi (rappaus, ei törmäystä) alkaa
+        // 1,60 m:stä ja peittää oviaukon yläosan; silmät 1,62 m kulkivat sen läpi ("kattolevy + seinä täyttää ruudun"). Silmä laskee
+        // näkyvän mallin alle SilmaVara.VaraM:n päähän (oviaukossa ~1,45 m, kumarrus); ennakko liikesuuntaan, ettei pudotus nytkähdä.
+        public const float NakyvaEnnakkoS = 0.25f;
+        float NakyvaRaja(float silmaY)
+        {
+            var pp = transform.position; float alaY = pp.y + 1.0f;
+            if (silmaY <= alaY) return silmaY;
+            var ennakko = pp + new Vector3((float)kavely.NopeusX, 0f, (float)kavely.NopeusZ) * NakyvaEnnakkoS;
+            return Mathf.Min(SeikkailuKavely.SilmaRaja(pp, silmaY, alaY), SeikkailuKavely.SilmaRaja(ennakko, silmaY, alaY));
         }
 
         /// <summary>Leike liiketavasta ja vauhdista: idle / kyykky_idle seistessä, kavely / juoksu / hiipiminen liikkeessä; toistonopeus =
@@ -598,7 +636,13 @@ namespace Matkakirja.Natiivi
 
         KavelySyote LueSyote()
         {
-            if (Time.unscaledTime < TestiLoppuu) return Testi;
+            if (Time.unscaledTime < TestiLoppuu) { testiKaynnissa = true; return Testi; }
+            if (testiKaynnissa)
+            {
+                // Testisyötteen loppu (poikki kavely tapit): paikka, silmät ja maassaolo lokiin (A2: kamera seinän/holvin sisällä).
+                testiKaynnissa = false;
+                Debug.Log($"MATKAKIRJA seikkailu: testisyöte loppui, paikka {transform.position}, silmät {olka.position}, katse {kavely.KameraYaw:F0}/{kavely.KameraPitch:F0}, maassa {cc.isGrounded}");
+            }
             var s = new KavelySyote();
             var kb = Keyboard.current;
             if (kb != null)
@@ -652,6 +696,7 @@ namespace Matkakirja.Natiivi
             if (SeikkailuKasittely.Kaynnissa) { s.HiiriX = s.HiiriY = 0; s.KatseX = s.KatseY = 0; }   // käsittely käsin: katse paikallaan
             return s;
         }
+        bool testiKaynnissa;
         static bool tapitHaettu; static System.Reflection.PropertyInfo tapVasen, tapOikea; static System.Reflection.MethodInfo tapKatse;
 
         /// <summary>Katseen syöte asteina ilman pelaajaa (veneessä): x kääntö oikealle, y nosto ylös — hiiri (oikea pohjassa tai lukittu),

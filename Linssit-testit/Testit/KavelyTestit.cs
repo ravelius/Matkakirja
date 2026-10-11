@@ -1,5 +1,6 @@
 // HISTORIAMOOTTORI V1 (Siirtoseppä 7.10.2026): vapaan kävelyn ydin — liike kameran suuntaan, kiihtyvyys, hahmon kääntyminen, katseen rajat.
 using System;
+using Matkakirja.Linssit.Dioraama;
 using Matkakirja.Linssit.Seikkailu;
 
 namespace Matkakirja.Linssit.Testit
@@ -90,6 +91,22 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(75.0, k.KameraPitch);
             Aja(k, new KavelySyote { HiiriY = 400 }, 1 / 60.0);
             Oleta.Sama(-75.0, k.KameraPitch);
+        }
+
+        // LÄHITASO SILMISTÄ (11.10., PT 06.0x, v8 laituri-a1 a2-02/03): tyrmän holvi 0,47 / 0,28 m silmästä, kapseli r 0,3 m. Lähitason
+        // kulma pysyy alle 0,2 m:n kaikilla kuvasuhteilla (iPad 4:3 … iPhone 2,17), dioraaman 0,3/0,5 m jää muille kameroille.
+        [Testi] static void SilmistaLahitasoEiLeikkaaSeinaa()
+        {
+            Oleta.Sama(Kameraliike.SilmaLahitasoM, Kameraliike.Lahitaso(true, true, 0));
+            Oleta.Sama(0.5, Kameraliike.Lahitaso(false, true, 0));
+            Oleta.Sama(0.3, Kameraliike.Lahitaso(false, false, 0.1));
+            Oleta.Sama(1.2, Kameraliike.Lahitaso(true, true, 1.2));   // puolilähikuvan lähileikkaus voittaa
+            foreach (double kuvasuhde in new[] { 4.0 / 3, 1376.0 / 1032, 19.5 / 9 })
+            {
+                double kulma = Kameraliike.LahitasonKulmaM(Kameraliike.Lahitaso(true, true, 0), 62, kuvasuhde);
+                Oleta.Tosi(kulma < 0.2, $"silmän lähitason kulma {kulma:F3} m (kuvasuhde {kuvasuhde:F2}) < 0,2 m");
+            }
+            Oleta.Tosi(Kameraliike.LahitasonKulmaM(Kameraliike.Lahitaso(false, true, 0), 62, 4.0 / 3) > 0.47, "vanha 0,5 m leikkasi tyrmän holvin (0,47 m)");
         }
     }
 }
