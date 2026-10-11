@@ -533,6 +533,10 @@ namespace Matkakirja.Natiivi
                 case "valikko": ui.Valikko.Sulje(); ui.Linssit.Valitsin.Avaa(); return null;
                 case "asetukset": ui.Aanentasot.Avaa(); return null;
                 case "sulje": ui.SuljeKaikki(); return null;
+                case "uusi-linssi":
+                    // ui uusi-linssi [tunnus]: uuden linssin paljastus (PeliOhjain.LinssiLoytyi, omistaja 11.10.2026).
+                    ui.TestaaUusiLinssi(string.IsNullOrWhiteSpace(loput) ? "taidemuseo" : loput.Trim());
+                    return null;
                 case "olavinlinna":
                     // "ui olavinlinna alku|loppu|nollaa|sulje|tila": Olavinlinnan alun valinta (OlavinlinnaAlku, juna 171).
                     return "=" + OlavinlinnaAlku.Testi(loput.Trim().Length > 0 ? loput.Trim() : "tila");
@@ -1238,10 +1242,6 @@ namespace Matkakirja.Natiivi
                     else if (pk.Length > 1 && pk[0] == "alku") Matkakirja.Pelikello.AlkuKelloUtc = luku;
                     return ui.Kellonaytto.Kuvaus;
                 }
-                case "uusi-linssi":
-                    // ui uusi-linssi [tunnus]: uuden linssin paljastus (PeliOhjain.LinssiLoytyi, omistaja 11.10.2026).
-                    ui.TestaaUusiLinssi(string.IsNullOrWhiteSpace(loput) ? "taidemuseo" : loput.Trim());
-                    return null;
                 case "pinnaus":
                     // Pinnattu palkki (Pinnaus.cs): ui pinnaus [palkki <otsikko> | pois]
                     return "=" + Pinnaus.Testi(loput);
