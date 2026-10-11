@@ -8,7 +8,7 @@ LS1 local_4b4b976c…, LS2 local_ee961a2d…, NUI local_e9fdc695…, Siirtosepp�
 
 ## ENSIMMÄISEKSI
 1. **Unity-beetaseuranta**: CronCreate "4 9 * * *" (prompt: aja unity-julkaisut.py, UUSI → rivi PT:lle + testikäännös) ja aja kerran
-   `python3 /Users/Shared/Claude/proto-3d/lokit/natiiviseppa-skriptit/unity-julkaisut.py` (tyhjä = ei uutta; nähdyt 6000.7.0b1–b4).
+   `python3 /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/unity-julkaisut.py` (tyhjä = ei uutta; nähdyt 6000.7.0b1–b4).
 2. **JUNA 180** jatkuu (alla). Lukitus vasta kun muistiportti läpi + LS1 KIIRE + kippikorjaukset sisällä + PT käskee.
 
 ## JUNA 180 = natiiviseppa/juna-180 420bc0af7 (BUILD 179 75fcc2b1b:n päällä; wt j175; peilattu peili/proto/natiiviseppa/juna-180)
@@ -99,3 +99,8 @@ Taustalla EI omia ajoja (cron 440f4d6d katoaa nollauksessa).
 - TOINEN KÄÄNNÖSLINJA (PT 10.2x) valmis: PROTO_LINJA=2 proto-kaanna.sh → kopio proto-3d/Matkakirja-proto-linja2 (symlinkki → /Volumes/T7 4TB/koodaus/proto-linja2,
   git worktree + linjan 1 Library 7,0 Gt), lukko /tmp/matkakirja-kaannospalvelu-2.lukko, nice 15 + xcodebuild -jobs 6, loki *-l2.log. burst-jit.sh viitelaskettu
   (haltijat /tmp/matkakirja-burst-jit-haltijat/<pid>). Varmuuskopiot tyokalut/*.ennen-linja2-20261011. Koe 10.39–10.46 OK rinnakkain linjan 1 kanssa.
+
+## TILA 11.10. 10.48
+- Joku siirsi 11.10. aamulla lokit/natiiviseppa-* (myös natiiviseppa-skriptit/, app- ja mac-tf-kopiot) NAS:lle (NAS-Homes/samireivinen/Matkakirja-arkisto/lokit/).
+  SKRIPTIT PALAUTETTU uuteen paikkaan /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/ (ei lokit-siivouksen alla). unity-julkaisut.py ja kopioi-juna-app.sh testattu;
+  cron vaihdettu uuteen polkuun. Simu-.app 181: lokit/juna-1.1.181-a93ce987.

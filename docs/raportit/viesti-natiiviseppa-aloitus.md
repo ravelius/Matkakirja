@@ -12,7 +12,7 @@ Päätoimittaja: "PÄÄTOIMITTAJA (Opus, max)". Vertaisille SendMessage session 
    yön uudelleenkäynnistyksen jälkeen Julkaisijan vuorolla; lukitus PT:n käskystä (kaava luovutuksessa).
 
 ## PYSYVÄ: UNITY-BEETASEURANTA (PT 10.10. 19.5x; kumoaa "pysytään b4:ssä")
-HETI ALOITUKSESSA: CronCreate "4 9 * * *" (päivittäin) + aja kerran `python3 /Users/Shared/Claude/proto-3d/lokit/natiiviseppa-skriptit/unity-julkaisut.py`.
+HETI ALOITUKSESSA: CronCreate "4 9 * * *" (päivittäin) + aja kerran `python3 /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/unity-julkaisut.py`.
 UUSI-rivi → heti rivi PT:lle (versio + osuvat korjaukset) → testikäännös omassa haarassa (käännös, unity-tarkistus, testit, iPad-muistiajo) → läpi:
 vaihto seuraavaan junaan PT:n kuittauksella, muuten rivi syineen. App Store vain lopullisella; 6.3 LTS varalla.
 
