@@ -6152,20 +6152,152 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 31.908, etela: 31.8824, lansi: 35.1877, ita: 35.2196 },
   },
   // AFRIKAN PÄÄKAUPUNKIPISTEET (Karttaseppä 11.10.2026, PT): kohteet OSM:stä ja Wikipediasta, tekstit myöhemmin.
+  abuja: {
+    rajat: { pohjoinen: 9.0767, etela: 9.0413, lansi: 7.4833, ita: 7.5249 },
+  },
+  accra: {
+    rajat: { pohjoinen: 5.5582, etela: 5.5268, lansi: -0.2185, ita: -0.1769 },
+    meri: true,
+  },
   alger: {
     rajat: { pohjoinen: 36.7916, etela: 36.7684, lansi: 3.0512, ita: 3.0679 },
+    meri: true,
+  },
+  antananarivo: {
+    rajat: { pohjoinen: -18.9077, etela: -18.9356, lansi: 47.5187, ita: 47.5363 },
+  },
+  asmara: {
+    rajat: { pohjoinen: 15.3441, etela: 15.3242, lansi: 38.9219, ita: 38.9485 },
+  },
+  bamako: {
+    rajat: { pohjoinen: 12.668, etela: 12.6125, lansi: -8.0154, ita: -7.9832 },
+  },
+  bangui: {
+    rajat: { pohjoinen: 4.4053, etela: 4.3538, lansi: 18.5527, ita: 18.5826 },
+  },
+  banjul: {
+    rajat: { pohjoinen: 13.4641, etela: 13.4469, lansi: -16.5888, ita: -16.5683 },
+    meri: true,
+  },
+  bissau: {
+    rajat: { pohjoinen: 11.8671, etela: 11.8533, lansi: -15.5893, ita: -15.5754 },
+    meri: true,
+  },
+  brazzaville: {
+    rajat: { pohjoinen: -4.2548, etela: -4.2892, lansi: 15.2395, ita: 15.2981 },
+  },
+  conakry: {
+    rajat: { pohjoinen: 9.5394, etela: 9.496, lansi: -13.7249, ita: -13.6768 },
+    meri: true,
+  },
+  djibouti: {
+    rajat: { pohjoinen: 11.6084, etela: 11.588, lansi: 43.136, ita: 43.1545 },
+    meri: true,
+  },
+  freetown: {
+    rajat: { pohjoinen: 8.502, etela: 8.4658, lansi: -13.2585, ita: -13.1963 },
+    meri: true,
+  },
+  gaborone: {
+    rajat: { pohjoinen: -24.6533, etela: -24.6709, lansi: 25.9056, ita: 25.9383 },
+  },
+  harare: {
+    rajat: { pohjoinen: -17.7949, etela: -17.8419, lansi: 31.0321, ita: 31.06 },
+  },
+  juba: {
+    rajat: { pohjoinen: 4.8506, etela: 4.8161, lansi: 31.5779, ita: 31.6227 },
+  },
+  kampala: {
+    rajat: { pohjoinen: 0.3432, etela: 0.2923, lansi: 32.5439, ita: 32.5973 },
+  },
+  khartum: {
+    rajat: { pohjoinen: 15.6188, etela: 15.5917, lansi: 32.5011, ita: 32.5488 },
+  },
+  kigali: {
+    rajat: { pohjoinen: -1.9261, etela: -1.9619, lansi: 30.0443, ita: 30.1028 },
+  },
+  kinshasa: {
+    rajat: { pohjoinen: -4.2933, etela: -4.3456, lansi: 15.2724, ita: 15.3229 },
+  },
+  libreville: {
+    rajat: { pohjoinen: 0.402, etela: 0.3879, lansi: 9.4389, ita: 9.4559 },
+    meri: true,
+  },
+  lilongwe: {
+    rajat: { pohjoinen: -13.9359, etela: -13.9907, lansi: 33.7452, ita: 33.7971 },
+  },
+  lome: {
+    rajat: { pohjoinen: 6.1338, etela: 6.1162, lansi: 1.2089, ita: 1.2306 },
+    meri: true,
+  },
+  luanda: {
+    rajat: { pohjoinen: -8.8049, etela: -8.8284, lansi: 13.2153, ita: 13.2392 },
+    meri: true,
+  },
+  lusaka: {
+    rajat: { pohjoinen: -15.4072, etela: -15.4346, lansi: 28.2743, ita: 28.3226 },
+  },
+  maputo: {
+    rajat: { pohjoinen: -25.9627, etela: -25.988, lansi: 32.5498, ita: 32.5975 },
+    meri: true,
+  },
+  maseru: {
+    rajat: { pohjoinen: -29.3079, etela: -29.3271, lansi: 27.4734, ita: 27.5064 },
+  },
+  mogadishu: {
+    rajat: { pohjoinen: 2.0439, etela: 2.0283, lansi: 45.3271, ita: 45.3486 },
+    meri: true,
+  },
+  monrovia: {
+    rajat: { pohjoinen: 6.3232, etela: 6.2945, lansi: -10.8168, ita: -10.795 },
+    meri: true,
+  },
+  ndjamena: {
+    rajat: { pohjoinen: 12.1265, etela: 12.0935, lansi: 15.0296, ita: 15.0597 },
+  },
+  niamey: {
+    rajat: { pohjoinen: 13.5322, etela: 13.4978, lansi: 2.0975, ita: 2.1391 },
+  },
+  nouakchott: {
+    rajat: { pohjoinen: 18.1109, etela: 18.0681, lansi: -15.9892, ita: -15.9637 },
+    meri: true,
+  },
+  ouagadougou: {
+    rajat: { pohjoinen: 12.3767, etela: 12.3563, lansi: -1.5324, ita: -1.5136 },
+  },
+  portlouis: {
+    rajat: { pohjoinen: -20.1555, etela: -20.1733, lansi: 57.4941, ita: 57.5134 },
+    meri: true,
+  },
+  portonovo: {
+    rajat: { pohjoinen: 6.4788, etela: 6.4655, lansi: 2.6135, ita: 2.6313 },
+    meri: true,
+  },
+  praia: {
+    rajat: { pohjoinen: 14.9247, etela: 14.8986, lansi: -23.5208, ita: -23.504 },
     meri: true,
   },
   rabat: {
     rajat: { pohjoinen: 34.0371, etela: 33.992, lansi: -6.8465, ita: -6.8157 },
     meri: true,
   },
+  saotome: {
+    rajat: { pohjoinen: 0.349, etela: 0.3309, lansi: 6.7239, ita: 6.7426 },
+    meri: true,
+  },
   tunis: {
     rajat: { pohjoinen: 36.8138, etela: 36.7899, lansi: 10.1638, ita: 10.1891 },
     meri: true,
   },
-  khartum: {
-    rajat: { pohjoinen: 15.6188, etela: 15.5917, lansi: 32.5011, ita: 32.5488 },
+  victoria: {
+    rajat: { pohjoinen: -4.6183, etela: -4.6399, lansi: 55.4451, ita: 55.475 },
+    meri: true,
+  },
+  windhoek: {
+    rajat: { pohjoinen: -22.5562, etela: -22.5785, lansi: 17.0776, ita: 17.0957 },
+  },
+  yaounde: {
+    rajat: { pohjoinen: 3.8809, etela: 3.8329, lansi: 11.4801, ita: 11.5284 },
   },
   // AFRIKAN PÄÄKAUPUNKIPISTEET LOPPU
 };
