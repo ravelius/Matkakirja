@@ -6099,7 +6099,8 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 45.8186, etela: 45.8045, lansi: 15.9691, ita: 15.9836 },
   },
   andorralavella: {
-    rajat: { pohjoinen: 42.5144, etela: 42.4915, lansi: 1.4939, ita: 1.5405 },
+    // Etelä- ja länsireunaa laskettu (Karttaseppä 11.10.): Santa Coloma osui mittakaavajanan päälle.
+    rajat: { pohjoinen: 42.5144, etela: 42.4891, lansi: 1.4906, ita: 1.5405 },
   },
   bern: {
     rajat: { pohjoinen: 46.9508, etela: 46.9438, lansi: 7.4403, ita: 7.4636 },
