@@ -53,7 +53,7 @@ Sama kokonaisuus kuin pelin vakiokaupungilla (187/266 kaupungilla on täsmällee
 | `kaupunkilehti` | kansi + 1 teemasivu | kansi: johdanto, 3 kansikuvaa, 4 nostoa, matkailijalle-opas (5 jaksoa); teemasivu: johdanto, minitehtävä, 4 nostoa; nosto 440–660 mrk | `KULTTUURI_KATEGORIAT[id]` → `kaupunkilehdet` |
 | `kohdekartta` | nähtävyyskartan kohteet | esittely ≤ 400 mrk, rajaus, 6–8 kohdetta (rakennus, aukio, luonto) | `KAUPUNKIKARTAT[id]` (Mac piirtää kartan) → `kohdekartat` |
 | `nahtavyydet` | juttu jokaiselle kohteelle | 2–3 kappaletta, 1–2 kuvaa | `NAHTAVYYSJUTUT[id]` → `nahtavyydet` |
-| `saatiedot` | kuukausinormaalit | keskilampo[12], sade[12], luonnehdinta | `SAATIEDOT[id]` → `saatiedot` |
+| `saatiedot` | sääaseman normaalit (`saa`-komento) | keskilampo, ylin, alin, sade [12], lahde { nimi, kausi }, luonnehdinta | `SAATIEDOT[id]` → `saatiedot` |
 | `ehdotukset` | lentoasema ja huomiot Päätoimittajalle | — | ei peliin |
 
 Kuvia noin 22 per kaupunki (kansi 3, nostot 8, matkailijalle 1, oppaan jaksot 3–5, kohteet 6–8,
@@ -73,7 +73,7 @@ Ennen–nyt-pari tehdään vain, jos isoisän aikainen PD-vedos ≥ 1200 px löy
 3. **Ristiriitaiset vuodet ja luvut:** kirjoita "noin" tai "lähteiden mukaan" ilman tarkkaa väliä, tai
    kerro molemmat; ristiriita ja ratkaisu kirjataan faktapohjaan. Älä valitse yhtä lukua hiljaa.
 4. **Asukasluku** vain `konteksti.json` → `kevytSisalto.asukkaat` (Sisältökirjurin tarkistama, vuosi
-   mukana) tai lähteestä vuosineen.
+   mukana) tai lähteestä vuosineen. Väestö- ja pinta-alaluvun **laajuus nimetään aina** (luku 13).
 5. **1873-kulma:** saa kertoa, mitä paikalla oli tai ei ollut isoisän matkavuonna 1873 ("isoisän
    matkavuonna 1873 …"). Jos kaupunkia ei ollut, sano se suoraan (Nairobi-malli). EI keksitä isoisän
    tekemisiä, merkintöjä, lainauksia eikä reittiä. Kartta elää nykyajassa: nykyiset kohteet ovat sallittuja.
@@ -89,7 +89,8 @@ Ennen–nyt-pari tehdään vain, jos isoisän aikainen PD-vedos ≥ 1200 px löy
    pelikaupunkien lehtien nostot ja lähinostojen tekstit. Sama tarina toisella kuvalla on toisto.
 10. **Kieli:** hyvä yleiskieli, ei huutomerkkejä, ei metatekstiä ("tässä jutussa", "Wikipedian mukaan");
     "lähteen mukaan" saa olla leipätekstissä. Vieraskieliset nimet kirjoitusasussaan, suomennos mukaan.
-11. **Kuvateksti kertoo kohteesta** (mitä se on, historia, merkitys), ei kuvan visuaalisesta sisällöstä;
+11. **Kuvateksti kertoo kohteesta** (mitä se on, historia, merkitys), ei kuvan visuaalisesta sisällöstä,
+    ja kohde on se, joka kuvassa näkyy (luku 13);
     `lyhyt` ≤ 100 mrk, yksi virke, päättyy pisteeseen (pakollinen, kun `selite` > 100 mrk); `selite`
     1–2 virkettä. Kuvateksteissä ei lähdeviittauksia lukijalle.
 12. **Minitehtävä** (teemasivu): vastaus löytyy saman sivun nostoista; ei toista kaupungin kysymyksiä;
@@ -121,13 +122,17 @@ Ennen–nyt-pari tehdään vain, jos isoisän aikainen PD-vedos ≥ 1200 px löy
 ```sh
 git fetch origin paakaupungit-<erä>-pilvi && git checkout paakaupungit-<erä>-pilvi
 node paakaupungit-pilvi/tyokalu.mjs konteksti <erä> <id> <id> ...      # konteksti.json + saa-syote.json
-node tools/hae-saaperusdata.mjs --tiedosto paakaupungit-pilvi/<erä>/saa-syote.json > paakaupungit-pilvi/<erä>/saa.txt
-node paakaupungit-pilvi/tyokalu.mjs saa <erä>                           # <id>/saa.json
+node paakaupungit-pilvi/tyokalu.mjs saa <erä>                           # <id>/saa.json (sääaseman normaalit)
 node paakaupungit-pilvi/tyokalu.mjs malli dakar > /tmp/malli-dakar.json # muotomalli agenteille
 ```
 
-Jos Open-Meteo vastaa 429 tai ei vastaa: säärivi jää pois (`saatiedot: null`, Samarkand-malli), syy
-TILANNE.md:hen, ja oppaan sääjakso kirjoitetaan Wikipedian ilmasto-osion varaan sen ääneen sanoen.
+`saa` hakee jokaiselle kaupungille sääaseman ilmastonormaalit en-Wikipedian ilmastotaulukosta (kansallisen
+sääpalvelun, WMO:n tai NOAA:n luvut; normaalikausi taulukon otsikosta) ja kirjoittaa `<id>/saa.json`:n
+(luvut, `lahde`, `tausta`). EI Open-Meteoa eikä `tools/hae-saaperusdata.mjs`:ää (luku 13). Jos työkalu
+tulostaa `EI SÄÄRIVIÄ <id>: syy` (ei taulukkoa, otsikossa ei normaalikautta tai taulukko on ristiriitainen),
+katso syy: oikean taulukon voi nimetä `saa-syote.json`:iin kentillä `"artikkeli"` (en-Wikipedian otsikko,
+esim. "Climate of Albania") ja `"taulukko"` (otsikon osa) ja ajaa `saa` uudelleen; muuten `saatiedot: null`,
+syy TILANNE.md:hen, eikä oppaan sääjaksossa ole lukuja.
 Luo `paakaupungit-pilvi/<erä>/TILANNE.md` (luku 10) ja tee commit + push.
 
 ### 6.2 Kaupunki kerrallaan
@@ -196,7 +201,8 @@ kenttiä kuin alla. Tekstit ovat JSON-merkkijonoja (kappaleraja `\n\n`, ei `+`-j
                 { "nimi": "…", "tyyppi": "aukio", "lat": 0.0, "lon": 0.0 } ] },
  "nahtavyydet": { "<kohteen nimi>": { "aika": "<esim. 1880–1902 tai 1200-luku>", "teksti": "<2–3 kappaletta>",
    "kuvat": [ { "tiedosto": "…", "lyhyt": "…", "selite": "…", "lahde": "…" } ], "lahde": "Wikipedia" } },
- "saatiedot": { "lat": 0.0, "lon": 0.0, "keskilampo": [12 lukua], "sade": [12 lukua], "luonnehdinta": "<2–3 lausetta näistä luvuista>" },
+ "saatiedot": { "lat": 0.0, "lon": 0.0, "keskilampo": [12 lukua], "ylin": [12], "alin": [12], "sade": [12 lukua],
+   "lahde": { "nimi": "en-Wikipedia, ilmastotaulukko", "kausi": "1991–2020" }, "luonnehdinta": "<2–3 lausetta näistä luvuista>" },
  "ehdotukset": { "lentoasema": "<Nimi (IATA)> tai null", "huomiot": ["<Päätoimittajalle, esim. kevyen pisteen kuvauksen virhe lähteineen>"] }
 }
 ```
@@ -219,7 +225,7 @@ Tarkennukset:
   vakioaihe; `nimi` saa olla oma ("Puisto kaupungin rajalla"). Teemasivulla ei `otsikko`-kenttää.
   `ennenNyt` vain jos pari löytyy, muuten kenttä pois. Oppaassa 5 jaksoa, joista enintään 2 kuvatonta;
   suositusjärjestys: Perille ja liikkeelle · nähtävää (1–2 jaksoa) · Mitä täällä syödään · Milloin
-  kannattaa tulla (sää `saatiedot`-luvuista tai Wikipedian ilmasto-osiosta, ja se sanotaan).
+  kannattaa tulla (ilmastoluvut vain `saatiedot`-luvuista, pyöristettyinä; lähdettä ei mainita tekstissä).
   `parasta` 5 riviä (`tahdet` 1–3), `hyvaTietaa` 3–4 riviä (rehellisiä varauksia ilman pelottelua).
 - `kohdekartta`: kohteet historiallisesta ytimestä (ei hallinnollisesta pisteestä); 6–8 kohdetta,
   pienissä pääkaupungeissa 1–5 perustellen (RAPORTTI.md), enintään 15. Vain paikat: rakennus (oletus,
@@ -229,8 +235,14 @@ Tarkennukset:
   `piirtoRajat`ia eikä `lahde`-kenttää kirjoiteta (Mac).
 - `nahtavyydet`: avain täsmälleen kohteen `nimi`. Teksti kertoo mitä kohde on, sen historian ja
   miltä se näytti (tai ettei sitä vielä ollut) 1873; 700–1400 mrk. `kuvat` 1–2.
-- `saatiedot`: lat/lon/keskilampo/sade sellaisenaan `<id>/saa.json`:sta; `luonnehdinta` kirjoitetaan
-  vain näistä luvuista (2–3 lausetta). Ilman säädataa `null`.
+- `saatiedot`: `<id>/saa.json` sellaisenaan ILMAN `tausta`-kenttää (lat, lon, keskilampo, ylin, alin, sade,
+  lahde); `tausta` (artikkeli, taulukko, lähteet, luettu) kirjataan faktapohjaan. `luonnehdinta` kirjoitetaan
+  vain näistä luvuista (2–3 lausetta). Jokainen ilmastoluku missä tahansa tekstissä (opas, kappale,
+  tiedot, kuvatekstit) tulee näistä luvuista; ilmastolauseessa ei mainita lähdettä ("Wikipedian mukaan",
+  "mallinnettujen normaalien mukaan", "lähteen mukaan"). Jos taulukossa ei ole vuorokauden keskilämpöä
+  (`tausta.keskilampo` = "(ylin + alin) / 2"), tekstissä käytetään ylin- ja alin-lukuja. Ilmastosuperlatiivi
+  ("Euroopan sateisin pääkaupunki") vain kahden riippumattoman lähteen tukemana, ja silloin ilman lähdemainintaa
+  (poikkeus luvun 4 kohtaan 2). Ilman säädataa `null`.
 
 ## 8. Agenttien kehotteet
 
@@ -249,7 +261,7 @@ tmp-kansioon), ja niistä luetaan vain tarvittavat kohdat (`grep -n`, `sed -n`).
 > kohdat. Lue kaupungin pääartikkeli, historia-artikkeli jos on, ja jokaisen ehdotetun kohteen artikkeli.
 > Kirjoita paakaupungit-pilvi/<erä>/<id>/faktapohja.md: 0) luetut lähteet (otsikko, kieli, hakupäivä)
 > ja 1873-kehys lähteineen (oliko kaupunkia, mitä paikalla oli); 1) perusfaktat (sijainti, synty, nimi,
-> asema; asukasluku vain konteksti.json:sta); 2) kansi: johdantoehdotus ja 4 nostoaihetta, kustakin 4–8
+> asema; asukasluku vain konteksti.json:sta, laajuus nimettynä); 2) kansi: johdantoehdotus ja 4 nostoaihetta, kustakin 4–8
 > faktaa lähteineen ja wiki-otsikko; 3) teemasivu: vakioaihe, nimi, johdanto ja 4 nostoaihetta faktoineen
 > sekä minitehtävän aihe; 4) opas: 5 jaksoa faktoineen, parasta 5, hyvä tietää 3–4, lentoasema (nimi,
 > IATA) ja matkustusturvallisuus, jos poikkeava; 5) kohdekartta: 6–8 kohdetta (rakennus, aukio, luonto)
@@ -281,8 +293,9 @@ tmp-kansioon), ja niistä luetaan vain tarvittavat kohdat (`grep -n`, `sed -n`).
 > paakaupungit-pilvi/PILVIOHJE-paakaupungit.md luvut 3, 4 ja 7; docs/aasia-tyoaineisto/lehtityo-resepti.md
 > kohta Mitat; /tmp/malli-dakar.json (vain rakenne); faktapohja.md, kuvat.md ja <id>/saa.json (jos on).
 > Kirjoita paakaupungit-pilvi/<erä>/<id>/sisalto.json luvun 7 muodossa. Vain faktapohjan faktoja; kuvat
-> vain kuvat.md:n valituista (tiedosto ja lähderivi sanatarkasti). Kuvatekstit kertovat kohteesta, eivät
-> kuvasta. Aja `node paakaupungit-pilvi/tyokalu.mjs tarkista <erä> <id>` ja korjaa, kunnes virheitä on 0;
+> vain kuvat.md:n valituista (tiedosto ja lähderivi sanatarkasti). Kuvatekstit kertovat kuvassa näkyvästä
+> kohteesta, eivät kuvan visuaalisesta sisällöstä (kuvat.md:n "mitä kuvassa näkyy"; epäselvässä esikatselu).
+> Säärivi ja ilmastoluvut vain <id>/saa.json:sta (luvut 7 ja 13). Aja `node paakaupungit-pilvi/tyokalu.mjs tarkista <erä> <id>` ja korjaa, kunnes virheitä on 0;
 > korjaa varoitukset, kun se on järkevää. Vastaa: virheet, varoitukset ja korjaamatta jätetyt varoitukset
 > syineen (lyhyesti).
 
@@ -294,7 +307,9 @@ tmp-kansioon), ja niistä luetaan vain tarvittavat kohdat (`grep -n`, `sed -n`).
 > paakaupungit-pilvi/tyokalu.mjs lahde en|fi "<otsikko>"`; älä luota faktapohjaan): jokainen vuosiluku,
 > luku, nimi, superlatiivi ja syy-yhteys; kaikki kysymykset, tiedot ja minitehtävä (vastaus löytyy saman
 > sivun nostoista, ei toista kysymyksiä, fakta ei ole nostovirke sanasta sanaan); 1873-väitteet;
-> nykypolitiikka ja sota; kuvateksti vastaa kuvat.md:n "mitä kuvassa näkyy" -kuvausta ja kertoo kohteesta;
+> nykypolitiikka ja sota; väestö- ja pinta-alaluvun laajuus (kaupunki, kunta tai seurakunta vai metropolialue)
+> on nimetty ja vastaa lähdettä; ilmastoluvut ovat saatiedot-lukuja; kuvateksti vastaa kuvaa: avaa jokaisen
+> kuvan esikatselu itse (`tyokalu.mjs esikatselu`) ja varmista, että kuvateksti kertoo kuvassa näkyvästä kohteesta;
 > kohteen koordinaatti osuu kohteeseen; kysymysten vihjeet eivät paljasta vastausta eikä oikea ole
 > pisin. Kirjoita paakaupungit-pilvi/<erä>/<id>/tarkistus.md: taulukko JSON-polku | väite | lähde
 > (artikkeli + osio) | OK / VÄÄRIN / EPÄVARMA | tarkka korvaava teksti. Älä muokkaa sisalto.json:ia.
@@ -329,7 +344,10 @@ tmp-kansioon), ja niistä luetaan vain tarvittavat kohdat (`grep -n`, `sed -n`).
 - Kohdekartta: esittely, rajat, 1–15 kohdetta (varoitus alle 6), tyyppi rakennus/aukio/luonto, kohde
   rajauksen sisällä ja alle 12 km pisteestä; jokaisella kohteella juttu ja jokaisella jutulla kohde;
   juttu ≥ 400 mrk, 1–3 kuvaa, lahde "Wikipedia".
-- Säätiedot: 12 + 12 lukua (varoitus, jos puuttuu).
+- Säätiedot: 12 + 12 lukua (varoitus, jos puuttuu); `lahde { nimi, kausi }` pakollinen ja luvut samat kuin
+  `<id>/saa.json`:ssa (virhe); ei `tausta`-kenttää. Ilmastoluvut luonnehdinnassa, oppaassa, kappaleessa ja
+  tiedoissa verrataan saatiedot-lukuihin (varoitus); lähdemaininta ilmastolauseessa ja "Wikipedia" lukijan
+  tekstissä ovat virheitä.
 - Tekstit: paikkamerkit (TÄYTÄ, TODO), ä/ö puuttuu pitkästä tekstistä (ascii-suomi), pyöreät luvut
   (≥ 4 loppunollaa, "noin miljoona") varoituksena, huutomerkit.
 - `--verkko`: Commons-tiedosto on olemassa, leveys ≥ 1200, lisenssi kelpaa ja vastaa lähderiviä,
@@ -388,12 +406,36 @@ jatkosessio haaraan `-b` (luku 10). Pistokoe ennen jatkoa: 3 nostoa ja 3 kuvaa p
    faktapohjan lähderivit lohkokommenteiksi. ÄLÄ käytä `tools/kirjoita-kategoriat.mjs`:ää: se sarjallistaa
    koko tiedoston uudelleen ja pudottaa kansikuvat, matkailijalle- ja tehtävä-kentät kaikilta kaupungeilta.
 3. Laudan rivi (x, y, la/lx/ly, airport), reitit, laattamäärät, cityCountry; kohdekartan piirto
-   (`tools/piirra-kaupunkikartta.mjs`, `tools/tarkista-karttapisteet.mjs`); säärivin ylin/alin
-   (`tools/hae-saanormaalit.mjs --vain <id>`).
+   (`tools/piirra-kaupunkikartta.mjs`, `tools/tarkista-karttapisteet.mjs`); säärivi sellaisenaan lahde-kenttineen
+   (ylin/alin ovat samasta ilmastotaulukosta; EI `tools/hae-saanormaalit.mjs`:ää, joka on Open-Meteo-otos)
+   ja `tausta`-tiedoista lohkokommentti (`Lähde: en-Wikipedia "<artikkeli>", ilmastotaulukko "<taulukko>", luettu <pvm>`).
 4. Päätoimittajan osuudet: isoisän tieto, saapumisteksti tai Euroopan fokusvirta (tai KAARETTOMAT-lista
    omistajan linjauksella), kulttuurivisa; maille ilman pelikaupunkia radio, paikallisaarteet,
    kaupunkimusiikin alue ja uutislähde; äänet; Pulun Kysy-vastaukset integroinnin jälkeen.
 5. `npm test` ja tavallinen julkaisukaava.
+
+## 13. Pistokokeen säännöt (Päätoimittaja 11.10.2026, e01–e02-pistokokeesta)
+
+Sisältökirjurin pistokoe (Minsk, Podgorica, Monaco, Andorra la Vella): 35 % väitteistä epätarkkoja, sääluvut
+väärin kaikissa kolmessa tarkistetussa lehdessä. Nämä kolme sääntöä ovat SITOVIA kaikissa vaiheissa (A–E).
+
+1. **Laajuus nimetään.** Väestö- ja pinta-alaluvun yhteydessä sanotaan aina, mitä aluetta luku koskee:
+   kaupunki (kunta, seurakunta, hallintoalue) vai taajama tai metropolialue. Esimerkki: Andorra la Vellan
+   väkiluku on seurakunnan (parròquia), ei pelkän kaupungin. Jos lähteet antavat eri laajuuksia, valitse
+   yksi ja nimeä se (tai kerro molemmat); faktapohjaan kirjataan luvun laajuus ja vuosi.
+2. **Kuvateksti tarkistetaan kuvaa vasten.** Kirjoittaja (C) ja tarkistaja (D) avaavat jokaisen kuvan
+   esikatselun (`tyokalu.mjs esikatselu`) ja varmistavat, että kuvateksti kertoo kuvassa näkyvästä
+   kohteesta: ei viereisestä rakennuksesta, tapahtumasta tai teoksesta, jota kuvassa ei ole (pistokoe:
+   neljästä lehdestä jokaisessa kuvateksti, joka kertoi muusta kuin kuvasta, esim. Sant Esteven sisäkuva
+   Halévyn oopperan nostossa).
+3. **Säädata vain korjatulla työkalulla.** Säärivi tehdään vain komennolla `tyokalu.mjs saa <erä>`
+   (sääaseman normaalit en-Wikipedian ilmastotaulukosta, `lahde.kausi` taulukon otsikosta). EI Open-Meteoa,
+   EI `tools/hae-saaperusdata.mjs`:ää (ERA5-ruutu ja kolme otosvuotta antoivat vääriä lukuja: Podgorican
+   tammikuu 2,7 astetta, oikea noin 6–7; Vaduzin vuosisade 1 724 mm, oikea 940) eikä käsin kopioituja
+   lukuja. Ilmastoluvut teksteissä vain `saatiedot`-luvuista, eikä ilmastolauseessa mainita lähdettä.
+   `tarkista` vertaa luvut `saa.json`:iin ja tekstien ilmastoluvut saatiedot-lukuihin.
+
+Lisäksi tiedoston lopun LISÄSÄÄNTÖ (Kypros, kaksi riippumatonta lähdettä tarkoille luvuille) on voimassa.
 
 ## Liite A: tyokalu.mjs (sanatarkasti sama kuin haarassa)
 
@@ -427,26 +469,31 @@ Haarassa tiedosto on valmiina. Jos se puuttuu, kirjoita se tästä sanatarkasti 
  *   esikatselu lataa 900 px esikatselun ja tulostaa polun (avaa Read-työkalulla).
  *
  *   konteksti  kirjoittaa <erä>/<id>/konteksti.json (pelin nykyinen aineisto,
- *              jota EI saa toistaa) ja <erä>/saa-syote.json
- *              (tools/hae-saaperusdata.mjs --tiedosto).
+ *              jota EI saa toistaa) ja <erä>/saa-syote.json (id, lat, lon, wikidata).
  *   malli      tulostaa olemassa olevan laudan kaupungin samassa muodossa kuin
  *              sisalto.json (esim. dakar, fes) — muotomalli kirjoittajalle.
- *   saa        jäsentää <erä>/saa.txt:n (hae-saaperusdata.mjs:n tuloste)
- *              tiedostoiksi <erä>/<id>/saa.json.
+ *   saa        hakee jokaiselle saa-syote.json:n kaupungille sääaseman
+ *              ilmastonormaalit en-Wikipedian ilmastotaulukosta (Weather box:
+ *              sääpalvelun, WMO:n tai NOAA:n normaalit, kausi taulukon otsikosta)
+ *              ja kirjoittaa <erä>/<id>/saa.json (luvut + lahde + tausta).
+ *              EI Open-Meteoa (11.10.2026: ERA5-malliruutu ja kolme otosvuotta
+ *              antoivat vääriä lukuja). Ilman kelvollista taulukkoa saa.json:ia
+ *              ei tehdä (saatiedot: null). Valinnaiset saa-syote.json-kentät:
+ *              "artikkeli" (en-Wikipedian otsikko) ja "taulukko" (otsikon osa).
  *   tarkista   <erä>/<id>/sisalto.json: VIRHE = korjattava (exit 1),
  *              VAROITUS = luetaan ja perustellaan RAPORTTI.md:ssä.
  *              --verkko: Commons (olemassa, leveys >= 1200, lisenssi, tekijä)
  *              ja wiki-otsikot (fi tai en). --malli: ohittaa pääkaupunkiehdot.
  *              --lyhyt: vain virheet ja määrät (pääsessiolle).
  */
-import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, unlinkSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const [komento, ...argit] = process.argv.slice(2);
-const VERKKO = argit.includes('--verkko') || ['konteksti', 'lahde', 'haku', 'esikatselu'].includes(komento);
+const VERKKO = argit.includes('--verkko') || ['konteksti', 'saa', 'lahde', 'haku', 'esikatselu'].includes(komento);
 // Konttiympäristössä Noden fetch tarvitsee NODE_USE_ENV_PROXY=1 (sama kuin tools/hae-saaperusdata.mjs).
 if (VERKKO && !process.env.NODE_USE_ENV_PROXY && (process.env.HTTPS_PROXY || process.env.https_proxy)) {
   const ajo = spawnSync(process.execPath, process.argv.slice(1), {
@@ -572,7 +619,7 @@ async function konteksti(era, idt) {
     };
     mkdirSync(join(TYOKANSIO, era, id), { recursive: true });
     writeFileSync(join(TYOKANSIO, era, id, 'konteksti.json'), `${JSON.stringify(k, null, 1)}\n`);
-    saa.push({ id, lat: Math.round(p.lat * 100) / 100, lon: Math.round(p.lon * 100) / 100 });
+    saa.push({ id, lat: Math.round(p.lat * 100) / 100, lon: Math.round(p.lon * 100) / 100, wikidata: p.wikidata ?? null });
     console.log(`${id}: konteksti.json (lähikaupunkeja ${lahella.length}, lähinostoja ${lahiNostot.length}, wiki "${wikiEhdotus}")`);
   }
   writeFileSync(join(TYOKANSIO, era, 'saa-syote.json'), `${JSON.stringify(saa, null, 1)}\n`);
@@ -610,22 +657,166 @@ async function malli(id) {
 
 /* ------------------------------------------------------------ saa */
 
-function saaKomento(era) {
-  const polku = join(TYOKANSIO, era, 'saa.txt');
-  if (!existsSync(polku)) throw new Error(`${era}/saa.txt puuttuu (aja tools/hae-saaperusdata.mjs ensin)`);
-  let n = 0;
-  for (const rivi of readFileSync(polku, 'utf8').split('\n')) {
-    const m = rivi.match(/^\s*([a-z0-9]+): \{ lat: (-?[\d.]+), lon: (-?[\d.]+), keskilampo: \[([^\]]*)\], sade: \[([^\]]*)\] \},?\s*$/);
-    if (!m) continue;
-    const luvut = (s) => s.split(',').map((x) => Number(x.trim()));
-    const kansio = join(TYOKANSIO, era, m[1]);
-    mkdirSync(kansio, { recursive: true });
-    writeFileSync(join(kansio, 'saa.json'), `${JSON.stringify({
-      lat: Number(m[2]), lon: Number(m[3]), keskilampo: luvut(m[4]), sade: luvut(m[5]),
-    })}\n`);
-    n += 1;
+// Säärivi = kaupungin sääaseman ilmastonormaalit en-Wikipedian ilmastotaulukosta (Weather box), ei
+// mallidataa. Vanha tapa (tools/hae-saaperusdata.mjs: Open-Meteon ERA5-ruutu ~25 km, vain otosvuodet
+// 1992/2006/2020) antoi vääriä "normaaleja": yksittäinen poikkeuskuukausi ratkaisi (Podgorican
+// lokakuu 360 mm, Andorran helmikuu 13 mm) ja vuorten tai meren ruutu vinoutti (Vaduzin ja
+// Reykjavíkin vuosisade lähes kaksinkertainen, Podgorican ja Monacon talvi 2–3 astetta liian kylmä).
+const SAA_LAHDE = 'en-Wikipedia, ilmastotaulukko';
+const SAA_KENTAT = ['lat', 'lon', 'keskilampo', 'ylin', 'alin', 'sade', 'lahde', 'luonnehdinta'];
+const htmlTeksti = (s) => String(s).replace(/<style[\s\S]*?<\/style>/g, '').replace(/<sup[\s\S]*?<\/sup>/g, '')
+  .replace(/<br\s*\/?>/g, ' ').replace(/<[^>]+>/g, '').replace(/&#160;|&nbsp;/g, ' ').replace(/&amp;/g, '&')
+  .replace(/&#8211;|&ndash;/g, '–').replace(/\s+/g, ' ').trim();
+const soluLuku = (td) => {
+  const t = htmlTeksti(td.split(/<br\s*\/?>/)[0]).replace(/[−–]/g, '-').replace(/,/g, '');
+  const m = t.match(/^-?\d+(?:\.\d+)?/);
+  return m ? Number(m[0]) : null;
+};
+
+// Kaikki sivun ilmastotaulukot: otsikko ("Climate data for …"), rivit { otsikko: [12 kk + vuosi] }, lähderivit.
+function ilmastotaulukot(html) {
+  const ulos = [];
+  for (let i = html.indexOf('Climate data for'); i >= 0; i = html.indexOf('Climate data for', i + 1)) {
+    const alku = html.lastIndexOf('<table', i);
+    const loppu = html.indexOf('</table>', i);
+    if (alku < 0 || loppu < 0) break;
+    const rivit = {};
+    const lahteet = [];
+    let otsikko = null;
+    for (const m of html.slice(alku, loppu).matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/g)) {
+      const th = m[1].match(/<th[^>]*>([\s\S]*?)<\/th>/);
+      const tdt = [...m[1].matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map((x) => x[1]);
+      if (th && /Climate data for/.test(th[1])) otsikko = htmlTeksti(th[1]).replace(/^[\s\S]*?(Climate data for)/, '$1');
+      else if (th && tdt.length >= 12) rivit[htmlTeksti(th[1])] = tdt.map(soluLuku);
+      else if (!th && tdt.length === 1) lahteet.push(htmlTeksti(tdt[0]));
+    }
+    if (otsikko) ulos.push({ otsikko, rivit, lahteet: lahteet.join(' | ') });
+    i = loppu;
   }
-  console.log(`${n} säärivia → ${era}/<id>/saa.json`);
+  return ulos;
+}
+
+// Yksi taulukko säärivisi: { kausi, keskilampo, ylin, alin, sade, menetelmä } tai { syy }.
+function taulukostaSaarivi(t) {
+  let kausi = null;
+  for (const m of t.otsikko.matchAll(/(\d{4})\s*[–-]\s*(\d{4})/g)) {
+    if (/(extreme|record)s?\W*$/i.test(t.otsikko.slice(Math.max(0, m.index - 14), m.index))) continue;
+    kausi = `${m[1]}–${m[2]}`;
+    break;
+  }
+  if (!kausi) return { syy: 'otsikossa ei normaalikautta (vuosiväliä ei arvata)' };
+  const rivi = (re) => Object.entries(t.rivit).find(([nimi, arvot]) => re.test(nimi)
+    && arvot.slice(0, 12).every((x) => Number.isFinite(x)));
+  const lampo = (re) => {
+    const r = rivi(re);
+    if (!r) return null;
+    const F = /°F\s*\(°C\)/.test(r[0]);
+    return { nimi: r[0], arvot: r[1].slice(0, 12).map((x) => (F ? ((x - 32) * 5) / 9 : x)) };
+  };
+  const ka = lampo(/^Daily mean °[CF]/i);
+  const yl = lampo(/^(Mean daily maximum|Average high) °[CF]/i);
+  const al = lampo(/^(Mean daily minimum|Average low) °[CF]/i);
+  const kymm = (x) => Math.round(x * 10);
+  let keskilampo = null;
+  let lampoTapa = null;
+  if (ka) { keskilampo = ka.arvot.map((x) => kymm(x) / 10); lampoTapa = ka.nimi; } else if (yl && al) {
+    keskilampo = yl.arvot.map((x, k) => Math.round((kymm(x) + kymm(al.arvot[k])) / 2) / 10);
+    lampoTapa = '(ylin + alin) / 2: taulukossa ei Daily mean -riviä';
+  }
+  if (!keskilampo) return { syy: 'ei keskilämpöä (Daily mean tai ylin + alin)' };
+  const sr = rivi(/^Average precipitation (mm|cm|inches)/i) ?? rivi(/^Average rainfall (mm|cm|inches)/i);
+  if (!sr) return { syy: 'ei sademäärää millimetreinä' };
+  const kerroin = /^Average \w+ inches/i.test(sr[0]) ? 25.4 : /^Average \w+ cm/i.test(sr[0]) ? 10 : 1;
+  const sade = sr[1].slice(0, 12).map((x) => Math.round(x * kerroin));
+  const vuosi = Number.isFinite(sr[1][12]) ? Math.round(sr[1][12] * kerroin) : null;
+  const summa = sade.reduce((a, b) => a + b, 0);
+  const huomiot = [];
+  // Ristiriitainen taulukko (esim. Tiranan lentoasema 11.10.2026: vuosi 1252, kuukaudet yhteensä 1152) hylätään:
+  // jompikumpi luku on väärin, eikä kumpaa tahansa saa valita hiljaa.
+  if (vuosi != null && Math.abs(vuosi - summa) > Math.max(5, 0.03 * vuosi)) return { syy: `vuosisarake ${vuosi} mm ≠ kuukausien summa ${summa} mm (taulukossa virhe)` };
+  if (keskilampo.some((x) => x < -40 || x > 45) || sade.some((x) => x < 0 || x > 1500)) return { syy: 'epäuskottavia lukuja (yksikkö?)' };
+  const [a, b] = kausi.split('–').map(Number);
+  if (b - a + 1 < 10) huomiot.push(`lyhyt kausi ${kausi}`);
+  if (/rainfall/i.test(sr[0])) huomiot.push('sade = vain vesisade (Average rainfall)');
+  const ulos = { kausi, keskilampo, sade, lampoTapa, sadeRivi: sr[0], vuosisade: summa, huomiot };
+  if (yl && al) {
+    ulos.ylin = yl.arvot.map((x) => Math.round(x));
+    ulos.alin = al.arvot.map((x) => Math.round(x));
+    if (keskilampo.some((x, k) => x > yl.arvot[k] + 0.05 || x < al.arvot[k] - 0.05)) huomiot.push('keskilämpö ei ole ylimmän ja alimman välissä');
+  }
+  return ulos;
+}
+
+const wikidataEnOtsikko = async (q) => {
+  const d = await haeJson(`https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&props=sitelinks|claims&sitefilter=enwiki&ids=${q}`);
+  const e = d.entities?.[q];
+  return { otsikko: e?.sitelinks?.enwiki?.title ?? null, maa: e?.claims?.P17?.[0]?.mainsnak?.datavalue?.value?.id ?? null };
+};
+
+async function saaKomento(era) {
+  if (!era) throw new Error('käyttö: saa <erä>');
+  const syote = JSON.parse(readFileSync(join(TYOKANSIO, era, 'saa-syote.json'), 'utf8'));
+  const luettu = new Date().toISOString().slice(0, 10);
+  let n = 0;
+  for (const p of syote) {
+    const kansio = join(TYOKANSIO, era, p.id);
+    const kontekstiPolku = join(kansio, 'konteksti.json');
+    const q = p.wikidata ?? (existsSync(kontekstiPolku) ? JSON.parse(readFileSync(kontekstiPolku, 'utf8')).wikidata : null);
+    // Ehdokasartikkelit: oma valinta → kaupungin en-artikkeli → maan en-artikkeli (kaupunkivaltiot).
+    const ehdokkaat = [];
+    let maa = null;
+    if (p.artikkeli) ehdokkaat.push(p.artikkeli);
+    if (q) {
+      const w = await wikidataEnOtsikko(q);
+      if (w.otsikko) ehdokkaat.push(w.otsikko);
+      maa = w.maa;
+    }
+    const syyt = [];
+    let valittu = null;
+    for (let i = 0; i <= ehdokkaat.length && !valittu; i += 1) {
+      if (i === ehdokkaat.length) {
+        if (!maa || p.artikkeli) break;
+        const m = (await wikidataEnOtsikko(maa)).otsikko;
+        maa = null;
+        if (!m || ehdokkaat.includes(m)) break;
+        ehdokkaat.push(m);
+      }
+      const otsikko = ehdokkaat[i];
+      const d = await haeJson('https://en.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=text|revid'
+        + `&redirects=1&page=${encodeURIComponent(otsikko)}`);
+      const taulut = ilmastotaulukot(d.parse?.text ?? '').filter((t) => !p.taulukko || t.otsikko.includes(p.taulukko));
+      if (!taulut.length) syyt.push(`${otsikko}: ei ilmastotaulukkoa${p.taulukko ? ` (rajaus "${p.taulukko}")` : ''}`);
+      for (const t of taulut) {
+        const r = taulukostaSaarivi(t);
+        if (r.syy) { syyt.push(`${otsikko}: "${t.otsikko}": ${r.syy}`); continue; }
+        valittu = { ...r, artikkeli: d.parse.title, revisio: d.parse.revid, taulukko: t.otsikko, lahteet: t.lahteet };
+        break;
+      }
+    }
+    const polku = join(kansio, 'saa.json');
+    if (!valittu) {
+      if (existsSync(polku)) unlinkSync(polku); // vanhan työkalun luvut eivät saa jäädä käyttöön
+      console.log(`EI SÄÄRIVIÄ ${p.id}: ${syyt.join(' · ') || 'ei Wikidata-tunnusta eikä artikkelia'}`
+        + ' → saatiedot: null ja syy TILANNE.md:hen (tai saa-syote.json: "artikkeli"/"taulukko")');
+      continue;
+    }
+    const v = valittu;
+    const rivi = {
+      lat: p.lat, lon: p.lon, keskilampo: v.keskilampo, ...(v.ylin ? { ylin: v.ylin, alin: v.alin } : {}), sade: v.sade,
+      lahde: { nimi: SAA_LAHDE, kausi: v.kausi },
+      tausta: {
+        artikkeli: v.artikkeli, revisio: v.revisio, taulukko: v.taulukko, lahteet: v.lahteet, keskilampo: v.lampoTapa,
+        sade: v.sadeRivi, vuosisade: v.vuosisade, luettu, huomiot: v.huomiot,
+      },
+    };
+    mkdirSync(kansio, { recursive: true });
+    writeFileSync(polku, `{\n${Object.entries(rivi).map(([k, x]) => ` ${JSON.stringify(k)}: ${JSON.stringify(x)}`).join(',\n')}\n}\n`);
+    n += 1;
+    const lt = v.keskilampo;
+    console.log(`${p.id}: ${v.taulukko} [${v.artikkeli}] → kausi ${v.kausi}, keskilämpö ${Math.min(...lt)}…${Math.max(...lt)} °C`
+      + `${/ylin/.test(v.lampoTapa) ? ' (ylin+alin)/2' : ''}, vuosisade ${v.vuosisade} mm${v.huomiot.length ? ` · HUOM: ${v.huomiot.join('; ')}` : ''}`);
+  }
+  console.log(`${n}/${syote.length} säärivia → ${era}/<id>/saa.json (saatiedot = saa.json ilman tausta-kenttää + luonnehdinta)`);
 }
 
 /* ------------------------------------------------------------ tarkista */
@@ -834,12 +1025,58 @@ async function tarkista(era, rajaus, { verkko, malliTila, lyhyt }) {
       if (!ju.aika) varoitus(`juttu ${nimi}: aika puuttuu`);
     }
 
-    // säätiedot
+    // säätiedot: luvut ja lahde sellaisenaan saa-komennon saa.json:sta (asemanormaalit), ei käsin eikä Open-Meteosta
     const sa = s.saatiedot;
+    const saaPolku = join(eraKansio, id, 'saa.json');
+    const saaJson = existsSync(saaPolku) ? JSON.parse(readFileSync(saaPolku, 'utf8')) : null;
     if (!sa) varoitus('saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)');
     else if (!Number.isFinite(sa.lat) || !Number.isFinite(sa.lon) || sa.keskilampo?.length !== 12 || sa.sade?.length !== 12
       || [...sa.keskilampo, ...sa.sade].some((x) => !Number.isFinite(x))) virhe('saatiedot { lat, lon, keskilampo[12], sade[12] }');
-    else if (!sa.luonnehdinta) varoitus('saatiedot.luonnehdinta puuttuu');
+    else {
+      if (!sa.luonnehdinta) varoitus('saatiedot.luonnehdinta puuttuu');
+      for (const kk2 of Object.keys(sa)) if (!SAA_KENTAT.includes(kk2)) virhe(`saatiedot.${kk2} ei kuulu peliin (tausta → faktapohja)`);
+      if (!malliTila) {
+        if (typeof sa.lahde?.nimi !== 'string' || !/^\d{4}–\d{4}$/.test(sa.lahde?.kausi ?? '')) {
+          virhe('saatiedot.lahde { nimi, kausi "1991–2020" } puuttuu: aja `tyokalu.mjs saa <erä>` ja kopioi saa.json (Open-Meteo-otos ei kelpaa)');
+        }
+        if (!saaJson) virhe('saatiedot ilman saa.json:ia (luvut vain saa-komennosta)');
+        else {
+          for (const kk2 of ['keskilampo', 'ylin', 'alin', 'sade', 'lahde']) {
+            if (JSON.stringify(sa[kk2] ?? null) !== JSON.stringify(saaJson[kk2] ?? null)) virhe(`saatiedot.${kk2} ≠ saa.json (kopioi sellaisenaan)`);
+          }
+        }
+      }
+      // Ilmastoluvut teksteissä (luonnehdinta, opas, tiedot): jokaisen aste- ja millimetriluvun on vastattava
+      // saatiedot-lukuja (kuukausiarvo, ylin/alin tai vuosisumma), eikä ilmastolauseessa mainita lähdettä.
+      const asteet = [...sa.keskilampo, ...(sa.ylin ?? []), ...(sa.alin ?? []), sa.keskilampo.reduce((x, y) => x + y, 0) / 12];
+      const vuosisade = sa.sade.reduce((x, y) => x + y, 0);
+      const luku = (t) => Number(t.replace(/[\s ]/g, '').replace(',', '.').replace(/[−–]/, '-'));
+      const sopiiAste = (v, t) => asteet.some((x) => Math.abs(x - v) <= (/,/.test(t) ? 0.15 : 1.05));
+      const sopiiSade = (v) => sa.sade.some((x) => Math.abs(x - v) <= Math.max(2, 0.05 * x)) || Math.abs(vuosisade - v) <= Math.max(10, 0.03 * vuosisade);
+      const ilmastoTekstit = [['saatiedot.luonnehdinta', sa.luonnehdinta ?? ''], ...(s.tiedot ?? []).map((x, i) => [`tiedot[${i}]`, x])];
+      const mk = s.kaupunkilehti?.[0]?.matkailijalle;
+      if (mk) {
+        ilmastoTekstit.push(['matkailijalle.kappale', mk.kappale ?? '']);
+        (mk.artikkeli?.jaksot ?? []).forEach((x, i) => ilmastoTekstit.push([`opas jakso ${i + 1}`, x.teksti ?? ''], [`opas jakso ${i + 1} kuva`, `${x.kuva?.lyhyt ?? ''} ${x.kuva?.selite ?? ''}`]));
+      }
+      const ILMASTO = /(lämp|sade|sadet|sata|sateis|kuiv|pakka|helle|helte|ilmasto|millimetri|tammi|helmi|maalis|huhti|touko|kesä|heinä|elo|syys|loka|marras|joulu)/i;
+      for (const [missa, teksti2] of ilmastoTekstit) {
+        if (typeof teksti2 !== 'string') continue;
+        for (const lause of teksti2.split(/(?<=[.!?])\s+/)) {
+          if (!ILMASTO.test(lause)) continue;
+          let ilmastoluku = false;
+          for (const m of lause.matchAll(/([−-]?\d+(?:,\d+)?)(?:\s*–\s*([−-]?\d+(?:,\d+)?))?\s*(?:astee?\w*|°C?)/g)) {
+            ilmastoluku = true;
+            for (const t of [m[1], m[2]].filter(Boolean)) if (!sopiiAste(luku(t), t)) varoitus(`${missa}: "${m[0]}" ei vastaa saatiedot-lukuja`);
+          }
+          for (const m of lause.matchAll(/(\d{1,3}(?:[\s ]\d{3})*(?:,\d+)?)(?:\s*–\s*(\d{1,3}(?:[\s ]\d{3})*))?\s*(?:mm\b(?!:)|millimetri\w*)/g)) {
+            ilmastoluku = true;
+            for (const t of [m[1], m[2]].filter(Boolean)) if (!sopiiSade(luku(t))) varoitus(`${missa}: "${m[0]}" ei vastaa saatiedot-lukuja`);
+          }
+          if (ilmastoluku && /(lähte\w* mukaan|wikipedi|normaalien mukaan|mallinne|aineisto|säädat)/i.test(lause)) virhe(`${missa}: ilmastolauseessa lähdemaininta ("${lause.slice(0, 60)}…")`);
+        }
+      }
+    }
 
     // kuvien yksikäsitteisyys ja aiempi käyttö. Matkakirjan valokuva saa olla
     // sama tiedosto kuin ennenNyt-pari (kaupunkilehti.md: parit kopioitiin
@@ -863,6 +1100,7 @@ async function tarkista(era, rajaus, { verkko, malliTila, lyhyt }) {
         const avain = polku.split('.').pop();
         if (ohita.has(avain)) return;
         if (/(TÄYTÄ|TODO|XXX|lorem ipsum)/i.test(o)) virhe(`${polku}: paikkamerkki jäi`);
+        if (!polku.startsWith('ehdotukset') && /(wikipedi|open-meteo|mallinnettujen|säädatan mukaan|sääaineiston mukaan)/i.test(o)) virhe(`${polku}: lähde- tai aineistomaininta lukijan tekstissä (metateksti, luku 4.10)`);
         if (o.length > 200 && !/[äö]/i.test(o)) virhe(`${polku}: ei ä- eikä ö-kirjaimia (ascii-suomi?)`);
         for (const m of o.matchAll(/\b(\d{1,3})((?:\s000)+)\b/g)) {
           if ((m[1].match(/0+$/)?.[0].length ?? 0) + 3 * (m[2].length / 4) >= 4) varoitus(`${polku}: pyöreä luku "${m[0]}" — onko lähteessä tarkka?`);
@@ -991,7 +1229,7 @@ try {
   const vapaat = argit.filter((x) => !x.startsWith('--'));
   if (komento === 'konteksti') await konteksti(vapaat[0], vapaat.slice(1));
   else if (komento === 'malli') await malli(vapaat[0]);
-  else if (komento === 'saa') saaKomento(vapaat[0]);
+  else if (komento === 'saa') await saaKomento(vapaat[0]);
   else if (komento === 'lahde') await lahdeKomento(vapaat[0], vapaat[1]);
   else if (komento === 'haku') await hakuKomento(vapaat[0], vapaat[1]);
   else if (komento === 'esikatselu') await esikatseluKomento(vapaat[0]);
@@ -1009,3 +1247,8 @@ try {
   process.exitCode = 2;
 }
 ```
+
+## LISÄSÄÄNTÖ (Päätoimittaja 11.10.2026, Pulun Kyproksen pistokokeesta: 19/37 väitettä epätarkkoja)
+Tarkat luvut ja vuodet (asukasluvut, määrät, perustamis- ja rakennusvuodet, etäisyydet) kirjataan vain, jos kaksi toisistaan
+riippumatonta lähdettä tukee niitä; muuten luku pyöristetään ("noin", vuosisata) tai jätetään pois. Syy–seuraus-selitykset
+kirjoitetaan vain lähteen sanoin, ei päätellen. Tarkistaja (vaihe E/F) käy jokaisen luvun läpi erikseen.
