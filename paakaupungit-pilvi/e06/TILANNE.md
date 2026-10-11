@@ -9,8 +9,8 @@ Vaihe 0: yhdeksän kontekstia ja saa-syote.json luotu alkuperäisellä tyokalu.m
 | Kaupunki | A | B | C | D | E | F |
 |---|---|---|---|---|---|---|
 | libreville | A koottu; 6 karttakandidaattia, rajaus-/tyyppipoikkeus ja turvallisuuslähde avoin | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
-| ciudaddelapaz | lähteiden luku käynnissä | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
-| saotome | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
+| ciudaddelapaz | lähdepaketti tehty; täysi A estyy: 0 karttakohdetta, opas/teema vajaat | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
+| saotome | lähteiden luku käynnissä | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | bangui | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | brazzaville | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | kinshasa | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
@@ -33,3 +33,7 @@ A-valmis tarkoittaa vain lähteistettyä faktapohjaa. Kaupunkia ei ole kirjoitet
 ## Libreville A
 
 Lähteistetty 0–9-rakenne koottu. 1849 kahdesta riippumattomasta lähteestä; muut epävarmat tarkat luvut poistettu/pyöristetty. Karttaehdotus ulottuu historiallisen ytimen lisäksi estuaarin retkiluontoon: pääsession hyväksyntää vaativa rajauspoikkeus, ei valmiiksi hyväksytty kartta. Mont-Bouët tarvitsee aukio-tyyppisovituksen. UM:n /c/GA palautti yleissivun; turvallisuustaso ei vahvistettu. IPHAMETRA HTTP 500.
+
+## Ciudad de la Paz A-este
+
+Nykykaupunki uusi; ei lähteistettyä historiallista keskustakantaa. Konteksti jo kieltää uuden hallintorakentamisen kuvakohteet 70 vuoden säännöllä. Lähteistetty täysi 0–9-raportti kertoo puutteet: 0 karttakohdetta, neljän teemanoston ja viiden matkasuosituksen faktamäärä ei täyty, nykyinen opas puutteellinen. Ei A-valmis-merkintää. Virallinen asetuslinkki palautti vain 161 tavua, ei luettavaa dokumenttia. Pääsession ratkaistava kevyenä pitäminen / lisälähteet. Kaupunkia ei ohitettu työlistasta.
