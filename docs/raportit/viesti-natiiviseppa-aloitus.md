@@ -10,7 +10,7 @@ Päätoimittaja: "PÄÄTOIMITTAJA (Opus, max)" (kaksi samannimistä: käytä [re
 
 ## KÄRKI
 1. Unity-beetaseurannan cron + ajo (alla).
-2. Juna 182 = natiiviseppa/juna-182 0a1f489a6: kokoa tulevat kuitatut; LUKITUS VASTA OMISTAJAN SANASTA PT:n kautta; museo lisää muistia → muistiajo ennen VIE:tä.
+2. Juna 182 = natiiviseppa/juna-182 c85a13ef7: kokoa tulevat kuitatut; LUKITUS VASTA OMISTAJAN SANASTA PT:n kautta; museo lisää muistia → muistiajo ennen VIE:tä.
 3. Pallohehkut muurien läpi (Olavinlinna, Siirtoseppä): koe F0/F1 (luovutuksessa).
 
 ## PYSYVÄ: UNITY-BEETASEURANTA (PT 10.10. 19.5x)

@@ -16,10 +16,10 @@ Kaavat 180/181: scratchpad /private/tmp/claude-502/-Users-Shared-Claude-Matkakir
 TF 181 iOS (Julkaisija 38121309251, sisäinen → Arvioijat + Beta-testaajat) + Mac KÄÄNNETTY a93ce987 10.39 (lokit/natiiviseppa-mac-tf-181-a93ce987).
 Simu-.app lokit/juna-1.1.181-a93ce987. Muistiajo 181 OK (51bd68d8b) + puiden Pariisi-portti OK (c1de4d7f3: A 0,69 / B 0,73 Gt).
 
-## JUNA 182 = natiiviseppa/juna-182 0a1f489a6 (pohja BUILD 181 a93ce987f; peili peili/proto/natiiviseppa/juna-182)
+## JUNA 182 = natiiviseppa/juna-182 c85a13ef7 (pohja BUILD 181 a93ce987f; peili peili/proto/natiiviseppa/juna-182)
 Kuitatut sisällä: LS1 kippi-leveat-pysty af7314a19 (e71176416 oli jo 181:ssä), LS2 museo-182 7a6051553 (⊃ NUI 79fbb7a35; LISÄÄ MUISTIA: LS2:n
 iPad-ajo fp ≤ 2615 Mt, vapaa ≥ 2504 Mt), NUI lahtokohteet-182 3b2d97f6d, Pelikoodari pulla-turvaverkko-182 61c412e0d, LS1 alkulento-kaupungit-182
-8b6ac5542 (⊃ 6a1068db8). PERUTTU: NUI linna-tekstit 25f332fe1 (merge 4ea8c02df revertattu a5e0a4c7b; omistaja: vanhat tekstit takaisin).
+8b6ac5542 (⊃ 6a1068db8), Pelikoodari iss-radio-182 235b230ba (äänet aanet/iss-v1/radio/ Julkaisijan vientijonossa: tarkista aws s3 ls ennen VIE:tä). PERUTTU: NUI linna-tekstit 25f332fe1 (merge 4ea8c02df revertattu a5e0a4c7b; omistaja: vanhat tekstit takaisin).
 Testit 0a1f489a6: K468/P490/L1439, tarkista ok.
 TULOSSA (PT 12.4x): LS1 aloitusintro-182 (⊃ 8b6ac5542), NUI Pulu-jakso + linna-kyltit (+ kortiston Takaisin pienenä committina), LS2 kehys + zoom,
 KIIRE: LS1 Pariisin saapumisesitys, Pelikoodari alkulennon horisontti, NUI Pulun alku. Olavinlinna v12 -yhdistelmä (Julkaisija) kun 7. kierros läpi.
