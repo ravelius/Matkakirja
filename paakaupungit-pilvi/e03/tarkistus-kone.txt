@@ -1,5 +1,3 @@
-(node:15522) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
-(Use `node --trace-warnings ...` to show where the warning was created)
 VAROITUS abudhabi: kohteita 4 (pohjataso 6; perustele RAPORTTI.md:ssä)
 VAROITUS abudhabi: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
 == abudhabi: 0 virhettä, 2 varoitusta, 21 kuvaa
@@ -17,4 +15,15 @@ VAROITUS beirut: opas jakso 3: lähderivin lisenssi CC BY 3.0 ≠ Commons "CC BY
 VAROITUS beirut: juttu Mohammad Al-Aminin moskeija kuva 1: lähderivin lisenssi CC BY 3.0 ≠ Commons "CC BY 3.0 pl"
 VAROITUS beirut: juttu Pyhän Yrjänän maroniittikatedraali kuva 1: lähderivin lisenssi CC BY 3.0 ≠ Commons "CC BY 3.0 pl"
 == beirut: 0 virhettä, 7 varoitusta, 24 kuvaa
-VIRHE: HTTP 429
+VAROITUS jerevan: kansi nosto 2: teksti 665 mrk (440–660)
+VAROITUS jerevan: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+VAROITUS jerevan: artikkeli.intro: pyöreä suuruusluokka — onko lähteessä tarkka?
+VAROITUS jerevan: kaupunkilehti[0].matkailijalle.kappale: pyöreä suuruusluokka — onko lähteessä tarkka?
+== jerevan: 0 virhettä, 4 varoitusta, 25 kuvaa
+VAROITUS manama: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+== manama: 0 virhettä, 1 varoitusta, 24 kuvaa
+VAROITUS tbilisi: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+VAROITUS tbilisi: artikkeli.intro: pyöreä suuruusluokka — onko lähteessä tarkka?
+VAROITUS tbilisi: kaupunkilehti[0].matkailijalle.artikkeli.jaksot[0].teksti: pyöreä suuruusluokka — onko lähteessä tarkka?
+== tbilisi: 0 virhettä, 3 varoitusta, 24 kuvaa
+YHTEENSÄ 7 kaupunkia: 0 virhettä (ajettu kaupunki kerrallaan --verkko; Commons 429 vaati uusintoja)
