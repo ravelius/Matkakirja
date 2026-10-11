@@ -55,13 +55,13 @@
    },
    "kulta": {
     "srgb": [
-     206,
-     168,
-     92
+     184,
+     152,
+     96
     ],
     "karheus": 0.38,
     "metalli": 1.0,
-    "huom": "lehtikulta, hieman kulunut"
+    "huom": "lehtikulta, hieman kulunut; LS2 11.10.: vanhan kullan sävy (ennen 206/168/92 näkyi lämpimässä valossa oranssina)"
    },
    "paspis": {
     "srgb": [
@@ -4748,10 +4748,10 @@
     "musta",
     "kulta",
     "kulta",
-    "kulta",
+    "musta",
     "musta"
    ],
-   "huom_materiaalit": "LS2 11.10. (PT 09.0x, omistaja: \"kehykset jäävät niin mustiksi\"): sisähelmi (x 1,3 → 0 cm) lehtikultaa kuten Rijksmuseumin golflijst-kehyksissä"
+   "huom_materiaalit": "LS2 11.10. (PT 09.0x/11.2x): sisähelmi (x 1,3 → 0 cm, janat 9–10) lehtikultaa; sisäreunan pystypinta (jana 11) eebenpuuta, ettei läheltä katsottuna näy leveää kultalankkua"
   },
   "nl_musta_kapea": {
    "pisteet_cm": [
@@ -5055,7 +5055,23 @@
     "jakso_mm": 6.0,
     "syvyys_mm": 1.0,
     "huom": "normaalikarttana pursotuksen suuntaan"
-   }
+   },
+   "materiaalit": [
+    "kulta",
+    "kulta",
+    "kulta",
+    "kulta",
+    "kulta",
+    "kulta",
+    "kulta",
+    "kulta",
+    "kulta",
+    "kulta",
+    "kulta",
+    "musta",
+    "musta"
+   ],
+   "huom_materiaalit": "sisäreunan pystypinta tumma (PT 11.2x: ei tasaista oranssia lankkua läheltä)"
   }
  },
  "reitti": [

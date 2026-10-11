@@ -18,7 +18,8 @@
 //  - _Ymparisto: ympäristön heijastus (Fresnel × salin radianssi ≈ 0,3 · (hajavalo + kohdevalojen valaistus kohdassa) / π):
 //    lakan kiilto näkyy myös ilman kohdevalon peiliheijastusta (simu 11.10. 09.17: pelkkä hajavalo jäi mustaksi).
 //  - _MetalliHaja: kulunut lehtikulta sirottaa laajasti (karhea mikropinta) → osa metallista heijastuu kuin hajapinta albedon
-//    värisenä; ilman tätä kultakehys näkyi kohdevalossakin tummanruskeana (vain kapea peiliheijastus).
+//    värisenä; ilman tätä kultakehys näkyi kohdevalossakin tummanruskeana (vain kapea peiliheijastus). Kulunut pinta (PT 11.2x:
+//    "ei tasaista oranssia"): metallikehyksen albedoa vaihdellaan arvokohinalla (~1,5 cm ja ~5 mm, maailman koordinaateissa).
 //  - _Valokerroin: materiaalin valon kerroin (teokset > 1, seinät ja lattiat < 1): teos hehkuu seinää kirkkaampana.
 //  - TASAINEN TEOS (omistaja 11.10. 10.0x: "koko taulu valaistu tasaisemmin"): _TeosKeski.w > 0 → keilan voimakkuus ja kartio
 //    lasketaan teoksen keskipisteessä (ei kuumaa kohtaa eikä 1/d²-porrasta ylä- ja alareunan välille), suunta ja n·l pikselistä.
@@ -100,6 +101,16 @@ Shader "Matkakirja/MuseoValaistu"
                 float4 vari : COLOR;
             };
 
+            // Sinitön hajautus (Hoskins hash13): sin isoilla maailmankoordinaateilla on mobiili-GPU:lla epätarkka.
+            float Hash(float3 p) { p = frac(p * 0.1031); p += dot(p, p.zyx + 31.32); return frac((p.x + p.y) * p.z); }
+            float Kohina(float3 p)
+            {
+                float3 i0 = floor(p), f = frac(p); f = f * f * (3 - 2 * f);
+                float a = lerp(lerp(Hash(i0), Hash(i0 + float3(1, 0, 0)), f.x), lerp(Hash(i0 + float3(0, 1, 0)), Hash(i0 + float3(1, 1, 0)), f.x), f.y);
+                float b = lerp(lerp(Hash(i0 + float3(0, 0, 1)), Hash(i0 + float3(1, 0, 1)), f.x), lerp(Hash(i0 + float3(0, 1, 1)), Hash(i0 + float3(1, 1, 1)), f.x), f.y);
+                return lerp(a, b, f.z);
+            }
+
             Ulos vert(Tulo i)
             {
                 Ulos o;
@@ -130,6 +141,12 @@ Shader "Matkakirja/MuseoValaistu"
                     n = normalize(n - gradU * (_Aalto.y * cos(ph) * haive));
                 }
                 float3 albedo = _Pohja.rgb * SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv).rgb;
+                if (_Ymparisto > 0 && _Metalli > 0.5)
+                {
+                    // Kulunut lehtikulta: kaksi oktaavia arvokohinaa → paikoin tummempi bolus läpi, paikoin kirkkaampi kiillotettu kulta.
+                    float kh = 0.65 * Kohina(i.maailma * 65) + 0.35 * Kohina(i.maailma * 210);
+                    albedo *= lerp(0.62, 1.12, kh);
+                }
                 if (_KarkiVari > 0.5) albedo *= i.vari.rgb;
                 float3 diff = albedo * (1 - _Metalli + _Metalli * _MetalliHaja);
                 float3 f0 = lerp(float3(_Kiilto, _Kiilto, _Kiilto), albedo, _Metalli);

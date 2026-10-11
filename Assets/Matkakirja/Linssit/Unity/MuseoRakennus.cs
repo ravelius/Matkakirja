@@ -44,7 +44,7 @@ namespace Matkakirja.Natiivi
 
         // Valon painotus (PT 11.10. 09.0x: "maalaus hehkuu seinää kirkkaampana ja sali tummuu reunoilta"): materiaalin _Valokerroin.
         public const float SeinaToisto = 3f;
-        public const float TeosValo = 1.5f, GrafiikkaValo = 1.25f, KehysValo = 1.3f, SeinaValo = 0.72f, KultaHaja = 0.45f;
+        public const float TeosValo = 1.5f, GrafiikkaValo = 1.25f, KehysValo = 1.3f, SeinaValo = 0.72f, KultaHaja = 0.3f;
 
         public MuseoRakennus(Transform isa)
         {
