@@ -5,8 +5,9 @@
 //   1. alkulento → LS1:n aloitusintro (18 s, KaupunkiIntro.Paattyi(kaupunki, ohitettu)) → kartta näkyvissä
 //   2. Pulu ilman kuplaa: tuuraus-1 "Kääk! Apua! Pöllö on kadonnut!" + tuuraus-2 "Kuuntele sillä välin isoisän matkakirjaa…"
 //   3. KaupunkiIntro.PuluValmis(kaupunki) → LS1 päästää lykätyn luennan (ilman introa Pulu kutsuu itse AloitaLykattyLuenta)
-//   4. luennan aikana tilarivi: ohje-1 5 s luennan alusta 7 s, heti perään ohje-2 10 s (korvaavat vanhat "Tervetuloa <maahan>…"
-//      ja "Klikkaa kaupungin kultaista merkkiä" -rivit aloituskaupungissa; tilarivi on yläkolmanneksessa, luentakuvat keskellä)
+//   4. LUENNAN JÄLKEEN tilarivi: ohje-1 1 s luennan lopusta 7 s, heti perään ohje-2 10 s (korvaavat vanhat "Tervetuloa <maahan>…"
+//      ja "Klikkaa kaupungin kultaista merkkiä" -rivit aloituskaupungissa). PT 11.10. 13.5x: rivi ei saa peittää luettavaa
+//      matkakirjatekstiä; tilaripohjalla ei ole toista paikkaa (yläkolmannes, kortin päällä puhelimella), joten vasta luennan jälkeen.
 //   5. luennan jälkeen: tuuraus-3 "Pöllö sähkötti…" + tuuraus-4 "No, jos tulee kysyttävää, napauta minua…"; auki oleva nosto
 //      suljetaan ensin (odotetaan). Aloituskaupungin oma Pulu-kommentti ja kuvat jäävät pois (Saapumisesitys, Aloituskaupunki).
 // Myöhemmillä aloituslennoilla (lippu nähty) vain kohta 4. Äänet Pelikoodarilta: aanet/pulu/tuuraus-v2/livia-tuuraus-n.mp3.
@@ -32,8 +33,8 @@ namespace Matkakirja.Natiivi
         const float PuheenHanta = 400f;
         /// <summary>Kuinka kauan saapuminen saa odottaa karttaa (traileri, välikortti) ja intron Paattyi-eventtiä.</summary>
         const float KarttaOdotusS = 240f, IntroOdotusS = 40f;
-        /// <summary>Tilarivit luennan alusta (omistaja: 5 s alusta näkyvissä 7 s, heti perään 10 s).</summary>
-        const long Ohje1AlkuMs = 5000;
+        /// <summary>Tilarivit luennan jälkeen (PT 13.5x; omistajan kestot: 7 s, heti perään 10 s).</summary>
+        const long Ohje1AlkuMs = 1000;
         const float Ohje1S = 7f, Ohje2S = 10f;
 
         static readonly string[] Alku = { "ui.livia.tuuraus-1", "ui.livia.tuuraus-2" };
@@ -134,12 +135,12 @@ namespace Matkakirja.Natiivi
             {
                 if (k == null || k != kaupunki) return;
                 luentaSoi = true;
-                if (ohjeetOdottaa) { ohjeetOdottaa = false; Ohjeet(k); }
             });
             o.LuentoLoppui += k => UiKerros.PaaSaikeessa(() =>
             {
                 if (k == null || k != kaupunki) return;
                 luentaSoi = false;
+                if (ohjeetOdottaa) { ohjeetOdottaa = false; Ohjeet(k); }
                 var jatko = luennanLoppu;
                 luennanLoppu = null;
                 jatko?.Invoke();
@@ -163,8 +164,7 @@ namespace Matkakirja.Natiivi
             kaupunki = aloitus = k;
             loppuOdottaa = false;
             luentaSoi = ohjain.SoivaLuento?.Kaupunki == k;
-            ohjeetOdottaa = !luentaSoi;
-            if (luentaSoi) Ohjeet(k);
+            ohjeetOdottaa = true;
             introTulee = TuleeIntro(k);
             kesken = ohjain.LuentaLykatty(k) && !annettu && !Nahty;
             Debug.Log($"MATKAKIRJA livia: aloituskaupunki {k}, intro {(introTulee ? "tulee" : "ei")}, tuuraus {(kesken ? "tulee" : "ei")}");
@@ -221,6 +221,9 @@ namespace Matkakirja.Natiivi
             kesken = false;
             if (introTulee) PuluValmis(kaupunki);
             else ohjain.AloitaLykattyLuenta();
+            string k = kaupunki;
+            // Luenta ei alkanut (ei luentaa, ohitettu): ohjeet silti.
+            Kello.schedule.Execute(() => { if (ohjeetOdottaa && !luentaSoi && ohjain?.PelaajanKaupunki == k) { ohjeetOdottaa = false; Ohjeet(k); } }).StartingIn(LuentaVaraMs);
             if (!loppuOdottaa) return;
             luennanLoppu = () => { if (v == versio) Ajasta(() => Loppuosa(v), KuplaMs); };
             // Luenta ei alkanut (ei luentaa, ohitettu): loppuosa silti.
@@ -238,7 +241,7 @@ namespace Matkakirja.Natiivi
             Repliikki(v, Loppu, 0, 3, Lopeta);
         }
 
-        /// <summary>Kohta 4: tilarivit luennan alusta (aloituskaupunki, kaikilla aloituslennoilla).</summary>
+        /// <summary>Kohta 4: tilarivit luennan jälkeen (aloituskaupunki, kaikilla aloituslennoilla).</summary>
         static void Ohjeet(string k)
         {
             if (!UiNakymat.Olemassa) return;
