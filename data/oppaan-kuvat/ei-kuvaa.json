@@ -156,6 +156,12 @@
   "syy": "ei vapaata kuvaa >= 1200 px, jossa kohde on tunnistettavasti"
  },
  {
+  "q": "Q214619",
+  "nimi": "Pieni merenneito",
+  "kaupunki": "koopenhamina",
+  "syy": "suojatarkastus: ei vapaata, suojaamatonta kuvaa"
+ },
+ {
   "q": "Q3403979",
   "nimi": "Miklušin vankila",
   "kaupunki": "kosice",

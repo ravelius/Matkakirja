@@ -5135,7 +5135,6 @@
    "kohteet": [
     "Q943946",
     "Q110289",
-    "Q214619",
     "Q211053",
     "Q206101",
     "Q940733",
@@ -5146,7 +5145,8 @@
     "Q838297",
     "Q326528",
     "Q952817",
-    "Q861363"
+    "Q861363",
+    "Q214619"
    ],
    "kuvat": [
     {
@@ -44627,15 +44627,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Sibelius park3.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sibelius_park3.jpg?width=1280",
+     "tiedosto": "Sibelius park HKI.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sibelius_park_HKI.jpg?width=1280",
      "tekija": "Tappinen",
      "lisenssi": "CC BY-SA 3.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sibelius_park3.jpg",
-     "selite": "Eila Hiltusen teräsputkista tehty monumentti seisoo Sibelius-puistossa kalliolla puiden keskellä.",
-     "leveys": 3008,
-     "korkeus": 2073,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sibelius_park_HKI.jpg",
+     "selite": "Sibeliuksen puiston lampi ja vehreä puistomaisema Taka-Töölössä Helsingissä.",
+     "leveys": 3112,
+     "korkeus": 1859,
      "tarkistettu": true
     }
    ]
@@ -47794,41 +47794,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "*Das Opern- und Konzerthaus in Reykjavik. 05.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/*Das_Opern-_und_Konzerthaus_in_Reykjavik._05.jpg?width=1280",
+     "tiedosto": "*Blick vom Turm der Hallgrimskirkja. 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/*Blick_vom_Turm_der_Hallgrimskirkja._04.jpg?width=1280",
      "tekija": "Holger Uwe Schmitt",
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:*Das_Opern-_und_Konzerthaus_in_Reykjavik._05.jpg",
-     "selite": "Harpa-konserttitalon lasiseinäinen julkisivu hohtaa Reykjavíkin satamassa.",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:*Blick_vom_Turm_der_Hallgrimskirkja._04.jpg",
+     "selite": "Hallgrímskirkjan tornista avautuu näkymä Reykjavíkin värikkäiden kattojen yli satamaan ja lahdelle; kaukana rannalla häämöttää Harpa.",
      "leveys": 5906,
-     "korkeus": 3822,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "*Das Opern- und Konzerthaus in Reykjavik. 04.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/*Das_Opern-_und_Konzerthaus_in_Reykjavik._04.jpg?width=1280",
-     "tekija": "Holger Uwe Schmitt",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:*Das_Opern-_und_Konzerthaus_in_Reykjavik._04.jpg",
-     "selite": "Harpan lasiset kuutiot ja viereinen rakennus kaupungin satama-alueella.",
-     "leveys": 5906,
-     "korkeus": 2778,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "*Das Opern- und Konzerthaus in Reykjavik. 03.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/*Das_Opern-_und_Konzerthaus_in_Reykjavik._03.jpg?width=1280",
-     "tekija": "Holger Uwe Schmitt",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:*Das_Opern-_und_Konzerthaus_in_Reykjavik._03.jpg",
-     "selite": "Konserttitalon vihertävän lasisen julkisivun kiteinen muoto.",
-     "leveys": 5906,
-     "korkeus": 3258,
+     "korkeus": 3937,
      "tarkistettu": true
     }
    ]
@@ -47844,28 +47818,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "20190623 Perlan 8841 (48469867211).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20190623_Perlan_8841_(48469867211).jpg?width=1280",
-     "tekija": "Ray Swi-hymn from Sijhih-Taipei, Taiwan",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20190623_Perlan_8841_(48469867211).jpg",
-     "selite": "Perlanin lasikupolin alla lepäävät suuret kuumavesisäiliöt Öskjuhlíðin kukkulalla.",
-     "leveys": 7952,
-     "korkeus": 5304,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "20190623 Perlan 8842 (48469866386).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20190623_Perlan_8842_(48469866386).jpg?width=1280",
-     "tekija": "Ray Swi-hymn from Sijhih-Taipei, Taiwan",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20190623_Perlan_8842_(48469866386).jpg",
-     "selite": "Perlanin säiliörakennukset kohoavat nurmikkoisen mäen laella.",
-     "leveys": 7952,
-     "korkeus": 5304,
+     "tiedosto": "Reykjavik Esja.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Reykjavik_Esja.jpg?width=1280",
+     "tekija": "MartinPutz",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Reykjavik_Esja.jpg",
+     "selite": "Perlanilta avautuu näkymä Reykjavíkin matalien talojen yli Esja-vuorelle, jonka lumiset rinteet kohoavat kaupungin takana.",
+     "leveys": 4752,
+     "korkeus": 2408,
      "tarkistettu": true
     }
    ]
@@ -47894,19 +47855,6 @@
     },
     {
      "jarjestys": 2,
-     "tiedosto": "1986 trafen sich hier trafen sich hier Ronald Reagan und Michael Gorbatschow. 01.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1986_trafen_sich_hier_trafen_sich_hier_Ronald_Reagan_und_Michael_Gorbatschow._01.jpg?width=1280",
-     "tekija": "Holger Uwe Schmitt",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1986_trafen_sich_hier_trafen_sich_hier_Ronald_Reagan_und_Michael_Gorbatschow._01.jpg",
-     "selite": "Höfði-talo ja sen vieressä merimiehen patsas Reykjavíkin rannalla.",
-     "leveys": 4542,
-     "korkeus": 3128,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
      "tiedosto": "1986 trafen sich hier trafen sich hier Ronald Reagan und Michael Gorbatschow. 02.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1986_trafen_sich_hier_trafen_sich_hier_Ronald_Reagan_und_Michael_Gorbatschow._02.jpg?width=1280",
      "tekija": "Holger Uwe Schmitt",
@@ -47931,19 +47879,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "1992 wurde das Rathaus in Reykjavik eröffnet. 04.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1992_wurde_das_Rathaus_in_Reykjavik_er%C3%B6ffnet._04.jpg?width=1280",
-     "tekija": "Holger Uwe Schmitt",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1992_wurde_das_Rathaus_in_Reykjavik_er%C3%B6ffnet._04.jpg",
-     "selite": "Tjörnin on Reykjavíkin keskustan lampi, jonka reunalla seisoo kaupungintalo.",
-     "leveys": 5906,
-     "korkeus": 3937,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "201708 Reykjavik centre a01.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/201708_Reykjavik_centre_a01.jpg?width=1280",
      "tekija": "Ziko van Dijk",
@@ -47953,19 +47888,6 @@
      "selite": "Tjörnin-lammen rannalla seisova Fríkirkjan-kirkko.",
      "leveys": 4000,
      "korkeus": 3000,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "1992 wurde das Rathaus in Reykjavik eröffnet. 06.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1992_wurde_das_Rathaus_in_Reykjavik_er%C3%B6ffnet._06.jpg?width=1280",
-     "tekija": "Holger Uwe Schmitt",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1992_wurde_das_Rathaus_in_Reykjavik_er%C3%B6ffnet._06.jpg",
-     "selite": "Joutsen uiskentelee Tjörninin vesillä keskustan rakennusten edessä.",
-     "leveys": 5906,
-     "korkeus": 3224,
      "tarkistettu": true
     }
    ]
@@ -48118,28 +48040,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Laugardalsvöllur, Iceland's national football stadium.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Laugardalsv%C3%B6llur%2C_Iceland's_national_football_stadium.jpg?width=1280",
-     "tekija": "Quintin Soloviev",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Laugardalsv%C3%B6llur%2C_Iceland's_national_football_stadium.jpg",
-     "selite": "Laugardalsvöllur on Islannin jalkapallomaajoukkueen kotistadion Reykjavíkin Laugardalurissa.",
-     "leveys": 5280,
-     "korkeus": 3675,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Eimskipsvöllurinn, Iceland Football Stadium.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eimskipsv%C3%B6llurinn%2C_Iceland_Football_Stadium.jpg?width=1280",
-     "tekija": "Lee Vilenski",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Eimskipsv%C3%B6llurinn%2C_Iceland_Football_Stadium.jpg",
-     "selite": "Stadionin katsomo ja sisäänkäynti Laugardalurin urheilualueella.",
-     "leveys": 4032,
-     "korkeus": 3024,
+     "tiedosto": "Fram - KR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fram_-_KR.jpg?width=1280",
+     "tekija": "Borkur Sigurbjornsson from Barcelona",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fram_-_KR.jpg",
+     "selite": "Jalkapallo-ottelu Laugardalsvöllurilla syyskuussa 2009: Fram vastaan KR.",
+     "leveys": 3072,
+     "korkeus": 1521,
      "tarkistettu": true
     }
    ]
@@ -59601,19 +59510,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Fountain in Tivoli Gardens, Copenhagen, 20220618 1307 7156.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fountain_in_Tivoli_Gardens%2C_Copenhagen%2C_20220618_1307_7156.jpg?width=1280",
-     "tekija": "Jakub Hałun",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fountain_in_Tivoli_Gardens%2C_Copenhagen%2C_20220618_1307_7156.jpg",
-     "selite": "Tivoli on vuonna 1843 avattu huvipuisto aivan Kööpenhaminan keskustassa.",
-     "leveys": 5048,
-     "korkeus": 3601,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "Tivoli Gardens, Copenhagen, Denmark.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tivoli_Gardens%2C_Copenhagen%2C_Denmark.jpg?width=1280",
      "tekija": "Junielib",
@@ -59623,43 +59519,6 @@
      "selite": "Tivolin sisäänkäynti hohtaa illalla valoissa.",
      "leveys": 3072,
      "korkeus": 2304,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q214619": {
-   "nimi": "Pieni merenneito",
-   "peruste": "sitelinks",
-   "kaupunki": "koopenhamina",
-   "kaupunkiQ": "Q1748",
-   "lat": 55.69286,
-   "lon": 12.59926,
-   "koko_m": 40,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Denmark, Copenhagen, Little Mermaid, Langelinie Promenade 150422-25.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Denmark%2C_Copenhagen%2C_Little_Mermaid%2C_Langelinie_Promenade_150422-25.jpg?width=1280",
-     "tekija": "Richardmaackphotography",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Denmark%2C_Copenhagen%2C_Little_Mermaid%2C_Langelinie_Promenade_150422-25.jpg",
-     "selite": "Pronssinen merenneito istuu kivellä Langelinien rannalla Andersenin sadun mukaan.",
-     "leveys": 3640,
-     "korkeus": 5460,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Denmark, Copenhagen, Little Mermaid, Langelinie Promenade 150422-26.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Denmark%2C_Copenhagen%2C_Little_Mermaid%2C_Langelinie_Promenade_150422-26.jpg?width=1280",
-     "tekija": "Richardmaackphotography",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Denmark%2C_Copenhagen%2C_Little_Mermaid%2C_Langelinie_Promenade_150422-26.jpg",
-     "selite": "Patsas on vuodelta 1913 ja Kööpenhaminan tunnetuin symboli.",
-     "leveys": 3640,
-     "korkeus": 5460,
      "tarkistettu": true
     }
    ]
@@ -60070,6 +59929,15 @@
      "tarkistettu": true
     }
    ]
+  },
+  "Q214619": {
+   "nimi": "Pieni merenneito",
+   "peruste": "sitelinks",
+   "kaupunki": "koopenhamina",
+   "kaupunkiQ": "Q1748",
+   "lat": 55.69286,
+   "lon": 12.59926,
+   "kuvat": []
   },
   "Q569428": {
    "nimi": "Pyhän Elisabetin katedraali",
@@ -63292,19 +63160,6 @@
      "selite": "Nordkapin jyrkkä kallioniemi kohoaa Pohjoisen jäämeren rannalla Magerøyan saarella.",
      "leveys": 4896,
      "korkeus": 3264,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Cabo Norte, Noruega, 2019-09-03, DD 16.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cabo_Norte%2C_Noruega%2C_2019-09-03%2C_DD_16.jpg?width=1280",
-     "tekija": "Diego Delso",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cabo_Norte%2C_Noruega%2C_2019-09-03%2C_DD_16.jpg",
-     "selite": "Kalliolla seisova pallomonumentti merkitsee Euroopan pohjoisimpana pidettyä matkailukohdetta.",
-     "leveys": 5149,
-     "korkeus": 7598,
      "tarkistettu": true
     }
    ]
@@ -86106,19 +85961,6 @@
      "selite": "Bjørvika on Oslon uusi vuononrantakaupunginosa, jonka pilvenpiirtäjät tunnetaan nimellä Barcode.",
      "leveys": 3876,
      "korkeus": 2740,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "2011-05-29 Bjørvika.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2011-05-29_Bj%C3%B8rvika.jpg?width=1280",
-     "tekija": "Chell Hill",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2011-05-29_Bj%C3%B8rvika.jpg",
-     "selite": "Alueen oopperatalon valkoinen katto ja uudet rakennukset heijastuvat vuonon pintaan.",
-     "leveys": 5184,
-     "korkeus": 2393,
      "tarkistettu": true
     }
    ]
@@ -108946,19 +108788,6 @@
      "leveys": 4160,
      "korkeus": 3120,
      "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Tammerkoski (22286032958).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tammerkoski_(22286032958).jpg?width=1280",
-     "tekija": "kooikkari from Finland",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tammerkoski_(22286032958).jpg",
-     "selite": "Illalla kosken rannan tehdasrakennukset ja piippu valaistaan.",
-     "leveys": 4608,
-     "korkeus": 3072,
-     "tarkistettu": true
     }
    ]
   },
@@ -109084,19 +108913,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Hämeensilta1.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/H%C3%A4meensilta1.jpg?width=1280",
-     "tekija": "Visa580",
-     "lisenssi": "CC BY 2.5",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:H%C3%A4meensilta1.jpg",
-     "selite": "Hämeensilta ylittää Tammerkosken keskustassa ja yhdistää kaupungin kaksi puolta.",
-     "leveys": 2304,
-     "korkeus": 1728,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "FI-Tampere-20131012 182314 HDR.JPG",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/FI-Tampere-20131012_182314_HDR.JPG?width=1280",
      "tekija": "Brylie Oxley",

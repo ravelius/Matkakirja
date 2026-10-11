@@ -48,19 +48,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Fountain in Tivoli Gardens, Copenhagen, 20220618 1307 7156.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fountain_in_Tivoli_Gardens%2C_Copenhagen%2C_20220618_1307_7156.jpg?width=1280",
-     "tekija": "Jakub Hałun",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fountain_in_Tivoli_Gardens%2C_Copenhagen%2C_20220618_1307_7156.jpg",
-     "selite": "Tivoli on vuonna 1843 avattu huvipuisto aivan Kööpenhaminan keskustassa.",
-     "leveys": 5048,
-     "korkeus": 3601,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "Tivoli Gardens, Copenhagen, Denmark.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tivoli_Gardens%2C_Copenhagen%2C_Denmark.jpg?width=1280",
      "tekija": "Junielib",
@@ -70,42 +57,6 @@
      "selite": "Tivolin sisäänkäynti hohtaa illalla valoissa.",
      "leveys": 3072,
      "korkeus": 2304,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
-   "q": "Q214619",
-   "nimi": "Pieni merenneito",
-   "peruste": "sitelinks",
-   "koko_m": 40,
-   "lat": 55.69286,
-   "lon": 12.59926,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Denmark, Copenhagen, Little Mermaid, Langelinie Promenade 150422-25.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Denmark%2C_Copenhagen%2C_Little_Mermaid%2C_Langelinie_Promenade_150422-25.jpg?width=1280",
-     "tekija": "Richardmaackphotography",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Denmark%2C_Copenhagen%2C_Little_Mermaid%2C_Langelinie_Promenade_150422-25.jpg",
-     "selite": "Pronssinen merenneito istuu kivellä Langelinien rannalla Andersenin sadun mukaan.",
-     "leveys": 3640,
-     "korkeus": 5460,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Denmark, Copenhagen, Little Mermaid, Langelinie Promenade 150422-26.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Denmark%2C_Copenhagen%2C_Little_Mermaid%2C_Langelinie_Promenade_150422-26.jpg?width=1280",
-     "tekija": "Richardmaackphotography",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Denmark%2C_Copenhagen%2C_Little_Mermaid%2C_Langelinie_Promenade_150422-26.jpg",
-     "selite": "Patsas on vuodelta 1913 ja Kööpenhaminan tunnetuin symboli.",
-     "leveys": 3640,
-     "korkeus": 5460,
      "tarkistettu": true
     }
    ]
@@ -535,5 +486,14 @@
    "tarkistettu": true
   }
  ],
- "eiKuvaa": []
+ "eiKuvaa": [
+  {
+   "q": "Q214619",
+   "nimi": "Pieni merenneito",
+   "lat": 55.69286,
+   "lon": 12.59926,
+   "peruste": "sitelinks",
+   "syy": "suojatarkastus: ei vapaata, suojaamatonta kuvaa"
+  }
+ ]
 }
