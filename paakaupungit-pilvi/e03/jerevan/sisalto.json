@@ -1,397 +1,501 @@
 {
- "$skeema": "matkakirja-paakaupunki/1",
- "id": "jerevan",
- "maa": "ARM",
- "era": "e03",
- "kaupunki": {
+  "$skeema": "matkakirja-paakaupunki/1",
   "id": "jerevan",
-  "name": "Jerevan",
-  "wiki": "Jerevan",
-  "ambience": "kaupunki",
-  "pallo": { "lat": 40.1814, "lon": 44.5144 }
- },
- "artikkeli": {
-  "intro": "Jerevan on Armenian pääkaupunki ja maan suurin kaupunki, ja se seisoo Hrazdan-joen rotkon äärellä Araratin tasangon koillisreunalla. Kaupungin pääsymboli on **Ararat-vuori**, joka näkyy kaupungin jokaisesta osasta. Asukkaita Jerevanissa on 1 147 600 (väestöarvio 1.1.2026).\n\nKaupungin nimen uskotaan juontuvan Erebunin linnoituksesta, jonka Urartun kuningas Argishti I perusti **782 eaa.** Isoisän matkavuonna 1873 kaupunki tunnettiin venäläisen vallan aikana nimellä Erivan: se oli Erivanin kuvernementin keskus mutta ei vielä virallisesti kaupunki, sillä kaupunkistatuksen se sai 1879. Matala savitalojen kaupunki muuttui 1920-luvulla, kun arkkitehti Alexander Tamanian laati yleissuunnitelman.\n\nNykyinen keskusta rakennettiin vaaleanpunaisesta ja keltaisesta **tuffikivestä**, ja Tasavallan aukio, Kaskadi ja Matenadaran ovat sen tunnetuimpia kohteita. Kaupunki oli UNESCOn maailman kirjapääkaupunki 2012.",
-  "teksti": "Jerevan on ollut Armenian pääkaupunki vuodesta 1918, ja itsenäisen Armenian pääkaupunki se on ollut 21.9.1991 alkaen. Kaupunki ei kuulu mihinkään maakuntaan, vaan sillä on pääkaupungin erityisasema.\n\n== Linnoituksesta kaupungiksi ==\nErebunin linnoitus perustettiin 782 eaa. Arin Berd -kukkulalle, ja 1968 Jerevan vietti 2 750-vuotisjuhlaa. Ottomaanien komentaja rakennutti Erivanin linnoituksen Hrazdanin rannalle 1582–83, ja venäläiset valtasivat sen lokakuussa 1827. Kaupunkistatuksen Jerevan sai 1.10.1879 Aleksanteri II:n asetuksella.\n\n== Tuffikaupunki ==\nTamanianin yleissuunnitelma hyväksyttiin 1924. Se on säteittäis-kehämäinen ja sijoitettiin vanhan katuverkon päälle, ja sen toteuttaminen johti monien vanhojen rakennusten purkamiseen. Kaupungin lipun kaksitoista pientä kolmiota viittaavat Armenian kahteentoista historialliseen pääkaupunkiin."
- },
- "kysymykset": [
-  {
-   "q": "Mikä vuori on Jerevanin pääsymboli ja näkyy kaupungin jokaisesta osasta?",
-   "options": ["Ararat", "Aragats", "Elbrus", "Kazbek"],
-   "correct": 0,
-   "level": 1,
-   "hint": "Nooan arkin kerrotaan laskeutuneen sen rinteelle.",
-   "fact": "Ararat on kaupungin pääsymboli, ja se näkyy kaupungin jokaisesta osasta.",
-   "source": "https://en.wikipedia.org/wiki/Yerevan"
-  },
-  {
-   "q": "Minä vuonna Urartun kuningas Argishti I perusti Erebunin linnoituksen, josta Jerevanin nimen uskotaan juontuvan?",
-   "options": ["782 eaa.", "882 eaa.", "682 eaa.", "582 eaa."],
-   "correct": 0,
-   "level": 2,
-   "hint": "Linnoitus perustettiin 700-luvulla ennen ajanlaskun alkua.",
-   "fact": "Erebuni perustettiin Arin Berd -kukkulalle, ja sen perustamiskirjoitus löytyi kukkulalta syksyllä 1950.",
-   "source": "https://en.wikipedia.org/wiki/Erebuni_Fortress"
-  },
-  {
-   "q": "Kuka arkkitehti laati Jerevanin vuoden 1924 yleissuunnitelman?",
-   "options": ["Alexander Tamanian", "Sargis Gurzadyan", "Mark Grigorian", "Boris Mehrabyan"],
-   "correct": 0,
-   "level": 2,
-   "hint": "Hän suunnitteli myös Tasavallan aukion ja oopperatalon.",
-   "fact": "Tamanian yhdisti uusklassismin Armenian omaan tuffikiveen, ja hänen suunnitelmansa on säteittäis-kehämäinen.",
-   "source": "https://en.wikipedia.org/wiki/Alexander_Tamanian"
-  },
-  {
-   "q": "Millä nimellä länsimaiset matkailijat kutsuivat Jerevanin Sinistä moskeijaa?",
-   "options": ["Gök Jami", "Kara Jami", "Ak Jami", "Ulu Jami"],
-   "correct": 0,
-   "level": 3,
-   "hint": "Nimi viittaa moskeijan laatoituksen väriin.",
-   "fact": "Matkailijat H. F. B. Lynch ja Luigi Villari kutsuivat moskeijaa nimellä Gök Jami, 'taivaansininen moskeija'.",
-   "source": "https://en.wikipedia.org/wiki/Blue_Mosque,_Yerevan"
-  },
-  {
-   "q": "Millä nimellä Jerevan tunnettiin venäläisen vallan aikana 1800-luvulla?",
-   "options": ["Erivan", "Alexandropol", "Vagharshapat", "Dvin"],
-   "correct": 0,
-   "level": 3,
-   "hint": "Venäjänkielinen muoto muistuttaa nykyistä nimeä.",
-   "fact": "Nimi Erivan oli venäläisen vallan aikainen virallinen muoto, ja Jerevaniksi se palautettiin 1936.",
-   "source": "https://en.wikipedia.org/wiki/Yerevan"
-  }
- ],
- "tiedot": [
-  "Jerevanin lipussa on kaksitoista pientä punaista kolmiota, ja ne kuvaavat Armenian kahtatoista historiallista pääkaupunkia.",
-  "Vardavar-juhlana, 98 päivää pääsiäisen jälkeen, tuntemattomatkin saavat kastella toisiaan vedellä, ja suosituin juhlapaikka on Joutsenjärvi.",
-  "Jerevan sijaitsee keskimäärin 990 metrin korkeudessa, ja lähteen mukaan se on viidenkymmenen korkeimmalla olevan yli miljoonan asukkaan kaupungin joukossa."
- ],
- "valokuva": {
-  "tiedosto": "Ararat. 7, Mosquée d'Erivan - (mission) G. Bapst ; (photogr.) Bapst ; (photogr. reprod. par) Molteni (pour la conférence donnée par) Bapst - btv1b531014279.jpg",
-  "vuosi": "1800-luku",
-  "lahde": "Bapst, Germain (1853-1921), Commons (PD)",
-  "lyhyt": "Erivanin moskeija, nykyinen Sininen moskeija, ranskalaisen Germain Bapstin vedoksessa.",
-  "selite": "Moskeija rakennettiin noin 1765–66 Erivanin kaanikunnan hallitsijan tilauksesta kaupungin pääpiirimoskeijaksi. Vedoksen tekijä on ranskalainen Germain Bapst."
- },
- "kaupunkilehti": [
-  {
-   "id": "kaupunki",
-   "nimi": "Jerevan",
-   "johdanto": "Isoisän matkavuonna 1873 Jerevan tunnettiin nimellä Erivan ja oli vielä matala savitalojen kaupunki Hrazdanin rotkon äärellä. Nykyinen vaaleanpunertava tuffikaupunki syntyi 1920-luvun suunnitelman pohjalta, mutta kaupungin juuret ovat Erebunin linnoituksessa vuodelta 782 eaa.",
-   "kansikuvat": [
-    {
-     "tiedosto": "Yerevan skyline at dawn.jpg",
-     "lyhyt": "Jerevan seisoo Araratin tasangon reunalla, ja Ararat on kaupungin pääsymboli.",
-     "selite": "Jerevan seisoo Hrazdan-joen rotkon äärellä Araratin tasangon koillisreunalla, ja Ararat-vuori on kaupungin pääsymboli.",
-     "lahde": "Սէրուժ Ուրիշեան (Serouj Ourishian), Wikimedia Commons (CC BY-SA 3.0)"
-    },
-    {
-     "tiedosto": "Yerevan, Republic Square of Yerevan, Armenia.jpg",
-     "lyhyt": "Tasavallan aukio on Jerevanin keskusaukio, jota ympäröi viisi tuffirakennusta.",
-     "selite": "Tasavallan aukion suunnitteli Alexander Tamanian vuoden 1924 yleissuunnitelmassa, ja rakennustyöt kestivät vuodesta 1926 vuoteen 1977.",
-     "lahde": "Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)"
-    },
-    {
-     "tiedosto": "Cascada, Ereván, Armenia, 2016-10-03, DD 18.jpg",
-     "lyhyt": "Kaskadi on viiden terassin portaikko, joka yhdistää keskustan pohjoisille kukkuloille.",
-     "selite": "Kaskadin idea oli jo Tamanianin 1920-luvun suunnitelmassa, ja portaikon sisällä toimii Cafesjian Center for the Arts vuodesta 2009.",
-     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)"
+  "maa": "ARM",
+  "era": "e03",
+  "kaupunki": {
+    "id": "jerevan",
+    "name": "Jerevan",
+    "wiki": "Jerevan",
+    "ambience": "kaupunki",
+    "pallo": {
+      "lat": 40.1814,
+      "lon": 44.5144
     }
-   ],
-   "nostot": [
+  },
+  "artikkeli": {
+    "intro": "Jerevan on Armenian pääkaupunki ja maan suurin kaupunki, ja se seisoo Hrazdan-joen rotkon äärellä Araratin tasangon koillisreunalla. Kaupungin pääsymboli on **Ararat-vuori**, joka näkyy kaupungin jokaisesta osasta. Asukkaita Jerevanissa on 1 147 600 (väestöarvio 1.1.2026).\n\nKaupungin nimen uskotaan juontuvan Erebunin linnoituksesta, jonka Urartun kuningas Argishti I perusti **782 eaa.** Isoisän matkavuonna 1873 kaupunki tunnettiin venäläisen vallan aikana nimellä Erivan: se oli Erivanin kuvernementin keskus mutta ei vielä virallisesti kaupunki, sillä kaupunkistatuksen se sai 1879. Matala savitalojen kaupunki muuttui 1920-luvulla, kun arkkitehti Alexander Tamanian laati yleissuunnitelman.\n\nTasavallan aukion ympärillä olevat uusklassiset rakennukset on tehty vaaleanpunaisesta ja keltaisesta **tuffikivestä**, ja aukio, Kaskadi ja Matenadaran ovat Tamanianin suunnitelman ja sen jatkojen tunnetuimpia kohteita. Kaupunki oli UNESCOn maailman kirjapääkaupunki 2012.",
+    "teksti": "Jerevan on ollut Armenian pääkaupunki vuodesta 1918, ja itsenäisen Armenian pääkaupunki se on ollut 21.9.1991 alkaen. Kaupunki ei kuulu mihinkään maakuntaan, vaan sillä on pääkaupungin erityisasema.\n\n== Linnoituksesta kaupungiksi ==\nErebunin linnoitus perustettiin 782 eaa. Arin Berd -kukkulalle, ja 1968 Jerevan vietti 2 750-vuotisjuhlaa. Ottomaanien komentaja rakennutti Erivanin linnoituksen Hrazdanin rannalle 1582–83, ja venäläiset valtasivat sen lokakuussa 1827. Kaupunkistatuksen Jerevan sai 1.10.1879 Aleksanteri II:n asetuksella.\n\n== Tuffikaupunki ==\nTamanianin yleissuunnitelma hyväksyttiin 1924. Se on säteittäis-kehämäinen ja sijoitettiin vanhan katuverkon päälle, ja sen toteuttaminen johti monien vanhojen rakennusten purkamiseen. Kaupungin lipun kaksitoista pientä kolmiota viittaavat Armenian kahteentoista historialliseen pääkaupunkiin."
+  },
+  "kysymykset": [
     {
-     "otsikko": "Erebuni, valloituksen linnoitus",
-     "teksti": "Erebunin linnoituksen perusti 782 eaa. Urartun kuningas Argishti I Arin Berd -kukkulalle, joka kohoaa Araratin tasangon reunalla 65 metriä. Perustamiskirjoitus löytyi kukkulalta syksyllä 1950 Konstantin Hovhannisjanin johtamassa kaivausretkikunnassa, ja siinä Argishti kertoo rakentaneensa linnoituksen jumala Khaldin suuruuden nimissä ja nimenneensä sen Erebuniksi. Kaivauksissa paljastuivat kuninkaan palatsi, pylväillä varustettu kokoushalli, Khaldin temppeli ja yli sata huonetta. Jerevanin nimen uskotaan juontuvan Erebunista: urartun verbi erebu-ni tarkoittaa lähteen mukaan 'ottaa, vallata'.",
-     "tiedosto": "Erebuni Fortress, Arin Berd 01.jpg",
-     "lyhyt": "Erebunin linnoitus Arin Berd -kukkulalla, jonka Urartun kuningas Argishti I perusti 782 eaa.",
-     "selite": "Erebunin linnoitusta ei koskaan hylätty kokonaan, vaan asutus jatkui ja kasvoi Jerevaniksi. Erebunin museo perustettiin 1968, samana vuonna kun Jerevanin 2 750-vuotisjuhla pidettiin.",
-     "lahde": "Avetisyan Ani, Wikimedia Commons (CC BY-SA 4.0)",
-     "wiki": "Erebuni Fortress"
-    },
-    {
-     "otsikko": "Erivan ennen kaupunkistatusta",
-     "teksti": "Isoisän matkavuonna 1873 Jerevan oli Erivanin kuvernementin keskus Venäjän keisarikunnassa, johon kaupunki oli siirtynyt 1827–28. Kaupunkistatuksen se sai vasta 1.10.1879 Aleksanteri II:n asetuksella. Lähteiden mukaan vanha Erivan oli pieni kaupunki, jossa oli kapeita katuja ja kujia sekä yksikerroksisia savitaloja tasakattoineen. Kaupunginosia olivat keskusta Shahar, kauppa-alue Ghantar sekä Kond, Dzoragyugh, Nork ja Shentagh. Hrazdanin rotkon rannalla oli ottomaanien 1582–83 rakentama Erivanin linnoitus, jonka venäläiset olivat vallanneet lokakuussa 1827. Muutos alkoi pian: ensimmäinen kirjapaino perustettiin 1874 ja ensimmäinen teatteri 1879.",
-     "tiedosto": "Ararat. 6, Bazar d'Erivan - (mission) G. Bapst ; (photogr.) Bapst ; (photogr. reprod. par) Molteni (pour la conférence donnée par) Bapst - btv1b53101419s.jpg",
-     "lyhyt": "Erivanin basaari ranskalaisen Germain Bapstin retkikunnan vedoksessa.",
-     "selite": "Vedos on ranskalaisen Germain Bapstin retkikunnan kuvasarjasta ja esittää Erivanin basaaria ennen Tamanianin yleissuunnitelman aikaisia purkuja.",
-     "lahde": "Bapst, Germain (1853-1921), Wikimedia Commons (PD)",
-     "wiki": "History of Yerevan"
-    },
-    {
-     "otsikko": "Tuffikaupunki syntyy",
-     "teksti": "Jerevanin yleissuunnitelman laati arkkitehti Alexander Tamanian, ja se hyväksyttiin 1924. Lähteen mukaan Jerevan oli ensimmäinen Neuvostoliiton kaupunki, jolle laadittiin yleissuunnitelma. Tamanian yhdisti uusklassismin Armenian omaan tuffikiveen ja sijoitti säteittäis-kehämäisen kaupunkisuunnitelmansa vanhan katuverkon päälle, mikä johti monien historiallisten rakennusten purkamiseen. Tasavallan aukion viisi pääraikennusta rakennettiin vaaleanpunaisesta ja keltaisesta tuffista basalttijalustalle: työt alkoivat 1926 hallituksen talolla, ja viimeinen rakennus, kansallisgalleria, valmistui 1977.",
-     "tiedosto": "Yerevan, Government House, Government of Armenia, Armenia.jpg",
-     "lyhyt": "Hallituksen talo Tasavallan aukiolla oli aukion ensimmäinen valmistunut rakennus.",
-     "selite": "Hallituksen talon rakennustyöt alkoivat 1926, ja se on yksi aukiota kehystävistä viidestä tuffirakennuksesta.",
-     "lahde": "Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)",
-     "wiki": "Alexander Tamanian"
-    },
-    {
-     "otsikko": "Portaikko, josta tuli taidemuseo",
-     "teksti": "Kaskadin idea oli jo Tamanianin 1920-luvun suunnitelmassa: keskusta oli tarkoitus yhdistää pohjoisille kukkuloille terasseilla, vesiputouksilla ja kukkapenkeillä, mutta hanke jäi rahoituksen puutteessa toteuttamatta. Portaikon suunnittelu alkoi 1970-luvun alussa, ja rakentaminen keskeytyi 1980-luvun lopulla. Hallitus päätti 2002 saattaa kompleksin loppuun, ja Cafesjian Center for the Arts avattiin marraskuussa 2009. Viiden terassin portaikossa on yli 550 askelmaa, ja sisällä kulkevat liukuportaat. Taidekeskuksen kokoelmat perustuvat Gerard L. Cafesjianin kokoelmaan, jossa on lähteen mukaan yli 5 000 teosta.",
-     "tiedosto": "CCA Cafesjian Sculpture Garden.jpg",
-     "lyhyt": "Cafesjianin veistospuutarha Kaskadin edustalla, jossa on kansainvälisten taiteilijoiden töitä.",
-     "selite": "Veistospuutarhassa on muun muassa Fernando Boteron, Jaume Plesnan, Lynn Chadwickin ja Barry Flanaganin töitä.",
-     "lahde": "Maria.hovsepyan, Wikimedia Commons (CC BY-SA 4.0)",
-     "wiki": "Yerevan Cascade"
-    }
-   ],
-   "matkailijalle": {
-    "kuva": {
-     "tiedosto": "Lavash in a tonir oven Armenia 2026.jpg",
-     "lyhyt": "Lavash on ohut leipä, joka paistetaan perinteisessä savi-tonir-uunissa.",
-     "selite": "Lavash on armenialaisen ruokapöydän perusleipä, jota syödään mezejen ja grillilihan kanssa.",
-     "lahde": "Furkan Akkurt, Wikimedia Commons (CC BY-SA 4.0)"
-    },
-    "kappale": "Jerevan on Armenian pääkaupunki ja maan suurin kaupunki, jossa asuu 1 147 600 ihmistä (väestöarvio 1.1.2026). Kaupunki seisoo Hrazdan-joen rotkon äärellä keskimäärin 990 metrin korkeudessa, ja Ararat-vuori näkyy kaupungin jokaisesta osasta. Keskusta on kompakti ja helppo kävellä, ja suuri osa sen rakennuksista on vaaleanpunaista tuffikiveä. Ilmasto on mannermainen: kesät ovat pitkiä, kuumia ja kuivia, talvet lyhyitä, kylmiä ja lumisia. Pöytään kuuluvat lavash-leipä, grillattu khorovats-liha ja lahmajoun.",
-    "artikkeli": {
-     "nimi": "Matkailijan Jerevan",
-     "taitto": "opas",
-     "teksti": "Kaupunki, jonka kattojen yllä kohoaa Ararat: aamulla tuffiaukio, päivällä käsikirjoitusten arkisto ja illalla Kaskadin portaat.",
-     "nosto": "Tasavallan aukiolta pääsee kävellen Pohjoiselle puistokadulle, oopperalle ja Kaskadille. Metro on yksilinjainen, ja asemien katoissa roikkuu kattokruunuja.",
-     "jaksot": [
-      {
-       "otsikko": "Perille ja liikkeelle",
-       "teksti": "Armenian pääportti on Zvartnotsin kansainvälinen lentoasema (EVN), noin 12–15 kilometriä keskustasta länteen; kotimaanlentoja ei ole, koska maa on pieni. Keskustaan pääsee lentoasemalta bussilla tai taksilla. Jerevanin keskusta on kompakti ja helppo kävellä. Metro on yksilinjainen: se on 12,1 kilometriä pitkä, siinä on kymmenen asemaa ja se on palvellut vuodesta 1981. Lisäksi liikennöivät linja-autot, johdinautot ja minibussit, ja raitiotie lakkautettiin tammikuussa 2004. Käteismaksu julkisessa liikenteessä lakkautettiin tammikuussa 2025, joten matkan maksaa maksukortilla, matkakortilla tai mobiililipulla. Taksin tilaamiseen sopivat sovellukset gg ja Yandex.",
-       "kuva": {
-        "tiedosto": "Trolleybus LiAZ-5280 (VZTM) in Yerevan, №010.jpg",
-        "lyhyt": "Johdinautot ovat liikennöineet Jerevanissa vuodesta 1949, ja linjoja on viisi.",
-        "selite": "Jerevanin johdinautoliikenne alkoi 1949, ja nykyisin linjoja on viisi, T1–T5.",
-        "lahde": "ArtoLeys, Wikimedia Commons (CC0)"
-       }
-      },
-      {
-       "otsikko": "Tasavallan aukiolta Kaskadiin",
-       "teksti": "Tasavallan aukio on kaupungin keskusaukio, jossa viisi tuffirakennusta kehystää soikeaa liikenneympyrää ja suihkulähdealtaita. Uudistetut musiikkisuihkulähteet avattiin syyskuussa 2007, ja ne esiintyvät useimpina iltoina huhti–lokakuussa. Pohjoinen puistokatu on 450 metriä pitkä ja 27 metriä leveä kävelykatu, joka avattiin 16.11.2007 ja yhdistää Abovyanin kadun Vapaudenaukioon. Vapaudenaukion tuntumassa ovat oopperatalo, puisto ja Joutsenjärvi. Kaskadin terassit ja liukuportaat vievät kukkulalle, ja portaat kannattaa kiivetä illalla, jolloin näkyy kaupunki ja Ararat.",
-       "kuva": {
-        "tiedosto": "Northern Avenue Yerevan 01.jpg",
-        "lyhyt": "Pohjoinen puistokatu on 450 metriä pitkä kävelykatu, joka avattiin virallisesti 16.11.2007.",
-        "selite": "Pohjoinen puistokatu on 27 metriä leveä, ja se yhdistää Abovyanin kadun Vapaudenaukioon.",
-        "lahde": "23artashes, Wikimedia Commons (CC BY-SA 4.0)"
-       }
-      },
-      {
-       "otsikko": "Vanha Erivan ja käsikirjoitukset",
-       "teksti": "Matenadaran seisoo Mashtotsin kadun koillispäässä, ja sinne kannattaa tutustua opastetulla kierroksella. Samalla kadulla on Sininen moskeija, jonka sisäänkäynti tulee Mashtotsin kadulta. Hrazdanin vasemmalla rannalla seisoo Pyhän Sargiksen katedraali, ja Shaharin vanhassa kaupunginosassa on Zoravorin kirkko; kirkot ovat avoinna aamusta myöhään iltaan. Erebunin linnoitus on noin 4,6 kilometrin päässä Tasavallan aukiolta kaakkoon, ja lähteen mukaan se on Armenian parhaiten säilynyt urartulainen linnake.",
-       "kuva": {
-        "tiedosto": "Blue Mosque, Yerevan in 2019 04.jpg",
-        "lyhyt": "Sininen moskeija rakennettiin noin 1765–66 Erivanin kaanin tilauksesta pääpiirin moskeijaksi.",
-        "selite": "Moskeijan minaretti on 24 metriä korkea, ja se oli 1800-luvun Jerevanin korkein rakennelma.",
-        "lahde": "23artashes, Wikimedia Commons (CC BY-SA 4.0)"
-       }
-      },
-      {
-       "otsikko": "Mitä täällä syödään",
-       "teksti": "Lavash on ohut leipä, joka paistetaan perinteisessä savi-tonir-uunissa ja jota syödään mezejen ja grillilihan kanssa. Khorovats on armenialaistyylinen grilliruoka lihasta ja vihanneksista. Lahmajoun on ohut taikinapohja, jonka päällä on yrtti–lihatahna, ja sitä myydään katukojuista. Juomista tan on jogurttijuoma, ja tarjolla on myös armenialaista kahvia, joka valmistetaan kardemummalla, sekä granaattiomenamehua. Konjakki on Armeniassa nimeltään konyak, ja Jerevanista tuli 1890–1900-luvuilla konjakin tuotantokeskus. Vernissage-ulkomarkkina Aram- ja Buzand-kaduilla toimii erityisesti viikonloppuisin.",
-       "kuva": {
-        "tiedosto": "Lavash stacked at GUM market in Yerevan, Armenia.jpg",
-        "lyhyt": "Lavash on ohut perinteinen armenialainen leipä, jota myydään myös toreilla.",
-        "selite": "Lavashia syödään mezejen ja grillilihan kanssa, ja se paistetaan perinteisessä savi-tonir-uunissa.",
-        "lahde": "Poshotenk, Wikimedia Commons (CC BY-SA 4.0)"
-       }
-      },
-      {
-       "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Jerevanin ilmasto on mannermainen aroilmasto: kesät ovat pitkiä, kuumia ja kuivia, talvet lyhyitä, kylmiä ja lumisia. Vuosien 1991–2020 keskiarvojen mukaan tammikuun keskilämpötila on −3,5 astetta ja heinäkuun 26,8 astetta, ja sadetta tulee noin 363 millimetriä vuodessa; kuivimmat kuukaudet ovat elo- ja syyskuu, joina sataa kymmenen millimetriä. Elokuussa lämpötila voi nousta 40 asteeseen, ja tammikuussa pakkanen on usein 15 astetta tai kovempi. Korkein ennätys, 43,7 astetta, mitattiin 12.7.2018. Kevät ja syksy ovat lempeitä, ja pitkien keskiarvojen mukaan lokakuun keskilämpötila on 14 astetta."
-      }
-     ],
-     "matkailu": {
-      "parasta": [
-       { "mita": "Kaskadi ja Cafesjianin taidekeskus", "tahdet": 3, "selite": "Portaat, terassit ja veistospuutarha; illalla näkyy kaupunki ja Ararat." },
-       { "mita": "Matenadaran", "tahdet": 3, "selite": "Armenialaisten käsikirjoitusten arkisto, jossa kannattaa käydä opastetulla kierroksella." },
-       { "mita": "Tasavallan aukio illalla", "tahdet": 3, "selite": "Tuffirakennukset ja musiikkisuihkulähteet, jotka esiintyvät useimpina iltoina huhti–lokakuussa." },
-       { "mita": "Erebunin linnoitus", "tahdet": 2, "selite": "Urartulainen linnake Arin Berd -kukkulalla, noin 4,6 kilometriä keskustasta kaakkoon." },
-       { "mita": "Sininen moskeija", "tahdet": 2, "selite": "Laatoitettu moskeija ja sen sisäpiha Mashtotsin kadun varrella." }
+      "q": "Mikä vuori on Jerevanin pääsymboli ja näkyy kaupungin jokaisesta osasta?",
+      "options": [
+        "Aragats",
+        "Elbrus",
+        "Ararat",
+        "Kazbek"
       ],
-      "hyvaTietaa": [
-       { "otsikko": "Keskusta on rauhallinen", "teksti": "Keskeisillä alueilla liikkuu mukavasti, mutta väenpaljoudessa kannattaa varoa taskuvarkaita. Tarkista ennen lähtöä ajantasaiset matkustustiedot." },
-       { "otsikko": "Taksi sovelluksella", "teksti": "Taksikuskien hinnoista riidellään helposti, joten käytä sovellusta tai sovi hinta etukäteen. Uber ja Bolt eivät toimi." },
-       { "otsikko": "Liikenne on vilkasta", "teksti": "Työmaita ja kuoppia on, joten tien ylitykseen kannattaa käyttää suojateitä." },
-       { "otsikko": "Viisumi ja maksut", "teksti": "EU-kansalaiset voivat matkustaa Armeniaan ilman viisumia 180 päivää vuodessa; tarkista voimassa oleva tieto ennen matkaa. Julkisessa liikenteessä käteismaksu on lopetettu." }
+      "correct": 2,
+      "level": 1,
+      "hint": "Vuori on kuvattuna myös kaupungin sinetin kilvessä.",
+      "fact": "Ararat on kaupungin pääsymboli, ja se näkyy kaupungin jokaisesta osasta.",
+      "source": "https://en.wikipedia.org/wiki/Yerevan"
+    },
+    {
+      "q": "Minä vuonna Urartun kuningas Argishti I perusti Erebunin linnoituksen, josta Jerevanin nimen uskotaan juontuvan?",
+      "options": [
+        "782 eaa.",
+        "882 eaa.",
+        "682 eaa.",
+        "582 eaa."
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Perustamiskirjoituksessa kuningas kertoo rakentaneensa linnoituksen jumala Khaldin suuruuden nimissä.",
+      "fact": "Erebuni perustettiin Arin Berd -kukkulalle, ja sen perustamiskirjoitus löytyi kukkulalta syksyllä 1950.",
+      "source": "https://en.wikipedia.org/wiki/Erebuni_Fortress"
+    },
+    {
+      "q": "Kuka arkkitehti laati Jerevanin vuoden 1924 yleissuunnitelman?",
+      "options": [
+        "Sargis Gurzadyan",
+        "Varazdat Arevshatyan",
+        "Boris Mehrabyan",
+        "Alexander Tamanian"
+      ],
+      "correct": 3,
+      "level": 2,
+      "hint": "Hän suunnitteli myös Tasavallan aukion ja oopperatalon.",
+      "fact": "Tamanian yhdisti uusklassismin Armenian omaan tuffikiveen, ja hänen suunnitelmansa on säteittäis-kehämäinen.",
+      "source": "https://en.wikipedia.org/wiki/Alexander_Tamanian"
+    },
+    {
+      "q": "Millä nimellä länsimaiset matkailijat kutsuivat Jerevanin Sinistä moskeijaa?",
+      "options": [
+        "Kara Jami",
+        "Gök Jami",
+        "Ak Jami",
+        "Ulu Jami"
+      ],
+      "correct": 1,
+      "level": 3,
+      "hint": "Nimi viittaa moskeijan laatoituksen väriin.",
+      "fact": "Matkailijat H. F. B. Lynch ja Luigi Villari kutsuivat moskeijaa nimellä Gök Jami, 'taivaansininen moskeija'.",
+      "source": "https://en.wikipedia.org/wiki/Blue_Mosque,_Yerevan"
+    },
+    {
+      "q": "Millä nimellä Jerevan tunnettiin venäläisen vallan aikana 1800-luvulla?",
+      "options": [
+        "Alexandropol",
+        "Vagharshapat",
+        "Erivan",
+        "Dvin"
+      ],
+      "correct": 2,
+      "level": 3,
+      "hint": "Venäjänkielinen muoto muistuttaa nykyistä nimeä.",
+      "fact": "Nimi Erivan oli venäläisen vallan aikainen virallinen muoto, ja Jerevaniksi se palautettiin 1936.",
+      "source": "https://en.wikipedia.org/wiki/Yerevan"
+    }
+  ],
+  "tiedot": [
+    "Jerevanin lipussa on kaksitoista pientä punaista kolmiota, ja ne kuvaavat Armenian kahtatoista historiallista pääkaupunkia.",
+    "Vardavar-juhlana, 98 päivää pääsiäisen jälkeen, tuntemattomatkin saavat kastella toisiaan vedellä, ja suosituin juhlapaikka on Joutsenjärvi.",
+    "Jerevan sijaitsee keskimäärin 990 metrin korkeudessa, ja lähteen mukaan se on viidenkymmenen korkeimmalla olevan yli miljoonan asukkaan kaupungin joukossa."
+  ],
+  "valokuva": {
+    "tiedosto": "Ararat. 7, Mosquée d'Erivan - (mission) G. Bapst ; (photogr.) Bapst ; (photogr. reprod. par) Molteni (pour la conférence donnée par) Bapst - btv1b531014279.jpg",
+    "vuosi": "1800-luku",
+    "lahde": "Bapst, Germain (1853-1921), Commons (PD)",
+    "lyhyt": "Erivanin moskeija, nykyinen Sininen moskeija, ranskalaisen Germain Bapstin vedoksessa.",
+    "selite": "Moskeija rakennettiin noin 1765–66 Erivanin kaanikunnan hallitsijan tilauksesta kaupungin pääasialliseksi perjantaimoskeijaksi. Vedoksen tekijä on ranskalainen Germain Bapst."
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Jerevan",
+      "johdanto": "Isoisän matkavuonna 1873 Jerevan tunnettiin nimellä Erivan ja oli vielä matala savitalojen kaupunki Hrazdanin rotkon äärellä. Nykyinen vaaleanpunertava tuffikaupunki syntyi 1920-luvun suunnitelman pohjalta, mutta kaupungin juuret ovat Erebunin linnoituksessa vuodelta 782 eaa.",
+      "kansikuvat": [
+        {
+          "tiedosto": "Yerevan skyline at dawn.jpg",
+          "lyhyt": "Jerevan seisoo Araratin tasangon reunalla, ja Ararat on kaupungin pääsymboli.",
+          "selite": "Jerevan seisoo Hrazdan-joen rotkon äärellä Araratin tasangon koillisreunalla, ja Ararat-vuori on kaupungin pääsymboli.",
+          "lahde": "Սէրուժ Ուրիշեան (Serouj Ourishian), Wikimedia Commons (CC BY-SA 3.0)"
+        },
+        {
+          "tiedosto": "Yerevan, Republic Square of Yerevan, Armenia.jpg",
+          "lyhyt": "Tasavallan aukio on Jerevanin keskusaukio, jota ympäröi viisi tuffirakennusta.",
+          "selite": "Tasavallan aukion suunnitteli Alexander Tamanian vuoden 1924 yleissuunnitelmassa, ja rakennustyöt kestivät vuodesta 1926 vuoteen 1977.",
+          "lahde": "Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)"
+        },
+        {
+          "tiedosto": "Cascada, Ereván, Armenia, 2016-10-03, DD 18.jpg",
+          "lyhyt": "Kaskadi on viiden terassin portaikko, joka yhdistää keskustan pohjoisille kukkuloille.",
+          "selite": "Kaskadin idea oli jo Tamanianin 1920-luvun suunnitelmassa, ja portaikon sisällä toimii Cafesjian Center for the Arts vuodesta 2009.",
+          "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)"
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Erebuni, valloituksen linnoitus",
+          "teksti": "Erebunin linnoituksen perusti 782 eaa. Urartun kuningas Argishti I Arin Berd -kukkulalle, joka kohoaa Araratin tasangon reunalla 65 metriä. Perustamiskirjoitus löytyi kukkulalta syksyllä 1950 Konstantin Hovhannisjanin johtamassa kaivausretkikunnassa, ja siinä Argishti kertoo rakentaneensa linnoituksen jumala Khaldin suuruuden nimissä ja nimenneensä sen Erebuniksi. Kaivauksissa paljastuivat kuninkaan palatsi, pylväillä varustettu kokoushalli, Khaldin temppeli ja yli sata huonetta. Jerevanin nimen uskotaan juontuvan Erebunista: urartun verbi erebu-ni tarkoittaa lähteen mukaan 'ottaa, vallata'.",
+          "tiedosto": "Erebuni Fortress, Arin Berd 01.jpg",
+          "lyhyt": "Erebunin linnoitus Arin Berd -kukkulalla, jonka Urartun kuningas Argishti I perusti 782 eaa.",
+          "selite": "Erebunin linnoitusta ei koskaan hylätty kokonaan, vaan asutus jatkui ja kasvoi Jerevaniksi. Erebunin museo perustettiin 1968, samana vuonna kun Jerevanin 2 750-vuotisjuhla pidettiin.",
+          "lahde": "Avetisyan Ani, Wikimedia Commons (CC BY-SA 4.0)",
+          "wiki": "Erebuni Fortress"
+        },
+        {
+          "otsikko": "Erivan ennen kaupunkistatusta",
+          "teksti": "Isoisän matkavuonna 1873 Jerevan oli Erivanin kuvernementin keskus Venäjän keisarikunnassa, johon kaupunki oli siirtynyt 1827–28. Kaupunkistatuksen se sai vasta 1.10.1879 Aleksanteri II:n asetuksella. Lähteiden mukaan vanha Erivan oli pieni kaupunki, jossa oli kapeita katuja ja kujia sekä yksikerroksisia savitaloja tasakattoineen. Kaupunginosia olivat keskusta Shahar, kauppa-alue Ghantar sekä Kond, Dzoragyugh, Nork ja Shentagh. Hrazdanin rotkon rannalla oli ottomaanien 1582–83 rakentama Erivanin linnoitus, jonka venäläiset olivat vallanneet lokakuussa 1827. Muutos alkoi pian: ensimmäinen kirjapaino perustettiin 1874 ja ensimmäinen teatteri 1879.",
+          "tiedosto": "Ararat. 6, Bazar d'Erivan - (mission) G. Bapst ; (photogr.) Bapst ; (photogr. reprod. par) Molteni (pour la conférence donnée par) Bapst - btv1b53101419s.jpg",
+          "lyhyt": "Erivanin basaari ranskalaisen Germain Bapstin retkikunnan vedoksessa.",
+          "selite": "Vedos on ranskalaisen Germain Bapstin retkikunnan kuvasarjasta ja esittää Erivanin basaaria ennen Tamanianin yleissuunnitelman aikaisia purkuja.",
+          "lahde": "Bapst, Germain (1853-1921), Wikimedia Commons (PD)",
+          "wiki": "History of Yerevan"
+        },
+        {
+          "otsikko": "Tuffikaupunki syntyy",
+          "teksti": "Jerevanin yleissuunnitelman laati arkkitehti Alexander Tamanian, ja se hyväksyttiin 1924. Lähteen mukaan Jerevan oli ensimmäinen Neuvostoliiton kaupunki, jolle laadittiin yleissuunnitelma. Tamanian yhdisti uusklassismin Armenian omaan tuffikiveen ja sijoitti säteittäis-kehämäisen kaupunkisuunnitelmansa vanhan katuverkon päälle, mikä johti monien historiallisten rakennusten purkamiseen. Tasavallan aukion viisi päärakennusta rakennettiin vaaleanpunaisesta ja keltaisesta tuffista basalttijalustalle: työt alkoivat 1926 hallituksen talolla, ja viimeinen rakennus, kansallisgalleria, valmistui 1977.",
+          "tiedosto": "Yerevan, Government House, Government of Armenia, Armenia.jpg",
+          "lyhyt": "Hallituksen talon rakennustyöt aloittivat Tasavallan aukion rakentamisen 1926.",
+          "selite": "Hallituksen talon rakennustyöt alkoivat 1926, ja se on yksi aukiota kehystävistä viidestä tuffirakennuksesta.",
+          "lahde": "Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)",
+          "wiki": "Alexander Tamanian"
+        },
+        {
+          "otsikko": "Portaikko, josta tuli taidemuseo",
+          "teksti": "Kaskadin idea oli jo Tamanianin 1920-luvun suunnitelmassa: keskusta oli tarkoitus yhdistää pohjoisille kukkuloille terasseilla, vesiputouksilla ja kukkapenkeillä, mutta hanke jäi rahoituksen puutteessa toteuttamatta. Portaikon suunnittelu alkoi 1970-luvun alussa, ja rakentaminen keskeytyi 1980-luvun lopulla. Hallitus päätti 2002 saattaa kompleksin loppuun, ja Cafesjian Center for the Arts avattiin marraskuussa 2009. Viiden terassin portaikossa on yli 550 askelmaa, ja sisällä kulkevat liukuportaat. Taidekeskuksen kokoelmat perustuvat Gerard L. Cafesjianin kokoelmaan, jossa on lähteen mukaan yli 5 000 teosta (Kaskadin museo esittelee niistä yli 500).",
+          "tiedosto": "CCA Cafesjian Sculpture Garden.jpg",
+          "lyhyt": "Cafesjianin veistospuutarha Kaskadin edustalla, jossa on kansainvälisten taiteilijoiden töitä.",
+          "selite": "Veistospuutarhassa on muun muassa Fernando Boteron, Jaume Plensan, Lynn Chadwickin ja Barry Flanaganin töitä.",
+          "lahde": "Maria.hovsepyan, Wikimedia Commons (CC BY-SA 4.0)",
+          "wiki": "Yerevan Cascade"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "Lavash in a tonir oven Armenia 2026.jpg",
+          "lyhyt": "Lavash on ohut leipä, joka paistetaan perinteisessä savi-tonir-uunissa.",
+          "selite": "Lavash on armenialaisen ruokapöydän perusleipä, jota syödään alkupalojen, juustojen ja grillilihan kanssa.",
+          "lahde": "Furkan Akkurt, Wikimedia Commons (CC BY-SA 4.0)"
+        },
+        "kappale": "Jerevan on Armenian pääkaupunki ja maan suurin kaupunki, jossa asuu 1 147 600 ihmistä (väestöarvio 1.1.2026). Kaupunki seisoo Hrazdan-joen rotkon äärellä keskimäärin 990 metrin korkeudessa, ja Ararat-vuori näkyy kaupungin jokaisesta osasta. Keskusta on kompakti ja helppo kävellä, ja Tasavallan aukion rakennukset ovat vaaleanpunaista ja keltaista tuffikiveä. Ilmasto on mannermainen: kesät ovat pitkiä, kuumia ja kuivia, talvet lyhyitä, kylmiä ja lumisia. Pöytään kuuluvat lavash-leipä, grillattu khorovats-liha ja lahmajoun.",
+        "artikkeli": {
+          "nimi": "Matkailijan Jerevan",
+          "taitto": "opas",
+          "teksti": "Kaupunki, jonka kattojen yllä kohoaa Ararat: aamulla tuffiaukio, päivällä käsikirjoitusten arkisto ja illalla Kaskadin portaat.",
+          "nosto": "Tasavallan aukiolta pääsee kävellen Pohjoiselle puistokadulle, oopperalle ja Kaskadille. Metro on yksilinjainen, ja asemien katoissa roikkuu kattokruunuja.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Armenian pääportti on Zvartnotsin kansainvälinen lentoasema (EVN), noin 12–15 kilometriä keskustasta länteen; kotimaanlentoja ei ole, koska maa on pieni. Keskustaan pääsee lentoasemalta bussilla tai taksilla. Jerevanin keskusta on kompakti ja helppo kävellä. Metro on yksilinjainen: lähteiden mukaan se on noin 12–13 kilometriä pitkä, siinä on kymmenen asemaa ja se on palvellut vuodesta 1981. Lisäksi liikennöivät linja-autot, johdinautot ja minibussit, ja raitiotie lakkautettiin tammikuussa 2004. Käteismaksu julkisessa liikenteessä lakkautettiin tammikuussa 2025, joten matkan maksaa maksukortilla, matkakortilla tai mobiililipulla. Taksin tilaamiseen sopivat sovellukset gg ja Yandex.",
+              "kuva": {
+                "tiedosto": "Trolleybus LiAZ-5280 (VZTM) in Yerevan, №010.jpg",
+                "lyhyt": "Johdinautot ovat liikennöineet Jerevanissa vuodesta 1949, ja linjoja on viisi.",
+                "selite": "Jerevanin johdinautoliikenne alkoi 1949, ja nykyisin linjoja on viisi, T1–T5.",
+                "lahde": "ArtoLeys, Wikimedia Commons (CC0)"
+              }
+            },
+            {
+              "otsikko": "Tasavallan aukiolta Kaskadiin",
+              "teksti": "Tasavallan aukio on kaupungin keskusaukio, jossa viisi tuffirakennusta kehystää soikeaa liikenneympyrää ja suihkulähdealtaita. Uudistetut musiikkisuihkulähteet avattiin syyskuussa 2007, ja ne esiintyvät useimpina iltoina huhti–lokakuussa. Pohjoinen puistokatu on 450 metriä pitkä ja 27 metriä leveä kävelykatu, joka avattiin 16.11.2007 ja yhdistää Abovyanin kadun Vapaudenaukioon. Vapaudenaukion tuntumassa ovat oopperatalo, puisto ja Joutsenjärvi. Kaskadin terassit ja liukuportaat vievät kukkulalle, ja portaat kannattaa kiivetä illalla, jolloin näkyy kaupunki ja Ararat.",
+              "kuva": {
+                "tiedosto": "Northern Avenue Yerevan 01.jpg",
+                "lyhyt": "Pohjoinen puistokatu on 450 metriä pitkä kävelykatu, joka avattiin virallisesti 16.11.2007.",
+                "selite": "Pohjoinen puistokatu on 27 metriä leveä, ja se yhdistää Abovyanin kadun Vapaudenaukioon.",
+                "lahde": "23artashes, Wikimedia Commons (CC BY-SA 4.0)"
+              }
+            },
+            {
+              "otsikko": "Vanha Erivan ja käsikirjoitukset",
+              "teksti": "Matenadaran seisoo Mashtotsin kadun koillispäässä, ja sinne kannattaa tutustua opastetulla kierroksella. Samalla kadulla on Sininen moskeija, jonka sisäänkäynti tulee Mashtotsin kadulta. Hrazdanin vasemmalla rannalla seisoo Pyhän Sargiksen katedraali, ja Shaharin vanhassa kaupunginosassa on Zoravorin kirkko; kirkot ovat avoinna aamusta myöhään iltaan. Erebunin linnoitus on noin 4,6 kilometrin päässä Tasavallan aukiolta kaakkoon, ja lähteen mukaan se on yksi Armenian parhaiten säilyneistä urartulaisista linnakkeista.",
+              "kuva": {
+                "tiedosto": "Blue Mosque, Yerevan in 2019 04.jpg",
+                "lyhyt": "Sininen moskeija rakennettiin noin 1765–66 Erivanin kaanin tilauksesta perjantaimoskeijaksi.",
+                "selite": "Moskeijan minaretti on 24 metriä korkea, ja se oli 1800-luvun Jerevanin korkein rakennelma.",
+                "lahde": "23artashes, Wikimedia Commons (CC BY-SA 4.0)"
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Lavash on ohut leipä, joka paistetaan perinteisessä savi-tonir-uunissa ja jota syödään alkupalojen, juustojen ja grillilihan kanssa. Khorovats on armenialaistyylinen grilliruoka lihasta ja vihanneksista. Lahmajoun on ohut taikinapohja, jonka päällä on yrtti–lihatahna, ja sitä myydään katukojuista. Juomista tan on jogurttijuoma, ja tarjolla on myös armenialaista kahvia, joka valmistetaan kardemummalla, sekä granaattiomenamehua. Konjakki on Armeniassa nimeltään konyak, ja Jerevanista tuli 1890–1900-luvuilla konjakin tuotantokeskus. Vernissage-ulkomarkkina Aram- ja Buzand-kaduilla toimii erityisesti viikonloppuisin.",
+              "kuva": {
+                "tiedosto": "Lavash stacked at GUM market in Yerevan, Armenia.jpg",
+                "lyhyt": "Lavash on ohut perinteinen armenialainen leipä, jota myydään myös toreilla.",
+                "selite": "Lavashia syödään alkupalojen, juustojen ja grillilihan kanssa, ja se paistetaan perinteisessä savi-tonir-uunissa.",
+                "lahde": "Poshotenk, Wikimedia Commons (CC BY-SA 4.0)"
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Jerevanin ilmasto on mannermainen aroilmasto: kesät ovat pitkiä, kuumia ja kuivia, talvet lyhyitä, kylmiä ja lumisia. Vuosien 1991–2020 keskiarvojen mukaan tammikuun keskilämpötila on −3,5 astetta ja heinäkuun 26,8 astetta, ja sadetta tulee noin 363 millimetriä vuodessa; kuivimmat kuukaudet ovat elo- ja syyskuu, joina sataa kymmenen millimetriä. Elokuussa lämpötila voi nousta 40 asteeseen, ja tammikuussa pakkanen on usein 15 astetta tai kovempi. Korkein ennätys, 43,7 astetta, mitattiin 12.7.2018. Kevät ja syksy ovat lempeitä, ja pitkien keskiarvojen mukaan lokakuun keskilämpötila on 14 astetta."
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Kaskadi ja Cafesjianin taidekeskus",
+                "tahdet": 3,
+                "selite": "Portaat, terassit ja veistospuutarha; illalla näkyy kaupunki ja Ararat."
+              },
+              {
+                "mita": "Matenadaran",
+                "tahdet": 3,
+                "selite": "Armenialaisten käsikirjoitusten arkisto, jossa kannattaa käydä opastetulla kierroksella."
+              },
+              {
+                "mita": "Tasavallan aukio illalla",
+                "tahdet": 3,
+                "selite": "Tuffirakennukset ja musiikkisuihkulähteet, jotka esiintyvät useimpina iltoina huhti–lokakuussa."
+              },
+              {
+                "mita": "Erebunin linnoitus",
+                "tahdet": 2,
+                "selite": "Urartulainen linnake Arin Berd -kukkulalla, noin 4,6 kilometriä keskustasta kaakkoon."
+              },
+              {
+                "mita": "Sininen moskeija",
+                "tahdet": 2,
+                "selite": "Laatoitettu moskeija ja sen sisäpiha Mashtotsin kadun varrella."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Keskusta on rauhallinen",
+                "teksti": "Keskeisillä alueilla liikkuu mukavasti, mutta väenpaljoudessa kannattaa varoa taskuvarkaita. Tarkista ennen lähtöä ajantasaiset matkustustiedot."
+              },
+              {
+                "otsikko": "Taksi sovelluksella",
+                "teksti": "Taksikuskien hinnoista riidellään helposti, joten käytä sovellusta tai sovi hinta etukäteen. Uber ja Bolt eivät toimi."
+              },
+              {
+                "otsikko": "Liikenne on vilkasta",
+                "teksti": "Työmaita ja kuoppia on, joten tien ylitykseen kannattaa käyttää suojateitä."
+              },
+              {
+                "otsikko": "Viisumi ja maksut",
+                "teksti": "EU-kansalaiset voivat matkustaa Armeniaan ilman viisumia 180 päivää vuodessa; tarkista voimassa oleva tieto ennen matkaa. Julkisessa liikenteessä käteismaksu on lopetettu."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "kirjallisuus",
+      "nimi": "Kirjojen kaupunki",
+      "johdanto": "Armenialaisten oma kirjaimisto syntyi noin vuonna 405, ja sen jälkeen kirjoitettua on kerätty Jerevaniin. Kaupunki oli UNESCOn maailman kirjapääkaupunki 2012, ja Matenadaran säilyttää suurta kokoelmaa armenialaisia käsikirjoituksia.",
+      "tehtava": {
+        "kysymys": "Mikä käsikirjoitus on lähteen mukaan vanhin säilynyt täydellinen armenialainen käsikirjoitus?",
+        "vaihtoehdot": [
+          "Lazarian evankeliumi",
+          "Echmiadzinin evankeliumi",
+          "Vehamor-evankeliumi",
+          "Mughnin evankeliumi"
+        ],
+        "oikea": 2,
+        "fakta": "Matenadaran sai Vehamor-evankeliumin lahjoituksena 1975, ja sen ajoitetaan todennäköisesti 600-luvulle."
+      },
+      "nostot": [
+        {
+          "otsikko": "Käsikirjoitusten arkisto",
+          "teksti": "Sana matenadaran yhdistää sanat 'kirja' ja 'säilytyspaikka', ja keskiaikaisessa Armeniassa se tarkoitti kirjastoa, koska kaikki kirjat olivat käsin kirjoitettuja. Nykyinen laitos perustettiin 3.3.1959 Etchmiadzinin kokoelman pohjalle, ja se nimettiin Mesrop Mashtotsin mukaan 1962. Edeltäjänä oli Etchmiadzinin käsikirjoituskokoelma, jossa oli 1828 luetteloituna 1 809 käsikirjoitusta ja 1913 jo 4 660. Lähteen mukaan kokoelmassa on noin 23 000 käsikirjoitusta ja käärettä katkelmineen. Kokoelma on merkitty UNESCOn Muisti maailmasta -rekisteriin 1997.",
+          "tiedosto": "Yerevan, Matenadaran, Entrance, Armenia.jpg",
+          "lyhyt": "Matenadaranin sisäänkäynti ja Mesrop Mashtotsin sekä hänen oppilaansa Koryunin patsas.",
+          "selite": "Rakennuksen edessä seisovat Mashtotsin ja hänen oppilaansa Koryunin patsas sekä kuuden keskiaikaisen oppineen patsaat.",
+          "lahde": "Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)",
+          "wiki": "Matenadaran"
+        },
+        {
+          "otsikko": "Aakkoset ja vanhimmat kirjat",
+          "teksti": "Mesrop Mashtots (362–440) keksi lähteen mukaan armenian aakkoset noin vuonna 405, mitä pidetään ratkaisevana askeleena armenialaisen identiteetin vahvistumisessa. Matenadaranin käsikirjoituksista Lazarian evankeliumi on vuodelta 887 ja Echmiadzinin evankeliumi vuodelta 989, ja jälkimmäisen kansi on kaiverrettua norsunluuta 500-luvulta. Vehamor-evankeliumi on lähteen mukaan todennäköisesti 600-luvulta ja siten vanhin säilynyt täydellinen armenialainen käsikirjoitus. Kokoelmassa on myös kopio Urbatagirkistä, ensimmäisestä painetusta armeniankielisestä kirjasta (Venetsia, 1512), sekä ensimmäinen armeniaksi painettu kartta (Amsterdam, 1695).",
+          "tiedosto": "Armenian illuminated manuscript from Tabriz at Matenadaran in Yerevan, Armenia.jpg",
+          "lyhyt": "Kuvitettu armenialainen käsikirjoitus Matenadaranin kokoelmassa.",
+          "selite": "Cilician mestarien Toros Roslinin ja Sargis Pitsakin kuvitetut käsikirjoitukset ovat kokoelman arvostetuimpia.",
+          "lahde": "Poshotenk, Wikimedia Commons (CC BY-SA 4.0)",
+          "wiki": "Mesrop Mashtots"
+        },
+        {
+          "otsikko": "Kirjakulttuuri Erivanissa",
+          "teksti": "Jerevanin kansalliskirjasto perustettiin 1832, ja nykyisessä rakennuksessa Teryanin kadulla se on toiminut vuodesta 1939. Ensimmäisen kirjapainon kaupunkiin perusti 1874 Zacharia Gevorkian, ja ensimmäinen yleinen kirjasto avattiin 1902. Khachatur Abovian syntyi 1809 Kanakerin kylässä, joka on nykyisin osa Jerevania. Hänen romaaninsa Armenian haavat kirjoitettiin 1841 ja julkaistiin 1858: se oli ensimmäinen modernilla armenian kielellä julkaistu romaani, ja sen kieli perustuu Jerevanin murteeseen klassisen armenian sijaan. Abovian oli myös ensimmäinen armenialainen kirjailija, joka kirjoitti lapsille.",
+          "tiedosto": "Khachatur Abovian statue Yerevan 2022.jpg",
+          "lyhyt": "Khachatur Abovianin patsas Jerevanissa, kirjailijan syntymäkylän Kanakerin kaupunginosassa.",
+          "selite": "Abovianin romaani Armenian haavat on kirjoitettu Jerevanin murteen pohjalta.",
+          "lahde": "Yerevantsi, Wikimedia Commons (CC BY-SA 4.0)",
+          "wiki": "Khachatur Abovian"
+        },
+        {
+          "otsikko": "UNESCOn kirjapääkaupunki",
+          "teksti": "UNESCO nimesi Jerevanin maailman kirjapääkaupungiksi 2012, ja päätös julkistettiin 6.6.2010. Valintaraadin mukaan kaupunki valittiin esittämänsä ohjelman laadun ja monipuolisuuden vuoksi. Kaupungin kirjastoista lastenkirjasto Khnko Aper perustettiin 1933, Avetik Isahakjanin keskuskirjasto 1935 ja musiikkikirjasto 1965. Kaupungissa on myös kirjailijoiden ja taiteilijoiden talomuseoita, kuten runoilija Hovhannes Tumanyanin ja säveltäjä Aram Khachaturianin museot. Charentsin kirjallisuus- ja taidemuseo avattiin 1921.",
+          "tiedosto": "National Library of Armenia.JPG",
+          "lyhyt": "Armenian kansalliskirjasto Jerevanissa, joka perustettiin 1832.",
+          "selite": "Kansalliskirjasto on toiminut nykyisessä rakennuksessa Teryanin kadulla vuodesta 1939.",
+          "lahde": "Serouj, Wikimedia Commons (CC BY 3.0)",
+          "wiki": "Yerevan"
+        }
       ]
-     },
-     "lahde": "Wikipedia"
     }
-   }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Jerevanin historiallinen ydin on pieni. Hrazdanin rotkon tuntumassa ovat säilyneet kirkot ja moskeija, ja keskustassa Tamanianin suunnittelema tuffiaukio, oopperatalo, Kaskadi ja Matenadaran kertovat 1900-luvun kaupungista.",
+    "rajat": {
+      "pohjoinen": 40.1948,
+      "etela": 40.1715,
+      "lansi": 44.4987,
+      "ita": 44.5246
+    },
+    "kohteet": [
+      {
+        "nimi": "Tasavallan aukio",
+        "tyyppi": "aukio",
+        "lat": 40.17753,
+        "lon": 44.51257
+      },
+      {
+        "nimi": "Sininen moskeija",
+        "lat": 40.1781,
+        "lon": 44.5056
+      },
+      {
+        "nimi": "Pyhän Sargiksen katedraali",
+        "lat": 40.17698,
+        "lon": 44.50215
+      },
+      {
+        "nimi": "Zoravorin kirkko",
+        "lat": 40.1861,
+        "lon": 44.5095
+      },
+      {
+        "nimi": "Oopperatalo",
+        "lat": 40.18583,
+        "lon": 44.515
+      },
+      {
+        "nimi": "Kaskadi",
+        "lat": 40.19138,
+        "lon": 44.51552
+      },
+      {
+        "nimi": "Matenadaran",
+        "lat": 40.19207,
+        "lon": 44.52113
+      },
+      {
+        "nimi": "Englantilainen puisto",
+        "tyyppi": "luonto",
+        "lat": 40.17417,
+        "lon": 44.50806
+      }
+    ]
   },
-  {
-   "id": "kirjallisuus",
-   "nimi": "Kirjojen kaupunki",
-   "johdanto": "Armenialaisten oma kirjaimisto syntyi noin vuonna 405, ja sen jälkeen kirjoitettua on kerätty Jerevaniin. Kaupunki oli UNESCOn maailman kirjapääkaupunki 2012, ja Matenadaran säilyttää suurta kokoelmaa armenialaisia käsikirjoituksia.",
-   "tehtava": {
-    "kysymys": "Mikä käsikirjoitus on Matenadaranin mukaan vanhin säilynyt täydellinen armenialainen käsikirjoitus?",
-    "vaihtoehdot": ["Vehamor-evankeliumi", "Lazarian evankeliumi", "Echmiadzinin evankeliumi", "Mughnin evankeliumi"],
-    "oikea": 0,
-    "fakta": "Matenadaran sai Vehamor-evankeliumin lahjoituksena 1975, ja sen ajoitetaan todennäköisesti 600-luvulle."
-   },
-   "nostot": [
-    {
-     "otsikko": "Käsikirjoitusten arkisto",
-     "teksti": "Sana matenadaran yhdistää sanat 'kirja' ja 'säilytyspaikka', ja keskiaikaisessa Armeniassa se tarkoitti kirjastoa, koska kaikki kirjat olivat käsin kirjoitettuja. Nykyinen laitos perustettiin 3.3.1959 Etchmiadzinin kokoelman pohjalle, ja se nimettiin Mesrop Mashtotsin mukaan 1962. Edeltäjänä oli Etchmiadzinin käsikirjoituskokoelma, jossa oli 1828 luetteloituna 1 809 käsikirjoitusta ja 1913 jo 4 660. Matenadaranin mukaan kokoelmassa on noin 23 000 käsikirjoitusta ja käärettä katkelmineen. Kokoelma on merkitty UNESCOn Muisti maailmasta -rekisteriin 1997.",
-     "tiedosto": "Yerevan, Matenadaran, Entrance, Armenia.jpg",
-     "lyhyt": "Matenadaranin sisäänkäynti ja Mesrop Mashtotsin sekä hänen oppilaansa Koryunin patsas.",
-     "selite": "Rakennuksen edessä seisovat Mashtotsin ja hänen oppilaansa Koryunin patsas sekä kuuden keskiaikaisen oppineen patsaat.",
-     "lahde": "Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)",
-     "wiki": "Matenadaran"
+  "nahtavyydet": {
+    "Tasavallan aukio": {
+      "aika": "1926–1977",
+      "teksti": "Tasavallan aukio on Jerevanin keskusaukio. Siihen kuuluvat soikea liikenneympyrä, jonka keskellä oleva kivikuvio on tehty näyttämään perinteiseltä armenialaiselta matolta, sekä puolisuunnikkaan muotoinen osa, jossa on allas ja musiikkisuihkulähteet. Uudistetut suihkulähteet avattiin syyskuussa 2007.\n\nAukiota ympäröi viisi pääasiassa vaaleanpunaisesta ja keltaisesta tuffista tehtyä uusklassista rakennusta: hallituksen talo, historiamuseo ja kansallisgalleria, hotelli sekä kaksi entistä ministeriörakennusta. Aukion suunnitteli arkkitehti Alexander Tamanian vuoden 1924 yleissuunnitelmassa, rakentaminen alkoi 1926 hallituksen talosta, ja viimeinen rakennus, kansallisgalleria, valmistui 1977. Aukio on ollut myös nimeltään Leninin aukio, kunnes kaupunginvaltuusto nimesi sen Tasavallan aukioksi 1.11.1990.\n\nIsoisän matkavuonna 1873 aukiota ei vielä ollut, vaan paikalla oli vanhaa Erivania. Vuoden 2003 kunnostuksessa tehdyissä kaivauksissa löytyi 1700–1800-lukujen kellareita ja tuffista tehtyjä vesiputkia, jotka ajoitetaan 800–1000-luvuille.",
+      "kuvat": [
+        {
+          "tiedosto": "Yerevan, Musical fountain, Republic Square, Armenia.jpg",
+          "lyhyt": "Tasavallan aukion musiikkisuihkulähteet avattiin uudistettuina syyskuussa 2007.",
+          "selite": "Musiikkisuihkulähteet esiintyvät useimpina iltoina huhti–lokakuussa, ja niiden takana on hallituksen talo.",
+          "lahde": "Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)"
+        }
+      ],
+      "lahde": "Wikipedia"
     },
-    {
-     "otsikko": "Aakkoset ja vanhimmat kirjat",
-     "teksti": "Mesrop Mashtots (362–440) keksi lähteen mukaan armenian aakkoset noin vuonna 405, mitä pidetään ratkaisevana askeleena armenialaisen identiteetin vahvistumisessa. Matenadaranin käsikirjoituksista Lazarian evankeliumi on vuodelta 887 ja Echmiadzinin evankeliumi vuodelta 989, ja jälkimmäisen kansi on kaiverrettua norsunluuta 500-luvulta. Vehamor-evankeliumi on Matenadaranin mukaan todennäköisesti 600-luvulta ja siten vanhin säilynyt täydellinen armenialainen käsikirjoitus. Kokoelmassa on myös kopio Urbatagirkistä, ensimmäisestä painetusta armeniankielisestä kirjasta (Venetsia, 1512), sekä ensimmäinen armeniaksi painettu kartta (Amsterdam, 1695).",
-     "tiedosto": "Armenian illuminated manuscript from Tabriz at Matenadaran in Yerevan, Armenia.jpg",
-     "lyhyt": "Tabrizista peräisin oleva kuvitettu armenialainen käsikirjoitus Matenadaranin kokoelmassa.",
-     "selite": "Cilician mestarien Toros Roslinin ja Sargis Pitsakin kuvitetut käsikirjoitukset ovat kokoelman arvostetuimpia.",
-     "lahde": "Poshotenk, Wikimedia Commons (CC BY-SA 4.0)",
-     "wiki": "Mesrop Mashtots"
+    "Sininen moskeija": {
+      "aika": "noin 1765–66",
+      "teksti": "Sininen moskeija rakennettiin noin 1765–66 Erivanin kaanikunnan hallitsijan Hoseyn Ali Khanin tilauksesta kaupungin pääasialliseksi perjantaimoskeijaksi. Kun venäläiset valtasivat kaupungin 1827, se oli suurin kahdeksasta Jerevanin moskeijasta. Minaretti on 24 metriä korkea, ja se oli 1800-luvun Jerevanin korkein rakennelma.\n\nMoskeijassa toimi 1700-luvun lopulta madrasa, ja saksalainen August von Haxthausen kuvasi 1840-luvulla koulun, jossa noin kolmekymmentä poikaa opiskeli persiaa. Länsimaiset matkailijat H. F. B. Lynch ja Luigi Villari kutsuivat moskeijaa nimellä Gök Jami, 'taivaansininen moskeija'. Laatoitus tehtiin noin 1887–88, ja rakennus uudistettiin 1907–1910.\n\nIsoisän matkavuonna 1873 moskeija oli toiminnassa. 1920-luvulta se ei enää toiminut uskonnollisena laitoksena, ja sisäpihan teehuoneessa kävi kirjailijoita ja taiteilijoita, muun muassa Yeghishe Charents, Martiros Saryan ja William Saroyan. Restauroinnin 1994–1998 jälkeen uskonnollisessa käytössä se on ollut jälleen vuodesta 1996, ja sen yhteydessä on Persian kielen kirjasto, joka avattiin 2014.",
+      "kuvat": [
+        {
+          "tiedosto": "Dome of Blue Mosque, Yerevan, Armenia.jpg",
+          "lyhyt": "Sinisen moskeijan laatoitus tehtiin noin 1887–88, ja rakennus uudistettiin 1907–1910.",
+          "selite": "Moskeijan nimi Gök Jami tarkoittaa 'taivaansinistä moskeijaa'.",
+          "lahde": "Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)"
+        }
+      ],
+      "lahde": "Wikipedia"
     },
-    {
-     "otsikko": "Kirjakulttuuri Erivanissa",
-     "teksti": "Jerevanin kansalliskirjasto perustettiin 1832, ja nykyisessä rakennuksessa Teryanin kadulla se on toiminut vuodesta 1939. Ensimmäisen kirjapainon kaupunkiin perusti 1874 Zacharia Gevorkian, ja ensimmäinen yleinen kirjasto avattiin 1902. Khachatur Abovian syntyi 1809 Kanakerin kylässä, joka on nykyisin osa Jerevania. Hänen romaaninsa Armenian haavat kirjoitettiin 1841 ja julkaistiin 1858: se oli ensimmäinen modernilla armenian kielellä julkaistu romaani, ja sen kieli perustuu Jerevanin murteeseen klassisen armenian sijaan. Abovian oli myös ensimmäinen armenialainen kirjailija, joka kirjoitti lapsille.",
-     "tiedosto": "Khachatur Abovian statue Yerevan 2022.jpg",
-     "lyhyt": "Khachatur Abovianin patsas Jerevanissa, kirjailijan syntymäkaupungissa lähellä Kanakeria.",
-     "selite": "Abovianin romaani Armenian haavat on kirjoitettu Jerevanin murteen pohjalta.",
-     "lahde": "Yerevantsi, Wikimedia Commons (CC BY-SA 4.0)",
-     "wiki": "Khachatur Abovian"
+    "Pyhän Sargiksen katedraali": {
+      "aika": "1835–1842",
+      "teksti": "Pyhän Sargiksen katedraali on Armenian apostolisen kirkon Araratin hiippakunnan keskus. Nykyinen kirkko rakennettiin 1835–1842 Hrazdanin vasemmalle rannalle Kentronin alueelle, ja se seisoi Dzoragyughin kylän yläosan vieressä vastapäätä vanhaa Erivanin linnoitusta.\n\nPaikalla oli alkukristillisestä ajasta lähtien erakkoluostari, jonka kirkot olivat pyhien Sargiksen, Georgin ja Jaakobin kirkot. Vuoden 1679 maanjäristys tuhosi sen, ja se rakennettiin uudelleen katolikos Nahabetin aikana 1691–1705.\n\nIsoisän matkavuonna 1873 kirkko oli jo valmiina. Nykyinen ulkoasu on myöhempi: kunnostus tehtiin Rafayel Israyelianin vuoden 1972 suunnitelman mukaan, jolloin julkisivu verhoiltiin Anin oranssilla tuffilla ja vanha kupoli korvattiin korkeammalla. Kellotorni valmistui 2000, ja kunnostuksen rahoittivat Lontoossa asuvat lahjoittajat Sarkis Kurkjian poikineen.",
+      "kuvat": [
+        {
+          "tiedosto": "Saint Sarkis Cathedral, Yerevan 25.jpg",
+          "lyhyt": "Pyhän Sargiksen katedraali valmistui 1835–1842 Hrazdanin vasemmalle rannalle.",
+          "selite": "Julkisivu verhoiltiin Anin oranssilla tuffilla Rafayel Israyelianin vuoden 1972 suunnitelman mukaan.",
+          "lahde": "23artashes, Wikimedia Commons (CC BY-SA 4.0)"
+        }
+      ],
+      "lahde": "Wikipedia"
     },
-    {
-     "otsikko": "UNESCOn kirjapääkaupunki",
-     "teksti": "UNESCO nimesi Jerevanin maailman kirjapääkaupungiksi 2012, ja päätös julkistettiin 6.6.2010. Valintaraadin mukaan kaupunki valittiin esittämänsä ohjelman laadun ja monipuolisuuden vuoksi. Kaupungin kirjastoista lastenkirjasto Khnko Aper perustettiin 1933, Avetik Isahakjanin keskuskirjasto 1935 ja musiikkikirjasto 1965. Kaupungissa on myös kirjailijoiden ja taiteilijoiden talomuseoita, kuten runoilija Hovhannes Tumanyanin ja säveltäjä Aram Khachaturianin museot. Charentsin kirjallisuus- ja taidemuseo avattiin 1921.",
-     "tiedosto": "National Library of Armenia.JPG",
-     "lyhyt": "Armenian kansalliskirjasto Jerevanissa, joka perustettiin 1832.",
-     "selite": "Kansalliskirjasto on toiminut nykyisessä rakennuksessa Teryanin kadulla vuodesta 1939.",
-     "lahde": "Serouj, Wikimedia Commons (CC BY 3.0)",
-     "wiki": "Yerevan"
+    "Zoravorin kirkko": {
+      "aika": "1693–94",
+      "teksti": "Zoravor Surp Astvatsatsin on kupoliton kolminaavinen basilika Shaharin vanhassa kaupunginosassa, jossa oli aiemmin apostoli Ananiaan hauta ja kappeli. Nimi Zoravor tarkoittaa 'voimakas', ja se lisättiin, koska kirkossa säilytettiin 1200-luvun Zoravor-Raamattua.\n\n1600-luvun alkupuoliskolla munkki Movses Syunetsi rakensi paikalle luostarikompleksin jerevanilaisten rahoituksella katolikos Pilipoksen aikana 1632–35, ja vuoden 1679 maanjäristys tuhosi sen. Nykyinen kirkko rakennettiin 1693–94 samalle paikalle jerevanilaisen kauppiaan Khoja Panosin lahjoituksella. Sisä- ja ulkoasu ovat yksinkertaiset, ja ulkoseinillä on 1600-luvun khachkar-ristikiviä.\n\nIsoisän matkavuonna 1873 kirkko oli olemassa, mutta Pyhän Ananiaan kappeli sen koillispuolella rakennettiin vasta 1889. Neuvostoaikana kirkkoa käytettiin muihin tarkoituksiin; se palautettiin kirkolle 1970-luvulla ja kunnostettiin täysin.",
+      "kuvat": [
+        {
+          "tiedosto": "Surp Zoravor Astvatsatsin Church.JPG",
+          "lyhyt": "Zoravorin kirkko on kupoliton kolminaavinen basilika, joka rakennettiin 1693–94.",
+          "selite": "Kirkon ulkoseinillä on 1600-luvun khachkar-ristikiviä, ja kirkko sijaitsee Shaharin vanhassa kaupunginosassa.",
+          "lahde": "© Travis K. Witt, Wikimedia Commons (CC BY-SA 4.0)"
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Oopperatalo": {
+      "aika": "1930–1953",
+      "teksti": "Virallisesti rakennus on Alexander Spendiaryanin kansallinen akateeminen ooppera- ja balettiteatteri, mutta paikalliset sanovat sitä yksinkertaisesti Operaksi. Perustuskivi laskettiin 28.11.1930, ja teatteri avattiin 20.1.1933 Spendiaryanin oopperalla Almast. Rakennuksen suunnitteli Alexander Tamanian; salin rakentaminen valmistui 1939 ja koko rakennus 1953.\n\nTalossa on kaksi salia: Aram Khachaturianin konserttisali, jossa on 1 300 paikkaa, sekä Spendiaryanin ooppera- ja balettisali, jossa on noin 1 070 paikkaa. Teatterin ensimmäinen balettiesitys oli Tšaikovskin Joutsenlampi 1935, ja ensimmäinen armenialainen baletti oli Khachaturianin Onni, josta syntyi Gayane. Armen Tigranianin ooppera Anoush on ollut ohjelmistossa vuodesta 1935.\n\nIsoisän matkavuonna 1873 oopperataloa ei vielä ollut. Rakennuksen eteläpuolella on Vapaudenaukio, jossa seisovat Tumanyanin ja Spendiaryanin patsaat vuodelta 1957, ja Joutsenjärvi rakennettiin 1960-luvun alussa muodoltaan Sevan-järveä muistuttavaksi.",
+      "kuvat": [
+        {
+          "tiedosto": "Ópera, Ereván, Armenia, 2016-10-03, DD 13.jpg",
+          "lyhyt": "Jerevanin oopperatalo avattiin 20.1.1933, ja sen suunnitteli Alexander Tamanian.",
+          "selite": "Talossa toimii kansallinen akateeminen ooppera- ja balettiteatteri, jossa on kaksi salia.",
+          "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)"
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Kaskadi": {
+      "aika": "1970-luku–2009",
+      "teksti": "Kaskadi on portaikkokompleksi, joka yhdistää keskustan Kanaker-Zeytunin kukkuloihin ja kuuluu Tamanianin kaupunkisuunnitelmassa määriteltyyn akseliin. Siinä on viisi terassia, noin 302 metrin matkalla yli 550 askelmaa ja sisäpuolella liukuportaat. Rakenne on maidonvalkoista tuffia ja travertiinia, ja koristeissa on khachkar-ristikivien, viiniköynnösten, granaattiomenoiden ja elämänpuun aiheita.\n\nArkkitehdit Jim Torosyan, Sargis Gurzadyan ja Aslan Mkhitaryan alkoivat suunnitella portaikkoa 1970-luvun alussa. Rakentaminen alkoi lähteiden mukaan 1970-luvun alussa tai 1980, ja se keskeytyi 1980-luvun lopulla; hallitus päätti 2002 saattaa kompleksin loppuun, ja sisälle avattiin Cafesjian Center for the Arts marraskuussa 2009.\n\nIsoisän matkavuonna 1873 Kaskadia ei vielä ollut. Sisällä on muun muassa Khanjyan-galleria, jossa on Grigor Khanjyanin triptyykki Armenian historia, sekä Sasuntsi Davit -galleria, jossa on Artashes Hovsepyanin reliefejä armenialaisesta eepoksesta. Keväästä alkusyksyyn portailla pidetään klassisen musiikin ja jazzin konsertteja.",
+      "kuvat": [
+        {
+          "tiedosto": "2014 Erywań, Kaskady (18).jpg",
+          "lyhyt": "Kaskadin alaterassit ovat osa viiden terassin portaikkoa keskustan pohjoislaidalla.",
+          "selite": "Portaikon rakenne on maidonvalkoista tuffia ja travertiinia.",
+          "lahde": "Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)"
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Matenadaran": {
+      "aika": "1945–1959",
+      "teksti": "Matenadaran on armenialaisten käsikirjoitusten arkisto. Harmaalla basaltilla verhoiltu, 22,4 metriä korkea rakennus kohoaa Mashtotsin kadun koillispäähän ja muodostaa kadun näköalan päätteen. Sen suunnitteli kaupungin ylikaupunginarkkitehti Mark Grigorian, ja rakentaminen kesti 1945–1957/58. Julkisivun esikuvana on Anin Pyhien apostolien kirkon 1100-luvun eteishallin itäjulkisivu.\n\nEdessä seisovat Mashtotsin ja hänen oppilaansa Koryunin patsas sekä kuuden keskiaikaisen oppineen patsaat, jotka edustavat muun muassa käsikirjoitusten kuvitusta, filosofiaa, kosmologiaa ja historiaa. Sisäänkäynnin aulassa on Van Khachaturin mosaiikki Avarayrin taistelusta (451) vuodelta 1960 ja portaikon ympärillä kolmen aikakauden seinämaalaus vuodelta 1959. Uusi rakennus arkkitehti Arthur Meschianin suunnittelemana vihittiin käyttöön 20.9.2011.\n\nIsoisän matkavuonna 1873 Matenadarania ei vielä ollut, ja käsikirjoitukset olivat Etchmiadzinissa. Kävijöitä oli noin 132 600 vuonna 2019.",
+      "kuvat": [
+        {
+          "tiedosto": "Մատենադարան, Երևան - Matenadaran, Yerevan (2019) 45.jpg",
+          "lyhyt": "Matenadaranin basalttijulkisivun esikuvana on Anin keskiaikaisten kirkkojen rakennustaide.",
+          "selite": "Julkisivun esikuvana on Anin Pyhien apostolien kirkon 1100-luvun eteishallin itäjulkisivu.",
+          "lahde": "Gardmanahay, Wikimedia Commons (CC BY-SA 4.0)"
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Englantilainen puisto": {
+      "aika": "1800-luvun puoliväli",
+      "teksti": "Englantilainen puisto on yksi Jerevanin vanhimmista puistoista. Lähteiden mukaan se on peräisin 1800-luvun puolivälistä: yksi kuvaus kertoo puiston avatun vuoden 1856 kaupunkisuunnitelman yhteydessä, toinen ajoittaa sen 1860-luvulle. Puiston pinta-ala on 5,5 hehtaaria, ja se sijaitsee Kentronin alueella Italian kadun varrella aivan Tasavallan aukion eteläpuolella.\n\nPuistoa uusittiin usein ensimmäiseen maailmansotaan asti, ja vuonna 1910 siinä oli suuri kunnostus. Siellä pelattiin 1920 Armenian modernin historian ensimmäinen jalkapallo-ottelu Jerevanin ja Aleksandropolin joukkueiden välillä. 2000-luvun alussa uusi Italian katu jakoi puiston kahtia, ja erotettu osa kunnostettiin Jerevanin 2 800-vuotispuistoksi.\n\nIsoisän matkavuonna 1873 puisto oli todennäköisesti jo olemassa. Puiston laidalla sijaitsee Sundukyanin akateeminen teatteri, ja keskellä olevat suihkulähteet ovat suosittu hääkuvauspaikka.",
+      "kuvat": [
+        {
+          "tiedosto": "English Park of Yerevan 05.jpg",
+          "lyhyt": "Englantilainen puisto on 5,5 hehtaarin puisto Tasavallan aukion eteläpuolella.",
+          "selite": "Puiston keskellä olevat suihkulähteet ovat suosittu hääkuvauspaikka.",
+          "lahde": "23artashes, Wikimedia Commons (CC BY-SA 4.0)"
+        }
+      ],
+      "lahde": "Wikipedia"
     }
-   ]
+  },
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Zvartnotsin kansainvälinen lentoasema (EVN)",
+    "huomiot": [
+      "Säädataa ei ole: saatiedot on null, ja oppaan sääjakso perustuu en-Wikipedian ilmastotaulukkoon (1991–2020, ääriarvot 1885 alkaen).",
+      "Kevyen pisteen kuvaus sijoittaa Kaskadin kaupungin pohjoisosaan; lähteiden mukaan se on keskustan pohjoislaidalla Kentronin alueella.",
+      "Ennen–nyt-paria ja valokuvan uusi-kenttää ei tehty: kaikki muut valitut nykykuvat on jo käytetty muualla, eikä samaa tiedostoa saa käyttää kahdesti."
+    ]
   }
- ],
- "kohdekartta": {
-  "numeroympyrat": true,
-  "esittely": "Jerevanin historiallinen ydin on pieni. Hrazdanin rotkon tuntumassa ovat säilyneet kirkot ja moskeija, ja keskustassa Tamanianin suunnittelema tuffiaukio, oopperatalo, Kaskadi ja Matenadaran kertovat 1900-luvun kaupungista.",
-  "rajat": { "pohjoinen": 40.1948, "etela": 40.1715, "lansi": 44.4987, "ita": 44.5246 },
-  "kohteet": [
-   { "nimi": "Tasavallan aukio", "tyyppi": "aukio", "lat": 40.17753, "lon": 44.51257 },
-   { "nimi": "Sininen moskeija", "lat": 40.17810, "lon": 44.50560 },
-   { "nimi": "Pyhän Sargiksen katedraali", "lat": 40.17698, "lon": 44.50215 },
-   { "nimi": "Zoravorin kirkko", "lat": 40.18610, "lon": 44.50950 },
-   { "nimi": "Oopperatalo", "lat": 40.18583, "lon": 44.51500 },
-   { "nimi": "Kaskadi", "lat": 40.19138, "lon": 44.51552 },
-   { "nimi": "Matenadaran", "lat": 40.19207, "lon": 44.52113 },
-   { "nimi": "Englantilainen puisto", "tyyppi": "luonto", "lat": 40.17417, "lon": 44.50806 }
-  ]
- },
- "nahtavyydet": {
-  "Tasavallan aukio": {
-   "aika": "1926–1977",
-   "teksti": "Tasavallan aukio on Jerevanin keskusaukio. Siihen kuuluvat soikea liikenneympyrä, jonka keskellä oleva kivikuvio on tehty näyttämään perinteiseltä armenialaiselta matolta, sekä puolisuunnikkaan muotoinen osa, jossa on allas ja musiikkisuihkulähteet. Uudistetut suihkulähteet avattiin syyskuussa 2007.\n\nAukiota ympäröi viisi pääasiassa vaaleanpunaisesta ja keltaisesta tuffista tehtyä uusklassista rakennusta: hallituksen talo, historiamuseo ja kansallisgalleria, hotelli sekä kaksi entistä ministeriörakennusta. Aukion suunnitteli arkkitehti Alexander Tamanian vuoden 1924 yleissuunnitelmassa, rakentaminen alkoi 1926 hallituksen talosta, ja viimeinen rakennus, kansallisgalleria, valmistui 1977. Aukio on ollut myös nimeltään Leninin aukio, kunnes kaupunginvaltuusto nimesi sen Tasavallan aukioksi 1.11.1990.\n\nIsoisän matkavuonna 1873 aukiota ei vielä ollut, vaan paikalla oli vanhaa Erivania. Vuoden 2003 kunnostuksessa tehdyissä kaivauksissa löytyi 1700–1800-lukujen kellareita ja tuffista tehtyjä vesiputkia, jotka ajoitetaan 800–1000-luvuille.",
-   "kuvat": [
-    {
-     "tiedosto": "Yerevan, Musical fountain, Republic Square, Armenia.jpg",
-     "lyhyt": "Tasavallan aukion musiikkisuihkulähteet avattiin uudistettuina syyskuussa 2007.",
-     "selite": "Musiikkisuihkulähteet esiintyvät useimpina iltoina huhti–lokakuussa, ja niiden takana on hallituksen talo.",
-     "lahde": "Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)"
-    }
-   ],
-   "lahde": "Wikipedia"
-  },
-  "Sininen moskeija": {
-   "aika": "noin 1765–66",
-   "teksti": "Sininen moskeija rakennettiin noin 1765–66 Erivanin kaanikunnan hallitsijan Hoseyn Ali Khanin tilauksesta kaupungin pääpiirimoskeijaksi. Kun venäläiset valtasivat kaupungin 1827, se oli suurin kahdeksasta Jerevanin moskeijasta. Minaretti on 24 metriä korkea, ja se oli 1800-luvun Jerevanin korkein rakennelma.\n\nMoskeijassa toimi 1700-luvun lopulta madrasa, ja saksalainen August von Haxthausen kuvasi 1840-luvulla koulun, jossa noin kolmekymmentä poikaa opiskeli persiaa. Länsimaiset matkailijat H. F. B. Lynch ja Luigi Villari kutsuivat moskeijaa nimellä Gök Jami, 'taivaansininen moskeija'. Laatoitus tehtiin noin 1887–88, ja rakennus uudistettiin 1907–1910.\n\nIsoisän matkavuonna 1873 moskeija oli toiminnassa. 1920-luvulta se ei enää toiminut uskonnollisena laitoksena, ja sisäpihan teehuoneessa kävi kirjailijoita ja taiteilijoita, muun muassa Yeghishe Charents, Martiros Saryan ja William Saroyan. Restauroinnin 1994–1998 jälkeen uskonnollisessa käytössä se on ollut jälleen vuodesta 1996, ja sen yhteydessä on Persian kielen kirjasto, joka avattiin 2014.",
-   "kuvat": [
-    {
-     "tiedosto": "Dome of Blue Mosque, Yerevan, Armenia.jpg",
-     "lyhyt": "Sinisen moskeijan laatoitus tehtiin noin 1887–88, ja rakennus uudistettiin 1907–1910.",
-     "selite": "Moskeijan nimi Gök Jami tarkoittaa 'taivaansinistä moskeijaa'.",
-     "lahde": "Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)"
-    }
-   ],
-   "lahde": "Wikipedia"
-  },
-  "Pyhän Sargiksen katedraali": {
-   "aika": "1835–1842",
-   "teksti": "Pyhän Sargiksen katedraali on Armenian apostolisen kirkon Araratin hiippakunnan keskus. Nykyinen kirkko rakennettiin 1835–1842 Hrazdanin vasemmalle rannalle Kentronin alueelle, ja se seisoi Dzoragyughin kylän yläosan vieressä vastapäätä vanhaa Erivanin linnoitusta.\n\nPaikalla oli alkukristillisestä ajasta lähtien erakkoluostari, jonka kirkot olivat pyhien Sargiksen, Georgin ja Jaakobin kirkot. Vuoden 1679 maanjäristys tuhosi sen, ja se rakennettiin uudelleen katolikos Nahabetin aikana 1691–1705.\n\nIsoisän matkavuonna 1873 kirkko oli jo valmiina. Nykyinen ulkoasu on myöhempi: kunnostus tehtiin Rafayel Israyelianin vuoden 1972 suunnitelman mukaan, jolloin julkisivu verhoiltiin Anin oranssilla tuffilla ja vanha kupoli korvattiin korkeammalla. Kellotorni valmistui 2000, ja kunnostuksen rahoittivat Lontoossa asuvat lahjoittajat Sarkis Kurkjian poikineen.",
-   "kuvat": [
-    {
-     "tiedosto": "Saint Sarkis Cathedral, Yerevan 25.jpg",
-     "lyhyt": "Pyhän Sargiksen katedraali valmistui 1835–1842 Hrazdanin vasemmalle rannalle.",
-     "selite": "Julkisivu verhoiltiin Anin oranssilla tuffilla Rafayel Israyelianin vuoden 1972 suunnitelman mukaan.",
-     "lahde": "23artashes, Wikimedia Commons (CC BY-SA 4.0)"
-    }
-   ],
-   "lahde": "Wikipedia"
-  },
-  "Zoravorin kirkko": {
-   "aika": "1693–94",
-   "teksti": "Zoravor Surp Astvatsatsin on kupoliton kolminaavinen basilika Shaharin vanhassa kaupunginosassa, jossa oli aiemmin apostoli Ananiaan hauta ja kappeli. Nimi Zoravor tarkoittaa 'voimakas', ja se lisättiin, koska kirkossa säilytettiin 1200-luvun Zoravor-Raamattua.\n\n1600-luvun alkupuoliskolla munkki Movses Syunetsi rakensi paikalle luostarikompleksin jerevanilaisten rahoituksella katolikos Pilipoksen aikana 1632–35, ja vuoden 1679 maanjäristys tuhosi sen. Nykyinen kirkko rakennettiin 1693–94 samalle paikalle jerevanilaisen kauppiaan Khoja Panosin lahjoituksella. Sisä- ja ulkoasu ovat yksinkertaiset, ja ulkoseinillä on 1600-luvun khachkar-ristikiviä.\n\nIsoisän matkavuonna 1873 kirkko oli olemassa, mutta Pyhän Ananiaan kappeli sen koillispuolella rakennettiin vasta 1889. Neuvostoaikana kirkkoa käytettiin muihin tarkoituksiin; se palautettiin kirkolle 1970-luvulla ja kunnostettiin täysin.",
-   "kuvat": [
-    {
-     "tiedosto": "Surp Zoravor Astvatsatsin Church.JPG",
-     "lyhyt": "Zoravorin kirkko on kupoliton kolminaavinen basilika, joka rakennettiin 1693–94.",
-     "selite": "Kirkon ulkoseinillä on 1600-luvun khachkar-ristikiviä, ja sen kellotorni kohoaa vanhan Shaharin kaupunginosan yllä.",
-     "lahde": "© Travis K. Witt, Wikimedia Commons (CC BY-SA 4.0)"
-    }
-   ],
-   "lahde": "Wikipedia"
-  },
-  "Oopperatalo": {
-   "aika": "1930–1953",
-   "teksti": "Virallisesti rakennus on Alexander Spendiaryanin kansallinen akateeminen ooppera- ja balettiteatteri, mutta paikalliset sanovat sitä yksinkertaisesti Operaksi. Perustuskivi laskettiin 28.11.1930, ja teatteri avattiin 20.1.1933 Spendiaryanin oopperalla Almast. Rakennuksen suunnitteli Alexander Tamanian; salin rakentaminen valmistui 1939 ja koko rakennus 1953.\n\nTalossa on kaksi salia: Aram Khachaturianin konserttisali, jossa on 1 300 paikkaa, sekä Spendiaryanin ooppera- ja balettisali, jossa on noin 1 070 paikkaa. Teatterin ensimmäinen balettiesitys oli Tšaikovskin Joutsenlampi 1935, ja ensimmäinen armenialainen baletti oli Khachaturianin Onni, josta syntyi Gayane. Armen Tigranianin ooppera Anoush on ollut ohjelmistossa vuodesta 1935.\n\nIsoisän matkavuonna 1873 oopperataloa ei vielä ollut. Rakennuksen eteläpuolella on Vapaudenaukio, jossa seisovat Tumanyanin ja Spendiaryanin patsaat vuodelta 1957, ja Joutsenjärvi rakennettiin 1960-luvun alussa muodoltaan Sevan-järveä muistuttavaksi.",
-   "kuvat": [
-    {
-     "tiedosto": "Ópera, Ereván, Armenia, 2016-10-03, DD 13.jpg",
-     "lyhyt": "Jerevanin oopperatalo avattiin 20.1.1933, ja sen suunnitteli Alexander Tamanian.",
-     "selite": "Talossa toimii kansallinen akateeminen ooppera- ja balettiteatteri, jossa on kaksi salia.",
-     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)"
-    }
-   ],
-   "lahde": "Wikipedia"
-  },
-  "Kaskadi": {
-   "aika": "1970-luku–2009",
-   "teksti": "Kaskadi on portaikkokompleksi, joka yhdistää keskustan Kanaker-Zeytunin kukkuloihin ja kuuluu Tamanianin kaupunkisuunnitelmassa määriteltyyn akseliin. Siinä on viisi terassia, noin 302 metrin matkalla yli 550 askelmaa ja sisäpuolella liukuportaat. Rakenne on maidonvalkoista tuffia ja travertiinia, ja koristeissa on khachkar-ristikivien, viiniköynnösten, granaattiomenoiden ja elämänpuun aiheita.\n\nArkkitehdit Jim Torosyan, Sargis Gurzadyan ja Aslan Mkhitaryan alkoivat suunnitella portaikkoa 1970-luvun alussa. Rakentaminen alkoi lähteen mukaan 1980 ja keskeytyi 1980-luvun lopulla; hallitus päätti 2002 saattaa kompleksin loppuun, ja sisälle avattiin Cafesjian Center for the Arts marraskuussa 2009.\n\nIsoisän matkavuonna 1873 Kaskadia ei vielä ollut. Sisällä on muun muassa Khanjyan-galleria, jossa on Grigor Khanjyanin triptyykki Armenian historia, sekä Sasuntsi Davit -galleria, jossa on Artashes Hovsepyanin reliefejä armenialaisesta eepoksesta. Keväästä alkusyksyyn portailla pidetään klassisen musiikin ja jazzin konsertteja.",
-   "kuvat": [
-    {
-     "tiedosto": "2014 Erywań, Kaskady (18).jpg",
-     "lyhyt": "Kaskadin alaterassit ovat osa viiden terassin portaikkoa keskustan pohjoislaidalla.",
-     "selite": "Portaikon rakenne on maidonvalkoista tuffia ja travertiinia.",
-     "lahde": "Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)"
-    }
-   ],
-   "lahde": "Wikipedia"
-  },
-  "Matenadaran": {
-   "aika": "1945–1959",
-   "teksti": "Matenadaran on armenialaisten käsikirjoitusten arkisto. Harmaalla basaltilla verhoiltu, 22,4 metriä korkea rakennus kohoaa Mashtotsin kadun koillispäähän ja muodostaa kadun näköalan päätteen. Sen suunnitteli kaupungin ylikaupunginarkkitehti Mark Grigorian, ja rakentaminen kesti 1945–1957/58. Julkisivun esikuvana on Anin Pyhien apostolien kirkon 1100-luvun eteishallin itäjulkisivu.\n\nEdessä seisovat Mashtotsin ja hänen oppilaansa Koryunin patsas sekä kuuden keskiaikaisen oppineen patsaat, jotka edustavat muun muassa käsikirjoitusten kuvitusta, filosofiaa, kosmologiaa ja historiaa. Sisäänkäynnin aulassa on Van Khachaturin mosaiikki Avarayrin taistelusta (451) vuodelta 1960 ja portaikon ympärillä kolmen aikakauden seinämaalaus vuodelta 1959. Uusi rakennus arkkitehti Arthur Meschianin suunnittelemana vihittiin käyttöön 20.9.2011.\n\nIsoisän matkavuonna 1873 Matenadarania ei vielä ollut, ja käsikirjoitukset olivat Etchmiadzinissa. Kävijöitä oli noin 132 600 vuonna 2019.",
-   "kuvat": [
-    {
-     "tiedosto": "Մատենադարան, Երևան - Matenadaran, Yerevan (2019) 45.jpg",
-     "lyhyt": "Matenadaranin basalttijulkisivun esikuvana on Anin keskiaikaisten kirkkojen rakennustaide.",
-     "selite": "Julkisivun esikuvana on Anin Pyhien apostolien kirkon 1100-luvun eteishallin itäjulkisivu.",
-     "lahde": "Gardmanahay, Wikimedia Commons (CC BY-SA 4.0)"
-    }
-   ],
-   "lahde": "Wikipedia"
-  },
-  "Englantilainen puisto": {
-   "aika": "1800-luvun puoliväli",
-   "teksti": "Englantilainen puisto on yksi Jerevanin vanhimmista puistoista. Lähteiden mukaan se on peräisin 1800-luvun puolivälistä: yksi kuvaus kertoo puiston avatun vuoden 1856 kaupunkisuunnitelman yhteydessä, toinen ajoittaa sen 1860-luvulle. Puiston pinta-ala on 5,5 hehtaaria, ja se sijaitsee Kentronin alueella Italian kadun varrella aivan Tasavallan aukion eteläpuolella.\n\nPuistoa uusittiin usein ensimmäiseen maailmansotaan asti, ja vuonna 1910 siinä oli suuri kunnostus. Siellä pelattiin 1920 Armenian modernin historian ensimmäinen jalkapallo-ottelu Jerevanin ja Aleksandropolin joukkueiden välillä. 2000-luvun alussa uusi Italian katu jakoi puiston kahtia, ja erotettu osa kunnostettiin Jerevanin 2 800-vuotispuistoksi.\n\nIsoisän matkavuonna 1873 puisto oli todennäköisesti jo olemassa. Puiston laidalla sijaitsee Sundukyanin akateeminen teatteri, ja keskellä olevat suihkulähteet ovat suosittu hääkuvauspaikka.",
-   "kuvat": [
-    {
-     "tiedosto": "English Park of Yerevan 05.jpg",
-     "lyhyt": "Englantilainen puisto on 5,5 hehtaarin puisto Tasavallan aukion eteläpuolella.",
-     "selite": "Puiston keskellä olevat suihkulähteet ovat suosittu hääkuvauspaikka.",
-     "lahde": "23artashes, Wikimedia Commons (CC BY-SA 4.0)"
-    }
-   ],
-   "lahde": "Wikipedia"
-  }
- },
- "saatiedot": null,
- "ehdotukset": {
-  "lentoasema": "Zvartnotsin kansainvälinen lentoasema (EVN)",
-  "huomiot": [
-    "Säädataa ei ole: saatiedot on null, ja oppaan sääjakso perustuu en-Wikipedian ilmastotaulukkoon (1991–2020, ääriarvot 1885 alkaen).",
-    "Kevyen pisteen kuvaus sijoittaa Kaskadin kaupungin pohjoisosaan; lähteiden mukaan se on keskustan pohjoislaidalla Kentronin alueella.",
-    "Ennen–nyt-paria ja valokuvan uusi-kenttää ei tehty: kaikki muut valitut nykykuvat on jo käytetty muualla, eikä samaa tiedostoa saa käyttää kahdesti."
-  ]
- }
 }

@@ -58,3 +58,10 @@ Ryhmittäin, polut sisalto.jsonissa.
 **Koordinaatit.** pallo 40.1814, 44.5144 (Jerevanin keskusta). Tasavallan aukio 40.17753, 44.51257 (WD/WV 40.177525, 44.512572), Sininen moskeija 40.1781, 44.5056 (WV), Sargis 40.17698, 44.50215 (WV), Zoravor 40.18610, 44.50950 (en 40.186079, 44.509606), Oopperatalo 40.1858, 44.515 (WV), Kaskadi 40.19138, 44.51552 (WV 40.191375, 44.515522), Matenadaran 40.19207, 44.52113 (WV), Englantilainen puisto 40.17417, 44.50806 (WV 40.174167, 44.508056). Kaikki osuvat kohteeseen; rajat sisältävät kaikki kohteet. Erebuni 4,6 km kaakkoon Tasavallan aukiolta laskettu WV:n koordinaatista (40.1406, 44.5379): noin 4,6 km, OK.
 
 **Kysymysten vihjeet.** Q3 ja Q4 ja Q5 vihjeet eivät paljasta vastausta (Q4 "väri" on lievä mutta ei nimeä vastausta). Q1 ja Q2 korjattava, ks. yllä.
+
+## Korjattu
+
+- Kaikki VÄÄRIN-korjaukset tehty sanatarkasti: kysymysten 1–2 vihjeet, kysymyksen 3 vaihtoehdot (Varazdat Arevshatyan), Erebunin superlatiivi, metron pituus (noin 12–13 km), Matenadaran-attribuutiot ("lähteen mukaan"), perjantaimoskeija (valokuva.selite, jakso 3 lyhyt, Sininen moskeija), tuffiyleistykset (intro, matkailijalle), Abovianin Kanaker, Zoravorin kellotorni pois, Plensa, päärakennusta.
+- EPÄVARMA pehmennetty: hallituksen talon lyhyt, Tabriz poistettu, Kaskadin rakennusajankohta, lavash (alkupalat), Cafesjianin 5 000 / 500, valokuva.vuosi "1800-luku" ennallaan.
+- Oikeiden vastausten indeksit sekoitettu: correct 2, 0, 3, 1, 2; tehtava.oikea 2.
+- Kuvia ei vaihdettu, kuvat.md ennallaan. tarkista --verkko: 0 virhettä.
