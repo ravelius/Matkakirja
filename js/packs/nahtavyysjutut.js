@@ -2252,19 +2252,20 @@ export const NAHTAVYYSJUTUT = {
           + 'urheiluvoittoja, mielenosoitetaan ja vietetään vappua.',
       kuvat: [
         {
-          tiedosto: 'Sergels torg-Stockholm-DSC 0115w.jpg',
-          lyhyt: 'Edvin Öhrströmin 37 metrin lasi- ja teräsobeliski valmistui 1974, torin muuta rakennetta myöhemmin.',
-          selite: 'Edvin Öhrströmin suunnittelema 37 metriä korkea lasi- ja '
-            + 'teräsobeliski valmistui vasta 1974, seitsemän vuotta torin muuta '
-            + 'rakennetta myöhemmin.',
-          lahde: 'Peter Haas, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'Brunkebergstorg ombyggnad 1969.jpg',
+          lyhyt: 'Perustustöitä Brunkebergstorgin kupeessa 1969: Norrmalmin uudistus oli vuosikymmenten työmaa.',
+          selite: 'Perustustöitä Brunkebergstorgin kupeessa vuonna 1969, taustalla '
+            + 'Telegrafverketin talo. Norrmalmin uudistus pyöri 1950-luvulta '
+            + '1970-luvulle, ja Sergelin torin ympäristö oli pitkään työmaata.',
+          lahde: 'Ingemar Gram, Wikimedia Commons (CC BY 4.0)',
         },
         {
-          tiedosto: 'Sergels Torg.jpg',
-          lyhyt: 'Alemman kävelytason mustavalkoinen kolmiokuvio toistuu nykyään Tukholman metrojunien penkeissä.',
-          selite: 'Alemman kävelytason mustavalkoinen kolmiokuvio on niin tunnettu, '
-            + 'että sama kuvio löytyy nykyään Tukholman metrojunien penkeistä.',
-          lahde: 'Kallerna, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'Brunkebergstorg, 1953.jpg',
+          lyhyt: 'Brunkebergstorg vuonna 1953, jolloin se oli alueen tärkein aukio — ennen Sergelin toria.',
+          selite: 'Brunkebergstorg vuonna 1953, jolloin se oli alueen tärkein aukio. '
+            + 'Pian ympäröivät Klaran korttelit purettiin, ja alueen uudeksi '
+            + 'keskukseksi tuli Sergelin tori.',
+          lahde: 'Jan Ehnemark, Svenska Dagbladet, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       lahde: 'Wikipedia',
