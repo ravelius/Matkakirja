@@ -56,7 +56,7 @@ namespace Matkakirja.Linssit.Testit
             for (double t = 0; t < kesto; t += Dt)
             {
                 a.Paivita(t, Dt, kx, 0, korkeus, tunti?.Invoke(t) ?? double.NaN, false);
-                foreach (var k in a.Kerrat) if (Array.IndexOf(PalloKaupunkiAanet.Kirkonkello, k.Tunnus) >= 0) tul.Add((t, k));
+                foreach (var k in a.Kerrat) if (Array.IndexOf(KaupunkiAanet.HeiluvatKellot, k.Tunnus) >= 0) tul.Add((t, k));   // juna 182: + kirkonkello-soitto
             }
             return tul;
         }
@@ -549,6 +549,8 @@ namespace Matkakirja.Linssit.Testit
             string json = "{\"kadut\":[{\"t\":\"tertiary\",\"p\":[[0,-50],[300,-50]]}],\"reitit\":[" +
                 "{\"tyyppi\":\"saaristolaiva\",\"kiertava\":false,\"p\":[[0,100,1],[20000,100,1]]},{\"tyyppi\":\"lautta\",\"kiertava\":false,\"p\":[[-100,0,1],[-900,0,1]]}]}";
             var h = IhmisAanet.Lue(json, 4);
+            // Juna 182: Soundly v2:n kellot ja lähitorvet ovat samoissa sarjoissa (Soundly2AanetTestit); tämä testi = erän 1 sarjat ilman v2:ta.
+            h.Saatavilla = t => Array.IndexOf(PalloSoundly2Aanet.PolkupyoraKello, t) < 0 && Array.IndexOf(PalloSoundly2Aanet.TorviLahi, t) < 0;
             Oleta.Sama(2, h.IsoVesi.Count, "saaristolaivan reitin päät isoa vettä");
             var torvet = new List<(double T, IhmisAanet.Tapahtuma E)>(); int soundlyKello = 0, kelloja = 0;
             for (double t = 0; t < 4 * 3600; t += 0.5)
