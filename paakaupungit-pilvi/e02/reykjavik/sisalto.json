@@ -1,0 +1,387 @@
+{
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "reykjavik",
+ "maa": "ISL",
+ "era": "e02",
+ "kaupunki": {
+  "id": "reykjavik",
+  "name": "Reykjavík",
+  "wiki": "Reykjavík",
+  "ambience": "pohjoinen",
+  "pallo": { "lat": 64.1466, "lon": -21.9426 }
+ },
+ "artikkeli": {
+  "intro": "Reykjavík on Islannin pääkaupunki ja **maan suurin kaupunki**, joka sijaitsee Faxaflói-lahden etelärannalla Lounais-Islannissa. Nimi tulee vanhan norjan sanoista reykr, savu, ja vík, lahti, ja sen kerrotaan viittaavan alueen kuumista lähteistä nousseeseen höyryyn. Lähteen mukaan se on maailman pohjoisin itsenäisen valtion pääkaupunki.\n\nKaupungille myönnettiin kauppaoikeudet 1786, ja vuotta pidetään sen perustamisvuotena. Isoisän matkavuonna 1873 Reykjavík oli vielä pieni kauppakaupunki, jossa kauppa oli rajattu Tanskan kruunun alamaisille. Kansallismuseo oli perustettu kymmenen vuotta aiemmin, 1863, ja vapaakauppa laajennettiin kaikille kansallisuuksille vasta 1880 jälkeen.\n\nNykyään kaupungissa asuu 139 804 ihmistä (1.1.2026, Hagstofa Íslands). Koko kaupunki lämmitetään **geotermisesti**, ja kuumalla vedellä sulatetaan jopa keskustan katuja. Valo vaihtelee jyrkästi: kesällä 20.5.–24.7. aurinko ei laske yli viittä astetta horisontin alapuolelle, mutta joulukuussa päivä on alle viisi tuntia.",
+  "teksti": "Reykjavík on enimmäkseen Seltjarnarnesin niemellä, ja lähiöt ulottuvat kauas etelään ja itään. Kaupungissa on kymmenen kaupunginosaa. Lähialueen korkein vuori Esja on 914 metriä korkea, ja Elliðaá-joesta voi kalastaa lohta kaupungin rajojen sisällä. Öskjuhlíð ja Skólavörðuholt ovat lähteen mukaan jääkauden kilpitulivuorten jäänteitä.\n\nIlmasto on subpolaarinen merellinen. Talvet ovat leutoja, ja pakkanen laskee harvoin alle −15 asteen. Kesällä lämpötila on yleensä 10–15 astetta eikä yleensä ylitä 20:tä. Tuulta on paljon, ja talvella tulee myrskyjä. Auringonpaistetunteja on noin 1 300 vuodessa.\n\nKoko kaupunki lämmitetään geotermisesti. Kuumalla vedellä lämmitetään myös uima-altaat, ja keskustan katuja ja jalkakäytäviä sulatetaan geotermisillä järjestelmillä. Perlan-museon säiliöt kuuluvat samaan kaukolämpöjärjestelmään."
+ },
+ "kysymykset": [
+  {
+   "q": "Mitä Reykjavíkin nimi tarkoittaa?",
+   "options": ["Savujen lahti", "Tuulten lahti", "Kalastajien lahti", "Vuorten lahti"],
+   "correct": 0,
+   "level": 1,
+   "hint": "Nimi syntyi vanhan norjan sanoista, ja sen kerrotaan viittaavan alueen kuumiin lähteisiin.",
+   "fact": "Nimi tulee vanhan norjan sanoista reykr ja vík. Sen kerrotaan viittaavan alueen kuumista lähteistä nousseeseen höyryyn.",
+   "source": "https://en.wikipedia.org/wiki/Reykjavík"
+  },
+  {
+   "q": "Mikä kirkko kohoaa Skólavörðuholt-kukkulalla Reykjavíkin keskustan lähellä?",
+   "options": ["Hallgrímskirkja", "Landakotskirkja", "Dómkirkjan", "Fríkirkjan"],
+   "correct": 0,
+   "level": 1,
+   "hint": "Kirkko on nimetty 1600-luvulla eläneen runoilijapapin mukaan.",
+   "fact": "Kirkon rakentaminen kesti vuodesta 1945 vuoteen 1986, ja lähteen mukaan se on Islannin suurin kirkko.",
+   "source": "https://en.wikipedia.org/wiki/Hallgr%C3%ADmskirkja"
+  },
+  {
+   "q": "Mikä on Perlanin lasikupun alla Öskjuhlíð-kukkulalla?",
+   "options": ["Kuuman veden säiliöt", "Vanha linnoitus", "Kalasataman varasto", "Tulivuoren kraatteri"],
+   "correct": 0,
+   "level": 2,
+   "hint": "Kukkulalle rakennettiin ensimmäinen näistä jo vuonna 1939.",
+   "fact": "Perlanin lasikupu lepää kuuden kaukolämpöveden säiliön päällä. Rakennus avattiin yleisölle 21.6.1991.",
+   "source": "https://en.wikipedia.org/wiki/Perlan"
+  },
+  {
+   "q": "Minkä arkkitehtuuripalkinnon Harpa sai vuonna 2013?",
+   "options": ["Mies van der Rohe -palkinnon", "Pohjoismaiden neuvoston palkinnon", "Venetsian biennaalin palkinnon", "Pritzkerin arkkitehtuuripalkinnon"],
+   "correct": 0,
+   "level": 2,
+   "hint": "Rakennuksen julkisivun suunnitteli taiteilija Olafur Eliasson yhdessä tanskalaisen arkkitehtitoimiston kanssa.",
+   "fact": "Harpa sai Euroopan unionin Mies van der Rohe -arkkitehtuuripalkinnon 2013. Konsertti- ja kongressitalon avajaiskonsertti pidettiin 4.5.2011.",
+   "source": "https://en.wikipedia.org/wiki/Harpa_(concert_hall)"
+  },
+  {
+   "q": "Mikä viestintäyhteys tehtiin Höfðin paikalla Cornwallin Poldhuun 26.6.1905?",
+   "options": ["Radioyhteys", "Kaapelilennätin", "Puhelinyhteys", "Postilaivayhteys"],
+   "correct": 0,
+   "level": 3,
+   "hint": "Aloitteen teki runoilija ja liikemies Einar Benediktsson.",
+   "fact": "Lähteen mukaan kyseessä oli Islannin ensimmäinen radioyhteys ulkomaille. Antenni oli käytössä lokakuuhun 1906.",
+   "source": "https://en.wikipedia.org/wiki/H%C3%B6f%C3%B0i"
+  }
+ ],
+ "tiedot": [
+  "Lähteen mukaan Reykjavík on maailman pohjoisin itsenäisen valtion pääkaupunki; Grönlannin Nuuk on hieman pohjoisempana, mutta Grönlanti ei ole itsenäinen valtio.",
+  "Hallgrímskirkjan kellopelissä on 29 kelloa, ja kolme suurinta on nimetty runoilija Hallgrímurin, hänen vaimonsa ja heidän tyttärensä mukaan.",
+  "Tjörninin luoteiskulmassa seisoo Raatihuone, joka valmistui 1992 ja näyttää nousevan suoraan lammesta."
+ ],
+ "valokuva": {
+  "tiedosto": "Austurvöllur 2023.jpg",
+  "vuosi": "2023",
+  "lahde": "APK, Commons (CC BY-SA 4.0)",
+  "lyhyt": "Austurvöllur on Reykjavíkin keskustan aukio, jonka laidalla ovat tuomiokirkko ja Alþingin talo.",
+  "selite": "Austurvöllur oli 1700-luvun alussa lähteen mukaan paljon nykyistä suurempi. Nykyään aukion ympärillä on kahviloita ja baareja."
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Reykjavík",
+   "johdanto": "Reykjavík on Faxaflói-lahden rannalla, ja sen nimi tarkoittaa savujen lahtea. Koko kaupunki lämmitetään geotermisesti, ja keskusta asettuu lammen, aukion ja matalien kukkuloiden ympärille.",
+   "kansikuvat": [
+    {
+     "tiedosto": "Reykjavik pano Saga.jpg",
+     "lyhyt": "Reykjavík on Islannin pääkaupunki ja maan suurin kaupunki.",
+     "selite": "Kaupunki on enimmäkseen Seltjarnarnesin niemellä Faxaflói-lahden etelärannalla, ja lähiöt ulottuvat kauas etelään ja itään.",
+     "lahde": "Wurzeller, Wikimedia Commons (CC BY-SA 3.0)"
+    },
+    {
+     "tiedosto": "Iceland - Reykjavik 007 (6571006223).jpg",
+     "lyhyt": "Esja on 914 metrin korkuinen vuori Reykjavíkin lähialueella.",
+     "selite": "Esja kohoaa Faxaflói-lahden toisella puolella kaupungin lähialueella, ja se on alueen korkein vuori.",
+     "lahde": "McKay Savage from London, UK, Wikimedia Commons (CC BY 2.0)"
+    },
+    {
+     "tiedosto": "Harpa From Arnarhóll (33650129491).jpg",
+     "lyhyt": "Harpa on Reykjavíkin konsertti- ja kongressitalo.",
+     "selite": "Harpa avattiin 4.5.2011, ja siellä toimii Islannin sinfoniaorkesteri.",
+     "lahde": "Gary J. Wood from Toronto, ON, Canada, Wikimedia Commons (CC BY-SA 2.0)"
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Kupu kuuman veden säiliöiden päällä",
+     "teksti": "Perlan on luonnontieteellinen museo Öskjuhlíð-kukkulan laella, ja sen lasikupu lepää kuuden kaukolämpöveden säiliön päällä. Kukkulalle rakennettiin ensimmäinen kuuman veden säiliö 1939 ja seuraavien kahden vuosikymmenen aikana viisi lisäsäiliötä. Säiliöt purettiin ja rakennettiin uudelleen 1980-luvun lopulla, ja rakennus avattiin yleisölle 21.6.1991. Neljä säiliötä on yhä käytössä: yhdessä on jääluola, joka on 100 metriä pitkä ja tehty noin 400 tonnista jäätä, lunta ja tuhkaa, ja yksi on muutettu planetaarioksi. Isoisän matkavuonna 1873 kukkulalla ei vielä ollut säiliöitä.",
+     "tiedosto": "20190623 Perlan 8841 (48469867211).jpg",
+     "lyhyt": "Perlan on luonnontieteellinen museo Öskjuhlíð-kukkulalla.",
+     "selite": "Lasikupu lepää kuuden kaukolämpöveden säiliön päällä, ja museo avattiin yleisölle 21.6.1991.",
+     "lahde": "Ray Swi-hymn from Sijhih-Taipei, Taiwan, Wikimedia Commons (CC BY-SA 2.0)",
+     "wiki": "Perlan"
+    },
+    {
+     "otsikko": "Lasi, jonka valot vaihtuvat",
+     "teksti": "Harpa on konsertti- ja kongressitalo, jonka avajaiskonsertti pidettiin 4.5.2011. Sen suunnittelivat tanskalainen Henning Larsen Architects ja tanskalais-islantilainen taiteilija Olafur Eliasson. Julkisivu on teräsrungon päälle asennettuja värillisiä lasipaneeleita, ja sen kerrotaan saaneen innoituksensa Islannin basalttimaisemasta. Julkisivun 714 LED-valoa näyttävät Eliassonin suunnittelemaa videoteosta. Rakennustyöt alkoivat 2007 ja pysähtyivät 2008–2011 rahoituskriisin ajaksi. Talo sai Mies van der Rohe -arkkitehtuuripalkinnon 2013.",
+     "tiedosto": "*Das Opern- und Konzerthaus in Reykjavik. 02.jpg",
+     "lyhyt": "Harpan julkisivu koostuu teräsrungon päälle asennetuista värillisistä lasipaneeleista.",
+     "selite": "Julkisivun kerrotaan saaneen innoituksensa Islannin basalttimaisemasta, ja siinä on 714 LED-valoa.",
+     "lahde": "Holger Uwe Schmitt, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Harpa (concert hall)"
+    },
+    {
+     "otsikko": "Kaupungin lampi ja leipäkeitto",
+     "teksti": "Tjörnin tarkoittaa lampea, ja se on pieni lampi keskustassa. Sen kuvataan olevan laguuni, joka on ollut osa riuttaa nykyisen Hafnarstrætin kohdalla, ja sitä ruokkii Vatnsmýrin suo. Lammen keskisyvyys on 0,57 metriä ja syvin kohta 0,8 metriä, ja talvella se jäätyy ajoittain luistelijoille. Lammella käy 40–50 vesilintulajia, esimerkiksi lapintiira, haahka ja harmaasorsa, ja lapintiiran saapuminen ilmoittaa kesän alun. Lintujen ruokinta on ollut niin suosittua, että lampea on kutsuttu runollisesti maailman suurimmaksi leipäkeitoksi.",
+     "tiedosto": "Tjörnin lake, Reykjavík-3.jpg",
+     "lyhyt": "Tjörnin on pieni lampi Reykjavíkin keskustassa.",
+     "selite": "Lammen ympärillä on muun muassa Korkein oikeus, taidemuseo, kansallismuseo, kaupunginkirjasto ja kansallisteatteri.",
+     "lahde": "Szilas, Wikimedia Commons (PD)",
+     "wiki": "Tjörnin"
+    },
+    {
+     "otsikko": "Norjassa valmistettu talo ja ensimmäinen radioyhteys",
+     "teksti": "Höfði on vuonna 1909 pystytetty talo, joka tunnetaan Reaganin ja Gorbatšovin kokouksen paikkana 1986. Talo valmistettiin osina Norjassa, kuljetettiin Islantiin ja pystytettiin Ranskan konsulille Jean-Paul Brillouinille, ja lähteen mukaan siinä näkyy jugendin vaikutus. Paikalla tehtiin 26.6.1905 Islannin ensimmäinen radioyhteys ulkomaille. Aloitteen teki runoilija ja liikemies Einar Benediktsson, joka asui talossa myöhemmin 1913–1925. Isoisän matkavuonna 1873 sekä talo että antenni olivat vielä tulevaisuutta.",
+     "tiedosto": "Höfði mvp.jpg",
+     "lyhyt": "Höfði on vuonna 1909 pystytetty talo Reykjavíkissa.",
+     "selite": "Talo oli 1940- ja 1950-luvuilla Britannian suurlähetystö, ja kaupunki osti sen 1958.",
+     "lahde": "Miquelvp, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Höfði"
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "Hallgrimskirkja 2026 Utsida.jpg",
+     "lyhyt": "Hallgrímskirkjan betonitorni kohoaa Skólavörðuholt-kukkulalla.",
+     "selite": "Kirkon tornista pääsee hissillä näköalatasanteelle.",
+     "lahde": "VeraVidiVici, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "kappale": "Reykjavíkin keskustassa lähes kaikki näkyvät kohteet ovat lammen, satamarannan tai kukkulan ympärillä. Kaupunkibusseista vastaa Strætó bs. Kesällä 20.5.–24.7. aurinko ei laske yli viittä astetta horisontin alapuolelle, mutta joulukuun alusta tammikuun 10. päivään päivä on alle viisi tuntia. Kesäpäivinä on yleensä 10–15 astetta, ja talvi on leutoa mutta tuulista. Lämmitys, uima-altaat ja keskustan katujen lumensulatus perustuvat geotermiseen kuumaan veteen.",
+    "artikkeli": {
+     "nimi": "Matkailijan Reykjavík",
+     "taitto": "opas",
+     "teksti": "Pieni pääkaupunki avautuu parhaiten kävellen lammen, aukion ja kukkuloiden välillä.",
+     "nosto": "Kesällä valo ei lopu, talvella päivä on lyhyt. Kaksi lentoasemaa ja yksi lauttasatama vievät sekä maailmalle että saarille.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Kansainvälinen Keflavík International Airport (KEF) on noin 50 kilometrin päässä kaupungista lounaaseen ja palvelee lähteen mukaan lähes kaikkea Islannin kansainvälistä liikennettä. Reykjavík Airport (RKV) on kaupungin sisällä, noin 2 kilometrin päässä keskustasta, ja palvelee kotimaan lentoja, yleisilmailua ja lääkintälentoja. Kaupungin ja ympäristön linja-autoliikenteestä vastaa Strætó bs. Satamia on kaksi: vanha satama keskustan lähellä ja Sundahöfn idässä, jonne tulevat suuremmat risteilijät.",
+       "kuva": {
+        "tiedosto": "Keflavík International Airport (31664385142).jpg",
+        "lyhyt": "Keflavík International Airport palvelee lähes kaikkea Islannin kansainvälistä liikennettä.",
+        "selite": "Lentoasema on noin 50 kilometrin päässä Reykjavíkista, ja sen tunnus on KEF.",
+        "lahde": "Jeff Hitchcock from Seattle, WA, USA, Wikimedia Commons (CC BY 2.0)"
+       }
+      },
+      {
+       "otsikko": "Vanha keskusta",
+       "teksti": "Austurvöllur on keskustan aukio, jonka ympärillä on kahviloita ja baareja ja jonka laidalla seisovat Dómkirkjan ja Alþingishúsið. Laugavegur on pääostoskatu, ja keskustan lampi on Tjörnin. Hallgrímskirkjan kellotorni on kukkulalla seisova korkea maamerkki, jonka näköalatasanteelle pääsee hissillä.",
+       "kuva": {
+        "tiedosto": "Dómkirkjan í Reykjavík 2023.jpg",
+        "lyhyt": "Dómkirkjan on Islannin piispan istuin Austurvöllin laidalla.",
+        "selite": "Ensimmäinen kirkko paikalla rakennettiin 1787 ja purettiin 1847 suuremman tieltä.",
+        "lahde": "APK, Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Kesällä valoa riittää: aurinko ei laske yli viittä astetta horisontin alapuolelle 20.5.–24.7., kun taas joulukuun alusta tammikuun 10. päivään päivä on alle viisi tuntia. Kesäpäivinä lämpötila on 10–15 astetta ja yli 20 asteen lukemia on harvoin. Kaupungin säädatan kuukausikeskiarvot liikkuvat välillä −0,1 (maaliskuu) ja 10,6 astetta (heinä- ja elokuu). Sadetta tulee joka kuukausi, eniten tammikuussa."
+      },
+      {
+       "otsikko": "Lämpö maan alta",
+       "teksti": "Kaikki Reykjavíkin rakennukset lämmitetään geotermisesti. Kuumaa vettä käytetään myös uima-altaisiin ja keskustan katujen lumensulatukseen. Laugardalslaug on lähteen mukaan suurin uima-allaskompleksi, ja Nauthólsvík on geotermisesti lämmitetty ranta. Perlanin säiliöt kuuluvat samaan järjestelmään."
+      },
+      {
+       "otsikko": "Saaret ja luonto",
+       "teksti": "Viðeyhin pääsee kesäisin lautalla muun muassa Harpan laiturilta, ja saarella on noin 30 pesivää lintulajia sekä kävelypolkuja. Heiðmörk on lähteen mukaan alueen suurin metsä- ja luonnonsuojelualue, ja Rauðhólar on punaisten pseudokraatterien ryhmä. Esja on 914 metriä korkea. Elliðaá-joen varrella kulkee kävely- ja pyöräteitä.",
+       "kuva": {
+        "tiedosto": "Viðey island view with Esja.jpg",
+        "lyhyt": "Viðey on Kollafjörðurin lahden suurin saari, jonne pääsee lautalla.",
+        "selite": "Saari on pinta-alaltaan 1,7 neliökilometriä, ja sen korkein kohta on 32 metriä.",
+        "lahde": "Slawojar, Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       { "mita": "Hallgrímskirkjan näköalatasanne", "tahdet": 3, "selite": "Hissillä torniin ja näkymä kaupunkiin ja vuorille." },
+       { "mita": "Perlan", "tahdet": 3, "selite": "Jääluola, planetaario ja näköalatasanne kuuman veden säiliöiden päällä." },
+       { "mita": "Kävely Tjörninin ympäri", "tahdet": 2, "selite": "Lammella käy 40–50 vesilintulajia." },
+       { "mita": "Harpan lasijulkisivu", "tahdet": 2, "selite": "Konsertteja ja värillisiä lasipaneeleja satamassa." },
+       { "mita": "Lauttamatka Viðeyhin", "tahdet": 2, "selite": "Saaressa on Richard Serran Áfangar-teos ja polkuja." }
+      ],
+      "hyvaTietaa": [
+       { "otsikko": "Kaksi lentoasemaa", "teksti": "Keflavík (KEF) palvelee kansainvälistä liikennettä noin 50 kilometrin päässä, Reykjavík Airport (RKV) kotimaan lentoja kaupungin sisällä." },
+       { "otsikko": "Uudenvuodenyö", "teksti": "Ilotulitteita saa ostaa ja käyttää 28.12.–6.1., joten uudenvuodenyönä koko kaupunki valaistuu ilotulituksista." },
+       { "otsikko": "Iceland Airwaves", "teksti": "Musiikkifestivaali pidetään vuosittain marraskuussa kaupungin eri paikoissa, ja Harpa on yksi päänäyttämöistä." },
+       { "otsikko": "Olut", "teksti": "Olut oli Islannissa kiellettyä 1.3.1989 asti." }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "kuvataide",
+   "nimi": "Taidetta satamasta ruohokentälle",
+   "johdanto": "Reykjavíkin taidemuseo toimii kolmessa eri talossa, ja yksi niistä on entinen satamavarasto. Taidetta on myös saaressa, jonne kuljetaan lautalla.",
+   "tehtava": {
+    "kysymys": "Kuinka monta basalttipylväsparia Richard Serran Áfangar-teoksessa on Viðeyn saarella?",
+    "vaihtoehdot": ["Yhdeksän", "Viisi", "Seitsemän", "Kaksitoista"],
+    "oikea": 0,
+    "fakta": "Áfangar valmistui 1990, ja sen parit sijaitsevat Vesturey-saaren luoteisreunalla. Kunkin parin pylväiden päät ovat samalla tasolla."
+   },
+   "nostot": [
+    {
+     "otsikko": "Maalari, jonka mukaan talo nimettiin",
+     "teksti": "Kjarvalsstaðir avattiin 1973, ja se on nimetty maalari Jóhannes S. Kjarvalin (1885–1972) mukaan. Lähteen mukaan se on Islannin ensimmäinen erityisesti kuvataidenäyttelyihin suunniteltu rakennus. Talo sijaitsee Klambratún-puiston keskellä lyhyen matkan päässä keskustasta. Kjarvalin töiden kerrotaan muodostavan suuren osan museon kokoelmasta, ja hänet kuvataan romanttiseksi boheemiksi, joka tallensi maan kauneutta ja mystiikkaa. Museolla on viisi osakokoelmaa: kaupungin yleinen taidekokoelma, Erró-, Kjarval- ja Ásmundur Sveinsson -kokoelmat sekä arkkitehtuuriosaston kokoelma.",
+     "tiedosto": "Kjarvalsafn.JPG",
+     "lyhyt": "Kjarvalsstaðir on Reykjavíkin taidemuseon toimipaikka Klambratún-puiston keskellä.",
+     "selite": "Museo on nimetty maalari Jóhannes S. Kjarvalin mukaan, ja se avattiin 1973.",
+     "lahde": "TommyBee, Wikimedia Commons (PD)",
+     "wiki": "Reykjavik Art Museum"
+    },
+    {
+     "otsikko": "Kuvanveistäjän oma talo",
+     "teksti": "Ásmundarsafn avattiin 1983, ja se on omistettu kuvanveistäjä Ásmundur Sveinssonin (1893–1982) veistoksille ja piirustuksille. Museo on taiteilijan entinen koti ja työpaja Laugardalurissa, jonka hän suunnitteli ja rakensi enimmäkseen itse vuosina 1942–1950. Arkkitehtuurissa leikitellään arabialaisen kulttuurin teemalla ja välimerellisellä vaikutuksella. Talon ympärillä oleva veistospuutarha on avoinna yleisölle ympäri vuoden. Sveinsson oli lähteen mukaan yksi Islannin kuvanveiston uranuurtajista, ja hänen töitään on eri puolilla maata.",
+     "tiedosto": "Ásmundarsafn - front view with sculptures by Ásmundur Sveinsson.jpg",
+     "lyhyt": "Ásmundarsafn on kuvanveistäjä Ásmundur Sveinssonin entinen koti ja työpaja Laugardalurissa.",
+     "selite": "Taiteilija rakensi talon enimmäkseen itse vuosina 1942–1950, ja museo avattiin 1983.",
+     "lahde": "Slawojar2, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Reykjavik Art Museum"
+    },
+    {
+     "otsikko": "Satamavarastosta galleriaksi",
+     "teksti": "Hafnarhús on Reykjavíkin taidemuseon uusin toimipaikka, ja se otettiin käyttöön täydellisen kunnostuksen jälkeen huhtikuussa 2000. Rakennus oli aiemmin sataman varasto, ja kunnostuksessa pyrittiin säilyttämään mahdollisimman paljon alkuperäisestä arkkitehtuurista. Talossa on kuusi galleriaa, sisäpiha ja monikäyttötila, jossa järjestetään rock-konsertteja ja runoiltoja. Esillä on aina töitä Erró-kokoelmasta: islantilainen pop-taiteilija Erró on asunut ja työskennellyt Pariisissa vuosikymmeniä ja lahjoittanut suuren kokoelman.",
+     "tiedosto": "ListasafnReykjavikur.JPG",
+     "lyhyt": "Hafnarhús on entinen sataman varasto, josta on tehty taidemuseon toimipaikka.",
+     "selite": "Museon galleriatilaa on lähteen mukaan yli 3 000 neliömetriä, ja näyttelyitä on yli kaksikymmentä vuodessa.",
+     "lahde": "TommyBee, Wikimedia Commons (PD)",
+     "wiki": "Reykjavik Art Museum"
+    },
+    {
+     "otsikko": "Yhdeksän paria saaressa",
+     "teksti": "Yhdysvaltalainen taiteilija Richard Serra sai Islannin kansallisgalleriasta kutsun tehdä teoksen 1988 ja valitsi paikaksi Viðeyn. Valmistunut 1990 teos Áfangar sijaitsee Vesturey-saaren luoteisreunalla, ja siinä on yhdeksän paria basalttipylväitä. Parien pylväät ovat 9 ja 10 metrin korkeudella merenpinnasta; ylempi pylväs on 3 ja alempi 4 metriä korkea, joten pylväiden päät ovat samalla tasolla. Viðey on Kollafjörðurin lahden suurin saari, ja sinne pääsee lautalla. Saarella pesii noin 30 lintulajia.",
+     "tiedosto": "Viðey island basalt columns and Milestones sculpture.jpg",
+     "lyhyt": "Richard Serran Áfangar on basalttipylväistä tehty teos Viðeyn saarella.",
+     "selite": "Teos valmistui 1990, ja basaltti on lähteen mukaan islantilaista kiveä.",
+     "lahde": "Slawojar, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Viðey"
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Reykjavíkin kohteet ovat lähellä toisiaan Seltjarnarnesin niemen pohjoisrannalla ja kukkuloilla. Lammen, aukion ja kukkulalla seisovan kirkon lisäksi mukana ovat Harpa, Höfði ja Perlan, ja yksi kohde on saaressa.",
+  "rajat": { "pohjoinen": 64.1710, "etela": 64.1260, "lansi": -21.9480, "ita": -21.8600 },
+  "kohteet": [
+   { "nimi": "Hallgrímskirkja", "lat": 64.14170, "lon": -21.92660 },
+   { "nimi": "Harpa", "lat": 64.15028, "lon": -21.93250 },
+   { "nimi": "Tjörnin", "tyyppi": "luonto", "lat": 64.14444, "lon": -21.94250 },
+   { "nimi": "Austurvöllur", "tyyppi": "aukio", "lat": 64.14720, "lon": -21.93980 },
+   { "nimi": "Perlan", "lat": 64.12920, "lon": -21.91890 },
+   { "nimi": "Höfði", "lat": 64.14639, "lon": -21.90667 },
+   { "nimi": "Viðey", "tyyppi": "luonto", "lat": 64.16667, "lon": -21.86667 }
+  ]
+ },
+ "nahtavyydet": {
+  "Hallgrímskirkja": {
+   "aika": "1945–1986",
+   "teksti": "Hallgrímskirkja on luterilainen seurakuntakirkko Skólavörðuholt-kukkulalla lähellä keskustaa. Kirkon korkeus on 74,5 metriä, ja lähteen mukaan se on Islannin suurin kirkko ja maan toiseksi korkein rakennus. Nimi tulee runoilija ja pappi Hallgrímur Péturssonin (1614–1674) mukaan, joka kirjoitti Passiovirret.\n\nValtion arkkitehti Guðjón Samúelsson sai suunnittelutehtävän 1937, ja hänen sanotaan suunnitelleen kirkon muistuttamaan Islannin basalttipylväsmuodostumia. Rakentaminen alkoi 1945 ja päättyi 1986: krypta vihittiin 1948, torni ja siivet valmistuivat 1974 ja laivasto vihittiin 1986. Lähteen mukaan kirkko on ekspressionistista arkkitehtuuria.\n\nTornissa on 29 kellon kellopeli, ja suuremmat Klais-urut valmistuivat joulukuussa 1992. Kirkon edessä on Leif Erikssonin patsas, lahja Yhdysvalloista Alþingin tuhatvuotisjuhlaan 1930. Isoisän matkavuonna 1873 kukkulalla ei vielä ollut kirkkoa, sillä suunnittelu tilattiin vasta 1937.",
+   "kuvat": [
+    {
+     "tiedosto": "Hallgrimskirkja 2026.jpg",
+     "lyhyt": "Hallgrímskirkja on Reykjavíkin luterilainen seurakuntakirkko Skólavörðuholt-kukkulalla.",
+     "selite": "Kirkon rakentaminen kesti vuodesta 1945 vuoteen 1986.",
+     "lahde": "VeraVidiVici, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Harpa": {
+   "aika": "2007–2011",
+   "teksti": "Harpa on konsertti- ja kongressitalo, jonka avajaiskonsertti pidettiin 4.5.2011 ja jossa toimii Islannin sinfoniaorkesteri. Talon suunnittelivat tanskalainen Henning Larsen Architects ja taiteilija Olafur Eliasson. Rakennustyöt alkoivat 2007 ja pysähtyivät 2008–2011 Islannin rahoituskriisin ajaksi. Nimi Harpa annettiin 11.12.2009 islantilaisen musiikin päivänä.\n\nJulkisivussa on 714 LED-valoa, 486 itäosassa ja 228 länsiosassa, jotka näyttävät Eliassonin suunnittelemaa videoteosta. Vuonna 2021 hän teki 12 uutta valoteosta, yhden kullekin kuukaudelle. Harpa sai Euroopan unionin Mies van der Rohe -arkkitehtuuripalkinnon 2013.\n\nTalon edessä vedessä on Ólöf Pálsdóttirin veistos Selloa soittava muusikko (1970), jonka malli oli tanskalainen sellisti Erling Blöndal Bengtsson. Veistos seurasi orkesteria Harpaan 2014. Isoisän matkavuonna 1873 talosta ei ollut vielä suunnitelmaakaan.",
+   "kuvat": [
+    {
+     "tiedosto": "Blua ĉielo kaj blankaj nuboj super la kongresejo Harpa.jpg",
+     "lyhyt": "Harpa on Henning Larsen Architectsin ja Olafur Eliassonin suunnittelema konsertti- ja kongressitalo.",
+     "selite": "Talo avattiin 2011, ja lähteen mukaan se on Reykjavíkin ensimmäinen konserttitaloksi rakennettu talo.",
+     "lahde": "RG72, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Tjörnin": {
+   "aika": "lampi; sillat 1920 ja 1942",
+   "teksti": "Tjörnin on pieni lampi Reykjavíkin keskustassa, ja useimmat kaupunkiin tulijat kulkevat sen rantaa. Lampea ruokkii Vatnsmýrin suo, ja lammella käy 40–50 vesilintulajia. Etelässä on Hljómskálagarður-puisto patsaineen, ja lammen eteläpuolella Hringbrautin toisella puolella on Reykjavík Airport.\n\nLammen luonnollinen laskupuro Lækurinn kulki aiemmin avoimena kanavana keskustan läpi, ja se on ollut viemärijärjestelmän osa Lækjargatan alla vuodesta 1911. Lammen luoteispäässä kulkee puinen jalankulkusilta vuodelta 1920, ja betonisilta vuodelta 1942 on yhä käytössä.\n\nIsoisän matkavuonna 1873 kumpaakaan siltaa ei vielä ollut. Suojelualue Vatnsmýri on heikentynyt, ja lintulajiston parantamiseksi suunnitellaan toimenpiteitä.",
+   "kuvat": [
+    {
+     "tiedosto": "Lago Tjörnin, Reikiavik, Distrito de la Capital, Islandia, 2014-08-13, DD 087.JPG",
+     "lyhyt": "Tjörnin on Reykjavíkin keskustan lampi, jonka rannalla käy kymmeniä vesilintulajeja.",
+     "selite": "Lampi jäätyy talvella ajoittain, ja jäällä luistellaan.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Austurvöllur": {
+   "aika": "1700-luvulta",
+   "teksti": "Austurvöllur on Reykjavíkin julkinen aukio, joka on suosittu kokoontumispaikka etenkin hyvällä säällä aukion laidan kahviloiden vuoksi. Aukion ympäröivät kadut ovat Vallarstræti, Pósthússtræti, Kirkjustræti ja Thorvaldsensstræti. Lähteen mukaan se oli 1700-luvun alussa paljon nykyistä suurempi.\n\nAukiolla on itsenäisyysliikkeen johtajan Jón Sigurðssonin iso patsas. Thorvaldsensstræti on nimetty kuvanveistäjä Bertel Thorvaldsenin mukaan, jonka patsas oli aukion keskellä pitkään ennen Sigurðssonin patsasta. Aukion laidalla ovat Alþingishúsið, tuomiokirkko Dómkirkjan, Hotel Borg ja kahviloita.\n\nAlþingishúsið on klassismin tyylinen rakennus, jonka suunnitteli Ferdinand Meldahl ja joka rakennettiin hakatusta dolerittikivestä 1880–1881. Tuomiokirkon ensimmäinen rakennus valmistui 1787 ja purettiin 1847 hieman suuremman tieltä. Isoisän matkavuonna 1873 aukion laidalla ei siis vielä ollut Alþingishúsiðia, mutta kirkko seisoi jo.",
+   "kuvat": [
+    {
+     "tiedosto": "Austurvöllur panoramic.jpg",
+     "lyhyt": "Austurvöllur on Reykjavíkin keskustan aukio, jonka laidalla ovat Alþingin talo ja tuomiokirkko.",
+     "selite": "Aukiolla seisoo Jón Sigurðssonin patsas.",
+     "lahde": "APK, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Perlan": {
+   "aika": "1939–1991",
+   "teksti": "Perlan seisoo Öskjuhlíð-kukkulalla 61 metrin korkeudessa merenpinnasta. Paine riittää viemään kukkulan säiliöistä vettä 38 metrin korkeuteen eli kymmenenteen kerrokseen. Jokaiseen säiliöön mahtuu viisi miljoonaa litraa vettä, mikä vastaa 5 000 kuutiometriä.\n\nNäyttelyihin kuuluvat Wonders of Iceland, revontulista kertova Áróra-planetaariohjelma ja Lava Show sekä Látrabjargin lintuvuoren kymmenen metrin korkuinen kopio. Näköalatasanteelta näkee kaupungin, ympäristön vuoret ja Atlantin, ja sisällä on ravintola, joka kiertää 360 astetta.\n\nEnsimmäinen säiliö valmistui 1939 ja loput viisi seuraavien kahden vuosikymmenen aikana. Isoisän matkavuonna 1873 Öskjuhlíð oli vielä rakentamaton kukkula. Perlan sijaitsee kauempana keskustasta kuin useimmat muut kohteet.",
+   "kuvat": [
+    {
+     "tiedosto": "Winter Light (6842178797).jpg",
+     "lyhyt": "Perlan on kuuman veden säiliöiden päälle rakennettu museo Öskjuhlíð-kukkulalla.",
+     "selite": "Museo avattiin yleisölle 21.6.1991.",
+     "lahde": "Axel Kristinsson from Reykjavík, Iceland, Wikimedia Commons (CC BY 2.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Höfði": {
+   "aika": "1909",
+   "teksti": "Höfði on vuonna 1909 rakennettu talo, joka valmistettiin osina Norjassa ja pystytettiin Reykjavíkiin Ranskan konsulille Jean-Paul Brillouinille. Rakennuslupaa ei ollut vielä myönnetty, kun talo pystytettiin, ja tuolloin se oli lähteen mukaan kaupungin suurin yksityinen kiinteistö. Kaupunki osti talon 1958 ja kunnosti sen, ja sitä käytetään juhlavastaanottoihin.\n\nRunoilija Einar Benediktsson asui talossa 1913–1925, ja Louisa Matthíasdóttir kasvoi siinä 1925–1937. Sisällä on ristiin ripustetut Yhdysvaltojen ja Neuvostoliiton liput 1986 pidetyn huippukokouksen muistoksi. Tulipalo vaurioitti taloa 25.9.2009 sen 100-vuotispäivänä, mutta korvaamattomat esineet pelastettiin. Talossa kerrotaan kummittelevan nuoren naisen henki.\n\nIsoisän matkavuonna 1873 paikalla ei vielä ollut taloa. Radioantenni tuli paikalle vasta 1905.",
+   "kuvat": [
+    {
+     "tiedosto": "Höfði 5528.JPG",
+     "lyhyt": "Höfði on vuonna 1909 pystytetty talo, jonka osat valmistettiin Norjassa.",
+     "selite": "Talo tunnetaan Reaganin ja Gorbatšovin kokouksen paikkana 1986.",
+     "lahde": "Hedwig Storch, Wikimedia Commons (CC BY-SA 3.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Viðey": {
+   "aika": "900-luvulta",
+   "teksti": "Viðey on Kollafjörðurin lahden suurin saari, ja sen pinta-ala on 1,7 neliökilometriä. Saari jakautuu kapealla kannaksella Länsisaareen, Itäsaareen ja Kotisaareen. Lähteen mukaan se oli noin kaksi miljoonaa vuotta sitten aktiivinen tulivuori. Sinne pääsee lautalla, ja lauttoja kulkee kesäisin päivittäin.\n\nSaarella on arkeologisia jäänteitä 900-luvun alusta ja augustinolaisluostari vuosilta 1225–1539. Länsisaaressa on Viðeyjarstofa-talo, jonka tanskalainen arkkitehti Nicolai Eigtved suunnitteli ja Tanskan hallitus rakennutti 1753–1755. Talossa on nykyään ravintola. Saarella on Richard Serran Áfangar sekä Yoko Onon Imagine Peace Tower, joka sytytetään vuosittain Lennonin syntymäpäivän 9.10. ja kuolinpäivän 8.12. välillä.\n\nIsoisän matkavuonna 1873 saari oli vielä asuttu, sillä viimeiset asukkaat lähtivät sieltä vasta 1943.",
+   "kuvat": [
+    {
+     "tiedosto": "Viðey island.jpg",
+     "lyhyt": "Viðey on Kollafjörðurin lahden suurin saari aivan Reykjavíkin edustalla.",
+     "selite": "Saaren nimen arvellaan viittaavan siihen, että se oli metsäinen tai että sinne ajautui ajopuuta.",
+     "lahde": "Slawojar, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": {
+  "lat": 64.15,
+  "lon": -21.94,
+  "keskilampo": [1, 0.4, -0.1, 2.3, 6.2, 9, 10.6, 10.6, 7.9, 4.3, 0.4, 0],
+  "sade": [199, 140, 108, 105, 104, 123, 71, 113, 129, 102, 138, 148],
+  "luonnehdinta": "Kuukausien keskilämpötila pysyy kylmimmillään noin −0,1 asteessa maaliskuussa ja lämpimimmillään 10,6 asteessa heinä- ja elokuussa. Talvikuukausina lämpötila on lähellä nollaa. Sadetta tulee joka kuukausi: eniten tammikuussa (199 mm) ja vähiten heinäkuussa (71 mm)."
+ },
+ "ehdotukset": {
+  "lentoasema": "Keflavík International Airport (KEF)",
+  "huomiot": [
+    "Kuvat: Hallgrímskirkja ja Harpa on kevyessä pisteessä merkitty ei kuvamotiivina: suojattu. Niiden kuvia käytetään vain kohteiden omissa jutuissa (kohde 1 ja 2, nosto K2). Poikkeukset, joista Päätoimittaja päättää: kansikuva 3 on Harpa (kuvat.md:ssä ei ole muuta leveää yleiskuvaa ilman kaskadia valokuvaan ja kohteisiin) ja matkailijalle-kuva on Hallgrímskirkja (ainoa pysty kuva kuvat.md:ssä).",
+    "Kevyen pisteen virhe: Dómkirkja ei ole 1790-luvulta. Lähteen (en-Wikipedia, Reykjavík Cathedral) mukaan ensimmäinen kirkko rakennettiin 1787 ja purettiin 1847 suuremman tieltä; nykyisen tuomiokirkon tarkkaa rakennusvuotta lähde ei anna. Alþingishúsið 1880-luvulta on oikein (1880–1881).",
+    "Ennen–nyt-pari jätetty pois: ainoa löytynyt PD-vedos (No-nb bldsa 3b203.jpg) on 1881–1888, ei isoisän matkavuodelta. Päätoimittaja päättää, kelpaako.",
+    "Oppaan jaksot 3 ja 4 ovat kuvattomia (keskiyön auringon ja revontulten haut tyhjiä, Nauthólsvík-kuvat hylätty); raja kaksi kuvatonta täyttyy.",
+    "Matkustusturvallisuutta ei tarkistettu (um.fi ei ollut lähteenä), joten oppaassa ei ole turvallisuusvaroitusta.",
+    "Säädata on Open-Meteon ruutuarvoja: kuukausisade (yht. noin 1 480 mm) on selvästi suurempi kuin tavanomaiset asemahavainnot, joten oppaassa mainitaan vain suhteellinen sadejärjestys ja saatiedot-luonnehdinnassa luvut sellaisenaan; tarkista halutessasi.",
+    "Kjarvalsstaðir: sama vuosi 1973 sekä museon perustamiselle että talon avaamiselle lähteessä; tekstissä käytetään vain avaamista."
+  ]
+ }
+}
