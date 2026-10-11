@@ -1,4 +1,4 @@
-# ISS-raketti: kertojan ja Pulun käsikirjoitus v2 (omistajan muokkaus 11.10.2026 klo 23.4x + PT:n kolme korjausta)
+# ISS-raketti: kertojan ja Pulun käsikirjoitus v2 (omistajan muokkaus 11.10.2026 klo 23.4x + PT:n kaksi korjausta)
 
 v2: MUUTTUNEET REPLIIKIT (6, merkitty [v2]) äänitetään uudelleen, muut 12 v3-manifestista ennallaan (omistaja 12.10. 00.1x: "Kolkuta, kolkuta" jää, v3:n otto).
 
