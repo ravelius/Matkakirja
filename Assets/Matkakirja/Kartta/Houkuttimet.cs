@@ -6,13 +6,13 @@ namespace Matkakirja
     /// HOUKUTTIMET KARTALLA (omistaja 11.10.2026 PT:n kautta, juna 182): kaupungit, joissa houkuttaa käydä, hehkuvat pisteinä
     /// hunnun päällä koko ajan, kaikilla zoomeilla ja myös koko Euroopan loitonnuksessa (EurooppaLoitonnus), pelin
     /// kaupunkirajauksesta riippumatta. Puhdas lista ja syke (ei UnityEngineä); testit Kartta-testit/Testit/HoukuttimetTestit.cs
-    /// ja Peli-testit (lautapelien kodit = Peliluettelo). Käyttö KaupunkiMerkit (pisteet), värit UI:n puolelta (UI/HoukutinVarit.cs,
+    /// ja Peli-testit (lautapelien kodeilla ei houkutinta, Peliluettelo). Käyttö KaupunkiMerkit (pisteet), värit UI:n puolelta (UI/HoukutinVarit.cs,
     /// Tyylikirja), komento "houkuttimet" (Komennot).
     ///
     ///  - LINSSIKAUPUNGIT violetteina (<see cref="LinssiToken"/>): Alpit (Topografia; laudan kaupunki "alpit", alueen piste),
     ///    Lontoo (Maailmanradio), Edinburgh (Keksinnöt), Istanbul (Ihmisen matka) ja Amsterdam (Taidemuseo).
-    ///  - LAUTAPELIKAUPUNGIT sinisinä (<see cref="PeliToken"/>, videopelien sininen): Berliini (Mylly) ja Ateena (Tavli).
-    ///  - OLAVINLINNA (videopeli) samalla sinisellä vapaana pisteenä (ei laudan kaupunki, ei napautusta; NUI-jako 11.10.).
+    ///  - LAUTAPELEIHIN EI VÄRIKOROSTUSTA (omistaja 11.10.2026 klo 17.1x): Berliini (Mylly) ja Ateena (Tavli) ovat tavallisia pisteitä.
+    ///  - OLAVINLINNA (videopeli) videopelien sinisellä (<see cref="PeliToken"/>) vapaana pisteenä (ei laudan kaupunki, ei napautusta; NUI-jako 11.10.).
     ///    NUI:n nostomerkki (NostotKartalla) hoitaa Olavinlinnan maan sisällä omilla säännöillään.
     ///  - HEHKU: olemassa oleva pistepohja (KaupunkiMerkit: pisteMateriaali, nelio) tavallisen pisteen kokoisena ja saman
     ///    pisteen hento hehkulevy alla (omistaja 16.0x: pienet joka tasolla, <see cref="PisteenMittakerroin"/>); hidas sykähdys koossa ja peitossa Joutosykkeen kellolla (jäätyy levossa keskiasentoon, lämpösääntö).
@@ -21,7 +21,7 @@ namespace Matkakirja
     /// </summary>
     public static class Houkuttimet
     {
-        public enum Laji { Linssi, Lautapeli, Videopeli }
+        public enum Laji { Linssi, Videopeli }
 
         public readonly struct Houkutin
         {
@@ -39,7 +39,7 @@ namespace Matkakirja
         /// <summary>
         /// Houkuttimet laudan kaupunkien tunnuksin (Sisalto.Kaupunki.id) ja vapaat pisteet paikkoineen. Olavinlinna (videopeli,
         /// NUI-jako 11.10.2026): ei laudan kaupunki (Savonlinna ei ole laudalla, Olavinlinna on maastokohde/nosto), joten vapaa
-        /// piste 61,8639 N 28,9011 E samalla sinisellä kuin lautapelit. Andøya (ISS-raketti) vapaa violetti piste.
+        /// piste 61,8639 N 28,9011 E videopelien sinisellä. Andøya (ISS-raketti) vapaa violetti piste.
         /// </summary>
         public static readonly Houkutin[] Lista =
         {
@@ -48,15 +48,13 @@ namespace Matkakirja
             new Houkutin("edinburgh", Laji.Linssi, "Keksinnöt"),
             new Houkutin("istanbul", Laji.Linssi, "Ihmisen matka"),
             new Houkutin("amsterdam", Laji.Linssi, "Taidemuseo"),
-            new Houkutin("berliini", Laji.Lautapeli, "Mylly"),
-            new Houkutin("ateena", Laji.Lautapeli, "Tavli"),
             new Houkutin("olavinlinna", Laji.Videopeli, "Olavinlinna 1499", 61.8639, 28.9011),
             // Andøya (PT 11.10. 15.0x): raketti vie ISS-linssiin, joten vapaa linssi-violetti piste Andøya Spacen laukaisupaikalla
             // (Andenes, 69,2944 N 16,0206 E). LS2 tekee raketin maamerkin ja napautuksen (hintalappu, Rahapula, laukaisu).
             new Houkutin("andoya", Laji.Linssi, "ISS (raketti)", 69.2944, 16.0206),
         };
 
-        /// <summary>Tyylikirjan tokenit (tyylikirja.json): linssi = erikois.linssi-hehku, lautapeli = teemat.videopeli.korostus.</summary>
+        /// <summary>Tyylikirjan tokenit (tyylikirja.json): linssi = erikois.linssi-hehku, videopeli = teemat.videopeli.korostus.</summary>
         public const string LinssiToken = "--tk-erikois-linssi-hehku", PeliToken = "--tk-videopeli-korostus";
 
         /// <summary>Laudan kaupungin houkutinlaji tai null (vapaat pisteet eivät ole kaupunkeja).</summary>
@@ -75,7 +73,7 @@ namespace Matkakirja
             return null;
         }
 
-        /// <summary>Token lajille (kirjaus ja testit): linssi violetti, lautapeli ja videopeli videopelien sininen.</summary>
+        /// <summary>Token lajille (kirjaus ja testit): linssi violetti, videopeli videopelien sininen.</summary>
         public static string Token(Laji laji) => laji == Laji.Linssi ? LinssiToken : PeliToken;
 
         // ---- Hehku ja syke ----
