@@ -13106,3 +13106,83 @@ PT 11.10.2026 klo 04.5x: elävän oppaan kierrosvalinnat Esittele kaupunki ja Li
 ## PÄÄKAUPUNKIEN SÄÄLUVUT JA LUKUTARKISTUS (11.10.2026 klo 04.50)
 
 PT 11.10.2026 klo 03.4x–04.5x: pilvierät e01 (8 kaupunkia) ja e02 (6) valmiit; SK:n pistokoe 78 oikein / 46 epätarkkaa / 7 virhettä, kuvien lisenssit kunnossa. Säätietojen juurisyy: tools/hae-saaperusdata.mjs laski Open-Meteon noin 25 km:n ruudusta vain 3 vuodesta → työkalu käyttää sääaseman normaaleja en-Wikipedian ilmastotaulukosta (kausi lahde-kenttään); 14/14 päivitetty (vertailu WMO, Météo-France ja Islannin IL ≤ 0,2 °C), PILVIOHJE luku 13 (laajuus, kuvateksti, säädata). SK korjasi 4 otoskaupunkia, muiden 10 lukutarkistus pilvessä (t01, t02). Pelin saatiedot.js:n 66 kaupunkia on tehty samalla virheellä ja graafi väittää "ERA5 1991–2020" → Pelikoodarin korjauserä. e03 (Tbilisi, Jerevan, Baku, Amman, Beirut, Abu Dhabi, Manama) käynnissä vanhalla säätyökalulla → säärivit uudelleen; Ramallah jätetty pois herkkänä → omistajalle. Ei vientiä peliin ennen QA:ta.
+
+## MAAKORTTI PYSÄKKIMAISSA (YÖN OLETUS) (11.10.2026 klo 09.13)
+
+11.10. 04.5x–06.0x PT (MAAKORTTI PYSÄKKIMAISSA, yön oletus aamun korttiin): vaihtoehto (a) NUI natiivi-ui/maakortti-pysakki c1a3d534e: oman maan tyhjän kohdan napautus avaa kartussin, kun maalla ei ole pääkaupunkipistettä (pääkaupunki on pysäkki, esim. Ranska, UK); kaupungin kyltin napautus on kaupunkikortin käytössä; samalla napautuksella maakuntapaneeli ei avaudu (muuten peittää kartussin), seuraava napautus kuten ennen. Ei junaan ennen omistajan vastausta.
+
+## VERKKOLÄHTEET: MEDIAWIKIN JA WIKIDATAN RAJAPINTA (11.10.2026 klo 09.13)
+
+11.10. 05.0x PT (VERKKOLÄHTEET): MediaWikin ja Wikidatan api.php on virallinen rajapinta → sallittu kuvaavalla User-Agentilla ja peräkkäisillä pyynnöillä, vaikka robots.txt kieltää /w/-polun indeksoijilta; /wiki/-haku käy myös. Pelikoodarin sääerä #4383: 59 kaupunkia sääaseman normaaleiksi, 7 poistettu (ei kelvollista taulukkoa).
+
+## OLAVINLINNA: KARTAN HILJAISUUS LINNAN JÄLKEEN EI OLE VIKA (11.10.2026 klo 09.13)
+
+11.10. 05.1x PT: Laitetestaajan 3. kierroksen vika 6 (kartta hiljaa linnan sulkemisen jälkeen) ei ole vika: KERRAN LÄPI -linjaus (30.9.), pohjaraita soi kerran ja hiljenee.
+
+## KAUPUNKIPUUT JUNAAN 182, PALLOKOMPASSI JA KIPPI JUNAAN 181 (11.10.2026 klo 09.13)
+
+11.10. 05.2x PT: LS1:n kaupunkipuut eivät junaan 181 (Pariisin katutasolla pitkät tummat rungot, Tukholman tuplalatvukset Googlen puiden kanssa, iPad-muistiajo tekemättä) → 182 kuvaparilla (tupla 0/auto/1); Soundly v2 Tukholma → 182; pöllö-PR #4384 tuotantoon (TF 179/180 eivät lue uusia kenttiä); pallokompassi 89e2d373a ja kippi-kärki 901178b19 kuitattu 181.
+
+## TAIDEMUSEO KUITATTU JUNAAN 181 (11.10.2026 klo 09.13)
+
+11.10. 05.4x PT: taidemuseo 2c92d79da kuitattu 181 (64 teosta, 33 pysähdystä, kertoja v2, saliääni −47 LUFS); näkyy linssivalitsimessa vain Alankomaissa (Raamattu TAIDEMUSEO-LINSSI: ovet kaupunkilehdistä).
+
+## OLAVINLINNAN 4. KIERROS (V8) (11.10.2026 klo 09.13)
+
+11.10. 06.0x PT: OLAVINLINNAN 4. KIERROS v8 (Laitetestaaja): C-portti ei läpi (pako vain ajastimella 82/95/445 s, muunnelma 3:n karmit, kamera seinässä kiinniotossa, paluuvene 50 s lukossa); korjattu vihje näkyy, hälytyssilmukka, Jatketaanko-napit, laiturilta porttikäytävään (v9). → Siirtoseppä v10 + Pelikoodari 02cd4d6ba (tyrmän harvat äänitapahtumat, epäilyrepliikki kerran) → 5. kierros. Aamun kortti: juna 181 valmiilla osilla (suositus).
+
+## KARTUSSIN TYHJÄ LIPPU KORJATTU (JUNA 181) (11.10.2026 klo 09.13)
+
+11.10. 06.2x PT: NUI lippu-valimuisti b39f3486b kuitattu 181 (kartussin tyhjä lippukehys kaikissa maissa TF 180:ssä: lipun ?v=-kysely jäi välimuistitiedoston nimeen, joten file://-luku ei löytänyt sitä); Sulje linna → kartta pystyyn on simun sivuvaikutus (oikea laite pysyy vaakana) ja Lontoon paneeli dialogin takana on Vahvistus-pohjan himmennys, ei vikoja.
+
+## OLAVINLINNA: KYNTTILÄ PALAA OLETUKSENA TYRMÄSSÄ (11.10.2026 klo 09.13)
+
+11.10. 06.2x PT (OLAVINLINNA, 4. kierroksen havainto: ensikertalaisen tyrmä lähes musta, koska kynttilä oli ensimmäisellä käynnillä sammuksissa ja kuvakkeella ei selitettä): kynttilä palaa oletuksena tyrmään tultaessa, kuvake sammuttaa ja sytyttää; ei uutta tekstiä eikä pohjaa (NUI).
+
+## PÄÄKAUPUNGIT E01 JA E02: LUKUTARKISTUKSEN PÄÄTÖKSET (11.10.2026 klo 09.13)
+
+11.10. 06.2x PT (PÄÄKAUPUNGIT e01+e02, pilven lukutarkistukset t01/t02: 0 tarkistinvirhettä, noin 30–50 lukua per kaupunki pyöristetty): yhden riippumattoman lähteen tarkat luvut pyöristetään tai poistetaan, toista kierrosta virallisiin tilastoihin ei tehdä nyt; lisenssit Commonsin tarkassa muodossa (CC BY-SA 3.0 RS, CC BY 3.0 PL); alle 440 merkin nostoja ei täytetä; Tirana noin neljännes kansasta (kunta 2023), Bernin karhu sinetissä 1200-luvulla, Vaduzin kansikuva 2 vaihtoon (linna pääosaan), Redutan nosto nykyrakennukseen (1913–1919). Sisältökirjuri yhdistää ja korjaa; peliin vasta kytkentäpäätöksen jälkeen.
+
+## PÄÄKAUPUNKIEN KYTKENTÄ PELIIN (JUNA 182) (11.10.2026 klo 09.13)
+
+11.10. 06.4x PT (PÄÄKAUPUNKIEN KYTKENTÄ, Pelikoodarin suunnitelma hyväksytty): pilven täysi sisältö kopioidaan pelin tauluihin pääkaupunkipisteen id:llä (kaupunkilehti, kohdekartta, nähtävyydet, sää, valokuva; artikkeli ja kysymykset vain dataan, ei kuluttajaa ilman pysäkkiä); maakortin pääkaupunkirivillä olemassa oleva "Lue lisää" (web) / Avauskortin "Lue kaupunkilehti" (natiivi) avaa lehden; ei skeemanostoa, vanhat appit eivät näe uutta sisääntuloa; data + web + vienti Pelikoodarilta yhtenä PR:nä ja natiivi NUI:lta, molemmat junaan 182. Ensin 14 Euroopan pääkaupunkia (e01, e02).
+
+## NOTRE-DAME V5G JA MAAKORTIN PARI3 (11.10.2026 klo 09.13)
+
+11.10. 06.5x PT: Notre-Dame v5g (katto oikean ilmakuvan sävyyn, julkisivu hieman lämpimämpi) osoitinvaihto PT:n kuittauksella ilman omistajan korttia (OIKOTIET 1): ero v5d:hen pieni ja oikean kuvan suuntaan; LS2 paketoi omat-mallit v6k16, Julkaisija vie. NUI maakortti pysäkkimaissa: c1a3d534e ei toiminut (lappu ja korostus avautuivat kartussin kanssa) → 70b2d75ca, pari3 todistettu (1. napautus vain kartussi lipun kanssa, 2. maakunta) → omistajan aamukorttiin. Natiivin pääkaupunkilehti 3447a1d2f odottaa Pelikoodarin vientiä.
+
+## OLAVINLINNAN 5. KIERROS (V10) (11.10.2026 klo 09.13)
+
+11.10. 07.0x PT: OLAVINLINNAN 5. KIERROS v10 (181j dbaebe31d): korjattu pako omalla liikkeellä (4/5), kynttilä heti, ei vieraita kylttejä, paluun katse vapaa, oven vihje 20 s, ei välkettä lähitasolla 0,05 m; EI läpi: tyrmästä palattua Etsintä 3 s:ssa ja 6 kiinniottoa 11 minuutissa (linnaan ei päästy), karmit painavat kameran seinään, lukko 60 s (muunnelmat 1 ja 3), laiturin täysmustat lohkot, varoitus 2 s ilman näkyvää vartijaa → Siirtoseppä v11 (turva-aika ≥ 60 s ja kasvava helpotus, karmin törmäyssäde, oma pako < 60 s, pielten renderöijä, varoitus ≥ 3 s näkyvällä vartijalla), Pelikoodari äänet (laituri +3 dB, tyrmä 3:n tapahtumat). Laiturin valkopaitainen hahmo on NPC.
+
+## PARITEETTI: PÄÄKAUPUNKIEN LEHTI WEBISSÄ (11.10.2026 klo 09.13)
+
+11.10. 07.0x PT (PARITEETTI, pääkaupunkien lehti): natiivi on malli → web avaa koko lehden "Lue kaupunkilehti →" kuten natiivi, jos lehtinäkymä on olemassa oleva web-pohja; pääkaupunkien kansikuvat peilataan ämpäriin junan mukana vie-paketti.sh:lla.
+
+## OPITTU VIRHE: TIEDOSTON MUOKKAUS SKRIPTILLÄ (11.10.2026 klo 09.13)
+
+11.10. 07.1x PT (OPITTU VIRHE, tiedostojen muokkaus skriptillä): Päätoimittajan Python-lisäys avasi scratchpad/tyojonot.md:n kirjoitustilaan ennen kuin uusi sisältö oli valmis, ja virhe (TypeError) jätti tiedoston tyhjäksi; palautettu transkripteista toistamalla kaikki muokkaukset 10.10. klo 09.16:n täydestä kopiosta (scratchpad/tyojonot-palautus.py, 658 riviä, rakenne tarkistettu). Jatkossa muokkaus kirjoitetaan ensin väliaikaistiedostoon ja vaihdetaan os.replace-kutsulla, ja tyojonot.varakopio.md päivitetään jonokierroksella.
+
+## OLAVINLINNA V11: VARTIJAN VAROITUS JA KATSEKÄÄNNÖS (11.10.2026 klo 09.13)
+
+11.10. 07.3x PT (OLAVINLINNA v11, vartijan varoitus): varoitus 3 s, vapautuksen jälkeen rauhalliset vartijat ja 60 s:n turva, helpotus kasvaa portaittain (Siirtoseppä 0eef98927); katse kääntyy varoittavaan vartijaan pehmeästi 0,6 s:ssa VAIN jakson ensimmäisellä varoituksella, ja pelaajan kosketus keskeyttää käännön heti (ei kameralukkoa); muilla varoituksilla vain ääni ja valo. Botti v10: 67/94 reittipistettä, tyrmät 12/14/68 s.
+
+## JUNA 181 NYT, MAAN KARTUSSI AINA NÄKYVISSÄ, RAMALLAH, PILVIKREDIITTI (11.10.2026 klo 09.13)
+
+11.10. 09.0x OMISTAJA (aamun kortti): JUNA 181 LÄHTEE NYT valmiilla osilla ("Kyllä, nyt (suositus)"), Olavinlinnan keskeneräiset osat seuraavaan junaan; 181:n Olavinlinna = testattu yhdistelmä 181k (v11, e3c5dd17b). MAAN KARTUSSI AINA NÄKYVISSÄ (omistaja sanatarkasti: "Maan kartussi pitää näkyä kokoajan vas alareunassa ja sitä napauttamalla se laajenee maakortiksi niin kuin ennenkin."): oman maan kartussi ei häivy, vaan pysyy vasemmassa alareunassa, ja sen napautus laajentaa sen maakortiksi; NUI:n tyhjän kohdan napautus (70b2d75ca) ei mene peliin; kartussikorjaus junaan 181 (omistaja 08.5x: "Odota hetki vielä junaa että nämä korjaukset ehtivät siihen mukaan"). RAMALLAH: pääkaupunkilehti neutraalisti ("Kyllä, neutraalisti (suositus)"), tehdään paikallisesti. PILVIKREDIITTI: omistaja ei ehtinyt katsoa → uusia pilvieriä ei aloiteta ennen lukemaa.
+
+## TAIDEMUSEON KEHYKSET JA YLEISILME (11.10.2026 klo 09.13)
+
+11.10. 09.0x OMISTAJA: "Miksi taidemuseon kehykset jäävät niin mustiksi ja miten yleisilmeestä saisi vaikuttavamman" → PT: kehykset ovat tarkoituksella 1600-luvun ebonoituja aaltolistakehyksiä (golflijst), mutta pelissä ilman lakan kiiltoa ja aaltokuviota ne näkyvät tasaisena mustana renkaana. LS2:n erä junaan 182: kehyksiin lakan kiilto, valoa poimiva aaltokuvio ja kapea kultainen sisäreuna (tärkeimmille kultakehys), jokaiselle teokselle lämmin kohdevalo (maalaus seinää kirkkaampi, sali tummuu reunoilta), pysähdyksen kamera hieman kauemmas; ennen/jälkeen-arkki PT:lle ja omistajalle.
+
+## MAAKORTIN NOSTOT TIIVIINÄ (11.10.2026 klo 09.13)
+
+11.10. 09.1x OMISTAJA (MAAKORTIN NOSTOT TIIVIINÄ, sanatarkasti): "jos noita maakuntia tulee lisää niin tuo kortti täyttyy niistä. otetaan pois kuvat ja maakuntien nimet tuosta. voisi olla jotenkin todella tiiviissä muodossa ilmaistuna kuinka monta nostoa pelaaja on avannut jne." → maakortin maakuntarivit (pikkukuvat, käsialanimet, mustepisteet) pois; avattujen nostojen määrä yhdellä tiiviillä rivillä olemassa olevalla tilastorivipohjalla (NOSTOT avatut/kaikki + ohut palkki). NUI junaan 181 kartussikorjauksen kanssa, web myöhemmin samaan malliin (Pelikoodari). Omistaja 08.5x: "Odota hetki vielä junaa että nämä korjaukset ehtivät siihen mukaan" → juna 181 odottaa näitä.
+
+## LUPAIKKUNAT EIVÄT PYSÄYTÄ ROOLEJA (11.10.2026 klo 09.13)
+
+11.10. 09.2x OMISTAJA (LUPAIKKUNAT EIVÄT PYSÄYTÄ ROOLEJA, kortti "Kyllä, kaikki (suositus)"; kysymys: "miksi minun piti sanoa kyllä eri sessioille ... ne hidastavat kehitystä todella paljon"): 1) hylätty lupa estää vain sen yhden komennon: rooli ei pysähdy kokonaan, vaan jatkaa jonon muuta työtä ja ilmoittaa JUMI → FABLE, ja Päätoimittaja antaa toisen toteutustavan (toinen sessio ei anna lupaa hylättyyn komentoon); 2) poistot ja siirrot tehdään vain valmiilla työkaluilla, jotka eivät avaa lupaikkunaa (ei rm:ää muuttujapoluilla, ei shell -c:tä); 3) Päätoimittaja nollaa Postivahdin kuten muut roolit ilman omistajan kyllä-vastausta. Raamattuun TYÖTAPA JA SESSIOT -kohtaan seuraavassa docs-PR:ssä.
+
+## TAIDEMUSEO: TEOS KATSOTAAN MAHDOLLISIMMAN LÄHELTÄ (11.10.2026 klo 09.21)
+
+OMISTAJA 11.10.2026 klo 09.2x (taidemuseo, sanatarkasti): "museossa teos pitää nähdä mahdollisimman läheltä. riitää että ympäristö näkyy kun siirrytään teoksen luo mutta varsinainen katselukokemus pitää olla mahdollisimman läheltä niin että seinää ei tarvitse näkyä juuri ollenkaan". Kumoaa 11.10. klo 00.4x:n linjan (kamera teoksen eteen 60–70 % ruudun korkeudesta) ja aamun kehyserän kohdan "pysähdyksen kamera hieman kauemmas". PT:n toteutusohje LS2:lle: pysähdyksessä koko teos (kehyksen sisäreuna) täyttää ruudun rajaavassa suunnassa noin 95 % ilman rajausta; kehys saa näkyä reunoilla, seinä enintään kapeina kaistoina kuvasuhde-eron vuoksi, ja kohdevalon reunatummennus pitää ne tummina; sali ja muut teokset näkyvät vain siirtymissä teoksesta toiseen; etäisyys lasketaan teoksen koosta, ruudun kuvasuhteesta ja näkökentästä laitekohtaisesti ja lähitaso tarkistetaan. Kehysten lakka, aaltokuvio, kultainen sisäreuna ja kohdevalot pysyvät erässä (juna 182); ennen/jälkeen-arkki kolmesta teoksesta iPadilla ja iPhonella PT:lle ja omistajalle.
