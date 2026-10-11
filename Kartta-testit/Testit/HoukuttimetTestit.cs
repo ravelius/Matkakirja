@@ -124,6 +124,20 @@ namespace Matkakirja.Kartta.Testit
             // iPhone (@3x): Suomen saapumisnäkymä 9 pt = 27 px; koko Euroopan näkymä (maan katto 1820 km / 13 579 km) pienempi.
             double eur = Houkuttimet.PisteenMittakerroin(1820.0 / 13579.0);
             Oleta.Tosi(9 * 3 * eur < 9 * 3 && 13 * 3 * eur <= 18, $"Euroopassa {9 * 3 * eur:0} / {13 * 3 * eur:0} px");
+            // PT 16.5x: houkuttimen ydin Euroopassa 9–10 pt, ei koskaan yli oman saapumiskoon; hehku ≤ 2 × ydin.
+            foreach (double oma in new[] { 9.0, 13.0 })
+            {
+                double ydinEur = Houkuttimet.YtimenKokoPt(oma, eur), ydinSuomi = Houkuttimet.YtimenKokoPt(oma, 1);
+                Oleta.Tosi(ydinEur >= 9 && ydinEur <= 10, $"ydin Euroopassa {ydinEur} pt (oma {oma})");
+                Oleta.Tosi(ydinSuomi == oma && ydinEur <= ydinSuomi, $"ydin Suomessa {ydinSuomi} pt");
+                double ed = double.MaxValue;
+                foreach (double z in new[] { 4.0, 1, 0.6, 0.3, 0.134 })
+                {
+                    double y = Houkuttimet.YtimenKokoPt(oma, Houkuttimet.PisteenMittakerroin(z));
+                    Oleta.Tosi(y <= ed, $"ydin ei kasva loitonnettaessa ({oma}, zoom {z})"); ed = y;
+                }
+            }
+            Oleta.Tosi(haloMax <= 2.0, $"hehku ≤ 2 × ydin ({haloMax:0.00})");
             Console.WriteLine($"  houkuttimet iPhone: Suomi 27 / 39 px, Eurooppa {9 * 3 * eur:0} / {13 * 3 * eur:0} px, halo enintään {haloMax:0.00} × piste");
         }
     }

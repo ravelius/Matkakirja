@@ -440,7 +440,8 @@ namespace Matkakirja
             foreach (var m in houkutinMerkit)
             {
                 if (!m.juuri.gameObject.activeSelf) continue;
-                float k = m.pisteKoko * (m.korostettu ? 1.5f : 1f) * koko * (paalla ? pisteMitta : 1f);
+                float oma = m.pisteKoko * (m.korostettu ? 1.5f : 1f);
+                float k = (paalla ? (float)Houkuttimet.YtimenKokoPt(oma, pisteMitta) : oma) * koko;   // PT 16.5x: ydin ≥ 9,5 pt
                 if (Mathf.Abs(m.pisteT.localScale.x - k) > 0.01f) m.pisteT.localScale = new Vector3(k, k, 1f);
                 bool hehkuu = paalla && !m.valintamerkki;
                 if (m.hehku.gameObject.activeSelf != hehkuu) m.hehku.gameObject.SetActive(hehkuu);

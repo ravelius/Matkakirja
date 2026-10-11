@@ -97,6 +97,16 @@ namespace Matkakirja
         /// </summary>
         public const double PisteMinOsuus = 0.45;
 
+        /// <summary>
+        /// Houkuttimen ydinpisteen vähimmäiskoko (pt) loitonnettaessa (PT 16.5x: koko Euroopan näkymässä 4 pt ei houkutellut;
+        /// ydin ~9–10 pt eli Suomen näkymän kaupunkipisteen koko). Ei koskaan suurempi kuin pisteen oma koko saapumisnäkymässä.
+        /// </summary>
+        public const double YdinMinPt = 9.5;
+
+        /// <summary>Houkuttimen ydin (pt): oma koko × mittakerroin, vähintään <see cref="YdinMinPt"/>, enintään oma koko.</summary>
+        public static double YtimenKokoPt(double omaKokoPt, double mittakerroin) =>
+            Math.Min(omaKokoPt, Math.Max(YdinMinPt, omaKokoPt * mittakerroin));
+
         /// <summary>Pisteen mittakerroin kartan zoomikertoimesta: [PisteMinOsuus, 1], ei koskaan kasva loitonnettaessa.</summary>
         public static double PisteenMittakerroin(double zoomKerroin) =>
             double.IsNaN(zoomKerroin) ? 1.0 : Math.Max(PisteMinOsuus, Math.Min(1.0, zoomKerroin));
