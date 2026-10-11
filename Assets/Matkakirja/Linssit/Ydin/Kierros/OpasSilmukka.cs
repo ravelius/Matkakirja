@@ -837,7 +837,13 @@ namespace Matkakirja.Linssit.Kierros
         // Pyhän Markuksen kellotornin (99 m, 80 m torin pisteestä) läpi, ja tornin seinäpalat peittivät kuvan alaosan) ----
         /// <summary>Tunnettu korkea rakenne: kierroksen kohde (workerin vastaus, korkeus myös sovittimen näytteistä) tai sovittimen
         /// lisäämä (kierroksen listan luokka torni/kirkko, nimelliskorkeus).</summary>
-        sealed class Este { public double Lat, Lon, KorkeusM, SadeM; public OpasKohde K; public bool Tunnettu; public double Korkeus => K != null && K.KorkeusM > 0 ? K.KorkeusM : KorkeusM; }
+        sealed class Este
+        {
+            public double Lat, Lon, KorkeusM, SadeM; public OpasKohde K; public bool Tunnettu; public string ListanLuokka;
+            public double Korkeus => K != null && K.KorkeusM > 0 ? K.KorkeusM : KorkeusM;
+            /// <summary>Luokka workerin vastauksesta tai listasta (null = tuntematon).</summary>
+            public string Luokka => K?.Luokka ?? ListanLuokka;
+        }
         readonly List<Este> esteet = new List<Este>();
         /// <summary>Esteen korkeus vähintään (m), sen yli silmä nousee (m), etäisyys esteen reunasta, jolla nosto on täysi (m), ja
         /// vyöhyke, jossa nosto hiipuu (m); noston silotus (s) ja suurin pystynopeus (m/s).</summary>
@@ -854,11 +860,12 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Sovitin: kierroksen tunnettu korkea rakenne (lat, lon, korkeus m maasta, säde m).</summary>
         /// <param name="tunnettu">Korkeus on tiedossa (listan luokka annettu): matala kohde (korkeus &lt; PalloEsteMinM) ei ole este
         /// (AukioEsteenVieressa); false = luokka puuttuu, ja vain korkea korkeus kirjataan.</param>
-        public void LisaaEste(double lat, double lon, double korkeusM, double sadeM = PalloEsteSadeM, bool tunnettu = true)
+        /// <param name="luokka">Listan luokka (torni: piste on tornissa; muu: rakennuksen piste, torni voi olla sivussa, TorniVirheM).</param>
+        public void LisaaEste(double lat, double lon, double korkeusM, double sadeM = PalloEsteSadeM, bool tunnettu = true, string luokka = null)
         {
             if (korkeusM < PalloEsteMinM && !tunnettu) return;
-            foreach (var e in esteet) if (KierrosLento.EtaisyysM(e.Lat, e.Lon, lat, lon) < 20) { e.KorkeusM = Math.Max(e.KorkeusM, korkeusM); e.SadeM = Math.Max(e.SadeM, sadeM); e.Tunnettu |= tunnettu; return; }
-            esteet.Add(new Este { Lat = lat, Lon = lon, KorkeusM = korkeusM, SadeM = sadeM, Tunnettu = tunnettu });
+            foreach (var e in esteet) if (KierrosLento.EtaisyysM(e.Lat, e.Lon, lat, lon) < 20) { e.KorkeusM = Math.Max(e.KorkeusM, korkeusM); e.SadeM = Math.Max(e.SadeM, sadeM); e.Tunnettu |= tunnettu; e.ListanLuokka ??= luokka; return; }
+            esteet.Add(new Este { Lat = lat, Lon = lon, KorkeusM = korkeusM, SadeM = sadeM, Tunnettu = tunnettu, ListanLuokka = luokka });
         }
         void LisaaKohdeEste(OpasKohde k)
         {
@@ -1059,34 +1066,55 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>
         /// KAPEA KUVA: KIERTO TORNIN YMPÄRI (PT 11.10. 07.5x, iPhone-ajo c36e29633: 11aedf241:n pystykuva katsoi 330–364 m:stä 27–30°:n
         /// kallistuksella kuin kartta, "pallon tunne katoaa"; sitova: viisto pallonäkymä ≥ 55°, katse tornissa, torni kokonaan kuvassa,
-        /// torista saa leikkautua osa): katsepiste tornin juurelle (Pysahdys.KohdeLat/Lon pysyy torin pisteenä) PalloTorniKapeaKatse ×
-        /// tornin korkeudelle, kallistus pohjakehyksen (San Marco 64°) vähintään PalloTorniKapeaKallistusMin, ja etäisyys pienin, jolla
-        /// torni juuresta huippuun mahtuu PalloTorniReunan sisään myös spiraalin laskussa (+PalloSpiraaliKallistusAst; vrt.
-        /// OpasKuvaus.KorkeaEtaisyys). Kierto tornin ympäri pitää tornin keskellä joka kulmalla; vaakasäde enintään
-        /// KaariNopeusMS / PalloKiertoMaxAstS (kierto 3 °/s).
+        /// torista saa leikkautua osa): katsepiste listan tornin pisteeseen (Pysahdys.KohdeLat/Lon pysyy torin pisteenä)
+        /// PalloTorniKapeaKatse × tornin korkeudelle, ja torni juuresta huippuun PalloTorniReunan sisään joka kierron kulmalla myös
+        /// spiraalin laskussa (+PalloSpiraaliKallistusAst; vrt. OpasKuvaus.KorkeaEtaisyys).
+        /// PAIKKAVIRHE (PT 11.10. 08.2x, iPhone-ajo 137402c0b: Grand-Placen torni valui pystykuvassa vasempaan reunaan ja ulos, koska
+        /// listan kaupungintalon piste on rakennuksen eikä tornin piste, ~23 m sivussa; vaakakulma pystykuvassa vain ±12°): torni
+        /// mahtuu kuvaan missä tahansa TorniVirheM:n säteellä listan pisteestä (keskipiste ja 8 suuntaa, tornin säde enintään
+        /// PalloTorniSadeM). Silmä vähintään tornin huippu + PalloEsteVaraM (myös spiraalin lopussa). Kallistus alkaa pohjakehyksestä ja
+        /// pienenee asteen kerrallaan (silmä nousee, kuva-akselin etäisyys kasvaa) kunnes vaakasäde mahtuu KaariNopeusMS / 3 °/s:iin
+        /// (kierto 3 °/s), kuitenkin vähintään PalloTorniKapeaKallistusMin.
         /// </summary>
         Pysahdys TorniKeskella(Pysahdys p, Este t, double suhde)
         {
             const double A = Math.PI / 180;
-            double katse = PalloTorniKapeaKatse * t.Korkeus, rMax = OpasKuvaus.KaariNopeusMS / (PalloKiertoMaxAstS * A);
-            double kall = Math.Max(PalloTorniKapeaKallistusMin, Math.Min(p.Kallistus, OpasOhjaus.KallistusMax - 1 - PalloSpiraaliKallistusAst));
-            bool Mahtuu(double et)
+            double katse = PalloTorniKapeaKatse * t.Korkeus, rMax = OpasKuvaus.KaariNopeusMS / (PalloKiertoMaxAstS * A), v = TorniVirheM(t);
+            double sade = Math.Min(t.SadeM, PalloTorniSadeM), silmaMin = t.Korkeus + PalloEsteVaraM;
+            double kM = 111195.0, kE = 111195.0 * Math.Cos(t.Lat * A);
+            var paikat = new List<(double lat, double lon)> { (t.Lat, t.Lon) };
+            if (v > 0) for (int i = 0; i < 8; i++) paikat.Add((t.Lat + v * Math.Cos(i * Math.PI / 4) / kM, t.Lon + v * Math.Sin(i * Math.PI / 4) / kE));
+            bool Mahtuu(double et, double kall)
             {
                 for (int i = 0; i < 2; i++)
                 {
-                    var a = new Kuvakulma(t.Lat, t.Lon, et, i == 0 ? kall : kall + PalloSpiraaliKallistusAst, 0, p.MaaM + katse);
-                    if (OpasKuvaus.KuvassaOsuus(a, t.Lat, t.Lon, p.MaaM, p.MaaM + t.Korkeus, t.SadeM, suhde) > PalloTorniReuna) return false;
+                    double kk = kall + i * PalloSpiraaliKallistusAst;
+                    if (katse + et * Math.Cos(kk * A) < silmaMin) return false;   // silmä ei tornin huipun alapuolella
+                    for (double fi = 0; fi < 360; fi += 15)
+                    {
+                        var a = new Kuvakulma(t.Lat, t.Lon, et, kk, fi, p.MaaM + katse);
+                        foreach (var (la, lo) in paikat)
+                            if (OpasKuvaus.KuvassaOsuus(a, la, lo, p.MaaM, p.MaaM + t.Korkeus, sade, suhde) > PalloTorniReuna) return false;
+                    }
                 }
-                return true;   // katsepiste tornissa: sama kuva joka kierron kulmalla
+                return true;
             }
-            double e = OpasOhjaus.EtMinM;
-            while (e < OpasKuvaus.KorkeaEtMaxM && !Mahtuu(e)) e *= 1.03;
-            // Kierto 3 °/s: jos vaakasäde kasvaisi yli rMax:n, kallistus pienenee (silmä nousee), kunnes säde mahtuu (≥ kapean alaraja).
-            while (e * Math.Sin(kall * A) > rMax && kall > PalloTorniKapeaKallistusMin + 0.5) { kall -= 1; while (!Mahtuu(e) && e < OpasKuvaus.KorkeaEtMaxM) e *= 1.03; }
+            double kall0 = Math.Max(PalloTorniKapeaKallistusMin, Math.Min(p.Kallistus, OpasOhjaus.KallistusMax - 1 - PalloSpiraaliKallistusAst));
+            double kall = kall0, e = 0;
+            for (kall = kall0; ; kall -= 1)
+            {
+                e = Math.Max(OpasOhjaus.EtMinM, (silmaMin - katse) / Math.Cos((kall + PalloSpiraaliKallistusAst) * A));   // silmän alaraja suoraan
+                while (e < OpasKuvaus.KorkeaEtMaxM && !Mahtuu(e, kall)) e *= 1.03;
+                if (e * Math.Sin(kall * A) <= rMax || kall - 1 < PalloTorniKapeaKallistusMin) break;
+            }
             return new Pysahdys { Id = p.Id, Nimi = p.Nimi, Alarivi = p.Alarivi, Teksti = p.Teksti, Lat = t.Lat, Lon = t.Lon, MaaM = p.MaaM, NostoM = katse,
                 Suuntima = p.Suuntima, Kallistus = kall, EtaisyysM = e, MinEtM = Math.Min(p.MinEtM, e), KattoYlaM = p.KattoYlaM, LoppuEtM = 0, Aukio = false,
                 KohdeLat = p.Lat, KohdeLon = p.Lon, TorniPohja = p, TorniSuhde = suhde };
         }
+        /// <summary>Tornin paikan epävarmuus listan pisteestä (m): luokka torni → piste on tornissa; muu (rakennus, kirkko, tuntematon) →
+        /// rakennuksen piste, torni voi olla sivussa (Brysselin kaupungintalo ~23 m).</summary>
+        static double TorniVirheM(Este t) => (t.Luokka ?? "").Trim().ToLowerInvariant() == "torni" ? PalloTorniVirheTorniM : PalloTorniVirheM;
+        public const double PalloTorniVirheM = 30, PalloTorniVirheTorniM = 15, PalloTorniSadeM = 8;
 
         /// <summary>Tornisäännön kuvasuhde: laitteen kuvasuhde (OpasKuvaus.KuvaSuhdeNyt) 0,01:n tarkkuudella, enintään PalloTorniKuvaSuhde
         /// (leveämpi kuva mahtuu 4:3:n kehykseen, joten iPad vaaka ja iPhone vaaka saavat saman kehyksen kuin ennen).</summary>

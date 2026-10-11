@@ -126,7 +126,7 @@ namespace Matkakirja.Linssit.Testit
                     {
                         kierrosAlkoi = true; s.AloitaKierros(reitti.Select(k => (k.Nimi, k.Lat, k.Lon)).ToList()); loki.Append($"{t:F1} kierros alkaa; ");
                         // Kuten sovitin: listan luokka (kylvo) tai lukitun kaupungin luokaton lista (ei kylvöä, korkeus tuntematon).
-                        if (kylvo) foreach (var k in reitti) s.LisaaEste(k.Lat, k.Lon, OpasSilmukka.EsteKorkeus(k.Luokka, listanKorkeus && k.KorkeusM > 0 ? k.KorkeusM : double.NaN), OpasSilmukka.PalloEsteSadeM, k.Luokka != null);
+                        if (kylvo) foreach (var k in reitti) s.LisaaEste(k.Lat, k.Lon, OpasSilmukka.EsteKorkeus(k.Luokka, listanKorkeus && k.KorkeusM > 0 ? k.KorkeusM : double.NaN), OpasSilmukka.PalloEsteSadeM, k.Luokka != null, k.Luokka);
                     }
                     for (int j = vastaukset.Count - 1; j >= 0; j--)
                     {
@@ -540,7 +540,9 @@ namespace Matkakirja.Linssit.Testit
         // valui kierron mukana kuvan oikeaan reunaan) ----
         /// <summary>Tornin (juuri ja huippu, säde min(15, koko/2)) ja torin pisteen paikka kuvassa joka 0,5 s saapumisesta lähtöön:
         /// suurin |x|/|y| (−1…1 = reuna, iPad vaaka 4:3, pystykulma 50°) koko pysähdyksellä ja lopussa.</summary>
-        public static (double koko, double loppu, double tori, int n) TorniKuvassa(Ajo a, string aukio, string torni, double alkaenS = 0, double suhde = 4.0 / 3)
+        /// <param name="tLat">Tornin todellinen paikka, jos eri kuin listan piste (NaN = listan piste; säde silloin PalloTorniSadeM).</param>
+        public static (double koko, double loppu, double tori, int n) TorniKuvassa(Ajo a, string aukio, string torni, double alkaenS = 0, double suhde = 4.0 / 3,
+            double tLat = double.NaN, double tLon = double.NaN)
         {
             var q = a.Reitti.First(x => x.Id == aukio); var t = a.Reitti.First(x => x.Id == torni);
             double h = t.KorkeusM > 0 ? t.KorkeusM : OpasSilmukka.EsteKorkeusLuokasta(t.Luokka);   // kuten kylvö: luokan nimelliskorkeus
@@ -549,7 +551,8 @@ namespace Matkakirja.Linssit.Testit
             {
                 if (r.t < seur - 1e-6 || r.t > t1 + 1e-6 || r.kohde != aukio) continue;
                 seur += 0.5; n++;
-                double m = OpasKuvaus.KuvassaOsuus(r.a, t.Lat, t.Lon, MaaM, MaaM + h, Math.Min(15, 0.5 * t.KokoM), suhde);
+                double m = double.IsNaN(tLat) ? OpasKuvaus.KuvassaOsuus(r.a, t.Lat, t.Lon, MaaM, MaaM + h, Math.Min(15, 0.5 * t.KokoM), suhde)
+                    : OpasKuvaus.KuvassaOsuus(r.a, tLat, tLon, MaaM, MaaM + h, OpasSilmukka.PalloTorniSadeM, suhde);
                 koko = Math.Max(koko, m); loppu = m;
                 tori = Math.Max(tori, OpasKuvaus.KuvassaOsuus(r.a, q.Lat, q.Lon, MaaM, MaaM, 0, suhde));
             }
@@ -654,6 +657,38 @@ namespace Matkakirja.Linssit.Testit
                 Console.WriteLine($"      {kaupunki} kääntö {kS} → {suhde:F2}: torni lopussa {m.loppu:F2}, tori enintään {m.tori:F2}, silmän nopeus enintään {vMax:F1} m/s, nopeuden hyppy enintään {dvMax:F2} m/s ({dvKohta}; lähtö {t1 - t0:F1} s)");
                 if (m.loppu > TorniReuna) viat.Add($"{kaupunki}: lopussa torni {m.loppu:F2}");
                 if (dvMax > 0.3) viat.Add($"{kaupunki}: nopeuden hyppy {dvMax:F2} m/s");
+            }
+            Oleta.Tosi(viat.Count == 0, string.Join("; ", viat));
+        }
+
+        [Testi] static void PystykuvaKestaaTorninPaikkavirheen()
+        {
+            // PT 11.10. 08.2x (iPhone-ajo 137402c0b): Grand-Placen kaupungintalon listan piste on rakennuksen piste; torni ~23 m sivussa
+            // (OSM/PT 50.84647/4.35197) valui pystykuvassa ulos. Torni kuvassa, kun se on listan pisteessä, 30 m sivussa mihin tahansa
+            // suuntaan tai OSM-paikassa; kallistus ≥ 55°, silmä tornin huipun yläpuolella, kierto ≥ 2,9 °/s. San Marco (torni-luokka) ja
+            // Signoria: listan piste ja 15 m (torni) / 30 m sivussa.
+            var viat = new List<string>();
+            foreach (var (kaupunki, aukio, torni, virhe) in new[] { ("bryssel", "Q215429", "Q1255327", 30.0), ("venetsia", "Q217527", "Q754194", 15.0), ("firenze", "Q849846", "Q271928", 30.0) })
+            {
+                var a = Aja(Profiili.Normaali, kaupunki, double.NaN, 14, false, true, 0.46, true);
+                var t = a.Reitti.First(x => x.Id == torni); var x = Asennot(a, aukio);
+                double kM = 111195, kE = 111195 * Math.Cos(t.Lat * Math.PI / 180), pahin = TorniKuvassa(a, aukio, torni, 0, 0.46).koko;
+                string pahinKohta = "listan piste";
+                var paikat = new List<(string, double, double)>();
+                for (int i = 0; i < 8; i++) paikat.Add(($"{virhe:F0} m suuntaan {45 * i}°", t.Lat + virhe * Math.Cos(i * Math.PI / 4) / kM, t.Lon + virhe * Math.Sin(i * Math.PI / 4) / kE));
+                if (kaupunki == "bryssel") paikat.Add(("OSM 50.84647/4.35197", 50.84647, 4.35197));
+                foreach (var (nimi, la, lo) in paikat)
+                {
+                    double m = TorniKuvassa(a, aukio, torni, 0, 0.46, la, lo).koko;
+                    if (m > pahin) { pahin = m; pahinKohta = nimi; }
+                }
+                double kaari = 0; for (int i = 1; i < x.Count; i++) kaari += Math.Abs(KierrosLento.Kiedo(x[i].Suunta - x[i - 1].Suunta));
+                double kierto = kaari / Math.Max(1, x[^1].T - x[0].T), kallMin = x.Min(y => y.Kallistus), silmaMin = x.Min(y => y.SilmaM);
+                Console.WriteLine($"      {kaupunki} pysty: torni enintään {pahin:F2} ({pahinKohta}), silmä {silmaMin:F0}–{x.Max(y => y.SilmaM):F0} m (torni {t.KorkeusM:F0} m), kallistus {kallMin:F0}–{x.Max(y => y.Kallistus):F0}°, et {x[0].EtM:F0} m, kierto {kierto:F1} °/s");
+                if (pahin > TorniReuna) viat.Add($"{kaupunki}: torni {pahin:F2} ({pahinKohta})");
+                if (kallMin < 55) viat.Add($"{kaupunki}: kallistus {kallMin:F0}°");
+                if (silmaMin < t.KorkeusM) viat.Add($"{kaupunki}: silmä {silmaMin:F0} m tornin huipun alapuolella");
+                if (kierto < 2.9) viat.Add($"{kaupunki}: kierto {kierto:F1} °/s");
             }
             Oleta.Tosi(viat.Count == 0, string.Join("; ", viat));
         }
