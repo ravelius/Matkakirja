@@ -23,6 +23,7 @@ Kaikki alla luetellut verkkosivut haettiin yhteisellä `sallittu_haku.py`-apuril
 | L13 | Marché du Mont-Bouët: alku, Présentation, Coordonnées | fr | 11.10.2026 | https://fr.wikipedia.org/wiki/March%C3%A9_du_Mont-Bou%C3%ABt |
 | L14 | Wikivoyage Libreville: Get in, Get around, Talk, See, Do, Buy, Eat | en | 11.10.2026 | https://en.wikivoyage.org/wiki/Libreville |
 | L15 | Wikidata Q3105583: P625 (Akandan aluepiste) | data | 11.10.2026 | https://www.wikidata.org/wiki/Special:EntityData/Q3105583.json |
+| L16 | FCDO Gabon: Warnings and insurance, current at 11 October 2026; vain yleistaso | en | 11.10.2026 | https://www.gov.uk/foreign-travel-advice/gabon |
 
 L1 ja L2 eivät yksin ole kaksi riippumatonta lähdettä. Tarkka perustamisvuosi **1849** saa L1:n ja erillisen Britannica-toimituksen L3:n tuen. L3:n historiakuvaus ei ole L1:n sanamuotoinen kopio. Muiden yksittäislähteisten vuosien pelaajatekstiin käytetään vuosisataa tai vuosikymmentä. Ramsarin päivämäärä kertoo kosteikkonimityksestä, ei puiston perustamisesta.
 
@@ -136,7 +137,7 @@ Johdantoehdotus: Librevillen ympärillä rannikon vesi ei kohtaa vain hiekkaa. E
 
 **Hyvä tietää (4):** ranskan kielestä on hyötyä (L1/L14); taksikyydistä sovitaan ennen lähtöä ilman hintalukuja (L14); Sibangin portin aukiolo varmistetaan ennakkoon (L14/L10); retkipuistot ja vastaranta vaativat oman kuljetusjärjestelyn (L14).
 
-**Matkustusturvallisuuden tarkistus:** `https://um.fi/matkustustiedote/-/c/GA` haettiin, mutta se palautti yleisen matkustustiedotesivun ilman Gabon-maatekstiä. Se EI todista Gabonin turvallisuustasoa. Tähän ei lisätä turvallisuusväitettä. Pääsession oppaan julkaisuportti tarvitsee toimivan nykyisen maakohtaisen viranomaislähteen; Wikivoyagen vanhat terveys-, yö- ja rikollisuusväitteet jätetään pois.
+**Matkustusturvallisuuden tarkistus:** `https://um.fi/matkustustiedote/-/c/GA` haettiin, mutta se palautti yleisen matkustustiedotesivun ilman Gabon-maatekstiä. Se EI todista Gabonin turvallisuustasoa. Tähän ei lisätä turvallisuusväitettä. Lisätarkistus L16: toimiva FCDO Gabon -viranomaislähde luettu, sivu ilmoittaa olevansa voimassa 11.10.2026. Warnings and insurance -sivulla ei ole kategorista matkustuskielto-/välttämisohjetta. Tämä ei ole riskittömyysväite eikä koko Safety and security -osion läpikäynti; Wikivoyagen vanhat terveys-, yö- ja rikollisuusväitteet jätetään pois.
 
 ## 5. Kohdekartta: kuusi lähteistettyä paikkakandidaattia
 
@@ -277,11 +278,18 @@ B tarkistaa jokaisen tiedoston lisenssin, tekijän, koon, näkymän, kohdeidenti
 - Sibangin puulajien määrä L10 noin 170, L14 tuhansia paikallisia lajeja. L14:n määrä jätetään pois; myös 170 pois ilman riippumatonta vahvistusta. IPHAMETRA:n lähdesivu palautti HTTP 500, ei luettu sisällölliseksi todisteeksi.
 - L11:n gnuväite ja yksittäislähteiset pesämäärät eivät mene tekstiin. L11:n vanhat keinovaloa ja muovia koskevat syyväitteet eivät ole noston välttämättömiä ja jätetään pois.
 - Tarkka lentoasemaetäisyys, satamaetäisyys, venematka-aika, puiston hehtaari-/linnustoluvut ja arboretumin perustamispäivä poistetaan. 1849 on ainoa tällä aineistolla kahdesta riippumattomasta lähteestä vahvistettu tarkka historiallinen vuosiluku.
-- Matkustusturvallisuus: toimiva maakohtainen viranomaislähde puuttuu; ei väitettä, että matkustus olisi turvallista.
+- Matkustusturvallisuus: UM-polku palautti yleissivun, mutta FCDO Gabon L16 luettu hakupäivänä; ei kategorista välttämisohjetta yleissivulla, ei riskittömyysväitettä.
 - Kuuden pisteen karttarajaus ja markkinan `aukio`-tyyppisovitus ovat pääsession käsiteltäviä toimituspoikkeuksia. A-aineisto on täysi lähdepaketti, mutta nämä eivät ole hyväksyttyjä karttapäätöksiä.
 
 ## 9. Poisjätetyt aiheet ja toistot
 
 Konteksti luettu. `maalehti: null`, `lahiKaupungit: []`, `lahiNostot: []`; vertailtavaa nykyistä maalehtinostoa ei ole. Kevyt kuvaus käsittelee nimeä, perustamista ja satamaa: täysi kaupungin johdatus käyttää samoja perusfaktoja tarkoituksellisesti laajempana korvaavana sisältönä, ei uutena identtisenä lähinostona. Saint-Michel, moderni Sainte-Marie-katedraali ja kansallismuseon esinekokoelma jätetään kartasta pois (#74: rakennus- ja taideteosoikeudet epävarmat; esine ei kartan sallittu tyyppi). Cap Estérias luettu mutta jätetty kuuden kohteen ehdotuksesta, jotta rajaus ei kasva lisää. Komon yläjuoksun piste ei sovi estuaarin rantakohteen pisteeksi, joten sitä ei käytetä kartalla. Maalaajuinen öljy-/mangaanitalous, yleinen kansallispuistohistoria, itsenäisyyspolitiikka, vaalit, nykyrikollisuus ja henkilöihin keskittyvät poliittiset nostot jäävät pois. Ei keksittyä isoisää.
 
-**A-tilanne:** 0–9-osioiden lähdepaketti koottu. Kuusi karttakandidaattia, 4+4 nostoa, 5 opasjaksoa, 5 kysymysaihetta ja 3 tietoa. Aineistossa ei ole Commons-valintoja, säälukuja eikä sisalto.json:ia. Karttarajauksen poikkeusehdotus, markkinatyyppi ja nykyinen matkustustiedote vaativat pääsession ratkaisun ennen C/F-toimitusta.
+**A-tilanne:** 0–9-osioiden lähdepaketti koottu. Kuusi karttakandidaattia, 4+4 nostoa, 5 opasjaksoa, 5 kysymysaihetta ja 3 tietoa. Aineistossa ei ole Commons-valintoja, säälukuja eikä sisalto.json:ia. Karttarajauksen poikkeusehdotus ja markkinatyyppi vaativat pääsession ratkaisun ennen C/F-toimitusta; FCDO:n nykyinen maakohtainen yleissivu on luettu.
+
+
+## Säätausta — pääsession alkuperäinen sääajo
+
+Ei sääriviä: Vuosisarake 2840 mm ei vastaa kuukausien summaa 2740 mm; alkuperäinen työkalu hylkäsi taulukon. saatiedot:null; ei aste- tai mm-lukuja teksteihin.
+
+Luvut C:hen saa.json:sta ilman tausta-kenttää. Sääteksti vain sarjan luvuista; ei toisen aseman käsin kopioitua kuvausta.

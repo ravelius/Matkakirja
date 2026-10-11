@@ -23,6 +23,7 @@ Yhteinen `sallittu_haku.py` tarkisti robots-säännöt (Claude-User ja Matkakirj
 | S13 | WIPO Lex ST007: lain metatiedot ja materiaaliluettelo, ei PDF:n sisältöä | https://www.wipo.int/wipolex/en/legislation/details/17161 |
 | S14 | Praia das Conchas (ilha de São Tomé), pt: koko lyhyt artikkeli; pois kartasta, koordinaatti puuttuu | https://pt.wikipedia.org/wiki/Praia_das_Conchas_(ilha_de_S%C3%A3o_Tom%C3%A9) |
 | S15 | Wikidata Q10352691: P625 puuttuu; ei karttakoordinaatin lähdettä | https://www.wikidata.org/wiki/Special:EntityData/Q10352691.json |
+| S16 | FCDO São Tomé and Príncipe: Warnings and insurance, voimassa 11.10.2026 | https://www.gov.uk/foreign-travel-advice/sao-tome-and-principe |
 
 **1873:** kaupunki oli olemassa; rannalla oli jo 1500-luvun linnake ja keskusta kirkkoineen. Nykyinen museotoiminta on myöhempi. Katedraalin nykyinen julkisivu on 1900-luvun puolivälin muutos, ei vuoden 1873 näkymä. Palatsin nykyisen rakennuksen tarkkaa valmistumista ei tiedetä, joten ei väitetä sen nykyasun olleen valmis 1873. Tchilolin nykyistä esityskäytäntöä ei myöskään siirretä automaattisesti 1873:een: S10 sanoo alkuperän ajoituksen olevan epävarma. Ei isoisän käyntiä tai reittiä. (S1 History; S3; S4; S7 Construction; S10 História do texto.)
 
@@ -69,7 +70,7 @@ Johdanto: pääkaupungin rannalta katsotaan sekä avomerelle että saaren metsä
 4. **Ruokaa kaupungissa:** S9 Eat mainitsee grillikalaa, meren antimia ja paikallisia annoksia sekä petiscos-pieniä annoksia. Nimetyille ravintoloille ei luvata nykyistä aukioloa. Tori on ruoka- ja kaupunkikierroksen mahdollinen osa, ei terveyslupaus. (S9 Eat / Buy.)
 5. **Milloin kannattaa tulla:** sääjakson luvut ja vuodenaikajohtopäätökset vasta pääsession saa.json:sta. S1:n Weather box käyttää NOAA-lähdettä mutta tässä ei kopioida lukuja. Metsäretken reitti ja varusteet sovitaan järjestäjän kanssa; vanhaa karttaa ei käytetä luvallisen kulun takeena. (S9 Nearby.)
 
-Parasta: Ana Chavesin rantakävely (S5/S9); linnakkeen historia (S3); kunnallistori (S9); tchiloli, jos esitys on paikallisesti vahvistettu (S10, ei aikataululupausta); oppaan kanssa järjestetty Obô-retki (S9/S11). Hyvä tietää: portugali ja dobra ovat kontekstin perustietoa; palatsin kuvaus-/vierailurajoitus (S7); minibusseilla on yhteiskyytikäyttöä ilman lukuja (S9); Obô on retki kaupungin ulkopuolelle, ei keskustakävelyä (S9/S11). Nykyinen maakohtainen matkustusturvallisuus ei vahvistunut tästä lähdepaketista; S9:n vanhaa "safety is not an issue" -väitettä ei käytetä.
+Parasta: Ana Chavesin rantakävely (S5/S9); linnakkeen historia (S3); kunnallistori (S9); tchiloli, jos esitys on paikallisesti vahvistettu (S10, ei aikataululupausta); oppaan kanssa järjestetty Obô-retki (S9/S11). Hyvä tietää: portugali ja dobra ovat kontekstin perustietoa; palatsin kuvaus-/vierailurajoitus (S7); minibusseilla on yhteiskyytikäyttöä ilman lukuja (S9); Obô on retki kaupungin ulkopuolelle, ei keskustakävelyä (S9/S11). S16:n toimiva maakohtainen FCDO-yleissivu luettu ja voimassa 11.10.2026; siinä ei kategorista matkustuksen välttämisohjetta. Ei tästä pääteltyä riskittömyyttä tai S9:n vanhaa "safety is not an issue" -väitettä.
 
 ## 5. Kohdekartta: kuusi lähteistettyä ehdotusta
 
@@ -100,10 +101,17 @@ Kansi 3: Ana Chavesin kaupunkiranta / keskustan yleiskuva eri suunnasta / linnak
 
 ## 8. Ristiriidat ja epävarmat
 
-S1 infobox 1485 / historia 1493; S2 1493 → 1400-luvun loppu. S3 linnake 1566 / S2 1575 → 1500-luku. S3 majakan alku 1866 / S2 1885; molemmissa myöhempi uudistus → 1800-luvun majakka, ei tarkkaa vuotta. Katedraalin historia eri rakennuskerroksia, nykyasu ei 1873. Palatsin nykyisen rakennuksen valmistumisajankohta tuntematon; S7:n itse arvioima aikaväli ja S9:n "mid-19th century" eivät muutu tarkaksi vuodeksi. Tchilolin oletettu tuonti 1500-luvulla ei S10:n mukaan ole todistettu; nykyesitystä ei sijoiteta 1873:een. Väkiluku kontekstissa piirikunta, S1:n city-luvut eri alue/vuosi. S11:n pinta-ala ja lajimäärät sekä saaren ja puiston lajiston laajuudet eivät sekoitu; lukumäärät pois. WIPO PDF:n sisältö ei luettu; Commons-yhteenveto ei yksin ole kaupallisten suojattujen rakennuskuvien lopullinen hyväksyntä. Kolmen yrityksen otsikoilla yritetty Lagoa Azul / Praia Lagarto ja torin omat artikkelit 404 → ei faktoja niiden nimettyjen kohteiden varaan. Nykyinen maakohtainen turvallisuusarvio puuttuu.
+S1 infobox 1485 / historia 1493; S2 1493 → 1400-luvun loppu. S3 linnake 1566 / S2 1575 → 1500-luku. S3 majakan alku 1866 / S2 1885; molemmissa myöhempi uudistus → 1800-luvun majakka, ei tarkkaa vuotta. Katedraalin historia eri rakennuskerroksia, nykyasu ei 1873. Palatsin nykyisen rakennuksen valmistumisajankohta tuntematon; S7:n itse arvioima aikaväli ja S9:n "mid-19th century" eivät muutu tarkaksi vuodeksi. Tchilolin oletettu tuonti 1500-luvulla ei S10:n mukaan ole todistettu; nykyesitystä ei sijoiteta 1873:een. Väkiluku kontekstissa piirikunta, S1:n city-luvut eri alue/vuosi. S11:n pinta-ala ja lajimäärät sekä saaren ja puiston lajiston laajuudet eivät sekoitu; lukumäärät pois. WIPO PDF:n sisältö ei luettu; Commons-yhteenveto ei yksin ole kaupallisten suojattujen rakennuskuvien lopullinen hyväksyntä. Kolmen yrityksen otsikoilla yritetty Lagoa Azul / Praia Lagarto ja torin omat artikkelit 404 → ei faktoja niiden nimettyjen kohteiden varaan. FCDO:n maakohtainen yleissivu S16 lisätty; Safety and security -osion yksityiskohtia ei tämän perusteella kirjoiteta.
 
 ## 9. Poisjätöt ja toistot
 
 Konteksti luettu: maalehti null, lähikaupungit ja lähinostot tyhjät. Kevyen pisteen vanha perustamis-/linnakekuvaus käytetään täyden kaupungin perusjohdatukseen tarkoituksellisesti; kahdeksan nostoa jakautuvat rannikkokaupunkiin ja retkiluontoon ilman samaa kappaletta kahdesti. Palatsi pois kuvauskiellon vuoksi; lähteistetty historia säilyy osion 0 varauksena. Modernit patsaat, uudistettu kirkkojulkisivu ilman oikeusnäyttöä, suojattu nykyteatteri tallenteena, väkivaltahistorian yksityiskohdat, nykypolitiikka, hinta-/aukiololuvut ja isoisän keksityt tekemiset jäävät pois. Sokeriviljelyn orjuushistoria kuuluu neutraaliin kaupunkihistoriaan tarvittaessa, ei julmuusnostoksi.
 
 **A-tilanne:** 0–9-lähdepaketti koottu, 4+4 nostoaihetta, opasrunko, visa 5 ja tiedot 3. Kuusi lähteistettyä karttakandidaattia; rajaus ja kahden kirkon oikeus/historiallisuus ovat avoimia. Täyden keskustakartan ja kuvakelpoisten kuuden kohteen hyväksyntää ei väitetä. Ei sisalto.json:ia tai kuvat.md:ta.
+
+
+## Säätausta — pääsession alkuperäinen sääajo
+
+Ei sääriviä: Taulukon otsikossa ei ole normaalikautta. Vuosiväliä ei arvata. saatiedot:null; ei aste- tai mm-lukuja teksteihin.
+
+Luvut C:hen saa.json:sta ilman tausta-kenttää. Sääteksti vain sarjan luvuista; ei toisen aseman käsin kopioitua kuvausta.

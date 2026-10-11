@@ -12,6 +12,8 @@ Kaikki haettu yhteisellä `sallittu_haku.py`:llä (robots Claude-User + Matkakir
 | C2 | Djibloho (en): alku, Administration; historiallinen aluerajaus | 11.10.2026 | https://en.wikipedia.org/wiki/Djibloho |
 | C3 | Wikivoyage Ciudad de la Paz (en): Understand, Get in, kaikki nähtävä-/ruoka-/liikkumisosiot, Sleep | 11.10.2026 | https://en.wikivoyage.org/wiki/Ciudad_de_la_Paz |
 | C4 | President Obiang Nguema International Airport (en): alku, infobox, sijainti ja IATA | 11.10.2026 | https://en.wikipedia.org/wiki/President_Obiang_Nguema_International_Airport |
+| C5 | FCDO Equatorial Guinea: Warnings and insurance, voimassa 11.10.2026 | 11.10.2026 | https://www.gov.uk/foreign-travel-advice/equatorial-guinea |
+| C6 | Bata, Equatorial Guinea, en: alku; kontekstin Malabo-superlatiivin ristiriita, ei uusia väkilukuja | 11.10.2026 | https://en.wikipedia.org/wiki/Bata,_Equatorial_Guinea |
 
 Kaupungilla ei löytynyt erillistä historia-artikkelia: historiaperusta C1:n Planning and construction / Progress sekä C2:n alku. C1:n linkittämä virallinen asetusosoite haettiin robots-tarkistuksen jälkeen, mutta palautettu HTML oli vain 161 tavua eikä luettavaa asetusasiakirjaa. Sitä ei käytetä virallisena lisävahvistuksena: https://www.guineaecuatorialpress.com/noticias/decreto_ley_por_el_que_se_declara_la_ciudad_de_la_paz_djibloho_capital_de_la_republica_de_guinea_ecuatorial . `Wele_River` ja `Woleu_River` palauttivat 404; ne eivät ole luettuja lähteitä eikä niiden varaan ehdoteta kohdekoordinaattia.
 
@@ -119,6 +121,7 @@ Kaikki myöhemmät kuvat tarvitsevat tiedoston PD/CC-lisenssin lisäksi kohteen 
 - C1/C2/C3 ovat Wikimedia-sivuja, joiden tiedot voivat nojata samoihin uutisiin; eivät automaattisesti riippumattomia lähteitä tarkalle vuodelle.
 - Virallista asetuslinkkiä ei saatu luettavana; HTTP 200 + 161 tavua ei todista asiakirjan lukemista. Nykyinen asema on kontekstin ja C1:n tukema; tarkka siirtopäivä pois.
 - Säätaulukon lähde Climate-Data.org, normaalikausi puuttuu. Ei sääaseman normaaliriviä tässä A:ssa.
+- Kontekstin maaesittely/kevytkuvaus kutsuu Malaboa maan suurimmaksi kaupungiksi, mutta C6:n alku nimeää Batan väkirikkaimmaksi. Malabon superlatiivia ei käytetä tässä paketissa; Batastakaan ei tehdä uutta tarkkaa väestö-/rankingväitettä ilman riippumatonta varmistusta. Konteksti.json jätetty alkuperäisen työkalun tuloksena muuttamatta, korjaushavainto pääsessiolle.
 - Kartan ja oppaan vähimmäissisältö ei täyty. Puutteita ei peitetä geneerisellä maan kuvauksella tai suojattujen modernien kohteiden nimeämisellä.
 
 ## 9. Poisjätöt ja kontekstivertailu
@@ -126,3 +129,10 @@ Kaikki myöhemmät kuvat tarvitsevat tiedoston PD/CC-lisenssin lisäksi kohteen 
 Konteksti luettu: maalehti null, lähikaupungit ja lähinostot tyhjät. Ei vertailtavaa valmista lähinostoa. Kevyen pisteen kuvaus käsittelee hanketta, nimeä ja pääkaupunkistatusta; samojen vähien faktojen toistaminen kahdeksaan nostoon olisi sisältötoisto. Ei hallitsijoiden motiiveja, vallankaappauspelkoja, opposition kritiikkiä, talouspoliittista arvottamista tai nykyhallinnon henkilöitä. Ei keksittyä isoisää, tyhjää-maata-romantiikkaa, moderneja suojattuja rakennuksia/veistoksia karttakohteina, hotelli-/ravintolahintoja tai tyhjiä palvelulupauksia.
 
 **A-loppu:** lähteiden lukukierros ja faktakuri tehty; viisi kysymysaihetta ja kolme tietoa käyttökelpoisia. Täysi A jää lähde- ja teosoikeusesteeseen (0 karttakohdetta, neljän teemanoston ja oppaan vähimmäissisältö puuttuu). Suositus pääsessiolle: pidä kevyenä, kunnes puuttuvat kohde-/opaslähteet on saatu. Tämä on erän kaupungin käsittely, ei sen poistaminen työlistasta.
+
+
+## Säätausta — pääsession alkuperäinen sääajo
+
+Ei sääriviä: Taulukon otsikossa ei ole normaalikautta. Vuosiväliä ei arvata. saatiedot:null; ei aste- tai mm-lukuja teksteihin.
+
+Luvut C:hen saa.json:sta ilman tausta-kenttää. Sääteksti vain sarjan luvuista; ei toisen aseman käsin kopioitua kuvausta.

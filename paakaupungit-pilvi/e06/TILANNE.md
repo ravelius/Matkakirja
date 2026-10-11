@@ -8,7 +8,7 @@ Vaihe 0: yhdeksän kontekstia ja saa-syote.json luotu alkuperäisellä tyokalu.m
 
 | Kaupunki | A | B | C | D | E | F |
 |---|---|---|---|---|---|---|
-| libreville | A koottu; 6 karttakandidaattia, rajaus-/tyyppipoikkeus ja turvallisuuslähde avoin | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
+| libreville | A koottu; 6 karttakandidaattia, rajaus-/tyyppipoikkeus avoin; FCDO yleissivu luettu | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | ciudaddelapaz | lähdepaketti tehty; täysi A estyy: 0 karttakohdetta, opas/teema vajaat | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | saotome | A koottu; 6 ehdotusta, Obô-rajaus ja 2 kirkon oikeusportti avoin | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | bangui | lähdepaketti tehty; täysi A estyy kartta-/opasminimiin; ruokanosto korjattu | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
@@ -32,7 +32,7 @@ A-valmis tarkoittaa vain lähteistettyä faktapohjaa. Kaupunkia ei ole kirjoitet
 
 ## Libreville A
 
-Lähteistetty 0–9-rakenne koottu. 1849 kahdesta riippumattomasta lähteestä; muut epävarmat tarkat luvut poistettu/pyöristetty. Karttaehdotus ulottuu historiallisen ytimen lisäksi estuaarin retkiluontoon: pääsession hyväksyntää vaativa rajauspoikkeus, ei valmiiksi hyväksytty kartta. Mont-Bouët tarvitsee aukio-tyyppisovituksen. UM:n /c/GA palautti yleissivun; turvallisuustaso ei vahvistettu. IPHAMETRA HTTP 500.
+Lähteistetty 0–9-rakenne koottu. 1849 kahdesta riippumattomasta lähteestä; muut epävarmat tarkat luvut poistettu/pyöristetty. Karttaehdotus ulottuu historiallisen ytimen lisäksi estuaarin retkiluontoon: pääsession hyväksyntää vaativa rajauspoikkeus, ei valmiiksi hyväksytty kartta. Mont-Bouët tarvitsee aukio-tyyppisovituksen. UM:n /c/GA palautti yleissivun; FCDO Gabon -yleissivu luettu myöhemmin, ei kategorista välttämisohjetta eikä riskittömyysväitettä. IPHAMETRA HTTP 500.
 
 ## Ciudad de la Paz A-este
 
@@ -73,3 +73,9 @@ Yhdessä lukukomennossa PYTHONPYCACHEPREFIX oli kirjoitettu väärin. Se loi oma
 ## A-sessio — tarkka lopputila
 
 Päivitetty 2026-10-11T21:29:16+03:00. Kaikki 9 kaupungin lähdelukukierrokset ja omat faktapohja.md-tiedostot tehty. Kuudessa on täysi 0–9-paketti kuudella karttakandidaatilla (varaukset taulukossa), kolmessa täysi A jää nimenomaiseen puutteeseen: Ciudad de la Paz, Bangui ja Gitega. Varauksia ei ole hyväksytty poikkeuksiksi. B/C/D/E/F tekemättä; pääsessio hoitaa sääaineiston, jatkovaiheet ja toimitusjärjestyksen.
+
+## Kolmen ensimmäisen kaupungin lisätarkistus
+
+FCDO Gabon / Equatorial Guinea / São Tomé and Príncipe -maakohtaiset Warnings and insurance -sivut luettu 11.10.2026. Sivujen current-at-kenttä sama päivä; ei kategorista välttämisohjetta yleissivuilla. Ei riskittömyysväitettä, viisumi-/terveys-/vakuutus-/rikollisuusohjeita tai Safety and security -koko-osion läpikäynnin väitettä.
+
+Ciudad de la Paz -kontekstin Malabo = maan suurin kaupunki -väite ristiriidassa luetun Bata-artikkelin kanssa. Superlatiivi pois uudesta faktapaketista; konteksti.json säilytetty alkuperäisenä, korjaushavainto pääsession tarkistukseen.
