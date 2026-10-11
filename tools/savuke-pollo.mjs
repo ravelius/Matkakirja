@@ -3858,11 +3858,13 @@ const kuplanNapautus = await vihjeSivu.evaluate(async () => {
    * 200 ms:n häivytyksen jälkeen, joten häipymistä mitataan siitä,
    * ettei näkyvää kuplaa enää ole — ja odotus on animaation mittainen.
    */
-  // Katoaminen kirjataan heti (enint. 1 s): valintavihje voi palata 400 ms:n viiveellä ennen kiinteää mittaushetkeä (CI).
+  // Mitataan NAPAUTETTUA kuplaa: se lähtee poistumaan (polloPoistuu, häivytys) tai irtoaa/piiloutuu. Pelkkä "näkyvää
+  // kuplaa ei ole" ei kelpaa, koska valintavihje voi tuoda uuden kuplan tilalle ennen kuin tyhjä hetki ehtii näkyä
+  // (CI-ajot 38177098488 ja 38177589782: pinon vihjekupla, ei kuittausta, mutta uusi kupla heti tilalla).
   let haipyi = false;
   for (const t0 = performance.now(); !haipyi && performance.now() - t0 < 1000;) {
     await new Promise((r) => requestAnimationFrame(r));
-    haipyi = !document.querySelector('.pollo-vihje:not([hidden])');
+    haipyi = Boolean(vihje.polloPoistuu) || !vihje.isConnected || vihje.hidden;
   }
   // Sama vuoro alusta: kupla takaisin kartan kosketuskoetta varten.
   ui.valintavihjeVaihe = false;
@@ -3939,6 +3941,7 @@ const kohdistus = await vihjeSivu.evaluate(async () => {
   const dy = Math.round(kohde.y - (laatikko.top + laatikko.height / 2));
   kehys.style.translate = `${dx}px ${dy}px`;
   await asettuu(vihje);
+  window.__napautettuKupla = vihje;
   // Diagnoosi (CI): mikä elementti on napautuspisteessä siirron jälkeen.
   const pisteessa = document.elementFromPoint(kohde.x, kohde.y);
   const kuplassa = Boolean(pisteessa && vihje.contains(pisteessa));
@@ -3956,10 +3959,12 @@ if (kohdistus.virhe) {
   await vihjeSivu.touchscreen.tap(kohdistus.x, kohdistus.y);
   // CI:n hitaassa piirrossa napautuksen käsittely voi viipyä yli 600 ms (ajo 38175149983: kupla yhä näkyvissä, ei vuotoa):
   // odotetaan kuplan katoamista enintään 2,5 s ja sen jälkeen vielä mahdollista vuotavaa clickiä.
-  // Katoaminen kirjataan heti, kun se tapahtuu: valintavihje (viive 400 ms tässä osiossa) voi palata ennen loppumittausta
-  // (CI-ajo 38176195972: kupla oli napautuspisteessä, ei vuotoa, mutta loppuhetkellä taas näkyvissä).
-  const katosi = await vihjeSivu.waitForFunction(() => !document.querySelector('.pollo-vihje:not([hidden])'), null, { timeout: 2500 })
-    .then(() => true, () => false);
+  // Napautettu kupla lähtee poistumaan (polloPoistuu) tai irtoaa; valintavihje voi tuoda uuden kuplan tilalle ennen
+  // loppumittausta (CI-ajot 38176195972–38177589782), joten näkyvien kuplien määrä ei kerro napautuksesta.
+  const katosi = await vihjeSivu.waitForFunction(() => {
+    const k = window.__napautettuKupla;
+    return !k || Boolean(k.polloPoistuu) || !k.isConnected || k.hidden;
+  }, null, { timeout: 2500 }).then(() => true, () => false);
   await vihjeSivu.waitForTimeout(600);
   const vuoto = await vihjeSivu.evaluate(async () => {
     const ui = window.matkakirja.ui;
