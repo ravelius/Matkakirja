@@ -70,6 +70,21 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(v.Contains("lerp(-0.3, h - latvusK * 0.5, kulma.y)"), "runko tyvestä (0,3 m maan alle) latvuksen keskelle");
         }
 
+        [Testi] static void LatvusJaRunkoKatutasolla()
+        {
+            // iPad-ajo 182 t03: latvukset yhtenä tummana laattana, rungot mustia. Lähiyksityiskohta latvuksen ruutukoosta; kaukoversio ennallaan (t01).
+            string v = File.ReadAllText(Polku("Assets", "Matkakirja", "Linssit", "Resources", "Varjostimet", "KaupunkiPuu.shader"));
+            Oleta.Tosi(v.Contains("return saturate((2.2 / fw - 40.0) / 80.0);") && v.Contains("c = lerp(c, c2, d);"), "lähiyksityiskohta d latvuksen koosta ruudulla");
+            Oleta.Tosi(v.Contains("c = pohja * sisa * (amb + _ElavaAurinkoVari.rgb * kaari);") && v.Contains("float3(0.045, 0.085, 0.05) : float3(0.075, 0.13, 0.04)"),
+                "kaukoversio (d = 0) ennallaan");
+            Oleta.Tosi(v.Contains("float kimppu = PuuKohina(") && v.Contains("float ala = lerp(0.4, 1.0,") && v.Contains("float reuna = lerp(0.65, 1.0,"), "kimput, alapinta ja reuna");
+            Oleta.Tosi(v.Contains("m + d * ((n3 - 0.5) * 0.22 - PuuIgn(i.p.xy) * 0.14)") && v.Contains("clip(PuuLatvusLeikkaus(i, PuuLahi(i.uv), lehti))"),
+                "epäsäännöllinen ditheröity reuna, sama leikkaus syvyyspasseissa");
+            Oleta.Tosi(v.Contains("float3 kuori = float3(0.13, 0.11, 0.09)") && v.Contains("float kaari = saturate((dot(n, l) + 0.2) / 1.2);"), "runko ruskeanharmaa lieriö auringon valossa");
+            int ilma = v.IndexOf("IlmIlmaperspektiivi(pit"), runko = v.IndexOf("float3 kuori");
+            Oleta.Tosi(ilma > runko && runko > 0, "ilmaperspektiivi latvuksen ja rungon jälkeen (molemmille)");
+        }
+
         [Testi] static void TyviMaahanPintamallista()
         {
             // Maa 50 m; puisto: latvusto 65 m 20 m:n säteellä origosta. Vanha 4 suunnan kehä latvus/2 + 3 = 7 m osui latvustoon (65 m).

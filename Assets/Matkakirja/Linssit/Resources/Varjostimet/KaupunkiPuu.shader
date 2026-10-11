@@ -9,6 +9,11 @@
 // MUOTO (11.10., iPad-ajo 181: rungot pitkiä ja ohuita): sama kuin Ydin PuuRuudukko.Muoto: latvus 0,7 × h (havu 0,8), leveys 0,5–1,2 × h
 // (havu 0,3–0,6), näkyvä runko ≤ kolmannes; runko 0,045 × h (0,25–1,1 m).
 // Häivytys ditheröiden: kaukorajalla (_PuuParam.y, viimeiset 15 %) ja kun kamera on latvuksen sisällä.
+// KATUTASON ULKONÄKÖ (11.10., iPad-ajo 182 t03: latvukset yhtenä tasaisena tummana laattana, rungot mustia): yksityiskohta d kasvaa latvuksen
+// koosta ruudulla (fwidth: 40 px → 0, 120 px → 1), joten kaukopuut ja pallonäkymä (t01) pysyvät ennallaan. Lähellä: puukohtainen sävy ja
+// kirkkaus (vaihtelu = puun paikasta), lehvästökimput (hieno kohina kallistaa normaalia aurinkoon päin), aurinkopuoli vaaleampi ja alapinta
+// tummempi, reunan tummuus ja ditheröity epäsäännöllinen reuna (vierekkäiset latvukset erottuvat). Runko ruskeanharmaa lieriö (normaali
+// kortin poikki), sama aurinko- ja taivasvalo; ilmaperspektiivi ja sumu kaikille osille kuten laatoilla.
 Shader "Matkakirja/Linssit/KaupunkiPuu"
 {
     SubShader
@@ -110,16 +115,28 @@ Shader "Matkakirja/Linssit/KaupunkiPuu"
             if (havu > 0.5) rr = length(float2(u.x / lerp(0.95, 0.3, saturate(u.y * 0.5 + 0.5)), u.y));
             return 1.05 - rr + (n1 - 0.5) * 0.3 + (n2 - 0.5) * 0.15;
         }
-        /// Häivytys ilman läpinäkyvyyttä: ruudun koordinaateista (interleaved gradient), w = 1 → aina näkyvissä.
-        void PuuHaivytys(V i)
+        /// Ruudun kohina (interleaved gradient) 0–1: ditheröinti ilman läpinäkyvyyttä.
+        float PuuIgn(float2 p) { return frac(52.9829189 * frac(dot(p, float2(0.06711056, 0.00583715)))); }
+        /// Häivytys ilman läpinäkyvyyttä: w = 1 → aina näkyvissä.
+        void PuuHaivytys(V i) { clip(i.tieto.w - PuuIgn(i.p.xy) * 0.999 - 0.0005); }
+        /// Katutason yksityiskohta 0–1 latvuksen koosta ruudulla (kortti 2,2 uv-yksikköä): alle 40 px 0 (kaukoversio ennallaan), yli 120 px 1.
+        float PuuLahi(float2 u)
         {
-            float ign = frac(52.9829189 * frac(dot(i.p.xy, float2(0.06711056, 0.00583715))));
-            clip(i.tieto.w - ign * 0.999 - 0.0005);
+            float fw = max(fwidth(u.x) + fwidth(u.y), 1e-5);
+            return saturate((2.2 / fw - 40.0) / 80.0);
+        }
+        /// Latvuksen leikkaus: kaukona PuuLatvus sellaisenaan; lähellä lisäksi hieno reunakohina (lehvästön epäsäännöllisyys) ja ditheröity
+        /// pehmeä reuna. Kaikki passit samoin (syvyys = väri).
+        float PuuLatvusLeikkaus(V i, float d, out float lehti)
+        {
+            float m = PuuLatvus(i.uv, i.tieto.y, i.tieto.z, lehti);
+            float n3 = PuuKohina(i.uv * 13.0 + i.tieto.y * float2(53.0, 17.0));
+            return m + d * ((n3 - 0.5) * 0.22 - PuuIgn(i.p.xy) * 0.14);
         }
         void PuuLeikkaa(V i)
         {
             float lehti;
-            if (i.tieto.x < 0.5) clip(PuuLatvus(i.uv, i.tieto.y, i.tieto.z, lehti));
+            if (i.tieto.x < 0.5) clip(PuuLatvusLeikkaus(i, PuuLahi(i.uv), lehti));
             else clip(0.95 - abs(i.uv.x));
             PuuHaivytys(i);
         }
@@ -144,8 +161,9 @@ Shader "Matkakirja/Linssit/KaupunkiPuu"
                 if (i.tieto.x < 0.5)
                 {
                     float lehti;
-                    clip(PuuLatvus(i.uv, i.tieto.y, i.tieto.z, lehti));
                     float2 u = i.uv;
+                    float d = PuuLahi(u);
+                    clip(PuuLatvusLeikkaus(i, d, lehti));
                     float rr = saturate(dot(u, u));
                     float3 nL = u.x * _PuuOikea.xyz + u.y * _PuuYlos.xyz + sqrt(1.0 - rr) * i.kohti;
                     float3 n = normalize(mul((float3x3)_PuuMatriisi, nL));
@@ -157,12 +175,37 @@ Shader "Matkakirja/Linssit/KaupunkiPuu"
                     float kaari = saturate((dot(n, l) + 0.3) / 1.3);
                     float3 amb = lerp(_ElavaTaivasAla.rgb, _ElavaTaivasYla.rgb, n.y * 0.5 + 0.5);
                     c = pohja * sisa * (amb + _ElavaAurinkoVari.rgb * kaari);
+                    if (d > 0.0)
+                    {
+                        // Katutaso: puukohtainen kirkkaus ja sävy (keltainen ↔ sinertävä), vaaleampi perusväri (vanha oli lähellä mustaa).
+                        float v1 = i.tieto.y, v2 = frac(v1 * 13.0), v3 = frac(v1 * 29.0);
+                        float3 p2 = i.tieto.z > 0.5 ? float3(0.055, 0.10, 0.06) : float3(0.095, 0.16, 0.045);
+                        p2 *= lerp(0.7, 1.3, v3);
+                        p2 *= lerp(float3(1.15, 1.05, 0.7), float3(0.85, 0.97, 1.2), v2);
+                        // Lehvästökimput: hieno kohina kallistaa normaalia aurinkoon / poispäin → valaistut ja varjoiset kimput.
+                        float kimppu = PuuKohina(u * 9.0 + v1 * float2(11.0, 71.0)) * 0.7 + PuuKohina(u * 21.0 + v1 * 5.0) * 0.3;
+                        float3 n2 = normalize(n + l * ((kimppu - 0.5) * 1.2));
+                        float valo = saturate((dot(n2, l) + 0.15) / 1.15);
+                        float ala = lerp(0.4, 1.0, saturate(u.y * 0.55 + 0.6));                 // alapinta tummempi
+                        float reuna = lerp(0.65, 1.0, saturate((1.05 - length(u)) * 2.5));      // reuna tummuu: latvukset erottuvat
+                        float aukot = lerp(0.45, 1.0, lehti) * lerp(0.75, 1.1, kimppu);
+                        float3 c2 = p2 * ala * reuna * aukot * (amb + _ElavaAurinkoVari.rgb * valo * 1.15);
+                        c = lerp(c, c2, d);
+                    }
                 }
                 else
                 {
                     clip(0.95 - abs(i.uv.x));
+                    // Runko: ruskeanharmaa lieriö; normaali kortin poikki (sivu kuten kärkivarjostimessa, kohti kameraa vaakatasossa).
+                    float3 kh = float3(i.kohti.x, 0.0, i.kohti.z);
+                    kh = dot(kh, kh) > 1e-6 ? normalize(kh) : float3(0.0, 0.0, 1.0);
+                    float3 sv = normalize(cross(float3(0.0, 1.0, 0.0), kh));
+                    float ux = clamp(i.uv.x / 0.95, -1.0, 1.0);
+                    float3 n = normalize(mul((float3x3)_PuuMatriisi, sv * ux + kh * sqrt(1.0 - ux * ux)));
                     float3 amb = lerp(_ElavaTaivasAla.rgb, _ElavaTaivasYla.rgb, 0.5);
-                    c = float3(0.06, 0.045, 0.035) * (amb + _ElavaAurinkoVari.rgb * 0.4 * (0.6 + 0.4 * i.uv.x)) * lerp(0.6, 1.0, i.uv.y);
+                    float kaari = saturate((dot(n, l) + 0.2) / 1.2);
+                    float3 kuori = float3(0.13, 0.11, 0.09) * lerp(0.8, 1.15, frac(i.tieto.y * 17.0));
+                    c = kuori * (amb + _ElavaAurinkoVari.rgb * kaari) * lerp(0.55, 1.0, saturate(i.uv.y * 1.5));   // tyvi hieman tummempi
                 }
                 PuuHaivytys(i);
                 // Ilmaperspektiivi samoin kuin Googlen laatoilla (IlmakehaLaatat; voima 0 = ilmakehä pois → ei muutosta).
