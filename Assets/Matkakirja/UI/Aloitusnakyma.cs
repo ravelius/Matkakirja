@@ -483,6 +483,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void PortistaKartalle()
         {
+            LivianAvaus.NollaaEnsikerta();   // uusi matka kuulostaa kuin ensimmäinen kerta (omistaja 11.10.2026 klo 11.4x)
             Aanisoitin.AvausAlkoi(); // web aloitaAvauksenAani (B7-soitin)
             // Löydös 118 (omistaja, build 14): "Vintiltä löytyi isoisän matkalaukku" -luenta ja teksti SAMAAN ruutuun kuin
             // Aloita seikkailu: portti, sumea pallo, etusivulento ja musiikki jatkuvat. Napit ja alalinkki häipyvät, ja

@@ -939,6 +939,7 @@ namespace Matkakirja.Natiivi
             SuljeKaikki();
             // Uusi peli unohtaa linssin muistin (web: linssimuisti kuuluu matkaan).
             PlayerPrefs.DeleteKey(global::Matkakirja.Linssit.Aikajana.LinssiMuisti.Etuliite + "ihmisen-matka"); PlayerPrefs.DeleteKey(global::Matkakirja.Linssit.Aikajana.LinssiMuisti.Etuliite + "ihmisen-matka-2");
+            LivianAvaus.NollaaEnsikerta();   // uusi matka kuulostaa kuin ensimmäinen kerta (omistaja 11.10.2026 klo 11.4x)
             Aloitus.NaytaAvaus(id => Aloita(o, id), o.Lahtokaupungit());
         }
 

@@ -382,6 +382,8 @@ namespace Matkakirja.Natiivi
             kortti.Kuvat.Tyhjenna(true);
             var v = Fokusvirrat.Hae(k);
             // Ohita tai lähtö (PeliOhjain.LuentoOhitettu, web luennanOhitus): pulun kommenttia ei aloiteta.
+            // Omistaja 11.10.2026 klo 11.5x: aloituskaupungissa Pulun oma kommentti ja kuvat jäävät kokonaan pois (Pulun osuus ei veny).
+            if (k == LivianPaljastus.Aloituskaupunki) kommentoitu.Add(k);
             if (v == null || kommentoitu.Contains(k) || v.PuluKommentit.Count == 0 || ohjain?.LuentoOhitettu == true)
             {
                 kortti.Kuvat.Hiljeni();

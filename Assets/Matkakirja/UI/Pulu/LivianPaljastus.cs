@@ -10,13 +10,20 @@
 // hiljaa luennan ajan; kommentti (Saapumisesitys) tulee sarjan jälkeen. Linssin ajan sarja odottaa (700 ms).
 // Äänite on vain äänitetylle variantille (Ateenaan / Ateenaa, web LIVIAN_AANITETTY_PALJASTUS).
 //
-// MUUT ALOITUSLENNOT: luennan jälkeen +900 ms (ilman luentaa 1800 ms) vihjerivi (tilarivin ilmoitus 3 s, ei Pulun kuplaa,
-// 6.10.2026) "Tervetuloa X. Sinun on ratkaistava tehtävä Y ennen kuin voit etsiä aarretta." ja +3 s "Klikkaa kaupungin kultaista merkkiä
-// kartalla." (web ui.js:821–828, polloVihje + polloLisavihje).
+// Tuuraus (omistaja 11.10.2026): paljastus-2 on äänitetty myös Tukholmaan, Moskovaan ja Istanbuliin (opastus-v1); paljastus-1 soi kaikissa.
+//
+// MUUT ALOITUSLENNOT: luennan jälkeen +900 ms (ilman luentaa 1800 ms) vihjerivi (tilarivin ilmoitus, ei Pulun kuplaa, 6.10.2026)
+// "Tervetuloa X. Sinun on ratkaistava tehtävä Y ennen kuin voit etsiä aarretta." ja sen jälkeen "Klikkaa kaupungin kultaista merkkiä
+// kartalla." (web ui.js:821–828). Omistaja 11.10. 11.5x: rivit jäävät, mutta luettaviksi (15 merkkiä/s, vähintään 6 s).
+//
+// PULU OPASTAA KERRAN (omistaja 11.10.2026; laitelippu matkakirja-livia-opastus, Uusi matka nollaa): aloituskaupungissa, kun
+// luenta on ohi ja kartta on ollut levossa 1 s, Pulu sanoo opastuksen lauseen 3 ("…napauta minua!") ilman kuplaa "welcome"-eleellä
+// (Pululla ei ole hehkua; ele on olemassa oleva korostus). Lauseet 1–2 odottavat omistajan päätöstä.
 //
 // Traileri: saapumiskuplat odottavat, kunnes silmukka on kartalla (web odotaLivianTraileria). Paikan puheen
 // vaiennus (Ohita, lähtö) ja kaupungin vaihto katkaisevat sarjan.
 using System;
+using System.Collections.Generic;
 using Matkakirja.Peli;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -42,6 +49,28 @@ namespace Matkakirja.Natiivi
         const string AanitettyPaikkaan = "Ateenaan";
         static readonly string[] Aaniversiot = { "4dd412c2-4", "55959b90-4" };
 
+        /// <summary>Tuurauksen paljastus-2 muihin aloituskaupunkeihin (Pelikoodarin opastus.json, aanet/pulu/opastus-v1/).</summary>
+        static readonly Dictionary<string, string> Paljastus2 = new Dictionary<string, string>
+        {
+            ["Tukholmaan"] = "tukholma",
+            ["Moskovaan"] = "moskova",
+            ["Istanbuliin"] = "istanbul",
+        };
+
+        /// <summary>Paljastuksen repliikin i äänite paikalle (null = ei äänitettä).</summary>
+        static string AaniUrl(string paikkaan, int i)
+        {
+            if (paikkaan == AanitettyPaikkaan) return i < Aaniversiot.Length ? Pulu.AaniOsoite("paljastus", i, Aaniversiot[i]) : null;
+            if (paikkaan == null || !Paljastus2.TryGetValue(paikkaan, out var id)) return null;
+            return i == 0 ? Pulu.AaniOsoite("paljastus", 0, Aaniversiot[0]) : i == 1 ? Aanet.Juuri + "aanet/pulu/opastus-v1/livia-paljastus-2-" + id + ".mp3" : null;
+        }
+
+        /// <summary>Opastuksen laitelippu ja odotus (lepo 1 s, enintään 3 min saapumisesta).</summary>
+        public const string OpastusAvain = "matkakirja-livia-opastus";
+        const float OpastusLepoS = 1f, OpastusOdotusS = 180f;
+        /// <summary>Tilarivin lukunopeus ja vähimmäisaika (omistaja 11.10. 11.5x: rivit näkyivät liian lyhyesti).</summary>
+        const float RiviMerkkiaS = 15f, RiviVahintaanS = 6f;
+
         /// <summary>LIVIAN PALJASTUS — KAANONIA (web livianPaljastus, kaksi ensimmäistä; sanatarkkoja).</summary>
         public static string[] Repliikit(string paikkaan)
         {
@@ -55,7 +84,14 @@ namespace Matkakirja.Natiivi
 
         static PeliOhjain ohjain;
         static bool annettu, kesken, luentaSoi;
-        static string kaupunki;
+        static string kaupunki, aloitus;
+        static IVisualElementScheduledItem opastusVahti;
+
+        /// <summary>Tämän matkan aloituskaupunki (aloituslento perillä); Saapumisesitys jättää siellä Pulun kommentin ja kuvat pois.</summary>
+        public static string Aloituskaupunki => aloitus;
+
+        /// <summary>Opastus jo kuultu tällä laitteella (tai tällä matkalla Uuden matkan jälkeen).</summary>
+        public static bool OpastusNahty => PlayerPrefs.GetInt(OpastusAvain, 0) == 1;
         static int versio;
         static IVisualElementScheduledItem ajastin;
         static Action luennanLoppu;
@@ -65,7 +101,8 @@ namespace Matkakirja.Natiivi
         {
             ohjain = null;
             annettu = kesken = luentaSoi = false;
-            kaupunki = null;
+            kaupunki = aloitus = null;
+            opastusVahti = null;
             ajastin = null;
             luennanLoppu = null;
         }
@@ -80,6 +117,7 @@ namespace Matkakirja.Natiivi
         public static void NollaaLippu()
         {
             PlayerPrefs.DeleteKey(Avain);
+            PlayerPrefs.DeleteKey(OpastusAvain);
             PlayerPrefs.Save();
             annettu = false;
         }
@@ -122,7 +160,9 @@ namespace Matkakirja.Natiivi
             Lopeta();
             int v = ++versio;
             kaupunki = k;
+            aloitus = k;
             luentaSoi = ohjain.SoivaLuento?.Kaupunki == k;
+            OdotaOpastus(k);
             bool paljastus = ohjain.LuentaLykatty(k);
             // Paljastus on tämän saapumisen puheenvuoro heti: kommentti odottaa (web livianPaljastusKesken).
             kesken = paljastus;
@@ -163,7 +203,7 @@ namespace Matkakirja.Natiivi
                 kesken = true;
                 try { PlayerPrefs.SetInt(Avain, 1); PlayerPrefs.Save(); } catch (Exception) { }
                 string paikkaan = Sijamuodot.Maahan(nimi);
-                Repliikki(v, 0, Repliikit(paikkaan), paikkaan == AanitettyPaikkaan);
+                Repliikki(v, 0, Repliikit(paikkaan), paikkaan);
                 return;
             }
             kesken = false;
@@ -184,20 +224,59 @@ namespace Matkakirja.Natiivi
         {
             if (!UiNakymat.Olemassa) return;
             var rivi = UiNakymat.Hae().Tilarivi;
-            float s = Nimikyltti.NakyyMs / 1000f;
-            rivi.Viesti(tervetuloa.Length > 0 ? tervetuloa : OhjeToinen, s);
+            string eka = tervetuloa.Length > 0 ? tervetuloa : OhjeToinen;
+            float s = Lukuaika(eka);
+            rivi.Viesti(eka, s);
             if (tervetuloa.Length == 0) return;
-            Ajasta(() => { if (Voimassa(v)) rivi.Viesti(OhjeToinen, s); }, Nimikyltti.NakyyMs);
+            Ajasta(() => { if (Voimassa(v)) rivi.Viesti(OhjeToinen, Lukuaika(OhjeToinen)); }, (long)(s * 1000f));
         }
 
+        /// <summary>Tilarivin näkymisaika sekunteina: 15 merkkiä/s, vähintään 6 s.</summary>
+        static float Lukuaika(string teksti) => Mathf.Max(RiviVahintaanS, (teksti?.Length ?? 0) / RiviMerkkiaS);
+
+        /// <summary>Opastus odottaa: luenta ohi (ja paljastus), kartta levossa 1 s (ei puhetta, linssiä eikä chattia), sitten kerran.</summary>
+        static void OdotaOpastus(string k)
+        {
+            opastusVahti?.Pause();
+            opastusVahti = null;
+            if (OpastusNahty || ohjain == null) return;
+            float alku = Time.realtimeSinceStartup, lepo = -1f;
+            opastusVahti = Kello.schedule.Execute(() =>
+            {
+                if (ohjain == null || ohjain.PelaajanKaupunki != k || OpastusNahty || Time.realtimeSinceStartup - alku > OpastusOdotusS)
+                {
+                    opastusVahti?.Pause();
+                    return;
+                }
+                bool chat = UiNakymat.Olemassa && UiNakymat.Hae().Chat.Auki;
+                bool levossa = !kesken && !luentaSoi && !ohjain.LuentaLykatty(k) && ohjain.Tila == SilmukanTila.Kartta
+                    && !Aanet.PuluPuhuu && !Aanet.KertojaPuhuu && !chat && LinssiUi.Rekisteri?.Auki == null && Pulu.Hae().Nakyvissa;
+                if (!levossa) { lepo = -1f; return; }
+                if (lepo < 0f) { lepo = Time.realtimeSinceStartup; return; }
+                if (Time.realtimeSinceStartup - lepo < OpastusLepoS) return;
+                opastusVahti?.Pause();
+                Opasta();
+            }).Every(250);
+        }
+
+        static void Opasta()
+        {
+            try { PlayerPrefs.SetInt(OpastusAvain, 1); PlayerPrefs.Save(); } catch (Exception) { }
+            Debug.Log("MATKAKIRJA livia: opastus 3");
+            Pulu.Hae().Sano(Kieli.T("ui.livia.opastus-3"), Aanet.Juuri + "aanet/pulu/opastus-v1/livia-opastus-3.mp3", "welcome", kuplaton: true);
+        }
+
+        /// <summary>Testi (`ui livia opastus`): opastus heti (lippu asetetaan kuten oikeasti).</summary>
+        public static void TestiOpastus() => Opasta();
+
         /// <summary>Web paljastusRepliikki: kupla, ääni ja jatko (napautus tai ajastin, vain kerran).</summary>
-        static void Repliikki(int v, int i, string[] repliikit, bool aanitetty)
+        static void Repliikki(int v, int i, string[] repliikit, string paikkaan)
         {
             ajastin?.Pause();
             ajastin = null;
             if (!Voimassa(v)) { Lopeta(true); return; }
             // Linssi päällä: sarja odottaa vuoroaan eikä katkea (web linssiEstaa, omistaja 4.9.2026).
-            if (LinssiUi.Rekisteri?.Auki != null) { Ajasta(() => Repliikki(v, i, repliikit, aanitetty), LinssiValiMs); return; }
+            if (LinssiUi.Rekisteri?.Auki != null) { Ajasta(() => Repliikki(v, i, repliikit, paikkaan), LinssiValiMs); return; }
             if (i >= repliikit.Length) { Lopeta(); return; }
             string teksti = repliikit[i];
             bool viimeinen = i == repliikit.Length - 1;
@@ -207,11 +286,11 @@ namespace Matkakirja.Natiivi
                 if (kuitattu++ > 0 || v != versio) return;
                 ajastin?.Pause();
                 if (viimeinen) OdotaLuenta(v);
-                else Repliikki(v, i + 1, repliikit, aanitetty);
+                else Repliikki(v, i + 1, repliikit, paikkaan);
             }
             var pulu = Pulu.Hae();
             float puheMs = -1f;
-            var aani = aanitetty && i < Aaniversiot.Length ? Pulu.AaniOsoite("paljastus", i, Aaniversiot[i]) : null;
+            var aani = AaniUrl(paikkaan, i);
             if (!pulu.Nakyvissa)
             {
                 // Kupla ei mahdu (web polloSaapumiskupla false): luenta heti liikkeelle, ei jäädä odottamaan.
