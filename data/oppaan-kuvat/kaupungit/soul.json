@@ -294,42 +294,6 @@
    ]
   },
   {
-   "q": "Q69134",
-   "nimi": "Namsan Seoul Tower",
-   "peruste": "sitelinks",
-   "koko_m": 150,
-   "lat": 37.55122,
-   "lon": 126.98828,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Seoul Aerial Shot 08.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Seoul_Aerial_Shot_08.jpg?width=1280",
-     "tekija": "Republic of Korea",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Seoul_Aerial_Shot_08.jpg",
-     "selite": "N Seoul Tower seisoo Namsan-vuoren huipulla kaupungin keskellä.",
-     "leveys": 5463,
-     "korkeus": 3624,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Namsan Tower sunset, Seoul.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Namsan_Tower_sunset%2C_Seoul.jpg?width=1280",
-     "tekija": "Rtflakfizer",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Namsan_Tower_sunset%2C_Seoul.jpg",
-     "selite": "Torni erottuu siluettina laskevan auringon edessä.",
-     "leveys": 2808,
-     "korkeus": 2098,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
    "q": "Q495437",
    "nimi": "Cheonggyecheon",
    "peruste": "sitelinks",
@@ -348,55 +312,6 @@
      "selite": "Cheonggyecheon on kaupungin halki virtaava kunnostettu oja, jonka yllä oli ennen valtatie.",
      "leveys": 6555,
      "korkeus": 4370,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Cheonggyecheon stream with flowers and bridge at sunrise near Cheonggye Plaza in Seoul.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cheonggyecheon_stream_with_flowers_and_bridge_at_sunrise_near_Cheonggye_Plaza_in_Seoul.jpg?width=1280",
-     "tekija": "Basile Morin",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cheonggyecheon_stream_with_flowers_and_bridge_at_sunrise_near_Cheonggye_Plaza_in_Seoul.jpg",
-     "selite": "Oja alkaa Cheonggye-aukiolta ja kulkee pilvenpiirtäjien välissä.",
-     "leveys": 6653,
-     "korkeus": 4435,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
-   "q": "Q494895",
-   "nimi": "Lotte World Tower",
-   "peruste": "sitelinks",
-   "koko_m": 300,
-   "lat": 37.5125,
-   "lon": 127.1025,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Lotte World morning view 8.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lotte_World_morning_view_8.jpg?width=1280",
-     "tekija": "kallerna",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lotte_World_morning_view_8.jpg",
-     "selite": "Lotte World Tower on yksi maailman korkeimmista pilvenpiirtäjistä.",
-     "leveys": 6000,
-     "korkeus": 4100,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Lotte World day view 5.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lotte_World_day_view_5.jpg?width=1280",
-     "tekija": "kallerna",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lotte_World_day_view_5.jpg",
-     "selite": "Torni kohoaa Seokchon-järven ja huvipuiston yllä.",
-     "leveys": 8200,
-     "korkeus": 4500,
      "tarkistettu": true
     }
    ]
@@ -519,15 +434,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "National Museum of Korea, Seoul (4) (41131638041).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Museum_of_Korea%2C_Seoul_(4)_(41131638041).jpg?width=1280",
-     "tekija": "Richard Mortel from Riyadh, Saudi Arabia",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Museum_of_Korea%2C_Seoul_(4)_(41131638041).jpg",
-     "selite": "Korean kansallismuseo on yksi Itä-Aasian suurimpia museoita.",
-     "leveys": 6000,
-     "korkeus": 4000,
+     "tiedosto": "Pensive Bodhisattva (National Treasure No. 78) 01 cropped.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pensive_Bodhisattva_(National_Treasure_No._78)_01_cropped.jpg?width=1280",
+     "tekija": "Korean kansallismuseo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pensive_Bodhisattva_(National_Treasure_No._78)_01_cropped.jpg",
+     "selite": "Kullattu pronssinen mietiskelevä Maitreya-patsas kuuluu Korean kansallismuseon kokoelmiin (kansallisaarre nro 78).",
+     "leveys": 3000,
+     "korkeus": 3000,
      "tarkistettu": true
     },
     {

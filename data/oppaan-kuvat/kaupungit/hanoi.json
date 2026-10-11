@@ -137,55 +137,6 @@
    ]
   },
   {
-   "q": "Q874234",
-   "nimi": "Ho Chi Minhin mausoleumi",
-   "peruste": "sitelinks",
-   "koko_m": 200,
-   "lat": 21.03667,
-   "lon": 105.83472,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Hanoi Vietnam Mausoleum-of-Ho-Chi-Minh-03.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hanoi_Vietnam_Mausoleum-of-Ho-Chi-Minh-03.jpg?width=1280",
-     "tekija": "CEphoto, Uwe Aranas",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hanoi_Vietnam_Mausoleum-of-Ho-Chi-Minh-03.jpg",
-     "selite": "Ho Chi Minhin mausoleumi on Ba Đìnhin aukion laidalla seisova harmaa muistomerkki.",
-     "leveys": 3349,
-     "korkeus": 2233,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Hanoi Vietnam Mausoleum-of-Ho-Chi-Minh-01.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hanoi_Vietnam_Mausoleum-of-Ho-Chi-Minh-01.jpg?width=1280",
-     "tekija": "CEphoto, Uwe Aranas",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hanoi_Vietnam_Mausoleum-of-Ho-Chi-Minh-01.jpg",
-     "selite": "Mausoleumia ympäröivät hoidetut nurmikot ja palmut.",
-     "leveys": 2270,
-     "korkeus": 1513,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Ho chi minh mausoleum.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ho_chi_minh_mausoleum.jpg?width=1280",
-     "tekija": "Gregor Dodson",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ho_chi_minh_mausoleum.jpg",
-     "selite": "Pylväikkö ja kolmikerroksinen jalusta tekevät rakennuksesta arvokkaan ja ankaran.",
-     "leveys": 3024,
-     "korkeus": 1998,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
    "q": "Q1186292",
    "nimi": "Yhden pilarin pagodi",
    "peruste": "pelin nosto",

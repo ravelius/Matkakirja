@@ -74,19 +74,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Central Stadium, Yekaterinburg (August 2022) - 2.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Central_Stadium%2C_Yekaterinburg_(August_2022)_-_2.jpg?width=1280",
-     "tekija": "Vyacheslav Bukharov",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Central_Stadium%2C_Yekaterinburg_(August_2022)_-_2.jpg",
-     "selite": "Keskusstadionin vanha julkisivu säilytettiin, kun areena uudistettiin vuoden 2018 jalkapallon MM-kisoja varten.",
-     "leveys": 5472,
-     "korkeus": 3078,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "Estadio Central (Ekaterinburg-arena).jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estadio_Central_(Ekaterinburg-arena).jpg?width=1280",
      "tekija": "Фальшивомонетчик",
@@ -231,15 +218,15 @@
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Plotinka in Yekaterinburg (September 2023) - 5.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plotinka_in_Yekaterinburg_(September_2023)_-_5.jpg?width=1280",
-     "tekija": "Vyacheslav Bukharov",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plotinka_in_Yekaterinburg_(September_2023)_-_5.jpg",
-     "selite": "Aukion kivi- ja metallipinnat muistuttavat ruukkiajasta, jolloin padon vieressä toimi tehdas.",
-     "leveys": 6000,
-     "korkeus": 3376,
+     "tiedosto": "Dam in Yekaterinburg.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dam_in_Yekaterinburg.jpg?width=1280",
+     "tekija": "Denis Denisov",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dam_in_Yekaterinburg.jpg",
+     "selite": "Plotinka eli Iset-joen pato Jekaterinburgin keskustassa: padon yläpuolella on kaupunkilampi ja suihkulähde, rannalla kivetty aukio.",
+     "leveys": 3264,
+     "korkeus": 2448,
      "tarkistettu": true
     }
    ]

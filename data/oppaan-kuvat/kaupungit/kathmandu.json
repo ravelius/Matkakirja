@@ -231,51 +231,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "DHARAHARA TOWER.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/DHARAHARA_TOWER.jpg?width=1280",
-     "tekija": "SUMIR SHRESTHA",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:DHARAHARA_TOWER.jpg",
-     "selite": "Dharahara on korkea torni Kathmandun keskustassa, joka rakennettiin uudelleen maanjäristyksen jälkeen.",
-     "leveys": 8108,
-     "korkeus": 10135,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
-   "q": "Q1050042",
-   "nimi": "Narayanhitin palatsi",
-   "peruste": "sitelinks",
-   "koko_m": 300,
-   "lat": 27.71556,
-   "lon": 85.32,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Narayanhiti Palace Museum.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Narayanhiti_Palace_Museum.jpg?width=1280",
-     "tekija": "Suraj Belbase",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Narayanhiti_Palace_Museum.jpg",
-     "selite": "Narayanhitin palatsi oli Nepalin kuninkaiden asuinpalatsi, ja nykyään se on museona.",
-     "leveys": 5896,
-     "korkeus": 3817,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Narayanhiti Palace-070A1259.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Narayanhiti_Palace-070A1259.jpg?width=1280",
-     "tekija": "Bijay Chaurasia",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Narayanhiti_Palace-070A1259.jpg",
-     "selite": "Palatsi kohoaa vihreiden puiden keskellä Kathmandun laakson keskustassa.",
-     "leveys": 6720,
-     "korkeus": 2411,
+     "tiedosto": "Dharahara 2011.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dharahara_2011.jpg?width=1280",
+     "tekija": "Swagat Raj Pyakurel",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dharahara_2011.jpg",
+     "selite": "Dharahara eli Bhimsenin torni Kathmandun keskustassa ennen vuoden 2015 maanjäristystä; maanjäristys kaatoi tornin, ja uusi rakennettiin sen paikalle.",
+     "leveys": 2736,
+     "korkeus": 3648,
      "tarkistettu": true
     }
    ]

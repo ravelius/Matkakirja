@@ -20501,26 +20501,6 @@ export const NAHTAVYYSJUTUT = {
             + 'Kasran mukaan, ja tiili oli kotimaista.',
           lahde: 'Parsa 2au, Wikimedia Commons (CC BY-SA 4.0)',
         },
-        {
-          tiedosto: 'The Islamic Museum Of National Museum of Iran Darafsh (05).jpg',
-          lyhyt: 'Islamilaisen ajan museo on valkoista travertiinia, pohjakaavaltaan kahdeksankulmainen risti.',
-          selite: 'Islamilaisen ajan museo on valkoista travertiinia ja '
-            + 'pohjakaavaltaan Bishapurin mukainen kahdeksankulmainen risti. '
-            + 'Vuosiluvut hajoavat: rakennus ajoitetaan vuosiin 1944–1950 '
-            + 'tai 1958, perustamisvuodeksi merkitään 1972, ja museona se '
-            + 'avattiin 1996.',
-          lahde: 'Darafsh, Wikimedia Commons (CC BY-SA 3.0)',
-        },
-        {
-          tiedosto: 'Musée de l\'Ère Islamique, Téhéran (2).jpg',
-          lyhyt: 'Islamilaisen ajan museon seitsemässä salissa on 170 vitriiniä ja noin 1 500 esinettä.',
-          selite: 'Islamilaisen ajan museon seitsemässä salissa on 170 '
-            + 'vitriiniä ja noin 1 500 esinettä: ylimpänä '
-            + 'varhaisislamilainen aika, seldžukit ja ilkhanidit, alempana '
-            + 'koraanisali kullattuine kufi-käsikirjoituksineen sekä '
-            + 'timuridien, safavidien ja qajarien salit.',
-          lahde: 'ZarlokX, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -27623,17 +27603,6 @@ export const NAHTAVYYSJUTUT = {
           + 'edustalla seisoo arkkitehdin oma patsas — harvinainen '
           + 'kunnia rakennukselle ja sen tekijälle samassa kuvassa.',
       kuvat: [
-        {
-          tiedosto: 'Стоквартирный дом и памятник его автору - архитектору Крячкову.jpg',
-          lyhyt: 'Sata asuntoa käsittävä talo sai Pariisin maailmannäyttelyssä 1937 kultamitalin.',
-          selite: 'Taloon suunniteltiin sata asuntoa, ja siitä se tunnetaan; '
-            + 'sen piirsivät Andrei Krjatškov ja Vitali Maslennikov, ja '
-            + 'kahdeksankerroksinen rakennus valmistui vuonna 1937. Pariisin '
-            + 'maailmannäyttelyssä 11. joulukuuta 1937 hanke sai '
-            + 'kultamitalin ja Grand Prix -palkinnon, ja talo on yhä '
-            + 'asuinkäytössä.',
-          lahde: 'Елена Горланова, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -28433,7 +28402,7 @@ export const NAHTAVYYSJUTUT = {
           + 'kaupunkilaiset ovat pystyttäneet itse.',
       kuvat: [
         {
-          tiedosto: 'Inari fox statue, Fushimi-Inari Shrine (46473407471).jpg',
+          tiedosto: "2026-06-29 kyoto-fushimi-inari torii-romon night.jpg",
           lyhyt: 'Fushimi Inari perustettiin 711, ja vuorenrinteen polulle on lahjoitettu tuhansia torii-portteja.',
           selite: 'Pyhäkön perusti vuonna 711 Hata-suku, ja se on omistettu '
             + 'Inarille, riisin ja maanviljelyn kamille — ja koska riisi oli '
@@ -28442,7 +28411,7 @@ export const NAHTAVYYSJUTUT = {
             + 'lahjoitettu noin kymmenentuhatta torii-porttia ja '
             + 'kymmeniätuhansia pieniä kivialttareita, jotka kaupunkilaiset '
             + 'ovat pystyttäneet itse.',
-          lahde: 'Dumphasizer, Wikimedia Commons (CC BY-SA 2.0)',
+          lahde: "DuckMaestro, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -30916,7 +30885,7 @@ export const NAHTAVYYSJUTUT = {
           + 'joka valmistui tammikuussa 2025.',
       kuvat: [
         {
-          tiedosto: 'Zaisan Memorial in Ulaanbaatar, Mongolia.jpg',
+          tiedosto: "Zaisan Memorial from the North.jpg",
           lyhyt: 'Muistomerkki paljastettiin 1971 toisessa maailmansodassa kaatuneiden muistoksi.',
           selite: 'Muistomerkki paljastettiin vuonna 1971, ja se on '
             + 'omistettu toisessa maailmansodassa kaatuneille '
@@ -30924,7 +30893,7 @@ export const NAHTAVYYSJUTUT = {
             + 'Renkaan muoto on otettu mongolialaisesta tulgasta eli '
             + 'liesijalustasta, ja sen sisäpintaa kiertää maalaus '
             + 'neuvostoliittolais-mongolialaisen yhteistyön vaiheista.',
-          lahde: 'Quintin Soloviev, Wikimedia Commons (CC0)',
+          lahde: "Chinneeb, Wikimedia Commons (CC BY 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -31376,16 +31345,6 @@ export const NAHTAVYYSJUTUT = {
           + 'Pähkinänsärkijä että kotimaiset oopperat Abai ja Birzhan '
           + 'ja Sara.',
       kuvat: [
-        {
-          tiedosto: 'The State Opera and Ballet Theatre “Astana Opera”.jpg',
-          lyhyt: 'Oopperatalo avattiin 2013 italialaisin piirustuksin, pääsalissa 1 250 paikkaa.',
-          selite: 'Oopperatalo avattiin vuonna 2013 italialaisen '
-            + 'ABDR-toimiston piirustusten mukaan, ja sen antiikin '
-            + 'temppeliä muistuttavan julkisivun päätykolmion harjalla ajaa '
-            + 'nelivaljakko. Pääsalissa on 1 250 paikkaa ja '
-            + 'orkesterisyvennyksessä tilaa 120 soittajalle.',
-          lahde: 'Nikolamikovic82, Wikimedia Commons (CC0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -31451,16 +31410,6 @@ export const NAHTAVYYSJUTUT = {
           + 'sen kuva on ollut myös 10 000 tengen setelissä. Tarun, '
           + 'jonka mukaan se on muotoiltu, kertoo lehden kansisivu.',
       kuvat: [
-        {
-          tiedosto: 'Kazakhstan P9130290 (39375228604).jpg',
-          lyhyt: 'Näköalatorni Bajterek valmistui 2002, näköalatasanne 97 metrin korkeudessa.',
-          selite: 'Näköalatasanne on 97 metrin korkeudessa 105-metrisessä '
-            + 'tornissa, ja sinne noustaan kahdella hissillä kuilussa, jota '
-            + 'kiertävät valkoiset oksamaiset ristikkopalkit. Nimi '
-            + 'tarkoittaa kazakiksi korkeaa poppelia, ja torni valmistui '
-            + '30. elokuuta 2002.',
-          lahde: 't_y_l, Wikimedia Commons (CC BY-SA 2.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -31557,17 +31506,6 @@ export const NAHTAVYYSJUTUT = {
           + 'jonka huipulla on tarun Samruk-lintu — sama lintu, joka '
           + 'munii Bajterekin kultaisen pallon.',
       kuvat: [
-        {
-          tiedosto: 'National Museum of Kazakhstan 03.jpg',
-          lyhyt: 'Vuonna 2012 avatun moskeijan kupoli on maan suurin, 51 metriä korkea.',
-          selite: 'Vuonna 2012 avatun moskeijan päälaen kupoli on maan '
-            + 'suurin, 51 metriä korkea, ja nurkissa nousee neljä 77 metrin '
-            + 'minareettia. Naapureina samalla aukiolla Esilin '
-            + 'koillisrannalla ovat kansallismuseo ja Kazak Elin '
-            + 'muistomerkki, 91 metrin pylväs, jonka huipulla on tarun '
-            + 'Samruk-lintu.',
-          lahde: 'Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -31641,16 +31579,6 @@ export const NAHTAVYYSJUTUT = {
           + 'tai -ruhtinattarelle 300-luvulla eaa. Kokoelmien perusta '
           + 'koottiin valtion Kulttuuriperintö-ohjelmassa.',
       kuvat: [
-        {
-          tiedosto: 'National Museum of the Republic of Kazakhstan 01.jpg',
-          lyhyt: 'Vuonna 2014 avattu museo oli Keski-Aasian suurin, tunnetuin esine Issykin kultainen soturi.',
-          selite: 'Vuonna 2014 avattu museo oli silloin Keski-Aasian '
-            + 'suurin, ja sen yhdessätoista salissa on näyttelytilaa noin '
-            + '14 000 neliömetriä. Kokoelmien tunnetuin esine on Issykin '
-            + 'kultainen soturi, tuhansista kultalevyistä koottu asu '
-            + '300-luvulta eaa.',
-          lahde: 'Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -34169,17 +34097,6 @@ export const NAHTAVYYSJUTUT = {
           + 'ruostumatonta terästä. Marmori tuotiin Itä-Jaavan '
           + 'Tulungagungista italialaisen sijaan.',
       kuvat: [
-        {
-          tiedosto: 'Masjid Istiqlal.jpg',
-          lyhyt: 'Kaakkois-Aasian suurin moskeija vihittiin 1978, mitat sidottu itsenäisyyden vuosilukuun.',
-          selite: 'Kaakkois-Aasian suurin moskeija vihittiin 22. helmikuuta '
-            + '1978, ja sen mitat on sidottu itsenäisyyteen: päärukoussalin '
-            + 'kupolin halkaisija on 45 metriä vuoden 1945 mukaan ja '
-            + 'kerroksia on viisi islamin viiden pilarin mukaan. '
-            + 'Presidentti Sukarno halusi sen nimenomaan katedraalin '
-            + 'viereen merkiksi uskontojen rinnakkaiselosta.',
-          lahde: 'Michael Coghlan, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -34214,18 +34131,6 @@ export const NAHTAVYYSJUTUT = {
           + 'marmorihalli, jonka seinillä on 51 dioraamaa Indonesian '
           + 'historiasta.',
       kuvat: [
-        {
-          tiedosto: 'Monas (monumen nasional) di Jakarta.jpg',
-          lyhyt: 'Monas-monumentti rakennettiin 1961–1975, mitat itsenäisyysjulistuksen päivämäärän mukaan.',
-          selite: 'Monumentti rakennettiin vuosina 1961–1975, ja arkkitehti '
-            + 'R. M. Soedarsono kirjoitti sen mittoihin '
-            + 'itsenäisyysjulistuksen päivämäärän: jalustan korkeus on 17 '
-            + 'metriä, leveys pohjalta 8 metriä ja kupin leveys 45 metriä. '
-            + 'Huipun pronssinen liekki päällystettiin alun perin 35 '
-            + 'kilolla kultalehteä, ja vuoden 1995 juhlaan määrä nostettiin '
-            + 'viiteenkymmeneen kiloon.',
-          lahde: 'Ayu Saraswati31, Wikimedia Commons (CC0)',
-        },
       ],
       lahde: 'Wikipedia',
     },

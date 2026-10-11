@@ -75,55 +75,6 @@
    ]
   },
   {
-   "q": "Q3449463",
-   "nimi": "Lotus Tower",
-   "peruste": "sitelinks",
-   "koko_m": 150,
-   "lat": 6.92694,
-   "lon": 79.85833,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Blue lotus tower.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_lotus_tower.jpg?width=1280",
-     "tekija": "Mohamed Rilwan1210",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blue_lotus_tower.jpg",
-     "selite": "Lotus Tower on Colombon lootuksenkukkaa muistuttava tv- ja näkötorni.",
-     "leveys": 2369,
-     "korkeus": 2064,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "ColomboSkyline - November 2017 (1).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ColomboSkyline_-_November_2017_(1).jpg?width=1280",
-     "tekija": "Rehman Abubakr",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ColomboSkyline_-_November_2017_(1).jpg",
-     "selite": "Torni kohoaa Colombon keskustan pilvenpiirtäjien rinnalla.",
-     "leveys": 2966,
-     "korkeus": 1669,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "ColomboSkyline - November 2017 (2).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ColomboSkyline_-_November_2017_(2).jpg?width=1280",
-     "tekija": "Rehman Abubakr",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ColomboSkyline_-_November_2017_(2).jpg",
-     "selite": "Torni on kaupungin korkein rakennelma ja erottuu kauas horisontissa.",
-     "leveys": 3138,
-     "korkeus": 1765,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
    "q": "Q2033487",
    "nimi": "Colombon kansallismuseo",
    "peruste": "sitelinks",
