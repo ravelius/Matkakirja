@@ -264,6 +264,18 @@ namespace Matkakirja.Peli
             return n;
         }
 
+        /// <summary>
+        /// Mantereen aarrekaupungit (laskurin nimittäjä, PT 11.10.2026): kaupungit, joiden laatta on aarre, kääntämättömänä tai
+        /// käännettynä. Pöllön korvaama ("empty") ei kuulu, joten AvatutAarteet ≤ AarrekaupungitYhteensa ja N/N on saavutettavissa.
+        /// </summary>
+        public int AarrekaupungitYhteensa(string manner)
+        {
+            int n = AvatutAarteet(manner);
+            foreach (var k in Laatat.Keys)
+                if (Laattatyypit.OnAarre(Laatat[k]) && MannerOf(k) == manner) n++;
+            return n;
+        }
+
         /// <summary>Laudan muut mantereet kaupunkijärjestyksessä (web muutMantereet).</summary>
         public List<string> MuutMantereet(string manner)
         {

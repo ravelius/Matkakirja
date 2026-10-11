@@ -1,6 +1,6 @@
 // AARRELASKURI (Natiivi-UI; omistaja 11.10.2026 klo 13.4x–13.5x Päätoimittajan kautta, juna 182): kartan yläreunan keskelle
-// "Etsityt kaupungit X/50", X = pelaajan avaamat aarteet Euroopassa (Laattamaailma.AvatutAarteet("europe")), 50 = Euroopan
-// aarrekaupungit. Tyyli: olemassa oleva päivälaskuri (Pelikellonaytto: mk-pelikello -lasipilleri ja mk-pelikello__paiva
+// "Etsityt kaupungit X/N", X = pelaajan avaamat aarteet Euroopassa (Laattamaailma.AvatutAarteet("europe")), N = tämän pelin
+// Euroopan kaupungit, joissa on aarrelaatta (AarrekaupungitYhteensa, yleensä 50; PT 11.10.: X ≤ N, jotta N/N on saavutettavissa). Tyyli: olemassa oleva päivälaskuri (Pelikellonaytto: mk-pelikello -lasipilleri ja mk-pelikello__paiva
 // -kapiteeli, isoin kirjaimin kuten "PÄIVÄ 1/80"); ei uusia tyylejä.
 //
 // Paikka: yläpalkin alle 8 pt (kuten karttaselite), vaakasuunnassa keskelle; palkin ollessa piilossa (vaaka, iPhonen veto)
@@ -13,14 +13,12 @@ namespace Matkakirja.Natiivi
 {
     public sealed class Aarrelaskuri
     {
-        /// <summary>Euroopan aarrekaupungit (omistaja 11.10.2026).</summary>
-        public const int EuroopanAarrekaupungit = 50;
         const string Manner = "europe";
         const float Ylavara = 8f;
 
         readonly VisualElement juuri;
         readonly Label rivi;
-        int naytetty = -1;
+        int naytetty = -1, naytettyN = -1;
 
         public Aarrelaskuri(UiKerros kerros)
         {
@@ -54,10 +52,11 @@ namespace Matkakirja.Natiivi
             if (!nayta) return;
             float yla = (Ylapalkki.PalkkiPiilossa ? 0f : Ylapalkki.Varaus) + Ylavara;
             if (juuri.resolvedStyle.top != yla) juuri.style.top = yla;
-            int x = PeliOhjain.Instanssi.Matka.Laatat?.AvatutAarteet(Manner) ?? 0;
-            if (x == naytetty) return;
-            naytetty = x;
-            rivi.text = Kieli.T("ui.aarrelaskuri", x, EuroopanAarrekaupungit).ToUpperInvariant();
+            var laatat = PeliOhjain.Instanssi.Matka.Laatat;
+            int x = laatat?.AvatutAarteet(Manner) ?? 0, n = laatat?.AarrekaupungitYhteensa(Manner) ?? 0;
+            if (x == naytetty && n == naytettyN) return;
+            naytetty = x; naytettyN = n;
+            rivi.text = Kieli.T("ui.aarrelaskuri", x, n).ToUpperInvariant();
             Ruudunpaivitys.Herata(0.1f);
         }
     }

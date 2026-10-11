@@ -244,6 +244,14 @@ namespace Matkakirja.Peli.Testit
             m.Kaannetyt.Aseta("d", Laattatyypit.IsoAarre);    // eri manner
             Oleta.Sama(2, m.AvatutAarteet("europe"));
             Oleta.Sama(1, m.AvatutAarteet("asia"));
+            m.Laatat.Aseta("e", Laattatyypit.IsoAarre);       // kääntämätön, tuntematon kaupunki → laudan manner (ei europe)
+            Oleta.Sama(2, m.AarrekaupungitYhteensa("europe"));
+            var m2 = Laattamaailma.Tyhja(kaupungit);
+            m2.Laatat.Aseta("a", Laattatyypit.PieniAarre); m2.Laatat.Aseta("b", Laattatyypit.Paaaarre); m2.Kaannetyt.Aseta("c", Laattatyypit.Tyhja);
+            Oleta.Sama(2, m2.AarrekaupungitYhteensa("europe"));
+            m2.Kaannetyt.Aseta("a", m2.Laatat.Hae("a")); m2.Laatat.Poista("a");
+            Oleta.Sama(1, m2.AvatutAarteet("europe"));
+            Oleta.Sama(2, m2.AarrekaupungitYhteensa("europe"));
         }
     }
 }
