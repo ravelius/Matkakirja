@@ -58,12 +58,15 @@ pidempi kuin haun sarake, joten sen lähderivi pitää varmistaa `tarkista --ver
 
 | kohta | tiedosto | koko | lisenssi | lähderivi | mitä kuvassa | vuosi |
 |---|---|---|---|---|---|---|
-| valokuva | Ararat. 7, Mosquée d'Erivan - (mission) G. Bapst ; (photogr.) Bapst ; (photogr. reprod. par) Molteni (pour la conférence donnée par) Bapst - btv1b531014279.jpg | 6826×6175 | PD | Bapst, Germain (1853-1921), Commons (PD) [täydennä Artist-kenttä tarkistimella] | mustavalkoinen lasivedos Erivanin moskeijasta (Sininen moskeija), kupoli ja laatoitettu julkisivu autiolla pihalla; ei ihmisiä | 1890-luku (Commonsin päiväys "between 18..", tarkista) |
+| valokuva | Caucase. Mosquée Géhu. Erivan - (mission) de Baye ; (photogr.) de Baye ; (photogr. reprod. par) Molteni (pour la conférence donnée par) de Baye - btv1b53251410k.jpg | 6869×6876 | PD | Baye, Joseph de (1853-1931), Commons (PD) | mustavalkoinen lasivedos Sinisen moskeijan (BnF-nimi Mosquée Géhu = Gök Jami) laatoitetusta kupolista puiden takaa, pihalla pieniä hahmoja (ei lähikuvaa) | 1898 (Commonsin päiväys; Baye kuollut 1931) |
 
 ## HYLÄTYT
 
 | tiedosto | syy |
 |---|---|
+| Ararat. 7, Mosquée d'Erivan (Bapst, btv1b531014279) | tunnistus epävarma: Commons-kuvaus sanoo Blue Mosque mutta kategoria on Abbas Mirza Mosque, eikä toista itsenäistä lähdettä löytynyt; PT:n päätös 11.10.: vaihdetaan varmaksi tunnistettuun Sinisen moskeijan kuvaan |
+| Mosque of Hussein Ali Khan in Erivan.png, Голубая мечеть в 1917-18 gg.png | ei valittu (Bayen 1898 vedos on BnF:n nimellä Mosquée Géhu ja Commonsin kategoriassa Blue Mosque, parempi lähde) |
+| THE GEOGE MACHID, BLUE PERSIAN Mosque at Erivan, Armenia.jpg | kuvan päällä käsin kirjoitettu arkistonumero (67362), ja kuva 1919 |
 | Mount Ararat and the Yerevan skyline.jpg | jo pelissä (js/packs/fokuskohteet-tur.js) |
 | Blue Mosque Courtyard Dusk Wikimedia Commons.jpg | kuvassa Istanbulin Sulttaani Ahmedin moskeija, ei Jerevania |
 | Blue Mosque, Yerevan in 2019 06.jpg | vain tiilimuuri, aihe ei tunnistettavissa |

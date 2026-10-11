@@ -1,0 +1,10 @@
+{
+ "lat": 26.22,
+ "lon": 50.58,
+ "keskilampo": [17.5,18.4,21.3,26,31.1,34,35.1,35.1,33.2,29.9,24.6,19.7],
+ "ylin": [21,22,26,31,36,39,40,40,38,34,28,23],
+ "alin": [15,15,18,22,27,30,31,32,30,26,22,17],
+ "sade": [18,13,15,8,8,0,0,0,0,1,17,15],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Manama","revisio":1376405041,"taulukko":"Climate data for Manama (Bahrain International Airport) 1991–2020 normals, extremes 1902–present","lahteet":"Source: NOAA, Meteo Climat (record highs and lows)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":95,"luettu":"2026-10-11","huomiot":[]}
+}

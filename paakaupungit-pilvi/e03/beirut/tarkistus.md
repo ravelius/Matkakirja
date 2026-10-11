@@ -91,7 +91,7 @@ Polkulyhenne: kl = kaupunkilehti[0], mj = kl.matkailijalle.artikkeli, nv = nahta
 | kuvat: kl.kansikuvat[2], mj.jaksot[1].kuva | Corniche, kävelijät, juoksijat, pyöräilijät | en Corniche Beirut, Usage; kuvat.md | OK | |
 | kuvat: kl.nostot[0] | Berytuksen pronssikolikko, roomalainen siirtokunta | kuvat.md (117–138 jaa.); en Beirut | OK | |
 | kuvat: kl.nostot[1] | Kylpylöiden rauniot Serail-kukkulan itärinteellä, puisto | en Beirut Central District, Roman Baths Garden; kuvat.md | OK | |
-| kuvat: kl.nostot[2] | College Hall, AUB; ei väitä 1873-kuvaksi (kuva noin 1920) | kuvat.md; en AUB (College Hall purettu 1991, rakennettu uudelleen 1999, joten "kuuluu kampukseen" on OK) | OK | |
+| kuvat: kl.nostot[2] | College Hall, AUB; nykykuva (2014, marviikad, CC BY-SA 2.0), ei väitä 1873-kuvaksi; Matson-kuva vaihdettu pois (tekijä k. 1977) | kuvat.md; en AUB (College Hall purettu 1991, rakennettu uudelleen 1999, joten "kuuluu kampukseen" on OK); Commons API: CC BY-SA 2.0 | OK | |
 | kuvat: kl.nostot[3] | Berytuksen rauniot katedraalin vieressä | kuvat.md; en Maronite Cathedral | OK | |
 | kuvat: kl[1].nostot[0] (mezze) | Selite sanoo kuvan otetun libanonilaisessa ravintolassa Genevessä, ei väitä Beirutiksi | kuvat.md (Genève, Tatakdh) | OK | |
 | kuvat: kl[1].nostot[1] | Manakish, leipomo | kuvat.md; en Lebanese cuisine | OK | |

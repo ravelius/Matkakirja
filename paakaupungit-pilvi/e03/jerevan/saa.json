@@ -1,0 +1,10 @@
+{
+ "lat": 40.18,
+ "lon": 44.51,
+ "keskilampo": [-3.5,0,7,12.9,17.7,23.1,26.8,26.7,21.4,14,5.8,-0.8],
+ "ylin": [2,6,14,20,25,31,35,34,29,22,13,4],
+ "alin": [-8,-5,1,6,11,15,19,19,13,7,0,-5],
+ "sade": [21,21,60,56,47,24,17,10,10,51,25,21],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Yerevan","revisio":1378943684,"taulukko":"Climate data for Yerevan (1991–2020, extremes 1885–present)","lahteet":"Source 1: Pogoda.ru.net | Source 2: NOAA (sun, humidity and precipitation days)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":363,"luettu":"2026-10-11","huomiot":[]}
+}

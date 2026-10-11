@@ -70,8 +70,8 @@
    ],
    "correct": 0,
    "level": 3,
-   "hint": "Teatterin pilarissa on kreikankielinen kirjoitus.",
-   "fact": "Pilarin kreikankielinen kirjoitus viittaa keisari Antoninus Piukseen, ja teatterissa oli useita tuhansia paikkoja.",
+   "hint": "Teatterin kirjoitus on kreikankielinen.",
+   "fact": "Kreikankielinen kirjoitus yhdistää teatterin keisari Antoninus Piuksen aikaan, ja teatterissa oli useita tuhansia paikkoja.",
    "source": "https://en.wikipedia.org/wiki/Roman_Theatre_(Amman)"
   },
   {
@@ -109,8 +109,8 @@
    "kansikuvat": [
     {
      "tiedosto": "Amman citadel 4.jpg",
-     "lyhyt": "Ammanin linnavuori, jolla on rakennuksia usealta eri aikakaudelta.",
-     "selite": "Ammanin linnavuori Jabal al-Qalʿa kohoaa alakaupungin yläpuolelle, ja sen kukkulalla on roomalaisaikaisia, bysanttilaisia ja umaijadiaikaisia rakennuksia.",
+     "lyhyt": "Suuren temppelin pylväitä Ammanin linnavuorella, taustalla rinteille levittäytyvä kaupunki.",
+     "selite": "Linnavuoren Suuren temppelin pylväät ja niiden päällä lepäävä palkki ovat roomalaisajan jäänteitä, ja taustalla kaupunki levittäytyy rinteille.",
      "lahde": "Davric, Wikimedia Commons (CC BY-SA 4.0)"
     },
     {
@@ -129,7 +129,7 @@
    "nostot": [
     {
      "otsikko": "Patsaat, joiden sisus on risua",
-     "teksti": "Ayn Ghazal on neoliittinen asuinpaikka Ammanin alueella, Seil-puron rannalla siinä, missä puro laskee Zarqa-jokeen. Nimi tarkoittaa gasellin lähdettä. Asutus kukoisti noin 9 000 vuotta sitten, ja arvioiden mukaan kylässä asui parhaimmillaan jopa noin 3 000 ihmistä. Talot olivat suorakaiteen muotoisia mutatiilirakennuksia, joiden seinät kipsattiin sisäpuolelta ja kipsi uusittiin muutaman vuoden välein. Tunnetuimmat löydöt ovat kipsipatsaat: puolikokoisten ihmishahmojen ydin on risukimppu, pinta on valkoista kipsiä ja silmät on korostettu bitumilla. Patsaita on löytynyt useita, ja ne ovat esillä Jordan Museumissa.",
+     "teksti": "Ayn Ghazal on neoliittinen asuinpaikka Ammanin alueella, Seil-puron rannalla siinä, missä puro laskee Zarqa-jokeen. Nimi tarkoittaa gasellin lähdettä. Asutus kukoisti noin 9 000 vuotta sitten, ja arvioiden mukaan kylässä asui parhaimmillaan jopa noin 3 000 ihmistä. Talot olivat suorakaiteen muotoisia, ja niiden seinät päällystettiin mudalla ja kalkkikipsillä, joka uusittiin muutaman vuoden välein. Tunnetuimmat löydöt ovat kipsipatsaat: puolikokoisten ihmishahmojen ydin on risukimppu, pinta on valkoista kipsiä ja silmät on korostettu bitumilla. Patsaita on löytynyt useita, ja ne ovat esillä Jordan Museumissa.",
      "tiedosto": "Ain Ghazal statue frontal.jpg",
      "lyhyt": "Ayn Ghazalin kipsipatsas, noin 9 000 vuotta vanha neoliittinen löytö.",
      "selite": "Ayn Ghazalin patsaiden ydin on risukimppu ja pinta kipsiä, ja niiden silmät on korostettu bitumilla.",
@@ -171,7 +171,7 @@
      "selite": "Linnavuoren pohjoisosassa on Umaijadien palatsi, ja kukkulalla on myös roomalaisajan pylväiden jäänteitä.",
      "lahde": "Lama Sakhnini, Wikimedia Commons (CC BY-SA 4.0)"
     },
-    "kappale": "Amman on Jordanian pääkaupunki, ja sen vanha ydin on alakaupungissa linnavuoren ja roomalaisen teatterin ympärillä. Kaupunki on rakennettu kukkuloille, joten matkat voivat kestää odotettua pidempään ja rinteet ovat jyrkkiä. Pääkenttä Queen Alia International Airport on lähteiden mukaan noin 30–40 kilometrin päässä kaupungista etelään. Kyltit ovat arabiaksi ja englanniksi, ja taksia varten osoite kannattaa pitää arabiaksi kirjoitettuna. Kevät ja syksy ovat lämpimiä ja kuivia, ja talvi on viileä ja sateinen. Ajantasaiset matkustustiedot kannattaa tarkistaa ennen lähtöä.",
+    "kappale": "Kesä on kuuma ja kuiva, ja talvi on viileä ja sateinen.",
     "artikkeli": {
      "nimi": "Matkailijan Amman",
      "taitto": "opas",
@@ -214,11 +214,11 @@
       },
       {
        "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Ammanin lentokentän mittausten mukaan vuosilta 1989–2018 heinä- ja elokuun päivälämpötila on keskimäärin noin 33 astetta, eikä sadetta juuri tule. Tammikuussa ylin lämpötila on noin 13 ja alin noin 4 astetta, ja sadetta tulee enimmillään noin 60 millimetriä kuussa. Sade painottuu marraskuusta huhtikuuhun, ja lunta voi tulla kerran tai kaksi vuodessa. Kevät on lyhyt, ja huhti–toukokuu sekä lokakuu ovat lämpimiä ja kuivia.",
+       "teksti": "Ammanin kesät ovat kuumia ja kuivia: heinä- ja elokuussa päivän ylin lämpötila on keskimäärin noin 33 °C, eikä sadetta tule käytännössä lainkaan kesäkuusta syyskuuhun. Talvi on viileä ja sateinen: tammikuussa päivän ylin lämpötila on noin 13 °C ja alin noin 4 °C, ja sadetta tulee noin 60 millimetriä. Vuodessa sataa yhteensä noin 230 millimetriä, ja sade painottuu marraskuusta maaliskuuhun. Huhtikuun keskilämpötila on noin 17 °C ja lokakuun noin 21 °C, ja silloin sataa jo vain vähän.",
        "kuva": {
         "tiedosto": "Amman in Snow.JPG",
-        "lyhyt": "Lunta voi sataa Ammanissa talvella kerran tai kaksi vuodessa.",
-        "selite": "Ammanissa talvi on viileä, ja lunta voi tulla lähteen mukaan kerran tai kaksi vuodessa.",
+        "lyhyt": "Lumi peittää Ammanin talot ja kadut talvella.",
+        "selite": "Lumen peittämiä taloja ja katu Ammanissa talvella.",
         "lahde": "The original uploader was Freedom's Falcon at Arabic Wikipedia ., Wikimedia Commons (CC BY 2.5)"
        }
       }
@@ -319,7 +319,7 @@
     },
     {
      "otsikko": "Pääkaupunki ja kukkulat",
-     "teksti": "Emiiri Abdullah I nimesi 1920-luvulla Ammanin vastaperustetun Transjordanian emiirikunnan pääkaupungiksi, ja väestö kasvoi muuttajista Levantin kaupungeista. Uusia rakennuksia valmistui 1920-luvulla, muun muassa Suuri Husseinin moskeija sekä Duke's Diwan, jonka Transjordanian hallitus vuokrasi lähteen mukaan Ammanin ensimmäiseksi postitoimistoksi. Maanjäristys 1920-luvun lopulla vauhditti kaupungin leviämistä rinteille, ja kivestä tuli yleisempi rakennusaine. Jabal Ammanin kukkulalle muuttivat varakkaita perheitä, liikemiehiä ja upseereita. Asukasluku on kasvanut noin tuhannen asukkaan kylästä 1800-luvun lopulla nykyään yli neljään miljoonaan.",
+     "teksti": "Emiiri Abdullah I nimesi 1920-luvulla Ammanin vastaperustetun Transjordanian emiirikunnan pääkaupungiksi, ja väestö kasvoi muuttajista Levantin kaupungeista. Uusia rakennuksia valmistui 1920-luvulla, esimerkiksi Suuri Husseinin moskeija sekä Duke's Diwan, jonka Transjordanian hallitus vuokrasi lähteen mukaan Ammanin ensimmäiseksi postitoimistoksi. Maanjäristys 1920-luvun lopulla vauhditti kaupungin leviämistä rinteille, ja kivestä tuli yleisempi rakennusaine. Jabal Ammanin kukkulalle muuttivat varakkaita perheitä, liikemiehiä ja upseereita. Asukasluku on kasvanut 1800-luvun pienestä kylästä Greater Amman Municipalityn alueen yli neljään miljoonaan.",
      "tiedosto": "Husseini Mosque Down Town Amman.jpg",
      "lyhyt": "Suuri Husseinin moskeija rakennettiin 1920-luvulla vanhemman moskeijan paikalle.",
      "selite": "Suuri Husseinin moskeija rakennettiin alakaupunkiin 1920-luvulla vanhemman moskeijan paikalle.",
@@ -405,7 +405,7 @@
   },
   "Rooman teatteri": {
    "aika": "100-luku",
-   "teksti": "Rooman teatteri on rakennettu rinteeseen Jabal al-Joufahin juurelle linnavuorta vastapäätä. Siinä oli useita tuhansia paikkoja, ja jyrkkä katsomo on jaettu vaakasuoriin osiin. Pilarissa oleva kreikankielinen kirjoitus viittaa keisari Antoninus Piukseen, joka hallitsi 100-luvun puolivälissä.\n\nTeatteri on suunnattu pohjoiseen, jotta aurinko ei lähteen mukaan häikäisisi katsojia. Lähteen mukaan ylimmille riveille kuuluu ja näkyy erinomaisesti jyrkän rakenteen ansiosta. Sivuovien takana ovat Jordan Folklore Museum ja Museum of Popular Tradition. Nykyään teatteri on kulttuuritapahtumien käytössä, ja esimerkiksi Al-Balad Music Festival järjestetään siellä ja viereisessä odeonissa.\n\nIsoisän matkavuonna 1873 teatteri oli rauniona. Kun tšerkessit asettuivat sen viereen 1870-luvun lopulla, he rakensivat talonsa teatterin kivistä.",
+   "teksti": "Rooman teatteri on rakennettu rinteeseen Jabal al-Joufahin juurelle linnavuorta vastapäätä. Siinä oli useita tuhansia paikkoja, ja jyrkkä katsomo on jaettu vaakasuoriin osiin. Kreikankielinen kirjoitus yhdistää teatterin keisari Antoninus Piuksen aikaan, ja hän hallitsi 100-luvun puolivälissä.\n\nTeatteri on suunnattu pohjoiseen, jotta aurinko ei lähteen mukaan häikäisisi katsojia. Lähteen mukaan ylimmille riveille kuuluu ja näkyy erinomaisesti jyrkän rakenteen ansiosta. Sivuovien takana ovat Jordan Folklore Museum ja Museum of Popular Tradition. Nykyään teatteri on kulttuuritapahtumien käytössä, ja esimerkiksi Al-Balad Music Festival järjestetään siellä ja viereisessä odeonissa.\n\nIsoisän matkavuonna 1873 teatteri oli rauniona. Kun tšerkessit asettuivat sen viereen 1870-luvun lopulla, he rakensivat talonsa teatterin kivistä.",
    "kuvat": [
     {
      "tiedosto": "Roman theater of Amman 01.jpg",
@@ -469,7 +469,71 @@
    "lahde": "Wikipedia"
   }
  },
- "saatiedot": null,
+ "saatiedot": {
+  "lat": 31.95,
+  "lon": 35.93,
+  "keskilampo": [
+   8.5,
+   9.4,
+   12.4,
+   17.1,
+   21.4,
+   24.6,
+   26.5,
+   26.6,
+   24.6,
+   21,
+   15,
+   10.2
+  ],
+  "ylin": [
+   13,
+   14,
+   18,
+   24,
+   28,
+   31,
+   33,
+   33,
+   31,
+   27,
+   20,
+   15
+  ],
+  "alin": [
+   4,
+   5,
+   8,
+   11,
+   15,
+   19,
+   21,
+   21,
+   19,
+   15,
+   10,
+   6
+  ],
+  "sade": [
+   61,
+   58,
+   31,
+   8,
+   3,
+   0,
+   0,
+   0,
+   0,
+   5,
+   21,
+   47
+  ],
+  "lahde": {
+   "nimi": "en-Wikipedia, ilmastotaulukko",
+   "kausi": "1989–2018"
+  },
+  "luonnehdinta": "Ammanissa tammikuun keskilämpötila on noin 8,5 °C ja elokuun noin 27 °C. Vuodessa sataa noin 230 millimetriä, pääosin marraskuusta maaliskuuhun; sateisin on tammikuu noin 60 millimetrillä, ja kesäkuusta syyskuuhun ei sada käytännössä lainkaan."
+ },
  "ehdotukset": {
   "lentoasema": "Queen Alia International Airport (AMM)",
   "huomiot": [
@@ -480,7 +544,7 @@
    "Valokuvan tiedosto \"Amman Odeum c 1900.jpg\": Commonsin nimen \"Odeum\" tunnistus odeoniksi on varmistamatta, joten kuvateksti puhuu vain roomalaisajan raunioista. Nykykuvaa (uusi) ei ole valittu, koska kuvat.md:ssä ei ole varattua lisäkuvaa.",
    "Nosto L2:n kuva on vuodelta 1921 (ei 1870-luvun lopulta); kuvateksti kertoo sen. Seil-purosta (K4) ei löytynyt kelvollista kuvaa, joten nostossa on nymfaionin kuva.",
    "Matkustusturvallisuus: um.fi ei ollut saatavilla (403) eikä Wikivoyage Jordanin alueellista varoituskenttää (2026-02-28) ole kirjoitettu tekstiin; oppaan kappaleessa on vain yleinen kehotus tarkistaa ajantasaiset matkustustiedot. Päätoimittaja päättää tarkemman sanamuodon.",
-   "Säädataa ei ole (saatiedot null); oppaan sääjakso perustuu en-Wikipedian ilmastotaulukkoon (Ammanin lentokenttä, 1989–2018). Vuosisade on ristiriitainen lähteissä (taulukko 238,5 mm, teksti 385 mm, fi 270 mm), joten sitä ei kirjattu.",
+   "Säädata: saatiedot ja ilmastoluvut tekstissä ovat saa.json:sta (en-Wikipedian ilmastotaulukko, korjattu saa-työkalu 11.10.2026).",
    "Rooman teatterin ja odeonin kohteiden välimatka on noin 90 metriä, joten kartan numeroympyrät ovat lähellä toisiaan."
   ]
  }

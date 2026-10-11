@@ -14,8 +14,8 @@
   }
  },
  "artikkeli": {
-  "intro": "Beirut on Libanonin pääkaupunki, maan suurin kaupunki ja tärkein satama. Se sijaitsee Välimeren rannalla niemellä, jonka takana Libanonvuoret nousevat itään. Kaupunki on ollut asuttu yli viisi tuhatta vuotta, ja lähteiden mukaan se on yksi maailman vanhimmista kaupungeista. Nimi tulee foinikian sanasta, joka tarkoittaa **kaivoja**, ja viittaa helposti saatavilla olleeseen pohjaveteen.\n\nRoomalaisena Berytuksena kaupunki tunnettiin **lakikoulustaan**, ja keskustan kaivauksissa on tullut esiin pylväskatuja ja kylpylöiden raunioita. Isoisän matkavuonna 1873 Beirut oli kasvava satama- ja kauppakaupunki, jolla oli tiiviit yhteydet Eurooppaan, erityisesti Ranskaan. Kukkulalla toimi jo koulu, josta tuli myöhemmin **American University of Beirut**.\n\nNykyään Beirut on maan kulttuuri-, kustannus-, pankki- ja yliopistokeskus. Rantabulevardi Corniche kiertää niemeä, ja sen varrella kohoavat Raouchén kalliot. Asukkaita kaupungissa on arvion mukaan 433 249 (vuonna 2017), ja suurkaupunkialueella heitä on yli kaksi miljoonaa.",
-  "teksti": "Berytus liitettiin Roomaan, kun Pompeius valloitti kaupungin vuonna 64 eaa. Myöhemmin siitä tehtiin roomalainen siirtokunta, ja lähteen mukaan se oli idän provinsseissa erityisen roomalainen kaupunki. Lakikoulu oli laajalti tunnettu, ja keisari Justinianus tunnusti sen 500-luvulla yhdeksi valtakunnan kolmesta virallisesta lakikoulusta. Suuri maanjäristys vuonna 551 raunioitti rannikon kaupunkeja, ja Berytuksessa kuoli lähteiden mukaan tuhansia ihmisiä.\n\nEgyptin Ibrahim Pashan vallattua Akkon vuonna 1832 Beirut alkoi elpyä. Vielä 1800-luvun jälkipuoliskolla kaupunki solmi tiiviit kauppayhteydet Euroopan valtoihin, ja eurooppalainen kiinnostus libanonilaiseen silkkiin teki siitä suuren satamakaupungin. Syrian Protestant College avattiin vuonna 1866, ja Université Saint-Joseph perustettiin 1800-luvun jälkipuoliskolla.\n\nNykyään keskusta on rakennettu uudelleen, ja uusien katujen alla näkyvät edelleen eri aikojen kerrokset. Kansallismuseo on Libanonin tärkein arkeologinen museo, ja Sursock-museo esittelee modernia taidetta huvilassa."
+  "intro": "Beirut on Libanonin pääkaupunki, maan suurin kaupunki ja tärkein satama. Se sijaitsee Välimeren rannalla niemellä, jonka takana Libanonvuoret nousevat itään. Kaupunki on ollut asuttu yli viisi tuhatta vuotta, ja lähteiden mukaan se on yksi maailman vanhimmista kaupungeista. Nimi tulee foinikian sanasta, joka tarkoittaa **kaivoja**, ja viittaa helposti saatavilla olleeseen pohjaveteen.\n\nRoomalaisena Berytuksena kaupunki tunnettiin **lakikoulustaan**, ja keskustan kaivauksissa on tullut esiin pylväskatuja ja kylpylöiden raunioita. Isoisän matkavuonna 1873 Beirut oli kasvava satama- ja kauppakaupunki, jolla oli tiiviit yhteydet Eurooppaan. Kukkulalla toimi jo koulu, josta tuli myöhemmin **American University of Beirut**.\n\nNykyään Beirut on maan kulttuuri-, kustannus-, pankki- ja yliopistokeskus. Rantabulevardi Corniche kiertää niemeä, ja sen varrella kohoavat Raouchén kalliot. Asukkaita kaupungissa (Beirutin kuvernementti) on arvion mukaan 433 249 (31.12.2017, luku sisältää rekisteröidyt syyrialaispakolaiset), ja suurkaupunkialueella määritelmästä riippuen noin 1,8–2,4 miljoonaa.",
+  "teksti": "Kaupunki joutui Rooman haltuun vuonna 64 eaa., kun Pompeius järjesteli Syyrian Rooman maakunnaksi, ja se sai nimen Berytus. Myöhemmin siitä tehtiin roomalainen siirtokunta, ja lähteen mukaan se oli idän provinsseissa erityisen roomalainen kaupunki. Lakikoulu oli laajalti tunnettu, ja Justinianus tunnusti sen 500-luvulla yhdeksi valtakunnan kolmesta virallisesta lakikoulusta. Suuri maanjäristys vuonna 551 raunioitti rannikon kaupunkeja, ja Berytuksessa kuoli lähteiden mukaan tuhansia ihmisiä.\n\nEgyptin Ibrahim Pashan vallattua Akkon vuonna 1832 Beirut alkoi elpyä. Kaupunki solmi tiiviit kauppayhteydet Eurooppaan, ja lähteen mukaan eurooppalainen kiinnostus silkkiin ja muihin vientituotteisiin muutti siitä merkittävän sataman ja kauppakeskuksen. Syrian Protestant College avattiin vuonna 1866, ja Université Saint-Joseph perustettiin 1800-luvun jälkipuoliskolla.\n\nNykyään keskusta on rakennettu uudelleen, ja uusien katujen alla näkyvät edelleen eri aikojen kerrokset. Kansallismuseo on Libanonin tärkein arkeologinen museo, ja Sursock-museo esittelee modernia taidetta huvilassa."
  },
  "kysymykset": [
   {
@@ -57,11 +57,11 @@
    "correct": 2,
    "level": 2,
    "hint": "Bulevardi kiertää niemen Saint George -lahdelta Raouchén kautta etelään.",
-   "fact": "Corniche on 4,8 kilometriä pitkä kävelybulevardi, joka kiertää niemen Saint George -lahdelta Raouchén kautta.",
+   "fact": "Corniche on noin viiden kilometrin pituinen kävelybulevardi, joka kiertää niemen Saint George -lahdelta Raouchén kautta.",
    "source": "https://en.wikipedia.org/wiki/Corniche_Beirut"
   },
   {
-   "q": "Minkä Beirutin keskustan aukion laidalla seisoo siirtolaisen lahjoittama kellotorni, jossa on nelisivuinen kello?",
+   "q": "Minkä Beirutin keskustan aukion laidalla seisoo siirtolaisen lahjoittama kellotorni?",
    "options": [
     "Nejmehin aukio",
     "Marttyyrien aukio",
@@ -71,7 +71,7 @@
    "correct": 0,
    "level": 3,
    "hint": "Aukion toinen nimi on ranskaksi Place de l'Étoile.",
-   "fact": "Aukion kellotornin lahjoitti libanonilaissyntyinen siirtolainen Michel Abed.",
+   "fact": "Aukion 1930-luvun kellotornin lahjoitti libanonilaistaustainen siirtolainen Michel Abed.",
    "source": "https://en.wikipedia.org/wiki/Nejmeh_Square"
   },
   {
@@ -116,7 +116,7 @@
     {
      "tiedosto": "Pigeon Rocks of Beirut, Rock of Raouche, Beirut, Lebanon.jpg",
      "lyhyt": "Raouchén Kyyhkyskalliot kohoavat merestä Beirutin rannikolla.",
-     "selite": "Raouchén edustalla oleva luonnonmuodostelma koostuu kahdesta kalliosta, ja kaupunginosan nimi tulee ranskan sanasta rocher, kallio.",
+     "selite": "Raouchén edustalla oleva luonnonmuodostelma koostuu kahdesta kalliosta, joita kutsutaan Kyyhkyskallioiksi.",
      "lahde": "Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)"
     },
     {
@@ -129,7 +129,7 @@
    "nostot": [
     {
      "otsikko": "Kaivojen kaupunki",
-     "teksti": "Beirutin nimi on vanha. Se tulee foinikialaisesta sanasta bīʾrōt, joka tarkoittaa kaivoja ja viittaa kaupungin helposti saavutettavaan pohjaveteen. Nimi esiintyy jo kolmessa akkadinkielisessä Amarna-kirjeessä 1300-luvulta eaa., joissa kuningas Ammunira Birutasta kirjoittaa Egyptin faaraolle. Kreikkalaiset muuttivat nimen muotoon Bērytós ja roomalaiset muotoon Berytus. Varhaisin asutus oli saarella Beirutjoessa, mutta kanava saaren ja rannan välillä liettyi umpeen, ja saari katosi.",
+     "teksti": "Beirutin nimi on vanha. Se tulee foinikialaisesta sanasta bīʾrōt, joka tarkoittaa kaivoja ja viittaa kaupungin helposti saavutettavaan pohjaveteen. Nimi esiintyy jo 1300-luvun eaa. Amarna-kirjeissä, ja kuningas Ammunira Birutasta kirjoitti Egyptin faaraolle kolme akkadinkielistä kirjettä. Kreikkalaiset muuttivat nimen muotoon Bērytós ja roomalaiset muotoon Berytus. Lähteen mukaan varhaisin asutus oli saarella Beirutjoen suistossa, mutta saaren ja rannan välinen kanava liettyi umpeen.",
      "tiedosto": "Phoenicia, Berytus. Mint AD 117-138 (50958306408).jpg",
      "lyhyt": "Roomalaisen Berytuksen lyömä pronssikolikko.",
      "selite": "Antiikin Berytus oli roomalainen siirtokunta, ja siellä lyötiin omia kolikoita.",
@@ -138,20 +138,20 @@
     },
     {
      "otsikko": "Lakikoulun kaupunki",
-     "teksti": "Kun Pompeius valloitti kaupungin vuonna 64 eaa., nimi Berytus palautettiin ja kaupunki liitettiin Rooman valtakuntaan. Augustuksen aikana siitä tehtiin roomalainen siirtokunta. Lähteen mukaan Berytus oli idän provinsseissa erityisen roomalainen kaupunki. Sen lakikoulu oli laajalti tunnettu, ja juristit Papinianus ja Ulpianus opettivat siellä Severusten aikana. Justinianus tunnusti koulun 500-luvulla yhdeksi valtakunnan kolmesta virallisesta lakikoulusta. Kun suuri maanjäristys vuonna 551 raunioitti rannikon kaupunkeja, lakikoulun opiskelijat siirrettiin Sidoniin.",
+     "teksti": "Kaupunki joutui Rooman haltuun vuonna 64 eaa., kun Pompeius järjesteli Syyrian Rooman maakunnaksi, ja se sai nimen Berytus. Augustuksen aikana siitä tehtiin roomalainen siirtokunta. Lähteen mukaan Berytus oli idän provinsseissa erityisen roomalainen kaupunki. Sen lakikoulu oli laajalti tunnettu, ja koulun opetus nojasi muun muassa roomalaisten juristien Papinianuksen ja Ulpianuksen kirjoituksiin. Justinianus tunnusti koulun 500-luvulla yhdeksi valtakunnan kolmesta virallisesta lakikoulusta. Kun suuri maanjäristys vuonna 551 raunioitti rannikon kaupunkeja, lakikoulun opiskelijat siirrettiin Sidoniin.",
      "tiedosto": "BeirutRomanBaths.jpg",
      "lyhyt": "Roomalaisten kylpylöiden raunioita Beirutin keskustassa.",
-     "selite": "Roomalaisen Berytuksen kylpylöiden rauniot löytyivät keskustan Serail-kukkulan itärinteeltä, ja niiden ympärille on rakennettu puisto.",
+     "selite": "Roomalaisen Berytuksen kylpylöiden rauniot ovat Serail-kukkulan rinteellä keskustassa; kuvassa näkyvät lämmitysjärjestelmän pienet pylväät.",
      "lahde": "Elgaard, Wikimedia Commons (CC BY-SA 3.0)",
      "wiki": "Beirut"
     },
     {
      "otsikko": "Silkkiä ja koulu kukkulalla",
-     "teksti": "Isoisän matkavuonna 1873 Beirut oli kasvava satama- ja kauppakaupunki. Egyptin Ibrahim Pashan vallattua Akkon vuonna 1832 kaupunki oli alkanut elpyä, ja 1800-luvun jälkipuoliskolla se solmi tiiviit kauppayhteydet Eurooppaan, erityisesti Ranskaan. Eurooppalainen kiinnostus libanonilaiseen silkkiin teki Beirutista suuren satamakaupungin. Syrian Protestant College oli avattu vuonna 1866, ja sen kampuksen ensimmäiset rakennukset otettiin käyttöön 1870-luvun alussa. Université Saint-Joseph perustettiin 1800-luvun jälkipuoliskolla.",
-     "tiedosto": "American University. Beirut, (A.U.B.). College Hall LOC matpc.02836.jpg",
+     "teksti": "Isoisän matkavuonna 1873 Beirut oli kasvava satama- ja kauppakaupunki. Egyptin Ibrahim Pashan vallattua Akkon vuonna 1832 kaupunki oli alkanut elpyä, ja 1800-luvun jälkipuoliskolla se solmi tiiviit kauppayhteydet Eurooppaan, erityisesti Ranskaan. Lähteen mukaan eurooppalainen kiinnostus libanonilaiseen silkkiin ja muihin vientituotteisiin muutti Beirutin merkittäväksi satamaksi ja kauppakeskukseksi. Syrian Protestant College oli avattu vuonna 1866, ja sen kampuksen ensimmäiset rakennukset otettiin käyttöön 1870-luvun alussa. Université Saint-Joseph perustettiin 1800-luvun jälkipuoliskolla.",
+     "tiedosto": "American University of Beirut - College hall (9691111395).jpg",
      "lyhyt": "American University of Beirutin College Hall.",
      "selite": "College Hall kuuluu American University of Beirutin kampukseen, joka kasvoi Syrian Protestant Collegen pohjalta.",
-     "lahde": "Matson Collection, Wikimedia Commons (PD)",
+     "lahde": "marviikad from Al Khobar, Saudi Arabia, Wikimedia Commons (CC BY-SA 2.0)",
      "wiki": "American University of Beirut"
     },
     {
@@ -160,7 +160,7 @@
      "tiedosto": "Berytus ruins and St. George Maronite Cathedral, Beirut.jpg",
      "lyhyt": "Berytuksen raunioita Pyhän Yrjänän maroniittikatedraalin vieressä.",
      "selite": "Keskustan kaivauksissa on tullut esiin eri aikakausien kerrostumia, ja maroniittikatedraalin esipihan alla on säilytetty osa roomalaista pylväskatua.",
-     "lahde": "Radosław Botev, Wikimedia Commons (CC BY 3.0)",
+     "lahde": "Radosław Botev, Wikimedia Commons (CC BY 3.0 PL)",
      "wiki": "Beirut Central District"
     }
    ],
@@ -205,7 +205,7 @@
         "tiedosto": "Nejmeh Square (1).jpg",
         "lyhyt": "Nejmehin aukio on Beirutin keskustan pääaukio.",
         "selite": "Nejmehin aukio on Beirutin keskustan pääaukio, jonka reunalla on kellotorni ja parlamenttirakennus.",
-        "lahde": "Radosław Botev, Wikimedia Commons (CC BY 3.0)"
+        "lahde": "Radosław Botev, Wikimedia Commons (CC BY 3.0 PL)"
        }
       },
       {
@@ -214,7 +214,7 @@
       },
       {
        "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Pitkän ajan keskiarvojen mukaan Beirutin ilmasto on kuuma-kesäinen Välimeren ilmasto. Touko–syyskuussa on lämmintä ja kuivaa, ja heinä–elokuussa päivälämpötila on noin 31 astetta ja kosteus voi olla raskas. Syksy ja kevät ovat lämpimiä mutta lyhyitä. Talvi on leuto ja sateinen: tammikuussa päivisin on noin 17 ja öisin noin 11 astetta, ja sateisin aika on lokakuusta huhtikuuhun. Kesällä sataa hyvin vähän."
+       "teksti": "Beirutin ilmasto on kuuma-kesäinen Välimeren ilmasto. Kesällä on lämmintä ja kuivaa, ja heinä–elokuussa kosteus voi olla raskas. Syksy ja kevät ovat lämpimiä mutta lyhyitä, ja talvi on leuto ja sateinen. Sateisinta on talvella, ja kesällä sataa hyvin vähän."
       }
      ],
      "matkailu": {
@@ -381,7 +381,7 @@
  "nahtavyydet": {
   "Raouchén Kyyhkyskalliot": {
    "aika": "Luonnonmuodostelma",
-   "teksti": "Raouché on Beirutin länsireunalla sijaitseva asuin- ja liikekaupunginosa, jonka edustalla kohoaa rannikolta kaksi kalliota. Kalliot tunnetaan nimellä Kyyhkyskalliot (Pigeons' Rock) tai Raouchén kallio, ja ne ovat luonnonmuodostelma. Kaupunginosan nimi tulee ranskan sanasta rocher, kallio.\n\nCorniche-rantabulevardi nousee Raouchén kohdalla korkeimmilleen meren yläpuolelle, ja kaupunginosa on rakennettu valkoisen kalkkikivijyrkänteen päälle. Jyrkänteen reunaa seuraavan Avenue de Parisin varrella on kahviloita ja ravintoloita. Lähteen mukaan kalliot ovat tunnistettava luonnonmaamerkki.\n\nSeudun rannoilta on löytynyt alueen vanhimmat todisteet ihmisasutuksesta, piikiviä ja yksinkertaisia kivityökaluja, jotka ovat esillä American University of Beirutin arkeologisessa museossa. Kalliot olivat paikallaan jo isoisän matkavuonna 1873.",
+   "teksti": "Raouché on Beirutin länsireunalla sijaitseva asuin- ja liikekaupunginosa, jonka edustalla kohoaa rannikolta kaksi kalliota. Kalliot tunnetaan nimellä Kyyhkyskalliot (Pigeons' Rock) tai Raouchén kallio, ja ne ovat luonnonmuodostelma.\n\nCorniche-rantabulevardi nousee Raouchén kohdalla korkeimmilleen meren yläpuolelle, ja kaupunginosa on rakennettu valkoisen kalkkikivijyrkänteen päälle. Jyrkänteen reunaa seuraavan Avenue de Parisin varrella on kahviloita ja ravintoloita. Lähteen mukaan kalliot ovat tunnistettava luonnonmaamerkki.\n\nSeudun rannoilta on löytynyt alueen vanhimmat todisteet ihmisasutuksesta, piikiviä ja yksinkertaisia kivityökaluja, jotka ovat esillä American University of Beirutin arkeologisessa museossa. Kalliot olivat paikallaan jo isoisän matkavuonna 1873.",
    "kuvat": [
     {
      "tiedosto": "Beirut-Rouche rock.jpg",
@@ -439,7 +439,7 @@
      "tiedosto": "Mohammad Al-Amin Mosque and St. George Maronite Cathedral, Beirut (3).jpg",
      "lyhyt": "Mohammad Al-Aminin moskeija, jota kutsutaan myös Siniseksi moskeijaksi.",
      "selite": "Moskeija vihittiin käyttöön 2000-luvulla, ja se seisoo keskustassa aivan Pyhän Yrjänän katedraalin vieressä.",
-     "lahde": "Radosław Botev, Wikimedia Commons (CC BY 3.0)"
+     "lahde": "Radosław Botev, Wikimedia Commons (CC BY 3.0 PL)"
     }
    ],
    "lahde": "Wikipedia"
@@ -452,14 +452,14 @@
      "tiedosto": "Mohammad Al-Amin Mosque and St. George Maronite Cathedral, Beirut (1).jpg",
      "lyhyt": "Pyhän Yrjänän maroniittikatedraali ja sen kellotorni.",
      "selite": "Katedraalin esipihan alla on säilytetty osa roomalaista pylväskatua.",
-     "lahde": "Radosław Botev, Wikimedia Commons (CC BY 3.0)"
+     "lahde": "Radosław Botev, Wikimedia Commons (CC BY 3.0 PL)"
     }
    ],
    "lahde": "Wikipedia"
   },
   "Nejmehin aukio": {
    "aika": "1920-luku",
-   "teksti": "Nejmehin aukio eli Place de l'Étoile on Beirutin keskustan pääaukio. Ranskalaiset purkivat 1920-luvulla vanhat basaarit ja muuttivat alueen nykyaikaiseksi kaupunginosaksi, ja aukio tunnetaan art deco -arkkitehtuuristaan.\n\nAukion kaunistus on 1930-luvun kellotorni, jossa on nelisivuinen kello ja jonka lahjoitti ulkomaille muuttanut libanonilainen Michel Abed. Parlamenttirakennuksen suunnitteli Mardiros Altounian, joka suunnitteli myös kellotornin. Rakennus yhdistää Beaux-Arts-tyylin paikallisiin piirteisiin, kuten kaksois- ja kolmoiskaariin, ja sen julkisivu on kalkkikiveä.\n\nAukion kreikkalainen Pyhän Yrjänän katedraali valmistui 1700-luvulla, ja sen alla on maanalainen museo, jossa on usean samalle paikalle rakennetun kirkon kerrostumia. Aukiota tunnetaan kyyhkysistään. Isoisän matkavuonna 1873 nykyistä aukiota ei vielä ollut: alueella oli vanhoja basaareja.",
+   "teksti": "Nejmehin aukio eli Place de l'Étoile on Beirutin keskustan pääaukio. Ranskalaiset purkivat 1920-luvulla vanhat basaarit ja muuttivat alueen nykyaikaiseksi kaupunginosaksi, ja aukio tunnetaan art deco -arkkitehtuuristaan.\n\nAukion kaunistus on 1930-luvun kellotorni, jonka lahjoitti libanonilaistaustainen siirtolainen Michel Abed. Parlamenttirakennuksen suunnitteli Mardiros Altounian, joka suunnitteli myös kellotornin. Rakennus yhdistää Beaux-Arts-tyylin paikallisiin piirteisiin, kuten kaksois- ja kolmoiskaariin, ja sen julkisivu on kalkkikiveä.\n\nAukion kreikkalainen Pyhän Yrjänän katedraali valmistui 1700-luvulla, ja sen alla on maanalainen museo, jossa on usean samalle paikalle rakennetun kirkon kerrostumia. Aukiota tunnetaan kyyhkysistään. Isoisän matkavuonna 1873 nykyistä aukiota ei vielä ollut: alueella oli vanhoja basaareja.",
    "kuvat": [
     {
      "tiedosto": "Beirut, Central District, Nejmeh Square.jpg",
@@ -491,10 +491,10 @@
    "Kohdekartan rajaus: tehtävänannon mukaan kartalla on faktapohjan kahdeksan kohdetta, joihin kuuluu Raouchén Kyyhkyskalliot, mutta faktapohjan vaihtoehto A (rajaus ilman Raouchéa, länsi 35.4975) jättäisi kalliot rajauksen ulkopuolelle ja aiheuttaisi tarkistimen virheen. Kompromissi: rajausta on laajennettu kattamaan Raouchén Wikidata-piste (länsi 35.467, noin 300 m marginaali), jolloin kartta on noin 4,9 km x 2,6 km ja ydinkeskusta pienenee. Päätoimittaja voi valita kahdeksan kohteen laajan tai seitsemän kohteen tiiviin kartan.",
    "Moskeijan ja maroniittikatedraalin etäisyys on vain noin 100 metriä, joten numeroympyrät ovat kartalla lähellä toisiaan.",
    "Tarkat luvut ja vuodet on pyöristetty LISÄSÄÄNNÖN mukaan: kansallismuseon rakennusvuodet (1930-luvun alku, avaus 1940-luvun alku), katedraalin rakennusvuodet (1800-luvun loppu), Nejmehin aukion purkutyöt (1920-luku), Marttyyrien aukion uudistus (1870-luvun lopulla), AUB:n ensimmäiset rakennukset (1870-luvun alku) ja keittokirjan vuosi (1880-luku). Tarkka vuosi sallitaan vain, jos tarkistaja löytää kaksi riippumatonta lähdettä. Pidetyt tarkat vuodet (64 eaa., 551, 1832, 1866, 1875, 1912, 1952) ovat faktapohjassa [V].",
-   "Säädataa ei ole (saatiedot null); oppaan sääjakso perustuu en-Wikipedian ilmastotaulukkoon (lentokentän mittaukset) ja sanoo vain pitkän ajan keskiarvoista, koska tarkkaa havaintojaksoa ei ole lähteessä. Vuosisade on ristiriitainen (730, 825 ja 914 mm), joten sitä ei ole kirjattu.",
+   "Säädata: saatiedot on null, koska en-Wikipedian Beirut-ilmastotaulukon otsikossa ei ole normaalikautta eikä jaksoa arvata (korjattu saa-työkalu 11.10.2026). Oppaan sääjakso on laadullinen ilman lukuja.",
    "Matkustusturvallisuus: um.fi ei ollut saatavilla (403), joten oppaassa on vain Wikivoyagen Libanon-sivun yleinen varoitus (jännitteet naapurimaiden kanssa, rajaseutu, pakolaisleirit, riippumaton lehdistö). Päätoimittaja tarkistaa sanamuodon ennen julkaisua.",
    "Mezze-nostoa (L1) kuvaava kuva on otettu libanonilaisessa ravintolassa Genevessä, ja kuvateksti kertoo sen. Mouneh-nostoon (L3) ei löytynyt kelvollista mouneh-kuvaa, joten kuvana on kibbeh ja kuvateksti kertoo kibbehistä. Kuvien lähderivin lisenssi CC BY 3.0 pl on kirjoitettu muotoon CC BY 3.0.",
-   "College Hallin kuva (nosto K3) on Matson-kokoelmasta noin 1920-luvulta, ei isoisän ajalta; kuvateksti ei väitä sitä 1873-kuvaksi. Matkakirjan valokuva (Bonfils) on vuodelta noin 1867 ja ilman nykykuvaa (uusi).",
+   "College Hallin kuva (nosto K3) on nykykuva (Flickr/Commons, CC BY-SA 2.0); Matson-kuva vaihdettu pois, koska tekijä kuoli 1977 (alle 70 v). Rakennus on purettu 1991 ja rakennettu uudelleen 1999 (en AUB), kuvateksti kertoo vain kampuksesta. Matkakirjan valokuva (Bonfils) on vuodelta noin 1867 ja ilman nykykuvaa (uusi).",
    "Faktapohjassa mainitut Samir Kassirin ja Imam Ouzain aukiot (kysymys 4, väärät vaihtoehdot) ovat faktapohjan ehdotuksia; tarkistaja voi vaihtaa ne."
   ]
  }

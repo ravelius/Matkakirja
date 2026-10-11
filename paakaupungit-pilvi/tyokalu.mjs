@@ -24,26 +24,31 @@
  *   esikatselu lataa 900 px esikatselun ja tulostaa polun (avaa Read-työkalulla).
  *
  *   konteksti  kirjoittaa <erä>/<id>/konteksti.json (pelin nykyinen aineisto,
- *              jota EI saa toistaa) ja <erä>/saa-syote.json
- *              (tools/hae-saaperusdata.mjs --tiedosto).
+ *              jota EI saa toistaa) ja <erä>/saa-syote.json (id, lat, lon, wikidata).
  *   malli      tulostaa olemassa olevan laudan kaupungin samassa muodossa kuin
  *              sisalto.json (esim. dakar, fes) — muotomalli kirjoittajalle.
- *   saa        jäsentää <erä>/saa.txt:n (hae-saaperusdata.mjs:n tuloste)
- *              tiedostoiksi <erä>/<id>/saa.json.
+ *   saa        hakee jokaiselle saa-syote.json:n kaupungille sääaseman
+ *              ilmastonormaalit en-Wikipedian ilmastotaulukosta (Weather box:
+ *              sääpalvelun, WMO:n tai NOAA:n normaalit, kausi taulukon otsikosta)
+ *              ja kirjoittaa <erä>/<id>/saa.json (luvut + lahde + tausta).
+ *              EI Open-Meteoa (11.10.2026: ERA5-malliruutu ja kolme otosvuotta
+ *              antoivat vääriä lukuja). Ilman kelvollista taulukkoa saa.json:ia
+ *              ei tehdä (saatiedot: null). Valinnaiset saa-syote.json-kentät:
+ *              "artikkeli" (en-Wikipedian otsikko) ja "taulukko" (otsikon osa).
  *   tarkista   <erä>/<id>/sisalto.json: VIRHE = korjattava (exit 1),
  *              VAROITUS = luetaan ja perustellaan RAPORTTI.md:ssä.
  *              --verkko: Commons (olemassa, leveys >= 1200, lisenssi, tekijä)
  *              ja wiki-otsikot (fi tai en). --malli: ohittaa pääkaupunkiehdot.
  *              --lyhyt: vain virheet ja määrät (pääsessiolle).
  */
-import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, unlinkSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const [komento, ...argit] = process.argv.slice(2);
-const VERKKO = argit.includes('--verkko') || ['konteksti', 'lahde', 'haku', 'esikatselu'].includes(komento);
+const VERKKO = argit.includes('--verkko') || ['konteksti', 'saa', 'lahde', 'haku', 'esikatselu'].includes(komento);
 // Konttiympäristössä Noden fetch tarvitsee NODE_USE_ENV_PROXY=1 (sama kuin tools/hae-saaperusdata.mjs).
 if (VERKKO && !process.env.NODE_USE_ENV_PROXY && (process.env.HTTPS_PROXY || process.env.https_proxy)) {
   const ajo = spawnSync(process.execPath, process.argv.slice(1), {
@@ -60,7 +65,7 @@ const PAKAT = ['europe', 'africa', 'asia', 'middleeast', 'northamerica', 'southa
 const VAKIOAIHEET = ['historia', 'kuvataide', 'kirjallisuus', 'musiikki', 'ruoka', 'luonto', 'tiede', 'nykytaide', 'huumori'];
 const KARTTATYYPIT = ['rakennus', 'aukio', 'luonto'];
 const OSIOT = ['kaupunki', 'artikkeli', 'kysymykset', 'tiedot', 'valokuva', 'kaupunkilehti', 'kohdekartta', 'nahtavyydet'];
-const LAHDE_RE = /^(.+), (?:Wikimedia )?Commons \((PD|CC0|CC BY(?:-SA)? \d\.\d(?: [Ii][Gg][Oo])?)\)$/;
+const LAHDE_RE = /^(.+), (?:Wikimedia )?Commons \((PD|CC0|CC BY(?:-SA)? \d\.\d(?: [Ii][Gg][Oo]| [A-Za-z]{2})?)\)$/;
 
 async function taulut(nimi, vienti) {
   const ulos = {};
@@ -169,7 +174,7 @@ async function konteksti(era, idt) {
     };
     mkdirSync(join(TYOKANSIO, era, id), { recursive: true });
     writeFileSync(join(TYOKANSIO, era, id, 'konteksti.json'), `${JSON.stringify(k, null, 1)}\n`);
-    saa.push({ id, lat: Math.round(p.lat * 100) / 100, lon: Math.round(p.lon * 100) / 100 });
+    saa.push({ id, lat: Math.round(p.lat * 100) / 100, lon: Math.round(p.lon * 100) / 100, wikidata: p.wikidata ?? null });
     console.log(`${id}: konteksti.json (lähikaupunkeja ${lahella.length}, lähinostoja ${lahiNostot.length}, wiki "${wikiEhdotus}")`);
   }
   writeFileSync(join(TYOKANSIO, era, 'saa-syote.json'), `${JSON.stringify(saa, null, 1)}\n`);
@@ -207,22 +212,166 @@ async function malli(id) {
 
 /* ------------------------------------------------------------ saa */
 
-function saaKomento(era) {
-  const polku = join(TYOKANSIO, era, 'saa.txt');
-  if (!existsSync(polku)) throw new Error(`${era}/saa.txt puuttuu (aja tools/hae-saaperusdata.mjs ensin)`);
-  let n = 0;
-  for (const rivi of readFileSync(polku, 'utf8').split('\n')) {
-    const m = rivi.match(/^\s*([a-z0-9]+): \{ lat: (-?[\d.]+), lon: (-?[\d.]+), keskilampo: \[([^\]]*)\], sade: \[([^\]]*)\] \},?\s*$/);
-    if (!m) continue;
-    const luvut = (s) => s.split(',').map((x) => Number(x.trim()));
-    const kansio = join(TYOKANSIO, era, m[1]);
-    mkdirSync(kansio, { recursive: true });
-    writeFileSync(join(kansio, 'saa.json'), `${JSON.stringify({
-      lat: Number(m[2]), lon: Number(m[3]), keskilampo: luvut(m[4]), sade: luvut(m[5]),
-    })}\n`);
-    n += 1;
+// Säärivi = kaupungin sääaseman ilmastonormaalit en-Wikipedian ilmastotaulukosta (Weather box), ei
+// mallidataa. Vanha tapa (tools/hae-saaperusdata.mjs: Open-Meteon ERA5-ruutu ~25 km, vain otosvuodet
+// 1992/2006/2020) antoi vääriä "normaaleja": yksittäinen poikkeuskuukausi ratkaisi (Podgorican
+// lokakuu 360 mm, Andorran helmikuu 13 mm) ja vuorten tai meren ruutu vinoutti (Vaduzin ja
+// Reykjavíkin vuosisade lähes kaksinkertainen, Podgorican ja Monacon talvi 2–3 astetta liian kylmä).
+const SAA_LAHDE = 'en-Wikipedia, ilmastotaulukko';
+const SAA_KENTAT = ['lat', 'lon', 'keskilampo', 'ylin', 'alin', 'sade', 'lahde', 'luonnehdinta'];
+const htmlTeksti = (s) => String(s).replace(/<style[\s\S]*?<\/style>/g, '').replace(/<sup[\s\S]*?<\/sup>/g, '')
+  .replace(/<br\s*\/?>/g, ' ').replace(/<[^>]+>/g, '').replace(/&#160;|&nbsp;/g, ' ').replace(/&amp;/g, '&')
+  .replace(/&#8211;|&ndash;/g, '–').replace(/\s+/g, ' ').trim();
+const soluLuku = (td) => {
+  const t = htmlTeksti(td.split(/<br\s*\/?>/)[0]).replace(/[−–]/g, '-').replace(/,/g, '');
+  const m = t.match(/^-?\d+(?:\.\d+)?/);
+  return m ? Number(m[0]) : null;
+};
+
+// Kaikki sivun ilmastotaulukot: otsikko ("Climate data for …"), rivit { otsikko: [12 kk + vuosi] }, lähderivit.
+function ilmastotaulukot(html) {
+  const ulos = [];
+  for (let i = html.indexOf('Climate data for'); i >= 0; i = html.indexOf('Climate data for', i + 1)) {
+    const alku = html.lastIndexOf('<table', i);
+    const loppu = html.indexOf('</table>', i);
+    if (alku < 0 || loppu < 0) break;
+    const rivit = {};
+    const lahteet = [];
+    let otsikko = null;
+    for (const m of html.slice(alku, loppu).matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/g)) {
+      const th = m[1].match(/<th[^>]*>([\s\S]*?)<\/th>/);
+      const tdt = [...m[1].matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map((x) => x[1]);
+      if (th && /Climate data for/.test(th[1])) otsikko = htmlTeksti(th[1]).replace(/^[\s\S]*?(Climate data for)/, '$1');
+      else if (th && tdt.length >= 12) rivit[htmlTeksti(th[1])] = tdt.map(soluLuku);
+      else if (!th && tdt.length === 1) lahteet.push(htmlTeksti(tdt[0]));
+    }
+    if (otsikko) ulos.push({ otsikko, rivit, lahteet: lahteet.join(' | ') });
+    i = loppu;
   }
-  console.log(`${n} säärivia → ${era}/<id>/saa.json`);
+  return ulos;
+}
+
+// Yksi taulukko säärivisi: { kausi, keskilampo, ylin, alin, sade, menetelmä } tai { syy }.
+function taulukostaSaarivi(t) {
+  let kausi = null;
+  for (const m of t.otsikko.matchAll(/(\d{4})\s*[–-]\s*(\d{4})/g)) {
+    if (/(extreme|record)s?\W*$/i.test(t.otsikko.slice(Math.max(0, m.index - 14), m.index))) continue;
+    kausi = `${m[1]}–${m[2]}`;
+    break;
+  }
+  if (!kausi) return { syy: 'otsikossa ei normaalikautta (vuosiväliä ei arvata)' };
+  const rivi = (re) => Object.entries(t.rivit).find(([nimi, arvot]) => re.test(nimi)
+    && arvot.slice(0, 12).every((x) => Number.isFinite(x)));
+  const lampo = (re) => {
+    const r = rivi(re);
+    if (!r) return null;
+    const F = /°F\s*\(°C\)/.test(r[0]);
+    return { nimi: r[0], arvot: r[1].slice(0, 12).map((x) => (F ? ((x - 32) * 5) / 9 : x)) };
+  };
+  const ka = lampo(/^Daily mean °[CF]/i);
+  const yl = lampo(/^(Mean daily maximum|Average high) °[CF]/i);
+  const al = lampo(/^(Mean daily minimum|Average low) °[CF]/i);
+  const kymm = (x) => Math.round(x * 10);
+  let keskilampo = null;
+  let lampoTapa = null;
+  if (ka) { keskilampo = ka.arvot.map((x) => kymm(x) / 10); lampoTapa = ka.nimi; } else if (yl && al) {
+    keskilampo = yl.arvot.map((x, k) => Math.round((kymm(x) + kymm(al.arvot[k])) / 2) / 10);
+    lampoTapa = '(ylin + alin) / 2: taulukossa ei Daily mean -riviä';
+  }
+  if (!keskilampo) return { syy: 'ei keskilämpöä (Daily mean tai ylin + alin)' };
+  const sr = rivi(/^Average precipitation (mm|cm|inches)/i) ?? rivi(/^Average rainfall (mm|cm|inches)/i);
+  if (!sr) return { syy: 'ei sademäärää millimetreinä' };
+  const kerroin = /^Average \w+ inches/i.test(sr[0]) ? 25.4 : /^Average \w+ cm/i.test(sr[0]) ? 10 : 1;
+  const sade = sr[1].slice(0, 12).map((x) => Math.round(x * kerroin));
+  const vuosi = Number.isFinite(sr[1][12]) ? Math.round(sr[1][12] * kerroin) : null;
+  const summa = sade.reduce((a, b) => a + b, 0);
+  const huomiot = [];
+  // Ristiriitainen taulukko (esim. Tiranan lentoasema 11.10.2026: vuosi 1252, kuukaudet yhteensä 1152) hylätään:
+  // jompikumpi luku on väärin, eikä kumpaa tahansa saa valita hiljaa.
+  if (vuosi != null && Math.abs(vuosi - summa) > Math.max(5, 0.03 * vuosi)) return { syy: `vuosisarake ${vuosi} mm ≠ kuukausien summa ${summa} mm (taulukossa virhe)` };
+  if (keskilampo.some((x) => x < -40 || x > 45) || sade.some((x) => x < 0 || x > 1500)) return { syy: 'epäuskottavia lukuja (yksikkö?)' };
+  const [a, b] = kausi.split('–').map(Number);
+  if (b - a + 1 < 10) huomiot.push(`lyhyt kausi ${kausi}`);
+  if (/rainfall/i.test(sr[0])) huomiot.push('sade = vain vesisade (Average rainfall)');
+  const ulos = { kausi, keskilampo, sade, lampoTapa, sadeRivi: sr[0], vuosisade: summa, huomiot };
+  if (yl && al) {
+    ulos.ylin = yl.arvot.map((x) => Math.round(x));
+    ulos.alin = al.arvot.map((x) => Math.round(x));
+    if (keskilampo.some((x, k) => x > yl.arvot[k] + 0.05 || x < al.arvot[k] - 0.05)) huomiot.push('keskilämpö ei ole ylimmän ja alimman välissä');
+  }
+  return ulos;
+}
+
+const wikidataEnOtsikko = async (q) => {
+  const d = await haeJson(`https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&props=sitelinks|claims&sitefilter=enwiki&ids=${q}`);
+  const e = d.entities?.[q];
+  return { otsikko: e?.sitelinks?.enwiki?.title ?? null, maa: e?.claims?.P17?.[0]?.mainsnak?.datavalue?.value?.id ?? null };
+};
+
+async function saaKomento(era) {
+  if (!era) throw new Error('käyttö: saa <erä>');
+  const syote = JSON.parse(readFileSync(join(TYOKANSIO, era, 'saa-syote.json'), 'utf8'));
+  const luettu = new Date().toISOString().slice(0, 10);
+  let n = 0;
+  for (const p of syote) {
+    const kansio = join(TYOKANSIO, era, p.id);
+    const kontekstiPolku = join(kansio, 'konteksti.json');
+    const q = p.wikidata ?? (existsSync(kontekstiPolku) ? JSON.parse(readFileSync(kontekstiPolku, 'utf8')).wikidata : null);
+    // Ehdokasartikkelit: oma valinta → kaupungin en-artikkeli → maan en-artikkeli (kaupunkivaltiot).
+    const ehdokkaat = [];
+    let maa = null;
+    if (p.artikkeli) ehdokkaat.push(p.artikkeli);
+    if (q) {
+      const w = await wikidataEnOtsikko(q);
+      if (w.otsikko) ehdokkaat.push(w.otsikko);
+      maa = w.maa;
+    }
+    const syyt = [];
+    let valittu = null;
+    for (let i = 0; i <= ehdokkaat.length && !valittu; i += 1) {
+      if (i === ehdokkaat.length) {
+        if (!maa || p.artikkeli) break;
+        const m = (await wikidataEnOtsikko(maa)).otsikko;
+        maa = null;
+        if (!m || ehdokkaat.includes(m)) break;
+        ehdokkaat.push(m);
+      }
+      const otsikko = ehdokkaat[i];
+      const d = await haeJson('https://en.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=text|revid'
+        + `&redirects=1&page=${encodeURIComponent(otsikko)}`);
+      const taulut = ilmastotaulukot(d.parse?.text ?? '').filter((t) => !p.taulukko || t.otsikko.includes(p.taulukko));
+      if (!taulut.length) syyt.push(`${otsikko}: ei ilmastotaulukkoa${p.taulukko ? ` (rajaus "${p.taulukko}")` : ''}`);
+      for (const t of taulut) {
+        const r = taulukostaSaarivi(t);
+        if (r.syy) { syyt.push(`${otsikko}: "${t.otsikko}": ${r.syy}`); continue; }
+        valittu = { ...r, artikkeli: d.parse.title, revisio: d.parse.revid, taulukko: t.otsikko, lahteet: t.lahteet };
+        break;
+      }
+    }
+    const polku = join(kansio, 'saa.json');
+    if (!valittu) {
+      if (existsSync(polku)) unlinkSync(polku); // vanhan työkalun luvut eivät saa jäädä käyttöön
+      console.log(`EI SÄÄRIVIÄ ${p.id}: ${syyt.join(' · ') || 'ei Wikidata-tunnusta eikä artikkelia'}`
+        + ' → saatiedot: null ja syy TILANNE.md:hen (tai saa-syote.json: "artikkeli"/"taulukko")');
+      continue;
+    }
+    const v = valittu;
+    const rivi = {
+      lat: p.lat, lon: p.lon, keskilampo: v.keskilampo, ...(v.ylin ? { ylin: v.ylin, alin: v.alin } : {}), sade: v.sade,
+      lahde: { nimi: SAA_LAHDE, kausi: v.kausi },
+      tausta: {
+        artikkeli: v.artikkeli, revisio: v.revisio, taulukko: v.taulukko, lahteet: v.lahteet, keskilampo: v.lampoTapa,
+        sade: v.sadeRivi, vuosisade: v.vuosisade, luettu, huomiot: v.huomiot,
+      },
+    };
+    mkdirSync(kansio, { recursive: true });
+    writeFileSync(polku, `{\n${Object.entries(rivi).map(([k, x]) => ` ${JSON.stringify(k)}: ${JSON.stringify(x)}`).join(',\n')}\n}\n`);
+    n += 1;
+    const lt = v.keskilampo;
+    console.log(`${p.id}: ${v.taulukko} [${v.artikkeli}] → kausi ${v.kausi}, keskilämpö ${Math.min(...lt)}…${Math.max(...lt)} °C`
+      + `${/ylin/.test(v.lampoTapa) ? ' (ylin+alin)/2' : ''}, vuosisade ${v.vuosisade} mm${v.huomiot.length ? ` · HUOM: ${v.huomiot.join('; ')}` : ''}`);
+  }
+  console.log(`${n}/${syote.length} säärivia → ${era}/<id>/saa.json (saatiedot = saa.json ilman tausta-kenttää + luonnehdinta)`);
 }
 
 /* ------------------------------------------------------------ tarkista */
@@ -431,12 +580,58 @@ async function tarkista(era, rajaus, { verkko, malliTila, lyhyt }) {
       if (!ju.aika) varoitus(`juttu ${nimi}: aika puuttuu`);
     }
 
-    // säätiedot
+    // säätiedot: luvut ja lahde sellaisenaan saa-komennon saa.json:sta (asemanormaalit), ei käsin eikä Open-Meteosta
     const sa = s.saatiedot;
+    const saaPolku = join(eraKansio, id, 'saa.json');
+    const saaJson = existsSync(saaPolku) ? JSON.parse(readFileSync(saaPolku, 'utf8')) : null;
     if (!sa) varoitus('saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)');
     else if (!Number.isFinite(sa.lat) || !Number.isFinite(sa.lon) || sa.keskilampo?.length !== 12 || sa.sade?.length !== 12
       || [...sa.keskilampo, ...sa.sade].some((x) => !Number.isFinite(x))) virhe('saatiedot { lat, lon, keskilampo[12], sade[12] }');
-    else if (!sa.luonnehdinta) varoitus('saatiedot.luonnehdinta puuttuu');
+    else {
+      if (!sa.luonnehdinta) varoitus('saatiedot.luonnehdinta puuttuu');
+      for (const kk2 of Object.keys(sa)) if (!SAA_KENTAT.includes(kk2)) virhe(`saatiedot.${kk2} ei kuulu peliin (tausta → faktapohja)`);
+      if (!malliTila) {
+        if (typeof sa.lahde?.nimi !== 'string' || !/^\d{4}–\d{4}$/.test(sa.lahde?.kausi ?? '')) {
+          virhe('saatiedot.lahde { nimi, kausi "1991–2020" } puuttuu: aja `tyokalu.mjs saa <erä>` ja kopioi saa.json (Open-Meteo-otos ei kelpaa)');
+        }
+        if (!saaJson) virhe('saatiedot ilman saa.json:ia (luvut vain saa-komennosta)');
+        else {
+          for (const kk2 of ['keskilampo', 'ylin', 'alin', 'sade', 'lahde']) {
+            if (JSON.stringify(sa[kk2] ?? null) !== JSON.stringify(saaJson[kk2] ?? null)) virhe(`saatiedot.${kk2} ≠ saa.json (kopioi sellaisenaan)`);
+          }
+        }
+      }
+      // Ilmastoluvut teksteissä (luonnehdinta, opas, tiedot): jokaisen aste- ja millimetriluvun on vastattava
+      // saatiedot-lukuja (kuukausiarvo, ylin/alin tai vuosisumma), eikä ilmastolauseessa mainita lähdettä.
+      const asteet = [...sa.keskilampo, ...(sa.ylin ?? []), ...(sa.alin ?? []), sa.keskilampo.reduce((x, y) => x + y, 0) / 12];
+      const vuosisade = sa.sade.reduce((x, y) => x + y, 0);
+      const luku = (t) => Number(t.replace(/[\s ]/g, '').replace(',', '.').replace(/[−–]/, '-'));
+      const sopiiAste = (v, t) => asteet.some((x) => Math.abs(x - v) <= (/,/.test(t) ? 0.15 : 1.05));
+      const sopiiSade = (v) => sa.sade.some((x) => Math.abs(x - v) <= Math.max(2, 0.05 * x)) || Math.abs(vuosisade - v) <= Math.max(10, 0.03 * vuosisade);
+      const ilmastoTekstit = [['saatiedot.luonnehdinta', sa.luonnehdinta ?? ''], ...(s.tiedot ?? []).map((x, i) => [`tiedot[${i}]`, x])];
+      const mk = s.kaupunkilehti?.[0]?.matkailijalle;
+      if (mk) {
+        ilmastoTekstit.push(['matkailijalle.kappale', mk.kappale ?? '']);
+        (mk.artikkeli?.jaksot ?? []).forEach((x, i) => ilmastoTekstit.push([`opas jakso ${i + 1}`, x.teksti ?? ''], [`opas jakso ${i + 1} kuva`, `${x.kuva?.lyhyt ?? ''} ${x.kuva?.selite ?? ''}`]));
+      }
+      const ILMASTO = /(lämp|sade|sadet|sata|sateis|kuiv|pakka|helle|helte|ilmasto|millimetri|tammi|helmi|maalis|huhti|touko|kesä|heinä|elo|syys|loka|marras|joulu)/i;
+      for (const [missa, teksti2] of ilmastoTekstit) {
+        if (typeof teksti2 !== 'string') continue;
+        for (const lause of teksti2.split(/(?<=[.!?])\s+/)) {
+          if (!ILMASTO.test(lause)) continue;
+          let ilmastoluku = false;
+          for (const m of lause.matchAll(/([−-]?\d+(?:,\d+)?)(?:\s*–\s*([−-]?\d+(?:,\d+)?))?\s*(?:astee?\w*|°C?)/g)) {
+            ilmastoluku = true;
+            for (const t of [m[1], m[2]].filter(Boolean)) if (!sopiiAste(luku(t), t)) varoitus(`${missa}: "${m[0]}" ei vastaa saatiedot-lukuja`);
+          }
+          for (const m of lause.matchAll(/(\d{1,3}(?:[\s ]\d{3})*(?:,\d+)?)(?:\s*–\s*(\d{1,3}(?:[\s ]\d{3})*))?\s*(?:mm\b(?!:)|millimetri\w*)/g)) {
+            ilmastoluku = true;
+            for (const t of [m[1], m[2]].filter(Boolean)) if (!sopiiSade(luku(t))) varoitus(`${missa}: "${m[0]}" ei vastaa saatiedot-lukuja`);
+          }
+          if (ilmastoluku && /(lähte\w* mukaan|wikipedi|normaalien mukaan|mallinne|aineisto|säädat)/i.test(lause)) virhe(`${missa}: ilmastolauseessa lähdemaininta ("${lause.slice(0, 60)}…")`);
+        }
+      }
+    }
 
     // kuvien yksikäsitteisyys ja aiempi käyttö. Matkakirjan valokuva saa olla
     // sama tiedosto kuin ennenNyt-pari (kaupunkilehti.md: parit kopioitiin
@@ -460,6 +655,7 @@ async function tarkista(era, rajaus, { verkko, malliTila, lyhyt }) {
         const avain = polku.split('.').pop();
         if (ohita.has(avain)) return;
         if (/(TÄYTÄ|TODO|XXX|lorem ipsum)/i.test(o)) virhe(`${polku}: paikkamerkki jäi`);
+        if (!polku.startsWith('ehdotukset') && /(wikipedi|open-meteo|mallinnettujen|säädatan mukaan|sääaineiston mukaan)/i.test(o)) virhe(`${polku}: lähde- tai aineistomaininta lukijan tekstissä (metateksti, luku 4.10)`);
         if (o.length > 200 && !/[äö]/i.test(o)) virhe(`${polku}: ei ä- eikä ö-kirjaimia (ascii-suomi?)`);
         for (const m of o.matchAll(/\b(\d{1,3})((?:\s000)+)\b/g)) {
           if ((m[1].match(/0+$/)?.[0].length ?? 0) + 3 * (m[2].length / 4) >= 4) varoitus(`${polku}: pyöreä luku "${m[0]}" — onko lähteessä tarkka?`);
@@ -588,7 +784,7 @@ try {
   const vapaat = argit.filter((x) => !x.startsWith('--'));
   if (komento === 'konteksti') await konteksti(vapaat[0], vapaat.slice(1));
   else if (komento === 'malli') await malli(vapaat[0]);
-  else if (komento === 'saa') saaKomento(vapaat[0]);
+  else if (komento === 'saa') await saaKomento(vapaat[0]);
   else if (komento === 'lahde') await lahdeKomento(vapaat[0], vapaat[1]);
   else if (komento === 'haku') await hakuKomento(vapaat[0], vapaat[1]);
   else if (komento === 'esikatselu') await esikatseluKomento(vapaat[0]);

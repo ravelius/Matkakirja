@@ -1,0 +1,10 @@
+{
+ "lat": 31.95,
+ "lon": 35.93,
+ "keskilampo": [8.5,9.4,12.4,17.1,21.4,24.6,26.5,26.6,24.6,21,15,10.2],
+ "ylin": [13,14,18,24,28,31,33,33,31,27,20,15],
+ "alin": [4,5,8,11,15,19,21,21,19,15,10,6],
+ "sade": [61,58,31,8,3,0,0,0,0,5,21,47],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1989–2018"},
+ "tausta": {"artikkeli":"Amman","revisio":1378211573,"taulukko":"Climate data for East Amman, Amman Civil Airport, elevation: 779 m or 2555 ft 1989-2018","lahteet":"Source 1: Jordan Meteorological Department | Source 2: NOAA (sun 1961–1990), Pogoda.ru.net (records), Weather.Directory","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":234,"luettu":"2026-10-11","huomiot":[]}
+}

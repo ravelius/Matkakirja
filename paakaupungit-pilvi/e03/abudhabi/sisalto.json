@@ -14,7 +14,7 @@
   }
  },
  "artikkeli": {
-  "intro": "Abu Dhabi on Arabiemiirikuntien pääkaupunki ja samannimisen emiirikunnan hallintokeskus. Kaupunki seisoo **saarella Persianlahden rannalla**, alle 250 metrin päässä mantereesta. Nimi on arabiaa ja tarkoittaa ”gasellin isää”, ja suosittu kertomus selittää sen metsästäjillä, jotka seurasivat gasellia rannikon makean veden luo.\n\nIsoisän matkavuonna 1873 rannikolla oli asutus linnakkeineen, ja helmenpyynti oli öljyä edeltänyt keskeinen elinkeino. Öljy ja ensimmäinen silta saarelle tulivat vasta 1900-luvun jälkipuoliskolla. Nykyään Abu Dhabin alueella asuu Abu Dhabin tilastokeskuksen mukaan 2 823 340 ihmistä (2024).\n\nKaupungin tunnetuimpia nähtävyyksiä ovat **Sheikh Zayedin suurmoskeija**, Qasr Al Watanin palatsi ja Saadiyat-saaren museot. Keskustassa seisova vanha **Qasr Al Hosn** muistuttaa, mistä kaupunki on kasvanut.",
+  "intro": "Abu Dhabi on Arabiemiirikuntien pääkaupunki ja samannimisen emiirikunnan hallintokeskus. Kaupunki seisoo **saarella Persianlahden rannalla**, aivan mantereen vieressä. Nimi on arabiaa ja tarkoittaa perinteisen selityksen mukaan ”gasellin isää”, ja suosittu kertomus selittää sen metsästäjillä, jotka seurasivat gasellia rannikon makean veden luo.\n\nIsoisän matkavuonna 1873 rannikolla oli asutus linnakkeineen, ja helmenpyynti oli öljyä edeltänyt keskeinen elinkeino. Öljy ja ensimmäinen silta saarelle tulivat vasta 1900-luvun jälkipuoliskolla. Nykyään Abu Dhabin hallinnollisella alueella (Abu Dhabi Region, johon kuuluvat saarikaupungin lisäksi mantereen esikaupungit, mutta ei koko emiirikuntaa) asuu Abu Dhabin tilastokeskuksen mukaan 2 823 340 ihmistä (2024); koko emiirikunnassa asukkaita on noin 4,1 miljoonaa.\n\nKaupungin tunnetuimpia nähtävyyksiä ovat **Sheikh Zayedin suurmoskeija**, Qasr Al Watanin palatsi ja Saadiyat-saaren museot. Keskustassa seisova vanha **Qasr Al Hosn** muistuttaa, mistä kaupunki on kasvanut.",
   "teksti": "Lähteen mukaan Bani Yas -heimo asui ensin Liwan keitaalla sisämaassa. Makean veden löytö rannikolta metsästysretkellä johti asutuksen perustamiseen saarelle 1700-luvulla, ja heimon Al Bu Falah -osa asettui sinne. Hallitsijasuku Al Nahyan polveutuu tästä osasta, ja asutuksen ytimessä oli linnake, joka seisoo kaupungin keskustassa yhä.\n\nKaupunki kasvoi nopeasti 1900-luvun jälkipuoliskolla. Lähteen mukaan ensimmäinen silta saarelta mantereelle rakennettiin 1960-luvun lopulla aiemmin pieneen kalastajakylään. Kaupunkisuunnitelma tehtiin samoihin aikoihin 1960- ja 1970-luvuilla. Sittemmin saaria, siltoja ja rantakatuja on lisätty, ja Cornichen paikalla oli ennen 1970-lukua ranta, jolla dhow-alukset ankkuroituivat.\n\nArabiemiirikunnat perustettiin 2. joulukuuta 1971, kun Abu Dhabi ja viisi muuta emiirikuntaa liittyivät yhteen. Abu Dhabista tuli liiton pääkaupunki, ja Sheikh Zayed bin Sultan Al Nahyan oli maan ensimmäinen presidentti. Nykyään kaupunki tunnetaan moskeijoistaan, palatseistaan ja museoistaan."
  },
  "kysymykset": [
@@ -29,7 +29,7 @@
    "correct": 2,
    "level": 1,
    "hint": "Suosittu kertomus liittyy metsästysretkeen, joka päättyi rannikolta löytyneeseen makeaan veteen.",
-   "fact": "Arabian sana ”abu” tarkoittaa isää ja ”dhabi” gasellia.",
+   "fact": "Nimen selitetään tarkoittavan gasellin isää: ”abu” on isä ja ”dhabi” gaselli.",
    "source": "https://en.wikipedia.org/wiki/Abu_Dhabi"
   },
   {
@@ -90,8 +90,8 @@
   }
  ],
  "tiedot": [
-  "Kaupungin länsirannalla kulkee Corniche, noin kahdeksan kilometriä pitkä rantakatu, jonka vieressä on erillinen pyörätie.",
-  "Abu Dhabi on saarella, joka on alle 250 metrin päässä mantereesta, ja sinne pääsee silloilla.",
+  "Kaupungin länsirannalla kulkee Corniche, usean kilometrin pituinen rantakatu, jonka vieressä on erillinen pyörätie.",
+  "Abu Dhabi on saarella aivan mantereen vieressä, ja sinne pääsee silloilla.",
   "Ennen 1970-lukua Cornichen paikalla oli ranta, jolla dhow-alukset ankkuroituivat ja kauppatavaraa lastattiin."
  ],
  "valokuva": {
@@ -104,7 +104,7 @@
   {
    "id": "kaupunki",
    "nimi": "Abu Dhabi",
-   "johdanto": "Abu Dhabi on saarikaupunki Persianlahdella, ja sen nimi tarkoittaa gasellin isää. Isoisän matkavuonna 1873 rannikolla oli asutus linnakkeineen ja helmenpyynti oli keskeinen elinkeino; moskeijat, sillat ja museot tulivat vasta myöhemmin.",
+   "johdanto": "Abu Dhabi on saarikaupunki Persianlahdella, ja sen nimen selitetään tarkoittavan gasellin isää. Isoisän matkavuonna 1873 rannikolla oli asutus linnakkeineen ja helmenpyynti oli keskeinen elinkeino; moskeijat, sillat ja museot tulivat vasta myöhemmin.",
    "kansikuvat": [
     {
      "tiedosto": "Skyline of Abu Dhabi at sunset.jpg",
@@ -113,27 +113,27 @@
     },
     {
      "tiedosto": "Abu Dhabi Skyline fron Corniche Rd.JPG",
-     "selite": "Corniche on noin kahdeksan kilometriä pitkä rantakatu Abu Dhabin länsirannalla.",
+     "selite": "Corniche on usean kilometrin pituinen rantakatu Abu Dhabin länsirannalla.",
      "lahde": "FritzDaCat, Wikimedia Commons (CC BY-SA 3.0)"
     },
     {
      "tiedosto": "Sheikh Zayed Grand Mosque @ Abu Dhabi (15856602738).jpg",
-     "selite": "Sheikh Zayedin suurmoskeija valmistui joulukuussa 2007 ja on maan suurin.",
+     "selite": "Sheikh Zayedin suurmoskeija avattiin joulukuussa 2007 ja on lähteen mukaan maan suurin.",
      "lahde": "Guilhem Vellut from Annecy, France, Wikimedia Commons (CC BY 2.0)"
     }
    ],
    "nostot": [
     {
      "otsikko": "Gasellin isä",
-     "teksti": "Nimi on arabiaa: ”abu” tarkoittaa isää ja ”dhabi” gasellia. Suosittu kertomus kuvaa, miten metsästäjät seurasivat gasellia rannikolle ja löysivät makeaa vettä; lähteen mukaan asutus syntyi makean veden löydön ympärille. Bani Yas -heimo oli asunut ensin Liwan keitaalla, ja sen Al Bu Falah -osa perusti asutuksen saarelle 1700-luvulla. Hallitsijasuku Al Nahyan polveutuu tästä osasta. Kaupungin keskustassa seisoo yhä linnake, joka muistuttaa asutuksen ensimmäisistä vuosista.",
+     "teksti": "Nimen selitetään tarkoittavan arabiaksi gasellin isää: ”abu” on isä ja ”dhabi” gaselli. Suosittu kertomus kuvaa, miten metsästäjät seurasivat gasellia rannikolle ja löysivät makeaa vettä; lähteen mukaan asutus syntyi makean veden löydön ympärille. Bani Yas -heimo oli asunut ensin Liwan keitaalla, ja sen Al Bu Falah -osa perusti asutuksen saarelle 1700-luvulla. Hallitsijasuku Al Nahyan polveutuu tästä osasta. Kaupungin keskustassa seisoo yhä linnake, joka muistuttaa asutuksen ensimmäisistä vuosista.",
      "tiedosto": "Arabian Gazelle.jpg",
-     "selite": "Abu Dhabin nimi tarkoittaa arabiaksi gasellin isää.",
+     "selite": "Abu Dhabin nimen selitetään tarkoittavan arabiaksi gasellin isää.",
      "lahde": "Ubm007, Wikimedia Commons (CC BY-SA 4.0)",
      "wiki": "Abu Dhabi"
     },
     {
      "otsikko": "Saari, joka kasvoi sillan jälkeen",
-     "teksti": "Abu Dhabin saari on vain lyhyen salmen päässä mantereesta, alle 250 metrin etäisyydellä. Lähteen mukaan ensimmäinen silta rakennettiin 1960-luvun lopulla yhdistämään manner aiemmin pieneen kalastajakylään. Kaupunkisuunnitelma tehtiin samoihin aikoihin 1960- ja 1970-luvuilla, ja lähteen mukaan se mitoitettiin satojentuhansien asukkaiden kaupungiksi. Sittemmin saaria ja siltoja on lisätty, ja Zaha Hadidin suunnittelema Sheikh Zayed -silta avattiin vuonna 2010.",
+     "teksti": "Abu Dhabin saari on vain kapean salmen päässä mantereesta. Lähteen mukaan ensimmäinen silta, Al Maqta, rakennettiin 1960-luvun lopulla yhdistämään manner aiemmin pieneen kalastajakylään. Kaupunkisuunnitelman laati 1960-luvun lopulla japanilainen arkkitehti Katsuhiko Takahashi, ja kaupunki kasvoi pian suunnitelmia suuremmaksi. Sittemmin saaria ja uusia siltoja on lisätty, ja Zaha Hadidin suunnittelema Sheikh Zayed -silta avattiin vuonna 2010.",
      "tiedosto": "Abu Dhabi 2013 - panoramio.jpg",
      "selite": "Sheikh Zayed -silta avattiin vuonna 2010 yhdistämään saari mantereeseen; sen suunnitteli Zaha Hadid.",
      "lahde": "Валерий Дед, Wikimedia Commons (CC BY 3.0)",
@@ -149,9 +149,9 @@
     },
     {
      "otsikko": "Moskeija, joka kokosi aineet kaikkialta",
-     "teksti": "Sheikh Zayedin suurmoskeija on lähteen mukaan maan suurin moskeija. Rakennustyö aloitettiin 1990-luvulla, ja rukoussalit otettiin käyttöön joulukuussa 2007. Hankkeessa oli lähteen mukaan mukana tuhansia työntekijöitä, ja materiaaleja ja tekijöitä tuli muun muassa Italiasta, Saksasta, Intiasta, Turkista, Iranista, Kiinasta, Britanniasta ja Uudesta-Seelannista. Moskeijassa on 82 kupolia, ja siihen mahtuu noin neljäkymmentä tuhatta rukoilijaa. Lähteen mukaan pihan kukkakuvioista marmorimosaiikkia pidetään maailman suurimpana.",
+     "teksti": "Sheikh Zayedin suurmoskeija on lähteen mukaan maan suurin moskeija. Rakennustyö aloitettiin 1990-luvulla, ja rukoussalit otettiin käyttöön joulukuussa 2007. Hankkeessa oli lähteen mukaan mukana tuhansia työntekijöitä, ja materiaaleja ja tekijöitä tuli muun muassa Italiasta, Saksasta, Intiasta, Turkista, Iranista, Kiinasta, Britanniasta ja Uudesta-Seelannista. Moskeijassa on 82 kupolia, ja siihen mahtuu kymmeniä tuhansia rukoilijoita. Lähteen mukaan pihan kukkakuvioinen marmorimosaiikki voi olla maailman suurin.",
      "tiedosto": "Abu dhabi, Moschea dello Sceicco Zayed, loggiati, pilastri, capitelli dorati 01 a palmizio.jpg",
-     "selite": "Sheikh Zayedin suurmoskeijaan tuotiin materiaaleja ja tekijöitä monista eri maista.",
+     "selite": "Suurmoskeijan valkoisessa marmoriseinässä on kullanvärisiä palmunlehtiaiheisia koristeita.",
      "lahde": "Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)",
      "wiki": "Sheikh Zayed Grand Mosque"
     }
@@ -174,13 +174,13 @@
        "teksti": "Zayed International Airport (AUH) on noin kolmenkymmenen kilometrin päässä kaupungin itäpuolella, ja sen nimi on annettu Sheikh Zayedin mukaan. Vaihtoehtona on lentää Dubaihin ja jatkaa sieltä bussilla tai taksilla. Saarella liikutaan busseilla ja takseilla, ja bussiin tarvitaan lähteen mukaan Hafilat-älykortti, sillä kuljettaja ei ota käteistä. Cornichen varrella kulkee erillinen pyörätie lähes koko matkan.",
        "kuva": {
         "tiedosto": "Shore view.jpg",
-        "selite": "Siltayhteydet liittävät saarikaupungin mantereeseen, josta saari on alle 250 metrin päässä.",
+        "selite": "Siltayhteydet liittävät saarikaupungin mantereeseen.",
         "lahde": "Akhilmohan89, Wikimedia Commons (CC BY-SA 4.0)"
        }
       },
       {
        "otsikko": "Nähtävää: linnake, palatsi ja ranta",
-       "teksti": "Qasr Al Hosn avattiin museona ja kulttuurikohteena uudelleen 2010-luvun lopulla pitkän entisöinnin jälkeen, ja sen vieressä on Abu Dhabin kulttuurisäätiö. Qasr Al Watan eli presidentin palatsi on avoinna vierailijoille maaliskuusta 2019 alkaen. Emirates Palace on hotelli, jota lähteen mukaan pidetään myös suosittuna nähtävyytenä. Etihad Towers on viiden tornin kokonaisuus, ja Corniche on noin kahdeksan kilometriä pitkä rantakatu puistoineen.",
+       "teksti": "Qasr Al Hosn avattiin museona ja kulttuurikohteena uudelleen 2010-luvun lopulla pitkän entisöinnin jälkeen, ja sen vieressä on Abu Dhabin kulttuurisäätiö. Qasr Al Watan eli presidentin palatsi on avoinna vierailijoille maaliskuusta 2019 alkaen. Emirates Palace on hotelli, jota lähteen mukaan pidetään myös suosittuna nähtävyytenä. Etihad Towers on viiden tornin kokonaisuus, ja Corniche on usean kilometrin pituinen rantakatu puistoineen.",
        "kuva": {
         "tiedosto": "Qasr Al Watan in March 2022 10.jpg",
         "selite": "Qasr Al Watan on Arabiemiirikuntien presidentin palatsi, johon vierailijat pääsevät tutustumaan.",
@@ -207,7 +207,7 @@
       },
       {
        "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Ilmasto on kuuma aavikkoilmasto. Toukokuusta syyskuuhun on erittäin kuumaa ja kosteaa, ja heinä–elokuussa ylin päivälämpötila on keskimäärin yli 40 astetta. Kuukausien keskilämpötilat vaihtelevat tammikuun noin 19 asteesta elokuun noin 36 asteeseen. Viileämpi kausi kestää marraskuusta maaliskuuhun, ja silloin sataa muutamana päivänä. Vuosisade on alle 60 millimetriä, ja aurinko paistaa lähes aina. Hiekka- ja pölymyrskyjä esiintyy ajoittain kuumina kuivina kuukausina.",
+       "teksti": "Ilmasto on kuuma ja hyvin kuiva. Kuukausien keskilämpötilat vaihtelevat tammikuun noin 19 asteesta elokuun noin 36 asteeseen, ja heinä- ja elokuussa päivän ylin lämpötila on keskimäärin noin 43 astetta. Viileämpi kausi kestää marraskuusta maaliskuuhun, jolloin keskilämpötila on noin 19–25 °C. Vuodessa sataa vain noin 50 millimetriä, eniten tammi- ja maaliskuussa noin 13 millimetriä kuussa; toukokuusta lokakuuhun sataa korkeintaan millimetrin kuussa.",
        "kuva": {
         "tiedosto": "Beach @ Corniche @ Abu Dhabi (15421876734).jpg",
         "selite": "Corniche on suosittu iltakävelypaikka.",
@@ -240,7 +240,7 @@
        {
         "mita": "Corniche",
         "tahdet": 2,
-        "selite": "Noin kahdeksan kilometrin rantakatu iltakävelyille ja pyöräilyyn."
+        "selite": "Usean kilometrin rantakatu iltakävelyille ja pyöräilyyn."
        }
       ],
       "hyvaTietaa": [
@@ -258,7 +258,7 @@
        },
        {
         "otsikko": "Kuumuus kesällä",
-        "teksti": "Päivälämpötila ylittää kesällä 40 astetta ja ilma on kostea, joten ulkona kannattaa liikkua aamulla tai illalla."
+        "teksti": "Heinä- ja elokuussa päivän ylin lämpötila on keskimäärin noin 43 astetta, joten ulkona kannattaa liikkua aamulla tai illalla."
        }
       ]
      },
@@ -399,13 +399,77 @@
    "lahde": "Wikipedia"
   }
  },
- "saatiedot": null,
+ "saatiedot": {
+  "lat": 24.45,
+  "lon": 54.38,
+  "keskilampo": [
+   19.1,
+   20.6,
+   23.4,
+   27.7,
+   31.8,
+   33.7,
+   35.5,
+   35.9,
+   33.3,
+   29.7,
+   25.2,
+   21.1
+  ],
+  "ylin": [
+   25,
+   27,
+   30,
+   35,
+   40,
+   41,
+   43,
+   43,
+   41,
+   37,
+   31,
+   27
+  ],
+  "alin": [
+   14,
+   16,
+   18,
+   21,
+   25,
+   27,
+   30,
+   30,
+   27,
+   24,
+   20,
+   16
+  ],
+  "sade": [
+   13,
+   8,
+   13,
+   5,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   2,
+   8
+  ],
+  "lahde": {
+   "nimi": "en-Wikipedia, ilmastotaulukko",
+   "kausi": "1991–2020"
+  },
+  "luonnehdinta": "Abu Dhabissa tammikuun keskilämpötila on noin 19 °C ja elokuun noin 36 °C. Vuodessa sataa vain noin 50 millimetriä, eniten tammi- ja maaliskuussa noin 13 millimetriä kuussa; toukokuusta lokakuuhun sataa korkeintaan millimetrin kuussa."
+ },
  "ehdotukset": {
   "lentoasema": "Zayed International Airport (AUH)",
   "huomiot": [
    "Kohdekartassa 4 kohdetta, koska 2 kohdetta jäi pois kuvan puutteen vuoksi: Abu Dhabin kulttuurisäätiöstä ei ole Commonsissa yhtään kuvaa, jonka leveys on vähintään 1200 px, ja Founder's Memorialin ainoa kelvollinen kuva on käytetty nostossa L3. Umm Al Emarat -puisto jätettiin pois, koska sille on vain yksi lähde (Wikivoyage), ja Corniche, koska katu ei sovi kohdetyyppeihin. Kulttuurisäätiö ja Founder's Memorial voidaan lisätä, kun kuva löytyy tai Päätoimittaja sallii L3-kuvan toistamisen.",
    "Valokuva-osio: Commonsissa ei ole isoisän ajan (enintään 1900) PD-vedosta Abu Dhabista, eikä kuvat.md:ssä ole erillistä nykyvalokuvaa. Tarkistin vaatii valokuva-osion, joten päätiedostoksi on pantu sama Qasr Al Hosn -kuva kuin kohdekartan jutussa (tarkistin sallii tämän, vuosi-kenttä puuttuu, koska Commons ei kerro ottovuotta luotettavasti). Päätoimittaja voi vaihtaa tai hyväksyä.",
-   "Saatiedot ovat null, koska säädataa ei ollut. Oppaan sääjakso perustuu en-Wikipedian ilmasto-osioon ja luvut on pyöristetty: tammikuun keskilämpö noin 19 astetta (artikkelin teksti 18,8, taulukko 19,1) ja elokuun noin 36; vuosisade alle 60 mm, koska taulukon kuukausiarvot summautuvat noin 50 mm:iin ja Wikivoyage antaa 57 mm.",
+   "Säädata: saatiedot ja ilmastoluvut tekstissä ovat saa.json:sta (en-Wikipedian ilmastotaulukko, korjattu saa-työkalu 11.10.2026).",
    "Matkustusturvallisuudesta ei ole luettavissa tuoretta lähdettä (um.fi palautti 403). Opas sanoo vain, että ajantasainen tilanne kannattaa tarkistaa ennen matkaa. Etihad Towers -artikkelin maininta vuoden 2026 iskuvauriosta jätettiin pois nykysotana; Päätoimittaja päättää, tarvitaanko oppaaseen varoitus.",
    "Ristiriitoja: Qasr Al Hosnin ikä (1761 vs. 1793-95) ja suurmoskeijan rakennusaika (1994 vs. 1996) ilmaistu vuosisadalla; Qasr Al Watanin valmistumisvuosi (2017 vs. 2018) ilmaistu 2010-luvun lopulla; Etihad Rail ja bussireittinumerot jätetty pois vanhenevina.",
    "fi-Wikipediaa ei luettu (aikakatkaisu), joten wiki-otsikon Abu Dhabi olemassaolo fi-Wikipediassa varmistuu vain tarkistimen --verkko-ajolla; ambience on basaari (vaihtoehto meri)."

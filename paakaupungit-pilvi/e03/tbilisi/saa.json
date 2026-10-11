@@ -1,0 +1,10 @@
+{
+ "lat": 41.72,
+ "lon": 44.83,
+ "keskilampo": [2.7,3.8,7.9,12.9,17.8,22.3,25.3,25.4,20.4,14.7,7.9,3.9],
+ "ylin": [7,8,13,19,24,29,32,32,26,20,13,8],
+ "alin": [-1,0,4,8,13,17,20,20,16,11,5,1],
+ "sade": [16,18,29,64,83,84,42,39,35,46,34,21],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Tbilisi","revisio":1378984855,"taulukko":"Climate data for Tbilisi (1991–2020 normals, extremes 1881–present)","lahteet":"Source 1: Pogoda.ru.net NOAA(humidity, precipitation and days with precip)(Sunshine hours 1961–1990) | Source 2: Weather Atlas(snowfall-daylight), Nomadseaon(daily maximum UV 2022–2023)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":511,"luettu":"2026-10-11","huomiot":[]}
+}

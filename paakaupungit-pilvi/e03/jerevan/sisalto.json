@@ -14,12 +14,12 @@
     }
   },
   "artikkeli": {
-    "intro": "Jerevan on Armenian pääkaupunki ja maan suurin kaupunki, ja se seisoo Hrazdan-joen rotkon äärellä Araratin tasangon koillisreunalla. Kaupungin pääsymboli on **Ararat-vuori**, joka näkyy kaupungin jokaisesta osasta. Asukkaita Jerevanissa on noin 1,1 miljoonaa.\n\nKaupungin nimen uskotaan juontuvan Erebunin linnoituksesta, jonka Urartun kuningas Argishti I perusti **782 eaa.** Isoisän matkavuonna 1873 kaupunki tunnettiin venäläisen vallan aikana nimellä Erivan: se oli Erivanin kuvernementin keskus mutta ei vielä virallisesti kaupunki, sillä kaupunkistatuksen se sai vasta 1870-luvun lopulla. Matala savitalojen kaupunki muuttui 1920-luvulla, kun arkkitehti Alexander Tamanian laati yleissuunnitelman.\n\nTasavallan aukion ympärillä olevat uusklassiset rakennukset on tehty vaaleanpunaisesta ja keltaisesta **tuffikivestä**, ja aukio, Kaskadi ja Matenadaran ovat Tamanianin suunnitelman ja sen jatkojen tunnetuimpia kohteita. Kaupunki oli UNESCOn maailman kirjapääkaupunki 2012.",
-    "teksti": "Jerevan on ollut Armenian pääkaupunki vuodesta 1918, ja itsenäisen Armenian pääkaupunki se on ollut vuodesta 1991. Kaupunki ei kuulu mihinkään maakuntaan, vaan sillä on pääkaupungin erityisasema.\n\n== Linnoituksesta kaupungiksi ==\nErebunin linnoitus perustettiin 782 eaa. Arin Berd -kukkulalle, ja 1968 Jerevan vietti 2 750-vuotisjuhlaa. Ottomaanien komentaja rakennutti Erivanin linnoituksen Hrazdanin rannalle 1582–83, ja venäläiset valtasivat sen lokakuussa 1827. Kaupunkistatuksen Jerevan sai 1870-luvun lopulla Aleksanteri II:n asetuksella.\n\n== Tuffikaupunki ==\nTamanianin yleissuunnitelma hyväksyttiin 1924. Se on säteittäis-kehämäinen ja sijoitettiin vanhan katuverkon päälle, ja sen toteuttaminen johti monien vanhojen rakennusten purkamiseen. Kaupungin lipun pienet punaiset kolmiot viittaavat Armenian historiallisiin pääkaupunkeihin."
+    "intro": "Jerevan on Armenian pääkaupunki ja maan suurin kaupunki, ja se seisoo Hrazdan-joen rotkon äärellä Araratin tasangon koillisreunalla. Kaupungin pääsymboli on **Ararat-vuori**, joka näkyy suuressa osassa kaupunkia. Itse kaupungissa asuu 2020-luvun luvuilla noin 1,1 miljoonaa ihmistä.\n\nKaupungin nimen uskotaan juontuvan Erebunin linnoituksesta, jonka Urartun kuningas Argishti I perusti **782 eaa.** Isoisän matkavuonna 1873 kaupunki tunnettiin venäläisen vallan aikana nimellä Erivan: se oli Erivanin kuvernementin keskus. Matala savitalojen kaupunki muuttui 1920-luvulla, kun arkkitehti Alexander Tamanian laati yleissuunnitelman.\n\nTasavallan aukion ympärillä olevat uusklassiset rakennukset on tehty vaaleanpunaisesta ja keltaisesta **tuffikivestä**, ja aukio, Kaskadi ja Matenadaran ovat Tamanianin suunnitelman ja sen jatkojen tunnetuimpia kohteita. Kaupunki oli UNESCOn maailman kirjapääkaupunki 2012.",
+    "teksti": "Jerevan on ollut Armenian pääkaupunki vuodesta 1918, ja itsenäisen Armenian pääkaupunki se on ollut vuodesta 1991. Kaupunki ei kuulu mihinkään maakuntaan, vaan sillä on pääkaupungin erityisasema.\n\n== Linnoituksesta kaupungiksi ==\nErebunin linnoitus perustettiin 782 eaa. Arin Berd -kukkulalle, ja 1968 Jerevan vietti 2 750-vuotisjuhlaa. Ottomaanien komentaja rakennutti Erivanin linnoituksen Hrazdanin rannalle 1582–83, ja venäläiset valtasivat sen lokakuussa 1827.\n\n== Tuffikaupunki ==\nTamanianin yleissuunnitelma hyväksyttiin 1924. Se on säteittäis-kehämäinen ja sijoitettiin vanhan katuverkon päälle, ja sen toteuttaminen johti monien vanhojen rakennusten purkamiseen. Kaupungin lipun pienet punaiset kolmiot viittaavat Armenian historiallisiin pääkaupunkeihin."
   },
   "kysymykset": [
     {
-      "q": "Mikä vuori on Jerevanin pääsymboli ja näkyy kaupungin jokaisesta osasta?",
+      "q": "Mikä vuori on Jerevanin pääsymboli ja näkyy suuressa osassa kaupunkia?",
       "options": [
         "Aragats",
         "Elbrus",
@@ -29,7 +29,7 @@
       "correct": 2,
       "level": 1,
       "hint": "Vuori on kuvattuna myös kaupungin sinetin kilvessä.",
-      "fact": "Ararat on kaupungin pääsymboli, ja se näkyy kaupungin jokaisesta osasta.",
+      "fact": "Ararat on kaupungin pääsymboli, ja se näkyy suurelta osalta kaupunkia.",
       "source": "https://en.wikipedia.org/wiki/Yerevan"
     },
     {
@@ -92,14 +92,14 @@
   "tiedot": [
     "Jerevanin lipussa on sinetin ympärillä pieniä punaisia kolmioita, ja ne kuvaavat Armenian historiallisia pääkaupunkeja.",
     "Vardavar-juhlana, joka vietetään pääsiäisen jälkeen, tuntemattomatkin saavat kastella toisiaan vedellä, ja suosituin juhlapaikka on Joutsenjärvi.",
-    "Jerevan sijaitsee noin tuhannen metrin korkeudessa, ja lähteen mukaan se on maailman korkeimmalla olevien miljoonakaupunkien joukossa."
+    "Jerevan sijaitsee keskimäärin noin tuhannen metrin korkeudessa merenpinnasta, mikä on korkealla miljoonakaupungiksi."
   ],
   "valokuva": {
-    "tiedosto": "Ararat. 7, Mosquée d'Erivan - (mission) G. Bapst ; (photogr.) Bapst ; (photogr. reprod. par) Molteni (pour la conférence donnée par) Bapst - btv1b531014279.jpg",
-    "vuosi": "1800-luku",
-    "lahde": "Bapst, Germain (1853-1921), Commons (PD)",
-    "lyhyt": "Erivanin moskeija, nykyinen Sininen moskeija, ranskalaisen Germain Bapstin vedoksessa.",
-    "selite": "Moskeija rakennettiin 1700-luvun loppupuolella Erivanin kaanikunnan hallitsijan tilauksesta kaupungin pääasialliseksi perjantaimoskeijaksi. Vedoksen tekijä on ranskalainen Germain Bapst."
+    "tiedosto": "Caucase. Mosquée Géhu. Erivan - (mission) de Baye ; (photogr.) de Baye ; (photogr. reprod. par) Molteni (pour la conférence donnée par) de Baye - btv1b53251410k.jpg",
+    "vuosi": "1898",
+    "lahde": "Baye, Joseph de (1853-1931), Commons (PD)",
+    "lyhyt": "Sininen moskeija Erivanissa ranskalaisen Joseph de Bayen retkikunnan vedoksessa 1898.",
+    "selite": "Vedoksessa näkyy moskeijan laatoitettu kupoli puiden takana ja ihmisiä pihalla. Moskeija rakennettiin 1765–66 Erivanin kaanin Hoseyn Ali Khanin tilauksesta, ja vedoksen tekijä on ranskalainen Joseph de Baye."
   },
   "kaupunkilehti": [
     {
@@ -110,7 +110,7 @@
         {
           "tiedosto": "Yerevan skyline at dawn.jpg",
           "lyhyt": "Jerevan seisoo Araratin tasangon reunalla, ja Ararat on kaupungin pääsymboli.",
-          "selite": "Jerevan seisoo Hrazdan-joen rotkon äärellä Araratin tasangon koillisreunalla, ja Ararat-vuori on kaupungin pääsymboli.",
+          "selite": "Aamuhämärän Jerevan, jonka yllä kohoavat lumipeitteisen Araratin kaksi huippua; kuvan keskellä on oopperarakennus.",
           "lahde": "Սէրուժ Ուրիշեան (Serouj Ourishian), Wikimedia Commons (CC BY-SA 3.0)"
         },
         {
@@ -137,8 +137,8 @@
           "wiki": "Erebuni Fortress"
         },
         {
-          "otsikko": "Erivan ennen kaupunkistatusta",
-          "teksti": "Isoisän matkavuonna 1873 Jerevan oli Erivanin kuvernementin keskus Venäjän keisarikunnassa, johon kaupunki oli siirtynyt 1827–28. Kaupunkistatuksen se sai vasta 1870-luvun lopulla Aleksanteri II:n asetuksella. Lähteiden mukaan vanha Erivan oli pieni kaupunki, jossa oli kapeita katuja ja kujia sekä yksikerroksisia savitaloja tasakattoineen. Kaupunginosia olivat keskusta Shahar, kauppa-alue Ghantar sekä Kond, Dzoragyugh, Nork ja Shentagh. Hrazdanin rotkon rannalla oli ottomaanien 1582–83 rakentama Erivanin linnoitus, jonka venäläiset olivat vallanneet lokakuussa 1827. Muutos alkoi pian: ensimmäinen kirjapaino ja ensimmäinen teatteri perustettiin 1870-luvulla.",
+          "otsikko": "Erivan 1800-luvulla",
+          "teksti": "Isoisän matkavuonna 1873 Jerevan oli Erivanin kuvernementin keskus Venäjän keisarikunnassa, johon kaupunki oli siirtynyt 1827–28. Lähteiden mukaan vanha Erivan oli pieni kaupunki, jossa oli kapeita katuja ja kujia sekä yksikerroksisia savitaloja tasakattoineen. Kaupungin keskusta oli Shahar ja kauppa-alue Ghantar, ja asuinosia olivat muun muassa Kond ja Dzoragyugh. Hrazdanin rotkon rannalla oli ottomaanien 1582–83 rakentama Erivanin linnoitus, jonka venäläiset olivat vallanneet lokakuussa 1827. Muutos alkoi pian: kaupunkiin perustettiin 1870-luvulla ensimmäinen kirjapaino.",
           "tiedosto": "Ararat. 6, Bazar d'Erivan - (mission) G. Bapst ; (photogr.) Bapst ; (photogr. reprod. par) Molteni (pour la conférence donnée par) Bapst - btv1b53101419s.jpg",
           "lyhyt": "Erivanin basaari ranskalaisen Germain Bapstin retkikunnan vedoksessa.",
           "selite": "Vedos on ranskalaisen Germain Bapstin retkikunnan kuvasarjasta ja esittää Erivanin basaaria ennen Tamanianin yleissuunnitelman aikaisia purkuja.",
@@ -147,9 +147,9 @@
         },
         {
           "otsikko": "Tuffikaupunki syntyy",
-          "teksti": "Jerevanin yleissuunnitelman laati arkkitehti Alexander Tamanian, ja se hyväksyttiin 1924. Lähteen mukaan Jerevan oli ensimmäinen Neuvostoliiton kaupunki, jolle laadittiin yleissuunnitelma. Tamanian yhdisti uusklassismin Armenian omaan tuffikiveen ja sijoitti säteittäis-kehämäisen kaupunkisuunnitelmansa vanhan katuverkon päälle, mikä johti monien historiallisten rakennusten purkamiseen. Tasavallan aukion viisi päärakennusta rakennettiin vaaleanpunaisesta ja keltaisesta tuffista basalttijalustalle: työt alkoivat 1926 hallituksen talolla, ja viimeinen rakennus, kansallisgalleria, valmistui 1977.",
+          "teksti": "Jerevanin yleissuunnitelman laati arkkitehti Alexander Tamanian, ja se hyväksyttiin 1924. Tamanian yhdisti uusklassismin Armenian omaan tuffikiveen ja sijoitti säteittäis-kehämäisen kaupunkisuunnitelmansa vanhan katuverkon päälle, mikä johti monien historiallisten rakennusten purkamiseen. Tasavallan aukion viisi päärakennusta rakennettiin vaaleanpunaisesta ja keltaisesta tuffista: työt alkoivat 1926 hallituksen talolla, ja viimeinen rakennus, kansallisgalleria, valmistui 1977.",
           "tiedosto": "Yerevan, Government House, Government of Armenia, Armenia.jpg",
-          "lyhyt": "Hallituksen talon rakennustyöt aloittivat Tasavallan aukion rakentamisen 1926.",
+          "lyhyt": "Hallituksen talo kellotorneineen Tasavallan aukiolla; rakennustyöt aloitettiin siitä 1926.",
           "selite": "Hallituksen talon rakennustyöt alkoivat 1926, ja se on yksi aukiota kehystävistä viidestä tuffirakennuksesta.",
           "lahde": "Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)",
           "wiki": "Alexander Tamanian"
@@ -171,7 +171,7 @@
           "selite": "Lavash on armenialaisen ruokapöydän perusleipä, jota syödään alkupalojen, juustojen ja grillilihan kanssa.",
           "lahde": "Furkan Akkurt, Wikimedia Commons (CC BY-SA 4.0)"
         },
-        "kappale": "Jerevan on Armenian pääkaupunki ja maan suurin kaupunki, jossa asuu noin 1,1 miljoonaa ihmistä. Kaupunki seisoo Hrazdan-joen rotkon äärellä noin tuhannen metrin korkeudessa, ja Ararat-vuori näkyy kaupungin jokaisesta osasta. Keskusta on kompakti ja helppo kävellä, ja Tasavallan aukion rakennukset ovat vaaleanpunaista ja keltaista tuffikiveä. Ilmasto on mannermainen: kesät ovat pitkiä, kuumia ja kuivia, talvet lyhyitä, kylmiä ja lumisia. Pöytään kuuluvat lavash-leipä, grillattu khorovats-liha ja lahmajoun.",
+        "kappale": "Ilmasto on mannermainen: kesät ovat kuumia ja kuivia, talvet kylmiä.",
         "artikkeli": {
           "nimi": "Matkailijan Jerevan",
           "taitto": "opas",
@@ -203,7 +203,7 @@
               "teksti": "Matenadaran seisoo Mashtotsin kadun koillispäässä, ja sinne kannattaa tutustua opastetulla kierroksella. Samalla kadulla on Sininen moskeija, jonka sisäänkäynti tulee Mashtotsin kadulta. Hrazdanin vasemmalla rannalla seisoo Pyhän Sargiksen katedraali, ja Shaharin vanhassa kaupunginosassa on Zoravorin kirkko; kirkot ovat avoinna aamusta myöhään iltaan. Erebunin linnoitus on muutaman kilometrin päässä Tasavallan aukiolta kaakkoon, ja lähteen mukaan se on yksi Armenian parhaiten säilyneistä urartulaisista linnakkeista.",
               "kuva": {
                 "tiedosto": "Blue Mosque, Yerevan in 2019 04.jpg",
-                "lyhyt": "Sininen moskeija rakennettiin 1700-luvun lopulla Erivanin kaanin tilauksesta.",
+                "lyhyt": "Sinisen moskeijan laatoitettu kupoli; moskeija rakennettiin 1765–66 Erivanin kaanin tilauksesta.",
                 "selite": "Moskeijan minaretti oli 1800-luvun Jerevanin korkein rakennelma.",
                 "lahde": "23artashes, Wikimedia Commons (CC BY-SA 4.0)"
               }
@@ -220,7 +220,7 @@
             },
             {
               "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Jerevanin ilmasto on mannermainen aroilmasto: kesät ovat pitkiä, kuumia ja kuivia, talvet lyhyitä, kylmiä ja lumisia. Tammikuussa on pakkasen puolella ja heinäkuussa lähes 30 astetta lämmintä, ja sadetta tulee vuodessa alle 400 millimetriä; kuivimmat kuukaudet ovat elo- ja syyskuu. Elokuussa lämpötila voi nousta lähelle 40 astetta, ja tammikuussa pakkanen voi olla kova. Kevät ja syksy ovat lempeitä."
+              "teksti": "Jerevanin ilmasto on mannermainen: kesät ovat kuumia ja kuivia ja talvet kylmiä. Tammikuun keskilämpötila on noin −3,5 °C ja päivän alin lämpötila keskimäärin noin −8 °C. Heinäkuun keskilämpötila on noin 27 °C ja päivän ylin lämpötila keskimäärin noin 35 °C. Huhtikuun keskilämpötila on noin 13 °C ja lokakuun noin 14 °C. Sadetta tulee vuodessa noin 360 millimetriä: sateisin on maaliskuu noin 60 millimetrillä, ja kuivimmat kuukaudet ovat elo- ja syyskuu noin 10 millimetrillä."
             }
           ],
           "matkailu": {
@@ -301,7 +301,7 @@
         },
         {
           "otsikko": "Aakkoset ja vanhimmat kirjat",
-          "teksti": "Mesrop Mashtots eli 300- ja 400-luvuilla ja keksi lähteen mukaan armenian aakkoset 400-luvun alussa, mitä pidetään ratkaisevana askeleena armenialaisen identiteetin vahvistumisessa. Matenadaranin käsikirjoituksista Lazarian evankeliumi on 800-luvulta ja Echmiadzinin evankeliumi 900-luvulta, ja jälkimmäisen kansi on kaiverrettua norsunluuta. Vehamor-evankeliumi on lähteen mukaan todennäköisesti 600-luvulta ja siten vanhin säilynyt täydellinen armenialainen käsikirjoitus. Kokoelmassa on kopio Urbatagirkistä, ensimmäisestä painetusta armeniankielisestä kirjasta (Venetsia, 1500-luku), sekä ensimmäinen armeniaksi painettu kartta (Amsterdam, 1600-luku).",
+          "teksti": "Mesrop Mashtots eli 300- ja 400-luvuilla ja keksi lähteen mukaan armenian aakkoset 400-luvun alussa, mitä pidetään ratkaisevana askeleena armenialaisen identiteetin vahvistumisessa. Matenadaranin käsikirjoituksista Lazarian evankeliumi on 800-luvulta ja Echmiadzinin evankeliumi 900-luvulta, ja jälkimmäisen kansi on kaiverrettua norsunluuta. Vehamor-evankeliumi on lähteen mukaan todennäköisesti 600-luvulta ja siten vanhin säilynyt täydellinen armenialainen käsikirjoitus. Ensimmäinen painettu armeniankielinen kirja Urbatagirk ilmestyi Venetsiassa 1512 ja ensimmäinen armeniaksi painettu kartta Amsterdamissa 1695.",
           "tiedosto": "Armenian illuminated manuscript from Tabriz at Matenadaran in Yerevan, Armenia.jpg",
           "lyhyt": "Kuvitettu armenialainen käsikirjoitus Matenadaranin kokoelmassa.",
           "selite": "Cilician mestarien Toros Roslinin ja Sargis Pitsakin kuvitetut käsikirjoitukset ovat kokoelman arvostetuimpia.",
@@ -310,7 +310,7 @@
         },
         {
           "otsikko": "Kirjakulttuuri Erivanissa",
-          "teksti": "Jerevanin kansalliskirjasto perustettiin 1800-luvulla,, ja nykyinen rakennus Teryanin kadulla on 1900-luvun alkupuoliskolta. Ensimmäisen kirjapainon kaupunkiin perusti 1870-luvulla Zacharia Gevorkian, ja ensimmäinen yleinen kirjasto avattiin 1900-luvun alussa. Khachatur Abovian syntyi 1800-luvun alussa Kanakerin kylässä, joka on nykyisin osa Jerevania. Hänen romaaninsa Armenian haavat kirjoitettiin 1840-luvulla ja julkaistiin 1858: se oli ensimmäinen modernilla armenian kielellä julkaistu romaani, ja sen kieli perustuu Jerevanin murteeseen klassisen armenian sijaan. Abovian oli myös ensimmäinen armenialainen kirjailija, joka kirjoitti lapsille.",
+          "teksti": "Jerevanin kansalliskirjasto perustettiin 1800-luvulla, ja nykyinen rakennus Teryanin kadulla on 1900-luvun alkupuoliskolta. Ensimmäinen kirjapaino perustettiin kaupunkiin 1870-luvulla, ja ensimmäinen yleinen kirjasto avattiin 1900-luvun alussa. Khachatur Abovian syntyi 1800-luvun alussa Kanakerin kylässä, joka on nykyisin osa Jerevania. Hänen romaaninsa Armenian haavat kirjoitettiin 1840-luvulla ja julkaistiin 1858: se oli ensimmäinen modernilla armenian kielellä julkaistu romaani, ja sen kieli perustuu Jerevanin murteeseen klassisen armenian sijaan. Abovian oli myös ensimmäinen armenialainen kirjailija, joka kirjoitti lapsille.",
           "tiedosto": "Khachatur Abovian statue Yerevan 2022.jpg",
           "lyhyt": "Khachatur Abovianin patsas Jerevanissa, kirjailijan syntymäkylän Kanakerin kaupunginosassa.",
           "selite": "Abovianin romaani Armenian haavat on kirjoitettu Jerevanin murteen pohjalta.",
@@ -398,8 +398,8 @@
       "lahde": "Wikipedia"
     },
     "Sininen moskeija": {
-      "aika": "1700-luvun loppupuoli",
-      "teksti": "Sininen moskeija rakennettiin 1700-luvun loppupuolella Erivanin kaanikunnan hallitsijan Hoseyn Ali Khanin tilauksesta kaupungin pääasialliseksi perjantaimoskeijaksi. Kun venäläiset valtasivat kaupungin 1827, se oli suurin kahdeksasta Jerevanin moskeijasta. Minaretti oli 1800-luvun Jerevanin korkein rakennelma.\n\nMoskeijassa toimi 1700-luvun lopulta madrasa, ja saksalainen August von Haxthausen kuvasi 1840-luvulla koulun, jossa joukko poikia opiskeli persiaa. Länsimaiset matkailijat H. F. B. Lynch ja Luigi Villari kutsuivat moskeijaa nimellä Gök Jami, 'taivaansininen moskeija'. Laatoitus tehtiin 1800-luvun lopulla, ja rakennus uudistettiin 1900-luvun alussa.\n\nIsoisän matkavuonna 1873 moskeija oli toiminnassa. 1920-luvulta se ei enää toiminut uskonnollisena laitoksena, ja sisäpihan teehuoneessa kävi kirjailijoita ja taiteilijoita, muun muassa Yeghishe Charents, Martiros Saryan ja William Saroyan. Restauroinnin jälkeen 1990-luvulla se on ollut jälleen uskonnollisessa käytössä, ja sen yhteydessä on Persian kielen kirjasto, joka avattiin 2010-luvulla.",
+      "aika": "1765–1766",
+      "teksti": "Sininen moskeija rakennettiin 1765–66 Erivanin kaanikunnan hallitsijan Hoseyn Ali Khanin tilauksesta kaupungin pääasialliseksi perjantaimoskeijaksi. Kun venäläiset valtasivat kaupungin 1827, se oli suurin kahdeksasta Jerevanin moskeijasta. Minaretti oli 1800-luvun Jerevanin korkein rakennelma.\n\nMoskeijassa toimi 1700-luvun lopulta madrasa, ja saksalainen August von Haxthausen kuvasi 1840-luvulla koulun, jossa joukko poikia opiskeli persiaa. Länsimaiset matkailijat H. F. B. Lynch ja Luigi Villari kutsuivat moskeijaa nimellä Gök Jami, 'taivaansininen moskeija'. Laatoitus tehtiin 1800-luvun lopulla, ja rakennus uudistettiin 1900-luvun alussa.\n\nIsoisän matkavuonna 1873 moskeija oli toiminnassa. 1920-luvulta se ei enää toiminut uskonnollisena laitoksena, ja sisäpihan teehuoneessa kävi kirjailijoita ja taiteilijoita, muun muassa Yeghishe Charents, Martiros Saryan ja William Saroyan. Restauroinnin jälkeen 1990-luvulla se on ollut jälleen uskonnollisessa käytössä, ja sen yhteydessä on Persian kielen kirjasto, joka avattiin 2010-luvulla.",
       "kuvat": [
         {
           "tiedosto": "Dome of Blue Mosque, Yerevan, Armenia.jpg",
@@ -489,11 +489,75 @@
       "lahde": "Wikipedia"
     }
   },
-  "saatiedot": null,
+  "saatiedot": {
+    "lat": 40.18,
+    "lon": 44.51,
+    "keskilampo": [
+      -3.5,
+      0,
+      7,
+      12.9,
+      17.7,
+      23.1,
+      26.8,
+      26.7,
+      21.4,
+      14,
+      5.8,
+      -0.8
+    ],
+    "ylin": [
+      2,
+      6,
+      14,
+      20,
+      25,
+      31,
+      35,
+      34,
+      29,
+      22,
+      13,
+      4
+    ],
+    "alin": [
+      -8,
+      -5,
+      1,
+      6,
+      11,
+      15,
+      19,
+      19,
+      13,
+      7,
+      0,
+      -5
+    ],
+    "sade": [
+      21,
+      21,
+      60,
+      56,
+      47,
+      24,
+      17,
+      10,
+      10,
+      51,
+      25,
+      21
+    ],
+    "lahde": {
+      "nimi": "en-Wikipedia, ilmastotaulukko",
+      "kausi": "1991–2020"
+    },
+    "luonnehdinta": "Jerevanissa tammikuun keskilämpötila on noin −3,5 °C ja heinäkuun noin 27 °C. Vuodessa sataa noin 360 millimetriä; sateisin kuukausi on maaliskuu noin 60 millimetrillä, ja kuivimmat ovat elo- ja syyskuu noin 10 millimetrillä."
+  },
   "ehdotukset": {
     "lentoasema": "Zvartnotsin kansainvälinen lentoasema (EVN)",
     "huomiot": [
-      "Säädataa ei ole: saatiedot on null, ja oppaan sääjakso perustuu en-Wikipedian ilmastotaulukkoon, ja luvut on pyöristetty.",
+      "Säädata: saatiedot ja ilmastoluvut tekstissä ovat saa.json:sta (en-Wikipedian ilmastotaulukko, korjattu saa-työkalu 11.10.2026).",
       "Kevyen pisteen kuvaus sijoittaa Kaskadin kaupungin pohjoisosaan; lähteiden mukaan se on keskustan pohjoislaidalla Kentronin alueella.",
       "Ennen–nyt-paria ja valokuvan uusi-kenttää ei tehty: kaikki muut valitut nykykuvat on jo käytetty muualla, eikä samaa tiedostoa saa käyttää kahdesti."
     ]

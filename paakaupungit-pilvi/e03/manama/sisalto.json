@@ -14,8 +14,8 @@
   }
  },
  "artikkeli": {
-  "intro": "Manama on Bahrainin pääkaupunki ja maan suurin kaupunki, ja se sijaitsee **Bahrainin pääsaaren koillisrannikolla** Persianlahdella matalalla niemellä. Maasto on tasaista ja kuivaa, ja kaupungin ytimessä on yhä vanha basaari eli souk. Manaman kuvernementissa asui vuonna 2020 noin 548 000 ihmistä.\n\nNimi mainitaan kaupunkina ensi kerran 1300-luvulla, ja Manama pysyi pienenä kauppasatamana, kunnes portugalilaiset valtasivat sen 1500-luvun alussa. Isoisän matkavuonna 1873 Manaman **kauppa oli lähteen mukaan toipunut täysin**. Viereisen saaren Muharraq oli Bahrainin pääkaupunki ennen Manamaa, ja kaupungit ovat lähteen mukaan muodostuneet nykyisiksi kaksoiskaupungeiksi 1800-luvulla.\n\nNykyään Manama on pankkien ja kaupan keskus. Rannalla kohoavat Bahrain World Trade Centerin **tuuliturbiinitornit** ja Bahrain Financial Harbourin tornit, ja kaupungissa ovat myös Bahrainin kansallismuseo ja Koraanin talo Beit Al Quran. Lentoasema on Muharraqin saarella, ja noin kuuden kilometrin päässä on UNESCOn maailmanperintökohde Qal'at al-Bahrain.",
-  "teksti": "Manama sijaitsee Bahrainin pääsaaren koillisrannikolla Persianlahdella. Ilmasto on kuuma ja kuiva, ja kesällä lämpötila voi nousta yli 45 asteeseen. Historiallisesti kaupunki rajoittui soukiin ja etelässä olevaan linnakkeeseen, ja Bahrain Financial Harbour on rakennettu pääosin täytemaalle.\n\nManama oli jo ennen öljyn löytymistä kauppakaupunki ja portti pääsaarelle. Brittiläinen tutkija kuvasi kaupunkia 1860-luvulla niin, että siellä oli muutamia raunioituneita kivirakennuksia ja maisemaa hallitsivat kalastajien ja helmenpyytäjien majat. Öljy löytyi 1932, ja lähteen mukaan öljyvarallisuus vauhditti kaupungin kasvua; 1990-luvulla talouden monipuolistaminen teki siitä rahoitusalan keskuksen.\n\nMatkailijalle Manama on kompakti: basaari ja Bab Al Bahrain ovat vanhan ytimen sydän, museot ovat rannan tuntumassa, ja uudet pilvenpiirtäjät näkyvät lähes joka kadunkulmasta. Lentoasema on viereisellä saarella, ja kävelyretket sopivat parhaiten talvikuukausiin."
+  "intro": "Manama on Bahrainin pääkaupunki ja maan suurin kaupunki, ja se sijaitsee **Bahrainin pääsaaren koillisrannikolla** Persianlahdella matalalla niemellä. Maasto on tasaista ja kuivaa, ja kaupungin ytimessä on yhä vanha basaari eli souk. Manaman kuvernementissa asui vuonna 2020 noin 548 000 ihmistä.\n\nNimi mainitaan kaupunkina ensi kerran 1300-luvulla, ja portugalilaiset valtasivat Bahrainin 1500-luvun alussa. Isoisän matkavuonna 1873 Manama oli **helmenpyynnin ja kaupan satamakaupunki**, jonka hallitsija oli solminut Britannian kanssa rauhan- ja ystävyyssopimuksen vuonna 1861. Viereisen saaren Muharraq oli Bahrainin pääkaupunki ennen Manamaa, ja nykyään kaupungit muodostavat yhtenäisen kaupunkialueen.\n\nNykyään Manama on pankkien ja kaupan keskus. Rannalla kohoavat Bahrain World Trade Centerin **tuuliturbiinitornit** ja Bahrain Financial Harbourin tornit, ja kaupungissa ovat myös Bahrainin kansallismuseo ja Koraanin talo Beit Al Quran. Lentoasema on Muharraqin saarella, ja noin kuuden kilometrin päässä on UNESCOn maailmanperintökohde Qal'at al-Bahrain.",
+  "teksti": "Manama sijaitsee Bahrainin pääsaaren koillisrannikolla Persianlahdella. Ilmasto on kuuma ja kuiva, ja heinä- ja elokuussa päivän ylin lämpötila on keskimäärin noin 40 astetta. Historiallisesti kaupunki rajoittui soukiin ja etelässä olevaan linnakkeeseen, ja Bahrain Financial Harbour on rakennettu pääosin täytemaalle.\n\nManama oli jo ennen öljyn löytymistä kauppakaupunki ja portti pääsaarelle. Englantilaisen matkailijan William Gifford Palgraven mukaan Manamassa oli 1860-luvun alussa vain muutamia rapistuvia kivitaloja, ja suurin osa asumuksista oli palmunlehdistä tehtyjä majoja, joissa asui muun muassa kalastajia. Öljy löytyi 1932, ja lähteen mukaan öljyvarallisuus vauhditti kaupungin kasvua; 1990-luvulla talouden monipuolistaminen teki siitä rahoitusalan keskuksen.\n\nMatkailijalle Manama on kompakti: basaari ja Bab Al Bahrain ovat vanhan ytimen sydän, museot ovat rannan tuntumassa, ja uudet pilvenpiirtäjät näkyvät lähes joka kadunkulmasta. Lentoasema on viereisellä saarella, ja kävelyretket sopivat parhaiten talvikuukausiin."
  },
  "kysymykset": [
   {
@@ -71,7 +71,7 @@
    "correct": 1,
    "level": 2,
    "hint": "Kokoelman ydin on yhden liikemiehen lahjoitus.",
-   "fact": "Museon kokoelma kattaa kalligrafiaperinteen ensimmäiseltä hidžran vuosisadalta nykypäivään.",
+   "fact": "Museon kokoelma kattaa kalligrafiaperinteen varhaisimmilta vuosisadoilta nykypäivään.",
    "source": "https://en.wikipedia.org/wiki/Beit_Al_Quran"
   },
   {
@@ -111,11 +111,11 @@
   {
    "id": "kaupunki",
    "nimi": "Manama",
-   "johdanto": "Manama on kauppasatama, jonka nimi mainitaan kirjoissa ensi kerran 1300-luvulla. Isoisän matkavuonna 1873 sen kauppa oli lähteen mukaan toipunut täysin.",
+   "johdanto": "Manama on kauppasatama, jonka nimi mainitaan kirjoissa ensi kerran 1300-luvulla. Isoisän matkavuonna 1873 se oli helmenpyynnin ja kaupan satamakaupunki.",
    "kansikuvat": [
     {
      "tiedosto": "Manama Skyline of West Manama 2.jpg",
-     "selite": "Manama on Bahrainin pääkaupunki ja maan suurin kaupunki.",
+     "selite": "Manaman siluetti Qal'at al-Bahrainin kaivausalueelta nähtynä.",
      "lahde": "Zairon, Wikimedia Commons (CC BY-SA 4.0)"
     },
     {
@@ -132,7 +132,7 @@
    "nostot": [
     {
      "otsikko": "Nimi, jonka merkitystä ei tiedetä varmasti",
-     "teksti": "Manaman nimen merkitystä ei tiedetä varmasti. Joidenkin tulkintojen mukaan se tulee arabian sanasta el-Menâme, joka tarkoittaa lepopaikkaa tai unien paikkaa, mutta myös persialainen juuri on mahdollinen, ja selitys on epävarma. Nimi mainitaan kaupunkina ensi kerran käsikirjoituksessa, joka ajoitetaan 1300-luvulle, ja varhaisimpien mainintojen aikaan Bahrain oli Hormuzin kuningaskunnan sivuvaltio. Manama pysyi pienenä kauppasatamana, kunnes portugalilaiset valtasivat sen 1500-luvun alussa. Isoisän matkavuonna 1873 kauppa oli lähteen mukaan toipunut täysin.",
+     "teksti": "Manaman nimen merkitystä ei tiedetä varmasti. Joidenkin tulkintojen mukaan se tulee arabian sanasta el-Menâme, joka tarkoittaa lepopaikkaa tai unien paikkaa, mutta myös persialainen juuri on mahdollinen, ja selitys on epävarma. Nimi mainitaan kaupunkina ensi kerran käsikirjoituksessa, joka ajoitetaan 1300-luvulle, ja varhaisimpien mainintojen aikaan Bahrain oli Hormuzin kuningaskunnan sivuvaltio. Portugalilaiset valtasivat Bahrainin 1500-luvun alussa. Isoisän matkavuonna 1873 Manama oli helmenpyynnin ja kaupan satamakaupunki, jonka hallitsija oli solminut Britannian kanssa rauhan- ja ystävyyssopimuksen vuonna 1861.",
      "tiedosto": "1771 Bonne Map of Arabia - Geographicus - Arabia-bonne-1771.jpg",
      "selite": "Rigobert Bonnen ranskankielinen Arabian niemimaan kartta vuodelta 1771.",
      "lahde": "Rigobert Bonne, Wikimedia Commons (PD)",
@@ -140,7 +140,7 @@
     },
     {
      "otsikko": "Kaksi kaupunkia kahdella saarella",
-     "teksti": "Manama ja Muharraq ovat kaksi kaupunkia kahdella saarella, ja lähteen mukaan ne ovat muodostuneet nykyisiksi kaksoiskaupungeiksi 1800-luvulla. Muharraq nousi etualalle puolustettavan sijaintinsa vuoksi, ja se oli Bahrainin pääkaupunki ennen Manamaa, kun taas Manama oli kauppakaupunki ja portti pääsaarelle. Kaupunkien välillä oli 1900-luvun alkupuolella puusilta, ja nykyään niitä yhdistää noin kolmen kilometrin pituinen pengertie. Muharraqin saarella on Bahrainin lentoasema, noin seitsemän kilometrin päässä Manaman keskustasta. Muharraqin vanha kaupunki kuuluu UNESCOn maailmanperintökohteeseen Bahrain Pearling Path.",
+     "teksti": "Manama ja Muharraq ovat vierekkäisiä kaupunkeja kahdella saarella, ja nykyään ne muodostavat yhtenäisen kaupunkialueen. Muharraq oli Bahrainin pääkaupunki ennen Manamaa ja helmenpyynnin keskus, kun taas Manama oli kauppakaupunki ja portti pääsaarelle. Kaupunkien välille rakennettiin 1900-luvun alkupuolella pengertie, jota pidetään Bahrainin ensimmäisenä nykyaikaisena siltana; nykyään saaria yhdistää kolme pengertietä. Muharraqin saarella on Bahrainin lentoasema. Muharraqin vanhassa kaupungissa on osa UNESCOn maailmanperintökohdetta Pearling, Testimony of an Island Economy (2012).",
      "tiedosto": "Manama bahrain.jpg",
      "selite": "NASA:n STS-78-lennolla otettu avaruuskuva Bahrainin pääsaaresta ja sen pohjoisosan kaupunkialueista.",
      "lahde": "NASA/STS-78, Wikimedia Commons (PD)",
@@ -148,7 +148,7 @@
     },
     {
      "otsikko": "Pilvenpiirtäjä, joka ottaa tuulen käyttöön",
-     "teksti": "Bahrain World Trade Centerin kaksoistornit ovat yli 200 metriä korkeat, ja ne valmistuivat 2000-luvun lopulla. Lähteen mukaan se on ensimmäinen pilvenpiirtäjä maailmassa, johon tuuliturbiinit on suunniteltu osaksi rakennetta. Tornit yhdistävissä silloissa on tuuliturbiinit. Purjeen muotoiset tornit ohjaavat Persianlahdelta puhaltavan tuulen turbiinien läpi, ja tuulitunnelikokeiden mukaan tuuli pysyy sopivassa kulmassa, kun se tulee kapeasta sektorista tornien keskiakselin suunnasta. Turbiinien odotettiin tuottavan murto-osan tornien sähköstä, ja rakennus on voittanut kestävän rakentamisen palkintoja.",
+     "teksti": "Bahrain World Trade Centerin kaksoistornit ovat yli 200 metriä korkeat, ja ne valmistuivat 2000-luvun lopulla. Lähteen mukaan se on ensimmäinen pilvenpiirtäjä maailmassa, johon tuuliturbiinit on suunniteltu osaksi rakennetta. Tornit yhdistävissä silloissa on tuuliturbiinit. Purjeen muotoiset tornit ohjaavat Persianlahdelta puhaltavan tuulen turbiinien läpi, ja tuulitunnelikokeiden mukaan virtaus pysyy lähes kohtisuorassa turbiineihin nähden, kun tuuli tulee enintään noin 45 asteen kulmasta tornien keskiakseliin nähden. Turbiinien odotettiin tuottavan murto-osan tornien sähköstä, ja rakennus on voittanut kestävän rakentamisen palkintoja.",
      "tiedosto": "Manama Bahrain World Trade Centre & Bahrain Financial Harbour 2.jpg",
      "selite": "Bahrain World Trade Centerin tornien välisissä silloissa on tuuliturbiinit.",
      "lahde": "Zairon, Wikimedia Commons (CC BY-SA 4.0)",
@@ -178,7 +178,7 @@
      "jaksot": [
       {
        "otsikko": "Perille ja liikkeelle",
-       "teksti": "Bahrain International Airport (BAH) on Muharraqin saarella, noin seitsemän kilometrin päässä Manaman liikealueesta. Uusi matkustajaterminaali on otettu käyttöön 2020-luvun alussa. Lentokentältä pääsee Manaman linja-autoasemalle linjoilla A1, A2, 10 ja 11, ja A1 kulkee säännöllisesti. Kaupungissa on oma linja-autoverkosto. Taksissa kannattaa käyttää mittaria. Saudi-Arabiasta pääsee autolla pengertietä pitkin, joka valmistui 1980-luvulla. Viisumisäännöt kannattaa tarkistaa ennen matkaa."
+       "teksti": "Bahrain International Airport (BAH) on Muharraqin saarella, muutaman kilometrin päässä Manaman liikealueesta. Uusi matkustajaterminaali on otettu käyttöön 2020-luvun alussa. Lentokentältä pääsee Manaman linja-autoasemalle linjoilla A1, A2, 10 ja 11, ja A1 kulkee säännöllisesti. Kaupungissa on oma linja-autoverkosto. Taksissa kannattaa käyttää mittaria. Saudi-Arabiasta pääsee autolla pengertietä pitkin, joka valmistui 1980-luvulla. Viisumisäännöt kannattaa tarkistaa ennen matkaa."
       },
       {
        "otsikko": "Basaari ja portti",
@@ -204,7 +204,7 @@
       },
       {
        "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Wikipedian ilmastotaulukon mukaan kuukausien keskilämpötila vaihtelee tammikuun noin 17 asteesta heinä- ja elokuun noin 34–35 asteeseen. Kesäkuusta syyskuuhun ei sada lainkaan, ja sade osuu talvikuukausiin, jolloin sataa kuukaudessa noin 13–18 millimetriä. Kesällä lämpötila voi nousta yli 45 asteeseen, ja talvella se voi harvoin laskea alle kymmeneen asteeseen. Kevät on miellyttävintä aikaa. Matkailuoppaan mukaan paras aika on marraskuusta maaliskuuhun, ja lokakuu ja huhtikuu ovat vielä kestäviä, kun taas kesä ja syyskuu ovat erittäin kuumia ja kosteita. Joulu–helmikuun iltoihin kannattaa pakata kevyt villapaita.",
+       "teksti": "Manamassa kuukausien keskilämpötila vaihtelee tammikuun noin 17,5 asteesta heinä- ja elokuun noin 35 asteeseen, ja heinä- ja elokuussa päivän ylin lämpötila on keskimäärin noin 40 astetta. Kesäkuusta syyskuuhun ei sada lainkaan, ja sade osuu talvikuukausiin: marraskuusta maaliskuuhun sataa kuukaudessa noin 13–18 millimetriä, ja vuodessa sataa yhteensä noin 95 millimetriä. Paras aika matkailuun on marraskuusta maaliskuuhun, jolloin keskilämpötila on noin 18–25 °C; kesäkuusta syyskuuhun se on noin 33–35 °C.",
        "kuva": {
         "tiedosto": "Manama Bahrain National Museum Exterior The Pearl Diver.jpg",
         "selite": "Bahrainin kansallismuseon edustalla on rantakävelyreitti, jolta näkee Muharraqin saarelle.",
@@ -297,9 +297,9 @@
     },
     {
      "otsikko": "Kuninkaan nimi kivessä",
-     "teksti": "Qal'at al-Bahrainilta on kaivauksilla löytynyt lisäksi kymmeniä savitauluja. Durand-kivi löydettiin 1800-luvulla, ja siinä esiintyy Dilmunin kuninkaan Rimumin nimi. Kivi on esillä Bahrainin kansallismuseon Dilmunin salissa, jossa on myös leimasinsinettejä sekä Barbarin ja Saarin temppelien esineitä. Savitaulut ja kiveen kirjoitettu nimi kertovat, että Dilmun tunnetaan nimenä kirjallisista lähteistä, ei vain kaivauslöydöistä. Ensimmäiset kaivaukset Qal'at al-Bahrainilla teki tanskalainen retkikunta 1950-luvulta alkaen.",
+     "teksti": "Qal'at al-Bahrainilta on kaivauksilla löytynyt lisäksi kymmeniä savitauluja. Durand-kivi löydettiin 1800-luvulla Bilad al-Qadimin moskeijan seinästä; sen kirjoitus mainitsee Rimumin, Inzak-jumalan palvelijan, ja Rimum tunnetaan Dilmunin kuninkaana. Alkuperäisen kerrotaan tuhoutuneen toisessa maailmansodassa, ja Bahrainin kansallismuseossa on jäljennös. Museon Dilmunin salissa on leimasinsinettejä sekä Barbarin temppelin ja Saarin löytöjä. Ensimmäiset kaivaukset Qal'at al-Bahrainilla teki tanskalainen retkikunta 1950-luvulta alkaen.",
      "tiedosto": "Durand Stone.jpg",
-     "selite": "Durand-kivi löydettiin 1800-luvulla, ja se on esillä Bahrainin kansallismuseossa.",
+     "selite": "Jäljennös Durand-kivestä Bahrainin kansallismuseossa; alkuperäinen löytyi 1800-luvulla.",
      "lahde": "Droodkin, Wikimedia Commons (CC BY-SA 4.0)",
      "wiki": "Dilmun Burial Mounds"
     },
@@ -377,7 +377,7 @@
   },
   "Manaman souk": {
    "aika": "vanha basaari",
-   "teksti": "Manaman souk on pääkaupungin vanha basaari, joka sijaitsee kaupungin pohjoisosassa vanhan kaupungin ja liikealueen välissä. Pääsisäänkäynti on Bab Al Bahrain. Lähteen mukaan kaupunki rajoittui historiallisesti soukiin ja etelässä olevaan linnakkeeseen.\n\nSouk on kapeiden kujien verkko, jossa myydään matkamuistoja, kultaa ja koruja sekä räätälin palveluita. Alue on jaettu uuteen jalankulkualueeseen ja vanhaan osaan, jossa on sekä autotie että jalkakäytävät; uudistettu alue avattiin yleisölle 2010-luvulla. Keskustassa on lähteen mukaan myös pieniä työpajoja ja kauppiaita, ja alueella on maan ainoa synagoga.\n\nIsoisän matkavuonna 1873 Manaman kauppa oli lähteen mukaan toipunut täysin. Vuosina 1911–12 Manamassa kävi lähteen mukaan kymmeniä höyrylaivoja, enimmäkseen brittiläisiä, ja tuontitavaroina mainitaan riisi, tekstiilit, kahvi, taatelit, tee ja tupakka.",
+   "teksti": "Manaman souk on pääkaupungin vanha basaari, joka sijaitsee kaupungin pohjoisosassa vanhan kaupungin ja liikealueen välissä. Pääsisäänkäynti on Bab Al Bahrain. Lähteen mukaan kaupunki rajoittui historiallisesti soukiin ja etelässä olevaan linnakkeeseen.\n\nSouk on kapeiden kujien verkko, jossa myydään matkamuistoja, kultaa ja koruja sekä räätälin palveluita. Alue on jaettu uuteen jalankulkualueeseen ja vanhaan osaan, jossa on sekä autotie että jalkakäytävät; uudistettu alue avattiin yleisölle 2010-luvulla. Keskustassa on lähteen mukaan myös pieniä työpajoja ja kauppiaita, ja alueella on maan ainoa synagoga.\n\nIsoisän matkavuonna 1873 Manama oli helmenpyynnin ja kaupan satamakaupunki. Vuosina 1911–12 Manamassa kävi lähteen mukaan kymmeniä höyrylaivoja, enimmäkseen brittiläisiä, ja tuontitavaroina mainitaan riisi, tekstiilit, kahvi, taatelit, tee ja tupakka.",
    "kuvat": [
     {
      "tiedosto": "Manama Bab al-Bahrain Souq 1.jpg",
@@ -413,7 +413,7 @@
   },
   "Beit Al Quran": {
    "aika": "1980-luvulta",
-   "teksti": "Beit Al Quran eli Koraanin talo on islamilaisen taiteen monitoimikeskus Hooran kaupunginosassa. Rakentaminen alkoi 1980-luvulla, ja museo avattiin 1990-luvun kynnyksellä. Kompleksiin kuuluvat moskeija, kirjasto, auditorio, koraanikoulu ja museo, jossa on useita näyttelysaleja.\n\nKokoelman ydin on liikemies Abdul Latif Jassim Kanoon oma käsikirjoituskokoelma, jonka hän lahjoitti museolle. Lähteen mukaan rahoitus tuli kokonaan lahjoituksina valtionpäämiehistä koululaisiin. Rakennuksen ulkoasu perustuu 1100-luvun moskeijaan. Kirjastossa on lähteen mukaan kymmeniä tuhansia kirjoja ja käsikirjoituksia, ja kokoelma kattaa kalligrafiaperinteen ensimmäiseltä hidžran vuosisadalta nykypäivään.\n\nIsoisän matkavuonna 1873 talo ei ollut vielä olemassa.",
+   "teksti": "Beit Al Quran eli Koraanin talo on islamilaisen taiteen monitoimikeskus Hooran kaupunginosassa. Rakentaminen alkoi 1980-luvulla, ja museo avattiin 1990-luvun kynnyksellä. Kompleksiin kuuluvat moskeija, kirjasto, auditorio, koraanikoulu ja museo, jossa on useita näyttelysaleja.\n\nKokoelman ydin on liikemies Abdul Latif Jassim Kanoon oma käsikirjoituskokoelma, jonka hän lahjoitti museolle. Lähteen mukaan rahoitus tuli kokonaan lahjoituksina valtionpäämiehistä koululaisiin. Rakennuksen ulkoasu perustuu 1100-luvun moskeijaan. Kirjastossa on lähteen mukaan kymmeniä tuhansia kirjoja ja käsikirjoituksia, ja kokoelma kattaa kalligrafiaperinteen varhaisimmilta vuosisadoilta nykypäivään.\n\nIsoisän matkavuonna 1873 talo ei ollut vielä olemassa.",
    "kuvat": [
     {
      "tiedosto": "Beit Al Quran 001.tiff",
@@ -425,7 +425,7 @@
   },
   "Bahrainin kansallismuseo": {
    "aika": "1988",
-   "teksti": "Bahrainin kansallismuseo avattiin vuonna 1988, ja se on lähteen mukaan maan suurin julkinen museo. Sen suunnittelivat tanskalaiset arkkitehdit Krohn & Hartvig Rasmussen, ja rakennus seisoo keinotekoisella niemellä Muharraqin saarta vastapäätä. Museossa on useita pysyviä näyttelysaleja.\n\nDilmunin salissa on leimasinsinettejä, Barbarin ja Saarin temppelien esineitä sekä Durand-kivi. Tylos–islamin sali käsittelee hellenististä aikaa ja islamin aikaa 700-luvulta, ja siellä on esillä Khamisin moskeijan esineitä. Perinteisten ammattien salissa on jäljennös perinteisestä soukista, ja Dilmun-hautojen salissa on A'alista siirretty ja museossa uudelleen koottu hautakumpu.\n\nIsoisän matkavuonna 1873 museota ei vielä ollut; se on rakennettu keinotekoiselle niemelle.",
+   "teksti": "Bahrainin kansallismuseo avattiin vuonna 1988, ja se on lähteen mukaan maan suurin julkinen museo. Sen suunnittelivat tanskalaiset arkkitehdit Krohn & Hartvig Rasmussen, ja rakennus seisoo keinotekoisella niemellä Muharraqin saarta vastapäätä. Museossa on useita pysyviä näyttelysaleja.\n\nDilmunin salissa on leimasinsinettejä sekä Barbarin temppelin ja Saarin löytöjä, ja museossa on esillä jäljennös Durand-kivestä. Tylos–islamin sali käsittelee hellenististä aikaa ja islamin aikaa 700-luvulta, ja siellä on esillä Khamisin moskeijan esineitä. Perinteisten ammattien salissa on jäljennös perinteisestä soukista, ja Dilmun-hautojen salissa on A'alista siirretty ja museossa uudelleen koottu hautakumpu.\n\nIsoisän matkavuonna 1873 museota ei vielä ollut; se on rakennettu keinotekoiselle niemelle.",
    "kuvat": [
     {
      "tiedosto": "Manama Bahrain National Museum Exterior 1.jpg",
@@ -448,11 +448,75 @@
    "lahde": "Wikipedia"
   }
  },
- "saatiedot": null,
+ "saatiedot": {
+  "lat": 26.22,
+  "lon": 50.58,
+  "keskilampo": [
+   17.5,
+   18.4,
+   21.3,
+   26,
+   31.1,
+   34,
+   35.1,
+   35.1,
+   33.2,
+   29.9,
+   24.6,
+   19.7
+  ],
+  "ylin": [
+   21,
+   22,
+   26,
+   31,
+   36,
+   39,
+   40,
+   40,
+   38,
+   34,
+   28,
+   23
+  ],
+  "alin": [
+   15,
+   15,
+   18,
+   22,
+   27,
+   30,
+   31,
+   32,
+   30,
+   26,
+   22,
+   17
+  ],
+  "sade": [
+   18,
+   13,
+   15,
+   8,
+   8,
+   0,
+   0,
+   0,
+   0,
+   1,
+   17,
+   15
+  ],
+  "lahde": {
+   "nimi": "en-Wikipedia, ilmastotaulukko",
+   "kausi": "1991–2020"
+  },
+  "luonnehdinta": "Manamassa tammikuun keskilämpötila on noin 17,5 °C ja heinä- ja elokuun noin 35 °C. Vuodessa sataa noin 95 millimetriä, suurin osa marraskuusta maaliskuuhun, ja kesäkuusta syyskuuhun ei sada lainkaan."
+ },
  "ehdotukset": {
   "lentoasema": "Bahrain International Airport (BAH)",
   "huomiot": [
-   "Säädataa ei ollut: saatiedot on null ja oppaan sääjakso perustuu Wikipedian ilmastotaulukkoon, jonka luvut pyöristettiin yhden lähteen vuoksi.",
+   "Säädata: saatiedot ja ilmastoluvut tekstissä ovat saa.json:sta (en-Wikipedian ilmastotaulukko, korjattu saa-työkalu 11.10.2026).",
    "Asukasluku (noin 548 000, 2020) on Capital Governoraten, ei kaupungin rajojen mukainen.",
    "Matkustusturvallisuus: opas ei viittaa ulkoministeriöön (ohje 4.8, ei viranomaisviittausta); teksti kehottaa vain tarkistamaan ajantasaiset paikalliset ohjeet.",
    "Opas 5 -kuva (Pearl Diver -veistos rantakäytävällä) kuuluu helmiteemaan; kuvateksti ei väitä veistoksesta mitään.",

@@ -1,0 +1,10 @@
+{
+ "lat": 40.37,
+ "lon": 49.84,
+ "keskilampo": [4.8,4.7,7.3,11.9,18,23.2,26.1,26.5,22,16.7,10.9,6.6],
+ "ylin": [7,8,11,17,23,28,31,31,26,20,13,9],
+ "alin": [3,3,5,9,15,20,23,23,19,13,8,5],
+ "sade": [32,30,18,17,15,9,4,8,29,33,44,35],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Baku","revisio":1379370493,"taulukko":"Climate data for Baku (Maştağa) (1991–2020 normals, extremes 1987–present)","lahteet":"Source 1: NOAA (precipitation days and sun 1971–1990) Starlings Roost Weather | Source 2: Meoweather (Snowy days) infoclimat.fr (extremes), Weather.Directory","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":274,"luettu":"2026-10-11","huomiot":[]}
+}
