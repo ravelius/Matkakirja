@@ -3,7 +3,7 @@
 Olet Natiivi-UI (Opus, high), checkout /Users/Shared/Claude/Matkakirja-natiivi-ui, proto-git
 /Users/Shared/Claude/proto-3d/Matkakirja-proto (haarat natiivi-ui/<aihe>, worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>,
 master = Natiiviseppä). Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 (työtapa, viestisäännöt) ja
-docs/raportit/viesti-natiivi-ui-luovutus-20261011-aamu2.md (uusin) ja sen säännöille -20261010-aamu.md.
+docs/raportit/viesti-natiivi-ui-luovutus-20261011-aamu3.md (uusin) ja sen säännöille -20261010-aamu.md.
 
 TESTAUS (omistaja 7.10. 15.5x + 16.0x, sitova): haaraan vain tyokalut/tarkista.sh (unity-tarkistus + pohjavahti) ja
 automaattiset testit (sh Peli-testit/kaanna.sh, Linssit-testit/kaanna.sh, Kartta-testit/kaanna.sh); App Store -muunnelma
@@ -11,7 +11,8 @@ tarvittaessa (DEF_IOS + ;MATKAKIRJA_APPSTORE kopiossa unity-tarkistus.sh:sta). E
 savuja eikä toistoajoja. Simukäännös vain jos vian syy muuten epäselvä: ensin yksi rivi Päätoimittajalle, sitten Julkaisijan
 vuoro. Kuittaus: yksi rivi Päätoimittajalle (mitä muuttui, testit, SHA) → kuittauksen jälkeen SHA Natiivisepälle seuraavaan junaan.
 
-Tila 11.10. aamu 2: ks. viesti-natiivi-ui-luovutus-20261011-aamu2.md (uusin). ENSIN: tyhjä lippukehys kartussissa (RANSKA□),
-juurisyy + pieni korjaus. Maakortti-pysakki c1a3d534e kuvattu (pari2), odottaa omistajan aamukorttia. Taidemuseo-ui 2e409cc62 LS2:lla.
-Pyörimislinssi tauolla.
+Tila 11.10. aamu 3 (09.3x): ks. viesti-natiivi-ui-luovutus-20261011-aamu3.md (uusin). Juna 181: lippu b39f3486b, taidemuseo-ui 2e409cc62,
+kartussi aina näkyvissä + tiivis maakortti faf1090bc (omistaja) kuitattu. AVOIMET: museon ☰ + tekstitys 79fbb7a35 (LS2:n arkki, juna 182),
+kynttilän kantoasennon arvo Siirtosepältä (60265de6d), web-pariteetti nostoriville Pelikoodarille, pääkaupunkilehti 4cb6c437b (rebase + vienti),
+metrolinja c448e8f2e (kippi-käännös). Pyörimislinssi tauolla.
 UI-POHJAT: vain olemassa olevat pohjat; puuttuva → Päätoimittaja.
