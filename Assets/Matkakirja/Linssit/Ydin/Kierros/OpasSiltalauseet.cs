@@ -206,6 +206,17 @@ namespace Matkakirja.Linssit.Kierros
                 if (x is string id && kohteet.Find(t => t.Id == id) is OpasTaky t && !r.Contains(t)) r.Add(t);
             return r.Count > 0 ? r : new List<OpasTaky>(kohteet);
         }
+
+        /// <summary>QA "opas hyppy &lt;Q-tunnus|nimi&gt;" (PT 11.10.): kohde listasta Wikidata-tunnuksella (täsmälleen) tai nimellä
+        /// (kirjainkoosta välittämättä, reunavälit pois); null = ei löydy.</summary>
+        public static OpasTaky Etsi(IReadOnlyList<OpasTaky> l, string tunnusTaiNimi)
+        {
+            string a = tunnusTaiNimi?.Trim();
+            if (l == null || string.IsNullOrEmpty(a)) return null;
+            foreach (var t in l) if (t != null && t.Id == a) return t;
+            foreach (var t in l) if (t?.Nimi != null && string.Equals(t.Nimi.Trim(), a, StringComparison.OrdinalIgnoreCase)) return t;
+            return null;
+        }
     }
 
     /// <summary>

@@ -1309,6 +1309,19 @@ namespace Matkakirja.Natiivi
             v.o.Kirjaa(ok ? $"opas: kierros hyppää {nyk} → {i} ({(i < KierrosKohteet.Count ? KierrosKohteet[i].nimi : "-")})" : $"opas: kierroshyppy {i} ei käy");
             return ok;
         }
+        /// <summary>QA "opas hyppy &lt;Q-tunnus|nimi&gt;" (PT 11.10.): kohteen indeksi KierrosKohteet-listassa (haku kierroksen tai
+        /// liiku-listan kohteista, OpasTaky.Etsi); −1 = ei löydy tai ei kierroksella.</summary>
+        public static int KierrosIndeksiKohteelle(string tunnusTaiNimi)
+        {
+            if (!Auki) return -1;
+            var v = Viimeisin;
+            var t = OpasTaky.Etsi(v.kierrosKohteet ?? v.kohteet, tunnusTaiNimi);
+            if (t == null) return -1;
+            var jono = KierrosKohteet;
+            for (int i = 0; i < jono.Count; i++)
+                if (jono[i].nimi == t.Nimi && Math.Abs(jono[i].lat - t.Lat) < 1e-6 && Math.Abs(jono[i].lon - t.Lon) < 1e-6) return i;
+            return -1;
+        }
         int hyppyLahto = int.MinValue;
 
         // ---- VAPAA LENTO JA PALUU KIERROKSELLE (omistaja 9.10., Päätoimittaja juna 170; napit Natiivi-UI heijastuksella,

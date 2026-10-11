@@ -127,6 +127,19 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(3, OpasTaky.Kierros(tyhja, OpasTaky.Lue(tyhja)).Count, "ei osumia → lista");
         }
 
+        [Testi] static void HyppyKohteenTunnuksellaTaiNimella()
+        {
+            // QA "opas hyppy Q1889515" / "opas hyppy Prešerenin aukio" (PT 11.10.): Id täsmälleen, nimi kirjainkoosta välittämättä.
+            var j = (Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna("{\"kohteet\":[{\"id\":\"Q1889515\",\"nimi\":\"Prešerenin aukio\",\"lat\":46.05,\"lon\":14.5},"
+                + "{\"id\":\"Q170285\",\"nimi\":\"Ljubljanan linna\",\"lat\":46.049,\"lon\":14.508}]}");
+            var l = OpasTaky.Lue(j);
+            Oleta.Sama("Prešerenin aukio", OpasTaky.Etsi(l, "Q1889515")?.Nimi, "Wikidata-tunnus");
+            Oleta.Sama("Q170285", OpasTaky.Etsi(l, "ljubljanan LINNA")?.Id, "nimi kirjainkoosta välittämättä");
+            Oleta.Sama("Q1889515", OpasTaky.Etsi(l, " Prešerenin aukio ")?.Id, "reunavälit");
+            Oleta.Tosi(OpasTaky.Etsi(l, "q1889515") == null, "tunnus täsmälleen");
+            Oleta.Tosi(OpasTaky.Etsi(l, "Tuntematon") == null && OpasTaky.Etsi(l, "") == null && OpasTaky.Etsi(null, "Q1") == null, "ei löydy");
+        }
+
         [Testi] static void KaupunginVaihtoLentaaHeti()
         {
             // Natiivi-UI 6.10. 00.2x (toistoappi 3244207f): Amsterdam valittu, kertoja kysyi Amsterdamista, mutta kamera jäi Kööpenhaminaan.

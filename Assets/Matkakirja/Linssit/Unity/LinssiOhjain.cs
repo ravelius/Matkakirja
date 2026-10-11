@@ -2180,7 +2180,14 @@ namespace Matkakirja.Natiivi
                     else if (osat.Length > 1 && osat[1] == "seuraava") Kirjaa($"opas: seuraava → {OpasSovitin.Seuraava()}");
                     else if (osat.Length > 1 && osat[1] == "jatka") Kirjaa($"opas: jatka → {OpasSovitin.JatkaKierrosta()}");
                     // "opas hyppy <i>": metrolinjan aseman napautus (Natiivi-UI, juna 180) → kierroksen kohde i.
-                    else if (osat.Length > 2 && osat[1] == "hyppy" && int.TryParse(osat[2], out int hi)) Kirjaa($"opas: hyppy {hi} → {OpasSovitin.KierrosKohteeseen(hi)}");
+                    // "opas hyppy <Q-tunnus|nimi>" (QA, PT 11.10.): kohde Wikidata-tunnuksella tai nimellä, sama reitti kuin indeksillä.
+                    else if (osat.Length > 2 && osat[1] == "hyppy")
+                    {
+                        string ha = string.Join(" ", osat.Skip(2));
+                        bool luku = int.TryParse(ha, out int hi);
+                        if (!luku) hi = OpasSovitin.KierrosIndeksiKohteelle(ha);
+                        Kirjaa(!luku && hi < 0 ? $"opas: hyppy {ha} → ei löydy" : $"opas: hyppy {ha} → {OpasSovitin.KierrosKohteeseen(hi)}");
+                    }
                     else if (osat.Length > 2 && osat[1] == "kysy") Kirjaa($"opas: kysy → {OpasSovitin.Kysy(string.Join(" ", osat.Skip(2)))}");
                     // Kartan kaupunkielementti (juna 159): opas suoraan kaupunkitilaan sallittujen listan id:llä tai nimellä.
                     else if (osat.Length > 3 && osat[1] == "kori" && osat[2] == "aanet") { PalloKori.AaniSarja = osat[3]; Kirjaa($"opas: kori äänet {PalloKori.AaniSarja}"); }
