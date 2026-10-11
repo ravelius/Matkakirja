@@ -15,7 +15,7 @@
  },
  "artikkeli": {
   "intro": "**Podgorica** on Montenegron pääkaupunki ja maan suurin kaupunki. Se sijaitsee Ribnica- ja Morača-jokien yhtymäkohdassa, missä Dinaaristen Alppien eteläiset juuret kohtaavat Zetan tasangon pohjoisosan. Nimi tarkoittaa kukkulan alla, ja sen antoi Gorica, yksi kaupungin ylle kohoavista sypressikukkuloista. Nimi mainitaan ensi kerran vuoden 1326 asiakirjassa Kotorin arkistossa.\n\nIsoisän matkavuonna 1873 kaupunki oli ottomaanien hallinnassa, ja sen ydin oli **Stara Varoš** Ribnican rannalla. Berliinin kongressi liitti kaupungin Montenegroon vuonna 1878. Vuosina 1946–1992 kaupungin nimi oli Titograd. Toisen maailmansodan pommitukset tuhosivat suuren osan vanhasta kaupungista, joten nykyinen kaupunkikuva on pääosin sodanjälkeinen. Asukkaita oli vuoden 2023 väestölaskennan mukaan 179 505.",
-  "teksti": "Alueen vanhimmat jäänteet ovat myöhäiseltä kivikaudelta, ja Podgorica on useiden historiallisten reittien risteyksessä. Rautakaudella seutua asuttivat illyriläiset heimot labeatit ja dokleatit. Noin kolme kilometriä nykyisen kaupungin pohjoispuolella sijaitsi roomalainen Doclea, josta tuli kunta keisari Claudiuksen aikana.\n\nOttomaanit valtasivat Podgorican 1400-luvun lopulla ja rakensivat sinne linnoituksen, torneja, portteja ja puolustusmuureja. Kaupunki kehittyi Ribnican vasemmalle rannalle ottomaanikaupungin tapaan, ja Sahat kula -kellotorni valmistui vuonna 1667. Vuonna 1878 kaupungissa oli noin 1 500 taloa ja yli 8 000 asukasta, jotka kuuluivat kolmeen eri uskontoon.\n\nNykyään Podgorica on Montenegron hallinnon, talouden ja koulutuksen keskus: yliopisto, tiedeakatemia, valtion televisioyhtiö ja kaikki päivälehdet ovat täällä. Morača on lähteen mukaan keskustan kohdalla noin 70 metriä leveä ja on uurtanut kaupungin läpi 20 metriä syvän kanjonin. Adrianmeri on noin 35 kilometrin päässä etelässä, mutta Rumija-vuori rajoittaa merellistä vaikutusta."
+  "teksti": "Alueen vanhimmat jäänteet ovat myöhäiseltä kivikaudelta, ja Podgorica on useiden historiallisten reittien risteyksessä. Rautakaudella seutua asuttivat illyriläiset heimot labeatit ja dokleatit. Noin kolme kilometriä nykyisen kaupungin pohjoispuolella sijaitsi roomalainen Doclea, josta tuli kunta (municipium) 1. vuosisadalla jKr.\n\nOttomaanit valtasivat Podgorican 1400-luvun lopulla ja rakensivat sinne linnoituksen, torneja, portteja ja puolustusmuureja. Kaupunki kehittyi Ribnican vasemmalle rannalle ottomaanikaupungin tapaan, ja Sahat kula -kellotorni valmistui vuonna 1667. Vuonna 1878 kaupungissa oli arvioiden mukaan noin 8 000 asukasta, jotka kuuluivat kolmeen uskontokuntaan.\n\nNykyään Podgorica on Montenegron hallinnon, talouden ja koulutuksen keskus: yliopisto, tiedeakatemia, valtion televisioyhtiö ja kaikki päivälehdet ovat täällä. Morača on lähteestä riippuen 50–100 metriä leveä keskustan kohdalla, ja lähteen mukaan se on uurtanut kaupungin läpi noin 20 metriä syvän kanjonin. Adrianmeri on noin 35 kilometrin päässä etelässä, mutta Rumija-vuori rajoittaa merellistä vaikutusta."
  },
  "kysymykset": [
   {
@@ -92,7 +92,7 @@
  "tiedot": [
   "Podgorican vuosisademäärä on noin 1 660 mm, ja lähteen mukaan se on Euroopan sateisin pääkaupunki.",
   "Millennium-sillan pylon kohoaa 57 metriä tien yläpuolelle, ja siltaa kannattelee 12 köyttä, kun 24 muuta kiinnittyy vastapainoihin.",
-  "Kaupungin Imperial-hotellissa oli vuonna 1925 kaksi kylpyhuonetta, mikä oli aikanaan ennenkuulumatonta, sillä useimmilla asukkailla ei ollut omaa kylpyhuonetta."
+  "Sahat kula on yksi harvoista ottomaanien ajan rakennuksista, jotka selvisivät Podgorican pommituksista toisessa maailmansodassa."
  ],
  "valokuva": {
   "tiedosto": "View of Hram Hristovog Vaskrsenja in Podgorica.jpg",
@@ -118,14 +118,14 @@
     },
     {
      "tiedosto": "Podgorica Sept 2013 .jpg",
-     "selite": "Morača on kaupungin pääjoki, lähteen mukaan noin 70 metriä leveä keskustan kohdalla.",
+     "selite": "Morača on kaupungin pääjoki, lähteestä riippuen 50–100 metriä leveä keskustan kohdalla.",
      "lahde": "Das Kraftfuttermischwerk, Wikimedia Commons (CC BY 2.0)"
     }
    ],
    "nostot": [
     {
      "otsikko": "Kukkulan alla",
-     "teksti": "Podgorican nimi tarkoittaa kukkulan alla. Gorica tarkoittaa pientä kukkulaa, ja se on yksi kaupungin ylle kohoavista sypressikukkuloista; sen korkeus on 130,3 metriä. Muita kukkuloita ovat Malo brdo 205,4 metriä, Velje brdo 283 metriä ja Ljubović 101 metriä. Itse kaupunki on lähes tasaisella maalla 40 metriä merenpinnan yläpuolella Zetan tasangon pohjoispäässä. Nimi mainitaan ensi kerran vuonna 1326 Kotorin arkiston asiakirjassa, ja keskiajalla kaupunki tunnettiin nimellä Ribnica.",
+     "teksti": "Podgorican nimi tarkoittaa kukkulan alla. Gorica tarkoittaa pientä kukkulaa, ja se on yksi kaupungin ylle kohoavista sypressikukkuloista; sen korkeus on noin 130 metriä. Muita kukkuloita ovat Malo brdo noin 205 metriä, Velje brdo noin 280 metriä ja Ljubović noin 100 metriä. Itse kaupunki on lähes tasaisella maalla noin 40 metriä merenpinnan yläpuolella Zetan tasangon pohjoispäässä. Nimi mainitaan ensi kerran vuonna 1326 Kotorin arkiston asiakirjassa, ja keskiajalla kaupunki tunnettiin nimellä Ribnica.",
      "tiedosto": "Brdo Gorica - panoramio.jpg",
      "selite": "Gorica on yksi sypressikukkuloista, jotka kohoavat Podgorican yllä.",
      "lahde": "Milos58, Wikimedia Commons (CC BY-SA 3.0)",
@@ -133,7 +133,7 @@
     },
     {
      "otsikko": "Risteys ennen kaupunkia",
-     "teksti": "Podgorica on useiden historiallisten reittien risteyksessä, ja se näkyy jo muinaisuudessa. Rautakaudella seutua asuttivat illyriläiset heimot labeatit ja dokleatit. Noin kolme kilometriä nykyisen kaupungin pohjoispuolella sijaitsi roomalainen Doclea, josta tuli kunta keisari Claudiuksen aikana vuosina 41–54. Kaupungissa oli 8 000–10 000 asukasta. Kun keisari Diocletianus perusti Praevalitanan provinssin noin vuoden 300 tienoilla, Doclea tuli sen pääkaupungiksi. Roomalaiset rakensivat alueelle myös vesijohdon.",
+     "teksti": "Podgorica on useiden historiallisten reittien risteyksessä, ja se näkyy jo muinaisuudessa. Rautakaudella seutua asuttivat illyriläiset heimot labeatit ja dokleatit. Noin kolme kilometriä nykyisen kaupungin pohjoispuolella sijaitsi roomalainen Doclea, josta tuli kunta (municipium) 1. vuosisadalla jKr. Kaupungissa oli 8 000–10 000 asukasta. Kun keisari Diocletianus perusti Praevalitanan provinssin noin vuoden 300 tienoilla, Doclea tuli sen pääkaupungiksi. Roomalaiset rakensivat alueelle myös vesijohdon.",
      "tiedosto": "Ancient city Doclea - ruins 12.jpg",
      "selite": "Doclea oli roomalainen kaupunki, joka tuli Praevalitanan provinssin pääkaupungiksi.",
      "lahde": "BuhaM, Wikimedia Commons (CC BY-SA 4.0)",
@@ -141,7 +141,7 @@
     },
     {
      "otsikko": "Ottomaanien kaupunki joen rannalla",
-     "teksti": "Ottomaanit valtasivat Podgorican 1400-luvun lopulla ja rakensivat siihen suuren linnoituksen sekä torneja, portteja ja puolustusmuureja. Kaupunki kehittyi Ribnican vasemmalle rannalle ottomaanikaupungin tapaan, ja Stara Varoš oli sen ydin 1400–1800-luvuilla. Sahat kula -kellotorni valmistui vuonna 1667 Hadži-paša Osmanagićin rakennuttamana. Vuonna 1864 Podgoricasta tuli Skutarin vilajetin kaza. Berliinin kongressi liitti kaupungin Montenegroon vuonna 1878, jolloin siellä oli noin 1 500 taloa ja yli 8 000 asukasta.",
+     "teksti": "Ottomaanit valtasivat Podgorican 1400-luvun lopulla ja rakensivat siihen suuren linnoituksen sekä torneja, portteja ja puolustusmuureja. Kaupunki kehittyi Ribnican vasemmalle rannalle ottomaanikaupungin tapaan, ja Stara Varoš oli sen ydin 1400–1800-luvuilla. Sahat kula -kellotorni valmistui vuonna 1667 Hadži-paša Osmanagićin rakennuttamana. Vuonna 1864 Podgoricasta tuli Skutarin vilajetin kaza. Berliinin kongressi liitti kaupungin Montenegroon vuonna 1878, jolloin siellä oli arvioiden mukaan noin 8 000 asukasta.",
      "tiedosto": "Podgorica Uhrturm (Sahat Kula).JPG",
      "selite": "Sahat kula valmistui vuonna 1667 Stara Varošiin, Podgorican vanhaan kaupunkiin.",
      "lahde": "Colomen, Wikimedia Commons (CC BY-SA 4.0)",
@@ -149,7 +149,7 @@
     },
     {
      "otsikko": "Kaupunki rakennetaan uudelleen",
-     "teksti": "Toisessa maailmansodassa Podgorica oli lähteen mukaan yksi Euroopan pahiten pommitetuista kaupungeista: ilmaiskuja oli yli 80, ja kaupunki vapautettiin 19.12.1944. Vuonna 1946 kaupunki sai nimen Titograd ja siitä tuli Montenegron pääkaupunki Jugoslavian liittovaltiossa. Sodanjälkeinen asukasluku, noin 15 000, kasvoi seitsenkertaiseksi kolmessa vuosikymmenessä. Alumiinikombinaatti rakennettiin 1969 ja yliopisto perustettiin 1974. Maanjäristys 15.4.1979 vaurioitti kaupunkia, ja nimi Podgorica palautettiin 1992.",
+     "teksti": "Toisessa maailmansodassa Podgoricaa pommitettiin lähteestä riippuen yli 70 tai yli 80 kertaa, ja kaupunki vapautettiin 19.12.1944. Vuonna 1946 kaupunki sai nimen Titograd ja siitä tuli Montenegron pääkaupunki Jugoslavian liittovaltiossa. Sodanjälkeinen asukasluku, noin 15 000, kasvoi lähes seitsenkertaiseksi kolmessa vuosikymmenessä. Alumiinikombinaatin rakentaminen aloitettiin 1969 ja yliopisto perustettiin 1974. Maanjäristys 15.4.1979 vaurioitti kaupunkia, ja nimi Podgorica palautettiin 1992.",
      "tiedosto": "City of Podgorica,Montenegro in 2020.15.jpg",
      "selite": "Sodan jälkeen suuri osa Podgoricasta rakennettiin uudelleen, ja kaupunki kasvoi nopeasti.",
      "lahde": "CAPTAIN RAJU, Wikimedia Commons (CC BY-SA 4.0)",
@@ -264,9 +264,9 @@
   {
    "id": "ruoka",
    "nimi": "Tupakkaa, viiniä ja espressoa",
-   "johdanto": "Podgorica on jokilaakson kauppakaupunki, jonka ensimmäinen suuri kauppatuote oli tupakka. Nykyään täällä istutaan kahvilassa espresson ääressä, ja viinitarhat kasvavat tasangolla kaupungin ympärillä.",
+   "johdanto": "Podgorica on jokilaakson kauppakaupunki, jonka ensimmäinen merkittävä kauppatuote oli Wikipedian mukaan tupakka. Nykyään täällä istutaan kahvilassa espresson ääressä, ja viinitarhat kasvavat tasangolla kaupungin ympärillä.",
    "tehtava": {
-    "kysymys": "Mikä tuote nousi Podgorican ensimmäiseksi merkittäväksi kauppatuotteeksi 1900-luvun alussa?",
+    "kysymys": "Mikä tuote nousi Wikipedian mukaan Podgorican ensimmäiseksi merkittäväksi kauppatuotteeksi 1900-luvun alussa?",
     "vaihtoehdot": [
      "Tupakka",
      "Viini",
@@ -274,7 +274,7 @@
      "Oliiviöljy"
     ],
     "oikea": 0,
-    "fakta": "Vuonna 1904 perustettu Zetska-säästöpankki oli kaupungin ensimmäinen merkittävä rahalaitos, ja siitä kasvoi Podgorička Bank."
+    "fakta": "Wikipedian mukaan tupakka oli Podgorican ensimmäinen merkittävä kauppatuote, ja vuonna 1902 kaupungista rakennettiin tiet kaikkiin naapurikaupunkeihin."
    },
    "nostot": [
     {
@@ -286,10 +286,10 @@
      "wiki": "Doclea (Illyria)"
     },
     {
-     "otsikko": "Tupakka tuo ensimmäiset rahat",
-     "teksti": "Vuonna 1902 Podgoricasta rakennettiin tiet kaikkiin naapurikaupunkeihin, ja tupakasta tuli kaupungin ensimmäinen merkittävä kauppatuote. Vuonna 1904 perustettiin Zetska-säästöpankki, josta kasvoi Podgorička Bank. Ennen ensimmäistä maailmansotaa talous perustui kauppaan ja pienteollisuuteen, ja malli periytyi ottomaanikaudelta. Tupakan jalostus kuului myös sodanjälkeisiin teollisuudenaloihin alumiinin ja tekstiilien rinnalla, ja alumiinikombinaatti rakennettiin vuonna 1969.",
+     "otsikko": "Tupakka ja kauppa",
+     "teksti": "Wikipedian mukaan Podgoricasta rakennettiin vuonna 1902 tiet kaikkiin naapurikaupunkeihin, ja tupakasta tuli kaupungin ensimmäinen merkittävä kauppatuote. Ennen ensimmäistä maailmansotaa talous perustui kauppaan ja pienteollisuuteen, ja malli periytyi ottomaanikaudelta. Sodan jälkeen kaupunkiin perustettiin tehtaita, ja tupakan jalostus kuului myös teollisuudenaloihin alumiinin ja tekstiilien rinnalla, ja alumiinikombinaatin rakentaminen aloitettiin vuonna 1969.",
      "tiedosto": "Podgorica-Tuzi plantaze wineyard IMG 1316 Cijevna river.JPG",
-     "selite": "Podgorican ympäristön tasanko: kaupungin talous perustui kauppaan ja pienteollisuuteen.",
+     "selite": "Plantažen viinitarhoja Podgorican lentoaseman vieressä Zetan tasangolla, ilmakuva.",
      "lahde": "Bjoertvedt, Wikimedia Commons (CC BY-SA 4.0)",
      "wiki": "Podgorica"
     },
@@ -358,7 +358,7 @@
  "nahtavyydet": {
   "Sahat kula -kellotorni": {
    "aika": "1667",
-   "teksti": "Sahat kula on 19 metriä korkea itsenäinen kivitorni Bećir Beg Osmanagićin aukiolla Stara Varošissa. Sen rakennutti Hadži-paša Osmanagić vuonna 1667, ja se on yksi harvoista ottomaanien ajan merkeistä, jotka selvisivät toisen maailmansodan pommituksista.\n\nIsoisän matkavuonna 1873 torni seisoi jo paikallaan, mutta nykyinen koneisto tuli vasta vuonna 1890: sen teki Pietro Colbachinin valimo Bassano del Grappassa Italiassa, kun alkuperäinen koneisto oli valmistettu Itävallassa. Tornin huipulle asennettiin metalliristi, joka kertoi kaupungin siirtymisestä ottomaaneilta kristityille montenegrolaisille.\n\nKellon uusi sähkökoneisto asennettiin tammikuussa 2012, ja vanha koneisto säilytettiin. Torni on lailla suojeltu kulttuurimonumentti.",
+   "teksti": "Sahat kula on 19 metriä korkea itsenäinen kivitorni Bećir Beg Osmanagićin aukiolla Stara Varošissa. Sen rakennutti Hadži-paša Osmanagić vuonna 1667, ja se on yksi harvoista ottomaanien ajan merkeistä, jotka selvisivät toisen maailmansodan pommituksista.\n\nIsoisän matkavuonna 1873 torni seisoi jo paikallaan, mutta nykyinen koneisto tuli vasta vuonna 1890, ja Wikipedian mukaan sen teki italialainen Colbachinin valimo Bassano del Grappassa. Tornin huippu sai metalliristin 1800-luvun lopulla, kun kaupunki oli siirtynyt Montenegrolle.\n\nKellon uusi sähkökoneisto asennettiin tammikuussa 2012. Torni on lailla suojeltu kulttuurimonumentti.",
    "kuvat": [
     {
      "tiedosto": "Podgorica Clock Tower Sahat kula 01.jpg",
@@ -370,7 +370,7 @@
   },
   "Ribnican linnoitus": {
    "aika": "1400-luvun loppu",
-   "teksti": "Ribnican linnoitus eli Depedogen, turkiksi Depedöğen, on ottomaanien linnoitus Stara Varošissa Ribnican ja Moračan yhtymäkohdan yläpuolella. Se rakennettiin 1400-luvun lopulla, lähteiden mukaan noin vuosina 1477–1479, ja se oli toinen kahdesta Stara Varošia ympäröineestä linnoituksesta.\n\nLinnoitus oli pitkään ammusvarastona. Salamanisku sytytti räjähdyksen vuonna 1878 ja tuhosi suuren osan linnoituksen sisä- ja ulkopuolesta, joten isoisän matkavuonna 1873 tuhoa ei ollut vielä tapahtunut.\n\nUskotaan, että linnoitus periytyy 1100-luvulta.",
+   "teksti": "Ribnican linnoitus eli Depedogen, turkiksi Depedöğen, on ottomaanien linnoitus Stara Varošissa Ribnican ja Moračan yhtymäkohdan yläpuolella. Se rakennettiin 1400-luvun lopulla, lähteiden mukaan noin vuosina 1477–1479, ja se oli toinen kahdesta Stara Varošia ympäröineestä linnoituksesta.\n\nLinnoitus oli pitkään ammusvarastona. Wikipedian mukaan salamanisku sytytti vuonna 1878 räjähdyksen, joka vaurioitti linnoituksen sisä- ja ulkopuolta pahoin, joten isoisän matkavuonna 1873 tuhoa ei ollut vielä tapahtunut.\n\nUskotaan, että linnoitus periytyy 1100-luvulta.",
    "kuvat": [
     {
      "tiedosto": "Depedogen.JPG",
@@ -381,8 +381,8 @@
    "lahde": "Wikipedia"
   },
   "Vanha silta Ribnican yli": {
-   "aika": "ottomaanikausi",
-   "teksti": "Vanha silta ylittää Ribnica-joen Stara Varošin kupeessa. Stara Varošin nähtävyyksien luettelossa sitä kutsutaan Adži-paša-sillaksi, ja toisessa yhteydessä nimellä Vezirov most eli Vezirin silta.\n\nSilta on kohdassa, jossa Ribnica laskee Moračaan. Samassa paikassa ovat Skaline-portaat. Kaupunki kehittyi Ribnican vasemmalle rannalle ottomaanikaupungin tapaan, ja joen ylitys oli osa vanhan kaupungin arkea.\n\nSilta kuuluu Stara Varošin ottomaaniytimeen, jota Stara Varošissa 1400–1800-luvuilla edusti myös Sahat kula, Ribnican linnoitus ja kaksi moskeijaa. Sillan tarkasta rakennusvuodesta lähteet eivät kerro, mutta isoisän matkavuonna 1873 Stara Varoš oli yhä kaupungin ydin.",
+   "aika": "uusittu 1700-luvulla",
+   "teksti": "Vanha silta ylittää Ribnica-joen Stara Varošin kupeessa. Stara Varošin nähtävyyksien luettelossa sitä kutsutaan Adži-paša-sillaksi. Wikipedian mukaan se on peräisin roomalaisajalta ja uusittiin perusteellisesti 1700-luvulla. Vezirov most on eri silta: se ylittää Moračan.\n\nSilta on kohdassa, jossa Ribnica laskee Moračaan. Samassa paikassa ovat Skaline-portaat. Kaupunki kehittyi Ribnican vasemmalle rannalle ottomaanikaupungin tapaan, ja joen ylitys oli osa vanhan kaupungin arkea.\n\nSilta kuuluu Stara Varošin ytimeen, jota 1400–1800-luvuilla edusti myös Sahat kula, Ribnican linnoitus ja kaksi moskeijaa. Isoisän matkavuonna 1873 Stara Varoš oli yhä kaupungin ydin.",
    "kuvat": [
     {
      "tiedosto": "Starimost.JPG",
@@ -394,7 +394,7 @@
   },
   "Itsenäisyydenaukio": {
    "aika": "uudistettu 2006",
-   "teksti": "Itsenäisyydenaukio on Podgorican keskusaukio Nova Varošissa, uuden kaupungin hallinnollisessa ja sosiokulttuurisessa sydämessä. Sen pinta-ala on 5 000 neliömetriä. Isoisän matkavuonna 1873 Nova Varošia ei vielä ollut, joten aukiotakaan ei ollut.\n\nVuoteen 2006 aukion nimi oli Ivan Milutinovićin aukio. Montenegron itsenäistymisvuonna 2006 aukio uusittiin kokonaan: sitä laajennettiin, päällystettiin ja siitä tehtiin autoton alue, ja sille rakennettiin iso keskussuihkulähde, kolonnadit ja vesikanavat sekä istutettiin palmuja. Projektin hinta oli noin 2,5 miljoonaa euroa.\n\nAukion laidalla on kaupunginkirjasto ja valtion galleria Art. Aukiota reunustavat Slobode- ja Njegoševa-kadut ovat kävelykatuja.",
+   "teksti": "Itsenäisyydenaukio on Podgorican keskusaukio Nova Varošissa, uuden kaupungin hallinnollisessa ja sosiokulttuurisessa sydämessä. Isoisän matkavuonna 1873 Nova Varošia ei vielä ollut, joten aukiotakaan ei ollut.\n\nVuoteen 2006 aukion nimi oli Ivan Milutinovićin aukio. Montenegron itsenäistymisvuonna 2006 aukio uusittiin kokonaan: sitä laajennettiin, päällystettiin ja siitä tehtiin autoton alue, ja sille rakennettiin iso keskussuihkulähde, kolonnadit ja vesikanavat sekä istutettiin palmuja.\n\nAukion laidalla on kaupunginkirjasto ja valtion galleria Art. Aukiota reunustavat Slobode- ja Njegoševa-kadut ovat kävelykatuja.",
    "kuvat": [
     {
      "tiedosto": "Podgorica - Independence Square PG.jpg",
@@ -468,7 +468,7 @@
    "Petrovićin linna ja puisto jätetty pois kohdekartasta: ei kelvollista kuvaa eikä riittäviä faktoja (6 kohdetta).",
    "Teemasivu ruoka: lähdepohja ohut (juusto, tupakka, viini, kahvila); vaihtoehtona nykytaide-sivu (Modernin taiteen keskus). T2-nostossa korvaava tasankokuva, koska tupakkakuvaa ei löytynyt.",
    "Oppaan ruokajakso kuvaton: ei sopivaa kuvaa.",
-   "Vanhan sillan rakennusvuosi puuttuu lähteistä; sijainti Wikivoyagen Skaline-kohteesta, likimääräinen.",
+   "Vanhan sillan ikä on epävarma (Wikipedian mukaan roomalaisaikainen, uusittu 1700-luvulla); sijainti Wikivoyagen Skaline-kohteesta, likimääräinen.",
    "Macilla tarkistettavaksi: vanhan sillan koordinaatti (42.43951 / 19.25921) ja Ribnican linnoituksen koordinaatti (42.439 / 19.25913) ovat varmistamattomia arvioita, jotka täytyy tarkistaa; varmista Commonsin Starimost.JPG-/Depedogen.JPG-kuvien tai Wikidatan (Adži-paša-silta, Ribnican linnoitus) koordinaateista ennen julkaisua, ja korvaa, jos ero on yli 50 m.",
    "Sää luettu saa.json:sta (mallinnettu); Wikivoyagen ilmastotaulu poikkeaa (sateisin marraskuu), jätetty pois.",
    "Matkustusturvallisuus tarkistamatta: um.fi ei ollut luettavissa.",
