@@ -595,7 +595,8 @@ namespace Matkakirja.Linssit.Testit
         }
 
         // ---- TORNI KUVASSA LAITTEEN KUVASUHTEELLA (PT 11.10. 07.3x: iPhonella pallo sekä pysty- ~0,46 että vaakakuvana ~2,17;
-        // pystyssä 80 m:n päässä oleva torni leikkautui sivuilta, kun tornisääntö oletti iPadin 4:3:n) ----
+        // pystyssä 80 m:n päässä oleva torni leikkautui sivuilta, kun tornisääntö oletti iPadin 4:3:n; 07.5x: pystyssä kierto tornin
+        // ympäri viistosti ≥ 55°, ei karttamaista yläkuvaa) ----
         static readonly (string kaupunki, string aukio, string torni)[] TorniAukiot =
             { ("venetsia", "Q217527", "Q754194"), ("bryssel", "Q215429", "Q1255327"), ("firenze", "Q849846", "Q271928") };
 
@@ -610,9 +611,14 @@ namespace Matkakirja.Linssit.Testit
                     var m = TorniKuvassa(a, aukio, torni, 0, suhde); var x = Asennot(a, aukio);
                     double kaari = 0; for (int i = 1; i < x.Count; i++) kaari += Math.Abs(KierrosLento.Kiedo(x[i].Suunta - x[i - 1].Suunta));   // kameran suunta: kierto katsepisteen ympäri
                     double kesto = x.Count > 1 ? x[^1].T - x[0].T : 1;
-                    Console.WriteLine($"      {kaupunki} {suhde:F2}: torni enintään {m.koko:F2}, lopussa {m.loppu:F2}, tori enintään {m.tori:F2} ({m.n}), silmä {x[0].SilmaM:F0} m, kallistus {x[0].Kallistus:F0}°, et {x[0].EtM:F0} m, kierto {kaari / kesto:F1} °/s");
+                    double kallMin = x.Min(y => y.Kallistus), silmaMax = x.Max(y => y.SilmaM);
+                    Console.WriteLine($"      {kaupunki} {suhde:F2}: torni enintään {m.koko:F2}, lopussa {m.loppu:F2}, tori enintään {m.tori:F2} ({m.n}), silmä {x[0].SilmaM:F0}–{silmaMax:F0} m, kallistus {kallMin:F0}–{x.Max(y => y.Kallistus):F0}°, et {x[0].EtM:F0} m, kierto {kaari / kesto:F1} °/s");
                     if (m.n < 10) viat.Add($"{kaupunki} {suhde:F2}: näytteitä {m.n}");
-                    if (m.koko > TorniReuna || m.tori > TorniReuna) viat.Add($"{kaupunki} {suhde:F2}: torni {m.koko:F2}, tori {m.tori:F2}");
+                    if (m.koko > TorniReuna) viat.Add($"{kaupunki} {suhde:F2}: torni {m.koko:F2}");
+                    // Pystykuva (PT 11.10. 07.5x): viisto pallonäkymä ≥ 55° ja torni keskellä; torista saa leikkautua osa. Vaaka: myös tori.
+                    if (suhde < 1 && kallMin < 55) viat.Add($"{kaupunki} {suhde:F2}: kallistus {kallMin:F0}° (< 55°)");
+                    if (suhde < 1 && kaari / kesto < 2.9) viat.Add($"{kaupunki} {suhde:F2}: kierto {kaari / kesto:F1} °/s");
+                    if (suhde >= 1 && m.tori > TorniReuna) viat.Add($"{kaupunki} {suhde:F2}: tori {m.tori:F2}");
                 }
             // iPad vaaka ennallaan: 4:3 ja 2,17 (leveämpi) antavat saman kehyksen kuin oletus.
             var ipad = Asennot(Aja(Profiili.Normaali, "venetsia"), "Q217527"); var leve = Asennot(Aja(Profiili.Normaali, "venetsia", double.NaN, 14, false, true, 2.17), "Q217527");
