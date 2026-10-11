@@ -218,6 +218,14 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
 #valmistuneet details.juna { margin-left: 0.8em; }
 #valmistuneet details.juna .runko { padding-left: 2.1em; }
 #valmistuneet .valmistui { margin-left: auto; font-size: 0.78rem; color: var(--himmea); font-variant-numeric: tabular-nums; }
+/* Sinulle (omistaja 11.10. 10.3x): Päätoimittajan omistajalle toimittamat tekstit väkäsen takana, uusin ensin; linkit napautettavina. */
+#viestit details.juna { margin-left: 0.8em; }
+#viestit details.juna .runko { padding-left: 2.1em; }
+#viestit .otsikko { font-weight: 600; }
+#viestit .runko .teksti { white-space: pre-line; overflow-wrap: anywhere; }
+#viestit .valmistui { margin-left: auto; font-size: 0.78rem; color: var(--himmea); font-variant-numeric: tabular-nums; }
+#viestit a { color: var(--seepia); text-underline-offset: 3px; }
+#viestit a:focus-visible { outline: 2px solid var(--seepia); outline-offset: 2px; }
 </style>
 
 <main class="wrap">
@@ -232,6 +240,10 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
     <div class="rivit" id="junat"></div>
     <div class="valmiit" id="junat-valmiit"></div>
     <div class="tf-paneeli" id="tf-paneeli" hidden></div>
+  </section>
+  <section class="kortti" id="viestit-osio" hidden>
+    <h2><button type="button" class="otsikkonappi" id="viestit-nappi" aria-expanded="false">Sinulle</button> <span class="kysymykset" id="viestit-maara"></span></h2>
+    <div class="rivit" id="viestit" hidden></div>
   </section>
   <section class="kortti" id="tyolista-osio" hidden>
     <h2>Työlista <button type="button" class="kysymykset kysymysnappi" id="kysymykset" aria-expanded="false" hidden></button></h2>
@@ -358,6 +370,24 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
   var valittuJuna = null;
   var kysymysAuki = false;
   var valmistuneetAuki = false;
+  var viestitAuki = false;
+  // Linkit napautettaviksi (https://…); muu teksti sellaisenaan, ei HTML:ää.
+  function linkitetty(teksti) {
+    var f = document.createDocumentFragment();
+    var re = /https?:\/\/[^\s<>"')\]]+/g, alku = 0, m;
+    teksti = String(teksti);
+    while ((m = re.exec(teksti))) {
+      if (m.index > alku) f.append(document.createTextNode(teksti.slice(alku, m.index)));
+      var url = m[0].replace(/[.,;:!?]+$/, '');
+      var a = document.createElement('a');
+      a.href = url; a.textContent = url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+      f.append(a);
+      alku = m.index + url.length;
+      re.lastIndex = alku;
+    }
+    if (alku < teksti.length) f.append(document.createTextNode(teksti.slice(alku)));
+    return f;
+  }
   var pyyntoKesken = 0;
   var SONNET_ROOLIT = { 'Postivahti': 1, 'Sis\u00e4lt\u00f6kirjuri': 1, 'Laitetestaaja': 1 };
   function junaRivi(sailio, paneeli, rivit) {
@@ -517,6 +547,33 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
       vs.append(d);
     });
 
+    // Sinulle (omistaja 11.10. 10.3x): ohjeet, linkit ja vastaukset, jotka Päätoimittaja toimittaa omistajalle;
+    // dokumentti viestit {rivit: [{otsikko, aika, teksti}]}, uusin ensin, enintään 30.
+    var vr = ((tila.viestit && tila.viestit.rivit) || []).slice(0, 30);
+    $('viestit-osio').hidden = vr.length === 0;
+    $('viestit-maara').textContent = vr.length ? '(' + vr.length + ')' : '';
+    $('viestit-nappi').setAttribute('aria-expanded', viestitAuki ? 'true' : 'false');
+    var vi = $('viestit');
+    vi.hidden = !(viestitAuki && vr.length);
+    var aukiS = {};
+    vi.querySelectorAll('details[open]').forEach(function (d) { aukiS[d.dataset.nimi] = true; });
+    vi.replaceChildren();
+    vr.forEach(function (r) {
+      var d = luo('details', 'juna');
+      d.dataset.nimi = (r.aika || '') + ' ' + (r.otsikko || '');
+      if (aukiS[d.dataset.nimi]) d.open = true;
+      var su = luo('summary');
+      su.append(luo('span', 'otsikko', r.otsikko || ''));
+      if (r.aika) su.append(luo('span', 'valmistui', r.aika));
+      d.append(su);
+      var runko = luo('div', 'runko');
+      var te = luo('div', 'teksti');
+      te.append(linkitetty(r.teksti || ''));
+      runko.append(te);
+      d.append(runko);
+      vi.append(d);
+    });
+
     // Laitteet (omistaja 10.10. 16.3x): mitä iPadilla ja Blenderillä on ajossa ja kenen ajo (Postivahdin laitteet.py → dokumentti laitteet).
     var la = $('laitteet');
     la.replaceChildren();
@@ -581,6 +638,7 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
 
   $('kysymykset').addEventListener('click', function () { kysymysAuki = !kysymysAuki; piirra(); });
   $('valmistuneet-nappi').addEventListener('click', function () { valmistuneetAuki = !valmistuneetAuki; piirra(); });
+  $('viestit-nappi').addEventListener('click', function () { viestitAuki = !viestitAuki; piirra(); });
   // Päivitysnappi (omistaja 10.10. 16.4x): napautus lähettää Päätoimittajalle kommentin "Päivitä Asemataulu", ja se vie tuoreet tiedot heti.
   $('paivitetty').addEventListener('click', function () {
     var nappi = $('paivitetty');
