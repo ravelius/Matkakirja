@@ -23,6 +23,8 @@ namespace Matkakirja.Natiivi
         public const string Sahkepalkkio = "Sähkepalkkio";
         public const string PalloLento = "Kuumailmapallolento";
         public const string PalloLentoPalautus = "Kuumailmapallolento peruttu";
+        public const string Olavinlinna = "Olavinlinna-peli";
+        public const string OlavinlinnaPalautus = "Olavinlinna-peli peruttu";
         public const string Oletus = "Matkakassa";
 
         /// <summary>
@@ -49,6 +51,20 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Maksu takaisin, kun pallo ei auennut maksun jälkeen.</summary>
         public void PalautaPalloLento() => KauppaTeko(k => k.PalloLentoPalautus(), RahaSyyt.PalloLentoPalautus);
+
+        /// <summary>
+        /// Olavinlinna-pelin maksu (Kaupat.OlavinlinnanHinta: "Pelaa" £20, alusta = "Aloita alusta" £10; "Jatka" ei kutsu tätä).
+        /// Rahat eivät riitä → tilarivin ilmoitus ja false: peli ei aukea. Kukkaroleima RahaSyyt.Olavinlinna.
+        /// </summary>
+        public bool MaksaOlavinlinna(bool alusta)
+        {
+            var r = KauppaTeko(k => k.Olavinlinna(alusta), RahaSyyt.Olavinlinna);
+            if (!r.Ok) Viesti(r.Virhe);
+            return r.Ok;
+        }
+
+        /// <summary>Maksu takaisin, kun peli ei auennut maksun jälkeen.</summary>
+        public void PalautaOlavinlinna(bool alusta) => KauppaTeko(k => k.OlavinlinnaPalautus(alusta), RahaSyyt.OlavinlinnaPalautus);
 
         int rahaNahty;
         string rahaSyy;
