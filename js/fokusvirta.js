@@ -3764,6 +3764,9 @@ function avaaIsoisanSarja(ui, city, pohjakuvat) {
   ui.isoisanSarjaAjettu ??= new Set();
   ui.isoisanSarjaAjettu.add(sarjanAvain(ui, city));
   const tila = avaaIsokuvaPaallys(ui, city, pohjakuvat[0]);
+  // Ohitettu luenta ei avaa päällystä (avaaIsokuvaPaallys → null): Ohita
+  // ennen äänen alkua kaatoi tämän purkuun (savuke-pollo 11.10.2026).
+  if (!tila) return false;
   const { aja, vaihda, ajastimet } = tila;
 
   vaihda(pohjakuvat[0], false);

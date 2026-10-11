@@ -1568,6 +1568,17 @@ export async function avaaPallolauta(ui) {
   doc.body.classList.add('pallolauta-paalla');
   let vetoAlku = null;
   kotelo.addEventListener('pointerdown', (e) => { vetoAlku = { x: e.clientX, y: e.clientY }; });
+  /*
+   * PÖLLÖN VIHJEKUPLA POIS KARTAN KOSKETUKSESTA (omistaja 13.8.2026:
+   * kartan kosketus vie kuplan pois eikä se palaa samassa vuorossa).
+   * Tasokartalla kutsu tulee panoroinnista (js/kartta.js
+   * asennaPanorointi); pallolaudalla se puuttui, joten valintavihje jäi
+   * ruudulle sormen alle (savuke-pollo 11.10.2026). Kosketus kuten
+   * kartta.js:ssä: iOS voi perua osoitintapahtumat.
+   */
+  const kartallaKosketettu = () => ui.kartallaKosketettu?.();
+  kotelo.addEventListener('pointerdown', kartallaKosketettu);
+  kotelo.addEventListener('touchstart', kartallaKosketettu, { passive: true });
   kotelo.addEventListener('pointermove', (e) => {
     if (!vetoAlku) return;
     if (Math.abs(e.clientX - vetoAlku.x) > 6 || Math.abs(e.clientY - vetoAlku.y) > 6) {
