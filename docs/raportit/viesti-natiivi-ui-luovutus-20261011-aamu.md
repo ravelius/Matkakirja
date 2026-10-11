@@ -16,6 +16,8 @@ käännös/simu vain Julkaisijan NYT-viestillä (ehdolla "muita ≤ 1" vain kun 
   ei avaa ikäkyselyä).
 
 ## KESKEN
+0. 05.54: maakortin iPhone-ajo tehty (todistus-maakortti-iphone-20261011-0553 OK), pari todistus-maakortti-pari2-20261011.jpg PT:lle,
+   SIMU VAPAA Julkaisijalle. Odottaa PT:n vastausta (juna 182 / omistajan kortti) + kysymys tyhjästä lippukehyksestä (RANSKA□).
 1. natiivi-ui/maakortti-pysakki **c1a3d534e** (worktree wt/proto-natiivi-ui-maakortti, EI junaan ennen omistajan vastausta, aamun kortti):
    oman maan tyhjä napautus avaa kartussin maissa ilman pääkaupunkipistettä, ja maakunnan nostokortti ei avaudu samalla napautuksella
    (yläreunan lappu näkyy). Käännös **9c37e120a** valmis (app proto-3d/lokit/natiivi-ui-app-maakortti). Kuvapari puuttuu: Julkaisijan
