@@ -25,12 +25,45 @@ namespace Matkakirja.Natiivi
         static readonly int IdLeikkaus = Shader.PropertyToID("_KavelyLeikkaus"), IdKoko = Shader.PropertyToID("_KavelyLeikkausKoko"),
             IdN = Shader.PropertyToID("_KavelyLeikkausN");
         public static bool Ladattu => Data != null;
+        /// <summary>Rakennus, johon kävelyosat piirrettiin (PiilotaPaallekkaiset).</summary>
+        public static DioraamaRakennus R3d { get; private set; }
+
+        /// <summary>
+        /// PÄÄLLEKKÄISET TILAT PIILOON (PT/LR 11.10.: tyrmä-E101 on dioraaman keittio.glb:n sisällä, ~3 500 kolmiota täysmustia levyjä
+        /// tyrmässä): dioraaman tilat, joiden rajat leikkaavat kävelyosan &lt;osaId&gt; piirrettyjä rajoja, piiloon. Kävelyosat ja niitä
+        /// piirtävät samannimiset tilat jäävät. Palauttaa piilotetut (kutsuja palauttaa ne, esim. tyrmästä poistuttaessa).
+        /// </summary>
+        public static List<GameObject> PiilotaPaallekkaiset(string osaId, Action<string> kirjaa)
+        {
+            var piilossa = new List<GameObject>();
+            var d = Data; var r3d = R3d;
+            if (d == null || r3d == null || osaId == null || !r3d.Tilat.TryGetValue("kavely:" + osaId, out var kg) || !(Rajat(kg) is Bounds osa)) return piilossa;
+            osa.Expand(-0.2f);
+            foreach (var kv in r3d.Tilat)
+            {
+                if (kv.Value == null || !kv.Value.activeSelf || kv.Key.StartsWith("kavely:", StringComparison.Ordinal)) continue;
+                bool piirtaaOsan = false;
+                foreach (var o in d.Osat.Keys) if (string.Equals(o, kv.Key, StringComparison.OrdinalIgnoreCase)) { piirtaaOsan = true; break; }
+                if (piirtaaOsan || !(Rajat(kv.Value) is Bounds tb) || !tb.Intersects(osa)) continue;
+                kv.Value.SetActive(false); piilossa.Add(kv.Value);
+            }
+            kirjaa?.Invoke($"seikkailu: {osaId}: päällekkäiset tilat piiloon {piilossa.Count} ({string.Join(", ", piilossa.ConvertAll(g => g.name))})");
+            return piilossa;
+        }
+
+        static Bounds? Rajat(GameObject g)
+        {
+            if (g == null) return null;
+            var rr = g.GetComponentsInChildren<MeshRenderer>(true); if (rr.Length == 0) return null;
+            var b = rr[0].bounds; foreach (var r in rr) b.Encapsulate(r.bounds);
+            return b;
+        }
 
         /// <summary>Lataa osat.json (osatUrl) ja merkit.json (merkitUrl, voi olla null), piirtää osat ja lisää törmäykset; glb-polut osat.jsonin
         /// kansiosta. url = peilikuvaus (ämpäri → peili).</summary>
         public static IEnumerator Lataa(string osatUrl, string merkitUrl, Func<string, string> url, DioraamaRakennus r3d, Rakennus rakennus, Transform isa, Action<string> kirjaa, Action<Tila> valoAtlas = null)
         {
-            Pura();
+            Pura(); R3d = r3d;
             string osat = null, merkit = null, juuri = osatUrl.Substring(0, osatUrl.LastIndexOf('/') + 1);
             yield return Teksti(url(osatUrl), t => osat = t);
             if (!string.IsNullOrEmpty(merkitUrl)) yield return Teksti(url(merkitUrl), t => merkit = t);

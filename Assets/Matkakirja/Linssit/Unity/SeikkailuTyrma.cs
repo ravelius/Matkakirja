@@ -64,6 +64,7 @@ namespace Matkakirja.Natiivi
             Vector3 Suunta(Vector3 a) { var v = a - t.istuin; v.y = 0; return v.sqrMagnitude > 1e-4f ? v.normalized : Vector3.zero; }
             var kohti = Suunta(t.ovi) + (t.ydin.Muunnelma == 1 ? Suunta(t.avaimet) : t.ydin.Muunnelma == 3 && t.ryomiOn ? Suunta(t.ryomi) : Vector3.zero);
             if (kohti.sqrMagnitude > 1e-4f) t.katse = Mathf.Atan2(kohti.x, kohti.z) * Mathf.Rad2Deg;
+            t.piilossa = SeikkailuKavely.PiilotaPaallekkaiset(mi.Osa, kirjaa);   // dioraaman keittiö tyrmän ympäriltä (täysmustat levyt)
             p.Siirra(t.istuin + Vector3.up * 0.05f); p.Tila.KameraYaw = p.Tila.HahmoYaw = t.katse; p.Tila.KameraPitch = 4;
             p.LiikeEstettyAsti = Time.unscaledTime + 2.5f;   // kiinniotossa pidetty tappi ei vie heränneenä seinään (tyrmä-pako 11.10. 00.46)
             DioraamaTaulu.NaytaSeikkailunNimi(Kieli.T("olavinlinna.seikkailu.tyrma.nimi"));   // tyrmän nimi kerran ~3 s (Raamattu NIMIKYLTIT HETKEN)
@@ -181,8 +182,10 @@ namespace Matkakirja.Natiivi
         }
         void Yritys() => ydin.Yritys();
 
+        System.Collections.Generic.List<GameObject> piilossa;
         void OnDestroy()
         {
+            if (piilossa != null) foreach (var g in piilossa) if (g != null) g.SetActive(true);
             if (Aktiivinen == this) Aktiivinen = null;
             SeikkailuEsineet.Irrotettiin -= KiviIrti; SeikkailuEsineet.Raapaistiin -= Yritys; SeikkailuEsineet.Kolahti -= Kolina;
             SeikkailuKasittely.Poista("tyrma-ovi");
