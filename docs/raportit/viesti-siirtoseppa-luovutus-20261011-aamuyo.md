@@ -25,6 +25,7 @@ appit proto-3d/lokit/olavinlinna-yhdistetty-181{b,c,d,e}). Simuvuorot Julkaisija
 | 9d56fbe0d | Tyrmässä dioraaman päällekkäiset tilat piiloon (v5-loki: Tila:tunnelma, Tila:keittio), palautus tyrmästä poistuessa | v5 ✓ |
 | 55cc11001 | Varoitus näkyy: puhe-leike ja kannettu valo 1,8× varoituksen ajan | EI vielä |
 | a9071a6f9 | Hahmokapseli vain partioiville (istuva tyrmän vartija tukki käytävän → v5:ssä A3 kävely ulos jumiin) | EI vielä |
+| d3e44804e | Tyrmä: avautuvalle ovelle käytävän lämmin valo + liekki; ulos jo oviaukolla (0,8 m) | EI vielä — KÄRKI |
 
 ## TODISTEET
 - todistus-laituri-a1-20261011-0155 (16278b34c): turva ok (9 s tatti reunassa, ei otetta, vartija kääntyi askelääneen), varoitus →
@@ -35,12 +36,10 @@ appit proto-3d/lokit/olavinlinna-yhdistetty-181{b,c,d,e}). Simuvuorot Julkaisija
   (Jatka napautettiin ennen latausta; skenaario korjattu `nakyy 180 Jatka`), ajo keskeytettiin.
 
 ## AVOIMET (järjestys)
-1. **KIIRE tyrmän kosketusjumi** (Laitetestaaja 181d, HID-vedot 2/2: kamera nurkassa, tatti ylös/oikea/alas ei liikuta, "ovi auki"
-   lokissa). Toisto käynnissä nollaushetkellä: skenaario proto-3d/tyokalut/siirtoseppa-ajot/skenaariot/tyrma-hid.txt (v5-appilla,
-   tulos todistus-tyrma-hid-20261011-*). Epäilyt: (a) hahmokapseli (korjattu a9071a6f9, Laitetestaajan 181d sisälsi kapselin);
-   (b) pelaaja ei ole oljilla (muunnelma 2: "ovi työnnetty auki" laukesi samassa kehyksessä kuin vesipoika = pelaaja < 1,3 m ovesta);
-   (c) oven käsittely (SeikkailuKasittely) nappaa vedot. Katso t00–t10-kuvat ja `ui seikkailutapit tila` -rivit.
-2. Yhdistetty v6 Julkaisijalta kärjellä a9071a6f9 (+55cc11001) → laituri-a1.txt + tyrma-hid.txt samalla vuorolla → PT:lle rivi + arkki.
+1. **Tyrmän kosketusjumi: TOISTETTU JA KORJATTU d3e44804e** (todennus v6:lla). HID-toisto todistus-tyrma-hid-20261011-0351 (v5):
+   tatti liikuttaa kaikkiin suuntiin oikeilla vedoilla (ei kosketusvikaa); pieni pimeä tyrmä → pelaaja osuu seiniin ja auki oleva ovi ja
+   käytävä näkyvät mustina aukkoina. Korjaus: käytävän valo oven avautuessa, ulos oviaukolta. Lisäksi a9071a6f9 (kapseli tukki käytävän).
+2. Yhdistetty v6 Julkaisijalta kärjellä d3e44804e → laituri-a1.txt + tyrma-hid.txt samalla vuorolla → PT:lle rivi + arkki.
 3. v47f-kuvapari LR:lle: todistus-olavinlinna-v47f-20261011-0233/kuvat/t0…t6 (laituri levossa, napautus, vedot) — lähetä polku LR:lle.
 4. Laitetestaajan 3. kierros v6:lla (PT päättää).
 5. LR v47g: mustat sauvasiluetit ja vaalea kattolevy tyrmässä (kuori), B1-lista todistus-botti-kavely-20261011-0052/B1-mustat-LR.md lähetetty LR:lle.
