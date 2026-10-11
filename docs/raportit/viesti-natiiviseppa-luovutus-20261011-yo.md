@@ -38,3 +38,8 @@ Mittausskripti scratchpadissa: ion-endpoint → root.json status (avain peitetty
 ## AVOIMET
 - MSAA-varoitus käynnistyksessä (kokeet D/E), linnan SSAO ilman DepthNormals-ajoja, LS2:n linnan pystyleike — ennallaan (ks. edellinen luovutus).
 - Worktreet proto-natiiviseppa-hehku/-kasvot/-vahti mergetty; ÄLÄ poista ilman omistajan lupaa.
+
+## UUSI SÄÄNTÖ 19.5x (omistaja PT:n kautta)
+Junasta 183 alkaen NS päivittää Asemataulun junan etenemisen jokaisessa vaiheessa: ArtifactData url https://claude.ai/artifact/Rq5ajPU4SraE2XKd7BYAix,
+collection "talo", doc "eteneminen" {nimi:"Juna N", tila, edistys 0–5, vaihe, valmis_arvio ISO, kirjoittaja, ts} (get → set if_version).
+Vaiheet 1 lukittu + testit, 2 käännös, 3 simutodiste/muistiajo, 4 TF-lataus, 5 Applella (Julkaisija). "junat"-dokumentti on PT:n.
