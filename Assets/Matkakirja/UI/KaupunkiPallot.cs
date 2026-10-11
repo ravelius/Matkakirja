@@ -148,6 +148,8 @@ namespace Matkakirja.Natiivi
             if (!ErikoisnostoMitat.OmaMaa(PallonMaa(p), nk != null ? nk.NykyinenMaa : null)) { NaytaHinta(p); return; }
             // Lento maksaa 200 p (omistaja 11.10.2026, juna 182): maksu ennen avausta, ilman rahaa pallo ei avaudu
             // (tilarivin "Rahat eivät riitä"); jos opas ei aukea maksun jälkeen, maksu palautetaan.
+            // Rahat eivät riitä → ilmoitus ja OK (Rahapula, omistaja 11.10.2026); tilarivi jää Maksa-funktion varaksi.
+            if (!Rahapula.Tarkista(Kieli.T("ui.pallo.nimi"), Matkakirja.Peli.KauppaVakiot.PalloLentoHinta)) return;
             var o = PeliOhjain.Instanssi;
             if (o != null && !o.MaksaPalloLento()) return;
             if (OpasSovitin.AvaaKaupunkitila(id)) return;

@@ -133,6 +133,7 @@
  "ui.opas.vapaa-lento": "Vapaa lento",
  "ui.pallo.kaupunkiopas": "{0}: kaupunkiopas",
  "ui.pallo.hinta": "Kuumailmapallo {0}",
+ "ui.pallo.nimi": "Kuumailmapallo",
  "ui.pelit.ei-peleja": "Ei vielä pelejä.",
  "ui.pelit.keskeneraiset": "Keskeneräiset",
  "ui.pelit.lentopeli": "Lentopeli",
