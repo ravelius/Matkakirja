@@ -134,6 +134,7 @@ namespace Matkakirja.Natiivi
             n.Liekit = new DioraamaLiekit(n.transform);
             n.Valot = new DioraamaValot(n.transform);
             n.Hahmot3D = new DioraamaHahmot3D(n.transform);
+            n.Hahmot3D.KatsojanKamera = () => n.Kamera;   // irrallisten hahmojen katse pelaajaan (soutajan kasvot 11.10.)
             n.Savu = new DioraamaSavu(n.transform);
             n.Ikkunat = new DioraamaIkkunat(n.transform);
             n.Ulkokuori = new DioraamaUlkokuori(n.transform);
