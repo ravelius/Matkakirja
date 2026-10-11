@@ -423,7 +423,7 @@ namespace Matkakirja.Natiivi
             // Trailerin päälle samaan kerrokseen: Pariisin C1–C5 jatkaa trailerin kuvia samalla asettelulla.
             Introesitys = new Introesitys(kerros);
             Saapuminen.Esitys = Introesitys;
-            Aloitusintro = new AloitusintroNakyma(Introesitys);
+            Aloitusintro = new AloitusintroNakyma(Introesitys, Matkakirja);
             KaupunkiMerkit.Kalusteet = KartanKalusteet; // löydös 164
             NostotKartalla.Napit = KartanNapit;         // Stonehenge Liikun alla (Päätoimittaja 6.10.)
             // Löydös 170: sisältöpaketti vaihtui kesken istunnon (Siirtoseppä) → maakunta- ja nostodata uudesta versiosta.
@@ -682,6 +682,8 @@ namespace Matkakirja.Natiivi
             o.MatkaPerilla += kaupunki => UiKerros.PaaSaikeessa(() => EsilataaNostot(kaupunki));
             EsilataaNostot(o.PelaajanKaupunki);
             UiSisalto.LataaLehti(o.PelaajanKaupunki);
+            // Aloitusintron kaupunkien lehdet (avaus- ja kansikuvat, 3 × ≤ 100 kt) heti: intro ei odota niitä hypyssä (simu 25a2dca37).
+            foreach (var ak in global::Matkakirja.Linssit.Kierros.KaupunkiIntro.Aloitukset.Keys) UiSisalto.LataaLehti(ak);
             // Esilataaja erä 2 (ESILATAUSPOLITIIKKA kohta 3): kohdekaupungin kuvat ja nostodata jo lennon/matkan aikana.
             o.SaapuminenTiedossa += kaupunki => UiKerros.PaaSaikeessa(() => EsilataaSaapuminen(kaupunki));
             // Esilataaja erä 3: kohdat 4–5 (nopan päässä / siirtokohteena näkyvä kaupunki) ja kohta 4 (joutilaana

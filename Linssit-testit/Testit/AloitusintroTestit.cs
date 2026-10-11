@@ -88,6 +88,12 @@ namespace Matkakirja.Linssit.Testit
             // Ateena: avauskuvat (ei kiinteää sarjaa).
             var a = KaupunkiIntro.AloitusKuvaOsoitteet("ateena", new List<string> { "1", "2", "3", "4", "5", "6", "7" }, kansi);
             Oleta.Sama("1 2 3 4 5 6", string.Join(" ", a));
+            // Simu 25a2dca37: lehti ei vielä ladattu (avaus- ja kansikuvia 0) → varakuvat (isoisän luenta- ja PuluCam-kuvat), ei tyhjää.
+            var t = KaupunkiIntro.AloitusKuvaOsoitteet("tukholma", new List<string>(), new List<string> { "luenta1", "luenta2", "pulu1" });
+            Oleta.Sama("luenta1 luenta2 pulu1 luenta1 luenta2 pulu1", string.Join(" ", t));
+            // Lehti saapuu kesken: avauskuvat ensin, varakuvat vasta niiden jälkeen.
+            var t2 = KaupunkiIntro.AloitusKuvaOsoitteet("tukholma", new List<string> { "a1", "a2" }, new List<string> { "k1", "luenta1" });
+            Oleta.Sama("a1 a2 k1 luenta1 a1 a2", string.Join(" ", t2));
         }
 
         [Testi] static void PariisiKorvaaLuennanMuttaEiAlkulennolla()

@@ -119,6 +119,8 @@ namespace Matkakirja.Natiivi
             // Kehittäjän maailmanäkymässä mihin tahansa voi hypätä (MaailmaHyppy): esittelyn kaupungin musiikki valmiiksi.
             if (Paavalikko.Maailma && tama != Matkakirja.Linssit.Kierros.KaupunkiIntro.Kaupunki)
                 EsilataaEsitysMusiikki(Matkakirja.Linssit.Kierros.KaupunkiIntro.Kaupunki);
+            // Aloitusintrojen Williamit (3 lyhyttä repliikkiä) levylle joutilaana: hyppy tai lyhyt matka ei odota verkkoa (simu 25a2dca37).
+            if (puhe != null) foreach (var a in Matkakirja.Linssit.Kierros.KaupunkiIntro.Aloitukset.Values) puhe.Esilataa(a.WilliamUrl, Taso.Muu);
         }
 
         /// <summary>
