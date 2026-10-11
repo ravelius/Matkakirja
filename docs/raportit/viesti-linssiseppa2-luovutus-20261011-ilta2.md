@@ -14,6 +14,9 @@ linssiseppa2/google-429-vara) ja wt/proto-linssiseppa2-museo (linssiseppa2/keitt
 - 429-mittaus _tyo/linssiseppa2/ion429/loki.tsv (25 × 5 min, loppuu ~20.52) → yhteenveto PT:lle klo ~21 (osuus 429, pisimmät jaksot; 6.10. lokit grep).
 
 ## AVOIN
+0. **KEITTIÖ V3 YÖ HYVÄKSYTTY SUUNNAKSI (PT 19.5x)**: oletusvalotus −1 EV (122dc77fb), kolmikko c962bad79. Lisätty kalkin alle hento kiven
+   kohokuvio (keittio-grafiikka, ks. git log) → käännä + kuva; sitten hdr-yo-kartat ämpäriin (vie-paketti.sh, esim. dioraama/kokeet/keittio-hdr-yo/)
+   ja NS:n iPad-mittaus (poikki hdr https://media.matkakirja.app/...) → ennen | V3 omistajalle PT:n kautta.
 1. **Grafiikan pystyleike (keittiö)**: V1 (kiilto, värimäärittely) + V2 (LR:n HDR-leivonta, albedo + RGBM-irradianssi) + V3 (yöleivonta
    kalkkiseinillä + esineiden valoluotaimet L1-SH) haarassa keittio-grafiikka d00ce68f5. Testikomennot: poikki grafiikka 0|1|2,
    poikki hdr <file-kansio> | valotus EV, poikki kavely siirra x y z yaw pitch. Kartat _tyo/linssiseppa2/grafiikka/hdr-yo (hdr_png.py).
