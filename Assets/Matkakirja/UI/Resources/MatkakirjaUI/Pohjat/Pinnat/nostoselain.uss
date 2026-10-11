@@ -421,9 +421,10 @@
 }
 
 .mk-nosto__ylarivi--kategoria .mk-nosto__ylarivi-teksti {
+    /* Ei ellipsiä (PT 11.10., simuajo 23afc880: "HISTOR…", "P…"): rivin harvennus (letter-spacing) jää UITK:n mittauksen
+     * ulkopuolelle, joten lyhytkin kategoria katkesi; kategoriat ovat lyhyitä ja rivi on oma, joten teksti saa näkyä kokonaan. */
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    flex-shrink: 0;
 }
 
 .mk-nosto__ylarivi--kategoria .mk-nosto__ylarivi-symboli {
