@@ -34,6 +34,13 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Aukio tai tori (workerin luokka; OpasKuvaus.Kehysta): pallon kierto väistää lähellä olevat korkeat rakenteet
         /// (OpasSilmukka.EsteNosto) ja silmä pysyy ympäröivien kattojen yllä (PalloAukioKattoMinM).</summary>
         public bool Aukio;
+        /// <summary>Tornisääntö (OpasSilmukka.TorniKuvaan, PT 11.10.): katsepiste voi olla siirretty torin pisteestä tornia kohti;
+        /// KohdeLat/KohdeLon on kohteen oma piste (NaN = Lat/Lon), TorniPohja kehys ennen sovitusta ja TorniSuhde kuvasuhde, jolle
+        /// sovitettiin (laite kääntyy → sovitus uudelleen); null = ei sovitettu.</summary>
+        public double KohdeLat = double.NaN, KohdeLon = double.NaN, TorniSuhde;
+        public Pysahdys TorniPohja;
+        public double OmaLat => double.IsNaN(KohdeLat) ? Lat : KohdeLat;
+        public double OmaLon => double.IsNaN(KohdeLon) ? Lon : KohdeLon;
 
         public static Pysahdys P(string id, string nimi, string alarivi, double lat, double lon, double maa, double nosto,
             double suuntima, double pitch, double etaisyys, string teksti = null) => new Pysahdys

@@ -67,7 +67,9 @@ namespace Matkakirja.Linssit.Testit
             return OpasKohde.Lue(j);
         }
 
-        static readonly Dictionary<(Profiili, string, double, double, bool, bool), Ajo> ajot = new Dictionary<(Profiili, string, double, double, bool, bool), Ajo>();
+        static readonly Dictionary<(Profiili, string, double, double, bool, bool, double, bool, double), Ajo> ajot = new Dictionary<(Profiili, string, double, double, bool, bool, double, bool, double), Ajo>();
+        /// <summary>Listan korkeus_m (pöllö-PR #4384, tuotannossa 11.10.; kultainen data ennen sitä: 0): Brysselin kaupungintalo ja Palazzo Vecchio.</summary>
+        static readonly Dictionary<string, double> ListanKorkeus = new Dictionary<string, double> { ["Q1255327"] = 96, ["Q271928"] = 94 };
 
         /// <summary>Pariisin kierros kaupunkitilan avauksesta (1,1 km / 50°, siirto ja avauksen kierto) kuten sovitin.</summary>
         /// <param name="tuloSuunta">Mistä suunnasta (°) kaupunkiin tullaan (siirron lähtöpaikka 50 km:n päässä; NaN = kaupungin päältä):
@@ -76,17 +78,24 @@ namespace Matkakirja.Linssit.Testit
         /// <param name="workerV1g">Notre-Damen katse workerin kentistä (esittely-v1g) eikä Ydin-oletuksesta.</param>
         /// <param name="kylvo">Sovitin syöttää kierroksen listan tornit ja kirkot esteiksi kierroksen alussa (false: listassa ei luokkaa,
         /// este selviää vasta esihaun vastauksesta perillä; simu 40f578863 San Marco).</param>
-        public static Ajo Aja(Profiili p = Profiili.Normaali, string kaupunki = "pariisi", double tuloSuunta = double.NaN, double avausS = 14, bool workerV1g = false, bool kylvo = true)
+        /// <param name="suhde">Laitteen kuvasuhde (OpasKuvaus.KuvaSuhdeNyt; iPad vaaka 4:3, iPhone pysty 0,46, vaaka 2,17).</param>
+        /// <param name="listanKorkeus">Listan korkeus_m (ListanKorkeus) kylvöön ja workerin vastaukseen kuten tuotannossa 11.10.</param>
+        /// <param name="kaantoS">Laite kääntyy (kuvasuhde 4:3 → suhde) näin monta s 1. aukion saapumisen jälkeen; NaN = ei.</param>
+        public static Ajo Aja(Profiili p = Profiili.Normaali, string kaupunki = "pariisi", double tuloSuunta = double.NaN, double avausS = 14, bool workerV1g = false, bool kylvo = true,
+            double suhde = 4.0 / 3, bool listanKorkeus = false, double kaantoS = double.NaN)
         {
-            var avain = (p, kaupunki, tuloSuunta, avausS, workerV1g, kylvo);
+            var avain = (p, kaupunki, tuloSuunta, avausS, workerV1g, kylvo, suhde, listanKorkeus, kaantoS);
             if (ajot.TryGetValue(avain, out var valmis)) return valmis;
             v1g = workerV1g;
-            bool vanha = OpasSilmukka.PalloLento; OpasSilmukka.PalloLento = true;
+            bool vanha = OpasSilmukka.PalloLento; OpasSilmukka.PalloLento = true; double vanhaSuhde = OpasKuvaus.KuvaSuhdeNyt;
+            OpasKuvaus.KuvaSuhdeNyt = double.IsNaN(kaantoS) ? suhde : 4.0 / 3;
             try
             {
                 var reitti = Reitti(kaupunki);
+                if (listanKorkeus) foreach (var k in reitti) if (ListanKorkeus.TryGetValue(k.Id, out double lk)) k.KorkeusM = lk;
                 var c = PalloKaupungitTestit.Lue().First(x => x.Id == kaupunki);
                 var ajo = new Ajo { Reitti = reitti };
+                string kaantoAukio = reitti.FirstOrDefault(k => OpasKuvaus.AukioLuokka(k.Luokka))?.Id; bool kaannetty = false;
                 var loki = new System.Text.StringBuilder();
                 bool odotus = p == Profiili.Odotus;
                 double vastausS = odotus ? 7 : 2, puheLisaS = odotus ? 5 : 0, t = 0, lentoAlkoi = double.NaN;
@@ -117,7 +126,7 @@ namespace Matkakirja.Linssit.Testit
                     {
                         kierrosAlkoi = true; s.AloitaKierros(reitti.Select(k => (k.Nimi, k.Lat, k.Lon)).ToList()); loki.Append($"{t:F1} kierros alkaa; ");
                         // Kuten sovitin: listan luokka (kylvo) tai lukitun kaupungin luokaton lista (ei kylvöä, korkeus tuntematon).
-                        if (kylvo) foreach (var k in reitti) s.LisaaEste(k.Lat, k.Lon, OpasSilmukka.EsteKorkeusLuokasta(k.Luokka), OpasSilmukka.PalloEsteSadeM, k.Luokka != null);
+                        if (kylvo) foreach (var k in reitti) s.LisaaEste(k.Lat, k.Lon, OpasSilmukka.EsteKorkeus(k.Luokka, listanKorkeus && k.KorkeusM > 0 ? k.KorkeusM : double.NaN), OpasSilmukka.PalloEsteSadeM, k.Luokka != null, k.Luokka);
                     }
                     for (int j = vastaukset.Count - 1; j >= 0; j--)
                     {
@@ -131,6 +140,8 @@ namespace Matkakirja.Linssit.Testit
                     }
                     for (int j = ymp.Count - 1; j >= 0; j--) if (ymp[j].t <= t) { var k = ymp[j].k; k.YmparysM = Ymparys.TryGetValue(k.Id, out var y) ? y : 15; ymp.RemoveAt(j); }
                     for (int j = hiljaa.Count - 1; j >= 0; j--) if (hiljaa[j] <= t) { hiljaa.RemoveAt(j); s.AaniLoppui(); }
+                    if (!double.IsNaN(kaantoS) && !kaannetty && kaantoAukio != null && ajo.Saapui.TryGetValue(kaantoAukio, out double ka0) && t >= ka0 + kaantoS)
+                    { kaannetty = true; OpasKuvaus.KuvaSuhdeNyt = suhde; loki.Append($"{t:F1} kuvasuhde {suhde:F2}; "); }
                     var vaihe0 = s.Vaihe; var nyk0 = s.Nykyinen?.Id;
                     s.Paivita(Dt, _ => MaaM, laatat);
                     if (vaihe0 != OpasVaihe.Lentaa && s.Vaihe == OpasVaihe.Lentaa && nyk0 != null && !ajo.Lahti.ContainsKey(nyk0)) ajo.Lahti[nyk0] = t;
@@ -142,7 +153,7 @@ namespace Matkakirja.Linssit.Testit
                 ajo.Loki = loki.ToString();
                 return ajot[avain] = ajo;
             }
-            finally { OpasSilmukka.PalloLento = vanha; }
+            finally { OpasSilmukka.PalloLento = vanha; OpasKuvaus.KuvaSuhdeNyt = vanhaSuhde; }
         }
 
         /// <summary>Pisin seisahdus kohteittain (s) ja syy (vaihe); kohde = pysähdys, jolla pallo oli (lento kohteeseen kuuluu kohteelle).</summary>
@@ -499,7 +510,8 @@ namespace Matkakirja.Linssit.Testit
                 var a = Aja(Profiili.Normaali, "venetsia", su); var x = Asennot(a, "Q217527");
                 double s0 = x[0].SilmaM, smax = x.Max(y => y.SilmaM);
                 Console.WriteLine($"      San Marco ({(double.IsNaN(su) ? "-" : su.ToString("F0"))}°): saapuessa et {x[0].EtM:F0} m, silmä {s0:F0} m, kallistus {x[0].Kallistus:F0}°, silmä enintään {smax:F0} m");
-                if (x[0].EtM < 200 || s0 < 60) viat.Add($"San Marco {su}: ei vanhaa kehystä (et {x[0].EtM:F0}, silmä {s0:F0})");
+                // PT 11.10. 05.2x (TorniKuvaan): katsepiste tornin puolelle ja ylemmäs, katse-etäisyys ~200 m (vaakasäde sama), raja 200 → 190 m.
+                if (x[0].EtM < 190 || s0 < 60) viat.Add($"San Marco {su}: ei vanhaa kehystä (et {x[0].EtM:F0}, silmä {s0:F0})");
                 if (smax > s0 + 10) viat.Add($"San Marco {su}: silmä nousi {s0:F0} → {smax:F0} m");
             }
             // Este selviää vasta perillä (simu 40f578863: lukitun kaupungin lista ilman luokkaa, kellotornin korkeus vasta esihaun
@@ -521,6 +533,163 @@ namespace Matkakirja.Linssit.Testit
             var v = Asennot(Aja(Profiili.Normaali, "praha"), "Q847613"); var vs = Asennot(Aja(Profiili.Normaali, "praha"), "Q421678");
             Console.WriteLine($"      Venceslas: et {v[0].EtM:F0} → {v[^1].EtM:F0} m, silmä {v.Min(y => y.SilmaM):F0}–{v.Max(y => y.SilmaM):F0} m; Vanhankaupungin aukio (kello 97 m): et {vs[0].EtM:F0} m, silmä {vs[0].SilmaM:F0} m");
             if (v[0].EtM < 180 || v[0].SilmaM < 50) viat.Add($"Venceslas: alku {v[0].EtM:F0} m, silmä {v[0].SilmaM:F0} m");
+            Oleta.Tosi(viat.Count == 0, string.Join("; ", viat));
+        }
+
+        // ---- TORNI KOKONAAN KUVASSA (PT 11.10. 05.2x, todistus-aukiot-jalkeen4-181: San Marcon pysähdyksen lopussa kellotorni
+        // valui kierron mukana kuvan oikeaan reunaan) ----
+        /// <summary>Tornin (juuri ja huippu, säde min(15, koko/2)) ja torin pisteen paikka kuvassa joka 0,5 s saapumisesta lähtöön:
+        /// suurin |x|/|y| (−1…1 = reuna, iPad vaaka 4:3, pystykulma 50°) koko pysähdyksellä ja lopussa.</summary>
+        /// <param name="tLat">Tornin todellinen paikka, jos eri kuin listan piste (NaN = listan piste; säde silloin PalloTorniSadeM).</param>
+        public static (double koko, double loppu, double tori, int n) TorniKuvassa(Ajo a, string aukio, string torni, double alkaenS = 0, double suhde = 4.0 / 3,
+            double tLat = double.NaN, double tLon = double.NaN)
+        {
+            var q = a.Reitti.First(x => x.Id == aukio); var t = a.Reitti.First(x => x.Id == torni);
+            double h = t.KorkeusM > 0 ? t.KorkeusM : OpasSilmukka.EsteKorkeusLuokasta(t.Luokka);   // kuten kylvö: luokan nimelliskorkeus
+            double t0 = a.Saapui[aukio], t1 = a.Lahti.TryGetValue(aukio, out var l) ? l : a.R[^1].t, seur = t0 + alkaenS, koko = 0, loppu = 0, tori = 0; int n = 0;
+            foreach (var r in a.R)
+            {
+                if (r.t < seur - 1e-6 || r.t > t1 + 1e-6 || r.kohde != aukio) continue;
+                seur += 0.5; n++;
+                double m = double.IsNaN(tLat) ? OpasKuvaus.KuvassaOsuus(r.a, t.Lat, t.Lon, MaaM, MaaM + h, Math.Min(15, 0.5 * t.KokoM), suhde)
+                    : OpasKuvaus.KuvassaOsuus(r.a, tLat, tLon, MaaM, MaaM + h, OpasSilmukka.PalloTorniSadeM, suhde);
+                koko = Math.Max(koko, m); loppu = m;
+                tori = Math.Max(tori, OpasKuvaus.KuvassaOsuus(r.a, q.Lat, q.Lon, MaaM, MaaM, 0, suhde));
+            }
+            return (koko, loppu, tori, n);
+        }
+
+        /// <summary>Raja: torni ja tori kuvassa 5 %:n marginaalilla (kuvan reunassa korin köydet).</summary>
+        public const double TorniReuna = 0.9;
+
+        [Testi] static void SanMarcoKellotorniKuvassaKokoKierron()
+        {
+            var viat = new List<string>();
+            // Kellotorni (Q754194, 99 m, 81 m torin pisteestä itään) joka tulosuunnasta, kylvö tuotannon tapaan (liiku-listan luokka ja korkeus_m).
+            foreach (double su in new[] { double.NaN, 0, 45, 90, 135, 180, 225, 270, 315 })
+            {
+                var a = Aja(Profiili.Normaali, "venetsia", su); var x = Asennot(a, "Q217527");
+                var m = TorniKuvassa(a, "Q217527", "Q754194");
+                double kaari = 0; for (int i = 1; i < x.Count; i++) kaari += Math.Abs(KierrosLento.Kiedo(x[i].SilmaSuunta - x[i - 1].SilmaSuunta));
+                double kesto = x.Count > 1 ? x[^1].T - x[0].T : 0;
+                Console.WriteLine($"      San Marco ({(double.IsNaN(su) ? "-" : su.ToString("F0"))}°): torni enintään {m.koko:F2}, lopussa {m.loppu:F2}, tori enintään {m.tori:F2} ({m.n} näytettä), kierto {kaari:F0}° / {kesto:F0} s, silmä {x[0].SilmaM:F0}–{x.Max(y => y.SilmaM):F0} m");
+                if (m.n < 10) viat.Add($"San Marco {su}: näytteitä {m.n}");
+                if (m.koko > TorniReuna) viat.Add($"San Marco {su}: torni {m.koko:F2} (lopussa {m.loppu:F2})");
+                if (m.tori > TorniReuna) viat.Add($"San Marco {su}: tori {m.tori:F2}");
+            }
+            // Ilman kylvöä (lista ilman luokkaa, simu 40f578863): torni selviää vasta perillä, kehys siirtyy PalloKehysSiirtoS:ssä → lopussa kuvassa.
+            foreach (double su in new[] { double.NaN, 0, 315 })
+            {
+                var a = Aja(Profiili.Normaali, "venetsia", su, 14, false, false);
+                var m = TorniKuvassa(a, "Q217527", "Q754194");
+                Console.WriteLine($"      San Marco ilman kylvöä ({(double.IsNaN(su) ? "-" : su.ToString("F0"))}°): torni enintään {m.koko:F2}, lopussa {m.loppu:F2}, tori enintään {m.tori:F2}");
+                if (m.loppu > TorniReuna || m.tori > TorniReuna) viat.Add($"San Marco ilman kylvöä {su}: lopussa torni {m.loppu:F2}, tori {m.tori:F2}");
+            }
+            // Muut aukiot korkean (≥ 60 m) tornin tai kirkon vieressä (alle 150 m): sama tilanne ja sama kehys (Concorde, Venceslas ym. ennallaan).
+            foreach (var (kaupunki, aukio, torni) in new[] { ("praha", "Q421678", "Q729370"), ("helsinki", "Q1329554", "Q738015"), ("krakova", "Q770631", "Q1143171"), ("sisilia", "Q1665695", "Q2066497") })
+            {
+                var a = Aja(Profiili.Normaali, kaupunki);
+                if (!a.Saapui.ContainsKey(aukio)) { viat.Add($"{kaupunki} {aukio}: ei saavuttu"); continue; }
+                var p = TorniKuvassa(a, aukio, torni);
+                Console.WriteLine($"      {a.Reitti.First(x => x.Id == aukio).Nimi}: {a.Reitti.First(x => x.Id == torni).Nimi} enintään {p.koko:F2}, lopussa {p.loppu:F2}, aukio enintään {p.tori:F2}");
+                if (p.koko > TorniReuna || p.tori > TorniReuna) viat.Add($"{kaupunki} {aukio}: torni {p.koko:F2}, aukio {p.tori:F2}");
+            }
+            Oleta.Tosi(viat.Count == 0, string.Join("; ", viat));
+        }
+
+        // ---- TORNI KUVASSA LAITTEEN KUVASUHTEELLA (PT 11.10. 07.3x: iPhonella pallo sekä pysty- ~0,46 että vaakakuvana ~2,17;
+        // pystyssä 80 m:n päässä oleva torni leikkautui sivuilta, kun tornisääntö oletti iPadin 4:3:n; 07.5x: pystyssä kierto tornin
+        // ympäri viistosti ≥ 55°, ei karttamaista yläkuvaa) ----
+        static readonly (string kaupunki, string aukio, string torni)[] TorniAukiot =
+            { ("venetsia", "Q217527", "Q754194"), ("bryssel", "Q215429", "Q1255327"), ("firenze", "Q849846", "Q271928") };
+
+        [Testi] static void TorniKuvassaKaikillaKuvasuhteilla()
+        {
+            var viat = new List<string>();
+            foreach (double suhde in new[] { 0.46, 4.0 / 3, 2.17 })
+                foreach (var (kaupunki, aukio, torni) in TorniAukiot)
+                {
+                    var a = Aja(Profiili.Normaali, kaupunki, double.NaN, 14, false, true, suhde, true);
+                    if (!a.Saapui.ContainsKey(aukio)) { viat.Add($"{kaupunki} {suhde:F2}: ei saavuttu"); continue; }
+                    var m = TorniKuvassa(a, aukio, torni, 0, suhde); var x = Asennot(a, aukio);
+                    double kaari = 0; for (int i = 1; i < x.Count; i++) kaari += Math.Abs(KierrosLento.Kiedo(x[i].Suunta - x[i - 1].Suunta));   // kameran suunta: kierto katsepisteen ympäri
+                    double kesto = x.Count > 1 ? x[^1].T - x[0].T : 1;
+                    double kallMin = x.Min(y => y.Kallistus), silmaMax = x.Max(y => y.SilmaM);
+                    Console.WriteLine($"      {kaupunki} {suhde:F2}: torni enintään {m.koko:F2}, lopussa {m.loppu:F2}, tori enintään {m.tori:F2} ({m.n}), silmä {x[0].SilmaM:F0}–{silmaMax:F0} m, kallistus {kallMin:F0}–{x.Max(y => y.Kallistus):F0}°, et {x[0].EtM:F0} m, kierto {kaari / kesto:F1} °/s");
+                    if (m.n < 10) viat.Add($"{kaupunki} {suhde:F2}: näytteitä {m.n}");
+                    if (m.koko > TorniReuna) viat.Add($"{kaupunki} {suhde:F2}: torni {m.koko:F2}");
+                    // Pystykuva (PT 11.10. 07.5x): viisto pallonäkymä ≥ 55° ja torni keskellä; torista saa leikkautua osa. Vaaka: myös tori.
+                    if (suhde < 1 && kallMin < 55) viat.Add($"{kaupunki} {suhde:F2}: kallistus {kallMin:F0}° (< 55°)");
+                    if (suhde < 1 && kaari / kesto < 2.9) viat.Add($"{kaupunki} {suhde:F2}: kierto {kaari / kesto:F1} °/s");
+                    if (suhde >= 1 && m.tori > TorniReuna) viat.Add($"{kaupunki} {suhde:F2}: tori {m.tori:F2}");
+                }
+            // iPad vaaka ennallaan: 4:3 ja 2,17 (leveämpi) antavat saman kehyksen kuin oletus.
+            var ipad = Asennot(Aja(Profiili.Normaali, "venetsia"), "Q217527"); var leve = Asennot(Aja(Profiili.Normaali, "venetsia", double.NaN, 14, false, true, 2.17), "Q217527");
+            if (ipad.Count != leve.Count || ipad.Zip(leve, (u, v) => Math.Abs(u.SilmaM - v.SilmaM) + Math.Abs(u.EtM - v.EtM)).Max() > 1e-9) viat.Add("2,17 eri kehys kuin 4:3");
+            Oleta.Tosi(viat.Count == 0, string.Join("; ", viat));
+        }
+
+        [Testi] static void LaiteKaantyyKeskenPysahdyksen()
+        {
+            // iPhone kääntyy vaakakuvasta (4:3:n kehys) pystyyn (0,46) 4 s aukiolle saapumisen jälkeen: kehys vaihtuu pehmeästi (silmän
+            // nopeuden muutos ≤ 0,3 m/s ruudulta toiselle, ~9 m/s² pysähdyksellä ja lähdön saumassa) ja lopussa torni ja tori kuvassa.
+            var viat = new List<string>();
+            foreach (var (kaupunki, aukio, torni, suhde, kS) in new[] { ("venetsia", "Q217527", "Q754194", 0.46, 4.0), ("bryssel", "Q215429", "Q1255327", 0.46, 4.0), ("firenze", "Q849846", "Q271928", 0.46, 4.0) })
+            {
+                var a = Aja(Profiili.Normaali, kaupunki, double.NaN, 14, false, true, suhde, true, kS);
+                var m = TorniKuvassa(a, aukio, torni, 0, suhde);
+                double t0 = a.Saapui[aukio], t1 = a.Lahti.TryGetValue(aukio, out var l) ? l : a.R[^1].t, dvMax = 0, vMax = 0; string dvKohta = "-";
+                var q = a.Reitti.First(x => x.Id == aukio);
+                (double e, double n, double u)? e1 = null, e2 = null;
+                foreach (var r in a.R)
+                {
+                    if (r.t < t0 || r.t > t1 + 0.2) continue;   // pysähdys ja lähdön sauma (lento itse saa kiihtyä)
+                    var e = OpasKuvaus.KameraPaikka(r.a, q.Lat, q.Lon);
+                    if (e1 is var (ae, an, au) && e2 is var (be, bn, bu))
+                    {
+                        double v1x = (ae - be) / Dt, v1y = (an - bn) / Dt, v1z = (au - bu) / Dt, v2x = (e.e - ae) / Dt, v2y = (e.n - an) / Dt, v2z = (e.u - au) / Dt;
+                        double dv = Math.Sqrt((v2x - v1x) * (v2x - v1x) + (v2y - v1y) * (v2y - v1y) + (v2z - v1z) * (v2z - v1z));
+                        if (dv > dvMax) { dvMax = dv; dvKohta = $"{r.t - t0:F1} s {r.v}"; }
+                        vMax = Math.Max(vMax, Math.Sqrt(v2x * v2x + v2y * v2y + v2z * v2z));
+                    }
+                    e2 = e1; e1 = e;
+                }
+                Console.WriteLine($"      {kaupunki} kääntö {kS} → {suhde:F2}: torni lopussa {m.loppu:F2}, tori enintään {m.tori:F2}, silmän nopeus enintään {vMax:F1} m/s, nopeuden hyppy enintään {dvMax:F2} m/s ({dvKohta}; lähtö {t1 - t0:F1} s)");
+                if (m.loppu > TorniReuna) viat.Add($"{kaupunki}: lopussa torni {m.loppu:F2}");
+                if (dvMax > 0.3) viat.Add($"{kaupunki}: nopeuden hyppy {dvMax:F2} m/s");
+            }
+            Oleta.Tosi(viat.Count == 0, string.Join("; ", viat));
+        }
+
+        [Testi] static void PystykuvaKestaaTorninPaikkavirheen()
+        {
+            // PT 11.10. 08.2x (iPhone-ajo 137402c0b): Grand-Placen kaupungintalon listan piste on rakennuksen piste; torni ~23 m sivussa
+            // (OSM/PT 50.84647/4.35197) valui pystykuvassa ulos. Torni kuvassa, kun se on listan pisteessä, 30 m sivussa mihin tahansa
+            // suuntaan tai OSM-paikassa; kallistus ≥ 55°, silmä tornin huipun yläpuolella, kierto ≥ 2,9 °/s. San Marco (torni-luokka) ja
+            // Signoria: listan piste ja 15 m (torni) / 30 m sivussa.
+            var viat = new List<string>();
+            foreach (var (kaupunki, aukio, torni, virhe) in new[] { ("bryssel", "Q215429", "Q1255327", 30.0), ("venetsia", "Q217527", "Q754194", 15.0), ("firenze", "Q849846", "Q271928", 30.0) })
+            {
+                var a = Aja(Profiili.Normaali, kaupunki, double.NaN, 14, false, true, 0.46, true);
+                var t = a.Reitti.First(x => x.Id == torni); var x = Asennot(a, aukio);
+                double kM = 111195, kE = 111195 * Math.Cos(t.Lat * Math.PI / 180), pahin = TorniKuvassa(a, aukio, torni, 0, 0.46).koko;
+                string pahinKohta = "listan piste";
+                var paikat = new List<(string, double, double)>();
+                for (int i = 0; i < 8; i++) paikat.Add(($"{virhe:F0} m suuntaan {45 * i}°", t.Lat + virhe * Math.Cos(i * Math.PI / 4) / kM, t.Lon + virhe * Math.Sin(i * Math.PI / 4) / kE));
+                if (kaupunki == "bryssel") paikat.Add(("OSM 50.84647/4.35197", 50.84647, 4.35197));
+                foreach (var (nimi, la, lo) in paikat)
+                {
+                    double m = TorniKuvassa(a, aukio, torni, 0, 0.46, la, lo).koko;
+                    if (m > pahin) { pahin = m; pahinKohta = nimi; }
+                }
+                double kaari = 0; for (int i = 1; i < x.Count; i++) kaari += Math.Abs(KierrosLento.Kiedo(x[i].Suunta - x[i - 1].Suunta));
+                double kierto = kaari / Math.Max(1, x[^1].T - x[0].T), kallMin = x.Min(y => y.Kallistus), silmaMin = x.Min(y => y.SilmaM);
+                Console.WriteLine($"      {kaupunki} pysty: torni enintään {pahin:F2} ({pahinKohta}), silmä {silmaMin:F0}–{x.Max(y => y.SilmaM):F0} m (torni {t.KorkeusM:F0} m), kallistus {kallMin:F0}–{x.Max(y => y.Kallistus):F0}°, et {x[0].EtM:F0} m, kierto {kierto:F1} °/s");
+                if (pahin > TorniReuna) viat.Add($"{kaupunki}: torni {pahin:F2} ({pahinKohta})");
+                if (kallMin < 55) viat.Add($"{kaupunki}: kallistus {kallMin:F0}°");
+                if (silmaMin < t.KorkeusM) viat.Add($"{kaupunki}: silmä {silmaMin:F0} m tornin huipun alapuolella");
+                if (kierto < 2.9) viat.Add($"{kaupunki}: kierto {kierto:F1} °/s");
+            }
             Oleta.Tosi(viat.Count == 0, string.Join("; ", viat));
         }
 }
