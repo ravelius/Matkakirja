@@ -70,3 +70,11 @@ appit proto-3d/lokit/olavinlinna-yhdistetty-181{b,c,d,e}). Simuvuorot Julkaisija
 - Skenaariot: laituri-a1.txt kierros 4 kävellen (ei siirtoa), tyrmässä kohti ovi:tyrma; uusi halytys.txt.
 - v8-ajo: tyrma-ovi + halytys + laituri-a1 (v7.sh-pohja: 181g → v8-kansio, --haara bf1938773).
 - Sivulöydös: SeikkailuVartijat r. 723 kirjaa tyrmän jälkeisen kiinnijäännin osaan tyrma-E101 → helpotus nollautuu. Korjaamatta.
+
+## PÄIVITYS 05.4x: v8 653b7ce3 todennettu (SIMU VAPAA 05.31), v9-kärki d238b68be Julkaisijalle
+- v8: ovi kuvassa (kajo), ulos avaimilla 40 s / vesipojan ovi työnnetty 85 s / Pulu 70 s; hälytys ei silmukkaa 45 s, kamera kääntyy
+  (todistus-tyrma-ovi-0511, -halytys-0516, -laituri-a1-0520). Muunnelma 3 (irtokivi) todentamatta (skenaarion ajoitus).
+- v9: de081936a anteeksianto tyrmän jälkeen (otteen osa + tarkistuspisteen osa nykyiseksi; testi AnteeksiantoTyrmanJalkeen),
+  d238b68be vesiportin pielet + kynnys (Ydin KavelyPielet, testit KavelyPieletTestit, kultainen vesiportti-tormays.glb). Linssit 1361/1361.
+- Julkaisija: v9 Laitetestaajan 4. kierroksen (v8) jälkeiseen kohdennettuun tarkistukseen (laituri-a1 alku + 2. kiinnijäänti).
+- LR:lle: ulkoalue ilman tiedostot-kenttää (paketti b257fdf63e18f222), vesiportin rako/kolmioaukko; mustat levyt = tyrmän kuori.
