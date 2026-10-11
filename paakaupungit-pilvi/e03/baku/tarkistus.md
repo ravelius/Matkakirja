@@ -80,3 +80,82 @@ Yhteenveto: VÄÄRIN 15, EPÄVARMA 6.
 - Kaikki 15 VÄÄRIN-kohtaa korjattu sanatarkasti: vastausindeksit sekoitettu (correct 1,3,2,0,1; minitehtävä oikea 2), Q4:n q ja hint, tiedot[0], bulevardin 3,75 km (3 kohtaa), rajasulku (3 kohtaa), Hajibeyovin kirja 1945, Shollar, Maştağan lämpötilat, Opas 2 -kuvateksti, Plośko.
 - EPÄVARMA pehmennetty: "kukkulalla" (5 kohtaa), sademäärä noin 270 mm (Maştağa), kesä-nosto, palatsin nosto-lyhyt, "lähinnä" lentokenttien kautta; bulevardin kohdekartan piste vaihdettu mugham-keskuksen pisteeseen 40.3608/49.835. Nosto 4:stä poistettu yksi virke pituuskiintiön vuoksi.
 - Kuvia ei vaihdettu (kuvat.md ennallaan). tarkista --verkko: 0 virhettä.
+
+## Lukupassi
+
+Päätoimittajan LISÄSÄÄNTÖ 11.10.2026 (PILVIOHJE-paakaupungit.md rivit 1013-1016): tarkka luku/vuosi saa jäädä vain, jos kaksi riippumatonta lähdettä tukee sitä. Lähteet haettu 11.10.2026 (en-Wikipedia, fi-Wikipedia, toisen artikkelin teksti, en.wikivoyage = WV). Lyhenteet: B = en Baku, HB = en History of Baku, OC = en Old City (Baku), MT = en Maiden Tower, PS = en Palace of the Shirvanshahs, JM = en Juma Mosque, TP = en Taza Pir Mosque, BB = en Baku Boulevard, TZ = en Taghiyev, MU = en Mugham, LM = en Leyli and Majnun, UH = en Hajibeyov, GR = en Gobustan, BM = en Baku Metro, AP = en Heydar Aliyev Airport, QA = en Alim Qasimov, OT = en Azerbaijan State Opera and Ballet Theater, fiB = fi Baku.
+
+| Sijainti | Arvo | Lähteet | Päätös |
+|---|---|---|---|
+| artikkeli.intro, kysymys 5, johdanto, nosto | 28 m merenpinnan alapuolella | B; fiB; WV | säilytetty |
+| artikkeli.intro, kuvateksti, matkailu | UNESCO-perintö 2000 | OC; PS; fiB | säilytetty |
+| artikkeli.intro, teksti, kysymys 4, nosto 1 | Nobelit Bakuun 1873 | B; HB | säilytetty |
+| artikkeli.intro | asukasluku 1860-luvulla noin 13 000 | vain B (7 000 / 13 000) | poistettu ("vielä pieni kaupunki") |
+| artikkeli.intro | nykyinen asukasluku 2 344 900 (1.1.2024) | tilastokomitea (konteksti.json) + B "yli kaksi miljoonaa" | pyöristetty ("yli kaksi miljoonaa"); tarkka luku vain yhdessä lähteessä |
+| artikkeli.intro, nosto 1 | öljynetsintä alkoi 1872 | B; HB antaa 1873 (ristiriita) | pyöristetty ("1870-luvun alussa") |
+| artikkeli.intro, kysymys 4, nosto 1 | yli 3 000 öljykaivoa vuoteen 1900 | vain B | pyöristetty ("tuhansia", "1800-luvun lopulla") |
+| artikkeli.teksti | Shirvanshahien palatsin päärakennus 1411 | PS; WV | säilytetty |
+| artikkeli.teksti, nosto 3, nähtävyys | safavidit 1501, osmanit 1578, Pietari Suuren piiritys 1723 | PS; B; HB; fiB | säilytetty |
+| artikkeli.teksti, nähtävyydet | muurien vahvistus 1806 | MT; OC; B; fiB | säilytetty |
+| artikkeli.teksti | lääninpääkaupunki 1859 | B; HB | säilytetty |
+| artikkeli.teksti | lennätin Tiflisiin 1868 | vain HB | pyöristetty (vuosi poistettu, "oli jo olemassa") |
+| artikkeli.teksti | rata Tiflisiin 8.5.1883 | vain HB | pyöristetty ("1880-luvulla") |
+| artikkeli.teksti, nähtävyydet, bulevardi | muurien purku 1865, 44 000 ruplaa, suihkulähteet 1867 | vain OC | pyöristetty (1800-luvun puoliväli, 1860-luku); rahasumma poistettu |
+| kysymys 4 fact, nosto 1 | ensimmäinen kaivo Bibi-Heybatissa 1846 | B; HB; fiB | säilytetty |
+| valokuva | vuosi 1861, Ulsky (1837–1868) | Commons-tiedoston nimi ja tekijätiedot | säilytetty (kuvan metatieto, ei väite) |
+| tiedot[2], nähtävyys, Opas 3 | laskuvarjotorni 1936, kunnostus 2008 | vain BB | pyöristetty (1930-luku, 2000-luvun loppu) |
+| kansikuva 2, nähtävyys, Opas 3, matkailu | bulevardin pituus 3,75 km (2012), White City +2 km (2015) | vain BB | pyöristetty (noin neljä km, pari km); vuodet poistettu |
+| kansikuva 2, Opas 3, nähtävyys | bulevardin istutuspäätös 1900, kansallispuisto 1999 | vain BB | pyöristetty (1900-luvun alku, 1990-luvun loppu) |
+| nähtävyys bulevardi | 20 m leveä penger, Hajinski 1909 ja 60 000 ruplaa, valmistuminen 1911, Phenomenon 1912 | vain BB (Phenomenon 1912 WV-rivi epävarma) | leveys ja rahasumma poistettu; vuodet pyöristetty (1910-luku) |
+| nähtävyys bulevardi, aika-kenttä | "1900–1911" | vain BB | pyöristetty ("1900-luvun alku") |
+| nosto 1 | jalostamo Balaxaniin 1837 | vain B | pyöristetty (1800-luvun alkupuolisko) |
+| nosto 1 | Rothschildit 1882 | B 1882; HB 1883 (ristiriita) | poistettu (nostosta, pituuskiintiö) |
+| nosto 1, lyhyt | Nobelin tislaamo 1876 | vain Branobel | pyöristetty (1870-luku) |
+| nosto 1 | Musta kaupunki 1880-luvun alkuun mennessä | vain B | pyöristetty (1800-luvun loppu) |
+| nosto 1 | Marudee 900-luvulla | B (vuosisata) | säilytetty vuosisatana, "lähteen mukaan" |
+| nosto 2, nähtävyys | Neitotorni 29,5 m, 16,5 m, kahdeksan kerrosta | MT; WV | säilytetty |
+| nosto 2, nähtävyys, lyhyt | seinät 5 m paksut | vain MT | pyöristetty ("useita metrejä") |
+| nosto 2, nähtävyys | kaivaukset 1962–63, puupalkit 14 m, kufi-kirjoitus 14 m korkeudella | vain MT | pyöristetty (1960-luku) / poistettu (14 m) |
+| nähtävyys Neitotorni | jopa 20 legendaa | vain MT | pyöristetty ("useita") |
+| nosto 3, nähtävyys | 52 huonetta, kolme kierreporrasta, nykyään 16 huonetta | vain PS | pyöristetty ("useita kymmeniä", "kapeita portaita"); 16 poistettu |
+| nosto 3, nähtävyys | museo-suojelualue 1964 | vain PS (HB/OC eri asia) | pyöristetty (1960-luku) |
+| nähtävyys palatsi | Kei-Kubad paloi 1918, kunnostus 1932–1934, restaurointi 1992 | vain PS | pyöristetty (1900-luvun alku, neuvostoaika, 1990-luku) |
+| nosto 3, nähtävyys, kuvateksti | maailmanperintö 2000 | PS; OC; fiB | säilytetty |
+| nosto 4 | khazri 144 km/h | vain B | pyöristetty ("yli sata km/h") |
+| nosto 4, kuvateksti | sadetta noin 200 mm vuodessa | B; WV ("Baku averages 200 mm") | säilytetty |
+| nosto 4 | Mustallamerellä 2 300 mm | vain B | poistettu ("moninkertaisesti enemmän") |
+| nosto 4 | Shollar: 25 000 ruplaa, valmistui 1916 | vain TZ | rahasumma poistettu; vuosi pyöristetty (1910-luku) |
+| Opas, matkailijalle | lentoasema noin 25 km | fiB 25 km; AP 20 km koillisessa (ristiriita) | pyöristetty ("parinkymmenen km") |
+| Opas, matkailijalle | maarajat suljettu, tammikuu 2026 | vain WV | pyöristetty (päivämäärä poistettu); huomiot[1] päivitetty |
+| Opas | metro kello 6–24 | vain WV | pyöristetty ("aamusta keskiyöhön") |
+| Opas | metro avattu 6.11.1967, kolme linjaa | BM; B (marraskuu 1967, 3 linjaa) | säilytetty vuosi ja kuukausi (päivä pyöristetty pois); kolme linjaa säilytetty |
+| Opas | 27 asemaa | BM 27; B 25 (ristiriita) | pyöristetty ("yli kaksikymmentä") |
+| Opas | vanhakaupunki 3 000 asukasta (2007) | vain OC | pyöristetty ("muutama tuhat") |
+| Opas | ateria kolmeen osaan | vain AC | pyöristetty (luku poistettu) |
+| Opas, kuvateksti | plovia yli 200 lajia | vain Azerbaijani cuisine | pyöristetty ("satoja") |
+| Opas, ilmasto | lämpötilat 26,3 / 4,8 / 18,0 / 16,7 °C | Maştağa-taulukko (B); ei toista riippumatonta | pyöristetty (26, 5, 18, 17 °C) |
+| Opas, ilmasto | sade 270 mm | B Maştağa; WV 200 mm (ristiriita) | pyöristetty ("parista sadasta kolmeen sataan") |
+| Opas | heinäkuu 3,9 mm, marraskuu 44,3 mm | B-taulukko; WV-ilmastotaulukko | säilytetty |
+| Opas, ilmasto | ajanjakso 1991–2020 | B; WV | säilytetty |
+| matkailu.parasta | Gobustan 70 km, yli 6 000 piirrosta | vain GR | pyöristetty ("alle sata km", "tuhansia") |
+| musiikki.johdanto, nosto 2 | ooppera kantaesitettiin 1908 | LM; UH | säilytetty |
+| nosto 2 | ooppera kirjoitettu 1907, kantaesitys 25.1.1908 | LM 1907; UH 1908 (ristiriita); päivä vain LM | 1907 ja päivä poistettu |
+| nosto 2 | yli 2 000 esitystä | vain LM | pyöristetty ("yli tuhat") |
+| nosto 2, 3 | Fuzuli 1400-luvun runoilija | LM; UH | säilytetty (vuosisata) |
+| nosto 3, selite | Taghiyev kattoi 1911 rakennuksen kulut | TZ; OT | säilytetty |
+| nosto 3 | 18-vuotiaana, teatteri 1883, palo 1909, tyttökoulu 1898–1900, palokunta 1886 | vain TZ | pyöristetty ("nuorena", 1800-luvun loppu) / vuosi poistettu |
+| nosto 4 | mugham UNESCO 2003 ja 2008 | MU (2008 vain MU) | pyöristetty (2000-luku) |
+| nosto 1 (mugham) | seitsemän pääasteikkoa | vain MU | pyöristetty ("useita") |
+| nosto 4, lyhyt, selite | keskus 2005, avattu 27.12.2008, 7 500 m2, 350 paikkaa | vain MU | pyöristetty (2000-luku) / poistettu (ala, paikat) |
+| nosto 4 | Buckley-duetti 1995 | vain QA | pyöristetty (1990-luku) |
+| nosto 4 | Hajibeyovin kirja 1945 | UH 1945; MU ilman vuotta | pyöristetty (1940-luku) |
+| nähtävyys Juma | 709 AH / 1309–1310, minaretti 1437, nykyinen moskeija 1899 | JM; WV (1899 myös HB) | säilytetty |
+| nähtävyys Juma | 1990-luvun käyttöpaluu, restaurointi 2008 | vain JM | pyöristetty ("sen jälkeen", 2000-luku) |
+| nähtävyys muurit | muurit vahvistettu 1806; korjaus 1807–1811 | 1806: MT/OC/B; 1807–1811 vain OC | 1806 säilytetty; 1807–1811 pyöristetty ("pian sen jälkeen") |
+| nähtävyys muurit | Taghiyevin portti 1877, vaaralista 2009 asti | vain OC | pyöristetty (1800-luvun loppu; "2000-luvulla jonkin aikaa") |
+| nähtävyys Taza Pir | 1905–1914, 1 400 m2 | TP; WV (1905/1914 myös HB) | säilytetty |
+| nähtävyys Taza Pir | Balkanin sota 1911, sulku 1917, moskeija 1943, restaurointi 2006–2009 | vain TP | vuodet poistettu / pyöristetty (1900-luvun puoliväli, 2000-luku) |
+| kohdekartta, rajat | koordinaatit | en-Wikipedia + WV (tarkistettu aiemmin, alle ~80 m) | säilytetty |
+| vuosisata- ja vuosikymmenilmaukset (1000–1100-luku, 1100–1300-luku, 1400-luku, 1800-luku jne.) | ajoitukset vuosisatatasolla | PS; MT; OC; JM; TP; B | säilytetty (ei tarkkoja lukuja) |
+
+Yhteenveto: säilytetty 21, pyöristetty 44, poistettu 4 (rivit, joissa yhdellä rivillä useita lukuja, on laskettu päätöksen pääasian mukaan). Nostojen pituudet 440–660 merkkiä tarkistettu.
