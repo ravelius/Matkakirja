@@ -28465,19 +28465,19 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Voytek S, Wikimedia Commons (CC BY-SA 2.5)',
         },
         {
-          otsikko: 'Kolme veljestä kolmelta vuosisadalta',
+          otsikko: 'Kolme veljestä -talot kolmelta vuosisadalta',
           tiedosto: 'The Three Brothers Houses (8531775989).jpg',
           teksti: 'Mazā Pils -kadulla seisoo vierekkäin kolme kapeaa taloa, joita '
-            + 'sanotaan Kolmeksi veljekseksi. Ne ovat Riian vanhin säilynyt '
+            + 'kutsutaan Kolme veljestä -taloiksi. Ne ovat Riian vanhin säilynyt '
             + 'asuintalojen ryhmä. Valkoinen veli on rakennettu 1400-luvun '
             + 'lopulla, keltaisen julkisivussa lukee vuosiluku 1646, ja '
             + 'kolmas valmistui vasta 1700-luvun alussa. Kaikkien päätyseinä '
             + 'on kadulle päin, kuten Itämeren kauppakaupungeissa oli tapana. '
             + 'Talot korjattiin 1950-luvulla, ja nykyään niissä toimii '
             + 'arkkitehtuurimuseo.',
-          lyhyt: 'Kolme veljestä on Riian vanhin säilynyt asuintalojen ryhmä 1400-luvun lopulta 1700-luvun alkuun.',
-          selite: 'Kolme veljestä on Riian vanhin säilynyt asuintalojen '
-            + 'ryhmä: valkoinen on 1400-luvun lopulta, keltaisessa lukee '
+          lyhyt: 'Kolme veljestä -talot ovat Riian vanhin säilynyt asuintalojen ryhmä 1400-luvun lopulta 1700-luvun alkuun.',
+          selite: 'Kolme veljestä -talot ovat Riian vanhin säilynyt '
+            + 'asuintalojen ryhmä: valkoinen on 1400-luvun lopulta, keltaisessa lukee '
             + 'vuosiluku 1646 ja kolmas valmistui 1700-luvun alussa.',
           lahde: 'Guillaume Speurt, Wikimedia Commons (CC BY-SA 2.0)',
         },

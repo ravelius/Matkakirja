@@ -13221,11 +13221,11 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Kolme veljestä': {
+    'Kolme veljestä -talot': {
       aika: '1400-luvun loppu–1746',
       teksti: 'Riian vanhassa kaupungissa, kapealla Mazā Pils -kadulla, '
           + 'seisoo vierekkäin kolme erinäköistä taloa, joita kutsutaan '
-          + 'Kolmeksi veljeksi. Ne ovat koko Riian vanhin säilynyt '
+          + 'Kolme veljestä -taloiksi. Ne ovat koko Riian vanhin säilynyt '
           + 'asuinrakennusten rivi. Vanhin veljeksistä on peräisin '
           + '1400-luvun lopulta, ja alun perin siellä oli vain yksi '
           + 'suuri huone sekä ullakko tavaroiden säilytystä varten.'
@@ -13237,7 +13237,7 @@ export const NAHTAVYYSJUTUT = {
           + 'koristeellinen barokkitalo.'
         + '\n\n'
         + 'Sodan jälkeen talot olivat pahoin rapistuneet, mutta ne '
-          + 'kunnostettiin 1950-luvulla. Vuonna 2020 Kolme veljestä sai '
+          + 'kunnostettiin 1950-luvulla. Vuonna 2020 Kolme veljestä -talot saivat '
           + 'arvostetun Euroopan perintötunnuksen. Nykyään taloissa '
           + 'toimii Latvian arkkitehtuurimuseo, joten sisään pääsee yhä '
           + 'tutustumaan siihen, miltä Riiassa näytti satoja vuosia '

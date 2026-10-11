@@ -4,7 +4,7 @@
  "kohteet": [
   {
    "q": "Q282196",
-   "nimi": "Kolme veljestä",
+   "nimi": "Kolme veljestä -talot",
    "peruste": "pelin nosto",
    "koko_m": 60,
    "lat": 56.95033,
@@ -18,7 +18,7 @@
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
      "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dz%C4%ABvojamo_namu_komplekss_%22Tr%C4%ABs_br%C4%81%C4%BCi%22.jpg",
-     "selite": "Kolme veljestä on Riian vanhimpia asuintalorivistöjä, jonka kolme taloa edustavat kolmea eri vuosisataa.",
+     "selite": "Kolme veljestä -talot ovat Riian vanhimpia asuintalorivistöjä, ja niiden kolme taloa edustavat kolmea eri vuosisataa.",
      "leveys": 7712,
      "korkeus": 4352,
      "tarkistettu": true
