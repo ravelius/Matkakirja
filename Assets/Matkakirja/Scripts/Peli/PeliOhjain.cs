@@ -187,6 +187,12 @@ namespace Matkakirja.Natiivi
         public event Action TilaMuuttui;
 
         /// <summary>
+        /// Pelaaja sai linssin (aarteen lisäksi, pisteillä tai aarteen kyljestä; Linssiomistus.Myonsi): Otsikko, Alaotsikko,
+        /// Tunnus. Natiivi-UI näyttää sen olemassa olevalla aarre- tai linssikortilla (omistaja 11.10.2026, juna 182).
+        /// </summary>
+        public event Action<LinssiMyonto> LinssiLoytyi;
+
+        /// <summary>
         /// Kukkaro muuttui teon jälkeen (web kukkaroleima): (muutos puntina, syy näyttötekstinä, saldo).
         /// Syy on webin leiman alarivi ("Lehden minitehtävä ratkesi", "pulla Livialle", "Bussimatka −5 puntaa").
         /// Tulee ennen TilaMuuttui-tapahtumaa. Kolikon ääni tulee erikseen Aani("coin")-tapahtumasta, kun rahaa tulee.
@@ -1113,6 +1119,9 @@ namespace Matkakirja.Natiivi
             AloitaMatkareitit();
             linssit = new Linssiomistus(passi ?? new Passi(), m.Tila.Linssit).Kytke(m);
             linssit.Kynnyssaanto = Linssirekisteri.Kynnys;   // omistajan sääntö (1400: radio ja topografia)
+            // Linssi aarteen lisäksi (omistaja 11.10.2026, juna 182): ISS toisesta aarteesta, kaupunkien linssiaarteet.
+            linssit.LinssiaarteetKaytossa = true;
+            linssit.Myonsi += (_, myonto) => { if (m == matka) try { LinssiLoytyi?.Invoke(myonto); } catch (Exception e) { Debug.LogException(e); } };
             kytkettyRekisteri = null;
             KytkeRekisteri();
             KytkeReitti(m);
