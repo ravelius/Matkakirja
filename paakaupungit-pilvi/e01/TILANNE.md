@@ -1,6 +1,6 @@
 # TILANNE e01 (päivitetty 2026-10-10 19:54:36 UTC)
 
-Alku: 2026-10-10 19:32 UTC. Kulutus 21:52 UTC mennessä: agentit yhteensä noin 1,91 milj. tokenia (A–E, Agent-työkalun ilmoittamat), kesto tähän asti 140 min.
+Alku: 2026-10-10 19:32 UTC, loppu 2026-10-11 00:37 UTC. Kulutus yhteensä noin 5,65 milj. tokenia, 40 agenttiajoa. Vaiheet A–F valmiit kaikille, ks. RAPORTTI.md.
 Vaihe 0 tehty (konteksti, säädata Open-Meteo OK, malli).
 
 | id | A | B | C | D | E | F | huomio |

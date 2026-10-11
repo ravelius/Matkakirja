@@ -1,0 +1,26 @@
+VAROITUS belgrad: teemasivu luonto nosto 4: lähderivin lisenssi CC BY-SA 3.0 ≠ Commons "CC BY-SA 3.0 rs"
+VAROITUS belgrad: juttu Suuri sotasaari kuva 1: lähderivin lisenssi CC BY-SA 3.0 ≠ Commons "CC BY-SA 3.0 rs"
+== belgrad: 0 virhettä, 2 varoitusta, 27 kuvaa
+== bratislava: 0 virhettä, 0 varoitusta, 25 kuvaa
+== chisinau: 0 virhettä, 0 varoitusta, 25 kuvaa
+VAROITUS minsk: artikkeli.intro: pyöreä luku "50 000" — onko lähteessä tarkka?
+VAROITUS minsk: tiedot[1]: pyöreä luku "770 000" — onko lähteessä tarkka?
+VAROITUS minsk: kaupunkilehti[0].nostot[2].teksti: pyöreä luku "300 000" — onko lähteessä tarkka?
+VAROITUS minsk: kaupunkilehti[0].nostot[2].teksti: pyöreä luku "50 000" — onko lähteessä tarkka?
+VAROITUS minsk: kaupunkilehti[1].nostot[1].teksti: pyöreä suuruusluokka — onko lähteessä tarkka?
+VAROITUS minsk: nahtavyydet.Kyynelten saari.teksti: pyöreä luku "30 000" — onko lähteessä tarkka?
+== minsk: 0 virhettä, 6 varoitusta, 25 kuvaa
+VAROITUS podgorica: kaupunkilehti[0].nostot[1].teksti: pyöreä luku "10 000" — onko lähteessä tarkka?
+VAROITUS podgorica: nahtavyydet.Itsenäisyydenaukio.teksti: pyöreä suuruusluokka — onko lähteessä tarkka?
+VAROITUS podgorica: nahtavyydet.Millennium-silta.teksti: pyöreä suuruusluokka — onko lähteessä tarkka?
+== podgorica: 0 virhettä, 3 varoitusta, 23 kuvaa
+== skopje: 0 virhettä, 0 varoitusta, 24 kuvaa
+VAROITUS tirana: kansi nosto 4: kuvatekstissä lähdeviittaus lukijalle
+VAROITUS tirana: kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].teksti: pyöreä suuruusluokka — onko lähteessä tarkka?
+VAROITUS tirana: kansikuva 2: lähderivin lisenssi CC BY 3.0 ≠ Commons "CC BY 3.0 pl"
+VAROITUS tirana: matkailijalle.kuva: lähderivin lisenssi CC BY 3.0 ≠ Commons "CC BY 3.0 pl"
+VAROITUS tirana: juttu Rinian puisto kuva 1: lähderivin lisenssi CC BY 3.0 ≠ Commons "CC BY 3.0 pl"
+== tirana: 0 virhettä, 5 varoitusta, 26 kuvaa
+VAROITUS zagreb: kohteita 5 (pohjataso 6; perustele RAPORTTI.md:ssä)
+== zagreb: 0 virhettä, 1 varoitusta, 21 kuvaa
+YHTEENSÄ 8 kaupunkia: 0 virhettä, 17 varoitusta
