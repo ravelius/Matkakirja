@@ -313,9 +313,9 @@ test('historia_polut: kehityskaupunkien historiaosiot (Tukholma, Pariisi) omasta
   assert.deepEqual(Object.keys(OPAS_AINEISTOT.historia_yksityiskohdat_polut).sort(), Object.keys(OPAS_AINEISTOT.historia_polut).sort());
 });
 
-test('esittely_polut: Pariisi v1g (v1f + Notre-Damen katse_suunta/katse_loppu/lasku_osuus), äänet ennallaan', async () => {
+test('esittely_polut: Pariisi v1h (v1g + kipin aukiot Vendôme, Bastille, République, Saint-Michel; juna 183), äänet ennallaan', async () => {
   const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
-  assert.equal(OPAS_AINEISTOT.esittely_polut.pariisi, 'opas/esittely-v1g/pariisi.json');
+  assert.equal(OPAS_AINEISTOT.esittely_polut.pariisi, 'opas/esittely-v1h/pariisi.json');
 });
 
 test('esittelyn omat lat/lon voittavat kohdelistan (Louvren pyramidi, LS1/PT 10.10.)', async () => {
@@ -352,11 +352,11 @@ test('katse_suunta (LS1/PT 9.10., juna 174): esittelyn kohteen kenttä pysähdyk
   assert.equal(toka.d.id, 'Q101'); assert.ok(!('katse_suunta' in toka.d), 'kenttä puuttuu → ei vastauksessa');
 });
 
-test('esittely_polut: Tukholma v3c (v3b + Stortorget katse_suunta 270 / kaari 20, Sergels torg pois; juna 183) ja kuvat-v9', async () => {
+test('esittely_polut: Tukholma v3c (v3b + Stortorget katse_suunta 270 / kaari 20, Sergels torg pois; juna 183) ja kuvat-v10 (+ Pariisin aukiot)', async () => {
   const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
   assert.equal(OPAS_AINEISTOT.esittely_polut.tukholma, 'opas/esittely-v3c/tukholma.json');
   const { KUVALISTA_URL } = await import('../tools/pollo/opas-kuvat.js');
-  assert.equal(KUVALISTA_URL, 'https://media.matkakirja.app/opas/kuvat-v9/kuvat.json');
+  assert.equal(KUVALISTA_URL, 'https://media.matkakirja.app/opas/kuvat-v10/kuvat.json');
 });
 
 test('katse_kaari (LS1/PT 9.10., juna 174): litteä kenttä pysähdykseen, rajattu 0–45, puuttuva/virheellinen pois', async () => {
