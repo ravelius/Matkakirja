@@ -1,6 +1,6 @@
 # e05 — A-vaiheen tilanne
 
-Alkuaika: 11.10.2026 noin 20.00 Europe/Helsinki. Päivitetty: 2026-10-11T20:29:53+03:00
+Alkuaika: 11.10.2026 noin 20.00 Europe/Helsinki. Päivitetty: 2026-10-11T20:36:48+03:00
 
 Oma klooni: NAS sessio-72-20261011/e05. Haara: paakaupungit-e05-codex. Pohja: e4f2845b3a82874550481fda26528df065820232.
 
@@ -12,8 +12,8 @@ Vaihe 0: kontekstit ja saa-syote.json tuotettu alkuperäisellä konteksti-työka
 | ouagadougou | ESTE: kartan kohdemäärä ja väestöalueen täsmennys | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
 | niamey | ESTE: kartan kohdemäärä ja väestöennusteen alkuperäinen vahvistus | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
 | yamoussoukro | ESTE: paikallinen 1873-varmistus ja hyväksyttävä kartta | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
-| accra | kesken | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
-| lome | jonossa | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
+| accra | valmis: A, 6 kohde-ehdotusta | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
+| lome | kesken | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
 | portonovo | jonossa | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
 | abuja | jonossa | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
 | ndjamena | jonossa | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
@@ -42,3 +42,7 @@ Osioiden 0–9 kooste ja kolme paikallista luonnonkohdetta varmistettu Wiki-koor
 ### yamoussoukro A-vaiheen lähdekooste 11.10.2026 20.29
 
 Osioiden 0–9 lähdekooste kirjoitettu. Kuusi tutkittua maamerkkiehdokasta eivät läpäisseet vapaan kohteen ja lähdekoordinaattien porttia; modernit tunnetut rakennukset hylätty. Nimetyltä kylältä puuttuu vuoden 1873 vahvistus. Kaupungin ja autonomisen piirin väestöt erotettu. Attiékén vuoden 2024 UNESCO-merkintä varmistettu riippumattomasta UNESCO-lähteestä ja Wikipediasta.
+
+### accra A-vaiheen lähdekooste 11.10.2026 20.36
+
+Kaikki 0–9 osiot, neljä kansi- ja teema-aihetta, opas ja kuusi karttakohdetta faktajoukkoineen. Lähteisiin sisältyvät UNESCO ja lentoaseman pitäjä. Labadin ristiriitainen Wikipedia-koordinaatti ratkaistu Wikidata P625:llä. Modernit suojatut teokset ja maalehden toistot rajattu pois. B–F ja kuvalisenssit avoinna.
