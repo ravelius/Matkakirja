@@ -5145,8 +5145,7 @@
     "Q838297",
     "Q326528",
     "Q952817",
-    "Q861363",
-    "Q214619"
+    "Q861363"
    ],
    "kuvat": [
     {
@@ -59929,15 +59928,6 @@
      "tarkistettu": true
     }
    ]
-  },
-  "Q214619": {
-   "nimi": "Pieni merenneito",
-   "peruste": "sitelinks",
-   "kaupunki": "koopenhamina",
-   "kaupunkiQ": "Q1748",
-   "lat": 55.69286,
-   "lon": 12.59926,
-   "kuvat": []
   },
   "Q569428": {
    "nimi": "Pyhän Elisabetin katedraali",

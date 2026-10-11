@@ -486,14 +486,5 @@
    "tarkistettu": true
   }
  ],
- "eiKuvaa": [
-  {
-   "q": "Q214619",
-   "nimi": "Pieni merenneito",
-   "lat": 55.69286,
-   "lon": 12.59926,
-   "peruste": "sitelinks",
-   "syy": "suojatarkastus: ei vapaata, suojaamatonta kuvaa"
-  }
- ]
+ "eiKuvaa": []
 }
