@@ -378,9 +378,9 @@ namespace Matkakirja.Linssit.Testit
 
         public void Kiinnijaanti()
         {
-            KiinniAlkaa?.Invoke(this);
             var d = Data; Kiinni++;
-            string osa = Askelaani.Osa(d, PX, PY, PZ);
+            string osa = Askelaani.Osa(d, PX, PY, PZ);   // otteen paikka ennen tyrmää (SeikkailuVartijat.Vie: otePaikka)
+            KiinniAlkaa?.Invoke(this);
             kiinniOsassa = osa == kiinniOsa ? kiinniOsassa + 1 : 1; kiinniOsa = osa;
             (PX, PY, PZ) = Tarkistus; Seuraava = TarkistusSeuraava; ArmoAsti = T + ArmoS; Tarjotin = false; pelaajanOsa = Askelaani.Osa(d, PX, PY, PZ);
             foreach (var w in Hahmot) if (w.Aktiivinen) { w.Aivot.Nollaa(w.X, w.Z, valpas: !w.Aivot.Torkkuu);   // torkkuva ei valpastu (SeikkailuVartijat.Kiinni)
@@ -388,6 +388,7 @@ namespace Matkakirja.Linssit.Testit
             if (kiinniOsassa >= 3) PuluPakotettu++;
         }
         public int KiinniOsassa => kiinniOsassa;
+        public string KiinniOsa => kiinniOsa;
 
         /// <summary>Hahmon korkeus lähimmältä reittiosuudelta (portaat nousevat tasaisesti).</summary>
         static double YReitilla(Hahmo h)

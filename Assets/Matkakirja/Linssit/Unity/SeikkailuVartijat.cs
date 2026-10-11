@@ -699,9 +699,11 @@ namespace Matkakirja.Natiivi
             yield return new WaitForSecondsRealtime(SeikkailuNakyvyys.HimmennysS);
             if (p != null) p.Otteessa = false;
             SeikkailuEsineet.Aktiivinen?.TarjotinPoydalle();   // ei tarjotinta tyrmään (Huonesimulaatio.Kiinnijaanti: Tarjotin = false)
+            // Anteeksiannon osa otteen paikasta, ei tyrmästä (PT 11.10. 05.0x: Kiinni kutsutaan tyrmän jälkeen pelaajan ollessa tyrma-E101:ssä).
+            string otePaikka = p != null ? Askelaani.Osa(SeikkailuKavely.Data, p.transform.position.x, p.transform.position.y, -p.transform.position.z) : null;
             // Tyrmä (pelattavuusmalli 4.1), jos sen merkit ovat paketissa: vartijat nollautuvat heti, pelaaja palaa tarkistuspisteeseen
             // vasta paon jälkeen (armoaika ja valppaus silloin).
-            if (p != null && SeikkailuTyrma.Aloita(transform.parent, p, () => { Kiinni(v); }, kirjaa))
+            if (p != null && SeikkailuTyrma.Aloita(transform.parent, p, () => { Kiinni(v, otePaikka); }, kirjaa))
             {
                 foreach (var x in vartijat) { var xp = x.Agentti.transform.position; x.Aivot.Nollaa(xp.x, xp.z, valpas: !x.Aivot.Torkkuu); x.EdellinenTila = VartijanTila.Partio; }
                 tyrmassa = true;
@@ -709,19 +711,19 @@ namespace Matkakirja.Natiivi
                 tyrmassa = false; ote = null;
                 yield break;
             }
-            Kiinni(v);
+            Kiinni(v, otePaikka);
             ote = null;
             yield return new WaitForSecondsRealtime(0.3f);
             SeikkailuNakyvyys.Himmennys = 0f;
         }
 
-        void Kiinni(V v)
+        void Kiinni(V v, string otePaikka = null)
         {
             var p = SeikkailuPelaaja.Aktiivinen;
             kirjaa?.Invoke($"seikkailu: KIINNI ({v.Osa}), pelaaja tarkistuspisteeseen {tarkistus}");
             if (p != null)
             {
-                string osa = Askelaani.Osa(SeikkailuKavely.Data, p.transform.position.x, p.transform.position.y, -p.transform.position.z);
+                string osa = otePaikka ?? Askelaani.Osa(SeikkailuKavely.Data, p.transform.position.x, p.transform.position.y, -p.transform.position.z);
                 Kiinnijaatiin?.Invoke(osa);
                 // Anteeksianto (pelattavuusmalli 4.2): 2. kiinnijäänti samassa huoneessa → näkö −15 % ja epäilyraja 0,4; 3. → Pulun taso 2 heti.
                 kiinniOsassa = osa == kiinniOsa ? kiinniOsassa + 1 : 1; kiinniOsa = osa;
@@ -729,7 +731,8 @@ namespace Matkakirja.Natiivi
                 if (kiinniOsassa >= 3) SeikkailuVihjeet.Aktiivinen?.Pakota(2, "3. kiinnijäänti");   // kieli: ei (tekninen)
                 kirjaa?.Invoke($"seikkailu: kiinnijäänti {kiinniOsassa}. kerran osassa {osa}{(kiinniOsassa >= 2 ? " (helpotus)" : "")}");
             }
-            if (p != null) p.Siirra(tarkistus);
+            // Tarkistuspisteen osa nykyiseksi (kuten Huonesimulaatio.Kiinnijaanti): paluu ei ole osanvaihto, joka päättäisi helpotuksen.
+            if (p != null) { p.Siirra(tarkistus); pelaajanOsa = Askelaani.Osa(SeikkailuKavely.Data, tarkistus.x, tarkistus.y, -tarkistus.z) ?? pelaajanOsa; }
             armoAsti = Time.unscaledTime + ArmoS;   // E1-ajo 7.10.: tarkistuspiste vartijan näkyvissä → kiinni uudelleen heti
             // Torkkuva vartija ei valpastu muiden kiinniotosta (Siirtoseppä 10.10., PT): valppaana hän näki Tott-kammion reitin 0,7 m:n päästä,
             // ja kiinni muuriportailla (68) maksoi ~100 s odotusta; nyt 63 s (OlavinlinnaMOsaTestit.KiinniJokaPisteessa).

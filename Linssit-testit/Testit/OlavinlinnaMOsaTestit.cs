@@ -259,5 +259,21 @@ namespace Matkakirja.Linssit.Testit
             var loppu = ThiefAjuri.Aja(w, w.Seuraava, 65, budjetti: 600).Loppu;   // takaisin Tott-kammioon portaiden juurelle (kirkkotorni-portaat)
             Oleta.Tosi(loppu != null && !loppu.Hahmot.Exists(h => h.Aivot.Helpotettu), "osan vaihtuessa helpotus päättyy");
         }
+
+        /// <summary>Anteeksianto tyrmän jälkeen (PT 11.10. 05.0x): kiinnijäänti kirjataan otteen paikan osaan, ei tyrmään, jossa pelaaja on
+        /// Kiinni-kutsun hetkellä (SeikkailuVartijat.Vie → SeikkailuTyrma → Kiinni); muuten tarkistuspisteessä helpotus nollautui heti.</summary>
+        [Testi] static void AnteeksiantoTyrmanJalkeen()
+        {
+            var w = Tila(51);
+            var tyrma = Huonesimulaatio.Data.Merkit.Find(m => m.Nimi == "istuu:pelaaja-tyrma");
+            Oleta.Tosi(tyrma != null, "tyrmän merkki datassa");
+            var osa = Askelaani.Osa(Huonesimulaatio.Data, w.PX, w.PY, w.PZ);
+            w.KiinniAlkaa = s => (s.PX, s.PY, s.PZ) = (tyrma.X, tyrma.Y, tyrma.Z);   // tyrmä ennen kiinnijäännin kirjausta
+            w.Kiinnijaanti();
+            Oleta.Sama(osa, w.KiinniOsa, "1. kiinnijäänti otteen osaan, ei tyrmään");
+            w.Odota(false);
+            w.Kiinnijaanti();
+            Oleta.Tosi(w.KiinniOsassa == 2 && w.Hahmot.TrueForAll(h => !h.Aktiivinen || h.Aivot.Helpotettu), $"2. kiinnijäänti samassa osassa ({osa}) tyrmän kautta: helpotus");
+        }
     }
 }
