@@ -5,10 +5,11 @@
 // heti, eikä heräämistä tai maakunnan valmistumista enää näytetä: ei nimen kirjoitusta eikä leimaa, ei MAAKUNNAT-palkkia
 // (aina täysi), ei "Maakunnan salaisuus löytyi" -riviä. Salaisuus-nosto näkyy kartalla kuten muut ja kuuluu laskuriin.
 //
-// Avattu kartussi, ylimpänä (piilossa, kun maalla ei ole maakuntanostoja):
+// Avattu kartussi, ylimpänä (piilossa, kun maalla ei ole maakuntanostoja), tilastorivien pohjalla (mk-kartuscha__rivi):
 //      NOSTOT      1/97   ▬─────────         löydetyt nostot / kaikki (salaisuudet mukana)
-//      [kuva] Attiki                ●○○○○○○  maakunnat (tuoreimmat löydöt ensin, sitten pisimmällä olevat, enintään 3):
-//                                            pikkukuva leimana, käsialanimi (Kirjasin.Kauno), mustepisteet löydetyt/kaikki
+//      MAAKUNNAT   0/13   ──────────         maakunnat, joiden kaikki nostot on avattu / kaikki
+// OMISTAJA 11.10.2026 09.1x (kortti): "jos noita maakuntia tulee lisää niin tuo kortti täyttyy niistä. otetaan pois kuvat ja
+// maakuntien nimet tuosta." → maakuntarivit (pikkukuva, käsialanimi, mustepisteet) pois; tiivis yhteenveto kahdella rivillä.
 // Maa valmis (kaikkien maakuntien Loydetyt == Kaikki) → lippu liehuu (löydös 144, Liput.Aaltoile); muuten staattinen kuva.
 //
 // LEPOPIIRTO: kaikki on tapahtumaohjattua; levossa mikään ei kirjoita tyyliä (arvot asetetaan vain muuttuneina).
@@ -23,23 +24,9 @@ namespace Matkakirja.Natiivi
 {
     public sealed partial class Kartuscha
     {
-        /// <summary>Maakunnan rivi kartussissa.</summary>
-        sealed class MaakuntaRivi
-        {
-            public string Avain, Nimi;
-            public VisualElement El, Kuva, Pisteet;
-            public Label NimiTeksti;
-            public int Loydetyt = -1, Kaikki = -1;
-        }
-
-        const int MaakuntiaRiveina = 3, PisteitaEnintaan = 10;
-
-        VisualElement muste, mkRivit;
-        Label nostotArvo;
-        VisualElement nostotPalkki;
-        readonly Dictionary<string, MaakuntaRivi> mkRivi = new Dictionary<string, MaakuntaRivi>();
-        /// <summary>Tämän istunnon löydöt maakunnittain, tuorein ensin (rivijärjestys).</summary>
-        readonly List<string> tuoreet = new List<string>();
+        VisualElement muste;
+        Label nostotArvo, maakunnatArvo;
+        VisualElement nostotPalkki, maakunnatPalkki;
         PeliOhjain kuunneltu;
 
         // Testikomennot (ui muste): laskurit ja valmiit maat ilman peliä.
@@ -63,8 +50,7 @@ namespace Matkakirja.Natiivi
             sisus.Insert(0, muste);
             muste.style.display = DisplayStyle.None;
             (nostotArvo, nostotPalkki) = MusteRivi(Kieli.T("ui.kartuscha.nostot"));
-            mkRivit = Rakenne.El("mk-kartuscha__maakunnat", muste, PickingMode.Ignore);
-            MaakuntaTiedot.Lataa(null);
+            (maakunnatArvo, maakunnatPalkki) = MusteRivi(Kieli.T("ui.kartuscha.maakunnat"));
         }
 
         (Label Arvo, VisualElement Palkki) MusteRivi(string nimike)
@@ -102,7 +88,6 @@ namespace Matkakirja.Natiivi
 
         void Loytyi(MusteLoyto t)
         {
-            if (!string.IsNullOrEmpty(t.Maakunta)) { tuoreet.Remove(t.Maakunta); tuoreet.Insert(0, t.Maakunta); }
             PaivitaMuste();
         }
 
@@ -145,8 +130,10 @@ namespace Matkakirja.Natiivi
                 int loydetyt = maakunnat.Sum(x => x.Loydetyt), kaikki = maakunnat.Sum(x => x.Kaikki);
                 AsetaTeksti(nostotArvo, $"{loydetyt}/{kaikki}");
                 AsetaPalkki(nostotPalkki, kaikki > 0 ? (float)loydetyt / kaikki : 0f);
+                int valmiit = maakunnat.Count(x => x.Loydetyt >= x.Kaikki);
+                AsetaTeksti(maakunnatArvo, $"{valmiit}/{maakunnat.Count}");
+                AsetaPalkki(maakunnatPalkki, (float)valmiit / maakunnat.Count);
             }
-            PaivitaRivit(nakyy ? maakunnat : new List<(string Maakunta, int Loydetyt, int Kaikki)>());
             PaivitaLippu();
             MusteMuuttui?.Invoke();
         }
@@ -157,73 +144,6 @@ namespace Matkakirja.Natiivi
         {
             var w = Length.Percent(Mathf.Clamp01(osuus) * 100f);
             if (p.style.width != w) p.style.width = w;
-        }
-
-        /// <summary>Maakuntarivit (kaikki heränneitä): tuoreet löydöt ensin, sitten pisimmällä olevat; enintään MaakuntiaRiveina.</summary>
-        void PaivitaRivit(List<(string Maakunta, int Loydetyt, int Kaikki)> maakunnat)
-        {
-            var valitut = maakunnat
-                .OrderBy(x => { int i = tuoreet.IndexOf(x.Maakunta); return i < 0 ? int.MaxValue : i; })
-                .ThenByDescending(x => (float)x.Loydetyt / x.Kaikki)
-                .ThenBy(x => x.Maakunta, System.StringComparer.Ordinal)
-                .Take(MaakuntiaRiveina).ToList();
-            foreach (var vanha in mkRivi.Keys.Where(k => !valitut.Any(v => v.Maakunta == k)).ToList())
-            {
-                mkRivi[vanha].El.RemoveFromHierarchy();
-                mkRivi.Remove(vanha);
-            }
-            for (int i = 0; i < valitut.Count; i++)
-            {
-                var (avain, loyd, kaikki) = valitut[i];
-                if (!mkRivi.TryGetValue(avain, out var r)) mkRivi[avain] = r = UusiRivi(avain);
-                if (mkRivit.IndexOf(r.El) != i) mkRivit.Insert(i, r.El);
-                AsetaPisteet(r, loyd, kaikki);
-            }
-            mkRivit.style.display = valitut.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
-        }
-
-        MaakuntaRivi UusiRivi(string avain)
-        {
-            var r = new MaakuntaRivi { Avain = avain, Nimi = MaakuntaTiedot.Nimi(avain) };
-            r.El = Rakenne.El("mk-kartuscha__mk", null, PickingMode.Ignore);
-            r.Kuva = Rakenne.El("mk-kartuscha__mkkuva", r.El, PickingMode.Ignore);
-            r.Kuva.style.display = DisplayStyle.None;
-            r.NimiTeksti = Rakenne.Teksti(r.Nimi, "mk-kartuscha__mknimi", r.El);
-            Kirjasimet.Aseta(r.NimiTeksti, Kirjasin.Kauno);
-            r.Pisteet = Rakenne.El("mk-kartuscha__pisteet", r.El, PickingMode.Ignore);
-            // Nimi ja kuva tulevat maakuntadatasta; rivi voi syntyä ennen latausta.
-            MaakuntaTiedot.Lataa(() =>
-            {
-                // Voi tulla synkronisesti ennen kuin rivi on sanakirjassa; irrotettu rivi päivittyy harmittomasti.
-                r.Nimi = MaakuntaTiedot.Nimi(avain);
-                AsetaTeksti(r.NimiTeksti, r.Nimi);
-                string kuva = MaakuntaTiedot.Pikkukuva(avain);
-                if (kuva == null) return;
-                Kuvat.Hae(kuva, t =>
-                {
-                    if (t == null) return;
-                    r.Kuva.style.backgroundImage = new StyleBackground(t);
-                    r.Kuva.style.display = DisplayStyle.Flex;
-                });
-            });
-            return r;
-        }
-
-        /// <summary>Mustepisteet (täytetyt / tyhjät, enintään 10) tai luku "3/27".</summary>
-        static void AsetaPisteet(MaakuntaRivi r, int loydetyt, int kaikki)
-        {
-            if (r.Loydetyt == loydetyt && r.Kaikki == kaikki) return;
-            r.Loydetyt = loydetyt;
-            r.Kaikki = kaikki;
-            r.Pisteet.Clear();
-            r.Pisteet.tooltip = $"{loydetyt}/{kaikki}";
-            if (kaikki > PisteitaEnintaan)
-            {
-                Kirjasimet.Aseta(Rakenne.Teksti($"{loydetyt}/{kaikki}", "mk-kartuscha__pisteluku", r.Pisteet), Kirjasin.Kone);
-                return;
-            }
-            for (int i = 0; i < kaikki; i++)
-                Rakenne.El(i < loydetyt ? "mk-kartuscha__piste mk-kartuscha__piste--taysi" : "mk-kartuscha__piste", r.Pisteet, PickingMode.Ignore);
         }
 
         // --- lippu ----------------------------------------------------------------------------------
@@ -270,8 +190,6 @@ namespace Matkakirja.Natiivi
                         int.TryParse(lisa.Split('/')[1], out k);
                     }
                     testiLaskurit[avain] = (Mathf.Max(0, l), k > 0 ? k : 7);
-                    tuoreet.Remove(avain);
-                    tuoreet.Insert(0, avain);
                     if (iso == maa) { PaivitaMuste(); if (!auki) Avaa(); }
                     else Testaa(maa, true);
                     return null;
@@ -295,7 +213,7 @@ namespace Matkakirja.Natiivi
                 {
                     var l = Laskurit(iso);
                     return $"{iso ?? "ei maata"}: {l.Count(x => x.Kaikki > 0)} maakuntaa, "
-                         + $"nostot {l.Sum(x => x.Loydetyt)}/{l.Sum(x => x.Kaikki)}, rivit [{string.Join(", ", mkRivi.Values.Select(r => r.Nimi + " " + r.Loydetyt + "/" + r.Kaikki))}], "
+                         + $"nostot {l.Sum(x => x.Loydetyt)}/{l.Sum(x => x.Kaikki)}, maakunnat valmiina {maakunnatArvo?.text ?? "-"}, "
                          + $"lippu {(lippuLiehuu ? "liehuu" : "staattinen")}";
                 }
             }
