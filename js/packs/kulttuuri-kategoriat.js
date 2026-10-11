@@ -5993,15 +5993,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Pariisin kaupungin korkein rakennus.',
           lahde: 'Joe deSousa, Wikimedia Commons (CC0)',
         },
-        {
-          tiedosto: 'The Avenue des Champs-Élysées and the Arc de Triomphe, Paris 27 December 2021.jpg',
-          lyhyt: 'Riemukaari pystytettiin vallankumous- ja Napoleonin sodissa kaatuneiden kunniaksi.',
-          selite: 'Champs-Élysées\'n länsipäässä seisova Riemukaari '
-            + 'pystytettiin vallankumous- ja Napoleonin sodissa kaatuneiden '
-            + 'kunniaksi, ja sen pintoihin on kaiverrettu voittojen ja '
-            + 'kenraalien nimiä.',
-          lahde: 'Pierre Blaché from Paris, France, Wikimedia Commons (CC0)',
-        },
       ],
       /*
        * AVAUSKUVAT (27.8.2026, herot erä 3): kolme uusittua herokuvaa
@@ -6379,12 +6370,10 @@ export const KULTTUURI_KATEGORIAT = {
                * saa väittää olevansa sieltä.
                */
               kuva: {
-                tiedosto: 'Paris Night.jpg',
-                lyhyt: 'Haussmannin 1800-luvun kaavassa saman korkuiset talot loivat Pariisin yhtenäisen sinkkikattomeren.',
-                selite: 'Haussmannin 1800-luvun kaavassa talot ladottiin '
-                  + 'saman korkuisiksi, ja siksi Pariisin katot muodostavat '
-                  + 'yhtenäisen sinkkimeren.',
-                lahde: 'Benh LIEU SONG, Wikimedia Commons (CC BY-SA 4.0)',
+                tiedosto: "Paris panorama from the top of the Notre-Dame Cathedral, 28 April 2018.jpg",
+                lyhyt: "Pariisin kattoja ja Seine Notre-Damen katolta kuvattuna",
+                selite: "Pariisin kattojen ja Seinen yli Notre-Damen katolta kuvattu panoraama.",
+                lahde: "Pedro Szekely, Wikimedia Commons (CC BY-SA 2.0)",
               },
             },
           ],
@@ -31833,7 +31822,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Punainen silta Euroopan kortteleihin',
-          tiedosto: 'Puente rojo, ciudad de Luxemburgo, Luxemburgo, 2023-12-16, DD 137.jpg',
+          tiedosto: "Vue du pont Adolphe depuis le parc de la Pétrusse, Luxembourg, septembre 2026.jpg",
           teksti: 'Kun Bryssel ja Strasbourg kilpailivat 1950-luvun lopulla '
             + 'uusien yhteisöjen virastoista, Luxemburgin hallitus halusi tarjota '
             + 'niille halpaa maata Kirchbergin lähes rakentamattomalta ylängöltä. '
@@ -31845,11 +31834,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kirchbergissä ovat EU:n tuomioistuin, tilintarkastustuomioistuin, '
             + 'Euroopan investointipankki ja parlamentin sihteeristö, jossa '
             + 'työskentelee yli 4 000 ihmistä.',
-          lyhyt: 'Punainen Grande-Duchesse Charlotten silta ylittää Pfaffenthalin laakson.',
-          selite: 'Grande-Duchesse Charlotten silta, luxemburgiksi Rout Bréck, '
-            + 'kulkee 75 metrin korkeudella Alzetten yllä ja yhdistää '
-            + 'yläkaupungin Kirchbergin EU-kortteleihin.',
-          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          lyhyt: "Adolphen silta Pétrussen laakson yllä",
+          selite: "Adolphen kaksoiskaarinen kivisilta ylittää Pétrussen laakson yläkaupungin ja rautatieaseman suunnan välillä; se avattiin 1903.",
+          lahde: "Yuliia Koval, Wikimedia Commons (CC BY-SA 4.0)",
           wiki: 'Grand Duchess Charlotte Bridge',
         },
       ],
@@ -66652,14 +66639,6 @@ export const KULTTUURI_KATEGORIAT = {
                   + 'uudelleen, ja aukio on ollut Unescon maailmanperintökohde vuodesta '
                   + '1998. Parillisten vuosien elokuussa keskelle levitetään muutamaksi '
                   + 'päiväksi kukkamatto, jossa on lähes miljoona begoniaa ja daaliaa.',
-              kuva: {
-                tiedosto: '2018 flower carpet at Grand Place, Brussels (DSCF6849).jpg',
-                lyhyt: 'Grand-Placen kukkamatto levitetään joka toinen elokuu aukion keskelle.',
-                selite: 'Joka toinen elokuu Grand-Placelle levitetään kolmeksi tai neljäksi '
-                    + 'päiväksi kukkamatto, jonka kuviot on tehty lähes miljoonasta '
-                    + 'kukasta.',
-                lahde: 'Trougnouf (Benoit Brummer), Wikimedia Commons (CC BY 4.0)',
-              },
             },
             {
               otsikko: 'Ruoka ja juoma',

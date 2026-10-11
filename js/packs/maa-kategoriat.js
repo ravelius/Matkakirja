@@ -1031,7 +1031,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kolme terhoa kolmen tornin päällä',
           aika: '1732–1733',
-          tiedosto: 'Fort thüngen Dräi Eechelen 01.jpg',
+          tiedosto: "Fuerte Thüngen, ciudad de Luxemburgo, Luxemburgo, 2023-12-16, DD 148.jpg",
           teksti: 'Tornien päällä on kolme terhoa, ja siitä Fort Thüngen sai lempinimensä '
             + 'Dräi Eechelen, Kolme terhoa. Linnake rakennettiin 1732–1733 ja nimettiin '
             + 'sotapäällikkö Adam Sigmund von Thüngenin mukaan. Lontoon sopimus vaati '
@@ -1043,7 +1043,7 @@ export const MAA_KATEGORIAT = {
             + 'Luxemburgin kaupungin Kirchbergissä.',
           selite: 'Fort Thüngenin kolme tornia, joiden päällä on terho. Linnake toimii '
             + 'nykyään museona.',
-          lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+          lahde: "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
           wiki: 'Fort Thüngen',
         },
       ],
@@ -1087,7 +1087,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Lause kaupungintalon päädyssä',
           aika: '1859',
-          tiedosto: 'Fronton City Hall Esch Alzette.JPG',
           teksti: 'Esch-sur-Alzetten kaupungintalon päädyssä kaivostyöläinen ja '
             + 'terästyöläinen tukevat kaupungin vaakunaa, ja alla lukee vanhalla '
             + 'kirjoitusasulla Mir wölle bleiwe wat mer sin, Haluamme pysyä sellaisina '
@@ -1095,11 +1094,6 @@ export const MAA_KATEGORIAT = {
             + 'runosta De Feierwon, jonka hän kirjoitti 1859 kaupungin rautatien '
             + 'vihkiäisiin. Luxemburgin kieltä puhuu noin 400 000 ihmistä. Sen vanhin '
             + 'tunnettu teksti on 1300-luvun alun Codex Mariendalensis.',
-          lyhyt: 'Esch-sur-Alzetten kaupungintalon päätykolmio, jossa on Luxemburgin '
-            + 'kansallinen tunnuslause luxemburgin kielellä.',
-          selite: 'Kaupungintalon päädyssä kaivostyöläinen ja terästyöläinen tukevat '
-            + 'kaupungin vaakunaa. Alla on tunnuslause vanhalla kirjoitusasulla.',
-          lahde: 'Zinneke, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Luxemburgin kieli',
         },
         {
@@ -2847,7 +2841,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Paviljonki, joka puretaan syksyllä',
           aika: '2000',
-          tiedosto: 'Serpentine Pavilion 2016 I (27776972542).jpg',
+          tiedosto: "Serpentine Gallery in the Kensington Gardens, London, spring 2013.JPG",
           teksti: 'Kensington Gardensissa nousee joka kesä uusi paviljonki. '
             + 'Serpentine-galleria on tilannut sellaisen vuodesta 2000 '
             + 'lähtien, ja säännöt ovat tiukat: arkkitehti ei saa olla '
@@ -2857,11 +2851,9 @@ export const MAA_KATEGORIAT = {
             + 'latoi nurmikolle 1 802 lasikuitulaatikkoa, jotka aukeavat '
             + 'suorasta seinästä kaartuvaksi tilaksi. Sisällä oli kahvila, '
             + 'iltaisin esityksiä, eikä pääsy maksanut mitään.',
-          lyhyt: 'Serpentine-galleria tilaa kesäisin väliaikaisen paviljongin; 2016 sen suunnitteli Bjarke Ingels.',
-          selite: 'Kensington Gardensin Serpentine-galleria tilaa kesäksi '
-            + 'arkkitehdilta väliaikaisen paviljongin, ja vuoden 2016 työn '
-            + 'suunnitteli Bjarke Ingels Group.',
-          lahde: 'Images George Rex, Wikimedia Commons (CC BY-SA 2.0)',
+          lyhyt: "Serpentine Gallery Kensington Gardensissa",
+          selite: "Kensington Gardensin Serpentine-galleria toimii 1934 valmistuneessa entisessä teepaviljongissa, ja sen viereen pystytetään joka kesä väliaikainen paviljonki.",
+          lahde: "Chmee2, Wikimedia Commons (CC BY-SA 3.0)",
           wiki: 'Bjarke Ingels',
         },
         {
@@ -2927,7 +2919,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: '42 773 sanaa yhdestä talosta',
-          tiedosto: 'Statue of Hodge - Dr Johnsons cat - in Gough Square (4043318307).jpg',
+          tiedosto: "Dr Johnson's House, Gough Square - geograph.org.uk - 5590547.jpg",
           teksti: 'Samuel Johnson allekirjoitti sanakirjasopimuksen kesäkuussa '
             + '1746 ja sai palkkioksi 1 500 guineaa. Työ tehtiin 17 Gough '
             + 'Squaren talossa Fleet Streetin takana, jonne hän muutti 1748, '
@@ -2938,12 +2930,9 @@ export const MAA_KATEGORIAT = {
             + 'paperiliuskoille. Talon edustalla istuu nykyään pronssinen '
             + 'kissa: Johnsonin Hodge, jolle isäntä kävi itse ostamassa '
             + 'ostereita, jottei palvelusväki suuttuisi elukalle.',
-          lyhyt: 'Gough Squaren talo on Samuel Johnsonin kirjailijakotimuseo; patsas esittää hänen kissaansa Hodgea.',
-          selite: 'Gough Squaren talo on Samuel Johnsonin entinen koti ja '
-            + 'nykyään kirjailijakotimuseo, ja patsas esittää hänen '
-            + 'kissaansa Hodgea, joka tunnetaan Boswellin vuoden 1791 '
-            + 'elämäkerrasta.',
-          lahde: 'Elliott Brown, Commons (CC BY 2.0)',
+          lyhyt: "Dr Johnsonin talo Gough Squarella",
+          selite: "Gough Squaren talo numero 17 on Samuel Johnsonin entinen koti ja nykyään kirjailijakotimuseo; hän asui siinä 1748–1759 ja kirjoitti sanakirjansa.",
+          lahde: "Paul Farmer, Wikimedia Commons (CC BY-SA 2.0)",
           wiki: 'Samuel Johnson',
         },
         {
@@ -3026,7 +3015,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Karhu, jolla on lappu kaulassa',
-          tiedosto: 'Statue of Paddington Bear with offerings.jpg',
+          tiedosto: "Paddington Station (6749517013).jpg",
           teksti: 'Michael Bond osti jouluaattona 1956 Selfridgesin tavaratalosta '
             + 'nallen, joka oli jäänyt yksin hyllylle, ja vei sen lahjaksi '
             + 'vaimolleen. Tarina syntyi kymmenessä päivässä ja kirja '
@@ -3036,11 +3025,9 @@ export const MAA_KATEGORIAT = {
             + 'after this bear. Thank you", ja esikuvana olivat sota-ajan '
             + 'uutisfilmit, joissa lontoolaislapsia lähetettiin maaseudulle '
             + 'turvaan nimilappu kaulassa ja pieni matkalaukku kädessä.',
-          lyhyt: 'Patsas Paddingtonin asemalla esittää karhua, joka ilmestyi ensi kerran kirjassa vuonna 1958.',
-          selite: 'Marcus Cornishin patsas Paddingtonin asemalla esittää '
-            + 'Michael Bondin karhua, joka ilmestyi ensi kerran kirjassa A '
-            + 'Bear Called Paddington 13. lokakuuta 1958.',
-          lahde: 'JRennocks, Commons (CC BY-SA 4.0)',
+          lyhyt: "Paddingtonin aseman Brunelin rautahalli",
+          selite: "Paddingtonin asema avattiin 1854, ja Brunelin rautahalli on yhä käytössä; Michael Bondin karhu ilmestyi kirjassa A Bear Called Paddington 13. lokakuuta 1958.",
+          lahde: "Hugh Llewelyn, Wikimedia Commons (CC BY-SA 2.0)",
           wiki: 'Michael Bond',
         },
         {
@@ -3505,7 +3492,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Kone, joka luki vihollisen postit',
-          tiedosto: 'Alan Turing by Stephen Kettle 2007.jpg',
+          tiedosto: "Bletchley Park Mansion.jpg",
           teksti: 'Saksan Enigma-koodikone vaihtoi asetuksensa joka keskiyö, '
             + 'joten murtajilla oli aikaa yksi vuorokausi. Alan Turing '
             + 'suunnitteli Bletchley Parkissa koneen nimeltä Bombe, joka '
@@ -3519,7 +3506,7 @@ export const MAA_KATEGORIAT = {
           selite: 'Bletchley Parkissa toimi toisen maailmansodan aikana '
             + 'liittoutuneiden koodinmurron pääkeskus, jossa Alan Turing oli '
             + 'purkamassa saksalaisten Enigma-salausta.',
-          lahde: 'DeFacto, Wikimedia Commons (CC BY-SA 4.0)',
+          lahde: "DeFacto, Wikimedia Commons (CC BY-SA 4.0)",
           wiki: 'Alan Turing',
         },
         {
@@ -3642,7 +3629,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Chaplin oli lontoolainen köyhä poika',
-          tiedosto: 'Charlie Chaplin statue, Leicester Square.jpg',
+          tiedosto: "Charlie Chaplin.jpg",
           teksti: 'Charlie Chaplin syntyi 16. huhtikuuta 1889 Walworthissa '
             + 'Etelä-Lontoossa, ja seitsemänvuotiaana hänet vietiin Lambethin '
             + 'vaivaistaloon. Molemmat vanhemmat olivat music hall '
@@ -3653,12 +3640,9 @@ export const MAA_KATEGORIAT = {
             + 'hän myöhemmin kirjoitti muistiin: kaiken piti olla '
             + 'ristiriitaista, housut pussittavat, takki tiukka, hattu pieni '
             + 'ja kengät suuret.',
-          lyhyt: 'John Doubledayn veistos esittää Chaplinia hänen tunnetuimmassa roolissaan Kulkurina.',
-          selite: 'John Doubledayn veistos esittää Chaplinia hänen '
-            + 'tunnetuimmassa roolissaan Kulkurina, ja muistomerkkiä '
-            + 'ehdotettiin hänen synnyinkaupunkiinsa jouluna 1977 pian hänen '
-            + 'kuolemansa jälkeen.',
-          lahde: 'Matt Brown, Wikimedia Commons (CC BY 2.0)',
+          lyhyt: "Charlie Chaplin Kulkurin asussa 1915",
+          selite: "Charlie Chaplin Kulkurin asussa noin vuonna 1915; hän syntyi Lontoossa 1889 ja kuoli jouluna 1977.",
+          lahde: "Hartsook Photo, Wikimedia Commons (PD)",
           wiki: 'Charles Chaplin',
         },
         {
@@ -9906,7 +9890,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Tenniskisa on nimetty lentäjän mukaan',
           aika: '1928',
-          tiedosto: 'Court Philippe Chatrier 2024.jpg',
+          tiedosto: "26-5-30 (championnat de France internationaux de tennis à Roland-Garros, de g. à d.) Cochet, Brugnon, Crawford, Moon - btv1b532300696.jpg",
           teksti: 'Roland Garros ei ollut tennispelaaja vaan lentäjä: hän lensi '
             + 'ensimmäisenä yksin Välimeren yli ja kuoli ensimmäisessä '
             + 'maailmansodassa. Kun Pariisiin rakennettiin 1928 stadion Davis '
@@ -9920,7 +9904,7 @@ export const MAA_KATEGORIAT = {
           selite: 'Roland-Garrosin turnaus perustettiin 1891, ja se on '
             + 'vuoden toinen tennisen Grand Slam -kilpailu Australian '
             + 'avointen jälkeen.',
-          lahde: 'MFonzatti, Wikimedia Commons (CC BY-SA 4.0)',
+          lahde: "Agence Rol (BnF Gallica), Wikimedia Commons (PD)",
           lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Court_Philippe_Chatrier_2024.jpg',
           lisenssi: 'CC BY-SA 4.0',
           lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
@@ -10095,28 +10079,16 @@ export const MAA_KATEGORIAT = {
           kohteet: [
             {
               nimi: 'Louvren kokoelmat — koko kokoelma verkossa',
-              tiedosto: 'Cour Napoléon at night - Louvre.jpg',
               teksti: 'Louvren kokoelmatietokannassa on yli 480 000 teosta — eli '
                 + 'paljon enemmän kuin museon seinillä on tilaa.',
-              lyhyt: 'Louvre on Pariisin kansallinen taidemuseo, jonka kokoelmiin kuuluu muun muassa Mona Lisa.',
-              selite: 'Louvre on Pariisin kansallinen taidemuseo, jonka '
-                + 'kokoelmiin kuuluvat muun muassa Mona Lisa, Milon Venus ja '
-                + 'Samothrakein Nike.',
-              lahde: 'Benh Lieu Song, Wikimedia Commons (CC BY 2.5)',
               linkki: 'https://collections.louvre.fr/',
             },
             {
               nimi: 'Centre Pompidou — nykytaiteen kokoelma',
-              tiedosto: 'Interior of the Centre Pompidou 2.jpg',
               teksti: 'Centre Pompidou on Pariisin nykytaiteen museo, ja sen '
                 + 'rakennus on itsessään osa juttua: putket, ilmastointi ja '
                 + 'portaat vietiin julkisivulle, jotta sisälle jäisi '
                 + 'mahdollisimman paljon tyhjää tilaa.',
-              lyhyt: 'Centre Pompidou valmistui high tech -tyyliin Rogersin ja Renzo Pianon suunnitelmien mukaan.',
-              selite: 'Centre Pompidou valmistui high tech -arkkitehtuurin '
-                + 'tyyliin Richard Rogersin, Su Rogersin ja Renzo Pianon '
-                + 'suunnitelmien mukaan.',
-              lahde: 'DiscoA340, Wikimedia Commons (CC BY-SA 4.0)',
               linkki: 'https://www.centrepompidou.fr/en/',
             },
             {
@@ -10238,12 +10210,10 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Angoulêmen sarjakuvamuseo — digitoidut sarjakuvat',
-              tiedosto: 'Cnbdi cognac.jpg',
-              lyhyt: 'Angoulême on ranskalaisen sarjakuvan keskus, jonka festivaali on järjestetty vuodesta 1974.',
-              selite: 'Angoulême on ranskalaisen sarjakuvan keskus, ja '
-                + 'kaupungin sarjakuvafestivaali on järjestetty vuodesta '
-                + '1974 Euroopan suurimpien joukossa.',
-              lahde: 'Nicrid16, Wikimedia Commons (CC BY-SA 3.0)',
+              tiedosto: "Angoulème -16- Cathédrale Saint-Pierre et les remparts photo n°155.JPG",
+              lyhyt: "Angoulêmen Saint-Pierren katedraali",
+              selite: "Angoulêmen katedraali kohoaa vanhankaupungin mäellä; kaupunki on ranskalaisen sarjakuvan keskus, ja sen sarjakuvafestivaali on järjestetty vuodesta 1974.",
+              lahde: "Mj.galais, Wikimedia Commons (CC BY-SA 3.0)",
               teksti: 'Angoulêmen Cité de la BD:llä on Euroopan suurin '
                 + 'sarjakuvakokoelma. Digitoitujen aineistojen sivulta pääsee '
                 + 'piirtäjien ja vanhojen sarjakuvalehtien sivuille, joilla '
@@ -10279,14 +10249,8 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'INA — Ranskan radio- ja tv-arkisto',
-              tiedosto: 'Auditorium de la Maison de la Radio, Paris 2018.jpg',
               teksti: 'INA on Ranskan valtion audiovisuaalinen arkisto, joka '
                 + 'tallentaa maan radio- ja tv-lähetykset.',
-              lyhyt: 'Radio Francen Maison de la Radio on rakennettu 500-metriseksi renkaaksi studioineen ja saleineen.',
-              selite: 'Radio Francen päärakennus Maison de la Radio on '
-                + 'rakennettu 500 metriä ympärysmitaltaan olevaksi '
-                + 'renkaaksi, ja siinä on studioita ja konserttisaleja.',
-              lahde: 'Jean-Pierre Dalbéra, Wikimedia Commons (CC BY 2.0)',
               linkki: 'https://www.ina.fr/',
             },
           ],
