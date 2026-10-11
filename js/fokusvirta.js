@@ -6665,11 +6665,15 @@ export const NOSTOTEHTAVIA_AARREPISTEESEEN = 1;
 /**
  * Lukitun pisteen ruudunlukijalappu ja napautuksen vastaus.
  * Sama lause molemmissa, jotta kuultu ja luettu peli kertovat saman.
+ *
+ * KAUPUNKILEHDESTÄ, EI KARTALTA (PT 11.10.2026): jokaisella kaupungilla on
+ * lehdessä aarteen avaava kysymys, mutta karttavisoja ei ole kaikissa maissa
+ * (esim. Kreikka), joten "kartalta" johti Ateenassa harhaan.
  */
-export const AARREPISTEEN_LUKKOLAPPU = 'ratkaise kysymys kartalta';
+export const AARREPISTEEN_LUKKOLAPPU = 'ratkaise kysymys kaupunkilehdestä';
 
 /** Lukitun pisteen napautuksen vastaus pulun kuplassa. */
-export const AARREPISTEEN_LUKKOVIESTI = 'Ratkaise kysymys kartalta.';
+export const AARREPISTEEN_LUKKOVIESTI = 'Ratkaise kysymys kaupunkilehdestä.';
 
 /**
  * Pulun ohje ensimmäisessä kaupungissa (omistajan sanamuoto 13.9., ks. yllä,
