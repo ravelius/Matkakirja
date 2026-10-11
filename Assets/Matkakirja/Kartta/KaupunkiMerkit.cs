@@ -265,6 +265,8 @@ namespace Matkakirja
         int houkutinRakennettu = -1;
         Color houkutinLinssiNyt, houkutinPeliNyt;
         bool houkutinLinssiTila;
+        /// <summary>Kaupunkipisteiden mittakerroin tässä kehyksessä (Houkuttimet.PisteenMittakerroin, omistaja 16.0x).</summary>
+        float pisteMitta = 1f;
         MaterialPropertyBlock hehkuLohko;
         static readonly int PisteVariId = Shader.PropertyToID("_BaseColor"), PisteKehysId = Shader.PropertyToID("_Kehys");
 
@@ -438,7 +440,7 @@ namespace Matkakirja
             foreach (var m in houkutinMerkit)
             {
                 if (!m.juuri.gameObject.activeSelf) continue;
-                float k = m.pisteKoko * (m.korostettu ? 1.5f : 1f) * koko;
+                float k = m.pisteKoko * (m.korostettu ? 1.5f : 1f) * koko * (paalla ? pisteMitta : 1f);
                 if (Mathf.Abs(m.pisteT.localScale.x - k) > 0.01f) m.pisteT.localScale = new Vector3(k, k, 1f);
                 bool hehkuu = paalla && !m.valintamerkki;
                 if (m.hehku.gameObject.activeSelf != hehkuu) m.hehku.gameObject.SetActive(hehkuu);
@@ -1355,6 +1357,7 @@ namespace Matkakirja
             //    LADOTTUA NIMEÄ EI NÄYTETÄ); valittavat ja lennon renkaat jäävät.
             //  - budjetti = round(40 · 20° / näkymän korkeus °) [6, 40] × liikevaran ala (NimiLadonta.Nimibudjetti).
             float zoom = LinssiTila || nk == null ? 1f : nk.ZoomKerroin;
+            pisteMitta = (float)Houkuttimet.PisteenMittakerroin(zoom);
             bool lattialla = zoom <= (float)NostoSaannot.KarttakerroinMin / 1.0025f;
             int katto = LinssiTila || valintamerkkeja > 0 || kierto == null ? int.MaxValue
                 : NimiLadonta.LiikevaranKatto(NimiLadonta.Nimibudjetti(NakymanKorkeusAsteina(tanPuoli)), NimiLadonta.LiikevaraOsuus);
@@ -1411,7 +1414,14 @@ namespace Matkakirja
                 }
                 var ala = NimenAla(m, ruutu, kerroin);
                 var suorakulmio = new Rect(ala.x - 4 * kerroin, ala.y - 2 * kerroin, ala.width + 8 * kerroin, ala.height + 4 * kerroin);
-                float pp = m.pisteKoko * kerroin * (m.korostettu ? 1.5f : 1f);
+                // Pisteet eivät kasva loitonnettaessa (omistaja 16.0x, Houkuttimet.PisteenMittakerroin); houkuttimet PaivitaHehkussa.
+                float pm = valinta || LinssiTila ? 1f : pisteMitta;
+                if (!m.houkutin || LinssiTila)
+                {
+                    float ps = m.pisteKoko * (m.korostettu ? 1.5f : 1f) * pm;
+                    if (Mathf.Abs(m.pisteT.localScale.x - ps) > 0.01f) m.pisteT.localScale = new Vector3(ps, ps, 1f);
+                }
+                float pp = m.pisteKoko * kerroin * (m.korostettu ? 1.5f : 1f) * pm;
                 nakyvat.Add(m);
                 ehdokkaat.Add(new NimiLadonta.KaupunkiEhdokas
                 {

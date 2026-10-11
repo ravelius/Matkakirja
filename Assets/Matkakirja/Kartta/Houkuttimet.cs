@@ -14,8 +14,8 @@ namespace Matkakirja
     ///  - LAUTAPELIKAUPUNGIT sinisinä (<see cref="PeliToken"/>, videopelien sininen): Berliini (Mylly) ja Ateena (Tavli).
     ///  - OLAVINLINNA (videopeli) samalla sinisellä vapaana pisteenä (ei laudan kaupunki, ei napautusta; NUI-jako 11.10.).
     ///    NUI:n nostomerkki (NostotKartalla) hoitaa Olavinlinnan maan sisällä omilla säännöillään.
-    ///  - HEHKU: olemassa oleva pistepohja (KaupunkiMerkit: pisteMateriaali, nelio) isompana ja saman pisteen kuultava
-    ///    hehkulevy alla; hidas sykähdys koossa ja peitossa Joutosykkeen kellolla (jäätyy levossa keskiasentoon, lämpösääntö).
+    ///  - HEHKU: olemassa oleva pistepohja (KaupunkiMerkit: pisteMateriaali, nelio) tavallisen pisteen kokoisena ja saman
+    ///    pisteen hento hehkulevy alla (omistaja 16.0x: pienet joka tasolla, <see cref="PisteenMittakerroin"/>); hidas sykähdys koossa ja peitossa Joutosykkeen kellolla (jäätyy levossa keskiasentoon, lämpösääntö).
     ///  - HUNNUN PÄÄLLÄ: huntu on Cesiumin laattojen raster-kerros (laatat geometriajonossa 2000); pisteet piirtyvät
     ///    läpinäkyvien jonossa (<see cref="PisteJono"/>) laattojen jälkeen ja kameraa kohti siirrettyinä, joten huntu ei peitä niitä.
     /// </summary>
@@ -80,10 +80,26 @@ namespace Matkakirja
 
         // ---- Hehku ja syke ----
 
-        /// <summary>Pisteen koko suhteessa tavalliseen pisteeseen (näkyy kaukaakin).</summary>
-        public const double KokoKerroin = 1.5;
-        /// <summary>Hehkulevyn koko suhteessa houkuttimen pisteeseen ja peitto (kuultava, ei peitä karttaa).</summary>
-        public const double HehkuKerroin = 2.4, HehkuPeitto = 0.32;
+        /// <summary>Ydinpisteen koko suhteessa tavalliseen kaupunkipisteeseen (omistaja 16.0x: sama koko, ei 1,5×).</summary>
+        public const double KokoKerroin = 1.0;
+        /// <summary>
+        /// Hento hehkulevy suhteessa ydinpisteeseen ja sen peitto (omistaja 16.0x: halo enintään kolmannes entisestä; ennen
+        /// 2,4 × 1,5 = 3,6 × piste, peitto 0,32 → nyt 1,7 × piste, peitto 0,22: ala sykkeen huipussakin alle kolmannes).
+        /// </summary>
+        public const double HehkuKerroin = 1.7, HehkuPeitto = 0.22;
+
+        /// <summary>
+        /// PISTEET EIVÄT KASVA LOITONNETTAESSA (omistaja 11.10.2026 klo 16.0x): kaupunkipisteet olivat kiinteän kokoisia
+        /// ruudulla (9 / 13 pt = 27 / 39 px iPhonella), vaikka kartta ja nostojen pisteet pienenevät loitonnettaessa, joten
+        /// koko Euroopan näkymässä ne näyttivät moninkertaisilta. Nyt piste = peruskoko × kartan mittakerroin (NostoKerros.
+        /// ZoomKerroin = saapumisnäkymän korkeus / kameran korkeus), katto 1 (ei koskaan peruskokoa suurempi) ja lattia
+        /// <see cref="PisteMinOsuus"/> (pysyy näkyvänä). Koskee laudan pisteitä, himmeitä kohdekaupunkeja ja houkuttimia.
+        /// </summary>
+        public const double PisteMinOsuus = 0.45;
+
+        /// <summary>Pisteen mittakerroin kartan zoomikertoimesta: [PisteMinOsuus, 1], ei koskaan kasva loitonnettaessa.</summary>
+        public static double PisteenMittakerroin(double zoomKerroin) =>
+            double.IsNaN(zoomKerroin) ? 1.0 : Math.Max(PisteMinOsuus, Math.Min(1.0, zoomKerroin));
         /// <summary>Sykkeen jakso (hidas) ja osuus.</summary>
         public const double JaksoS = 3.2, SykeOsuus = 0.16;
 
@@ -93,10 +109,10 @@ namespace Matkakirja
         /// <summary>Pisteen kokokerroin hetkellä aikaS (Joutosyke.Aika) voimalla 0–1 (Joutosyke.Voima; 0 = keskiasento).</summary>
         public static double Koko(double aikaS, double voima) => KokoKerroin * (1 + SykeOsuus * Aalto(aikaS, voima));
 
-        /// <summary>Hehkulevyn kokokerroin (suhteessa houkuttimen pisteeseen): sykkii pistettä enemmän.</summary>
-        public static double HehkunKoko(double aikaS, double voima) => HehkuKerroin * (1 + 2 * SykeOsuus * Aalto(aikaS, voima));
+        /// <summary>Hehkulevyn kokokerroin (suhteessa houkuttimen pisteeseen), sykkii kuten piste.</summary>
+        public static double HehkunKoko(double aikaS, double voima) => HehkuKerroin * (1 + SykeOsuus * Aalto(aikaS, voima));
 
-        /// <summary>Hehkulevyn peitto: 0,32 ± puolet sykkeessä.</summary>
+        /// <summary>Hehkulevyn peitto: 0,22 ± puolet sykkeessä.</summary>
         public static double HehkunPeitto(double aikaS, double voima) => HehkuPeitto * (1 + 0.5 * Aalto(aikaS, voima));
 
         // ---- Näkyvyys ----

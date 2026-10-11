@@ -103,5 +103,28 @@ namespace Matkakirja.Kartta.Testit
             }
             Oleta.Tosi(Houkuttimet.JaksoS >= 2.4, "hidas sykähdys");
         }
+
+        [Testi]
+        static void PisteetPienetKaikillaTasoilla()
+        {
+            // Omistaja 16.0x: ydinpiste tavallisen kaupunkipisteen kokoinen, halo hento (ala alle kolmannes entisestä 3,6 × pisteestä).
+            Oleta.Tosi(Houkuttimet.KokoKerroin == 1.0, "ydin = tavallinen piste");
+            double haloMax = Houkuttimet.HehkuKerroin * Houkuttimet.KokoKerroin * (1 + Houkuttimet.SykeOsuus);
+            Oleta.Tosi(haloMax * haloMax <= (2.4 * 1.5) * (2.4 * 1.5) / 3, $"halo {haloMax:0.00} × piste ≤ kolmannes alasta");
+            Oleta.Tosi(Houkuttimet.HehkuPeitto <= 0.25, "hento hehku");
+            // Pisteet eivät kasva loitonnettaessa: mittakerroin ei koskaan yli 1 ja pienenee (tai pysyy) zoomikertoimen pienetessä.
+            double edellinen = double.MaxValue;
+            foreach (double zoom in new[] { 64.0, 8, 2, 1, 0.8, 0.5, 0.3, 0.2, 0.134, 0.05 })
+            {
+                double k = Houkuttimet.PisteenMittakerroin(zoom);
+                Oleta.Tosi(k <= 1.0 && k <= edellinen && k >= Houkuttimet.PisteMinOsuus, $"zoom {zoom}: {k}");
+                edellinen = k;
+            }
+            Oleta.Tosi(Houkuttimet.PisteenMittakerroin(1) == 1 && Houkuttimet.PisteenMittakerroin(double.NaN) == 1, "saapumisnäkymässä peruskoko");
+            // iPhone (@3x): Suomen saapumisnäkymä 9 pt = 27 px; koko Euroopan näkymä (maan katto 1820 km / 13 579 km) pienempi.
+            double eur = Houkuttimet.PisteenMittakerroin(1820.0 / 13579.0);
+            Oleta.Tosi(9 * 3 * eur < 9 * 3 && 13 * 3 * eur <= 18, $"Euroopassa {9 * 3 * eur:0} / {13 * 3 * eur:0} px");
+            Console.WriteLine($"  houkuttimet iPhone: Suomi 27 / 39 px, Eurooppa {9 * 3 * eur:0} / {13 * 3 * eur:0} px, halo enintään {haloMax:0.00} × piste");
+        }
     }
 }
