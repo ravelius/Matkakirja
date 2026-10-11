@@ -87,3 +87,9 @@ Siirtosepälle lähetetty v47g–j; v47k–n LÄHETTÄMÄTTÄ (viestiraja).
 - **Pariisi v3 + v3b** `_valmiit/pariisi-korttelit-v3/` (LAHTEET.md): Bourbon pois, Banque puskuri 6 m + vaaleammat lämpimät julkisivut
   (LS2 716dd1464: Banque KUNNOSSA), Branly v3b rengas 35 m kaduille/puistoon raoilla naapurirakennusten ympäri. LS2 paketoi (v6k18 → uusi).
 - Laitetestaajan 8. kierrosta ei vielä ole (7. uusin) → mallikohdat kun raportti tulee.
+- **v47p VIETY** (hionta, `kuori_sisalla.py` scratchpadissa: merkit/kävelypinnat kuoren sisällä ilman leikkausta): ampuma-aukkokomeroille
+  leikkaukset (kaytava()), reitti:pelaaja-94 komeron suulle. 1499 aeda3a577e00ac6a (ca653507885419a5), NYKY e9efc06ec00f48c3 (cefa8252a93364e2).
+  Avoin: ulkoalueen kiila x −10,8…−7,9, z 2,8…6 (silmä kuoren sisällä) → kysytty Siirtosepältä, onko botti käynyt.
+- PT 14.0x: botin mallikohdat Siirtosepältä heti ajon jälkeen ja ne ensin. Uudet jonossa (linna edellä): ISS-raketti LS2:lle (Opus-agentti
+  tekee `_valmiit/iss-raketti-v1/`, tarkista ennen lähetystä), soutajan kasvot Natiivisepälle (ARKit 52, ele_puhe_istuen, ele_osoitus_portti,
+  Eyes/Eyebrows-painot; PT antaa järjestyksen).
