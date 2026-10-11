@@ -1,0 +1,54 @@
+{
+ "id": "majuro",
+ "era": "e14",
+ "nimi": "Majuro",
+ "nimiAlkukieli": "M̧ajro (englanniksi Majuro)",
+ "maa": "MHL",
+ "maanNimi": "Marshallinsaaret",
+ "asema": "pääkaupunki",
+ "lat": 7.0918,
+ "lon": 171.3802,
+ "wikidata": "Q12919",
+ "kevytSisalto": {
+  "kuvaus": "Majuro on Marshallinsaarten pääkaupunki ja suurin asutuskeskus, kapea atollin kaari, jonka toisella puolella on valtameri ja toisella laguuni. Väestö ja palvelut ovat keskittyneet itäreunan Delap–Uliga–Djarrit-alueelle, ja siellä ovat hallitus, parlamentti ja suurin osa kaupasta. Atollin länsipäässä on Laura, jonka hiekkaranta on suosittu virkistyskohde.",
+  "tunnusrakennukset": [
+   "Capitol-rakennus (Nitijeļā eli parlamentti)",
+   "Alele-museo",
+   "Laura-ranta ja Lauran kylä",
+   "Majuron kansainvälinen lentokenttä"
+  ],
+  "asukkaat": {
+   "arvo": 23156,
+   "vuosi": 2021,
+   "lahde": "EPPSO, RMI 2021 Census Report, Volume 1, väestö atollin mukaan: Majuro (koko Majuron atolli) 23 156; kotitalouksissa asuvia 22 873. Kaupunkiydin Delap–Uliga–Djarrit 14 149 (citypopulation.de).",
+   "linkki": "https://rmieppso.org/download/8/census-surveys/1236/rmi-2021-census-table-report.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Marshallinsaaret on Mikronesian alueella Tyynellämerellä sijaitseva saarivaltio, jonka 29 atollia ja viisi yksittäistä saarta ovat kahdessa ketjussa, Ratakissa ja Ralikissa. Maan maapinta-ala on noin 181 neliökilometriä, ja asutus on keskittynyt Majuron ja Ebeyen taajamiin. Yhdysvallat teki 1946–1958 ydinkokeita Bikinin ja Enewetakin atolleilla, ja kokeiden perintö on yhä osa maan historiaa ja politiikkaa. Maa on vapaassa yhteydessä Yhdysvaltoihin ja käyttää Yhdysvaltain dollaria; muutto ulkomaille on pienentänyt väkilukua 2010-luvulta lähtien, ja siksi laskentojen välillä väkiluku on laskenut noin 53 000:sta noin 42 000:een (2011–2021).",
+  "genetiivi": "Marshallinsaarten",
+  "kielet": [
+   {
+    "kieli": "marshallin kieli",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Yhdysvaltain dollari",
+   "koodi": "USD"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Majuro",
+  "maanAvain": "Marshallinsaaret",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

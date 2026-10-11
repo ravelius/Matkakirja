@@ -1,0 +1,57 @@
+{
+ "id": "ngerulmud",
+ "era": "e14",
+ "nimi": "Ngerulmud",
+ "nimiAlkukieli": "Ngerulmud",
+ "maa": "PLW",
+ "maanNimi": "Palau",
+ "asema": "pääkaupunki",
+ "lat": 7.5006,
+ "lon": 134.6242,
+ "wikidata": "Q515229",
+ "kevytSisalto": {
+  "kuvaus": "Ngerulmud on Palaun hallintokaupunki Babeldaobin saarella Melekeokin osavaltiossa. Se rakennettiin 2000-luvun alussa korvaamaan Koror, ja siellä on parlamentti-, tuomioistuin- ja hallintorakennukset yhteisellä aukiolla. Ngerulmudissa ei ole varsinaista asutusta, ja sitä pidetään maailman pienimpänä suvereenin valtion pääkaupunkina; suurin kaupunki ja liike-elämän keskus on edelleen Koror.",
+  "tunnusrakennukset": [
+   "Palaun kansallinen kapitolirakennus (Olbiil Era Kelulau, kansalliskongressin rakennus)",
+   "Korkeimman oikeuden ja hallinnon rakennukset kapitolikompleksissa",
+   "Melekeokin kylä (perinteinen kylä lähellä)"
+  ],
+  "asukkaat": {
+   "arvo": 318,
+   "vuosi": 2020,
+   "lahde": "Palaun Office of Planning and Statistics, väestölaskenta 2020: Melekeokin osavaltion väkiluku (Ngerulmud sijaitsee Melekeokin osavaltiossa; Ngerulmudilla itsellään ei ole asukkaita ja Melekeokin kylässä oli 19); luku citypopulation.de:n kautta (lähde: Bureau of Budget & Planning / PRISM)",
+   "linkki": "https://citypopulation.de/Palau.html"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Palau on Mikronesiassa, Filippiinien itäpuolella Tyynellämerellä sijaitseva saarivaltio, jonka alueeseen kuuluu yli kolmesataa saarta. Suurin saari Babeldaob on vehreää ja vähän asuttua, kun taas suurin osa asukkaista elää etelämpänä Kororin kaupungissa. Maan tunnetuimpia luontokohteita ovat Rock Islands -kalkkikivisaaret ja niiden laguuni, jotka kuuluvat UNESCOn maailmanperintöluetteloon. Palau itsenäistyi vuonna 1994, ja sillä on Yhdysvaltain kanssa vapaan assosiaation sopimus, johon liittyvät muun muassa puolustus ja taloudellinen tuki.",
+  "genetiivi": "Palaun",
+  "kielet": [
+   {
+    "kieli": "palau",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "sonsorol, tobi ja angaur (alueelliset kielet)",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Yhdysvaltain dollari",
+   "koodi": "USD"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Ngerulmud",
+  "maanAvain": "Palau",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

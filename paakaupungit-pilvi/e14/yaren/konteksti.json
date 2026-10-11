@@ -1,0 +1,54 @@
+{
+ "id": "yaren",
+ "era": "e14",
+ "nimi": "Yaren",
+ "nimiAlkukieli": "Yaren (alkuperäinen nimi Makwa tai Moqua)",
+ "maa": "NRU",
+ "maanNimi": "Nauru",
+ "asema": "pääkaupunki",
+ "lat": -0.5477,
+ "lon": 166.9209,
+ "wikidata": "Q31026",
+ "kevytSisalto": {
+  "kuvaus": "Yaren on Naurun saaren eteläisimpiä piirejä ja maan tosiasiallinen pääkaupunki, vaikka Naurulla ei ole virallista pääkaupunkia. Alueella on parlamenttitalo, ministeriöiden toimistoja, poliisin päämaja ja maan lentokenttä. Yarenin tunnetuin luonnonnähtävyys on Moqua-kaivo, maanalainen järvi, joka on historiallisesti ollut tärkeä makean veden lähde.",
+  "tunnusrakennukset": [
+   "Parlamenttitalo (Parliament House)",
+   "Moqua-kaivo (maanalainen järvi)",
+   "Naoero-museo (kansallismuseo)",
+   "Naurun kansainvälinen lentokenttä"
+  ],
+  "asukkaat": {
+   "arvo": 803,
+   "vuosi": 2021,
+   "lahde": "Nauru Bureau of Statistics ja SPC, Nauru 2021 Population and Housing Census – Analytical Report (2023), taulukko piireittäin: Yarenin piiri 803 (747 vuonna 2011, 632 vuonna 2001)",
+   "linkki": "https://stats.gov.nr/download/49/2021/359/nauru-2021-population-and-housing-census-analytical-report.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Nauru on päiväntasaajan eteläpuolella Tyynellämerellä sijaitseva yksittäinen korallisaari, jonka pinta-ala on vain noin 21 neliökilometriä. Se on pinta-alaltaan maailman kolmanneksi pienin maa, ja asukkaita on noin 11 700. Fosfaatin louhinta muovasi vuosikymmeniä saaren talouden ja tuhosi suuren osan sisäosien maa-alasta, ja käyttökelpoiset varat ehtyivät 1990-luvulla. Maan paikallinen nimi on Naoero, ja englanninkielisessä virallisessa käytössä sen nimi on nykyään Republic of Naoero; suomeksi vakiintunut muoto on edelleen Nauru.",
+  "genetiivi": "Naurun",
+  "kielet": [
+   {
+    "kieli": "naurun kieli",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Australian dollari",
+   "koodi": "AUD"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Yaren",
+  "maanAvain": "Nauru",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

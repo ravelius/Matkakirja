@@ -1,0 +1,88 @@
+{
+ "id": "canberra",
+ "era": "e14",
+ "nimi": "Canberra",
+ "nimiAlkukieli": "Canberra",
+ "maa": "AUS",
+ "maanNimi": "Australia",
+ "asema": "pääkaupunki",
+ "lat": -35.2931,
+ "lon": 149.1269,
+ "wikidata": "Q3114",
+ "kevytSisalto": {
+  "kuvaus": "Canberra on Australian pääkaupunki, joka rakennettiin tarkoituksella Sydneyn ja Melbournen väliin ratkaisemaan niiden kiista pääkaupungin asemasta. Kaupunki on suunniteltu puutarhakaupunki-ideoiden mukaan, ja sen keskellä on tekojärvi, jota ympäröivät puistot, puistokadut ja kansalliset laitokset. Canberra on maan poliittinen ja hallinnollinen keskus sekä yliopisto- ja tutkimuskaupunki.",
+  "tunnusrakennukset": [
+   "Vanha parlamenttitalo (Old Parliament House, 1927)",
+   "Parlamenttitalo (Parliament House, 1988)",
+   "Kansalliskirjasto (National Library of Australia)",
+   "Burley Griffin -järvi (tekojärvi kaupungin keskellä)"
+  ],
+  "asukkaat": {
+   "arvo": 484630,
+   "vuosi": 2025,
+   "lahde": "Australian tilastovirasto (ABS), Regional population 2024–25: arvioitu vakinainen väestö 30.6.2025, Greater Capital City Statistical Area ACT (Canberra), julkaistu 31.3.2026",
+   "linkki": "https://www.abs.gov.au/statistics/people/population/regional-population/latest-release"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Yksitoista laivaa ja 252 päivää merellä",
+    "Viimeinen vankilaiva ja käsin kirjoitettu lehti",
+    "Kaivosmiesten vala Ballaratissa",
+    "Yksi manner, monta parlamenttia ja kolme raideleveyttä"
+   ]
+  },
+  {
+   "id": "alkuperaiskansat",
+   "nimi": "Alkuperäiskansat",
+   "nostot": [
+    "Viisisataa kansaa ja viisikymmentä vuosituhatta",
+    "Emu, joka on tähtien välissä",
+    "Tuli, joka hoitaa maata",
+    "Punainen kallio saa toisen nimen"
+   ]
+  },
+  {
+   "id": "talous",
+   "nimi": "Talous",
+   "nostot": [
+    "Kulta, joka kolminkertaisti väkiluvun",
+    "Kaksikymmentäkuusi lammasta Kapkaupungista",
+    "Sanoma, joka kulki tunneissa eikä kuukausissa",
+    "Joki, jota pitkin villa tuli alas"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Eläin, joka maalattiin täytetystä nahasta",
+    "Eläin, jota pidettiin huijauksena",
+    "Suurin elävien rakentama rakennelma",
+    "Nimi, joka tarkoittaa ei vettä"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Leipä, joka paistetaan tuhkassa",
+    "Käärö, jota kannettiin selässä",
+    "Riisiä ja teetä kultakentillä",
+    "Ruoka, jota siirtolaiset väheksyivät"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Canberra",
+  "maanAvain": "Australia",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

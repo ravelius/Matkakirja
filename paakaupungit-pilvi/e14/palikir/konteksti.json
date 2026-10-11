@@ -1,0 +1,66 @@
+{
+ "id": "palikir",
+ "era": "e14",
+ "nimi": "Palikir",
+ "nimiAlkukieli": "Palikir",
+ "maa": "FSM",
+ "maanNimi": "Mikronesia",
+ "asema": "pääkaupunki",
+ "lat": 6.9178,
+ "lon": 158.185,
+ "wikidata": "Q42751",
+ "kevytSisalto": {
+  "kuvaus": "Palikir on Pohnpein saarella sijaitseva Mikronesian liittovaltion pääkaupunki ja maan hallinnon keskus. Se on suunniteltu kokonaan hallintokeskukseksi, jossa on Kongressin, korkeimman oikeuden ja postin rakennukset, ja sen ympärillä kasvaa tiheää sademetsää. Sadetta tulee vuosittain noin 5 000 millimetriä, joten kaupunkia on kutsuttu maailman sateisimmaksi pääkaupungiksi.",
+  "tunnusrakennukset": [
+   "Kongressitalo (FSM Congress)",
+   "Korkein oikeus",
+   "Postitoimisto",
+   "Mount Nanlaud (luonnonmaamerkki)"
+  ],
+  "asukkaat": {
+   "arvo": 4903,
+   "vuosi": 2023,
+   "lahde": "FSM Division of Statistics / Pohnpei (PNI) Statistics Office, PNI Basic Tables, 2023 Population and Housing Census, taulukko B1 'Age and Sex by Municipality, Pohnpei State: 2023': Sokehsin kunta, kaikki sukupuolet yhteensä 4 903 (Pohnpei yhteensä 26 102)",
+   "linkki": "https://stats.gov.fm/download/54/pohnpei/2216/pni-basic-tables-2023-population-housing-census.xlsx"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Mikronesian liittovaltio on läntisellä Tyynellämerellä sijaitseva saarivaltio, joka koostuu neljästä osavaltiosta: Yapista, Chuukista, Pohnpeista ja Kosraesta. Maan noin 700 neliökilometrin maapinta-ala on jakautunut sadoille saarille, jotka ovat hajallaan laajalla merialueella. Osavaltioilla on omat kielensä ja perinteensä, ja yhteisenä virallisena kielenä on englanti. Maa on vapaassa yhteydessä Yhdysvaltoihin, ja Pohnpeilla sijaitseva muinainen Nan Madolin saarikaupunki on Unescon maailmanperintökohde.",
+  "genetiivi": "Mikronesian",
+  "kielet": [
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "chuukin kieli",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "pohnpein kieli",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "kosraen kieli",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "yapin kieli",
+    "asema": "kansallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Yhdysvaltain dollari",
+   "koodi": "USD"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Palikir",
+  "maanAvain": "Mikronesian liittovaltio",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

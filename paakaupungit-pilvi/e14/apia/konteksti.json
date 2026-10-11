@@ -1,0 +1,54 @@
+{
+ "id": "apia",
+ "era": "e14",
+ "nimi": "Apia",
+ "nimiAlkukieli": "Apia",
+ "maa": "WSM",
+ "maanNimi": "Samoa",
+ "asema": "pääkaupunki",
+ "lat": -13.8333,
+ "lon": -171.8333,
+ "wikidata": "Q36260",
+ "kevytSisalto": {
+  "kuvaus": "Apia on Samoan pääkaupunki, suurin kaupunki ja satama Upolun saaren pohjoisrannikolla. Kaupunki on maan hallinnon, kaupan ja liikenteen keskus, ja sen vanhassa osassa on siirtomaa-ajan rakennuksia, kirkkoja ja Mulinu'un niemimaa, jolla parlamentti sijaitsee. Kaupungin lähellä on kirjailija Robert Louis Stevensonin entinen koti Vailima, ja hän on haudattu läheiselle Vaean vuorelle.",
+  "tunnusrakennukset": [
+   "Apian kellotorni (sotamuistomerkki kaupungin keskustassa)",
+   "Neitsyt Marian vastaanottamisen katedraali (Immaculate Conception of Mary Cathedral)",
+   "Robert Louis Stevensonin museo (Vailima)",
+   "Maota Fono (parlamenttitalo, Mulinu'u)"
+  ],
+  "asukkaat": {
+   "arvo": 35974,
+   "vuosi": 2021,
+   "lahde": "Samoan tilastovirasto (Samoa Bureau of Statistics, SBS), Population and Housing Census 2021 -factsheet (lopulliset tulokset, lokakuu 2022): Apia Urban Area 35 974 (miehiä 17 990, naisia 17 984); alustava luku huhtikuussa 2022 oli 34 963",
+   "linkki": "https://sbs.gov.ws/wp-content/uploads/2022/12/Factsheet_Samoa_-PHC2021.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Samoa on Polynesiassa Tyynellämerellä sijaitseva saarivaltio, joka koostuu kahdesta pääsaaresta, Upolusta ja Savai'ista, sekä pienemmistä saarista. Maa itsenäistyi vuonna 1962 Uuden-Seelannin huoltohallinnosta ensimmäisenä Polynesian valtiona. Samoalaiseen yhteiskuntaan kuuluu vahva perinteinen fa'a Samoa -elämäntapa, jossa suku ja matai-päällikkyys ovat keskeisiä, ja maa on tunnettu vulkaanisista maisemistaan, koralliriutoista ja banaani-, kookos- ja kalastustaloudesta. Asukkaista suuri osa elää pääkaupunki Apian ympärillä Upolun pohjoisrannikolla.",
+  "genetiivi": "Samoan",
+  "kielet": [
+   {
+    "kieli": "samoa",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Samoan tala",
+   "koodi": "WST"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Apia",
+  "maanAvain": "Samoa",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

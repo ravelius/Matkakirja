@@ -1,0 +1,62 @@
+{
+ "id": "funafuti",
+ "era": "e14",
+ "nimi": "Funafuti",
+ "nimiAlkukieli": "Funafuti",
+ "maa": "TUV",
+ "maanNimi": "Tuvalu",
+ "asema": "pääkaupunki",
+ "lat": -8.5048,
+ "lon": 179.1174,
+ "wikidata": "Q34126",
+ "kevytSisalto": {
+  "kuvaus": "Funafuti on Tuvalun pääkaupunki ja suurin asutuskeskus, jonka hallinto sijaitsee Vaiakun kylässä atollin pääsaarella Fongafalella. Saari on paikoin vain muutaman kymmenen metrin levyinen, ja sen toisella puolella on laguuni ja toisella avoin valtameri. Funafutissa ovat parlamentti, lentokenttä ja sairaala, ja atollin länsiriutalla on suojeltu Funafuti Conservation Area.",
+  "tunnusrakennukset": [
+   "Tuvalun parlamentti (Palamene o Tuvalu)",
+   "Funafuti International Airport (kiitorata, jota käytetään myös yhteisönä aukiona)",
+   "Fētu'ao Lima (Morning Star -kirkko)",
+   "Princess Margaret Hospital"
+  ],
+  "asukkaat": {
+   "arvo": 6602,
+   "vuosi": 2022,
+   "lahde": "Tuvalun väestölaskenta 2022, Funafutin atollin väestö (noin 62 % koko maan väestöstä; 6 320 vuonna 2017); luku Wikipedian Funafuti-sivun ja geo-ref.net:n kautta",
+   "linkki": "https://en.wikipedia.org/wiki/Funafuti"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Tuvalu on Polynesiassa, Tyynellämerellä Havaijin ja Australian puolivälissä sijaitseva pieni saarivaltio, joka koostuu yhdeksästä matalasta saaresta, joista kuusi on atolleja. Maa on sekä pinta-alaltaan että väkiluvultaan yksi maailman pienimmistä, ja sen korkein kohta on vain muutaman metrin merenpinnan yläpuolella. Tuvalu itsenäistyi vuonna 1978 ja kuuluu Kansainyhteisöön. Merenpinnan nousu on maan keskeinen tulevaisuuskysymys, ja siksi Tuvalu on tuonut ilmastonmuutoksen kansainvälisiin keskusteluihin vahvasti esiin.",
+  "genetiivi": "Tuvalun",
+  "kielet": [
+   {
+    "kieli": "tuvalu",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "samoa",
+    "asema": "muu"
+   },
+   {
+    "kieli": "kiribati (Nuin saarella)",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Australian dollari (rinnalla Tuvalun dollarin kolikot)",
+   "koodi": "AUD"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Funafuti",
+  "maanAvain": "Tuvalu",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

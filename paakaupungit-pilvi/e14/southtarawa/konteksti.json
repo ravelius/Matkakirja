@@ -1,0 +1,54 @@
+{
+ "id": "southtarawa",
+ "era": "e14",
+ "nimi": "South Tarawa",
+ "nimiAlkukieli": "South Tarawa (kiribatiksi Tarawa Teinainano)",
+ "maa": "KIR",
+ "maanNimi": "Kiribati",
+ "asema": "pääkaupunki",
+ "lat": 1.3333,
+ "lon": 172.9667,
+ "wikidata": "Q131233",
+ "kevytSisalto": {
+  "kuvaus": "South Tarawa on Tarawan atollin eteläreunan saarten ketju, jonka luodot on yhdistetty toisiinsa penkereillä. Sen kapealla maakaistalla, jonka leveys on keskimäärin vain noin 450 metriä, asuu noin puolet koko maan väestöstä, ja siellä sijaitsevat suurin osa valtion hallinnosta, kaupasta ja kouluista. Hallintorakennukset ovat eri puolilla ketjua: parlamentti Ambossa, presidentinlinna Bairikissa ja satama Betiossa.",
+  "tunnusrakennukset": [
+   "Parlamenttitalo (House of Assembly, Ambo)",
+   "State House (Bairiki)",
+   "Sacred Heart -katedraali (Teaoraereke)",
+   "Betion satama ja Tarawan taistelun muistopaikat"
+  ],
+  "asukkaat": {
+   "arvo": 63439,
+   "vuosi": 2020,
+   "lahde": "Kiribatin tilastotoimisto (National Statistics Office), Republic of Kiribati 2020 Population and Housing Census: General Report and Results (heinäkuu 2021; laskenta alkoi 7.11.2020), South Tarawan saariketju; luku Wikidatan (Q131233) ja Wikipedian lainaamana. Koko maa 119 438 (+9 302 vuodesta 2015).",
+   "linkki": "https://www.wikidata.org/wiki/Q131233"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Kiribati on Tyynellämerellä päiväntasaajan ja 180. pituuspiirin molemmin puolin levittäytyvä saarivaltio, jonka 32 atollia ja koralliluotoa kuuluvat Gilbert-, Phoenix- ja Linesaariin sekä Banaba-saareen. Maan maapinta-ala on vain noin 811 neliökilometriä, mutta sen merialue on valtava ja ulottuu kolmelle aikavyöhykkeelle. Saaret ovat enimmäkseen vain muutaman metrin korkeudella merenpinnasta, minkä vuoksi merenpinnan nousu on maalle vakava uhka. Suurin osa asukkaista asuu Tarawan atollilla, jolla maan hallinto sijaitsee.",
+  "genetiivi": "Kiribatin",
+  "kielet": [
+   {
+    "kieli": "kiribati (gilbertin kieli)",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Australian dollari",
+   "koodi": "AUD"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "South Tarawa",
+  "maanAvain": "Kiribati",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

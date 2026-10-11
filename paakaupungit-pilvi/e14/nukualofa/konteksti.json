@@ -1,0 +1,54 @@
+{
+ "id": "nukualofa",
+ "era": "e14",
+ "nimi": "Nukuʻalofa",
+ "nimiAlkukieli": "Nukuʻalofa",
+ "maa": "TON",
+ "maanNimi": "Tonga",
+ "asema": "pääkaupunki",
+ "lat": -21.1343,
+ "lon": -175.2018,
+ "wikidata": "Q38834",
+ "kevytSisalto": {
+  "kuvaus": "Nukuʻalofa on Tongan pääkaupunki ja hallinnon, kaupan ja liikenteen keskus Tongatapun saaren pohjoisrannikolla. Kaupunki on matala ja tasainen, ja sen kuninkaallinen palatsi sijaitsee rannalla Kolofoʻoun kaupunginosassa. Talamahun kauppahalli ja satama ovat kaupungin arjen keskuksia, ja vuoden 2006 mellakat sekä vuoden 2022 purkauksen tsunami ovat jättäneet jälkensä kaupunkikuvaan.",
+  "tunnusrakennukset": [
+   "Kuninkaallinen palatsi (Royal Palace, puinen 1860-luvun rakennus)",
+   "Talamahun kauppahalli (Talamahu Market)",
+   "Centenary Chapel (Free Wesleyan -kirkon keskuskirkko)",
+   "Kuninkaalliset haudat (Mala'ekula)"
+  ],
+  "asukkaat": {
+   "arvo": 21185,
+   "vuosi": 2021,
+   "lahde": "Tongan väestölaskenta 2021, analyyttinen raportti (Tonga Statistics Department / SPC): Tongatapun kaupunkiväestö (Kolofoʻou, Maʻufanga, Kolomotuʻa), luku saatu hakutuloksen tiivistelmästä, ei avattu suoraan raportista",
+   "linkki": "https://sdd.spc.int/digital_library/tonga-2021-census-population-and-housing-volume-2-analytical-report"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Tonga on Polynesiassa Tyynellämerellä sijaitseva kuningaskunta, joka koostuu yli sadasta saaresta, joista vain noin kolmasosa on asuttuja. Se on Tyynenmeren saarivaltioista ainoa, joka ei koskaan joutunut kokonaan siirtomaaksi, vaikka Britannia hoiti sen ulkosuhteita suojeluksen aikana vuosina 1900–1970. Maan talous nojaa maatalouteen, kalastukseen, ulkomailla asuvien tongalaisten rahalähetyksiin ja avustuksiin, ja suurin saari Tongatapu on asutuksen keskus. Tyypillisiä piirteitä ovat vahva kirkollisuus, perinteinen aatelisto ja alueen riuttojen sekä tulivuorten luonto; vuoden 2022 Hunga Tonga–Hunga Haʻapai -purkaus aiheutti suuria tuhoja.",
+  "genetiivi": "Tongan",
+  "kielet": [
+   {
+    "kieli": "tonga",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Tongan paʻanga",
+   "koodi": "TOP"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Nukuʻalofa",
+  "maanAvain": "Tonga",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}
