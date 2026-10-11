@@ -45,6 +45,8 @@ export const VAATIMUKSET = {
   '1.60': ['kokoelma:paakaupungit', 'maat.perustiedot', 'maat.paakaupunki'],
   // Karttaseppä 10.10.2026: pääkaupunkien havainnekuvat (PT).
   '1.61': ['paakaupungit.kuvat'],
+  // Karttaseppä 10.10.2026: alkulennon valittavat kohteet (omistaja: vain Eurooppa, NUI juna 181).
+  '1.62': ['kaupungit.lahtokohde'],
   '1.9': ['kokoelma:kuvakysymykset', 'kokoelma:lippumaat', 'kokoelma:pulmaaineisto', 'kokoelma:luennat',
     'kokoelma:livianpuhe', 'kokoelma:maat', 'manifest.offline'],
   '1.10': ['kokoelma:karttamerkit', 'kokoelma:karttavalot', 'kokoelma:maastonimet', 'kokoelma:maarajat',
