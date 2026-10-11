@@ -15,8 +15,10 @@
 // KEHYKSET JA VALON PAINOTUS (PT 11.10. 09.0x, omistaja: "kehykset jäävät niin mustiksi, miten yleisilmeestä vaikuttavamman"):
 //  - _Aalto (x = 2π/jakso 1/m, y = aallon kaltevuus): golflijst-aaltokuvio normaaliin kehyksen pituussuunnassa (UV.x = matka m,
 //    UV.y = 1 aaltonauhalla); pintagradientti ruudun derivaatoista, häivytetään kun jakso alittaa ~2 px (ei välkettä).
-//  - _Ymparisto: ympäristön heijastus (Fresnel × salin hajavalon radianssi, seinien heijastus ~0,3): lakan kiilto ja lehtikulta
-//    näkyvät myös ilman kohdevalon peiliheijastusta.
+//  - _Ymparisto: ympäristön heijastus (Fresnel × salin radianssi ≈ 0,3 · (hajavalo + kohdevalojen valaistus kohdassa) / π):
+//    lakan kiilto näkyy myös ilman kohdevalon peiliheijastusta (simu 11.10. 09.17: pelkkä hajavalo jäi mustaksi).
+//  - _MetalliHaja: kulunut lehtikulta sirottaa laajasti (karhea mikropinta) → osa metallista heijastuu kuin hajapinta albedon
+//    värisenä; ilman tätä kultakehys näkyi kohdevalossakin tummanruskeana (vain kapea peiliheijastus).
 //  - _Valokerroin: materiaalin valon kerroin (teokset > 1, seinät ja lattiat < 1): teos hehkuu seinää kirkkaampana.
 Shader "Matkakirja/MuseoValaistu"
 {
@@ -35,6 +37,7 @@ Shader "Matkakirja/MuseoValaistu"
         _Aalto ("Aaltokuvio (x = 2π/jakso, y = kaltevuus)", Vector) = (0, 0, 0, 0)
         _Ymparisto ("Ympäristöheijastus", Range(0, 1)) = 0
         _Valokerroin ("Valon kerroin", Float) = 1
+        _MetalliHaja ("Metallin hajaosa", Range(0, 1)) = 0
     }
     SubShader
     {
@@ -62,7 +65,7 @@ Shader "Matkakirja/MuseoValaistu"
                 float _AtlasLx;
                 float _Heijastus;
                 float4 _Aalto;
-                float _Ymparisto, _Valokerroin;
+                float _Ymparisto, _Valokerroin, _MetalliHaja;
             CBUFFER_END
             TEXTURE2D(_MuseoHeijastusKuva); SAMPLER(sampler_MuseoHeijastusKuva);
             float _MuseoHeijastusMaara;     // 0 = ei heijastusta (peilikameran piirto, kytkin)
@@ -112,12 +115,12 @@ Shader "Matkakirja/MuseoValaistu"
                     float det = dot(dpdx, r1);
                     float3 gradU = (dudx * r1 + dudy * r2) / (abs(det) > 1e-12 ? det : 1e-12);
                     float ph = _Aalto.x * i.uv.x;
-                    float haive = saturate(2.0 - fwidth(ph) * 0.8);   // < ~2 px jaksolla aalto häipyy tasaiseksi
+                    float haive = saturate((1.2 - fwidth(ph)) * 2.0);   // jakso < ~6 px → aalto häipyy tasaiseksi (näkyy vain läheltä)
                     n = normalize(n - gradU * (_Aalto.y * cos(ph) * haive));
                 }
                 float3 albedo = _Pohja.rgb * SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv).rgb;
                 if (_KarkiVari > 0.5) albedo *= i.vari.rgb;
-                float3 diff = albedo * (1 - _Metalli);
+                float3 diff = albedo * (1 - _Metalli + _Metalli * _MetalliHaja);
                 float3 f0 = lerp(float3(_Kiilto, _Kiilto, _Kiilto), albedo, _Metalli);
                 float eksp = max(2, 2 / max(1e-3, _Karheus * _Karheus * _Karheus * _Karheus) - 2);
                 float normi = (eksp + 8) / (8 * PI);
@@ -129,6 +132,7 @@ Shader "Matkakirja/MuseoValaistu"
                 float3 Eymp = E;
                 E *= _Valokerroin;
                 float3 L = diff * E / PI;
+                float3 Espot = 0;
                 [loop] for (int k = 0; k < _MuseoSpotMaara; k++)
                 {
                     float3 d = _MuseoSpotP[k].xyz - i.maailma;
@@ -136,7 +140,9 @@ Shader "Matkakirja/MuseoValaistu"
                     float3 l = d * rsqrt(d2);
                     float keila = smoothstep(_MuseoSpotP[k].w, _MuseoSpotD[k].w, dot(-l, _MuseoSpotD[k].xyz));
                     float nl = saturate(dot(n, l));
-                    float3 e = _MuseoSpotV[k].rgb * (nl * keila / d2) * _Valokerroin;
+                    float3 e0 = _MuseoSpotV[k].rgb * (keila / d2);
+                    Espot += e0;
+                    float3 e = e0 * nl * _Valokerroin;
                     float3 h = normalize(l + v);
                     float spek = normi * pow(saturate(dot(n, h)), eksp);
                     float3 f = f0 + (1 - f0) * pow(1 - saturate(dot(h, v)), 5);
@@ -146,7 +152,7 @@ Shader "Matkakirja/MuseoValaistu"
                 {
                     // Ympäristö: salin keskimääräinen radianssi ≈ 0,3 · E / π, heijastuu Fresnelin painolla (karheus vaimentaa reunakiiltoa).
                     float3 fe = f0 + (max(float3(1, 1, 1) * (1 - _Karheus), f0) - f0) * pow(1 - saturate(dot(n, v)), 5);
-                    L += fe * Eymp * (0.3 * _Ymparisto / PI);
+                    L += fe * (Eymp + Espot) * (0.3 * _Ymparisto / PI);
                 }
                 L += _Hehku.rgb;
                 float3 c = L * _MuseoValotus;

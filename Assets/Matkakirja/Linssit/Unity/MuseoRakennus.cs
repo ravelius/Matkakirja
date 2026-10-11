@@ -43,7 +43,7 @@ namespace Matkakirja.Natiivi
         public int Kolmioita { get; private set; }
 
         // Valon painotus (PT 11.10. 09.0x: "maalaus hehkuu seinää kirkkaampana ja sali tummuu reunoilta"): materiaalin _Valokerroin.
-        public const float TeosValo = 1.5f, GrafiikkaValo = 1.25f, KehysValo = 1.3f, SeinaValo = 0.72f;
+        public const float TeosValo = 1.5f, GrafiikkaValo = 1.25f, KehysValo = 1.3f, SeinaValo = 0.72f, KultaHaja = 0.45f;
 
         public MuseoRakennus(Transform isa)
         {
@@ -126,11 +126,11 @@ namespace Matkakirja.Natiivi
                 if (kehysProfMat.TryGetValue(avain, out var x)) return x;
                 var pohja = kehysMat.TryGetValue(m, out var km) ? km : halliMat;
                 var mm = new Material(pohja) { name = "Kehys " + avain }; tuhottavat.Add(mm);
-                mm.SetFloat("_Ymparisto", 1f); mm.SetFloat("_Valokerroin", KehysValo);
+                mm.SetFloat("_Ymparisto", 1f); mm.SetFloat("_Valokerroin", KehysValo); mm.SetFloat("_MetalliHaja", KultaHaja);
                 if (prof.AaltoNauhat.Count > 0 && prof.AaltoJaksoMm > 0 && prof.AaltoSyvyysMm > 0)
                 {
                     double k = 2 * Math.PI / (prof.AaltoJaksoMm / 1000);
-                    mm.SetVector("_Aalto", new Vector4((float)k, (float)(prof.AaltoSyvyysMm / 2000 * k), 0, 0));   // kaltevuus = amplitudi · k
+                    mm.SetVector("_Aalto", new Vector4((float)k, (float)(prof.AaltoSyvyysMm / 4000 * k), 0, 0));   // kaltevuus = puolet amplitudi · k:sta (hillitty)
                 }
                 return kehysProfMat[avain] = mm;
             }
