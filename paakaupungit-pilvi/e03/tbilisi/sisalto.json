@@ -1,0 +1,466 @@
+{
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "tbilisi",
+ "maa": "GEO",
+ "era": "e03",
+ "kaupunki": {
+  "id": "tbilisi",
+  "name": "Tbilisi",
+  "wiki": "Tbilisi",
+  "ambience": "kaupunki",
+  "pallo": {
+   "lat": 41.7151,
+   "lon": 44.8271
+  }
+ },
+ "artikkeli": {
+  "intro": "Tbilisi on Georgian pääkaupunki ja suurin kaupunki, ja se levittyy Mtkvari- eli Kura-joen molemmille puolille vuorten rajaamaan laaksoon. Nimi tulee vanhasta georgian sanasta tpili, **lämmin**, ja viittaa kaupungin rikkipitoisiin kuumiin lähteisiin. Lähteen mukaan Iberian kuningas Vakhtang I perusti kaupungin 400-luvulla, ja kuningas Dachi siirsi Iberian pääkaupungin Mtshetasta Tbilisiin 500-luvun alussa.\n\nIsoisän matkavuonna 1873 kaupunkia kutsuttiin nimellä **Tiflis**, ja se oli Venäjän keisarikunnan Tiflisin kuvernementin pääkaupunki. Vuotta aiemmin oli avattu maan ensimmäinen rautatie Potiin, mutta raitiotietä ei vielä ollut. Nykyinen nimi vakiintui virallisesti vasta 1936.\n\nVuoden 2026 alussa Tbilisissä asui 1 369 400 ihmistä, lähes kolmannes koko maan väestöstä. Vanhassa kaupungissa kirkot, kylpylät ja linnoitus seisovat lähekkäin, ja kaupunki on **rakennettu uudestaan monta kertaa**. Risteyskaupungissa elää yli sata etnistä ryhmää.",
+  "teksti": "Tbilisin synnystä kerrotaan legenda: kuningas Vakhtang I metsästi haukan kanssa, ja haukka ja sen saalis putosivat kuumaan lähteeseen. Kuningas ihastui lähteisiin ja päätti rakentaa niiden viereen kaupungin. Arkeologisen aineiston mukaan Vakhtang kuitenkin elvytti tai rakensi uudelleen vain osia olemassa olevasta asutuksesta, joka juontuu 4. vuosituhannelta eaa.\n\nVenäjän keisarikunta liitti Kartli-Kakhetin itseensä 1801, ja Tiflisin kuvernementti perustettiin 1846. Hyvin harva rakennus oli säilynyt vuoden 1795 tuhosta, joten suuri osa nykyisistä historiallisista rakennuksista on Venäjän vallan ajalta. Pääväylä oli Golovin-katu, nykyinen Rustaveli-katu, ja kaupunkiin nousi uusia lännenmallisia kortteleita.\n\nGeorgian kulttuuri elää kaupungissa vahvasti: Shota Rustavelin keskiaikainen eepos on kansallisaarre, ja kaupunki oli UNESCOn maailman kirjapääkaupunki 2021. Pöydässä kokoonnutaan supraan, yhteiseen juhla-ateriaan, jota johtaa maljanpuhuja eli tamada."
+ },
+ "kysymykset": [
+  {
+   "q": "Mitä Tbilisin nimi tarkoittaa?",
+   "options": [
+    "Lämmin paikka",
+    "Kallion kaupunki",
+    "Kuninkaan silta",
+    "Joen kaupunki"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Nimi liittyy maan alta nouseviin luonnonlähteisiin.",
+   "fact": "Nimi tulee vanhasta georgian sanasta tpili, lämmin. Syynä ovat alueen rikkipitoiset kuumat lähteet.",
+   "source": "https://en.wikipedia.org/wiki/Tbilisi"
+  },
+  {
+   "q": "Mikä joki virtaa Tbilisin läpi?",
+   "options": [
+    "Mtkvari",
+    "Rioni",
+    "Alazani",
+    "Aragvi"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Joen toinen nimi on Kura.",
+   "fact": "Tbilisi sijaitsee Mtkvari- eli Kura-joen molemmin puolin Itä-Georgiassa.",
+   "source": "https://en.wikipedia.org/wiki/Tbilisi"
+  },
+  {
+   "q": "Mikä on lähteen mukaan Tbilisin vanhin säilynyt kirkko?",
+   "options": [
+    "Anchiskhatin basilika",
+    "Metekhin kirkko",
+    "Siionin katedraali",
+    "Mamadaviti-kirkko"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Kronikoiden mukaan sen rakennutti kuningas Dachi.",
+   "fact": "Anchiskhatin basilika on peräisin 500-luvulta. Nimi tulee 1675 Tbilisiin tuodusta Anchan ikonista.",
+   "source": "https://en.wikipedia.org/wiki/Anchiskhati_Basilica"
+  },
+  {
+   "q": "Mistä kaupungista kuningas Dachi siirsi Iberian pääkaupungin Tbilisiin?",
+   "options": [
+    "Mtshetasta",
+    "Kutaisista",
+    "Batumista",
+    "Potista"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Kaupunki oli Iberian pääkaupunki ennen Tbilisiä.",
+   "fact": "Dachi hallitsi lähteiden mukaan vuosina 522–534. Siirto tehtiin 500-luvun alussa.",
+   "source": "https://en.wikipedia.org/wiki/Tbilisi"
+  },
+  {
+   "q": "Minä vuonna Tiflisin nimi muutettiin virallisesti Tbilisiksi?",
+   "options": [
+    "1936",
+    "1918",
+    "1921",
+    "1801"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Nimenmuutos tehtiin Neuvostoliiton aikana.",
+   "fact": "Vuoteen 1936 asti kaupunki oli englanniksi ja useimmilla kielillä Tiflis. Virallinen muutos tehtiin 17. elokuuta 1936.",
+   "source": "https://en.wikipedia.org/wiki/Tbilisi"
+  }
+ ],
+ "tiedot": [
+  "Abanotubanin kylpylöitä oli 1200-luvun loppuun mennessä kirjattu 65, ja kuumat lähteet antoivat koko kaupungille nimen.",
+  "Kaupunki on rakentunut vuorten sisään amfiteatterin muotoon, ja korkeus vaihtelee 380 metristä 770 metriin.",
+  "Funikulaari avattiin 1905, ja se nousee noin 300 metriä Mtatsmindan huipulle."
+ ],
+ "valokuva": {
+  "tiedosto": "Tbilisi XIXc 04.jpg",
+  "vuosi": "1800-luvun loppu",
+  "lahde": "Dmitri Yermakov, Commons (PD)",
+  "lyhyt": "Tiflisin katunäkymä 1800-luvun lopulta, ajalta ennen sähköraitiotietä.",
+  "selite": "Tiflisin katunäkymä 1800-luvun lopulta. Kadulla kulkee hevosvetoinen raitiovaunu, sillä hevosraitiotie alkoi 1883 ja sähköraitiotie vasta 1904."
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Tbilisi",
+   "johdanto": "Tbilisi sai nimensä lämpimistä lähteistään, ja se oli Kura-joen rinteillä suuri kaupunki jo isoisän matkavuonna 1873, jolloin sitä kutsuttiin Tiflisiksi. Vanhoissa kortteleissa kirkot, kylpylät ja linnoitus seisovat vierekkäin, ja kaupunki on rakennettu uudestaan monta kertaa.",
+   "kansikuvat": [
+    {
+     "tiedosto": "Narikala, Tiflis, Georgia, 2016-09-29, DD 148-150 HDR.jpg",
+     "selite": "Narikalan linnoitus kohoaa vanhan kaupungin yllä, ja sen ensimmäinen maininta on 300-luvulta.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+     "tiedosto": "Metekhi cliff with the church of the Nativity of the Holy Virgin. Tbilisi, Georgia. December 2023.jpg",
+     "selite": "Metekhin kirkko on rakennettu noin vuosina 1278–1284 Kuran yllä kohoavalle kalliolle.",
+     "lahde": "Kober, Wikimedia Commons (CC0)"
+    },
+    {
+     "tiedosto": "Tbilisi - Freedom Square - 2025-10 - p17.jpg",
+     "selite": "Vapaudenaukio on Rustaveli-kadun itäpää, ja Venäjän vallan aikana sitä kutsuttiin Eriwanin aukioksi.",
+     "lahde": "Александр Сигачёв, Wikimedia Commons (CC0)"
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Lämpimän paikan nimi",
+     "teksti": "Tbilisin nimi tulee vanhasta georgian sanasta tpili, lämmin. Syynä ovat alueen rikkipitoiset kuumat lähteet. Legendan mukaan kuningas Vakhtang I metsästi haukan kanssa, ja haukka ja sen saalis putosivat kuumaan lähteeseen. Kuningas ihastui lähteisiin ja päätti raivata metsän ja rakentaa niiden viereen kaupungin. Arkeologisen aineiston mukaan Vakhtang ei kuitenkaan perustanut kaupunkia tyhjästä, vaan elvytti tai rakensi uudelleen osia, kuten Abanotubanin ja Metekhin. Kylpyläkaupunginosan nimi tarkoittaa kirjaimellisesti kylpylän aluetta, ja 1200-luvun loppuun mennessä kaupungista oli kirjattu 65 kylpylää.",
+     "tiedosto": "Roofs of the sulfur baths in Tbilisi.jpg",
+     "selite": "Abanotubanin rikkikylpylät tunnistaa pienistä maanpinnan kupoleista.",
+     "lahde": "Wowan1978, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Tbilisi"
+    },
+    {
+     "otsikko": "Tiflis, Kaukasian kaupunki",
+     "teksti": "Isoisän matkavuonna 1873 Tbilisiä kutsuttiin Tiflisiksi. Venäjän keisarikunta oli liittänyt Kartli-Kakhetin kuningaskunnan itseensä 1801, ja Tiflisin kuvernementti perustettiin 1846 kaupunki pääkaupunkinaan. Lähteen mukaan kaupunki oli 1801–1917 Kaukasian käskynhaltijakunnan hallintopaikka. Pääväylä oli Golovin-katu, nykyinen Rustaveli-katu, jolle käskynhaltijat asettuivat asumaan. Maaorjuus oli lakkautettu 1866 ja maan ensimmäinen rautatie Tbilisistä Potiin avattu 1872, joten rautatie oli kaupungissa vielä uusi. Hevosraitiotietä ei ollut, sillä se alkoi vasta 1883.",
+     "tiedosto": "Piotr Veretschagin-Tiflis.jpg",
+     "selite": "Piotr Vereštšaginin maalaus Tiflisistä on vuosilta 1873–1874, isoisän matkavuodelta.",
+     "lahde": "Piotr Petrovitch Veretschagin, Wikimedia Commons (PD)",
+     "wiki": "History of Tbilisi"
+    },
+    {
+     "otsikko": "Kaupunki, joka rakennettiin uudelleen",
+     "teksti": "Hyvin harva rakennus säilyi vuoden 1795 tuhosta, joten useimmat Tbilisin historialliset rakennukset ovat Venäjän vallan ajalta 1801–1917. Vanhimmat kaupunginosat Kala, Abanotubani ja Avlabari rakennettiin pääosin uudelleen keskiaikaisten katujen pohjalle, osa vanhojen perustusten päälle. Vanhan kaupungin tunnusmerkki ovat puutalot avoimine, veistettyine parvekkeineen. Sololakin, Rustaveli-kadun ja Veran lännenmallisilla alueilla näkyvät beaux-arts-, orientalistinen ja muut historiallisuustyylit. Jugend kukoisti 1890-luvun puolivälistä Venäjän vallan loppuun. Historiallinen alue oli maailman monumenttivahdin listalla 1998, 2000 ja 2002.",
+     "tiedosto": "(Renovated) Old Town, Tbilisi, Georgia.jpg",
+     "selite": "Vanhan kaupungin parvekkeelliset puutalot ovat pääosin 1800-luvun rakentamia.",
+     "lahde": "Saskia Heijltjes, Wikimedia Commons (CC BY-SA 2.0)",
+     "wiki": "Old Tbilisi"
+    },
+    {
+     "otsikko": "Risteyskaupunki",
+     "teksti": "Tbilisi sijaitsee Euroopan ja Aasian välillä lähellä Silkkitietä, ja kauppareittien ja valtojen kamppailu on näkynyt kaupungissa vuosisatojen ajan. Nykyään siellä elää yli sata etnistä ryhmää. Vanhassa kaupungissa moskeija, synagoga sekä eri kirkkokuntien kirkot ovat alle 500 metrin päässä toisistaan. 1800-luvulla kaupunki jakautui kortteleihin: Avlabarissa asuivat armenialaiset ja georgialaiset, vasemmalla rannalla oli saksalaiskortteli Alexanderdorf ja oikealla persialainen Said-Abad. Lähteen mukaan oma kaupunkikulttuuri ja folklore muotoutuivat samoin 1800-luvulla.",
+     "tiedosto": "Catedral de Sioni, Tiflis, Georgia, 2016-09-29, DD 97-99 HDR.jpg",
+     "lyhyt": "Siionin katedraalin sisätilat maalasi Grigori Gagarin 1850–1860-luvuilla.",
+     "selite": "Siionin katedraalin sisätilat maalasi Grigori Gagarin 1850–1860, ja osa keskiaikaisista freskoista katosi.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Tbilisi"
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "Metekhi church overlooking the Kura River. View from the south-west. Tbilisi, Georgia. December 2023.jpg",
+     "lyhyt": "Metekhin kirkko seisoo kalliolla Kuran yllä.",
+     "selite": "Metekhin kirkko seisoo Kuran yllä kohoavalla kalliolla, ja siellä on myös Vakhtang I:n ratsastajapatsas.",
+     "lahde": "Kober, Wikimedia Commons (CC0)"
+    },
+    "kappale": "Tbilisin kansainväliselle lentoasemalle on keskustaan noin 18 kilometriä, ja kaupunkiin pääsee bussilla tai taksilla. Keskustan kukkuloille nousee funikulaari Mtatsmindaan ja gondolihissi Narikalan linnoitukselle. Metro on rakennettu Neuvostoliiton aikaan, ja asemat ovat runsaasti koristeltuja. Vanhassa kaupungissa kannattaa kävellä, sillä kirkot, kylpylät ja linnoitus ovat lähellä toisiaan. Pöydässä odottavat khachapuri ja khinkali, ja ruokailu on usein yhteinen juhla.",
+    "artikkeli": {
+     "nimi": "Matkailijan Tbilisi",
+     "taitto": "opas",
+     "teksti": "Kaupunki, jossa kuumat lähteet, puuparvekkeet ja vuorten rinteet kohtaavat Kura-joen rannalla.",
+     "nosto": "Tbilisin voi kiertää jalan, funikulaarilla ja gondolilla. Nimi tarkoittaa lämmintä paikkaa, ja lämpimän lähteen äärelle kannattaa pysähtyä.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Shota Rustaveli Tbilisin kansainvälinen lentoasema (TBS) on noin 18 kilometriä kaakkoon keskustasta, ja vuonna 2022 siellä kävi 2,99 miljoonaa matkustajaa. Metro aloitettiin 1952 ja valmistui 1966; siinä on kaksi linjaa ja 23 asemaa, joista kaksi on maan päällä. Asemat on koristeltu Neuvostoliiton tyyliin runsaasti, ja kyltit ovat georgiaksi ja englanniksi. Raitiotie suljettiin 2006, mutta keskusta on osin kävelykelpoinen. Kukkuloille pääsee funikulaarilla Mtatsmindaan ja gondolihissillä Rike-puistosta Narikalaan.",
+       "kuva": {
+        "tiedosto": "Tbilisi Peace Bridge and Rike Park.jpg",
+        "selite": "Rike-puistosta Narikalan linnoitukselle kulkee gondolihissi vuodesta 2012.",
+        "lahde": "falco, Wikimedia Commons (CC0)"
+       }
+      },
+      {
+       "otsikko": "Vanha kaupunki kävellen",
+       "teksti": "Vanhan kaupungin kujilla on vanhoja parvekkeita, kirkkoja, moskeija ja kylpylöitä. Narikalan linnoitus, Metekhin kirkko, Siionin katedraali ja Anchiskhatin basilika ovat kävelymatkan päässä toisistaan. Abanotubanin rikkikylpylät tunnistaa pienistä maanpinnan kupoleista, ja puutarhan ja kylpylöiden välillä kulkevan reitin varrella on turkkilainen sunnimoskeija. Vapaudenaukio on Rustaveli-kadun itäpää, ja sen pohjoispuolella on matkailutoimisto. Vanha kaupunki ei ole nykyään virallinen hallintoalue.",
+       "kuva": {
+        "tiedosto": "Aerial tramway – Tbilisi – 02.jpg",
+        "selite": "Gondolihissin yläasema on Narikalan muurin vieressä, ja lähteen mukaan hissi avattiin 2012.",
+        "lahde": "Maesi64, Wikimedia Commons (CC0)"
+       }
+      },
+      {
+       "otsikko": "Kukkuloille ja puistoihin",
+       "teksti": "Kansallinen kasvitieteellinen puutarha on lähteen mukaan 161 hehtaarin laajuinen, ja sen pääsisäänkäynti on Narikalan linnoituksen juurella. Kävely- ja pyöräreitit avattiin 2018. Funikulaari on kulkenut 1905, ja se avattiin uudelleen 2012; se nousee noin 300 metriä Mtatsmindaan, jossa on huvipuisto ja kirjailijoiden panteoni. Kilpikonnajärvelle kulkee köysirata Vaken puistosta, ja se avattiin 1965 ja uudelleen 2016. Tbilisin tekoallas kaupungin pohjoispuolella on valmistunut 1953.",
+       "kuva": {
+        "tiedosto": "Funicular of Tbilisi 2014.JPG",
+        "selite": "Funikulaari avattiin 1905, ja se nousee noin 300 metriä Mtatsmindan rinteelle.",
+        "lahde": "Kober, Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Georgialainen ateria on usein supra, yhteinen juhla-ateria, jota johtaa maljanpuhuja eli tamada. Khachapuri on juustoleipä, jota kutsutaan Georgian kansalliseksi ruoaksi; Adjarian-versio on venemäinen, ja sen päälle tulee juustoa, voita ja munankeltuainen. Khinkali on taikinapussi, jossa on liha- tai kasvistäyte; sitä syödään käsin, ja ensimmäisellä puraisulla imetään liemi. Georgia on lähteen mukaan maailman vanhin viinintuottaja-alue, ja perinne on vähintään 8 000 vuoden ikäinen.",
+       "kuva": {
+        "tiedosto": "Old Tbilisi, Georgian khachapuri, Georgia.jpg",
+        "selite": "Khachapuri on juustoleipä, jota kutsutaan Georgian kansalliseksi ruoaksi.",
+        "lahde": "Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)"
+       }
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Lehdellä ei ole omaa säädataa, joten nämä luvut ovat Wikipedian Tbilisi-artikkelin ilmasto-osiosta (1991–2020). Ilmasto on kostea lauhkea, ja siinä on mannerilmaston ja puolikuivan ilmaston piirteitä. Vuoden keskilämpö on 13,8 °C; tammikuu on kylmin 2,7 °C:n keskilämmöllä ja heinä–elokuu lämpimin, noin 25 °C. Päivän ylin lämpötila on vähintään 32 °C keskimäärin 22 päivänä vuodessa. Vuosisade on 632–673 millimetriä, tammikuu on kuivin ja touko–kesäkuu sateisimmat, noin 83–84 millimetriä. Lunta on 15–25 päivänä vuodessa. Vuoret pitävät pilviä kaupungin yllä keväisin ja syksyisin, ja silloin sade- ja pilvijaksot voivat venyä pitkiksi."
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Kävely Vanhassa kaupungissa",
+        "tahdet": 3,
+        "selite": "Kujilla on vanhoja parvekkeita, kirkkoja ja kylpylöitä."
+       },
+       {
+        "mita": "Narikalan linnoitus",
+        "tahdet": 3,
+        "selite": "Muinainen linnoitus kohoaa jyrkällä kukkulalla kaupungin ja Kuran yllä."
+       },
+       {
+        "mita": "Kansallinen kasvitieteellinen puutarha",
+        "tahdet": 2,
+        "selite": "Lähteen mukaan 161 hehtaarin puutarha Narikalan juurella."
+       },
+       {
+        "mita": "Abanotubanin rikkikylpylät",
+        "tahdet": 2,
+        "selite": "Kuumien lähteiden kylpyläkaupunginosa, jonka nimi tarkoittaa kylpylän aluetta."
+       },
+       {
+        "mita": "Funikulaari Mtatsmindaan",
+        "tahdet": 2,
+        "selite": "Vuonna 1905 avattu rata nousee noin 300 metriä."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Kyltit eivät ole aina kaksikielisiä",
+        "teksti": "Metrossa kyltit ovat georgiaksi ja englanniksi, mutta bussien kyltit ovat usein vain georgiaksi."
+       },
+       {
+        "otsikko": "Yksi kortti riittää",
+        "teksti": "Metromoney-kortti hoitaa useimmat julkiset kulkuneuvot."
+       },
+       {
+        "otsikko": "Sovi taksin hinta etukäteen",
+        "teksti": "Lentokentältä kannattaa sopia taksin hinta ennen kyytiä tai käyttää sovellustaksia."
+       },
+       {
+        "otsikko": "Kielet ja hätänumero",
+        "teksti": "Kaupungissa puhutaan georgiaa ja venäjää, ja jonkin verran englantia. Poliisin ja hätäkeskuksen numero on 112."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "kirjallisuus",
+   "nimi": "Runoilijoiden kaupunki",
+   "johdanto": "Tbilisin pääkatu on nimetty keskiaikaisen runoilijan mukaan, ja kaupungin kukkulalla lepäävät maan kirjailijat. Sanat ovat täällä kuuluneet jopa morsiamen myötäjäisiin.",
+   "tehtava": {
+    "kysymys": "Minä vuonna Pantterinnahkaan pukeutunut ritari painettiin ensimmäisen kerran?",
+    "vaihtoehdot": [
+     "1712",
+     "1612",
+     "1812",
+     "1912"
+    ],
+    "oikea": 0,
+    "fakta": "Runo painettiin ensimmäisen kerran Tbilisissä, vaikka Rustaveli kirjoitti sen todennäköisesti yli viisi vuosisataa aiemmin."
+   },
+   "nostot": [
+    {
+     "otsikko": "Pantterinnahkaan pukeutunut ritari",
+     "teksti": "Shota Rustaveli eli noin vuodesta 1160 1220-luvun jälkeen ja oli georgialaisen kultakauden johtava runoilija. Hänen runoelmansa Vepkhistqaosani, suomeksi Pantterinnahkaan pukeutunut ritari, on yli 1 600 nelisäkeen eepos ja Georgian kansalliseepos. Tapahtumat sijoittuvat kuvitteellisiin Intiaan ja Arabiaan, ja kertomus on värikäs allegoria kuningatar Tamarin ajasta. Juonen keskellä ovat ystävät Avtandil ja Tariel sekä heidän etsintänsä Nestan-Darejanille. Nimen eläin on epävarma: tiikeri, pantteri tai leopardi, mutta nykytutkimus kallistuu pantteriin. Tbilisin pääkatu, teatteri, metroasema ja lentoasema on nimetty hänen mukaansa.",
+     "tiedosto": "Shota Rustaveli Monument (Tbilisi).jpg",
+     "selite": "Shota Rustaveli oli keskiaikainen runoilija, jonka mukaan Tbilisin pääkatu on nimetty.",
+     "lahde": "Ephraim Stillberg, Wikimedia Commons (PD)",
+     "wiki": "The Knight in the Panther's Skin"
+    },
+    {
+     "otsikko": "Kirja morsiamen myötäjäisissä",
+     "teksti": "Runo painettiin ensimmäisen kerran 1712 Tbilisissä. Rustaveli kirjoitti sen todennäköisesti 1205–1207, vaikka vaihtoehtona on esitetty aikaa 1180-luvulta 1200-luvun ensimmäiselle vuosikymmenelle. 1900-luvun alkuun asti runon kappale kuului jokaisen morsiamen myötäjäisiin. Kaksi 1500-luvun foliota ja joitain 1300-luvun säkeitä säilytetään Georgian käsikirjoituskeskuksessa Tbilisissä; kaikki muut tunnetut kopiot ovat 1600-luvulta. Unkarilainen taidemaalari Mihály Zichy kuvitti runon 1800-luvulla, ja Tbilisissä on hänelle veistos ja katu.",
+     "tiedosto": "Zichy, Mihály. Illustrations to 'The Knight in the Panther's Skin'. 1888 01.jpg",
+     "lyhyt": "Mihály Zichy kuvitti Rustavelin runon 1800-luvulla.",
+     "selite": "Mihály Zichy kuvitti Rustavelin runon 1800-luvulla, ja kuvitukset ovat hänen tunnetuimpia töitään.",
+     "lahde": "Mihály Zichy, Wikimedia Commons (PD)",
+     "wiki": "The Knight in the Panther's Skin"
+    },
+    {
+     "otsikko": "Mtatsmindan kirjailijoiden panteoni",
+     "teksti": "Mtatsmindan panteoni on kirjailijoiden ja yhteiskunnallisten vaikuttajien hautausmaa Mamadaviti-kirkon pihalla Mtatsmindan rinteellä. Se perustettiin virallisesti 1929 venäläisen kirjailijan Aleksandr Gribojedovin kuoleman satavuotismuistoksi. Gribojedov (1795–1829) ja hänen georgialainen vaimonsa Nino Chavchavadze (1812–1857) olivat ensimmäisiä haudattuja. Aiempia yrityksiä olivat Kukian panteoni noin 1900 ja Diduben panteoni 1915. Nikoloz Baratashvili ja Vazha-Pshavela siirrettiin Didubesta Mtatsmindaan 1934, ja myös Ilia Chavchavadze on haudattu panteoniin.",
+     "tiedosto": "Panteón de Mtatsminda, Tiflis, Georgia, 2016-09-29, DD 18.jpg",
+     "selite": "Mtatsmindan panteoni sijaitsee Mamadaviti-kirkon pihalla ja on perustettu virallisesti 1929.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Mtatsminda Pantheon"
+    },
+    {
+     "otsikko": "Kirjailijoiden talo",
+     "teksti": "Kirjailijoiden talo seisoo Sololakissa Ivane Machabelin kadulla 13. Yrittäjä David Sarajishvili rakennutti sen 1903–1905 arkkitehti Karl Zaarin suunnitelmien mukaan, ja tyyli yhdistää jugendia ja uusbarokkia. Terassin mosaiikki on Villeroy & Bochin laatoista. 1920-luvun alussa talossa kokoontui kirjailijaryhmä Siniset sarvet. Vuodesta 2008 talo on ollut omistettu kirjallisuudelle, ja 2017 siellä aloitettiin kirjailijaresidenssi. Tbilisi oli UNESCOn maailman kirjapääkaupunki 2021, ja kesäpuutarhassa toimii ravintola.",
+     "tiedosto": "Writer's House of Georgia.jpg",
+     "lyhyt": "Kirjailijoiden talo valmistui 1903–1905 jugendin ja uusbarokin tyylillä.",
+     "selite": "Kirjailijoiden talo valmistui 1903–1905 David Sarajishvilin rakennuttamana jugendin ja uusbarokin sekoituksena.",
+     "lahde": "Hundnase, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Writers' House of Georgia"
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Tbilisin historiallinen ydin levittyy Kuran rannoille Narikalan rinteestä Vapaudenaukiolle. Kohteet kertovat kaupungin kerroksista keskiajan linnoituksesta ja kylpylöistä 1800-luvun aukioon ja puutarhaan.",
+  "rajat": {
+   "pohjoinen": 41.6983,
+   "etela": 41.6834,
+   "lansi": 44.798,
+   "ita": 44.8147
+  },
+  "kohteet": [
+   {
+    "nimi": "Narikalan linnoitus",
+    "lat": 41.68778,
+    "lon": 44.80861
+   },
+   {
+    "nimi": "Metekhin kirkko",
+    "lat": 41.69,
+    "lon": 44.81111
+   },
+   {
+    "nimi": "Abanotubanin rikkikylpylät",
+    "lat": 41.68778,
+    "lon": 44.81111
+   },
+   {
+    "nimi": "Siionin katedraali",
+    "lat": 41.6914,
+    "lon": 44.8075
+   },
+   {
+    "nimi": "Anchiskhatin basilika",
+    "lat": 41.69556,
+    "lon": 44.80694
+   },
+   {
+    "nimi": "Vapaudenaukio",
+    "tyyppi": "aukio",
+    "lat": 41.69333,
+    "lon": 44.80167
+   },
+   {
+    "nimi": "Kansallinen kasvitieteellinen puutarha",
+    "tyyppi": "luonto",
+    "lat": 41.68611,
+    "lon": 44.8075
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Narikalan linnoitus": {
+   "aika": "300-luvulta; nykyiset muurit 1500–1600-luvuilta",
+   "teksti": "Narikala on muinainen linnoitus Tbilisin ja Kuran yllä, jyrkällä kukkulalla rikkikylpylöiden ja kasvitieteellisen puutarhan välissä. Ensimmäinen kirjallinen maininta on 300-luvun toiselta puoliskolta kuningas Varaz-Bakurin ajalta, ja legendan mukaan linnoituksen rakensi kuningas Vakhtang I Gorgasali. Umayyadit laajensivat sitä 600-luvulla, ja kuningas Davit Rakentaja (1089–1125) rakennutti sitä edelleen. Mongolit antoivat sille nimen Narin Qala, pieni linnoitus.\n\nNykyiset linnoitteet ovat pääosin 1500–1600-luvuilta. Muurien ympäröimässä linnoituksessa on kaksi osaa, ja alapihalla on Pyhän Nikolauksen kirkko, joka rakennettiin 1996–1997 tulipalossa tuhoutuneen 1200-luvun kirkon tilalle.\n\nMaanjäristys vaurioitti osia linnoituksesta 1827, ja vaurioituneet osat purettiin. Isoisän matkavuonna 1873 linnoitus oli siis lähteen mukaan jo osin rauniona. Vuodesta 2012 sinne on noussut gondolihissi Rike-puistosta.",
+   "kuvat": [
+    {
+     "tiedosto": "2014 Tbilisi, Ruiny twierdzy Narikala (02).jpg",
+     "selite": "Narikalan linnoituksen muurit ovat pääosin 1500–1600-luvuilta.",
+     "lahde": "Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Metekhin kirkko": {
+   "aika": "noin 1278–1284",
+   "teksti": "Metekhin kirkko on Neitsyt Marian kuolonuneen kirkko, jonka kuningas Demetrios II rakennutti noin 1278–1284. Se seisoo kalliolla Kuran yllä, ja nimi tarkoittaa palatsin ympäristöä; nimi on peräisin 1100-luvulta. Perinteen mukaan Vakhtang rakensi alueelle kirkon ja linnakkeen, mutta mikään niistä ei säilynyt mongolien hyökkäyksestä 1235. Nykyinen kirkko on tiilestä ja veistetystä kivestä, ja siinä on kolme ulkonevaa apsista ja neljä vapaata pilaria kupolin alla.\n\nKuningas Rostom (1633–1658) linnoitti alueen, ja Venäjän vallan aikana kirkko oli kasarmina. Linnake purettiin 1819 ja tilalle rakennettiin vankila, joka suljettiin vasta 1938. Isoisän matkavuonna 1873 paikalla siis toimi vankila.\n\nKirkko palautettiin patriarkaatille ja otettiin käyttöön 1988. Vakhtang I Gorgaslanin ratsastajapatsas pystytettiin 1961, ja Kuran yli vievä betonisilta valmistui 1951 kahden vanhan sillan paikalle.",
+   "kuvat": [
+    {
+     "tiedosto": "2014 Tbilisi, Cerkiew Metechi (02).jpg",
+     "selite": "Metekhin kirkon edessä on Vakhtang I Gorgaslanin ratsastajapatsas, joka pystytettiin 1961.",
+     "lahde": "Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Abanotubanin rikkikylpylät": {
+   "aika": "1200-luvulta",
+   "teksti": "Abanotubani on kylpyläkaupunginosa Mtkvarin itärannalla Narikalan juurella, Metekhin vastapäätä. Nimi tarkoittaa kirjaimellisesti kylpylän aluetta. Legendan mukaan juuri tähän kuninkaan haukka putosi, ja kuumat lähteet johtivat uuden pääkaupungin perustamiseen. Kaupungin nimikin tulee lämpimistä, rikkipitoisista lähteistä.\n\nKylpylät ovat kaupungin vanhimpia tunnettuja paikkoja: 1200-luvun loppuun mennessä Tbilisissä oli kirjattu 65 kylpylää, ja ne olivat muslimiasukkaille ilmaisia. Alueen tunnistaa pienistä kupoleista, jotka kohoavat maanpinnalta. Isoisän matkavuonna 1873 kylpylöillä oli siis takanaan vuosisatojen historia.\n\nAlueen vieressä on turkkilainen sunnimoskeija. Abanotubani kuuluu hallinnollisesti Krtsanisin piiriin.",
+   "kuvat": [
+    {
+     "tiedosto": "2014 Tbilisi, Łaźnie siarkowe w Abanotubani (01).jpg",
+     "selite": "Abanotubanin kylpylät sijaitsevat Narikalan juurella, ja kaupungin nimi tulee lähteistä.",
+     "lahde": "Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Siionin katedraali": {
+   "aika": "500–600-luvuilta; uudelleenrakennettu 1112",
+   "teksti": "Siionin katedraali on Georgian kirkon Neitsyt Marian kuolonuneen katedraali Sionin kadulla. Nimi tulee Siionin vuoresta Jerusalemissa. Alkuperäinen kirkko rakennettiin lähteen mukaan 500–600-luvuilla, ja perinteen mukaan Vakhtang aloitti rakentamisen jo 400-luvulla. Kuningas Davit Rakentaja rakennutti kirkon uudelleen 1112, ja nykyisen rakenteen peruselementit ovat tältä ajalta.\n\nKatedraali on kärsinyt vaurioita monta kertaa: 1226, 1386, 1522, 1600-luvulla, maanjäristyksessä 1668 ja 1795. Kellotorni on vuodelta 1425, ja se palautettiin 1939. Keltainen tuffi on tuotu Bolnisista, ja alttarin vasemmalla puolella on viiniköynnösristi, joka muistuttaa Pyhän Ninon rististä.\n\nIsoisän matkavuonna 1873 katedraalin sisäasu oli jo muuttunut: Grigori Gagarin maalasi seinämaalausten sarjan ja suunnitteli kivisen ikonostaasin 1850–1860, ja osa keskiaikaisista freskoista katosi. Katedraali oli maan pääkatedraali ja katolikos-patriarkan istuin, kunnes Pyhän Kolminaisuuden katedraali vihittiin 2004.",
+   "kuvat": [
+    {
+     "tiedosto": "Sioni Cathedral, Tbilisi. Western façade with the main entrance.jpg",
+     "selite": "Siionin katedraalin nykyisen rakenteen peruselementit ovat vuodelta 1112.",
+     "lahde": "Kober, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Anchiskhatin basilika": {
+   "aika": "500-luvulta",
+   "teksti": "Anchiskhatin basilika on lähteen mukaan Tbilisin vanhin säilynyt kirkko, ja se on peräisin 500-luvulta. Kronikoiden mukaan sen rakennutti kuningas Dachi. Kirkko on kolmilaivainen basilika, jonka konkat ovat hevosenkengän muotoisia, ja se rakennettiin alun perin keltaisesta tuffikivestä.\n\nNimi Anchiskhati tarkoittaa Anchan ikonia. Se otettiin käyttöön vuonna 1675, kun Beka Opizarin 1100-luvulla tekemä Vapahtajan ikoni tuotiin Klarjetin Anchan luostarista Tbilisiin ottomaanien uhkaa pakoon. Ikoni on nykyään Georgian taidemuseossa. Tiilinen kellotorni on peräisin samalta vuodelta katolikos Domentin ajalta.\n\nKirkon ulkoasu muuttui rajusti 1870-luvulla, kun siihen lisättiin kupoli, joten isoisän matkavuonna 1873 se oli keskellä muutosta. Neuvostoaikana jumalanpalvelukset keskeytettiin ja kirkko oli käsityömuseo ja taidestudio; entisöinti 1958–1964 palautti 1600-luvun ilmeen, ja uskonnollinen käyttö palasi 1991.",
+   "kuvat": [
+    {
+     "tiedosto": "Anchiskhati Basilica of Saint Mary 1.jpg",
+     "selite": "Anchiskhatin basilika on lähteen mukaan Tbilisin vanhin säilynyt kirkko.",
+     "lahde": "Kakhi Kuloshvili, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Vapaudenaukio": {
+   "aika": "1800-luvulta",
+   "teksti": "Vapaudenaukio on aukio keskustassa Rustaveli-kadun itäpäässä. Kuusi katua haarautuu siltä: Rustaveli, Pushkin, Kote Apkhazi, Shalva Dadiani, Galaktion Tabidze ja Giorgi Leonidze. Aukion pohjoispuolella on pieni puistikko suihkulähteineen ja Pushkinin rintakuva, ja Tbilisin kaupunginvaltuusto toimii aukiolla.\n\nAukion nimi on vaihdellut. Venäjän vallan aikana, siis myös isoisän matkavuonna 1873, se oli Eriwanin aukio. Nimi tuli kenraali Ivan Paskevichin mukaan, joka sai kreivin arvon Erivanin valtauksesta. Vuonna 1918 aukio sai nimekseen Vapaudenaukio, ja Neuvostoaikana sitä kutsuttiin Berian ja Leninin aukioksi.\n\nVuonna 2006 aukiolle paljastettiin Vapauden muistomerkki, jossa Pyhä Yrjö surmaa lohikäärmettä. Sen on tehnyt kuvanveistäjä Zurab Tsereteli.",
+   "kuvat": [
+    {
+     "tiedosto": "Freedom Square, Tbilisi (50497944841).jpg",
+     "selite": "Vapaudenaukiolta haarautuu kuusi katua, ja aukion nimi on vaihtunut useita kertoja.",
+     "lahde": "Andrew Milligan sumo, Wikimedia Commons (CC BY 2.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Kansallinen kasvitieteellinen puutarha": {
+   "aika": "1600-luvulta; virallisesti 1845",
+   "teksti": "Kansallinen kasvitieteellinen puutarha sijaitsee Tsavkisis-Tskalin rotkossa Sololakin vuoriston etelärinteillä. Lähteen mukaan sen pinta-ala on 161 hehtaaria. Jean Chardin kuvasi alueen 1671 kuninkaallisina puutarhoina, ja puutarha on ehkä perustettu 1625. Tournefort 1701 ja prinssi Vakhushtin kartta 1735 mainitsevat sen.\n\nPersian hyökkäyksessä 1795 puutarha ryöstettiin, mutta se elvytettiin 1800-luvun alussa ja perustettiin virallisesti 1845. Isoisän matkavuonna 1873 puutarha oli siis ollut virallisesti perustettu jo lähes kolme vuosikymmentä. Vuodesta 1888 se toimi kasvistokeskuksena, ja 1896–1904 sitä laajennettiin länteen.\n\nEntisen muslimihautausmaan alue liitettiin puutarhaan 1932–1958; säilyneiden hautojen joukossa on azerbaidžanilaisen kirjailijan Mirza Fatali Akhundovin (1812–1878) hauta. Pääsisäänkäynti on Narikalan linnoituksen juurella, ja kävely- ja pyöräreitit valmistuivat 2018.",
+   "kuvat": [
+    {
+     "tiedosto": "Waterfall on the Tsavkisistsqali river in the National Botanical Gardens, Tbilisi.jpg",
+     "lyhyt": "Puutarha sijaitsee Tsavkisis-Tskalin rotkossa.",
+     "selite": "Puutarha sijaitsee Tsavkisis-Tskalin rotkossa, ja Chardin kuvasi sen 1671 kuninkaallisina puutarhoina.",
+     "lahde": "Alf Altendorf, Wikimedia Commons (CC BY-SA 2.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": null,
+ "ehdotukset": {
+  "lentoasema": "Shota Rustaveli Tbilisin kansainvälinen lentoasema (TBS)",
+  "huomiot": [
+   "Säädataa ei ole: saatiedot null, oppaan sääjakso perustuu en-Wikipedian Tbilisi-artikkelin ilmasto-osioon (1991-2020).",
+   "um.fi:n matkustustiedote ei ollut luettavissa (403): tarkistettava ennen julkaisua.",
+   "Valokuvalla ei ole nykykuvaparia (uusi) eikä lehdellä ennen-nyt-paria: kuvat.md:ssä ei valittuna sopivaa nykykuvaa.",
+   "Lehden oppaan Rike-puisto-kuva (Tbilisi Peace Bridge and Rike Park) kuvaa Rike-puistoa ja Rauhan siltaa; tekstissä käytetty vain gondolihissi-fakta."
+  ]
+ }
+}
