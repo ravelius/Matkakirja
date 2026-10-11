@@ -1,0 +1,10 @@
+{
+ "lat": 9.06,
+ "lon": 7.49,
+ "keskilampo": [26.9,29.3,30.7,30,28.1,26.6,25.7,25.2,25.7,26.5,26.9,26.3],
+ "ylin": [35,37,37,36,33,31,30,29,30,31,34,35],
+ "alin": [19,22,24,24,23,22,22,22,22,22,20,18],
+ "sade": [1,6,22,73,157,194,250,308,229,170,10,1],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Abuja","revisio":1376903060,"taulukko":"Climate data for Abuja, Nigeria (1991-2020)","lahteet":"Source 1: NOAA | Source 2: Weather.Directory","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":1421,"luettu":"2026-10-11","huomiot":[]}
+}

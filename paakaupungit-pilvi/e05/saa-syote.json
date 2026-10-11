@@ -3,60 +3,70 @@
   "id": "bamako",
   "lat": 12.65,
   "lon": -7.99,
-  "wikidata": "Q3703"
+  "wikidata": "Q3703",
+  "artikkeli": "Bamako"
  },
  {
   "id": "ouagadougou",
   "lat": 12.37,
   "lon": -1.53,
-  "wikidata": "Q3777"
+  "wikidata": "Q3777",
+  "artikkeli": "Ouagadougou"
  },
  {
   "id": "niamey",
   "lat": 13.52,
   "lon": 2.12,
-  "wikidata": "Q3674"
+  "wikidata": "Q3674",
+  "artikkeli": "Niamey"
  },
  {
   "id": "yamoussoukro",
   "lat": 6.82,
   "lon": -5.27,
-  "wikidata": "Q3768"
+  "wikidata": "Q3768",
+  "artikkeli": "Yamoussoukro"
  },
  {
   "id": "accra",
   "lat": 5.56,
   "lon": -0.2,
-  "wikidata": "Q3761"
+  "wikidata": "Q3761",
+  "artikkeli": "Accra"
  },
  {
   "id": "lome",
   "lat": 6.13,
   "lon": 1.22,
-  "wikidata": "Q3792"
+  "wikidata": "Q3792",
+  "artikkeli": "Lomé"
  },
  {
   "id": "portonovo",
   "lat": 6.48,
   "lon": 2.62,
-  "wikidata": "Q3799"
+  "wikidata": "Q3799",
+  "artikkeli": "Porto-Novo"
  },
  {
   "id": "abuja",
   "lat": 9.06,
   "lon": 7.49,
-  "wikidata": "Q3787"
+  "wikidata": "Q3787",
+  "artikkeli": "Abuja"
  },
  {
   "id": "ndjamena",
   "lat": 12.11,
   "lon": 15.05,
-  "wikidata": "Q3659"
+  "wikidata": "Q3659",
+  "artikkeli": "N'Djamena"
  },
  {
   "id": "yaounde",
   "lat": 3.86,
   "lon": 11.52,
-  "wikidata": "Q3808"
+  "wikidata": "Q3808",
+  "artikkeli": "Yaoundé"
  }
 ]

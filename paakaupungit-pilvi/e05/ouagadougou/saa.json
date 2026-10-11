@@ -1,0 +1,10 @@
+{
+ "lat": 12.37,
+ "lon": -1.53,
+ "keskilampo": [25,28.1,31.7,33.5,32.5,30.1,27.8,26.8,27.7,29.6,28.3,25.7],
+ "ylin": [34,37,39,40,38,36,33,32,33,36,37,34],
+ "alin": [17,20,24,27,27,25,23,23,23,24,20,18],
+ "sade": [0,0,5,44,70,83,202,232,143,32,7,0],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Ouagadougou","revisio":1378478303,"taulukko":"Climate data for Ouagadougou (1991–2020, extremes 1902–present)","lahteet":"Source 1: World Meteorological Organization, Meteo Climat (record highs and lows) | Source 2: Deutscher Wetterdienst (humidity, 1961–1967)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":818,"luettu":"2026-10-11","huomiot":[]}
+}

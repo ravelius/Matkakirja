@@ -1,0 +1,10 @@
+{
+ "lat": 13.52,
+ "lon": 2.12,
+ "keskilampo": [24.6,27.8,31.9,34.7,34.5,32.2,29.5,28.1,29.6,31.5,29,25.5],
+ "ylin": [32,36,40,42,41,38,35,33,35,38,37,34],
+ "alin": [17,20,24,28,28,27,24,23,24,25,21,17],
+ "sade": [0,0,0,10,25,79,146,193,85,17,0,0],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Niamey","revisio":1378113383,"taulukko":"Climate data for Niamey Airport (1991–2020, extremes 1961–present)","lahteet":"Source 1: NOAA NCEI / World Meteorological Organization (1991–2020 WMO Region I Africa Normals) | Source 2: Deutscher Wetterdienst (humidity 1961–1990)","keskilampo":"Daily mean °C (°F)","sade":"Average rainfall mm (inches)","vuosisade":555,"luettu":"2026-10-11","huomiot":["sade = vain vesisade (Average rainfall)"]}
+}

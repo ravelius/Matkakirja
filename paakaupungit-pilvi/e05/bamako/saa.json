@@ -1,0 +1,10 @@
+{
+ "lat": 12.65,
+ "lon": -7.99,
+ "keskilampo": [24.9,27.9,30.6,32.3,31.6,29.1,26.8,26.1,26.7,27.8,26.7,25.1],
+ "ylin": [33,36,38,40,38,35,32,31,32,35,35,33],
+ "alin": [17,20,23,25,25,23,22,22,22,21,18,17],
+ "sade": [2,1,4,18,71,130,227,264,176,53,2,0],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Bamako","revisio":1379116869,"taulukko":"Climate data for Bamako (1991–2020, extremes 1949–present)","lahteet":"Source 1: NOAA (sun, 1961–1990), World Meteorological Organization | Source 2: Deutscher Wetterdienst (extremes and humidity), Extreme Temperature Around The World","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":948,"luettu":"2026-10-11","huomiot":[]}
+}

@@ -1,0 +1,10 @@
+{
+ "lat": 3.86,
+ "lon": 11.52,
+ "keskilampo": [24.8,25.8,25.5,25,24.8,23.9,23.1,23.2,23.7,24,24.5,24.6],
+ "ylin": [31,32,31,30,30,29,27,27,28,29,30,30],
+ "alin": [19,20,20,20,20,19,19,19,19,19,19,19],
+ "sade": [21,47,125,171,199,143,60,78,235,294,108,27],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Yaoundé","revisio":1379272705,"taulukko":"Climate data for Yaoundé (1991-2020), extremes 1913-present","lahteet":"Source 1: World Meteorological Organization NOAA (sun 1961–1990) | Source 2: BBC Weather","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":1508,"luettu":"2026-10-11","huomiot":[]}
+}
