@@ -1,0 +1,10 @@
+{
+ "lat": 34.02,
+ "lon": -6.84,
+ "keskilampo": [12.3,13,14.8,16,18.5,20.8,22.6,23.1,21.7,19.6,15.9,13.7],
+ "ylin": [17,18,20,21,24,26,27,28,27,25,21,19],
+ "alin": [7,8,10,11,13,16,18,18,17,14,11,9],
+ "sade": [81,61,63,42,18,4,0,1,14,55,94,90],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Rabat","revisio":1379365345,"taulukko":"Climate data for Rabat (Rabat–Salé Airport) 1991–2020, extremes 1943–present","lahteet":"Source 1: NOAA (sun 1961–1990) | Source 2: Deutscher Wetterdienst (humidity 1973–1993, record highs and lows), Meteo Climat (record highs and lows) Infoclimat","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":523,"luettu":"2026-10-11","huomiot":[]}
+}

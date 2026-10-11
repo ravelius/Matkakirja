@@ -1,0 +1,10 @@
+{
+ "lat": 14.92,
+ "lon": -23.51,
+ "keskilampo": [23.2,23.2,23.8,24.2,24.8,25.7,26.4,27.4,27.6,27.5,26.3,24.4],
+ "ylin": [27,27,28,28,29,30,30,31,31,31,30,28],
+ "alin": [20,20,20,20,21,22,23,24,24,24,23,21],
+ "sade": [1,0,0,0,0,0,6,55,75,27,4,8],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Praia","revisio":1377102448,"taulukko":"Climate data for Praia (Nelson Mandela International Airport) 1991–2020","lahteet":"Source 1: NOAA, Instituto Nacional de Meteorologia e Geofísica (humidity 1981-2010) | Source 2: Deutscher Wetterdienst (extremes, sun)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":176,"luettu":"2026-10-11","huomiot":[]}
+}

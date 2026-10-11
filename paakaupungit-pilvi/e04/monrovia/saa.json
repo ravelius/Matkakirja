@@ -1,0 +1,10 @@
+{
+ "lat": 6.31,
+ "lon": -10.8,
+ "keskilampo": [26.9,27.5,27.9,27.5,26.9,26.1,25.3,25,25.5,26.4,26.7,27],
+ "ylin": [31,32,32,31,30,29,28,27,28,29,30,31],
+ "alin": [23,23,24,24,24,23,23,23,23,23,23,23],
+ "sade": [25,48,97,160,417,818,696,561,914,587,191,48],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Monrovia","revisio":1379469768,"taulukko":"Climate data for Roberts International Airport, 37 miles (60 km) east of Monrovia, Liberia (1991-2020)","lahteet":"Source 1: Deutscher Wetterdienst (average temperature and extremes only) | Source 2: Danish Meteorological Institute","keskilampo":"Daily mean °F (°C)","sade":"Average rainfall inches (mm)","vuosisade":4562,"luettu":"2026-10-11","huomiot":["sade = vain vesisade (Average rainfall)"]}
+}

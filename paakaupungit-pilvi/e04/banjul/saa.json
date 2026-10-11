@@ -1,0 +1,10 @@
+{
+ "lat": 13.45,
+ "lon": -16.58,
+ "keskilampo": [25.3,25.9,26.3,26.1,26.5,27.5,27.7,27.7,27.9,28.9,28.4,26.6],
+ "ylin": [33,33,33,32,32,32,32,32,32,34,34,33],
+ "alin": [18,19,20,20,21,23,24,24,24,24,23,20],
+ "sade": [1,1,0,0,3,55,175,354,244,76,1,0],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Banjul","revisio":1377725086,"taulukko":"Climate data for Banjul (1991-2020)","lahteet":"Source 1: World Meteorological Organization | Source 2: Deutscher Wetterdienst (humidity and sun)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":910,"luettu":"2026-10-11","huomiot":[]}
+}
