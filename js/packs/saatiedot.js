@@ -5063,4 +5063,88 @@ export const SAATIEDOT = {
     },
     luonnehdinta: 'Tammikuu on kylmin kuukausi, keskilämpö 1,4 astetta, ja heinäkuu lämpimin, 19,4 astetta. Sadetta kertyy joka kuukausi, eniten elokuussa (144 mm) ja vähiten helmikuussa (34 mm), ja vuodessa sitä tulee noin 940 millimetriä.',
   },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e03, 7 kaupunkia):
+   * Säärivit sääaseman normaaleista (tyokalu.mjs saa; asema ja kausi lahde-kentässä). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03-pilvi.
+   * Ilmastotaulukon artikkeli ja luku-päivä: haaran <id>/saa.json tausta.
+   */
+  abudhabi: {
+    lat: 24.45,
+    lon: 54.38,
+    keskilampo: [19.1, 20.6, 23.4, 27.7, 31.8, 33.7, 35.5, 35.9, 33.3, 29.7, 25.2, 21.1],
+    ylin: [25, 27, 30, 35, 40, 41, 43, 43, 41, 37, 31, 27],
+    alin: [14, 16, 18, 21, 25, 27, 30, 30, 27, 24, 20, 16],
+    sade: [13, 8, 13, 5, 0, 0, 1, 0, 0, 0, 2, 8],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Abu Dhabissa tammikuun keskilämpötila on noin 19 °C ja elokuun noin 36 °C. Vuodessa sataa vain noin 50 millimetriä, eniten tammi- ja maaliskuussa noin 13 millimetriä kuussa; toukokuusta lokakuuhun sataa korkeintaan millimetrin kuussa.',
+  },
+  amman: {
+    lat: 31.95,
+    lon: 35.93,
+    keskilampo: [8.5, 9.4, 12.4, 17.1, 21.4, 24.6, 26.5, 26.6, 24.6, 21, 15, 10.2],
+    ylin: [13, 14, 18, 24, 28, 31, 33, 33, 31, 27, 20, 15],
+    alin: [4, 5, 8, 11, 15, 19, 21, 21, 19, 15, 10, 6],
+    sade: [61, 58, 31, 8, 3, 0, 0, 0, 0, 5, 21, 47],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1989–2018',
+    },
+    luonnehdinta: 'Ammanissa tammikuun keskilämpötila on noin 8,5 °C ja elokuun noin 27 °C. Vuodessa sataa noin 230 millimetriä, pääosin marraskuusta maaliskuuhun; sateisin on tammikuu noin 60 millimetrillä, ja kesäkuusta syyskuuhun ei sada käytännössä lainkaan.',
+  },
+  baku: {
+    lat: 40.37,
+    lon: 49.84,
+    keskilampo: [4.8, 4.7, 7.3, 11.9, 18, 23.2, 26.1, 26.5, 22, 16.7, 10.9, 6.6],
+    ylin: [7, 8, 11, 17, 23, 28, 31, 31, 26, 20, 13, 9],
+    alin: [3, 3, 5, 9, 15, 20, 23, 23, 19, 13, 8, 5],
+    sade: [32, 30, 18, 17, 15, 9, 4, 8, 29, 33, 44, 35],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Bakussa talvikuukausina keskilämpötila on noin 5 °C ja lämpimimpänä kuukautena, elokuussa, noin 27 °C. Vuodessa sataa noin 270 millimetriä; kuivin on heinäkuu alle 5 millimetrillä ja sateisin marraskuu noin 44 millimetrillä.',
+  },
+  jerevan: {
+    lat: 40.18,
+    lon: 44.51,
+    keskilampo: [-3.5, 0, 7, 12.9, 17.7, 23.1, 26.8, 26.7, 21.4, 14, 5.8, -0.8],
+    ylin: [2, 6, 14, 20, 25, 31, 35, 34, 29, 22, 13, 4],
+    alin: [-8, -5, 1, 6, 11, 15, 19, 19, 13, 7, 0, -5],
+    sade: [21, 21, 60, 56, 47, 24, 17, 10, 10, 51, 25, 21],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Jerevanissa tammikuun keskilämpötila on noin −3,5 °C ja heinäkuun noin 27 °C. Vuodessa sataa noin 360 millimetriä; sateisin kuukausi on maaliskuu noin 60 millimetrillä, ja kuivimmat ovat elo- ja syyskuu noin 10 millimetrillä.',
+  },
+  manama: {
+    lat: 26.22,
+    lon: 50.58,
+    keskilampo: [17.5, 18.4, 21.3, 26, 31.1, 34, 35.1, 35.1, 33.2, 29.9, 24.6, 19.7],
+    ylin: [21, 22, 26, 31, 36, 39, 40, 40, 38, 34, 28, 23],
+    alin: [15, 15, 18, 22, 27, 30, 31, 32, 30, 26, 22, 17],
+    sade: [18, 13, 15, 8, 8, 0, 0, 0, 0, 1, 17, 15],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Manamassa tammikuun keskilämpötila on noin 17,5 °C ja heinä- ja elokuun noin 35 °C. Vuodessa sataa noin 95 millimetriä, suurin osa marraskuusta maaliskuuhun, ja kesäkuusta syyskuuhun ei sada lainkaan.',
+  },
+  tbilisi: {
+    lat: 41.72,
+    lon: 44.83,
+    keskilampo: [2.7, 3.8, 7.9, 12.9, 17.8, 22.3, 25.3, 25.4, 20.4, 14.7, 7.9, 3.9],
+    ylin: [7, 8, 13, 19, 24, 29, 32, 32, 26, 20, 13, 8],
+    alin: [-1, 0, 4, 8, 13, 17, 20, 20, 16, 11, 5, 1],
+    sade: [16, 18, 29, 64, 83, 84, 42, 39, 35, 46, 34, 21],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Tbilisissä tammikuun keskilämpötila on noin 3 °C ja elokuun noin 25 °C. Vuodessa sataa noin 510 millimetriä; sateisimmat kuukaudet ovat touko- ja kesäkuu noin 85 millimetrillä kuussa, ja kuivin on tammikuu noin 16 millimetrillä.',
+  },
 };

@@ -141898,4 +141898,1789 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e03, 7 kaupunkia):
+   * Kaupunkilehti (kansi + teemasivut). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03-pilvi.
+   */
+  abudhabi: [
+    {
+      id: 'kaupunki',
+      nimi: 'Abu Dhabi',
+      johdanto: 'Abu Dhabi on saarikaupunki Persianlahdella, ja sen nimen selitetään tarkoittavan gasellin isää. Isoisän matkavuonna 1873 rannikolla oli asutus linnakkeineen ja helmenpyynti oli keskeinen elinkeino; moskeijat, sillat ja museot tulivat vasta myöhemmin.',
+      kansikuvat: [
+        {
+          tiedosto: 'Skyline of Abu Dhabi at sunset.jpg',
+          selite: 'Abu Dhabin länsiranta Persianlahden äärellä; rantakadun eteläpäässä on Emirates Palace -hotelli.',
+          lahde: 'Robert Haandrikman, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Abu Dhabi Skyline fron Corniche Rd.JPG',
+          selite: 'Corniche on usean kilometrin pituinen rantakatu Abu Dhabin länsirannalla.',
+          lahde: 'FritzDaCat, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Sheikh Zayed Grand Mosque @ Abu Dhabi (15856602738).jpg',
+          selite: 'Sheikh Zayedin suurmoskeija avattiin joulukuussa 2007 ja on lähteen mukaan maan suurin.',
+          lahde: 'Guilhem Vellut from Annecy, France, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Gasellin isä',
+          teksti: 'Nimen selitetään tarkoittavan arabiaksi gasellin isää: ”abu” on isä ja ”dhabi” gaselli. Suosittu kertomus kuvaa, miten metsästäjät seurasivat gasellia rannikolle ja löysivät makeaa vettä; lähteen mukaan asutus syntyi makean veden löydön ympärille. Bani Yas -heimo oli asunut ensin Liwan keitaalla, ja sen Al Bu Falah -osa perusti asutuksen saarelle 1700-luvulla. Hallitsijasuku Al Nahyan polveutuu tästä osasta. Kaupungin keskustassa seisoo yhä linnake, joka muistuttaa asutuksen ensimmäisistä vuosista.',
+          tiedosto: 'Arabian Gazelle.jpg',
+          selite: 'Abu Dhabin nimen selitetään tarkoittavan arabiaksi gasellin isää.',
+          lahde: 'Ubm007, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Abu Dhabi',
+        },
+        {
+          otsikko: 'Saari, joka kasvoi sillan jälkeen',
+          teksti: 'Abu Dhabin saari on vain kapean salmen päässä mantereesta. Lähteen mukaan ensimmäinen silta, Al Maqta, rakennettiin 1960-luvun lopulla yhdistämään manner aiemmin pieneen kalastajakylään. Kaupunkisuunnitelman laati 1960-luvun lopulla japanilainen arkkitehti Katsuhiko Takahashi, ja kaupunki kasvoi pian suunnitelmia suuremmaksi. Sittemmin saaria ja uusia siltoja on lisätty, ja Zaha Hadidin suunnittelema Sheikh Zayed -silta avattiin vuonna 2010.',
+          tiedosto: 'Abu Dhabi 2013 - panoramio.jpg',
+          selite: 'Sheikh Zayed -silta avattiin vuonna 2010 yhdistämään saari mantereeseen; sen suunnitteli Zaha Hadid.',
+          lahde: 'Валерий Дед, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Abu Dhabi',
+        },
+        {
+          otsikko: 'Pääkaupunki, joka ei ollut ensimmäinen suunnitelma',
+          teksti: 'Arabiemiirikunnat perustettiin 2. joulukuuta 1971, kun Abu Dhabi ja viisi muuta emiirikuntaa liittyivät yhteen. Lähteen mukaan perustuslain ensimmäisessä versiossa pääkaupungiksi oli tarkoitettu uutta kaupunkia nimeltä Al Karama Abu Dhabin ja Dubain väliin. Abu Dhabista tehtiin ensin väliaikainen ja sitten pysyvä pääkaupunki. Sheikh Zayed bin Sultan Al Nahyan nimitettiin ensimmäiseksi presidentiksi, ja hän pysyi virassa yli kolmekymmentä vuotta. Hän ja Dubain hallitsija olivat sopineet liitosta periaatteessa jo 1960-luvun lopulla.',
+          tiedosto: 'Qasr Al Watan, Abu Dhabi (P1100960).jpg',
+          selite: 'Kansakunnan palatsi Qasr Al Watan on presidentin palatsi ja avattiin yleisölle 2019.',
+          lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Abu Dhabi',
+        },
+        {
+          otsikko: 'Moskeija, joka kokosi aineet kaikkialta',
+          teksti: 'Sheikh Zayedin suurmoskeija on lähteen mukaan maan suurin moskeija. Rakennustyö aloitettiin 1990-luvulla, ja rukoussalit otettiin käyttöön joulukuussa 2007. Hankkeessa oli lähteen mukaan mukana tuhansia työntekijöitä, ja materiaaleja ja tekijöitä tuli muun muassa Italiasta, Saksasta, Intiasta, Turkista, Iranista, Kiinasta, Britanniasta ja Uudesta-Seelannista. Moskeijassa on 82 kupolia, ja siihen mahtuu kymmeniä tuhansia rukoilijoita. Lähteen mukaan pihan kukkakuvioinen marmorimosaiikki voi olla maailman suurin.',
+          tiedosto: 'Abu dhabi, Moschea dello Sceicco Zayed, loggiati, pilastri, capitelli dorati 01 a palmizio.jpg',
+          selite: 'Suurmoskeijan valkoisessa marmoriseinässä on kullanvärisiä palmunlehtiaiheisia koristeita.',
+          lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Sheikh Zayed Grand Mosque',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Abu dhabi, Moschea dello Sceicco Zayed, loggiati, 2.jpg',
+          selite: 'Sheikh Zayedin suurmoskeija on avoin myös ei-muslimivieraille, kunhan vaatetus on peittävä.',
+          lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Abu Dhabi on Arabiemiirikuntien pääkaupunki, mutta maan kaupallinen ja matkailun keskus on Dubai. Kaupunki on Persianlahden saarella, ja siltoja pitkin pääsee mantereelle. Nähtävää löytyy moskeijasta, linnakkeesta, palatsista ja Saadiyat-saaren museoista. Rantakatu Corniche sopii kävelyyn ja pyöräilyyn, ja ruoka on enimmäkseen halal-ruokaa. Kesä on erittäin kuuma, joten matkailuun sopii parhaiten marraskuun ja maaliskuun välinen aika. Ajantasainen matkustustilanne kannattaa tarkistaa ennen matkaa.',
+        artikkeli: {
+          nimi: 'Matkailijan Abu Dhabi',
+          taitto: 'opas',
+          teksti: 'Saarikaupunki, jossa vanha linnake, valkoinen moskeija ja kupolin alle rakennettu museo kuuluvat samaan matkaan.',
+          nosto: 'Abu Dhabi on pääkaupunki, mutta maan kaupallinen ja matkailun keskus on lähteen mukaan Dubai. Ilmailuun ja matkailuun tehdyt investoinnit ovat 2000-luvulta lähtien lisänneet kaupungin tekemistä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Zayed International Airport (AUH) on noin kolmenkymmenen kilometrin päässä kaupungin itäpuolella, ja sen nimi on annettu Sheikh Zayedin mukaan. Vaihtoehtona on lentää Dubaihin ja jatkaa sieltä bussilla tai taksilla. Saarella liikutaan busseilla ja takseilla, ja bussiin tarvitaan lähteen mukaan Hafilat-älykortti, sillä kuljettaja ei ota käteistä. Cornichen varrella kulkee erillinen pyörätie lähes koko matkan.',
+              kuva: {
+                tiedosto: 'Shore view.jpg',
+                selite: 'Siltayhteydet liittävät saarikaupungin mantereeseen.',
+                lahde: 'Akhilmohan89, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Nähtävää: linnake, palatsi ja ranta',
+              teksti: 'Qasr Al Hosn avattiin museona ja kulttuurikohteena uudelleen 2010-luvun lopulla pitkän entisöinnin jälkeen, ja sen vieressä on Abu Dhabin kulttuurisäätiö. Qasr Al Watan eli presidentin palatsi on avoinna vierailijoille maaliskuusta 2019 alkaen. Emirates Palace on hotelli, jota lähteen mukaan pidetään myös suosittuna nähtävyytenä. Etihad Towers on viiden tornin kokonaisuus, ja Corniche on usean kilometrin pituinen rantakatu puistoineen.',
+              kuva: {
+                tiedosto: 'Qasr Al Watan in March 2022 10.jpg',
+                selite: 'Qasr Al Watan on Arabiemiirikuntien presidentin palatsi, johon vierailijat pääsevät tutustumaan.',
+                lahde: 'Renek78, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Moskeija ja Saadiyat',
+              teksti: 'Sheikh Zayedin suurmoskeijassa saavat vierailla myös ei-muslimit, kunhan vaatetus on peittävä: naiset peittävät päänsä, ja lainavaatteita on saatavilla. Ilmaisia opastuksia on tarjolla, ja perjantaisin pääsy on rajoitettu, joten ajankohta kannattaa tarkistaa etukäteen. Saadiyat-saarella ovat Louvre Abu Dhabi, Abrahamic Family House ja Manarat Al Saadiyat -näyttelytila. Yas-saari on huvipuistojen saari.',
+              kuva: {
+                tiedosto: 'Saadiyat Beach.jpg',
+                selite: 'Saadiyat-saarelle on koottu museoita ja uskontojen yhteinen Abrahamic Family House.',
+                lahde: 'Adman Payne, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Suurin osa ruoasta on halal, ja arabialaista ruokaa saa kaikkialta pienistä shawarma-paikoista hotellien ravintoloihin. Myös eteläaasialainen ruoka on yleistä. Perinteistä emiirikuntien ruokaa tarjoavia paikkoja on vähän; lähteen mukaan esimerkiksi harees ja lugaimat-jälkiruoka kuuluvat siihen. Arabialaisen kahvin kahvilat ovat suosittuja, ja alkoholia tarjoillaan vain lisensoiduissa paikoissa.',
+              kuva: {
+                tiedosto: 'Dallah in north garden.jpg',
+                selite: 'Arabialainen kahvi kuuluu Abu Dhabin ruokakulttuuriin, ja kahvilat ovat suosittuja.',
+                lahde: 'Hamzabilal.3093, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Ilmasto on kuuma ja hyvin kuiva. Kuukausien keskilämpötilat vaihtelevat tammikuun noin 19 asteesta elokuun noin 36 asteeseen, ja heinä- ja elokuussa päivän ylin lämpötila on keskimäärin noin 43 astetta. Viileämpi kausi kestää marraskuusta maaliskuuhun, jolloin keskilämpötila on noin 19–25 °C. Vuodessa sataa vain noin 50 millimetriä, eniten tammi- ja maaliskuussa noin 13 millimetriä kuussa; toukokuusta lokakuuhun sataa korkeintaan millimetrin kuussa.',
+              kuva: {
+                tiedosto: 'Beach @ Corniche @ Abu Dhabi (15421876734).jpg',
+                selite: 'Corniche on suosittu iltakävelypaikka.',
+                lahde: 'Guilhem Vellut from Annecy, France, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Sheikh Zayedin suurmoskeija',
+                tahdet: 3,
+                selite: 'Marmoria, kukkakuvioinen mosaiikkipiha ja 82 kupolia.',
+              },
+              {
+                mita: 'Louvre Abu Dhabi',
+                tahdet: 3,
+                selite: 'Jean Nouvelin suunnittelema kupoli ja laaja taidekokoelma Saadiyat-saarella.',
+              },
+              {
+                mita: 'Qasr Al Hosn',
+                tahdet: 2,
+                selite: 'Lähteen mukaan kaupungin vanhin kivirakennus, nykyään museo ja käsityöpaja.',
+              },
+              {
+                mita: 'Qasr Al Watan',
+                tahdet: 2,
+                selite: 'Presidentin palatsi, jonne vierailijat pääsevät tutustumaan.',
+              },
+              {
+                mita: 'Corniche',
+                tahdet: 2,
+                selite: 'Usean kilometrin rantakatu iltakävelyille ja pyöräilyyn.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Pukeutuminen moskeijassa',
+                teksti: 'Vaatetuksen on peitettävä vartalo, ja naiset peittävät päänsä; moskeijalla on lainavaatteita. Perjantaisin pääsy on rajoitettu, joten ajankohta kannattaa tarkistaa etukäteen.',
+              },
+              {
+                otsikko: 'Ramadan',
+                teksti: 'Paastokuukautena ravintolat voivat olla päivällä kiinni, ja julkinen syöminen ja juominen ei ole sopivaa.',
+              },
+              {
+                otsikko: 'Alkoholi',
+                teksti: 'Alkoholia saa vain luvalla tai lisensoiduista ravintoloista ja hotelleista.',
+              },
+              {
+                otsikko: 'Kuumuus kesällä',
+                teksti: 'Heinä- ja elokuussa päivän ylin lämpötila on keskimäärin noin 43 astetta, joten ulkona kannattaa liikkua aamulla tai illalla.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'nykytaide',
+      nimi: 'Valo, kupoli ja kuutio',
+      johdanto: 'Abu Dhabin uusi taide on syntynyt 2000-luvulla: museo ranskalaisen nimen alla, valosta kudottu kupoli ja muotokuva, joka riippuu kaapeleissa. Mukana on myös talo, jossa kolme uskontoa jakaa saman jalustan.',
+      tehtava: {
+        kysymys: 'Minkälaisista kappaleista The Constellation -teos Founder\'s Memorialissa on koottu?',
+        vaihtoehdot: [
+          'Kiillotetuista pronssipalloista',
+          'Lasisista ja teräksisistä kuutioista',
+          'Säännöllisistä monitahokkaista',
+          'Käsin veistetyistä marmorilaatoista',
+        ],
+        oikea: 2,
+        fakta: 'Teoksen on suunnitellut yhdysvaltalainen taiteilija Ralph Helmick.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kupoli, joka sataa valoa',
+          teksti: 'Louvre Abu Dhabi on Saadiyat-saarella, ja se avattiin marraskuussa 2017. Arkkitehti Jean Nouvelin suunnittelema kupoli rakentuu tuhansista rei\'itetyistä alumiinitähdistä, jotka on ladottu kahdeksaan kerrokseen. Lähteen mukaan kupolin on tarkoitus muistuttaa auringonsäteitä, jotka suodattuvat palmunlehvien läpi keitaalla. Gallerioiden välissä on vesialtaita, jotta rakennus näyttää kelluvan meressä. Lähteen mukaan museo on Arabian niemimaan suurin taidemuseo.',
+          tiedosto: 'LouvreAD platforms.jpg',
+          selite: 'Louvre Abu Dhabi avattiin marraskuussa 2017, ja sen kupolin suunnitteli Jean Nouvel.',
+          lahde: 'Boubloub, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Louvre Abu Dhabi',
+        },
+        {
+          otsikko: 'Teksti kivessä, pronssipuu ja sormenjälki',
+          teksti: 'Louvre Abu Dhabin julkisiin teoksiin kuuluu Jenny Holzerin valkoinen kalkkikiviveistos, johon on kaiverrettu otteita kolmesta tekstistä kolmella kirjoitusjärjestelmällä: sumerilais-akkadilainen luomismyytti nuolenpääkirjoituksella, Ibn Khaldunin Muqaddimah arabiaksi ja Montaignen Esseet ranskaksi. Giuseppe Penonen Germination-teokseen kuuluu pronssipuu kupolin alla sekä posliinilaatta, jonka samankeskiset renkaat perustuvat lähteen mukaan Zayedin sormenjälkeen. Ennen museon avaamista kokoelmaa esiteltiin hotellissa ja näyttelytilassa.',
+          tiedosto: 'LouvreAD tree.jpg',
+          selite: 'Giuseppe Penonen pronssipuu Louvre Abu Dhabin kupolin alla kuuluu museon julkisiin teoksiin.',
+          lahde: 'Boubloub, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Louvre Abu Dhabi',
+        },
+        {
+          otsikko: 'Muotokuva, joka riippuu kaapeleissa',
+          teksti: 'The Founder\'s Memorial on muistomerkki ja kävijäkeskus Sheikh Zayedille, joka oli Arabiemiirikuntien ensimmäinen presidentti ja kuoli vuonna 2004. Sanctuary Gardenin keskellä on kuutiomainen paviljonki, jonka sisällä on teos The Constellation. Ralph Helmickin suunnittelema kolmiulotteinen muotokuva Zayedista koostuu yli tuhannesta geometrisesta kappaleesta, jotka riippuvat kaapeleissa. Kappaleet ovat viittä eri säännöllistä monitahokasta eli Platonin kappaletta. Teos valaistaan öisin, ja sitä ympäröi korotettu kävelysilta.',
+          tiedosto: 'Abu Dhabi, Founder\'s Memorial.jpg',
+          selite: 'The Founder\'s Memorial on muistomerkki Arabiemiirikuntien ensimmäiselle presidentille.',
+          lahde: 'Olivier Teyssandier, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'The Founder\'s Memorial',
+        },
+        {
+          otsikko: 'Kolme taloa yhdellä jalustalla',
+          teksti: 'Abrahamic Family House on Saadiyat-saarella, ja siinä on moskeija, kirkko ja synagoga erillisissä rakennuksissa. Kompleksi vihittiin käyttöön helmikuussa 2023. Hanke sai alkunsa asiakirjasta, jonka paavi Franciscus ja al-Azharin suurimaami Ahmed El-Tayeb allekirjoittivat Abu Dhabissa 2010-luvun lopulla. Moskeija on nimeltään Imam Al-Tayeb, kirkko on nimetty Franciscus Assisilaisen mukaan ja synagoga on Moses Ben Maimon. Lähteen mukaan synagogassa on Arabiemiirikuntien ensimmäinen pyhäkkö, rituaalikylpy (mikveh) ja opintosali. Kompleksi on kaikille avoin.',
+          tiedosto: 'Moses Ben Maimon Synagogue interior - june 28 2025.jpg',
+          selite: 'Moses Ben Maimon -synagoga on yksi Abrahamic Family Housen kolmesta rakennuksesta.',
+          lahde: 'Blahajsdm2025, Wikimedia Commons (CC0)',
+          wiki: 'Abrahamic Family House',
+        },
+      ],
+    },
+  ],
+  amman: [
+    {
+      id: 'kaupunki',
+      nimi: 'Amman',
+      johdanto: 'Amman on rakentunut kukkuloille, joilla on asuttu jo noin 9 000 vuotta sitten, mutta jotka olivat isoisän matkavuonna 1873 autioina. Vanha kaupunki on kasvanut linnavuoren, roomalaisen teatterin ja katetun puron ympärille.',
+      kansikuvat: [
+        {
+          tiedosto: 'Amman citadel 4.jpg',
+          lyhyt: 'Suuren temppelin pylväitä Ammanin linnavuorella, taustalla rinteille levittäytyvä kaupunki.',
+          selite: 'Linnavuoren Suuren temppelin pylväät ja niiden päällä lepäävä palkki ovat roomalaisajan jäänteitä, ja taustalla kaupunki levittäytyy rinteille.',
+          lahde: 'Davric, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Roman Theatre in Amman 0189.jpg',
+          lyhyt: 'Hashemite Plaza on alakaupungin aukio Rooman teatterin ja odeonin vieressä.',
+          selite: 'Hashemite Plaza on Rooman teatterin ja odeonin viereinen alakaupungin aukio, jonka paikalla lähteen mukaan sijaitsi antiikin forum.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'View of the Amman Citadel, Jordan3.jpg',
+          lyhyt: 'Linnavuori kohoaa Ammanin vanhan keskustan yllä.',
+          selite: 'Linnavuoren rauniot ovat osa Ammanin vanhaa ydintä, jota ympäröivät rinteille levittäytyneet asuinalueet.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Patsaat, joiden sisus on risua',
+          teksti: 'Ayn Ghazal on neoliittinen asuinpaikka Ammanin alueella, Seil-puron rannalla siinä, missä puro laskee Zarqa-jokeen. Nimi tarkoittaa gasellin lähdettä. Asutus kukoisti noin 9 000 vuotta sitten, ja arvioiden mukaan kylässä asui parhaimmillaan jopa noin 3 000 ihmistä. Talot olivat suorakaiteen muotoisia, ja niiden seinät päällystettiin mudalla ja kalkkikipsillä, joka uusittiin muutaman vuoden välein. Tunnetuimmat löydöt ovat kipsipatsaat: puolikokoisten ihmishahmojen ydin on risukimppu, pinta on valkoista kipsiä ja silmät on korostettu bitumilla. Patsaita on löytynyt useita, ja ne ovat esillä Jordan Museumissa.',
+          tiedosto: 'Ain Ghazal statue frontal.jpg',
+          lyhyt: 'Ayn Ghazalin kipsipatsas, noin 9 000 vuotta vanha neoliittinen löytö.',
+          selite: 'Ayn Ghazalin patsaiden ydin on risukimppu ja pinta kipsiä, ja niiden silmät on korostettu bitumilla.',
+          lahde: 'ALFGRN, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Ayn Ghazal (archaeological site)',
+        },
+        {
+          otsikko: 'Linnavuori kerroksina',
+          teksti: 'Ammanin linnavuori eli Jabal al-Qalʿa on L:n muotoinen kukkula alakaupungin yllä, ja lähteen mukaan se on yksi maailman vanhimmista jatkuvasti asutuista paikoista. Kukkulalta on löytynyt myös lähteen mukaan vanhin tunnettu ammoninkielinen kirjoitus, joka on kirjoitettu foinikialaisin kirjaimin. Roomalaisaikaa edustaa Suuri temppeli, jota on kutsuttu Herkuleen temppeliksi, vaikka lähteen mukaan nimi on epätarkka eikä jumaluutta tunneta varmasti. Pohjoisosassa on Umaijadien palatsi 700-luvulta ja eteläosassa keskiajan vartiotorni, jonka seinään on käytetty temppelin pylväsosia. Iso osa kukkulasta on yhä kaivamatta.',
+          tiedosto: 'Amman Temple of Hercules 0344.jpg',
+          lyhyt: 'Suuri temppeli, jota kutsutaan myös Herkuleen temppeliksi, Ammanin linnavuorella.',
+          selite: 'Suuri temppeli rakennettiin 100-luvun jälkipuoliskolla, ja sen jumaluutta ei tunneta varmasti.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Amman Citadel',
+        },
+        {
+          otsikko: 'Philadelphia laaksossa',
+          teksti: 'Antiikissa kaupunki tunnettiin nimellä Philadelphia. Lähteen mukaan Ptolemaios II Philadelphos valtasi paikan 200-luvulla eaa., rakennutti sen uudelleen ja nimesi sen omasta lisänimestään Philadelphiaksi; nimi tarkoittaa veljesrakkautta. Roomalaisaikana kaupunki kuului Dekapolis-liittoon ja myöhemmin Arabian provinssiin, ja 100-luvulla laaksoon rakennettiin klassiseen tyyliin iso teatteri, pieni odeon, nymfaion, kylpylät, forum ja pylväskatuja. Teatterissa oli useita tuhansia katsojapaikkoja ja odeonissa muutamia satoja. Uusia roomalaisia kylpylöitä löytyi Hashemite Plazan vierestä sadevesiviemärin rakennustöiden yhteydessä 2020-luvun alussa.',
+          tiedosto: 'Amman Odeon 0225.jpg',
+          lyhyt: 'Odeon eli pieni teatteri rakennettiin 100-luvulla Rooman teatterin rinnalle.',
+          selite: 'Odeon rakennettiin Philadelphiaan 100-luvulla samoihin aikoihin viereisen suuren teatterin kanssa.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Philadelphia (Amman)',
+        },
+        {
+          otsikko: 'Piilotettu puro',
+          teksti: 'Seil Amman oli puro, joka virtasi Ras al-Einin lähteiltä koilliseen kohti Ayn Ghazalia ja päätyi Zarqa-jokeen. Lähteen mukaan Amman tunnettiin historiallisesti vesien kaupunkina. Antiikissa puron pohjoisrannalla kulki pylväskatu ja eteläisellä rannalla olivat forum, teatteri, odeon, nymfaion ja kylpylät. Uudet asukkaat rakensivat 1800-luvun lopulla talonsa puron ympärille. Puro peitettiin betonilla 1900-luvun jälkipuoliskolla, ja sen paikalla kulkee katu, jota kutsutaan epävirallisesti nimellä Saqf Al-Seil eli katettu Seil. Lähteen mukaan syinä olivat likaantuminen, lähteiden kuivuminen, tulvat ja liikenne.',
+          tiedosto: 'Amman Nymphaeum 0113.jpg',
+          lyhyt: 'Nymfaion oli Seil-puron vieressä seissyt julkinen suihkulähde.',
+          selite: 'Nymfaion kuului laakson antiikin rakennuksiin, jotka seisoivat Seil-puron rannalla.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Seil Amman',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Amman Citadel 02.jpg',
+          lyhyt: 'Umaijadien palatsi rakennettiin Ammanin linnavuorelle 700-luvulla.',
+          selite: 'Linnavuoren pohjoisosassa on Umaijadien palatsi, ja kukkulalla on myös roomalaisajan pylväiden jäänteitä.',
+          lahde: 'Lama Sakhnini, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Kesä on kuuma ja kuiva, ja talvi on viileä ja sateinen.',
+        artikkeli: {
+          nimi: 'Matkailijan Amman',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa roomalainen teatteri, linnavuoren rauniot ja kukkuloiden kahvilakadut ovat samalla matkalla.',
+          nosto: 'Ammanin vanha ydin on alakaupungin laaksossa ja sen yllä nousevalla linnavuorella, ja kaupunki jatkuu kukkulalta toiselle. Kävelijän kannattaa varata aikaa, sillä rinteet ovat jyrkkiä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Pääkenttä Queen Alia International Airport sijaitsee Ziziassa, lähteiden mukaan noin 30–40 kilometrin päässä Ammanista etelään. Kentältä kaupunkiin pääsee bussilla, taksilla tai tilaustaksisovelluksilla. Pienempi Amman Civil Airport palvelee pääasiassa kotimaan- ja lähialueiden lentoja. Kaupungissa liikutaan takseilla, jotka kulkevat mittarilla, linja-autoilla ja kahdella BRT-runkobussireitillä. Jalan kulkeminen on kukkuloiden vuoksi hitaampaa kuin kartalta luulisi.',
+              kuva: {
+                tiedosto: 'BRT in Amman, Jordan 1.jpg',
+                lyhyt: 'Ammanin BRT on kaupungin runkobussijärjestelmä.',
+                selite: 'BRT eli runkobussijärjestelmä täydentää Ammanin tavallisia linja-autoja, ja siinä on kaksi reittiä.',
+                lahde: 'Malkawi99, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Linnavuori ja alakaupunki',
+              teksti: 'Linnavuorella ovat Suuri temppeli, bysanttilaisen kirkon jäänteet, Umaijadien palatsi ja keskiajan vartiotorni sekä museo; kukkulan näköalapaikka on suosittu auringonlaskun katseluun. Alakaupungissa Rooman teatteri ja odeon sijaitsevat Hashemite Plazan laidalla, ja teatterin sivuilla ovat Jordan Folklore Museum ja Museum of Popular Traditions. Läheltä löytyvät myös nymfaion ja Suuri Husseinin moskeija. Jordan Museum Ras al-Einissa esittelee muun muassa Ayn Ghazalin patsaat ja Kuolleenmeren kääröjä.',
+              kuva: {
+                tiedosto: 'متحف الأردن 2.jpg',
+                lyhyt: 'Jordan Museum Ras al-Einissa esittelee muun muassa Ayn Ghazalin patsaat.',
+                selite: 'Jordan Museumin kokoelmiin kuuluvat Ayn Ghazalin patsaat ja Kuolleenmeren kääröjä.',
+                lahde: 'Freedom\'s Falcon, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Jabal Amman ja kukkulat',
+              teksti: 'Jabal Ammanin kukkulalla on 1900-luvun alun taloja, joissa toimii nykyään kahviloita ja toimistoja. Rainbow Street on nimetty entisen elokuvateatterin mukaan, ja kesäisin perjantaisin siellä pidetään Souk Jara -markkinaa, jossa myydään käsitöitä ja ruokaa. Jabal al-Luweibdehissa toimii Jordan National Gallery of Fine Arts, ja Darat al-Funun on taidekeskus. Al-Balad Music Festival järjestetään Rooman teatterissa ja odeonissa.',
+              kuva: {
+                tiedosto: 'Jabal Amman - near Rainbow street.jpg',
+                lyhyt: 'Jabal Amman on vanha kukkulakaupunginosa, jossa on 1900-luvun alun taloja.',
+                selite: 'Jabal Ammanin kukkulalle asettuivat pääkaupunki-aseman myötä varakkaat perheet, ja vanhoissa taloissa toimii nykyään kahviloita ja toimistoja.',
+                lahde: 'Jotari, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Lähteen mukaan Ammanin ruoka on usean alueen keittiöiden tulos, ja katuruoka tekee siitä omaleimaisen. Arabialaisessa ruoassa liha on yleensä lammasta tai kanaa, ja riisi ja leipä ovat sivuruokia. Shawarma on paikallinen suosikki, ja yleisiä ruokia ovat falafel, hummus ja fuul. Jälkiruoaksi kannattaa maistaa knafeh nabelseyyehia, jonka nimi viittaa Nablusin kaupunkiin.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Ammanin kesät ovat kuumia ja kuivia: heinä- ja elokuussa päivän ylin lämpötila on keskimäärin noin 33 °C, eikä sadetta tule käytännössä lainkaan kesäkuusta syyskuuhun. Talvi on viileä ja sateinen: tammikuussa päivän ylin lämpötila on noin 13 °C ja alin noin 4 °C, ja sadetta tulee noin 60 millimetriä. Vuodessa sataa yhteensä noin 230 millimetriä, ja sade painottuu marraskuusta maaliskuuhun. Huhtikuun keskilämpötila on noin 17 °C ja lokakuun noin 21 °C, ja silloin sataa jo vain vähän.',
+              kuva: {
+                tiedosto: 'Amman in Snow.JPG',
+                lyhyt: 'Lumi peittää Ammanin talot ja kadut talvella.',
+                selite: 'Lumen peittämiä taloja ja katu Ammanissa talvella.',
+                lahde: 'The original uploader was Freedom\'s Falcon at Arabic Wikipedia ., Wikimedia Commons (CC BY 2.5)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Linnavuori ja Suuri temppeli',
+                tahdet: 3,
+                selite: 'Usean aikakauden jäänteitä samalla kukkulalla alakaupungin yllä.',
+              },
+              {
+                mita: 'Rooman teatteri ja odeon',
+                tahdet: 3,
+                selite: 'Antiikin katsomot, joissa pidetään yhä konsertteja ja kulttuuritapahtumia.',
+              },
+              {
+                mita: 'Jordan Museum',
+                tahdet: 3,
+                selite: 'Ayn Ghazalin patsaat ja Kuolleenmeren kääröjä samassa museossa.',
+              },
+              {
+                mita: 'Rainbow Street ja Jabal Amman',
+                tahdet: 2,
+                selite: 'Vanhoja taloja, kahviloita ja kesäisin Souk Jara -markkina.',
+              },
+              {
+                mita: 'Alakaupungin torit',
+                tahdet: 2,
+                selite: 'Kirjakojuja ja katukauppiaita vanhan keskustan kaduilla.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Kukkulat ja jyrkät rinteet',
+                teksti: 'Kartalla lyhyt matka voi viedä pitkään, koska tiet nousevat jyrkästi.',
+              },
+              {
+                otsikko: 'Taksi mittarilla',
+                teksti: 'Pyydä taksia käyttämään mittaria, sillä taksien on käytettävä sitä.',
+              },
+              {
+                otsikko: 'Moskeijavierailu',
+                teksti: 'Kuningas Abdullah I:n moskeijaan matkailijat ovat tervetulleita; miehillä pitää olla pitkät housut ja naisilla pää, käsivarret ja jalat peitettyinä, ja huppumekko lainataan ilmaiseksi.',
+              },
+              {
+                otsikko: 'Ramadan',
+                teksti: 'Ramadanin aikana ruokaa on lähes mahdoton ostaa auringonnoususta laskuun, myös matkailijoille.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Kaupunki, joka perustettiin uudelleen',
+      johdanto: 'Amman oli myöhäiskeskiajalta lähtien rauniopaikka, jossa kävivät vain viljelijät ja paimentolaiset, kunnes uudet asukkaat saapuivat 1870-luvun lopulla. Rautatie ja pääkaupungin asema toivat sen jälkeen kauppiaita ja uusia rakennuksia kukkuloille.',
+      tehtava: {
+        kysymys: 'Mitä ensimmäiset tšerkessit hyödynsivät taloissaan, kun he asettuivat Rooman teatterin viereen?',
+        vaihtoehdot: [
+          'Rannikolta tuotuja tiiliä',
+          'Kaukasukselta mukana tuotuja puuosia',
+          'Teatterin kiviä',
+          'Kalkkikiveä louhoksesta Ras al-Einin läheltä',
+        ],
+        oikea: 2,
+        fakta: 'Antiikin teatterin kivet saivat uuden käytön, kun ensimmäiset tulijat rakensivat niistä talonsa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Autio rinne',
+          teksti: 'Keskiajalla Ammanin asema nousi hetkeksi: mamelukkikaudella Balqan piirin pääkaupunki siirrettiin Ammaniin, ja emiiri Sirghitmish osti kaupungin, siirsi sinne tuomioistuimet, hallinnon ja torit sekä rahoitti rakennustöitä. Hänen kuolemansa jälkeen kaupunki ja sen maat vaihtoivat omistajaa, ja tuotto väheni. Myöhäiskeskiajalta 1870-luvun loppuun Amman oli lähteen mukaan hylätty paikka, jossa asuivat kausiluontoisesti viljelijät ja beduiinit. Ottomaanien valtakunta liitti seudun itseensä 1500-luvun alussa, ja Transjordanian poliittisena keskuksena toimi pitkälti al-Salt. Isoisän matkavuonna 1873 Amman oli tällainen rauniopaikka.',
+          tiedosto: 'Amman Citadel 140.JPG',
+          lyhyt: 'Linnavuoren Ayyubid-vartiotorni on peräisin keskiajalta.',
+          selite: 'Ayyubid-vartiotorni on keskiajalta, ja sen eteläjulkisivussa on käytetty Suuren temppelin pylväsosia.',
+          lahde: 'Tarawneh, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Amman',
+        },
+        {
+          otsikko: 'Uudet asukkaat',
+          teksti: 'Muslimitšerkessejä saapui Ammaniin useita satoja 1870-luvun lopulla, ja ottomaanien viranomaiset ohjasivat heidät asettumaan sinne ja jakoivat heille viljelymaata. Ensimmäiset tulijat kuuluivat shapsug-heimoon. He asettuivat Rooman teatterin viereen ja rakensivat talojensa seinät teatterin kivistä. Ensimmäisten kuukausien olot olivat ankarat: osa asui luolissa ja roomalaisajan raunioissa, ja brittiläinen matkailija Laurence Oliphant merkitsi 1870-luvun lopulla, että suurin osa alkuperäisistä asukkaista oli jo lähtenyt. Talot tehtiin mutatiilestä ja katot puusta, ja 1900-luvun alussa kaupungissa oli tšerkessikortteleita, moskeijoita ja leipomoita.',
+          tiedosto: 'Bedouin and Circassian chiefs on the Aerodrome at Amman, 1921 LOC matpc.04761.jpg',
+          lyhyt: 'Tšerkessit ovat kuuluneet Ammanin väestöön 1870-luvun lopulta lähtien.',
+          selite: 'Tšerkessit ovat kuuluneet Ammanin väestöön 1870-luvun lopun asutuksesta lähtien, ja kuvassa heidän päällikkönsä ovat yhdessä beduiinipäälliköiden kanssa vuonna 1921.',
+          lahde: 'Matson Collection, Wikimedia Commons (PD)',
+          wiki: 'Circassians in Jordan',
+        },
+        {
+          otsikko: 'Rata tuo kauppiaat',
+          teksti: 'Ottomaanien rakentama Hejaz-rautatie yhdisti Damaskoksen ja Medinan, ja sen tarkoitus oli helpottaa pyhiinvaellusta ja kauppaa. Hanke käynnistyi 1900-luvun alussa, rata tuli käyttöön Ammanin seudulla saman vuosikymmenen aikana, ja lähteen mukaan se lyhensi matkaa Damaskoksesta Medinaan huomattavasti. Lähteen mukaan rata muutti Ammanin pienestä kylästä alueen kauppakeskukseksi: tšerkessien yrittäjyys ja rata houkuttelivat kauppiaita Damaskoksesta, Nablusista ja Jerusalemista, ja monet muuttivat perheineen kaupunkiin 1900- ja 1910-luvuilla. Ensimmäisen kunnanvaltuuston pormestarina toimi tšerkessi Ismael Babouk.',
+          tiedosto: 'Hejaz Railway Station Trains (Amman Station).jpg',
+          lyhyt: 'Hejaz-rautatie yhdisti Damaskoksen ja Medinan, ja Amman kasvoi sen varrella.',
+          selite: 'Ottomaanien rakentama Hejaz-rautatie yhdisti Damaskoksen ja Medinan, ja sen varrella Amman kasvoi lähteen mukaan alueen kauppakeskukseksi.',
+          lahde: 'Bashar Tabbah, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hejaz railway',
+        },
+        {
+          otsikko: 'Pääkaupunki ja kukkulat',
+          teksti: 'Emiiri Abdullah I nimesi 1920-luvulla Ammanin vastaperustetun Transjordanian emiirikunnan pääkaupungiksi, ja väestö kasvoi muuttajista Levantin kaupungeista. Uusia rakennuksia valmistui 1920-luvulla, esimerkiksi Suuri Husseinin moskeija sekä Duke\'s Diwan, jonka Transjordanian hallitus vuokrasi lähteen mukaan Ammanin ensimmäiseksi postitoimistoksi. Maanjäristys 1920-luvun lopulla vauhditti kaupungin leviämistä rinteille, ja kivestä tuli yleisempi rakennusaine. Jabal Ammanin kukkulalle muuttivat varakkaita perheitä, liikemiehiä ja upseereita. Asukasluku on kasvanut 1800-luvun pienestä kylästä Greater Amman Municipalityn alueen yli neljään miljoonaan.',
+          tiedosto: 'Husseini Mosque Down Town Amman.jpg',
+          lyhyt: 'Suuri Husseinin moskeija rakennettiin 1920-luvulla vanhemman moskeijan paikalle.',
+          selite: 'Suuri Husseinin moskeija rakennettiin alakaupunkiin 1920-luvulla vanhemman moskeijan paikalle.',
+          lahde: 'Freedom\'s Falcon at Arabic Wikipedia, Wikimedia Commons (PD)',
+          wiki: 'Grand Husseini Mosque',
+        },
+      ],
+    },
+  ],
+  baku: [
+    {
+      id: 'kaupunki',
+      nimi: 'Baku',
+      johdanto: 'Baku on Kaspianmeren rannalla 28 metriä merenpinnan alapuolella, ja lähteen mukaan se on koko Kaukasuksen suurin kaupunki. Muurien sisällä seisovat Neitotorni ja Širvanšahien palatsi, ja muurien ulkopuolella meri, tuuli ja öljy ovat muovanneet kaupunkia vuosisatoja.',
+      kansikuvat: [
+        {
+          tiedosto: 'Baku Skyline qiz qalasi.jpg',
+          lyhyt: 'Icheri Sheher on Bakun muurien ympäröimä vanhakaupunki.',
+          selite: 'Vanhakaupunki eli Icheri Sheher on muurien ympäröimä kaupunginosa, joka on kuulunut UNESCOn maailmanperintöön vuodesta 2000.',
+          lahde: 'Viceskeeni2, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Baku Boulevard 2024.jpg',
+          lyhyt: 'Bakun bulevardi on Bakunlahden rantaa seuraava promenadi.',
+          selite: 'Bulevardin istutuksista päätettiin 1900-luvun alussa, ja promenadi on noin neljä kilometriä pitkä.',
+          lahde: 'Rufatazizzade, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Vista de Baku, Azerbaiyán, 2016-09-26, DD 138.jpg',
+          lyhyt: 'Baku sijaitsee Bakunlahden rannalla Kaspianmeren länsirannalla.',
+          selite: 'Kaupunki on Absheronin niemimaan eteläreunalla, ja Bakunlahti avautuu Kaspianmerelle.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Öljyn kaupunki',
+          teksti: 'Bakun luonnollisista öljylähteistä kertoi jo 900-luvulla arabialainen historioitsija al-Masudi. Balaxaniin rakennettiin 1837 öljyn tislaamo, jota osa lähteistä pitää Absheronin ensimmäisenä, ja ensimmäinen kaivo porattiin Bibi-Heybatissa 1846.\n\nLaaja öljynetsintä alkoi 1870-luvun alussa, kun Venäjän viranomaiset huutokauppasivat öljyrikkaita maa-alueita yksityisille sijoittajille. Robert Nobel tuli Bakuun 1873 ja osti jalostamon 1874; Ludvig liittyi mukaan myöhemmin, ja yhtiöstä tuli 1879 Branobel. Jalostamoalue, Musta kaupunki, kehittyi 1800-luvun lopulla, ja vuonna 1901 Bakun kentät tuottivat jo yli puolet maailman öljystä.',
+          tiedosto: 'Naftaproduktionsbolaget Bröderna Nobel 4.jpg',
+          lyhyt: 'Öljysäiliövaunuja Nobelin öljylaitoksella Bakussa joskus vuosien 1876 ja 1920 välillä.',
+          selite: 'Kuva on peräisin Karl Wilhelm Hagelinin albumeista (Tekniska museet), ja taustalla näkyy tiilirakennuksia.',
+          lahde: 'Fotograf okänd (Tekniska museet), Wikimedia Commons (CC0)',
+          wiki: 'Baku',
+        },
+        {
+          otsikko: 'Neitotorni',
+          teksti: 'Neitotorni on lieriömäinen, kahdeksankerroksinen torni, jonka korkeus on mittauspuolesta riippuen noin 28–31 metriä ja perushalkaisija noin 16–16,5 metriä. Torni on kallion päällä, ja 1960-luvun kaivauksissa sen perustuksista löytyi korkeita puupalkkeja, joiden tulkitaan olleen maanjäristyksen kestävä rakenne.\n\nTornin ikä on kiistanalainen. Yleisesti sen ajoitetaan 1100-luvulle, mutta osa tutkijoista pitää alaosaa paljon vanhempana. Etelämuurissa korkealla on kufi-kirjoitus, jossa mainitaan nimi Qubbeye Masud ibn Davud; hänen roolinsa arkkitehtina on epävarma.\n\nTornissa on museo, ja katolta näkyvät vanhankaupungin kujat, minareetit ja Bakunlahti.',
+          tiedosto: 'Baku Maiden Tower 004 7736.jpg',
+          lyhyt: 'Neitotornin seinät ovat alaosassa useita metrejä paksut.',
+          selite: 'Torni on rakennettu kallion päälle, ja se on kuvattu Azerbaidžanin setelissä ja kolikoissa.',
+          lahde: 'Ludvig14, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Maiden Tower (Baku)',
+        },
+        {
+          otsikko: 'Širvanšahien palatsi',
+          teksti: 'Širvanšahien palatsi kohoaa vanhankaupungin kukkulalla. Päärakennus aloitettiin 1411, ja se oli alun perin kaksikerroksinen rakennus, jossa oli useita kymmeniä huoneita ja kapeita kierreportaita. Kompleksiin kuuluvat Divan-khana, hautaholvit, hovimoskeija, vesisäiliö ja kylpylän jäänteet.\n\nSafavidit valtasivat Bakun 1501, ja osmanit saivat sen haltuunsa 1578. Palatsi oli tyhjillään 1600-luvulta, ja Venäjän joukkojen pommitus vaurioitti sitä 1723 Venäjän–Persian sodassa. 1800-luvulla se siirtyi Venäjän sotilasosastolle, joka käytti sitä varastona.\n\nMuseo-suojelualueeksi palatsi julistettiin 1960-luvulla, ja maailmanperintölistalle se tuli 2000.',
+          tiedosto: 'Palacio de los Shirvanshah, Baku, Azerbaiyán, 2016-09-28, DD 08-10 HDR.jpg',
+          lyhyt: 'Širvanšahien palatsikompleksiin kuuluvat päärakennus, Divan-khana ja hovimoskeija.',
+          selite: 'Palatsikompleksiin kuuluvat muun muassa Divan-khana, hovimoskeija ja hautaholvit.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Palace of the Shirvanshahs',
+        },
+        {
+          otsikko: 'Tuulten kaupunki',
+          teksti: 'Bakua kutsutaan Tuulten kaupungiksi, azeriksi Küləklər şəhəri. Kaupunki on hyvin tuulinen ympäri vuoden: pohjoistuuli khazri voi yltää yli sadan kilometrin tuntinopeuteen, ja eteläinen lämmin tuuli on nimeltään gilavar.\n\nBakussa sataa vähän: sadetta tulee noin 270 millimetriä vuodessa, koska Kaukasuksen vuoret luovat sadevarjon.\n\nVettä on tuotu kaupunkiin kaukaa: Zeynalabdin Taghiyev osallistui Shollar-vesiputken rahoitukseen; putki valmistui 1910-luvulla ja johti vettä Kaukasuksen vuorilta Quban läheltä.',
+          tiedosto: 'A view of the Baku bay, Azerbaijan.jpg',
+          lyhyt: 'Bakussa sataa vuodessa noin 270 millimetriä.',
+          selite: 'Näkymä Bakunlahdelle. Bakussa sataa vuodessa noin 270 millimetriä, koska Kaukasuksen vuoret luovat sadevarjon.',
+          lahde: 'AlixSaz, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Baku',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Torre de la Doncella, Baku, Azerbaiyán, 2016-09-26, DD 08.jpg',
+          lyhyt: 'Neitotorni kuuluu vanhankaupungin UNESCO-kohteeseen.',
+          selite: 'Neitotorni ja Širvanšahien palatsi kuuluvat samaan UNESCOn maailmanperintökohteeseen, ja tornissa on museo.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Baku on Azerbaidžanin pääkaupunki, jonne saavutaan lentäen Heydar Aliyev International Airportille (GYD) parinkymmenen kilometrin päähän keskustasta. Lähteen mukaan maan maarajat naapurimaihin ovat suljetut siviililiikenteeltä, joten maahan pääsee lähinnä kansainvälisten lentokenttien kautta. Vanhakaupunki, bulevardi ja Fountains Square ovat jalankulkuvyöhykkeitä, ja metro kulkee aamusta keskiyöhön. Kaupunki on tavallisella maalaisjärjellä turvallinen suurkaupunki, mutta liikenne vaatii tarkkuutta.',
+        artikkeli: {
+          nimi: 'Matkailijan Baku',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa tuuli kulkee muurien ja pilvenpiirtäjien välissä, kannattaa kävellä.',
+          nosto: 'Bakun vanhakaupunki, bulevardi ja Fountains Square ovat jalankulkuvyöhykkeitä. Kesä on kuuma, ja heinäkuu on vuoden kuivin kuukausi. Viileällä säällä pohjoistuuli khazri tuntuu purevalta.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Heydar Aliyev International Airport (GYD) sijaitsee parinkymmenen kilometrin päässä keskustasta, ja sen entinen nimi oli Bina International Airport. Bussi T1 yhdistää lentoaseman rautatieasemaan Koroglun metroaseman kautta, ja bussi N16 kulkee Samed Vurgun -puistoon. Metron ensimmäinen osuus avattiin marraskuussa 1967, ja nykyään siinä on kolme linjaa ja yli kaksikymmentä asemaa. Metro kulkee aamusta keskiyöhön, ja asemilla valokuvaus on kielletty. Lähteen mukaan maan maarajat naapurimaihin ovat suljetut siviililiikenteeltä, joten Bakuun tullaan yleensä lentäen.',
+              kuva: {
+                tiedosto: 'Terminal 1 (Baku airport).jpg',
+                lyhyt: 'Heydar Aliyev International Airport on Bakun lentoasema.',
+                selite: 'Lentoaseman entinen nimi oli Bina International Airport, ja se sijaitsee parinkymmenen kilometrin päässä keskustasta.',
+                lahde: 'Xoqoni Said, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Vanhakaupunki',
+              teksti: 'Icheri Sheher on muurien ympäröimä kaupunginosa, jossa on kaksi karavaaniseraijia, kylpylöitä ja Juma-moskeija. Kaiken ehtii nähdä jalan yhdessä päivässä. Muurien sisällä asuu vain muutama tuhat ihmistä. Neitotorni ja Širvanšahien palatsi kuuluvat samaan maailmanperintökohteeseen vanhankaupungin kanssa.',
+              kuva: {
+                tiedosto: 'Baku Icheri-Sheher Portal 004 7861.jpg',
+                lyhyt: 'Icheri Sheherin muurien sisällä on kapeita kujia, karavaaniseraijeja ja kylpylöitä.',
+                selite: 'Vanhakaupunki jaettiin aikanaan asuinalueisiin, joista Gemichiler oli laivanrakentajien ja Noyutchuler öljytyöläisten.',
+                lahde: 'Ludvig14, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Bulevardi ja nykykaupunki',
+              teksti: 'Bakun bulevardi on merenrantapromenadi, joka on Yeni Bulvar -osuuden myötä 2010-luvulla pidentynyt noin neljän kilometrin mittaiseksi; White City -osuus lisäsi vielä pari kilometriä Freedom Squaren itäpuolelle. Alueella on huvipuisto, jachtiklubi, musiikkisuihkulähde ja patsaita, ja 1930-luvulla rakennettu laskuvarjotorni on yksi sen maamerkeistä. Nykyaikaista arkkitehtuuria edustavat muun muassa Flame Towers -pilvenpiirtäjät.',
+              kuva: {
+                tiedosto: 'Baku Boulevard Park.jpg',
+                lyhyt: 'Bakun bulevardi julistettiin kansallispuistoksi 1990-luvun lopulla.',
+                selite: 'Bulevardin istutuksista päätettiin 1900-luvun alussa, ja puiston multa tuotiin muualta.',
+                lahde: 'Antoloji, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Ateria jakautuu lähteen mukaan osiin, joihin kuuluvat alkupalat tai keitot ja pääruoka. Plov eli riisiruoka on perusruoka. Kaspianmeren kalaa, erityisesti sampea, grillataan vartaassa ja tarjotaan granaattiomenakastikkeella nimeltä narsharab. Musta tee juodaan aterian jälkeen ja tarjotaan vieraille tervetuliaisjuomana, usein hillon kanssa. Teehuoneissa, çayxanalar, pelataan nardea eli backgammonia tai dominoa. Jälkiruoiksi sopivat pakhlava ja shaki halva.',
+              kuva: {
+                tiedosto: 'Azerbaijani plov.JPG',
+                lyhyt: 'Plovista tunnetaan Azerbaidžanin keittiössä satoja lajeja.',
+                selite: 'Plov on azerbaidžanilaisen keittiön perusruoka, josta tunnetaan lähteen mukaan satoja lajeja.',
+                lahde: 'Urek Meniashvili, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Bakun kesät ovat kuumia ja talvet viileitä, ja pohjoistuuli khazri tuntuu viileällä säällä purevalta. Heinä- ja elokuun keskilämpötila on noin 26 °C ja tammi- ja helmikuun noin 5 °C. Toukokuun keskilämpötila on noin 18 °C ja lokakuun noin 17 °C. Sadetta tulee vuodessa noin 270 millimetriä: heinäkuu on kuivin noin 4 millimetrillä ja marraskuu sateisin noin 44 millimetrillä.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Vanhakaupunki (Icheri Sheher)',
+                tahdet: 3,
+                selite: 'UNESCOn maailmanperintökohde vuodesta 2000, ja kaiken ehtii nähdä jalan yhdessä päivässä.',
+              },
+              {
+                mita: 'Näkymä Neitotornin katolta',
+                tahdet: 3,
+                selite: 'Tornin katolta näkyvät vanhankaupungin kujat, minareetit ja Bakunlahti.',
+              },
+              {
+                mita: 'Širvanšahien palatsi',
+                tahdet: 3,
+                selite: '1400-luvun palatsikompleksi vanhankaupungin kukkulalla.',
+              },
+              {
+                mita: 'Bakun bulevardi',
+                tahdet: 2,
+                selite: 'Merenrantapromenadi, jonka pituus on noin neljä kilometriä ja jota White City -osuus pidensi vielä parilla kilometrillä.',
+              },
+              {
+                mita: 'Gobustanin kalliopiirrokset',
+                tahdet: 2,
+                selite: 'Alle sadan kilometrin päässä Bakusta lounaaseen on UNESCO-kohde, jossa on tuhansia kalliopiirroksia.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Liikenne vaatii tarkkuutta',
+                teksti: 'Monet kuljettajat eivät noudata sääntöjä, eivätkä suojatiet ole aina turvallisia, etenkään yöllä.',
+              },
+              {
+                otsikko: 'Turvatarkastukset',
+                teksti: 'Joillakin nähtävyyksillä ja metroasemilla tehdään tavallisia turvatarkastuksia, ja metroasemilla valokuvaus on kielletty.',
+              },
+              {
+                otsikko: 'Maahan tullaan lentäen',
+                teksti: 'Lähteen mukaan maan maarajat naapurimaihin ovat suljetut siviililiikenteeltä, eikä meritse saapuminen ole mahdollista.',
+              },
+              {
+                otsikko: 'Tuuli tuntuu viileällä säällä',
+                teksti: 'Pohjoistuuli khazri tuntuu viileällä säällä purevalta, joten lämmin takki kannattaa pakata.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Mugham ja ooppera',
+      johdanto: 'Bakussa laulettu ja soitettu mugham on runouden ja improvisaation taidemuoto, jonka UNESCO on ottanut ihmiskunnan aineettoman perinnön luetteloon. Samassa kaupungissa kantaesitettiin 1908 ooppera, joka yhdisti itäisen ja läntisen musiikin.',
+      tehtava: {
+        kysymys: 'Millä soittimella soitettu azerimughamin pätkä lähetettiin Voyager-luotainten mukana avaruuteen?',
+        vaihtoehdot: [
+          'Kamancha',
+          'Tar',
+          'Balaban',
+          'Daf',
+        ],
+        oikea: 2,
+        fakta: 'Balaban on puhallinsoitin, jonka ääni kuuluu Voyager-luotainten Golden Recordilla.',
+      },
+      nostot: [
+        {
+          otsikko: 'Mugham',
+          teksti: 'Mugham on taidemuoto, joka yhdistää klassisen runouden ja musiikillisen improvisaation tietyissä moodeissa. Moodi ei ole pelkkä asteikko, vaan suullisesti siirtyvä kokoelma melodioita, joita esittäjä käyttää improvisoidessaan. Lähteen mukaan pääasteikkoja on useita, ja Rast, Shur ja Segah ovat erityisen yleisiä.\n\nEsitys voi kestää tunteja, ja runojen aihe on yleensä rakkaus, usein mystisenä rakkautena Jumalaan.\n\nUNESCO julisti mughamin mestariteokseksi 2000-luvun alussa ja otti sen myöhemmin aineettoman perinnön luetteloon. Voyager-luotainten Golden Recordille valittiin lyhyt azerimughamin pätkä, jota soitetaan balaban-puhallinsoittimella.',
+          tiedosto: 'Seyid Shushinski ansambl.jpg',
+          lyhyt: 'Mugham yhdistää klassisen runouden ja musiikillisen improvisaation.',
+          selite: 'Mughamin esitys voi kestää tunteja, ja UNESCO otti taidemuodon aineettoman perinnön luetteloon 2000-luvulla.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+          wiki: 'Mugham',
+        },
+        {
+          otsikko: 'Leyli ja Majnun, 1908',
+          teksti: 'Uzeyir Hajibeyovin ooppera Leyli ja Majnun kantaesitettiin 1908 Taghiyevin teatterissa Bakussa. Sitä pidetään muslimi-idän ensimmäisenä oopperana.\n\nLibretto syntyi Uzeyir Hajibeyovin ja hänen veljensä Jeyhun Hajibeyovin yhteistyönä, ja sen pohjana on 1400-luvun runoilija Muhammad Fuzulin runo Leyla ja Majnun. Kantaesityksessä Hajibeyov soitti itse viulua, ja johtajana oli Huseyn Arablinski.\n\nOoppera yhdistää itäisiä ja läntisiä musiikkimuotoja, ja sitä on kuvattu kahden musiikkikulttuurin vuoropuheluksi. Lähteen mukaan se on esitetty yli tuhat kertaa Azerbaidžanin valtion oopperassa ja ulkomailla.',
+          tiedosto: 'Azerbaijan State Academic Opera and Ballet Theater, 2019.jpg',
+          lyhyt: 'Azerbaidžanin valtion akateeminen ooppera- ja balettiteatteri sai rakennuksensa Taghiyevin tuella.',
+          selite: 'Taghiyev kattoi 1911 kaikki rakennuksen kulut, ja siitä tuli myöhemmin Azerbaidžanin valtion akateeminen ooppera- ja balettiteatteri.',
+          lahde: 'Dmitry Karyshev, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Leyli and Majnun (opera)',
+        },
+        {
+          otsikko: 'Taghiyevin teatteri',
+          teksti: 'Zeynalabdin Taghiyev oli kenkien tekijän poika Bakun vanhastakaupungista, ja hän nousi muurarista urakoitsijaksi nuorena. Hän oli itse lukutaidoton, mutta tuki stipendeillä nuorten opintoja.\n\nTaghiyev rahoitti ensimmäisen azerbaidžanilaisen kansallisteatterin 1800-luvun lopulla ja kunnosti sen palon jälkeen. Teatterissa kantaesitettiin Leyli ja Majnun 1908. Vuonna 1911 hän kattoi kaikki kulut rakennukseen, josta tuli myöhemmin Azerbaidžanin valtion akateeminen ooppera- ja balettiteatteri.\n\nHän rahoitti myös Lähi-idän ensimmäisen sekulaarin muslimityttöjen koulun sekä Bakun palokunnan perustamisen 1800-luvun lopulla.',
+          tiedosto: 'Haji Zeynalabdin Taghiyev.jpg',
+          lyhyt: 'Zeynalabdin Taghiyev rahoitti Bakussa teatteria, tyttökoulua ja palokuntaa.',
+          selite: 'Taghiyev oli itse lukutaidoton, mutta tuki stipendeillä nuorten opintoja.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+          wiki: 'Zeynalabdin Taghiyev',
+        },
+        {
+          otsikko: 'Mugham-keskus ja jazz',
+          teksti: 'Kansainvälinen mugham-keskus perustettiin 2000-luvun alussa Bakun bulevardin alueelle, ja se avattiin 2000-luvun lopulla. Keskukseen kuuluvat satojen kuulijoiden konserttisali, äänitysstudio ja harjoitustilat.\n\nMughamin ja jazzin yhdistäminen on oma haaransa: Vagif Mustafazadeh yhdisti jazzin ja mughamin, ja 1990-luvulla Jeff Buckley esitti Alim Qasimovin kanssa duetin Ranskassa. Bakun kansainvälinen jazzfestivaali on yksi kaupungin vuosittaisista tapahtumista.\n\nHajibeyov julkaisi 1940-luvulla kirjan The Principles of Azerbaijan Folk Music.',
+          tiedosto: 'International Mugham Center of Azerbaijan.2.jpg',
+          lyhyt: 'Kansainvälinen mugham-keskus avattiin 2000-luvun lopulla Bakun bulevardin vieressä.',
+          selite: 'Keskuksen konserttisalin lisäksi rakennukseen kuuluvat äänitysstudio ja harjoitustilat.',
+          lahde: 'Natella.M, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Baku',
+        },
+      ],
+    },
+  ],
+  beirut: [
+    {
+      id: 'kaupunki',
+      nimi: 'Beirut',
+      johdanto: 'Beirut on kaivojen kaupunki: nimi tulee foinikian sanasta, joka tarkoittaa kaivoja, ja kaupunki on ollut asuttu yli viisi tuhatta vuotta. Isoisän matkavuonna 1873 Beirut oli kasvava satamakaupunki, ja 1800-luvun jälkipuoliskolla sieltä vietiin silkkiä Eurooppaan, ja kukkulalla opetti jo koulu, josta tuli myöhemmin yliopisto.',
+      kansikuvat: [
+        {
+          tiedosto: 'Mohammad Al-Amin Mosque and Saint George Maronite Cathedral – Beirut, Lebanon.jpg',
+          lyhyt: 'Moskeija ja katedraali seisovat Beirutin keskustassa vierekkäin.',
+          selite: 'Mohammad Al-Aminin moskeija ja Pyhän Yrjänän maroniittikatedraali seisovat Beirutin keskustassa aivan vierekkäin.',
+          lahde: 'Habibhelou, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Pigeon Rocks of Beirut, Rock of Raouche, Beirut, Lebanon.jpg',
+          lyhyt: 'Raouchén Kyyhkyskalliot kohoavat merestä Beirutin rannikolla.',
+          selite: 'Raouchén edustalla oleva luonnonmuodostelma koostuu kahdesta kalliosta, joita kutsutaan Kyyhkyskallioiksi.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Beirut Corniche, Beirut, Lebanon.jpg',
+          lyhyt: 'Corniche on noin viiden kilometrin pituinen kävelybulevardi.',
+          selite: 'Corniche kiertää Beirutin niemeä Saint George -lahdelta Raouchén kautta, ja sen varrella kulkee kävelijöitä, juoksijoita ja pyöräilijöitä.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaivojen kaupunki',
+          teksti: 'Beirutin nimi on vanha. Se tulee foinikialaisesta sanasta bīʾrōt, joka tarkoittaa kaivoja ja viittaa kaupungin helposti saavutettavaan pohjaveteen. Nimi esiintyy jo 1300-luvun eaa. Amarna-kirjeissä, ja kuningas Ammunira Birutasta kirjoitti Egyptin faaraolle kolme akkadinkielistä kirjettä. Kreikkalaiset muuttivat nimen muotoon Bērytós ja roomalaiset muotoon Berytus. Lähteen mukaan varhaisin asutus oli saarella Beirutjoen suistossa, mutta saaren ja rannan välinen kanava liettyi umpeen.',
+          tiedosto: 'Phoenicia, Berytus. Mint AD 117-138 (50958306408).jpg',
+          lyhyt: 'Roomalaisen Berytuksen lyömä pronssikolikko.',
+          selite: 'Antiikin Berytus oli roomalainen siirtokunta, ja siellä lyötiin omia kolikoita.',
+          lahde: 'Carole Raddato from FRANKFURT, Germany, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Beirut',
+        },
+        {
+          otsikko: 'Lakikoulun kaupunki',
+          teksti: 'Kaupunki joutui Rooman haltuun vuonna 64 eaa., kun Pompeius järjesteli Syyrian Rooman maakunnaksi, ja se sai nimen Berytus. Augustuksen aikana siitä tehtiin roomalainen siirtokunta. Lähteen mukaan Berytus oli idän provinsseissa erityisen roomalainen kaupunki. Sen lakikoulu oli laajalti tunnettu, ja koulun opetus nojasi muun muassa roomalaisten juristien Papinianuksen ja Ulpianuksen kirjoituksiin. Justinianus tunnusti koulun 500-luvulla yhdeksi valtakunnan kolmesta virallisesta lakikoulusta. Kun suuri maanjäristys vuonna 551 raunioitti rannikon kaupunkeja, lakikoulun opiskelijat siirrettiin Sidoniin.',
+          tiedosto: 'BeirutRomanBaths.jpg',
+          lyhyt: 'Roomalaisten kylpylöiden raunioita Beirutin keskustassa.',
+          selite: 'Roomalaisen Berytuksen kylpylöiden rauniot ovat Serail-kukkulan rinteellä keskustassa; kuvassa näkyvät lämmitysjärjestelmän pienet pylväät.',
+          lahde: 'Elgaard, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Beirut',
+        },
+        {
+          otsikko: 'Silkkiä ja koulu kukkulalla',
+          teksti: 'Isoisän matkavuonna 1873 Beirut oli kasvava satama- ja kauppakaupunki. Egyptin Ibrahim Pashan vallattua Akkon vuonna 1832 kaupunki oli alkanut elpyä, ja 1800-luvun jälkipuoliskolla se solmi tiiviit kauppayhteydet Eurooppaan, erityisesti Ranskaan. Lähteen mukaan eurooppalainen kiinnostus libanonilaiseen silkkiin ja muihin vientituotteisiin muutti Beirutin merkittäväksi satamaksi ja kauppakeskukseksi. Syrian Protestant College oli avattu vuonna 1866, ja sen kampuksen ensimmäiset rakennukset otettiin käyttöön 1870-luvun alussa. Université Saint-Joseph perustettiin 1800-luvun jälkipuoliskolla.',
+          tiedosto: 'American University of Beirut - College hall (9691111395).jpg',
+          lyhyt: 'American University of Beirutin College Hall.',
+          selite: 'College Hall kuuluu American University of Beirutin kampukseen, joka kasvoi Syrian Protestant Collegen pohjalta.',
+          lahde: 'marviikad from Al Khobar, Saudi Arabia, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'American University of Beirut',
+        },
+        {
+          otsikko: 'Kadun alla Rooman katu',
+          teksti: 'Beirutin keskustassa moderni kaupunki seisoo antiikin päällä. Mohammad Al-Aminin moskeijan rakennustyössä paljastui osa roomalaisen kaupungin itä–länsisuuntaisesta pääkadusta, Decumanus Maximuksesta, päällysteineen ja pylväineen. Maroniittikatedraalin esipihan alta on säilytetty hellenistinen rakennelma, osa pylväskatua ja osmanien aikainen muuri. Nejmehin aukion kreikkalaisen Pyhän Yrjänän katedraalin alla on maanalainen museo, jossa on usean samalle paikalle rakennetun kirkon kerrostumia ja osa roomalaista pylväskatua.',
+          tiedosto: 'Berytus ruins and St. George Maronite Cathedral, Beirut.jpg',
+          lyhyt: 'Berytuksen raunioita Pyhän Yrjänän maroniittikatedraalin vieressä.',
+          selite: 'Keskustan kaivauksissa on tullut esiin eri aikakausien kerrostumia, ja maroniittikatedraalin esipihan alla on säilytetty osa roomalaista pylväskatua.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 PL)',
+          wiki: 'Beirut Central District',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Mohammad Al-Amin Mosque in 2026 01.jpg',
+          lyhyt: 'Mohammad Al-Aminin moskeija Beirutin keskustassa.',
+          selite: 'Moskeija vihittiin käyttöön 2000-luvulla, ja sen tyyli muistuttaa osmanien aikaista arkkitehtuuria.',
+          lahde: 'باسم, Wikimedia Commons (PD)',
+        },
+        kappale: 'Beirut on Välimeren rannalla sijaitseva vilkas pääkaupunki, jossa arabia on virallinen kieli, mutta ranskan ja englannin taito on yleistä. Keskustassa on kävelyreitti, joka yhdistää tärkeimmät arkeologiset kohteet ja historialliset rakennukset, ja rantabulevardi Corniche kiertää niemeä noin viiden kilometrin matkalla. Kaupungissa liikutaan taksilla, mikrobusseilla ja busseilla. Libanonin tilanne voi muuttua nopeasti, joten ajankohtaista matkustustietoa kannattaa seurata ennen matkaa.',
+        artikkeli: {
+          nimi: 'Matkailijan Beirut',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa rantabulevardin palmut, antiikin rauniot ja leipomoiden aamuleipä mahtuvat samaan päivään.',
+          nosto: 'Beirutin keskustassa on kävelyreitti, ja kadun alta paljastuu roomalaisen kaupungin jäänteitä. Ravintolassa mezzeen voi kuulua kymmeniä annoksia.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Rafic Hariri International Airport (BEY) on Libanonin ainoa kansainvälinen lentokenttä, ja se sijaitsee kaupungin eteläpuolella, lyhyen ajomatkan päässä keskustasta. Kaupungissa liikutaan taksilla, mikrobusseilla ja busseilla.',
+              kuva: {
+                tiedosto: 'Airbus A320 of Middle East Airlines at Beirut Rafic Hariri International Airport.jpg',
+                lyhyt: 'Middle East Airlines on Libanonin kansallinen lentoyhtiö.',
+                selite: 'Middle East Airlines on Libanonin kansallinen lentoyhtiö, jonka pääkonttori on Beirutissa.',
+                lahde: 'abdallahh from Montréal, Canada, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Nähtävää: rantabulevardi ja Raouché',
+              teksti: 'Corniche on noin viiden kilometrin pituinen kävelybulevardi, joka kiertää niemen Saint George -lahdelta Raouchén kautta etelään. Palmujen varrelta avautuu näkymä Välimerelle ja idässä Libanonvuorten huipuille, ja reitillä kulkee kävelijöitä, juoksijoita ja pyöräilijöitä. Raouché on kaupunginosa, jonka kalliorinteellä kulkee Avenue de Paris. Edustalla on kaksi kalliota, Kyyhkyskalliot.',
+              kuva: {
+                tiedosto: 'Beirut Corniche North.JPG',
+                lyhyt: 'Corniche on Beirutin merenrantaa kiertävä kävelybulevardi.',
+                selite: 'Corniche kiertää Beirutin niemeä, ja sen varrella kulkee kävelijöitä, juoksijoita ja pyöräilijöitä.',
+                lahde: 'Wusel007, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Nähtävää: keskusta ja museot',
+              teksti: 'Keskustassa on kävelyreitti, joka yhdistää tärkeimmät arkeologiset kohteet ja historialliset rakennukset. Nejmehin aukiolla, jota kutsutaan myös nimellä Place de l\'Étoile, on parlamentti, kaksi katedraalia ja kellotorni. Marttyyrien aukion tuntumassa Mohammad Al-Aminin moskeija ja Pyhän Yrjänän maroniittikatedraali seisovat vierekkäin. Kansallismuseo on Libanonin tärkein arkeologinen museo, ja Sursock-museo esittelee modernia taidetta huvilassa. Hamrassa on American University of Beirutin kampus ja sen arkeologinen museo.',
+              kuva: {
+                tiedosto: 'Nejmeh Square (1).jpg',
+                lyhyt: 'Nejmehin aukio on Beirutin keskustan pääaukio.',
+                selite: 'Nejmehin aukio on Beirutin keskustan pääaukio, jonka reunalla on kellotorni ja parlamenttirakennus.',
+                lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 PL)',
+              },
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Mezze on pienten annosten sarja, johon kuuluu salaatteja kuten tabbouleh ja fattoush, tahnoja kuten hummus ja moutabal, täytettyjä viininlehtiä ja litteää leipää. Ravintolassa mezzeen voi kuulua kymmeniä kylmiä ja kuumia annoksia, kotona usein vain muutama. Aamupalaksi ja välipalaksi sopivat manakish eli za\'atar- tai juustoleipä sekä ka\'ak, yleinen katuleipä. Makeisia ovat esimerkiksi baklava, sfouf ja ka\'ak. Lauantaisin Souksissa kokoontuu Souk el Tayeb -markkina, jossa myydään kauden tuotteita.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Beirutin ilmasto on kuuma-kesäinen Välimeren ilmasto. Kesällä on lämmintä ja kuivaa, ja heinä–elokuussa kosteus voi olla raskas. Syksy ja kevät ovat lämpimiä mutta lyhyitä, ja talvi on leuto ja sateinen. Sateisinta on talvella, ja kesällä sataa hyvin vähän.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kävely Cornichea pitkin',
+                tahdet: 3,
+                selite: 'Noin viiden kilometrin rantakatu palmuineen ja merinäkymineen.',
+              },
+              {
+                mita: 'Raouchén Kyyhkyskalliot',
+                tahdet: 3,
+                selite: 'Kaksi kalliota merellä Raouchén edustalla.',
+              },
+              {
+                mita: 'Kansallismuseo',
+                tahdet: 3,
+                selite: 'Libanonin tärkein arkeologinen museo, jossa on esineitä esihistoriasta mamelukkien aikaan.',
+              },
+              {
+                mita: 'Keskustan aukiot ja kadun alle jääneet rauniot',
+                tahdet: 2,
+                selite: 'Nejmehin ja Marttyyrien aukiot sekä roomalaisten kylpylöiden puisto ovat lähellä toisiaan.',
+              },
+              {
+                mita: 'Sursock-museo',
+                tahdet: 2,
+                selite: '1900-luvun alun huvilassa on moderni ja nykytaide.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Kieli',
+                teksti: 'Arabia on virallinen kieli, mutta ranskan ja englannin taito on yleistä.',
+              },
+              {
+                otsikko: 'Pukeutuminen',
+                teksti: 'Uskonnollisissa kohteissa kannattaa pukeutua vaatimattomasti ja noudattaa paikallisia ohjeita.',
+              },
+              {
+                otsikko: 'Valokuvaus',
+                teksti: 'Valokuvaamisessa kannattaa noudattaa paikallisia ohjeita ja kysyä lupa ihmisiltä ennen kuvaamista.',
+              },
+              {
+                otsikko: 'Ajankohtainen tilanne',
+                teksti: 'Libanonin tilanne voi muuttua nopeasti, joten ajankohtaista matkustustietoa kannattaa seurata ennen matkaa.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Mezze ja mouneh',
+      johdanto: 'Libanonilaisen aterian pöytä täyttyy pienistä annoksista, ja syksyn kellarissa odottavat purkit. Beirutissa leipä, vihannekset ja sitruunamehu kertovat, mitä kaikkea Välimeren itärannalla on kokattu ja säilötty.',
+      tehtava: {
+        kysymys: 'Mitä libanonilainen mouneh tarkoittaa?',
+        vaihtoehdot: [
+          'Viikoittaista kadunkulmamarkkinaa',
+          'Pitkää juhla-aterian kattausta',
+          'Ruoan kausittaista säilömistä',
+          'Leivän paistamista kivi-uunissa',
+        ],
+        oikea: 2,
+        fakta: 'Mouneh on perinne, jossa loppukesän ja syksyn runsas sato muutetaan säilykkeiksi vuoden ympäri käytettäväksi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Mezze: pöytä täynnä pieniä annoksia',
+          teksti: 'Mezze on joukko pieniä annoksia, jotka asetetaan vieraiden eteen. Ravintolassa mezzeen voi kuulua kymmeniä kylmiä ja kuumia annoksia, kotona usein vain muutama. Mukana on salaatteja kuten tabbouleh ja fattoush, tahnoja kuten hummus, baba ghanoush ja moutabal sekä kebbehiä, falafelia ja täytettyjä viininlehtiä. Hummus tehdään kikherneistä, seesamitahinista, sitruunamehusta ja valkosipulista, ja baba ghanoush grillatusta munakoisosta. Annoksia syödään pieninä paloina litteän leivän kanssa.',
+          tiedosto: 'Nourriture terreste dans un restaurant libanais, quartie des Grottes à Genêve (cropped).jpg',
+          lyhyt: 'Mezze on libanonilaisen aterian pienten annosten sarja.',
+          selite: 'Mezze koostuu pienistä annoksista, kuten hummuksesta, baba ghanoushista ja tabboulehista, ja tämä kuva on otettu libanonilaisessa ravintolassa Genevessä.',
+          lahde: 'Tatakdh, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Lebanese cuisine',
+        },
+        {
+          otsikko: 'Leipä ja aamiaisen manakish',
+          teksti: 'Lähteen mukaan leipä kuuluu olennaisesti jokaiseen ateriaan, eikä ruokaa yleensä tarjoilla ilman sitä. Suosittu on taskullinen pita, khubz Arabi eli arabialainen leipä, jota revitään dippailuun tai täytetään falafelilla tai shawarmalla. Marquq on lähes paperinohutta leipää, joka paistetaan metallisella saj-levyllä. Aamiaiseksi syödään usein manaeeshia, pientä pizzamaista leipää, jonka päällä on juustoa tai za\'atar-mausteseosta, ja sitä myydään leipomoissa. Ka\'ak on yleinen libanonilainen katuleipä, jota syödään välipalana.',
+          tiedosto: 'Zaatar Mankousheh.jpg',
+          lyhyt: 'Manakish on libanonilainen za\'atar-leipä.',
+          selite: 'Manakish eli manaeesh on pieni pizzamainen leipä, jota syödään usein aamiaiseksi ja jota myydään leipomoissa.',
+          lahde: 'Elie.ghob, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Manakish',
+        },
+        {
+          otsikko: 'Mouneh: syksyn varasto',
+          teksti: 'Mouneh tarkoittaa ruoan kausittaista valmistusta ja säilöntää ympärivuotista käyttöä varten, ja sana tulee arabian verbistä varastoida. Perinteisesti kotitaloudet valmistivat loppukesällä ja alkusyksyllä, kun sato oli runsaimmillaan, bulguria, oliiviöljyä, labnehia eli siivilöityä jogurttia, tahinia, pikkelsejä, hilloja ja tomaattisosetta. Säilykkeet pidettiin ennen saviruukuissa viileissä kellareissa, nykyään yleisemmin lasipurkeissa. Ruoka seuraa vuodenaikoja, ja maan eri osat tunnetaan eri ruoista: Etelä-Libanon esimerkiksi kibbehstä.',
+          tiedosto: 'Kibbeh Bil Sanieh.jpg',
+          lyhyt: 'Kibbeh kuuluu libanonilaisen mezzen annoksiin.',
+          selite: 'Kibbeh kuuluu libanonilaisen mezzen annoksiin, ja Etelä-Libanon tunnetaan kibbehstä.',
+          lahde: 'Amaiursancho5, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Lebanese cuisine',
+        },
+        {
+          otsikko: 'Keittokirja ja vaikutteet',
+          teksti: 'Beirutissa julkaistiin 1880-luvulla Khalil Sarkisin keittokirja, joka oli lähteen mukaan yksi 1800-luvun ensimmäisistä laajasti luetuista arabiankielisistä keittokirjoista. Libanonilainen keittiö yhdistää turkkilaista, arabialaista ja ranskalaista ruoanlaittoa. Lähteen mukaan osmanien valta toi keittiöön lampaan käytön ja ranskalaiset flanin, éclairit ja croissantit. Yleisiä aineksia ovat valkosipuli, oliiviöljy ja sitruunamehu. Jälkiruokia ovat baklava, sfouf ja ka\'ak, ja meghli-riisipuuro tarjoillaan perheeseen syntyneen vauvan kunniaksi.',
+          tiedosto: 'Lebanon - Baklava - Karabij - Eclair (2318962553).jpg',
+          lyhyt: 'Libanonilaisia jälkiruokia: baklavaa ja ranskalaisvaikutteisia leivoksia.',
+          selite: 'Baklava kuuluu libanonilaisiin jälkiruokiin, joissa näkyy myös ranskalaisia vaikutteita, kuten éclairit.',
+          lahde: 'Serge Melki from Indianapolis, USA, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Lebanese cuisine',
+        },
+      ],
+    },
+  ],
+  jerevan: [
+    {
+      id: 'kaupunki',
+      nimi: 'Jerevan',
+      johdanto: 'Isoisän matkavuonna 1873 Jerevan tunnettiin nimellä Erivan ja oli vielä matala savitalojen kaupunki Hrazdanin rotkon äärellä. Nykyinen vaaleanpunertava tuffikaupunki syntyi 1920-luvun suunnitelman pohjalta, mutta kaupungin juuret ovat Erebunin linnoituksessa vuodelta 782 eaa.',
+      kansikuvat: [
+        {
+          tiedosto: 'Yerevan skyline at dawn.jpg',
+          lyhyt: 'Jerevan seisoo Araratin tasangon reunalla, ja Ararat on kaupungin pääsymboli.',
+          selite: 'Aamuhämärän Jerevan, jonka yllä kohoavat lumipeitteisen Araratin kaksi huippua; kuvan keskellä on oopperarakennus.',
+          lahde: 'Սէրուժ Ուրիշեան (Serouj Ourishian), Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Yerevan, Republic Square of Yerevan, Armenia.jpg',
+          lyhyt: 'Tasavallan aukio on Jerevanin keskusaukio, jota ympäröi viisi tuffirakennusta.',
+          selite: 'Tasavallan aukion suunnitteli Alexander Tamanian vuoden 1924 yleissuunnitelmassa, ja rakennustyöt kestivät vuodesta 1926 vuoteen 1977.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Cascada, Ereván, Armenia, 2016-10-03, DD 18.jpg',
+          lyhyt: 'Kaskadi on terassien portaikko, joka yhdistää keskustan pohjoisille kukkuloille.',
+          selite: 'Kaskadin idea oli jo Tamanianin 1920-luvun suunnitelmassa, ja portaikon sisällä toimii Cafesjian Center for the Arts vuodesta 2009.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Erebuni, valloituksen linnoitus',
+          teksti: 'Erebunin linnoituksen perusti 782 eaa. Urartun kuningas Argishti I Arin Berd -kukkulalle, joka kohoaa Araratin tasangon reunalla. Perustamiskirjoitus löytyi kukkulalta 1950-luvun alussa Konstantin Hovhannisjanin johtamassa kaivausretkikunnassa, ja siinä Argishti kertoo rakentaneensa linnoituksen jumala Khaldin suuruuden nimissä ja nimenneensä sen Erebuniksi. Kaivauksissa paljastuivat kuninkaan palatsi, pylväillä varustettu kokoushalli, Khaldin temppeli ja lukuisia huoneita. Jerevanin nimen uskotaan juontuvan Erebunista: urartun verbi erebu-ni tarkoittaa lähteen mukaan \'ottaa, vallata\'.',
+          tiedosto: 'Erebuni Fortress, Arin Berd 01.jpg',
+          lyhyt: 'Erebunin linnoitus Arin Berd -kukkulalla, jonka Urartun kuningas Argishti I perusti 782 eaa.',
+          selite: 'Erebunin linnoitusta ei koskaan hylätty kokonaan, vaan asutus jatkui ja kasvoi Jerevaniksi. Erebunin museo perustettiin Jerevanin 2 750-vuotisjuhlan aikoihin 1968.',
+          lahde: 'Avetisyan Ani, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Erebuni Fortress',
+        },
+        {
+          otsikko: 'Erivan 1800-luvulla',
+          teksti: 'Isoisän matkavuonna 1873 Jerevan oli Erivanin kuvernementin keskus Venäjän keisarikunnassa, johon kaupunki oli siirtynyt 1827–28. Lähteiden mukaan vanha Erivan oli pieni kaupunki, jossa oli kapeita katuja ja kujia sekä yksikerroksisia savitaloja tasakattoineen. Kaupungin keskusta oli Shahar ja kauppa-alue Ghantar, ja asuinosia olivat muun muassa Kond ja Dzoragyugh. Hrazdanin rotkon rannalla oli ottomaanien 1582–83 rakentama Erivanin linnoitus, jonka venäläiset olivat vallanneet lokakuussa 1827. Muutos alkoi pian: kaupunkiin perustettiin 1870-luvulla ensimmäinen kirjapaino.',
+          tiedosto: 'Ararat. 6, Bazar d\'Erivan - (mission) G. Bapst ; (photogr.) Bapst ; (photogr. reprod. par) Molteni (pour la conférence donnée par) Bapst - btv1b53101419s.jpg',
+          lyhyt: 'Erivanin basaari ranskalaisen Germain Bapstin retkikunnan vedoksessa.',
+          selite: 'Vedos on ranskalaisen Germain Bapstin retkikunnan kuvasarjasta ja esittää Erivanin basaaria ennen Tamanianin yleissuunnitelman aikaisia purkuja.',
+          lahde: 'Bapst, Germain (1853-1921), Wikimedia Commons (PD)',
+          wiki: 'History of Yerevan',
+        },
+        {
+          otsikko: 'Tuffikaupunki syntyy',
+          teksti: 'Jerevanin yleissuunnitelman laati arkkitehti Alexander Tamanian, ja se hyväksyttiin 1924. Tamanian yhdisti uusklassismin Armenian omaan tuffikiveen ja sijoitti säteittäis-kehämäisen kaupunkisuunnitelmansa vanhan katuverkon päälle, mikä johti monien historiallisten rakennusten purkamiseen. Tasavallan aukion viisi päärakennusta rakennettiin vaaleanpunaisesta ja keltaisesta tuffista: työt alkoivat 1926 hallituksen talolla, ja viimeinen rakennus, kansallisgalleria, valmistui 1977.',
+          tiedosto: 'Yerevan, Government House, Government of Armenia, Armenia.jpg',
+          lyhyt: 'Hallituksen talo kellotorneineen Tasavallan aukiolla; rakennustyöt aloitettiin siitä 1926.',
+          selite: 'Hallituksen talon rakennustyöt alkoivat 1926, ja se on yksi aukiota kehystävistä viidestä tuffirakennuksesta.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Alexander Tamanian',
+        },
+        {
+          otsikko: 'Portaikko, josta tuli taidemuseo',
+          teksti: 'Kaskadin idea oli jo Tamanianin 1920-luvun suunnitelmassa: keskusta oli tarkoitus yhdistää pohjoisille kukkuloille terasseilla, vesiputouksilla ja kukkapenkeillä, mutta hanke jäi rahoituksen puutteessa toteuttamatta. Portaikon suunnittelu alkoi 1970-luvun alussa, ja rakentaminen keskeytyi 1980-luvun lopulla. Hallitus päätti 2000-luvun alussa saattaa kompleksin loppuun, ja Cafesjian Center for the Arts avattiin 2009. Portaikossa on terasseja, satoja askelmia ja sisällä kulkevat liukuportaat. Taidekeskuksen kokoelmat perustuvat Gerard L. Cafesjianin kokoelmaan, jossa on lähteen mukaan tuhansia teoksia.',
+          tiedosto: 'CCA Cafesjian Sculpture Garden.jpg',
+          lyhyt: 'Cafesjianin veistospuutarha Kaskadin edustalla, jossa on kansainvälisten taiteilijoiden töitä.',
+          selite: 'Veistospuutarhassa on muun muassa Fernando Boteron, Jaume Plensan, Lynn Chadwickin ja Barry Flanaganin töitä.',
+          lahde: 'Maria.hovsepyan, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Yerevan Cascade',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Lavash in a tonir oven Armenia 2026.jpg',
+          lyhyt: 'Lavash on ohut leipä, joka paistetaan perinteisessä savi-tonir-uunissa.',
+          selite: 'Lavash on armenialaisen ruokapöydän perusleipä, jota syödään alkupalojen, juustojen ja grillilihan kanssa.',
+          lahde: 'Furkan Akkurt, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Ilmasto on mannermainen: kesät ovat kuumia ja kuivia, talvet kylmiä.',
+        artikkeli: {
+          nimi: 'Matkailijan Jerevan',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jonka kattojen yllä kohoaa Ararat: aamulla tuffiaukio, päivällä käsikirjoitusten arkisto ja illalla Kaskadin portaat.',
+          nosto: 'Tasavallan aukiolta pääsee kävellen Pohjoiselle puistokadulle, oopperalle ja Kaskadille. Metro on yksilinjainen, ja asemien katoissa roikkuu kattokruunuja.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Armenian pääportti on Zvartnotsin kansainvälinen lentoasema (EVN), noin 12–15 kilometriä keskustasta länteen; kotimaanlentoja ei ole, koska maa on pieni. Keskustaan pääsee lentoasemalta bussilla tai taksilla. Jerevanin keskusta on kompakti ja helppo kävellä. Metro on yksilinjainen: lähteiden mukaan se on noin 12–13 kilometriä pitkä, siinä on kymmenen asemaa ja se on palvellut vuodesta 1981. Lisäksi liikennöivät linja-autot, johdinautot ja minibussit, ja raitiotie lakkautettiin 2000-luvun alussa. Käteismaksu julkisessa liikenteessä on lakkautettu, joten matkan maksaa maksukortilla, matkakortilla tai mobiililipulla. Taksin tilaamiseen sopivat sovellukset gg ja Yandex.',
+              kuva: {
+                tiedosto: 'Trolleybus LiAZ-5280 (VZTM) in Yerevan, №010.jpg',
+                lyhyt: 'Johdinautot ovat liikennöineet Jerevanissa vuosikymmenien ajan.',
+                selite: 'Jerevanin johdinautoliikenne on jatkunut Neuvostoajalta nykypäivään, ja nykyisin linjoilla on tunnukset T1–T5.',
+                lahde: 'ArtoLeys, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Tasavallan aukiolta Kaskadiin',
+              teksti: 'Tasavallan aukio on kaupungin keskusaukio, jossa viisi tuffirakennusta kehystää soikeaa liikenneympyrää ja suihkulähdealtaita. Uudistetut musiikkisuihkulähteet avattiin 2000-luvun lopulla, ja ne esiintyvät useimpina iltoina huhti–lokakuussa. Pohjoinen puistokatu on 450 metriä pitkä kävelykatu, joka avattiin 2000-luvun lopulla ja yhdistää Abovyanin kadun Vapaudenaukioon. Vapaudenaukion tuntumassa ovat oopperatalo, puisto ja Joutsenjärvi. Kaskadin terassit ja liukuportaat vievät kukkulalle, ja portaat kannattaa kiivetä illalla, jolloin näkyy kaupunki ja Ararat.',
+              kuva: {
+                tiedosto: 'Northern Avenue Yerevan 01.jpg',
+                lyhyt: 'Pohjoinen puistokatu on 450 metriä pitkä kävelykatu, joka avattiin 2000-luvun lopulla.',
+                selite: 'Pohjoinen puistokatu on kävelykatu, joka yhdistää Abovyanin kadun Vapaudenaukioon.',
+                lahde: '23artashes, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Vanha Erivan ja käsikirjoitukset',
+              teksti: 'Matenadaran seisoo Mashtotsin kadun koillispäässä, ja sinne kannattaa tutustua opastetulla kierroksella. Samalla kadulla on Sininen moskeija, jonka sisäänkäynti tulee Mashtotsin kadulta. Hrazdanin vasemmalla rannalla seisoo Pyhän Sargiksen katedraali, ja Shaharin vanhassa kaupunginosassa on Zoravorin kirkko; kirkot ovat avoinna aamusta myöhään iltaan. Erebunin linnoitus on muutaman kilometrin päässä Tasavallan aukiolta kaakkoon, ja lähteen mukaan se on yksi Armenian parhaiten säilyneistä urartulaisista linnakkeista.',
+              kuva: {
+                tiedosto: 'Blue Mosque, Yerevan in 2019 04.jpg',
+                lyhyt: 'Sinisen moskeijan laatoitettu kupoli; moskeija rakennettiin 1765–66 Erivanin kaanin tilauksesta.',
+                selite: 'Moskeijan minaretti oli 1800-luvun Jerevanin korkein rakennelma.',
+                lahde: '23artashes, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Lavash on ohut leipä, joka paistetaan perinteisessä savi-tonir-uunissa ja jota syödään alkupalojen, juustojen ja grillilihan kanssa. Khorovats on armenialaistyylinen grilliruoka lihasta ja vihanneksista. Lahmajoun on ohut taikinapohja, jonka päällä on yrtti–lihatahna, ja sitä myydään katukojuista. Juomista tan on jogurttijuoma, ja tarjolla on myös armenialaista kahvia, joka valmistetaan kardemummalla, sekä granaattiomenamehua. Konjakki on Armeniassa nimeltään konyak, ja Jerevanista tuli 1800-luvun lopulta alkaen konjakin tuotantokeskus. Vernissage-ulkomarkkina Aram- ja Buzand-kaduilla toimii erityisesti viikonloppuisin.',
+              kuva: {
+                tiedosto: 'Lavash stacked at GUM market in Yerevan, Armenia.jpg',
+                lyhyt: 'Lavash on ohut perinteinen armenialainen leipä, jota myydään myös toreilla.',
+                selite: 'Lavashia syödään alkupalojen, juustojen ja grillilihan kanssa, ja se paistetaan perinteisessä savi-tonir-uunissa.',
+                lahde: 'Poshotenk, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Jerevanin ilmasto on mannermainen: kesät ovat kuumia ja kuivia ja talvet kylmiä. Tammikuun keskilämpötila on noin −3,5 °C ja päivän alin lämpötila keskimäärin noin −8 °C. Heinäkuun keskilämpötila on noin 27 °C ja päivän ylin lämpötila keskimäärin noin 35 °C. Huhtikuun keskilämpötila on noin 13 °C ja lokakuun noin 14 °C. Sadetta tulee vuodessa noin 360 millimetriä: sateisin on maaliskuu noin 60 millimetrillä, ja kuivimmat kuukaudet ovat elo- ja syyskuu noin 10 millimetrillä.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kaskadi ja Cafesjianin taidekeskus',
+                tahdet: 3,
+                selite: 'Portaat, terassit ja veistospuutarha; illalla näkyy kaupunki ja Ararat.',
+              },
+              {
+                mita: 'Matenadaran',
+                tahdet: 3,
+                selite: 'Armenialaisten käsikirjoitusten arkisto, jossa kannattaa käydä opastetulla kierroksella.',
+              },
+              {
+                mita: 'Tasavallan aukio illalla',
+                tahdet: 3,
+                selite: 'Tuffirakennukset ja musiikkisuihkulähteet, jotka esiintyvät useimpina iltoina huhti–lokakuussa.',
+              },
+              {
+                mita: 'Erebunin linnoitus',
+                tahdet: 2,
+                selite: 'Urartulainen linnake Arin Berd -kukkulalla, muutaman kilometrin päässä keskustasta kaakkoon.',
+              },
+              {
+                mita: 'Sininen moskeija',
+                tahdet: 2,
+                selite: 'Laatoitettu moskeija ja sen sisäpiha Mashtotsin kadun varrella.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Keskusta on rauhallinen',
+                teksti: 'Keskeisillä alueilla liikkuu mukavasti, mutta väenpaljoudessa kannattaa varoa taskuvarkaita. Tarkista ennen lähtöä ajantasaiset matkustustiedot.',
+              },
+              {
+                otsikko: 'Taksi sovelluksella',
+                teksti: 'Taksikuskien hinnoista riidellään helposti, joten käytä sovellusta tai sovi hinta etukäteen. Uber ja Bolt eivät toimi.',
+              },
+              {
+                otsikko: 'Liikenne on vilkasta',
+                teksti: 'Työmaita ja kuoppia on, joten tien ylitykseen kannattaa käyttää suojateitä.',
+              },
+              {
+                otsikko: 'Viisumi ja maksut',
+                teksti: 'EU-kansalaiset voivat matkustaa Armeniaan yleensä ilman viisumia rajoitetun ajan; tarkista voimassa oleva tieto ennen matkaa. Julkisessa liikenteessä käteismaksu on lopetettu.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjojen kaupunki',
+      johdanto: 'Armenialaisten oma kirjaimisto syntyi noin vuonna 405, ja sen jälkeen kirjoitettua on kerätty Jerevaniin. Kaupunki oli UNESCOn maailman kirjapääkaupunki 2012, ja Matenadaran säilyttää suurta kokoelmaa armenialaisia käsikirjoituksia.',
+      tehtava: {
+        kysymys: 'Mikä käsikirjoitus on lähteen mukaan vanhin säilynyt täydellinen armenialainen käsikirjoitus?',
+        vaihtoehdot: [
+          'Lazarian evankeliumi',
+          'Echmiadzinin evankeliumi',
+          'Vehamor-evankeliumi',
+          'Mughnin evankeliumi',
+        ],
+        oikea: 2,
+        fakta: 'Matenadaran sai Vehamor-evankeliumin lahjoituksena, ja sen ajoitetaan todennäköisesti 600-luvulle.',
+      },
+      nostot: [
+        {
+          otsikko: 'Käsikirjoitusten arkisto',
+          teksti: 'Sana matenadaran yhdistää sanat \'kirja\' ja \'säilytyspaikka\', ja keskiaikaisessa Armeniassa se tarkoitti kirjastoa, koska kaikki kirjat olivat käsin kirjoitettuja. Nykyinen laitos perustettiin 1959 Etchmiadzinin kokoelman pohjalle, ja se nimettiin Mesrop Mashtotsin mukaan 1960-luvun alussa. Edeltäjänä oli Etchmiadzinin käsikirjoituskokoelma, joka kasvoi 1800-luvulta alkaen tuhansiin käsikirjoituksiin. Lähteen mukaan kokoelmassa on kymmeniä tuhansia käsikirjoituksia ja käärettä katkelmineen. Kokoelma on merkitty UNESCOn Muisti maailmasta -rekisteriin.',
+          tiedosto: 'Yerevan, Matenadaran, Entrance, Armenia.jpg',
+          lyhyt: 'Matenadaranin sisäänkäynti ja Mesrop Mashtotsin sekä hänen oppilaansa Koryunin patsas.',
+          selite: 'Rakennuksen edessä seisovat Mashtotsin ja hänen oppilaansa Koryunin patsas sekä keskiaikaisten oppineiden patsaat.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Matenadaran',
+        },
+        {
+          otsikko: 'Aakkoset ja vanhimmat kirjat',
+          teksti: 'Mesrop Mashtots eli 300- ja 400-luvuilla ja keksi lähteen mukaan armenian aakkoset 400-luvun alussa, mitä pidetään ratkaisevana askeleena armenialaisen identiteetin vahvistumisessa. Matenadaranin käsikirjoituksista Lazarian evankeliumi on 800-luvulta ja Echmiadzinin evankeliumi 900-luvulta, ja jälkimmäisen kansi on kaiverrettua norsunluuta. Vehamor-evankeliumi on lähteen mukaan todennäköisesti 600-luvulta ja siten vanhin säilynyt täydellinen armenialainen käsikirjoitus. Ensimmäinen painettu armeniankielinen kirja Urbatagirk ilmestyi Venetsiassa 1512 ja ensimmäinen armeniaksi painettu kartta Amsterdamissa 1695.',
+          tiedosto: 'Armenian illuminated manuscript from Tabriz at Matenadaran in Yerevan, Armenia.jpg',
+          lyhyt: 'Kuvitettu armenialainen käsikirjoitus Matenadaranin kokoelmassa.',
+          selite: 'Cilician mestarien Toros Roslinin ja Sargis Pitsakin kuvitetut käsikirjoitukset ovat kokoelman arvostetuimpia.',
+          lahde: 'Poshotenk, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mesrop Mashtots',
+        },
+        {
+          otsikko: 'Kirjakulttuuri Erivanissa',
+          teksti: 'Jerevanin kansalliskirjasto perustettiin 1800-luvulla, ja nykyinen rakennus Teryanin kadulla on 1900-luvun alkupuoliskolta. Ensimmäinen kirjapaino perustettiin kaupunkiin 1870-luvulla, ja ensimmäinen yleinen kirjasto avattiin 1900-luvun alussa. Khachatur Abovian syntyi 1800-luvun alussa Kanakerin kylässä, joka on nykyisin osa Jerevania. Hänen romaaninsa Armenian haavat kirjoitettiin 1840-luvulla ja julkaistiin 1858: se oli ensimmäinen modernilla armenian kielellä julkaistu romaani, ja sen kieli perustuu Jerevanin murteeseen klassisen armenian sijaan. Abovian oli myös ensimmäinen armenialainen kirjailija, joka kirjoitti lapsille.',
+          tiedosto: 'Khachatur Abovian statue Yerevan 2022.jpg',
+          lyhyt: 'Khachatur Abovianin patsas Jerevanissa, kirjailijan syntymäkylän Kanakerin kaupunginosassa.',
+          selite: 'Abovianin romaani Armenian haavat on kirjoitettu Jerevanin murteen pohjalta.',
+          lahde: 'Yerevantsi, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Khachatur Abovian',
+        },
+        {
+          otsikko: 'UNESCOn kirjapääkaupunki',
+          teksti: 'UNESCO nimesi Jerevanin maailman kirjapääkaupungiksi 2012. Valintaraadin mukaan kaupunki valittiin esittämänsä ohjelman laadun ja monipuolisuuden vuoksi. Kaupungin kirjastoista lastenkirjasto Khnko Aper, Avetik Isahakjanin keskuskirjasto ja musiikkikirjasto ovat 1900-luvulla perustettuja. Kaupungissa on myös talomuseoita, kuten runoilija Hovhannes Tumanyanin ja säveltäjä Aram Khachaturianin museot. Charentsin kirjallisuus- ja taidemuseo avattiin 1900-luvun alussa.',
+          tiedosto: 'National Library of Armenia.JPG',
+          lyhyt: 'Armenian kansalliskirjasto Jerevanissa, joka perustettiin 1800-luvulla.',
+          selite: 'Kansalliskirjasto on toiminut nykyisessä rakennuksessa Teryanin kadulla 1900-luvun alkupuoliskolta.',
+          lahde: 'Serouj, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Yerevan',
+        },
+      ],
+    },
+  ],
+  manama: [
+    {
+      id: 'kaupunki',
+      nimi: 'Manama',
+      johdanto: 'Manama on kauppasatama, jonka nimi mainitaan kirjoissa ensi kerran 1300-luvulla. Isoisän matkavuonna 1873 se oli helmenpyynnin ja kaupan satamakaupunki.',
+      kansikuvat: [
+        {
+          tiedosto: 'Manama Skyline of West Manama 2.jpg',
+          selite: 'Manaman siluetti Qal\'at al-Bahrainin kaivausalueelta nähtynä.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Manama Manama Skyline 04.jpg',
+          selite: 'Manama on Persianlahden alueen rahoituskeskus.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Manama Bahrain Bay 03.jpg',
+          selite: 'Manama sijaitsee matalalla niemellä Persianlahden rannalla.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Nimi, jonka merkitystä ei tiedetä varmasti',
+          teksti: 'Manaman nimen merkitystä ei tiedetä varmasti. Joidenkin tulkintojen mukaan se tulee arabian sanasta el-Menâme, joka tarkoittaa lepopaikkaa tai unien paikkaa, mutta myös persialainen juuri on mahdollinen, ja selitys on epävarma. Nimi mainitaan kaupunkina ensi kerran käsikirjoituksessa, joka ajoitetaan 1300-luvulle, ja varhaisimpien mainintojen aikaan Bahrain oli Hormuzin kuningaskunnan sivuvaltio. Portugalilaiset valtasivat Bahrainin 1500-luvun alussa. Isoisän matkavuonna 1873 Manama oli helmenpyynnin ja kaupan satamakaupunki, jonka hallitsija oli solminut Britannian kanssa rauhan- ja ystävyyssopimuksen vuonna 1861.',
+          tiedosto: '1771 Bonne Map of Arabia - Geographicus - Arabia-bonne-1771.jpg',
+          selite: 'Rigobert Bonnen ranskankielinen Arabian niemimaan kartta vuodelta 1771.',
+          lahde: 'Rigobert Bonne, Wikimedia Commons (PD)',
+          wiki: 'Manama',
+        },
+        {
+          otsikko: 'Kaksi kaupunkia kahdella saarella',
+          teksti: 'Manama ja Muharraq ovat vierekkäisiä kaupunkeja kahdella saarella, ja nykyään ne muodostavat yhtenäisen kaupunkialueen. Muharraq oli Bahrainin pääkaupunki ennen Manamaa ja helmenpyynnin keskus, kun taas Manama oli kauppakaupunki ja portti pääsaarelle. Kaupunkien välille rakennettiin 1900-luvun alkupuolella pengertie, jota pidetään Bahrainin ensimmäisenä nykyaikaisena siltana; nykyään saaria yhdistää kolme pengertietä. Muharraqin saarella on Bahrainin lentoasema. Muharraqin vanhassa kaupungissa on osa UNESCOn maailmanperintökohdetta Pearling, Testimony of an Island Economy (2012).',
+          tiedosto: 'Manama bahrain.jpg',
+          selite: 'NASA:n STS-78-lennolla otettu avaruuskuva Bahrainin pääsaaresta ja sen pohjoisosan kaupunkialueista.',
+          lahde: 'NASA/STS-78, Wikimedia Commons (PD)',
+          wiki: 'Muharraq',
+        },
+        {
+          otsikko: 'Pilvenpiirtäjä, joka ottaa tuulen käyttöön',
+          teksti: 'Bahrain World Trade Centerin kaksoistornit ovat yli 200 metriä korkeat, ja ne valmistuivat 2000-luvun lopulla. Lähteen mukaan se on ensimmäinen pilvenpiirtäjä maailmassa, johon tuuliturbiinit on suunniteltu osaksi rakennetta. Tornit yhdistävissä silloissa on tuuliturbiinit. Purjeen muotoiset tornit ohjaavat Persianlahdelta puhaltavan tuulen turbiinien läpi, ja tuulitunnelikokeiden mukaan virtaus pysyy lähes kohtisuorassa turbiineihin nähden, kun tuuli tulee enintään noin 45 asteen kulmasta tornien keskiakseliin nähden. Turbiinien odotettiin tuottavan murto-osan tornien sähköstä, ja rakennus on voittanut kestävän rakentamisen palkintoja.',
+          tiedosto: 'Manama Bahrain World Trade Centre & Bahrain Financial Harbour 2.jpg',
+          selite: 'Bahrain World Trade Centerin tornien välisissä silloissa on tuuliturbiinit.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bahrain World Trade Center',
+        },
+        {
+          otsikko: 'Talo, jonka rahoittivat lahjoittajat valtionpäämiehistä koululaisiin',
+          teksti: 'Beit Al Quran eli Koraanin talo on islamilaisen taiteen monitoimikeskus Hooran kaupunginosassa. Rakentaminen alkoi 1980-luvulla, ja museo avattiin 1990-luvun kynnyksellä. Lähteen mukaan rahoitus tuli kokonaan lahjoituksina, joita antoivat valtionpäämiehistä koululaisiin. Kokoelman ydin on liikemies Abdul Latif Jassim Kanoon oma käsikirjoituskokoelma, jonka hän lahjoitti museolle. Kompleksiin kuuluvat moskeija, kirjasto, auditorio, koraanikoulu ja museo, jossa on useita näyttelysaleja. Pääsy on lähteen mukaan ilmainen.',
+          tiedosto: 'Museum-Beit-Al-Quran (318).jpg',
+          selite: 'Beit Al Quranin museossa on esillä kalligrafiaa ja käsikirjoituksia.',
+          lahde: 'Ibrahim.ID, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Beit Al Quran',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Manama Manama Souq.jpg',
+          selite: 'Manaman souk on kapeiden kujien verkko, jossa on kauppoja ja räätälinliikkeitä.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Manama on Bahrainin pääkaupunki ja maan suurin kaupunki. Se on pieni, ja vanha souk-alue ja nykyinen pankkikaupunginosa ovat lähellä toisiaan. Vanhan kaupungin ytimessä sijaitsevat basaari ja Bab Al Bahrain, rannan tuntumassa museot. Lentokenttä on viereisellä Muharraqin saarella. Kävelyretket sopivat talvikuukausiin, sillä kesällä on hyvin kuuma.',
+        artikkeli: {
+          nimi: 'Matkailijan Manama',
+          taitto: 'opas',
+          teksti: 'Pieni kaupunki saaren rannalla, jossa vanha basaari ja nykyajan pankkitornit ovat lyhyen matkan päässä toisistaan.',
+          nosto: 'Lentokenttä on viereisellä saarella, ja kävelyretket sopivat parhaiten talvikuukausiin, sillä kesällä on hyvin kuuma.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Bahrain International Airport (BAH) on Muharraqin saarella, muutaman kilometrin päässä Manaman liikealueesta. Uusi matkustajaterminaali on otettu käyttöön 2020-luvun alussa. Lentokentältä pääsee Manaman linja-autoasemalle linjoilla A1, A2, 10 ja 11, ja A1 kulkee säännöllisesti. Kaupungissa on oma linja-autoverkosto. Taksissa kannattaa käyttää mittaria. Saudi-Arabiasta pääsee autolla pengertietä pitkin, joka valmistui 1980-luvulla. Viisumisäännöt kannattaa tarkistaa ennen matkaa.',
+            },
+            {
+              otsikko: 'Basaari ja portti',
+              teksti: 'Manama Souq on pääkaupungin vanha basaari, ja sen pääsisäänkäynti on Bab Al Bahrain. Souk on kapeiden kujien verkko, jossa myydään matkamuistoja, kultaa ja koruja sekä räätälin palveluita. Alue on jaettu uuteen jalankulkualueeseen ja vanhaan osaan, jossa on sekä autotie että jalkakäytävät. Bab Al Bahrainin pohjakerroksessa toimivat matkailuneuvonta ja käsityökauppa.',
+              kuva: {
+                tiedosto: 'Manama Bab al-Bahrain Souq 3.jpg',
+                selite: 'Souk on jaettu uuteen jalankulkualueeseen ja vanhaan osaan.',
+                lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Museot ja rannan kävely',
+              teksti: 'Bahrainin kansallismuseo on lähteen mukaan maan suurin julkinen museo, ja se avattiin vuonna 1988 keinotekoiselle niemelle Muharraqin saarta vastapäätä. Beit Al Quranin pääsy on lähteen mukaan ilmainen. Al Fateh Grand Mosque on avoinna kävijöille muina päivinä paitsi perjantaina, ja opastettuja kierroksia on usealla kielellä. Corniche al-Fateh on rannan kävelykatu, jolta näkee pilvenpiirtäjiä ja lentokoneiden nousuja. Qal\'at al-Bahrain on noin kuuden kilometrin päässä länteen, ja se on UNESCOn maailmanperintökohde.',
+              kuva: {
+                tiedosto: 'Manama Bahrain National Museum Exterior Vorplatz 04.jpg',
+                selite: 'Bahrainin kansallismuseo avattiin vuonna 1988.',
+                lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Bahrainin keittiössä on arabialaisia, iranilaisia, intialaisia, afrikkalaisia ja eurooppalaisia vaikutteita, koska maa on ollut satama ja kauppapaikka. Arkipäivän ruokia ovat harees eli nyhtöliha ja vehnä, muhammar eli riisi taateleilla tai sokerilla paistetun kalan kanssa sekä mumawwash, riisi ja vihreät linssit. Arabialainen kahvi on kansallisjuoma, ja karak-tee tarjotaan vieraanvaraisuuden merkiksi. Perinteistä bahrainilaista ruokaa on ravintoloissa vaikea löytää, koska sitä syödään pääasiassa kotona. Adliya on suosittu ravintola-alue. Ramadanin aikana ravintolat ovat päivisin kiinni.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Manamassa kuukausien keskilämpötila vaihtelee tammikuun noin 17,5 asteesta heinä- ja elokuun noin 35 asteeseen, ja heinä- ja elokuussa päivän ylin lämpötila on keskimäärin noin 40 astetta. Kesäkuusta syyskuuhun ei sada lainkaan, ja sade osuu talvikuukausiin: marraskuusta maaliskuuhun sataa kuukaudessa noin 13–18 millimetriä, ja vuodessa sataa yhteensä noin 95 millimetriä. Paras aika matkailuun on marraskuusta maaliskuuhun, jolloin keskilämpötila on noin 18–25 °C; kesäkuusta syyskuuhun se on noin 33–35 °C.',
+              kuva: {
+                tiedosto: 'Manama Bahrain National Museum Exterior The Pearl Diver.jpg',
+                selite: 'Bahrainin kansallismuseon edustalla on rantakävelyreitti, jolta näkee Muharraqin saarelle.',
+                lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Manama Souq ja Bab Al Bahrain',
+                tahdet: 3,
+                selite: 'Kävelyä vanhan basaarin kujilla ja portin ympärillä.',
+              },
+              {
+                mita: 'Bahrainin kansallismuseo',
+                tahdet: 3,
+                selite: 'Dilmunin esineitä ja useita pysyviä näyttelyitä rannan tuntumassa.',
+              },
+              {
+                mita: 'Beit Al Quran',
+                tahdet: 2,
+                selite: 'Käsikirjoituksia ja kalligrafiaa, ja pääsy on lähteen mukaan ilmainen.',
+              },
+              {
+                mita: 'Qal\'at al-Bahrain',
+                tahdet: 3,
+                selite: 'Maailmanperintökohde noin kuuden kilometrin päässä länteen.',
+              },
+              {
+                mita: 'Corniche al-Fateh',
+                tahdet: 1,
+                selite: 'Rannan kävelykatu, jolta näkee pilvenpiirtäjiä ja lentokoneita.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Ramadanin aikaan',
+                teksti: 'Syöminen, juominen ja tupakointi julkisesti päivällä on kielletty, ja ravintolat ovat päivisin suljettuina.',
+              },
+              {
+                otsikko: 'Pukeutuminen',
+                teksti: 'Pitkät housut ovat kävelyyn suositeltavat, ja osaan museoista ja virastoista ei pääse shortseissa.',
+              },
+              {
+                otsikko: 'Viikonloppu on perjantai ja lauantai',
+                teksti: 'Perjantai ja lauantai ovat julkisen sektorin virallinen viikonloppu, ja Al-Fatih-suurmoskeija on avoinna kävijöille muulloin kuin perjantaisin.',
+              },
+              {
+                otsikko: 'Ajantasaiset ohjeet',
+                teksti: 'Ajantasaiset paikalliset ohjeet kannattaa tarkistaa ennen matkaa ja noudattaa matkan aikana.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kuolemattomuuden maa ja pyhät kirjat',
+      johdanto: 'Bahrainin muinainen nimi Dilmun esiintyy savitauluissa, jotka ovat yli 4 000 vuotta vanhoja, ja kaupungissa säilytetään yhä käsikirjoituksia ja asiakirjoja. Tämä sivu kertoo, mitä tarinoita ja kirjoja saaren ympärille on kertynyt.',
+      tehtava: {
+        kysymys: 'Minkä muinaisen eepoksen mukaan Dilmun oli kuolemattomuuteen liitetty paikka?',
+        vaihtoehdot: [
+          'Odysseia-eepos',
+          'Gilgameš-eepos',
+          'Ramayana-eepos',
+          'Beowulf-eepos',
+        ],
+        oikea: 1,
+        fakta: 'Gilgameš-eepos kuvaa Dilmunin kuolemattomuuden maaksi, ja Bahrainin saaret on yhdistetty Dilmuniin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Maa, jossa ei kuolla',
+          teksti: 'Bahrain yhdistetään Dilmunin sivilisaatioon, joka tunnetaan Gilgameš-eepoksesta kuolemattomuuteen liitettynä paikkana. Lähteen mukaan Dilmun oli eepoksessa sumerien esi-isien paikka ja jumalten tapaamispaikka. Bahrainin kansallismuseo sijaitsee Manaman rannalla keinotekoisella niemellä, ja sen Dilmun-salissa on asetelma, joka kuvaa kohtausta tästä eepoksesta. Lähteen mukaan Dilmunin paikka tarinassa tunnetaan vain eepoksen kautta, mutta sumerilaisissa kirjallisissa viitteissä näkyvät kauppayhteydet on vahvistettu arkeologialla.',
+          tiedosto: 'British Museum Flood Tablet 1.jpg',
+          selite: 'British Museumin kiilakirjoitettu Flood Tablet liittyy Gilgameš-eepokseen.',
+          lahde: 'Photograph by Mike Peel ( www.mikepeel.net )., Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Dilmun',
+        },
+        {
+          otsikko: 'Paratiisi savitaulussa',
+          teksti: 'Sumerilaisessa tarinassa Enki ja Ninhursag Dilmun kuvataan alkutilassa paratiisimaisena: pedot eivät tapa, ei ole kipua eikä tauteja, eikä kuolemaa. Lähteen mukaan Dilmun on keskeinen hahmo sumerilaisessa luomismyytissä, ja tarina Dilmunin paratiisipuutarhasta on voinut inspiroida Eedenin puutarhan kertomusta. Dilmun-sana esiintyy kiilakirjoitustauluissa, jotka löytyivät Uruk-kaupungin Inanna-jumalattaren temppelistä ja jotka ajoitetaan kolmannen vuosituhannen lopulle eaa. Lähteen mukaan mikään tunnettu teksti ei kuitenkaan kerro, että Dilmun olisi ollut sumerien pyhä paikka.',
+          tiedosto: 'Dilmun stamp seal with hunters and goats, rectangular pen, ca early 2nd millennium BC.jpg',
+          selite: 'Dilmunin leimasin 2. vuosituhannen alusta eaa.',
+          lahde: 'Metropolitan Museum of Art, Wikimedia Commons (CC0)',
+          wiki: 'Dilmun',
+        },
+        {
+          otsikko: 'Kuninkaan nimi kivessä',
+          teksti: 'Qal\'at al-Bahrainilta on kaivauksilla löytynyt lisäksi kymmeniä savitauluja. Durand-kivi löydettiin 1800-luvulla Bilad al-Qadimin moskeijan seinästä; sen kirjoitus mainitsee Rimumin, Inzak-jumalan palvelijan, ja Rimum tunnetaan Dilmunin kuninkaana. Alkuperäisen kerrotaan tuhoutuneen toisessa maailmansodassa, ja Bahrainin kansallismuseossa on jäljennös. Museon Dilmunin salissa on leimasinsinettejä sekä Barbarin temppelin ja Saarin löytöjä. Ensimmäiset kaivaukset Qal\'at al-Bahrainilla teki tanskalainen retkikunta 1950-luvulta alkaen.',
+          tiedosto: 'Durand Stone.jpg',
+          selite: 'Jäljennös Durand-kivestä Bahrainin kansallismuseossa; alkuperäinen löytyi 1800-luvulla.',
+          lahde: 'Droodkin, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Dilmun Burial Mounds',
+        },
+        {
+          otsikko: 'Käsikirjoituksia ja asiakirjoja',
+          teksti: 'Bahrainin kansallismuseon asiakirja- ja käsikirjoitussalissa on nähtävillä harvinaisia koraaneja keskiajalta, tähtitiedettä koskevia muistiinpanoja ja kirjeitä. Beit Al Quranin kokoelma esittelee kalligrafiaperinteitä käsikirjoituksista, joita on tuotu Kiinasta Espanjaan asti. Al-Fatih-moskeijassa on kufi-kalligrafiaa kauttaaltaan, ja sen keskuksen kirjastossa on kirjoja, joista osa on noin sata vuotta vanhoja tai vanhempia. Kansallismuseon salissa ja moskeijan kirjastossa säilyvät siis sekä keskiajan että myöhempien vuosisatojen kirjalliset jäljet.',
+          tiedosto: 'Folio from a Koran (8th-9th century).jpg',
+          selite: 'Koraanin lehti 700–800-luvulta, kirjoitettu kufi-tyylillä.',
+          lahde: 'Unknown in Abbasid dynasty, Wikimedia Commons (PD)',
+          wiki: 'Beit Al Quran',
+        },
+      ],
+    },
+  ],
+  tbilisi: [
+    {
+      id: 'kaupunki',
+      nimi: 'Tbilisi',
+      johdanto: 'Tbilisi sai nimensä lämpimistä lähteistään, ja se oli Kura-joen rinteillä suuri kaupunki jo isoisän matkavuonna 1873, jolloin sitä kutsuttiin Tiflisiksi. Vanhoissa kortteleissa kirkot, kylpylät ja linnoitus seisovat vierekkäin, ja kaupunki on rakennettu uudestaan monta kertaa.',
+      kansikuvat: [
+        {
+          tiedosto: 'Narikala, Tiflis, Georgia, 2016-09-29, DD 148-150 HDR.jpg',
+          selite: 'Narikalan linnoitus kohoaa vanhan kaupungin yllä, ja sen ensimmäinen maininta on 300-luvulta.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Metekhi cliff with the church of the Nativity of the Holy Virgin. Tbilisi, Georgia. December 2023.jpg',
+          selite: 'Metekhin kirkko on rakennettu 1200-luvulla Kuran yllä kohoavalle kalliolle.',
+          lahde: 'Kober, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Tbilisi - Freedom Square - 2025-10 - p17.jpg',
+          selite: 'Vapaudenaukio on Rustaveli-kadun itäpää, ja Venäjän vallan aikana sitä kutsuttiin Erivanin aukioksi.',
+          lahde: 'Александр Сигачёв, Wikimedia Commons (CC0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Lämpimän paikan nimi',
+          teksti: 'Tbilisin nimi tulee vanhasta georgian sanasta tpili, lämmin. Syynä ovat alueen rikkipitoiset kuumat lähteet. Legendan mukaan kuningas Vakhtang I metsästi haukan kanssa, ja haukka ja sen saalis putosivat kuumaan lähteeseen. Kuningas ihastui lähteisiin ja päätti raivata metsän ja rakentaa niiden viereen kaupungin. Arkeologisen aineiston mukaan Vakhtang ei kuitenkaan perustanut kaupunkia tyhjästä, vaan elvytti tai rakensi uudelleen osia, kuten Abanotubanin ja Metekhin. Kylpyläkaupunginosan nimi tarkoittaa kirjaimellisesti kylpylän aluetta, ja 1200-luvun loppuun mennessä kaupungista oli kirjattu kymmeniä kylpylöitä.',
+          tiedosto: 'Roofs of the sulfur baths in Tbilisi.jpg',
+          selite: 'Abanotubanin rikkikylpylät tunnistaa pienistä maanpinnan kupoleista.',
+          lahde: 'Wowan1978, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tbilisi',
+        },
+        {
+          otsikko: 'Tiflis, Kaukasian kaupunki',
+          teksti: 'Isoisän matkavuonna 1873 Tbilisiä kutsuttiin Tiflisiksi. Venäjän keisarikunta oli liittänyt Kartli-Kakhetin kuningaskunnan itseensä 1801, ja Venäjän vallan aikana 1801–1917 Tiflis oli Kaukasian hallintopaikka; vuonna 1846 perustetun Tiflisin kuvernementin se oli pääkaupunki. Pääväylä oli Golovin-katu, nykyinen Rustaveli-katu, jolle käskynhaltijat asettuivat asumaan. Maaorjuus oli lakkautettu ja maan ensimmäinen rautatie Tbilisistä Potiin oli avattu 1872, joten rautatie oli kaupungissa vielä aivan uusi. Hevosraitiotietä ei ollut, sillä se alkoi vasta 1800-luvun loppupuolella.',
+          tiedosto: 'Piotr Veretschagin-Tiflis.jpg',
+          selite: 'Piotr Vereštšaginin maalaus Tiflisistä on vuosilta 1873–1874, isoisän matkavuoden ajalta.',
+          lahde: 'Piotr Petrovitch Veretschagin, Wikimedia Commons (PD)',
+          wiki: 'History of Tbilisi',
+        },
+        {
+          otsikko: 'Kaupunki, joka rakennettiin uudelleen',
+          teksti: 'Hyvin harva rakennus säilyi vuoden 1795 tuhosta, joten useimmat Tbilisin historialliset rakennukset ovat Venäjän vallan ajalta 1801–1917. Vanhimmat kaupunginosat Kala, Abanotubani ja Avlabari rakennettiin pääosin uudelleen 1795 jälkeen. Vanhan kaupungin tunnusmerkki ovat puutalot avoimine, veistettyine parvekkeineen. Sololakin, Rustaveli-kadun ja Veran lännenmallisilla alueilla näkyvät beaux-arts-, orientalistinen ja muut historiallisuustyylit. Jugend kukoisti kaupungissa Venäjän vallan viimeisinä vuosikymmeninä. Historiallinen alue oli maailman monumenttivahdin listalla useaan otteeseen.',
+          tiedosto: '(Renovated) Old Town, Tbilisi, Georgia.jpg',
+          selite: 'Vanhan kaupungin parvekkeelliset puutalot ovat pääosin 1800-luvun rakentamia.',
+          lahde: 'Saskia Heijltjes, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Old Tbilisi',
+        },
+        {
+          otsikko: 'Risteyskaupunki',
+          teksti: 'Tbilisi sijaitsee Euroopan ja Aasian välillä lähellä Silkkitietä, ja kauppareittien ja valtojen kamppailu on näkynyt kaupungissa vuosisatojen ajan. Nykyään siellä elää yli sata etnistä ryhmää. Vanhassa kaupungissa moskeija, synagoga sekä eri kirkkokuntien kirkot ovat lähellä toisiaan. 1800-luvulla kaupunki jakautui kortteleihin: Avlabarissa asuivat armenialaiset ja georgialaiset, vasemmalla rannalla oli saksalaiskortteli Alexanderdorf ja oikealla persialainen Said-Abad. Lähteen mukaan oma kaupunkikulttuuri ja folklore muotoutuivat samoin 1800-luvulla.',
+          tiedosto: 'Catedral de Sioni, Tiflis, Georgia, 2016-09-29, DD 97-99 HDR.jpg',
+          lyhyt: 'Siionin katedraalin sisätilat maalasi Grigori Gagarin 1800-luvun puolivälissä.',
+          selite: 'Siionin katedraalin sisätilat maalasi Grigori Gagarin 1800-luvun puolivälissä, ja osa keskiaikaisista freskoista katosi.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tbilisi',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Metekhi church overlooking the Kura River. View from the south-west. Tbilisi, Georgia. December 2023.jpg',
+          lyhyt: 'Metekhin kirkko seisoo kalliolla Kuran yllä.',
+          selite: 'Metekhin kirkko seisoo Kuran yllä kohoavalla kalliolla, ja siellä on myös Vakhtang I:n ratsastajapatsas.',
+          lahde: 'Kober, Wikimedia Commons (CC0)',
+        },
+        kappale: 'Tbilisin kansainväliselle lentoasemalle on keskustaan noin 18 kilometriä, ja kaupunkiin pääsee bussilla tai taksilla. Keskustan kukkuloille nousee funikulaari Mtatsmindaan ja gondolihissi Narikalan linnoitukselle. Metro on rakennettu Neuvostoliiton aikaan, ja asemat ovat runsaasti koristeltuja. Vanhassa kaupungissa kannattaa kävellä, sillä kirkot, kylpylät ja linnoitus ovat lähellä toisiaan. Pöydässä odottavat khachapuri ja khinkali, ja ruokailu on usein yhteinen juhla.',
+        artikkeli: {
+          nimi: 'Matkailijan Tbilisi',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa kuumat lähteet, puuparvekkeet ja vuorten rinteet kohtaavat Kura-joen rannalla.',
+          nosto: 'Tbilisin voi kiertää jalan, funikulaarilla ja gondolilla. Nimi tarkoittaa lämmintä paikkaa, ja lämpimän lähteen äärelle kannattaa pysähtyä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Shota Rustaveli Tbilisin kansainvälinen lentoasema (TBS) on noin 18 kilometriä kaakkoon keskustasta, ja siellä käy vuosittain noin kolme miljoonaa matkustajaa. Metro aloitettiin 1952 ja valmistui 1966; siinä on kaksi linjaa ja yli 20 asemaa, ja osa niistä on maan päällä. Asemat on koristeltu Neuvostoliiton tyyliin runsaasti, ja kyltit ovat georgiaksi ja englanniksi. Raitiotie suljettiin 2000-luvun alussa, mutta keskusta on osin kävelykelpoinen. Kukkuloille pääsee funikulaarilla Mtatsmindaan ja gondolihissillä Rike-puistosta Narikalaan.',
+              kuva: {
+                tiedosto: 'Tbilisi Peace Bridge and Rike Park.jpg',
+                lyhyt: 'Rauhan silta yhdistää Vanhan kaupungin Rike-puistoon.',
+                selite: 'Rauhan silta avattiin 2010-luvun alussa, ja se yhdistää Vanhan kaupungin Kuran yli Rike-puistoon, josta kulkee gondolihissi Narikalan linnoitukselle.',
+                lahde: 'falco, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Vanha kaupunki kävellen',
+              teksti: 'Vanhan kaupungin kujilla on vanhoja parvekkeita, kirkkoja, moskeija ja kylpylöitä. Narikalan linnoitus, Metekhin kirkko, Siionin katedraali ja Anchiskhatin basilika ovat kävelymatkan päässä toisistaan. Abanotubanin rikkikylpylät tunnistaa pienistä maanpinnan kupoleista, ja puutarhan ja kylpylöiden välillä kulkevan reitin varrella on turkkilainen sunnimoskeija. Vapaudenaukio on Rustaveli-kadun itäpää, ja sen pohjoispuolella on matkailutoimisto. Vanha kaupunki ei ole nykyään virallinen hallintoalue.',
+              kuva: {
+                tiedosto: 'Aerial tramway – Tbilisi – 02.jpg',
+                selite: 'Gondolihissin yläasema on Narikalan muurin vieressä, ja lähteen mukaan hissi on avattu 2010-luvulla.',
+                lahde: 'Maesi64, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Kukkuloille ja puistoihin',
+              teksti: 'Kansallinen kasvitieteellinen puutarha on lähteen mukaan yli sadan hehtaarin laajuinen, ja sen pääsisäänkäynti on Narikalan linnoituksen juurella. Kävely- ja pyöräreitit rakennettiin 2010-luvulla. Funikulaari on kulkenut 1905, ja se avattiin uudelleen pitkän sulun jälkeen; se nousee noin 300 metriä Mtatsmindaan, jossa on huvipuisto ja kirjailijoiden panteoni. Kilpikonnajärvelle kulkee köysirata Vaken puistosta. Tbilisin tekoallas kaupungin pohjoispuolella on valmistunut 1900-luvun puolivälissä.',
+              kuva: {
+                tiedosto: 'Funicular of Tbilisi 2014.JPG',
+                selite: 'Funikulaari avattiin 1905, ja se nousee noin 300 metriä Mtatsmindan rinteelle.',
+                lahde: 'Kober, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Georgialainen ateria on usein supra, yhteinen juhla-ateria, jota johtaa maljanpuhuja eli tamada. Khachapuri on juustoleipä, jota kutsutaan Georgian kansalliseksi ruoaksi; Adjarian-versio on venemäinen, ja sen päälle tulee juustoa, voita ja munankeltuainen. Khinkali on taikinapussi, jossa on liha- tai kasvistäyte; sitä syödään käsin, ja ensimmäisellä puraisulla imetään liemi. Georgia on lähteen mukaan yksi maailman vanhimmista viinintuottaja-alueista, ja perinne on vähintään 8 000 vuoden ikäinen.',
+              kuva: {
+                tiedosto: 'Old Tbilisi, Georgian khachapuri, Georgia.jpg',
+                selite: 'Khachapuri on juustoleipä, jota kutsutaan Georgian kansalliseksi ruoaksi.',
+                lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Tbilisissä kesät ovat kuumia: heinä- ja elokuussa päivän ylin lämpötila on keskimäärin noin 32 °C ja elokuun keskilämpötila noin 25 °C. Talvella lämpötila on lähellä nollaa: tammikuun keskilämpötila on noin 3 °C, ja päivän alin lämpötila on keskimäärin noin −1 °C. Sadetta tulee vuodessa noin 510 millimetriä. Sateisimpia ovat touko- ja kesäkuu noin 85 millimetrillä kuussa, ja kuivin on tammikuu noin 16 millimetrillä.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kävely Vanhassa kaupungissa',
+                tahdet: 3,
+                selite: 'Kujilla on vanhoja parvekkeita, kirkkoja ja kylpylöitä.',
+              },
+              {
+                mita: 'Narikalan linnoitus',
+                tahdet: 3,
+                selite: 'Muinainen linnoitus kohoaa jyrkällä kukkulalla kaupungin ja Kuran yllä.',
+              },
+              {
+                mita: 'Kansallinen kasvitieteellinen puutarha',
+                tahdet: 2,
+                selite: 'Lähteen mukaan yli sadan hehtaarin puutarha Narikalan juurella.',
+              },
+              {
+                mita: 'Abanotubanin rikkikylpylät',
+                tahdet: 2,
+                selite: 'Kuumien lähteiden kylpyläkaupunginosa, jonka nimi tarkoittaa kylpylän aluetta.',
+              },
+              {
+                mita: 'Funikulaari Mtatsmindaan',
+                tahdet: 2,
+                selite: 'Vuonna 1905 avattu rata nousee noin 300 metriä.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Kyltit eivät ole aina kaksikielisiä',
+                teksti: 'Metrossa kyltit ovat georgiaksi ja englanniksi, mutta bussien kyltit ovat usein vain georgiaksi.',
+              },
+              {
+                otsikko: 'Yksi kortti riittää',
+                teksti: 'Metromoney-kortti hoitaa useimmat julkiset kulkuneuvot.',
+              },
+              {
+                otsikko: 'Sovi taksin hinta etukäteen',
+                teksti: 'Lentokentältä kannattaa sopia taksin hinta ennen kyytiä tai käyttää sovellustaksia.',
+              },
+              {
+                otsikko: 'Kielet ja hätänumero',
+                teksti: 'Kaupungissa puhutaan georgiaa ja venäjää, ja jonkin verran englantia. Hätänumero kannattaa tarkistaa ennen matkaa.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Runoilijoiden kaupunki',
+      johdanto: 'Tbilisin pääkatu on nimetty keskiaikaisen runoilijan mukaan, ja kaupungin kukkulalla lepäävät maan kirjailijat. Sanat ovat täällä kuuluneet jopa morsiamen myötäjäisiin.',
+      tehtava: {
+        kysymys: 'Milloin Pantterinnahkaan pukeutunut ritari painettiin ensimmäisen kerran?',
+        vaihtoehdot: [
+          '1700-luvun alussa',
+          '1500-luvun lopulla',
+          '1800-luvun lopulla',
+          '1600-luvun lopulla',
+        ],
+        oikea: 0,
+        fakta: 'Painos ilmestyi Tbilisissä noin viisi vuosisataa sen jälkeen, kun Rustaveli todennäköisesti kirjoitti runon.',
+      },
+      nostot: [
+        {
+          otsikko: 'Pantterinnahkaan pukeutunut ritari',
+          teksti: 'Shota Rustaveli eli 1100- ja 1200-lukujen vaihteessa ja oli georgialaisen kultakauden johtava runoilija. Hänen runoelmansa Vepkhistqaosani, suomeksi Pantterinnahkaan pukeutunut ritari, on yli tuhannen nelisäkeen eepos ja Georgian kansalliseepos. Tapahtumat sijoittuvat kuvitteellisiin Intiaan ja Arabiaan, ja kertomus on värikäs allegoria kuningatar Tamarin ajasta. Juonen keskellä ovat ystävät Avtandil ja Tariel sekä heidän etsintänsä Nestan-Darejanille. Nimen eläin on epävarma: tiikeri, pantteri tai leopardi, mutta nykytutkimus kallistuu pantteriin. Tbilisin pääkatu, teatteri, metroasema ja lentoasema on nimetty hänen mukaansa.',
+          tiedosto: 'Shota Rustaveli Monument (Tbilisi).jpg',
+          selite: 'Shota Rustaveli oli keskiaikainen runoilija, jonka mukaan Tbilisin pääkatu on nimetty.',
+          lahde: 'Ephraim Stillberg, Wikimedia Commons (PD)',
+          wiki: 'The Knight in the Panther\'s Skin',
+        },
+        {
+          otsikko: 'Kirja morsiamen myötäjäisissä',
+          teksti: 'Runo painettiin ensimmäisen kerran 1700-luvun alussa Tbilisissä. Rustaveli kirjoitti sen todennäköisesti 1200-luvun alussa, vaikka vaihtoehtona on esitetty jo 1100-luvun loppua. Perimätiedon mukaan runon kappale kuului 1900-luvun alkuun asti morsiamen myötäjäisiin. Vanhimmat säilyneet käsikirjoitukset ovat 1500–1600-luvuilta, ja osa niistä säilytetään Georgian käsikirjoituskeskuksessa Tbilisissä. Unkarilainen taidemaalari Mihály Zichy kuvitti runon 1800-luvulla, ja Tbilisissä on hänelle muistomerkki.',
+          tiedosto: 'Zichy, Mihály. Illustrations to \'The Knight in the Panther\'s Skin\'. 1888 01.jpg',
+          lyhyt: 'Mihály Zichy kuvitti Rustavelin runon 1800-luvulla.',
+          selite: 'Mihály Zichy kuvitti Rustavelin runon 1800-luvulla, ja hänelle on pystytetty muistomerkki Tbilisiin.',
+          lahde: 'Mihály Zichy, Wikimedia Commons (PD)',
+          wiki: 'The Knight in the Panther\'s Skin',
+        },
+        {
+          otsikko: 'Mtatsmindan kirjailijoiden panteoni',
+          teksti: 'Mtatsmindan panteoni on kirjailijoiden ja yhteiskunnallisten vaikuttajien hautausmaa Mamadaviti-kirkon pihalla Mtatsmindan rinteellä. Se perustettiin virallisesti venäläisen kirjailijan Aleksandr Gribojedovin muistoksi. Gribojedov ja hänen georgialainen vaimonsa Nino Chavchavadze olivat ensimmäisiä haudattuja. Aiempia yrityksiä olivat Kukian ja Diduben panteonit. Nikoloz Baratashvili ja Vazha-Pshavela siirrettiin Didubesta Mtatsmindaan Neuvostoaikana. Myös Ilia Chavchavadze on haudattu panteoniin.',
+          tiedosto: 'Panteón de Mtatsminda, Tiflis, Georgia, 2016-09-29, DD 18.jpg',
+          selite: 'Mtatsmindan panteoni sijaitsee Mamadaviti-kirkon pihalla ja on perustettu virallisesti 1900-luvulla.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mtatsminda Pantheon',
+        },
+        {
+          otsikko: 'Kirjailijoiden talo',
+          teksti: 'Kirjailijoiden talo seisoo Sololakissa Ivane Machabelin kadulla. Yrittäjä David Sarajishvili rakennutti sen 1900-luvun alussa arkkitehti Karl Zaarin suunnitelmien mukaan, ja tyyli yhdistää jugendia ja uusbarokkia. Terassin mosaiikki on Villeroy & Bochin laatoista. 1900-luvun alkupuolella talossa kokoontui kirjailijaryhmä Siniset sarvet. Nykyään talo on omistettu kirjallisuudelle, ja siellä toimii kirjailijaresidenssi. Tbilisi oli UNESCOn maailman kirjapääkaupunki 2021, ja kesäpuutarhassa toimii ravintola.',
+          tiedosto: 'Writer\'s House of Georgia.jpg',
+          lyhyt: 'Kirjailijoiden talo valmistui 1900-luvun alussa jugendin ja uusbarokin tyylillä.',
+          selite: 'Kirjailijoiden talo valmistui 1900-luvun alussa David Sarajishvilin rakennuttamana jugendin ja uusbarokin sekoituksena.',
+          lahde: 'Hundnase, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Writers\' House of Georgia',
+        },
+      ],
+    },
+  ],
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierä e03b, Ramallah):
+   * Kaupunkilehti (kansi + teemasivut). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03b-ramallah.
+   */
+  ramallah: [
+    {
+      id: 'kaupunki',
+      nimi: 'Ramallah',
+      johdanto: 'Isoisän matkavuonna 1873 Ramallah oli vielä kivitalojen kylä Jerusalemin pohjoispuolella, noin 870 metrin korkeudessa Juudean vuoristossa. Nykyään kaupunki on tunnettu kahviloistaan, museoistaan ja kulttuuritapahtumistaan, ja siellä toimii Palestiinan hallinnon keskeisiä toimielimiä.',
+      kansikuvat: [
+        {
+          tiedosto: 'Ramallah Sunset.jpg',
+          lyhyt: 'Ramallah seisoo Juudean vuoristossa noin 870 metrin korkeudessa.',
+          selite: 'Kaupunki on rakentunut vuoriston harjanteelle ja rinteille Länsirannan keskiosassa, noin 10–15 kilometriä Jerusalemista pohjoiseen.',
+          lahde: 'Fjmustak, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Ramallah city.jpg',
+          lyhyt: 'Ramallahissa kirkot ja moskeijat kohoavat kaupungin kivitalojen yllä.',
+          selite: 'Kaupunki oli historiallisesti pääosin kristitty, ja nykyään muslimit muodostavat enemmistön ja kristityt merkittävän vähemmistön.',
+          lahde: 'AmeenSaeb, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Al Manara Square.jpg',
+          lyhyt: 'Al-Manaran aukio on Ramallahin keskusaukio: keskellä pylväs, leijonapatsaat ja suihkulähde.',
+          selite: 'Aukio on lähteen mukaan yksi Palestiinan tunnetuista julkisista tiloista, ja arabiaksi sen nimi on Maydan al-Manara.',
+          lahde: 'أمين, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Viisi veljestä ja kylä, joka asutettiin uudelleen',
+          teksti: 'Ramallah mainitaan 1300-luvun alun säätiöasiakirjoissa kylänä, jonka omenat, oliivit ja puuvilla tuottivat tuloja Hebronin Ibrahim-moskeijalle. Mamelukkikauden lopulla kylä rappeutui: vuoden 1525 verorekisterissä se oli asumaton tila, mutta 1530-luvun alussa jälleen asuttu. Perimätiedon mukaan nykyisen Ramallahin perustivat Rashid al-Haddadinin viisi poikaa, jotka tulivat Karakin seudulta nykyisen Jordanian puolelta; Haddadin tarkoittaa arabiaksi seppiä. Suvun kerrotaan väittäneen polveutuvansa ghassanideista, muinaisesta arabikristittyjen heimoliitosta. 1500-luvun lopun verorekisterissä kylässä oli noin 80 taloutta, joista valtaosa kristittyjä.',
+          tiedosto: 'Panorama Ramallah hills.jpg',
+          lyhyt: 'Kukkuloita ja oliivipuita Ramallahin ympäristössä Juudean vuoristossa.',
+          selite: 'Mamelukkien aikaan kylän tuloja kerryttivät muun muassa oliivit ja omenat, ja hedelmätarhat erottivat sen monista naapureista.',
+          lahde: 'Fjmustak, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ramallah',
+        },
+        {
+          otsikko: 'Kivitalojen kylä isoisän aikaan',
+          teksti: 'Isoisän matkavuonna 1873 Ramallah oli vielä kivitalojen kylä Jerusalemin alueella. Amerikkalainen Edward Robinson kirjasi seudulla käydessään 1830-luvulla, että asukkaat olivat kreikkalaisen riituksen kristittyjä; väkeä oli arviolta alle tuhat. Kylä maksoi veroa viljana Jerusalemin pyhälle alueelle. 1800-luvun lopulla Palestine Exploration Fund kuvasi kylää suureksi kristityksi kyläksi, jossa oli hyvin rakennettuja kivitaloja korkealla harjanteella ja näkymä länteen merelle asti.',
+          tiedosto: '2010-08 Ramallah 11.jpg',
+          lyhyt: 'Kivinen asuinrakennus kaari-ikkunoineen ja tiilikattoineen Ramallahissa.',
+          selite: 'Kuvan talo on kivirakenteinen; 1800-luvun lopulla kylää kuvattiin hyvin rakennettujen kivitalojen kyläksi.',
+          lahde: 'Ralf Lotys (Sicherlich), Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Ramallah',
+        },
+        {
+          otsikko: 'Kveekarikoulusta Detroitiin',
+          teksti: 'Amerikkalaiset kveekarit perustivat Ramallahiin kouluja naisten ja tyttöjen koulutuksen parantamiseksi. Jones-pariskunta aloitti tyttöjen koulutyön vuonna 1869, ja 1880-luvun lopulta koulu toimi sisäoppilaitoksena, jonne tuli oppilaita Jerusalemista, Lyddasta, Jaffasta ja Beirutista. Poikien koulun rakentaminen alkoi 1900-luvun alussa. Pian kauppiaat lähtivät Yhdysvaltoihin ja perustivat tuonti- ja vientiliikkeitä, jotka myivät mattoja. Ramallahilaisten siirtolaisten yhteisö on lähteen mukaan yksi Yhdysvaltain suurimmista arabiyhteisöistä, erityisesti Michiganissa, ja Detroitissa perustettiin 1950-luvun lopulla American Federation of Ramallah.',
+          tiedosto: 'Friends School.2.JPG',
+          lyhyt: 'Friends Boys School -rakennus Ramallahin Friends-koulujen yläkoulun kampuksella.',
+          selite: 'Ramallahin Friends-koulut ovat kveekarien perustamia: tyttöjen koulutyö alkoi 1860-luvun lopulla, ja poikien koulun rakentaminen alkoi 1900-luvun alussa.',
+          lahde: 'Friends123, Wikimedia Commons (CC0)',
+          wiki: 'Ramallah Friends School',
+        },
+        {
+          otsikko: 'Radiota ja huviloita: mandaattiajan Ramallah',
+          teksti: 'Brittiläisen mandaatin aikana Ramallah kehittyi, ja 1920-luvulla paikallinen arabiylempi luokka rakennutti kaupunkiin monikerroksisia huviloita, joista monet ovat yhä pystyssä. Sähkö tuli kaupunkiin 1930-luvulla. Vuonna 1936 aloittaneen Palestine Broadcasting Servicen pääasiallinen lähetin sijaitsi Ramallahissa, vaikka studiot olivat Jerusalemissa; lähetykset olivat arabiaksi, hepreaksi ja englanniksi. 2000-luvun rakennusbuumi on nostanut uusia asuin- ja hotellirakennuksia erityisesti Al-Masyounin hienostuneeseen ja moderniin kaupunginosaan.',
+          tiedosto: 'Old Mansion in Ramallah Palestine 2023.jpg',
+          lyhyt: 'Kaksikerroksinen kivitalo kaari-ikkunoineen ja ulkoportaineen Ramallahissa.',
+          selite: 'Kuvan kivitalossa on kaari-ikkunoita ja ulkoportaat; Ramallahiin rakennettiin 1920-luvulla monikerroksisia huviloita.',
+          lahde: 'Manintheopt, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ramallah',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'شارع السهل، رام الله.jpg',
+          lyhyt: 'Sahl-katu Ramallah Tahtan alueella, jossa on lehtipuita ja kahvilaterasseja.',
+          selite: 'Ramallah Tahta tarkoittaa alempaa Ramallahia, ja alue tunnetaan vanhana kaupunkina kirkkoineen ja moskeijoineen.',
+          lahde: 'Yousef Odeh Photos, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Ramallahiin ei lennetä, vaan sinne tullaan Jerusalemista bussilla tai yhteistaksilla. Tarkista ennen matkaa ulkoministeriön matkustustiedote. Keskusta on pieni ja kävelyyn sopiva, ja Al-Manaran aukio on sen sydän. Kaupungissa puhutaan arabiaa, ja monet osaavat englantia. Ilmasto on Välimeren tyyppinen: kesä on kuiva ja talvi leuto ja sateinen.',
+        artikkeli: {
+          nimi: 'Matkailijan Ramallah',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa vanhat kivitalot, kahvilakadut ja kulttuurikeskukset sijaitsevat vuoriston harjanteella: aamulla mehubaari Al-Manaran aukiolla, päivällä kirkot ja koulut, illalla Kulttuuripalatsin kukkula.',
+          nosto: 'Keskusta on pieni ja kävelyyn sopiva. Kulttuuripalatsi ja Mahmoud Darwish -museo sijaitsevat kukkulalla kaupungin lounaislaidalla.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Ramallahissa ei ole matkustajalentoja liikennöivää lentoasemaa. Lähimmät kansainväliset kentät ovat Ben Gurionin kansainvälinen lentoasema (TLV) Lodissa ja Queen Alia -lentoasema (AMM) Jordanian Ammanissa. Perille tullaan Jerusalemista bussilla tai yhteistaksilla, ja matka on noin 10–15 kilometriä. Tarkista ennen matkaa ulkoministeriön matkustustiedote. Jerusalemista tulevat bussit päättyvät Al-Manaran aukion lähelle, ja kaupungissa on useita linja-autoasemia. Keskusta on pieni ja kävelyyn sopiva. Taksilla ja yhteistaksilla (serviis) pääsee lähiöihin ja ympäryskyliin, ja hinta kannattaa sopia ennen kyytiin nousua.',
+              kuva: {
+                tiedosto: 'Streets in Ramallah 01.jpg',
+                lyhyt: 'Kerrostalojen reunustama katu Ramallahissa.',
+                selite: 'Keskusta on pieni ja kävelyyn sopiva, ja taksilla ja yhteistaksilla pääsee lähiöihin ja ympäryskyliin.',
+                lahde: 'Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Al-Manaran aukio ja keskusta',
+              teksti: 'Al-Manaran aukio on kaupungin keskusaukio. Sen vieressä on Silwadi-mehubaari, joka tarjoaa tuorepuristettuja mehuja. Hisbeh-tuoretori on lähellä aukiota, ja sieltä saa hedelmiä ja vihanneksia. Keskustan kaduilla on paljon falafel- ja shawarma-paikkoja ja kahviloita, ja keskusta on ruuhkainen päivisin. Al-Masyoun on hienostuneempi ja uudempi kaupunginosa ravintoloineen ja kahviloineen, ja siellä sijaitsevat myös monet edustustot.',
+              kuva: {
+                tiedosto: 'Ramallah market 06.jpg',
+                lyhyt: 'Katettu vihannestori Ramallahissa.',
+                selite: 'Ramallahin toreilla myydään tuoreita hedelmiä ja vihanneksia.',
+                lahde: 'Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Vanha kaupunki, kirkot ja koulut',
+              teksti: 'Ramallahin vanha kaupunki, Ramallah Tahta, ei muistuta tyypillistä medinaa, mutta siellä on useita kirkkoja ja moskeijoita. Dar Zahran Heritage Building on suojeltu, suvun omistama rakennus ja historiamuseo vanhassa kaupungissa. Kirkastuksen kirkko on bysanttilaistyylinen basilika, ja lähteen mukaan se vihittiin 1800-luvun puolivälissä. Pyhän perheen kirkko ja kveekarien Friends-koulut ovat vanhan kaupungin tuntumassa; alakoulun kampus on vanhan kaupungin keskustan lähellä ja yläkoulu al-Birehin puolella.',
+              kuva: {
+                tiedosto: 'Ramallah stunning Old city.jpg',
+                lyhyt: 'Vanha kalkkikivitalo kaksoisikkunoineen Ramallahin vanhassa kaupungissa.',
+                selite: 'Ramallahin vanha kaupunki ei muistuta tyypillistä medinaa, mutta siellä on useita kirkkoja ja moskeijoita.',
+                lahde: 'Fateen888, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Falafel ja hummus-pitavoileivät ovat arkiruokaa, ja leipomoissa myydään kmaaj-pitaleipää. Musakhania pidetään usein Palestiinan kansallisruokana: se on uunissa paistettua kanaa sipulin, sumakin ja pinjansiementen kanssa leivän päällä, ja se kuuluu myös Ramallahin ravintoloiden listoille. Mansaf, karitsaa ja riisiä jogurttikastikkeessa, on Länsirannan keskiosan perinneruoka juhliin ja suuriin kokoontumisiin. Arabialainen jäätelö on sitkeämpää ja tahmeampaa kuin länsimainen. Juomista tarjolla on arabialaista kahvia, minttuteetä, sahlebia ja tuoremehuja, ja kahviloissa poltetaan vesipiippua.',
+              kuva: {
+                tiedosto: 'Mussakhan.jpg',
+                lyhyt: 'Musakhan on uunissa paistettua kanaa sipulin, sumakin ja pinjansiementen kanssa leivän päällä.',
+                selite: 'Musakhan on lähtöisin Tulkarmin ja Jeninin seudulta, ja se tehdään perinteisesti oliivisadon aikaan.',
+                lahde: 'Alice Wiegand, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Ramallahin ilmasto on Välimeren tyyppinen: kesä on kuiva, talvi leuto ja sateinen, ja joinakin vuosina sataa lunta. Esityksiä ja konsertteja varten kannattaa katsoa Kulttuuripalatsin ohjelma, sillä palatsi on kaupungin pääpaikka niille.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Al-Manaran aukio ja Silwadin tuoremehut',
+                tahdet: 3,
+                selite: 'Kaupungin keskusaukio, jonka vieressä on mehubaari.',
+              },
+              {
+                mita: 'Kulttuuripalatsi ja Mahmoud Darwish -museo',
+                tahdet: 3,
+                selite: 'Kukkulalla sijaitseva kulttuurikeskus ja runoilijan museo.',
+              },
+              {
+                mita: 'Vanha kaupunki ja Dar Zahran',
+                tahdet: 2,
+                selite: 'Kivitaloja, kirkkoja ja suojeltu Dar Zahranin rakennus.',
+              },
+              {
+                mita: 'Khalil Sakakini -kulttuurikeskus',
+                tahdet: 2,
+                selite: 'Näyttelyitä, runoiltoja ja elokuvanäytöksiä kunnostetussa vanhassa talossa.',
+              },
+              {
+                mita: 'Tell en-Nasbehin kukkula',
+                tahdet: 1,
+                selite: 'Muinainen kumpu heti kaupungin eteläpuolella, jonka ympäri voi kävellä.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Tarkastuspiste matkalla',
+                teksti: 'Tarkista ennen matkaa ulkoministeriön matkustustiedote.',
+              },
+              {
+                otsikko: 'Ei omaa valuuttaa',
+                teksti: 'Palestiinalla ei ole omaa valuuttaa. Ramallahissa hinnat ovat yleensä Israelin uusina sekeleinä; myös Jordanian dinaari on käytössä.',
+              },
+              {
+                otsikko: 'Kielet',
+                teksti: 'Arabia on virallinen kieli; monet bussinkuljettajat osaavat perusenglantia.',
+              },
+              {
+                otsikko: 'Aukioloajat vaihtelevat',
+                teksti: 'Kirkot, moskeijat ja museot ovat toimivia paikkoja, ja aukioloajat vaihtelevat. Mukataa on suljettu yleisöltä.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Runoilijan kaupunki',
+      johdanto: 'Runoilija Mahmoud Darwish asettui 1990-luvulla Ramallahiin ja on haudattu kaupungin Kulttuuripalatsin viereen kukkulalle. Hänen mukaansa on nimetty museo ja kansainvälinen palkinto, ja kaupungissa järjestetään runoiltoja, elokuvanäytöksiä ja näyttelyitä.',
+      tehtava: {
+        kysymys: 'Minkä Ramallahin rakennuksen viereen runoilija Mahmoud Darwish on haudattu?',
+        vaihtoehdot: [
+          'Kulttuuripalatsi',
+          'Kirkastuksen kirkko',
+          'Friends-koulu',
+          'Al-Kasaba-teatteri',
+        ],
+        oikea: 0,
+        fakta: 'Kulttuuripalatsi on oikea vastaus: runoilijan museo ja hautapaikka ovat samalla kukkulalla palatsin vieressä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Runoilija, joka muutti Ramallahiin',
+          teksti: 'Mahmoud Darwishia pidetään lähteen mukaan laajasti Palestiinan kansallisrunoilijana. Hän syntyi al-Birwan kylässä Galileassa ja oli perheen toinen lapsi; äiti ei osannut lukea, ja isoisä opetti hänet lukemaan. Ensimmäinen runokokoelma ilmestyi lähteen mukaan, kun hän oli 19-vuotias, ja elinaikanaan hän julkaisi yli 30 runokokoelmaa. Hän toimi myös useiden kirjallisuuslehtien toimittajana. Hän muutti Ramallahiin 1990-luvulla ja kuoli vuonna 2008. Hänet on haudattu Kulttuuripalatsin viereen kukkulan laelle, josta on näkymä Jerusalemiin.',
+          tiedosto: 'Mahmoud Darwish Museum IMG 4054.jpg',
+          lyhyt: 'Kirjoituspöytä ja kehystettyjä asiakirjoja Mahmoud Darwish -museon näyttelytilassa.',
+          selite: 'Museo ja mausoleumi on omistettu runoilijalle, joka muutti Ramallahiin 1990-luvulla.',
+          lahde: 'بدارين, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mahmoud Darwish',
+        },
+        {
+          otsikko: 'Runo, jota käännettiin ja luettiin',
+          teksti: 'Aluksi Darwish kirjoitti klassisen arabialaisen runon mukaan yksiloppuisia säkeitä, mutta 1970-luvulla hän siirtyi vapaaseen mittaan, ja kieli muuttui henkilökohtaisemmaksi ja joustavammaksi. Hän kirjoitti arabiaksi, mutta puhui myös englantia, ranskaa ja hepreaa. Vaikuttajikseen hän mainitsi irakilaisrunoilijat Abd al-Wahhab al-Bayatin ja Badr Shakir al-Sayyabin sekä ranskalaisen Arthur Rimbaud\'n ja amerikkalaisen Allen Ginsbergin. Hänen runojaan ja muuta kirjallisuuttaan on lähteen mukaan julkaistu 20 kielellä, ja useita hänen kokoelmiaan on käännetty myös hepreaksi.',
+          tiedosto: 'Mahmoud Darwish Museum IMG 4051.jpg',
+          lyhyt: 'Mustekyniä ja mustepullo Mahmoud Darwish -museon vitriinissä.',
+          selite: 'Vitriinin kyltin mukaan esineet kuuluivat runoilijan omaisuuteen.',
+          lahde: 'بدارين, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mahmoud Darwish',
+        },
+        {
+          otsikko: 'Palkinto runoilijan nimellä',
+          teksti: 'Mahmoud Darwish -säätiö perustettiin 4. lokakuuta 2008 palestiinalaiseksi voittoa tavoittelemattomaksi säätiöksi turvaamaan runoilijan kulttuurista, kirjallista ja älyllistä perintöä. Seuraavana päivänä Berliinin kansainvälisellä kirjallisuusfestivaalilla järjestettiin maailmanlaajuinen lukutilaisuus runoilijan muistoksi. Säätiö jakaa vuosittain Mahmoud Darwish -luovuuspalkinnon Palestiinan ja muiden maiden älymystölle; sen sai vuonna 2010 eteläafrikkalainen runoilija Breyten Breytenbach, ja vuonna 2017 yhdessä muiden kanssa egyptiläinen kirjailija Salwa Bakr ja intialainen kirjailija Arundhati Roy.',
+          tiedosto: 'حديقة متحف محمود درويش - رام الله.jpg',
+          lyhyt: 'Mahmoud Darwish -museon puutarha kukkulalla Ramallahissa.',
+          selite: 'Runoilijan nimeä kantava säätiö jakaa vuosittain kansainvälisen luovuuspalkinnon.',
+          lahde: 'Hadi Hijjawi, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mahmoud Darwish',
+        },
+        {
+          otsikko: 'Sakakini-keskus: näyttelyitä, runoiltoja ja elokuvia',
+          teksti: 'Khalil Sakakini -kulttuurikeskus on palestiinalainen taide- ja kulttuurijärjestö Ramallahissa, ja se on nimetty jerusalemilaisen oppineen ja runoilijan Khalil Sakakinin mukaan. Keskus toimii kunnostetussa 1900-luvun alun rakennuksessa, joka perustuu perinteiseen palestiinalaiseen rakentamistapaan. Keskus perustettiin 1990-luvulla, ja sen ensimmäinen johtaja oli kirjailija ja tutkija Adila Laïdi-Hanieh. Siellä järjestetään taidenäyttelyitä, kirja- ja runolukuiltoja, lasten toimintaa ja elokuvanäytöksiä. Laïdi-Hanieh toimi myöhemmin Palestiinan museon pääjohtajana.',
+          tiedosto: 'WikiArabia 2016 Tech Meetup Ramallah 55.JPG',
+          lyhyt: 'Khalil Sakakini -kulttuurikeskuksen talo ulkoportaineen Ramallahissa.',
+          selite: 'Keskus toimii kunnostetussa 1900-luvun alun rakennuksessa, joka perustuu perinteiseen palestiinalaiseen rakentamistapaan.',
+          lahde: 'Ja\'afar Hajeer, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Khalil Sakakini Cultural Center',
+        },
+      ],
+    },
+  ],
 };

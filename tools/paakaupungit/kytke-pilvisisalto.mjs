@@ -19,13 +19,14 @@ function js(v, sisennys) {
   return `{\n${e.map(([k, x]) => `${s}  ${JS_ID.test(k) ? k : js(k, 0)}: ${js(x, sisennys + 2)}`).join(',\n')},\n${s}}`;
 }
 const kaupungit = [];
-for (const era of readdirSync(data).filter((x) => /^e\d+$/.test(x)).sort())
+for (const era of readdirSync(data).filter((x) => /^e\d+[a-z]?$/.test(x)).sort())
   for (const id of readdirSync(join(data, era)).sort()) {
     const p = join(data, era, id, 'sisalto.json');
     if (existsSync(p)) kaupungit.push(JSON.parse(readFileSync(p, 'utf8')));
   }
 // Lisää taulun loppuun (ennen sulkevaa "};") rivit; taulu tunnistetaan otsikkorivistä.
 function lisaa(tiedosto, otsikko, rivit, kommentti) {
+  if (!rivit.length) return; // ei tyhjää kommenttilohkoa (esim. erä ilman säärivejä)
   const polku = join(repo, 'js/packs', tiedosto);
   let s = readFileSync(polku, 'utf8');
   const a = s.indexOf(otsikko);
@@ -37,9 +38,9 @@ function lisaa(tiedosto, otsikko, rivit, kommentti) {
 }
 const era = (k) => `${k.era}`;
 const kom = (mita) => [
-  `PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e01–e02, tarkistettu ${kaupungit.length} kaupunkia 0 virhettä):`,
+  `PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät ${[...new Set(kaupungit.map((k) => k.era))].join(', ')}, ${kaupungit.length} kaupunkia):`,
   `${mita}. Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa`,
-  'maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e01-pilvi ja -e02-pilvi.',
+  `maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat ${[...new Set(kaupungit.map((k) => `paakaupungit-${k.era}-pilvi`))].join(', ')}.`,
 ];
 const r = (k, arvo) => `  ${JS_ID.test(k) ? k : js(k, 0)}: ${js(arvo, 2)},`;
 lisaa('kulttuuri-kategoriat.js', 'export const KULTTUURI_KATEGORIAT = {', kaupungit.map((k) => r(k.id, k.kaupunkilehti)), kom('Kaupunkilehti (kansi + teemasivut)'));

@@ -3357,4 +3357,81 @@ export const EUROPE_VALOKUVAT = {
     lyhyt: 'Vaduzin linna on Liechtensteinin ruhtinaan palatsi ja kaupungin tunnetuin maamerkki.',
     selite: 'Linnan vanhimmat osat ovat 1100-luvulta, ja ruhtinasperheen vakituinen asuinpaikka se on ollut vuodesta 1938.',
   },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e03, 7 kaupunkia):
+   * Valokuva (vain dataa: ei pysäkkiä, ei kuluttajaa vielä). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03-pilvi.
+   */
+  abudhabi: {
+    tiedosto: 'Qasr al Hosn.jpg',
+    lahde: 'Darthjipsu, Commons (CC BY-SA 4.0)',
+    lyhyt: 'Qasr Al Hosn on Abu Dhabin vanhin kivirakennus ja nykyään museo.',
+    selite: 'Qasr Al Hosn on Abu Dhabin vanhin kivirakennus. Linnake oli emiirin palatsi ja hallituspaikka vuoteen 1966, ja nykyään se on museo ja kulttuurikohde.',
+  },
+  amman: {
+    tiedosto: 'Amman Odeum c 1900.jpg',
+    vuosi: 'noin 1900',
+    lahde: 'American Colony (Jerusalem), Commons (PD)',
+    lyhyt: 'Roomalaisajan raunio Ammanissa noin vuonna 1900.',
+    selite: 'Noin vuonna 1900 Amman oli pieni tšerkessien asuttama kylä, jossa seisoi yhä roomalaisajan raunioita.',
+  },
+  baku: {
+    tiedosto: 'Baku, 1861.jpg',
+    vuosi: '1861',
+    lahde: 'Alexander Ulsky (1837–1868), Commons (PD)',
+    lyhyt: 'Baku vuonna 1861: muurien ympäröity kaupunki Bakunlahden rannalla.',
+    selite: 'Baku oli tuolloin Venäjän keisarikunnan lääninpääkaupunki, ja muurien sisäpuolinen kaupunki erottui muurien ulkopuolisesta.',
+  },
+  beirut: {
+    tiedosto: 'View of Beirut, looking towards body of water) - Bonfils LCCN2004668094.jpg',
+    vuosi: 'noin 1867',
+    lahde: 'Maison Bonfils (Beirut, Lebanon), photographer, Commons (PD)',
+    lyhyt: 'Beirut 1800-luvulla, kasvava satama- ja kauppakaupunki.',
+    selite: 'Beirut oli 1800-luvulla kasvava satama- ja kauppakaupunki, jolla oli tiiviit yhteydet Eurooppaan.',
+  },
+  jerevan: {
+    tiedosto: 'Caucase. Mosquée Géhu. Erivan - (mission) de Baye ; (photogr.) de Baye ; (photogr. reprod. par) Molteni (pour la conférence donnée par) de Baye - btv1b53251410k.jpg',
+    vuosi: '1898',
+    lahde: 'Baye, Joseph de (1853-1931), Commons (PD)',
+    lyhyt: 'Sininen moskeija Erivanissa ranskalaisen Joseph de Bayen retkikunnan vedoksessa 1898.',
+    selite: 'Vedoksessa näkyy moskeijan laatoitettu kupoli puiden takana ja ihmisiä pihalla. Moskeija rakennettiin 1765–66 Erivanin kaanin Hoseyn Ali Khanin tilauksesta, ja vedoksen tekijä on ranskalainen Joseph de Baye.',
+  },
+  manama: {
+    tiedosto: 'Portuguese Fort Bahrain 1870.jpg',
+    vuosi: 'noin 1870',
+    lahde: 'Unknown / Anonymous photographer, Commons (PD)',
+    lyhyt: 'Vanha linnake Bahrainissa noin vuonna 1870, muutamaa vuotta ennen isoisän matkavuotta.',
+    selite: 'Vanha valokuva linnakkeesta Bahrainissa noin vuodelta 1870. Kuvan tarkkaa kohdetta ei ole varmistettu.',
+    uusi: {
+      tiedosto: 'Bahrain Fort March 2015.JPG',
+      lahde: 'Martin Falbisoner, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Qal\'at al-Bahrain nykyään: UNESCOn maailmanperintökohde noin kuuden kilometrin päässä Manamasta.',
+      selite: 'Qal\'at al-Bahrainin linnake on osittain kaivettu esiin ja nimetty UNESCOn maailmanperintökohteeksi. Se sijaitsee noin kuuden kilometrin päässä Manamasta länteen.',
+    },
+  },
+  tbilisi: {
+    tiedosto: 'Tbilisi XIXc 04.jpg',
+    vuosi: '1800-luvun loppu',
+    lahde: 'Dmitri Yermakov, Commons (PD)',
+    lyhyt: 'Tiflisin katunäkymä 1800-luvun lopulta, ajalta ennen sähköraitiotietä.',
+    selite: 'Tiflisin katunäkymä 1800-luvun lopulta. Kaupungissa liikennöi hevosraitiotie 1800-luvun lopulta, ja sähköraitiotie avattiin vasta 1900-luvun alussa.',
+  },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierä e03b, Ramallah):
+   * Valokuva (vain dataa: ei pysäkkiä, ei kuluttajaa vielä). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03b-ramallah.
+   */
+  ramallah: {
+    tiedosto: 'A bride\'s arrival before the house of her bridegroom - a wedding, Ramallah, Palestine - DPLA - 3b81a2b05b83c9447910b7487c7606e8 (page 1).jpg',
+    vuosi: '1900',
+    lahde: 'Underwood & Underwood, Commons (PD)',
+    lyhyt: 'Häät Ramallahissa noin vuonna 1900: väkijoukko kokoontuu, kun morsian saapuu sulhasen talolle.',
+    selite: 'Kuva on Underwood & Underwoodin stereokuva, jossa kyläläisiä seisoo puun ja kivimuurin luona morsiamen saapuessa. Isoisän matkavuonna 1873 Ramallah oli vielä kivitalojen kylä, jonka asukkaat olivat enimmäkseen kreikkalaisen riituksen kristittyjä.',
+    uusi: {
+      tiedosto: '2010-08 Ramallah 43.jpg',
+      lahde: 'Ralf Lotys (Sicherlich), Commons (CC BY 3.0)',
+      lyhyt: 'Moskeija ja kerrostaloja Ramallahin rinteillä nykyään.',
+      selite: 'Kivitalojen kylästä on kasvanut kerrostalojen täyttämä kaupunki: Ramallahin kaupungissa asui vuonna 2017 noin 39 000 ihmistä.',
+    },
+  },
 };

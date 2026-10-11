@@ -65227,4 +65227,702 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e03, 7 kaupunkia):
+   * Kohdekartan nähtävyysjutut. Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03-pilvi.
+   */
+  abudhabi: {
+    'Qasr Al Hosn': {
+      aika: '1700-luvulta',
+      teksti: 'Qasr Al Hosn on linnake ja museo Abu Dhabin keskustassa. Nykyinen muotonsa on peräisin 1930-luvun lopun laajennuksesta, joka lähteen mukaan rahoitettiin ensimmäisen öljylupasopimuksen tuloilla. Se oli emiirin palatsi ja hallituspaikka vuoteen 1966.\n\nKoska nykyinen muoto syntyi vasta 1930-luvun lopun laajennuksessa, isoisän matkavuonna 1873 linnake oli pienempi. Nimi Valkoinen linnake ei ole alkuperäinen: linnake maalattiin kirkkaan valkoiseksi vasta 1900-luvun lopun kunnostuksissa.\n\nNykyään Qasr Al Hosn on museo ja kulttuurikohde, joka avattiin uudelleen 2010-luvun lopulla pitkän entisöinnin jälkeen. Sen vieressä on Abu Dhabin kulttuurisäätiö, ja koko alueeseen kuuluu myös käsityöpaja House of Artisans.',
+      kuvat: [
+        {
+          tiedosto: 'Qasr al Hosn.jpg',
+          selite: 'Qasr Al Hosn on Abu Dhabin vanhin kivirakennus ja nykyään museo.',
+          lahde: 'Darthjipsu, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Qasr Al Watan': {
+      aika: '2010-luvun loppu',
+      teksti: 'Qasr Al Watan eli Kansakunnan palatsi on Arabiemiirikuntien presidentin palatsi. Sitä käytetään juhla- ja valtiovierailuihin sekä ministerineuvoston tarpeisiin, eikä se ole asuinkäytössä.\n\nRakennus valmistui 2010-luvun lopulla ja avattiin yleisölle maaliskuussa 2019. Julkisivu on valkoista graniittia ja kalkkikiveä, ja sisällä on iso kupoli sekä kristallikruunu. Palatsin Great Hallin itäsiivessä on House of Knowledge, jossa on esillä diplomaattilahjoja ja jonka kirjastossa on tuhansia teoksia.\n\nIsoisän matkavuonna 1873 palatsia ei vielä ollut. Lähteen mukaan hallitsijan pysyvä asuinpaikka oli tuolloin linnake Qasr Al Hosn,.',
+      kuvat: [
+        {
+          tiedosto: 'Qasr Al Watan 13.jpg',
+          selite: 'Qasr Al Watan avattiin yleisölle maaliskuussa 2019, ja se on Arabiemiirikuntien presidentin palatsi.',
+          lahde: 'EditQ, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Emirates Palace': {
+      aika: '2005',
+      teksti: 'Emirates Palace on viiden tähden hotelli Cornichen eteläpäässä. Se avattiin vuonna 2005, ja sen suunnitteli arkkitehtitoimisto WATG. Rakennuksessa on islamilaisen rakennustaiteen elementtejä, kuten symmetriaa ja geometrisia kuvioita, sekä keskikupoli ja kymmeniä pienempiä kupoleita.\n\nHotellilla on oma ranta ja marina. Lähteen mukaan sitä pidetään hotellina myös suosittuna nähtävyytenä. Palatsilla on rooli myös taidehistoriassa: Louvre Abu Dhabin kokoelman ensimmäinen esittely oli täällä 2000-luvun lopulla, vuosia ennen museon avaamista.\n\nIsoisän matkavuonna 1873 tällaista rakennusta ei ollut. Cornichen paikalla oli lähteen mukaan ennen 1970-lukua ranta, jolla dhow-alukset ankkuroituivat, ja öljy löydettiin vasta 1900-luvun puolivälin tienoilla.',
+      kuvat: [
+        {
+          tiedosto: 'Emirates Palace - 55482143859.jpg',
+          selite: 'Emirates Palace avattiin hotellina vuonna 2005 Cornichen eteläpäähän.',
+          lahde: 'xiquinhosilva, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Etihad Towers': {
+      aika: '2010-luku',
+      teksti: 'Etihad Towers on viiden tornin kokonaisuus Emirates Palacea vastapäätä. Tornien korkeudet ovat suunnilleen 200–300 metriä, ja niissä on toimistoja, asuntoja ja hotelli. Lähteen mukaan toinen torneista on yksi kaupungin korkeimmista, ja sen yläkerroksessa on katselutaso.\n\n2010-luvun alussa tornit otettiin käyttöön, ja hotelli avattiin pian sen jälkeen. Kokonaisuus kuuluu siihen rakennusryhmään, joka on antanut Abu Dhabin länsirannalle sen tämänhetkisen siluetin. Tornit ovat esiintyneet myös elokuvassa Furious 7, jossa autolla ajetaan tornien läpi.\n\nIsoisän matkavuonna 1873 tällä kohdalla ei seissyt yhtään tällaista rakennusta: rannikolla oli asutus, ja korkeat tornit kuuluvat öljyn jälkeiseen aikaan.',
+      kuvat: [
+        {
+          tiedosto: 'The Big Six in Abu Dhabi.jpg',
+          selite: 'Etihad Towers on viiden tornin kokonaisuus, jossa on toimistoja, asuntoja ja hotelli.',
+          lahde: 'Tms2007, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  amman: {
+    'Suuri temppeli': {
+      aika: '100-luku',
+      teksti: 'Suuri temppeli kohoaa linnavuoren ylätasanteella. Se rakennettiin 100-luvun jälkipuoliskolla, kun Arabian provinssia hallitsi kuvernööri Geminius Marcianus, samoihin aikoihin kuin Rooman teatteri.\n\nNimi Herkuleen temppeli on lähteen mukaan epätarkka, koska jumaluutta ei tunneta varmasti. Arkkitraavin kirjoituksessa mainitaan Herkuleen pyhäkkö ja juhlapaikka, mikä tukee Herkules-tulkintaa, mutta kirjoituksen tulkinnasta on esitetty myös epäilyjä.\n\nIsoisän matkavuonna 1873 linnavuori oli lähteen mukaan hylätty rauniokasa; kaivauksia on tehty 1920-luvulta alkaen, ja iso osa kukkulasta on yhä kaivamatta.',
+      kuvat: [
+        {
+          tiedosto: 'Sunrise over the Temple of Hercules.jpg',
+          lyhyt: 'Suuren temppelin pylväät Ammanin linnavuorella.',
+          selite: 'Suuri temppeli rakennettiin Philadelphian akropolikselle 100-luvun jälkipuoliskolla.',
+          lahde: 'andryn2006, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Umaijadien palatsi': {
+      aika: '700-luku',
+      teksti: 'Umaijadien palatsi on linnavuoren ylätason pohjoisosassa. Sen rakennutti lähteen mukaan kalifi Hisham ibn Abd al-Malik, joka hallitsi 700-luvun alkupuoliskolla, ja rakennuksen on oletettu olleen hallintorakennus tai umaijadivirkamiehen asuinpaikka.\n\nKompleksiin kuuluu vastaanottosali, useita kokoushuoneita ja pylväikkötie. Arkkitehtuuri yhdistää bysanttilaista, sassanidista ja selvästi islamilaista tyyliä. Palatsin eteläpuolella on moskeija, jonka pylväsmetsä-malli esiintyy lähteen mukaan yleensä vain Persiassa ja Mesopotamiassa, ja lähellä on suuri vesisäiliö, joka toimitti vettä kylpylöihin ja muihin tiloihin.\n\nPalatsi rapistui abbasidien ja fatimidien aikana, ja kaupunkia oli jo aiemmin vaurioittanut voimakas maanjäristys 700-luvun puolivälissä. Isoisän matkavuonna 1873 paikka oli lähteen mukaan rauniona, ja kaivauksia on tehty 1920-luvulta alkaen.',
+      kuvat: [
+        {
+          tiedosto: 'Amman citadel - Umayyad Palace entrance.jpg',
+          lyhyt: 'Umaijadien palatsi Ammanin linnavuoren pohjoisosassa.',
+          selite: 'Palatsi sijaitsee linnavuoren pohjoisosassa ja on peräisin kalifi Hishamin ajalta.',
+          lahde: 'AliAbuRas, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Rooman teatteri': {
+      aika: '100-luku',
+      teksti: 'Rooman teatteri on rakennettu rinteeseen Jabal al-Joufahin juurelle linnavuorta vastapäätä. Siinä oli useita tuhansia paikkoja, ja jyrkkä katsomo on jaettu vaakasuoriin osiin. Kreikankielinen kirjoitus yhdistää teatterin keisari Antoninus Piuksen aikaan, ja hän hallitsi 100-luvun puolivälissä.\n\nTeatteri on suunnattu pohjoiseen, jotta aurinko ei lähteen mukaan häikäisisi katsojia. Lähteen mukaan ylimmille riveille kuuluu ja näkyy erinomaisesti jyrkän rakenteen ansiosta. Sivuovien takana ovat Jordan Folklore Museum ja Museum of Popular Tradition. Nykyään teatteri on kulttuuritapahtumien käytössä, ja esimerkiksi Al-Balad Music Festival järjestetään siellä ja viereisessä odeonissa.\n\nIsoisän matkavuonna 1873 teatteri oli rauniona. Kun tšerkessit asettuivat sen viereen 1870-luvun lopulla, he rakensivat talonsa teatterin kivistä.',
+      kuvat: [
+        {
+          tiedosto: 'Roman theater of Amman 01.jpg',
+          lyhyt: 'Rooman teatteri on rakennettu rinteeseen, ja siinä oli useita tuhansia paikkoja.',
+          selite: 'Rooman teatteri on peräisin 100-luvun puolivälistä, ja nykyään siellä pidetään kulttuuritapahtumia.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Odeon: {
+      aika: '100-luku',
+      teksti: 'Odeon on pieni teatteri Hashemite Plazan itälaidalla. Se on pieni, ja se rakennettiin 100-luvulla samoihin aikoihin viereisen suuren teatterin kanssa. Kaksi katsomoa sijaitsevat lähellä toisiaan: suuri teatteri Hashemite Plazan eteläpuolella ja pieni odeon plazan itäpuolella.\n\nArkeologien arvion mukaan odeon oli peitetty puukatolla tai tilapäisellä kangaskatoksella. Rakennus on kunnostettu äskettäin yhdessä nymfaionin kanssa, ja nykyään siellä pidetään konsertteja. Lähteen mukaan tunnetuin niistä on Al-Balad Music Festival, joka järjestetään Rooman teatterissa ja odeonissa.\n\nIsoisän matkavuonna 1873 laakso, jossa odeon sijaitsee, oli lähteen mukaan autio rauniopaikka, jossa kävivät vain viljelijät ja beduiinit.',
+      kuvat: [
+        {
+          tiedosto: 'Amman Odeon 03.jpg',
+          lyhyt: 'Odeon on pieni roomalaisajan teatteri Hashemite Plazan laidalla.',
+          selite: 'Odeon oli pieni teatteri, ja nykyään siellä järjestetään konsertteja.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Nymfaion: {
+      aika: '100-luku',
+      teksti: 'Nymfaion oli roomalaisen Philadelphian julkinen suihkulähde, josta on säilynyt osa. Se rakennettiin samoihin aikoihin teatterin ja odeonin kanssa, ja se sijaitsi Seil-puron vieressä. Lähteen mukaan siinä oli arviolta useiden satojen neliömetrien allas, joka täytettiin jatkuvasti vedellä.\n\nNykyisin nymfaionin jäänteet ovat Ibn al-Atheer- ja Quraysh-katujen risteyksessä alakaupungin keskellä. Forum sijaitsi lähteen mukaan nykyisen Hashemite Plazan paikalla. Kunnostus alkoi 2010-luvun puolivälissä: työhön osallistui arkeologian opiskelijoita ja ammattilaisia useasta jordanialaisesta yliopistosta, ja rahoittajana oli Yhdysvaltain suurlähetystö.\n\nPuro peitettiin 1900-luvulla, ja sen paikalla kulkee nykyään katu. Isoisän matkavuonna 1873 laakso oli lähteen mukaan autio rauniopaikka, ja asutus levisi sen päälle ja ympärille vasta 1870-luvun lopun jälkeen.',
+      kuvat: [
+        {
+          tiedosto: 'Amman Nymphaeum 0138.jpg',
+          lyhyt: 'Nymfaion oli roomalaisen Philadelphian julkinen suihkulähde.',
+          selite: 'Nymfaionin allas täytettiin jatkuvasti vedellä, ja rakennus sijaitsi Seil-puron vieressä.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Suuri Husseinin moskeija': {
+      aika: '1920-luku',
+      teksti: 'Suuri Husseinin moskeija on perjantaimoskeija alakaupungissa ja lähteen mukaan yksi kaupungin vanhimmista moskeijoista. Se sijaitsee vanhemman moskeijan paikalla; alkuperäinen Omari-moskeija rakennettiin lähteen mukaan umaijadien aikana bysanttilaisen basilikan paikalle.\n\nAl-Muqaddasi kuvasi 900-luvulla kaupungin kaunista moskeijaa, jonka lattia oli mosaiikkia. Brittiläinen tutkija Charles Warren kuvasi paikalla ollutta vanhaa moskeijaa 1860-luvulla, ja C. R. Conder valokuvasi sen 1880-luvun alussa. Tšerkessiasutuksen jälkeen rukoussali tyhjennettiin ja katto rakennettiin uudelleen.\n\nNykyinen moskeija rakennettiin 1920-luvulla emiiri Abdullahin määräyksestä, ja se nimettiin hänen isänsä Sharif Hussein bin Alin mukaan. Se oli yksi emiirikunnan perustamisen jälkeisistä ensimmäisistä uusista rakennuksista. Isoisän matkavuoden molemmin puolin paikalla oli yhä vanha moskeija.',
+      kuvat: [
+        {
+          tiedosto: 'Grand Husseini Mosque na 2026 (2).jpg',
+          lyhyt: 'Suuri Husseinin moskeija on perjantaimoskeija Ammanin alakaupungissa.',
+          selite: 'Suuri Husseinin moskeija rakennettiin 1920-luvulla vanhemman moskeijan paikalle ja nimettiin Sharif Hussein bin Alin mukaan.',
+          lahde: 'Justwiki, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Duke\'s Diwan': {
+      aika: '1920-luku',
+      teksti: 'Duke\'s Diwan on historiallinen talo King Faisal Streetillä, joka lähteen mukaan kuuluu kaupungin vanhimpiin rakennuksiin. Talo rakennettiin 1920-luvulla, ja Transjordanian hallitus vuokrasi sen lähteen mukaan Ammanin ensimmäiseksi postitoimistoksi. Posti toimi talossa 1940-luvulle asti.\n\nSen jälkeen talossa toimi hetken valtiovarainministeriö, ja 1900-luvun jälkipuoliskolla se oli Haifa-hotelli. Vuosituhannen vaihteessa Mamdouh Bisharat vuokrasi talon estääkseen sen purkamisen. Diwan on arabiaksi huone, joka on aina avoin vieraille.\n\nNykyään talossa on antiikkia, valokuvia ja 1920-luvun huonekaluja, ja siellä järjestetään musiikki-, maalaus-, kirjallisuus- ja runotapahtumia. King Faisal Street oli emiirikunnan aikana kaupungin keskeisimpiä katuja. Isoisän matkavuonna 1873 taloa ei ollut vielä rakennettu.',
+      kuvat: [
+        {
+          tiedosto: 'Diwan al Duq.jpg',
+          lyhyt: 'Duke\'s Diwan oli Ammanin ensimmäinen postitoimisto 1920-luvulta.',
+          selite: 'Duke\'s Diwan rakennettiin 1920-luvulla Ammanin ensimmäiseksi postitoimistoksi, ja nykyään siellä on kulttuuri- ja taidekeskus.',
+          lahde: 'Fjmustak, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  baku: {
+    Neitotorni: {
+      aika: '1100-luku',
+      teksti: 'Neitotorni on lieriömäinen, kahdeksankerroksinen torni vanhankaupungin rannan puolella. Sen korkeus on lähteestä ja mittauspuolesta riippuen noin 28–31 metriä ja perushalkaisija noin 16–16,5 metriä, ja seinät ovat alaosassa useita metrejä paksut. Torni on rakennettu kallion päälle, ja sen perustuksista on löytynyt korkeita puupalkkeja. Etelämuurin kufi-kirjoituksessa mainitaan nimi Qubbeye Masud ibn Davud; häntä on pidetty arkkitehtina, mutta kirjoitus ei välttämättä tarkoita tornin rakentajaa.\n\nTornin ikä on kiistanalainen. Yleisesti sen ajoitetaan 1100-luvulle, mutta osa tutkijoista pitää perustuksia ja alimpia kerroksia paljon vanhempina. Lähteen mukaan tornista kerrotaan useita legendoja, joista tunnetuin kertoo tulenpunatukkaisesta neidosta, joka pelasti kaupunkilaiset.\n\nIsoisän matkavuonna 1873 torni seisoi vanhankaupungin muurien rannan puolella, ja Venäjä oli valtauksen jälkeen korjannut muureja ja laajentanut linnoitusta. Meri on lähteen mukaan sittemmin vetäytynyt, ja tornin edustalle on syntynyt maakaistale. Nykyään tornissa on museo, ja katolta näkyvät vanhankaupungin kujat, minareetit ja Bakunlahti.',
+      kuvat: [
+        {
+          tiedosto: 'Torre de la Doncella, Baku, Azerbaiyán, 2016-09-26, DD 212-214 HDR.jpg',
+          lyhyt: 'Neitotorni kuuluu Bakun vanhankaupungin UNESCO-kohteeseen.',
+          selite: 'Neitotorni ja Širvanšahien palatsi inskriboitiin yhdessä UNESCOn maailmanperintöluetteloon vanhankaupungin kanssa.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Širvanšahien palatsi': {
+      aika: '1400-luku',
+      teksti: 'Širvanšahien palatsi kohoaa vanhankaupungin kukkulalla. Päärakennus aloitettiin 1411, ja se oli alun perin kaksikerroksinen rakennus, jossa oli useita kymmeniä huoneita ja kapeita kierreportaita. Kompleksiin kuuluvat Divan-khana, hautaholvit, hovimoskeija minareetteineen, Seyyid Yahya Bakuvin mausoleumi, itäportaali eli Muradin portti, vesisäiliö ja kylpylän jäänteet. Shirvanshah Khalilullah I haudattiin perheineen palatsin alueelle.\n\nSafavidit valtasivat Bakun 1501, ja osmanit saivat kaupungin haltuunsa 1578. Palatsi oli tyhjillään 1600-luvulta, ja Venäjän joukkojen pommitus vaurioitti sen kaakkoisjulkisivua 1723, kun Pietari Suuren käskystä Bakua vallattiin.\n\nIsoisän matkavuonna 1873 palatsi oli Venäjän sotilasosaston hallussa. Osasto oli 1800-luvulla tehnyt siihen osittaisen kunnostuksen ja muuttanut tiloja varastoiksi. Kei-Kubad-moskeija tuhoutui 1900-luvun alussa, ja kunnostustöitä tehtiin neuvostoaikana. Museo-suojelualueeksi palatsi julistettiin 1960-luvulla, ja restaurointi alkoi uudelleen 1990-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Palace of the Shirvanshahs, Baku (Şirvanşahlar sarayı).jpg',
+          lyhyt: 'Širvanšahien palatsi on 1400-luvun palatsikompleksi vanhankaupungin kukkulalla.',
+          selite: 'Palatsin tiloissa toimii nykyään museo, ja se on kuulunut maailmanperintöön vuodesta 2000.',
+          lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Juma-moskeija': {
+      aika: '1100-luku ja 1899',
+      teksti: 'Bakun ensimmäinen Jame-moskeija rakennettiin 1100-luvulla paikalle, jolle se rakennettiin useita kertoja uudelleen. Kirjoituksen mukaan Amir Sharaf al-Din Mahmud määräsi sen kunnostettavaksi 709 AH eli 1309–1310. Stalaktiittikoristeinen minaretti rakennettiin pohjoisseinälle 1437, ja pihassa oli 1400-luvun medresan huoneita, joista yksi on säilynyt.\n\nNykyinen moskeija rakennettiin 1899 kauppias ja hyväntekijä Haji Sheikhali Agha Dadashovin rahoituksella. Lähteen mukaan rakennuksessa on jälkiä zarathustralaisesta temppelistä, ja yksi tutkija uskoi sen nousseen tulenpalvojien temppelin jäänteille.\n\nIsoisän matkavuonna 1873 nykyistä moskeijaa ei vielä ollut, vaan paikalla oli vanha Jame-moskeija. Neuvostoaikana rakennus toimi kilimimuseona, ja sen jälkeen se palasi moskeijakäyttöön. Se restauroitiin täysin 2000-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Juma Mosque (Baku) 14.JPG',
+          lyhyt: 'Juma-moskeijan nykyinen rakennus valmistui 1899.',
+          selite: 'Moskeija sijaitsee vanhassakaupungissa, ja sen edeltäjä rakennettiin 1100-luvulla.',
+          lahde: 'Urek Meniashvili, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanhankaupungin muurit ja Shemakhan portti': {
+      aika: '1000–1100-luku',
+      teksti: 'Bakun vanhakaupunki on muurien ympäröimä, ja lähteen mukaan Bakuun ja sen ympäristöön rakennettiin 1100–1300-luvuilla massiivisia linnoituksia. Keskiajan monumentteja ovat Synyg Galan minaretti 1000-luvulta, muurit ja tornit 1000–1100-luvulta sekä Multanin karavaaniseraiji ja Haji Gayyibin kylpylä 1400-luvulta. Vanhakaupunki jaettiin asuinalueisiin, joista Gemichiler oli laivanrakentajien ja Noyutchuler öljytyöläisten.\n\nVenäjä valtasi Bakun 1806, ja muureja korjattiin ja linnoitusta laajennettiin pian sen jälkeen. Muureille sijoitettiin kymmeniä tykkejä. Alun perin muureissa oli kaksi porttia, Salyan ja Shemakha.\n\nIsoisän matkavuonna 1873 muurit olivat vielä pitkälti ennallaan, mutta merenpuoleinen osa oli purettu 1800-luvun puolivälissä. Kivet myytiin, ja tuotto käytettiin bulevardin rakentamiseen. Bulevardin ensimmäiset suihkulähteet ilmestyivät 1860-luvulla. Taghiyevin portti avattiin vasta 1800-luvun lopulla. Vanhakaupunki oli 2000-luvulla jonkin aikaa UNESCOn vaaralistalla.',
+      kuvat: [
+        {
+          tiedosto: 'Walls of the fortress of the Baku Old City (Azerbaijan) - 10-12centuries6.jpg',
+          lyhyt: 'Vanhankaupungin muurit ovat peräisin 1000–1100-luvulta.',
+          selite: 'Venäjä valtasi Bakun 1806, ja muureja korjattiin pian sen jälkeen; niissä oli alun perin kaksi porttia, Salyan ja Shemakha.',
+          lahde: 'Самый древний, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Taza Pirin moskeija': {
+      aika: '1905–1914',
+      teksti: 'Taza Pirin moskeija rakennettiin 1905–1914 Nabat Khanum Ashurbeyovan rakennuttamana ja rahoittamana. Arkkitehti oli Eugeniusz Skibiński. Moskeija seisoo 1300–1400-luvun pyhimyksen Abu Seyid Abdullan haudan paikalla, ja se oli ensimmäinen Bakun uskonnollinen rakennus, jossa käytettiin valkoista kiveä. Sisäpinta-ala on 1 400 neliömetriä.\n\nHankkeeseen osallistui myös Zeynalabdin Taghiyev. Balkanin sota ja viranomaisvalvonta hidastivat rakentamista. Moskeija suljettiin vallankumouksen yhteydessä, ja sitä käytettiin elokuvateatterina ja jyväaittana. Moskeijaksi se palasi 1900-luvun puolivälissä, ja restaurointi tehtiin 2000-luvulla.\n\nIsoisän matkavuonna 1873 moskeijaa ei vielä ollut, vaan paikalla oli vain pyhimyksen hautapaikka.',
+      kuvat: [
+        {
+          tiedosto: 'Təzəpir məscidinin Mərkəzi parkdan görünüşü.jpg',
+          lyhyt: 'Taza Pirin moskeija rakennettiin 1905–1914 pyhimyksen haudan paikalle.',
+          selite: 'Moskeija oli ensimmäinen Bakun uskonnollinen rakennus, jossa käytettiin valkoista kiveä.',
+          lahde: 'Sefer azeri, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bakun bulevardi': {
+      aika: '1900-luvun alku',
+      teksti: 'Bakun bulevardi on merenrantapromenadi, jonka pituus on nykyään noin neljä kilometriä. Municipal Horticultural Commission päätti 1900-luvun alussa istuttaa meren rantaan puita ja pensaita, ja puolalainen insinööri Kazimierz Skurewicz suunnitteli penkereen. Pitkään toisella puolella olivat kartanot ja toisella meri, eikä alueella ollut puita, joten multaa tuotiin muualta. Mammad Hassan Hajinski paransi puistoa myöhemmin. Kilpailun voitti ehdotus Zvezda eli Tähti, jossa oli uimala, ravintola ja tusina paviljonkia, ja työt valmistuivat 1910-luvun alussa.\n\nPuolalaisen arkkitehdin Józef Plośkon suunnittelema Phenomenon-rakennus valmistui 1910-luvulla kasinoksi, elokuvateatteriksi ja ravintolaksi, ja nykyään siinä toimii nukketeatteri. Laskuvarjotorni rakennettiin 1930-luvulla ja kunnostettiin 2000-luvun lopulla. Bulevardi julistettiin kansallispuistoksi 1990-luvun lopulla.\n\nIsoisän matkavuonna 1873 bulevardia ei vielä ollut. Muurien merenpuoleinen osa oli kuitenkin purettu 1800-luvun puolivälissä ja kivien myynnistä saadut rahat osoitettu bulevardin rakentamiseen, ja ensimmäiset suihkulähteet ilmestyivät 1860-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Promenade, Baku (P1090242).jpg',
+          lyhyt: 'Bakun bulevardi on Bakunlahden rantaa seuraava promenadi.',
+          selite: 'Bulevardin nykyinen puisto on peräisin 1900-luvun alusta, ja sen laskuvarjotorni rakennettiin 1930-luvulla.',
+          lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  beirut: {
+    'Raouchén Kyyhkyskalliot': {
+      aika: 'Luonnonmuodostelma',
+      teksti: 'Raouché on Beirutin länsireunalla sijaitseva asuin- ja liikekaupunginosa, jonka edustalla kohoaa rannikolta kaksi kalliota. Kalliot tunnetaan nimellä Kyyhkyskalliot (Pigeons\' Rock) tai Raouchén kallio, ja ne ovat luonnonmuodostelma.\n\nCorniche-rantabulevardi nousee Raouchén kohdalla korkeimmilleen meren yläpuolelle, ja kaupunginosa on rakennettu valkoisen kalkkikivijyrkänteen päälle. Jyrkänteen reunaa seuraavan Avenue de Parisin varrella on kahviloita ja ravintoloita. Lähteen mukaan kalliot ovat tunnistettava luonnonmaamerkki.\n\nSeudun rannoilta on löytynyt alueen vanhimmat todisteet ihmisasutuksesta, piikiviä ja yksinkertaisia kivityökaluja, jotka ovat esillä American University of Beirutin arkeologisessa museossa. Kalliot olivat paikallaan jo isoisän matkavuonna 1873.',
+      kuvat: [
+        {
+          tiedosto: 'Beirut-Rouche rock.jpg',
+          lyhyt: 'Raouchén Kyyhkyskalliot Beirutin rannikolla.',
+          selite: 'Kyyhkyskalliot ovat Raouchén edustalla kohoava luonnonmuodostelma, joka koostuu kahdesta kalliosta.',
+          lahde: 'Oussama Tahmaz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Beirutin kansallismuseo': {
+      aika: '1930-luku',
+      teksti: 'Beirutin kansallismuseo on Libanonin tärkein arkeologinen museo. Rakennus on ranskalaistyylistä egyptiläistä uusklassismia, ja sen suunnittelivat arkkitehdit Antoine Nahas ja Pierre Leprince-Ringuet. Materiaalina on libanonilainen okran värinen kalkkikivi, ja keskiosassa on lasikatto, joka tuo päivänvalon sisään.\n\nRakentaminen alkoi 1930-luvun alussa, ja museo avattiin virallisesti 1940-luvun alussa. Tontin antoi kaupunki, ja se sijaitsee Beirutin hipodromin lähellä. Kokoelmassa on lähteen mukaan suuri määrä esineitä, pääosin antiikin ja keskiajan löytöjä, ja esillä on esineitä esihistoriasta mamelukkien aikaan.\n\nAlakerran gallerian kokoelmiin kuuluu foinikialaisia ihmishahmoisia sarkofageja sekä Neitsyt Marian kuva, jonka lähde ajoittaa 200-luvulle ja jonka mukaan se on yksi vanhimmista löydetyistä Marian kuvauksista. Isoisän matkavuonna 1873 museota ei vielä ollut, sillä rakennus valmistui vasta 1900-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Beirut National Museum, Main Entrance, March 2017.jpg',
+          lyhyt: 'Beirutin kansallismuseo on Libanonin tärkein arkeologinen museo.',
+          selite: 'Museon rakennus on egyptiläistä uusklassismia, ja sen kokoelmat ulottuvat esihistoriasta mamelukkien aikaan.',
+          lahde: 'Bdx, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sursock-museo': {
+      aika: '1912',
+      teksti: 'Sursock-museo on moderni- ja nykytaiteen museo huvilassa Rmeilin kaupunginosassa Rue Sursockilla. Huvilan rakennutti vuonna 1912 aatelismies Nicolas Ibrahim Sursock, joka määräsi testamentissaan sen muutettavaksi museoksi. Hän kuoli vuonna 1952, ja huvila periytyi Beirutin kaupungille.\n\nRakennuksessa on italialaisia eli venetsialaisia ja osmanien arkkitehtuurin vaikutteita, ja se on yksi harvoista säilyneistä saman aikakauden huviloista Beirutissa. Museo avattiin 1960-luvun alussa näyttelyllä, jossa oli nykyisten libanonilaistaiteilijoiden töitä. Pysyvään kokoelmaan kuuluu satoja teoksia 1800- ja 1900-luvuilta: maalauksia, veistoksia ja grafiikkaa, myös japanilaisia puupiirroksia ja islamilaista taidetta.\n\nMuseon tilat ovat kasvaneet moninkertaisiksi, kun puutarhan alle rakennettiin uusia maanalaisia kerroksia. Ulkopuolella on esillä Youssef Hoyekin veistos Les Pleureuses eli itkevät naiset, joka oli alun perin Marttyyrien aukion muistomerkki. Sursock-suku oli yksi 1800-luvun kauppasuvuista, mutta isoisän matkavuonna 1873 huvilaa ei vielä ollut.',
+      kuvat: [
+        {
+          tiedosto: 'The Sursock Museum façade.jpg',
+          lyhyt: 'Sursock-museo toimii huvilassa Rmeilin kaupunginosassa.',
+          selite: 'Sursock-museo toimii 1900-luvun alussa rakennetussa huvilassa Rmeilin kaupunginosassa.',
+          lahde: 'murielkahwagi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Marttyyrien aukio': {
+      aika: '1700-luvulta',
+      teksti: 'Marttyyrien aukio on Beirutin historiallinen pääaukio. Sen vanhin nimi on Sahat al-Burj eli Tornin aukio. Aukio oli kaupunginmuurin ulkopuolinen avoin tori, ja muinainen Burj al-Kashefin vartiotorni merkitsi sen ulkoreunaa.\n\nAukion nimi on vaihtunut useita kertoja. 1700-luvulla se sai nimen Place du Canon Burj-tornin lähelle sijoitetun venäläisen tykin mukaan, ja myöhemmin se tunnettiin nimellä Place des Canons. Sulttaani Abdul Hamid II:n mukaan sitä kutsuttiin Hamidiyyeh-aukioksi, ja nuorturkkilaisten vallankumouksen jälkeen Vapauden aukioksi. Nykyisen nimensä aukio sai 1930-luvulla muistoksi teloitetuille nationalisteille, jotka edustivat eri uskontokuntia.\n\nIsoisän matkavuonna 1873 aukio tunnettiin nimellä Place des Canons, ja kunta uudisti sen kaupungin pääkokoontumispaikaksi 1870-luvun lopulla. Aukiota katsoi Petit Serail, kuvernöörin virka-asunto. Ratikka tuli aukiolle 1900-luvun alussa, ja 1950-luvulla siitä tuli bussi- ja taksiterminaali sekä elokuvateattereiden ja kahviloiden paikka.',
+      kuvat: [
+        {
+          tiedosto: 'Martyrs Square (48706314).jpg',
+          lyhyt: 'Marttyyrien muistomerkki Beirutin keskustan pääaukiolla.',
+          selite: 'Marttyyrien aukio sai nykyisen nimensä 1930-luvulla ensimmäisen maailmansodan aikana teloitettujen nationalistien muistoksi.',
+          lahde: 'upyernoz from Haverford, USA, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mohammad Al-Aminin moskeija': {
+      aika: '2000-luku',
+      teksti: 'Mohammad Al-Aminin moskeija on sunnalaisuuden moskeija Beirutin keskustassa, ja sitä kutsutaan myös Siniseksi moskeijaksi. Sen suunnitteli Azmi Fakhoury, ja tyyli muistuttaa osmanien aikaista arkkitehtuuria. Kupoleissa on vaaleansinistä laattaa, ja moskeijaan mahtuu tuhansia rukoilijoita.\n\nMoskeija vihittiin käyttöön 2000-luvulla. Paikalla oli 1800-luvulla zawiya eli sufilaisluostari, jonka vieressä toimi tori. Rakennustyön aikana kaivauksissa paljastui osa roomalaisen kaupungin pääkadun Decumanus Maximuksen päällysteestä ja pylväistä.\n\nMoskeija seisoo aivan Pyhän Yrjänän maroniittikatedraalin vieressä. Isoisän matkavuonna 1873 nykyistä moskeijaa ei vielä ollut.',
+      kuvat: [
+        {
+          tiedosto: 'Mohammad Al-Amin Mosque and St. George Maronite Cathedral, Beirut (3).jpg',
+          lyhyt: 'Mohammad Al-Aminin moskeija, jota kutsutaan myös Siniseksi moskeijaksi.',
+          selite: 'Moskeija vihittiin käyttöön 2000-luvulla, ja se seisoo keskustassa aivan Pyhän Yrjänän katedraalin vieressä.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 PL)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Yrjänän maroniittikatedraali': {
+      aika: '1800-luvun loppu',
+      teksti: 'Pyhän Yrjänän maroniittikatedraali on maroniittien Beirutin arkkihiippakunnan katedraali keskustassa. Nykyinen kolmilaivainen basilika rakennettiin 1800-luvun lopulla arkkipiispa Joseph Debsin johdolla 1700-luvun puolivälissä rakennetun pienemmän Pyhän Yrjänän kirkon paikalle.\n\nUusklassisen julkisivun suunnitteli italialainen arkkitehti Giuseppe Maggiore, ja sisätila muistuttaa Santa Maria Maggioren basilikaa Roomassa. Katossa on kullattu kassettikatto, ja seinissä on stukkia ja marmoria. Rakentamisessa käytettiin roomalaisia pylväitä Beit Meryn Deir El Qalaan temppelistä.\n\nEsipihan alta on säilytetty hellenistinen rakennelma, osa roomalaista pylväskatua ja osmanien aikainen muuri. Uusi kellotorni on noin 70 metriä korkea, ja lähteen mukaan arkkipiispa kertoi sen korkeuden vastaavan viereisen moskeijan minareetteja uskontojen välisen sovun viestinä. Isoisän matkavuonna 1873 nykyistä katedraalia ei vielä ollut.',
+      kuvat: [
+        {
+          tiedosto: 'Mohammad Al-Amin Mosque and St. George Maronite Cathedral, Beirut (1).jpg',
+          lyhyt: 'Pyhän Yrjänän maroniittikatedraali ja sen kellotorni.',
+          selite: 'Katedraalin esipihan alla on säilytetty osa roomalaista pylväskatua.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 PL)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nejmehin aukio': {
+      aika: '1920-luku',
+      teksti: 'Nejmehin aukio eli Place de l\'Étoile on Beirutin keskustan pääaukio. Ranskalaiset purkivat 1920-luvulla vanhat basaarit ja muuttivat alueen nykyaikaiseksi kaupunginosaksi, ja aukio tunnetaan art deco -arkkitehtuuristaan.\n\nAukion kaunistus on 1930-luvun kellotorni, jonka lahjoitti libanonilaistaustainen siirtolainen Michel Abed. Parlamenttirakennuksen suunnitteli Mardiros Altounian, joka suunnitteli myös kellotornin. Rakennus yhdistää Beaux-Arts-tyylin paikallisiin piirteisiin, kuten kaksois- ja kolmoiskaariin, ja sen julkisivu on kalkkikiveä.\n\nAukion kreikkalainen Pyhän Yrjänän katedraali valmistui 1700-luvulla, ja sen alla on maanalainen museo, jossa on usean samalle paikalle rakennetun kirkon kerrostumia. Aukiota tunnetaan kyyhkysistään. Isoisän matkavuonna 1873 nykyistä aukiota ei vielä ollut: alueella oli vanhoja basaareja.',
+      kuvat: [
+        {
+          tiedosto: 'Beirut, Central District, Nejmeh Square.jpg',
+          lyhyt: 'Nejmehin aukio on Beirutin keskustan pääaukio.',
+          selite: 'Aukio syntyi 1920-luvulla, kun vanhat basaarit purettiin ja alue rakennettiin uudelleen.',
+          lahde: 'Heinz Hövel, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Suuri Serail': {
+      aika: '1800-luku',
+      teksti: 'Suuri Serail eli al-Sarāy al-Kabir, hallituspalatsi, kohoaa kukkulalla Beirutin keskustassa, ja nykyään se on Libanonin pääministerin virkapaikka. Rakennus syntyi osmanien sotilas- ja siviilihallinnon päämajaksi, ja beirutilaiset kutsuivat sitä nimellä Al-Quishleh eli varuskunta.\n\nLinnoittaminen alkoi 1800-luvun puolivälissä, ja rakennukseen lisättiin toinen kerros. Sulttaani Abdülazizin määräämä sotilassairaala valmistui 1860-luvulla. Isoisän matkavuonna 1873 rakennus oli siis jo olemassa kasarmina ja sotilashallinnon rakennuksena, mutta lopullisen muotonsa se sai vasta myöhemmissä muutoksissa 1800-luvun lopulla.\n\nSuunnittelu noudatti osmanien uuden sotilasjärjestyksen arkkitehtuuria, ja korkealla sijaitseva vaatimaton julkisivu jäljittelee Istanbulin Selimiye-kasarmia. Ranskalaiset muuttivat rakennuksen Ylikomissariaatiksi 1900-luvun alussa. Lähellä on Hamidiyyeh-kellotorni, joka rakennettiin 1800-luvun lopulla.',
+      kuvat: [
+        {
+          tiedosto: 'Grand Serail, Government Palace, Beirut.jpg',
+          lyhyt: 'Suuri Serail on Libanonin pääministerin virkapaikka.',
+          selite: 'Suuri Serail rakennettiin osmanien aikana kasarmiksi ja hallinnon päämajaksi.',
+          lahde: 'Pjposullivan1, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  jerevan: {
+    'Tasavallan aukio': {
+      aika: '1926–1977',
+      teksti: 'Tasavallan aukio on Jerevanin keskusaukio. Siihen kuuluvat soikea liikenneympyrä, jonka keskellä oleva kivikuvio on tehty näyttämään perinteiseltä armenialaiselta matolta, sekä puolisuunnikkaan muotoinen osa, jossa on allas ja musiikkisuihkulähteet. Uudistetut suihkulähteet avattiin 2000-luvun lopulla.\n\nAukiota ympäröi viisi pääasiassa vaaleanpunaisesta ja keltaisesta tuffista tehtyä uusklassista rakennusta: hallituksen talo, historiamuseo ja kansallisgalleria, hotelli sekä kaksi entistä ministeriörakennusta. Aukion suunnitteli arkkitehti Alexander Tamanian vuoden 1924 yleissuunnitelmassa, rakentaminen alkoi 1926 hallituksen talosta, ja viimeinen rakennus, kansallisgalleria, valmistui 1977. Aukio on ollut myös nimeltään Leninin aukio, kunnes kaupunginvaltuusto nimesi sen Tasavallan aukioksi 1990-luvun taitteessa.\n\nIsoisän matkavuonna 1873 aukiota ei vielä ollut, vaan paikalla oli vanhaa Erivania. 2000-luvun alun kunnostuksessa tehdyissä kaivauksissa löytyi 1700–1800-lukujen kellareita ja tuffista tehtyjä vesiputkia, jotka ajoitetaan 800–1000-luvuille.',
+      kuvat: [
+        {
+          tiedosto: 'Yerevan, Musical fountain, Republic Square, Armenia.jpg',
+          lyhyt: 'Tasavallan aukion musiikkisuihkulähteet avattiin uudistettuina 2000-luvun lopulla.',
+          selite: 'Musiikkisuihkulähteet esiintyvät useimpina iltoina huhti–lokakuussa, ja niiden takana on hallituksen talo.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sininen moskeija': {
+      aika: '1765–1766',
+      teksti: 'Sininen moskeija rakennettiin 1765–66 Erivanin kaanikunnan hallitsijan Hoseyn Ali Khanin tilauksesta kaupungin pääasialliseksi perjantaimoskeijaksi. Kun venäläiset valtasivat kaupungin 1827, se oli suurin kahdeksasta Jerevanin moskeijasta. Minaretti oli 1800-luvun Jerevanin korkein rakennelma.\n\nMoskeijassa toimi 1700-luvun lopulta madrasa, ja saksalainen August von Haxthausen kuvasi 1840-luvulla koulun, jossa joukko poikia opiskeli persiaa. Länsimaiset matkailijat H. F. B. Lynch ja Luigi Villari kutsuivat moskeijaa nimellä Gök Jami, \'taivaansininen moskeija\'. Laatoitus tehtiin 1800-luvun lopulla, ja rakennus uudistettiin 1900-luvun alussa.\n\nIsoisän matkavuonna 1873 moskeija oli toiminnassa. 1920-luvulta se ei enää toiminut uskonnollisena laitoksena, ja sisäpihan teehuoneessa kävi kirjailijoita ja taiteilijoita, muun muassa Yeghishe Charents, Martiros Saryan ja William Saroyan. Restauroinnin jälkeen 1990-luvulla se on ollut jälleen uskonnollisessa käytössä, ja sen yhteydessä on Persian kielen kirjasto, joka avattiin 2010-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Dome of Blue Mosque, Yerevan, Armenia.jpg',
+          lyhyt: 'Sinisen moskeijan laatoitus tehtiin 1800-luvun lopulla, ja rakennus uudistettiin 1900-luvun alussa.',
+          selite: 'Moskeijan nimi Gök Jami tarkoittaa \'taivaansinistä moskeijaa\'.',
+          lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Sargiksen katedraali': {
+      aika: '1835–1842',
+      teksti: 'Pyhän Sargiksen katedraali on Armenian apostolisen kirkon Araratin hiippakunnan keskus. Nykyinen kirkko rakennettiin 1835–1842 Hrazdanin vasemmalle rannalle Kentronin alueelle, ja se seisoi Dzoragyughin kylän yläosan vieressä vastapäätä vanhaa Erivanin linnoitusta.\n\nPaikalla oli alkukristillisestä ajasta lähtien erakkoluostari, jonka kirkot olivat pyhien Sargiksen, Georgin ja Jaakobin kirkot. Vuoden 1679 maanjäristys tuhosi sen, ja se rakennettiin uudelleen katolikos Nahabetin aikana 1600-luvun lopulla.\n\nIsoisän matkavuonna 1873 kirkko oli jo valmiina. Nykyinen ulkoasu on myöhempi: kunnostus tehtiin Rafayel Israyelianin suunnitelman mukaan 1970-luvulla, jolloin julkisivu verhoiltiin Anin oranssilla tuffilla ja vanha kupoli korvattiin korkeammalla. Kellotorni valmistui 2000-luvun vaihteessa, ja kunnostuksen rahoittivat Lontoossa asuvat lahjoittajat Sarkis Kurkjian poikineen.',
+      kuvat: [
+        {
+          tiedosto: 'Saint Sarkis Cathedral, Yerevan 25.jpg',
+          lyhyt: 'Pyhän Sargiksen katedraali valmistui 1835–1842 Hrazdanin vasemmalle rannalle.',
+          selite: 'Julkisivu verhoiltiin Anin oranssilla tuffilla Rafayel Israyelianin 1970-luvun suunnitelman mukaan.',
+          lahde: '23artashes, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Zoravorin kirkko': {
+      aika: '1693–94',
+      teksti: 'Zoravor Surp Astvatsatsin on kupoliton kolminaavinen basilika Shaharin vanhassa kaupunginosassa, jossa oli aiemmin apostoli Ananiaan hauta ja kappeli. Nimi Zoravor tarkoittaa \'voimakas\', ja se lisättiin, koska kirkossa säilytettiin 1200-luvun Zoravor-Raamattua.\n\n1600-luvun alkupuoliskolla munkki Movses Syunetsi rakensi paikalle luostarikompleksin jerevanilaisten rahoituksella katolikos Pilipoksen aikana, ja vuoden 1679 maanjäristys tuhosi sen. Nykyinen kirkko rakennettiin 1693–94 samalle paikalle jerevanilaisen kauppiaan Khoja Panosin lahjoituksella. Sisä- ja ulkoasu ovat yksinkertaiset, ja ulkoseinillä on 1600-luvun khachkar-ristikiviä.\n\nIsoisän matkavuonna 1873 kirkko oli olemassa, mutta Pyhän Ananiaan kappeli sen koillispuolella rakennettiin vasta 1800-luvun lopulla. Neuvostoaikana kirkkoa käytettiin muihin tarkoituksiin; se palautettiin kirkolle 1970-luvulla ja kunnostettiin täysin.',
+      kuvat: [
+        {
+          tiedosto: 'Surp Zoravor Astvatsatsin Church.JPG',
+          lyhyt: 'Zoravorin kirkko on kupoliton kolminaavinen basilika, joka rakennettiin 1693–94.',
+          selite: 'Kirkon ulkoseinillä on 1600-luvun khachkar-ristikiviä, ja kirkko sijaitsee Shaharin vanhassa kaupunginosassa.',
+          lahde: '© Travis K. Witt, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Oopperatalo: {
+      aika: '1930-luku–1953',
+      teksti: 'Virallisesti rakennus on Alexander Spendiaryanin kansallinen akateeminen ooppera- ja balettiteatteri, mutta paikalliset sanovat sitä yksinkertaisesti Operaksi. Perustuskivi laskettiin 1930-luvun alussa, ja teatteri avattiin 1933 Spendiaryanin oopperalla Almast. Rakennuksen suunnitteli Alexander Tamanian; salin rakentaminen valmistui 1939 ja koko rakennus 1953.\n\nTalossa on kaksi salia: Aram Khachaturianin konserttisali sekä Spendiaryanin ooppera- ja balettisali, ja kummassakin on yli tuhat paikkaa. Teatterin ensimmäinen balettiesitys oli Tšaikovskin Joutsenlampi, ja ensimmäinen armenialainen baletti oli Khachaturianin Onni, josta syntyi Gayane. Armen Tigranianin ooppera Anoush on ollut ohjelmistossa teatterin alkuvuosista asti.\n\nIsoisän matkavuonna 1873 oopperataloa ei vielä ollut. Rakennuksen eteläpuolella on Vapaudenaukio, jossa seisovat Tumanyanin ja Spendiaryanin patsaat, ja Joutsenjärvi rakennettiin 1960-luvun alussa muodoltaan Sevan-järveä muistuttavaksi.',
+      kuvat: [
+        {
+          tiedosto: 'Ópera, Ereván, Armenia, 2016-10-03, DD 13.jpg',
+          lyhyt: 'Jerevanin oopperatalo avattiin 1933, ja sen suunnitteli Alexander Tamanian.',
+          selite: 'Talossa toimii kansallinen akateeminen ooppera- ja balettiteatteri, jossa on kaksi salia.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kaskadi: {
+      aika: '1970-luku–2009',
+      teksti: 'Kaskadi on portaikkokompleksi, joka yhdistää keskustan Kanaker-Zeytunin kukkuloihin ja kuuluu Tamanianin kaupunkisuunnitelmassa määriteltyyn akseliin. Siinä on useita terasseja, satoja askelmia noin 300 metrin matkalla ja sisäpuolella liukuportaat. Rakenne on maidonvalkoista tuffia ja travertiinia, ja koristeissa on khachkar-ristikivien, viiniköynnösten, granaattiomenoiden ja elämänpuun aiheita.\n\nArkkitehdit Jim Torosyan, Sargis Gurzadyan ja Aslan Mkhitaryan alkoivat suunnitella portaikkoa 1970-luvun alussa. Rakentaminen alkoi lähteiden mukaan 1970- tai 1980-luvulla, ja se keskeytyi 1980-luvun lopulla; hallitus päätti 2000-luvun alussa saattaa kompleksin loppuun, ja sisälle avattiin Cafesjian Center for the Arts 2009.\n\nIsoisän matkavuonna 1873 Kaskadia ei vielä ollut. Sisällä on muun muassa Khanjyan-galleria, jossa on Grigor Khanjyanin triptyykki Armenian historia, sekä Sasuntsi Davit -galleria, jossa on Artashes Hovsepyanin reliefejä armenialaisesta eepoksesta. Keväästä alkusyksyyn portailla pidetään klassisen musiikin ja jazzin konsertteja.',
+      kuvat: [
+        {
+          tiedosto: '2014 Erywań, Kaskady (18).jpg',
+          lyhyt: 'Kaskadin alaterassit ovat osa terassien portaikkoa keskustan pohjoislaidalla.',
+          selite: 'Portaikon rakenne on maidonvalkoista tuffia ja travertiinia.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Matenadaran: {
+      aika: '1900-luvun puoliväli',
+      teksti: 'Matenadaran on armenialaisten käsikirjoitusten arkisto. Harmaalla basaltilla verhoiltu rakennus kohoaa Mashtotsin kadun koillispäähän ja muodostaa kadun näköalan päätteen. Sen suunnitteli kaupungin ylikaupunginarkkitehti Mark Grigorian, ja rakentaminen kesti 1900-luvun puolivälissä useita vuosia. Julkisivun esikuvana on Anin Pyhien apostolien kirkon 1100-luvun eteishallin itäjulkisivu.\n\nEdessä seisovat Mashtotsin ja hänen oppilaansa Koryunin patsas sekä keskiaikaisten oppineiden patsaat, jotka edustavat muun muassa käsikirjoitusten kuvitusta, filosofiaa, kosmologiaa ja historiaa. Sisäänkäynnin aulassa on Van Khachaturin mosaiikki Avarayrin taistelusta ja portaikon ympärillä kolmen aikakauden seinämaalaus. Uusi rakennus arkkitehti Arthur Meschianin suunnittelemana vihittiin käyttöön 2010-luvun alussa.\n\nIsoisän matkavuonna 1873 Matenadarania ei vielä ollut, ja käsikirjoitukset olivat Etchmiadzinissa. Kävijöitä oli yli satatuhatta vuodessa 2010-luvun lopulla.',
+      kuvat: [
+        {
+          tiedosto: 'Մատենադարան, Երևան - Matenadaran, Yerevan (2019) 45.jpg',
+          lyhyt: 'Matenadaranin basalttijulkisivun esikuvana on Anin keskiaikaisten kirkkojen rakennustaide.',
+          selite: 'Julkisivun esikuvana on Anin Pyhien apostolien kirkon 1100-luvun eteishallin itäjulkisivu.',
+          lahde: 'Gardmanahay, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Englantilainen puisto': {
+      aika: '1800-luvun puoliväli',
+      teksti: 'Englantilainen puisto on yksi Jerevanin vanhimmista puistoista. Lähteiden mukaan se on peräisin 1800-luvun puolivälistä. Puisto sijaitsee Kentronin alueella Italian kadun varrella aivan Tasavallan aukion eteläpuolella.\n\nPuistoa uusittiin usein ensimmäiseen maailmansotaan asti, ja 1900-luvun alussa siinä oli suuri kunnostus. Siellä pelattiin 1920-luvun alussa Armenian modernin historian ensimmäinen jalkapallo-ottelu Jerevanin ja Aleksandropolin joukkueiden välillä. 2000-luvun alussa uusi Italian katu jakoi puiston kahtia, ja erotettu osa kunnostettiin erilliseksi puistoksi.\n\nIsoisän matkavuonna 1873 puisto oli todennäköisesti jo olemassa. Puiston laidalla sijaitsee Sundukyanin akateeminen teatteri, ja keskellä olevat suihkulähteet ovat suosittu hääkuvauspaikka.',
+      kuvat: [
+        {
+          tiedosto: 'English Park of Yerevan 05.jpg',
+          lyhyt: 'Englantilainen puisto on yksi kaupungin vanhimmista puistoista Tasavallan aukion eteläpuolella.',
+          selite: 'Puiston keskellä olevat suihkulähteet ovat suosittu hääkuvauspaikka.',
+          lahde: '23artashes, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  manama: {
+    'Bab Al Bahrain': {
+      aika: '1940-luvun lopulta',
+      teksti: 'Bab Al Bahrain eli Bahrainin portti on valkoinen porttirakennus Customs Squaren eli Tullitorin laidalla Manaman liikealueella. Se on Manaman soukin pääsisäänkäynti. Lähteen mukaan rakennus avattiin 1940-luvun lopulla, ja sen suunnitteli Bahrainin hallitsijan brittiläinen neuvonantaja Charles Belgrave.\n\nRakennusta on uudistettu useaan otteeseen, viimeksi 2010-luvulla, jolloin julkisivut ja sisätilat kunnostettiin. Pohjakerroksessa toimivat nykyään matkailuneuvonta ja käsityökauppa. Portin ympärille on kertynyt kauppoja ja kahviloita: lähteen mukaan Naseef Cafe oli maan ensimmäinen jäätelökauppa, ja aukio on lähteen mukaan alueen ensimmäinen virallinen julkinen tila.\n\nIsoisän matkavuonna 1873 porttia ei vielä ollut. Lähteen mukaan kaupunki rajoittui historiallisesti soukiin ja etelässä olevaan linnakkeeseen.',
+      kuvat: [
+        {
+          tiedosto: 'Bab Al Bahrain, Manama, Baréin, 2024-08-18, DD 72.jpg',
+          selite: 'Bab Al Bahrain on Manaman soukin pääsisäänkäynti.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Manaman souk': {
+      aika: 'vanha basaari',
+      teksti: 'Manaman souk on pääkaupungin vanha basaari, joka sijaitsee kaupungin pohjoisosassa vanhan kaupungin ja liikealueen välissä. Pääsisäänkäynti on Bab Al Bahrain. Lähteen mukaan kaupunki rajoittui historiallisesti soukiin ja etelässä olevaan linnakkeeseen.\n\nSouk on kapeiden kujien verkko, jossa myydään matkamuistoja, kultaa ja koruja sekä räätälin palveluita. Alue on jaettu uuteen jalankulkualueeseen ja vanhaan osaan, jossa on sekä autotie että jalkakäytävät; uudistettu alue avattiin yleisölle 2010-luvulla. Keskustassa on lähteen mukaan myös pieniä työpajoja ja kauppiaita, ja alueella on maan ainoa synagoga.\n\nIsoisän matkavuonna 1873 Manama oli helmenpyynnin ja kaupan satamakaupunki. Vuosina 1911–12 Manamassa kävi lähteen mukaan kymmeniä höyrylaivoja, enimmäkseen brittiläisiä, ja tuontitavaroina mainitaan riisi, tekstiilit, kahvi, taatelit, tee ja tupakka.',
+      kuvat: [
+        {
+          tiedosto: 'Manama Bab al-Bahrain Souq 1.jpg',
+          selite: 'Manaman souk on pääkaupungin vanha basaari.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bahrain Financial Harbour': {
+      aika: '2000-luvun alusta',
+      teksti: 'Bahrain Financial Harbour on kaupallinen rantakompleksi Manaman pohjoisrannalla King Faisal Highwayn varrella. Se on rakennettu pääosin täytemaalle entisen Manaman laiturin paikalle. Rakentaminen alkoi 2000-luvun alussa, ja tornit valmistuivat 2000-luvun puolivälissä.\n\nKompleksin kaksi päätornia ovat yli 250 metriä korkeat, ja niissä on yli 50 kerrosta. Torneissa toimii pankkeja ja kansainvälisiä yrityksiä. Harbour Gate -rakennuksessa toimii Bahrainin pörssi. Finanssikriisi viivästytti joitakin hankkeen osia.\n\nIsoisän matkavuonna 1873 kompleksia ei vielä ollut.',
+      kuvat: [
+        {
+          tiedosto: 'Manama Bahrain Financial Harbour Panoramablick 4.jpg',
+          selite: 'Bahrain Financial Harbour on Manaman pohjoisrannan kaupallinen kompleksi.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bahrain World Trade Center': {
+      aika: '2000-luvun lopulta',
+      teksti: 'Bahrain World Trade Center sijaitsee King Faisal Highwayn lähellä Bahrain Financial Harbourin tuntumassa. Kaksi purjeen muotoista tornia valmistui 2000-luvun lopulla, ja turbiinit käynnistyivät ensimmäisen kerran 2000-luvun lopulla. Rakennuksen alakerrassa on ostoskeskus.\n\nTornien välisissä silloissa on tuuliturbiineja. Lähteen mukaan turbiinien odotetaan pyörivän noin puolet ajasta, ja niiden tarkoitus on tuottaa osa tornien sähköstä. Rakennus on voittanut kestävän rakentamisen palkintoja, muun muassa LEAF Award -palkinnon.\n\nIsoisän matkavuonna 1873 tornia ei ollut, sillä rakennus valmistui vasta 2000-luvun lopulla.',
+      kuvat: [
+        {
+          tiedosto: 'Manama Bahrain World Trade Centre & Bahrain Financial Harbour 1.jpg',
+          selite: 'Bahrain World Trade Centerin tornit valmistuivat 2000-luvun lopulla.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Beit Al Quran': {
+      aika: '1980-luvulta',
+      teksti: 'Beit Al Quran eli Koraanin talo on islamilaisen taiteen monitoimikeskus Hooran kaupunginosassa. Rakentaminen alkoi 1980-luvulla, ja museo avattiin 1990-luvun kynnyksellä. Kompleksiin kuuluvat moskeija, kirjasto, auditorio, koraanikoulu ja museo, jossa on useita näyttelysaleja.\n\nKokoelman ydin on liikemies Abdul Latif Jassim Kanoon oma käsikirjoituskokoelma, jonka hän lahjoitti museolle. Lähteen mukaan rahoitus tuli kokonaan lahjoituksina valtionpäämiehistä koululaisiin. Rakennuksen ulkoasu perustuu 1100-luvun moskeijaan. Kirjastossa on lähteen mukaan kymmeniä tuhansia kirjoja ja käsikirjoituksia, ja kokoelma kattaa kalligrafiaperinteen varhaisimmilta vuosisadoilta nykypäivään.\n\nIsoisän matkavuonna 1873 talo ei ollut vielä olemassa.',
+      kuvat: [
+        {
+          tiedosto: 'Beit Al Quran 001.tiff',
+          selite: 'Beit Al Quran on islamilaisen taiteen monitoimikeskus Hooran kaupunginosassa.',
+          lahde: 'Mohamsuraj, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bahrainin kansallismuseo': {
+      aika: '1988',
+      teksti: 'Bahrainin kansallismuseo avattiin vuonna 1988, ja se on lähteen mukaan maan suurin julkinen museo. Sen suunnittelivat tanskalaiset arkkitehdit Krohn & Hartvig Rasmussen, ja rakennus seisoo keinotekoisella niemellä Muharraqin saarta vastapäätä. Museossa on useita pysyviä näyttelysaleja.\n\nDilmunin salissa on leimasinsinettejä sekä Barbarin temppelin ja Saarin löytöjä, ja museossa on esillä jäljennös Durand-kivestä. Tylos–islamin sali käsittelee hellenististä aikaa ja islamin aikaa 700-luvulta, ja siellä on esillä Khamisin moskeijan esineitä. Perinteisten ammattien salissa on jäljennös perinteisestä soukista, ja Dilmun-hautojen salissa on A\'alista siirretty ja museossa uudelleen koottu hautakumpu.\n\nIsoisän matkavuonna 1873 museota ei vielä ollut; se on rakennettu keinotekoiselle niemelle.',
+      kuvat: [
+        {
+          tiedosto: 'Manama Bahrain National Museum Exterior 1.jpg',
+          selite: 'Bahrainin kansallismuseo avattiin vuonna 1988.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al-Fatih-suurmoskeija': {
+      aika: '1980-luvulta',
+      teksti: 'Al-Fatih-suurmoskeija sijaitsee Juffairin kaupunginosassa Al Fateh Highwayn vieressä, ja se rakennettiin 1980-luvulla. Moskeija on nimetty Ahmed Al Fatehin kunniaksi, ja siinä on tilaa tuhansille rukoilijoille.\n\nSisätiloissa lattia on italialaista marmoria, kattokruunu on tehty Itävallassa ja ovet ovat intialaista tiikkiä. Kufi-kalligrafiaa on kauttaaltaan. Moskeijan keskuksen kirjastossa on tuhansia kirjoja. Moskeija on avoinna kävijöille kaikkina päivinä paitsi perjantaina, ja kierroksia järjestetään useilla kielillä.\n\nIsoisän matkavuonna 1873 moskeijaa ei ollut.',
+      kuvat: [
+        {
+          tiedosto: 'Manama al-Fateh Grand Mosque Exterior Norden 1.jpg',
+          selite: 'Al-Fatih-suurmoskeija sijaitsee Juffairin kaupunginosassa.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  tbilisi: {
+    'Narikalan linnoitus': {
+      aika: '300-luvulta; nykyiset linnoitteet 1600-luvulta tai vanhempia',
+      teksti: 'Narikala on muinainen linnoitus Tbilisin ja Kuran yllä, jyrkällä kukkulalla rikkikylpylöiden ja kasvitieteellisen puutarhan välissä. Ensimmäinen kirjallinen maininta on 300-luvulta kuningas Varaz-Bakurin ajalta, ja legendan mukaan linnoituksen rakensi kuningas Vakhtang I Gorgasali. Umayyadit laajensivat sitä 600-luvulla, ja kuningas Davit Rakentaja rakennutti sitä edelleen. Mongolit antoivat sille nimen Narin Qala, pieni linnoitus.\n\nNykyiset linnoitteet ovat pääosin 1600-luvun tai sitä aiempaa rakentamista. Muurien ympäröimässä linnoituksessa on kaksi osaa, ja alapihalla on Pyhän Nikolauksen kirkko, joka on uusi rakennus tulipalossa tuhoutuneen vanhan kirkon tilalla.\n\nOsia linnoituksesta oli purettu vuoden 1827 maanjäristyksen jälkeen. Isoisän matkavuonna 1873 linnoitus oli siis osin vaurioitunut. 2010-luvulta sinne on noussut gondolihissi Rike-puistosta.',
+      kuvat: [
+        {
+          tiedosto: '2014 Tbilisi, Ruiny twierdzy Narikala (02).jpg',
+          selite: 'Narikalan linnoitteet ovat pääosin 1600-luvun tai sitä aiempaa rakentamista.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Metekhin kirkko': {
+      aika: '1200-luvulta',
+      teksti: 'Metekhin kirkko on Neitsyt Marian kuolonuneen kirkko, jonka kuningas Demetrios II rakennutti 1200-luvulla. Se seisoo kalliolla Kuran yllä, ja nimi tarkoittaa palatsin ympäristöä; nimi on peräisin 1100-luvulta. Perinteen mukaan Vakhtang rakensi alueelle kirkon ja linnakkeen, mutta mikään niistä ei säilynyt mongolien hyökkäyksestä. Nykyinen kirkko on tiilestä ja veistetystä kivestä, ja siinä on useita ulkonevia apsiksia ja vapaita pilareita kupolin alla.\n\nKuningas Rostom linnoitti alueen, ja Venäjän vallan aikana kirkko oli kasarmina. Linnake purettiin 1800-luvun alussa ja tilalle rakennettiin vankila, joka toimi vielä Neuvostoaikana. Isoisän matkavuonna 1873 paikalla siis toimi vankila.\n\nKirkko palautettiin patriarkaatille ja otettiin uudelleen käyttöön 1900-luvun lopulla. Vakhtang I Gorgaslanin ratsastajapatsas pystytettiin 1900-luvulla, ja Kuran yli vievä betonisilta rakennettiin vanhojen siltojen paikalle.',
+      kuvat: [
+        {
+          tiedosto: '2014 Tbilisi, Cerkiew Metechi (02).jpg',
+          selite: 'Metekhin kirkon edessä on Vakhtang I Gorgaslanin ratsastajapatsas, joka pystytettiin 1900-luvulla.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Abanotubanin rikkikylpylät': {
+      aika: 'legendan mukaan 400-luvulta; kylpylät kirjattu 1200-luvulla',
+      teksti: 'Abanotubani on kylpyläkaupunginosa Mtkvarin itärannalla Narikalan juurella, Metekhin vastapäätä. Nimi tarkoittaa kirjaimellisesti kylpylän aluetta. Legendan mukaan juuri tähän kuninkaan haukka putosi, ja kuumat lähteet johtivat uuden pääkaupungin perustamiseen. Kaupungin nimikin tulee lämpimistä, rikkipitoisista lähteistä.\n\nKylpylät ovat kaupungin vanhimpia tunnettuja paikkoja: 1200-luvun loppuun mennessä Tbilisissä oli kirjattu kymmeniä kylpylöitä, ja ne olivat muslimiasukkaille ilmaisia. Alueen tunnistaa pienistä kupoleista, jotka kohoavat maanpinnalta. Isoisän matkavuonna 1873 kylpylöillä oli siis takanaan vuosisatojen historia.\n\nAlueen vieressä on turkkilainen sunnimoskeija. Abanotubani kuuluu hallinnollisesti Krtsanisin piiriin.',
+      kuvat: [
+        {
+          tiedosto: '2014 Tbilisi, Łaźnie siarkowe w Abanotubani (01).jpg',
+          selite: 'Abanotubanin kylpylät sijaitsevat Narikalan juurella, ja kaupungin nimi tulee lähteistä.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Siionin katedraali': {
+      aika: '500–600-luvuilta; nykyinen rakenne 1100-luvulta',
+      teksti: 'Siionin katedraali on Georgian kirkon Neitsyt Marian kuolonuneen katedraali Sionin kadulla. Nimi tulee Siionin vuoresta Jerusalemissa. Alkuperäinen kirkko rakennettiin lähteen mukaan 500–600-luvuilla, ja keskiaikaisten kronikoiden mukaan rakentamisen aloitti jo kuningas Vakhtang Gorgasali. Kuningas Davit Rakentaja rakennutti kirkon uudelleen 1100-luvulla, ja nykyisen rakenteen peruselementit ovat tältä ajalta. Lähteet antavat nykyiselle rakenteelle eri ajoituksia; peruselementit ovat 1100-luvulta.\n\nKatedraali on kärsinyt vaurioita monta kertaa vihollisten hyökkäyksissä ja maanjäristyksessä, viimeksi Persian hyökkäyksessä 1795. Kellotorni on 1400-luvulta, ja se on palautettu nykyiseen asuunsa 1900-luvulla. Keltainen tuffi on tuotu Bolnisista, ja alttarin vasemmalla puolella on viiniköynnösristi, joka muistuttaa Pyhän Ninon rististä.\n\nIsoisän matkavuonna 1873 katedraalin sisäasu oli jo muuttunut: Grigori Gagarin maalasi seinämaalausten sarjan ja suunnitteli kivisen ikonostaasin 1800-luvun puolivälissä, ja osa keskiaikaisista freskoista katosi. Katedraali oli maan pääkatedraali ja katolikos-patriarkan istuin, kunnes Pyhän Kolminaisuuden katedraali vihittiin 2000-luvun alussa.',
+      kuvat: [
+        {
+          tiedosto: 'Sioni Cathedral, Tbilisi. Western façade with the main entrance.jpg',
+          selite: 'Siionin katedraalin nykyisen rakenteen peruselementit ovat 1100-luvulta.',
+          lahde: 'Kober, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Anchiskhatin basilika': {
+      aika: '500-luvulta',
+      teksti: 'Anchiskhatin basilika on lähteen mukaan Tbilisin vanhin säilynyt kirkko, ja se on peräisin 500-luvulta. Kronikoiden mukaan sen rakennutti kuningas Dachi. Kirkko on kolmilaivainen basilika, jonka konkat ovat hevosenkengän muotoisia, ja se rakennettiin alun perin keltaisesta tuffikivestä.\n\nNimi Anchiskhati tarkoittaa Anchan ikonia. Se otettiin käyttöön 1600-luvulla, kun Beka Opizarin 1100-luvulla tekemä Vapahtajan ikoni tuotiin Klarjetin Anchan luostarista Tbilisiin ottomaanien uhkaa pakoon. Ikoni on nykyään Georgian taidemuseossa. Tiilinen kellotorni on peräisin samalta ajalta katolikos Domentin ajalta.\n\nKirkon ulkoasu muuttui rajusti 1800-luvulla, kun siihen lisättiin kupoli. Neuvostoaikana jumalanpalvelukset keskeytettiin ja kirkko oli käsityömuseo ja taidestudio; entisöinti 1900-luvun puolivälissä palautti 1600-luvun ilmeen, ja uskonnollinen käyttö palasi Georgian itsenäistymisen jälkeen.',
+      kuvat: [
+        {
+          tiedosto: 'Anchiskhati Basilica of Saint Mary 1.jpg',
+          selite: 'Anchiskhatin basilika on lähteen mukaan Tbilisin vanhin säilynyt kirkko.',
+          lahde: 'Kakhi Kuloshvili, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Vapaudenaukio: {
+      aika: 'Venäjän vallan ajalta; nimi Vapaudenaukio 1900-luvulta',
+      teksti: 'Vapaudenaukio on aukio keskustassa Rustaveli-kadun itäpäässä. Sieltä haarautuu useita katuja, kuten Rustaveli, Pushkin ja Kote Apkhazi. Aukion pohjoispuolella on pieni puistikko suihkulähteineen ja Pushkinin rintakuva, ja Tbilisin kaupunginvaltuusto toimii aukiolla.\n\nAukion nimi on vaihdellut. Venäjän vallan aikana, siis myös isoisän matkavuonna 1873, se oli Erivanin aukio. Nimi tuli kenraali Ivan Paskevichin mukaan, joka sai kreivin arvon Erivanin valtauksesta. Ensimmäisen Georgian tasavallan perustamisen aikaan aukio sai nimekseen Vapaudenaukio, ja Neuvostoaikana sitä kutsuttiin Berian ja Leninin aukioksi.\n\n2000-luvulla aukiolle paljastettiin Vapauden muistomerkki, jossa Pyhä Yrjö surmaa lohikäärmettä. Sen on tehnyt kuvanveistäjä Zurab Tsereteli.',
+      kuvat: [
+        {
+          tiedosto: 'Freedom Square, Tbilisi (50497944841).jpg',
+          selite: 'Vapaudenaukiolta haarautuu useita katuja, ja aukion nimi on vaihtunut useita kertoja.',
+          lahde: 'Andrew Milligan sumo, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kansallinen kasvitieteellinen puutarha': {
+      aika: 'varhaisemmista kuninkaallisista puutarhoista; virallisesti 1845',
+      teksti: 'Kansallinen kasvitieteellinen puutarha sijaitsee Tsavkisis-Tskalin rotkossa Sololakin vuoriston etelärinteillä. Lähteen mukaan sen pinta-ala on yli sata hehtaaria. Jean Chardin kuvasi alueen 1600-luvulla kuninkaallisina puutarhoina, ja myös Tournefort ja prinssi Vakhushtin kartta mainitsevat sen.\n\nPersian hyökkäyksessä 1795 puutarha ryöstettiin, mutta se elvytettiin 1800-luvun alussa ja perustettiin virallisesti 1845. Isoisän matkavuonna 1873 puutarha oli siis ollut virallisesti perustettu jo lähes kolme vuosikymmentä. 1800-luvun lopulla se toimi kasvistokeskuksena, ja sitä laajennettiin länteen.\n\nEntisen muslimihautausmaan alue liitettiin puutarhaan 1900-luvun puolivälissä; säilyneiden hautojen joukossa on azerbaidžanilaisen kirjailijan Mirza Fatali Akhundovin hauta. Pääsisäänkäynti on Narikalan linnoituksen juurella, ja kävely- ja pyöräreitit valmistuivat 2010-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Waterfall on the Tsavkisistsqali river in the National Botanical Gardens, Tbilisi.jpg',
+          lyhyt: 'Puutarha sijaitsee Tsavkisis-Tskalin rotkossa.',
+          selite: 'Puutarha sijaitsee Tsavkisis-Tskalin rotkossa, ja Chardin kuvasi sen 1600-luvulla kuninkaallisina puutarhoina.',
+          lahde: 'Alf Altendorf, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierä e03b, Ramallah):
+   * Kohdekartan nähtävyysjutut. Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03b-ramallah.
+   */
+  ramallah: {
+    'Al-Manaran aukio': {
+      aika: '1900-luku',
+      teksti: 'Al-Manaran aukio (arabiaksi Maydan al-Manara) on Ramallahin keskusaukio ja lähteen mukaan yksi Palestiinan tunnetuista julkisista tiloista. Isoisän matkavuonna 1873 aukiota ei vielä ollut: paikalla kulki multatie, joka yhdisti Ramallahin ja viereisen al-Birehin. Tie sai 1900-luvun alussa yhä enemmän merkitystä, ja 1930-luvulla Ramallah ja al-Bireh yhdistettiin sähköverkkoon. Katuvalojen kytkintaulu asetettiin tolppaan tien varteen, ja paikkaa alettiin kutsua al-Manaraksi eli majakaksi.\n\n1950-luvun alussa tolppa korvattiin muistomerkillä, jossa kivipylvään ympärillä oli viisi leijonaa; ne edustivat viittä sukua, jotka kaikki polveutuvat Rashid al-Haddadinin suvusta. Leijonat ovat lähteen mukaan perinteisiä rohkeuden, voiman ja ylpeyden symboleita, ja nykyisessä muistomerkissä ne ovat pylvään juurella suihkulähteen ja kukkapenkkien ympärillä. Muistomerkki rakennettiin myöhemmin uudelleen alkuperäisen mallin mukaan, ja työ valmistui vuoden 2000 paikkeilla.\n\nAukion laidalla toimii Silwadi-mehubaari, ja Hisbeh-tuoretori on lähellä aukiota.',
+      kuvat: [
+        {
+          tiedosto: '2010-08 Ramallah 22.jpg',
+          lyhyt: 'Al-Manaran aukio Ramallahissa: pylväs ja leijonapatsaat pylvään juurella.',
+          selite: 'Aukion muistomerkin leijonat edustavat Ramallahin perustajasukuja, jotka polveutuvat Haddadin-suvusta.',
+          lahde: 'Ralf Lotys (Sicherlich), Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän perheen kirkko': {
+      aika: '1910-luku',
+      teksti: 'Pyhän perheen kirkko on Ramallahin latinalaiskatolinen kirkko. Isoisän matkavuonna 1873 kirkkoa ei vielä ollut: latinalaiskatolinen yhteisö oli pieni, ja messu vietettiin talossa. Katolisia asettui Ramallahiin 1800-luvun jälkipuoliskolla sen jälkeen, kun Pyhän Joosefin sisaret ja Rosary-sisaret olivat perustaneet kouluja. Kirkon rakentamislupa myönnettiin vasta useita vuosikymmeniä myöhemmin, ja rakentaminen alkoi 1910-luvun alussa ottomaanien viranomaisten luvalla.\n\nKirkon yhteydessä on pappila, luostari ja koulu. Katolinen kirkko on kaupungin toiseksi suurin kristillinen kirkkokunta, ja Pyhän Joosefin tyttökoulu ja Al-Ahliyyah College ovat katolisia kouluja.',
+      kuvat: [
+        {
+          tiedosto: '2010-08 Ramallah 56.jpg',
+          lyhyt: 'Pyhän perheen kirkon pitkä kylki ja nelikulmainen kellotorni Ramallahissa.',
+          selite: 'Kirkon rakentaminen alkoi 1910-luvun alussa ottomaanien viranomaisten luvalla.',
+          lahde: 'Ralf Lotys (Sicherlich), Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ramallahin Friends-koulut': {
+      aika: '1860-luvun loppu',
+      teksti: 'Ramallahin Friends-koulut ovat amerikkalaisten kveekarien perustamia. Isoisän matkavuonna 1873 tyttöjen koulutyö oli jo alkanut: Jones-pariskunta aloitti sen 1860-luvun lopulla, ja koulun myöhempi nimi oli Ramallahin tyttöjen koulutuskoti. Koulu syntyi ottomaanien aikana Jerusalemin hallintoalueella. Poikien koulun rakentaminen alkoi 1900-luvun alussa. Alakoulun kampus, entinen tyttökoulu, on vanhan kaupungin keskustan lähellä, ja yläkoulun kampus, entinen poikakoulu, on al-Birehin puolella.\n\nKoulu on avoin tytöille ja pojille, ja opetus on arabiaksi ja englanniksi; nykyään koulut tarjoavat kansainvälistä IB-ohjelmaa. Entisiin oppilaisiin kuuluvat kansanperinteen tutkija Widad Kawar, joka on tutkinut palestiinalaisia pukuja, sekä kirjailija ja historioitsija Serene Husseini Shahid.',
+      kuvat: [
+        {
+          tiedosto: 'Ramallah Friends Schools2.JPG',
+          lyhyt: 'Friends-koulun piha ja Friends Boys School -rakennus Ramallahissa.',
+          selite: 'Rakennus kuuluu kveekarien kouluihin, joiden tyttöjen koulutyö alkoi 1860-luvun lopulla.',
+          lahde: 'Palobserver, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kulttuuripalatsi ja Mahmoud Darwish -museo': {
+      aika: '2000-luku',
+      teksti: 'Ramallahin Kulttuuripalatsi (Ramallah Cultural Palace) avattiin 2000-luvun alussa. Isoisän matkavuonna 1873 kukkulalla ei vielä ollut kumpaakaan rakennusta. Lähteen mukaan palatsi on Palestiinan hallinnoimilla alueilla ainoa laatuaan oleva kulttuurikeskus: siellä on noin 700-paikkainen sali, kokoushuoneita, näyttelysaleja ja elokuvatiloja. Hankkeen toteuttivat yhdessä Palestiinan hallinto, YK:n kehitysohjelma UNDP ja Japanin hallitus, ja palatsi on kaupungin pääpaikka esityksille ja konserteille.\n\nPalatsin viereen kukkulan laelle on haudattu runoilija Mahmoud Darwish, jonka muistolle on Ramallahissa museo ja mausoleumi. Museo on aivan palatsin lähellä, kadun toisella puolella.',
+      kuvat: [
+        {
+          tiedosto: 'Mahmoud Darwish Museum IMG 4086.jpg',
+          lyhyt: 'Mahmoud Darwish -museon piha Ramallahissa: pitkä vesiallas kalkkikivimuurien välissä.',
+          selite: 'Museo ja mausoleumi on rakennettu runoilijan muistolle Kulttuuripalatsin viereen.',
+          lahde: 'بدارين, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tell en-Nasbeh': {
+      aika: 'rautakausi',
+      teksti: 'Tell en-Nasbeh on pieni muinainen kumpu heti Ramallahin eteläpuolella, ja se on yksi kolmesta kohteesta, jotka usein yhdistetään Raamatun Mispaan; muut ehdokkaat ovat Nabi Samwil ja Shuafat. Isoisän matkavuonna 1873 kohdetta ei vielä ollut kaivettu.\n\nKumpu sijaitsi muinaisen tien varrella Jerusalemista pohjoiseen, ja rautakaudella se oli Juudan pohjoinen rajalinnoitus. Rautakaudella paikka oli muurein ja massiivisin kaupunginportein ympäröity asutus, ja babylonialaisten aikaan Jerusalemin tuhon jälkeen Mispa nousi lähteen mukaan alueen hallintokeskukseksi. Kaivauksia tehtiin 1920- ja 1930-luvuilla yhdysvaltalaisen William Frederic Badèn johdolla, ja ne olivat lähteen mukaan yksi alueen varhaisimmista tieteellisistä kaivauksista. Löydöt, tuhansia esineitä, ovat Badèn museossa Berkeleyssä. Kukkulan ympäri voi kävellä.',
+      kuvat: [
+        {
+          tiedosto: 'Tel a-Nasba.jpg',
+          lyhyt: 'Tell en-Nasbeh, jonka usein katsotaan olevan raamatullinen Mispa, ilmasta kuvattuna.',
+          selite: 'Kumpua ympäröivät nykyään kaupungin kerrostalot, ja sen kaivauksia tehtiin 1920- ja 1930-luvuilla.',
+          lahde: 'דניאל צבי, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al-Kasaba-teatteri': {
+      aika: 'vuosituhannen vaihde',
+      teksti: 'Al-Kasaba (arabiaksi القصبة) on teatteri ja elokuva-arkisto, Al-Kasaba Theatre and Cinematheque, Ramallahin keskustassa lähellä Al-Manaran aukiota ja Khalil Sakakini -kulttuurikeskusta. Isoisän matkavuonna 1873 sitä ei vielä ollut: toiminta alkoi vasta vuonna 1970 Jerusalemissa, ja Ramallahin teatteri ja elokuvateatteri avattiin vuosituhannen vaihteessa entisen elokuvateatterin tiloihin.\n\nLähteen mukaan Al-Kasaba on yksi harvoista alueen paikoista, joissa palestiinalaiset taiteilijat, näyttelijät ja elokuvantekijät voivat tuottaa ja esittää töitään. Sen salit tarjoavat tilan sekä palestiinalaisille että kansainvälisille esitysryhmille, ja siellä esitetään näytelmiä, tanssia, elokuvia ja konsertteja sekä järjestetään konferensseja.\n\nTeatteri on yksi Ramallahin kulttuuripaikoista Kulttuuripalatsin ja Khalil Sakakini -kulttuurikeskuksen rinnalla.',
+      kuvat: [
+        {
+          tiedosto: 'Théâtre Al-Kasaba en 2017.jpg',
+          lyhyt: 'Al-Kasaba-teatterin sisäänkäynti Ramallahissa: kaarikatos ja arabian- ja englanninkielinen kyltti.',
+          selite: 'Al-Kasaba Theatre and Cinematheque toimii Ramallahin keskustassa, ja sen toiminta alkoi Jerusalemissa vuonna 1970.',
+          lahde: 'Djex93, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
