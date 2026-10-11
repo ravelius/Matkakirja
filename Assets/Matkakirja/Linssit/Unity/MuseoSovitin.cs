@@ -5,7 +5,7 @@
 // Linnanrakentajan reitti, tauko/seuraava/edellinen), vapaa kulku (SeikkailuTapit: vasen tappi liike, veto katse) ja teoksen
 // esittely napista (MuseoTaulu, KORTTI-pohja). Näyttämö dioraaman tapaan omassa kerroksessa ja kuvassa (MuseoNayttamo).
 // Testikomennot (linssi-komento.txt): "linssi taidemuseo" avaa; "museo tila|kierros|vapaa|seuraava|edellinen|tauko 0|1|
-// siirry <n>|esittele [0|1]|liiku <eteen> <sivulle> <kääntö> <s>|katse <yaw> <pitch>|valotus <ev>|huone [0|1]|sali glb|halli|lod0|lod1|auto"; "museo kuvajuuri <url|pois>", "museo astc pois".
+// siirry <n>|paikka <x> <z> <yaw> [pitch]|teos <nro 1…|id>|esittele [0|1]|liiku <eteen> <sivulle> <kääntö> <s>|katse <yaw> <pitch>|valotus <ev>|huone [0|1]|sali glb|halli|lod0|lod1|auto"; "museo kuvajuuri <url|pois>", "museo astc pois".
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -44,6 +44,8 @@ namespace Matkakirja.Natiivi
         public static bool Astc = true;
         /// <summary>LR:n sali-GLB väliaikaishallin tilalle (KuvaJuuri + MuseoRakennus.SaliKansio); false = väliaikaishalli ("museo sali halli").</summary>
         public static bool SaliGlb = true;
+        /// <summary>Salien taustaääni (Aanisoitin.LinssiTaustat; omistaja 10.10. 22.0x: Belgradin nykytaiteen museo, hiljaisena).</summary>
+        public const string SaliAani = "museo-sali";
         /// <summary>Sali-GLB:n taso: 0 = 13 k kolmiota + atlas 4096² (22 Mt), 1 = 7,8 k + 2048² (5,6 Mt); −1 = laitteen muistin mukaan.</summary>
         public static int SaliLod = -1;
         static int SaliTaso => SaliLod >= 0 ? SaliLod : SystemInfo.systemMemorySize >= 7000 ? 0 : 1;
@@ -63,6 +65,8 @@ namespace Matkakirja.Natiivi
         Sali sali;
         public MuseoKierros Kierros { get; private set; }
         int naytettyVersio = -1;
+        readonly MuseoKertoja kertoja = new MuseoKertoja();
+        int kertojaKohta = -1;
         float viimeLoki;
 
         public MuseoSovitin(LinssiOhjain o, PalloKierto kierto)
@@ -112,7 +116,7 @@ namespace Matkakirja.Natiivi
             if (kierto != null) SyoteLukko.Esta(this);
             y.Pelikerrokset(false);
             y.MusiikkiPitoon(true);
-            y.Taustaaani(null);
+            y.Taustaaani(SaliAani);
 
             var pallonKamera = kierto != null ? kierto.GetComponent<Camera>() : null;
             nayttamo = MuseoNayttamo.Luo(pallonKamera);
@@ -123,9 +127,25 @@ namespace Matkakirja.Natiivi
             if (SaliGlb && !string.IsNullOrEmpty(KuvaJuuri)) o.StartCoroutine(rakennus.LataaSali(KuvaJuuri, SaliTaso, o.Kirjaa));
             // ASTC (MuseoTekstuurit) on ensisijainen; JPEG vain sen puuttuessa, ettei myöhässä valmistuva JPEG ylikirjoita seinätasoa.
             if (!Astc && !string.IsNullOrEmpty(KuvaJuuri)) o.StartCoroutine(rakennus.LataaKuvat(sali, KuvaJuuri, o.Kirjaa));
-            Kierros = new MuseoKierros(sali);
+            // Teoskierros (PT 11.10. 00.4x): pysähdys jokaisella kertojan teoksella kierros.json:n järjestyksessä; ilman sitä LR:n reitti.
+            List<string> kierrosTeokset = null;
+            var kierrosJson = Resources.Load<TextAsset>("Museo/alankomaat/kierros");
+            if (kierrosJson != null)
+            {
+                try
+                {
+                    kierrosTeokset = new List<string>();
+                    foreach (var x in Matkakirja.Peli.MiniJson.TaulukkoTaiTyhja(Matkakirja.Peli.MiniJson.Kentta(Matkakirja.Peli.MiniJson.Objekti(Matkakirja.Peli.MiniJson.Jasenna(kierrosJson.text)), "pysahdykset")))
+                        if (x is string id) kierrosTeokset.Add(id);
+                }
+                catch (Exception e) { kierrosTeokset = null; o.Kirjaa("museo: kierros.json virheellinen: " + e.Message); }
+                Resources.UnloadAsset(kierrosJson);
+            }
+            Kierros = new MuseoKierros(sali, kierrosTeokset);
+            if (Kierros.Puuttuvat.Count > 0) o.Kirjaa("museo: kierroksen teoksia ei salissa: " + string.Join(", ", Kierros.Puuttuvat));
+            if (nayttamo.Kamera != null) Kierros.SovitaPysahdykset(nayttamo.Kamera.aspect);
             teosjarjestys.Clear();
-            foreach (int i in Kierros.Pysahdykset) teosjarjestys.Add(sali.HaeRipustus(sali.Reitti[i].Kohde)?.Teos.Id);
+            for (int k = 0; k < Kierros.Pysahdykset.Count; k++) teosjarjestys.Add(sali.HaeRipustus(Kierros.Pysahdys(k).Kohde)?.Teos.Id);
             tekstuurit = nayttamo.gameObject.AddComponent<MuseoTekstuurit>();
             // Paketit teoskohtaisesti kuva.paketista (Kuvapaikka.Paketti); kunnes MuseoTekstuurit lukee sen, juuri + "astc-v1/" + id.
             tekstuurit.Juuri = Astc && KuvaJuuri != null ? KuvaJuuri + "astc-v1/" : null;
@@ -133,11 +153,16 @@ namespace Matkakirja.Natiivi
             tekstuurit.Kirjaa = o.Kirjaa;
             tekstuurit.Paikka = id => id != null && rakennus != null && rakennus.Kuvapaikat.TryGetValue(id, out var kp) ? kp : null;
             tekstuurit.EiPakettia = JpgVaralle;
+            var kaikki = new List<string>();
+            foreach (var r in sali.Ripustukset) kaikki.Add(r.Teos.Id);
+            tekstuurit.Kaikki = kaikki;
             veistokset = nayttamo.gameObject.AddComponent<MuseoVeistokset>();
             veistokset.Juuri = KuvaJuuri != null && rakennus.Veistospaikat.Count > 0 ? KuvaJuuri + "astc-v1/patsaat/" : null;
             veistokset.Paikat = () => rakennus?.Veistospaikat;
             veistokset.Pohjamateriaali = () => rakennus?.VeistosPohja;
             veistokset.Kirjaa = o.Kirjaa;
+            kertojaKohta = -1;
+            o.StartCoroutine(kertoja.Lataa(o.Kirjaa));
             SeikkailuTapit.MuseoKavely = () => Auki && Kierros != null && Kierros.Vaihe == MuseoVaihe.Vapaa;
             EsittelyAuki = false;
             o.Kirjaa($"museo: auki {sali.Nimi}: {sali.Osat.Count} osaa, {sali.Ripustukset.Count} teosta, {Kierros.Pysahdykset.Count} pysähdystä, " +
@@ -158,9 +183,21 @@ namespace Matkakirja.Natiivi
                 Kierros.VapaaLiike(liike.y, liike.x, kaanto, nosto, dt);
             }
             else Kierros.Paivita(dt);
+            if (nayttamo.Kamera != null) Kierros.SovitaPysahdykset(nayttamo.Kamera.aspect);   // vain muuttuessa (kierto, avaus)
             nayttamo.Paivita(sali, Kierros.Nykyinen, dt);
             tekstuurit?.Paivita(nayttamo.Kamera, Kierros.NykyinenTeos?.Teos.Id, teosjarjestys, Kierros.Kohta);
             veistokset?.Paivita(nayttamo.Kamera);
+            // Kertoja: kierroksen pysähdys soittaa teoksen äänitteen kerran saapuessa ja kestää vähintään sen ajan; matkaan lähtö pysäyttää.
+            if (Kierros.Vaihe == MuseoVaihe.Pysahtyy)
+            {
+                var id = Kierros.NykyinenTeos?.Teos.Id;
+                if (kertojaKohta != Kierros.Kohta && kertoja.On(id))
+                {
+                    kertojaKohta = Kierros.Kohta;
+                    if (kertoja.Soita(id, false)) { Kierros.PidennaPysahdys(kertoja.Kesto(id) + 1.5); o.Kirjaa($"museo: kertoja {id} {kertoja.Kesto(id):F0} s"); }
+                }
+            }
+            else if (Kierros.Vaihe == MuseoVaihe.Siirtyy) { kertojaKohta = -1; kertoja.Pysayta(); }
             var huone = sali.HuonePisteessa(Kierros.Nykyinen.P, NykyinenHuone);
             if (huone != NykyinenHuone)
             {
@@ -191,6 +228,7 @@ namespace Matkakirja.Natiivi
             Auki = false;
             if (Aktiivinen == this) Aktiivinen = null;
             EsittelyAuki = false; HuoneKorttiAuki = false; NykyinenHuone = null;
+            kertoja.Pysayta();
             SeikkailuTapit.MuseoKavely = null;
             tekstuurit?.Vapauta(); tekstuurit = null;
             veistokset?.Vapauta(); veistokset = null;
@@ -220,6 +258,15 @@ namespace Matkakirja.Natiivi
             var k = Aktiivinen.Kierros;
             if (k != null && k.Vaihe != MuseoVaihe.Vapaa) k.Tauko(EsittelyAuki);
             Vaihtui?.Invoke();
+        }
+
+        /// <summary>Esittelynappi: teoksella on kertojan äänite → soi (pyynnöstä, myös vapaassa kulussa) ja true; muuten false (kortin lukija).</summary>
+        public static bool KertojaEsittelee()
+        {
+            var a = Aktiivinen; var id = a?.Teos?.Teos.Id;
+            if (a == null || !a.kertoja.On(id)) return false;
+            a.kertoja.Soita(id, true);
+            return true;
         }
 
         /// <summary>Huonekortti (KORTTI-pohja, NUI): vain pelaajan napautuksesta nimikyltistä. Kierros pysähtyy kuten esittelyssä.</summary>
@@ -310,10 +357,78 @@ namespace Matkakirja.Natiivi
                     if (Kierros.Vaihe != MuseoVaihe.Vapaa) Kierros.Vapaa();
                     Kierros.VapaaLiike(0, 0, L(osat[2]) / (MuseoKierros.VapaaKaantoAs * 1.0), L(osat[3]) / (MuseoKierros.VapaaKaantoAs * 1.0), 1.0);
                     break;
+                case "teos" when osat.Length > 2:
+                    {
+                        var r = int.TryParse(osat[2], NumberStyles.Integer, CultureInfo.InvariantCulture, out int nro) && nro >= 1 && nro <= sali.Ripustukset.Count
+                            ? sali.Ripustukset[nro - 1] : sali.Ripustukset.Find(x => x.Teos.Id == osat[2]);
+                        if (r == null || !Kierros.NaytaTeos(r)) o.Kirjaa($"museo: teos {osat[2]} ei katseluasentoa");
+                        else o.Kirjaa($"museo: teos {r.Teos.Id} {r.Teos.Otsikko} ({r.Paikka.Id}) katseluasento {Kierros.Nykyinen}");
+                    }
+                    break;
+                case "paikka" when osat.Length > 4:
+                    if (!Kierros.Aseta(L(osat[2]), L(osat[3]), L(osat[4]), osat.Length > 5 ? L(osat[5]) : 0)) o.Kirjaa($"museo: paikka {osat[2]} {osat[3]} ei sallittu");
+                    break;
                 case "valotus" when osat.Length > 2: MuseoNayttamo.ValotusKorjausEv = (float)L(osat[2]); break;
             }
             o.Kirjaa(Tila());
             Vaihtui?.Invoke();
+        }
+    }
+
+    /// <summary>
+    /// TAIDEMUSEON KERTOJA (omistaja 11.10. hyväksyi 33 tekstiä, PT; Pelikoodari aanet/taidemuseo-kertoja-v1: William Iv4, eleven_v4_turbo,
+    /// −17,2 dB): manifest.json {aanet:[{id, sali, aani, ajat, kesto_s}]} → teoksen tunnus → äänite. Soitto Puhe.Soitalla (kertojakytkin,
+    /// väistöt ja pinnaus kuten muissa kertojissa); pyynnöstä = Esittele-nappi.
+    /// </summary>
+    public sealed class MuseoKertoja
+    {
+        public static string Juuri = "https://media.matkakirja.app/aanet/taidemuseo-kertoja-v2/";   // v2: tempo 1,10× (Pelikoodari 11.10.)
+        readonly Dictionary<string, (string Url, double Kesto)> aanet = new Dictionary<string, (string, double)>();
+        public string Soiva { get; private set; }
+        public int Maara => aanet.Count;
+
+        public System.Collections.IEnumerator Lataa(Action<string> kirjaa)
+        {
+            if (aanet.Count > 0 || string.IsNullOrEmpty(Juuri)) yield break;
+            using (var r = UnityEngine.Networking.UnityWebRequest.Get(Juuri + "manifest.json"))
+            {
+                yield return r.SendWebRequest();
+                if (r.result != UnityEngine.Networking.UnityWebRequest.Result.Success) { kirjaa?.Invoke("museo: kertoja ei latautunut (" + r.error + ")"); yield break; }
+                try
+                {
+                    var d = Matkakirja.Peli.MiniJson.Objekti(Matkakirja.Peli.MiniJson.Jasenna(r.downloadHandler.text));
+                    foreach (var o in Matkakirja.Peli.MiniJson.TaulukkoTaiTyhja(Matkakirja.Peli.MiniJson.Kentta(d, "aanet")))
+                    {
+                        var a = Matkakirja.Peli.MiniJson.Objekti(o);
+                        string id = Matkakirja.Peli.MiniJson.Teksti(a, "id"), aani = Matkakirja.Peli.MiniJson.Teksti(a, "aani");
+                        if (!string.IsNullOrEmpty(id) && !string.IsNullOrEmpty(aani) && !aani.Contains(".."))
+                            aanet[id] = (Juuri + aani, Matkakirja.Peli.MiniJson.Luku(a, "kesto_s") ?? 0);
+                    }
+                    kirjaa?.Invoke($"museo: kertoja {aanet.Count} äänitettä");
+                }
+                catch (Exception e) { kirjaa?.Invoke("museo: kertojan manifest virheellinen: " + e.Message); }
+            }
+        }
+
+        public bool On(string id) => id != null && aanet.ContainsKey(id);
+        public double Kesto(string id) => id != null && aanet.TryGetValue(id, out var a) ? a.Kesto : 0;
+
+        public bool Soita(string id, bool pyynnosta)
+        {
+            var p = Puhe.Instanssi;
+            if (p == null || !aanet.TryGetValue(id ?? "", out var a)) return false;
+            if (Soiva == id && p.Soi && p.SoivaUrl == a.Url) return true;
+            if (!p.Soita(a.Url, 0.3f, () => { if (Soiva == id) Soiva = null; }, pyynnosta)) return false;
+            Soiva = id;
+            return true;
+        }
+
+        public void Pysayta()
+        {
+            if (Soiva == null) return;
+            var p = Puhe.Instanssi;
+            if (p != null && aanet.TryGetValue(Soiva, out var a) && p.SoivaUrl == a.Url) p.Pysayta();
+            Soiva = null;
         }
     }
 }

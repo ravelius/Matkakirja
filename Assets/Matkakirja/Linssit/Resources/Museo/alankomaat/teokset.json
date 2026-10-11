@@ -1,7 +1,7 @@
 {
  "versio": 2,
  "maa": "alankomaat",
- "huomio": "LS1 10.10.: Sisältökirjurin teokset.v2.json (media…/taidemuseo/alankomaat/lahde/teokset.v2.json, 58 teosta) suodatettuna ensimmäisen palan 20 teokseen (sali.json). Polut suhteessa MuseoSovitin.KuvaJuuri = …/taidemuseo/alankomaat/. Mitat cm [korkeus, leveys]. kuva.lahde ja seina_lahde ovat polkuja suhteessa taidemuseo/alankomaat/. id = Rijksmuseumin objektinumero (rijksmuseum-siipi) tai muu museokohtainen tunnus.",
+ "huomio": "LS2 10.10. (taidemuseon tekijä, PT 20.5x: kaikki salit ilman tyhjiä kohtia): Sisältökirjurin teokset.v2.json (58) + grafiikka/teokset.grafiikka.v2.1.json (13) suodatettuna sali.json:n kaikkiin 62 teos_ehdotukseen (LR:n sali v2g täytti viimeiset 11 paikkaa; ennen 20, LS1:n ensimmäinen pala). ASTC-paketit astc-v1/<id>/ kaikille (42 uutta teos_astc.py:llä). Polut suhteessa MuseoSovitin.KuvaJuuri = …/taidemuseo/alankomaat/. Mitat cm [korkeus, leveys]. id = museon inventaarionumero. LS2 11.10. 00.5x (PT: kaikki 13 grafiikan kertojateosta seinälle): RP-P-OB-612 ja RP-P-OB-616 grafiikkakabinetin oven seinälle (graf-i1, graf-i2), 64 teosta.",
  "teokset": [
   {
    "id": "SK-C-251",
@@ -901,6 +901,2035 @@
      5614
     ],
     "commons_sha1": "0bd6a8258e09f528aab7bac6fb384b2b8bd04a8d"
+   }
+  },
+  {
+   "id": "uva-amsterdam-kartta-1625",
+   "id_lahde": "uva-amsterdam-kartta-1625",
+   "tyyppi": "kartta",
+   "siipi": "grafiikka-valokuvat",
+   "nimi_fi": "Amsterdamin kartta vuodelta 1625 (1630-luvun painos)",
+   "nimi_en": "Map of Amsterdam, 1625 (1630s edition)",
+   "tekija": "Balthasar Florisz. van Berckenrode",
+   "vuosi": "1625 (uusintapainos 1630-luvulta)",
+   "materiaali": "painettu kartta",
+   "tekniikka": "painettu kartta",
+   "mitat_cm_kork_lev": null,
+   "mitat_teksti": null,
+   "kuvasuhde_leveys_per_korkeus": 1.1254,
+   "museo": "Allard Pierson (Universiteit van Amsterdam)",
+   "kaupunki": "Amsterdam",
+   "lat": 52.3676,
+   "lon": 4.897,
+   "inventaario": "OTM: HB-KZL W.X. 020",
+   "museon_tietue": null,
+   "teoksen_oikeustila": "Public domain (Berckenrode k. 1646)",
+   "lisenssi": "Public domain",
+   "lisenssi_url": null,
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Map_of_Amsterdam,_1625_(1630s_edition)_by_Balthasar_Florisz._van_Berckenrode_Universiteit_van_Amsterdam_OTM-_HB-KZL_W.X._020.jpg",
+   "krediitti": "Allard Pierson (Universiteit van Amsterdam)",
+   "kuvateksti_fi": "Kartta näyttää Amsterdamin kanavarenkaat ja satamaan ankkuroidut laivat 1600-luvun alun kasvun aikana.",
+   "huomio": "Kuva ei ole Rijksmuseumista vaan Allard Piersonin (Amsterdamin yliopisto) kokoelmasta, tunnus OTM: HB-KZL W.X. 020; kustantaja Philips Molevliet 1630. Mitat eivät ole saatavilla UvA:n tietueessa (tarkistettu 10.10.2026): LR päättää ripustuskoon, kuvasuhde 1,1255.",
+   "kuva": {
+    "paketti": "astc-v1/uva-amsterdam-kartta-1625/",
+    "px": [
+     8192,
+     7279
+    ],
+    "lahde": "grafiikka/kuvat/iso/uva-amsterdam-kartta-1625.jpg",
+    "seina_lahde": "grafiikka/kuvat/seina/uva-amsterdam-kartta-1625.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Map of Amsterdam, 1625 (1630s edition) by Balthasar Florisz. van Berckenrode Universiteit van Amsterdam OTM- HB-KZL W.X. 020.jpg",
+    "tekija_kuvalle": "Balthasar Florisz. van Berckenrode",
+    "alkuperainen_px": [
+     10153,
+     9021
+    ],
+    "commons_sha1": "ef8bd06ea6d0ef97bac2d4df77f401d3c0599f23"
+   }
+  },
+  {
+   "id": "RP-P-OB-832",
+   "id_lahde": "rijks-rp-p-ob-832",
+   "tyyppi": "grafiikka",
+   "siipi": "grafiikka-valokuvat",
+   "nimi_fi": "Kallioinen maisema, tiet ja joki",
+   "nimi_en": "Rocky Landscape with a Road and a River",
+   "tekija": "Hercules Segers (mahdollisesti)",
+   "vuosi": "n. 1622–1625",
+   "materiaali": "viivaetsaus plaattoonilla ja korostuksilla; väritetty",
+   "tekniikka": "viivaetsaus plaattoonilla ja korostuksilla; väritetty",
+   "mitat_cm_kork_lev": [
+    23.6,
+    28.3
+   ],
+   "mitat_teksti": "korkeus 236 mm, leveys 283 mm (leikattu painopinnan sisältä)",
+   "kuvasuhde_leveys_per_korkeus": 1.2397,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "RP-P-OB-832",
+   "museon_tietue": "https://id.rijksmuseum.nl/200126240",
+   "teoksen_oikeustila": "Public domain (Segers k. n. 1638); Rijksmuseum: Public Domain Mark",
+   "lisenssi": "CC0",
+   "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Rotsachtig_landschap_met_wegen_en_een_rivier_Rotsachtig_landschap_met_wegen_en_rivier,_RP-P-OB-832.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Segersin vuoristomaisema, jossa tie ja joki kiemurtelevat rotkossa. Tielle on maalattu kaksi pientä kulkijaa.",
+   "huomio": "Rijksmuseum: tekijän attribuutio \"mahdollisesti\" Hercules Segers.",
+   "kuva": {
+    "paketti": "astc-v1/RP-P-OB-832/",
+    "px": [
+     8192,
+     6608
+    ],
+    "lahde": "grafiikka/kuvat/iso/rijks-rp-p-ob-832.jpg",
+    "seina_lahde": "grafiikka/kuvat/seina/rijks-rp-p-ob-832.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Rotsachtig landschap met wegen en een rivier Rotsachtig landschap met wegen en rivier, RP-P-OB-832.jpg",
+    "tekija_kuvalle": "Rijksmuseum",
+    "alkuperainen_px": [
+     6084,
+     4908
+    ],
+    "commons_sha1": "e02810459bdd211aba6f6977bbd07944267284fb"
+   }
+  },
+  {
+   "id": "RP-F-AB12278-A",
+   "id_lahde": "rijks-rp-f-ab12278-a",
+   "tyyppi": "valokuva",
+   "siipi": "grafiikka-valokuvat",
+   "nimi_fi": "Näkymä valokuvaajan talon katolta Singelille",
+   "nimi_en": "View from the roof of the photographer’s house onto the Singel, Amsterdam",
+   "tekija": "Eduard Isaac Asser",
+   "vuosi": "n. 1852",
+   "materiaali": "suolavedos",
+   "tekniikka": "suolavedos",
+   "mitat_cm_kork_lev": [
+    8.9,
+    8.6
+   ],
+   "mitat_teksti": "kuva 89 × 86 mm",
+   "kuvasuhde_leveys_per_korkeus": 0.9695,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "RP-F-AB12278-A",
+   "museon_tietue": "https://id.rijksmuseum.nl/200412116",
+   "teoksen_oikeustila": "Public domain (Asser k. 1894); Rijksmuseum: CC0",
+   "lisenssi": "CC0",
+   "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Gezicht_vanaf_het_dak_van_het_huis_van_de_fotograaf_op_het_Singel,_Amsterdam,_RP-F-AB12278-A.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Eduard Isaac Asser kuvasi Singelin talot oman talonsa katolta noin 1852. Varhainen suolavedos Amsterdamista.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/RP-F-AB12278-A/",
+    "px": [
+     7942,
+     8192
+    ],
+    "lahde": "grafiikka/kuvat/iso/rijks-rp-f-ab12278-a.jpg",
+    "seina_lahde": "grafiikka/kuvat/seina/rijks-rp-f-ab12278-a.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Gezicht vanaf het dak van het huis van de fotograaf op het Singel, Amsterdam, RP-F-AB12278-A.jpg",
+    "tekija_kuvalle": "Rijksmuseum",
+    "alkuperainen_px": [
+     3818,
+     3938
+    ],
+    "commons_sha1": "7990c327188e7b62eb6010bf5cac013629ec01b8"
+   }
+  },
+  {
+   "id": "RP-F-AB12278-Z",
+   "id_lahde": "rijks-rp-f-ab12278-z",
+   "tyyppi": "valokuva",
+   "siipi": "grafiikka-valokuvat",
+   "nimi_fi": "Laivamalli",
+   "nimi_en": "Ship model",
+   "tekija": "Eduard Isaac Asser",
+   "vuosi": "n. 1852",
+   "materiaali": "suolavedos",
+   "tekniikka": "suolavedos",
+   "mitat_cm_kork_lev": [
+    10.1,
+    11.6
+   ],
+   "mitat_teksti": "kuva 101 × 116 mm",
+   "kuvasuhde_leveys_per_korkeus": 1.1421,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "RP-F-AB12278-Z",
+   "museon_tietue": "https://id.rijksmuseum.nl/200412103",
+   "teoksen_oikeustila": "Public domain (Asser k. 1894); Rijksmuseum: CC0",
+   "lisenssi": "CC0",
+   "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Scheepsmodel,_RP-F-AB12278-Z.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Asserin suolavedos kolmimastoisesta laivamallista noin vuodelta 1852. Varhaisessa valokuvassa näkyy takila tarkasti.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/RP-F-AB12278-Z/",
+    "px": [
+     8192,
+     7173
+    ],
+    "lahde": "grafiikka/kuvat/iso/rijks-rp-f-ab12278-z.jpg",
+    "seina_lahde": "grafiikka/kuvat/seina/rijks-rp-f-ab12278-z.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Scheepsmodel, RP-F-AB12278-Z.jpg",
+    "tekija_kuvalle": "Rijksmuseum",
+    "alkuperainen_px": [
+     4004,
+     3506
+    ],
+    "commons_sha1": "bc91938486e9b39b5b1fc3dce5d2b1fe8b6d1e94"
+   }
+  },
+  {
+   "id": "RP-P-OB-849",
+   "id_lahde": "rijks-rp-p-ob-849",
+   "tyyppi": "grafiikka",
+   "siipi": "grafiikka-valokuvat",
+   "nimi_fi": "Iso puu",
+   "nimi_en": "The Large Tree",
+   "tekija": "Hercules Segers (mahdollisesti)",
+   "vuosi": "n. 1628–1629",
+   "materiaali": "viivaetsaus plaattoonilla ja korostuksilla",
+   "tekniikka": "viivaetsaus plaattoonilla ja korostuksilla",
+   "mitat_cm_kork_lev": [
+    21.7,
+    27.7
+   ],
+   "mitat_teksti": "korkeus 217 mm, leveys 277 mm",
+   "kuvasuhde_leveys_per_korkeus": 1.2876,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "RP-P-OB-849",
+   "museon_tietue": "https://id.rijksmuseum.nl/200126279",
+   "teoksen_oikeustila": "Public domain (Segers k. n. 1638); Rijksmuseum: Public Domain Mark",
+   "lisenssi": "CC0",
+   "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:De_grote_boom,_RP-P-OB-849.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Hercules Segersin Iso puu: laitumen yli kohoaa jättimäinen puu, taustalla näkyy kylä.",
+   "huomio": "Rijksmuseum: tekijän attribuutio \"mahdollisesti\" Hercules Segers.",
+   "kuva": {
+    "paketti": "astc-v1/RP-P-OB-849/",
+    "px": [
+     8192,
+     6362
+    ],
+    "lahde": "grafiikka/kuvat/iso/rijks-rp-p-ob-849.jpg",
+    "seina_lahde": "grafiikka/kuvat/seina/rijks-rp-p-ob-849.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:De grote boom, RP-P-OB-849.jpg",
+    "tekija_kuvalle": "Rijksmuseum",
+    "alkuperainen_px": [
+     6312,
+     4902
+    ],
+    "commons_sha1": "9659a6e671d14b756855b2ff39bf38e6e9d8d0db"
+   }
+  },
+  {
+   "id": "RP-F-00-565",
+   "id_lahde": "rijks-rp-f-00-565",
+   "tyyppi": "valokuva",
+   "siipi": "grafiikka-valokuvat",
+   "nimi_fi": "Kolkje ja Oudezijds Achterburgwal Amsterdamissa",
+   "nimi_en": "Het Kolkje and Oudezijds Achterburgwal in Amsterdam",
+   "tekija": "George Hendrik Breitner",
+   "vuosi": "1894–1898",
+   "materiaali": "kehitetty gelatiinihopeavedos",
+   "tekniikka": "kehitetty gelatiinihopeavedos",
+   "mitat_cm_kork_lev": [
+    30.1,
+    35.5
+   ],
+   "mitat_teksti": "kuva 301 × 355 mm, arkki 394 × 446 mm",
+   "kuvasuhde_leveys_per_korkeus": 1.1989,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "RP-F-00-565",
+   "museon_tietue": "https://id.rijksmuseum.nl/200144322",
+   "teoksen_oikeustila": "Public domain (Breitner k. 1923); Rijksmuseum: CC0",
+   "lisenssi": "CC0",
+   "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Het_Kolkje_en_de_Oudezijds_Achterburgwal_in_Amsterdam,_RP-F-00-565.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Breitnerin valokuva Amsterdamin vanhasta kaupungista: Oudezijds Achterburgwal sumuisessa valossa, vasemmalla Zeedijkin takapuoli.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/RP-F-00-565/",
+    "px": [
+     8192,
+     6833
+    ],
+    "lahde": "grafiikka/kuvat/iso/rijks-rp-f-00-565.jpg",
+    "seina_lahde": "grafiikka/kuvat/seina/rijks-rp-f-00-565.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Het Kolkje en de Oudezijds Achterburgwal in Amsterdam, RP-F-00-565.jpg",
+    "tekija_kuvalle": "Rijksmuseum",
+    "alkuperainen_px": [
+     6486,
+     5410
+    ],
+    "commons_sha1": "0cc9312765479e772b1feb526841c2f879d54e97"
+   }
+  },
+  {
+   "id": "RP-F-K89497",
+   "id_lahde": "rijks-rp-f-k89497",
+   "tyyppi": "valokuva",
+   "siipi": "grafiikka-valokuvat",
+   "nimi_fi": "Näkymä Damilta Amsterdamissa",
+   "nimi_en": "View of the Dam in Amsterdam",
+   "tekija": "George Hendrik Breitner",
+   "vuosi": "n. 1890–1910",
+   "materiaali": "kehitetty gelatiinihopeavedos (moderni vedos negatiivista)",
+   "tekniikka": "kehitetty gelatiinihopeavedos (moderni vedos negatiivista)",
+   "mitat_cm_kork_lev": [
+    30.5,
+    40.0
+   ],
+   "mitat_teksti": "kuva 40 × 30,5 cm, reuna 50,5 × 39,3 cm",
+   "kuvasuhde_leveys_per_korkeus": 1.3059,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "RP-F-K89497",
+   "museon_tietue": "https://id.rijksmuseum.nl/200407635",
+   "teoksen_oikeustila": "Public domain (Breitner k. 1923); Rijksmuseum: CC0",
+   "lisenssi": "CC0",
+   "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Gezicht_op_de_Dam_in_Amsterdam,_RP-F-K89497.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Breitnerin kuva Damin aukiolta, taustalla Uusi kirkko ja kuninkaanpalatsi. Moderni vedos Breitnerin lasinegatiivista.",
+   "huomio": "Rijksmuseumin mitat (korkeus 40 × leveys 30,5) tulkittu kuvasuhteen perusteella vaaka-asentoon.",
+   "kuva": {
+    "paketti": "astc-v1/RP-F-K89497/",
+    "px": [
+     8192,
+     6273
+    ],
+    "lahde": "grafiikka/kuvat/iso/rijks-rp-f-k89497.jpg",
+    "seina_lahde": "grafiikka/kuvat/seina/rijks-rp-f-k89497.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Gezicht op de Dam in Amsterdam, RP-F-K89497.jpg",
+    "tekija_kuvalle": "Rijksmuseum",
+    "alkuperainen_px": [
+     6054,
+     4636
+    ],
+    "commons_sha1": "90d61ec50c62ceddf4218bd4b4f466ae7fcf1da0"
+   }
+  },
+  {
+   "id": "RP-F-K89483",
+   "id_lahde": "rijks-rp-f-k89483",
+   "tyyppi": "valokuva",
+   "siipi": "grafiikka-valokuvat",
+   "nimi_fi": "Rakennustyöläisiä työmaalla, Van Diemenstraat",
+   "nimi_en": "Construction workers in a building pit on the Van Diemenstraat, Amsterdam",
+   "tekija": "George Hendrik Breitner",
+   "vuosi": "n. 1890–1910",
+   "materiaali": "kehitetty gelatiinihopeavedos (moderni vedos negatiivista)",
+   "tekniikka": "kehitetty gelatiinihopeavedos (moderni vedos negatiivista)",
+   "mitat_cm_kork_lev": [
+    30.0,
+    40.0
+   ],
+   "mitat_teksti": "kuva 400 × 300 mm, arkki 505 × 398 mm",
+   "kuvasuhde_leveys_per_korkeus": 1.3279,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "RP-F-K89483",
+   "museon_tietue": "https://id.rijksmuseum.nl/200407621",
+   "teoksen_oikeustila": "Public domain (Breitner k. 1923); Rijksmuseum: CC0",
+   "lisenssi": "CC0",
+   "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Bouwvakkers_ana_het_werk_in_een_bouwput_aan_de_Van_Diemenstraat_in_Amsterdam,_RP-F-K89483.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Rakennustyöläiset perustusten kaivannossa Van Diemenstraatilla Amsterdamissa. Moderni vedos Breitnerin negatiivista.",
+   "huomio": "Rijksmuseumin mitat (korkeus 40 × leveys 30) tulkittu kuvasuhteen perusteella vaaka-asentoon.",
+   "kuva": {
+    "paketti": "astc-v1/RP-F-K89483/",
+    "px": [
+     8192,
+     6169
+    ],
+    "lahde": "grafiikka/kuvat/iso/rijks-rp-f-k89483.jpg",
+    "seina_lahde": "grafiikka/kuvat/seina/rijks-rp-f-k89483.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Bouwvakkers ana het werk in een bouwput aan de Van Diemenstraat in Amsterdam, RP-F-K89483.jpg",
+    "tekija_kuvalle": "Rijksmuseum",
+    "alkuperainen_px": [
+     6124,
+     4612
+    ],
+    "commons_sha1": "bd9b2da64231d90e6b7d2587dc2b4641231d697d"
+   }
+  },
+  {
+   "id": "SK-C-149",
+   "id_lahde": "rijks-sk-c-149",
+   "siipi": "rijksmuseum",
+   "nimi_fi": "Äiti kampaa lapsen hiuksia (”Äidin velvollisuus”)",
+   "nimi_en": "A Mother Delousing her Child’s Hair, known as ‘A Mother’s Duty’",
+   "tekija": "Pieter de Hooch",
+   "vuosi": "n. 1660–1661",
+   "tekniikka": "öljy kankaalle",
+   "mitat_cm_kork_lev": [
+    52.5,
+    61.0
+   ],
+   "kuvasuhde_leveys_per_korkeus": 1.1449,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "SK-C-149",
+   "museon_tietue": "https://id.rijksmuseum.nl/20028104",
+   "lisenssi": "Public domain",
+   "teoksen_oikeustila": "Public Domain Mark 1.0 (Rijksmuseum)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Een_moeder_die_het_haar_van_haar_kind_reinigt,_bekend_als_%E2%80%98Moedertaak%E2%80%99_Rijksmuseum_SK-C-149.jpeg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "De Hooch kuvaa äidin kampaamassa lapsen hiuksia. Arkinen huolenpito oli kultaisen ajan kotikuvan keskeinen aihe.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/SK-C-149/",
+    "px": [
+     8192,
+     7155
+    ],
+    "lahde": "lahde/kuvat/iso/rijks-sk-c-149.jpg",
+    "seina_lahde": "lahde/kuvat/seina/rijks-sk-c-149.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Een moeder die het haar van haar kind reinigt, bekend als ‘Moedertaak’ Rijksmuseum SK-C-149.jpeg",
+    "tekija_kuvalle": "Pieter de Hooch",
+    "alkuperainen_px": [
+     15410,
+     13460
+    ],
+    "commons_sha1": "f32d2feaf20d262e2198a8ede5ef98f046ceabd2"
+   }
+  },
+  {
+   "id": "RP-P-OB-550",
+   "id_lahde": "rijks-rp-p-ob-550",
+   "tyyppi": "grafiikka",
+   "siipi": "grafiikka-valokuvat",
+   "nimi_fi": "Kultaseppä Jan Lutma",
+   "nimi_en": "Johannes Lutma (Jan Lutma, goldsmith)",
+   "tekija": "Rembrandt van Rijn",
+   "vuosi": "1656",
+   "materiaali": "etsaus ja kuivaneula lievällä plaattoonilla",
+   "tekniikka": "etsaus ja kuivaneula lievällä plaattoonilla",
+   "mitat_cm_kork_lev": [
+    19.8,
+    14.8
+   ],
+   "mitat_teksti": "korkeus 198 mm, leveys 148 mm",
+   "kuvasuhde_leveys_per_korkeus": 0.7361,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "RP-P-OB-550",
+   "museon_tietue": "https://id.rijksmuseum.nl/200125642",
+   "teoksen_oikeustila": "Public domain (Rembrandt k. 1669); Rijksmuseum: Public Domain Mark",
+   "lisenssi": "CC0",
+   "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Portret_van_Johannes_Lutma_De_goudsmid_Jan_Lutma,_RP-P-OB-550.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Rembrandtin etsaus amsterdamilaisesta kultasepästä Jan Lutmasta. Mies istuu nojatuolissa ja katsoo suoraan katsojaan.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/RP-P-OB-550/",
+    "px": [
+     6030,
+     8192
+    ],
+    "lahde": "grafiikka/kuvat/iso/rijks-rp-p-ob-550.jpg",
+    "seina_lahde": "grafiikka/kuvat/seina/rijks-rp-p-ob-550.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Portret van Johannes Lutma De goudsmid Jan Lutma, RP-P-OB-550.jpg",
+    "tekija_kuvalle": "Rijksmuseum",
+    "alkuperainen_px": [
+     4034,
+     5480
+    ],
+    "commons_sha1": "d1d9fb5a8d5a97a8cb4f27aeb29d8a3e07edab24"
+   }
+  },
+  {
+   "id": "SK-A-3276",
+   "id_lahde": "rijks-sk-a-3276",
+   "siipi": "rijksmuseum",
+   "nimi_fi": "Jeremia surkuttelee Jerusalemin tuhoa",
+   "nimi_en": "Jeremiah Lamenting the Destruction of Jerusalem",
+   "tekija": "Rembrandt van Rijn (Rijks: ”mainittu teoksessa”)",
+   "vuosi": "1630",
+   "tekniikka": "öljy puupaneelille",
+   "mitat_cm_kork_lev": [
+    58.0,
+    46.0
+   ],
+   "kuvasuhde_leveys_per_korkeus": 0.7866,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "SK-A-3276",
+   "museon_tietue": "https://id.rijksmuseum.nl/200107946",
+   "lisenssi": "Public domain",
+   "teoksen_oikeustila": "Public Domain Mark 1.0 (Rijksmuseum)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Jeremia_treurend_over_de_verwoesting_van_Jeruzalem_Rijksmuseum_SK-A-3276.jpeg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Nuoren Rembrandtin pieni paneelimaalaus vuodelta 1630: profeetta Jeremia suree Jerusalemin tuhoa.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/SK-A-3276/",
+    "px": [
+     6444,
+     8192
+    ],
+    "lahde": "lahde/kuvat/iso/rijks-sk-a-3276.jpg",
+    "seina_lahde": "lahde/kuvat/seina/rijks-sk-a-3276.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Jeremia treurend over de verwoesting van Jeruzalem Rijksmuseum SK-A-3276.jpeg",
+    "tekija_kuvalle": "Rembrandt",
+    "alkuperainen_px": [
+     3856,
+     4902
+    ],
+    "commons_sha1": "3cf6dd0309edeca010bf56491fc303400a7b080f"
+   }
+  },
+  {
+   "id": "RP-P-1961-1117",
+   "id_lahde": "rijks-rp-p-1961-1117",
+   "tyyppi": "grafiikka",
+   "siipi": "grafiikka-valokuvat",
+   "nimi_fi": "Maisema metsästäjän ja koirien kanssa (Jagertje)",
+   "nimi_en": "Landscape with sportsman and dogs",
+   "tekija": "Rembrandt van Rijn",
+   "vuosi": "n. 1648",
+   "materiaali": "etsaus ja kuivaneula",
+   "tekniikka": "etsaus ja kuivaneula",
+   "mitat_cm_kork_lev": [
+    12.8,
+    15.8
+   ],
+   "mitat_teksti": "korkeus 128 mm, leveys 158 mm",
+   "kuvasuhde_leveys_per_korkeus": 1.2221,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "RP-P-1961-1117",
+   "museon_tietue": "https://id.rijksmuseum.nl/200125463",
+   "teoksen_oikeustila": "Public domain (Rembrandt k. 1669); Rijksmuseum: Public Domain Mark",
+   "lisenssi": "CC0",
+   "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Landschap_met_schaapherder_en_hond_Het_jagertje,_RP-P-1961-1117.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Rembrandt kuvasi hollantilaisen maiseman kevyin viivoin: metsästäjä koirineen kulkee tietä, taustalla kylä ja kukkulat.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/RP-P-1961-1117/",
+    "px": [
+     8192,
+     6703
+    ],
+    "lahde": "grafiikka/kuvat/iso/rijks-rp-p-1961-1117.jpg",
+    "seina_lahde": "grafiikka/kuvat/seina/rijks-rp-p-1961-1117.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Landschap met schaapherder en hond Het jagertje, RP-P-1961-1117.jpg",
+    "tekija_kuvalle": "Rijksmuseum",
+    "alkuperainen_px": [
+     4986,
+     4080
+    ],
+    "commons_sha1": "dec5fdba37088256fd28e99ae9cb6b31eef85d4d"
+   }
+  },
+  {
+   "id": "RP-P-OB-810",
+   "id_lahde": "rijks-rp-p-ob-810",
+   "tyyppi": "grafiikka",
+   "siipi": "grafiikka-valokuvat",
+   "nimi_fi": "Kaukomaisema tiestä ja sammaleisista oksista",
+   "nimi_en": "Distant View with a Road and Mossy Branches",
+   "tekija": "Hercules Segers (mahdollisesti)",
+   "vuosi": "n. 1622–1625",
+   "materiaali": "viivaetsaus, painettu tummansinisellä puuvillalle ja värjätty maalilla",
+   "tekniikka": "viivaetsaus, painettu tummansinisellä puuvillalle ja värjätty maalilla",
+   "mitat_cm_kork_lev": [
+    14.0,
+    19.1
+   ],
+   "mitat_teksti": "korkeus 140 mm, leveys 191 mm (leikattu vasemmalta)",
+   "kuvasuhde_leveys_per_korkeus": 1.3516,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "RP-P-OB-810",
+   "museon_tietue": "https://id.rijksmuseum.nl/200126264",
+   "teoksen_oikeustila": "Public domain (Segers k. n. 1638); Rijksmuseum: Public Domain Mark",
+   "lisenssi": "CC0",
+   "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Vergezicht_met_een_weg_en_bemoste_takken,_RP-P-OB-810.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Segersin kaukomaisema: etsaus on painettu sinisellä puuvillalle ja värjätty maalilla. Etualalla on sammaleinen oksa.",
+   "huomio": "Rijksmuseum: tekijän attribuutio \"mahdollisesti\" Hercules Segers.",
+   "kuva": {
+    "paketti": "astc-v1/RP-P-OB-810/",
+    "px": [
+     8192,
+     6061
+    ],
+    "lahde": "grafiikka/kuvat/iso/rijks-rp-p-ob-810.jpg",
+    "seina_lahde": "grafiikka/kuvat/seina/rijks-rp-p-ob-810.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Vergezicht met een weg en bemoste takken, RP-P-OB-810.jpg",
+    "tekija_kuvalle": "Rijksmuseum",
+    "alkuperainen_px": [
+     6652,
+     4922
+    ],
+    "commons_sha1": "7f3acc7a05607de5e06ff3719bebdac617486b3f"
+   }
+  },
+  {
+   "id": "SK-A-2338",
+   "id_lahde": "rijks-sk-a-2338",
+   "siipi": "rijksmuseum",
+   "nimi_fi": "Kukka-asetelma marmoripöydällä",
+   "nimi_en": "Still Life with Flowers on a Marble Tabletop",
+   "tekija": "Rachel Ruysch (Rijks: ”mainittu teoksessa”)",
+   "vuosi": "1716",
+   "tekniikka": "öljy kankaalle",
+   "mitat_cm_kork_lev": [
+    48.5,
+    39.5
+   ],
+   "kuvasuhde_leveys_per_korkeus": 0.782,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "SK-A-2338",
+   "museon_tietue": "https://id.rijksmuseum.nl/20027537",
+   "lisenssi": "CC0",
+   "teoksen_oikeustila": "Public Domain Mark 1.0 (Rijksmuseum)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Stilleven_met_bloemen_op_een_marmeren_tafelblad,_SK-A-2338.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Rachel Ruyschin kukka-asetelma marmoripöydällä vuodelta 1716.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/SK-A-2338/",
+    "px": [
+     6406,
+     8192
+    ],
+    "lahde": "lahde/kuvat/iso/rijks-sk-a-2338.jpg",
+    "seina_lahde": "lahde/kuvat/seina/rijks-sk-a-2338.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Stilleven met bloemen op een marmeren tafelblad, SK-A-2338.jpg",
+    "tekija_kuvalle": "Rijksmuseum",
+    "alkuperainen_px": [
+     4240,
+     5422
+    ],
+    "commons_sha1": "277b6600a0c7c04119837be691c7dfa214236a85"
+   }
+  },
+  {
+   "id": "SK-A-2099",
+   "id_lahde": "rijks-sk-a-2099",
+   "siipi": "rijksmuseum",
+   "nimi_fi": "Asetelma parsalla",
+   "nimi_en": "Still Life with Asparagus",
+   "tekija": "Adriaen Coorte (Rijks: ”mainittu teoksessa”)",
+   "vuosi": "1697",
+   "tekniikka": "öljy paperille ja paneelille (Rijks: paper, panel)",
+   "mitat_cm_kork_lev": [
+    25.0,
+    20.5
+   ],
+   "kuvasuhde_leveys_per_korkeus": 0.808,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "SK-A-2099",
+   "museon_tietue": "https://id.rijksmuseum.nl/200109193",
+   "lisenssi": "Public domain",
+   "teoksen_oikeustila": "Public Domain Mark 1.0 (Rijksmuseum)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Stilleven_met_asperges_Rijksmuseum_SK-A-2099.jpeg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Adriaen Coorten pieni asetelma parsakimpusta (1697). Vähäeleinen aihe, tarkka katse.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/SK-A-2099/",
+    "px": [
+     6619,
+     8192
+    ],
+    "lahde": "lahde/kuvat/iso/rijks-sk-a-2099.jpg",
+    "seina_lahde": "lahde/kuvat/seina/rijks-sk-a-2099.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Stilleven met asperges Rijksmuseum SK-A-2099.jpeg",
+    "tekija_kuvalle": "Adriaen Coorte",
+    "alkuperainen_px": [
+     4648,
+     5752
+    ],
+    "commons_sha1": "9fa7161cc4943700d91c87455a8c149dcd58c8ff"
+   }
+  },
+  {
+   "id": "SK-C-206",
+   "id_lahde": "rijks-sk-c-206",
+   "siipi": "rijksmuseum",
+   "nimi_fi": "Neljä nuorta sonnia niityllä",
+   "nimi_en": "Four Young Bulls in a Meadow",
+   "tekija": "Paulus Potter",
+   "vuosi": "1651",
+   "tekniikka": "öljy puupaneelille",
+   "mitat_cm_kork_lev": [
+    25.0,
+    30.1
+   ],
+   "kuvasuhde_leveys_per_korkeus": 1.218,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "SK-C-206",
+   "museon_tietue": "https://id.rijksmuseum.nl/20026074",
+   "lisenssi": "Public domain",
+   "teoksen_oikeustila": "Public Domain Mark 1.0 (Rijksmuseum)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Vier_koeien_in_de_wei_Rijksmuseum_SK-C-206.jpeg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Neljä nuorta sonnia niityllä. Paulus Potterin pieni mutta tarkka eläinkuva vuodelta 1651.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/SK-C-206/",
+    "px": [
+     8192,
+     6726
+    ],
+    "lahde": "lahde/kuvat/iso/rijks-sk-c-206.jpg",
+    "seina_lahde": "lahde/kuvat/seina/rijks-sk-c-206.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Vier koeien in de wei Rijksmuseum SK-C-206.jpeg",
+    "tekija_kuvalle": "Paulus Potter",
+    "alkuperainen_px": [
+     5322,
+     4370
+    ],
+    "commons_sha1": "dfc211fbd7b43659a64e92ae0f46828a519ff6b6"
+   }
+  },
+  {
+   "id": "SK-A-2326",
+   "id_lahde": "rijks-sk-a-2326",
+   "siipi": "rijksmuseum",
+   "nimi_fi": "Serenadi",
+   "nimi_en": "The Serenade",
+   "tekija": "Judith Leyster (Rijks: ”mainittu teoksessa”)",
+   "vuosi": "1629",
+   "tekniikka": "öljy puupaneelille",
+   "mitat_cm_kork_lev": [
+    47.0,
+    34.5
+   ],
+   "kuvasuhde_leveys_per_korkeus": 0.7244,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "SK-A-2326",
+   "museon_tietue": "https://id.rijksmuseum.nl/200109431",
+   "lisenssi": "CC0",
+   "teoksen_oikeustila": "Public Domain Mark 1.0 (Rijksmuseum)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:De_serenade,_SK-A-2326.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Soittaja kynttilän valossa, Judith Leysterin tyyliä (Rijksmuseum: mainittu teoksessa).",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/SK-A-2326/",
+    "px": [
+     5934,
+     8192
+    ],
+    "lahde": "lahde/kuvat/iso/rijks-sk-a-2326.jpg",
+    "seina_lahde": "lahde/kuvat/seina/rijks-sk-a-2326.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:De serenade, SK-A-2326.jpg",
+    "tekija_kuvalle": "Rijksmuseum",
+    "alkuperainen_px": [
+     4452,
+     6146
+    ],
+    "commons_sha1": "0e580c4c2fe6c75fba4c6fc3b012b3d7968628c0"
+   }
+  },
+  {
+   "id": "SK-A-1685",
+   "id_lahde": "rijks-sk-a-1685",
+   "siipi": "rijksmuseum",
+   "nimi_fi": "Iloinen juoja",
+   "nimi_en": "The Jolly Drinker",
+   "tekija": "Judith Leyster (Rijks: ”mainittu teoksessa”)",
+   "vuosi": "1629",
+   "tekniikka": "öljy kankaalle",
+   "mitat_cm_kork_lev": [
+    87.0,
+    81.5
+   ],
+   "kuvasuhde_leveys_per_korkeus": 0.9465,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "SK-A-1685",
+   "museon_tietue": "https://id.rijksmuseum.nl/20014007",
+   "lisenssi": "CC0",
+   "teoksen_oikeustila": "Public Domain Mark 1.0 (Rijksmuseum)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:De_vrolijke_drinker,_SK-A-1685.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Iloinen juoja: eloisa kuva vuodelta 1629, Judith Leysterin tyyliä (Rijksmuseum: mainittu teoksessa).",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/SK-A-1685/",
+    "px": [
+     7754,
+     8192
+    ],
+    "lahde": "lahde/kuvat/iso/rijks-sk-a-1685.jpg",
+    "seina_lahde": "lahde/kuvat/seina/rijks-sk-a-1685.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:De vrolijke drinker, SK-A-1685.jpg",
+    "tekija_kuvalle": "Rijksmuseum",
+    "alkuperainen_px": [
+     4432,
+     4682
+    ],
+    "commons_sha1": "ed640b4ca4c5253bc968e042030a4614742cea3b"
+   }
+  },
+  {
+   "id": "SK-A-4050",
+   "id_lahde": "rijks-sk-a-4050",
+   "siipi": "rijksmuseum",
+   "nimi_fi": "Omakuva apostoli Paavalina",
+   "nimi_en": "Self-portrait as the Apostle Paul",
+   "tekija": "Rembrandt van Rijn",
+   "vuosi": "1661",
+   "tekniikka": "öljy kankaalle",
+   "mitat_cm_kork_lev": [
+    91.0,
+    77.0
+   ],
+   "kuvasuhde_leveys_per_korkeus": 0.8395,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "SK-A-4050",
+   "museon_tietue": "https://id.rijksmuseum.nl/200107952",
+   "lisenssi": "Public domain",
+   "teoksen_oikeustila": "Public Domain Mark 1.0 (Rijksmuseum)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Zelfportret_als_de_apostel_Paulus_Rijksmuseum_SK-A-4050.jpeg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Rembrandt kuvasi itsensä apostoli Paavalina vuonna 1661, kahdeksan vuotta ennen kuolemaansa.",
+   "huomio": "Datasta puuttuu ”downloadbaar”-merkintä (IIIF-kuva kuitenkin saatavilla, ks. huomiot). (A [osin EPÄVARMA: ladattavuusmerkintä])",
+   "kuva": {
+    "paketti": "astc-v1/SK-A-4050/",
+    "px": [
+     6877,
+     8192
+    ],
+    "lahde": "lahde/kuvat/iso/rijks-sk-a-4050.jpg",
+    "seina_lahde": "lahde/kuvat/seina/rijks-sk-a-4050.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Zelfportret als de apostel Paulus Rijksmuseum SK-A-4050.jpeg",
+    "tekija_kuvalle": "Rembrandt",
+    "alkuperainen_px": [
+     10080,
+     12006
+    ],
+    "commons_sha1": "1df2dc579ec4ba5b0fc14f1d726caa398c9cc146"
+   }
+  },
+  {
+   "id": "SK-A-3137",
+   "id_lahde": "rijks-sk-a-3137",
+   "siipi": "rijksmuseum",
+   "nimi_fi": "Pietarin kieltäminen",
+   "nimi_en": "The Denial of St Peter",
+   "tekija": "Rembrandt van Rijn (Rijks: ”mainittu teoksessa”)",
+   "vuosi": "1660",
+   "tekniikka": "öljy kankaalle",
+   "mitat_cm_kork_lev": [
+    154.5,
+    169.5
+   ],
+   "kuvasuhde_leveys_per_korkeus": 1.0931,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "SK-A-3137",
+   "museon_tietue": "https://id.rijksmuseum.nl/200107933",
+   "lisenssi": "Public domain",
+   "teoksen_oikeustila": "Public Domain Mark 1.0 (Rijksmuseum)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:De_verloochening_van_Petrus_Rijksmuseum_SK-A-3137.jpeg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Raamatun kertomus, jossa Pietari kieltää tuntevansa Jeesuksen. Kynttilän valo rajaa hetken jännityksen pimeästä huoneesta.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/SK-A-3137/",
+    "px": [
+     8192,
+     7494
+    ],
+    "lahde": "lahde/kuvat/iso/rijks-sk-a-3137.jpg",
+    "seina_lahde": "lahde/kuvat/seina/rijks-sk-a-3137.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:De verloochening van Petrus Rijksmuseum SK-A-3137.jpeg",
+    "tekija_kuvalle": "Rembrandt",
+    "alkuperainen_px": [
+     5052,
+     4622
+    ],
+    "commons_sha1": "054ce98a20c0634ec5dbc92165f51f562b0c3bfe"
+   }
+  },
+  {
+   "id": "SK-C-230",
+   "id_lahde": "rijks-sk-c-230",
+   "siipi": "rijksmuseum",
+   "nimi_fi": "Sairas nainen",
+   "nimi_en": "The Sick Woman",
+   "tekija": "Jan Steen",
+   "vuosi": "n. 1663–1666",
+   "tekniikka": "öljy kankaalle",
+   "mitat_cm_kork_lev": [
+    76.0,
+    63.5
+   ],
+   "kuvasuhde_leveys_per_korkeus": 0.8298,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "SK-C-230",
+   "museon_tietue": "https://id.rijksmuseum.nl/20015867",
+   "lisenssi": "Public domain",
+   "teoksen_oikeustila": "Public Domain Mark 1.0 (Rijksmuseum)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:De_zieke_vrouw_Rijksmuseum_SK-C-230.jpeg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Jan Steenin arkikohtaus sairaan naisen huoneesta.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/SK-C-230/",
+    "px": [
+     6798,
+     8192
+    ],
+    "lahde": "lahde/kuvat/iso/rijks-sk-c-230.jpg",
+    "seina_lahde": "lahde/kuvat/seina/rijks-sk-c-230.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:De zieke vrouw Rijksmuseum SK-C-230.jpeg",
+    "tekija_kuvalle": "Jan Steen",
+    "alkuperainen_px": [
+     4478,
+     5396
+    ],
+    "commons_sha1": "b0cbf07e1929ef17df857cd64927532df4971141"
+   }
+  },
+  {
+   "id": "SK-A-385",
+   "id_lahde": "rijks-sk-a-385",
+   "siipi": "rijksmuseum",
+   "nimi_fi": "Pyhän Nikolauksen juhla",
+   "nimi_en": "The Feast of St Nicholas",
+   "tekija": "Jan Steen",
+   "vuosi": "1665–1668",
+   "tekniikka": "öljy kankaalle",
+   "mitat_cm_kork_lev": [
+    82.0,
+    70.5
+   ],
+   "kuvasuhde_leveys_per_korkeus": 0.8566,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "SK-A-385",
+   "museon_tietue": "https://id.rijksmuseum.nl/2006398",
+   "lisenssi": "Public domain",
+   "teoksen_oikeustila": "Public Domain Mark 1.0 (Rijksmuseum)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Het_Sint-Nicolaasfeest_Rijksmuseum_SK-A-385.jpeg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Pyhän Nikolauksen juhla: lapset löytävät lahjansa. Hollantilainen Sinterklaas-perinne elää yhä.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/SK-A-385/",
+    "px": [
+     7017,
+     8192
+    ],
+    "lahde": "lahde/kuvat/iso/rijks-sk-a-385.jpg",
+    "seina_lahde": "lahde/kuvat/seina/rijks-sk-a-385.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Het Sint-Nicolaasfeest Rijksmuseum SK-A-385.jpeg",
+    "tekija_kuvalle": "Jan Steen",
+    "alkuperainen_px": [
+     4610,
+     5382
+    ],
+    "commons_sha1": "9e790551b10d04a6bf177eb5b18f61b70d0f5831"
+   }
+  },
+  {
+   "id": "SK-A-404",
+   "id_lahde": "rijks-sk-a-404",
+   "siipi": "rijksmuseum",
+   "nimi_fi": "Galantti keskustelu, ”Isän neuvo”",
+   "nimi_en": "Gallant Conversation, known as ‘The Paternal Admonition’",
+   "tekija": "Gerard ter Borch",
+   "vuosi": "n. 1654–1655",
+   "tekniikka": "öljy kankaalle",
+   "mitat_cm_kork_lev": [
+    70.0,
+    72.5
+   ],
+   "kuvasuhde_leveys_per_korkeus": 1.0316,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "SK-A-404",
+   "museon_tietue": "https://id.rijksmuseum.nl/200108277",
+   "lisenssi": "CC0",
+   "teoksen_oikeustila": "Public Domain Mark 1.0 (Rijksmuseum)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Interieur_met_drie_figuren_die_met_elkaar_in_gesprek_zijn_bekend_als_%27De_vaderlijke_vermaning%27,_SK-A-404.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Gerard ter Borch on tunnettu satiinin pinnan maalaamisesta. Teoksen nimi Isän neuvo on perinteinen.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/SK-A-404/",
+    "px": [
+     8192,
+     7941
+    ],
+    "lahde": "lahde/kuvat/iso/rijks-sk-a-404.jpg",
+    "seina_lahde": "lahde/kuvat/seina/rijks-sk-a-404.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Interieur met drie figuren die met elkaar in gesprek zijn bekend als 'De vaderlijke vermaning', SK-A-404.jpg",
+    "tekija_kuvalle": "Rijksmuseum",
+    "alkuperainen_px": [
+     4764,
+     4618
+    ],
+    "commons_sha1": "9f656f6b3b2a0b16b30343d4918bdbd53e7e8934"
+   }
+  },
+  {
+   "id": "SK-A-351",
+   "id_lahde": "rijks-sk-a-351",
+   "siipi": "rijksmuseum",
+   "nimi_fi": "Näkymä Haarlemiin luoteesta, etualalla pellavankuivauspellot",
+   "nimi_en": "View of Haarlem from the Northwest, with the Bleaching Fields in the Foreground",
+   "tekija": "Jacob Isaacksz van Ruisdael",
+   "vuosi": "n. 1650–1682",
+   "tekniikka": "öljy kankaalle",
+   "mitat_cm_kork_lev": [
+    43.0,
+    38.0
+   ],
+   "kuvasuhde_leveys_per_korkeus": 0.8826,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "SK-A-351",
+   "museon_tietue": "https://id.rijksmuseum.nl/200107958",
+   "lisenssi": "CC0",
+   "teoksen_oikeustila": "Public Domain Mark 1.0 (Rijksmuseum)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Gezicht_op_Haarlem_uit_het_noordwesten,_met_de_blekerijen_op_de_voorgrond,_SK-A-351.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Näkymä Haarlemiin pellavankuivauspeltojen yli. Avara taivas on Ruisdaelin tavaramerkki.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/SK-A-351/",
+    "px": [
+     7230,
+     8192
+    ],
+    "lahde": "lahde/kuvat/iso/rijks-sk-a-351.jpg",
+    "seina_lahde": "lahde/kuvat/seina/rijks-sk-a-351.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Gezicht op Haarlem uit het noordwesten, met de blekerijen op de voorgrond, SK-A-351.jpg",
+    "tekija_kuvalle": "Jacob van Ruisdael",
+    "alkuperainen_px": [
+     4268,
+     4836
+    ],
+    "commons_sha1": "08b4c659322f531897431a74251dbe646ca013e6"
+   }
+  },
+  {
+   "id": "SK-A-1320",
+   "id_lahde": "rijks-sk-a-1320",
+   "siipi": "rijksmuseum",
+   "nimi_fi": "Luistelua kylässä",
+   "nimi_en": "Ice-Skating in a Village",
+   "tekija": "Hendrick Avercamp",
+   "vuosi": "n. 1610",
+   "tekniikka": "öljy puupaneelille",
+   "mitat_cm_kork_lev": [
+    35.7,
+    70.4
+   ],
+   "kuvasuhde_leveys_per_korkeus": 1.9883,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "SK-A-1320",
+   "museon_tietue": "https://id.rijksmuseum.nl/200108162",
+   "lisenssi": "CC0",
+   "teoksen_oikeustila": "Public Domain Mark 1.0 (Rijksmuseum)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Schaatsenrijden_in_een_dorp,_SK-A-1320.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Kapea panoraama kylän jäällä: luistelu oli talvihuvi kaikille kansankerroksille.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/SK-A-1320/",
+    "px": [
+     8192,
+     4120
+    ],
+    "lahde": "lahde/kuvat/iso/rijks-sk-a-1320.jpg",
+    "seina_lahde": "lahde/kuvat/seina/rijks-sk-a-1320.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Schaatsenrijden in een dorp, SK-A-1320.jpg",
+    "tekija_kuvalle": "Rijksmuseum",
+    "alkuperainen_px": [
+     6310,
+     3174
+    ],
+    "commons_sha1": "de74f04162859eed092a26ecc09cfe888df4c9ae"
+   }
+  },
+  {
+   "id": "SK-C-244",
+   "id_lahde": "rijks-sk-c-244",
+   "siipi": "rijksmuseum",
+   "nimi_fi": "Tykinlaukaus",
+   "nimi_en": "The Cannon Shot",
+   "tekija": "Willem van de Velde (II)",
+   "vuosi": "n. 1680",
+   "tekniikka": "öljy kankaalle",
+   "mitat_cm_kork_lev": [
+    78.5,
+    67.0
+   ],
+   "kuvasuhde_leveys_per_korkeus": 0.8414,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "SK-C-244",
+   "museon_tietue": "https://id.rijksmuseum.nl/200108360",
+   "lisenssi": "Public domain",
+   "teoksen_oikeustila": "Public Domain Mark 1.0 (Rijksmuseum)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Het_kanonschot_Rijksmuseum_SK-C-244.jpeg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Willem van de Velden merimaalaus: laiva ampuu tykinlaukauksen ja savu leviää tyynelle merelle.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/SK-C-244/",
+    "px": [
+     6893,
+     8192
+    ],
+    "lahde": "lahde/kuvat/iso/rijks-sk-c-244.jpg",
+    "seina_lahde": "lahde/kuvat/seina/rijks-sk-c-244.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Het kanonschot Rijksmuseum SK-C-244.jpeg",
+    "tekija_kuvalle": "Willem van de Velde the Younger",
+    "alkuperainen_px": [
+     4556,
+     5414
+    ],
+    "commons_sha1": "fd80eb366145f924ebb1b1969571b2b49f79c31c"
+   }
+  },
+  {
+   "id": "SK-A-45",
+   "id_lahde": "rijks-sk-a-45",
+   "siipi": "rijksmuseum",
+   "nimi_fi": "Caritas: Joanna de Geer lapsineen",
+   "nimi_en": "Caritas: Joanna de Geer with her Children Cecilia Trip and Laurens Trip",
+   "tekija": "Ferdinand Bol",
+   "vuosi": "1662–1669",
+   "tekniikka": "öljy kankaalle",
+   "mitat_cm_kork_lev": [
+    167.0,
+    152.5
+   ],
+   "kuvasuhde_leveys_per_korkeus": 0.9073,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "SK-A-45",
+   "museon_tietue": "https://id.rijksmuseum.nl/200108246",
+   "lisenssi": "CC0",
+   "teoksen_oikeustila": "Public Domain Mark 1.0 (Rijksmuseum)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Caritas_Joanna_de_Geer_(1629-1691)_met_haar_kinderen_Cecilia_Trip_(1660-1728)_en_Laurens_Trip_(geb._1662),_SK-A-45.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Caritas eli lahjoittava rakkaus: Joanna de Geer lastensa Cecilian ja Laurensin kanssa allegorisena muotokuvana.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/SK-A-45/",
+    "px": [
+     7433,
+     8192
+    ],
+    "lahde": "lahde/kuvat/iso/rijks-sk-a-45.jpg",
+    "seina_lahde": "lahde/kuvat/seina/rijks-sk-a-45.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Caritas Joanna de Geer (1629-1691) met haar kinderen Cecilia Trip (1660-1728) en Laurens Trip (geb. 1662), SK-A-45.jpg",
+    "tekija_kuvalle": "Rijksmuseum",
+    "alkuperainen_px": [
+     4740,
+     5224
+    ],
+    "commons_sha1": "5df986719aee3bbba5ab6e36e02d956d3e890db2"
+   }
+  },
+  {
+   "id": "SK-A-156",
+   "id_lahde": "rijks-sk-a-156",
+   "siipi": "rijksmuseum",
+   "nimi_fi": "Vesimylly",
+   "nimi_en": "A Watermill",
+   "tekija": "Meindert Hobbema",
+   "vuosi": "n. 1664",
+   "tekniikka": "öljy puupaneelille",
+   "mitat_cm_kork_lev": [
+    60.5,
+    85.0
+   ],
+   "kuvasuhde_leveys_per_korkeus": 1.408,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "SK-A-156",
+   "museon_tietue": "https://id.rijksmuseum.nl/20015940",
+   "lisenssi": "Public domain",
+   "teoksen_oikeustila": "Public Domain Mark 1.0 (Rijksmuseum)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Een_watermolen_Rijksmuseum_SK-A-156.jpeg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Hobbeman metsäinen vesimylly, aihe jonka hän toisti useasti.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/SK-A-156/",
+    "px": [
+     8192,
+     5818
+    ],
+    "lahde": "lahde/kuvat/iso/rijks-sk-a-156.jpg",
+    "seina_lahde": "lahde/kuvat/seina/rijks-sk-a-156.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Een watermolen Rijksmuseum SK-A-156.jpeg",
+    "tekija_kuvalle": "Meindert Hobbema",
+    "alkuperainen_px": [
+     6268,
+     4452
+    ],
+    "commons_sha1": "2eeb4022efe8c0d84c125950f6ca9826c6153836"
+   }
+  },
+  {
+   "id": "SK-A-3957",
+   "id_lahde": "rijks-sk-a-3957",
+   "siipi": "rijksmuseum",
+   "nimi_fi": "Jokimaisema lehmineen",
+   "nimi_en": "River Landscape with Cows",
+   "tekija": "Aelbert Cuyp (Rijks: ”mainittu teoksessa”)",
+   "vuosi": "n. 1645–1650",
+   "tekniikka": "öljy puupaneelille",
+   "mitat_cm_kork_lev": [
+    43.0,
+    72.5
+   ],
+   "kuvasuhde_leveys_per_korkeus": 1.7017,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "SK-A-3957",
+   "museon_tietue": "https://id.rijksmuseum.nl/20027732",
+   "lisenssi": "CC0",
+   "teoksen_oikeustila": "Public Domain Mark 1.0 (Rijksmuseum)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Rivierlandschap_met_koeien,_SK-A-3957.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Pehmeä kultainen valo ja lehmät joen rannalla, Aelbert Cuypin tyyliin.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/SK-A-3957/",
+    "px": [
+     8192,
+     4814
+    ],
+    "lahde": "lahde/kuvat/iso/rijks-sk-a-3957.jpg",
+    "seina_lahde": "lahde/kuvat/seina/rijks-sk-a-3957.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Rivierlandschap met koeien, SK-A-3957.jpg",
+    "tekija_kuvalle": "Aelbert Cuyp",
+    "alkuperainen_px": [
+     6480,
+     3808
+    ],
+    "commons_sha1": "d6d67b5000293e05603a7416b673cef42e065828"
+   }
+  },
+  {
+   "id": "SK-A-2979",
+   "id_lahde": "rijks-sk-a-2979",
+   "siipi": "rijksmuseum",
+   "nimi_fi": "Talvi Amsterdamissa",
+   "nimi_en": "Winter in Amsterdam",
+   "tekija": "George Hendrik Breitner",
+   "vuosi": "n. 1900–1901",
+   "tekniikka": "öljy kankaalle",
+   "mitat_cm_kork_lev": [
+    95.0,
+    192.0
+   ],
+   "kuvasuhde_leveys_per_korkeus": 1.9078,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "SK-A-2979",
+   "museon_tietue": "https://id.rijksmuseum.nl/200108310",
+   "lisenssi": "CC0",
+   "teoksen_oikeustila": "Public Domain Mark 1.0 (Rijksmuseum)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Winter_in_Amsterdam,_SK-A-2979.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Breitnerin leveä kaupunkikuva talvisesta Amsterdamista.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/SK-A-2979/",
+    "px": [
+     8192,
+     4294
+    ],
+    "lahde": "lahde/kuvat/iso/rijks-sk-a-2979.jpg",
+    "seina_lahde": "lahde/kuvat/seina/rijks-sk-a-2979.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Winter in Amsterdam, SK-A-2979.jpg",
+    "tekija_kuvalle": "George Hendrik Breitner",
+    "alkuperainen_px": [
+     5086,
+     2666
+    ],
+    "commons_sha1": "171a9e6519cd8f324722bb255a77f6c5538d8519"
+   }
+  },
+  {
+   "id": "SK-A-1328",
+   "id_lahde": "rijks-sk-a-1328",
+   "siipi": "rijksmuseum",
+   "nimi_fi": "Keltaiset ratsastajat",
+   "nimi_en": "The Yellow Riders",
+   "tekija": "George Hendrik Breitner",
+   "vuosi": "1885–1886",
+   "tekniikka": "öljy kankaalle",
+   "mitat_cm_kork_lev": [
+    115.0,
+    77.5
+   ],
+   "kuvasuhde_leveys_per_korkeus": 0.6687,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "SK-A-1328",
+   "museon_tietue": "https://id.rijksmuseum.nl/200108302",
+   "lisenssi": "Public domain",
+   "teoksen_oikeustila": "Public Domain Mark 1.0 (Rijksmuseum)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:De_Gele_Rijders_Rijksmuseum_SK-A-1328.jpeg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Breitnerin Keltaiset ratsastajat (1885–1886): amsterdamilaisen impressionismin liike ja väri.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/SK-A-1328/",
+    "px": [
+     5478,
+     8192
+    ],
+    "lahde": "lahde/kuvat/iso/rijks-sk-a-1328.jpg",
+    "seina_lahde": "lahde/kuvat/seina/rijks-sk-a-1328.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:De Gele Rijders Rijksmuseum SK-A-1328.jpeg",
+    "tekija_kuvalle": "George Hendrik Breitner",
+    "alkuperainen_px": [
+     4752,
+     7106
+    ],
+    "commons_sha1": "4b8d5ff711b02939321a70cc249eeb6280c58788"
+   }
+  },
+  {
+   "id": "mauritshuis-605",
+   "id_lahde": "mauritshuis-605",
+   "siipi": "mauritshuis",
+   "nimi_fi": "Tikli",
+   "nimi_en": "The Goldfinch",
+   "tekija": "Carel Fabritius",
+   "vuosi": "1654",
+   "tekniikka": "öljy paneelille",
+   "mitat_cm_kork_lev": [
+    33.5,
+    22.8
+   ],
+   "kuvasuhde_leveys_per_korkeus": 0.6549,
+   "museo": "Mauritshuis, Haag",
+   "kaupunki": "Haag",
+   "lat": 52.0805,
+   "lon": 4.314,
+   "inventaario": "605",
+   "museon_tietue": null,
+   "lisenssi": "Public domain",
+   "teoksen_oikeustila": "Public domain (tekijä kuollut yli 100 v sitten)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Carel_Fabritius_-_The_Goldfinch_-_605_-_Mauritshuis.jpg",
+   "krediitti": "Mauritshuis",
+   "kuvateksti_fi": "Carel Fabritiuksen Tikli vuodelta 1654: pieni lintu ketjussa seinää vasten. Fabritius kuoli Delftin ruutivaraston räjähdyksessä samana vuonna.",
+   "huomio": "Suomennos: tikli (Carduelis carduelis), ei tikka.",
+   "kuva": {
+    "paketti": "astc-v1/mauritshuis-605/",
+    "px": [
+     5365,
+     8192
+    ],
+    "lahde": "lahde/kuvat/iso/mauritshuis-605.jpg",
+    "seina_lahde": "lahde/kuvat/seina/mauritshuis-605.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Carel Fabritius - The Goldfinch - 605 - Mauritshuis.jpg",
+    "tekija_kuvalle": "Carel Fabritius",
+    "alkuperainen_px": [
+     3930,
+     6000
+    ],
+    "commons_sha1": "6ecbd41139fbffca3c2ab6708ac18bc2909d7632"
+   }
+  },
+  {
+   "id": "fhm-os-i-116",
+   "id_lahde": "fhm-os-i-116",
+   "siipi": "hals",
+   "nimi_fi": "Vanhustenkodin hallintonaiset",
+   "nimi_en": "Regentessen van het Oudemannenhuis (Regentesses of the Old Men’s Almshouse)",
+   "tekija": "Frans Hals",
+   "vuosi": "n. 1664",
+   "tekniikka": "öljy kankaalle",
+   "mitat_cm_kork_lev": [
+    202,
+    279.7
+   ],
+   "kuvasuhde_leveys_per_korkeus": 1.4771,
+   "museo": "Frans Hals Museum, Haarlem",
+   "kaupunki": "Haarlem",
+   "lat": 52.3797,
+   "lon": 4.6317,
+   "inventaario": "os I-116",
+   "museon_tietue": null,
+   "lisenssi": "Public domain",
+   "teoksen_oikeustila": "Public domain (tekijä kuollut yli 100 v sitten)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Regentesses_of_the_Old_Men%E2%80%99s_Alms_House,_by_Frans_Hals.jpg",
+   "krediitti": "Frans Hals Museum",
+   "kuvateksti_fi": "Haarlemin vanhustenkodin hallintonaiset, Frans Halsin myöhäisteos tummissa vaatteissa ja ilmeikkäin kasvoin.",
+   "huomio": "Commonsin tiedosto on museon oma lataus (krediitti Frans Hals Museum). Museon sivuehtojen vuoksi poistetaan, jos museo huomauttaa.",
+   "kuva": {
+    "paketti": "astc-v1/fhm-os-i-116/",
+    "px": [
+     8192,
+     5546
+    ],
+    "lahde": "lahde/kuvat/iso/fhm-os-i-116.jpg",
+    "seina_lahde": "lahde/kuvat/seina/fhm-os-i-116.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Regentesses of the Old Men’s Alms House, by Frans Hals.jpg",
+    "tekija_kuvalle": "Frans Hals",
+    "alkuperainen_px": [
+     8648,
+     5856
+    ],
+    "commons_sha1": "56998df23c02b53e6dc6b4f435e59bda5c14edd7"
+   }
+  },
+  {
+   "id": "vgm-s0005v1962",
+   "id_lahde": "vgm-s0005v1962",
+   "siipi": "van-gogh",
+   "nimi_fi": "Perunansyöjät",
+   "nimi_en": "De aardappeleters (The Potato Eaters)",
+   "tekija": "Vincent van Gogh",
+   "vuosi": "huhti–toukokuu 1885",
+   "tekniikka": "öljy kankaalle",
+   "mitat_cm_kork_lev": [
+    82,
+    114
+   ],
+   "kuvasuhde_leveys_per_korkeus": 1.4107,
+   "museo": "Van Gogh Museum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.3584,
+   "lon": 4.8811,
+   "inventaario": "s0005V1962 (F82)",
+   "museon_tietue": null,
+   "lisenssi": "Public domain",
+   "teoksen_oikeustila": "Public domain (tekijä kuollut yli 100 v sitten)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_The_potato_eaters_-_Google_Art_Project_(5776925).jpg",
+   "krediitti": "Van Gogh Museum",
+   "kuvateksti_fi": "Perunansyöjät (1885): talonpoikaperhe syö illallista lampun valossa. Van Goghin varhaisen kauden pääteos.",
+   "huomio": "Google Art Project -kopio.",
+   "kuva": {
+    "paketti": "astc-v1/vgm-s0005v1962/",
+    "px": [
+     8192,
+     5807
+    ],
+    "lahde": "lahde/kuvat/iso/vgm-s0005v1962.jpg",
+    "seina_lahde": "lahde/kuvat/seina/vgm-s0005v1962.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Vincent van Gogh - The potato eaters - Google Art Project (5776925).jpg",
+    "tekija_kuvalle": "Vincent van Gogh",
+    "alkuperainen_px": [
+     3500,
+     2481
+    ],
+    "commons_sha1": "c528c5977c09a461ee515f4187bfe9b1de0d8fc1"
+   }
+  },
+  {
+   "id": "SK-A-2280",
+   "id_lahde": "rijks-sk-a-2280",
+   "siipi": "rijksmuseum",
+   "nimi_fi": "Majakka murtuvissa aalloissa",
+   "nimi_en": "Lighthouse in Breaking Waves",
+   "tekija": "Hendrik Willem Mesdag",
+   "vuosi": "n. 1900–1907",
+   "tekniikka": "öljy puupaneelille",
+   "mitat_cm_kork_lev": [
+    52.0,
+    40.0
+   ],
+   "kuvasuhde_leveys_per_korkeus": 0.7828,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "SK-A-2280",
+   "museon_tietue": "https://id.rijksmuseum.nl/200109477",
+   "lisenssi": "CC0",
+   "teoksen_oikeustila": "Public Domain Mark 1.0 (Rijksmuseum)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Vuurtoren_in_de_branding,_SK-A-2280.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Mesdagin merimaisema: majakka murtuvien aaltojen keskellä.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/SK-A-2280/",
+    "px": [
+     6413,
+     8192
+    ],
+    "lahde": "lahde/kuvat/iso/rijks-sk-a-2280.jpg",
+    "seina_lahde": "lahde/kuvat/seina/rijks-sk-a-2280.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Vuurtoren in de branding, SK-A-2280.jpg",
+    "tekija_kuvalle": "Rijksmuseum",
+    "alkuperainen_px": [
+     5308,
+     6780
+    ],
+    "commons_sha1": "5f08acb3a7d69f26df04f6439e6d9066155c1105"
+   }
+  },
+  {
+   "id": "vgm-s0149v1962",
+   "id_lahde": "vgm-s0149v1962",
+   "siipi": "van-gogh",
+   "nimi_fi": "Vehnäpelto ja varikset",
+   "nimi_en": "Korenveld met kraaien (Wheatfield with Crows)",
+   "tekija": "Vincent van Gogh",
+   "vuosi": "heinäkuu 1890",
+   "tekniikka": "öljy kankaalle",
+   "mitat_cm_kork_lev": [
+    50.5,
+    103
+   ],
+   "kuvasuhde_leveys_per_korkeus": 2.1021,
+   "museo": "Van Gogh Museum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.3584,
+   "lon": 4.8811,
+   "inventaario": "s0149V1962 (F779)",
+   "museon_tietue": null,
+   "lisenssi": "Public domain",
+   "teoksen_oikeustila": "Public domain (tekijä kuollut yli 100 v sitten)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Wheatfield_with_crows_-_Google_Art_Project.jpg",
+   "krediitti": "Van Gogh Museum",
+   "kuvateksti_fi": "Vehnäpelto ja varikset, maalattu heinäkuussa 1890 Auvers-sur-Oisessa, Van Goghin viimeisinä viikkoina.",
+   "huomio": "Google Art Project -kopio. Pieni tiedosto: 3508 × 1669 px.",
+   "kuva": {
+    "paketti": "astc-v1/vgm-s0149v1962/",
+    "px": [
+     8192,
+     3897
+    ],
+    "lahde": "lahde/kuvat/iso/vgm-s0149v1962.jpg",
+    "seina_lahde": "lahde/kuvat/seina/vgm-s0149v1962.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Vincent van Gogh - Wheatfield with crows - Google Art Project.jpg",
+    "tekija_kuvalle": "Vincent van Gogh",
+    "alkuperainen_px": [
+     3508,
+     1669
+    ],
+    "commons_sha1": "fff411c81d9177430ea02fa10492a7e144c3bc19"
+   }
+  },
+  {
+   "id": "kmska-2200",
+   "id_lahde": "kmska-2200",
+   "siipi": "breitner",
+   "nimi_fi": "Ilta Dam-aukiolla Amsterdamissa",
+   "nimi_en": "Avond op de Dam in Amsterdam",
+   "tekija": "George Hendrik Breitner",
+   "vuosi": "1890",
+   "tekniikka": "öljy kankaalle",
+   "mitat_cm_kork_lev": [
+    93,
+    178
+   ],
+   "kuvasuhde_leveys_per_korkeus": 1.914,
+   "museo": "Koninklijk Museum voor Schone Kunsten Antwerpen (KMSKA)",
+   "kaupunki": "Antwerpen",
+   "lat": 51.2107,
+   "lon": 4.4047,
+   "inventaario": "2200",
+   "museon_tietue": null,
+   "lisenssi": "Public domain",
+   "teoksen_oikeustila": "Public domain (tekijä kuollut yli 100 v sitten)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:George_Hendrik_Breitner_-_Avond_op_de_Dam_in_Amsterdam_-_2200_-_Royal_Museum_of_Fine_Arts_Antwerp.tiff",
+   "krediitti": "Koninklijk Museum voor Schone Kunsten Antwerpen (KMSKA)",
+   "kuvateksti_fi": "Breitnerin Ilta Dam-aukiolla Amsterdamissa vuodelta 1890, nykyisin Antwerpenin kuninkaallisessa taidemuseossa.",
+   "huomio": "KMSKA: PD-teosten kuvat vapaasti käytettävissä, krediitti toivottu.",
+   "kuva": {
+    "paketti": "astc-v1/kmska-2200/",
+    "px": [
+     8192,
+     4280
+    ],
+    "lahde": "lahde/kuvat/iso/kmska-2200.jpg",
+    "seina_lahde": "lahde/kuvat/seina/kmska-2200.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:George Hendrik Breitner - Avond op de Dam in Amsterdam - 2200 - Royal Museum of Fine Arts Antwerp.tiff",
+    "tekija_kuvalle": "George Hendrik Breitner",
+    "alkuperainen_px": [
+     6908,
+     3609
+    ],
+    "commons_sha1": "b1e0dae38c44dbc0e889ab2db5b24930c30a0308"
+   }
+  },
+  {
+   "id": "vgm-s0031v1962",
+   "id_lahde": "vgm-s0031v1962",
+   "siipi": "van-gogh",
+   "nimi_fi": "Auringonkukat",
+   "nimi_en": "Zonnebloemen (Sunflowers)",
+   "tekija": "Vincent van Gogh",
+   "vuosi": "tammikuu 1889",
+   "tekniikka": "öljy kankaalle",
+   "mitat_cm_kork_lev": [
+    95,
+    73
+   ],
+   "kuvasuhde_leveys_per_korkeus": 0.7579,
+   "museo": "Van Gogh Museum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.3584,
+   "lon": 4.8811,
+   "inventaario": "s0031V1962 (F458)",
+   "museon_tietue": null,
+   "lisenssi": "Public domain",
+   "teoksen_oikeustila": "Public domain (tekijä kuollut yli 100 v sitten)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Zonnebloemen_-_Google_Art_Project.jpg",
+   "krediitti": "Van Gogh Museum",
+   "kuvateksti_fi": "Van Goghin Auringonkukat tammikuulta 1889, maalattu Arlesissa. Van Gogh Museumin versio.",
+   "huomio": "Google Art Project -kopio Commonsista, ei museon sivulta. Älä käytä Commonsin tiedostoa \"VGM F458.jpg\" (lähde saattaa olla Lontoon versio).",
+   "kuva": {
+    "paketti": "astc-v1/vgm-s0031v1962/",
+    "px": [
+     6209,
+     8192
+    ],
+    "lahde": "lahde/kuvat/iso/vgm-s0031v1962.jpg",
+    "seina_lahde": "lahde/kuvat/seina/vgm-s0031v1962.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Vincent van Gogh - Zonnebloemen - Google Art Project.jpg",
+    "tekija_kuvalle": "Vincent van Gogh",
+    "alkuperainen_px": [
+     4000,
+     5277
+    ],
+    "commons_sha1": "f4c1b705b489b3a4ae9a429c4b813408180cabab"
+   }
+  },
+  {
+   "id": "mauritshuis-146",
+   "id_lahde": "mauritshuis-146",
+   "siipi": "mauritshuis",
+   "nimi_fi": "Tohtori Nicolaes Tulpin anatomian oppitunti",
+   "nimi_en": "The Anatomy Lesson of Dr Nicolaes Tulp",
+   "tekija": "Rembrandt van Rijn",
+   "vuosi": "1632",
+   "tekniikka": "öljy kankaalle",
+   "mitat_cm_kork_lev": [
+    169.5,
+    216.5
+   ],
+   "kuvasuhde_leveys_per_korkeus": 1.3275,
+   "museo": "Mauritshuis, Haag",
+   "kaupunki": "Haag",
+   "lat": 52.0805,
+   "lon": 4.314,
+   "inventaario": "146",
+   "museon_tietue": null,
+   "lisenssi": "Public domain",
+   "teoksen_oikeustila": "Public domain (tekijä kuollut yli 100 v sitten)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_-_The_Anatomy_Lesson_of_Dr_Nicolaes_Tulp_-_146_-_Mauritshuis.jpg",
+   "krediitti": "Mauritshuis",
+   "kuvateksti_fi": "Tohtori Nicolaes Tulpin anatomian oppitunti (1632) on nuoren Rembrandtin läpimurtoteos Amsterdamissa.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/mauritshuis-146/",
+    "px": [
+     8192,
+     6171
+    ],
+    "lahde": "lahde/kuvat/iso/mauritshuis-146.jpg",
+    "seina_lahde": "lahde/kuvat/seina/mauritshuis-146.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Rembrandt van Rijn - The Anatomy Lesson of Dr Nicolaes Tulp - 146 - Mauritshuis.jpg",
+    "tekija_kuvalle": "Rembrandt",
+    "alkuperainen_px": [
+     6000,
+     4520
+    ],
+    "commons_sha1": "36a7657796697d7ec1cc3d7ebf12b72b378d47c7"
+   }
+  },
+  {
+   "id": "mauritshuis-840",
+   "id_lahde": "mauritshuis-840",
+   "siipi": "mauritshuis",
+   "nimi_fi": "Omakuva",
+   "nimi_en": "Self-Portrait",
+   "tekija": "Rembrandt van Rijn",
+   "vuosi": "1669",
+   "tekniikka": "öljy kankaalle",
+   "mitat_cm_kork_lev": [
+    65.4,
+    60.2
+   ],
+   "kuvasuhde_leveys_per_korkeus": 0.9233,
+   "museo": "Mauritshuis, Haag",
+   "kaupunki": "Haag",
+   "lat": 52.0805,
+   "lon": 4.314,
+   "inventaario": "840",
+   "museon_tietue": null,
+   "lisenssi": "Public domain",
+   "teoksen_oikeustila": "Public domain (tekijä kuollut yli 100 v sitten)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_Self-portrait_(Mauritshuis).jpg",
+   "krediitti": "Mauritshuis",
+   "kuvateksti_fi": "Rembrandtin omakuva vuodelta 1669, hänen kuolinvuotensa.",
+   "huomio": "Mitat Europeanan tietueesta; kehys- ja kangasmitta eivät erotu varmasti.",
+   "kuva": {
+    "paketti": "astc-v1/mauritshuis-840/",
+    "px": [
+     7564,
+     8192
+    ],
+    "lahde": "lahde/kuvat/iso/mauritshuis-840.jpg",
+    "seina_lahde": "lahde/kuvat/seina/mauritshuis-840.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Rembrandt Self-portrait (Mauritshuis).jpg",
+    "tekija_kuvalle": "Rembrandt",
+    "alkuperainen_px": [
+     5540,
+     6000
+    ],
+    "commons_sha1": "75f51d843905e18188ded1cdfaf0f6bee499e7b5"
+   }
+  },
+  {
+   "id": "mauritshuis-92",
+   "id_lahde": "mauritshuis-92",
+   "siipi": "mauritshuis",
+   "nimi_fi": "Delftin näkymä",
+   "nimi_en": "View of Delft",
+   "tekija": "Johannes Vermeer",
+   "vuosi": "n. 1660–1661",
+   "tekniikka": "öljy kankaalle",
+   "mitat_cm_kork_lev": [
+    96.5,
+    115.7
+   ],
+   "kuvasuhde_leveys_per_korkeus": 1.1996,
+   "museo": "Mauritshuis, Haag",
+   "kaupunki": "Haag",
+   "lat": 52.0805,
+   "lon": 4.314,
+   "inventaario": "92",
+   "museon_tietue": null,
+   "lisenssi": "Public domain",
+   "teoksen_oikeustila": "Public domain (tekijä kuollut yli 100 v sitten)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Johannes_Vermeer_-_View_of_Delft_-_92_-_Mauritshuis.jpg",
+   "krediitti": "Mauritshuis",
+   "kuvateksti_fi": "Vermeerin Delftin näkymä noin vuodelta 1660: kaupunki kanavan toisella puolella pilvisen taivaan alla.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/mauritshuis-92/",
+    "px": [
+     8192,
+     6829
+    ],
+    "lahde": "lahde/kuvat/iso/mauritshuis-92.jpg",
+    "seina_lahde": "lahde/kuvat/seina/mauritshuis-92.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Johannes Vermeer - View of Delft - 92 - Mauritshuis.jpg",
+    "tekija_kuvalle": "Johannes Vermeer",
+    "alkuperainen_px": [
+     6000,
+     5002
+    ],
+    "commons_sha1": "dbfeab7cef30933675a6bc38c5b50a6fe58e54cf"
+   }
+  },
+  {
+   "id": "mauritshuis-670",
+   "id_lahde": "mauritshuis-670",
+   "siipi": "mauritshuis",
+   "nimi_fi": "Tyttö helmikorvakorulla",
+   "nimi_en": "Girl with a Pearl Earring",
+   "tekija": "Johannes Vermeer",
+   "vuosi": "n. 1665",
+   "tekniikka": "öljy kankaalle",
+   "mitat_cm_kork_lev": [
+    44.5,
+    39
+   ],
+   "kuvasuhde_leveys_per_korkeus": 0.8442,
+   "museo": "Mauritshuis, Haag",
+   "kaupunki": "Haag",
+   "lat": 52.0805,
+   "lon": 4.314,
+   "inventaario": "670",
+   "museon_tietue": null,
+   "lisenssi": "Public domain",
+   "teoksen_oikeustila": "Public domain (tekijä kuollut yli 100 v sitten)",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:1665_Girl_with_a_Pearl_Earring.jpg",
+   "krediitti": "Mauritshuis",
+   "kuvateksti_fi": "Vermeerin Tyttö helmikorvakorulla, Mauritshuisin tunnetuin teos. Kuvan leveys on yli 12 000 pikseliä.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/mauritshuis-670/",
+    "px": [
+     6916,
+     8192
+    ],
+    "lahde": "lahde/kuvat/iso/mauritshuis-670.jpg",
+    "seina_lahde": "lahde/kuvat/seina/mauritshuis-670.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:1665 Girl with a Pearl Earring.jpg",
+    "tekija_kuvalle": "Johannes Vermeer",
+    "alkuperainen_px": [
+     12285,
+     14550
+    ],
+    "commons_sha1": "863e60ca490e9e58214f2ecc5931d2d9b837f6d8"
+   }
+  },
+  {
+   "id": "RP-P-OB-612",
+   "id_lahde": "rijks-rp-p-ob-612",
+   "tyyppi": "grafiikka",
+   "siipi": "grafiikka-valokuvat",
+   "nimi_fi": "Kristus kansalle näytettynä (Ecce Homo, vaaka-asento)",
+   "nimi_en": "Christ presented to the people: oblong plate",
+   "tekija": "Rembrandt van Rijn",
+   "vuosi": "1655",
+   "materiaali": "kuivaneula plaattoonilla, painettu japaninpaperille",
+   "tekniikka": "kuivaneula plaattoonilla, painettu japaninpaperille",
+   "mitat_cm_kork_lev": [
+    36.0,
+    45.5
+   ],
+   "mitat_teksti": "korkeus 360 mm, leveys 455 mm",
+   "kuvasuhde_leveys_per_korkeus": 1.2697,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "RP-P-OB-612",
+   "museon_tietue": "https://id.rijksmuseum.nl/200124970",
+   "teoksen_oikeustila": "Public domain (Rembrandt k. 1669); Rijksmuseum: Public Domain Mark",
+   "lisenssi": "CC0",
+   "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Christus_aan_het_volk_getoond_liggende_plaat,_RP-P-OB-612.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Rembrandtin Ecce Homo: Pilatus esittelee Kristuksen kansalle. Kuivaneulatyö on painettu japaninpaperille.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/RP-P-OB-612/",
+    "px": [
+     8192,
+     6452
+    ],
+    "lahde": "grafiikka/kuvat/iso/rijks-rp-p-ob-612.jpg",
+    "seina_lahde": "grafiikka/kuvat/seina/rijks-rp-p-ob-612.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Christus aan het volk getoond liggende plaat, RP-P-OB-612.jpg",
+    "tekija_kuvalle": "Rijksmuseum",
+    "alkuperainen_px": [
+     5500,
+     4332
+    ],
+    "commons_sha1": "86d2940d052639d5fe9d33f9e1d7498ae75e06a8"
+   }
+  },
+  {
+   "id": "RP-P-OB-616",
+   "id_lahde": "rijks-rp-p-ob-616",
+   "tyyppi": "grafiikka",
+   "siipi": "grafiikka-valokuvat",
+   "nimi_fi": "Kolme ristiä",
+   "nimi_en": "The Three Crosses",
+   "tekija": "Rembrandt van Rijn",
+   "vuosi": "1653",
+   "materiaali": "kuivaneula ja kaiverrus (burin) plaattoonilla",
+   "tekniikka": "kuivaneula ja kaiverrus (burin) plaattoonilla",
+   "mitat_cm_kork_lev": [
+    38.6,
+    45.2
+   ],
+   "mitat_teksti": "korkeus 386 mm, leveys 452 mm",
+   "kuvasuhde_leveys_per_korkeus": 1.1653,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "RP-P-OB-616",
+   "museon_tietue": "https://id.rijksmuseum.nl/200124983",
+   "teoksen_oikeustila": "Public domain (Rembrandt k. 1669); Rijksmuseum: Public Domain Mark",
+   "lisenssi": "CC0",
+   "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:De_drie_kruisen,_RP-P-OB-616.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Kolme ristiä (1653): Rembrandtin dramaattisimpia etsauksia. Valon säteet putoavat Golgatalle ja kuivaneula luo syvät varjot.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/RP-P-OB-616/",
+    "px": [
+     8192,
+     7030
+    ],
+    "lahde": "grafiikka/kuvat/iso/rijks-rp-p-ob-616.jpg",
+    "seina_lahde": "grafiikka/kuvat/seina/rijks-rp-p-ob-616.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:De drie kruisen, RP-P-OB-616.jpg",
+    "tekija_kuvalle": "Rijksmuseum",
+    "alkuperainen_px": [
+     5332,
+     4576
+    ],
+    "commons_sha1": "9526ae47374220e8d61e149ce8bbd1b899bf0ae0"
    }
   }
  ]

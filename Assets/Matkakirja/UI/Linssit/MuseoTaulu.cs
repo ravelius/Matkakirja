@@ -61,6 +61,9 @@ namespace Matkakirja.Natiivi
             alarivi = Rakenne.Teksti("", "mk-aikajana-havainne__kuvateksti", otsikko);
             Kirjasimet.Aseta(alarivi, Kirjasin.Antiikva);
             alarivi.style.fontSize = Tyylikirja.Koko.Valiotsikko; alarivi.style.whiteSpace = WhiteSpace.Normal;
+            // Tekijärivi luettavaksi punaisella damastilla ja tummalla seinällä (LS2 11.10., kierros 33 pysähdystä: k11–k15, k24–k33):
+            // vaaleampi paperisävy (Kehys.Paper, sama kuin otsikon --paper) tumman --paper-dark-sävyn sijaan.
+            alarivi.style.color = (Color)Tyylikirja.Kehys.Paper;
             foreach (var t in new[] { nimi, alarivi })
             {
                 t.style.textShadow = new TextShadow { offset = new Vector2(0, 2), blurRadius = 14, color = Tyylikirja.Himmennys.Kuva };
@@ -86,7 +89,8 @@ namespace Matkakirja.Natiivi
                 // Esittely kuuluu napista: avaus aloittaa luennan (kaiutin keskeyttää), toinen painallus sulkee.
                 // Ei teosta (vapaa kulku käytävällä): sama nappi avaa huoneen kortin.
                 if (MuseoSovitin.Aktiivinen?.Teos == null && MuseoSovitin.Aktiivinen?.NykyinenHuone != null) { MuseoSovitin.HuoneKortti(); return; }
-                luennalla = !MuseoSovitin.EsittelyAuki;
+                // Kertojan äänite (MuseoKertoja) ensin; kortin lukija (puhesynteesi) vain teoksille, joilla sitä ei ole.
+                luennalla = !MuseoSovitin.EsittelyAuki && !MuseoSovitin.KertojaEsittelee();
                 MuseoSovitin.Esittele();
             }, ryhma);
 
@@ -171,15 +175,22 @@ namespace Matkakirja.Natiivi
         /// Kapea pystyruutu (puhelin; PT 10.10. museo2: Yövartion nimi vei kolme riviä ja alarivi osui kehyksen päälle): nimikyltin
         /// otsikko tyylikirjan Otsikko-koossa, jolloin pisimmätkin nimet (Staalmeesters, 56 merkkiä) mahtuvat kahdelle riville
         /// Poistun vasemmalle puolelle; leveämmällä Nimiö kuten ennen.
+        /// MATALA vaakaruutu (puhelin vaakana; PT 11.10. 00.3x KIIRE, omistaja TF 180: otsikko peitti taulun yläosan): nimikyltti
+        /// ylös (10 pt) ja pienemmäksi, jolloin kyltti vie vain ylimmän ~15 %:n ja taulu (MuseoKierros.Katseluasento: 16–81 %) jää vapaaksi.
         /// </summary>
         void AsetteleNimi()
         {
-            float w = otsikko.parent != null ? otsikko.parent.resolvedStyle.width : 0;
+            float w = otsikko.parent != null ? otsikko.parent.resolvedStyle.width : 0, h = otsikko.parent != null ? otsikko.parent.resolvedStyle.height : 0;
             if (!(w > 0)) return;
-            float koko = w < KapeaLeveys ? Tyylikirja.Koko.Otsikko : Tyylikirja.Koko.Nimio;
+            bool matala = h > 0 && h < MatalaKorkeus;
+            float koko = w < KapeaLeveys || matala ? Tyylikirja.Koko.Otsikko : Tyylikirja.Koko.Nimio;
             if (nimi.resolvedStyle.fontSize != koko) nimi.style.fontSize = koko;
+            float ala = Tyylikirja.Koko.Valiotsikko;   // matalassakin (LS2 11.10.: Leipa 16 oli lukukelvoton seinää vasten)
+            if (alarivi.resolvedStyle.fontSize != ala) alarivi.style.fontSize = ala;
+            float yla = matala ? 10f : 76f;
+            if (otsikko.resolvedStyle.top != yla) otsikko.style.top = yla;
         }
-        const float KapeaLeveys = 520f;
+        const float KapeaLeveys = 520f, MatalaKorkeus = 520f;
 
         void AsetteleKortti()
         {
@@ -262,7 +273,7 @@ namespace Matkakirja.Natiivi
                     kKapiteeli.text = $"{t.Taiteilija} · {t.Vuosi}";
                     kNimi.text = t.Otsikko;
                     Rivi(kAlkuperainen, t.Alkuperainen);
-                    Rivi(kTekniikka, string.IsNullOrEmpty(t.Tekniikka) ? t.Mitat : $"{Isolla(t.Tekniikka)}, {t.Mitat}");
+                    Rivi(kTekniikka, string.IsNullOrEmpty(t.Tekniikka) ? t.Mitat : t.Mitat == null ? Isolla(t.Tekniikka) : $"{Isolla(t.Tekniikka)}, {t.Mitat}");
                     Rivi(kKuvateksti, t.Kuvateksti);
                     // Havainnekuva kuten nostoissa (ui.nosto.havainnekuva) lähderivin perään.
                     string lahde = string.Join(" · ", new[] { t.Lahde, t.Lisenssi }.Where(x => !string.IsNullOrWhiteSpace(x)));

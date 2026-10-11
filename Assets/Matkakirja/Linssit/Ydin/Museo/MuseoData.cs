@@ -100,8 +100,10 @@ namespace Matkakirja.Linssit.Museo
         public int KuvaLeveys, KuvaKorkeus;
         public double KorkeusCm, LeveysCm, Kuvasuhde;
         public bool Grafiikka;
-        /// <summary>Kortin mittarivi: "45,5 × 41 cm".</summary>
-        public string Mitat => $"{Luku(KorkeusCm)} × {Luku(LeveysCm)} cm";
+        /// <summary>Lähteessä ei mittoja (Amsterdamin kartta 1625, UvA): ripustetaan paikan kokoon kuvasuhteella, kortissa ei mittariviä.</summary>
+        public bool MitatPuuttuu;
+        /// <summary>Kortin mittarivi: "45,5 × 41 cm"; null, jos mitat puuttuvat.</summary>
+        public string Mitat => MitatPuuttuu ? null : $"{Luku(KorkeusCm)} × {Luku(LeveysCm)} cm";
         static string Luku(double v) => v.ToString(v % 1 == 0 ? "0" : "0.0", CultureInfo.GetCultureInfo("fi-FI"));
     }
 
@@ -325,16 +327,19 @@ namespace Matkakirja.Linssit.Museo
             var seina = kuva != null ? MiniJson.ObjektiTaiNull(MiniJson.Kentta(kuva, "seina")) : null;
             var px = MiniJson.TaulukkoTaiTyhja(seina != null ? MiniJson.Kentta(seina, "px") : kuva != null ? MiniJson.Kentta(kuva, "px") : MiniJson.Kentta(d, "kuva_px"));
             var paketti = kuva != null ? MiniJson.Kentta(kuva, "paketti") : null;   // "astc-v1/<id>/" tai {polku}
-            string id = T("inventaario", "id"), tekniikka = T("tekniikka");
+            // teokset.v2 (id_lahde mukana): id = sali.json:n teos_ehdotus, inventaario voi olla muu tunnus (Amsterdamin kartta 1625:
+            // "OTM: HB-KZL W.X. 020"); vanhassa paketissa id = "rijks-…" ja inventaario on tunnus.
+            string id = T("id_lahde") != null ? T("id", "inventaario") : T("inventaario", "id"), tekniikka = T("tekniikka");
             return new Teos
             {
                 Id = id, Otsikko = T("otsikko", "nimi_fi"), Alkuperainen = T("alkuperainen", "nimi_en"), Taiteilija = T("taiteilija", "tekija"),
                 Vuosi = T("vuosi"), Tekniikka = tekniikka, Lahde = T("lahde", "museo"), Lisenssi = T("teoksen_oikeustila", "lisenssi"), Iiif = T("iiif"),
                 Kuva = seina != null ? MiniJson.Teksti(seina, "tiedosto") : kuva != null ? MiniJson.Teksti(kuva, "seina_lahde") : T("kuva"),
                 Paketti = paketti as string ?? (paketti is Dictionary<string, object> po ? MiniJson.Teksti(po, "polku") : null),
+                MitatPuuttuu = MiniJson.Luku(d, "korkeus_cm") == null && mitat.Count != 2,
                 KorkeusCm = MiniJson.Luku(d, "korkeus_cm") ?? (mitat.Count == 2 ? M(0) : 50), LeveysCm = MiniJson.Luku(d, "leveys_cm") ?? (mitat.Count == 2 ? M(1) : 40),
                 Kuvasuhde = MiniJson.Luku(d, "kuvasuhde") ?? MiniJson.Luku(d, "kuvasuhde_leveys_per_korkeus") ?? 0,
-                Grafiikka = MiniJson.Kentta(d, "grafiikka") is bool g ? g : id != null && id.StartsWith("RP-P-", StringComparison.Ordinal),
+                Grafiikka = MiniJson.Kentta(d, "grafiikka") is bool g ? g : T("siipi") == "grafiikka-valokuvat" || id != null && id.StartsWith("RP-P-", StringComparison.Ordinal),
                 Kuvateksti = T("kuvateksti", "kuvateksti_fi"), Havainnekuva = MiniJson.Totuus(d, "havainnekuva"),
                 KuvaLeveys = px.Count == 2 ? Convert.ToInt32(px[0], CultureInfo.InvariantCulture) : 0,
                 KuvaKorkeus = px.Count == 2 ? Convert.ToInt32(px[1], CultureInfo.InvariantCulture) : 0,
@@ -350,6 +355,8 @@ namespace Matkakirja.Linssit.Museo
                 var teos = p.Ehdotus == null ? null : Teokset.Find(x => x.Id == p.Ehdotus);
                 if (teos == null) continue;
                 double w = teos.LeveysCm / 100, h = teos.KorkeusCm / 100;
+                // Mitat puuttuvat: LR:n paikan koko (Sisältökirjuri: "LR päättää ripustuskoon") kuvasuhteella.
+                if (teos.MitatPuuttuu && teos.Kuvasuhde > 0) { h = p.MaxKorkeus; w = h * teos.Kuvasuhde; if (w > p.MaxLeveys) { w = p.MaxLeveys; h = w / teos.Kuvasuhde; } }
                 double k = Math.Min(1, Math.Min(p.MaxLeveys / w, p.MaxKorkeus / h));
                 Ripustukset.Add(new Ripustus { Paikka = p, Teos = teos, Leveys = w * k, Korkeus = h * k, Pienennetty = k < 1 });
             }
