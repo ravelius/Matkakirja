@@ -735,18 +735,34 @@ namespace Matkakirja.Linssit.Testit
                 var q0 = a.Reitti.First(y => y.Id == id);
                 var mon = OpasKatseOletukset.Monumentti(id, q0.Lat, q0.Lon).Value;
                 if (!a.Saapui.TryGetValue(id, out double ta) || !a.Lahti.TryGetValue(id, out double tb)) { viat.Add($"{kaupunki} {id}: ei pysähdystä"); continue; }
-                double xMin = double.MaxValue, xMaks = double.MinValue, kMax = 0;
+                double xMin = double.MaxValue, xMaks = double.MinValue, kMax = 0, vinoMin = double.MaxValue, silmaMin = double.MaxValue;
+                // Etuala (PT 14.4x): kulma monumentista silmään vs. monumentista aukion pisteeseen (0° = silmä aukion puolella).
+                var pe = OpasKuvaus.KameraPaikka(new Kuvakulma(q0.Lat, q0.Lon, 0, 0, 0, 0), mon.lat, mon.lon);
+                double puoli0 = double.NaN, puoli1 = 0, puoliMin = 180;
                 foreach (var r in a.R)
                 {
                     if (r.t < ta || r.t > tb || r.kohde != id) continue;
                     double xo = (OpasKuvaus.KuvassaX(r.a, mon.lat, mon.lon, MaaM + 0.5 * OpasKuvaus.AukioKohdeKorkeusM, 0.46) + 1) / 2;
                     xMin = Math.Min(xMin, xo); xMaks = Math.Max(xMaks, xo);
                     kMax = Math.Max(kMax, OpasKuvaus.KuvassaOsuus(r.a, mon.lat, mon.lon, MaaM, MaaM + OpasKuvaus.AukioKohdeKorkeusM, 2, 0.46));
+                    var e = OpasKuvaus.KameraPaikka(r.a, mon.lat, mon.lon);
+                    double h = e.u - MaaM, vaaka = Math.Sqrt(e.e * e.e + e.n * e.n);
+                    vinoMin = Math.Min(vinoMin, Math.Sqrt(vaaka * vaaka + h * h)); silmaMin = Math.Min(silmaMin, h);
+                    double kulma = Math.Abs(KierrosLento.Kiedo((Math.Atan2(e.n, e.e) - Math.Atan2(pe.n, pe.e)) * 180 / Math.PI));
+                    if (double.IsNaN(puoli0)) puoli0 = kulma;
+                    puoli1 = kulma; puoliMin = Math.Min(puoliMin, kulma);
                 }
                 double siirto = KierrosLento.EtaisyysM(q0.Lat, q0.Lon, mon.lat, mon.lon);
-                Console.WriteLine($"      {kaupunki} {id} {q0.Nimi} pysty: monumentti {siirto:F0} m pisteestä, {xMin:F3}–{xMaks:F3} leveydestä vasemmalta, kokonaan kuvassa enintään {kMax:F2}");
+                Console.WriteLine($"      {kaupunki} {id} {q0.Nimi} pysty: monumentti {siirto:F0} m pisteestä, {xMin:F3}–{xMaks:F3} leveydestä vasemmalta, kokonaan kuvassa enintään {kMax:F2}, " +
+                    $"vino etäisyys monumentista ≥ {vinoMin:F0} m, silmä ≥ {silmaMin:F0} m, silmä aukion puolelta {puoli0:F0}° → {puoli1:F0}° (pienin {puoliMin:F0}°)");
                 if (xMin < OpasKuvaus.PalloAukioMonumenttiX - 0.03 || xMaks > OpasKuvaus.PalloAukioMonumenttiX + 0.03 || kMax > TorniReuna)
                     viat.Add($"{kaupunki} {id}: monumentti {xMin:F3}–{xMaks:F3} / {kMax:F2}");
+                // PT 14.4x: ei lähempänä kuin ennen (vanha kehys: vino 128 → 80 m, silmä 38 m) — vino ≥ PalloMonumenttiMinEtM, silmä ≥ 55 m.
+                if (vinoMin < OpasKuvaus.PalloMonumenttiMinEtM - 2 || silmaMin < OpasKuvaus.PalloMonumenttiSilmaM - 10)
+                    viat.Add($"{kaupunki} {id}: vino {vinoMin:F0} m, silmä {silmaMin:F0} m");
+                // Etuala: kierto vie silmää aukion puolelle (kulma pienenee vähintään 30°) tai silmä käy aukion puolella (≤ 60°).
+                if (siirto >= OpasKatseOletukset.MonumenttiSuuntaMinM && puoliMin > 60 && puoli1 > puoli0 - 30)
+                    viat.Add($"{kaupunki} {id}: silmä ei aukion puolella ({puoli0:F0}° → {puoli1:F0}°)");
             }
             Oleta.Tosi(viat.Count == 0, string.Join("; ", viat));
         }
@@ -788,7 +804,9 @@ namespace Matkakirja.Linssit.Testit
                         // PT 10.0x: pystykuvassa obeliski 58 %:ssa vasemmalta (otsikon alta oikealle) ± 0,03 koko pysähdyksen.
                         if (suhde < 1 && (xMin < OpasKuvaus.PalloAukioMonumenttiX - 0.03 || xKMax > OpasKuvaus.PalloAukioMonumenttiX + 0.03 || kMax > TorniReuna))
                             viat.Add($"Concorde {suhde:F2}: obeliski {xMin:F3}–{xKMax:F3} / {kMax:F2}");
-                        if (suhde < 1 && x0.EtM > v.EtM + 1e-6) viat.Add($"Concorde {suhde:F2}: loittoni {v.EtM:F0} → {x0.EtM:F0} m");
+                        // PT 14.4x: monumentti ei lähempänä kuin ennen (vino ≥ PalloMonumenttiMinEtM, silmä ≥ 65 m), mutta ei loitonnusta
+                        // kauas (PT 09.2x: 129 → 375 m, obeliski pieni): enintään 1,15 × max(vaakakuvan etäisyys, PalloMonumenttiMinEtM).
+                        if (suhde < 1 && x0.EtM > 1.15 * Math.Max(v.EtM, OpasKuvaus.PalloMonumenttiMinEtM)) viat.Add($"Concorde {suhde:F2}: loittoni {v.EtM:F0} → {x0.EtM:F0} m");
                     }
                     Console.WriteLine($"      {id} {suhde:F2}: alussa et {x0.EtM:F0} m (vaaka {v.EtM:F0}), silmä {x0.SilmaM:F0} m, kallistus {x0.Kallistus:F0}°, kohde {osuus:F2} leveydestä{lisa}, lopussa et {x[^1].EtM:F0} m, kierto {kaari / Math.Max(1, x[^1].T - x[0].T):F1} °/s");
                     if (suhde >= 4.0 / 3 && Math.Abs(x0.EtM - v.EtM) > 1e-6) viat.Add($"{id} {suhde:F2}: et {x0.EtM:F1} ≠ vaaka {v.EtM:F1}");

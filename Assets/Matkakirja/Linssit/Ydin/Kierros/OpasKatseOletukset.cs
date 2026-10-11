@@ -97,6 +97,15 @@ namespace Matkakirja.Linssit.Kierros
             return null;
         }
 
+        /// <summary>Monumentin suunta aukion pisteestä (°, pohjoisesta; OpasSilmukka.MonumenttiKatse) tai NaN (ei riviä, tai monumentti
+        /// alle MonumenttiSuuntaMinM pisteestä).</summary>
+        public static double MonumenttiSuunta(string id, double lat, double lon)
+        {
+            if (!(Monumentti(id, lat, lon) is (double la, double lo)) || KierrosLento.EtaisyysM(lat, lon, la, lo) < MonumenttiSuuntaMinM) return double.NaN;
+            return OpasSilmukka.Suunta(lat, lon, la, lo);
+        }
+        public const double MonumenttiSuuntaMinM = 15;
+
         /// <summary>Täydentää workerin kohteen (katse_suunta puuttuu) paikan oletuksella.</summary>
         public static void Taydenna(OpasKohde k)
         {

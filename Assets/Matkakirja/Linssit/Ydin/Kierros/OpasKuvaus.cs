@@ -214,12 +214,25 @@ namespace Matkakirja.Linssit.Kierros
                 // linjausta "Concorde lähempää, niin että obeliski erottuu"; ennen sitä obeliski oli oikeassa reunassa): ei loitonnusta —
                 // sama lähikehys (etäisyys, kallistus, spiraali), mutta katsepiste ja kierto keskusmonumentissa (OpasKatseOletukset), joten
                 // monumentti pysyy vaakasuunnassa keskellä; aukiosta saa leikkautua osa. KohdeLat/Lon = aukion piste.
+                // EI LÄHEMPÄNÄ KUIN ENNEN (PT 11.10. 14.4x, simu: Damin kansallismonumentti ja Navonan suihkulähde suttuisia läiskiä +9 s:n
+                // kohdalla, silmä 38 m ja vino etäisyys ~105 m, koska spiraali lähestyi monumenttia 128 → 80 m): VALINTA kauempaa ja
+                // korkeammalta — vaakaetäisyys pysyy vanhana (alku r0), silmä vähintään PalloMonumenttiSilmaM maasta, vino etäisyys
+                // monumentista vähintään PalloMonumenttiMinEtM (vanha saapumisetäisyys ~128 m, jolla laatat olivat vielä terävät) ja
+                // kallistus vähintään PalloMonumenttiKallistusMin (viisto pallonäkymä). Ei lähestymistä (LoppuEtM 0), joten etäisyys ei
+                // koskaan alita vanhaa samalla hetkellä (vanha lähestyi 128 → 80 m) eikä silmä vanhaa (38 m). Perustelu: pelkkä etäisyyden
+                // kasvatus samalla 38 m:n silmällä painaisi katseen vaakaan (etualan katot kuvaan), pelkkä nosto toisi kartta-asennon;
+                // nosto ~65 m:iin ja vanha vaakaetäisyys antavat ~62° viiston kuvan, jossa etuala on 50 m:n päästä alkaen aukiota.
+                const double AM = Math.PI / 180;
+                double r0 = p.EtaisyysM * Math.Sin(p.Kallistus * AM), silma = Math.Max(Math.Max(p.NostoM + p.EtaisyysM * Math.Cos(p.Kallistus * AM), p.KattoYlaM), PalloMonumenttiSilmaM);
+                double dz = Math.Max(1, silma - p.NostoM), r = Math.Max(r0, dz * Math.Tan(PalloMonumenttiKallistusMin * AM));
+                if (r * r + dz * dz < PalloMonumenttiMinEtM * PalloMonumenttiMinEtM) r = Math.Sqrt(PalloMonumenttiMinEtM * PalloMonumenttiMinEtM - dz * dz);
+                double kallM = Math.Min(Math.Atan2(r, dz) / AM, OpasOhjaus.KallistusMax - 1), etM = Math.Sqrt(r * r + dz * dz);
                 return new Pysahdys
                 {
                     Id = p.Id, Nimi = p.Nimi, Alarivi = p.Alarivi, Teksti = p.Teksti, Lat = p.MonumenttiLat, Lon = p.MonumenttiLon, MaaM = p.MaaM, NostoM = p.NostoM,
-                    Suuntima = p.Suuntima, Kallistus = p.Kallistus, EtaisyysM = p.EtaisyysM, MinEtM = p.MinEtM, KattoYlaM = p.KattoYlaM, LoppuEtM = p.LoppuEtM,
+                    Suuntima = p.Suuntima, Kallistus = kallM, EtaisyysM = etM, MinEtM = p.MinEtM, KattoYlaM = p.KattoYlaM, LoppuEtM = 0,
                     Aukio = p.Aukio, KohdeLat = p.Lat, KohdeLon = p.Lon, MonumenttiLat = p.MonumenttiLat, MonumenttiLon = p.MonumenttiLon, LeveysSuhde = suhde, LeveysPohja = p,
-                    PanoroiAst = MonumenttiPanorointi(p.Kallistus, suhde),
+                    PanoroiAst = MonumenttiPanorointi(kallM, suhde),
                 };
             }
             if (p.LeveysKoko <= 0) return p;
@@ -256,6 +269,9 @@ namespace Matkakirja.Linssit.Kierros
         }
         /// <summary>Pystykuvan aukiomonumentin vaakapaikka (osuus kuvan leveydestä vasemmasta reunasta; 0,5 = keskellä).</summary>
         public const double PalloAukioMonumenttiX = 0.58;
+        /// <summary>Pystykuvan aukiomonumentin kehys (PT 11.10. 14.4x, LeveysKuvaan): silmä vähintään (m maasta), vino etäisyys
+        /// monumentista vähintään (m; laattojen tarkkuus) ja kallistus vähintään (°).</summary>
+        public const double PalloMonumenttiSilmaM = 65, PalloMonumenttiMinEtM = 130, PalloMonumenttiKallistusMin = 58;
 
         /// <summary>Kapean kuvan leveyssovitus: kohde enintään tämä osuus puolileveydestä, loitonnus enintään (× iPadin etäisyys) ja
         /// silmä enintään (m maasta).</summary>
