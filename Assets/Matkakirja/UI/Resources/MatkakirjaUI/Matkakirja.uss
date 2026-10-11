@@ -1604,11 +1604,6 @@
     margin-top: 6px;
 }
 
-/* Napit eivät kutistu vierityksen alta (linnan kortisto 11.10.: Takaisin valui kortin alareunan yli, kun teksti täytti 86 %). */
-.mk-tietoja .mk-kortti__napit {
-    flex-shrink: 0;
-}
-
 /* Lähdeluettelo (web .lahteet-*): nimikilpi, kappaleet, ryhmät ja rivit. */
 .mk-tietoja__kilpi {
     align-items: center;
