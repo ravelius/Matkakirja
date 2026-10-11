@@ -107,3 +107,22 @@ Gishora H3 perustaja Ntare Rugamba/1800-luvun alkupuoli vs H4 Mwezi IV Gisabo/19
 Konteksti luettu: maalehti null, lähikaupungit/lähinostot tyhjät. Kevyen pisteen kuningaskuntajohdatus tarkennetaan alueelliseksi paikkahistoriaksi, ei varmaksi vuosisatojen nykykaupungiksi. Yleinen Burundin kahvi-/tee-/Tanganjikajärvitarina ei kaupungin omaksi erikoisuudeksi. Pois kuninkaan voiton sotatarina, nykyinen presidentti-/puolue-/parlamenttikehys, poliittiset murhat, vankilan tulipalon henkilötapahtumat, nykysodat/rikollisuus, suojatut modernit kirkot/museoarkkitehtuuri/esineet, nykyiset rumpulevyt ja keksitty isoisä. Karera ja Ruvubu luettu mutta eivät salaa Gitegan keskustaan siirrettyjä paikkoja.
 
 **A-loppu:** varsinainen lähdelukukierros tehty, 0–9-paketti, 4+4 nostoa, opas 5/parasta 5/hyvä tietää 4, visa 5/tiedot 3 koottu. **Täysi A jää karttaminimin, historiallisten kuvakelpoisten keskustakohteiden ja Gishoran 1873-ajoituksen puutteeseen.** Pääsession ratkaistava lisälähteet tai pienemmän/koko seudun kartan nimenomainen poikkeus. Kaupunki on käsitelty, ei poistettu listasta eikä merkitty toimitusvalmiiksi.
+
+
+## Säätaustan lähdeviite — pääsession aineisto
+
+Pääsession `gitega/saa.json` on työpuussa. Seuraava on vain sen tausta-metatieto, ei käsin kopioitu lämpö-/sadesarja. Luvut ja sääkuvaus C:ssä ainoastaan saa.json:sta. Tämä viite ei hyväksy tai muuta pääsession numeerista aineistoa.
+
+```json
+{
+  "artikkeli": "Gitega",
+  "revisio": 1377359798,
+  "taulukko": "Climate data for Gitega (1991–2020)",
+  "lahteet": "Source: NOAA",
+  "keskilampo": "Daily mean °C (°F)",
+  "sade": "Average precipitation mm (inches)",
+  "vuosisade": 1258,
+  "luettu": "2026-10-11",
+  "huomiot": []
+}
+```

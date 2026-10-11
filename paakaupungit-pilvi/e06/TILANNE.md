@@ -79,3 +79,7 @@ Päivitetty 2026-10-11T21:29:16+03:00. Kaikki 9 kaupungin lähdelukukierrokset j
 FCDO Gabon / Equatorial Guinea / São Tomé and Príncipe -maakohtaiset Warnings and insurance -sivut luettu 11.10.2026. Sivujen current-at-kenttä sama päivä; ei kategorista välttämisohjetta yleissivuilla. Ei riskittömyysväitettä, viisumi-/terveys-/vakuutus-/rikollisuusohjeita tai Safety and security -koko-osion läpikäynnin väitettä.
 
 Ciudad de la Paz -kontekstin Malabo = maan suurin kaupunki -väite ristiriidassa luetun Bata-artikkelin kanssa. Superlatiivi pois uudesta faktapaketista; konteksti.json säilytetty alkuperäisenä, korjaushavainto pääsession tarkistukseen.
+
+## Pääsession rinnakkainen säävalmistelu
+
+Lopputarkistuksessa havaittiin työpuussa pääsession SAA-VALMISTELU.md, kuuden kaupungin saa.json (Bangui, Brazzaville, Kinshasa, Luanda, Kigali, Gitega), muutettu saa-syote.json ja viiden aiemman faktapohjan säätaustalisäyksiä. Näitä ei tämän agentin loppucommitissa stageroida tai nollata. Gitegan omaan muuttamattomaan A-tiedostoon lisättiin vain olemassa olevan saa.json:n tausta-metatietoviite. A-rakenne tarkistettiin omasta commit-snapshotista 6f190ecc4a21af86f7c77f916a17e9859bbb6134, jotta muiden säämuutoksia ei kutsuta tämän agentin tarkistamaksi tai valmiiksi toimittamaksi.

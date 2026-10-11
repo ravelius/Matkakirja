@@ -1,0 +1,19 @@
+e06 A-rakenne; ei faktahyväksyntä, C-tarkistus tai toimituskuittaus
+A-snapshot 6f190ecc4a21af86f7c77f916a17e9859bbb6134
+
+libreville: osiot 0–9 OK, konteksti OK, SHA256 e89f00286d3b16a46bcabff7c595b16a0ffe3d3e3522a760121a5e1e4ca1ee7f
+ciudaddelapaz: osiot 0–9 OK, konteksti OK, SHA256 6e7768635b68c815f014126599d8d2f199e0e3f11858e49314561a4599287bc2
+saotome: osiot 0–9 OK, konteksti OK, SHA256 3fa77a5192fa033a3a9f75700548b89be3d33fe8b0e2fcb0b54f377173d9e8ca
+bangui: osiot 0–9 OK, konteksti OK, SHA256 1276b8d8a8c99118472b01c65bf8d9347a314d042daf26b62a50a86212002247
+brazzaville: osiot 0–9 OK, konteksti OK, SHA256 6124231333e24b16974ad449c8c9db9320eea4bc3d46befde0287db754573303
+kinshasa: osiot 0–9 OK, konteksti OK, SHA256 48ea8982b6b03e856609771d469420dfb6626d43e60af87aac0981e4fd49df41
+luanda: osiot 0–9 OK, konteksti OK, SHA256 f855458fb3c683a30dcd37e90d34a450991dd8cbfdccb236073b15c95937dc91
+kigali: osiot 0–9 OK, konteksti OK, SHA256 abaaf426581266fa4a50811a9584c5f34c24ffc1c55e0dba56b868fd5f75e574
+gitega: osiot 0–9 OK, konteksti OK, SHA256 b6e67c7754e4d2a0d9e137f78b6b72c1618b73364a059fc66b5bfdb11bcbe400
+
+9/9 A-lähdepaketin rakenne OK; lähde-/poikkeusportteja ei tämä tarkistus hyväksy.
+Muutosraja OK: vain paakaupungit-pilvi/e06/. ._* indexissä 0. git diff --check OK.
+Ei sisalto.json tai kuvat.md A-snapshotissa; ei PR/merge/pelikytkentä.
+Täyden A:n puutteet: Ciudad de la Paz, Bangui, Gitega. Kuudessa 6 ehdotusta varauksin.
+npm test ja C-sisaltotarkistin ei ajettu: A-rajaus ja CODEX/PILVIOHJE-poikkeus.
+Työpuussa havaittu pääsession erillistä säävalmistelua. Säätaustalisäykset, saa.json:t, SAA-VALMISTELU.md ja muutettu saa-syote.json eivät tämän A-snapshotin testikohde tai tämän agentin tuotos.
