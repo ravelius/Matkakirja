@@ -77,7 +77,7 @@ vie_v47n.zsh). Lokit `vie_v47{l,m,n}.log`. v47n:n MUUTOKSET.md-rivi kirjoittuu v
 | v47n | jonossa (ketju_v47n.zsh) → vie_v47n.log | jonossa |
 Siirtosepälle lähetetty v47g–j; v47k–n LÄHETTÄMÄTTÄ (viestiraja).
 
-## JATKO 13.2x–14.1x (sama sessio nollauksen jälkeen)
+## JATKO 13.2x–13.5x (sama sessio nollauksen jälkeen)
 - Siirtosepälle lähetetty v47k–n ja v47o tunnukset (viestiraja purettu). v47n: MUUTOKSET.md-rivi korjattu (kannet törmäyksessä, yla 0,95).
 - **v47o VIETY**: 1499 24ce89cf1b3322fe (f5964b6c852eba5c), NYKY dffee326e689b421 (d7bddb1ac60dad69). Juurisyy: ulkokuori on komeron
   kohdalla RK+0,65…0,89 (KT/RK-ympyrä ei vastaa kuorta) → komeron suu kuoren pintaan, perä RK−0,85, korkeus 2,25, arkku perälle, näkyvät
