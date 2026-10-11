@@ -2183,11 +2183,10 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Arild Vågen, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
-          tiedosto: 'Gyllene salen (Golden Hall) and mosaic of Mälardrottningen - Stockholms stadshus (24831465706).jpg',
-          lyhyt: 'Kultaisessa salissa tanssitaan Nobel-illallisen jälkeen, seinillä yli 18 miljoonaa mosaiikkipalaa.',
-          selite: 'Kultaisessa salissa tanssitaan Nobel-illallisen jälkeen, ja sen '
-            + 'seinät on peitetty yli 18 miljoonalla pienellä mosaiikkipalalla.',
-          lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
+          tiedosto: "5a1 Den blå hallen - the blue hall - Stockholm city hall.JPG",
+          lyhyt: "Sininen sali, Tukholman kaupungintalo",
+          selite: "Kaupungintalon Sinisessä salissa (Blå hallen) kohoavat paljaat punatiiliseinät, joiden yläosassa on ikkunarivi ja alaosassa pylväskaaria.",
+          lahde: "Øyvind Holmstad, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -14231,14 +14230,6 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Beata May, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Oslo Opera House at sunset 4.jpg',
-          lyhyt: 'Talossa on 1 100 huonetta 49 000 neliömetrin alalla, ja suurimpaan saliin mahtuu 1 364 katsojaa.',
-          selite: 'Talossa on peräti 1 100 huonetta yhteensä 49 000 '
-            + 'neliömetrin alalla, ja suurimpaan saliin mahtuu 1 364 '
-            + 'katsojaa.',
-          lahde: 'Nurtenge, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
           tiedosto: '2025-09-26-Operahuset-Oslo-1.jpg',
           lyhyt: 'Kattokaltevuudet ulottuvat maahan asti, joten kuka tahansa voi kävellä katolle.',
           selite: 'Kattokaltevuudet ulottuvat maahan asti, joten kuka tahansa '
@@ -14784,16 +14775,6 @@ export const NAHTAVYYSJUTUT = {
             + 'portin saksalaiset joukot räjäyttivät 9. huhtikuuta 1940 '
             + 'ottaessaan linnoituksen haltuunsa.',
           lahde: 'Christen Købke, Wikimedia Commons (Public domain)',
-        },
-        {
-          tiedosto: 'The Little Mermaid - 4668118032.jpg',
-          lyhyt: 'Kastelletin muurien kupeessa Langelinien rannassa istuu Pieni merenneito -patsas vuodelta 1913.',
-          selite: 'Samalla Langelinien rannalla, jolle saksalaisjoukot '
-            + 'nousivat maihin 1940, istuu kalliolla Pieni merenneito '
-            + '-patsas: pronssiveistos paljastettiin vuonna 1913, ja '
-            + 'baletista innostunut panimomiljonääri Carl Jacobsen '
-            + 'tilasi sen H. C. Andersenin sadun kunniaksi.',
-          lahde: 'Andrea Lai, Wikimedia Commons (CC BY 2.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -21424,15 +21405,10 @@ export const NAHTAVYYSJUTUT = {
           + 'laivat.',
       kuvat: [
         {
-          tiedosto: 'Hämeensilta, Tampere.jpg',
-          lyhyt: 'Hämeensilta on 68-metrinen holvisilta; nykyinen 2019 silta jäljittelee vuoden 1929 edeltäjäänsä.',
-          selite: 'Hämeensilta on 68 metriä pitkä yksiaukkoinen holvisilta, '
-            + 'jonka julkisivut on verhoiltu Kalvolan punertavalla '
-            + 'graniitilla. Nykyinen silta valmistui 2019 mutta tehtiin '
-            + 'tarkoituksella edeltäjänsä eli vuoden 1929 kivisillan '
-            + 'näköiseksi, ja kaiteilla seisovat yhä Wäinö Aaltosen neljä '
-            + 'pronssiveistosta vuodelta 1929.',
-          lahde: 'Eteil, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "Hämeensilta.JPG",
+          lyhyt: "Hämeensilta Tammerkosken yllä",
+          selite: "Kivinen Hämeensilta kaartuu Tammerkosken yli Tampereen keskustassa, ja taustalla kohoavat tehdasrakennus ja korkea savupiippu.",
+          lahde: "M62, Wikimedia Commons (CC BY-SA 3.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -54738,11 +54714,10 @@ export const NAHTAVYYSJUTUT = {
           + 'arboretum.',
       kuvat: [
         {
-          tiedosto: 'Bergen-University-modf.jpg',
-          lyhyt: 'Vuoden 1865 museotalon edessä on perustaja Christien patsas ja kivileijona.',
-          selite: 'Vuoden 1865 museotalon edessä seisoo perustajan Wilhelm '
-            + 'Frimann Koren Christien patsas ja sen juurella kivileijona.',
-          lahde: 'Floflo, muokannut Aqwis, Wikimedia Commons (CC BY-SA 2.5)',
+          tiedosto: "Naturhistorisk museum 2025.jpg",
+          lyhyt: "Luonnonhistoriallinen museo, Bergen",
+          selite: "Bergenin yliopistomuseon luonnonhistoriallisen museon vaalea rakennus pyöreine päätyosineen näkyy museopuutarhan puolelta.",
+          lahde: "EllenGrong, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -64978,10 +64953,10 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Harpa on konsertti- ja kongressitalo, jonka avajaiskonsertti pidettiin 4.5.2011 ja jossa toimii Islannin sinfoniaorkesteri. Talon suunnittelivat tanskalainen Henning Larsen Architects ja taiteilija Olafur Eliasson. Rakennustyöt alkoivat 2007, ja 2008 alkanut rahoituskriisi pysäytti hankkeen, kunnes työt jatkuivat 2009 valtion ja kaupungin päätöksellä. Nimi Harpa annettiin 11.12.2009 islantilaisen musiikin päivänä.\n\nJulkisivussa on 714 LED-valoa, jotka näyttävät Eliassonin suunnittelemaa videoteosta. Vuonna 2021 hän teki 12 uutta valoteosta, yhden kullekin kuukaudelle. Harpa sai Euroopan unionin Mies van der Rohe -arkkitehtuuripalkinnon 2013.\n\nTalon edessä vedessä on Ólöf Pálsdóttirin veistos Selloa soittava muusikko, jonka malli oli tanskalainen sellisti Erling Blöndal Bengtsson. Veistos seurasi orkesteria Harpaan 2014. Isoisän matkavuonna 1873 talosta ei ollut vielä suunnitelmaakaan.',
       kuvat: [
         {
-          tiedosto: 'Blua ĉielo kaj blankaj nuboj super la kongresejo Harpa.jpg',
-          lyhyt: 'Harpa on Henning Larsen Architectsin ja Olafur Eliassonin suunnittelema konsertti- ja kongressitalo.',
-          selite: 'Talo avattiin 2011, ja se on Reykjavíkin ensimmäinen konserttitaloksi rakennettu talo.',
-          lahde: 'RG72, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "Reykjavik-40-vom Hallgrimskirchturm-2018-gje.jpg",
+          lyhyt: "Reykjavíkin satama ja Harpa Hallgrímskirkjan tornista nähtynä",
+          selite: "Hallgrímskirkjan tornista näkee kattojen yli satamaan, jonka rannalla Harpa-konserttitalon lasipintainen runko erottuu kaukaa.",
+          lahde: "Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -65017,10 +64992,10 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Perlan seisoo Öskjuhlíð-kukkulalla 61 metrin korkeudessa merenpinnasta. Paine riittää viemään kukkulan säiliöistä vettä 38 metrin korkeudella merenpinnasta olevan rakennuksen kymmenenteen kerrokseen. Jokaiseen säiliöön mahtuu noin neljä miljoonaa litraa vettä, mikä vastaa noin 4 000 kuutiometriä.\n\nNäyttelyihin kuuluvat Wonders of Iceland, revontulista kertova Áróra-planetaariohjelma ja Lava Show sekä Látrabjargin lintuvuoren kymmenen metrin korkuinen kopio. Näköalatasanteelta näkee kaupungin, ympäristön vuoret ja Atlantin, ja sisällä on ravintola, joka kiertää 360 astetta.\n\nEnsimmäinen säiliö valmistui 1939 ja loput viisi seuraavien kahden vuosikymmenen aikana. Isoisän matkavuonna 1873 Öskjuhlíð oli vielä rakentamaton kukkula. Perlan sijaitsee kauempana keskustasta kuin useimmat muut kohteet.',
       kuvat: [
         {
-          tiedosto: 'Winter Light (6842178797).jpg',
-          lyhyt: 'Perlan on kuuman veden säiliöiden päälle rakennettu museo Öskjuhlíð-kukkulalla.',
-          selite: 'Museo avattiin yleisölle 21.6.1991.',
-          lahde: 'Axel Kristinsson from Reykjavík, Iceland, Wikimedia Commons (CC BY 2.0)',
+          tiedosto: "View of Reykjavík from Perlan, 20230507 1341 5757.jpg",
+          lyhyt: "Näkymä Perlanilta Reykjavíkiin",
+          selite: "Perlanin näköalatasanteelta avautuu näkymä Reykjavíkin kattojen ja lahden yli kaukaisille vuorille.",
+          lahde: "Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Wikipedia',
