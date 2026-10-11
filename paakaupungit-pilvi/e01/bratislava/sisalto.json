@@ -1,0 +1,525 @@
+{
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "bratislava",
+ "maa": "SVK",
+ "era": "e01",
+ "kaupunki": {
+  "id": "bratislava",
+  "name": "Bratislava",
+  "wiki": "Bratislava",
+  "ambience": "kaupunki",
+  "pallo": {
+   "lat": 48.148,
+   "lon": 17.107
+  }
+ },
+ "artikkeli": {
+  "intro": "Bratislava on Slovakian pääkaupunki, ja se seisoo Tonavan rannalla lounaisessa Slovakiassa Pienten Karpaattien juurella. Lähteen mukaan se on ainoa pääkaupunki, joka rajoittuu kahteen valtioon, Itävaltaan ja Unkariin, ja Wieniin on matkaa noin 50–60 kilometriä. Kaupungissa asui 31.12.2025 yhteensä 480 902 ihmistä.\n\nIsoisän matkavuonna 1873 kaupunki oli **Pozsony eli Pressburg**, Unkarin kuningaskunnan kaupunki Itävalta-Unkarissa, ja nimi Bratislava tuli viralliseksi vasta maaliskuussa 1919. Unkarin pääkaupunki se oli 1500-luvulta 1700-luvun lopulle, valtiopäivät kokoontuivat siellä 1848 asti, ja Pyhän Martinin tuomiokirkossa kruunattiin kuninkaita vuosina **1563–1830**. Linna kaupungin yläpuolella oli palanut raunioksi 1811.\n\nNykyään vanha kaupunki on pieni kävelykaupunki, jossa **linna, tuomiokirkko ja Mikaelin portti** kertovat kruunajaisten ajasta. Kaupungin musiikkiperinne ulottuu Haydnin ja Hummelin aikaan.",
+  "teksti": "Bratislava on Slovakian pääkaupunki Tonavan rannalla, Pienten Karpaattien juurella. Tonava virtaa kaupungin läpi lännestä kaakkoon, ja kaupungin pinta-ala on 367,66 neliökilometriä. Pysyvää asutusta alueella on ollut noin 5000 eaa. alkaen, ja kelttiläinen boii-heimo perusti noin 200 eaa. linnoitetun kaupungin ja löi kolikoita.\n\nKaupunki sai ensimmäiset tunnetut kaupunkioikeutensa 1291 ja kuului vapaana kuninkaallisena kaupunkina Unkarin kuningaskuntaan. Osmanien edetessä Unkarin pääkaupunki siirrettiin 1536 Pressburgiin, ja arkkipiispan istuin tuli sinne 1543. Valtiopäivät kokoontuivat täällä 1848 asti, ja kruunajaiskaupunkina se toimi vuosina 1563–1830. Kaupungin ensimmäinen pysyvä Tonavan silta valmistui vasta 1891.\n\nKaupungin nimet kertovat sen monikulttuurisuudesta: saksaksi Pressburg, unkariksi Pozsony ja slovakiksi Prešporok. Vuonna 1910 väestöstä 42 prosenttia puhui saksaa, 41 unkaria ja 15 slovakkia, ja monet olivat kaksi- tai kolmikielisiä. Nykyään kaupungin tunnusrakennuksia ovat Bratislavan linna, Pyhän Martinin tuomiokirkko, Vanha raatihuone ja Mikaelin portti."
+ },
+ "kysymykset": [
+  {
+   "q": "Minkä joen rannalla Bratislava sijaitsee?",
+   "options": [
+    "Tonava",
+    "Elbe",
+    "Veikseli",
+    "Rein"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Kaupungin satamasta pääsee tätä jokea pitkin Mustallemerelle.",
+   "fact": "Bratislava sijaitsee Tonavan rannalla, ja sen satamasta pääsee Tonavaa pitkin Mustallemerelle.",
+   "source": "https://en.wikipedia.org/wiki/Bratislava"
+  },
+  {
+   "q": "Mikä on Bratislavan nimi unkariksi?",
+   "options": [
+    "Pozsony",
+    "Esztergom",
+    "Székesfehérvár",
+    "Visegrád"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Nimi esiintyy ensimmäisen kerran asiakirjassa vuodelta 1002.",
+   "fact": "Unkarilainen nimi Pozsony esiintyy ensi kerran vuonna 1002. Saksaksi kaupunkia sanottiin Pressburgiksi ja slovakiksi Prešporokiksi vuoteen 1919 asti.",
+   "source": "https://en.wikipedia.org/wiki/Bratislava"
+  },
+  {
+   "q": "Mikä keskiaikaisista kaupunginporteista on Bratislavassa säilynyt?",
+   "options": [
+    "Mikaelin portti",
+    "Kalastajien portti",
+    "Vydrican portti",
+    "Laurincin portti"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Se on ainoa jäljellä oleva neljästä portista, ja sen torni rakennettiin uudelleen 1700-luvulla.",
+   "fact": "Mikaelin portti on lähteen mukaan ainoa säilynyt keskiaikaisista kaupunginporteista, ja sen nykyasu on vuosilta 1753–1758.",
+   "source": "https://en.wikipedia.org/wiki/Michael%27s_Gate"
+  },
+  {
+   "q": "Mitä Pyhän Martinin tuomiokirkon tornin huipulla on?",
+   "options": [
+    "Kruunun jäljennös",
+    "Kullattu risti ja kukko",
+    "Ritarin ratsastajapatsas",
+    "Kuparinen tuulikukko"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Tornin huippu viittaa kirkon kuninkaallisiin tehtäviin vuosina 1563–1830.",
+   "fact": "Tornin huipulla on kullattu Pyhän Tapanin kruunun jäljennös, joka asetettiin paikalleen 1847 ja painaa 150 kiloa.",
+   "source": "https://en.wikipedia.org/wiki/St_Martin%27s_Cathedral,_Bratislava"
+  },
+  {
+   "q": "Minkä taistelun jälkeen Primasin palatsissa allekirjoitettiin Pressburgin rauha vuonna 1805?",
+   "options": [
+    "Austerlitzin taistelun",
+    "Leipzigin kansojen taistelun",
+    "Waterloon taistelun",
+    "Wagramin taistelun"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Rauha päätti kolmannen koalitiosodan, jonka ratkaisi Napoleonin voitto.",
+   "fact": "Rauha solmittiin Austerlitzin voiton jälkeen palatsin peilisalissa, ja se päätti kolmannen koalitiosodan.",
+   "source": "https://en.wikipedia.org/wiki/Primate%27s_Palace,_Bratislava"
+  }
+ ],
+ "tiedot": [
+  "Lähteen mukaan Bratislava on ainoa pääkaupunki, joka rajoittuu kahteen valtioon: Itävaltaan ja Unkariin.",
+  "Lähteen mukaan nykyisen Slovakian alueen ensimmäinen pankki perustettiin Bratislavaan vuonna 1842.",
+  "Kaupungin matalin kohta on 126 metrin korkeudella, ja korkein, Devínska Kobyla, nousee 514 metriin."
+ ],
+ "valokuva": {
+  "tiedosto": "Bratislava Castle (view from Slavín), Slovakia.JPG",
+  "vuosi": "nykyisin",
+  "lahde": "Kiwiev, Commons (CC0)",
+  "lyhyt": "Bratislavan linna ja vanha kaupunki Tonavan rannalla.",
+  "selite": "Linna paloi raunioksi 1811 ja oli yhä raunio isoisän matkavuonna 1873, ja sitä kunnostettiin vuodesta 1957 alkaen."
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Bratislava",
+   "johdanto": "Bratislava oli isoisän matkavuonna 1873 Pozsony eli Pressburg, Unkarin vanha kruunajaiskaupunki Tonavan rannalla, ja sen yläpuolella kohonnut linna oli palanut raunioksi. Nykyään se on Slovakian pääkaupunki, ja Wieniin on sieltä junalla noin tunti.",
+   "kansikuvat": [
+    {
+     "tiedosto": "View of Bratislava from Nový most, 20210727 1012 0262.jpg",
+     "lyhyt": "Bratislavan vanha kaupunki ja linna Tonavan rannalla.",
+     "selite": "Bratislavan linna ja vanha kaupunki muodostavat kaupungin historiallisen ytimen Tonavan varrella.",
+     "lahde": "Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+     "tiedosto": "Hviezdoslavovo námestie (10266936594).jpg",
+     "lyhyt": "Hviezdoslavin aukio, vanhan kaupungin kävelyaukio kansallisteatterin edessä.",
+     "selite": "Aukio on nimetty runoilija Pavol Országh Hviezdoslavin mukaan, ja sen päässä on Slovakian kansallisteatteri.",
+     "lahde": "Jorge Láscar from Australia, Wikimedia Commons (CC BY 2.0)"
+    },
+    {
+     "tiedosto": "Bratislava - St. Martins Cathedral from Danube.jpg",
+     "lyhyt": "Pyhän Martinin tuomiokirkko, jossa Unkarin kuninkaita kruunattiin vuosina 1563–1830.",
+     "selite": "Pyhän Martinin tuomiokirkon 85-metrinen torni oli osa keskiaikaista kaupunginmuuria.",
+     "lahde": "Ingo Mehling, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Kruunu, jota varjeltiin kuin vankia",
+     "teksti": "Pyhän Martinin tuomiokirkosta tuli Unkarin kuninkaiden kruunajaiskirkko vuonna 1563, kun osmanit olivat vallanneet vanhan kruunajaiskaupungin Székesfehérvárin. Ensimmäisenä kruunattiin Maximilian II, jonka päähän Pyhän Tapanin kruunu asetettiin 8. syyskuuta 1563. Lähteen mukaan kruunu oli Pressburgin linnassa noin vuodesta 1552 1780-luvulle, ja sitä vartioi kaksi kruunuvartijaa sekä sata jalkaväkimiestä, puolet unkarilaisia ja puolet itävaltalaisia. Habsburg-kuninkaat eivät saaneet pitää kruunua itse, vaan he pääsivät sen luo vain kruunajaisissa. Nykyään tornin huipulla on kullattu jäljennös, joka asetettiin paikalleen 1847.",
+     "tiedosto": "Bratislava Saint Martin's Cathedral Tower 01.jpg",
+     "lyhyt": "Pyhän Martinin tuomiokirkon torni, jonka huipulla on Pyhän Tapanin kruunun jäljennös.",
+     "selite": "Tornin kullattu kruununjäljennös asetettiin paikalleen 1847, ja se painaa 150 kiloa.",
+     "lahde": "Uoaei1, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "St Martin's Cathedral, Bratislava"
+    },
+    {
+     "otsikko": "Kaupunki, jossa valtiopäivät päättyivät",
+     "teksti": "Unkarin valtiopäivät kokoontuivat Pressburgissa lähteen mukaan vuodesta 1536 vuoteen 1848. Vuonna 1843 ne julistivat unkarin kielen lainsäädännön, hallinnon ja opetuksen viralliseksi kieleksi. Keväällä 1848 kuningas Ferdinand V allekirjoitti Primasin palatsissa lait, joihin kuului maaorjuuden lakkauttaminen. Se oli viimeinen Pressburgissa kokoontunut valtiopäivä, ja sen jälkeen päivät siirtyivät Pestiin. Samassa palatsissa, peilisalissa, oli allekirjoitettu vuonna 1805 Pressburgin rauha. Isoisän matkavuonna 1873 kaupunkiin pääsi jo junalla sekä Wieniin että Pestiin.",
+     "tiedosto": "Palacio primacial, Bratislava, Eslovaquia, 2020-02-01, DD 30.jpg",
+     "lyhyt": "Primasin palatsi, jossa kuningas allekirjoitti vuoden 1848 lait.",
+     "selite": "Primasin palatsi valmistui 1778–1781, ja sen peilisalissa solmittiin Pressburgin rauha 1805.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Primate's Palace, Bratislava"
+    },
+    {
+     "otsikko": "Kaupunki kolmella nimellä",
+     "teksti": "Isoisän matkavuonna 1873 kaupunki oli virallisesti Pozsony, koska se kuului Unkarin kuningaskuntaan, mutta arjessa kuultiin yhtä hyvin saksan Pressburgia. Slovakiksi se oli Prešporok. Nimi Pozsony mainitaan lähteen mukaan ensimmäisen kerran Pannonhalman luostarin perustamiskirjassa vuodelta 1002. Nykyinen nimi Bratislava syntyi lukuvirheestä: tutkija Šafárik tulkitsi vanhan lähteen nimen Braslav muotoon Bratislav, ja nimi tuli viralliseksi maaliskuussa 1919. Vuoden 1910 väestöstä 42 prosenttia puhui saksaa, 41 unkaria ja 15 slovakkia, ja monet osasivat kahta tai kolmea kieltä.",
+     "tiedosto": "Pozsony.jpg",
+     "lyhyt": "Pozsony eli Pressburg, Unkarin kuningaskunnan kaupunki Tonavan rannalla 1800-luvulla.",
+     "selite": "Pozsony oli kaupungin virallinen nimi Unkarin kuningaskunnan aikana, ja saksaksi sitä sanottiin Pressburgiksi.",
+     "lahde": "Unknown author Unknown author, Wikimedia Commons (PD)",
+     "wiki": "Bratislava"
+    },
+    {
+     "otsikko": "Rautatie tuli siltaa aiemmin",
+     "teksti": "Bratislavan teollistuminen alkoi lähteen mukaan vuonna 1830, kun Tonavalla alkoi säännöllinen höyrylaivaliikenne. Vuonna 1840 Pressburgista Svätý Juriin avattiin Unkarin kuningaskunnan hevosrautatie, ja höyryveturirata Wieniin valmistui 1848 sekä Pestiin 1850. Pysyvää siltaa Tonavan yli ei silti ollut: Starý most rakennettiin vasta 1891. Isoisän matkavuonna 1873 junalla oli voinut matkustaa jo yli kaksikymmentä vuotta. Samana vuonna perustettiin kemiantehdas, josta tuli nykyinen Istrochem.",
+     "tiedosto": "Bratislava Stary Most R03.jpg",
+     "lyhyt": "Starý most, Bratislavan ensimmäinen pysyvä silta Tonavan yli, valmistui 1891.",
+     "selite": "Siltaa ennen kaupungista ei ollut pysyvää siltayhteyttä Tonavan yli, vaikka junat Wieniin ja Pestiin kulkivat jo 1840–1850-luvuilla.",
+     "lahde": "Marc Ryckaert ( MJJR ), Wikimedia Commons (CC BY 3.0)",
+     "wiki": "History of Bratislava"
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "Bratislava - Michalská brána (5).jpg",
+     "lyhyt": "Mikaelin portti, vanhan kaupungin tornillinen portti.",
+     "selite": "Mikaelin portin 51-metrinen torni on yhä pystyssä, ja tornissa toimii kaupunginmuseon asemuseo.",
+     "lahde": "Fred Romero from Paris, France, Wikimedia Commons (CC BY 2.0)"
+    },
+    "kappale": "Bratislava on pieni pääkaupunki, jonka keskusta on helppo kiertää jalan. Tonavan rannalla sijaitsevassa kaupungissa asui 31.12.2025 yhteensä 480 902 ihmistä. Vanha kaupunki on pitkälti kävelykatuja, joten auton voi jättää pois. Wieniin on junalla noin tunti, ja kaupunki on lähteen mukaan turvallinen länsimaisin mittarein. Hätänumero on 112.",
+    "artikkeli": {
+     "nimi": "Matkailijan Bratislava",
+     "taitto": "opas",
+     "teksti": "Tonavan rannan kruunajaiskaupunki on pieni, kävelyyn sopiva ja vain tunnin junamatkan päässä Wienistä.",
+     "nosto": "Linnamäeltä, Mikaelin portin tornista ja vanhan raatihuoneen tornista näkee vanhan kaupungin katot ja Tonavan. Joulutori täyttää raatihuoneen edustan kojuilla.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Bratislavan M. R. Štefánikin lentoasema (BTS) on noin 9 kilometriä keskustasta koilliseen, ja kaupunkibussi 61 kulkee sieltä pääasemalle. Moni matkaaja käyttää myös Wienin lentoasemaa, joka on noin 50 kilometrin päässä; sieltä on suora bussiyhteys noin tunnin välein ja matka kestää 80–90 minuuttia. Junat kulkevat Wienin pääasemalta Bratislavan pääasemalle ja Petržalkan asemalle tunnin välein, ja matka kestää noin tunnin. Kaupungin raitiovaunut, johdinautot ja bussit ovat punamustia, ja lippu leimataan heti kyytiin noustessa. Tonavalla kulkee laivavuoroja Devíniin ja Wieniin.",
+       "kuva": {
+        "tiedosto": "M. R. Štefánik Airport Bratislava terminal 2019.jpg",
+        "lyhyt": "Bratislavan M. R. Štefánikin lentoasema, 9 kilometrin päässä keskustasta.",
+        "selite": "Lentoasema sijaitsee noin 9 kilometriä keskustasta koilliseen, ja sieltä kulkee kaupunkibussi pääasemalle.",
+        "lahde": "Steven Lek, Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      },
+      {
+       "otsikko": "Linnamäki ja tuomiokirkko",
+       "teksti": "Bratislavan linna kohoaa noin 85 metriä Tonavan yläpuolella, ja siellä ovat Kruunutorni sekä Slovakian kansallismuseon näyttelyitä. Lähellä on Pyhän Martinin tuomiokirkko, jonka torni on 85 metriä korkea. Tonavan yli kulkevan Uuden sillan ravintolatorni näkyy linnamäeltä kauas.",
+       "kuva": {
+        "tiedosto": "Castillo de Bratislava, Eslovaquia, 2020-02-01, DD 56.jpg",
+        "lyhyt": "Bratislavan linna kohoaa noin 85 metrin korkeudella Tonavan yläpuolella.",
+        "selite": "Linnan Kruunutorni on 1200-luvulta, ja linnassa on Slovakian kansallismuseon näyttelyitä.",
+        "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      },
+      {
+       "otsikko": "Vanha kaupunki",
+       "teksti": "Mikaelin portin tornissa on näköalaparveke kuudennessa kerroksessa, ja vanhan raatihuoneen tornissa on näköalatasanne. Hlavné námestie ja Hviezdoslavin aukio ovat kaupungin kävelyaukioita. Primasin palatsin peilisali on avoinna yleisölle.",
+       "kuva": {
+        "tiedosto": "Jakub's house of Stará radnica in Bratislava, Bratislava I District.jpg",
+        "lyhyt": "Vanhan raatihuoneen sisäpiha, jossa toimii Bratislavan kaupunginmuseo.",
+        "selite": "Vanha raatihuone toimi kaupungintalona 1400-luvulta 1800-luvun lopulle, ja siellä on nykyisin kaupunginmuseo.",
+        "lahde": "Frettie, Wikimedia Commons (CC BY 3.0)"
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Bryndzové halušky eli pienet taikinannokset lampaanjuustokastikkeessa on Slovakian kansallisruoka. Joulutori Vanhan raatihuoneen edessä on lähteen mukaan noin sadan myyntikojun kokoinen. Slovakialainen valkoviini sopii ruokaan, ja roomalaiset toivat viininviljelyn alueelle.",
+       "kuva": {
+        "tiedosto": "Bryndzove halusky slovak cuisine.jpg",
+        "lyhyt": "Bryndzové halušky, Slovakian kansallisruoka.",
+        "selite": "Bryndzové halušky on taikinannoksia lampaanjuustokastikkeessa, ja sitä pidetään Slovakian kansallisruokana.",
+        "lahde": "Backpack Foodie, Wikimedia Commons (CC BY-SA 3.0)"
+       }
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Mallinnettujen kuukausinormaalien mukaan heinäkuu on lämpimin kuukausi, keskilämpö 22,4 astetta, ja tammikuu kylmin, keskilämpö −0,8 astetta. Toukokuun keskilämpö on 14,8 ja syyskuun 17,4 astetta. Kesäkuussa sataa eniten, 104 millimetriä, ja tammikuussa vähiten, 27 millimetriä.",
+       "kuva": {
+        "tiedosto": "Bratislava view from Slavin.jpg",
+        "lyhyt": "Slavínin näköalapaikka vanhan kaupungin yläpuolella.",
+        "selite": "Slavínin näköalapaikalta avautuu näkymä kaupungin ylle ja kauas ympäristöön.",
+        "lahde": "Radler59 ( talk ), Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Bratislavan linnan näköalat",
+        "tahdet": 3,
+        "selite": "Linnamäeltä näkee Tonavan yli Itävaltaan."
+       },
+       {
+        "mita": "Mikaelin portin torni",
+        "tahdet": 3,
+        "selite": "Kuudennen kerroksen parvekkeelta näkee vanhan kaupungin ja linnan, ja tornissa on kaupunginmuseon asemuseo."
+       },
+       {
+        "mita": "Vanhan raatihuoneen torni",
+        "tahdet": 2,
+        "selite": "Näköalatasanteen lisäksi rakennuksessa on kaupunginmuseo."
+       },
+       {
+        "mita": "Slavínin näköalapaikka",
+        "tahdet": 2,
+        "selite": "Paikalta näkee kaupungin horisontin vihreän lehdoston takaa."
+       },
+       {
+        "mita": "Joulutori",
+        "tahdet": 2,
+        "selite": "Vanhan raatihuoneen edessä on talvella kojuja noin sata."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Junalla Wieniin",
+        "teksti": "Matka kestää noin tunnin, ja junat lähtevät tunnin välein sekä pääasemalta että Petržalkan asemalta."
+       },
+       {
+        "otsikko": "Lippu leimataan heti",
+        "teksti": "Julkisessa liikenteessä lippu leimataan kyytiin noustessa, eivätkä kuljettajat myy lippuja."
+       },
+       {
+        "otsikko": "Keskusta on pieni",
+        "teksti": "Vanha kaupunki on helppo kiertää jalan, ja autoa kannattaa välttää."
+       },
+       {
+        "otsikko": "Lentoasemalta keskustaan",
+        "teksti": "Kaupunkibussi 61 kulkee lentoasemalta pääasemalle."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikkia kruunajaiskaupungissa",
+   "johdanto": "Pressburgin palatseissa ja kirkoissa soi 1700-luvulla Haydnin musiikki, ja kuusivuotias Mozart vieraili kaupungissa. Se on myös säveltäjä Hummelin syntymäkaupunki.",
+   "tehtava": {
+    "kysymys": "Kenen konsertissa pressburgilaissyntyinen Hummel esiintyi ensi kerran yhdeksänvuotiaana?",
+    "vaihtoehdot": [
+     "Mozartin",
+     "Haydnin",
+     "Beethovenin",
+     "Lisztin"
+    ],
+    "oikea": 0,
+    "fakta": "Hummelin ensiesiintyminen yleisön edessä tapahtui yhdeksänvuotiaana, ja lavana oli hänen opettajansa Mozartin konsertti."
+   },
+   "nostot": [
+    {
+     "otsikko": "Kuusivuotias vieras ja kiistanalainen konsertti",
+     "teksti": "Ventúrska-kadun varrella olevan Pálffyn palatsin rakennutti 1747 kreivi Leopold Pálffy, ja portaalin reliefi kuvaa hänen sotilasuraansa Maria Teresian armeijan kenraalina. Palatsin paikalla on ollut vanhempaa rakennuskantaa: remontissa seinistä löytyi goottilaisen rakennuksen osia ja kellarista roomalaisia ja kelttiläisiä löytöjä. Talossa toimi aiemmin rahapaja. Tunnetuin tarina kertoo kuusivuotiaan Mozartin soittaneen palatsissa konsertin vuonna 1762, mutta lähteiden mukaan asia on kiistanalainen, ja historioitsijat epäilevät sitä.",
+     "tiedosto": "Bratislava - Pálffy Palace - Mozart.jpg",
+     "lyhyt": "Pálffyn palatsi Ventúrska-kadulla, barokkipalatsi vuodelta 1747.",
+     "selite": "Kreivi Leopold Pálffyn rakennuttama palatsi on liitetty tarinaan nuoren Mozartin konsertista, jota historioitsijat pitävät kiistanalaisena.",
+     "lahde": "Ladislav Luppa, Wikimedia Commons (CC0)",
+     "wiki": "Pálffy Palace (Ventúrska Street)"
+    },
+    {
+     "otsikko": "Haydnin orkesteri ja kreivin nuotit",
+     "teksti": "Kreivi Antal Grassalkovich, Maria Teresian läheinen ystävä, rakennutti kesäpalatsin arkkitehti Andreas Mayerhofferin suunnitelmien mukaan, ja se valmistui 1760. Kreivillä oli oma orkesteri, ja ruhtinas Esterházy lainasi hänelle suosikkikapellimestarinsa Joseph Haydnin. Palatsista tuli Pressburgin barokkimusiikkielämän keskus, ja Haydn kantaesitti siellä teoksiaan. Palatsin takana levittäytyvä ranskalaistyylinen puutarha on nykyisin julkinen puisto, jossa on Hummelin patsas.",
+     "tiedosto": "Grassalkovich Palace - view from gardens.JPG",
+     "lyhyt": "Grassalkovichin palatsin puutarha, kreivin kesäpalatsin ranskalaistyylinen puisto.",
+     "selite": "Palatsi valmistui 1760, ja sen puutarha on nykyisin julkinen puisto.",
+     "lahde": "Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)",
+     "wiki": "Grassalkovich Palace"
+    },
+    {
+     "otsikko": "Pressburgissa syntynyt Hummel",
+     "teksti": "Säveltäjä Johann Nepomuk Hummel syntyi Pressburgissa 14. marraskuuta 1778. Hänen isänsä oli viulisti ja musiikinopettaja Grassalkovichin kotiorkesterissa, ja perhe muutti Wieniin 1786 lopussa tai 1787 alussa. Kahdeksanvuotiaana poika sai Mozartilta oppitunteja, ja Mozart otti hänet kahdeksi vuodeksi asumaan luokseen maksutta. Seuraavana vuonna poika astui yleisön eteen Mozartin konsertissa. Myöhemmin Hummel seurasi Haydnia Esterházyn ruhtinaan konserttimestarina ja toimi Weimarin kapellimestarina 1819–1837. Lähteen mukaan hänen pianomusiikkinsa vaikutti Chopiniin, Lisztiin ja Mendelssohniin.",
+     "tiedosto": "Johann Nepomuk Hummel pomník 01.jpg",
+     "lyhyt": "Johann Nepomuk Hummel, Pressburgissa 1778 syntynyt säveltäjä ja pianisti.",
+     "selite": "Hummel opiskeli Mozartin johdolla ja toimi myöhemmin Weimarin kapellimestarina.",
+     "lahde": "Ľuboš Repta, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Johann Nepomuk Hummel"
+    },
+    {
+     "otsikko": "Soittosali on orkesteria vanhempi",
+     "teksti": "Slovakian filharmoninen orkesteri perustettiin 1949, ja se on soittanut 1950-luvulta lähtien Redutassa, barokkiaikaisessa rakennuksessa, joka valmistui 1773. Kaupungin musiikkiperinne on kuitenkin orkesteria paljon vanhempi: yhdeksänvuotias Franz Liszt soitti De Paulin palatsissa 1820, ja Beethoven vieraili kaupungissa 1796. Lähteen mukaan kaupungissa vierailivat tai asuivat myös Haydn ja Bartók. Säveltäjä Franz Schmidt syntyi Pozsonyssa 1874, vuosi isoisän matkan jälkeen.",
+     "tiedosto": "Bratislava Reduta R01.jpg",
+     "lyhyt": "Reduta, barokkiaikainen konserttitalo, jossa Slovakian filharmonia soittaa.",
+     "selite": "Redutan rakennus valmistui 1773, ja Slovakian filharmonia on soittanut siellä 1950-luvulta lähtien.",
+     "lahde": "Marc Ryckaert, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Slovak Philharmonic"
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Bratislavan vanhan ytimen kohteet kertovat Unkarin kruunajaiskaupungin ajasta. Linna ja tuomiokirkko vartioivat Tonavaa, raatihuone ja aukiot ovat kaupungin arjen keskus, ja Mikaelin portti on säilynyt keskiaikaisen muurin ajalta.",
+  "rajat": {
+   "pohjoinen": 48.1519,
+   "etela": 48.139,
+   "lansi": 17.096,
+   "ita": 17.1208
+  },
+  "kohteet": [
+   {
+    "nimi": "Bratislavan linna",
+    "lat": 48.14222,
+    "lon": 17.1
+   },
+   {
+    "nimi": "Pyhän Martinin tuomiokirkko",
+    "lat": 48.14214,
+    "lon": 17.10478
+   },
+   {
+    "nimi": "Mikaelin portti",
+    "lat": 48.14515,
+    "lon": 17.10667
+   },
+   {
+    "nimi": "Vanha raatihuone",
+    "lat": 48.14389,
+    "lon": 17.10911
+   },
+   {
+    "nimi": "Hviezdoslavin aukio",
+    "tyyppi": "aukio",
+    "lat": 48.14167,
+    "lon": 17.10833
+   },
+   {
+    "nimi": "Sininen kirkko",
+    "lat": 48.14339,
+    "lon": 17.11683
+   },
+   {
+    "nimi": "Grassalkovichin palatsi",
+    "lat": 48.14924,
+    "lon": 17.10775
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Bratislavan linna": {
+   "aika": "800-luku–nykypäivä; raunioina 1811–1953",
+   "teksti": "Bratislavan linna on suuri nelikulmainen rakennus, jonka jokaisessa kulmassa on torni. Se seisoo eristäytyneellä kalliolla noin 85 metriä Tonavan yläpuolella, ja paikka on ollut asuttu jo kivikauden ja pronssikauden taitteesta. Kelttien akropolis, roomalaisten Tonavan raja ja suuri slaavilainen linnoitettu asutus seurasivat toisiaan, ja 800-luvulla kukkulalla oli esiromaaninen kivibasilika.\n\nLinnaa muokattiin vuosisatojen mittaan: Sigismundin aikana 1430 siitä tehtiin goottilainen linnoitus hussilaisia vastaan, 1562 renessanssilinna ja 1649 barokkilinna. Maria Teresian aikana 1761–1766 siitä tuli kuninkaallinen asunto, ja portaat tehtiin loivemmiksi, jotta hän pääsi ratsastamaan niillä. Sisäpihan kaivo on 80 metriä syvä.\n\nTulipalo tuhosi linnan 28. toukokuuta 1811, kun siellä majoittuneet sotilaat olivat huolimattomia, ja palo levisi osaan kaupunkia. Isoisän matkavuonna 1873 linna oli yhä raunio, jonka materiaalia sotilaat myivät rakennusaineeksi. Raunioina se pysyi vuoteen 1953, ja kunnostus 1700-luvun asuun alkoi 1957.",
+   "kuvat": [
+    {
+     "tiedosto": "Bratislava Castle Pano S 01.jpg",
+     "lyhyt": "Bratislavan linna, nelikulmainen kulmatornillinen linna Tonavan yläpuolella.",
+     "selite": "Linna paloi raunioksi 1811 ja kunnostettiin vuodesta 1957 alkaen 1700-luvun asuunsa.",
+     "lahde": "Uoaei1, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Pyhän Martinin tuomiokirkko": {
+   "aika": "1311–1452; uudelleengotisointi 1869–1877",
+   "teksti": "Pyhän Martinin tuomiokirkko on goottilainen ristipohjainen basilika, jonka rakentaminen alkoi 1311 aiemman romaanisen kirkon paikalla. Kirkko vihittiin 1452, ja työt jatkuivat vielä 1500-luvulle. Laivan mitat ovat 69,37 × 22,85 metriä, ja 85 metriä korkea torni oli osa keskiaikaista kaupunginmuuria. Alttarilla seisoo Georg Raphael Donnerin vuonna 1744 tekemä ratsastajapatsas Pyhästä Martinista, joka on puettu unkarilaisen husaarin asuun.\n\nKirkko kärsi tuhoja: salamanisku vaurioitti sitä 1760, ja barokkihuippu paloi 1835. Nykyisen asunsa kirkko sai uudelleengotisoinnissa 1869–1877, joten isoisän matkavuonna 1873 se oli telineissä ja työn alla. Kirkon alla on katakombit ja kolme kryptaa, joista vain arkkipiispan krypta on yleisön avoinna. Kirkko on ollut kansallinen kulttuurimonumentti 11. marraskuuta 2002 alkaen.",
+   "kuvat": [
+    {
+     "tiedosto": "Bratislava Saint Martin's Cathedral O 01.jpg",
+     "lyhyt": "Pyhän Martinin tuomiokirkko, goottilainen kruunajaiskirkko vanhassa kaupungissa.",
+     "selite": "Kirkon rakennustyöt alkoivat 1311, ja nykyasunsa se sai uudelleengotisoinnissa 1869–1877.",
+     "lahde": "Uoaei1, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Mikaelin portti": {
+   "aika": "noin 1300; nykyasu 1753–1758",
+   "teksti": "Mikaelin portti on lähteen mukaan ainoa säilynyt keskiaikaisista kaupunginporteista, ja se rakennettiin noin vuonna 1300. Ensimmäinen kirjallinen maininta on vuodelta 1411. Kaupungin muut kolme porttia olivat Laurincin portti idässä, Kalastajien portti etelässä ja Vydrican portti lännessä.\n\nTorni purettiin 1529–1534 ja rakennettiin uudelleen 1753–1758. Nykyinen 51-metrinen torni on tuolta ajalta, ja sen huipulla on Pyhän Mikaelin ja lohikäärmeen patsas. Portin sisäpuolella oleva kivikyltti kertoo, että kaupunginvaltuusto ja asukkaat korjasivat tornin 1758. Kaupungin ympärillä olleet muurit purettiin 1700-luvulla, koska ne estivät kaupungin kasvun, joten isoisän matkavuonna 1873 muureja ei ollut enää juuri jäljellä.\n\nNykyään tornissa toimii Bratislavan kaupunginmuseon asemuseo, ja kuudennen kerroksen parvekkeelta näkee vanhan kaupungin, linnan ja ympäristön. Portin edessä oleva tiilinen Mikaelin silta vuodelta 1727 on lähteen mukaan kaupungin vanhin silta.",
+   "kuvat": [
+    {
+     "tiedosto": "Bratislava - Michalská - Michalská brána.jpg",
+     "lyhyt": "Mikaelin portti, vanhan kaupungin tornillinen portti.",
+     "selite": "Tornin nykyasu on vuosilta 1753–1758, ja huipulla on Pyhän Mikaelin patsas.",
+     "lahde": "Txllxt TxllxT, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Vanha raatihuone": {
+   "aika": "1300-luku–1800-luvun loppu kaupungintalona",
+   "teksti": "Vanha raatihuone on vanhan kaupungin sydämessä päätorin ja Primasin aukion välissä oleva rakennuskompleksi. Lähteen mukaan se on maan vanhin kaupungintalo ja yksi vanhimmista kivirakennuksista. Sen torni on noin 1300-luvulta, vaikka toinen kohta lähteessä mainitsee 1200-luvun lopun. Kompleksi syntyi 1400-luvulla, kun kolme kaupunkitaloa ja Apponyin palatsi yhdistettiin; Apponyin palatsi rakennettiin 1761–1762.\n\nRaatihuone toimi kaupungintalona 1400-luvulta 1800-luvun lopulle, ja se oli välillä myös vankila ja rahapaja. Isoisän matkavuonna 1873 se oli yhä kaupungin hallinnon käytössä. Renessanssikunnostus tehtiin 1599 maanjäristyksen jälkeen, ja uusrenessanssisiipi lisättiin 1912.\n\nNapoleonin sotilaat ampuivat tykinkuulan torniin 1809, ja kuula on yhä seinässä. Nykyään rakennuksessa on Bratislavan kaupunginmuseo, joka perustettiin 1868, ja tornin näköalatasanteelta avautuu näkymä vanhaan kaupunkiin.",
+   "kuvat": [
+    {
+     "tiedosto": "Bratislava Old Town Hall.jpg",
+     "lyhyt": "Vanha raatihuone, kaupunginmuseon koti vanhan kaupungin sydämessä.",
+     "selite": "Raatihuone syntyi 1400-luvulla useiden kaupunkitalojen yhdistämisestä.",
+     "lahde": "Valerio2468, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Hviezdoslavin aukio": {
+   "aika": "1800-luku–nykypäivä",
+   "teksti": "Hviezdoslavin aukio on vanhan kaupungin pitkä kävelyaukio Uuden sillan ja Slovakian kansallisteatterin välissä. Se on nimetty runoilija Pavol Országh Hviezdoslavin mukaan, mutta aiemmin sillä on ollut nimiä Kossuth Lajos tér, Radetzky tér ja Séta tér. Aukion halki kulkee kaksi suihkulähderiviä, ja se uudistettiin 1900-luvun lopussa kävelyalueeksi.\n\nMaaliskuussa 1848 Lajos Kossuth puhui väkijoukolle Zöldfa-hotellin parvekkeelta. Neorenessanssiteatteri, jonka suunnittelivat Fellner ja Helmer, rakennettiin 1885–1886 ja avattiin 22. syyskuuta 1886 oopperalla Bánk bán. Isoisän matkavuonna 1873 teatterirakennusta ei vielä ollut, ja aukio tunnettiin aiemmin muilla nimillä.\n\nTeatterin edustalla on Ganymedes-suihkulähde vuodelta 1888, ja runoilija Petőfin patsas pystytettiin aukiolle 1911.",
+   "kuvat": [
+    {
+     "tiedosto": "Bratislava - Statue of Pavol Országh Hviezdoslav.jpg",
+     "lyhyt": "Hviezdoslavin aukio ja runoilija Pavol Országh Hviezdoslavin patsas.",
+     "selite": "Aukio sijaitsee Uuden sillan ja Slovakian kansallisteatterin välissä.",
+     "lahde": "Ladislav Luppa, Wikimedia Commons (CC0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Sininen kirkko": {
+   "aika": "1908–1913",
+   "teksti": "Sininen kirkko, virallisesti Pyhän Elisabetin kirkko, on unkarilaisen jugendin edustaja vanhan kaupungin itäosassa. Se on omistettu Unkarin Elisabetille, joka lähteen mukaan kasvoi Pressburgin linnassa. Kirkon suunnitteli Ödön Lechner, ja se rakennettiin 1908–1913. Alun perin se oli viereisen lukion kappeli.\n\nKirkon pohjapiirros on soikea, ja sylinterimäinen torni on 36,8 metriä korkea. Kupolia suunniteltiin, mutta lopulta rakennettiin tynnyriholvi. Katto on lasitettua tiiltä, ja julkisivu oli alun perin vaaleanpastellia ennen kuin siitä tuli sininen.\n\nIsoisän matkavuonna 1873 kirkkoa ei vielä ollut, sillä sen rakennustyöt alkoivat vasta 1908. Pienoismalli kirkosta on Brysselin Mini-Europe-puistossa.",
+   "kuvat": [
+    {
+     "tiedosto": "Blue Church, Bratislava 01.jpg",
+     "lyhyt": "Sininen kirkko eli Pyhän Elisabetin kirkko, Ödön Lechnerin suunnittelema jugendkirkko.",
+     "selite": "Kirkko rakennettiin 1908–1913 Unkarin Elisabetille omistettuna.",
+     "lahde": "Thomas Ledl, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Grassalkovichin palatsi": {
+   "aika": "1760",
+   "teksti": "Grassalkovichin palatsi on rokokoo- ja myöhäisbarokkityylinen palatsi, jonka ympärillä on ranskalaistyylinen puutarha Hodžovo-aukion vieressä. Arkkitehti Andreas Mayerhoffer suunnitteli sen kreivi Antal Grassalkovichille, joka toimi Unkarin kuninkaallisen kamarin puheenjohtajana. Palatsi valmistui 1760.\n\nKappelin seinillä on Joseph von Pichlerin freskoja, ja pääportaikon barokkiveistokset kuvaavat vuodenaikoja; ne on liitetty kuvanveistäjä Johann Wilhelm Beyeriin. Pyhän Barbaran kappeli vihittiin 1769. Isoisän matkavuonna 1873 palatsi oli olemassa, ja viimeiset omistajat ennen Itävalta-Unkarin loppua olivat arkkiherttua Fredrik Teschenistä ja hänen puolisonsa.\n\nPalatsi restauroitiin 1990-luvulla. Vuodesta 1996 se on ollut Slovakian presidentin virka-asunto, ja puutarha on avoin julkinen puisto.",
+   "kuvat": [
+    {
+     "tiedosto": "Bratislava Grassalkovich Palace 01.jpg",
+     "lyhyt": "Grassalkovichin palatsi, kreivi Antal Grassalkovichin kesäpalatsi vuodelta 1760.",
+     "selite": "Palatsi on nykyisin Slovakian presidentin virka-asunto.",
+     "lahde": "Uoaei1, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": {
+  "lat": 48.15,
+  "lon": 17.11,
+  "keskilampo": [
+   -0.8,
+   2.7,
+   5.1,
+   11.1,
+   14.8,
+   19,
+   22.4,
+   21.9,
+   17.4,
+   11.3,
+   6.3,
+   2.3
+  ],
+  "sade": [
+   27,
+   30,
+   63,
+   43,
+   68,
+   104,
+   33,
+   80,
+   50,
+   74,
+   38,
+   42
+  ],
+  "luonnehdinta": "Mallinnettujen kuukausinormaalien mukaan Bratislavassa on lämmin kesä ja pakkasen rajoilla oleva talvi: heinäkuun keskilämpö on 22,4 astetta ja tammikuun −0,8 astetta. Sadetta tulee ympäri vuoden, eniten kesäkuussa (104 mm) ja vähiten tammikuussa (27 mm)."
+ },
+ "ehdotukset": {
+  "lentoasema": "Bratislava M. R. Štefánik (BTS)",
+  "huomiot": [
+   "konteksti.json:n kuvaus sanoo Bratislavan olleen kruunajaispaikka 1700-luvun loppuun; lähteiden mukaan (Pyhän Martinin tuomiokirkko, Wikivoyage) viimeinen kruunaus oli 1830, joten kuvaus on korjattava.",
+   "Mikaelin portti ja Sininen kirkko ovat jo maalehden nostoja. Kohdekartan juttujen kulmat: portti rakennus- ja tornihistoriana (ei kruunajaiskulkue), kirkko Lechnerin jugendkirkkona ja Elisabetin kappelina; Päätoimittaja päättää, jäävätkö kohteet kartalle (varakohteet Fransiskaanikirkko, Pálffyn palatsi, Primasin palatsi).",
+   "Kruunajaisvuodet: en-Bratislava sanoo kruunajaiskaupunki 1536–1830, tuomiokirkko- ja Wikivoyage-lähteet 1563–1830; käytetty 1563–1830.",
+   "Etäisyys Wieniin vaihtelee lähteissä (49–60 km, konteksti 55 km); tekstissä noin 50–60 km.",
+   "Mozartin konsertti Pálffyn palatsissa 1762 on lähteiden mukaan kiistanalainen ja kirjoitettu sellaisena; ei kysymysaiheena.",
+   "um.fi-lähde oli estetty: matkustusturvallisuus perustuu vain Wikivoyagen yleislausuntoon, ja se on tarkistettava.",
+   "Ennen–nyt-paria ei löytynyt (isoisän aikainen PD-vedos puuttui); valokuvan vuosi-kenttä on \"nykyisin\", koska Commons ei anna kuvausvuotta kuvat.md:ssä.",
+   "Kysymys 5 kirjoitettu uusiksi faktapohjan sotkuisen version tilalle (Austerlitz, ilman kuukautta vihjeessä)."
+  ]
+ }
+}
