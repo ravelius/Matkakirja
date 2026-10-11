@@ -102,7 +102,8 @@ namespace Matkakirja.Natiivi
             }
 
             var turva = kerros.Turva(LinssiUi.Ylakerros);
-            ryhma = Ohjausnappi.Ryhma(turva);
+            // LÄPINÄKYVÄT NAPIT (omistaja 11.10.): tyylikirjan teema harmaa-kuulto, vain kuvake ja ohut ääriviiva maalauksen päällä.
+            ryhma = Ohjausnappi.Ryhma(turva, "harmaa-kuulto");
             ryhma.style.position = Position.Absolute;
             // OHJAUSNAPPI-ryhmän pohjatyyli on oikea yläkulma (top/right): top pois, muuten ryhmä venyy koko korkeudelle ja napit
             // keskittyvät ruudun keskelle (LS1:n kuva-arkki 10.10. 11.4x, iPad vaaka).
@@ -131,7 +132,7 @@ namespace Matkakirja.Natiivi
             {
                 Debug.Log("MATKAKIRJA museo: Poistu");
                 UiNakymat.Hae()?.Linssit?.SuljeLinssi();
-            }, aanet: false);
+            }, aanet: false, teema: "harmaa-kuulto");
             Valikko.NaytaTekstitys(() => MuseoSovitin.TekstitysPaalla, MuseoSovitin.AsetaTekstitys);
             poistuRivi = Rakenne.El(null, turva, PickingMode.Ignore);
             poistuRivi.style.position = Position.Absolute;

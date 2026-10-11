@@ -72,7 +72,7 @@
     "kerma": "#faf4d6"
   },
   "teemat": {
-    "_selite": "UI-pohjien kolme teemaa (+ linssin avaruuslasi). Teeman valitsee konteksti, ei pinta. Värit webin nykyisistä pinnoista; ei saavutettavuusperusteisia näkyviä muutoksia (omistajan Ydinajatus). HARMAA = ohjausnappien neutraali harmaa valokuvan, 3D:n ja avaruuden päällä (omistaja 16.9.2026, .satelliitti-sulku; OHJAUSNAPPI 2.10.2026).",
+    "_selite": "UI-pohjien kolme teemaa (+ linssin avaruuslasi). Teeman valitsee konteksti, ei pinta. Värit webin nykyisistä pinnoista; ei saavutettavuusperusteisia näkyviä muutoksia (omistajan Ydinajatus). HARMAA = ohjausnappien neutraali harmaa valokuvan, 3D:n ja avaruuden päällä (omistaja 16.9.2026, .satelliitti-sulku; OHJAUSNAPPI 2.10.2026). TUMMA = kuvan päällä, videopeleissä ja muissa pimeissä näkymissä (yö); hyväksytty pohja tai variantti käy vastaaviin tilanteisiin kysymättä (omistaja 9.10.2026, Raamattu #4243).",
     "paperi": {
       "pinta": "#f5f0e2",
       "pergamentti": "#ecd8ae",
@@ -116,6 +116,16 @@
       "korostus": "#ffffff",
       "reunus": "#aaaaaa",
       "toiminto": "rgba(170, 170, 170, 0.55)"
+    },
+    "harmaa-kuulto": {
+      "_selite": "HARMAA läpinäkyvänä (omistaja 11.10.2026, taidemuseo: \"napit saisi olla läpinäkyviä\"): ohjausnappi ilman pintaa, vain kuvake ja ohut ääriviiva maalauksen ja seinän päällä; painettuna ja valittuna harmaan pinta.",
+      "pinta": "rgba(130, 130, 130, 0)",
+      "pinta-peitto": "#828282",
+      "muste": "#f0f0f0",
+      "muste-pehmea": "#bdbdbd",
+      "korostus": "#ffffff",
+      "reunus": "rgba(224, 224, 224, 0.6)",
+      "toiminto": "rgba(130, 130, 130, 0.42)"
     },
     "lcd": {
       "pinta": "#0c2214",
@@ -469,7 +479,7 @@
     "_selite": "Hyväksytyt pohjat (omistaja 1.10.2026). Uusi pinta valitsee näistä; merge-pyynnössä rivi 'Pohja: …'.",
     "NOSTOKORTTI": { "teemat": ["paperi", "tumma"], "kuvat": "0|1|2|3+", "sulku": "ohinapautus, veto alas, Esc (ei ✕)", "osat": ["NOSTOSELAIN (‹ Nostot ›, PANEELI, luetut/kaikki)", "AUTO (luenta, siirtyy seuraavaan 3 s)"] },
     "LUKUARKKI": { "teemat": ["paperi"], "kuvat": "vapaa", "sulku": "POISTU, Esc, veto oikealle" },
-    "KORTTI": { "teemat": ["paperi", "tumma"], "kuvat": "0|1", "sulku": "modaali: napit; muuten Takaisin, ohinapautus, Esc", "_tumma": "TUMMA vain videopeleissä (seikkailun tietokortit ja löytö, natiivi .mk-kortti-kehys--tumma ja .mk-paljastus--tumma, tk-tumma-*-tokenit): omistaja 8.10.2026 klo 21.2x \"A\", koska pimeässä pelissä kirkas paperi häikäisee (Thiefin taso); muualla KORTTI paperisena." },
+    "KORTTI": { "teemat": ["paperi", "tumma"], "kuvat": "0|1", "sulku": "modaali: napit; muuten Takaisin, ohinapautus, Esc", "_tumma": "TUMMA videopeleissä ja muissa pimeissä näkymissä (seikkailun tietokortit ja löytö, natiivi .mk-kortti-kehys--tumma ja .mk-paljastus--tumma; pallon ☰-, ☾- ja Kysy-listat yöllä; tk-tumma-*-tokenit): omistaja 8.10.2026 klo 21.2x \"A\", koska pimeässä kirkas paperi häikäisee (Thiefin taso); muualla KORTTI paperisena. Hyväksytty pohja käy vastaaviin (omistaja 9.10.2026 klo 01.05, Raamattu #4243): pimeä näkymä → tumma teema kysymättä, käyttö lokiin; omistajalta kysytään vain kokonaan uusi pohja tai muunnelma." },
     "PANEELI": { "teemat": ["paperi", "lasi"], "kuvat": "0", "sulku": "ohinapautus, Esc, avaaja" },
     "KUVANÄKYMÄ": { "teemat": ["tumma"], "kuvat": "1+", "sulku": "✕, ohinapautus, veto alas, Esc" },
     "LINSSIN OHJAIN": { "teemat": ["lasi", "lasi-avaruus"], "kuvat": "0", "sulku": "Sulje linssi, Esc", "variantit": ["KAMERAN PÄÄLLYS"] },
@@ -499,7 +509,7 @@
       "_selite": "kuvakokoelmien pohja (omistaja 2.10.2026 klo 15.5x, loki 022276d61); malli vanha julistegalleria (.julistegalleria*, mitat sieltä)."
     },
     "OHJAUSNAPPI": {
-      "teemat": ["harmaa", "paperi", "lasi", "lasi-avaruus"],
+      "teemat": ["harmaa", "harmaa-kuulto", "paperi", "lasi", "lasi-avaruus"],
       "koko": "nappi.ohjaus neliönä, kulma kulma.nappi, reuna 1 pt, osuma-ala nappi.osuma; iso = nappi.ohjaus-iso (56) kuvasisällölle, esim. linnan pienoiskartta (omistaja 2.10.2026 klo 17.4x)",
       "kuvake": "24-ruudukon viivakuvake kokoa nappi.ohjaus-kuvake, viiva 1,75, ei tekstimerkkejä (×, ‹)",
       "kontekstikuvakkeet": "seikkailun toimintonappi (omistaja 7.10.2026 klo 20.3x): käsi = poimi, käytä, avaa, aseta, laske, pue, kiinnitä, raavi, käännä, katkaise (M-osa, Siirtoseppä 8.10.2026) ja muut verbit; kaari = heitä; liekki = sytytä, puhalla, sammuta. Natiivin omat 24-ruudukon viivakuvakkeet (Ikonit.Kasi, Ikonit.Heittokaari, Ikonit.Liekki), viiva 1,75, ei tekstiä",
