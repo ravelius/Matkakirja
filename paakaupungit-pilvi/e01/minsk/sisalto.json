@@ -15,7 +15,7 @@
  },
  "artikkeli": {
   "intro": "Minsk on Valko-Venäjän pääkaupunki ja maan suurin kaupunki. Se sijaitsee Svislač-joen varrella noin 220 metrin korkeudessa, ja asukkaita on 1 995 091 (1.1.2026, Belstat) eli noin viidennes maan väestöstä. Ensimmäinen maininta nimellä Měneskъ on **vuoden 1067** kronikassa Nemihan taistelun yhteydessä, ja kaupunki oli lähteen mukaan ollut olemassa jo sitä ennen.\n\nIsoisän matkavuonna **1873** Minsk oli Venäjän keisarikunnan Minskin kuvernementin keskus ja kasvava ratasolmu. Moskova–Varsova-rata kulki kaupungin kautta vuodesta 1871, ja 1873 rakennettiin lisäksi rata Romnysta Libavaan Itämeren rannalle. Kunnallinen vesijohto oli otettu käyttöön 1872, ja Yläkaupunkiin nousi kaksi- ja kolmikerroksisia tiili- ja kivitaloja.\n\nToinen maailmansota muutti kaupungin kasvot: Minsk oli miehitettynä 1941–1944, ja vapautuksen aikaan asukkaita oli noin 50 000 ja noin **80 % taloista** oli raunioina. Vanha keskusta korvattiin 1940–50-luvuilla leveillä katuosuuksilla ja aukioilla, väkiluku ylitti miljoonan 1972 ja metro avattiin 1984. ",
-  "teksti": "Minskin nimen alkuperä on epävarma: yksi selitys johtaa sen Menka-joesta, toinen kauppapaikkaa tarkoittavasta sanasta. Kaupunki kuului Polatskin ruhtinaskuntaan 980 mennessä ja Liettuan suuriruhtinaskuntaan 1242. Magdeburgin kaupunkioikeudet se sai 1499, ja Venäjälle se liitettiin 1793.\n\nVuonna 1918 Minskistä tuli Valko-Venäjän kansantasavallan pääkaupunki, ja 1919 se oli Valko-Venäjän sosialistisen neuvostotasavallan pääkaupunki. Sodan jälkeen kaupunki rakennettiin uudelleen. Ympäröivät kylät liitettiin siihen, ja niiden tilalle rakennettiin tiheitä asuinalueita.\n\nNykyään Minskin joukkoliikenteeseen kuuluvat kolme metrolinjaa, kahdeksan raitiolinjaa, yli 70 johdinautolinjaa ja yli sata bussilinjaa. Lähteen mukaan Minsk on maan suurin liikennesolmu, ja IVY:n päämaja sijaitsee kaupungissa."
+  "teksti": "Minskin nimen alkuperä on epävarma: yksi selitys johtaa sen Menka-joesta, toinen kauppapaikkaa tarkoittavasta sanasta. Kaupunki kuului Polatskin ruhtinaskuntaan 980 mennessä ja Liettuan suuriruhtinaskuntaan 1242. Magdeburgin kaupunkioikeudet se sai 1499, ja Venäjälle se liitettiin 1793.\n\nVuonna 1918 Minskistä tuli Valko-Venäjän kansantasavallan pääkaupunki, ja 1919 se oli Valko-Venäjän sosialistisen neuvostotasavallan pääkaupunki. Sodan jälkeen kaupunki rakennettiin uudelleen. Ympäröivät kylät liitettiin siihen, ja niiden tilalle rakennettiin tiheitä asuinalueita.\n\nNykyään Minskin joukkoliikenteeseen kuuluvat kolme metrolinjaa, kahdeksan raitiolinjaa, yli 70 johdinautolinjaa ja yli sata bussilinjaa. Lähteen mukaan Minsk on maan suurin liikennesolmu."
  },
  "kysymykset": [
   {
@@ -43,7 +43,7 @@
    "correct": 0,
    "level": 1,
    "hint": "Joen varrella ovat Yläkaupunki ja Gorki-puisto.",
-   "fact": "Svislač virtaa Minskin halki ja kuuluu Mustanmeren valuma-alueeseen.",
+   "fact": "Svislač on 327 kilometriä pitkä Berezinan sivujoki, ja se virtaa Minskin halki.",
    "source": "https://en.wikipedia.org/wiki/Minsk"
   },
   {
@@ -96,9 +96,9 @@
  ],
  "valokuva": {
   "tiedosto": "Svislach river in Minsk.jpg",
-  "vuosi": "2020",
+  "vuosi": "2018",
   "lahde": "Viktar Palstsiuk, Commons (CC BY-SA 4.0)",
-  "lyhyt": "Svislač virtaa Minskin halki ja kuuluu Mustanmeren valuma-alueeseen.",
+  "lyhyt": "Svislač on 327 kilometriä pitkä Berezinan sivujoki, ja se virtaa Minskin halki.",
   "selite": "Svislač on Minskin halki virtaava joki, jonka varrella kaupunki sijaitsee Minskin kukkuloiden kaakkoisrinteellä."
  },
  "kaupunkilehti": [
@@ -114,19 +114,19 @@
     },
     {
      "tiedosto": "Svislach River in Minsk Belarus.jpg",
-     "selite": "Svislač halkoo Minskiä, ja sen rantaa seuraavat puistot Voitonaukiolta Gorki-puistoon.",
+     "selite": "Svislač virtaa Minskin läpi, ja Voitonaukiolta ulottuu puisto joelle ja Gorki-puistoon.",
      "lahde": "Tim Adams, Wikimedia Commons (CC BY 3.0)"
     },
     {
      "tiedosto": "Independence Avenue, Minsk 2019-08-24.jpg",
-     "selite": "Sodan jälkeen keskustaan rakennettiin leveitä katuja ja aukioita, kuten Itsenäisyydenkatu.",
+     "selite": "Sodan jälkeen keskusta sai leveitä katuosuuksia ja aukioita; Itsenäisyyden valtakatu on pääväylä.",
      "lahde": "Alexey Komarov, Wikimedia Commons (CC BY-SA 4.0)"
     }
    ],
    "nostot": [
     {
      "otsikko": "Rautatie risteää",
-     "teksti": "Isoisän matkavuonna 1873 Minskistä oli tulossa ratasolmu. Moskova–Varsova-rata kulki kaupungin kautta jo vuodesta 1871, ja 1873 rakennettiin lisäksi uusi rata Romnysta Itämeren rannalla sijaitsevaan Libavaan eli nykyiseen Liepājaan. Radat risteävät yhä Minsk-Pasažyrskin asemalla, joka rakennettiin 1873 nimellä Vilenski Vazkal, Vilnan asema. Aseman ensimmäinen rakennus oli puuta, ja se purettiin 1890 ja korvattiin kivirakennuksella. Sodassa asema tuhoutui kokonaan, mutta se rakennettiin uudelleen 1945–46, ja nykyinen rakennus valmistui 1991–2002. Lähteen mukaan Minsk on maan suurin liikennesolmu. Vuoteen 1900 mennessä kaupungissa oli 58 tehdasta.",
+     "teksti": "Isoisän matkavuonna 1873 Minskistä oli tulossa ratasolmu. Moskova–Varsova-rata kulki kaupungin kautta jo vuodesta 1871, ja 1873 rakennettiin lisäksi uusi rata Romnysta Itämeren rannalla sijaitsevaan Libavaan eli nykyiseen Liepājaan. Radat risteävät yhä Minsk-Pasažyrskin asemalla, joka rakennettiin 1873 nimellä Vilenski Vazkal, Vilnan asema. Aseman ensimmäinen rakennus oli puuta, ja se purettiin 1890 ja korvattiin kivirakennuksella. Sodassa asema tuhoutui kokonaan, mutta se rakennettiin uudelleen 1945–46, ja nykyinen rakennus rakennettiin 1991–2002. Lähteen mukaan Minsk on maan suurin liikennesolmu. Vuoteen 1900 mennessä kaupungissa oli 58 tehdasta.",
      "tiedosto": "Minsk railroad station 2.jpg",
      "selite": "Minsk-Pasažyrskin asema, jonka ensimmäinen rakennus valmistui 1873.",
      "lahde": "Redline, Wikimedia Commons (PD)",
@@ -142,9 +142,9 @@
     },
     {
      "otsikko": "Tuhosta uudelleen rakennettu",
-     "teksti": "Ennen toista maailmansotaa Minskissä oli noin 300 000 asukasta. Kaupunki vapautettiin 3.7.1944, ja silloin tehtaat, kunnalliset rakennukset, voimalaitokset, sillat ja useimmat tiet olivat raunioina, samoin noin 80 % taloista. Asukkaita oli jäljellä noin 50 000. Historiallinen keskusta korvattiin 1940–50-luvuilla suurilla rakennuksilla, leveillä katuosuuksilla ja aukioilla. Väkiluku ylitti miljoonan 1972 ja 1,5 miljoonaa 1986. Ympäröivät kylät liitettiin kaupunkiin, ja niiden paikalle rakennettiin tiheitä asuinalueita. Joitakin tuhoutuneita kohteita, esimerkiksi vanha raatihuone, on rakennettu uudelleen. Metro avattiin 1984.",
+     "teksti": "Ennen toista maailmansotaa Minskissä oli noin 300 000 asukasta. Kaupunki vapautettiin 3.7.1944, ja silloin tehtaat, kunnalliset rakennukset, voimalaitokset, sillat ja useimmat tiet olivat raunioina, samoin noin 80 % taloista. Asukkaita oli jäljellä noin 50 000. Historiallinen keskusta korvattiin 1940–50-luvuilla suurilla rakennuksilla, leveillä katuosuuksilla ja aukioilla. Väkiluku ylitti miljoonan 1972 ja 1,5 miljoonaa 1986. Ympäröivät kylät liitettiin kaupunkiin. Keskustaan on rakennettu uudelleen Venäjän keisarikunnan aikana hävitetty vanha raatihuone. Metro avattiin 1984.",
      "tiedosto": "Miensk - Ratuša.jpg",
-     "selite": "Raatihuone on yksi sodassa tuhoutuneista kohteista, jotka on rakennettu uudelleen.",
+     "selite": "Minskin vanha raatihuone on rakennettu keskustaan uudelleen.",
      "lahde": "Zedlik, Wikimedia Commons (CC BY-SA 3.0)",
      "wiki": "Minsk"
     },
@@ -181,7 +181,7 @@
       },
       {
        "otsikko": "Vanha kaupunki jalan",
-       "teksti": "Vanhan Minskin kierros alkaa Kolminaisuuden esikaupungista, jonka nimi on Kolminaisuusmäki. Lähellä ovat Pyhän Hengen katedraali, joka valmistui 1642, ja Neitsyt Marian arkkikatedraali, entinen jesuiittakollegion kirkko vuodelta 1710. Lähteen mukaan myös Pietarin ja Paavalin kirkko on rakennettu 1620–1630-luvulla. Kirkot sijaitsevat melko lähellä toisiaan, joten ne mahtuvat samalle kävelykierrokselle.",
+       "teksti": "Vanhan Minskin kierros alkaa Kolminaisuuden esikaupungista, jonka nimi on Kolminaisuusmäki. Lähellä ovat Pyhän Hengen katedraali, joka valmistui 1642, ja Neitsyt Marian arkkikatedraali, entinen jesuiittakollegion kirkko vuodelta 1710. Lähteen mukaan myös Pietarin ja Paavalin kirkko on rakennettu 1620-luvulla. Kirkot sijaitsevat melko lähellä toisiaan, joten ne mahtuvat samalle kävelykierrokselle.",
        "kuva": {
         "tiedosto": "Plošča Pieramohi (Minsk Metro station) 2020 05.jpg",
         "selite": "Voitonaukion metroasema; Minskin metro avattiin 1984, ja linjoja on nykyään kolme.",
@@ -190,7 +190,7 @@
       },
       {
        "otsikko": "Joki ja puistot",
-       "teksti": "Svislač virtaa kaupungin läpi, ja sen rannoilla on puistoja. Gorki-puisto perustettiin 1800, ja siellä on huvipuisto, 56 metriä korkea maailmanpyörä ja planetaario. Muita puistoja ovat Janka Kupalan puisto ja Tšeljuskinilaisten puisto. Zaslawyen tekojärvi on rakennettu 1956, ja se on noin viiden kilometrin päässä luoteessa.",
+       "teksti": "Svislač virtaa kaupungin läpi, ja sen rannoilla on puistoja. Gorki-puisto perustettiin 1800, ja siellä on huvipuisto, 56 metriä korkea maailmanpyörä ja planetaario. Muita puistoja ovat Janka Kupalan puisto ja Tšeljuskinilaisten puisto. Zaslawyen tekojärvi on rakennettu 1956, ja se on noin viiden kilometrin päässä kaupungin luoteisreunasta.",
        "kuva": {
         "tiedosto": "Минск.Парк Горького.Колесо обозрения. - panoramio.jpg",
         "selite": "Gorki-puiston maailmanpyörä on 56 metriä korkea.",
@@ -211,7 +211,7 @@
        "teksti": "Lähteen mukaan Minskiin kannattaa tulla toukokuusta syyskuuhun. Mallinnettujen kuukausinormaalien mukaan tammikuun keskilämpötila on noin −3,7 astetta ja heinäkuun noin 18,9 astetta, ja sadetta tulee eniten elokuussa, noin 100 millimetriä. Lähteen mukaan syksyllä ja keväällä on usein sumua.",
        "kuva": {
         "tiedosto": "Minsk after snow and freezing fog (8217148748) (2).jpg",
-        "selite": "Sumu on Minskissä yleinen syksyllä ja keväällä.",
+        "selite": "Sumu on Minskissä yleinen erityisesti syksyllä ja keväällä.",
         "lahde": "David Brewer from Brookmans Park, England, Wikimedia Commons (CC BY-SA 2.0)"
        }
       }
@@ -250,12 +250,8 @@
         "teksti": "Asemilla on turvatarkastus, ja suuret laukut voidaan pyytää tarkastettaviksi."
        },
        {
-        "otsikko": "Kuvaamisesta",
-        "teksti": "Lähteen mukaan hallintorakennusten kuvaaminen on kiellettyä, joten kirkot ja puistot ovat helpompia kuvauskohteita."
-       },
-       {
         "otsikko": "Lentoyhteydet",
-        "teksti": "Lähteen mukaan suoria lentoja Euroopan unionin alueelle ei ole, ja reitti kulkee käytännössä Istanbulin kautta. Tilanne muuttuu, joten ajantasaiset matkustustiedot kannattaa tarkistaa ennen matkaa."
+        "teksti": "Lentoyhteydet muuttuvat, joten ajantasaiset reitit ja matkustustiedot kannattaa tarkistaa ennen matkaa."
        },
        {
         "otsikko": "Kielet",
@@ -270,7 +266,7 @@
   {
    "id": "kirjallisuus",
    "nimi": "Kirjat, kieli ja näyttämö",
-   "johdanto": "Minskin ensimmäinen julkinen kirjasto avattiin 1830-luvulla, ja nykyään kaupungissa on kymmeniä kirjastoja, teattereita ja museoita. Kaupungin kaduilla on kuultu ruteenia, puolaa, venäjää ja valkovenäjää.",
+   "johdanto": "Minskin ensimmäinen julkinen kirjasto avattiin 1830-luvulla, ja lähteen mukaan kaupungissa on nykyään 11 teatteria, 16 museota ja 139 kirjastoa. Kaupungin kaduilla on kuultu ruteenia, puolaa, venäjää ja valkovenäjää.",
    "tehtava": {
     "kysymys": "Minä vuonna Minskissä avattiin ensimmäinen julkinen kirjasto?",
     "vaihtoehdot": [
@@ -285,7 +281,7 @@
    "nostot": [
     {
      "otsikko": "Kirjasto, lehti ja teatteri 1800-luvulla",
-     "teksti": "Minskin ensimmäinen julkinen kirjasto avattiin 1836, ja vuotta myöhemmin, 1837, kaupunki sai palokunnan. Ensimmäinen paikallinen sanomalehti, Minskije gubernskije vedomosti, ilmestyi 1838, ja ensimmäinen teatteri perustettiin 1844. Alle kymmenessä vuodessa kaupunkiin syntyi siis kirjastojen, lehtien ja näyttämötaiteen perusta, ja pääkadut ja aukiot oli päällystetty kivellä samalla vuosikymmenellä. Isoisän matkavuonna 1873 nämä laitokset olivat jo olemassa. Nykyään Minskissä on lähteen mukaan 11 teatteria, 16 museota, 20 elokuvateatteria ja 139 kirjastoa.",
+     "teksti": "Minskin ensimmäinen julkinen kirjasto avattiin 1836, ja vuotta myöhemmin, 1837, kaupunki sai palokunnan. Ensimmäinen paikallinen sanomalehti, Minskije gubernskije vedomosti, ilmestyi 1838, ja ensimmäinen teatteri perustettiin 1844. Alle kymmenessä vuodessa kaupunkiin syntyi siis kirjastojen, lehtien ja näyttämötaiteen perusta, ja pääkadut ja aukiot oli päällystetty kivellä samalla vuosikymmenellä. Isoisän matkavuonna 1873 nämä laitokset oli jo perustettu. Nykyään Minskissä on lähteen mukaan 11 teatteria, 16 museota, 20 elokuvateatteria ja 139 kirjastoa.",
      "tiedosto": "Mienskaja ratuša. Менская ратуша (H. Hierasimovič, 1839).jpg",
      "selite": "Minskin raatihuone oli keskustassa jo 1800-luvulla, kun kaupunkiin avattiin ensimmäinen kirjasto.",
      "lahde": "H. Herasimovič, Wikimedia Commons (PD)",
@@ -320,7 +316,7 @@
  ],
  "kohdekartta": {
   "numeroympyrat": true,
-  "esittely": "Minskin historiallinen ydin on Svislač-joen varrella, jossa Yläkaupungin barokkikirkot ja Kolminaisuuden esikaupunki kertovat vanhasta Minskistä. Kohteet kuuluvat keskustan jalankulkureitteihin Niamiha- ja Kastryčnickaja-asemien tienoilla.",
+  "esittely": "Minskin historiallinen ydin on Svislač-joen varrella, jossa Yläkaupungin barokkikirkot ja Kolminaisuuden esikaupunki kertovat vanhasta Minskistä. Vanhan Minskin kohteet ovat Niamiha- ja Kastryčnickaja-asemien tuntumassa, ja Voitonaukio ja Gorki-puisto Pieramohi-aseman lähellä.",
   "rajat": {
    "pohjoinen": 53.9126,
    "etela": 53.8938,
@@ -370,7 +366,7 @@
  },
  "nahtavyydet": {
   "Kolminaisuuden esikaupunki": {
-   "aika": "1390-luvulta",
+   "aika": "1100-luvulta",
    "teksti": "Kolminaisuuden esikaupunki eli valkovenäjäksi Trajeckaje pradmiescie, Kolminaisuusmäki, on historiallinen alue keskustan koillisosassa Svislačin vasemmalla rannalla. Se oli aikanaan kaupan ja hallinnon keskus. Nimi tulee todennäköisimmin Jogailan vuonna 1390 perustamasta Kolminaisuuden kirkosta, ja toisen selityksen mukaan se viittaa Pyhän Kolminaisuuden puolustuslinnakkeeseen.\n\nAlue on vanhaa asutusta. Lipkatataarit asettuivat Tatarskaja Slabadaan 1400-luvulta, ja ensimmäinen asutus ajoitetaan vuoteen 1428, joten tataariasutus oli vanhaa jo isoisän matkavuonna 1873. Minskin ensimmäinen katolinen kirkko oli alueella.\n\nNykyään alueella on Kansallinen ooppera- ja balettiteatteri. Läheinen Kyynelten saari liittyy esikaupunkiin sillalla.",
    "kuvat": [
     {
@@ -383,7 +379,7 @@
   },
   "Pyhän Hengen katedraali": {
    "aika": "1633–1642",
-   "teksti": "Pyhän Hengen katedraali rakennettiin vuosina 1633–1642 bernardiiniluostarin osaksi paikalle, jossa oli aiemmin luostari. Barokkikirkko vaurioitui sodassa 1654–67 ja vihittiin uudelleen elokuussa 1687. Tulipalo koetteli sitä 1741, ja suurpalo 30.5.1835 levisi luostarista koko keskustaan. Bernardiinien luostari suljettiin 1852, ja kirkko oli ollut sen osana vuodesta 1642 lähtien.\n\nKirkko palautettiin itäkirkon käyttöön 1860, kunnostus alkoi 1869, ja se vihittiin uudelleen 22.10.1870. Isoisän matkavuonna 1873 katedraali oli siis vasta kolmen vuoden ikäinen uudelleen vihitty kirkko.\n\nVuonna 1961 siitä tuli hiippakunnan katedraali. Ikonistasissa on Minskin Jumalanäidin ikoni vuodelta 1500, ja hiippakunnan katedraalina kirkko palvelee yhä seurakuntaa.",
+   "teksti": "Pyhän Hengen katedraali rakennettiin vuosina 1633–1642 bernardiiniluostarin osaksi paikalle, jossa oli aiemmin luostari. Barokkikirkko vaurioitui sodassa 1654–67 ja vihittiin uudelleen elokuussa 1687. Tulipalo koetteli sitä 1741, ja suurpalo 30.5.1835 levisi luostarista koko keskustaan. Bernardiinien luostari suljettiin 1852, ja kirkko oli ollut sen osana vuodesta 1642 lähtien.\n\nKirkko palautettiin itäkirkon käyttöön 1860, kunnostus alkoi 1869, ja se vihittiin uudelleen 22.10.1870. Isoisän matkavuonna 1873 katedraali oli siis vasta kolmen vuoden ikäinen uudelleen vihitty kirkko.\n\nVuonna 1961 siitä tuli hiippakunnan katedraali, ja nykyään se on Valko-Venäjän oikeauskoisen kirkon päätuomiokirkko. Ikonistasissa on Minskin Jumalanäidin ikoni vuodelta 1500.",
    "kuvat": [
     {
      "tiedosto": "Cathedral of Holy Spirit in Minsk 20190502-2.jpg",
@@ -407,7 +403,7 @@
   },
   "Punainen kirkko": {
    "aika": "1905–1910",
-   "teksti": "Punainen kirkko eli Pyhien Simeonin ja Helenan kirkko on uusromaaninen. Sen suunnittelivat arkkitehdit Tomasz Pajzderski ja Władysław Marconi, peruskivi muurattiin 1905 ja kirkko vihittiin 20.9.1910, eli rakentaminen kesti viisi vuotta. Tiilet tuotiin Częstochowasta ja kattotiilet Włocławekista. Isoisän matkavuonna 1873 kirkkoa ei ollut vielä olemassa.\n\nRahoittaja oli Edward Woyniłłowicz, ja kirkko nimettiin hänen kahden kuolleen lapsensa, Szymonin ja Helenan, muistoksi. Vuonna 1903 noin 2 000 katolilaista oli anonut tonttia kirkolle.\n\nKirkko suljettiin 1932 ja sitä käytettiin muun muassa elokuvateatterina. Se palautettiin kirkolle 1990. Lähteen mukaan sen siluetti on suosittu matkamuistoissa.",
+   "teksti": "Punainen kirkko eli Pyhien Simeonin ja Helenan kirkko on uusromaaninen. Sen suunnittelivat arkkitehdit Tomasz Pajzderski ja Władysław Marconi, peruskivi muurattiin lähteiden mukaan 1905–1908 ja kirkko vihittiin 20.9.1910. Tiilet tuotiin Częstochowasta ja kattotiilet Włocławekista. Isoisän matkavuonna 1873 kirkkoa ei ollut vielä olemassa.\n\nRahoittaja oli Edward Woyniłłowicz, ja kirkko nimettiin hänen kahden kuolleen lapsensa, Szymonin ja Helenan, muistoksi. Vuonna 1903 noin 2 000 katolilaista oli anonut tonttia kirkolle.\n\nKirkko suljettiin 1932 ja sitä käytettiin muun muassa elokuvateatterina. Se palautettiin kirkolle 1990. Lähteen mukaan sen siluetti on suosittu matkamuistoissa.",
    "kuvat": [
     {
      "tiedosto": "Church of Saints Simon and Helena (Aug 2019).jpg",
@@ -419,7 +415,7 @@
   },
   "Kyynelten saari": {
    "aika": "1988–1996",
-   "teksti": "Kyynelten saari, virallisesti Rohkeuden ja surun saari, on pieni muistosaari Svislač-joessa. Siltaa pitkin pääsee Kolminaisuuden esikaupunkiin. Saari on muistomerkki ulkomailla sotatoimissa kuolleille valkovenäläisille.\n\nKokonaisuuteen kuuluu veistoksia, muistokiviä ja kappeli. Arkkitehtuuri syntyi kuvanveistäjä J. Pavlovin johdolla, ja muistomerkki rakennettiin 1988–1996 ja vihittiin 3.8.1996. Rakentaminen kesti lähes kahdeksan vuotta. Saari sijaitsee aivan Kolminaisuuden esikaupungin vieressä, joten sen voi liittää samaan kävelykierrokseen vanhan Minskin kanssa.\n\nSuomenkielisen lähteen mukaan Afganistanin sodassa 1979–89 menehtyi 771 valkovenäläistä ja sotaan osallistui 30 000. Isoisän matkavuonna 1873 saarta ei ollut.",
+   "teksti": "Kyynelten saari, virallisesti Rohkeuden ja surun saari, on pieni muistosaari Svislač-joessa. Siltaa pitkin pääsee Kolminaisuuden esikaupunkiin. Saari on muistomerkki ulkomailla sotatoimissa kuolleille valkovenäläisille.\n\nKokonaisuuteen kuuluu veistoksia, muistokiviä ja kappeli. Arkkitehtuuri syntyi kuvanveistäjä J. Pavlovin johdolla, ja muistomerkki rakennettiin 1988–1996 ja vihittiin 3.8.1996. Saari sijaitsee aivan Kolminaisuuden esikaupungin vieressä, joten sen voi liittää samaan kävelykierrokseen vanhan Minskin kanssa.\n\nSuomenkielisen lähteen mukaan Afganistanin sodassa 1979–89 menehtyi 771 valkovenäläistä ja sotaan osallistui 30 000. Isoisän matkavuonna 1873 saarta ei ollut.",
    "kuvat": [
     {
      "tiedosto": "Island of tears Sons of the Fatherland monument Minsk.JPG",
@@ -494,7 +490,7 @@
    "Kolminaisuuden esikaupunki on kaupunginosa eikä aukio, joten tyyppiä ei ole merkitty (oletus rakennus); Päätoimittaja päättää, kelpaako kohteeksi vai vaihdetaan.",
    "Punaisen kirkon koordinaatit: en-artikkeli 53.89652, 27.54748 vs matkaoppaan 53.89653, 27.54537 (noin 140 m); käytetty en-arvoa, tarkistus Wikidatasta Macilla.",
    "Kansikuvan K4 (raatihuoneen 1835 piirros) tekijä 'Unknown author Unknown author' on Commonsin Artist-kentän sellaisenaan antama; Päätoimittaja voi tarkistaa. Kuva ei ole suoraan tulipalokuva.",
-   "valokuvan vuosi (2020) on arvio: kuvat.md ei anna vuotta; Mac tarkistaa Commonsin EXIF-päivän.",
+   "valokuvan vuosi 2018 on Commonsin päiväyksen mukainen (tarkistettu vaiheessa D).",
    "Ennen–nyt-paria ei ole: isoisän ajan PD-kuvia löytyi vain raatihuoneesta (1835, 1839), ei asemasta.",
    "Matkustusturvallisuus: um.fi ei ollut luettavissa (403); oppaassa vain lyhyt maininta ajantasaisten matkustustietojen tarkistamisesta ja lentoyhteyksistä (matkaopas). Mac tarkistaa.",
    "Gorki-puistosta oli vain 7 faktaa; juttu on lyhyt. Kyynelten saaren fakta Afganistanin sodasta on fi-lähteestä, maininta pidetty neutraalina muistamisena.",

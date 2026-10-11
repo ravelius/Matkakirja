@@ -11,5 +11,5 @@ Vaihe 0 tehty (konteksti, säädata Open-Meteo OK, malli).
 | skopje | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | 0 varoitusta |
 | podgorica | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | 3 varoitusta (pyöreät luvut lähteestä); koordinaatit vanha silta, Ribnica Macilla |
 | chisinau | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | 0 varoitusta; Katedraalipuisto pois kartalta (7 kohdetta) |
-| minsk | ✓ | ✓ | ✓ | ✓ | | | | | kohde 3 ohut (5 faktaa), Gorki 7 |
+| minsk | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | 6 varoitusta (pyöreät luvut lähteestä); Pietari ja Paavali pois kartalta; sumukuva talvinen |
 | bratislava | ✓ | | | | | | faktapohjassa viimeistelemättömiä kohtia (kysymys 5, osio 4) |

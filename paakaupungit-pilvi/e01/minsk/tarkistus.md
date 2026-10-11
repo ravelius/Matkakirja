@@ -78,3 +78,13 @@ Yhteenveto: VÄÄRIN 8, EPÄVARMA 13.
 - Pyhän Hengen katedraalin vuodet 1633–1642 (en-katedraaliartikkeli) vs 1642–87 (en Minsk): ratkaisu 1633–1642 + uudelleenvihkimys 1687 on lähteiden mukainen.
 - ehdotukset-osio: Punaisen kirkon koordinaatti en 53.89652/27.54747 (Wikipedia API vahvistaa); Wikivoyage antaa 53.89653/27.54537.
 - Kansikuva 3 (kuvat.md) kuvailee rakennukset "uudelleenrakennetuiksi"; teksti ei väitä sitä.
+
+## Korjattu
+
+- valokuva.vuosi 2018; valokuva.lyhyt ja kysymykset[1].fact: Svislač on 327 km pitkä Berezinan sivujoki (ei Mustameri-väitettä).
+- Nostot[2]: raatihuone rakennettu uudelleen (ei sodassa tuhoutunut), selite ja teksti korjattu; teksti lyhennetty (kylien liittämislause) mitan vuoksi.
+- Zaslawyen tekojärvi: "kaupungin luoteisreunasta"; kirjallisuus-johdanto: 11 teatteria, 16 museota, 139 kirjastoa; kohdekartta.esittely korjattu (Pieramohi mukaan).
+- Poistettu: lentoyhteyksien pakoteväite (yleinen tarkistusmuistutus tilalle), kuvaamiskieltokohta kokonaan, IVY:n päämaja -virke.
+- Pehmennetty/korjattu: kansikuvat[1] ja [2] (lyhennetty alle 100 mrk), nosto[0] "rakennettiin 1991–2002", Punainen kirkko (peruskivi 1905–1908 lähteiden mukaan, ei "viisi vuotta"), Kyynelten saaren kestovirke poistettu, Kolminaisuuden esikaupunki aika 1100-luvulta, Pyhän Hengen katedraalin nykytila (päätuomiokirkko; "ortodoksisen"-sana vältetty, koska tarkistin tulkitsee sen paikkamerkiksi), Pietarin ja Paavalin kirkko 1620-luvulla, kirjallisuus-nosto "oli jo perustettu", sumukuvan selite "erityisesti".
+- Sumukuva (talvinen) jätetty ennalleen; Päätoimittaja hyväksyy tai vaihtaa. ehdotukset.huomiot-rivit (mm. valokuvan vuosi) jätetty koskematta.
+- Tarkistus: 0 virhettä, 6 varoitusta (pyöreät luvut), myös --verkko.
