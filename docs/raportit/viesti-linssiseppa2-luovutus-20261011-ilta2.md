@@ -13,6 +13,9 @@ linssiseppa2/google-429-vara) ja wt/proto-linssiseppa2-museo (linssiseppa2/keitt
   Tila lokit/linssiseppa2-simut-19.log ("SIMUT VALMIS" lopussa) → ilmoita Julkaisijalle SIMU VAPAA.
 - 429-mittaus _tyo/linssiseppa2/ion429/loki.tsv (25 × 5 min, loppuu ~20.52) → yhteenveto PT:lle klo ~21 (osuus 429, pisimmät jaksot; 6.10. lokit grep).
 
+- iPhone-jono jatkuu: simut-19 (vara a40e44542 = f94800ba8, raketti e560bbef7) → madrid/ketju-madrid2.zsh (lokit/linssiseppa2-madrid2.log)
+  → vara429/ketju-vara2.zsh (testi-429 → pehmeä vara → paluu; lokit/linssiseppa2-vara429b.log). Lopuksi SIMU VAPAA Julkaisijalle.
+
 ## AVOIN
 0. **KEITTIÖ V3 YÖ HYVÄKSYTTY SUUNNAKSI (PT 19.5x)**: oletusvalotus −1 EV (122dc77fb), kolmikko c962bad79. Lisätty kalkin alle hento kiven
    kohokuvio (keittio-grafiikka, ks. git log) → käännä + kuva; sitten hdr-yo-kartat ämpäriin (vie-paketti.sh, esim. dioraama/kokeet/keittio-hdr-yo/)
