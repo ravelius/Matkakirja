@@ -15,7 +15,7 @@
  },
  "artikkeli": {
   "intro": "Bratislava on Slovakian pääkaupunki, ja se seisoo Tonavan rannalla lounaisessa Slovakiassa Pienten Karpaattien juurella. Lähteen mukaan se on ainoa pääkaupunki, joka rajoittuu kahteen valtioon, Itävaltaan ja Unkariin, ja Wieniin on matkaa noin 50–60 kilometriä. Bratislavan kaupungissa (piirit I-V) asui 31.12.2025 yhteensä 480 902 ihmistä.\n\nIsoisän matkavuonna 1873 kaupunki oli **Pozsony eli Pressburg**, Unkarin kuningaskunnan kaupunki Itävalta-Unkarissa, ja nimi Bratislava tuli viralliseksi vasta maaliskuussa 1919. Unkarin pääkaupunki se oli 1500-luvulta 1700-luvun lopulle, valtiopäivät kokoontuivat siellä 1848 asti, ja Pyhän Martinin tuomiokirkossa kruunattiin kuninkaita vuosina **1563–1830**. Linna kaupungin yläpuolella oli palanut raunioksi 1811.\n\nNykyään vanha kaupunki on pieni kävelykaupunki, jossa **linna, tuomiokirkko ja Mikaelin portti** kertovat kruunajaisten ajasta. Kaupungin musiikkiperinne ulottuu Haydnin ja Hummelin aikaan.",
-  "teksti": "Bratislava on Slovakian pääkaupunki Tonavan rannalla, Pienten Karpaattien juurella. Tonava virtaa kaupungin läpi lännestä kaakkoon, ja Bratislavan kaupungin (piirit I-V) pinta-ala on 367,66 neliökilometriä. Pysyvää asutusta alueella on ollut jo uudella kivikaudella, noin 5500-5000 eaa. alkaen, ja kelttiläinen boii-heimo perusti noin 200-100 eaa. linnoitetun kaupungin ja löi kolikoita.\n\nKaupunki sai ensimmäiset tunnetut kaupunkioikeutensa 1291 ja kuului vapaana kuninkaallisena kaupunkina Unkarin kuningaskuntaan. Osmanien edetessä Unkarin pääkaupunki siirrettiin 1536 Pressburgiin, ja arkkipiispan istuin tuli sinne 1543. Valtiopäivät kokoontuivat täällä 1848 asti, ja tuomiokirkko toimi kruunajaiskirkkona vuosina 1563–1830. Kaupungin ensimmäinen pysyvä Tonavan silta valmistui vasta 1891.\n\nKaupungin nimet kertovat sen monikulttuurisuudesta: saksaksi Pressburg, unkariksi Pozsony ja slovakiksi Prešporok. Vuonna 1910 väestöstä 42 prosenttia puhui saksaa, 41 unkaria ja 15 slovakkia, ja monet olivat kaksi- tai kolmikielisiä. Nykyään kaupungin tunnusrakennuksia ovat Bratislavan linna, Pyhän Martinin tuomiokirkko, Vanha raatihuone ja Mikaelin portti."
+  "teksti": "Bratislava on Slovakian pääkaupunki Tonavan rannalla, Pienten Karpaattien juurella. Tonava virtaa kaupungin läpi lännestä kaakkoon, ja Bratislavan kaupungin (piirit I-V) pinta-ala on 367,66 neliökilometriä. Pysyvää asutusta alueella on ollut jo uudella kivikaudella, noin 5500-5000 eaa. alkaen, ja kelttiläinen boii-heimo perusti noin 200-100 eaa. linnoitetun kaupungin ja löi kolikoita.\n\nKaupunki sai ensimmäiset tunnetut kaupunkioikeutensa 1291 ja kuului vapaana kuninkaallisena kaupunkina Unkarin kuningaskuntaan. Osmanien edetessä Unkarin pääkaupunki siirrettiin 1536 Pressburgiin, ja arkkipiispan istuin tuli sinne 1543. Valtiopäivät kokoontuivat täällä 1848 asti, ja tuomiokirkko toimi kruunajaiskirkkona vuosina 1563–1830. Kaupungin ensimmäinen pysyvä Tonavan silta valmistui vasta 1891.\n\nKaupungin nimet kertovat sen monikulttuurisuudesta: saksaksi Pressburg, unkariksi Pozsony ja slovakiksi Prešporok. Vuonna 1910 väestöstä 42 prosenttia puhui saksaa, 41 unkaria ja 15 slovakkia. Tunnusrakennuksia ovat Bratislavan linna, Pyhän Martinin tuomiokirkko, Vanha raatihuone ja Mikaelin portti."
  },
  "kysymykset": [
   {
@@ -98,7 +98,7 @@
   "tiedosto": "Bratislava Castle (view from Slavín), Slovakia.JPG",
   "vuosi": "nykyisin",
   "lahde": "Kiwiev, Commons (CC0)",
-  "lyhyt": "Bratislavan linna ja vanha kaupunki Tonavan rannalla.",
+  "lyhyt": "Bratislavan linna kohoaa vanhan kaupungin yläpuolella kukkulalla.",
   "selite": "Linna paloi raunioksi 1811 ja oli yhä raunio isoisän matkavuonna 1873, ja sitä kunnostettiin 1950-luvulta alkaen."
  },
  "kaupunkilehti": [
@@ -158,8 +158,8 @@
      "otsikko": "Rautatie tuli siltaa aiemmin",
      "teksti": "Bratislavan teollistuminen alkoi lähteen mukaan 1830-luvulla, kun Tonavalla alkoi säännöllinen höyrylaivaliikenne. Vuonna 1840 Pressburgista Svätý Juriin avattiin Unkarin kuningaskunnan hevosrautatie, ja höyryveturirata Wieniin valmistui 1840-luvun lopulla sekä Pestiin 1850-luvun alussa. Pysyvää siltaa Tonavan yli ei silti ollut: Starý most rakennettiin vasta 1891. Isoisän matkavuonna 1873 junalla oli voinut matkustaa jo yli kaksikymmentä vuotta. 1870-luvulla perustettiin kemiantehdas, josta tuli nykyinen Istrochem.",
      "tiedosto": "Bratislava Stary Most R03.jpg",
-     "lyhyt": "Starý most, Bratislavan ensimmäinen pysyvä silta Tonavan yli, valmistui 1891.",
-     "selite": "Siltaa ennen kaupungista ei ollut pysyvää siltayhteyttä Tonavan yli, vaikka junat Wieniin ja Pestiin kulkivat jo 1840- ja 1850-luvun taitteessa.",
+     "lyhyt": "Starý most Tonavan yli, jonka ensimmäinen pysyvä silta valmistui 1891.",
+     "selite": "Kuvassa on Starý most; kaupungin ensimmäinen pysyvä Tonavan silta valmistui 1891, vaikka junat Wieniin ja Pestiin kulkivat jo 1840- ja 1850-luvun taitteessa.",
      "lahde": "Marc Ryckaert ( MJJR ), Wikimedia Commons (CC BY 3.0)",
      "wiki": "History of Bratislava"
     }
@@ -223,8 +223,8 @@
        "teksti": "Heinäkuu on lämpimin kuukausi, keskilämpö 22,0 astetta, ja tammikuu kylmin, keskilämpö 0,3 astetta. Touko- ja syyskuussa keskilämpö on 16,2 astetta. Sadetta tulee vuodessa noin 580 millimetriä, eniten heinäkuussa (62 mm) ja vähiten helmikuussa (33 mm).",
        "kuva": {
         "tiedosto": "Bratislava view from Slavin.jpg",
-        "lyhyt": "Slavín, vuonna 1960 avattu sotilashautausmaa ja muistomerkki vanhan kaupungin yläpuolella.",
-        "selite": "Slavínin muistomerkiltä avautuu näkymä kaupunkiin ja Pieniin Karpaatteihin.",
+        "lyhyt": "Slavín, vuonna 1960 avattu sotilashautausmaa ja muistomerkki kaupungin yläpuolella.",
+        "selite": "Slavínin muistomerkin terassilta avautuu näkymä Bratislavan keskustaan.",
         "lahde": "Radler59 ( talk ), Wikimedia Commons (CC BY-SA 4.0)"
        }
       }
@@ -300,8 +300,8 @@
      "otsikko": "Kuusivuotias vieras ja kiistanalainen konsertti",
      "teksti": "Ventúrska-kadun varrella olevan Pálffyn palatsin rakennutti 1740-luvulla kreivi Leopold Pálffy, ja portaalin reliefi kuvaa hänen sotilasuraansa Maria Teresian armeijan kenraalina. Palatsin paikalla on ollut vanhempaa rakennuskantaa: remontissa seinistä löytyi goottilaisen rakennuksen osia ja kellarista roomalaisia ja kelttiläisiä löytöjä. Talossa toimi aiemmin rahapaja. Tunnetuin tarina kertoo kuusivuotiaan Mozartin soittaneen palatsissa konsertin vuonna 1762, mutta lähteiden mukaan asia on kiistanalainen, ja historioitsijat epäilevät sitä.",
      "tiedosto": "Bratislava - Pálffy Palace - Mozart.jpg",
-     "lyhyt": "Pálffyn palatsi Ventúrska-kadulla, 1700-luvun barokkipalatsi.",
-     "selite": "Kreivi Leopold Pálffyn rakennuttama palatsi on liitetty tarinaan nuoren Mozartin konsertista, jota historioitsijat pitävät kiistanalaisena.",
+     "lyhyt": "Pálffyn palatsin Mozart-laatta, jonka mukaan kuusivuotias Mozart konsertoi talossa 1762.",
+     "selite": "Laatta kertoo tarinasta, jota historioitsijat pitävät kiistanalaisena. Palatsin rakennutti 1740-luvulla kreivi Leopold Pálffy.",
      "lahde": "Ladislav Luppa, Wikimedia Commons (CC0)",
      "wiki": "Pálffy Palace (Ventúrska Street)"
     },
@@ -327,8 +327,8 @@
      "otsikko": "Soittosali on orkesteria vanhempi",
      "teksti": "Slovakian filharmoninen orkesteri perustettiin 1949, ja se on soittanut 1950-luvulta lähtien Redutassa, konserttitalossa, joka valmistui 1913–1919. Kaupungin musiikkiperinne on kuitenkin orkesteria paljon vanhempi: nuori Franz Liszt soitti De Paulin palatsissa 1820-luvun alussa, ja Beethoven vieraili kaupungissa 1790-luvulla. Lähteen mukaan kaupungissa vierailivat tai asuivat myös Haydn ja Bartók. Säveltäjä Franz Schmidt syntyi Pozsonyssa 1874, vuosi isoisän matkan jälkeen.",
      "tiedosto": "Bratislava Reduta R01.jpg",
-     "lyhyt": "Reduta, barokkiaikainen konserttitalo, jossa Slovakian filharmonia soittaa.",
-     "selite": "Redutan rakennus valmistui 1913–1919, ja Slovakian filharmonia on soittanut siellä 1950-luvulta lähtien.",
+     "lyhyt": "Reduta, uusbarokkinen konserttitalo, jossa Slovakian filharmonia soittaa.",
+     "selite": "Nykyinen rakennus on uusbarokkinen ja valmistui 1913–1919 aiemman Redutan paikalle, ja filharmonia on soittanut siellä 1950-luvulta lähtien.",
      "lahde": "Marc Ryckaert, Wikimedia Commons (CC BY-SA 4.0)",
      "wiki": "Slovak Philharmonic"
     }
@@ -451,12 +451,12 @@
   },
   "Sininen kirkko": {
    "aika": "1900-luvun alku–1913",
-   "teksti": "Sininen kirkko, virallisesti Pyhän Elisabetin kirkko, on unkarilaisen jugendin edustaja vanhan kaupungin itäosassa. Se on omistettu Unkarin Elisabetille, joka lähteen mukaan kasvoi Pressburgin linnassa. Kirkon suunnitteli Ödön Lechner, ja se rakennettiin 1900-luvun alku–1913. Alun perin se oli viereisen lukion kappeli.\n\nKirkon pohjapiirros on soikea, ja sylinterimäinen torni on noin 37 metriä korkea. Kupolia suunniteltiin, mutta lopulta rakennettiin tynnyriholvi. Katto on lasitettua tiiltä, ja julkisivu oli alun perin vaaleanpastellia ennen kuin siitä tuli sininen.\n\nIsoisän matkavuonna 1873 kirkkoa ei vielä ollut, sillä sen rakennustyöt alkoivat vasta 1900-luvun alussa. Pienoismalli kirkosta on Brysselin Mini-Europe-puistossa.",
+   "teksti": "Sininen kirkko, virallisesti Pyhän Elisabetin kirkko, on unkarilaisen jugendin edustaja vanhan kaupungin itäosassa. Se on omistettu Unkarin Elisabetille, joka lähteen mukaan kasvoi Pressburgin linnassa. Kirkon suunnitteli Ödön Lechner, ja se rakennettiin 1900-luvun alussa, ja se valmistui 1913. Alun perin se oli viereisen lukion kappeli.\n\nKirkon pohjapiirros on soikea, ja sylinterimäinen torni on noin 37 metriä korkea. Kupolia suunniteltiin, mutta lopulta rakennettiin tynnyriholvi. Katto on lasitettua tiiltä, ja julkisivu oli alun perin vaaleanpastellia ennen kuin siitä tuli sininen.\n\nIsoisän matkavuonna 1873 kirkkoa ei vielä ollut, sillä sen rakennustyöt alkoivat vasta 1900-luvun alussa. Pienoismalli kirkosta on Brysselin Mini-Europe-puistossa.",
    "kuvat": [
     {
      "tiedosto": "Blue Church, Bratislava 01.jpg",
      "lyhyt": "Sininen kirkko eli Pyhän Elisabetin kirkko, Ödön Lechnerin suunnittelema jugendkirkko.",
-     "selite": "Kirkko rakennettiin 1900-luvun alku–1913 Unkarin Elisabetille omistettuna.",
+     "selite": "Kirkko rakennettiin 1900-luvun alussa Unkarin Elisabetille omistettuna.",
      "lahde": "Thomas Ledl, Wikimedia Commons (CC BY-SA 4.0)"
     }
    ],
