@@ -65,7 +65,7 @@ export const OPAS_AINEISTOT = Object.freeze({
     sisilia: 'opas/esittely-v2/sisilia.json',
     sofia: 'opas/esittely-v2/sofia.json',
     tampere: 'opas/esittely-v2/tampere.json',
-    tukholma: 'opas/esittely-v3b/tukholma.json',   // v3b 9.10.: Vasa-museo katse_suunta 40 (veden puolelta, LS1/PT, juna 174). v3 9.10. omistaja: kohteita lähempää; v2 + 5 lähikohdetta, kierros 14 kohdetta lyhimpänä reittinä (v2: avaus + 14 kohdetta), aaneton: true pysyy (vain R2:n ääni)
+    tukholma: 'opas/esittely-v3c/tukholma.json',   // v3c 11.10.: Stortorget katse_suunta 270 / katse_kaari 20 ja tarkka sijainti, Sergels torg pois (suojattu teos; Karttaseppä/PT, juna 183). v3b 9.10.: Vasa-museo katse_suunta 40 (veden puolelta, LS1/PT, juna 174). v3 9.10. omistaja: kohteita lähempää; v2 + 5 lähikohdetta, kierros 14 kohdetta lyhimpänä reittinä (v2: avaus + 14 kohdetta), aaneton: true pysyy (vain R2:n ääni)
     valletta: 'opas/esittely-v2/valletta.json',
     venetsia: 'opas/esittely-v2/venetsia.json',
     vilna: 'opas/esittely-v2/vilna.json',
