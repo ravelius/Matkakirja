@@ -23,15 +23,16 @@ namespace Matkakirja.Natiivi
             return System.Array.IndexOf(Valot, v) >= 0;
         }
 
-        /// <summary>Kohdenosto (laji Kohde, tunnus ilman etuliitettä) videopelikohteena; myös lautapelinosto.</summary>
-        public static bool Kohde(Nosto n) => n != null && n.Laji == NostoLaji.Kohde && (Valo("kohde:" + n.Id) || Lautapeli(n) != null);
+        /// <summary>Kohdenosto (laji Kohde, tunnus ilman etuliitettä) videopelikohteena. Lautapelinostot eivät (omistaja 11.10.2026
+        /// klo 17.1x: "Lautapeleihin ei tule väri korostusta"): tavallinen paperinen nostokortti ilmaisella Pelaa-napilla.</summary>
+        public static bool Kohde(Nosto n) => n != null && n.Laji == NostoLaji.Kohde && Valo("kohde:" + n.Id);
 
         /// <summary>Lautapelinoston valotunnuksen etuliite (Lautapelinostot → Nostokortti.Avaa("peli:mylly")).</summary>
         public const string PeliEtuliite = "peli:";
         const string PeliId = "peli-";
 
         /// <summary>
-        /// LAUTAPELINOSTON KORTTI (PT 11.10.2026: "tee molemmat"): videopeliteeman nostokortti, otsikkona pelin nimi, lyhyt
+        /// LAUTAPELINOSTON KORTTI (PT 11.10.2026: "tee molemmat"; omistaja 17.1x: ei värikorostusta): tavallinen nostokortti, otsikkona pelin nimi, lyhyt
         /// esittely ensimmäisen laudan historiatekstistä (Peliluettelo, Sisältökirjuri/Siirtoseppä) ja ilmainen Pelaa-nappi.
         /// </summary>
         public static Nosto Lautapelinosto(string valo)

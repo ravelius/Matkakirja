@@ -1,11 +1,12 @@
 // LAUTAPELINOSTOT (Natiivi-UI; omistaja hyväksyi 11.10.2026 klo 14.2x Päätoimittajan kautta, juna 182): lautapelit nostoina omissa
-// kaupungeissaan, Mylly Berliinissä ja Tavli Ateenassa (Peliluettelo.Koti). Sama sininen videopeliteema kuin Olavinlinnalla
-// (tyylikirja teemat.videopeli, Videopelit.Hehku), mutta aina ilmaisia: napautus avaa videopeliteeman nostokortin (lyhyt
-// esittely + ilmainen Pelaa, Videopelit.Lautapelinosto; PT 11.10. "tee molemmat"), Pelaa avaa pelin (MyllyNakyma/TavliNakyma.
-// AvaaPeli). Kaupunkikortin tehtävätarjous (Peliluettelo.Odottaa) säilyy ennallaan.
+// kaupungeissaan, Mylly Berliinissä ja Tavli Ateenassa (Peliluettelo.Koti). Aina ilmaisia: napautus avaa tavallisen nostokortin
+// (lyhyt esittely + ilmainen Pelaa, Videopelit.Lautapelinosto; PT 11.10. "tee molemmat"), Pelaa avaa pelin
+// (MyllyNakyma/TavliNakyma.AvaaPeli). Kaupunkikortin tehtävätarjous (Peliluettelo.Odottaa) säilyy ennallaan.
+// EI VÄRIKOROSTUSTA (omistaja 11.10.2026 klo 17.1x: "Lautapeleihin ei tule väri korostusta"): ei sinistä videopeliteemaa,
+// hehkua eikä sykäystä; ne jäävät Olavinlinnalle.
 //
-//  - Karttaobjekti ERIKOISNOSTOT-pohjalla kuten kipsipäät ja kaupunkipallot: pyöreä sininen levy, jossa pelin viivaikoni
-//    (sama kuin Pelit-valikossa, Ikonit.Viiva mylly/tavli), alla sininen hehkurengas ja syke 4 s:n välein (Videopelit).
+//  - Karttaobjekti ERIKOISNOSTOT-pohjalla kuten kipsipäät ja kaupunkipallot: pyöreä paperinen levy (tk-paperi-*), jossa pelin
+//    viivaikoni (sama kuin Pelit-valikossa, Ikonit.Viiva mylly/tavli).
 //  - Paikka: kaupungin pisteen oikealla puolella; kun kaupungin kutsukortti on oikealla, vasemmalla (kuten pallo kortista poispäin).
 //  - Näkyy pelaajan ollessa kaupungin maassa (kuten pallot ja päät), häivytys maan vaihtuessa; kaukonäkymän houkutinpisteet
 //    hunnun päällä ovat Linssisepän. Piilossa pallon takapuolella, ruudun ulkopuolella sekä linssin, lentopelin, kaupunkikortin,
@@ -53,18 +54,8 @@ namespace Matkakirja.Natiivi
             var b = Rakenne.Nappi(null, "mk-erikoisnosto-paa mk-lautapelinosto", () => Avaa(k), juuri);
             b.name = "lautapelinosto-" + peli.Id;   // todistusajon haku
             b.tooltip = Kieli.T("ui.lautapelinosto.pelaa", peli.Nimi);   // VoiceOver
-            var hehku = Rakenne.El("mk-lautapelinosto__hehku mk-nosto-merkki__hehku mk-nosto-merkki__hehku--videopeli", b, PickingMode.Ignore);
-            hehku.style.backgroundImage = new StyleBackground(Videopelit.Hehku());
-            Videopelit.KytkeSykaisy(hehku);
             var levy = Rakenne.El("mk-lautapelinosto__levy", b, PickingMode.Ignore);
             Rakenne.Ikoni(Ikonit.Viiva.TryGetValue(peli.Id, out var ik) ? ik : Ikonit.Viiva["noppa"], "mk-lautapelinosto__ikoni", levy);
-            hehku.schedule.Execute(() =>
-            {
-                if (!LinssiUi.VahennettyLiike()) { hehku.RemoveFromClassList("mk-nosto-merkki__hehku--syke"); return; }
-                if (!k.Nakyy) return;
-                hehku.ToggleInClassList("mk-nosto-merkki__hehku--syke");
-                Ruudunpaivitys.Herata(2.6f);
-            }).Every(Videopelit.SykeValiMs);
             b.style.display = DisplayStyle.None;
             k.Nappi = b;
             kohteet.Add(k);
