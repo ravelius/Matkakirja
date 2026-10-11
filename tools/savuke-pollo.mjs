@@ -3932,6 +3932,9 @@ if (kohdistus.virhe) {
   vaadi('kuplan alle löytyy kohdemerkki', false, kohdistus.virhe);
 } else {
   await vihjeSivu.touchscreen.tap(kohdistus.x, kohdistus.y);
+  // CI:n hitaassa piirrossa napautuksen käsittely voi viipyä yli 600 ms (ajo 38175149983: kupla yhä näkyvissä, ei vuotoa):
+  // odotetaan kuplan katoamista enintään 2,5 s ja sen jälkeen vielä mahdollista vuotavaa clickiä.
+  await vihjeSivu.waitForFunction(() => !document.querySelector('.pollo-vihje:not([hidden])'), null, { timeout: 2500 }).catch(() => {});
   await vihjeSivu.waitForTimeout(600);
   const vuoto = await vihjeSivu.evaluate(async () => {
     const ui = window.matkakirja.ui;
