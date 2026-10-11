@@ -8,8 +8,8 @@ Vaihe 0: yhdeksän kontekstia ja saa-syote.json luotu alkuperäisellä tyokalu.m
 
 | Kaupunki | A | B | C | D | E | F |
 |---|---|---|---|---|---|---|
-| libreville | lähteiden luku käynnissä | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
-| ciudaddelapaz | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
+| libreville | A koottu; 6 karttakandidaattia, rajaus-/tyyppipoikkeus ja turvallisuuslähde avoin | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
+| ciudaddelapaz | lähteiden luku käynnissä | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | saotome | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | bangui | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | brazzaville | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
@@ -29,3 +29,7 @@ A-valmis tarkoittaa vain lähteistettyä faktapohjaa. Kaupunkia ei ole kirjoitet
 - Sisältötyön CODEX/PILVIOHJE-poikkeus: ei koko npm test -ajoa; ei sisalto.json:ia, PR:ää tai mergeä.
 - Tarkat luvut: kaksi riippumatonta lähdettä; muuten noin/vuosisata tai poisto. Kontekstin hyväksytty väestöluku kirjataan laajuuksineen lähdehuomioksi, ei kopioida tarkkana ilman lisävahvistusta.
 - Kaupallinen peli (#74): modernit suojatut teokset ja rakennukset jätetään pois, jos kaupallinen FOP teostyypille ei ole varma. Luontokohteet ensisijaisia; kuvien tiedostolisenssi ja kohteen oikeudet kuuluvat myöhempään B-vaiheeseen.
+
+## Libreville A
+
+Lähteistetty 0–9-rakenne koottu. 1849 kahdesta riippumattomasta lähteestä; muut epävarmat tarkat luvut poistettu/pyöristetty. Karttaehdotus ulottuu historiallisen ytimen lisäksi estuaarin retkiluontoon: pääsession hyväksyntää vaativa rajauspoikkeus, ei valmiiksi hyväksytty kartta. Mont-Bouët tarvitsee aukio-tyyppisovituksen. UM:n /c/GA palautti yleissivun; turvallisuustaso ei vahvistettu. IPHAMETRA HTTP 500.
