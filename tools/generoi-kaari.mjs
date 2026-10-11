@@ -11,6 +11,7 @@
  * Ilman kaupunkeja generoi kaikki. Avain kierrätetään ajon jälkeen,
  * sitä ei tallenneta minnekään.
  *
+ * --osat=kohtaaminen,aarre rajaa generoitavat osat (saapumista ei generoida, jos sille ei tilata luentaa).
  * --mykistetyt generoi VAIN mykistetyt-kenttien osoittamat osat
  * (tekstierän jäljiltä vaienneet luennat) — kaupungin muut, ehjät
  * luennat eivät kulu eivätkä muutu. Tämä on generointierän
@@ -63,6 +64,8 @@ const OSAT = [
 ];
 
 const vainMykistetyt = process.argv.includes('--mykistetyt');
+// --osat=kohtaaminen,aarre rajaa generoitavat osat (esim. kun saapuminen ei saa luentaa: 12.10.2026 Euroopan 9 uutta kaarta, 2 luentaa/kaupunki).
+const osaRaja = (process.argv.find((x) => x.startsWith('--osat=')) ?? '').slice(7).split(',').filter(Boolean);
 const pyydetyt = process.argv.slice(2).filter((a) => !a.startsWith('--'));
 const kohteet = KAARI_PAKETIT.kohteet.filter((k) => (!pyydetyt.length || pyydetyt.includes(k.id))
   && (!vainMykistetyt || (k.mykistetyt ?? []).length));
@@ -129,6 +132,7 @@ let generoitu = 0;
 for (const k of kohteet) {
   for (const [osa, luentaKentta, tekstiKentta] of OSAT) {
     if (vainMykistetyt && !(k.mykistetyt ?? []).includes(osa)) continue;
+    if (osaRaja.length && !osaRaja.includes(osa)) continue;
     const teksti = k[luentaKentta] ?? k[tekstiKentta];
     if (!teksti) { console.error(`${k.id}/${osa}: teksti puuttuu — ohitetaan.`); continue; }
     const polku = resolve(JUURI, `assets/audio/puhe-kaari-${osa}-${k.id}.mp3`);
