@@ -72,3 +72,48 @@ Yhteenveto: VÄÄRIN 10, EPÄVARMA 9.
 ## Korjattu
 
 Kaikki A-osion kohdat korjattu sisalto.json:iin sanatarkasti: intro (lähteen mukaan suurin), Ayn Ghazal (jopa noin 3 000), Suuri temppeli (nähtävyysteksti kirjoitettu uudelleen ilman kuutta pylvästä, keskeneräisyyttä, marmoria kirkkoon ja jättikättä; kuvan selite vaihdettu), tšerkessinosto lyhyt, fuul/falafel, Ptolemaios II (valtasi ja rakennutti uudelleen), odeonin tehtäväväite poistettu, liikenneympyrät, Diwan ja moskeija -nosto, Diwan-teksti, Hejaz-rata (vuosi 1900 tienoilla, 1903, ei tarkkaa päivämäärälukua), paikkaluvut pyöristetty (useita tuhansia / muutamia satoja) kaikissa kohdissa, Queen Alia 30–40 km, valokuvan selite, Husseinin moskeijan 1873-väite (Warren 1867, Conder 1881), tehtävä-kysymys, Umaijadien kuvan lyhyt. Kohta "Ajantasaiset matkustustiedot" jätetty Päätoimittajalle. Kuvia ei vaihdettu; kuvat.md ennallaan. Tarkistustyökalu ajettu --verkko.
+
+## Lukupassi
+
+Lisäsääntö 11.10.2026: tarkka luku säilyy vain, jos kaksi riippumatonta lähdettä tukee sitä. Lähteet luettu faktapohja.md:n ja aiemmin haettujen Wikipedia-otteiden kautta (en-Wikipedia; fi-Wikipedia ja Wikivoyage toisena, missä saatavilla); tyokalu.mjs-haut jumiutuivat, joten epävarmat luvut pyöristettiin.
+
+| Sijainti | Arvo | Lähteet | Päätös |
+|---|---|---|---|
+| artikkeli.intro | 4,3 milj. (2025) | vain konteksti.json (GAM); en Amman 5 milj. (2026), en Demographics 4,0 milj. (2015), WV 4 milj. | pyöristetty: "yli neljä miljoonaa", vuosi poistettu |
+| nostot[3] (historia) | yli neljä milj. vuonna 2025 | sama | pyöristetty: "nykyään yli neljään miljoonaan" |
+| nostot[3] (historia) | noin tuhat asukasta 1800-luvun lopulla | en Amman Demographics (1890); fi Amman sama | säilytetty ("noin") |
+| intro, johdanto, Ayn Ghazal | noin 9 000 vuotta | en Ayn Ghazal (7250–5000 eaa.); en Amman, Neolithic | säilytetty ("noin") |
+| Ayn Ghazal | jopa noin 3 000 asukasta | en Ayn Ghazal; en Amman (arvio) | säilytetty (arvio, "jopa noin") |
+| Ayn Ghazal | yli 30 patsasta | vain yksi lähde | poistettu ("useita") |
+| intro, teksti, tiedot[0] | seitsemän kukkulaa; yli kymmenen | en Amman Geography; fi Amman | säilytetty ("lähteen mukaan", "yli kymmenelle") |
+| artikkeli.teksti | kahdeksan liikenneympyrää | vain en Amman, Roads | poistettu (lukumäärä) |
+| intro, teksti, tšerkessit | 1870-luvun loppu (lähteissä 1878) | en Amman; en Circassians in Jordan | säilytetty (vuosikymmen) |
+| nostot Autio rinne | Balqan siirto, 1500-luvun alku (1516) | en Amman; en Downtown Amman (ottomaanikausi) | säilytetty (vuosisata) |
+| nostot Uudet asukkaat | Oliphant 1879 | en Amman; en Grand Husseini Mosque (sama tietosanakirja, ei riippumaton) | pyöristetty: "1870-luvun lopulla" |
+| nostot Uudet asukkaat | kolme tšerkessikorttelia | vain en Amman | poistettu (lukumäärä) |
+| nostot Uudet asukkaat | kuva 1921 | Commons-tiedot ja LOC-otsikko | säilytetty |
+| nostot Rata | käynnistyi 1900 tienoilla; käytössä 1903 | en Amman 1903; en Downtown 1904; Timeline 1908 (ristiriita) | pyöristetty: "1900-luvun alussa", "saman vuosikymmenen aikana" |
+| nostot Rata | Ensimmäinen valtuusto 1900-luvun 1. vuosikymmen | vain en Amman / Timeline 1909 | poistettu (vuosi); Babouk säilytetty ilman ajankohtaa |
+| nostot Rata, kysymys 3 | "1900-luvun alussa" | en Amman; en Hejaz railway | säilytetty (vuosisata) |
+| nostot Pääkaupunki | 1920-luvulla (lähteissä 1921, 1928); maanjäristys 1920-luvun lopulla | en Amman; en Timeline of Amman | säilytetty (vuosikymmen) |
+| Rooman teatteri | useita tuhansia paikkoja (6 000) | en Roman Theatre; fi Amman | säilytetty (pyöristetty) |
+| Rooman teatteri | kolme vaakasuoraa osaa | vain en Roman Theatre | pyöristetty: "vaakasuoriin osiin" |
+| Rooman teatteri, Suuri temppeli | 100-luku, Antoninus, 161–166 (Marcianus) | en Roman Theatre; en Amman Citadel | säilytetty (vuosisata; tarkat vuodet eivät tekstissä) |
+| Odeon | muutamia satoja paikkoja (500) | en Odeon; en Philadelphia (Amman) | säilytetty (pyöristetty) |
+| Philadelphia | Ptolemaios II, 200-luku eaa. | en Amman; en Philadelphia (Amman); fi Amman | säilytetty (vuosisata) |
+| Umaijadien palatsi | 700-luku; neljä kokoushuonetta | en Amman Citadel (kokoushuoneet vain tämä) | 700-luku säilytetty; "neljä" pyöristetty: "useita" |
+| Umaijadien palatsi | maanjäristys 700-luvun puolivälissä (749) | en Amman Citadel; en Amman | säilytetty (pyöristetty) |
+| Nymfaion | useiden satojen m2 (600 m2) allas | vain en Nymphaeum | säilytetty (pyöristetty, hedge) |
+| Nymfaion | kunnostus 2010-luvun puolivälissä; kolme yliopistoa | en Nymphaeum (2015, kolme nimettyä) | vuosi säilytetty (vuosikymmen); "kolme" pyöristetty: "useasta" |
+| Philadelphia-nosto | kylpylät 2020-luvun alussa | en Roman baths (Amman) (syyskuu 2020) | säilytetty (vuosikymmen) |
+| Seil | peitetty 1900-luvun jälkipuoliskolla (1964–1971) | en Seil Amman; en Nymphaeum | säilytetty (pyöristetty) |
+| Husseinin moskeija | 600-/900-luku, 1860-luku (Warren 1867), 1880-luvun alku (Conder 1881), 1920-luku | en Grand Husseini Mosque; en Amman | säilytetty vuosikymmenin; viimeisen virkkeen tarkat vuodet 1867/1881 poistettu |
+| Duke's Diwan | 1920-luku, posti 1940-lukuun, Bisharat vuosituhannen vaihteessa | en The Duke's Diwan; en Downtown Amman | säilytetty (vuosikymmen) |
+| Oppaan ilmasto | 1989–2018, noin 33, 13, 4 astetta, noin 60 mm | en Amman ilmastotaulukko; Wikivoyage-ilmastokaavio | säilytetty (pyöristetty) |
+| Oppaan lentokenttä | 30–40 km | en Queen Alia 30 km; en Amman 30 km; fi Amman 40 km | säilytetty (haarukka) |
+| Oppaan BRT | kaksi reittiä | en Amman, Bus and taxi; Wikivoyage Amman | säilytetty |
+| Kysymykset 1–5, tehtävä | fact-kentät: useita satoja, useita tuhansia, 1870-luvun loppu, 1900-luvun alku, 1900-luvun jälkipuolisko | kuten yllä | säilytetty; vastaukset ehjiä, muutoksia ei tarvittu |
+| Valokuva | noin 1900 | Commons-tiedostonimi | säilytetty |
+| Huomio | historia-nosto 4 oli 685 merkkiä | | lyhennetty 651:een; muut nostot 614–654 |
+
+Yhteenveto: säilytetty 26, pyöristetty 8 (4,3 milj. kahdessa paikassa, Oliphant, rata, teatterin osat, kokoushuoneet, yliopistot), poistettu 4 (kahdeksan liikenneympyrää, yli 30 patsasta, kolme tšerkessikorttelia, valtuuston vuosi).
