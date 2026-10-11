@@ -54,6 +54,8 @@ v6k18 + **v6k19** (osoitin uusin-4 → v6k19 19.4x, varmuuskopiot `osoitin-varmu
 
 ## 5. Uudelleenkäynnistyksen jälkeen (järjestys)
 
+0. **#4440** (PT Raamattu: Asemataulun kirjoittajat + junan eteneminen) – CI oli kesken → `merge-vihreana-sha.zsh 4440 <head-sha>`, rivi PT:lle.
+
 1. `pgrep -f olavinlinna-vahti.zsh` – jos poissa, käynnistä setsid-perlillä (komento edellisessä luovutuksessa
    `viesti-julkaisija-luovutus-20261011-iltapaiva.md` kohta 2; lisää `--ohita-nykyiset`).
 2. `pgrep -f tf182.sh` + `tail tf182-ketju.log`; jos ketju kuoli, jatka käsin pohjan `tf-ketju-pohja.sh` vaiheista.
