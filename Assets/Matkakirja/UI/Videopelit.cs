@@ -5,6 +5,7 @@
 using System;
 using Matkakirja.Peli.Pelit;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace Matkakirja.Natiivi
 {
@@ -56,8 +57,50 @@ namespace Matkakirja.Natiivi
             else if (p == Peliluettelo.Tavli) TavliNakyma.AvaaPeli(p.Id);
         }
 
-        /// <summary>Syke: hehku himmenee ja kirkastuu vuorotellen (siirtymä 2,4 s USS:ssä, ympäristöanimaatio).</summary>
+        /// <summary>"Vähennä liikettä" -syke: hehku himmenee ja kirkastuu vuorotellen (siirtymä 2,4 s USS:ssä, ympäristöanimaatio).</summary>
         public const long SykeValiMs = 4000;
+
+        /// <summary>
+        /// SYKÄYS (omistaja 11.10.2026 klo 17.0x PT:n kautta: "sykkiikö … jotta se houkuttelee tarpeeksi klikkaamaan", juna 182):
+        /// kertasykkeen rengaspohjalla (IssPiirros.Syke / web .astro-iss-syke) noin 3 s:n välein sininen rengas laajenee
+        /// 1 → 1,35 ja haihtuu 0,9 s:ssa (ease-out); perusrengas pysyy. "Vähennä liikettä" → vanha hidas häivytys. Ei herätä
+        /// ruudunpäivitystä: kartan levossa (Ruudunpaivitys PAIKALLAAN) syke jäätyy kuten ennenkin.
+        /// </summary>
+        public const float SykaisyValiS = 3f, SykaisyKestoS = 0.9f, SykaisyMittakaava = 1.35f, SykaisyAlkuPeitto = 0.9f;
+
+        /// <summary>Sykäyksen mittakaava ja peitto hetkellä t (s) jakson alusta; jakson lopussa (t ≥ kesto) rengas on haihtunut.</summary>
+        public static (float Mittakaava, float Peitto) Sykaisy(float t)
+        {
+            if (t < 0f || t >= SykaisyKestoS) return (SykaisyMittakaava, 0f);
+            float u = t / SykaisyKestoS, k = 1f - (1f - u) * (1f - u);
+            return (1f + (SykaisyMittakaava - 1f) * k, SykaisyAlkuPeitto * (1f - k));
+        }
+
+        /// <summary>Testikomento `ui sykaisy <t>|pois`: sykäys pysäytettynä hetkeen t (kuvat alku, laajimmillaan, haihtunut).</summary>
+        public static float? PakotettuT;
+
+        const string AaltoNimi = "videopeli-aalto";
+
+        /// <summary>Kytkee hehkuun (videopeliluokalla) laajenevan aaltorenkaan; kutsu toistuvasti turvallinen.</summary>
+        public static void KytkeSykaisy(VisualElement hehku)
+        {
+            if (hehku == null || hehku.Q(AaltoNimi) != null) return;
+            var aalto = new VisualElement { name = AaltoNimi, pickingMode = PickingMode.Ignore };
+            aalto.AddToClassList("mk-nosto-merkki__hehku");
+            aalto.style.left = aalto.style.top = aalto.style.right = aalto.style.bottom = 0;
+            aalto.style.backgroundImage = new StyleBackground(Hehku());
+            aalto.style.opacity = 0f;
+            hehku.Add(aalto);
+            hehku.schedule.Execute(() =>
+            {
+                bool paalla = hehku.ClassListContains("mk-nosto-merkki__hehku--videopeli") && hehku.panel != null
+                              && hehku.resolvedStyle.display != DisplayStyle.None && !LinssiUi.VahennettyLiike();
+                if (!paalla) { if (aalto.style.opacity != 0f) aalto.style.opacity = 0f; return; }
+                var (m, p) = Sykaisy(PakotettuT ?? Time.unscaledTime % SykaisyValiS);
+                aalto.style.scale = new Scale(new Vector2(m, m));
+                aalto.style.opacity = p;
+            }).Every(16);
+        }
 
         const int Koko = 96;
         static Texture2D hehku;

@@ -55,10 +55,12 @@ namespace Matkakirja.Natiivi
             b.tooltip = Kieli.T("ui.lautapelinosto.pelaa", peli.Nimi);   // VoiceOver
             var hehku = Rakenne.El("mk-lautapelinosto__hehku mk-nosto-merkki__hehku mk-nosto-merkki__hehku--videopeli", b, PickingMode.Ignore);
             hehku.style.backgroundImage = new StyleBackground(Videopelit.Hehku());
+            Videopelit.KytkeSykaisy(hehku);
             var levy = Rakenne.El("mk-lautapelinosto__levy", b, PickingMode.Ignore);
             Rakenne.Ikoni(Ikonit.Viiva.TryGetValue(peli.Id, out var ik) ? ik : Ikonit.Viiva["noppa"], "mk-lautapelinosto__ikoni", levy);
             hehku.schedule.Execute(() =>
             {
+                if (!LinssiUi.VahennettyLiike()) { hehku.RemoveFromClassList("mk-nosto-merkki__hehku--syke"); return; }
                 if (!k.Nakyy) return;
                 hehku.ToggleInClassList("mk-nosto-merkki__hehku--syke");
                 Ruudunpaivitys.Herata(2.6f);

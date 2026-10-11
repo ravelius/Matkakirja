@@ -1245,6 +1245,10 @@ namespace Matkakirja.Natiivi
                 case "aarrelaskuri":
                     // ui aarrelaskuri: "Etsityt kaupungit X/50" (omistaja 11.10.2026), näkyykö ja mitä.
                     return ui.Aarrelaskuri.Kuvaus;
+                case "sykaisy":
+                    // ui sykaisy <t>|pois: videopelikohteiden sykäys pysäytettynä hetkeen t s (0 alku, 0,3 laaja, 0,9 haihtunut).
+                    Videopelit.PakotettuT = float.TryParse(loput.Trim(), NumberStyles.Float, CultureInfo.InvariantCulture, out var st) ? st : (float?)null;
+                    return "=sykaisy " + (Videopelit.PakotettuT?.ToString(CultureInfo.InvariantCulture) ?? "vapaa");
                 case "lautapelinostot":
                     // ui lautapelinostot: Mylly (Berliini) ja Tavli (Ateena) videopelinostoina (omistaja 11.10.2026).
                     return ui.Lautapelinostot.Kuvaus();
