@@ -6,6 +6,7 @@
 // muutos tunnistetaan tallennuksessa saldon erotuksesta, ja syyn antaa teon tekijä (rahaSyy) tai
 // teon tapahtumarivi, jossa mainitaan punnat ("Bussimatka −5 puntaa").
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Matkakirja.Natiivi
@@ -53,6 +54,9 @@ namespace Matkakirja.Natiivi
         int rahaNahty;
         string rahaSyy;
 
+        /// <summary>Tilarivin viesti ilman punta-rivejä: rahan muutos näkyy vain kukkaroleimassa (ei tuplaa, 11.10.2026).</summary>
+        string TilariviIlmanRahaa(IEnumerable<string> rivit) => Matkakirja.Peli.Kulukertyma.IlmanRaharivia(rivit, streakRivi);
+
         /// <summary>Reitillä kertynyt matkakulu odottaa kaupunkia (yläpalkki pitää summan; Kartalle purkaa).</summary>
         public bool MatkakuluOdottaa => !kulut.Tyhja;
 
@@ -73,9 +77,13 @@ namespace Matkakirja.Natiivi
              * tulee yhteenveto (Kulukertyma.Syy). Yläpalkki pitää summan samalla odottamassa (UiNakymat RahaLykkays).
              */
             bool reitilla = !matka.Tila.Pelaaja.Sijainti.Kaupungissa;
+            // Yksi leima koko tallennukselle (omistaja 11.10.2026): teon syy, lippurivit (matkan hinta, löytöpalkkio)
+            // ja päiväkulu yhteen; ennen lippu voitti ja päiväkulu jäi näkymättä (Peli/Kukkaro.cs Yhdista).
+            var rivit = tapahtumat.Concat(kysymysLisat).Where(t => Matkakirja.Peli.Kulukertyma.OnRaharivi(t, streakRivi)).ToList();
             if (reitilla && muutos < 0 && paivakuluSyy != null && syy == null)
             {
                 kulut.Kerry(muutos);
+                foreach (var r in rivit) kulut.Rivi(r);
                 paivakuluSyy = null;
                 return;
             }
@@ -84,14 +92,12 @@ namespace Matkakirja.Natiivi
             {
                 muutos += kulut.Muutos;
                 kuluSyy = kulut.Syy();
+                rivit = kulut.Rivit.Concat(rivit).ToList();
                 kulut.Tyhjenna();
             }
             else if (!reitilla) kulut.Tyhjenna();
             if (muutos == 0) { paivakuluSyy = null; return; }
-            // Teon oma tapahtumarivi punnista (matkan hinta, löytöpalkkio) on tarkin syy (ei putken lokiriviä).
-            var rivi = tapahtumat.Concat(kysymysLisat).LastOrDefault(t => t != null && t.Contains("£") && t != streakRivi);
-            // Päiväkulu (talouden vaihe 1): teon oma raharivi on tarkempi, jos sama teko maksoi muutakin.
-            syy ??= kuluSyy ?? rivi ?? paivakuluSyy ?? RahaSyyt.Oletus;
+            syy = Matkakirja.Peli.Kulukertyma.Yhdista(syy, rivit, kuluSyy ?? paivakuluSyy) ?? RahaSyyt.Oletus;
             paivakuluSyy = null;
             try { RahaMuuttui?.Invoke(muutos, syy, saldo); } catch (Exception e) { UnityEngine.Debug.LogException(e); }
         }

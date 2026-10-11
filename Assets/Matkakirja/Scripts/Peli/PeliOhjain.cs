@@ -751,7 +751,7 @@ namespace Matkakirja.Natiivi
             if (matka.Tila.Pelaaja.Raha > rahaEnnen) Aanita(Aanitunnukset.Kolikot);
             KirjaaPelipaiva(tekija);
             Tallenna();
-            if (tapahtumat.Count > 0) Viesti(string.Join(" · ", tapahtumat));
+            Viesti(TilariviIlmanRahaa(tapahtumat));
             if (Tila == SilmukanTila.Lehti || Tila == SilmukanTila.Matkalla) { tilarivi.Aseta(PeliApu.TilaTeksti(verkko, matka.Tila)); return t; }
             if (AvoinTehtava != Tehtava.Ei) { Tila = SilmukanTila.Kartta; NaytaKysymys(); }
             else if (!matka.Tila.Pelaaja.Sijainti.Equals(lahto)) Kartalle(true);
@@ -1562,7 +1562,7 @@ namespace Matkakirja.Natiivi
             // Webissä ei ole saapumisilmoitusta (saapumisen kertovat nimikortti ja traileri), ja siirron alussa
             // näytettynä se ennätti nappulan ohi (liikkumisen pariteetti, c535aea-video). Vain ilman pelinäkymää.
             if (t.Saapui != null && !Kaytossa) osat.Add("Saavuit: " + PeliApu.KaupunginNimi(verkko, t.Saapui));
-            Viesti(string.Join(" · ", osat));
+            Viesti(TilariviIlmanRahaa(osat));
             Debug.Log($"MATKAKIRJA peli: {PeliApu.TavanNimi(t.Tapa)} {t.Lahto} → {t.Kohde}" + (t.Noppa.HasValue ? $" (noppa {t.Noppa})" : "")
                       + (t.Saapui != null ? ", saapui " + t.Saapui : ""));
 

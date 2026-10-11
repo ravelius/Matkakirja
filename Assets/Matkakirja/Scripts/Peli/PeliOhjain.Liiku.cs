@@ -93,7 +93,7 @@ namespace Matkakirja.Natiivi
                     if (!r.Ok) { Virhe(r.Virhe); Kartalle(false); return r.Virhe; }
                     KirjaaPelipaiva(tekija);
                     Tallenna();
-                    if (tapahtumat.Count > 0) Viesti(string.Join(" · ", tapahtumat));
+                    Viesti(TilariviIlmanRahaa(tapahtumat));
                     Kartalle(false);
                     return null;
                 }
@@ -196,7 +196,7 @@ namespace Matkakirja.Natiivi
                 if (matka.Tila.Vaihe == Vaihe.Siirto) { Kartalle(false); return; }
                 // Jumissa: vuoro päättyi jo (Matka.Heita); noppa häipyy.
                 try { MatkaPerilla?.Invoke(null); } catch (Exception e) { Debug.LogException(e); }
-                if (tapahtumat.Count > 0) Viesti(string.Join(" · ", tapahtumat));
+                Viesti(TilariviIlmanRahaa(tapahtumat));
                 Kartalle(false);
             };
             var a = PeliApu.Koordinaatti(verkko, lahto);
