@@ -88390,14 +88390,6 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'mitatussa historiassa. Nykyään muurin betonipintaan '
                 + 'on maalattu muraaleja, joista osa esittää kaupunkia '
                 + 'itseään.',
-              kuva: {
-                tiedosto: 'Muro da Mauá (Porto Alegre, Brasil) 11.JPG',
-                lyhyt: 'Muro da Mauá on vuoden 1941 tulvan jälkeen rakennettu penger, jonka pintaan on maalattu muraaleja.',
-                selite: 'Muro da Mauá on vuoden 1941 tulvan jälkeen '
-                  + 'rakennettu penger, jonka betonipintaan on '
-                  + 'sittemmin maalattu muraaleja.',
-                lahde: 'Eugenio Hansen, OFS, Wikimedia Commons (CC BY-SA 4.0)',
-              },
             },
             {
               otsikko: 'Milloin kannattaa tulla',
@@ -121480,14 +121472,6 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'hiljaisuuteen, sillä silloin lähes kaikki on kiinni.',
               kuva: [
                 {
-                  tiedosto: 'Cayenne airport (8332248070).jpg',
-                  lyhyt: 'Lentoaseman hallin banderolli muistuttaa, kenen mukaan kenttä nimettiin 2012.',
-                  selite: 'Cayennen lentoaseman terminaalihallin lasiseinää '
-                    + 'peittää Félix Ébouén muotokuva ja Gaston Monnervillen '
-                    + 'sitaatti, jossa tämä kutsuu Ébouéta valtiomieheksi.',
-                  lahde: 'Spotting973, Wikimedia Commons (CC BY-SA 2.0)',
-                },
-                {
                   tiedosto: 'Cayenne maison créole 2013.jpg',
                   lyhyt: 'Kreolitalon säleluukut päästävät tuulen sisään mutta pitävät auringon ulkona.',
                   selite: 'Kaksikerroksinen puinen kreolitalo Cayennen '
@@ -131068,10 +131052,6 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Brasilian Jamaika',
           teksti: '1970-luvun puolivälissä São Luísiin alkoi kantautua reggaeta lyhytaaltoradioista ja merimiesten tuomilta levyiltä, ja kaupunki rakastui siihen välittömästi. Levittäjiksi nousivat radiolat – valtavat, itse rakennetut kaiutintornit, joita DJ:t ajavat korttelijuhliin. Niitä on nykyään yli 200 pelkässä Maranhãossa, ja DJ Serralheiron radiola on yksi paikallisista instituutioista. Lempinimi ’Brasilian Jamaika’ vakiintui 1980-luvulla, kun radiolakulttuuri räjähti käsiin, ja reggae sulautui muihin paikallisiin perinteisiin, kuten bumba-meu-boihin. Praça do Reggae -aukio on nykyään pyhitetty tälle intohimolle keskellä vanhaa kaupunkia.',
-          tiedosto: 'Praça do Reggae, São Luís.jpg',
-          lyhyt: 'Reggaeaiheinen seinämaalaus vanhan talon julkisivulla Praça do Reggaella.',
-          selite: 'Seinämaalaus esittää aurinkolasipäistä, hattuniekkaa hahmoa viidakkokasvien keskellä; taustalla erottuu rapistunut, ikkunaluukuin varustettu siirtomaa-ajan talo.',
-          lahde: 'Artur Oliveira Silva, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Reggae Maranhão Museum',
         },
       ],
@@ -131347,18 +131327,10 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Taivas tuomiokirkon katossa',
           teksti: 'Tuomiokirkon holvikattoon on maalattu illuusio taivaasta: siniset pilvet täyttävät kupolin, ja keskellä kultareunaisessa kehyksessä Kristus kohoaa käsivarret levällään ympärillään leijuvien pienten enkelien seuratessa. Tällaiset trompe l’oeil -kattomaalaukset olivat suosittuja katolisissa kirkoissa ympäri Portugalin siirtomaita, koska ne veivät katsojan huomion pois raskaista kivipilareista ja loivat vaikutelman rajattomasta tilasta. Maalaus kuuluu samaan 1700-luvun lopun laajennukseen, joka antoi kirkolle nykyisen uusklassisen ulkoasunsa – sisällä barokin väri ja liike elävät silti yhä katossa.',
-          tiedosto: 'Pintura do teto da Igreja da Sé - São Luís.jpg',
-          lyhyt: 'Tuomiokirkon kattoon maalattu taivas, jossa Kristus kohoaa enkelien ympäröimänä.',
-          selite: 'Kirkon holvikattoon maalattu kohtaus näyttää Kristuksen kohoamassa käsivarret levällään pilvien ja pienten enkelien ympäröimänä, kultareunaisen koristekehyksen sisällä.',
-          lahde: 'Maiara Boaz, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           otsikko: 'Karitsa lasimaalauksessa',
           teksti: 'Kirkon ikkunoissa toistuu Jumalan Karitsan aihe: valkoinen karitsa seisoo sädekehän edessä ja kantaa sorkallaan lippua, jossa on punainen risti. Kuva-aihe on kristikunnan vanhimpia symboleita – karitsa viittaa uhriin ja lippu ylösnousemuksen voittoon kuolemasta. Toisin kuin talojen asulejot, jotka ovat maalattua keramiikkaa, lasimaalaus rakennetaan värillisistä lasinpaloista lyijylistojen väliin; auringonvalo suodattuu niiden läpi ja maalaa lattialle värikkään kuvion. Ikkunat ovat nuorempia kuin kirkon 1600-luvun perustukset – ne ovat osa niitä lukuisia kunnostuskerroksia, jotka ovat muokanneet rakennusta vuosisatojen kuluessa.',
-          tiedosto: 'Vitral da Igreja da Sé - São Luís - 20180628144419.jpg',
-          lyhyt: 'Lasimaalaus tuomiokirkossa: Jumalan Karitsa kantaa ristilippua.',
-          selite: 'Kaarevassa ikkunassa on lasimaalaus valkoisesta karitsasta, joka kantaa sorkallaan punarististä lippua sädekehän edessä; ympärillä on värikäs geometrinen lasikuvio.',
-          lahde: 'Maiara Boaz, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -136820,11 +136792,8 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Aukio joka sai marttyyrin nimen',
           teksti:
             'Kun Tiradentesin pää tuotiin Vila Ricaan näytille varoitukseksi, se asetettiin juuri sille aukiolle, joka tunnetaan nykyään nimellä Praça Tiradentes. Brasilian tultua tasavallaksi 1889 Tiradentesista tehtiin kansallissankari ja itsenäisyyden marttyyri: hänen muistomerkkinsä paljastettiin aukiolla 21. huhtikuuta 1894, täsmälleen 102 vuotta teloituksen jälkeen. Samasta päivästä tuli Brasiliassa pysyvä kansallinen vapaapäivä, jota vietetään yhä joka vuosi Tiradentesin muistoksi.',
-          tiedosto: 'Estatua tiradentes.JPG',
-          lyhyt: 'Tiradentesia esittävä rintakuva, kaulassa hirttoköyttä muistuttava naru.',
           selite:
             'Pronssinen rintakuva esittää Tiradentesia parrakkaana miehenä, jonka kaulan ympärillä roikkuu köysi hänen hirttämisensä muistoksi.',
-          lahde: 'Andrevruas, Wikimedia Commons (CC BY 3.0)',
           wiki: 'Tiradentes',
         },
       ],
