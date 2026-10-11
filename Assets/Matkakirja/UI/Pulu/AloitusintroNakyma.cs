@@ -3,10 +3,10 @@
 // kappale alkaa samassa ruudussa (Puhe.Puhuu → Aanisoitin.SaapumisPuheAlkoi, kuten saapumistrailerissa isoisän puheen kanssa),
 // kuusi lähes koko ruudun kuvaa 3 s välein (Introesitys, sama pohja kuin Pariisin C1–C5) ja kaupungin nimi + iskulause kirjain
 // kerrallaan Williamin puheen ajan. Ohita näkyy koko ajan. Lopussa (18 s tai Ohita) valmis(ohitettu): PeliOhjain vie kartalle ja
-// laukaisee KaupunkiIntro.Paattyi. Musiikin jatko: kaupungissa, jossa on oma kappale (Ateena, Pariisi), nopea katkeaa intron
-// lopussa 2 s:n häivytyksellä ja oma kappale alkaa 1 s myöhemmin (Aanisoitin.KaupunkiIntro kuten Pariisin esittelyssä, Ohita
-// tekee saman heti); Tukholmassa (ei omaa kappaletta kartalla) nopea soi loppuun ja vain esityksen korotus laskee 3 s:ssä.
-// Kuvat: UiSisalto.Kaupunki(k).Avauskuvat, vajaus kansikuvista (Pariisi 4 + 2), alle kuuden kiertää alusta (KaupunkiIntro.AloitusKuvat).
+// laukaisee KaupunkiIntro.Paattyi. Musiikin jatko: nopea katkeaa intron lopussa 2 s:n häivytyksellä ja kaupungin kappale alkaa
+// 1 s myöhemmin (Aanisoitin.KaupunkiIntro kuten Pariisin esittelyssä, Ohita tekee saman heti): Ateena ja Pariisi oma kappale,
+// Tukholma pohjolan alueraita (PT 12.3x). Kuvat: KaupunkiIntro.AloitusKuvaOsoitteet (Pariisi C1–C4, 1. avauskuva, C5; muut
+// avauskuvat ja vajaus kansikuvista, alle kuuden kiertää alusta). Pariisi joka käynnillä samalla 18 s:n muodolla (PT 12.3x).
 // Kirjaukset: "MATKAKIRJA ui saapuminen: aloitusintro <k> alkaa / kuva n / William alkaa / päättyi (ohitettu …)".
 using System;
 using System.Collections.Generic;
@@ -68,15 +68,16 @@ namespace Matkakirja.Natiivi
             {
                 if (oma != kerta || !kaynnissa) return;
                 var kt = UiSisalto.Kaupunki(kaupunki);
-                var kuvat = KaupunkiIntro.AloitusKuvat(kt?.Avauskuvat, kt?.Kansikuvat, x => x.Tiedosto);
+                var kuvat = KaupunkiIntro.AloitusKuvaOsoitteet(kaupunki, kt?.Avauskuvat.Select(x => x.Tiedosto).ToList(),
+                    kt?.Kansikuvat.Select(x => x.Tiedosto).ToList());
                 int avaus = kt?.Avauskuvat.Count ?? 0;
                 Debug.Log($"MATKAKIRJA ui saapuminen: aloitusintro {kaupunki} kuvat {kuvat.Count} (avauskuvia {avaus}, kansikuvia {kt?.Kansikuvat.Count ?? 0}): "
-                          + string.Join(" | ", kuvat.Select(x => System.IO.Path.GetFileName(x.Tiedosto ?? ""))));
+                          + string.Join(" | ", kuvat.Select(x => System.IO.Path.GetFileName(x ?? ""))));
                 Aloita(data, kt, kuvat, oma);
             });
         }
 
-        void Aloita(KaupunkiIntro.Aloitus data, KaupunkiTiedot kt, List<Kuvateksti> kuvat, int oma)
+        void Aloita(KaupunkiIntro.Aloitus data, KaupunkiTiedot kt, List<string> kuvat, int oma)
         {
             esitys.Aloita("aloitusintro " + kaupunki, () => Lopeta(true));
             // Vahti: peli ohitti (testikomento ohita-traileri, uusi matka) → intro pois.
@@ -105,7 +106,7 @@ namespace Matkakirja.Natiivi
                     Ajasta((int)(KaupunkiIntro.AloitusKuvaAlkaa(i) * 1000), () =>
                     {
                         Debug.Log($"MATKAKIRJA ui saapuminen: aloitusintro {kaupunki} kuva {n} {Time.unscaledTime:0.000} (intron alusta {Time.unscaledTime - alkoi:0.00} s)");
-                        esitys.Kuva(kuva.Tiedosto, kaupunki + " " + n);
+                        esitys.Kuva(kuva, kaupunki + " " + n);
                     });
                 }
                 esitys.Nimi(kt?.Nimi ?? kaupunki, kt?.Iskulause);

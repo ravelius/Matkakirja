@@ -157,6 +157,8 @@ namespace Matkakirja.Peli
         int jaksoVaihe;
         /// <summary>Kaupunki-intro soittaa jakson nopean ja hitaan linssipidon ohi (JaksonIntroAlusta); hitaan loppu palauttaa pidon.</summary>
         bool introPito;
+        /// <summary>VainEsitykseen-jakso alkoi ilman esitystä (suoraan hitaasta): jakson oma Hidas ei soi, vaan kaupungin oma raita.</summary>
+        bool jaksoIlmanEsitysta;
         /// <summary>Kasvaa jokaisella jakson tauolla; soitin ajastaa JaksonTaukoMs:n ja kutsuu JaksonTaukoOhi(nro).</summary>
         public int JaksonTaukoNro { get; private set; }
         public int JaksonTaukoMs { get; private set; }
@@ -695,7 +697,7 @@ namespace Matkakirja.Peli
                     return;
                 }
                 odottavaNopea = null;
-                jaksoKaupunki = kaupunki; jaksoVaihe = 0;
+                jaksoKaupunki = kaupunki; jaksoVaihe = 0; jaksoIlmanEsitysta = false;
                 KaynnistaPohja(musiikinPaikka, musiikinMaa);
             });
             return true;
@@ -1127,8 +1129,9 @@ namespace Matkakirja.Peli
                     if (jaksoKaupunki != cityId)
                     {
                         jaksoKaupunki = cityId; jaksoVaihe = 0; JaksoAlkaa(cityId);
-                        // Ei esitystä tulossa: nopea jää pois, kaupungin oma raita kuten ennen.
-                        if (jakso.VainEsitykseen && odottaaPuhetta != cityId && !esitysSoi) jaksoVaihe = 2;
+                        // Ei esitystä tulossa: nopea ja jakson Hidas jäävät pois, kaupungin oma raita kuten ennen.
+                        jaksoIlmanEsitysta = jakso.VainEsitykseen && odottaaPuhetta != cityId && !esitysSoi;
+                        if (jaksoIlmanEsitysta) jaksoVaihe = 2;
                     }
                     SoitaJakso(jakso, oma);
                     return;
@@ -1162,7 +1165,7 @@ namespace Matkakirja.Peli
         {
             if (jaksoVaihe == 1) { LopetaPohja(); return; }
             // Tausta ilman omaa raitaa: pohjavire vain vanhassa ketjussa (KarttaVainKaupunki → hiljaisuus hitaan jälkeen).
-            string Polku(int v) => v == 0 ? t.MusaPolku(j.Nopea) : v == 2 ? (j.Hidas != null ? t.MusaPolku(j.Hidas) : oma)
+            string Polku(int v) => v == 0 ? t.MusaPolku(j.Nopea) : v == 2 ? (j.Hidas != null && !jaksoIlmanEsitysta ? t.MusaPolku(j.Hidas) : oma)
                 : j.Tausta != null ? t.MusaPolku(j.Tausta) : t.KarttaVainKaupunki ? null : t.MusaPolku(t.Pohjaraita);
             var polku = Polku(jaksoVaihe);
             while (polku != null && puuttuvat.Contains(polku) && jaksoVaihe < 3) { jaksoVaihe = jaksoVaihe == 0 ? 2 : 3; polku = Polku(jaksoVaihe); }

@@ -1,8 +1,8 @@
 // PELIOHJAIN: ALOITUSINTRO (omistaja 11.10. 11.5x PT:n kautta, juna 182; lisävaatimukset 12.1x; Linssiseppä).
 //
 // Aloituskaupungit Ateena, Pariisi ja Tukholma: saavuttaessa 18 s:n aloitusintro trailerin paikalla (PeliNakymat.Aloitusintro,
-// UI/Pulu/AloitusintroNakyma.cs). Ateena ja Tukholma joka saapumisella, Pariisi vain alkulennon ensisaapumisella (muilla käynneillä
-// nykyinen saapumisesitys C1–C5 isoilla kuvilla). Kulku:
+// UI/Pulu/AloitusintroNakyma.cs) kaikissa kolmessa joka saapumisella (PT 12.3x: Pariisissakin 18 s, ei 36 s:n C1–C5-esitystä;
+// Pariisin muilla kuin alkulennon käynneillä intro korvaa luennan, KaupunkiIntro.KorvaaLuennan). Kulku:
 //   AloituslentoLoppui / Perilla → KaupunkiIntro.Saapuu(k, intro) (TuleeAloitusintro tosi jo AloituslentoPaattyi-hetkellä, jotta
 //   NUI näkee sen) → PaataTraileri: Tila = Traileri, intro → valmis(ohitettu) → TraileriValmis → SaavuLehteen (kartta, luenta
 //   lykätty Pulun taakse tai jonoon 1 s:n viiveellä) → KaupunkiIntro.Paata → Paattyi(k, ohitettu) → NUI:n Pulu ensimmäisellä
@@ -24,7 +24,7 @@ namespace Matkakirja.Natiivi
         void AloitusintroSaapuminen(string kaupunki, bool alkulento, bool hiljaa)
         {
             bool intro = !hiljaa && AloitusintroTulossa(kaupunki, alkulento);
-            KaupunkiIntro.Saapuu(kaupunki, intro);
+            KaupunkiIntro.Saapuu(kaupunki, intro, alkulento);
             if (intro) Debug.Log($"MATKAKIRJA ui saapuminen: aloitusintro tulossa {kaupunki} ({(alkulento ? "alkulento" : "saapuminen")})");
         }
 

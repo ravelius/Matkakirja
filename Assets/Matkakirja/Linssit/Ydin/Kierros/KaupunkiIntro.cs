@@ -215,9 +215,9 @@ namespace Matkakirja.Linssit.Kierros
         // Tukholma. Saavuttaessa 18 s:n intro: William sanoo kaupungin nimen ja iskulauseen, kaupungin nopea kappale alkaa samassa
         // ruudussa, kuusi lähes koko ruudun kuvaa 3 s välein (sama esityspohja kuin Pariisin C1–C5: Natiivi Introesitys), Ohita aina.
         // Intron jälkeen kartta, sitten Paattyi (NUI:n Pulu ensimmäisellä kerralla → PuluValmis → isoisän luenta; muuten luenta
-        // alkaa ~1 s kuluttua ilman Pulua). Ateena ja Tukholma: joka saapumisella (12.1x "intro joka kerta"); Pariisi: vain alkulennon
-        // ensisaapumisella (muilla käynneillä nykyinen C1–C5-esitys isoilla kuvilla). Kuvia ei sidota iskuihin (Ateenan ja
-        // Tukholman tempoa ei ole mitattu). Unity-osa: PeliOhjain (PaataTraileri, Perilla), UI/Pulu/AloitusintroNakyma.cs.
+        // alkaa ~1 s kuluttua ilman Pulua). Kaikki kolme kaupunkia joka saapumisella samalla 18 s:n muodolla (12.1x "intro joka
+        // kerta"; PT 12.3x: Pariisissakin, ei enää 36 s:n C1–C5-esitystä). Pariisin muilla kuin alkulennon käynneillä intro korvaa
+        // isoisän luennan kuten vanha esittely (KorvaaLuennan). Kuvia ei sidota iskuihin (Ateenan ja Tukholman tempoa ei ole mitattu). Unity-osa: PeliOhjain (PaataTraileri, Perilla), UI/Pulu/AloitusintroNakyma.cs.
         // =====================================================================================================================
 
         /// <summary>Yhden aloitusintron data: Williamin repliikki (kesto mitattu), nopea kappale ja saako intro tulla muulloin kuin alkulennolla.</summary>
@@ -225,9 +225,18 @@ namespace Matkakirja.Linssit.Kierros
         {
             public string Kaupunki, WilliamUrl, MusiikkiUrl;
             public double WilliamS, MusiikkiS;
-            /// <summary>Vain alkulennon ensisaapumisella (Pariisi: muilla käynneillä nykyinen saapumisesitys C1–C5).</summary>
+            /// <summary>Vain alkulennon ensisaapumisella (PT 12.3x: ei yhdelläkään kaupungilla; kenttä jää rajapinnaksi).</summary>
             public bool VainAlkulennolla;
+            /// <summary>Muilla kuin alkulennon käynneillä intro korvaa isoisän luennan (Pariisi, vanha SaapumisluentoPois-sääntö).</summary>
+            public bool KorvaaLuennanMuulloin;
+            /// <summary>
+            /// Kiinteä kuvasarja (osoite tai "avaus:n" = lehden n:s avauskuva); null = avauskuvat + kansikuvat (AloitusKuvat).
+            /// </summary>
+            public string[] Kuvat;
         }
+
+        /// <summary>Kuvasarjan merkintä "lehden n:s avauskuva" (n alkaen 0).</summary>
+        public const string AvausKuva = "avaus:";
 
         public const string WilliamJuuri = "https://media.matkakirja.app/aanet/kaupunki-intro-v1/william-";
         public const string MusiikkiJuuri = "https://media.matkakirja.app/audio/musa-kaupunki-";
@@ -242,7 +251,15 @@ namespace Matkakirja.Linssit.Kierros
         public static readonly IReadOnlyDictionary<string, Aloitus> Aloitukset = new Dictionary<string, Aloitus>(StringComparer.OrdinalIgnoreCase)
         {
             ["ateena"] = A("ateena", 3.25, 90.1, false),
-            ["pariisi"] = A("pariisi", 3.82, double.NaN, true),
+            // PT 12.3x: Pariisin kuusi = nykyajan Codex-kuvat C1–C4 (Seinen rantakatu, bistron terassi, Champs-Élysées, Guimardin
+            // metro), lehden ensimmäinen avauskuva ja viimeisenä C5 (sama näkymä 1870-luvun valokuvana): siirtymä isoisän maailmaan
+            // juuri ennen karttaa ja luentaa, kuten 36 s:n esityksen lopussa.
+            ["pariisi"] = new Aloitus
+            {
+                Kaupunki = "pariisi", WilliamUrl = WilliamJuuri + "pariisi.mp3", WilliamS = 3.82,
+                MusiikkiUrl = MusiikkiJuuri + "pariisi-nopea-lyria-v2.mp3", MusiikkiS = double.NaN, KorvaaLuennanMuulloin = true,
+                Kuvat = new[] { KuvaUrl(1), KuvaUrl(2), KuvaUrl(3), KuvaUrl(4), AvausKuva + "0", KuvaUrl(5) },
+            },
             ["tukholma"] = A("tukholma", 3.49, 95.5, false),
         };
 
@@ -255,6 +272,31 @@ namespace Matkakirja.Linssit.Kierros
         {
             var a = AloitusintroData(kaupunki);
             return a != null && (alkulento || !a.VainAlkulennolla);
+        }
+
+        /// <summary>
+        /// Intron kuusi kuvaosoitetta: kiinteä sarja (Aloitus.Kuvat; "avaus:n" → avauskuva n, puuttuva jää pois) tai avauskuvat ja
+        /// kansikuvat; vajaus täytetään avaus- ja kansikuvilla ja alle kuusi kiertää alusta (AloitusKuvat).
+        /// </summary>
+        public static List<string> AloitusKuvaOsoitteet(string kaupunki, IReadOnlyList<string> avaus, IReadOnlyList<string> kansi)
+        {
+            var a = AloitusintroData(kaupunki);
+            if (a?.Kuvat == null) return AloitusKuvat(avaus, kansi, x => x);
+            var kiintea = new List<string>();
+            foreach (var x in a.Kuvat)
+            {
+                if (x != null && x.StartsWith(AvausKuva, StringComparison.Ordinal))
+                {
+                    int.TryParse(x.Substring(AvausKuva.Length), out int n);
+                    var lahde = avaus != null && n < avaus.Count ? avaus : kansi;
+                    if (lahde != null && n >= 0 && n < lahde.Count) kiintea.Add(lahde[n]);
+                }
+                else kiintea.Add(x);
+            }
+            var lisa = new List<string>();
+            if (avaus != null) lisa.AddRange(avaus);
+            if (kansi != null) lisa.AddRange(kansi);
+            return AloitusKuvat(kiintea, lisa, x => x);
         }
 
         /// <summary>Ajoitus: kuusi kuvaa 3 s välein = 18 s.</summary>
@@ -310,6 +352,7 @@ namespace Matkakirja.Linssit.Kierros
         public static Action<string> LykattyLuentaKoukku;
 
         static string tuleva, saapuminen, puluOdottaa;
+        static bool saapuminenAlkulennolla;
 
         /// <summary>Tosi intron kaupungille saapumisesta (alkulennolla AloituslentoPaattyi-hetkestä) Paattyi-eventtiin asti.</summary>
         public static bool TuleeAloitusintro(string kaupunki) => kaupunki != null && string.Equals(tuleva, kaupunki, StringComparison.OrdinalIgnoreCase);
@@ -318,12 +361,20 @@ namespace Matkakirja.Linssit.Kierros
         public static bool AloitusSaapumisella(string kaupunki) => kaupunki != null && string.Equals(saapuminen, kaupunki, StringComparison.OrdinalIgnoreCase);
 
         /// <summary>Saapuminen (PeliOhjain): intro = tuleeko aloitusintro. Muu saapuminen nollaa edellisen käynnin tilan.</summary>
-        public static void Saapuu(string kaupunki, bool intro)
+        public static void Saapuu(string kaupunki, bool intro, bool alkulento = false)
         {
             tuleva = intro ? kaupunki : null;
             saapuminen = intro ? kaupunki : null;
+            saapuminenAlkulennolla = intro && alkulento;
             puluOdottaa = null;
         }
+
+        /// <summary>
+        /// Tämän käynnin intro korvaa isoisän saapumisluennan (PT 12.3x: Pariisi muilla kuin alkulennon käynneillä, kuten vanha
+        /// esittely; alkulennolla luenta soi Pulun jälkeen).
+        /// </summary>
+        public static bool KorvaaLuennan(string kaupunki) =>
+            AloitusSaapumisella(kaupunki) && !saapuminenAlkulennolla && AloitusintroData(kaupunki)?.KorvaaLuennanMuulloin == true;
 
         /// <summary>Intro loppui (kartta jo näkyvissä): Paattyi kerran. false = tälle kaupungille ei ollut introa tulossa (ei eventtiä).</summary>
         public static bool Paata(string kaupunki, bool ohitettu)
@@ -347,6 +398,7 @@ namespace Matkakirja.Linssit.Kierros
         public static void Nollaa()
         {
             tuleva = saapuminen = puluOdottaa = null;
+            saapuminenAlkulennolla = false;
         }
     }
 }

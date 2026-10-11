@@ -27,12 +27,11 @@ namespace Matkakirja.Linssit.Testit
             foreach (var k in new[] { "lontoo", "rooma", null, "" }) Oleta.Sama(null, KaupunkiIntro.AloitusintroData(k), "ei introa: " + k);
         }
 
-        [Testi] static void IntroJokaKertaPariisiVainAlkulennolla()
+        [Testi] static void IntroJokaKertaKaikissaKolmessa()
         {
-            foreach (var k in new[] { "ateena", "tukholma" })
+            // PT 12.3x: sama 18 s:n muoto kaikissa kolmessa kaupungissa ja kaikilla käynneillä (Pariisissakin).
+            foreach (var k in new[] { "ateena", "pariisi", "tukholma" })
                 Oleta.Tosi(KaupunkiIntro.AloitusintroSaa(k, true) && KaupunkiIntro.AloitusintroSaa(k, false), k + " joka saapumisella");
-            Oleta.Tosi(KaupunkiIntro.AloitusintroSaa("pariisi", true), "Pariisi alkulennolla");
-            Oleta.Tosi(!KaupunkiIntro.AloitusintroSaa("pariisi", false), "Pariisi muulloin: nykyinen C1–C5-esitys");
             Oleta.Tosi(!KaupunkiIntro.AloitusintroSaa("lontoo", true), "Lontoo ei");
             // Pariisin nykyintro (C1–C5) on yhä vain Pariisissa.
             Oleta.Tosi(KaupunkiIntro.OnIntro("pariisi") && !KaupunkiIntro.OnIntro("ateena"));
@@ -71,6 +70,41 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("a1 a2 a3 a4 a1 a2", string.Join(" ", v));
             Oleta.Sama(0, KaupunkiIntro.AloitusKuvat<string>(null, new string[0], id).Count, "ei kuvia");
             Oleta.Sama("a1 a1 a1 a1 a1 a1", string.Join(" ", KaupunkiIntro.AloitusKuvat(new[] { "a1", null, "" }, null, id)), "tyhjät ohi");
+        }
+
+        [Testi] static void PariisinKuusiKuvaa()
+        {
+            var avaus = new List<string> { "lehti-a1", "lehti-a2", "lehti-a3", "lehti-a4" };
+            var kansi = new List<string> { "lehti-k1" };
+            var p = KaupunkiIntro.AloitusKuvaOsoitteet("pariisi", avaus, kansi);
+            Oleta.Sama(6, p.Count);
+            Oleta.Sama(string.Join(" ", new[] { KaupunkiIntro.KuvaUrl(1), KaupunkiIntro.KuvaUrl(2), KaupunkiIntro.KuvaUrl(3), KaupunkiIntro.KuvaUrl(4),
+                "lehti-a1", KaupunkiIntro.KuvaUrl(5) }), string.Join(" ", p), "C1–C4, 1. avauskuva, C5 viimeisenä");
+            // Ilman lehden kuvia: viisi C-kuvaa ja kierto alusta.
+            var ilman = KaupunkiIntro.AloitusKuvaOsoitteet("pariisi", null, null);
+            Oleta.Sama(6, ilman.Count);
+            Oleta.Sama(KaupunkiIntro.KuvaUrl(5), ilman[4]);
+            Oleta.Sama(KaupunkiIntro.KuvaUrl(1), ilman[5], "kierto");
+            // Ateena: avauskuvat (ei kiinteää sarjaa).
+            var a = KaupunkiIntro.AloitusKuvaOsoitteet("ateena", new List<string> { "1", "2", "3", "4", "5", "6", "7" }, kansi);
+            Oleta.Sama("1 2 3 4 5 6", string.Join(" ", a));
+        }
+
+        [Testi] static void PariisiKorvaaLuennanMuttaEiAlkulennolla()
+        {
+            KaupunkiIntro.Nollaa();
+            try
+            {
+                KaupunkiIntro.Saapuu("pariisi", true, alkulento: true);
+                Oleta.Tosi(!KaupunkiIntro.KorvaaLuennan("pariisi"), "alkulento: luenta Pulun jälkeen");
+                KaupunkiIntro.Saapuu("pariisi", true);
+                Oleta.Tosi(KaupunkiIntro.KorvaaLuennan("pariisi"), "muu käynti: intro korvaa luennan (vanha sääntö)");
+                KaupunkiIntro.Saapuu("ateena", true);
+                Oleta.Tosi(!KaupunkiIntro.KorvaaLuennan("ateena") && !KaupunkiIntro.KorvaaLuennan("pariisi"), "Ateenassa luenta");
+                KaupunkiIntro.Saapuu("pariisi", false);
+                Oleta.Tosi(!KaupunkiIntro.KorvaaLuennan("pariisi"), "ilman introa ei korvausta");
+            }
+            finally { KaupunkiIntro.Nollaa(); }
         }
 
         static List<(string, bool)> Kuuntele(out Action<string, bool> h)

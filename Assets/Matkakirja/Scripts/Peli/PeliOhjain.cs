@@ -1804,6 +1804,8 @@ namespace Matkakirja.Natiivi
             // PARIISIN UUSI ESITTELY KORVAA LUENNAN (omistaja 10.10. 20.0x, kortti "Uusi korvaa vanhan"): isoisän kolmen kuvan luenta
             // jää pois kaupungeissa, joissa saapumisesitys soittaa nykyintron (Saapumisesitys.UusiEsittely); saapumisluenta päättyy heti.
             if (l != null && SaapumisluentoPois?.Invoke(kaupunki) == true) { Debug.Log("MATKAKIRJA peli: saapumisluento pois (uusi esittely) " + kaupunki); l = null; }
+            // PT 12.3x: Pariisin aloitusintro muilla kuin alkulennon käynneillä korvaa luennan kuten vanha esittely.
+            if (l != null && Matkakirja.Linssit.Kierros.KaupunkiIntro.KorvaaLuennan(kaupunki)) { Debug.Log("MATKAKIRJA peli: saapumisluento pois (aloitusintro) " + kaupunki); l = null; }
             if (l != null && LykkaaLuento(kaupunki, l)) return; // saapumisluenta pysyy kesken lykkäyksen ajan (löydös 162)
             // Löydökset 86/89 (omistaja, build 13): ei paikkarivin ilmoitusta luennan alkaessa (web aloitaMerkinta ei näytä
             // ilmoitusta; tumma laatikko "Ateena, elokuussa 1873. Pölyä ja puhetta kullasta." näytti väärän väriseltä

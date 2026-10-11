@@ -29,7 +29,9 @@ namespace Matkakirja.Peli.Testit
             foreach (var k in new[] { "ateena", "tukholma" })
             {
                 var a = t.Jaksot[k];
-                Oleta.Tosi(a.VainEsitykseen && a.Hidas == null && a.Tausta == null, k);
+                Oleta.Tosi(a.VainEsitykseen && a.Tausta == null, k);
+                // PT 12.3x: Tukholman nopea häivytetään pohjolan alueraitaan (ei omaa kartan kappaletta); Ateenalla oma raita.
+                Oleta.Sama(k == "tukholma" ? "musa-kaupunki-pohjola" : null, a.Hidas, k + " hidas");
                 Oleta.Sama("assets/audio/musa-kaupunki-" + k + "-nopea-lyria.mp3", t.MusaPolku(a.Nopea), k + " nopea");
                 Oleta.Sama("https://media.matkakirja.app/audio/musa-kaupunki-" + k + "-nopea-lyria-v2.mp3", AaniOsoite.Url(t.MusaPolku(a.Nopea)), k + " ämpärissä");
             }
@@ -45,7 +47,8 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("ateena:hidas", s.Jakso);
             s.Paikka("tukholma", "kaupunki");
             Oleta.Sama(null, Pohja(s), "Tukholma ilman omaa raitaa: hiljaa kuten ennen");
-            Oleta.Tosi(!s.JaksollaHidas("tukholma") && s.JaksollaHidas("ateena") && s.JaksollaHidas("pariisi"), "hidas vain omalla raidalla");
+            Oleta.Tosi(s.JaksollaHidas("tukholma") && s.JaksollaHidas("ateena") && s.JaksollaHidas("pariisi"), "intron jälkeen aina hidas");
+            Oleta.Tosi(!s.JaksollaHidas("lontoo"), "ei jaksoa");
         }
 
         [Testi] static void AloitusintronJaksoNopeaOdottaaWilliamia()
@@ -66,7 +69,7 @@ namespace Matkakirja.Peli.Testit
                 s.JaksonIntroKatko(2000);
                 s.JaksonIntroHidas();
                 if (k == "ateena") Oleta.Tosi(Soi(s, "musa-kaupunki-ateena") && !Soi(s, "musa-kaupunki-ateena-nopea"), "katkon jälkeen oma raita: " + Pohja(s));
-                else Oleta.Sama(null, Pohja(s), "Tukholma: hidasta ei ole");
+                else Oleta.Tosi(Soi(s, "musa-kaupunki-pohjola"), "Tukholma: häivytys pohjolan alueraitaan: " + Pohja(s));
             }
         }
 
