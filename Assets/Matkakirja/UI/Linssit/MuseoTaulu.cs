@@ -237,8 +237,9 @@ namespace Matkakirja.Natiivi
         }
         const float KapeaLeveys = 520f, MatalaKorkeus = 520f;
 
-        /// <summary>Sitova vuosiväli (PT 11.10.: "n. 1669–" / "1670" ei saa katketa): TextCoren &lt;nobr&gt;.</summary>
-        static string Sido(string s) => string.IsNullOrEmpty(s) ? s : "<nobr>" + s + "</nobr>";
+        /// <summary>Sitova vuosiväli (PT 11.10.: "n. 1669–" / "1670" ei saa katketa): sitova välilyönti (U+00A0) ja sitova
+        /// yhdysmerkki (U+2011) viivan tilalle; UITK:n TextCore ei noudata &lt;nobr&gt;-tagia (simu 11.10. 14.51).</summary>
+        static string Sido(string s) => string.IsNullOrEmpty(s) ? s : s.Replace(' ', '\u00A0').Replace('–', '\u2011').Replace('-', '\u2011');
 
         void AsetteleKortti()
         {
