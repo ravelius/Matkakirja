@@ -1,0 +1,97 @@
+{
+ "id": "luanda",
+ "era": "e06",
+ "nimi": "Luanda",
+ "nimiAlkukieli": "Luanda",
+ "maa": "AGO",
+ "maanNimi": "Angola",
+ "asema": "pääkaupunki",
+ "lat": -8.8383,
+ "lon": 13.2344,
+ "wikidata": "Q3897",
+ "kevytSisalto": {
+  "kuvaus": "Luanda on Angolan pääkaupunki, maan suurin kaupunki ja tärkein satama Atlantin rannalla. Portugalilaiset perustivat sen 1500-luvun lopulla, ja siitä tuli tärkeä kauppa-asema Portugalin siirtomaavallan aikana. Nykyään kaupunki on hallinnon, öljyteollisuuden ja kaupan keskus, ja sen lahtea rajaa pitkä, kapea hiekkaniemi Ilha de Luanda.",
+  "tunnusrakennukset": [
+   "Fortaleza de São Miguel (linnoitus, perustettu 1576)",
+   "Sé-katedraali (Igreja da Nossa Senhora da Conceição, 1600-luvulta)",
+   "Igreja de Nossa Senhora do Cabo (Ilha de Luanda)",
+   "Marginal (rantabulevardi)"
+  ],
+  "asukkaat": {
+   "arvo": 8816297,
+   "vuosi": 2024,
+   "lahde": "Angolan tilastovirasto INE, väestönlaskenta 2024, lopulliset tulokset julkaistu 20.11.2025 (Luandan maakunta); siteerattu Forbes Africa Lusófonassa. Maakunnan hallinnon ilmoittama luku oli 8 665 510",
+   "linkki": "https://forbesafricalusofona.com/?p=165500"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Arvonimi, josta tuli maan nimi",
+    "Kuningatar, joka teki saattajastaan tuolin",
+    "Raha, joka poimittiin meren pohjasta",
+    "Kalliot, joissa on kuningattaren jalanjäljet"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Kaksi lehteä, jotka eivät kuole",
+    "Suo, joka juottaa Kalaharin",
+    "Halkeama, josta näkee kymmenentuhatta neliökilometriä",
+    "Yö, jona niemimaasta tuli saari"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Harmaa pohjoisessa, keltainen etelässä",
+    "Kansallisruoka, jolla on kaksi ehdokasta",
+    "Kalulu ladotaan kerroksiin",
+    "Baobabin hedelmästä jäätelöä"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Jousi, joka lähti Brasiliaan",
+    "Kotibileistä syntyi semba",
+    "Juoksija, joka kuljetti viestejä",
+    "Van Damme, humalainen tanssi ja Fruity Loops"
+   ]
+  },
+  {
+   "id": "kuvataide",
+   "nimi": "Kuvataide",
+   "nostot": [
+    "Pyhä kukkula, jonka ikää ei osata sanoa",
+    "Yksi viiva, joka ei nouse hiekasta",
+    "Naamio, joka tanssii naiseutta",
+    "Metsästäjä, joka sai rannerenkaan"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "kohde:sao-miguelin-linnoitus",
+   "nimi": "São Miguelin linnoitus",
+   "lahde": "fokuskohde",
+   "laji": "historia",
+   "km": 4,
+   "teksti": "Fortaleza de São Miguel on portugalilaisten 1576 rakentama linnoitus Luandan Ingombotan kaupunginosassa; rakennuttaja oli kaupungin perustaja Paulo Dias de Novais. Vuonna 1627 siitä tuli siirtomaan hallinnollinen keskus, ja se oli myös Bra…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Luanda",
+  "maanAvain": "Angola",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

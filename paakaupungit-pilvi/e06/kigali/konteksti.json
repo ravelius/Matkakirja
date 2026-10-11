@@ -1,0 +1,62 @@
+{
+ "id": "kigali",
+ "era": "e06",
+ "nimi": "Kigali",
+ "nimiAlkukieli": "Kigali",
+ "maa": "RWA",
+ "maanNimi": "Ruanda",
+ "asema": "pääkaupunki",
+ "lat": -1.9441,
+ "lon": 30.0619,
+ "wikidata": "Q3859",
+ "kevytSisalto": {
+  "kuvaus": "Kigali on Ruandan pääkaupunki ja suurin kaupunki, joka sijaitsee maan keskiosassa useiden kukkuloiden päällä. Saksalainen Richard Kandt perusti siellä aseman vuonna 1907, ja pääkaupungiksi kaupungista tuli itsenäisyyden myötä. Kaupunki on tunnettu siisteydestään ja suunnitelmallisesta kasvustaan, ja se on maan hallinnon, kaupan ja kulttuurin keskus.",
+  "tunnusrakennukset": [
+   "Kandt House Museum (Richard Kandtin talo)",
+   "Kigali Convention Centre",
+   "Kimironkon tori",
+   "Kigalin kansanmurhan muistokeskus (Kigali Genocide Memorial)"
+  ],
+  "asukkaat": {
+   "arvo": 1745555,
+   "vuosi": 2022,
+   "lahde": "NISR, väestö- ja asuntolaskenta 2022; Kigalin kaupunkiprovinssi (City of Kigali: Nyarugenge 374 319, Gasabo 879 505, Kicukiro 491 731)",
+   "linkki": "https://statistics.gov.rw/node/479"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Ruanda on pieni, kukkulainen sisämaavaltio Itä-Afrikan suurten järvien alueella, ja sitä kutsutaan usein tuhannen kukkulan maaksi. Maa itsenäistyi Belgiasta vuonna 1962, ja sen historiaa leimaa vuoden 1994 kansanmurha, jonka muisto on tärkeä osa kansallista kulttuuria ja koulutusta. Tämän jälkeen Ruanda on kasvattanut taloutta voimakkaasti, ja maa tunnetaan siisteydestään, vuoristogorilloistaan ja kahvin ja teen viennistä. Maan asukastiheys on Afrikan suurimpia, ja suurin osa väestöstä elää maaseudulla pienviljelijöinä.",
+  "genetiivi": "Ruandan",
+  "kielet": [
+   {
+    "kieli": "kinyarwanda",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "ranska",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "swahili",
+    "asema": "virallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Ruandan frangi",
+   "koodi": "RWF"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Kigali",
+  "maanAvain": "Ruanda",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

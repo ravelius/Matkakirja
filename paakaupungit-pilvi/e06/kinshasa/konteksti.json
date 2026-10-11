@@ -1,0 +1,88 @@
+{
+ "id": "kinshasa",
+ "era": "e06",
+ "nimi": "Kinshasa",
+ "nimiAlkukieli": "Kinshasa",
+ "maa": "COD",
+ "maanNimi": "Kongo",
+ "asema": "pääkaupunki",
+ "lat": -4.3219,
+ "lon": 15.3119,
+ "wikidata": "Q3838",
+ "kevytSisalto": {
+  "kuvaus": "Kinshasa on Kongon demokraattisen tasavallan pääkaupunki ja yksi Afrikan suurimmista kaupungeista. Se sijaitsee Kongo-joen rannalla Pool Malebo -laajentuman äärellä, ja joen toisella puolella näkyy Brazzaville, jonne ei ole siltaa. Kaupunki on myös oma maakuntansa sekä maan hallinnon, musiikin ja kulttuurin keskus.",
+  "tunnusrakennukset": [
+   "Notre-Dame du Congo -katedraali (1947, Lingwala)",
+   "Marché Central (keskustori, avattu 1944)",
+   "Kinshasan keskusasema (Gare Centrale)",
+   "Mont Ngaliema -kukkula"
+  ],
+  "asukkaat": {
+   "arvo": 14565700,
+   "vuosi": 2020,
+   "lahde": "Kongon DR:n tilastoinstituutti INS, väestöennuste 1.7.2020 (Kinshasan kaupunki-maakunta), luku citypopulation.de:n maakuntataulukon INS-alaviitteestä. Viimeisin varsinainen laskenta on vuodelta 1984 (2 664 309); toinen väestölaskenta (RGPH-2) on suunniteltu vuodelle 2027, joten kaikki luvut ovat ennusteita ja heikosti luotettavia.",
+   "linkki": "https://citypopulation.de/en/drcongo/cities/"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Luu, jossa on 168 lovea",
+    "Kuningas, joka kirjoitti Lissaboniin",
+    "Helmilauta, joka on arkisto",
+    "Joen kieli, jolla ei ollut äidinkielisiä"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Eläin, jonka löysi jalanjälki",
+    "Höyhen, jota kukaan ei tunnistanut",
+    "Järvi, jonka pohjalla on kaasukenttä",
+    "Neljä prosenttia, joka painaa yhtä paljon kuin loput"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Juuri, joka on ensin liotettava",
+    "Lehdet, jotka survotaan muhennokseksi",
+    "Kansallisruoka, joka on palmun voita",
+    "Kala, joka kypsyy lehden sisällä"
+   ]
+  },
+  {
+   "id": "kuvataide",
+   "nimi": "Kuvataide",
+   "nostot": [
+    "Kuninkaan kaksoisolento",
+    "Kaksitoista tapaa seitsemästätoista",
+    "Maalari, joka kirjoittaa kuviinsa",
+    "Kaupungit, jotka rakennettiin pahvista"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Levy, joka kävi Karibialla ja palasi",
+    "Levypakkaaja, josta tuli kitaran velho",
+    "Laulu, joka kirjoitettiin hotellihuoneessa",
+    "Pukeutuminen, joka on oma taiteenlajinsa"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Kinshasa",
+  "maanAvain": "Kongon demokraattinen tasavalta",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

@@ -1,0 +1,55 @@
+{
+ "id": "ciudaddelapaz",
+ "era": "e06",
+ "nimi": "Ciudad de la Paz",
+ "nimiAlkukieli": "Ciudad de la Paz (myös Djibloho, Oyala)",
+ "maa": "GNQ",
+ "maanNimi": "Päiväntasaajan Guinea",
+ "asema": "pääkaupunki",
+ "lat": 1.592,
+ "lon": 10.822,
+ "wikidata": "Q1140136",
+ "kevytSisalto": {
+  "kuvaus": "Ciudad de la Paz on Päiväntasaajan Guinean mantereen sademetsäiselle sisämaalle rakennettu suunniteltu kaupunki, jonka rakentaminen alkoi vuonna 2011 ja jonka presidentin asetus nimesi maan pääkaupungiksi vuonna 2026. Kaupunki on suunniteltu 160 000-200 000 asukkaalle noin 80 neliökilometrin alueelle. Entinen pääkaupunki Malabo Bioko-saarella on edelleen maan suurin kaupunki ja talouskeskus.",
+  "tunnusrakennukset": [
+   "(uudet hallintorakennukset rakenteilla; ei valittu kuvaan 70 v -säännön vuoksi)"
+  ],
+  "asukkaat": {
+   "arvo": null,
+   "vuosi": 2026,
+   "lahde": "Syyskuun 2026 AFP-raportin (Kuwait Times) mukaan kaupunki on lähes asumaton; luotettavaa lukua ei ole (Wikidata P1082: 2000, merkitsevyys heikko)",
+   "linkki": "https://kuwaittimes.com/article/49584/world/equatorial-guineas-new-capital-still-has-no-residents/"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Päiväntasaajan Guinea on pieni Keski-Afrikan valtio Guineanlahden rannalla, ja se koostuu mantereen Río Munin alueesta sekä Bioko-saaresta ja muista saarista. Maa oli Espanjan siirtomaa ja itsenäistyi vuonna 1968, minkä vuoksi espanja on sen pääkieli ja maa on Afrikan ainoa espanjankielinen valtio. Öljy- ja kaasuvarat ovat tehneet siitä väkilukuunsa nähden varakkaan, vaikka tulot jakautuvat epätasaisesti. Maan pääkaupunki on mantereen sisäosaan rakennettu suunniteltu Ciudad de la Paz, kun taas entinen pääkaupunki Malabo Bioko-saarella on edelleen maan suurin kaupunki ja talouskeskus.",
+  "genetiivi": "Päiväntasaajan Guinean",
+  "kielet": [
+   {
+    "kieli": "espanja",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "ranska",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "portugali",
+    "asema": "virallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Keski-Afrikan CFA-frangi",
+   "koodi": "XAF"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Ciudad de la Paz",
+  "maanAvain": "Päiväntasaajan Guinea",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

@@ -1,0 +1,58 @@
+{
+ "id": "brazzaville",
+ "era": "e06",
+ "nimi": "Brazzaville",
+ "nimiAlkukieli": "Brazzaville",
+ "maa": "COG",
+ "maanNimi": "Kongon tasavalta",
+ "asema": "pääkaupunki",
+ "lat": -4.2694,
+ "lon": 15.2711,
+ "wikidata": "Q3844",
+ "kevytSisalto": {
+  "kuvaus": "Brazzaville on Kongon tasavallan pääkaupunki ja suurin kaupunki Kongo-joen pohjoisrannalla. Vastarannalla näkyy Kongon demokraattisen tasavallan pääkaupunki Kinshasa, ja nämä kaksi ovat maailman lähimpiä pääkaupunkeja, joiden välissä on vain joki. Kaupunki on joki- ja rautatieliikenteen solmukohta, ja se oli Vapaan Ranskan pääkaupunki toisen maailmansodan aikana.",
+  "tunnusrakennukset": [
+   "Sainte-Anne-du-Congon basilika",
+   "Pierre Savorgnan de Brazzan mausoleumi",
+   "Nabemba-torni",
+   "Palais des Congrès"
+  ],
+  "asukkaat": {
+   "arvo": 2138236,
+   "vuosi": 2023,
+   "lahde": "RGPH-5 2023, INS Congo (alustavat tulokset), Brazzavillen kunta (commune); koko Brazzavillen departementti 2 145 783",
+   "linkki": "https://www.citypopulation.de/en/congo/admin/11__brazzaville"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Kongon tasavalta on Keski-Afrikan maa, joka ulottuu Atlantin rannikolta päiväntasaajan sademetsiin ja Kongo-joen altaaseen. Se ei ole sama maa kuin naapurin Kongon demokraattinen tasavalta, vaikka maiden pääkaupungit Brazzaville ja Kinshasa ovat vastakkain Kongo-joen rannoilla. Valtaosa asukkaista asuu etelässä, Brazzavillen ja Atlantin satamakaupunki Pointe-Noiren seudulla, ja talous perustuu pitkälti offshore-öljyyn. Virallinen kieli on ranska, ja lingala ja kituba ovat kansalliskieliä.",
+  "genetiivi": "Kongon tasavallan",
+  "kielet": [
+   {
+    "kieli": "ranska",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "lingala",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "kituba (monokutuba)",
+    "asema": "kansallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Keski-Afrikan CFA-frangi",
+   "koodi": "XAF"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Brazzaville",
+  "maanAvain": "Kongon tasavalta",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

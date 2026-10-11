@@ -1,0 +1,66 @@
+{
+ "id": "libreville",
+ "era": "e06",
+ "nimi": "Libreville",
+ "nimiAlkukieli": "Libreville",
+ "maa": "GAB",
+ "maanNimi": "Gabon",
+ "asema": "pääkaupunki",
+ "lat": 0.4081,
+ "lon": 9.4403,
+ "wikidata": "Q3825",
+ "kevytSisalto": {
+  "kuvaus": "Libreville on Gabonin pääkaupunki ja suurin kaupunki, joka sijaitsee Gabonin suistolahden pohjoisrannalla lähellä Guineanlahtea. Kaupunki perustettiin vuonna 1849 ranskalaisten vapauttamien orjien asuinpaikaksi, ja nimi tarkoittaa ranskaksi vapaata kaupunkia. Nykyään siellä asuu noin kolmannes maan väestöstä, ja se on valtionhallinnon, sataman ja kaupan keskus.",
+  "tunnusrakennukset": [
+   "Mont-Bouët'n tori (Gabonin suurin kauppatori)",
+   "Saint-Michel de Nkembo -kirkko",
+   "Sainte-Marie-katedraali (Notre-Dame de l'Assomption, 1958)",
+   "Musée national des Arts et Traditions"
+  ],
+  "asukkaat": {
+   "arvo": 703940,
+   "vuosi": 2013,
+   "lahde": "Gabonin tilastolaitos (Direction Générale de la Statistique), väestö- ja asuntolaskenta 1.10.2013, Librevillen kunta (commune); luku luettu citypopulation.de:n taulukosta, joka nimeää DGS:n lähteeksi. Vuoden 2026 laskennan (koko maa 3 518 621) kuntakohtaista Libreville-lukua ei ole julkaistu.",
+   "linkki": "https://www.citypopulation.de/en/gabon/cities/"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Gabon on päiväntasaajan tuntumassa Atlantin rannalla sijaitseva Keski-Afrikan maa, jonka pinta-alasta valtaosa on sademetsää. Entinen Ranskan siirtomaa itsenäistyi vuonna 1960, ja maan talous perustuu öljyyn, mangaaniin ja puuhun; vuonna 2002 maahan perustettiin kolmetoista kansallispuistoa. Ranska on ainoa virallinen kieli, mutta arjessa puhutaan myös fangia, myenea ja muita bantukieliä. Maan poliittinen järjestelmä on presidenttivaltainen, ja 2020-luvulla se on uudistanut perustuslakiaan.",
+  "genetiivi": "Gabonin",
+  "kielet": [
+   {
+    "kieli": "ranska",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "fang",
+    "asema": "muu"
+   },
+   {
+    "kieli": "myene",
+    "asema": "muu"
+   },
+   {
+    "kieli": "punu",
+    "asema": "muu"
+   },
+   {
+    "kieli": "nzebi",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Keski-Afrikan CFA-frangi",
+   "koodi": "XAF"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Libreville",
+  "maanAvain": "Gabon",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

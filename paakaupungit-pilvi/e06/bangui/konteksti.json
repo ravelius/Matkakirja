@@ -1,0 +1,54 @@
+{
+ "id": "bangui",
+ "era": "e06",
+ "nimi": "Bangui",
+ "nimiAlkukieli": "Bangui",
+ "maa": "CAF",
+ "maanNimi": "Keski-Afrikan tasavalta",
+ "asema": "pääkaupunki",
+ "lat": 4.3733,
+ "lon": 18.5628,
+ "wikidata": "Q3832",
+ "kevytSisalto": {
+  "kuvaus": "Bangui on Keski-Afrikan tasavallan pääkaupunki, joka sijaitsee Ubangi-joen pohjoisrannalla vastapäätä Kongon demokraattisen tasavallan rantaa. Ranskalaiset perustivat sen 1889 kauppa- ja sotilasasemaksi, ja siitä tuli maan hallinnollinen ja taloudellinen keskus. Kaupunki on tärkeä jokiliikenteen solmukohta, ja joki on edelleen sen ja maan tärkeimpiä kulkureittejä.",
+  "tunnusrakennukset": [
+   "Notre-Dame-de-l'Immaculée-Conception -katedraali",
+   "Boganda-kansallismuseo (Musée national Barthélemy Boganda)",
+   "Marché central -tori",
+   "Ubangi-joen ranta"
+  ],
+  "asukkaat": {
+   "arvo": 812407,
+   "vuosi": 2021,
+   "lahde": "ICASEES (Keski-Afrikan tasavallan tilastolaitos), arvio 1.3.2021, Banguin kaupunki; arvio perustuu keskeneräiseen digitaaliseen kartoitukseen, ei laskentaan. Viimeisin väestönlaskenta 2003: 622 771.",
+   "linkki": "https://citypopulation.de/en/centralafrica/admin/bangui/CF711__bangui/"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Keski-Afrikan tasavalta on Afrikan sydämessä sijaitseva sisämaavaltio, jonka läpi kulkee vedenjakaja Kongo- ja Tšadjärven valuma-alueiden välillä. Maa itsenäistyi Ranskasta 1960, ja kansallisina kielinä ovat sango ja ranska. Taloudellisesti se on yksi maailman vähiten kehittyneistä maista, ja sen resursseihin kuuluvat timantit, kulta, puu ja maatalous. Maa on kokenut pitkiä sisäisiä konflikteja, ja YK perusti sinne MINUSCA-rauhanturvaoperaation vuonna 2014.",
+  "genetiivi": "Keski-Afrikan tasavallan",
+  "kielet": [
+   {
+    "kieli": "sango",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "ranska",
+    "asema": "virallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "CFA-frangi (Keski-Afrikka)",
+   "koodi": "XAF"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Bangui",
+  "maanAvain": "Keski-Afrikan tasavalta",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

@@ -1,0 +1,57 @@
+{
+ "id": "gitega",
+ "era": "e06",
+ "nimi": "Gitega",
+ "nimiAlkukieli": "Gitega",
+ "maa": "BDI",
+ "maanNimi": "Burundi",
+ "asema": "pääkaupunki",
+ "lat": -3.4283,
+ "lon": 29.925,
+ "wikidata": "Q167551",
+ "kevytSisalto": {
+  "kuvaus": "Gitega on Burundin poliittinen pääkaupunki, joka sijaitsee maan keskiosan kukkulaylängöllä. Se oli vuosisatoja kuningaskunnan keskus ja siirtomaa-ajalla hallintokaupunki, ja pääkaupunkiasema palasi sille 2019. Kaupunki tunnetaan kansallismuseostaan ja läheisestä rumpujen pyhäköstä, jossa esitellään burundilaista rumpuperinnettä.",
+  "tunnusrakennukset": [
+   "Gitegan kansallismuseo (Musée national de Gitega, 1955)",
+   "Gishoran rumpupyhäkkö (Sanctuaire des tambours de Gishora)",
+   "saksalaisajan hallintokeskuksen jäänteet"
+  ],
+  "asukkaat": {
+   "arvo": 198363,
+   "vuosi": 2025,
+   "lahde": "YK:n World Urbanization Prospects 2025 (taajama-arvio), Worldometersin kautta; viimeisin laskennan luku vuodelta 2008 on 41 944 (kaupunkiosa, ISTEEBU)",
+   "linkki": "https://www.worldometers.info/population/largest-cities-in-burundi/"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Burundi on Itä-Afrikan pieni, vuoristoinen sisämaavaltio Tanganjikajärven rannalla. Se itsenäistyi Belgian hallinnasta 1962 ja on yksi maailman tiheimmin asutuista maista. Väestö on suurimmaksi osaksi maaseudulla, ja talous perustuu pääosin pienviljelyyn sekä kahvin ja teen vientiin. Poliittinen pääkaupunki on Gitega, jonne pääkaupunkiasema siirrettiin vuonna 2019, ja maan suurin kaupunki sekä talouden ja kaupan keskus on edelleen Bujumbura.",
+  "genetiivi": "Burundin",
+  "kielet": [
+   {
+    "kieli": "kirundi",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "ranska",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Burundin frangi",
+   "koodi": "BIF"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Gitega",
+  "maanAvain": "Burundi",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

@@ -1,0 +1,56 @@
+[
+ {
+  "id": "libreville",
+  "lat": 0.41,
+  "lon": 9.44,
+  "wikidata": "Q3825"
+ },
+ {
+  "id": "ciudaddelapaz",
+  "lat": 1.59,
+  "lon": 10.82,
+  "wikidata": "Q1140136"
+ },
+ {
+  "id": "saotome",
+  "lat": 0.34,
+  "lon": 6.73,
+  "wikidata": "Q3932"
+ },
+ {
+  "id": "bangui",
+  "lat": 4.37,
+  "lon": 18.56,
+  "wikidata": "Q3832"
+ },
+ {
+  "id": "brazzaville",
+  "lat": -4.27,
+  "lon": 15.27,
+  "wikidata": "Q3844"
+ },
+ {
+  "id": "kinshasa",
+  "lat": -4.32,
+  "lon": 15.31,
+  "wikidata": "Q3838"
+ },
+ {
+  "id": "luanda",
+  "lat": -8.84,
+  "lon": 13.23,
+  "wikidata": "Q3897"
+ },
+ {
+  "id": "kigali",
+  "lat": -1.94,
+  "lon": 30.06,
+  "wikidata": "Q3859"
+ },
+ {
+  "id": "gitega",
+  "lat": -3.43,
+  "lon": 29.93,
+  "wikidata": "Q167551"
+ }
+]
