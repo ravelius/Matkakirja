@@ -8,7 +8,7 @@ Alku: 2026-10-10T21:59:24Z. Agenttien kulutus: kirjataan kahden ensimmäisen kau
 | vaduz | ✓ | ✓ | ✓ | ✓ (VÄÄRIN 9, EPÄVARMA 8) | ✓ | ✓ 0 virhettä, 1 varoitus | 5 kohdetta, lähteissä vain 5 koordinaatilla |
 | monaco | ✓ | ✓ | ✓ | ✓ (VÄÄRIN 10, EPÄVARMA 20) | | | |
 | andorralavella | ✓ | ✓ | ✓ | ✓ (VÄÄRIN 6, EPÄVARMA 14) | | | |
-| sanmarino | ✓ | ✓ | ✓ | | | | |
+| sanmarino | ✓ | ✓ | ✓ | ✓ (VÄÄRIN 10, EPÄVARMA 16) | | | |
 | reykjavik | ✓ | ✓ | ✓ | ✓ (VÄÄRIN 11, EPÄVARMA 12) | | | |
 
 Vaihe 0 ✓ (konteksti, sää: 6 säärivia Open-Meteosta).
