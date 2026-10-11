@@ -40,3 +40,13 @@ linssiseppa2/google-429-vara) ja wt/proto-linssiseppa2-museo (linssiseppa2/keitt
 - 429-vara: d56415983 = paluu Googleen vasta seuraavan kohteen lennossa (kokeessa näkyi tyhjää sinistä varan alussa ja paluussa).
   Käännä + koe (sk-vara2.txt, lisää hyppy toiseen kohteeseen koetuksen jälkeen) uudelleenkäynnistyksen jälkeen.
 - 429-mittaus (ion429/loki.tsv): 18.51–19.31 429 (paitsi 19.21), 19.36→ 200; loppuyhteenveto PT:lle ~21.
+
+## PÄIVITYS 23.2x
+- JUNA 183 (NS:llä, PT kuittasi): aluskerros-stencil 589aecae0 (Madrid), google-429-vara d56415983, iss-raketti 50e91b1b7 (äänet pakattuina,
+  pito 5 s, laattojen odotus ≤ 6 s; korvaa a861c67c9 + a377272c1). Äänellinen tallenne lokit/linssiseppa2-raketti-aanella-20261011/.
+- Raketin alustan maisema (tasainen harmaa) → 184: tarkka Andøyan maasto alustakuvaan (kaappaukset linssiseppa2-raketti-20261011/alusta-katsesuunnat.jpg).
+- KEITTIÖ V3 PYSYVÄKSI (PT 23.2x): koodi linssiseppa2/keittio-grafiikka d4f4558c2 → Siirtoseppä linnahaaraan; kartat
+  _tyo/linssiseppa2/grafiikka/vienti-valot/ → LR:n seuraavaan vientiin + rakennus.json keittio-g102 valoatlas.hdr (ohje LR:lle lähetetty).
+  Kun LR kertoo hashin: kuva pelistä (Siirtosepän kiinnitys) → PT. Taso 2 = vain HDR-tilat; V1 + värimäärittely = taso 1 (koe).
+- Omistajan kuvapari: kaappaukset/linssiseppa2-grafiikka-20261011/omistajalle-keittio-v48b-*.jpg (näytetty omistajalle, kuitattu).
+- 429-mittaus valmis (PT:lle): 8/25 × 429 klo 18.51–19.31, sitten 200.
