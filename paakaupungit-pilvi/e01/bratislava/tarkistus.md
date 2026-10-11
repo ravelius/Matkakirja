@@ -60,3 +60,21 @@ Yhteenveto: VÄÄRIN 4, EPÄVARMA 11.
 | Kuvatekstit (kaikki lyhyt/selite) | lyhyt ≤ 100 mrk (suurin 86), päättyy pisteeseen, selite 1–2 virkettä, ei lähdeviittauksia; sisältö vastaa kuvat.md:n kuvauksia ja kertoo kohteesta (poikkeus Slavín, ks. A) | kuvat.md ja sisalto.json, tarkistettu koneellisesti | OK |
 | 1873-väitteet | linna raunio, Pozsony-nimi, raatihuone hallinnon käytössä, teatteria ja Sinistä kirkkoa ei ollut, Grassalkovich olemassa, Istrochem 1873, junayhteydet, Schmidt syntyi 1874 | em. lähteet | OK |
 | Nykypolitiikka ja sota | Napoleonin sodat, 1848 ja Pressburgin rauha esitetty historiana neutraalisti; nykypolitiikkaa, vaaleja tai nykysotaa ei ole | koko sisalto.json | OK |
+
+## Korjattu
+
+- Valtiopäivät: 1536 -> 1542 ja "tosin välillä keskeytyksin" (nostot[1]).
+- Vanha raatihuone, aika: kaupungintalona 1400-luvulta 1800-luvun loppuun.
+- kohdekartta.esittely: kaupungin eri aikakausista (kruunajaiskaupunki, palatsit, jugend).
+- kysymykset[3].hint: ei enää paljasta vastausta (kullalta kiiltävä torni).
+- Mozart pehmennetty ("tarinan mukaan ... konsertoi"), "ja kirkoissa" pois.
+- artikkeli.teksti: tuomiokirkko toimi kruunajaiskirkkona 1563–1830.
+- Nimi Bratislava: "katsotaan lähteen mukaan"; arkikäytön väite korvattu neutraalilla Pressburg-maininnalla.
+- Uuden sillan ravintolatorni: näkyvyysväite pois.
+- Nosto[3].selite: junat 1848 ja 1850.
+- Hviezdoslavin aukio, aika: 1700-luku–nykypäivä; nykyinen kävelyaukio 1900-luvun lopulta.
+- Slavín-kuvan lyhyt ja selite kertovat kohteesta (sotilashautausmaa 1960, Pienet Karpaatit).
+- Haydn-noston otsikko: kreivin kesäpalatsi.
+- Tuomiokirkko: telinemaininta pois, "työt olivat käynnissä".
+- tiedot[0]: kuusi siltaa (ei toistoa intron kanssa).
+- Oikeiden vastausten indeksejä ei muutettu (peli sekoittaa).
