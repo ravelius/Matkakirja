@@ -1,0 +1,487 @@
+{
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "amman",
+ "maa": "JOR",
+ "era": "e03",
+ "kaupunki": {
+  "id": "amman",
+  "name": "Amman",
+  "wiki": "Amman",
+  "ambience": "basaari",
+  "pallo": {
+   "lat": 31.95,
+   "lon": 35.93
+  }
+ },
+ "artikkeli": {
+  "intro": "Amman on Jordanian pääkaupunki ja maan suurin kaupunki, ja Greater Amman Municipalityn alueella asui vuonna 2025 noin **4,3 miljoonaa** ihmistä. Kaupunki on levinnyt kukkuloille Jordanin itäiselle ylängölle, ja lähteen mukaan se rakennettiin alun perin seitsemälle kukkulalle. Kaupunginosien nimet tulevat usein kukkulan (jabal) tai laakson (wadi) mukaan, ja rinteitä peittävät kalkki- ja hiekkakivitalot.\n\nPaikka on ollut asuttu tuhansia vuosia: Ayn Ghazalin neoliittisesta kylästä on noin 9 000 vuotta, ja nimensä kaupunki sai ammonilaisilta, joiden pääkaupunki se oli. Antiikissa se tunnettiin nimellä Philadelphia, ja laaksossa ja linnavuorella ovat yhä roomalaisajan teatteri, odeon ja **Suuri temppeli**. Myöhäiskeskiajalta lähtien paikka oli hylätty rauniopaikka, jossa kävivät vain viljelijät ja beduiinit.\n\nIsoisän matkavuonna 1873 Amman oli lähteen mukaan tällainen autio paikka. Uusi asutus alkoi **1870-luvun lopulla**, kun ottomaanien viranomaiset ohjasivat Ammaniin tšerkessejä, ja lähteen mukaan Hejaz-rautatie muutti kylän 1900-luvun alussa alueen kauppakeskukseksi.",
+  "teksti": "Amman on rakennettu kukkuloille ja laaksoihin, ja kaupunginosia nimetään usein jabalin eli kukkulan tai wadin eli laakson mukaan. Rakennukset on päällystetty valkoisella tai beigellä kalkki- tai hiekkakivellä, ja parvekkeita on lähes joka kerroksessa. Liikenneympyröitä kutsutaan ympyröiksi, ja ne toimivat maamerkkeinä, vaikka ne merkitsivät ennen kaupunginosia.\n\nAntiikissa laaksossa sijaitsi Philadelphia, joka kuului Rooman valtakunnassa Dekapolis-kaupunkien liittoon ja myöhemmin Arabian provinssiin. Sen aikaisia rakennuksia ovat teatteri, odeon ja nymfaion sekä linnavuoren Suuri temppeli. Laaksoa halkoi Seil-puro, joka peitettiin 1900-luvun jälkipuoliskolla.\n\nUuden ajan Amman syntyi 1870-luvun lopulla, kun tšerkessit asettuivat raunioiden keskelle. Hejaz-rautatie toi kauppiaita Damaskoksesta, Nablusista ja Jerusalemista, ja 1920-luvulla emiiri Abdullah I nimesi kaupungin Transjordanian emiirikunnan pääkaupungiksi. Jordan Museum esittelee nykyään kaupungin ja maan historiaa Ayn Ghazalin patsaista alkaen."
+ },
+ "kysymykset": [
+  {
+   "q": "Minkä muinaisen kansan mukaan Amman on saanut nimensä?",
+   "options": [
+    "Nabatealaisten",
+    "Filistealaisten",
+    "Ammonilaisten",
+    "Assyrialaisten"
+   ],
+   "correct": 2,
+   "level": 1,
+   "hint": "Heidän pääkaupunkinsa oli paikalla jo ennen antiikin Rooman aikaa.",
+   "fact": "Amman johtaa nimensä ammonilaisista, joiden pääkaupunki Rabat ʿAmmān se oli.",
+   "source": "https://en.wikipedia.org/wiki/Amman"
+  },
+  {
+   "q": "Keitä ottomaanien viranomaiset ohjasivat asettumaan hylättyyn Ammaniin 1870-luvun lopulla?",
+   "options": [
+    "Egyptistä tulleita viljelijäperheitä",
+    "Kaukasukselta tulleita tšerkessejä",
+    "Kreetalta tulleita kauppiaita",
+    "Arabian niemimaan beduiineja"
+   ],
+   "correct": 1,
+   "level": 2,
+   "hint": "He rakensivat ensimmäiset talonsa Rooman teatterin viereen.",
+   "fact": "Useita satoja muslimitšerkessejä asettui Ammaniin, ja viranomaiset jakoivat heille viljelymaata.",
+   "source": "https://en.wikipedia.org/wiki/Amman"
+  },
+  {
+   "q": "Minkä ottomaanien rakentaman rautatien varrella Amman kasvoi 1900-luvun alussa alueen kauppakeskukseksi?",
+   "options": [
+    "Bagdadin rautatie",
+    "Ugandan rautatie",
+    "Siperian rautatie",
+    "Hejaz-rautatie"
+   ],
+   "correct": 3,
+   "level": 2,
+   "hint": "Rata kulki Damaskoksesta pyhiinvaelluskaupunki Medinaan.",
+   "fact": "Rata toi Ammaniin kauppiaita Damaskoksesta, Nablusista ja Jerusalemista, ja lähteen mukaan se muutti kylän alueen kauppakeskukseksi.",
+   "source": "https://en.wikipedia.org/wiki/Hejaz_railway"
+  },
+  {
+   "q": "Minkä keisarin kunniaksi Rooman teatteri lähteen mukaan rakennettiin?",
+   "options": [
+    "Antoninus Piuksen",
+    "Konstantinus Suuren",
+    "Nervan",
+    "Diocletianuksen"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Teatterin pilarissa on kreikankielinen kirjoitus.",
+   "fact": "Pilarin kreikankielinen kirjoitus viittaa keisari Antoninus Piukseen, ja teatterissa oli noin 6 000 paikkaa.",
+   "source": "https://en.wikipedia.org/wiki/Roman_Theatre_(Amman)"
+  },
+  {
+   "q": "Mitä kaupunki teki Seil-purolle 1900-luvun jälkipuoliskolla?",
+   "options": [
+    "Patosi sen kaupungin vesialtaaksi",
+    "Johti sen kanavaa pitkin Kuolleeseenmereen",
+    "Peitti sen betonilla, ja päälle tuli katu",
+    "Täytti sen kokonaan hiekalla"
+   ],
+   "correct": 2,
+   "level": 3,
+   "hint": "Puro virtasi ennen alakaupungin läpi Ras al-Einin lähteiltä alkaen.",
+   "fact": "Puro peitettiin betonilla, ja sen paikalla kulkee katu, jota kutsutaan epävirallisesti nimellä Saqf Al-Seil.",
+   "source": "https://en.wikipedia.org/wiki/Seil_Amman"
+  }
+ ],
+ "tiedot": [
+  "Lähteen mukaan Amman rakennettiin alun perin seitsemälle kukkulalle, mutta nykyään se ulottuu yli kymmenelle kukkulalle, ja kaupunginosien nimet tulevat usein kukkulan (jabal) tai laakson (wadi) nimestä.",
+  "Rooman aikaisen nymfaionin allas täytettiin jatkuvasti vedellä, ja se sijaitsi Seil-puron vieressä keskellä antiikin kaupunkia.",
+  "Rooman teatteri on lähteen mukaan suunnattu pohjoiseen, jotta aurinko ei häikäisisi katsojia."
+ ],
+ "valokuva": {
+  "tiedosto": "Amman Odeum c 1900.jpg",
+  "vuosi": "noin 1900",
+  "lahde": "American Colony (Jerusalem), Commons (PD)",
+  "lyhyt": "Roomalaisajan raunio Ammanissa noin vuonna 1900.",
+  "selite": "Noin vuonna 1900 Amman oli pieni tšerkessien asuttama kylä, jonka laaksossa seisoi yhä roomalaisajan raunioita."
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Amman",
+   "johdanto": "Amman on rakentunut kukkuloille, joilla on asuttu jo noin 9 000 vuotta sitten, mutta jotka olivat isoisän matkavuonna 1873 autioina. Vanha kaupunki on kasvanut linnavuoren, roomalaisen teatterin ja katetun puron ympärille.",
+   "kansikuvat": [
+    {
+     "tiedosto": "Amman citadel 4.jpg",
+     "lyhyt": "Ammanin linnavuori, jolla on rakennuksia usealta eri aikakaudelta.",
+     "selite": "Ammanin linnavuori Jabal al-Qalʿa kohoaa alakaupungin yläpuolelle, ja sen kukkulalla on roomalaisaikaisia, bysanttilaisia ja umaijadiaikaisia rakennuksia.",
+     "lahde": "Davric, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+     "tiedosto": "Roman Theatre in Amman 0189.jpg",
+     "lyhyt": "Hashemite Plaza on alakaupungin aukio Rooman teatterin ja odeonin vieressä.",
+     "selite": "Hashemite Plaza on Rooman teatterin ja odeonin viereinen alakaupungin aukio, jonka paikalla lähteen mukaan sijaitsi antiikin forum.",
+     "lahde": "Dosseman, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+     "tiedosto": "View of the Amman Citadel, Jordan3.jpg",
+     "lyhyt": "Linnavuori kohoaa Ammanin vanhan keskustan yllä.",
+     "selite": "Linnavuoren rauniot ovat osa Ammanin vanhaa ydintä, jota ympäröivät rinteille levittäytyneet asuinalueet.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 3.0)"
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Patsaat, joiden sisus on risua",
+     "teksti": "Ayn Ghazal on neoliittinen asuinpaikka Ammanin alueella, Seil-puron rannalla siinä, missä puro laskee Zarqa-jokeen. Nimi tarkoittaa gasellin lähdettä. Asutus kukoisti noin 9 000 vuotta sitten, ja lähteen mukaan kylässä asui parhaimmillaan useita tuhansia ihmisiä. Talot olivat suorakaiteen muotoisia mutatiilirakennuksia, joiden seinät kipsattiin sisäpuolelta ja kipsi uusittiin muutaman vuoden välein. Tunnetuimmat löydöt ovat kipsipatsaat: puolikokoisten ihmishahmojen ydin on risukimppu, pinta on valkoista kipsiä ja silmät on korostettu bitumilla. Patsaita on yli kolmekymmentä, ja ne ovat esillä Jordan Museumissa.",
+     "tiedosto": "Ain Ghazal statue frontal.jpg",
+     "lyhyt": "Ayn Ghazalin kipsipatsas, noin 9 000 vuotta vanha neoliittinen löytö.",
+     "selite": "Ayn Ghazalin patsaiden ydin on risukimppu ja pinta kipsiä, ja niiden silmät on korostettu bitumilla.",
+     "lahde": "ALFGRN, Wikimedia Commons (CC BY-SA 2.0)",
+     "wiki": "Ayn Ghazal (archaeological site)"
+    },
+    {
+     "otsikko": "Linnavuori kerroksina",
+     "teksti": "Ammanin linnavuori eli Jabal al-Qalʿa on L:n muotoinen kukkula alakaupungin yllä, ja lähteen mukaan se on yksi maailman vanhimmista jatkuvasti asutuista paikoista. Kukkulalta on löytynyt myös lähteen mukaan vanhin tunnettu ammoninkielinen kirjoitus, joka on kirjoitettu foinikialaisin kirjaimin. Roomalaisaikaa edustaa Suuri temppeli, jota on kutsuttu Herkuleen temppeliksi, vaikka lähteen mukaan nimi on epätarkka eikä jumaluutta tunneta varmasti. Pohjoisosassa on Umaijadien palatsi 700-luvulta ja eteläosassa keskiajan vartiotorni, jonka seinään on käytetty temppelin pylväsosia. Iso osa kukkulasta on yhä kaivamatta.",
+     "tiedosto": "Amman Temple of Hercules 0344.jpg",
+     "lyhyt": "Suuri temppeli, jota kutsutaan myös Herkuleen temppeliksi, Ammanin linnavuorella.",
+     "selite": "Suuri temppeli rakennettiin 100-luvun jälkipuoliskolla, ja sen jumaluutta ei tunneta varmasti.",
+     "lahde": "Dosseman, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Amman Citadel"
+    },
+    {
+     "otsikko": "Philadelphia laaksossa",
+     "teksti": "Antiikissa kaupunki tunnettiin nimellä Philadelphia. Lähteen mukaan Ptolemaios II Philadelphos asetti paikalle kaupungin 200-luvulla eaa. ja nimesi sen omasta lisänimestään, joka tarkoittaa veljesrakkautta. Roomalaisaikana kaupunki kuului Dekapolis-liittoon ja myöhemmin Arabian provinssiin, ja 100-luvulla laaksoon rakennettiin klassiseen tyyliin iso teatteri, pieni odeon, nymfaion, kylpylät, forum ja pylväskatuja. Teatterissa oli noin 6 000 ja odeonissa noin 500 paikkaa. Uusia roomalaisia kylpylöitä löytyi Hashemite Plazan vierestä sadevesiviemärin rakennustöiden yhteydessä 2020-luvun alussa.",
+     "tiedosto": "Amman Odeon 0225.jpg",
+     "lyhyt": "Odeon eli pieni teatteri rakennettiin 100-luvulla Rooman teatterin rinnalle.",
+     "selite": "Odeon rakennettiin Philadelphiaan 100-luvulla samoihin aikoihin viereisen suuren teatterin kanssa.",
+     "lahde": "Dosseman, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Philadelphia (Amman)"
+    },
+    {
+     "otsikko": "Piilotettu puro",
+     "teksti": "Seil Amman oli puro, joka virtasi Ras al-Einin lähteiltä koilliseen kohti Ayn Ghazalia ja päätyi Zarqa-jokeen. Lähteen mukaan Amman tunnettiin historiallisesti vesien kaupunkina. Antiikissa puron pohjoisrannalla kulki pylväskatu ja eteläisellä rannalla olivat forum, teatteri, odeon, nymfaion ja kylpylät. Uudet asukkaat rakensivat 1800-luvun lopulla talonsa puron ympärille. Puro peitettiin betonilla 1900-luvun jälkipuoliskolla, ja sen paikalla kulkee katu, jota kutsutaan epävirallisesti nimellä Saqf Al-Seil eli katettu Seil. Lähteen mukaan syinä olivat likaantuminen, lähteiden kuivuminen, tulvat ja liikenne.",
+     "tiedosto": "Amman Nymphaeum 0113.jpg",
+     "lyhyt": "Nymfaion oli Seil-puron vieressä seissyt julkinen suihkulähde.",
+     "selite": "Nymfaion kuului laakson antiikin rakennuksiin, jotka seisoivat Seil-puron rannalla.",
+     "lahde": "Dosseman, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Seil Amman"
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "Amman Citadel 02.jpg",
+     "lyhyt": "Umaijadien palatsin kupoli ja pylväänkatkelmia Ammanin linnavuorella.",
+     "selite": "Linnavuoren pohjoisosassa on Umaijadien palatsi, ja kukkulalla on myös roomalaisajan pylväiden jäänteitä.",
+     "lahde": "Lama Sakhnini, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "kappale": "Amman on Jordanian pääkaupunki, ja sen vanha ydin on alakaupungissa linnavuoren ja roomalaisen teatterin ympärillä. Kaupunki on rakennettu kukkuloille, joten matkat voivat kestää odotettua pidempään ja rinteet ovat jyrkkiä. Pääkenttä Queen Alia International Airport on noin 30 kilometrin päässä kaupungista etelään. Kyltit ovat arabiaksi ja englanniksi, ja taksia varten osoite kannattaa pitää arabiaksi kirjoitettuna. Kevät ja syksy ovat lämpimiä ja kuivia, ja talvi on viileä ja sateinen. Ajantasaiset matkustustiedot kannattaa tarkistaa ennen lähtöä.",
+    "artikkeli": {
+     "nimi": "Matkailijan Amman",
+     "taitto": "opas",
+     "teksti": "Kaupunki, jossa roomalainen teatteri, linnavuoren rauniot ja kukkuloiden kahvilakadut ovat samalla matkalla.",
+     "nosto": "Ammanin vanha ydin on alakaupungin laaksossa ja sen yllä nousevalla linnavuorella, ja kaupunki jatkuu kukkulalta toiselle. Kävelijän kannattaa varata aikaa, sillä rinteet ovat jyrkkiä.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Pääkenttä Queen Alia International Airport sijaitsee Ziziassa, noin 30 kilometriä Ammanista etelään. Kentältä kaupunkiin pääsee bussilla, taksilla tai tilaustaksisovelluksilla. Pienempi Amman Civil Airport palvelee pääasiassa kotimaan- ja lähialueiden lentoja. Kaupungissa liikutaan takseilla, jotka kulkevat mittarilla, linja-autoilla ja kahdella BRT-runkobussireitillä. Jalan kulkeminen on kukkuloiden vuoksi hitaampaa kuin kartalta luulisi.",
+       "kuva": {
+        "tiedosto": "BRT in Amman, Jordan 1.jpg",
+        "lyhyt": "Ammanin BRT on kaupungin runkobussijärjestelmä.",
+        "selite": "BRT eli runkobussijärjestelmä täydentää Ammanin tavallisia linja-autoja, ja siinä on kaksi reittiä.",
+        "lahde": "Malkawi99, Wikimedia Commons (CC BY-SA 3.0)"
+       }
+      },
+      {
+       "otsikko": "Linnavuori ja alakaupunki",
+       "teksti": "Linnavuorella ovat Suuri temppeli, bysanttilaisen kirkon jäänteet, Umaijadien palatsi ja keskiajan vartiotorni sekä museo; kukkulan näköalapaikka on suosittu auringonlaskun katseluun. Alakaupungissa Rooman teatteri ja odeon sijaitsevat Hashemite Plazan laidalla, ja teatterin sivuilla ovat Jordan Folklore Museum ja Museum of Popular Traditions. Läheltä löytyvät myös nymfaion ja Suuri Husseinin moskeija. Jordan Museum Ras al-Einissa esittelee muun muassa Ayn Ghazalin patsaat ja Kuolleenmeren kääröjä.",
+       "kuva": {
+        "tiedosto": "متحف الأردن 2.jpg",
+        "lyhyt": "Jordan Museum Ras al-Einissa esittelee muun muassa Ayn Ghazalin patsaat.",
+        "selite": "Jordan Museumin kokoelmiin kuuluvat Ayn Ghazalin patsaat ja Kuolleenmeren kääröjä.",
+        "lahde": "Freedom's Falcon, Wikimedia Commons (PD)"
+       }
+      },
+      {
+       "otsikko": "Jabal Amman ja kukkulat",
+       "teksti": "Jabal Ammanin kukkulalla on 1900-luvun alun taloja, joissa toimii nykyään kahviloita ja toimistoja. Rainbow Street on nimetty entisen elokuvateatterin mukaan, ja kesäisin perjantaisin siellä pidetään Souk Jara -markkinaa, jossa myydään käsitöitä ja ruokaa. Jabal al-Luweibdehissa toimii Jordan National Gallery of Fine Arts, ja Darat al-Funun on taidekeskus. Al-Balad Music Festival järjestetään Rooman teatterissa ja odeonissa.",
+       "kuva": {
+        "tiedosto": "Jabal Amman - near Rainbow street.jpg",
+        "lyhyt": "Jabal Amman on vanha kukkulakaupunginosa, jossa on 1900-luvun alun taloja.",
+        "selite": "Jabal Ammanin kukkulalle asettuivat pääkaupunki-aseman myötä varakkaat perheet, ja vanhoissa taloissa toimii nykyään kahviloita ja toimistoja.",
+        "lahde": "Jotari, Wikimedia Commons (CC BY 4.0)"
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Lähteen mukaan Ammanin ruoka on usean alueen keittiöiden tulos, ja katuruoka tekee siitä omaleimaisen. Arabialaisessa ruoassa liha on yleensä lammasta tai kanaa, ja riisi ja leipä ovat sivuruokia. Shawarma on paikallinen suosikki, ja kikhernepohjaisista ruoista tavataan falafelia, hummusta ja fuulia. Jälkiruoaksi kannattaa maistaa knafeh nabelseyyehia, jonka nimi viittaa Nablusin kaupunkiin."
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Ammanin lentokentän mittausten mukaan vuosilta 1989–2018 heinä- ja elokuun päivälämpötila on keskimäärin noin 33 astetta, eikä sadetta juuri tule. Tammikuussa ylin lämpötila on noin 13 ja alin noin 4 astetta, ja sadetta tulee enimmillään noin 60 millimetriä kuussa. Sade painottuu marraskuusta huhtikuuhun, ja lunta voi tulla kerran tai kaksi vuodessa. Kevät on lyhyt, ja huhti–toukokuu sekä lokakuu ovat lämpimiä ja kuivia.",
+       "kuva": {
+        "tiedosto": "Amman in Snow.JPG",
+        "lyhyt": "Lunta voi sataa Ammanissa talvella kerran tai kaksi vuodessa.",
+        "selite": "Ammanissa talvi on viileä, ja lunta voi tulla lähteen mukaan kerran tai kaksi vuodessa.",
+        "lahde": "The original uploader was Freedom's Falcon at Arabic Wikipedia ., Wikimedia Commons (CC BY 2.5)"
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Linnavuori ja Suuri temppeli",
+        "tahdet": 3,
+        "selite": "Usean aikakauden jäänteitä samalla kukkulalla alakaupungin yllä."
+       },
+       {
+        "mita": "Rooman teatteri ja odeon",
+        "tahdet": 3,
+        "selite": "Antiikin katsomot, joissa pidetään yhä konsertteja ja kulttuuritapahtumia."
+       },
+       {
+        "mita": "Jordan Museum",
+        "tahdet": 3,
+        "selite": "Ayn Ghazalin patsaat ja Kuolleenmeren kääröjä samassa museossa."
+       },
+       {
+        "mita": "Rainbow Street ja Jabal Amman",
+        "tahdet": 2,
+        "selite": "Vanhoja taloja, kahviloita ja kesäisin Souk Jara -markkina."
+       },
+       {
+        "mita": "Alakaupungin torit",
+        "tahdet": 2,
+        "selite": "Kirjakojuja ja katukauppiaita vanhan keskustan kaduilla."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Kukkulat ja jyrkät rinteet",
+        "teksti": "Kartalla lyhyt matka voi viedä pitkään, koska tiet nousevat jyrkästi."
+       },
+       {
+        "otsikko": "Taksi mittarilla",
+        "teksti": "Pyydä taksia käyttämään mittaria, sillä taksien on käytettävä sitä."
+       },
+       {
+        "otsikko": "Moskeijavierailu",
+        "teksti": "Kuningas Abdullah I:n moskeijaan matkailijat ovat tervetulleita; miehillä pitää olla pitkät housut ja naisilla pää, käsivarret ja jalat peitettyinä, ja huppumekko lainataan ilmaiseksi."
+       },
+       {
+        "otsikko": "Ramadan",
+        "teksti": "Ramadanin aikana ruokaa on lähes mahdoton ostaa auringonnoususta laskuun, myös matkailijoille."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "historia",
+   "nimi": "Kaupunki, joka perustettiin uudelleen",
+   "johdanto": "Amman oli myöhäiskeskiajalta lähtien rauniopaikka, jossa kävivät vain viljelijät ja paimentolaiset, kunnes uudet asukkaat saapuivat 1870-luvun lopulla. Rautatie ja pääkaupungin asema toivat sen jälkeen kauppiaita ja uusia rakennuksia kukkuloille.",
+   "tehtava": {
+    "kysymys": "Mitä rakennusainetta ensimmäiset tšerkessiasukkaat käyttivät taloihinsa Rooman teatterin lähellä?",
+    "vaihtoehdot": [
+     "Rannikolta tuotuja tiiliä",
+     "Kaukasukselta mukana tuotuja puuosia",
+     "Teatterin kiviä",
+     "Kalkkikiveä louhoksesta Ras al-Einin läheltä"
+    ],
+    "oikea": 2,
+    "fakta": "Antiikin teatterin kivet saivat uuden käytön, kun ensimmäiset tulijat rakensivat niistä talonsa."
+   },
+   "nostot": [
+    {
+     "otsikko": "Autio rinne",
+     "teksti": "Keskiajalla Ammanin asema nousi hetkeksi: mamelukkikaudella Balqan piirin pääkaupunki siirrettiin Ammaniin, ja emiiri Sirghitmish osti kaupungin, siirsi sinne tuomioistuimet, hallinnon ja torit sekä rahoitti rakennustöitä. Hänen kuolemansa jälkeen kaupunki ja sen maat vaihtoivat omistajaa, ja tuotto väheni. Myöhäiskeskiajalta 1870-luvun loppuun Amman oli lähteen mukaan hylätty paikka, jossa asuivat kausiluontoisesti viljelijät ja beduiinit. Ottomaanien valtakunta liitti seudun itseensä 1500-luvun alussa, ja Transjordanian poliittisena keskuksena toimi pitkälti al-Salt. Isoisän matkavuonna 1873 Amman oli tällainen rauniopaikka.",
+     "tiedosto": "Amman Citadel 140.JPG",
+     "lyhyt": "Linnavuoren Ayyubid-vartiotorni on peräisin keskiajalta.",
+     "selite": "Ayyubid-vartiotorni on keskiajalta, ja sen eteläjulkisivussa on käytetty Suuren temppelin pylväsosia.",
+     "lahde": "Tarawneh, Wikimedia Commons (CC BY-SA 3.0)",
+     "wiki": "Amman"
+    },
+    {
+     "otsikko": "Uudet asukkaat",
+     "teksti": "Muslimitšerkessejä saapui Ammaniin useita satoja 1870-luvun lopulla, ja ottomaanien viranomaiset ohjasivat heidät asettumaan sinne ja jakoivat heille viljelymaata. Ensimmäiset tulijat kuuluivat shapsug-heimoon. He asettuivat Rooman teatterin viereen ja rakensivat talojensa seinät teatterin kivistä. Ensimmäisten kuukausien olot olivat ankarat: osa asui luolissa ja roomalaisajan raunioissa, ja brittiläinen matkailija Laurence Oliphant merkitsi 1879, että suurin osa alkuperäisistä asukkaista oli jo lähtenyt. Talot tehtiin mutatiilestä ja katot puusta, ja 1900-luvun alussa kaupungissa oli kolme tšerkessikorttelia, moskeijoita ja leipomoita.",
+     "tiedosto": "Bedouin and Circassian chiefs on the Aerodrome at Amman, 1921 LOC matpc.04761.jpg",
+     "lyhyt": "Beduiini- ja tšerkessipäälliköitä Ammanin lentokentällä vuonna 1921.",
+     "selite": "Tšerkessit ovat kuuluneet Ammanin väestöön 1870-luvun lopun asutuksesta lähtien, ja kuvassa heidän päällikkönsä ovat yhdessä beduiinipäälliköiden kanssa vuonna 1921.",
+     "lahde": "Matson Collection, Wikimedia Commons (PD)",
+     "wiki": "Circassians in Jordan"
+    },
+    {
+     "otsikko": "Rata tuo kauppiaat",
+     "teksti": "Ottomaanien rakentama Hejaz-rautatie yhdisti Damaskoksen ja Medinan, ja sen tarkoitus oli helpottaa pyhiinvaellusta ja kauppaa. Rakentaminen alkoi 1900-luvun ensimmäisellä vuosikymmenellä, ja lähteen mukaan matka Damaskoksesta Medinaan lyheni noin 40 päivästä noin viiteen. Lähteen mukaan rata muutti Ammanin pienestä kylästä alueen kauppakeskukseksi: tšerkessien yrittäjyys ja rata houkuttelivat kauppiaita Damaskoksesta, Nablusista ja Jerusalemista, ja monet muuttivat perheineen kaupunkiin 1900- ja 1910-luvuilla. Ensimmäinen kunnanvaltuusto perustettiin 1900-luvun ensimmäisellä vuosikymmenellä, tšerkessi Ismael Babouk pormestarina.",
+     "tiedosto": "Hejaz Railway Station Trains (Amman Station).jpg",
+     "lyhyt": "Hejaz-rautatie yhdisti Damaskoksen ja Medinan, ja Amman kasvoi sen varrella.",
+     "selite": "Ottomaanien rakentama Hejaz-rautatie yhdisti Damaskoksen ja Medinan, ja sen varrella Amman kasvoi lähteen mukaan alueen kauppakeskukseksi.",
+     "lahde": "Bashar Tabbah, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Hejaz railway"
+    },
+    {
+     "otsikko": "Pääkaupunki ja kukkulat",
+     "teksti": "Emiiri Abdullah I nimesi 1920-luvulla Ammanin vastaperustetun Transjordanian emiirikunnan pääkaupungiksi, ja väestö kasvoi muuttajista Levantin kaupungeista. Uusia hallinnon rakennuksia valmistui 1920-luvun alussa, muun muassa Suuri Husseinin moskeija ja Duke's Diwan, joka toimi Ammanin ensimmäisenä postitoimistona. Maanjäristys 1920-luvun lopulla vauhditti kaupungin leviämistä rinteille, ja kivestä tuli yleisempi rakennusaine. Jabal Ammanin kukkulalle, jota ei koskaan linnoitettu, muuttivat varakkaita perheitä, liikemiehiä ja upseereita. Asukasluku on kasvanut noin tuhannen asukkaan kylästä 1800-luvun lopulla yli neljään miljoonaan vuonna 2025.",
+     "tiedosto": "Husseini Mosque Down Town Amman.jpg",
+     "lyhyt": "Suuri Husseinin moskeija rakennettiin 1920-luvulla vanhemman moskeijan paikalle.",
+     "selite": "Suuri Husseinin moskeija rakennettiin alakaupunkiin 1920-luvulla vanhemman moskeijan paikalle.",
+     "lahde": "Freedom's Falcon at Arabic Wikipedia, Wikimedia Commons (PD)",
+     "wiki": "Grand Husseini Mosque"
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Ammanin vanha ydin on alakaupungin laakso ja sen pohjoispuolella nouseva linnavuori. Laaksossa seisovat roomalainen teatteri, odeon ja nymfaion, ja kukkulan harjalla Suuri temppeli ja Umaijadien palatsi. Lisäksi kartalla on kaksi alakaupungin 1920-luvun rakennusta.",
+  "rajat": {
+   "pohjoinen": 31.9582,
+   "etela": 31.947,
+   "lansi": 35.9302,
+   "ita": 35.9431
+  },
+  "kohteet": [
+   {
+    "nimi": "Suuri temppeli",
+    "lat": 31.9538,
+    "lon": 35.9349
+   },
+   {
+    "nimi": "Umaijadien palatsi",
+    "lat": 31.9555,
+    "lon": 35.9342
+   },
+   {
+    "nimi": "Rooman teatteri",
+    "lat": 31.95169,
+    "lon": 35.93931
+   },
+   {
+    "nimi": "Odeon",
+    "lat": 31.95233,
+    "lon": 35.93989
+   },
+   {
+    "nimi": "Nymfaion",
+    "lat": 31.95033,
+    "lon": 35.93617
+   },
+   {
+    "nimi": "Suuri Husseinin moskeija",
+    "lat": 31.9497,
+    "lon": 35.9347
+   },
+   {
+    "nimi": "Duke's Diwan",
+    "lat": 31.9519,
+    "lon": 35.9334
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Suuri temppeli": {
+   "aika": "100-luku",
+   "teksti": "Suuri temppeli kohoaa linnavuoren ylätasanteella. Se rakennettiin 100-luvun jälkipuoliskolla, kun Arabian provinssia hallitsi kuvernööri Geminius Marcianus, samoihin aikoihin kuin Rooman teatteri. Temppeli seisoi suurella jalustalla, ja sen etuosan portiikissa oli kuusi korkeaa pylvästä. Sivuilla pylväitä ei ollut, minkä vuoksi jotkut tutkijat arvelevat, ettei temppeli koskaan valmistunut.\n\nNimi Herkuleen temppeli on lähteen mukaan epätarkka, koska jumaluutta ei tunneta varmasti. Arkkitraavin kirjoituksessa mainitaan Herkuleen pyhäkkö ja juhlapaikka, mikä tukee Herkules-tulkintaa, mutta läheltä löytyneen jättiläispatsaan on arveltu esittävän naisjumalaa. Patsaasta on jäljellä kolme sormea ja kyynärpää, ja se oli arvion mukaan usean metrin korkuinen.\n\nRauniot toimivat myöhemmin rakennusaineena: temppelin pylväsosia käytettiin keskiajan vartiotornin eteläjulkisivuun ja marmoria bysanttilaiseen kirkkoon. Isoisän matkavuonna 1873 linnavuori oli lähteen mukaan hylätty rauniokasa; kaivauksia on tehty 1920-luvulta alkaen, ja iso osa kukkulasta on yhä kaivamatta.",
+   "kuvat": [
+    {
+     "tiedosto": "Sunrise over the Temple of Hercules.jpg",
+     "lyhyt": "Suuren temppelin pylväät Ammanin linnavuorella.",
+     "selite": "Suuren temppelin etuosan portiikissa oli alun perin kuusi korkeaa pylvästä.",
+     "lahde": "andryn2006, Wikimedia Commons (CC BY-SA 2.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Umaijadien palatsi": {
+   "aika": "700-luku",
+   "teksti": "Umaijadien palatsi on linnavuoren ylätason pohjoisosassa. Sen rakennutti lähteen mukaan kalifi Hisham ibn Abd al-Malik, joka hallitsi 700-luvun alkupuoliskolla, ja rakennuksen on oletettu olleen hallintorakennus tai umaijadivirkamiehen asuinpaikka.\n\nKompleksiin kuuluu vastaanottosali, neljä kokoushuonetta ja pylväikkötie. Arkkitehtuuri yhdistää bysanttilaista, sassanidista ja selvästi islamilaista tyyliä. Palatsin eteläpuolella on moskeija, jonka pylväsmetsä-malli esiintyy lähteen mukaan yleensä vain Persiassa ja Mesopotamiassa, ja lähellä on suuri vesisäiliö, joka toimitti vettä kylpylöihin ja muihin tiloihin.\n\nPalatsi rapistui abbasidien ja fatimidien aikana, ja kaupunkia oli jo aiemmin vaurioittanut voimakas maanjäristys 700-luvun puolivälissä. Isoisän matkavuonna 1873 paikka oli lähteen mukaan rauniona, ja kaivauksia on tehty 1920-luvulta alkaen.",
+   "kuvat": [
+    {
+     "tiedosto": "Amman citadel - Umayyad Palace entrance.jpg",
+     "lyhyt": "Umaijadien palatsi Ammanin linnavuoren pohjoisosassa.",
+     "selite": "Palatsi sijaitsee linnavuoren pohjoisosassa ja on peräisin kalifi Hishamin ajalta.",
+     "lahde": "AliAbuRas, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Rooman teatteri": {
+   "aika": "100-luku",
+   "teksti": "Rooman teatteri on rakennettu rinteeseen Jabal al-Joufahin juurelle linnavuorta vastapäätä. Siinä oli noin 6 000 paikkaa, ja jyrkkä katsomo on jaettu kolmeen vaakasuoraan osaan. Pilarissa oleva kreikankielinen kirjoitus viittaa keisari Antoninus Piukseen, joka hallitsi 100-luvun puolivälissä.\n\nTeatteri on suunnattu pohjoiseen, jotta aurinko ei lähteen mukaan häikäisisi katsojia. Lähteen mukaan ylimmille riveille kuuluu ja näkyy erinomaisesti jyrkän rakenteen ansiosta. Sivuovien takana ovat Jordan Folklore Museum ja Museum of Popular Tradition. Nykyään teatteri on kulttuuritapahtumien käytössä, ja esimerkiksi Al-Balad Music Festival järjestetään siellä ja viereisessä odeonissa.\n\nIsoisän matkavuonna 1873 teatteri oli rauniona. Kun tšerkessit asettuivat sen viereen 1870-luvun lopulla, he rakensivat talonsa teatterin kivistä.",
+   "kuvat": [
+    {
+     "tiedosto": "Roman theater of Amman 01.jpg",
+     "lyhyt": "Rooman teatteri on rakennettu rinteeseen, ja siinä oli noin 6 000 paikkaa.",
+     "selite": "Rooman teatteri on peräisin 100-luvun puolivälistä, ja nykyään siellä pidetään kulttuuritapahtumia.",
+     "lahde": "Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Odeon": {
+   "aika": "100-luku",
+   "teksti": "Odeon on pieni teatteri Hashemite Plazan itälaidalla. Siinä oli noin 500 paikkaa, ja se rakennettiin 100-luvulla samoihin aikoihin viereisen suuren teatterin kanssa. Kaksi katsomoa sijaitsevat lähellä toisiaan, mutta niillä oli eri tehtävät: suuri teatteri oli tarkoitettu isolle yleisölle ja odeon pienemmälle.\n\nArkeologien arvion mukaan odeon oli peitetty puukatolla tai tilapäisellä kangaskatoksella. Rakennus on kunnostettu äskettäin yhdessä nymfaionin kanssa, ja nykyään siellä pidetään konsertteja. Lähteen mukaan tunnetuin niistä on Al-Balad Music Festival, joka järjestetään Rooman teatterissa ja odeonissa.\n\nIsoisän matkavuonna 1873 laakso, jossa odeon sijaitsee, oli lähteen mukaan autio rauniopaikka, jossa kävivät vain viljelijät ja beduiinit.",
+   "kuvat": [
+    {
+     "tiedosto": "Amman Odeon 03.jpg",
+     "lyhyt": "Odeon on pieni roomalaisajan teatteri Hashemite Plazan laidalla.",
+     "selite": "Odeonissa oli noin 500 paikkaa, ja nykyään siellä järjestetään konsertteja.",
+     "lahde": "Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Nymfaion": {
+   "aika": "100-luku",
+   "teksti": "Nymfaion oli roomalaisen Philadelphian julkinen suihkulähde, josta on säilynyt osa. Se rakennettiin samoihin aikoihin teatterin ja odeonin kanssa, ja se sijaitsi Seil-puron vieressä. Lähteen mukaan siinä oli arviolta useiden satojen neliömetrien allas, joka täytettiin jatkuvasti vedellä.\n\nNykyisin nymfaionin jäänteet ovat Ibn al-Atheer- ja Quraysh-katujen risteyksessä alakaupungin keskellä. Forum sijaitsi lähteen mukaan nykyisen Hashemite Plazan paikalla. Kunnostus alkoi 2010-luvun puolivälissä: työhön osallistui arkeologian opiskelijoita ja ammattilaisia kolmesta jordanialaisesta yliopistosta, ja rahoittajana oli Yhdysvaltain suurlähetystö.\n\nPuro peitettiin 1900-luvulla, ja sen paikalla kulkee nykyään katu. Isoisän matkavuonna 1873 laakso oli lähteen mukaan autio rauniopaikka, ja asutus levisi sen päälle ja ympärille vasta 1870-luvun lopun jälkeen.",
+   "kuvat": [
+    {
+     "tiedosto": "Amman Nymphaeum 0138.jpg",
+     "lyhyt": "Nymfaion oli roomalaisen Philadelphian julkinen suihkulähde.",
+     "selite": "Nymfaionin allas täytettiin jatkuvasti vedellä, ja rakennus sijaitsi Seil-puron vieressä.",
+     "lahde": "Dosseman, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Suuri Husseinin moskeija": {
+   "aika": "1920-luku",
+   "teksti": "Suuri Husseinin moskeija on perjantaimoskeija alakaupungissa ja lähteen mukaan yksi kaupungin vanhimmista moskeijoista. Se sijaitsee vanhemman moskeijan paikalla; alkuperäinen Omari-moskeija rakennettiin lähteen mukaan umaijadien aikana bysanttilaisen basilikan paikalle.\n\nAl-Muqaddasi kuvasi 900-luvulla kaupungin kaunista moskeijaa, jonka lattia oli mosaiikkia. Brittiläinen tutkija Charles Warren kuvasi paikalla ollutta vanhaa moskeijaa 1860-luvulla, ja C. R. Conder valokuvasi sen 1880-luvun alussa. Tšerkessiasutuksen jälkeen rukoussali tyhjennettiin ja katto rakennettiin uudelleen.\n\nNykyinen moskeija rakennettiin 1920-luvulla emiiri Abdullahin määräyksestä, ja se nimettiin hänen isänsä Sharif Hussein bin Alin mukaan. Se oli yksi emiirikunnan perustamisen jälkeisistä ensimmäisistä uusista rakennuksista. Isoisän matkavuonna 1873 paikalla oli vanha moskeija, jonka Warren oli kuvannut 1860-luvulla.",
+   "kuvat": [
+    {
+     "tiedosto": "Grand Husseini Mosque na 2026 (2).jpg",
+     "lyhyt": "Suuri Husseinin moskeija on perjantaimoskeija Ammanin alakaupungissa.",
+     "selite": "Suuri Husseinin moskeija rakennettiin 1920-luvulla vanhemman moskeijan paikalle ja nimettiin Sharif Hussein bin Alin mukaan.",
+     "lahde": "Justwiki, Wikimedia Commons (CC BY 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Duke's Diwan": {
+   "aika": "1920-luku",
+   "teksti": "Duke's Diwan on historiallinen talo King Faisal Streetillä, joka lähteen mukaan kuuluu kaupungin vanhimpiin rakennuksiin. Talo rakennettiin 1920-luvulla, ja Transjordanian hallitus vuokrasi sen Ammanin ensimmäiseksi postitoimistoksi. Posti toimi talossa 1940-luvulle asti.\n\nSen jälkeen talossa toimi hetken valtiovarainministeriö, ja 1900-luvun jälkipuoliskolla se oli Haifa-hotelli. Vuosituhannen vaihteessa Mamdouh Bisharat vuokrasi talon estääkseen sen purkamisen. Diwan on arabiaksi huone, joka on aina avoin vieraille.\n\nNykyään talossa on antiikkia, valokuvia ja 1920-luvun huonekaluja, ja siellä järjestetään musiikki-, maalaus-, kirjallisuus- ja runotapahtumia. King Faisal Street oli emiirikunnan aikana kaupungin keskeisimpiä katuja. Isoisän matkavuonna 1873 taloa ei ollut vielä rakennettu.",
+   "kuvat": [
+    {
+     "tiedosto": "Diwan al Duq.jpg",
+     "lyhyt": "Duke's Diwan oli Ammanin ensimmäinen postitoimisto 1920-luvulta.",
+     "selite": "Duke's Diwan rakennettiin 1920-luvulla Ammanin ensimmäiseksi postitoimistoksi, ja nykyään siellä on kulttuuri- ja taidekeskus.",
+     "lahde": "Fjmustak, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": null,
+ "ehdotukset": {
+  "lentoasema": "Queen Alia International Airport (AMM)",
+  "huomiot": [
+   "Kohdekartassa 7 kohdetta, kaikki rakennuksia: ei aukio- eikä luontokohdetta. Hashemite Plazalle ei löytynyt koordinaattia (en-Wikipedia-artikkelissa ei koordinaatteja, Wikidata Q6727215 ilman P625:ttä, Wikivoyagen Amman-sivulla ei omaa merkintää), joten aukiota ei otettu kartalle; keksittyä pistettä ei käytetty. Plaza mainitaan teksteissä.",
+   "Linnavuori (Wikidata Q3157009: 31.9547, 35.9343) on noin 110 metrin päässä Suuresta temppelistä (Q20423672: 31.9538, 35.9349), joten linnavuoren kerronta on yhdistetty Suuren temppelin ja Umaijadien palatsin (Q21188319: 31.9555, 35.9342) kohteisiin.",
+   "Tarkkoja lukuja ja vuosia on pyöristetty LISÄSÄÄNNÖN mukaan, koska faktapohjassa ei ole [V]-merkintöjä: tšerkessien saapuminen \"1870-luvun lopulla\" (lähteissä 1878), Hejaz-rata \"1900-luvun alussa\", pääkaupunkivuosi \"1920-luvulla\" (lähteissä 1921 ja 1928), Seil-puron peittäminen \"1900-luvun jälkipuoliskolla\" (1964–1971). Tarkistajan kannattaa katsoa nämä ja päättää, saako tarkka vuosi takaisin.",
+   "Suuren temppelin nimi: konteksti.json (tunnusrakennukset) sanoo Herkuleen temppeli, mutta lähteen mukaan nimi on epätarkka eikä jumaluutta tunneta varmasti; tekstit käyttävät nimeä Suuri temppeli ja mainitsevat Herkules-nimen lähteen varauksella.",
+   "Valokuvan tiedosto \"Amman Odeum c 1900.jpg\": Commonsin nimen \"Odeum\" tunnistus odeoniksi on varmistamatta, joten kuvateksti puhuu vain roomalaisajan raunioista. Nykykuvaa (uusi) ei ole valittu, koska kuvat.md:ssä ei ole varattua lisäkuvaa.",
+   "Nosto L2:n kuva on vuodelta 1921 (ei 1870-luvun lopulta); kuvateksti kertoo sen. Seil-purosta (K4) ei löytynyt kelvollista kuvaa, joten nostossa on nymfaionin kuva.",
+   "Matkustusturvallisuus: um.fi ei ollut saatavilla (403) eikä Wikivoyage Jordanin alueellista varoituskenttää (2026-02-28) ole kirjoitettu tekstiin; oppaan kappaleessa on vain yleinen kehotus tarkistaa ajantasaiset matkustustiedot. Päätoimittaja päättää tarkemman sanamuodon.",
+   "Säädataa ei ole (saatiedot null); oppaan sääjakso perustuu en-Wikipedian ilmastotaulukkoon (Ammanin lentokenttä, 1989–2018). Vuosisade on ristiriitainen lähteissä (taulukko 238,5 mm, teksti 385 mm, fi 270 mm), joten sitä ei kirjattu.",
+   "Rooman teatterin ja odeonin kohteiden välimatka on noin 90 metriä, joten kartan numeroympyrät ovat lähellä toisiaan."
+  ]
+ }
+}
