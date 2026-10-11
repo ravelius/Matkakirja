@@ -18,7 +18,7 @@ Aiempi Sää/Commons-rajapintaeste: 11.10.2026 robots.txt kieltää en/fi-Wikipe
 | praia | valmis | poikkeama avoin | — | — | — | — | A: 5 kohdetta perustellen; B: 13 kuvaa, 8 puuttuu |
 | banjul | valmis | poikkeama avoin | korjattu luonnos | osittain | tekstikorjaukset tehty | 3 kuvavirhettä | 16 kuvaa; K3 hylätty, pysty ja Albertin torin kuva puuttuvat |
 | bissau | valmis | poikkeama avoin | korjattu luonnos | osittain | tekstikorjaukset tehty | 3 kuvavirhettä | 16 kuvaa kaavio mukaan lukien; 3 kohdekuvaa puuttuu |
-| conakry | valmis | poikkeama avoin | työn alla | — | — | — | 21 kuvaa; Camayennen kohdekuva puuttuu, C etenee |
+| conakry | valmis | poikkeama avoin | luonnos | työn alla | — | — | 21 kuvaa; 1 kuvavirhe / 0 varoitusta, riippumaton D etenee |
 | monrovia | valmis | työn alla | — | — | — | — | A: 6 lähdekoordinaattikohdetta ja sääaseman ero kirjattu |
 | tunis | valmis | — | — | — | — | — | A: kevyt, 6 vanhan ytimen kohdetta; ei Karthagon toistoa |
 
