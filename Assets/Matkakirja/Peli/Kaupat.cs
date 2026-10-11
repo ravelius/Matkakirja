@@ -47,6 +47,8 @@ namespace Matkakirja.Peli
         public const int SahkePullaVinkkiHinta = 50;   // fokusvirta.js SAHKE_PULLA_VINKKI_HINTA
         public const int SahkePullaLinkkiHinta = 25;   // fokusvirta.js SAHKE_PULLA_LINKKI_HINTA
         public const int PalloLentoHinta = 200;        // kuumailmapallolento (omistaja 11.10.2026, juna 182; vain natiivi)
+        public const int OlavinlinnaHinta = 20;        // Olavinlinna-nosto "Pelaa" (omistaja 11.10.2026, juna 182; vain natiivi)
+        public const int OlavinlinnaAlustaHinta = 10;  // "Aloita alusta", kun tallennus on olemassa; "Jatka" ilmainen
 
         /// <summary>Web sahkePalkkio(ohi, pohja): max(0, Math.round(pohja × (1 − 0,25 × ohi))).</summary>
         public static int SahkePalkkioOhilyonneista(int ohi, int pohja = SahkePalkkio) =>
@@ -440,6 +442,29 @@ namespace Matkakirja.Peli
         /// <summary>Maksu takaisin, jos pallo ei auennut maksun jälkeen (KaupunkiPallot.Avaa).</summary>
         public KauppaTulos PalloLentoPalautus(int hinta = KauppaVakiot.PalloLentoHinta)
         {
+            P.Raha += hinta;
+            return new KauppaTulos { Ok = true, Hinta = -hinta };
+        }
+
+        // --- Olavinlinna ------------------------------------------------------
+
+        /// <summary>Olavinlinna-pelin hinta: "Pelaa" £20, "Aloita alusta" £10 (omistaja 11.10.2026, juna 182). "Jatka" on ilmainen.</summary>
+        public static int OlavinlinnanHinta(bool alusta) => alusta ? KauppaVakiot.OlavinlinnaAlustaHinta : KauppaVakiot.OlavinlinnaHinta;
+
+        /// <summary>Olavinlinna-pelin maksu ennen avausta; ei vie vuoroa.</summary>
+        public KauppaTulos Olavinlinna(bool alusta)
+        {
+            int hinta = OlavinlinnanHinta(alusta);
+            var p = P;
+            if (p.Raha < hinta) return KauppaTulos.Epaonnistui("Rahat eivät riitä");
+            p.Raha -= hinta;
+            return new KauppaTulos { Ok = true, Hinta = hinta };
+        }
+
+        /// <summary>Maksu takaisin, jos peli ei auennut maksun jälkeen.</summary>
+        public KauppaTulos OlavinlinnaPalautus(bool alusta)
+        {
+            int hinta = OlavinlinnanHinta(alusta);
             P.Raha += hinta;
             return new KauppaTulos { Ok = true, Hinta = -hinta };
         }
