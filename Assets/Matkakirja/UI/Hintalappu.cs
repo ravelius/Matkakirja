@@ -1,7 +1,7 @@
 // HINTALAPPU (Natiivi-UI; omistaja 11.10.2026 Päätoimittajan kautta, juna 182): maksullisen karttakohteen hinta sen kyljessä 3 s:n
 // ajan, kun pelaaja ei ole kohteen paikassa (kuumailmapallo muusta maasta "KUUMAILMAPALLO £200", raketti muualta kuin Tromssasta
-// "ISS £500"). Napautus ei silloin avaa eikä veloita. Pohja: päivälaskurin lasipilleri (mk-pelikello + mk-pelikello__paiva, kuten
-// aarrelaskuri), isoin kirjaimin. Yksi lappu kerrallaan; seuraa kohde-elementtiä (worldBound) ruutu ruudulta ja häviää, kun kohde
+// "ISS £500"). Napautus ei silloin avaa eikä veloita. Pohja: päivälaskurin lasipilleri ja kellorivi (mk-pelikello +
+// mk-pelikello__kello, kuten aarrelaskuri; kapiteelirivin harvennus levitti tekstin ruudun yli, simuajo d868ab8d). Yksi lappu kerrallaan; seuraa kohde-elementtiä (worldBound) ruutu ruudulta ja häviää, kun kohde
 // piiloutuu. Kutsu: Hintalappu.Nayta(kohdeElementti, teksti[, vasemmalle]).
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -31,13 +31,13 @@ namespace Matkakirja.Natiivi
                 juuri = Rakenne.El("mk-erikoisnostot", k.Juuri(UiKerros.Nostot), PickingMode.Ignore);
                 juuri.name = "hintalappu";
                 lappu = Rakenne.El("mk-pelikello", juuri, PickingMode.Ignore);
-                rivi = Rakenne.Teksti("", "mk-pelikello__paiva", lappu);
-                Kirjasimet.Aseta(rivi, Kirjasin.Kone);
+                rivi = Rakenne.Teksti("", "mk-pelikello__kello", lappu);
+                Kirjasimet.Aseta(rivi, Kirjasin.KoneBold);
                 lappu.style.display = DisplayStyle.None;
                 k.JokaRuutu += Ruutu;
             }
             juuri.BringToFront();
-            rivi.text = (teksti ?? "").ToUpperInvariant();
+            rivi.text = teksti ?? "";
             kohde = kohdeElementti;
             vasen = vasemmalle;
             loppuu = Time.unscaledTime + KestoS;
