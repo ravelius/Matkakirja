@@ -345,37 +345,26 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("ihmisen-matka,keksinnot,radio", string.Join(",", w.WebKynnys(new[] { "pallo" }, 0, 1400)));
         }
 
-        [Testi] static void LinssiaarteetToisestaAarteestaJaKaupungeista()
+        [Testi] static void LinssiaarteetKaupungeistaEiIssAarteesta()
         {
-            // Omistaja 11.10.2026 (juna 182): ISS toisesta avatusta aarteesta (ensimmäinen pöllö), kaupunkien aarteista
-            // topografia (Alpit), radio (Lontoo), keksinnot (Edinburgh), ihmisen-matka (Istanbul) ja taidemuseo (Amsterdam).
+            // Omistaja 11.10.2026 (juna 182): topografia (Alpit), radio (Lontoo), keksinnot (Edinburgh), ihmisen-matka
+            // (Istanbul) ja taidemuseo (Amsterdam) aarteen lisäksi. ISS ei tule aarteesta (vain raketilla, Kaupat.Raketti).
             var m = UusiPeli();
             var om = new Linssiomistus(new Passi()).Kytke(m);
             var p = m.Tila.Pelaaja;
             var saadut = new List<string>();
             om.Myonsi += (_, my) => saadut.Add(my.Tunnus);
             // Pois oletuksena: webin kultainen jälki ei muutu.
-            p.Loydot.Add(Laattatyypit.IsoAarre); p.Loydot.Add(Laattatyypit.IsoAarre);
             Oleta.Sama(0, om.Linssiaarre(p, new Loyto { Kaupunki = "lontoo", Tyyppi = Laattatyypit.IsoAarre }).Count, "pois päältä");
-            p.Loydot.Clear();
             om.LinssiaarteetKaytossa = true;
-            // Ensimmäinen avattu (pöllö): ei ISS:ää.
-            p.Loydot.Add(Laattatyypit.IsoAarre);
-            Oleta.Sama(0, om.Linssiaarre(p, new Loyto { Kaupunki = "rooma", Tyyppi = Laattatyypit.IsoAarre, Pollo = true }).Count, "1. aarre");
-            // Toinen avattu: ISS aarteen lisäksi.
-            p.Loydot.Add(Laattatyypit.IsoAarre);
-            var toinen = om.Linssiaarre(p, new Loyto { Kaupunki = "pariisi", Tyyppi = Laattatyypit.IsoAarre });
-            Oleta.Sama("satelliitti", string.Join(",", toinen.Select(x => x.Tunnus)));
-            Oleta.Tosi(om.Omistaa("satelliitti"), "ISS omistuksessa");
-            // Kaupunkien linssiaarteet, kukin kerran; jo omistettu ei ilmoitu uudelleen.
-            foreach (var k in new[] { "alpit", "lontoo", "edinburgh", "istanbul", "amsterdam", "lontoo" })
+            foreach (var k in new[] { "rooma", "pariisi", "alpit", "lontoo", "edinburgh", "istanbul", "amsterdam", "lontoo" })
             {
                 p.Loydot.Add(Laattatyypit.IsoAarre);
                 om.Linssiaarre(p, new Loyto { Kaupunki = k, Tyyppi = Laattatyypit.IsoAarre });
             }
-            Oleta.Sama("satelliitti,topografia,radio,keksinnot,ihmisen-matka,taidemuseo", string.Join(",", saadut));
+            Oleta.Sama("topografia,radio,keksinnot,ihmisen-matka,taidemuseo", string.Join(",", saadut));
+            Oleta.Tosi(!om.Omistaa("satelliitti"), "ISS ei aarteesta");
             Oleta.Tosi(om.Omistaa("taidemuseo") && om.Omistaa("radio"), "taidemuseo avautuu");
-            // Lappi (tähtitaivas) ei vielä.
             Oleta.Tosi(!Linssiomistus.Linssiaarteet.ContainsKey("lappi"), "tähtitaivas vasta valmiina");
         }
 
