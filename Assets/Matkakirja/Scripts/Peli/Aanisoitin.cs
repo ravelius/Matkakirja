@@ -815,6 +815,17 @@ namespace Matkakirja.Natiivi
         float esiTarkistus;
 
         /// <summary>
+        /// Esittelyn nopea vain levylle (ei muistiin): kehittäjän maailmahypyllä ei ole matka-aikaa, joten joutilaana ladatut
+        /// tiedostot purkautuvat saapuessa levyltä (PT 11.10. 13.4x, simu d9e01e670: Tukholman nopea verkosta 4,2 s hypyllä).
+        /// </summary>
+        public void EsilataaEsitysNopeaLevylle(string kaupunki)
+        {
+            var url = Tila?.EsitysNopeaOsoite(kaupunki);
+            if (url == null || ladataan.Contains(url) || File.Exists(LevyPolku(url))) return;
+            StartCoroutine(Levylle(url, LevyPolku(url)));
+        }
+
+        /// <summary>
         /// Uuden esittelyn kaupungin nopea valmiiksi (ennakointi tai tiedossa oleva saapuminen). Toistuva pyyntö vain päivittää
         /// vanhenemisajan. Musiikki pois tai ei jaksoa = ei mitään.
         /// </summary>
