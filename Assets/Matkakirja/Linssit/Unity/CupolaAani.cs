@@ -23,6 +23,13 @@
 // (luennan hyppyongelma). Tiedostot ladataan kerran laitteen välimuistiin. Muualla kuin iOS-laitteella/simulaattorissa
 // (editori) kerrokset eivät soi. Testimykistys (simulaattori) ja Äänimaisema-kytkin vaientavat myös nämä, ja sovellus
 // taustalle sulkee kerrokset (paluussa uusi arvottu kohta).
+//
+// NASA-RADIO SATUNNAISESTI (omistaja 11.10.2026 klo 12.5x PT:n kautta: "ne nasan oikeat radioäänet ovat hyviä. niitä voisi
+// soittaa aina välissä ja valita niistä sellaiset missä kuuluu muitakin kieliä kuin englantia"): kolme aitoa NASA JSC:n
+// radioäänitettä (Progress- ja Sojuz-telakointi, irrotus; englantia ja venäjää, public domain, aanet/iss-v1/radio/) soivat koko
+// linssin ajan (kuten humina) yksi kerrallaan, arvotussa järjestyksessä ja arvotun hiljaisen tauon (RadioTaukoMinS…MaxS) jälkeen,
+// huminan ja muiden tehosteiden alla (RadioV2Voima) ja väistävät puhetta selvästi. Kerros 2, ei silmukkana: soitto loppuu
+// tiedoston kestoon (häivytys), sitten uusi tauko. Vanha 23 min:n radiosilmukka (kerros 1) pysyy pois (RadioKaytossa = false).
 using System.Collections;
 using System.IO;
 using System.Runtime.InteropServices;
@@ -40,7 +47,18 @@ namespace Matkakirja.Natiivi
         public const float RadioPituusS = 1380f;
         /// <summary>NASA:n radiosilmukka (rätinä) pois käytöstä (omistaja 3.10.2026); tiedostoa ei ladata eikä kerrosta avata.</summary>
         public static bool RadioKaytossa = false;
-        const int Humina = 0, Radio = 1;
+        const int Humina = 0, Radio = 1, NasaRadio = 2;
+        /// <summary>NASA-radion äänitteet (url, kesto s) ja soittotapa (omistaja 11.10.2026, ks. alku).</summary>
+        public static readonly (string Url, float KestoS)[] NasaRadiot =
+        {
+            ("https://media.matkakirja.app/aanet/iss-v1/radio/iss-radio-progress-telakointi.mp3", 147.2f),
+            ("https://media.matkakirja.app/aanet/iss-v1/radio/iss-radio-sojuz-telakointi.mp3", 109.3f),
+            ("https://media.matkakirja.app/aanet/iss-v1/radio/iss-radio-irrotus.mp3", 127.3f),
+        };
+        /// <summary>Tauko ennen radiota ja radioiden välissä (s, arvotaan väliltä). Ensimmäinen tauko lyhyempi.</summary>
+        public static float RadioTaukoMinS = 45f, RadioTaukoMaxS = 120f, RadioEkaTaukoMinS = 20f, RadioEkaTaukoMaxS = 60f;
+        /// <summary>Taso: tiedostot −23 LUFS, humina −26 LUFS; 0,35 ≈ 6 dB huminan alla. Puheen aikana lähes vaiti.</summary>
+        public static float RadioV2Voima = 0.35f, RadioV2Vaisto = 0.1f;
         /// <summary>Perustasot (humina −26 LUFS, radio −20 LUFS tiedostossa → radio 6 dB huminaa hiljempänä).</summary>
         public static float HuminaVoima = 0.9f, RadioVoima = 0.45f;
         /// <summary>Väistön kertoimet puheen aikana (AaniTila.Voimassa &lt; 1): humina vain vähän, radio selvästi.</summary>
@@ -65,12 +83,16 @@ namespace Matkakirja.Natiivi
 
         static CupolaAani instanssi;
         bool paalla, soi, linssissa, cupolassa;
-        readonly float[] taso = new float[2];
+        readonly float[] taso = new float[3];
         /// <summary>Tavoitetaso ilman testimykistystä (mittaus: väistö näkyy myös mykistetyssä simulaattorissa).</summary>
-        readonly float[] tavoite = new float[2];
+        readonly float[] tavoite = new float[3];
         bool puheNyt;
         int vuoro;
         string viimeVirhe;
+        /// <summary>NASA-radio: soi nyt (kerros auki ja ennen loppuhäivytystä), loppuhetki, edellinen arvottu ja seuraavan alku.</summary>
+        bool nasaSoi;
+        float nasaLoppu, nasaSeuraava = -1f;
+        int nasaEdellinen = -1;
 
         /// <summary>Korvataanko linssin taustaääni (astro-humina) ISS-huminalla nyt: humina soi (linssissä tai Cupolassa).</summary>
         public static bool KorvaaLinssinTaustan(string tunnus) =>
@@ -85,6 +107,8 @@ namespace Matkakirja.Natiivi
             m.Rekisteroi("iss", "maisema", "cupola-humina", "Cupolan humina", "cupola-humina-gen-90s", "cupola-humina-gen-90s-16k");
             // Radiosilmukkaa ei rekisteröidä: omistaja poisti sen 3.10. (rätinä), RadioKaytossa = false (PT 9.10.: ei kytketä).
             m.Rekisteroi("linssit", "maisema", "cupola-humina", "Linssin humina (Cupola)", "cupola-humina-gen-90s", "cupola-humina-gen-90s-16k");
+            // NASA-radio satunnaisesti (omistaja 11.10.2026): ISS:n maisemaan, oma taso.
+            m.Rekisteroi("iss", "maisema", "iss-radio", "NASA-radio (venäjää)", "iss-radio-progress-telakointi", "iss-radio-sojuz-telakointi", "iss-radio-irrotus");
             // Astronautin humina (linssin taustaääni; Cupolan humina korvaa sen ISS:ssä, mutta taso säädettävissä): Aanisoitin.LinssiTausta.
             m.Rekisteroi("iss", "maisema", Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Humina, "Astronautin humina", Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Humina);
             return true;
@@ -161,6 +185,8 @@ namespace Matkakirja.Natiivi
             float alku = Random.Range(0f, RadioPituusS - 5f);
             if (RadioKaytossa) MatkakirjaSilmukka_Avaa(Radio, radio, alku, 0);
             soi = true;
+            nasaSoi = false;
+            nasaSeuraava = Time.unscaledTime + Random.Range(RadioEkaTaukoMinS, RadioEkaTaukoMaxS);
             Debug.Log(RadioKaytossa ? $"MATKAKIRJA cupola-aani: soi, radio kohdasta {alku:0} s" : "MATKAKIRJA cupola-aani: soi (humina v2, ei radiota)");
         }
 
@@ -178,7 +204,8 @@ namespace Matkakirja.Natiivi
             if (oma != vuoro || paalla) yield break;
             MatkakirjaSilmukka_Sulje(Humina);
             MatkakirjaSilmukka_Sulje(Radio);
-            soi = false;
+            MatkakirjaSilmukka_Sulje(NasaRadio);
+            soi = nasaSoi = false;
         }
 
         IEnumerator Hae(string url, System.Action<string> valmis)
@@ -200,7 +227,7 @@ namespace Matkakirja.Natiivi
         {
             if (!paalla) return;
             // Taustalla ei soiteta; paluussa uusi arvottu kohta.
-            if (tauko) { vuoro++; MatkakirjaSilmukka_Sulje(Humina); MatkakirjaSilmukka_Sulje(Radio); soi = false; }
+            if (tauko) { vuoro++; MatkakirjaSilmukka_Sulje(Humina); MatkakirjaSilmukka_Sulje(Radio); MatkakirjaSilmukka_Sulje(NasaRadio); soi = nasaSoi = false; }
             else Kaynnista();
         }
 
@@ -223,6 +250,35 @@ namespace Matkakirja.Natiivi
             float r = kuuluu ? tavoite[Radio] : 0f;
             Liu(Humina, h, puhe ? VaistoS : NousuS);
             Liu(Radio, r, puhe ? VaistoS : NousuS);
+            // NASA-radio: tauon jälkeen uusi äänite, soitto tiedoston keston ajan, häivytys ennen loppua (ei silmukkaa).
+            float nyt = Time.unscaledTime;
+            if (nasaSoi && nyt >= nasaLoppu) { nasaSoi = false; nasaSeuraava = nyt + LaskuS + Random.Range(RadioTaukoMinS, RadioTaukoMaxS); StartCoroutine(SuljeNasa(vuoro)); }
+            if (!nasaSoi && paalla && nasaSeuraava > 0f && nyt >= nasaSeuraava) { nasaSeuraava = -1f; StartCoroutine(AvaaNasa(vuoro)); }
+            tavoite[NasaRadio] = kuuluisi && nasaSoi ? RadioV2Voima * mik.Kerroin("maisema", "iss-radio") * (puhe ? RadioV2Vaisto : 1f) : 0f;
+            Liu(NasaRadio, kuuluu ? tavoite[NasaRadio] : 0f, puhe ? VaistoS : NousuS);
+        }
+
+        IEnumerator AvaaNasa(int oma)
+        {
+            int i = Random.Range(0, NasaRadiot.Length);
+            if (NasaRadiot.Length > 1 && i == nasaEdellinen) i = (i + 1 + Random.Range(0, NasaRadiot.Length - 1)) % NasaRadiot.Length;
+            string polku = null;
+            yield return Hae(NasaRadiot[i].Url, p => polku = p);
+            if (oma != vuoro || !paalla || !soi) yield break;
+            if (polku == null) { nasaSeuraava = Time.unscaledTime + RadioTaukoMaxS; yield break; }   // verkkovirhe: yritä myöhemmin
+            nasaEdellinen = i;
+            taso[NasaRadio] = 0f;
+            MatkakirjaSilmukka_Avaa(NasaRadio, polku, 0, 0);
+            nasaSoi = true;
+            nasaLoppu = Time.unscaledTime + NasaRadiot[i].KestoS - LaskuS - 0.3f;
+            Debug.Log($"MATKAKIRJA cupola-aani: NASA-radio {Path.GetFileName(polku)}");
+        }
+
+        IEnumerator SuljeNasa(int oma)
+        {
+            yield return new WaitForSeconds(LaskuS + 0.1f);
+            if (oma != vuoro || nasaSoi) yield break;
+            MatkakirjaSilmukka_Sulje(NasaRadio);
         }
 
         void Liu(int k, float kohde, float nousuS)
@@ -240,6 +296,7 @@ namespace Matkakirja.Natiivi
             if (i == null) return "cupola-aani: ei käynnistetty";
             string K(int k) => $"tila {MatkakirjaSilmukka_Tila(k)} taso {i.taso[k]:0.00} tavoite {i.tavoite[k]:0.00} aika {MatkakirjaSilmukka_Aika(k):0.0} s";
             return $"cupola-aani: päällä {i.paalla}, soi {i.soi}, mykistys {TestiMykistys.Paalla}, puhe {i.puheNyt}; humina {K(Humina)}; radio {K(Radio)}"
+                + $"; nasa-radio {K(NasaRadio)} soi {i.nasaSoi} seuraava {(i.nasaSeuraava > 0f ? i.nasaSeuraava - Time.unscaledTime : -1f):0} s"
                 + (i.viimeVirhe != null ? $"; virhe {i.viimeVirhe}" : "");
         }
     }
