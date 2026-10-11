@@ -257,15 +257,15 @@
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Nile and Cairo Tower - panoramio.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nile_and_Cairo_Tower_-_panoramio.jpg?width=1280",
-     "tekija": "Daniel Nussbaum",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nile_and_Cairo_Tower_-_panoramio.jpg",
-     "selite": "Tornista on näkymä Niilin ylittäville silloille ja Kairon keskustaan.",
-     "leveys": 2048,
-     "korkeus": 1536,
+     "tiedosto": "The Nile river crosed by the 6th Oct Bridge (left)- Qasr al-Nil Bridge (right) (14609131728).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Nile_river_crosed_by_the_6th_Oct_Bridge_(left)-_Qasr_al-Nil_Bridge_(right)_(14609131728).jpg?width=1280",
+     "tekija": "Jorge Láscar",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Nile_river_crosed_by_the_6th_Oct_Bridge_(left)-_Qasr_al-Nil_Bridge_(right)_(14609131728).jpg",
+     "selite": "Näkymä Kairon tornista: Niili, Gezira-saaren puistot sekä Qasr al-Nilin ja Lokakuun kuudennen päivän sillat johtavat keskustaan.",
+     "leveys": 4288,
+     "korkeus": 2848,
      "tarkistettu": true
     },
     {
@@ -495,42 +495,6 @@
      "selite": "Portin massiiviset tornit ovat osa Kairon vanhaa kaupunginmuuria.",
      "leveys": 3456,
      "korkeus": 2304,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
-   "q": "Q597617",
-   "nimi": "Kairon oopperatalo",
-   "peruste": "sitelinks",
-   "koko_m": 200,
-   "lat": 30.04245,
-   "lon": 31.22353,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Cairo Opera House - panoramio.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cairo_Opera_House_-_panoramio.jpg?width=1280",
-     "tekija": "AwOiSoAk KaOsIoWa",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cairo_Opera_House_-_panoramio.jpg",
-     "selite": "Kairon oopperatalo sijaitsee Gezira-saarella Niilin keskellä.",
-     "leveys": 3648,
-     "korkeus": 2432,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Cairo Opera House at evening 06.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cairo_Opera_House_at_evening_06.jpg?width=1280",
-     "tekija": "لا روسا",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cairo_Opera_House_at_evening_06.jpg",
-     "selite": "Illalla ooppera on valaistu lämpimin sävyin.",
-     "leveys": 4160,
-     "korkeus": 2336,
      "tarkistettu": true
     }
    ]

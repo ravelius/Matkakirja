@@ -14,8 +14,7 @@
     "Q2599114",
     "Q2920069",
     "Q1238770",
-    "Q582193",
-    "Q582018"
+    "Q582193"
    ],
    "kuvat": [
     {
@@ -2140,13 +2139,11 @@
     "Q2581624",
     "Q1522557",
     "Q1670193",
-    "Q2477297",
     "Q1567959",
     "Q3096341",
     "Q671363",
     "Q3098136",
-    "Q2629758",
-    "Q3527875"
+    "Q2629758"
    ],
    "kuvat": [
     {
@@ -4296,7 +4293,6 @@
     "Q1430119",
     "Q2422298",
     "Q2041270",
-    "Q597617",
     "Q286446",
     "Q307747"
    ],
@@ -5323,7 +5319,6 @@
     "Q6385318",
     "Q16267974",
     "Q1654025",
-    "Q288618",
     "Q42605973",
     "Q60747485",
     "Q18344049"
@@ -7414,7 +7409,6 @@
     "Q117654",
     "Q3326866",
     "Q3457262",
-    "Q208389",
     "Q285287"
    ],
    "kuvat": [
@@ -8006,7 +8000,6 @@
     "Q18467833",
     "Q36698317",
     "Q2091236",
-    "Q111469133",
     "Q1493703",
     "Q798812"
    ],
@@ -12358,32 +12351,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Ethiopian National Museum in Addis Ababa.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethiopian_National_Museum_in_Addis_Ababa.jpg?width=1280",
-     "tekija": "Ninaras",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ethiopian_National_Museum_in_Addis_Ababa.jpg",
-     "selite": "Museon kokoelmat ulottuvat ihmiskunnan varhaisimmista vaiheista keisarikunnan aikaan.",
-     "leveys": 2999,
-     "korkeus": 1999,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Addis-Abeba-Musée national d'Ethiopie (1).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Addis-Abeba-Mus%C3%A9e_national_d'Ethiopie_(1).jpg?width=1280",
-     "tekija": "Ji-Elle",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Addis-Abeba-Mus%C3%A9e_national_d'Ethiopie_(1).jpg",
-     "selite": "Museon sisääntulohalli avautuu usean kerroksen läpi.",
-     "leveys": 4320,
-     "korkeus": 3240,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
      "tiedosto": "Coronas de emperadores etíopes, museo nacional de Etiopía, Adís Abeba, Etiopía, 2024-01-19, DD 18.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coronas_de_emperadores_et%C3%ADopes%2C_museo_nacional_de_Etiop%C3%ADa%2C_Ad%C3%ADs_Abeba%2C_Etiop%C3%ADa%2C_2024-01-19%2C_DD_18.jpg?width=1280",
      "tekija": "Diego Delso",
@@ -12555,19 +12522,6 @@
      "leveys": 4520,
      "korkeus": 3504,
      "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "2 Faculty Of Pharmacy Sports and Assembly Hall View from East to West.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2_Faculty_Of_Pharmacy_Sports_and_Assembly_Hall_View_from_East_to_West.jpg?width=1280",
-     "tekija": "The Chroniclers",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2_Faculty_Of_Pharmacy_Sports_and_Assembly_Hall_View_from_East_to_West.jpg",
-     "selite": "Modernistinen kampusrakennus edustaa 1960-luvun etiopialaista arkkitehtuuria.",
-     "leveys": 4988,
-     "korkeus": 3456,
-     "tarkistettu": true
     }
    ]
   },
@@ -12591,43 +12545,6 @@
      "selite": "Hager Fikir on yksi Afrikan vanhimmista yhä toimivista teattereista.",
      "leveys": 1280,
      "korkeus": 960,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q582018": {
-   "nimi": "Etiopian kansallisteatteri",
-   "peruste": "pelin nosto",
-   "kaupunki": "addisabeba",
-   "kaupunkiQ": "Q3624",
-   "lat": 9.01611,
-   "lon": 38.7519,
-   "koko_m": 80,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Ethiopian National Theater 2.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethiopian_National_Theater_2.jpg?width=1280",
-     "tekija": "Lenege",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ethiopian_National_Theater_2.jpg",
-     "selite": "Teatterin 1900-luvun puolivälin julkisivu ja katettu kulkukäytävä näkyvät kadun puolelta.",
-     "leveys": 1280,
-     "korkeus": 591,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Ethiopian National Theatre.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethiopian_National_Theatre.jpg?width=1280",
-     "tekija": "By LuckyInWaco",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ethiopian_National_Theatre.jpg",
-     "selite": "Rakennuksessa esiintyivät etiopialaisen jazzin ja musiikin tekijät.",
-     "leveys": 2448,
-     "korkeus": 3264,
      "tarkistettu": true
     }
    ]
@@ -31801,41 +31718,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "The African Renaissance Monument.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_African_Renaissance_Monument.jpg?width=1280",
-     "tekija": "Richard N Horne",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_African_Renaissance_Monument.jpg",
-     "selite": "Pronssipatsas kohoaa kukkulalla ja esittää miestä, naista ja lasta kohti tulevaisuutta.",
-     "leveys": 3022,
-     "korkeus": 2654,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "African Renaissance Monument (5502494604).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/African_Renaissance_Monument_(5502494604).jpg?width=1280",
+     "tiedosto": "Dakars Mamelles (5824544243).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dakars_Mamelles_(5824544243).jpg?width=1280",
      "tekija": "Jeff Attaway",
      "lisenssi": "CC BY 2.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:African_Renaissance_Monument_(5502494604).jpg",
-     "selite": "Monumentti hallitsee Dakarin laitakaupungin yläpuolella olevaa kukkulaa.",
-     "leveys": 3041,
-     "korkeus": 2281,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Dakar belle vue.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dakar_belle_vue.jpg?width=1280",
-     "tekija": "Djibfall",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dakar_belle_vue.jpg",
-     "selite": "Portaikko johtaa patsaan juurelle ja kaupungin yli avautuvaan näköalaan.",
-     "leveys": 3072,
-     "korkeus": 4096,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dakars_Mamelles_(5824544243).jpg",
+     "selite": "Ilmakuva Dakarin laitakaupungin taloista ja Mamelles-kukkuloista; kuva on otettu leijalla nostetulla kameralla.",
+     "leveys": 3617,
+     "korkeus": 2713,
      "tarkistettu": true
     }
    ]
@@ -31973,43 +31864,6 @@
      "selite": "Sisäänkäynnin yläpuolella pyhimysveistokset katsovat alas aukiolle.",
      "leveys": 4608,
      "korkeus": 3456,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q2477297": {
-   "nimi": "Dakarin suuri moskeija",
-   "peruste": "pelin nosto",
-   "kaupunki": "dakar",
-   "kaupunkiQ": "Q3718",
-   "lat": 14.67822,
-   "lon": -17.44219,
-   "koko_m": 120,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Grande mosquée de Dakar.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grande_mosqu%C3%A9e_de_Dakar.jpg?width=1280",
-     "tekija": "M.GADJ!",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grande_mosqu%C3%A9e_de_Dakar.jpg",
-     "selite": "Valkoinen moskeija ja sen minareetti hallitsevat Médinan kaupunginosan kulmaa.",
-     "leveys": 4032,
-     "korkeus": 2468,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Institut Islamque de la grande mosquée de Dakar.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Institut_Islamque_de_la_grande_mosqu%C3%A9e_de_Dakar.jpg?width=1280",
-     "tekija": "M.GADJ!",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Institut_Islamque_de_la_grande_mosqu%C3%A9e_de_Dakar.jpg",
-     "selite": "Moskeijan yhteydessä toimivan islamilaisen instituutin sisäpiha on avara ja kaareva.",
-     "leveys": 4032,
-     "korkeus": 3024,
      "tarkistettu": true
     }
    ]
@@ -32195,30 +32049,6 @@
      "selite": "Kokoelman naamiot ja asut kertovat alueen seremonioista.",
      "leveys": 3216,
      "korkeus": 2136,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q3527875": {
-   "nimi": "Daniel Sorano -kansallisteatteri",
-   "peruste": "pelin nosto",
-   "kaupunki": "dakar",
-   "kaupunkiQ": "Q3718",
-   "lat": 14.66639,
-   "lon": -17.43972,
-   "koko_m": 100,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Théâtre Daniel Sorano.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Th%C3%A9%C3%A2tre_Daniel_Sorano.jpg?width=1280",
-     "tekija": "PaulAxelKOUASSI",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Th%C3%A9%C3%A2tre_Daniel_Sorano.jpg",
-     "selite": "Senegalin kansallisteatterin julkisivu on nimetty näyttelijä Daniel Soranon mukaan.",
-     "leveys": 1360,
-     "korkeus": 766,
      "tarkistettu": true
     }
    ]
@@ -52053,15 +51883,15 @@
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Nile and Cairo Tower - panoramio.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nile_and_Cairo_Tower_-_panoramio.jpg?width=1280",
-     "tekija": "Daniel Nussbaum",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nile_and_Cairo_Tower_-_panoramio.jpg",
-     "selite": "Tornista on näkymä Niilin ylittäville silloille ja Kairon keskustaan.",
-     "leveys": 2048,
-     "korkeus": 1536,
+     "tiedosto": "The Nile river crosed by the 6th Oct Bridge (left)- Qasr al-Nil Bridge (right) (14609131728).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Nile_river_crosed_by_the_6th_Oct_Bridge_(left)-_Qasr_al-Nil_Bridge_(right)_(14609131728).jpg?width=1280",
+     "tekija": "Jorge Láscar",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Nile_river_crosed_by_the_6th_Oct_Bridge_(left)-_Qasr_al-Nil_Bridge_(right)_(14609131728).jpg",
+     "selite": "Näkymä Kairon tornista: Niili, Gezira-saaren puistot sekä Qasr al-Nilin ja Lokakuun kuudennen päivän sillat johtavat keskustaan.",
+     "leveys": 4288,
+     "korkeus": 2848,
      "tarkistettu": true
     },
     {
@@ -52297,43 +52127,6 @@
      "selite": "Portin massiiviset tornit ovat osa Kairon vanhaa kaupunginmuuria.",
      "leveys": 3456,
      "korkeus": 2304,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q597617": {
-   "nimi": "Kairon oopperatalo",
-   "peruste": "sitelinks",
-   "kaupunki": "kairo",
-   "kaupunkiQ": "Q85",
-   "lat": 30.04245,
-   "lon": 31.22353,
-   "koko_m": 200,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Cairo Opera House - panoramio.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cairo_Opera_House_-_panoramio.jpg?width=1280",
-     "tekija": "AwOiSoAk KaOsIoWa",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cairo_Opera_House_-_panoramio.jpg",
-     "selite": "Kairon oopperatalo sijaitsee Gezira-saarella Niilin keskellä.",
-     "leveys": 3648,
-     "korkeus": 2432,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Cairo Opera House at evening 06.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cairo_Opera_House_at_evening_06.jpg?width=1280",
-     "tekija": "لا روسا",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cairo_Opera_House_at_evening_06.jpg",
-     "selite": "Illalla ooppera on valaistu lämpimin sävyin.",
-     "leveys": 4160,
-     "korkeus": 2336,
      "tarkistettu": true
     }
    ]
@@ -54639,19 +54432,6 @@
      "selite": "Stadion sijaitsee meren rannalla ja Pöytävuoren juurella.",
      "leveys": 2738,
      "korkeus": 1825,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Cape Town Stadium Inside 02.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cape_Town_Stadium_Inside_02.jpg?width=1280",
-     "tekija": "Nkansahrexford",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cape_Town_Stadium_Inside_02.jpg",
-     "selite": "Katsomosta näkyy Pöytävuori kentän yli.",
-     "leveys": 5248,
-     "korkeus": 3936,
      "tarkistettu": true
     }
    ]
@@ -61104,52 +60884,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "KNUST main entrance with Kwame Nkrumah Memorial Park.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/KNUST_main_entrance_with_Kwame_Nkrumah_Memorial_Park.jpg?width=1280",
-     "tekija": "ZSM",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:KNUST_main_entrance_with_Kwame_Nkrumah_Memorial_Park.jpg",
-     "selite": "Yliopiston pääsisäänkäynnin luona on Kwame Nkrumahin muistopuisto.",
-     "leveys": 2429,
-     "korkeus": 1619,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q288618": {
-   "nimi": "Baba Yaran stadion",
-   "peruste": "sitelinks",
-   "kaupunki": "kumasi",
-   "kaupunkiQ": "Q182059",
-   "lat": 6.68268,
-   "lon": -1.60511,
-   "koko_m": 250,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Kumasi924.JPG",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kumasi924.JPG?width=1280",
-     "tekija": "Ina96",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kumasi924.JPG",
-     "selite": "Baba Yaran stadion on Ghanan suurimpia ja Kumasin jalkapallon koti.",
-     "leveys": 1600,
-     "korkeus": 1200,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Baba Yara Sports Stadium in Kumasi.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baba_Yara_Sports_Stadium_in_Kumasi.jpg?width=1280",
-     "tekija": "Michael Schubert",
-     "lisenssi": "Public domain",
-     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Baba_Yara_Sports_Stadium_in_Kumasi.jpg",
-     "selite": "Kenttä ja juoksurata valaistuna ottelun aikana.",
-     "leveys": 3264,
-     "korkeus": 2448,
+     "tiedosto": "Knust campus- Commercial area.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Knust_campus-_Commercial_area.jpg?width=1280",
+     "tekija": "Jude Hammond",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Knust_campus-_Commercial_area.jpg",
+     "selite": "Katu ja matalia rakennuksia Kwame Nkrumahin tiede- ja teknologiayliopiston kampuksella Kumasissa.",
+     "leveys": 4160,
+     "korkeus": 3120,
      "tarkistettu": true
     }
    ]
@@ -62006,19 +61749,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Statue of a woman carrying a baby in National Museum Centre-Lagos.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Statue_of_a_woman_carrying_a_baby_in_National_Museum_Centre-Lagos.jpg?width=1280",
-     "tekija": "Omoeko Media",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Statue_of_a_woman_carrying_a_baby_in_National_Museum_Centre-Lagos.jpg",
-     "selite": "Museon puutarhassa on veistoksia, ja sisällä säilytetään Nigerian taidetta ja arkeologiaa.",
-     "leveys": 3845,
-     "korkeus": 5820,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "Bronze ceremonial vessel in form of a snail shell, 9th century, Igbo-Ukwu, Nigeria.JPG",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bronze_ceremonial_vessel_in_form_of_a_snail_shell%2C_9th_century%2C_Igbo-Ukwu%2C_Nigeria.JPG?width=1280",
      "tekija": "Ochiwar",
@@ -62093,19 +61823,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "LAGOS CENTRAL MOSQUE.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/LAGOS_CENTRAL_MOSQUE.jpg?width=1280",
-     "tekija": "Sir Demo",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:LAGOS_CENTRAL_MOSQUE.jpg",
-     "selite": "Keskusmoskeijan neljä minarettia nousevat Lagosin saaren vilkkaan kauppakadun ylle.",
-     "leveys": 4878,
-     "korkeus": 3779,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "LAGOS ISLAND 1.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/LAGOS_ISLAND_1.jpg?width=1280",
      "tekija": "Sir Demo",
@@ -62140,19 +61857,6 @@
      "leveys": 5464,
      "korkeus": 3070,
      "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Tafawa Balewa Square Image.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tafawa_Balewa_Square_Image.jpg?width=1280",
-     "tekija": "Sidhant Bendre",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tafawa_Balewa_Square_Image.jpg",
-     "selite": "Aukion portin kotkapatsaat ja teräsrakenteet ovat sen tunnusmerkkejä.",
-     "leveys": 3172,
-     "korkeus": 1723,
-     "tarkistettu": true
     }
    ]
   },
@@ -62167,15 +61871,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Freedom Park Obelisk.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Freedom_Park_Obelisk.jpg?width=1280",
-     "tekija": "Folu Oyefeso",
+     "tiedosto": "Freedom Park Broad street.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Freedom_Park_Broad_street.jpg?width=1280",
+     "tekija": "Juganutt",
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Freedom_Park_Obelisk.jpg",
-     "selite": "Vapauden puisto on rakennettu entisen siirtomaavankilan paikalle kulttuuri- ja muistopuistoksi.",
-     "leveys": 3024,
-     "korkeus": 4032,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Freedom_Park_Broad_street.jpg",
+     "selite": "Freedom Park ilmasta: puisto on vihreä alue Lagosin saaren tiiviin kaupunkirakenteen keskellä.",
+     "leveys": 3352,
+     "korkeus": 2177,
      "tarkistettu": true
     },
     {
@@ -80341,30 +80045,6 @@
     }
    ]
   },
-  "Q208389": {
-   "nimi": "Sabha",
-   "peruste": "sitelinks",
-   "kaupunki": "murzuk",
-   "kaupunkiQ": "Q526822",
-   "lat": 27.03333,
-   "lon": 14.43333,
-   "koko_m": 2500,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Al-Fadl ibn Abbas Mosque, Sabha.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Fadl_ibn_Abbas_Mosque%2C_Sabha.jpg?width=1280",
-     "tekija": "مريم محمد الروادي",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-Fadl_ibn_Abbas_Mosque%2C_Sabha.jpg",
-     "selite": "Sabha on Fezzanin suurin kaupunki, ja sen moskeijat ovat kaupungin keskeisiä maamerkkejä.",
-     "leveys": 3264,
-     "korkeus": 2448,
-     "tarkistettu": true
-    }
-   ]
-  },
   "Q285287": {
    "nimi": "Qatrun",
    "peruste": "sitelinks",
@@ -84712,43 +84392,6 @@
      "selite": "Ouidahin harmaa basilika seisoo vodun-temppelin naapurina, ja kaksi uskontoa elää kaupungissa rinnakkain.",
      "leveys": 2736,
      "korkeus": 3648,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "10eme station de la Basilique de l'Immaculée-Conception de Ouidah.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/10eme_station_de_la_Basilique_de_l'Immacul%C3%A9e-Conception_de_Ouidah.jpg?width=1280",
-     "tekija": "Rachad sanoussi",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:10eme_station_de_la_Basilique_de_l'Immacul%C3%A9e-Conception_de_Ouidah.jpg",
-     "selite": "Basilikan muuria kiertää ristin tie, jonka kultaiset reliefit kuvaavat Kristuksen kärsimystä.",
-     "leveys": 5184,
-     "korkeus": 3888,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q111469133": {
-   "nimi": "Zoungbodjin muistomerkki",
-   "peruste": "pelin nosto",
-   "kaupunki": "orjarannikko",
-   "kaupunkiQ": "Q1360692",
-   "lat": 6.34,
-   "lon": 2.08917,
-   "koko_m": 100,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Mémorial de Zoungbodji (2).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/M%C3%A9morial_de_Zoungbodji_(2).jpg?width=1280",
-     "tekija": "Ji-Elle",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:M%C3%A9morial_de_Zoungbodji_(2).jpg",
-     "selite": "Zoungbodjin muistomerkki on orjuutettujen ihmisten joukkohaudan paikka, ja patsas kuvaa kahlittua polvistunutta naista.",
-     "leveys": 3648,
-     "korkeus": 5472,
      "tarkistettu": true
     }
    ]

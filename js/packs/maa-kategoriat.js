@@ -5572,14 +5572,9 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Bibliotheca Alexandrina — digitoidut aineistot',
-              tiedosto: 'Reading Room in Bibliotheca Alexandrina.jpg',
               teksti: 'Aleksandrian antiikin kirjasto tuhoutui kauan sitten, '
                 + 'mutta sen muistoksi rakennettiin samalle seudulle uusi. '
                 + 'Bibliotheca Alexandrina avattiin vuonna 2002.',
-              lyhyt: 'Bibliotheca Alexandrina avattiin 2002 kirjastona ja kulttuurikeskuksena Aleksandriaan.',
-              selite: 'Bibliotheca Alexandrina avattiin 2002 kirjastona ja '
-                + 'kulttuurikeskuksena Välimeren rannalle Aleksandriaan.',
-              lahde: 'D-Stanley, Wikimedia Commons (CC BY 2.0)',
               linkki: 'https://www.bibalex.org/en/default',
             },
           ],
@@ -44388,7 +44383,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kirja, joka syntyi kolmen vuoden eristyksessä',
           aika: '1375–1378',
-          tiedosto: 'Bust of Ibn Khaldun (Casbah of Bejaia, Algeria).jpg',
           teksti: 'Tlemcenin sulttaani lähetti Ibn Khaldunin vuonna 1375 '
               + 'Biskran arabiheimojen luo. Paluumatkalla hän haki turvaa '
               + 'berberiheimolta Länsi-Algerian Qalat Ibn Salaman '
@@ -44400,10 +44394,6 @@ export const MAA_KATEGORIAT = {
               + 'suvun valtaan ja kantaa samalla sen tuhon siementä. '
               + 'Kylässä ei ollut kirjastoa, joten viimeistelyä varten '
               + 'hänen oli palattava 1378 kotikaupunkiinsa Tunisiin.',
-          lyhyt: 'Ibn Khaldunin rintakuva seisoo Béjaïan kasbahissa, samassa maassa jossa Muqaddimah syntyi.',
-          selite: 'Ibn Khaldunin rintakuva seisoo Béjaïan kasbahissa '
-            + 'Algeriassa, samassa maassa, jossa Muqaddimah syntyi.',
-          lahde: 'Reda Kerbouche, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           otsikko: 'Maalivahti, josta tuli Nobel-kirjailija',
@@ -45695,7 +45685,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Musta tähti nousi keskiyöllä',
           aika: '6.3.1957',
-          tiedosto: 'Black Star Gate located in Accra.jpg',
           teksti: 'Kultarannikosta tuli 6. maaliskuuta 1957 ensimmäinen '
               + 'itsenäistynyt siirtomaa Saharan eteläpuolisessa Afrikassa. '
               + 'Accraan saapui yli sata toimittajaa ja valokuvaajaa, ja kun '
@@ -45706,9 +45695,6 @@ export const MAA_KATEGORIAT = {
               + 'tarkoittaa afrikkalaista vapautta. Nkrumah avasi Accraan '
               + 'myös Mustan tähden aukion. Maan nimeksi valittiin '
               + 'keskiaikaisen valtakunnan nimi.',
-          selite: 'Mustan tähden portti Accrassa. Kaarteen otsassa lukee '
-            + 'AD 1957 ja alempana Freedom and Justice.',
-          lahde: 'Uprising Man, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Kwame Nkrumah',
         },
       ],
@@ -46344,7 +46330,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Satamatyöläisestä elokuvan isäksi',
           aika: '1923–2007',
-          tiedosto: 'Monument Ousmane Sembene à l\'UCAD 03.jpg',
           teksti: 'Ousmane Sembène syntyi kalastajan poikana Ziguinchorissa, '
               + 'jätti koulun viisitoistavuotiaana ja teki Dakarissa '
               + 'ruumiillisia töitä. Sotavuosien jälkeen hän matkusti '
@@ -46356,10 +46341,6 @@ export const MAA_KATEGORIAT = {
               + 'Lyhytelokuva Borom Sarret valmistui 1963, ja La Noire de… '
               + 'oli 1966 ensimmäinen Saharan eteläpuolisen afrikkalaisen '
               + 'ohjaama pitkä elokuva.',
-          lyhyt: 'Sembènen muistomerkki Dakarin yliopistolla; Mandabi 1968 oli ensimmäinen wolofinkielinen elokuva.',
-          selite: 'Sembènen muistomerkki Dakarin yliopiston edessä. Hänen '
-            + 'elokuvansa Mandabi (1968) oli ensimmäinen wolofinkielinen.',
-          lahde: '4MAPS, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Ousmane Sembène',
         },
         {
@@ -48777,7 +48758,6 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Holvi, joka muurataan ilman muottia',
-          tiedosto: 'Gurna Mosque R01.jpg',
           teksti: 'Nubialaisten kirkkojen huomattavin rakennuspiirre on '
               + 'savitiilestä muurattu holvi. Sen erikoisuus on siinä, '
               + 'ettei se tarvitse puista tukimuottia: tiilet ladotaan '
@@ -48789,10 +48769,6 @@ export const MAA_KATEGORIAT = {
               + 'ja teki siitä 1900-luvulla oman rakennustapansa '
               + 'perustan. Sitä pidetään yhä yhtenä ekologisimmista '
               + 'rakennustavoista.',
-          lyhyt: 'Hassan Fathyn New Gournan moskeija on rakennettu savitiilestä nubialaisin holvein ja kupolein.',
-          selite: 'Hassan Fathyn suunnittelema New Gournan moskeija on '
-            + 'rakennettu savitiilestä nubialaisin holvein ja kupolein.',
-          lahde: 'Marc Ryckaert, Wikimedia Commons (CC BY 3.0)',
           wiki: 'Hassan Fathy',
         },
         {
@@ -51360,7 +51336,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kansanäänestys, joka teki kahdesta yhden',
           aika: '1919–1972',
-          tiedosto: 'Reunification monument in Buea.jpg',
+          tiedosto: "Aerial view of Buea from governor's street.jpg",
           teksti: 'Ensimmäisen maailmansodan jälkeen Saksan Kamerun jaettiin kahdeksi '
               + 'Kansainliiton mandaatiksi: suurempi osa Ranskalle, kapea läntinen '
               + 'kaistale Britannialle. Ranskan puoli itsenäistyi 1. tammikuuta 1960 '
@@ -51371,10 +51347,9 @@ export const MAA_KATEGORIAT = {
               + 'hyväksyttiin elokuussa — Buea sai Länsi-Kamerunin pääkaupungin aseman '
               + 'ja Yaoundé liittovaltion. Vuonna 1972 liittovaltio korvattiin '
               + 'yhtenäisvaltiolla.',
-          lyhyt: 'Buea oli Länsi-Kamerunin pääkaupunki; puistossa seisoo yhdistymisen muistomerkki.',
-          selite: 'Buea Kamerunvuoren rinteellä oli Länsi-Kamerunin pääkaupunki, ja '
-            + 'sen puistossa seisoo yhdistymisen muistomerkki.',
-          lahde: 'A.R. Etoyiva, Wikimedia Commons (CC BY-SA 4.0)',
+          lyhyt: "Buean kaupunki",
+          selite: "Näkymä Buean kaupunkiin Lounais-alueen kuvernöörin toimiston suunnasta; kuvassa näkyy myös moskeija.",
+          lahde: "3ch310n 123, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
     },
@@ -52512,7 +52487,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Levypakkaaja, josta tuli kitaran velho',
           aika: '1938–1989',
-          tiedosto: 'Luambo makiadi franco.jpg',
           teksti: 'Franco Luambo Makiadi jäi 11-vuotiaana ilman isää, ja koulu loppui siihen. '
               + 'Äiti myi munkkeja Ngiri-Ngirin torilla, ja poika sai paikan levyjen '
               + 'pakkaajana Ngoma-levy-yhtiöllä. Siellä hän opetteli kitaraa salaa aina, kun '
@@ -52522,10 +52496,6 @@ export const MAA_KATEGORIAT = {
               + 'perustettiin 1956, ja Franco siirsi sebenen kappaleen loppuun ja soitti sen '
               + 'peukalolla ja etusormella. Rolling Stone sijoitti hänet 2023 kaikkien aikojen '
               + 'kitaristien listalla sijalle 71.',
-          lyhyt: 'Yhtyeen tunnuslause oli On entre O.K., on sort K.O. – sisään kunnossa, ulos tyrmättynä.',
-          selite: 'Yhtyeen tunnuslause oli On entre O.K., on sort K.O. — sisään mennään '
-            + 'kunnossa, ulos tullaan tyrmättynä.',
-          lahde: 'Lingabo, Wikimedia Commons (CC0)',
           wiki: 'Franco Luambo',
         },
         {
@@ -58598,7 +58568,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Rodinin museo täyttyi zimbabwelaisesta kivestä',
           aika: '1968–1971',
-          tiedosto: 'Zimbabwe sculpture at Atlanta airport.JPG',
           teksti: 'Pakotteiden vuodet pitivät maan taidetta poissa '
               + 'maailmalta, mutta McEwen sai näyttelyt liikkeelle. New '
               + 'Yorkin MoMA esitteli työpajakoulun 1968–69, ja 1971 Pariisin '
@@ -58609,11 +58578,6 @@ export const MAA_KATEGORIAT = {
               + 'nousivat Dominic Benhura ja Tapfuma Gutsa; Benhuran veistos '
               + 'seisoo Singaporen kasvitieteellisessä puutarhassa ja '
               + 'McEwenin testamenttaama kokoelma British Museumissa.',
-          lyhyt: 'Atlantan lentoasemalla on 2001 alkaen ollut zimbabwelaisen kivenveiston näyttely matkustajareitillä.',
-          selite: 'Atlantan lentoasemalla on ollut vuodesta 2001 pysyvä '
-            + 'näyttely zimbabwelaista kivenveistoa matkustajien '
-            + 'kulkureitin varrella.',
-          lahde: 'Keizers, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       tehtava: {
@@ -60923,7 +60887,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kananhöyhensivellin maalasi taideauton',
           aika: '1991',
-          tiedosto: 'BMWArtCar-Mahlangu.jpg',
           teksti: 'Ndebelet maalaavat talojensa seinät kirkkain '
             + 'geometrisin kuvioin, ja työ on naisten: tytöt oppivat '
             + 'sen äidiltään ja isoäidiltään ennen kuin saavat oman '
@@ -60936,9 +60899,6 @@ export const MAA_KATEGORIAT = {
             + 'syntyivät BMW 525i:n pintaan kananhöyhenistä sidotulla '
             + 'siveltimellä, ja se oli hänen ensimmäinen työnsä muulle '
             + 'kuin seinälle.',
-          selite: 'Esther Mahlangun vuonna 1991 maalaama BMW 525i oli sarjan '
-            + 'ensimmäinen taideauto, jonka teki nainen.',
-          lahde: 'Olli1800, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Esther Mahlangu',
         },
         {
@@ -61375,7 +61335,6 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Valtaistuin, jonka termiitit allekirjoittivat',
-          tiedosto: 'Throne of Weapons, British Museum 1.jpg',
           teksti: 'Cristóvão Estevão Canhavato, taiteilijanimeltään Kester, kokosi '
               + '2002 valtaistuimen käytöstä poistetuista aseista, jotka hän sai '
               + '"aseista työkaluiksi" -hankkeelta. Osat ovat monesta maasta: '
@@ -61386,8 +61345,6 @@ export const MAA_KATEGORIAT = {
               + 'se on jälki, johon kantohihna oli kiinnitetty. Teoksen on '
               + 'allekirjoittanut hänen lisäkseen termiitti. British Museum osti sen '
               + 'samana vuonna.',
-          selite: 'Trono de Armas on ollut British Museumin kokoelmissa vuodesta 2002.',
-          lahde: 'Mike Peel, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
