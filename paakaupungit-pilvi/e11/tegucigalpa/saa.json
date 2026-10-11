@@ -1,0 +1,10 @@
+{
+ "lat": 14.11,
+ "lon": -87.2,
+ "keskilampo": [20.6,21.1,22.8,24.4,24.4,23.9,23.3,23.9,23.3,22.8,21.1,19.7],
+ "ylin": [27,28,30,31,31,29,29,29,29,28,27,27],
+ "alin": [14,14,15,17,18,18,18,18,18,17,16,15],
+ "sade": [8,3,8,43,107,145,61,89,132,145,58,20],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Tegucigalpa","revisio":1378333498,"taulukko":"Climate data for Tegucigalpa (Tegucigalpa Airport) 1991–2020, extremes 1951–present","lahteet":"Source 1: World Meteorological Organization (Precipitation/Temperature/Rain days 1991–2020) | Source 2: NOAA (Sunshine & Humidity standard baseline data)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":819,"luettu":"2026-10-11","huomiot":[]}
+}

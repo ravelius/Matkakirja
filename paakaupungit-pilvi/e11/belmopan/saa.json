@@ -1,0 +1,10 @@
+{
+ "lat": 17.25,
+ "lon": -88.77,
+ "keskilampo": [23.7,24.4,25.5,27.6,28.6,28.3,27.7,27.9,27.9,26.8,25.1,24.2],
+ "ylin": [28,30,31,34,34,33,32,33,33,31,29,29],
+ "alin": [19,19,20,22,23,24,23,23,23,23,21,20],
+ "sade": [135,51,49,41,119,260,245,226,222,244,202,135],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Belmopan","revisio":1375112996,"taulukko":"Climate data for Belmopan (1991–2020)","lahteet":"Source: National Meteorological Service of Belize (sun 1981–2010)","keskilampo":"Daily mean °C (°F)","sade":"Average rainfall mm (inches)","vuosisade":1929,"luettu":"2026-10-11","huomiot":["sade = vain vesisade (Average rainfall)"]}
+}

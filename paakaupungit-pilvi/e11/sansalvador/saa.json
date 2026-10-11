@@ -1,0 +1,10 @@
+{
+ "lat": 13.7,
+ "lon": -89.19,
+ "keskilampo": [23.1,23.9,24.7,25.4,24.9,24.3,24.3,24.2,23.7,23.6,23.3,23.1],
+ "ylin": [31,33,33,33,31,30,31,31,30,30,30,31],
+ "alin": [18,18,19,20,21,21,20,20,20,20,19,18],
+ "sade": [2,1,11,42,193,265,302,319,332,245,65,6],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"San Salvador","revisio":1377476653,"taulukko":"Climate data for San Salvador (Ilopango International Airport) 1991–2020, extremes 1957–present","lahteet":"Source 1: Ministerio de Medio Ambiente y Recursos Naturales, NOAA | Source 2: Danish Meteorological Institute (sun 1931–1960), Meteo Climat (record highs and lows), Weather.Directory","keskilampo":"Daily mean °C (°F)","sade":"Average rainfall mm (inches)","vuosisade":1783,"luettu":"2026-10-11","huomiot":["sade = vain vesisade (Average rainfall)"]}
+}

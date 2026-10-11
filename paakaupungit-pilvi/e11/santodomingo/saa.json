@@ -1,0 +1,10 @@
+{
+ "lat": 18.46,
+ "lon": -69.94,
+ "keskilampo": [25.6,25.6,26.1,26.7,27.4,28,28.2,28.3,28.2,27.9,27.1,26.2],
+ "ylin": [30,30,31,31,31,32,32,32,32,32,31,31],
+ "alin": [21,21,22,23,24,24,24,24,24,24,23,22],
+ "sade": [68,59,54,86,151,119,157,195,192,177,148,77],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Santo Domingo","revisio":1379157003,"taulukko":"Climate data for Santo Domingo (1991–2020, extremes 1909–present)","lahteet":"Source 1: NOAA, ONAMET (humidity, rain days, sunshine 1971–2000) | Source 2: Diario Libre (May record high, and record lows for January and February), Meteo Climat (record highs and lows)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":1483,"luettu":"2026-10-11","huomiot":[]}
+}

@@ -1,0 +1,10 @@
+{
+ "lat": 17.97,
+ "lon": -76.79,
+ "keskilampo": [26.6,26.6,26.8,27.6,28.2,29.1,29.3,29.4,29.1,28.5,27.9,27.1],
+ "ylin": [31,31,31,32,32,33,33,33,33,32,32,31],
+ "alin": [23,23,23,24,25,26,26,26,26,25,24,24],
+ "sade": [15,9,25,28,99,65,56,102,185,162,88,41],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Kingston, Jamaica","revisio":1376418614,"taulukko":"Climate data for Kingston, Jamaica (Norman Manley International Airport) 1991–2020, extremes 1852–present","lahteet":"Source 1: NOAA, Meteorological Service (Jamaica) (precipitation days, humidity, daily sun) | Source 2: Meteo Climat (record highs and lows)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":875,"luettu":"2026-10-11","huomiot":[]}
+}

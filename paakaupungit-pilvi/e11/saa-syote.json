@@ -3,54 +3,63 @@
   "id": "washington",
   "lat": 38.9,
   "lon": -77.04,
-  "wikidata": "Q61"
+  "wikidata": "Q61",
+  "artikkeli": "Washington, D.C."
  },
  {
   "id": "ottawa",
   "lat": 45.42,
   "lon": -75.69,
-  "wikidata": "Q1930"
+  "wikidata": "Q1930",
+  "artikkeli": "Ottawa"
  },
  {
   "id": "belmopan",
   "lat": 17.25,
   "lon": -88.77,
-  "wikidata": "Q3043"
+  "wikidata": "Q3043",
+  "artikkeli": "Belmopan"
  },
  {
   "id": "sansalvador",
   "lat": 13.7,
   "lon": -89.19,
-  "wikidata": "Q3110"
+  "wikidata": "Q3110",
+  "artikkeli": "San Salvador"
  },
  {
   "id": "tegucigalpa",
   "lat": 14.11,
   "lon": -87.2,
-  "wikidata": "Q3238"
+  "wikidata": "Q3238",
+  "artikkeli": "Tegucigalpa"
  },
  {
   "id": "sanjose",
   "lat": 9.93,
   "lon": -84.08,
-  "wikidata": "Q3070"
+  "wikidata": "Q3070",
+  "artikkeli": "San José, Costa Rica"
  },
  {
   "id": "santodomingo",
   "lat": 18.46,
   "lon": -69.94,
-  "wikidata": "Q34820"
+  "wikidata": "Q34820",
+  "artikkeli": "Santo Domingo"
  },
  {
   "id": "portauprince",
   "lat": 18.55,
   "lon": -72.34,
-  "wikidata": "Q34261"
+  "wikidata": "Q34261",
+  "artikkeli": "Port-au-Prince"
  },
  {
   "id": "kingston",
   "lat": 17.97,
   "lon": -76.79,
-  "wikidata": "Q34692"
+  "wikidata": "Q34692",
+  "artikkeli": "Kingston, Jamaica"
  }
 ]
