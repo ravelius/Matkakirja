@@ -536,6 +536,10 @@ namespace Matkakirja.Natiivi
                 case "olavinlinna":
                     // "ui olavinlinna alku|loppu|nollaa|sulje|tila": Olavinlinnan alun valinta (OlavinlinnaAlku, juna 171).
                     return "=" + OlavinlinnaAlku.Testi(loput.Trim().Length > 0 ? loput.Trim() : "tila");
+                case "konsoli":
+                    // "ui konsoli pois|paalle": kehitysversion Development Console -rivit pois stilleistä (PT 11.10.: arkit ilman konsolia).
+                    Debug.developerConsoleEnabled = loput.Trim() != "pois"; Debug.developerConsoleVisible = false;
+                    return "=konsoli " + (Debug.developerConsoleEnabled ? "päällä" : "pois");
                 case "seikkailutapit":
                     // "ui seikkailutapit [on|off|auto]": seikkailun kävelytapit (SeikkailuTapit) ilman SeikkailuPelaajaa testiin.
                     if (loput.Trim() == "on") SeikkailuTapit.TestiNakyy = true;
