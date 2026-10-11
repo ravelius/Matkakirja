@@ -5411,7 +5411,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'muistokäytössä.',
           lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
         },
-        kappale: 'Tukholma on rakennettu neljälletoista saarelle siihen '
+        kappale: 'Tukholman ydin on rakennettu neljälletoista saarelle siihen '
           + 'kohtaan, jossa Mälaren laskee Itämereen. Kaupungin itäpuolella '
           + 'alkaa saaristo, jossa on yli 24 000 saarta ja luotoa — ja '
           + 'sen vesi on niin vähäsuolaista, ettei se maistu merivedeltä.',
@@ -5440,7 +5440,7 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Kaupunki, jolla on kaksi vettä',
               teksti: 'Tukholma sijaitsee kohdassa, jossa makea Mälaren '
-                + 'purkautuu suolaiseen Itämereen. Vanhakaupunki Gamla '
+                + 'purkautuu Itämereen. Vanhakaupunki Gamla '
                 + 'stan on pääosin yksi saari, Stadsholmen, ja siihen '
                 + 'luetaan lisäksi Riddarholmen, Helgeandsholmen ja '
                 + 'Strömsborg. Vuoteen 1980 asti sen virallinen nimi oli '
@@ -5608,16 +5608,17 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Martin piirsi Tukholman ennen valokuvaa',
           tiedosto: 'Stockholmspanorama 1790.jpg',
           teksti: 'Elias Martin oppi ammattinsa Lontoossa, jossa hän asui '
-            + 'kaksitoista vuotta ja opetteli akvatinnan — tekniikan, jolla '
-            + 'kuparilevystä saa vesivärimäisen sävyn. Kotiin palattuaan 1780 '
-            + 'hän kääntyi kaupunkiin, jota kukaan ei ollut piirtänyt '
-            + 'sellaisenaan: satamaan, toreille ja työn ääreen. Veli Johan '
-            + 'Fredrik kaiversi kuvat levyiksi, ja niitä myytiin sarjoina. Ne '
-            + 'ovat tarkin näkymä Tukholmaan ennen valokuvaa.',
-          lyhyt: 'Elias Martinin näkymät ovat tarkin kuva Tukholmasta ennen valokuvaa, veljen kuparikaiverruksina.',
-          selite: 'Elias Martinin näkymät ovat tarkin kuva Tukholmasta ennen '
-            + 'valokuvaa, ja hänen veljensä Johan Fredrik kaiversi ne '
-            + 'kuparilevyiksi.',
+            + 'yli kaksitoista vuotta ja kehitti vesiväritaitojaan. Kotiin '
+            + 'palattuaan 1780-luvun alussa hän kääntyi kaupunkiin, jota '
+            + 'harvat olivat piirtäneet sellaisenaan: satamaan, toreille ja '
+            + 'työn ääreen. Veli Johan Fredrik teki kuvista akvatintoja eli '
+            + 'kuparipainokuvia, joiden sävy on vesivärimäinen, ja niitä '
+            + 'myytiin sarjoina. Ne ovat yksi tarkimmista näkymistä '
+            + 'Tukholmaan ennen valokuvaa.',
+          lyhyt: 'Elias Martinin näkymät ovat yksi tarkimmista kuvista Tukholmasta ennen valokuvaa, veljen akvatintoina.',
+          selite: 'Elias Martinin näkymät ovat yksi tarkimmista kuvista '
+            + 'Tukholmasta ennen valokuvaa, ja hänen veljensä Johan Fredrik '
+            + 'teki niistä akvatintoja.',
           lahde: 'Elias Martin, Wikimedia Commons (PD)',
           wiki: 'Elias Martin',
           galleria: [
@@ -5694,14 +5695,14 @@ export const KULTTUURI_KATEGORIAT = {
          * Tukholman nostoruuhkasta.
          */
         {
-          otsikko: 'Kaupungin vanhin kuva on kuva kuvasta',
+          otsikko: 'Kaupungin vanhin värikuva on kuva kuvasta',
           tiedosto: 'Vädersolstavlan 1535.jpg',
           teksti: 'Huhtikuun 20. päivänä 1535 tukholmalaiset näkivät '
             + 'aamutaivaalla valkoisia renkaita ja niiden kehällä useita '
             + 'hehkuvia auringonkuvia. Kyse oli halosta: ilmassa leijuvat '
             + 'jääkiteet taittavat auringonvaloa kuin lasiprismat. Näky '
             + 'pelotti, ja siitä teetettiin maalaus — samalla syntyi vanhin '
-            + 'tunnettu värikuva Tukholmasta muureineen ja kirkontorneineen. '
+            + 'tunnettu värikuva Tukholmasta porttitorneineen ja kirkkoineen. '
             + 'Storkyrkanissa riippuvaan tauluun on kirjoitettu kaksi '
             + 'vuosilukua, 1535 ja renovoitu 1636. Vuonna 1999 taulu '
             + 'tutkittiin, ja se osoittautui kokonaan 1600-luvun työksi: '
@@ -5765,9 +5766,9 @@ export const KULTTUURI_KATEGORIAT = {
            * Kuvateksti ennallaan.
            */
           ampari: 'herokoe/hero-tukholma-gamlastan.jpg',
-          lyhyt: 'Tukholma on rakennettu neljälletoista saarelle, missä Mälaren purkautuu Itämereen.',
-          selite: 'Tukholma on rakennettu neljälletoista saarelle siihen '
-            + 'kohtaan, jossa makea Mälaren purkautuu suolaiseen Itämereen.',
+          lyhyt: 'Tukholman ydin on rakennettu neljälletoista saarelle, missä Mälaren purkautuu Itämereen.',
+          selite: 'Tukholman ydin on rakennettu neljälletoista saarelle siihen '
+            + 'kohtaan, jossa makea Mälaren purkautuu Itämereen.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -5803,21 +5804,20 @@ export const KULTTUURI_KATEGORIAT = {
         + 'senttiä leveä.',
       nostot: [
         {
-          otsikko: 'Polhem sai sulkutyön 83-vuotiaana',
+          otsikko: 'Polhem sai sulkutyön yli 80-vuotiaana',
           tiedosto: 'Blå slussen Cumelin.jpg',
           teksti: 'Mälaren on järvi, jonka pinta on merenpintaa korkeammalla, ja '
             + 'Tukholma seisoo juuri siinä kohdassa, jossa vesi purkautuu '
             + 'Itämereen. Ennen sulkuja veneet piti sauvoa ja hinata virran '
             + 'läpi maksua vastaan, ja moni ajoi matalikolle. Ensimmäisen '
             + 'sulun rakensivat hollantilaiset mestarit kuningatar Kristiinan '
-            + 'aikaan, ja se valmistui 1642. Kun siitä tuli liian pieni, työ '
-            + 'annettiin 1744 Christopher Polhemille, joka oli silloin '
-            + '83-vuotias. Hän kuoli kesken hankkeen, ja poika Gabriel sai '
-            + 'sulun valmiiksi 1755.',
-          lyhyt: 'Christopher Polhem sai Tukholman sulkutyön 1744 83-vuotiaana, ja poika Gabriel valmiiksi 1755.',
-          selite: 'Christopher Polhem sai Tukholman sulkutyön vuonna 1744 '
-            + 'ollessaan 83-vuotias, ja hänen poikansa Gabriel sai sulun '
-            + 'valmiiksi 1755.',
+            + 'aikaan, ja se valmistui 1642. Kun siitä tuli liian pieni, '
+            + 'rakennussopimus tehtiin 1744 Christopher Polhemin kanssa, joka '
+            + 'oli silloin yli 80-vuotias. Hän kuoli 1751 kesken hankkeen, ja '
+            + 'sulku avattiin 1755.',
+          lyhyt: 'Christopher Polhem teki Tukholman sulun rakennussopimuksen 1744 yli 80-vuotiaana, ja sulku avattiin 1755.',
+          selite: 'Christopher Polhem teki Tukholman sulun rakennussopimuksen '
+            + 'vuonna 1744 ollessaan yli 80-vuotias, ja sulku avattiin 1755.',
           lahde: 'Johan Petter Cumelin, Wikimedia Commons (PD)',
           wiki: 'Christopher Polhem',
           galleria: [
@@ -5858,14 +5858,13 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Lohi nousee eduskuntatalon vierestä',
           tiedosto: 'Fishing in Strömmen, Stockholm - panoramio.jpg',
           teksti: 'Norrström on virta, jota pitkin Mälarenin vesi syöksyy '
-            + 'mereen aivan eduskuntatalon vierestä, ja siitä nostetaan joka '
-            + 'vuosi satoja lohia ja meritaimenia: vuonna 2000 saatiin lohi, '
-            + 'joka painoi lähes kaksikymmentäkaksi kiloa. Vedessä elää noin '
-            + 'kolmekymmentä kalalajia, enemmän kuin missään muualla '
-            + 'Tukholman seudun vesissä. Aina ei ollut näin. Kalat palasivat '
-            + 'vasta 1970-luvulla aloitettujen istutusten myötä, ja vuonna '
-            + '2024 vanha vuoden 1850 sulku muutettiin kalatieksi, jota '
-            + 'myöten kalat pääsevät nousemaan järveen asti.',
+            + 'mereen aivan eduskuntatalon vierestä, ja siitä kalastetaan '
+            + 'lohia ja meritaimenia: vuonna 2000 saatiin lohi, joka painoi '
+            + 'noin kaksikymmentä kiloa. Vedessä elää kymmeniä kalalajeja. '
+            + 'Aina ei ollut näin. 1970-luvulla alkaneet istutukset ovat '
+            + 'elvyttäneet lohi- ja taimenkantaa, ja vuonna 2024 Slussenin '
+            + 'vanha Nils Ericsonin sulku (1850) muutettiin kalatieksi, jota '
+            + 'myöten kalat pääsevät nousemaan Mälareniin.',
           selite: 'Strömmenissä saa onkia keskellä kaupunkia, ja lohi nousee '
             + 'virtaan aivan vanhankaupungin kupeeseen.',
           lahde: 'Bengt Nyman, Wikimedia Commons (CC BY 3.0)',
@@ -6594,14 +6593,11 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Paras patonki valitaan sokkona',
           tiedosto: '84 Boulevard de Port-Royal Bakery.jpg',
           teksti: 'Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta '
-            + 'perinteisestä patongista, ja säännöt ovat tarkat: leivän pitää '
-            + 'olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Mitä '
+            + 'perinteisestä patongista, ja säännöt ovat tarkat: leivän pituudelle ja painolle on omat rajansa. Mitä '
             + 'patongissa saa olla, on määrätty laissa — käytännössä vain '
             + 'vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa '
-            + 'missään vaiheessa pakastaa. Leivät numeroidaan ennen '
-            + 'maistamista, jottei raati tiedä kenen leipää se arvostelee, ja '
-            + 'raadissa istuu ammattilaisia, toimittajia ja kuusi arvottua '
-            + 'tavallista pariisilaista. Voittaja saa rahapalkinnon ja yhden '
+            + 'missään vaiheessa pakastaa. Leivät ovat anonyymejä, jottei raati tiedä kenen leipää se arvostelee, ja '
+            + 'raadissa istuu ammattilaisia, toimittajia ja arvottuja tavallisia pariisilaisia. Voittaja saa rahapalkinnon ja yhden '
             + 'velvollisuuden: hän toimittaa presidentinpalatsin leivät '
             + 'seuraavan vuoden ajan.',
           lyhyt: 'Pariisi on järjestänyt vuodesta 1994 kilpailun parhaasta patongista presidentin leipojaksi.',
@@ -6646,7 +6642,7 @@ export const KULTTUURI_KATEGORIAT = {
           'rikkoutunut lyhty',
         ],
         oikea: 2,
-        fakta: 'Palo alkoi lokakuussa 1928, kun kynttilä kaatui selluloidista '
+        fakta: 'Palo alkoi marraskuun 2. päivän yönä 1928, kun kynttilä kaatui selluloidista '
           + 'tehtyjen kukkien päälle Djangon perheen asuntovaunussa.',
       },
     },
@@ -7712,20 +7708,20 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'historia',
       nimi: 'Historia',
-      johdanto: 'Akropoliin lounaiskulmassa on temppeli, jonka voitolta '
-        + 'riisuttiin siivet, torin laidalla filosofin saviastia — ja kadun '
+      johdanto: 'Akropoliin lounaiskulmassa on temppeli, jonka Voitolla '
+        + 'ei ole siipiä, torin laidalla filosofin saviastia — ja kadun '
         + 'varrella palatsi, jonka rakennutti Troijan kullan löytäjä.',
       nostot: [
         {
-          otsikko: 'Temppeli, jolta leikattiin siivet',
+          otsikko: 'Temppeli, jonka Voitolla ei ole siipiä',
           tiedosto: 'Acròpoli d\'Atenes - Temple de Nike Àptera.JPG',
           teksti: 'Propylaian ohi Akropoliin lounaiskulmaan noustaan '
             + 'kallion pienimmän temppelin luo: Athena Niken pyhäkköön. Sen '
-            + 'kaidetta koristi aikoinaan marmoripatsas voitonjumalattaresta '
-            + '— mutta kuvanveistäjä oli jättänyt siltä siivet pois. '
+            + 'sisällä seisoi puinen jumalatar-patsas ilman siipiä, vaikka '
+            + 'temppelin kaiteen kuvissa Voitot lentävät siivet levällään. '
             + 'Myöhemmät ateenalaiset selittivät asian omalla tavallaan: '
             + 'Voitto ei koskaan saisi lentää pois heidän kaupungistaan, '
-            + 'joten sen siivet piti riisua. Temppelin toinen nimi, Nike '
+            + 'joten patsas tehtiin siivettömäksi. Temppelin toinen nimi, Nike '
             + 'Aptera, tarkoittaa juuri siivetöntä Voittoa.',
           selite: 'Athena Niken temppeli seisoo Akropoliin lounaiskulmassa, '
             + 'ja se on kallion pienin temppeli.',
@@ -7741,7 +7737,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kerran rikkoi hänen astiansa, ateenalaiset eivät suuttuneet '
             + 'vaan hankkivat uuden tilalle. Se oli omituista kunnioitusta '
             + 'miehelle, joka kulki torilla päivällä lyhty kädessä ja väitti '
-            + 'etsivänsä rehellistä ihmistä — ikään kuin kirkkainkaan valo '
+            + 'etsivänsä "ihmistä" — ikään kuin kirkkainkaan valo '
             + 'ei siihen riittäisi.',
           selite: 'Diogenes asui talvisin viljan säilytykseen tarkoitetussa '
             + 'saviastiassa eli pithoksessa.',
@@ -7750,14 +7746,15 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Iliou Melathron — Troijan palatsi',
           tiedosto: 'The Numismatic Museum of Athens (Iliou Melathron) on August 2, 2020.jpg',
-          teksti: 'Kesäkuussa 1873, kaivauksen viimeisenä päivänä, Heinrich '
-            + 'Schliemann löysi Hisarlikin kummulta kultaa, jonka uskoi '
+          teksti: 'Kevään ja kesän 1873 taitteessa, kaivauskauden loppupuolella, '
+            + 'Heinrich Schliemann löysi Hisarlikin kummulta kultaa, jonka uskoi '
             + 'kuningas Priamoksen aarteeksi. Muutamaa vuotta myöhemmin hän '
             + 'rakennutti Ateenaan kadun varteen komean palatsin, Iliou '
             + 'Melathronin — Troijan palatsin. Se seisoo paikallaan yhä: '
             + 'nykyään talossa lasketaan vanhoja kolikoita, sillä se on '
-            + 'numismaattinen museo. Talon friisissä Schliemann kaivaa '
-            + 'ikuisesti, lapio kädessä.',
+            + 'numismaattinen museo. Seinillä on pompeijilaistyylisiä '
+            + 'maalauksia, ja lattioiden mosaiikit esittävät Schliemannin '
+            + 'kaivauslöytöjä tai niiden innoittamia aiheita.',
           selite: 'Schliemannin kotipalatsissa Iliou Melathronissa toimii '
             + 'nykyään Ateenan numismaattinen museo.',
           lahde: 'George E. Koronaios, Wikimedia Commons (CC BY-SA 4.0)',
@@ -7812,8 +7809,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       tehtava: {
-        kysymys: 'Miksi Athena Niken patsaalta oli myöhempien ateenalaisten '
-          + 'selityksen mukaan riisuttu siivet?',
+        kysymys: 'Miksi Athena Niken patsas oli myöhempien ateenalaisten '
+          + 'selityksen mukaan siivetön?',
         vaihtoehdot: [
           'jotta Voitto ei voisi koskaan lentää pois kaupungista',
           'kuvanveistäjä ei ehtinyt tehdä niitä ajoissa',

@@ -7385,8 +7385,8 @@ export const MAA_KATEGORIAT = {
             + 'leijuvat jääkiteet taittavat auringonvaloa kuin '
             + 'lasiprismat. Näky pelotti, ja pappi Olaus Petri teetti '
             + 'siitä maalauksen. Samalla syntyi vanhin tunnettu värikuva '
-            + 'Tukholmasta: kaupunki muureineen, kirkontorneineen ja '
-            + 'ympäröivine hirsiaitoineen. Alkuperäinen taulu on '
+            + 'Tukholmasta: kaupunki porttitorneineen, kirkkoineen ja veteen '
+            + 'lyötyine paalurivineen. Alkuperäinen taulu on '
             + 'kadonnut — Storkyrkanissa riippuu vuoden 1636 kopio.',
           lyhyt: 'Vädersolstavlan kuvaa Tukholman yllä 1535 nähtyä halo-ilmiötä, vanhinta väristä kuvaa kaupungista.',
           selite: 'Vädersolstavlan kuvaa Tukholman yllä 20. huhtikuuta 1535 '
@@ -7405,7 +7405,7 @@ export const MAA_KATEGORIAT = {
             + 'arkeologit tutkivat paikan 1999 metallinilmaisimella, '
             + 'maasta nousi 67 kiloa hopeaa: rannerenkaita, tankoja ja '
             + 'noin neljätoistatuhatta kolikkoa. Suurin osa kolikoista '
-            + 'oli lyöty islamilaisissa maissa Bagdadista Samarkandiin. '
+            + 'oli lyöty islamilaisissa maissa, Pohjois-Afrikasta Keski-Aasiaan. '
             + 'Gotlantilaiset kävivät siis kauppaa Venäjän jokia pitkin '
             + 'aina Kaspianmerelle saakka ja toivat turkiksista hopeaa.',
           lyhyt: 'Spillingsin aarre on maailman suurin viikinkiaikainen hopealöytö, 67 kiloa ja yli 14 000 kolikkoa.',
@@ -7416,23 +7416,25 @@ export const MAA_KATEGORIAT = {
           wiki: 'Viikinkiaika',
         },
         {
-          otsikko: 'Kuninkaan pakoreitti hiihdetään joka vuosi',
+          otsikko: 'Tulevan kuninkaan pakoreitti hiihdetään joka vuosi',
           aika: '1520',
           tiedosto: 'Jørgen Aukland Vasaloppet 2013 002.jpg',
           teksti: 'Vuonna 1520 nuori Kustaa Eriksson pakeni tanskalaisia '
             + 'Taalainmaalle ja yritti saada talonpojat kapinaan. Moran '
-            + 'miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. '
-            + 'Kun tieto Tukholman verilöylystä levisi, kaksi hiihtäjää '
-            + 'lähetettiin hänen peräänsä — he saivat hänet kiinni ja '
-            + 'käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli '
+            + 'miehet epäröivät, ja hän lähti legendan mukaan suksilla kohti '
+            + 'Norjaa. Tarun mukaan moralaiset katuivat ja lähettivät kaksi '
+            + 'hiihtäjää hänen peräänsä, ja nämä tavoittivat hänet Sälenissä '
+            + 'ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli '
             + 'kuningas Kustaa Vaasa. Vuodesta 1922 sama matka on '
             + 'hiihdetty toisin päin: 90 kilometriä Säleniltä Moraan. '
             + 'Ensimmäinen kilpailu järjestettiin sanomalehden '
             + 'ehdotuksesta, ja siihen osallistui 119 hiihtäjää.',
-          lyhyt: 'Vasaloppet hiihdetään Bergasta Moraan, ja se on maailman vanhin ja suurin hiihtokilpailu.',
-          selite: 'Vasaloppet hiihdetään maaliskuun ensimmäisenä sunnuntaina '
-            + 'Bergasta Moraan, ja 90 kilometrin kisa on maailman vanhin ja '
-            + 'osanottajamäärältään suurin hiihtokilpailu.',
+          lyhyt: 'Jørgen Aukland saa maalissa suudelman seppeleenkantajalta voitettuaan Vasaloppetin 2013.',
+          selite: 'Jørgen Aukland saa maalissa suudelman seppeleenkantajalta '
+            + 'Isabelle Janssonilta voitettuaan Vasaloppetin vuonna 2013. Kisa '
+            + 'hiihdetään maaliskuun ensimmäisenä sunnuntaina Bergasta Moraan, '
+            + 'ja 90 kilometrin matka on maailman vanhin ja osanottajamäärältään '
+            + 'suurin hiihtokilpailu.',
           lahde: 'Vasaloppet/Nisse Schmidt, Wikimedia Commons (CC BY 3.0)',
           wiki: 'Vaasahiihto',
         },
@@ -7966,14 +7968,14 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Lohi ui eduskuntatalon ohi',
           aika: '2000',
           tiedosto: 'Håvbåt på Strömmen 2020.jpg',
-          teksti: 'Norrström on virta, jota pitkin Mälarenin vesi syöksyy mereen '
-            + 'aivan eduskuntatalon vierestä. Siitä nostetaan joka vuosi '
-            + 'satoja lohia ja meritaimenia: vuonna 2000 saatiin lohi, joka '
-            + 'painoi lähes 22 kiloa. Vedessä elää noin kolmekymmentä '
-            + 'kalalajia, enemmän kuin missään muualla Tukholman seudun '
-            + 'vesissä. Kalat palasivat 1970-luvulla aloitettujen istutusten '
-            + 'myötä, ja vuonna 2024 vanha vuoden 1850 sulku muutettiin '
-            + 'kalatieksi, jota myöten kalat pääsevät nousemaan järveen.',
+          teksti: 'Norrström on virta, jota pitkin Mälarenin vesi syöksyy '
+            + 'mereen aivan eduskuntatalon vierestä. Siitä kalastetaan lohia '
+            + 'ja meritaimenia: vuonna 2000 saatiin lohi, joka painoi noin '
+            + '20 kiloa. Vedessä elää kymmeniä kalalajeja. 1970-luvulla '
+            + 'alkaneet istutukset ovat elvyttäneet lohi- ja taimenkantaa, '
+            + 'ja vuonna 2024 Slussenin vanha Nils Ericsonin sulku (1850) '
+            + 'muutettiin kalatieksi, jota myöten kalat pääsevät nousemaan '
+            + 'Mälareniin.',
           selite: 'Atlantinlohi kuoriutuu joissa ja vaeltaa mereen '
             + 'kasvamaan, ja se voi kasvaa metrin mittaiseksi.',
           lahde: 'Frankie Fouganthin, Wikimedia Commons (CC BY-SA 4.0)',
@@ -10033,10 +10035,8 @@ export const MAA_KATEGORIAT = {
           teksti: 'Ranskan laki määrää, mitä perinteisessä patongissa saa olla: '
             + 'käytännössä vain vehnäjauhoa, vettä, suolaa ja hiivaa, eikä '
             + 'taikinaa saa missään vaiheessa pakastaa. Pariisin kaupunki on '
-            + 'järjestänyt vuodesta 1994 kilpailun, jossa leivän pitää olla '
-            + '55–65 senttiä pitkä ja painaa 250–300 grammaa. Leivät '
-            + 'numeroidaan, jottei raati tiedä kenen leipää maistaa, ja '
-            + 'raadissa istuu kuusi arvottua tavallista pariisilaista. '
+            + 'järjestänyt vuodesta 1994 kilpailun, jossa leivän pituudelle ja painolle on omat rajansa. Leivät ovat anonyymejä, jottei raati tiedä kenen leipää maistaa, ja '
+            + 'raadissa istuu arvottuja tavallisia pariisilaisia. '
             + 'Voittaja saa 4 000 euroa ja toimittaa vuoden ajan '
             + 'presidentinpalatsin leivät.',
           lyhyt: 'Patongin taikina ja mitat on määritelty Ranskan laissa; leipä on tavallisesti noin 65 cm pitkä.',
@@ -10055,8 +10055,7 @@ export const MAA_KATEGORIAT = {
             + 'ja laatikoita lähes yhdeksänsataa kolmen kilometrin matkalla. '
             + 'Kaupunki päättää säännöt: yksi myyjä saa kahdeksan metriä '
             + 'kaidetta ja enintään neljä laatikkoa, ne on avattava vähintään '
-            + 'neljänä päivänä viikossa, ja maali on aina sama vaunuvihreä '
-            + 'kuin ensimmäisen metron kylteissä. Kesällä 2024 laatikot piti '
+            + 'neljänä päivänä viikossa, ja maali on aina sama vaunuvihreä, jota käytettiin jo ensimmäisessä metrossa. Kesällä 2024 laatikot piti '
             + 'purkaa olympialaisten avajaisten tieltä, mutta päätös '
             + 'peruttiin ja ne saivat jäädä.',
           lyhyt: 'Bouquinistit myyvät vanhoja kirjoja Seinen rantamuurien varrella.',
