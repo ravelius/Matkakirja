@@ -151,6 +151,12 @@ namespace Matkakirja.Peli
         string arvottuPaikka, arvottuUrl;
         /// <summary>Kerran loppuun soinut pohjaraita: ei uudelleen ennen kuin paikka tai ketju vaihtuu (KERRAN LÄPI).</summary>
         string soinutPolku;
+        /// <summary>
+        /// Kaupungin oma (hidas) kappale soi loppuun tässä kaupungissa (omistaja 11.10.2026 klo 15.5x: "vain yhden kerran jonka jälkeen
+        /// ei musiikkia ennen seuraavaa kaupunkia"). soinutPolku ei riittänyt: lehden musiikki korvasi sen loppuessaan, ja lehden
+        /// sulkeminen aloitti kaupungin kappaleen uudelleen (KaupunkijaksoTestit.HidasKerranJaSittenHiljaisuusSeuraavaanKaupunkiin).
+        /// </summary>
+        string soinutOma;
 
         // KAUPUNKIJAKSO (AaniTaulut.Jaksot): vaihe 0 nopea (kerran), 1 tauko, 2 hidas (kerran), 3 tausta (silmukka).
         string jaksoKaupunki;
@@ -258,7 +264,7 @@ namespace Matkakirja.Peli
         {
             if (paikka != this.paikka)
             {
-                soinutPolku = null; jaksoKaupunki = null; jaksoVaihe = 0; introPito = false; // uusi laukaisu: musiikki (ja jakso) alusta
+                soinutPolku = soinutOma = null; jaksoKaupunki = null; jaksoVaihe = 0; introPito = false; // uusi laukaisu: musiikki (ja jakso) alusta
                 odottaaPuhetta = null; odottavaNopea = null; esitysSoi = false;
                 if (puheEnnenJaksoa != paikka) puheEnnenJaksoa = null;
             }
@@ -405,7 +411,7 @@ namespace Matkakirja.Peli
         /// <summary>Musiikki-kytkin (web kaannaMusiikki).</summary>
         public void MusiikkiPaalle(bool paalla) => Tee(() =>
         {
-            if (paalla) soinutPolku = null; // pelaajan oma kytkentä on uusi laukaisu
+            if (paalla) soinutPolku = soinutOma = null; // pelaajan oma kytkentä on uusi laukaisu
             if (paalla != Musiikki) { Musiikki = paalla; MusiikkitilaMuuttui(); }
             KaynnistaLataus(AaniVakiot.SaadinMs);
             if (!paalla)
@@ -422,7 +428,7 @@ namespace Matkakirja.Peli
         public void AanimaisemaPaalle(bool paalla) => Tee(() =>
         {
             Aanimaisema = paalla;
-            if (paalla) soinutPolku = null;
+            if (paalla) soinutPolku = soinutOma = null;
             KaynnistaLataus(AaniVakiot.SaadinMs);
             if (!paalla)
             {
@@ -546,12 +552,13 @@ namespace Matkakirja.Peli
                 Vapauta(s);
                 var j = t.Jaksot[jaksoKaupunki];
                 if (jaksoVaihe == 0 && j.TaukoMs > 0) { jaksoVaihe = 1; JaksonTaukoMs = j.TaukoMs; JaksonTaukoNro++; return; }
-                if (jaksoVaihe == 2) introPito = false; // intro ohi: tausta ei soi linssipidossa
+                if (jaksoVaihe == 2) { introPito = false; if (s.Polku == OmaRaita()) soinutOma = s.Polku; } // intro ohi: tausta ei soi linssipidossa
                 jaksoVaihe = jaksoVaihe == 0 ? 2 : 3;
                 JatkaJaksoa();
                 return;
             }
             soinutPolku = s.Polku;
+            if (s.Polku != null && s.Polku == OmaRaita()) soinutOma = s.Polku;
             pohja = null;
             pohjaPolku = null;
             s.Tauko = true; // ended → paused
@@ -920,7 +927,7 @@ namespace Matkakirja.Peli
         {
             LopetaMaisema(); LopetaVisaSoitin(); LopetaPohja(); LopetaSiirtyma();
             VisaAuki = false;
-            soinutPolku = null;
+            soinutPolku = soinutOma = null;
             odottaaPuhetta = puheEnnenJaksoa = null; odottavaNopea = null; esitysSoi = false;
         });
 
@@ -1026,7 +1033,13 @@ namespace Matkakirja.Peli
 
         double PohjaTaso(double kerroin) => Math.Min(1,
             AaniVakiot.MusiikinPerustaso * (introPito ? 1 : EsityksenKerroin(kerroin)) * MusiikinKerroin * (AvausKaynnissa ? AaniVakiot.AvauksenMusiikki : 1)
-            * EsitysKorotus);
+            * EsitysKorotus * HitaanTaso);
+
+        /// <summary>
+        /// Hidas kaupunkikappale hiljempaa kuin nopea intro (AaniVakiot.HitaanKerroin); nopea = jakson vaihe 0. Natiivin
+        /// soittosääntö (KerranLapi); webin silmukkakäytös (KerranLapi = false, kultainen jälki) ennallaan.
+        /// </summary>
+        double HitaanTaso => !KerranLapi || jaksoKaupunki != null && jaksoVaihe == 0 ? 1 : AaniVakiot.HitaanKerroin;
 
         /// <summary>
         /// Saapumisesityksen nopea puheen alla: aina EsitysVaistoPuhe (hiljennykset ennallaan, 0,45), ei koskaan tavallista 0,25:tä.
@@ -1141,6 +1154,8 @@ namespace Matkakirja.Peli
             }
             // Ei raitaa (kaupungin ulkopuolella kartalla, KarttaVainKaupunki): edellinen kappale häivytetään pois (web sama).
             if (polku == null) { LopetaPohja(); return; }
+            // Kaupungin oma kappale soi jo kerran tässä kaupungissa: hiljaisuus (myös tilaraidan, esim. lehden, jälkeen).
+            if (polku == soinutOma) { LopetaPohja(); return; }
             if (pohja != null && pohjaPolku == polku) return;
             if (pohja == null && polku == soinutPolku) return; // soi jo kerran läpi tässä laukaisussa
             if (LatausKantaa(polku)) { LopetaPohja(AaniVakiot.PohjaVaihtoMs); return; } // pallon raita jatkuu: ei alusta
@@ -1198,6 +1213,9 @@ namespace Matkakirja.Peli
                 Ramppi(s, PohjaTaso(Voimassa), nousu);
             });
         }
+
+        /// <summary>Kaupungin oma kappale nykyisessä paikassa (ilman tilaraitoja), tai null.</summary>
+        string OmaRaita() => musiikinPaikka == null ? null : Musiikkivalitsin.Valitse(valitsin.Ketju(null, musiikinPaikka, musiikinMaa), puuttuvat);
 
         void LopetaPohja(int laskuMs = -1)
         {

@@ -115,6 +115,44 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(Soi(v, "musa-pohja") && v.Toive(Kanava.Pohja).Silmukka, "vanha: tausta = pohjavire silmukkana: " + Pohja(v));
         }
 
+        // --- SOITTOSÄÄNTÖ (omistaja 11.10.2026 klo 15.5x, juna 182): "hidas musiikki saa soida hiljempaa kuin nopea ja hidas myös vain
+        // yhden kerran jonka jälkeen ei musiikkia ennen seuraavaa kaupunkia". --------------------------------------------------------
+
+        [Testi] static void HidasKerranJaSittenHiljaisuusSeuraavaanKaupunkiin()
+        {
+            foreach (var (k, hidas) in new[] { ("pariisi", "musa-kaupunki-pariisi"), ("lontoo", "musa-kaupunki-lontoo"), ("ateena", "musa-kaupunki-ateena") })
+            {
+                var s = Uusi();
+                s.Paikka(k, "kaupunki");
+                if (k == "pariisi") { s.PohjaLoppui(); s.JaksonTaukoOhi(1); }
+                Oleta.Tosi(Soi(s, hidas) && !s.Toive(Kanava.Pohja).Silmukka, k + ": hidas kerran: " + Pohja(s));
+                s.PohjaLoppui();
+                Oleta.Sama(null, Pohja(s), k + ": hitaan jälkeen hiljaa");
+                // Lehti auki ja kiinni samassa kaupungissa: hidas ei ala uudelleen.
+                s.Tila("lehti", true); s.Tila("lehti", false);
+                Oleta.Sama(null, Pohja(s), k + ": lehden jälkeen yhä hiljaa: " + Pohja(s));
+                s.Paikka(k, "kaupunki");
+                Oleta.Sama(null, Pohja(s), k + ": sama kaupunki uudelleen: hiljaa");
+                // Seuraava kaupunki alkaa omasta musiikistaan.
+                s.Paikka(k == "lontoo" ? "pariisi" : "lontoo", "kaupunki");
+                Oleta.Tosi(Pohja(s) != null, k + ": seuraavassa kaupungissa taas musiikkia");
+            }
+        }
+
+        [Testi] static void HidasHiljempaaKuinNopea()
+        {
+            Oleta.Tosi(AaniVakiot.HitaanKerroin > 0 && AaniVakiot.HitaanKerroin < 1, "hitaan kerroin alle 1: " + AaniVakiot.HitaanKerroin);
+            var s = Uusi();
+            s.Paikka("pariisi", "kaupunki");
+            double nopea = Kerroin(s);
+            s.PohjaLoppui(); s.JaksonTaukoOhi(1);
+            double hidas = Kerroin(s);
+            Oleta.Tosi(System.Math.Abs(hidas - nopea * AaniVakiot.HitaanKerroin) < 1e-9, $"Pariisi: nopea {nopea:0.000}, hidas {hidas:0.000}");
+            var l = Uusi();
+            l.Paikka("lontoo", "kaupunki");
+            Oleta.Tosi(System.Math.Abs(Kerroin(l) - AaniVakiot.HitaanKerroin) < 1e-9, "kaupungin oma kappale hitaan tasolla: " + Kerroin(l));
+        }
+
         [Testi] static void PuuttuvaNopeaHyppaaHitaaseenIlmanTaukoa()
         {
             var s = Uusi();
@@ -518,7 +556,7 @@ namespace Matkakirja.Peli.Testit
             var s = Esitys();
             s.Paikka("lontoo", "kaupunki");
             Oleta.Sama(1.0, s.EsitysKorotus, "Lontoo");
-            Lahella(s, 1, "Lontoo tavallisella tasolla");
+            Lahella(s, AaniVakiot.HitaanKerroin, "Lontoo tavallisella (hitaan) tasolla");
             var e = Uusi();
             e.NopeaOdottaaPuhetta = k => false;
             e.Paikka("pariisi", "kaupunki");
@@ -578,7 +616,7 @@ namespace Matkakirja.Peli.Testit
             k.JaksonIntroHidas();
             Oleta.Tosi(Soi(k, "musa-kaupunki-pariisi") && !Soi(k, "musa-kaupunki-pariisi-nopea"), "hidas: " + Pohja(k));
             Oleta.Sama(1.0, k.EsitysKorotus, "hitaassa ei korotusta");
-            Lahella(k, 1, "hidas tavallisella tasolla");
+            Lahella(k, AaniVakiot.HitaanKerroin, "hidas tavallisella (hitaan) tasolla");
             // Paikan vaihto: uusi kaupunki ilman korotusta; uusi esitys korottaa taas.
             var p = Esitys();
             p.Paikka("pariisi", "kaupunki");
