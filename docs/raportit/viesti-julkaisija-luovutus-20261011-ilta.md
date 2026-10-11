@@ -37,8 +37,7 @@ Pitolista: `julkaisija-tyokalut/pidossa.txt` (tyhjä). Päätoimittaja: SendMess
 
 ## 3. Avoimet (uudelleenkäynnistyksen hetkellä)
 
-- SK suoja-PR:t 2. erä: #4432–#4436 MERGED; **#4437 merge-silmukassa** (Bash-tausta, kuolee uudelleenkäynnistyksessä) →
-  tarkista `gh pr view 4437`; jos OPEN ja vihreä, `merge-vihreana-sha.zsh 4437 <sha>`. Peilaa + vie-sisalto hoituvat.
+- SK suoja-PR:t 2. erä #4432–#4437 MERGED (e169c4d0f) – tarkista vain peilaa + vie-sisalto e169c4d0f:lle.
 - LS2: 429-vara a40e44542 kääntyi linjalla 2 → iPhone 8D1FD618 ~5 min Madrid, sitten raketti e560bbef7 ~10 min; keittiö
   d00bd6b37 iPadilla A26BC7D0 käynnissä 19.4x.
 - Pelikoodari: aarrelaskuri-50-183 linjalla 2 (19.37) → simu kun pyytää.
@@ -46,7 +45,7 @@ Pitolista: `julkaisija-tyokalut/pidossa.txt` (tyhjä). Päätoimittaja: SendMess
 
 ## 4. Tänään mergetty / viety (ilta)
 
-Mergetty: #4398, #4400–#4436 (paitsi #4437), mm. #4410 aarremerkinnät (v677), #4413/#4416/#4428 workerin polut
+Mergetty: #4398, #4400–#4439, mm. #4410 aarremerkinnät (v677), #4413/#4416/#4428 workerin polut
 (pollo-julkaisu success), #4418 + suoja-PR:t (peilaa success, uusin.json v684 = 0641ad913), #4439 muutosloki 182.
 Viety: aloitus-aarre, kukkaro, soutaja v1+v2, esittely-suoja, Stortorget, musa-lyria-183 (15), Pariisin aukiot, omat mallit
 v6k18 + **v6k19** (osoitin uusin-4 → v6k19 19.4x, varmuuskopiot `osoitin-varmuus/`).
@@ -57,7 +56,7 @@ v6k18 + **v6k19** (osoitin uusin-4 → v6k19 19.4x, varmuuskopiot `osoitin-varmu
    `viesti-julkaisija-luovutus-20261011-iltapaiva.md` kohta 2; lisää `--ohita-nykyiset`).
 2. `pgrep -f tf182.sh` + `tail tf182-ketju.log`; jos ketju kuoli, jatka käsin pohjan `tf-ketju-pohja.sh` vaiheista.
 3. Testattavaa-ajo (kohta 0), jos `gh run list --workflow testflight-sisainen.yml -L 3` ei näytä sitä.
-4. #4437 (kohta 3).
+4. Peilaa + vie-sisalto e169c4d0f (kohta 3).
 5. Monitorit: vahti-loki + linjan 2 lukko + tf182-ketju.
 
 ## 6. Opit
