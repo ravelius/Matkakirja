@@ -76,3 +76,14 @@ vie_v47n.zsh). Lokit `vie_v47{l,m,n}.log`. v47n:n MUUTOKSET.md-rivi kirjoittuu v
 | v47m | cbbde49c26671fb6 (fed17eff62a4b16b) | CI käynnissä (blender ad516b4f5c56ac62, 617e3d998) → vie_v47m.log |
 | v47n | jonossa (ketju_v47n.zsh) → vie_v47n.log | jonossa |
 Siirtosepälle lähetetty v47g–j; v47k–n LÄHETTÄMÄTTÄ (viestiraja).
+
+## JATKO 13.2x–14.1x (sama sessio nollauksen jälkeen)
+- Siirtosepälle lähetetty v47k–n ja v47o tunnukset (viestiraja purettu). v47n: MUUTOKSET.md-rivi korjattu (kannet törmäyksessä, yla 0,95).
+- **v47o VIETY**: 1499 24ce89cf1b3322fe (f5964b6c852eba5c), NYKY dffee326e689b421 (d7bddb1ac60dad69). Juurisyy: ulkokuori on komeron
+  kohdalla RK+0,65…0,89 (KT/RK-ympyrä ei vastaa kuorta) → komeron suu kuoren pintaan, perä RK−0,85, korkeus 2,25, arkku perälle, näkyvät
+  seinät; otteet 2–24 kuoren pintaan (taulukot OTE_R/OTE_N kavely.py:ssä, mitattu ulkokuori_normaali.glb:stä). Työkalut
+  `lahde/tyokalut-lr/komero_v47o.zsh`; scratchpad d510e6ef…/ (komero_tarkista.py, ote_sade.py, suu_mitta.py, kytke_v47o.py).
+  NavMesh 89→94 ennallaan.
+- **Pariisi v3 + v3b** `_valmiit/pariisi-korttelit-v3/` (LAHTEET.md): Bourbon pois, Banque puskuri 6 m + vaaleammat lämpimät julkisivut
+  (LS2 716dd1464: Banque KUNNOSSA), Branly v3b rengas 35 m kaduille/puistoon raoilla naapurirakennusten ympäri. LS2 paketoi (v6k18 → uusi).
+- Laitetestaajan 8. kierrosta ei vielä ole (7. uusin) → mallikohdat kun raportti tulee.
