@@ -672,11 +672,11 @@ export const FOKUSVIRTA_SOFIA = {
        * Category:Statue of Sofia ei ole olemassa.
        */
       kuva: {
-        tiedosto: 'Sofia statue, Sofia (P1070773).jpg',
-        lyhyt: 'Sofia-patsas Nezavisimost-aukiolla on kahdeksan metriä korkea kuparihahmo 16 metrin jalustalla.',
-        selite: 'Sofia-patsas Nezavisimost-aukiolla. Kuparinen hahmo on '
-          + 'kahdeksan metriä korkea ja seisoo 16 metrin jalustalla.',
-        lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',
+        tiedosto: "Bulgaria-02926 - Saint Sofia Church (11047630053).jpg",
+        lyhyt: 'Pyhän Sofian kirkko, jonka mukaan Sofia on saanut nimensä.',
+        selite: 'Pyhän Sofian kirkko Sofiassa. Kaupunki on saanut nimensä '
+          + 'kirkon mukaan.',
+        lahde: "Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)",
       },
       visa: {
         kysymys: 'Kuka seisoi Nezavisimost-aukion jalustalla ennen kuin '
