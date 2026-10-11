@@ -27,6 +27,18 @@ Testit: `sh Linssit-testit/kaanna.sh` / `sh Kartta-testit/kaanna.sh` / `sh Peli-
   lokit/todistus-houkuttimet-iphone-182d-20261011-1652/arkki-houkuttimet-iphone.jpg (+ ipad-182d-1654).
   Avoin (ei pyydetty): tavalliset himmeät pisteet jäävät iPhonella Italia–Balkan-alueella Kalusteet-laatikon (luult. Pulu.alue) alle.
 
+## Lisäys 12.10. 02.0x (juna 183)
+- **KIPPI-183 LOPULLINEN** linssiseppa/kippi-183 **f6e438497** (juna-183 493efdebe + ikkunat-183 + kippi-katse-183 + kippi-autot-183 +
+  kippi-vali-183), SHA NS:llä ja PT:llä (PT kuittasi sisällön A–E). Linssit 1479, Kartta 481, Peli 529, tarkista 0; ajo testi-183-ls1d.
+  Sisältö: ikkunaerä (✕ yläpuolelle, näppäimistönosto, laajenna-väkäset, asetus "Sulje napauttamalla karttaa"), minihampurilainen
+  (Auto + Nostojen ohjaus kytkinriveinä, oletus pois, valikko ylöspäin puolikkaassa), A katse joka suuntaan peilikuvana (KoriKatseVeto),
+  B kompassi v3 (_valmiit/ilmapallo-v1/pallokompassi-v3, ämpärissä v3), C köydet kantorenkaaseen + ydin, D autot + pisaravarjo (agentti),
+  E OpasValys (korkeusnäytteet, agentti), vapaan lennon esityskorjaus 574bb5c31.
+- **Aukiot 183** f170db3e1 KUITATTU ja NS:llä. **Puut-portti** 6323b5204 KUITATTU (junassa 867ff6b8f); tarkkuuskorjaus **ba5edb2db**
+  NS:n Tuileries-vertailussa (odottaa tulosta → PT kuittaa → NS).
+- Vedokset: lokit/linssiseppa-vedokset-kippi-183/, lokit/linssiseppa-vedokset-minihampurilainen-183/, lokit/linssiseppa-vedokset-auto-183/.
+- Worktreet: wt/proto-linssiseppa-{monumentit,ikkunat,autot,vali,puut}; poista kun juna 183 TF:ssä.
+
 ## Lisäys 18.0x
 - **Houkuttimet 182e KUITATTU** (PT 18.0x) linssiseppa/eurooppa-loitonnus-182 **0d83ffedb**: Berliinin ja Ateenan sininen houkutin pois
   (omistaja 17.1x: lautapeleihin ei värikorostusta), SHA Natiivisepällä. Testihaara linssiseppa/testi-182-houkuttimet-e 79e9a201f
