@@ -1,0 +1,19 @@
+# Äänittäjän luovutus 11.10.2026 klo ~19.2x (uudelleenkäynnistys)
+
+## Tehty
+- Lyria-nopeat: kaikki 42 nopeaa (37 + Bryssel, Košice, Ljubljana, Luxemburg, Valletta) generoitu, käsitelty, ääniportti + häiriötarkistus 0 hylättyä, äänisivulla (julkaistu 18.5x).
+- Viety ämpäriin vie-paketti.sh:lla: 36 nopeaa (musa-nopeat-37-vienti-20261011), Moskovan uusi nimellä musa-kaupunki-moskova-nopea-2-lyria-v2 (musa-moskova-nopea-2-vienti-20261011), 5 nopeaa (musa-nopeat-5-vienti-20261011). Pelikoodari kytkee junaan 183.
+- Euroopan ääni-inventaario: docs/raportit/aanet-eurooppa-inventaario-20261011.md (merged #4430).
+- Työkansio proto-3d/_tyo/musiikit-5plus5-20261011 (generoi.mjs, nopeat-taulu.mjs 42 kaupunkia, kasittele.zsh, aanisivulle2.py, kehotteet.json).
+
+## Keskeneräinen: ISS-RAKETIN ÄÄNET (Pelikoodari/PT, Linssiseppä 2 kytkee)
+Tarvitaan viisi ääntä, tunnukset sytytys, maxq, irtoaminen, toinen-vaihe, hiljaisuus. Ei aloitettu (ei latauksia).
+- Sonniss GDC -kasassa ei oikeita rakettilaukaisuja (vain sci-fi Blast Off, RC-jet Viggen ignition, höyrypurkaukset). Soundlyn paikallinen kirjasto tyhjä (GUI-lataus vaatii vapaan näytön, PT).
+- PARAS LÄHDE: NASA KSC:n laukaisuäänitteet Wikimedia Commonsissa (Public domain, API-haku tehty, metatiedot nasa-ehdokkaat.json scratchpadissa): SpaceX CLPS IM-2 Pad Mic 1/2 (WAV 75 MB), IM-2 Beach/Causeway (37 MB), Crew-10 Beach/Causeway (35 MB), Artemis II Pad Camera Site 4 (6 MB). Latausluvan pyysin käyttäjältä, EI saatu vielä.
+- Jatko: lupa → lataus proto-3d/_tyo/iss-raketti-aanet-20261011 → leikkaus/kerrostus (silmukka ~20 s sytytys+nousu) → ääniportti + musiikkiharia → vientipaketti + LAHTEET.md (PD, NASA) + manifesti → polut LS2:lle (local_ee961a2d).
+
+## Muut avoimet
+- Moskovan nimikiista: PT pyysi -lyria-v3, vein jo -nopea-2-lyria-v2 (Pelikoodarin pyynnöstä); ei v3:a ellei PT käske.
+- Äänisivun julkaisu: aanisivu-julkaise.zsh kopioituna scratchpadiin; aja sieltä (ei _valmiit-kansiosta).
+- Lyria: avain ~/.zshrc (ei ~/.matkakirja-avaimet-koodaus.zsh, antoi API_KEY_INVALID); virhemerkinnät kehotteet.json:ssa poistettava ennen uusintaa.
+- Pelikoodarin istunto pidätti aiempia viestejä (lupatila), SendMessage toimii nyt.
