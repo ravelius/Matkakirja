@@ -284,6 +284,10 @@ namespace Matkakirja.Natiivi
         // UI:n napit (MuseoTaulu).
         public static void Tauko() { var k = Aktiivinen?.Kierros; if (k == null) return; if (k.Vaihe == MuseoVaihe.Vapaa) k.Kierrokselle(); else k.Tauko(!k.Tauolla); }
         public static void Seuraava() => Aktiivinen?.Kierros?.Seuraava();
+        /// <summary>Zoom (omistaja 11.10. 12.4x): suurennuslasi vaihtaa, nipistys asettaa; veto tutkii teosta zoomissa.</summary>
+        public static void Zoom() { var k = Aktiivinen?.Kierros; k?.AsetaZoom(!k.Zoom); }
+        public static void Zoom(bool paalla) => Aktiivinen?.Kierros?.AsetaZoom(paalla);
+        public static void ZoomVeda(double dx, double dy) => Aktiivinen?.Kierros?.ZoomVeda(dx, dy);
         public static void Edellinen() => Aktiivinen?.Kierros?.Edellinen();
         public static void VapaaTaiKierros() { var k = Aktiivinen?.Kierros; if (k == null) return; if (k.Vaihe == MuseoVaihe.Vapaa) k.Kierrokselle(); else k.Vapaa(); }
         public static void Esittele(bool? auki = null)

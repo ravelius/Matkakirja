@@ -228,7 +228,7 @@ namespace Matkakirja.Linssit.Testit
                     var p = a.Value.P; var d = a.Value.Suunta; var n = r.Paikka.Normaali;
                     Oleta.Tosi(Math.Abs(d.Y) < 1e-9 && d.X * n.X + d.Z * n.Z < -0.999, $"{r.Teos.Id}: katse vaakasuoraan kohtisuoraan seinään");
                     double et = (p - r.Paikka.Keskipiste).Pituus;
-                    var (w, h) = k.Nakoala(r);   // omistaja 11.10. 09.2x: kehyksen sisäreuna täyttää ruudun (95 %), ei rajausta
+                    var (w, h) = k.Ulkomitat(r);   // omistaja 11.10. 12.4x: koko kehys näkyvissä (ulkoreuna ≤ 93 %)
                     double fh = h / (2 * et * t), fw = w / (2 * et * t * ks);
                     Oleta.Tosi(fh <= MuseoKierros.TayttoKorkeus + 1e-6 && fw <= MuseoKierros.TayttoLeveys + 1e-6, $"{r.Teos.Id} {ks:F2}: mahtuu ({fh:F2} × {fw:F2})");
                     Oleta.Tosi(Math.Abs(p.Y - r.Paikka.Keskipiste.Y) < 1e-6, $"{r.Teos.Id}: silmä teoksen keskikorkeudella ({p.Y:F2} / {r.Paikka.Keskipiste.Y:F2})");
@@ -250,6 +250,33 @@ namespace Matkakirja.Linssit.Testit
             var j = Matkakirja.Peli.MiniJson.Objekti(Matkakirja.Peli.MiniJson.Jasenna(File.ReadAllText(Polku("Assets", "Matkakirja", "Linssit", "Resources", "Museo", "alankomaat", "kierros.json"))));
             foreach (var x in Matkakirja.Peli.MiniJson.TaulukkoTaiTyhja(Matkakirja.Peli.MiniJson.Kentta(j, "pysahdykset"))) l.Add((string)x);
             return l;
+        }
+
+        [Testi] static void ZoomPysahdyksessa()
+        {
+            // Omistaja 11.10. 12.4x: suurennuslasi vie lähemmäs teosta, veto tutkii kehyksen sisällä, kierros ei etene, palautus takaisin.
+            var s = Alankomaat(); var k = new MuseoKierros(s, KierrosTeokset()); k.SovitaPysahdykset(4.0 / 3);
+            k.AsetaZoom(true); Oleta.Tosi(!k.Zoom, "ei zoomia siirtymässä");
+            for (int i = 0; i < 2000 && k.Vaihe != MuseoVaihe.Pysahtyy; i++) k.Paivita(0.05);
+            var r = k.NykyinenTeos; var p0 = k.Nykyinen.P; var c = r.Paikka.Keskipiste;
+            double Et(V3 p) => Math.Sqrt((p.X - c.X) * (p.X - c.X) + (p.Z - c.Z) * (p.Z - c.Z));
+            k.AsetaZoom(true); Oleta.Tosi(k.Zoom, "zoom päälle pysähdyksessä");
+            for (int i = 0; i < 20; i++) k.Paivita(0.05);
+            Oleta.Tosi(k.ZoomOsuus == 1, "zoom liukuu perille");
+            double odotus = Math.Max(k.LahinEtaisyys(r), Et(p0) / MuseoKierros.ZoomKerroin);
+            Oleta.Tosi(Math.Abs(Et(k.Nykyinen.P) - odotus) < 1e-6, $"lähempänä ({Et(p0):F2} → {Et(k.Nykyinen.P):F2} m)");
+            var d = k.Nykyinen.Suunta; Oleta.Tosi(Math.Abs(d.Y) < 1e-9, "katse vaakasuoraan");
+            double aika = k.VaiheenAika; for (int i = 0; i < 2000; i++) k.Paivita(0.05);
+            Oleta.Tosi(k.Vaihe == MuseoVaihe.Pysahtyy && k.VaiheenAika == aika, "kierros ei etene zoomin aikana");
+            k.ZoomVeda(-10, -10);   // pitkä veto: rajautuu kehyksen sisään
+            k.Paivita(0.05);
+            var (W, H) = k.Ulkomitat(r); var q = k.Nykyinen.P;
+            double sivu = Math.Sqrt(Math.Max(0, (q - c).Pituus * (q - c).Pituus - Et(q) * Et(q) - (q.Y - c.Y) * (q.Y - c.Y)));
+            Oleta.Tosi(Math.Abs(q.Y - c.Y) <= H / 2 + 1e-6, $"pysty rajattu ({q.Y - c.Y:F2} / {H / 2:F2})");
+            k.AsetaZoom(false); for (int i = 0; i < 20; i++) k.Paivita(0.05);
+            Oleta.Tosi(k.ZoomOsuus == 0 && (k.Nykyinen.P - p0).Pituus < 1e-6, "palautus pysähdyksen asentoon");
+            k.AsetaZoom(true); k.Paivita(0.05); k.Seuraava();
+            Oleta.Tosi(!k.Zoom && k.ZoomOsuus == 0, "seuraava teos nollaa zoomin");
         }
 
         [Testi] static void TeoskierrosKertojanTeoksilla()

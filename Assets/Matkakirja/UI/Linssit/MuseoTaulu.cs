@@ -4,7 +4,8 @@
 //  - Teoksen nimi ja taiteilija vasemmassa yläkulmassa: Lontoon kierroksen otsikkopohja (mk-aikajana-havainne__otsikko +
 //    __kuvateksti, KierrosTaulu), näkyy pysähdyksessä ja vapaassa kulussa katsotulle teokselle.
 //  - Ohjausnapit (OHJAUSNAPPI-pohja, Ohjausnappi.Ryhma) alhaalla keskellä: edellinen, tauko/jatka, seuraava, vapaa kulku ↔
-//    kierros, esittely. Kuvakkeet olemassa olevista (Ikonit.Takaisin, Tauko, Seuraava, saapas, kirja).
+//    kierros, esittely, zoom. Kuvakkeet olemassa olevista (Ikonit.Takaisin, Tauko, Seuraava, saapas, kirja, suurennuslasi).
+//  - ZOOM (omistaja 11.10. 12.4x): suurennuslasi pysähdyksessä vie lähemmäs teosta, vetämällä tutkitaan, nipistys toimii samoin.
 //  - Esittely (Natiivi-UI 10.10., PT 09.5x): KORTTI-pohja (Kortti pohja: true). Kapiteeli "taiteilija · vuosi", otsikko teos,
 //    alkuperäinen nimi, tekniikka ja mitat, lyhyt kuvateksti ja lähderivi "kokoelma · lisenssi" (havainnekuva merkitään kuten
 //    nostoissa). Kaiutin (KortinLukija) lukee esittelyn kertojan äänellä, ja Esittele-nappi aloittaa luennan heti: esittely
@@ -29,6 +30,9 @@ namespace Matkakirja.Natiivi
     {
         const float KorttiOsuus = 0.42f;
         readonly VisualElement nakyma, otsikko, ryhma, korttiJuuri, poistuRivi;
+        Button zoom;
+        readonly Dictionary<int, Vector2> kosketukset = new Dictionary<int, Vector2>();
+        float nipistysAlku;
         readonly Label nimi, alarivi, kKapiteeli, kNimi, kAlkuperainen, kTekniikka, kKuvateksti, kLahde;
         readonly Button tauko, vapaa, esittele, edellinen, seuraava;
         readonly Kortti kortti, huoneKortti;
@@ -49,6 +53,29 @@ namespace Matkakirja.Natiivi
             nakyma.style.left = 0; nakyma.style.right = 0; nakyma.style.top = 0; nakyma.style.bottom = 0;
             nakyma.style.backgroundColor = MuseoNayttamo.Tausta;
             nakyma.style.display = DisplayStyle.None;
+            // Zoomin veto ja nipistys (kierroksella näkymä ottaa kosketukset; vapaassa kulussa ei, ks. Paivita).
+            nakyma.RegisterCallback<PointerDownEvent>(e =>
+            {
+                kosketukset[e.pointerId] = e.position;
+                if (kosketukset.Count == 2) nipistysAlku = Nipistys();
+            });
+            nakyma.RegisterCallback<PointerMoveEvent>(e =>
+            {
+                if (!kosketukset.TryGetValue(e.pointerId, out var ed)) return;
+                kosketukset[e.pointerId] = e.position;
+                var koko = nakyma.layout.size;
+                if (kosketukset.Count == 1 && koko.x > 0 && koko.y > 0)
+                    MuseoSovitin.ZoomVeda((e.position.x - ed.x) / koko.x, (e.position.y - ed.y) / koko.y);
+                else if (kosketukset.Count == 2 && nipistysAlku > 0)
+                {
+                    float suhde = Nipistys() / nipistysAlku;
+                    if (suhde > 1.25f || suhde < 0.8f) { MuseoSovitin.Zoom(suhde > 1); nipistysAlku = 0; }
+                }
+            });
+            EventCallback<PointerUpEvent> irti = e => { kosketukset.Remove(e.pointerId); nipistysAlku = 0; };
+            nakyma.RegisterCallback(irti);
+            nakyma.RegisterCallback<PointerCancelEvent>(e => { kosketukset.Remove(e.pointerId); nipistysAlku = 0; });
+            nakyma.RegisterCallback<PointerLeaveEvent>(e => kosketukset.Remove(e.pointerId));
             MuseoNayttamo.KuvaVaihtui += AsetaKuva;
 
             var yla = kerros.Juuri(LinssiUi.Ylakerros);
@@ -95,6 +122,7 @@ namespace Matkakirja.Natiivi
                 luennalla = !MuseoSovitin.EsittelyAuki && !MuseoSovitin.KertojaEsittelee();
                 MuseoSovitin.Esittele();
             }, ryhma);
+            zoom = Ohjausnappi.Nappi(Ikonit.Viiva["suurennuslasi"], Kieli.T("ui.museo.zoom"), MuseoSovitin.Zoom, ryhma);
 
             // ☰ POISTUN TILALLE (PT 11.10. 09.1x, juna 182): olemassa oleva LinssiValikko (OHJAUSNAPPI-valikko) riveillä Tekstitys
             // (kertojan tekstitys, oletus pois; Raamattu PUHE ÄÄNENÄ) ja Poistu linssistä, kuten oppaassa. Paikka kuten Poistulla.
@@ -302,6 +330,10 @@ namespace Matkakirja.Natiivi
             bool naytaTeos = r != null && k != null && (k.Vaihe == MuseoVaihe.Pysahtyy || vapaana);
             otsikko.style.display = naytaTeos && !MuseoSovitin.EsittelyAuki ? DisplayStyle.Flex : DisplayStyle.None;
             esittele.SetEnabled(r != null);
+            bool zoomissa = k != null && k.Zoom;
+            zoom.SetEnabled(zoomissa || (r != null && k != null && k.Vaihe == MuseoVaihe.Pysahtyy));
+            zoom.EnableInClassList("mk-valittu", zoomissa);
+            zoom.tooltip = zoomissa ? Kieli.T("ui.museo.zoom-pois") : Kieli.T("ui.museo.zoom");
             if (r != null)
             {
                 var t = r.Teos;
@@ -325,6 +357,11 @@ namespace Matkakirja.Natiivi
             NaytaKortti(MuseoSovitin.EsittelyAuki && r != null);
             NaytaHuone(MuseoSovitin.HuoneKorttiAuki && s.NykyinenHuone != null);
             PaivitaVirke();
+        }
+
+        float Nipistys()
+        {
+            var e = kosketukset.Values.GetEnumerator(); e.MoveNext(); var a = e.Current; e.MoveNext(); return Vector2.Distance(a, e.Current);
         }
 
         void HuoneVaihtui(Huone h)
