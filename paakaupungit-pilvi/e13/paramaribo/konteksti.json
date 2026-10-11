@@ -1,0 +1,66 @@
+{
+ "id": "paramaribo",
+ "era": "e13",
+ "nimi": "Paramaribo",
+ "nimiAlkukieli": "Paramaribo",
+ "maa": "SUR",
+ "maanNimi": "Suriname",
+ "asema": "pääkaupunki",
+ "lat": 5.852,
+ "lon": -55.203,
+ "wikidata": "Q3001",
+ "kevytSisalto": {
+  "kuvaus": "Paramaribo on Surinamen pääkaupunki ja suurin kaupunki Surinam-joen rannalla. Sen historiallinen keskusta on Unescon maailmanperintökohde (2002), ja siellä on hollantilaistyylisiä puutaloja, linnoitus ja Etelä-Amerikan suurimpiin kuuluva puukatedraali. Kaupungissa moskeija ja synagooga seisovat vierekkäin, mikä kuvastaa Surinamen monikulttuurista väestöä.",
+  "tunnusrakennukset": [
+   "Pyhien Pietarin ja Paavalin katedraali (Sint-Petrus-en-Paulusbasiliek, 1885, puurakenteinen)",
+   "Fort Zeelandia (1600-luvulta)",
+   "Keizerstraatin moskeija ja Neveh Shalom -synagooga (vierekkäin)",
+   "Waterkant (joenrannan puutalot)"
+  ],
+  "asukkaat": {
+   "arvo": 240924,
+   "vuosi": 2012,
+   "lahde": "Algemeen Bureau voor de Statistiek (ABS) Suriname, Achtste Volkstelling (Census 8) 2012, Paramaribon piiri (district; 242 946 vuonna 2004), ABS:n piirituloste Vol. I",
+   "linkki": "https://www.statistics-suriname.org/wp-content/uploads/2019/03/presentatie-districts-resultaten-vol1-070314.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Suriname on Etelä-Amerikan pienin itsenäinen valtio, ja se sijaitsee Guyanan ja Ranskan Guyanan välissä Atlantin rannikolla. Maa itsenäistyi Alankomaista vuonna 1975, ja hollanti on yhä virallinen kieli, vaikka arjessa kuullaan myös sranan tongoa, hindustania, jaavaa ja monia muita kieliä. Lähes koko maa on sademetsää ja väestö asuu pääosin rannikolla, erityisesti pääkaupunki Paramaribon seudulla. Väestö on yksi maailman monikulttuurisimmista, ja talouden tukena ovat kullan ja öljyn tuotanto sekä bauksiitti.",
+  "genetiivi": "Surinamen",
+  "kielet": [
+   {
+    "kieli": "hollanti",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "sranan tongo",
+    "asema": "muu"
+   },
+   {
+    "kieli": "sarnami hindustani",
+    "asema": "muu"
+   },
+   {
+    "kieli": "jaava",
+    "asema": "muu"
+   },
+   {
+    "kieli": "maroon-kielet (mm. saramaka)",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Surinamen dollari",
+   "koodi": "SRD"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Paramaribo",
+  "maanAvain": "Suriname",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

@@ -1,0 +1,145 @@
+{
+ "id": "santiagodechile",
+ "era": "e13",
+ "nimi": "Santiago de Chile",
+ "nimiAlkukieli": "Santiago (Santiago de Chile)",
+ "maa": "CHL",
+ "maanNimi": "Chile",
+ "asema": "pääkaupunki",
+ "lat": -33.4375,
+ "lon": -70.65,
+ "wikidata": "Q2887",
+ "kevytSisalto": {
+  "kuvaus": "Santiago on Chilen pääkaupunki ja maan suurin kaupunki, joka sijaitsee Andien ja Rannikkovuorten väliin jäävässä laaksossa. Kaupungin historiallinen ydin muodostuu Plaza de Armas -aukion ja sen ympärille perustetun katedraalin ja virastojen ympärille, ja kaupungin sisällä kohoavat metsäiset Cerro San Cristóbal ja Cerro Santa Lucía. Talvisin selkeinä päivinä lumihuippuiset Andit näkyvät lähes joka puolelta kaupunkia.",
+  "tunnusrakennukset": [
+   "Plaza de Armas ja Catedral Metropolitana (julkisivu Joaquín Toesca, 1700-luvun loppu)",
+   "Cerro San Cristóbal (Parque Metropolitano de Santiago)",
+   "Cerro Santa Lucía (puistokukkula)",
+   "Palacio de La Moneda (hallintorakennus, 1805)"
+  ],
+  "asukkaat": {
+   "arvo": 438856,
+   "vuosi": 2024,
+   "lahde": "Chilen tilastovirasto INE, väestönlaskenta 2024 (Santiagon comuna eli kaupungin keskustakunta), siteerattuna Kongressin kirjaston BCN:n kuntaraportissa 2025",
+   "linkki": "https://www.bcn.cl/siit/reportescomunales/comunas_v.html?anno=2025&idcom=13101"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Raja, jota ei ylitetty kolmeensataan vuoteen",
+    "Itsenäisyys julistettiin taistelun vuosipäivänä",
+    "Kuusituhatta saksalaista ja poltetut metsät",
+    "Kaupunki, jonka keksintö tappoi"
+   ]
+  },
+  {
+   "id": "saaret",
+   "nimi": "Saaret",
+   "nostot": [
+    "Yhdeksänsataa patsasta, ei yhtään pystyssä",
+    "Mies, joka pyysi jäädä saarelle",
+    "Kirkot, jotka veistettiin kokonaan puusta",
+    "Maailman eteläisin kansa ja sen sanakirja"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Aavikko, jossa sadetta ei ole mitattu",
+    "Kymmenen minuuttia, jotka tuntuivat Havaijilla",
+    "Jääkenttä, joka ruokkii kymmeniä jäätiköitä",
+    "Puu, jossa saattaa olla viisituhatta vuosilustoa"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Rypäle, jota luultiin sukupuuttoon kuolleeksi",
+    "Ruoka, joka kypsyy kuopassa kuumien kivien päällä",
+    "Maissipiirakka, jonka resepti kirjattiin ennen isoisää",
+    "Mauste, joka savustetaan puunuotiolla"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Tanssi, joka vaihtoi nimeä rajan yli",
+    "Ensimmäinen latinalaisamerikkalainen Louvressa",
+    "Huilut, joiden nimi tarkoittaa palvelijaa",
+    "Kitara, jossa on kaksikymmentäviisi kieltä"
+   ]
+  }
+ ],
+ "lahiKaupungit": [
+  {
+   "id": "valparaiso",
+   "nimi": "Valparaíso",
+   "km": 100,
+   "lehti": [
+    {
+     "id": "kaupunki",
+     "nimi": "Valparaíso",
+     "nostot": [
+      "Pysähdyspaikka Kap Hornin kiertäjille",
+      "Kiskoilla nousevat hissit",
+      "Kaupunki joka maalattiin takaisin",
+      "Kanava joka vei aseman"
+     ]
+    },
+    {
+     "id": "historia",
+     "nimi": "Historia",
+     "nostot": [
+      "Alimapu, kylä ennen Valparaísoa",
+      "Britit Cerro Alegren rinteellä",
+      "Kaupunki jossa kaikki kokeiltiin ensin",
+      "Maanjäristys joka piirsi kadut uusiksi"
+     ]
+    },
+    {
+     "id": "kirjallisuus",
+     "nimi": "Kirjallisuus",
+     "nostot": [
+      "Maailman vanhin espanjankielinen sanomalehti",
+      "Kolme taloa ja yksi Nobel",
+      "Etsivä joka asuu Paseo Gervasonilla",
+      "Kirjasto isoisän matkavuodelta"
+     ]
+    }
+   ],
+   "kohdekartta": [
+    "Plaza Sotomayor",
+    "Baburizzan palatsi",
+    "Anglikaaninen katedraali",
+    "Valparaíson yliopisto",
+    "Katolinen yliopisto",
+    "Toisinajattelijoiden hautausmaa",
+    "Valparaíson katedraali",
+    "Pyhien sydänten kirkko"
+   ]
+  }
+ ],
+ "lahiNostot": [
+  {
+   "id": "skandaali:santiagon-taistelu-1962",
+   "nimi": "Santiago 1962",
+   "lahde": "skandaalit",
+   "laji": "skandaali",
+   "km": 5,
+   "teksti": "Chile ja Italia kohtasivat MM-kisojen B-lohkossa Santiagossa 2. kesäkuuta 1962. Ottelusta tuli tunnettu Santiagon taisteluna: kaksi pelaajaa sai ulosajon, nyrkkejä heilui ja poliisin oli puututtava peliin neljästi. Erotuomarina oli englant…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Santiago de Chile",
+  "maanAvain": "Chile",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

@@ -1,0 +1,32 @@
+[
+ {
+  "id": "georgetown",
+  "lat": 6.81,
+  "lon": -58.15,
+  "wikidata": "Q10717"
+ },
+ {
+  "id": "paramaribo",
+  "lat": 5.85,
+  "lon": -55.2,
+  "wikidata": "Q3001"
+ },
+ {
+  "id": "brasilia",
+  "lat": -15.79,
+  "lon": -47.88,
+  "wikidata": "Q2844"
+ },
+ {
+  "id": "lapaz",
+  "lat": -16.5,
+  "lon": -68.13,
+  "wikidata": "Q1491"
+ },
+ {
+  "id": "santiagodechile",
+  "lat": -33.44,
+  "lon": -70.65,
+  "wikidata": "Q2887"
+ }
+]

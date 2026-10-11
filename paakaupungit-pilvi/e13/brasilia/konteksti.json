@@ -1,0 +1,97 @@
+{
+ "id": "brasilia",
+ "era": "e13",
+ "nimi": "Brasília",
+ "nimiAlkukieli": "Brasília",
+ "maa": "BRA",
+ "maanNimi": "Brasilia",
+ "asema": "pääkaupunki",
+ "lat": -15.7939,
+ "lon": -47.8828,
+ "wikidata": "Q2844",
+ "kevytSisalto": {
+  "kuvaus": "Brasília on Brasilian liittovaltion pääkaupunki, joka rakennettiin tyhjästä sisämaahan 1950-luvun lopulla korvaamaan Rio de Janeiro hallinnon keskuksena. Kaupungin suunnitelma, Plano Piloto, muistuttaa ylhäältä katsottuna lentokonetta tai nuolta, ja se on Unescon maailmanperintökohde vuodesta 1987. Kaupunki ympäröi tekoaltaana tehtyä Paranoá-järveä ja sijaitsee Cerradon savannien reunalla.",
+  "tunnusrakennukset": [
+   "Plano Piloto (Lúcio Costan kaupunkisuunnitelma, Unescon maailmanperintö 1987)",
+   "Esplanada dos Ministérios (ministeriöiden akseli)",
+   "Catedral Metropolitana de Brasília (Oscar Niemeyer, 1970)",
+   "Ponte Juscelino Kubitschek (silta, 2002)"
+  ],
+  "asukkaat": {
+   "arvo": 2817381,
+   "vuosi": 2022,
+   "lahde": "IBGE (Brasilian maantieteen ja tilastoinnin instituutti), väestönlaskenta 2022 (Brasília eli Distrito Federal, jota IBGE käsittelee yhtenä kuntana); IBGE:n arvio 2025: 2 996 899",
+   "linkki": "https://www.ibge.gov.br/cidades-e-estados/df"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Viisivuotias jäi valtaistuimelle",
+    "Vapaa kohtu, ehdollinen lapsuus",
+    "Sota, joka käänsi upseerien mielet",
+    "Itsenäisyys ilman pitkää sotaa"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Metsä, jonka koko ei mahdu mieleen",
+    "Kaksitoista tainta, jotka eivät selvinneet",
+    "Musta multa on ihmisen tekoa",
+    "Kolmesataayhdeksänkymmentäyksi kansaa"
+   ]
+  },
+  {
+   "id": "tiede",
+   "nimi": "Tiede",
+   "nostot": [
+    "Maan ensimmäinen valokuvaaja oli keisari",
+    "Kalastusretki, joka toi filosofin Amazonille",
+    "Kolmas hallitsija akatemian luettelossa",
+    "Museo, joka alkoi lintujen talona"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Tyylilaji, jonka nimi tarkoittaa itkua",
+    "Nainen, joka käveli miesten piiriin",
+    "Peli, joka piiloutui musiikkiin",
+    "Lissabonin salonkien suosikki Riosta"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Siemenet, joita ei olisi saanut viedä",
+    "Lauantain papupata ja sen kaksi tarinaa",
+    "Juuri, joka pitää osata käsitellä",
+    "Aroilta hiilloksen ääreen"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "kohde:brasilia",
+   "nimi": "Brasília",
+   "lahde": "fokuskohde",
+   "laji": "kaupunki",
+   "km": 0,
+   "teksti": "Brasília on Brasilian pääkaupunki, ja presidentti Juscelino Kubitschek perusti sen 21. huhtikuuta 1960 korvaamaan Rio de Janeiron. Kaupunki on suunniteltu tyhjästä: kaavan tekivät 1956 Lúcio Costa, Oscar Niemeyer ja Joaquim Cardozo, maisem…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Brasília",
+  "maanAvain": "Brasilia",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

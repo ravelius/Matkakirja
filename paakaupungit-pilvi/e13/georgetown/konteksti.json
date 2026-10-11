@@ -1,0 +1,62 @@
+{
+ "id": "georgetown",
+ "era": "e13",
+ "nimi": "Georgetown",
+ "nimiAlkukieli": "Georgetown",
+ "maa": "GUY",
+ "maanNimi": "Guyana",
+ "asema": "pääkaupunki",
+ "lat": 6.8058,
+ "lon": -58.1508,
+ "wikidata": "Q10717",
+ "kevytSisalto": {
+  "kuvaus": "Georgetown on Guyanan pääkaupunki ja suurin kaupunki Demerara-joen suulla Atlantin rannikolla. Maanpinta on osin merenpinnan alapuolella, joten kaupunkia suojaavat meriseinä ja hollantilaisperinteiset kanavat. Kaupungin tunnuksena ovat leveät puiden reunustamat kadut ja valkoiset puutalot, ja se toimii myös Karibian yhteisö CARICOMin sihteeristön kotipaikkana.",
+  "tunnusrakennukset": [
+   "Pyhän Yrjön katedraali (St George's Cathedral, 1892, yksi maailman korkeimmista puurakennuksista)",
+   "Stabroek-tori (Stabroek Market, 1881, valurautainen kellotorni)",
+   "Georgetownin majakka (1830)",
+   "Guyanan kasvitieteellinen puutarha"
+  ],
+  "asukkaat": {
+   "arvo": 125683,
+   "vuosi": 2022,
+   "lahde": "Guyana Bureau of Statistics, Preliminary Report: Guyana National Population and Housing Census 2022 (laskenta 14./15.9.2022), alueen 4 taulukko: Georgetown 125 683 (2012: 120 142); kokonaisväestö 878 674. Luettu suoraan PDF:stä; raportti on alustava.",
+   "linkki": "https://statisticsguyana.gov.gy/wp-content/uploads/2019/10/Preliminary-Report-Guyana-National-Population-and-Housing-Census-2022.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Guyana on Etelä-Amerikan koillisrannikolla sijaitseva valtio, jonka väestö asuu lähes kokonaan Atlantin rannikkoalueella, kun taas sisämaa on lähes asumatonta sademetsää ja savannia. Maa itsenäistyi Britanniasta vuonna 1966 ja on maanosan ainoa maa, jonka virallinen kieli on englanti. Väestö on etnisesti monimuotoista, ja suurimmat ryhmät ovat intialaistaustaiset ja afrikkalaistaustaiset guyanalaiset sekä alkuperäiskansat. Offshore-öljyn löytymisen jälkeen vuonna 2015 maan talous on kasvanut poikkeuksellisen nopeasti, ja Essequibon alueesta on ollut kiista Venezuelan kanssa.",
+  "genetiivi": "Guyanan",
+  "kielet": [
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "Guyanan kreoli (englantiin pohjautuva)",
+    "asema": "muu"
+   },
+   {
+    "kieli": "Guyanan hindustani",
+    "asema": "muu"
+   },
+   {
+    "kieli": "intiaanikielet (mm. makushi, wapishana, akawaio)",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Guyanan dollari",
+   "koodi": "GYD"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Georgetown",
+  "maanAvain": "Guyana",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

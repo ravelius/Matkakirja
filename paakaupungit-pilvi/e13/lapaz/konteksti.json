@@ -1,0 +1,129 @@
+{
+ "id": "lapaz",
+ "era": "e13",
+ "nimi": "La Paz",
+ "nimiAlkukieli": "La Paz (Nuestra Señora de La Paz)",
+ "maa": "BOL",
+ "maanNimi": "Bolivia",
+ "asema": "hallinnon paikka",
+ "lat": -16.4958,
+ "lon": -68.1333,
+ "wikidata": "Q1491",
+ "kevytSisalto": {
+  "kuvaus": "La Paz on Bolivian hallituksen ja kongressin kotipaikka, ja se sijaitsee Altiplanon reunaa leikkaavassa kanjonissa useiden tuhansien metrien korkeudessa. Kaupunki on rakentunut jyrkille rinteille Choqueyapu-joen laaksoon, ja sen takana kohoaa lumihuippuinen Illimani. Perustuslain mukainen pääkaupunki on Sucre, mutta La Paz on käytännössä maan hallinnon ja talouselämän keskus.",
+  "tunnusrakennukset": [
+   "Basílica de San Francisco (kolonialistinen barokkikirkko, rakennettu 1743-1790)",
+   "Calle Jaén (siirtomaa-ajan katu)",
+   "Plaza Murillo (kaupungin pääaukio)",
+   "Mi Teleférico -köysiratajärjestelmä (2014)"
+  ],
+  "asukkaat": {
+   "arvo": 755732,
+   "vuosi": 2024,
+   "lahde": "Bolivian tilastovirasto INE, väestönlaskenta 23.3.2024, ensimmäiset tulokset elokuussa 2024 (La Pazin kunta eli municipio; Wikidata Q1491 antaa saman luvun). Luku on kiistetty, ks. huom",
+   "linkki": "https://www.lostiempos.com/actualidad/pais/20240903/asamblea-pacenidad-rechaza-resultados-del-censo-exigen-se-realice-auditoria"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Piiritys, jota johdettiin ylätasangolta",
+    "Nimi, joka keksittiin kokouksessa",
+    "Kymmenen sentin vero, joka vei meren",
+    "Merivoimat maassa, jolla ei ole merta"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Puisto, jossa lasketaan joka seitsemäs maailman lintulaji",
+    "Flamingo, jonka luultiin kadonneen",
+    "Kasvi, joka kukkii kerran ja kuolee",
+    "Savanni, jonka ihminen muotoili"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Piiras, joka on syötävä pystyssä",
+    "Peruna, joka pakastekuivataan jalkojen alla",
+    "Kansallisjuoma, jonka nimi tulee rautatieslangista",
+    "Siemen, jonka linnut jättävät rauhaan"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Neljä soitinta, joita ei ollut soitettu yhdessä",
+    "Työlaulu, joka jäi Yungasin laaksoihin",
+    "Laulu, joka vietiin Pariisiin ilman lupaa",
+    "Tule takaisin, kun osaat laulaa espanjaksi"
+   ]
+  },
+  {
+   "id": "kuvataide",
+   "nimi": "Kuvataide",
+   "nostot": [
+    "Kultasuti, joka mahdutti koko kaupungin yhteen kuvaan",
+    "Enkelit, joilla on musketti ja pitsikaulus",
+    "Maalari, joka toi ylängön ihmiset kankaalle",
+    "Kuvanveistäjä, joka vei kaivosmiehet New Yorkiin"
+   ]
+  }
+ ],
+ "lahiKaupungit": [
+  {
+   "id": "titicaca",
+   "nimi": "Titicaca",
+   "km": 148,
+   "lehti": [
+    {
+     "id": "kaupunki",
+     "nimi": "Titicaca-järvi",
+     "nostot": [
+      "Maailman korkein purjehduskelpoinen järvi",
+      "Isoisän ajan höyrylaiva vuorten yli",
+      "Auringon lapset nousevat järvestä",
+      "Tiwanaku, inkoja vanhempi valtakunta",
+      "Auringon pyhä saari",
+      "Puman kivi antoi järvelle nimen"
+     ]
+    },
+    {
+     "id": "luonto",
+     "nimi": "Kelluvat saaret ja järven eliöt",
+     "nostot": [
+      "Kelluvat ruokosaaret",
+      "Elämä totorasta rakennetulla saarella",
+      "Totora, saarten ainoa raaka-aine",
+      "Jättiläissammakko joka hengittää ihollaan",
+      "Lentokyvytön sukeltajalintu"
+     ]
+    }
+   ],
+   "kohdekartta": []
+  }
+ ],
+ "lahiNostot": [
+  {
+   "id": "skandaali:kokaiinivallankaappaus-1980",
+   "nimi": "Kokaiinikaappaus",
+   "lahde": "skandaalit",
+   "laji": "skandaali",
+   "km": 0,
+   "teksti": "Luis García Meza Tejada oli uraupseeri, joka nousi kenraaliksi Hugo Banzerin diktatuurin aikana. Hän johti armeijan oikeistosiipeä, joka ei hyväksynyt paluuta siviilihallintoon: moni upseeri oli ollut mukana Banzerin ajassa eikä pitänyt si…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "La Paz",
+  "maanAvain": "Bolivia",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}
