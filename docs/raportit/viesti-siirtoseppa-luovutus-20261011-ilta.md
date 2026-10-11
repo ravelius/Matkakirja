@@ -5,7 +5,7 @@
 Olet Siirtoseppä (Opus, high): Olavinlinnan historiamoottori ja pelattava pala (natiivi proto). Lue tämä, CLAUDE.md ja Raamatun
 Ydinajatus kohta 2. Edellinen luovutus: docs/raportit/viesti-siirtoseppa-luovutus-20261011-aamu.md (taulukko vanhoista commiteista).
 Proto-worktree /Users/Shared/Claude/wt/proto-siirtoseppa-kello, haara **siirtoseppa/laituri-varoitus**, kärki katso `git log -1`
-(16.15: **3c6f44c81**). Pakettihaarat worktreessa /Users/Shared/Claude/wt/proto-siirtoseppa-v47g: siirtoseppa/v47h…v47p (+ v47q tekeillä).
+(16.3x: **a8cac6c40**). Pakettihaarat worktreessa /Users/Shared/Claude/wt/proto-siirtoseppa-v47g: siirtoseppa/v47h…v47q (v47q **633fdf41e**, pyydetty vahtiin).
 Proto-git on paikallinen (ei pushia). Olavinlinna-vahti kääntää jokaisen linnahaaran commitin → lokit/olavinlinna-uusin; haaralista
 /Users/Shared/Claude/julkaisija-tyokalut/olavinlinna-haarat.txt (Julkaisija vaihtaa pakettihaaran, kun kerrot haaran + SHA:n).
 **Omistaja 12.5x:** kaikki avoimet junaan 182, myös Olavinlinna; HIONTA KUULUU JUNAAN 182 (laatu tärkeintä). Opus-ali-agentit rinnakkain.
@@ -28,15 +28,13 @@ yksivärinen; harja aloitus seinässä (muurinharjan länsipää ilman päätyä
 cfd0f1e89 (ei vielä ajettu). Jumit 16/19/42/61/72 = mallin juurisyy (lattia jatkuu seinän alle) → LR v47q korjaa datassa.
 
 ## SEURAAVAT TEHTÄVÄT (järjestys)
-1. **v47q-kiinnitys** (Sonnet-agentti käynnissä nollaushetkellä → tarkista `git -C <v47g-worktree> log --oneline -1 siirtoseppa/v47q`;
-   jos puuttuu, kiinnitä kuten 9b34a3b7c: pala 6619d8a1d8fdc525 (blender 5843ae9faf23540b), nyky 1bad2c78cf1adf4f (nyky-blender selvitettävä)).
-   Kerro Julkaisijalle haara + SHA → vahti → BOTTI NYT ×2 (3c6f44c81 tai uudempi + v47q).
+1. **v47q valmis** (633fdf41e; nyky-blender 932b9b043a65545d johdettu nyky-palan manifest.json:sta kuten vie-blender.sh). Julkaisijalle
+   kerrottu → kun olavinlinna-uusin ⊃ a8cac6c40 + v47q → BOTTI NYT ×2 → "BOTTI x/17" PT:lle. (v47g-worktreen oma testi
+   AstronauttiLinssiTestit.CupolanEnnakkoOnAvautuvaAsento kaatuu vanhalla pohjalla; kello-kopio 1533/1533.)
 2. **v47r/s/t** tulevat seuraavalta Linnanrakentajalta (LR nollautui): r = ulkoalueen kiila, s = harjan päätyseinä + kävely matalien
    näkyvien pintojen alta, t = kappelin tilan kansipinta pois 1499:stä (piste 77). Kiinnitä vain viimeisin.
-3. **SilmaVaran lähdeloki** (Sonnet-agentti käynnissä, muutokset kellossa committaamatta: SeikkailuKavely.cs, KavelyPielet.cs,
-   SilmaVaraLahdeTestit.cs). Tarkista `git status`; jos valmis ja testit läpi → committaa vain nämä tiedostot. Tarkoitus: selvittää mikä
-   näkyvä pinta painaa silmän 1,22 m:iin muuriportaan juuressa (glTF −18,1; 3,8; −18,5; LR: kirkkotorni-portaat-meshissä ei ole) → lokirivi
-   "seikkailu: silmävara <lähde> painaa silmää …" seuraavassa botti-ajossa → kerro LR:lle.
+3. **SilmaVaran lähdeloki valmis** (a8cac6c40): seuraavan botti-ajon lokista grep "silmävara" → tott-kammion/muuriportaan juuren
+   (glTF −18,1; 3,8; −18,5) painaja → kerro LR:lle (lähteinä vain kävelyosien näkyvät glb:t ja tila:keittio-g102).
 4. Kun BOTTI 17/17 tai jäljellä vain LR:n kohdat → PT:lle, Laitetestaajalle hyväksytyt osat (8. kierros A/B).
 5. Soutajan kuvakulma veneessä (NS:n kasvot 046e28c48 + soutaja v2 38108e9ad ovat linnahaarassa): tarkista simulla, näkyvätkö soutajan
    kasvot pelaajalle repliikin aikana (NS pyysi; pää kääntyy kameraan). Jos kamera on selän takana → kääntö tai istumapaikka.
