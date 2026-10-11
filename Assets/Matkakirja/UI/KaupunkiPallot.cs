@@ -16,6 +16,8 @@
 //    jos pelaajan kaupungin kutsukortti (Kutsuminiatyyri) on pisteen lähellä vasemmalla, pallo peilataan oikealle. Kortin paikka on
 //    lukittu kaupunkia kohden, joten puoli päätetään kerran (KaupunkiPalloMitat.Oikealle) eikä vaihdu zoomatessa; vain korttia
 //    lähin pallo, ja maan vaihtuessa puolet päätetään uudelleen.
+//  - Muun maan pallo (omistaja 11.10.2026 PT:n kautta, juna 182): napautus ei avaa eikä veloita, vaan pallon viereen tulee 3 s:ksi
+//    hintalappu "KUUMAILMAPALLO £200" (Hintalappu: päivälaskurin pohja, yhteinen raketin "ISS £500" kanssa). Pelaajan maassa napautus avaa ja veloittaa kuten ennen.
 //  - Tyylit: olemassa oleva ERIKOISNOSTOT-pohja (mk-erikoisnosto-paa, __kuva); nimi vain VoiceOverille.
 //  - Napautus: OpasSovitin.AvaaKaupunkitila(id) (LS1:n kaupunkitila, juna 159); lista OpasSovitin.SallitutLista / LataaSallitut. Pulu väistää palloa (Pulu.Alareuna, NakyvaAlueet).
 using System.Collections.Generic;
@@ -113,7 +115,8 @@ namespace Matkakirja.Natiivi
                 if (string.IsNullOrEmpty(k.Id) || double.IsNaN(k.Lat) || double.IsNaN(k.Lon)) continue;
                 string id = k.Id;
                 // Kosketusnappi ilman oletusteeman ja mk-nappi-tyylejä: pallo läpinäkyvällä taustalla (kuten päät).
-                var b = new PalloNappi(() => Avaa(id)) { text = "" };
+                Pallo pl = null;
+                var b = new PalloNappi(() => Avaa(pl)) { text = "" };
                 b.RemoveFromClassList(Button.ussClassName);
                 b.AddToClassList("mk-erikoisnosto-paa");
                 b.tooltip = Kieli.T("ui.pallo.kaupunkiopas", k.Nimi);   // vain VoiceOverille ja vihjeenä
@@ -125,7 +128,8 @@ namespace Matkakirja.Natiivi
                 // Kehityskaupunki: värillinen pallo; muut kipsinä (omistaja 8.10.2026 klo 20.4x), toimivat samoin.
                 var oma = Kehityskaupunki(id) || kipsiKuva?.Kuva == null ? kuva : kipsiKuva;
                 if (oma?.Kuva != null) kv.style.backgroundImage = new StyleBackground(Background.FromRenderTexture(oma.Kuva));
-                pallot.Add(new Pallo { Id = id, Nimi = k.Nimi, Lat = k.Lat, Lon = k.Lon, Nappi = b, Kuva = kv, Aina = Kehityskaupunki(id) });
+                pl = new Pallo { Id = id, Nimi = k.Nimi, Lat = k.Lat, Lon = k.Lon, Nappi = b, Kuva = kv, Aina = Kehityskaupunki(id) };
+                pallot.Add(pl);
             }
             Debug.Log($"MATKAKIRJA kaupunkipallot: {pallot.Count} kaupunkia: {string.Join(", ", pallot.Select(p => p.Id))}");
         }
@@ -134,11 +138,17 @@ namespace Matkakirja.Natiivi
         /// suoraan (9.10.: heijastus pois, puuttuva rajapinta kaatuu käännökseen; KehityskaupungitTestit).</summary>
         static bool Kehityskaupunki(string id) => Matkakirja.Linssit.Kehityskaupungit.On(id);
 
-        static void Avaa(string id)
+        void Avaa(Pallo p)
         {
+            string id = p.Id;
             Debug.Log("MATKAKIRJA kaupunkipallot: napautus " + id);
+            // Muun maan pallo: hintalappu, ei avausta eikä veloitusta (omistaja 11.10.2026).
+            var nk = NostoKerros.Instanssi;
+            if (!ErikoisnostoMitat.OmaMaa(PallonMaa(p), nk != null ? nk.NykyinenMaa : null)) { NaytaHinta(p); return; }
             // Lento maksaa 200 p (omistaja 11.10.2026, juna 182): maksu ennen avausta, ilman rahaa pallo ei avaudu
             // (tilarivin "Rahat eivät riitä"); jos opas ei aukea maksun jälkeen, maksu palautetaan.
+            // Rahat eivät riitä → ilmoitus ja OK (Rahapula, omistaja 11.10.2026); tilarivi jää Maksa-funktion varaksi.
+            if (!Rahapula.Tarkista(Kieli.T("ui.pallo.nimi"), Matkakirja.Peli.KauppaVakiot.PalloLentoHinta)) return;
             var o = PeliOhjain.Instanssi;
             if (o != null && !o.MaksaPalloLento()) return;
             if (OpasSovitin.AvaaKaupunkitila(id)) return;
@@ -219,6 +229,16 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>Muun maan pallo: hinta pallon kylkeen (Hintalappu, 3 s), vasemmalle kallistuneen vastakkaiselle puolelle.</summary>
+        void NaytaHinta(Pallo p)
+        {
+            hinnanPallo = p;
+            Hintalappu.Nayta(p.Nappi, Kieli.T("ui.pallo.hinta", PeliApu.Valuutta + Matkakirja.Peli.KauppaVakiot.PalloLentoHinta), vasemmalle: p.Oikea);
+            Debug.Log("MATKAKIRJA kaupunkipallot: hinta " + p.Id + " (muu maa)");
+        }
+
+        Pallo hinnanPallo;
+
         string edellinenMaa = "";
         bool edellinenKaikki;
 
@@ -283,8 +303,8 @@ namespace Matkakirja.Natiivi
         {
             var p = int.TryParse(kohde, out int i) ? (i >= 0 && i < pallot.Count ? pallot[i] : null) : pallot.FirstOrDefault(x => x.Id == kohde);
             if (p == null) return "kaupunkipallot: ei palloa " + kohde;
-            Avaa(p.Id);
-            return "kaupunkipallot: napautettu " + p.Id;
+            Avaa(p);
+            return "kaupunkipallot: napautettu " + p.Id + (hinnanPallo == p ? " (muu maa: hintalappu)" : "");
         }
     }
 
