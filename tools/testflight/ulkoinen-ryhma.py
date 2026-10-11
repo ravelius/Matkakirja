@@ -53,6 +53,7 @@ def main():
     p.add_argument('--ryhma', default='', help='ulkoisten ryhmien nimet pilkuin (tyhjä = kaikki julkisen linkin ryhmät)')
     p.add_argument('--luo-ryhma', default='', help='luo ulkoinen ryhmä julkisella linkillä (raja 100), ellei ole')
     p.add_argument('--odota-min', type=int, default=45)
+    p.add_argument('--alusta', default='IOS', help='IOS tai MAC_OS: sama build-numero voi olla molemmilla (oletus IOS)')
     p.add_argument('--vanhenna', default='', help='pilkuin erotetut CFBundleVersionit, jotka vanhennetaan ensin')
     p.add_argument('--poista', default='', help='pilkuin erotetut CFBundleVersionit, jotka irrotetaan ulkoisesta ryhmästä (sisäisille jäävät)')
     a = p.parse_args()
@@ -215,7 +216,8 @@ def main():
 
     raja = time.time() + a.odota_min * 60
     while True:
-        tila, d = kutsu('GET', f'/v1/builds?filter[app]={app_id}&filter[version]={a.build}&limit=5')
+        tila, d = kutsu('GET', f'/v1/builds?filter[app]={app_id}&filter[version]={a.build}&limit=5'
+                         f'&filter[preReleaseVersion.platform]={a.alusta}')
         if tila != 200:
             virhe('Buildia ei saatu', f'{tila}: {d}')
         build = d['data'][0] if d.get('data') else None
