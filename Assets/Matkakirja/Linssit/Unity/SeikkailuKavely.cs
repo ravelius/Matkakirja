@@ -21,6 +21,10 @@ namespace Matkakirja.Natiivi
         /// <summary>osat.jsonin kansio (merkkien glb-polut, esim. esineet, ovat suhteessa tähän).</summary>
         public static string Juuri { get; private set; }
         public static readonly List<Mesh> KavelyPinnat = new List<Mesh>();
+        /// <summary>Kävelyosien näkyvät kolmiot isän kehyksessä (Ydin SilmaVara; SeikkailuPelaaja.NakyvaRaja): silmä ei mene näkyvää
+        /// mallia VaraM:ää lähemmäs, myös törmäyksettömiin pintoihin (tyrmän holvi oviaukon edessä, PT 07.0x, Laitetestaaja 5. kierros).</summary>
+        public static SilmaVara Silmavara { get; private set; } = new SilmaVara();
+        static Transform silmavaraIsa;
         static readonly List<GameObject> tormaykset = new List<GameObject>();
         static readonly int IdLeikkaus = Shader.PropertyToID("_KavelyLeikkaus"), IdKoko = Shader.PropertyToID("_KavelyLeikkausKoko"),
             IdN = Shader.PropertyToID("_KavelyLeikkausN");
@@ -86,6 +90,8 @@ namespace Matkakirja.Natiivi
                     {
                         piirretty++;
                         if (kt.ValoVain) valoAtlas?.Invoke(kt);
+                        try { Silmavara.LisaaMalli(DioraamaGlb.Lue(b, true)); }   // kaikki solmut (holvi on omana solmunaan)
+                        catch (Exception e) { kirjaa?.Invoke($"seikkailu: {osa.Id}: silmävara ohitetaan ({e.Message})"); }
                     }
                 }
                 if (!string.IsNullOrEmpty(osa.Tormays))
@@ -113,8 +119,8 @@ namespace Matkakirja.Natiivi
                 }
             }
             int pielia = LisaaPielet(d, isa);
-            Data = d; Juuri = juuri;
-            kirjaa?.Invoke($"seikkailu: kävelygeometria {d.Osat.Count} osaa (piirretty {piirretty}, törmäyksiä {tormays}, kävelypintoja {KavelyPinnat.Count}), merkkejä {d.Merkit.Count}, pielet {pielia}");
+            Data = d; Juuri = juuri; silmavaraIsa = isa;
+            kirjaa?.Invoke($"seikkailu: kävelygeometria {d.Osat.Count} osaa (piirretty {piirretty}, törmäyksiä {tormays}, kävelypintoja {KavelyPinnat.Count}), merkkejä {d.Merkit.Count}, pielet {pielia}, silmävara {Silmavara.Kolmioita}");
         }
 
         /// <summary>Portaalin pielet ja kynnys (Ydin KavelyPielet; Laitetestaaja laituri-a1 11.10.: tatti pohjassa laiturilta kannen
@@ -134,6 +140,15 @@ namespace Matkakirja.Natiivi
                 tormaykset.Add(go); n++;
             }
             return n;
+        }
+
+        /// <summary>Silmän korkein maailman-y (silmaY → alaY) pelaajan kohdalla näkyvää mallia vasten (Ydin SilmaVara.Raja).</summary>
+        public static float SilmaRaja(Vector3 paikka, float silmaY, float alaY)
+        {
+            if (Silmavara.Kolmioita == 0) return silmaY;
+            var l = silmavaraIsa != null ? silmavaraIsa.InverseTransformPoint(paikka) : paikka;
+            double ero = l.y - paikka.y;   // isän kehys: vain siirto (kävelyosat ja törmäykset samassa kehyksessä)
+            return (float)(Silmavara.Raja(l.x, l.z, silmaY + ero, alaY + ero) - ero);
         }
 
         /// <summary>Kuoren leikkaukset päälle/pois (kävelytila).</summary>
@@ -277,6 +292,7 @@ namespace Matkakirja.Natiivi
             tormaykset.Clear();
             foreach (var m in KavelyPinnat) if (m != null) UnityEngine.Object.Destroy(m);
             KavelyPinnat.Clear();
+            Silmavara = new SilmaVara(); silmavaraIsa = null;
             Data = null;
             Leikkaukset(false);
         }

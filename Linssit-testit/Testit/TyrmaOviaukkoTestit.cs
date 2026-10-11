@@ -4,6 +4,7 @@
 // KavelyPieletTestit: ympyrä (0,3 + iho 0,03) seinien poikkileikkauksia vasten nilkalla (lattia + 0,4) ja vyötäröllä (+ 1,0).
 // Mitattu: oviaukko 1,0 m × seinä 0,8 m, käytävä 1,0 m → kulkukelpoinen; ryömintäaukko 0,6 × 0,55 m (kapseli 0,66 m ei mahdu,
 // yläpuolella kamana), irtokivi 0,18 m seinän sisällä → kapseli pysähtyy aukon suulle kiven ulottuville.
+// 11.10. (PT 07.0x, Laitetestaaja 5. kierros): näkyvä malli kultaiset/olavinlinna-tyrma-E101-nakyva.glb (SilmaVara): holvi oviaukossa.
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -65,7 +66,7 @@ namespace Matkakirja.Linssit.Testit
         }
 
         /// <summary>Tatti kohti pistettä (kävelyvauhti) enintään s sekuntia; palauttaa loppupaikan ja pienimmän etäisyyden mittapisteeseen.</summary>
-        static (double X, double Z, double Lahin) Kohti(double x, double z, double kx, double kz, List<(double, double, double, double)> s, double mx, double mz, double sek = 12)
+        static (double X, double Z, double Lahin) Kohti(double x, double z, double kx, double kz, List<(double, double, double, double)> s, double mx, double mz, double sek = 12, Action<double, double> askel = null)
         {
             double lahin = double.MaxValue;
             for (double t = 0; t < sek; t += Dt)
@@ -73,6 +74,7 @@ namespace Matkakirja.Linssit.Testit
                 double dx = kx - x, dz = kz - z, e = Math.Sqrt(dx * dx + dz * dz); if (e < 0.05) break;
                 x += dx / e * Kavely.KavelyMs * Dt; z += dz / e * Kavely.KavelyMs * Dt;
                 Tyonna(ref x, ref z, s);
+                askel?.Invoke(x, z);
                 lahin = Math.Min(lahin, Math.Sqrt((x - mx) * (x - mx) + (z - mz) * (z - mz)));
             }
             return (x, z, lahin);
@@ -97,6 +99,59 @@ namespace Matkakirja.Linssit.Testit
             var (x, z, _) = Kohti(i.X, i.Z, o.X, o.Z, s, o.X, o.Z);
             var (x2, z2, _) = Kohti(x, z, u.X, u.Z, s, u.X, u.Z);
             Oleta.Tosi(Et(x2, z2, u) > UlosM + 0.5, $"lukittu ovi pitää huoneessa ({Et(x2, z2, u):F2} m käytävän päästä)");
+        }
+
+        static SilmaVara nakyva;
+        /// <summary>Näkyvä malli (paketin tyrma-E101.glb, leivottu v47c, sha1 f31a00f1): kivi = törmäys, lisäksi rappaus (holvi ja käytävän
+        /// kattolevy) ja oljet ilman törmäystä.</summary>
+        static SilmaVara Nakyva()
+        {
+            if (nakyva != null) return nakyva;
+            var m = DioraamaGlb.Lue(File.ReadAllBytes(Path.Combine(AppContext.BaseDirectory, "..", "kultaiset", "olavinlinna-tyrma-E101-nakyva.glb")), false);
+            nakyva = new SilmaVara();
+            nakyva.LisaaMalli(m);
+            return nakyva;
+        }
+
+        [Testi] static void SilmaEiMeneNakyvanHolvinLapiOviaukossa()
+        {
+            // PT 07.0x, Laitetestaaja 5. kierros (v10-30/60/76): "kattolevy + seinä täyttää ruudun" ovella kaikissa muunnelmissa. Juurisyy:
+            // rappauksen holvi alkaa 1,60 m:stä seinän linjassa ja peittää oviaukon yläosan ilman törmäystä; silmät 1,62 m menevät läpi.
+            var v = Nakyva(); var i = M("istuu:pelaaja-tyrma"); var o = M("ovi:tyrma"); var u = M("ovi:tyrma-ulos");
+            double silma = Lattia + 1.62, ala = Lattia + 1.0, raaka = double.MaxValue, korjattu = double.MaxValue, matalin = silma;
+            void Askel(double x, double z)
+            {
+                raaka = Math.Min(raaka, v.Etaisyys(x, silma, z, 1.0));
+                double y = v.Raja(x, z, silma, ala); matalin = Math.Min(matalin, y);
+                korjattu = Math.Min(korjattu, v.Etaisyys(x, y, z, 1.0));
+            }
+            var (x1, z1, _) = Kohti(i.X, i.Z, o.X, o.Z, Seinat(), o.X, o.Z, askel: Askel);
+            Kohti(x1, z1, u.X, u.Z, Seinat(), u.X, u.Z, askel: Askel);
+            Console.WriteLine($"      oviaukko: ilman rajaa {raaka:F3} m holvista, rajalla {korjattu:F3} m, silmät matalimmillaan {matalin - Lattia:F2} m");
+            Oleta.Tosi(raaka < 0.05, $"juurisyy: ilman rajaa silmä {raaka:F3} m näkyvästä holvista");
+            Oleta.Tosi(korjattu >= SilmaVara.VaraM - 1e-9, $"silmä vähintään {SilmaVara.VaraM} m näkyvästä mallista ({korjattu:F3} m)");
+            Oleta.Tosi(matalin <= Lattia + 1.47 && matalin >= ala, $"oviaukossa kumarrus ({matalin - Lattia:F2} m lattiasta)");
+            Oleta.Sama(silma, v.Raja(i.X, i.Z, silma, ala), "oljilla silmät ennallaan");
+        }
+
+        [Testi] static void HuoneessaEiTurhaaKumarrusta()
+        {
+            // Silmä laskee vain aukkojen kohdalla: huoneen jokainen kapselin paikka (≥ R seinistä), joka on yli 1,0 m ovesta,
+            // ryömintäaukosta ja ilmaraosta, pitää silmät 1,62 m:ssä.
+            var v = Nakyva(); double silma = Lattia + 1.62; int n = 0, kumartui = 0;
+            var aukot = new[] { M("ovi:tyrma"), M("esine:irtokivi-tyrma"), M("ilmarako:tyrma") };
+            for (double x = -18.6; x <= -10.6; x += 0.1)
+                for (double z = -6.4; z <= 2.0; z += 0.1)
+                {
+                    double tx = x, tz = z; Tyonna(ref tx, ref tz, Seinat());
+                    if (Math.Abs(tx - x) > 1e-9 || Math.Abs(tz - z) > 1e-9) continue;   // kapseli ei mahdu
+                    bool lahella = false; foreach (var a in aukot) if (Et(x, z, a) < 1.0) lahella = true;
+                    if (lahella || v.Etaisyys(x, Lattia + 0.1, z, 0.3) > 0.11) continue;   // vain lattian päällä
+                    n++; if (v.Raja(x, z, silma, Lattia + 1.0) < silma) kumartui++;
+                }
+            Console.WriteLine($"      huone: {n} kapselin paikkaa, kumarrus {kumartui}");
+            Oleta.Tosi(n > 300, $"huoneen paikkoja {n}");
+            Oleta.Sama(0, kumartui, $"kumarrus huoneessa ({kumartui}/{n})");
         }
 
         [Testi] static void RyomintaaukonSuuKivenUlottuvilla()

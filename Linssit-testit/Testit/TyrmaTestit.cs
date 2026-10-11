@@ -1,4 +1,5 @@
-// HISTORIAMOOTTORI (Siirtoseppä 7.10.2026): tyrmä muunnelma 1 — sujuva pako ≤ 45 s, 20 s → vihje kerran, 60 s → Pulu avaa oven.
+// HISTORIAMOOTTORI (Siirtoseppä 7.10.2026): tyrmä muunnelma 1 — sujuva pako ≤ 45 s; 11.10. (PT 07.0x, Laitetestaaja 5. kierros):
+// 10 s → vihje, toistuu 15 s:n välein, 45 s → lukko aukeaa (ennen 20 s kerran ja 60 s).
 using System;
 using Matkakirja.Linssit.Seikkailu;
 
@@ -37,10 +38,28 @@ namespace Matkakirja.Linssit.Testit
         {
             var t = new Tyrma();
             Aja(t, Tyrma.PuluTuleeS + Tyrma.VihjeS + 0.5);
-            Oleta.Tosi(t.Vihje, "20 s ilman tekoa → vihje");
-            t.Vihje = false; Aja(t, 10); Oleta.Tosi(!t.Vihje, "vihje kerran");
-            Aja(t, Tyrma.PuluAvaaS);
-            Oleta.Tosi(t.PuluAvasi && t.Vaihe == TyrmanVaihe.OviAuki, "60 s → Pulu avaa oven");
+            Oleta.Tosi(t.Vihje, "10 s ilman tekoa → vihje");
+            t.Vihje = false; Aja(t, Tyrma.VihjeValiS - 1); Oleta.Tosi(!t.Vihje, "ei ennen väliä");
+            Aja(t, 1.5); Oleta.Tosi(t.Vihje, "vihje toistuu 15 s:n välein");
+            t.Vihje = false; Oleta.Tosi(t.Poimi(), "teko"); Aja(t, Tyrma.VihjeS - 1); Oleta.Tosi(!t.Vihje, "teko aloittaa alusta");
+            Aja(t, 1.5); Oleta.Tosi(t.Vihje, "seuraava vihje (ovelle) 10 s teosta");
+            Oleta.Tosi(t.Vaihe == TyrmanVaihe.AvaimetKadessa && t.Aika < Tyrma.PuluAvaaS, "ennen lukkoa");
+            Aja(t, Tyrma.PuluAvaaS - t.Aika + 0.05);
+            Oleta.Tosi(t.PuluAvasi && t.Vaihe == TyrmanVaihe.OviAuki, "45 s → lukko aukeaa");
+            Oleta.Sama(45.0, Tyrma.PuluAvaaS, "varalukko 45 s (PT 07.0x)");
+        }
+
+        [Testi] static void OmallaTeollaAlle60sKaikissaMuunnelmissa()
+        {
+            // Laitetestaaja 5. kierros: muunnelmissa 1 ja 3 ulos vasta 84–130 s (lukko ratkaisi). Kosketuspelaaja: herätys 2,5 s,
+            // ensimmäinen vihje 10 s:ssa ohjaa avaimiin / irtokiveen, kävely ~2 m 1,4 m/s, irtokivi kolme napautusta 1 s välein.
+            var a = new Tyrma(1); Aja(a, Tyrma.PuluTuleeS + Tyrma.VihjeS + 0.2); Oleta.Tosi(a.Vihje, "vihje avaimiin");
+            Aja(a, 3); Oleta.Tosi(a.Poimi(), "avainten päälle astuminen poimii"); Aja(a, 4);
+            Oleta.Tosi(a.AvaaOvi(), "ovelle käveleminen avaa"); Aja(a, 5); Oleta.Tosi(a.Ulos() && !a.PuluAvasi && a.Aika < 60, $"muunnelma 1 omalla teolla {a.Aika:F0} s");
+            var k = new Tyrma(3); Aja(k, Tyrma.VihjeS + 0.2); Oleta.Tosi(k.Vihje, "vihje irtokiveen");
+            Aja(k, 4); for (int n = 0; n < 2; n++) { k.Yritys(); Aja(k, 1); }
+            Oleta.Tosi(k.KiviIrti(), "kolmas veto irrottaa"); Aja(k, 6);
+            Oleta.Tosi(k.Ulos() && !k.PuluAvasi && k.Aika < 60, $"muunnelma 3 omalla teolla {k.Aika:F0} s");
         }
     
         [Testi] static void OvenVihjeLukonAuettuaJaToistuen()
