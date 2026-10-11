@@ -112,8 +112,28 @@ namespace Matkakirja.Natiivi
                     if (m != null) KavelyPinnat.Add(m);
                 }
             }
+            int pielia = LisaaPielet(d, isa);
             Data = d; Juuri = juuri;
-            kirjaa?.Invoke($"seikkailu: kävelygeometria {d.Osat.Count} osaa (piirretty {piirretty}, törmäyksiä {tormays}, kävelypintoja {KavelyPinnat.Count}), merkkejä {d.Merkit.Count}");
+            kirjaa?.Invoke($"seikkailu: kävelygeometria {d.Osat.Count} osaa (piirretty {piirretty}, törmäyksiä {tormays}, kävelypintoja {KavelyPinnat.Count}), merkkejä {d.Merkit.Count}, pielet {pielia}");
+        }
+
+        /// <summary>Portaalin pielet ja kynnys (Ydin KavelyPielet; Laitetestaaja laituri-a1 11.10.: tatti pohjassa laiturilta kannen
+        /// kulmaan, ei sillalle): näkymättömät BoxColliderit oletuskerroksessa kuten vartijoiden kapselit (CharacterController törmää,
+        /// näkölinjat, napautus ja kattoraja eivät). Puretaan törmäysten mukana.</summary>
+        static int LisaaPielet(KavelyData d, Transform isa)
+        {
+            int n = 0;
+            foreach (var l in KavelyPielet.Laske(d))
+            {
+                var go = new GameObject("Pieli:" + l.Nimi) { layer = 0 };
+                go.transform.SetParent(isa, false);
+                // Isän kehyksessä kuten törmäysmeshit; glTF (x, y, z) → (x, y, −z), kierto_y sama kulma (Unityn +x = (cos, 0, −sin)).
+                go.transform.localPosition = new Vector3((float)l.X, (float)l.Y, (float)-l.Z);
+                go.transform.localRotation = Quaternion.Euler(0f, (float)(l.KiertoY * 180 / Math.PI), 0f);
+                go.AddComponent<BoxCollider>().size = new Vector3((float)l.KokoX, (float)l.KokoY, (float)l.KokoZ);
+                tormaykset.Add(go); n++;
+            }
+            return n;
         }
 
         /// <summary>Kuoren leikkaukset päälle/pois (kävelytila).</summary>
