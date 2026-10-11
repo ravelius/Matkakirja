@@ -1150,7 +1150,9 @@ export const RAAMATTU = {
           + '11.10.2026 klo 21.5x: "vaihdetaan tuohon riipukseen"; korvaa Meripihkahuoneen, joka ei mahdu '
           + 'matkalaukkuun): riipus vuodelta 1389 (Juhana Peloton), kateissa 1640-luvulta; Euroopan pikkuaarre '
           + 'Itämeren meripihka säilyy. MITTASÄÄNTÖ (omistaja 21.5x): unohdettu aarre on yhden ihmisen '
-          + 'kannettavissa (Suuren Zimbabwen kivilintu käy). AARNIN LUETTELO ESITELLÄÄN VASTA MYÖHEMMIN (omistaja '
+          + 'kannettavissa (Suuren Zimbabwen kivilintu käy). NIMET (Päätoimittaja 11.10.2026 klo 23.0x): Euroopan '
+          + 'aarre on "Kolme veljestä -riipus" ja Riian nähtävyys "Kolme veljestä -talot", jotta ne eivät sekoitu '
+          + '(Sisältökirjuri muuttaa datan). AARNIN LUETTELO ESITELLÄÄN VASTA MYÖHEMMIN (omistaja '
           + '21.3x: "pelaaja ei vielä tiedä mitään koko aarnin luettelosta"): pelin alussa isoisä kertoo '
           + 'aarteesta mainitsematta luetteloa (ks. Kaupungit, ALOITUSKAUPUNKI JA KAUPUNGIN INTRO).',
         'AARREVIHJEET: ei symboleja eikä järjestelmiä — vain harvat '
@@ -1190,14 +1192,10 @@ export const RAAMATTU = {
           + 'terminaaliin ja olet varma, että ukko oli löytänyt '
           + 'jotain. Mutta kuka on repinyt kirjasta viimeisen '
           + 'sivun?"',
-        'VAANIJAKAARI ALKOI (kaanonit 25.8.2026): Istanbulin '
-          + 'aarremerkintä on ensimmäinen vaanijavihje ("mies, joka '
-          + 'oli kysellyt minusta satamassa, seisoi jo sillalla"); '
-          + 'Rooman merkintä on twist-siemen ("Rooman aarre oli '
-          + 'ainoa, jota en yrittänytkään... Jonain päivänä '
-          + 'ymmärrät miksi"); Bukarest kuittaa hiljaisuuden '
-          + '("Sillalla ei tällä kertaa seissyt ketään"). Kaari '
-          + 'hengittää — ei joka maassa.',
+        'VAANIJAKAARI ALKOI (kaanonit 25.8.2026): kaari hengittää '
+          + '— ei joka maassa. Kaaren aarremerkintäosuus (Istanbul, '
+          + 'Rooma ja Bukarest) poistettiin 11.10.2026 aarremerkintöjen '
+          + 'mukana, ja kaari jatkuu muiden tekstien varassa.',
       ],
     },
     {

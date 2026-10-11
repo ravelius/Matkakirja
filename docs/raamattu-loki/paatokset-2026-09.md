@@ -13766,3 +13766,15 @@ Raamattuun (docs-PR 11.10. yö, Kolme veljestä): Ydinajatus, PELIT, TALOUS JA L
 11.10. 22.4x OMISTAJA (chat) sanatarkasti: "ei kun tee meta human, se on tärkeää saada huomiseksi" → RAAMATTUUN: METAHUMAN HYVÄKSYTTY Olavinlinnan hahmoihin (soutaja v1c junaan 183, muut puhuvat hahmot LR:ltä yön aikana); muistiraja NS:n mittauksella.
 
 Raamattuun (docs-PR 11.10. yö, Kolme veljestä): Ydinajatus, HISTORIALLISET KOHTEET SEIKKAILUINA MAAN TASALTA (HAHMOT: MetaHuman hyväksytty Olavinlinnan puhuviin hahmoihin).
+
+## VAANIJAKAARI: AARREMERKINTÄOSUUS POISTETTU KAANONISTA JA RAAMATUSTA (11.10.2026 klo 23.06)
+
+11.10. 23.0x PT (omistajan linjaus 21.7x: poistettuja aarremerkintätekstejä ei jätetä repoon): Istanbulin, Rooman, Bukarestin, Sarajevon ja Sofian aarremerkintätekstit on poistettu kaanontiedostoista docs/mantereet-tyoaineisto/fokusvirta-*-kaanon.md (osio 5 on tynkä, ja muu sisältö jää; Rooman pöllöosion otsikosta poistettiin viittaus aarremerkinnän jälkeiseen kuittaukseen). Raamatun VAANIJAKAARI ALKOI -kohta ei enää lainaa eikä nojaa aarremerkintöihin, vaan kaari jatkuu muiden tekstien varassa. Uutta tarinaa ei kirjoitettu.
+
+Raamattuun (docs-PR 11.10. yö, Kolme veljestä): Tarina ja hahmot, VAANIJAKAARI ALKOI (yhden lauseen huomautus aarremerkintäosuuden poistosta 11.10.).
+
+## NIMET: KOLME VELJESTÄ -RIIPUS JA RIIAN KOLME VELJESTÄ -TALOT (11.10.2026 klo 23.06)
+
+11.10. 23.0x PT: Riian nähtävyys on nimeltään "Kolme veljestä -talot" ja Euroopan unohdettu aarre "Kolme veljestä -riipus", jotta ne eivät sekoitu. Sisältökirjuri muuttaa datan.
+
+Raamattuun (docs-PR 11.10. yö, Kolme veljestä): Tarina ja hahmot, AARNI (NIMET).

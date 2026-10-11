@@ -62,16 +62,10 @@ tarkista onko Bukarest maailmankartan laudalla kaupunkina ja onko
 kaaridata; jos ei, RAPORTOI. Kohtaamispiste: Colțean tornin paikka
 (Colțea-sairaala, 44.4356 N, 26.1017 E — rakentaja laskee laudat).
 
-## 5. Aarremerkintä (ei vaanijaa; hiljainen jatkumo Istanbulin
-vihjeelle)
+## 5. Aarremerkintä — poistettu
 
-> Kätkin lippaani samana elokuuna, jona kuningas muurasi Sinaiassa
-> linnansa peruskiven. Hänen lippaansa tarvitsee linnan — minun
-> tarvitsee vain tarkan silmän. Sillalla ei tällä kertaa seissyt
-> ketään.
-
-(Viimeinen virke kuittaa Istanbulin vaanijan poissaolon — kaari
-hengittää. "Peruskivi elokuussa 1873" on tarkistettu fakta.)
+Aarremerkinnät poistettiin pelistä 11.10.2026 (omistaja), eikä niiden tekstejä säilytetä repossa
+(Raamattu, Poistetut ideat).
 
 ## 6. Täkynostopooli (otsikot sitovia)
 
