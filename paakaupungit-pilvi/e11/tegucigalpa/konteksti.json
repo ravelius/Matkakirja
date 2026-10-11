@@ -1,0 +1,58 @@
+{
+ "id": "tegucigalpa",
+ "era": "e11",
+ "nimi": "Tegucigalpa",
+ "nimiAlkukieli": "Tegucigalpa",
+ "maa": "HND",
+ "maanNimi": "Honduras",
+ "asema": "pääkaupunki",
+ "lat": 14.1058,
+ "lon": -87.2047,
+ "wikidata": "Q3238",
+ "kevytSisalto": {
+  "kuvaus": "Tegucigalpa on Hondurasin pääkaupunki ja suurin kaupunki, joka sijaitsee vuorten rajaamassa laaksossa Choluteca-joen varrella. Yhdessä Comayagüelan kanssa se muodostaa Distrito Centralin, ja se on toiminut pääkaupunkina 1880-luvulta lähtien. Siirtomaa-ajan kirkot ja kapeat kadut sijaitsevat ydinkeskustassa, jota ympäröivät rinteille levinneet kaupunginosat.",
+  "tunnusrakennukset": [
+   "Catedral de San Miguel Arcángel (1700-luvun lopun katedraali)",
+   "Iglesia de Los Dolores",
+   "Teatro Nacional Manuel Bonilla",
+   "Parque Central / Plaza Morazán"
+  ],
+  "asukkaat": {
+   "arvo": 1342329,
+   "vuosi": 2024,
+   "lahde": "Instituto Nacional de Estadística (INE) Honduras, väestöennuste 2024, Distrito Central (Tegucigalpa ja Comayagüela), El Heraldo -uutinen 1.4.2024; viimeisin väestölaskenta 2013: 996 658",
+   "linkki": "https://www.elheraldo.hn/tegucigalpa/distrito-central-municipio-mas-poblado-honduras-centroamerica-nc18389510"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Honduras on Väli-Amerikan maa, jolla on rannikko sekä Karibianmerellä että Tyynellämerellä, ja sen sisäosat ovat vuoristoisia. Maa itsenäistyi Espanjasta 1821, ja virallinen kieli on espanja. Kuuluisimpia nähtävyyksiä ovat Copánin muinaiset maya-rauniot, Bay-saaret ja suuret sademetsät. Taloutta kannattelevat kahvi, vaatetusteollisuus, maatalous ja ulkomailla asuvien lähettämät rahat.",
+  "genetiivi": "Hondurasin",
+  "kielet": [
+   {
+    "kieli": "espanja",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "miskito",
+    "asema": "muu"
+   },
+   {
+    "kieli": "garifuna",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Hondurasin lempira",
+   "koodi": "HNL"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Tegucigalpa",
+  "maanAvain": "Honduras",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

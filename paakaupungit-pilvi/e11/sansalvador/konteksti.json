@@ -1,0 +1,54 @@
+{
+ "id": "sansalvador",
+ "era": "e11",
+ "nimi": "San Salvador",
+ "nimiAlkukieli": "San Salvador",
+ "maa": "SLV",
+ "maanNimi": "El Salvador",
+ "asema": "pääkaupunki",
+ "lat": 13.6976,
+ "lon": -89.1912,
+ "wikidata": "Q3110",
+ "kevytSisalto": {
+  "kuvaus": "San Salvador on El Salvadorin pääkaupunki ja suurin kaupunki, joka sijaitsee tulivuorten ympäröimässä laaksossa. Kaupunki on maan hallinnon, talouden ja kulttuurin keskus, ja sen ympärille on kasvanut laaja kaupunkialue. Maanjäristykset ovat muovanneet sen historiaa vuosisatojen ajan.",
+  "tunnusrakennukset": [
+   "Teatro Nacional de El Salvador (1917)",
+   "Palacio Nacional (1911)",
+   "Catedral Metropolitana de San Salvador",
+   "San Salvadorin tulivuori ja Boquerón-kraateri"
+  ],
+  "asukkaat": {
+   "arvo": 330543,
+   "vuosi": 2024,
+   "lahde": "Banco Central de Reserva (BCR) / Oficina Nacional de Estadísticas y Censos (ONEC), VII Censo de Población y VI de Vivienda 2024, San Salvadorin piiri (distrito): 330 543 (5,4 % koko väestöstä; koko maa 6 029 976). Vertailuna 316 090 vuonna 2007. Luku vahvistettu El Mundo -uutisesta ja UCA:n ECA-lehden taulukosta; citypopulation.de antaa 329 379.",
+   "linkki": "https://diario.elmundo.sv/economia/esta-es-la-poblacion-por-distrito-de-el-salvador-segun-el-censo-2024"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "El Salvador on Väli-Amerikan pienin ja tiheimmin asuttu valtio, jolla on rantaviivaa vain Tyynellämerellä. Maata halkoo tulivuorten ketju, ja kuumassa ilmastossa kasvatetaan muun muassa kahvia. Se itsenäistyi Espanjasta 1821, ja viralliseksi kieleksi on vakiintunut espanja. Maan valuuttana on vuodesta 2001 ollut Yhdysvaltain dollari.",
+  "genetiivi": "El Salvadorin",
+  "kielet": [
+   {
+    "kieli": "espanja",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "nawat (pipil)",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Yhdysvaltain dollari",
+   "koodi": "USD"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "San Salvador",
+  "maanAvain": "El Salvador",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

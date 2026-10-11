@@ -1,0 +1,53 @@
+{
+ "id": "portauprince",
+ "era": "e11",
+ "nimi": "Port-au-Prince",
+ "nimiAlkukieli": "Port-au-Prince / Pòtoprens",
+ "maa": "HTI",
+ "maanNimi": "Haiti",
+ "asema": "pääkaupunki",
+ "lat": 18.5469,
+ "lon": -72.3403,
+ "wikidata": "Q34261",
+ "kevytSisalto": {
+  "kuvaus": "Port-au-Prince on Haitin pääkaupunki ja suurin kaupunki, joka sijaitsee Gonâve-lahden pohjukassa vehreiden kukkuloiden juurella. Se on maan kaupan, hallinnon ja kulttuurin keskus, ja sen toreilla ja taidegallerioissa elää vahva haitilainen kuvataidekulttuuri. Kaupunki kärsi vakavasti vuoden 2010 maanjäristyksestä.",
+  "tunnusrakennukset": [
+   "Marché en Fer (Rautatori)",
+   "Musée du Panthéon National Haïtien (MUPANAH)",
+   "Champ de Mars -puisto"
+  ],
+  "asukkaat": {
+   "arvo": 987310,
+   "vuosi": 2015,
+   "lahde": "Institut Haïtien de Statistique et d'Informatique (IHSI), 'Population totale, population de 18 ans et plus, ménages et densités estimés en 2015' (väestöarvio, Port-au-Princen kunta/commune); luku Wikidatan (Q34261) ja Wikipedian lainaamana. Port-au-Princen kaupunkiseutu (6 kuntaa) 2 618 894 vuonna 2015. Uudempaa virallista lukua ei ole (viimeisin laskenta 2003).",
+   "linkki": "https://www.wikidata.org/wiki/Q34261"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Haiti täyttää Hispaniola-saaren länsiosan, ja sen naapuri idässä on Dominikaaninen tasavalta. Maa itsenäistyi Ranskasta 1804 orjakapinan seurauksena, ja se oli maailman ensimmäinen orjuuden kukistaneen kansannousun synnyttämä itsenäinen valtio. Ranskan lisäksi kansan äidinkieli on haitinkreoli, ja maa tunnetaan vahvasta kuvataiteesta, musiikista ja kansanperinteestä. Haiti on Amerikkojen köyhimpiä maita, ja poliittinen epävakaus ja luonnonkatastrofit, kuten vuoden 2010 maanjäristys, ovat vaikeuttaneet sen kehitystä.",
+  "genetiivi": "Haitin",
+  "kielet": [
+   {
+    "kieli": "haitinkreoli",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "ranska",
+    "asema": "virallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "gourde",
+   "koodi": "HTG"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Port-au-Prince",
+  "maanAvain": "Haiti",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

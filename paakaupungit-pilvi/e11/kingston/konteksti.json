@@ -1,0 +1,54 @@
+{
+ "id": "kingston",
+ "era": "e11",
+ "nimi": "Kingston",
+ "nimiAlkukieli": "Kingston",
+ "maa": "JAM",
+ "maanNimi": "Jamaika",
+ "asema": "pääkaupunki",
+ "lat": 17.9714,
+ "lon": -76.7931,
+ "wikidata": "Q34692",
+ "kevytSisalto": {
+  "kuvaus": "Kingston on Jamaikan pääkaupunki ja suurin kaupunki, joka sijaitsee saaren kaakkoisrannikolla suuren luonnonsataman rannalla. Sen takana kohoavat Blue Mountains -vuoret. Kaupunki on maan talouden, hallinnon ja musiikkielämän keskus, ja reggaen juuret ovat vahvasti sen kaduilla ja studioissa.",
+  "tunnusrakennukset": [
+   "Devon House",
+   "Holy Trinity Cathedral",
+   "National Heroes Park -puisto",
+   "Kingstonin satama ja Palisadoes"
+  ],
+  "asukkaat": {
+   "arvo": 89186,
+   "vuosi": 2022,
+   "lahde": "Statistical Institute of Jamaica (STATIN), väestölaskenta 12.9.2022, Kingstonin seurakunta (parish); luku citypopulation.de:n kautta. STATINin omassa seurakuntataulukossa Kingston ja St. Andrew esitetään yhtenä (672 904, 2022; laskennan kokonaisväestö 2 774 538, alustavat tulokset julkaistu 15.10.2025). Kingstonin kaupunkialue (urban place, kolmen seurakunnan alueella) 611 154.",
+   "linkki": "https://statinja.gov.jm/PopCensus/Census2022/Population%20Change%20by%20Parish.aspx"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Jamaika on Karibianmeren kolmanneksi suurin saari Kuuban ja Hispaniolan jälkeen, ja se itsenäistyi Britanniasta 1962. Virallinen kieli on englanti, ja arjessa puhutaan laajasti jamaikanpatois-kreolia. Maa tunnetaan reggaemusiikista, Blue Mountains -vuorten kahvista, bauksiitin kaivuusta ja huippu-urheilijoista, etenkin pikajuoksijoista. Matkailu on yksi tärkeimmistä elinkeinoista.",
+  "genetiivi": "Jamaikan",
+  "kielet": [
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "jamaikanpatois (jamaikankreoli)",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Jamaikan dollari",
+   "koodi": "JMD"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Kingston",
+  "maanAvain": "Jamaika",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

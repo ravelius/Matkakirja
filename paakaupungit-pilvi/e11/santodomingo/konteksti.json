@@ -1,0 +1,54 @@
+{
+ "id": "santodomingo",
+ "era": "e11",
+ "nimi": "Santo Domingo",
+ "nimiAlkukieli": "Santo Domingo de Guzmán",
+ "maa": "DOM",
+ "maanNimi": "Dominikaaninen tasavalta",
+ "asema": "pääkaupunki",
+ "lat": 18.4625,
+ "lon": -69.9361,
+ "wikidata": "Q34820",
+ "kevytSisalto": {
+  "kuvaus": "Santo Domingo on Dominikaanisen tasavallan pääkaupunki ja maan suurin kaupunki, joka sijaitsee Ozama-joen suulla Karibianmeren rannalla. Sen vanha kaupunginosa Zona Colonial on Amerikoiden vanhimpia eurooppalaisia asuinalueita ja Unescon maailmanperintökohde. Nykyaikainen kaupunki on maan hallinnon, kaupan ja kulttuurin keskus, ja sen liepeillä asuu useita miljoonia ihmisiä.",
+  "tunnusrakennukset": [
+   "Catedral Primada de América (Amerikoiden ensimmäinen katedraali)",
+   "Alcázar de Colón",
+   "Fortaleza Ozama",
+   "Calle Las Damas (Amerikoiden vanhin katu)"
+  ],
+  "asukkaat": {
+   "arvo": 1029110,
+   "vuosi": 2022,
+   "lahde": "Oficina Nacional de Estadística (ONE), X Censo Nacional de Población y Vivienda 2022, Distrito Nacional (Santo Domingo de Guzmán): 1 029 110 asukasta (naisia 539 058, miehiä 490 052; pinta-ala 91,3 km²); ONE:n kuntaprofiili ja alustavat tulokset. Gran Santo Domingo (Distrito Nacional + Santo Domingon provinssi) yli 3,7 miljoonaa.",
+   "linkki": "https://www.one.gob.do/media/eooffxsf/tcm-región-ozama-santo-domingo-de-guzmán-2026.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Dominikaaninen tasavalta täyttää Karibianmeren Hispaniola-saaren itäosan, ja sen naapuri länsipuolella on Haiti. Maa itsenäistyi vuonna 1844 irtautumalla Haitin hallinnasta, ja sen kieli on espanja. Maasta löytyy Karibian korkein vuori Pico Duarte sekä pitkiä hiekkarantoja, ja matkailu on talouden tärkeimpiä aloja sokerin, kaupan ja palvelujen rinnalla. Pääkaupunki Santo Domingo on Amerikoiden vanhimpia eurooppalaisten perustamia kaupunkeja.",
+  "genetiivi": "Dominikaanisen tasavallan",
+  "kielet": [
+   {
+    "kieli": "espanja",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "haitinkreoli",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Dominikaanisen tasavallan peso",
+   "koodi": "DOP"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Santo Domingo",
+  "maanAvain": "Dominikaaninen tasavalta",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

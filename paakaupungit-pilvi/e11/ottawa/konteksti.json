@@ -1,0 +1,97 @@
+{
+ "id": "ottawa",
+ "era": "e11",
+ "nimi": "Ottawa",
+ "nimiAlkukieli": "Ottawa",
+ "maa": "CAN",
+ "maanNimi": "Kanada",
+ "asema": "pääkaupunki",
+ "lat": 45.4247,
+ "lon": -75.695,
+ "wikidata": "Q1930",
+ "kevytSisalto": {
+  "kuvaus": "Ottawa on Kanadan pääkaupunki, joka sijaitsee Ottawa-joen rannalla Ontarion ja Quebecin rajalla. Kaupunki kasvoi Rideau-kanavan rakennusajan työleiristä liittovaltion hallinnon keskukseksi, ja sen vanhimmat tunnukset ovat Parliament Hillin goottilaistyyliset rakennukset sekä talvisin jäätyvä Rideau-kanava. Englanti ja ranska ovat molemmat läsnä kaupungin arjessa, koska joen vastarannalla on ranskankielinen Gatineau.",
+  "tunnusrakennukset": [
+   "Parliament Hill ja Library of Parliament (1876, uusgoottilainen)",
+   "Peace Tower (valmistui 1927)",
+   "Château Laurier (hotelli, 1912)",
+   "Rideau-kanava (Unescon maailmanperintö 2007)"
+  ],
+  "asukkaat": {
+   "arvo": 1017449,
+   "vuosi": 2021,
+   "lahde": "Statistics Canada, väestönlaskenta 2021 (Ottawan kaupunki eli census subdivision; sama luku Wikidatassa ja Ottawan kaupungin sivuilla)",
+   "linkki": "https://ottawa.ca/en/living-ottawa/statistics-and-demographics/2021-census"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Viisisataa vuotta ennen Kolumbusta",
+    "Yhtiö, joka omisti kolmasosan maasta",
+    "Saari, joka kutsui juhlat ja tuli itse viimeisenä",
+    "Punatakit lähtevät länteen"
+   ]
+  },
+  {
+   "id": "alkuperaiskansat",
+   "nimi": "Alkuperäiskansat",
+   "nostot": [
+    "Kansa, joka syntyi turkiskaupan varrella",
+    "Paalu, jota ei palvota",
+    "Kivi, joka toimii ihmisen sijasta",
+    "Koulut, joita kesti sata kaksikymmentä vuotta"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Kuumat lähteet, joista tuli puisto",
+    "Sata miljardia tonnia kahdesti päivässä",
+    "Pato, joka löytyi satelliittikuvasta",
+    "Puisto, joka on Sveitsiä suurempi"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Neljäkymmentä ämpäriä yhtä pulloa kohti",
+    "Neljäkymmentä kiloa yhdessä säkissä",
+    "Leipä, joka jakaa mielipiteet",
+    "Riita siitä, kuka teki sotkun ensin"
+   ]
+  },
+  {
+   "id": "urheilu",
+   "nimi": "Urheilu",
+   "nostot": [
+    "Peli, joka kesti kolme päivää",
+    "Ensimmäinen ottelu katon alla",
+    "Kaksikymmentä miestä ja rautaiset kivet",
+    "Kaksi viikkoa aikaa keksiä peli"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "skandaali:pacific-skandaali",
+   "nimi": "Pacific 1873",
+   "lahde": "skandaalit",
+   "laji": "skandaali",
+   "km": 0,
+   "teksti": "British Columbia liittyi Kanadaan 1871 ehdolla, että valtio rakentaa radan Tyynenmeren rannikolta itäisiin maakuntiin. Urakasta kilpaili kaksi ryhmää: Hugh Allanin Canada Pacific Railway Company ja David Lewis Macphersonin Inter-Oceanic Ra…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Ottawa",
+  "maanAvain": "Kanada",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

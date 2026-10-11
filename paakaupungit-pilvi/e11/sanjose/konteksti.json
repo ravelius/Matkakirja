@@ -1,0 +1,58 @@
+{
+ "id": "sanjose",
+ "era": "e11",
+ "nimi": "San José",
+ "nimiAlkukieli": "San José",
+ "maa": "CRI",
+ "maanNimi": "Costa Rica",
+ "asema": "pääkaupunki",
+ "lat": 9.9327,
+ "lon": -84.0796,
+ "wikidata": "Q3070",
+ "kevytSisalto": {
+  "kuvaus": "San José sijaitsee Costa Rican keskilaaksossa runsaan kilometrin korkeudessa, ja se on maan poliittinen, taloudellinen ja kulttuurinen keskus. Kaupungin kaupunkialue kasvaa naapurikantonien yli yli kahden miljoonan asukkaan metropoliksi. Keskustassa ovat teatterit, museot ja torit, ja ympärillä kohoavat tulivuoret ja vuoret.",
+  "tunnusrakennukset": [
+   "Teatro Nacional (Kansallisteatteri)",
+   "Catedral Metropolitana (metropoliittakatedraali)",
+   "Museo Nacional de Costa Rica (Bellavistan linnoituksessa)",
+   "Mercado Central (keskustori)"
+  ],
+  "asukkaat": {
+   "arvo": 352381,
+   "vuosi": 2022,
+   "lahde": "INEC, väestölaskenta 2022: San Josén kantoni (cantón)",
+   "linkki": "https://www.citypopulation.de/en/costarica/admin/"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Costa Rica on Keski-Amerikan kapea maa, jonka rannikot ulottuvat sekä Tyynelle valtamerelle että Karibianmerelle. Maa lakkautti armeijansa joulukuussa 1948, ja päätös kirjattiin vuoden 1949 perustuslakiin. Tulivuoret, pilvimetsät ja laaja suojeltu luonto tekevät maasta tunnetun ekomatkailun kohteen. Talous nojaa matkailuun, maatalouteen sekä elektroniikka- ja lääketeollisuuden vientiin.",
+  "genetiivi": "Costa Rican",
+  "kielet": [
+   {
+    "kieli": "espanja",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "bribri ja muut alkuperäiskielet",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "limonin kreoli (mekatelyu)",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Costa Rican colón",
+   "koodi": "CRC"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "San José",
+  "maanAvain": "Costa Rica",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

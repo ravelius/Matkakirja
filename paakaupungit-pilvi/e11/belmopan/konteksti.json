@@ -1,0 +1,66 @@
+{
+ "id": "belmopan",
+ "era": "e11",
+ "nimi": "Belmopan",
+ "nimiAlkukieli": "Belmopan",
+ "maa": "BLZ",
+ "maanNimi": "Belize",
+ "asema": "pääkaupunki",
+ "lat": 17.25,
+ "lon": -88.7675,
+ "wikidata": "Q3043",
+ "kevytSisalto": {
+  "kuvaus": "Belmopan on Belizen sisämaassa sijaitseva suunniteltu pääkaupunki, joka rakennettiin 1960- ja 1970-luvuilla korvaamaan hurrikaanin tuhoama rannikkokaupunki Belize City. Se on Amerikan mantereen pienin pääkaupunki asukasluvultaan. Rauhallista kaupunkia ympäröivät joet, viidakkomaiset kukkulat ja luontokohteet.",
+  "tunnusrakennukset": [
+   "Kansalliskokouksen rakennus (mayatemppeliä mukaileva)",
+   "Independence Plaza",
+   "Holy Redeemer -katedraali",
+   "Guanacaste National Park (luontokohde kaupungin lähellä)"
+  ],
+  "asukkaat": {
+   "arvo": 20754,
+   "vuosi": 2022,
+   "lahde": "Belizen tilastoinstituutti (SIB), väestölaskenta 2022, taulukko 'Population by City/Town/Village/Community and Sex' (Cayo, Belmopan; tarkka sovitettu luku 20 753,6)",
+   "linkki": "https://sib.org.bz/wp-content/uploads/Census2022_PopulationCTV.xlsx"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Belize on Keski-Amerikan ainoa maa, jonka virallinen kieli on englanti, ja se sijaitsee Meksikon ja Guatemalan välissä Karibianmeren rannalla. Maan itäpuolella kulkee läntisen pallonpuoliskon pisin koralliriutta, jonka ympäristö on Unescon maailmanperintöä. Sisämaassa on vehreää sademetsää ja mayakulttuurin raunioita, ja väestö on etnisesti ja kielellisesti hyvin monimuotoinen. Belize on itsenäistynyt Britanniasta 1981 ja kuuluu sekä Kansainyhteisöön että CARICOMiin.",
+  "genetiivi": "Belizen",
+  "kielet": [
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "espanja",
+    "asema": "muu"
+   },
+   {
+    "kieli": "belizenkreoli (kriol)",
+    "asema": "muu"
+   },
+   {
+    "kieli": "mayakielet (mm. kekchi, mopan, yucatec)",
+    "asema": "muu"
+   },
+   {
+    "kieli": "garifuna",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Belizen dollari",
+   "koodi": "BZD"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Belmopan",
+  "maanAvain": "Belize",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

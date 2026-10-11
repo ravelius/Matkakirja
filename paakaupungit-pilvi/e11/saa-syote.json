@@ -1,0 +1,56 @@
+[
+ {
+  "id": "washington",
+  "lat": 38.9,
+  "lon": -77.04,
+  "wikidata": "Q61"
+ },
+ {
+  "id": "ottawa",
+  "lat": 45.42,
+  "lon": -75.69,
+  "wikidata": "Q1930"
+ },
+ {
+  "id": "belmopan",
+  "lat": 17.25,
+  "lon": -88.77,
+  "wikidata": "Q3043"
+ },
+ {
+  "id": "sansalvador",
+  "lat": 13.7,
+  "lon": -89.19,
+  "wikidata": "Q3110"
+ },
+ {
+  "id": "tegucigalpa",
+  "lat": 14.11,
+  "lon": -87.2,
+  "wikidata": "Q3238"
+ },
+ {
+  "id": "sanjose",
+  "lat": 9.93,
+  "lon": -84.08,
+  "wikidata": "Q3070"
+ },
+ {
+  "id": "santodomingo",
+  "lat": 18.46,
+  "lon": -69.94,
+  "wikidata": "Q34820"
+ },
+ {
+  "id": "portauprince",
+  "lat": 18.55,
+  "lon": -72.34,
+  "wikidata": "Q34261"
+ },
+ {
+  "id": "kingston",
+  "lat": 17.97,
+  "lon": -76.79,
+  "wikidata": "Q34692"
+ }
+]

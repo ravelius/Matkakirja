@@ -1,0 +1,118 @@
+{
+ "id": "washington",
+ "era": "e11",
+ "nimi": "Washington",
+ "nimiAlkukieli": "Washington, D.C. (District of Columbia)",
+ "maa": "USA",
+ "maanNimi": "Yhdysvallat",
+ "asema": "pääkaupunki",
+ "lat": 38.895,
+ "lon": -77.0367,
+ "wikidata": "Q61",
+ "kevytSisalto": {
+  "kuvaus": "Washington, D.C. on Yhdysvaltain liittovaltion pääkaupunki, joka ei kuulu mihinkään osavaltioon vaan on oma liittovaltiopiirinsä Potomac-joen rannalla. Kaupungin keskusta on suunniteltu 1790-luvulla leveiden puistokatujen ja National Mall -nurmialueen ympärille, ja sen tunnetuimpiin maamerkkeihin kuuluvat Kapitolin kupoli, Washington-monumentti ja Lincoln-muistomerkki. Kaupungissa on lisäksi suuri joukko Smithsonian-museoita, joihin on useimmiten vapaa pääsy.",
+  "tunnusrakennukset": [
+   "Yhdysvaltain Kapitoli (kupoli valmistui 1866)",
+   "Washington-monumentti (1884)",
+   "Lincoln-muistomerkki (1922)",
+   "Library of Congressin Jefferson-rakennus (1897)"
+  ],
+  "asukkaat": {
+   "arvo": 693645,
+   "vuosi": 2025,
+   "lahde": "U.S. Census Bureau, Vintage 2025 -väestöarvio 1.7.2025 (District of Columbia, QuickFacts; julkaistu 27.1.2026); väestönlaskenta 2020: 689 545",
+   "linkki": "https://www.census.gov/quickfacts/dc"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Teetä mereen sata vuotta sitten",
+    "Maalaus, joka ei esitä allekirjoitusta",
+    "Kello, joka vaikeni ikuisiksi ajoiksi",
+    "Kultainen naula ja yhden sanan sähke"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto ja kansallispuistot",
+   "nostot": [
+    "Maailman ensimmäinen kansallispuisto",
+    "Lähde, joka pitää aikataulua",
+    "Yksikätinen mies soutaa tuntemattomaan",
+    "Presidentti allekirjoitti kesken sodan"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Laulua kuningattarelle",
+    "Kirja, joka pysäytti katoavat laulut",
+    "Kurpitsasta ja nahasta tehty soitin",
+    "Pilkkalaulusta ylpeyden ääneksi"
+   ]
+  },
+  {
+   "id": "tiede",
+   "nimi": "Tiede ja keksinnöt",
+   "nostot": [
+    "Taidemaalari, joka kutisti mantereen",
+    "Hissi, joka ei enää pudonnut",
+    "Kone, jota kukaan ei halunnut ostaa",
+    "Oikeussalista syntynyt patenttipooli"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Kiitospäivä keskellä sisällissotaa",
+    "Sana, joka tuli Karibialta",
+    "Pata, jossa maailma kohtaa",
+    "Mies, joka istutti taimitarhoja rajaseudulle"
+   ]
+  },
+  {
+   "id": "hetki-wright-kitty-hawk-1903",
+   "nimi": "Lento",
+   "nostot": [
+    "Kill Devil Hills 1903 — kaksitoista sekuntia ilmassa"
+   ]
+  },
+  {
+   "id": "hetki-franklin-leija-1752",
+   "nimi": "Salama",
+   "nostot": [
+    "Philadelphia 1752 — kipinä avaimesta rystyseen"
+   ]
+  },
+  {
+   "id": "hetki-edison-lamppu-1879",
+   "nimi": "Sähkövalo",
+   "nostot": [
+    "Menlo Park 1879 — kolmetoista ja puoli tuntia valoa"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "skandaali:credit-mobilier",
+   "nimi": "Crédit Mobilier",
+   "lahde": "skandaalit",
+   "laji": "skandaali",
+   "km": 2,
+   "teksti": "Kongressi valtuutti Union Pacific -rautatien 1864 ja lupasi mannerten välisen radan rakentamiseen sata miljoonaa dollaria pääomaa, lainaa 16 000–48 000 dollaria rautatiekilometriä kohti ja kahdenkymmenen miljoonan eekkerin maat.\n\nRadan joh…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Washington",
+  "maanAvain": "Yhdysvallat",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}
