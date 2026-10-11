@@ -1,3 +1,9 @@
+## 2026-10-11 16.15 UTC — LISÄSÄÄNTÖ: panoraamavapaus (Päätoimittaja, Raamattu #4431)
+
+Peli on kaupallinen: rakennuksen tai julkisen taideteoksen kuva kelpaa vain, jos kuvauspaikan maan panoraamavapaus sallii
+kaupallisen käytön juuri sille teostyypille (Commons COM:FOP). Pelkkä ei-kaupallinen panoraamavapaus = ei vapautta.
+Epävarmassa tapauksessa valitse toinen vapaa kuva tai jätä kohde ilman kuvaa ja kirjaa se RAPORTTI.md:hen.
+
 ## 2026-10-11 15.30 UTC — TARKENNUS: pääkaupungit e04–e14 (Päätoimittaja, Karttasepän laudan tarkistuksesta #4423)
 
 - **Jätä pois:** Freetown (Sierra Leonen kaupunkilehti on jo pelissä) ja Sri Jayawardenepura Kotte (Colombo 6 km). Eriin jää 93 kaupunkia.
