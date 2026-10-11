@@ -4991,13 +4991,13 @@
     "Q1427503",
     "Q1142386",
     "Q167321",
-    "Q142917",
     "Q732489",
     "Q1440653",
     "Q1417441",
     "Q1076911",
     "Q2429499",
-    "Q1575425"
+    "Q1575425",
+    "Q142917"
    ],
    "kuvat": [
     {
@@ -8803,7 +8803,6 @@
    "lat": 56.947,
    "lon": 24.105,
    "kohteet": [
-    "Q337179",
     "Q282196",
     "Q1133059",
     "Q727809",
@@ -8812,8 +8811,9 @@
     "Q1026415",
     "Q322183",
     "Q186097",
-    "Q1133733",
-    "Q830319"
+    "Q337179",
+    "Q830319",
+    "Q1133733"
    ],
    "kuvat": [
     {
@@ -10451,8 +10451,8 @@
     "Q12378759",
     "Q914562",
     "Q7722735",
-    "Q1365010",
-    "Q1253709"
+    "Q1253709",
+    "Q1365010"
    ],
    "kuvat": [
     {
@@ -58225,15 +58225,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Maidan Nezalezhnosti view.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maidan_Nezalezhnosti_view.jpg?width=1280",
-     "tekija": "Juan Antonio Segal",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Maidan_Nezalezhnosti_view.jpg",
-     "selite": "Itsenäisyydenaukio eli Maidan on Kiovan keskusaukio, jonka keskellä seisoo itsenäisyyspatsas.",
-     "leveys": 6000,
-     "korkeus": 4000,
+     "tiedosto": "Виды Киева (светопечать С. В. Кульженко), 2-09.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%92%D0%B8%D0%B4%D1%8B_%D0%9A%D0%B8%D0%B5%D0%B2%D0%B0_(%D1%81%D0%B2%D0%B5%D1%82%D0%BE%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D1%8C_%D0%A1._%D0%92._%D0%9A%D1%83%D0%BB%D1%8C%D0%B6%D0%B5%D0%BD%D0%BA%D0%BE)%2C_2-09.jpg?width=1280",
+     "tekija": "S. V. Kulženko (albumin kustantaja)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%B8%D0%B4%D1%8B_%D0%9A%D0%B8%D0%B5%D0%B2%D0%B0_(%D1%81%D0%B2%D0%B5%D1%82%D0%BE%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D1%8C_%D0%A1._%D0%92._%D0%9A%D1%83%D0%BB%D1%8C%D0%B6%D0%B5%D0%BD%D0%BA%D0%BE)%2C_2-09.jpg",
+     "selite": "Kiovan kaupunginduuman rakennus vanhassa valokuvassa (1800-luvun loppu tai 1900-luvun alku); samalla paikalla on nykyisin Itsenäisyydenaukio.",
+     "leveys": 1720,
+     "korkeus": 1190,
      "tarkistettu": true
     }
    ]
@@ -58249,28 +58249,28 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Golden Gate Kiev 2018 G1.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Golden_Gate_Kiev_2018_G1.jpg?width=1280",
-     "tekija": "George Chernilevsky",
-     "lisenssi": "Public domain",
-     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Kiev_2018_G1.jpg",
-     "selite": "Kultainen portti oli 1000-luvun kaupunkimuurin pääportti, ja se on osin jälleenrakennettu.",
-     "leveys": 5120,
-     "korkeus": 3616,
+     "tiedosto": "Zoloti virita, 1858.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zoloti_virita%2C_1858.jpg?width=1280",
+     "tekija": "Vasili Timm",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zoloti_virita%2C_1858.jpg",
+     "selite": "Kultaisen portin rauniot Vasili Timmin litografiassa vuodelta 1858, kauan ennen nykyistä jälleenrakennusta.",
+     "leveys": 3154,
+     "korkeus": 1654,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Golden Gate (Kiev) 20190505-1.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Golden_Gate_(Kiev)_20190505-1.jpg?width=1280",
-     "tekija": "Suicasmo",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Golden_Gate_(Kiev)_20190505-1.jpg",
-     "selite": "Portin puinen suojarakennelma ja punatiilinen kappeli on rakennettu muinaisen mallin mukaan.",
-     "leveys": 5184,
-     "korkeus": 3456,
+     "tiedosto": "The Golgen Gate from the west by Westerveld.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Golgen_Gate_from_the_west_by_Westerveld.jpg?width=1280",
+     "tekija": "Abraham van Westerveld",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Golgen_Gate_from_the_west_by_Westerveld.jpg",
+     "selite": "Kultaisen portin rauniot Abraham van Westervelden piirustuksessa vuodelta 1651.",
+     "leveys": 1961,
+     "korkeus": 1365,
      "tarkistettu": true
     }
    ]
@@ -58371,43 +58371,6 @@
      "selite": "Portaat johtavat valaistulle kirkolle mäen laella.",
      "leveys": 5826,
      "korkeus": 3884,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q142917": {
-   "nimi": "Äiti Ukraina",
-   "peruste": "sitelinks",
-   "kaupunki": "kiova",
-   "kaupunkiQ": "Q1899",
-   "lat": 50.4265,
-   "lon": 30.56311,
-   "koko_m": 100,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Kyiv - Motherland monument and Patona bridge.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kyiv_-_Motherland_monument_and_Patona_bridge.jpg?width=1280",
-     "tekija": "Віктор Полянко",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kyiv_-_Motherland_monument_and_Patona_bridge.jpg",
-     "selite": "Äiti Ukraina on suuri teräspatsas, joka kohoaa Dneprin rantakukkulalla.",
-     "leveys": 2048,
-     "korkeus": 1536,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Mother Ukraine monument with the Ukrainian trident in Kyiv, Ukraine, 2026.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mother_Ukraine_monument_with_the_Ukrainian_trident_in_Kyiv%2C_Ukraine%2C_2026.jpg?width=1280",
-     "tekija": "Світлана 743",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mother_Ukraine_monument_with_the_Ukrainian_trident_in_Kyiv%2C_Ukraine%2C_2026.jpg",
-     "selite": "Patsaan kilvessä on Ukrainan kolmikärki.",
-     "leveys": 2121,
-     "korkeus": 2878,
      "tarkistettu": true
     }
    ]
@@ -58557,19 +58520,6 @@
      "leveys": 4070,
      "korkeus": 2712,
      "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "21 Khreshchatyk Street, Kiev.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/21_Khreshchatyk_Street%2C_Kiev.jpg?width=1280",
-     "tekija": "Maksym Kozlenko",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:21_Khreshchatyk_Street%2C_Kiev.jpg",
-     "selite": "Kadun varrella on kaareva portti ja stalinistisen ajan kerrostaloja.",
-     "leveys": 2048,
-     "korkeus": 1365,
-     "tarkistettu": true
     }
    ]
   },
@@ -58634,18 +58584,27 @@
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Київський фунікулер Нижня станція.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9A%D0%B8%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D1%84%D1%83%D0%BD%D1%96%D0%BA%D1%83%D0%BB%D0%B5%D1%80_%D0%9D%D0%B8%D0%B6%D0%BD%D1%8F_%D1%81%D1%82%D0%B0%D0%BD%D1%86%D1%96%D1%8F.jpg?width=1280",
-     "tekija": "Lenka:)",
-     "lisenssi": "CC BY 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9A%D0%B8%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D1%84%D1%83%D0%BD%D1%96%D0%BA%D1%83%D0%BB%D0%B5%D1%80_%D0%9D%D0%B8%D0%B6%D0%BD%D1%8F_%D1%81%D1%82%D0%B0%D0%BD%D1%86%D1%96%D1%8F.jpg",
-     "selite": "Alaaseman kaarimainen sisäänkäynti avautuu Podilin puolella.",
-     "leveys": 2560,
-     "korkeus": 1920,
+     "tiedosto": "Фунікулер 1905.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A4%D1%83%D0%BD%D1%96%D0%BA%D1%83%D0%BB%D0%B5%D1%80_1905.jpg?width=1280",
+     "tekija": "Dmitri Markov",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%A4%D1%83%D0%BD%D1%96%D0%BA%D1%83%D0%BB%D0%B5%D1%80_1905.jpg",
+     "selite": "Kiovan funikulaari vuoden 1905 paikkeilla; taustalla näkyy muun muassa Pyhän Andreaan kirkko.",
+     "leveys": 2362,
+     "korkeus": 1470,
      "tarkistettu": true
     }
    ]
+  },
+  "Q142917": {
+   "nimi": "Äiti Ukraina",
+   "peruste": "sitelinks",
+   "kaupunki": "kiova",
+   "kaupunkiQ": "Q1899",
+   "lat": 50.4265,
+   "lon": 30.56311,
+   "kuvat": []
   },
   "Q1356352": {
    "nimi": "Victoria Memorial",
@@ -79228,15 +79187,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Tretyakov and his gallery.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tretyakov_and_his_gallery.jpg?width=1280",
-     "tekija": "Andrey",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tretyakov_and_his_gallery.jpg",
-     "selite": "Tretjakovin galleria on Venäjän taiteen keskeisin museo, jonka satumainen julkisivu suunniteltiin venäläiseen tyyliin.",
-     "leveys": 3872,
-     "korkeus": 2592,
+     "tiedosto": "Tretyakov Gallery, Moscow, main building .JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tretyakov_Gallery%2C_Moscow%2C_main_building_.JPG?width=1280",
+     "tekija": "Wmpearl",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tretyakov_Gallery%2C_Moscow%2C_main_building_.JPG",
+     "selite": "Tretjakovin gallerian päärakennuksen koristeellinen julkisivu ja pääsisäänkäynti.",
+     "leveys": 3372,
+     "korkeus": 2384,
      "tarkistettu": true
     }
    ]
@@ -84932,19 +84891,6 @@
      "leveys": 6000,
      "korkeus": 4000,
      "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "51-101-1026 002 Odesa reg.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/51-101-1026_002_Odesa_reg.jpg?width=1280",
-     "tekija": "Wadco2",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:51-101-1026_002_Odesa_reg.jpg",
-     "selite": "Portaiden yläpäästä avautuu näkymä satamaan ja merelle.",
-     "leveys": 4650,
-     "korkeus": 3100,
-     "tarkistettu": true
     }
    ]
   },
@@ -85083,41 +85029,28 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Воронцовський маяк 12.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D1%86%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%BC%D0%B0%D1%8F%D0%BA_12.jpg?width=1280",
-     "tekija": "Nata Naval",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D1%86%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%BC%D0%B0%D1%8F%D0%BA_12.jpg",
-     "selite": "Vorontsovin majakka on valkoinen majakkatorni Odessan sataman aallonmurtajan päässä.",
-     "leveys": 2132,
-     "korkeus": 1422,
+     "tiedosto": "Vue de Odessa Phare Woronztowsky.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vue_de_Odessa_Phare_Woronztowsky.JPG?width=1280",
+     "tekija": "Tuntematon tekijä (reprodusoinut HOBOPOCC)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vue_de_Odessa_Phare_Woronztowsky.JPG",
+     "selite": "Vorontsovin majakka vanhassa albumikuvassa 1900-luvun alusta; valkoinen torni seisoo kivisen laiturin päässä.",
+     "leveys": 1944,
+     "korkeus": 2592,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Vorontsov Lighthouse 2017 G3.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vorontsov_Lighthouse_2017_G3.jpg?width=1280",
-     "tekija": "George Chernilevsky",
+     "tiedosto": "Одесса. Маяк. Почтовая открытка 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%B0._%D0%9C%D0%B0%D1%8F%D0%BA._%D0%9F%D0%BE%D1%87%D1%82%D0%BE%D0%B2%D0%B0%D1%8F_%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%BA%D0%B0_01.jpg?width=1280",
+     "tekija": "Tuntematon kustantaja",
      "lisenssi": "Public domain",
      "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vorontsov_Lighthouse_2017_G3.jpg",
-     "selite": "Majakan punainen lyhty johdattaa laivoja satamaan.",
-     "leveys": 3600,
-     "korkeus": 4800,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Vorontsov Lighthouse 2017 G1.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vorontsov_Lighthouse_2017_G1.jpg?width=1280",
-     "tekija": "George Chernilevsky",
-     "lisenssi": "Public domain",
-     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vorontsov_Lighthouse_2017_G1.jpg",
-     "selite": "Majakka seisoo merellä aallonmurtajan päässä.",
-     "leveys": 4000,
-     "korkeus": 5500,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%B0._%D0%9C%D0%B0%D1%8F%D0%BA._%D0%9F%D0%BE%D1%87%D1%82%D0%BE%D0%B2%D0%B0%D1%8F_%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%BA%D0%B0_01.jpg",
+     "selite": "Vorontsovin majakka ja satamalaituri vuoden 1923 postikortissa; etualalla soutuvene.",
+     "leveys": 1395,
+     "korkeus": 915,
      "tarkistettu": true
     }
    ]
@@ -92905,56 +92838,6 @@
    "lon": 46.6988,
    "kuvat": []
   },
-  "Q337179": {
-   "nimi": "Vapauden muistomerkki",
-   "peruste": "pelin nosto",
-   "kaupunki": "riika",
-   "kaupunkiQ": "Q1773",
-   "lat": 56.95156,
-   "lon": 24.11322,
-   "koko_m": 60,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Freedom Monument, Riga (09.09.2022).01.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Freedom_Monument%2C_Riga_(09.09.2022).01.jpg?width=1280",
-     "tekija": "Nenea hartia",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Freedom_Monument%2C_Riga_(09.09.2022).01.jpg",
-     "selite": "Vapauden muistomerkki on Riian keskustan korkea obeliskimainen muistomerkki, jonka huipulla seisoo Vapaus-patsas.",
-     "leveys": 3648,
-     "korkeus": 5472,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "0873 LVA Riga freedom monument pedestal.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/0873_LVA_Riga_freedom_monument_pedestal.jpg?width=1280",
-     "tekija": "Virtual-Pano",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:0873_LVA_Riga_freedom_monument_pedestal.jpg",
-     "selite": "Muistomerkin jalustaa koristavat kuvanveistäjä Kārlis Zāleen veistokset ja kirjoitus isänmaan ja vapauden puolesta.",
-     "leveys": 5025,
-     "korkeus": 5025,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "0873 LVA Riga freedom monument SE.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/0873_LVA_Riga_freedom_monument_SE.jpg?width=1280",
-     "tekija": "Virtual-Pano",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:0873_LVA_Riga_freedom_monument_SE.jpg",
-     "selite": "Muistomerkki valmistui 1935, ja sen huipulla seisoo kolmea tähteä kantava nainen.",
-     "leveys": 4267,
-     "korkeus": 8463,
-     "tarkistettu": true
-    }
-   ]
-  },
   "Q282196": {
    "nimi": "Kolme veljestä",
    "peruste": "pelin nosto",
@@ -93166,19 +93049,6 @@
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Skylines of Riga by Nasta Faley.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skylines_of_Riga_by_Nasta_Faley.jpg?width=1280",
-     "tekija": "Nasta Faley",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skylines_of_Riga_by_Nasta_Faley.jpg",
-     "selite": "Ilmasta näkyvät markkinahallien kaarevat katot ja kaukana Daugavan sillat.",
-     "leveys": 6000,
-     "korkeus": 4000,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
      "tiedosto": "Maskavas Forštate, Latgale Suburb, Riga, Latvia - panoramio (86).jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maskavas_For%C5%A1tate%2C_Latgale_Suburb%2C_Riga%2C_Latvia_-_panoramio_(86).jpg?width=1280",
      "tekija": "bynyalcin",
@@ -93342,55 +93212,14 @@
     }
    ]
   },
-  "Q1133733": {
-   "nimi": "Latvian kansalliskirjasto",
-   "peruste": "sitelinks",
+  "Q337179": {
+   "nimi": "Vapauden muistomerkki",
+   "peruste": "pelin nosto",
    "kaupunki": "riika",
    "kaupunkiQ": "Q1773",
-   "lat": 56.94134,
-   "lon": 24.09664,
-   "koko_m": 120,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "National Bibliothek Lettlands 1.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Bibliothek_Lettlands_1.jpg?width=1280",
-     "tekija": "Yeti-Hunter",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Bibliothek_Lettlands_1.jpg",
-     "selite": "Latvian kansalliskirjasto eli Valon linna on moderni kirjastorakennus Daugavan rannalla.",
-     "leveys": 3328,
-     "korkeus": 1872,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "2023 Riga Daugava river.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2023_Riga_Daugava_river.jpg?width=1280",
-     "tekija": "Qasinka",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2023_Riga_Daugava_river.jpg",
-     "selite": "Kirjaston lasinen kolmiopäätyrakennus erottuu joen yli nähtynä.",
-     "leveys": 3443,
-     "korkeus": 2582,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "27. trolejbuss Mūkusalas ielā.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/27._trolejbuss_M%C5%ABkusalas_iel%C4%81.jpg?width=1280",
-     "tekija": "Driver24",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:27._trolejbuss_M%C5%ABkusalas_iel%C4%81.jpg",
-     "selite": "Rakennus nousee porrasmaisesti taivasta kohti.",
-     "leveys": 3576,
-     "korkeus": 2656,
-     "tarkistettu": true
-    }
-   ]
+   "lat": 56.95156,
+   "lon": 24.11322,
+   "kuvat": []
   },
   "Q830319": {
    "nimi": "Riian radio- ja televisiotorni",
@@ -93399,48 +93228,16 @@
    "kaupunkiQ": "Q1773",
    "lat": 56.92389,
    "lon": 24.13694,
-   "koko_m": 368,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "16-08-31-View from Latvian Academy of Sciences building-RR2 4242.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/16-08-31-View_from_Latvian_Academy_of_Sciences_building-RR2_4242.jpg?width=1280",
-     "tekija": "Ralf Roletschek",
-     "lisenssi": "CC BY-SA 3.0 at",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:16-08-31-View_from_Latvian_Academy_of_Sciences_building-RR2_4242.jpg",
-     "selite": "Riian radio- ja televisiotorni kohoaa Daugavan saaressa kaupungin keskustan eteläpuolella.",
-     "leveys": 4288,
-     "korkeus": 2848,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Aerial view, sun and clouds in Riga.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view%2C_sun_and_clouds_in_Riga.jpg?width=1280",
-     "tekija": "Aleksejs Bergmanis",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view%2C_sun_and_clouds_in_Riga.jpg",
-     "selite": "Ilmasta torni ja Daugavan sillat erottuvat aamun pilvissä.",
-     "leveys": 5364,
-     "korkeus": 3014,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Daugava River and Riga Radio and Television Tower.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Daugava_River_and_Riga_Radio_and_Television_Tower.jpg?width=1280",
-     "tekija": "Tim Adams",
-     "lisenssi": "CC BY 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Daugava_River_and_Riga_Radio_and_Television_Tower.jpg",
-     "selite": "Torni on yksi Euroopan korkeimmista rakennuksista.",
-     "leveys": 3127,
-     "korkeus": 4691,
-     "tarkistettu": true
-    }
-   ]
+   "kuvat": []
+  },
+  "Q1133733": {
+   "nimi": "Latvian kansalliskirjasto",
+   "peruste": "sitelinks",
+   "kaupunki": "riika",
+   "kaupunkiQ": "Q1773",
+   "lat": 56.94134,
+   "lon": 24.09664,
+   "kuvat": []
   },
   "Q79961": {
    "nimi": "Rio de Janeiron Kristus-patsas",
@@ -108777,43 +108574,6 @@
     }
    ]
   },
-  "Q1365010": {
-   "nimi": "Tallinnan televisiotorni",
-   "peruste": "sitelinks",
-   "kaupunki": "tallinna",
-   "kaupunkiQ": "Q1770",
-   "lat": 59.47111,
-   "lon": 24.8875,
-   "koko_m": 80,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Tallin TV tower.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tallin_TV_tower.jpg?width=1280",
-     "tekija": "Marmuras",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tallin_TV_tower.jpg",
-     "selite": "Televisiotorni valmistui vuoden 1980 olympiapurjehdusta varten.",
-     "leveys": 2448,
-     "korkeus": 3264,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Tallinn TV Tower 01.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tallinn_TV_Tower_01.jpg?width=1280",
-     "tekija": "Erko",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tallinn_TV_Tower_01.jpg",
-     "selite": "Yli 300 metriä korkea torni kohoaa Pirita-puiston metsästä.",
-     "leveys": 4000,
-     "korkeus": 6000,
-     "tarkistettu": true
-    }
-   ]
-  },
   "Q1253709": {
    "nimi": "Tallinnan laululava",
    "peruste": "pelin nosto",
@@ -108825,31 +108585,27 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Tallinn Song Festival Grounds, Tallinn, Estonia, 2012-08-12, DD 13.JPG",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tallinn_Song_Festival_Grounds%2C_Tallinn%2C_Estonia%2C_2012-08-12%2C_DD_13.JPG?width=1280",
-     "tekija": "Diego Delso",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tallinn_Song_Festival_Grounds%2C_Tallinn%2C_Estonia%2C_2012-08-12%2C_DD_13.JPG",
-     "selite": "Laululavan valtava kaari kokoaa yleisölaulujuhlien yhteislaulun.",
-     "leveys": 5051,
-     "korkeus": 3359,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Tallinn Song Festival Grounds, Tallinn, Estonia, 2012-08-12, DD 09.JPG",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tallinn_Song_Festival_Grounds%2C_Tallinn%2C_Estonia%2C_2012-08-12%2C_DD_09.JPG?width=1280",
-     "tekija": "Diego Delso",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tallinn_Song_Festival_Grounds%2C_Tallinn%2C_Estonia%2C_2012-08-12%2C_DD_09.JPG",
-     "selite": "Edessä levittäytyy laaja nurmikko, jolle mahtuu kymmeniä tuhansia kuulijoita.",
-     "leveys": 5420,
-     "korkeus": 2730,
+     "tiedosto": "Tallinna lauluväljak, AM N05942.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tallinna_lauluv%C3%A4ljak%2C_AM_N05942.jpg?width=1280",
+     "tekija": "Adolf Purve (Viron historiamuseo)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tallinna_lauluv%C3%A4ljak%2C_AM_N05942.jpg",
+     "selite": "Tallinnan laulukenttä 1930-luvulla: nurmikenttä, kaukana lavarakennus ja taustalla kaupungin siluetti ja meri.",
+     "leveys": 7568,
+     "korkeus": 4920,
      "tarkistettu": true
     }
    ]
+  },
+  "Q1365010": {
+   "nimi": "Tallinnan televisiotorni",
+   "peruste": "sitelinks",
+   "kaupunki": "tallinna",
+   "kaupunkiQ": "Q1770",
+   "lat": 59.47111,
+   "lon": 24.8875,
+   "kuvat": []
   },
   "Q1190334": {
    "nimi": "Näsinneula",
@@ -119428,28 +119184,28 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Uzupio by Augustas Didzgalvis.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Uzupio_by_Augustas_Didzgalvis.jpg?width=1280",
-     "tekija": "Augustas Didžgalvis",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Uzupio_by_Augustas_Didzgalvis.jpg",
-     "selite": "Užupisin kaupunginosan aukiolla enkelipatsas symboloi kaupunginosan itsenäistä taiteilijatasavaltaa.",
-     "leveys": 1800,
-     "korkeus": 1200,
+     "tiedosto": "Uzupio tvenkiniai2015.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Uzupio_tvenkiniai2015.JPG?width=1280",
+     "tekija": "Anaiptol",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Uzupio_tvenkiniai2015.JPG",
+     "selite": "Užupisin lammikot katselupaikalta nähtynä, taustalla kaupunginosan taloja.",
+     "leveys": 2848,
+     "korkeus": 2136,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "199 vilnius Užupis Constitution (15598363386).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/199_vilnius_U%C5%BEupis_Constitution_(15598363386).jpg?width=1280",
-     "tekija": "Brian Toward from London, United Kingdom",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:199_vilnius_U%C5%BEupis_Constitution_(15598363386).jpg",
-     "selite": "Seinälle kiinnitetyissä tauluissa on Užupisin tasavallan perustuslaki monella kielellä.",
-     "leveys": 6000,
-     "korkeus": 4000,
+     "tiedosto": "Vilnia, Zarečča. Вільня, Зарэчча (J. Bułhak, 1919).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vilnia%2C_Zare%C4%8D%C4%8Da._%D0%92%D1%96%D0%BB%D1%8C%D0%BD%D1%8F%2C_%D0%97%D0%B0%D1%80%D1%8D%D1%87%D1%87%D0%B0_(J._Bu%C5%82hak%2C_1919).jpg?width=1280",
+     "tekija": "Jan Bułhak",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vilnia%2C_Zare%C4%8D%C4%8Da._%D0%92%D1%96%D0%BB%D1%8C%D0%BD%D1%8F%2C_%D0%97%D0%B0%D1%80%D1%8D%D1%87%D1%87%D0%B0_(J._Bu%C5%82hak%2C_1919).jpg",
+     "selite": "Užupisin (Zarečča) kattoja ja torneja Jan Bułhakin valokuvassa vuodelta 1919.",
+     "leveys": 1916,
+     "korkeus": 1263,
      "tarkistettu": true
     }
    ]
@@ -119489,28 +119245,28 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Three Crosses monument at sunset (8178265580).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Three_Crosses_monument_at_sunset_(8178265580).jpg?width=1280",
-     "tekija": "Guillaume Speurt from Vilnius, Lithuania",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Three_Crosses_monument_at_sunset_(8178265580).jpg",
-     "selite": "Kolmen valkoisen ristin muistomerkki kohoaa kukkulan päällä Vilnan keskustan yläpuolella.",
-     "leveys": 3265,
-     "korkeus": 2376,
+     "tiedosto": "Vilnius, Senamiestis, vaizdas nuo Trijų Kryžių kalno.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vilnius%2C_Senamiestis%2C_vaizdas_nuo_Trij%C5%B3_Kry%C5%BEi%C5%B3_kalno.jpg?width=1280",
+     "tekija": "Terminator216",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vilnius%2C_Senamiestis%2C_vaizdas_nuo_Trij%C5%B3_Kry%C5%BEi%C5%B3_kalno.jpg",
+     "selite": "Näkymä Kolmen ristin kukkulalta Vilnan vanhankaupungin punakattoisiin taloihin ja kirkkoihin.",
+     "leveys": 6000,
+     "korkeus": 4000,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "3 kryziai 2021.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/3_kryziai_2021.jpg?width=1280",
-     "tekija": "user:CD",
+     "tiedosto": "Vilnius Landmarks 58.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vilnius_Landmarks_58.jpg?width=1280",
+     "tekija": "Scotch Mist",
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:3_kryziai_2021.jpg",
-     "selite": "Kukkulan ristit näkyvät kauas kaupungin ylle erityisesti hämärässä.",
-     "leveys": 3000,
-     "korkeus": 4000,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vilnius_Landmarks_58.jpg",
+     "selite": "Vilnan vanhakaupunki punaisine kattoineen Kolmen ristin kukkulan näköalapaikalta katsottuna.",
+     "leveys": 5936,
+     "korkeus": 2920,
      "tarkistettu": true
     }
    ]

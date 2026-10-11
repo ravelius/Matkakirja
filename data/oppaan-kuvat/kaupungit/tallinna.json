@@ -402,42 +402,6 @@
    ]
   },
   {
-   "q": "Q1365010",
-   "nimi": "Tallinnan televisiotorni",
-   "peruste": "sitelinks",
-   "koko_m": 80,
-   "lat": 59.47111,
-   "lon": 24.8875,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Tallin TV tower.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tallin_TV_tower.jpg?width=1280",
-     "tekija": "Marmuras",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tallin_TV_tower.jpg",
-     "selite": "Televisiotorni valmistui vuoden 1980 olympiapurjehdusta varten.",
-     "leveys": 2448,
-     "korkeus": 3264,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Tallinn TV Tower 01.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tallinn_TV_Tower_01.jpg?width=1280",
-     "tekija": "Erko",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tallinn_TV_Tower_01.jpg",
-     "selite": "Yli 300 metriä korkea torni kohoaa Pirita-puiston metsästä.",
-     "leveys": 4000,
-     "korkeus": 6000,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
    "q": "Q1253709",
    "nimi": "Tallinnan laululava",
    "peruste": "pelin nosto",
@@ -447,28 +411,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Tallinn Song Festival Grounds, Tallinn, Estonia, 2012-08-12, DD 13.JPG",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tallinn_Song_Festival_Grounds%2C_Tallinn%2C_Estonia%2C_2012-08-12%2C_DD_13.JPG?width=1280",
-     "tekija": "Diego Delso",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tallinn_Song_Festival_Grounds%2C_Tallinn%2C_Estonia%2C_2012-08-12%2C_DD_13.JPG",
-     "selite": "Laululavan valtava kaari kokoaa yleisölaulujuhlien yhteislaulun.",
-     "leveys": 5051,
-     "korkeus": 3359,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Tallinn Song Festival Grounds, Tallinn, Estonia, 2012-08-12, DD 09.JPG",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tallinn_Song_Festival_Grounds%2C_Tallinn%2C_Estonia%2C_2012-08-12%2C_DD_09.JPG?width=1280",
-     "tekija": "Diego Delso",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tallinn_Song_Festival_Grounds%2C_Tallinn%2C_Estonia%2C_2012-08-12%2C_DD_09.JPG",
-     "selite": "Edessä levittäytyy laaja nurmikko, jolle mahtuu kymmeniä tuhansia kuulijoita.",
-     "leveys": 5420,
-     "korkeus": 2730,
+     "tiedosto": "Tallinna lauluväljak, AM N05942.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tallinna_lauluv%C3%A4ljak%2C_AM_N05942.jpg?width=1280",
+     "tekija": "Adolf Purve (Viron historiamuseo)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tallinna_lauluv%C3%A4ljak%2C_AM_N05942.jpg",
+     "selite": "Tallinnan laulukenttä 1930-luvulla: nurmikenttä, kaukana lavarakennus ja taustalla kaupungin siluetti ja meri.",
+     "leveys": 7568,
+     "korkeus": 4920,
      "tarkistettu": true
     }
    ]
@@ -502,5 +453,14 @@
    "tarkistettu": true
   }
  ],
- "eiKuvaa": []
+ "eiKuvaa": [
+  {
+   "q": "Q1365010",
+   "nimi": "Tallinnan televisiotorni",
+   "lat": 59.47111,
+   "lon": 24.8875,
+   "peruste": "sitelinks",
+   "syy": "suojatarkastus: ei vapaata, suojaamatonta kuvaa"
+  }
+ ]
 }
