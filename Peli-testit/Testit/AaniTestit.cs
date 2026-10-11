@@ -462,7 +462,7 @@ namespace Matkakirja.Peli.Testit
         {
             var te = O(Jalki["tehosteet"]);
             var lista = L(te["lista"]).Select(O).ToList();
-            Oleta.Sama(lista.Count, Tehostetaulu.Kaikki.Count, "tehosteita");
+            Oleta.Sama(lista.Count, Tehostetaulu.Kaikki.Count - Tehostetaulu.VainNatiivi.Count, "tehosteita (ilman vain natiivin)");
             foreach (var w in lista)
             {
                 var nimi = MiniJson.Teksti(w, "nimi");

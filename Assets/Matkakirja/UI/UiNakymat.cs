@@ -80,6 +80,51 @@ namespace Matkakirja.Natiivi
         public readonly Noppa Noppa;
         public readonly Leima Leima;
 
+        /*
+         * KUKKARON PALAUTE (omistaja 11.10.2026, juna 182): rahaleima ja yläpalkin summa samalla hetkellä. Aarteen tai
+         * muun palkkion summa kysymyksen tai paljastuskortin aikana odottaa, kunnes pelaaja on taas kartalla, ja näkyy
+         * noin sekunnin päästä siitä (leima, väri ja kolikot). Reitillä kertyvät matkakulut purkaa ohjain itse
+         * kaupungissa yhtenä muutoksena (PeliOhjain.Raha.cs, Peli/Kukkaro.cs).
+         */
+        const int AarteenViiveMs = 1000;
+        readonly List<(int Muutos, string Syy, int Saldo)> odottavatRahat = new List<(int, string, int)>();
+        UnityEngine.UIElements.IVisualElementScheduledItem rahaVahti;
+        UnityEngine.UIElements.VisualElement rahaKello;
+
+        bool AarreOdottaa(PeliOhjain o) => o.Tila == SilmukanTila.Kysymys || Paljastus.Auki;
+
+        static bool Reitilla(PeliOhjain o) => o.Matka?.Tila.Pelaaja?.Sijainti.Kaupungissa == false;
+
+        void KukkaroMuuttui(PeliOhjain o, int muutos, string syy, int saldo)
+        {
+            if (muutos > 0 && (AarreOdottaa(o) || odottavatRahat.Count > 0))
+            {
+                odottavatRahat.Add((muutos, syy, saldo));
+                VahdiRahaa(o);
+                return;
+            }
+            Leima.Raha(muutos, syy);
+            Tilarivi.RahaPalaute(saldo);
+        }
+
+        void VahdiRahaa(PeliOhjain o)
+        {
+            if (rahaVahti != null || rahaKello == null) return;
+            float vapaaAlkaen = -1f;
+            rahaVahti = rahaKello.schedule.Execute(() =>
+            {
+                if (AarreOdottaa(o)) { vapaaAlkaen = -1f; return; }
+                if (vapaaAlkaen < 0f) vapaaAlkaen = Time.realtimeSinceStartup;
+                if ((Time.realtimeSinceStartup - vapaaAlkaen) * 1000f < AarteenViiveMs) return;
+                rahaVahti.Pause();
+                rahaVahti = null;
+                var lista = odottavatRahat.ToArray();
+                odottavatRahat.Clear();
+                foreach (var r in lista) Leima.Raha(r.Muutos, r.Syy);
+                if (lista.Length > 0) Tilarivi.RahaPalaute(lista[lista.Length - 1].Saldo);
+            }).Every(200);
+        }
+
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void KytkeTehdas()
         {
@@ -445,6 +490,7 @@ namespace Matkakirja.Natiivi
                 if (astro) l.Astronautti.Taulu.PulunNapautus();
                 return astro;
             };
+            rahaKello = kerros.Juuri(UiKerros.Tilarivi);   // kukkaron palautteen odotus (VahdiRahaa)
             // Livia lennähtää paikalle, kun käyttöliittymä on valmis (webin ensisaapuminen: handoff).
             kerros.Juuri(UiKerros.Tilarivi).schedule.Execute(() => Pulu.Tilanne("arrival")).StartingIn(1500);
             Tietoja = new Tietoja(kerros);
@@ -663,8 +709,10 @@ namespace Matkakirja.Natiivi
             // C16: Livian tuurauspaljastus (ensimmäinen saapuminen koskaan) tai saapumisen ohjekuplat aloituslennon jälkeen.
             LivianPaljastus.Kytke(o);
             if (o.Tila == SilmukanTila.Aloitus) NaytaAloitus(o);
-            // Rahan muutos kupliksi (web buildToast kind stamp, "+10 puntaa · Lehden minitehtävä ratkesi").
-            o.RahaMuuttui += (muutos, syy, _) => UiKerros.PaaSaikeessa(() => Leima.Raha(muutos, syy));
+            // Rahan muutos kupliksi (web buildToast kind stamp, "+10 puntaa · Lehden minitehtävä ratkesi") ja kukkaron palaute
+            // yläpalkin summaan samalla hetkellä (omistaja 11.10.2026, juna 182; KukkaroMuuttui).
+            o.RahaMuuttui += (muutos, syy, saldo) => UiKerros.PaaSaikeessa(() => KukkaroMuuttui(o, muutos, syy, saldo));
+            Tilarivi.RahaLykkays = suunta => suunta > 0 ? AarreOdottaa(o) : suunta < 0 && (o.MatkakuluOdottaa || Reitilla(o));
             KytkeTalous(o);
             // Noppa häipyy, kun nappula on perillä (web haivyta saapuessa).
             // A11 (web ui.js piilotaNoppa): noppa häipyy vain kaupunkiin päättyneellä matkalla; reitin varrella se jää

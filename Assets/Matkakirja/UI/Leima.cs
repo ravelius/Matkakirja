@@ -18,7 +18,7 @@ namespace Matkakirja.Natiivi
         static readonly Regex Summa = new Regex(@"£\s*\d+|\d+\s*(?:puntaa|£)");
 
         readonly VisualElement juuri;
-        readonly Queue<(string Teksti, string Ala, string Ikoni)> jono = new Queue<(string, string, string)>();
+        readonly Queue<(string Teksti, string Ala, string Ikoni, int Ms)> jono = new Queue<(string, string, string, int)>();
         bool naytetaan;
 
         public Leima(UiKerros ui)
@@ -26,18 +26,22 @@ namespace Matkakirja.Natiivi
             juuri = Rakenne.El("mk-leimat", ui.Juuri(UiKerros.Matkavalinta), PickingMode.Ignore);
         }
 
-        /// <summary>Rahan muutos kuplaksi (PeliOhjain.RahaMuuttui).</summary>
+        /// <summary>
+        /// Rahan muutos kuplaksi (PeliOhjain.RahaMuuttui). Matkakulu (ruoka ja yöpyminen) näkyy 5 s
+        /// (omistaja 11.10.2026, juna 182; Peli/Kukkaro.cs), muut oletusajan.
+        /// </summary>
         public void Raha(int muutos, string syy)
         {
             if (muutos == 0) return;
-            if (!string.IsNullOrEmpty(syy) && Summa.IsMatch(syy)) Nayta(syy, null);
-            else Nayta((muutos > 0 ? "+" : "−") + "£" + Mathf.Abs(muutos), syy);
+            int ms = Matkakirja.Peli.Kulukertyma.OnMatkakulu(syy) ? Matkakirja.Peli.Kulukertyma.MatkakulunNakyvyysMs : NakyvissaMs;
+            if (!string.IsNullOrEmpty(syy) && Summa.IsMatch(syy)) Nayta(syy, null, nakyvissaMs: ms);
+            else Nayta((muutos > 0 ? "+" : "−") + "£" + Mathf.Abs(muutos), syy, nakyvissaMs: ms);
         }
 
         /// <summary>Kupla jonoon (ikoni = Ikonit.Viiva-avain, oletus kukkaro).</summary>
-        public void Nayta(string teksti, string ala, string ikoni = "kukkaro")
+        public void Nayta(string teksti, string ala, string ikoni = "kukkaro", int nakyvissaMs = NakyvissaMs)
         {
-            jono.Enqueue((teksti, ala, ikoni));
+            jono.Enqueue((teksti, ala, ikoni, nakyvissaMs));
             if (!naytetaan) Seuraava();
         }
 
@@ -45,7 +49,7 @@ namespace Matkakirja.Natiivi
         {
             if (jono.Count == 0) { naytetaan = false; return; }
             naytetaan = true;
-            var (teksti, ala, ikoni) = jono.Dequeue();
+            var (teksti, ala, ikoni, ms) = jono.Dequeue();
             var kupla = Rakenne.El("mk-leima", juuri, PickingMode.Ignore);
             if (ikoni != null && Ikonit.Viiva.TryGetValue(ikoni, out var merkinta)) Rakenne.Ikoni(merkinta, "mk-leima__ikoni", kupla);
             var tekstit = Rakenne.El("mk-leima__tekstit", kupla, PickingMode.Ignore);
@@ -53,8 +57,8 @@ namespace Matkakirja.Natiivi
             if (!string.IsNullOrEmpty(ala)) Kirjasimet.Aseta(Rakenne.Teksti(ala, "mk-leima__ala", tekstit), Kirjasin.Kone);
             kupla.schedule.Execute(() => kupla.AddToClassList("mk-auki")).StartingIn(16);
             kupla.schedule.Execute(() => { kupla.RemoveFromClassList("mk-auki"); kupla.AddToClassList("mk-leima--lahtee"); })
-                .StartingIn(SisaanMs + NakyvissaMs);
-            kupla.schedule.Execute(() => { kupla.RemoveFromHierarchy(); Seuraava(); }).StartingIn(SisaanMs + NakyvissaMs + UlosMs);
+                .StartingIn(SisaanMs + ms);
+            kupla.schedule.Execute(() => { kupla.RemoveFromHierarchy(); Seuraava(); }).StartingIn(SisaanMs + ms + UlosMs);
         }
     }
 }

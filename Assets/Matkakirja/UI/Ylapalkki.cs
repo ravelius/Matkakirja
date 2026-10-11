@@ -258,7 +258,8 @@ namespace Matkakirja.Natiivi
             var pp = RuntimePanelUtils.ScreenToPanel(elama.panel, new Vector2(ruutu.x, UiRuutu.Korkeus - ruutu.y));
             if (!elama.worldBound.Contains(pp)) SuljeElamaSelite();
         }
-        IVisualElementScheduledItem ilmoitusAjastin, valahdysAjastin, rahaAjastin;
+        IVisualElementScheduledItem ilmoitusAjastin, valahdysAjastin, rahaOdotus, rahaPienenee, rahaPalaa;
+        string odottavaRaha;
 
         /// <summary>Ratas- ja valikkonappi (Paavalikko ja Aanentasot ankkuroituvat näihin).</summary>
         public readonly Button Ratas, Valikko;
@@ -1111,9 +1112,7 @@ namespace Matkakirja.Natiivi
             {
                 // iPhone: "300 £ 1/80" — raha ja päivä / isoisän ennätys (omistaja 24.9.2026; suomalainen muoto
                 // "400 £" kaikkialle, Fable 27.9. klo 20.1x).
-                string uusiRaha = Raha(osat[0]);
-                if (uusiRaha != RahaNyt && RahaNyt.StartsWith("£")) Valahda(raha, ref rahaAjastin);
-                AsetaRahaTeksti(uusiRaha);
+                PaivitaRaha(Raha(osat[0]));
                 var m = System.Text.RegularExpressions.Regex.Match(osat[1], @"\d+");
                 string uusiKello = (m.Success ? m.Value : osat[1]) + "/" + Matkakirja.Peli.LaattaVakiot.EnnatysPaivat;
                 kello.style.display = DisplayStyle.Flex;
@@ -1127,10 +1126,8 @@ namespace Matkakirja.Natiivi
                 // omistaja 15.50; täysi muoto valikossa; ennen 30.9.: "1/80, keskipäivä"). Muuten "Päivä 1, aamu".
                 var pv = System.Text.RegularExpressions.Regex.Match(osat[1], @"\d+");
                 bool lyhyt = Linssivalitsin.PilleriValikko && pv.Success;
-                string uusiRaha = Raha(osat[0]);
-                // Kukkaron muutos välähtää kuten kello (osto, palkkio, lento).
-                if (uusiRaha != RahaNyt && RahaNyt.StartsWith("£")) Valahda(raha, ref rahaAjastin);
-                AsetaRahaTeksti(uusiRaha);
+                // Kukkaron muutos: palaute (väri, suurennus, ääni) PaivitaRaha / RahaPalaute.
+                PaivitaRaha(Raha(osat[0]));
                 string uusiKello = lyhyt ? Kieli.T("ui.ylapalkki.pv", pv.Value) : Iso(osat[1]) + ", " + osat[2];
                 kello.style.display = DisplayStyle.Flex;
                 if (uusiKello != kelloTeksti && kelloTeksti.Length > 0) Valahda(kello, ref valahdysAjastin);
@@ -1311,6 +1308,70 @@ namespace Matkakirja.Natiivi
         }
 
         string RahaNyt => (punta.style.display == DisplayStyle.Flex ? "£" : "") + raha.text;
+
+        /*
+         * KUKKARON PALAUTE (omistaja 11.10.2026, juna 182). Summa vaihtuu samalla hetkellä kuin rahaleima
+         * (RahaPalaute ohjaimen RahaMuuttui-tapahtumasta, UiNakymat): vähennys punaisena, lisäys vihreänä,
+         * lihavana ja pienesti suurennettuna noin sekunnin, sitten takaisin; ääni "kukkaro" tai "coin".
+         * Tilarivin uusi summa jää siihen asti odottamaan. Varalla summa näytetään itse VaraMs:n jälkeen
+         * (pelistreak ja muut muutokset ilman leimaa), ellei RahaLykkays pidä sitä: reitillä kertyvät
+         * matkakulut (suunta −1) ja kysymyksen aikana tullut aarre (suunta +1) odottavat UiNakymatin vapautusta.
+         */
+        const int VaraMs = 1500, SuuriMs = 450, PalaaMs = 1000;
+
+        /// <summary>Pidetäänkö summan muutos (suunta −1 / +1) vielä odottamassa (UiNakymat asettaa).</summary>
+        public Func<int, bool> RahaLykkays;
+
+        void PaivitaRaha(string uusi)
+        {
+            if (!RahaNyt.StartsWith("£") || !uusi.StartsWith("£")) { odottavaRaha = null; AsetaRahaTeksti(uusi); return; }
+            if (uusi == RahaNyt) { odottavaRaha = null; return; }
+            odottavaRaha = uusi;
+            rahaOdotus?.Pause();
+            rahaOdotus = raha.schedule.Execute(TarkistaOdottava).StartingIn(VaraMs);
+        }
+
+        void TarkistaOdottava()
+        {
+            if (odottavaRaha == null) return;
+            int suunta = Math.Sign(Luku(odottavaRaha) - Luku(RahaNyt));
+            if (RahaLykkays?.Invoke(suunta) == true) { rahaOdotus = raha.schedule.Execute(TarkistaOdottava).StartingIn(400); return; }
+            NaytaRaha(odottavaRaha);
+        }
+
+        /// <summary>Ohjaimen saldo näkyviin palautteella (RahaMuuttui; aarteella kartalle paluun jälkeen).</summary>
+        public void RahaPalaute(int saldo)
+        {
+            if (!RahaNyt.StartsWith("£")) return;
+            rahaOdotus?.Pause();
+            NaytaRaha("£" + saldo);
+        }
+
+        void NaytaRaha(string uusi)
+        {
+            odottavaRaha = null;
+            int ero = Luku(uusi) - Luku(RahaNyt);
+            AsetaRahaTeksti(uusi);
+            SovitaPilleri();
+            if (ero == 0) return;
+            raha.EnableInClassList("mk-pilleri__raha--vahenee", ero < 0);
+            raha.EnableInClassList("mk-pilleri__raha--kasvaa", ero > 0);
+            raha.AddToClassList("mk-pilleri__raha--suuri");
+            Kirjasimet.Aseta(raha, Kirjasin.KoneLihava);
+            Aanet.Tehoste(ero > 0 ? "coin" : "kukkaro");
+            rahaPienenee?.Pause();
+            rahaPalaa?.Pause();
+            rahaPienenee = raha.schedule.Execute(() => raha.RemoveFromClassList("mk-pilleri__raha--suuri")).StartingIn(SuuriMs);
+            rahaPalaa = raha.schedule.Execute(() =>
+            {
+                raha.RemoveFromClassList("mk-pilleri__raha--vahenee");
+                raha.RemoveFromClassList("mk-pilleri__raha--kasvaa");
+                // Rahattomuuden varoitus pitää lihavoinnin (NaytaTalous).
+                if (!raha.ClassListContains("mk-pilleri__raha--rahaton")) raha.style.unityFontDefinition = StyleKeyword.Null;
+            }).StartingIn(PalaaMs);
+        }
+
+        static int Luku(string s) => int.TryParse(s.TrimStart('£').Replace("\u00a0", "").Trim(), out var n) ? n : 0;
 
         void NaytaTalous(bool pelirivi)
         {

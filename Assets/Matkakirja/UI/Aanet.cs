@@ -457,11 +457,21 @@ namespace Matkakirja.Natiivi
             omatTehosteet[nimi] = (lista, gain, tasavire, omaIsku);
         }
 
+        const float KolikkoValiS = 0.6f;
+        static float viimeKolikko = -10f;
+
         static readonly Dictionary<string, (AudioClip[] Klipit, float Gain, bool Tasavire, bool OmaIsku)> omatTehosteet =
             new Dictionary<string, (AudioClip[], float, bool, bool)>();
 
         public static bool Tehoste(string nimi, float voima = 1f, float viive = 0f)
         {
+            // Kolikot kerran: kukkaron palaute (Ylapalkki) ja teon oma kolikkoääni osuvat samaan hetkeen (omistaja 11.10.2026).
+            if (nimi == "coin" && viive <= 0f)
+            {
+                float nyt = Time.realtimeSinceStartup;
+                if (nyt - viimeKolikko < KolikkoValiS) return true;
+                viimeKolikko = nyt;
+            }
             if (nimi != null && omatTehosteet.TryGetValue(nimi, out var oma))
             {
                 if (Mykistetty || sanelussa) return true;

@@ -53,6 +53,9 @@ namespace Matkakirja.Natiivi
         int rahaNahty;
         string rahaSyy;
 
+        /// <summary>Reitillä kertynyt matkakulu odottaa kaupunkia (yläpalkki pitää summan; Kartalle purkaa).</summary>
+        public bool MatkakuluOdottaa => !kulut.Tyhja;
+
         /// <summary>Tallennuksen jälkeen: saldo muuttui → RahaMuuttui (muutos, syy, saldo).</summary>
         void IlmoitaRaha()
         {
@@ -64,11 +67,31 @@ namespace Matkakirja.Natiivi
             rahaNahty = saldo;
             rahaSyy = null;
             streakPalkkio = 0;
+            /*
+             * MONEN PÄIVÄN MATKA YHTENÄ PÄIVITYKSENÄ (omistaja 11.10.2026, juna 182): reitillä (ei kaupungissa)
+             * päiväkulut kertyvät eivätkä nouse leimaksi; kaupungissa kertymä lisätään tähän muutokseen ja syyksi
+             * tulee yhteenveto (Kulukertyma.Syy). Yläpalkki pitää summan samalla odottamassa (UiNakymat RahaLykkays).
+             */
+            bool reitilla = !matka.Tila.Pelaaja.Sijainti.Kaupungissa;
+            if (reitilla && muutos < 0 && paivakuluSyy != null && syy == null)
+            {
+                kulut.Kerry(muutos);
+                paivakuluSyy = null;
+                return;
+            }
+            string kuluSyy = null;
+            if (!reitilla && !kulut.Tyhja)
+            {
+                muutos += kulut.Muutos;
+                kuluSyy = kulut.Syy();
+                kulut.Tyhjenna();
+            }
+            else if (!reitilla) kulut.Tyhjenna();
             if (muutos == 0) { paivakuluSyy = null; return; }
             // Teon oma tapahtumarivi punnista (matkan hinta, löytöpalkkio) on tarkin syy (ei putken lokiriviä).
             var rivi = tapahtumat.Concat(kysymysLisat).LastOrDefault(t => t != null && t.Contains("£") && t != streakRivi);
             // Päiväkulu (talouden vaihe 1): teon oma raharivi on tarkempi, jos sama teko maksoi muutakin.
-            syy ??= rivi ?? paivakuluSyy ?? RahaSyyt.Oletus;
+            syy ??= kuluSyy ?? rivi ?? paivakuluSyy ?? RahaSyyt.Oletus;
             paivakuluSyy = null;
             try { RahaMuuttui?.Invoke(muutos, syy, saldo); } catch (Exception e) { UnityEngine.Debug.LogException(e); }
         }

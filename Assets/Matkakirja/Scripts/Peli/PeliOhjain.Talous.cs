@@ -37,11 +37,14 @@ namespace Matkakirja.Natiivi
 
         bool loppuIlmoitettu;
         string paivakuluSyy;
+        /// <summary>Reitillä kertyneet päiväkulut: näkyvät yhtenä päivityksenä kaupungissa (Peli/Kukkaro.cs).</summary>
+        readonly Kulukertyma kulut = new Kulukertyma();
 
         void KytkeTalous(Matka m)
         {
             loppuIlmoitettu = m.Tila.MatkaPaattyi != null;
             paivakuluSyy = null;
+            kulut.Tyhjenna();
             m.Rahatilanne += (p, tilanne, otsikko, ala) =>
             {
                 if (m != matka) return;
@@ -54,6 +57,7 @@ namespace Matkakirja.Natiivi
                 var paikka = k.Matkalla ? "Yö matkalla"
                     : "Yö kaupungissa " + (p.Sijainti.Kaupungissa && m.Verkko.Kaupungit.TryGetValue(p.Sijainti.Kaupunki, out var c) ? c.Nimi : "");
                 paivakuluSyy = paikka.Trim() + ": " + (k.Majoitus > 0 ? $"ruoka £{k.Ruoka}, majoitus £{k.Majoitus}" : $"ruoka £{k.Ruoka}");
+                kulut.Yo(k.Ruoka, k.Majoitus, paivakuluSyy);
             };
         }
 

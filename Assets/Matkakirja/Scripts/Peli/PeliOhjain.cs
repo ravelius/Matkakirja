@@ -1230,6 +1230,8 @@ namespace Matkakirja.Natiivi
             vaihtoehdot = new List<MatkaVaihtoehto>();
             riviValittu = null;
             Tila = SilmukanTila.Kartta;
+            // Reitillä kertyneet matkakulut yhtenä päivityksenä, kun pelaaja on taas kaupungissa (PeliOhjain.Raha.cs).
+            if (MatkakuluOdottaa) IlmoitaRaha();
             PaivitaNakyma();
             PaivitaNappula();
             if (kameraPelaajaan && Kaytossa) Saavu();
