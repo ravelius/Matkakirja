@@ -31,7 +31,7 @@ import {
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const AANI = 'Sz0tRTEpybtDJ9ru2kgD'; // Viisas Kertoja
-const MALLI = 'eleven_v3';
+const MALLI = process.env.KAARI_MALLI ?? 'eleven_v3';
 const STABILITY = 0.5;
 const LOPPUTAUKO = ' <break time="1.0s" />';
 

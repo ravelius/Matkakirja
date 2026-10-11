@@ -2576,7 +2576,7 @@ export const KAARI_PAKETIT = {
       tunneKohtaaminen: { tunne: 'ilo', voimakkuus: 0.5 },
       tunneAarre: { tunne: 'miettiva', voimakkuus: 0.55 },
       /* Luonnokset hyväksytty 12.10.2026 (docs/raportit/kaaret-eurooppa-luonnokset-20261011.md); luennat 18 = kohtaaminen + aarre, saapuminen jää ilman (varapolku). */
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: ['saapuminen'],
       otsikko: 'Bryssel — kivi, jonka paino oli kirjattu',
       saapuminen: 'Pörssitalon julkisivua hakataan sateessakin, koska talon pitää '
         + 'valmistua jouluksi. Märästä kivestä nousi kellarin haju. Yksi '
@@ -2615,7 +2615,7 @@ export const KAARI_PAKETIT = {
       tunneKohtaaminen: { tunne: 'vakava', voimakkuus: 0.5 },
       tunneAarre: { tunne: 'utelias', voimakkuus: 0.55 },
       /* Luonnokset hyväksytty 12.10.2026 (docs/raportit/kaaret-eurooppa-luonnokset-20261011.md); luennat 18 = kohtaaminen + aarre, saapuminen jää ilman (varapolku). */
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: ['saapuminen'],
       otsikko: 'Kassa — avain, jonka pantti jäi',
       saapuminen: 'Sähke Wieniin kulki minuutissa, mutta sen hinta ei mahtunut '
         + 'taskuuni. Jätin lennätinvirkailijalle pantiksi kellon avaimen ja '
@@ -2653,7 +2653,7 @@ export const KAARI_PAKETIT = {
       tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
       tunneAarre: { tunne: 'lammin', voimakkuus: 0.55 },
       /* Luonnokset hyväksytty 12.10.2026 (docs/raportit/kaaret-eurooppa-luonnokset-20261011.md); luennat 18 = kohtaaminen + aarre, saapuminen jää ilman (varapolku). */
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: ['saapuminen'],
       otsikko: 'Ljubljana — kimppu ja kartta',
       saapuminen: 'Torilla kukkakauppias sanoi kukkien nimet kahdella kielellä, ja '
         + 'minä ymmärsin toisen. Ostin kimpun, jonka nimeä en osannut '
@@ -2691,7 +2691,7 @@ export const KAARI_PAKETIT = {
       tunneKohtaaminen: { tunne: 'hammastys', voimakkuus: 0.5 },
       tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
       /* Luonnokset hyväksytty 12.10.2026 (docs/raportit/kaaret-eurooppa-luonnokset-20261011.md); luennat 18 = kohtaaminen + aarre, saapuminen jää ilman (varapolku). */
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: ['saapuminen'],
       otsikko: 'Luxemburg — kivi, joka jäi kesken',
       saapuminen: 'Kallio kaikui vasaroista kuin jättimäinen kello. Muuri kaatui '
         + 'sekuntia ennen kuin ehdin ymmärtää huudon. Purkutyöläinen oli '
@@ -2730,7 +2730,7 @@ export const KAARI_PAKETIT = {
       tunneKohtaaminen: { tunne: 'miettiva', voimakkuus: 0.5 },
       tunneAarre: { tunne: 'miettiva', voimakkuus: 0.55 },
       /* Luonnokset hyväksytty 12.10.2026 (docs/raportit/kaaret-eurooppa-luonnokset-20261011.md); luennat 18 = kohtaaminen + aarre, saapuminen jää ilman (varapolku). */
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: ['saapuminen'],
       otsikko: 'Valletta — talo ilman kattoa',
       saapuminen: 'Oopperatalo oli palanut toukokuussa sisältä tyhjäksi, mutta '
         + 'lippuluukulla istui silti mies. Kysyin, mitä hän myy. Hän '
@@ -2770,7 +2770,7 @@ export const KAARI_PAKETIT = {
       tunneKohtaaminen: { tunne: 'vakava', voimakkuus: 0.5 },
       tunneAarre: { tunne: 'jannitys', voimakkuus: 0.55 },
       /* Luonnokset hyväksytty 12.10.2026 (docs/raportit/kaaret-eurooppa-luonnokset-20261011.md); luennat 18 = kohtaaminen + aarre, saapuminen jää ilman (varapolku). */
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: ['saapuminen'],
       otsikko: 'Bergen — rivi väärässä sarakkeessa',
       saapuminen: 'Bryggenin lattialankut kitisivät jalkojeni alla kuin talo olisi '
         + 'kuunnellut askeleitani. Kuivattu kala haisi niin, että silmiin '
@@ -2810,7 +2810,7 @@ export const KAARI_PAKETIT = {
       tunneKohtaaminen: { tunne: 'utelias', voimakkuus: 0.5 },
       tunneAarre: { tunne: 'miettiva', voimakkuus: 0.55 },
       /* Luonnokset hyväksytty 12.10.2026 (docs/raportit/kaaret-eurooppa-luonnokset-20261011.md); luennat 18 = kohtaaminen + aarre, saapuminen jää ilman (varapolku). */
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: ['saapuminen'],
       otsikko: 'Firenze — tilaus, jota ei haettu',
       saapuminen: 'Firenze oli ollut Italian pääkaupunki kuusi vuotta, ja kun '
         + 'virkamiehet muuttivat Roomaan, kaupunki jäi täyteen tyhjiä '
@@ -2848,7 +2848,7 @@ export const KAARI_PAKETIT = {
       tunneKohtaaminen: { tunne: 'ylpea', voimakkuus: 0.5 },
       tunneAarre: { tunne: 'utelias', voimakkuus: 0.55 },
       /* Luonnokset hyväksytty 12.10.2026 (docs/raportit/kaaret-eurooppa-luonnokset-20261011.md); luennat 18 = kohtaaminen + aarre, saapuminen jää ilman (varapolku). */
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: ['saapuminen'],
       otsikko: 'Sevilla — sarja, joka jatkuu',
       saapuminen: 'Triana-sillan raudan alla jokilaivat jonottivat satamaan, ja '
         + 'minä arvioin joen leveyden silmämitalla: erehdyin sata askelta. '
@@ -2886,7 +2886,7 @@ export const KAARI_PAKETIT = {
       tunneKohtaaminen: { tunne: 'ilo', voimakkuus: 0.5 },
       tunneAarre: { tunne: 'ilo', voimakkuus: 0.55 },
       /* Luonnokset hyväksytty 12.10.2026 (docs/raportit/kaaret-eurooppa-luonnokset-20261011.md); luennat 18 = kohtaaminen + aarre, saapuminen jää ilman (varapolku). */
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: ['saapuminen'],
       otsikko: 'Tampere — viisitoista, ehkä kuusitoista',
       saapuminen: 'Laskin sillalta tehtaiden piiput ääneen ja sain viisitoista. '
         + 'Ohikulkija pysähtyi, kysyi, mitä teen, ja laski kanssani. Hän '
