@@ -314,6 +314,22 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(Math.Abs(k.Nykyinen.P.Y - yq) < 1e-9, "QA-kuvan korkeus pysyy");
         }
 
+        [Testi] static void KertojanTekstitys()
+        {
+            // PT 11.10. 09.0x: tekstitys virkkeittäin kertojan sanojen ajoista (ajat/<sali>/<id>.json); näytetty teksti, kun virkkeitä yhtä monta.
+            const string json = "{\"teksti\": \"Katso sinistä. Se on ultramariinia (n. 1663)! Loppu.\", \"puhuttu\": \"Katso sinistä. Se on ultramariinia noin 1663! Loppu.\"," +
+                "\"sanat\": [{\"sana\":\"Katso\",\"alku_s\":0.3,\"loppu_s\":0.6},{\"sana\":\"sinistä.\",\"alku_s\":0.7,\"loppu_s\":1.2}," +
+                "{\"sana\":\"Se\",\"alku_s\":1.6,\"loppu_s\":1.7},{\"sana\":\"on\",\"alku_s\":1.75,\"loppu_s\":1.9},{\"sana\":\"ultramariinia\",\"alku_s\":2.0,\"loppu_s\":2.8}," +
+                "{\"sana\":\"noin\",\"alku_s\":2.9,\"loppu_s\":3.1},{\"sana\":\"1663!\",\"alku_s\":3.2,\"loppu_s\":4.0},{\"sana\":\"Loppu.\",\"alku_s\":4.5,\"loppu_s\":5.0}]}";
+            var t = MuseoTekstitys.Lue(json);
+            Oleta.Sama(3, t.Virkkeet.Count, "kolme virkettä");
+            Oleta.Tosi(t.Virke(0.1) == null, "ennen ensimmäistä sanaa ei tekstiä");
+            Oleta.Sama("Katso sinistä.", t.Virke(0.5));
+            Oleta.Sama("Se on ultramariinia (n. 1663)!", t.Virke(2.5), "näytetty teksti puhutun ajoituksella (lyhenne ei katkaise)");
+            Oleta.Sama("Loppu.", t.Virke(5.2));
+            Oleta.Tosi(t.Virke(5.0 + MuseoTekstitys.JalkiS + 0.1) == null, "lopun jälkeen tyhjä");
+        }
+
         [Testi] static void PysahdysKertojanMittainen()
         {
             var k = new MuseoKierros(Alankomaat());
