@@ -16936,12 +16936,12 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/andorralavella-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Kartan ydin on Gran Valiran laakso, jossa vanha keskusta, Santa Coloma ja Pont de la Margineda ovat rinnakkain. Mukana on myös Escaldesin kylpylä ja Madriun maailmanperintölaakso idässä.',
+    esittely: 'Kartan ydin on Gran Valiran laakso, jossa vanha keskusta ja Santa Coloma ovat rinnakkain. Mukana on myös Escaldesin kylpylä.',
     rajat: {
       pohjoinen: 42.5144,
-      etela: 42.4815,
-      lansi: 1.4882,
-      ita: 1.5993,
+      etela: 42.4915,
+      lansi: 1.4939,
+      ita: 1.5405,
     },
     kohteet: [
       {
@@ -16960,20 +16960,9 @@ export const KAUPUNKIKARTAT = {
         lon: 1.4976,
       },
       {
-        nimi: 'Pont de la Margineda',
-        lat: 42.48417,
-        lon: 1.49192,
-      },
-      {
         nimi: 'Caldea',
         lat: 42.5117,
         lon: 1.5368,
-      },
-      {
-        nimi: 'Madriu-Perafita-Claror',
-        tyyppi: 'luonto',
-        lat: 42.49472,
-        lon: 1.59556,
       },
     ],
   },
@@ -16984,9 +16973,9 @@ export const KAUPUNKIKARTAT = {
     esittely: 'Bernin ydin kulkee Aaren niemekkeen harjalla Bundesplatzilta Zytgloggen ja tuomiokirkon ohi karhukuopalle. Kohteet ovat parin kilometrin kävelyn sisällä toisistaan.',
     rajat: {
       pohjoinen: 46.9508,
-      etela: 46.944,
-      lansi: 7.4402,
-      ita: 7.4635,
+      etela: 46.9438,
+      lansi: 7.4403,
+      ita: 7.4636,
     },
     kohteet: [
       {
@@ -17001,14 +16990,8 @@ export const KAUPUNKIKARTAT = {
       },
       {
         nimi: 'Liittopalatsi',
-        lat: 46.94667,
-        lon: 7.44417,
-      },
-      {
-        nimi: 'Bundesplatz',
-        tyyppi: 'aukio',
-        lat: 46.94701,
-        lon: 7.44412,
+        lat: 46.9465,
+        lon: 7.44422,
       },
       {
         nimi: 'Bärengraben ja BärenPark',
@@ -17077,12 +17060,12 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/reykjavik-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Reykjavíkin kohteet ovat lähellä toisiaan Seltjarnarnesin niemen pohjoisrannalla ja kukkuloilla. Lammen, aukion ja kukkulalla seisovan kirkon lisäksi mukana ovat Harpa, Höfði ja Perlan, ja yksi kohde on saaressa.',
+    esittely: 'Reykjavíkin kohteet ovat lähellä toisiaan Seltjarnarnesin niemen pohjoisrannalla ja kukkuloilla. Lammen, aukion ja kukkulalla seisovan kirkon lisäksi mukana ovat Harpa, Höfði ja Perlan.',
     rajat: {
-      pohjoinen: 64.171,
-      etela: 64.126,
-      lansi: -21.948,
-      ita: -21.83,
+      pohjoinen: 64.153,
+      etela: 64.1265,
+      lansi: -21.9487,
+      ita: -21.9005,
     },
     kohteet: [
       {
@@ -17117,12 +17100,6 @@ export const KAUPUNKIKARTAT = {
         lat: 64.14639,
         lon: -21.90667,
       },
-      {
-        nimi: 'Viðey',
-        tyyppi: 'luonto',
-        lat: 64.1639,
-        lon: -21.85,
-      },
     ],
   },
   sanmarino: {
@@ -17154,13 +17131,13 @@ export const KAUPUNKIKARTAT = {
       },
       {
         nimi: 'Palazzo Pubblico',
-        lat: 43.9369,
-        lon: 12.4466,
+        lat: 43.93679,
+        lon: 12.44644,
       },
       {
         nimi: 'San Marinon basilika',
-        lat: 43.93694,
-        lon: 12.44667,
+        lat: 43.93722,
+        lon: 12.44694,
       },
       {
         nimi: 'Piazza della Libertà',
@@ -17180,12 +17157,12 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/vaduz-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Vaduzin ydin on pieni: linna, katedraali ja kaksi museota ovat lyhyen kävelymatkan päässä toisistaan, ja Schalunin linnanraunio on noin kilometrin koilliseen.',
+    esittely: 'Vaduzin ydin on pieni: linna, katedraali ja kaksi museota ovat lyhyen kävelymatkan päässä toisistaan.',
     rajat: {
-      pohjoinen: 47.154,
+      pohjoinen: 47.1421,
       etela: 47.1335,
-      lansi: 9.519,
-      ita: 9.537,
+      lansi: 9.5185,
+      ita: 9.5284,
     },
     kohteet: [
       {
@@ -17207,11 +17184,6 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Kunstmuseum Liechtenstein',
         lat: 47.13944,
         lon: 9.5225,
-      },
-      {
-        nimi: 'Schalunin linnanraunio',
-        lat: 47.1509,
-        lon: 9.5336,
       },
     ],
   },

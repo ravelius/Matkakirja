@@ -6099,24 +6099,24 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 45.8186, etela: 45.8045, lansi: 15.9691, ita: 15.9836 },
   },
   andorralavella: {
-    rajat: { pohjoinen: 42.5144, etela: 42.4815, lansi: 1.4882, ita: 1.5993 },
+    rajat: { pohjoinen: 42.5144, etela: 42.4915, lansi: 1.4939, ita: 1.5405 },
   },
   bern: {
-    rajat: { pohjoinen: 46.9508, etela: 46.944, lansi: 7.4402, ita: 7.4635 },
+    rajat: { pohjoinen: 46.9508, etela: 46.9438, lansi: 7.4403, ita: 7.4636 },
   },
   monaco: {
     rajat: { pohjoinen: 43.7421, etela: 43.7275, lansi: 7.4102, ita: 7.4326 },
     meri: true,
   },
   reykjavik: {
-    rajat: { pohjoinen: 64.171, etela: 64.126, lansi: -21.948, ita: -21.83 },
+    rajat: { pohjoinen: 64.153, etela: 64.1265, lansi: -21.9487, ita: -21.9005 },
     meri: true,
   },
   sanmarino: {
     rajat: { pohjoinen: 43.9396, etela: 43.9274, lansi: 12.443, ita: 12.4563 },
   },
   vaduz: {
-    rajat: { pohjoinen: 47.154, etela: 47.1335, lansi: 9.519, ita: 9.537 },
+    rajat: { pohjoinen: 47.1421, etela: 47.1335, lansi: 9.5185, ita: 9.5284 },
   },
 };
 
