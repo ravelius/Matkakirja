@@ -242,6 +242,7 @@
  "ui.nosto.kierros": "Kierros",
  "ui.nosto.lehti": "Lehti",
  "ui.nosto.pelaa": "Pelaa {0}",
+ "ui.lautapelinosto.pelaa": "Pelaa: {0}",
  "ui.nosto.jatka": "Jatka",
  "ui.nosto.aloita-alusta": "Aloita alusta {0}",
  "ui.nosto.suurenna-kartta": "Suurenna kartta",

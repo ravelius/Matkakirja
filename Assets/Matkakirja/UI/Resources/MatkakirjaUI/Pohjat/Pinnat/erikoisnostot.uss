@@ -33,3 +33,39 @@
     bottom: 0;
     -unity-background-scale-mode: stretch-to-fill;
 }
+
+/* LAUTAPELINOSTO (omistaja 11.10.2026 PT:n kautta, juna 182; UI/Lautapelinostot.cs): pyöreä sininen videopelilevy pelin
+ * viivaikonilla (tyylikirja teemat.videopeli), alla sininen hehkurengas (mk-nosto-merkki__hehku--videopeli, syke). */
+.mk-lautapelinosto {
+    width: 44px;
+    height: 44px;
+    background-color: initial;
+    overflow: visible;
+}
+
+.mk-lautapelinosto__hehku {
+    left: -26px;
+    top: -26px;
+    width: 96px;
+    height: 96px;
+}
+
+.mk-lautapelinosto__levy {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    border-width: 1.5px;
+    border-radius: 22px;
+    border-color: var(--tk-videopeli-korostus);
+    background-color: var(--tk-videopeli-pinta);
+}
+
+.mk-lautapelinosto__ikoni {
+    width: 24px;
+    height: 24px;
+    color: var(--tk-videopeli-muste);
+}

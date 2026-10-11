@@ -1238,6 +1238,9 @@ namespace Matkakirja.Natiivi
                     else if (pk.Length > 1 && pk[0] == "alku") Matkakirja.Pelikello.AlkuKelloUtc = luku;
                     return ui.Kellonaytto.Kuvaus;
                 }
+                case "lautapelinostot":
+                    // ui lautapelinostot: Mylly (Berliini) ja Tavli (Ateena) videopelinostoina (omistaja 11.10.2026).
+                    return ui.Lautapelinostot.Kuvaus();
                 case "pinnaus":
                     // Pinnattu palkki (Pinnaus.cs): ui pinnaus [palkki <otsikko> | pois]
                     return "=" + Pinnaus.Testi(loput);
