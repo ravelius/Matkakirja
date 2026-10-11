@@ -1906,7 +1906,20 @@ namespace Matkakirja.Natiivi
         void Valitse(string teksti)
         {
             Debug.Log("MATKAKIRJA opas: valinta \"" + teksti + "\"");
+            // IKÄKYSELY (PT 11.10. 04.5x): kierrosvalinta (Esittele kaupunki / Lisää tätä kaupunkia) ei ole pelaajan syötettä
+            // tekoälylle: worker käsittelee sen kuten toiveen puuttumisen (opas.js onKierrosToive → toive null) ja kohdekaupungeissa
+            // esigeneroidulla kierroksella. Siksi se menee oppaalle suoraan ilman ikäkyselyä; muut vaihtoehdot (esim. "Näytä jotain
+            // outoa") ohjaavat live-tekoälyn vastausta, joten ne kulkevat chatin kautta ja ikäkysely säilyy.
+            if (OnKierrosToive(teksti) && OpasSovitin.Toive(teksti)) return;
             UiNakymat.Hae()?.Chat?.Kysy(teksti, true);
+        }
+
+        /// <summary>Workerin onKierrosToive (tools/pollo/opas.js): vain kirjaimet a–ö pienellä verrattuna.</summary>
+        static bool OnKierrosToive(string t)
+        {
+            static string Avain(string x) => new string((x ?? "").ToLowerInvariant().Where(c => c >= 'a' && c <= 'z' || c == 'ä' || c == 'ö' || c == 'å').ToArray());
+            string a = Avain(t);
+            return a.Length > 0 && (a == Avain("Esittele kaupunki") || a == Avain("Lisää tätä kaupunkia"));   // kieli: ei (workerin tunnisteet)
         }
 
         void Avaa(Nakyma n)
