@@ -218,14 +218,15 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
 #valmistuneet details.juna { margin-left: 0.8em; }
 #valmistuneet details.juna .runko { padding-left: 2.1em; }
 #valmistuneet .valmistui { margin-left: auto; font-size: 0.78rem; color: var(--himmea); font-variant-numeric: tabular-nums; }
-/* Sinulle (omistaja 11.10. 10.3x): Päätoimittajan omistajalle toimittamat tekstit väkäsen takana, uusin ensin; linkit napautettavina. */
-#viestit details.juna { margin-left: 0.8em; }
-#viestit details.juna .runko { padding-left: 2.1em; }
-#viestit .otsikko { font-weight: 600; }
-#viestit .runko .teksti { white-space: pre-line; overflow-wrap: anywhere; }
-#viestit .valmistui { margin-left: auto; font-size: 0.78rem; color: var(--himmea); font-variant-numeric: tabular-nums; }
-#viestit a { color: var(--seepia); text-underline-offset: 3px; }
-#viestit a:focus-visible { outline: 2px solid var(--seepia); outline-offset: 2px; }
+/* Sinulle (omistaja 11.10. 11.2x–11.3x): vain tärkeimmät linkit ranskalaisin viivoin ilman väkäsiä; otsikko pienentää osion,
+   ei lihavointia, linkki pienemmällä, jotta se mahtuu riville. */
+ul.linkit { list-style: none; margin: 0; padding: 0 0 0 0.8em; display: flex; flex-direction: column; gap: 3px; font-size: 0.92rem; }
+ul.linkit li { display: flex; gap: 0.45em; min-width: 0; }
+ul.linkit li::before { content: "\2013"; color: var(--himmea); flex-shrink: 0; }
+ul.linkit .teksti { min-width: 0; overflow-wrap: anywhere; }
+ul.linkit .otsikko { font-weight: 400; }
+ul.linkit a { color: var(--seepia); text-underline-offset: 3px; font-size: 0.78rem; }
+ul.linkit a:focus-visible { outline: 2px solid var(--seepia); outline-offset: 2px; }
 </style>
 
 <main class="wrap">
@@ -242,8 +243,8 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
     <div class="tf-paneeli" id="tf-paneeli" hidden></div>
   </section>
   <section class="kortti" id="viestit-osio" hidden>
-    <h2><button type="button" class="otsikkonappi" id="viestit-nappi" aria-expanded="false">Sinulle</button> <span class="kysymykset" id="viestit-maara"></span></h2>
-    <div class="rivit" id="viestit" hidden></div>
+    <h2><button type="button" class="otsikkonappi" id="viestit-nappi" aria-expanded="false">Sinulle</button></h2>
+    <ul class="linkit" id="viestit" hidden></ul>
   </section>
   <section class="kortti" id="tyolista-osio" hidden>
     <h2>Työlista <button type="button" class="kysymykset kysymysnappi" id="kysymykset" aria-expanded="false" hidden></button></h2>
@@ -370,7 +371,9 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
   var valittuJuna = null;
   var kysymysAuki = false;
   var valmistuneetAuki = false;
+  // Sinulle-osion auki/kiinni muistetaan katsojan selaimessa (vain mukavuus; ilman tallennusta kiinni).
   var viestitAuki = false;
+  try { viestitAuki = localStorage.getItem('sinulle-auki') === '1'; } catch (e) { viestitAuki = false; }
   // Linkit napautettaviksi (https://…); muu teksti sellaisenaan, ei HTML:ää.
   function linkitetty(teksti) {
     var f = document.createDocumentFragment();
@@ -547,31 +550,21 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
       vs.append(d);
     });
 
-    // Sinulle (omistaja 11.10. 10.3x): ohjeet, linkit ja vastaukset, jotka Päätoimittaja toimittaa omistajalle;
-    // dokumentti viestit {rivit: [{otsikko, aika, teksti}]}, uusin ensin, enintään 30.
+    // Sinulle (omistaja 11.10. 11.2x–11.3x): vain tärkeimmät linkit suoraan näkyvissä ranskalaisin viivoin, ei väkäsiä;
+    // dokumentti viestit {rivit: [{otsikko, teksti}]}, enintään 30.
     var vr = ((tila.viestit && tila.viestit.rivit) || []).slice(0, 30);
     $('viestit-osio').hidden = vr.length === 0;
-    $('viestit-maara').textContent = vr.length ? '(' + vr.length + ')' : '';
     $('viestit-nappi').setAttribute('aria-expanded', viestitAuki ? 'true' : 'false');
     var vi = $('viestit');
-    vi.hidden = !(viestitAuki && vr.length);
-    var aukiS = {};
-    vi.querySelectorAll('details[open]').forEach(function (d) { aukiS[d.dataset.nimi] = true; });
+    vi.hidden = !viestitAuki;
     vi.replaceChildren();
     vr.forEach(function (r) {
-      var d = luo('details', 'juna');
-      d.dataset.nimi = (r.aika || '') + ' ' + (r.otsikko || '');
-      if (aukiS[d.dataset.nimi]) d.open = true;
-      var su = luo('summary');
-      su.append(luo('span', 'otsikko', r.otsikko || ''));
-      if (r.aika) su.append(luo('span', 'valmistui', r.aika));
-      d.append(su);
-      var runko = luo('div', 'runko');
-      var te = luo('div', 'teksti');
+      var li = luo('li');
+      var te = luo('span', 'teksti');
+      if (r.otsikko) te.append(luo('span', 'otsikko', r.otsikko + ': '));
       te.append(linkitetty(r.teksti || ''));
-      runko.append(te);
-      d.append(runko);
-      vi.append(d);
+      li.append(te);
+      vi.append(li);
     });
 
     // Laitteet (omistaja 10.10. 16.3x): mitä iPadilla ja Blenderillä on ajossa ja kenen ajo (Postivahdin laitteet.py → dokumentti laitteet).
@@ -638,7 +631,11 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
 
   $('kysymykset').addEventListener('click', function () { kysymysAuki = !kysymysAuki; piirra(); });
   $('valmistuneet-nappi').addEventListener('click', function () { valmistuneetAuki = !valmistuneetAuki; piirra(); });
-  $('viestit-nappi').addEventListener('click', function () { viestitAuki = !viestitAuki; piirra(); });
+  $('viestit-nappi').addEventListener('click', function () {
+    viestitAuki = !viestitAuki;
+    try { localStorage.setItem('sinulle-auki', viestitAuki ? '1' : '0'); } catch (e) { /* ei tallennusta */ }
+    piirra();
+  });
   // Päivitysnappi (omistaja 10.10. 16.4x): napautus lähettää Päätoimittajalle kommentin "Päivitä Asemataulu", ja se vie tuoreet tiedot heti.
   $('paivitetty').addEventListener('click', function () {
     var nappi = $('paivitetty');
