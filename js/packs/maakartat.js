@@ -4584,6 +4584,7 @@ export const KAUPUNKIKARTAT = {
   },
   edinburgh: {
     polku: 'assets/kartat/edinburgh-keskusta.png',
+    varikartta: 'assets/kartat/edinburgh-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 55.9615, etela: 55.9415, lansi: -3.214, ita: -3.162 },
     /*
@@ -16659,6 +16660,7 @@ export const KAUPUNKIKARTAT = {
   },
   chisinau: {
     polku: 'assets/kartat/chisinau-keskusta.png',
+    varikartta: 'assets/kartat/chisinau-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Chișinăun historiallinen ydin muotoutui 1800-luvulla: katedraali ja riemukaari muodostavat akselin, keskuspuisto perustettiin vuonna 1818 ja vanhin kirkko on vuodelta 1752. Kohteet ovat kävellen ulottuvilla, Ciuflea itäisimpänä.',
@@ -16762,6 +16764,7 @@ export const KAUPUNKIKARTAT = {
   },
   podgorica: {
     polku: 'assets/kartat/podgorica-keskusta.png',
+    varikartta: 'assets/kartat/podgorica-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Vanha ja uusi Podgorica ovat kävelymatkan päässä toisistaan. Ribnican rannalla seisovat kellotorni ja linnoituksen muurit, ja Moračan yli vie nykyajan silta, jonka toisella puolella kohoaa katedraali.',
@@ -16807,6 +16810,7 @@ export const KAUPUNKIKARTAT = {
   },
   skopje: {
     polku: 'assets/kartat/skopje-keskusta.png',
+    varikartta: 'assets/kartat/skopje-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Skopjen historiallinen ydin kokoontuu Kivisillan ympärille: Vanhassa basaarissa on hamameja, karavaanisarajeja ja moskeijoita, ja Kale-linnoitus kohoaa kaupungin korkeimmalle kohdalle. Silta on yli 500 vuotta vanha ja kaupungin vaakunan pääaihe.',
@@ -16956,6 +16960,7 @@ export const KAUPUNKIKARTAT = {
   },
   andorralavella: {
     polku: 'assets/kartat/andorralavella-keskusta.png',
+    varikartta: 'assets/kartat/andorralavella-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Kartan ydin on Gran Valiran laakso, jossa vanha keskusta ja Santa Coloma ovat rinnakkain. Mukana on myös Escaldesin kylpylä.',
@@ -16990,6 +16995,7 @@ export const KAUPUNKIKARTAT = {
   },
   bern: {
     polku: 'assets/kartat/bern-keskusta.png',
+    varikartta: 'assets/kartat/bern-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Bernin ydin kulkee Aaren niemekkeen harjalla Bundesplatzilta Zytgloggen ja tuomiokirkon ohi karhukuopalle. Kohteet ovat parin kilometrin kävelyn sisällä toisistaan.',
@@ -17029,6 +17035,7 @@ export const KAUPUNKIKARTAT = {
   },
   monaco: {
     polku: 'assets/kartat/monaco-keskusta.png',
+    varikartta: 'assets/kartat/monaco-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Monacon vanha kaupunki, ruhtinaanlinna ja katedraali ovat kalliolla, jonka vieressä on Port Hercule -satama. Satamasta itään rinne nousee Monte Carloon, jossa sijaitsevat kasino ja oopperasali.',
@@ -17127,6 +17134,7 @@ export const KAUPUNKIKARTAT = {
   },
   sanmarino: {
     polku: 'assets/kartat/sanmarino-keskusta.png',
+    varikartta: 'assets/kartat/sanmarino-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'San Marinon historiallinen keskusta ja Monte Titanon harja kuuluvat UNESCOn maailmanperintöön. Mukana ovat kolme tornia, kaupungin hallinnon ja uskonnon keskukset sekä itse vuori.',
@@ -17178,6 +17186,7 @@ export const KAUPUNKIKARTAT = {
   },
   vaduz: {
     polku: 'assets/kartat/vaduz-keskusta.png',
+    varikartta: 'assets/kartat/vaduz-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Vaduzin ydin on pieni: linna, katedraali ja kaksi museota ovat lyhyen kävelymatkan päässä toisistaan.',
@@ -19644,6 +19653,7 @@ export const KAUPUNKIKARTAT = {
   // VATIKAANI (Karttaseppä 11.10.2026, PT, juna 183): kohteet Wikipediasta ja OSM:stä, tekstit myöhemmin.
   vatikaanivaltio: {
     polku: 'assets/kartat/vatikaanivaltio-keskusta.png',
+    varikartta: 'assets/kartat/vatikaanivaltio-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     rajat: {
