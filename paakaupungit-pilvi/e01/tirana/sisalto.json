@@ -14,8 +14,8 @@
   }
  },
  "artikkeli": {
-  "intro": "Tirana on Albanian pääkaupunki ja maan suurin kaupunki, ja se levittäytyy Tiranan tasangolle **Dajtin vuoren juurelle**. Alueella on asuttu jo esihistoriallisista ajoista, ja kaupunki mainitaan venetsialaisissa asiakirjoissa 1350-luvulla. Nykyinen kaupunki sai muotonsa 1600-luvun alussa, kun paikallinen hallitsija Sulejman Bargjini rakennutti vuonna 1614 moskeijan, pienen kauppakeskuksen ja hammamin.\n\nIsoisän matkavuonna 1873 Tirana oli ottomaanien aikainen **basaarikaupunki**, jossa Et'hem Beyn moskeija ja kellotorni jo kohosivat. Pääkaupungiksi se julistettiin väliaikaisesti vuonna 1920 ja pysyvästi 1925. Nykyisen keskustansa se sai 1900-luvun suunnitelmista, joita laativat itävaltalaiset ja italialaiset arkkitehdit.\n\nTiranan kunnassa asui vuoden 2023 väestölaskennan mukaan 598 176 ihmistä. Skanderbeg-aukion ympärillä ovat kellotorni, moskeija ja museot, ja viime vuosina vanhoja rakennuksia on annettu uuteen käyttöön: **pyramidi**, joka avattiin 1988 museona, on nyt nuorten teknologiakeskus.",
-  "teksti": "Kaupungin ydin on tiivis ja kuljettavissa jalan. Skanderbeg-aukion ympärillä ovat oopperatalo, kansalliskirjasto, kansallinen historiallinen museo, Et'hem Beyn moskeija ja kellotorni. Aukion nykyisen ilmeen suunnittelivat arkkitehtitoimisto 51N4E ja taiteilija Anri Sala, ja se avattiin yleisölle kesäkuussa 2017.\n\nHistorian kerrokset näkyvät kävellessä. Tiranan linnoitus on bysanttilaiskauden jäänne, josta on jäljellä ottomaanien aikainen muuri, Kokonozin moskeija on vuodelta 1750 ja Tabakkien silta 1700-luvulta. Kommunistiajan uskonnonvastainen politiikka sulki moskeijat, ja Et'hem Beyn moskeija avattiin uskonnolliseen käyttöön uudelleen vuonna 1991.\n\nItäpuolella Dajtin vuori kohoaa noin 1 600 metriin, ja sitä kutsutaan Tiranan luonnonparvekkeeksi. Dajtin vuoren kansallispuisto perustettiin vuonna 1966, ja köysirata nousee vuoren rinteelle kaupungin itälaidalta. Keskustan lähellä Rinian puisto on vuodelta 1950, ja sen länsireunalla on Taivani-keskus."
+  "intro": "Tirana on Albanian pääkaupunki ja maan suurin kaupunki, ja se levittäytyy Tiranan tasangolle **Dajtin vuoren juurelle**. Alueella on asuttu jo esihistoriallisista ajoista, ja kaupunki mainitaan venetsialaisissa asiakirjoissa 1300-luvulla. Nykyinen kaupunki sai muotonsa 1600-luvun alussa, kun paikallinen hallitsija Sulejman Bargjini rakennutti vuonna 1614 moskeijan, pienen kauppakeskuksen ja hammamin.\n\nIsoisän matkavuonna 1873 Tirana oli ottomaanien aikainen **basaarikaupunki**, jossa Et'hem Beyn moskeija ja kellotorni jo kohosivat. Pääkaupungiksi se julistettiin väliaikaisesti vuonna 1920 ja pysyvästi 1925. Nykyisen keskustansa se sai 1900-luvun suunnitelmista, joita laativat itävaltalaiset ja italialaiset arkkitehdit.\n\nTiranan kunnassa asui vuoden 2023 väestölaskennan mukaan 598 176 ihmistä. Skanderbeg-aukion ympärillä ovat kellotorni, moskeija ja museot, ja viime vuosina vanhoja rakennuksia on annettu uuteen käyttöön: **pyramidi**, joka avattiin 1988 museona, on nyt nuorten teknologiakeskus.",
+  "teksti": "Kaupungin ydin on tiivis ja kuljettavissa jalan. Skanderbeg-aukion ympärillä ovat oopperatalo, kansalliskirjasto, kansallinen historiallinen museo, Et'hem Beyn moskeija ja kellotorni. Aukion nykyisen ilmeen suunnittelivat arkkitehtitoimisto 51N4E ja taiteilija Anri Sala, ja se avattiin yleisölle vuonna 2017.\n\nHistorian kerrokset näkyvät kävellessä. Tiranan linnoitus on bysanttilaiskauden jäänne, josta on jäljellä ottomaanien aikainen muuri, Kokonozin moskeija on vuodelta 1750 ja Tabakkien silta 1700-luvulta. Kommunistiajan uskonnonvastainen politiikka sulki moskeijat, ja Et'hem Beyn moskeija avattiin uskonnolliseen käyttöön uudelleen 1990-luvun alussa.\n\nItäpuolella Dajtin vuori kohoaa noin 1 600 metriin, ja sitä kutsutaan Tiranan luonnonparvekkeeksi. Dajtin vuoren kansallispuisto perustettiin vuonna 1966, ja köysirata nousee vuoren rinteelle kaupungin itälaidalta. Keskustan lähellä Rinian puisto on noin vuodelta 1950, ja sen länsireunalla on Taivani-keskus."
  },
  "kysymykset": [
   {
@@ -61,7 +61,7 @@
    "source": "https://en.wikipedia.org/wiki/Dajti"
   },
   {
-   "q": "Missä kaupungissa Tiranan kellotornin kello valettiin vuonna 1838?",
+   "q": "Missä kaupungissa sijaitsi valimo, jonka nimi on Tiranan kellotornin kellon italiankielisessä kirjoituksessa?",
    "options": [
     "Triestessä",
     "Venetsiassa",
@@ -71,7 +71,7 @@
    "correct": 0,
    "level": 3,
    "hint": "Valimon omistivat Accerboni-veljekset.",
-   "fact": "Kello valettiin Accerboni-veljesten valimossa Triestessä 29. heinäkuuta 1838. Kellon halkaisija on 0,74 metriä.",
+   "fact": "Kellotornin kellossa on italiankielinen kirjoitus, jossa mainitaan Accerboni-veljesten valimo Triestessä.",
    "source": "https://en.wikipedia.org/wiki/Tirana_Clock_Tower"
   },
   {
@@ -90,9 +90,9 @@
   }
  ],
  "tiedot": [
-  "Vuonna 2016 Albania ohitti Espanjan kahviloiden määrässä asukasta kohti: lähteen mukaan Albaniassa oli 654 kahvilaa sataatuhatta asukasta kohti.",
+  "2010-luvun puolivälissä Albania ohitti lähteiden mukaan Espanjan kahviloiden määrässä asukasta kohti: Albaniassa oli yli kuusisataa kahvilaa sataatuhatta asukasta kohti.",
   "Rinian puistoa kutsuttiin ironisesti Taiwaniksi, ja nimi elää yhä puiston länsireunan Taivani-keskuksessa, jossa on kahviloita, ravintoloita ja keilarata kellarissa.",
-  "Tiranassa pidettiin ensimmäinen autoton päivä syyskuussa 2015, ja lähteen mukaan se kannusti kuntaa järjestämään autottoman päivän joka kuukausi."
+  "Tiranassa pidettiin ensimmäinen autoton päivä syyskuussa 2015, ja kaupunki aikoi toistaa sen lähes joka kuukausi."
  ],
  "valokuva": {
   "tiedosto": "Clock Tower and Mosque of Tirana (night).jpg",
@@ -129,7 +129,7 @@
    "nostot": [
     {
      "otsikko": "Basaarin ja vesimyllyjen kaupunki",
-     "teksti": "Tiranan seutu on ollut asuttu esihistoriallisista ajoista, ja varhaisin tunnistettu viite on Pëllumbasin luola, jonka lähde ajoittaa paleoliittiseen aikaan. Kaupunki mainitaan venetsialaisissa asiakirjoissa 1350-luvulla ja uudelleen 1418, ja ottomaanien ensimmäisessä maarekisterissä 1431–32 Tiranassa oli 60 asuttua aluetta ja 7 300 asukasta. Lähteen mukaan asutus oli alkanut kehittyä basaariksi ja siellä oli useita vesimyllyjä jo ennen vuotta 1614, jolloin Sulejman Bargjini rakennutti vanhan moskeijan, pienen kauppakeskuksen ja hammamin.",
+     "teksti": "Tiranan seutu on ollut asuttu esihistoriallisista ajoista, ja varhaisin tunnistettu viite on Pëllumbasin luola, jonka lähde ajoittaa paleoliittiseen aikaan. Kaupunki mainitaan venetsialaisissa asiakirjoissa 1300-luvulla ja uudelleen 1418, ja ottomaanien ensimmäisessä maarekisterissä 1431–32 Tiranassa oli 60 asuttua aluetta ja 7 300 asukasta. Lähteen mukaan asutus oli alkanut kehittyä basaariksi ja siellä oli useita vesimyllyjä jo ennen vuotta 1614, jolloin Sulejman Bargjini rakennutti vanhan moskeijan, pienen kauppakeskuksen ja hammamin.",
      "tiedosto": "Tirana Castle, Albania 2019 02.jpg",
      "lyhyt": "Tiranan linnoitus on bysanttilaiskauden jäänne, ja sen muuri on ottomaanien ajalta.",
      "selite": "Linnoitus sijaitsi kohdassa, jossa itä–länsi- ja pohjois–etelä-suuntaiset tiet risteävät, ja se muodosti lähteen mukaan Tiranan sydämen.",
@@ -138,7 +138,7 @@
     },
     {
      "otsikko": "Moskeija ja kellotorni",
-     "teksti": "Et'hem Beyn moskeijan rakentaminen alkoi 1791 tai 1794 Molla Beyn johdolla, ja se valmistui 1819 tai 1821 hänen poikansa Haxhi Ethem Beyn aikana. Portiikin ja sisätilan seinämaalauksissa on puita, vesiputouksia ja siltoja, joista useimmat ovat mielikuvitusmaisemia. Viereinen kellotorni valmistui lähteen mukaan 1822 tai 1830. Tufina-suku, tunnettu kelloseppä-osaamisestaan, huolehti kellosta vuoteen 1973 asti. Moskeija suljettiin kommunistiajan uskonnonvastaisen politiikan aikana, ja se avattiin uskonnolliseen käyttöön uudelleen vuonna 1991.",
+     "teksti": "Et'hem Beyn moskeijan rakentaminen alkoi 1791 tai 1794 Molla Beyn johdolla, ja se valmistui 1819 tai 1821 hänen poikansa Haxhi Ethem Beyn aikana. Portiikin ja sisätilan seinämaalauksissa on puita, vesiputouksia ja siltoja, joista useimmat ovat mielikuvitusmaisemia. Viereinen kellotorni valmistui lähteen mukaan 1822 tai 1830. Tufina-suku, tunnettu kelloseppä-osaamisestaan, huolehti kellosta vuoteen 1973 asti. Moskeija suljettiin kommunistiajan uskonnonvastaisen politiikan aikana, ja se avattiin uskonnolliseen käyttöön uudelleen 1990-luvun alussa.",
      "tiedosto": "Et'hem Bey mosque and clock tower by Edward Lear.jpg",
      "lyhyt": "Edward Learin piirros kellotornista ja moskeijasta on kohteen varhaisimpia kuvia.",
      "selite": "Edward Lear kuvasi tornia syyskuussa 1848, ja hänen akvarellinsa ovat tornin varhaisin kuvadokumentti.",
@@ -147,7 +147,7 @@
     },
     {
      "otsikko": "Pääkaupunki piirretään",
-     "teksti": "Lushnjën kongressi julisti Tiranan Albanian väliaikaiseksi pääkaupungiksi vuonna 1920, ja asema vahvistui pysyväksi 1925. Itävalta-Unkarin armeijan asiantuntijat laativat kaupungin ensimmäisen kartan elokuussa 1916, ja ensimmäinen säätelysuunnitelma tehtiin 1923 itävaltalaisten arkkitehtien voimin. Keskustan hankkeesta vastasivat italialaiset arkkitehdit Florestano Di Fausto ja Armando Brasini, ja Dëshmorët e Kombit -bulevardi rakennettiin 1930. Prikaatien palatsi oli tarkoitettu kuningas Zogu I:n asuinpaikaksi.",
+     "teksti": "Lushnjën kongressi julisti Tiranan Albanian väliaikaiseksi pääkaupungiksi vuonna 1920, ja asema vahvistui pysyväksi 1925. Itävalta-Unkarin armeijan asiantuntijat laativat kaupungin ensimmäisen kartan ensimmäisen maailmansodan aikana, ja ensimmäinen säätelysuunnitelma tehtiin 1920-luvun alussa itävaltalaisten arkkitehtien voimin. Keskustan hankkeesta vastasivat italialaiset arkkitehdit Florestano Di Fausto ja Armando Brasini, ja Dëshmorët e Kombit -bulevardi sai alun perin nimen King Zog I Boulevard. Prikaatien palatsi oli tarkoitettu kuningas Zogu I:n asuinpaikaksi.",
      "tiedosto": "Pallati i Brigadave South side.jpg",
      "lyhyt": "Prikaatien palatsi oli tarkoitettu kuningas Zogu I:n asuinpaikaksi.",
      "selite": "Palatsin nimi tulee siitä, että kansanarmeijan prikaati otti sen italialaisilta.",
@@ -156,7 +156,7 @@
     },
     {
      "otsikko": "Silta nahkureiden tiellä",
-     "teksti": "Tabakkien silta on 1700-luvun ottomaanien aikainen kivinen jalankulkusilta. Se kuului tiehen, joka yhdisti Tiranan Debariin, ja tietä käyttivät pääasiassa maanviljelijät tuodessaan tuotteita ja karjaa kaupunkiin. Silta ylitti Lanë-puron paikassa, jonka lähellä oli lihakauppiaiden ja nahkureiden alue. Lanë ohjattiin pois vanhalta uomaltaan 1930-luvulla, ja silta jäi rappiolle. Se puhdistettiin ja kunnostettiin 1990-luvulla, ja nykyään se on vain jalankulkijoiden käytössä.",
+     "teksti": "Tabakkien silta on 1700-luvun ottomaanien aikainen kivinen jalankulkusilta. Se kuului tiehen, joka yhdisti Tiranan Debariin, ja tietä käyttivät pääasiassa maanviljelijät tuodessaan tuotteita ja karjaa kaupunkiin. Silta ylitti Lanë-puron paikassa, jonka lähellä oli lihakauppiaiden ja nahkureiden alue. Lanë ohjattiin pois vanhalta uomaltaan 1930-luvulla, ja silta jäi rappiolle. Se puhdistettiin ja kunnostettiin myöhemmin, ja nykyään se on vain jalankulkijoiden käytössä.",
      "tiedosto": "Ura e Tabakëve nga Edward Lear (1848).jpg",
      "lyhyt": "Tabakkien silta kuului Tiranasta Debariin johtaneeseen tiehen.",
      "selite": "Commonsin mukaan Edward Lear kuvasi aluetta vuonna 1848, ja kaupunki pitää siltaa todisteena Tiranan 1700-luvun kaupunkikehityksestä.",
@@ -167,7 +167,7 @@
    "matkailijalle": {
     "kuva": {
      "tiedosto": "Clock Tower of Tirana (1).jpg",
-     "lyhyt": "Tiranan kellotorni on noin 33 metriä korkea ottomaanien aikainen torni.",
+     "lyhyt": "Tiranan kellotorni on yli 30 metriä korkea ottomaanien aikainen torni.",
      "selite": "Torni valmistui lähteen mukaan 1822 tai 1830, ja sen nykyinen ulkoasu on vuoden 1928 remontista.",
      "lahde": "Radosław Botev, Wikimedia Commons (CC BY 3.0)"
     },
@@ -180,7 +180,7 @@
      "jaksot": [
       {
        "otsikko": "Perille ja liikkeelle",
-       "teksti": "Tirana International Airport Nënë Tereza sijaitsee luoteessa Krujën kunnan alueella, lähteestä riippuen noin 11–17 kilometrin päässä keskustasta. Lähteen mukaan se on Albanian ainoa lentoasema, jolla on säännöllistä reittiliikennettä. Bussit yhdistävät lentoaseman Tiranaan, Durrësiin, Shkodëriin ja Fieriin. Kaupunkiliikenne hoituu busseilla: kaupunkilinjoja on lähteen mukaan 16 ja esikaupunkilinjoja 14, ja reitit löytyvät Google Mapsista. Rautatieasema siirrettiin 2013 Kashariin. Jalkakäytävät ovat epätasaisia ja kadunnimet vaihtuvat, joten suunnistus onnistuu parhaiten maamerkeillä.",
+       "teksti": "Tirana International Airport Nënë Tereza sijaitsee luoteessa Krujën kunnan alueella, tietä pitkin noin 17 kilometrin päässä keskustasta. Bussit yhdistävät lentoaseman Tiranaan, Durrësiin, Shkodëriin ja Fieriin. Kaupunkiliikenne hoituu busseilla: linjoja on kaupungin ja esikaupunkien alueella yhteensä kolmisenkymmentä, ja reitit löytyvät Google Mapsista. Rautatieasema siirrettiin 2013 kaupungin laidalle. Jalkakäytävät ovat epätasaisia ja kadunnimet vaihtuvat, joten suunnistus onnistuu parhaiten maamerkeillä.",
        "kuva": {
         "tiedosto": "Rinas-Airport-New-Terminal.jpg",
         "lyhyt": "Tirana International Airport Nënë Tereza tunnetaan myös Rinasin lentoasemana.",
@@ -193,14 +193,14 @@
        "teksti": "Skanderbeg-aukiolta on lyhyt matka Et'hem Beyn moskeijalle, kellotornille ja kansalliskirjastolle, jonka kokoelmassa on lähteen mukaan yli miljoona kirjaa, lehteä, karttaa ja muuta aineistoa. Tiranan linnoituksen jäljellä oleva muuri ja sen vieressä joulukuussa 2018 avattu basaari ovat lähellä, ja Tabakkien silta kuuluu vanhaan 1700-luvun kaupunkiin. Pyramidin portaita voi kävellä huipulle, ja Rinian puistossa on Taivani-keskus kahviloineen.",
        "kuva": {
         "tiedosto": "Bulevardi Dëshmorët e Kombit Tiranë.jpg",
-        "lyhyt": "Dëshmorët e Kombit -bulevardi rakennettiin 1930 nimellä King Zog I Boulevard.",
-        "selite": "Bulevardi jakaa Lanë-joen kanssa keskustan neljään osaan, ja se on osa 1900-luvun pääkaupunkisuunnitelmaa.",
+        "lyhyt": "Dëshmorët e Kombit -bulevardi on Tiranan keskustan pääkatu.",
+        "selite": "Bulevardi kuuluu 1900-luvun pääkaupunkisuunnitelmaan, ja yhdessä Lanë-joen kanssa se jakaa keskustan neljään osaan.",
         "lahde": "NestedLoops, Wikimedia Commons (CC BY-SA 4.0)"
        }
       },
       {
        "otsikko": "Dajti, kaupungin parveke",
-       "teksti": "Dajti kohoaa heti Tiranan itäpuolella, ja sen korkein huippu Maja e Dajtit on lähteen mukaan 1 613 metriä. Vuorta kutsutaan Tiranan luonnonparvekkeeksi. Dajtin vuoren kansallispuisto perustettiin 1966, ja se sijaitsee noin 26 kilometriä Tiranasta itään. Dajti Ekspres -köysirata kulkee kaupungin itälaidalta Llarkan tasangolle: matka on 4,7 kilometriä ja kestää 15 minuuttia, ja alaasemalle pääsee kaupunkibussilla 15–20 minuutissa. Puiston metsissä elää lähteiden mukaan karhu, susi ja villikissa.",
+       "teksti": "Dajti kohoaa heti Tiranan itäpuolella, ja sen korkein huippu Maja e Dajtit on lähteen mukaan 1 613 metriä. Vuorta kutsutaan Tiranan luonnonparvekkeeksi. Dajtin vuoren kansallispuisto perustettiin 1966, ja se sijaitsee noin 26 kilometriä Tiranasta itään. Dajti Ekspres -köysirata kulkee kaupungin itälaidalta Llarkan tasangolle: matka on noin 4,5 kilometriä ja kestää noin 15 minuuttia, ja alaasemalle pääsee kaupunkibussilla noin 20 minuutissa. Puiston metsissä elää lähteiden mukaan karhu, susi ja villikissa.",
        "kuva": {
         "tiedosto": "View of Tirana from Dajti mountain.jpg",
         "lyhyt": "Dajtin vuoren kansallispuisto perustettiin vuonna 1966.",
@@ -210,7 +210,7 @@
       },
       {
        "otsikko": "Mitä täällä syödään",
-       "teksti": "Tiranan seudun perinneruoka on fërgesë, jota valmistetaan paprikasta tai maksasta. Lähteen mukaan fërgesë on uunissa kypsennettyjä vihanneksia ja juustoa, ja tavë dheu on maksalla täydennetty fërgesë. Italialainen vaikutus näkyy, sillä pizzaa ja pastaa saa lähes kaikkialta. Kahvilakulttuuri on vahva: lähteen mukaan Albania ohitti 2016 Espanjan kahviloiden määrässä asukasta kohti. Maataloustraditiossa juusto, oliivit ja viini ovat tärkeitä.",
+       "teksti": "Tiranan seudun perinneruoka on fërgesë, jota valmistetaan paprikasta tai maksasta. Lähteen mukaan fërgesë on uunissa kypsennettyjä vihanneksia ja juustoa, ja tavë dheu on maksalla täydennetty fërgesë. Italialainen vaikutus näkyy, sillä pizzaa ja pastaa saa lähes kaikkialta. Kahvilakulttuuri on vahva: lähteiden mukaan Albania ohitti 2010-luvun puolivälissä Espanjan kahviloiden määrässä asukasta kohti. Maataloustraditiossa juusto, oliivit ja viini ovat tärkeitä.",
        "kuva": {
         "tiedosto": "Fërgesë dhe Tavë me oriz.jpg",
         "lyhyt": "Fërgesë on Tiranan seudun perinneruoka.",
@@ -223,7 +223,7 @@
        "teksti": "Tammikuun keskilämpötila on 6,7 astetta ja heinäkuun 24,0 astetta. Sateisimmat kuukaudet ovat marraskuu (172 mm) ja joulukuu (148 mm), ja kuivin on heinäkuu (42 mm); vuodessa sataa noin 1 270 millimetriä. Toukokuussa ja syyskuussa keskilämpötila on 18–21 astetta, mikä sopii kävelyyn. Kesä on lämmin ja kuiva, talvi leuto ja sateinen.",
        "kuva": {
         "tiedosto": "Tirana Snowfall 2017.jpg",
-        "lyhyt": "Tiranan talvet ovat leutoja ja kosteita.",
+        "lyhyt": "Tiranan talvet ovat yleensä leutoja ja kosteita, mutta joskus kaupunki saa lumipeiteen.",
         "selite": "Tammikuun keskilämpötila on noin 7 astetta, ja eniten sataa marras-, joulu- ja tammikuussa.",
         "lahde": "BBB2021, Wikimedia Commons (CC BY-SA 4.0)"
        }
@@ -298,7 +298,7 @@
    "nostot": [
     {
      "otsikko": "Pyramidi saa uuden tehtävän",
-     "teksti": "Pyramidi avattiin lokakuussa 1988 museona. Sen suunnittelivat Pranvera Hoxha, Klement Kolaneci, Pirro Vaso ja Vladimir Bregu, ja lähteen mukaan sitä sanottiin Albanian kaikkien aikojen kalleimmaksi yksittäiseksi rakennukseksi. Vuoden 1991 jälkeen se toimi konferenssi- ja näyttelykeskuksena. Purkusuunnitelmia tehtiin useita, mutta 2017 ilmoitettiin, että rakennus kunnostetaan. Arkkitehtitoimisto MVRDV muutti sen TUMO Tiranaksi, ja ulkopinnan portaat avattiin yleisölle toukokuussa 2023.",
+     "teksti": "Pyramidi avattiin vuonna 1988 museona. Sen suunnittelivat muun muassa Pranvera Hoxha ja Klement Kolaneci. Vuoden 1991 jälkeen se toimi konferenssi- ja näyttelykeskuksena. Purkusuunnitelmia tehtiin useita, mutta 2010-luvun lopulla ilmoitettiin, että rakennus kunnostetaan. Arkkitehtitoimisto MVRDV muutti sen TUMO Tiranaksi, ja ulkopinnan portaat avattiin yleisölle toukokuussa 2023.",
      "tiedosto": "Pyramid of Tirana October 2023.jpg",
      "lyhyt": "Pyramidi avattiin museona 1988 ja uudistettiin nuorten teknologiakeskukseksi.",
      "selite": "Alkuperäinen betonirakenne säilytettiin, ja siihen lisättiin portaat, kattoikkunat ja värikkäitä uusia elementtejä.",
@@ -307,7 +307,7 @@
     },
     {
      "otsikko": "Aukio, jonka suunnitteli toimisto ja taiteilija",
-     "teksti": "Skanderbeg-aukio on Tiranan pääaukio, ja sitä hallitsee Skanderbegin monumentti. Aukion nykyinen ilme syntyi 51N4E-arkkitehtitoimiston ja taiteilija Anri Salan suunnitelmasta, ja se avattiin yleisölle kesäkuussa 2017. Suunnitelman mukaan kivimateriaali tuotiin kaikkialta Albaniasta ja albaanien asuttamilta mailta, ja puutarhoissa esiteltäisiin Albanian kasvillisuutta. Hanke sai Euroopan julkisen kaupunkitilan palkinnon 2018 ja Euroopan unionin nykyarkkitehtuuripalkinnon toisen palkinnon 2019. Aukio kuuluu lähteen mukaan Balkanin suurimpaan jalankulkualueeseen.",
+     "teksti": "Skanderbeg-aukio on Tiranan pääaukio, ja sitä hallitsee Skanderbegin monumentti. Aukion nykyinen ilme syntyi 51N4E-arkkitehtitoimiston ja taiteilija Anri Salan suunnitelmasta, ja se avattiin yleisölle vuonna 2017. Suunnitelman mukaan kivimateriaali tuotiin kaikkialta Albaniasta ja albaanien asuttamilta mailta, ja puutarhoissa esiteltäisiin Albanian kasvillisuutta. Hanke sai Euroopan julkisen kaupunkitilan palkinnon 2018.",
      "tiedosto": "Skanderbeg Square Tirana 2018.jpg",
      "lyhyt": "Skanderbeg-aukio avattiin 2017 jalankulkualueena, jonka kiveä suunniteltiin eri puolilta Albaniaa.",
      "selite": "Aukion ympärillä ovat muun muassa oopperatalo, kansalliskirjasto, kansallinen historiallinen museo, Et'hem Beyn moskeija ja kellotorni.",
@@ -316,7 +316,7 @@
     },
     {
      "otsikko": "Anri Sala ja värien Tirana",
-     "teksti": "Anri Sala on vuonna 1974 syntynyt albanialainen nykytaiteilija, jonka pääväline on video. Hän opiskeli Albanian taideakatemiassa 1992–1996 ja jatkoi Pariisissa ja Tourcoingissa. Hänen videoinstallaationsa Dammi i colori eli Anna minulle värit oli esillä Tate Modernissa Lontoossa, ja teos käsittelee Tiranan muutosta värien kautta. Sala edusti Ranskaa Venetsian biennaalissa 2013 ja sai Vincent-palkinnon 2014. Yhdessä 51N4E:n kanssa hän suunnitteli Skanderbeg-aukion.",
+     "teksti": "Anri Sala on vuonna 1974 syntynyt albanialainen nykytaiteilija, jonka pääväline on video. Hän opiskeli Albanian taideakatemiassa ja jatkoi Pariisissa ja Tourcoingissa. Hänen videoinstallaationsa Dammi i colori eli Anna minulle värit käsittelee Tiranan muutosta värien kautta. Sala edusti Ranskaa Venetsian biennaalissa 2013 ja sai Vincent-palkinnon 2014. Yhdessä 51N4E:n kanssa hän suunnitteli Skanderbeg-aukion.",
      "tiedosto": "Colorful houses in Tirana.jpg",
      "lyhyt": "Tiranan kerrostalojen julkisivuja on maalattu kirkkain värein.",
      "selite": "Julkisivujen maalaus kuului lähteen mukaan kaupungin uudistuksiin 2000-luvun alussa, ja Anri Salan Dammi i colori käsittelee kaupungin muutosta värien kautta.",
@@ -325,7 +325,7 @@
     },
     {
      "otsikko": "Bunkkeri museona",
-     "teksti": "Bunk'Art-museo muodostuu kahdesta maanalaisesta bunkkerista, jotka rakennettiin kommunistiajan johdon määräyksestä. Ne on muutettu historiamuseoksi ja nykytaiteen gallerioksi, joiden näyttelyt kertovat toisesta maailmansodasta ja kylmästä sodasta. Suuressa bunkkerissa on lähes 3 000 neliömetriä maanalaista tilaa useassa kerroksessa, ja se rakennettiin 1970-luvulla poliittiselle eliitille. Se pysyi suuren osan olemassaolostaan salaisena. Kansallinen taidegalleria Dëshmorët e Kombit -bulevardilla säilyttää noin 4 500 teosta.",
+     "teksti": "Bunk'Art-museo muodostuu kahdesta maanalaisesta bunkkerista, jotka rakennettiin kommunistiajan johdon määräyksestä. Ne on muutettu historiamuseoksi ja nykytaiteen gallerioksi, joiden näyttelyt kertovat toisesta maailmansodasta ja kylmästä sodasta. Suuressa bunkkerissa on viisi maanalaista kerrosta ja yli sata huonetta, ja se rakennettiin 1970-luvulla poliittiselle eliitille. Se pysyi suuren osan olemassaolostaan salaisena. Kansallinen taidegalleria Dëshmorët e Kombit -bulevardilla säilyttää noin 4 500 teosta.",
      "tiedosto": "Tiranë, Albania January 2023 - BUNK'ART 2 museum 11.jpg",
      "lyhyt": "Bunk'Art on kommunistiajan bunkkeri, josta on tehty museo ja nykytaiteen galleria.",
      "selite": "Bunk'Artin näyttelyt kertovat Albanian 1900-luvun historiasta, ja yhdessä kohteessa on myös nykytaidetta.",
@@ -391,8 +391,8 @@
  },
  "nahtavyydet": {
   "Skanderbeg-aukio": {
-   "aika": "1917, uudistettu 2017",
-   "teksti": "Skanderbeg-aukio on Tiranan pääaukio, ja sen pinta-ala on noin neljä hehtaaria. Aukio on nimetty Albanian kansallissankarin Skanderbegin mukaan, ja sitä hallitsee hänen monumenttinsa, jonka kuvanveistäjä oli Odhise Paskali. Itävaltalaiset rakensivat julkisen aukion paikalle 1917, joten isoisän matkavuonna 1873 aukiota ei vielä ollut.\n\nKaupungin suunnitelman laati ensin Armando Brasini 1925, ja sitä jatkoi Florestano Di Fausto uusrenessanssityylillä. Gherardo Bosio päivitti pääsuunnitelman 1939. Kuningaskunnan aikana, vuosina 1928–1939, aukiolla oli liikenneympyrä ja suihkulähde.\n\nAukio uudistettiin 2016–2017 jalankulkualueeksi 51N4E-toimiston ja Anri Salan suunnitelman mukaan, ja se avattiin yleisölle kesäkuussa 2017. Se sai Euroopan julkisen kaupunkitilan palkinnon 2018. Aukion ympärillä ovat oopperatalo, kansalliskirjasto, kansallinen historiallinen museo, Et'hem Beyn moskeija, kellotorni ja kaupungintalo.",
+   "aika": "1910-luvulla, uudistettu 2017",
+   "teksti": "Skanderbeg-aukio on Tiranan pääaukio, ja sen pinta-ala on noin neljä hehtaaria. Aukio on nimetty Albanian kansallissankarin Skanderbegin mukaan, ja sitä hallitsee hänen monumenttinsa, jonka kuvanveistäjä oli Odhise Paskali. Itävaltalaiset rakensivat julkisen aukion paikalle 1910-luvulla, joten isoisän matkavuonna 1873 aukiota ei vielä ollut.\n\nKaupungin suunnitelman laati ensin Armando Brasini 1925, ja sitä jatkoi Florestano Di Fausto uusrenessanssityylillä. Gherardo Bosio päivitti pääsuunnitelman 1939. Kuningaskunnan aikana aukiolla oli liikenneympyrä ja suihkulähde.\n\nAukio uudistettiin jalankulkualueeksi 51N4E-toimiston ja Anri Salan suunnitelman mukaan, ja se valmistui vuonna 2017. Se sai Euroopan julkisen kaupunkitilan palkinnon 2018. Aukion ympärillä ovat oopperatalo, kansalliskirjasto, kansallinen historiallinen museo, Et'hem Beyn moskeija, kellotorni ja kaupungintalo.",
    "kuvat": [
     {
      "tiedosto": "Tirana - Skanderbeg Square (Sheshi Skënderbej) - by Pudelek.jpg",
@@ -405,7 +405,7 @@
   },
   "Et'hem Beyn moskeija": {
    "aika": "1790-luvulta 1819–1821",
-   "teksti": "Virallisesti Haji Et'hem Beyn moskeija on sunnalaismoskeija, jonka rakentaminen alkoi 1791 tai 1794 Molla Beyn johdolla. Se valmistui 1819 tai 1821 hänen poikansa Haxhi Ethem Beyn aikana, joten isoisän matkavuonna 1873 moskeija oli seissyt jo yli viisikymmentä vuotta. Rakennuksessa on kupolilla katettu neliöpohjainen rukoushuone, pohjoispuolinen portiikki ja minareetti.\n\nJulkisivun ja sisätilan seinämaalauksissa on puita, vesiputouksia ja siltoja, ja useimmat kohtaukset ovat mielikuvitusmaisemia. Moskeija ja viereinen kellotorni muodostavat rakennuskokonaisuuden. Sen edessä oli vanha basaari ja idässä Sulejman Pashan moskeija vuodelta 1614, joka tuhoutui toisessa maailmansodassa.\n\nKommunistiajan uskonnonvastaisen politiikan aikana moskeija suljettiin, julistettiin kulttuurimonumentiksi ja kunnostettiin 1960-luvun lopulla ja 1970-luvun alussa. Tammikuussa 1991 tuhannet ihmiset astuivat sisään lippujen kanssa, ja moskeija avattiin uskonnolliseen käyttöön samana vuonna.",
+   "teksti": "Virallisesti Haji Et'hem Beyn moskeija on sunnalaismoskeija, jonka rakentaminen alkoi 1791 tai 1794 Molla Beyn johdolla. Se valmistui 1819 tai 1821 hänen poikansa Haxhi Ethem Beyn aikana, joten isoisän matkavuonna 1873 moskeija oli seissyt jo yli viisikymmentä vuotta. Rakennuksessa on kupolilla katettu neliöpohjainen rukoushuone, pohjoispuolinen portiikki ja minareetti.\n\nJulkisivun ja sisätilan seinämaalauksissa on puita, vesiputouksia ja siltoja, ja useimmat kohtaukset ovat mielikuvitusmaisemia. Moskeija ja viereinen kellotorni muodostavat rakennuskokonaisuuden. Sen edessä oli vanha basaari ja idässä Sulejman Pashan moskeija vuodelta 1614, joka tuhoutui toisessa maailmansodassa.\n\nKommunistiajan uskonnonvastaisen politiikan aikana moskeija suljettiin, julistettiin kulttuurimonumentiksi ja kunnostettiin kommunistiajan kuluessa. 1990-luvun alussa tuhannet ihmiset astuivat sisään lippujen kanssa, ja moskeija avattiin uskonnolliseen käyttöön.",
    "kuvat": [
     {
      "tiedosto": "Ethem Bey mosque, Tirana (by Pudelek).jpg",
@@ -418,7 +418,7 @@
   },
   "Tiranan kellotorni": {
    "aika": "1822 tai 1830",
-   "teksti": "Kellotorni on ottomaanien aikainen kulttuuriperintökohde, joka tunnistettiin ensimmäisen kerran lokakuussa 1948. Et'hem Bey rakennutti tornin minareetin jälkeen, ja valmistumista juhlisti runoilija Shaban Hulusi Bey Toptani kronogrammilla. Valmistumisvuosi on lähteen mukaan 1822 tai 1830, joten torni seisoi jo isoisän matkavuonna 1873.\n\nTorni on noin 33 metriä korkea ja neliöpohjainen, ja sen kivet tuotiin Priskën kukkuloilta. Se sai nykyisen ulkoasunsa vuoden 1928 remontissa, mutta ensimmäinen kerros on alkuperäinen. Pohjoisseinän kiviriviin on veistetty reliefit: lohikäärme ja kasvikuvio. Kellon kunnossapidosta huolehti vuoteen 1973 asti Tufina-suku.\n\nTornin varhaisin kuvadokumentti on Edward Learin kaksi akvarellia syyskuulta 1848. Laaja kunnostus valmistui helmikuussa 2010. Ramadanin ja bajramin aikaan tornin ja moskeijan minareetin väliin ripustetaan toisinaan mahya-valoja.",
+   "teksti": "Kellotorni on ottomaanien aikainen kulttuuriperintökohde, joka tunnistettiin ensimmäisen kerran 1940-luvulla. Et'hem Bey rakennutti tornin minareetin jälkeen, ja valmistumista juhlisti runoilija Shaban Hulusi Bey Toptani kronogrammilla. Valmistumisvuosi on lähteen mukaan 1822 tai 1830, joten torni seisoi jo isoisän matkavuonna 1873.\n\nTorni on yli 30 metriä korkea ja neliöpohjainen, ja sen kivet tuotiin Priskën kukkuloilta. Se sai nykyisen ulkoasunsa vuoden 1928 remontissa, mutta ensimmäinen kerros on alkuperäinen. Pohjoisseinän kiviriviin on veistetty reliefit: lohikäärme ja kasvikuvio. Kellon kunnossapidosta huolehti vuoteen 1973 asti Tufina-suku.\n\nTornin varhaisin kuvadokumentti on Edward Learin kaksi akvarellia syyskuulta 1848. Laaja kunnostus valmistui vuonna 2010. Ramadanin ja bajramin aikaan tornin ja moskeijan minareetin väliin ripustetaan toisinaan mahya-valoja.",
    "kuvat": [
     {
      "tiedosto": "Tirana-Clock Tower.JPG",
@@ -431,7 +431,7 @@
   },
   "Tiranan linnoitus": {
    "aika": "ennen vuotta 1300",
-   "teksti": "Tiranan linnoitus eli albaniaksi Kalaja e Tiranës on bysanttilaiskauden jäänne, jonka historia ulottuu lähteen mukaan ennen vuotta 1300. Mahdollinen varhaisempi nimi Tirkan liittyy linnoitukseen. Linnoitus sijaitsi kohdassa, jossa risteävät itä–länsi- ja pohjois–etelä-suuntaiset tiet, ja se muodosti Tiranan sydämen.\n\nLinnoituksessa tunnetaan kolme tornia. Maanpäällä on jäljellä noin kuusi metriä korkea, viiniköynnöksen peittämä ottomaanien aikainen muuri, ja muurin perustukset on liitetty Murat Toptanin jalankulkukatuun. Isoisän matkavuonna 1873 muuri oli jo vanhaa kaupunkia.\n\nLinnoitus julistettiin ensimmäisen luokan kulttuurimonumentiksi kesäkuussa 1973. Alueelle avattiin perinteinen basaari joulukuussa 2018: siellä on käsityöliikkeitä ja perinneravintoloita. Alueella on myös hotelleja ja kulttuurilaitoksia.",
+   "teksti": "Tiranan linnoitus eli albaniaksi Kalaja e Tiranës on bysanttilaiskauden jäänne, jonka historia ulottuu lähteen mukaan ennen vuotta 1300. Mahdollinen varhaisempi nimi Tirkan liittyy linnoitukseen. Linnoitus sijaitsi kohdassa, jossa risteävät itä–länsi- ja pohjois–etelä-suuntaiset tiet, ja se muodosti Tiranan sydämen.\n\nLinnoituksessa tunnetaan useita torneja. Maanpäällä on jäljellä noin kuusi metriä korkea, viiniköynnöksen peittämä ottomaanien aikainen muuri, ja muurin perustukset on liitetty Murat Toptanin jalankulkukatuun. Isoisän matkavuonna 1873 muuri oli jo vanhaa kaupunkia.\n\nLinnoitus julistettiin ensimmäisen luokan kulttuurimonumentiksi 1970-luvulla. Alueelle avattiin perinteinen basaari joulukuussa 2018: siellä on käsityöliikkeitä ja perinneravintoloita. Alueella on myös hotelleja ja kulttuurilaitoksia.",
    "kuvat": [
     {
      "tiedosto": "Fortress Walls, Tirana.JPG",
@@ -444,7 +444,7 @@
   },
   "Tabakkien silta": {
    "aika": "1700-luku",
-   "teksti": "Tabakkien silta eli albaniaksi Ura e Tabakëve on 1700-luvun ottomaanien aikainen kivinen jalankulkusilta. Se sijaitsee Tabakkien moskeijan lähellä. Nimi tulee nahkureista: heitä kutsuttiin nimellä tabakë, ja tunnettuja nahanparkitsijasukuja olivat muun muassa Xheleti ja Kuka.\n\nSilta kuului tiehen, joka yhdisti Tiranan Debariin Priskë e Madhen, Qafe Priskën, Domjen, Shëngjergjin, Bizën, Martaneshin ja Zerqanin kautta. Tietä käyttivät pääasiassa maanviljelijät tuodessaan tuotteita ja karjaa kaupunkiin. Silta ylitti Lanë-puron paikassa, jonka lähellä oli lihakauppiaiden ja nahkureiden alue, ja se oli isoisän matkavuonna 1873 jo vanha.\n\nLanë ohjattiin pois vanhalta uomaltaan 1930-luvulla, ja silta jäi rappiolle. Se puhdistettiin ja kunnostettiin 1990-luvulla, ja kunnostuksessa paljastuivat sillan perustukset. Kaupunki pitää siltaa yhtenä tärkeimmistä kulttuuriperintökohteistaan.",
+   "teksti": "Tabakkien silta eli albaniaksi Ura e Tabakëve on 1700-luvun ottomaanien aikainen kivinen jalankulkusilta. Se sijaitsee Tabakkien moskeijan lähellä. Nimi tulee nahkureista: heitä kutsuttiin nimellä tabakë, ja tunnettuja nahanparkitsijasukuja olivat muun muassa Xheleti ja Kuka.\n\nSilta kuului tiehen, joka yhdisti Tiranan Debariin Priskë e Madhen, Qafe Priskën, Domjen, Shëngjergjin, Bizën, Martaneshin ja Zerqanin kautta. Tietä käyttivät pääasiassa maanviljelijät tuodessaan tuotteita ja karjaa kaupunkiin. Silta ylitti Lanë-puron paikassa, jonka lähellä oli lihakauppiaiden ja nahkureiden alue, ja se oli isoisän matkavuonna 1873 jo vanha.\n\nLanë ohjattiin pois vanhalta uomaltaan 1930-luvulla, ja silta jäi rappiolle. Se puhdistettiin ja kunnostettiin myöhemmin, ja kunnostuksessa paljastuivat sillan perustukset. Kaupunki pitää siltaa yhtenä tärkeimmistä kulttuuriperintökohteistaan.",
    "kuvat": [
     {
      "tiedosto": "Tanners' Bridge, Tirana, Albania 02.jpg",
@@ -457,12 +457,12 @@
   },
   "Kokonozin moskeija": {
    "aika": "1750",
-   "teksti": "Virallisesti Mahmut Agë Kokonozin moskeija tunnetaan myös nimellä Uuden basaarin moskeija. Nimi tulee ottomaanien aikaisesta aga-arvonimestä. Moskeija rakennettiin 1750 ottomaanien aikana, joten isoisän matkavuonna 1873 se oli seissyt jo yli sata vuotta.\n\nKommunistiajan uskonnonvastainen politiikka kosketti myös tätä moskeijaa: vuonna 1966 se suljettiin ja muutettiin ruokavarastoksi, myöhemmin tupakkakaupaksi. Lähteen mukaan se on silti yksi harvoista moskeijoista, jotka selvisivät kommunistiajasta ehjinä. Moskeija avattiin uudelleen helmikuussa 1991, ja nimensä mukaisesti se kuuluu yhä Uuden basaarin ympäristöön.",
+   "teksti": "Virallisesti Mahmut Agë Kokonozin moskeija tunnetaan myös nimellä Uuden basaarin moskeija. Nimi tulee ottomaanien aikaisesta aga-arvonimestä. Moskeija rakennettiin 1750 ottomaanien aikana, joten isoisän matkavuonna 1873 se oli seissyt jo yli sata vuotta.\n\nKommunistiajan uskonnonvastainen politiikka kosketti myös tätä moskeijaa: 1960-luvulla se suljettiin ja muutettiin ruokavarastoksi, myöhemmin tupakkakaupaksi. Lähteen mukaan se on silti yksi harvoista moskeijoista, jotka selvisivät kommunistiajasta. Moskeija avattiin uudelleen 1990-luvun alussa, ja nimensä mukaisesti se kuuluu yhä Uuden basaarin ympäristöön.",
    "kuvat": [
     {
      "tiedosto": "Pazari i Ri, Tirana Albania 2017.jpg",
-     "lyhyt": "Kokonozin moskeija tunnetaan myös Uuden basaarin moskeijana.",
-     "selite": "Moskeija rakennettiin 1750, ja se on yksi harvoista kommunistiajasta ehjinä selvinneistä.",
+     "lyhyt": "Kokonozin moskeija kohoaa Uuden basaarin torin laidalla Tiranan keskustassa.",
+     "selite": "Moskeijan kerrotaan rakennetun 1750, ja se on yksi harvoista Tiranan moskeijoista, jotka selvisivät kommunistiajasta.",
      "lahde": "Kevin Jasini, Wikimedia Commons (CC BY-SA 2.0)"
     }
    ],
@@ -470,12 +470,12 @@
   },
   "Tiranan pyramidi": {
    "aika": "1988, uudistettu 2023",
-   "teksti": "Pyramidi avattiin lokakuussa 1988 museona, ja sen suunnittelivat Pranvera Hoxha, Klement Kolaneci, Pirro Vaso ja Vladimir Bregu. Lähteen mukaan rakennusta sanottiin Albanian kaikkien aikojen kalleimmaksi yksittäiseksi rakennukseksi. Kompleksin pinta-ala on 1,7 hehtaaria. Isoisän matkavuonna 1873 sitä ei ollut vielä olemassa.\n\nVuoden 1991 jälkeen rakennus toimi konferenssi- ja näyttelykeskuksena, ja osaa on käytetty vuodesta 2001 television ja radion lähetyskeskuksena. Purkusuunnitelmia tehtiin useita: historioitsija Ardian Klosi keräsi vetoomukseen noin 6 000 allekirjoitusta. Vuonna 2017 ilmoitettiin, ettei rakennusta puretakaan vaan kunnostetaan.\n\nArkkitehtitoimisto MVRDV muutti rakennuksen nuorten teknologiakeskus TUMO Tiranaksi. Alkuperäinen betonirakenne säilytettiin, ja siihen lisättiin portaat, kattoikkunat ja värikkäitä uusia elementtejä. Huipulle voi kävellä portaita pitkin.",
+   "teksti": "Pyramidi avattiin vuonna 1988 museona, ja sen suunnittelivat muun muassa Pranvera Hoxha ja Klement Kolaneci. Kompleksin pinta-ala on runsaat puolitoista hehtaaria. Isoisän matkavuonna 1873 sitä ei ollut vielä olemassa.\n\nVuoden 1991 jälkeen rakennus toimi konferenssi- ja näyttelykeskuksena, ja osaa on käytetty 2000-luvun alusta television ja radion lähetyskeskuksena. Purkusuunnitelmia tehtiin useita: historioitsija Ardian Klosi keräsi vetoomukseen tuhansia allekirjoituksia. 2010-luvun lopulla ilmoitettiin, ettei rakennusta puretakaan vaan kunnostetaan.\n\nArkkitehtitoimisto MVRDV muutti rakennuksen nuorten teknologiakeskus TUMO Tiranaksi. Alkuperäinen betonirakenne säilytettiin, ja siihen lisättiin portaat, kattoikkunat ja värikkäitä uusia elementtejä. Huipulle voi kävellä portaita pitkin.",
    "kuvat": [
     {
      "tiedosto": "Pyramid of Tirana 1.jpg",
      "lyhyt": "Pyramidin portaat avattiin yleisölle toukokuussa 2023.",
-     "selite": "Kompleksin pinta-ala on 1,7 hehtaaria.",
+     "selite": "Kompleksin pinta-ala on runsaat puolitoista hehtaaria.",
      "lahde": "BBB2021, Wikimedia Commons (CC BY-SA 4.0)"
     }
    ],
@@ -483,11 +483,11 @@
   },
   "Rinian puisto": {
    "aika": "1950",
-   "teksti": "Rinian puisto eli Parku Rinia, nuorisopuisto, on Tiranan keskeinen yleinen puisto. Se rakennettiin 1950 kommunistiajalla, pinta-ala on 2,98 hehtaaria ja se sijaitsee noin 500 metrin päässä keskusaukiolta. Isoisän matkavuonna 1873 puistoa ei ollut.\n\nPuisto alkoi saada ironisesti nimen Taiwan, ja sen länsireunan terassoitu valkoinen Taivani-keskus on nimetty sen mukaan. Keskuksessa on kahviloita, ravintoloita, suihkulähteitä ja keilarata kellarissa. Vuoden 1991 jälkeen puiston ympärille nousi luvattomia rakennuksia, ja vuoden 2000 siivouksessa niitä purettiin noin 130.\n\nJoka vuosi 14. maaliskuuta vietetään Kesäpäivää eli Dita e Verësiä, joka merkitsee talven päättymistä ja luonnon heräämistä. Pääjuhla on Elbasanissa, mutta Tiranassa järjestetään tapahtumia ja sirkusesityksiä Rinian puistossa.",
+   "teksti": "Rinian puisto eli Parku Rinia, nuorisopuisto, on Tiranan keskeinen yleinen puisto. Se rakennettiin noin 1950 kommunistiajalla, pinta-ala on noin kolme hehtaaria ja se sijaitsee noin 500 metrin päässä keskusaukiolta. Isoisän matkavuonna 1873 puistoa ei ollut.\n\nPuisto alkoi saada ironisesti nimen Taiwan, ja sen länsireunan terassoitu valkoinen Taivani-keskus on nimetty sen mukaan. Keskuksessa on kahviloita, ravintoloita, suihkulähteitä ja keilarata kellarissa. Vuoden 1991 jälkeen puiston ympärille nousi luvattomia rakennuksia, ja vuoden 2000 siivouksessa niitä purettiin runsaasti.\n\nJoka vuosi 14. maaliskuuta vietetään Kesäpäivää eli Dita e Verësiä, joka merkitsee talven päättymistä ja luonnon heräämistä. Pääjuhla on Elbasanissa, mutta Tiranassa järjestetään tapahtumia ja sirkusesityksiä Rinian puistossa.",
    "kuvat": [
     {
      "tiedosto": "Rinia Park Tirana (1).jpg",
-     "lyhyt": "Rinian puisto rakennettiin 1950 Tiranan keskeiseksi yleiseksi puistoksi.",
+     "lyhyt": "Rinian puisto rakennettiin noin 1950 Tiranan keskeiseksi yleiseksi puistoksi.",
      "selite": "Puiston länsireunalla on Taivani-keskus, jonka nimi viittaa puiston ironiseen lempinimeen Taiwan.",
      "lahde": "Radosław Botev, Wikimedia Commons (CC BY 3.0)"
     }
@@ -498,10 +498,62 @@
  "saatiedot": {
   "lat": 41.33,
   "lon": 19.82,
-  "keskilampo": [6.7, 7.8, 10, 13.4, 18, 21.6, 24, 23.8, 20.7, 16, 11.7, 8.1],
-  "ylin": [12, 13, 16, 19, 24, 28, 31, 31, 27, 22, 17, 13],
-  "alin": [2, 3, 5, 8, 12, 16, 17, 17, 14, 10, 6, 3],
-  "sade": [143, 132, 115, 104, 103, 68, 42, 46, 78, 114, 172, 148],
+  "keskilampo": [
+   6.7,
+   7.8,
+   10,
+   13.4,
+   18,
+   21.6,
+   24,
+   23.8,
+   20.7,
+   16,
+   11.7,
+   8.1
+  ],
+  "ylin": [
+   12,
+   13,
+   16,
+   19,
+   24,
+   28,
+   31,
+   31,
+   27,
+   22,
+   17,
+   13
+  ],
+  "alin": [
+   2,
+   3,
+   5,
+   8,
+   12,
+   16,
+   17,
+   17,
+   14,
+   10,
+   6,
+   3
+  ],
+  "sade": [
+   143,
+   132,
+   115,
+   104,
+   103,
+   68,
+   42,
+   46,
+   78,
+   114,
+   172,
+   148
+  ],
   "lahde": {
    "nimi": "en-Wikipedia, ilmastotaulukko",
    "kausi": "1961–1990"
