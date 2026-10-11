@@ -4454,6 +4454,7 @@ export const KAUPUNKIKARTAT = {
   },
   barcelona: {
     polku: 'assets/kartat/barcelona-keskusta.png',
+    varikartta: 'assets/kartat/barcelona-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 41.4105, etela: 41.37, lansi: 2.147, ita: 2.1984 }, // pohjoisreuna +0,002 (Roviran aukio irti reunasta, Karttaseppä 11.10.2026)
     /*
@@ -4511,6 +4512,7 @@ export const KAUPUNKIKARTAT = {
   },
   granada: {
     polku: 'assets/kartat/granada-keskusta.png',
+    varikartta: 'assets/kartat/granada-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 37.1875, etela: 37.1675, lansi: -3.6045, ita: -3.5795 },
     /*
@@ -4641,6 +4643,7 @@ export const KAUPUNKIKARTAT = {
   },
   marseille: {
     polku: 'assets/kartat/marseille-keskusta.png',
+    varikartta: 'assets/kartat/marseille-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 43.3065, etela: 43.2765, lansi: 5.345, ita: 5.393 },
     /*
@@ -6445,6 +6448,7 @@ export const KAUPUNKIKARTAT = {
      * yläkulmaan ison tyhjän laguunin.
      */
     polku: 'assets/kartat/venetsia-keskusta.png',
+    varikartta: 'assets/kartat/venetsia-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 45.445, etela: 45.4265, lansi: 12.3155, ita: 12.352 },
     /*
@@ -6663,6 +6667,7 @@ export const KAUPUNKIKARTAT = {
   },
   krakova: {
     polku: 'assets/kartat/krakova-keskusta.png',
+    varikartta: 'assets/kartat/krakova-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 50.069, etela: 50.047, lansi: 19.9225, ita: 19.9585 },
     // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Amsterdamissa:
@@ -7277,6 +7282,7 @@ export const KAUPUNKIKARTAT = {
   },
   pietari: {
     polku: 'assets/kartat/pietari-keskusta.png',
+    varikartta: 'assets/kartat/pietari-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 59.9545, etela: 59.9195, lansi: 30.284, ita: 30.347 }, // eteläreuna −0,002 (Mariinski irti mittakaavajanasta, Karttaseppä 11.10.2026)
     /*
@@ -7468,6 +7474,7 @@ export const KAUPUNKIKARTAT = {
   },
   odessa: {
     polku: 'assets/kartat/odessa-keskusta.png',
+    varikartta: 'assets/kartat/odessa-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 46.501, etela: 46.466, lansi: 30.724, ita: 30.776 },
     /*
@@ -7658,6 +7665,7 @@ export const KAUPUNKIKARTAT = {
    */
   sevilla: {
     polku: 'assets/kartat/sevilla-keskusta.png',
+    varikartta: 'assets/kartat/sevilla-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: {
       pohjoinen: 37.3945, etela: 37.3745, lansi: -6.0137, ita: -5.9784,
@@ -8754,6 +8762,7 @@ export const KAUPUNKIKARTAT = {
   },
   dubrovnik: {
     polku: 'assets/kartat/dubrovnik-keskusta.png',
+    varikartta: 'assets/kartat/dubrovnik-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 42.6442, etela: 42.6388, lansi: 18.1035, ita: 18.1148 },
     /*
@@ -8904,6 +8913,7 @@ export const KAUPUNKIKARTAT = {
   },
   tromssa: {
     polku: 'assets/kartat/tromssa-keskusta.png',
+    varikartta: 'assets/kartat/tromssa-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 69.6575, etela: 69.6365, lansi: 18.937, ita: 19.013 },
     /*
@@ -14708,6 +14718,7 @@ export const KAUPUNKIKARTAT = {
    */
   bergen: {
     polku: 'assets/kartat/bergen-keskusta.png',
+    varikartta: 'assets/kartat/bergen-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 60.4010, etela: 60.3850, lansi: 5.2990, ita: 5.3375 },
     esittely: 'Kartta näyttää Vågenin lahden ja sen ympärille '
@@ -17190,11 +17201,13 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Vaduzin ydin on pieni: linna, katedraali ja kaksi museota ovat lyhyen kävelymatkan päässä toisistaan.',
+    // PT 12.10.2026: rajaus länteen Reinille ja Sevelenin sillalle, linna rinteessä
+    // (oli 47.1421 / 47.1335 / 9.5185 / 9.5284).
     rajat: {
-      pohjoinen: 47.1421,
-      etela: 47.1335,
-      lansi: 9.5185,
-      ita: 9.5284,
+      pohjoinen: 47.145,
+      etela: 47.131,
+      lansi: 9.4985,
+      ita: 9.53,
     },
     kohteet: [
       {
