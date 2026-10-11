@@ -48,3 +48,14 @@ vie_v47n.zsh). Lokit `vie_v47{l,m,n}.log`. v47n:n MUUTOKSET.md-rivi kirjoittuu v
    leikkausrengas koko sumennetulle tontille (puutarha rantaan) + geneerinen maa. Lähde `_valmiit/pariisi-korttelit-v2/` (lahde/pinnat.py,
    korttelit_malli.py, valinta.py).
 3. ND julkisivun lämpö (PT myöhemmin).
+
+## PARIISI v3: ALUSTAVAT HAVAINNOT (13.xx, ei aloitettu; nollaus 76 % > 50 %)
+- Banque: leikkauksessa (80 pistettä) ei teräviä kärkiä ja maa (korttelit_malli.py delaunay leikkausmonikulmiosta) kattaa sen → valkoinen kiila
+  pohjoiskärjessä on todennäköisesti Googlen sumennus, joka ulottuu renkaan yli kadulle (LS2:n k6 ennen: sumennuksen kärki pidempi).
+  Ehdotus: valinta.py:n puskuri (rivi 35, 2,5 m) aluekohtaiseksi, Banque ~6 m → korttelit_malli.py uudelleen. Julkisivu: vertaa Googlen
+  naapureihin (vaaleampi, vähemmän vihreä; julkisivu-c / kivi_pariisi).
+- Branly: piha/tontti valkoinen = IGN:n maskaama orto maatekstuurissa → maskatulle maalle geneerinen sora/nurmi; rengas koko sumennetulle
+  tontille (puutarha rantaan): tontin raja OSM:stä (Overpass, robots/API-käyttö ok) tai LS2:n kuvista mitattuna.
+- Palais Bourbon pois paketista (PT). LS2 tutkii kaukolaattojen tarkentumisen (kohta 4).
+- Työkalut kopioitu pysyvästi: `_valmiit/olavinlinna-kavely-v1/lahde/tyokalut-lr/{navtesti,jumit,raot,ylakuva,glbtri,atlas_musta}.py`.
+- Viikkokiintiö 97 % (11.10. 13.xx); 99 %:ssa rivi omistajalle (muisti viikkoraja-97-siirtoprompti).
