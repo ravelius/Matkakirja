@@ -166,13 +166,58 @@ namespace Matkakirja.Linssit.Kierros
             // kierrossa silmä vähintään PalloAukioKattoMinM maasta (OpasOhjaus.Rajoita ja spiraalin alaraja).
             bool aukioKehys = AukioLuokat.Contains((luokka ?? k?.Luokka ?? "").Trim().ToLowerInvariant());
             if (OpasSilmukka.PalloLento && aukioKehys) kattoYla = Math.Max(kattoYla, PalloAukioKattoMinM);
-            return new Pysahdys
+            var pk = new Pysahdys
             {
                 Id = k.Id ?? k.Nimi, Nimi = k.Nimi, Alarivi = k.Alarivi, Teksti = k.Teksti, Lat = k.Lat, Lon = k.Lon, MaaM = maaM, NostoM = nosto,
                 Suuntima = KierrosLento.Kiedo(tulosuunta + SivuKulma), Kallistus = kall, EtaisyysM = et, MinEtM = minEt, KattoYlaM = kattoYla,
                 LoppuEtM = loppuEt > 0 && loppuEt < et ? loppuEt : 0, Aukio = aukioKehys,
             };
+            // KAPEA KUVA (Linssiseppä 11.10. 08.5x): yllä oleva kehys suunnitellaan KuvaSuhteelle 1,8 (iPad ja iPhone vaaka ennallaan);
+            // pallon pystykuvassa leveä kohde mahtuu leveyssuunnassa (LeveysKuvaan).
+            if (!OpasSilmukka.PalloLento) return pk;
+            pk.LeveysKoko = koko;
+            return LeveysKuvaan(pk, KehysSuhde);
         }
+
+        /// <summary>Kehysten kuvasuhde: laitteen kuvasuhde (KuvaSuhdeNyt) 0,01:n tarkkuudella, enintään 4:3 (leveämpi kuva näkee vähintään
+        /// iPadin vaakakuvan, joten kehys on sama kuin ennen; Linssiseppä 11.10.).</summary>
+        public static double KehysSuhde => KuvaSuhdeNyt >= VaakaSuhde - 0.01 ? VaakaSuhde : Math.Max(0.2, Math.Round(KuvaSuhdeNyt, 2));
+        public const double VaakaSuhde = 4.0 / 3;
+
+        /// <summary>
+        /// LEVEÄ KOHDE KAPEASSA KUVASSA (Linssiseppä 11.10. 08.5x: iPhonen pystykuvassa 0,46 Louvre, Concorde ja muut leveät kohteet olivat
+        /// kehyksen alussa ~2 ruudun levyisiä, koska Kehysta laskee leveyden kuvasuhteella 1,8): kuvasuhteella &lt; 4:3 kehys loittonee
+        /// samalla kallistuksella (viisto pallonäkymä pysyy), kunnes katsepisteen etäisyydellä näkyvä puolileveys on vähintään
+        /// min(iPadin vaakakuvan puolileveys samassa kehyksessä, koko / 2 / PalloKapeaReuna) — kohde mahtuu reunan sisään, mutta
+        /// kapea kuva ei näytä enempää kuin iPad. RAJA: loitonnus enintään PalloKapeaKerroinMax × iPadin etäisyys ja silmä enintään
+        /// PalloKapeaSilmaMaxM maasta; sen yli kohteen keskus kehystetään ja reunat rajautuvat (Louvre 700 m, Champs-Élysées 1,9 km,
+        /// Concorden aukio, jonka kehys on jo iPadilla keskustaan rajattu). Spiraalin loppuetäisyys skaalautuu samassa suhteessa
+        /// (lähestyminen sama osuus). Kuvasuhde ≥ 4:3 → p sellaisenaan.
+        /// </summary>
+        public static Pysahdys LeveysKuvaan(Pysahdys p, double suhde)
+        {
+            if (p.LeveysPohja != null) p = p.LeveysPohja;
+            p.LeveysSuhde = suhde;
+            if (suhde >= VaakaSuhde - 1e-6 || p.LeveysKoko <= 0) return p;
+            const double A = Math.PI / 180;
+            double tanP = Math.Tan(KuvaPystyAst * A / 2), et0 = p.EtaisyysM, c = Math.Cos(p.Kallistus * A);
+            double tarve = Math.Min(et0 * tanP * VaakaSuhde, p.LeveysKoko / (2 * PalloKapeaReuna));   // tarvittava puolileveys (m)
+            double et = tarve / (tanP * suhde);
+            if (et <= et0 + 0.5) return p;
+            double raja = et0 * PalloKapeaKerroinMax;
+            if (c > 0.01) raja = Math.Min(raja, Math.Max(et0, (PalloKapeaSilmaMaxM - p.NostoM) / c));
+            et = Math.Min(et, raja);
+            double f = et / et0, loppu = p.LoppuEtM > 0 ? p.LoppuEtM * f : 0;
+            return new Pysahdys
+            {
+                Id = p.Id, Nimi = p.Nimi, Alarivi = p.Alarivi, Teksti = p.Teksti, Lat = p.Lat, Lon = p.Lon, MaaM = p.MaaM, NostoM = p.NostoM,
+                Suuntima = p.Suuntima, Kallistus = p.Kallistus, EtaisyysM = et, MinEtM = p.MinEtM, KattoYlaM = p.KattoYlaM,
+                LoppuEtM = loppu > 0 && loppu < et ? loppu : 0, Aukio = p.Aukio, LeveysKoko = p.LeveysKoko, LeveysSuhde = suhde, LeveysPohja = p,
+            };
+        }
+        /// <summary>Kapean kuvan leveyssovitus: kohde enintään tämä osuus puolileveydestä, loitonnus enintään (× iPadin etäisyys) ja
+        /// silmä enintään (m maasta).</summary>
+        public const double PalloKapeaReuna = 0.9, PalloKapeaKerroinMax = 3.0, PalloKapeaSilmaMaxM = 300;
         /// <summary>Kierron loppu (PT 10.10.): kohde täyttää näin suuren osan pystykentästä (KuvaPystyAst) kierron lopussa.</summary>
         public const double KolmannesOsuus = 1.0 / 3;
         /// <summary>Kierron alku loppuetäisyyden kerrannaisena (alussa kohde ympäristöineen; kehys pidetään, jos se on välissä).</summary>

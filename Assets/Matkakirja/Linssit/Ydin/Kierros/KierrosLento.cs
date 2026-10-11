@@ -41,6 +41,10 @@ namespace Matkakirja.Linssit.Kierros
         public Pysahdys TorniPohja;
         public double OmaLat => double.IsNaN(KohdeLat) ? Lat : KohdeLat;
         public double OmaLon => double.IsNaN(KohdeLon) ? Lon : KohdeLon;
+        /// <summary>Leveyssovitus kapeaan kuvaan (OpasKuvaus.LeveysKuvaan, Linssiseppä 11.10. 08.5x): LeveysKoko = kohteen koko (m; 0 = kehys
+        /// ei ole pallon Kehysta-kehys), LeveysSuhde = kuvasuhde, jolle kehys laskettiin, LeveysPohja = kehys ennen sovitusta (null = tämä).</summary>
+        public double LeveysKoko, LeveysSuhde;
+        public Pysahdys LeveysPohja;
 
         public static Pysahdys P(string id, string nimi, string alarivi, double lat, double lon, double maa, double nosto,
             double suuntima, double pitch, double etaisyys, string teksti = null) => new Pysahdys
