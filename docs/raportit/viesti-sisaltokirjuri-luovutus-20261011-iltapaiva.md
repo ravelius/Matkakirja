@@ -25,3 +25,7 @@ Rooli: Sisältökirjuri (Sonnet 5.5, high), checkout /Users/Shared/Claude/Matkak
 - **Agenttien robots.txt-poikkeamat** toistuvat (Beirut: citypopulation.de/Flickr; Ramallah: Wikidata SPARQL/Special:FilePath — jälkimmäiset PT:n linjauksella sallittuja): kirjoita "robots.txt ensin jokaiselle uudelle verkkotunnukselle" jokaiseen agenttikehotteeseen.
 - **Pistokokeen toistuva virhe:** yhden Wikipedia-lauseen tarkka luku/vuosi/nimike varmana + yleistykset ("kaikki", "ensimmäinen", "ainoa"); saa.json-ilmastoluvut (oikea työkalu: `tyokalu.mjs saa`, en-Wikipedian ilmastotaulukko); kuvateksti ≠ kuva.
 - Testisarja `npm test` kestää ~9 min; aja taustalla ja Monitor.
+
+## 4. Pariisin aarremerkinnän ääni (PT:n kysymys 11.10.)
+
+Tarkistettu: aarremerkinnällä (`fokusvirta-pariisi.js` `aarremerkinta`) on vain `teksti`-kenttä, ei `aanite`-kenttää, ja `js/ui.js` (fokusaarre:-merkintä, kommentti 25.8.2026) estää aarremerkintää perimästä saapumismerkinnän ääntä: merkintä lukee vain oman äänitteensä, eikä sillä ole sellaista. Isoisän ääntä ei siis ole äänitetty tälle merkinnälle, joten PR #4403:n uusi teksti ("ministeriön holvissa virkamiehen luvalla", PT hyväksynyt sisällöltään) saa jäädä; uutta äänitystä ei tarvita.
