@@ -1,0 +1,8 @@
+== bern: 0 virhettä, 0 varoitusta, 24 kuvaa
+VAROITUS vaduz: kohteita 5 (pohjataso 6; perustele RAPORTTI.md:ssä)
+== vaduz: 0 virhettä, 1 varoitusta, 21 kuvaa
+VAROITUS monaco: kaupunkilehti[0].nostot[2].teksti: pyöreä luku "100 000" — onko lähteessä tarkka?
+VAROITUS monaco: kaupunkilehti[1].nostot[1].teksti: pyöreä luku "100 000" — onko lähteessä tarkka?
+VAROITUS monaco: nahtavyydet.Valtamerimuseo.teksti: pyöreä luku "100 000" — onko lähteessä tarkka?
+== monaco: 0 virhettä, 3 varoitusta, 23 kuvaa
+== andorralavella: 0 virhettä, 0 varoitusta, 24 kuvaa
