@@ -39,6 +39,9 @@ SKRIPTI = re.compile(r'([\w.-]+)\.(?:sh|zsh|py)\b')
 HIIRI = re.compile(r'soundly-erat/aja\.zsh\b|\bmac-cpu\.sh\b|\bcliclick\b|osascript\b.*System Events.*(?:click|keystroke|key code)', re.I)
 HIIRI_AJOT = (('soundly-erat/aja.zsh', 'Pelikoodari', 'Soundly-äänihaku'), ('mac-cpu.sh', 'Natiiviseppä', 'Mac-sovelluksen mittaus'))
 SIMU = re.compile(r'^\s+(.+?) \(([0-9A-F-]{36})\) \(Booted\)')
+# Googlen musiikkityökalu Lyria (omistaja 11.10.2026 klo 15.3x): Pelikoodarin generoi*.mjs-ajot musiikkikansioissa tai Lyria-kutsu.
+LYRIA = re.compile(r'musiikki[\w./-]*/generoi[\w-]*\.mjs|lyria', re.I)
+MJS = re.compile(r'([\w-]+)/(generoi[\w-]*)\.mjs')
 
 
 def prosessit():
@@ -285,11 +288,28 @@ def hiiri(P, oma):
             'tunnettu': False, 'kesto_min': kesto_min(etime)}
 
 
+def musiikki(P, oma):
+    o = osumat(LYRIA, P, oma)
+    if not o:
+        return {'nimi': 'Googlen musiikki', 'tila': 'vapaa'}
+    pid, (_pp, etime, _cmd, _c) = max(o, key=lambda x: kesto_min(x[1][1]))
+    kuvaus = 'musiikin generointi'
+    for _p, (_x, _e, c, _cc) in o:
+        m = MJS.search(c)
+        if m:
+            kansio = re.sub(r'-\d{8}$', '', m.group(1)).replace('-', ' ')
+            kuvaus = f"{kansio}: {m.group(2).replace('-', ' ')}"
+            break
+    # tunnettu False: sivu näyttää roolin tehtävän (tehtavat), tämä varalla.
+    return {'nimi': 'Googlen musiikki', 'tila': 'käytössä', 'rooli': rooli(pid, P), 'kuvaus': kuvaus, 'tunnettu': False,
+            'kesto_min': kesto_min(etime)}
+
+
 def main():
     P = prosessit()
     oma = os.getpid()
     rivit = [hiiri(P, oma), laite('iPad', IPAD, P, oma), laite('Blender', BLENDER, P, oma), unity(P, oma), simulaattorit(P),
-             pilviajot(), codex()]
+             pilviajot(), codex(), musiikki(P, oma)]
     data = {'ts': int(time.time() * 1000), 'rivit': rivit}
     kohde = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'laitteet.json')
     with open(kohde, 'w') as f:
