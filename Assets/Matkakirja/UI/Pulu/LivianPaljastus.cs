@@ -175,6 +175,7 @@ namespace Matkakirja.Natiivi
                 {
                     if (v != versio) return;
                     introOdottaja = null;
+                    introTulee = false;   // PuluValmis ei tee mitään ilman Paattyi-eventtiä → luenta suoraan AloitaLykattyLuenta
                     Debug.Log("MATKAKIRJA livia: intron loppua ei kuulunut 40 s:ssa");
                     Alkuosa(v);
                 }, (long)(IntroOdotusS * 1000f));
