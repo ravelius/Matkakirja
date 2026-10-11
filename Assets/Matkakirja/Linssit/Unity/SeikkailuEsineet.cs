@@ -28,6 +28,9 @@ namespace Matkakirja.Natiivi
         public static event Action<Vector3> Aanteli;
         /// <summary>Testi / kosketusnappi: seuraava ruutu tekee toiminnon.</summary>
         public static bool ToimintoPyydetty;
+        /// <summary>Toiminto tuli toimintonapista (Natiivi-UI:n PyydaToiminto) eikä 3D-napautuksesta. Oma kynttilä syttyy ja sammuu vain napista,
+        /// E-näppäimestä tai X-napista (PT:n Olavinlinna-suunnitelma B2, Laitetestaaja 11.10. a3: napautus mihin tahansa sammutti kynttilän).</summary>
+        public static bool ToimintoNapista;
 
         enum Laji { Heitettava, Nostettava, Irrotettava, Kiintea, Kaadettava, Puettava }
         sealed class Esine { public string Id; public GameObject Go; public Rigidbody Rb; public bool Heitetty, Kuului; public Laji Laji; public bool Irrotettu, Kaatunut; public Vector3 Ulos; public int Napautuksia; public double AaniM; public Vector3 Alku; public Quaternion AlkuKierto; }
@@ -837,7 +840,7 @@ namespace Matkakirja.Natiivi
             {
                 // Ohjattu jakso (pako): toimintonappi vain jakson omalle teolle (Katkaise).
                 Toiminto = SeikkailuPako.OhjattuVerbi;
-                bool tp = ToimintoPyydetty; ToimintoPyydetty = false;
+                bool tp = ToimintoPyydetty; ToimintoPyydetty = false; ToimintoNapista = false;
                 var kbo = Keyboard.current; var gpo = Gamepad.current;
                 if (Toiminto != null && (tp || kbo != null && kbo.eKey.wasPressedThisFrame || gpo != null && gpo.buttonWest.wasPressedThisFrame)) SeikkailuPako.OhjattuToimi?.Invoke();
                 return;
@@ -874,13 +877,16 @@ namespace Matkakirja.Natiivi
             }
             // Ei esinettä lähellä eikä kädessä → toiminto kynttilöille (E3: sammuta, sytytä, puhalla oma); nappi näkyy samoin ehdoin.
             var kynttilat = SeikkailuKynttilat.Aktiivinen;
-            Lahin = lahin?.Id ?? (kadessa == null && kynttilat != null && kynttilat.ToimintoTarjolla(p) ? "kynttila" : null)
+            // Oman kynttilän sytytys/puhallus viimeisenä (OmaVaihto): muuten palava kynttilä vei napin ovelta ja tikkailta (PT B2).
+            bool omaVaihto = kadessa == null && kynttilat != null && kynttilat.OmaVaihto(p);
+            Lahin = lahin?.Id ?? (kadessa == null && kynttilat != null && !omaVaihto && kynttilat.ToimintoTarjolla(p) ? "kynttila" : null)
                 ?? (kadessa == null && OnttoLahella(p) ? "koputa" : null)
                 ?? (kadessa == null && Tikkaat(p) != null ? "tikkaat" : null)
                 ?? (kadessa == null && LahinOvi(p) != null ? "ovi" : null)
                 ?? (kadessa == null && koysiKiinni && SakaraLahella(p) ? "sakara" : null)
                 ?? (kadessa == null && SeikkailuKomero.Aktiivinen?.Verbi(p) != null ? "komero" : null)
-                ?? (kadessa == null && SeikkailuPako.Aktiivinen?.Verbi(p) != null ? "pako" : null);
+                ?? (kadessa == null && SeikkailuPako.Aktiivinen?.Verbi(p) != null ? "pako" : null)
+                ?? (omaVaihto ? "kynttila" : null);
             Toiminto = kadessa != null
                 ? (SeikkailuTyrma.Aktiivinen is SeikkailuTyrma tyv && tyv.OviLahella(p) ? Kieli.T("olavinlinna.verbi.avaa")
                     : kadessa.Id == Koysikieppi && SakaraLahella(p) ? Kieli.T("olavinlinna.verbi.kiinnita")
@@ -889,11 +895,11 @@ namespace Matkakirja.Natiivi
                 : lahin != null ? (lahin.Laji == Laji.Irrotettava ? Kieli.T("olavinlinna.verbi.irrota") : lahin.Laji == Laji.Kaadettava ? Kieli.T("olavinlinna.verbi.kaada") : lahin.Laji == Laji.Puettava ? Kieli.T("olavinlinna.verbi.pue") : lahin.Id == Nyytti ? Kieli.T("olavinlinna.verbi.avaa") : Kieli.T("olavinlinna.verbi.poimi"))
                 : Lahin == "kynttila" ? kynttilat.ToimintoVerbi(p)
                 : Lahin == "koputa" ? Kieli.T("olavinlinna.verbi.koputa") : Lahin == "tikkaat" ? Kieli.T("olavinlinna.verbi.kiipea") : Lahin == "ovi" ? Kieli.T("olavinlinna.verbi.avaa") : Lahin == "sakara" ? Kieli.T("olavinlinna.verbi.kiipea") : Lahin == "komero" ? SeikkailuKomero.Aktiivinen.Verbi(p) : Lahin == "pako" ? SeikkailuPako.Aktiivinen.Verbi(p) : null;
-            bool toiminto = ToimintoPyydetty;
-            ToimintoPyydetty = false;
+            bool toiminto = ToimintoPyydetty, napista = ToimintoNapista;
+            ToimintoPyydetty = false; ToimintoNapista = false;
             var kb = Keyboard.current; var gp = Gamepad.current;
-            if (kb != null && kb.eKey.wasPressedThisFrame) toiminto = true;
-            if (gp != null && gp.buttonWest.wasPressedThisFrame && !SeikkailuKasittely.KeskellaKohde()) toiminto = true;   // X käsiteltävän päällä: veto tai napautus
+            if (kb != null && kb.eKey.wasPressedThisFrame) toiminto = napista = true;
+            if (gp != null && gp.buttonWest.wasPressedThisFrame && !SeikkailuKasittely.KeskellaKohde()) toiminto = napista = true;   // X käsiteltävän päällä: veto tai napautus
             if (!toiminto) return;
             if (kadessa != null && SeikkailuTyrma.Aktiivinen is SeikkailuTyrma ty && ty.OviLahella(p)) ty.AvaaOvi(p);
             else if (kadessa != null && kadessa.Id == Koysikieppi && SakaraLahella(p)) KiinnitaKoysi(p);
@@ -922,13 +928,14 @@ namespace Matkakirja.Natiivi
                 else if (lahin.Laji == Laji.Puettava) StartCoroutine(Pue(p, lahin));
                 else Poimi(p, lahin);
             }
-            else if (kynttilat != null && kynttilat.Toimi(p)) { }
+            else if (kynttilat != null && !kynttilat.OmaVaihto(p) && kynttilat.Toimi(p, false)) { }
             else if (OnttoLahella(p)) Koputa(p);
             else if (Tikkaat(p) is (Vector3 tAla, Vector3 tYla, Vector3 tSuunta, bool tYlh)) p.AloitaKiipeily(tAla, tYla, tSuunta, tYlh);
             else if (LahinOvi(p) is Ovi ov) AvaaOvi(p, ov);
             else if (koysiKiinni && SakaraLahella(p)) AloitaSeinakiipeily(p);   // köysi jo sakarassa: uusi yritys
             else if (SeikkailuKomero.Aktiivinen is SeikkailuKomero ko && ko.Toimi(p)) { }
             else if (SeikkailuPako.Aktiivinen is SeikkailuPako pk && pk.Toimi(p)) { }
+            else if (napista && kynttilat != null) kynttilat.Toimi(p, true);   // oma kynttilä vain napista, E:stä tai X:stä (PT B2)
         }
 
         void Poimi(SeikkailuPelaaja p, Esine e)

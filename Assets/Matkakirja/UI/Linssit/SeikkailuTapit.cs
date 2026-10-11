@@ -107,7 +107,7 @@ namespace Matkakirja.Natiivi
         readonly Button toimintoNappi;
         string toimintoTila;   // null = piilossa, "poimi" tai "heita"
         static PropertyInfo esineetAktiivinen, esineLahin, esineKadessa, esineVerbi;
-        static FieldInfo esineToiminto;
+        static FieldInfo esineToiminto, esineNapista;
         static bool esineetHaettu;
 
         public SeikkailuTapit(UiKerros kerros, int kerrosNro)
@@ -167,6 +167,7 @@ namespace Matkakirja.Natiivi
                 esineKadessa = t?.GetProperty("Kadessa", BindingFlags.Public | BindingFlags.Instance);
                 esineVerbi = t?.GetProperty("Toiminto", BindingFlags.Public | BindingFlags.Instance);
                 esineToiminto = t?.GetField("ToimintoPyydetty", BindingFlags.Public | BindingFlags.Static);
+                esineNapista = t?.GetField("ToimintoNapista", BindingFlags.Public | BindingFlags.Static);
             }
             if (!(esineetAktiivinen?.GetValue(null) is Object e) || e == null) return null;
             // VALMIS VERBI (Siirtoseppä, historia-fp d1734576): SeikkailuEsineet.Toiminto ("Poimi", "Heitä", "Aseta", "Avaa" …),
@@ -201,6 +202,7 @@ namespace Matkakirja.Natiivi
         void PyydaToiminto()
         {
             esineToiminto?.SetValue(null, true);
+            esineNapista?.SetValue(null, true);   // napista, ei 3D-napautuksesta: vain tämä sytyttää ja sammuttaa oman kynttilän (PT B2)
             Debug.Log($"MATKAKIRJA seikkailutapit: toiminto ({toimintoTila ?? "-"}){(esineToiminto == null ? ", SeikkailuEsineet puuttuu" : "")}");
         }
 
@@ -217,7 +219,36 @@ namespace Matkakirja.Natiivi
             toimintoNappi.tooltip = Toimintonimet.TryGetValue(tila, out var nimi) ? Kieli.T(nimi) : tila;
         }
 
+        /// <summary>
+        /// KYNTTILÄVIHJE (PT:n Olavinlinna-suunnitelma B2, vaihtoehto B 11.10.): toimintonappi korostetaan KorostusS sekunniksi samalla tavalla kuin
+        /// painettuna (OHJAUSNAPPI-pohjan :active: korostusreuna ja toimintotausta, ryhmän harmaa teema), ilman tekstiä; pelin vihjekieli on
+        /// valo ja ääni. SeikkailuVihjeet kutsuu ensimmäisellä pimeällä hetkellä ja ☰ › Vihjeestä pimeässä ilman kynttilää.
+        /// </summary>
+        public static void KorostaToiminto()
+        {
+            var t = viimeisin; if (t == null) return;
+            int kerta = ++t.korostusKerta;
+            t.toimintoNappi.style.borderTopColor = t.toimintoNappi.style.borderRightColor = t.toimintoNappi.style.borderBottomColor
+                = t.toimintoNappi.style.borderLeftColor = (Color)Tyylikirja.Harmaa.Korostus;
+            t.toimintoNappi.style.backgroundColor = (Color)Tyylikirja.Harmaa.Toiminto;
+            t.toimintoNappi.schedule.Execute(() =>
+            {
+                if (kerta != t.korostusKerta) return;
+                t.toimintoNappi.style.borderTopColor = t.toimintoNappi.style.borderRightColor = t.toimintoNappi.style.borderBottomColor
+                    = t.toimintoNappi.style.borderLeftColor = StyleKeyword.Null;
+                t.toimintoNappi.style.backgroundColor = StyleKeyword.Null;
+            }).StartingIn((long)(KorostusS * 1000));
+            Debug.Log("MATKAKIRJA seikkailutapit: kynttilänappi korostettu");
+        }
+        public const float KorostusS = 3f;
+        int korostusKerta;
+        /// <summary>Testi: toimintonappi korostettuna (reunan väri = harmaan teeman korostus).</summary>
+        public static bool TestiKorostettu => viimeisin != null && viimeisin.toimintoNappi.style.backgroundColor.keyword != StyleKeyword.Null
+            && viimeisin.toimintoNappi.style.backgroundColor.value == (Color)Tyylikirja.Harmaa.Toiminto;
+
         const float TappiAla = 40f;
+        /// <summary>Kulmatappien yläreuna ruudun alareunasta (pt): muu teksti alakulmissa sen yläpuolelle (DioraamaTaulun historian otsikko).</summary>
+        public const float TappienYlareuna = TappiAla + OpasTapit.Halkaisija;
 
         /// <summary>Kosketukset joka ruutu (vain seikkailussa): oikean puoliskon veto katseeksi, lyhyt napautus maailmaan.</summary>
         void LueKosketukset()

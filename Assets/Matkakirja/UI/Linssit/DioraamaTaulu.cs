@@ -319,6 +319,7 @@ namespace Matkakirja.Natiivi
             avainsana = Rakenne.El("mk-astroavaus__otsikko--haipyy", kerros.Juuri(LinssiUi.Ylakerros), PickingMode.Ignore);
             avainsana.style.position = Position.Absolute;
             avainsana.style.left = 28; avainsana.style.bottom = 24;
+            kerros.Turva(LinssiUi.Ylakerros);   // turva-alueen reunat mitataan tälle kerrokselle (AvainsanaVasen)
             avainsana.style.alignItems = Align.FlexStart;
             avainsana.style.opacity = 0f;
             avainsanaVuosi = Rakenne.Teksti("", "mk-aikajana-havainne__otsikko", avainsana);
@@ -527,6 +528,12 @@ namespace Matkakirja.Natiivi
         readonly Label avainsanaVuosi, avainsanaSanat;
         Avainsana avainsanaNyt;
         internal const float AvainsanaS = 4f; // myös DioraamaTimelinen avainsanaraidan klippien kesto
+        /// <summary>Olavinlinnan perustamisvuosi: historiassa huoneiden nimilaput näkyvät vasta tästä (PT B4).</summary>
+        const double LinnaPerustettu = 1475;
+        /// <summary>Avainsanan alareuna (pt): esittelyssä 24; historiassa liiketapin yläpuolella (PT B4, Laitetestaaja 11.10. d: otsikko tatin päällä).</summary>
+        static float AvainsanaAla => Matkakirja.Natiivi.SeikkailuHistoria.Kaynnissa ? SeikkailuTapit.TappienYlareuna + Tyylikirja.Vali.L : 24f;
+        /// <summary>Avainsanan vasen reuna (pt): 28 turva-alueen sisällä (simu 11.10. 02.3x: iPhone vaaka, "Kivikausi" Dynamic Islandin alla).</summary>
+        static float AvainsanaVasen => 28f + Mathf.Max(0f, UiKerros.Hae().Reunat(LinssiUi.Ylakerros).x);
         readonly Label nimiruudunNimi, nimiruudunAlarivi;
         readonly Latauspalkki latauspalkki;
         bool nimiruutuAuki, virheIlmoitettu;
@@ -630,6 +637,7 @@ namespace Matkakirja.Natiivi
                     avainsanaSanat.text = h.Sanat ?? "";
                 }
                 avainsana.style.opacity = h != null ? 1f : 0f;
+                avainsana.style.bottom = AvainsanaAla; avainsana.style.left = AvainsanaVasen;
                 // VoiceOver: vuosi ja sanat yhtenä nimenä historian aikana (Päätoimittaja 9.10., juna 171).
                 avainsana.tooltip = h != null ? ((h.VuosiTeksti ?? "") + " " + (h.Sanat ?? "")).Trim() : null;
             }
@@ -656,6 +664,7 @@ namespace Matkakirja.Natiivi
                 Debug.Log($"MATKAKIRJA linssit: avainsana {nyt.Vuosi} {nyt.Sanat} ({nyt.Ts:F1} s, kierros +{DioraamaTimeline.S(DioraamaSovitin.ViimeisinT - DioraamaTimeline.KierrosAlku)} s, {(DioraamaTimeline.OhjaaKertojaa ? "timeline" : "ydin")})");
             }
             avainsana.style.opacity = nyt != null ? 1f : 0f;
+            avainsana.style.bottom = AvainsanaAla; avainsana.style.left = AvainsanaVasen;
             avainsanaNyt = nyt;
         }
 
@@ -702,6 +711,9 @@ namespace Matkakirja.Natiivi
                 = lappuKerros.style.visibility = valikonAikana;
             // Linnan historia (Siirtoseppä, kuva-arkki 9.10. virhe 3): ei Pulua eikä huonekorttia historian aikana (ohjaajan suunnitelma).
             if (Matkakirja.Natiivi.SeikkailuHistoria.Kaynnissa) pulu.style.visibility = puluAlue.style.visibility = lauta.style.visibility = Visibility.Hidden;
+            // Huoneiden nimilaput eivät leiju tyhjän saaren yllä (PT B4, Laitetestaaja 11.10. d: kivikaudella Kierreportaat, Fatabuuri, Kappeli…):
+            // historiassa piiloon, kunnes vuosi on linnan perustamisvuosi tai myöhäisempi.
+            if (Matkakirja.Natiivi.SeikkailuHistoria.Kaynnissa && !(Matkakirja.Natiivi.SeikkailuHistoria.Vuosi >= LinnaPerustettu)) lappuKerros.style.visibility = Visibility.Hidden;
             // Pelattava pala (Raamattu: pelissä ei Pulun reunakuvaa; omistajan iPad TF 179: minipulu tapin päällä laiturilla ja
             // soutukohtauksessa): minipulu ja sen napautusalue piiloon pelaajan ja veneen ajaksi. Läpipeluu 10.10. yö (tekstivahti
             // "Kuuntele"): myös infotaulun Kuuntele-nappi, joka ei ole pelin käyttöliittymää (huoneen kuunnelma jatkuu äänenä).
