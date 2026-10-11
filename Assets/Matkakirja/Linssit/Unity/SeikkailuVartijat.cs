@@ -39,6 +39,9 @@ namespace Matkakirja.Natiivi
             public VartijanTila EdellinenTila;
             public AudioSource Askeleet;
             public float RepliikkiAsti; public int RepliikkiLaskuri; public float TyoAsti, VaroitusAsti, PuhuiS = -99f;
+            /// <summary>Epäilyrepliikki on jo kuultu tässä jaksossa (partiosta poistumisesta paluuseen): Laitetestaajan 4. kierros, sama
+            /// "portinvartija-epaily-3" soi Epäilyssä ja varoituksessa 2–3 kertaa → kerran per jakso (PT 11.10. 06.0x).</summary>
+            public bool EpailyKuultu;
             /// <summary>Kannetun valon säde (lyhty 4 m, soihtu 6 m), 0 = ei kanna.</summary>
             public float ValoM;
             /// <summary>Kannettu valo ja sen perusvoima (varoituksen ajan kirkkaampi).</summary>
@@ -511,8 +514,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Pystyleikkeen repliikit tilan vaihtuessa (Pelikoodarin manifest: vartija-epaily/etsinta/paluu/kiinni), 4 s tauko per vartija.</summary>
         void Repliikki(V v, VartijanTila oli, VartijanTila nyt, bool nakee)
         {
+            if (nyt == VartijanTila.Partio || nyt == VartijanTila.Kiinni) v.EpailyKuultu = false;   // jakso päättyi
             var r = SeikkailuRepliikit.Aktiivinen;
             if (r == null || !r.Valmis || Time.unscaledTime < v.RepliikkiAsti) return;
+            if (nyt == VartijanTila.Epaily && v.EpailyKuultu) return;
             string t = null; int n = ++v.RepliikkiLaskuri;
             var pr = v.Aivot.Profiili;
             bool palasi = nyt == VartijanTila.Partio && oli != VartijanTila.Partio && oli != VartijanTila.Kiinni;
@@ -544,7 +549,7 @@ namespace Matkakirja.Natiivi
                     : nyt == VartijanTila.Kiinni ? "muuri-vartija-kiinni-1" : palasi ? (n % 2 == 0 ? "muuri-vartija-paluu-2" : "muuri-vartija-paluu-1") : null;
                 if (m != null && r.On(m)) t = m;
             }
-            double kesto = r.Soita(t, v.Agentti.transform); v.PuhuiS = Time.unscaledTime;
+            double kesto = r.Soita(t, v.Agentti.transform); v.PuhuiS = Time.unscaledTime; if (nyt == VartijanTila.Epaily) v.EpailyKuultu = true;
             v.RepliikkiAsti = Time.unscaledTime + (float)Math.Max(4.0, kesto + 0.5);
         }
 
@@ -900,8 +905,9 @@ namespace Matkakirja.Natiivi
             var pr = v.Aivot.Profiili;
             string t = pr == VartijaProfiili.Portinvartija ? "portinvartija-epaily-3"
                 : pr == VartijaProfiili.Vartija && v.Osa == "muurikaytava" ? "muuri-vartija-epaily-1" : "vartija-epaily-1";
-            // Sama kehys tai juuri puhuttu tilarepliikki (Partio → Epäily) on jo huudahdus: ei toista päälle.
-            if (r != null && r.Valmis && r.On(t) && Time.unscaledTime - v.PuhuiS > 2f) { v.PuhuiS = Time.unscaledTime; double k = r.Soita(t, v.Agentti.transform); v.RepliikkiAsti = Time.unscaledTime + (float)Math.Max(4.0, k + 0.5); }
+            // Sama kehys tai juuri puhuttu tilarepliikki (Partio → Epäily) on jo huudahdus: ei toista päälle. Epäilyrepliikki kerran per
+            // jakso (EpailyKuultu); varoitusääni (VaroitusAlkoi) soi silti joka varoituksessa, joten suunta kuuluu aina.
+            if (r != null && r.Valmis && r.On(t) && !v.EpailyKuultu && Time.unscaledTime - v.PuhuiS > 2f) { v.PuhuiS = Time.unscaledTime; v.EpailyKuultu = true; double k = r.Soita(t, v.Agentti.transform); v.RepliikkiAsti = Time.unscaledTime + (float)Math.Max(4.0, k + 0.5); }
             if (Time.unscaledTime >= v.VaroitusAsti) { v.VaroitusAsti = Time.unscaledTime + VaroitusValiS; VaroitusAlkoi?.Invoke(vp); }
         }
 
