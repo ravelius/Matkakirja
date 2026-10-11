@@ -94,6 +94,7 @@ details.juna .runko { padding: 0 0 10px 1.3em; display: flex; flex-direction: co
 .rooli { background: var(--opus); border-radius: 5px; padding: 6px 8px; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
 .rooli.sonnet { background: var(--sonnet); }
 .rooli .r-paa { display: flex; align-items: center; gap: 6px; font-weight: 700; font-size: 0.92rem; }
+.rooli .r-effort { margin-left: -2px; font-weight: 400; font-size: 0.75rem; color: var(--himmea); }
 .rooli .r-aika { margin-left: auto; font-weight: 400; font-size: 0.75rem; color: var(--himmea); font-variant-numeric: tabular-nums; }
 .piste { width: 8px; height: 8px; border-radius: 2px; background: var(--harmaa); flex-shrink: 0; }
 .piste.tyo { background: var(--vihrea); }
@@ -561,6 +562,8 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
       var kortti = luo('div', 'rooli ' + (s === 'kysyy' ? 'tila-kysyy' : s === 'työ' ? 'tila-tyo' : s === 'odottaa' ? 'tila-odottaa' : 'tila-lepo'));
       var paa = luo('div', 'r-paa');
       paa.append(luo('span', 'piste' + (malli.indexOf('sonnet') >= 0 ? ' sonnet' : '')), luo('span', '', x.nimi || ''));
+      // Effort-taso nimen perässä pienemmällä, ei lihavoituna (omistaja 10.10. 22.5x); Postivahti vie kentän effort sessionimestä.
+      if (x.effort) paa.append(luo('span', 'r-effort', '(' + x.effort + ')'));
       kortti.append(paa);
       var tyossa = s === 'työ' || /työ käynnissä/i.test(String(x.teksti || ''));
       var selite = (tyossa && tehtavat[x.nimi]) || x.teksti;
