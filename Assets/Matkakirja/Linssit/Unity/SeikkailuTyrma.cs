@@ -43,6 +43,10 @@ namespace Matkakirja.Natiivi
             t.ydin = new Tyrma(mu1);
             SeikkailuEsineet.Irrotettiin += t.KiviIrti; SeikkailuEsineet.Raapaistiin += t.Yritys;
             Aktiivinen = t;
+            // Kynttilä palaa tyrmään tultaessa (PT 11.10. 06.2x, Laitetestaajan 4. kierros: ensikertalaisen tyrmä lähes musta, kun oma
+            // kynttilä oli sammuksissa); toimintonappi sammuttaa ja sytyttää kuten ennen. Pöydälle asetettu kynttilä jää paikalleen.
+            var kyn = SeikkailuKynttilat.Aktiivinen;
+            if (kyn != null && kyn.Ydin.OmaKynttila && !kyn.Ydin.OmaPalaa && kyn.OmaAsetettu == null) { kyn.Ydin.AsetaOma(true); kirjaa?.Invoke("seikkailu: tyrmä: oma kynttilä sytytetty"); }
             // Käsittely käsin (pelattavuusmalli 6): oven veto avaimet kädessä; 60° = auki, nopea veto narahtaa (4 m). Napautus avaa kuten ennen.
             float kertyma = 0f;
             SeikkailuKasittely.Lisaa(new SeikkailuKasittely.Kasiteltava
