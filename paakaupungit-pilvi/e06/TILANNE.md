@@ -10,8 +10,8 @@ Vaihe 0: yhdeksän kontekstia ja saa-syote.json luotu alkuperäisellä tyokalu.m
 |---|---|---|---|---|---|---|
 | libreville | A koottu; 6 karttakandidaattia, rajaus-/tyyppipoikkeus ja turvallisuuslähde avoin | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | ciudaddelapaz | lähdepaketti tehty; täysi A estyy: 0 karttakohdetta, opas/teema vajaat | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
-| saotome | lähteiden luku käynnissä | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
-| bangui | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
+| saotome | A koottu; 6 ehdotusta, Obô-rajaus ja 2 kirkon oikeusportti avoin | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
+| bangui | lähteiden luku käynnissä | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | brazzaville | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | kinshasa | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | luanda | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
@@ -37,3 +37,7 @@ Lähteistetty 0–9-rakenne koottu. 1849 kahdesta riippumattomasta lähteestä; 
 ## Ciudad de la Paz A-este
 
 Nykykaupunki uusi; ei lähteistettyä historiallista keskustakantaa. Konteksti jo kieltää uuden hallintorakentamisen kuvakohteet 70 vuoden säännöllä. Lähteistetty täysi 0–9-raportti kertoo puutteet: 0 karttakohdetta, neljän teemanoston ja viiden matkasuosituksen faktamäärä ei täyty, nykyinen opas puutteellinen. Ei A-valmis-merkintää. Virallinen asetuslinkki palautti vain 161 tavua, ei luettavaa dokumenttia. Pääsession ratkaistava kevyenä pitäminen / lisälähteet. Kaupunkia ei ohitettu työlistasta.
+
+## São Tomé A
+
+0–9-lähdepaketti koottu. Linnakkeen/perustamisen vuosiristiriidat vuosisatamuotoon. Kuusi karttakandidaattia, mutta Obô on erillinen retkikohde ja kahden kirkon nykyjulkisivujen FOP/historiallisuus vaatii lisävahvistuksen. WIPO-lain metatiedot luettu, PDF 403 ja vaihtoehtoinen /edocs/lexdocs/ robots-kielletty: ei lain sisällön lukuväitettä. Palatsi pois kuvauskiellon vuoksi. Ei valmiin kartan tai kuvien hyväksyntää.
