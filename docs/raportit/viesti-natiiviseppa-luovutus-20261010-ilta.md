@@ -92,3 +92,10 @@ Taustalla EI omia ajoja (cron 440f4d6d katoaa nollauksessa).
 - Peilipush-kilpa: peili/proto/juna/b13 oli jo dc89bb5d6:ssa (vahti) → atominen push hylättiin; master + proto/juna/b13 pushattu uudelleen erikseen.
 - 182-jono: Olavinlinna v12 (60265de6d, 6dd9ee50e, Siirtoseppä v12, Julkaisijan 181l), f94ff6d02, NUI 79fbb7a35 (ei kuitattu). MSAA-syvyysvika (PT) jonossa.
 - Levysiivous: PT 09.1x vaihtoehto b) NAS-siirto VIE:n jälkeen valmiilla siirtotyökalulla (omistaja hylkäsi rm -rf:n 00.4x; tarkista poistetaanko lähde).
+
+## TILA 11.10. 10.47
+- TF 181 iOS käynnistetty (Julkaisija, 38121309251, sisäinen → Arvioijat + Beta-testaajat). Mac 181 KÄÄNNETTY a93ce987 10.39 (fi.matkakirja.peli 1.1 (181)),
+  kopio lokit/natiiviseppa-mac-tf-181-a93ce987 → Julkaisija käynnistää Mac-TF:n.
+- TOINEN KÄÄNNÖSLINJA (PT 10.2x) valmis: PROTO_LINJA=2 proto-kaanna.sh → kopio proto-3d/Matkakirja-proto-linja2 (symlinkki → /Volumes/T7 4TB/koodaus/proto-linja2,
+  git worktree + linjan 1 Library 7,0 Gt), lukko /tmp/matkakirja-kaannospalvelu-2.lukko, nice 15 + xcodebuild -jobs 6, loki *-l2.log. burst-jit.sh viitelaskettu
+  (haltijat /tmp/matkakirja-burst-jit-haltijat/<pid>). Varmuuskopiot tyokalut/*.ennen-linja2-20261011. Koe 10.39–10.46 OK rinnakkain linjan 1 kanssa.
