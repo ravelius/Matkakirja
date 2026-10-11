@@ -190,9 +190,9 @@ test('esittely-indeksi: pilotti pariisi, praha, wien (vienti 7.10.)', async () =
   // Äänettömät 31 (omistaja 7.10. 18.2x): kaikki sallitut kaupungit, jokaisella oma polku esittely-aaneton-v3:ssa (8.10. avaukseen pallovirke).
   const { OPAS_SALLITUT } = await import('../tools/pollo/sallitut.js');
   assert.deepEqual([...OPAS_AINEISTOT.esittely].sort(), OPAS_SALLITUT.sallitut.map((x) => x.id).sort());
-  // Kehityskaupunki Tukholma (omistaja 8.10. 20.4x): kertojan äänet, oma polku; 9.10. lähikohteet esittely-v3, v3b Vasan katse_suunta.
+  // Kehityskaupunki Tukholma (omistaja 8.10. 20.4x): kertojan äänet, oma polku; 9.10. lähikohteet esittely-v3, v3b Vasan katse_suunta, v3c Stortorget (juna 183).
   // LS1 11.10.: Bryssel ja Firenze v2a (korkeus_m tornillisille rakennuksille, natiivin kierroksen esteet).
-  const AANELLISET = { tukholma: 'opas/esittely-v3b/tukholma.json', bryssel: 'opas/esittely-v2a/bryssel.json', firenze: 'opas/esittely-v2a/firenze.json' };
+  const AANELLISET = { tukholma: 'opas/esittely-v3c/tukholma.json', bryssel: 'opas/esittely-v2a/bryssel.json', firenze: 'opas/esittely-v2a/firenze.json' };
   for (const id of OPAS_AINEISTOT.esittely.slice(6)) assert.equal(OPAS_AINEISTOT.esittely_polut[id], AANELLISET[id] ?? `opas/esittely-v2/${id}.json`);
 });
 
@@ -352,9 +352,11 @@ test('katse_suunta (LS1/PT 9.10., juna 174): esittelyn kohteen kenttä pysähdyk
   assert.equal(toka.d.id, 'Q101'); assert.ok(!('katse_suunta' in toka.d), 'kenttä puuttuu → ei vastauksessa');
 });
 
-test('esittely_polut: Tukholma v3b (Vasa-museo katse_suunta 40, juna 174)', async () => {
+test('esittely_polut: Tukholma v3c (v3b + Stortorget katse_suunta 270 / kaari 20, Sergels torg pois; juna 183) ja kuvat-v9', async () => {
   const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
-  assert.equal(OPAS_AINEISTOT.esittely_polut.tukholma, 'opas/esittely-v3b/tukholma.json');
+  assert.equal(OPAS_AINEISTOT.esittely_polut.tukholma, 'opas/esittely-v3c/tukholma.json');
+  const { KUVALISTA_URL } = await import('../tools/pollo/opas-kuvat.js');
+  assert.equal(KUVALISTA_URL, 'https://media.matkakirja.app/opas/kuvat-v9/kuvat.json');
 });
 
 test('katse_kaari (LS1/PT 9.10., juna 174): litteä kenttä pysähdykseen, rajattu 0–45, puuttuva/virheellinen pois', async () => {
