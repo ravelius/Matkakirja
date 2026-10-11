@@ -3847,8 +3847,12 @@ const kuplanNapautus = await vihjeSivu.evaluate(async () => {
    * 200 ms:n häivytyksen jälkeen, joten häipymistä mitataan siitä,
    * ettei näkyvää kuplaa enää ole — ja odotus on animaation mittainen.
    */
-  await new Promise((r) => setTimeout(r, 400));
-  const haipyi = !document.querySelector('.pollo-vihje:not([hidden])');
+  // Katoaminen kirjataan heti (enint. 1 s): valintavihje voi palata 400 ms:n viiveellä ennen kiinteää mittaushetkeä (CI).
+  let haipyi = false;
+  for (const t0 = performance.now(); !haipyi && performance.now() - t0 < 1000;) {
+    await new Promise((r) => requestAnimationFrame(r));
+    haipyi = !document.querySelector('.pollo-vihje:not([hidden])');
+  }
   // Sama vuoro alusta: kupla takaisin kartan kosketuskoetta varten.
   ui.valintavihjeVaihe = false;
   ui.paivitaValintavihje();
@@ -3940,14 +3944,18 @@ if (kohdistus.virhe) {
   await vihjeSivu.touchscreen.tap(kohdistus.x, kohdistus.y);
   // CI:n hitaassa piirrossa napautuksen käsittely voi viipyä yli 600 ms (ajo 38175149983: kupla yhä näkyvissä, ei vuotoa):
   // odotetaan kuplan katoamista enintään 2,5 s ja sen jälkeen vielä mahdollista vuotavaa clickiä.
-  await vihjeSivu.waitForFunction(() => !document.querySelector('.pollo-vihje:not([hidden])'), null, { timeout: 2500 }).catch(() => {});
+  // Katoaminen kirjataan heti, kun se tapahtuu: valintavihje (viive 400 ms tässä osiossa) voi palata ennen loppumittausta
+  // (CI-ajo 38176195972: kupla oli napautuspisteessä, ei vuotoa, mutta loppuhetkellä taas näkyvissä).
+  const katosi = await vihjeSivu.waitForFunction(() => !document.querySelector('.pollo-vihje:not([hidden])'), null, { timeout: 2500 })
+    .then(() => true, () => false);
   await vihjeSivu.waitForTimeout(600);
   const vuoto = await vihjeSivu.evaluate(async () => {
     const ui = window.matkakirja.ui;
     const tulos = {
       ohi: window.__kuplanOhi,
-      haipyi: !document.querySelector('.pollo-vihje:not([hidden])'),
       vaihe: window.matkakirja.game.phase,
+      // Diagnoosi: palasiko kupla ennen loppumittausta (napautus ei nollaa vuoron vihjelippua, joten ei pitäisi).
+      lopussaNakyy: Boolean(document.querySelector('.pollo-vihje:not([hidden])')),
     };
     // Sama vuoro alusta seuraavaa mittausta varten.
     ui.valintavihjeVaihe = false;
@@ -3955,6 +3963,7 @@ if (kohdistus.virhe) {
     await new Promise((r) => setTimeout(r, 700));
     return tulos;
   });
+  vuoto.haipyi = katosi;
   vaadi('kuplan napautus ei vuoda kartalle',
     vuoto.ohi === 0 && vuoto.haipyi === true && vuoto.vaihe === kohdistus.vaihe,
     JSON.stringify({ ...vuoto, alku: kohdistus.vaihe, piste: [kohdistus.x, kohdistus.y], kuplassa: kohdistus.kuplassa,
