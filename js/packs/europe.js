@@ -420,7 +420,7 @@ export const EUROPE = {
   id: 'europe',
   name: 'Kolme veljestä',
   boardLabel: 'Eurooppa',
-  tagline: 'Etsi kadonneen Kolme veljestä -riipuksen aarre tunturien, kanavien ja raunioiden takaa.',
+  tagline: 'Etsi kadonnut Kolme veljestä -riipus tunturien, kanavien ja raunioiden takaa.',
   ariaLabel: 'Euroopan aarrekartta',
 
   /*
@@ -437,7 +437,7 @@ export const EUROPE = {
   tokens: {
     types: themedTokenTypes({
       star: {
-        name: 'Kolmen veljeksen aarre',
+        name: 'Kolme veljestä -riipus',
         fakta: 'Kolme veljestä oli riipus, jonka pariisilainen kultaseppä '
           + 'Hermann Ruissel teki 1389 Juhana Pelottomalle: kolme punaista '
           + 'spinelliä, keskellä timantti ja välissä helmiä. Burgundilta se '
@@ -523,12 +523,12 @@ export const EUROPE = {
   ],
 
   texts: {
-    intro: 'Peli alkaa! Etsikää kadonneen Kolmen veljeksen aarre ja palatkaa kotisatamaan: Lontooseen, Istanbuliin, Moskovaan tai Ateenaan.',
-    starFound: '◈ {name} löysi KOLMEN VELJEKSEN AARTEEN kaupungista {city}!',
-    starToast: 'KOLMEN VELJEKSEN AARRE!',
+    intro: 'Peli alkaa! Etsikää kadonnut Kolme veljestä -riipus ja palatkaa sen kanssa kotisatamaan.',
+    starFound: '◈ {name} löysi KOLME VELJESTÄ -RIIPUKSEN kaupungista {city}!',
+    starToast: 'KOLME VELJESTÄ -RIIPUS!',
     starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
-    winStar: 'toi Kolmen veljeksen aarteen turvallisesti kotiin',
-    winnerStar: '{name} toi Kolmen veljeksen aarteen kotiin {money} punnan kanssa.',
+    winStar: 'toi Kolme veljestä -riipuksen turvallisesti kotiin',
+    winnerStar: '{name} toi Kolme veljestä -riipuksen kotiin {money} punnan kanssa.',
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.
     diaries: [
       'Kotimantere. Puolet karttani rajoista on väärin, ja loput ylitetään näyttämättä passia. Kukaan ei tarkasta papereitani — en tiedä, olenko helpottunut vai loukkaantunut.',
