@@ -56,9 +56,22 @@ namespace Matkakirja.Natiivi
             ok.Q<Label>(className: "mk-nappi__teksti").text = okTeksti;
             vahvistettu = kunVahvistettu;
             peruttu = kunPeruttu;
+            peru.style.display = DisplayStyle.Flex;
             Auki = true;
+            // Aina päällimmäiseksi omassa kerroksessaan: rahapulan ilmoitus jäi auki olevan nostokortin alle (simuajo d868ab8d).
+            himmennys.BringToFront();
             Rakenne.Nayta(himmennys, true, 320);
             SyoteLukko.Esta(this);
+        }
+
+        /// <summary>
+        /// Ilmoitus yhdellä napilla (omistaja 11.10.2026, rahan puute: Rahapula.Tarkista): sama kortti ilman Peruuta-nappia;
+        /// OK (kulta) sulkee.
+        /// </summary>
+        public void Ilmoita(string otsikkoTeksti, string leipa, string okTeksti, Action kunSuljettu = null)
+        {
+            Kysy(otsikkoTeksti, leipa, "", okTeksti, kunSuljettu);
+            peru.style.display = DisplayStyle.None;
         }
 
         public void Sulje()

@@ -50,6 +50,9 @@ namespace Matkakirja.Natiivi
 
         public bool Nakyy => kortit.Count > 0;
 
+        /// <summary>Näkyvien kuvakorttien laatikot paneelissa (aarrelaskuri väistää).</summary>
+        public IEnumerable<Rect> Laatikot { get { foreach (var k in kortit) yield return k.worldBound; } }
+
         /// <summary>Arvioijakierros 30.9. (1.1 (75)): Ohita näkyy vain luennan aikana (Saapumisesitys.Alkoi → tosi,
         /// Loppui → epätosi). Livian kommentin PuluCam-kuvat eivät tuo Ohitaa takaisin.</summary>
         public bool LuentoKaynnissa

@@ -160,13 +160,22 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public Luento OtaLuento(string kaupunki)
         {
-            if (kaupunki == null || !luennot.TryGetValue(kaupunki, out var l) || kaupunki == edellinen) return null;
+            if (kaupunki == null || kaupunki == edellinen) return null;
+            var l = Luento(kaupunki);
+            if (l == null) return null;
             edellinen = kaupunki;
             return l;
         }
 
+        /// <summary>
+        /// Kaupungin luennon korvaaja (Natiivi-UI: aloituskaupungin isoisän aarreteksti, omistaja 11.10.2026, juna 182);
+        /// null-tulos = kaupungin oma luento.
+        /// </summary>
+        public Func<string, Luento> Korvaava;
+
         /// <summary>Kaupungin luento ehdoitta (kaiutinnappi), tai null.</summary>
-        public Luento Luento(string kaupunki) => kaupunki != null && luennot.TryGetValue(kaupunki, out var l) ? l : null;
+        public Luento Luento(string kaupunki) =>
+            kaupunki == null ? null : Korvaava?.Invoke(kaupunki) ?? (luennot.TryGetValue(kaupunki, out var l) ? l : null);
 
         /// <summary>
         /// Avauslennon repliikki (web lueLennonRepliikki; lennonLuentaAlkoi nollautuu jokaisessa avauksessa,

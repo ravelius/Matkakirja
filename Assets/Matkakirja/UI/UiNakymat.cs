@@ -41,6 +41,8 @@ namespace Matkakirja.Natiivi
         public readonly Kartuscha Kartuscha;
         public readonly Erikoisnostot Erikoisnostot;
         public readonly KaupunkiPallot KaupunkiPallot;
+        /// <summary>Mylly Berliinissä ja Tavli Ateenassa sinisinä videopelinostoina (omistaja 11.10.2026).</summary>
+        public readonly Lautapelinostot Lautapelinostot;
         /// <summary>Elävä kartta: heränneiden maakuntien käsialanimet kartalla (kartussin maa).</summary>
         public readonly MaakuntanimetKartalla MaakuntaNimet;
         /// <summary>Nostomerkit kartalla (Natiivisepän NostoKerros → merkit, nimiöt, napautus).</summary>
@@ -63,6 +65,8 @@ namespace Matkakirja.Natiivi
         public readonly Aloitusnakyma Aloitus;
         /// <summary>Kello ja "Päivä 1/80" aloituskaupungin valinnassa ja lennolla (v3f).</summary>
         public readonly Pelikellonaytto Kellonaytto;
+        /// <summary>"Etsityt kaupungit X/50" kartan yläreunan keskellä (omistaja 11.10.2026).</summary>
+        public readonly Aarrelaskuri Aarrelaskuri;
         public readonly Huipennus Huipennus;
         public readonly Nostokortti Nostokortti;
         public readonly Lehtinakyma Lehti;
@@ -176,6 +180,31 @@ namespace Matkakirja.Natiivi
                     Oikein = true, LoytoTyyppi = "matkamuisto", LoytoNimi = m.Nimi, LoytoFakta = m.Selite, LoytoKuvaUrl = m.KuvaUrl,
                     LoytoRivi = "+" + m.Pisteet + " " + global::Matkakirja.Peli.Kokemus.Lyhenne, LoytoPergamentti = true,
                 }))));
+        }
+
+        readonly Queue<global::Matkakirja.Peli.LinssiMyonto> linssiJono = new Queue<global::Matkakirja.Peli.LinssiMyonto>();
+
+        /// <summary>Testikomento `ui uusi-linssi [tunnus]`: kortti kuten pelin LinssiLoytyi.</summary>
+        public void TestaaUusiLinssi(string tunnus)
+        {
+            linssiJono.Enqueue(new global::Matkakirja.Peli.LinssiMyonto
+                { Tunnus = tunnus, Otsikko = "Uusi linssi", Alaotsikko = "Aarteen mukana oli linssi — uusi katselutapa laukkuun" }); // kieli: ei (testikomento)
+            NaytaLinssi();
+        }
+
+        /// <summary>Jonon seuraava uusi linssi paljastuksena (nimi, linssin kuva, alaotsikko faktana, "Uusi linssi" rahan paikalla).</summary>
+        void NaytaLinssi()
+        {
+            if (Paljastus.Auki || linssiJono.Count == 0) return;
+            var m = linssiJono.Dequeue();
+            var t = LinssiUi.Rekisteri?.Hae(m.Tunnus)?.Tiedot;
+            string kuva = Linssivalitsin.FotoIsot.TryGetValue(m.Tunnus, out var f) ? f : t?.Havainnekuva;
+            Debug.Log("MATKAKIRJA ui: uusi linssi " + m.Tunnus);
+            Paljastus.Nayta(new KysymysNaytto
+            {
+                Oikein = true, LoytoTyyppi = "linssi", LoytoNimi = t?.Nimi ?? m.Tunnus, LoytoFakta = m.Alaotsikko, LoytoKuvaUrl = kuva,
+                LoytoRivi = m.Otsikko, LoytoPergamentti = true,
+            }, NaytaLinssi);
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -453,7 +482,8 @@ namespace Matkakirja.Natiivi
             KaupunkiMerkit.PaakaupunkiNapautettu = (maa, _) => Kartuscha?.NaytaMaa(maa);
             MaakuntaNimet = new MaakuntanimetKartalla(kerros, Kartuscha);
             Erikoisnostot = new Erikoisnostot(kerros, Kartuscha);   // ajattelijoiden kipsipäät karttaobjekteina (kehittäjätila, web #3866)
-            KaupunkiPallot = new KaupunkiPallot(kerros);   // kaupunkiopas karttaelementtinä: kuumailmapallo sallituissa kaupungeissa (omistaja 7.10.)
+            KaupunkiPallot = new KaupunkiPallot(kerros);
+            Lautapelinostot = new Lautapelinostot(kerros);   // kaupunkiopas karttaelementtinä: kuumailmapallo sallituissa kaupungeissa (omistaja 7.10.)
             Karttaselite = new Karttaselite(kerros);
             OfflineTila = new OfflineTilaUi(kerros, Tilarivi, () => { Valikko.Sulje(); Aanentasot.Avaa(); });
             Matkakirja = new Matkakirjakortti(kerros);
@@ -501,6 +531,7 @@ namespace Matkakirja.Natiivi
             Valikko.MitaUutta.TarkistaPaivitys(); // web: "Peli päivittyi", kun laitteella oli aiempi versio
             Aloitus = new Aloitusnakyma(kerros);
             Kellonaytto = new Pelikellonaytto(kerros);
+            Aarrelaskuri = new Aarrelaskuri(kerros);
             // Löydökset 81/82: yläpalkki pois aloitusnäytöltä. Sulkeutuessa päivitys seuraavassa ruudussa, jotta
             // valinnan Aloita ehtii merkitä aloituslennon (palkki ei välähdä valinnan ja lennon välissä).
             Aloitusnakyma.AukiMuuttui += auki =>
@@ -549,7 +580,7 @@ namespace Matkakirja.Natiivi
             Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Vahvistus.Sulje(); Julistegalleria.Sulje(); Minipopup.SuljeAuki(); };
             Paljastus = new Paljastus(kerros);
             // Löytö päätyy matkalaukkuun: laukku heilahtaa paljastuksen sulkeutuessa (web elavoitaLaukku).
-            Paljastus.Suljettiin += aarre => { if (aarre) Tilarivi.ElavoitaLaukku(); };
+            Paljastus.Suljettiin += aarre => { if (aarre) Tilarivi.ElavoitaLaukku(); UiKerros.Hae().Juuri(UiKerros.Valikot).schedule.Execute(NaytaLinssi); };
             Sahke = new SahkeNakyma(kerros, Valikko);
             Sahkelomake = new SahketehtavaNakyma(kerros); // pelidialogien kerros (30), pulun kuplat päällä
             Julistegalleria = new Julistegalleria(kerros); // laukun päälle (sama kerros, myöhemmin)
@@ -707,6 +738,12 @@ namespace Matkakirja.Natiivi
             o.AloituslentoPaattyi += _ => UiKerros.PaaSaikeessa(() => { AloituslentoPerilla(); Aloitus.AloituslentoPaattyi(); });
             // C16: Livian tuurauspaljastus (ensimmäinen saapuminen koskaan) tai saapumisen ohjekuplat aloituslennon jälkeen.
             LivianPaljastus.Kytke(o);
+            // Aloituskaupungin isoisän aarreteksti (omistaja 11.10.2026, juna 182): luento ja fokusvirta korvautuvat.
+            o.Luennat.Korvaava = AloitusAarre.Luento;
+            AloitusAarre.Lataa();
+            // UUSI LINSSI (omistaja 11.10.2026, juna 182; Pelikoodarin PeliOhjain.LinssiLoytyi: aarteen lisäksi, pisteillä tai
+            // aarteen kyljestä): olemassa oleva paljastus pergamenttimallina kuten matkamuisto; aarteen paljastus ensin.
+            o.LinssiLoytyi += m => UiKerros.PaaSaikeessa(() => { if (m != null) { linssiJono.Enqueue(m); NaytaLinssi(); } });
             if (o.Tila == SilmukanTila.Aloitus) NaytaAloitus(o);
             // Rahan muutos kupliksi (web buildToast kind stamp, "+10 puntaa · Lehden minitehtävä ratkesi") ja kukkaron palaute
             // yläpalkin summaan samalla hetkellä (omistaja 11.10.2026, juna 182; KukkaroMuuttui).

@@ -2147,6 +2147,17 @@
     -unity-background-scale-mode: stretch-to-fill;
 }
 
+/* Videopelikohteen sininen hehkurengas (omistaja 11.10.2026, Videopelit.Hehku): hillitty syke 4 s:n välein. */
+.mk-nosto-merkki__hehku--videopeli {
+    transition-property: opacity;
+    transition-duration: 2400ms; /* ympäristöanimaatio: videopelikohteen merkin syke (omistaja 11.10.2026), ei käyttöliittymän siirtymä */
+    transition-timing-function: ease-in-out;
+}
+
+.mk-nosto-merkki__hehku--videopeli.mk-nosto-merkki__hehku--syke {
+    opacity: 0.5;
+}
+
 /* Maakuntakartta (omistaja 28.9. klo 17.1x): paneeli on pelkkä kuvausruutu, hieman isompi kuva ja teksti, silti kevyt. */
 .mk-selite.mk-selite--karttatila {
     width: 300px;
