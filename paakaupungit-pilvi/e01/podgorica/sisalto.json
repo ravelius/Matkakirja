@@ -263,18 +263,18 @@
   },
   {
    "id": "ruoka",
-   "nimi": "Tupakkaa, viiniä ja espressoa",
-   "johdanto": "Podgorica on jokilaakson kauppakaupunki, jonka ensimmäinen merkittävä kauppatuote oli Wikipedian mukaan tupakka. Nykyään täällä istutaan kahvilassa espresson ääressä, ja viinitarhat kasvavat tasangolla kaupungin ympärillä.",
+   "nimi": "Viiniä, kauppaa ja espressoa",
+   "johdanto": "Podgorica on jokilaakson kauppakaupunki, jonka talous on pitkään nojannut kauppaan. Nykyään täällä istutaan kahvilassa espresson ääressä, ja viinitarhat kasvavat tasangolla kaupungin ympärillä.",
    "tehtava": {
-    "kysymys": "Mikä tuote nousi Wikipedian mukaan Podgorican ensimmäiseksi merkittäväksi kauppatuotteeksi 1900-luvun alussa?",
+    "kysymys": "Mikä rypälelajike on Podgorican viinitarhojen tunnetuin ja yleisin?",
     "vaihtoehdot": [
-     "Tupakka",
-     "Viini",
-     "Juusto",
-     "Oliiviöljy"
+     "Vranac",
+     "Riesling",
+     "Sangiovese",
+     "Gamay"
     ],
     "oikea": 0,
-    "fakta": "Wikipedian mukaan tupakka oli Podgorican ensimmäinen merkittävä kauppatuote, ja vuonna 1902 kaupungista rakennettiin tiet kaikkiin naapurikaupunkeihin."
+    "fakta": "Vranac on Montenegron tunnetuin punaviinirypäle. Plantažen yli 2 000 hehtaarin viinitarha Ćemovskon tasangolla Podgorican tuntumassa istutettiin 1970-luvun lopulla ja 1980-luvun alussa."
    },
    "nostot": [
     {
@@ -286,8 +286,8 @@
      "wiki": "Doclea (Illyria)"
     },
     {
-     "otsikko": "Tupakka ja kauppa",
-     "teksti": "Wikipedian mukaan Podgoricasta rakennettiin vuonna 1902 tiet kaikkiin naapurikaupunkeihin, ja tupakasta tuli kaupungin ensimmäinen merkittävä kauppatuote. Ennen ensimmäistä maailmansotaa talous perustui kauppaan ja pienteollisuuteen, ja malli periytyi ottomaanikaudelta. Sodan jälkeen kaupunkiin perustettiin tehtaita, ja tupakan jalostus kuului myös teollisuudenaloihin alumiinin ja tekstiilien rinnalla, ja alumiinikombinaatin rakentaminen aloitettiin vuonna 1969.",
+     "otsikko": "Viiniä tasangolta",
+     "teksti": "Ennen ensimmäistä maailmansotaa talous perustui kauppaan ja pienteollisuuteen, ja malli periytyi ottomaanikaudelta. Sodan jälkeen kaupunkiin perustettiin tehtaita, ja alumiinikombinaatin rakentaminen aloitettiin vuonna 1969. Kaupungin tuntumassa Ćemovskon tasangolla on Plantažen yli 2 000 hehtaarin viinitarha, joka istutettiin 1970-luvun lopulla ja 1980-luvun alussa. Plantaže on Montenegron suurin viinintuottaja, ja tunnetuin lajike on paikallinen vranac.",
      "tiedosto": "Podgorica-Tuzi plantaze wineyard IMG 1316 Cijevna river.JPG",
      "selite": "Plantažen viinitarhoja Podgorican lentoaseman vieressä Zetan tasangolla, ilmakuva.",
      "lahde": "Bjoertvedt, Wikimedia Commons (CC BY-SA 4.0)",
@@ -358,7 +358,7 @@
  "nahtavyydet": {
   "Sahat kula -kellotorni": {
    "aika": "1667",
-   "teksti": "Sahat kula on 19 metriä korkea itsenäinen kivitorni Bećir Beg Osmanagićin aukiolla Stara Varošissa. Sen rakennutti Hadži-paša Osmanagić vuonna 1667, ja se on yksi harvoista ottomaanien ajan merkeistä, jotka selvisivät toisen maailmansodan pommituksista.\n\nIsoisän matkavuonna 1873 torni seisoi jo paikallaan, mutta nykyinen koneisto tuli vasta vuonna 1890, ja Wikipedian mukaan sen teki italialainen Colbachinin valimo Bassano del Grappassa. Tornin huippu sai metalliristin 1800-luvun lopulla, kun kaupunki oli siirtynyt Montenegrolle.\n\nKellon uusi sähkökoneisto asennettiin tammikuussa 2012. Torni on lailla suojeltu kulttuurimonumentti.",
+   "teksti": "Sahat kula on 19 metriä korkea itsenäinen kivitorni Bećir Beg Osmanagićin aukiolla Stara Varošissa. Sen rakennutti Hadži-paša Osmanagić vuonna 1667, ja se on yksi harvoista ottomaanien ajan merkeistä, jotka selvisivät toisen maailmansodan pommituksista.\n\nIsoisän matkavuonna 1873 torni seisoi jo paikallaan, mutta nykyinen koneisto tuli vasta vuonna 1890, ja sen teki italialainen Colbachinin valimo Bassano del Grappassa. Tornin huippu sai metalliristin 1800-luvun lopulla, kun kaupunki oli siirtynyt Montenegrolle.\n\nKellon uusi sähkökoneisto asennettiin tammikuussa 2012. Torni on lailla suojeltu kulttuurimonumentti.",
    "kuvat": [
     {
      "tiedosto": "Podgorica Clock Tower Sahat kula 01.jpg",
@@ -370,7 +370,7 @@
   },
   "Ribnican linnoitus": {
    "aika": "1400-luvun loppu",
-   "teksti": "Ribnican linnoitus eli Depedogen, turkiksi Depedöğen, on ottomaanien linnoitus Stara Varošissa Ribnican ja Moračan yhtymäkohdan yläpuolella. Se rakennettiin 1400-luvun lopulla, lähteiden mukaan noin vuosina 1477–1479, ja se oli toinen kahdesta Stara Varošia ympäröineestä linnoituksesta.\n\nLinnoitus oli pitkään ammusvarastona. Wikipedian mukaan salamanisku sytytti vuonna 1878 räjähdyksen, joka vaurioitti linnoituksen sisä- ja ulkopuolta pahoin, joten isoisän matkavuonna 1873 tuhoa ei ollut vielä tapahtunut.\n\nUskotaan, että linnoitus periytyy 1100-luvulta.",
+   "teksti": "Ribnican linnoitus eli Depedogen, turkiksi Depedöğen, on ottomaanien linnoitus Stara Varošissa Ribnican ja Moračan yhtymäkohdan yläpuolella. Se rakennettiin 1400-luvun lopulla, lähteiden mukaan noin vuosina 1477–1479, ja se oli toinen kahdesta Stara Varošia ympäröineestä linnoituksesta.\n\nLinnoitus oli pitkään ammusvarastona. Salamanisku sytytti myöhemmin 1800-luvun lopulla räjähdyksen, joka vaurioitti linnoitusta pahoin, joten isoisän matkavuonna 1873 tuhoa ei ollut vielä tapahtunut.\n\nUskotaan, että linnoitus periytyy 1100-luvulta.",
    "kuvat": [
     {
      "tiedosto": "Depedogen.JPG",
@@ -382,7 +382,7 @@
   },
   "Vanha silta Ribnican yli": {
    "aika": "uusittu 1700-luvulla",
-   "teksti": "Vanha silta ylittää Ribnica-joen Stara Varošin kupeessa. Stara Varošin nähtävyyksien luettelossa sitä kutsutaan Adži-paša-sillaksi. Wikipedian mukaan se on peräisin roomalaisajalta ja uusittiin perusteellisesti 1700-luvulla. Vezirov most on eri silta: se ylittää Moračan.\n\nSilta on kohdassa, jossa Ribnica laskee Moračaan. Samassa paikassa ovat Skaline-portaat. Kaupunki kehittyi Ribnican vasemmalle rannalle ottomaanikaupungin tapaan, ja joen ylitys oli osa vanhan kaupungin arkea.\n\nSilta kuuluu Stara Varošin ytimeen, jota 1400–1800-luvuilla edusti myös Sahat kula, Ribnican linnoitus ja kaksi moskeijaa. Isoisän matkavuonna 1873 Stara Varoš oli yhä kaupungin ydin.",
+   "teksti": "Vanha silta ylittää Ribnica-joen Stara Varošin kupeessa. Stara Varošin nähtävyyksien luettelossa sitä kutsutaan Adži-paša-sillaksi. Siltaa pidetään hyvin vanhana: sen alkuperä ulottuu roomalaisaikaan, ja sitä on uusittu myöhemmin. Vezirov most on eri silta: se ylittää Moračan.\n\nSilta on kohdassa, jossa Ribnica laskee Moračaan. Samassa paikassa ovat Skaline-portaat. Kaupunki kehittyi Ribnican vasemmalle rannalle ottomaanikaupungin tapaan, ja joen ylitys oli osa vanhan kaupungin arkea.\n\nSilta kuuluu Stara Varošin ytimeen, jota 1400–1800-luvuilla edusti myös Sahat kula, Ribnican linnoitus ja kaksi moskeijaa. Isoisän matkavuonna 1873 Stara Varoš oli yhä kaupungin ydin.",
    "kuvat": [
     {
      "tiedosto": "Starimost.JPG",
@@ -466,9 +466,9 @@
   "lentoasema": "Podgorican lentoasema (TGD)",
   "huomiot": [
    "Petrovićin linna ja puisto jätetty pois kohdekartasta: ei kelvollista kuvaa eikä riittäviä faktoja (6 kohdetta).",
-   "Teemasivu ruoka: lähdepohja ohut (juusto, tupakka, viini, kahvila); vaihtoehtona nykytaide-sivu (Modernin taiteen keskus). T2-nostossa korvaava tasankokuva, koska tupakkakuvaa ei löytynyt.",
+   "Teemasivu ruoka: lähdepohja ohut (juusto, viini, kahvila); vaihtoehtona nykytaide-sivu (Modernin taiteen keskus). T2-nostossa korvaava tasankokuva, koska tupakkakuvaa ei löytynyt.",
    "Oppaan ruokajakso kuvaton: ei sopivaa kuvaa.",
-   "Vanhan sillan ikä on epävarma (Wikipedian mukaan roomalaisaikainen, uusittu 1700-luvulla); sijainti Wikivoyagen Skaline-kohteesta, likimääräinen.",
+   "Vanhan sillan ikä on epävarma (roomalaisaikainen, uusittu myöhemmin); sijainti Wikivoyagen Skaline-kohteesta, likimääräinen.",
    "Macilla tarkistettavaksi: vanhan sillan koordinaatti (42.43951 / 19.25921) ja Ribnican linnoituksen koordinaatti (42.439 / 19.25913) ovat varmistamattomia arvioita, jotka täytyy tarkistaa; varmista Commonsin Starimost.JPG-/Depedogen.JPG-kuvien tai Wikidatan (Adži-paša-silta, Ribnican linnoitus) koordinaateista ennen julkaisua, ja korvaa, jos ero on yli 50 m.",
    "Sää luettu saa.json:sta (mallinnettu); Wikivoyagen ilmastotaulu poikkeaa (sateisin marraskuu), jätetty pois.",
    "Matkustusturvallisuus tarkistamatta: um.fi ei ollut luettavissa.",
