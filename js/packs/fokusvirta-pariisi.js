@@ -1420,11 +1420,18 @@ export const FOKUSVIRTA_PARIISI = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: kruununjalokivien
-   * safiiri.
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Näin kruunun safiirin ministeriön holvissa virkamiehen luvalla ja piirsin sen ääriviivat luetteloon. Vartija katsoi minua niin pitkään, että jätin '
-      + 'lyijykynänkin taskuun ja tulin ulos hitaasti kuin syytön mies.',
+    teksti: 'Aarni kirjoitti aarteen lepäävän palatsissa, jota ei enää ole. '
+      + 'Tuileries\'n raunioita riitti koko kortteliksi, ja vartija oli '
+      + 'varma, että etsin hopeaa. Kaivoin kaksi iltaa ja putsasin sen '
+      + 'jälkeen viikon nokea kynsistäni. Meripihkaa ei löytynyt, ei edes '
+      + 'nappina.',
   },
 };

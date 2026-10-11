@@ -1165,12 +1165,18 @@ export const FOKUSVIRTA_BERLIINI = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Nibelungein
-   * aarre.
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Seurasin laulun jälkiä Wormsiin asti ja seisoin Reinin '
-      + 'rannalla kartta kädessä. Joki oli leveä ja välinpitämätön — '
-      + 'kirjoitin: tämä aarre ei odota löytäjää, se odottaa uskojaa.',
+    teksti: 'Ajoin hevosraitiovaunussa Charlottenburgiin silmät kiinni, sillä '
+      + 'Meripihkahuone oli tehty Preussin kuninkaan linnaa varten. '
+      + 'Vahtimestarin mukaan kuningas lahjoitti huoneen tsaarille 1716. '
+      + 'Olin myöhässä sata viisikymmentäseitsemän vuotta, mikä on pitkä '
+      + 'aika jopa minulle. Takaisin kävelin.',
   },
 };

@@ -885,15 +885,18 @@ export const FOKUSVIRTA_ISTANBUL = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * Kaanon, kohta 5 — teksti sellaisenaan. Isoisän merkintä, joka
-   * aukeaa kun aarre löytyy. Kaanon merkitsee tämän MAAN 3
-   * ENSIMMÄISEKSI VAANIJAVIHJEEKSI: merkintä ei enää kerro vain siitä,
-   * että aarre jäi kaivamatta, vaan siitä, että joku muukin etsii.
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Basaarin kätköä en ehtinyt edes piirtää: mies, joka oli '
-      + 'kysellyt minusta satamassa, seisoi jo sillalla. Jätin merkin '
-      + 'luetteloon ja nousin yöjunaan — jos hän etsii samaa kuin minä, '
-      + 'toivon että sinä ehdit ensin.',
+    teksti: 'Keisarillisen museon johtaja Dethier kokosi Hagia Irenessä '
+      + 'antiikkia, ja arvelin kokoelman säilyttävän myös kadonneita '
+      + 'huoneita. Hän kuunteli minua kaksi minuuttia, nosti pöydälle '
+      + 'marmoripään ja kysyi, tunnistinko sen. En tunnistanut. Sovimme, '
+      + 'että kumpikin tuntee oman alansa.',
   },
 };

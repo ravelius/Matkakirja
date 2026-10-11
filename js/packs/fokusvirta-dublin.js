@@ -1206,23 +1206,18 @@ export const FOKUSVIRTA_DUBLIN = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable 29.8.2026) — teksti sellaisenaan. Iso aarre: Irlannin
-   * kruununjalokivet. Merkintä aukeaa, kun aarre löytyy
-   * (js/fokusvirta.js fokusvirtaAarremerkinta).
-   *
-   * VUOSILUKUKURI (ks. tiedoston alku): isoisä on Dublinissa vuonna
-   * 1873 ja jalokivet varastetaan vasta heinäkuussa 1907. Merkintä ei
-   * siksi tiedä varkaudesta mitään — se panee muistiin vartijan
-   * huolettoman lauseen ja toteaa, etteivät sellaiset lauseet vanhene
-   * hyvin. Varkaus kerrotaan pelaajalle vasta aarteen omassa
-   * faktarivissä (js/packs/paikallisaarteet.js, IRL isoAarre), eli
-   * täsmälleen silloin kun merkinnän viimeinen virke lunastuu.
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Linnassa säilytetään jalokiviä, joilla ritarikunta '
-      + 'koristautuu juhlissaan. Näin ne lasin takana: tähti ja käädyt, '
-      + 'timantteja ja smaragdeja. Vartija kehui, ettei niitä vahdi öisin '
-      + 'kukaan, sillä kuka nyt linnasta varastaisi. Kirjoitan tämän '
-      + 'muistiin, koska sellainen lause ei yleensä vanhene hyvin.',
+    teksti: 'Trinity Collegen kirjastossa pyysin nähdä Kellsin kirjan, koska '
+      + 'kaunein kätkö on kaunis kirja. Katsoin Chi Rho -sivua tunnin. '
+      + 'Siinä kaksi kissaa vahtii hiiriä, jotka nakertavat '
+      + 'ehtoollisleipää. Meripihkaa ei löytynyt, ja hiiret saivat '
+      + 'enemmän irti kuin minä.',
   },
 };

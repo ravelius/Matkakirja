@@ -1132,20 +1132,18 @@ export const FOKUSVIRTA_VARSOVA = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Merkintä aukeaa, kun aarre
-   * löytyy (js/fokusvirta.js fokusvirtaAarremerkinta).
-   *
-   * MERKINTÄ EI NIMEÄ YHTÄKÄÄN ESINETTÄ, JA SE ON TARKOITUS: Puolan
-   * iso aarre on Krakovan Rafael, ja Varsovan merkintä kuvaa tavan
-   * eikä kohdetta. Tämän paketin täyt ja oppitunti ovat saman tavan
-   * kolme esimerkkiä — taulut, kirjat ja yksi kallo — eikä yksikään
-   * niistä ole se aarre, jota pelaaja etsii.
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Kirjakauppias sanoi: tämä kansa on oppinut, että aarre jota ei '
-      + 'voi puolustaa, pitää piilottaa tai lähettää matkalle. Kirjastot, '
-      + 'sydämet, taulut — kaikki tärkein on täällä liikkunut ja liikkuu '
-      + 'vielä. Ruhtinaiden kokoelmatkin pakataan kärryihin, kun idästä '
-      + 'tai lännestä kuuluu jyrinää. Kaikki ei ole palannut vieläkään.',
+    teksti: 'Ajattelin, että Itämeren meripihka tulee Veikselin mukana, ja '
+      + 'kävelin aamuusvassa Veikselin rautasillan yli katsomaan, mitä '
+      + 'joki tuo. Laskin kuusi jännettä ennen kuin muistin, että '
+      + 'Veikseli virtaa Itämerelle eikä sieltä. Kirjoitin luetteloon: '
+      + 'aarre ei kulje vastavirtaan.',
   },
 };

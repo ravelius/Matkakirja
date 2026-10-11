@@ -1281,17 +1281,18 @@ export const FOKUSVIRTA_EDINBURGH = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Skotlannin
-   * kruununkalleudet, jotka muurattiin arkkuun ja löytyivät 1818.
-   * Merkintä aukeaa, kun aarre löytyy (js/fokusvirta.js
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
    * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Täällä kerrotaan kruunusta, joka muurattiin arkkuun sodan '
-      + 'jaloissa ja unohdettiin niin perusteellisesti, että se löytyi '
-      + 'vasta sadan vuoden päästä omasta linnastaan. Kirjailija löysi '
-      + 'sen, ei sotilas. Aarni sanoisi: parhaat kätköt eivät ole '
-      + 'kaukana — ne ovat paikoissa, joista kaikki luulevat jo '
-      + 'tietävänsä kaiken.',
+    teksti: 'Calton Hillillä seisoo Parthenonin jäljitelmä, jonka rahat '
+      + 'loppuivat vuonna 1829. Aarnin mukaan kadonnut raha jättää aina '
+      + 'jäljen, joten kiersin pilarit ja koputin jokaista. Kaikki '
+      + 'kuulostivat kiveltä. Kirjasin luetteloon, ettei raha ollut '
+      + 'kadonnut vaan seisoi näkyvillä.',
   },
 };

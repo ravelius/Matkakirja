@@ -116,4 +116,21 @@ export const FOKUSVIRTA_ISLANTI = {
       lahde: 'Matkakirjan havainnekuva',
     },
   },
+
+  /*
+   * ---------- AARREMERKINTÄ ----------
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
+   */
+  aarremerkinta: {
+    teksti: 'Reykjavikin tuomiokirkon ullakolla oli koko maan kirjasto, ja '
+      + 'Aarnin mukaan huone saattoi lymytä kirjojen välissä. '
+      + 'Kirjastonhoitaja vei minut hyllylle, jonka kirjoja en osannut '
+      + 'lukea. Hylly oli kuusi kyynärää pitkä, ja meripihkaa siinä oli '
+      + 'nolla kyynärää.',
+  },
 };

@@ -973,15 +973,18 @@ export const FOKUSVIRTA_OSLO = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: viikinkien
-   * hopeakätkö. Merkintä aukeaa, kun aarre löytyy (js/fokusvirta.js
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
    * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Talonpoika torilla kertoi, että hänen pitäjässään aura osui '
-      + 'arkkuun, jossa oli hopeaa viikinkien ajalta — ja että joka '
-      + 'pitäjässä on peltonsa, josta samaa tarinaa kerrotaan. Useimmat '
-      + 'tarinat ovat tyhjiä. Mutta maa on täällä vanhaa ja aurat uusia, '
-      + 'ja joka kevät kynnetään syvemmältä.',
+    teksti: 'Heinäkuussa Christiania puhui kuningas Oscarin kruunajaisista '
+      + 'Trondheimissa. Kävelin palatsin portille kysymään, oliko hovin '
+      + 'kellareissa Preussin lahjoja. Vartija sanoi, ettei sinne pääse '
+      + 'kuka tahansa. Kirjoitin luetteloon, etten minä ole kuka tahansa. '
+      + 'Luettelo ei vastannut.',
   },
 };

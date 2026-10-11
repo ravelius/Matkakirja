@@ -1278,14 +1278,18 @@ export const FOKUSVIRTA_MADRID = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Vigon lahden
-   * hopealasti. Merkintä aukeaa, kun aarre löytyy (js/fokusvirta.js
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
    * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Vigossa soutumies näytti kohdan, jossa hopealaivat '
-      + 'makaavat, ja pyysi viikon palkan sukelluksesta. Minulla oli '
-      + 'viikko aikaa muttei uskallusta — merkitsin syvyyden ja soudin '
-      + 'takaisin.',
+    teksti: 'Kuningas Amadeo oli luopunut kruunusta helmikuussa, ja '
+      + 'kuvittelin kuninkaanlinnan ovien olevan nyt auki. Luettelon '
+      + 'mukaan huone odotti kuningasta, joka ei sitä tarvitse. Seisoin '
+      + 'linnan edessä koko aamun hattu kädessä. Ovet olivat kiinni kuten '
+      + 'ennenkin: valtiomuoto oli vaihtunut, ei lukko.',
   },
 };

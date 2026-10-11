@@ -769,14 +769,18 @@ export const FOKUSVIRTA_TALLINNA = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: hansakauppiaan
-   * hopeakätkö seinän sisässä. Merkintä aukeaa, kun aarre löytyy
-   * (js/fokusvirta.js fokusvirtaAarremerkinta).
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Raatihuoneen vahtimestari kertoi, että vanhoista taloista '
-      + 'löytyy yhä hopeaa seinien sisästä — hansakauppias ei luottanut '
-      + 'pankkiin vaan muuriin. Koputin yhtä seinää ja jätin sen rauhaan: '
-      + 'kätkön suoja on talo, eikä taloa pureta uteliaan takia.',
+    teksti: 'Pietari Suuri sai Meripihkahuoneen 1716 ja aloitti Revalin '
+      + 'laidalla Katharinenthalin linnan 1718. Kahdessa vuodessa mies '
+      + 'ehtii päättää, minne huoneensa panee. Kiersin linnan puistossa '
+      + 'neljästi seiniä katsoen. Puutarhuri huomautti, että Pietari '
+      + 'kuoli 1725. Merkitsin senkin luetteloon.',
   },
 };

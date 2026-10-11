@@ -1290,17 +1290,18 @@ export const FOKUSVIRTA_KIOVA = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. Iso
-   * aarre: hetmani Polubotokin kultakätkö (js/packs/paikallisaarteet.js,
-   * UKR). Merkintä aukeaa, kun aarre löytyy (js/fokusvirta.js
-   * fokusvirtaAarremerkinta), samaan matkakirjakorttiin kuin
-   * saapumismerkintä.
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Vanha kirjuri kertoi hetmanista, joka vei aikoinaan '
-      + 'tynnyrillisen kultaa turvaan vieraan maan pankkiin ja kuoli '
-      + 'vankilassa kertomatta kuittia kenellekään. Suku on hakenut sitä '
-      + 'siitä asti. Pankki ei myönnä eikä kiellä — ja juuri niin, sanoi '
-      + 'kirjuri, tekee pankki jolla on jotain holvissaan.',
+    teksti: 'Aarnin luettelossa mainittiin arkkitehti Rastrelli, ja Kiovan '
+      + 'Mariinski-palatsin oli suunnitellut juuri hän. Portinvartija ei '
+      + 'päästänyt minua sisään, joten mittasin julkisivun ulkoa. Palatsi '
+      + 'oli kunnostettu kolme vuotta aiemmin. Sisältä en tiedä, mutta '
+      + 'ulkoa meripihkaa ei näkynyt.',
   },
 };

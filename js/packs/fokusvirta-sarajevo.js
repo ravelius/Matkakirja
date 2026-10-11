@@ -862,12 +862,18 @@ export const FOKUSVIRTA_SARAJEVO = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * Kaanon, kohta 5 — teksti sellaisenaan. Isoisän merkintä, joka aukeaa
-   * kun aarre löytyy. Kaanon: tähän maahan ei tule vaanijaa.
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Kätkö oli sillan kolmannen kaaren alla, käden ulottuvilla — '
-      + 'mutta joki tuli syksystä paksuna enkä uinut. Piirsin kaaren niin '
-      + 'tarkasti, että sinä löydät sen kuivin jaloin.',
+    teksti: 'Itämeren meripihka kulki antiikissa Adrianmerelle, ja kuvittelin '
+      + 'sen jatkaneen vuorten yli Sarajevoon. Kartta ei tukenut '
+      + 'ajatustani, mutta ei kieltänytkään. Morića hanin pohjakerros oli '
+      + 'tehty seitsemällekymmenelle hevoselle; en mennyt sisään. Huone '
+      + 'odottakoon, en ole kuormajuhta.',
   },
 };

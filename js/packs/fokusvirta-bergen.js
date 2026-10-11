@@ -1058,14 +1058,18 @@ export const FOKUSVIRTA_BERGEN = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: viikinkien
-   * hopeakätkö. Merkintä aukeaa, kun aarre löytyy (js/fokusvirta.js
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
    * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Vuonon suulla asuva vanhus vannoi, että hänen sukunsa mailta on '
-      + 'kynnetty esiin hopeaa, jonka viikingit kätkivät ja unohtivat — '
-      + 'käätyjä, rahoja, katkottuja harkkoja. Maa muistaa pidempään kuin '
-      + 'suku. Jossain aura ei ole vielä osunut oikeaan vakoon.',
+    teksti: 'Bryggenin vanhat puuvarastot seisoivat rannassa kuin '
+      + 'hansakauppiaat olisivat lähteneet eilen, vaikka lähtö oli yli '
+      + 'sata vuotta sitten. Hansa toi tänne Itämeren viljaa, joten '
+      + 'luulin sen tuoneen meripihkaakin. Tutkin seinät kaksi tuntia. '
+      + 'Takkini haisi kalalta kolme päivää.',
   },
 };

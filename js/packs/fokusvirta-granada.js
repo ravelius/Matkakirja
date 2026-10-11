@@ -1013,15 +1013,18 @@ export const FOKUSVIRTA_GRANADA = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Vigon lahden
-   * hopealasti. Merkintä aukeaa, kun aarre löytyy (js/fokusvirta.js
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
    * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Täällä joka toinen mies vannoo, että maurit kätkivät '
-      + 'kultansa linnan alle lähtiessään, ja joka kolmas on kaivanut '
-      + 'sitä. Vanha opas nauroi heille: kaivavat väärässä päässä '
-      + 'maata, sanoi hän — oikea aarre upposi meren pohjaan luoteessa, '
-      + 'laivojen mukana, ja sen päällä on vettä eikä kiveä.',
+    teksti: 'Granadan Capilla Realissa lepäävät Ferdinand ja Isabella, ja '
+      + 'luettelo sijoitti huoneen kuninkaiden jalkojen juureen. Kiersin '
+      + 'heidän marmorisen hautamonumenttinsa kahdesti, ja jälkimmäinen '
+      + 'kierros oli pidempi kuin ensimmäinen. Meripihkan väriä ei '
+      + 'näkynyt yhdessäkään kulmassa.',
   },
 };

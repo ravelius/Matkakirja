@@ -1275,19 +1275,18 @@ export const FOKUSVIRTA_VILNA = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Vilnan katedraalin
-   * kätkö (js/packs/paikallisaarteet.js, LTU). Merkintä aukeaa, kun
-   * aarre löytyy (js/fokusvirta.js fokusvirtaAarremerkinta).
-   *
-   * MERKINTÄ EI PALJASTA LÖYTÖVUOTTA, JA SE ON TARKOITUS. Isoisä
-   * kirjoittaa vuonna 1873 eikä voi tietää vuodesta 1985; oppitunti
-   * kertoo koko tarinan, merkintä jättää sen auki.
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Suntio kertoi äänellä, joka oli puoliksi kuiskaus: kun sota tai '
-      + 'tuli uhkaa, katedraalin holveihin kätketään mitä kallisarvoisinta '
-      + 'on, ja aina ei muisteta hakea kaikkea takaisin. Kirkon kivet '
-      + 'pitävät salaisuutensa kauemmin kuin ihmiset elävät. Joskus vielä '
-      + 'joku avaa väärän seinän oikeasta kohdasta.',
+    teksti: 'Vilnan asemalla huomasin, että Preussin rajalta Pietariin '
+      + 'johtava rata kulkee juuri tämän kaupungin kautta. Aioin '
+      + 'tiedustella, milloin Meripihkahuone saapuu. Ennen lippuluukkua '
+      + 'tarkistin vuosiluvut: huone lahjoitettiin 1716, säännölliset '
+      + 'junat alkoivat 1862. Olin 146 vuotta myöhässä.',
   },
 };

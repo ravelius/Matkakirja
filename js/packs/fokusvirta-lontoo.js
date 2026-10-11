@@ -1310,15 +1310,18 @@ export const FOKUSVIRTA_LONTOO = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: kuningas Juhanan
-   * jalokivet, jotka upposivat Wash-lahdella 1216. Merkintä aukeaa,
-   * kun aarre löytyy (js/fokusvirta.js fokusvirtaAarremerkinta).
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Washin lahdella vanha kalastaja näytti, missä kuningas '
-      + 'Juhanan kuormasto upposi liejuun — vuorovesi oli syönyt sen '
-      + 'kuudessasadassa vuodessa syvemmälle kuin yksikään lapio yltää. '
-      + 'Kirjoitin luetteloon: tämä aarre ei ole kadonnut, se on vain '
-      + 'kärsivällisempi kuin me.',
+    teksti: 'Threadneedle Streetin Baltic-pörssin ovella sydämeni hypähti, '
+      + 'sillä Itämeri tarkoittaa meripihkaa. Kysyin portieerilta, '
+      + 'kaupattiinko sisällä sitä. Hän sanoi, että kaupataan talia. '
+      + 'Kiitin ja jäin vielä hetkeksi sumuun odottamaan, että vastaus '
+      + 'muuttuisi.',
   },
 };

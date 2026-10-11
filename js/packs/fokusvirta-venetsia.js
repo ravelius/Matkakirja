@@ -942,16 +942,18 @@ export const FOKUSVIRTA_VENETSIA = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta.
-   * Merkintä aukeaa, kun aarre löytyy (js/fokusvirta.js
-   * fokusvirtaAarremerkinta), ja voittaa kortissa sekä virran oman
-   * merkinnän että vanhan saapumistekstin.
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Lasinpuhaltaja Muranossa sanoi, että tässä kaupungissa '
-      + 'mikään ei katoa — se vain vajoaa. Kanaalien pohjassa makaa '
-      + 'sormuksia, kolikoita ja vähintään yksi dogen sinetti, ja joka '
-      + 'kuivatuksessa jotain nousee. Kaupunki joka seisoo veden päällä '
-      + 'pitää aarteensa veden alla.',
+    teksti: 'Laskuveden aikaan laguuni haisi niin, että pakenin Frarin '
+      + 'arkistoon, jonne oli koottu koko tasavallan paperit. Arvelin '
+      + 'meripihkakaupan jättäneen sinne jäljen. Odotushuoneessa mittasin '
+      + 'ikkunan, oven ja penkin, ja luettelo tuli vasta kun olin valmis. '
+      + 'Se alkoi suolasta ja päättyi pippuriin.',
   },
 };

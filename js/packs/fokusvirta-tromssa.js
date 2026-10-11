@@ -170,4 +170,21 @@ export const FOKUSVIRTA_TROMSSA = {
       europe: { x: 577, y: 66 },
     },
   },
+
+  /*
+   * ---------- AARREMERKINTÄ ----------
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
+   */
+  aarremerkinta: {
+    teksti: 'Tromssan satamassa venäläiset pomorit vaihtoivat ruisjauhoja '
+      + 'kuivattuun kalaan. Kysyin päälliköltä ranskaksi tsaarin '
+      + 'meripihkahuoneesta. Hän vastasi venäjäksi pitkään ja iloisesti. '
+      + 'Kiitin, nyökkäsin ja ostin säkillisen jauhoja, koska luulin sitä '
+      + 'vastaukseksi.',
+  },
 };

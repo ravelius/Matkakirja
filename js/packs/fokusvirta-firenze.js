@@ -911,16 +911,18 @@ export const FOKUSVIRTA_FIRENZE = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Caravaggion
-   * kadonnut maalaus. Merkintä aukeaa, kun aarre löytyy
-   * (js/fokusvirta.js fokusvirtaAarremerkinta).
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Taidekauppias kertoi minulle maalarista, joka pakeni miekka '
-      + 'kädessä kaupungista toiseen ja jätti jälkeensä tauluja, joista '
-      + 'kaikkia ei ole koskaan laskettu. Yksi niistä on hänen mukaansa '
-      + 'yhä väärässä huoneessa, väärän nimen alla, eikä kukaan ole '
-      + 'katsonut sitä kunnolla kahteensataan vuoteen. Pimeästä ne '
-      + 'hänen taulunsa syntyivät — pimeään ne osaavat myös kadota.',
+    teksti: 'Ponte Vecchion kultasepät olivat pitäneet siltaa 1500-luvulta '
+      + 'asti, ja arvelin, että kolmessa vuosisadassa heille on kertynyt '
+      + 'kaikkea kaunista. Laskin liikkeet kahdesti ja sain eri luvut, '
+      + 'mikä ei ole minulle tavallista. Meripihkaa oli yksi rannekoru. '
+      + 'Huone ei olisi mahtunut sillallekaan.',
   },
 };

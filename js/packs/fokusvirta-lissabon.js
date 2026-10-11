@@ -1207,19 +1207,18 @@ export const FOKUSVIRTA_LISSABON = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. Iso
-   * aarre: kuninkaan kirjaston nide. Merkintä aukeaa, kun aarre löytyy
-   * (js/fokusvirta.js fokusvirtaAarremerkinta).
-   *
-   * MUOTO ON OLIO EIKÄ MERKKIJONO (v1301: jokainen kaupunki kirjoittaa
-   * `{ teksti }`).
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Kirjastonhoitaja kertoi kuninkaan kirjastosta, joka pakeni '
-      + 'laivalla valtameren yli keisarin sotia — kymmeniätuhansia niteitä '
-      + 'heiluvissa arkuissa. Kaikki eivät koskaan palanneet. Yksi nide on '
-      + 'hänen mukaansa yhä väärällä mantereella, väärässä hyllyssä, '
-      + 'oikeiden kansien takana. Kirja on helpoin aarre piilottaa: se '
-      + 'katoaa toisten kirjojen sekaan.',
+    teksti: 'Oppaan mukaan Águas Livresin akveduktin suuri kaari on noin '
+      + 'kuusikymmentäviisi metriä korkea. Luettelo vihjasi huoneeseen, '
+      + 'jonka yli vesi kulkee, joten otin Alcântaran laaksossa kaaren '
+      + 'korkeuden kolmella tavalla ja sain kolme tulosta. Huonetta en '
+      + 'löytänyt. Kaaren korkeuttakaan en.',
   },
 };

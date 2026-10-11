@@ -932,16 +932,18 @@ export const FOKUSVIRTA_BARCELONA = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. Iso
-   * aarre: Vigon lahden hopealasti. Merkintä aukeaa, kun aarre löytyy
-   * (js/fokusvirta.js fokusvirtaAarremerkinta), samaan matkakirja-
-   * korttiin kuin saapumismerkintä.
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Satamakapakassa laulettiin laulua lahdesta pohjoisessa, '
-      + 'jonne upposi laivasto hopeaa lasteinaan — ja joka mies vannoi '
-      + 'tietävänsä jonkun, joka melkein nosti sen. Melkein on tässä '
-      + 'maassa raskain sana. Kirjoitan laulun säkeen muistiin: "hopea '
-      + 'makaa Vigossa, kärsivällisyys sen perii."',
+    teksti: 'Ciutadellan linnoitus oli luovutettu kaupungille jo 1869, ja '
+      + 'kenttää muotoiltiin puistoksi. Aarnin luettelo sijoitti huoneen '
+      + 'sen kellareihin, joten vuokrasin lapion. Työmaalla oli jo '
+      + 'enemmän kuoppia kuin ehtisin kaivaa viikossa. Palautin lapion '
+      + 'käyttämättömänä; vuokra meni silti päivältä.',
   },
 };
