@@ -84,3 +84,11 @@ Taustalla EI omia ajoja (cron 440f4d6d katoaa nollauksessa).
 - Omistaja 00.0x: säästökatot 1–3 → natiiviseppa/kuvataajuus-181 ccf9df4f5 (KuvataajuusPaatos: pallokierros + lämmin 40/30 fps, kartan lepo 10 Hz).
 - JUNA 181 = natiiviseppa/juna-181 5eb15ef80 (BUILD 180 04c2af364 + Pelikoodari 04d98a0b9, NUI 5a57b42b5, LS1 eca61364a, kuvataajuus ccf9df4f5); K466/P473/L1354, unity 0, tarkista ok; peilattu.
   Uusintamittaus (sama 15 min) ennen lukitusta: scratchpad akku181.sh odottaa Julkaisijan NYT:iä. Tulossa: LS1 esityksen ajoitus (KIIRE) + pallokompassi, LR v47f, LS2 saliääni.
+
+## TILA 11.10. 10.20 — BUILD 181 LUKITTU
+- **BUILD 181 = a93ce987f48bc35e4b2554990427573d51947d1c** (master; juna/b13 dc89bb5d6 = natiiviseppa/juna-181-2; puu identtinen; L1435/P489/K466, unity 0;
+  KÄÄNNETTY ea478c73f 10.19). Muistiajo 181 OK (51bd68d8b) + puiden Pariisi-portti OK (c1de4d7f3: A 0,69 / B 0,73 Gt). Omistaja 09.3x: kaikki valmiit 181:een.
+  Muutosloki julkaisija-tyokalut/muutosloki-181.txt (PT kuittasi). Mac odottaa Julkaisijan NYT:iä (scratchpad mac181.sh).
+- Peilipush-kilpa: peili/proto/juna/b13 oli jo dc89bb5d6:ssa (vahti) → atominen push hylättiin; master + proto/juna/b13 pushattu uudelleen erikseen.
+- 182-jono: Olavinlinna v12 (60265de6d, 6dd9ee50e, Siirtoseppä v12, Julkaisijan 181l), f94ff6d02, NUI 79fbb7a35 (ei kuitattu). MSAA-syvyysvika (PT) jonossa.
+- Levysiivous: PT 09.1x vaihtoehto b) NAS-siirto VIE:n jälkeen valmiilla siirtotyökalulla (omistaja hylkäsi rm -rf:n 00.4x; tarkista poistetaanko lähde).
