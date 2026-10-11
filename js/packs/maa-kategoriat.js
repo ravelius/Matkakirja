@@ -9228,12 +9228,12 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Museum Folkwang Essen — valokuvakokoelma',
-              tiedosto: 'Museum Folkwang Essen-10.jpg',
+              tiedosto: "Frontansicht Museum Folkwang.JPG",
               lyhyt: 'Essenin Museum Folkwang syntyi 1922 kaupungin taidemuseon ja Osthausin kokoelman yhdistyessä.',
               selite: 'Essenin Museum Folkwang syntyi 1922, kun kaupungin '
                 + 'taidemuseo ja Karl Ernst Osthausin yksityiskokoelma '
                 + 'yhdistettiin.',
-              lahde: 'Rufus46, Wikimedia Commons (CC BY-SA 3.0)',
+              lahde: "Julius1990, Wikimedia Commons (CC BY-SA 3.0)",
               teksti: 'Essenin Folkwang on yksi Saksan tärkeimmistä '
                 + 'valokuvamuseoista. Se säilyttää kokonaisia valokuvaajien '
                 + 'jäämistöjä negatiiveineen, ja kuvat selataan museon '
@@ -18235,7 +18235,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kuva, jossa on syvyys',
           aika: '1947',
-          tiedosto: 'Visa Dove Hologram Rainbow.jpg',
+          tiedosto: "Hologram by Ken Harris, 2012 Switzerland.jpg",
           teksti: 'Dénes Gábor yritti parantaa elektronimikroskoopin sumeaa kuvaa '
             + 'ja keksi vuonna 1947 menetelmän, jossa talteen otetaan valon '
             + 'kirkkauden lisäksi se, missä vaiheessa aalto saapuu. Kun '
@@ -18247,7 +18247,7 @@ export const MAA_KATEGORIAT = {
           lyhyt: 'Holografia tallentaa ja palauttaa aaltorintaman, tunnetuimmin kolmiulotteisina kuvina.',
           selite: 'Holografia tallentaa ja palauttaa aaltorintaman, ja se '
             + 'tunnetaan parhaiten kolmiulotteisten kuvien tuottamisesta.',
-          lahde: 'Dominic Alves, Wikimedia Commons (CC BY 2.0)',
+          lahde: "Ken Harris, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       tehtava: {
