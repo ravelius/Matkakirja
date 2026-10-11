@@ -16939,8 +16939,8 @@ export const KAUPUNKIKARTAT = {
     esittely: 'Kartan ydin on Gran Valiran laakso, jossa vanha keskusta ja Santa Coloma ovat rinnakkain. Mukana on myös Escaldesin kylpylä.',
     rajat: {
       pohjoinen: 42.5144,
-      etela: 42.4915,
-      lansi: 1.4939,
+      etela: 42.4891,
+      lansi: 1.4906,
       ita: 1.5405,
     },
     kohteet: [
