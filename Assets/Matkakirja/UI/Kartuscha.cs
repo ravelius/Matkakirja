@@ -111,6 +111,7 @@ namespace Matkakirja.Natiivi
             radio.RegisterCallback<GeometryChangedEvent>(_ => TasaaNimirivi());
 
             kerros.TurvaMuuttui += Asettele;
+            UiSisalto.LehdetSaapuivat += PaivitaPaakaupunkiLehti;
             kerros.JokaRuutu += TarkistaOhiNapautus;
             // Pelaajan maa tarkistetaan harvakseltaan (kaupunki vaihtuu vain saapuessa).
             kortti.schedule.Execute(Seuraa).Every(400);
@@ -468,12 +469,15 @@ namespace Matkakirja.Natiivi
             valtiomuotoRivi.style.display = DisplayStyle.None;
             foreach (var vanha in tilastot.Query(className: "mk-kartuscha__rivi").ToList()) vanha.RemoveFromHierarchy();
             pkKuvat?.RemoveFromHierarchy(); pkKuvat = null;
+            pkLehti?.RemoveFromHierarchy(); pkLehti = null; pkLehtiId = null; pkRivi = null;
             vertailut.Clear();
             // Pääkaupunki ensimmäisenä rivinä (PT 10.10., sama kuin web): "HALLINNON PAIKKA", kun asema on "hallinnon paikka"
             // (ISR → Jerusalem, PSE → Ramallah); ilman tietoa ei riviä.
             if (m.Paakaupunki != null)
                 Tilasto(Kieli.T(m.PaakaupunkiAsema == "hallinnon paikka" ? "ui.kartuscha.hallinnon-paikka" : "ui.kartuscha.paakaupunki"), m.Paakaupunki, null);
+            if (m.Paakaupunki != null) pkRivi = tilastot.Query(className: "mk-kartuscha__rivi").First();
             if (m.Paakaupunki != null && m.PaakaupunkiKuvat.Count > 0) PaakaupunkiKuvat(m.PaakaupunkiKuvat);
+            if (m.PaakaupunkiId != null) { pkLehtiId = m.PaakaupunkiId; UiSisalto.LataaLehti(pkLehtiId); PaivitaPaakaupunkiLehti(); }
             if (m.OnTiedot)
             {
                 Tilasto(Kieli.T("ui.kartuscha.vakiluku"), m.Vakiluku, m.VakilukuSija);
@@ -581,12 +585,36 @@ namespace Matkakirja.Natiivi
                 });
             }
         }
-        VisualElement pkKuvat;
+        VisualElement pkKuvat, pkRivi;
         Kuvasuurennos suurennos;
 
+        /// <summary>
+        /// PÄÄKAUPUNGIN LEHTI (PT 11.10.2026 06.4x, Pelikoodarin suunnitelma kohta 4): kevyen pääkaupunkipisteen (Zagreb, Bern …) lehti
+        /// avautuu Avauskortin "Lue kaupunkilehti →" -painikkeella (sama pohja mk-avauskortti__lehti) pääkaupunkirivin ja kuvarivin alla.
+        /// Painike näkyy vasta, kun kokoelmat/kaupunkilehdet/&lt;id&gt; on liitetty (UiSisalto.LehdetSaapuivat); 404 = ei painiketta.
+        /// </summary>
+        void PaivitaPaakaupunkiLehti()
+        {
+            bool on = pkLehtiId != null && UiSisalto.Kaupunki(pkLehtiId)?.Lehti == true && pkRivi?.parent == tilastot;
+            if (!on) { pkLehti?.RemoveFromHierarchy(); pkLehti = null; return; }
+            if (pkLehti != null) return;
+            string id = pkLehtiId;
+            pkLehti = Rakenne.Nappi(Kieli.T("ui.avauskortti.lue-kaupunkilehti"), "mk-avauskortti__lehti", () =>
+            {
+                string virhe = PeliOhjain.Instanssi != null ? PeliOhjain.Instanssi.LueLehti(id) : "peli ei ole valmis";
+                Debug.Log("MATKAKIRJA ui kartuscha: pääkaupungin lehti " + id + (virhe != null ? " ei avautunut: " + virhe : " avattu"));
+            }, null);
+            Kirjasimet.Aseta(pkLehti, Kirjasin.Kone);
+            pkLehti.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());   // ei avaa sijoja (tilastot)
+            tilastot.Insert(tilastot.IndexOf(pkKuvat?.parent == tilastot ? pkKuvat : pkRivi) + 1, pkLehti);
+        }
+        Button pkLehti;
+        string pkLehtiId;
+
         /// <summary>Testi (`ui kartuscha pkkuvat`): pääkaupungin kuvarivin tila.</summary>
-        public string PaakaupunkiKuvatKuvaus() => pkKuvat == null ? "pääkaupungin kuvat: ei riviä"
-            : $"pääkaupungin kuvat: {pkKuvat.childCount} kuvaa @ {pkKuvat.worldBound.xMin:0},{pkKuvat.worldBound.yMin:0} {pkKuvat.worldBound.width:0}×{pkKuvat.worldBound.height:0}";
+        public string PaakaupunkiKuvatKuvaus() => (pkKuvat == null ? "pääkaupungin kuvat: ei riviä"
+            : $"pääkaupungin kuvat: {pkKuvat.childCount} kuvaa @ {pkKuvat.worldBound.xMin:0},{pkKuvat.worldBound.yMin:0} {pkKuvat.worldBound.width:0}×{pkKuvat.worldBound.height:0}")
+            + $"; lehti {pkLehtiId ?? "-"}: {(pkLehti != null ? "painike" : pkLehtiId != null && UiSisalto.LehtiLuettu(pkLehtiId) ? "ei lehteä" : "ei painiketta")}";
 
         void Tilasto(string nimike, string arvo, string sija)
         {
