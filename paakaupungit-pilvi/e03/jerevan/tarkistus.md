@@ -65,3 +65,124 @@ Ryhmittäin, polut sisalto.jsonissa.
 - EPÄVARMA pehmennetty: hallituksen talon lyhyt, Tabriz poistettu, Kaskadin rakennusajankohta, lavash (alkupalat), Cafesjianin 5 000 / 500, valokuva.vuosi "1800-luku" ennallaan.
 - Oikeiden vastausten indeksit sekoitettu: correct 2, 0, 3, 1, 2; tehtava.oikea 2.
 - Kuvia ei vaihdettu, kuvat.md ennallaan. tarkista --verkko: 0 virhettä.
+
+
+## Lukupassi (11.10.2026, Päätoimittajan lisäsääntö: tarkka luku vain kahdella riippumattomalla lähteellä)
+
+Lähteet: en-Wikipedian artikkelit (Yerevan, History of Yerevan, Erebuni Fortress, Blue Mosque, Matenadaran, Yerevan Cascade, Cafesjian Museum of Art, Republic Square, Alexander Tamanian, Saint Sarkis, Zoravor, Opera Theatre, English Park, Northern Avenue, Yerevan Metro, Khachatur Abovian, Mesrop Mashtots, Zvartnots, World Book Capital) sekä fi-Wikipedia (Jerevan, Tasavallan aukio). fi-Wikipedian Matenadaran-, Kaskadi- ja Tamanian-artikkelit eivät sisältäneet lukuja eikä Wikidata/Wikivoyage-hakuja saatu läpi, joten yhden artikkelin varassa olleet luvut pyöristettiin tai poistettiin. Vuosikymmen- ja vuosisatatason ilmaisut ('1800-luvun lopulla') eivät ole tarkkoja lukuja eivätkä vaadi kahta lähdettä. Päätös: S = säilytetty, P = pyöristetty, R = poistettu.
+
+| Sijainti | Arvo | Lähteet | Päätös | Uusi muoto |
+|---|---|---|---|---|
+| artikkeli.intro, teksti | 782 eaa. (Erebuni) | en Yerevan; en Erebuni Fortress; en History of Yerevan; fi Jerevan (700-luku eaa.) | S |  |
+| artikkeli, kysymys 2, nostot, johdanto | 782 eaa. (kysymysvaihtoehdot 882/682/582 väärinä) | kuten yllä | S |  |
+| artikkeli.teksti | pääkaupunki vuodesta 1918 | en Yerevan; fi Jerevan (1918 jälkeen) | S |  |
+| artikkeli.teksti | 21.9.1991 -> vuosi 1991 | en Yerevan (päivä); fi Jerevan (vuosi) | P | vain vuosi 1991 (fi tukee vuotta) |
+| artikkeli.teksti, nosto 1 | Erivanin linnoitus 1582–83 | en Yerevan; en History of Yerevan | S |  |
+| artikkeli.teksti, nosto 1, nähtävyydet | valtaus lokakuussa 1827 | en Yerevan; en History of Yerevan; fi Jerevan (1827) | S | kuukausi lokakuu, ei päivää (lähteet 1.10. / 2.10.) |
+| nosto 1 | siirtyminen Venäjälle 1827–28 | en Yerevan (1827, 1828); fi Jerevan (1826–27) | S |  |
+| artikkeli.teksti, kuvatekstit | 2 750-vuotisjuhla 1968 | en Yerevan; en Erebuni Fortress; en Republic Square; fi Tasavallan aukio | S |  |
+| artikkeli.teksti, nosto 2, nähtävyydet | Tamanianin suunnitelma 1924 | en Yerevan; en Blue Mosque; fi Tasavallan aukio | S |  |
+| nosto 2, nähtävyydet, kansikuva | Tasavallan aukio alkoi 1926 | en Republic Square; fi Tasavallan aukio | S |  |
+| nosto 2, nähtävyydet, kansikuva | kansallisgalleria valmis 1977 | en Republic Square; fi Tasavallan aukio | S |  |
+| intro, johdanto, kirjallisuus | UNESCO kirjapääkaupunki 2012 | en Yerevan; en World Book Capital | S |  |
+| kirjallisuus nosto 0 | Matenadaran perustettu 1959 | en Matenadaran; en Yerevan | S | päivä 3.3. poistettu (P) |
+| kirjallisuus nosto 2 | Armenian haavat julkaistu 1858 | en Khachatur Abovian; en Matenadaran | S |  |
+| nähtävyydet, oopperatalo | avattu 1933 | en Yerevan; en Opera Theatre; fi Jerevan | S | päivä 20.1. poistettu (P) |
+| nähtävyydet, oopperatalo | sali 1939 | en Yerevan; en Opera Theatre | S |  |
+| nähtävyydet, oopperatalo | koko rakennus 1953 | en Opera Theatre; en Tamanian | S |  |
+| opas, nähtävyydet, kuvateksti | Pohjoinen puistokatu 450 m | en Yerevan; en Northern Avenue; fi Tasavallan aukio | S |  |
+| opas jakso 0 | lentoasema 12–15 km | en Zvartnots (15 km); fi Jerevan (12 km) | S |  |
+| opas jakso 0 | metro noin 12–13 km | en Yerevan (12,1); en Yerevan Metro (13,4) | S | haarukka kattaa molemmat |
+| opas jakso 0, nosto | metro 10 asemaa | en Yerevan; en Yerevan Metro | S |  |
+| opas jakso 0 | metro vuodesta 1981 | en Yerevan; en Yerevan Metro | S |  |
+| nähtävyydet, Sargis | 1835–1842 | en Yerevan; en Saint Sarkis | S |  |
+| nähtävyydet, Sargis ja Zoravor | maanjäristys 1679 | en Yerevan; en History of Yerevan; en Sargis; en Zoravor | S |  |
+| nähtävyydet, Zoravor | 1693–94 | en Yerevan; en Zoravor | S |  |
+| nähtävyydet, Sininen moskeija | suurin kahdeksasta moskeijasta | en Blue Mosque; en Yerevan (kahdeksan moskeijaa 1800-luvun puolivälissä) | S |  |
+| nähtävyydet, Tasavallan aukio | viisi rakennusta | en Republic Square; fi Tasavallan aukio | S |  |
+| artikkeli.intro, matkailijalle | asukasluku 1 147 600 (1.1.2026) | vain konteksti.json; en Yerevan 1 086 677 ja fi 1 060 138 (2011) eivät tue tarkkaa lukua | P | noin 1,1 miljoonaa |
+| artikkeli.intro, teksti, nosto 1 | kaupunkistatus 1.10.1879 | vain en Yerevan | P | 1870-luvun lopulla |
+| nosto 1 | kirjapaino 1874 | vain en Yerevan | P | 1870-luvulla |
+| nosto 1 | teatteri 1879 | vain en Yerevan | P | 1870-luvulla |
+| kysymys 5 | nimi palautettu 1936 | vain en Yerevan | P | Neuvostoliiton aikana |
+| kysymys 1 / tiedot | 990 m keskikorkeus | vain en Yerevan | P | noin tuhannen metrin korkeudessa |
+| tiedot | 98 päivää pääsiäisen jälkeen (Vardavar) | vain en Yerevan | R | 'pääsiäisen jälkeen' |
+| tiedot, artikkeli.teksti | 12 kolmiota lipussa | vain en Yerevan | R | 'pieniä kolmioita' |
+| tiedot | 'viidenkymmenen korkeimman miljoonakaupungin joukossa' | vain en Yerevan | R | 'korkeimmalla olevien miljoonakaupunkien joukossa' |
+| kysymys 2 fact, nosto 0 | perustamiskirjoitus syksyllä 1950 | vain en Erebuni Fortress | P | 1950-luvun alussa |
+| nosto 0 | Arin Berd 65 m | vain en Erebuni Fortress | R |  |
+| nosto 0 | yli sata huonetta | vain en Erebuni Fortress | P | lukuisia huoneita |
+| nosto 0 | Erebunin museo 1968 | vain en Erebuni Fortress | P | '2 750-vuotisjuhlan aikoihin 1968' (S-vuosi tuettu) |
+| nosto 3, nähtävyydet | Kaskadin päätös 2002 | vain en Yerevan Cascade | P | 2000-luvun alussa |
+| nosto 3, nähtävyydet | avaus marraskuussa 2009 | en Cafesjian Museum of Art (17.11.); en Yerevan Cascade (2009) | P | vain 2009 |
+| nosto 3 | yli 550 askelmaa | vain en Yerevan Cascade (555–572) | P | satoja askelmia |
+| nähtävyydet, Kaskadi | 302 m | vain en Yerevan Cascade | P | noin 300 metrin matkalla |
+| nosto 3, kuvatekstit, nähtävyydet | viisi terassia | vain en Yerevan Cascade | R | 'terasseja' |
+| nosto 3 | Cafesjianin kokoelma yli 5 000 / yli 500 | vain en Cafesjian Museum of Art | P | tuhansia teoksia; 500 poistettu |
+| nähtävyydet, Kaskadi | rakentaminen 1970-luvun alussa tai 1980 | vain en Yerevan Cascade | P | 1970- tai 1980-luvulla |
+| kirjallisuus nosto 0 | nimetty 1962 | vain en Matenadaran | P | 1960-luvun alussa |
+| kirjallisuus nosto 0 | 3.3.1959 päivä | vain en Matenadaran | P | vain 1959 (S) |
+| kirjallisuus nosto 0 | 1828: 1 809 ja 1913: 4 660 käsikirjoitusta | vain en Matenadaran | R | 'tuhansiin käsikirjoituksiin' |
+| kirjallisuus nosto 0 | noin 23 000 käsikirjoitusta | vain en Matenadaran | P | kymmeniä tuhansia |
+| kirjallisuus nosto 0 | UNESCO Muisti maailmasta 1997 | vain en Matenadaran | R | vuosi poistettu |
+| kirjallisuus nosto 1, johdanto | Mashtotsin aakkoset noin 405 | vain en Mesrop Mashtots | P | 400-luvun alussa |
+| kirjallisuus nosto 1 | Mashtots 362–440 | vain en Mesrop Mashtots | P | 300- ja 400-luvuilla |
+| kirjallisuus nosto 1 | Lazarian 887 | vain en Matenadaran | P | 800-luvulta |
+| kirjallisuus nosto 1 | Echmiadzin 989 | vain en Matenadaran | P | 900-luvulta |
+| kirjallisuus nosto 1 | norsunluukansi 500-luvulta | vain en Matenadaran | R | vuosisata poistettu |
+| kirjallisuus nosto 1 | Urbatagirk 1512, Venetsia | vain en Matenadaran | P | 1500-luku |
+| kirjallisuus nosto 1 | kartta 1695, Amsterdam | vain en Matenadaran | P | 1600-luku |
+| tehtävä fakta | Vehamor-lahjoitus 1975 | vain en Matenadaran | R | vuosi poistettu; 600-luku säilyi (vuosisata) |
+| kirjallisuus nosto 2, kuvateksti | kansalliskirjasto 1832 | vain en Yerevan | P | 1800-luvulla |
+| kirjallisuus nosto 2, kuvateksti | nykyinen rakennus vuodesta 1939 | vain en Yerevan | P | 1900-luvun alkupuoliskolta |
+| kirjallisuus nosto 2 | kirjapaino 1874 (Gevorkian) | vain en Yerevan | P | 1870-luvulla |
+| kirjallisuus nosto 2 | yleinen kirjasto 1902 | vain en Yerevan | P | 1900-luvun alussa |
+| kirjallisuus nosto 2 | Abovian syntyi 1809 | vain en Khachatur Abovian | P | 1800-luvun alussa |
+| kirjallisuus nosto 2 | romaani kirjoitettu 1841 | vain en Khachatur Abovian | P | 1840-luvulla |
+| kirjallisuus nosto 3 | valinta julkistettu 6.6.2010 | vain en Yerevan | R | poistettu |
+| kirjallisuus nosto 3 | Khnko Aper 1933, Isahakjan 1935, musiikkikirjasto 1965 | vain en Yerevan | P | 1900-luvulla perustettuja |
+| kirjallisuus nosto 3 | Charents-museo 1921 | vain en Yerevan | P | 1900-luvun alussa |
+| opas jakso 0 | raitiotie lakkautettu tammikuussa 2004 | vain en Yerevan | P | 2000-luvun alussa |
+| opas jakso 0 | käteismaksu lakkautettu tammikuussa 2025 | vain en Yerevan (marras 2024 / tammi 2025) | P | 'on lakkautettu' |
+| opas jakso 0, kuvateksti | johdinautot 1949 | vain en Yerevan | R | 'vuosikymmenien ajan' |
+| opas jakso 0, kuvateksti | viisi johdinautolinjaa | vain en Yerevan | R | tunnukset T1–T5 säilyivät, määrä poistettu |
+| opas jakso 1, nähtävyydet, kuvateksti | musiikkisuihkulähteet syyskuussa 2007 | vain en Republic Square / Yerevan | P | 2000-luvun lopulla |
+| opas jakso 1 | Pohjoinen puistokatu avattu 16.11.2007 | vain en Northern Avenue | P | 2000-luvun lopulla |
+| opas jakso 1, kuvateksti | Pohjoinen puistokatu 27 m leveä | vain en Northern Avenue | R |  |
+| opas jakso 2, matkailu | Erebuni noin 4,6 km Tasavallan aukiolta | laskettu koordinaateista; ei kahta tekstilähdettä | P | muutaman kilometrin päässä |
+| opas jakso 3 | konjakin tuotanto 1890–1900-luvuilla | en Yerevan (1887 tehdas)  | P | 1800-luvun lopulta alkaen |
+| opas jakso 4 | tammikuu −3,5 / heinäkuu 26,8 / lokakuu 14 | vain en Yerevan (ilmastotaulukko) | P | 'pakkasen puolella', 'lähes 30 astetta'; lokakuun luku poistettu |
+| opas jakso 4 | sadanta 363 mm; elo- ja syyskuu 10 mm | vain en Yerevan (taulukko 363, proosa 318) | P | alle 400 mm; kuukausiluku poistettu |
+| opas jakso 4 | elokuussa 40 astetta; tammikuussa −15 | vain en Yerevan | P | 'lähelle 40 astetta'; pakkasluku poistettu |
+| opas jakso 4 | ennätys 43,7 °C 12.7.2018 | vain en Yerevan | R |  |
+| opas, hyvä tietää | viisumiton 180 päivää | vain Wikivoyage (ei toista lähdettä) | R | 'rajoitetun ajan' |
+| nähtävyydet, Sininen moskeija | rakennettu noin 1765–66 | vain en Blue Mosque | P | 1700-luvun lopulla |
+| nähtävyydet, Sininen moskeija | minaretti 24 m | vain en Blue Mosque | R |  |
+| nähtävyydet, Sininen moskeija | noin 30 poikaa (Haxthausen) | vain en Blue Mosque | R | 'joukko poikia' |
+| nähtävyydet, Sininen moskeija | laatoitus 1887–88 | vain en Blue Mosque | P | 1800-luvun lopulla |
+| nähtävyydet, Sininen moskeija | uudistus 1907–1910 | vain en Blue Mosque | P | 1900-luvun alussa |
+| nähtävyydet, Sininen moskeija | restaurointi 1994–98, käyttö 1996 | vain en Blue Mosque | P | 1990-luvulla |
+| nähtävyydet, Sininen moskeija | Persian kielen kirjasto 2014 | vain en Blue Mosque | P | 2010-luvulla |
+| nähtävyydet, Tasavallan aukio | nimenmuutos 1.11.1990 | vain en Republic Square | P | 1990-luvun taitteessa |
+| nähtävyydet, Tasavallan aukio | kaivaukset 2003 | vain en Republic Square | P | 2000-luvun alun kunnostuksessa |
+| nähtävyydet, Sargis | Nahabet 1691–1705 | vain en Sargis | P | 1600-luvun lopulla |
+| nähtävyydet, Sargis | suunnitelma 1972 | vain en Sargis | P | 1970-luvulla |
+| nähtävyydet, Sargis | kellotorni 2000 | vain en Sargis | P | 2000-luvun vaihteessa |
+| nähtävyydet, Zoravor | Pilipos 1632–35 | vain en Zoravor | R | vuodet poistettu |
+| nähtävyydet, Zoravor | kappeli 1889 | vain en Zoravor | P | 1800-luvun lopulla |
+| nähtävyydet, oopperatalo | perustuskivi 28.11.1930 | vain en Opera Theatre | P | 1930-luvun alussa |
+| nähtävyydet, oopperatalo | salit 1 300 / 1 070 paikkaa | vain en Opera Theatre | P | yli tuhat paikkaa |
+| nähtävyydet, oopperatalo | Joutsenlampi 1935, Anoush 1935 | vain en Opera Theatre | R | vuodet poistettu |
+| nähtävyydet, oopperatalo | patsaat 1957 | vain Freedom Square -lähde | R | vuosi poistettu |
+| nähtävyydet, Matenadaran | korkeus 22,4 m | vain en Matenadaran | R |  |
+| nähtävyydet, Matenadaran | rakentaminen 1945–57/58 | vain en Matenadaran | P | 1900-luvun puolivälissä useita vuosia; 'aika' 1900-luvun puoliväli |
+| nähtävyydet, Matenadaran | mosaiikki 1960, seinämaalaus 1959, Avarayr 451 | vain en Matenadaran | R | vuodet poistettu |
+| nähtävyydet, Matenadaran | uusi rakennus 20.9.2011 | vain en Matenadaran | P | 2010-luvun alussa |
+| nähtävyydet, Matenadaran | 132 600 kävijää 2019 | vain en Matenadaran | P | yli satatuhatta, 2010-luvun lopulla |
+| nähtävyydet, Matenadaran, nosto 0 | kuusi oppineen patsasta | vain en Matenadaran | R | 'keskiaikaisten oppineiden patsaat' |
+| nähtävyydet, Englantilainen puisto | 1856 / 1860-luku | en Yerevan (1856) ja en English Park (1860-luku) ristiriidassa | P | 1800-luvun puoliväli |
+| nähtävyydet, Englantilainen puisto | 5,5 ha | vain en English Park | R |  |
+| nähtävyydet, Englantilainen puisto | kunnostus 1910, jalkapallo 1920 | vain en English Park | P | 1900-luvun alussa; 1920-luvun alussa |
+| nähtävyydet, Englantilainen puisto | 2 800-vuotispuisto | vain en English Park | R | 'erilliseksi puistoksi' |
+
+Yhteensä: säilytetty 26, pyöristetty 60, poistettu 25. Kysymysten fact-kentät ja oikeat vastaukset ovat loogisesti eheät (Q2 782 eaa. säilyi; Q5 fact ilman vuotta; tehtävän fakta ilman lahjoitusvuotta). tarkista e03 jerevan --verkko: 0 virhettä.
