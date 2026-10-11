@@ -79,3 +79,15 @@ Yhteenveto: VÄÄRIN 9, EPÄVARMA 9. Kaikki muut tarkistetut väitteet OK (alla 
 | matkailijalle.artikkeli.jaksot[0].kuva (J1, Rike-puisto) | VÄÄRIN | kuvassa ei gondolia, ks. yllä |
 | valokuva.selite | VÄÄRIN | visuaalinen sisältö, ks. yllä |
 | kaupunkilehti[0].nostot[3] (Risteyskaupunki) | huomio | kuvan (Siionin sisäkatto) aihe ei liity nostoon; teksti ei mainitse Sionia. Ei faktavirhe, mutta kuvavalinta kannattaa harkita |
+
+## Korjattu
+
+- tiedot[0]: 65 kylpylää koskee koko Tbilisiä, ei Abanotubania.
+- kysymykset[2]: vaihtoehto "Metekhin kirkko" -> "Metekhin Neitsyt Marian kirkko" (oikea ei enää pisin); kysymykset[3]: "Kutaisista" -> "Telavista" (Mtshetasta ei enää jaettu pisin).
+- Anchiskhati: 1873-lause poistettu. Narikala: "osin rauniona" -> "osin vaurioitunut", purku 1827 jälkeen.
+- Oppaan jakso 1 kuvateksti: Rauhan silta 2010 + gondolihissi Rike-puistosta; lisätty lyhyt-kenttä. Kuva ennallaan, kuvat.md ei muutu.
+- Ilmastojakso: metateksti poistettu, vuosisade "lähteen mukaan noin 630–670 mm".
+- Mtatsminda-nosto: siirrot 1930-luvulla, määräys 1934. valokuva.selite kuvaa kohdetta. Zichy-selite ilman superlatiivia.
+- Intro: Vakhtang "perimätiedon mukaan"; käskynhaltijakunta -> "Kaukasian hallintopaikka"; tehtava.fakta muotoiltu uudelleen.
+- Abanotubani-aika ja Vapaudenaukio-aika korjattu; kirjoitusasu "Erivanin aukio" yhtenäistetty (kansikuva ja teksti). Siionin katedraaliin lisätty ajoituslause.
+- Pallo ennallaan (ohje: pallo = konteksti.json); huomio kirjattu ehdotukset.huomiot-kenttään. Kuvia ei vaihdettu.
