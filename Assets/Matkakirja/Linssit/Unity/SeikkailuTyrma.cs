@@ -75,7 +75,7 @@ namespace Matkakirja.Natiivi
             SeikkailuEsineet.Kolahti += t.Kolina;
             // Alarajavalo (Laitetestaaja v6 3. kierros: ilman kynttilää lähes musta): käytävän soihdun kajo oven raoista sisään.
             var sisaan = t.istuin - t.ovi; sisaan.y = 0; sisaan = sisaan.sqrMagnitude > 1e-4f ? sisaan.normalized : Vector3.zero;
-            t.Kajo("Tyrmän oven raon kajo", t.ovi + sisaan * 0.45f + Vector3.up * 0.35f, new Color(1f, 0.62f, 0.34f), 0.55f, 3.2f);
+            t.Kajo("tyrma-oven-kajo", t.ovi + sisaan * 0.45f + Vector3.up * 0.35f, new Color(1f, 0.62f, 0.34f), 0.55f, 3.2f);
             go.AddComponent<SeikkailuTyrmaAanet>().Alusta(t, t.istuin, t.ovi, t.rako, t.avaimet, t.ryomiOn ? t.ryomi : t.ovi, kirjaa);   // tippuva vesi, askeleet, ohjaava ääni (Pelikoodari 11.10., PT B3)
             kirjaa?.Invoke($"seikkailu: tyrmä (muunnelma {t.ydin.Muunnelma}: {(t.ydin.Muunnelma == 1 ? "avaimet ilmaraosta" : t.ydin.Muunnelma == 2 ? "vesipojan ovi" : "irtokivi")})");
             return true;
@@ -93,7 +93,7 @@ namespace Matkakirja.Natiivi
                 SeikkailuAanet.SoitaTaiVara("avainnippu", "avain-lukko", rako, 0.8f);
                 if (avainId != null) SeikkailuEsineet.Aktiivinen?.Nayta(avainId, avaimet);
                 SeikkailuAanet.Soita("kivi-lasku", avaimet, 0.4f, 1.6f);   // avaimet kilahtavat olkiin
-                Kajo("Tyrmän kuunsäde avaimilla", avaimet + Vector3.up * 0.6f, new Color(0.62f, 0.71f, 0.85f), 0.45f, 1.6f);   // ilmaraon kuu avaimiin
+                Kajo("tyrma-kuunsade-avaimet", avaimet + Vector3.up * 0.6f, new Color(0.62f, 0.71f, 0.85f), 0.45f, 1.6f);   // ilmaraon kuu avaimiin
                 kirjaa?.Invoke("seikkailu: tyrmä: avaimet pudotettiin ilmaraosta");
             }
             if (ydin.VesipoikaAvasi)
