@@ -319,6 +319,7 @@ namespace Matkakirja.Natiivi
             avainsana = Rakenne.El("mk-astroavaus__otsikko--haipyy", kerros.Juuri(LinssiUi.Ylakerros), PickingMode.Ignore);
             avainsana.style.position = Position.Absolute;
             avainsana.style.left = 28; avainsana.style.bottom = 24;
+            kerros.Turva(LinssiUi.Ylakerros);   // turva-alueen reunat mitataan tälle kerrokselle (AvainsanaVasen)
             avainsana.style.alignItems = Align.FlexStart;
             avainsana.style.opacity = 0f;
             avainsanaVuosi = Rakenne.Teksti("", "mk-aikajana-havainne__otsikko", avainsana);
@@ -523,6 +524,8 @@ namespace Matkakirja.Natiivi
         const double LinnaPerustettu = 1475;
         /// <summary>Avainsanan alareuna (pt): esittelyssä 24; historiassa liiketapin yläpuolella (PT B4, Laitetestaaja 11.10. d: otsikko tatin päällä).</summary>
         static float AvainsanaAla => Matkakirja.Natiivi.SeikkailuHistoria.Kaynnissa ? SeikkailuTapit.TappienYlareuna + Tyylikirja.Vali.L : 24f;
+        /// <summary>Avainsanan vasen reuna (pt): 28 turva-alueen sisällä (simu 11.10. 02.3x: iPhone vaaka, "Kivikausi" Dynamic Islandin alla).</summary>
+        static float AvainsanaVasen => 28f + Mathf.Max(0f, UiKerros.Hae().Reunat(LinssiUi.Ylakerros).x);
         readonly Label nimiruudunNimi, nimiruudunAlarivi;
         readonly Latauspalkki latauspalkki;
         bool nimiruutuAuki, virheIlmoitettu;
@@ -617,7 +620,7 @@ namespace Matkakirja.Natiivi
                     avainsanaSanat.text = h.Sanat ?? "";
                 }
                 avainsana.style.opacity = h != null ? 1f : 0f;
-                avainsana.style.bottom = AvainsanaAla;
+                avainsana.style.bottom = AvainsanaAla; avainsana.style.left = AvainsanaVasen;
                 // VoiceOver: vuosi ja sanat yhtenä nimenä historian aikana (Päätoimittaja 9.10., juna 171).
                 avainsana.tooltip = h != null ? ((h.VuosiTeksti ?? "") + " " + (h.Sanat ?? "")).Trim() : null;
             }
@@ -644,7 +647,7 @@ namespace Matkakirja.Natiivi
                 Debug.Log($"MATKAKIRJA linssit: avainsana {nyt.Vuosi} {nyt.Sanat} ({nyt.Ts:F1} s, kierros +{DioraamaTimeline.S(DioraamaSovitin.ViimeisinT - DioraamaTimeline.KierrosAlku)} s, {(DioraamaTimeline.OhjaaKertojaa ? "timeline" : "ydin")})");
             }
             avainsana.style.opacity = nyt != null ? 1f : 0f;
-            avainsana.style.bottom = AvainsanaAla;
+            avainsana.style.bottom = AvainsanaAla; avainsana.style.left = AvainsanaVasen;
             avainsanaNyt = nyt;
         }
 
