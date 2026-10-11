@@ -21,7 +21,7 @@ namespace Matkakirja.Kartta.Testit
         [Testi]
         static void HoukutinLista()
         {
-            var linssit = Houkuttimet.Lista.Where(h => h.Laji == Houkuttimet.Laji.Linssi).Select(h => h.Id).ToArray();
+            var linssit = Houkuttimet.Lista.Where(h => h.Laji == Houkuttimet.Laji.Linssi && !h.Vapaa).Select(h => h.Id).ToArray();
             var pelit = Houkuttimet.Lista.Where(h => h.Laji == Houkuttimet.Laji.Lautapeli).Select(h => h.Id).ToArray();
             Oleta.Tosi(linssit.SequenceEqual(new[] { "alpit", "lontoo", "edinburgh", "istanbul", "amsterdam" }), "linssikaupungit: " + string.Join(",", linssit));
             Oleta.Tosi(pelit.SequenceEqual(new[] { "berliini", "ateena" }), "lautapelikaupungit: " + string.Join(",", pelit));
@@ -31,7 +31,10 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Tosi(Houkuttimet.LajiKaupungille("olavinlinna") == null && Houkuttimet.LajiTunnukselle("olavinlinna") == Houkuttimet.Laji.Videopeli,
                        "Olavinlinna ei ole kaupunki (ei napautusta)");
             Oleta.Tosi(Houkuttimet.Token(Houkuttimet.Laji.Videopeli) == Houkuttimet.PeliToken, "Olavinlinna videopelien sinisellä");
-            Oleta.Tosi(Houkuttimet.Lista.Length == 8 && Houkuttimet.Lista.Count(h => !h.Vapaa) == 7, "8 houkutinta: 5 linssiä, 2 lautapeliä, Olavinlinna");
+            Oleta.Tosi(Houkuttimet.Lista.Length == 9 && Houkuttimet.Lista.Count(h => !h.Vapaa) == 7, "9 houkutinta: 5 linssiä, 2 lautapeliä, Olavinlinna, Andøya");
+            var andoya = Houkuttimet.Lista.First(h => h.Id == "andoya");
+            Oleta.Tosi(andoya.Vapaa && andoya.Laji == Houkuttimet.Laji.Linssi && Math.Abs(andoya.Lat - 69.2944) < 1e-9 && Math.Abs(andoya.Lon - 16.0206) < 1e-9
+                && Houkuttimet.LajiKaupungille("andoya") == null, "Andøya vapaa violetti piste " + andoya);
             Oleta.Tosi(Houkuttimet.Lista.Select(h => h.Id).Distinct().Count() == Houkuttimet.Lista.Length, "tunnukset yksilöllisiä");
             Oleta.Tosi(Houkuttimet.LajiKaupungille("alpit") == Houkuttimet.Laji.Linssi && Houkuttimet.LajiKaupungille("ateena") == Houkuttimet.Laji.Lautapeli
                        && Houkuttimet.LajiKaupungille("pariisi") == null && Houkuttimet.LajiKaupungille(null) == null, "laji kaupungille");

@@ -39,7 +39,7 @@ namespace Matkakirja
         /// <summary>
         /// Houkuttimet laudan kaupunkien tunnuksin (Sisalto.Kaupunki.id) ja vapaat pisteet paikkoineen. Olavinlinna (videopeli,
         /// NUI-jako 11.10.2026): ei laudan kaupunki (Savonlinna ei ole laudalla, Olavinlinna on maastokohde/nosto), joten vapaa
-        /// piste 61,8639 N 28,9011 E samalla sinisellä kuin lautapelit.
+        /// piste 61,8639 N 28,9011 E samalla sinisellä kuin lautapelit. Andøya (ISS-raketti) vapaa violetti piste.
         /// </summary>
         public static readonly Houkutin[] Lista =
         {
@@ -51,6 +51,9 @@ namespace Matkakirja
             new Houkutin("berliini", Laji.Lautapeli, "Mylly"),
             new Houkutin("ateena", Laji.Lautapeli, "Tavli"),
             new Houkutin("olavinlinna", Laji.Videopeli, "Olavinlinna 1499", 61.8639, 28.9011),
+            // Andøya (PT 11.10. 15.0x): raketti vie ISS-linssiin, joten vapaa linssi-violetti piste Andøya Spacen laukaisupaikalla
+            // (Andenes, 69,2944 N 16,0206 E). LS2 tekee raketin maamerkin ja napautuksen (hintalappu, Rahapula, laukaisu).
+            new Houkutin("andoya", Laji.Linssi, "ISS (raketti)", 69.2944, 16.0206),
         };
 
         /// <summary>Tyylikirjan tokenit (tyylikirja.json): linssi = erikois.linssi-hehku, lautapeli = teemat.videopeli.korostus.</summary>
