@@ -1,0 +1,501 @@
+{
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "beirut",
+ "maa": "LBN",
+ "era": "e03",
+ "kaupunki": {
+  "id": "beirut",
+  "name": "Beirut",
+  "wiki": "Beirut",
+  "ambience": "basaari",
+  "pallo": {
+   "lat": 33.8869,
+   "lon": 35.5131
+  }
+ },
+ "artikkeli": {
+  "intro": "Beirut on Libanonin pääkaupunki, maan suurin kaupunki ja tärkein satama. Se sijaitsee Välimeren rannalla niemellä, jonka takana Libanonvuoret nousevat itään. Kaupunki on ollut asuttu yli viisi tuhatta vuotta, ja lähteiden mukaan se on yksi maailman vanhimmista kaupungeista. Nimi tulee foinikian sanasta, joka tarkoittaa **kaivoja**, ja viittaa helposti saatavilla olleeseen pohjaveteen.\n\nRoomalaisena Berytuksena kaupunki tunnettiin **lakikoulustaan**, ja keskustan kaivauksissa on tullut esiin pylväskatuja ja kylpylöiden raunioita. Isoisän matkavuonna 1873 Beirut oli kasvava satama- ja kauppakaupunki, jolla oli tiiviit yhteydet Eurooppaan, erityisesti Ranskaan. Kukkulalla toimi jo koulu, josta tuli myöhemmin **American University of Beirut**.\n\nNykyään Beirut on maan kulttuuri-, kustannus-, pankki- ja yliopistokeskus. Rantabulevardi Corniche kiertää niemeä, ja sen varrella kohoavat Raouchén kalliot. Asukkaita kaupungissa on arvion mukaan 433 249 (vuonna 2017), ja suurkaupunkialueella heitä on yli kaksi miljoonaa.",
+  "teksti": "Berytus liitettiin Roomaan, kun Pompeius valloitti kaupungin vuonna 64 eaa. Siitä tehtiin roomalainen siirtokunta, ja lähteen mukaan se oli idän provinsseissa erityisen roomalainen kaupunki. Lakikoulu oli laajalti tunnettu, ja keisari Justinianus tunnusti sen 500-luvulla yhdeksi valtakunnan kolmesta virallisesta lakikoulusta. Suuri maanjäristys vuonna 551 raunioitti rannikon kaupunkeja, ja Berytuksessa kuoli arvioiden mukaan kymmeniä tuhansia ihmisiä.\n\nEgyptin Ibrahim Pashan vallattua Akkon vuonna 1832 Beirut alkoi elpyä. Vielä 1800-luvun jälkipuoliskolla kaupunki solmi tiiviit kauppayhteydet Euroopan valtoihin, ja eurooppalainen kiinnostus libanonilaiseen silkkiin teki siitä suuren satamakaupungin. Syrian Protestant College avattiin vuonna 1866, ja Université Saint-Joseph perustettiin vuonna 1875.\n\nNykyään keskusta on rakennettu uudelleen, ja uusien katujen alla näkyvät edelleen eri aikojen kerrokset. Kansallismuseo on Libanonin tärkein arkeologinen museo, ja Sursock-museo esittelee modernia taidetta huvilassa."
+ },
+ "kysymykset": [
+  {
+   "q": "Mitä Beirutin nimi tarkoittaa foinikian kielellä?",
+   "options": [
+    "Setripuita",
+    "Kaivoja",
+    "Majakoita",
+    "Purjeita"
+   ],
+   "correct": 1,
+   "level": 1,
+   "hint": "Ajattele, mistä asukkaat saivat juomavetensä.",
+   "fact": "Nimi tulee foinikian sanasta bīʾrōt, joka tarkoittaa kaivoja, ja viittaa kaupungin helposti saavutettavaan pohjaveteen.",
+   "source": "https://en.wikipedia.org/wiki/Beirut"
+  },
+  {
+   "q": "Minkä alan koulusta Rooman aikainen Berytus tuli tunnetuksi?",
+   "options": [
+    "Merenkulkukoulusta",
+    "Tähtitieteen koulusta",
+    "Lääkärikoulusta",
+    "Lakikoulusta"
+   ],
+   "correct": 3,
+   "level": 2,
+   "hint": "Koulun opettajien tekstit vaikuttivat keisari Justinianuksen suureen kokoelmaan.",
+   "fact": "Berytuksen lakikoulu oli yksi valtakunnan kolmesta virallisesta lakikoulusta, ja sen juristien tekstit vaikuttivat Justinianuksen lakikokoelmaan.",
+   "source": "https://en.wikipedia.org/wiki/Beirut"
+  },
+  {
+   "q": "Mikä on Beirutin merenrantaa kiertävän noin viiden kilometrin kävelybulevardin nimi?",
+   "options": [
+    "Esplanade",
+    "Lungomare",
+    "Corniche",
+    "Boardwalk"
+   ],
+   "correct": 2,
+   "level": 2,
+   "hint": "Bulevardi kiertää niemen Saint George -lahdelta Raouchén kautta etelään.",
+   "fact": "Corniche on 4,8 kilometriä pitkä kävelybulevardi, joka kiertää niemen Saint George -lahdelta Raouchén kautta.",
+   "source": "https://en.wikipedia.org/wiki/Corniche_Beirut"
+  },
+  {
+   "q": "Minkä Beirutin keskustan aukion laidalla seisoo siirtolaisen lahjoittama kellotorni, jossa on nelisivuinen kello?",
+   "options": [
+    "Nejmehin aukio",
+    "Marttyyrien aukio",
+    "Samir Kassirin aukio",
+    "Imam Ouzain aukio"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Aukion toinen nimi on ranskaksi Place de l'Étoile.",
+   "fact": "Aukion kellotornin lahjoitti libanonilais-brasilialainen siirtolainen Michel Abed.",
+   "source": "https://en.wikipedia.org/wiki/Nejmeh_Square"
+  },
+  {
+   "q": "Minä vuonna Syrian Protestant College, nykyinen American University of Beirut, avasi ovensa?",
+   "options": [
+    "1856",
+    "1876",
+    "1886",
+    "1866"
+   ],
+   "correct": 3,
+   "level": 3,
+   "hint": "Avaaminen tapahtui ennen kuin Université Saint-Joseph perustettiin.",
+   "fact": "College avasi ovensa 3.12.1866 kuudentoista opiskelijan luokalla, ja siitä kasvoi myöhemmin American University of Beirut.",
+   "source": "https://en.wikipedia.org/wiki/American_University_of_Beirut"
+  }
+ ],
+ "tiedot": [
+  "Antiikin Berytuksen kolikoissa oli tunnuksena ankkurin ympärille kietoutunut delfiini, ja lähteen mukaan saman merkin otti myöhemmin käyttöön venetsialainen kirjapainaja Aldus Manutius.",
+  "Roomalaisen Berytuksen julkisiin rakennuksiin kuului useita kylpylöitä, pylväskatuja, sirkus ja teatteri.",
+  "Beirutin keskustan Souks-kauppakorttelit on rakennettu uudelleen antiikin roomalais-kreikkalaisen katuverkon mukaisesti."
+ ],
+ "valokuva": {
+  "tiedosto": "View of Beirut, looking towards body of water) - Bonfils LCCN2004668094.jpg",
+  "vuosi": "noin 1867",
+  "lahde": "Maison Bonfils (Beirut, Lebanon), photographer, Commons (PD)",
+  "lyhyt": "Beirut 1800-luvulla, kasvava satama- ja kauppakaupunki.",
+  "selite": "Beirut oli 1800-luvulla kasvava satama- ja kauppakaupunki, jolla oli tiiviit yhteydet Eurooppaan."
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Beirut",
+   "johdanto": "Beirut on kaivojen kaupunki: nimi tulee foinikian sanasta, joka tarkoittaa kaivoja, ja kaupunki on ollut asuttu yli viisi tuhatta vuotta. Isoisän matkavuonna 1873 satamasta lähti silkkiä Eurooppaan, ja kukkulalla opetti jo koulu, josta tuli myöhemmin yliopisto.",
+   "kansikuvat": [
+    {
+     "tiedosto": "Mohammad Al-Amin Mosque and Saint George Maronite Cathedral – Beirut, Lebanon.jpg",
+     "lyhyt": "Moskeija ja katedraali seisovat Beirutin keskustassa vierekkäin.",
+     "selite": "Mohammad Al-Aminin moskeija ja Pyhän Yrjänän maroniittikatedraali seisovat Beirutin keskustassa aivan vierekkäin.",
+     "lahde": "Habibhelou, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+     "tiedosto": "Pigeon Rocks of Beirut, Rock of Raouche, Beirut, Lebanon.jpg",
+     "lyhyt": "Raouchén Kyyhkyskalliot kohoavat merestä Beirutin rannikolla.",
+     "selite": "Raouchén edustalla oleva luonnonmuodostelma koostuu kahdesta kalliosta, ja kaupunginosan nimi tulee ranskan sanasta rocher, kallio.",
+     "lahde": "Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)"
+    },
+    {
+     "tiedosto": "Beirut Corniche, Beirut, Lebanon.jpg",
+     "lyhyt": "Corniche on noin viiden kilometrin pituinen kävelybulevardi.",
+     "selite": "Corniche kiertää Beirutin niemeä Saint George -lahdelta Raouchén kautta, ja sen varrella kulkee kävelijöitä, juoksijoita ja pyöräilijöitä.",
+     "lahde": "Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)"
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Kaivojen kaupunki",
+     "teksti": "Beirutin nimi on vanha. Se tulee foinikialaisesta sanasta bīʾrōt, joka tarkoittaa kaivoja ja viittaa kaupungin helposti saavutettavaan pohjaveteen. Nimi esiintyy jo kolmessa akkadinkielisessä Amarna-kirjeessä 1300-luvulta eaa., joissa kuningas Ammunira Birutasta kirjoittaa Egyptin faaraolle. Kreikkalaiset muuttivat nimen muotoon Bērytós ja roomalaiset muotoon Berytus. Varhaisin asutus oli saarella Beirutjoessa, mutta kanava saaren ja rannan välillä liettyi umpeen, ja saari katosi.",
+     "tiedosto": "Phoenicia, Berytus. Mint AD 117-138 (50958306408).jpg",
+     "lyhyt": "Roomalaisen Berytuksen lyömä pronssikolikko.",
+     "selite": "Antiikin Berytus oli roomalainen siirtokunta, ja siellä lyötiin omia kolikoita.",
+     "lahde": "Carole Raddato from FRANKFURT, Germany, Wikimedia Commons (CC BY-SA 2.0)",
+     "wiki": "Beirut"
+    },
+    {
+     "otsikko": "Lakikoulun kaupunki",
+     "teksti": "Kun Pompeius valloitti kaupungin vuonna 64 eaa., nimi Berytus palautettiin, ja siitä tehtiin roomalainen siirtokunta. Lähteen mukaan Berytus oli idän provinsseissa erityisen roomalainen kaupunki. Sen lakikoulu oli laajalti tunnettu, ja juristit Papinianus ja Ulpianus opettivat siellä Severusten aikana. Justinianus tunnusti koulun 500-luvulla yhdeksi valtakunnan kolmesta virallisesta lakikoulusta. Kun suuri maanjäristys vuonna 551 raunioitti rannikon kaupunkeja, lakikoulun opiskelijat siirrettiin Sidoniin.",
+     "tiedosto": "BeirutRomanBaths.jpg",
+     "lyhyt": "Roomalaisten kylpylöiden raunioita Beirutin keskustassa.",
+     "selite": "Roomalaisen Berytuksen kylpylöiden rauniot löytyivät keskustan Serail-kukkulan itärinteeltä, ja niiden ympärille on rakennettu puisto.",
+     "lahde": "Elgaard, Wikimedia Commons (CC BY-SA 3.0)",
+     "wiki": "Beirut"
+    },
+    {
+     "otsikko": "Silkkiä ja koulu kukkulalla",
+     "teksti": "Isoisän matkavuonna 1873 Beirut oli kasvava satama- ja kauppakaupunki. Egyptin Ibrahim Pashan vallattua Akkon vuonna 1832 kaupunki oli alkanut elpyä, ja 1800-luvun jälkipuoliskolla se solmi tiiviit kauppayhteydet Eurooppaan, erityisesti Ranskaan. Eurooppalainen kiinnostus libanonilaiseen silkkiin teki Beirutista suuren satamakaupungin. Syrian Protestant College oli avattu vuonna 1866, ja sen kampuksen ensimmäiset rakennukset otettiin käyttöön 1870-luvun alussa. Université Saint-Joseph perustettiin vuonna 1875.",
+     "tiedosto": "American University. Beirut, (A.U.B.). College Hall LOC matpc.02836.jpg",
+     "lyhyt": "American University of Beirutin College Hall.",
+     "selite": "College Hall kuuluu American University of Beirutin kampukseen, joka kasvoi Syrian Protestant Collegen pohjalta.",
+     "lahde": "Matson Collection, Wikimedia Commons (PD)",
+     "wiki": "American University of Beirut"
+    },
+    {
+     "otsikko": "Kadun alla Rooman katu",
+     "teksti": "Beirutin keskustassa moderni kaupunki seisoo antiikin päällä. Mohammad Al-Aminin moskeijan rakennustyössä paljastui osa roomalaisen kaupungin itä–länsisuuntaisesta pääkadusta, Decumanus Maximuksesta, päällysteineen ja pylväineen. Maroniittikatedraalin esipihan alta on säilytetty hellenistinen rakennelma, osa pylväskatua ja osmanien aikainen muuri. Nejmehin aukion Pyhän Yrjänän katedraalin alla on maanalainen museo, jossa on seitsemän samalle paikalle rakennetun kirkon kerrostumia.",
+     "tiedosto": "Berytus ruins and St. George Maronite Cathedral, Beirut.jpg",
+     "lyhyt": "Berytuksen raunioita Pyhän Yrjänän maroniittikatedraalin vieressä.",
+     "selite": "Keskustan kaivauksissa on tullut esiin eri aikakausien kerrostumia, ja maroniittikatedraalin esipihan alla on säilytetty osa roomalaista pylväskatua.",
+     "lahde": "Radosław Botev, Wikimedia Commons (CC BY 3.0)",
+     "wiki": "Beirut Central District"
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "Mohammad Al-Amin Mosque in 2026 01.jpg",
+     "lyhyt": "Mohammad Al-Aminin moskeija Beirutin keskustassa.",
+     "selite": "Moskeija vihittiin käyttöön 2000-luvulla, ja sen tyyli muistuttaa osmanien aikaista arkkitehtuuria.",
+     "lahde": "باسم, Wikimedia Commons (PD)"
+    },
+    "kappale": "Beirut on Välimeren rannalla sijaitseva vilkas pääkaupunki, jossa arabia on virallinen kieli ja englantia ja ranskaa puhutaan laajasti. Keskusta on suurelta osin kävelykatuja, ja rantabulevardi Corniche kiertää niemeä noin viiden kilometrin matkalla. Taksi on yleisin kulkutapa kaupungin sisällä. Libanonissa jännitteet naapurimaiden kanssa purkautuvat toisinaan, joten ajankohtaista tilannetta kannattaa seurata riippumattomasta lehdistöstä. Syyrian ja Israelin rajojen lähellä liikkumista tulee välttää.",
+    "artikkeli": {
+     "nimi": "Matkailijan Beirut",
+     "taitto": "opas",
+     "teksti": "Kaupunki, jossa rantabulevardin palmut, antiikin rauniot ja leipomoiden aamuleipä mahtuvat samaan päivään.",
+     "nosto": "Beirutin keskusta on suurelta osin kävelykatuja, ja kadun alta paljastuu roomalaisen kaupungin jäänteitä. Tyypillinen mezze koostuu noin kolmestakymmenestä kylmästä ja kuumasta annoksesta.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Rafic Hariri International Airport (BEY) on Libanonin ainoa kansainvälinen lentokenttä ja kansallisen lentoyhtiön Middle East Airlinesin tukikohta. Se on noin seitsemän kilometrin päässä kaupungin eteläpuolella, ja ajomatka keskustaan kestää 10–15 minuuttia. Useimmilla kansainvälisillä lentoyhtiöillä on päivittäisiä lentoja Beirutin ja Euroopan suurkaupunkien välillä. Kaupungin sisällä yleisin kulkutapa on taksi: mittaria ei ole, joten hinta kannattaa sopia etukäteen. Jaetussa taksissa eli servicessä auto on yhteinen usealle matkustajalle ja hinta kiinteä. Katunumeroiden sijaan paikalliset neuvovat maamerkkien avulla.",
+       "kuva": {
+        "tiedosto": "Airbus A320 of Middle East Airlines at Beirut Rafic Hariri International Airport.jpg",
+        "lyhyt": "Middle East Airlines on Libanonin kansallinen lentoyhtiö.",
+        "selite": "Middle East Airlines on Libanonin kansallinen lentoyhtiö, jonka tukikohta on Rafic Hariri -lentokentällä.",
+        "lahde": "abdallahh from Montréal, Canada, Wikimedia Commons (CC BY 2.0)"
+       }
+      },
+      {
+       "otsikko": "Nähtävää: rantabulevardi ja Raouché",
+       "teksti": "Corniche on noin viiden kilometrin pituinen kävelybulevardi, joka kiertää niemen Saint George -lahdelta Raouchén kautta etelään. Palmujen varrelta avautuu näkymä Välimerelle ja idässä Libanonvuorten huipuille, ja reitillä kulkee kävelijöitä, juoksijoita ja pyöräilijöitä. Raouché on kaupunginosa, jonka kalliorinteen kahvilat reunustavat Avenue de Parisia. Edustalla on kaksi kalliota, Kyyhkyskalliot, ja kahviloista katsellaan auringonlaskua.",
+       "kuva": {
+        "tiedosto": "Beirut Corniche North.JPG",
+        "lyhyt": "Corniche on Beirutin merenrantaa kiertävä kävelybulevardi.",
+        "selite": "Corniche kiertää Beirutin niemeä, ja sen varrella kulkee kävelijöitä, juoksijoita ja pyöräilijöitä.",
+        "lahde": "Wusel007, Wikimedia Commons (CC BY-SA 3.0)"
+       }
+      },
+      {
+       "otsikko": "Nähtävää: keskusta ja museot",
+       "teksti": "Keskusta on suurelta osin kävelykatuja, joiden varrella on kivijulkisivuisia rakennuksia ja arkadikatuja. Nejmehin aukiolla, jota kutsutaan myös nimellä Place de l'Étoile, on parlamentti, kaksi katedraalia ja kellotorni. Marttyyrien aukion tuntumassa Mohammad Al-Aminin moskeija ja Pyhän Yrjänän maroniittikatedraali seisovat vierekkäin. Kansallismuseo on Libanonin tärkein arkeologinen museo, ja Sursock-museo esittelee modernia taidetta huvilassa. Hamrassa on American University of Beirutin kampus ja sen arkeologinen museo; kampukselle pääsee vain pääportista, ja henkilöllisyystodistus vaaditaan.",
+       "kuva": {
+        "tiedosto": "Nejmeh Square (1).jpg",
+        "lyhyt": "Nejmehin aukio on Beirutin keskustan pääaukio.",
+        "selite": "Nejmehin aukio on Beirutin keskustan pääaukio, jonka reunalla on kellotorni ja parlamenttirakennus.",
+        "lahde": "Radosław Botev, Wikimedia Commons (CC BY 3.0)"
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Mezze on pienten annosten sarja, jossa on tyypillisesti noin 30 kylmää ja kuumaa annosta: salaatteja kuten tabbouleh ja fattoush, tahnoja kuten hummus ja moutabal, täytettyjä viininlehtiä ja litteää leipää. Aamupalaksi ja välipalaksi sopivat manakish eli za'atar- tai juustoleipä sekä ka'ak, jota myydään leipomoissa ja katukauppiailta. Makeisia ovat esimerkiksi maamoul, ktaef ja ashta. Lauantaisin Souksissa kokoontuu Souk el Tayeb -markkina, jossa myydään kauden tuotteita. Juomavedeksi suositellaan pullovettä hanaveden sijaan."
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Pitkän ajan keskiarvojen mukaan Beirutin ilmasto on kuuma-kesäinen Välimeren ilmasto. Huhtikuusta kesäkuuhun on lämmintä ja kuivaa, ja heinä–elokuussa päivät ovat noin 30 asteen tienoilla ja kosteus voi olla raskas. Syksy ja kevät ovat lämpimiä mutta lyhyitä. Talvi on leuto ja sateinen: tammikuun keskilämpötila on noin 14 astetta, ja sateisin aika on lokakuusta huhtikuuhun. Kesällä sataa hyvin vähän."
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Kävely Cornichea pitkin",
+        "tahdet": 3,
+        "selite": "Noin viiden kilometrin rantakatu palmuineen ja merinäkymineen."
+       },
+       {
+        "mita": "Raouchén Kyyhkyskalliot",
+        "tahdet": 3,
+        "selite": "Kaksi kalliota merellä ja kahvilat kalliorinteellä."
+       },
+       {
+        "mita": "Kansallismuseo",
+        "tahdet": 3,
+        "selite": "Libanonin tärkein arkeologinen museo, jossa on esineitä esihistoriasta mamelukkien aikaan."
+       },
+       {
+        "mita": "Keskustan aukiot ja kadun alle jääneet rauniot",
+        "tahdet": 2,
+        "selite": "Nejmehin ja Marttyyrien aukiot sekä roomalaisten kylpylöiden puisto ovat lähellä toisiaan."
+       },
+       {
+        "mita": "Sursock-museo",
+        "tahdet": 2,
+        "selite": "1900-luvun alun huvilassa on moderni ja nykytaide."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Kieli",
+        "teksti": "Arabia on virallinen kieli, mutta englantia ja ranskaa puhutaan laajasti, ja kyltit ovat usein kolmikielisiä."
+       },
+       {
+        "otsikko": "Pukeutuminen",
+        "teksti": "Moskeijoissa ja kirkoissa vieraillessa olkapäät ja polvet tulee peittää."
+       },
+       {
+        "otsikko": "Valokuvaus",
+        "teksti": "Sotilaiden ja sotilasrakennusten valokuvaaminen on kielletty."
+       },
+       {
+        "otsikko": "Ajankohtainen tilanne",
+        "teksti": "Tilannetta kannattaa seurata riippumattomasta lehdistöstä, ja Syyrian ja Israelin rajojen sekä pakolaisleirien lähellä liikkumista tulee välttää."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Mezze ja mouneh",
+   "johdanto": "Libanonilaisen aterian pöytä täyttyy pienistä annoksista, ja syksyn kellarissa odottavat purkit. Beirutissa leipä, vihannekset ja sitruunamehu kertovat, mitä kaikkea Välimeren itärannalla on kokattu ja säilötty.",
+   "tehtava": {
+    "kysymys": "Mitä libanonilainen mouneh tarkoittaa?",
+    "vaihtoehdot": [
+     "Viikoittaista kadunkulmamarkkinaa",
+     "Pitkää juhla-aterian kattausta",
+     "Ruoan kausittaista säilömistä",
+     "Leivän paistamista kivi-uunissa"
+    ],
+    "oikea": 2,
+    "fakta": "Mouneh on perinne, jossa loppukesän ja syksyn runsas sato muutetaan säilykkeiksi vuoden ympäri käytettäväksi."
+   },
+   "nostot": [
+    {
+     "otsikko": "Mezze: pöytä täynnä pieniä annoksia",
+     "teksti": "Mezze on joukko pieniä annoksia, jotka asetetaan vieraiden eteen. Tyypillinen mezze koostuu noin 30 kylmästä ja kuumasta annoksesta. Mukana on salaatteja kuten tabbouleh ja fattoush, tahnoja kuten hummus, baba ghanoush ja moutabal sekä kebbehiä, falafelia ja täytettyjä viininlehtiä. Hummus tehdään kikherneistä, seesamitahinista, sitruunamehusta ja valkosipulista, ja baba ghanoush hiilillä grillatusta munakoisosta. Annoksia syödään pieninä paloina litteän leivän kanssa.",
+     "tiedosto": "Nourriture terreste dans un restaurant libanais, quartie des Grottes à Genêve (cropped).jpg",
+     "lyhyt": "Mezze on libanonilaisen aterian pienten annosten sarja.",
+     "selite": "Mezze koostuu pienistä annoksista, kuten hummuksesta, baba ghanoushista ja tabboulehista, ja tämä kuva on otettu libanonilaisessa ravintolassa Genevessä.",
+     "lahde": "Tatakdh, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Lebanese cuisine"
+    },
+    {
+     "otsikko": "Leipä ja aamiaisen manakish",
+     "teksti": "Lähteen mukaan leipä kuuluu olennaisesti jokaiseen ateriaan, eikä ruokaa yleensä tarjoilla ilman sitä. Suosittu on taskullinen pita, khubz Arabi eli arabialainen leipä, jota revitään dippailuun tai täytetään falafelilla tai shawarmalla. Marquq on lähes paperinohutta leipää, joka paistetaan metallisella saj-levyllä. Aamiaiseksi syödään usein manaeeshia, pientä pizzamaista leipää, jonka päällä on juustoa tai za'atar-mausteseosta, ja sitä myydään leipomoissa. Ka'ak on pyöreä katuleipä, jota katukauppiaat kaupittelevat pyörällä tai mopolla torvella ilmoittaen.",
+     "tiedosto": "Zaatar Mankousheh.jpg",
+     "lyhyt": "Manakish on libanonilainen za'atar-leipä.",
+     "selite": "Manakish eli manaeesh on pieni pizzamainen leipä, jota syödään usein aamiaiseksi ja jota myydään leipomoissa.",
+     "lahde": "Elie.ghob, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Manakish"
+    },
+    {
+     "otsikko": "Mouneh: syksyn varasto",
+     "teksti": "Mouneh tarkoittaa ruoan kausittaista valmistusta ja säilöntää ympärivuotista käyttöä varten, ja sana tulee arabian verbistä varastoida. Perinteisesti kotitaloudet valmistivat loppukesällä ja alkusyksyllä, kun sato oli runsaimmillaan, bulguria, oliiviöljyä, labnehia eli siivilöityä jogurttia, tahinia, pikkelsejä, hilloja ja tomaattisosetta. Säilykkeet pidettiin ennen saviruukuissa viileissä kellareissa, nykyään yleisemmin lasipurkeissa. Ruoka seuraa vuodenaikoja, ja maan eri osat tunnetaan eri ruoista: Etelä-Libanon esimerkiksi kibbehstä.",
+     "tiedosto": "Kibbeh Bil Sanieh.jpg",
+     "lyhyt": "Kibbeh kuuluu libanonilaisen mezzen annoksiin.",
+     "selite": "Kibbeh kuuluu libanonilaisen mezzen annoksiin, ja Etelä-Libanon tunnetaan kibbehstä.",
+     "lahde": "Amaiursancho5, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Lebanese cuisine"
+    },
+    {
+     "otsikko": "Keittokirja ja vaikutteet",
+     "teksti": "Beirutissa julkaistiin 1880-luvulla Khalil Sarkisin keittokirja, joka oli lähteen mukaan yksi 1800-luvun ensimmäisistä laajasti luetuista arabiankielisistä keittokirjoista. Libanonilainen keittiö yhdistää turkkilaista, arabialaista ja ranskalaista ruoanlaittoa. Lähteen mukaan osmanien valta toi keittiöön lampaan käytön ja ranskalaiset flanin, éclairit ja croissantit. Yleisiä aineksia ovat valkosipuli, oliiviöljy ja sitruunamehu. Jälkiruokia ovat baklava, sfouf ja ka'ak, ja meghli-riisipuuro tarjoillaan perheeseen syntyneen vauvan kunniaksi.",
+     "tiedosto": "Lebanon - Baklava - Karabij - Eclair (2318962553).jpg",
+     "lyhyt": "Libanonilaisia jälkiruokia: baklavaa ja ranskalaisvaikutteisia leivoksia.",
+     "selite": "Baklava kuuluu libanonilaisiin jälkiruokiin, joissa näkyy myös ranskalaisia vaikutteita, kuten éclairit.",
+     "lahde": "Serge Melki from Indianapolis, USA, Wikimedia Commons (CC BY 2.0)",
+     "wiki": "Lebanese cuisine"
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Beirutin historiallinen ydin ulottuu niemen kärjestä kukkuloille, ja Rooman, osmanien ja ranskalaisen mandaatin ajan kerrostumat ovat vierekkäin. Rantakalliot, kirkot ja moskeijat, aukiot ja museot kertovat, miten kaupunki on elänyt Välimeren kauppasatamana.",
+  "rajat": {
+   "pohjoinen": 33.8993,
+   "etela": 33.8755,
+   "lansi": 35.4635,
+   "ita": 35.5194
+  },
+  "kohteet": [
+   {
+    "nimi": "Raouchén Kyyhkyskalliot",
+    "tyyppi": "luonto",
+    "lat": 33.88333,
+    "lon": 35.46667
+   },
+   {
+    "nimi": "Beirutin kansallismuseo",
+    "lat": 33.87822,
+    "lon": 35.5149
+   },
+   {
+    "nimi": "Sursock-museo",
+    "lat": 33.89294,
+    "lon": 35.51623
+   },
+   {
+    "nimi": "Marttyyrien aukio",
+    "tyyppi": "aukio",
+    "lat": 33.89639,
+    "lon": 35.50722
+   },
+   {
+    "nimi": "Mohammad Al-Aminin moskeija",
+    "lat": 33.89497,
+    "lon": 35.50637
+   },
+   {
+    "nimi": "Pyhän Yrjänän maroniittikatedraali",
+    "lat": 33.89527,
+    "lon": 35.50531
+   },
+   {
+    "nimi": "Nejmehin aukio",
+    "tyyppi": "aukio",
+    "lat": 33.89664,
+    "lon": 35.50449
+   },
+   {
+    "nimi": "Suuri Serail",
+    "lat": 33.89593,
+    "lon": 35.50093
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Raouchén Kyyhkyskalliot": {
+   "aika": "Luonnonmuodostelma",
+   "teksti": "Raouché on Beirutin länsireunalla sijaitseva asuin- ja liikekaupunginosa, jonka edustalla kohoaa rannikolta kaksi kalliota. Kalliot tunnetaan nimellä Kyyhkyskalliot (Pigeons' Rock) tai Raouchén kallio, ja ne ovat luonnonmuodostelma. Kaupunginosan nimi tulee ranskan sanasta rocher, kallio.\n\nCorniche-rantabulevardi nousee Raouchén kohdalla korkeimmilleen meren yläpuolelle, ja kaupunginosa on rakennettu valkoisen kalkkikivijyrkänteen päälle. Jyrkänteen reunaa seuraavan Avenue de Parisin varrella on kahviloita ja ravintoloita, joiden terasseilta katsellaan auringonlaskua. Lähteen mukaan kalliot ovat yksi kaupungin tunnetuimmista maamerkeistä.\n\nSeudun rannoilta on löytynyt alueen vanhimmat todisteet ihmisasutuksesta, piikiviä ja yksinkertaisia kivityökaluja, jotka ovat esillä American University of Beirutin arkeologisessa museossa. Kalliot olivat paikallaan jo isoisän matkavuonna 1873.",
+   "kuvat": [
+    {
+     "tiedosto": "Beirut-Rouche rock.jpg",
+     "lyhyt": "Raouchén Kyyhkyskalliot Beirutin rannikolla.",
+     "selite": "Kyyhkyskalliot ovat Raouchén edustalla kohoava luonnonmuodostelma, joka koostuu kahdesta kalliosta.",
+     "lahde": "Oussama Tahmaz, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Beirutin kansallismuseo": {
+   "aika": "1930-luku",
+   "teksti": "Beirutin kansallismuseo on Libanonin tärkein arkeologinen museo. Rakennus on ranskalaistyylistä egyptiläistä uusklassismia, ja sen suunnittelivat arkkitehdit Antoine Nahas ja Pierre Leprince-Ringuet. Materiaalina on libanonilainen okran värinen kalkkikivi, ja keskiosassa on lasikatto, joka tuo päivänvalon sisään.\n\nRakentaminen alkoi 1930-luvun alussa, ja museo avattiin virallisesti 1940-luvun alussa. Tontin antoi kaupunki, ja se sijaitsee Beirutin hipodromin lähellä. Kokoelmassa on kymmeniä tuhansia esineitä, pääosin antiikin ja keskiajan löytöjä, ja esillä on satoja esineitä esihistoriasta mamelukkien aikaan.\n\nAlakerran gallerian kokoelmiin kuuluu foinikialaisia ihmishahmoisia sarkofageja sekä Neitsyt Marian kuva, jonka lähde ajoittaa 200-luvulle ja jonka mukaan se on yksi vanhimmista löydetyistä Marian kuvauksista. Isoisän matkavuonna 1873 museota ei vielä ollut, sillä rakennus valmistui vasta 1900-luvulla.",
+   "kuvat": [
+    {
+     "tiedosto": "Beirut National Museum, Main Entrance, March 2017.jpg",
+     "lyhyt": "Beirutin kansallismuseo on Libanonin tärkein arkeologinen museo.",
+     "selite": "Museon rakennus on egyptiläistä uusklassismia, ja sen kokoelmat ulottuvat esihistoriasta mamelukkien aikaan.",
+     "lahde": "Bdx, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Sursock-museo": {
+   "aika": "1912",
+   "teksti": "Sursock-museo on moderni- ja nykytaiteen museo huvilassa Rmeilin kaupunginosassa Rue Sursockilla. Huvilan rakennutti vuonna 1912 aatelismies Nicolas Ibrahim Sursock, joka määräsi testamentissaan sen muutettavaksi museoksi. Hän kuoli vuonna 1952, ja huvila periytyi Beirutin kaupungille.\n\nRakennuksessa on italialaisia eli venetsialaisia ja osmanien arkkitehtuurin vaikutteita, ja se on yksi harvoista säilyneistä saman aikakauden huviloista Beirutissa. Museo avattiin 1960-luvun alussa näyttelyllä, jossa oli nykyisten libanonilaistaiteilijoiden töitä. Pysyvään kokoelmaan kuuluu satoja teoksia 1800- ja 1900-luvuilta: maalauksia, veistoksia ja grafiikkaa, myös japanilaisia puupiirroksia ja islamilaista taidetta.\n\nMuseon tilat ovat kasvaneet moninkertaisiksi, kun puutarhan alle rakennettiin uusia maanalaisia kerroksia. Ulkopuolella on esillä Youssef Hoyekin veistos Les Pleureuses eli itkevät naiset, joka oli alun perin Marttyyrien aukion muistomerkki. Sursock-suku oli yksi 1800-luvun kauppasuvuista, mutta isoisän matkavuonna 1873 huvilaa ei vielä ollut.",
+   "kuvat": [
+    {
+     "tiedosto": "The Sursock Museum façade.jpg",
+     "lyhyt": "Sursock-museo toimii huvilassa Rmeilin kaupunginosassa.",
+     "selite": "Sursock-museo toimii 1900-luvun alussa rakennetussa huvilassa Rmeilin kaupunginosassa.",
+     "lahde": "murielkahwagi, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Marttyyrien aukio": {
+   "aika": "1700-luvulta",
+   "teksti": "Marttyyrien aukio on Beirutin historiallinen pääaukio. Sen vanhin nimi on Sahat al-Burj eli Tornin aukio. Aukio oli kaupunginmuurin ulkopuolinen avoin tori, ja muinainen Burj al-Kashefin vartiotorni merkitsi sen ulkoreunaa.\n\nAukion nimi on vaihtunut useita kertoja. 1700-luvulla se sai nimen Place du Canon Venäjän laivaston ankkuroidun tykin mukaan, ja myöhemmin se tunnettiin nimellä Place des Canons. Sulttaani Abdul Hamid II:n mukaan sitä kutsuttiin Hamidiyyeh-aukioksi, ja nuorturkkilaisten vallankumouksen jälkeen Vapauden aukioksi. Nykyisen nimensä aukio sai 1930-luvulla muistoksi teloitetuille nationalisteille, jotka edustivat eri uskontokuntia.\n\nIsoisän matkavuonna 1873 aukio oli vielä avoin tori kaupungin muurien ulkopuolella, ja kunta uudisti sen kaupungin pääkokoontumispaikaksi vasta 1870-luvun lopulla. Aukiota katsoi Petit Serail, kuvernöörin virka-asunto. Ratikka tuli aukiolle 1900-luvun alussa, ja 1950-luvulla siitä tuli bussi- ja taksiterminaali sekä elokuvateattereiden ja kahviloiden paikka.",
+   "kuvat": [
+    {
+     "tiedosto": "Martyrs Square (48706314).jpg",
+     "lyhyt": "Marttyyrien muistomerkki Beirutin keskustan pääaukiolla.",
+     "selite": "Marttyyrien aukio sai nimensä 1900-luvun alussa teloitettujen nationalistien muistoksi.",
+     "lahde": "upyernoz from Haverford, USA, Wikimedia Commons (CC BY 2.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Mohammad Al-Aminin moskeija": {
+   "aika": "2000-luku",
+   "teksti": "Mohammad Al-Aminin moskeija on sunnalaisuuden moskeija Beirutin keskustassa, ja sitä kutsutaan myös Siniseksi moskeijaksi. Sen suunnitteli Azmi Fakhoury, ja tyyli muistuttaa osmanien aikaista arkkitehtuuria. Kupoleissa on vaaleansinistä laattaa, ja moskeijaan mahtuu tuhansia rukoilijoita.\n\nMoskeija vihittiin käyttöön 2000-luvulla. Paikalla oli 1800-luvulla zawiya eli sufilaisluostari, jonka vieressä toimi tori. Rakennustyön aikana kaivauksissa paljastui osa roomalaisen kaupungin pääkadun Decumanus Maximuksen päällysteestä ja pylväistä.\n\nMoskeija seisoo aivan Pyhän Yrjänän maroniittikatedraalin vieressä. Isoisän matkavuonna 1873 nykyistä moskeijaa ei vielä ollut, mutta sen paikalla toimi zawiya.",
+   "kuvat": [
+    {
+     "tiedosto": "Mohammad Al-Amin Mosque and St. George Maronite Cathedral, Beirut (3).jpg",
+     "lyhyt": "Mohammad Al-Aminin moskeija, jota kutsutaan myös Siniseksi moskeijaksi.",
+     "selite": "Moskeija vihittiin käyttöön 2000-luvulla, ja se seisoo keskustassa aivan Pyhän Yrjänän katedraalin vieressä.",
+     "lahde": "Radosław Botev, Wikimedia Commons (CC BY 3.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Pyhän Yrjänän maroniittikatedraali": {
+   "aika": "1800-luvun loppu",
+   "teksti": "Pyhän Yrjänän maroniittikatedraali on maroniittien Beirutin arkkihiippakunnan katedraali keskustassa. Nykyinen kolmilaivainen basilika rakennettiin 1800-luvun lopulla arkkipiispa Joseph Debsin johdolla 1700-luvun puolivälissä rakennetun pienemmän Pyhän Yrjänän kirkon paikalle.\n\nUusklassisen julkisivun suunnitteli italialainen arkkitehti Giuseppe Maggiore, ja sisätila muistuttaa Santa Maria Maggioren basilikaa Roomassa. Katossa on kullattu kassettikatto, ja seinissä on stukkia ja marmoria. Rakentamisessa käytettiin roomalaisia pylväitä Beit Meryn Deir El Qalaan temppelistä.\n\nEsipihan alta on säilytetty hellenistinen rakennelma, osa roomalaista pylväskatua ja osmanien aikainen muuri. Uusi kellotorni on noin 70 metriä korkea, ja lähteen mukaan arkkipiispa kertoi sen korkeuden vastaavan viereisen moskeijan minareetteja uskontojen välisen sovun viestinä. Isoisän matkavuonna 1873 nykyistä katedraalia ei vielä ollut.",
+   "kuvat": [
+    {
+     "tiedosto": "Mohammad Al-Amin Mosque and St. George Maronite Cathedral, Beirut (1).jpg",
+     "lyhyt": "Pyhän Yrjänän maroniittikatedraali ja sen kellotorni.",
+     "selite": "Katedraalin esipihan alla on säilytetty osa roomalaista pylväskatua.",
+     "lahde": "Radosław Botev, Wikimedia Commons (CC BY 3.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Nejmehin aukio": {
+   "aika": "1920-luku",
+   "teksti": "Nejmehin aukio eli Place de l'Étoile on Beirutin keskustan pääaukio. Ranskalaiset purkivat 1920-luvulla vanhat basaarit ja muuttivat alueen nykyaikaiseksi kaupunginosaksi, ja aukio tunnetaan art deco -arkkitehtuuristaan.\n\nAukion kaunistus on 1930-luvun kellotorni, jossa on nelisivuinen kello ja jonka lahjoitti libanonilais-brasilialainen siirtolainen Michel Abed. Parlamenttirakennuksen suunnitteli Mardiros Altounian, joka suunnitteli myös kellotornin. Rakennus yhdistää Beaux-Arts-tyylin paikallisiin piirteisiin, kuten kaksois- ja kolmoiskaariin, ja sen julkisivu on kalkkikiveä.\n\nAukion Pyhän Yrjänän katedraali valmistui 1700-luvulla, ja sen alla on maanalainen museo, jossa on seitsemän samalle paikalle rakennetun kirkon kerrostumia. Aukiota tunnetaan kyyhkysistään. Isoisän matkavuonna 1873 nykyistä aukiota ei vielä ollut: alueella oli vanhoja basaareja.",
+   "kuvat": [
+    {
+     "tiedosto": "Beirut, Central District, Nejmeh Square.jpg",
+     "lyhyt": "Nejmehin aukio on Beirutin keskustan pääaukio.",
+     "selite": "Aukio syntyi 1920-luvulla, kun vanhat basaarit purettiin ja alue rakennettiin uudelleen.",
+     "lahde": "Heinz Hövel, Wikimedia Commons (CC BY-SA 3.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Suuri Serail": {
+   "aika": "1800-luku",
+   "teksti": "Suuri Serail eli al-Sarāy al-Kabir, hallituspalatsi, kohoaa kukkulalla Beirutin keskustassa, ja nykyään se on Libanonin pääministerin virkapaikka. Rakennus syntyi osmanien sotilas- ja siviilihallinnon päämajaksi, ja beirutilaiset kutsuivat sitä nimellä Al-Quishleh eli varuskunta.\n\nLinnoittaminen alkoi 1800-luvun puolivälissä, ja rakennukseen lisättiin toinen kerros. Sulttaani Abdülazizin määräämä sotilassairaala valmistui 1860-luvulla. Isoisän matkavuonna 1873 rakennus oli siis jo olemassa kasarmina ja sotilashallinnon rakennuksena, mutta lopullisen muotonsa se sai vasta myöhemmissä muutoksissa 1800-luvun lopulla.\n\nSuunnittelu noudatti osmanien uuden sotilasjärjestyksen arkkitehtuuria, ja korkealla sijaitseva vaatimaton julkisivu jäljittelee Istanbulin Selimiye-kasarmia. Ranskalaiset muuttivat rakennuksen Ylikomissariaatiksi 1900-luvun alussa. Lähellä on Hamidiyyeh-kellotorni, joka rakennettiin 1800-luvun lopulla.",
+   "kuvat": [
+    {
+     "tiedosto": "Grand Serail, Government Palace, Beirut.jpg",
+     "lyhyt": "Suuri Serail on Libanonin pääministerin virkapaikka.",
+     "selite": "Suuri Serail rakennettiin osmanien aikana kasarmiksi ja hallinnon päämajaksi.",
+     "lahde": "Pjposullivan1, Wikimedia Commons (CC BY-SA 2.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": null,
+ "ehdotukset": {
+  "lentoasema": "Rafic Hariri International Airport (BEY)",
+  "huomiot": [
+   "Kohdekartan rajaus: tehtävänannon mukaan kartalla on faktapohjan kahdeksan kohdetta, joihin kuuluu Raouchén Kyyhkyskalliot, mutta faktapohjan vaihtoehto A (rajaus ilman Raouchéa, länsi 35.4975) jättäisi kalliot rajauksen ulkopuolelle ja aiheuttaisi tarkistimen virheen. Kompromissi: käytössä on faktapohjan rajaus 5.1 (länsi 35.4635), jolloin kartta on noin 5,2 km x 2,6 km ja ydinkeskusta pienenee. Päätoimittaja voi valita kahdeksan kohteen laajan tai seitsemän kohteen tiiviin kartan.",
+   "Moskeijan ja maroniittikatedraalin etäisyys on vain noin 100 metriä, joten numeroympyrät ovat kartalla lähellä toisiaan.",
+   "Tarkat luvut ja vuodet on pyöristetty LISÄSÄÄNNÖN mukaan: kansallismuseon rakennusvuodet (1930-luvun alku, avaus 1940-luvun alku), katedraalin rakennusvuodet (1800-luvun loppu), Nejmehin aukion purkutyöt (1920-luku), Marttyyrien aukion uudistus (1870-luvun lopulla), AUB:n ensimmäiset rakennukset (1870-luvun alku) ja keittokirjan vuosi (1880-luku). Tarkka vuosi sallitaan vain, jos tarkistaja löytää kaksi riippumatonta lähdettä. Pidetyt tarkat vuodet (64 eaa., 551, 1832, 1866, 1875, 1912, 1952) ovat faktapohjassa [V].",
+   "Säädataa ei ole (saatiedot null); oppaan sääjakso perustuu en-Wikipedian ilmastotaulukkoon (lentokentän mittaukset) ja sanoo vain pitkän ajan keskiarvoista, koska tarkkaa havaintojaksoa ei ole lähteessä. Vuosisade on ristiriitainen (730, 825 ja 914 mm), joten sitä ei ole kirjattu.",
+   "Matkustusturvallisuus: um.fi ei ollut saatavilla (403), joten oppaassa on vain Wikivoyagen Libanon-sivun yleinen varoitus (jännitteet naapurimaiden kanssa, rajaseutu, pakolaisleirit, riippumaton lehdistö). Päätoimittaja tarkistaa sanamuodon ennen julkaisua.",
+   "Mezze-nostoa (L1) kuvaava kuva on otettu libanonilaisessa ravintolassa Genevessä, ja kuvateksti kertoo sen. Mouneh-nostoon (L3) ei löytynyt kelvollista mouneh-kuvaa, joten kuvana on kibbeh ja kuvateksti kertoo kibbehistä. Kuvien lähderivin lisenssi CC BY 3.0 pl on kirjoitettu muotoon CC BY 3.0.",
+   "College Hallin kuva (nosto K3) on Matson-kokoelmasta noin 1920-luvulta, ei isoisän ajalta; kuvateksti ei väitä sitä 1873-kuvaksi. Matkakirjan valokuva (Bonfils) on vuodelta noin 1867 ja ilman nykykuvaa (uusi).",
+   "Faktapohjassa mainitut Samir Kassirin ja Imam Ouzain aukiot (kysymys 4, väärät vaihtoehdot) ovat faktapohjan ehdotuksia; tarkistaja voi vaihtaa ne."
+  ]
+ }
+}
