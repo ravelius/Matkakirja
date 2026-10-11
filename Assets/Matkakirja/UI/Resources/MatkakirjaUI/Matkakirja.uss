@@ -1705,27 +1705,40 @@
     color: var(--map-ink-70);
 }
 
-/* Kukkaron palaute (Ylapalkki.NaytaRaha; omistaja 11.10.2026, juna 182): vähennys punaisena ja lisäys vihreänä
-   tyylikirjan tilaväreillä, lihava (Kirjasimet) ja pieni suurennus noin sekunnin, sitten takaisin. Ennen 11.10.
-   summa välähti kultaisena (.mk-valahdys, nyt vain kellolla). Kaksi luokkaa, jotta palaute voittaa rahattoman värin. */
-.mk-pilleri__raha {
+/* Kukkaron palaute (Ylapalkki.NaytaRaha; omistaja 11.10.2026, juna 182; tarkennus 15.2x): koko summa (£ ja luku)
+   tyylikirjan tilaväreillä ja lihavana, suurenee ja pienenee tyylikirjan liikkeellä (liike.avaus 220 ms sisaan-käyrällä,
+   liike.sulku 200 ms pehmea-käyrällä), väri palaa hitaasti. £ skaalautuu oikeasta reunastaan ja luku vasemmasta, joten ne
+   pysyvät kiinni toisissaan. Kaksi luokkaa, jotta palaute voittaa rahattoman värin. */
+.mk-pilleri__raha,
+.mk-pilleri__punta {
     transition-property: color, scale;
-    transition-duration: 1.2s, 0.25s; /* ympäristöanimaatio (pohjavahdin poikkeus 8.10.) */
+    transition-duration: 1.2s, 0.2s; /* ympäristöanimaatio (pohjavahdin poikkeus 8.10.) */
+    transition-timing-function: ease, cubic-bezier(0.45, 0, 0.2, 1);
 }
 
-.mk-pilleri__raha.mk-pilleri__raha--vahenee {
+.mk-pilleri__raha {
+    transform-origin: 0% 50%;
+}
+
+.mk-pilleri__punta {
+    transform-origin: 100% 50%;
+}
+
+.mk-pilleri__raha.mk-pilleri__summa--vahenee,
+.mk-pilleri__punta.mk-pilleri__summa--vahenee {
     color: var(--tk-tila-raha-vahenee);
-    transition-duration: 0.15s, 0.25s;
 }
 
-.mk-pilleri__raha.mk-pilleri__raha--kasvaa {
+.mk-pilleri__raha.mk-pilleri__summa--kasvaa,
+.mk-pilleri__punta.mk-pilleri__summa--kasvaa {
     color: var(--tk-tila-raha-kasvaa);
-    transition-duration: 0.15s, 0.25s;
 }
 
-.mk-pilleri__raha.mk-pilleri__raha--suuri {
+.mk-pilleri__raha.mk-pilleri__summa--suuri,
+.mk-pilleri__punta.mk-pilleri__summa--suuri {
     scale: 1.25 1.25;
-    transition-duration: 0.15s, 0.15s;
+    transition-duration: 0.15s, 0.22s;
+    transition-timing-function: ease, cubic-bezier(0.22, 0.9, 0.24, 1);
 }
 
 /* Talouden vaihe 1 (web .turn-pill .kassa.rahaton, .rahaton-aika): rahat lopussa kassa punaisena ja lihavana,

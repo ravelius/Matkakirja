@@ -103,7 +103,7 @@ namespace Matkakirja.Natiivi
                 VahdiRahaa(o);
                 return;
             }
-            Leima.Raha(muutos, syy);
+            // Vain yläpalkin summa (omistaja 15.2x: "rahapäivitys saisi tulla näkyviin pelkästään oikeaan yläkulmaan").
             Tilarivi.RahaPalaute(saldo);
         }
 
@@ -120,7 +120,6 @@ namespace Matkakirja.Natiivi
                 rahaVahti = null;
                 var lista = odottavatRahat.ToArray();
                 odottavatRahat.Clear();
-                foreach (var r in lista) Leima.Raha(r.Muutos, r.Syy);
                 if (lista.Length > 0) Tilarivi.RahaPalaute(lista[lista.Length - 1].Saldo);
             }).Every(200);
         }

@@ -26,3 +26,27 @@ extern "C" void MatkakirjaHaptiikka_Valinta(void)
         [g prepare];
     });
 }
+
+// KUKKARON PALAUTE (omistaja 11.10.2026: "samaan aikaan voisi tulla haptinen palaute kännykällä"; Pelikoodari): rahan kasvu =
+// onnistumisen ilmoitus, vähennys = kevyt isku. Kutsu yläpalkin summan värinvaihdon hetkellä (Ylapalkki.NaytaRaha).
+// Simulaattorissa ja iPadissa (ei Taptic Enginea) kutsu ei tee mitään.
+static UINotificationFeedbackGenerator* ilmoitus;
+static UIImpactFeedbackGenerator* kevyt;
+
+extern "C" void MatkakirjaHaptiikka_RahaKasvoi(void)
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (ilmoitus == nil) ilmoitus = [[UINotificationFeedbackGenerator alloc] init];
+        [ilmoitus notificationOccurred:UINotificationFeedbackTypeSuccess];
+        [ilmoitus prepare];
+    });
+}
+
+extern "C" void MatkakirjaHaptiikka_RahaVaheni(void)
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (kevyt == nil) kevyt = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleLight];
+        [kevyt impactOccurred];
+        [kevyt prepare];
+    });
+}
