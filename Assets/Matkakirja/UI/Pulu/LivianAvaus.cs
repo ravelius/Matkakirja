@@ -11,8 +11,8 @@
 // (78 ms/merkki, 3,2–18 s) tai puheen loppuun + 400 ms (livianKuplanAjastin), napautus vie
 // eteenpäin. Vähennetty liike: ei liitoa eikä viivettä. Äänet: saapuu ensimmäisellä,
 // sekoilee humoristisilla (SEKOILUN_MERKIT), lahtee sarjan loputtua, jos kupla näkyi.
-// Repliikki 4 (yhden reitin kupla) väistyy, kun lähtökohteita on useita; äänite kulkee
-// kaanonin numerolla. Viides repliikki (opaslupaus) saa Viisaan Pöllön muotokuvan.
+// v2 (omistaja 11.10.2026): neljä repliikkiä kaikille, äänet aanet/pulu/opastus-v1/livia-avaus-v2-n.mp3; neljäs
+// (opaslupaus) saa Viisaan Pöllön muotokuvan. Uusi matka nollaa ensikerran liput (NollaaEnsikerta).
 //
 // Loppu: sarja päättyy itsestään (viimeinen puhe saa soida loppuun) tai keskeytyy, kun
 // valinta tehdään (valinnassa() = false; web doPickStart → peruLivianAvaus), chat on auki,
@@ -43,17 +43,16 @@ namespace Matkakirja.Natiivi
         const long AvauksenViive = 900, KuplienVali = 280;
         const float PuheenHanta = 400f;
 
-        /// <summary>Kaanonin järjestysnumero kuplalle, joka väistyy usealla reitillä (web LIVIAN_YHDEN_REITIN_KUPLA).</summary>
-        public const int YhdenReitinKupla = 3;
-
-        /// <summary>LIVIAN AVAUSREPLIIKIT — KAANONIA (päätoimittaja 29.8.2026). Sanatarkkoja: ei muokata täällä.</summary>
+        /// <summary>
+        /// LIVIAN AVAUSREPLIIKIT v2 — KAANONIA (omistaja hyväksyi 11.10.2026 PT:n kautta, Pelikoodarin äänet opastus-v1):
+        /// neljä repliikkiä kaikille (vanha yhden reitin kupla poistui), neljäs saa Viisaan Pöllön muotokuvan. Sanatarkkoja.
+        /// </summary>
         public static readonly string[] Repliikit =
         {
-            "ui.livia.avaus-1",
-            "ui.livia.avaus-2",
-            "ui.livia.avaus-3",
-            "ui.livia.avaus-4",
-            "ui.livia.avaus-5",
+            "ui.livia.avaus-v2-1",
+            "ui.livia.avaus-v2-2",
+            "ui.livia.avaus-v2-3",
+            "ui.livia.avaus-v2-4",
         };
 
         /// <summary>Uuden matkan lyhyet tervehdykset (web LIVIAN_UUSI_MATKA #3440, Fable hyväksyi 27.9.).</summary>
@@ -76,12 +75,29 @@ namespace Matkakirja.Natiivi
             return Kieli.T(UusiMatka[i]);
         }
 
-        /// <summary>Äänitteiden versiokysely (web LIVIAN_AANITETYT + LIVIAN_AANIERAT, avaus-1…5).</summary>
-        static readonly string[] Aaniversiot = { "62c6bcbd-4", "30c6eb27-4", "1446cf47-4", "b8bf54c6-4", "c7f488b4-4" };
+        /// <summary>Avauksen v2-äänite (aanet/pulu/opastus-v1/livia-avaus-v2-n.mp3, Pelikoodarin opastus.json).</summary>
+        static string AaniUrl(int indeksi) => Aanet.Juuri + "aanet/pulu/opastus-v1/livia-avaus-v2-" + (indeksi + 1) + ".mp3";
+
+        /// <summary>
+        /// UUSI MATKA = ENSIMMÄINEN KERTA (omistaja 11.10.2026 klo 11.4x: "pulun ääni saisi toistua aina alussa jos valitsen uusi
+        /// peli jotta kuulen samat kuin pelaaja ensimmäistä kertaa"): avausesittely, tuurauspaljastus ja opastus kuuluvat taas,
+        /// lyhyt "Taas matkaan?" -tervehdys jää pois. Jatka matkaa ei kutsu tätä.
+        /// </summary>
+        public static void NollaaEnsikerta()
+        {
+            try
+            {
+                PlayerPrefs.DeleteKey(Avain);
+                PlayerPrefs.DeleteKey(UusiMatkaAvain);
+                PlayerPrefs.Save();
+            }
+            catch (Exception) { }
+            LivianPaljastus.NollaaLippu();
+        }
 
         /// <summary>Opaslupauksen muotokuva (web assets/tietaja/viisas-pollo-muotokuva-v1.png).</summary>
         const string MuotokuvaUrl = Laukku.SivustoJuuri + "assets/tietaja/viisas-pollo-muotokuva-v1.png";
-        const int MuotokuvanRepliikki = 4;
+        const int MuotokuvanRepliikki = 3;
 
         /// <summary>Web SEKOILUN_MERKIT: repliikit, joihin kuuluu doing-ääni.</summary>
         static readonly Regex Sekoilu = new Regex("Melkein joka ikisen|ihan hiessä|anteeksi valikoima");
@@ -113,12 +129,11 @@ namespace Matkakirja.Natiivi
 
         public static bool Kaynnissa => kesken;
 
-        /// <summary>Sarja tälle pelille (web livianAvausSarja): yhden reitin kupla vain, jos kohteita ≤ 1.</summary>
+        /// <summary>Sarja tälle pelille (web livianAvausSarja): v2:ssa kaikki neljä repliikkiä kohteiden määrästä riippumatta.</summary>
         public static List<(string Teksti, int Indeksi)> Sarja(int kohteita)
         {
             var t = new List<(string, int)>();
-            for (int i = 0; i < Repliikit.Length; i++)
-                if (kohteita <= 1 || i != YhdenReitinKupla) t.Add((Kieli.T(Repliikit[i]), i));
+            for (int i = 0; i < Repliikit.Length; i++) t.Add((Kieli.T(Repliikit[i]), i));
             return t;
         }
 
@@ -233,11 +248,12 @@ namespace Matkakirja.Natiivi
                 return;
             }
             var (teksti, indeksi) = sarja[i];
+            Debug.Log($"MATKAKIRJA livia: avaus {indeksi + 1}/{sarja.Count}");
             float puheMs = -1f;
             // Jatkohiljaisuus vaientaa Livian (Sano ei puhu): sarja päättyy siististi.
             if (PeliOhjain.Jatkohiljaisuus) { Lopeta(true); return; }
             // Kartan kohtaus (omistaja 6.10.2026): esittely puhuu ilman kuplia; sarja etenee ajastimella (lukuaika / puheen loppu).
-            var kupla = pulu.Sano(teksti, Pulu.AaniOsoite("avaus", indeksi, Aaniversiot[indeksi]), null,
+            var kupla = pulu.Sano(teksti, AaniUrl(indeksi), null,
                 () => Seuraava(i + 1, v), klippi => puheMs = klippi != null ? klippi.length * 1000f : 0f, kuplaton: true);
             pulu.Kuplat.Avauskupla(kupla);
             if (indeksi == MuotokuvanRepliikki) pulu.Kuplat.LisaaMuotokuva(kupla, MuotokuvaUrl);

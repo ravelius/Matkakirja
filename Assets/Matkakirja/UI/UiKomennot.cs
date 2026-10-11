@@ -1511,6 +1511,9 @@ namespace Matkakirja.Natiivi
                 if (osat.Count > 1 && osat[1] == "nollaa") { LivianPaljastus.NollaaLippu(); return null; }
                 return "paljastus " + (LivianPaljastus.Nahty ? "nähty" : "näkemättä") + (LivianPaljastus.Kesken ? ", kesken" : "");
             }
+            // ui livia tuuraus alku|loppu → aloituskaupungin Pöllö-repliikit 1–2 tai 3–4 heti; ui livia ensikerta → Uuden matkan nollaus.
+            if (osat.Count > 1 && osat[0] == "tuuraus") { LivianPaljastus.Testi(osat[1] == "loppu"); return "tuuraus " + osat[1]; }
+            if (osat.Count > 0 && osat[0] == "ensikerta") { LivianAvaus.NollaaEnsikerta(); return "ensikerran liput nollattu"; }
             if (osat.Count > 0 && osat[0] == "pois")
             {
                 liviaKehys?.RemoveFromHierarchy();
