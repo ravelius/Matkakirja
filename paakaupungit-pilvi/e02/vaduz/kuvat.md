@@ -5,7 +5,7 @@ Kaikki kuvat katsottu esikatselulla; mikään ei ole jo pelissä (grep js/packs/
 | Kohta | Tiedosto | Koko | Lisenssi | Lähderivi | Mitä kuvassa näkyy | Vuosi |
 |---|---|---|---|---|---|---|
 | Kansi 1 | 3152-3154 - Vaduz - Blick aus Mitteldorf.jpg | 8888×2640 | CC BY-SA 2.5 | Andrew Bossi, Wikimedia Commons (CC BY-SA 2.5) | Laaja panoraama: kivetty katu, viinitarha ja talot etualalla, metsäinen rinne ja linna ylhäällä, vuoret taustalla, sininen taivas | |
-| Kansi 2 | Vaduz Liechtenstein 13.jpg | 4968×3497 | CC BY-SA 2.5 | böhringer friedrich, Wikimedia Commons (CC BY-SA 2.5) | Städtle-kadun risteys, lasipintainen kauppatalo, rinne ja linna harjalla, kirkas talvitaivas (kaksi etäistä jalankulkijaa) | |
+| Kansi 2 | Château de Vaduz - 2022.jpg | 5543×3837 | CC BY-SA 4.0 | Christian David, Wikimedia Commons (CC BY-SA 4.0) | Linna rinteellä pääosassa: nelikulmainen kivitorni, pyöreä bastioni ja vanhat siivet, taustalla lumihuippuisia vuoria ja kirkas taivas (ei ihmisiä, ei tekstiä) | 2022 |
 | Kansi 3 | LIE Vaduz, Schlossweg, Aussicht 0014.jpg | 3963×2972 | CC BY 4.0 | -wuppertaler, Wikimedia Commons (CC BY 4.0) | Ylhäältä katsottu laakso: kaupungin katot ja viinitarhat, taustalla lumihuippuinen vuorijono ja pilvinen taivas | |
 | Nosto K1 | Schloss Vaduz. Ansicht von Nordwesten. 2015-10-03 17-24-28.jpg | 5184×3456 | CC BY-SA 4.0 | Shesmax, Wikimedia Commons (CC BY-SA 4.0) | Linna metsäisen rinteen päällä iltavalossa: vasemmalla kivitorni, valkoiset siivet ja vuoret taustalla | |
 | Nosto K2 | Anton Florian v Liechtenstein.jpg | 2158×2750 | PD | Unidentified painter, Wikimedia Commons (PD) | Maalattu vyötärökuva peruukkipäisestä miehestä haarniskassa ja punaisessa viitassa, soikea kehys | 1700-luku |
@@ -41,3 +41,7 @@ Huom. Kohteen 4 vuosi sarakkeessa on valokuvan, ei vanhan kuvan vuosi (kuva ei o
 | Schloss Vaduz. Bergfried. 2003-10-26 10-17-00.jpg | yksityiskohta (muurin aukko), ei tunnista linnaa |
 | 2018-10-05 Liechtenstein, Vaduz, St. Florin (KPFC) 09.jpg | ei katedraali, vaan keltainen talo ja palokunnan kokoontuminen (ihmisjoukko) |
 | LIE Vaduz, Burgruine Schalun 0004.jpg | (ks. yllä) |
+| Vaduz Liechtenstein 13.jpg | vaihdettu pois kansi 2:sta (PT 11.10.): lasinen kauppatalo hallitsi, linna pieni |
+| Castillo, Vaduz, Liechtenstein, 2022-10-23, DD 30.jpg | pelkkä torni lähikuvassa, ei koko linnaa; tekstikylttejä |
+| Vaduz Castle 1.jpg | linna pieni metsäisessä rinteessä, rakennusteline |
+| Castle of Vaduz (1).jpg | nosturi hallitsee kuvaa |

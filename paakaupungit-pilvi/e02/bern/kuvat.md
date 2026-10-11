@@ -31,6 +31,8 @@ Haku 10.10.2026, kaikki kuvat katsottu esikatselulla. Lisenssi ja koko rajapinna
 | kohde Marzilibahn | Marzilibahn 2010 Wagen vor Bundeshaus.jpg | 4984×3720 | CC BY 3.0 | Sandstein, Wikimedia Commons (CC BY 3.0) | Punainen funikulaarivaunu rinteessä, taustalla Bundeshausin vihreät kupolit | 2010 |
 | valokuva | Bear pit, Berne, Switzerland-LCCN2001701111.jpg | 3702×2787 | PD | Photochrom Print Collection, Commons (PD) | Käsinvärjätty fotokromivedos karhukuopasta: neljä karhua kivipohjalla, katsojia muurilla, myyntikoju; HUOM vedoksen alareunassa pieni painettu otsikkoteksti (vedoksen oma, ei lisätty), Päätoimittaja päättää kelpaako | n. 1890–1900 |
 
+RAJAUS (PT 11.10.): valokuvan (Bear pit, Berne ... LCCN2001701111.jpg) painettu otsikkoteksti alareunassa ei ole rajattavissa pois, koska pelissä ei ole rajausmekanismia matkakirjan valokuvalle (VALOKUVAT-rivin kentät: tiedosto, vuosi, lahde, lyhyt, selite; ui.js:n `rajaus`/object-position koskee vain esittely.json-kortin pikkukuvia ja isoisän valokuvien rajausTyyli on kovakoodattu isoisan-valokuvat.js:ään). Uutta mekanismia ei keksitty. Kuva jää sellaisenaan; rajaus (alareunan tekstirivi pois) tehtävä Macilla, jos pelille lisätään kuvarajaus tai kuvatiedosto rajataan paikalliskopioon. Muut PD-vedokset ovat samalla tavalla tekstillisiä (ks. hylätyt).
+
 Ennen–nyt-paria ei ole: PD-valokuvavedosta Bundesplatzilta tai Münsterin tornista 1800-luvulta ≥ 1200 px ei löytynyt (haut tyhjiä). Vaihtoehto, jos Päätoimittaja haluaa: N3:n Durheimin litografia 1857 (ei valokuva, eri kuvakulma kuin nykykuvat).
 
 ## HYLÄTYT

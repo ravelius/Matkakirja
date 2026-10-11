@@ -6,7 +6,7 @@ Kaikki 21 kuvaa katsottu esikatselulla. Kaikki lyhyet <=100 merkkiä, yksi virke
 |---|---|---|---|---|---|
 | .valokuva | Schloss Vaduz. Ansicht von Westen. 2015-10-03 17-52-32.jpg | koko linna rinteen harjalla | OK | | |
 | kaupunkilehti[0].kansikuvat[0] | 3152-3154 - Vaduz - Blick aus Mitteldorf.jpg | panoraama: katu, viinitarha, talot, linna rinteellä, vuoret | OK | | |
-| kaupunkilehti[0].kansikuvat[1] | Vaduz Liechtenstein 13.jpg | Städtle-risteys, lasitalo, linna harjalla pienenä | OK | | |
+| kaupunkilehti[0].kansikuvat[1] | Château de Vaduz - 2022.jpg | linna rinteellä: kivitorni, pyöreä bastioni, lumihuippuiset vuoret taustalla (vaihdettu PT 11.10.) | OK | | |
 | kaupunkilehti[0].kansikuvat[2] | LIE Vaduz, Schlossweg, Aussicht 0014.jpg | kaupungin katot, viinitarhat, lumihuippuiset vuoret; Reiniä ei erotu | KORJATTU | Vaduz sijaitsee Reinin laaksossa, jonka vastarannalla kohoavat Sveitsin Alpit. | (ennallaan) Rein on 27 kilometriä pitkä raja Sveitsin kanssa. |
 | kaupunkilehti[0].nostot[0] | Schloss Vaduz. Ansicht von Nordwesten. 2015-10-03 17-24-28.jpg | linna, kivitorni vasemmalla | OK | | |
 | kaupunkilehti[0].nostot[1] | Anton Florian v Liechtenstein.jpg | ruhtinaan muotokuva | OK | | |

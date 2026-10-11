@@ -14,7 +14,7 @@
   }
  },
  "artikkeli": {
-  "intro": "Bern on **Sveitsin liittokaupunki**, jossa ovat maan hallituksen ja parlamentin kotipaikka. Perustuslaki ei nimeä virallista pääkaupunkia; Bern on hallituksen kotipaikka eli liittokaupunki. Kaupungissa (kunnassa) asuu 146 867 ihmistä (31.12.2025, sivuasukkaat mukaan lukien). Vanhakaupunki nousee **Aare-joen ympäröimälle mäkiniemelle**, ja se on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983.\n\nPerimätiedon mukaan herttua Berchtold V perusti kaupungin 1191, ja karhu on ollut sen sinetissä ja vaakunassa ainakin 1220-luvulta. Vuoden 1405 suurpalo tuhosi suurimman osan puutaloista, ja tilalle nousi vähitellen hiekkakivikaupunki, jonka holvikäytäviä on noin kuusi kilometriä. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28.11.1848.\n\nIsoisän matkavuonna 1873 kaupunki oli ollut hallituksen kotipaikka jo neljännesvuosisadan. Ensimmäinen liittopalatsi oli valmistunut 1857, mutta kupolilla varustettua parlamenttirakennusta ei vielä ollut, ja tuomiokirkon torni oli kesken: se valmistui vasta **1893**. Vanhankaupungin muoto ja kaduntasoiset holvikäytävät olivat kuitenkin jo silloin tuttuja.",
+  "intro": "Bern on **Sveitsin liittokaupunki**, jossa ovat maan hallituksen ja parlamentin kotipaikka. Perustuslaki ei nimeä virallista pääkaupunkia; Bern on hallituksen kotipaikka eli liittokaupunki. Kaupungissa (kunnassa) asuu 146 867 ihmistä (31.12.2025, sivuasukkaat mukaan lukien). Vanhakaupunki nousee **Aare-joen ympäröimälle mäkiniemelle**, ja se on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983.\n\nPerimätiedon mukaan herttua Berchtold V perusti kaupungin 1191, ja karhu on ollut sen sinetissä ja vaakunassa ainakin 1200-luvulta. Vuoden 1405 suurpalo tuhosi suurimman osan puutaloista, ja tilalle nousi vähitellen hiekkakivikaupunki, jonka holvikäytäviä on noin kuusi kilometriä. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28.11.1848.\n\nIsoisän matkavuonna 1873 kaupunki oli ollut hallituksen kotipaikka jo neljännesvuosisadan. Ensimmäinen liittopalatsi oli valmistunut 1857, mutta kupolilla varustettua parlamenttirakennusta ei vielä ollut, ja tuomiokirkon torni oli kesken: se valmistui vasta **1893**. Vanhankaupungin muoto ja kaduntasoiset holvikäytävät olivat kuitenkin jo silloin tuttuja.",
   "teksti": "== Nimi ja alku ==\nBern on Sveitsin tasangolla Bernin Alppien pohjoispuolella, ja Aare-joki kiertää vanhaakaupunkia. Keskiaikaisen kaupungin perusti Zähringenin suku, ja perimätiedon mukaan Berchtold V perusti sen 1191. Nimen alkuperä on epävarma: karhuselitys on lähteen mukaan kansanetymologiaa, ja nykyään pidetään todennäköisenä kelttiläistä nimeä.\n\n== Hiekkakivestä rakennettu ==\nVuoden 1405 suurpalon jälkeen puutalot korvattiin vähitellen hiekkakivirakennuksilla, ja holvikäytävät syntyivät 1400-luvulla. Tuomiokirkon rakentaminen aloitettiin 1421, ja se pysähtyi lähes kolmeksi vuosisadaksi 1500-luvun lopulla.\n\n== Liittokaupunki ==\nVuonna 1848 Bern valittiin hallituksen kotipaikaksi, ja ensimmäinen liittopalatsi valmistui 1857. Nykyinen parlamenttirakennus rakennettiin 1894–1902."
  },
  "kysymykset": [
@@ -29,7 +29,7 @@
    "correct": 0,
    "level": 1,
    "hint": "Kansantarun mukaan herttua nimesi kaupungin ensimmäisellä metsästysretkellään kohtaamansa eläimen mukaan.",
-   "fact": "Karhu on ollut Bernin sinetissä ja vaakunassa ainakin 1220-luvulta. Perimätiedon mukaan herttua nimesi kaupungin ensimmäisen metsästyksessä kohtaamansa eläimen mukaan.",
+   "fact": "Karhu on ollut Bernin sinetissä ja vaakunassa ainakin 1200-luvulta. Perimätiedon mukaan herttua nimesi kaupungin ensimmäisen metsästyksessä kohtaamansa eläimen mukaan.",
    "source": "https://en.wikipedia.org/wiki/Bern"
   },
   {
@@ -129,10 +129,10 @@
    "nostot": [
     {
      "otsikko": "Karhu vai rako",
-     "teksti": "Kansantaru kertoo, että herttua Berchtold V lupasi nimetä uuden kaupungin ensimmäisen metsästyksessä kohtaamansa eläimen mukaan, ja se oli karhu. Lähteen mukaan yhteys sanaan Bär on kuitenkin kansanetymologiaa. Pitkään nimeä pidettiin peräisin Veronasta, jota keskiyläsaksaksi sanottiin Berniksi. Nykyään todennäköisempänä pidetään kelttiläistä juurta: 1980-luvulla löytyneessä sinkkitaulussa on Engehalbinselin entisen asutuksen nimi Brenodor. Karhu on silti kaupungin sinetissä ja vaakunassa ainakin 1220-luvulta, ja kaupunkia on leikillä kutsuttu myös Mutzopolisiksi, koska Mutz tarkoittaa murteessa karhua.",
+     "teksti": "Kansantaru kertoo, että herttua Berchtold V lupasi nimetä uuden kaupungin ensimmäisen metsästyksessä kohtaamansa eläimen mukaan, ja se oli karhu. Lähteen mukaan yhteys sanaan Bär on kuitenkin kansanetymologiaa. Pitkään nimeä pidettiin peräisin Veronasta, jota keskiyläsaksaksi sanottiin Berniksi. Nykyään todennäköisempänä pidetään kelttiläistä juurta: 1980-luvulla löytyneessä sinkkitaulussa on Engehalbinselin entisen asutuksen nimi Brenodor. Karhu on silti kaupungin sinetissä ja vaakunassa ainakin 1200-luvulta, ja kaupunkia on leikillä kutsuttu myös Mutzopolisiksi, koska Mutz tarkoittaa murteessa karhua.",
      "tiedosto": "Bemalte Sandsteinskulptur Bär mit Wappen (Walter Schnegg 1952) 01.jpg",
-     "lyhyt": "Karhu on ollut Bernin sinetissä ja vaakunassa ainakin 1220-luvulta.",
-     "selite": "Karhu on Bernin vaakunaeläin: se on kuvattu kaupungin sinetissä ja vaakunassa ainakin 1220-luvulta lähtien.",
+     "lyhyt": "Karhu on ollut Bernin sinetissä ja vaakunassa ainakin 1200-luvulta.",
+     "selite": "Karhu on Bernin vaakunaeläin: se on kuvattu kaupungin sinetissä ja vaakunassa ainakin 1200-luvulta lähtien.",
      "lahde": "AnBuKu, Wikimedia Commons (CC BY-SA 4.0)",
      "wiki": "Bern"
     },

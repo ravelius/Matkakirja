@@ -65,7 +65,7 @@ const PAKAT = ['europe', 'africa', 'asia', 'middleeast', 'northamerica', 'southa
 const VAKIOAIHEET = ['historia', 'kuvataide', 'kirjallisuus', 'musiikki', 'ruoka', 'luonto', 'tiede', 'nykytaide', 'huumori'];
 const KARTTATYYPIT = ['rakennus', 'aukio', 'luonto'];
 const OSIOT = ['kaupunki', 'artikkeli', 'kysymykset', 'tiedot', 'valokuva', 'kaupunkilehti', 'kohdekartta', 'nahtavyydet'];
-const LAHDE_RE = /^(.+), (?:Wikimedia )?Commons \((PD|CC0|CC BY(?:-SA)? \d\.\d(?: [Ii][Gg][Oo])?)\)$/;
+const LAHDE_RE = /^(.+), (?:Wikimedia )?Commons \((PD|CC0|CC BY(?:-SA)? \d\.\d(?: [Ii][Gg][Oo]| [A-Za-z]{2})?)\)$/;
 
 async function taulut(nimi, vienti) {
   const ulos = {};

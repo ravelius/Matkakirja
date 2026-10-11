@@ -32,7 +32,7 @@ Yhteenveto: VÄÄRIN 4, EPÄVARMA 12.
 | artikkeli.intro / teksti | liittokaupunki; 28.11.1848 valinta Zürichin ja Luzernin edelle; Unesco 1983; 1405 suurpalo; holvikäytävät 6 km; vuosiluvut 1857 ja 1893 | Bern, Modern history, Main sights; Old City, Great Fire of 1405 | OK |
 | artikkeli.intro | 1191 Berchtold V, Zähringen (kronikan mukaan) | Bern, Early history ("According to 14th-century historiography … 1191") | OK |
 | artikkeli.teksti | 20 km Bernin Alppien pohjoispuolella; kelttiläinen nimi todennäköisempi; tuomiokirkko 1421, tauko 1575 jälkeen; parlamenttirakennus 1894–1902 | Bern, Topography, Etymology; Bern Minster, History; Federal Palace | OK |
-| kysymykset[0] | karhu vaakunassa ainakin 1220-luvulta | Bern, Etymology | OK |
+| kysymykset[0] | karhu vaakunassa ainakin 1200-luvulta (muutettu PT 11.10.) | Bern, Etymology | OK |
 | kysymykset[2] | Zytglogge "aikakello", nimi kirjattu 1413, rakennettu noin 1218–1220 läntisen muurin porttitorniksi | Zytglogge, History ja Name | OK |
 | kysymykset[3] | 1405 tulipalo, sen jälkeen hiekkakivi, puutalojen tilalle ristikkotaloja | Bern, Old Swiss Confederacy; Old City, Great Fire | OK |
 | kysymykset[4] | torni 1893, rakennus alkoi 1421, noin 100 m | Bern Minster, johdanto (100,6 m) | OK (ks. EPÄVARMA "korkein") |
@@ -41,7 +41,7 @@ Yhteenveto: VÄÄRIN 4, EPÄVARMA 12.
 | tiedot[1] | Marzilibahn 105 m, vesikäyttö alussa | Marzili Funicular (huom. Bern-artikkeli sanoo 106 m ja "toiseksi lyhin"; teksti ei väitä lyhintä) | OK |
 | tiedot[2] | Nydeggbrücke keskikaari 46 m, Euroopan suurin 1890-luvulle | Nydeggbrücke, Bridge construction | OK |
 | valokuva.selite | neljäs kuoppa 1857, muutto 27.5.1857 Aaren yli | Bärengraben, History; Old City, 1857 | OK |
-| nostot[0] (kaupunkilehti 0) | Berchtold-legenda, Verona, Brenodor, sinkkitaulu 1980-luvulla, vaakuna 1220-luvulta | Bern, Etymology, Early history | OK (Mutzopolis ks. yllä) |
+| nostot[0] (kaupunkilehti 0) | Berchtold-legenda, Verona, Brenodor, sinkkitaulu 1980-luvulla, vaakuna 1200-luvulta (muutettu PT 11.10.) | Bern, Etymology, Early history | OK (Mutzopolis ks. yllä) |
 | nostot[1] | holvikäytävät 1400-luvulla yläkerroista; Unescon perustelu | Old City, Great Fire of 1405 | OK |
 | nostot[2] | 28.11.1848; syyt Zürich/Luzern/Sonderbund; 1852–1857 kaupungin kustannuksella; 5.6.1857; 16 vuotta 1873 | Bern, Modern history; Federal Palace, History; Old City | OK |
 | nostot[3] | Anshelm 1513 Novara; 1400-luvun puolivälin maininta (1440s); 1857; BärenPark 2009; tunneli; Bärenbähnli 2015 | Bärengraben, History; Bern, Etymology | OK |
