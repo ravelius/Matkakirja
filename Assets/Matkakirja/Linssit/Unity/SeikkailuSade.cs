@@ -15,8 +15,9 @@ namespace Matkakirja.Natiivi
         public static SeikkailuSade Aktiivinen { get; private set; }
         /// <summary>Korkean tuulen raja (m, Unity y): muurin harja ja tornin yläosa ulkona (piha ~0, harja ~10–12).</summary>
         public const float KorkeallaY = 8.5f;
-        /// <summary>Muurin tippuminen tyrmässä (PT 11.10. 03.0x, Pelikoodari: tyrmän keskitaso −41,5 dB, tavoite −32…−30 dB; sisällä muuten 0,28).</summary>
-        public const float TyrmaTippuminen = 0.6f;
+        /// <summary>Muurin tippuminen tyrmässä (PT 11.10. 03.0x, Pelikoodari: tyrmän keskitaso −41,5 dB, tavoite −32…−30 dB; sisällä muuten 0,28;
+        /// simu 1a7ebdf2c: 0,6 → −38,6 dB, joten täysi taso ja lisäksi SeikkailuTyrmaAanet-pohja).</summary>
+        public const float TyrmaTippuminen = 1f;
         internal static readonly string[] Tunnukset = { "sade-kivi", "sade-vesi", "sade-puu", "sade-pressu", "tippuminen-raystas", "tippuminen-muuri", "ukkonen-jyly",
             "tuuli-kostea", "tuuli-korkea",   // Sonniss-tuulet (Pelikoodari 9.10., ämpärissä sonniss-tuulet-v1)
             "tuuli-metsa",   // männikön tuuli muurin ulkopuolella (sonniss-aanet-v2, PT 9.10.)

@@ -14,6 +14,10 @@ namespace Matkakirja.Natiivi
         static readonly string[] Tipat = { "kaivo-01", "kaivo-02", "kaivo-03", "kaivo-04", "kaivo-05", "kaivo-06" };
         /// <summary>Askelia kauempana käytävällä ja väli (s): ohikulku sivusuunnassa oven takana.</summary>
         const int AskelMaara = 8; const float AskelValiS = 0.62f, KaytavaM = 3.5f, OhikulkuM = 7f, TippaKorkeusM = 2.3f;
+        /// <summary>Tyrmän pohja (olavinlinna-soundly-v2 linna-tila-01 "Underground, Dungeon, Dark, Water Droplets, Constant Hum",
+        /// −23 LUFS, 2D-silmukka) ja sen taso; simu 1a7ebdf2c: tyrmä −38,6 dB ilman sitä, tavoite (PT) −32…−30 dB.</summary>
+        const string Pohja = "linna-tila-01"; const float PohjaTaso = 0.9f, PohjaNousuS = 2f;
+        AudioSource pohja;
 
         SeikkailuTyrma tyrma; TyrmanAanet ajastin;
         readonly List<TyrmanAani> soitettavat = new List<TyrmanAani>();
@@ -30,8 +34,25 @@ namespace Matkakirja.Natiivi
         {
             if (tyrma == null || ajastin == null) return;
             var y = tyrma.Ydin;
+            Pohjaa(y.Vaihe != TyrmanVaihe.Ulkona);
             ajastin.Paivita(Time.deltaTime, y.Muunnelma, y.Vaihe, y.Aika, soitettavat);
             foreach (var a in soitettavat) Soita(a);
+        }
+
+        void Pohjaa(bool paalla)
+        {
+            if (pohja == null)
+            {
+                var klippi = SeikkailuAanet.Klippi(Pohja); if (klippi == null || !paalla) return;   // pankki vielä latautumassa
+                pohja = gameObject.AddComponent<AudioSource>();
+                pohja.clip = klippi; pohja.loop = true; pohja.spatialBlend = 0f; pohja.playOnAwake = false; pohja.volume = 0f;
+                pohja.time = Random.Range(0f, Mathf.Max(0f, klippi.length - 0.1f));
+                SaumatonSilmukka.Kiinnita(pohja);
+                pohja.Play();
+            }
+            float taso = SeikkailuAanet.MikserinTaso(Pohja);
+            float nyt = pohja.volume / Mathf.Max(taso, 1e-4f);
+            pohja.volume = Mathf.MoveTowards(nyt, paalla ? PohjaTaso : 0f, Time.unscaledDeltaTime / PohjaNousuS) * taso;
         }
 
         void Soita(TyrmanAani a)
