@@ -21,3 +21,11 @@ Scratchpad (skenaariot, simu2.sh): /private/tmp/claude-502/-Users-Shared-Claude-
   simu2.sh poistaa natiivi-ui-app-poistu3-180:n ENNEN-ajon jälkeen (Julkaisijan levypyyntö; pakka-180 jo poistettu).
 - Maakortti: ei muutosta; PT kysyy omistajalta, pitääkö oman maan kortti saada auki pysäkkikaupungeissa (kartussi häipyy 3 s, pääkaupunkipiste vain ei-pysäkeille).
 - Laitetestaajan karttakierroksen kohta 4 (kohdelista himmeä) = vanha havainto, PT: ei ehdoteta omistajalle.
+
+## Päivitys 04.5x (PT kuittasi kaiken junaan 181, Natiivisepällä)
+- metro-kyltti-181 0fb0ad5bf (isonnettu kuva todennettu: todistus-isokuva-sirut-pari-20261011.jpg)
+- olavinlinna-dialogi-181 98fab3e74 (⊃ 12c1bfb51): "Aloita alusta"; todennus Laitetestaajan kierroksella. Dialogin tausta ennallaan (PT).
+- opas-sirut-181 b65f6507b (⊃ 2cb258340): Wien todennettu 3d1438b8d:llä; kierrostoive ohittaa ikäkyselyn (todennus Wienissä junan 181 käännöksellä).
+- Hiljaisuus linnan jälkeen = KERRAN LÄPI -linjaus (Pelikoodari), ei vika. Maakortti: PT kysyy omistajalta.
+- Levy: pakka-180 ja poistu3-180 poistettu. Jäljellä appit metro-181 ja sirut-181 (poista, kun juna 181 on TF:ssä).
+- SEURAAVAKSI: Wienin todennus junan 181 käännöksellä (sirut + ei ikäkyselyä Esittele kaupungista), muuten levossa.
