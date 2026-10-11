@@ -236,6 +236,9 @@ namespace Matkakirja.Natiivi
         }
         const float KapeaLeveys = 520f, MatalaKorkeus = 520f;
 
+        /// <summary>Sitova vuosiväli (PT 11.10.: "n. 1669–" / "1670" ei saa katketa): TextCoren &lt;nobr&gt;.</summary>
+        static string Sido(string s) => string.IsNullOrEmpty(s) ? s : "<nobr>" + s + "</nobr>";
+
         void AsetteleKortti()
         {
             var isa = korttiJuuri.parent;
@@ -245,7 +248,11 @@ namespace Matkakirja.Natiivi
             // Nappirivin yläreuna (ei bottom + korkeus: venynyt ryhmä antoi negatiivisen tilan ja ~50 pt:n kortin).
             float napit = H - ryhma.layout.yMin + m;
             if (float.IsNaN(napit) || napit < m || napit > H * 0.5f) napit = 24f + Tyylikirja.Nappi.Ohjaus + m;
-            if (Pohja.Leveys(W) == Pohja.Luokka.Kapea)
+            // Kapea kortti (puhelin pystyssä): alkuperäinen nimi pois, jotta pisinkin esittely (Yövartio) mahtuu Peitto.Max:iin
+            // (PT 11.10.: viimeinen rivi leikkautui); sivukortissa tilaa on.
+            bool kapea = Pohja.Leveys(W) == Pohja.Luokka.Kapea;
+            kAlkuperainen.style.display = !kapea && !string.IsNullOrEmpty(kAlkuperainen.text) ? DisplayStyle.Flex : DisplayStyle.None;
+            if (kapea)
             {
                 korttiJuuri.style.left = m; korttiJuuri.style.right = m; korttiJuuri.style.width = StyleKeyword.Auto;
                 korttiJuuri.style.top = StyleKeyword.Auto; korttiJuuri.style.bottom = napit;
@@ -341,15 +348,15 @@ namespace Matkakirja.Natiivi
             {
                 var t = r.Teos;
                 nimi.text = t.Otsikko;
-                alarivi.text = $"{t.Taiteilija}, {t.Vuosi}";
+                alarivi.text = $"{t.Taiteilija}, {Sido(t.Vuosi)}";   // vuosiväli ei katkea rivinvaihtoon (PT 11.10.)
                 if (korttiTeos != t.Id)
                 {
                     korttiTeos = t.Id;
                     // INFOKORTTI (omistaja 11.10.): taiteilija (elinvuodet), nimi, vuosi · tekniikka · koko, kokoelma, esittely; puuttuva kenttä pois.
-                    kKapiteeli.text = string.IsNullOrEmpty(t.Elinvuodet) ? t.Taiteilija : $"{t.Taiteilija} ({t.Elinvuodet})";
+                    kKapiteeli.text = string.IsNullOrEmpty(t.Elinvuodet) ? t.Taiteilija : $"{t.Taiteilija} ({Sido(t.Elinvuodet)})";
                     kNimi.text = t.Otsikko;
                     Rivi(kAlkuperainen, t.Alkuperainen);
-                    Rivi(kTekniikka, string.Join(" · ", new[] { t.Vuosi, string.IsNullOrEmpty(t.Tekniikka) ? null : Isolla(t.Tekniikka), t.Mitat }.Where(x => !string.IsNullOrWhiteSpace(x))));
+                    Rivi(kTekniikka, string.Join(" · ", new[] { Sido(t.Vuosi), string.IsNullOrEmpty(t.Tekniikka) ? null : Isolla(t.Tekniikka), t.Mitat }.Where(x => !string.IsNullOrWhiteSpace(x))));
                     Rivi(kKokoelma, t.Lahde);
                     Rivi(kKuvateksti, t.Kuvateksti);
                     // Havainnekuva kuten nostoissa (ui.nosto.havainnekuva) lähderivin perään.
