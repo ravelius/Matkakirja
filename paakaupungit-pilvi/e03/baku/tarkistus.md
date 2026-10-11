@@ -74,3 +74,9 @@ Yhteenveto: VÄÄRIN 15, EPÄVARMA 6.
 | 1873-väitteet | Neitotorni, palatsi, Juma (ei vielä), muurit, bulevardi (ei vielä), Taza Pir (vain hauta), lääninpääkaupunki, Nobelit | edellä | OK |
 | nykypolitiikka ja sota | Ei sotaa tai vaaleja; Heydar Aliyev -keskus jätetty pois; rajasulku esitetty asiallisesti, ks. VÄÄRIN/EPÄVARMA muotoilu | PILVIOHJE 4.6, 4.8 | OK |
 | sääjakso (ehdotukset.huomiot[0]) | ajanjakso 1991–2020, mittauspiste Maştağa oikein; keskilämpötilat 26,4 ja 4,3 ovat proosasta, eivät 1991–2020-taulukosta | en-Baku, Climate | ajanjakso ja mittauspiste OK; lämpötilahuomio sisältyy jaksot[4]-riviin (ei lasketa erikseen) |
+
+## Korjattu
+
+- Kaikki 15 VÄÄRIN-kohtaa korjattu sanatarkasti: vastausindeksit sekoitettu (correct 1,3,2,0,1; minitehtävä oikea 2), Q4:n q ja hint, tiedot[0], bulevardin 3,75 km (3 kohtaa), rajasulku (3 kohtaa), Hajibeyovin kirja 1945, Shollar, Maştağan lämpötilat, Opas 2 -kuvateksti, Plośko.
+- EPÄVARMA pehmennetty: "kukkulalla" (5 kohtaa), sademäärä noin 270 mm (Maştağa), kesä-nosto, palatsin nosto-lyhyt, "lähinnä" lentokenttien kautta; bulevardin kohdekartan piste vaihdettu mugham-keskuksen pisteeseen 40.3608/49.835. Nosto 4:stä poistettu yksi virke pituuskiintiön vuoksi.
+- Kuvia ei vaihdettu (kuvat.md ennallaan). tarkista --verkko: 0 virhettä.
