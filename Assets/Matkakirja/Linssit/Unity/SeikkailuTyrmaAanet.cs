@@ -45,7 +45,7 @@ namespace Matkakirja.Natiivi
                     // Satunnainen kohta holvissa 1–3 m pelaajan istuimesta; pisarat eri kokoisia (sävel 0,85–1,2).
                     float kulma = r * Mathf.PI * 2f, m = 1f + 2f * (float)ajastin.Satunnainen();
                     var paikka = istuin + new Vector3(Mathf.Cos(kulma) * m, TippaKorkeusM, Mathf.Sin(kulma) * m);
-                    SeikkailuAanet.Soita(Tipat[(int)(ajastin.Satunnainen() * Tipat.Length) % Tipat.Length], paikka, 0.3f + 0.25f * r, 0.85f + 0.35f * (float)ajastin.Satunnainen());
+                    SeikkailuAanet.Soita(Tipat[(int)(ajastin.Satunnainen() * Tipat.Length) % Tipat.Length], paikka, 0.6f + 0.3f * r, 0.85f + 0.35f * (float)ajastin.Satunnainen());
                     break;
                 }
                 case TyrmanAani.Askeleet: StartCoroutine(Ohikulku(r < 0.5f)); break;
@@ -70,7 +70,7 @@ namespace Matkakirja.Natiivi
                 var l = SeikkailuKuulija.Lahde("Tehoste:" + SeikkailuVartijat.VartijanAskeleet, 2f, 25f);
                 SeikkailuKuulija.Aseta(l, keski + sivu * Mathf.Lerp(-OhikulkuM, OhikulkuM, osuus) * 0.5f);
                 // Kaukana ja holvin takana: hiljainen ja tumma (sävel alas), keskellä kuuluvin.
-                l.clip = klippi; l.pitch = 0.88f; l.volume = (0.25f + 0.15f * Mathf.Sin(osuus * Mathf.PI)) * SeikkailuAanet.Taso("tehosteet", SeikkailuVartijat.VartijanAskeleet);
+                l.clip = klippi; l.pitch = 0.88f; l.volume = (0.35f + 0.2f * Mathf.Sin(osuus * Mathf.PI)) * SeikkailuAanet.Taso("tehosteet", SeikkailuVartijat.VartijanAskeleet);
                 l.Play(); Destroy(l.gameObject, klippi.length / l.pitch + 0.2f);
                 yield return new WaitForSeconds(AskelValiS);
             }
