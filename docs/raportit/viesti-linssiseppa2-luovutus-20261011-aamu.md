@@ -50,3 +50,15 @@ vie-paketti.sh:lla (_valmiit/<nimi>-vienti-<pvm>/ + SHA256SUMS + LAHTEET.md). Pe
   Paketti v6k17 `_tyo/linssiseppa2/pariisi-v2/v6k17` (portti 0, LAHTEET.md valmiina), ei viety. Raportti + arkit 40a584921
   (docs/raportit/kaappaukset/linssiseppa2-pariisi-v2-20261011/). Bourbon ei sumennettu (Google parempi), Banque/Branly LR:lle.
 - JONO: kohta 4 (kaukolaatat karkeina v6k17:llä: pidempi odotus + muistimittaus), sitten LR:n korjausten jälkeen v6k17 uudelleen + kuvat.
+
+## PÄIVITYS 11.10. klo 15.3x
+- **MUSEO JUNA 182 KUITATTU**: zoom 2ed80e908 → info 5438a04f5 → ajatusviiva **df7cce371** (NS:llä). Odottaa: alarivin vasen tasaus
+  **0c10deb39** (worktree wt/proto-linssiseppa2-museo, haara museo-info-182): käännös linja 1 jonossa (museoinfo5), sitten iPhone-ajo
+  (museo-lapipeluu/vuoro-viiva5.zsh jalkeen, SUUNNAT=pysty) → kuva PT:lle + SHA NS:lle (korvaa df7cce371:n). Tyylikirjan teema
+  harmaa-kuulto webissä merged (#4407).
+- **PARIISI**: v3 (LR) Banque kunnossa, Branly v3b paketoitu _tyo/linssiseppa2/pariisi-v3/v6k18b (ei kuvattu); kaukolaatat: ei toistu.
+- **ISS-RAKETTI (juna 183)**: proto `linssiseppa2/iss-raketti` (wt/proto-linssiseppa2-muisti) kärki a7e6263b4: Nousu (lentomalli),
+  Maamerkit aina+napautus (Pelikoodari hyväksyi), RakettiReitti (napautus → hintalappu/Rahapula/MaksaRaketti), RakettiLaukaisu +
+  RakettiMalli + RakettiNakyma (ali-agentti), LR:n malli Resources/Raketti. Kartan GLB ämpärissä (maamerkit/tromssa-e96d8c4f.glb),
+  maamerkkirivi webin haarassa linssiseppa2-raketti-maamerkki (skeemanosto Pelikoodarilla). Äänet Pelikoodarilta (pyydetty).
+  Käännös linja 2 ketjussa museon jälkeen (raketti/kaanna-raketti.zsh), simu raketti/vuoro-raketti.zsh (SIMU NYT Julkaisijalta).
