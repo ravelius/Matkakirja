@@ -30,8 +30,20 @@ Hakupäivä kaikissa 11.10.2026. Tekstit ja alkuperäiset lähdetiedostot: `/Vol
 | N18 | [FCDO: Mauritania travel advice](https://www.gov.uk/foreign-travel-advice/mauritania), en: Warnings and insurance; sivu ilmoittaa current at 11 October 2026, updated 24 March 2026. [Regional risks](https://www.gov.uk/foreign-travel-advice/mauritania/regional-risks) ja [Safety and security](https://www.gov.uk/foreign-travel-advice/mauritania/safety-and-security): alueellinen rajaus, liikkuminen, raha ja kuvauskäytännöt. Vain oppaan käytännön tieto, ei politiikkaa/rikostapauksia peliin. |
 | WD1 | [Nouakchott Q3688 EntityData](https://www.wikidata.org/wiki/Special:EntityData/Q3688.json): P17, P1376, P206, P625, P1082 ja sitelinkit. |
 | WD2 | [Ksar Q3200125 EntityData](https://www.wikidata.org/wiki/Special:EntityData/Q3200125.json) ja [Sebkha Q891950 EntityData](https://www.wikidata.org/wiki/Special:EntityData/Q891950.json): P625:n qualifierit tarkistettiin; kummankin piste **koskee kaupungintaloa**, ei torin tai vanhan kylän koordinaattia. Qualifierin Q9022797 EntityData vahvistaa nimityksen mairie. |
+| N19 | [Nouakchott, fr-Wikipedia](https://fr.wikipedia.org/wiki/Nouakchott), täydentävä lisäkierros: Paysage urbain, Histoire, Économie, Transport maritime ja Urbanisme. Revision 240237815. Kadut, vanha ksar, torialue ja rannikko; vain kaupunki-/sääpisteet, ei uusia nimettyjen paikallisten luonnon-/torikohteiden koordinaatteja. |
+| N20 | [Nouakchott, ar-Wikipedia](https://ar.wikipedia.org/wiki/%D9%86%D9%88%D8%A7%D9%83%D8%B4%D9%88%D8%B7), lisäkierros: الجغرافيا, التقسيم الإداري, الاقتصاد ja maamerkkiluettelo. Revision 74332140. Nimeää myös vanhan sataman ja Madrid-risteyksen, mutta ei niiden omia kohdepisteitä. Ilmastolukuja ei käytetä. |
+| N21 | [Ksar (Nouakchott), fr-Wikipedia](https://fr.wikipedia.org/wiki/Ksar_%28Nouakchott%29): kunnan/kaupunginosan kuvaus, Géographie, infolaatikko. Revision 234079759. Historiasivu tyhjä, koordinaatti WD2:n mairie-piste, ei vanha linnoitus/kylä. |
+| N22 | [القصر (نواكشوط), ar-Wikipedia](https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%82%D8%B5%D8%B1_%28%D9%86%D9%88%D8%A7%D9%83%D8%B4%D9%88%D8%B7%29): nykyinen Ksar-kaupunginosa, eri yleispiste; ei vanhan kylän tai yksittäisen rakennuksen tarkkaa identiteettiä. Revision 62823312. |
+| N23 | [Buildings and structures in Nouakchott, en-Wikipedia-luokka](https://en.wikipedia.org/wiki/Category:Buildings_and_structures_in_Nouakchott): ainoastaan lähdeotsikoiden paikannin, ei paikallishistorian väitelähde. Ohjasi Old Fort -artikkeliin ja toriluokkaan; ei Commons-luokkaan siirtymistä. |
+| N24 | [Retail markets in Nouakchott, en-Wikipedia-luokka](https://en.wikipedia.org/wiki/Category:Retail_markets_in_Nouakchott): ainoastaan paikannin. Luettelossa Marché Capitale, Marché de La Viande, Marocaine market ja Nouakchott fish market; löydettiin kahden uuden torin omat artikkelit. Ei luettelon kattavuusväitettä. |
+| N25 | [Old Fort, Nouakchott](https://en.wikipedia.org/wiki/Old_Fort,_Nouakchott): lyhyt sijaintikuvaus ja oma koordinaatti. Ei rakennushistoriaa, alkuperäisen/nykyisen osan tunnistusta, ikää tai kuuden paikkafaktan aineistoa. |
+| N26 | [Marché Capitale](https://en.wikipedia.org/wiki/March%C3%A9_Capitale): oma koordinaatti, sijainti Ould Abas -moskeijan luoteispuolella ja vanha uutisreferointi markkinarakenteiden ongelmista. Vuoden 2013 turvallisuus-/purkuehdotus ei nykytilan varmistus. |
+| N27 | [Marché de La Viande](https://en.wikipedia.org/wiki/March%C3%A9_de_La_Viande): lyhyt sijaintikuvaus ja oma koordinaatti Ould Abas -moskeijan lounaispuolella. Ei eläinmarkkinan identiteetti-/historia-/tavaravalikoimatietoa. |
+| WD3 | [Old Fort Q7084020 EntityData](https://www.wikidata.org/wiki/Special:EntityData/Q7084020.json): oma P625, sama paikka kuin N25; revision 2478904563. Ei mairie-qualifieria, mutta ei muita historiallisia väiteominaisuuksia. |
 
 **UM-puute:** `https://um.fi/matkustustiedote/-/c/MR` haettiin sallitusti mutta palautti UM:n navigaation ilman Mauritanian maakohtaista tiedotetta. Maakohtaista UM-tasoa ei löytynyt eikä sitä arvata. Nykyoppaan varovaisuus tarkistettiin siksi vaihtoehtoisesta virallisesta FCDO-lähteestä (N18). Tämä poikkeama kirjataan RAPORTTI.md:hen.
+
+**Rajattu jatkoselvitys 11.10.2026:** yksi lisäkierros, kymmenen uutta onnistuneesti luettua lähdesivua (N19–N27 ja WD3), sitten haku pysäytettiin toimeksiannon rajaan. Hakukonehaut toimivat otsikko-/Q-paikantimina. Marocaine, kansallismuseo, satama ja vanhat Wv-tekstit luettiin uudelleen olemassa olevista NAS-vastauksista; ne eivät uusia verkkolähteitä. Ei kuvahakuja, Commons-pyyntöjä, kiellettyjä API-polkuja tai koordinaattien arvaamista.
 
 Myös Canary Current -artikkeli sekä ranskan- ja saksankielinen Wikivoyage luettiin lähdevaihtoehtojen etsimiseksi. Merivirran artikkelissa oli niukkoja kohdistettuja viitteitä eikä siitä oteta Nouakchottin kalamääriä tai ilmaston syyselityksiä. Ranskan Wikivoyage ei tuonut uusia kelvollisia kohdekoordinaatteja.
 
@@ -237,19 +249,25 @@ Tähdet ovat toimituksellisia, eivät lähteen arvosanoja. Atlantin rantaa ei no
 
 **Turvallisuustila:** FCDO:n 11.10.2026 ajantasaisessa aluejaossa useille Mauritanian alueille annetaan välttämiskehotuksia, mutta Nouakchott ei kuulu nimettyihin yleisesti vältettäviin alueisiin. Tämä ei ole ”turvalliseksi vahvistettu” -leima. Oppaassa sanotaan lyhyesti, että matkustaminen edellyttää valmistautumista ja paikallisten ohjeiden seuraamista; kaupungin ulkopuolisiin retkiin liittyy aluekohtaisia rajoituksia. Ei koko maan kuvitteellista matkustuskieltoa, UM-tasoa, politiikan tai rikosten esittelyä.
 
-## 5. Kohdekartta: avoin kohdemäärä, tarkat paikat erotettu ehdotuksista
+## 5. Kohdekartta: lisäkierros valmis, hyväksyttävä kokonaisuus yhä avoin
 
-**6–8 kelvollista kohdetta ei vielä ole.** Nuoresta kaupungista löytyi kaksi Wikipedia-koordinaatillista arkista paikkaa ja kolmas Wikivoyage-koordinaatillinen markkinaehdotus. Modernit suojatut monumentit eivät täytä määrää. Ohjeen pienten pääkaupunkien 1–5-poikkeus ei väestön puolesta automaattisesti koske Nouakchottia; tästä tarvitaan toimituksen poikkeamaratkaisu. Kaupunkia ei viedä valmiiksi eikä puuttuvia pisteitä päätellä karttakuvasta, hotellista tai EXIFistä.
+**6–8 kelvollisen, riittävin paikallisfaktoin varustetun kohteen joukko ei valmistunut.** Kuudelle nimetylle paikalle on nyt oma WP-koordinaatti: kalastajaranta, Marocaine, Marché Capitale, Marché de La Viande, Old Fort ja kansallismuseo. Koordinaattien määrä ei ole valmiiden kohdejuttujen määrä. Kalastajarannalle on vahva faktajoukko; museolle on aineiston/esineiden kautta riittävä faktatausta ehdollisena paikkakohteena. Marocaine-, Capitale-, Viande- ja Old Fort -aiheille ei ole kuutta–kymmentä sisällöllistä paikkafaktaa. Old Fortin fyysisen rakenteen ajoitus/teosidentiteetti ja kaikkien ehdotusten täsmälliset B-oikeusratkaisut ovat erillisiä avoimia portteja.
 
-| Tila | Nimi | Tyyppiehdotus | lat | lon | Tarkka lähde |
-| --- | --- | --- | --- | --- | --- |
-| Paikkatieto lähteistetty | Kalastajaranta | luonto | 18.10333 | -16.02611 | N4 `Fish market (Nouakchott)` koordinaattirivi: 18°6′12″N 16°1′34″W. Piste edustaa rantautumis-/kalamarkkina-aluetta, ei teollista satamaa. |
-| Paikkatieto lähteistetty, faktoja niukasti | Marocaine-tori | aukio (toripaikka) | 18.07667 | -15.97917 | N5 `Marocaine market` koordinaattirivi: 18°4′36″N 15°58′45″W. Läheinen moderni moskeija ei ole kuvakohde. |
-| Ehdotus, koordinaattilähteen poikkeus ratkaistava | Eläinmarkkina | aukio (avoin markkinapaikka) | 18.05682 | -15.85058 | N13 Aktivitäten / Kamelmarkt-listaus: 18.056815, −15.850576. Ei WP/WD-P625-vahvistusta; ei hyväksytty oletussäännön täyttäväksi koordinaatiksi. |
+Eläinmarkkinalla on edelleen vain saksankielisen Wikivoyagen tarkka listauspiste. **Marché de La Vianden nimi ei todista sitä samaksi Kamelmarktiksi**, eikä keskikaupungin Viande-piste korvaa itälaidan eläinmarkkinan koordinaattia. Pienen kaupungin 1–5-poikkeus ei automaattisesti sovellu miljoonakaupunkiin. A jää avoimeksi, kunnes kohteet täyttävät faktavaatimuksen/oikeusrajauksen tai toimitus hyväksyy nimetyn poikkeaman. Ei uutena pienkohdekarttana valmiiksi merkitsemistä.
 
-**Rajausehdotus vasta kohdemäärän ratkaisun jälkeen.** Jos nämä kolme sallitaan: pohjoinen 18.10603, etelä 18.05412, länsi −16.02895, itä −15.84774, johdettu noin 300 metrin marginaalilla. Eläinmarkkina levittää karttaa itään merkittävästi. Tämä ei ole lopullinen kartta eikä esitys maantieteellisesti pienestä vanhastakaupungista.
+| Tila | Nimi | Tyyppiehdotus / pääaihe | lat | lon | Tarkka lähde ja raja |
+| --- | --- | --- | ---: | ---: | --- |
+| Paikkatieto ja faktajoukko lähteistetty | Kalastajaranta | luonto / rannikon kalastustyö | 18.10333 | -16.02611 | N4 oma koordinaatti 18°6′12″N 16°1′34″W. Ei teollinen satama. |
+| Oma paikkatieto, faktavaje | Marocaine-tori | aukio / markkinapaikka | 18.07667 | -15.97917 | N5 oma koordinaatti 18°4′36″N 15°58′45″W. Ei viereinen moskeija. |
+| Uusi oma paikkatieto, faktavaje/nykytilan raja | Marché Capitale | aukio / markkinatoiminta, ei hallin arkkitehtuuri | 18.08611 | -15.97944 | N26 oma koordinaatti 18°5′10″N 15°58′46″W. Tori moskeijan luoteispuolella; vanhaa purkuehdotusta ei tämän päivän kohdekuvaksi. |
+| Uusi oma paikkatieto, faktavaje | Marché de La Viande | aukio / markkinapaikka | 18.08333 | -15.98000 | N27 oma koordinaatti 18°5′0″N 15°58′48″W. Moskeijan lounaispuolella; ei itälaidan Kamelmarkt ilman erillistä identiteettivahvistusta. |
+| Uusi oma paikkatieto, faktavaje/teosvaihe avoin | Old Fort | rakennuspaikka, vain tunnistettu vanha rakenne mahdollinen | 18.09750 | -15.95833 | N25 oma koordinaatti 18°5′51″N 15°57′30″W; WD3 P625 sama. Ei Ksar-mairie tai ar-Ksarin yleispiste. |
+| Oma paikkatieto, riittävä aineistofakta; kohderajaus/oikeusportti ehdollinen | Kansallismuseo | museopaikka ja arkeologinen/etnografinen aineisto | 18.08556 | -15.97472 | N6 oma museoartikkelin koordinaatti 18°5′8″N 15°58′29″W. Ei nykyisen museotalon suojatun arkkitehtuurin kohde. |
+| Ehdotus, koordinaattilähteen poikkeus ratkaistava | Eläinmarkkina | aukio / avoin kotieläinmarkkina | 18.05682 | -15.85058 | N13 Kamelmarkt-listaus 18.056815, −15.850576. WP/WD-P625-vahvistusta ei tässä kierroksessa löytynyt. |
 
-**Esittelyaihe:** nykyisen kaupungin työn paikat rannalla ja toreilla. Pääkaupunkivuoden vanhaa näkymää ei luvata kohteista. Esittely kirjoitetaan lopullisen kohdelistan vasta varmistuttua.
+Viisi desimaalia on lähdekoordinaatin esitystapa, ei lupaus lähdettä paremmasta tarkkuudesta. Vanhan kolmen paikan rajausehdotuksen marginaaleja ei enää tarjota lopullisena karttana. Rajaus tehdään vasta hyväksytyn kohdelistan jälkeen; ehdollisten pisteiden sijoittaminen samaan kuvaan ei ratkaise niiden kohdekelpoisuutta. Kaupunkipallo, mairie, hotellipiste, valokuvan EXIF tai kartan silmämääräinen luenta eivät nähtävyyskoordinaatin korvikkeita.
+
+**Esittelyaihe:** nykyisen kaupungin työn ja muistin paikat rannalla, toreilla ja mahdollisessa museopaikassa. Nykyiset kohteet eivät vuoden 1873 valmista näkymää. Lopullinen esittely vasta kelvollisen listan ratkaisun jälkeen.
 
 ### 1 — Kalastajaranta
 
@@ -294,13 +312,66 @@ N3 Buy (kaupungin ulkolaidalla, Boutilimitin tien suunnassa), N13 Aktivitäten (
 
 Ei teurastuskuvia, veitset/lähikasvot pääaiheena, eläinten myyntihintoja, ostosuositusta, täsmällisiä ruumiinmittoja tai kansallisia karjatilastoja.
 
-### Muut tutkitut ehdotukset, ei kartalle vielä
+### 4 — Marché Capitale, uusi koordinaattiehdotus
 
-- **Marché Capitale ja Marché Sixième:** N3 vahvistaa olemassaolon ja torikaupan, mutta ei täsmällistä kohdekoordinaattia. Tietoa ei korvata Sebkhan kaupungintalopisteellä.
-- **Ksar:** N1 kertoo vanhasta kylästä, mutta nykyisen Ksar-kunnan/kaupunginosan Wikipedia-piste tai WD2:n mairie-piste ei varmista vanhan linnoitetun kylän tarkkaa sijaintia. Ei sijoiteta keksittyä raunioita nykyiseen hallintotaloon.
-- **Luonnonranta tai vihervyöhykkeen käyntipaikka:** aiheille on faktalähteet mutta ei nimettyä, tarkasti lähdekoordinaatein vahvistettua vierailupaikkaa. Ei hotellin koordinaattia rantakohteeksi.
-- **Kansallismuseo:** kohde ja koordinaatti tiedossa, mutta modernin museotalon arkkitehtuuri ei tämän tilauksen kuvakohteeksi. Vanhoista esineistä voi kertoa oppaassa asianmukaisesti lähteistettynä.
-- **Friendship Port:** faktalähde olemassa, mutta erillinen teollinen satama historiallisesta nykykeskustasta etäällä; ei kalastajarannan korvike, ei toistaiseksi kartan monumentti-/vierailupaikka.
+N26 sekä N3 Buy / Eat; N19 Urbanisme nimeää vanhan Marché Capitale -paikan kuvatekstissään, mutta kuvia ei haettu tai käytetty koordinaattilähteinä. Oman torin WP-piste, ei kaupungin yleispiste.
+
+Vahvistettu kirjoitusaineisto:
+
+- Nouakchottissa on Marché Capitale -niminen markkinapaikka (N26).
+- Toripaikka on Ould Abas -moskeijan luoteispuolella (N26).
+- Wv nimeää sen yhdeksi paikallisten erikoisuuksien/matkamuistojen hankintapaikoista (N3); ei jokaisen myyjän tuotetta koskevaa lupausta.
+- Wv kuvaa sen lähellä voileipäruokapaikkojen katua (N3 Eat); vanha opastieto, ei tietyn ravintolan tämän päivän sijainti-/aukiolovarmennus.
+- N26 referoi 2010-luvun alun uutista markkinan ruuhkasta/rakenteista ja purku-/uudelleenrakennusehdotuksesta. Se ei varmista rakennuksen tämän päivän tilaa, toteutunutta purkua tai matkailijan turvallisuutta.
+
+**Faktavaje:** tämä ei vielä kuutta–kymmentä sisällöllistä paikkafaktaa. Kaupungin yleinen markkinatalous, naapurimoskeijan historia tai tuotteet muualla kaupungissa eivät täydennä vain lukumäärää. Moderni markkinatoiminta ei automaattisesti suojattu taideteos: pääaihe voisi olla avoin torikäyttö, mutta nykyisen nimettyjen hallirakenteiden tekijä-/suojatilaa ei ratkaistu. Kuvapääteokseksi ei nykyinen suojattu halli. **1873:** markkinan perustamis-/saman paikan toimintatietoa puuttuu, joten ei vanhaksi karavaanitoriksi. Piste lähteistetty, kohdejuttu avoin.
+
+### 5 — Marché de La Viande, uusi koordinaattiehdotus
+
+N27, artikkeli yhden sijaintivirkkeen mittainen.
+
+- Nouakchottissa on tällä nimellä markkinapaikka (N27).
+- Se sijaitsee Ould Abas -moskeijan lounaispuolella (N27).
+- Oma WP-piste yllä. Marché Capitale on saman moskeijan toisella puolella, ei automaattisesti sama torinimi (N26; N27).
+
+**Faktavaje/identiteetti:** nimi tarkoittaa lihatoriin liittyvää nimitystä, mutta nimi yksin ei todista myytäviä eläinlajeja, teurastusta, tukkukauppaa tai Kamelmarkt-listauksen identiteettiä. N27 ei anna ikää, historiaa, tavaravalikoimaa tai käyttörakenteita. Ei kuutta paikallisfaktaa, ei kahden markkinapisteen yhdistämistä, ei lähdekoordinaatin siirtämistä itälaidan markkinalle. **1873:** toimintaa tai saman paikan nimeä ei vahvistettu. Mahdollinen myöhempi toritoiminnan kuva erotettava suojatun modernin rakennusteoksen pääaiheesta; oikeusportti ei ratkea paikan nimellä.
+
+### 6 — Old Fort, uusi tarkka paikkatunniste
+
+N25; WD3 `Q7084020`, P625 18.0975, −15.95833333, precision 0.00027777777777778, ei mairie-qualifieria. En-artikkelin oma piste vastaa WD:tä; saman Wikipedian tuontiketju ei kaksi riippumatonta historiallista lähdettä.
+
+- Lähde nimeää Old Fort -linnoituspaikan Nouakchottissa (N25).
+- Sijaintikuvaus sanoo sen olevan kaupungin koillispuolella ja presidentinpalatsin koillispuolella (N25); nykyisen palatsin arkkitehtuuri/politiikka ei kohteen aihe.
+- Lähellä mainitaan Stadium of Ksar ja College d’Application (N25), vain paikan identiteettituki, ei niiden tarinoita linnoituksen faktatäytteeksi.
+
+**Faktavaje ja teosidentiteetti:** Old Fort -nimitys ei osoita tarkkaa ikää, alkuperäistä rakenteen rakennusvaihetta, säilymistä, restaurointia tai saman fyysisen talon yhteyttä kaupungin pääartikkelin siirtomaa-ajan ksar-kuvaukseen. Fr-Nouakchott kuvaa 1900-luvun alun sotilasasemaa ja kaupungin suunnittelun vanhan linnoitusytimen ympärille; tätä ei sidota ilman kohdeidentiteetin vahvistusta juuri tähän pisteeseen ja nykyiseen rakennukseen. Kahden läheisen nimen perusteella ei päätellä samaa forttia.
+
+N25/WD3 antavat oman **linnoituspaikan** pisteen, joten aiempi mairie-este ei koske tätä tunnistetta. Ohjeen kuuden–kymmenen sisällöllisen paikkafaktan joukko ja nykyisen kuvatun rakenteen vanha/moderni raja eivät kuitenkaan valmistu. **1873:** N25 ei vahvista tämän rakenteen olemassaoloa tuolloin; “Old” ei ajankohta eikä PD-merkintä. Ei arvattua raunioita, rakennusvuotta tai kuvaoikeusratkaisua. Kohdejuttu ja mahdollinen rakennuskuva jäävät avoimeksi.
+
+### 7 — Kansallismuseo, ehdollinen aineistojen paikkakohde
+
+N6 luettu uudelleen alkuperäisestä NAS-vastauksesta. Täsmennys alkuperäiseen rajaukseen: moderni toiminnallinen paikka ei automaattisesti suojattu taideteos. Museo instituutiona/arkeologisen aineiston paikkana voidaan erottaa nykyisen museotalon arkkitehtuurista. Tätä vaihtoehtoa ei vielä merkitä lopulliseksi C-kohteeksi tai B-kuvaksi.
+
+1. Paikka on Mauritanian kansallismuseo Nouakchottissa (N6).
+2. Museolla on arkeologinen kokoelma (N6).
+3. Etnografinen aineisto kuvaa Mauritanian eri yhteisöjen elämää (N6).
+4. Artikkeli mainitsee esihistoriallisia kivityökaluja ja Mousterian/Aterian/Neolithic-ryhmiä ilman tässä julkaistavia tarkkoja ajoituslukuja (N6).
+5. Keramiikansirpaleet ja nuolenkärjet kuuluvat kuvattuihin aineistolajeihin (N6).
+6. Myös paikalliseen pukeutumiseen liittyviä aineistoja esitellään (N6); modernin tekstiilin tekijäoikeus ei automaattisesti päättynyt.
+7. Museossa on aineistoa historiallisten mauritanialaisten paikkojen kaivauksista (N6); esineen alkuperä ei museokaupungin löytöpaikka.
+8. Samassa rakennuksessa toimii myös tutkimukseen, käsikirjoitusten säilyttämiseen ja kansalliskirjastoon liittyviä laitoksia (N6); instituutioiden tehtävät eivät nykyisen julkisivun oikeuslupa.
+
+**1873:** museolaitos ja nykyinen museotalo ovat 1900-luvulta. Muinaisen esineen aiempi olemassaolo ei tarkoita sen olleen nykyisessä museossa isoisän matkavuonna. Kohdejuttu voisi kertoa esineiden muistin paikkana nykyhetken aikatasolla, ilman modernin arkkitehtuurin esittelyä. Esihistoriallinen käyttöesine on eri oikeusketju kuin moderni tekstiili, näyttelyasetelma tai valokuva; museon vanhimmat esineet eivät vapauta museotaloa.
+
+**B-portti:** tarkka hyväksyttävä esine/aineisto ja valokuvaajan lupa/lisenssi sekä mahdolliset pääsy-/kuvausehdot. Jos kohteen tyyppi ja lehden kuva edellyttävät nykyisen talon arkkitehtuuria pääteoksena, vaihtoehto ei tämän aineiston perusteella kelpaa. A:n fakta-/koordinaattituki museopaikalle on olemassa, mutta toimituksen rajausratkaisu tarvitaan. Ei rakennusvuotta/arkkitehtuurin PD:tä museo-instituution perustamisesta.
+
+### Muut tutkitut ehdotukset, ei määrästä tehtyä hyväksyntää
+
+- **Marché Sixième / Cinquième:** vanhat Wv- ja kaupunkitekstit kuvaavat markkina-alueita, mutta lisäkierros ei löytänyt niiden omaa WP/WD-kohdepistettä. Nimet tai nykyisen kunnan mairie eivät torin pisteen korvike.
+- **Ksar:** N21:n fr-piste on WD2:n mairie. N22:n ar-piste 18.12778, −15.93917 paikantaa nykyistä kaupunginosaa; artikkeli ei nimeä sillä alkuperäistä kylää, linnoitusta tai rakennusta. Old Fortin oma N25/WD3-piste kirjattu erikseen yllä, ilman historiallista identiteetin oletusta.
+- **Ranta/vihervyöhyke:** N19/N20 lisäävät rannikon ja kaupungin yleisiä hiekka-/tulva-/istutuskuvauksia, mutta eivät nimeä tarkoin WP/WD-kohdekoordinaatein vahvistettua luonnon käyntipaikkaa. Ei kaupungin meteorologisen aseman koordinaattia dyynikohteeksi.
+- **Madrid-risteys, vanha torni, zoo/Parc Deydouh:** nimiä esiintyy pääartikkelien/olemassa olevan museolähteen tekstissä. Tässä kymmenen sivun kierroksessa ei saatu niille omaa lähdekoordinaattia ja kuuden–kymmenen kohdefaktan joukkoa. Ei nimen perusteella arvausta tai suljettu eläintarha nykyretkeksi.
+- **Friendship Port:** funktionaalinen teollinen satama ei automaattisesti suojattu taideteos, mutta sama asia ei kalastajaranta. Se sijaitsee erillään nykykeskustan ytimestä; nimettyjen rakenteiden teoskohtainen oikeus, oman paikalliskohteen piste ja rajauksen tarkoitus eivät ratkea sataman toiminnan yleisellä kuvauksella. Ei kaukaista satamaa määrän täytteeksi tai nykyisen terminaalin arkkitehtuuria suojattuna pääteoksena.
 
 ## 6. Viisi kysymysaihetta ja kolme tietoa
 
@@ -346,15 +417,19 @@ Ei valittuja kuvia eikä Commons-tarkistusta tässä A:ssa. #74: kuvausmaan kaup
 | Kalastajarannan kohdejuttu | Nouakchott fish market coast | Eri tiedosto kuin muissa kohdissa; työalue ja Atlantin ranta. |
 | Marocaine-torin ehdotus | Marocaine market Nouakchott | Torin identiteetti varmistettava, moderni moskeija ei torikuvaksi. Kohdejuttu vielä faktavajeinen. |
 | Eläinmarkkinan ehdotus | Nouakchott camel market / dromedary market | Dromedaarit etäältä, ei teurastusta/lähikasvoja. Koordinaattilähdepoikkeus auki. |
+| Uusi Marché Capitale -ehdotus | Marché Capitale Nouakchott | Toritoiminta, ei suojatun modernin markkinahallin pääteos; fakta- ja nykytilaraja auki, kuvahakua ei tehty A:ssa. |
+| Uusi Marché de La Viande -ehdotus | Marché de La Viande Nouakchott | Tarkka tori, ei sama kuin Kamelmarkt pelkän nimen vuoksi; faktavaje, ei teurastuskuvaa tai kuvattujen lajien arvaamista. |
+| Old Fort -ehdotus | Old Fort Nouakchott | Vanha rakenne vain tunnistuksen/ajoituksen ja oikeusketjun kautta; nimi “Old” ei PD-todiste. Nykyosan historia puuttuu. |
+| Ehdollinen museopaikka | National Museum of Mauritania ancient utilitarian artifact | Varmennettu vanha esine/aineisto, ei nykyinen museotalo pääteoksena eikä moderni tekstiili automaattisena PD:nä. Toimituksen kohderajaus ja B-luvat auki. |
 | Valokuva | Nouakchott historic settlement photo / coast | Ennen vuotta 1900 oleva paikkavarmennettu PD-kuva voi olla epätodennäköinen; mitään toisen kaupungin kylää ei nimetty Nouakchottiksi. Muuten eri nykykuva, ei ennen–nyt-paria. |
 
 Jokainen valittu kuva katsotaan, lisenssi/Artist tarkistetaan sallitulta lähdesivulta, leveys vähintään 1200 px. Tarkka tiedosto vain kerran, paitsi ohjeen erikseen sallima valokuvan/ennen–nyt-parin poikkeus. Samasta kalastajarannasta useita eri aihekuvia tarvitaan; aihetoisto perustellaan raportissa.
 
 ## 8. Ristiriidat, avoimet asiat ja kirjoittajan rajat
 
-1. **Kartta:** vain kaksi Wikipedia-koordinaatillista sopivaa arkista paikkaa. Kolmannelle on täsmällinen saksankielinen Wikivoyage-listaus, mutta se ei täytä suoraan WP/WD-P625-oletusvaatimusta. 6–8-paikkainen lista on avoin; ei kuviteltuja pisteitä tai hyväksynnän väittämistä.
+1. **Kartta lisäkierroksen jälkeen:** kuudelle nimetylle paikalle oma WP-piste, mutta vain kalastajarannalle valmis vahva faktajoukko ja museolle ehdollinen aineistopohjainen vaihtoehto. Neljälle muulle paikkafaktoja liian vähän, Old Fortin nykyosan ikä/identiteetti lisäksi avoin. Eläinmarkkina edelleen saksankielinen Wv-piste, ei WP/WD-oletusvaatimuksen täyttäväksi väitetty. 6–8 kelvollisen kohteen joukko avoin; kymmenen uuden lähdesivun kierros päättyi ilman täydellistä listaa.
 2. **Marocaine-tori:** artikkeli on hyvin lyhyt ja siinä on lähdepuute-merkintä. Kohdejuttua ei venytetä kuuteen faktaan kaupunkia yleisesti koskevilla lauseilla tai moskeijan tarinalla. Kuvan ja kaupankäynnin tarkempi kohdelähde tarvitaan.
-3. **Ksar/Sebkha:** WD2:n koordinaatin `applies to part` on mairie. Lähde ei paikanna vanhaa kylää, toripaikkaa tai suola-allasta. Wikipedia-kunnan koordinaatti ei myöskään todista tietyn historiallisen talon paikkaa.
+3. **Ksar/Sebkha:** WD2:n koordinaatin `applies to part` on mairie. N21 toistaa tämän pisteen, N22 antaa eri nykyisen kaupunginosapisteen ilman vanhan kylän talon identiteettiä. Old Fort N25/WD3 on erillinen oma paikkatunniste, mutta nimen samankaltaisuus ei yhdistä sen nykyistä rakennetta automaattisesti alkuperäiseen ksariin. Mairie/kuntapiste ei vanha kylä, tori tai suola-allas.
 4. **Väestö:** kontekstin 2023 laskennan laajuus ovat kolme wilayaa yhteensä. N3:n johdannon vanhempi luku on eri vuoden arvio; sitä ei käytetä ristiriidan ratkaisemiseksi. Tarkka luku pysyy lähtötiedossa, pelaajalle pyöristys ja nimetty laajuus.
 5. **Kylän koko:** N1:n johdanto kutsuu edeltäjää keskikokoiseksi rannikkokyläksi, History pieneksi kalastajakyläksi. Käytetään ”rannikkokylä/linnoitettu kalastajakylä”, ei tarkkaa väkilukua tai ”tyhjä paikka”.
 6. **Alkuperäissuunnitelma:** rakentamisen aloitusta ja Mauritanian itsenäistymistä koskevia täsmällisiä vuosia näkyy N1/N2/N3:ssa, mutta wiki-toisto ei ole kaksi riippumatonta lähdettä. Vuosisadan puoliväli riittää.
@@ -365,15 +440,18 @@ Jokainen valittu kuva katsotaan, lisenssi/Artist tarkistetaan sallitulta lähdes
 11. **Suojaistutukset:** FAO-aineisto on historiallisen hankkeen menetelmäkuvaus. Ei johdeta nykyistä yhtenäistä viherrengasta, kaikkien istutusalueiden lajistoa tai aina onnistuvaa reseptiä. Menetelmien syyselitykset vain lähteestä.
 12. **Turvallisuus:** UM:sta ei löytynyt maakohtaista tiedotetta. FCDO:n vaihtoehtoinen virallinen kanava ja päivämäärä on kirjattu. Wikivoyagen alkoholiohje ei vastaa nykyistä FCDO:n lakitietoa; sitä ei käytetä eikä alkoholin hankkimista neuvota oppaassa. Ei poliittisten tai rikollisuuteen liittyvien aiheiden pelitekstiä.
 13. **Meteoriitit:** kaupunkisivun myyntitieto ei vahvista yksittäisen kuvan kivelle Nouakchott-taustaa, löytöpaikkaa tai alkuperäplaneettaa. Tarkka kappaletunnus vain tarkistetusta kuvasivusta ja tieteellisestä taustasta.
-14. **Kamelimarkkina:** ”suurin Länsi-Afrikassa” on varauksellinen lähdeväite, ei riippumattomasti tarkistettu; jätetty pois. Nykyisen markkinan historiaa ei täytetä maan yleisellä karavaanitarinalla.
+14. **Kamelimarkkina:** ”suurin Länsi-Afrikassa” on varauksellinen lähdeväite, ei riippumattomasti tarkistettu; jätetty pois. Nykyisen markkinan historiaa ei täytetä maan yleisellä karavaanitarinalla. N27:n keskustan Marché de La Viande ei lähteessä sama kuin N13:n itälaidan Kamelmarkt; niiden pisteitä ei yhdistetä.
+15. **Capitale/Viande:** löytyi omat koordinaatit, mutta artikkelit niukkoja. Capitalen vanha ruuhka-/purkusuunnitelmareferointi ei nykyinen toiminta-/turvallisuusvarmennus. Vianden nimi ei todiste kotieläinlajeista. Kuusi faktaa ei muodostu maasta, kaupungista, koordinaatin toistosta ja naapurimoskeijan tarinasta.
+16. **Old Fort:** oma WP/WD-piste ratkaisee kyseisen nimettyyn paikkaan liittyvän paikkatiedon, mutta ei rakennusikää, säilymistä, muutosvaiheita, PD:tä tai kuuden sisällöllisen paikkafaktan aineistoa. Ei 1873 olemassaoloa “Old”-sanasta.
+17. **Toiminnallinen moderni paikka:** museopaikka ja avoin markkinatoiminta eivät automaattisesti suojattuja arkkitehtuuriteoksia. Nykyisen rakennuksen/taiteen suojattu päämotiivi on edelleen kielletty. Museon vanhat esineet eivät vapauta taloa/modernia kokoelmateosta. Ehdollinen aineistopohjainen museopaikka ei vielä B/C-hyväksyntä.
 
 ## 9. Poisjätetyt aiheet ja toimituksen ratkaistavat asiat
 
 - Kontekstissa ei ole maalehden nostoja eikä lähikaupunkien nostoja. Maan perustietojen kieli-/valuutta-/itsenäistymisesittelyä ei kirjoiteta uudelleen kaupungin nostoiksi. Kevyen pisteen kalastuskylä-/kuivuuskuvaus toimii intron taustana, mutta nostot syventävät eri arkisia mekanismeja, eivät toista sitä neljästi.
 - Saudi Mosque, Ibn Abbas -moskeija, modernit hallintorakennukset, nimetyt uudet monumentit ja Oumtounsyn terminaali: ei suojattujen teosten arkkitehtuurikohteiksi tai pääkuvien aiheiksi. Modernin talon iästä ei yksin päätellä oikeuksien päättyneen.
-- Museotalo on moderni. Muinaiset kokoelmaesineet ja museon institutionaalinen tarkoitus voidaan käsitellä oppaassa; rakennusta ei kierrätetä karttamonumentiksi.
+- Museotalo on moderni; sen arkkitehtuuria ei kierrätetä suojattuna karttamonumentiksi. Muinaiset kokoelmaesineet ja instituution tehtävä voidaan erottaa talon arkkitehtuurista. Osion 5 ehdollinen museopaikka tuo oman pisteen ja aineistofaktat, mutta vaatii toimituksen kohderajauksen sekä B:n teos-/valokuvalisenssit. Ei modernin funktionaalisuuden automaattista taideteosluokittelua.
 - Nykyiset poliittiset henkilöt, vaalit, länsisaharan kiista, sotilas- ja konfliktitapahtumat, rikostapaukset: tehtävän rajaus. Historiallinen kaupunginsuunnittelu käsitellään neutraalisti ilman sankarikehystä.
 - Banc d'Arguin ja muut kaukana sijaitsevat suuret suojelualueet: eivät tämän kaupungin ytimessä, laajoina luontoaiheina kuuluvat maalehteen, eivät koordinaattivajeen täytteeksi.
 - Tarkat määrät, vuosiluvut, välimatkat, torin myynti-/kalalajimäärät ja teknisten aitamitoitusten numerot: ilman kahta riippumatonta tukea pois tai vuosisata/pyöristys. Lähdeasiakirjan päiväys ja säätaulukon metatiedot säilytetään jäljitettävyyttä varten.
-- **Päätoimittajalle:** ratkaise, voiko nuorelle suurkaupungille sallia perustellusti pienemmän kohdekartan ja Wikivoyagen täsmällisen markkinakoordinaatin, vai täydennetäänkö kohdemäärä muulla hyväksytyllä reitillä. Marocaine-torin lisäfaktat puuttuvat joka tapauksessa. Kaupunki ei ole tämän A-tiedoston perusteella valmis C–F-vaiheiden lopputarkistukseen.
+- **Päätoimittajalle:** kymmenen uuden lähdesivun rajattu lisäkierros tuotti kolme uutta täsmällistä paikkapistettä mutta ei 6–8 kelvollisen kohteen joukkoa. Nyt kuusi WP-pistettä, joista Marocaine/Capitale/Viande/Old Fort ovat faktavajeisia ja museon kohderajaus/oikeusketju ehdollinen. Eläinmarkkinan Wv-pisteen lähdepoikkeama edelleen auki. Ratkaise nimetty pienemmän joukon poikkeama ja museopaikan aineistopääaihe tai tilaa erikseen uusi täydentävä lähdereitti; ei automaattinen pienen kaupungin poikkeus. Kaupunki jää A:ssa avoimeksi eikä tämän tiedoston perusteella valmis C–F-vaiheiden lopputarkistukseen.
 - Kuvat, lisenssit, kuvaselitteet, lopullinen sisalto.json ja sen nollavirheinen validointi: myöhemmät B–F-vaiheet; mitään kuvaa ei hyväksytty tässä A:ssa.

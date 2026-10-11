@@ -14,11 +14,11 @@ Aiempi Sää/Commons-rajapintaeste: 11.10.2026 robots.txt kieltää en/fi-Wikipe
 |---|---|---|---|---|---|---|---|
 | rabat | valmis | valmis | valmis | valmis | valmis | valmis | F0virhetta1varoitus23kuvaa; aineistopaketti valmis |
 | alger | valmis | poikkeama avoin | — | — | — | — | B4hyvaksyttya/19puuttuvaa; kaupalliset oikeudet avoin; säänull |
-| nouakchott | poikkeama avoin | — | — | — | — | — | Faktat koottu, kartta2WPpistetta; A ei vielä valmis |
+| nouakchott | poikkeama avoin | — | — | — | — | — | 6 WP-paikkapistettä löydetty, 4 kohteen faktavaje ja museorajaus avoin |
 | praia | valmis | poikkeama avoin | — | — | — | — | A: 5 kohdetta perustellen; B: 13 kuvaa, 8 puuttuu |
-| banjul | valmis | kesken | — | — | — | — | A: 3 kohdetta pienen kaupungin perustelulla; B työn alla |
-| bissau | valmis | — | — | — | — | — | A: 3 kohdetta kompaktin vanhan satamaytimen perustelulla |
-| conakry | valmis | — | — | — | — | — | A: 6 lähdekoordinaattikohdetta; UM-puute korvattu FCDO-lähteellä |
+| banjul | valmis | poikkeama avoin | korjattu luonnos | osittain | tekstikorjaukset tehty | 3 kuvavirhettä | 16 kuvaa; K3 hylätty, pysty ja Albertin torin kuva puuttuvat |
+| bissau | valmis | poikkeama avoin | luonnos | kesken | — | — | 16 kuvaa kaavio mukaan lukien; 3 kohdekuvaa puuttuu |
+| conakry | valmis | kesken | — | — | — | — | A valmis, B työn alla; luonnonsaaret ensisijaiset |
 | monrovia | valmis | — | — | — | — | — | A: 6 lähdekoordinaattikohdetta ja sääaseman ero kirjattu |
 | tunis | valmis | — | — | — | — | — | A: kevyt, 6 vanhan ytimen kohdetta; ei Karthagon toistoa |
 
@@ -39,3 +39,11 @@ Yhteinen NAS-lähdevarasto ja robots-tarkistava hakuapuri: valiaikainen/sallittu
 Säädata tuotettu alkuperäisellä tyokalu.mjs saa -komennolla; vain verkkosyöte sovitettu sallittuun Wikipedia-lähdesivuun (valiaikainen/saa-lahdesovitus.mjs). Alkuperäinen numeropoiminta ja tarkistusalgoritmi säilyvät muuttumattomina. 8/9 saa.json syntyi; Algerin taulukko hylätty: vuosisarake685mm, kuukausien summa603mm. Alger saatiedot:null, ei tekstiin aste/mm-lukuja. saa-syote.json:ssa artikkeli rajattu kaupungin en-artikkeliin, jotta maa-fallback ei valitse muun kaupungin asemaa.
 
 Edistyminen: varmennetut A–F-vaiheet /558 (93×6), ei käytetyn ajan arvio. Rabat A–F valmis: 0 virhettä, 1 perusteltu varoitus, 23 kuvaa. Valmis aineistopaketti 1/93, koko e04-erä vielä kesken. Pääsession ledgerissä 15/558 vaihetta eli 2,7 %; e05/e06:n osittaisia lähdekoosteita ei lasketa valmistuneiksi.
+
+## Banjul ja Bissau: keskeneräiset sisältöluonnokset
+
+Banjul D: 3 VÄÄRIN ja 1 EPÄVARMA. E:n 4/4 kokonaisen kentän korvausta toteutettu; 12 JSON-arvoa muuttui ja K3-lauttakuva poistettiin luettavien kasvojen vuoksi. Pääsession F-tarkistus: 3 virhettä, 2 varoitusta, 16 kuvaa. Ei valmis-C/E/F tai valmis-kaupunki.
+
+Bissau: H1:n sisäpiha, H2:n yleinen bastionikaavio, H3:n Pidjiguiti ja H4:n yleinen uudempi satama on erotettu kuvateksteissä; kaavio ei ole Amuran piirros eikä satamakuva Tulliaukio. Kaikki 16 kuvaa katsottu B/C:ssä, D työn alla. C:n 3 virhettä johtuvat N1/N2/N3-kohdekuvista; 1 kohdemäärän varoitus.
+
+Viisi kuvaporttien tulkintakysymystä postilaatikossa: #74-kuvattomuus vs 0-virheportti, 70 vuoden teoskohderaja vs kaupallinen FOP, vanha luonnonpysty, alkuperäisen painotuotteen kuvateksti sekä saman paikan kuvan käyttö nostossa ja kohdejutussa. Poikkeuksia ei sovelleta hiljaa; alkuperäiset konevirheet jäävät näkyviin. Työ jatkuu muissa kaupungeissa.
