@@ -6791,6 +6791,7 @@ export const KAUPUNKIKARTAT = {
   },
   tallinna: {
     polku: 'assets/kartat/tallinna-keskusta.png',
+    varikartta: 'assets/kartat/tallinna-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 59.4505, etela: 59.431, lansi: 24.7275, ita: 24.769 },
     /*
@@ -7114,6 +7115,7 @@ export const KAUPUNKIKARTAT = {
   },
   sarajevo: {
     polku: 'assets/kartat/sarajevo-keskusta.png',
+    varikartta: 'assets/kartat/sarajevo-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 43.8655, etela: 43.8535, lansi: 18.412, ita: 18.445 },
     /*
@@ -8801,6 +8803,7 @@ export const KAUPUNKIKARTAT = {
   },
   riika: {
     polku: 'assets/kartat/riika-keskusta.png',
+    varikartta: 'assets/kartat/riika-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 56.956, etela: 56.941, lansi: 24.0908, ita: 24.1293 },
     /*
@@ -8841,6 +8844,7 @@ export const KAUPUNKIKARTAT = {
   },
   vilna: {
     polku: 'assets/kartat/vilna-keskusta.png',
+    varikartta: 'assets/kartat/vilna-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 54.688, etela: 54.6705, lansi: 25.2695, ita: 25.307 },
     /*
@@ -16545,6 +16549,7 @@ export const KAUPUNKIKARTAT = {
    */
   belgrad: {
     polku: 'assets/kartat/belgrad-keskusta.png',
+    varikartta: 'assets/kartat/belgrad-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Belgradin ydin on kahden joen yhtymäkohdan kalliolla. Kohteet kulkevat linnoituksesta ja sen puistosta pääkaupungin 1800-luvun keskustaan, Vračarin kukkulalle ja joen saarelle.',
@@ -16603,6 +16608,7 @@ export const KAUPUNKIKARTAT = {
   },
   bratislava: {
     polku: 'assets/kartat/bratislava-keskusta.png',
+    varikartta: 'assets/kartat/bratislava-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Bratislavan vanhan ytimen kohteet kertovat kaupungin eri aikakausista: Unkarin kruunajaiskaupungista, 1700-luvun palatseista ja 1900-luvun alun jugendista. Linna ja tuomiokirkko vartioivat Tonavaa, raatihuone ja aukiot ovat kaupungin arjen keskus, ja Mikaelin portti on säilynyt keskiaikaisen muurin ajalta.',
@@ -16703,6 +16709,7 @@ export const KAUPUNKIKARTAT = {
   },
   minsk: {
     polku: 'assets/kartat/minsk-keskusta.png',
+    varikartta: 'assets/kartat/minsk-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Minskin historiallinen ydin on Svislač-joen varrella, jossa Yläkaupungin barokkikirkot ja Kolminaisuuden esikaupunki kertovat vanhasta Minskistä. Vanhan Minskin kohteet ovat Niamiha- ja Kastryčnickaja-asemien tuntumassa, ja Voitonaukio ja Gorki-puisto Pieramohi-aseman lähellä.',
@@ -16851,6 +16858,7 @@ export const KAUPUNKIKARTAT = {
   },
   tirana: {
     polku: 'assets/kartat/tirana-keskusta.png',
+    varikartta: 'assets/kartat/tirana-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Tiranan historiallinen ydin on tiivis: samalla noin kilometrin säteellä ovat 1700- ja 1800-luvun moskeijat ja silta, kellotorni, linnoituksen muuri ja 1900-luvun pääkaupunkisuunnitelman aukio. Kauempana ydintä kohoavat pyramidi ja puisto näyttävät, miten kaupunki on sen jälkeen kasvanut.',
@@ -16907,6 +16915,7 @@ export const KAUPUNKIKARTAT = {
   },
   zagreb: {
     polku: 'assets/kartat/zagreb-keskusta.png',
+    varikartta: 'assets/kartat/zagreb-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Historiallinen ydin on Yläkaupunki ja Kaptol sekä niiden alapuolella oleva keskusaukio. Alakaupunki jatkuu etelään vihreän hevosenkengän aukioina. Kohteet ovat kävelymatkan sisällä toisistaan.',
@@ -17071,6 +17080,7 @@ export const KAUPUNKIKARTAT = {
   },
   reykjavik: {
     polku: 'assets/kartat/reykjavik-keskusta.png',
+    varikartta: 'assets/kartat/reykjavik-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Reykjavíkin kohteet ovat lähellä toisiaan Seltjarnarnesin niemen pohjoisrannalla ja kukkuloilla. Lammen, aukion ja kukkulalla seisovan kirkon lisäksi mukana ovat Harpa, Höfði ja Perlan.',
