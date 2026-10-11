@@ -474,7 +474,7 @@ namespace Matkakirja.Linssit.Kierros
 
             /// <summary>Kiertoasento ilman pelaajan ohjausta: kulma fi (°, etumerkillinen) ja spiraalin eteneminen x (s).</summary>
             public Kuvakulma Asento(Pysahdys p, double fi, double x) =>
-                OpasKuvaus.Spiraali(OpasKuvaus.Pysahdyksella(p, 0, false), fi, Q(x), Lahesty, Lasku, p.MaaM, double.IsNaN(KattoK) ? p.KattoYlaM : KattoK);
+                Panoroitu(OpasKuvaus.Spiraali(OpasKuvaus.Pysahdyksella(p, 0, false), fi, Q(x), Lahesty, Lasku, p.MaaM, double.IsNaN(KattoK) ? p.KattoYlaM : KattoK), p);
 
             /// <summary>Kierron tavoitekulmanopeus (°/s) ajassa tau saapumisesta, kun kulmaa on käytetty kaytetty (°).</summary>
             public double Nopeus(double tau, double kaytetty)
@@ -744,8 +744,13 @@ namespace Matkakirja.Linssit.Kierros
         Kuvakulma KohdeKierrossa()
         {
             var b = KohdeAsento();
-            return lentoKierto == null ? b : Kierretty(b, -lentoKierto.Suunta * lentoKierto.Phi(VaiheAika - LentoKestoS));
+            return Panoroitu(lentoKierto == null ? b : Kierretty(b, -lentoKierto.Suunta * lentoKierto.Phi(VaiheAika - LentoKestoS)), kohdeKehys);
         }
+
+        /// <summary>Kehyksen sivukääntö (Pysahdys.PanoroiAst; pystykuvan aukiomonumentti oikealle otsikon alta) viimeisenä: kierto ja
+        /// spiraali lasketaan katsepisteen ympäri, sitten kamera kääntyy silmän ympäri — sama lennon kohdeasennossa (KohdeKierrossa) ja
+        /// pysähdyksellä (KiertoSuunnitelma.Asento), joten saapuminen ja lähtö ovat jatkuvia.</summary>
+        static Kuvakulma Panoroitu(Kuvakulma k, Pysahdys p) => p == null || p.PanoroiAst == 0 ? k : OpasKuvaus.Panoroi(k, p.PanoroiAst);
 
         static Kuvakulma Kierretty(Kuvakulma k, double d) =>
             Math.Abs(d) < 1e-9 ? k : new Kuvakulma(k.Lat, k.Lon, k.EtaisyysM, k.Kallistus, KierrosLento.Kiedo(k.Suuntima + d), k.KatseKorkeusM);
@@ -2304,7 +2309,7 @@ namespace Matkakirja.Linssit.Kierros
             // Pallon kierto (KiertoSuunnitelma): saapumisasento on saapumisen sulautuksen verran kierretty kehys.
             if (Vaihe == OpasVaihe.Lentaa && kohdeKehys != null) return VaiheAika >= LentoKestoS ? (Kuvakulma?)null
                 : lentoKierto == null ? EsiAsento(kohdeKehys)
-                : OpasOhjaus.Rajoita(Kierretty(OpasKuvaus.Pysahdyksella(kohdeKehys, 0), -lentoKierto.Suunta * lentoKierto.Phi(0)), kohdeKehys.MaaM, kohdeKehys.KattoYlaM);
+                : Panoroitu(OpasOhjaus.Rajoita(Kierretty(OpasKuvaus.Pysahdyksella(kohdeKehys, 0), -lentoKierto.Suunta * lentoKierto.Phi(0)), kohdeKehys.MaaM, kohdeKehys.KattoYlaM), kohdeKehys);
             if (Seuraava != null && !Seuraava.Kysymys) return EsiAsento(KehysKohteelle(Seuraava, maaKorkeus));
             if (OdotettuPaikka is (double, double) op)
                 return EsiAsento(KehysKohteelle(new OpasKohde { Lat = op.lat, Lon = op.lon, KokoM = 120 }, maaKorkeus));

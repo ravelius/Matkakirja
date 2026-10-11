@@ -47,6 +47,8 @@ namespace Matkakirja.Linssit.Kierros
         public Pysahdys LeveysPohja;
         /// <summary>Aukion keskusmonumentin paikka (pallon aukiokehys; NaN = ei aukio): kapeassa kuvassa kierto sen ympäri.</summary>
         public double MonumenttiLat = double.NaN, MonumenttiLon = double.NaN;
+        /// <summary>Kameran sivukääntö silmän ympäri (°, + = oikealle) kierron ja spiraalin jälkeen (OpasSilmukka.Panoroitu); 0 = ei.</summary>
+        public double PanoroiAst;
 
         public static Pysahdys P(string id, string nimi, string alarivi, double lat, double lon, double maa, double nosto,
             double suuntima, double pitch, double etaisyys, string teksti = null) => new Pysahdys
