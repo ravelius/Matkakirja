@@ -100,3 +100,14 @@ appit proto-3d/lokit/olavinlinna-yhdistetty-181{b,c,d,e}). Simuvuorot Julkaisija
   Linssit 1373/1373. Laiturin mustat lohkot ja tyrmän mustat laatikot = LR (ilmoitettu LR:lle).
 - v11-ajo valmiina: scratchpad v11.sh (181k?, tarkista kansio Julkaisijan viestistä): laituri-a1 + tyrma-ovi + pisteet.txt (uusi: pelaajan
   kävely 7→8, 15→16, 19→20). laituri-a1: `poikki vartijat tila` (ilman tilaa käynnistää vartijat uudelleen!).
+
+## PÄIVITYS 09.2x: v11 ajettu (SIMU VAPAA 08.39), v12-kärki 3dccfed20 (181l = 9280d4a30, v12b pyydetty)
+- v11 e3c5dd17 (laituri-a1-0822, tyrma-ovi-0831, pisteet-0835): vapautus + turva 60 s, helpotus 1, ulos 9 s / 55 s, lukko 45 s;
+  laiturin valkopaitainen = vesiportin hahmo (−62,6/−22,5), ei pelaajan malli. Pisteet: 8 lyhyt 1,2 m, 16 portaat NavMesh katki, 20 este.
+- v12 (Laitetestaajan 6. kierros, kuudes-20261011.md): 9280d4a30 keittiö (KavelySisatila: atlas musta keittio-g102 ulkopinnoilla,
+  vanha keittio.glb piiloon), tyrmän vihje yhdestä lähteestä, AukkoVeto, SilmaVara.Taakse, tarkistuspiste turvan aikana, helpotus säilyy,
+  turva 60–150 s, vapautus historian jälkeen (KeittionOhitusTestit); e2c0b3e98 monimesh (dc53ccd54 cherry-pick, oli jo 181k:ssa);
+  3dccfed20 KavelyPaikat (8 ramppi, 16 sillat, 20 silta) + KavelyLeikkaus/DioraamaKuori kiertosuunta c = cos k (LR) + pielet −KiertoY.
+- AVOIN PT:lle: ovi:paaovi lukossa ovi:kappeli-alun aukossa (piste 20) → a) LR siirtää/poistaa lukon (suositus) b) lukko vasta kohtauksessa.
+- Skenaariot: laituri-a1 a1-02:n kohdalle paikka + `kavelyosat 0` -kuva (LR:n mustat lohkot); tyrma-ovi `poikki kadet tila`.
+- Seuraava ajo: v12b (181l + 3dccfed20) Laitetestaajan 7. kierroksen jälkeen: laituri-a1 + tyrma-ovi + pisteet (v11.sh-pohja).
