@@ -1483,7 +1483,8 @@ namespace Matkakirja.Natiivi
             v.silmukka.AloitaKierros(jono);
             // Aukion kierron esteet (juna 181, San Marcon kellotorni): listan tornit ja kirkot nimelliskorkeudella, tarkentuu vastauksista.
             // Luokaton lista (lukittu kaupunki, worker "luokka": null): korkeus tuntematon → lähellä oleva aukio vanhalla kehyksellä.
-            foreach (var t in v.kierrosKohteet ?? v.kohteet) v.silmukka.LisaaEste(t.Lat, t.Lon, OpasSilmukka.EsteKorkeusLuokasta(t.Luokka), OpasSilmukka.PalloEsteSadeM, t.Luokka != null);
+            foreach (var t in v.kierrosKohteet ?? v.kohteet) v.silmukka.LisaaEste(t.Lat, t.Lon, OpasSilmukka.EsteKorkeus(t.Luokka, t.KorkeusM), OpasSilmukka.PalloEsteSadeM,
+                t.Luokka != null || !double.IsNaN(t.KorkeusM));
             v.Silta(OpasSiltalauseet.Aloitus, true);
             return true;
         }

@@ -845,6 +845,10 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Kierroksen listan luokan nimelliskorkeus (m; sovitin, ennen kuin kohteen oma korkeus tulee workerilta; varovainen,
         /// koska San Marcon kellotornin vastaus tulee vasta torilla): torni ja kirkko.</summary>
         public const double PalloEsteTorniM = 100, PalloEsteKirkkoM = 60, PalloEsteSadeM = 15;
+        /// <summary>Listan kohteen esteen korkeus: luokan nimelliskorkeus tai workerin korkeus_m, kumpi suurempi (aukiot 182: rakennus-
+        /// luokan tornit kuten Brysselin kaupungintalo 96 m ja Palazzo Vecchio 94 m eivät olleet esteitä).</summary>
+        public static double EsteKorkeus(string luokka, double korkeusM) =>
+            Math.Max(EsteKorkeusLuokasta(luokka), double.IsNaN(korkeusM) || korkeusM < 0 ? 0 : korkeusM);
         public static double EsteKorkeusLuokasta(string luokka) => (luokka ?? "").Trim().ToLowerInvariant() switch { "torni" => PalloEsteTorniM, "kirkko" => PalloEsteKirkkoM, _ => 0 };
 
         /// <summary>Sovitin: kierroksen tunnettu korkea rakenne (lat, lon, korkeus m maasta, säde m).</summary>

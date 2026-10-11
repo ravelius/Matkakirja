@@ -68,6 +68,19 @@ namespace Matkakirja.Linssit.Testit
                 "{\"paiva\":\"2026-10-06\",\"kohteet\":[{\"id\":\"Q1\",\"nimi\":\"Canal Grande\",\"koukku\":\"Kaupunki vedellä.\",\"kaupunki\":\"Venetsia\",\"iso\":\"IT\",\"lat\":45.43,\"lon\":12.33,\"kuva\":{\"url\":\"u\"}},"
                 + "{\"nimi\":\"rikki\",\"lat\":95,\"lon\":0}]}"));
             Oleta.Sama(1, t.Count); Oleta.Tosi(t[0].Iso2 == "IT" && t[0].Kaupunki == "Venetsia" && t[0].KuvaUrl == "u");
+            Oleta.Tosi(double.IsNaN(t[0].KorkeusM), "korkeus_m puuttuu → NaN");
+        }
+
+        [Testi] static void ListanKorkeaRakennusOnEste()
+        {
+            // Aukiot 182 (simu b5c8dcb5): Grand-Placen kaupungintalo ja Palazzo Vecchio luokassa rakennus → torni leikkautui reunaan.
+            var t = OpasTaky.Lue((Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna(
+                "{\"kohteet\":[{\"id\":\"Q271928\",\"nimi\":\"Palazzo Vecchio\",\"lat\":43.7694,\"lon\":11.2559,\"luokka\":\"rakennus\",\"korkeus_m\":94}]}"));
+            Oleta.Sama(94.0, t[0].KorkeusM);
+            Oleta.Sama(94.0, OpasSilmukka.EsteKorkeus(t[0].Luokka, t[0].KorkeusM));
+            Oleta.Sama(OpasSilmukka.PalloEsteTorniM, OpasSilmukka.EsteKorkeus("torni", double.NaN));
+            Oleta.Sama(0.0, OpasSilmukka.EsteKorkeus("rakennus", double.NaN));
+            Oleta.Sama(120.0, OpasSilmukka.EsteKorkeus("torni", 120));
         }
 
         [Testi] static void LiikunArviokehysVaihtuuOikeaan()
