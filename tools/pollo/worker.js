@@ -3278,7 +3278,8 @@ async function hoidaOppaanLiiku(pyynto, env, kors) {
   const omat = omatKohteet(kaupunki, env);
   if (omat) {
     return vastaa({ kaupunki, kohteet: omat.kohteet.map((k, i) => ({ id: k.id, nimi: k.nimi, lat: k.lat, lon: k.lon, alarivi: k.kuvaus ?? null,
-      luokka: k.luokka ?? null, tarkeys: i + 1, kuva: kohteenKuvat(kuvaLista, k.id)[0] ?? null, kuvat: kohteenKuvat(kuvaLista, k.id) })),
+      luokka: k.luokka ?? null, ...(Number.isFinite(k.korkeus_m) ? { korkeus_m: k.korkeus_m } : {}),
+      tarkeys: i + 1, kuva: kohteenKuvat(kuvaLista, k.id)[0] ?? null, kuvat: kohteenKuvat(kuvaLista, k.id) })),
       kierros: omat.kierros }, kors);
   }
   const lukitut = kaupunginKohteet(kuvaLista, kaupunki).filter((k) => pisteSallittu(k, kaupunki, env));
@@ -3286,9 +3287,18 @@ async function hoidaOppaanLiiku(pyynto, env, kors) {
     // Kaupunkikierros-rivi (omistaja 6.10. 23.4x, natiivi lukee kentän junasta 156): 8 tärkeintä lyhimpänä reittinä
     // sijaintia lähimmästä alkaen; kohteet pysyvät tärkeysjärjestyksessä listaa varten.
     const alku = Number.isFinite(lat) && Number.isFinite(lon) && !(lat === 0 && lon === 0) ? { lat, lon } : null;
-    return vastaa({ kaupunki, kohteet: lukitut.map((k, i) => ({ id: k.id, nimi: k.nimi, lat: k.lat, lon: k.lon, alarivi: null,
-      luokka: null, tarkeys: i + 1, kuva: k.kuvat[0] ?? null, kuvat: k.kuvat })),
-      kierros: liikunKierros(lukitut, alku, esittelynAlku(await oppaanEsittely(env, kaupunki), kaupunki)) }, kors);
+    // Luokka ja korkeus esittelystä (id = Wikidata-tunnus): natiivin kierros kehystää aukiot ja väistää esteitä (San Marco / kellotorni).
+    // Sama esittely palvelee kierroksen alkua; puuttuva esittely → luokka null kuten ennen.
+    const esittely = await oppaanEsittely(env, kaupunki);
+    const esittelyKohde = new Map((esittely?.kohteet ?? []).map((e) => [e.id, e]));
+    return vastaa({ kaupunki, kohteet: lukitut.map((k, i) => {
+      const e = esittelyKohde.get(k.id);
+      return { id: k.id, nimi: k.nimi, lat: k.lat, lon: k.lon, alarivi: null,
+        luokka: typeof e?.luokka === 'string' && e.luokka ? e.luokka : null,
+        ...(Number.isFinite(e?.korkeus_m) ? { korkeus_m: e.korkeus_m } : {}),
+        tarkeys: i + 1, kuva: k.kuvat[0] ?? null, kuvat: k.kuvat };
+    }),
+      kierros: liikunKierros(lukitut, alku, esittelynAlku(esittely, kaupunki)) }, kors);
   }
   try {
     const viite = await tarkistettuSijainti(kaupunki, Number.isFinite(lat) && Number.isFinite(lon) && !(lat === 0 && lon === 0) ? { lat, lon } : null);

@@ -385,3 +385,38 @@ test('katse_loppu ja lasku_osuus (LS1/PT 11.10., juna 181): litteät kentät pys
   const toka = await opas(env, { kaydyt: ['Q100'], istunto: 'kl1' });
   assert.ok(!('katse_loppu' in toka.d) && !('lasku_osuus' in toka.d), 'kentät puuttuvat → ei vastauksessa');
 });
+
+test('Liiku: lukitun kaupungin kohteille luokka ja korkeus_m esittelystä; puuttuva esittely → luokka null kuten ennen', async () => {
+  const vanha = globalThis.fetch; globalThis.fetch = async () => new Response('{}');
+  try {
+    const e = ymparisto();
+    e.OPAS_ESITTELY_TESTI = { testila: { ...ESITTELY, kohteet: ESITTELY.kohteet.map((k, i) => ({ ...k,
+      luokka: i === 1 ? 'torni' : i === 2 ? undefined : 'aukio', ...(i === 1 ? { korkeus_m: 99 } : i === 3 ? { korkeus_m: 'korkea' } : {}) })) } };
+    const hae = async (env) => (await (await worker.fetch(new Request('https://pollo.example/opas/liiku?kaupunki=Testil%C3%A4&lat=60&lon=25',
+      { headers: H }), env, { waitUntil() {} })).json());
+    const d = await hae(e);
+    const k = (id) => d.kohteet.find((x) => x.id === id);
+    assert.equal(k('Q100').luokka, 'aukio'); assert.equal('korkeus_m' in k('Q100'), false);
+    assert.equal(k('Q101').luokka, 'torni'); assert.equal(k('Q101').korkeus_m, 99);
+    assert.equal(k('Q102').luokka, null, 'esittelyn kohteella ei luokkaa → null');
+    assert.equal('korkeus_m' in k('Q103'), false, 'ei-luku ei välity');
+    assert.equal(k('Q109').luokka, null, 'kohde ilman esittelyriviä → null');
+    assert.deepEqual(d.kohteet.map((x) => x.id), Array.from({ length: 10 }, (_, i) => `Q${100 + i}`), 'järjestys ennallaan');
+    assert.ok(d.kohteet.every((x) => x.alarivi === null && x.kuvat.length === 1), 'muut kentät ennallaan');
+    // Esittely puuttuu → luokka null, korkeutta ei
+    const ilman = await hae({ ...ymparisto(), OPAS_ESITTELY_TESTI: {} });
+    assert.ok(ilman.kohteet.length >= 8);
+    assert.ok(ilman.kohteet.every((x) => x.luokka === null && !('korkeus_m' in x)));
+  } finally { globalThis.fetch = vanha; }
+});
+
+test('Liiku: omat kohteet (Giza) välittävät luokan ja korkeus_m:n', async () => {
+  const vanha = globalThis.fetch; globalThis.fetch = async () => new Response('{}');
+  try {
+    const e = { ...ymparisto(), OPAS_ESITTELY_TESTI: undefined, OPAS_SALLITUT_ESTO: '1' };
+    const d = await (await worker.fetch(new Request('https://pollo.example/opas/liiku?kaupunki=Gizan%20pyramidit',
+      { headers: { ...H, 'x-matkakirja-kokeilu': 'giza' } }), e, {})).json();
+    const kheops = d.kohteet.find((x) => x.id === 'Q37200');
+    assert.equal(kheops.luokka, 'rakennus'); assert.equal(kheops.korkeus_m, 139);
+  } finally { globalThis.fetch = vanha; }
+});
