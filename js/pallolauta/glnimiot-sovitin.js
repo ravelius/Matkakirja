@@ -655,6 +655,11 @@ export function luoGlNimiosovitin({
       if (kutsuKunValmis) kunPeliValmis = kutsuKunValmis;
       return jaaPeli(datumit);
     },
+    /** GL-nappulan laatikko kotelon pikseleinä tai null (kohdenimen väistö, merkit.js vaistaNappulaa). */
+    nappulanLaatikko() {
+      if (!nappula || typeof ruutupiste !== 'function') return null;
+      return glNappulanLaatikko(ruutupiste(nappula.lat, nappula.lng));
+    },
     /** GL-nappulan ja GL-kohteiden laatikot kotelon pikseleinä ladonnan esteiksi. */
     pelinLaatikot() {
       if (typeof ruutupiste !== 'function') return [];

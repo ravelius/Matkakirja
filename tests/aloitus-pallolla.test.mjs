@@ -503,3 +503,19 @@ test('häivytetty avausteksti on poissa myös sormelta', () => {
   assert.match(css, /\.intro\.intro-fade,\n\.intro\.intro-fade \* \{ pointer-events: none; \}/,
     'näkymätön Valitse aloituskaupunki -nappi veisi pallon pyörityksen');
 });
+
+/*
+ * Karttasepän havainto 11.10.2026: lähtövalinnassa Lontoon pelinappula
+ * osui Pariisin kohdenimen päälle (mitattu 1400 × 900 ja 390 × 844).
+ * Nappula on kiinteä este, joten kohdenimi vaihtaa puolta halon alle.
+ */
+test('kohdenimi väistää pelinappulaa halon alle (Lontoo ja Pariisi)', () => {
+  const merkit = lue('../js/pallolauta/merkit.js');
+  assert.match(merkit, /nimi\.dataset\.ala = String\(nimenSade \+ KOHDEMERKIN_NIMI_RAKO_PX \+ KOHDEMERKIN_NIMI_PX\);/);
+  assert.match(merkit, /const y = alle \? Number\(t\.dataset\.ala\) : yla;/);
+  const lauta = lue('../js/pallolauta/lauta.js');
+  // Sekä ladonnassa että merkkien vaihtuessa (GL-nappula valmistuu myöhemmin).
+  assert.match(lauta, /merkit\.paivita\(\{ nappula: liikkuu[^\n]*\n\s*vaistoSeuraavaan\(\);/);
+  assert.match(lauta, /const pelinLaatikot = [^\n]*\n[^\n]*\n\s*vaistaNappulaa\(\);/);
+  assert.match(lue('../js/pallolauta/glnimiot-sovitin.js'), /nappulanLaatikko\(\) \{/);
+});
