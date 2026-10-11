@@ -9,11 +9,16 @@
 export const SEA_FEE = 200;
 export const FLIGHT_PRICE = 350;
 /*
- * KYYTIMAKSU (juna 183, VAIN NATIIVI): liftaus maksaa natiivissa 50 £ kerran
- * kaupungista lähdettäessä (kuten laivalippu). Webin peli ei veloita sitä;
- * vakio on tässä, jotta arvo kulkee paketin saannot-kokoelmassa natiiviin.
+ * KYYTIMAKSU (juna 183, VAIN NATIIVI; PT 11.10. 23.3x: ilman tuloja ei yli n. 1 800 km):
+ * liftaus maksaa natiivissa KYYTI_PER_KM puntaa maareitin päiden välisen
+ * kilometrin mukaan (vähintään KYYTI_VAHINTAAN, pyöristys 5 puntaan) jokaisesta
+ * kaupungista lähtevästä reitistä; bussi on BUSSI_KERROIN × kyyti, vähintään
+ * BUS_FARE. Webin peli ei veloita kyytiä eikä pituushintaa; vakiot ovat tässä,
+ * jotta arvot kulkevat paketin saannot-kokoelmassa natiiviin.
  */
-export const KYYTI_HINTA = 50;
+export const KYYTI_PER_KM = 0.15;
+export const KYYTI_VAHINTAAN = 20;
+export const BUSSI_KERROIN = 1.5;
 /*
  * BUSSILIPPU (omistaja 13.9.2026, karttauudistuksen Liiku-nappi,
  * sanatarkasti: *"bussi kahden vierekkaisen kaupungin valilla (50p)"*).
@@ -29,7 +34,7 @@ export const KYYTI_HINTA = 50;
  * (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 1 kohta 4: *"pelaaja voi
  * valita rahan puutteessa hitaamman tavan edeta"*).
  */
-export const BUS_FARE = 80; // juna 183 (ennen 50)
+export const BUS_FARE = 80; // juna 183 (ennen 50); natiivissa vähimmäishinta, pidemmälle BUSSI_KERROIN × kyyti
 
 /**
  * Sijainti on joko kaupungissa tai reitin varrella:
