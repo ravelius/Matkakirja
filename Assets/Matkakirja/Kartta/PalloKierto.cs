@@ -1494,6 +1494,7 @@ namespace Matkakirja
             Debug.Log("MATKAKIRJA kartta: eurooppa-loitonnus rajat " + tapahtuma + ": " + (Rajat.Instanssi != null ? Rajat.Instanssi.EurooppaTila() : "ei rajakerrosta"));
             if (kaupunkiMerkit == null) kaupunkiMerkit = FindAnyObjectByType<KaupunkiMerkit>();
             Debug.Log("MATKAKIRJA kartta: eurooppa-loitonnus pisteet " + tapahtuma + ": " + (kaupunkiMerkit != null ? kaupunkiMerkit.EurooppaTila() : "ei merkkejä"));
+            if (kaupunkiMerkit != null) Debug.Log("MATKAKIRJA kartta: " + kaupunkiMerkit.HoukuttimetTila());
         }
 
         /// <summary>Asettaa maan rajat saapumisnäkymästä (AjaSaapumisnakymaan) tai poistaa ne (laatikoton saapuminen).</summary>

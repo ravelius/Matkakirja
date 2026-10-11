@@ -17,6 +17,7 @@ namespace Matkakirja
     ///   kaupunki id               lento kaupunkiin ja nimikortti (kuin napautus)
     ///   aja lat lon kaari [s]     kamera-ajo; kaari = kapeamman suunnan asteet
     ///   pallo                     koko pallo kuvaan
+    ///   houkuttimet               houkutinpisteet lokiin ("MATKAKIRJA kartta: houkuttimet …": pisteet, värit, hunnun päällä)
     ///   eurooppa [s] | eurooppa tila   kamera pelaajan Euroopan loitonnukseen (katto, Euroopan keskipiste; juna 182) / tila
     ///                             lokiin ("MATKAKIRJA kartta: eurooppa-loitonnus …": katto, huntu, rajat, pisteet, laatat)
     ///   pallo rajat paalle|pois [m]   laattojen renderöijien rajat laajennettuina (k − 1) × m kaikkiin suuntiin
@@ -606,6 +607,10 @@ namespace Matkakirja
                     break;
                 case "pallo":
                     kierto.Aja(kierto.leveys, kierto.pituus, kierto.KokoPallonKorkeus(), 1.4f, null);
+                    break;
+                case "houkuttimet":
+                    // houkuttimet [tila]: linssi- ja lautapelikaupunkien hehkupisteet lokiin (omistaja 11.10.2026, juna 182).
+                    Debug.Log("MATKAKIRJA kartta: " + merkit.HoukuttimetTila());
                     break;
                 case "eurooppa" when o.Length > 1 && o[1] == "tila":
                     kierto.KirjaaEurooppa("tila");
@@ -1270,6 +1275,7 @@ namespace Matkakirja
                 case "valmius":
                 case "lento" when o.Length > 1 && o[1] == "v3":
                 case "kamerareitti":
+                case "houkuttimet":
                     return false;
                 case "pallo" when o.Length > 1 && o[1] == "lepo":
                     return false;

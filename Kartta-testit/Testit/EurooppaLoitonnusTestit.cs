@@ -8,9 +8,9 @@ namespace Matkakirja.Kartta.Testit
 {
     static class EurooppaLoitonnusTestit
     {
-        const double R = 6378137.0, Fov = 50.0, Rad = Math.PI / 180.0;
+        internal const double R = 6378137.0, Fov = 50.0, Rad = Math.PI / 180.0;
         // Laitteet pisteinä (leveys, korkeus, pistekerroin): iPhone 17 Pro pysty, iPad Air 11" pysty ja vaaka.
-        static readonly (string Nimi, double W, double H, double K)[] Laitteet =
+        internal static readonly (string Nimi, double W, double H, double K)[] Laitteet =
         {
             ("iPhone pysty", 402, 874, 3), ("iPad pysty", 820, 1180, 2), ("iPad vaaka", 1180, 820, 2),
         };
@@ -22,7 +22,7 @@ namespace Matkakirja.Kartta.Testit
         };
 
         /// <summary>Näkyykö piste kamerassa, joka katsoo Euroopan keskipistettä korkeudelta h (säteinä), pohjoinen ylös.</summary>
-        static bool Kuvassa(double lat, double lon, double h, double kuvasuhde)
+        internal static bool Kuvassa(double lat, double lon, double h, double kuvasuhde)
         {
             double d = 1 + h, la = EurooppaLoitonnus.KeskiLat * Rad, lo = EurooppaLoitonnus.KeskiLon * Rad;
             double[] c = { Math.Cos(la) * Math.Cos(lo), Math.Cos(la) * Math.Sin(lo), Math.Sin(la) };
@@ -38,7 +38,7 @@ namespace Matkakirja.Kartta.Testit
         }
 
         /// <summary>PalloKierto.KokoPallonKorkeus (metreinä): r / sin(kapeampi puolikulma × 0,92) − r.</summary>
-        static double KokoPallo(double kuvasuhde)
+        internal static double KokoPallo(double kuvasuhde)
         {
             double pysty = Fov / 2 * Rad, vaaka = Math.Atan(Math.Tan(pysty) * kuvasuhde);
             return R / Math.Sin(Math.Min(pysty, vaaka) * 0.92) - R;

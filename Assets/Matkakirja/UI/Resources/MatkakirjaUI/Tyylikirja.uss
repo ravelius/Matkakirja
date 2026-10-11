@@ -1,5 +1,5 @@
 /* TYYLIKIRJA — generoitu tiedostosta tyylikirja/tyylikirja.json (webin repo, node tools/tyylikirja.mjs --natiivi);
- * ÄLÄ MUOKKAA KÄSIN. lähde 469eaf9fe6d8. Tuodaan ensimmäisenä (Matkakirja.tss). */
+ * ÄLÄ MUOKKAA KÄSIN. lähde 469585cb41c6. Tuodaan ensimmäisenä (Matkakirja.tss). */
 
 :root {
     --bg: #1d1610;
@@ -326,6 +326,7 @@
     --tk-erikois-leima-1-a62: rgba(72, 74, 116, 0.62);
     --tk-erikois-leima-2-a55: rgba(120, 168, 108, 0.55);
     --tk-erikois-leima-3: #e2664c;
+    --tk-erikois-linssi-hehku: #b57bff;
     --tk-erikois-muu-1: #3b3b3b;
     --tk-erikois-muu-2-a95: rgba(112, 42, 24, 0.95);
     --tk-erikois-muu-3: #8a4a1c;
