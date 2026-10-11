@@ -14,8 +14,8 @@
   }
  },
  "artikkeli": {
-  "intro": "Vaduz on **Liechtensteinin pääkaupunki**, ja se sijaitsee Reinin itärannalla Alppien juurella. Jyrkän rinteen päältä kaupunkia katsoo Vaduzin linna, joka on ruhtinassuvun asuinpaikka ja kaupungin tunnetuin maamerkki. Vaduzissa asuu 6 109 ihmistä (2025), mutta naapurikunta Schaan on silti suurempi.\n\nNimi on lähteen mukaan romaaninen ja tarkoittaa vesijohtoa, ja ensimmäiset merkinnät ovat 1100-luvulta. Vuonna 1712 Liechtensteinin suku osti Vaduzin kreivikunnan, ja vuonna 1719 keisari Kaarle VI yhdisti ostetut alueet ruhtinaskunnaksi, joka sai suvun nimen.\n\nIsoisän matkavuonna 1873 Vaduz oli kylä ja alueen hallintokeskus, ja maan armeija oli lakkautettu 1868. **Rautatie** oli rakennettu maan halki 1872, mutta asema on Schaanin kunnan puolella. Nykyään kaupungin katedraali ja museot kertovat valtiosta, joka on lähteen mukaan **Euroopan neljänneksi pienin**.",
-  "teksti": "Vaduz sijaitsee Reinin itärannalla Liechtensteinin keskiosassa. Nimen juuri on vanha retoromaaninen auadutg, vesijohto, joka juontuu latinan sanasta aquaeductus, ja ensimmäiset merkinnät kylästä ovat 1100-luvun käsikirjoituksista.\n\nVaduzin kreivikunta muodostettiin 1342 Werdenbergin kreivikunnan osana. Sveitsiläiset polttivat linnan ja koko kylän Švaabin sodassa 1499, ja keisari Rudolf II antoi Vaduzille markkinaoikeudet 1592. Liechtensteinin suku osti Schellenbergin herruuden 1699 ja Vaduzin kreivikunnan 1712, ja Kaarle VI yhdisti alueet ruhtinaskunnaksi 1719.\n\nVuoden 1862 perustuslaki toi kansalaisvapaudet ja ensimmäiset maapäivät, ja kunnallislaki antoi Vaduzille pormestarin ja kunnanvaltuuston 1864. Rautatie rakennettiin 1872, kansallismuseo perustettiin 1890 ja Kunstmuseum valmistui 2000."
+  "intro": "Vaduz on **Liechtensteinin pääkaupunki**, ja se sijaitsee Reinin itärannalla Alppien juurella. Jyrkän rinteen päältä kaupunkia katsoo Vaduzin linna, joka on ruhtinassuvun asuinpaikka ja kaupungin tunnetuin maamerkki. Vaduzin kunnassa asuu noin 6 100 ihmistä (2025), mutta naapurikunta Schaan on silti suurempi.\n\nNimi on lähteen mukaan romaaninen ja tarkoittaa vesijohtoa, ja ensimmäiset merkinnät ovat 1100-luvulta. Vuonna 1712 Liechtensteinin suku osti Vaduzin kreivikunnan, ja vuonna 1719 keisari Kaarle VI yhdisti ostetut alueet ruhtinaskunnaksi, joka sai suvun nimen.\n\nIsoisän matkavuonna 1873 Vaduz oli kylä ja alueen hallintokeskus, ja maan armeija oli lakkautettu 1868. **Rautatie** oli rakennettu maan halki 1872, mutta asema on Schaanin kunnan puolella. Nykyään kaupungin katedraali ja museot kertovat valtiosta, joka on lähteen mukaan **Euroopan neljänneksi pienin**.",
+  "teksti": "Vaduz sijaitsee Reinin itärannalla Liechtensteinin keskiosassa. Nimen juuri on vanha retoromaaninen auadutg, vesijohto, joka juontuu latinan sanasta aquaeductus, ja ensimmäiset merkinnät kylästä ovat 1100-luvun käsikirjoituksista.\n\nVaduzin kreivikunta muodostettiin 1342 Werdenbergin kreivikunnan osana. Sveitsiläiset polttivat linnan ja koko kylän Švaabin sodassa 1499, ja keisari Rudolf II antoi Vaduzille markkinaoikeudet 1592. Liechtensteinin suku osti Schellenbergin herruuden 1699 ja Vaduzin kreivikunnan 1712, ja Kaarle VI yhdisti alueet ruhtinaskunnaksi 1719.\n\nVuoden 1862 perustuslaki toi kansalaisvapaudet ja ensimmäiset maapäivät, ja kunnallislaki antoi Vaduzille pormestarin ja kunnanvaltuuston 1864. Rautatie rakennettiin 1872, kansallismuseo perustettiin 1800-luvun lopulla ja Kunstmuseum valmistui 2000."
  },
  "kysymykset": [
   {
@@ -29,7 +29,7 @@
    "correct": 0,
    "level": 1,
    "hint": "Joki muodostaa Liechtensteinin rajan Sveitsin kanssa.",
-   "fact": "Vaduz on Reinin itärannalla. Rein on 27 kilometriä pitkä raja Liechtensteinin ja Sveitsin välillä.",
+   "fact": "Vaduz on Reinin itärannalla. Rein muodostaa noin 27 kilometrin pituisen rajan Liechtensteinin ja Sveitsin välille.",
    "source": "https://en.wikipedia.org/wiki/Vaduz"
   },
   {
@@ -121,15 +121,15 @@
     },
     {
      "tiedosto": "LIE Vaduz, Schlossweg, Aussicht 0014.jpg",
-     "lyhyt": "Vaduzin takana kohoavat Alpit, ja Rein kulkee laakson länsireunalla.",
-     "selite": "Rein on 27 kilometriä pitkä raja Sveitsin kanssa.",
+     "lyhyt": "Vaduz sijaitsee Reinin laaksossa, jonka vastarannalla kohoavat Sveitsin Alpit.",
+     "selite": "Rein muodostaa noin 27 kilometrin pituisen rajan Sveitsin kanssa.",
      "lahde": "-wuppertaler, Wikimedia Commons (CC BY 4.0)"
     }
    ],
    "nostot": [
     {
      "otsikko": "Linna rinteellä",
-     "teksti": "Vaduzin linna kohoaa rinteellä kaupungin yllä, ja se on ruhtinaan palatsi ja virallinen asuinpaikka. Linnan vanhimmat osat ovat 1100-luvun torni ja itäosat. Tornin pohja on 12 × 13 metriä, seinät ovat maan tasolla jopa neljä metriä paksut ja alkuperäinen sisäänkäynti on yhdentoista metrin korkeudessa. Rakentajiksi oletetaan Werdenberg-Sargansin kreivit. Sveitsin valaliitto poltti linnan Švaabin sodassa 1499, ja kreivi Kaspar von Hohenems laajensi länsisiipeä 1613–1640. Liechtensteinin suku osti linnan 1712, ja vakituinen asuinpaikka siitä tuli 1938. Koska ruhtinassuku asuu linnassa yhä, se ei ole yleisölle avoin.",
+     "teksti": "Vaduzin linna kohoaa rinteellä kaupungin yllä, ja se on ruhtinaan palatsi ja virallinen asuinpaikka. Linnan vanhimmat osat ovat 1100-luvun torni ja itäosat. Tornin pohja on noin 12 × 13 metriä ja alkuperäinen sisäänkäynti on yhdentoista metrin korkeudessa. Rakentajiksi oletetaan Werdenberg-Sargansin kreivit. Sveitsin valaliitto poltti linnan Švaabin sodassa 1499, ja kreivi Kaspar von Hohenems laajensi länsisiipeä 1613–1640. Liechtensteinin suku osti linnan 1712, ja vakituinen asuinpaikka siitä tuli 1938. Koska ruhtinassuku asuu linnassa yhä, se ei ole yleisölle avoin.",
      "tiedosto": "Schloss Vaduz. Ansicht von Nordwesten. 2015-10-03 17-24-28.jpg",
      "lyhyt": "Vaduzin linna on ruhtinaan palatsi, jonka vanhimmat osat ovat 1100-luvulta.",
      "selite": "Linnan 1100-luvun torni on säilynyt vanhimpana osana, ja linna on ollut Liechtensteinin suvun omaisuutta vuodesta 1712.",
@@ -147,7 +147,7 @@
     },
     {
      "otsikko": "Taidemuseo mustana laatikkona",
-     "teksti": "Kunstmuseum Liechtenstein valmistui marraskuussa 2000, ja sen suunnittelivat arkkitehdit Meinrad Morger, Heinrich Degelo ja Christian Kerez. Rakennuksen ulkopinta on värjättyä betonia ja mustaa basalttia, johon on upotettu jokikiviä. Sisällä on kuusi näyttelytilaa ja kaksi vastakkaista porrasta, joiden ansiosta rakennuksen läpi näkee vinottain. Rakennus lahjoitettiin valtiolle vuosituhannen lahjana elokuussa 2000. Kokoelman perusta on vuonna 1967 saaduissa kymmenessä maalauksessa, ja kokoelma painottuu 1900–2000-lukujen veistoksiin ja installaatioihin. Hilti Art Foundationin näyttelyrakennus lisättiin viereen toukokuussa 2015.",
+     "teksti": "Kunstmuseum Liechtenstein valmistui marraskuussa 2000, ja sen suunnittelivat arkkitehdit Meinrad Morger, Heinrich Degelo ja Christian Kerez. Rakennuksen ulkopinta on värjättyä betonia ja mustaa basalttia, johon on upotettu jokikiviä. Sisällä on kuusi näyttelytilaa ja kaksi vastakkaista porrasta, joiden ansiosta rakennuksen läpi näkee vinottain. Rakennus lahjoitettiin valtiolle vuosituhannen lahjana elokuussa 2000. Kokoelman perusta on vuonna 1967 saaduissa kymmenessä maalauksessa, ja kokoelma painottuu 1900–2000-lukujen veistoksiin ja installaatioihin. Hilti Art Foundationin näyttelyrakennus lisättiin viereen vuonna 2015.",
      "tiedosto": "Kunstmuseum Liechtenstein 2.jpg",
      "lyhyt": "Kunstmuseum Liechtenstein on valtion taidemuseo ja maan kansallinen taidekokoelma.",
      "selite": "Museon musta rakennus valmistui marraskuussa 2000, ja sen ulkopinnassa on betonia, basalttia ja jokikiviä.",
@@ -156,7 +156,7 @@
     },
     {
      "otsikko": "Kansallismuseo entisessä tavernassa",
-     "teksti": "Liechtensteinin kansallismuseo toimii rakennuksessa, joka ajoitetaan lähteen mukaan vuoteen 1438 tai noin vuoteen 1500. Rakennus oli ruhtinaallinen taverna, tullihuone ja hallituksen kokouspaikka, ja hallitus toimi siinä 1865–1905. Goethen kerrotaan yöpyneen majatalossa 1.–2.7.1788 palatessaan Italiasta. Museo perustettiin 1890 linnaan kuvernööri Friedrich Stellwag von Carionin aloitteesta, ja nykyisessä rakennuksessa se on ollut vuodesta 1972. Museossa on neljä osaa: päärakennus, postimuseo, aarrekammio ja maatalomuseo. Näyttelytilaa on 2 000 neliömetriä ja 42 huonetta.",
+     "teksti": "Liechtensteinin kansallismuseo toimii rakennuksessa, joka ajoitetaan lähteen mukaan vuoteen 1438. Rakennus oli ruhtinaallinen taverna, tullihuone ja hallituksen kokouspaikka, ja hallitus toimi siinä 1800-luvun lopulta vuoteen 1905. Museo perustettiin 1800-luvun lopulla linnaan kuvernööri Friedrich Stellwag von Carionin aloitteesta, ja nykyisessä rakennuksessa se on ollut vuodesta 1972. Museossa on neljä osaa: päärakennus, postimuseo, aarrekammio ja maatalomuseo. Näyttelytilaa on 2 000 neliömetriä ja noin 40 huonetta.",
      "tiedosto": "Liechtensteinisches Landesmuseum, 2014.JPG",
      "lyhyt": "Liechtensteinin kansallismuseo toimii entisessä ruhtinaallisessa tavernassa.",
      "selite": "Rakennus oli myös tullihuone ja hallituksen kokouspaikka, ja museo avasi laajennuksensa 28.11.2003.",
@@ -168,7 +168,7 @@
     "kuva": {
      "tiedosto": "Cathedral of St. Florin, Vaduz 0.jpg",
      "lyhyt": "St. Florinin katedraali on uusgoottilainen kirkko ja Vaduzin arkkihiippakunnan keskus.",
-     "selite": "Katedraali rakennettiin 1874 keskiaikaisten perustusten päälle, ja se on ollut katedraali vuodesta 1997.",
+     "selite": "Katedraali rakennettiin 1869–1873 vanhan kappelin viereen, ja se on ollut katedraali vuodesta 1997.",
      "lahde": "Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)"
     },
     "kappale": "Vaduz on pieni pääkaupunki, jonka tärkeimmät kohteet ovat linna, St. Florinin katedraali ja museot. Kaupungissa ei ole lentokenttää, ja lähin suuri lentoasema on Zürichissä. Lähin juna-asema Schaan-Vaduz sijaitsee naapurikunnassa Schaanissa, ja kaupunkiin pääsee myös linja-autolla. Maksuväline on Sveitsin frangi. Linna ei ole yleisölle avoin, koska ruhtinassuku asuu siellä. Ruhtinaiden hautakappeli katedraalin vieressä on avoin yleisölle vain 1. marraskuuta.",
@@ -180,15 +180,15 @@
      "jaksot": [
       {
        "otsikko": "Perille ja liikkeelle",
-       "teksti": "Vaduzissa ei ole lentokenttää. Lähin suuri lentoasema on Zürichissä, ja pienempiä ovat St. Gallen-Altenrhein ja Friedrichshafen. Autolla kaupunkiin tulee Sveitsin A13- tai Itävallan A14-tietä, ja Reinin voi ylittää Vaduz–Sevelen-jalkakäytävällä. Bussit kulkevat Buchsista, St. Gallenista, Sevelenistä ja Feldkirchistä noin 20–40 minuutin välein. Lähin juna-asema Schaan-Vaduz on Schaanin kunnan puolella, ja Feldkirchin ja Buchsin välinen linja on maan ainoa rautatie."
+       "teksti": "Vaduzissa ei ole lentokenttää. Lähin suuri lentoasema on Zürichissä, ja pienempiä ovat St. Gallen-Altenrhein ja Friedrichshafen. Autolla kaupunkiin tulee Sveitsin A13- tai Itävallan A14-tietä, ja Reinin voi ylittää Vaduz–Sevelen-jalkakäytävällä. Bussit kulkevat Buchsista, St. Gallenista, Sevelenistä ja Feldkirchistä säännöllisesti. Lähin juna-asema Schaan-Vaduz on Schaanin kunnan puolella, ja Feldkirchin ja Buchsin välinen linja on maan ainoa rautatie."
       },
       {
        "otsikko": "Linna ja kaupungin ydin",
-       "teksti": "Linna näkyy lähes kaikkialle kaupungissa mutta ei ole yleisölle avoin, joten sitä katsotaan ulkoa. Kaupungin arkkitehtuuriin kuuluvat St. Florinin katedraali, hallitusrakennus ja raatihuone. Uusgoottilainen katedraali on rakennettu 1874, ja ruhtinaiden hautakappeli sen vieressä on avoin yleisölle vain 1. marraskuuta.",
+       "teksti": "Linna näkyy lähes kaikkialle kaupungissa mutta ei ole yleisölle avoin, joten sitä katsotaan ulkoa. Kaupungin arkkitehtuuriin kuuluvat St. Florinin katedraali, hallitusrakennus ja raatihuone. Uusgoottilainen katedraali on rakennettu 1869–1873, ja ruhtinaiden hautakappeli sen vieressä on avoin yleisölle vain 1. marraskuuta.",
        "kuva": {
         "tiedosto": "2018-10-05 Liechtenstein, Vaduz, St. Florin (KPFC) 10.jpg",
         "lyhyt": "St. Florinin katedraalin suojeluspyhimys on Remüsin Florinus.",
-        "selite": "Florinus oli 800-luvun pyhimys Vinschgaun laaksosta, ja katedraali on kansallisten ja ruhtinassuvun seremonioiden paikka.",
+        "selite": "Florinus oli Vinschgaun laaksosta kotoisin oleva pyhimys, ja katedraali on kansallisten ja ruhtinassuvun seremonioiden paikka.",
         "lahde": "Rafael P. D. Suppmann, Wikimedia Commons (CC BY-SA 4.0)"
        }
       },
@@ -232,7 +232,7 @@
        {
         "mita": "Kansallismuseo",
         "tahdet": 3,
-        "selite": "Entinen taverna, jossa on 42 näyttelyhuonetta."
+        "selite": "Entinen taverna, jossa on noin 40 näyttelyhuonetta."
        },
        {
         "mita": "Schalunin linnanraunio",
@@ -273,7 +273,7 @@
    "nimi": "Pieni valtio kaupungin ympärillä",
    "johdanto": "Liechtenstein syntyi kahden pienen alueen ostosta ja keisarin päätöksestä, ja Vaduz on ollut sen keskus kolmesataa vuotta. Sivu kertoo, miten ruhtinaskunta syntyi ja miten se selvisi 1800-luvun muutoksista.",
    "tehtava": {
-    "kysymys": "Kuinka monta miestä Liechtensteinin armeijassa oli, kun se lakkautettiin vuonna 1868?",
+    "kysymys": "Noin kuinka monta miestä Liechtensteinin armeijassa oli, kun se lakkautettiin vuonna 1868?",
     "vaihtoehdot": [
      "80",
      "20",
@@ -286,7 +286,7 @@
    "nostot": [
     {
      "otsikko": "Keisarin päätös ja pysyvät rajat",
-     "teksti": "Liechtensteinin suvun ostamilla alueilla ei ollut muuta feodaaliherraa kuin keisari, ja se oli ostosten tärkein etu. Keisari Kaarle VI yhdisti Schellenbergin ja Vaduzin 23.1.1719 ruhtinaskunnaksi nimellä Liechtenstein. Lähteen mukaan nimi annettiin suvun ruhtinaan, keisarin uskollisen palvelijan Anton Florianin, kunniaksi. Siitä päivästä lähtien Liechtenstein oli Pyhän saksalais-roomalaisen keisarikunnan suvereeni jäsen. Maan rajat ovat pysyneet samoina vuodesta 1434, jolloin Rein muodostui keisarikunnan ja sveitsiläiskantonien rajaksi. Rein on 27 kilometriä pitkä raja Sveitsin kanssa.",
+     "teksti": "Liechtensteinin suvun ostamilla alueilla ei ollut muuta feodaaliherraa kuin keisari, ja se oli ostosten tärkein etu. Keisari Kaarle VI yhdisti Schellenbergin ja Vaduzin 23.1.1719 ruhtinaskunnaksi nimellä Liechtenstein. Lähteen mukaan nimi annettiin suvun ruhtinaan, keisarin uskollisen palvelijan Anton Florianin, kunniaksi. Siitä päivästä lähtien Liechtenstein oli Pyhän saksalais-roomalaisen keisarikunnan suvereeni jäsen. Rein on maan länsiraja ja muodostaa noin 27 kilometrin pituisen rajan Sveitsin kanssa.",
      "tiedosto": "Josef Johann Adam v Liechtenstein.jpg",
      "lyhyt": "Josef Johann Adam von Liechtenstein (1690–1732) oli ruhtinas 1721–1732.",
      "selite": "Vaduzin kreivikunta ostettiin vuonna 1712, ja ruhtinaskunta sai nimensä seitsemän vuotta myöhemmin.",
@@ -295,25 +295,25 @@
     },
     {
      "otsikko": "Vaduz, joka poltettiin 1499",
-     "teksti": "Vaduzin linna mainitaan lähteissä 1322, ja Schalunin linnan ensimmäinen kirjallinen maininta on jo vuodelta 1237. Vaduzin kreivikunta muodostettiin 1342 Werdenbergin kreivikunnan osana, ja 1400-luvulla alueella oli kolme sotaa ja tuhoa. Švaabin sodassa 1499 sveitsiläiset polttivat linnan ja tuhosivat koko kylän. Keisari Rudolf II antoi Vaduzille markkinaoikeudet 1592. Linnan rakentajiksi oletetaan Werdenberg-Sargansin kreivit, ja Liechtensteinin suku osti sen 1712. ",
+     "teksti": "Vaduzin linna mainitaan lähteissä 1322, ja Schalunin linnan ensimmäinen kirjallinen maininta on jo vuodelta 1237. Vaduzin kreivikunta muodostettiin 1342 Werdenbergin kreivikunnan osana. Švaabin sodassa 1499 sveitsiläiset polttivat linnan ja tuhosivat koko kylän. Keisari Rudolf II antoi Vaduzille markkinaoikeudet 1592. Linnan rakentajiksi oletetaan Werdenberg-Sargansin kreivit, ja Liechtensteinin suku osti sen 1712. ",
      "tiedosto": "Schloss Vaduz. Ansicht von Nordwesten. 2015-10-03 16-50-11.jpg",
      "lyhyt": "Vaduzin linna poltettiin Švaabin sodassa 1499, ja sen länsisiipeä laajennettiin 1613–1640.",
-     "selite": "Linnan vanhimmat osat ovat 1100-luvulta, ja tornin seinät ovat maan tasolla jopa neljä metriä paksut.",
+     "selite": "Linnan vanhimmat osat ovat 1100-luvulta, ja torni on linnan vanhimpia osia.",
      "lahde": "Shesmax, Wikimedia Commons (CC BY-SA 4.0)",
      "wiki": "Vaduz"
     },
     {
      "otsikko": "Armeija, joka palasi ehkä yhden miehen isompana",
-     "teksti": "Itävalta-Preussin sodassa 1866 ruhtinas Johann II asetti sotilaansa Saksan liiton käyttöön vain Tirolin puolustamiseksi. Maan joukot asettuivat Stilfser Jochille Peter Rheinbergerin johdolla, ja 20 miehen reservi jäi Vaduzin linnaan. Kun sota päättyi 22.7., armeija marssi kotiin ja sai juhlallisen vastaanoton Vaduzissa. Kansantarun mukaan lähti 80 miestä ja palasi 81, ja lisämiehen henkilöllisyys on kiistanalainen: hän oli itävaltalainen yhteysupseeri tai italialainen maanviljelijä. Armeija lakkautettiin 12.2.1868, kun Saksan liitto oli hajonnut ja ylläpito oli käynyt kalliiksi. Viimeinen elossa ollut veteraani Andreas Kieber kuoli 1939.",
+     "teksti": "Itävalta-Preussin sodassa 1866 ruhtinas Johann II asetti sotilaansa Saksan liiton käyttöön vain Tirolin puolustamiseksi. Maan joukot asettuivat Stilfser Jochille Peter Rheinbergerin johdolla, ja pieni reservi jäi Vaduzin linnaan. Kun sota päättyi heinäkuussa, armeija marssi kotiin ja sai juhlallisen vastaanoton Vaduzissa. Kansantarun mukaan lähti 80 miestä ja palasi 81, ja lisämiehen henkilöllisyys on kiistanalainen: hän oli itävaltalainen yhteysupseeri tai italialainen maanviljelijä. Armeija lakkautettiin 12.2.1868, kun Saksan liitto oli hajonnut ja ylläpito oli käynyt kalliiksi. Viimeinen elossa ollut veteraani Andreas Kieber kuoli 1939.",
      "tiedosto": "PlaqueAndreasKieber-MaurenCemeteryLiechtenstein RomanDeckert25012023.jpg",
      "lyhyt": "Andreas Kieber (1844–1939) oli viimeinen elossa ollut Liechtensteinin armeijan veteraani.",
-     "selite": "Muistolaatta Maurenin hautausmaalla kertoo viimeisestä veteraanista, joka kuoli 94-vuotiaana.",
+     "selite": "Muistolaatta Maurenin hautausmaalla kertoo viimeisestä veteraanista, joka kuoli 94- tai 95-vuotiaana.",
      "lahde": "RomanDeckert, Wikimedia Commons (CC BY-SA 4.0)",
      "wiki": "History of Liechtenstein"
     },
     {
      "otsikko": "Perustuslaki 1862 ja ensimmäiset maapäivät",
-     "teksti": "Vuoden 1862 perustuslain valmisteli pääosin Karl Schädler, ja se vahvistettiin 26.9.1862. Se oli pitkälti Vorarlbergin perustuslain mallinen ja loi kansalaisvapaudet sekä ensimmäistä kertaa maapäivät eli Landtagin. Taustalla olivat 1848–1849 vallankumoukset: kansankomitea asetti 22.3.1848 kolmihenkisen johtokunnan ja perustuslakineuvosto 27.7.1848, mutta ruhtinas Aloys II palautti yksinvallan 20.7.1852. Kunnallislaki 1864 antoi Vaduzille pormestarin ja kunnanvaltuuston. Isoisän matkavuonna 1873 maa oli siis vasta opetellut uutta järjestystä.",
+     "teksti": "Vuoden 1862 perustuslain valmisteli pääosin Karl Schädler, ja se vahvistettiin 26.9.1862. Se oli pitkälti Vorarlbergin perustuslain mallinen ja loi kansalaisvapaudet sekä ensimmäistä kertaa maapäivät eli Landtagin. Taustalla olivat 1848–1849 vallankumoukset: kansankomitea asetti 1848 kolmihenkisen johtokunnan ja perustuslakineuvosto perustettiin samana vuonna, mutta ruhtinas Aloys II palautti yksinvallan 1852. Kunnallislaki 1864 antoi Vaduzille pormestarin ja kunnanvaltuuston. Isoisän matkavuonna 1873 maa oli siis vasta opetellut uutta järjestystä.",
      "tiedosto": "Landtag of Liechtenstein 1931.jpg",
      "lyhyt": "Maapäivät eli Landtag perustettiin ensimmäisen kerran vuoden 1862 perustuslailla.",
      "selite": "Maapäivät eli Landtag on Liechtensteinin parlamentti, ja kuva on vuodelta 1931.",
@@ -363,11 +363,11 @@
  "nahtavyydet": {
   "Vaduzin linna": {
    "aika": "1100-luku–",
-   "teksti": "Vaduzin linna on Liechtensteinin ruhtinaan palatsi ja virallinen asuinpaikka sekä kaupungin tunnetuin maamerkki. Se kohoaa rinteellä kaupungin yllä ja näkyy lähes joka puolelle. Linnan vanhimmat osat ovat 1100-luvun torni ja itäpuolen rakenteet, ja linna mainitaan lähteissä 1322. Tornin pohja on 12 × 13 metriä, seinät ovat maan tasolla jopa neljä metriä paksut ja alkuperäinen sisäänkäynti on yhdentoista metrin korkeudessa. Rakentajiksi oletetaan Werdenberg-Sargansin kreivit.\n\nSveitsin valaliitto poltti linnan Švaabin sodassa 1499. Kreivi Kaspar von Hohenems laajensi länsisiipeä 1613–1640, ja Liechtensteinin suku osti linnan 1712. Linnassa on Anna-kappeli, jossa on myöhäisgoottilainen pääalttari. Suurkunnostus tehtiin 1900-luvun alussa, ja ruhtinasperheen vakituinen asuinpaikka linnasta tuli 1938.\n\nIsoisän matkavuonna 1873 linna oli ollut suvun omaisuutta jo yli puolitoista vuosisataa, mutta ruhtinas ei asunut maassa. Linnan tarkkaa kuntoa tuolloin lähteet eivät kuvaa. Nykyään linna ei ole yleisölle avoin, koska ruhtinassuku asuu siellä.",
+   "teksti": "Vaduzin linna on Liechtensteinin ruhtinaan palatsi ja virallinen asuinpaikka sekä kaupungin tunnetuin maamerkki. Se kohoaa rinteellä kaupungin yllä ja näkyy lähes joka puolelle. Linnan vanhimmat osat ovat 1100-luvun torni ja itäpuolen rakenteet, ja linna mainitaan lähteissä 1322. Tornin pohja on noin 12 × 13 metriä ja alkuperäinen sisäänkäynti on yhdentoista metrin korkeudessa. Rakentajiksi oletetaan Werdenberg-Sargansin kreivit.\n\nSveitsin valaliitto poltti linnan Švaabin sodassa 1499. Kreivi Kaspar von Hohenems laajensi länsisiipeä 1613–1640, ja Liechtensteinin suku osti linnan 1712. Linnassa on Anna-kappeli, jossa on myöhäisgoottilainen pääalttari. Suurkunnostus tehtiin 1900-luvun alussa, ja ruhtinasperheen vakituinen asuinpaikka linnasta tuli 1938.\n\nIsoisän matkavuonna 1873 linna oli ollut suvun omaisuutta jo yli puolitoista vuosisataa, mutta ruhtinas ei asunut maassa. Linnan tarkkaa kuntoa tuolloin lähteet eivät kuvaa. Nykyään linna ei ole yleisölle avoin, koska ruhtinassuku asuu siellä.",
    "kuvat": [
     {
      "tiedosto": "LIE Vaduz, Schloss Vaduz 0007.jpg",
-     "lyhyt": "Vaduzin linnan pyöreä torni rakennettiin vuosina 1529–1532.",
+     "lyhyt": "Vaduzin linnan pyöreä torni rakennettiin 1500-luvulla.",
      "selite": "Linnan tornit ja siivet ovat syntyneet eri vuosisatoina, ja vanhin osa on 1100-luvun itätorni.",
      "lahde": "-wuppertaler, Wikimedia Commons (CC BY 4.0)"
     }
@@ -375,13 +375,13 @@
    "lahde": "Wikipedia"
   },
   "St. Florinin katedraali": {
-   "aika": "1874",
-   "teksti": "St. Florinin katedraali on uusgoottilainen kirkko ja Vaduzin arkkihiippakunnan keskus. Sen suojeluspyhimys on Remüsin Florinus, 800-luvun pyhimys Vinschgaun laaksosta. Kirkon arkkitehti oli Friedrich von Schmidt, ja se rakennettiin 1874 keskiaikaisten perustusten päälle. Katedraali on kansallisten ja ruhtinassuvun seremonioiden paikka.\n\nPappilakirkosta katedraali tuli 1997, kun paavi Johannes Paavali II perusti arkkihiippakunnan 2. joulukuuta 1997. Seremonia pidettiin 12. joulukuuta. Aiemmin seurakunta kuului Churin hiippakunnan dekanaattiin.\n\nKatedraalin vieressä on ruhtinaiden hautakappeli, joka on avoin yleisölle vain 1. marraskuuta. Sinne on haudattu muun muassa Franz Joseph II (1989) ja prinssi Alois (1869–1955). Lähteen mukaan nykyinen kirkko rakennettiin 1874, joten isoisän matkavuonna 1873 se oli valmistumassa tai vielä valmistumatta; tarkkaa rakennusvaihetta lähde ei kerro.",
+   "aika": "1869–1873",
+   "teksti": "St. Florinin katedraali on uusgoottilainen kirkko ja Vaduzin arkkihiippakunnan keskus. Sen suojeluspyhimys on Remüsin Florinus, Vinschgaun laaksosta kotoisin oleva pyhimys. Kirkon arkkitehti oli Friedrich von Schmidt, ja se rakennettiin 1869–1873 vanhan kappelin viereen. Katedraali on kansallisten ja ruhtinassuvun seremonioiden paikka.\n\nPappilakirkosta katedraali tuli 1997, kun paavi Johannes Paavali II perusti arkkihiippakunnan 2. joulukuuta 1997. Aiemmin seurakunta kuului Churin hiippakunnan dekanaattiin.\n\nKatedraalin vieressä on ruhtinaiden hautakappeli, joka on avoin yleisölle vain 1. marraskuuta. Sinne on haudattu muun muassa Franz Joseph II (1989) ja prinssi Alois (1869–1955). Kirkko rakennettiin 1869–1873 ja valmistui 1873, joten isoisän matkavuonna 1873 se oli juuri valmistunut.",
    "kuvat": [
     {
      "tiedosto": "Vaduz Kathedrale StFlorin.jpg",
      "lyhyt": "St. Florinin katedraali on uusgoottilainen kirkko.",
-     "selite": "Kirkon arkkitehti oli Friedrich von Schmidt, ja se rakennettiin 1874 keskiaikaisten perustusten päälle.",
+     "selite": "Kirkon arkkitehti oli Friedrich von Schmidt, ja se rakennettiin 1869–1873 vanhan kappelin viereen.",
      "lahde": "AuHaidhausen, Wikimedia Commons (CC BY 4.0)"
     }
    ],
@@ -389,12 +389,12 @@
   },
   "Liechtensteinin kansallismuseo": {
    "aika": "1400-luku",
-   "teksti": "Liechtensteinin kansallismuseo toimii rakennuksessa, joka ajoitetaan lähteen mukaan vuoteen 1438 tai noin vuoteen 1500. Rakennus oli ruhtinaallinen taverna, tullihuone ja hallituksen kokouspaikka. Kreivi Kaspar von Hohenems osti majatalon 1637, ja Feldkirchin ja Churin välisen kauppareitin tavarat tarkastettiin siellä. Goethen kerrotaan yöpyneen majatalossa 1.–2.7.1788 palatessaan Italiasta.\n\nHallitus toimi rakennuksessa 1865–1905, ja goottilaisia kellareita käytettiin vankilana. Museo perustettiin 1890 linnaan kuvernööri Friedrich Stellwag von Carionin aloitteesta, ja nykyisessä rakennuksessa se on ollut vuodesta 1972. Rakennus vaurioitui 1992 ja museo suljettiin, ja laajennus avattiin 28.11.2003.\n\nMuseossa on neljä osaa: päärakennus, postimuseo, aarrekammio (2015) ja maatalomuseo. Näyttelytilaa on 2 000 neliömetriä ja 42 huonetta. Isoisän matkavuonna 1873 museota ei vielä ollut, mutta rakennus oli hallituksen paikka.",
+   "teksti": "Liechtensteinin kansallismuseo toimii rakennuksessa, joka ajoitetaan lähteen mukaan vuoteen 1438. Rakennus oli ruhtinaallinen taverna, tullihuone ja hallituksen kokouspaikka. Feldkirchin ja Churin välisen kauppareitin tavarat tarkastettiin siellä.\n\nHallitus toimi rakennuksessa 1800-luvun lopulta vuoteen 1905, ja goottilaisia kellareita käytettiin vankilana. Museo perustettiin 1800-luvun lopulla linnaan kuvernööri Friedrich Stellwag von Carionin aloitteesta, ja nykyisessä rakennuksessa se on ollut vuodesta 1972. Rakennus vaurioitui 1992 ja museo suljettiin, ja laajennus avattiin 28.11.2003.\n\nMuseossa on neljä osaa: päärakennus, postimuseo, aarrekammio (2015) ja maatalomuseo. Näyttelytilaa on 2 000 neliömetriä ja noin 40 huonetta. Isoisän matkavuonna 1873 museota ei vielä ollut, mutta rakennus oli hallituksen paikka.",
    "kuvat": [
     {
      "tiedosto": "Liechtensteinisches Landesmuseum in Vaduz (2018).jpg",
      "lyhyt": "Kansallismuseo esittelee Liechtensteinin kulttuuri- ja luonnonhistoriaa.",
-     "selite": "Museon näyttelytilaa on yhteensä 2 000 neliömetriä ja 42 huonetta.",
+     "selite": "Museon näyttelytilaa on yhteensä 2 000 neliömetriä ja noin 40 huonetta.",
      "lahde": "JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0)"
     }
    ],
@@ -402,7 +402,7 @@
   },
   "Kunstmuseum Liechtenstein": {
    "aika": "2000",
-   "teksti": "Kunstmuseum Liechtenstein on valtion taidemuseo ja maan kansallinen taidekokoelma. Se esittelee kansainvälistä modernia ja nykytaidetta, ja kokoelman painotus on 1900–2000-lukujen veistoksissa ja installaatioissa. Rakennus on arkkitehtien Meinrad Morgerin, Heinrich Degelon ja Christian Kerezin työ, ja se valmistui marraskuussa 2000.\n\nUlkopuoli on värjättyä betonia ja mustaa basalttia, ja ulkopintaan on upotettu jokikiviä. Sisällä on kuusi näyttelytilaa ja kaksi vastakkaista porrasta, joiden ansiosta rakennuksen läpi näkee vinottain. Rakennus lahjoitettiin valtiolle vuosituhannen lahjana elokuussa 2000, ja avajaisia vietettiin 12.11.2000. Hilti Art Foundationin näyttelyrakennus lisättiin viereen toukokuussa 2015.\n\nKokoelman perusta on vuonna 1967 saaduissa kymmenessä maalauksessa, ja valtion taidekokoelma perustettiin 1968. Isoisän matkavuonna 1873 museota ei vielä ollut, sillä se rakennettiin yli sata vuotta myöhemmin.",
+   "teksti": "Kunstmuseum Liechtenstein on valtion taidemuseo ja maan kansallinen taidekokoelma. Se esittelee kansainvälistä modernia ja nykytaidetta, ja kokoelman painotus on 1900–2000-lukujen veistoksissa ja installaatioissa. Rakennus on arkkitehtien Meinrad Morgerin, Heinrich Degelon ja Christian Kerezin työ, ja se valmistui marraskuussa 2000.\n\nUlkopuoli on värjättyä betonia ja mustaa basalttia, ja ulkopintaan on upotettu jokikiviä. Sisällä on kuusi näyttelytilaa ja kaksi vastakkaista porrasta, joiden ansiosta rakennuksen läpi näkee vinottain. Rakennus lahjoitettiin valtiolle vuosituhannen lahjana elokuussa 2000, ja avajaisia vietettiin 12.11.2000. Hilti Art Foundationin näyttelyrakennus lisättiin viereen vuonna 2015.\n\nKokoelman perusta on vuonna 1967 saaduissa kymmenessä maalauksessa, ja valtion taidekokoelma perustettiin 1968. Isoisän matkavuonna 1873 museota ei vielä ollut, sillä se rakennettiin yli sata vuotta myöhemmin.",
    "kuvat": [
     {
      "tiedosto": "Kunstmuseum Liechtenstein (Vaduz, 2018).jpg",
