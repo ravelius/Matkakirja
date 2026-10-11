@@ -13834,3 +13834,39 @@ Vain lokiin (docs-PR 11.10. yö 2, kipin ohjaimet): Raamattua ei muutettu; linja
 12.10. 00.1x OMISTAJA (chat) sanatarkasti: "Se kolkuta kolkuta oli hauska, sen voi jättää" → kolmas korjaus peruttu: vaiheen 8 Pulun repliikki on "Kirjekyyhky tuo postia avaruuteen! Kolkuta, kolkuta!" v3:n otosta, ja voimassa ovat kaksi korjausta (Max Livia; Cupolasta näkyy Maa ja sen ohut sininen ilmakehä). Käsikirjoitus päivitetty: 6 muuttunutta repliikkiä äänitetään uudelleen, muut 12 v3:n otoista.
 
 Junaan 183 (ks. JUNA 183 VASTA KUN KAIKKI ON VALMISTA, EI KELLONAIKARAJAA).
+
+## TAIDEHALLIN OHJAUS: NÄYTTELYVALIKKO ALUSSA, ☰:SSÄ KAIKKI NÄYTTELYT, TEOSTEN NIMILISTA JA SIIRRY-NAPPI, SUURENNUS ELEILLÄ, KÄVELY TEOKSEN LUO (omistaja 12.10.2026 klo 00.1x) (12.10.2026 klo 01.50)
+
+12.10. 00.1x OMISTAJA (chat) sanatarkasti: "Taidehallissa pitää olla alussa valikko mistä saa valita mitä näyttelyä haluaa katsoa. Ota kaikki napit pois esityksen ajaksi.  Hampurilaisen kautta näkyy kaikki näyttelyt ja pelaaja voi sitä kautta vaihtaa huonetta. Teoksen nimen ylä ja alapuolella voisi näkyä edellisen ja seuraavan teoksen nimet hyvin pienellä. Napauttamalla mitä tahansa niitä vasemmalle sivulle levittäytyy kaikki teoksien nimet ja niitä voisi kelata vetämällä sormea nimien päällä. Valittu nimi näkyisi aina suurimmalla ja viereiset nimet vähän suuremmalla.  Nimien koot muuttuisivat pehmeästi animoiden. Pelaaja pääsisi siirtymään teokseen klikkaamalla uudelleen valittua teosta. Jos pelaaja ei tee mitään 1.5sek sisällä, teoksen nimen oik puolelle tulee siirry nappi jota painamalla teokseen pääsee myös. Teoksen kuvan Suurentaminen onnistuisi tupla napautuksella tai nipistys eleellä. Siirtyminen toisen teoksen luo valinnan jälkeen tapahtuu niin että henkilö kävelee uuden teoksen luo automaattisesti. Mitä olet mieltä?" → PT: hyvä, tehdään (NUI: valikko, ☰-näyttelyt, nimilista kipin pysäkkilistan pohjalta, Siirry, eleet; LS2: kävely pelaajan silmin + suurennus eleillä, suurennuslasinappi pois); PT:n lisäehdotus: nimilistan avaus pysäyttää kertojan ja sulkeminen jatkaa. Juna 183 ei odota tätä (mukaan jos ehtii ennen lukitusta), muuten 184. RAAMATTUUN (taidemuseo/taidehalli: ohjaimet esityksen aikana).
+
+Tarkennus 12.10. klo 00.2x: tauko jää näkyviin esityksen aikana ja pysäyttää kertojan ja tekstityksen (ks. TAUKO PYSÄYTTÄÄ KERTOJAN JA TEKSTITYKSEN KAIKISSA ESITYKSISSÄ).
+
+Toteutus (kesken 12.10. klo 01.3x): Natiivi-UI natiivi-ui/kippi-taidehalli-183 (alkuvalikko, ☰:n näyttelyt, nimilista ja Siirry 622ee5953; esityksen aikana vain ⏸ ja ☰ fc0e46072) ja Linssiseppä 2 linssiseppa2/taidehalli-183 (kävely pelaajan silmin, suurennus tuplanapautuksella ja nipistyksellä 6be55b774). Junaan 183, jos ehtii ennen lukitusta, muuten 184.
+
+Raamattuun (docs-PR 12.10. yö, taidehalli): Ydinajatus, NATIIVI PELI ETUSIJALLE, TAIDEMUSEO-LINSSI: TAIDEHALLIN OHJAUS (korvaa ZOOM-NAPIN; info-nappia ei näytetä esityksen aikana; MAITTAIN-kohdan napista kuuluva esittely viittaa ohjaukseen). PT:n lisäehdotus (nimilistan avaus pysäyttää kertojan, sulkeminen jatkaa) vain lokissa.
+
+## DIALOGIT YHTENÄ OTTONA: KAHDEN TAI USEAMMAN ÄÄNEN KESKUSTELU YHTENÄ DIALOGIOTTONA AIKALEIMOIN, EI REPLIIKKI KERRALLAAN (omistaja 12.10.2026 klo 00.1x) (12.10.2026 klo 01.50)
+
+12.10. 00.1x OMISTAJA (chat) sanatarkasti: "Äänitä kumpikin repliikki yhtenä pitkänä dialogi ottona jotta rytmi säilyy luontevana" → raketin selostus v6: koko dialogi (18 repliikkiä, William + Livia) YHTENÄ dialogigenerointina aikaleimoin (Äänittäjä), LS2 ajoittaa vaiheet repliikkien alkuihin. RAAMATTUUN (äänet, jatke 3.10. "yksi pitkä teksti kerralla" -säännölle): kahden tai useamman äänen keskustelu generoidaan yhtenä dialogiottona, ei repliikki kerrallaan.
+
+Rinnakkainen lainaus samalta minuutilta ("Se kolkuta kolkuta oli hauska, sen voi jättää") on kirjattu jo kirjaukseen RAKETIN SELOSTUS V2 (#4464). Tämä kumoaa siinä kirjatun äänitystavan (6 muuttunutta repliikkiä uudelleen, muut 12 v3:n otoista): kaikki 18 repliikkiä ovat nyt samassa otossa. Jatkaa kirjauksia OMISTAJA: SOKRATEEN KERTOJA YHTENÄ OTTONA (3.10.) ja OMISTAJA: LINNAN KOHTAUKSET — KESKUSTELU YHTENÄ OTTONA (5.10.).
+
+Toteutus (kesken 12.10. klo 01.3x): Äänittäjä v6 (121,8 s, puheentunnistus 18/18) → Linssiseppä 2 (yksi dialogiraita, sytytys kertojan sanaan ja vaiheet repliikkien alkuun, 3f7942bee), junaan 183.
+
+Raamattuun (docs-PR 12.10. yö, taidehalli): Äänet ja luennat, ÄÄNET PCM:NÄ, PAKKAUS KERRAN: DIALOGIT YHTENÄ OTTONA.
+
+## TAUKO PYSÄYTTÄÄ KERTOJAN JA TEKSTITYKSEN KAIKISSA ESITYKSISSÄ; TAIDEHALLIN ESITYKSESSÄ NÄKYVISSÄ TAUKO JA ☰ (omistaja 12.10.2026 klo 00.2x) (12.10.2026 klo 01.50)
+
+12.10. 00.2x OMISTAJA (chat) sanatarkasti: "Jätä kuitenkin se pause nappi ja silloin kertojan ääni pitää myös katketa. Nykyisessä pause ei toiminut niim" → taidehallin esityksen aikana näkyvissä tauko + ☰; tauko pysäyttää kertojan ja tekstityksen, toisto jatkaa samasta kohdasta (nykyisen museon vika → NUI/LS2 korjaus junaan 183; kipin tauko tarkistetaan äänellä). RAAMATTUUN (taidehalli + kaikki esitykset: tauko pysäyttää kertojan).
+
+Toteutus junassa 183: Linssiseppä 2 00f83a6da (museo: tauko pysäyttää kertojan heti ja jatko soittaa samasta kohdasta, tekstitys pysyy virkkeessä tauon ajan) ja Natiivi-UI c8214dceb (⏸ vaihtuu ▶:ksi tauolla).
+
+Raamattuun (docs-PR 12.10. yö, taidehalli): Arkkikirjasto, LIIKKUVAT KOHTAUKSET TEHDÄÄN KUIN ELOKUVA: TAUKO PYSÄYTTÄÄ KERTOJAN JA TEKSTITYKSEN (kaikki esitykset ja kierrokset); taidehallin tauko ja ☰: TAIDEHALLIN OHJAUS.
+
+## KIPPI: AURINKONAPPI POISTUU KOKONAAN, ☰ OIKEAAN YLÄKULMAAN KAIKISSA TILOISSA (omistaja 12.10.2026 klo 00.2x) (12.10.2026 klo 01.50)
+
+12.10. 00.2x OMISTAJA (chat) sanatarkasti: "Olihan kipissä sää nappi aina siellä hampurilaisen sisällä valikkona? Eli nappi poistuu kokonaan" + "Hampurilainen näkyi oudon keskellä. Pitäisi olla oik yläkulmassa. Näytä vielä vedokset napeista" → ☀-nappi poistuu kokonaan (vain ☰ "Aika ja sää" kaikissa tiloissa), ☰ kiinni oikeaan yläkulmaan kaikissa tiloissa (NUI), vedokset 6 tilasta iPhone + iPad omistajalle. (Raamattu: kuvakytkin ☰:ssä kirjattu #4464:ään.)
+
+Toteutus junassa 183: Natiivi-UI kippi-ui-183 (☰ turva-alueen oikeaan yläkulmaan kaikissa tiloissa ja säävihje ☰:n luo 28b30cddf; ☀ ei koskaan yläkulmassa 144198cc8; junaan c8214dceb).
+
+Raamattuun: ei muutosta tässä docs-PR:ssä; Karttalinssit, ELÄVÄ OPAS sanoo jo, että Aika ja sää on ☰-valikossa ilman erillistä ☾/☀-nappia ja hampurilainen on oikeassa yläkulmassa (docs-PR 11.10. yö 2, #4464).
