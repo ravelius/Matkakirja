@@ -323,6 +323,25 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(200, p.Raha, "palautus antaa hinnan takaisin");
         }
 
+        [Testi] static void OlavinlinnaMaksaa20TaiAlusta10()
+        {
+            // Omistaja 11.10.2026 (juna 182): "Pelaa" £20, "Aloita alusta" £10 (tallennus olemassa), "Jatka" ilmainen.
+            Oleta.Sama(20, Kaupat.OlavinlinnanHinta(false));
+            Oleta.Sama(10, Kaupat.OlavinlinnanHinta(true));
+            var m = UusiPeli();
+            var ka = new Kaupat(m);
+            var p = m.Tila.Pelaaja;
+            p.Raha = 25;
+            Oleta.Tosi(ka.Olavinlinna(false).Ok, "pelaa");
+            Oleta.Sama(5, p.Raha);
+            var ei = ka.Olavinlinna(true);
+            Oleta.Tosi(!ei.Ok && ei.Virhe == "Rahat eivät riitä" && p.Raha == 5, "£5 ei riitä alusta-hintaan");
+            p.Raha = 10;
+            Oleta.Tosi(ka.Olavinlinna(true).Ok && p.Raha == 0, "tasan £10 riittää");
+            ka.OlavinlinnaPalautus(true);
+            Oleta.Sama(10, p.Raha, "palautus");
+        }
+
         [Testi] static void KauppasisaltoLukeeNaytteet()
         {
             var s = Kauppasisalto.Lue(
