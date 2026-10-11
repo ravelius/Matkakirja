@@ -1,3 +1,15 @@
+## 2026-10-11 18.24 UTC — VÄLITILA: Rabat A–F valmis, e04 jatkuu
+
+Rabat on valmis aineistopaketti (A–F), ei vielä valmis e04-erä tai pelikytkentä. Alkuperäinen tarkistin hyväksytyllä lähdesivusovituksella: **0 virhettä, 1 perusteltu varoitus, 23 kuvaa**. B/C/D avasivat kaikki 23 kuvaa; D:n kuusi korjausta toteutettiin E:ssä, ja F tarkisti lopputuloksen. Rabatin sisalto.json SHA-256 f8f838afc5472fcd842ffcd8b9960dab39b9c9659598ce897847ff44a7bc8c3e. VALMIS.md kertoo näytöt ja seuraavat hyväksyntäportit.
+
+Viimeisin push/readback-vahvistettu e04-haara paakaupungit-e04-codex: **569d10170408a1e6e66f3d0974b6e5cfb4f75a26**. Uusia A-faktapohjia: Banjul, Bissau ja Conakry. Praia A valmis, B: 13 kuvaa / 8 puuttuvaa. Alger A valmis, B: 4 kuvaa / 19 puuttuvaa. Monrovia/Tunis A ja Banjul B työn alla. Nouakchott A:n karttapoikkeama edelleen avoin. TILANNE.md ja kuvakoosteet kirjaavat yksittäiset rajat; mitään puuttuvaa kuvaa, koordinaattia tai lisenssiä ei keksitty.
+
+Omistajan e05/e06-apusessiot toimivat nyt uusilla vuoroilla ja ovat pushaaneet omille paakaupungit-e05-codex / paakaupungit-e06-codex -haaroilleen. Sovellusrestartia ei tarvittu. Niiden osittaisia lähdekoosteita ei merkitä toimitusvalmiiksi; pääsessio tuottaa sääluvut alkuperäisellä työkalulla ja hoitaa myöhemmin B–F. Toimitusjärjestys e04→e14 säilyy.
+
+Edistyminen juuri nyt: 11/558 varmennettua A–F-vaihetta eli 2,0 %, valmis aineistopaketti 1/93. Kaksi edellisen välitilan ratkaisukysymystä (kuvattomuus vs vanhan koneen 0-virheportti, Nouakchottin pienempi kartta / lähdekoordinaattipoikkeus) ovat edelleen avoimia. Jatketaan muita kaupunkeja eikä odoteta näitä pysähdyksissä.
+
+Omistajan Codex/ChatGPT-datasiirto valmistui: aktiivinen data T7:llä, SQLite-tarkistukset OK, sovellus avattu ja käynnissä. Tämän pääkaupunkityön tuotanto ja väliaineisto NASilla. Aiemmat #70/#71-kuvageneroinnit pysyvät omistajan palauteportissa. Tässä työssä ei generointia, R2-toimitusta, mergeä, pelikytkentää tai julkaisua.
+
 ## 2026-10-11 17.23 UTC — VÄLITILA e04 ja omistajan nopeutusohjaus
 
 Omistaja hyväksyi tässä keskustelussa 11.10. robots-sallitut tavalliset alkuperäiset Wikipedia/Commons-lähdesivut estettyjen rajapintapolkujen sijasta sekä kolme samanaikaista työagenttia. Kulutuksella ei väliä. Lisäksi luotiin e05/e06 faktasessiot omiin NAS-klooneihin; niiden alkuvaiheessa sovellus käytti vanhaan symlinkkikansiopolkuun törmäävää rajoitettua ajoprofiilia, joten aloitus tarvitsee vielä uuden vuoron oikeustarkistuksen. Valmiiden erien toimitusjärjestys e04→e14 säilyy. Kaikki tuotanto- ja väliaineisto NASilla.
