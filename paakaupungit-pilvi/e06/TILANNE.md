@@ -16,7 +16,7 @@ Vaihe 0: yhdeksän kontekstia ja saa-syote.json luotu alkuperäisellä tyokalu.m
 | kinshasa | A koottu; 6 Wiki/Wikidata-ehdotusta, retkirajaus/zoo-nykytila/Lola-lupa avoin | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | luanda | A koottu; 6 historiallista ydinkohdetta, Jesusin uudet osat B-oikeusportissa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | kigali | A koottu; 6 Wiki/Wikidata-ehdotusta, luontokartan rajaus ja talon B-oikeusportti | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
-| gitega | lähteiden luku käynnissä | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
+| gitega | lähdepaketti tehty; täysi A estyy karttaminimiin ja Gishoran 1873-ajoitukseen | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 
 A-valmis tarkoittaa vain lähteistettyä faktapohjaa. Kaupunkia ei ole kirjoitettu, kuvitettu, kytketty tai julkaistu.
 
@@ -24,8 +24,8 @@ A-valmis tarkoittaa vain lähteistettyä faktapohjaa. Kaupunkia ei ole kirjoitet
 
 - Omistajan 11.10.2026 lähdepoikkeus: robots-sallitut tavalliset /wiki/-lähdesivut hyväksytään estettyjen API-polkujen sijaan. /w/, /api/ ja Commons Special:Search ovat kiellettyjä. Kaikki lähdesivut haetaan yhteisellä sallittu_haku.py-apurilla (Claude-User ja Matkakirja, redirectit, lähdevarasto, globaali 1/s). Commons-hakuja tai lisenssivalintoja ei tehdä tässä A-sessiossa.
 - Omistajan rajaus: erillinen faktakokoaja, ei apuagentteja tai lisäsessioita, ei postilaatikkoa eikä viestejä pääsessioon. Pääsessio lukee tilan.
-- Kaikki kirjoitukset ja väliaineisto NAS-tehtäväjuuressa. TMPDIR ja PYTHONPYCACHEPREFIX valiaikainen/e06:ssa; NAS AppleDouble ._* suljettu oman .git/info/exclude:n kautta.
-- Hiekkalaatikon prosessin alustus epäonnistui symbolisen työtilapolun vuoksi. NAS-komennot suoritetaan hyväksytyllä eskalaatiolla; yhteiseen checkoutiin ei kosketa.
+- Työaineisto ja kirjoituskohteet rajattu NAS-tehtäväjuureen; yhden pycache-polun korjattu kirjoitusvirhe dokumentoitu alla. TMPDIR ja PYTHONPYCACHEPREFIX valiaikainen/e06:ssa; NAS AppleDouble ._* suljettu oman .git/info/exclude:n kautta.
+- Hiekkalaatikon prosessin alustus epäonnistui symbolisen työtilapolun vuoksi. Alun NAS-komennot suoritettiin hyväksytyllä eskalaatiolla; jatkoviestin jälkeen profiili oli ilman hiekkalaatikkoa. Yhteiseen checkoutiin ei koskettu.
 - Sisältötyön CODEX/PILVIOHJE-poikkeus: ei koko npm test -ajoa; ei sisalto.json:ia, PR:ää tai mergeä.
 - Tarkat luvut: kaksi riippumatonta lähdettä; muuten noin/vuosisata tai poisto. Kontekstin hyväksytty väestöluku kirjataan laajuuksineen lähdehuomioksi, ei kopioida tarkkana ilman lisävahvistusta.
 - Kaupallinen peli (#74): modernit suojatut teokset ja rakennukset jätetään pois, jos kaupallinen FOP teostyypille ei ole varma. Luontokohteet ensisijaisia; kuvien tiedostolisenssi ja kohteen oikeudet kuuluvat myöhempään B-vaiheeseen.
@@ -65,3 +65,11 @@ UNESCO metallurginen historia luettu. FOP-yhteenveto ei kata still-valokuvia suo
 ## Korjattu väliaineiston polkuvirhe
 
 Yhdessä lukukomennossa PYTHONPYCACHEPREFIX oli kirjoitettu väärin. Se loi oman stdlib-välimuistin NAS-tehtäväjuuren ulkopuolelle (72 tiedostoa, vain .pyc/AppleDouble). Sisältö tarkistettiin ja koko oma välimuisti siirrettiin tehtäväjuureen valiaikainen/e06/korjattu-polkuvirheen-cache. Väärä ulkopuolinen hakemistopolku on poissa. Käyttäjän aineistoa ei muokattu; oikea TMPDIR ja pycache-polku käytössä.
+
+## Gitega A-este
+
+0–9 lähdepaketti tehty, rumpuperinne UNESCO ICH -lähteestä. Gishora-perustaja/ajankohta ristiriitainen (Ntare/1800-luvun alkupuoli vs Mwezi/1903), 1873 ei varma. Vanhan UNESCO 5141 -linkin en/fr-versiot palauttivat vain sivupohjan, ei kohdekuvausta. Kuuden historiallisen kuvakelpoisen keskustakohteen ehto ei täyty; museo/katedraali oikeudeltaan epävarmoja, tori vain Wikivoyage-piste, Ruvubu/Karera kaukana keskustasta. Ei kuutta pistettä yhdestä suojapaikasta tai väärän Tansanian Mugera-pisteestä. Pääsession ratkaistava lisälähteet/poikkeus, ei A-valmis-merkintää.
+
+## A-sessio — tarkka lopputila
+
+Päivitetty 2026-10-11T21:29:16+03:00. Kaikki 9 kaupungin lähdelukukierrokset ja omat faktapohja.md-tiedostot tehty. Kuudessa on täysi 0–9-paketti kuudella karttakandidaatilla (varaukset taulukossa), kolmessa täysi A jää nimenomaiseen puutteeseen: Ciudad de la Paz, Bangui ja Gitega. Varauksia ei ole hyväksytty poikkeuksiksi. B/C/D/E/F tekemättä; pääsessio hoitaa sääaineiston, jatkovaiheet ja toimitusjärjestyksen.
