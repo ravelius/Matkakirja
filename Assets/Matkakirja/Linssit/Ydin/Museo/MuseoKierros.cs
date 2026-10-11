@@ -327,9 +327,9 @@ namespace Matkakirja.Linssit.Museo
         // --- Katseluasento (PT 11.10. 00.3x KIIRE, omistaja TF 180: "Taulut näkyvät liian kaukaa ja matalalta") -----------------
         /// <summary>Museokameran pystysuora näkökenttä (MuseoNayttamo.Kamera.fieldOfView).</summary>
         public const double KameraFovAste = 58;
-        /// <summary>Teos kehyksineen täyttää tämän osan ruudun korkeudesta (PT 11.10.: 60–70 %; enintään TayttoLeveys leveydestä) ja sen keskipiste on
+        /// <summary>Teos kehyksineen täyttää tämän osan ruudun korkeudesta (PT 11.10. 09.0x: kauempaa, seinää ja kehystä näkyy luontevasti; enintään TayttoLeveys leveydestä) ja sen keskipiste on
         /// KeskiY:n kohdalla ylhäältä: vapaa kaista nimikyltin (ylin ~15 %) ja ohjausnappien (alin ~20 %) välissä.</summary>
-        public const double TayttoKorkeus = 0.65, TayttoLeveys = 0.80, KeskiY = 0.48, LahinM = 0.45, PaspisM = 0.065;   // LahinM: seinävara 0,35 m + 0,1 (pienet grafiikat lähelle)
+        public const double TayttoKorkeus = 0.55, TayttoLeveys = 0.72, KeskiY = 0.48, LahinM = 0.45, PaspisM = 0.065;   // LahinM: seinävara 0,35 m + 0,1 (pienet grafiikat lähelle)
         readonly Dictionary<int, (V3 P, V3 Katse)> lrAsennot = new Dictionary<int, (V3, V3)>();
         public double Kuvasuhde { get; private set; }
 

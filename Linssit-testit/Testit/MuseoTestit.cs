@@ -232,7 +232,7 @@ namespace Matkakirja.Linssit.Testit
                     double fh = h / (2 * et * t), fw = w / (2 * et * t * ks);
                     Oleta.Tosi(fh <= MuseoKierros.TayttoKorkeus + 1e-6 && fw <= MuseoKierros.TayttoLeveys + 1e-6, $"{r.Teos.Id} {ks:F2}: mahtuu ({fh:F2} × {fw:F2})");
                     Oleta.Tosi(Math.Abs(p.Y - r.Paikka.Keskipiste.Y) < 0.04 * et + 1e-6, $"{r.Teos.Id}: silmä teoksen keskikorkeudella ({p.Y:F2} / {r.Paikka.Keskipiste.Y:F2})");
-                    if (fh < 0.50 && fw < 0.70) lyhyet.Add($"{r.Teos.Id} {ks:F2} {fh:F2}/{fw:F2} {et:F1} m");
+                    if (fh < MuseoKierros.TayttoKorkeus - 0.12 && fw < MuseoKierros.TayttoLeveys - 0.12) lyhyet.Add($"{r.Teos.Id} {ks:F2} {fh:F2}/{fw:F2} {et:F1} m");
                 }
             Oleta.Tosi(lyhyet.Count == 0, "teos täyttää ruudun (huone ei rajaa liikaa): " + string.Join("; ", lyhyet));
             k.SovitaPysahdykset(2622.0 / 1206);
@@ -328,6 +328,25 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("Se on ultramariinia (n. 1663)!", t.Virke(2.5), "näytetty teksti puhutun ajoituksella (lyhenne ei katkaise)");
             Oleta.Sama("Loppu.", t.Virke(5.2));
             Oleta.Tosi(t.Virke(5.0 + MuseoTekstitys.JalkiS + 0.1) == null, "lopun jälkeen tyhjä");
+        }
+
+        [Testi] static void KehyksenKultaJaAalto()
+        {
+            // PT 11.10. 09.0x (omistaja: "kehykset jäävät niin mustiksi"): LR:n janamateriaalit ja aaltokuvio käyttöön, kultainen
+            // sisähelmi mustissa aaltolistoissa, pääteoksille kullattu aaltolista.
+            var s = Alankomaat();
+            var k = s.Kehykset["nl_aalto_musta"];
+            var osat = MuseoGeometria.KehysOsat(k, 1.0, 0.8, (1, 1, 1));
+            Oleta.Tosi(osat.ContainsKey("musta") && osat.ContainsKey("kulta"), "musta nauha + kultainen sisähelmi");
+            double pm = osat["musta"].Pinta(), pk = osat["kulta"].Pinta();
+            Oleta.Tosi(pk > 0.01 * pm && pk < 0.25 * pm, $"kultaa kapea osa ({pk / pm:P0})");
+            int aallossa = 0; foreach (var uv in osat["musta"].UV) if (uv.V > 0.5) aallossa++;
+            Oleta.Tosi(aallossa > 0 && k.AaltoJaksoMm > 0 && k.AaltoSyvyysMm > 0, $"aaltonauhat merkitty ({aallossa} kärkeä)");
+            Oleta.Tosi(MuseoGeometria.KehysOsat(s.Kehykset["nl_yovartio"], 4.5, 3.8, (1, 1, 1)).ContainsKey("kulta"), "Yövartion kultaliuska");
+            Oleta.Tosi(Math.Abs(MuseoGeometria.Kehys(k, 1.0, 0.8, (1, 1, 1)).Pinta() - pm - pk) < 1e-9, "Kehys = kaikki osat yhtenä");
+            foreach (var id in new[] { "SK-C-216", "SK-C-6", "SK-A-135" })
+                Oleta.Sama("nl_aalto_kulta", s.Ripustukset.Find(r => r.Teos.Id == id).Paikka.Kehysprofiili, id + ": kullattu aaltolista");
+            Oleta.Sama("kulta", s.Kehykset["nl_aalto_kulta"].Materiaali);
         }
 
         [Testi] static void PysahdysKertojanMittainen()

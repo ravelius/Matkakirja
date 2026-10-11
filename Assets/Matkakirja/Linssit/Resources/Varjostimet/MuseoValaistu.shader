@@ -12,6 +12,12 @@
 // katsova pinta → MuseoNayttamon peilikamera (lattian tason y = 0 yli, vino lähitaso) piirtää salin puoliresoluutioiseen kuvaan
 // _MuseoHeijastusKuva; lattia lukee sitä ruudun kohdasta, karheuden mukaan sumeampana (mip) ja Fresnelin painolla (hillitty).
 // _MuseoHeijastusMaara = 0 peilikameran omassa piirrossa ja kun heijastus on pois ("museo heijastus 0").
+// KEHYKSET JA VALON PAINOTUS (PT 11.10. 09.0x, omistaja: "kehykset jäävät niin mustiksi, miten yleisilmeestä vaikuttavamman"):
+//  - _Aalto (x = 2π/jakso 1/m, y = aallon kaltevuus): golflijst-aaltokuvio normaaliin kehyksen pituussuunnassa (UV.x = matka m,
+//    UV.y = 1 aaltonauhalla); pintagradientti ruudun derivaatoista, häivytetään kun jakso alittaa ~2 px (ei välkettä).
+//  - _Ymparisto: ympäristön heijastus (Fresnel × salin hajavalon radianssi, seinien heijastus ~0,3): lakan kiilto ja lehtikulta
+//    näkyvät myös ilman kohdevalon peiliheijastusta.
+//  - _Valokerroin: materiaalin valon kerroin (teokset > 1, seinät ja lattiat < 1): teos hehkuu seinää kirkkaampana.
 Shader "Matkakirja/MuseoValaistu"
 {
     Properties
@@ -26,6 +32,9 @@ Shader "Matkakirja/MuseoValaistu"
         _Atlas ("Valoatlas (E / AtlasLx)", 2D) = "black" {}
         _AtlasLx ("Atlaksen lx-kerroin (0 = ei atlasta)", Float) = 0
         _Heijastus ("Lattiaheijastus (0 = ei)", Range(0, 1)) = 0
+        _Aalto ("Aaltokuvio (x = 2π/jakso, y = kaltevuus)", Vector) = (0, 0, 0, 0)
+        _Ymparisto ("Ympäristöheijastus", Range(0, 1)) = 0
+        _Valokerroin ("Valon kerroin", Float) = 1
     }
     SubShader
     {
@@ -52,6 +61,8 @@ Shader "Matkakirja/MuseoValaistu"
                 float4 _Hehku;
                 float _AtlasLx;
                 float _Heijastus;
+                float4 _Aalto;
+                float _Ymparisto, _Valokerroin;
             CBUFFER_END
             TEXTURE2D(_MuseoHeijastusKuva); SAMPLER(sampler_MuseoHeijastusKuva);
             float _MuseoHeijastusMaara;     // 0 = ei heijastusta (peilikameran piirto, kytkin)
@@ -92,6 +103,18 @@ Shader "Matkakirja/MuseoValaistu"
                 float3 v = normalize(_WorldSpaceCameraPos - i.maailma);
                 float3 n = normalize(i.normaali);
                 if (dot(n, v) < 0) n = -n;
+                // Aaltokuvio: derivaatat haarautumatta (määrittelemättömät divergentissä haarassa).
+                float3 dpdx = ddx(i.maailma), dpdy = ddy(i.maailma);
+                float dudx = ddx(i.uv.x), dudy = ddy(i.uv.x);
+                if (_Aalto.y > 0 && i.uv.y > 0.5)
+                {
+                    float3 r1 = cross(dpdy, n), r2 = cross(n, dpdx);
+                    float det = dot(dpdx, r1);
+                    float3 gradU = (dudx * r1 + dudy * r2) / (abs(det) > 1e-12 ? det : 1e-12);
+                    float ph = _Aalto.x * i.uv.x;
+                    float haive = saturate(2.0 - fwidth(ph) * 0.8);   // < ~2 px jaksolla aalto häipyy tasaiseksi
+                    n = normalize(n - gradU * (_Aalto.y * cos(ph) * haive));
+                }
                 float3 albedo = _Pohja.rgb * SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv).rgb;
                 if (_KarkiVari > 0.5) albedo *= i.vari.rgb;
                 float3 diff = albedo * (1 - _Metalli);
@@ -103,6 +126,8 @@ Shader "Matkakirja/MuseoValaistu"
                 float3 E = _MuseoHaja.rgb * lerp(0.55, 1.0, saturate(n.y * 0.5 + 0.5));
                 float hajaSpot = 1;
                 if (_AtlasLx > 0) { E = SAMPLE_TEXTURE2D(_Atlas, sampler_Atlas, i.uv1).rgb * _AtlasLx; hajaSpot = 0; }
+                float3 Eymp = E;
+                E *= _Valokerroin;
                 float3 L = diff * E / PI;
                 [loop] for (int k = 0; k < _MuseoSpotMaara; k++)
                 {
@@ -111,11 +136,17 @@ Shader "Matkakirja/MuseoValaistu"
                     float3 l = d * rsqrt(d2);
                     float keila = smoothstep(_MuseoSpotP[k].w, _MuseoSpotD[k].w, dot(-l, _MuseoSpotD[k].xyz));
                     float nl = saturate(dot(n, l));
-                    float3 e = _MuseoSpotV[k].rgb * (nl * keila / d2);
+                    float3 e = _MuseoSpotV[k].rgb * (nl * keila / d2) * _Valokerroin;
                     float3 h = normalize(l + v);
                     float spek = normi * pow(saturate(dot(n, h)), eksp);
                     float3 f = f0 + (1 - f0) * pow(1 - saturate(dot(h, v)), 5);
                     L += e * (hajaSpot * diff / PI + f * spek);
+                }
+                if (_Ymparisto > 0)
+                {
+                    // Ympäristö: salin keskimääräinen radianssi ≈ 0,3 · E / π, heijastuu Fresnelin painolla (karheus vaimentaa reunakiiltoa).
+                    float3 fe = f0 + (max(float3(1, 1, 1) * (1 - _Karheus), f0) - f0) * pow(1 - saturate(dot(n, v)), 5);
+                    L += fe * Eymp * (0.3 * _Ymparisto / PI);
                 }
                 L += _Hehku.rgb;
                 float3 c = L * _MuseoValotus;

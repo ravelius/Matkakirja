@@ -2043,7 +2043,7 @@
    "max_leveys": 4.3,
    "max_korkeus": 3.4,
    "sopii": "maalaus",
-   "kehysprofiili": "nl_aalto_musta",
+   "kehysprofiili": "nl_aalto_kulta",
    "valokeila": {
     "paikka": [
      -5.617,
@@ -2079,7 +2079,7 @@
    "max_leveys": 1.3,
    "max_korkeus": 1.8,
    "sopii": "maalaus",
-   "kehysprofiili": "nl_aalto_musta",
+   "kehysprofiili": "nl_aalto_kulta",
    "valokeila": {
     "paikka": [
      -6.6,
@@ -2151,7 +2151,7 @@
    "max_leveys": 4.3,
    "max_korkeus": 3.4,
    "sopii": "maalaus",
-   "kehysprofiili": "nl_aalto_musta",
+   "kehysprofiili": "nl_aalto_kulta",
    "valokeila": {
     "paikka": [
      5.617,
@@ -4735,7 +4735,23 @@
     "jakso_mm": 6.0,
     "syvyys_mm": 1.0,
     "huom": "normaalikarttana pursotuksen suuntaan"
-   }
+   },
+   "materiaalit": [
+    "musta",
+    "musta",
+    "musta",
+    "musta",
+    "musta",
+    "musta",
+    "musta",
+    "musta",
+    "musta",
+    "kulta",
+    "kulta",
+    "kulta",
+    "musta"
+   ],
+   "huom_materiaalit": "LS2 11.10. (PT 09.0x, omistaja: \"kehykset jäävät niin mustiksi\"): sisähelmi (x 1,3 → 0 cm) lehtikultaa kuten Rijksmuseumin golflijst-kehyksissä"
   },
   "nl_musta_kapea": {
    "pisteet_cm": [
@@ -4787,7 +4803,17 @@
     ],
     "jakso_mm": 5.0,
     "syvyys_mm": 0.8
-   }
+   },
+   "materiaalit": [
+    "musta",
+    "musta",
+    "musta",
+    "musta",
+    "musta",
+    "kulta",
+    "kulta",
+    "musta"
+   ]
   },
   "nl_kulta_1700": {
    "pisteet_cm": [
@@ -4953,6 +4979,83 @@
    ],
    "kuvaus": "grafiikan kapea musta puukehys; passepartout 7 cm ja lasi teospaikan paspis-kentästä",
    "materiaali": "musta"
+  },
+  "nl_aalto_kulta": {
+   "pisteet_cm": [
+    [
+     12,
+     0
+    ],
+    [
+     12,
+     2.6
+    ],
+    [
+     11.2,
+     3.4
+    ],
+    [
+     10.2,
+     3.4
+    ],
+    [
+     9.4,
+     4.6
+    ],
+    [
+     6.8,
+     6.9
+    ],
+    [
+     4.4,
+     6.4
+    ],
+    [
+     3.2,
+     5.2
+    ],
+    [
+     2.2,
+     4.3
+    ],
+    [
+     1.3,
+     4.7
+    ],
+    [
+     0.4,
+     4.3
+    ],
+    [
+     0,
+     3.6
+    ],
+    [
+     0,
+     1.6
+    ],
+    [
+     -0.6,
+     1.6
+    ]
+   ],
+   "kuvaus": "Kullattu aaltolistakehys (golflijst, 1600-luku) pääteoksille; sama profiili kuin nl_aalto_musta (LS2 11.10., PT 09.0x)",
+   "materiaali": "kulta",
+   "aaltokuvio": {
+    "nauhat_cm": [
+     [
+      9.4,
+      6.8
+     ],
+     [
+      2.2,
+      1.3
+     ]
+    ],
+    "jakso_mm": 6.0,
+    "syvyys_mm": 1.0,
+    "huom": "normaalikarttana pursotuksen suuntaan"
+   }
   }
  },
  "reitti": [

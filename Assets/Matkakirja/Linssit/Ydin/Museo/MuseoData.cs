@@ -70,6 +70,20 @@ namespace Matkakirja.Linssit.Museo
         public double LeveysCm { get { double m = 0; foreach (var p in Pisteet) m = Math.Max(m, p.X); return m; } }
         /// <summary>Sisähuulen korkeus seinästä (cm, profiilin viimeinen piste): kangas jää tämän alle.</summary>
         public double HuuliCm => Pisteet.Count > 0 ? Pisteet[Pisteet.Count - 1].Y : 1.5;
+        /// <summary>Janakohtaiset materiaalit (janan i = pisteet i → i+1); puuttuva tai null = Materiaali.</summary>
+        public readonly List<string> Materiaalit = new List<string>();
+        public string JananMateriaali(int i) => i < Materiaalit.Count && !string.IsNullOrEmpty(Materiaalit[i]) ? Materiaalit[i] : Materiaali;
+        /// <summary>Aaltokuvio (golflijst): nauhat profiilin x-väleinä (cm, [ulompi, sisempi]), jakso ja syvyys (mm). Ei nauhoja = sileä.</summary>
+        public readonly List<(double A, double B)> AaltoNauhat = new List<(double, double)>();
+        public double AaltoJaksoMm, AaltoSyvyysMm;
+        /// <summary>Onko janan i keskikohta aaltonauhalla.</summary>
+        public bool Aallossa(int i)
+        {
+            if (i + 1 >= Pisteet.Count) return false;
+            double x = (Pisteet[i].X + Pisteet[i + 1].X) / 2;
+            foreach (var (a, b) in AaltoNauhat) if (x <= Math.Max(a, b) + 1e-9 && x >= Math.Min(a, b) - 1e-9) return true;
+            return false;
+        }
     }
 
     /// <summary>Tekstitaulu ilman tekstiä (liite C2.4 kohta 8): pieni vaalea laatta teoksen vieressä; napautus avaa kortin.</summary>
@@ -257,6 +271,17 @@ namespace Matkakirja.Linssit.Museo
                     {
                         var a = MiniJson.TaulukkoTaiTyhja(p);
                         if (a.Count >= 2) k.Pisteet.Add((Convert.ToDouble(a[0], CultureInfo.InvariantCulture), Convert.ToDouble(a[1], CultureInfo.InvariantCulture)));
+                    }
+                    // LR:n osakohtaiset materiaalit (profiilin janat, esim. Yövartion kultaliuska) ja aaltokuvio (golflijst; PT 11.10. 09.0x).
+                    foreach (var m in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(d, "materiaalit"))) k.Materiaalit.Add(m as string);
+                    if (MiniJson.ObjektiTaiNull(MiniJson.Kentta(d, "aaltokuvio")) is { } ak)
+                    {
+                        foreach (var nb in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(ak, "nauhat_cm")))
+                        {
+                            var a = MiniJson.TaulukkoTaiTyhja(nb);
+                            if (a.Count >= 2) k.AaltoNauhat.Add((Convert.ToDouble(a[0], CultureInfo.InvariantCulture), Convert.ToDouble(a[1], CultureInfo.InvariantCulture)));
+                        }
+                        k.AaltoJaksoMm = MiniJson.Luku(ak, "jakso_mm") ?? 0; k.AaltoSyvyysMm = MiniJson.Luku(ak, "syvyys_mm") ?? 0;
                     }
                     s.Kehykset[kv.Key] = k;
                 }

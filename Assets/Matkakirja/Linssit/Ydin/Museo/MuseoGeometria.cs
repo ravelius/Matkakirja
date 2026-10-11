@@ -29,6 +29,13 @@ namespace Matkakirja.Linssit.Museo
             T.Add(i); T.Add(i + 1); T.Add(i + 2); T.Add(i); T.Add(i + 2); T.Add(i + 3);
         }
 
+        /// <summary>Nelikulmio omilla UV:illä (kehys: U = matka kehyksen suuntaan m, V = aaltokuvion paino).</summary>
+        public void Nelio(V3 a, V3 b, V3 c, V3 d, V3 n, (double, double, double) vari, (double, double) ua, (double, double) ub, (double, double) uc, (double, double) ud)
+        {
+            Nelio(a, b, c, d, n, vari);
+            int i = UV.Count - 4; UV[i] = ua; UV[i + 1] = ub; UV[i + 2] = uc; UV[i + 3] = ud;
+        }
+
         public double Pinta()
         {
             double s = 0;
@@ -169,8 +176,13 @@ namespace Matkakirja.Linssit.Museo
         /// <summary>Kehys teoksen ympärille paikallisissa koordinaateissa: teos origossa tasossa z = 0 (X oikealle, Y ylös,
         /// +Z seinästä ulos), w × h metreinä (teoksen näkyvä ala). Profiilin x kasvaa ulospäin, y seinästä ulos (cm).</summary>
         public static Verkko Kehys(Kehysprofiili k, double w, double h, (double, double, double) vari)
+            => KehysOsat(k, w, h, vari, yksiMateriaali: true).TryGetValue(k.Materiaali ?? "", out var v) ? v : new Verkko();
+
+        /// <summary>Kehys materiaaleittain (Kehysprofiili.JananMateriaali; esim. musta nauha + kultainen sisähelmi). UV: U = matka
+        /// kehyksen pituussuunnassa (m; varjostimen aaltokuvion vaihe), V = 1 aaltonauhalla, muuten 0.</summary>
+        public static Dictionary<string, Verkko> KehysOsat(Kehysprofiili k, double w, double h, (double, double, double) vari, bool yksiMateriaali = false)
         {
-            var v = new Verkko();
+            var osat = new Dictionary<string, Verkko>(StringComparer.Ordinal);
             var p = k.Pisteet;
             // Neljä sivua: (ulospäin osoittava suunta, kulma a, kulma b) kehän järjestyksessä.
             var sivut = new[] { (new V3(0, -1, 0), -1, -1, 1, -1), (new V3(1, 0, 0), 1, -1, 1, 1), (new V3(0, 1, 0), 1, 1, -1, 1), (new V3(-1, 0, 0), -1, 1, -1, -1) };
@@ -184,9 +196,15 @@ namespace Matkakirja.Linssit.Museo
                     if (l < 1e-9) continue;
                     // Profiilin normaali (dz, −dx): ulkoreunan pystyosa osoittaa ulos, sisäreuna teokseen päin, tasaiset seinästä ulos.
                     var n = o * (dz / l) + new V3(0, 0, -dx / l);
-                    v.Nelio(A(d0, z0), B(d0, z0), B(d1, z1), A(d1, z1), n, vari);
+                    string m = yksiMateriaali ? k.Materiaali ?? "" : k.JananMateriaali(i) ?? "";
+                    if (!osat.TryGetValue(m, out var v)) osat[m] = v = new Verkko();
+                    double aw = k.Aallossa(i) ? 1 : 0;
+                    // U pituussuunnassa: vaakasivuilla x, pystysivuilla y (jatkuva kulmasta kulmaan, vaihe vaihtuu viisteessä).
+                    double U(V3 q) => o.Y != 0 ? q.X : q.Y;
+                    V3 a0 = A(d0, z0), b0 = B(d0, z0), b1 = B(d1, z1), a1 = A(d1, z1);
+                    v.Nelio(a0, b0, b1, a1, n, vari, (U(a0), aw), (U(b0), aw), (U(b1), aw), (U(a1), aw));
                 }
-            return v;
+            return osat;
         }
     }
 }

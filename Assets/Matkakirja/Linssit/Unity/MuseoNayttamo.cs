@@ -119,7 +119,7 @@ namespace Matkakirja.Natiivi
             var bloom = profiili.Add<Bloom>(true);
             bloom.threshold.Override(1.4f); bloom.intensity.Override(0.12f); bloom.scatter.Override(0.5f);
             var vinjetti = profiili.Add<Vignette>(true);
-            vinjetti.intensity.Override(0.1f); vinjetti.smoothness.Override(0.5f);
+            vinjetti.intensity.Override(0.2f); vinjetti.smoothness.Override(0.5f);   // PT 11.10. 09.0x: sali tummuu reunoilta (ennen 0,1)
             volyymi.profile = profiili;
         }
 
