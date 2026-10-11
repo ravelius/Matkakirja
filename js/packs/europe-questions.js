@@ -2411,6 +2411,424 @@ export const EUROPE_QUESTIONS = {
       hint: 'Maa tunnetaan padoistaan ja tuulimyllyistään.',
     },
   ],
+};
+
+/**
+ * "Tiesitkö että…" -tiedot paketin kaupungeista. Peli näyttää yhden vuorossa
+ * olevan pelaajan sijainnista, joten jokaisella paikalla on useampi vaihtoehto.
+ */
+export const EUROPE_FACTS = {
+  lontoo: [
+    'Lontoon metro avattiin vuonna 1863 ja on maailman vanhin. Sen lempinimi Tube tulee tunnelien pyöreästä muodosta.',
+    'Thamesin vuorovesi nostaa ja laskee veden pintaa Lontoossa noin seitsemän metriä vuorokaudessa.',
+    {
+      text: 'Lähden kotoa, jossa on sumu, juna maan alla ja klubi, jossa maailma tunnetaan paremmin kuin missään. Ainakin niin siellä sanotaan; tämä matka on tehty sen väitteen tarkistamiseksi.',
+      voice: 'isoisa',
+    },
+  ],
+  istanbul: [
+    'Istanbul on ainoa suurkaupunki, joka sijaitsee kahdella mantereella: Bosporinsalmi erottaa sen Euroopan ja Aasian puolen.',
+    'Kaupunki tunnettiin ennen nimillä Bysantion ja Konstantinopoli, ja se oli kahden valtakunnan pääkaupunki lähes 1 600 vuoden ajan.',
+    {
+      text: 'Kaupunki seisoo kahden maanosan päällä, ja salmen yli soudetaan kuin kadun poikki. Basaarissa opin, että hinta on keskustelu eikä numero.',
+      voice: 'isoisa',
+    },
+  ],
+  sevilla: [
+    { text: 'Sevilla on Andalusian pääkaupunki Guadalquivirjoen rannalla. Maurit kutsuivat sitä nimellä Ishbiliya ja roomalaiset Hispalis.', source: 'https://fi.wikipedia.org/wiki/Sevilla' },
+    { text: 'Amerikan löytymisen jälkeen kaupunkiin sijoitettiin kauppakamari, jolla oli yksinoikeus kauppaan Amerikkojen kanssa. Kauppa siirtyi Cádiziin vuonna 1717.', source: 'https://fi.wikipedia.org/wiki/Sevilla' },
+    { text: 'Santa Marían katedraali valmistui 1506 ja on maailman suurin goottilainen katedraali. Sen kellotorni Giralda on entisen moskeijan minareetti.', source: 'https://fi.wikipedia.org/wiki/Sevilla' },
+    {
+      text: 'Joki on kaupungin koko onni ja koko onnettomuus: se toi Amerikan laivat tähän asti, ja kun se madaltui, kauppa muutti alavirtaan eikä palannut. Kultainen torni seisoo yhä rannassa laskemassa lasteja, joita ei enää tule.',
+      voice: 'isoisa',
+    },
+  ],
+  bergen: [
+    { text: 'Bergenin perusti kuningas Olav Kyrre vuonna 1070, ja se oli Norjan pääkaupunki vuosina 1217–1299.', source: 'https://fi.wikipedia.org/wiki/Bergen' },
+    { text: 'Hansakauppiaiden ranta-alue Bryggen on Unescon maailmanperintökohde. Tärkein kauppatavara oli Pohjois-Norjasta tuotu kuivattu turska.', source: 'https://fi.wikipedia.org/wiki/Bergen' },
+    { text: 'Bergenin satama on tonnimääriltään Pohjoismaiden suurin tavaraliikenteen satama, ja kaupungissa sataa keskimäärin kahtena päivänä kolmesta.', source: 'https://fi.wikipedia.org/wiki/Bergen' },
+    {
+      text: 'Vuoret erottavat tämän kaupungin muusta maasta niin tarkasti, että sinne on helpompi purjehtia kuin ajaa. Kauppahuoneiden kirjat ovat saksaksi, vaikka Hansan valta loppui kolmesataa vuotta sitten.',
+      voice: 'isoisa',
+    },
+  ],
+  dublin: [
+    { text: 'Dublinin nimi tulee iirin sanoista dubh linn, musta lammikko, joka oli viikinkien satamapaikka Liffey-joen mutkassa.', source: 'https://fi.wikipedia.org/wiki/Dublin' },
+    'Irlannin kansallissymboli on kolmiapila, ja maan lempinimi smaragdisaari kertoo runsaista sateista ja vihreistä laitumista.',
+    {
+      text: 'Sade tulee sivuttain ja loppuu kesken lauseen. Täällä puhutaan omaa kieltä, jota Lontoossa pidetään kuolevana; minä kuulin sitä joka kadulla.',
+      voice: 'isoisa',
+    },
+  ],
+  edinburgh: [
+    'Edinburghin vanhakaupunki ja uusikaupunki ovat molemmat Unescon maailmanperintökohteita — keskiaikainen sokkelo ja 1700-luvun ruutukaava vierekkäin.',
+    'Skotlannin ylängöillä puhutaan yhä gaelia, ja kielen elvyttämiseksi on perustettu omia kouluja.',
+    {
+      text: 'Linna seisoo kalliolla, joka on vanhan tulivuoren kanta. Kaupunki on jaettu vanhaan ja uuteen puoleen, ja kumpikin pitää itseään oikeana.',
+      voice: 'isoisa',
+    },
+  ],
+  pariisi: [
+    'Pariisin katujen alla kulkee satoja kilometrejä vanhoja kivilouhoksia. Osa niistä on katakombeja, joihin siirrettiin vanhojen hautausmaiden luut 1700-luvulla.',
+    'Louvre oli alun perin linnoitus ja kuninkaanlinna. Museoksi se avattiin vasta Ranskan vallankumouksen jälkeen vuonna 1793.',
+    {
+      text: 'Kaupunki toipuu piirityksestä ja rakentaa leveitä katuja kujien tilalle. Näyttelyihin pystytetään rautaa ja lasia; kivi kestää, rauta ei.',
+      voice: 'isoisa',
+    },
+  ],
+  marseille: [
+    { text: 'Marseillen vanha satama on ollut käytössä yli 2 600 vuotta: kreikkalaiset purjehtijat perustivat kaupungin noin 600 eaa. ja antoivat sille nimen Massalia.', source: 'https://fi.wikipedia.org/wiki/Marseille' },
+    'Sataman yllä kohoaa Notre-Dame de la Garden basilika, jonka kullattu Madonna näkyy kauas merelle. Merimiehet ovat ripustaneet kirkon kattoon pienoisveneitä kiitoslahjoiksi.',
+    {
+      text: 'Satama haisee tervalta, sahramilta ja kalalta, ja laiturilla kuulee kymmentä kieltä ennen aamiaista. Täältä laivat lähtevät Afrikkaan; minäkin lähden, kunhan keitto on syöty.',
+      voice: 'isoisa',
+    },
+  ],
+  granada: [
+    'Alhambran palatsin seinät on kaiverrettu täyteen arabiankielisiä runosäkeitä ja koristekuvioita, ja sen suihkulähteisiin vesi johdettiin vuorilta jo seitsemänsataa vuotta sitten.',
+    'Granadassa juoman tilaaja saa tapas-annoksen kaupan päälle — vanha tapa, joka on suuresta osasta Espanjaa jo hävinnyt.',
+    {
+      text: 'Punainen linna seisoo kukkulalla kuin väsynyt vartija, ja sen saleissa vesi puhuu hiljaa. Lumivuoret hohtavat selän takana, vaikka alhaalla kypsyvät appelsiinit.',
+      voice: 'isoisa',
+    },
+  ],
+  lissabon: [
+    'Lissabonin keltaiset raitiovaunut kiipeävät niin jyrkkiä katuja, että kaupungissa on myös julkisia hissejä ja köysiratoja.',
+    'Portugalilaiset purjehtijat lähtivät Lissabonista etsimään merireittiä Intiaan; Vasco da Gama saapui perille vuonna 1498.',
+    {
+      text: 'Kaupunki nousi maanjäristyksen raunioista suoriksi kortteleiksi, ja kukkuloilla lauletaan surumielisiä lauluja. Torni joen suulla muistuttaa, että täältä lähdettiin maailmalle kauan ennen meitä.',
+      voice: 'isoisa',
+    },
+  ],
+  madrid: [
+    'Madridin Retiro-puisto oli alun perin kuninkaan yksityinen puutarha. Se avattiin kaikille 1800-luvulla ja on nykyään kaupunkilaisten olohuone.',
+    'Espanjassa syödään päivällinen usein vasta kello 21 jälkeen, ja työpäivä katkeaa pitkään lounastaukoon.',
+    {
+      text: 'Kaupunki on korkealla ylätasangolla, joten kesä on kuumempi ja talvi kylmempi kuin rannikolla. Kadut täyttyvät väestä vasta auringonlaskun jälkeen, mikä on järkevää enkä aio omaksua sitä.',
+      voice: 'isoisa',
+    },
+  ],
+  barcelona: [
+    'Barcelonan Eixample-kaupunginosan korttelit on suunniteltu viistetyin kulmin, jotta risteyksiin syntyy pieniä aukioita.',
+    'Sagrada Famílian rakentaminen alkoi vuonna 1882, ja se rahoitetaan yhä lahjoituksilla ja pääsymaksuilla.',
+    {
+      text: 'Vanhat muurit on purettu ja kaupunki kasvaa ruutukaavaan, jonka kulmat on viistetty. Täällä puhutaan omaa kieltä, eikä se ole murre, vaikka niin vakuutetaan.',
+      voice: 'isoisa',
+    },
+  ],
+  amsterdam: [
+    'Amsterdamin taloissa on ullakolla usein nostokoukku: portaat ovat niin kapeat, että huonekalut nostetaan sisään ikkunasta.',
+    'Kaupungissa on enemmän polkupyöriä kuin asukkaita, ja pyöriä nostetaan vuosittain tuhansittain kanavista.',
+    {
+      text: 'Talot seisovat paalujen päällä pehmeässä maassa ja nojaavat toisiinsa kuin väsyneet herrat. Osa maasta on merenpinnan alapuolella ja pysyy kuivana vain siksi, että sitä pumpataan.',
+      voice: 'isoisa',
+    },
+  ],
+  bryssel: [
+    'Grand-Placen kauppahuoneet rakennettiin uudelleen 1690-luvun lopulla, kun Ranskan tykistö pommitti torin raunioiksi vuonna 1695 — nykyiset kullatut julkisivut ovat siis jälleenrakennusta, ei alkuperäisiä.',
+    'Galeries Royales Saint-Hubert avattiin vuonna 1847 lasikattoisena kauppakujana, ja se oli aikanaan yksi Euroopan ensimmäisistä katetuista ostoskaduista.',
+    {
+      text: 'Belgian suklaa on vielä tavallista kaakaolevyä: täytetty praliini keksitään täällä vasta neljänkymmenen vuoden päästä. Torilla myydään sen sijaan pitsiä, jota nyplätään sormin niin nopeasti, etten ehdi seurata.',
+      voice: 'isoisa',
+    },
+  ],
+  luxemburg: [
+    'Luxemburgin linnoituksen purkaminen kesti vuodesta 1867 vuoteen 1883 eli kuusitoista vuotta, ja työ tuhosi yli 24 kilometriä maanalaisia käytäviä ja maksoi 1,5 miljoonaa kultafrangia.',
+    'Kaupungin Bock-kallio sai varustuksensa vuonna 963, kun kreivi Siegfried rakensi sille Lucilinburhuc-linnansa — tapahtumaa pidetään koko Luxemburgin kaupungin syntyhetkenä.',
+    {
+      text: 'Rautatie on yhdistänyt kaupungin Ranskaan ja Preussiin jo vuosia, mutta täkäläinen suurherttua ei ole koskaan itse istunut siinä junassa — hän asuu Haagissa eikä ole käynyt omassa maassaan vuosikausiin.',
+      voice: 'isoisa',
+    },
+  ],
+  kosice: [
+    'Košicen keskustan muodostaa pitkä, linssinmuotoinen Hlavná-katu: sen ympärille yhdistyivät Ala- ja Ylä-Kassa 1200-luvulla.',
+    'Košicessa oli 1657 perustettu jesuiittojen yliopisto (Universitas Cassoviensis), josta tuli 1777 kuninkaallinen akatemia ja myöhemmin oikeusakatemia.',
+    {
+      text: 'Kassaan tuli sähkölennätin 1856 ja rautatie Miskolcista 1860. Nyt yhteydet kulkevat jo Prešoviin, Žilinaan ja Chopiin asti, ja asemalla on aina vilinää.',
+      voice: 'isoisa',
+    },
+  ],
+  ljubljana: [
+    'Ljubljanan linna toimi Krainin läänin vankilana vuosina 1813–1945, ja linnan vanha vankila oli kuilu, johon vangit laskettiin köydellä tai ketjulla.',
+    'Ljubljanan Tivoli-puisto on suunniteltu vuonna 1813 ranskalaisen insinöörin johdolla, ja sen nimi tulee Pariisin Tivolista.',
+    {
+      text: 'Laibach oli Napoleonin Illyrian maakuntien pääkaupunki neljä vuotta, 1809–1813. Ranskalaisten insinööri ehti jättää kaupunkiin puiston, jossa minäkin kävelin tänään.',
+      voice: 'isoisa',
+    },
+  ],
+  valletta: [
+    'Vallettan 320 muistomerkkiä ja kirkkoa mahtuvat vain 0,55 neliökilometrin alueelle, ja Unesco hyväksyi koko kaupungin maailmanperintökohteeksi vuonna 1980.',
+    'Ennen ritarikunnan tuloa niemi tunnettiin nimellä Sciberras — lähes asumaton kalliokieleke Grand Harbourin ja Marsamxett-sataman välissä.',
+    {
+      text: 'Linnoitusten purkamista on ehdotettu täälläkin pari kertaa viime vuosikymmeninä, mutta muurit seisovat yhä — veikkaan, että ne haudataan vasta viimeisenä koko saarelta.',
+      voice: 'isoisa',
+    },
+  ],
+  berliini: [
+    'Berliinissä on enemmän siltoja kuin Venetsiassa — kaupungin halki virtaa Spree ja sitä ympäröi kanavien verkosto.',
+    'Muurin paikka on merkitty katukiveykseen kaksoisrivillä mukulakiviä, joten reitin voi kävellä vielä tänäkin päivänä.',
+    {
+      text: 'Kaupunki on uuden valtakunnan pääkaupunki ja rakentaa kuin kilpaa. Kaksi vuotta sitten sitä ei ollut tässä muodossa olemassa; Lontoo on ollut Lontoo tuhat vuotta, mikä on turvallisempi järjestys.',
+      voice: 'isoisa',
+    },
+  ],
+  praha: [
+    'Prahan linna on pinta-alaltaan yksi maailman suurimmista linnoista ja toimii yhä Tšekin presidentin virka-asuntona.',
+    { text: 'Tšekissä juodaan asukasta kohden enemmän olutta kuin missään muualla maailmassa; ensimmäinen panimo perustettiin jo 993.', source: 'https://fi.wikipedia.org/wiki/T%C5%A1ekki' },
+    {
+      text: 'Sillalla seisoo kolmekymmentä pyhimystä ja raatihuoneen kello näyttää tähtien paikat. Kaupunki kuuluu keisarikuntaan mutta puhuu omaa kieltään yhä äänekkäämmin.',
+      voice: 'isoisa',
+    },
+  ],
+  wien: [
+    { text: 'Wienin kahvilakulttuuri on ollut vuodesta 2011 Itävallan kansallisessa aineettoman kulttuuriperinnön luettelossa: kahvilassa saa istua tuntikausia yhden kupillisen kanssa.', source: 'https://en.wikipedia.org/wiki/Viennese_caf%C3%A9' },
+    'Wienin juomavesi tulee putkia pitkin suoraan Alpeilta, ja vesijohto valmistui jo vuonna 1873.',
+    {
+      text: 'Musiikkia soitetaan täällä kuin muualla juodaan teetä, ja valssia tanssitaan myös arkena. Kaupunki purki juuri muurinsa ja rakensi niiden paikalle kehäkadun.',
+      voice: 'isoisa',
+    },
+  ],
+  budapest: [
+    { text: 'Budapestin maanalainen on Manner-Euroopan vanhin metro. Se avattiin vuonna 1896 ja on Unescon maailmanperintökohde.', source: 'https://fi.wikipedia.org/wiki/Budapestin_metro' },
+    'Tonava jakaa kaupungin: Buda on kukkulainen ja rauhallinen, Pest tasainen ja vilkas.',
+    {
+      text: 'Kaksi kaupunkia joen kahta puolta yhdistettiin tänä vuonna yhdeksi. Kuumista lähteistä nousee vesi, jossa on kylvetty roomalaisten ajoista; sitä yhdistäminen ei muuta.',
+      voice: 'isoisa',
+    },
+  ],
+  varsova: [
+    'Varsovan vaakunassa on merenneito, joka legendan mukaan käski kalastajien perustaa kaupungin joen mutkaan.',
+    'Puolan kieli kirjoitetaan latinalaisin kirjaimin, mutta siinä on omia merkkejä kuten ł, ż ja ę.',
+    {
+      text: 'Kaupunki on keisarikunnan maakuntakaupunki, eikä sitä sanota täällä ääneen mielellään. Kadulla soitetaan pianoa niin, että pysähdyn kuuntelemaan; sävellykset ovat maanmiehen, joka kuoli Pariisissa.',
+      voice: 'isoisa',
+    },
+  ],
+  krakova: [
+    'Wawelin kukkulan luolassa asui tarun mukaan lohikäärme. Luolan suulla seisoo nykyään pronssinen lohikäärmepatsas, joka sylkee oikeaa tulta muutaman minuutin välein.',
+    { text: 'Mariankirkon tornista soitetaan hejnał-sävelmä joka tunti neljään ilmansuuntaan, ja se katkaistaan aina samassa kohdassa kesken.', source: 'https://fi.wikipedia.org/wiki/Krakova' },
+    {
+      text: 'Torin halli on täynnä kangasta ja meripihkaa, ja joka tunti torvi aloittaa sävelmän, jota se ei koskaan saa loppuun. Tämä kaupunki muistaa pitkään; se on sen suru ja sen ylpeys.',
+      voice: 'isoisa',
+    },
+  ],
+  alpit: [
+    { text: 'Alppien halki kulkee Gotthardin pohjatunneli, joka on yli 57 kilometriä pitkä — maailman pisin rautatietunneli.', source: 'https://fi.wikipedia.org/wiki/Gotthardin_pohjatunneli' },
+    'Alppien jäätiköt ovat sulaneet nopeasti, ja niiden reunoilta on paljastunut esineitä, jotka ovat olleet jään alla tuhansia vuosia.',
+    {
+      text: 'Vuoret ylitetään solien kautta muulin kanssa, ja laaksot ovat jään jäljiltä U:n muotoisia. Sanovat poraavansa tunnelin vuoren läpi; en usko sen valmistuvan elinaikanani.',
+      voice: 'isoisa',
+    },
+  ],
+  venetsia: [
+    'Venetsia seisoo miljoonien puupaalujen varassa. Veden alla hapettomassa liejussa paalut eivät lahoa vaan kovettuvat lähes kiven kaltaisiksi.',
+    'Venetsian karnevaalin naamiot syntyivät, jotta säätyläiset ja palvelijat saattoivat juhlia yhdessä tuntemattomina. Naamioita valmistetaan yhä käsityönä paperimassasta.',
+    {
+      text: 'Kaupungissa ei ole yhtään hevosta, mutta tuhat venettä. Kirjoitan tätä portailla, joiden alin askelma on ollut meressä sata vuotta, eikä kukaan tunnu olevan siitä huolissaan.',
+      voice: 'isoisa',
+    },
+  ],
+  rooma: [
+    'Roomassa on yhä käytössä antiikin aikana rakennettuja vesijohtoja, ja kaupungin kaduilla on tuhansia ilmaisia juomavesihanoja.',
+    { text: 'Pantheonin betonikupoli on lähes kahden vuosituhannen jälkeen yhä maailman suurin ilman terästä rakennettu kupoli.', source: 'https://en.wikipedia.org/wiki/Pantheon,_Rome' },
+    {
+      text: 'Kaupunki on juuri tullut uuden Italian pääkaupungiksi, ja paavi on jäänyt muuriensa sisälle. Akveduktit tuovat vettä yhä, mikä on enemmän kuin voin sanoa monesta uudemmasta laitoksesta.',
+      voice: 'isoisa',
+    },
+  ],
+  sisilia: [
+    'Sisilia on ollut vuorollaan kreikkalaisten, roomalaisten, arabien ja normannien hallussa, ja kaikki näkyvät yhä saaren ruoassa ja rakennuksissa.',
+    'Etnan rinteillä viljellään viiniä ja pistaaseja, koska tuhka tekee maaperästä poikkeuksellisen ravinteikasta.',
+    {
+      text: 'Saarella on kreikkalaisia temppeleitä, arabialaisia kupoleita ja normannien kirkkoja samassa korttelissa. Etna savuaa taustalla eikä välitä kenestäkään niistä.',
+      voice: 'isoisa',
+    },
+  ],
+  ateena: [
+    'Ateenassa on asuttu yhtäjaksoisesti yli 3 000 vuotta, mikä tekee siitä yhden Euroopan vanhimmista kaupungeista.',
+    'Kreikan kieltä on kirjoitettu samalla kirjaimistolla lähes 2 800 vuotta, ja siitä ovat peräisin sanat kuten museo, teatteri ja matematiikka.',
+    {
+      text: 'Kaupunki on pieni ja tomuinen, ja kuningaskunta vasta muutaman vuosikymmenen ikäinen. Kukkulan temppeli on kestänyt kaksituhatta vuotta eikä ole huomannut kumpaakaan asiaa.',
+      voice: 'isoisa',
+    },
+  ],
+  kreeta: [
+    'Knossoksen palatsissa oli juokseva vesi ja viemäröinti jo pronssikaudella, noin 3 500 vuotta sitten.',
+    'Kreetan Samarian rotko on Euroopan pisimpiä: se kulkee 16 kilometriä vuorilta merelle ja kapenee paikoin muutaman metrin levyiseksi.',
+    {
+      text: 'Saari kuuluu sulttaanin valtakuntaan, ja kapinoita on ollut useita. Oliiviöljyä käytetään kaikkeen, ja se on parempaa kuin mikään voi, jota Lontoossa myydään.',
+      voice: 'isoisa',
+    },
+  ],
+  dubrovnik: [
+    'Dubrovnik perusti Euroopan ensimmäisiin kuuluvan karanteenin vuonna 1377: laivaväen piti odottaa saarella 30 päivää ennen kaupunkiin pääsyä.',
+    'Ragusan tasavalta kielsi orjakaupan jo vuonna 1416, varhain Euroopan mittapuulla.',
+    {
+      text: 'Muurien sisällä on kaupunki, joka oli oma tasavaltansa vuosisatoja ja säilyi neuvottelemalla eikä sotimalla. Meidän laivastomme olisi ollut halvempi hoitaa samalla tavalla.',
+      voice: 'isoisa',
+    },
+  ],
+  sarajevo: [
+    'Baščaršijan basaarissa on taottu kuparia osmanien ajoista asti. Kahvi tarjoillaan pienestä kuparipannusta sokeripalan ja lokum-makeisen kanssa, ja sen ääressä istutaan pitkään.',
+    'Sarajevossa moskeija, katolinen katedraali, ortodoksinen kirkko ja synagoga ovat muutaman korttelin sisällä — siksi kaupunkia on kutsuttu Euroopan Jerusalemiksi.',
+    {
+      text: 'Idän basaari ja lännen kahvilat ovat tässä samalla kadulla, ja minareetit ja kirkontornit jakavat saman taivaan. Vuoret ympäröivät laaksoa niin, että ilta ehtii tänne tuntia aikaisemmin.',
+      voice: 'isoisa',
+    },
+  ],
+  sofia: [
+    'Sofian keskustassa seisovat vierekkäin ortodoksinen katedraali, moskeija, synagoga ja katolinen kirkko muutaman korttelin säteellä.',
+    'Sofia on yksi Euroopan korkeimmalla sijaitsevista pääkaupungeista, noin 550 metrissä, ja hiihtokeskus on kaupungin rajojen sisällä.',
+    {
+      text: 'Kaupunki on sulttaanin maakuntakaupunki vuoren juurella, ja vuorella on lunta vielä keväällä. Sanovat, että tänne syntyy pian oma valtio; sitä on syytä seurata.',
+      voice: 'isoisa',
+    },
+  ],
+  bukarest: [
+    'Bukarestin parlamenttitalo on yksi maailman suurimmista ja painavimmista rakennuksista. Se valmistui 1980-luvulla.',
+    'Romaniassa puhutaan latinasta polveutuvaa kieltä, mutta sanastossa on paljon lainoja naapureiden slaavilaisista kielistä.',
+    {
+      text: 'Ruhtinaskunnassa puhutaan kieltä, joka on latinaa slaavilaisten keskellä, ja kirjaimet vaihtuivat latinalaisiin vasta äskettäin. Kadut jäljittelevät Pariisia, mikä on täällä kohteliaisuus.',
+      voice: 'isoisa',
+    },
+  ],
+  kiova: [
+    'Kiovan Petšerskin luostarin alla kiemurtelee kilometrien pituinen luolasto, jota on kaivettu 1000-luvulta lähtien.',
+    'Kiovan Rus oli keskiajalla mahtava ruhtinaskunta, jonka perintöä pitävät omanaan useat nykyiset itäslaavilaiset kansat.',
+    {
+      text: 'Luostarin käytävät kulkevat maan alla, ja kaupunki on ollut pyhä paikka tuhat vuotta. Keisarikunta hallitsee, mutta kaupunki on vanhempi kuin yksikään sitä hallinnut valta.',
+      voice: 'isoisa',
+    },
+  ],
+  odessa: [
+    'Odessa perustettiin 1794 vapaasatamaksi, ja kaupunkiin muutti väkeä kymmenistä maista — siksi sen kulttuuri on poikkeuksellisen monikielinen.',
+    'Odessan oopperatalo on rakennettu tanskalaisen ja itävaltalaisen arkkitehdin suunnitelmien mukaan, ja sitä pidetään yhtenä Euroopan kauneimmista.',
+    {
+      text: 'Satamasta lähtee vehnää koko Euroopalle, ja portaat nousevat rannasta kaupunkiin kuin teatterissa. Täällä vitsaillaan enemmän kuin missään muualla keisarikunnassa; se lienee sataman tuomaa.',
+      voice: 'isoisa',
+    },
+  ],
+  moskova: [
+    'Moskovan Punaisen torin nimi ei tule väristä eikä politiikasta: vanha venäjän sana krasnyi tarkoitti sekä punaista että kaunista.',
+    'Moskova on Euroopan väkirikkain kaupunki, ja sen metrolla tehdään arkisin miljoonia matkoja päivässä.',
+    {
+      text: 'Vanhassa kaupungissa on puutaloja ja kupoleita, ja kellot soivat niin että keskustelu keskeytyy. Pääkaupunki on Pietarissa, mutta sydän on ilmeisesti täällä; sen kuulee heti kun kysyy.',
+      voice: 'isoisa',
+    },
+  ],
+  pietari: [
+    'Pietarin siltoja nostetaan kesäöisin ylös, jotta laivat pääsevät Nevaa pitkin — jalankulkijan kannattaa tarkistaa aikataulu ennen kotimatkaa.',
+    'Kaupunki on rakennettu yli sadalle saarelle, ja sitä on kutsuttu Pohjolan Venetsiaksi.',
+    {
+      text: 'Kaupunki on rakennettu suolle keisarin käskyllä, ja se näkyy: kaikki on suoraa ja märkää. Kesäöinä ei tarvita kynttilää lainkaan, mikä on hyödyllistä ja hieman häiritsevää.',
+      voice: 'isoisa',
+    },
+  ],
+  helsinki: [
+    'Helsingin edustalla on yli 300 saarta, ja monille niistä pääsee kaupungin omalla lautalla.',
+    'Suomen kieli ei ole sukua ruotsille eikä venäjälle vaan virolle ja unkarille — se kuuluu suomalais-ugrilaisiin kieliin.',
+    {
+      text: 'Suuriruhtinaskunnan pääkaupunki on pieni ja valkoinen, ja satamassa tarvitaan jäänmurtajaa puoli vuotta. Kaduilla kuuluu kaksi kieltä, eikä kolmatta täällä tarvita — ei edes minun.',
+      voice: 'isoisa',
+    },
+  ],
+  tallinna: [
+    'Helsingin ja Tallinnan väliä kulkee vuosittain miljoonia matkustajia — reitti on yksi maailman vilkkaimmista laivayhteyksistä.',
+    'Viron kieli on niin läheistä sukua suomelle, että moni kyltti aukeaa suomalaiselle ilman opiskelua.',
+    {
+      text: 'Muurien ja tornien takana on hansakaupunki, jossa kauppa oli järjestetty jo keskiajalla. Alakaupunki ja ylälinna eivät ole koskaan olleet aivan samaa mieltä mistään.',
+      voice: 'isoisa',
+    },
+  ],
+  riika: [
+    'Riian keskusmarkkinahallit rakennettiin 1920-luvulla vanhoista ilmalaivahalleista.',
+    'Latvian laulujuhlaperinne on Unescon aineettoman kulttuuriperinnön luettelossa — kuoroissa laulaa kymmeniätuhansia ihmisiä.',
+    {
+      text: 'Joen suussa on satama, joka lähettää puuta ja pellavaa Englantiin. Kaupunki puhuu saksaa kauppapöydässä ja latviaa toreilla; jälkimmäinen on täällä kotoisin.',
+      voice: 'isoisa',
+    },
+  ],
+  vilna: [
+    'Vilnassa on taiteilijoiden julistama leikkimielinen Užupisin "tasavalta", jolla on oma perustuslaki käännettynä kymmenille kielille.',
+    'Liettua oli viimeinen Euroopan maa, joka kristillistyi — vasta 1387.',
+    {
+      text: 'Kaupungissa on kirjapainoja ja oppineita niin paljon, että sitä kutsutaan Pohjolan Jerusalemiksi. Barokkikirkkoja on niin monta, että laskin ne kahdesti väärin.',
+      voice: 'isoisa',
+    },
+  ],
+  tukholma: [
+    'Tukholman vanhankaupungin kujista kapein on alle metrin levyinen.',
+    'Ruotsissa on jokamiehenoikeus: luonnossa saa liikkua ja telttailla myös toisen mailla, kunhan ei häiritse eikä tuhoa.',
+    {
+      text: 'Kaupunki on rakennettu saarille, ja vesi on niin kirkasta että keskustassa kalastetaan. Vanhakaupunki on kapea kuin käytävä, ja siellä kaikki tuntevat toisensa hieman liian hyvin.',
+      voice: 'isoisa',
+    },
+  ],
+  oslo: [
+    'Oslo lahjoittaa joka vuosi kuusen Lontoon Trafalgar Squarelle kiitokseksi toisen maailmansodan aikaisesta tuesta.',
+    'Norjan Oslovuono ja rannikko ovat niin syviä, että suuret risteilijät pääsevät aivan kaupungin keskustaan asti.',
+    {
+      text: 'Kaupunki on Christiania, ja vuono tuo laivat suoraan keskustaan. Norja on liitossa Ruotsin kanssa, mutta omasta lipusta puhutaan täällä yhä useammin.',
+      voice: 'isoisa',
+    },
+  ],
+  firenze: [
+    { text: 'Firenzessä lyötiin vuodesta 1252 kultarahaa nimeltä floriini, ja siitä tuli niin luotettu, että sillä maksettiin kauppavelkoja ympäri Eurooppaa.', source: 'https://fi.wikipedia.org/wiki/Floriini' },
+    { text: 'Michelangelon David seisoi kolme ja puoli vuosisataa ulkona Signorian aukiolla. Se siirrettiin sisätiloihin vuonna 1873, ja aukiolla on nykyään kopio.', source: 'https://fi.wikipedia.org/wiki/Daavid_(Michelangelo)' },
+    {
+      text: 'Hallitus muutti täältä Roomaan kaksi vuotta sitten, ja kaupunki maksaa yhä velkoja kaduista, jotka se levensi pääkaupungiksi. Signorian aukiolta nostettiin juuri jättiläispatsas katon alle suojaan.',
+      voice: 'isoisa',
+    },
+  ],
+
+  kobenhavn: [
+    'Kööpenhaminan ja Ruotsin Malmön yhdistää Juutinrauman silta, joka sukeltaa keskellä salmea tunneliin tekosaaren kautta.',
+    'Tanskalainen sana hygge tarkoittaa lämmintä ja kiireetöntä yhdessäoloa — kynttilöitä, kahvia ja hyvää seuraa.',
+    {
+      text: 'Kaupungissa on huvipuisto lyhtyineen ja musiikkeineen, ja se on ollut auki jo kolmekymmentä vuotta. Tanska menetti äskettäin maakuntansa etelässä, eikä siitä puhuta päivällisellä.',
+      voice: 'isoisa',
+    },
+  ],
+  tampere: [
+    'Tampereen läpi virtaava Tammerkoski laskee Näsijärvestä Pyhäjärveen noin 18 metriä. Koski oli kaupungin ensimmäinen voimalaitos jo ennen kuin sähköä osattiin tehdä.',
+    'Pyynikinharju on maailman korkein pitkittäisharju: sen laki on 160 metriä merenpinnasta ja 80 metriä Pyhäjärven pintaa ylempänä.',
+    {
+      text: 'Kaupunki on kaksi järveä ja niiden välinen koski, ja kosken partaalla seisoo punatiilinen puuvillatehdas, joka on koko Pohjolan suurin työpaikka. Savupiippuja lasken viisitoista.',
+      voice: 'isoisa',
+    },
+  ],
+  lappi: [
+    'Napapiiri kulkee Rovaniemen pohjoispuolelta: sen pohjoispuolella aurinko ei laske keskikesällä eikä nouse keskitalvella.',
+    'Saamen kieliä on useita, ja niissä on kymmeniä sanoja lumelle sen mukaan, millaista hangella on kulkea.',
+    {
+      text: 'Täällä aurinko ei laske kesällä lainkaan eikä nouse talvella; kirjoitan kellonajan muistiin, koska muuten en tiedä sitä. Poroja paimennetaan tuhansittain, ja se on työtä, jota en osaisi päivääkään.',
+      voice: 'isoisa',
+    },
+  ],
+  tromssa: [
+    { text: 'Tromssassa on maailman pohjoisin yliopisto, ja kaupungissa toimii myös oma panimo ja katedraali.', source: 'https://en.wikipedia.org/wiki/University_of_Troms%C3%B8' },
+    { text: 'Tromssan kaupunki sijaitsee saarella, ja mantereelle pääsee vuonon yli kaartuvaa siltaa pitkin.', source: 'https://fi.wikipedia.org/wiki/Tromssa' },
+    {
+      text: 'Täältä lähtevät retkikunnat jäämerelle, ja satamassa lastataan turkiksia ja hylkeenrasvaa. Lämmin merivirta pitää sataman sulana keskellä talvea, mitä en ollut uskoa ennen kuin näin sen.',
+      voice: 'isoisa',
+    },
+  ],
+  islanti: [
+    { text: 'Islannin Alltinget kokoontui ensimmäisen kerran vuonna 930, ja se on maailman vanhimpia yhä toimivia kansanedustuslaitoksia. Kokouspaikka Þingvellir sijaitsee mannerlaattojen repeämässä.', source: 'https://fi.wikipedia.org/wiki/Islanti' },
+    'Islantilaisilla ei ole sukunimiä vaan vanhemman nimestä johdettu jälkiosa: Jónsdóttir on Jónin tytär ja Jónsson Jónin poika. Puhelinluettelo aakkostetaan etunimen mukaan.',
+    {
+      text: 'Maa savuaa kuin sammumaton nuotio, ja kuuma puro virtaa jäätikön vierestä. Laivamatka tänne oli pitkä ja kylmä; ymmärrän nyt, miksi saagat kirjoitettiin sisällä talven mittaan.',
+      voice: 'isoisa',
+    },
+  ],
+};
+
+/*
+ * PÄÄKAUPUNKIPISTEIDEN KYSYMYKSET JA TIEDOT omissa tauluissaan (Pelikoodari 11.10.2026): pisteet eivät ole
+ * laudan kaupunkeja, joten ne eivät kuulu EUROPE_QUESTIONS/EUROPE_FACTS-tauluihin, jotka laudat yhdistävät
+ * (tests/rules.test.mjs: tietoja vain laudan kaupungeille). Vain dataa; avain = pisteen id.
+ */
+export const PAAKAUPUNKIEN_KYSYMYKSET = {
   /*
    * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e01–e02, tarkistettu 14 kaupunkia 0 virhettä):
    * Kysymykset (vain dataa: ei pysäkkiä, Päätoimittaja 06.4x). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
@@ -3426,414 +3844,7 @@ export const EUROPE_QUESTIONS = {
   ],
 };
 
-/**
- * "Tiesitkö että…" -tiedot paketin kaupungeista. Peli näyttää yhden vuorossa
- * olevan pelaajan sijainnista, joten jokaisella paikalla on useampi vaihtoehto.
- */
-export const EUROPE_FACTS = {
-  lontoo: [
-    'Lontoon metro avattiin vuonna 1863 ja on maailman vanhin. Sen lempinimi Tube tulee tunnelien pyöreästä muodosta.',
-    'Thamesin vuorovesi nostaa ja laskee veden pintaa Lontoossa noin seitsemän metriä vuorokaudessa.',
-    {
-      text: 'Lähden kotoa, jossa on sumu, juna maan alla ja klubi, jossa maailma tunnetaan paremmin kuin missään. Ainakin niin siellä sanotaan; tämä matka on tehty sen väitteen tarkistamiseksi.',
-      voice: 'isoisa',
-    },
-  ],
-  istanbul: [
-    'Istanbul on ainoa suurkaupunki, joka sijaitsee kahdella mantereella: Bosporinsalmi erottaa sen Euroopan ja Aasian puolen.',
-    'Kaupunki tunnettiin ennen nimillä Bysantion ja Konstantinopoli, ja se oli kahden valtakunnan pääkaupunki lähes 1 600 vuoden ajan.',
-    {
-      text: 'Kaupunki seisoo kahden maanosan päällä, ja salmen yli soudetaan kuin kadun poikki. Basaarissa opin, että hinta on keskustelu eikä numero.',
-      voice: 'isoisa',
-    },
-  ],
-  sevilla: [
-    { text: 'Sevilla on Andalusian pääkaupunki Guadalquivirjoen rannalla. Maurit kutsuivat sitä nimellä Ishbiliya ja roomalaiset Hispalis.', source: 'https://fi.wikipedia.org/wiki/Sevilla' },
-    { text: 'Amerikan löytymisen jälkeen kaupunkiin sijoitettiin kauppakamari, jolla oli yksinoikeus kauppaan Amerikkojen kanssa. Kauppa siirtyi Cádiziin vuonna 1717.', source: 'https://fi.wikipedia.org/wiki/Sevilla' },
-    { text: 'Santa Marían katedraali valmistui 1506 ja on maailman suurin goottilainen katedraali. Sen kellotorni Giralda on entisen moskeijan minareetti.', source: 'https://fi.wikipedia.org/wiki/Sevilla' },
-    {
-      text: 'Joki on kaupungin koko onni ja koko onnettomuus: se toi Amerikan laivat tähän asti, ja kun se madaltui, kauppa muutti alavirtaan eikä palannut. Kultainen torni seisoo yhä rannassa laskemassa lasteja, joita ei enää tule.',
-      voice: 'isoisa',
-    },
-  ],
-  bergen: [
-    { text: 'Bergenin perusti kuningas Olav Kyrre vuonna 1070, ja se oli Norjan pääkaupunki vuosina 1217–1299.', source: 'https://fi.wikipedia.org/wiki/Bergen' },
-    { text: 'Hansakauppiaiden ranta-alue Bryggen on Unescon maailmanperintökohde. Tärkein kauppatavara oli Pohjois-Norjasta tuotu kuivattu turska.', source: 'https://fi.wikipedia.org/wiki/Bergen' },
-    { text: 'Bergenin satama on tonnimääriltään Pohjoismaiden suurin tavaraliikenteen satama, ja kaupungissa sataa keskimäärin kahtena päivänä kolmesta.', source: 'https://fi.wikipedia.org/wiki/Bergen' },
-    {
-      text: 'Vuoret erottavat tämän kaupungin muusta maasta niin tarkasti, että sinne on helpompi purjehtia kuin ajaa. Kauppahuoneiden kirjat ovat saksaksi, vaikka Hansan valta loppui kolmesataa vuotta sitten.',
-      voice: 'isoisa',
-    },
-  ],
-  dublin: [
-    { text: 'Dublinin nimi tulee iirin sanoista dubh linn, musta lammikko, joka oli viikinkien satamapaikka Liffey-joen mutkassa.', source: 'https://fi.wikipedia.org/wiki/Dublin' },
-    'Irlannin kansallissymboli on kolmiapila, ja maan lempinimi smaragdisaari kertoo runsaista sateista ja vihreistä laitumista.',
-    {
-      text: 'Sade tulee sivuttain ja loppuu kesken lauseen. Täällä puhutaan omaa kieltä, jota Lontoossa pidetään kuolevana; minä kuulin sitä joka kadulla.',
-      voice: 'isoisa',
-    },
-  ],
-  edinburgh: [
-    'Edinburghin vanhakaupunki ja uusikaupunki ovat molemmat Unescon maailmanperintökohteita — keskiaikainen sokkelo ja 1700-luvun ruutukaava vierekkäin.',
-    'Skotlannin ylängöillä puhutaan yhä gaelia, ja kielen elvyttämiseksi on perustettu omia kouluja.',
-    {
-      text: 'Linna seisoo kalliolla, joka on vanhan tulivuoren kanta. Kaupunki on jaettu vanhaan ja uuteen puoleen, ja kumpikin pitää itseään oikeana.',
-      voice: 'isoisa',
-    },
-  ],
-  pariisi: [
-    'Pariisin katujen alla kulkee satoja kilometrejä vanhoja kivilouhoksia. Osa niistä on katakombeja, joihin siirrettiin vanhojen hautausmaiden luut 1700-luvulla.',
-    'Louvre oli alun perin linnoitus ja kuninkaanlinna. Museoksi se avattiin vasta Ranskan vallankumouksen jälkeen vuonna 1793.',
-    {
-      text: 'Kaupunki toipuu piirityksestä ja rakentaa leveitä katuja kujien tilalle. Näyttelyihin pystytetään rautaa ja lasia; kivi kestää, rauta ei.',
-      voice: 'isoisa',
-    },
-  ],
-  marseille: [
-    { text: 'Marseillen vanha satama on ollut käytössä yli 2 600 vuotta: kreikkalaiset purjehtijat perustivat kaupungin noin 600 eaa. ja antoivat sille nimen Massalia.', source: 'https://fi.wikipedia.org/wiki/Marseille' },
-    'Sataman yllä kohoaa Notre-Dame de la Garden basilika, jonka kullattu Madonna näkyy kauas merelle. Merimiehet ovat ripustaneet kirkon kattoon pienoisveneitä kiitoslahjoiksi.',
-    {
-      text: 'Satama haisee tervalta, sahramilta ja kalalta, ja laiturilla kuulee kymmentä kieltä ennen aamiaista. Täältä laivat lähtevät Afrikkaan; minäkin lähden, kunhan keitto on syöty.',
-      voice: 'isoisa',
-    },
-  ],
-  granada: [
-    'Alhambran palatsin seinät on kaiverrettu täyteen arabiankielisiä runosäkeitä ja koristekuvioita, ja sen suihkulähteisiin vesi johdettiin vuorilta jo seitsemänsataa vuotta sitten.',
-    'Granadassa juoman tilaaja saa tapas-annoksen kaupan päälle — vanha tapa, joka on suuresta osasta Espanjaa jo hävinnyt.',
-    {
-      text: 'Punainen linna seisoo kukkulalla kuin väsynyt vartija, ja sen saleissa vesi puhuu hiljaa. Lumivuoret hohtavat selän takana, vaikka alhaalla kypsyvät appelsiinit.',
-      voice: 'isoisa',
-    },
-  ],
-  lissabon: [
-    'Lissabonin keltaiset raitiovaunut kiipeävät niin jyrkkiä katuja, että kaupungissa on myös julkisia hissejä ja köysiratoja.',
-    'Portugalilaiset purjehtijat lähtivät Lissabonista etsimään merireittiä Intiaan; Vasco da Gama saapui perille vuonna 1498.',
-    {
-      text: 'Kaupunki nousi maanjäristyksen raunioista suoriksi kortteleiksi, ja kukkuloilla lauletaan surumielisiä lauluja. Torni joen suulla muistuttaa, että täältä lähdettiin maailmalle kauan ennen meitä.',
-      voice: 'isoisa',
-    },
-  ],
-  madrid: [
-    'Madridin Retiro-puisto oli alun perin kuninkaan yksityinen puutarha. Se avattiin kaikille 1800-luvulla ja on nykyään kaupunkilaisten olohuone.',
-    'Espanjassa syödään päivällinen usein vasta kello 21 jälkeen, ja työpäivä katkeaa pitkään lounastaukoon.',
-    {
-      text: 'Kaupunki on korkealla ylätasangolla, joten kesä on kuumempi ja talvi kylmempi kuin rannikolla. Kadut täyttyvät väestä vasta auringonlaskun jälkeen, mikä on järkevää enkä aio omaksua sitä.',
-      voice: 'isoisa',
-    },
-  ],
-  barcelona: [
-    'Barcelonan Eixample-kaupunginosan korttelit on suunniteltu viistetyin kulmin, jotta risteyksiin syntyy pieniä aukioita.',
-    'Sagrada Famílian rakentaminen alkoi vuonna 1882, ja se rahoitetaan yhä lahjoituksilla ja pääsymaksuilla.',
-    {
-      text: 'Vanhat muurit on purettu ja kaupunki kasvaa ruutukaavaan, jonka kulmat on viistetty. Täällä puhutaan omaa kieltä, eikä se ole murre, vaikka niin vakuutetaan.',
-      voice: 'isoisa',
-    },
-  ],
-  amsterdam: [
-    'Amsterdamin taloissa on ullakolla usein nostokoukku: portaat ovat niin kapeat, että huonekalut nostetaan sisään ikkunasta.',
-    'Kaupungissa on enemmän polkupyöriä kuin asukkaita, ja pyöriä nostetaan vuosittain tuhansittain kanavista.',
-    {
-      text: 'Talot seisovat paalujen päällä pehmeässä maassa ja nojaavat toisiinsa kuin väsyneet herrat. Osa maasta on merenpinnan alapuolella ja pysyy kuivana vain siksi, että sitä pumpataan.',
-      voice: 'isoisa',
-    },
-  ],
-  bryssel: [
-    'Grand-Placen kauppahuoneet rakennettiin uudelleen 1690-luvun lopulla, kun Ranskan tykistö pommitti torin raunioiksi vuonna 1695 — nykyiset kullatut julkisivut ovat siis jälleenrakennusta, ei alkuperäisiä.',
-    'Galeries Royales Saint-Hubert avattiin vuonna 1847 lasikattoisena kauppakujana, ja se oli aikanaan yksi Euroopan ensimmäisistä katetuista ostoskaduista.',
-    {
-      text: 'Belgian suklaa on vielä tavallista kaakaolevyä: täytetty praliini keksitään täällä vasta neljänkymmenen vuoden päästä. Torilla myydään sen sijaan pitsiä, jota nyplätään sormin niin nopeasti, etten ehdi seurata.',
-      voice: 'isoisa',
-    },
-  ],
-  luxemburg: [
-    'Luxemburgin linnoituksen purkaminen kesti vuodesta 1867 vuoteen 1883 eli kuusitoista vuotta, ja työ tuhosi yli 24 kilometriä maanalaisia käytäviä ja maksoi 1,5 miljoonaa kultafrangia.',
-    'Kaupungin Bock-kallio sai varustuksensa vuonna 963, kun kreivi Siegfried rakensi sille Lucilinburhuc-linnansa — tapahtumaa pidetään koko Luxemburgin kaupungin syntyhetkenä.',
-    {
-      text: 'Rautatie on yhdistänyt kaupungin Ranskaan ja Preussiin jo vuosia, mutta täkäläinen suurherttua ei ole koskaan itse istunut siinä junassa — hän asuu Haagissa eikä ole käynyt omassa maassaan vuosikausiin.',
-      voice: 'isoisa',
-    },
-  ],
-  kosice: [
-    'Košicen keskustan muodostaa pitkä, linssinmuotoinen Hlavná-katu: sen ympärille yhdistyivät Ala- ja Ylä-Kassa 1200-luvulla.',
-    'Košicessa oli 1657 perustettu jesuiittojen yliopisto (Universitas Cassoviensis), josta tuli 1777 kuninkaallinen akatemia ja myöhemmin oikeusakatemia.',
-    {
-      text: 'Kassaan tuli sähkölennätin 1856 ja rautatie Miskolcista 1860. Nyt yhteydet kulkevat jo Prešoviin, Žilinaan ja Chopiin asti, ja asemalla on aina vilinää.',
-      voice: 'isoisa',
-    },
-  ],
-  ljubljana: [
-    'Ljubljanan linna toimi Krainin läänin vankilana vuosina 1813–1945, ja linnan vanha vankila oli kuilu, johon vangit laskettiin köydellä tai ketjulla.',
-    'Ljubljanan Tivoli-puisto on suunniteltu vuonna 1813 ranskalaisen insinöörin johdolla, ja sen nimi tulee Pariisin Tivolista.',
-    {
-      text: 'Laibach oli Napoleonin Illyrian maakuntien pääkaupunki neljä vuotta, 1809–1813. Ranskalaisten insinööri ehti jättää kaupunkiin puiston, jossa minäkin kävelin tänään.',
-      voice: 'isoisa',
-    },
-  ],
-  valletta: [
-    'Vallettan 320 muistomerkkiä ja kirkkoa mahtuvat vain 0,55 neliökilometrin alueelle, ja Unesco hyväksyi koko kaupungin maailmanperintökohteeksi vuonna 1980.',
-    'Ennen ritarikunnan tuloa niemi tunnettiin nimellä Sciberras — lähes asumaton kalliokieleke Grand Harbourin ja Marsamxett-sataman välissä.',
-    {
-      text: 'Linnoitusten purkamista on ehdotettu täälläkin pari kertaa viime vuosikymmeninä, mutta muurit seisovat yhä — veikkaan, että ne haudataan vasta viimeisenä koko saarelta.',
-      voice: 'isoisa',
-    },
-  ],
-  berliini: [
-    'Berliinissä on enemmän siltoja kuin Venetsiassa — kaupungin halki virtaa Spree ja sitä ympäröi kanavien verkosto.',
-    'Muurin paikka on merkitty katukiveykseen kaksoisrivillä mukulakiviä, joten reitin voi kävellä vielä tänäkin päivänä.',
-    {
-      text: 'Kaupunki on uuden valtakunnan pääkaupunki ja rakentaa kuin kilpaa. Kaksi vuotta sitten sitä ei ollut tässä muodossa olemassa; Lontoo on ollut Lontoo tuhat vuotta, mikä on turvallisempi järjestys.',
-      voice: 'isoisa',
-    },
-  ],
-  praha: [
-    'Prahan linna on pinta-alaltaan yksi maailman suurimmista linnoista ja toimii yhä Tšekin presidentin virka-asuntona.',
-    { text: 'Tšekissä juodaan asukasta kohden enemmän olutta kuin missään muualla maailmassa; ensimmäinen panimo perustettiin jo 993.', source: 'https://fi.wikipedia.org/wiki/T%C5%A1ekki' },
-    {
-      text: 'Sillalla seisoo kolmekymmentä pyhimystä ja raatihuoneen kello näyttää tähtien paikat. Kaupunki kuuluu keisarikuntaan mutta puhuu omaa kieltään yhä äänekkäämmin.',
-      voice: 'isoisa',
-    },
-  ],
-  wien: [
-    { text: 'Wienin kahvilakulttuuri on ollut vuodesta 2011 Itävallan kansallisessa aineettoman kulttuuriperinnön luettelossa: kahvilassa saa istua tuntikausia yhden kupillisen kanssa.', source: 'https://en.wikipedia.org/wiki/Viennese_caf%C3%A9' },
-    'Wienin juomavesi tulee putkia pitkin suoraan Alpeilta, ja vesijohto valmistui jo vuonna 1873.',
-    {
-      text: 'Musiikkia soitetaan täällä kuin muualla juodaan teetä, ja valssia tanssitaan myös arkena. Kaupunki purki juuri muurinsa ja rakensi niiden paikalle kehäkadun.',
-      voice: 'isoisa',
-    },
-  ],
-  budapest: [
-    { text: 'Budapestin maanalainen on Manner-Euroopan vanhin metro. Se avattiin vuonna 1896 ja on Unescon maailmanperintökohde.', source: 'https://fi.wikipedia.org/wiki/Budapestin_metro' },
-    'Tonava jakaa kaupungin: Buda on kukkulainen ja rauhallinen, Pest tasainen ja vilkas.',
-    {
-      text: 'Kaksi kaupunkia joen kahta puolta yhdistettiin tänä vuonna yhdeksi. Kuumista lähteistä nousee vesi, jossa on kylvetty roomalaisten ajoista; sitä yhdistäminen ei muuta.',
-      voice: 'isoisa',
-    },
-  ],
-  varsova: [
-    'Varsovan vaakunassa on merenneito, joka legendan mukaan käski kalastajien perustaa kaupungin joen mutkaan.',
-    'Puolan kieli kirjoitetaan latinalaisin kirjaimin, mutta siinä on omia merkkejä kuten ł, ż ja ę.',
-    {
-      text: 'Kaupunki on keisarikunnan maakuntakaupunki, eikä sitä sanota täällä ääneen mielellään. Kadulla soitetaan pianoa niin, että pysähdyn kuuntelemaan; sävellykset ovat maanmiehen, joka kuoli Pariisissa.',
-      voice: 'isoisa',
-    },
-  ],
-  krakova: [
-    'Wawelin kukkulan luolassa asui tarun mukaan lohikäärme. Luolan suulla seisoo nykyään pronssinen lohikäärmepatsas, joka sylkee oikeaa tulta muutaman minuutin välein.',
-    { text: 'Mariankirkon tornista soitetaan hejnał-sävelmä joka tunti neljään ilmansuuntaan, ja se katkaistaan aina samassa kohdassa kesken.', source: 'https://fi.wikipedia.org/wiki/Krakova' },
-    {
-      text: 'Torin halli on täynnä kangasta ja meripihkaa, ja joka tunti torvi aloittaa sävelmän, jota se ei koskaan saa loppuun. Tämä kaupunki muistaa pitkään; se on sen suru ja sen ylpeys.',
-      voice: 'isoisa',
-    },
-  ],
-  alpit: [
-    { text: 'Alppien halki kulkee Gotthardin pohjatunneli, joka on yli 57 kilometriä pitkä — maailman pisin rautatietunneli.', source: 'https://fi.wikipedia.org/wiki/Gotthardin_pohjatunneli' },
-    'Alppien jäätiköt ovat sulaneet nopeasti, ja niiden reunoilta on paljastunut esineitä, jotka ovat olleet jään alla tuhansia vuosia.',
-    {
-      text: 'Vuoret ylitetään solien kautta muulin kanssa, ja laaksot ovat jään jäljiltä U:n muotoisia. Sanovat poraavansa tunnelin vuoren läpi; en usko sen valmistuvan elinaikanani.',
-      voice: 'isoisa',
-    },
-  ],
-  venetsia: [
-    'Venetsia seisoo miljoonien puupaalujen varassa. Veden alla hapettomassa liejussa paalut eivät lahoa vaan kovettuvat lähes kiven kaltaisiksi.',
-    'Venetsian karnevaalin naamiot syntyivät, jotta säätyläiset ja palvelijat saattoivat juhlia yhdessä tuntemattomina. Naamioita valmistetaan yhä käsityönä paperimassasta.',
-    {
-      text: 'Kaupungissa ei ole yhtään hevosta, mutta tuhat venettä. Kirjoitan tätä portailla, joiden alin askelma on ollut meressä sata vuotta, eikä kukaan tunnu olevan siitä huolissaan.',
-      voice: 'isoisa',
-    },
-  ],
-  rooma: [
-    'Roomassa on yhä käytössä antiikin aikana rakennettuja vesijohtoja, ja kaupungin kaduilla on tuhansia ilmaisia juomavesihanoja.',
-    { text: 'Pantheonin betonikupoli on lähes kahden vuosituhannen jälkeen yhä maailman suurin ilman terästä rakennettu kupoli.', source: 'https://en.wikipedia.org/wiki/Pantheon,_Rome' },
-    {
-      text: 'Kaupunki on juuri tullut uuden Italian pääkaupungiksi, ja paavi on jäänyt muuriensa sisälle. Akveduktit tuovat vettä yhä, mikä on enemmän kuin voin sanoa monesta uudemmasta laitoksesta.',
-      voice: 'isoisa',
-    },
-  ],
-  sisilia: [
-    'Sisilia on ollut vuorollaan kreikkalaisten, roomalaisten, arabien ja normannien hallussa, ja kaikki näkyvät yhä saaren ruoassa ja rakennuksissa.',
-    'Etnan rinteillä viljellään viiniä ja pistaaseja, koska tuhka tekee maaperästä poikkeuksellisen ravinteikasta.',
-    {
-      text: 'Saarella on kreikkalaisia temppeleitä, arabialaisia kupoleita ja normannien kirkkoja samassa korttelissa. Etna savuaa taustalla eikä välitä kenestäkään niistä.',
-      voice: 'isoisa',
-    },
-  ],
-  ateena: [
-    'Ateenassa on asuttu yhtäjaksoisesti yli 3 000 vuotta, mikä tekee siitä yhden Euroopan vanhimmista kaupungeista.',
-    'Kreikan kieltä on kirjoitettu samalla kirjaimistolla lähes 2 800 vuotta, ja siitä ovat peräisin sanat kuten museo, teatteri ja matematiikka.',
-    {
-      text: 'Kaupunki on pieni ja tomuinen, ja kuningaskunta vasta muutaman vuosikymmenen ikäinen. Kukkulan temppeli on kestänyt kaksituhatta vuotta eikä ole huomannut kumpaakaan asiaa.',
-      voice: 'isoisa',
-    },
-  ],
-  kreeta: [
-    'Knossoksen palatsissa oli juokseva vesi ja viemäröinti jo pronssikaudella, noin 3 500 vuotta sitten.',
-    'Kreetan Samarian rotko on Euroopan pisimpiä: se kulkee 16 kilometriä vuorilta merelle ja kapenee paikoin muutaman metrin levyiseksi.',
-    {
-      text: 'Saari kuuluu sulttaanin valtakuntaan, ja kapinoita on ollut useita. Oliiviöljyä käytetään kaikkeen, ja se on parempaa kuin mikään voi, jota Lontoossa myydään.',
-      voice: 'isoisa',
-    },
-  ],
-  dubrovnik: [
-    'Dubrovnik perusti Euroopan ensimmäisiin kuuluvan karanteenin vuonna 1377: laivaväen piti odottaa saarella 30 päivää ennen kaupunkiin pääsyä.',
-    'Ragusan tasavalta kielsi orjakaupan jo vuonna 1416, varhain Euroopan mittapuulla.',
-    {
-      text: 'Muurien sisällä on kaupunki, joka oli oma tasavaltansa vuosisatoja ja säilyi neuvottelemalla eikä sotimalla. Meidän laivastomme olisi ollut halvempi hoitaa samalla tavalla.',
-      voice: 'isoisa',
-    },
-  ],
-  sarajevo: [
-    'Baščaršijan basaarissa on taottu kuparia osmanien ajoista asti. Kahvi tarjoillaan pienestä kuparipannusta sokeripalan ja lokum-makeisen kanssa, ja sen ääressä istutaan pitkään.',
-    'Sarajevossa moskeija, katolinen katedraali, ortodoksinen kirkko ja synagoga ovat muutaman korttelin sisällä — siksi kaupunkia on kutsuttu Euroopan Jerusalemiksi.',
-    {
-      text: 'Idän basaari ja lännen kahvilat ovat tässä samalla kadulla, ja minareetit ja kirkontornit jakavat saman taivaan. Vuoret ympäröivät laaksoa niin, että ilta ehtii tänne tuntia aikaisemmin.',
-      voice: 'isoisa',
-    },
-  ],
-  sofia: [
-    'Sofian keskustassa seisovat vierekkäin ortodoksinen katedraali, moskeija, synagoga ja katolinen kirkko muutaman korttelin säteellä.',
-    'Sofia on yksi Euroopan korkeimmalla sijaitsevista pääkaupungeista, noin 550 metrissä, ja hiihtokeskus on kaupungin rajojen sisällä.',
-    {
-      text: 'Kaupunki on sulttaanin maakuntakaupunki vuoren juurella, ja vuorella on lunta vielä keväällä. Sanovat, että tänne syntyy pian oma valtio; sitä on syytä seurata.',
-      voice: 'isoisa',
-    },
-  ],
-  bukarest: [
-    'Bukarestin parlamenttitalo on yksi maailman suurimmista ja painavimmista rakennuksista. Se valmistui 1980-luvulla.',
-    'Romaniassa puhutaan latinasta polveutuvaa kieltä, mutta sanastossa on paljon lainoja naapureiden slaavilaisista kielistä.',
-    {
-      text: 'Ruhtinaskunnassa puhutaan kieltä, joka on latinaa slaavilaisten keskellä, ja kirjaimet vaihtuivat latinalaisiin vasta äskettäin. Kadut jäljittelevät Pariisia, mikä on täällä kohteliaisuus.',
-      voice: 'isoisa',
-    },
-  ],
-  kiova: [
-    'Kiovan Petšerskin luostarin alla kiemurtelee kilometrien pituinen luolasto, jota on kaivettu 1000-luvulta lähtien.',
-    'Kiovan Rus oli keskiajalla mahtava ruhtinaskunta, jonka perintöä pitävät omanaan useat nykyiset itäslaavilaiset kansat.',
-    {
-      text: 'Luostarin käytävät kulkevat maan alla, ja kaupunki on ollut pyhä paikka tuhat vuotta. Keisarikunta hallitsee, mutta kaupunki on vanhempi kuin yksikään sitä hallinnut valta.',
-      voice: 'isoisa',
-    },
-  ],
-  odessa: [
-    'Odessa perustettiin 1794 vapaasatamaksi, ja kaupunkiin muutti väkeä kymmenistä maista — siksi sen kulttuuri on poikkeuksellisen monikielinen.',
-    'Odessan oopperatalo on rakennettu tanskalaisen ja itävaltalaisen arkkitehdin suunnitelmien mukaan, ja sitä pidetään yhtenä Euroopan kauneimmista.',
-    {
-      text: 'Satamasta lähtee vehnää koko Euroopalle, ja portaat nousevat rannasta kaupunkiin kuin teatterissa. Täällä vitsaillaan enemmän kuin missään muualla keisarikunnassa; se lienee sataman tuomaa.',
-      voice: 'isoisa',
-    },
-  ],
-  moskova: [
-    'Moskovan Punaisen torin nimi ei tule väristä eikä politiikasta: vanha venäjän sana krasnyi tarkoitti sekä punaista että kaunista.',
-    'Moskova on Euroopan väkirikkain kaupunki, ja sen metrolla tehdään arkisin miljoonia matkoja päivässä.',
-    {
-      text: 'Vanhassa kaupungissa on puutaloja ja kupoleita, ja kellot soivat niin että keskustelu keskeytyy. Pääkaupunki on Pietarissa, mutta sydän on ilmeisesti täällä; sen kuulee heti kun kysyy.',
-      voice: 'isoisa',
-    },
-  ],
-  pietari: [
-    'Pietarin siltoja nostetaan kesäöisin ylös, jotta laivat pääsevät Nevaa pitkin — jalankulkijan kannattaa tarkistaa aikataulu ennen kotimatkaa.',
-    'Kaupunki on rakennettu yli sadalle saarelle, ja sitä on kutsuttu Pohjolan Venetsiaksi.',
-    {
-      text: 'Kaupunki on rakennettu suolle keisarin käskyllä, ja se näkyy: kaikki on suoraa ja märkää. Kesäöinä ei tarvita kynttilää lainkaan, mikä on hyödyllistä ja hieman häiritsevää.',
-      voice: 'isoisa',
-    },
-  ],
-  helsinki: [
-    'Helsingin edustalla on yli 300 saarta, ja monille niistä pääsee kaupungin omalla lautalla.',
-    'Suomen kieli ei ole sukua ruotsille eikä venäjälle vaan virolle ja unkarille — se kuuluu suomalais-ugrilaisiin kieliin.',
-    {
-      text: 'Suuriruhtinaskunnan pääkaupunki on pieni ja valkoinen, ja satamassa tarvitaan jäänmurtajaa puoli vuotta. Kaduilla kuuluu kaksi kieltä, eikä kolmatta täällä tarvita — ei edes minun.',
-      voice: 'isoisa',
-    },
-  ],
-  tallinna: [
-    'Helsingin ja Tallinnan väliä kulkee vuosittain miljoonia matkustajia — reitti on yksi maailman vilkkaimmista laivayhteyksistä.',
-    'Viron kieli on niin läheistä sukua suomelle, että moni kyltti aukeaa suomalaiselle ilman opiskelua.',
-    {
-      text: 'Muurien ja tornien takana on hansakaupunki, jossa kauppa oli järjestetty jo keskiajalla. Alakaupunki ja ylälinna eivät ole koskaan olleet aivan samaa mieltä mistään.',
-      voice: 'isoisa',
-    },
-  ],
-  riika: [
-    'Riian keskusmarkkinahallit rakennettiin 1920-luvulla vanhoista ilmalaivahalleista.',
-    'Latvian laulujuhlaperinne on Unescon aineettoman kulttuuriperinnön luettelossa — kuoroissa laulaa kymmeniätuhansia ihmisiä.',
-    {
-      text: 'Joen suussa on satama, joka lähettää puuta ja pellavaa Englantiin. Kaupunki puhuu saksaa kauppapöydässä ja latviaa toreilla; jälkimmäinen on täällä kotoisin.',
-      voice: 'isoisa',
-    },
-  ],
-  vilna: [
-    'Vilnassa on taiteilijoiden julistama leikkimielinen Užupisin "tasavalta", jolla on oma perustuslaki käännettynä kymmenille kielille.',
-    'Liettua oli viimeinen Euroopan maa, joka kristillistyi — vasta 1387.',
-    {
-      text: 'Kaupungissa on kirjapainoja ja oppineita niin paljon, että sitä kutsutaan Pohjolan Jerusalemiksi. Barokkikirkkoja on niin monta, että laskin ne kahdesti väärin.',
-      voice: 'isoisa',
-    },
-  ],
-  tukholma: [
-    'Tukholman vanhankaupungin kujista kapein on alle metrin levyinen.',
-    'Ruotsissa on jokamiehenoikeus: luonnossa saa liikkua ja telttailla myös toisen mailla, kunhan ei häiritse eikä tuhoa.',
-    {
-      text: 'Kaupunki on rakennettu saarille, ja vesi on niin kirkasta että keskustassa kalastetaan. Vanhakaupunki on kapea kuin käytävä, ja siellä kaikki tuntevat toisensa hieman liian hyvin.',
-      voice: 'isoisa',
-    },
-  ],
-  oslo: [
-    'Oslo lahjoittaa joka vuosi kuusen Lontoon Trafalgar Squarelle kiitokseksi toisen maailmansodan aikaisesta tuesta.',
-    'Norjan Oslovuono ja rannikko ovat niin syviä, että suuret risteilijät pääsevät aivan kaupungin keskustaan asti.',
-    {
-      text: 'Kaupunki on Christiania, ja vuono tuo laivat suoraan keskustaan. Norja on liitossa Ruotsin kanssa, mutta omasta lipusta puhutaan täällä yhä useammin.',
-      voice: 'isoisa',
-    },
-  ],
-  firenze: [
-    { text: 'Firenzessä lyötiin vuodesta 1252 kultarahaa nimeltä floriini, ja siitä tuli niin luotettu, että sillä maksettiin kauppavelkoja ympäri Eurooppaa.', source: 'https://fi.wikipedia.org/wiki/Floriini' },
-    { text: 'Michelangelon David seisoi kolme ja puoli vuosisataa ulkona Signorian aukiolla. Se siirrettiin sisätiloihin vuonna 1873, ja aukiolla on nykyään kopio.', source: 'https://fi.wikipedia.org/wiki/Daavid_(Michelangelo)' },
-    {
-      text: 'Hallitus muutti täältä Roomaan kaksi vuotta sitten, ja kaupunki maksaa yhä velkoja kaduista, jotka se levensi pääkaupungiksi. Signorian aukiolta nostettiin juuri jättiläispatsas katon alle suojaan.',
-      voice: 'isoisa',
-    },
-  ],
-
-  kobenhavn: [
-    'Kööpenhaminan ja Ruotsin Malmön yhdistää Juutinrauman silta, joka sukeltaa keskellä salmea tunneliin tekosaaren kautta.',
-    'Tanskalainen sana hygge tarkoittaa lämmintä ja kiireetöntä yhdessäoloa — kynttilöitä, kahvia ja hyvää seuraa.',
-    {
-      text: 'Kaupungissa on huvipuisto lyhtyineen ja musiikkeineen, ja se on ollut auki jo kolmekymmentä vuotta. Tanska menetti äskettäin maakuntansa etelässä, eikä siitä puhuta päivällisellä.',
-      voice: 'isoisa',
-    },
-  ],
-  tampere: [
-    'Tampereen läpi virtaava Tammerkoski laskee Näsijärvestä Pyhäjärveen noin 18 metriä. Koski oli kaupungin ensimmäinen voimalaitos jo ennen kuin sähköä osattiin tehdä.',
-    'Pyynikinharju on maailman korkein pitkittäisharju: sen laki on 160 metriä merenpinnasta ja 80 metriä Pyhäjärven pintaa ylempänä.',
-    {
-      text: 'Kaupunki on kaksi järveä ja niiden välinen koski, ja kosken partaalla seisoo punatiilinen puuvillatehdas, joka on koko Pohjolan suurin työpaikka. Savupiippuja lasken viisitoista.',
-      voice: 'isoisa',
-    },
-  ],
-  lappi: [
-    'Napapiiri kulkee Rovaniemen pohjoispuolelta: sen pohjoispuolella aurinko ei laske keskikesällä eikä nouse keskitalvella.',
-    'Saamen kieliä on useita, ja niissä on kymmeniä sanoja lumelle sen mukaan, millaista hangella on kulkea.',
-    {
-      text: 'Täällä aurinko ei laske kesällä lainkaan eikä nouse talvella; kirjoitan kellonajan muistiin, koska muuten en tiedä sitä. Poroja paimennetaan tuhansittain, ja se on työtä, jota en osaisi päivääkään.',
-      voice: 'isoisa',
-    },
-  ],
-  tromssa: [
-    { text: 'Tromssassa on maailman pohjoisin yliopisto, ja kaupungissa toimii myös oma panimo ja katedraali.', source: 'https://en.wikipedia.org/wiki/University_of_Troms%C3%B8' },
-    { text: 'Tromssan kaupunki sijaitsee saarella, ja mantereelle pääsee vuonon yli kaartuvaa siltaa pitkin.', source: 'https://fi.wikipedia.org/wiki/Tromssa' },
-    {
-      text: 'Täältä lähtevät retkikunnat jäämerelle, ja satamassa lastataan turkiksia ja hylkeenrasvaa. Lämmin merivirta pitää sataman sulana keskellä talvea, mitä en ollut uskoa ennen kuin näin sen.',
-      voice: 'isoisa',
-    },
-  ],
-  islanti: [
-    { text: 'Islannin Alltinget kokoontui ensimmäisen kerran vuonna 930, ja se on maailman vanhimpia yhä toimivia kansanedustuslaitoksia. Kokouspaikka Þingvellir sijaitsee mannerlaattojen repeämässä.', source: 'https://fi.wikipedia.org/wiki/Islanti' },
-    'Islantilaisilla ei ole sukunimiä vaan vanhemman nimestä johdettu jälkiosa: Jónsdóttir on Jónin tytär ja Jónsson Jónin poika. Puhelinluettelo aakkostetaan etunimen mukaan.',
-    {
-      text: 'Maa savuaa kuin sammumaton nuotio, ja kuuma puro virtaa jäätikön vierestä. Laivamatka tänne oli pitkä ja kylmä; ymmärrän nyt, miksi saagat kirjoitettiin sisällä talven mittaan.',
-      voice: 'isoisa',
-    },
-  ],
+export const PAAKAUPUNKIEN_TIEDOT = {
   /*
    * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e01–e02, tarkistettu 14 kaupunkia 0 virhettä):
    * Tiedot (vain dataa). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa

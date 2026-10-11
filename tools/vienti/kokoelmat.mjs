@@ -152,9 +152,7 @@ function lautaKokoelmat(ns) {
   }
   const paikkatiedot = [];
   for (const [kaupunki, lista] of Object.entries(P.placeFacts)) {
-    // Pääkaupunkipisteen tiedot (EUROPE_FACTS[pisteen id], PT 11.10.2026) eivät viittaa laudan kaupunkiin.
-    const onKaupunki = P.cities.some((c) => c.id === kaupunki);
-    lista.forEach((f, i) => paikkatiedot.push({ id: `${kaupunki}:${i}`, kaupunki: onKaupunki ? kaupunki : null, data: f }));
+    lista.forEach((f, i) => paikkatiedot.push({ id: `${kaupunki}:${i}`, kaupunki, data: f }));
   }
   return {
     kaupungit: taulukko(`${LAUTA}#MAAILMANKARTTA.cities`,

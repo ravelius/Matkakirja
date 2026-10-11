@@ -47,8 +47,8 @@ lisaa('nahtavyysjutut.js', 'export const NAHTAVYYSJUTUT = {', kaupungit.filter((
 lisaa('saatiedot.js', 'export const SAATIEDOT = {', kaupungit.filter((k) => k.saatiedot).map((k) => r(k.id, k.saatiedot)),
   [...kom('Säärivit sääaseman normaaleista (tyokalu.mjs saa; asema ja kausi lahde-kentässä)'), 'Ilmastotaulukon artikkeli ja luku-päivä: haaran <id>/saa.json tausta.']);
 lisaa('europe-valokuvat.js', 'export const EUROPE_VALOKUVAT = {', kaupungit.filter((k) => k.valokuva).map((k) => r(k.id, k.valokuva)), kom('Valokuva (vain dataa: ei pysäkkiä, ei kuluttajaa vielä)'));
-lisaa('europe-questions.js', 'export const EUROPE_QUESTIONS = {', kaupungit.map((k) => r(k.id, k.kysymykset)), kom('Kysymykset (vain dataa: ei pysäkkiä, Päätoimittaja 06.4x)'));
-lisaa('europe-questions.js', 'export const EUROPE_FACTS = {', kaupungit.map((k) => r(k.id, k.tiedot)), kom('Tiedot (vain dataa)'));
+lisaa('europe-questions.js', 'export const PAAKAUPUNKIEN_KYSYMYKSET = {', kaupungit.map((k) => r(k.id, k.kysymykset)), kom('Kysymykset (vain dataa: ei pysäkkiä, Päätoimittaja 06.4x)'));
+lisaa('europe-questions.js', 'export const PAAKAUPUNKIEN_TIEDOT = {', kaupungit.map((k) => r(k.id, k.tiedot)), kom('Tiedot (vain dataa)'));
 lisaa('europe-artikkelit.js', 'export const EUROPE_ARTIKKELIT = {', kaupungit.map((k) => r(k.kaupunki.wiki, k.artikkeli)), kom('Artikkelit wiki-otsikolla (vain dataa)'));
 // Pisteen id → artikkeliavain (maakortin pääkaupunkirivin esittely, js/fokusmitat.js); taulu on tiedoston lopussa.
 lisaa('europe-artikkelit.js', 'export const PAAKAUPUNKIEN_ARTIKKELIAVAIMET = {', kaupungit.map((k) => r(k.id, k.kaupunki.wiki)),
