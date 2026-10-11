@@ -230,14 +230,14 @@ namespace Matkakirja.Peli
 
         /*
          * LINSSI AARTEEN LISÄKSI (omistaja 11.10.2026 klo 14.2x "Kyllä kaikkiin", PT). Aarteen oma sisältö (raha,
-         * Meripihkahuoneen etsintä) säilyy; linssi tulee sen lisäksi. 1) Astronautin kamera (satelliitti) pelaajan
-         * TOISESTA avatusta aarteesta (ensimmäinen on pöllö). 2) Kaupungin aarteen ensimmäinen avaus antaa kaupungin
-         * linssin (Linssiaarteet). Tähtitaivas → Lappi vasta, kun linssi on valmis. Pisteillä avautuminen
+         * Meripihkahuoneen etsintä) säilyy; linssi tulee sen lisäksi: kaupungin aarteen ensimmäinen avaus antaa
+         * kaupungin linssin (Linssiaarteet). ISS EI tule aarteesta (omistajan korjaus 11.10.2026: "Raketti on heti
+         * saatavilla kunhan pelaaja vain pääsee sinne ja on rahat laukaisuun"; ISS:lle vain raketilla Tromssasta,
+         * Kaupat.Raketti). Tähtitaivas → Lappi vasta, kun linssi on valmis. Pisteillä avautuminen
          * (TarkistaLinssikynnys) jää rinnalle. Ilmoitus Myonsi-tapahtumana (PeliOhjain.LinssiLoytyi → NUI:n kortti).
          * Pois oletuksena, jotta webin kultainen jälki pysyy; PeliOhjain kytkee päälle.
          */
         public bool LinssiaarteetKaytossa;
-        public const string ToisenAarteenLinssi = "satelliitti";
         public static readonly IReadOnlyDictionary<string, string> Linssiaarteet = new Dictionary<string, string>
         {
             ["alpit"] = "topografia",
@@ -247,12 +247,11 @@ namespace Matkakirja.Peli
             ["amsterdam"] = "taidemuseo",
         };
 
-        /// <summary>Löydön linssit (Matka.Loysi): toinen avattu aarre ja kaupungin linssiaarre; vain uudet ilmoitetaan.</summary>
+        /// <summary>Löydön linssi (Matka.Loysi): kaupungin linssiaarre; vain uusi ilmoitetaan.</summary>
         public List<LinssiMyonto> Linssiaarre(Pelaaja p, Loyto l)
         {
             var tulos = new List<LinssiMyonto>();
             if (!LinssiaarteetKaytossa || p == null || l == null) return tulos;
-            if (p.Loydot.Count >= 2) LisaaLinssiaarre(p, ToisenAarteenLinssi, tulos);
             if (!l.Pollo && l.Kaupunki != null && Linssiaarteet.TryGetValue(l.Kaupunki, out var tunnus)) LisaaLinssiaarre(p, tunnus, tulos);
             return tulos;
         }
