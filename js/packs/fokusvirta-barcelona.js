@@ -929,21 +929,4 @@ export const FOKUSVIRTA_BARCELONA = {
       id: 'juliste', sivu: 3, otsake: 'JULISTE', palkinto: 'juliste', visa: NAYTTELY_VISA,
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Ciutadellan linnoitus oli luovutettu kaupungille jo 1869, ja '
-      + 'kenttää muotoiltiin puistoksi. Aarnin luettelo sijoitti huoneen '
-      + 'sen kellareihin, joten vuokrasin lapion. Työmaalla oli jo '
-      + 'enemmän kuoppia kuin ehtisin kaivaa viikossa. Palautin lapion '
-      + 'käyttämättömänä; vuokra meni silti päivältä.',
-  },
 };

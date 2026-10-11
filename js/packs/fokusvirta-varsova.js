@@ -1129,21 +1129,4 @@ export const FOKUSVIRTA_VARSOVA = {
       id: 'juliste', sivu: 3, otsake: 'JULISTE', palkinto: 'juliste', visa: WIELICZKA_VISA,
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Ajattelin, että Itämeren meripihka tulee Veikselin mukana, ja '
-      + 'kävelin aamuusvassa Veikselin rautasillan yli katsomaan, mitä '
-      + 'joki tuo. Laskin kuusi jännettä ennen kuin muistin, että '
-      + 'Veikseli virtaa Itämerelle eikä sieltä. Kirjoitin luetteloon: '
-      + 'aarre ei kulje vastavirtaan.',
-  },
 };

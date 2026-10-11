@@ -786,21 +786,4 @@ export const FOKUSVIRTA_DUBROVNIK = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Luža-aukiolla Orlandon patsaan kyynärvarsi oli Ragusan '
-      + 'virallinen mitta, ja asetin oman käsivarteni sen viereen. Omani '
-      + 'osoittautui pidemmäksi. Kankaat mitattiin tällä kyynärällä, ja '
-      + 'arvelin, että meripihkakin olisi mitattu, jos sitä olisi koskaan '
-      + 'tullut. Sitä ei ollut koskaan tullut.',
-  },
 };

@@ -906,20 +906,4 @@ export const FOKUSVIRTA_TUKHOLMA = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Kysyin Meripihkahuoneesta Riddarholmenin kirkon suntiolta. Hän '
-      + 'muistutti, että Preussin kuningas lahjoitti huoneen tsaarille '
-      + 'liiton sinetiksi, ja liitto solmittiin Ruotsia vastaan. Täältä '
-      + 'sitä on turha etsiä, hän sanoi ja sulki oven nenäni edestä.',
-  },
 };

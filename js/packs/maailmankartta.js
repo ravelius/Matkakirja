@@ -1266,7 +1266,7 @@ export const MAAILMANKARTTA = {
     flightRegret: MAAILMA.texts.flightRegret,
     // Maailmankartan unohdettua aarretta ei ole nimetty (revitty sivu
     // jättää sen arvoitukseksi) — perityt Euroopan rivit kuuluttaisivat
-    // täällä Meripihkahuoneen, vaikka aarre löytyisi vaikka Perusta.
+    // täällä Kolme veljestä -riipuksen, vaikka aarre löytyisi vaikka Perusta.
     intro: 'Peli alkaa! Etsi unohdettu aarre ja kerää löytöjä ympäri maailmaa.',
     starFound: '◈ {name} löysi UNOHDETUN AARTEEN kaupungista {city}!',
     starToast: 'UNOHDETTU AARRE LÖYTYI!',

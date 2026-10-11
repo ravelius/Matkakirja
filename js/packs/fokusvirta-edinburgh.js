@@ -1278,21 +1278,4 @@ export const FOKUSVIRTA_EDINBURGH = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Calton Hillillä seisoo Parthenonin jäljitelmä, jonka rahat '
-      + 'loppuivat vuonna 1829. Aarnin mukaan kadonnut raha jättää aina '
-      + 'jäljen, joten kiersin pilarit ja koputin jokaista. Kaikki '
-      + 'kuulostivat kiveltä. Kirjasin luetteloon, ettei raha ollut '
-      + 'kadonnut vaan seisoi näkyvillä.',
-  },
 };

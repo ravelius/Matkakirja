@@ -99,21 +99,4 @@ export const FOKUSVIRTA_BRYSSEL = {
       europe: { x: 295, y: 556 },
     },
   },
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Brysselin Galgenbergin hirsipuumäellä kohosi oikeuspalatsin '
-      + 'työmaa, jota oli rakennettu vuodesta 1866. Kuvittelin, että '
-      + 'moinen perustus kätkee jotakin, ja laskeuduin kuoppaan '
-      + 'mittanauha kädessä. Kuoppa oli nauhaani syvempi. Työmies nosti '
-      + 'minut ylös ja kysyi, olinko syyttäjä vai syytetty.',
-  },
 };
