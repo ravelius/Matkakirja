@@ -261,7 +261,10 @@ namespace Matkakirja.Linssit.Museo
                 if ((eteen - p).Pituus < 0.2) eteen = kohde.Katse; else eteen = new V3(eteen.X, SilmaY, eteen.Z) + (eteen - p) * 2;
                 var paat = V3.Lerp(lahto.Katse, kohde.Katse, e);
                 double w = L > 3 ? Math.Sin(Math.PI * e) * 0.85 : 0;
-                Nykyinen = new MuseoAsento(p, V3.Lerp(paat, eteen, w));
+                // Katse vaakatasossa silmän korkeudella (simu 11.10. 09.42: korkealla roikkuvalta teokselta laskeutuessa katse jäi
+                // teoksen korkeudelle ja kamera katsoi kattoon); pysähdysten katseet ovat vaakasuoria, joten saapuminen ei muutu.
+                var kt = V3.Lerp(paat, eteen, w);
+                Nykyinen = new MuseoAsento(p, new V3(kt.X, p.Y, kt.Z));
                 if (VaiheenAika >= VaiheenKesto)
                 {
                     Nykyinen = new MuseoAsento(kohde.P, kohde.Katse);

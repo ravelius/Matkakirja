@@ -265,12 +265,13 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Sama(33, k.Pysahdykset.Count, "pysähdys jokaisella kertojan teoksella");
                 k.SovitaPysahdykset(ks);
                 var nahdyt = new System.Collections.Generic.List<string>(); int versio = k.Versio; var ed = k.Nykyinen.P; double maxNopeus = 0;
-                var seinassa = new System.Collections.Generic.List<string>();
+                var seinassa = new System.Collections.Generic.List<string>(); double maxPitch = 0;
                 for (int i = 0; i < 60000 && k.Vaihe != MuseoVaihe.Valmis; i++)
                 {
                     k.Paivita(0.05);
                     maxNopeus = Math.Max(maxNopeus, (k.Nykyinen.P - ed).Pituus / 0.05); ed = k.Nykyinen.P;
                     if (!k.SallittuKatselu(k.Nykyinen.P) && seinassa.Count < 5) seinassa.Add($"{k.Kohta}: {k.Nykyinen.P}");
+                    maxPitch = Math.Max(maxPitch, Math.Abs(k.Nykyinen.Suunta.Y));
                     if (k.Versio != versio)
                     {
                         versio = k.Versio;
@@ -281,6 +282,7 @@ namespace Matkakirja.Linssit.Testit
                     }
                 }
                 Oleta.Tosi(seinassa.Count == 0, $"{ks:F2}: matka ei seinän läpi: " + string.Join("; ", seinassa));
+                Oleta.Tosi(maxPitch < 0.05, $"{ks:F2}: katse vaakatasossa koko kierroksen (suurin |y| {maxPitch:F2}; ei kattoon)");
                 Oleta.Tosi(k.Vaihe == MuseoVaihe.Valmis, $"{ks:F2}: kierros läpi");
                 var odotus = lista.FindAll(id => !k.Puuttuvat.Contains(id));
                 Oleta.Sama(string.Join(",", odotus), string.Join(",", nahdyt), $"{ks:F2}: pysähdykset kierros.json:n järjestyksessä");
