@@ -21,6 +21,34 @@ namespace Matkakirja.Linssit.Museo
             return k.Lx * l * l / Math.Max(0.2, cos);
         }
 
+        /// <summary>MUSEOIDEN TAPA (omistaja 11.10. 10.0x: "parhaissa museoissa taulu valaistaan katsojan pään yläpuolelta niin että koko
+        /// taulu on valaistu tasaisemmin"): keila katossa teoksen edessä KattoKulmaAste pystysuorasta (katsojan pään yläpuolella, ei
+        /// heijastusta katsojan silmään), suunnattu teoksen keskelle, kartio kattaa teoksen kehyksineen (KattoKatto × puolilävistäjä)
+        /// leveällä reunahäivällä; lämmin (enintään KattoKelvin). Valaistus pidetään LR:n lx-tavoitteessa teoksen keskellä.
+        /// katto = osan katon korkeus (m); puoliW/puoliH = teoksen ulkomitat kehyksineen / 2.</summary>
+        public const double KattoKulmaAste = 30, KattoKatto = 1.1, KattoKelvin = 3000, KattoVaraM = 0.15;
+        public static Valokeila KattoKeila(Teospaikka p, double katto, double puoliW, double puoliH)
+        {
+            var c = p.Keskipiste; var n = p.Normaali; double nl = Math.Sqrt(n.X * n.X + n.Z * n.Z);
+            double nx = nl > 1e-9 ? n.X / nl : 0, nz = nl > 1e-9 ? n.Z / nl : 1;
+            double y = Math.Max(c.Y + puoliH + 0.3, katto - KattoVaraM), pudotus = y - c.Y;
+            double vaaka = pudotus * Math.Tan(KattoKulmaAste * Math.PI / 180);
+            var paikka = new Dioraama.V3(c.X + nx * vaaka, y, c.Z + nz * vaaka);
+            var d = c - paikka; double l = d.Pituus; var akseli = d * (1 / l);
+            // Kartio: kehyksen kulmista suurin kulma akselista (seinä on vino keilaan nähden), sisäkartio kattaa sen KattoKatto-varalla.
+            const double Haive = 0.35; double maks = 0;
+            foreach (var (sx, sy) in new[] { (-1, -1), (1, -1), (1, 1), (-1, 1) })
+            {
+                var q = new Dioraama.V3(c.X - nz * sx * puoliW, c.Y + sy * puoliH, c.Z + nx * sx * puoliW) - paikka;
+                double cos = (q.X * akseli.X + q.Y * akseli.Y + q.Z * akseli.Z) / q.Pituus;
+                maks = Math.Max(maks, Math.Acos(Math.Max(-1, Math.Min(1, cos))) * 180 / Math.PI);
+            }
+            double puoli = maks * KattoKatto / (1 - Haive);
+            var vanha = p.Valo;
+            return new Valokeila { Paikka = paikka, Suunta = akseli, PuolikulmaAste = Math.Min(85, puoli), Reunahaive = Haive,
+                                   Lx = vanha?.Lx ?? 150, Kelvin = Math.Min(KattoKelvin, vanha?.Kelvin ?? KattoKelvin) };
+        }
+
         /// <summary>Lukitun valotuksen kerroin 1 / Lmax (cd/m² → kuva-arvo).</summary>
         public static double Valotus(double ev100) => 1.0 / (1.2 * Math.Pow(2, ev100));
 

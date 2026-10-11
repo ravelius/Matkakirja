@@ -42,6 +42,10 @@ namespace Matkakirja.Natiivi
         public readonly Dictionary<string, MuseoTekstuurit.Kuvapaikka> Kuvapaikat = new Dictionary<string, MuseoTekstuurit.Kuvapaikka>();
         public int Kolmioita { get; private set; }
 
+        // Valon painotus (PT 11.10. 09.0x: "maalaus hehkuu seinää kirkkaampana ja sali tummuu reunoilta"): materiaalin _Valokerroin.
+        public const float SeinaToisto = 3f;
+        public const float TeosValo = 1.5f, GrafiikkaValo = 1.25f, KehysValo = 1.3f, SeinaValo = 0.72f, KultaHaja = 0.3f;
+
         public MuseoRakennus(Transform isa)
         {
             juuri = new GameObject("MuseoRakennus").transform;
@@ -95,6 +99,7 @@ namespace Matkakirja.Natiivi
         public void Rakenna(Sali s)
         {
             var halliMat = Materiaali("MuseoHalli", Color.white, 0.03f, 0.85f, 0, karkivari: true);
+            halliMat.SetFloat("_Valokerroin", SeinaValo);
             valiaikaiset.Add(Kappale("Halli", MuseoGeometria.Halli(s), halliMat, juuri, lineaarinenVari: false));
 
             var ikkunaMat = Materiaali("MuseoKattoikkuna", new Color(0.9f, 0.92f, 0.95f), 0, 1);
@@ -113,6 +118,23 @@ namespace Matkakirja.Natiivi
             foreach (var kv in s.KehysMateriaalit)
                 kehysMat[kv.Key] = Materiaali("Kehys " + kv.Key, Lin((kv.Value.R, kv.Value.G, kv.Value.B)), kv.Value.Metalli > 0.5 ? 0.9f : 0.05f, (float)kv.Value.Karheus, (float)kv.Value.Metalli);
             var paspisMat = kehysMat.TryGetValue("paspis", out var pm) ? pm : Materiaali("Paspis", new Color(0.82f, 0.78f, 0.69f), 0.02f, 0.9f);
+            paspisMat.SetFloat("_Valokerroin", GrafiikkaValo);
+            // Kehyksen materiaali profiilia kohti (aaltokuvio on profiilin ominaisuus): lakan kiilto ja lehtikulta ympäristöheijastuksella.
+            var kehysProfMat = new Dictionary<string, Material>();
+            Material KehysMat(string m, Kehysprofiili prof)
+            {
+                string avain = m + "|" + prof.Id;
+                if (kehysProfMat.TryGetValue(avain, out var x)) return x;
+                var pohja = kehysMat.TryGetValue(m, out var km) ? km : halliMat;
+                var mm = new Material(pohja) { name = "Kehys " + avain }; tuhottavat.Add(mm);
+                mm.SetFloat("_Ymparisto", 1f); mm.SetFloat("_Valokerroin", KehysValo); mm.SetFloat("_MetalliHaja", KultaHaja);
+                if (prof.AaltoNauhat.Count > 0 && prof.AaltoJaksoMm > 0 && prof.AaltoSyvyysMm > 0)
+                {
+                    double k = 2 * Math.PI / (prof.AaltoJaksoMm / 1000);
+                    mm.SetVector("_Aalto", new Vector4((float)k, (float)(prof.AaltoSyvyysMm / 4000 * k), 0, 0));   // kaltevuus = puolet amplitudi · k:sta (hillitty)
+                }
+                return kehysProfMat[avain] = mm;
+            }
             var tauluMat = Materiaali("Tekstitaulu", Lin(MuseoGeometria.Vari(s, "paneeli_kerma", TekstitauluVari)), 0.03f, 0.8f);
 
             foreach (var r in s.Ripustukset)
@@ -127,7 +149,10 @@ namespace Matkakirja.Natiivi
 
                 double w = r.Leveys, h = r.Korkeus, ulkoW = w, ulkoH = h;
                 if (paikka.Grafiikka) { ulkoW += 2 * PaspisM; ulkoH += 2 * PaspisM; }
-                var mat = Materiaali("Teos " + r.Teos.Id, Color.white, 0.03f, 0.5f);
+                var mat = Materiaali("Teos " + r.Teos.Id, Color.white, 0.02f, 0.65f);   // matta lakka: ei heijastusta (omistaja 11.10.)
+                mat.SetFloat("_Valokerroin", paikka.Grafiikka ? GrafiikkaValo : TeosValo);
+                var tk = MuseoNayttamo.U(paikka.Keskipiste);
+                mat.SetVector("_TeosKeski", new Vector4(tk.x, tk.y, tk.z, 1));   // tasainen valaistus koko kankaalle
                 mat.mainTexture = Paikkakuva(r.Teos);
                 TeosMateriaalit[r.Teos.Id] = mat;
                 s.Kehykset.TryGetValue(paikka.Kehysprofiili ?? s.Oletuskehys ?? "", out var prof);
@@ -138,11 +163,8 @@ namespace Matkakirja.Natiivi
                     Paketti = r.Teos.Paketti, PxLeveys = r.Teos.KuvaLeveys, PxKorkeus = r.Teos.KuvaKorkeus };
                 if (paikka.Grafiikka) Kappale("Passepartout", Suorakaide(ulkoW, ulkoH, kangas - 0.0008), paspisMat, go.transform, true, kaannaZ: true);
                 if (prof != null)
-                {
-                    var km = kehysMat.TryGetValue(prof.Materiaali ?? "musta", out var x) ? x : halliMat;
-                    var kv = MuseoGeometria.Kehys(prof, ulkoW, ulkoH, (1, 1, 1));
-                    Kappale("Kehys", kv, km, go.transform, true, kaannaZ: true);
-                }
+                    foreach (var kv in MuseoGeometria.KehysOsat(prof, ulkoW, ulkoH, (1, 1, 1)))
+                        Kappale("Kehys " + kv.Key, kv.Value, KehysMat(kv.Key, prof), go.transform, true, kaannaZ: true);
             }
             VeistosPohja = Materiaali("Veistos marmori", new Color(0.86f, 0.84f, 0.80f).linear, 0.04f, 0.35f);
             var jalustaMat = Materiaali("Jalusta", Lin(MuseoGeometria.Vari(s, "kivi_hiekka", (0.77, 0.73, 0.63))), 0.03f, 0.8f);
@@ -303,6 +325,7 @@ namespace Matkakirja.Natiivi
                     yield return MuseoTekstuurit.Hae(kansio + "tekstuurit/" + o.Pinta + ".astcm", b => d = b);
                     if (juuri == null) yield break;
                     tex = d != null ? DioraamaAstc.Lue(d, "Museo " + o.Pinta, out _, TextureWrapMode.Repeat) : null;
+                    if (tex != null) { tex.filterMode = FilterMode.Trilinear; tex.anisoLevel = 4; }   // vino seinä terävänä kuten JPEG-varalla
                 }
                 else tex = o.Kuva < malli.Kuvat.Count && malli.Kuvat[o.Kuva] != null ? Jpeg(malli.Kuvat[o.Kuva], "Museo " + o.Pinta + " (JPEG)", TextureWrapMode.Repeat) : null;
                 tekstuurit[o.Pinta] = tex;
@@ -348,6 +371,10 @@ namespace Matkakirja.Natiivi
             else if (p == "penkki_nahka") karheus = 0.5f;
             else if (p.StartsWith("damasti", StringComparison.Ordinal)) karheus = 0.6f;
             var m = Materiaali("Sali " + p, c, kiilto, karheus, metalli);
+            m.SetFloat("_Valokerroin", SeinaValo);
+            // Seinän terävyys (omistaja 11.10. 10.0x "miksi seinä näkyy noin epäterävänä"): rijks_harmaa toistui 2 m:n välein (2 mm/px);
+            // pysähdysetäisyydeltä iPadin pikseli on ~0,3 mm → 3× tiheämpi toisto (0,67 mm/px). Kuvioidut (damasti ym.) säilyttävät mittakaavansa.
+            if (p == "rijks_harmaa") m.mainTextureScale = new Vector2(SeinaToisto, SeinaToisto);
             // Lattiaheijastus (juna 180): parketti hillitysti, kiillotettu marmori selvemmin (MuseoNayttamo.PaivitaHeijastus).
             if (p.StartsWith("parketti", StringComparison.Ordinal)) m.SetFloat("_Heijastus", LattiaHeijastusParketti);
             else if (p.StartsWith("kivi_marmori", StringComparison.Ordinal)) m.SetFloat("_Heijastus", LattiaHeijastusMarmori);

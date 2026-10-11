@@ -154,6 +154,7 @@
 //   ui matkakirja auki                        avaa lapuksi alkaneen kortin (web asetaPaivakirjanKoko(false))
 //                                             Saapumistekstit (skeema 1.24): lokiin valokuvien määrä ja äänite (kairo)
 //                                             tai lukijan pituus; esim. kairo, fes (havainto kokoelmasta)
+//   ui museotekstitys                        museon kertojan tekstityskaistaleen tila (teksti, paikka)
 //   ui kartuscha [ISO3] [auki] | pois         kartuscha maalle ilman peliä (oletus ITA); raukeaa pelaajan maan vaihtuessa
 //   ui kartuscha lippu vanha|kulma           lipputangon paikka: vanha itäreunan ankkuri tai maan oikea yläkulma (29.9.)
 //   ui kartuscha pkkuvat                     pääkaupungin havainnekuvien rivi (määrä ja paikka; skeema 1.61)
@@ -1330,6 +1331,8 @@ namespace Matkakirja.Natiivi
                     if (ali == "tila") return ui.Kartuscha.MusteTesti("tila", null) + "; " + ui.MaakuntaNimet.Kuvaus();
                     return ui.Kartuscha.MusteTesti(ali, mo.Length > 1 ? mo[1].Trim() : null);
                 }
+                case "museotekstitys":   // museon kertojan tekstityskaistale (LS2 11.10., juna 182)
+                    return "=" + (ui.Linssit?.Museo?.VirkeKuvaus() ?? "museo-tekstitys: ei museota");
                 case "kartuscha":
                 {
                     var ks = loput.Split(' ');

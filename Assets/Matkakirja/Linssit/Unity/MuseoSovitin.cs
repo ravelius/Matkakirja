@@ -64,6 +64,23 @@ namespace Matkakirja.Natiivi
         bool jpgKaynnissa;
         Sali sali;
         public MuseoKierros Kierros { get; private set; }
+
+        // --- KERTOJAN TEKSTITYS (PT 11.10. 09.0x, juna 182): oletus POIS (Raamattu PUHE ÄÄNENÄ, EI KUPLINA); pelaaja kytkee Linssivalikon
+        // Tekstitys-riviltä (Natiivi-UI: Valikko.NaytaTekstitys(() => MuseoSovitin.TekstitysPaalla, MuseoSovitin.AsetaTekstitys)).
+        const string TekstitysAvain = "museo-tekstitys";
+        static bool? tekstitys;
+        public static bool TekstitysPaalla { get { tekstitys ??= PlayerPrefs.GetInt(TekstitysAvain, 0) == 1; return tekstitys.Value; } }
+        public static event Action<bool> TekstitysMuuttui;
+        public static void AsetaTekstitys(bool paalla)
+        {
+            tekstitys = paalla; PlayerPrefs.SetInt(TekstitysAvain, paalla ? 1 : 0); PlayerPrefs.Save();
+            LinssiOhjain.Instanssi?.Kirjaa("museo: tekstitys " + (paalla ? "päällä" : "pois"));
+            TekstitysMuuttui?.Invoke(paalla);
+        }
+        /// <summary>Kertojan soiva virke tekstitykseen (null = ei mitään näytettävää: tekstitys pois, kertoja hiljaa tai tauko virkkeiden välissä).</summary>
+        public static string KertojanVirke { get; private set; }
+        /// <summary>Virke vaihtui (UI päivittää tekstityskaistaleen).</summary>
+        public static event Action<string> KertojanVirkeVaihtui;
         int naytettyVersio = -1;
         readonly MuseoKertoja kertoja = new MuseoKertoja();
         int kertojaKohta = -1;
@@ -185,6 +202,9 @@ namespace Matkakirja.Natiivi
             else Kierros.Paivita(dt);
             if (nayttamo.Kamera != null) Kierros.SovitaPysahdykset(nayttamo.Kamera.aspect);   // vain muuttuessa (kierto, avaus)
             nayttamo.Paivita(sali, Kierros.Nykyinen, dt);
+            var korostus = Kierros.Vaihe == MuseoVaihe.Pysahtyy ? Kierros.NykyinenTeos : null;
+            var (kw, kh) = korostus != null ? Kierros.Ulkomitat(korostus) : (0, 0);
+            nayttamo.Korosta(korostus, kw / 2, kh / 2, dt);
             tekstuurit?.Paivita(nayttamo.Kamera, Kierros.NykyinenTeos?.Teos.Id, teosjarjestys, Kierros.Kohta);
             veistokset?.Paivita(nayttamo.Kamera);
             // Kertoja: kierroksen pysähdys soittaa teoksen äänitteen kerran saapuessa ja kestää vähintään sen ajan; matkaan lähtö pysäyttää.
@@ -198,6 +218,7 @@ namespace Matkakirja.Natiivi
                 }
             }
             else if (Kierros.Vaihe == MuseoVaihe.Siirtyy) { kertojaKohta = -1; kertoja.Pysayta(); }
+            PaivitaVirke();
             var huone = sali.HuonePisteessa(Kierros.Nykyinen.P, NykyinenHuone);
             if (huone != NykyinenHuone)
             {
@@ -222,10 +243,26 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        void PaivitaVirke()
+        {
+            string v = null, soiva = kertoja.Soiva;
+            if (TekstitysPaalla && soiva != null)
+            {
+                if (kertoja.TarvitseeLatauksen(soiva)) o.StartCoroutine(kertoja.LataaTekstitys(soiva, o.Kirjaa));
+                var p = Puhe.Instanssi;
+                if (p != null && p.Soi) v = kertoja.Tekstitys(soiva)?.Virke(p.Aika);
+            }
+            if (v == KertojanVirke) return;
+            KertojanVirke = v;
+            if (v != null) o.Kirjaa("museo: virke " + (v.Length > 48 ? v.Substring(0, 48) + "…" : v));   // QA: tekstitys soi tahdissa
+            KertojanVirkeVaihtui?.Invoke(v);
+        }
+
         public void Sulje()
         {
             if (!Auki) return;
             Auki = false;
+            if (KertojanVirke != null) { KertojanVirke = null; KertojanVirkeVaihtui?.Invoke(null); }
             if (Aktiivinen == this) Aktiivinen = null;
             EsittelyAuki = false; HuoneKorttiAuki = false; NykyinenHuone = null;
             kertoja.Pysayta();
@@ -286,7 +323,7 @@ namespace Matkakirja.Natiivi
             if (!Auki || Kierros == null) return "museo: kiinni";
             var r = Kierros.NykyinenTeos; var a = Kierros.Nykyinen;
             return $"museo: {Kierros.Vaihe}{(Kierros.Tauolla ? " tauko" : "")} {Kierros.Kohta + 1}/{Kierros.Pysahdykset.Count}, paikka {a.P}, suunta {a.Suunta}, " +
-                   $"osa {sali.OsaPisteessa(a.P)?.Id ?? "-"}, teos {(r == null ? "-" : r.Teos.Id + " " + r.Teos.Otsikko)}, esittely {(EsittelyAuki ? "auki" : "kiinni")}, huone {NykyinenHuone?.Id ?? "-"}{(HuoneKorttiAuki ? " (kortti)" : "")}, valotuskorjaus {MuseoNayttamo.ValotusKorjausEv:+0.0;-0.0} EV";
+                   $"osa {sali.OsaPisteessa(a.P)?.Id ?? "-"}, teos {(r == null ? "-" : r.Teos.Id + " " + r.Teos.Otsikko)}, esittely {(EsittelyAuki ? "auki" : "kiinni")}, tekstitys {(TekstitysPaalla ? "päällä" : "pois")}, huone {NykyinenHuone?.Id ?? "-"}{(HuoneKorttiAuki ? " (kortti)" : "")}, valotuskorjaus {MuseoNayttamo.ValotusKorjausEv:+0.0;-0.0} EV";
         }
 
         static double L(string s) => double.Parse(s, CultureInfo.InvariantCulture);
@@ -346,6 +383,8 @@ namespace Matkakirja.Natiivi
                 case "seuraava": Kierros.Seuraava(); break;
                 case "edellinen": Kierros.Edellinen(); break;
                 case "tauko": Kierros.Tauko(osat.Length < 3 || osat[2] != "0"); break;
+                case "himmennys" when osat.Length > 2: MuseoNayttamo.HimmennysPaalla = osat[2] != "0"; o.Kirjaa("museo: himmennys " + (MuseoNayttamo.HimmennysPaalla ? "päällä" : "pois")); break;
+                case "tekstitys" when osat.Length > 2: AsetaTekstitys(osat[2] == "1" || osat[2] == "paalla"); break;
                 case "siirry" when osat.Length > 2: Kierros.Siirry(int.Parse(osat[2], CultureInfo.InvariantCulture) - 1); break;
                 case "esittele": Esittele(osat.Length > 2 ? osat[2] != "0" : (bool?)null); break;
                 case "huone": HuoneKortti(osat.Length > 2 ? osat[2] != "0" : (bool?)null); break;
@@ -384,6 +423,9 @@ namespace Matkakirja.Natiivi
     {
         public static string Juuri = "https://media.matkakirja.app/aanet/taidemuseo-kertoja-v2/";   // v2: tempo 1,10× (Pelikoodari 11.10.)
         readonly Dictionary<string, (string Url, double Kesto)> aanet = new Dictionary<string, (string, double)>();
+        readonly Dictionary<string, string> ajat = new Dictionary<string, string>();
+        readonly Dictionary<string, MuseoTekstitys> tekstitykset = new Dictionary<string, MuseoTekstitys>();
+        readonly HashSet<string> ladataan = new HashSet<string>();
         public string Soiva { get; private set; }
         public int Maara => aanet.Count;
 
@@ -403,6 +445,8 @@ namespace Matkakirja.Natiivi
                         string id = Matkakirja.Peli.MiniJson.Teksti(a, "id"), aani = Matkakirja.Peli.MiniJson.Teksti(a, "aani");
                         if (!string.IsNullOrEmpty(id) && !string.IsNullOrEmpty(aani) && !aani.Contains(".."))
                             aanet[id] = (Juuri + aani, Matkakirja.Peli.MiniJson.Luku(a, "kesto_s") ?? 0);
+                        string aj = Matkakirja.Peli.MiniJson.Teksti(a, "ajat");
+                        if (!string.IsNullOrEmpty(id) && !string.IsNullOrEmpty(aj) && !aj.Contains("..")) ajat[id] = Juuri + aj;
                     }
                     kirjaa?.Invoke($"museo: kertoja {aanet.Count} äänitettä");
                 }
@@ -411,6 +455,27 @@ namespace Matkakirja.Natiivi
         }
 
         public bool On(string id) => id != null && aanet.ContainsKey(id);
+
+        /// <summary>Teoksen tekstitys (null, kunnes ladattu tai jos ajoja ei ole). Tarve() käynnistää latauksen kerran.</summary>
+        public MuseoTekstitys Tekstitys(string id) => id != null && tekstitykset.TryGetValue(id, out var t) ? t : null;
+        public bool TarvitseeLatauksen(string id) => id != null && ajat.ContainsKey(id) && !tekstitykset.ContainsKey(id) && !ladataan.Contains(id);
+
+        /// <summary>Lataa teoksen sanojen ajat (vain kun pelaaja on kytkenyt tekstityksen; noin 5–10 kt).</summary>
+        public System.Collections.IEnumerator LataaTekstitys(string id, Action<string> kirjaa)
+        {
+            if (!ajat.TryGetValue(id ?? "", out var url) || !ladataan.Add(id)) yield break;
+            using (var r = UnityEngine.Networking.UnityWebRequest.Get(url))
+            {
+                yield return r.SendWebRequest();
+                MuseoTekstitys t = null;
+                if (r.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
+                    try { t = MuseoTekstitys.Lue(r.downloadHandler.text); } catch (Exception e) { kirjaa?.Invoke($"museo: tekstitys {id} virheellinen: {e.Message}"); }
+                else kirjaa?.Invoke($"museo: tekstitys {id} ei latautunut ({r.error})");
+                tekstitykset[id] = t;
+                ladataan.Remove(id);
+                if (t != null) kirjaa?.Invoke($"museo: tekstitys {id} {t.Virkkeet.Count} virkettä");
+            }
+        }
         public double Kesto(string id) => id != null && aanet.TryGetValue(id, out var a) ? a.Kesto : 0;
 
         public bool Soita(string id, bool pyynnosta)

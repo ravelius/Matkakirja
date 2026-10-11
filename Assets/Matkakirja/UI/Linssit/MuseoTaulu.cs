@@ -14,8 +14,10 @@
 //    tultaessa huonekortti näkyy tiiviinä (vain nimi) Nimikyltti.NakyyMs ja häivytetään. Teksti (2–3 virkettä) vain napautuksesta:
 //    kyltin napautus tai Esittele-nappi, kun teosta ei ole (MuseoSovitin.HuoneKortti). Sama paikka, sulku ja kierroksen tauko
 //    kuin esittelyssä; kortit sulkevat toisensa (MuseoSovitin).
-//  - Poistu (PT 10.10. museo2, EI TURHIA ✕-NAPPEJA): oikeassa yläkulmassa linssien ✕:n paikalla sama nappirivi ja nappi kuin
-//    Myllyssä ja oppaan latausruudussa (mk-kortti__napit + mk-nappi--toiminto, ui.pelit.poistu); LinssiUi piilottaa ✕:n museon ajaksi.
+//  - ☰ (PT 11.10. 09.1x, juna 182; ennen Poistu-nappi, PT 10.10. museo2 EI TURHIA ✕-NAPPEJA): oikeassa yläkulmassa linssien ✕:n
+//    paikalla LinssiValikko riveillä Tekstitys ja Poistu linssistä kuten oppaassa; LinssiUi piilottaa ✕:n museon ajaksi.
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using Matkakirja.Linssit.Museo;
 using UnityEngine;
@@ -37,7 +39,7 @@ namespace Matkakirja.Natiivi
         string korttiTeos;
         EventCallback<PointerDownEvent> ohi;
 
-        /// <summary>Museo auki (LinssiUi.PaivitaSulku: ✕ pois, Poistu-nappi tilalle).</summary>
+        /// <summary>Museo auki (LinssiUi.PaivitaSulku: ✕ pois, ☰ tilalle).</summary>
         public bool Auki => auki;
 
         public MuseoTaulu(UiKerros kerros)
@@ -94,17 +96,19 @@ namespace Matkakirja.Natiivi
                 MuseoSovitin.Esittele();
             }, ryhma);
 
-            poistuRivi = Rakenne.El("mk-kortti__napit", turva, PickingMode.Ignore);
-            poistuRivi.style.position = Position.Absolute;
-            poistuRivi.style.top = 16; poistuRivi.style.right = 16;
-            poistuRivi.style.display = DisplayStyle.None;
-            // Tumma sali: KORTTI-pohjan tumma variantti (vaalea reunus ja teksti), muuten nappi ei erotu (museo2-arkki 15.4x).
-            poistuRivi.AddToClassList("mk-kortti-kehys--tumma");
-            Kirjasimet.Aseta(Rakenne.Nappi(Kieli.T("ui.pelit.poistu"), "mk-nappi--toiminto", () =>
+            // ☰ POISTUN TILALLE (PT 11.10. 09.1x, juna 182): olemassa oleva LinssiValikko (OHJAUSNAPPI-valikko) riveillä Tekstitys
+            // (kertojan tekstitys, oletus pois; Raamattu PUHE ÄÄNENÄ) ja Poistu linssistä, kuten oppaassa. Paikka kuten Poistulla.
+            Valikko = new LinssiValikko(kerros, new List<(string, Action)>(), Kieli.T("ui.opas.poistu-linssista"), () =>
             {
                 Debug.Log("MATKAKIRJA museo: Poistu");
                 UiNakymat.Hae()?.Linssit?.SuljeLinssi();
-            }, poistuRivi), Kirjasin.Kone);
+            }, aanet: false);
+            Valikko.NaytaTekstitys(() => MuseoSovitin.TekstitysPaalla, MuseoSovitin.AsetaTekstitys);
+            poistuRivi = Rakenne.El(null, turva, PickingMode.Ignore);
+            poistuRivi.style.position = Position.Absolute;
+            poistuRivi.style.top = 16; poistuRivi.style.right = 16;
+            poistuRivi.style.display = DisplayStyle.None;
+            poistuRivi.Add(Valikko.Nappi);
 
             korttiJuuri = Rakenne.El("mk-museo-kortti", turva, PickingMode.Ignore);
             korttiJuuri.style.position = Position.Absolute;
@@ -164,8 +168,17 @@ namespace Matkakirja.Natiivi
             MuseoSovitin.HuoneVaihtui += HuoneVaihtui;
             Nappaimisto.Rekisteroi("museo-huone", 60, () => MuseoSovitin.HuoneKorttiAuki, null, null, () => MuseoSovitin.HuoneKortti(false));
 
+            // KERTOJAN TEKSTITYS (LS2 11.10., PT: juna 182, oletus pois; Raamattu PUHE ÄÄNENÄ): Ihmisen matkan kertomus-pohja
+            // (mk-aikajana-kertomus: tumma läpikuultava laatikko, keskitetty teksti) ohjausnappien yläpuolelle, ei teoksen päälle.
+            virke = Rakenne.El("mk-aikajana-kertomus", turva, PickingMode.Ignore);
+            virke.style.display = DisplayStyle.None;
+            virkeLaatikko = Rakenne.El("mk-aikajana-kertomus__laatikko", virke, PickingMode.Ignore);
+            virkeTeksti = Rakenne.Teksti("", "mk-aikajana-kertomus__teksti", virkeLaatikko);
+            Kirjasimet.Aseta(virkeTeksti, Kirjasin.Luku);
+            MuseoSovitin.KertojanVirkeVaihtui += _ => PaivitaVirke();
+
             MuseoSovitin.Vaihtui += Paivita;
-            kerros.JokaRuutu += () => { if (auki) { AsetteleKortti(); AsetteleNimi(); } };
+            kerros.JokaRuutu += () => { if (auki) { AsetteleKortti(); AsetteleNimi(); AsetteleVirke(); } };
         }
 
         void AsetaKuva(RenderTexture kuva) =>
@@ -176,7 +189,7 @@ namespace Matkakirja.Natiivi
         /// otsikko tyylikirjan Otsikko-koossa, jolloin pisimmätkin nimet (Staalmeesters, 56 merkkiä) mahtuvat kahdelle riville
         /// Poistun vasemmalle puolelle; leveämmällä Nimiö kuten ennen.
         /// MATALA vaakaruutu (puhelin vaakana; PT 11.10. 00.3x KIIRE, omistaja TF 180: otsikko peitti taulun yläosan): nimikyltti
-        /// ylös (10 pt) ja pienemmäksi, jolloin kyltti vie vain ylimmän ~15 %:n ja taulu (MuseoKierros.Katseluasento: 16–81 %) jää vapaaksi.
+        /// ylös (10 pt) ja pienemmäksi, jolloin kyltti vie vain ylimmän ~15 %:n ja taulu (MuseoKierros.Katseluasento: teos täyttää 95 % rajaavasta suunnasta, omistaja 11.10.) jää vapaaksi.
         /// </summary>
         void AsetteleNimi()
         {
@@ -242,6 +255,33 @@ namespace Matkakirja.Natiivi
             });
         }
 
+        /// <summary>Museon ☰ (Tekstitys, Poistu linssistä).</summary>
+        public readonly LinssiValikko Valikko;
+        readonly VisualElement virke, virkeLaatikko;
+        readonly Label virkeTeksti;
+
+        /// <summary>Kertojan virke kaistaleelle (MuseoSovitin.KertojanVirke; null = piiloon). Esittely- ja huonekortti peittävät sen.</summary>
+        void PaivitaVirke()
+        {
+            string v = auki && !korttiNakyy && !huoneAuki ? MuseoSovitin.KertojanVirke : null;
+            if (v != null && virkeTeksti.text != v) virkeTeksti.text = v;
+            var d = v != null ? DisplayStyle.Flex : DisplayStyle.None;
+            if (virke.style.display != d) virke.style.display = d;
+            virkeLaatikko.EnableInClassList("mk-nakyy", v != null);
+        }
+
+        /// <summary>Kaistale ohjausnappien yläpuolelle (8 pt väli); pohjan bottom 14 px on aikaselaimen paikka, museossa napit.</summary>
+        void AsetteleVirke()
+        {
+            if (virke.style.display == DisplayStyle.None || virke.parent == null || ryhma.resolvedStyle.display == DisplayStyle.None) return;
+            float ala = virke.parent.worldBound.yMax - ryhma.worldBound.yMin + 8f;
+            if (!float.IsNaN(ala) && Mathf.Abs(virke.resolvedStyle.bottom - ala) > 0.5f) virke.style.bottom = ala;
+        }
+
+        /// <summary>Testi (`ui museo tekstitys`): kaistaleen tila.</summary>
+        public string VirkeKuvaus() => virke.style.display == DisplayStyle.None ? "museo-tekstitys: piilossa (tekstitys " + (MuseoSovitin.TekstitysPaalla ? "päällä" : "pois") + ")"
+            : $"museo-tekstitys: \"{(virkeTeksti.text.Length > 40 ? virkeTeksti.text.Substring(0, 40) + "…" : virkeTeksti.text)}\" @ {virkeLaatikko.worldBound.xMin:0},{virkeLaatikko.worldBound.yMin:0} {virkeLaatikko.worldBound.width:0}×{virkeLaatikko.worldBound.height:0}";
+
         void Paivita()
         {
             var s = MuseoSovitin.Aktiivinen;
@@ -250,7 +290,7 @@ namespace Matkakirja.Natiivi
             ryhma.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
             poistuRivi.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
             if (UiNakymat.Olemassa) UiNakymat.Hae().Linssit?.PaivitaSulku();
-            if (!auki) { otsikko.style.display = DisplayStyle.None; NaytaKortti(false); NaytaHuone(false); return; }
+            if (!auki) { Valikko.Sulje(); otsikko.style.display = DisplayStyle.None; NaytaKortti(false); NaytaHuone(false); PaivitaVirke(); return; }
             var k = s.Kierros;
             bool vapaana = k != null && k.Vaihe == MuseoVaihe.Vapaa;
             nakyma.pickingMode = vapaana ? PickingMode.Ignore : PickingMode.Position;
@@ -284,6 +324,7 @@ namespace Matkakirja.Natiivi
             }
             NaytaKortti(MuseoSovitin.EsittelyAuki && r != null);
             NaytaHuone(MuseoSovitin.HuoneKorttiAuki && s.NykyinenHuone != null);
+            PaivitaVirke();
         }
 
         void HuoneVaihtui(Huone h)

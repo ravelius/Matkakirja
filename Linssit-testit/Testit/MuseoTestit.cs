@@ -228,11 +228,12 @@ namespace Matkakirja.Linssit.Testit
                     var p = a.Value.P; var d = a.Value.Suunta; var n = r.Paikka.Normaali;
                     Oleta.Tosi(Math.Abs(d.Y) < 1e-9 && d.X * n.X + d.Z * n.Z < -0.999, $"{r.Teos.Id}: katse vaakasuoraan kohtisuoraan seinään");
                     double et = (p - r.Paikka.Keskipiste).Pituus;
-                    var (w, h) = k.Ulkomitat(r);   // kehys ja passepartout mukana
+                    var (w, h) = k.Nakoala(r);   // omistaja 11.10. 09.2x: kehyksen sisäreuna täyttää ruudun (95 %), ei rajausta
                     double fh = h / (2 * et * t), fw = w / (2 * et * t * ks);
                     Oleta.Tosi(fh <= MuseoKierros.TayttoKorkeus + 1e-6 && fw <= MuseoKierros.TayttoLeveys + 1e-6, $"{r.Teos.Id} {ks:F2}: mahtuu ({fh:F2} × {fw:F2})");
-                    Oleta.Tosi(Math.Abs(p.Y - r.Paikka.Keskipiste.Y) < 0.04 * et + 1e-6, $"{r.Teos.Id}: silmä teoksen keskikorkeudella ({p.Y:F2} / {r.Paikka.Keskipiste.Y:F2})");
-                    if (fh < 0.50 && fw < 0.70) lyhyet.Add($"{r.Teos.Id} {ks:F2} {fh:F2}/{fw:F2} {et:F1} m");
+                    Oleta.Tosi(Math.Abs(p.Y - r.Paikka.Keskipiste.Y) < 1e-6, $"{r.Teos.Id}: silmä teoksen keskikorkeudella ({p.Y:F2} / {r.Paikka.Keskipiste.Y:F2})");
+                    Oleta.Tosi(et >= k.LahinEtaisyys(r) - 1e-6, $"{r.Teos.Id}: kehys ei leikkaudu lähitasoon ({et:F2} m)");
+                    if (Math.Max(fh, fw) < 0.85 && et > k.LahinEtaisyys(r) + 0.06) lyhyet.Add($"{r.Teos.Id} {ks:F2} {fh:F2}/{fw:F2} {et:F1} m");
                 }
             Oleta.Tosi(lyhyet.Count == 0, "teos täyttää ruudun (huone ei rajaa liikaa): " + string.Join("; ", lyhyet));
             k.SovitaPysahdykset(2622.0 / 1206);
@@ -264,12 +265,13 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Sama(33, k.Pysahdykset.Count, "pysähdys jokaisella kertojan teoksella");
                 k.SovitaPysahdykset(ks);
                 var nahdyt = new System.Collections.Generic.List<string>(); int versio = k.Versio; var ed = k.Nykyinen.P; double maxNopeus = 0;
-                var seinassa = new System.Collections.Generic.List<string>();
+                var seinassa = new System.Collections.Generic.List<string>(); double maxPitch = 0;
                 for (int i = 0; i < 60000 && k.Vaihe != MuseoVaihe.Valmis; i++)
                 {
                     k.Paivita(0.05);
                     maxNopeus = Math.Max(maxNopeus, (k.Nykyinen.P - ed).Pituus / 0.05); ed = k.Nykyinen.P;
-                    if (!k.Sallittu(k.Nykyinen.P) && seinassa.Count < 5) seinassa.Add($"{k.Kohta}: {k.Nykyinen.P}");
+                    if (!k.SallittuKatselu(k.Nykyinen.P) && seinassa.Count < 5) seinassa.Add($"{k.Kohta}: {k.Nykyinen.P}");
+                    maxPitch = Math.Max(maxPitch, Math.Abs(k.Nykyinen.Suunta.Y));
                     if (k.Versio != versio)
                     {
                         versio = k.Versio;
@@ -280,6 +282,7 @@ namespace Matkakirja.Linssit.Testit
                     }
                 }
                 Oleta.Tosi(seinassa.Count == 0, $"{ks:F2}: matka ei seinän läpi: " + string.Join("; ", seinassa));
+                Oleta.Tosi(maxPitch < 0.05, $"{ks:F2}: katse vaakatasossa koko kierroksen (suurin |y| {maxPitch:F2}; ei kattoon)");
                 Oleta.Tosi(k.Vaihe == MuseoVaihe.Valmis, $"{ks:F2}: kierros läpi");
                 var odotus = lista.FindAll(id => !k.Puuttuvat.Contains(id));
                 Oleta.Sama(string.Join(",", odotus), string.Join(",", nahdyt), $"{ks:F2}: pysähdykset kierros.json:n järjestyksessä");
@@ -290,8 +293,112 @@ namespace Matkakirja.Linssit.Testit
             for (int i = 0; i < 600 && m.Vaihe != MuseoVaihe.Pysahtyy; i++) m.Paivita(0.05);
             m.Seuraava(); Oleta.Tosi(m.Kohta == 1 && m.Vaihe == MuseoVaihe.Siirtyy, "⏭ seuraavaan");
             m.Siirry(m.Pysahdykset.Count - 1); bool ulkona = false;
-            for (int i = 0; i < 20000 && m.Vaihe != MuseoVaihe.Pysahtyy; i++) { m.Paivita(0.05); ulkona |= !m.Sallittu(m.Nykyinen.P); }
+            for (int i = 0; i < 20000 && m.Vaihe != MuseoVaihe.Pysahtyy; i++) { m.Paivita(0.05); ulkona |= !m.SallittuKatselu(m.Nykyinen.P); }
             Oleta.Tosi(!ulkona && m.NykyinenTeos.Teos.Id == "SK-C-5", "Siirry Yövartioon oviaukoista");
+        }
+
+        [Testi] static void VapaaanLaskeutuuPehmeasti()
+        {
+            // PT 11.10. 09.0x: vapaaseen kulkuun siirryttäessä silmä ei hyppää pysähdyksen korkeudelta 1,6 m:iin vaan laskeutuu.
+            var s = Alankomaat(); var k = new MuseoKierros(s, KierrosTeokset()); k.SovitaPysahdykset(4.0 / 3);
+            int kg = k.Pysahdykset.Count - 2;   // korkealla roikkuva kabinettigallerian teos (SK-A-44)
+            k.Siirry(kg); for (int i = 0; i < 20000 && k.Vaihe != MuseoVaihe.Pysahtyy; i++) k.Paivita(0.05);
+            double y0 = k.Nykyinen.P.Y;
+            Oleta.Tosi(y0 > MuseoKierros.SilmaY + 0.5, $"pysähdys korkealla ({y0:F2} m)");
+            k.Vapaa();
+            Oleta.Tosi(Math.Abs(k.Nykyinen.P.Y - y0) < 1e-9, "ei hyppyä vapaaseen siirryttäessä");
+            double ed = y0, maxAskel = 0;
+            for (int i = 0; i < 60; i++) { k.VapaaLiike(0, 0, 0, 0, 0.05); maxAskel = Math.Max(maxAskel, Math.Abs(k.Nykyinen.P.Y - ed)); ed = k.Nykyinen.P.Y; }
+            Oleta.Tosi(maxAskel < 0.25, $"laskeutuminen pehmeä (suurin askel {maxAskel:F3} m / 50 ms)");
+            Oleta.Tosi(Math.Abs(k.Nykyinen.P.Y - MuseoKierros.SilmaY) < 0.01, $"3 s:ssa kävelykorkeudella ({k.Nykyinen.P.Y:F3})");
+            Oleta.Tosi(k.Sallittu(k.Nykyinen.P), $"teoksen edestä liukui kävelyalueelle ({k.Nykyinen.P})");
+            for (int i = 0; i < 20; i++) k.VapaaLiike(1, 0, 0, 0, 0.05);
+            Oleta.Tosi(k.Sallittu(k.Nykyinen.P), "kävely toimii");
+            var r = s.Ripustukset.Find(x => x.Teos.Id == "SK-C-5");
+            Oleta.Tosi(k.NaytaTeos(r), "QA: teos katseluasentoon");
+            double yq = k.Nykyinen.P.Y; for (int i = 0; i < 40; i++) k.VapaaLiike(0, 0, 0, 0, 0.05);
+            Oleta.Tosi(Math.Abs(k.Nykyinen.P.Y - yq) < 1e-9, "QA-kuvan korkeus pysyy");
+        }
+
+        [Testi] static void KertojanTekstitys()
+        {
+            // PT 11.10. 09.0x: tekstitys virkkeittäin kertojan sanojen ajoista (ajat/<sali>/<id>.json); näytetty teksti, kun virkkeitä yhtä monta.
+            const string json = "{\"teksti\": \"Katso sinistä. Se on ultramariinia (n. 1663)! Loppu.\", \"puhuttu\": \"Katso sinistä. Se on ultramariinia noin 1663! Loppu.\"," +
+                "\"sanat\": [{\"sana\":\"Katso\",\"alku_s\":0.3,\"loppu_s\":0.6},{\"sana\":\"sinistä.\",\"alku_s\":0.7,\"loppu_s\":1.2}," +
+                "{\"sana\":\"Se\",\"alku_s\":1.6,\"loppu_s\":1.7},{\"sana\":\"on\",\"alku_s\":1.75,\"loppu_s\":1.9},{\"sana\":\"ultramariinia\",\"alku_s\":2.0,\"loppu_s\":2.8}," +
+                "{\"sana\":\"noin\",\"alku_s\":2.9,\"loppu_s\":3.1},{\"sana\":\"1663!\",\"alku_s\":3.2,\"loppu_s\":4.0},{\"sana\":\"Loppu.\",\"alku_s\":4.5,\"loppu_s\":5.0}]}";
+            var t = MuseoTekstitys.Lue(json);
+            Oleta.Sama(3, t.Virkkeet.Count, "kolme virkettä");
+            Oleta.Tosi(t.Virke(0.1) == null, "ennen ensimmäistä sanaa ei tekstiä");
+            Oleta.Sama("Katso sinistä.", t.Virke(0.5));
+            Oleta.Sama("Se on ultramariinia (n. 1663)!", t.Virke(2.5), "näytetty teksti puhutun ajoituksella (lyhenne ei katkaise)");
+            Oleta.Sama("Loppu.", t.Virke(5.2));
+            Oleta.Tosi(t.Virke(5.0 + MuseoTekstitys.JalkiS + 0.1) == null, "lopun jälkeen tyhjä");
+            // Pitkä virke (> PitkaMerkit) kahteen osaan keskikohtaa lähimmän pilkun kohdalta puheen tahdissa.
+            string pitka = "Vuonna 1971 hotellitarjoilija piiloutui näyttelyssä sähkökaappiin, leikkasi maalauksen irti kehyksestä, " +
+                           "piilotti sen tyynyliinaan ja vaati lunnaiksi rahaa nälkää näkevien ihmisten avuksi.";
+            var sb = new System.Text.StringBuilder(); double ts = 0; bool eka = true;
+            foreach (var w in pitka.Split(' ')) { sb.Append(eka ? "" : ",").Append($"{{\"sana\":\"{w}\",\"alku_s\":{ts.ToString(System.Globalization.CultureInfo.InvariantCulture)},\"loppu_s\":{(ts + 0.3).ToString(System.Globalization.CultureInfo.InvariantCulture)}}}"); ts += 0.4; eka = false; }
+            var tp = MuseoTekstitys.Lue($"{{\"teksti\":\"{pitka}\",\"sanat\":[{sb}]}}");
+            Oleta.Sama(2, tp.Virkkeet.Count, "pitkä virke kahdeksi");
+            Oleta.Tosi(tp.Virkkeet[0].Teksti.Length <= MuseoTekstitys.PitkaMerkit && tp.Virkkeet[1].Teksti.Length <= MuseoTekstitys.PitkaMerkit,
+                       $"osat pilkun kohdalta ({tp.Virkkeet[0].Teksti.Length} + {tp.Virkkeet[1].Teksti.Length})");
+            Oleta.Tosi(Math.Abs(tp.Virkkeet[1].Alku - tp.Virkkeet[0].Loppu) < 1e-9 && tp.Virkkeet[1].Alku > tp.Virkkeet[0].Alku, "jako puheen tahdissa");
+            // SK-A-1595:n pisin virke (234 merkkiä, pilkku kolmanneksessa): jako keskeltä, kumpikin osa enintään PitkaMerkit.
+            string sk = "Vuonna 1971 hotellitarjoilija piiloutui Brysselin näyttelyssä sähkökaappiin, leikkasi tämän maalauksen irti kehyksestä " +
+                        "perunankuorimaveitsellä ja vaati lunnaita nälkää näkevien Itä-Pakistanin eli nykyisen Bangladeshin ihmisten avuksi.";
+            sb.Clear(); ts = 0; eka = true;
+            foreach (var w in sk.Split(' ')) { sb.Append(eka ? "" : ",").Append($"{{\"sana\":\"{w}\",\"alku_s\":{ts.ToString(System.Globalization.CultureInfo.InvariantCulture)},\"loppu_s\":{(ts + 0.3).ToString(System.Globalization.CultureInfo.InvariantCulture)}}}"); ts += 0.4; eka = false; }
+            var ts2 = MuseoTekstitys.Lue($"{{\"teksti\":\"{sk}\",\"sanat\":[{sb}]}}");
+            Oleta.Tosi(ts2.Virkkeet.Count == 2 && ts2.Virkkeet.TrueForAll(v => v.Teksti.Length <= MuseoTekstitys.PitkaMerkit), "SK-A-1595 kahtena enintään 120 merkin osana");
+        }
+
+        [Testi] static void KehyksenKultaJaAalto()
+        {
+            // PT 11.10. 09.0x (omistaja: "kehykset jäävät niin mustiksi"): LR:n janamateriaalit ja aaltokuvio käyttöön, kultainen
+            // sisähelmi mustissa aaltolistoissa, pääteoksille kullattu aaltolista.
+            var s = Alankomaat();
+            var k = s.Kehykset["nl_aalto_musta"];
+            var osat = MuseoGeometria.KehysOsat(k, 1.0, 0.8, (1, 1, 1));
+            Oleta.Tosi(osat.ContainsKey("musta") && osat.ContainsKey("kulta"), "musta nauha + kultainen sisähelmi");
+            double pm = osat["musta"].Pinta(), pk = osat["kulta"].Pinta();
+            Oleta.Tosi(pk > 0.01 * pm && pk < 0.25 * pm, $"kultaa kapea osa ({pk / pm:P0})");
+            int aallossa = 0; foreach (var uv in osat["musta"].UV) if (uv.V > 0.5) aallossa++;
+            Oleta.Tosi(aallossa > 0 && k.AaltoJaksoMm > 0 && k.AaltoSyvyysMm > 0, $"aaltonauhat merkitty ({aallossa} kärkeä)");
+            Oleta.Tosi(MuseoGeometria.KehysOsat(s.Kehykset["nl_yovartio"], 4.5, 3.8, (1, 1, 1)).ContainsKey("kulta"), "Yövartion kultaliuska");
+            Oleta.Tosi(Math.Abs(MuseoGeometria.Kehys(k, 1.0, 0.8, (1, 1, 1)).Pinta() - pm - pk) < 1e-9, "Kehys = kaikki osat yhtenä");
+            foreach (var id in new[] { "SK-C-216", "SK-C-6", "SK-A-135" })
+                Oleta.Sama("nl_aalto_kulta", s.Ripustukset.Find(r => r.Teos.Id == id).Paikka.Kehysprofiili, id + ": kullattu aaltolista");
+            Oleta.Sama("kulta", s.Kehykset["nl_aalto_kulta"].Materiaali);
+        }
+
+        [Testi] static void ValoKatostaPaanYlapuolelta()
+        {
+            // Omistaja 11.10. 10.0x: keila katossa katsojan pään yläpuolella ~30° pystysuorasta, koko teos ja kehys tasaisesti.
+            var s = Alankomaat(); int kulmassa = 0;
+            foreach (var r in s.Ripustukset)
+            {
+                var (w, h) = MuseoKierros.Ulkomitat(s, r);
+                var osa = s.HaeOsa(r.Paikka.Osa);
+                var k = MuseoValo.KattoKeila(r.Paikka, osa.Y1, w / 2, h / 2);
+                var c = r.Paikka.Keskipiste; var n = r.Paikka.Normaali; var d = c - k.Paikka;
+                Oleta.Tosi((k.Paikka - c).X * n.X + (k.Paikka - c).Z * n.Z > 0, $"{r.Teos.Id}: keila teoksen edessä");
+                Oleta.Tosi(k.Paikka.Y > 2.0 && k.Paikka.Y <= Math.Max(osa.Y1, c.Y + h / 2 + 0.3) + 1e-9, $"{r.Teos.Id}: keila katossa pään yläpuolella ({k.Paikka.Y:F2} m)");
+                double pysty = Math.Acos(-d.Y / d.Pituus) * 180 / Math.PI;
+                if (Math.Abs(pysty - MuseoValo.KattoKulmaAste) < 0.5) kulmassa++;
+                var (ulko, sisa) = MuseoValo.Kartio(k);
+                foreach (var (sx, sy) in new[] { (-1, -1), (1, -1), (1, 1), (-1, 1) })
+                {
+                    // Kehyksen kulma seinän tasossa (vaaka-akseli normaalista).
+                    var x = new Linssit.Dioraama.V3(-n.Z, 0, n.X); double xl = Math.Sqrt(x.X * x.X + x.Z * x.Z);
+                    var kulma = c + x * (sx * w / 2 / xl) + new Linssit.Dioraama.V3(0, sy * h / 2, 0);
+                    var dk = kulma - k.Paikka;
+                    double cos = (dk.X * k.Suunta.X + dk.Y * k.Suunta.Y + dk.Z * k.Suunta.Z) / dk.Pituus;
+                    Oleta.Tosi(cos >= sisa - 1e-9, $"{r.Teos.Id}: kehyksen kulma täydessä valossa (sisäkartio)");
+                }
+                Oleta.Tosi(k.Kelvin <= MuseoValo.KattoKelvin && k.Lx == r.Paikka.Valo.Lx, $"{r.Teos.Id}: lämmin, lx ennallaan");
+            }
+            Oleta.Tosi(kulmassa >= s.Ripustukset.Count * 0.9, $"30° pystysuorasta: {kulmassa}/{s.Ripustukset.Count}");
         }
 
         [Testi] static void PysahdysKertojanMittainen()

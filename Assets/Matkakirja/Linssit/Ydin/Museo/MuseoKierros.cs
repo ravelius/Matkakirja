@@ -12,6 +12,10 @@
 //  - TEOSKIERROS (PT 11.10. 00.4x): kierros pysähtyy jokaisella kertojan teoksella (kierros.json, järjestys huoneittain);
 //    pysähdys on teoksen katseluasento, ja siirtymä kulkee suoraan huoneen poikki ja osasta toiseen oviaukkojen kautta
 //    (Ovet), joten muut teokset näkyvät seinillä matkalla. Ilman listaa kierros on LR:n reitti kuten ennen.
+//  - LÄHELTÄ (omistaja 11.10. 09.2x, sitova: "katselukokemus mahdollisimman läheltä niin että seinää ei tarvitse näkyä juuri
+//    ollenkaan"): pysähdyksessä teos (kehyksen sisäreuna) täyttää 95 % ruudun rajaavasta suunnasta, kamera saa tulla seinän
+//    lähelle (KatseluVaraM, kehyksen syvyys + lähitaso). Siirtymä peruuttaa ensin teoksen edestä saliin (Takaa-piste, ~1,6 m)
+//    ja tulee seuraavan teoksen eteen sen Takaa-pisteen kautta: sali ja muut teokset näkyvät vain siirtymissä.
 // Puhdas C#: MuseoTestit.
 using System;
 using System.Collections.Generic;
@@ -33,7 +37,7 @@ namespace Matkakirja.Linssit.Museo
     public sealed class MuseoKierros
     {
         public const double KavelyMs = 1.1, SiirtymaMinS = 2.5, PysahdysMinS = 6, SilmaY = 1.6, SeinaVaraM = 0.35, KatseEteenM = 3;
-        public const double VapaaMs = 1.4, VapaaKaantoAs = 70, KallistusMax = 35;
+        public const double VapaaMs = 1.4, VapaaKaantoAs = 70, KallistusMax = 35, LaskuS = 0.4;
 
         readonly Sali sali;
         /// <summary>LR:n reitti (sali.Reitti) tai teoskierroksen pisteet: alku + yksi pysähdys teosta kohden.</summary>
@@ -58,7 +62,7 @@ namespace Matkakirja.Linssit.Museo
         /// <summary>Kaaripituustaulukko: näytteen matka ja parametri u = väli + t (tasainen kävelyvauhti epätasaisillakin väleillä).</summary>
         readonly List<double> naytteetS = new List<double>(), naytteetU = new List<double>();
         MuseoAsento lahto;
-        double yaw, pitch;
+        double yaw, pitch, vapaaY = SilmaY;
 
         /// <param name="teokset">Teoskierros: pysähdykset näille teoksille tässä järjestyksessä (null = LR:n reitti).</param>
         public MuseoKierros(Sali s, IList<string> teokset = null)
@@ -84,6 +88,7 @@ namespace Matkakirja.Linssit.Museo
                     var p = a?.P ?? new V3(c.X + n.X * 1.5, SilmaY, c.Z + n.Z * 1.5);
                     reitti.Add(new Reittipiste { P = p, Katse = a?.Katse ?? new V3(c.X, SilmaY, c.Z), PysahdysS = PysahdysMinS, Kohde = r.Paikka.Id });
                     Pysahdykset.Add(reitti.Count - 1);
+                    if (TakaaPiste(r, p) is V3 tp) takaa[reitti.Count - 1] = tp;
                 }
             }
             var alku = reitti.Count > 0 ? reitti[0] : new Reittipiste { P = new V3(0, SilmaY, 0), Katse = new V3(0, SilmaY, -5) };
@@ -93,6 +98,9 @@ namespace Matkakirja.Linssit.Museo
         }
 
         public Reittipiste Pysahdys(int k) => k >= 0 && k < Pysahdykset.Count ? reitti[Pysahdykset[k]] : null;
+        /// <summary>Teoskierroksen pysähdyksen peruutuspiste salissa (reitin indeksi → piste silmän korkeudella); ei LR:n reitillä.</summary>
+        readonly Dictionary<int, V3> takaa = new Dictionary<int, V3>();
+        V3? vapaaTaakse;
         /// <summary>Ripustus, jonka luona ollaan (vain pysähdyksessä tai sinne tullessa); vapaassa tilassa katsottu teos.</summary>
         public Ripustus NykyinenTeos => Vaihe == MuseoVaihe.Vapaa ? KatsottuTeos() : Pysahdys(Kohta) is { } r ? sali.HaeRipustus(r.Kohde) : null;
 
@@ -107,8 +115,12 @@ namespace Matkakirja.Linssit.Museo
             int loppu = Pysahdykset[k];
             polku = new List<V3> { Nykyinen.P };
             // Kulkupisteet edellisen ja seuraavan pysähdyksen välissä (taaksepäin hypättäessä samat käänteisesti); teoskierroksella
-            // suoraan. Osasta toiseen aina oviaukkojen kautta (Ovet).
-            if (teoskierros) { }
+            // teoksen edestä peruuttaen saliin ja seuraavan eteen sen peruutuspisteen kautta. Osasta toiseen oviaukkojen kautta (Ovet).
+            if (teoskierros)
+            {
+                if (LahdonTakaa() is V3 l) polku.Add(l);
+                if (takaa.TryGetValue(loppu, out var tk)) polku.Add(tk);
+            }
             else if (edellinen < loppu) for (int i = edellinen + 1; i < loppu; i++) polku.Add(reitti[i].P);
             else for (int i = edellinen - 1; i > loppu; i--) polku.Add(reitti[i].P);
             polku.Add(reitti[loppu].P);
@@ -249,7 +261,10 @@ namespace Matkakirja.Linssit.Museo
                 if ((eteen - p).Pituus < 0.2) eteen = kohde.Katse; else eteen = new V3(eteen.X, SilmaY, eteen.Z) + (eteen - p) * 2;
                 var paat = V3.Lerp(lahto.Katse, kohde.Katse, e);
                 double w = L > 3 ? Math.Sin(Math.PI * e) * 0.85 : 0;
-                Nykyinen = new MuseoAsento(p, V3.Lerp(paat, eteen, w));
+                // Katse vaakatasossa silmän korkeudella (simu 11.10. 09.42: korkealla roikkuvalta teokselta laskeutuessa katse jäi
+                // teoksen korkeudelle ja kamera katsoi kattoon); pysähdysten katseet ovat vaakasuoria, joten saapuminen ei muutu.
+                var kt = V3.Lerp(paat, eteen, w);
+                Nykyinen = new MuseoAsento(p, new V3(kt.X, p.Y, kt.Z));
                 if (VaiheenAika >= VaiheenKesto)
                 {
                     Nykyinen = new MuseoAsento(kohde.P, kohde.Katse);
@@ -281,7 +296,9 @@ namespace Matkakirja.Linssit.Museo
             var d = Nykyinen.Suunta;
             yaw = Math.Atan2(d.X, -d.Z) * 180 / Math.PI;
             pitch = Math.Asin(Math.Max(-1, Math.Min(1, d.Y))) * 180 / Math.PI;
-            Nykyinen = new MuseoAsento(new V3(Nykyinen.P.X, SilmaY, Nykyinen.P.Z), Nykyinen.P + d);
+            Nykyinen = new MuseoAsento(Nykyinen.P, Nykyinen.P + d);   // silmä laskeutuu pysähdyksen korkeudelta pehmeästi (VapaaLiike)
+            vapaaY = SilmaY;
+            vapaaTaakse = Sallittu(Nykyinen.P) ? (V3?)null : LahdonTakaa();   // teoksen edestä (seinän vierestä) liukuen kävelyalueelle
             Vaihe = MuseoVaihe.Vapaa; Tauolla = false; VaiheenAika = 0; Versio++;
         }
 
@@ -297,8 +314,11 @@ namespace Matkakirja.Linssit.Museo
             }
             Vaihe = MuseoVaihe.Siirtyy;
             AloitaSiirtyma(paras, Pysahdykset[paras]);
-            // Polku suoraan nykyisestä paikasta (ei edellisen pysähdyksen kulkupisteitä).
-            polku = Karsi(Ovet(new List<V3> { Nykyinen.P, reitti[Pysahdykset[paras]].P }));
+            // Polku suoraan nykyisestä paikasta (ei edellisen pysähdyksen kulkupisteitä), teoksen eteen peruutuspisteen kautta.
+            var pk = new List<V3> { Nykyinen.P };
+            if (takaa.TryGetValue(Pysahdykset[paras], out var tk)) pk.Add(tk);
+            pk.Add(reitti[Pysahdykset[paras]].P);
+            polku = Karsi(Ovet(pk));
             Mittaa();
             VaiheenKesto = Math.Max(SiirtymaMinS, polunMatka[polunMatka.Count - 1] / KavelyMs + KaantoS(Nykyinen, reitti[Pysahdykset[paras]]));
         }
@@ -307,12 +327,21 @@ namespace Matkakirja.Linssit.Museo
         /// Seinät rajaavat akseleittain (liukuu seinää pitkin), aukoista pääsee läpi.</summary>
         public void VapaaLiike(double eteen, double sivulle, double kaanto, double kallistus, double dt)
         {
+            // Silmän korkeus lähestyy vapaaY:tä (vapaaseen siirryttäessä pysähdyksen katseluasennosta kävelykorkeudelle 1,6 m;
+            // PT 11.10. 09.0x: ennen hyppy jopa 1,4 m): eksponentiaalinen lähestyminen, aikavakio LaskuS.
             if (Vaihe != MuseoVaihe.Vapaa) return;
             yaw += kaanto * VapaaKaantoAs * dt;
             pitch = Math.Max(-KallistusMax, Math.Min(KallistusMax, pitch + kallistus * VapaaKaantoAs * dt));
             double yr = yaw * Math.PI / 180, pr = pitch * Math.PI / 180;
             var f = new V3(Math.Sin(yr), 0, -Math.Cos(yr)); var r = new V3(Math.Cos(yr), 0, Math.Sin(yr));
             var p = Nykyinen.P;
+            if (vapaaTaakse is V3 vt)
+            {
+                double w = 1 - Math.Exp(-dt / LaskuS);
+                p = new V3(p.X + (vt.X - p.X) * w, p.Y, p.Z + (vt.Z - p.Z) * w);
+                if (Sallittu(p) || Math.Abs(vt.X - p.X) + Math.Abs(vt.Z - p.Z) < 0.01) vapaaTaakse = null;
+            }
+            if (Math.Abs(p.Y - vapaaY) > 1e-4) p = new V3(p.X, vapaaY + (p.Y - vapaaY) * Math.Exp(-dt / LaskuS), p.Z);
             var siirto = (f * eteen + r * sivulle) * (VapaaMs * dt);
             var px = new V3(p.X + siirto.X, p.Y, p.Z); if (Sallittu(px)) p = px;
             var pz = new V3(p.X, p.Y, p.Z + siirto.Z); if (Sallittu(pz)) p = pz;
@@ -323,9 +352,11 @@ namespace Matkakirja.Linssit.Museo
         // --- Katseluasento (PT 11.10. 00.3x KIIRE, omistaja TF 180: "Taulut näkyvät liian kaukaa ja matalalta") -----------------
         /// <summary>Museokameran pystysuora näkökenttä (MuseoNayttamo.Kamera.fieldOfView).</summary>
         public const double KameraFovAste = 58;
-        /// <summary>Teos kehyksineen täyttää tämän osan ruudun korkeudesta (PT 11.10.: 60–70 %; enintään TayttoLeveys leveydestä) ja sen keskipiste on
+        /// <summary>Teos kehyksineen täyttää tämän osan ruudun korkeudesta (PT 11.10. 09.0x: kauempaa, seinää ja kehystä näkyy luontevasti; enintään TayttoLeveys leveydestä) ja sen keskipiste on
         /// KeskiY:n kohdalla ylhäältä: vapaa kaista nimikyltin (ylin ~15 %) ja ohjausnappien (alin ~20 %) välissä.</summary>
-        public const double TayttoKorkeus = 0.65, TayttoLeveys = 0.80, KeskiY = 0.48, LahinM = 0.45, PaspisM = 0.065;   // LahinM: seinävara 0,35 m + 0,1 (pienet grafiikat lähelle)
+        public const double TayttoKorkeus = 0.95, TayttoLeveys = 0.95, KeskiY = 0.5, LahinM = 0.12, PaspisM = 0.065;
+        /// <summary>Katseluasennon vara osan seinistä (ei kävelyn SeinaVaraM: kamera saa tulla teoksen eteen) ja peruutuspisteen etäisyys.</summary>
+        public const double KatseluVaraM = 0.08, TakaaM = 1.6, LahitasoM = 0.05;
         readonly Dictionary<int, (V3 P, V3 Katse)> lrAsennot = new Dictionary<int, (V3, V3)>();
         public double Kuvasuhde { get; private set; }
 
@@ -336,23 +367,76 @@ namespace Matkakirja.Linssit.Museo
         {
             if (r?.Paikka == null || kuvasuhde <= 0) return null;
             var pk = r.Paikka;
-            var (W, H) = Ulkomitat(r);
+            var (W, H) = Nakoala(r);
             double t = Math.Tan(KameraFovAste / 2 * Math.PI / 180);
-            double d = Math.Max(LahinM, Math.Max(H / 2 / (TayttoKorkeus * t), W / 2 / (TayttoLeveys * kuvasuhde * t)));
+            double dMin = LahinEtaisyys(r);
+            double d = Math.Max(dMin, Math.Max(H / 2 / (TayttoKorkeus * t), W / 2 / (TayttoLeveys * kuvasuhde * t)));
             var n = pk.Normaali; double nl = Math.Sqrt(n.X * n.X + n.Z * n.Z); if (nl < 1e-9) return null;
             double nx = n.X / nl, nz = n.Z / nl;
             var c = pk.Keskipiste;
-            for (; d >= LahinM - 1e-9; d -= 0.1)
+            for (; d >= dMin - 1e-9; d -= 0.05)
             {
-                double silma = c.Y - (0.5 - KeskiY) * 2 * d * t;   // teos hieman ruudun keskikohdan yläpuolelle, ilman kallistusta
+                double silma = c.Y - (0.5 - KeskiY) * 2 * d * t;
                 var p = new V3(c.X + nx * d, silma, c.Z + nz * d);
-                if (Sallittu(p)) return new MuseoAsento(p, new V3(p.X - nx * KatseEteenM, silma, p.Z - nz * KatseEteenM));
+                if (SallittuKatselu(p)) return new MuseoAsento(p, new V3(p.X - nx * KatseEteenM, silma, p.Z - nz * KatseEteenM));
             }
             return null;
         }
 
+        /// <summary>Kehyksen sisäreunan mitat (m): kangas + passepartout (grafiikka). Omistaja 11.10.: tämä täyttää ruudun.</summary>
+        public (double W, double H) Nakoala(Ripustus r)
+        {
+            double paspis = r.Paikka.Grafiikka ? 2 * PaspisM : 0;
+            return (r.Leveys + paspis, r.Korkeus + paspis);
+        }
+
+        /// <summary>Lähin katseluetäisyys: kehyksen syvyys seinästä + lähitaso + vara (kehys ei leikkaudu), vähintään LahinM.</summary>
+        public double LahinEtaisyys(Ripustus r)
+        {
+            double syv = 0;
+            if (sali.Kehykset.TryGetValue(r.Paikka.Kehysprofiili ?? sali.Oletuskehys ?? "", out var prof)) foreach (var q in prof.Pisteet) syv = Math.Max(syv, q.Y / 100);
+            return Math.Max(LahinM, syv + LahitasoM + 0.05);
+        }
+
+        /// <summary>Katseluasennon paikka sallittu: osan sisällä KatseluVaraM:n päässä seinistä tai kävelyalueella.</summary>
+        public bool SallittuKatselu(V3 p)
+        {
+            foreach (var o in sali.Osat)
+                if (p.X > o.X0 + KatseluVaraM && p.X < o.X1 - KatseluVaraM && p.Z > o.Z0 + KatseluVaraM && p.Z < o.Z1 - KatseluVaraM) return true;
+            return Sallittu(p);
+        }
+
+        /// <summary>Peruutuspiste salissa teoksen edestä: normaalin suuntaan noin TakaaM (vähintään 0,4 m katseluasentoa kauempana),
+        /// kävelyalueella silmän korkeudella; null, jos sellaista ei löydy 5 m:n sisältä.</summary>
+        V3? TakaaPiste(Ripustus r, V3 katselu)
+        {
+            var n = r.Paikka.Normaali; double nl = Math.Sqrt(n.X * n.X + n.Z * n.Z); if (nl < 1e-9) return null;
+            double nx = n.X / nl, nz = n.Z / nl; var c = r.Paikka.Keskipiste;
+            double d0 = Math.Sqrt((katselu.X - c.X) * (katselu.X - c.X) + (katselu.Z - c.Z) * (katselu.Z - c.Z));
+            for (double d = Math.Max(TakaaM, d0 + 0.4); d >= d0 + 0.4 - 1e-9; d -= 0.1)
+            { var p = new V3(c.X + nx * d, SilmaY, c.Z + nz * d); if (Sallittu(p)) return p; }
+            for (double d = Math.Max(TakaaM, d0 + 0.4); d <= 5; d += 0.1)
+            { var p = new V3(c.X + nx * d, SilmaY, c.Z + nz * d); if (Sallittu(p)) return p; }
+            return null;
+        }
+
+        /// <summary>Lähdön peruutuspiste: pysähdyksen Takaa-piste, jos ollaan pysähdyksen kohdalla, tai kävelyalueen ulkopuolelta
+        /// taaksepäin katsesuunnasta (vapaa kulku seinän vierestä).</summary>
+        V3? LahdonTakaa()
+        {
+            foreach (int i in Pysahdykset)
+                if ((reitti[i].P - Nykyinen.P).Pituus < 0.05) return takaa.TryGetValue(i, out var t) ? t : (V3?)null;
+            if (Sallittu(Nykyinen.P)) return null;
+            var d = Nykyinen.Suunta; double l = Math.Sqrt(d.X * d.X + d.Z * d.Z); if (l < 1e-9) return null;
+            for (double s = 0.1; s <= 3; s += 0.1)
+            { var p = new V3(Nykyinen.P.X - d.X / l * s, SilmaY, Nykyinen.P.Z - d.Z / l * s); if (Sallittu(p)) return p; }
+            return null;
+        }
+
         /// <summary>Teoksen ulkomitat seinällä (m): kangas + passepartout (grafiikka) + kehysprofiilin leveys molemmin puolin.</summary>
-        public (double W, double H) Ulkomitat(Ripustus r)
+        public (double W, double H) Ulkomitat(Ripustus r) => Ulkomitat(sali, r);
+
+        public static (double W, double H) Ulkomitat(Sali sali, Ripustus r)
         {
             var pk = r.Paikka;
             double kehys = sali.Kehykset.TryGetValue(pk.Kehysprofiili ?? sali.Oletuskehys ?? "", out var prof) ? prof.LeveysCm / 100 : 0.08;
@@ -370,8 +454,10 @@ namespace Matkakirja.Linssit.Museo
             {
                 var rp = reitti[i];
                 if (!lrAsennot.TryGetValue(i, out var lr)) lrAsennot[i] = lr = (rp.P, rp.Katse);
-                var a = Katseluasento(sali.HaeRipustus(rp.Kohde), kuvasuhde);
+                var rr = sali.HaeRipustus(rp.Kohde);
+                var a = Katseluasento(rr, kuvasuhde);
                 rp.P = a?.P ?? lr.P; rp.Katse = a?.Katse ?? lr.Katse;
+                if (teoskierros && rr != null) { if (TakaaPiste(rr, rp.P) is V3 tp) takaa[i] = tp; else takaa.Remove(i); }
             }
             if (Vaihe == MuseoVaihe.Pysahtyy) { var k = reitti[Pysahdykset[Kohta]]; Nykyinen = new MuseoAsento(k.P, k.Katse); Versio++; }
             else if (Vaihe == MuseoVaihe.Siirtyy && polku != null && polku.Count > 1)
@@ -386,7 +472,7 @@ namespace Matkakirja.Linssit.Museo
             if (Vaihe != MuseoVaihe.Vapaa) Vapaa();
             var d = a.Value.Suunta;
             yaw = Math.Atan2(d.X, -d.Z) * 180 / Math.PI; pitch = 0;
-            Nykyinen = a.Value; Versio++;
+            Nykyinen = a.Value; vapaaY = a.Value.P.Y; vapaaTaakse = null; Versio++;   // QA-kuva: silmä pysyy katseluasennon korkeudella
             return true;
         }
 
@@ -398,7 +484,7 @@ namespace Matkakirja.Linssit.Museo
             if (!Sallittu(p)) return false;
             if (Vaihe != MuseoVaihe.Vapaa) Vapaa();
             yaw = yawAste; pitch = Math.Max(-KallistusMax, Math.Min(KallistusMax, pitchAste));
-            Nykyinen = new MuseoAsento(p, p);
+            Nykyinen = new MuseoAsento(p, p); vapaaY = SilmaY; vapaaTaakse = null;
             VapaaLiike(0, 0, 0, 0, 0);
             Versio++;
             return true;
