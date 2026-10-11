@@ -1,33 +1,36 @@
 // HISTORIAMOOTTORI: TYRMÄN ÄÄNIYMPÄRISTÖ (Pelikoodari 11.10.2026; PT:n Olavinlinna-yösuunnitelma B3, Laitetestaajan TF 180 -raportti e:
 // tyrmässä 10,8 min tasaista −42 dB:n hiljaisuutta, ääni ei ohjannut pelaajaa). Puhdas ajastin SeikkailuTyrmaAanet-sovittimelle:
-// tippuva vesi holvista 2,5–7 s:n välein, kaukaiset askeleet käytävällä (ensimmäiset 12–20 s, sitten 35–60 s:n välein) ja muunnelman
-// ohjaava ääni: 1 avainten kilinä ilmaraossa ennen pudotusta ja olkien suunnasta, kunnes avaimet poimitaan; 2 raollaan olevan oven
+// harvat satunnaiset tapahtumat tyrmän pohjaäänen päällä (Laitetestaajan 4. kierros: pohja −30 dB tasainen 7,4 min ilman tapahtumia;
+// PT 11.10. 06.0x): ensimmäinen 8–14 s:ssa, sitten 20–40 s:n välein, vuorotellen eri lajia (ei samaa kahdesti peräkkäin): iso pisara
+// holvista, kaukaiset askeleet käytävällä tai metallin kalahdus oven takana (vartijan varusteet). Lisäksi muunnelman ohjaava ääni: 1 avainten kilinä ilmaraossa ennen pudotusta ja olkien suunnasta, kunnes avaimet poimitaan; 2 raollaan olevan oven
 // narahdus vedossa; 3 irtokiven rapina, kunnes kivi irtoaa. Satunnaisuus siemenestä (testattava).
 using System;
 using System.Collections.Generic;
 
 namespace Matkakirja.Linssit.Seikkailu
 {
-    public enum TyrmanAani { Tippa, Askeleet, AvainRaossa, AvainOlissa, OviVeto, KiviRapina }
+    public enum TyrmanAani { Tippa, Askeleet, Metalli, AvainRaossa, AvainOlissa, OviVeto, KiviRapina }
 
     public sealed class TyrmanAanet
     {
-        public const double TippaMinS = 2.5, TippaMaxS = 7, AskelEnsinMinS = 12, AskelEnsinMaxS = 20, AskelMinS = 35, AskelMaxS = 60;
+        public const double EnsinMinS = 8, EnsinMaxS = 14, ValiMinS = 20, ValiMaxS = 40;
+        /// <summary>Satunnaiset tapahtumat, joista arvotaan (ohjaavat äänet erikseen).</summary>
+        public static readonly TyrmanAani[] Tapahtumat = { TyrmanAani.Tippa, TyrmanAani.Askeleet, TyrmanAani.Metalli };
         /// <summary>Avainten kilinä raossa ennen pudotusta (Tyrma.PuluTuleeS = 3 s).</summary>
         public const double AvainRaossaS = 1.2;
         /// <summary>Ohjaava ääni: ensimmäinen viive vaiheen alusta ja väli sen jälkeen.</summary>
         public const double OhjausEnsinS = 7, OhjausMinS = 10, OhjausMaxS = 14;
 
         readonly Random rnd;
-        double tippa, askel, ohjaus = -1;
+        double tapahtuma, ohjaus = -1;
+        TyrmanAani? viimeisin;
         bool raossa;
         TyrmanVaihe edellinen = TyrmanVaihe.Istuu;
 
         public TyrmanAanet(int siemen = 0)
         {
             rnd = new Random(siemen);
-            tippa = Vali(0.8, 2.0);
-            askel = Vali(AskelEnsinMinS, AskelEnsinMaxS);
+            tapahtuma = Vali(EnsinMinS, EnsinMaxS);
         }
 
         double Vali(double a, double b) => a + rnd.NextDouble() * (b - a);
@@ -39,8 +42,13 @@ namespace Matkakirja.Linssit.Seikkailu
         {
             ulos.Clear();
             if (vaihe == TyrmanVaihe.Ulkona) return;
-            if ((tippa -= dt) <= 0) { ulos.Add(TyrmanAani.Tippa); tippa = Vali(TippaMinS, TippaMaxS); }
-            if ((askel -= dt) <= 0) { ulos.Add(TyrmanAani.Askeleet); askel = Vali(AskelMinS, AskelMaxS); }
+            if ((tapahtuma -= dt) <= 0)
+            {
+                // Eri laji kuin edellinen: arvotaan muista kahdesta.
+                int i = (int)(rnd.NextDouble() * (Tapahtumat.Length - (viimeisin == null ? 0 : 1)));
+                foreach (var t in Tapahtumat) { if (t == viimeisin) continue; if (i-- == 0) { viimeisin = t; ulos.Add(t); break; } }
+                tapahtuma = Vali(ValiMinS, ValiMaxS);
+            }
             if (muunnelma == 1 && !raossa && vaihe == TyrmanVaihe.Istuu && aika >= AvainRaossaS) { raossa = true; ulos.Add(TyrmanAani.AvainRaossa); }
             var ohjaava = Ohjaava(muunnelma, vaihe);
             if (vaihe != edellinen) { edellinen = vaihe; ohjaus = ohjaava != null ? OhjausEnsinS : -1; }

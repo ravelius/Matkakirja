@@ -1,4 +1,4 @@
-// TYRMÄN ÄÄNIYMPÄRISTÖ (Pelikoodari 11.10.2026, PT B3): ei pitkiä hiljaisia jaksoja, askeleet käytävällä, muunnelman ohjaava ääni
+// TYRMÄN ÄÄNIYMPÄRISTÖ (Pelikoodari 11.10.2026, PT B3 ja 06.0x): harvat vaihtelevat tapahtumat pohjan päällä, muunnelman ohjaava ääni
 // vain kunnes tehtävä on tehty.
 using System.Collections.Generic;
 using System.Linq;
@@ -15,16 +15,20 @@ namespace Matkakirja.Linssit.Testit
             return kaikki;
         }
 
-        [Testi] static void EiPitkiaHiljaisuuksia()
+        [Testi] static void HarvatVaihtelevatTapahtumat()
         {
+            // 4. kierros (PT 06.0x): pohjan päällä harvat tapahtumat 20–40 s:n välein, ensimmäinen 8–14 s:ssa, ei samaa lajia kahdesti peräkkäin.
             for (int siemen = 0; siemen < 20; siemen++)
             {
-                var e = Aja(2, 600, t => TyrmanVaihe.Istuu, siemen);
-                double edellinen = 0, pisin = 0;
-                foreach (var (t, _) in e) { pisin = System.Math.Max(pisin, t - edellinen); edellinen = t; }
-                Oleta.Tosi(pisin <= TyrmanAanet.TippaMaxS + 0.2, $"pisin hiljaisuus {pisin:F1} s (siemen {siemen})");
-                var askeleet = e.Where(x => x.A == TyrmanAani.Askeleet).Select(x => x.T).ToList();
-                Oleta.Tosi(askeleet.Count >= 9 && askeleet[0] <= TyrmanAanet.AskelEnsinMaxS + 0.2, $"askeleet {askeleet.Count}, ensin {askeleet.FirstOrDefault():F0} s");
+                var e = Aja(2, 600, t => TyrmanVaihe.Istuu, siemen).Where(x => TyrmanAanet.Tapahtumat.Contains(x.A)).ToList();
+                Oleta.Tosi(e[0].T >= TyrmanAanet.EnsinMinS - 0.2 && e[0].T <= TyrmanAanet.EnsinMaxS + 0.2, $"ensimmäinen {e[0].T:F1} s (siemen {siemen})");
+                for (int i = 1; i < e.Count; i++)
+                {
+                    double vali = e[i].T - e[i - 1].T;
+                    Oleta.Tosi(vali >= TyrmanAanet.ValiMinS - 0.2 && vali <= TyrmanAanet.ValiMaxS + 0.2, $"väli {vali:F1} s (siemen {siemen})");
+                    Oleta.Tosi(e[i].A != e[i - 1].A, $"{e[i].A} kahdesti peräkkäin (siemen {siemen})");
+                }
+                Oleta.Tosi(e.Count >= 14 && TyrmanAanet.Tapahtumat.All(l => e.Any(x => x.A == l)), $"tapahtumia {e.Count}, kaikki lajit (siemen {siemen})");
             }
         }
 
