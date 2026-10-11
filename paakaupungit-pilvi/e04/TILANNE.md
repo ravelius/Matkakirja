@@ -19,8 +19,8 @@ Aiempi Sää/Commons-rajapintaeste: 11.10.2026 robots.txt kieltää en/fi-Wikipe
 | banjul | valmis | kesken | — | — | — | — | A: 3 kohdetta pienen kaupungin perustelulla; B työn alla |
 | bissau | valmis | — | — | — | — | — | A: 3 kohdetta kompaktin vanhan satamaytimen perustelulla |
 | conakry | valmis | — | — | — | — | — | A: 6 lähdekoordinaattikohdetta; UM-puute korvattu FCDO-lähteellä |
-| monrovia | kesken | — | — | — | — | — |  |
-| tunis | kesken | — | — | — | — | — | kevyt; ei Karthagon toistoa |
+| monrovia | valmis | — | — | — | — | — | A: 6 lähdekoordinaattikohdetta ja sääaseman ero kirjattu |
+| tunis | valmis | — | — | — | — | — | A: kevyt, 6 vanhan ytimen kohdetta; ei Karthagon toistoa |
 
 Vastaanotto ei tarkoita valmista erää, Sisältökirjurin hyväksyntää, pelikytkentää tai julkaisua.
 
@@ -38,4 +38,4 @@ Yhteinen NAS-lähdevarasto ja robots-tarkistava hakuapuri: valiaikainen/sallittu
 
 Säädata tuotettu alkuperäisellä tyokalu.mjs saa -komennolla; vain verkkosyöte sovitettu sallittuun Wikipedia-lähdesivuun (valiaikainen/saa-lahdesovitus.mjs). Alkuperäinen numeropoiminta ja tarkistusalgoritmi säilyvät muuttumattomina. 8/9 saa.json syntyi; Algerin taulukko hylätty: vuosisarake685mm, kuukausien summa603mm. Alger saatiedot:null, ei tekstiin aste/mm-lukuja. saa-syote.json:ssa artikkeli rajattu kaupungin en-artikkeliin, jotta maa-fallback ei valitse muun kaupungin asemaa.
 
-Edistyminen: varmennetut A–F-vaiheet /558 (93×6), ei käytetyn ajan arvio. Rabat A–F valmis: 0 virhettä, 1 perusteltu varoitus, 23 kuvaa. Valmis aineistopaketti 1/93, koko e04-erä vielä kesken. Pääsession ledgerissä 11/558 vaihetta eli 2,0 %; e05/e06:n osittaisia lähdekoosteita ei lasketa valmistuneiksi.
+Edistyminen: varmennetut A–F-vaiheet /558 (93×6), ei käytetyn ajan arvio. Rabat A–F valmis: 0 virhettä, 1 perusteltu varoitus, 23 kuvaa. Valmis aineistopaketti 1/93, koko e04-erä vielä kesken. Pääsession ledgerissä 15/558 vaihetta eli 2,7 %; e05/e06:n osittaisia lähdekoosteita ei lasketa valmistuneiksi.
