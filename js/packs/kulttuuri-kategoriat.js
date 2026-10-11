@@ -66390,7 +66390,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Tanssi, joka ei sittenkään ole flamencoa',
-          tiedosto: 'Portada feria 2019An002.jpg',
+          tiedosto: "8714200670 725501b6bc o feria abril.jpg",
           teksti: 'Nimestään huolimatta sevillana-tanssia, jota usein '
             + 'esitellään flamencona, ei pidetä alkuperältään '
             + 'sevillalaisena. Sen sijaan sevillanas-kansanlaulut ja '
@@ -66400,11 +66400,9 @@ export const KULTTUURI_KATEGORIAT = {
             + '25. elokuuta 1846 karjamarkkinoiksi, ja ensimmäinen feria '
             + 'pidettiin 18. huhtikuuta 1847 Prado de San Sebastiánilla '
             + 'kaupungin laidalla. Vuonna 2012 telttoja oli 1 048.',
-          lyhyt: 'Ferian portada eli pääportti rakennetaan ja puretaan uudestaan joka vuosi.',
-          selite: 'Ferian portada eli pääportti rakennetaan joka vuosi '
-            + 'uudestaan, työ aloitetaan kuukausia etukäteen ja purku '
-            + 'kestää juhlan jälkeen viikkoja.',
-          lahde: 'Anual, Wikimedia Commons (CC BY-SA 4.0)',
+          lyhyt: "Caballistat Sevillan ferialla",
+          selite: "Caballistat eli ratsastajat perinteisissä asuissaan Sevillan huhtikuun ferialla vuonna 2013.",
+          lahde: "David Sim, Wikimedia Commons (CC BY 2.0)",
           wiki: 'Seville Fair',
         },
         {
