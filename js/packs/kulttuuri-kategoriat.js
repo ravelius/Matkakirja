@@ -4087,11 +4087,11 @@ export const KULTTUURI_KATEGORIAT = {
                   lahde: 'Jacek Rużyczka, Wikimedia Commons (CC BY-SA 3.0)',
                 },
                 {
-                  tiedosto: 'S-Bahn at Hauptbahnhof Berlin.JPG',
+                  tiedosto: "Berlin Hauptbahnhof 170421.jpg",
                   lyhyt: 'Berliinin päärautatieasema avattiin 2006, ja sen raiteet kulkevat kahdessa tasossa ristikkäin.',
                   selite: 'Berliinin päärautatieasema avattiin vuonna 2006, ja '
                     + 'sen junaraiteet kulkevat kahdessa tasossa ristikkäin.',
-                  lahde: 'Martin Falbisoner, Wikimedia Commons (CC BY-SA 4.0)',
+                  lahde: "Ad Meskens, Wikimedia Commons (CC BY-SA 4.0)",
                 },
               ],
             },
@@ -12700,7 +12700,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'raidetta, ja matkoja tehtiin 2023 yhteensä 383 '
                 + 'miljoonaa. Saman lipun alla kulkee yli kaksisataa '
                 + 'bussilinjaa ja 33 raitiolinjaa.',
-              kuva: { tiedosto: 'Budapest, M4 metró, Fővám tér, 10.jpg', selite: 'Budapestin metrossa on neljä linjaa, 52 asemaa ja 39 kilometriä raidetta.', lahde: 'Random photos 1989, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: "A Millenniumi Földalatti Vasút mára megszünt felszíni szakasza a Hősök tere és a Széchenyi fürdő között. Fortepan 94831.jpg", selite: 'Budapestin metrossa on neljä linjaa, 52 asemaa ja 39 kilometriä raidetta.', lahde: "FOTO:Fortepan / UVATERV, Wikimedia Commons (CC BY-SA 3.0)" },
             },
             {
               otsikko: 'Kaksi puolta ja 23 piiriä',
@@ -13141,7 +13141,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Puu, jonka lehdissä on nimiä',
-          tiedosto: 'Mémorial holocauste Budapest.jpg',
+          tiedosto: "Dohány utcai zsinagóga. - Fortepan 82461.jpg",
           teksti: 'Synagogan takapihalla, joukkohaudan päällä, seisoo '
             + 'kuvanveistäjä Imre Vargan metallinen itkuraita-patsas, '
             + 'jonka jokaiseen hopeiseen lehteen on kaiverrettu holokaustissa '
@@ -13150,11 +13150,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'unkarilaissyntyinen Hollywood-näyttelijä Tony Curtis, '
             + 'jonka isä oli kotoisin Unkarista. Muistomerkki tunnetaan '
             + 'Elämän puuna.',
-          lyhyt: 'Imre Vargan 1991 valmistunut Elämän puu -muistomerkki kantaa holokaustin uhrien nimiä hopeisissa lehdissä.',
-          selite: 'Imre Vargan vuonna 1991 valmistunut Elämän puu '
-            + '-muistomerkki kantaa holokaustissa menehtyneiden nimiä '
-            + 'hopeisissa lehdissä.',
-          lahde: 'Yelkrokoyade, Wikimedia Commons (CC BY-SA 3.0)',
+          lyhyt: "Dohány-kadun synagoga vanhassa valokuvassa vuoden 1890 jälkeen.",
+          selite: "Dohány-kadun synagoga vanhassa, vuoden 1890 jälkeen otetussa valokuvassa; julkisivua hallitsevat kaksi sipulikupolitornia.",
+          lahde: "FOTO:Fortepan / Budapest Főváros Levéltára, Wikimedia Commons (public domain)",
           wiki: 'Emanuel Memorial',
         },
       ],
@@ -14309,7 +14307,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Pahvikaupunki kilpailee joka joulukuu',
-          tiedosto: 'Szopka krakowska Gillert Tadeusz 2019.jpg',
+          tiedosto: "Szopka krakowska, konik zwierzyniecki (Lajkonik), wesele krakowskie. 1927-1936 (80186262).jpg",
           teksti: 'Szopka on krakovalainen jouluseimi, joka rakennetaan pahvista '
             + 'ja värillisestä foliosta oikeiden rakennusten mukaan: '
             + 'Mariankirkon tornit, Sukiennice, Wawel. Tavan aloittivat '
@@ -14318,11 +14316,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ensimmäisenä torstaina Adam Mickiewiczin patsaalle '
             + 'keskustorille kilpailuun. Unesco otti tavan '
             + 'kulttuuriperintöluetteloonsa 2018.',
-          lyhyt: 'Szopka rakennetaan pahvista krakovalaisten rakennusten mukaan; Unesco listasi tavan perinnöksi 2018.',
-          selite: 'Szopka rakennetaan pahvista ja värillisestä foliosta '
-            + 'oikeiden krakovalaisten rakennusten mukaan, ja Unesco otti '
-            + 'tavan kulttuuriperintöluetteloonsa 2018.',
-          lahde: 'JagaKRA, Wikimedia Commons (CC BY-SA 4.0)',
+          lyhyt: "Vanha postikortti 1927–1936: krakovalainen szopka, Lajkonik ja kansanhäät.",
+          selite: "Vanha postikortti vuosilta 1927–1936 esittelee krakovalaisia kansantapoja: vasemmalla szopka, keskellä Lajkonik ja oikealla kansanhäät.",
+          lahde: "Tuntematon tekijä, Kansalliskirjasto (Polona) / Wikimedia Commons (public domain)",
         },
       ],
     },
@@ -14537,7 +14533,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'toinen linja avattiin 2015. Asemia on 39. '
                 + 'Raitiovaunut aloittivat hevosvetoisina 1866, ja '
                 + 'verkko sähköistettiin vuoteen 1908 mennessä.',
-              kuva: { tiedosto: 'Bemowo metro station, 3.jpg', lyhyt: 'Varsovan metron ensimmäinen linja avattiin 1995, vaikka rakentaminen alkoi jo 1983.', selite: 'Varsovan metron ensimmäinen linja avattiin 7. huhtikuuta 1995, vaikka rakentaminen oli aloitettu jo 1983.', lahde: 'Oliwier Brzeziński, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: "Alstom Metropolis, M1 Świętokrzyska.jpg", lyhyt: 'Varsovan metron ensimmäinen linja avattiin 1995, vaikka rakentaminen alkoi jo 1983.', selite: 'Varsovan metron ensimmäinen linja avattiin 7. huhtikuuta 1995, vaikka rakentaminen oli aloitettu jo 1983.', lahde: "RAIL P (RAIL.PHOTOGRAPHY), Wikimedia Commons (CC0)" },
             },
             {
               otsikko: 'Kaksi rantaa, kaksi kaupunkia',
