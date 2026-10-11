@@ -406,7 +406,7 @@ namespace Matkakirja.Natiivi
             {
                 // Silmät: kamera lukittu silmäpisteeseen ja sen kiertoon (Ytimen kulmat), ei vaimennusta eikä heiluntaa.
                 p.KapseliPiiloon();
-                var fl = LensSettings.Default; fl.FieldOfView = FpFov; fl.NearClipPlane = 0.05f; fl.FarClipPlane = 4000f;
+                var fl = LensSettings.Default; fl.FieldOfView = FpFov; fl.NearClipPlane = (float)Kameraliike.SilmaLahitasoM; fl.FarClipPlane = 4000f;   // DioraamaNayttamo.Paivita pitää saman (Kameraliike.Lahitaso)
                 p.kamera.Lens = fl;
                 cg.AddComponent<CinemachineHardLockToTarget>();
                 cg.AddComponent<CinemachineRotateWithFollowTarget>();

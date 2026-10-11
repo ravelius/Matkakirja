@@ -131,5 +131,22 @@ namespace Matkakirja.Linssit.Dioraama
             double dk = 1.5 * Math.Sin(2 * Math.PI * t / 31);
             return new Asento(asento.Kohde, asento.Atsimuutti + da, asento.Korkeus + dk, asento.Etaisyys, asento.Fov, asento.Aukko, asento.Kierto);
         }
+
+        // LÄHITASO (11.10., PT 06.0x, v8 laituri-a1 a2-02/03, Laitetestaaja v8-29/35/46): DioraamaNayttamo.Paivita asetti joka kehys
+        // lähitason ≥ 0,5 m (ympäristö) Cinemachinen jälkeen, joten silmälinssin 0,05 m ei koskaan jäänyt voimaan. Kapseli (r 0,3 m)
+        // päästää silmän 0,28–0,3 m:n päähän seinästä (tyrmän holvi 0,28 / 0,47 m) → lähitaso leikkasi seinän ja holvin auki.
+        public const double LahitasoM = 0.3, LahitasoYmparistoM = 0.5, SilmaLahitasoM = 0.05;
+
+        /// <summary>Kameran lähitaso: silmistä (1. persoona) SilmaLahitasoM, muuten 0,3 m (ympäristössä 0,5 m); lähileikkaus (puolilähikuva)
+        /// voittaa, kun se on suurempi.</summary>
+        public static double Lahitaso(bool silmista, bool ymparisto, double lahiLeikkaus)
+            => Math.Max(silmista ? SilmaLahitasoM : ymparisto ? LahitasoYmparistoM : LahitasoM, lahiLeikkaus);
+
+        /// <summary>Lähitason kulman etäisyys silmästä (m): pystykenttä asteina, kuvasuhde = leveys / korkeus.</summary>
+        public static double LahitasonKulmaM(double lahitaso, double pystyFovAste, double kuvasuhde)
+        {
+            double ty = Math.Tan(pystyFovAste * Math.PI / 360), tx = ty * kuvasuhde;
+            return lahitaso * Math.Sqrt(1 + tx * tx + ty * ty);
+        }
     }
 }
