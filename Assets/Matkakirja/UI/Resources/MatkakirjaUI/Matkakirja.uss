@@ -202,9 +202,14 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    transition-property: color;
-    transition-duration: 0.7s; /* ympäristöanimaatio (pohjavahdin poikkeus 8.10.) */
+    transition-property: color, opacity;
+    transition-duration: 0.7s, 0.15s; /* ympäristöanimaatio (pohjavahdin poikkeus 8.10.) */
     transition-timing-function: ease-out;
+}
+
+/* Kukkaron palaute (Ylapalkki.NaytaRaha, PT 11.10.2026): päivä häivytetään summan animaation ajaksi; pillerin leveys pysyy. */
+.mk-pilleri__kello.mk-pilleri__kello--piilo {
+    opacity: 0;
 }
 
 /* aika-valahdys: päivän vaihtuessa kello syttyy kultaiseksi ja himmenee takaisin */
@@ -1707,21 +1712,13 @@
 
 /* Kukkaron palaute (Ylapalkki.NaytaRaha; omistaja 11.10.2026, juna 182; tarkennus 15.2x): koko summa (£ ja luku)
    tyylikirjan tilaväreillä ja lihavana, suurenee ja pienenee tyylikirjan liikkeellä (liike.avaus 220 ms sisaan-käyrällä,
-   liike.sulku 200 ms pehmea-käyrällä), väri palaa hitaasti. £ skaalautuu oikeasta reunastaan ja luku vasemmasta, joten ne
-   pysyvät kiinni toisissaan. Kaksi luokkaa, jotta palaute voittaa rahattoman värin. */
+   liike.sulku 200 ms pehmea-käyrällä), väri palaa hitaasti. Summa siirtyy pillerin keskelle ja suurenee keskeltä
+   (koodi, PT 11.10.). Kaksi luokkaa, jotta palaute voittaa rahattoman värin. */
 .mk-pilleri__raha,
 .mk-pilleri__punta {
-    transition-property: color, scale;
-    transition-duration: 1.2s, 0.2s; /* ympäristöanimaatio (pohjavahdin poikkeus 8.10.) */
-    transition-timing-function: ease, cubic-bezier(0.45, 0, 0.2, 1);
-}
-
-.mk-pilleri__raha {
-    transform-origin: 0% 50%;
-}
-
-.mk-pilleri__punta {
-    transform-origin: 100% 50%;
+    transition-property: color, scale, translate;
+    transition-duration: 1.2s, 0.2s, 0.2s; /* ympäristöanimaatio (pohjavahdin poikkeus 8.10.) */
+    transition-timing-function: ease, cubic-bezier(0.45, 0, 0.2, 1), cubic-bezier(0.45, 0, 0.2, 1);
 }
 
 .mk-pilleri__raha.mk-pilleri__summa--vahenee,
@@ -1734,11 +1731,12 @@
     color: var(--tk-tila-raha-kasvaa);
 }
 
+/* Suurennus ja keskitys tulevat koodista (Ylapalkki.KeskitaJaSuurenna: koko mahtuu pillerin sisään); tämä luokka antaa
+   nousulle tyylikirjan liike.avaus-ajan ja sisaan-käyrän. */
 .mk-pilleri__raha.mk-pilleri__summa--suuri,
 .mk-pilleri__punta.mk-pilleri__summa--suuri {
-    scale: 1.25 1.25;
-    transition-duration: 0.15s, 0.22s;
-    transition-timing-function: ease, cubic-bezier(0.22, 0.9, 0.24, 1);
+    transition-duration: 0.15s, 0.22s, 0.22s;
+    transition-timing-function: ease, cubic-bezier(0.22, 0.9, 0.24, 1), cubic-bezier(0.22, 0.9, 0.24, 1);
 }
 
 /* Talouden vaihe 1 (web .turn-pill .kassa.rahaton, .rahaton-aika): rahat lopussa kassa punaisena ja lihavana,

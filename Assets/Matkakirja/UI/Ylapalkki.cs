@@ -258,9 +258,9 @@ namespace Matkakirja.Natiivi
             var pp = RuntimePanelUtils.ScreenToPanel(elama.panel, new Vector2(ruutu.x, UiRuutu.Korkeus - ruutu.y));
             if (!elama.worldBound.Contains(pp)) SuljeElamaSelite();
         }
-        IVisualElementScheduledItem ilmoitusAjastin, valahdysAjastin, rahaOdotus, rahaPienenee, rahaPalaa;
+        IVisualElementScheduledItem ilmoitusAjastin, valahdysAjastin, rahaOdotus, rahaPienenee, rahaPalaa, rahaKeskelle, rahaVapauta;
         string odottavaRaha;
-        /// <summary>Kukkaron animaatio käynnissä: päivä ("1 pv") piilossa, Aseta ei tuo sitä takaisin kesken.</summary>
+        /// <summary>Kukkaron animaatio käynnissä: pillerin leveys lukittu, päivä ("1 pv") häivytetty.</summary>
         bool rahaAnimaatio;
 
         /// <summary>Ratas- ja valikkonappi (Paavalikko ja Aanentasot ankkuroituvat näihin).</summary>
@@ -1117,7 +1117,7 @@ namespace Matkakirja.Natiivi
                 PaivitaRaha(Raha(osat[0]));
                 var m = System.Text.RegularExpressions.Regex.Match(osat[1], @"\d+");
                 string uusiKello = (m.Success ? m.Value : osat[1]) + "/" + Matkakirja.Peli.LaattaVakiot.EnnatysPaivat;
-                kello.style.display = rahaAnimaatio ? DisplayStyle.None : DisplayStyle.Flex;
+                kello.style.display = DisplayStyle.Flex;
                 if (uusiKello != kelloTeksti && kelloTeksti.Length > 0) Valahda(kello, ref valahdysAjastin);
                 kelloTeksti = uusiKello;
                 kello.text = uusiKello;
@@ -1131,7 +1131,7 @@ namespace Matkakirja.Natiivi
                 // Kukkaron muutos: palaute (väri, suurennus, ääni) PaivitaRaha / RahaPalaute.
                 PaivitaRaha(Raha(osat[0]));
                 string uusiKello = lyhyt ? Kieli.T("ui.ylapalkki.pv", pv.Value) : Iso(osat[1]) + ", " + osat[2];
-                kello.style.display = rahaAnimaatio ? DisplayStyle.None : DisplayStyle.Flex;
+                kello.style.display = DisplayStyle.Flex;
                 if (uusiKello != kelloTeksti && kelloTeksti.Length > 0) Valahda(kello, ref valahdysAjastin);
                 kelloTeksti = uusiKello;
                 kello.text = uusiKello; // web: kello omana tekstinään pillerin välillä, ei pistettä
@@ -1322,7 +1322,9 @@ namespace Matkakirja.Natiivi
          * (pelistreak ja muut muutokset ilman leimaa), ellei RahaLykkays pidä sitä: reitillä kertyvät
          * matkakulut (suunta −1) ja kysymyksen aikana tullut aarre (suunta +1) odottavat UiNakymatin vapautusta.
          */
-        const int VaraMs = 1500, SuuriMs = 450, PalaaMs = 1000;
+        const int VaraMs = 1500, SuuriMs = 450, PalaaMs = 1000, VapautaMs = 260;
+        /// <summary>Summan suurin koko ja väli pillerin reunoihin huipussa (PT 11.10.: "mahtuu pillerin sisään tasaisin välein").</summary>
+        const float Suurennus = 1.25f, ReunaVaraPx = 8f;
 
         /// <summary>Pidetäänkö summan muutos (suunta −1 / +1) vielä odottamassa (UiNakymat asettaa).</summary>
         public Func<int, bool> RahaLykkays;
@@ -1356,29 +1358,38 @@ namespace Matkakirja.Natiivi
         {
             odottavaRaha = null;
             int ero = Luku(uusi) - Luku(RahaNyt);
+            if (ero == 0) { AsetaRahaTeksti(uusi); SovitaPilleri(); return; }
+            /*
+             * PILLERI PYSYY SAMAN LEVYISENÄ (PT 11.10.2026: leveys hyppäsi, kun "1 pv" poistui ja palasi). Leveys lukitaan
+             * animaation ajaksi, päivä häivytetään (opacity, ei display), ja summa siirretään pillerin keskelle ja
+             * suurennetaan keskeltä (KeskitaJaSuurenna) niin, että suurin koko mahtuu sisään tasaisin välein.
+             */
+            if (!rahaAnimaatio && pilleri.resolvedStyle.width > 0) pilleri.style.width = pilleri.resolvedStyle.width;
+            rahaVapauta?.Pause();
             AsetaRahaTeksti(uusi);
-            SovitaPilleri();
-            if (ero == 0) return;
             foreach (var l in new[] { raha, punta })
             {
                 l.EnableInClassList("mk-pilleri__summa--vahenee", ero < 0);
                 l.EnableInClassList("mk-pilleri__summa--kasvaa", ero > 0);
-                l.AddToClassList("mk-pilleri__summa--suuri");
             }
             Kirjasimet.Aseta(raha, Kirjasin.KoneLihava);
             Kirjasimet.Aseta(punta, Kirjasin.LukuLihava);
-            // Päivä piiloon animaation ajaksi: oikeassa yläkulmassa näkyy vain summa.
             rahaAnimaatio = true;
-            if (kello.style.display == DisplayStyle.Flex) kello.style.display = DisplayStyle.None;
-            SovitaPilleri();
+            kello.AddToClassList("mk-pilleri__kello--piilo");
             Aanet.Tehoste(ero > 0 ? "coin" : "kukkaro");
             if (ero > 0) MatkakirjaHaptiikka_RahaKasvoi(); else MatkakirjaHaptiikka_RahaVaheni();
+            rahaKeskelle?.Pause();
             rahaPienenee?.Pause();
             rahaPalaa?.Pause();
+            // Asettelu ehtii päivittyä (lihava kirjasin, uusi luku) ennen mittausta.
+            rahaKeskelle = raha.schedule.Execute(KeskitaJaSuurenna).StartingIn(16);
             rahaPienenee = raha.schedule.Execute(() =>
             {
-                raha.RemoveFromClassList("mk-pilleri__summa--suuri");
-                punta.RemoveFromClassList("mk-pilleri__summa--suuri");
+                foreach (var l in new[] { raha, punta })
+                {
+                    l.RemoveFromClassList("mk-pilleri__summa--suuri");
+                    l.style.scale = StyleKeyword.Null;
+                }
             }).StartingIn(SuuriMs);
             rahaPalaa = raha.schedule.Execute(() =>
             {
@@ -1386,14 +1397,40 @@ namespace Matkakirja.Natiivi
                 {
                     l.RemoveFromClassList("mk-pilleri__summa--vahenee");
                     l.RemoveFromClassList("mk-pilleri__summa--kasvaa");
+                    l.style.translate = StyleKeyword.Null;
                 }
                 // Rahattomuuden varoitus pitää lihavoinnin (NaytaTalous); punta palaa Luku-kirjasimeen.
                 if (!raha.ClassListContains("mk-pilleri__raha--rahaton")) raha.style.unityFontDefinition = StyleKeyword.Null;
                 Kirjasimet.Aseta(punta, Kirjasin.Luku);
-                rahaAnimaatio = false;
-                if (kelloTeksti.Length > 0 && kello.text.Length > 0) kello.style.display = DisplayStyle.Flex;
-                SovitaPilleri();
+                kello.RemoveFromClassList("mk-pilleri__kello--piilo");
+                // Lukitus pois vasta, kun summa on liukunut paikalleen ja päivä palannut (liike.sulku + varmuus).
+                rahaVapauta = raha.schedule.Execute(() =>
+                {
+                    rahaAnimaatio = false;
+                    foreach (var l in new[] { raha, punta }) l.style.transformOrigin = StyleKeyword.Null;
+                    pilleri.style.width = StyleKeyword.Null;
+                    SovitaPilleri();
+                }).StartingIn(VapautaMs);
             }).StartingIn(PalaaMs);
+        }
+
+        /// <summary>Summa (£ + luku) pillerin keskelle ja suurennus keskeltä niin, että se mahtuu sisään tasaisin välein.</summary>
+        void KeskitaJaSuurenna()
+        {
+            var p = pilleri.worldBound;
+            var b = raha.worldBound;
+            var a = punta.resolvedStyle.display == DisplayStyle.Flex ? punta.worldBound : b;
+            float vas = Mathf.Min(a.xMin, b.xMin), oik = Mathf.Max(a.xMax, b.xMax), leveys = Mathf.Max(1f, oik - vas);
+            float keski = (vas + oik) / 2f, dx = p.center.x - keski;
+            float sisa = p.width - pilleri.resolvedStyle.borderLeftWidth - pilleri.resolvedStyle.borderRightWidth - 2f * ReunaVaraPx;
+            float s = Mathf.Clamp(sisa / leveys, 1f, Suurennus);
+            foreach (var l in new[] { raha, punta })
+            {
+                l.AddToClassList("mk-pilleri__summa--suuri");
+                l.style.transformOrigin = new TransformOrigin(new Length(keski - l.worldBound.xMin, LengthUnit.Pixel), new Length(50, LengthUnit.Percent));
+                l.style.translate = new Translate(dx, 0);
+                l.style.scale = new Scale(new Vector2(s, s));
+            }
         }
 
 #if UNITY_IOS && !UNITY_EDITOR
