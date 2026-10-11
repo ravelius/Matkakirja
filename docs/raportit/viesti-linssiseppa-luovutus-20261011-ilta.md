@@ -27,6 +27,15 @@ Testit: `sh Linssit-testit/kaanna.sh` / `sh Kartta-testit/kaanna.sh` / `sh Peli-
   lokit/todistus-houkuttimet-iphone-182d-20261011-1652/arkki-houkuttimet-iphone.jpg (+ ipad-182d-1654).
   Avoin (ei pyydetty): tavalliset himmeät pisteet jäävät iPhonella Italia–Balkan-alueella Kalusteet-laatikon (luult. Pulu.alue) alle.
 
+## Lisäys 18.0x
+- **Houkuttimet 182e KUITATTU** (PT 18.0x) linssiseppa/eurooppa-loitonnus-182 **0d83ffedb**: Berliinin ja Ateenan sininen houkutin pois
+  (omistaja 17.1x: lautapeleihin ei värikorostusta), SHA Natiivisepällä. Testihaara linssiseppa/testi-182-houkuttimet-e 79e9a201f
+  (wt proto-linssiseppa-testi182h). Kuva lokit/todistus-houkuttimet-iphone-182e-20261011-1751/kuvat/h2-eurooppa.png.
+- **Pariisin aukiot 183** linssiseppa/aukiot-pariisi-183 **e5ce4097d** (⊃ cacc9ce4f; wt proto-linssiseppa-monumentit): Vendôme, Bastille,
+  République, Saint-Michel AukionMonumentit-tauluun Karttasepän datasta (T7 _tyo/karttaseppa/kippi-pariisi-20261011/); Tertre pois (PT 17.4x).
+  Kamera noudattaa workerin katse_suunta/katse_kaari (Bastille 0 ±20: Opéra Bastille ei näy) — tarkista että Pelikoodari vie ne workeriin.
+  kamera_ehdotus (18–30 m) EI käytössä: silmä ≥ 65 m. Simu kun aukiot workerissa.
+
 ## Seuraavaksi (juna 183)
 - **Stortorgetin ja Pariisin aukioiden kamera (PT 17.0x, juna 183)** Karttasepän datasta: Karttaseppä toimitti /Volumes/T7 4TB/koodaus/proto-3d/_tyo/karttaseppa/kippi-tukholma-20261011/
   kippi-aukiot-tukholma.json (+ LAHTEET.md). Pelikoodari lisää Stortorgetin (Q3048023) liiku-listaan ja esittely-v3c:hen;
