@@ -219,6 +219,7 @@ namespace Matkakirja.Linssit.Kierros
                     Id = p.Id, Nimi = p.Nimi, Alarivi = p.Alarivi, Teksti = p.Teksti, Lat = p.MonumenttiLat, Lon = p.MonumenttiLon, MaaM = p.MaaM, NostoM = p.NostoM,
                     Suuntima = p.Suuntima, Kallistus = p.Kallistus, EtaisyysM = p.EtaisyysM, MinEtM = p.MinEtM, KattoYlaM = p.KattoYlaM, LoppuEtM = p.LoppuEtM,
                     Aukio = p.Aukio, KohdeLat = p.Lat, KohdeLon = p.Lon, MonumenttiLat = p.MonumenttiLat, MonumenttiLon = p.MonumenttiLon, LeveysSuhde = suhde, LeveysPohja = p,
+                    PanoroiAst = MonumenttiPanorointi(p.Kallistus, suhde),
                 };
             }
             if (p.LeveysKoko <= 0) return p;
@@ -238,6 +239,24 @@ namespace Matkakirja.Linssit.Kierros
                 LoppuEtM = loppu > 0 && loppu < et ? loppu : 0, Aukio = p.Aukio, LeveysKoko = p.LeveysKoko, LeveysSuhde = suhde, LeveysPohja = p,
             };
         }
+        /// <summary>
+        /// MONUMENTTI OTSIKON ALTA (PT 11.10. 10.0x, arkki 182h: pystykuvassa Concorden obeliski osui vasemman yläkulman otsikon "Concorden
+        /// aukio" loppuun): kamera kääntyy silmän ympäri vasemmalle niin, että monumentti on PalloAukioMonumenttiX:ssä kuvan leveydestä
+        /// vasemmasta reunasta (pystysuunta ennallaan). Kulma kehyksen kallistuksesta (katse painuu 90° − kallistus):
+        /// x = cos p · sin δ / ((cos² p · cos δ + sin² p) · tanX) ratkaistuna δ:lle (Newton, 4 kierrosta). Negatiivinen = vasemmalle.
+        /// </summary>
+        public static double MonumenttiPanorointi(double kallistus, double suhde)
+        {
+            const double A = Math.PI / 180;
+            double x = 2 * PalloAukioMonumenttiX - 1, tanX = Math.Tan(KuvaPystyAst * A / 2) * suhde, p = (90 - kallistus) * A, c = Math.Cos(p), s2 = Math.Sin(p) * Math.Sin(p);
+            double F(double d) => c * Math.Sin(d) / ((c * c * Math.Cos(d) + s2) * tanX);
+            double dd = x * tanX / Math.Max(0.1, c);
+            for (int i = 0; i < 4; i++) { double f = F(dd) - x, h = 1e-6; dd -= f / ((F(dd + h) - F(dd - h)) / (2 * h)); }
+            return -dd / A;
+        }
+        /// <summary>Pystykuvan aukiomonumentin vaakapaikka (osuus kuvan leveydestä vasemmasta reunasta; 0,5 = keskellä).</summary>
+        public const double PalloAukioMonumenttiX = 0.58;
+
         /// <summary>Kapean kuvan leveyssovitus: kohde enintään tämä osuus puolileveydestä, loitonnus enintään (× iPadin etäisyys) ja
         /// silmä enintään (m maasta).</summary>
         public const double PalloKapeaReuna = 0.9, PalloKapeaKerroinMax = 3.0, PalloKapeaSilmaMaxM = 300;

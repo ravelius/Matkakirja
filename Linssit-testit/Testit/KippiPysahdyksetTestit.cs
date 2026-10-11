@@ -699,7 +699,7 @@ namespace Matkakirja.Linssit.Testit
         {
             // PT 11.10. 09.2x: pystykuvassa vain alue-luokka loittonee (Tivoli); rakennukset ja kadut (Louvre, Champs-Élysées) sekä
             // korkeat (Riemukaari, Eiffel) kuten vaakakuvassa; aukio (Concorde) pysyy lähikehyksessä ja kiertää obeliskia, joka on
-            // vaakasuunnassa keskellä (±0,3) ja kokonaan kuvassa (0,9) koko pysähdyksen ajan.
+            // vaakasuunnassa 58 %:ssa vasemmalta (± 0,03; PT 10.0x, otsikon alta) ja kokonaan kuvassa (0,9) koko pysähdyksen ajan.
             var viat = new List<string>();
             double tanP = Math.Tan(OpasKuvaus.KuvaPystyAst * Math.PI / 360);
             foreach (var (kaupunki, id, koko) in new[] { ("pariisi", "Q19675", 700.0), ("pariisi", "Q189503", 360.0), ("pariisi", "Q550", 1900.0), ("pariisi", "Q64436", 50.0),
@@ -717,16 +717,19 @@ namespace Matkakirja.Linssit.Testit
                     {
                         // Luxorin obeliski (OpasKatseOletukset, Wikidata Q1503331), 23 m (AukioKohdeKorkeusM).
                         var mon = OpasKatseOletukset.Monumentti(a.Reitti.First(y => y.Id == id).Lat, a.Reitti.First(y => y.Id == id).Lon).Value;
-                        double xMax = 0, kMax = 0; var q0 = a.Reitti.First(y => y.Id == id);
+                        double xMax = 0, kMax = 0, xMin = double.MaxValue, xKMax = double.MinValue; var q0 = a.Reitti.First(y => y.Id == id);
                         double ta = a.Saapui[id], tb = a.Lahti[id];
                         foreach (var r in a.R)
                         {
                             if (r.t < ta || r.t > tb || r.kohde != id) continue;
-                            xMax = Math.Max(xMax, Math.Abs(OpasKuvaus.KuvassaX(r.a, mon.lat, mon.lon, MaaM + 0.5 * OpasKuvaus.AukioKohdeKorkeusM, suhde)));
+                            double xo = OpasKuvaus.KuvassaX(r.a, mon.lat, mon.lon, MaaM + 0.5 * OpasKuvaus.AukioKohdeKorkeusM, suhde);
+                            xMax = Math.Max(xMax, Math.Abs(xo)); xMin = Math.Min(xMin, (xo + 1) / 2); xKMax = Math.Max(xKMax, (xo + 1) / 2);
                             kMax = Math.Max(kMax, OpasKuvaus.KuvassaOsuus(r.a, mon.lat, mon.lon, MaaM, MaaM + OpasKuvaus.AukioKohdeKorkeusM, 2, suhde));
                         }
-                        lisa = $", obeliski vaakasuunnassa enintään {xMax:F2}, kokonaan kuvassa enintään {kMax:F2}";
-                        if (suhde < 1 && (xMax > 0.3 || kMax > TorniReuna)) viat.Add($"Concorde {suhde:F2}: obeliski {xMax:F2} / {kMax:F2}");
+                        lisa = $", obeliski {xMin:F3}–{xKMax:F3} kuvan leveydestä vasemmalta, kokonaan kuvassa enintään {kMax:F2}";
+                        // PT 10.0x: pystykuvassa obeliski 58 %:ssa vasemmalta (otsikon alta oikealle) ± 0,03 koko pysähdyksen.
+                        if (suhde < 1 && (xMin < OpasKuvaus.PalloAukioMonumenttiX - 0.03 || xKMax > OpasKuvaus.PalloAukioMonumenttiX + 0.03 || kMax > TorniReuna))
+                            viat.Add($"Concorde {suhde:F2}: obeliski {xMin:F3}–{xKMax:F3} / {kMax:F2}");
                         if (suhde < 1 && x0.EtM > v.EtM + 1e-6) viat.Add($"Concorde {suhde:F2}: loittoni {v.EtM:F0} → {x0.EtM:F0} m");
                     }
                     Console.WriteLine($"      {id} {suhde:F2}: alussa et {x0.EtM:F0} m (vaaka {v.EtM:F0}), silmä {x0.SilmaM:F0} m, kallistus {x0.Kallistus:F0}°, kohde {osuus:F2} leveydestä{lisa}, lopussa et {x[^1].EtM:F0} m, kierto {kaari / Math.Max(1, x[^1].T - x[0].T):F1} °/s");
