@@ -1,0 +1,3 @@
+VAROITUS rabat: artikkeli.intro: pyöreä suuruusluokka — onko lähteessä tarkka?
+== rabat: 0 virhettä, 1 varoitusta, 23 kuvaa
+YHTEENSÄ 1 kaupunkia: 0 virhettä, 1 varoitusta
