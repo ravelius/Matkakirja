@@ -1,7 +1,7 @@
 // METROLINJA (omistaja 7.10.2026 klo 10.2x, Päätoimittajan kortti; Pariisin kaupunkiesitys): kierroksen eteneminen pystyviivana
 // METROLINJA-pohjalla (Pohjat/metrolinja.uss). Kaikki asemat nimineen himmeinä, nykyinen tummana ja lihavoituna; kuljettu osuus
 // viivasta korostusvärillä. Data LS1:ltä (OpasSovitin.KierrosKohteet, KierrosIndeksi, KierrosVaihtui). Paikka ja korkeus OpasValikolta.
-// Omistaja 7.10. 12.3x: ei taustaa; porrastus nykyinen (välitotsikko, lihava) > viereiset (apuri) > muut (kapiteeli, hennompi),
+// Omistaja 7.10. 12.3x: ei taustaa; porrastus nykyinen (välitotsikko, lihava) > muut (apuri, täysi peitto; PT 11.10.: kapiteeli hukkui vaaleaan kaupunkiin),
 // teksti ja viiva oppaan otsikon tyylillä (valkoinen, Himmennys-varjo ja ääriviiva). Kuumailmapallon lähtiessä (LS1
 // KierrosLahtee) seuraava suurenee ja nykyinen pienenee pehmeästi ~1 s: sisältöanimaatio koodista joka ruudulla, ei USS-siirtymä.
 using System.Collections.Generic;
@@ -308,11 +308,11 @@ namespace Matkakirja.Natiivi
                 float taso = Mathf.Lerp(alkuTaso.Length == n ? alkuTaso[k] : 0f, Taso(k, kohde), e);
                 nytTaso[k] = taso;
                 var (rivi, nimi, paikka) = asemat[k];
-                // Koko: kapiteeli 12 → apuri 14 → väliotsikko 18; peitto 0,85 → 0,85 → 1; piste 6 → 8 → 12 pt. Kauempien peitto 0,6 → 0,85
-                // (pallon UI-katselmointi TF 172, PT 9.10.2026): 0,6 himmensi myös varjon ja ääriviivan, ja nimet hukkuivat yöllä tummaan ja
-                // päivällä vaaleaan kaupunkiin. Porrastus jää kokoon ja painoon; ei taustaa (omistaja 7.10. 12.3x).
-                float koko = taso < 1f ? Mathf.Lerp(Tyylikirja.Koko.Kapiteeli, Tyylikirja.Koko.Apuri, taso) : Mathf.Lerp(Tyylikirja.Koko.Apuri, Tyylikirja.Koko.Valiotsikko, taso - 1f);
-                float peitto = taso < 1f ? 0.85f : Mathf.Lerp(0.85f, 1f, taso - 1f);
+                // Koko: muut ja viereiset apuri 14 → nykyinen väliotsikko 18; peitto aina 1; piste 6 → 8 → 12 pt. Kauempien peitto 0,6 → 0,85
+                // (pallon UI-katselmointi TF 172, PT 9.10.2026) → 1 ja kapiteeli 12 → apuri 14 (Laitetestaajan karttakierros 180 kohta 4, PT 11.10.
+                // 06.5x: muut rivit hukkuivat vaaleaan Pariisiin). Porrastus nykyiseen painolla (lihava) ja korostuksella; ei taustaa (omistaja 7.10. 12.3x).
+                float koko = taso < 1f ? Tyylikirja.Koko.Apuri : Mathf.Lerp(Tyylikirja.Koko.Apuri, Tyylikirja.Koko.Valiotsikko, taso - 1f);
+                const float peitto = 1f;
                 float piste = taso < 1f ? Mathf.Lerp(6f, 8f, taso) : Mathf.Lerp(8f, 12f, taso - 1f);
                 // Korostettu nimi yhdellä rivillä, koko leveyden mukaan (SovitaKorostus); kahdelle riville vain, jos ei mahdu muuten.
                 if (k == kohde && kt > 0f) koko = Mathf.Lerp(koko, korostusKoko, kt);
