@@ -34,3 +34,13 @@ vie-paketti.sh:lla (_valmiit/<nimi>-vienti-<pvm>/ + SHA256SUMS + LAHTEET.md). Pe
 3. Tunnettu: vapaaseen kulkuun siirryttäessä kamera putoaa pysähdyksen silmäkorkeudesta 1,6 m:iin (korkealla roikkuvilla teoksilla
    hyppy) → harkitse liukua.
 4. Peking (kierros 4, LR v6) ja pyörimislinssi 2b (51b4342e4) TAUOLLA.
+
+## PÄIVITYS 11.10. klo 11.5x: JUNA 182 MUSEO KUITATTU
+- proto `linssiseppa2/museo-182` kärki **7a6051553** (PT kuittasi, SHA Natiivisepälle): omistajan "teos läheltä" (95 %), salin himmennys
+  pysähdyksessä, valo katosta 30° pään yläpuolelta tasaisesti (MuseoValo.KattoKeila, _TeosKeski), kehykset (aalto, lakka, kultahelmi,
+  3 kultakehystä, vanha kulta), seinä 3× toisto + aniso, siirtymän katse vaakatasossa, tekstitysdata + NUI:n kaistale ja ☰ (79fbb7a35),
+  yli 120 merkin virkkeet kahtia. Arkit docs/raportit/kaappaukset/linssiseppa2-museo182-20261011/ (v3 7636d8219).
+- iPad Pro 13 (Release 7a6051553): fp ≤ 2615 Mt, vapaa ≥ 2504 Mt, ~30 fps. Skripti museo-lapipeluu/ipad-muisti-182.zsh.
+- Käännökset: pyydä AINA KÄÄNNÖS NYT; linja 2 = PROTO_LINJA=2 (linjan 2 iPad-simuun tulee käynnistyksessä Development Console -rivejä,
+  Natiivisepän juurisyyjonossa). Älä tapa proto-kaanna.sh:ta, jos lukko on jo oma.
+- JONO nyt: Pariisin korttelit v2 (kohta 2 alla), sitten vapaan kulun pikkuviat.
