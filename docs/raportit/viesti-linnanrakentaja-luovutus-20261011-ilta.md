@@ -73,3 +73,18 @@ SEURAAVAKSI: yhdistä eleet (kohta 3: soutaja_yhdista.py tyo/eleet-leikkeet.glb 
   (T7 _tyo/karttaseppa/olavinlinna-keittio-vertailu-20261011/: kalkittu luonnonkivi #EADFD1, liuskekivilattia) ja Sisältökirjurin
   sisätilojen totuusraportti (PR #4417, korjauslista §6: kappeli kalkittu, soihdut pois, Kuninkaansali, Tott-kammio, ampuma-aukot,
   tyrmä, porttikäytävä, keittiön rappaus) → kysy PT:ltä järjestys. Pariisi v3c/v3d: odottaa LS2:n pelikuvia.
+
+## JATKO 11.10. ~19.5x (UUDELLEENKÄYNNISTYS, PT)
+- VIETY lisäksi: v47y (reitti:pelaaja-12 z 10,6 → 10,35, keittiön ovi laatikon ulkopuolelle): 1499 632ad9e11308fb3f; NYKY-vienti
+  käynnissä irrotettuna (scratchpad/vie_v47y.log, skripti tyokalut-lr/vie-v47/vie_v47y.zsh) → tunnukset Siirtosepälle, kun KAIKKI VALMIS.
+- KESKEN agentteina (kuolevat uudelleenkäynnistyksessä → aja uudelleen samalla tehtävällä):
+  1) v47z kapeat kohdat (junan 183 jumit): A) 16 kierreportaan ramppi ulkoreuna RS − 0,1 → RS − 0,02 (sisin kaista 40–52° liian jyrkkä,
+     kulkukelpoista 0,85 m); B) 75 ampumakäytävän rengas: paaovi-porras (K(165…187, RP 6,3)) sisäseinä seina 0,6 työntyy renkaaseen
+     (0,71 m) → seina=0,4; C) 64/65 palatsin seinä (−16,37; −7,73)→(−15,37; −9,93) ja kierreportaan varren seinä (−16,63; −8,91)→
+     (−18,8; −4,97) rako 0,73 m → ≥ 0,9. Ketju: kavely.py → olavinlinna-kavely-v1/v47z-tyo → jumit 2…94 → leivo muuttuneet näkyvät →
+     kytke vain muuttuneet osat (EI vesiportti/ranta: v47v-laituri on glb-tasolla). Siirtosepän pyyntö 19.4x: kaistat ≥ 0,9 m.
+  2) MetaHuman-pilotti soutajalla (_valmiit/linna-hahmot/metahuman-soutaja-v1/; Unreal kiinni lopuksi!) → kuvapari + puhevideo +
+     muistiarvio PT:lle. Tarkista, jäikö Unreal auki (pgrep -x UnrealEditor) ja mitä kansioon ehti syntyä.
+- Natiivi (Siirtoseppä): seinävariantti r 0,3 + solu 0,05 + korkeus 1,75 + minRegionArea 0,25 (7c84c88e1) testissä 16/19/61:lle;
+  botin katse kulkusuuntaan (91/92, 12). Datan seinäleikkaus tyokalut-lr/kavely_tri_seinat.py HYLÄTTY (palatsin törmäysnormaalit
+  sekaisin → katkoi reittejä); pielivara.py ja navseinat.py jäävät työkaluiksi.
