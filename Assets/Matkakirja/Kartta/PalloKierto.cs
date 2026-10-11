@@ -1783,6 +1783,13 @@ namespace Matkakirja
         Cesium3DTileset maastoPallo;
         Task<CesiumSampleHeightResult> maastoKysely;
         double2 maastoKyselyPaikka;   // (lat, lon)
+        /// <summary>
+        /// LÄHITASO KATUTASOLLA (Linssiseppä 11.10.2026, kaupunkipuiden katutasokuvat): kaupunkinäkymässä maaston rako on pois
+        /// (maasto 0), joten lähitaso oli puolet silmän ELLIPSOIDIkorkeudesta, enintään 50 m (Pariisissa 3 m maan yllä ~43 m:
+        /// katu ja lähipuut leikkautuivat). Oppaan kiinteä kamera (testikomento) antaa tähän maan ellipsoidikorkeuden silmän
+        /// kohdalla (oma korkeusmalli; NaN = ei tietoa); null = ennallaan (normaali peli ei muutu).
+        /// </summary>
+        public Func<double, double, double> LahitasonMaa;
         double maastoNayte;
         double2 maastoNaytePaikka;    // (lat, lon)
         bool maastoNayteOn;
@@ -1981,7 +1988,9 @@ namespace Matkakirja
                 // Lähitaso: kallistuksessa 1 % etäisyydestä, mutta enintään puolet raosta maastoon, ettei läheinen
                 // vuori leikkaudu (Metal käyttää käänteistä syvyyttä, joten pieni lähitaso ei syö tarkkuutta).
                 double lahi = kaytetty > 0 ? math.max(50.0, etaisyys * 0.01) : math.max(100.0, etaisyys * 0.02);
-                lahi = math.min(lahi, math.max(1.0, (silmanKorkeus - maasto) * 0.5));
+                double maaLahi = maasto;
+                if (maastoRakoPois && LahitasonMaa != null) { double m = LahitasonMaa(silmanLat, silmanLon); if (!double.IsNaN(m)) maaLahi = m; }
+                lahi = math.min(lahi, math.max(1.0, (silmanKorkeus - maaLahi) * 0.5));
                 kamera.nearClipPlane = (float)lahi;
                 kamera.farClipPlane = (float)math.max(etaisyys + 2.0 * r, KaukorajaVahintaan);
             }

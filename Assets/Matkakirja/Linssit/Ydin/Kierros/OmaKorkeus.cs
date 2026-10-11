@@ -68,6 +68,13 @@ namespace Matkakirja.Linssit.Kierros
             return double.NaN;
         }
 
+        /// <summary>Ellipsoidikorkeus mallin omassa ENU:ssa (x itä, y pohjoinen, m) tai NaN; KaupunkiPuut (sama origo, ei lat/lon-kierrosta).</summary>
+        public double KorkeusEnu(double x, double y)
+        {
+            foreach (var o in Osat) { double h = o.Korkeus(x, y); if (!double.IsNaN(h)) return h; }
+            return double.NaN;
+        }
+
         const double A = 6378137.0, F = 1 / 298.257223563, E2 = F * (2 - F);
 
         static (double x, double y, double z) Ecef(double lat, double lon)
