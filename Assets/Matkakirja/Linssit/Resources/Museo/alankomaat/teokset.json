@@ -2,6 +2,7 @@
  "versio": 2,
  "maa": "alankomaat",
  "huomio": "LS2 10.10. (taidemuseon tekijä, PT 20.5x: kaikki salit ilman tyhjiä kohtia): Sisältökirjurin teokset.v2.json (58) + grafiikka/teokset.grafiikka.v2.1.json (13) suodatettuna sali.json:n kaikkiin 62 teos_ehdotukseen (LR:n sali v2g täytti viimeiset 11 paikkaa; ennen 20, LS1:n ensimmäinen pala). ASTC-paketit astc-v1/<id>/ kaikille (42 uutta teos_astc.py:llä). Polut suhteessa MuseoSovitin.KuvaJuuri = …/taidemuseo/alankomaat/. Mitat cm [korkeus, leveys]. id = museon inventaarionumero. LS2 11.10. 00.5x (PT: kaikki 13 grafiikan kertojateosta seinälle): RP-P-OB-612 ja RP-P-OB-616 grafiikkakabinetin oven seinälle (graf-i1, graf-i2), 64 teosta.",
+ "elinvuodet_lahde": "tekija_elinvuodet = Wikidata P569/P570 (tekija_wikidata), haettu 11.10.2026 Commonsin tiedosto- ja Creator-sivujen kautta (LS2, omistajan infokortti)",
  "teokset": [
   {
    "id": "SK-C-251",
@@ -46,7 +47,11 @@
      6400
     ],
     "commons_sha1": "d2ba0a889ab693d819fdebafc8ee530256b69b9e"
-   }
+   },
+   "tekija_elinvuodet": "1632–1675",
+   "tekija_wikidata": [
+    "Q41264"
+   ]
   },
   {
    "id": "SK-A-2860",
@@ -91,7 +96,11 @@
      5254
     ],
     "commons_sha1": "801e68e273311c354845249b9c4463fe71972993"
-   }
+   },
+   "tekija_elinvuodet": "1632–1675",
+   "tekija_wikidata": [
+    "Q41264"
+   ]
   },
   {
    "id": "RP-P-OB-602",
@@ -136,7 +145,11 @@
      3648
     ],
     "commons_sha1": "5666151f377f871f0de62fe46a4e0a9251260aca"
-   }
+   },
+   "tekija_elinvuodet": "1606–1669",
+   "tekija_wikidata": [
+    "Q5598"
+   ]
   },
   {
    "id": "SK-A-4691",
@@ -181,7 +194,11 @@
      5020
     ],
     "commons_sha1": "50d4879739379298383bda28aa78a0751a1f08b6"
-   }
+   },
+   "tekija_elinvuodet": "1606–1669",
+   "tekija_wikidata": [
+    "Q5598"
+   ]
   },
   {
    "id": "SK-A-354",
@@ -226,7 +243,11 @@
      6678
     ],
     "commons_sha1": "d2c547a3110f70f7e03648e41ed4dbdc89a51475"
-   }
+   },
+   "tekija_elinvuodet": "1664–1750",
+   "tekija_wikidata": [
+    "Q234385"
+   ]
   },
   {
    "id": "SK-C-6",
@@ -271,7 +292,11 @@
      7168
     ],
     "commons_sha1": "c96590912886b794c734e6cfa1fca1e716ddd9ec"
-   }
+   },
+   "tekija_elinvuodet": "1606–1669",
+   "tekija_wikidata": [
+    "Q5598"
+   ]
   },
   {
    "id": "SK-C-216",
@@ -316,7 +341,11 @@
      5430
     ],
     "commons_sha1": "7e8195936ea0aa0d02a4aba49422ab8da10ba33d"
-   }
+   },
+   "tekija_elinvuodet": "1606–1669",
+   "tekija_wikidata": [
+    "Q5598"
+   ]
   },
   {
    "id": "SK-C-374",
@@ -361,7 +390,12 @@
      3542
     ],
     "commons_sha1": "3044751228ce24c65af2aa8bc6041bd86937db77"
-   }
+   },
+   "tekija_elinvuodet": "Hals 1591–1666, Codde 1599–1678",
+   "tekija_wikidata": [
+    "Q167654",
+    "Q655049"
+   ]
   },
   {
    "id": "SK-A-4",
@@ -406,7 +440,11 @@
      4830
     ],
     "commons_sha1": "d55169f72fc8142e52fe838f3ed33b5725aa5121"
-   }
+   },
+   "tekija_elinvuodet": "1610–1652",
+   "tekija_wikidata": [
+    "Q541976"
+   ]
   },
   {
    "id": "SK-A-44",
@@ -451,7 +489,11 @@
      5652
     ],
     "commons_sha1": "ae8d6a3b7835a881462e7cd8889ba6b405c7ee52"
-   }
+   },
+   "tekija_elinvuodet": "1616–1680",
+   "tekija_wikidata": [
+    "Q374039"
+   ]
   },
   {
    "id": "SK-C-5",
@@ -496,7 +538,11 @@
      11528
     ],
     "commons_sha1": "53db595a5a1bca243b152b175d65f0f2f1ab1ff8"
-   }
+   },
+   "tekija_elinvuodet": "1606–1669",
+   "tekija_wikidata": [
+    "Q5598"
+   ]
   },
   {
    "id": "SK-A-2344",
@@ -541,7 +587,11 @@
      11058
     ],
     "commons_sha1": "09beee3e2598baa333fda9f092e3ad7f6373b1a5"
-   }
+   },
+   "tekija_elinvuodet": "1632–1675",
+   "tekija_wikidata": [
+    "Q41264"
+   ]
   },
   {
    "id": "SK-A-1595",
@@ -586,7 +636,11 @@
      5996
     ],
     "commons_sha1": "cc670d6d9ca605ef17ec5168f2e376692bfb16ec"
-   }
+   },
+   "tekija_elinvuodet": "1632–1675",
+   "tekija_wikidata": [
+    "Q41264"
+   ]
   },
   {
    "id": "SK-A-182",
@@ -631,7 +685,11 @@
      4836
     ],
     "commons_sha1": "803b9a6db060199e3334b41b8178c6f760dcef2c"
-   }
+   },
+   "tekija_elinvuodet": "1629–1684",
+   "tekija_wikidata": [
+    "Q314889"
+   ]
   },
   {
    "id": "RP-P-OB-444",
@@ -676,7 +734,11 @@
      4910
     ],
     "commons_sha1": "63671c333490b18f151bcfa87a36c2b1b150d007"
-   }
+   },
+   "tekija_elinvuodet": "1606–1669",
+   "tekija_wikidata": [
+    "Q5598"
+   ]
   },
   {
    "id": "SK-A-199",
@@ -721,7 +783,11 @@
      4938
     ],
     "commons_sha1": "ffc0bc31ed1f37d70596ceecb49f92164f856bae"
-   }
+   },
+   "tekija_elinvuodet": "1619–1693",
+   "tekija_wikidata": [
+    "Q28144"
+   ]
   },
   {
    "id": "SK-A-135",
@@ -766,7 +832,11 @@
      5430
     ],
     "commons_sha1": "923e0201801473b7f2636d105e05dbf0f0699326"
-   }
+   },
+   "tekija_elinvuodet": "1591–1666",
+   "tekija_wikidata": [
+    "Q167654"
+   ]
   },
   {
    "id": "SK-C-229",
@@ -811,7 +881,11 @@
      4508
     ],
     "commons_sha1": "ffca2004bf4aa88ef0ee982ebc4a0abf5638166e"
-   }
+   },
+   "tekija_elinvuodet": "1626–1679",
+   "tekija_wikidata": [
+    "Q205863"
+   ]
   },
   {
    "id": "SK-A-1718",
@@ -856,7 +930,11 @@
      3626
     ],
     "commons_sha1": "f4ee055869e2be0c7cca6018c1860030129506e2"
-   }
+   },
+   "tekija_elinvuodet": "1585–1634",
+   "tekija_wikidata": [
+    "Q212593"
+   ]
   },
   {
    "id": "SK-C-211",
@@ -901,7 +979,11 @@
      5614
     ],
     "commons_sha1": "0bd6a8258e09f528aab7bac6fb384b2b8bd04a8d"
-   }
+   },
+   "tekija_elinvuodet": "1628–1682",
+   "tekija_wikidata": [
+    "Q213612"
+   ]
   },
   {
    "id": "uva-amsterdam-kartta-1625",
@@ -947,7 +1029,11 @@
      9021
     ],
     "commons_sha1": "ef8bd06ea6d0ef97bac2d4df77f401d3c0599f23"
-   }
+   },
+   "tekija_elinvuodet": "1591–1645",
+   "tekija_wikidata": [
+    "Q4356567"
+   ]
   },
   {
    "id": "RP-P-OB-832",
@@ -996,7 +1082,11 @@
      4908
     ],
     "commons_sha1": "e02810459bdd211aba6f6977bbd07944267284fb"
-   }
+   },
+   "tekija_elinvuodet": "1589–1638",
+   "tekija_wikidata": [
+    "Q931846"
+   ]
   },
   {
    "id": "RP-F-AB12278-A",
@@ -1045,7 +1135,11 @@
      3938
     ],
     "commons_sha1": "7990c327188e7b62eb6010bf5cac013629ec01b8"
-   }
+   },
+   "tekija_elinvuodet": "1809–1894",
+   "tekija_wikidata": [
+    "Q13464791"
+   ]
   },
   {
    "id": "RP-F-AB12278-Z",
@@ -1094,7 +1188,11 @@
      3506
     ],
     "commons_sha1": "bc91938486e9b39b5b1fc3dce5d2b1fe8b6d1e94"
-   }
+   },
+   "tekija_elinvuodet": "1809–1894",
+   "tekija_wikidata": [
+    "Q13464791"
+   ]
   },
   {
    "id": "RP-P-OB-849",
@@ -1143,7 +1241,11 @@
      4902
     ],
     "commons_sha1": "9659a6e671d14b756855b2ff39bf38e6e9d8d0db"
-   }
+   },
+   "tekija_elinvuodet": "1589–1638",
+   "tekija_wikidata": [
+    "Q931846"
+   ]
   },
   {
    "id": "RP-F-00-565",
@@ -1192,7 +1294,11 @@
      5410
     ],
     "commons_sha1": "0cc9312765479e772b1feb526841c2f879d54e97"
-   }
+   },
+   "tekija_elinvuodet": "1857–1923",
+   "tekija_wikidata": [
+    "Q289441"
+   ]
   },
   {
    "id": "RP-F-K89497",
@@ -1241,7 +1347,11 @@
      4636
     ],
     "commons_sha1": "90d61ec50c62ceddf4218bd4b4f466ae7fcf1da0"
-   }
+   },
+   "tekija_elinvuodet": "1857–1923",
+   "tekija_wikidata": [
+    "Q289441"
+   ]
   },
   {
    "id": "RP-F-K89483",
@@ -1290,7 +1400,11 @@
      4612
     ],
     "commons_sha1": "bd9b2da64231d90e6b7d2587dc2b4641231d697d"
-   }
+   },
+   "tekija_elinvuodet": "1857–1923",
+   "tekija_wikidata": [
+    "Q289441"
+   ]
   },
   {
    "id": "SK-C-149",
@@ -1335,7 +1449,11 @@
      13460
     ],
     "commons_sha1": "f32d2feaf20d262e2198a8ede5ef98f046ceabd2"
-   }
+   },
+   "tekija_elinvuodet": "1629–1684",
+   "tekija_wikidata": [
+    "Q314889"
+   ]
   },
   {
    "id": "RP-P-OB-550",
@@ -1384,7 +1502,11 @@
      5480
     ],
     "commons_sha1": "d1d9fb5a8d5a97a8cb4f27aeb29d8a3e07edab24"
-   }
+   },
+   "tekija_elinvuodet": "1606–1669",
+   "tekija_wikidata": [
+    "Q5598"
+   ]
   },
   {
    "id": "SK-A-3276",
@@ -1429,7 +1551,11 @@
      4902
     ],
     "commons_sha1": "3cf6dd0309edeca010bf56491fc303400a7b080f"
-   }
+   },
+   "tekija_elinvuodet": "1606–1669",
+   "tekija_wikidata": [
+    "Q5598"
+   ]
   },
   {
    "id": "RP-P-1961-1117",
@@ -1478,7 +1604,11 @@
      4080
     ],
     "commons_sha1": "dec5fdba37088256fd28e99ae9cb6b31eef85d4d"
-   }
+   },
+   "tekija_elinvuodet": "1606–1669",
+   "tekija_wikidata": [
+    "Q5598"
+   ]
   },
   {
    "id": "RP-P-OB-810",
@@ -1527,7 +1657,11 @@
      4922
     ],
     "commons_sha1": "7f3acc7a05607de5e06ff3719bebdac617486b3f"
-   }
+   },
+   "tekija_elinvuodet": "1589–1638",
+   "tekija_wikidata": [
+    "Q931846"
+   ]
   },
   {
    "id": "SK-A-2338",
@@ -1572,7 +1706,11 @@
      5422
     ],
     "commons_sha1": "277b6600a0c7c04119837be691c7dfa214236a85"
-   }
+   },
+   "tekija_elinvuodet": "1664–1750",
+   "tekija_wikidata": [
+    "Q234385"
+   ]
   },
   {
    "id": "SK-A-2099",
@@ -1617,7 +1755,11 @@
      5752
     ],
     "commons_sha1": "9fa7161cc4943700d91c87455a8c149dcd58c8ff"
-   }
+   },
+   "tekija_elinvuodet": "1665–1707",
+   "tekija_wikidata": [
+    "Q367798"
+   ]
   },
   {
    "id": "SK-C-206",
@@ -1662,7 +1804,11 @@
      4370
     ],
     "commons_sha1": "dfc211fbd7b43659a64e92ae0f46828a519ff6b6"
-   }
+   },
+   "tekija_elinvuodet": "1625–1654",
+   "tekija_wikidata": [
+    "Q355406"
+   ]
   },
   {
    "id": "SK-A-2326",
@@ -1707,7 +1853,11 @@
      6146
     ],
     "commons_sha1": "0e580c4c2fe6c75fba4c6fc3b012b3d7968628c0"
-   }
+   },
+   "tekija_elinvuodet": "1609–1660",
+   "tekija_wikidata": [
+    "Q232423"
+   ]
   },
   {
    "id": "SK-A-1685",
@@ -1752,7 +1902,11 @@
      4682
     ],
     "commons_sha1": "ed640b4ca4c5253bc968e042030a4614742cea3b"
-   }
+   },
+   "tekija_elinvuodet": "1609–1660",
+   "tekija_wikidata": [
+    "Q232423"
+   ]
   },
   {
    "id": "SK-A-4050",
@@ -1797,7 +1951,11 @@
      12006
     ],
     "commons_sha1": "1df2dc579ec4ba5b0fc14f1d726caa398c9cc146"
-   }
+   },
+   "tekija_elinvuodet": "1606–1669",
+   "tekija_wikidata": [
+    "Q5598"
+   ]
   },
   {
    "id": "SK-A-3137",
@@ -1842,7 +2000,11 @@
      4622
     ],
     "commons_sha1": "054ce98a20c0634ec5dbc92165f51f562b0c3bfe"
-   }
+   },
+   "tekija_elinvuodet": "1606–1669",
+   "tekija_wikidata": [
+    "Q5598"
+   ]
   },
   {
    "id": "SK-C-230",
@@ -1887,7 +2049,11 @@
      5396
     ],
     "commons_sha1": "b0cbf07e1929ef17df857cd64927532df4971141"
-   }
+   },
+   "tekija_elinvuodet": "1626–1679",
+   "tekija_wikidata": [
+    "Q205863"
+   ]
   },
   {
    "id": "SK-A-385",
@@ -1932,7 +2098,11 @@
      5382
     ],
     "commons_sha1": "9e790551b10d04a6bf177eb5b18f61b70d0f5831"
-   }
+   },
+   "tekija_elinvuodet": "1626–1679",
+   "tekija_wikidata": [
+    "Q205863"
+   ]
   },
   {
    "id": "SK-A-404",
@@ -1977,7 +2147,11 @@
      4618
     ],
     "commons_sha1": "9f656f6b3b2a0b16b30343d4918bdbd53e7e8934"
-   }
+   },
+   "tekija_elinvuodet": "1617–1681",
+   "tekija_wikidata": [
+    "Q346808"
+   ]
   },
   {
    "id": "SK-A-351",
@@ -2022,7 +2196,11 @@
      4836
     ],
     "commons_sha1": "08b4c659322f531897431a74251dbe646ca013e6"
-   }
+   },
+   "tekija_elinvuodet": "1628–1682",
+   "tekija_wikidata": [
+    "Q213612"
+   ]
   },
   {
    "id": "SK-A-1320",
@@ -2067,7 +2245,11 @@
      3174
     ],
     "commons_sha1": "de74f04162859eed092a26ecc09cfe888df4c9ae"
-   }
+   },
+   "tekija_elinvuodet": "1585–1634",
+   "tekija_wikidata": [
+    "Q212593"
+   ]
   },
   {
    "id": "SK-C-244",
@@ -2112,7 +2294,11 @@
      5414
     ],
     "commons_sha1": "fd80eb366145f924ebb1b1969571b2b49f79c31c"
-   }
+   },
+   "tekija_elinvuodet": "1633–1707",
+   "tekija_wikidata": [
+    "Q432266"
+   ]
   },
   {
    "id": "SK-A-45",
@@ -2157,7 +2343,11 @@
      5224
     ],
     "commons_sha1": "5df986719aee3bbba5ab6e36e02d956d3e890db2"
-   }
+   },
+   "tekija_elinvuodet": "1616–1680",
+   "tekija_wikidata": [
+    "Q374039"
+   ]
   },
   {
    "id": "SK-A-156",
@@ -2202,7 +2392,11 @@
      4452
     ],
     "commons_sha1": "2eeb4022efe8c0d84c125950f6ca9826c6153836"
-   }
+   },
+   "tekija_elinvuodet": "1638–1709",
+   "tekija_wikidata": [
+    "Q336908"
+   ]
   },
   {
    "id": "SK-A-3957",
@@ -2247,7 +2441,11 @@
      3808
     ],
     "commons_sha1": "d6d67b5000293e05603a7416b673cef42e065828"
-   }
+   },
+   "tekija_elinvuodet": "1620–1691",
+   "tekija_wikidata": [
+    "Q313194"
+   ]
   },
   {
    "id": "SK-A-2979",
@@ -2292,7 +2490,11 @@
      2666
     ],
     "commons_sha1": "171a9e6519cd8f324722bb255a77f6c5538d8519"
-   }
+   },
+   "tekija_elinvuodet": "1857–1923",
+   "tekija_wikidata": [
+    "Q289441"
+   ]
   },
   {
    "id": "SK-A-1328",
@@ -2337,7 +2539,11 @@
      7106
     ],
     "commons_sha1": "4b8d5ff711b02939321a70cc249eeb6280c58788"
-   }
+   },
+   "tekija_elinvuodet": "1857–1923",
+   "tekija_wikidata": [
+    "Q289441"
+   ]
   },
   {
    "id": "mauritshuis-605",
@@ -2382,7 +2588,11 @@
      6000
     ],
     "commons_sha1": "6ecbd41139fbffca3c2ab6708ac18bc2909d7632"
-   }
+   },
+   "tekija_elinvuodet": "1622–1654",
+   "tekija_wikidata": [
+    "Q352954"
+   ]
   },
   {
    "id": "fhm-os-i-116",
@@ -2427,7 +2637,11 @@
      5856
     ],
     "commons_sha1": "56998df23c02b53e6dc6b4f435e59bda5c14edd7"
-   }
+   },
+   "tekija_elinvuodet": "1591–1666",
+   "tekija_wikidata": [
+    "Q167654"
+   ]
   },
   {
    "id": "vgm-s0005v1962",
@@ -2472,7 +2686,11 @@
      2481
     ],
     "commons_sha1": "c528c5977c09a461ee515f4187bfe9b1de0d8fc1"
-   }
+   },
+   "tekija_elinvuodet": "1853–1890",
+   "tekija_wikidata": [
+    "Q5582"
+   ]
   },
   {
    "id": "SK-A-2280",
@@ -2517,7 +2735,11 @@
      6780
     ],
     "commons_sha1": "5f08acb3a7d69f26df04f6439e6d9066155c1105"
-   }
+   },
+   "tekija_elinvuodet": "1831–1915",
+   "tekija_wikidata": [
+    "Q474238"
+   ]
   },
   {
    "id": "vgm-s0149v1962",
@@ -2562,7 +2784,11 @@
      1669
     ],
     "commons_sha1": "fff411c81d9177430ea02fa10492a7e144c3bc19"
-   }
+   },
+   "tekija_elinvuodet": "1853–1890",
+   "tekija_wikidata": [
+    "Q5582"
+   ]
   },
   {
    "id": "kmska-2200",
@@ -2607,7 +2833,11 @@
      3609
     ],
     "commons_sha1": "b1e0dae38c44dbc0e889ab2db5b24930c30a0308"
-   }
+   },
+   "tekija_elinvuodet": "1857–1923",
+   "tekija_wikidata": [
+    "Q289441"
+   ]
   },
   {
    "id": "vgm-s0031v1962",
@@ -2652,7 +2882,11 @@
      5277
     ],
     "commons_sha1": "f4c1b705b489b3a4ae9a429c4b813408180cabab"
-   }
+   },
+   "tekija_elinvuodet": "1853–1890",
+   "tekija_wikidata": [
+    "Q5582"
+   ]
   },
   {
    "id": "mauritshuis-146",
@@ -2697,7 +2931,11 @@
      4520
     ],
     "commons_sha1": "36a7657796697d7ec1cc3d7ebf12b72b378d47c7"
-   }
+   },
+   "tekija_elinvuodet": "1606–1669",
+   "tekija_wikidata": [
+    "Q5598"
+   ]
   },
   {
    "id": "mauritshuis-840",
@@ -2742,7 +2980,11 @@
      6000
     ],
     "commons_sha1": "75f51d843905e18188ded1cdfaf0f6bee499e7b5"
-   }
+   },
+   "tekija_elinvuodet": "1606–1669",
+   "tekija_wikidata": [
+    "Q5598"
+   ]
   },
   {
    "id": "mauritshuis-92",
@@ -2787,7 +3029,11 @@
      5002
     ],
     "commons_sha1": "dbfeab7cef30933675a6bc38c5b50a6fe58e54cf"
-   }
+   },
+   "tekija_elinvuodet": "1632–1675",
+   "tekija_wikidata": [
+    "Q41264"
+   ]
   },
   {
    "id": "mauritshuis-670",
@@ -2832,7 +3078,11 @@
      14550
     ],
     "commons_sha1": "863e60ca490e9e58214f2ecc5931d2d9b837f6d8"
-   }
+   },
+   "tekija_elinvuodet": "1632–1675",
+   "tekija_wikidata": [
+    "Q41264"
+   ]
   },
   {
    "id": "RP-P-OB-612",
@@ -2881,7 +3131,11 @@
      4332
     ],
     "commons_sha1": "86d2940d052639d5fe9d33f9e1d7498ae75e06a8"
-   }
+   },
+   "tekija_elinvuodet": "1606–1669",
+   "tekija_wikidata": [
+    "Q5598"
+   ]
   },
   {
    "id": "RP-P-OB-616",
@@ -2930,7 +3184,11 @@
      4576
     ],
     "commons_sha1": "9526ae47374220e8d61e149ce8bbd1b899bf0ae0"
-   }
+   },
+   "tekija_elinvuodet": "1606–1669",
+   "tekija_wikidata": [
+    "Q5598"
+   ]
   }
  ]
 }

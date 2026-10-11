@@ -108,6 +108,9 @@ namespace Matkakirja.Linssit.Museo
         public string Id, Otsikko, Alkuperainen, Taiteilija, Vuosi, Tekniikka, Lahde, Lisenssi, Iiif, Kuva, Paketti;
         /// <summary>Lyhyt kuvateksti (1–3 virkettä, Sisältökirjuri); null = ei riviä kortissa.</summary>
         public string Kuvateksti;
+        /// <summary>Taiteilijan elinvuodet ("1606–1669"; kaksi tekijää "Hals 1591–1666, Codde 1599–1678"; Wikidata, teokset.json
+        /// elinvuodet_lahde); null = ei tiedossa.</summary>
+        public string Elinvuodet;
         /// <summary>Kuva on havainnekuva (ei teoksen valokuva): kortti merkitsee sen kuten nostot.</summary>
         public bool Havainnekuva;
         /// <summary>Kuvan pikselit (leveys, korkeus): v2:ssa ASTC-paketin lähde (iso, pitkä sivu 8192), v1:ssä seinäkuva; 0 = tuntematon.</summary>
@@ -365,7 +368,7 @@ namespace Matkakirja.Linssit.Museo
                 KorkeusCm = MiniJson.Luku(d, "korkeus_cm") ?? (mitat.Count == 2 ? M(0) : 50), LeveysCm = MiniJson.Luku(d, "leveys_cm") ?? (mitat.Count == 2 ? M(1) : 40),
                 Kuvasuhde = MiniJson.Luku(d, "kuvasuhde") ?? MiniJson.Luku(d, "kuvasuhde_leveys_per_korkeus") ?? 0,
                 Grafiikka = MiniJson.Kentta(d, "grafiikka") is bool g ? g : T("siipi") == "grafiikka-valokuvat" || id != null && id.StartsWith("RP-P-", StringComparison.Ordinal),
-                Kuvateksti = T("kuvateksti", "kuvateksti_fi"), Havainnekuva = MiniJson.Totuus(d, "havainnekuva"),
+                Kuvateksti = T("kuvateksti", "kuvateksti_fi"), Elinvuodet = T("tekija_elinvuodet"), Havainnekuva = MiniJson.Totuus(d, "havainnekuva"),
                 KuvaLeveys = px.Count == 2 ? Convert.ToInt32(px[0], CultureInfo.InvariantCulture) : 0,
                 KuvaKorkeus = px.Count == 2 ? Convert.ToInt32(px[1], CultureInfo.InvariantCulture) : 0,
             };

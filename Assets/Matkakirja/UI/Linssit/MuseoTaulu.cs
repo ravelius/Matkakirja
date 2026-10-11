@@ -6,8 +6,8 @@
 //  - Ohjausnapit (OHJAUSNAPPI-pohja, Ohjausnappi.Ryhma) alhaalla keskellä: edellinen, tauko/jatka, seuraava, vapaa kulku ↔
 //    kierros, esittely, zoom. Kuvakkeet olemassa olevista (Ikonit.Takaisin, Tauko, Seuraava, saapas, kirja, suurennuslasi).
 //  - ZOOM (omistaja 11.10. 12.4x): suurennuslasi pysähdyksessä vie lähemmäs teosta, vetämällä tutkitaan, nipistys toimii samoin.
-//  - Esittely (Natiivi-UI 10.10., PT 09.5x): KORTTI-pohja (Kortti pohja: true). Kapiteeli "taiteilija · vuosi", otsikko teos,
-//    alkuperäinen nimi, tekniikka ja mitat, lyhyt kuvateksti ja lähderivi "kokoelma · lisenssi" (havainnekuva merkitään kuten
+//  - Esittely (Natiivi-UI 10.10., PT 09.5x; infokortti omistaja 11.10.): KORTTI-pohja (Kortti pohja: true). Kapiteeli "taiteilija (elinvuodet)", otsikko teos,
+//    alkuperäinen nimi, "vuosi · tekniikka · mitat", kokoelma, lyhyt kuvateksti ja lähderivi lisenssistä (havainnekuva merkitään kuten
 //    nostoissa). Kaiutin (KortinLukija) lukee esittelyn kertojan äänellä, ja Esittele-nappi aloittaa luennan heti: esittely
 //    kuuluu napista. Paikka kuten NOSTOKORTTI: KAPEA alareunaan ohjausnappien yläpuolelle (enintään Peitto.Max %), muuten
 //    sivukortti oikealle (Pohja.Sivukortti). Sulku KORTTI-pohjan mukaan: ohinapautus ja Esc (kierros on tauolla kortin ajan).
@@ -33,7 +33,7 @@ namespace Matkakirja.Natiivi
         Button zoom;
         readonly Dictionary<int, Vector2> kosketukset = new Dictionary<int, Vector2>();
         float nipistysAlku;
-        readonly Label nimi, alarivi, kKapiteeli, kNimi, kAlkuperainen, kTekniikka, kKuvateksti, kLahde;
+        readonly Label nimi, alarivi, kKapiteeli, kNimi, kAlkuperainen, kTekniikka, kKokoelma, kKuvateksti, kLahde;
         readonly Button tauko, vapaa, esittele, edellinen, seuraava;
         readonly Kortti kortti, huoneKortti;
         readonly Label hNimi, hTeksti;
@@ -85,10 +85,11 @@ namespace Matkakirja.Natiivi
             otsikko.style.alignItems = Align.FlexStart;
             otsikko.style.display = DisplayStyle.None;
             nimi = Rakenne.Teksti("", "mk-aikajana-havainne__otsikko", otsikko);
-            Kirjasimet.Aseta(nimi, Kirjasin.Goottilainen);
+            // NYKYAIKAINEN MUSEO (omistaja 11.10.): nimikyltti, kortti ja tekstitys Moderni-kirjasimella (SF Pro, tyylikirja), ei goottilaista.
+            Kirjasimet.Aseta(nimi, Kirjasin.ModerniLihava);
             nimi.style.fontSize = Tyylikirja.Koko.Nimio; nimi.style.whiteSpace = WhiteSpace.Normal; nimi.style.unityTextAlign = TextAnchor.LowerLeft;
             alarivi = Rakenne.Teksti("", "mk-aikajana-havainne__kuvateksti", otsikko);
-            Kirjasimet.Aseta(alarivi, Kirjasin.Antiikva);
+            Kirjasimet.Aseta(alarivi, Kirjasin.Moderni);
             alarivi.style.fontSize = Tyylikirja.Koko.Valiotsikko; alarivi.style.whiteSpace = WhiteSpace.Normal;
             // Tekijärivi luettavaksi punaisella damastilla ja tummalla seinällä (LS2 11.10., kierros 33 pysähdystä: k11–k15, k24–k33):
             // vaaleampi paperisävy (Kehys.Paper, sama kuin otsikon --paper) tumman --paper-dark-sävyn sijaan.
@@ -101,7 +102,8 @@ namespace Matkakirja.Natiivi
             }
 
             var turva = kerros.Turva(LinssiUi.Ylakerros);
-            ryhma = Ohjausnappi.Ryhma(turva);
+            // LÄPINÄKYVÄT NAPIT (omistaja 11.10.): tyylikirjan teema harmaa-kuulto, vain kuvake ja ohut ääriviiva maalauksen päällä.
+            ryhma = Ohjausnappi.Ryhma(turva, "harmaa-kuulto");
             ryhma.style.position = Position.Absolute;
             // OHJAUSNAPPI-ryhmän pohjatyyli on oikea yläkulma (top/right): top pois, muuten ryhmä venyy koko korkeudelle ja napit
             // keskittyvät ruudun keskelle (LS1:n kuva-arkki 10.10. 11.4x, iPad vaaka).
@@ -130,7 +132,7 @@ namespace Matkakirja.Natiivi
             {
                 Debug.Log("MATKAKIRJA museo: Poistu");
                 UiNakymat.Hae()?.Linssit?.SuljeLinssi();
-            }, aanet: false);
+            }, aanet: false, teema: "harmaa-kuulto");
             Valikko.NaytaTekstitys(() => MuseoSovitin.TekstitysPaalla, MuseoSovitin.AsetaTekstitys);
             poistuRivi = Rakenne.El(null, turva, PickingMode.Ignore);
             poistuRivi.style.position = Position.Absolute;
@@ -151,11 +153,11 @@ namespace Matkakirja.Natiivi
             ylarivi.style.justifyContent = Justify.SpaceBetween;
             ylarivi.style.alignItems = Align.Center;
             kKapiteeli = Rakenne.Teksti("", "mk-kortti__kapiteeli", ylarivi);
-            Kirjasimet.Aseta(kKapiteeli, Tyylikirja.Kirjain.Kapiteeli);
+            Kirjasimet.Aseta(kKapiteeli, Kirjasin.Moderni);
             kKapiteeli.style.flexGrow = 1; kKapiteeli.style.flexShrink = 1; kKapiteeli.style.flexBasis = 0; kKapiteeli.style.whiteSpace = WhiteSpace.Normal;
             lukija = new KortinLukija(ylarivi, Kieli.T("ui.nosto.kuuntele-kortti"), saatimet: true, rajaus: () => kortti.worldBound);
             kNimi = Rakenne.Teksti("", "mk-kortti__otsikko", kortti.Sisus); kNimi.style.whiteSpace = WhiteSpace.Normal;
-            Kirjasimet.Aseta(kNimi, Tyylikirja.Kirjain.Otsikko);
+            Kirjasimet.Aseta(kNimi, Kirjasin.ModerniLihava);
             // Pitkä otsikko iPhone pystyssä (LS1 10.10., Yövartio): kortin korkeusraja (Peitto.Max) kutisti kapiteelirivin otsikon alle.
             // Kuten Mitä uutta (mk-tietoja__vieritys): kapiteeli ja otsikko pysyvät, vain tekstit joustavat ja vierivät.
             ylarivi.style.flexShrink = 0;
@@ -167,14 +169,16 @@ namespace Matkakirja.Natiivi
             vieritys.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             kortti.Sisus.Add(vieritys);
             kAlkuperainen = Rakenne.Teksti("", "mk-kortti__teksti", vieritys); kAlkuperainen.style.whiteSpace = WhiteSpace.Normal;
-            Kirjasimet.Aseta(kAlkuperainen, Tyylikirja.Kirjain.Apuri);
+            Kirjasimet.Aseta(kAlkuperainen, Kirjasin.ModerniKevyt);
             kTekniikka = Rakenne.Teksti("", "mk-kortti__teksti", vieritys); kTekniikka.style.whiteSpace = WhiteSpace.Normal;
-            Kirjasimet.Aseta(kTekniikka, Tyylikirja.Kirjain.Leipa);
+            Kirjasimet.Aseta(kTekniikka, Kirjasin.Moderni);
+            kKokoelma = Rakenne.Teksti("", "mk-kortti__teksti", vieritys); kKokoelma.style.whiteSpace = WhiteSpace.Normal;
+            Kirjasimet.Aseta(kKokoelma, Kirjasin.Moderni);
             kKuvateksti = Rakenne.Teksti("", "mk-kortti__teksti", vieritys); kKuvateksti.style.whiteSpace = WhiteSpace.Normal;
-            Kirjasimet.Aseta(kKuvateksti, Tyylikirja.Kirjain.Leipa);
+            Kirjasimet.Aseta(kKuvateksti, Kirjasin.Moderni);
             // Lähderivi konekirjoituksella kuten kysymyskortin kuvalähde (Kirjasin.Kone), ei omaa kokoa.
             kLahde = Rakenne.Teksti("", "mk-kortti__teksti", vieritys); kLahde.style.whiteSpace = WhiteSpace.Normal;
-            Kirjasimet.Aseta(kLahde, Kirjasin.Kone);
+            Kirjasimet.Aseta(kLahde, Kirjasin.ModerniKevyt);
             Nappaimisto.Rekisteroi("museo-esittely", 60, () => MuseoSovitin.EsittelyAuki, null, null, () => MuseoSovitin.Esittele(false));
 
             huoneKortti = new Kortti(null, pohja: true);
@@ -186,10 +190,10 @@ namespace Matkakirja.Natiivi
             hRivi.style.justifyContent = Justify.SpaceBetween;
             hRivi.style.alignItems = Align.Center;
             hNimi = Rakenne.Teksti("", "mk-kortti__otsikko", hRivi); hNimi.style.whiteSpace = WhiteSpace.Normal; hNimi.style.flexGrow = 1; hNimi.style.flexShrink = 1; hNimi.style.flexBasis = 0;
-            Kirjasimet.Aseta(hNimi, Tyylikirja.Kirjain.Otsikko);
+            Kirjasimet.Aseta(hNimi, Kirjasin.ModerniLihava);
             hLukija = new KortinLukija(hRivi, Kieli.T("ui.nosto.kuuntele-kortti"), saatimet: true, rajaus: () => huoneKortti.worldBound);
             hTeksti = Rakenne.Teksti("", "mk-kortti__teksti", huoneKortti.Sisus); hTeksti.style.whiteSpace = WhiteSpace.Normal;
-            Kirjasimet.Aseta(hTeksti, Tyylikirja.Kirjain.Leipa);
+            Kirjasimet.Aseta(hTeksti, Kirjasin.Moderni);
             huoneKortti.style.display = DisplayStyle.None;
             huoneKortti.Sisus.RegisterCallback<ClickEvent>(_ => { if (!MuseoSovitin.HuoneKorttiAuki) MuseoSovitin.HuoneKortti(true); });
             huoneKyltti = new Nimikyltti(huoneKortti);
@@ -202,7 +206,7 @@ namespace Matkakirja.Natiivi
             virke.style.display = DisplayStyle.None;
             virkeLaatikko = Rakenne.El("mk-aikajana-kertomus__laatikko", virke, PickingMode.Ignore);
             virkeTeksti = Rakenne.Teksti("", "mk-aikajana-kertomus__teksti", virkeLaatikko);
-            Kirjasimet.Aseta(virkeTeksti, Kirjasin.Luku);
+            Kirjasimet.Aseta(virkeTeksti, Kirjasin.Moderni);
             MuseoSovitin.KertojanVirkeVaihtui += _ => PaivitaVirke();
 
             MuseoSovitin.Vaihtui += Paivita;
@@ -233,6 +237,10 @@ namespace Matkakirja.Natiivi
         }
         const float KapeaLeveys = 520f, MatalaKorkeus = 520f;
 
+        /// <summary>Sitova vuosiväli (PT 11.10.: "n. 1669–" / "1670" ei saa katketa): sitova välilyönti (U+00A0) ja sitova
+        /// yhdysmerkki (U+2011) viivan tilalle; UITK:n TextCore ei noudata &lt;nobr&gt;-tagia (simu 11.10. 14.51).</summary>
+        static string Sido(string s) => string.IsNullOrEmpty(s) ? s : s.Replace(' ', '\u00A0').Replace('–', '\u2011').Replace('-', '\u2011');
+
         void AsetteleKortti()
         {
             var isa = korttiJuuri.parent;
@@ -242,7 +250,11 @@ namespace Matkakirja.Natiivi
             // Nappirivin yläreuna (ei bottom + korkeus: venynyt ryhmä antoi negatiivisen tilan ja ~50 pt:n kortin).
             float napit = H - ryhma.layout.yMin + m;
             if (float.IsNaN(napit) || napit < m || napit > H * 0.5f) napit = 24f + Tyylikirja.Nappi.Ohjaus + m;
-            if (Pohja.Leveys(W) == Pohja.Luokka.Kapea)
+            // Kapea kortti (puhelin pystyssä): alkuperäinen nimi pois, jotta pisinkin esittely (Yövartio) mahtuu Peitto.Max:iin
+            // (PT 11.10.: viimeinen rivi leikkautui); sivukortissa tilaa on.
+            bool kapea = Pohja.Leveys(W) == Pohja.Luokka.Kapea;
+            kAlkuperainen.style.display = !kapea && !string.IsNullOrEmpty(kAlkuperainen.text) ? DisplayStyle.Flex : DisplayStyle.None;
+            if (kapea)
             {
                 korttiJuuri.style.left = m; korttiJuuri.style.right = m; korttiJuuri.style.width = StyleKeyword.Auto;
                 korttiJuuri.style.top = StyleKeyword.Auto; korttiJuuri.style.bottom = napit;
@@ -338,17 +350,19 @@ namespace Matkakirja.Natiivi
             {
                 var t = r.Teos;
                 nimi.text = t.Otsikko;
-                alarivi.text = $"{t.Taiteilija}, {t.Vuosi}";
+                alarivi.text = $"{t.Taiteilija}, {Sido(t.Vuosi)}";   // vuosiväli ei katkea rivinvaihtoon (PT 11.10.)
                 if (korttiTeos != t.Id)
                 {
                     korttiTeos = t.Id;
-                    kKapiteeli.text = $"{t.Taiteilija} · {t.Vuosi}";
+                    // INFOKORTTI (omistaja 11.10.): taiteilija (elinvuodet), nimi, vuosi · tekniikka · koko, kokoelma, esittely; puuttuva kenttä pois.
+                    kKapiteeli.text = string.IsNullOrEmpty(t.Elinvuodet) ? t.Taiteilija : $"{t.Taiteilija} ({Sido(t.Elinvuodet)})";
                     kNimi.text = t.Otsikko;
                     Rivi(kAlkuperainen, t.Alkuperainen);
-                    Rivi(kTekniikka, string.IsNullOrEmpty(t.Tekniikka) ? t.Mitat : t.Mitat == null ? Isolla(t.Tekniikka) : $"{Isolla(t.Tekniikka)}, {t.Mitat}");
+                    Rivi(kTekniikka, string.Join(" · ", new[] { Sido(t.Vuosi), string.IsNullOrEmpty(t.Tekniikka) ? null : Isolla(t.Tekniikka), t.Mitat }.Where(x => !string.IsNullOrWhiteSpace(x))));
+                    Rivi(kKokoelma, t.Lahde);
                     Rivi(kKuvateksti, t.Kuvateksti);
                     // Havainnekuva kuten nostoissa (ui.nosto.havainnekuva) lähderivin perään.
-                    string lahde = string.Join(" · ", new[] { t.Lahde, t.Lisenssi }.Where(x => !string.IsNullOrWhiteSpace(x)));
+                    string lahde = string.Join(" · ", new[] { t.Lisenssi }.Where(x => !string.IsNullOrWhiteSpace(x)));
                     if (t.Havainnekuva) lahde = (lahde.Length > 0 ? lahde + " · " : "") + Kieli.T("ui.nosto.havainnekuva");
                     Rivi(kLahde, lahde);
                     lukija.Aseta(new[] { t.Otsikko, $"{t.Taiteilija}, {t.Vuosi}.", t.Kuvateksti }, omistaja: "museo:" + t.Id);

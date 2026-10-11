@@ -1,12 +1,12 @@
 // TYYLIKIRJA — generoitu tiedostosta tyylikirja/tyylikirja.json (webin repo, node tools/tyylikirja.mjs --natiivi).
-// ÄLÄ MUOKKAA KÄSIN. lähde eb1498a45a7e. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
+// ÄLÄ MUOKKAA KÄSIN. lähde d6b293ff1c57. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
 {
     public static class Tyylikirja
     {
-        public const string Lahde = "eb1498a45a7e";
+        public const string Lahde = "d6b293ff1c57";
 
         public static class Kehys
         {
@@ -85,6 +85,7 @@ namespace Matkakirja.Natiivi
         public static readonly Teema Lasi = new Teema("lasi", new Color32(46, 33, 20, 224), new Color32(243, 230, 208, 255), new Color32(201, 180, 143, 255), new Color32(217, 161, 59, 255), new Color32(217, 161, 59, 115), new Color32(217, 161, 59, 255));
         public static readonly Teema LasiAvaruus = new Teema("lasi-avaruus", new Color32(4, 12, 9, 230), new Color32(223, 246, 232, 255), new Color32(159, 201, 176, 255), new Color32(93, 255, 168, 255), new Color32(93, 255, 168, 71), new Color32(93, 255, 168, 255));
         public static readonly Teema Harmaa = new Teema("harmaa", new Color32(130, 130, 130, 107), new Color32(224, 224, 224, 255), new Color32(189, 189, 189, 255), new Color32(255, 255, 255, 255), new Color32(170, 170, 170, 255), new Color32(170, 170, 170, 140));
+        public static readonly Teema HarmaaKuulto = new Teema("harmaa-kuulto", new Color32(130, 130, 130, 0), new Color32(240, 240, 240, 255), new Color32(189, 189, 189, 255), new Color32(255, 255, 255, 255), new Color32(224, 224, 224, 153), new Color32(130, 130, 130, 107));
         public static readonly Teema Lcd = new Teema("lcd", new Color32(12, 34, 20, 255), new Color32(132, 255, 160, 255), new Color32(132, 255, 160, 158), new Color32(132, 255, 160, 255), new Color32(124, 255, 158, 71), new Color32(132, 255, 160, 255));
 
         public static class Himmennys
