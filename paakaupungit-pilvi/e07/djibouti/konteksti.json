@@ -1,0 +1,62 @@
+{
+ "id": "djibouti",
+ "era": "e07",
+ "nimi": "Djibouti",
+ "nimiAlkukieli": "Djibouti (arabia: جيبوتي)",
+ "maa": "DJI",
+ "maanNimi": "Djibouti",
+ "asema": "pääkaupunki",
+ "lat": 11.595,
+ "lon": 43.1481,
+ "wikidata": "Q3604",
+ "kevytSisalto": {
+  "kuvaus": "Djibouti on maan pääkaupunki ja suurin kaupunki Tadjouran lahden rannalla Afrikan sarven kaakkoisreunalla. Kaupunki on kasvanut 1800-luvun lopun ranskalaisesta siirtokuntakaupungista alueen tärkeäksi satama- ja kauppakeskukseksi, ja Etiopian ulkomaankaupasta suuri osa kulkee sen kautta. Vanhassa keskustassa on arkadeja ja mauriarkkitehtuurin vaikutteita, ja uudemmat satamat ovat kaupungin ulkopuolella.",
+  "tunnusrakennukset": [
+   "Place du 27 Juin (kaarisommitelmat, maurilaistyyliset arkadit)",
+   "Hamoudi-moskeija",
+   "Ryad-tori",
+   "Djiboutin satama ja Doralehin konttiterminaali"
+  ],
+  "asukkaat": {
+   "arvo": 767250,
+   "vuosi": 2024,
+   "lahde": "INSTAD (Institut National de la Statistique de Djibouti), 3. väestö- ja asuntolaskenta RGPH-3 (20.5.2024), Djiboutin kaupunki (Balbala 547 129, Boulaos 212 074, Ras Dika 8 047); tiedot citypopulation.de:n taulukosta, joka nimeää INSTAD:n lähteeksi. Koko maa 1 066 809.",
+   "linkki": "https://citypopulation.de/en/djibouti/admin/1__djibouti/"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Djibouti on pieni, kuuma ja kuiva valtio Afrikan sarvessa Punaisenmeren ja Adeninlahden välissä Bab-el-Mandebin salmen tuntumassa. Maa itsenäistyi Ranskasta vuonna 1977, ja sen tärkein voimavara on sijainti maailman vilkkaimman meriliikennereitin varrella. Satamat ja rautatie palvelevat erityisesti sisämaavaltio Etiopian kauppaa, ja Djiboutissa on myös useiden ulkovaltojen tukikohtia. Asukkaat ovat enimmäkseen muslimeja, ja suurimmat kansat ovat somalit ja afarit.",
+  "genetiivi": "Djiboutin",
+  "kielet": [
+   {
+    "kieli": "arabia",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "ranska",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "somali",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "afar",
+    "asema": "kansallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Djiboutin frangi",
+   "koodi": "DJF"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Djibouti (kaupunki)",
+  "maanAvain": "Djibouti",
+  "varattuNimi": true
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

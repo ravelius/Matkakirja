@@ -1,0 +1,88 @@
+{
+ "id": "dodoma",
+ "era": "e07",
+ "nimi": "Dodoma",
+ "nimiAlkukieli": "Dodoma",
+ "maa": "TZA",
+ "maanNimi": "Tansania",
+ "asema": "pääkaupunki",
+ "lat": -6.173,
+ "lon": 35.742,
+ "wikidata": "Q3866",
+ "kevytSisalto": {
+  "kuvaus": "Dodoma on Tansanian virallinen pääkaupunki maan keskiosassa, ylängöllä kaukana rannikon Dar es Salaamista. Kaupunki syntyi 1900-luvun alussa rautatien varrelle, ja pääkaupungin siirrosta päätettiin 1970-luvulla. Hallinnon siirto on edennyt vaiheittain, ja ministeriöt ovat muuttaneet Mtumban hallintokaupunginosaan 2010-luvun lopulla.",
+  "tunnusrakennukset": [
+   "Parlamenttirakennus (Bunge)",
+   "Gaddafi-moskeija",
+   "Pyhän Hengen katedraali (anglikaaninen)",
+   "Dodoman rautatieasema"
+  ],
+  "asukkaat": {
+   "arvo": 846160,
+   "vuosi": 2025,
+   "lahde": "Tansanian tilastokeskus (National Bureau of Statistics, NBS), The 2022 Population and Housing Census: Dodoma Region Population Projections 2023–2050 (toukokuu 2025), taulukko 3C.22: Dodoma City Council, projektio vuodelle 2025 (2023: 799 961; 2024: 823 031; 2026: 869 747). Projektio perustuu vuoden 2022 väestölaskentaan (Dodoma City 765 179, 2012: 410 956).",
+   "linkki": "https://www.nbs.go.tz/uploads/statistics/documents/en-1764652694-01.%20Dodoma%20Population%20Projection%20Report%20%E2%80%93%202023-2050.pdf"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Housut yhdestä napista",
+    "Kolmekymmentäkahdeksan minuuttia",
+    "Opettaja, joka käänsi Shakespearen",
+    "Vapauden rata vuorten läpi"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Kattila, jonka pohjalla asutaan",
+    "Laava, jota voi katsoa päivällä kuin mutavirtaa",
+    "Apina, joka jäi saarelle meren noustessa",
+    "Uusi apinasuku 83 vuoteen"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Nuput, jotka tekivät saarista maustesaaret",
+    "Riisi, joka kertoo kauppareitin",
+    "Munakas, jonka sisällä on ranskalaiset",
+    "Puisto, joka herää auringonlaskussa"
+   ]
+  },
+  {
+   "id": "kuvataide",
+   "nimi": "Kuvataide",
+   "nostot": [
+    "Kuusi seuraajaa ja neljä vuotta aikaa",
+    "Sukupuu, joka veistetään yhdestä rungosta",
+    "Ovi, joka kertoo talon asukkaasta",
+    "Kangas, jolla on nimi ja mielipide"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Sulttaani tilasi orkesterin Egyptistä",
+    "Orjaksi syntynyt laulaja, joka levytti Bombayssa",
+    "Peukalopiano ja Peter Gabrielin levy-yhtiö",
+    "Aivot, joita tarvittiin selvitäkseen"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Dodoma",
+  "maanAvain": "Tansania",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

@@ -1,0 +1,97 @@
+{
+ "id": "mogadishu",
+ "era": "e07",
+ "nimi": "Mogadishu",
+ "nimiAlkukieli": "Muqdisho",
+ "maa": "SOM",
+ "maanNimi": "Somalia",
+ "asema": "pääkaupunki",
+ "lat": 2.0369,
+ "lon": 45.3387,
+ "wikidata": "Q2449",
+ "kevytSisalto": {
+  "kuvaus": "Mogadishu on Somalian pääkaupunki ja suurin kaupunki Intian valtameren rannalla. Kaupunki oli keskiajalla merkittävä kauppasatama, jonka vanhat korallikivitalot ja moskeijat näkyvät yhä Hamar Weynen ja Shanganin kaupunginosien kaduilla. Rannat, torit ja satama ovat tärkeitä asukkaiden arjessa ja kaupankäynnissä.",
+  "tunnusrakennukset": [
+   "Arba'a Rukun -moskeija (n. 1268-69)",
+   "Fakr ad-Din -moskeija (1200-luku)",
+   "Hamar Weynen ja Shanganin vanhat korallikivikorttelit",
+   "Mogadishun satama"
+  ],
+  "asukkaat": {
+   "arvo": 3289438,
+   "vuosi": 2025,
+   "lahde": "IPC (Integrated Food Security Phase Classification), Somalia: Acute Food Insecurity and Acute Malnutrition Analysis January-June 2026 (24.2.2026), väestöarvio Banaadirin alueelle syyskuussa 2025; EUAA:n maaraportti lainaa lukua",
+   "linkki": "https://www.euaa.europa.eu/somalia-security-situation/23-benadir-and-mogadishu"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Kaupunki, jonka kangas tunnettiin Kairossa",
+    "Lähettiläs, joka purjehti Kiinaan",
+    "Nimi, joka eksyi väärään saareen",
+    "Kultasatama, jonka kala paljasti"
+   ]
+  },
+  {
+   "id": "runous",
+   "nimi": "Runous",
+   "nostot": [
+    "Maa, jossa päälliköllä oli oma runoilija",
+    "Runo, jossa jokainen säe alkaa samalla äänteellä",
+    "Runoilija, joka mainitsi rakastettunsa nimeltä",
+    "Kirjaimet, jotka keksittiin kolmesti"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Balwo syntyi rikkoutuneen auton vierellä",
+    "Mies, joka osti luutun Adenissa",
+    "Viisi säveltä ja kolme tekijää",
+    "Aamunkoitto kiersi maailmaa"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Canjeero, aamun ohut leipä",
+    "Federaatio on riisiä ja spagettia samalla lautasella",
+    "Xalwo kuuluu häihin ja juhlapäivään",
+    "Teehen maito vasta lopuksi"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Virta, joka kääntyy monsuunin mukana",
+    "Kameli on pankki ja maitokannu",
+    "Strutsi, jonka kaula on sininen",
+    "Villiaasi, jonka jaloissa on seepran raidat"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "kohde:hamarweyne",
+   "nimi": "Hamar Weyne",
+   "lahde": "fokuskohde",
+   "laji": "historia",
+   "km": 1,
+   "teksti": "Hamar Weyne on Mogadishun vanha kaupunginosa, ja siinä on noin kaksikymmentäviisi pientä moskeijaa. Vanhin niistä on Fakhr al-Dinin moskeija, jonka rakennusaika tiedetään vuoden 1269 piirtokirjoituksesta: se kertoo rakennuttajaksi sulttaan…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Mogadishu",
+  "maanAvain": "Somalia",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

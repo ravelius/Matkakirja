@@ -1,0 +1,65 @@
+[
+ {
+  "id": "khartum",
+  "lat": 15.6,
+  "lon": 32.53,
+  "wikidata": "Q1963",
+  "artikkeli": "Khartoum"
+ },
+ {
+  "id": "juba",
+  "lat": 4.85,
+  "lon": 31.58,
+  "wikidata": "Q1947",
+  "artikkeli": "Juba"
+ },
+ {
+  "id": "asmara",
+  "lat": 15.34,
+  "lon": 38.94,
+  "wikidata": "Q3642",
+  "artikkeli": "Asmara"
+ },
+ {
+  "id": "djibouti",
+  "lat": 11.6,
+  "lon": 43.15,
+  "wikidata": "Q3604",
+  "artikkeli": "Djibouti City"
+ },
+ {
+  "id": "mogadishu",
+  "lat": 2.04,
+  "lon": 45.34,
+  "wikidata": "Q2449",
+  "artikkeli": "Mogadishu"
+ },
+ {
+  "id": "kampala",
+  "lat": 0.31,
+  "lon": 32.58,
+  "wikidata": "Q3894",
+  "artikkeli": "Kampala"
+ },
+ {
+  "id": "dodoma",
+  "lat": -6.17,
+  "lon": 35.74,
+  "wikidata": "Q3866",
+  "artikkeli": "Dodoma"
+ },
+ {
+  "id": "lilongwe",
+  "lat": -13.99,
+  "lon": 33.77,
+  "wikidata": "Q3876",
+  "artikkeli": "Lilongwe"
+ },
+ {
+  "id": "lusaka",
+  "lat": -15.42,
+  "lon": 28.28,
+  "wikidata": "Q3881",
+  "artikkeli": "Lusaka"
+ }
+]

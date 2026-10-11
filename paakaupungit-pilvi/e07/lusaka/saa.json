@@ -1,0 +1,10 @@
+{
+ "lat": -15.42,
+ "lon": 28.28,
+ "keskilampo": [22.1,21.9,22,21,19.2,17.3,18.3,21.3,23.6,24.8,24.4,22.5],
+ "ylin": [27,27,27,27,25,24,26,30,32,32,30,28],
+ "alin": [17,17,17,15,13,11,11,13,16,18,18,18],
+ "sade": [210,169,88,21,3,0,0,0,0,11,78,179],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Lusaka","revisio":1379007878,"taulukko":"Climate data for Lusaka City Airport (1991–2020)","lahteet":"Source: NOAA","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":759,"luettu":"2026-10-11","huomiot":[]}
+}

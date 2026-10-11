@@ -1,0 +1,97 @@
+{
+ "id": "khartum",
+ "era": "e07",
+ "nimi": "Khartum",
+ "nimiAlkukieli": "الخرطوم (al-Kharṭūm)",
+ "maa": "SDN",
+ "maanNimi": "Sudan",
+ "asema": "pääkaupunki",
+ "lat": 15.603,
+ "lon": 32.527,
+ "wikidata": "Q1963",
+ "kevytSisalto": {
+  "kuvaus": "Khartum on Sudanin pääkaupunki Valkoisen ja Sinisen Niilin yhtymäkohdassa, ja yhdessä Omdurmanin ja Khartoum Northin kanssa se muodostaa maan suurimman kaupunkialueen. Kaupunki perustettiin 1800-luvun alussa Egyptin vallan aikana, ja sen asemaa on pitänyt yllä sijainti jokien risteyksessä ja siltayhteydet kolmen osan välillä. Kaupungin tunnettuihin kohteisiin kuuluvat Sudanin kansallismuseo ja jokien yhtymäkohta.",
+  "tunnusrakennukset": [
+   "Sudanin kansallismuseo (muinaisia nubialaistemppeleitä puutarhassaan)",
+   "Tasavaltalaispalatsi (Republican Palace, entinen kenraalikuvernöörin palatsi)",
+   "Tutin saari ja Tuti-silta",
+   "Al-Mogranin kansallinen kasvitieteellinen puutarha"
+  ],
+  "asukkaat": {
+   "arvo": 1410858,
+   "vuosi": 2008,
+   "lahde": "Sudanin tilastokeskus (Central Bureau of Statistics), 5. väestölaskenta 2008; Khartumin kaupungin luku citypopulation.de:n taulukosta (Khartumin osavaltio 5 274 321, virallinen projektio 2018 7 993 900; kolmen kaupungin kaupunkialue 4 272 728). Uudempaa virallista laskentaa ei ole, eikä kaupungille ole luotettavaa uudempaa arviota.",
+   "linkki": "https://www.citypopulation.de/en/sudan/cities/"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Rauhansopimus, joka kesti lähes seitsemänsataa vuotta",
+    "Kuningatar, joka hautasi keisarin pään portaiden alle",
+    "Kirjoitus, joka osataan lukea muttei ymmärtää",
+    "Autiomaan kansa, jonka egyptiläiset tunsivat"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Leipä, joka paistuu puolessa minuutissa",
+    "Hartsi, joka on melkein jokaisessa limonadissa",
+    "Punainen juoma, joka ei ole teetä",
+    "Papuja, jotka on hauduttu yön yli"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Musiikkilaji, joka nimettiin salkun mukaan",
+    "Lyyra, joka soi henkien parannusmenoissa",
+    "Naiset, joiden laulu saattoi ratkaista riidan",
+    "Perjantain rumpu ei ole esitys vaan rukous"
+   ]
+  },
+  {
+   "id": "kuvataide",
+   "nimi": "Kuvataide",
+   "nostot": [
+    "Katedraali, joka löytyi hiekan alta ennen tulvaa",
+    "Holvi, joka muurataan ilman muottia",
+    "Koulu, joka teki kirjaimista kuvia",
+    "Kuninkaan haudan päälle ladottiin valkoista ja mustaa"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Hiekkaseinä, joka pimentää kaupungin",
+    "Riutta keskellä merta, kaukana rannasta",
+    "Keltainen Niili, joka kuivui Saharan mukana",
+    "Paikka, jossa kaksi Niiliä sekoittuu yhdeksi"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "kohde:niili~2",
+   "nimi": "Niili",
+   "lahde": "fokuskohde",
+   "laji": "joki",
+   "km": 3,
+   "teksti": "Ugandassa alkaa maailman pisimmän joen matka: Valkoinen Niili purkautuu Victorianjärvestä ja kulkee Kyogajärven kautta Albertjärvelle — näitä osuuksia kutsutaan Victorian Niiliksi ja Albertin Niiliksi. Koko Niilillä on mittaa 7 088 kilomet…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Khartum",
+  "maanAvain": "Sudan",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

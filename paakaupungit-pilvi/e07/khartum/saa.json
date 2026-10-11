@@ -1,0 +1,10 @@
+{
+ "lat": 15.6,
+ "lon": 32.53,
+ "keskilampo": [23.6,25.9,29.1,32.8,35,34.9,32.7,31.1,32.7,32.9,28.8,25],
+ "ylin": [31,34,37,41,42,42,39,37,39,40,36,32],
+ "alin": [16,18,21,25,28,28,27,25,27,26,22,18],
+ "sade": [0,0,0,0,5,3,25,53,25,9,0,0],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Khartoum","revisio":1378835098,"taulukko":"Climate data for Khartoum (1991–2020)","lahteet":"Source 1: World Meteorological Organisation, NOAA (extremes and humidity 1961–1990) | Source 2: Deutscher Wetterdienst (sun, 1961–1990)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":120,"luettu":"2026-10-11","huomiot":[]}
+}

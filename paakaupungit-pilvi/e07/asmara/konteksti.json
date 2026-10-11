@@ -1,0 +1,62 @@
+{
+ "id": "asmara",
+ "era": "e07",
+ "nimi": "Asmara",
+ "nimiAlkukieli": "ኣስመራ (Asmera, tigrinja)",
+ "maa": "ERI",
+ "maanNimi": "Eritrea",
+ "asema": "pääkaupunki",
+ "lat": 15.3366,
+ "lon": 38.9363,
+ "wikidata": "Q3642",
+ "kevytSisalto": {
+  "kuvaus": "Asmara on Eritrean pääkaupunki ja suurin kaupunki, joka sijaitsee yli 2 300 metrin korkeudella ylängöllä. Italialaisen siirtomaa-ajan 1930-luvun modernismi muodostaa kaupungin ytimen, ja siksi se nimettiin UNESCOn maailmanperintökohteeksi vuonna 2017. Leveä palmukatu, kahvilat ja futuristiset rakennukset antavat kaupungille omaleimaisen ilmeen.",
+  "tunnusrakennukset": [
+   "Fiat Tagliero -huoltoasema (1938)",
+   "Enda Mariam -katedraali (Eritrean ortodoksikirkko)",
+   "Al Khulafa Al Rashiudin -suurmoskeija",
+   "Cinema Impero (1937)"
+  ],
+  "asukkaat": {
+   "arvo": 963000,
+   "vuosi": 2020,
+   "lahde": "Arvio, ei virallista laskentaa (Eritreassa ei ole järjestetty väestönlaskentaa itsenäistymisen jälkeen). Luku on peräisin CIA World Factbookin kaupunkiarviosta, jonka Wikidata (Q3642) toistaa; Factbookin myöhempi arvio on 998 000 (2021, IndexMundi-peili). YK:n World Urbanization Prospects 2025 antaa kaupunkikeskittymälle selvästi pienemmän, eri rajaukseen perustuvan luvun (n. 228 000, Worldometersin kautta).",
+   "linkki": "https://www.wikidata.org/wiki/Q3642"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Eritrea on Afrikan sarven maa Punaisenmeren rannalla Etiopian, Sudanin ja Djiboutin välissä. Se oli Italian siirtomaa, sitten Etiopian yhteydessä, ja itsenäistyi pitkän vapaussodan jälkeen 1991–1993. Maalla ei ole virallista kieltä, ja arkielämässä käytetään yhdeksää tunnustettua kieltä, joista tigrinja on laajimmin käytetty; hallinnon työkieliä ovat tigrinja, arabia ja englanti. Pääkaupunki Asmara on vuonna 2017 UNESCOn maailmanperintökohteeksi nimetty modernistinen kaupunki, ja maa on vahvasti suljettu ulkomaailmalle.",
+  "genetiivi": "Eritrean",
+  "kielet": [
+   {
+    "kieli": "tigrinja",
+    "asema": "muu"
+   },
+   {
+    "kieli": "arabia",
+    "asema": "muu"
+   },
+   {
+    "kieli": "englanti",
+    "asema": "muu"
+   },
+   {
+    "kieli": "tigre",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "nakfa",
+   "koodi": "ERN"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Asmara",
+  "maanAvain": "Eritrea",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

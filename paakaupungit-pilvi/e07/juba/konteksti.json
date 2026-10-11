@@ -1,0 +1,97 @@
+{
+ "id": "juba",
+ "era": "e07",
+ "nimi": "Juba",
+ "nimiAlkukieli": "Juba",
+ "maa": "SDS",
+ "maanNimi": "Etelä-Sudan",
+ "asema": "pääkaupunki",
+ "lat": 4.851,
+ "lon": 31.583,
+ "wikidata": "Q1947",
+ "kevytSisalto": {
+  "kuvaus": "Juba on Etelä-Sudanin pääkaupunki ja Keski-Equatorian osavaltion keskus Valkoisen Niilin rannalla. Kaupungista tuli maan pääkaupunki, kun Etelä-Sudan itsenäistyi 9.7.2011. Juba on maan tärkein kauppa-, liikenne- ja hallintokeskus, ja sen joenranta, torit ja kukkulat näkyvät kaupunkikuvassa.",
+  "tunnusrakennukset": [
+   "John Garangin mausoleumi",
+   "Juban silta Niilillä",
+   "Konyo Konyon tori",
+   "Jebel Kujur -kukkula"
+  ],
+  "asukkaat": {
+   "arvo": 690918,
+   "vuosi": 2021,
+   "lahde": "Etelä-Sudanin tilastotoimisto (NBS), Population Estimation Survey 2021 (julkaistu huhtikuussa 2023), Juban piirikunta (county); luku CSRF-Southsudanin piirikuntaprofiilista",
+   "linkki": "https://csrf-southsudan.org/county_profile/juba/"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Kuningas, jonka terveydestä riippui koko kansan onni",
+    "Kaksi armeijaa kohtasi — ja joi viskiä",
+    "Heittoveitsi, jossa on kolme terää",
+    "Maa, jolle piti ensin keksiä nimi"
+   ]
+  },
+  {
+   "id": "tarinat",
+   "nimi": "Tarinat ja uskomukset",
+   "nostot": [
+    "Veijari, joka tekee kaiken väärin",
+    "Kolme oraakkelia, joilla oli eri hinta",
+    "Keihäänherrat uhraavat härän",
+    "Palmu, josta kansa sai nimensä"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Sama taikina paistetaan tai keitetään",
+    "Pinaattipata, joka maistuu maapähkinältä",
+    "Kala, joka painaa enemmän kuin kaksi ihmistä",
+    "Karjaa ei teurasteta ruoaksi"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Ksylofoni, jota soittaa kolme ihmistä yhtä aikaa",
+    "Juban yöt, jolloin soittivat Skylarks ja Rejaf Jazz",
+    "Poika saa nimensä lempihäriltään",
+    "Ihmishahmo, joka soi peukaloilla"
+   ]
+  },
+  {
+   "id": "kielet",
+   "nimi": "Kielet",
+   "nostot": [
+    "Kymmeniä kieliä ja yksi työkieli",
+    "Kieli, joka syntyi varuskunnassa",
+    "Kieli, jossa vokaalilla on kolme pituutta",
+    "Zande on yhden kansan ja monen kielen nimi"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "kohde:gondokoro",
+   "nimi": "Gondokoro",
+   "lahde": "fokuskohde",
+   "laji": "historia",
+   "km": 11,
+   "teksti": "Gondokoro on saari ja entinen kauppa-asema Valkoisen Niilin itärannalla, 1 200 kilometriä Khartumista etelään. Sen merkitys oli sijainnissa: se oli muutaman kilometrin päässä siitä kohdasta, johon Khartumista ylävirtaan purjehduskelpoinen …"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Juba",
+  "maanAvain": "Etelä-Sudan",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

@@ -1,0 +1,78 @@
+{
+ "id": "lusaka",
+ "era": "e07",
+ "nimi": "Lusaka",
+ "nimiAlkukieli": "Lusaka",
+ "maa": "ZMB",
+ "maanNimi": "Sambia",
+ "asema": "pääkaupunki",
+ "lat": -15.4167,
+ "lon": 28.2833,
+ "wikidata": "Q3881",
+ "kevytSisalto": {
+  "kuvaus": "Lusaka on Sambian keskiosan ylängöllä noin 1 280 metrin korkeudessa sijaitseva pääkaupunki ja maan suurin kaupunki. Se perustettiin vuonna 1905 rautatien vesipysäkiksi ja kasvoi siirtomaa-ajan pääkaupungiksi vuonna 1935. Kaupungin sydän on Cairo Road, ja kaupunki on hallinnon ja kaupan keskus, jossa on myös COMESA-yhteismarkkina-alueen pääkonttori.",
+  "tunnusrakennukset": [
+   "Lusakan kansallismuseo",
+   "Pyhän Ristin katedraali (anglikaaninen, Cathedral Hill)",
+   "Parlamenttikompleksi",
+   "Cairo Road (pääkatu)"
+  ],
+  "asukkaat": {
+   "arvo": 2212301,
+   "vuosi": 2022,
+   "lahde": "ZamStats, 2022 Census of Population and Housing, Population Summary Report Volume Two, piirikohtainen väestötaulukko: Lusaka District 2 212 301 (miehet 1 064 935, naiset 1 147 366; kaikki kaupunkiväestöä).",
+   "linkki": "https://www.zamstats.gov.zm/wp-content/uploads/2024/09/2022-Census-of-Population-and-Housing-Summary-Report-Part-2.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Sambia on Etelä-Afrikan sisämaavaltio, jonka halki virtaavat Zambezi ja Kafue ja jonka eteläreunalla ovat Victoria-putoukset. Entinen Pohjois-Rhodesia itsenäistyi Britanniasta vuonna 1964, ja virallinen kieli on englanti, vaikka maassa puhutaan kymmeniä paikallisia kieliä. Talous nojaa erityisesti kuparikaivoksiin sekä maatalouteen ja matkailuun. Maa on tunnettu laajoista kansallispuistoistaan ja runsaasta luonnonvaraisesta eläimistöstään.",
+  "genetiivi": "Sambian",
+  "kielet": [
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "bemba",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "tonga",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "nyanja",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "lozi",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "kaonde",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "lunda",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "luvale",
+    "asema": "kansallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Sambian kwacha",
+   "koodi": "ZMW"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Lusaka",
+  "maanAvain": "Sambia",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

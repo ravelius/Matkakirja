@@ -1,0 +1,66 @@
+{
+ "id": "lilongwe",
+ "era": "e07",
+ "nimi": "Lilongwe",
+ "nimiAlkukieli": "Lilongwe",
+ "maa": "MWI",
+ "maanNimi": "Malawi",
+ "asema": "pääkaupunki",
+ "lat": -13.9864,
+ "lon": 33.7681,
+ "wikidata": "Q3876",
+ "kevytSisalto": {
+  "kuvaus": "Lilongwe on Malawin pääkaupunki ja suurin kaupunki, joka sijaitsee Lilongwe-joen varrella maan keskiosassa. Kaupungista tuli pääkaupunki vuonna 1975, kun hallinto siirrettiin etelässä sijaitsevasta Zombasta, ja hallintorakennusten viimeinen muutto saatiin päätökseen vasta 2000-luvulla. Kaupunki jakautuu vilkkaaseen vanhaan kaupunkiin torikauppoineen ja uudempaan, suunniteltuun hallinto- ja liikekeskustaan.",
+  "tunnusrakennukset": [
+   "Kamuzu Banda -mausoleumi",
+   "Capital Hill (hallintokortteli ja parlamentti)",
+   "Lilongwen vanhan kaupungin keskustori",
+   "Lilongwe Nature Sanctuary (luonnonsuojelualue)"
+  ],
+  "asukkaat": {
+   "arvo": 989318,
+   "vuosi": 2018,
+   "lahde": "Malawin tilastovirasto (NSO), väestö- ja asuntolaskenta 2018, Lilongwe Cityn piirikertomus; kaupunkipiirin (Lilongwe City) asukasluku, ei sisällä ympäröivää Lilongwen piirikuntaa",
+   "linkki": "https://cms.nsomalawi.mw/api/download/297/2018-Census-District-Report-Lilongwe-City.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Malawi on Itä-Afrikan sisämaavaltio, jonka itälaitaa hallitsee Malawijärvi, yksi Afrikan suurimmista järvistä. Maa itsenäistyi Britanniasta vuonna 1964, ja sen monikielisessä väestössä puhutaan monia kieliä, vaikka englanti on virallinen kieli. Useimmat malawilaiset elävät maataloudesta, ja tupakka, tee ja sokeri ovat tärkeitä vientituotteita. Maata kutsutaan usein \"Afrikan lämpimäksi sydämeksi\" ystävällisyydestään ja luonnostaan, jota edustavat järvi, Zomba-vuoriylänkö ja kansallispuistot.",
+  "genetiivi": "Malawin",
+  "kielet": [
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "chichewa (chewa)",
+    "asema": "muu"
+   },
+   {
+    "kieli": "tumbuka",
+    "asema": "muu"
+   },
+   {
+    "kieli": "yao",
+    "asema": "muu"
+   },
+   {
+    "kieli": "lomwe",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Malawin kwacha",
+   "koodi": "MWK"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Lilongwe",
+  "maanAvain": "Malawi",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

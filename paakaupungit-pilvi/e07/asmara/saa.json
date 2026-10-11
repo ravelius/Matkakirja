@@ -1,0 +1,10 @@
+{
+ "lat": 15.34,
+ "lon": 38.94,
+ "keskilampo": [13.8,14.9,16.3,17,17.6,17.6,16.3,16.1,15.7,14.9,14,13.2],
+ "ylin": [22,24,25,25,25,25,22,22,23,22,22,22],
+ "alin": [4,5,8,9,10,11,11,11,9,8,7,5],
+ "sade": [4,2,15,33,41,39,175,156,16,15,20,3],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1961–1990"},
+ "tausta": {"artikkeli":"Asmara","revisio":1378508016,"taulukko":"Climate data for Asmara, Eritrea (1961–1990 normals, extremes 1903–2012)","lahteet":"Source 1: NOAA | Source 2: Meteo Climat (extremes)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":519,"luettu":"2026-10-11","huomiot":[]}
+}

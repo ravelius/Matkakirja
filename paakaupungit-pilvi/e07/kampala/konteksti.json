@@ -1,0 +1,129 @@
+{
+ "id": "kampala",
+ "era": "e07",
+ "nimi": "Kampala",
+ "nimiAlkukieli": "Kampala",
+ "maa": "UGA",
+ "maanNimi": "Uganda",
+ "asema": "pääkaupunki",
+ "lat": 0.314,
+ "lon": 32.581,
+ "wikidata": "Q3894",
+ "kevytSisalto": {
+  "kuvaus": "Kampala on Ugandan pääkaupunki ja suurin kaupunki, ja se levittyy punamultaisille kukkuloille lähellä Victoria-järveä. Kaupunki kasvoi Bugandan kuningaskunnan keskuksen ympärille, ja sen nimi tulee brittien 1890-luvulla kukkulalle rakentamasta linnakkeesta. Nykyään se on maan hallinnon, kaupan ja korkeakoulutuksen keskus, jonka päiväväestö on moninkertainen yöpyviin asukkaisiin verrattuna.",
+  "tunnusrakennukset": [
+   "Kasubin kuninkaalliset haudat (Unescon maailmanperintökohde)",
+   "Namirembe-katedraali (St. Paul's Cathedral)",
+   "Rubaga-katedraali",
+   "Ugandan kansallismoskeija (Gaddafi-moskeija)"
+  ],
+  "asukkaat": {
+   "arvo": 1797722,
+   "vuosi": 2024,
+   "lahde": "Uganda Bureau of Statistics (UBOS), kansallinen väestö- ja asuntolaskenta 2024, Kampalan kaupunkialue (Kampala City); luku City Populationin ja Wikidatan välityksellä",
+   "linkki": "https://www.citypopulation.de/en/uganda/admin/"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Maa, joka nimettiin yhden kuningaskunnan mukaan",
+    "Kymmenen kilometriä kaivantoa",
+    "Kuningas, joka palasi vasta arkussa",
+    "Neljäkymmentäviisi nimeä ja pyhiinvaellus"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Lintu, joka seisoo tuntikausia paikallaan",
+    "Kruunu, joka nousi lippuun",
+    "Järvi, jonka syvyydestä ei olla yksimielisiä",
+    "Metsä, jonka keskellä on kaksikymmentäseitsemän kylää"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Vihreänä poimittu, höyryssä kypsennetty",
+    "Hovikokin keksintö vuodelta 1887",
+    "Kello, jota syödään",
+    "Kahvi, joka kasvoi täällä ennen ketään"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Neljä mestaria jäljellä",
+    "Harppu, jonka päällä voi istua",
+    "Yksi kitara ja pitkä tarina",
+    "Pitkä rumpu ja sen seurue"
+   ]
+  },
+  {
+   "id": "tavat",
+   "nimi": "Tavat",
+   "nostot": [
+    "Viisikymmentäkaksi klaania ja yksi tunnus",
+    "Nimi, jolla tervehditään",
+    "Kangas, joka kuoritaan puusta",
+    "Satoja iskuja, satoja merkityksiä"
+   ]
+  }
+ ],
+ "lahiKaupungit": [
+  {
+   "id": "viktoria",
+   "nimi": "Viktoria Nyanza",
+   "km": 99,
+   "lehti": [
+    {
+     "id": "kaupunki",
+     "nimi": "Viktoria Nyanza",
+     "nostot": [
+      "Speke näkee unelmansa järven",
+      "Todiste Ripon Putouksilla",
+      "Stanley purjehtii ympäri järven",
+      "Kolmen maan järvi",
+      "Saarien meri",
+      "Elanto verkoilla ja koukuilla"
+     ]
+    },
+    {
+     "id": "jarvielama",
+     "nimi": "Evoluution laboratorio",
+     "nostot": [
+      "Satojen lajien parvi",
+      "Vieraslaji joka mullisti järven",
+      "Kalasääski, järven ilmavartija",
+      "Papyrusviidakko suodattaa vettä",
+      "Saalis joka ruokkii ja jakaa"
+     ]
+    }
+   ],
+   "kohdekartta": []
+  }
+ ],
+ "lahiNostot": [
+  {
+   "id": "kohde:kasubi",
+   "nimi": "Kasubin haudat",
+   "lahde": "fokuskohde",
+   "laji": "kulttuuri",
+   "km": 4,
+   "teksti": "Kasubin kukkulalla Kampalassa on neljän Bugandan kabakan eli kuninkaan hautapaikka. Muteesa I rakennutti sinne 1882 palatsin, ja hänen kuoltuaan 1884 siitä tuli hautapaikka — mikä oli poikkeus perinteestä, jossa kuningas haudattiin yhteen …"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Kampala",
+  "maanAvain": "Uganda",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

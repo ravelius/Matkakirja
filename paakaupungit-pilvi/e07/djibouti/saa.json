@@ -1,0 +1,10 @@
+{
+ "lat": 11.6,
+ "lon": 43.15,
+ "keskilampo": [25.1,25.7,27,28.7,31,34.2,36.4,36,33.1,29.3,26.9,25.4],
+ "ylin": [29,29,31,33,35,40,42,42,38,34,31,30],
+ "alin": [22,22,24,25,28,30,31,31,30,26,23,22],
+ "sade": [14,12,14,29,16,2,6,6,10,11,22,15],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Djibouti City","revisio":1376655946,"taulukko":"Climate data for Djibouti (1991–2020)","lahteet":"Source 1: Hong Kong Observatory (temperature and rainfall), NOAA (sunshine and records) | Source 2: Deutscher Wetterdienst (rainy days 1968–1986, humidity 1953–1970)","keskilampo":"Daily mean °C (°F)","sade":"Average rainfall mm (inches)","vuosisade":157,"luettu":"2026-10-11","huomiot":["sade = vain vesisade (Average rainfall)"]}
+}
