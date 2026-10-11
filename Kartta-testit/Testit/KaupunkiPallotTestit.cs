@@ -51,6 +51,9 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Tosi(!KaupunkiPalloMitat.Nakyy("ITA", null, false), "peli: ei maata → ei palloja");
             Oleta.Tosi(KaupunkiPalloMitat.Nakyy("ITA", "GRC", true) && KaupunkiPalloMitat.Nakyy("GRC", "GRC", true), "maailmanäkymä: kaikki maat");
             Oleta.Tosi(KaupunkiPalloMitat.Nakyy("FIN", null, true), "maailmanäkymä: myös ilman pelaajan maata");
+            Oleta.Tosi(KaupunkiPalloMitat.Nakyy("FRA", "GRC", false, true) && KaupunkiPalloMitat.Nakyy("SWE", null, false, true), "valmis pallo: aina, myös muussa maassa");
+            Oleta.Tosi(KaupunkiPalloMitat.Mukana(true, false) && !KaupunkiPalloMitat.Mukana(false, false), "pelaaja: vain valmiit pallot");
+            Oleta.Tosi(KaupunkiPalloMitat.Mukana(false, true) && KaupunkiPalloMitat.Mukana(true, true), "kehittäjä: kaikki pallot");
         }
 
         /// <summary>Omistaja 10.10. 11.5x: kehittäjän maailmanäkymässä muiden kuin kohdemaan pallot paljon pienempinä.</summary>

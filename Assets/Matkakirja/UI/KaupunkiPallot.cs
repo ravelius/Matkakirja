@@ -4,6 +4,8 @@
 // kaupungin oppaan suoraan (LS1:n kaupunkitila). Mekanismi kuten ajattelijoiden kipsipäät (UI/Erikoisnostot.cs):
 //
 //  - Pallo on karttaobjekti: nappi liikkuu kartan mukana, kuvan alareunan keskikohta (köyden pää) kaupungin keskipisteessä.
+//  - Pelaajalle vain valmiit pallot (omistaja 11.10. 13.5x): Kehityskaupungit (Pariisi, Tukholma) näkyvät aina kartalla, muut
+//    sallitut kaupungit (kipsipallot) vain kehittäjälle (KaupunkiPalloMitat.Mukana); kehittäjätilan vaihtuessa pallot rakennetaan uudelleen.
 //  - Näkyvyys (omistaja 7.10. 12.5x: "vain siinä maassa, missä parhaillaan ollaan"): vain pelaajan nykyisen maan
 //    (NostoKerros.NykyinenMaa) sallittujen kaupunkien pallot kaikilla zoomeilla, maan vaihtuessa häivytys kuten kipsipäillä;
 //    ei sallittua kaupunkia maassa → ei palloja. Koko zoomin mukaan (Kartta/KaupunkiPalloMitat.cs): 84 → 120 pt lähestyessä (osuma-ala = nappi ≥ 44 × 44 pt). Piilossa pallon takapuolella, ruudun ulkopuolella sekä linssin, lentopelin, kaupunkikortin,
@@ -34,6 +36,8 @@ namespace Matkakirja.Natiivi
             public Button Nappi;
             public VisualElement Kuva;
             public bool Nakyy;
+            /// <summary>Valmis pallo (Kehityskaupunki): näkyy aina kartalla, ei vain pelaajan maassa.</summary>
+            public bool Aina;
             /// <summary>Pallo kallistuu oikealle (kuva peilattu takaisin), kun kaupungin kutsukortti on vasemmalla; päätetään
             /// kerran kaupunkia kohden, kun kortti näkyy (kortin paikka on lukittu), ettei pallo vaihda puolta zoomatessa.</summary>
             public bool Oikea, PuoliPaatetty;
@@ -51,7 +55,7 @@ namespace Matkakirja.Natiivi
         readonly List<Pallo> pallot = new List<Pallo>();
         KaupunkiPalloKuva kuva, kipsiKuva;
         PalloKierto kierto;
-        bool listaVaihtui = true;
+        bool listaVaihtui = true, kehittajana;
         float lataus = -1f;
         /// <summary>A/B ja testit: `ui kaupunkipallot 0|1` (oletus päällä).</summary>
         public static bool Paalla = true;
@@ -88,6 +92,7 @@ namespace Matkakirja.Natiivi
             // Lista: OpasSovitin lukee levyltä ja hakee palvelimelta (myös ilman oppaan avausta; uusinta 10 min); tyhjä = ei palloja.
             // Kutsu enintään minuutin välein, ettei epäonnistunut haku toistu puolen sekunnin välein (lista null → uusi haku).
             if (Time.realtimeSinceStartup - lataus > 60f || lataus < 0f) { lataus = Time.realtimeSinceStartup; OpasSovitin.LataaSallitut(); }
+            if (Asetukset.Kehittaja != kehittajana) { kehittajana = Asetukset.Kehittaja; listaVaihtui = true; }
             if (!listaVaihtui) return;
             listaVaihtui = false;
             Rakenna(OpasSovitin.SallitutLista);
@@ -98,6 +103,9 @@ namespace Matkakirja.Natiivi
             foreach (var p in pallot) p.Nappi.RemoveFromHierarchy();
             pallot.Clear();
             if (lista == null || lista.Count == 0) return;
+            bool kehittaja = Asetukset.Kehittaja;
+            lista = lista.Where(k => KaupunkiPalloMitat.Mukana(Kehityskaupunki(k.Id), kehittaja)).ToList();
+            if (lista.Count == 0) return;
             kuva ??= KaupunkiPalloKuva.Luo(Pikselit);
             if (lista.Any(k => !Kehityskaupunki(k.Id))) kipsiKuva ??= KaupunkiPalloKuva.Luo(Pikselit, kipsi: true);
             foreach (var k in lista)
@@ -117,7 +125,7 @@ namespace Matkakirja.Natiivi
                 // Kehityskaupunki: värillinen pallo; muut kipsinä (omistaja 8.10.2026 klo 20.4x), toimivat samoin.
                 var oma = Kehityskaupunki(id) || kipsiKuva?.Kuva == null ? kuva : kipsiKuva;
                 if (oma?.Kuva != null) kv.style.backgroundImage = new StyleBackground(Background.FromRenderTexture(oma.Kuva));
-                pallot.Add(new Pallo { Id = id, Nimi = k.Nimi, Lat = k.Lat, Lon = k.Lon, Nappi = b, Kuva = kv });
+                pallot.Add(new Pallo { Id = id, Nimi = k.Nimi, Lat = k.Lat, Lon = k.Lon, Nappi = b, Kuva = kv, Aina = Kehityskaupunki(id) });
             }
             Debug.Log($"MATKAKIRJA kaupunkipallot: {pallot.Count} kaupunkia: {string.Join(", ", pallot.Select(p => p.Id))}");
         }
@@ -169,7 +177,7 @@ namespace Matkakirja.Natiivi
                 edellinenMaa = maa; edellinenKaikki = kaikki;
                 foreach (var x in pallot) x.PuoliPaatetty = false;   // uusi maa: puolet uudelleen pelaajan kaupungin kortin mukaan
                 Debug.Log($"MATKAKIRJA kaupunkipallot: maa {maa ?? "-"}, näkyvät: " + string.Join(", ",
-                    pallot.Where(x => KaupunkiPalloMitat.Nakyy(PallonMaa(x), maa, kaikki)).Select(x => x.Id).DefaultIfEmpty("-")));
+                    pallot.Where(x => KaupunkiPalloMitat.Nakyy(PallonMaa(x), maa, kaikki, x.Aina)).Select(x => x.Id).DefaultIfEmpty("-")));
             }
             // Kortti kuuluu pelaajan kaupunkiin: vain korttia lähin pallo ratkaisee puolensa (simu af5922b9: Sevillan kortti käänsi
             // Granadan ja Tampereen kortti Helsingin pallon).
@@ -187,7 +195,7 @@ namespace Matkakirja.Natiivi
             }
             foreach (var p in pallot)
             {
-                bool oma = KaupunkiPalloMitat.Nakyy(PallonMaa(p), maa, kaikki);
+                bool oma = KaupunkiPalloMitat.Nakyy(PallonMaa(p), maa, kaikki, p.Aina);
                 // Maailmanäkymässä muiden maiden pallot paljon pienempinä (omistaja 10.10. 11.5x); kohdemaan pallot ennallaan.
                 float pk = KaupunkiPalloMitat.KokoMaassa(koko, PallonMaa(p), maa, kaikki);
                 p.Peitto = ErikoisnostoMitat.Haivytys(p.Peitto, oma, Time.unscaledDeltaTime, kesto);
