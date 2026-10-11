@@ -302,6 +302,27 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(ka.PullaOstettu("maailmankartta:rooma") && ka.PullaVinkkiOstettu("rooma"), "sama avainavaruus");
         }
 
+        [Testi] static void PalloLentoMaksaa200JaPalautuu()
+        {
+            // Omistaja 11.10.2026 (juna 182): kuumailmapallolento 200 p; ilman rahaa ei avausta, saldo ennallaan.
+            Oleta.Sama(200, KauppaVakiot.PalloLentoHinta);
+            var m = UusiPeli();
+            var ka = new Kaupat(m);
+            var p = m.Tila.Pelaaja;
+            p.Raha = 250;
+            var r = ka.PalloLento();
+            Oleta.Tosi(r.Ok && r.Hinta == 200, "maksu onnistuu");
+            Oleta.Sama(50, p.Raha, "200 p pois");
+            var ei = ka.PalloLento();
+            Oleta.Tosi(!ei.Ok && ei.Virhe == "Rahat eivät riitä", "50 p ei riitä");
+            Oleta.Sama(50, p.Raha, "epäonnistunut ei veloita");
+            p.Raha = 200;
+            Oleta.Tosi(ka.PalloLento().Ok, "tasan 200 p riittää");
+            Oleta.Sama(0, p.Raha);
+            Oleta.Tosi(ka.PalloLentoPalautus().Ok, "palautus");
+            Oleta.Sama(200, p.Raha, "palautus antaa hinnan takaisin");
+        }
+
         [Testi] static void KauppasisaltoLukeeNaytteet()
         {
             var s = Kauppasisalto.Lue(

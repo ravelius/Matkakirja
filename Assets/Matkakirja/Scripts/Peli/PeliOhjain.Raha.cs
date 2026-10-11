@@ -21,6 +21,8 @@ namespace Matkakirja.Natiivi
         public const string Puolitus = "50:50";
         public const string Kaveriapu = "Kysy kaverilta";
         public const string Sahkepalkkio = "Sähkepalkkio";
+        public const string PalloLento = "Kuumailmapallolento";
+        public const string PalloLentoPalautus = "Kuumailmapallolento peruttu";
         public const string Oletus = "Matkakassa";
 
         /// <summary>
@@ -34,6 +36,20 @@ namespace Matkakirja.Natiivi
 
     public sealed partial class PeliOhjain
     {
+        /// <summary>
+        /// Kuumailmapallolennon maksu (KauppaVakiot.PalloLentoHinta, kukkaroleima RahaSyyt.PalloLento).
+        /// Rahat eivät riitä → tilarivin ilmoitus (sama kuin muissa kaupoissa) ja false: pallo ei avaudu.
+        /// </summary>
+        public bool MaksaPalloLento()
+        {
+            var r = KauppaTeko(k => k.PalloLento(), RahaSyyt.PalloLento);
+            if (!r.Ok) Viesti(r.Virhe);
+            return r.Ok;
+        }
+
+        /// <summary>Maksu takaisin, kun pallo ei auennut maksun jälkeen.</summary>
+        public void PalautaPalloLento() => KauppaTeko(k => k.PalloLentoPalautus(), RahaSyyt.PalloLentoPalautus);
+
         int rahaNahty;
         string rahaSyy;
 
