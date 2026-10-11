@@ -1,2 +1,20 @@
 (node:15522) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
 (Use `node --trace-warnings ...` to show where the warning was created)
+VAROITUS abudhabi: kohteita 4 (pohjataso 6; perustele RAPORTTI.md:ssä)
+VAROITUS abudhabi: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+== abudhabi: 0 virhettä, 2 varoitusta, 21 kuvaa
+VAROITUS amman: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+VAROITUS amman: artikkeli.intro: pyöreä suuruusluokka — onko lähteessä tarkka?
+== amman: 0 virhettä, 2 varoitusta, 24 kuvaa
+VAROITUS baku: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+VAROITUS baku: artikkeli.intro: pyöreä suuruusluokka — onko lähteessä tarkka?
+== baku: 0 virhettä, 2 varoitusta, 23 kuvaa
+VAROITUS beirut: kansi.johdanto: 1–2 virkettä
+VAROITUS beirut: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+VAROITUS beirut: artikkeli.intro: pyöreä suuruusluokka — onko lähteessä tarkka?
+VAROITUS beirut: kansi nosto 4: lähderivin lisenssi CC BY 3.0 ≠ Commons "CC BY 3.0 pl"
+VAROITUS beirut: opas jakso 3: lähderivin lisenssi CC BY 3.0 ≠ Commons "CC BY 3.0 pl"
+VAROITUS beirut: juttu Mohammad Al-Aminin moskeija kuva 1: lähderivin lisenssi CC BY 3.0 ≠ Commons "CC BY 3.0 pl"
+VAROITUS beirut: juttu Pyhän Yrjänän maroniittikatedraali kuva 1: lähderivin lisenssi CC BY 3.0 ≠ Commons "CC BY 3.0 pl"
+== beirut: 0 virhettä, 7 varoitusta, 24 kuvaa
+VIRHE: HTTP 429
