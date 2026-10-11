@@ -158,13 +158,17 @@ namespace Matkakirja.Natiivi
             // kuumailmapallo (omistaja 7.10.): kun este on pulun kohdalla tai sen alla, pulu nousee sen yläpuolelle.
             // TF 177 (omistaja 10.10., maailmahyppy Ateena → Pariisi): este verrataan pulun LEPOPAIKKAAN (pohja), ei nykyiseen
             // paikkaan — muuten noussut pulu osui seuraavaan ylempään palloon ja kiipesi kehys kehykseltä pistepillerin päälle.
+            // Juna 182 (omistaja 11.10. 17.5x, koko Euroopan näkymä: "miksi pulu on tuolla ylhäällä?"): este verrataan LINNUN
+            // laatikkoon (kosketus, 62 × 82 pt) lepopaikalla, ei koko alueeseen (kuplien tila ~160 × 312 pt) — muuten kartan
+            // keskellä ~250 pt ylempänä ja ~100 pt vasemmalla oleva Pariisin pallo nosti pulun keskelle karttaa.
             if (alue.panel == null || alue.worldBound.width <= 0) return pohja;
-            float ruutu = alue.panel.visualTree.layout.height, lepoYla = ruutu - pohja - alue.worldBound.height;
+            var (lintuX0, lintuX1, lintuAla, lintuKork) = LintuLepopaikalla();
+            float ruutu = alue.panel.visualTree.layout.height, lepoYla = ruutu - pohja - lintuAla - lintuKork;
             float este = 0f;
             void Vaista(IEnumerable<Rect> alueet)
             {
                 foreach (var a in alueet)
-                    if (a.xMax > alue.worldBound.xMin && a.xMin < alue.worldBound.xMax && a.yMax > lepoYla - 40f)
+                    if (a.xMax > lintuX0 && a.xMin < lintuX1 && a.yMax > lepoYla - 40f)
                         este = Mathf.Max(este, ruutu - a.yMin + 8f);
             }
             if (ui.Erikoisnostot != null) Vaista(ui.Erikoisnostot.NakyvaAlueet());
@@ -178,6 +182,21 @@ namespace Matkakirja.Natiivi
                 yla = Mathf.Max(yla, haku.worldBound.yMax);
             float katto = yla > 0f ? ruutu - yla - Tyylikirja.Vali.S - alue.worldBound.height : float.MaxValue;
             return Mathf.Max(perus, Mathf.Min(Mathf.Max(pohja, este), katto));
+        }
+
+        /// <summary>
+        /// Linnun laatikko lepopaikalla paneelin koordinaateissa: vaakasuunnan reunat sekä linnun alareunan etäisyys alueen
+        /// alareunasta ja linnun korkeus. Asettelusta (layout) eikä worldBoundista, joten kartan väistön siirto ja kierto
+        /// (AsetaKarttapaikka: näyttämön translate) eivät vaikuta; alueen skaala (modaali 0,72) otetaan worldBoundin suhteesta.
+        /// </summary>
+        (float X0, float X1, float Ala, float Korkeus) LintuLepopaikalla()
+        {
+            var ab = alue.worldBound;
+            float s = alue.layout.width > 0 ? ab.width / alue.layout.width : 1f;
+            var n = nayttamo.layout; var k = kosketus.layout;
+            if (k.width <= 0 || k.height <= 0) return (ab.xMin, ab.xMax, 0f, ab.height);
+            float x0 = ab.xMin + (n.x + k.x) * s;
+            return (x0, x0 + k.width * s, Mathf.Max(0f, alue.layout.height - (n.y + k.yMax)) * s, k.height * s);
         }
 
         // --- joka ruutu ----------------------------------------------------------------
