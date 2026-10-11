@@ -4,7 +4,9 @@
 // -kapiteeli, isoin kirjaimin kuten "PÄIVÄ 1/80"); ei uusia tyylejä.
 //
 // Paikka: yläpalkin alle 8 pt (kuten karttaselite), vaakasuunnassa keskelle; palkin ollessa piilossa (vaaka, iPhonen veto)
-// turva-alueen yläreunaan. Näkyy pelin karttatilassa; linssin, aloitusnäkymän ja valikon aikana piilossa.
+// turva-alueen yläreunaan. Matkakirjan lappu on samassa kohdassa, joten laskuri asettuu lapun alle 6 pt; auki oleva
+// matkakirja (luenta) peittää yläosan, ja laskuri on silloin piilossa (simuajo 760f067f: laskuri lapun päällä).
+// Näkyy pelin karttatilassa; linssin, aloitusnäkymän ja valikon aikana piilossa.
 // Luku tarkistetaan puolen sekunnin välein, piirto vain luvun vaihtuessa.
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -14,7 +16,7 @@ namespace Matkakirja.Natiivi
     public sealed class Aarrelaskuri
     {
         const string Manner = "europe";
-        const float Ylavara = 8f;
+        const float Ylavara = 8f, LapunVali = 6f;
 
         readonly VisualElement juuri;
         readonly Label rivi;
@@ -41,7 +43,7 @@ namespace Matkakirja.Natiivi
             var ui = UiNakymat.Hae();
             var o = PeliOhjain.Instanssi;
             return o != null && o.Kaytossa && o.Matka != null && o.Tila == SilmukanTila.Kartta && ui.Linssit?.Auki == null
-                   && !Aloitusnakyma.AloitusAuki && !ui.Valikko.Auki;
+                   && !Aloitusnakyma.AloitusAuki && !ui.Valikko.Auki && (!ui.Matkakirja.Nakyy || ui.Matkakirja.Lappuna);
         }
 
         void Paivita()
@@ -51,6 +53,12 @@ namespace Matkakirja.Natiivi
             if (juuri.style.display != tila) { juuri.style.display = tila; Ruudunpaivitys.Herata(0.1f); }
             if (!nayta) return;
             float yla = (Ylapalkki.PalkkiPiilossa ? 0f : Ylapalkki.Varaus) + Ylavara;
+            var mk = UiNakymat.Hae().Matkakirja;
+            if (mk.Lappuna && juuri.parent != null)
+            {
+                var lappu = mk.Rajat;
+                if (lappu.width > 0) yla = Mathf.Max(yla, juuri.parent.WorldToLocal(new Vector2(lappu.xMin, lappu.yMax)).y + LapunVali);
+            }
             if (juuri.resolvedStyle.top != yla) juuri.style.top = yla;
             var laatat = PeliOhjain.Instanssi.Matka.Laatat;
             int x = laatat?.AvatutAarteet(Manner) ?? 0, n = laatat?.AarrekaupungitYhteensa(Manner) ?? 0;
