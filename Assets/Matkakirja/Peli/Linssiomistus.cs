@@ -222,7 +222,54 @@ namespace Matkakirja.Peli
             matka.LinssiKylkiaisena += (p, kaupunki, tyyppi) => Kylkiainen(p, kaupunki, tyyppi);
             matka.Kokemus.KynnysYlitetty += TarkistaLinssikynnys;
             matka.Loysi += PeninkulmaLoydosta;
+            matka.Loysi += (p, l) => Linssiaarre(p, l);
             return this;
+        }
+
+        // --- linssiaarteet (omistaja 11.10.2026, juna 182; ei webissä) --------
+
+        /*
+         * LINSSI AARTEEN LISÄKSI (omistaja 11.10.2026 klo 14.2x "Kyllä kaikkiin", PT). Aarteen oma sisältö (raha,
+         * Meripihkahuoneen etsintä) säilyy; linssi tulee sen lisäksi. 1) Astronautin kamera (satelliitti) pelaajan
+         * TOISESTA avatusta aarteesta (ensimmäinen on pöllö). 2) Kaupungin aarteen ensimmäinen avaus antaa kaupungin
+         * linssin (Linssiaarteet). Tähtitaivas → Lappi vasta, kun linssi on valmis. Pisteillä avautuminen
+         * (TarkistaLinssikynnys) jää rinnalle. Ilmoitus Myonsi-tapahtumana (PeliOhjain.LinssiLoytyi → NUI:n kortti).
+         * Pois oletuksena, jotta webin kultainen jälki pysyy; PeliOhjain kytkee päälle.
+         */
+        public bool LinssiaarteetKaytossa;
+        public const string ToisenAarteenLinssi = "satelliitti";
+        public static readonly IReadOnlyDictionary<string, string> Linssiaarteet = new Dictionary<string, string>
+        {
+            ["alpit"] = "topografia",
+            ["lontoo"] = "radio",
+            ["edinburgh"] = "keksinnot",
+            ["istanbul"] = "ihmisen-matka",
+            ["amsterdam"] = "taidemuseo",
+        };
+
+        /// <summary>Löydön linssit (Matka.Loysi): toinen avattu aarre ja kaupungin linssiaarre; vain uudet ilmoitetaan.</summary>
+        public List<LinssiMyonto> Linssiaarre(Pelaaja p, Loyto l)
+        {
+            var tulos = new List<LinssiMyonto>();
+            if (!LinssiaarteetKaytossa || p == null || l == null) return tulos;
+            if (p.Loydot.Count >= 2) LisaaLinssiaarre(p, ToisenAarteenLinssi, tulos);
+            if (!l.Pollo && l.Kaupunki != null && Linssiaarteet.TryGetValue(l.Kaupunki, out var tunnus)) LisaaLinssiaarre(p, tunnus, tulos);
+            return tulos;
+        }
+
+        void LisaaLinssiaarre(Pelaaja p, string tunnus, List<LinssiMyonto> tulos)
+        {
+            var r = Rivi(tunnus);
+            var nimi = r != null ? ValmiinNimi(r) : LinssinNimi?.Invoke(tunnus) ?? tunnus;
+            if (!MyonnaRivi(p, tunnus, nimi).Item1) return;
+            tulos.Add(Ilmoita(p, new LinssiMyonto
+            {
+                Tunnus = tunnus,
+                Otsikko = "Uusi linssi",
+                Alaotsikko = "Aarteen mukana oli linssi — uusi katselutapa laukkuun",
+                Tilanne = "peli.linssi.avautui",
+                Teksti = $"{p.Nimi} löysi aarteen mukana linssin ({nimi}).",
+            }));
         }
 
         Pelaaja Vuorossa => Matka?.Tila.Pelaaja;
