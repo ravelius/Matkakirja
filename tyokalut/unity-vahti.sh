@@ -24,8 +24,10 @@ while kill -0 $PID 2>/dev/null; do
     # kuormassa 486 ja nice 15:llä koko AOT kesti yli 180 s ilman lokirivejä → väärä hälytys). Jos jokin jälkeläinen on ajossa
     # (tila R) tai kuluttaa CPU:ta, odotetaan, mutta kokonaisaika on katossa JUMIKATTO (oletus 1800 s hiljaisuutta).
     puu=$PID; uudet=$PID
-    while [ -n "$uudet" ]; do uudet=$(for q in $uudet; do pgrep -P $q; done); [ -n "$uudet" ] && puu="$puu $uudet"; done
-    ajossa=$(ps -o state=,%cpu= -p $(echo $puu | tr ' ' ',') 2>/dev/null | awk '$1 ~ /^R/ || $2 > 1 { n++ } END { print n + 0 }')
+    # $(echo …): zsh ei pilko muuttujaa sanoiksi → monen lapsen lista meni pgrep -P:lle yhtenä argumenttina ("usage: pgrep",
+    # puu jäi vajaaksi; Julkaisija 11.10. 15.55, LS1 aukiot). Komennon tulos pilkotaan sekä sh:ssa että zsh:ssa.
+    while [ -n "$uudet" ]; do uudet=$(for q in $(echo $uudet); do pgrep -P $q; done); [ -n "$uudet" ] && puu="$puu $uudet"; done
+    ajossa=$(ps -o state=,%cpu= -p $(echo $puu | xargs | tr ' ' ',') 2>/dev/null | awk '$1 ~ /^R/ || $2 > 1 { n++ } END { print n + 0 }')
     if [ "$ajossa" -gt 0 ] && [ $hiljaa -lt ${JUMIKATTO:-1800} ]; then
       [ $((hiljaa % 60)) -eq 0 ] && echo "vahti: loki hiljaa ${hiljaa}s, mutta $ajossa prosessia ajossa (esim. Burst) → odotetaan"
       continue
