@@ -5656,7 +5656,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Maailman pisin taidenäyttely',
-          tiedosto: 'Tunnelbana T-Centralen Blue Line (43481298780).jpg',
           teksti: 'Tukholman metrossa on noin sata asemaa, ja niistä yli '
             + 'yhdeksälläkymmenellä on taidetta: maalauksia, veistoksia, '
             + 'mosaiikkeja ja reliefejä yli 150 taiteilijalta. Sinisen linjan '
@@ -5664,10 +5663,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'peitetty laatoilla — se ruiskubetonoitiin ja maalattiin '
             + 'sellaisenaan, joten aseman seinä on kirjaimellisesti vuori. '
             + 'Tavallinen matkalippu kelpaa koko näyttelyyn.',
-          lyhyt: 'Per Olof Ultvedt maalasi T-Centralenin sinisen linjan kallioseinään siniset köynnökset 1975.',
-          selite: 'T-Centralenin sinisen linjan karkeaan kallioseinään Per '
-            + 'Olof Ultvedt maalasi vuonna 1975 siniset köynnökset.',
-          lahde: 'Sonse, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Tukholman metro',
         },
         {
@@ -15625,12 +15620,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Åbo Akademi University Library, Wikimedia Commons (CC BY 2.0)',
         },
         {
-          tiedosto: 'Hämeensilta 2021.jpg',
-          lyhyt: 'Vuoden 1929 kivisilta korvattiin 2019, ja Aaltosen veistokset palautettiin kaiteille.',
-          selite: 'Vuoden 1929 kivisilta korvattiin 2019 vanhan näköisellä '
-            + 'graniittisillalla, ja Wäinö Aaltosen neljä pronssiveistosta '
-            + 'nostettiin takaisin kaiteille.',
-          lahde: 'Tiia Monto, Commons (CC BY-SA 4.0)',
+          tiedosto: "Hämeensilta bridge in Tampere, Finland, 2024 July.jpg",
+          lyhyt: "Hämeensilta ylittää Tammerkosken Tampereen keskustassa.",
+          selite: "Hämeensilta kaartuu Tammerkosken yli Tampereen keskustassa; etualalla on joen kirkas vesi ja pohjakasvillisuutta.",
+          lahde: "Pete, Wikimedia Commons (CC BY 2.0)",
         },
       ],
       matkailijalle: {
@@ -15913,7 +15906,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tyyppi: 'kuva',
           otsikko: 'Neljä patsasta sillan kaiteella',
-          tiedosto: 'Hämeensilta 2017.jpg',
+          tiedosto: "Hämeensilta bridge in Tampere Jun2012.jpg",
           teksti: 'Hämeensilta vie kaupungin pääkadun kosken yli. Sen '
             + 'kaiteilla seisoo neljä Wäinö Aaltosen pronssiveistosta '
             + 'vuodelta 1929: metsästäjä, erämies, kauppias ja verontuoja. '
@@ -15923,11 +15916,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennettiin vanhan kivisillan näköiseksi ja verhoiltiin '
             + 'samalla punertavalla graniitilla — patsaat nostettiin '
             + 'takaisin paikoilleen.',
-          lyhyt: 'Hämeensillan kaiteilla seisoo Wäinö Aaltosen neljä pronssiveistosta vuodelta 1929.',
-          selite: 'Hämeensillan kaiteilla seisoo neljä Wäinö Aaltosen '
-            + 'pronssiveistosta vuodelta 1929: metsästäjä, erämies, kauppias '
-            + 'ja verontuoja.',
-          lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 4.0)',
+          lyhyt: "Hämeensilta ylittää Tammerkosken Tampereen keskustassa.",
+          selite: "Hämeensilta kaartuu Tammerkosken yli Tampereen keskustassa; taustalla kohoaa punatiilinen tehtaan savupiippu.",
+          lahde: "Methem (Mikko J. Putkonen), Wikimedia Commons (CC BY 3.0)",
           wiki: 'Hämeensilta',
         },
         {
@@ -16047,7 +16038,7 @@ export const KULTTUURI_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Lahjoitus, josta tuli museo',
-          tiedosto: 'Muumimuseon sisäänkäynti Tampere-talossa.jpg',
+          tiedosto: "Tampere hall1.jpg",
           teksti: 'Tove Jansson ja hänen kumppaninsa, graafikko Tuulikki '
             + 'Pietilä, lahjoittivat 1986 Tampereen taidemuseolle '
             + 'valtavan kokoelman: yli tuhat piirustusta ja maalausta '
@@ -16056,11 +16047,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vuoteen 2016 asti, jolloin se sai nykyisen nimensä ja '
             + 'muutti Tampere-talon uusiin tiloihin. Tampereella on yhä '
             + 'maailman ainoa Muumimuseo.',
-          lyhyt: 'Tove Jansson lahjoitti 1986 Tampereelle yli tuhat teosta, ja niistä syntyi maailman ainoa muumimuseo.',
-          selite: 'Tove Jansson lahjoitti vuonna 1986 Tampereelle yli '
-            + 'tuhat teosta, ja niistä syntyi maailman ainoa '
-            + 'Muumimuseo.',
-          lahde: 'Iljanne, Wikimedia Commons (CC BY-SA 4.0)',
+          lyhyt: "Muumimuseo toimii Tampere-talon sisällä.",
+          selite: "Tampere-talo Tampereen keskustassa, ja sen sisällä toimii Muumimuseo.",
+          lahde: "Visa580, Wikimedia Commons (CC BY 2.5)",
           wiki: 'Muumimuseo',
         },
         {
@@ -29203,13 +29192,13 @@ export const KULTTUURI_KATEGORIAT = {
         + 'on lähdetty kauas.',
       kansikuvat: [
         {
-          tiedosto: 'Bjørvika Oslo Opera house 3.JPG',
+          tiedosto: "Oslo Opera House - 2025.jpg",
           lyhyt: 'Oslon oopperatalo on Nidarosin katedraalin jälkeen suurin Norjan kulttuurirakennus.',
           selite: 'Oslon oopperatalo on suurin Norjaan Nidarosin katedraalin '
             + 'jälkeen rakennettu kulttuurirakennus, ja sen vinot ulkopinnat '
             + 'on päällystetty Carraran marmorilla ja valkoisella '
             + 'graniitilla.',
-          lahde: 'Øyvind Holmstad, Wikimedia Commons (CC BY-SA 3.0)',
+          lahde: "Pierre Blaché, Wikimedia Commons (CC0)",
         },
         {
           tiedosto: 'Karl Johans gate Oslo 2022-08-17 01.jpg',
@@ -29681,7 +29670,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Uusi koti satamanlahden rannalla',
-          tiedosto: 'Ekeberg hill, Sørenga and Lambda Oslo Norway February 2020 Bernt Rostad CC BY 2.0.jpg',
+          tiedosto: "New Munch Museum in Bjørvika seen from south.jpg",
           teksti: 'Vuonna 2021 Munch-museo muutti uuteen '
             + 'kolmentoista kerroksen rakennukseen Bjørvikan '
             + 'satama-alueella, lähelle oopperataloa. Rakennusta '
@@ -29693,7 +29682,7 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Munch-museo muutti 2021 uuteen Lambda-rakennukseen Bjørvikan satama-alueelle.',
           selite: 'Munch-museo muutti vuonna 2021 uuteen '
             + 'Lambda-rakennukseen Bjørvikan satama-alueelle.',
-          lahde: 'Bernt Rostad, Wikimedia Commons (CC BY 2.0)',
+          lahde: "Helge Høifødt, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
     },
@@ -31076,7 +31065,6 @@ export const KULTTUURI_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Patsas, jonka tilasi panimoperijä',
-          tiedosto: 'Denmark, Copenhagen, Little Mermaid, Langelinie Promenade 150422-25.jpg',
           teksti: 'Carlsbergin perustajan poika Carl Jacobsen näki '
             + 'baletin H. C. Andersenin sadusta Pieni merenneito ja '
             + 'tilasi 1909 kuvanveistäjä Edvard Eriksenilta patsaan '
@@ -31085,15 +31073,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'samalla kivellä siitä lähtien — vain runsaan metrin '
             + 'korkuisena, yllättävän pienenä siihen nähden kuinka '
             + 'kuuluisa siitä on tullut.',
-          lyhyt: 'Carl Jacobsen tilasi patsaan 1909, ja se paljastettiin Langelinien rannalla 1913.',
-          selite: 'Carl Jacobsen tilasi patsaan vuonna 1909, ja se '
-            + 'paljastettiin Langelinien rantapromenadilla vuonna 1913.',
-          lahde: 'Richardmaackphotography, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Den lille Havfrue',
         },
         {
           otsikko: 'Pää, joka katosi kokonaan',
-          tiedosto: 'Langelinie, Copenhagen 2018-03-03 (39604935190).jpg',
           teksti: 'Patsas on häväisty lukuisia kertoja vuosikymmenten '
             + 'aikana. Vuonna 1964 tuntemattomat sahasivat sen pään '
             + 'kokonaan irti yöllä — päätä ei koskaan löydetty, ja '
@@ -31102,15 +31085,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'poliittisena protestina ja liattu punaisella maalilla '
             + 'valaanpyyntiä vastustavan viestin kera. Kaupunki on aina '
             + 'korjannut patsaan.',
-          lyhyt: 'Patsaan pää sahattiin irti 1964 eikä sitä koskaan löydetty; vuosien varrella myös muuta ilkivaltaa.',
-          selite: 'Patsaan pää sahattiin irti vuonna 1964 eikä sitä '
-            + 'koskaan löydetty, ja patsas on häväisty useita kertoja '
-            + 'sen jälkeen.',
-          lahde: 'Guillaume Baviere, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           otsikko: 'Yksi maailman valokuvatuimmista patsaista',
-          tiedosto: 'Copenhagen 2015-08-29 (22032632181).jpg',
           teksti: 'Ilkivallasta huolimatta Pieni merenneito on säilynyt '
             + 'Tanskan tunnetuimpana matkailusymbolina ja yksi maailman '
             + 'kuvatuimmista patsaista — sitä käy katsomassa vuosittain '
@@ -31118,10 +31095,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'koosta. Patsas seisoo yhä samalla kivellä Langelinien '
             + 'rannassa, katse suunnattuna merelle päin, aivan kuten '
             + 'sadussakin.',
-          lyhyt: 'Pieni merenneito on säilynyt yhtenä maailman kuvatuimmista patsaista ilkivallasta huolimatta.',
-          selite: 'Pieni merenneito on säilynyt yhtenä maailman '
-            + 'kuvatuimmista patsaista ilkivallasta huolimatta.',
-          lahde: 'Guillaume Baviere, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
     },

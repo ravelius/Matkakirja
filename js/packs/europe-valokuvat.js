@@ -2748,13 +2748,10 @@ export const EUROPE_VALOKUVAT = {
       + 'lakit päässä, ja kosken takana avautuu Hämeenkatu kivitaloineen. '
       + 'Oikealla puistossa on koristeellinen puinen paviljonki.',
     uusi: {
-      tiedosto: 'Hämeensilta 2021.jpg',
-      lahde: 'Tiia Monto, Commons (CC BY-SA 4.0)',
-      lyhyt: 'Sama silta tänään: vuoden 1929 kivisilta korvattiin 2019 uudella, graniitilla verhoiltuna.',
-      selite: 'Sama silta tänään. Vuoden 1929 kivisilta korvattiin 2019 '
-        + 'uudella, joka rakennettiin vanhan näköiseksi ja verhoiltiin '
-        + 'punertavalla graniitilla. Kaiteella seisoo yhä yksi Wäinö '
-        + 'Aaltosen neljästä pronssiveistoksesta.',
+      tiedosto: "Hämeensilta bridge in Tampere, Finland, 2024 July.jpg",
+      lahde: "Pete, Wikimedia Commons (CC BY 2.0)",
+      lyhyt: "Hämeensilta ylittää Tammerkosken Tampereen keskustassa.",
+      selite: "Hämeensilta kaartuu Tammerkosken yli Tampereen keskustassa; etualalla on joen kirkas vesi ja pohjakasvillisuutta.",
     },
   },
 
