@@ -90,3 +90,13 @@ appit proto-3d/lokit/olavinlinna-yhdistetty-181{b,c,d,e}). Simuvuorot Julkaisija
 - v10-ajossa varmistettava: laiturin valkopaitainen = renki-1500 vai Fogg (`linssi poikki vartijat` laituri-a1:ssä a1-00 jälkeen),
   kaukonäkymän syvyystarkkuus 0,05 m:n lähitasolla, keittiö piilossa tyrmässä, muunnelma 2 katse kääntyy.
 - Skenaario laituri-a1: tapit katse alas 0,77 s (oli 1,5 s → +72° alas).
+
+## PÄIVITYS 07.5x: v10 ajettu (SIMU VAPAA 07.30), v11-kärki 41e1f55a9 Julkaisijalle (+ Pelikoodari 3033a8066)
+- v10 dbaebe31: laituri-a1 kaikki muunnelmat ulos (m1 12 s, m2 14 s, m3 68 s); botti 67/94 (todistus-botti-kavely-20261011-0715):
+  jumit 8 pikkupiha→porttikäytävä, 14–19 kirkkotorni-portaat, 20–38 kappeli-kavely "ei reittiä" (y 9,63), palatsi 49–64, muurikäytävä 83–94.
+- v11 (Laitetestaajan 5. kierros laitetestaaja-olavinlinna-viides-20261011.md): 0eef98927 vapautus (rauhalliset + turva 60 s, helpotus
+  0–3 portaittain, varoitus 3 s), 9a8e0ddbe katse varoittajaan vain jakson 1. varoituksella + kosketus keskeyttää (PT hyväksyi rajattuna),
+  41e1f55a9 SilmaVara (silmä ≥ 0,15 m näkyvästä mallista; holvi 1,60 m oviaukossa), lukko 45 s, avaimet astumalla, vihje 10 s.
+  Linssit 1373/1373. Laiturin mustat lohkot ja tyrmän mustat laatikot = LR (ilmoitettu LR:lle).
+- v11-ajo valmiina: scratchpad v11.sh (181k?, tarkista kansio Julkaisijan viestistä): laituri-a1 + tyrma-ovi + pisteet.txt (uusi: pelaajan
+  kävely 7→8, 15→16, 19→20). laituri-a1: `poikki vartijat tila` (ilman tilaa käynnistää vartijat uudelleen!).
