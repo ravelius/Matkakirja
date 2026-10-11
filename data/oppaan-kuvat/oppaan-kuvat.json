@@ -22926,19 +22926,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Berlin - Potsdamer Platz - 2016.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berlin_-_Potsdamer_Platz_-_2016.jpg?width=1280",
-     "tekija": "Avda",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Berlin_-_Potsdamer_Platz_-_2016.jpg",
-     "selite": "Potsdamer Platz on muuri-ajan jälkeen rakennettu uusi liike- ja viihdekeskus.",
-     "leveys": 2867,
-     "korkeus": 1911,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "Daniel Cox - Potsdamer Platz in Berlin (DEU).jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Daniel_Cox_-_Potsdamer_Platz_in_Berlin_(DEU).jpg?width=1280",
      "tekija": "Daniel Cox",
@@ -22951,7 +22938,7 @@
      "tarkistettu": true
     },
     {
-     "jarjestys": 3,
+     "jarjestys": 2,
      "tiedosto": "Germany - NARA - 68154987 (cropped).jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Germany_-_NARA_-_68154987_(cropped).jpg?width=1280",
      "tekija": "Unknown authorUnknown author or not provided",
@@ -23146,19 +23133,6 @@
      "selite": "Päärautatieasema on lasinen risteysasema Spreen rannalla.",
      "leveys": 4720,
      "korkeus": 3063,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "(20260614 100717648 HDR) Berlin Hauptbahnhof.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(20260614_100717648_HDR)_Berlin_Hauptbahnhof.jpg?width=1280",
-     "tekija": "Roy Zuo",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(20260614_100717648_HDR)_Berlin_Hauptbahnhof.jpg",
-     "selite": "Aseman lasikatto kattaa useita raidetasoja.",
-     "leveys": 4096,
-     "korkeus": 3072,
      "tarkistettu": true
     }
    ]
@@ -26805,19 +26779,6 @@
      "selite": "Rakennuksen julkisivua koristaa runsas kiviveistos.",
      "leveys": 5184,
      "korkeus": 3456,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Gellert baths lobby 2024.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gellert_baths_lobby_2024.jpg?width=1280",
-     "tekija": "HartOve",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gellert_baths_lobby_2024.jpg",
-     "selite": "Kylpylän sisätilat ovat täynnä mosaiikkeja ja patsaita.",
-     "leveys": 4032,
-     "korkeus": 3024,
      "tarkistettu": true
     }
    ]
@@ -117881,19 +117842,6 @@
      "selite": "Pyhän ristin kirkko on barokkinen kaksitorninen kirkko Krakowskie Przedmieście -kadun varrella.",
      "leveys": 3892,
      "korkeus": 3728,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Ulica Krakowskie Przedmieście, Warsaw 11.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ulica_Krakowskie_Przedmie%C5%9Bcie%2C_Warsaw_11.jpg?width=1280",
-     "tekija": "Simon Burchell",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ulica_Krakowskie_Przedmie%C5%9Bcie%2C_Warsaw_11.jpg",
-     "selite": "Kirkko erottuu kapeasta katukuilusta valkoisena ja keltaisena.",
-     "leveys": 3000,
-     "korkeus": 4000,
      "tarkistettu": true
     }
    ]

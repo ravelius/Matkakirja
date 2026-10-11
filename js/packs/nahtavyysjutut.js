@@ -496,12 +496,10 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Jürgen Matern, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
-          tiedosto: 'Raising a flag over the Reichstag - Restoration.jpg',
-          lyhyt: 'Reichstag raunioitui sodassa, ja sen katolle 1945 pystytetystä lipusta otettu kuva kiersi maailman.',
-          selite: 'Talo raunioitui toisessa maailmansodassa, ja toukokuussa 1945 '
-            + 'sen katolle pystytetystä lipusta otettu valokuva kiersi '
-            + 'maailman.',
-          lahde: 'Jevgeni Haldei, Wikimedia Commons (PD)',
+          tiedosto: "Ruins of the Reichstag in Berlin, 3 June 1945. BU8573.jpg",
+          lyhyt: "Reichstag raunioina Berliinissä 3. kesäkuuta 1945.",
+          selite: "Talo raunioitui toisessa maailmansodassa. Kuva on otettu 3. kesäkuuta 1945, kun julkisivu ja kupoli olivat pahoin vaurioituneet.",
+          lahde: "Sgt Hewitt, No 5 Army Film & Photographic Unit / Imperial War Museums, Wikimedia Commons (Public domain)",
         },
       ],
       lahde: 'Wikipedia',
