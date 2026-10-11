@@ -1,0 +1,9 @@
+VIRHE tunis: kansikuva 3: tiedosto puuttuu
+VIRHE tunis: opas jakso 3: tiedosto puuttuu
+VIRHE tunis: teemasivu historia nosto 2: tiedosto puuttuu
+VIRHE tunis: teemasivu historia nosto 3: tiedosto puuttuu
+VIRHE tunis: teemasivu historia nosto 4: tiedosto puuttuu
+VIRHE tunis: juttu Dar Othman kuva 1: tiedosto puuttuu
+VIRHE tunis: juttu Dar Hussein kuva 1: tiedosto puuttuu
+== tunis: 7 virhettä, 0 varoitusta, 15 kuvaa
+YHTEENSÄ 1 kaupunkia: 7 virhettä, 0 varoitusta

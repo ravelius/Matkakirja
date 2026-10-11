@@ -99,3 +99,11 @@ Alkuperäinen paikallinen tarkistin sekä alkuperäinen `--verkko` sallitun läh
 Tarkistuslokit ja lopullisen sisällön hash sekä verkkosovituksen kuvien/otsikoiden todisteet omassa tunis-C:ssa. Numeroväitteille lähde- ja ristiriitapohja yllä/A:ssa. Jäljellä ovat erityisesti D:n H2/O3/N5/N6 koristepintaportti, K4:n kasvokynnys, traveler 2017 tuoreus ja nykyiset pääsykäytännöt. Nollavirheinen C-luonnos ei tarkoita näiden riippumattomien toimitusporttien valmistumista.
 
 Lopullinen sisalto.json SHA-256: `94773bc6c15373ddbedaef0e182f47945d804bd307f352931ef904730b6f05a6`. Paikallisen ja verkkotarkistuksen hashit täsmäävät tähän versioon (`tarkistukset.json`). Verkkotodisteessa on 22 kuvan oma tiedostosivutietue yhdessä Commons-erässä sekä fi/en-otsikoiden kaksi erää, yhteensä kolme pyyntötietuetta (`verkkotarkistus-evidence.json`). Katselutodiste sisältää lopulliset neljä kuvakenttää ja JSON-polun jokaiseen kuvaan.
+
+## Nykytila — E1-lisäys 12.10.2026
+
+Erillinen E-korjaaja tyhjensi D:n määräyksen mukaiset 28 kuvakenttää sanatarkasti: C3/H2/H3/H4/O3/N5/N6, jokaisesta tiedosto/lyhyt/selite/lahde. C3 on hylätty luettavien kasvojen vuoksi; muiden kuuden kuvan erillisten koristeiden oikeusketjua ei ratkaistu, joten kuvat poistuvat käytöstä. Alkuperäinen B-valinta/provenance ja D-todisteet säilyvät historiallisina, eivät näiden seitsemän nykyisen käytön hyväksyntänä.
+
+Nykyisessä sisalto.json:ssa on **15 kuvaa ja seitsemän avointa kuvapaikkaa**. Tekstit, wikiarvot, sääsarjat, kartta, rakenne ja kaikki muut JSON-arvot säilyvät. Alkuperäinen paikallinen --lyhyt ja sallittu --verkko --lyhyt: **7 virhettä, 0 varoitusta, 15 kuvaa**, kumpikin exit 1. Virheet ovat C3, H2/H3/H4, O3, N5 ja N6; kuvapuuttumia ei hyväksytty poikkeuksiksi. Yllä oleva C:n 22 kuvan nollavirheloki on kirjoitushetken historiallinen tulos.
+
+Korjatun sisalto.json:n SHA-256 `d03d6b38151957de95ab53603680bb414a3d9dd4925f5ea9baf71c79c306748f`; before/after-, sanatarkkuus-, käänteisen byte-palautuksen ja D-raportin alkuperäisosan säilymisen todisteet `valiaikainen/tunis-E/`. Kuvat.md/B-valintoja ei muutettu. Tämä on keskeneräinen korjattu luonnos, ei valmis kaupunki/C/E/F, peliin kytkentä tai julkaisu.

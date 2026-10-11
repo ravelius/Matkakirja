@@ -1,6 +1,6 @@
 # Pääkaupungit e04 — toimeksiannot #72 ja #73
 
-Päivitetty 2026-10-11T21:31:11.188189+00:00
+Päivitetty 2026-10-11T21:42:32.815171+00:00
 
 Haara `paakaupungit-e04-codex`, pohja `e4f2845b3a82874550481fda26528df065820232`. Uusi työ, vain e04–e14; aiemmat #70/#71-kuvatilaukset pysyvät palauteportissa. Ei generointia, R2-toimitusta, pelikytkentää tai julkaisua. Kaikki tämän työn tiedostot ja väliaineisto NASilla.
 
@@ -20,7 +20,7 @@ Aiempi Sää/Commons-rajapintaeste: 11.10.2026 robots.txt kieltää en/fi-Wikipe
 | bissau | valmis | poikkeama avoin | korjattu luonnos | osittain | tekstikorjaukset tehty | 3 kuvavirhettä | 16 kuvaa kaavio mukaan lukien; 3 kohdekuvaa puuttuu |
 | conakry | valmis | poikkeama avoin | korjattu luonnos | osittain | E1/E2 tehty | 1 kuvavirhe | 21 kuvaa, vain Camayennen kohdekuva puuttuu |
 | monrovia | valmis | poikkeama avoin | korjattu luonnos | osittain | E1 tehty | 8 kuvavirhettä | 14 kuvaa; kolme D-tekstikorjausta toteutettu |
-| tunis | valmis | oikeustarkistus avoin | luonnos | työn alla | — | — | C: 0 virhettä, 0 varoitusta, 22 kuvaa; D:n koristepinta- ja kasvotarkistus kesken |
+| tunis | valmis | poikkeama avoin | korjattu luonnos | osittain | E1 tehty | 7 kuvavirhettä | 15 kuvaa; C3:n kasvot ja 6 erillistä koristepintaa hylätty nykyisestä luonnoksesta |
 
 Vastaanotto ei tarkoita valmista erää, Sisältökirjurin hyväksyntää, pelikytkentää tai julkaisua.
 
@@ -51,3 +51,5 @@ Viisi kuvaporttien tulkintakysymystä postilaatikossa: #74-kuvattomuus vs 0-virh
 Conakry D: 2 VÄÄRIN, 2 EPÄVARMA. E1 teki seitsemän sanatarkkaa JSON-korjausta ja hylkäsi luettavien kasvojen kuvan. Uusi K2:n kaupallisen sataman aluskuva B/C/D-katsottu, E2 lisäsi neljä hyväksyttyä kuvakenttää; R3:n alkuperäisen keulamaalauksen oikeuksia ei väitetä ratkaistuiksi. Pääsession F: 1 virhe / 0 varoitusta / 21 kuvaa, vain Camayenne. Monrovia D: 1 VÄÄRIN ja 1 EPÄVARMA. E1 teki kolme sanatarkkaa tekstikentän korjausta, kuva- ja sääkentät säilyivät. Pääsession F: 8 virhettä / 0 varoitusta / 14 kuvaa, kaikki virheet kuvapuutteita. Ei valmis-C/E/F tai valmis-kaupunki kummallekaan.
 
 Tunis B/C: 22 katsottua kuvaa ja kaksi sallittua kuvatonta opasjaksoa; C:n alkuperäinen kone- ja verkkotarkistus 0 virhettä / 0 varoitusta. D:n riippumaton tarkistus on kesken, erityisesti kaakeli-, stukko- ja puukoristepinnat sekä epäselvät kasvot. Luonnosta ei lasketa valmiiksi B/C/F-vaiheeksi pelkän koneportin perusteella.
+
+Tunis D: 1 VÄÄRIN / 6 EPÄVARMA, 22 alkuperäistä kuvaa katsottu. E1 toteutti 28 kokonaisen merkkijonokentän tyhjennystä: C3:n luettavat kasvot sekä H2/H3/H4/O3/N5/N6:n erilliset koristepinnat ilman riittävää oikeusketjua. Muu JSON, kartta, numerot ja D/C-raporttien alkuperäiset osat säilyivät byte-/arvotarkasti. Pääsession F: 7 kuvavirhettä / 0 varoitusta / 15 kuvaa. Ei valmis-C/E/F tai valmis-kaupunki. Sää48/48 ja karttapisteet6/6 varmennettiin alkuperäislähteistä; koristeiden oikeuksia ei väitetä ratkaistuiksi.
