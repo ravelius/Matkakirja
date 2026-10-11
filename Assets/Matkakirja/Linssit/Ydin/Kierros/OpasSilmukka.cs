@@ -666,6 +666,8 @@ namespace Matkakirja.Linssit.Kierros
         {
             public KiertoSuunnitelma K; public Pysahdys P;
             public double Fi, W, Wd, X, Xr, DEt, DKall, DSuunta, DKatse, DLat, DLon, T = PalloLahtoHiipuuS, Siirto0 = -1, SiirtoS = PalloKehysSiirtoS;
+            /// <summary>Kehyksen vaihto kesken lähdössä: vanha kehys ja sen kierto (vaihto jatkuu lennon alussa); null = ei vaihtoa.</summary>
+            public Pysahdys SVanha; public KiertoSuunnitelma SVanhaK;
         }
         LahtoJatko lahtoJatko;
 
@@ -680,6 +682,9 @@ namespace Matkakirja.Linssit.Kierros
             if (!PalloLento || pysKierto == null || NykyinenKehys?.Id == null || VapaaTila || Ohjaus.Aktiivinen || KameraSeis
                 || (Vaihe != OpasVaihe.Puhuu && Vaihe != OpasVaihe.Odottaa)) return;
             var raaka = pysKierto.Asento(NykyinenKehys, kaariKulma, lipumisRaaka);
+            // Kehyksen vaihto kesken (tornin tai kuvasuhteen vaihto): sama vanhan ja uuden sekoitus kuin PysahdysAsentossa, ja jatko
+            // jatkaa vaihtoa (LahtoNyt) — vakioerolla nopeus hyppäsi lähdössä (Concorde, kääntö 4:3 → 0,46: 1,4 m/s ruudulla).
+            if (siirtoVanha != null) raaka = KierrosLento.Valissa(siirtoVanhaKs.Asento(siirtoVanha, kaariKulma, lipumisRaaka), raaka, KierrosLento.Smootherstep(siirtoT), 0);
             lahtoJatko = new LahtoJatko
             {
                 K = pysKierto, P = NykyinenKehys, Fi = kaariKulma, W = pysKierto.Suunta * kaariW * kaariYlos, Wd = pysKierto.Suunta * kaariWd * kaariYlos, X = lipumisRaaka, Xr = kaariYlos,
@@ -687,6 +692,7 @@ namespace Matkakirja.Linssit.Kierros
                 DSuunta = KierrosLento.Kiedo(Asento.Suuntima - raaka.Suuntima), DKatse = Asento.KatseKorkeusM - raaka.KatseKorkeusM,
                 // Katsepiste: kehyksen vaihto kesken (TorniKuvaan siirtää katsepistettä; ennen vaihto piti sen paikallaan) → ei hyppyä.
                 DLat = Asento.Lat - raaka.Lat, DLon = Asento.Lon - raaka.Lon, Siirto0 = siirtoVanha != null ? siirtoT : -1, SiirtoS = siirtoS,
+                SVanha = siirtoVanha, SVanhaK = siirtoVanhaKs,
             };
             // Jatko ei saa viedä silmää lennon päätepisteen ohi (lyhyt hyppy, Bryssel Manneken Pis → kaupungintalo: jatko vei 15 m
             // eteenpäin ja lento palasi 2,5 m): jatkon matka tangentin suuntaan enintään PalloLahtoJatkoOsuus lennon silmän siirtymästä
@@ -725,16 +731,13 @@ namespace Matkakirja.Linssit.Kierros
             // hidastus Wd), hiipuminen alkaa nykäyksettä (lennon oma S-käyrä kiihtyy samalla).
             double T = j.T, u = Math.Max(0, Math.Min(1, VaiheAika / T)), u4 = u * u * u * u;
             double g = T * (u - OpasKuvaus.SmootherstepIntegraali(u)), g2 = T * T * (0.5 * u * u - u4 * u * (6.0 / 7 * u * u - 2.5 * u + 2));
-            var r = j.K.Asento(j.P, j.Fi + j.W * g + j.Wd * g2, j.X + j.Xr * g);
-            // Lähtö kesken kehyksen vaihdon (PalloKehysSiirtoS): ero uuteen kehykseen hiipuu vaihdon omaa käyrää pitkin loppuun, joten
-            // vaihdon nopeus jatkuu (PalloKaupungitTestit Venetsia ilman kylvöä: lähtö Δv 1,4 m/s, kun ero pysyi vakiona).
-            double f = 1;
-            if (j.Siirto0 >= 0)
-            {
-                double s0 = KierrosLento.Smootherstep(j.Siirto0), s1 = KierrosLento.Smootherstep(Math.Min(1, j.Siirto0 + Math.Max(0, VaiheAika) / j.SiirtoS));
-                f = s0 < 1 - 1e-9 ? (1 - s1) / (1 - s0) : 0;
-            }
-            return new Kuvakulma(r.Lat + f * j.DLat, r.Lon + f * j.DLon, r.EtaisyysM + f * j.DEt, r.Kallistus + f * j.DKall, KierrosLento.Kiedo(r.Suuntima + f * j.DSuunta), r.KatseKorkeusM + f * j.DKatse);
+            double fi = j.Fi + j.W * g + j.Wd * g2, x = j.X + j.Xr * g;
+            var r = j.K.Asento(j.P, fi, x);
+            // Lähtö kesken kehyksen vaihdon (PalloKehysSiirtoS / kääntö): vaihto jatkuu samaa käyrää pitkin vanhan ja uuden kehyksen
+            // kierrolla, joten nopeus ja kiihtyvyys jatkuvat (PalloKaupungitTestit Venetsia ilman kylvöä, LeveaKohdeKapeassaKuvassa).
+            if (j.SVanha != null)
+                r = KierrosLento.Valissa(j.SVanhaK.Asento(j.SVanha, fi, x), r, KierrosLento.Smootherstep(Math.Min(1, j.Siirto0 + Math.Max(0, VaiheAika) / j.SiirtoS)), 0);
+            return new Kuvakulma(r.Lat + j.DLat, r.Lon + j.DLon, r.EtaisyysM + j.DEt, r.Kallistus + j.DKall, KierrosLento.Kiedo(r.Suuntima + j.DSuunta), r.KatseKorkeusM + j.DKatse);
         }
 
         /// <summary>Lennon kohdeasento kierron kanssa (tulokehys kiertyy saapumisen sulautuksessa).</summary>
@@ -961,6 +964,28 @@ namespace Matkakirja.Linssit.Kierros
                 uusi = TorniKuvaan(vanha);
                 if (ReferenceEquals(uusi, vanha)) return;
             }
+            AloitaKehysVaihto(ks, vanha, uusi, kaanto);
+        }
+
+        /// <summary>
+        /// LEVEÄ KOHDE, LAITE KÄÄNTYI KESKEN PYSÄHDYKSEN (Linssiseppä 11.10. 08.5x): pallon Kehysta-kehys (alue LeveysKoko &gt; 0 tai aukio MonumenttiLat, ei tornisääntöä)
+        /// lasketaan uudelleen uudelle kuvasuhteelle samasta pohjakehyksestä (OpasKuvaus.LeveysKuvaan) ja vaihtuu pehmeästi kuten
+        /// tornisäännössä (AloitaKehysVaihto).
+        /// </summary>
+        void VaihdaLeveaKehysTarvittaessa(KiertoSuunnitelma ks)
+        {
+            var vanha = NykyinenKehys;
+            if (siirtoVanha != null || vanha == null || (vanha.LeveysKoko <= 0 && double.IsNaN(vanha.MonumenttiLat)) || vanha.TorniPohja != null) return;
+            double suhde = OpasKuvaus.KehysSuhde;
+            if (Math.Abs(vanha.LeveysSuhde - suhde) < 0.005) return;
+            var uusi = OpasKuvaus.LeveysKuvaan(vanha, suhde);
+            if (ReferenceEquals(uusi, vanha) || (Math.Abs(uusi.EtaisyysM - vanha.EtaisyysM) < 0.5 && KierrosLento.EtaisyysM(uusi.Lat, uusi.Lon, vanha.Lat, vanha.Lon) < 0.5)) { vanha.LeveysSuhde = suhde; return; }
+            AloitaKehysVaihto(ks, vanha, uusi, true);
+        }
+
+        /// <summary>Pysähdyksen kehyksen vaihto vanha → uusi liukuen (siirtoS) samalla kierron kulmalla; kaanto = laitteen kääntö.</summary>
+        void AloitaKehysVaihto(KiertoSuunnitelma ks, Pysahdys vanha, Pysahdys uusi, bool kaanto)
+        {
             siirtoVanha = vanha; siirtoVanhaKs = ks.Kopio(); siirtoT = 0;
             NykyinenKehys = uusi;
             const double A = Math.PI / 180;
@@ -1027,6 +1052,7 @@ namespace Matkakirja.Linssit.Kierros
         Pysahdys TorniKuvaan(Pysahdys p)
         {
             if (p?.TorniPohja != null) p = p.TorniPohja;   // uusi sovitus (laite kääntyi) aina sovittamattomasta kehyksestä
+            if (p != null && p.LeveysKoko > 0) p = OpasKuvaus.LeveysKuvaan(p, TorniSuhde);   // pohja nykyiselle kuvasuhteelle (4:3 → ennallaan)
             if (!PalloLento || p == null || p.Aukio) return p;
             var t = TorniEste(p);
             if (t == null) return p;
@@ -1118,7 +1144,7 @@ namespace Matkakirja.Linssit.Kierros
 
         /// <summary>Tornisäännön kuvasuhde: laitteen kuvasuhde (OpasKuvaus.KuvaSuhdeNyt) 0,01:n tarkkuudella, enintään PalloTorniKuvaSuhde
         /// (leveämpi kuva mahtuu 4:3:n kehykseen, joten iPad vaaka ja iPhone vaaka saavat saman kehyksen kuin ennen).</summary>
-        public static double TorniSuhde => OpasKuvaus.KuvaSuhdeNyt >= PalloTorniKuvaSuhde - 0.01 ? PalloTorniKuvaSuhde : Math.Max(0.2, Math.Round(OpasKuvaus.KuvaSuhdeNyt, 2));
+        public static double TorniSuhde => OpasKuvaus.KehysSuhde;
         /// <summary>Kapean kuvan katsepisteen korkeus (osuus tornin korkeudesta) ja kallistus vähintään (°, PT 07.5x: ≥ 55°), laitteen
         /// kääntymisen kehysvaihdon huippukiihtyvyys (m/s²) ja lyhin kesto (s).</summary>
         public const double PalloTorniKapeaKatse = 0.5, PalloTorniKapeaKallistusMin = 56, PalloTorniKaantoMS2 = 4, PalloTorniKaantoMinS = 4;
@@ -2369,6 +2395,7 @@ namespace Matkakirja.Linssit.Kierros
                 }
                 var ks = pysKierto;
                 VaihdaAukionKehysTarvittaessa(ks);
+                VaihdaLeveaKehysTarvittaessa(ks);
                 if (!Ohjaus.Aktiivinen && !KameraSeis)
                 {
                     lipumisAika += dt;

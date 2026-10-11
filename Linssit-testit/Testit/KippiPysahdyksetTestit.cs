@@ -692,5 +692,79 @@ namespace Matkakirja.Linssit.Testit
             }
             Oleta.Tosi(viat.Count == 0, string.Join("; ", viat));
         }
+
+        // ---- LEVEÄ KOHDE KAPEASSA KUVASSA (Linssiseppä 11.10. 08.5x: Kehysta laski leveyden kuvasuhteella 1,8, joten iPhonen
+        // pystykuvassa 0,46 Louvre ja Concorde olivat kehyksen alussa ~2 ruudun levyisiä; OpasKuvaus.LeveysKuvaan) ----
+        [Testi] static void LeveaKohdeKapeassaKuvassa()
+        {
+            // PT 11.10. 09.2x: pystykuvassa vain alue-luokka loittonee (Tivoli); rakennukset ja kadut (Louvre, Champs-Élysées) sekä
+            // korkeat (Riemukaari, Eiffel) kuten vaakakuvassa; aukio (Concorde) pysyy lähikehyksessä ja kiertää obeliskia, joka on
+            // vaakasuunnassa keskellä (±0,3) ja kokonaan kuvassa (0,9) koko pysähdyksen ajan.
+            var viat = new List<string>();
+            double tanP = Math.Tan(OpasKuvaus.KuvaPystyAst * Math.PI / 360);
+            foreach (var (kaupunki, id, koko) in new[] { ("pariisi", "Q19675", 700.0), ("pariisi", "Q189503", 360.0), ("pariisi", "Q550", 1900.0), ("pariisi", "Q64436", 50.0),
+                ("pariisi", "Q243", 125.0), ("koopenhamina", "Q110289", 350.0) })
+            {
+                var v = Asennot(Aja(Profiili.Normaali, kaupunki), id)[0];
+                foreach (double suhde in new[] { 0.46, 4.0 / 3, 2.17 })
+                {
+                    var a = Aja(Profiili.Normaali, kaupunki, double.NaN, 14, false, true, suhde);
+                    var x = Asennot(a, id); var x0 = x[0];
+                    double nakyy = x0.EtM * tanP * Math.Min(suhde, 4.0 / 3), osuus = koko / 2 / nakyy;   // kohteen puolileveys / näkyvä puolileveys
+                    double kaari = 0; for (int i = 1; i < x.Count; i++) kaari += Math.Abs(KierrosLento.Kiedo(x[i].Suunta - x[i - 1].Suunta));
+                    string lisa = "";
+                    if (id == "Q189503")
+                    {
+                        // Luxorin obeliski (OpasKatseOletukset, Wikidata Q1503331), 23 m (AukioKohdeKorkeusM).
+                        var mon = OpasKatseOletukset.Monumentti(a.Reitti.First(y => y.Id == id).Lat, a.Reitti.First(y => y.Id == id).Lon).Value;
+                        double xMax = 0, kMax = 0; var q0 = a.Reitti.First(y => y.Id == id);
+                        double ta = a.Saapui[id], tb = a.Lahti[id];
+                        foreach (var r in a.R)
+                        {
+                            if (r.t < ta || r.t > tb || r.kohde != id) continue;
+                            xMax = Math.Max(xMax, Math.Abs(OpasKuvaus.KuvassaX(r.a, mon.lat, mon.lon, MaaM + 0.5 * OpasKuvaus.AukioKohdeKorkeusM, suhde)));
+                            kMax = Math.Max(kMax, OpasKuvaus.KuvassaOsuus(r.a, mon.lat, mon.lon, MaaM, MaaM + OpasKuvaus.AukioKohdeKorkeusM, 2, suhde));
+                        }
+                        lisa = $", obeliski vaakasuunnassa enintään {xMax:F2}, kokonaan kuvassa enintään {kMax:F2}";
+                        if (suhde < 1 && (xMax > 0.3 || kMax > TorniReuna)) viat.Add($"Concorde {suhde:F2}: obeliski {xMax:F2} / {kMax:F2}");
+                        if (suhde < 1 && x0.EtM > v.EtM + 1e-6) viat.Add($"Concorde {suhde:F2}: loittoni {v.EtM:F0} → {x0.EtM:F0} m");
+                    }
+                    Console.WriteLine($"      {id} {suhde:F2}: alussa et {x0.EtM:F0} m (vaaka {v.EtM:F0}), silmä {x0.SilmaM:F0} m, kallistus {x0.Kallistus:F0}°, kohde {osuus:F2} leveydestä{lisa}, lopussa et {x[^1].EtM:F0} m, kierto {kaari / Math.Max(1, x[^1].T - x[0].T):F1} °/s");
+                    if (suhde >= 4.0 / 3 && Math.Abs(x0.EtM - v.EtM) > 1e-6) viat.Add($"{id} {suhde:F2}: et {x0.EtM:F1} ≠ vaaka {v.EtM:F1}");
+                    if (suhde < 1)
+                    {
+                        if (x0.Kallistus < 55) viat.Add($"{id} {suhde:F2}: kallistus {x0.Kallistus:F0}°");
+                        if (id == "Q110289")
+                        {
+                            // Alue loittonee: näkyvä puolileveys vähintään min(vaakakuvan, koko / 2 / 0,9), tai raja (3 × / silmä 300 m).
+                            double tarve = Math.Min(v.EtM * tanP * 4.0 / 3, koko / 2 / OpasKuvaus.PalloKapeaReuna);
+                            bool raja = x0.EtM >= OpasKuvaus.PalloKapeaKerroinMax * v.EtM - 1 || x0.SilmaM >= OpasKuvaus.PalloKapeaSilmaMaxM - 2;
+                            if (x0.EtM <= v.EtM + 1) viat.Add($"Tivoli {suhde:F2}: ei loitonnusta ({x0.EtM:F0} m)");
+                            if (!raja && nakyy < tarve - 1) viat.Add($"Tivoli {suhde:F2}: näkyvä puolileveys {nakyy:F0} < {tarve:F0} m");
+                        }
+                        else if (id != "Q189503" && Math.Abs(x0.EtM - v.EtM) > 1e-6) viat.Add($"{id} {suhde:F2}: et {x0.EtM:F1} ≠ vaaka {v.EtM:F1} (vain alue loittonee)");
+                    }
+                }
+            }
+            // Laite kääntyy Concorden pysähdyksellä 4 s saapumisesta vaakakuvasta pystyyn: pehmeä vaihto (nopeuden muutos ≤ 0,3 m/s/ruutu).
+            var k = Aja(Profiili.Normaali, "pariisi", double.NaN, 14, false, true, 0.46, false, 4);
+            var q = k.Reitti.First(y => y.Id == "Q189503");
+            double t0 = k.Saapui[q.Id], t1 = k.Lahti[q.Id], dvMax = 0; string dvKohta = "-"; (double e, double n, double u)? e1 = null, e2 = null;
+            foreach (var r in k.R)
+            {
+                if (r.t < t0 || r.t > t1 + 0.2) continue;
+                var e = OpasKuvaus.KameraPaikka(r.a, q.Lat, q.Lon);
+                if (e1 is var (ae, an, au) && e2 is var (be, bn, bu))
+                {
+                    double dv = Math.Sqrt(Math.Pow((e.e - 2 * ae + be) / Dt, 2) + Math.Pow((e.n - 2 * an + bn) / Dt, 2) + Math.Pow((e.u - 2 * au + bu) / Dt, 2));
+                    if (dv > dvMax) { dvMax = dv; dvKohta = $"{r.t - t0:F2} s {r.v}"; }
+                }
+                e2 = e1; e1 = e;
+            }
+            var kx = Asennot(k, q.Id);
+            Console.WriteLine($"      Concorde kääntö 4:3 → 0,46: et {kx[0].EtM:F0} → {kx[^1].EtM:F0} m, nopeuden muutos enintään {dvMax:F2} m/s/ruutu ({dvKohta}, lähtö {t1 - t0:F1} s)");
+            if (dvMax > 0.3) viat.Add($"Concorde kääntö: nopeuden muutos {dvMax:F2} m/s");
+            Oleta.Tosi(viat.Count == 0, string.Join("; ", viat));
+        }
 }
 }

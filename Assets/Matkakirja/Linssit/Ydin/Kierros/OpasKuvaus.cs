@@ -36,6 +36,8 @@ namespace Matkakirja.Linssit.Kierros
         public const double SivuKulma = 25;
         public const double PalloMatalampiAst = 6, AukioEtMaxM = 220;
         static readonly System.Collections.Generic.HashSet<string> AukioLuokat = new System.Collections.Generic.HashSet<string> { "aukio", "tori" };
+        /// <summary>Workerin alue-luokat (Luokittele → Alue): pallon pystykuvassa kehys loittonee (LeveysKuvaan).</summary>
+        static readonly System.Collections.Generic.HashSet<string> AlueLuokat = new System.Collections.Generic.HashSet<string> { "linnoitus", "puisto", "vesi", "satama", "alue", "saari" };
         /// <summary>Workerin luokka on aukio tai tori (OpasKohde.Lue ottaa nämä kehystykseen).</summary>
         public static bool AukioLuokka(string luokka) => luokka != null && AukioLuokat.Contains(luokka.Trim().ToLowerInvariant());
         // Pysähdys
@@ -166,13 +168,79 @@ namespace Matkakirja.Linssit.Kierros
             // kierrossa silmä vähintään PalloAukioKattoMinM maasta (OpasOhjaus.Rajoita ja spiraalin alaraja).
             bool aukioKehys = AukioLuokat.Contains((luokka ?? k?.Luokka ?? "").Trim().ToLowerInvariant());
             if (OpasSilmukka.PalloLento && aukioKehys) kattoYla = Math.Max(kattoYla, PalloAukioKattoMinM);
-            return new Pysahdys
+            var pk = new Pysahdys
             {
                 Id = k.Id ?? k.Nimi, Nimi = k.Nimi, Alarivi = k.Alarivi, Teksti = k.Teksti, Lat = k.Lat, Lon = k.Lon, MaaM = maaM, NostoM = nosto,
                 Suuntima = KierrosLento.Kiedo(tulosuunta + SivuKulma), Kallistus = kall, EtaisyysM = et, MinEtM = minEt, KattoYlaM = kattoYla,
                 LoppuEtM = loppuEt > 0 && loppuEt < et ? loppuEt : 0, Aukio = aukioKehys,
             };
+            // KAPEA KUVA (Linssiseppä 11.10. 08.5x, PT 09.2x): yllä oleva kehys suunnitellaan KuvaSuhteelle 1,8 (iPad ja iPhone vaaka
+            // ennallaan); pallon pystykuvassa alue loittonee ja aukio kiertää keskusmonumenttiaan (LeveysKuvaan).
+            if (!OpasSilmukka.PalloLento) return pk;
+            if (aukioKehys)
+            {
+                var mon = OpasKatseOletukset.Monumentti(k.Lat, k.Lon) ?? (k.Lat, k.Lon);
+                pk.MonumenttiLat = mon.lat; pk.MonumenttiLon = mon.lon;
+            }
+            // Loitonnus vain workerin alue-luokille (PT 09.2x; OpasKohde.Luokka kertoo vain aukiot, ja koosta päätelty Alue kattaisi myös
+            // Louvren ja Champs-Élysées'n, jotka pysyvät kuten vaakakuvassa). Luokka puuttuu → ei loitonnusta.
+            else if (AlueLuokat.Contains((k.LuokkaWorker ?? "").Trim().ToLowerInvariant())) pk.LeveysKoko = koko;
+            return LeveysKuvaan(pk, KehysSuhde);
         }
+
+        /// <summary>Kehysten kuvasuhde: laitteen kuvasuhde (KuvaSuhdeNyt) 0,01:n tarkkuudella, enintään 4:3 (leveämpi kuva näkee vähintään
+        /// iPadin vaakakuvan, joten kehys on sama kuin ennen; Linssiseppä 11.10.).</summary>
+        public static double KehysSuhde => KuvaSuhdeNyt >= VaakaSuhde - 0.01 ? VaakaSuhde : Math.Max(0.2, Math.Round(KuvaSuhdeNyt, 2));
+        public const double VaakaSuhde = 4.0 / 3;
+
+        /// <summary>
+        /// LEVEÄ KOHDE KAPEASSA KUVASSA (Linssiseppä 11.10. 08.5x: iPhonen pystykuvassa 0,46 Louvre, Concorde ja muut leveät kohteet olivat
+        /// kehyksen alussa ~2 ruudun levyisiä, koska Kehysta laskee leveyden kuvasuhteella 1,8; PT 09.2x: vain alue-luokka loittonee,
+        /// rakennukset ja kadut pysyvät kuten vaakakuvassa, aukio kiertää monumenttiaan): kuvasuhteella &lt; 4:3 alueen kehys loittonee
+        /// samalla kallistuksella (viisto pallonäkymä pysyy), kunnes katsepisteen etäisyydellä näkyvä puolileveys on vähintään
+        /// min(iPadin vaakakuvan puolileveys samassa kehyksessä, koko / 2 / PalloKapeaReuna) — kohde mahtuu reunan sisään, mutta
+        /// kapea kuva ei näytä enempää kuin iPad. RAJA: loitonnus enintään PalloKapeaKerroinMax × iPadin etäisyys ja silmä enintään
+        /// PalloKapeaSilmaMaxM maasta; sen yli kohteen keskus kehystetään ja reunat rajautuvat. Spiraalin loppuetäisyys skaalautuu samassa suhteessa
+        /// (lähestyminen sama osuus). Kuvasuhde ≥ 4:3 → p sellaisenaan.
+        /// </summary>
+        public static Pysahdys LeveysKuvaan(Pysahdys p, double suhde)
+        {
+            if (p.LeveysPohja != null) p = p.LeveysPohja;
+            p.LeveysSuhde = suhde;
+            if (suhde >= VaakaSuhde - 1e-6) return p;
+            if (!double.IsNaN(p.MonumenttiLat))
+            {
+                // AUKIO PYSTYKUVASSA (PT 11.10. 09.2x, iPhone-ajo e0689c677: Concorde loittoni 129 → 375 m ja obeliski jäi pieneksi, vastoin
+                // linjausta "Concorde lähempää, niin että obeliski erottuu"; ennen sitä obeliski oli oikeassa reunassa): ei loitonnusta —
+                // sama lähikehys (etäisyys, kallistus, spiraali), mutta katsepiste ja kierto keskusmonumentissa (OpasKatseOletukset), joten
+                // monumentti pysyy vaakasuunnassa keskellä; aukiosta saa leikkautua osa. KohdeLat/Lon = aukion piste.
+                return new Pysahdys
+                {
+                    Id = p.Id, Nimi = p.Nimi, Alarivi = p.Alarivi, Teksti = p.Teksti, Lat = p.MonumenttiLat, Lon = p.MonumenttiLon, MaaM = p.MaaM, NostoM = p.NostoM,
+                    Suuntima = p.Suuntima, Kallistus = p.Kallistus, EtaisyysM = p.EtaisyysM, MinEtM = p.MinEtM, KattoYlaM = p.KattoYlaM, LoppuEtM = p.LoppuEtM,
+                    Aukio = p.Aukio, KohdeLat = p.Lat, KohdeLon = p.Lon, MonumenttiLat = p.MonumenttiLat, MonumenttiLon = p.MonumenttiLon, LeveysSuhde = suhde, LeveysPohja = p,
+                };
+            }
+            if (p.LeveysKoko <= 0) return p;
+            const double A = Math.PI / 180;
+            double tanP = Math.Tan(KuvaPystyAst * A / 2), et0 = p.EtaisyysM, c = Math.Cos(p.Kallistus * A);
+            double tarve = Math.Min(et0 * tanP * VaakaSuhde, p.LeveysKoko / (2 * PalloKapeaReuna));   // tarvittava puolileveys (m)
+            double et = tarve / (tanP * suhde);
+            if (et <= et0 + 0.5) return p;
+            double raja = et0 * PalloKapeaKerroinMax;
+            if (c > 0.01) raja = Math.Min(raja, Math.Max(et0, (PalloKapeaSilmaMaxM - p.NostoM) / c));
+            et = Math.Min(et, raja);
+            double f = et / et0, loppu = p.LoppuEtM > 0 ? p.LoppuEtM * f : 0;
+            return new Pysahdys
+            {
+                Id = p.Id, Nimi = p.Nimi, Alarivi = p.Alarivi, Teksti = p.Teksti, Lat = p.Lat, Lon = p.Lon, MaaM = p.MaaM, NostoM = p.NostoM,
+                Suuntima = p.Suuntima, Kallistus = p.Kallistus, EtaisyysM = et, MinEtM = p.MinEtM, KattoYlaM = p.KattoYlaM,
+                LoppuEtM = loppu > 0 && loppu < et ? loppu : 0, Aukio = p.Aukio, LeveysKoko = p.LeveysKoko, LeveysSuhde = suhde, LeveysPohja = p,
+            };
+        }
+        /// <summary>Kapean kuvan leveyssovitus: kohde enintään tämä osuus puolileveydestä, loitonnus enintään (× iPadin etäisyys) ja
+        /// silmä enintään (m maasta).</summary>
+        public const double PalloKapeaReuna = 0.9, PalloKapeaKerroinMax = 3.0, PalloKapeaSilmaMaxM = 300;
         /// <summary>Kierron loppu (PT 10.10.): kohde täyttää näin suuren osan pystykentästä (KuvaPystyAst) kierron lopussa.</summary>
         public const double KolmannesOsuus = 1.0 / 3;
         /// <summary>Kierron alku loppuetäisyyden kerrannaisena (alussa kohde ympäristöineen; kehys pidetään, jos se on välissä).</summary>
@@ -729,6 +797,19 @@ namespace Matkakirja.Linssit.Kierros
                     suurin = Math.Max(suurin, Math.Max(Math.Abs(x), Math.Abs(y)));
                 }
             return suurin;
+        }
+
+        /// <summary>Pisteen (lat, lon, korkeus u m ellipsoidista) vaakapaikka kuvassa (−1…1 = reunat, + = oikealle; kameran takana NaN).</summary>
+        public static double KuvassaX(Kuvakulma k, double lat, double lon, double u, double suhde)
+        {
+            const double R = 6371000, A = Math.PI / 180;
+            var s = KameraPaikka(k, lat, lon);
+            double te = (k.Lon - lon) * R * Math.Cos(lat * A) * A - s.e, tn = (k.Lat - lat) * R * A - s.n, tu = k.KatseKorkeusM - s.u;
+            double fl = Math.Sqrt(te * te + tn * tn + tu * tu), rl = Math.Sqrt(tn * tn + te * te);
+            if (fl < 1e-6 || rl < 1e-9) return double.NaN;
+            double sz = (-s.e * te - s.n * tn + (u - s.u) * tu) / fl;
+            if (sz <= 1) return double.NaN;
+            return (-s.e * tn / rl + s.n * te / rl) / sz / (Math.Tan(KuvaPystyAst * A / 2) * suhde);
         }
 
         /// <summary>Kameran paikka (m) paikallisessa ENU:ssa pisteestä (lat0, lon0): katsekohde − katsesuunta × etäisyys.</summary>
