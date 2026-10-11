@@ -2108,16 +2108,6 @@ export const EUROPE_VALOKUVAT = {
 
     lisat: [
 
-      {
-
-        tiedosto: 'Arsenalna station. Kyiv metro.jpg',
-        vuosi: '2012',
-        lahde: 'Ahernar, Commons (CC BY-SA 4.0)',
-        lyhyt: 'Arsenalnan metroaseman laiturihalli Kiovassa vuonna 2012.',
-        selite: 'Arsenalnan aseman laiturihalli Kiovassa. Marmoripilarit ja '
-          + 'matala holvi ovat 105 metrin syvyydessä maan alla, ja halli on '
-          + 'poikkeuksellisen lyhyt.',
-      },
 
       {
 
@@ -2238,24 +2228,6 @@ export const EUROPE_VALOKUVAT = {
 
       },
 
-      {
-
-        tiedosto: 'Komsomolskaya-KL MosMetro station 02-2015 platform.jpg',
-
-        vuosi: '2015',
-
-        lahde: 'A. Savin, Commons (CC BY-SA 3.0)',
-
-        lyhyt: 'Komsomolskajan metroasema Moskovassa vuonna 2015.',
-        selite: 'Komsomolskajan asema Moskovan metron kehälinjalla. Pylväsrivit '
-
-          + 'kannattavat holvia, katossa on mosaiikkeja ja rivi '
-
-          + 'kattokruunuja — tällaiselta asemalta päiväkirjan kirjoittaja '
-
-          + 'unohti nousta pois.',
-
-      },
 
     ],
     tiedosto: 'Church of St. Basil, Red Square Moscow LCCN2017660946.jpg',
@@ -2429,22 +2401,6 @@ export const EUROPE_VALOKUVAT = {
 
       },
 
-      {
-
-        tiedosto: 'Latvian Song festival 2008.jpg',
-
-        vuosi: '2008',
-
-        lahde: 'Laima Gūtmane (simka), Commons (CC BY-SA 3.0)',
-
-        lyhyt: 'Latvian laulujuhla Riian Mežaparksin laulukentällä vuonna 2008.',
-        selite: 'Latvian laulujuhla Riian Mežaparksin suurella laulukentällä '
-
-          + 'vuonna 2008. Ensimmäiset yleiset latvialaiset laulujuhlat '
-
-          + 'pidettiin Riiassa kesällä 1873, ja perinne jatkuu yhä.',
-
-      },
 
       {
         tiedosto: 'Latvia Riga Cathedral weather cock.jpg',
@@ -2500,24 +2456,6 @@ export const EUROPE_VALOKUVAT = {
 
       },
 
-      {
-
-        tiedosto: 'Mermaid of Užupis.jpg',
-
-        vuosi: '2024',
-
-        lahde: 'Michał Derela, Commons (CC BY-SA 4.0)',
-
-        lyhyt: 'Užupiksen merenneitopatsas Vilnia-joen rannassa vuonna 2024.',
-        selite: 'Užupiksen merenneito istuu muurin kolossa Vilnia-joen rannassa, '
-
-          + 'aivan sillan vieressä. Pronssiveistos on kaupunginosan '
-
-          + 'tunnetuin maamerkki, ja se on siinä samassa kohdassa, jonka '
-
-          + 'päiväkirja mainitsee.',
-
-      },
 
     ],
     tiedosto: 'Vilnia, Vostraja Brama. Вільня, Вострая Брама (S. Fleury, 1900).jpg',

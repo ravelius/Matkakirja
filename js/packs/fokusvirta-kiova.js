@@ -763,12 +763,10 @@ export const FOKUSVIRTA_KIOVA = {
      * kupoli.
      */
     kuva: {
-      tiedosto: 'Golden Gate Kiev top 2018 G1.jpg',
-      lyhyt: 'Portin holvin päällä kultakupolinen kirkko näkyi kauas; nykyinen on vuoden 1982 jälleenrakennus.',
-      selite: 'Portin holvin päälle rakennetun kirkon kullatut kupolit '
-        + 'näkyivät aikanaan kauas kaupungin ulkopuolelle; nykyinen '
-        + 'rakennelma on vuoden 1982 jälleenrakennus.',
-      lahde: 'George Chernilevsky, Wikimedia Commons (public domain)',
+      tiedosto: "Киев. Золотые ворота. Почтовая открытка 04.jpg",
+      lyhyt: "Kultaisen portin rauniot postikortissa 1910",
+      selite: "Kultaisen portin rauniot suojarakennuksen alla postikortissa vuoden 1910 tienoilta; nykyinen portti on vuoden 1982 jälleenrakennus.",
+      lahde: "Tuntematon kustantaja, Wikimedia Commons (PD)",
     },
   },
 
