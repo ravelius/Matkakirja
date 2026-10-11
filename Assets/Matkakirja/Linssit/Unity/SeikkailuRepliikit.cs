@@ -103,8 +103,12 @@ namespace Matkakirja.Natiivi
         {
             if (!repliikit.TryGetValue(tunnus, out var r)) { kirjaa?.Invoke($"seikkailu: repliikki {tunnus} puuttuu manifestista"); return 0; }
             StartCoroutine(SoitaKun(r, puhuja));
+            soitettu[tunnus] = Time.unscaledTime;
             return r.KestoS;
         }
+        readonly Dictionary<string, float> soitettu = new Dictionary<string, float>(StringComparer.Ordinal);
+        /// <summary>Sekunteja repliikin edellisestä soitosta, tai ääretön (riita ei toista veneen soutaja-2:ta heti perään, PT B3).</summary>
+        public float SoitostaS(string tunnus) => soitettu.TryGetValue(tunnus, out var t) ? Time.unscaledTime - t : float.PositiveInfinity;
 
         IEnumerator SoitaKun(Repliikki r, Transform puhuja)
         {

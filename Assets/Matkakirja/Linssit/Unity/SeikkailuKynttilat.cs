@@ -173,8 +173,9 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        /// <summary>Toiminto pelaajan kohdalla (SeikkailuEsineet ohjaa tänne). Palauttaa, tehtiinkö jotain.</summary>
-        public bool Toimi(SeikkailuPelaaja p)
+        /// <summary>Toiminto pelaajan kohdalla (SeikkailuEsineet ohjaa tänne). Palauttaa, tehtiinkö jotain. omaSallittu = false (3D-napautus):
+        /// oma kynttilä ei syty eikä sammu (vain toimintonappi, E tai X; PT B2).</summary>
+        public bool Toimi(SeikkailuPelaaja p, bool omaSallittu = true)
         {
             var c = p.transform.position + Vector3.up * 1.0f;
             if (LuukullaOn(c)) { VaihdaLuukku(); p.KasiEle("luukku"); return true; }
@@ -195,6 +196,7 @@ namespace Matkakirja.Natiivi
             }
             var t = ydin.Valitse(c.x, c.y, c.z);
             if (t.Toiminto == KynttilaToiminto.Ei) return false;
+            if (!omaSallittu && (t.Toiminto == KynttilaToiminto.SytytaOma || t.Toiminto == KynttilaToiminto.SammutaOma)) return false;
             ydin.Tee(t);
             if (t.Toiminto == KynttilaToiminto.SammutaOma || t.Toiminto == KynttilaToiminto.SammutaTilan) SeikkailuAanet.Soita("puhallus", c, 0.6f);
             kirjaa?.Invoke($"seikkailu: kynttilä {t.Toiminto} {t.Indeksi} (palavia {ydin.Palavia}/{ydin.Maara}, oma {(ydin.OmaPalaa ? "palaa" : "ei")})");
@@ -203,6 +205,20 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Onko toiminto tarjolla (nappi näkyviin).</summary>
         public bool ToimintoTarjolla(SeikkailuPelaaja p) => ToimintoVerbi(p) != null;
+
+        /// <summary>Tarjolla on vain oman kynttilän sytytys tai puhallus (ei luukkua, ikuista valoa, asetusta eikä tilan kynttilää). Se on
+        /// toimintoketjun viimeinen: ovi, tikkaat, koputus ja muut menevät edelle (Laitetestaaja 11.10.: kynttilä palaa, ovi ei aukea; PT B2).</summary>
+        public bool OmaVaihto(SeikkailuPelaaja p)
+        {
+            if (p == null || ToimintoVerbi(p) == null) return false;
+            var c = p.transform.position + Vector3.up * 1.0f;
+            if (LuukullaOn(c)) return false;
+            if (ydin.OmaKynttila && !ydin.OmaPalaa && OmaAsetettu == null && Vector3.Distance(c + Vector3.up * 0.4f, IkuinenValo) < SytytysM + 0.6f) return false;
+            if (OmaAsetettu is Vector3 asp && Vector3.Distance(asp, c) < 1.2f) return false;
+            if (OmaAsetettu == null && ydin.OmaPalaa && OnttoPaikka() is Vector3 op && Vector3.Distance(op, c) < 1.3f) return false;
+            var t = ydin.Valitse(c.x, c.y, c.z).Toiminto;
+            return t == KynttilaToiminto.SytytaOma || t == KynttilaToiminto.SammutaOma;
+        }
 
         /// <summary>Tarjolla olevan toiminnon verbi (Natiivi-UI:n toimintonappi): Avaa/Sulje (luukku), Sytytä (ikuisesta valosta),
         /// Ota (asetettu kynttilä), Aseta (seinän viereen), Sammuta, Sytytä tai Puhalla (oma); null = ei toimintoa. Sama järjestys kuin Toimi.</summary>
@@ -215,7 +231,8 @@ namespace Matkakirja.Natiivi
             if (OmaAsetettu is Vector3 asp && Vector3.Distance(asp, c) < 1.2f) return Kieli.T("olavinlinna.verbi.ota");
             if (OmaAsetettu == null && ydin.OmaPalaa && OnttoPaikka() is Vector3 op && Vector3.Distance(op, c) < 1.3f) return Kieli.T("olavinlinna.verbi.aseta");
             var t = ydin.Valitse(c.x, c.y, c.z).Toiminto;
-            if (t == KynttilaToiminto.Ei || !(Lahella(c) || ydin.OmaPalaa)) return null;
+            // Sammunut oma kynttilä: liekkinappi aina tarjolla (B2: 3D-napautus ei enää sytytä, joten nappi on ainoa tapa myös tyrmässä).
+            if (t == KynttilaToiminto.Ei || !(Lahella(c) || ydin.OmaPalaa || t == KynttilaToiminto.SytytaOma)) return null;
             return t == KynttilaToiminto.SammutaOma ? Kieli.T("olavinlinna.verbi.puhalla") : t == KynttilaToiminto.SammutaTilan ? Kieli.T("olavinlinna.verbi.sammuta") : Kieli.T("olavinlinna.verbi.sytyta");
         }
 

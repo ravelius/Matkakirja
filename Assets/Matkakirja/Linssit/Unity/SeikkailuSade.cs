@@ -15,11 +15,24 @@ namespace Matkakirja.Natiivi
         public static SeikkailuSade Aktiivinen { get; private set; }
         /// <summary>Korkean tuulen raja (m, Unity y): muurin harja ja tornin yläosa ulkona (piha ~0, harja ~10–12).</summary>
         public const float KorkeallaY = 8.5f;
+        /// <summary>Muurin tippuminen tyrmässä (PT 11.10. 03.0x, Pelikoodari: tyrmän keskitaso −41,5 dB, tavoite −32…−30 dB; sisällä muuten 0,28;
+        /// simu 1a7ebdf2c: 0,6 → −38,6 dB, joten täysi taso ja lisäksi SeikkailuTyrmaAanet-pohja).</summary>
+        public const float TyrmaTippuminen = 1f;
+        /// <summary>Laiturin ja rannan äänipohja (PT 11.10. 06.2x, Laitetestaajan 4. kierros: laiturilla paikallaan −36 dB tasainen, myös
+        /// v6:ssa −37…−38 dB eli ei regressio; tavoite tyrmän tapaan −32…−30 dB): Soundly soutu-silmukka-02 "Water, Lap, Waves, Lake,
+        /// Lapping Against Dock" (−23 LUFS, pankissa kytkemättä) muurin ulkopuolella jalan. Tyrmän linna-tila-01 0,9 toi n. +7 dB.</summary>
+        public const string LaituriLaineet = "soutu-silmukka-02";
+        /// <remarks>Laitetestaajan 5. kierros (v10, viides1.wav): laiturilla paikallaan −32…−35 dB 0,9:llä, tavoite −31 → +3 dB (PT 07.0x).
+        /// Taso ei voi nousta 1,0:n yli (maisemaryhmä 1 × 1,27 rajautuu AudioSource.volumeen, Siirtoseppä 11.10.), joten +3 dB tulee
+        /// toisesta kerroksesta: sama silmukka puoli kierrosta edellä samalla tasolla (kaksi korreloimatonta = tehon kaksinkertaistus).</remarks>
+        public const float LaituriLaineetTaso = 0.9f;
+        AudioSource laineet2;
         internal static readonly string[] Tunnukset = { "sade-kivi", "sade-vesi", "sade-puu", "sade-pressu", "tippuminen-raystas", "tippuminen-muuri", "ukkonen-jyly",
             "tuuli-kostea", "tuuli-korkea",   // Sonniss-tuulet (Pelikoodari 9.10., ämpärissä sonniss-tuulet-v1)
             "tuuli-metsa",   // männikön tuuli muurin ulkopuolella (sonniss-aanet-v2, PT 9.10.)
             "yolinnut", "koira",
-            "kesayo-sirkat", "satama-vesi" };   // sonniss-aanet-v3 (PT 9.10.): kesäyön sirkat ulkona, vesi loiskii kallioon rannalla ja veneessä   // elokuun yön linnut ja kaukainen koira (aanet-lapi-v1, Pelikoodari 9.10.; Tausta-voima)
+            "kesayo-sirkat", "satama-vesi",
+            LaituriLaineet };   // sonniss-aanet-v3 (PT 9.10.): kesäyön sirkat ulkona, vesi loiskii kallioon rannalla ja veneessä   // elokuun yön linnut ja kaukainen koira (aanet-lapi-v1, Pelikoodari 9.10.; Tausta-voima)
         readonly Dictionary<string, AudioSource> lahteet = new Dictionary<string, AudioSource>();
         readonly Dictionary<string, float> tavoite = new Dictionary<string, float>();
         float tarkistusT;
@@ -58,6 +71,23 @@ namespace Matkakirja.Natiivi
             ulos["koira"] = veneessa ? 0.25f : ulkona ? 0.18f : 0f;
             ulos["kesayo-sirkat"] = ulkona && !korkealla ? 0.22f : 0f;
             ulos["satama-vesi"] = veneessa ? 0.4f : vesi ? 0.35f : ulkopuolella ? 0.15f : 0f;
+            // Laituri ja ranta jalan: laineet loiskivat laituria vasten pohjana (veneessä soutu ja satama-vesi riittävät, muurin harjalla ei).
+            ulos[LaituriLaineet] = ulkopuolella && !veneessa && !korkealla ? LaituriLaineetTaso : 0f;
+        }
+
+        /// <summary>Laineiden toinen kerros: sama klippi puoli silmukkaa edellä, taso seuraa ensimmäistä (ks. LaituriLaineetTaso).</summary>
+        void LaineetToinen(AudioSource a)
+        {
+            if (laineet2 == null)
+            {
+                if (a.clip == null || a.volume <= 0f) return;
+                laineet2 = gameObject.AddComponent<AudioSource>();
+                laineet2.clip = a.clip; laineet2.loop = true; laineet2.spatialBlend = 0f; laineet2.playOnAwake = false;
+                laineet2.time = (a.time + a.clip.length * 0.5f) % Mathf.Max(0.1f, a.clip.length);
+                SaumatonSilmukka.Kiinnita(laineet2);
+                laineet2.Play();
+            }
+            laineet2.volume = a.volume;
         }
 
         /// <summary>Kävelyosa muurin ulkopuolella (ranta, vesiportti, laituri, ulkoalue; LR:n osat v45x).</summary>
@@ -89,6 +119,7 @@ namespace Matkakirja.Natiivi
                 }
                 bool korkealla = p != null && markyys >= 0.5 && p.transform.position.y > KorkeallaY;
                 Tavoitteet(markyys, veneessa, puulla, tavoite, korkealla, ulkopuolella);
+                if (SeikkailuTyrma.Aktiivinen != null) tavoite["tippuminen-muuri"] = TyrmaTippuminen;
             }
             foreach (var t in Tunnukset)
             {
@@ -107,6 +138,7 @@ namespace Matkakirja.Natiivi
                 float nyt = l.volume / Mathf.Max(taso, 1e-4f);
                 nyt = Mathf.MoveTowards(nyt, v, dt / 1.5f);
                 l.volume = nyt * taso;
+                if (t == LaituriLaineet) LaineetToinen(l);
             }
         }
     }

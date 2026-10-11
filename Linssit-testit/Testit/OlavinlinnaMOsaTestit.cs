@@ -147,7 +147,8 @@ namespace Matkakirja.Linssit.Testit
                 Console.WriteLine($"      kiinni {k + 1}: tarkistus ({tarkistus.X:F1}, {tarkistus.Y:F1}, {tarkistus.Z:F1}), komeroon {komeroon:F1} m");
                 if (k == 69) Oleta.Tosi(komeroon <= 2 && Math.Abs(tarkistus.Y - komero.Y) <= 2, $"kiinni 70: tarkistuspiste komerossa ({komeroon:F1} m)");
                 Oleta.Tosi(koe.PX == tarkistus.X && koe.PZ == tarkistus.Z && koe.Seuraava <= k + 1, $"kiinni {k + 1}: tarkistuspisteeseen (seuraava {koe.Seuraava + 1})");
-                foreach (var h in koe.Hahmot) if (h.Aktiivinen && !h.Aivot.Torkkuu) Oleta.Tosi(h.Aivot.Valppaus > 59, $"{h.Nimi} valppaana");
+                // Vapautus (PT 07.0x 11.10., Laitetestaaja 5. kierros): rauhallisina ja turva 60 s (ennen kaikki valppaiksi 60 s).
+                foreach (var h in koe.Hahmot) if (h.Aktiivinen) Oleta.Tosi(h.Aivot.Valppaus == 0 && h.Aivot.Turva > 59, $"{h.Nimi} rauhallinen ja turva ({h.Aivot.Valppaus:F0} / {h.Aivot.Turva:F0} s)");
                 var tulos = ThiefAjuri.Aja(koe, koe.Seuraava, KiipeilyAlku, budjetti: 600); var loppu = tulos.Loppu;
                 if (loppu == null) { Console.WriteLine($"      jumissa pisteessä {tulos.Pisin + 1}:"); ThiefAjuri.Tulosta(tulos.PisinTila); }
                 Console.WriteLine($"      kiinni pisteessä {k + 1} → tarkistus pisteeseen {koe.Seuraava + 1}: {(loppu != null ? $"loppuun {loppu.T - t0:F0} s, kiinni {loppu.Kiinni}" : "JUMI")}");
@@ -258,6 +259,22 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(1, w.PuluPakotettu, "3. kiinnijäänti: Pulun taso 2");
             var loppu = ThiefAjuri.Aja(w, w.Seuraava, 65, budjetti: 600).Loppu;   // takaisin Tott-kammioon portaiden juurelle (kirkkotorni-portaat)
             Oleta.Tosi(loppu != null && !loppu.Hahmot.Exists(h => h.Aivot.Helpotettu), "osan vaihtuessa helpotus päättyy");
+        }
+
+        /// <summary>Anteeksianto tyrmän jälkeen (PT 11.10. 05.0x): kiinnijäänti kirjataan otteen paikan osaan, ei tyrmään, jossa pelaaja on
+        /// Kiinni-kutsun hetkellä (SeikkailuVartijat.Vie → SeikkailuTyrma → Kiinni); muuten tarkistuspisteessä helpotus nollautui heti.</summary>
+        [Testi] static void AnteeksiantoTyrmanJalkeen()
+        {
+            var w = Tila(51);
+            var tyrma = Huonesimulaatio.Data.Merkit.Find(m => m.Nimi == "istuu:pelaaja-tyrma");
+            Oleta.Tosi(tyrma != null, "tyrmän merkki datassa");
+            var osa = Askelaani.Osa(Huonesimulaatio.Data, w.PX, w.PY, w.PZ);
+            w.KiinniAlkaa = s => (s.PX, s.PY, s.PZ) = (tyrma.X, tyrma.Y, tyrma.Z);   // tyrmä ennen kiinnijäännin kirjausta
+            w.Kiinnijaanti();
+            Oleta.Sama(osa, w.KiinniOsa, "1. kiinnijäänti otteen osaan, ei tyrmään");
+            w.Odota(false);
+            w.Kiinnijaanti();
+            Oleta.Tosi(w.KiinniOsassa == 2 && w.Hahmot.TrueForAll(h => !h.Aktiivinen || h.Aivot.Helpotettu), $"2. kiinnijäänti samassa osassa ({osa}) tyrmän kautta: helpotus");
         }
     }
 }
