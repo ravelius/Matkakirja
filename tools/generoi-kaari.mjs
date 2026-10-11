@@ -36,7 +36,8 @@ const STABILITY = 0.5;
 const LOPPUTAUKO = ' <break time="1.0s" />';
 
 const avain = process.env.ELEVEN_API_KEY ?? process.env.ELEVENLABS_API_KEY;
-if (!avain) {
+const KUIVA = process.argv.includes('--kuiva') || process.env.ELEVEN_KUIVA === '1';
+if (!avain && !KUIVA) {
   console.error('ELEVEN_API_KEY puuttuu ympäristöstä — luentoja ei voi generoida.');
   process.exit(1);
 }
@@ -83,6 +84,11 @@ const RAAKA_KANSIO = raakaAmpariKansio(AMPARIN_JUURI, ERA);
 const kuittirivit = [];
 
 async function generoi(teksti, polku, nimi) {
+  if (KUIVA) {
+    // --kuiva: ei API-kutsua, ei raakavientiä, ei tiedostoja — vain mitä ajo tekisi (PT 12.10.2026: kuiva-ajo generoi aiemmin oikeasti).
+    console.log(`${nimi}: KUIVA — generoitaisiin ${teksti.length} merkkiä → ${polku}`);
+    return false;
+  }
   console.log(`${nimi}: generoidaan (${teksti.length} merkkiä)…`);
   const vastaus = await fetch(
     'https://api.elevenlabs.io/v1/text-to-dialogue?output_format=mp3_44100_128',
@@ -129,6 +135,7 @@ async function generoi(teksti, polku, nimi) {
 }
 
 let generoitu = 0;
+let suunniteltu = 0;
 for (const k of kohteet) {
   for (const [osa, luentaKentta, tekstiKentta] of OSAT) {
     if (vainMykistetyt && !(k.mykistetyt ?? []).includes(osa)) continue;
@@ -136,8 +143,8 @@ for (const k of kohteet) {
     const teksti = k[luentaKentta] ?? k[tekstiKentta];
     if (!teksti) { console.error(`${k.id}/${osa}: teksti puuttuu — ohitetaan.`); continue; }
     const polku = resolve(JUURI, `assets/audio/puhe-kaari-${osa}-${k.id}.mp3`);
-    await generoi(teksti, polku, `${k.id}/${osa}`);
-    generoitu += 1;
+    if (await generoi(teksti, polku, `${k.id}/${osa}`) !== false) generoitu += 1;
+    else suunniteltu += 1;
   }
 }
 if (kuittirivit.length) {
@@ -150,4 +157,4 @@ if (kuittirivit.length) {
   }), AMPARIN_JUURI);
   console.log(`Kuitti: ${kuitti.objectKey}`);
 }
-console.log(`Valmis — ${generoitu} luentaa.`);
+console.log(KUIVA ? `Kuiva-ajo valmis — ${suunniteltu} luentaa generoitaisiin, ei kutsuja.` : `Valmis — ${generoitu} luentaa.`);
