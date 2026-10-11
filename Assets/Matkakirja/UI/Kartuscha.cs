@@ -513,7 +513,9 @@ namespace Matkakirja.Natiivi
         const float NimikeMin = 78f;
         bool nimikkeetSovitettu;
 
-        List<VisualElement> Nimikkeet() => tilastot.Query(className: "mk-kartuscha__nimike").ToList();
+        // NOSTOT/MAAKUNNAT-rivit (muste) samaan sarakkeeseen kuin tilastot (PT 11.10.: arvot olivat ~6 pt vasemmempana kuin PÄÄKAUPUNKI-rivillä).
+        List<VisualElement> Nimikkeet() => tilastot.Query(className: "mk-kartuscha__nimike").ToList()
+            .Concat(muste != null ? muste.Query(className: "mk-kartuscha__nimike").ToList() : new List<VisualElement>()).ToList();
 
         void NollaaNimikkeet()
         {
