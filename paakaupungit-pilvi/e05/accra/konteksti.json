@@ -1,0 +1,97 @@
+{
+ "id": "accra",
+ "era": "e05",
+ "nimi": "Accra",
+ "nimiAlkukieli": "Accra (ga: Nkran)",
+ "maa": "GHA",
+ "maanNimi": "Ghana",
+ "asema": "pääkaupunki",
+ "lat": 5.556,
+ "lon": -0.1969,
+ "wikidata": "Q3761",
+ "kevytSisalto": {
+  "kuvaus": "Accra on Ghanan pääkaupunki ja suurin kaupunki Guineanlahden rannalla. Alueella asuivat gat, ja rannikolle rakennettiin eurooppalaisia kauppalinnoituksia 1500- ja 1600-luvuilla. Britit tekivät Accrasta Kultarannikon pääkaupungin vuonna 1877, ja nykyään se on Ghanan hallinnon, kaupan ja kulttuurin keskus. Kaupungin laajempi kaupunkiseutu ulottuu itään kohti Teman satamakaupunkia.",
+  "tunnusrakennukset": [
+   "James Fort ja Jamestownin majakka",
+   "Ussher Fort",
+   "Independence Arch eli Black Star Gate",
+   "Holy Trinity -katedraali"
+  ],
+  "asukkaat": {
+   "arvo": 1782150,
+   "vuosi": 2021,
+   "lahde": "Ghana Statistical Service (GSS), 2021 Population and Housing Census, General Report Volume 3A: Population of Regions and Districts (s. 80). Luku on entisen Accran kaupungin alueen 13 nykyisen piirin summa, laskettu suoraan GSS:n omasta piiritaulukosta: Accra Metropolitan 284 124, Ablekuma Central 169 145, Ablekuma North 159 208, Ablekuma West 153 490, Ayawaso Central 94 831, Ayawaso East 53 004, Ayawaso North 63 386, Ayawaso West 75 303, Korle Klottey 68 633, Okaikoi North 160 446, La Dadekotopon 140 264, Ledzokuku 217 304, Krowor 143 012 = 1 782 150. Greater Accra -alue 5 455 692.",
+   "linkki": "https://web.archive.org/web/2024/https://statsghana.gov.gh/gssmain/fileUpload/pressrelease/2021%20PHC%20General%20Report%20Vol%203A_Population%20of%20Regions%20and%20Districts_181121.pdf"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Nimi lainattiin tuhannen kilometrin päästä",
+    "Palatsi, jossa oli Timesin numero vuodelta 1843",
+    "Seppä toi taskussaan kaakaon",
+    "Musta tähti nousi keskiyöllä"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Riisi, jonka durranlehti värjää",
+    "Hapatettua maissia lehden sisällä",
+    "Musta pippuri, joka on oikeasti kalaa",
+    "Banaani, joka paistetaan mausteissa"
+   ]
+  },
+  {
+   "id": "kasityo",
+   "nimi": "Käsityö",
+   "nostot": [
+    "Kangas, jonka hämähäkki keksi",
+    "Merkit, jotka painetaan kalebassilla",
+    "Punnus, joka kertoo sananlaskun",
+    "Arkku, joka on kaakaopalko"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Nimi tuli oven ulkopuolelta",
+    "Apteekkari, joka soitti Armstrongin kanssa",
+    "Ksylofoni kurpitsoiden päällä",
+    "Tanssi, joka silittää ja ajaa autoa"
+   ]
+  },
+  {
+   "id": "tavat",
+   "nimi": "Tavat",
+   "nostot": [
+    "Nimi kertoo, minä päivänä synnyit",
+    "Juhla, jossa nälälle nauretaan",
+    "Neljäkymmentä päivää hiljaisuutta",
+    "Perintö kulkee äidin kautta"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "kohde:osun-linna",
+   "nimi": "Osun linna",
+   "lahde": "fokuskohde",
+   "laji": "historia",
+   "km": 2,
+   "teksti": "Osun linna eli Christiansborg seisoo Accran Osun kaupunginosassa Guineanlahden rannalla. Tanska-Norja rakensi paikalle linnoituksen 1660-luvulla, ja se vaihtoi omistajaa portugalilaisten, akwamujen, brittien ja lopulta itsenäisen Ghanan vä…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Accra",
+  "maanAvain": "Ghana",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

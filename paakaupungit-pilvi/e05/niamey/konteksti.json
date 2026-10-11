@@ -1,0 +1,74 @@
+{
+ "id": "niamey",
+ "era": "e05",
+ "nimi": "Niamey",
+ "nimiAlkukieli": "Niamey",
+ "maa": "NER",
+ "maanNimi": "Niger",
+ "asema": "pääkaupunki",
+ "lat": 13.515,
+ "lon": 2.1175,
+ "wikidata": "Q3674",
+ "kevytSisalto": {
+  "kuvaus": "Niamey on Nigerin pääkaupunki ja suurin kaupunki, joka sijaitsee Niger-joen varrella lounaisessa osassa maata. Ranskalaiset perustivat sinne sotilasaseman 1900-luvun alussa, ja kaupungista kasvoi nopeasti hallinnon ja kaupan keskus itsenäistymisen jälkeen. Joki on kaupungin ainoa pysyvä vesistö ja sen vedenhankinnan lähde, ja kaupunki on kulttuurin, kaupan ja yliopiston keskus.",
+  "tunnusrakennukset": [
+   "Boubou Hama -kansallismuseo (Musée national Boubou Hama)",
+   "Niameyn suuri moskeija",
+   "Kennedyn silta (Pont Kennedy)",
+   "Grand Marché (Niameyn suuri tori)"
+  ],
+  "asukkaat": {
+   "arvo": 1492414,
+   "vuosi": 2024,
+   "lahde": "Nigerin tilastovirasto (INS), Niamey-esite 'Niamey, démographie 2024' (projektio RGP/H 2012 -laskennan pohjalta; Niamey on oma hallintoalue); luku haun tiivistelmästä, PDF:ää ei saatu luettavaan muotoon",
+   "linkki": "https://stat-niger.org/wp-content/uploads/niamey/niamey_depliant_demographique_2024.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Niger on Länsi-Afrikan sisämaavaltio, jonka pohjoisosa kuuluu Saharan autiomaahan ja jonka eteläosassa Niger-joki ja Tšadin järven seutu mahdollistavat maanviljelyn. Maa itsenäistyi Ranskasta vuonna 1960, ja sen väestö on yksi maailman nuorimmista ja nopeimmin kasvavista. Suurin osa asukkaista elää maataloudesta ja karjanhoidosta, ja maan vientiin kuuluvat uraani ja öljy. Maan poliittinen historia on sisältänyt useita sotilasvallankaappauksia, ja Niger kuuluu Malin ja Burkina Fason kanssa Sahelin valtioiden liittoon.",
+  "genetiivi": "Nigerin",
+  "kielet": [
+   {
+    "kieli": "hausa",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "zarma-songhai",
+    "asema": "muu"
+   },
+   {
+    "kieli": "fulfulde (fulani)",
+    "asema": "muu"
+   },
+   {
+    "kieli": "tamasheq (tuareg)",
+    "asema": "muu"
+   },
+   {
+    "kieli": "kanuri",
+    "asema": "muu"
+   },
+   {
+    "kieli": "ranska",
+    "asema": "muu"
+   },
+   {
+    "kieli": "englanti",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Länsi-Afrikan CFA-frangi",
+   "koodi": "XOF"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Niamey",
+  "maanAvain": "Niger",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

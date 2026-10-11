@@ -1,0 +1,97 @@
+{
+ "id": "abuja",
+ "era": "e05",
+ "nimi": "Abuja",
+ "nimiAlkukieli": "Abuja",
+ "maa": "NGA",
+ "maanNimi": "Nigeria",
+ "asema": "pääkaupunki",
+ "lat": 9.06,
+ "lon": 7.49,
+ "wikidata": "Q3787",
+ "kevytSisalto": {
+  "kuvaus": "Abuja on Nigerian keskiosaan 1970–1980-luvuilla suunniteltu pääkaupunki, jonne hallinto siirtyi Lagosista vuonna 1991. Kaupunki rakennettiin tasapuolisemmaksi sijainniksi maan eri väestöryhmien kannalta, ja sen yllä kohoaa suuri Aso-kallio. Abuja on nykyään yksi Afrikan nopeimmin kasvavista kaupungeista, vaikka kasvun tarkkaa vauhtia on vaikea mitata.",
+  "tunnusrakennukset": [
+   "Aso-kallio (Aso Rock)",
+   "Abujan kansallismoskeija",
+   "Nigerian kansallinen kristillinen keskus",
+   "Zuma-kallio (Zuma Rock) kaupungin porttina"
+  ],
+  "asukkaat": {
+   "arvo": 1693400,
+   "vuosi": 2022,
+   "lahde": "Nigerian väestökomissio (NPC) / tilastotoimisto (NBS): Abuja Municipal Area Councilin (AMAC) projektio vuodelle 2022 vuoden 2006 väestönlaskennan pohjalta (776 298 vuonna 2006); luku myös Wikidatassa",
+   "linkki": "https://citypopulation.de/en/nigeria/admin/NGA015__federal_capital_territory/"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Kuningatar, joka jätti jälkeensä muurit",
+    "Tyhjä kalebassi kuninkaan eteen",
+    "Opettajat, jotka lähetettiin kylästä kylään",
+    "Laskettiinko sinun leskiäitisi?"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Riisi, josta käydään sotaa netissä",
+    "Vartaat, joissa mauste on maapähkinää",
+    "Keitto, jonka nimi tarkoittaa jauhamista",
+    "Nyrkillä survottu jamssi"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Rumpu, joka puhuu",
+    "Kolme miestä, banjo ja kurpitsakalistin",
+    "Ensimmäinen Grammy-ehdokkuus Nigeriaan",
+    "Afrobeat syntyi Los Angelesin reissulla"
+   ]
+  },
+  {
+   "id": "kuvataide",
+   "nimi": "Kuvataide",
+   "nostot": [
+    "Talonrakentajat löysivät kahdeksantoista päätä",
+    "Ovi, joka lähti Lontooseen",
+    "Kuningatar istui mallina nigerialaiselle",
+    "Sitoa ja liottaa"
+   ]
+  },
+  {
+   "id": "kirjallisuus",
+   "nimi": "Kirjallisuus",
+   "nostot": [
+    "Palmuviinin juoja ja kuollut tiristäjä",
+    "Käsikirjoitus, joka makasi nurkassa",
+    "Nobel-puhe, joka omistettiin vangille",
+    "Torin painokoneet keksivät pokkarin"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "kohde:zumarock",
+   "nimi": "Zuma Rock",
+   "lahde": "fokuskohde",
+   "laji": "vuori",
+   "km": 29,
+   "teksti": "Zuma Rock on suuri yksittäinen kalliokohouma eli inselberg Madallan kylässä Nigerin osavaltiossa, Abujasta länteen Kadunaan vievän tien varrella. Se on magmainen tunkeuma, jonka kivilajit ovat gabroa ja granodioriittia ja jonka ikä on prek…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Abuja",
+  "maanAvain": "Nigeria",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

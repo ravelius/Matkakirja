@@ -1,0 +1,58 @@
+{
+ "id": "lome",
+ "era": "e05",
+ "nimi": "Lomé",
+ "nimiAlkukieli": "Lomé",
+ "maa": "TGO",
+ "maanNimi": "Togo",
+ "asema": "pääkaupunki",
+ "lat": 6.1319,
+ "lon": 1.2228,
+ "wikidata": "Q3792",
+ "kevytSisalto": {
+  "kuvaus": "Lomé on Guineanlahden rannalla Ghanan rajan vieressä sijaitseva Togon pääkaupunki, suurin kaupunki ja tärkein satama. Kaupungin keskustassa ovat Grand Marché -kauppahalli, saksalaisaikaiset rakennukset ja punatiilinen Sacré-Cœurin katedraali, ja rantabulevardit kulkevat Atlantin vierellä. Laaja Grand Lomé -metropolialue on valtion talouden ja hallinnon keskus.",
+  "tunnusrakennukset": [
+   "Sacré-Cœurin katedraali (Cathédrale du Sacré-Cœur)",
+   "Grand Marché (suurtori)",
+   "Palais de Lomé (entinen saksalaisaikainen kuvernöörin residenssi)",
+   "Akodessewan fetissitori"
+  ],
+  "asukkaat": {
+   "arvo": 2188376,
+   "vuosi": 2022,
+   "lahde": "INSEED (Togon kansallinen tilasto- ja taloustutkimuslaitos), RGPH-5 lopulliset tulokset (julkistettu 4.4.2023, kenttätyö 23.10.-12.11.2022): Grand Lomé 2 188 376 (Golfe 1 305 681 + Agoè-Nyivé 882 695)",
+   "linkki": "https://inseed.tg/wp-content/uploads/2023/09/Depliant-Resultats-Definitifs_RGPH5_02Avril2023.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Togo on kapea Länsi-Afrikan valtio, jonka pohjoisrajalla on Burkina Faso ja jonka rannikko aukeaa Guineanlahdelle Ghanan ja Beninin välissä. Entinen saksalainen ja ranskalainen hallintoalue itsenäistyi vuonna 1960, ja sen virallinen kieli on ranska, mutta puhutuimpia ovat ewe ja kabiyè. Maan taloudessa tärkeitä ovat maatalous, fosfaatti ja Lomén satama, joka palvelee myös sisämaavaltioita. Rannikon kosteat lagunit vaihtuvat sisämaassa vuoristoisiin metsiin ja savanneihin.",
+  "genetiivi": "Togon",
+  "kielet": [
+   {
+    "kieli": "ranska",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "ewe",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "kabiyè",
+    "asema": "kansallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "CFA-frangi (Länsi-Afrikka)",
+   "koodi": "XOF"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Lomé",
+  "maanAvain": "Togo",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

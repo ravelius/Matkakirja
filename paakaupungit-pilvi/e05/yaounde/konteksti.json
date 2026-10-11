@@ -1,0 +1,88 @@
+{
+ "id": "yaounde",
+ "era": "e05",
+ "nimi": "Yaoundé",
+ "nimiAlkukieli": "Yaoundé",
+ "maa": "CMR",
+ "maanNimi": "Kamerun",
+ "asema": "pääkaupunki",
+ "lat": 3.8578,
+ "lon": 11.5181,
+ "wikidata": "Q3808",
+ "kevytSisalto": {
+  "kuvaus": "Yaoundé on Kamerunin pääkaupunki ja maan toiseksi suurin kaupunki Doualan jälkeen. Se sijaitsee maan eteläosan sisämaassa noin 750 metrin korkeudessa viheriöivillä kukkuloilla, joiden vuoksi sitä kutsutaan seitsemän kukkulan kaupungiksi. Saksalaiset perustivat paikalle tutkimusaseman 1880-luvun lopulla, ja nykyään kaupunki on maan hallinnon, ministeriöiden ja koulutuksen keskus, kun taas Douala on talouden keskus.",
+  "tunnusrakennukset": [
+   "Kamerunin kansallismuseo (entinen kuvernöörin ja presidentin palatsi)",
+   "Notre-Dame-des-Victoires-katedraali",
+   "Keskustori (Marché Central)",
+   "Mont Fébé -kukkula ja sen luostari"
+  ],
+  "asukkaat": {
+   "arvo": 3762900,
+   "vuosi": 2025,
+   "lahde": "Kamerunin tilastoinstituutti INS / BUCREP, väestöennuste 1.1.2025, siteerattu citypopulation.de-palvelussa; väestönlaskenta 2005: 1 817 524",
+   "linkki": "https://citypopulation.de/en/cameroon/cities/"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Kuningas, jota ei saanut nähdä",
+    "Joki, joka nimettiin katkaravuista",
+    "Kuningaskunta, jonka perusti nainen ja metsästäjä",
+    "Kansanäänestys, joka teki kahdesta yhden"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Kansallisruoka, jonka lehdet keitetään kolmesti",
+    "Keitto, jonka värin tekee kalkkikivi",
+    "Neljäkymmentä kiloa pippuria banaaniviljelmältä",
+    "Havupuun sukulainen, joka silputaan keitoksi"
+   ]
+  },
+  {
+   "id": "kuvataide",
+   "nimi": "Kuvataide",
+   "nostot": [
+    "Naamio, jossa kuningas muuttuu norsuksi",
+    "Kylä, jossa katonharja kertoo arvon",
+    "Kangas, joka kertoo mistä olet kotoisin",
+    "Taiteilija, joka rakensi galleriansa kotikylään"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Huuto, josta tuli tanssilaji",
+    "B-puoli, joka valloitti New Yorkin",
+    "Kitara, joka sidottiin kuulostamaan balafonilta",
+    "Soitin, jonka mukaan hengen antoi"
+   ]
+  },
+  {
+   "id": "urheilu",
+   "nimi": "Urheilu",
+   "nostot": [
+    "Hallitseva maailmanmestari kaatui avausottelussa",
+    "Kolmekymmentäkahdeksanvuotias vaihtomies",
+    "Vuosi, jolloin voitettiin kaikki",
+    "Viisitoista metriä seitsemän kertaa"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Yaoundé",
+  "maanAvain": "Kamerun",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

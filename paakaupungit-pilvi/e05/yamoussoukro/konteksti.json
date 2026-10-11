@@ -1,0 +1,66 @@
+{
+ "id": "yamoussoukro",
+ "era": "e05",
+ "nimi": "Yamoussoukro",
+ "nimiAlkukieli": "Yamoussoukro",
+ "maa": "CIV",
+ "maanNimi": "Norsunluurannikko",
+ "asema": "pääkaupunki",
+ "lat": 6.8161,
+ "lon": -5.2742,
+ "wikidata": "Q3768",
+ "kevytSisalto": {
+  "kuvaus": "Yamoussoukro on Norsunluurannikon virallinen pääkaupunki maan keskiosassa. Ensimmäinen presidentti Félix Houphouët-Boigny, joka oli kotoisin seudulta, nimesi sen pääkaupungiksi vuonna 1983 ja rakennutti sinne leveitä katuja ja suurkirkon. Hallinnon ja liike-elämän painopiste on kuitenkin edelleen Abidjanissa, ja Yamoussoukro on pikemminkin koulutus- ja kirkkokaupunki.",
+  "tunnusrakennukset": [
+   "Rauhan Neitsyt Marian basilika (Basilique Notre-Dame de la Paix)",
+   "Fondation Félix Houphouët-Boigny",
+   "Félix Houphouët-Boignyn kansallinen polyteknillinen instituutti (INP-HB)",
+   "Kaimaanijärvi (Lac aux Caïmans)"
+  ],
+  "asukkaat": {
+   "arvo": 340234,
+   "vuosi": 2021,
+   "lahde": "INS, RGPH 2021, Yamoussoukron kaupunki (chef-lieu); koko Yamoussoukron autonomisen piirin (district autonome) väkiluku on 422 072; luku Wikidatassa (preferred), viittaus RGPH2021-tulosten PDF-tiedostoon",
+   "linkki": "https://plan.gouv.ci/assets/fichier/RGPH2021-RESULTATS-GLOBAUX-VF.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Norsunluurannikko on Länsi-Afrikan Guineanlahden rannikkomaa, jonka talous on alueen suurimpia. Maa on maailman suurin kaakaon tuottaja ja viljelee myös kahvia, kumia ja kasvattaa öljypalmuja. Virallinen pääkaupunki on sisämaassa sijaitseva Yamoussoukro, mutta hallinnon ja talouden keskus on rannikon suurin kaupunki Abidjan. Maa on kielellisesti ja etnisesti monimuotoinen: ranska on virallinen kieli, ja arvioiden mukaan puhuttuja kieliä on lähes 80.",
+  "genetiivi": "Norsunluurannikon",
+  "kielet": [
+   {
+    "kieli": "ranska",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "baoulé",
+    "asema": "muu"
+   },
+   {
+    "kieli": "dioula (dyula)",
+    "asema": "muu"
+   },
+   {
+    "kieli": "bété",
+    "asema": "muu"
+   },
+   {
+    "kieli": "senufo",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Länsi-Afrikan CFA-frangi",
+   "koodi": "XOF"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Yamoussoukro",
+  "maanAvain": "Norsunluurannikko",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

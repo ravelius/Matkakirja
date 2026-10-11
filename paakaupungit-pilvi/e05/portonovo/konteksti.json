@@ -1,0 +1,111 @@
+{
+ "id": "portonovo",
+ "era": "e05",
+ "nimi": "Porto-Novo",
+ "nimiAlkukieli": "Porto-Novo",
+ "maa": "BEN",
+ "maanNimi": "Benin",
+ "asema": "pääkaupunki",
+ "lat": 6.4833,
+ "lon": 2.6167,
+ "wikidata": "Q3799",
+ "kevytSisalto": {
+  "kuvaus": "Porto-Novo on Beninin virallinen pääkaupunki, joka sijaitsee laguunin rannalla itäisessä osassa maata. Se on historiallinen kuningaskunnan keskus, jonka vanhassa osassa on säilynyt siirtomaa-ajan ja brasilialaistyylisiä rakennuksia. Parlamentti toimii Porto-Novossa, kun taas hallitus ja liike-elämä keskittyvät lähellä sijaitsevaan Cotonouun.",
+  "tunnusrakennukset": [
+   "Honmén palatsi ja museo (Musée Honmé)",
+   "Porto-Novon suurmoskeija (brasilialaistyylinen, 1912)",
+   "Place Jean Bayol -aukio",
+   "Kasvitieteellinen puutarha (Jardin des Plantes et de la Nature)"
+  ],
+  "asukkaat": {
+   "arvo": 264320,
+   "vuosi": 2013,
+   "lahde": "Beninin tilastolaitos INStaD (ent. INSAE), 4. väestö- ja asuntolaskenta RGPH4 (11.5.2013), lopulliset tulokset, Porto-Novon kunta (commune). RGPH5:n tuloksia ei ole julkaistu.",
+   "linkki": "https://www.instad.bj/images/docs/insae-statistiques/demographiques/population/Resultats%20definitifs%20RGPH4.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Benin on Guineanlahden rannikolla sijaitseva Länsi-Afrikan valtio, jonka pinta-ala on hieman yli 114 000 neliökilometriä. Maa itsenäistyi Ranskasta 1960, ja sen virallinen kieli on ranska; arjessa käytetään lisäksi muun muassa fonia ja jorubaa. Viralliseksi pääkaupungiksi on kirjattu Porto-Novo, mutta hallituksen toimipaikka ja suurin kaupunki on Cotonou. Taloutta kannattelevat maatalous, puuvilla sekä Cotonoun satama, jota käyttävät myös sisämaan naapurit.",
+  "genetiivi": "Beninin",
+  "kielet": [
+   {
+    "kieli": "ranska",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "fon",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "joruba",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "bariba",
+    "asema": "kansallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "CFA-frangi (Länsi-Afrikka)",
+   "koodi": "XOF"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [
+  {
+   "id": "lagos",
+   "nimi": "Lagos",
+   "km": 89,
+   "lehti": [
+    {
+     "id": "kaupunki",
+     "nimi": "Lagos",
+     "nostot": [
+      "Savilautanen, joka upposi laguuniin",
+      "Sotaleiri, jonka nimeksi jäi Eko",
+      "Vuosi 1873: siirtomaa, jota hallittiin muualta",
+      "Paluumuuttajat rakensivat kaupungin uudelleen",
+      "Agogoro Eyo, pitkä valkoinen hahmo"
+     ]
+    },
+    {
+     "id": "luonto",
+     "nimi": "Laguuni ja sillat",
+     "nostot": [
+      "Laguuni, joka on nimensä toisinto",
+      "Kuusi kylää paalujen päällä",
+      "Kolme siltaa ja yksi vuosi 1901",
+      "Kaupunki, joka tekee itse maansa",
+      "Latvuskävelysilta mangroven yllä"
+     ]
+    }
+   ],
+   "kohdekartta": [
+    "Lagosin keskusmoskeija",
+    "Tinubun aukio",
+    "Ajelen hautausmaa",
+    "Kristuksen katedraali",
+    "King's College",
+    "Vapauden puisto",
+    "Tafawa Balewan aukio",
+    "Nigerian kansallismuseo"
+   ]
+  }
+ ],
+ "lahiNostot": [
+  {
+   "id": "kohde:badagry",
+   "nimi": "Badagry",
+   "lahde": "fokuskohde",
+   "laji": "kaupunki",
+   "km": 30,
+   "teksti": "Badagry on rannikkokaupunki Lounais-Nigeriassa Porto Novon salmen pohjoisrannalla, noin 69 kilometriä Lagosista lounaaseen ja aivan Beninin rajan tuntumassa. Se nousi Länsi-Afrikan rannikon kauppakeskukseksi vuosina 1736–1851: purjehduskel…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Porto-Novo",
+  "maanAvain": "Benin",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

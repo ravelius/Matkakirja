@@ -1,0 +1,97 @@
+{
+ "id": "ndjamena",
+ "era": "e05",
+ "nimi": "N'Djamena",
+ "nimiAlkukieli": "N'Djaména (ransk.) / انجمينا (arab.)",
+ "maa": "TCD",
+ "maanNimi": "Tšad",
+ "asema": "pääkaupunki",
+ "lat": 12.11,
+ "lon": 15.05,
+ "wikidata": "Q3659",
+ "kevytSisalto": {
+  "kuvaus": "N'Djamena on Tšadin pääkaupunki ja maan suurin kaupunki. Se sijaitsee Chari- ja Logone-jokien yhtymäkohdassa lähellä Kamerunin rajaa, ja ranskalaiset perustivat sen Fort-Lamyksi vuonna 1900. Nykyisen nimensä kaupunki sai vuonna 1973, ja nykyään se on maan hallinnon, kaupan ja korkeakoulutuksen keskus.",
+  "tunnusrakennukset": [
+   "Notre-Dame-de-la-Paix-katedraali (vihitty 1965, uudelleen 2023)",
+   "Tšadin kansallismuseo",
+   "N'Djamenan suurmoskeija",
+   "Keskustori (Marché Central)"
+  ],
+  "asukkaat": {
+   "arvo": 951418,
+   "vuosi": 2009,
+   "lahde": "INSEED, 2. väestö- ja asuntolaskenta RGPH2 (2009), 'Résultats globaux définitifs' (maaliskuu 2012): N'Djaména 951 418 (miehet 506 218, naiset 445 200); sama luku INSEEDin julkaisuissa 'Etat et structure de la population RGPH2 2009' ja 'Indicateurs globaux issus du RGPH2'. Alwihda Infon raportoima 993 492 ei esiinny missään luetussa INSEEDin julkaisussa.",
+   "linkki": "https://web.archive.org/web/2024/https://inseed.td/index.php/component/jdownloads/send/7-documents-et-publications-demographique/63-rapport-resultats2"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Valtakunta, jonka pääkaupunkia ei ole löydetty",
+    "Ratsuväki, jota Keski-Afrikassa ei ollut nähty",
+    "Sulttaanit, jotka veivät pääkaupungin mennessään",
+    "Sulttaanikunta, joka perustettiin avioliitoilla"
+   ]
+  },
+  {
+   "id": "kuvataide",
+   "nimi": "Kuvataide",
+   "nostot": [
+    "Kalliot, joilla on enemmän nautoja kuin ihmisiä",
+    "Tyttöjen paikka",
+    "Savikylä, jossa asuivat jättiläiset",
+    "Maa, jossa on yksi elokuvateatteri"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Pallo, joka kastetaan kastikkeeseen",
+    "Kaksi tapaa säilöä kala",
+    "Levä, jota syötiin ennen kuin kukaan tiesi mitä se on",
+    "Punainen juoma ja punainen hirssi"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Neljä metriä metallia, jota soitetaan vain palatsissa",
+    "Soitin, joka puhuu miehen puolesta",
+    "Kinde, hu hu ja survimet",
+    "Yhtye, jonka presidentti lähetti kouluun Zaireen"
+   ]
+  },
+  {
+   "id": "kirjallisuus",
+   "nimi": "Kirjallisuus",
+   "nostot": [
+    "Kaksikymmentä kirjailijaa, kuusikymmentä kirjaa",
+    "Näytelmä, joka ilmestyi vasta tekijän kuoltua",
+    "Teatterintekijä, joka päätyi Anne Frankin asuntoon",
+    "Runoilija Koyomista Amiensin luentosaliin"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "kohde:chari",
+   "nimi": "Chari",
+   "lahde": "fokuskohde",
+   "laji": "joki",
+   "km": 0,
+   "teksti": "Tšad-järvi on käytännössä yhden joen varassa: Charista tulee yhdeksänkymmentä prosenttia sen vedestä. Joki virtaa 1 400 kilometriä Keski-Afrikan tasavallasta Tšadin halki, seuraa Kamerunin rajaa N'Djamenasta alkaen ja saa siellä pääsivujok…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "N'Djamena",
+  "maanAvain": "Tšad",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

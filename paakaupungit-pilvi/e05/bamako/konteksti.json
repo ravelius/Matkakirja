@@ -1,0 +1,97 @@
+{
+ "id": "bamako",
+ "era": "e05",
+ "nimi": "Bamako",
+ "nimiAlkukieli": "Bamako",
+ "maa": "MLI",
+ "maanNimi": "Mali",
+ "asema": "pääkaupunki",
+ "lat": 12.6458,
+ "lon": -7.9922,
+ "wikidata": "Q3703",
+ "kevytSisalto": {
+  "kuvaus": "Bamako on Malin pääkaupunki ja suurin kaupunki Nigerjoen varrella Lounais-Malissa. Se on yksi Afrikan nopeimmin kasvavista kaupungeista, ja sen vilkkaat torit, kalastus ja jokiliikenne ovat kaupungin arkea. Kaupunki on maan hallinnon, kaupan ja kulttuurin keskus, ja sen kautta kulkee rautatie Dakariin.",
+  "tunnusrakennukset": [
+   "Bamakon suurmoskeija",
+   "Malin kansallismuseo",
+   "Pont des Martyrs (Marttyyrien silta)",
+   "Grand Marché eli Marché Rose"
+  ],
+  "asukkaat": {
+   "arvo": 4227569,
+   "vuosi": 2022,
+   "lahde": "INSTAT Mali, RGPH5 (15.6.2022), Rapport d'analyse 'Etat et structure de la population' (joulukuu 2024), taulukko 2.3: Bamakon piiri (District de Bamako) 4 227 569 asukasta, 18,9 % koko väestöstä (mies 2 095 300, nainen 2 132 269); sama luku 'Résultats globaux' -raportissa.",
+   "linkki": "https://instat-mali.org/laravel-filemanager/files/shares/rgph/rapport-etat-structure-population-rgph5-rgph.pdf"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Poika, joka ei kävellyt, ja valtakunta",
+    "Perustuslaki, joka opeteltiin ulkoa",
+    "Pyhiinvaellus, joka painoi kullan hinnan alas",
+    "Kaksi tuntia, ja Songhai oli mennyttä"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Kylä, jonka talot muurattiin suolasta",
+    "Kansallisruoan nimi on koko resepti",
+    "Pienin jyvä kypsyy kuudessa viikossa",
+    "Puu, joka maustaa koko Sahelin"
+   ]
+  },
+  {
+   "id": "kuvataide",
+   "nimi": "Kuvataide",
+   "nostot": [
+    "Antilooppi, jota tanssitaan",
+    "Kangas, joka värjätään mudalla",
+    "Studioon tultiin parhaissa vaatteissa",
+    "Bamakon silmä"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Kaksikymmentäyksi kieltä, seitsemänkymmentä sukupolvea",
+    "Ääni, jota ei olisi saanut kuulua",
+    "Kitaristi, joka kielsi soittavansa bluesia",
+    "Viisivuotias stadionin lavalla"
+   ]
+  },
+  {
+   "id": "urheilu",
+   "nimi": "Urheilu",
+   "nostot": [
+    "Musta pantteri Saint-Étiennessä",
+    "Neljä maalia yhdessätoista minuutissa",
+    "Maailmanmestaruus oli lähempänä juniorina",
+    "Kultaa Dakarissa, matka Pekingiin"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "kohde:bamako",
+   "nimi": "Bamako",
+   "lahde": "fokuskohde",
+   "laji": "kaupunki",
+   "km": 1,
+   "teksti": "Bamako on Malin pääkaupunki ja suurin kaupunki: vuoden 2022 laskennassa 4 227 569 asukasta. Se sijaitsee Nigerin varrella niiden koskien tuntumassa, jotka erottavat joen ylä- ja keskijuoksun toisistaan. Kaupungin kafun perusti noin 1650 Ni…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Bamako",
+  "maanAvain": "Mali",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

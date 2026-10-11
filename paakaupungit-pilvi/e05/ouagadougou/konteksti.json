@@ -1,0 +1,62 @@
+{
+ "id": "ouagadougou",
+ "era": "e05",
+ "nimi": "Ouagadougou",
+ "nimiAlkukieli": "Ouagadougou",
+ "maa": "BFA",
+ "maanNimi": "Burkina Faso",
+ "asema": "pääkaupunki",
+ "lat": 12.3686,
+ "lon": -1.5275,
+ "wikidata": "Q3777",
+ "kevytSisalto": {
+  "kuvaus": "Ouagadougou on Burkina Fason pääkaupunki ja suurin kaupunki, joka sijaitsee maan keskiosassa. Se on perinteinen mossien kuninkaanhovin keskus ja nykyään hallinnon, kaupan ja kulttuurin keskus. Kaupunki tunnetaan elokuvafestivaalista FESPACOsta ja käsityömarkkinoistaan.",
+  "tunnusrakennukset": [
+   "Pyhän Neitsyt Marian Tahrattoman sikiämisen katedraali (Cathédrale de l'Immaculée-Conception, 1930-luku)",
+   "Mogho Naban palatsi (mossien kuninkaan hovi)",
+   "Burkina Fason kansallismuseo",
+   "Place de la Nation -aukio"
+  ],
+  "asukkaat": {
+   "arvo": 2415266,
+   "vuosi": 2019,
+   "lahde": "INSD (Burkina Fason tilastolaitos), 5. väestölaskenta RGPH 2019, lopulliset tulokset (julkaistu 2022): Ouagadougou 1 183 557 miestä + 1 231 709 naista = 2 415 266 (11,8 % maan väestöstä; 45,1 % kaupunkiväestöstä), INSD:n oma tulosjulkaisu",
+   "linkki": "https://www.insd.bf/en/file-download/download/public/2073"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Burkina Faso on Länsi-Afrikan sisämaavaltio Saharan eteläpuolisella Sahelin alueella. Se itsenäistyi Ranskasta 1960 nimellä Ylä-Volta, ja nykyinen nimi, joka tarkoittaa suunnilleen 'rehellisten ihmisten maata', otettiin käyttöön 1984. Väestö koostuu monista kieli- ja kansanryhmistä, joista suurin on mossi, ja ranska on virallinen kieli. Maa on tunnettu kullankaivuusta, puuvillasta, elokuva- ja kulttuuritapahtumista sekä turvallisuustilanteesta, jota ovat horjuttaneet aseellinen väkivalta ja vallanvaihdokset.",
+  "genetiivi": "Burkina Fason",
+  "kielet": [
+   {
+    "kieli": "ranska",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "mooré",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "dioula (jula)",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "fulfulde",
+    "asema": "kansallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "CFA-frangi (Länsi-Afrikka)",
+   "koodi": "XOF"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Ouagadougou",
+  "maanAvain": "Burkina Faso",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}
