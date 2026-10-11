@@ -1,0 +1,10 @@
+{
+ "lat": 39.02,
+ "lon": 125.75,
+ "keskilampo": [-5.4,-2,4,11.4,17.4,21.9,24.7,25,20.2,12.9,4.8,-2.9],
+ "ylin": [0,3,10,18,24,28,29,30,26,19,10,1],
+ "alin": [-10,-7,-1,6,12,17,21,22,16,8,1,-7],
+ "sade": [10,15,24,45,75,90,275,210,91,47,38,18],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Pyongyang","revisio":1378825104,"taulukko":"Climate data for Pyongyang (1991–2020 normals, extremes 1961–present)","lahteet":"Source 1: Korea Meteorological Administration | Source 2: Pogodaiklimat.ru (extremes), Deutscher Wetterdienst (sun, 1961–1990) and Weather Atlas","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":938,"luettu":"2026-10-11","huomiot":[]}
+}

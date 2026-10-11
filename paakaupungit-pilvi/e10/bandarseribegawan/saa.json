@@ -1,0 +1,10 @@
+{
+ "lat": 4.92,
+ "lon": 114.92,
+ "keskilampo": [27,27.2,27.6,28,28.1,27.9,27.7,27.8,27.6,27.2,27.2,27.2],
+ "ylin": [33,33,34,35,35,35,35,35,35,34,34,34],
+ "alin": [22,22,23,23,23,23,22,22,22,22,23,23],
+ "sade": [321,163,143,242,260,238,242,232,235,314,323,359],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Bandar Seri Begawan","revisio":1372862410,"taulukko":"Climate data for Bandar Seri Begawan (Brunei Airport) (1991–2020 normals, extremes 1972–2020)","lahteet":"Source 1: World Meteorological Organisation, | Source 2: Deutscher Wetterdienst (extremes, 1971–2012 and humidity, 1972–1990)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":3072,"luettu":"2026-10-11","huomiot":[]}
+}

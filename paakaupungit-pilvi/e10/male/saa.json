@@ -1,0 +1,10 @@
+{
+ "lat": 4.18,
+ "lon": 73.51,
+ "keskilampo": [28.2,28.6,29.2,29.6,29.3,29,28.7,28.6,28.4,28.3,28.1,28],
+ "ylin": [31,31,32,32,32,31,31,31,31,31,30,30],
+ "alin": [26,26,27,27,27,26,26,26,26,26,26,26],
+ "sade": [87,38,49,127,238,146,198,193,214,245,236,212],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Malé","revisio":1379765872,"taulukko":"Climate data for Malé (Velana International Airport) 1991–2020, extremes 1966–present","lahteet":"Source 1: World Meteorological Organization (humidity 1981-2010) | Source 2: Meteo Climat (record highs and lows)","keskilampo":"Daily mean °C (°F)","sade":"Average rainfall mm (inches)","vuosisade":1983,"luettu":"2026-10-11","huomiot":["sade = vain vesisade (Average rainfall)"]}
+}

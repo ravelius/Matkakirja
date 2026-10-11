@@ -3,42 +3,49 @@
   "id": "male",
   "lat": 4.18,
   "lon": 73.51,
-  "wikidata": "Q9347"
+  "wikidata": "Q9347",
+  "artikkeli": "Malé"
  },
  {
   "id": "vientiane",
   "lat": 17.98,
   "lon": 102.63,
-  "wikidata": "Q9326"
+  "wikidata": "Q9326",
+  "artikkeli": "Vientiane"
  },
  {
   "id": "phnompenh",
   "lat": 11.57,
   "lon": 104.92,
-  "wikidata": "Q1850"
+  "wikidata": "Q1850",
+  "artikkeli": "Phnom Penh"
  },
  {
   "id": "kualalumpur",
   "lat": 3.15,
   "lon": 101.7,
-  "wikidata": "Q1865"
+  "wikidata": "Q1865",
+  "artikkeli": "Kuala Lumpur"
  },
  {
   "id": "bandarseribegawan",
   "lat": 4.92,
   "lon": 114.92,
-  "wikidata": "Q9279"
+  "wikidata": "Q9279",
+  "artikkeli": "Bandar Seri Begawan"
  },
  {
   "id": "naypyidaw",
   "lat": 19.75,
   "lon": 96.12,
-  "wikidata": "Q37400"
+  "wikidata": "Q37400",
+  "artikkeli": "Naypyidaw"
  },
  {
   "id": "pjongjang",
   "lat": 39.02,
   "lon": 125.75,
-  "wikidata": "Q18808"
+  "wikidata": "Q18808",
+  "artikkeli": "Pyongyang"
  }
 ]
