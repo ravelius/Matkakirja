@@ -1,0 +1,10 @@
+{
+ "lat": 38.57,
+ "lon": 68.79,
+ "keskilampo": [3.1,5,10.5,15.8,20.1,25.1,27.4,26,21.2,14.7,9,4.6],
+ "ylin": [9,11,17,23,28,34,36,36,31,24,17,11],
+ "alin": [-1,1,6,10,13,17,19,17,13,8,4,0],
+ "sade": [61,94,103,114,77,17,3,1,4,29,55,60],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Dushanbe","revisio":1379323334,"taulukko":"Climate data for Dushanbe (1991–2020, extremes 1926–present)","lahteet":"Source 1: Pogoda.ru.net | Source 2: Deutscher Wetterdienst (humidity 1951–1993 and precipitation days 1961–1990) NOAA (sun, 1961–1990)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":618,"luettu":"2026-10-11","huomiot":[]}
+}

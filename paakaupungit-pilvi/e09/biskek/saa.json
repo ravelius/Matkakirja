@@ -1,0 +1,10 @@
+{
+ "lat": 42.87,
+ "lon": 74.57,
+ "keskilampo": [-2.7,-0.5,6.2,12.8,17.8,22.9,25.5,24.2,18.7,11.6,4.2,-1.1],
+ "ylin": [3,5,12,19,24,30,32,31,26,19,10,5],
+ "alin": [-7,-5,1,7,11,16,18,17,12,6,0,-5],
+ "sade": [28,36,48,71,59,34,19,15,18,37,45,37],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Bishkek","revisio":1379419742,"taulukko":"Climate data for Bishkek (1991–2020, extremes 1936–present)","lahteet":"Source 1: Pogoda.ru.net | Source 2: NOAA (sun, 1961–1990)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":447,"luettu":"2026-10-11","huomiot":[]}
+}

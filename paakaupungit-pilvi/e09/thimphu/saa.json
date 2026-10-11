@@ -1,0 +1,10 @@
+{
+ "lat": 27.47,
+ "lon": 89.63,
+ "keskilampo": [6.3,8.5,11.6,15.1,18.2,21,21.8,21.7,20.3,16.3,11.5,7.9],
+ "ylin": [15,17,19,22,25,27,27,27,26,24,20,17],
+ "alin": [-2,0,4,8,12,15,17,16,15,9,3,-1],
+ "sade": [6,9,20,30,50,98,153,121,74,43,1,4],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1996–2017"},
+ "tausta": {"artikkeli":"Thimphu","revisio":1377594384,"taulukko":"Climate data for Thimphu-Simtokha, elevation 2,310 m (7,580 ft), (1996–2017 normals)","lahteet":"Source 1: National Center for Hydrology and Meteorology | Source 2: World Meteorological Organization (rainy days 1996–2018)","keskilampo":"Daily mean °C (°F)","sade":"Average rainfall mm (inches)","vuosisade":609,"luettu":"2026-10-11","huomiot":["sade = vain vesisade (Average rainfall)"]}
+}

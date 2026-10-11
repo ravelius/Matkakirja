@@ -1,0 +1,10 @@
+{
+ "lat": 33.7,
+ "lon": 73.04,
+ "keskilampo": [10.7,13.4,18.1,23.6,28.7,31.4,30.1,29.1,27.6,23.3,17.3,12.5],
+ "ylin": [18,20,25,31,36,38,35,34,33,31,25,20],
+ "alin": [4,7,11,17,22,25,25,24,22,16,9,5],
+ "sade": [55,93,95,58,40,78,311,317,135,34,18,26],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Islamabad","revisio":1378012529,"taulukko":"Climate data for Islamabad (1991–2020 normals)","lahteet":"Source 1: NOAA (sun, 1961-1990), Deutscher Wetterdienst (humidity 1973-1990, daily sun 1961-1990) | Source 2: PMD (extremes)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":1260,"luettu":"2026-10-11","huomiot":[]}
+}

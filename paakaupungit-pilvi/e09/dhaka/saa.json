@@ -1,0 +1,10 @@
+{
+ "lat": 23.73,
+ "lon": 90.39,
+ "keskilampo": [18.4,22.1,26.4,28.6,28.9,29.1,28.9,29,28.7,27.5,24,19.9],
+ "ylin": [25,28,32,34,34,33,32,32,32,32,30,26],
+ "alin": [13,17,21,24,25,26,26,27,26,24,20,15],
+ "sade": [7,21,48,128,272,317,391,315,285,174,21,11],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Dhaka","revisio":1376004687,"taulukko":"Climate data for Dhaka (1991–2020 normals, extremes 1949–present)","lahteet":"Source 1: NOAA, Bangladesh Meteorological Department (humidity 1981–2010) hours | Source 2: Sistema de Clasificación Bioclimática Mundial (extremes 1934–1994)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":1990,"luettu":"2026-10-11","huomiot":[]}
+}
