@@ -71,8 +71,16 @@ namespace Matkakirja
             maailmaNakyma && !string.IsNullOrEmpty(pelaajanMaa) && !ErikoisnostoMitat.OmaMaa(pallonMaa, pelaajanMaa)
                 ? koko * MuuMaaOsuus : koko;
 
-        /// <summary>Saako pallo näkyä: kehittäjän maailmanäkymässä (huntu pois) aina, muuten vain pelaajan nykyisessä maassa.</summary>
-        public static bool Nakyy(string pallonMaa, string pelaajanMaa, bool maailmaNakyma) =>
-            maailmaNakyma || ErikoisnostoMitat.OmaMaa(pallonMaa, pelaajanMaa);
+        /// <summary>Saako pallo näkyä: valmis pallo (<paramref name="aina"/>, Kehityskaupunki) ja kehittäjän maailmanäkymässä (huntu
+        /// pois) aina, muuten vain pelaajan nykyisessä maassa.</summary>
+        public static bool Nakyy(string pallonMaa, string pelaajanMaa, bool maailmaNakyma, bool aina = false) =>
+            aina || maailmaNakyma || ErikoisnostoMitat.OmaMaa(pallonMaa, pelaajanMaa);
+
+        /// <summary>
+        /// PELAAJALLE VAIN VALMIIT PALLOT (omistaja 11.10.2026 klo 13.5x Päätoimittajan kautta, juna 182): pelaaja näkee vain
+        /// valmiiden kaupunkien (Kehityskaupungit: Pariisi, Tukholma) pallot, ja ne näkyvät aina kartalla (ei vain omassa maassa);
+        /// muut sallitut kaupungit (kipsipallot) vain kehittäjälle.
+        /// </summary>
+        public static bool Mukana(bool kehityskaupunki, bool kehittaja) => kehityskaupunki || kehittaja;
     }
 }
