@@ -19619,6 +19619,58 @@ export const KAUPUNKIKARTAT = {
     ],
   },
   // AFRIKAN PÄÄKAUPUNKIPISTEET LOPPU
+  // VATIKAANI (Karttaseppä 11.10.2026, PT, juna 183): kohteet Wikipediasta ja OSM:stä, tekstit myöhemmin.
+  vatikaanivaltio: {
+    polku: 'assets/kartat/vatikaanivaltio-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 41.9081,
+      etela: 41.8986,
+      lansi: 12.4467,
+      ita: 12.4605,
+    },
+    kohteet: [
+      {
+        nimi: 'Pietarinkirkko',
+        wiki: 'Pietarinkirkko',
+        lat: 41.90216,
+        lon: 12.45371,
+      },
+      {
+        nimi: 'Pietarinaukio',
+        tyyppi: 'aukio',
+        wiki: 'Pietarinaukio',
+        lat: 41.90225,
+        lon: 12.45722,
+      },
+      {
+        nimi: 'Sikstuksen kappeli',
+        wiki: 'Sikstuksen kappeli',
+        lat: 41.90298,
+        lon: 12.45448,
+      },
+      {
+        nimi: 'Apostolinen palatsi',
+        wiki: 'Apostolinen palatsi',
+        lat: 41.90361,
+        lon: 12.45639,
+      },
+      {
+        nimi: 'Vatikaanin museot',
+        wiki: 'Vatikaanin museot',
+        lat: 41.90627,
+        lon: 12.45274,
+      },
+      {
+        nimi: 'Vatikaanin puutarhat',
+        tyyppi: 'luonto',
+        wiki: 'Vatican Gardens',
+        lat: 41.90306,
+        lon: 12.45056,
+      },
+    ],
+  },
 };
 
 /*

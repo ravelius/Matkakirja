@@ -6300,6 +6300,10 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 3.8809, etela: 3.8329, lansi: 11.4801, ita: 11.5284 },
   },
   // AFRIKAN PÄÄKAUPUNKIPISTEET LOPPU
+  // VATIKAANI (PT 11.10.2026, juna 183): Euroopan viimeinen pääkaupunkipiste ilman karttaa.
+  vatikaanivaltio: {
+    rajat: { pohjoinen: 41.9081, etela: 41.8986, lansi: 12.4467, ita: 12.4605 },
+  },
 };
 
 /*
