@@ -1,0 +1,58 @@
+{
+ "id": "roseau",
+ "era": "e12",
+ "nimi": "Roseau",
+ "nimiAlkukieli": "Roseau",
+ "maa": "DMA",
+ "maanNimi": "Dominica",
+ "asema": "pääkaupunki",
+ "lat": 15.3,
+ "lon": -61.3833,
+ "wikidata": "Q36281",
+ "kevytSisalto": {
+  "kuvaus": "Roseau on Dominican länsirannikolla Roseau-joen suulla sijaitseva pääkaupunki ja saaren vanhin ja tärkein asutuskeskus. Kaupunki on saaren tärkein ulkomaankaupan satama, ja sen rakennuksissa näkyvät sekä ranskalainen että englantilainen siirtomaa-aika. Kaupungin yläpuolella kohoaa Morne Bruce -kukkula, jolta on näkymä yli kaupungin ja meren.",
+  "tunnusrakennukset": [
+   "Our Lady of Fair Haven -katedraali (roomalaiskatolinen)",
+   "Dominican kasvitieteellinen puutarha",
+   "Fort Young",
+   "Dominican museo ja Old Market Square"
+  ],
+  "asukkaat": {
+   "arvo": 14725,
+   "vuosi": 2011,
+   "lahde": "Dominican hallitus, Central Statistical Office, 2011 Population and Housing Census, Preliminary Results (syyskuu 2011), Roseaun kaupunki; luku vahvistettu citypopulation.de:n ja Wikipedian lainaamana. Vuoden 2022 väestölaskennan (enumerointi 21.5.–24.6.2022) tuloksia ei löytynyt.",
+   "linkki": "https://www.citypopulation.de/en/dominica/cities/"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Dominica on vuoristoinen ja sademetsäinen saarivaltio Pienten Antillien keskiosassa Guadeloupen ja Martiniquen välissä. Saarta kutsutaan Karibian luontosaareksi, ja siellä on kuumia lähteitä, vesiputouksia ja Morne Trois Pitonsin kansallispuisto, joka kuuluu Unescon maailmanperintöön. Saarella asuu Karibian ainoa kalinago-alkuperäiskansan hallinnoima alue, ja ranskalaisvaikutteinen kreolikieli elää englannin rinnalla. Hurrikaani Maria aiheutti saarella syyskuussa 2017 laajaa tuhoa, ja sen jäljet ovat vaikuttaneet saaren kehitykseen sen jälkeen.",
+  "genetiivi": "Dominican",
+  "kielet": [
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "dominicanranskalainen kreoli (kwéyòl)",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "kokoy (englantipohjainen kreoli)",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Itä-Karibian dollari",
+   "koodi": "XCD"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Roseau",
+  "maanAvain": "Dominica",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

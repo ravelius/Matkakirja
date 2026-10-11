@@ -1,0 +1,54 @@
+{
+ "id": "basseterre",
+ "era": "e12",
+ "nimi": "Basseterre",
+ "nimiAlkukieli": "Basseterre",
+ "maa": "KNA",
+ "maanNimi": "Saint Kitts ja Nevis",
+ "asema": "pääkaupunki",
+ "lat": 17.2983,
+ "lon": -62.7342,
+ "wikidata": "Q41295",
+ "kevytSisalto": {
+  "kuvaus": "Basseterre on Saint Kittsin ja Nevisin pääkaupunki ja satamakaupunki Saint Kittsin saaren etelärannikolla. Kaupungin keskusta rakentui ranskalaisen ja brittiläisen siirtomaa-ajan ruutukaavan ympärille, ja sen sydämenä ovat Itsenäisyydenaukio ja kellotornin kaunistama Circus-aukio. Satama toimii risteilyalusten pysähdyspaikkana, ja matkailu on kaupungin tärkeimpiä elinkeinoja.",
+  "tunnusrakennukset": [
+   "Berkeley Memorial -kellotorni (The Circus, 1883)",
+   "Neitsyt Marian vapahtajan tahrattoman sikiämisen konkatedraali (Immaculate Conception Co-Cathedral)",
+   "Itsenäisyydenaukio (Independence Square) vanhoine rakennuksineen",
+   "Pyhän Yrjön anglikaaninen kirkko (St George's)"
+  ],
+  "asukkaat": {
+   "arvo": 13652,
+   "vuosi": 2022,
+   "lahde": "Saint Kitts ja Nevisin tilastoyksikkö (Department of Statistics), 2022 Population and Housing Census Summary Report, taulukko väestöstä seurakunnittain: Saint George Basseterre 13 652 (2011: 12 635); koko maa 51 320. Luettu suoraan raportin PDF:stä.",
+   "linkki": "https://statistics.caricom.org/wp-content/uploads/2025/11/SKN-Census-Report-2021-2022.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Saint Kitts ja Nevis on kahdesta saaresta koostuva pieni valtio Karibianmeren Pienillä Antilleilla, ja se on läntisen pallonpuoliskon pinta-alaltaan ja väkiluvultaan pienin itsenäinen maa. Britannian siirtomaana ollut saarivaltio itsenäistyi vuonna 1983, ja se on edelleen Kansainyhteisön valtakunta, jonka valtionpäänä on Britannian kuningas. Maa on liittovaltio, jossa pienemmällä Nevisin saarella on oma saarihallintonsa ja perustuslaillinen oikeus erota liitosta kansanäänestyksellä. Talous nojaa matkailuun, palveluihin ja sijoittajille tarjottuun kansalaisuusohjelmaan, ja sokeriruo'on viljely lopetettiin vuonna 2005.",
+  "genetiivi": "Saint Kittsin ja Nevisin",
+  "kielet": [
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "Saint Kittsin ja Nevisin englantiin pohjautuva kreoli",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Itä-Karibian dollari",
+   "koodi": "XCD"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Basseterre",
+  "maanAvain": "Saint Kitts ja Nevis",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

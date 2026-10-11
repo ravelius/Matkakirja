@@ -1,0 +1,56 @@
+[
+ {
+  "id": "nassau",
+  "lat": 25.08,
+  "lon": -77.34,
+  "wikidata": "Q2467"
+ },
+ {
+  "id": "saintjohns",
+  "lat": 17.12,
+  "lon": -61.84,
+  "wikidata": "Q36262"
+ },
+ {
+  "id": "basseterre",
+  "lat": 17.3,
+  "lon": -62.73,
+  "wikidata": "Q41295"
+ },
+ {
+  "id": "roseau",
+  "lat": 15.3,
+  "lon": -61.38,
+  "wikidata": "Q36281"
+ },
+ {
+  "id": "castries",
+  "lat": 14.01,
+  "lon": -60.99,
+  "wikidata": "Q41699"
+ },
+ {
+  "id": "kingstown",
+  "lat": 13.16,
+  "lon": -61.23,
+  "wikidata": "Q41474"
+ },
+ {
+  "id": "bridgetown",
+  "lat": 13.1,
+  "lon": -59.62,
+  "wikidata": "Q36168"
+ },
+ {
+  "id": "stgeorges",
+  "lat": 12.05,
+  "lon": -61.75,
+  "wikidata": "Q41547"
+ },
+ {
+  "id": "portofspain",
+  "lat": 10.67,
+  "lon": -61.52,
+  "wikidata": "Q39178"
+ }
+]

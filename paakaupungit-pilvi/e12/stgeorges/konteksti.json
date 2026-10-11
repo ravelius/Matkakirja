@@ -1,0 +1,58 @@
+{
+ "id": "stgeorges",
+ "era": "e12",
+ "nimi": "St. George's",
+ "nimiAlkukieli": "St. George's",
+ "maa": "GRD",
+ "maanNimi": "Grenada",
+ "asema": "pääkaupunki",
+ "lat": 12.0525,
+ "lon": -61.7531,
+ "wikidata": "Q41547",
+ "kevytSisalto": {
+  "kuvaus": "St. George's on Grenadan pääkaupunki, joka sijaitsee saaren lounaisrannikolla kukkuloiden ympäröimän hevosenkengän muotoisen sataman rannalla. Sen pastellinsävyiset talot ja punakattoiset varastorakennukset nousevat jyrkille rinteille, ja kaupunkia pidetään yhtenä Karibian kauneimmista. Satama on ollut sen elämän keskus siirtomaa-ajoista asti.",
+  "tunnusrakennukset": [
+   "Carenage-satama (hevosenkenkäsatama)",
+   "Fort George",
+   "St. George's Anglican Church",
+   "Grenadan kansallismuseo"
+  ],
+  "asukkaat": {
+   "arvo": 2681,
+   "vuosi": 2022,
+   "lahde": "Grenadan Central Statistical Office (CSO), väestölaskenta 2022, St. Georgen kaupunki (Town of St George; miehiä 1 325, naisia 1 356); CSO:n tiedote elokuussa 2024 ja citypopulation.de. Luku koskee kaupunkia, ei St. George -seurakuntaa (44 777). Kaupungin väkiluku on laskenut: 3 133 (2011), 3 908 (2001).",
+   "linkki": "https://nowgrenada.com/2024/08/central-statistical-office-publishes-latest-population-count-by-parish/"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Grenada on Karibianmeren Windward-saarten eteläosassa sijaitseva pieni saarivaltio, johon kuuluvat pääsaari Grenada sekä pienemmät Carriacou ja Petite Martinique. Maa itsenäistyi Britanniasta 1974, ja virallinen kieli on englanti. Sitä kutsutaan mausteiden saareksi, sillä muskottipähkinä ja muut mausteet ovat tärkeä vientituote. Vehreä, tulivuoriperäinen saari houkuttelee matkailijoita rannoilla ja sademetsillä.",
+  "genetiivi": "Grenadan",
+  "kielet": [
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "grenadan kreolienglanti",
+    "asema": "muu"
+   },
+   {
+    "kieli": "grenadan ranskalaisperäinen patois",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Itä-Karibian dollari",
+   "koodi": "XCD"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "St. George's",
+  "maanAvain": "Grenada",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

@@ -1,0 +1,58 @@
+{
+ "id": "nassau",
+ "era": "e12",
+ "nimi": "Nassau",
+ "nimiAlkukieli": "Nassau",
+ "maa": "BHS",
+ "maanNimi": "Bahama",
+ "asema": "pääkaupunki",
+ "lat": 25.078,
+ "lon": -77.339,
+ "wikidata": "Q2467",
+ "kevytSisalto": {
+  "kuvaus": "Nassau on New Providencen saaren pohjoisrannalla sijaitseva Bahaman pääkaupunki, jossa asuu noin kolme neljäsosaa maan väestöstä. Siirtomaa-ajan linnoitukset, pastellinväriset talot ja Bay Street -rantakatu antavat kaupungille leimansa. Satama toimii sekä risteilylaivojen että tavarakuljetusten solmukohtana.",
+  "tunnusrakennukset": [
+   "Fort Charlotte",
+   "Queen's Staircase (66 askelman kalkkikiviportaat)",
+   "Government House",
+   "Christ Church Cathedral"
+  ],
+  "asukkaat": {
+   "arvo": 296732,
+   "vuosi": 2022,
+   "lahde": "BNSI väestölaskenta 4.4.2022: New Providencen saari, jolla kaupunki sijaitsee (saaren asutus on käytännössä Nassaun kaupunkialue)",
+   "linkki": "https://cdn.bahamas.gov.bs/tenant/tenantbnsi/documents/2022censusofpopulationandhousingpresentation15november2024-20250526040724.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Bahama on Atlantin valtamerellä Floridan itäpuolella sijaitseva saarivaltio, jossa on noin 700 saarta ja yli 2 000 luotoa. Vain noin 30 saarta on asuttuja, ja suurin osa asukkaista elää New Providencen saarella, jolla pääkaupunki Nassau sijaitsee. Maa itsenäistyi Britanniasta 1973, ja sen talous nojaa vahvasti matkailuun ja rahoituspalveluihin. Kirkkaat matalat vedet ja koralliriutat tekevät saaristosta yhden Karibian tunnetuimmista lomakohteista.",
+  "genetiivi": "Bahaman",
+  "kielet": [
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "bahamalainen kreoli",
+    "asema": "muu"
+   },
+   {
+    "kieli": "haitinkreoli",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Bahaman dollari",
+   "koodi": "BSD"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Nassau",
+  "maanAvain": "Bahama",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

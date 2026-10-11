@@ -1,0 +1,54 @@
+{
+ "id": "castries",
+ "era": "e12",
+ "nimi": "Castries",
+ "nimiAlkukieli": "Castries",
+ "maa": "LCA",
+ "maanNimi": "Saint Lucia",
+ "asema": "pääkaupunki",
+ "lat": 14.0108,
+ "lon": -60.9894,
+ "wikidata": "Q41699",
+ "kevytSisalto": {
+  "kuvaus": "Castries on Saint Lucian pääkaupunki ja pääsatama saaren luoteisrannikolla luonnonsataman äärellä. Kaupunki on tuhoutunut tulipaloissa useita kertoja, ja nykyinen kaupunkikuva on pääosin 1900-luvulta. Keskustan aukiot, tori ja satamatoiminta tekevät siitä saaren talouden ja hallinnon keskuksen.",
+  "tunnusrakennukset": [
+   "Neitsyt Marian tahrattoman sikiämisen katedraali (Cathedral Basilica of the Immaculate Conception)",
+   "Derek Walcott -aukio (Derek Walcott Square) suurine saman-puineen",
+   "Fort Charlotte Morne Fortunella",
+   "Castriesin keskustori (Castries Central Market)"
+  ],
+  "asukkaat": {
+   "arvo": 36431,
+   "vuosi": 2022,
+   "lahde": "Saint Lucian Central Statistics Office, 2022 Population and Housing Census, Provisional Report Release 1, taulukko A.9 (kotitalousväestö): Castries City 12 818 + Castries Suburban 23 613 = 36 431 (yhteenlasku tässä); koko Castriesin piiri 60 614. Luettu suoraan PDF:stä; raportti on CSO:n mukaan alustava.",
+   "linkki": "https://stats.gov.lc/wp-content/uploads/2024/08/StLucia-Provisional-Census-Report-2022-Release-1Rev1.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Saint Lucia on vuoristoinen ja vehreä saarivaltio Karibianmeren Pienillä Antilleilla, Martiniquen ja Saint Vincentin välissä. Maa kuului vuorotellen ranskalaisille ja briteille ennen itsenäistymistään vuonna 1979, minkä jälkeen se on jäänyt Kansainyhteisön valtakunnaksi. Saaren tunnetuin maamerkki ovat merestä jyrkästi kohoavat Pitonit, jotka ovat Unescon maailmanperintökohde. Matkailu on tärkein elinkeino, ja virallisen englannin rinnalla arjessa käytetään yleisesti ranskaan pohjautuvaa kreolikieltä.",
+  "genetiivi": "Saint Lucian",
+  "kielet": [
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "Saint Lucian ranskaan pohjautuva kreoli (kwéyòl)",
+    "asema": "kansallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Itä-Karibian dollari",
+   "koodi": "XCD"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Castries",
+  "maanAvain": "Saint Lucia",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

@@ -1,0 +1,66 @@
+{
+ "id": "portofspain",
+ "era": "e12",
+ "nimi": "Port of Spain",
+ "nimiAlkukieli": "Port of Spain",
+ "maa": "TTO",
+ "maanNimi": "Trinidad ja Tobago",
+ "asema": "pääkaupunki",
+ "lat": 10.6667,
+ "lon": -61.5167,
+ "wikidata": "Q39178",
+ "kevytSisalto": {
+  "kuvaus": "Port of Spain on Trinidadin ja Tobagon pääkaupunki ja pääsatama Trinidadin saaren luoteisrannikolla Paria-lahden rannalla. Kaupungin keskeinen vihreä alue on Queen's Park Savannah, jonka laidalla seisoo 1900-luvun alun suurhuviloita, nk. Magnificent Seven. Kaupunki on myös vuotuisen karnevaalin pääpaikka ja maan öljyyn nojaavan talouden hallinnollinen keskus.",
+  "tunnusrakennukset": [
+   "Queen's Park Savannah ja Magnificent Seven -huvilat (mm. Stollmeyer's Castle)",
+   "Neitsyt Marian tahrattoman sikiämisen katedraali (Cathedral of the Immaculate Conception, 1832)",
+   "Pyhän Kolminaisuuden katedraali (Holy Trinity Cathedral, 1818)",
+   "Red House (parlamenttitalo, 1906)"
+  ],
+  "asukkaat": {
+   "arvo": 37074,
+   "vuosi": 2011,
+   "lahde": "Trinidad ja Tobago, Central Statistical Office, väestölaskenta 9.1.2011, Port of Spainin kaupunki (City; 49 031 vuonna 2000); luku citypopulation.de:n kautta. Uudempaa laskentaa tai kaupunkikohtaista arviota ei löytynyt (CSO:n keskivuoden arviot ovat vain sukupuoli- ja ikäryhmittäin, 2005–2022).",
+   "linkki": "https://citypopulation.de/en/trinidad/cities/"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Trinidad ja Tobago on kahden suuren saaren muodostama valtio aivan Etelä-Amerikan rannikon lähellä, Venezuelan edustalla Karibianmeren eteläreunalla. Maa itsenäistyi Britannian siirtomaa-ajan jälkeen vuonna 1962 ja muuttui tasavallaksi 1976. Trinidadilla asuu valtaosa väestöstä, ja maan talous perustuu poikkeuksellisesti öljyyn ja maakaasuun, kun taas Tobago elää enemmän matkailusta. Väestö on monikulttuurista, ja karnevaali, kalypso, teräsrumpu eli steelpan ja trinidadilainen ruoka ovat osa maan kulttuuria.",
+  "genetiivi": "Trinidadin ja Tobagon",
+  "kielet": [
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "Trinidadin englantiin pohjautuva kreoli",
+    "asema": "muu"
+   },
+   {
+    "kieli": "Tobagon englantiin pohjautuva kreoli",
+    "asema": "muu"
+   },
+   {
+    "kieli": "Trinidadin hindustani",
+    "asema": "muu"
+   },
+   {
+    "kieli": "espanja",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Trinidadin ja Tobagon dollari",
+   "koodi": "TTD"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Port of Spain",
+  "maanAvain": "Trinidad ja Tobago",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

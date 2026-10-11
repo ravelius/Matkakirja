@@ -1,0 +1,54 @@
+{
+ "id": "kingstown",
+ "era": "e12",
+ "nimi": "Kingstown",
+ "nimiAlkukieli": "Kingstown",
+ "maa": "VCT",
+ "maanNimi": "Saint Vincent ja Grenadiinit",
+ "asema": "pääkaupunki",
+ "lat": 13.1553,
+ "lon": -61.2274,
+ "wikidata": "Q41474",
+ "kevytSisalto": {
+  "kuvaus": "Kingstown on Saint Vincentin ja Grenadiinien pääkaupunki, pääsatama ja talouden keskus Saint Vincentin saaren etelärannikolla. Kaupungin kapeilla kaduilla on 1800-luvun siirtomaa-ajan kivirakennuksia ja kirkkoja, ja sen yläpuolella on Fort Charlotte -linnoitus. Edempänä sisämaassa on Karibian vanhimpiin kuuluva kasvitieteellinen puutarha.",
+  "tunnusrakennukset": [
+   "Fort Charlotte (1800-luvun alun linnoitus)",
+   "Pyhän Yrjön katedraali (St George's Cathedral, anglikaaninen, 1820-luku)",
+   "Pyhän Marian katedraali (St Mary's Cathedral, katolinen)",
+   "Kingstownin kasvitieteellinen puutarha (perustettu 1765)"
+  ],
+  "asukkaat": {
+   "arvo": 10690,
+   "vuosi": 2023,
+   "lahde": "Saint Vincent ja Grenadiinit, Statistical Office, väestönlaskenta 15.6.2023, Kingstownin piiri (district, 490 ha, kotitalousväestö); luku citypopulation.de:n kautta. Kingstownin taajama 26 395.",
+   "linkki": "https://www.citypopulation.de/en/stvincent/cities/"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Saint Vincent ja Grenadiinit on Karibianmeren Tuulen puoleisilla Antilleilla sijaitseva saarivaltio, johon kuuluvat pääsaari Saint Vincent ja Grenadiinien ketjun noin 32 pienempää saarta ja luotoa. Maa itsenäistyi Britannian siirtomaa-ajan jälkeen vuonna 1979 ja on säilynyt Kansainyhteisön valtakuntana. Pohjoisessa kohoaa aktiivinen La Soufrière -tulivuori, joka purkautui voimakkaasti huhtikuussa 2021. Talous perustuu matkailuun ja maatalouteen, erityisesti banaaneihin, sekä purjehdus- ja huvivenematkailuun Grenadiineilla.",
+  "genetiivi": "Saint Vincentin ja Grenadiinien",
+  "kielet": [
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "Saint Vincentin englantiin pohjautuva kreoli",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Itä-Karibian dollari",
+   "koodi": "XCD"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Kingstown",
+  "maanAvain": "Saint Vincent ja Grenadiinit",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

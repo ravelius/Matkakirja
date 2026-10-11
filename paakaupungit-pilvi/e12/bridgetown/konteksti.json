@@ -1,0 +1,54 @@
+{
+ "id": "bridgetown",
+ "era": "e12",
+ "nimi": "Bridgetown",
+ "nimiAlkukieli": "Bridgetown",
+ "maa": "BRB",
+ "maanNimi": "Barbados",
+ "asema": "pääkaupunki",
+ "lat": 13.0975,
+ "lon": -59.6167,
+ "wikidata": "Q36168",
+ "kevytSisalto": {
+  "kuvaus": "Bridgetown on Barbadosin lounaisrannikolla Carlisle Bayn äärellä sijaitseva pääkaupunki ja saaren vilkkain kauppakeskus. Kaupungin sydämessä kulkee Careenage-vesiväylä, jonka rannoilla on parlamenttirakennukset. Vuonna 2011 Unesco merkitsi Bridgetownin historiallisen keskustan ja Garrisonin maailmanperintökohteeksi.",
+  "tunnusrakennukset": [
+   "Parlamenttirakennukset (Parliament Buildings)",
+   "Saint Michaelin katedraali",
+   "Garrison ja Main Guard -kellotorni",
+   "Nidhe Israel -synagoga"
+  ],
+  "asukkaat": {
+   "arvo": 77394,
+   "vuosi": 2021,
+   "lahde": "Barbadosin tilastopalvelu, väestölaskenta 2021 (arvioitu vakinainen väestö): St. Michaelin seurakunta, jonka keskus Bridgetown on",
+   "linkki": "https://www.barbadosparliament.com/uploads/sittings/attachments/b4801e175204f8dcf0345a9ca1e361a3.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Barbados on itäisin Pienten Antillien saarista, matala koralliperäinen saari Atlantin ja Karibianmeren rajalla. Maa itsenäistyi Britanniasta 1966 ja muuttui tasavallaksi marraskuussa 2021, mutta pysyi Kansainyhteisön jäsenenä. Talous perustuu matkailuun, rahoituspalveluihin ja aiemmin sokeriruokoon, ja saaren rommiperinne ulottuu satojen vuosien taakse. Bridgetownin historiallinen keskusta ja Garrison kuuluvat Unescon maailmanperintöön.",
+  "genetiivi": "Barbadosin",
+  "kielet": [
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "bajan-kreoli",
+    "asema": "kansallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Barbadosin dollari",
+   "koodi": "BBD"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Bridgetown",
+  "maanAvain": "Barbados",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

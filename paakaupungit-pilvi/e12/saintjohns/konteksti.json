@@ -1,0 +1,58 @@
+{
+ "id": "saintjohns",
+ "era": "e12",
+ "nimi": "Saint John's",
+ "nimiAlkukieli": "St. John's",
+ "maa": "ATG",
+ "maanNimi": "Antigua ja Barbuda",
+ "asema": "pääkaupunki",
+ "lat": 17.121,
+ "lon": -61.845,
+ "wikidata": "Q36262",
+ "kevytSisalto": {
+  "kuvaus": "Saint John's on Antiguan luoteisosassa sijaitseva maan pääkaupunki ja suurin kaupunki, joka kiertää luonnonsatamaa. Satama on kaupungin sydän: risteilyalukset laskevat siellä Heritage Quayn ja Redcliffe Quayn kauppa-alueille. Kaupungin siluettia hallitsevat valkoiset barokkimaiset katedraalin tornit.",
+  "tunnusrakennukset": [
+   "Saint John's Cathedral (anglikaaninen katedraali)",
+   "Fort James (satamansuun linnake)",
+   "Antiguan ja Barbudan museo",
+   "Redcliffe Quay (historiallinen satamakorttelialue)"
+  ],
+  "asukkaat": {
+   "arvo": 22219,
+   "vuosi": 2011,
+   "lahde": "Antigua ja Barbudan tilastoyksikkö (Statistics Division), 2011 Population and Housing Census – A Demographic Profile, taulukko 1.4 (St. John City; laitosväestö mukana). Taulukon mukaan kaupungin väkiluku oli 24 451 vuonna 2001 ja laski 9,1 % vuoteen 2011. Uudempaa väestölaskentaa ei löytynyt.",
+   "linkki": "https://statistics.gov.ag/wp-content/uploads/2017/11/2011-Antigua-and-Barbuda-Population-and-Housing-Census-A-Demographic-Profile.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Antigua ja Barbuda on kaksi pääsaarta käsittävä Karibian saarivaltio Pienten Antillien Tuulen puoleisten saarten ryhmässä. Antigua on asutuksen ja talouden keskus, kun taas matalampi Barbuda on harvaan asuttu ja tunnettu pitkistä rannoistaan. Maa itsenäistyi Britanniasta vuonna 1981, ja matkailu on sen tärkein elinkeino. Historiallinen Nelson's Dockyard Antiguan eteläosassa kuuluu Unescon maailmanperintökohteisiin.",
+  "genetiivi": "Antigua ja Barbudan",
+  "kielet": [
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "antiguan ja barbudan kreoli",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "espanja",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Itä-Karibian dollari",
+   "koodi": "XCD"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Saint John's",
+  "maanAvain": "Antigua ja Barbuda",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}
