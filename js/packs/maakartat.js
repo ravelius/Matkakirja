@@ -4838,7 +4838,11 @@ export const KAUPUNKIKARTAT = {
   ateena: {
     polku: 'assets/kartat/ateena-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
+    // Värikartta ja 1,6-kertainen reunus kuten Pariisissa ja Tukholmassa
+    // (Karttaseppä 11.10.2026: aloituskaupungit samaan tyyliin).
+    varikartta: 'assets/kartat/ateena-varikartta.png',
     rajat: { pohjoinen: 37.9855, etela: 37.9625, lansi: 23.707, ita: 23.758 },
+    piirtoRajat: { pohjoinen: 37.9924, etela: 37.9556, lansi: 23.6917, ita: 23.7733 },
     /*
      * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi

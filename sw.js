@@ -1785,6 +1785,7 @@ const SHELL = [
   './assets/kartat/lontoo-varikartta.png',
   './assets/kartat/madrid-keskusta.png',
   './assets/kartat/pariisi-varikartta.png',
+  './assets/kartat/ateena-varikartta.png',
   './assets/kartat/tukholma-varikartta.png',
   './assets/kartat/rooma-varikartta.png',
   './assets/kartat/wien-varikartta.png',
