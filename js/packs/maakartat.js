@@ -4363,6 +4363,7 @@ export const KAUPUNKIKARTAT = {
   },
   lissabon: {
     polku: 'assets/kartat/lissabon-keskusta.png',
+    varikartta: 'assets/kartat/lissabon-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 38.7265, etela: 38.7035, lansi: -9.1505, ita: -9.118 },
     /*
@@ -5085,6 +5086,7 @@ export const KAUPUNKIKARTAT = {
   },
   dublin: {
     polku: 'assets/kartat/dublin-keskusta.png',
+    varikartta: 'assets/kartat/dublin-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 53.355, etela: 53.335, lansi: -6.294, ita: -6.244 },
     /*
@@ -5416,6 +5418,7 @@ export const KAUPUNKIKARTAT = {
   },
   budapest: {
     polku: 'assets/kartat/budapest-keskusta.png',
+    varikartta: 'assets/kartat/budapest-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 47.5125, etela: 47.4825, lansi: 19.019, ita: 19.079 },
     /*
@@ -6220,6 +6223,7 @@ export const KAUPUNKIKARTAT = {
      * puutarhat lännessä ja niiden välissä Prado-akseli.
      */
     polku: 'assets/kartat/madrid-keskusta.png',
+    varikartta: 'assets/kartat/madrid-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 40.43, etela: 40.406, lansi: -3.72, ita: -3.675 },
     /*
@@ -6716,6 +6720,7 @@ export const KAUPUNKIKARTAT = {
   },
   varsova: {
     polku: 'assets/kartat/varsova-keskusta.png',
+    varikartta: 'assets/kartat/varsova-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 52.2535, etela: 52.2265, lansi: 20.9995, ita: 21.043 },
     // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Amsterdamissa:
@@ -6860,6 +6865,7 @@ export const KAUPUNKIKARTAT = {
   },
   sofia: {
     polku: 'assets/kartat/sofia-keskusta.png',
+    varikartta: 'assets/kartat/sofia-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 42.705, etela: 42.681, lansi: 23.312, ita: 23.345 },
     /*
@@ -6993,6 +6999,7 @@ export const KAUPUNKIKARTAT = {
   },
   bukarest: {
     polku: 'assets/kartat/bukarest-keskusta.png',
+    varikartta: 'assets/kartat/bukarest-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 44.4445, etela: 44.4235, lansi: 26.08, ita: 26.109 },
     kainalot: [
@@ -7192,6 +7199,7 @@ export const KAUPUNKIKARTAT = {
   },
   kiova: {
     polku: 'assets/kartat/kiova-keskusta.png',
+    varikartta: 'assets/kartat/kiova-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 50.47, etela: 50.44, lansi: 30.499, ita: 30.539 },
     /*
@@ -7359,6 +7367,7 @@ export const KAUPUNKIKARTAT = {
   },
   moskova: {
     polku: 'assets/kartat/moskova-keskusta.png',
+    varikartta: 'assets/kartat/moskova-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 55.7655, etela: 55.7345, lansi: 37.5915, ita: 37.6435 },
     /*
@@ -7522,6 +7531,7 @@ export const KAUPUNKIKARTAT = {
   },
   oslo: {
     polku: 'assets/kartat/oslo-keskusta.png',
+    varikartta: 'assets/kartat/oslo-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 59.918, etela: 59.901, lansi: 10.7135, ita: 10.761 },
     /*
