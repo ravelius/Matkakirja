@@ -53,7 +53,9 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void EsilataaEsitysMusiikki(string kaupunki)
         {
-            if (aanisoitin == null || string.IsNullOrEmpty(kaupunki) || SaapumisluentoPois?.Invoke(kaupunki) != true) return;
+            if (aanisoitin == null || string.IsNullOrEmpty(kaupunki)) return;
+            // Aloitusintron kaupungin nopea myös (juna 182: Ateena ja Tukholma joka saapumisella, Pariisi alkulennolla).
+            if (SaapumisluentoPois?.Invoke(kaupunki) != true && !AloitusintroTulossa(kaupunki, AloituslentoKaynnissa)) return;
             try { aanisoitin.EsilataaEsitysNopea(kaupunki); } catch (Exception e) { Debug.LogException(e); }
         }
 
@@ -69,6 +71,7 @@ namespace Matkakirja.Natiivi
             if (!luennatLuettu) { puheetOdottaa.Add((kaupunki, taso)); return; }
             puhe.Esilataa(luennat.Saapumispuhe(kaupunki)?.Url, taso);
             puhe.Esilataa(luennat.Luento(kaupunki)?.Url, taso);
+            EsilataaAloitusintro(kaupunki, taso); // Williamin repliikki (juna 182)
         }
 
         void LuennatLuettu()

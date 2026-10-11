@@ -50,6 +50,10 @@ namespace Matkakirja.Natiivi
         public readonly Saapumisesitys Saapuminen;
         public readonly PuluChat Chat;
         public readonly Saapumistraileri Traileri;
+        /// <summary>Isojen kuvien esityspohja: Pariisin C1–C5 ja aloitusintro (omistaja 12.1x, juna 182).</summary>
+        public readonly Introesitys Introesitys;
+        /// <summary>Aloitusintro (Ateena, Pariisi, Tukholma; omistaja 11.10. 11.5x, juna 182).</summary>
+        public readonly AloitusintroNakyma Aloitusintro;
         /// <summary>Saapumisen välikortti aloituslennon jälkeen (Traileri-kerroksen päällimmäinen).</summary>
         public readonly Saapumiskortti Saapumiskortti;
         public readonly Tietoja Tietoja;
@@ -83,6 +87,7 @@ namespace Matkakirja.Natiivi
             PeliNakymat.MatkaValinta = _ => Hae().Matkavalinta;
             PeliNakymat.KaupunkiKortti = _ => Hae().Kaupunkikortti;
             PeliNakymat.Saapumistraileri = (kaupunki, url, valmis) => Hae().Traileri.NaytaPelista(kaupunki, url, valmis);
+            PeliNakymat.Aloitusintro = (kaupunki, valmis) => Hae().Aloitusintro.NaytaPelista(kaupunki, valmis);
             PeliNakymat.Saapumiskortti = (rivi, arkkiTaynna, valmis) =>
             {
                 var ui = Hae();
@@ -415,6 +420,10 @@ namespace Matkakirja.Natiivi
             Saapuminen = new Saapumisesitys(Matkakirja, Pulu);
             Chat = new PuluChat(kerros, Pulu);
             Traileri = new Saapumistraileri(kerros);
+            // Trailerin päälle samaan kerrokseen: Pariisin C1–C5 jatkaa trailerin kuvia samalla asettelulla.
+            Introesitys = new Introesitys(kerros);
+            Saapuminen.Esitys = Introesitys;
+            Aloitusintro = new AloitusintroNakyma(Introesitys);
             KaupunkiMerkit.Kalusteet = KartanKalusteet; // löydös 164
             NostotKartalla.Napit = KartanNapit;         // Stonehenge Liikun alla (Päätoimittaja 6.10.)
             // Löydös 170: sisältöpaketti vaihtui kesken istunnon (Siirtoseppä) → maakunta- ja nostodata uudesta versiosta.

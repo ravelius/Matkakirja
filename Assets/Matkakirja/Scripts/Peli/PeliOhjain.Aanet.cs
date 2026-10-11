@@ -265,8 +265,12 @@ namespace Matkakirja.Natiivi
         /// Väärä tosi ei jumita: Perilla ja trailerin loppu vapauttavat odotuksen (Aanisoitin.SaapumisMusiikkiVapaa).
         /// </summary>
         bool SaapumisMusiikkiOdottaa(string kaupunki) =>
-            kaupunki != null && SaapumisluentoPois?.Invoke(kaupunki) == true && !jatkoHiljaa
-            && (Tila == SilmukanTila.Traileri ? traileriKaupunki == kaupunki : TraileriTarjolla(kaupunki));
+            kaupunki != null && !jatkoHiljaa
+            && (Matkakirja.Linssit.Kierros.KaupunkiIntro.TuleeAloitusintro(kaupunki)
+                // Aloitusintro (juna 182): nopea odottaa Williamia jo matkalla (lennolla kohteen jakso alkaa nousussa).
+                || (Tila == SilmukanTila.Matkalla && saapumisKaupunki == kaupunki && AloitusintroTulossa(kaupunki, AloituslentoKaynnissa))
+                || (SaapumisluentoPois?.Invoke(kaupunki) == true
+                    && (Tila == SilmukanTila.Traileri ? traileriKaupunki == kaupunki : TraileriTarjolla(kaupunki))));
 
         /// <summary>Ruudun lopussa (Update): tapahtumat ruudun lopputilasta ja muutokset AaniTilaan.</summary>
         void PaivitaAanet()

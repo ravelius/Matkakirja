@@ -260,6 +260,12 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static Action<string, string, Action> Saapumistraileri;
         /// <summary>
+        /// ALOITUSINTRO (omistaja 11.10. 11.5x, juna 182): (kaupunki, valmis(ohitettu)). 18 s:n intro (William, nopea kappale, kuusi
+        /// isoa kuvaa, Ohita) trailerin paikalla, kun KaupunkiIntro.TuleeAloitusintro(kaupunki). valmis kerran (loppu tai Ohita).
+        /// Asettamaton = ei introa: saapuminen kuten ennen (traileri tai lehti).
+        /// </summary>
+        public static Action<string, Action<bool>> Aloitusintro;
+        /// <summary>
         /// Saapumisen välikortti aloituslennon jälkeen (web ui.js naytaSaapumiskortti, löydös 52): (rivi, arkki täynnä,
         /// valmis). Pergamenttiarkki nousee 420 ms, rivi "KAUPUNKI · PÄIVÄ n/80" kirjoittuu, jää 1 s ja häipyy; sitten
         /// valmis ja arkki häipyy 700 ms. Arkki täynnä -kutsussa PeliOhjain purkaa lennon ja vie kameran saapumis-

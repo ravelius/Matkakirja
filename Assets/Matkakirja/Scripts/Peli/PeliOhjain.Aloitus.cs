@@ -197,6 +197,8 @@ namespace Matkakirja.Natiivi
             AloituslentoKaynnissa = false;
             // Varareitti (ei korttia tai kortti keskeytyi): lennon esitys pois viimeistään tässä.
             Nappula?.PaataAloituslento();
+            // Aloitusintro (juna 182): TuleeAloitusintro tosi jo AloituslentoPaattyi-hetkellä (NUI kysyy sitä tapahtumassa).
+            AloitusintroSaapuminen(kohde, alkulento: true, hiljaa: false);
             try { AloituslentoPaattyi?.Invoke(kohde); } catch (Exception e) { Debug.LogException(e); }
             // Saapuminen normaalisti: traileri tai kaupunkilehti (Perilla); kamera webin avauslennon tapaan
             // kaupunkinäkymään (siirto.js laske: omaKamera → kamera.kotiin ilman maan laatikkoa), ellei se jo

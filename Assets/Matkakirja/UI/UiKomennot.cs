@@ -628,6 +628,27 @@ namespace Matkakirja.Natiivi
                     ui.Traileri.Nayta(tk, null, () => Kirjaa("traileri valmis: " + tk));
                     return null;
                 }
+                // Aloitusintro ilman lentoa (Linssiseppä, juna 182): "ui aloitusintro ateena|pariisi|tukholma", "ui aloitusintro ohita".
+                // Kulkee kuten saapuessa: TuleeAloitusintro tosi intron ajan ja lopussa KaupunkiIntro.Paattyi (NUI:n Pulu voi alkaa).
+                // Musiikki vain, jos pelaaja on jo tässä kaupungissa (AaniTila.JaksonEsitysAlusta).
+                case "aloitusintro":
+                {
+                    string ak = (loput.Length > 0 ? loput : "ateena").Trim().ToLowerInvariant();
+                    if (ak == "ohita")
+                    {
+                        if (!ui.Aloitusintro.Kaynnissa) return "aloitusintro ei ole käynnissä";
+                        ui.Aloitusintro.Lopeta(true);
+                        return null;
+                    }
+                    var aiv = Matkakirja.Linssit.Kierros.KaupunkiIntro.AloitusintroData(ak);
+                    if (aiv == null || ui.Aloitusintro.Kaynnissa) return ui.Aloitusintro.NaytaQa(ak, null);
+                    Matkakirja.Linssit.Kierros.KaupunkiIntro.Saapuu(aiv.Kaupunki, true);
+                    return ui.Aloitusintro.NaytaQa(aiv.Kaupunki, ohitettu =>
+                    {
+                        bool laukesi = Matkakirja.Linssit.Kierros.KaupunkiIntro.Paata(aiv.Kaupunki, ohitettu);
+                        Kirjaa($"aloitusintro valmis: {aiv.Kaupunki} (ohitettu {ohitettu}, Paattyi {(laukesi ? "laukesi" : "ei")})");
+                    });
+                }
                 case "saapumiskortti-mitta":
                     Kirjaa("saapumiskortti-mitta: " + ui.Saapumiskortti.Mitta(loput.Length > 0 ? loput : "ATEENA · PÄIVÄ 1/80"));
                     return null;

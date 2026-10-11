@@ -665,6 +665,42 @@ namespace Matkakirja.Peli
             return polku == null || puuttuvat.Contains(polku) ? null : AaniOsoite.Url(polku);
         }
 
+        /// <summary>
+        /// Aloitusintron musiikin jatko: onko jakson nopean jälkeen kaupungin hidas kappale (oma tai jakson Hidas). true = intron
+        /// lopussa nopea katkaistaan ja hidas alkaa (Aanisoitin.KaupunkiIntro, kuten Pariisin esittelyssä); false (Tukholma, ei omaa
+        /// raitaa) = nopea saa soida loppuun, ettei kartta hiljene heti intron jälkeen.
+        /// </summary>
+        public bool JaksollaHidas(string kaupunki)
+        {
+            if (kaupunki == null || !t.Jaksot.TryGetValue(kaupunki, out var j)) return false;
+            if (j.Hidas != null) return true;
+            return Musiikkivalitsin.Valitse(valitsin.Ketju(null, kaupunki, t.Maa(kaupunki)), puuttuvat) != null;
+        }
+
+        /// <summary>
+        /// QA (ui aloitusintro &lt;k&gt; ilman lentoa): kaupungin jakson nopea alusta nyt esityksenä (korotus, esityksen nousu), jos
+        /// musiikin paikka on jo tämä kaupunki eikä linssipito ole päällä. Muuten false (intro kulkee ilman musiikkia).
+        /// </summary>
+        public bool JaksonEsitysAlusta(string kaupunki)
+        {
+            if (kaupunki == null || pito || musiikinPaikka != kaupunki || !KerranLapi || !JaksoVoiSoida(kaupunki)) return false;
+            Tee(() =>
+            {
+                odottaaPuhetta = null; puheEnnenJaksoa = null;
+                esitysSoi = true; esitysKorotusPois = false;
+                // Esiladattu nopea odotti jo: se soimaan (sama soitin).
+                if (odottavaNopea != null && pohja == odottavaNopea && jaksoKaupunki == kaupunki && jaksoVaihe == 0)
+                {
+                    JatkaOdottanutta(AaniVakiot.EsitysNousuMs);
+                    return;
+                }
+                odottavaNopea = null;
+                jaksoKaupunki = kaupunki; jaksoVaihe = 0;
+                KaynnistaPohja(musiikinPaikka, musiikinMaa);
+            });
+            return true;
+        }
+
         /// <summary>Voiko kaupungin jakso soida (musiikki ja äänimaisema päällä, jakso olemassa); false = intron kello käy hiljaa.</summary>
         public bool JaksoVoiSoida(string kaupunki) => Aanimaisema && Musiikki && kaupunki != null && t.Jaksot.ContainsKey(kaupunki);
 
@@ -1082,15 +1118,26 @@ namespace Matkakirja.Peli
             musiikinMaa = maa;
             if (!Aanimaisema || !Musiikki || pito) { LopetaPohja(); return; }
             var polku = Musiikkivalitsin.Valitse(valitsin.Ketju(tilat, cityId, maa, VisaAuki), puuttuvat);
-            // Ei raitaa (kaupungin ulkopuolella kartalla, KarttaVainKaupunki): edellinen kappale häivytetään pois (web sama).
-            if (polku == null) { LopetaPohja(); return; }
             if (KerranLapi && cityId != null && t.Jaksot.TryGetValue(cityId, out var jakso))
             {
                 var oma = Musiikkivalitsin.Valitse(valitsin.Ketju(null, cityId, maa), puuttuvat);
-                if (polku == oma) { if (jaksoKaupunki != cityId) { jaksoKaupunki = cityId; jaksoVaihe = 0; JaksoAlkaa(cityId); } SoitaJakso(jakso, oma); return; }
+                // Aloitusintron jakso (VainEsitykseen) alkaa myös ilman kaupungin omaa raitaa (Tukholma: oma = polku = null).
+                if (polku == oma && (polku != null || jakso.VainEsitykseen))
+                {
+                    if (jaksoKaupunki != cityId)
+                    {
+                        jaksoKaupunki = cityId; jaksoVaihe = 0; JaksoAlkaa(cityId);
+                        // Ei esitystä tulossa: nopea jää pois, kaupungin oma raita kuten ennen.
+                        if (jakso.VainEsitykseen && odottaaPuhetta != cityId && !esitysSoi) jaksoVaihe = 2;
+                    }
+                    SoitaJakso(jakso, oma);
+                    return;
+                }
                 // Tilaraita (lehti, kohtaaminen …) keskeyttää: saapumisen nopea ja tauko jäävät väliin, paluussa hidas.
                 if (jaksoKaupunki == cityId && jaksoVaihe < 2) jaksoVaihe = 2;
             }
+            // Ei raitaa (kaupungin ulkopuolella kartalla, KarttaVainKaupunki): edellinen kappale häivytetään pois (web sama).
+            if (polku == null) { LopetaPohja(); return; }
             if (pohja != null && pohjaPolku == polku) return;
             if (pohja == null && polku == soinutPolku) return; // soi jo kerran läpi tässä laukaisussa
             if (LatausKantaa(polku)) { LopetaPohja(AaniVakiot.PohjaVaihtoMs); return; } // pallon raita jatkuu: ei alusta
@@ -1121,6 +1168,13 @@ namespace Matkakirja.Peli
             while (polku != null && puuttuvat.Contains(polku) && jaksoVaihe < 3) { jaksoVaihe = jaksoVaihe == 0 ? 2 : 3; polku = Polku(jaksoVaihe); }
             if (polku == null || puuttuvat.Contains(polku)) { LopetaPohja(); return; }
             if (pohja != null && pohjaPolku == polku) return;
+            // Aloitusintron jakso ilman introa (VainEsitykseen, hidas = kaupungin oma raita) toimii kuin tavallinen pohja: pallon
+            // jatkuva sama raita kantaa (ei alusta) ja kerran läpi soinut ei ala heti uudelleen.
+            if (j.VainEsitykseen && jaksoVaihe >= 2)
+            {
+                if (pohja == null && polku == soinutPolku) return;
+                if (LatausKantaa(polku)) { LopetaPohja(AaniVakiot.PohjaVaihtoMs); return; }
+            }
             // Jakson vaihe tarvitsee oman soittimen (PohjaLoppui): jatkuva latausraita ristiin pois.
             if (LatausJatkuu) LopetaLataus(AaniVakiot.LatausRistiMs, desibeli: true);
             var vaistyva = pohja;

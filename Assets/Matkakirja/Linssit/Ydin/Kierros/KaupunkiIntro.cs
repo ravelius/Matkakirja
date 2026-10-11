@@ -209,5 +209,144 @@ namespace Matkakirja.Linssit.Kierros
 
         /// <summary>Eiffelin laattojen esilataus (reittikameran ehdoin: näytetään saman minuutin sisällä) otoksen loppuun asti.</summary>
         public static bool EiffelEsilataus(double t) => t < Otokset[2].LoppuS;
+
+        // =====================================================================================================================
+        // ALOITUSINTRO (omistaja 11.10. 11.5x PT:n kautta, juna 182; lisävaatimukset 12.1x): aloituskaupungit Ateena, Pariisi ja
+        // Tukholma. Saavuttaessa 18 s:n intro: William sanoo kaupungin nimen ja iskulauseen, kaupungin nopea kappale alkaa samassa
+        // ruudussa, kuusi lähes koko ruudun kuvaa 3 s välein (sama esityspohja kuin Pariisin C1–C5: Natiivi Introesitys), Ohita aina.
+        // Intron jälkeen kartta, sitten Paattyi (NUI:n Pulu ensimmäisellä kerralla → PuluValmis → isoisän luenta; muuten luenta
+        // alkaa ~1 s kuluttua ilman Pulua). Ateena ja Tukholma: joka saapumisella (12.1x "intro joka kerta"); Pariisi: vain alkulennon
+        // ensisaapumisella (muilla käynneillä nykyinen C1–C5-esitys isoilla kuvilla). Kuvia ei sidota iskuihin (Ateenan ja
+        // Tukholman tempoa ei ole mitattu). Unity-osa: PeliOhjain (PaataTraileri, Perilla), UI/Pulu/AloitusintroNakyma.cs.
+        // =====================================================================================================================
+
+        /// <summary>Yhden aloitusintron data: Williamin repliikki (kesto mitattu), nopea kappale ja saako intro tulla muulloin kuin alkulennolla.</summary>
+        public sealed class Aloitus
+        {
+            public string Kaupunki, WilliamUrl, MusiikkiUrl;
+            public double WilliamS, MusiikkiS;
+            /// <summary>Vain alkulennon ensisaapumisella (Pariisi: muilla käynneillä nykyinen saapumisesitys C1–C5).</summary>
+            public bool VainAlkulennolla;
+        }
+
+        public const string WilliamJuuri = "https://media.matkakirja.app/aanet/kaupunki-intro-v1/william-";
+        public const string MusiikkiJuuri = "https://media.matkakirja.app/audio/musa-kaupunki-";
+
+        static Aloitus A(string k, double williamS, double musiikkiS, bool vainAlkulennolla) => new Aloitus
+        {
+            Kaupunki = k, WilliamUrl = WilliamJuuri + k + ".mp3", WilliamS = williamS,
+            MusiikkiUrl = MusiikkiJuuri + k + "-nopea-lyria-v2.mp3", MusiikkiS = musiikkiS, VainAlkulennolla = vainAlkulennolla,
+        };
+
+        /// <summary>Aloitusintrojen taulukko (kaupunki → William, nopea). Pariisin nopea on sama kuin nykyisen esityksen (KaupunkiJakso).</summary>
+        public static readonly IReadOnlyDictionary<string, Aloitus> Aloitukset = new Dictionary<string, Aloitus>(StringComparer.OrdinalIgnoreCase)
+        {
+            ["ateena"] = A("ateena", 3.25, 90.1, false),
+            ["pariisi"] = A("pariisi", 3.82, double.NaN, true),
+            ["tukholma"] = A("tukholma", 3.49, 95.5, false),
+        };
+
+        /// <summary>Kaupungin aloitusintro tai null.</summary>
+        public static Aloitus AloitusintroData(string kaupunki) =>
+            kaupunki != null && Aloitukset.TryGetValue(kaupunki, out var a) ? a : null;
+
+        /// <summary>Saako tämä saapuminen aloitusintron (alkulento = alkulennon ensisaapuminen).</summary>
+        public static bool AloitusintroSaa(string kaupunki, bool alkulento)
+        {
+            var a = AloitusintroData(kaupunki);
+            return a != null && (alkulento || !a.VainAlkulennolla);
+        }
+
+        /// <summary>Ajoitus: kuusi kuvaa 3 s välein = 18 s.</summary>
+        public const int AloitusKuvia = 6;
+        public const double AloitusKuvaS = 3, AloitusKestoS = AloitusKuvia * AloitusKuvaS;
+        /// <summary>Kaupungin nimi ja iskulause näkyvät Williamin puheen ja kahden ensimmäisen kuvan ajan, sitten kirjaimet ulos.</summary>
+        public const double AloitusNimiPoisS = 2 * AloitusKuvaS;
+        /// <summary>Kuinka kauan intro odottaa esiladattua musiikkia ennen kuin se alkaa ilman (kuten saapumistraileri, 1 s).</summary>
+        public const double AloitusMusiikkiOdotusS = 1;
+        /// <summary>Musiikin jatko (kuten Pariisin esittelyssä, Aanisoitin.KaupunkiIntro): nopea katkeaa intron lopussa 2 s:n
+        /// häivytyksellä ja kaupungin tavallinen kappale (jakson hidas = oma raita) alkaa 1 s myöhemmin. Ohita tekee saman heti.</summary>
+        public const float AloitusKatkoS = 18f, AloitusHaivytysS = 2f, AloitusHidasS = 19f;
+        /// <summary>Isoisän luenta Paattyi-hetkestä, kun Pulua ei tule (12.1x "noin 1 s viiveellä").</summary>
+        public const float AloitusLuentaViiveS = 1f;
+
+        /// <summary>Kuvan indeksi (0–5) hetkellä t intron alusta; -1 ennen alkua ja lopun jälkeen.</summary>
+        public static int AloitusKuva(double t) =>
+            double.IsNaN(t) || t < 0 || t >= AloitusKestoS ? -1 : Math.Min(AloitusKuvia - 1, (int)Math.Floor(t / AloitusKuvaS));
+
+        /// <summary>Kuvan n (0–5) alkuhetki intron alusta.</summary>
+        public static double AloitusKuvaAlkaa(int n) => n * AloitusKuvaS;
+
+        /// <summary>
+        /// Kuusi kuvaa: avauskuvat järjestyksessä, vajaus täytetään lisäkuvilla (kansikuvat), samat (avain) vain kerran; jos yhteensä
+        /// on alle kuuden, sarja kiertää alusta (kuva vaihtuu silti 3 s välein). Tyhjä = ei kuvia.
+        /// </summary>
+        public static List<T> AloitusKuvat<T>(IEnumerable<T> avaus, IEnumerable<T> lisa, Func<T, string> avain)
+        {
+            var l = new List<T>();
+            var nahty = new HashSet<string>();
+            foreach (var lahde in new[] { avaus, lisa })
+            {
+                if (lahde == null) continue;
+                foreach (var x in lahde)
+                {
+                    if (l.Count >= AloitusKuvia) break;
+                    var a = x == null ? null : avain(x);
+                    if (string.IsNullOrEmpty(a) || !nahty.Add(a)) continue;
+                    l.Add(x);
+                }
+            }
+            int erilaisia = l.Count;
+            for (int i = 0; erilaisia > 0 && l.Count < AloitusKuvia; i++) l.Add(l[i % erilaisia]);
+            return l;
+        }
+
+        // --- tila ja NUI:n rajapinta (sovittu 11.10.; NUI tilaa heijastuksella: nimet pysyvät) ----------------------------------
+
+        /// <summary>Intro päättyi (kaupunki, ohitettu): kerran per intro, kun 18 s on täynnä tai Ohita painettiin; kartta on jo näkyvissä.</summary>
+        public static event Action<string, bool> Paattyi;
+
+        /// <summary>Unity-kerros kytkee (PeliOhjain): PuluValmis → PeliOhjain.AloitaLykattyLuenta (Ydin ei näe PeliOhjainta).</summary>
+        public static Action<string> LykattyLuentaKoukku;
+
+        static string tuleva, saapuminen, puluOdottaa;
+
+        /// <summary>Tosi intron kaupungille saapumisesta (alkulennolla AloituslentoPaattyi-hetkestä) Paattyi-eventtiin asti.</summary>
+        public static bool TuleeAloitusintro(string kaupunki) => kaupunki != null && string.Equals(tuleva, kaupunki, StringComparison.OrdinalIgnoreCase);
+
+        /// <summary>Tämä käynti alkoi aloitusintrolla (seuraavaan saapumiseen asti): Pariisin C1–C5-esitys ja luennan korvaus eivät koske sitä.</summary>
+        public static bool AloitusSaapumisella(string kaupunki) => kaupunki != null && string.Equals(saapuminen, kaupunki, StringComparison.OrdinalIgnoreCase);
+
+        /// <summary>Saapuminen (PeliOhjain): intro = tuleeko aloitusintro. Muu saapuminen nollaa edellisen käynnin tilan.</summary>
+        public static void Saapuu(string kaupunki, bool intro)
+        {
+            tuleva = intro ? kaupunki : null;
+            saapuminen = intro ? kaupunki : null;
+            puluOdottaa = null;
+        }
+
+        /// <summary>Intro loppui (kartta jo näkyvissä): Paattyi kerran. false = tälle kaupungille ei ollut introa tulossa (ei eventtiä).</summary>
+        public static bool Paata(string kaupunki, bool ohitettu)
+        {
+            if (!TuleeAloitusintro(kaupunki)) return false;
+            tuleva = null;
+            puluOdottaa = kaupunki;
+            Paattyi?.Invoke(kaupunki, ohitettu);
+            return true;
+        }
+
+        /// <summary>NUI: Pulun jakso on ohi → isoisän lykätty luenta (kerran per intro; toinen kutsu ei tee mitään).</summary>
+        public static void PuluValmis(string kaupunki)
+        {
+            if (kaupunki == null || !string.Equals(puluOdottaa, kaupunki, StringComparison.OrdinalIgnoreCase)) return;
+            puluOdottaa = null;
+            LykattyLuentaKoukku?.Invoke(kaupunki);
+        }
+
+        /// <summary>Uusi matka tai aloitusnäkymä: tila pois (Paattyi ei laukea vanhalle introlle).</summary>
+        public static void Nollaa()
+        {
+            tuleva = saapuminen = puluOdottaa = null;
+        }
     }
 }

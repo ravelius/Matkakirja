@@ -19,11 +19,66 @@ namespace Matkakirja.Peli.Testit
         [Testi] static void TaulussaVainPariisinPilotti()
         {
             var t = AaniTaulut.Oletus();
-            Oleta.Sama(1, t.Jaksot.Count, "jaksoja");
+            // Aloitusintro 182: Ateena ja Tukholma mukana, mutta nopea vain intron kanssa (VainEsitykseen).
+            Oleta.Sama(3, t.Jaksot.Count, "jaksoja");
             var j = t.Jaksot["pariisi"];
             Oleta.Sama("assets/audio/musa-kaupunki-pariisi-nopea-lyria.mp3", t.MusaPolku(j.Nopea), "nopea");
             Oleta.Sama(3000, j.TaukoMs, "tauko");
             Oleta.Tosi(j.Hidas == null && j.Tausta == null, "hidas = kaupungin raita, tausta = pohjavire");
+            Oleta.Tosi(!j.VainEsitykseen, "Pariisin pilotti ennallaan: nopea joka saapumisella");
+            foreach (var k in new[] { "ateena", "tukholma" })
+            {
+                var a = t.Jaksot[k];
+                Oleta.Tosi(a.VainEsitykseen && a.Hidas == null && a.Tausta == null, k);
+                Oleta.Sama("assets/audio/musa-kaupunki-" + k + "-nopea-lyria.mp3", t.MusaPolku(a.Nopea), k + " nopea");
+                Oleta.Sama("https://media.matkakirja.app/audio/musa-kaupunki-" + k + "-nopea-lyria-v2.mp3", AaniOsoite.Url(t.MusaPolku(a.Nopea)), k + " ämpärissä");
+            }
+        }
+
+        // --- ALOITUSINTRO 182: Ateenan ja Tukholman nopea vain intron kanssa -------------------------------------------------------
+
+        [Testi] static void AloitusintronJaksoIlmanIntroaKutenEnnen()
+        {
+            var s = Uusi();
+            s.Paikka("ateena", "kaupunki");
+            Oleta.Tosi(Soi(s, "musa-kaupunki-ateena") && !Soi(s, "musa-kaupunki-ateena-nopea"), "Ateenan oma raita suoraan: " + Pohja(s));
+            Oleta.Sama("ateena:hidas", s.Jakso);
+            s.Paikka("tukholma", "kaupunki");
+            Oleta.Sama(null, Pohja(s), "Tukholma ilman omaa raitaa: hiljaa kuten ennen");
+            Oleta.Tosi(!s.JaksollaHidas("tukholma") && s.JaksollaHidas("ateena") && s.JaksollaHidas("pariisi"), "hidas vain omalla raidalla");
+        }
+
+        [Testi] static void AloitusintronJaksoNopeaOdottaaWilliamia()
+        {
+            foreach (var k in new[] { "ateena", "tukholma" })
+            {
+                var s = Uusi();
+                s.NopeaOdottaaPuhetta = x => x == k;
+                s.Paikka("lontoo", "kaupunki");
+                s.Paikka(k, "kaupunki");
+                var w = s.Toive(Kanava.Pohja);
+                Oleta.Tosi(Soi(s, "musa-kaupunki-" + k + "-nopea") && w.Tauko, k + ": nopea latautuu ja odottaa: " + Pohja(s));
+                Oleta.Sama(k, s.OdottaaPuhetta);
+                s.JaksonNopeaAlkaa(k);
+                w = s.Toive(Kanava.Pohja);
+                Oleta.Tosi(!w.Tauko && w.KestoMs == AaniVakiot.EsitysNousuMs, k + ": soi Williamin kanssa");
+                Oleta.Sama(k, s.EsitysKaupunki);
+                s.JaksonIntroKatko(2000);
+                s.JaksonIntroHidas();
+                if (k == "ateena") Oleta.Tosi(Soi(s, "musa-kaupunki-ateena") && !Soi(s, "musa-kaupunki-ateena-nopea"), "katkon jälkeen oma raita: " + Pohja(s));
+                else Oleta.Sama(null, Pohja(s), "Tukholma: hidasta ei ole");
+            }
+        }
+
+        [Testi] static void AloitusintronQaEsitysAlusta()
+        {
+            var s = Uusi();
+            Oleta.Tosi(!s.JaksonEsitysAlusta("ateena"), "ei kaupungissa: ei musiikkia");
+            s.Paikka("ateena", "kaupunki");
+            Oleta.Sama("ateena:hidas", s.Jakso);
+            Oleta.Tosi(s.JaksonEsitysAlusta("ateena"), "kaupungissa");
+            Oleta.Tosi(Soi(s, "musa-kaupunki-ateena-nopea") && !s.Toive(Kanava.Pohja).Tauko, "nopea alusta: " + Pohja(s));
+            Oleta.Sama("ateena", s.EsitysKaupunki);
         }
 
         [Testi] static void NopeaTaukoHidasTausta()
