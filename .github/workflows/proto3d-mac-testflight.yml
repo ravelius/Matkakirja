@@ -18,7 +18,7 @@ on:
     inputs:
       app_polku:
         description: 'Valmis Mac-käännös (Natiivisepän mac-kaanna.sh)'
-        default: '/Users/Shared/Claude/proto-3d/Matkakirja-proto-mac/Build/mac/Matkakirja 3D.app'
+        default: '/Users/Shared/Claude/proto-3d/Matkakirja-proto-mac/Build/mac/Matkakirja.app'
       versio:
         description: 'CFBundleShortVersionString (sama kuin iOS-junan versio)'
         default: '1.1'
@@ -131,7 +131,9 @@ jobs:
         run: |
           set -euo pipefail
           kohde="$RUNNER_TEMP/mac"; rm -rf "$kohde"; mkdir -p "$kohde"
-          app="$kohde/Matkakirja 3D.app"
+          # Asennettava nimi aina "Matkakirja.app" (omistaja 11.10.2026: nimi kaikkialla pelkkä Matkakirja), vaikka lähde
+          # olisi vanha "Matkakirja 3D.app"; ohjelmatiedoston nimi tulee Info.plististä (CFBundleExecutable).
+          app="$kohde/Matkakirja.app"
           ditto "$APP_POLKU" "$app"
           xattr -cr "$app"
           plist="$app/Contents/Info.plist"
