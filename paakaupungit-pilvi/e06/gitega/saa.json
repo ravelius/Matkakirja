@@ -1,0 +1,10 @@
+{
+ "lat": -3.43,
+ "lon": 29.93,
+ "keskilampo": [21.9,21.8,21.6,21.5,21.1,21.2,21.3,22.3,22.4,21.8,21.3,21.6],
+ "ylin": [28,28,27,26,26,27,27,28,28,28,27,27],
+ "alin": [16,16,16,17,16,16,15,16,16,16,16,16],
+ "sade": [100,97,143,142,108,45,10,39,88,109,192,185],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Gitega","revisio":1377359798,"taulukko":"Climate data for Gitega (1991–2020)","lahteet":"Source: NOAA","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":1258,"luettu":"2026-10-11","huomiot":[]}
+}

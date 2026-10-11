@@ -109,3 +109,15 @@ Perustaminen R1 History 1880 / infobox ja R3 1883 → 1880-luku. Vapaan Ranskan 
 Konteksti luettu: maalehti null, lähikaupungit/lähinostot tyhjät. Kahden pääkaupungin perusmaantiede kuuluu sekä tämän että seuraavan Kinshasan johdatukseen, mutta koko rumba-/jokiallastarina ei saa tulla molempiin: **Brazzaville ottaa kaupungin musiikkiprofiilin; Kinshasa saa toisen teeman**. Pelin kevyen pisteen lähin/ainoa-superlatiivi jätetään pois. Nykypolitiikka, nykykonfliktit, henkilöiden sankarikehys, väkivallan yksityiskohdat, modernit suojatut rakennukset/veistokset, maalausteokset ja nykyiset rumbatallenteet eivät kartta-/kuvakohteita. Ei keksittyä isoisää.
 
 **A-tila:** lähdepaketti 0–9, 4+4 nostoa, opas, viisi visan lopullista aihetta ja kolme tietoa koottu. Kuusi karttakandidaattia; Ramsar-koordinaatin poikkeus, luonnonpaikkojen mahdollinen yhdistäminen ja katedraalin historiallisen kuvan oikeusportti avoinna. Ei kuvituksen tai lopullisen kartan hyväksyntää.
+
+
+## Säätausta — pääsession alkuperäinen sääajo
+
+- Lähdeartikkeli: Brazzaville, revisio 1378477766; luettu 2026-10-11.
+- Taulukko: Climate data for Brazzaville (1991-2020).
+- Normaalikausi: 1991–2020; lämpöpoiminta: Daily mean °C (°F).
+- Saderivi: Average precipitation mm (inches); vuosisade 1497 mm.
+- Taulukon lähteet: "Source: NOAA".
+- Huomiot: [].
+
+Luvut C:hen saa.json:sta ilman tausta-kenttää. Sääteksti vain sarjan luvuista; ei toisen aseman käsin kopioitua kuvausta.

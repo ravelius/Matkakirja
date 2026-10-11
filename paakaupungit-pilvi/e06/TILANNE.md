@@ -83,3 +83,7 @@ Ciudad de la Paz -kontekstin Malabo = maan suurin kaupunki -väite ristiriidassa
 ## Pääsession rinnakkainen säävalmistelu
 
 Lopputarkistuksessa havaittiin työpuussa pääsession SAA-VALMISTELU.md, kuuden kaupungin saa.json (Bangui, Brazzaville, Kinshasa, Luanda, Kigali, Gitega), muutettu saa-syote.json ja viiden aiemman faktapohjan säätaustalisäyksiä. Näitä ei tämän agentin loppucommitissa stageroida tai nollata. Gitegan omaan muuttamattomaan A-tiedostoon lisättiin vain olemassa olevan saa.json:n tausta-metatietoviite. A-rakenne tarkistettiin omasta commit-snapshotista 6f190ecc4a21af86f7c77f916a17e9859bbb6134, jotta muiden säämuutoksia ei kutsuta tämän agentin tarkistamaksi tai valmiiksi toimittamaksi.
+
+## Pääsession säävalmistelu ja lähdehylkäykset
+
+Alkuperäisen sääpoiminnan numeerinen tarkistus tuotti 6/9 riviä. Lähdetarkistus hylkäsi myöhemmin Luandan ja Kinshasan eri ajanjaksojen jäljitettävyysongelman; alkuperäiset tiedostot arkistoitu NAS-väliaineistoon. Käytössä 4/9: Bangui, Brazzaville, Kigali, Gitega. Libreville / Ciudad de la Paz / São Tomé konehylkäys, Luanda / Kinshasa lähdehylkäys; kaikilla viidellä saatiedot:null. A-raportin säätilan aikaisemmat luvut eivät kumoa tätä myöhempää päätöstä. SAA-VALMISTELU.md ja SAA-LAHDEHYLKAYKSET.md sisältävät näytöt.

@@ -104,3 +104,10 @@ K1 Location yhdistää kaupunki-maakunnan 9 965 km² virheellisesti Pool Maleboo
 Konteksti luettu: maalehden Historia/Luonto/Ruoka/Kuvataide/Musiikki nostot tallennettu. Pois Ishango-luu, Portugalin kirjeenvaihto, lukasa, lingalan synnyn tarina; okapi/kongonriikinkukko/Kivujärven kaasukenttä/peat-kuorma; maniokin käsittely, pondu, moambe, lehtikäärekala; modernit maalaukset/pahvikaupungit; rumba/levykitara/hotellihuonelaulu/sape. Myös Brazzavillen juuri kirjoitettu rumbateema pois. Kaupungin bonobosuoja ja kasvikokoelman toiminta ovat omia aiheita eivätkä näiden maalehtinostojen kopioita. Nykypolitiikka, konfliktin osapuolet, rikollisuus, keksitty isoisä, tekijänoikeudelliset nykyteokset ja nykykonserttitallenteet jäävät pois.
 
 **A-tila:** 0–9-paketti, 4+4 nostoa, opas 5, visa 5, tiedot 3 ja kuusi Wiki/Wikidata-paikkakandidaattia koottu. Retkirajaus, eläintarhan nykytila ja Lolan kaupallisen kuvan/paikkaluvan portti ovat avoimia; niitä ei kutsuta kuvavalmiiksi tai toimitusvalmiiksi. Ei sääluvun käsikopioita, B/C-tiedostoja tai pelikytkentää.
+
+
+## Säätausta — lähdetarkistuksen päätös
+
+Taulukon otsikko 1991–2020, mutta sadeaineiston DMI-viite tr01-17.pdf on julkaistu ennen normaalikauden loppua (arkistolinkki vuodelta 2013). Nykyisen sadesarjan 1991–2020-alkuperä ei varmistunut; ei arvausta vanhan julkaisun kattamasta kaudesta.
+
+Päätös: ei saa.json:ia tuotantokansiossa. C käyttää saatiedot:null ja poistaa tämän sarjan numeeriset ilmastoväitteet kaikista tekstikentistä. Sääaihe voidaan pitää laadullisena vain erikseen lähteistetyllä tiedolla, ilman aste/mm-lukuja tai vuodenaikojen suosituksen päättelyä hylätystä sarjasta.

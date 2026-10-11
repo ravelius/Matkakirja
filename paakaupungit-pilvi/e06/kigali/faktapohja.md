@@ -106,3 +106,15 @@ History of Kigali ohjautuu pääartikkeliin, ei riippumaton vuosivahvistus. Kand
 Konteksti luettu: maalehti null, lähikaupungit/lähinostot tyhjät. Kevyen pisteen perustamis-/kukkulajohdatus laajennetaan perusjohdatukseksi; kosteikkotyö ja kaupunginosat uusia aiheita. Maan yleinen gorilla-, kahvi- ja teetarina jää maan mittakaavaan eikä siirry kaupunkikohtaiseksi. Modernit suojatut monumentit/rakennukset, nykytaide, kansanmurhamuistokeskuksen teokset ja sotahistoriakohtaiset nostot pois tämän tehtävän rajauksessa. Ei nykypolitiikkaa, rikoksia, hintoja, virheellisiä viisumiohjeita tai keksittyä isoisää.
 
 **A-tila:** 0–9 koottu, 4+4 nostoa, opas 5, parasta 5/hyvä tietää 4, visa 5/tiedot 3 ja kuusi Wikipedia/Wikidata-paikkakandidaattia. Kaupunkiluonnon laaja rajaus on poikkeusehdotus, Kandtin talon/mahdollisten uusien osien kaupallinen kuva on B-portti. Ei luontokoordinaatin arvausta tai toimitus-/kuvahyväksyntää.
+
+
+## Säätausta — pääsession alkuperäinen sääajo
+
+- Lähdeartikkeli: Kigali, revisio 1377206149; luettu 2026-10-11.
+- Taulukko: Climate data for Kigali Airport (1991–2020).
+- Normaalikausi: 1991–2020; lämpöpoiminta: Daily mean °C (°F).
+- Saderivi: Average precipitation mm (inches); vuosisade 953 mm.
+- Taulukon lähteet: "Source 1: NOAA | Source 2: Weather.Directory".
+- Huomiot: [].
+
+Luvut C:hen saa.json:sta ilman tausta-kenttää. Sääteksti vain sarjan luvuista; ei toisen aseman käsin kopioitua kuvausta.

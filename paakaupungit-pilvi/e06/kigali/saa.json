@@ -1,0 +1,10 @@
+{
+ "lat": -1.94,
+ "lon": 30.06,
+ "keskilampo": [21.9,22,21.7,21.5,21.5,21.3,21.4,22.3,22.3,21.9,21.2,21.5],
+ "ylin": [28,28,27,26,26,27,27,28,28,27,26,27],
+ "alin": [16,16,16,17,17,16,15,16,16,16,16,16],
+ "sade": [84,84,129,136,89,20,10,30,65,109,121,76],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Kigali","revisio":1377206149,"taulukko":"Climate data for Kigali Airport (1991–2020)","lahteet":"Source 1: NOAA | Source 2: Weather.Directory","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":953,"luettu":"2026-10-11","huomiot":[]}
+}

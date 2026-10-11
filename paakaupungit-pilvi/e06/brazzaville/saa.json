@@ -1,0 +1,10 @@
+{
+ "lat": -4.27,
+ "lon": 15.27,
+ "keskilampo": [26.1,26.6,26.8,26.7,26.3,24.1,23.4,24.1,25.9,26.2,25.7,25.9],
+ "ylin": [31,32,33,33,31,29,28,29,31,31,31,31],
+ "alin": [23,22,23,23,23,21,20,21,22,22,22,22],
+ "sade": [160,137,189,169,132,9,3,11,43,164,264,216],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Brazzaville","revisio":1378477766,"taulukko":"Climate data for Brazzaville (1991-2020)","lahteet":"Source: NOAA","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":1497,"luettu":"2026-10-11","huomiot":[]}
+}

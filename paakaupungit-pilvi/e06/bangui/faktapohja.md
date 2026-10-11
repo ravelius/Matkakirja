@@ -98,3 +98,15 @@ B1 perustamispäivä 26.6.1889 / B6 24.7.1889 → vain 1889. B1 siirtää vertai
 Konteksti luettu: maalehti null, lähikaupungit/lähinostot tyhjät. Kevyen pisteen jokisijaintia ja perustamista laajennetaan kaupungin perusjohdatuksena; metallurgia ja ruoka antavat uusia aiheita. Ei nykykonfliktin osapuolia, rikoksia, poliitikkojen henkilönostoja, julmuuksia, norsunluuostoksia, modernin veistostaiteen kohteita, hintoja tai keksittyä isoisää. Suljettua museota tai maaseudun putouksia ei tarjota nyt toimivaksi retkeksi.
 
 **A-loppu:** lähde- ja tekstifaktapaketti tehty; täysi A estyy 6–8 hyväksyttävän keskustakohteen ja varsinaisen viiden käyntikohteen oppaan puutteeseen; ruokanoston faktaminimi on korjattu. Jatkokorjaus tarvitsee historiallisten vapautuneiden paikkojen lisälähteet tai pääsession päätöksen kevyenä pitämisestä. Ei B/C/D/E/F-tuotoksia.
+
+
+## Säätausta — pääsession alkuperäinen sääajo
+
+- Lähdeartikkeli: Bangui, revisio 1374429412; luettu 2026-10-11.
+- Taulukko: Climate data for Bangui (Bangui M'poko International Airport) 1991–2020, extremes 1982-present.
+- Normaalikausi: 1991–2020; lämpöpoiminta: Daily mean °C (°F).
+- Saderivi: Average precipitation mm (inches); vuosisade 1459 mm.
+- Taulukon lähteet: "Source: NOAA".
+- Huomiot: [].
+
+Luvut C:hen saa.json:sta ilman tausta-kenttää. Sääteksti vain sarjan luvuista; ei toisen aseman käsin kopioitua kuvausta.

@@ -108,3 +108,10 @@ São Miguel U10 1576 / U1 History 1634, kontekstin lähinosto 1576 → ei uutta 
 Konteksti ja lähinosto luettu. São Miguelin valmis 4 km:n lähinosto jätetään uudesta kannesta/teemasta ja kuuden karttakohteen joukosta pois; ei samaa linnoitustarinaa uudella kuvalla. Maalehdelle jäävät Angolan nimen/arvonimen tarina, Nzinga, nzimbu-raha, kuningattaren jalanjäljet, welwitschia, Kalaharin suo, laaja maisemahalkeama, myrskyssä saareksi muuttunut niemimaa, funge/kalulu/moamba-valmistus, baobabi-jäätelö, berimbau/semba/kizomba/kuduro sekä maalehden kuvataiteen aiheet. Kirkkokerrostumat ja uuden lentoaseman korjaus eivät ole näiden kopioita. Pois nykyiset suojatut monumentit, mausoleumi, sisätaiteen kuvat ilman oikeusnäyttöä, nykypolitiikka/sota/rikostarinat, hinta- ja aukiolotiedot sekä keksitty isoisä.
 
 **A-tila:** 0–9 koottu, 4+4 lähteistettyä nostoa, opas 5, parasta 5/hyvä tietää 4, visa 5/tiedot 3, kuusi historiallista paikkaa vanhasta ytimestä ja Wikipedia/Wikidata-koordinaatit. Tavalliset B-vaiheen tiedostolisenssit/kuvan katsominen sekä Jesusin myöhempien osien FOP-tekijäportti ovat tekemättä. Ei karttarajauksen ulkoista poikkeusta, ei sisalto.json:ia tai kuvat.md:ta.
+
+
+## Säätausta — lähdetarkistuksen päätös
+
+Taulukon otsikko 2001–2025, mutta saderivin lähde on nimenomaisesti DWD:n 1961–1990. Yhtä kausi-kenttää ei voida käyttää molempien ajanjaksojen merkintänä.
+
+Päätös: ei saa.json:ia tuotantokansiossa. C käyttää saatiedot:null ja poistaa tämän sarjan numeeriset ilmastoväitteet kaikista tekstikentistä. Sääaihe voidaan pitää laadullisena vain erikseen lähteistetyllä tiedolla, ilman aste/mm-lukuja tai vuodenaikojen suosituksen päättelyä hylätystä sarjasta.
