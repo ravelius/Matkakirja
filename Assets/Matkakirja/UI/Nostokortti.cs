@@ -1074,6 +1074,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Videopelin avaus nostosta: Jatka ilmaiseksi, muuten maksu ensin (alusta = Aloita alusta).</summary>
         void Pelaa(bool jatka, bool alusta)
         {
+            // Rahat eivät riitä → ilmoitus ja OK (Rahapula, omistaja 11.10.2026); tilarivi jää Maksa-funktion varaksi.
+            if (!jatka && !Rahapula.Tarkista(Kieli.T("ui.nosto.olavinlinna-peli"), Matkakirja.Peli.Kaupat.OlavinlinnanHinta(alusta))) return;
             var o = PeliOhjain.Instanssi;
             if (!jatka && o != null && !o.MaksaOlavinlinna(alusta)) return;
             Sulje();
