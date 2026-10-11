@@ -651,6 +651,7 @@ namespace Matkakirja
             if (!nakyma.Equals(edellinenNakyma)) { edellinenNakyma = nakyma; nakymaKehys = Time.frameCount; NakymaMuuttui?.Invoke(); }
             bool lepo = !Liikkeessa && !Peitetty;
             if (lepo != Levossa) { Levossa = lepo; LepoMuuttui?.Invoke(lepo); }
+            if (Application.isPlaying) SeuraaEurooppaa();
         }
 
         /// <summary>
@@ -1408,8 +1409,92 @@ namespace Matkakirja
             || (saapumisKorkeus > 0 && korkeus <= saapumisKorkeus * 1.1);
         double saapumisKorkeus;
 
-        /// <summary>Eleen loitonnuksen katto metreinä: maan katto, jos rajat ovat voimassa, muuten koko pallo.</summary>
-        double EleKatto() => !linssinKatto.HasValue && RajatVoimassa && maanKatto > 0 ? math.clamp(maanKatto, MinKorkeus(), MaxKorkeus()) : MaxKorkeus();
+        /// <summary>
+        /// Eleen loitonnuksen katto metreinä: maan katto, jos rajat ovat voimassa, muuten koko pallo. Euroopan maissa katto on
+        /// vähintään koko Euroopan sovitus (<see cref="EuroopanKattoM"/>, omistaja 11.10.2026, juna 182).
+        /// </summary>
+        double EleKatto() => !linssinKatto.HasValue && RajatVoimassa && maanKatto > 0
+            ? math.clamp(EurooppaVoimassa ? EuroopanKattoM : maanKatto, MinKorkeus(), MaxKorkeus()) : MaxKorkeus();
+
+        // ---- EUROOPPA-LOITONNUS (omistaja 11.10.2026 PT:n kautta, juna 182, kuumailmapallojen kohta c; EurooppaLoitonnus) ----
+        //
+        // Pelaaja saa loitontaa Euroopan maassa niin kauas, että koko Eurooppa mahtuu kuvaan laitteen kuvasuhteella; maan
+        // katon yläpuolella panorointiraja laajenee pehmeästi Euroopan laatikkoon (RajaaMaahan). Kehittäjän maailmatila,
+        // linssit, matka ja maat Euroopan ulkopuolella ennallaan (RajatVoimassa, maaEuroopassa).
+
+        bool maaEuroopassa, eurooppaTila;
+        double eurooppaFov = -1, eurooppaSuhde = -1, eurooppaSovitus = double.NaN;
+
+        /// <summary>Korkeus (m), jolla koko Euroopan laatikko mahtuu tämän kameran kuvaan (välimuisti kuvakulman ja kuvasuhteen mukaan).</summary>
+        public double EuroopanSovitusM()
+        {
+            var kamera = GetComponent<Camera>();
+            double fov = kamera != null ? kamera.fieldOfView : Saapumisnakyma.PalloFov;
+            double suhde = kamera != null ? kamera.aspect : 1.0;
+            if (fov != eurooppaFov || suhde != eurooppaSuhde)
+            {
+                eurooppaFov = fov;
+                eurooppaSuhde = suhde;
+                double h = EurooppaLoitonnus.SovitusKorkeus(fov, suhde);
+                eurooppaSovitus = double.IsNaN(h) ? double.NaN : h * CesiumWgs84Ellipsoid.GetMaximumRadius();
+            }
+            return eurooppaSovitus;
+        }
+
+        /// <summary>Euroopan loitonnus sallittu: pelaajan maan rajat voimassa (ei maailmatilaa, linssiä eikä matkaa) ja maa Euroopassa.</summary>
+        public bool EurooppaVoimassa => maaEuroopassa && maanKatto > 0 && !linssinKatto.HasValue && RajatVoimassa;
+
+        /// <summary>Pelaajan loitonnuksen katto Euroopan maassa (m); 0 = Euroopan loitonnus ei voimassa.</summary>
+        public double EuroopanKattoM => EurooppaVoimassa ? EurooppaLoitonnus.Katto(maanKatto, EuroopanSovitusM(), MaxKorkeus()) : 0;
+
+        /// <summary>Maan katto (m, saapumisnäkymän uloszoomauksen raja); 0 = ei maan rajoja.</summary>
+        public double MaanKattoM => maanKatto;
+
+        /// <summary>Kamera Euroopan loitonnuksessa: maan katon selvästi yläpuolella (himmeät pisteet, kevyet rajat, kirjaus).</summary>
+        public bool EuroopanLoitonnuksessa => EurooppaVoimassa && EurooppaLoitonnus.Kaukana(korkeus, maanKatto);
+
+        /// <summary>Euroopan loitonnuksen tila lokiin ("MATKAKIRJA kartta: eurooppa-loitonnus …").</summary>
+        public string EurooppaKuvaus(string tapahtuma)
+        {
+            var kamera = GetComponent<Camera>();
+            double k = Pistekerroin;
+            double w = (kamera != null ? kamera.pixelWidth : Screen.width) / k, h = (kamera != null ? kamera.pixelHeight : Screen.height) / k;
+            return $"MATKAKIRJA kartta: eurooppa-loitonnus {tapahtuma}: katto {EuroopanKattoM / 1000:0} km (maan katto {maanKatto / 1000:0} km, " +
+                   $"Euroopan sovitus {EuroopanSovitusM() / 1000:0} km, koko pallo {MaxKorkeus() / 1000:0} km), korkeus {korkeus / 1000:0} km, " +
+                   $"keskipiste ({leveys:0.0}, {pituus:0.0}), ruutu {w:0}×{h:0} pt, fov {(kamera != null ? kamera.fieldOfView : 0):0}, " +
+                   $"voimassa {(EurooppaVoimassa ? "kyllä" : "ei")} (maa Euroopassa {(maaEuroopassa ? "kyllä" : "ei")}, rajat {(RajatVoimassa ? "kyllä" : "ei")}), " +
+                   $"panoroinnin laajennus {EurooppaLoitonnus.Osuus(korkeus, maanKatto, EuroopanKattoM):0.00}";
+        }
+
+        /// <summary>
+        /// Kirjaa Euroopan loitonnukseen tulon ja sieltä lähdön sekä koko tilan, kun kamera pysähtyy Euroopan loitonnuksessa
+        /// (Update): katto, huntu, rajat ja pisteet (komento "eurooppa tila" samat rivit).
+        /// </summary>
+        void SeuraaEurooppaa()
+        {
+            bool nyt = EuroopanLoitonnuksessa;
+            if (nyt != eurooppaTila)
+            {
+                eurooppaTila = nyt;
+                eurooppaLepo = false;
+                Debug.Log(EurooppaKuvaus(nyt ? "sisään" : "ulos"));
+            }
+            if (!nyt || Levossa == eurooppaLepo) return;
+            eurooppaLepo = Levossa;
+            if (Levossa) KirjaaEurooppa("levossa");
+        }
+        bool eurooppaLepo;
+
+        /// <summary>Euroopan loitonnuksen koko tila lokiin: kamera, huntu (Varitaso), rajat (Rajat) ja pisteet (KaupunkiMerkit).</summary>
+        public void KirjaaEurooppa(string tapahtuma)
+        {
+            Debug.Log(EurooppaKuvaus(tapahtuma));
+            var vt = FindAnyObjectByType<Varitaso>();
+            Debug.Log(vt != null ? vt.EurooppaTila(tapahtuma) : "MATKAKIRJA kartta: eurooppa-loitonnus huntu " + tapahtuma + ": ei väritasoa");
+            Debug.Log("MATKAKIRJA kartta: eurooppa-loitonnus rajat " + tapahtuma + ": " + (Rajat.Instanssi != null ? Rajat.Instanssi.EurooppaTila() : "ei rajakerrosta"));
+            if (kaupunkiMerkit == null) kaupunkiMerkit = FindAnyObjectByType<KaupunkiMerkit>();
+            Debug.Log("MATKAKIRJA kartta: eurooppa-loitonnus pisteet " + tapahtuma + ": " + (kaupunkiMerkit != null ? kaupunkiMerkit.EurooppaTila() : "ei merkkejä"));
+        }
 
         /// <summary>Asettaa maan rajat saapumisnäkymästä (AjaSaapumisnakymaan) tai poistaa ne (laatikoton saapuminen).</summary>
         void AsetaMaanRajat(Saapumisnakyma.Tulos t, double toiveLng, string maa)
@@ -1418,6 +1503,10 @@ namespace Matkakirja
             // Saaret (PRT Azorit ja Madeira, ESP Kanariat) panorointirajaan; katto pysyy mantereen saapumisnäkymässä.
             maanLaatikko = katto.HasValue ? Saapumisnakyma.Lisaikkunoineen(t.Laatikko.Value, maa) : (Saapumisnakyma.Laatikko?)null;
             maanKatto = katto.HasValue ? katto.Value * CesiumWgs84Ellipsoid.GetMaximumRadius() : 0;
+            // Euroopan loitonnus (juna 182): maan saapumislaatikon keskipiste Euroopan laatikossa.
+            var keski = katto.HasValue ? Saapumisnakyma.LaudaltaAsteiksi(t.Laatikko.Value.X + t.Laatikko.Value.W / 2, t.Laatikko.Value.Y + t.Laatikko.Value.H / 2)
+                : (Lon: double.NaN, Lat: double.NaN);
+            maaEuroopassa = katto.HasValue && EurooppaLoitonnus.Euroopassa(keski.Lat, keski.Lon);
             maanToiveLng = toiveLng;
             webSuhde = t.Korkeus > 0 ? t.WebKorkeus / t.Korkeus : 1;
             panorajaMuisti = null;
@@ -1442,7 +1531,16 @@ namespace Matkakirja
             if (!RajatVoimassa) return;
             var raja = MaanPanoraja();
             if (!raja.HasValue) return;
-            var (lat, lon) = Saapumisnakyma.RajaaPanorointi(raja.Value, leveys, pituus);
+            var r = raja.Value;
+            // Euroopan loitonnus: maan katon yläpuolella raja laajenee pehmeästi Euroopan laatikkoon (lähennettäessä kutistuu
+            // jatkuvasti, joten kamera palaa maahan ilman hyppyä).
+            double osuus = EurooppaVoimassa ? EurooppaLoitonnus.Osuus(korkeus, maanKatto, EuroopanKattoM) : 0;
+            if (osuus > 0)
+            {
+                var l = EurooppaLoitonnus.Laajenna(r.LatMin, r.LatMax, r.LngMin, r.LngMax, r.Pituus, osuus);
+                r.LatMin = l.LatMin; r.LatMax = l.LatMax; r.LngMin = l.LngMin; r.LngMax = l.LngMax;
+            }
+            var (lat, lon) = Saapumisnakyma.RajaaPanorointi(r, leveys, pituus);
             if (math.abs(lat - leveys) > 1e-9 || math.abs(Kiedo(lon - pituus)) > 1e-9)
             {
                 leveys = lat;

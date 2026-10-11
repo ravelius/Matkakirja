@@ -17,6 +17,8 @@ namespace Matkakirja
     ///   kaupunki id               lento kaupunkiin ja nimikortti (kuin napautus)
     ///   aja lat lon kaari [s]     kamera-ajo; kaari = kapeamman suunnan asteet
     ///   pallo                     koko pallo kuvaan
+    ///   eurooppa [s] | eurooppa tila   kamera pelaajan Euroopan loitonnukseen (katto, Euroopan keskipiste; juna 182) / tila
+    ///                             lokiin ("MATKAKIRJA kartta: eurooppa-loitonnus …": katto, huntu, rajat, pisteet, laatat)
     ///   pallo rajat paalle|pois [m]   laattojen renderöijien rajat laajennettuina (k − 1) × m kaikkiin suuntiin
     ///                             (PalloReiat, löydös 119; oletus päällä, m = 9 000; päivittyy komennolla "korkeus n")
     ///   pallo tausta magenta|pois kameran tausta magentaksi piirron ajaksi (reiät kuviin; lennon skybox, tähtitaivas ja
@@ -605,6 +607,20 @@ namespace Matkakirja
                 case "pallo":
                     kierto.Aja(kierto.leveys, kierto.pituus, kierto.KokoPallonKorkeus(), 1.4f, null);
                     break;
+                case "eurooppa" when o.Length > 1 && o[1] == "tila":
+                    kierto.KirjaaEurooppa("tila");
+                    break;
+                case "eurooppa":
+                {
+                    // eurooppa [s]: kamera pelaajan Euroopan loitonnukseen (katto, Euroopan keskipiste, pohjoinen ylös; omistaja
+                    // 11.10.2026, juna 182). Ilman Euroopan sääntöä (maailmatila, matka, maa muualla) pelkkä sovituskorkeus.
+                    double h = kierto.EurooppaVoimassa ? kierto.EuroopanKattoM : kierto.EuroopanSovitusM();
+                    if (!kierto.EurooppaVoimassa) Debug.LogWarning("MATKAKIRJA komento: eurooppa ilman pelaajan Euroopan sääntöä (" + kierto.EurooppaKuvaus("ei voimassa") + ")");
+                    float kesto = o.Length > 1 ? (float)D(1) : 1.4f;
+                    kierto.Aja(EurooppaLoitonnus.KeskiLat, EurooppaLoitonnus.KeskiLon, h, kesto, () => kierto.KirjaaEurooppa("ajo valmis"));
+                    kierto.PalautaPohjoinen(kesto);
+                    break;
+                }
                 case "veto":
                     kierto.AloitaEle(new PalloKierto.Ele
                     {

@@ -156,7 +156,10 @@ namespace Matkakirja
             if (kierto == null) kierto = FindAnyObjectByType<PalloKierto>();
             if (kierto != null)
             {
-                bool k = kaukana ? kierto.korkeus > kaukoKorkeus * 0.85 : kierto.korkeus > kaukoKorkeus;
+                // Euroopan loitonnus (omistaja 11.10.2026, juna 182): huntu pysyy koko Euroopan näkymässä, joten kaukoraja on
+                // vähintään 1,3 × pelaajan Euroopan katto (EurooppaLoitonnus.HunnunKaukoraja; muualla 15 000 km ennallaan).
+                double raja = EurooppaLoitonnus.HunnunKaukoraja(kaukoKorkeus, kierto.EuroopanKattoM);
+                bool k = kaukana ? kierto.korkeus > raja * 0.85 : kierto.korkeus > raja;
                 if (k != kaukana) { kaukana = k; if (k) Poista(); else Luo(); }
                 // Fablen päätös 24.9.: huntu häivytetään koko näkymän zoomin funktiona, ei laattakohtaisesti; zoom on
                 // näkymän KAUKAISIMMAN maapisteen taso (ylälaita tai horisontti). Kotimaan korostus 25.9.: häivytys
@@ -167,6 +170,8 @@ namespace Matkakirja
                     float t = Mathf.Clamp01((z - (AlinKaytetty - 0.5f)) / 1.0f);
                     Alfa(t * t * (3f - 2f * t));
                 }
+                bool eurooppa = kierto.EuroopanLoitonnuksessa;
+                if (eurooppa != eurooppaKirjattu) { eurooppaKirjattu = eurooppa; Debug.Log(EurooppaTila(eurooppa ? "sisään" : "ulos")); }
             }
             string maa = Pakotettu;
             if (string.IsNullOrEmpty(maa))
@@ -290,6 +295,33 @@ namespace Matkakirja
             double mpp = 2.0 * kauimmas * Math.Tan(kam.fieldOfView * 0.5 * Math.PI / 180.0) / Math.Max(1, Screen.height);
             double lev = Math.Cos(kierto.leveys * Math.PI / 180.0);
             return (float)Math.Log(2.0 * Math.PI * R * Math.Max(0.2, lev) / (256.0 * Math.Max(1e-3, mpp)), 2.0);
+        }
+
+        bool eurooppaKirjattu;
+
+        /// <summary>
+        /// Hunnun tila Euroopan loitonnuksessa lokiin ("MATKAKIRJA kartta: eurooppa-loitonnus huntu …"): kerros, alfa, näkymän
+        /// alin taso ja arvio hunnun laattamäärästä näkyvällä alueella (Web Mercator, tasot ⌊z⌋ ja ⌈z⌉; Cesium valitsee tason
+        /// ruudun tarkkuudesta, joten määrä pysyy maan näkymän luokkaa).
+        /// </summary>
+        public string EurooppaTila(string tapahtuma)
+        {
+            if (kierto == null) return "MATKAKIRJA kartta: eurooppa-loitonnus huntu " + tapahtuma + ": ei kameraa";
+            double raja = EurooppaLoitonnus.HunnunKaukoraja(kaukoKorkeus, kierto.EuroopanKattoM);
+            float z = NakymanAlinTaso();
+            var kam = kierto.GetComponent<Camera>();
+            string laatat = "ei aluetta";
+            if (kam != null && kierto.georeferenssi != null && Pintaosuma.NakyvaAlue(kierto.georeferenssi, kam, kierto.pituus, out var a))
+            {
+                int z0 = Mathf.Clamp(Mathf.FloorToInt(z), 0, tasoMax), z1 = Mathf.Clamp(Mathf.CeilToInt(z), 0, tasoMax);
+                laatat = $"näkyvä alue lat {a.Lat0:0}…{a.Lat1:0} lon {a.Lon0:0}…{a.Lon1:0}, laattoja z{z0} " +
+                         $"{EurooppaLoitonnus.LaattojaAlueella(a.Lat0, a.Lat1, a.Lon0, a.Lon1, z0)} / z{z1} " +
+                         $"{EurooppaLoitonnus.LaattojaAlueella(a.Lat0, a.Lat1, a.Lon0, a.Lon1, z1)}";
+            }
+            string tila = kerros != null ? "päällä" : kaukana ? "pois (kaukoraja)" : ladattu == null ? "ei sarjaa" : "pois";
+            return $"MATKAKIRJA kartta: eurooppa-loitonnus huntu {tapahtuma}: {tila}, maa {Maa ?? "-"}, alfa {(alfaNyt < 0 ? 1f : alfaNyt):0.00}, " +
+                   $"näkymän alin taso z{z:0.0} (häivytys {AlinKaytetty - 0.5f:0.0}…{AlinKaytetty + 0.5f:0.0}), tasot z{tasoMin}–{tasoMax}, " +
+                   $"kaukoraja {raja / 1000:0} km (korkeus {kierto.korkeus / 1000:0} km), {laatat}";
         }
 
         void Poista()

@@ -198,6 +198,7 @@ namespace Matkakirja
         {
             peliSuodatin = kaupungit == null ? null : new HashSet<string>(kaupungit);
             peliMaa = kaupungit == null ? null : maa;
+            if (kaukoHimmeat) PaivitaKaukoHimmeat();
             Likaa();
         }
         HashSet<string> peliSuodatin;
@@ -233,7 +234,44 @@ namespace Matkakirja
         /// <summary>Sallivatko NaytaVain- ja pelisuodatin kaupungin (leikkaus).</summary>
         bool Suodatettu(string id) =>
             (suodatin == null || suodatin.Contains(id))
-            && (LinssiTila || peliSuodatin == null || peliSuodatin.Contains(id) || (himmeat != null && himmeat.Contains(id)));
+            && (LinssiTila || peliSuodatin == null || peliSuodatin.Contains(id) || (himmeat != null && himmeat.Contains(id))
+                || (kaukoHimmeat && kaukoJoukko.Contains(id)));
+
+        // ---- EUROOPPA-LOITONNUS (omistaja 11.10.2026 PT:n kautta, juna 182, kuumailmapallojen kohta c; EurooppaLoitonnus) ----
+        // Kun pelaaja loitontaa maan katon yläpuolelle Euroopan maassa (PalloKierto.EuroopanLoitonnuksessa), pelin rajauksen
+        // ulkopuoliset Euroopan kaupungit näkyvät himmeinä pisteinä olemassa olevalla himmeällä pohjalla (40 %, ei nimeä). Ne
+        // eivät ole napautettavia (pelaajan napautus ei saa siirtää eikä lentää); lähennettäessä ne katoavat.
+
+        bool kaukoHimmeat;
+        readonly HashSet<string> kaukoJoukko = new HashSet<string>();
+
+        void PaivitaKaukoHimmeat()
+        {
+            kaukoJoukko.Clear();
+            foreach (var m in merkit)
+            {
+                bool h = kaukoHimmeat && !LinssiTila && peliSuodatin != null && !peliSuodatin.Contains(m.kaupunki.id)
+                         && EurooppaLoitonnus.Euroopassa(m.kaupunki.lat, m.kaupunki.lon);
+                if (h) kaukoJoukko.Add(m.kaupunki.id);
+                if (m.kaukoHimmea == h) continue;
+                m.kaukoHimmea = h;
+                AsetaPisteenVari(m);
+            }
+            Likaa();
+        }
+
+        /// <summary>Euroopan loitonnuksen pisteet lokiin: himmeitä Euroopan kaupunkeja ja niistä näkyvissä, pelaajan pisteet.</summary>
+        public string EurooppaTila()
+        {
+            int k = 0, n = 0, oma = 0;
+            foreach (var m in merkit)
+            {
+                if (m.kaukoHimmea) { k++; if (m.juuri.gameObject.activeSelf) n++; }
+                else if (m.juuri.gameObject.activeSelf) oma++;
+            }
+            return $"{(kaukoHimmeat ? "himmeät päällä" : "himmeät pois")}, himmeitä {k} (näkyvissä {n}), muita näkyviä pisteitä {oma}, " +
+                   $"pelin rajaus {(peliSuodatin != null ? peliSuodatin.Count + " kaupunkia" : "ei")}";
+        }
 
         /// <summary>
         /// Pääkaupunkipiste (<see cref="kevyet"/>): linssin suodatin kuten kaupungeilla (luettelossa id), ei aloitusvalinnan aikana (vain
@@ -343,7 +381,7 @@ namespace Matkakirja
         void AsetaPisteenVari(Merkki m)
         {
             var r = m.pisteT.GetComponent<MeshRenderer>();
-            float nak = (m.usva < 0f ? 1f : m.usva) * (m.himmea ? HimmeanPeitto : 1f) * (m.paakaupunki ? m.kevytPeitto : 1f);
+            float nak = (m.usva < 0f ? 1f : m.usva) * (m.himmea || m.kaukoHimmea ? HimmeanPeitto : 1f) * (m.paakaupunki ? m.kevytPeitto : 1f);
             if (!m.korostus.HasValue && nak >= 0.999f) { r.SetPropertyBlock(null); return; }
             var v = m.korostus ?? (pisteMateriaali != null ? pisteMateriaali.GetColor("_BaseColor") : Color.black);
             v.a *= nak;
@@ -675,6 +713,7 @@ namespace Matkakirja
             public TextMeshPro lentoaika; // aloitusvalinnan lentoaika renkaan alla ("+6 h", v3f), luodaan tarvittaessa
             public bool valintamerkki; // valittava kaupunki: kohdemerkki, ei pistettä, nimi renkaan yläpuolella
             public bool himmea; // pelaajan näkymä: rajauksen ulkopuolinen pelin kaupunki, piste 40 %, ei nimeä
+            public bool kaukoHimmea; // Euroopan loitonnus: rajauksen ulkopuolinen Euroopan kaupunki, piste 40 %, ei nimeä, ei napautusta
             public Vector2 teksti; // nimen piirretty koko pisteinä (ilman pistettä ja rakoa)
             public bool lukittu; // nimen paikka lukittu (web LUKKO): vapautuu, kun kaupunki poistuu näkyvistä tai asu vaihtuu
             public NimiLadonta.NimenPaikka lukko; // pikseleinä
@@ -949,6 +988,7 @@ namespace Matkakirja
             var kalusteet = Kalusteet?.Invoke();
             foreach (var m in merkit)
             {
+                if (m.kaukoHimmea) continue; // Euroopan loitonnuksen himmeät pisteet eivät ole napautettavia
                 if (!Nakyvissa(m, kt, gt, kalusteet, out Vector3 p)) continue; // suodatetut ja takapuolen merkit
                 float d = Vector2.Distance(ruutu, p);
                 // Huomiorenkaan sisällä napautus osuu (raja suurempi säteistä: rengas 27 pt, osumaSade 44 pt).
@@ -1039,6 +1079,9 @@ namespace Matkakirja
         void LateUpdate()
         {
             if (merkit.Count == 0 || kamera == null) return;
+            // Euroopan loitonnus: himmeät pisteet päälle tai pois (kerran tilan vaihtuessa).
+            bool kauko = !LinssiTila && peliSuodatin != null && kierto != null && kierto.EuroopanLoitonnuksessa;
+            if (kauko != kaukoHimmeat) { kaukoHimmeat = kauko; PaivitaKaukoHimmeat(); }
             var kt = kamera.transform;
             var gt = georeferenssi.transform;
             // Kehyksen hinta (Pelikoodari 25.9.): kehystä ei piirretä (Ruudunpaivitys PAIKALLAAN, 59/60) → ei ladontaa.
@@ -1143,7 +1186,7 @@ namespace Matkakirja
                     Pakko = valinta,
                     // Siirtokohteen nimen piirtää kohdemerkki (Siirtokohdemerkit.NimeaaKaupungin): nimi kerran kuten webissä.
                     // UI-pariteetti rivi 2 (Fable 26.9., web on malli): aloitusvalinnan aikana vain valittavien nimet.
-                    Sallittu = valinta || (valintamerkkeja == 0 && (nimiotNakyvat || LinssiTila) && !m.himmea
+                    Sallittu = valinta || (valintamerkkeja == 0 && (nimiotNakyvat || LinssiTila) && !m.himmea && !m.kaukoHimmea
                                            && (!lattialla || m.etuoikeus == EtuRengas)
                                            && !(Siirtokohdemerkit.Instanssi?.NimeaaKaupungin(m.kaupunki.id) ?? false)),
                     X = ruutu.x, Y = ruutu.y,

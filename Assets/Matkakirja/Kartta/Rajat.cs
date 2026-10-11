@@ -9,7 +9,8 @@ namespace Matkakirja
     ///  - muste RAJA_MUSTE #6b5539, peitto RAJA_PEITTO 0,34 (lineaarisessa sekoituksessa <see cref="PeittoNatiivi"/>);
     ///  - leveys VEKTORIT_RAJA_LEVEYS_CSS 0,65–0,95 pt × Pistekerroin (Viivaleveys);
     ///  - katkoviiva RAJA_KATKO_YKS [0,011; 0,022] pallon yksikköä = 700,8 m mustetta, 1 401,6 m väliä (Rajaviiva _Katko);
-    ///  - vasta maanäkymästä sisäänpäin: tiheys ≥ VEKTORIT_RAJAT_PX_ASTE 30 px/° (kaukaa pistekuvio sulaisi läiskiksi).
+    ///  - vasta maanäkymästä sisäänpäin: tiheys ≥ VEKTORIT_RAJAT_PX_ASTE 30 px/° (kaukaa pistekuvio sulaisi läiskiksi);
+    ///    Euroopan loitonnuksessa 15 px/° kevyemmällä peitolla (EurooppaLoitonnus, omistaja 11.10.2026).
     /// Järjestys: <see cref="RajaJono"/> 2996, pelaajan maan kehän (2995) päällä ja rannikon (2997) alla (web: rajat ja ranta
     /// samassa renderOrderissa −0,5, korostus −0,55).
     ///
@@ -56,13 +57,28 @@ namespace Matkakirja
         protected override string Nimi => "Rajat";
         protected override int Jono => RajaJono;
         protected override Color Muste => RajaMuste;
-        public override float PeittoNyt => PeittoOhitus >= 0f && PeittoOhitus <= 1f ? PeittoOhitus : PeittoNatiivi;
+        /// <summary>
+        /// Peitto: komennon ohitus, muuten webin 0,34 lineaarisena; Euroopan loitonnuksessa (omistaja 11.10.2026, juna 182)
+        /// kevyempi kaukana: 0,55 × kynnyksellä 15 px/° → täysi 30 px/°:sta (EurooppaLoitonnus.RajojenPeitto).
+        /// </summary>
+        public override float PeittoNyt => PeittoOhitus >= 0f && PeittoOhitus <= 1f ? PeittoOhitus
+            : EurooppaVoimassa ? EurooppaLoitonnus.RajojenPeitto(PeittoNatiivi, NykyTiheys) : PeittoNatiivi;
         protected override double LeveysPt(double tiheys) => Viivaleveys.Pt(tiheys, Viivaleveys.RajaKaukana, Viivaleveys.RajaLahella);
         protected override int Pakotettu => PakotettuTaso;
         protected override bool LinssinPaallaOma => LinssinPaalla;
         protected override float KatkoM => (float)Vektorisolut.RajaKatkoM;
         protected override float ValiM => (float)Vektorisolut.RajaValiM;
-        protected override double MinTiheys => Vektorisolut.RajatTiheys;
+        /// <summary>
+        /// Piirtokynnys: webin 30 px/°; Euroopan maassa pelaajan rajojen ollessa voimassa 15 px/°, jotta rajat näkyvät kevyesti
+        /// koko Euroopan näkymässä (iPhone pysty ~25 px/°, iPad ~35–45 px/°). Kehittäjän maailmatila ennallaan.
+        /// </summary>
+        protected override double MinTiheys => EurooppaLoitonnus.RajojenMinTiheys(EurooppaVoimassa, Vektorisolut.RajatTiheys);
+        bool EurooppaVoimassa => kierto != null && kierto.EurooppaVoimassa;
+
+        /// <summary>Euroopan loitonnuksen kirjaus: tiheys, kynnys, peitto ja piirtyykö kerros.</summary>
+        public string EurooppaTila() =>
+            $"tiheys {NykyTiheys:0.0} px/° (kynnys {MinTiheys:0} px/°, Euroopan säännöllä {(EurooppaVoimassa ? "kyllä" : "ei")}), " +
+            $"peitto {PeittoNyt:0.000} lineaarisena (lähellä {PeittoNatiivi:0.000}), piirtyy {(Piirtyy && NykyTiheys >= MinTiheys ? "kyllä" : "ei")}";
         protected override string OmaSyy() => !Sallittu ? "komento pois" : !Nakyvissa ? "Rajat.Nakyvissa = false" : null;
     }
 }
