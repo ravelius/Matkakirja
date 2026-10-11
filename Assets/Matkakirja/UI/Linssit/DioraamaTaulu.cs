@@ -328,6 +328,7 @@ namespace Matkakirja.Natiivi
             avainsanaSanat = Rakenne.Teksti("", "mk-aikajana-havainne__kuvateksti", avainsana);
             Kirjasimet.Aseta(avainsanaSanat, Kirjasin.Antiikva);
             avainsanaSanat.style.fontSize = 19; avainsanaSanat.style.unityTextAlign = TextAnchor.UpperLeft;
+            if (UiKerros.Tabletti) avainsanaSanat.style.fontSize = Tyylikirja.Koko.Otsikko;   // iPad pykälää isompi (PT 11.10.)
             // Erottuvuus tummasta 3D-näkymästä (omistaja 11.10. 09.3x: "jääkauden jälkeen" tummaa vettä vasten): tumman teeman
             // kirkkain muste ja Ihmisen matkan kertomuksen leveä pehmeä varjo (0 2 14, tumma pinta 0,95) kapean 2 pt:n tilalle.
             var varjo = (Color)Tyylikirja.Tumma.Pinta; varjo.a = 0.95f;
@@ -687,12 +688,21 @@ namespace Matkakirja.Natiivi
         /// huonekortteja ei muuten näytetä (napautus kuuluu pelaajalle).</summary>
         public static void NaytaSeikkailunNimi(string nimi) { seikkailunNimi = nimi; seikkailunNimiAlku = Time.unscaledTime; }
         static string seikkailunNimi; static float seikkailunNimiAlku;
+        float? nimiKokoEnnen;
+        static float PykalaYlos(float k) => k < Tyylikirja.Koko.Valiotsikko ? Tyylikirja.Koko.Valiotsikko : k < Tyylikirja.Koko.Otsikko ? Tyylikirja.Koko.Otsikko : Tyylikirja.Koko.Arkki;
 
         void PaivitaSeikkailunNimi()
         {
             if (seikkailunNimi == null) return;
             float ika = Time.unscaledTime - seikkailunNimiAlku;
-            if (SeikkailuPelaaja.Aktiivinen == null || ika > NimiS + NimiHaivytysS) { seikkailunNimi = null; lauta.style.display = DisplayStyle.None; lauta.style.minWidth = 220; return; }
+            if (SeikkailuPelaaja.Aktiivinen == null || ika > NimiS + NimiHaivytysS)
+            {
+                seikkailunNimi = null; lauta.style.display = DisplayStyle.None; lauta.style.minWidth = 220;
+                if (nimiKokoEnnen is float k0) { otsikko.style.fontSize = k0; nimiKokoEnnen = null; }
+                return;
+            }
+            // iPadilla nimi pykälää isompi (PT 11.10.); alkuperäinen koko palaa nimen jälkeen.
+            if (UiKerros.Tabletti && nimiKokoEnnen == null) { nimiKokoEnnen = otsikko.resolvedStyle.fontSize; otsikko.style.fontSize = PykalaYlos(nimiKokoEnnen.Value); }
             otsikko.text = seikkailunNimi;
             teksti.style.display = lainaus.style.display = puhuja.style.display = kuunteleNappi.style.display = DisplayStyle.None;
             if (initiaaliEl != null) initiaaliEl.style.display = DisplayStyle.None;

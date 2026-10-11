@@ -98,3 +98,8 @@
     font-size: var(--tk-koko-valiotsikko);
     color: var(--tk-tumma-muste);
 }
+
+/* iPad (PT 11.10. iPad-arkista: teksti yhä pieni ruutuun nähden): tumman kortin leipä yhden asteikkopykälän isompi. */
+.mk-kortti-kehys--tumma.mk-kortti-kehys--tabletti .mk-kortti--pohja .mk-kortti__teksti {
+    font-size: var(--tk-koko-otsikko);
+}
