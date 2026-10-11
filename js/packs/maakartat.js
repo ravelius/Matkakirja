@@ -4451,7 +4451,8 @@ export const KAUPUNKIKARTAT = {
       // Juhana II:n hovi istui Paço da Ribeirassa nykyisen Kauppatorin
       // paikalla; hetken oma sivu on lehdessä, tämä on sen karttapaikka.
       {
-        nimi: 'Kolumbus 1484', tyyppi: 'henkilo', lat: 38.7066, lon: -9.1352,
+        // Rannalle Kauppatorin itäpuolelle (oli 38.7066/-9.1352 Tejon päällä; Karttaseppä 11.10.2026).
+        nimi: 'Kolumbus 1484', tyyppi: 'henkilo', lat: 38.708, lon: -9.1345,
         nosto: 'hetki-kolumbus-portugali-1484',
       },
     ],
@@ -4459,7 +4460,7 @@ export const KAUPUNKIKARTAT = {
   barcelona: {
     polku: 'assets/kartat/barcelona-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
-    rajat: { pohjoinen: 41.4085, etela: 41.37, lansi: 2.147, ita: 2.1984 },
+    rajat: { pohjoinen: 41.4105, etela: 41.37, lansi: 2.147, ita: 2.1984 }, // pohjoisreuna +0,002 (Roviran aukio irti reunasta, Karttaseppä 11.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
@@ -6396,7 +6397,8 @@ export const KAUPUNKIKARTAT = {
        */
       {
         nimi: 'Vädersolstavlan', tyyppi: 'taide', lat: 59.3258, lon: 18.0703,
-        nosto: 'syvennys-tukholma-aurinkotaulu', nimiPuoli: 'vasen',
+        // Ympyrä irti Kuninkaanlinnasta (15 px; Karttaseppä 11.10.2026).
+        nosto: 'syvennys-tukholma-aurinkotaulu', nimiPuoli: 'vasen', siirto: { x: -16, y: 12 },
       },
       {
         nimi: 'Norrström', lat: 59.3286, lon: 18.0713, nosto: 'syvennys-tukholma-lohi',
@@ -6420,7 +6422,8 @@ export const KAUPUNKIKARTAT = {
       },
       {
         nimi: 'Naamiaislaukaus', tyyppi: 'henkilo', lat: 59.3297, lon: 18.0706,
-        nosto: 'skandaali-naamiaisten-laukaus',
+        // Ympyrä irti Norrströmistä (14 px; Karttaseppä 11.10.2026).
+        nosto: 'skandaali-naamiaisten-laukaus', nimiPuoli: 'vasen', siirto: { x: -16, y: -12 },
       },
       {
         nimi: 'Kreuger', tyyppi: 'henkilo', lat: 59.3318, lon: 18.0696,
@@ -7266,7 +7269,7 @@ export const KAUPUNKIKARTAT = {
   pietari: {
     polku: 'assets/kartat/pietari-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
-    rajat: { pohjoinen: 59.9545, etela: 59.9215, lansi: 30.284, ita: 30.347 },
+    rajat: { pohjoinen: 59.9545, etela: 59.9195, lansi: 30.284, ita: 30.347 }, // eteläreuna −0,002 (Mariinski irti mittakaavajanasta, Karttaseppä 11.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linjaus kuin Tallinnassa):
      * esittely kertoo kohteet, ei kanavien ja katujen viivastoja.
@@ -7345,7 +7348,8 @@ export const KAUPUNKIKARTAT = {
       // Jänissaaren länsipää; Pietari-Paavalin linnoituksen piste on saman saaren
       // keskellä.
       {
-        nimi: 'Jänissaari 1703', tyyppi: 'henkilo', lat: 59.9515, lon: 30.312,
+        // Saaren länsiosaan (oli 59.9515/30.312 salmessa; Karttaseppä 11.10.2026).
+        nimi: 'Jänissaari 1703', tyyppi: 'henkilo', lat: 59.9505, lon: 30.3135,
         nosto: 'hetki-pietari-perustus-1703', nimiPuoli: 'vasen',
       },
       // Pietarin yliopisto, Vasilinsaari.
