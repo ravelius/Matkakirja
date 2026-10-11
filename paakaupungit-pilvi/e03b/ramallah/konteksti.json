@@ -1,0 +1,94 @@
+{
+ "id": "ramallah",
+ "era": "e03b",
+ "nimi": "Ramallah",
+ "nimiAlkukieli": "رام الله (Rām Allāh)",
+ "maa": "PSE",
+ "maanNimi": "Palestiina",
+ "asema": "hallinnon paikka",
+ "lat": 31.8969,
+ "lon": 35.2017,
+ "wikidata": "Q158119",
+ "kevytSisalto": {
+  "kuvaus": "Ramallah on Länsirannalla Juudean vuoristossa noin 870 metrin korkeudessa sijaitseva kaupunki, jossa Palestiinan hallinnon keskeiset toimielimet ovat toimineet 1990-luvulta lähtien. Palestiinalaiset ilmoittavat valtionsa pääkaupungiksi Itä-Jerusalemin, jonka asema on kiistanalainen, joten Ramallahia kutsutaan tässä hallinnon paikaksi. Kaupunki on tunnettu kahviloistaan, museoistaan, kulttuuritapahtumistaan ja lähellä sijaitsevasta Birzeitin yliopistosta.",
+  "tunnusrakennukset": [
+   "Mukataa (hallinnon keskus)",
+   "Mahmoud Darwish -museo",
+   "Al-Manaran aukio",
+   "Palestiinan kulttuuripalatsi (Ramallah Cultural Palace)"
+  ],
+  "asukkaat": {
+   "arvo": 38998,
+   "vuosi": 2017,
+   "lahde": "Palestiinan tilastokeskus (PCBS), väestö-, asunto- ja laitoslaskenta 2017, Ramallahin kaupunki (Wikipedia, joka viittaa PCBS:n 2017 laskentaan; 2007: 27 460). Wikipedian infoboxin 43 880 (2024) lähde on epäselvä, ei käytetty. Ramallahin-al-Bireh-kaupunkiseutu noin 362 000 (2016).",
+   "linkki": "https://en.wikipedia.org/wiki/Ramallah"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Palestiina on Välimeren ja Jordan-joen välisellä alueella sijaitseva Palestiinan valtio, johon kuuluvat Länsiranta ja Gazan kaista. Palestiinalaiset julistivat valtion itsenäiseksi vuonna 1988, ja YK:n yleiskokous antoi sille tarkkailijavaltion aseman vuonna 2012. Valtion tunnustaminen vaihtelee: osa maailman valtioista tunnustaa sen, osa ei, ja alueen hallinnolliset ja alueelliset järjestelyt ovat monimutkaiset ja kiistanalaiset. Palestiinalaiskulttuuri on tunnettu runoudesta, kirjonnasta ja keittiöstä.",
+  "genetiivi": "Palestiinan",
+  "kielet": [
+   {
+    "kieli": "arabia",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "englanti",
+    "asema": "muu"
+   },
+   {
+    "kieli": "heprea",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "ei omaa valuuttaa; käytössä Israelin uusi sekeli, Jordanian dinaari ja Egyptin punta",
+   "koodi": "ILS"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [
+  {
+   "id": "jerusalem",
+   "nimi": "Jerusalem",
+   "km": 13,
+   "lehti": [
+    {
+     "id": "kaupunki",
+     "nimi": "Jerusalem",
+     "nostot": [
+      "Muurit ovat nuoremmat kuin luulisi",
+      "Kolmetuhatta vuotta hautoja yhdellä rinteellä",
+      "Talo ja sen vesisäiliö samasta kuopasta",
+      "Ensimmäinen kortteli muurien ulkopuolella"
+     ]
+    },
+    {
+     "id": "tiede",
+     "nimi": "Vesi",
+     "nostot": [
+      "Lähde, joka ratkaisi kaupungin paikan",
+      "Viisisataakolmekymmentäkolme metriä kahdesta suunnasta",
+      "Allas, johon pysähdyttiin ennen temppeliä",
+      "Vettä Betlehemin altailta"
+     ]
+    }
+   ],
+   "kohdekartta": [
+    "Damaskoksen portti",
+    "Pyhän haudan kirkko",
+    "Kalliomoskeija",
+    "Läntinen muuri",
+    "Jaffan portti",
+    "Al-Aqsa-moskeija"
+   ]
+  }
+ ],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Ramallah",
+  "maanAvain": "Palestiinan valtio",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

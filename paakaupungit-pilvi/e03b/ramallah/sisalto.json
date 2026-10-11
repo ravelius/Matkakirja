@@ -1,0 +1,476 @@
+{
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "ramallah",
+ "maa": "PSE",
+ "era": "e03b",
+ "kaupunki": {
+  "id": "ramallah",
+  "name": "Ramallah",
+  "wiki": "Ramallah",
+  "ambience": "basaari",
+  "pallo": {
+   "lat": 31.8969,
+   "lon": 35.2017
+  }
+ },
+ "artikkeli": {
+  "intro": "Ramallah on Länsirannan keskiosassa Juudean vuoristossa, noin 870 metrin korkeudessa ja noin 10–15 kilometriä Jerusalemista pohjoiseen. Nimi tarkoittaa arabiaksi **Jumalan korkeutta**. Ramallahin kaupungissa asui vuonna 2017 noin 39 000 ihmistä; luku ei sisällä viereistä al-Birehiä, jota hallitaan erikseen. Kaupungissa toimii Palestiinan hallinnon keskeisiä toimielimiä, ja presidentin virasto on Mukataassa.\n\nIsoisän matkavuonna 1873 Ramallah oli vielä kivitalojen kylä Jerusalemin pohjoispuolella, jonka asukkaat olivat enimmäkseen kreikkalaisen riituksen kristittyjä. Kveekarit aloittivat kylässä tyttöjen koulutyön 1860-luvun lopulla, ja heidän Friends-koulunsa toimivat yhä. Omaksi kunnakseen Ramallah tuli 1900-luvun alussa.\n\nLähteen mukaan Ramallahia pidetään yleisesti palestiinalaiskaupunkien kulttuurisimpana, ja se on kotina monille runoilijoille, taiteilijoille ja muusikoille. Runoilija **Mahmoud Darwish** asui täällä ja on haudattu Kulttuuripalatsin viereen kukkulalle. Keskustan sydän on Al-Manaran aukio.",
+  "teksti": "Ramallah on Palestiinan hallinnon keskeisten toimielinten paikka Länsirannan keskiosassa. Kaupungin nimi tarkoittaa arabiaksi Jumalan korkeutta, ja sen keskikorkeus on noin 870 metriä merenpinnan yläpuolella.\n\n== Kylästä kaupungiksi ==\nRamallah mainitaan 1300-luvun alun säätiöasiakirjoissa, ja sen hedelmätarhat erottivat sen monista naapureista. Perimätiedon mukaan nykyisen kaupungin perustivat Haddadin-suvun veljekset, jotka tulivat Karakin seudulta 1500-luvulla. Isoisän matkavuonna 1873 paikka oli vielä kivitalojen kylä, ja omaksi kunnakseen se tuli 1900-luvun alussa.\n\n== Kulttuurin kaupunki ==\nRamallahissa on Mahmoud Darwish -museo, Kulttuuripalatsi ja Khalil Sakakini -kulttuurikeskus, jossa järjestetään näyttelyitä, runoiltoja ja elokuvanäytöksiä. Heti kaupungin eteläpuolella on Tell en-Nasbehin muinainen kukkula."
+ },
+ "kysymykset": [
+  {
+   "q": "Minkä runoilijan museo ja mausoleumi on Ramallahissa?",
+   "options": [
+    "Mahmoud Darwish",
+    "Khalil Gibran",
+    "Nizar Qabbani",
+    "Rabindranath Tagore"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Lähteen mukaan häntä pidetään laajasti palestiinalaisten kansallisrunoilijana.",
+   "fact": "Mahmoud Darwish asui Ramallahissa, ja hänen museonsa ja mausoleuminsa on kaupungissa. Hänen nimellään jaetaan myös vuosittain kansainvälinen luovuuspalkinto.",
+   "source": "https://en.wikipedia.org/wiki/Mahmoud_Darwish"
+  },
+  {
+   "q": "Mitä Ramallahin nimi tarkoittaa arabiaksi?",
+   "options": [
+    "Jumalan korkeus",
+    "Jumalan lähde",
+    "Jumalan portti",
+    "Jumalan laakso"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Nimen loppuosa on arabian sana, jota käytetään Jumalasta puhuttaessa.",
+   "fact": "Nimi tarkoittaa sanatarkasti Jumalan korkeutta, ja kaupunki on noin 870 metrin korkeudessa Juudean vuoristossa.",
+   "source": "https://en.wikipedia.org/wiki/Ramallah"
+  },
+  {
+   "q": "Minkä suvun perimätieto kertoo perustaneen nykyisen Ramallahin?",
+   "options": [
+    "Haddadin",
+    "Nashashibi",
+    "Tamimi",
+    "Khoury"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Suvun nimi tarkoittaa arabiaksi ammattia, jossa taotaan metallia.",
+   "fact": "Perimätiedon mukaan nykyisen Ramallahin perustivat Rashid al-Haddadinin viisi poikaa. Haddadin tarkoittaa arabiaksi seppiä.",
+   "source": "https://en.wikipedia.org/wiki/Ramallah"
+  },
+  {
+   "q": "Mitä Al-Manaran aukion nimi tarkoittaa nimen selityksen mukaan?",
+   "options": [
+    "majakkaa",
+    "kaupungin porttia",
+    "vanhaa siltaa",
+    "kyläkaivoa"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Nimi liittyy 1930-luvun sähkölaitteeseen, joka asennettiin tien varteen.",
+   "fact": "Aukion nimi juontuu siitä, että katuvalojen kytkintaulu asetettiin 1930-luvulla tolppaan Ramallahin ja al-Birehin väliselle multatielle, ja paikkaa alettiin kutsua majakaksi.",
+   "source": "https://en.wikipedia.org/wiki/Al-Manara_Square"
+  },
+  {
+   "q": "Minkä viereisen kaupungin kanssa Ramallah on kasvanut käytännössä yhteen, vaikka kaupungit hallitaan erikseen?",
+   "options": [
+    "al-Bireh",
+    "Birzeit",
+    "Beit Sahour",
+    "Beit Jala"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Kaupunki on Ramallahin välitön naapuri eikä lähikylä.",
+   "fact": "Al-Bireh on kasvanut Ramallahiin kiinni, mutta kaupungit ovat omat hallintoyksikkönsä.",
+   "source": "https://en.wikipedia.org/wiki/Ramallah"
+  }
+ ],
+ "tiedot": [
+  "Ramallahilaisten naisten puvuissa oli selkäpaneelissa usein ristipistoin kirjailtu palmunmotiivi, ja morsiamen smadeh-päähineen kolikkorivi oli samalla hänen varallisuuttaan.",
+  "Huhtikuussa 2010 Ramallahin seudulla valmistettiin jättimäinen musakhan, joka hyväksyttiin Guinnessin ennätyskirjaan; sen leivän halkaisija oli 4 metriä.",
+  "Ramallahissa toimivan Ashtar-teatterin draamakoulu on lähteen mukaan Palestiinan ensimmäinen draamakoulu."
+ ],
+ "valokuva": {
+  "tiedosto": "A bride's arrival before the house of her bridegroom - a wedding, Ramallah, Palestine - DPLA - 3b81a2b05b83c9447910b7487c7606e8 (page 1).jpg",
+  "vuosi": "1900",
+  "lahde": "Underwood & Underwood, Commons (PD)",
+  "lyhyt": "Häät Ramallahissa noin vuonna 1900: väkijoukko kokoontuu, kun morsian saapuu sulhasen talolle.",
+  "selite": "Kuva on Underwood & Underwoodin stereokuva, jossa kyläläisiä seisoo puun ja kivimuurin luona morsiamen saapuessa. Isoisän matkavuonna 1873 Ramallah oli vielä kivitalojen kylä, jonka asukkaat olivat enimmäkseen kreikkalaisen riituksen kristittyjä.",
+  "uusi": {
+   "tiedosto": "2010-08 Ramallah 43.jpg",
+   "lahde": "Ralf Lotys (Sicherlich), Commons (CC BY 3.0)",
+   "lyhyt": "Moskeija ja kerrostaloja Ramallahin rinteillä nykyään.",
+   "selite": "Kivitalojen kylästä on kasvanut kerrostalojen täyttämä kaupunki: Ramallahin kaupungissa asui vuonna 2017 noin 39 000 ihmistä."
+  }
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Ramallah",
+   "johdanto": "Isoisän matkavuonna 1873 Ramallah oli vielä kivitalojen kylä Jerusalemin pohjoispuolella, noin 870 metrin korkeudessa Juudean vuoristossa. Nykyään kaupunki on tunnettu kahviloistaan, museoistaan ja kulttuuritapahtumistaan, ja siellä toimii Palestiinan hallinnon keskeisiä toimielimiä.",
+   "kansikuvat": [
+    {
+     "tiedosto": "Ramallah Sunset.jpg",
+     "lyhyt": "Ramallah seisoo Juudean vuoristossa noin 870 metrin korkeudessa.",
+     "selite": "Kaupunki on rakentunut vuoriston harjanteelle ja rinteille Länsirannan keskiosassa, noin 10–15 kilometriä Jerusalemista pohjoiseen.",
+     "lahde": "Fjmustak, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+     "tiedosto": "Ramallah city.jpg",
+     "lyhyt": "Ramallahissa kirkot ja moskeijat kohoavat kaupungin kivitalojen yllä.",
+     "selite": "Kaupunki oli historiallisesti pääosin kristitty, ja nykyään muslimit muodostavat enemmistön ja kristityt merkittävän vähemmistön.",
+     "lahde": "AmeenSaeb, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+     "tiedosto": "Al Manara Square.jpg",
+     "lyhyt": "Al-Manaran aukio on Ramallahin keskusaukio: keskellä pylväs, leijonapatsaat ja suihkulähde.",
+     "selite": "Aukio on lähteen mukaan yksi Palestiinan tunnetuista julkisista tiloista, ja arabiaksi sen nimi on Maydan al-Manara.",
+     "lahde": "أمين, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Viisi veljestä ja kylä, joka asutettiin uudelleen",
+     "teksti": "Ramallah mainitaan 1300-luvun alun säätiöasiakirjoissa kylänä, jonka omenat, oliivit ja puuvilla tuottivat tuloja Hebronin Ibrahim-moskeijalle. Mamelukkikauden lopulla kylä rappeutui: vuoden 1525 verorekisterissä se oli asumaton tila, mutta 1530-luvun alussa jälleen asuttu. Perimätiedon mukaan nykyisen Ramallahin perustivat Rashid al-Haddadinin viisi poikaa, jotka tulivat Karakin seudulta nykyisen Jordanian puolelta; Haddadin tarkoittaa arabiaksi seppiä. Suvun kerrotaan väittäneen polveutuvansa ghassanideista, muinaisesta arabikristittyjen heimoliitosta. 1500-luvun lopun verorekisterissä kylässä oli noin 80 taloutta, joista valtaosa kristittyjä.",
+     "tiedosto": "Panorama Ramallah hills.jpg",
+     "lyhyt": "Kukkuloita ja oliivipuita Ramallahin ympäristössä Juudean vuoristossa.",
+     "selite": "Mamelukkien aikaan kylän tuloja kerryttivät muun muassa oliivit ja omenat, ja hedelmätarhat erottivat sen monista naapureista.",
+     "lahde": "Fjmustak, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Ramallah"
+    },
+    {
+     "otsikko": "Kivitalojen kylä isoisän aikaan",
+     "teksti": "Isoisän matkavuonna 1873 Ramallah oli vielä kivitalojen kylä Jerusalemin alueella. Amerikkalainen Edward Robinson kirjasi seudulla käydessään 1830-luvulla, että asukkaat olivat kreikkalaisen riituksen kristittyjä; väkeä oli arviolta alle tuhat. Kylä maksoi veroa viljana Jerusalemin pyhälle alueelle. 1800-luvun lopulla Palestine Exploration Fund kuvasi kylää suureksi kristityksi kyläksi, jossa oli hyvin rakennettuja kivitaloja korkealla harjanteella ja näkymä länteen merelle asti.",
+     "tiedosto": "2010-08 Ramallah 11.jpg",
+     "lyhyt": "Kivinen asuinrakennus kaari-ikkunoineen ja tiilikattoineen Ramallahissa.",
+     "selite": "Kuvan talo on kivirakenteinen; 1800-luvun lopulla kylää kuvattiin hyvin rakennettujen kivitalojen kyläksi.",
+     "lahde": "Ralf Lotys (Sicherlich), Wikimedia Commons (CC BY 3.0)",
+     "wiki": "Ramallah"
+    },
+    {
+     "otsikko": "Kveekarikoulusta Detroitiin",
+     "teksti": "Amerikkalaiset kveekarit perustivat Ramallahiin kouluja naisten ja tyttöjen koulutuksen parantamiseksi. Jones-pariskunta aloitti tyttöjen koulutyön vuonna 1869, ja 1880-luvun lopulta koulu toimi sisäoppilaitoksena, jonne tuli oppilaita Jerusalemista, Lyddasta, Jaffasta ja Beirutista. Poikien koulun rakentaminen alkoi 1900-luvun alussa. Pian kauppiaat lähtivät Yhdysvaltoihin ja perustivat tuonti- ja vientiliikkeitä, jotka myivät mattoja. Ramallahilaisten siirtolaisten yhteisö on lähteen mukaan yksi Yhdysvaltain suurimmista arabiyhteisöistä, erityisesti Michiganissa, ja Detroitissa perustettiin 1950-luvun lopulla American Federation of Ramallah.",
+     "tiedosto": "Friends School.2.JPG",
+     "lyhyt": "Friends Boys School -rakennus Ramallahin Friends-koulujen yläkoulun kampuksella.",
+     "selite": "Ramallahin Friends-koulut ovat kveekarien perustamia: tyttöjen koulutyö alkoi 1860-luvun lopulla, ja poikien koulun rakentaminen alkoi 1900-luvun alussa.",
+     "lahde": "Friends123, Wikimedia Commons (CC0)",
+     "wiki": "Ramallah Friends School"
+    },
+    {
+     "otsikko": "Radiota ja huviloita: mandaattiajan Ramallah",
+     "teksti": "Brittiläisen mandaatin aikana Ramallah kehittyi, ja 1920-luvulla paikallinen arabiylempi luokka rakennutti kaupunkiin monikerroksisia huviloita, joista monet ovat yhä pystyssä. Sähkö tuli kaupunkiin 1930-luvulla. Vuonna 1936 aloittaneen Palestine Broadcasting Servicen pääasiallinen lähetin sijaitsi Ramallahissa, vaikka studiot olivat Jerusalemissa; lähetykset olivat arabiaksi, hepreaksi ja englanniksi. 2000-luvun rakennusbuumi on nostanut uusia asuin- ja hotellirakennuksia erityisesti Al-Masyounin hienostuneeseen ja moderniin kaupunginosaan.",
+     "tiedosto": "Old Mansion in Ramallah Palestine 2023.jpg",
+     "lyhyt": "Kaksikerroksinen kivitalo kaari-ikkunoineen ja ulkoportaineen Ramallahissa.",
+     "selite": "Kuvan kivitalossa on kaari-ikkunoita ja ulkoportaat; Ramallahiin rakennettiin 1920-luvulla monikerroksisia huviloita.",
+     "lahde": "Manintheopt, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Ramallah"
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "شارع السهل، رام الله.jpg",
+     "lyhyt": "Sahl-katu Ramallah Tahtan alueella, jossa on lehtipuita ja kahvilaterasseja.",
+     "selite": "Ramallah Tahta tarkoittaa alempaa Ramallahia, ja alue tunnetaan vanhana kaupunkina kirkkoineen ja moskeijoineen.",
+     "lahde": "Yousef Odeh Photos, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "kappale": "Ramallahiin ei lennetä, vaan sinne tullaan Jerusalemista bussilla tai yhteistaksilla. Matka kulkee tarkastuspisteen kautta, ja liikkuminen voi olla rajoitettua; tilanne vaihtelee, joten selvitä ajankohtainen turvallisuustilanne ennen lähtöä. Keskusta on pieni ja kävelyyn sopiva, ja Al-Manaran aukio on sen sydän. Kaupungissa puhutaan arabiaa, ja monet osaavat englantia. Ilmasto on Välimeren tyyppinen: kesä on kuiva ja talvi leuto ja sateinen.",
+    "artikkeli": {
+     "nimi": "Matkailijan Ramallah",
+     "taitto": "opas",
+     "teksti": "Kaupunki, jossa vanhat kivitalot, kahvilakadut ja kulttuurikeskukset sijaitsevat vuoriston harjanteella: aamulla mehubaari Al-Manaran aukiolla, päivällä kirkot ja koulut, illalla Kulttuuripalatsin kukkula.",
+     "nosto": "Keskusta on pieni ja kävelyyn sopiva. Kulttuuripalatsi ja Mahmoud Darwish -museo sijaitsevat kukkulalla kaupungin lounaislaidalla.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Ramallahissa ei ole matkustajalentoja liikennöivää lentoasemaa. Lähimmät kansainväliset kentät ovat Ben Gurionin kansainvälinen lentoasema (TLV) Lodissa ja Queen Alia -lentoasema (AMM) Jordanian Ammanissa. Perille tullaan Jerusalemista bussilla tai yhteistaksilla, ja matka on noin 10–15 kilometriä. Matka kulkee tarkastuspisteen kautta, ja liikkuminen voi olla rajoitettua; tilanne vaihtelee, joten selvitä ajankohtainen turvallisuustilanne ennen lähtöä. Jerusalemista tulevat bussit päättyvät Al-Manaran aukion lähelle, ja kaupungissa on useita linja-autoasemia. Keskusta on pieni ja kävelyyn sopiva. Taksilla ja yhteistaksilla (serviis) pääsee lähiöihin ja ympäryskyliin, ja hinta kannattaa sopia ennen kyytiin nousua.",
+       "kuva": {
+        "tiedosto": "Streets in Ramallah 01.jpg",
+        "lyhyt": "Kerrostalojen reunustama katu Ramallahissa.",
+        "selite": "Keskusta on pieni ja kävelyyn sopiva, ja taksilla ja yhteistaksilla pääsee lähiöihin ja ympäryskyliin.",
+        "lahde": "Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      },
+      {
+       "otsikko": "Al-Manaran aukio ja keskusta",
+       "teksti": "Al-Manaran aukio on kaupungin keskusaukio. Sen vieressä on Silwadi-mehubaari, joka tarjoaa tuorepuristettuja mehuja. Hisbeh-tuoretori on lähellä aukiota, ja sieltä saa hedelmiä ja vihanneksia. Keskustan kaduilla on paljon falafel- ja shawarma-paikkoja ja kahviloita, ja keskusta on ruuhkainen päivisin. Al-Masyoun on hienostuneempi ja uudempi kaupunginosa ravintoloineen ja kahviloineen, ja siellä sijaitsevat myös monet edustustot.",
+       "kuva": {
+        "tiedosto": "Ramallah market 06.jpg",
+        "lyhyt": "Katettu vihannestori Ramallahissa.",
+        "selite": "Ramallahin toreilla myydään tuoreita hedelmiä ja vihanneksia.",
+        "lahde": "Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      },
+      {
+       "otsikko": "Vanha kaupunki, kirkot ja koulut",
+       "teksti": "Ramallahin vanha kaupunki, Ramallah Tahta, ei muistuta tyypillistä medinaa, mutta siellä on useita kirkkoja ja moskeijoita. Dar Zahran Heritage Building on suojeltu, suvun omistama rakennus ja historiamuseo vanhassa kaupungissa. Kirkastuksen kirkko on bysanttilaistyylinen basilika, ja lähteen mukaan se vihittiin 1800-luvun puolivälissä. Pyhän perheen kirkko ja kveekarien Friends-koulut ovat vanhan kaupungin tuntumassa; alakoulun kampus on vanhan kaupungin keskustan lähellä ja yläkoulu al-Birehin puolella.",
+       "kuva": {
+        "tiedosto": "Ramallah stunning Old city.jpg",
+        "lyhyt": "Vanha kalkkikivitalo kaksoisikkunoineen Ramallahin vanhassa kaupungissa.",
+        "selite": "Ramallahin vanha kaupunki ei muistuta tyypillistä medinaa, mutta siellä on useita kirkkoja ja moskeijoita.",
+        "lahde": "Fateen888, Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Falafel ja hummus-pitavoileivät ovat arkiruokaa, ja leipomoissa myydään kmaaj-pitaleipää. Musakhania pidetään usein Palestiinan kansallisruokana: se on uunissa paistettua kanaa sipulin, sumakin ja pinjansiementen kanssa leivän päällä, ja se kuuluu myös Ramallahin ravintoloiden listoille. Mansaf, karitsaa ja riisiä jogurttikastikkeessa, on Länsirannan keskiosan perinneruoka juhliin ja suuriin kokoontumisiin. Arabialainen jäätelö on sitkeämpää ja tahmeampaa kuin länsimainen. Juomista tarjolla on arabialaista kahvia, minttuteetä, sahlebia ja tuoremehuja, ja kahviloissa poltetaan vesipiippua.",
+       "kuva": {
+        "tiedosto": "Mussakhan.jpg",
+        "lyhyt": "Musakhan on uunissa paistettua kanaa sipulin, sumakin ja pinjansiementen kanssa leivän päällä.",
+        "selite": "Musakhan on lähtöisin Tulkarmin ja Jeninin seudulta, ja se tehdään perinteisesti oliivisadon aikaan.",
+        "lahde": "Alice Wiegand, Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Ramallahin ilmasto on Välimeren tyyppinen: kesä on kuiva, talvi leuto ja sateinen, ja joinakin vuosina sataa lunta. Esityksiä ja konsertteja varten kannattaa katsoa Kulttuuripalatsin ohjelma, sillä palatsi on kaupungin pääpaikka niille."
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Al-Manaran aukio ja Silwadin tuoremehut",
+        "tahdet": 3,
+        "selite": "Kaupungin keskusaukio, jonka vieressä on mehubaari."
+       },
+       {
+        "mita": "Kulttuuripalatsi ja Mahmoud Darwish -museo",
+        "tahdet": 3,
+        "selite": "Kukkulalla sijaitseva kulttuurikeskus ja runoilijan museo."
+       },
+       {
+        "mita": "Vanha kaupunki ja Dar Zahran",
+        "tahdet": 2,
+        "selite": "Kivitaloja, kirkkoja ja suojeltu Dar Zahranin rakennus."
+       },
+       {
+        "mita": "Khalil Sakakini -kulttuurikeskus",
+        "tahdet": 2,
+        "selite": "Näyttelyitä, runoiltoja ja elokuvanäytöksiä kunnostetussa vanhassa talossa."
+       },
+       {
+        "mita": "Tell en-Nasbehin kukkula",
+        "tahdet": 1,
+        "selite": "Muinainen kumpu heti kaupungin eteläpuolella, jonka ympäri voi kävellä."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Tarkastuspiste matkalla",
+        "teksti": "Matka Ramallahiin kulkee tarkastuspisteen kautta, ja liikkuminen voi olla rajoitettua. Tilanne vaihtelee, joten selvitä ajankohtainen turvallisuustilanne ennen lähtöä."
+       },
+       {
+        "otsikko": "Ei omaa valuuttaa",
+        "teksti": "Palestiinalla ei ole omaa valuuttaa. Ramallahissa hinnat ovat yleensä Israelin uusina sekeleinä; myös Jordanian dinaari on käytössä."
+       },
+       {
+        "otsikko": "Kielet",
+        "teksti": "Arabia on virallinen kieli; monet bussinkuljettajat osaavat perusenglantia."
+       },
+       {
+        "otsikko": "Aukioloajat vaihtelevat",
+        "teksti": "Kirkot, moskeijat ja museot ovat toimivia paikkoja, ja aukioloajat vaihtelevat. Mukataa on suljettu yleisöltä."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "kirjallisuus",
+   "nimi": "Runoilijan kaupunki",
+   "johdanto": "Runoilija Mahmoud Darwish asettui 1990-luvulla Ramallahiin ja on haudattu kaupungin Kulttuuripalatsin viereen kukkulalle. Hänen mukaansa on nimetty museo ja kansainvälinen palkinto, ja kaupungissa järjestetään runoiltoja, elokuvanäytöksiä ja näyttelyitä.",
+   "tehtava": {
+    "kysymys": "Minkä Ramallahin rakennuksen viereen runoilija Mahmoud Darwish on haudattu?",
+    "vaihtoehdot": [
+     "Kulttuuripalatsi",
+     "Kirkastuksen kirkko",
+     "Friends-koulu",
+     "Al-Kasaba-teatteri"
+    ],
+    "oikea": 0,
+    "fakta": "Kulttuuripalatsi on oikea vastaus: runoilijan museo ja hautapaikka ovat samalla kukkulalla palatsin vieressä."
+   },
+   "nostot": [
+    {
+     "otsikko": "Runoilija, joka muutti Ramallahiin",
+     "teksti": "Mahmoud Darwishia pidetään lähteen mukaan laajasti Palestiinan kansallisrunoilijana. Hän syntyi al-Birwan kylässä Galileassa ja oli perheen toinen lapsi; äiti ei osannut lukea, ja isoisä opetti hänet lukemaan. Ensimmäinen runokokoelma ilmestyi lähteen mukaan, kun hän oli 19-vuotias, ja elinaikanaan hän julkaisi yli 30 runokokoelmaa. Hän toimi myös useiden kirjallisuuslehtien toimittajana. Hän muutti Ramallahiin 1990-luvulla ja kuoli vuonna 2008. Hänet on haudattu Kulttuuripalatsin viereen kukkulan laelle, josta on näkymä Jerusalemiin.",
+     "tiedosto": "Mahmoud Darwish Museum IMG 4054.jpg",
+     "lyhyt": "Kirjoituspöytä ja kehystettyjä asiakirjoja Mahmoud Darwish -museon näyttelytilassa.",
+     "selite": "Museo ja mausoleumi on omistettu runoilijalle, joka muutti Ramallahiin 1990-luvulla.",
+     "lahde": "بدارين, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Mahmoud Darwish"
+    },
+    {
+     "otsikko": "Runo, jota käännettiin ja luettiin",
+     "teksti": "Aluksi Darwish kirjoitti klassisen arabialaisen runon mukaan yksiloppuisia säkeitä, mutta 1970-luvulla hän siirtyi vapaaseen mittaan, ja kieli muuttui henkilökohtaisemmaksi ja joustavammaksi. Hän kirjoitti arabiaksi, mutta puhui myös englantia, ranskaa ja hepreaa. Vaikuttajikseen hän mainitsi irakilaisrunoilijat Abd al-Wahhab al-Bayatin ja Badr Shakir al-Sayyabin sekä ranskalaisen Arthur Rimbaud'n ja amerikkalaisen Allen Ginsbergin. Hänen runojaan ja muuta kirjallisuuttaan on lähteen mukaan julkaistu 20 kielellä, ja useita hänen kokoelmiaan on käännetty myös hepreaksi.",
+     "tiedosto": "Mahmoud Darwish Museum IMG 4051.jpg",
+     "lyhyt": "Mustekyniä ja mustepullo Mahmoud Darwish -museon vitriinissä.",
+     "selite": "Vitriinin kyltin mukaan esineet kuuluivat runoilijan omaisuuteen.",
+     "lahde": "بدارين, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Mahmoud Darwish"
+    },
+    {
+     "otsikko": "Palkinto runoilijan nimellä",
+     "teksti": "Mahmoud Darwish -säätiö perustettiin 4. lokakuuta 2008 palestiinalaiseksi voittoa tavoittelemattomaksi säätiöksi turvaamaan runoilijan kulttuurista, kirjallista ja älyllistä perintöä. Seuraavana päivänä Berliinin kansainvälisellä kirjallisuusfestivaalilla järjestettiin maailmanlaajuinen lukutilaisuus runoilijan muistoksi. Säätiö jakaa vuosittain Mahmoud Darwish -luovuuspalkinnon Palestiinan ja muiden maiden älymystölle; sen sai vuonna 2010 eteläafrikkalainen runoilija Breyten Breytenbach, ja vuonna 2017 yhdessä muiden kanssa egyptiläinen kirjailija Salwa Bakr ja intialainen kirjailija Arundhati Roy.",
+     "tiedosto": "حديقة متحف محمود درويش - رام الله.jpg",
+     "lyhyt": "Mahmoud Darwish -museon puutarha kukkulalla Ramallahissa.",
+     "selite": "Runoilijan nimeä kantava säätiö jakaa vuosittain kansainvälisen luovuuspalkinnon.",
+     "lahde": "Hadi Hijjawi, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Mahmoud Darwish"
+    },
+    {
+     "otsikko": "Sakakini-keskus: näyttelyitä, runoiltoja ja elokuvia",
+     "teksti": "Khalil Sakakini -kulttuurikeskus on palestiinalainen taide- ja kulttuurijärjestö Ramallahissa, ja se on nimetty jerusalemilaisen oppineen ja runoilijan Khalil Sakakinin mukaan. Keskus toimii kunnostetussa 1900-luvun alun rakennuksessa, joka perustuu perinteiseen palestiinalaiseen rakentamistapaan. Keskus perustettiin 1990-luvulla, ja sen ensimmäinen johtaja oli kirjailija ja tutkija Adila Laïdi-Hanieh. Siellä järjestetään taidenäyttelyitä, kirja- ja runolukuiltoja, lasten toimintaa ja elokuvanäytöksiä. Laïdi-Hanieh toimi myöhemmin Palestiinan museon pääjohtajana.",
+     "tiedosto": "WikiArabia 2016 Tech Meetup Ramallah 55.JPG",
+     "lyhyt": "Khalil Sakakini -kulttuurikeskuksen talo ulkoportaineen Ramallahissa.",
+     "selite": "Keskus toimii kunnostetussa 1900-luvun alun rakennuksessa, joka perustuu perinteiseen palestiinalaiseen rakentamistapaan.",
+     "lahde": "Ja'afar Hajeer, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Khalil Sakakini Cultural Center"
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Ramallahin kartta kattaa kaupungin ytimen: Al-Manaran aukion ja Al-Kasaba-teatterin, vanhan kaupungin Pyhän perheen kirkon ja Friends-koulut sekä lounaisella kukkulalla olevan Kulttuuripalatsin ja Darwish-museon. Kaupungin eteläpuolella nousee Tell en-Nasbehin muinainen kukkula.",
+  "rajat": {
+   "pohjoinen": 31.908,
+   "etela": 31.8824,
+   "lansi": 35.1877,
+   "ita": 35.2196
+  },
+  "kohteet": [
+   {
+    "nimi": "Al-Manaran aukio",
+    "tyyppi": "aukio",
+    "lat": 31.905,
+    "lon": 35.20444
+   },
+   {
+    "nimi": "Al-Kasaba-teatteri",
+    "lat": 31.90247,
+    "lon": 35.20392
+   },
+   {
+    "nimi": "Pyhän perheen kirkko",
+    "lat": 31.905,
+    "lon": 35.19972
+   },
+   {
+    "nimi": "Ramallahin Friends-koulut",
+    "lat": 31.9054,
+    "lon": 35.2081
+   },
+   {
+    "nimi": "Kulttuuripalatsi ja Mahmoud Darwish -museo",
+    "lat": 31.8917,
+    "lon": 35.1909
+   },
+   {
+    "nimi": "Tell en-Nasbeh",
+    "tyyppi": "luonto",
+    "lat": 31.88514,
+    "lon": 35.21642
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Al-Manaran aukio": {
+   "aika": "1900-luku",
+   "teksti": "Al-Manaran aukio (arabiaksi Maydan al-Manara) on Ramallahin keskusaukio ja lähteen mukaan yksi Palestiinan tunnetuista julkisista tiloista. Isoisän matkavuonna 1873 aukiota ei vielä ollut: paikalla kulki multatie, joka yhdisti Ramallahin ja viereisen al-Birehin. Tie sai 1900-luvun alussa yhä enemmän merkitystä, ja 1930-luvulla Ramallah ja al-Bireh yhdistettiin sähköverkkoon. Katuvalojen kytkintaulu asetettiin tolppaan tien varteen, ja paikkaa alettiin kutsua al-Manaraksi eli majakaksi.\n\n1950-luvun alussa tolppa korvattiin muistomerkillä, jossa kivipylvään ympärillä oli viisi leijonaa; ne edustivat viittä sukua, jotka kaikki polveutuvat Rashid al-Haddadinin suvusta. Leijonat ovat lähteen mukaan perinteisiä rohkeuden, voiman ja ylpeyden symboleita, ja nykyisessä muistomerkissä ne ovat pylvään juurella suihkulähteen ja kukkapenkkien ympärillä. Muistomerkki rakennettiin myöhemmin uudelleen alkuperäisen mallin mukaan, ja työ valmistui vuoden 2000 paikkeilla.\n\nAukion laidalla toimii Silwadi-mehubaari, ja Hisbeh-tuoretori on lähellä aukiota.",
+   "kuvat": [
+    {
+     "tiedosto": "2010-08 Ramallah 22.jpg",
+     "lyhyt": "Al-Manaran aukio Ramallahissa: pylväs ja leijonapatsaat pylvään juurella.",
+     "selite": "Aukion muistomerkin leijonat edustavat Ramallahin perustajasukuja, jotka polveutuvat Haddadin-suvusta.",
+     "lahde": "Ralf Lotys (Sicherlich), Wikimedia Commons (CC BY 3.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Pyhän perheen kirkko": {
+   "aika": "1910-luku",
+   "teksti": "Pyhän perheen kirkko on Ramallahin latinalaiskatolinen kirkko. Isoisän matkavuonna 1873 kirkkoa ei vielä ollut: latinalaiskatolinen yhteisö oli pieni, ja messu vietettiin talossa. Katolisia asettui Ramallahiin 1800-luvun jälkipuoliskolla sen jälkeen, kun Pyhän Joosefin sisaret ja Rosary-sisaret olivat perustaneet kouluja. Kirkon rakentamislupa myönnettiin vasta useita vuosikymmeniä myöhemmin, ja rakentaminen alkoi 1910-luvun alussa ottomaanien viranomaisten luvalla.\n\nKirkon yhteydessä on pappila, luostari ja koulu. Katolinen kirkko on kaupungin toiseksi suurin kristillinen kirkkokunta, ja Pyhän Joosefin tyttökoulu ja Al-Ahliyyah College ovat katolisia kouluja.",
+   "kuvat": [
+    {
+     "tiedosto": "2010-08 Ramallah 56.jpg",
+     "lyhyt": "Pyhän perheen kirkon pitkä kylki ja nelikulmainen kellotorni Ramallahissa.",
+     "selite": "Kirkon rakentaminen alkoi 1910-luvun alussa ottomaanien viranomaisten luvalla.",
+     "lahde": "Ralf Lotys (Sicherlich), Wikimedia Commons (CC BY 3.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Ramallahin Friends-koulut": {
+   "aika": "1860-luvun loppu",
+   "teksti": "Ramallahin Friends-koulut ovat amerikkalaisten kveekarien perustamia. Isoisän matkavuonna 1873 tyttöjen koulutyö oli jo alkanut: Jones-pariskunta aloitti sen 1860-luvun lopulla, ja koulun myöhempi nimi oli Ramallahin tyttöjen koulutuskoti. Koulu syntyi ottomaanien aikana Jerusalemin hallintoalueella. Poikien koulun rakentaminen alkoi 1900-luvun alussa. Alakoulun kampus, entinen tyttökoulu, on vanhan kaupungin keskustan lähellä, ja yläkoulun kampus, entinen poikakoulu, on al-Birehin puolella.\n\nKoulu on avoin tytöille ja pojille, ja opetus on arabiaksi ja englanniksi; nykyään koulut tarjoavat kansainvälistä IB-ohjelmaa. Entisiin oppilaisiin kuuluvat kansanperinteen tutkija Widad Kawar, joka on tutkinut palestiinalaisia pukuja, sekä kirjailija ja historioitsija Serene Husseini Shahid.",
+   "kuvat": [
+    {
+     "tiedosto": "Ramallah Friends Schools2.JPG",
+     "lyhyt": "Friends-koulun piha ja Friends Boys School -rakennus Ramallahissa.",
+     "selite": "Rakennus kuuluu kveekarien kouluihin, joiden tyttöjen koulutyö alkoi 1860-luvun lopulla.",
+     "lahde": "Palobserver, Wikimedia Commons (CC0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Kulttuuripalatsi ja Mahmoud Darwish -museo": {
+   "aika": "2000-luku",
+   "teksti": "Ramallahin Kulttuuripalatsi (Ramallah Cultural Palace) avattiin 2000-luvun alussa. Isoisän matkavuonna 1873 kukkulalla ei vielä ollut kumpaakaan rakennusta. Lähteen mukaan palatsi on Palestiinan hallinnoimilla alueilla ainoa laatuaan oleva kulttuurikeskus: siellä on noin 700-paikkainen sali, kokoushuoneita, näyttelysaleja ja elokuvatiloja. Hankkeen toteuttivat yhdessä Palestiinan hallinto, YK:n kehitysohjelma UNDP ja Japanin hallitus, ja palatsi on kaupungin pääpaikka esityksille ja konserteille.\n\nPalatsin viereen kukkulan laelle on haudattu runoilija Mahmoud Darwish, jonka muistolle on Ramallahissa museo ja mausoleumi. Museo on aivan palatsin lähellä, kadun toisella puolella.",
+   "kuvat": [
+    {
+     "tiedosto": "Mahmoud Darwish Museum IMG 4086.jpg",
+     "lyhyt": "Mahmoud Darwish -museon piha Ramallahissa: pitkä vesiallas kalkkikivimuurien välissä.",
+     "selite": "Museo ja mausoleumi on rakennettu runoilijan muistolle Kulttuuripalatsin viereen.",
+     "lahde": "بدارين, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Tell en-Nasbeh": {
+   "aika": "rautakausi",
+   "teksti": "Tell en-Nasbeh on pieni muinainen kumpu heti Ramallahin eteläpuolella, ja se on yksi kolmesta kohteesta, jotka usein yhdistetään Raamatun Mispaan; muut ehdokkaat ovat Nabi Samwil ja Shuafat. Isoisän matkavuonna 1873 kohdetta ei vielä ollut kaivettu.\n\nKumpu sijaitsi muinaisen tien varrella Jerusalemista pohjoiseen, ja rautakaudella se oli Juudan pohjoinen rajalinnoitus. Rautakaudella paikka oli muurein ja massiivisin kaupunginportein ympäröity asutus, ja babylonialaisten aikaan Jerusalemin tuhon jälkeen Mispa nousi lähteen mukaan alueen hallintokeskukseksi. Kaivauksia tehtiin 1920- ja 1930-luvuilla yhdysvaltalaisen William Frederic Badèn johdolla, ja ne olivat lähteen mukaan yksi alueen varhaisimmista tieteellisistä kaivauksista. Löydöt, tuhansia esineitä, ovat Badèn museossa Berkeleyssä. Kukkulan ympäri voi kävellä.",
+   "kuvat": [
+    {
+     "tiedosto": "Tel a-Nasba.jpg",
+     "lyhyt": "Tell en-Nasbeh, jonka usein katsotaan olevan raamatullinen Mispa, ilmasta kuvattuna.",
+     "selite": "Kumpua ympäröivät nykyään kaupungin kerrostalot, ja sen kaivauksia tehtiin 1920- ja 1930-luvuilla.",
+     "lahde": "דניאל צבי, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Al-Kasaba-teatteri": {
+   "aika": "vuosituhannen vaihde",
+   "teksti": "Al-Kasaba (arabiaksi القصبة) on teatteri ja elokuva-arkisto, Al-Kasaba Theatre and Cinematheque, Ramallahin keskustassa lähellä Al-Manaran aukiota ja Khalil Sakakini -kulttuurikeskusta. Isoisän matkavuonna 1873 sitä ei vielä ollut: toiminta alkoi vasta vuonna 1970 Jerusalemissa, ja Ramallahin teatteri ja elokuvateatteri avattiin vuosituhannen vaihteessa entisen elokuvateatterin tiloihin.\n\nLähteen mukaan Al-Kasaba on yksi harvoista alueen paikoista, joissa palestiinalaiset taiteilijat, näyttelijät ja elokuvantekijät voivat tuottaa ja esittää töitään. Sen salit tarjoavat tilan sekä palestiinalaisille että kansainvälisille esitysryhmille, ja siellä esitetään näytelmiä, tanssia, elokuvia ja konsertteja sekä järjestetään konferensseja.\n\nTeatteri on yksi Ramallahin kulttuuripaikoista Kulttuuripalatsin ja Khalil Sakakini -kulttuurikeskuksen rinnalla.",
+   "kuvat": [
+    {
+     "tiedosto": "Théâtre Al-Kasaba en 2017.jpg",
+     "lyhyt": "Al-Kasaba-teatterin sisäänkäynti Ramallahissa: kaarikatos ja arabian- ja englanninkielinen kyltti.",
+     "selite": "Al-Kasaba Theatre and Cinematheque toimii Ramallahin keskustassa, ja sen toiminta alkoi Jerusalemissa vuonna 1970.",
+     "lahde": "Djex93, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": null,
+ "ehdotukset": {
+  "lentoasema": "Ben Gurionin kansainvälinen lentoasema (TLV)",
+  "huomiot": [
+   "Sää: Ramallahille ei ole saa.json:ia (en-Wikipedian ilmastotaulukossa ei normaalikautta), joten saatiedot on null ja oppaan sääjakso on laadullinen ilman lukuja. Päätoimittaja päättää, ajetaanko saa-komento Jerusalemin sääasemalle.",
+   "Lentoasema: Ramallahissa ei ole reittiliikenteen lentoasemaa; ehdotettu TLV on lähin kansainvälinen kenttä, ja direct-lentoa ei ole.",
+   "Matkustustiedote: um.fi ei auennut faktapohjan haussa (403), joten oppaan lause tarkastuspisteestä ja ajantasaisesta matkustustiedotteesta perustuu vain Wikivoyagen vanhempaan tietoon; tarkistettava um.fi:stä ennen julkaisua.",
+   "Kuvat: Matson-kokoelman kuvat (K1, valokuva) korvattu (PT:n 70 v -sääntö) ja Willem van de Poll -kuva (K2, tekijä k. 1982) korvattu nykykuvalla (Ralf Lotys, CC BY 3.0). Valokuvana on Underwood & Underwoodin stereokuva noin vuodelta 1900 (PD; Commons-sivu kuuluu DPLA-aineistoon, vedos rajattava yhteen puoliskoon ilman korttikehystä; Ramallah-paikannus tulee vain kuvan luettelotiedosta).",
+   "Kohdekartta on 6 kohteen kartta: Mukataalle ja Kirkastuksen kirkolle ei löytynyt kelvollista Commons-kuvaa, ja Sakakini-keskuksen ainoa kelvollinen kuva on käytetty teemasivun nostossa L4 (sama tiedosto ei saa olla kahdesti). Kuudenneksi kohteeksi lisättiin Al-Kasaba-teatteri (koordinaatti en-Wikipedia ja Wikidata Q3527423; kuva Djex93). Dar Zahranille ei ole kuvaa eikä Wikipedia-artikkelia. Friends-koulujen pinni on siirretty yläkoulun kampukselle (en-Wikipedia 31.9054, 35.2081), koska kohteen kuva näyttää Friends Boys School -rakennuksen; alakoulun (ent. tyttökoulu) kampus on 31.9037, 35.1993.",
+   "Kuvat: Al-Manaran poliisiautot ja Arafat-juliste sisältävät kuvat (Al-Manara Square 01-08, Al-Manara.jpg) on vaihdettu kuviin ilman poliisiautoja ja julisteita (Al Manara Square.jpg ja 2010-08 Ramallah 22.jpg); L1 vaihdettu Darwish-museon sisäkuvaan (pöytä), jolloin lippu poistui. Al Manara Square.jpg:ssä (kansi 3) näkyy aukion takana pieni lippu rakennuksen seinällä.",
+   "Kevyen pisteen kuvaus (konteksti.json) sisältää pääkaupunkikiistaa koskevan lauseen; täysi kaupunki ei toista sitä (omistajan linjaus: neutraali hallinnon paikka).",
+   "Valuutta: konteksti.json (maanPerustiedot.valuutta) mainitsee Egyptin punnan; Ramallahia koskevat lähteet (en Economy of the State of Palestine, Wikivoyage) eivät tue sitä, joten opas mainitsee vain sekelin ja dinaarin."
+  ]
+ }
+}
