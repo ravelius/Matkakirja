@@ -192,3 +192,17 @@ Ehdotettu faktateksti: "Sevilla sai 1503 yksinoikeuden Espanjan Amerikan-kauppaa
 | tampere / fakta | Koski antoi voimaa Finlaysonin kehräämölle ja muille tehtaille | OK | Finlayson perustettiin 1820 vesivoimalla toimivaksi tehtaaksi Tammerkosken varrelle (https://en.wikipedia.org/wiki/James_Finlayson_(industrialist); https://visittampere.fi/en/destination/finlayson-200-a-factory-that-became-a-brand/) | - |
 
 Ehdotettu faktateksti: "Tammerkoski virtaa Näsijärvestä Pyhäjärveen noin kilometrin matkan, ja sen putouskorkeus on noin 18 metriä. Koski antoi voimaa Finlaysonin kehräämölle ja muille tehtaille."
+
+
+---
+
+# Lisäys 12.10.2026: Bergenin korvaava kysymys (Hansakonttori)
+
+| väite | tulos | lähteet |
+|---|---|---|
+| Bryggenin rannassa toimi Hansaliiton kauppakonttori (Kontor), perustettu 1300-luvun puolivälissä (lähteet 1350/1360) | OK | https://en.wikipedia.org/wiki/Bryggen ; https://www.norgesverdensarv.no/bryggen-i-bergen |
+| kauppa perustui kuivatun kalan vientiin ja viljan tuontiin | OK | Wikipedia (Bryggen) ; UNESCO OUV |
+| nykyiset puutalot vuoden 1702 palon jälkeiseltä ajalta | OK | UNESCO Statement of OUV (whc.unesco.org/document/216022) ; Wikipedia |
+| Unesco-maailmanperintö 1979 | OK | whc.unesco.org (ref. 59, 1979) |
+| Kontorin päättymisvuosi 1754 | EI VAHVISTETTU, ei väitetä tekstissä | – |
+| Kassan arkisto: "kaupungin asiakirja- ja esinekortisto" | fiktiivinen yleistys (Štátny archív v Košiciach on olemassa; postimuseota Kassassa ei löytynyt) | haku 12.10. |
