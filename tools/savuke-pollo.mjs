@@ -3832,6 +3832,17 @@ const kuplanNapautus = await vihjeSivu.evaluate(async () => {
   const vihje = document.querySelector('.pollo-vihje');
   if (!vihje) return { osoitin: null, haipyi: false, uudestaan: false, virhe: 'kuplaa ei ole' };
   const osoitin = getComputedStyle(vihje).pointerEvents;
+  // Diagnoosi (CI: napautus ei häivytä): kuplien määrä, laji, kuittaus ja pinon tila ennen napautusta.
+  const kaikki = [...document.querySelectorAll('.pollo-vihje')];
+  const tila = {
+    kuplia: kaikki.length,
+    nakyvia: kaikki.filter((k) => !k.hidden).length,
+    laji: vihje.dataset?.laji ?? null,
+    kuittaus: Boolean(vihje.polloKuittaus),
+    poistuu: Boolean(vihje.polloPoistuu),
+    pinossa: Boolean(vihje.closest('.pollo-kuplapino')),
+    luokat: vihje.className,
+  };
   /*
    * NAPAUTUS RATKAISTAAN SORMEN NOUSTESSA (omistaja 5.9.2026, "vieritys
    * ei ole napautus", js/pollo.js sidoKuplanNapautus): pelkkä pointerdown
@@ -3861,6 +3872,7 @@ const kuplanNapautus = await vihjeSivu.evaluate(async () => {
     osoitin,
     haipyi,
     uudestaan: Boolean(document.querySelector('.pollo-vihje:not([hidden])')),
+    tila,
   };
 });
 vaadi('napautus häivyttää kuplan tieltä',
