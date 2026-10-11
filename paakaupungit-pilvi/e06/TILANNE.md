@@ -14,8 +14,8 @@ Vaihe 0: yhdeksän kontekstia ja saa-syote.json luotu alkuperäisellä tyokalu.m
 | bangui | lähdepaketti tehty; täysi A estyy karttaminimiin, 1 ruokanostoon ja opasminimiin | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | brazzaville | A koottu; 6 ehdotusta, 1 koordinaattipoikkeus ja katedraalin vanhan kuvan portti | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | kinshasa | A koottu; 6 Wiki/Wikidata-ehdotusta, retkirajaus/zoo-nykytila/Lola-lupa avoin | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
-| luanda | lähteiden luku käynnissä | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
-| kigali | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
+| luanda | A koottu; 6 historiallista ydinkohdetta, Jesusin uudet osat B-oikeusportissa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
+| kigali | lähteiden luku käynnissä | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | gitega | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 
 A-valmis tarkoittaa vain lähteistettyä faktapohjaa. Kaupunkia ei ole kirjoitettu, kuvitettu, kytketty tai julkaistu.
@@ -53,3 +53,7 @@ UNESCO metallurginen historia luettu. FOP-yhteenveto ei kata still-valokuvia suo
 ## Kinshasa A
 
 0–9 koottu, kuusi luontopainotteista koordinaattia Wikipedia/Wikidata. Maalehden ruokaa/rumbaa ei toisteta; teema kasvipuutarhan toimintaan ja bonobosuojaan. UM:n nykyinen matkustustiedote luettu. Eteläiset kolme kohdetta erillinen retkialue: karttarajauspoikkeus avoin. Zoo-domain ei ratkennut, nykytilaa ei luvata. Lolan virallinen kuvauspolitiikka ammattilaisille lupa / puhelinkuvat henkilökohtaisia; valittavan kaupallisen tiedoston ja paikkaluvan portti avoin. Ei kuva- tai karttahyväksyntää.
+
+## Luanda A
+
+0–9 koottu, kuusi vanhan ytimen historiallista/naturapaikkaa Wikipedia/Wikidata-koordinaatein. São Miguelin olemassa oleva lähinosto pois uudesta nostosta/kartasta. Lentoasemaksi NBJ (Airlinkin oma vaihtoilmoitus + kenttäartikkeli), vanha LDA ei nykyoppaaksi. Väestö maakunta. Sé/Conceição vs Remédios -nimisekaannus ja Carmon/São Miguelin vuosiristiriidat kirjattu. HPIP TLS-este, ei sisällön lukuväitettä. Jesusin modernien osien FOP/tekijä sekä kaikkien varsinaisten kuvatiedostojen lisenssit jäävät B-porttiin.
