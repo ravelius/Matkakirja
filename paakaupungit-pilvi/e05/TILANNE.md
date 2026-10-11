@@ -1,6 +1,6 @@
 # e05 — A-vaiheen tilanne
 
-Alkuaika: 11.10.2026 noin 20.00 Europe/Helsinki. Päivitetty: 2026-10-11T20:59:47+03:00
+Alkuaika: 11.10.2026 noin 20.00 Europe/Helsinki. Päivitetty: 2026-10-11T21:07:58+03:00
 
 Oma klooni: NAS sessio-72-20261011/e05. Haara: paakaupungit-e05-codex. Pohja: e4f2845b3a82874550481fda26528df065820232.
 
@@ -16,8 +16,8 @@ Vaihe 0: kontekstit ja saa-syote.json tuotettu alkuperäisellä konteksti-työka
 | lome | ESTE: kartan kohdemäärä ja rakennusten oikeusketjut | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
 | portonovo | ESTE: kartan kohdemäärä ja rakennusten oikeusketjut | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
 | abuja | ESTE: kartan kohdemäärä ja osa nykytilalähteistä | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
-| ndjamena | kesken | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
-| yaounde | jonossa | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
+| ndjamena | ESTE: kartan kohdemäärä ja museo-/opaslisälähteet | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
+| yaounde | kesken | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
 
 ## Lähde- ja eräpoikkeukset
 
@@ -58,3 +58,7 @@ Osioiden 0–9 lähdekooste ja yksi varmistettu puutarhan luontopiste. UNESCO-ti
 ### abuja A-vaiheen lähdekooste 11.10.2026 20.59
 
 Osioiden 0–9 kooste, Aso ja Jabi lähdekoordinaatteineen. Uusi pääkaupunki erotettu alueen aiemmista yhteisöistä ja AMAC-ennuste koko FCT:stä. Suojatut nykyiset rakennukset/puistoteos hylätty. Zuma Rockin valmis fokusnosto ei toistu. Gooya-laakson Yobe-sijainti tunnistettu, ei väärää Abuja-kohdetta.
+
+### ndjamena A-vaiheen lähdekooste 11.10.2026 21.07
+
+Osioiden 0–9 kooste ja Logonen suu Charissa varmistettu Wiki-koordinaatista. Kaupunkilähteiden ristiriitaiset perustamis-/nimeämisvuodet pehmennetty. Museon valokset erotettu alkuperäisistä fossiileista, Toumaïn varma esi-isä-superlatiivi hylätty. Charin maalehti/fokusnostotoistot rajattu pois. Viisi muuta karttaehdokasta eivät läpäisseet oikeus-/lähdeporttia.
