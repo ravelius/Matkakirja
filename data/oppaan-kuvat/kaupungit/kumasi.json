@@ -120,51 +120,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "KNUST main entrance with Kwame Nkrumah Memorial Park.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/KNUST_main_entrance_with_Kwame_Nkrumah_Memorial_Park.jpg?width=1280",
-     "tekija": "ZSM",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:KNUST_main_entrance_with_Kwame_Nkrumah_Memorial_Park.jpg",
-     "selite": "Yliopiston pääsisäänkäynnin luona on Kwame Nkrumahin muistopuisto.",
-     "leveys": 2429,
-     "korkeus": 1619,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
-   "q": "Q288618",
-   "nimi": "Baba Yaran stadion",
-   "peruste": "sitelinks",
-   "koko_m": 250,
-   "lat": 6.68268,
-   "lon": -1.60511,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Kumasi924.JPG",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kumasi924.JPG?width=1280",
-     "tekija": "Ina96",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kumasi924.JPG",
-     "selite": "Baba Yaran stadion on Ghanan suurimpia ja Kumasin jalkapallon koti.",
-     "leveys": 1600,
-     "korkeus": 1200,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Baba Yara Sports Stadium in Kumasi.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baba_Yara_Sports_Stadium_in_Kumasi.jpg?width=1280",
-     "tekija": "Michael Schubert",
-     "lisenssi": "Public domain",
-     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Baba_Yara_Sports_Stadium_in_Kumasi.jpg",
-     "selite": "Kenttä ja juoksurata valaistuna ottelun aikana.",
-     "leveys": 3264,
-     "korkeus": 2448,
+     "tiedosto": "Knust campus- Commercial area.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Knust_campus-_Commercial_area.jpg?width=1280",
+     "tekija": "Jude Hammond",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Knust_campus-_Commercial_area.jpg",
+     "selite": "Katu ja matalia rakennuksia Kwame Nkrumahin tiede- ja teknologiayliopiston kampuksella Kumasissa.",
+     "leveys": 4160,
+     "korkeus": 3120,
      "tarkistettu": true
     }
    ]

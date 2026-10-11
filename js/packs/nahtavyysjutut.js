@@ -1027,14 +1027,6 @@ export const NAHTAVYYSJUTUT = {
           + 'näkee koko Kairon. Vuosina 2006–2009 torni kunnostettiin, ja '
           + 'se on yhä suosittu nähtävyys.',
       kuvat: [
-        {
-          tiedosto: 'نهر النيل وبرج القاهرة.jpg',
-          lyhyt: '187 metriä korkea Kairon torni valmistui 1961 muistuttamaan lootuskukkaa.',
-          selite: 'Naoum Shebibin suunnittelema 187 metriä korkea torni valmistui '
-            + '1961 muistuttamaan muinaista lootuskukkaa, ja se oli hetken '
-            + 'Afrikan korkein rakennelma.',
-          lahde: 'Abdouououou, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -55750,12 +55742,6 @@ export const NAHTAVYYSJUTUT = {
           + 'käsikirjasto, islamilainen keskus ja ylimmän imaamin '
           + 'asunto.',
       kuvat: [
-        {
-          tiedosto: 'LAGOS CENTRAL MOSQUE.jpg',
-          selite: 'Moskeijan kaarikäytävä ja kaksi minareettia kohoavat '
-            + 'suoraan torikadun päivänvarjojen yläpuolelle.',
-          lahde: 'Sir Demo, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -55786,10 +55772,9 @@ export const NAHTAVYYSJUTUT = {
           + 'viisikymmentä vuotta myöhemmin.',
       kuvat: [
         {
-          tiedosto: 'Stutues of orishas in Tinubu square, Lagos.jpg',
-          selite: 'Aukion pronssiveistokset nähtynä pyöreän aukon läpi; '
-            + 'taustalla kohoavat keskustan tornit.',
-          lahde: 'Omoeko Media, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "An old Brazilian building at Tinubu square, Lagos.jpg",
+          selite: "Vanha brasilialaistyylinen rakennus Tinubun aukion laidalla Lagosin saarella; edessä seisoo keltaisia minibusseja.",
+          lahde: "Omoeko Media, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -60083,12 +60068,6 @@ export const NAHTAVYYSJUTUT = {
           + 'alkulohko-ottelua ja välierän, 2000 seitsemän ottelua ja '
           + '2008 uudestaan.',
       kuvat: [
-        {
-          tiedosto: 'Baba Yara Sports Stadium in Kumasi.jpg',
-          selite: 'Iltaottelussa valonheittimet valaisevat kentän ja '
-            + 'keltaiset katsomot täyttyvät reunoja myöten.',
-          lahde: 'Michael Schubert, Wikimedia Commons (PD)',
-        },
       ],
       lahde: 'Wikipedia',
     },

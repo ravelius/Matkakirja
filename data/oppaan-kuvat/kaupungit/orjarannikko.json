@@ -156,42 +156,6 @@
      "leveys": 2736,
      "korkeus": 3648,
      "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "10eme station de la Basilique de l'Immaculée-Conception de Ouidah.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/10eme_station_de_la_Basilique_de_l'Immacul%C3%A9e-Conception_de_Ouidah.jpg?width=1280",
-     "tekija": "Rachad sanoussi",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:10eme_station_de_la_Basilique_de_l'Immacul%C3%A9e-Conception_de_Ouidah.jpg",
-     "selite": "Basilikan muuria kiertää ristin tie, jonka kultaiset reliefit kuvaavat Kristuksen kärsimystä.",
-     "leveys": 5184,
-     "korkeus": 3888,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
-   "q": "Q111469133",
-   "nimi": "Zoungbodjin muistomerkki",
-   "peruste": "pelin nosto",
-   "koko_m": 100,
-   "lat": 6.34,
-   "lon": 2.08917,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Mémorial de Zoungbodji (2).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/M%C3%A9morial_de_Zoungbodji_(2).jpg?width=1280",
-     "tekija": "Ji-Elle",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:M%C3%A9morial_de_Zoungbodji_(2).jpg",
-     "selite": "Zoungbodjin muistomerkki on orjuutettujen ihmisten joukkohaudan paikka, ja patsas kuvaa kahlittua polvistunutta naista.",
-     "leveys": 3648,
-     "korkeus": 5472,
-     "tarkistettu": true
     }
    ]
   },

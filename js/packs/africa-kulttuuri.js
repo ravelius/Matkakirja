@@ -814,15 +814,13 @@ export const AFRICA_KULTTUURI = {
       {
         tyyppi: 'kuva',
         otsikko: 'Paluuttoman portti',
-        tiedosto: 'Porte du non-retour au Benin.jpg',
+        tiedosto: "Ouidah-Petit temple vaudou sur la plage.jpg",
         teksti: 'Ouidahin rannalla seisoo Paluuttoman portti: muistomerkki '
           + 'sillä kohdalla, josta orjalaivat lähtivät Atlantin yli. '
           + 'Rantatietä pitkin kulkee muistopolku, jonka jokainen '
           + 'pysähdys kertoo yhden vaiheen tarinasta.',
-        selite: 'Paluuttoman portti Ouidahissa: pronssireliefit kuvaavat '
-          + 'lähtijöitä, jotka eivät koskaan palanneet. Portti pystytettiin '
-          + '1995 muistuttamaan siitä, mitä täällä tapahtui.',
-        lahde: 'Wikimedia Commons (CC0)',
+        selite: "Pieni olkikattoinen vodun-temppeli seisoo Ouidahin hiekkarannalla; seinää koristavat siniset kuviot ja viereisessä tangossa on lippu.",
+        lahde: "Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)",
       },
       {
         tyyppi: 'teksti',

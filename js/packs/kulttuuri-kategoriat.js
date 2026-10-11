@@ -1292,14 +1292,6 @@ export const KULTTUURI_KATEGORIAT = {
          * tyhjää taivasta vasten, ja yläosa on pelkkää taivasta —
          * Matkaopas-nauha ei peitä aihetta.
          */
-        kuva: {
-          tiedosto: 'Cairo Tower, al-Qāhirah, CG, EGY (47119632244).jpg',
-          lyhyt: 'Kairon tornin näköalatasanteelta erottuvat kirkkaalla säällä lännen pyramidit.',
-          selite: 'Kairon torni seisoo Geziran saaren eteläkärjessä, ja sen '
-            + 'näköalatasanteelta erottuvat kirkkaalla säällä lännen '
-            + 'pyramidit.',
-          lahde: 'Warren LeMay, Wikimedia Commons (CC0)',
-        },
         kappale: 'Kairo on arabimaailman suurin kaupunki, mutta '
           + 'matkailijan Kairo on kaksi kävelyä ja yksi joki. '
           + 'Vanhassakaupungissa idässä tuhatvuotinen pääkatu vie '
@@ -42532,15 +42524,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tuntumassa, rantatie seuraa kivistä aallonmurtajaa, ja '
             + 'edustalla lepää tyyni merenlahti.',
           lahde: 'Moomkenb3, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'Tripoli CBD.JPG',
-          lyhyt: 'Rantakadulla kohoaa lasihotelli ja neljä kahdeksankulmaista tornitaloa palmuistutusten välissä.',
-          selite: 'Rantakadun varsi maan tasalta: vasemmalla kohoaa '
-            + 'kaareva lasijulkisivuinen hotelli, edempänä neljä '
-            + 'kahdeksankulmaista tornitaloa vierekkäin, ja leveällä '
-            + 'kadulla ajaa autoja palmuistutusten välissä.',
-          lahde: 'Jaw101ie, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'TRIPOLI.TRABLUS CITY - panoramio.jpg',
@@ -97995,10 +97978,6 @@ export const KULTTUURI_KATEGORIAT = {
             + '1969 ja toi mukanaan vibrafonin, congat ja uuden '
             + 'soundin. Vuodesta 1998 Éthiopiques-sarja on kantanut '
             + 'levytykset takaisin maailmalle.',
-          tiedosto: 'Ethiopian National Theater 2.jpg',
-          selite: 'Kansallisteatterin julkisivu, jonka takana '
-            + 'Nalbandian sävelsi ensimmäiset sekoitukset.',
-          lahde: 'Lenege, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Ethio-jazz',
           musiikki: 'https://music.apple.com/fi/artist/mulatu-astatke/76533627',
           musiikkiNimi: 'Mulatu Astatke Apple Musicissa',
@@ -100824,10 +100803,9 @@ export const KULTTUURI_KATEGORIAT = {
       ],
       matkailijalle: {
         kuva: {
-          tiedosto: 'La mosquée de la divinité.jpg',
-          selite: 'Jumaluuden moskeija seisoo Ouakamin rannalla '
-            + 'kahden kupolillisen minareetin varassa.',
-          lahde: 'Passou12, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "Fishermen return from fishing to Ouakam beach.jpg",
+          selite: "Kolme kalastajaa palaa värikkäällä puuveneellä pyyntimatkalta kohti Ouakamin rantaa Dakarissa.",
+          lahde: "Ruth Zurielly Jennings, Wikimedia Commons (CC BY-SA 4.0)",
         },
         kappale: 'Dakar on Senegalin pääkaupunki ja Manner-Afrikan '
           + 'läntisin kaupunki. Departementissa asuu 1 278 469 ihmistä '
@@ -101048,10 +101026,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Kaupunkiin rakennettiin sitä varten uusia teitä, '
             + 'lentoaseman terminaali ja kaksi uutta näyttämöä. '
             + 'Kävijöitä kertyi 50 000.',
-          tiedosto: 'Théâtre Daniel Sorano.jpg',
-          selite: 'Daniel Sorano -teatteri rakennettiin vuoden 1966 '
-            + 'festivaalia varten, ja se on yhä käytössä.',
-          lahde: 'PaulAxelKOUASSI, Wikimedia Commons (CC BY 4.0)',
           wiki: 'World Festival of Black Arts',
         },
         {
@@ -111601,15 +111575,6 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'voidaan kysyä, jos matka jatkuu naapurimaihin.',
               kuva: [
                 {
-                  tiedosto: 'Kilimanjaro Airport Terminal Building.jpg',
-                  lyhyt: 'Kilimanjaron lentokentän terminaali on Moshin ja Arushan puolivälissä.',
-                  selite: 'Matkustajat kävelevät matalan terminaalirakennuksen '
-                    + 'edustalla lokakuussa 2014; asfaltilla seisoo '
-                    + 'matkatavaroiden lastausauto, ja julkisivun edessä kasvaa '
-                    + 'kukkivia pensaita.',
-                  lahde: 'Peter Makholm, Wikimedia Commons (CC BY-SA 2.0)',
-                },
-                {
                   tiedosto: 'Mount Kilimanjaro from Moshi.jpg',
                   lyhyt: 'Kibon lumihuippu näkyy kirkkaalla säällä Moshin kattojen yllä.',
                   selite: 'Moshin keskustan talojen takana kohoaa Kilimanjaron '
@@ -116557,12 +116522,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'se kannattaa pitää käsimatkatavaroissa passin vieressä.',
               kuva: [
                 {
-                  tiedosto: 'New Freetown International Airport airside.jpg',
-                  lyhyt: 'Lungin uusi terminaali avattiin 2023 kiitotien pohjoispuolelle.',
-                  selite: 'Freetown International Airportin kaareva '
-                    + 'terminaalirakennus ja keltaiset matkustajasillat '
-                    + 'utuisessa ilta-auringossa; kuva tammikuulta 2024.',
-                  lahde: 'Davidbstanley, Wikimedia Commons (CC0)',
+                  tiedosto: "Freetown-aerialview.jpg",
+                  lyhyt: "Freetown ilmasta",
+                  selite: "Ilmakuva Freetownista: kaupunki levittäytyy lahden rannalle ja vihreiden kukkuloiden juurelle.",
+                  lahde: "David Hond, Wikimedia Commons (CC BY 2.0)",
                 },
                 {
                   tiedosto: 'Aberdeen, Freetown, Sierra Leone - panoramio - Ghassan Mroue.jpg',
@@ -120860,14 +120823,6 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kenellekään kadulla.',
               kuva: [
                 {
-                  tiedosto: 'Nampula Airport.jpg',
-                  lyhyt: 'Nampulan lentoasema on saarta lähin säännöllisen lentoliikenteen kenttä.',
-                  selite: 'Matkustajat kävelevät kentän poikki Nampulan '
-                    + 'lentoaseman terminaaliin, jonka katolla lukee '
-                    + 'kaupungin nimi; kuva toukokuulta 2012.',
-                  lahde: 'Gustavo Sugahara, Wikimedia Commons (CC BY 2.0)',
-                },
-                {
                   tiedosto: 'Mozambique Island Wharf (32679313634).jpg',
                   lyhyt: 'Kivikaupungin laituri seisoo paksujen betonipilarien varassa.',
                   selite: 'Mosambikin saaren laiturin tukevat pilarit '
@@ -121868,10 +121823,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Commons (PD)',
         },
         {
-          tiedosto: 'Benin UNESCO à la Porte du non-retour à Ouidah.jpg',
-          lyhyt: 'Muistomerkin kivilaatta Ouidahin rannalla, portti pystytetty 1995.',
-          selite: 'Muistomerkin kivilaatta Ouidahin rannalla. Siihen on kaiverrettu portin nimi ranskaksi sekä Beninin ja Unescon tunnukset; portti pystytettiin 1995.',
-          lahde: 'Rachad Sanoussi, Commons (CC BY-SA 4.0)',
+          tiedosto: "Marché à Ouidah (Dahomey).jpg",
+          lyhyt: "Tori Ouidahissa Dahomeyn aikaan",
+          selite: "Vanhalla postikortilla väkijoukko kokoontuu torille suuren puun alle Ouidahissa, ranskalaisessa Dahomeyn siirtomaassa.",
+          lahde: "Tuntematon, Wikimedia Commons (public domain)",
         },
       ],
       nostot: [
@@ -122184,11 +122139,8 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Chachan tori',
           teksti:
             "Torilla, jota kutsuttiin Chachan toriksi, käytiin Ouidah'n orjakaupan huutokauppoja. Nimi tulee Francisco Félix de Sousasta, brasilialais-portugalilaisesta kauppiaasta, jonka lempinimi oli \"Chacha\": kuningas Ghezo nimitti hänet 1820-luvulla Dahomeyn viralliseksi orjakaupan välittäjäksi ja myönsi hänelle käytännössä yksinoikeuden koko sataman kauppaan. De Sousasta tuli yksi aikansa rikkaimmista miehistä Länsi-Afrikassa, ja hänen jälkeläisensä hallitsivat Ouidah'n kauppaa vielä vuosikymmeniä hänen kuolemansa jälkeen 1849.",
-          tiedosto: 'Marché des esclaves.jpg',
-          lyhyt: 'Chachan tori, jossa orjakaupan hinnat neuvoteltiin ja ihmiset huutokaupattiin.',
           selite:
             'Kuvassa on laatoitettu aukio, jonka poikki kulkee rivi tummia, palloa muistuttavia pronssipylväitä; taustalla näkyy palmuja ja matalia rakennuksia kirkkaassa päivänvalossa.',
-          lahde: 'Gbehlon, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Francisco Félix de Sousa',
         },
         {
@@ -122206,11 +122158,8 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Zoungbodjin hiljainen paikka',
           teksti:
             'Kaikki orjiksi otetut eivät selvinneet edes rannalle asti. Zoungbodjin kylän liepeillä sijaitsee joukkohauta, johon haudattiin marssin aikana kuolleet tai liian heikoiksi todetut vangit, jotka kauppiaat hylkäsivät ennen laivaan nousua. Monille vangeille pakotettiin suuhun puinen kapula, joka esti puhumisen ja syömisen sekä teki itsemurhan kielen nielaisemalla mahdottomaksi. Paikka on nykyisin rauhoitettu muistoalue, jolla kylttien mukaan vieraita pyydetään pitämään hiljaisuutta kunnioituksesta uhreja kohtaan.',
-          tiedosto: 'Mémorial de Zoungbodji (1).jpg',
-          lyhyt: 'Zoungbodjin muistopatsas esittää suukapulaan pakotettua vankia.',
           selite:
             'Kuvassa on tummanvihreä pronssipatsas polvistuneesta miehestä, jonka suuhun on kiinnitetty puinen kapula ja jonka lantiolla on sininen vaate; taustalla on muuri, jossa on kyltti "Ouidah 92" ja teksti muistopaikan hiljaisuudesta.',
-          lahde: 'Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Ouidah',
         },
         {

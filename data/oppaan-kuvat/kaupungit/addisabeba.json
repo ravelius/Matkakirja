@@ -61,32 +61,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Ethiopian National Museum in Addis Ababa.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethiopian_National_Museum_in_Addis_Ababa.jpg?width=1280",
-     "tekija": "Ninaras",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ethiopian_National_Museum_in_Addis_Ababa.jpg",
-     "selite": "Museon kokoelmat ulottuvat ihmiskunnan varhaisimmista vaiheista keisarikunnan aikaan.",
-     "leveys": 2999,
-     "korkeus": 1999,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Addis-Abeba-Musée national d'Ethiopie (1).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Addis-Abeba-Mus%C3%A9e_national_d'Ethiopie_(1).jpg?width=1280",
-     "tekija": "Ji-Elle",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Addis-Abeba-Mus%C3%A9e_national_d'Ethiopie_(1).jpg",
-     "selite": "Museon sisääntulohalli avautuu usean kerroksen läpi.",
-     "leveys": 4320,
-     "korkeus": 3240,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
      "tiedosto": "Coronas de emperadores etíopes, museo nacional de Etiopía, Adís Abeba, Etiopía, 2024-01-19, DD 18.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coronas_de_emperadores_et%C3%ADopes%2C_museo_nacional_de_Etiop%C3%ADa%2C_Ad%C3%ADs_Abeba%2C_Etiop%C3%ADa%2C_2024-01-19%2C_DD_18.jpg?width=1280",
      "tekija": "Diego Delso",
@@ -254,19 +228,6 @@
      "leveys": 4520,
      "korkeus": 3504,
      "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "2 Faculty Of Pharmacy Sports and Assembly Hall View from East to West.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2_Faculty_Of_Pharmacy_Sports_and_Assembly_Hall_View_from_East_to_West.jpg?width=1280",
-     "tekija": "The Chroniclers",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2_Faculty_Of_Pharmacy_Sports_and_Assembly_Hall_View_from_East_to_West.jpg",
-     "selite": "Modernistinen kampusrakennus edustaa 1960-luvun etiopialaista arkkitehtuuria.",
-     "leveys": 4988,
-     "korkeus": 3456,
-     "tarkistettu": true
     }
    ]
   },
@@ -289,42 +250,6 @@
      "selite": "Hager Fikir on yksi Afrikan vanhimmista yhä toimivista teattereista.",
      "leveys": 1280,
      "korkeus": 960,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
-   "q": "Q582018",
-   "nimi": "Etiopian kansallisteatteri",
-   "peruste": "pelin nosto",
-   "koko_m": 80,
-   "lat": 9.01611,
-   "lon": 38.7519,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Ethiopian National Theater 2.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethiopian_National_Theater_2.jpg?width=1280",
-     "tekija": "Lenege",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ethiopian_National_Theater_2.jpg",
-     "selite": "Teatterin 1900-luvun puolivälin julkisivu ja katettu kulkukäytävä näkyvät kadun puolelta.",
-     "leveys": 1280,
-     "korkeus": 591,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Ethiopian National Theatre.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethiopian_National_Theatre.jpg?width=1280",
-     "tekija": "By LuckyInWaco",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ethiopian_National_Theatre.jpg",
-     "selite": "Rakennuksessa esiintyivät etiopialaisen jazzin ja musiikin tekijät.",
-     "leveys": 2448,
-     "korkeus": 3264,
      "tarkistettu": true
     }
    ]
