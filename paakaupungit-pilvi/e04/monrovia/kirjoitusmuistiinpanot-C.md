@@ -1,6 +1,6 @@
 # Monrovia — C:n keskeneräinen sisältöluonnos 11.10.2026
 
-**Ei valmis C/E/F tai valmis kaupunki.** `sisalto.json` sisältää täyden tekstikokonaisuuden ja kuuden paikan kartan. B:n 14 valittua kuvaa käytetään kerran. Kahdeksan pakollista kuvapaikkaa jää puuttumaan: K2, K3, H3, H4, matkailijalle-pysty, N1, N2 ja oppaan kolmas kuva O3. O2/O5 ovat kaksi erikseen sallittua kuvatonta jaksoa. Kuvituksen vähimmäinen olisi 22, käytössä 14.
+**Nykytila E1-korjausten jälkeen: ei valmis C/E/F tai valmis kaupunki.** `sisalto.json` sisältää tekstikokonaisuuden ja kuuden paikan kartan. D:n R1:n kaksi libanonilais-kenttää ja R2:n K3-teksti on korvattu sanatarkasti (518/359/502 merkkiä); epävarmaa samojen oikeustalon asiakirjojen museosiirtoa ei enää väitetä. B:n samat 14 valittua kuvaa käytetään kerran. Kahdeksan pakollista kuvapaikkaa puuttuu edelleen: K2, K3, H3, H4, matkailijalle-pysty, N1, N2 ja oppaan kolmas kuva O3. O2/O5 ovat kaksi erikseen sallittua kuvatonta jaksoa. Kuvituksen vähimmäinen olisi 22, käytössä 14. Alla olevat C:n alkuperäiset mittaukset ja jatkoporttimerkinnät ovat kirjoitushetken historiallista aineistoa; erillinen D-tarkistus ja E1-korjaukset on kirjattu tarkistus.md:hen.
 
 Kirjoitettu vain Monrovian `sisalto.json` ja tämä muistiinpano, omat väliaineistot NASin `valiaikainen/monrovia-C`-kansioon. Ei Git-toimia, Commons-kuvahakuja, uusia agentteja, kuvanmuokkausta tai muiden kaupunkien/pelin muutoksia. Kuvapuuttumat eivät ole lupa väärän kohteen, hylätyn kuvan tai uuden suojatun rakennusaiheen käyttämiseen.
 
@@ -126,3 +126,9 @@ YHTEENSÄ 1 kaupunkia: 8 virhettä, 0 varoitusta
 Kaikki kahdeksan virhettä ovat todellisia pakollisen kuvituksen puutteita. Puuttuvien nostojen kuva-attribuutit jätetty pois, matkailijalle-kuva tyhjä olio, N1/N2 tyhjät kuvalistat, O3 kuva pois. O3:a ei naamioitu tyhjäksi kuvaolioksi, joka voisi kiertää kuvattomien jaksojen laskennan. Teksti-/skeema-/wikiarvovirheitä tai konevaroituksia ei jäänyt.
 
 Työ on **keskeneräinen sisältöluonnos**. Kahdeksan kuvaroolin ratkaisu, D:n riippumaton kuva-/faktatarkistus ja mainitut N4/N6-/teososa-/karttarajaportit ovat avoimia. Ei nollavirheväitettä, valmis C/E/F -merkintää, hyväksyttyä julkaisu- tai pelitoimitustilaa.
+
+## Nykytilan päivitys — E1 12.10.2026
+
+Erillinen E-korjaaja toteutti vain D:n määräämät kolme kokonaiskorvausta sanatarkasti: K4/O4:n maanjohdos libanonilaiseksi sekä K3:n oikeustalo-/museoasiakirjojen rinnastus ilman väitettä samojen asiakirjojen siirrosta. Pituudet 518/359/502 merkkiä. Kaikki muut JSON-arvot, samat 14 kuvaa, kuusi karttapistettä sekä sääluvut ja lähde säilyivät.
+
+Paikallinen ja sallittu alkuperäinen verkkotarkistus: **8 virhettä, 0 varoitusta, 14 kuvaa**, kumpikin exit 1. Virheet ovat samat kahdeksan kuvapuutetta; niitä ei piilotettu eikä hyväksytty poikkeukseksi. Toinen korjauskierros ei ollut tarpeen. Todisteet `valiaikainen/monrovia-E/`; sisältö SHA-256 `dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31`. Ei valmis C/E/F, valmis kaupunki, pelikytkentä tai julkaisu.

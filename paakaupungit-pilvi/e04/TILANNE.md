@@ -1,6 +1,6 @@
 # Pääkaupungit e04 — toimeksiannot #72 ja #73
 
-Päivitetty 2026-10-11T19:56:41.292209+00:00
+Päivitetty 2026-10-11T21:31:11.188189+00:00
 
 Haara `paakaupungit-e04-codex`, pohja `e4f2845b3a82874550481fda26528df065820232`. Uusi työ, vain e04–e14; aiemmat #70/#71-kuvatilaukset pysyvät palauteportissa. Ei generointia, R2-toimitusta, pelikytkentää tai julkaisua. Kaikki tämän työn tiedostot ja väliaineisto NASilla.
 
@@ -19,8 +19,8 @@ Aiempi Sää/Commons-rajapintaeste: 11.10.2026 robots.txt kieltää en/fi-Wikipe
 | banjul | valmis | poikkeama avoin | korjattu luonnos | osittain | tekstikorjaukset tehty | 3 kuvavirhettä | 16 kuvaa; K3 hylätty, pysty ja Albertin torin kuva puuttuvat |
 | bissau | valmis | poikkeama avoin | korjattu luonnos | osittain | tekstikorjaukset tehty | 3 kuvavirhettä | 16 kuvaa kaavio mukaan lukien; 3 kohdekuvaa puuttuu |
 | conakry | valmis | poikkeama avoin | korjattu luonnos | osittain | E1/E2 tehty | 1 kuvavirhe | 21 kuvaa, vain Camayennen kohdekuva puuttuu |
-| monrovia | valmis | poikkeama avoin | luonnos | työn alla | — | — | 14 kuvaa, 8 kuvavirhettä; riippumaton D etenee |
-| tunis | valmis | — | — | — | — | — | A: kevyt, 6 vanhan ytimen kohdetta; ei Karthagon toistoa |
+| monrovia | valmis | poikkeama avoin | korjattu luonnos | osittain | E1 tehty | 8 kuvavirhettä | 14 kuvaa; kolme D-tekstikorjausta toteutettu |
+| tunis | valmis | oikeustarkistus avoin | luonnos | työn alla | — | — | C: 0 virhettä, 0 varoitusta, 22 kuvaa; D:n koristepinta- ja kasvotarkistus kesken |
 
 Vastaanotto ei tarkoita valmista erää, Sisältökirjurin hyväksyntää, pelikytkentää tai julkaisua.
 
@@ -38,7 +38,7 @@ Yhteinen NAS-lähdevarasto ja robots-tarkistava hakuapuri: valiaikainen/sallittu
 
 Säädata tuotettu alkuperäisellä tyokalu.mjs saa -komennolla; vain verkkosyöte sovitettu sallittuun Wikipedia-lähdesivuun (valiaikainen/saa-lahdesovitus.mjs). Alkuperäinen numeropoiminta ja tarkistusalgoritmi säilyvät muuttumattomina. 8/9 saa.json syntyi; Algerin taulukko hylätty: vuosisarake685mm, kuukausien summa603mm. Alger saatiedot:null, ei tekstiin aste/mm-lukuja. saa-syote.json:ssa artikkeli rajattu kaupungin en-artikkeliin, jotta maa-fallback ei valitse muun kaupungin asemaa.
 
-Edistyminen: varmennetut A–F-vaiheet /558 (93×6), ei käytetyn ajan arvio. Rabat A–F valmis: 0 virhettä, 1 perusteltu varoitus, 23 kuvaa. Valmis aineistopaketti 1/93, koko e04-erä vielä kesken. Pääsession ledgerissä 15/558 vaihetta eli 2,7 %; e05/e06:n osittaisia lähdekoosteita ei lasketa valmistuneiksi.
+Edistyminen: varmennetut A–F-vaiheet /558 (93×6), ei käytetyn ajan arvio. Rabat A–F valmis: 0 virhettä, 1 perusteltu varoitus, 23 kuvaa. Valmis aineistopaketti 1/93, koko e04-erä vielä kesken. Pääsession ledgerissä 16/558 vaihetta eli 2,9 %; e05/e06:n osittaisia lähdekoosteita ei lasketa valmistuneiksi.
 
 ## Banjul ja Bissau: keskeneräiset sisältöluonnokset
 
@@ -48,4 +48,6 @@ Bissau: H1:n sisäpiha, H2:n yleinen bastionikaavio, H3:n Pidjiguiti ja H4:n yle
 
 Viisi kuvaporttien tulkintakysymystä postilaatikossa: #74-kuvattomuus vs 0-virheportti, 70 vuoden teoskohderaja vs kaupallinen FOP, vanha luonnonpysty, alkuperäisen painotuotteen kuvateksti sekä saman paikan kuvan käyttö nostossa ja kohdejutussa. Poikkeuksia ei sovelleta hiljaa; alkuperäiset konevirheet jäävät näkyviin. Työ jatkuu muissa kaupungeissa.
 
-Conakry D: 2 VÄÄRIN, 2 EPÄVARMA. E1 teki seitsemän sanatarkkaa JSON-korjausta ja hylkäsi luettavien kasvojen kuvan. Uusi K2:n kaupallisen sataman aluskuva B/C/D-katsottu, E2 lisäsi neljä hyväksyttyä kuvakenttää; R3:n alkuperäisen keulamaalauksen oikeuksia ei väitetä ratkaistuiksi. Pääsession F: 1 virhe / 0 varoitusta / 21 kuvaa, vain Camayenne. Monrovia C: 8 virhettä / 0 varoitusta / 14 kuvaa. Ei valmis-C/E/F tai valmis-kaupunki kummallekaan.
+Conakry D: 2 VÄÄRIN, 2 EPÄVARMA. E1 teki seitsemän sanatarkkaa JSON-korjausta ja hylkäsi luettavien kasvojen kuvan. Uusi K2:n kaupallisen sataman aluskuva B/C/D-katsottu, E2 lisäsi neljä hyväksyttyä kuvakenttää; R3:n alkuperäisen keulamaalauksen oikeuksia ei väitetä ratkaistuiksi. Pääsession F: 1 virhe / 0 varoitusta / 21 kuvaa, vain Camayenne. Monrovia D: 1 VÄÄRIN ja 1 EPÄVARMA. E1 teki kolme sanatarkkaa tekstikentän korjausta, kuva- ja sääkentät säilyivät. Pääsession F: 8 virhettä / 0 varoitusta / 14 kuvaa, kaikki virheet kuvapuutteita. Ei valmis-C/E/F tai valmis-kaupunki kummallekaan.
+
+Tunis B/C: 22 katsottua kuvaa ja kaksi sallittua kuvatonta opasjaksoa; C:n alkuperäinen kone- ja verkkotarkistus 0 virhettä / 0 varoitusta. D:n riippumaton tarkistus on kesken, erityisesti kaakeli-, stukko- ja puukoristepinnat sekä epäselvät kasvot. Luonnosta ei lasketa valmiiksi B/C/F-vaiheeksi pelkän koneportin perusteella.

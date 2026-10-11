@@ -1,0 +1,10 @@
+VIRHE monrovia: kansi nosto 2: tiedosto puuttuu
+VIRHE monrovia: kansi nosto 3: tiedosto puuttuu
+VIRHE monrovia: matkailijalle.kuva: tiedosto puuttuu
+VIRHE monrovia: oppaassa yli kaksi kuvatonta jaksoa
+VIRHE monrovia: teemasivu historia nosto 3: tiedosto puuttuu
+VIRHE monrovia: teemasivu historia nosto 4: tiedosto puuttuu
+VIRHE monrovia: juttu Kansallismuseon vanha oikeustalo: kuvia 1–3
+VIRHE monrovia: juttu Providence Baptist Church, historiallinen pyhäkkö: kuvia 1–3
+== monrovia: 8 virhettä, 0 varoitusta, 14 kuvaa
+YHTEENSÄ 1 kaupunkia: 8 virhettä, 0 varoitusta
