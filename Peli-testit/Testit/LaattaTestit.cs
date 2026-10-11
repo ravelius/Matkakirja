@@ -228,5 +228,22 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("a=x;c=3;b=4", Parit(k));
             Oleta.Sama(null, k.Hae("z"));
         }
+
+        [Testi] static void AvatutAarteetMantereittain()
+        {
+            var kaupungit = new[]
+            {
+                new Kaupunki { Id = "a", Manner = "europe" }, new Kaupunki { Id = "b", Manner = "europe" },
+                new Kaupunki { Id = "c", Manner = "europe" }, new Kaupunki { Id = "d", Manner = "asia" },
+            };
+            var m = Laattamaailma.Tyhja(kaupungit);
+            Oleta.Sama(0, m.AvatutAarteet("europe"));
+            m.Kaannetyt.Aseta("a", Laattatyypit.PieniAarre);
+            m.Kaannetyt.Aseta("b", Laattatyypit.Tyhja);       // pöllön korvaama: ei aarre
+            m.Kaannetyt.Aseta("c", Laattatyypit.Paaaarre);
+            m.Kaannetyt.Aseta("d", Laattatyypit.IsoAarre);    // eri manner
+            Oleta.Sama(2, m.AvatutAarteet("europe"));
+            Oleta.Sama(1, m.AvatutAarteet("asia"));
+        }
     }
 }
