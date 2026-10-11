@@ -13186,3 +13186,63 @@ PT 11.10.2026 klo 03.4x–04.5x: pilvierät e01 (8 kaupunkia) ja e02 (6) valmiit
 ## TAIDEMUSEO: TEOS KATSOTAAN MAHDOLLISIMMAN LÄHELTÄ (11.10.2026 klo 09.21)
 
 OMISTAJA 11.10.2026 klo 09.2x (taidemuseo, sanatarkasti): "museossa teos pitää nähdä mahdollisimman läheltä. riitää että ympäristö näkyy kun siirrytään teoksen luo mutta varsinainen katselukokemus pitää olla mahdollisimman läheltä niin että seinää ei tarvitse näkyä juuri ollenkaan". Kumoaa 11.10. klo 00.4x:n linjan (kamera teoksen eteen 60–70 % ruudun korkeudesta) ja aamun kehyserän kohdan "pysähdyksen kamera hieman kauemmas". PT:n toteutusohje LS2:lle: pysähdyksessä koko teos (kehyksen sisäreuna) täyttää ruudun rajaavassa suunnassa noin 95 % ilman rajausta; kehys saa näkyä reunoilla, seinä enintään kapeina kaistoina kuvasuhde-eron vuoksi, ja kohdevalon reunatummennus pitää ne tummina; sali ja muut teokset näkyvät vain siirtymissä teoksesta toiseen; etäisyys lasketaan teoksen koosta, ruudun kuvasuhteesta ja näkökentästä laitekohtaisesti ja lähitaso tarkistetaan. Kehysten lakka, aaltokuvio, kultainen sisäreuna ja kohdevalot pysyvät erässä (juna 182); ennen/jälkeen-arkki kolmesta teoksesta iPadilla ja iPhonella PT:lle ja omistajalle.
+
+## OLAVINLINNAN KEHITYKSEN NOPEUTUS: ALOITUSKOHDAT, BOTTI JA AUTOMAATTIKÄÄNNÖS (11.10.2026 klo 10.54)
+
+11.10. 09.2x PT (LINNAN NOPEUTUS, omistajan kysymys "miten linnan kehitystä saisi nopeutettua?"): juurisyy = jokainen testikierros pelattiin alusta ja pysähtyi ensimmäiseen esteeseen (4. tyrmä, 5. vartijat, 6. musta keittiö), joten viat löytyivät yksi kerrallaan ja kierros vei noin 1,5 h. Päätökset: 1) Siirtoseppä tekee kehittäjätilan aloituskohdat jokaiseen linnan osaan (laituri, porttikäytävä, keittiö, sisäpihat, kappeli, tyrmä, paluu; tila kuin pelaaja olisi tullut sinne, ei näy pelaajalle); 2) kävelevä botti ajaa jokaisen osan erikseen Unity-editorissa jokaisen linnacommitin jälkeen, ja botin läpäisy on portti ennen Laitetestaajan läpipeluuta; 3) Julkaisijan olavinlinna-vahti (julkaisija-tyokalut/olavinlinna-vahti.zsh, haaralista olavinlinna-haarat.txt) kääntää linnan yhdistelmän automaattisesti 3 min pushihiljaisuuden jälkeen polkuun lokit/olavinlinna-uusin, taukolippu /tmp/matkakirja-linnavahti-tauko junan, VIE:n ja muistiajon ajaksi; yksi simupaikka linnalle päivällä. Tavoite noin 30 min kierros. Piste 20 (kappelin ovi): Siirtoseppä b 209fffc21 (lukko vasta kappalaisen kohtauksessa), LR:n jonoon a (ovi:paaovi-merkki käsikirjoituksen pääovelle).
+
+## OLAVINLINNAN TEKSTIT LUETTAVIKSI (11.10.2026 klo 10.54)
+
+11.10. 09.3x OMISTAJA (Olavinlinna, sanatarkasti): "teksteistä on vaikea saada selvää linnassa ja itse kortti vie paljon tilaa suhteessa tekstiin" → NUI (nollauksen jälkeen 1. tehtävä, juna 182): kaikki linnan tekstit kuvataan iPadilla ja iPhonella (tietokerroksen kortit kuten 3 Perustamistaulu ja 4 Keittiö, historian tekstitys, huoneen nimikyltti, Jatketaanko); tumma kortti mitoitetaan sisällön mukaan ilman tyhjää tilaa, leipäteksti isommaksi ja kirkkaammaksi tk-tumma-tokeneilla (ei uusia värejä); historian tekstitys ja nimikyltit erottuvat tummasta 3D-näkymästä olemassa olevalla keinolla; muutos tumman kortin pohjaan koskee kaikkia tummia kortteja; ennen/jälkeen-arkki PT:lle ja omistajalle.
+
+## ÄÄNISIVUN VALINTARUUDUT JA LÄHETÄ CLAUDELLE (11.10.2026 klo 10.54)
+
+11.10. 09.3x OMISTAJA (äänisivu, sanatarkasti): "saisiko äänisivuille suoraan checkboxit niille jotka ovat hyviä näytteitä ja napin ylös \"lähetä claudelle\" tms" → Pelikoodari (KIIRE ennen e03:a): jokaiseen näyteriviin valintaruutu, joka tallentuu heti palvelimelle (Pages Function + tallennus Accessin takana), ja ylös "Lähetä Claudelle (N)" + valinnainen viesti; lukutyökalu tulostaa uudet lähetykset, PT ajaa sen jonokierroksella ja reitittää; aanisivu-lisaa.py (Julkaisija) pysyy yhteensopivana.
+
+## JUNA 181: KAIKKI VALMIIT MUKAAN (11.10.2026 klo 10.54)
+
+11.10. 09.4x OMISTAJA: "voiko kaikki valmiit siirtää junaan 181 ja sitten julkaista vai kannattaako odottaa vielä hetki jotain?" → PT: kyllä, ei odoteta. Juna 181 = runko + NUI faf1090bc + 043409780 + juna 182:n kuitatut, jotka eivät lisää muistia (LS1 5ed2754c8 + esittely v2a, kippi-pysty-182 9642efcd7, Soundly v2 229141f7c; NUI c448e8f2e metro, 3447a1d2f pääkaupunkien lehti + sisältöpaketti VIE:ssä); LS1 puut 52d927252 + a0b4c5240 vain, jos Pariisin muistiajo lopullisella rungolla menee läpi (muuten puut pois ilman uutta odotusta). Ei mukaan: Olavinlinna v12 (7. kierros kesken; 181:ssä v11), LS1 4d56dcf7f (uusinta), NUI 79fbb7a35 (museon ☰, kuittaamatta). Loput junaan 182 illalla (2. TF tänään).
+
+## ULKOINEN TESTFLIGHT AUKI JUNASTA 181 (11.10.2026 klo 10.54)
+
+11.10. 09.5x OMISTAJA (kortti "Kyllä, junasta 181 alkaen (suositus)"; kysymys: "miten saan jaettua testflight koodeja beta testaajille"): ULKOINEN TESTFLIGHT-RYHMÄ AUKI UUSILLE BUILDEILLE: ulkoinen-kielletty-esto (10.10., ikäkysely ja kuratoitu tila ensin) poistetaan, koska ikäkysely (juna 177) ja kuratoitu live (worker #4337) ovat pelissä; junasta 181 alkaen ulkoinen ryhmä Arvioijat (julkinen linkki https://testflight.apple.com/join/KxKekB4n, raja 100) saa jokaisen PASS-buildin sisäisen rinnalla Applen beta-arvioon (30.9. linja palaa voimaan); Mitä testata -teksti junan muutoslokista. ASC 11.10.: ulkoisessa uusin TF 165 (beta-arvio hyväksytty 8.10.), liittyneitä 0; sisäinen Beta testaajat 1. RAAMATTUUN seuraavassa docs-PR:ssä: LIVE-TEKOÄLY-kohdan lause "ulkoiseen ryhmään ei viedä uusia buildeja ennen ikäkyselyä ja kuratoitua tilaa" → auki 181:stä.
+
+## TESTAAJIEN OMA TESTFLIGHT-LINKKI (11.10.2026 klo 10.54)
+
+11.10. 09.5x OMISTAJA (kortti, kysymys "onko tuo linkki sama apuraha raadille vai onko heille oma?"; vastaus sanatarkasti): "oma linkki testaajille, mutta sama versio kummallekin. haluan vain nähdä milloin raatilaiset lataavat pelin itselleen" → Julkaisija luo ulkoisen ryhmän Beta-testaajat omalla julkisella linkillä (raja 100); junasta 181 alkaen molemmat ryhmät (Arvioijat = apurahahakemuksen linkki KxKekB4n ja Beta-testaajat) saavat jokaisen PASS-buildin samaan aikaan; ASC-tila-ajo 30 min välein kirjoittaa ryhmittäiset asennukset tiedostoon julkaisija-tyokalut/asc-testaajat.json → Asemataululle laatat Raati ja Testaajat (Postivahti) ja PT kertoo omistajalle, kun raadista ladataan peli.
+
+## TAIDEMUSEO: SEINÄN TERÄVYYS JA VALAISTUS KATOSTA (11.10.2026 klo 10.54)
+
+11.10. 10.0x OMISTAJA (taidemuseon ennen/jälkeen-arkki, Hals; sanatarkasti): "miksi seinä näkyy noin epäterävänä? lisäksi parhaissa museoissa taulu valaistaan katsojan pään yläpuolelta niin että koko taulu on valaistu tasaisemmin" → LS2: seinän epäterävyyden syy selvitetään ja seinä teoksen vierestä teräväksi pysähdysetäisyydellä (simu ja iPad); kohdevalo kattoon katsojan pään yläpuolelle teoksen eteen noin 30° pystysuorasta, tasainen leveä keila koko teoksen ja kehyksen yli (ei kuumaa kohtaa, ei kehyksen varjoa teoksen yläosaan, ei heijastusta), lämmin sävy; yhdessä pysähdyksen salihimmennyksen kanssa (PT 09.5x: iPhone pystyssä vaakateosten ympärillä valaistu seinä ja lattia → sali lähes mustaksi pysähdyksen ajaksi). RAAMATTUUN TAIDEMUSEO-LINSSI: valaistus.
+
+## RAADIN SEURANTA POSTIVAHDILLE (11.10.2026 klo 10.54)
+
+11.10. 10.1x OMISTAJA: "postivahti varmaan kannattaa olla se seuraaja ja ei tarvitse kuin muutaman kerran päivässä seurata" → raadin (Arvioijat) asennusten seuranta Postivahdille neljästi päivässä (asc-testaajat.json, Julkaisijan ajo harvennettu 30 min → 4×/vrk); Postivahti lähettää PT:lle rivin RAATI: +N, PT kertoo omistajalle; Asemataulun laatat Raati ja Testaajat. Testaajien oma linkki https://testflight.apple.com/join/BBAT7tBm (ryhmä Beta-testaajat, raja 100), sama build kuin Arvioijilla (#4389).
+
+## TOINEN KÄÄNNÖSLINJA (11.10.2026 klo 10.54)
+
+11.10. 10.2x OMISTAJA: "miksi suurin osa rooleista on levossa vaikka taidemuseossa yms. on työstettävää?" → PT: syy on yksi Unity-käännöslukko ja kaksi simua (lukkojono 10.1x: NUI ×2 → juna 181 → linnavahti → LS2 museo182e → LS1 kippi); osa "levossa" näkyvistä ajaa taustalla (LR:n vienti, Natiivisepän käännös). PÄÄTÖS (TYÖNJOHTAJAN HARKINTA, kone vapaa omistajan poissa ollessa ma 12.10. asti): TOINEN KÄÄNNÖSLINJA heti (Julkaisija + Natiiviseppä): linja 1 juna/TF + olavinlinna-vahti, linja 2 roolien testikäännökset; nice 15, memory_pressure-vapaa ≥ 20 % ennen käynnistystä, simuja enintään 2 (toinen linnalle). RAAMATTUUN, jos pysyvä.
+
+## CLAUDE-API CONSOLE-KREDIITEILLÄ (11.10.2026 klo 10.54)
+
+11.10. 10.3x OMISTAJA (kortti "Nyt iPadilla (suositus)"; kysymys: "minulla on myös ilmaisia kredittejä jotka eivät näy tässä mutta ilmeisesti claude consolessa. voisiko ne ohjata pulun api käyttön tai kaikki mahdollinen käyttö joka vaatii nimen oman clauden apia voisi ohjata käyttämään niitä kredittejä"): CLAUDE-API KREDIITEILLE: omistaja luo Consolessa (organisaatio, jossa krediitit; todennäköisesti VVI, Claude for Startups) uuden API-avaimen ja vaihtaa sen GitHub-salaisuuteen ANTHROPIC_API_KEY (ei chattiin); Julkaisija ajaa pollo-julkaisu.yml → workerin salaisuus → Pulun live-testi. Nykyinen avain luotiin 18.9. ennen VVI-organisaatiota. ANTHROPIC_ADMIN_KEY (kulut) mahdollisesti vanhaan organisaatioon → selvitys. RAAMATTUUN AVAIMET-kohtaan: API-käyttö Console-krediiteillä.
+
+## ASEMATAULU: SINULLE-OSIO (11.10.2026 klo 10.54)
+
+11.10. 10.3x OMISTAJA: "voisiko tekstit yms. mitä toimitat minulle lisätä asematauluun oman väkäsen alle ja laita ne niin että saan ne luettua myös etä claudella (käytän läppärin työpöytäsovellusta)" → ASEMATAULUUN osio "Sinulle (N)" (väkänen, kiinni oletuksena; uusin ensin, enintään 30; linkit napautettavina): dokumentti talo/viestit {rivit: [{otsikko, aika, teksti}]}; PT lisää sinne jokaisen omistajalle toimitetun ohjeen, linkin ja vastauksen, jota hän tarvitsee myöhemmin (Asemataulu v50, 1. sisältö: API-avaimen vaihto, TestFlight-linkit, äänisivu, museon seinä ja valo). RAAMATTUUN ASEMATAULU-kohtaan + tools/asemataulu/asemataulu.html docs-PR:llä samana päivänä.
+
+## ASEMATAULU: JUNAN ETENEMINEN 5 MIN VÄLEIN (11.10.2026 klo 10.54)
+
+11.10. 10.4x OMISTAJA: "päivittyykö junan eteneminen oikein asemataulussa?" + "kun juna lähtee, päivitystiheyttä voisi nostaa junan osalta" → junan edistys (1 lukittu, 2 arkistoitu ja allekirjoitettu, 3 lähetetty Applelle, 4 VALID, 5 TestFlightissa) + valmis_arvio Postivahdin 5 min kierrokselle aina kun juna on käännöksessä (TF-työnkulun vaiheista), katsojan sykkeestä riippumatta. RAAMATTUUN ASEMATAULU-kohtaan.
+
+## PULU OPASTAA ENSIMMÄISELLÄ SAAPUMISELLA (11.10.2026 klo 10.54)
+
+11.10. 10.5x OMISTAJA (kortti "Pulu opastaa kerran (suositus)"; kysymys: "pelaajan saapuessa kohdekaupunkiin ensimmäistä kertaa, mitä hänelle selitetään pelistä?"): ENSIMMÄISEN SAAPUMISEN OPASTUS: vain ensimmäisellä kaupunkiin saapumisella, saapumisesityksen jälkeen, Pulu kertoo puheena kolmella lyhyellä lauseella mitä kartalla voi napauttaa (nostot), mistä aarre löytyy ja miten Pulua kysytään; kohteet korostuvat hetken olemassa olevalla korostuksella; ei uusia ikkunoita eikä tekstiä (PUHE ÄÄNENÄ). Pelikoodari luonnostelee repliikit → PT hyväksyy → generointi Pulun äänellä (turbo, yksi otto; lupa kortissa) → NUI natiivi. RAAMATTUUN SAAPUMINEN-kohtaan. Käännöslinja 2 käytössä 10.46 (Natiiviseppä).
+
+## PULUN OPASTUKSEN KÄSIKIRJOITUS ENNEN GENEROINTIA (11.10.2026 klo 10.54)
+
+11.10. 10.5x OMISTAJA: "näytä ne pulun tekstit (koko juttu mikä tulisi) ennen kun generoit" → opastuksen koko käsikirjoitus (repliikit, ajoitus, korostukset) omistajalle hyväksyttäväksi ennen generointia; Pelikoodari ei generoi ennen PT:n ilmoitusta omistajan hyväksynnästä.
+
+## PULUN ALUN KÄSIKIRJOITUS KOKONAISUUTENA (11.10.2026 klo 10.54)
+
+11.10. 10.5x OMISTAJA (opastuksen luonnos, kortti): kolme repliikkiä hyväksytty sisällöltään ("nämä hyvät"): 1) "Napauta kartan merkkejä – niistä aukeaa juttuja." 2) "Vastaa kysymykseen oikein, niin vihreä piste vie aarteen jäljille." 3) "Ja jos jokin mietityttää, napauta minua!" EI GENEROIDA VIELÄ: omistaja kysyi "mitä muuta pulu sanoo alussa?" ja "mitä pulu sanoo lennon valinnassa alussa" → Pelikoodari kokoaa koko alun käsikirjoituksen sanatarkasti (aloituskaupungin valinta, alkulento, saapuminen Tukholmaan, opastuksen paikka) tiedostoon docs/raportit/pulu-alku-kasikirjoitus-20261011.md → PT näyttää omistajalle (vastaus + Asemataulun Sinulle-osio) → vasta hyväksynnän jälkeen generointi (turbo, yksi otto) → NUI natiivi.
