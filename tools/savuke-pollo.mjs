@@ -3777,6 +3777,15 @@ const kupla = await vihjeSivu.evaluate(async () => {
   const ennenAikojaan = Boolean(document.querySelector('.pollo-vihje:not([hidden])'));
   await new Promise((r) => setTimeout(r, 700));
   const vihje = document.querySelector('.pollo-vihje');
+  // Kehys liukuu paikalleen (right/bottom 380 ms, ilmestymisanimaatio): CI:n ohjelmistopiirrossa liuku voi olla kesken
+  // 700 ms:n kohdalla (ajo 38174279579: väli −20 px), joten mitataan vasta, kun paikka pysyy 6 ruutua samana (enint. 3 s).
+  for (let vakaa = 0, edellinen = '', t0 = performance.now(); vihje && vakaa < 6 && performance.now() - t0 < 3000;) {
+    await new Promise((r) => requestAnimationFrame(r));
+    const r = vihje.getBoundingClientRect();
+    const nyt = `${Math.round(r.left)},${Math.round(r.top)},${Math.round(r.width)},${Math.round(r.height)}`;
+    vakaa = nyt === edellinen ? vakaa + 1 : 0;
+    edellinen = nyt;
+  }
   const nappi = document.querySelector('.pollo-nappi')?.getBoundingClientRect();
   const laatikko = vihje?.getBoundingClientRect();
   return {
@@ -3869,9 +3878,21 @@ vaadi('napautus häivyttää kuplan tieltä',
  * kohteet eivät kaikissa vuoroissa satu kuplan alle — vuoto ei silti
  * riipu paikasta, vaan tapahtumien järjestyksestä.
  */
-const kohdistus = await vihjeSivu.evaluate(() => {
+const kohdistus = await vihjeSivu.evaluate(async () => {
   const vihje = document.querySelector('.pollo-vihje');
   if (!vihje || vihje.hidden) return { virhe: 'kuplaa ei ole' };
+  // Paikan pitää olla asettunut ennen siirron laskemista ja napautusta (ks. edellinen mittaus; CI-ajo 38174279579:
+  // napautus osui kuplan ohi kartalle, ohi 1, kun kupla liukui vielä).
+  const asettuu = async (el) => {
+    for (let vakaa = 0, edellinen = '', t0 = performance.now(); vakaa < 6 && performance.now() - t0 < 3000;) {
+      await new Promise((r) => requestAnimationFrame(r));
+      const r = el.getBoundingClientRect();
+      const nyt = `${Math.round(r.left)},${Math.round(r.top)}`;
+      vakaa = nyt === edellinen ? vakaa + 1 : 0;
+      edellinen = nyt;
+    }
+  };
+  await asettuu(vihje);
   // Kuplapinon myötä (3.9.2026) yksittäinen kupla ei enää kellu itse:
   // paikan omistaa pinon kehys, joten siirto tehdään sille.
   const kehys = vihje.closest('.pollo-kuplapino-kehys') ?? vihje;
@@ -3901,6 +3922,7 @@ const kohdistus = await vihjeSivu.evaluate(() => {
   const dx = Math.round(kohde.x - (laatikko.left + laatikko.width / 2));
   const dy = Math.round(kohde.y - (laatikko.top + laatikko.height / 2));
   kehys.style.translate = `${dx}px ${dy}px`;
+  await asettuu(vihje);
   // Mittari: pääseekö napautus kuplan ohi dokumenttiin asti.
   window.__kuplanOhi = 0;
   document.addEventListener('click', () => { window.__kuplanOhi += 1; });
