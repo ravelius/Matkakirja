@@ -355,6 +355,35 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("kulta", s.Kehykset["nl_aalto_kulta"].Materiaali);
         }
 
+        [Testi] static void ValoKatostaPaanYlapuolelta()
+        {
+            // Omistaja 11.10. 10.0x: keila katossa katsojan pään yläpuolella ~30° pystysuorasta, koko teos ja kehys tasaisesti.
+            var s = Alankomaat(); int kulmassa = 0;
+            foreach (var r in s.Ripustukset)
+            {
+                var (w, h) = MuseoKierros.Ulkomitat(s, r);
+                var osa = s.HaeOsa(r.Paikka.Osa);
+                var k = MuseoValo.KattoKeila(r.Paikka, osa.Y1, w / 2, h / 2);
+                var c = r.Paikka.Keskipiste; var n = r.Paikka.Normaali; var d = c - k.Paikka;
+                Oleta.Tosi((k.Paikka - c).X * n.X + (k.Paikka - c).Z * n.Z > 0, $"{r.Teos.Id}: keila teoksen edessä");
+                Oleta.Tosi(k.Paikka.Y > 2.0 && k.Paikka.Y <= Math.Max(osa.Y1, c.Y + h / 2 + 0.3) + 1e-9, $"{r.Teos.Id}: keila katossa pään yläpuolella ({k.Paikka.Y:F2} m)");
+                double pysty = Math.Acos(-d.Y / d.Pituus) * 180 / Math.PI;
+                if (Math.Abs(pysty - MuseoValo.KattoKulmaAste) < 0.5) kulmassa++;
+                var (ulko, sisa) = MuseoValo.Kartio(k);
+                foreach (var (sx, sy) in new[] { (-1, -1), (1, -1), (1, 1), (-1, 1) })
+                {
+                    // Kehyksen kulma seinän tasossa (vaaka-akseli normaalista).
+                    var x = new Linssit.Dioraama.V3(-n.Z, 0, n.X); double xl = Math.Sqrt(x.X * x.X + x.Z * x.Z);
+                    var kulma = c + x * (sx * w / 2 / xl) + new Linssit.Dioraama.V3(0, sy * h / 2, 0);
+                    var dk = kulma - k.Paikka;
+                    double cos = (dk.X * k.Suunta.X + dk.Y * k.Suunta.Y + dk.Z * k.Suunta.Z) / dk.Pituus;
+                    Oleta.Tosi(cos >= sisa - 1e-9, $"{r.Teos.Id}: kehyksen kulma täydessä valossa (sisäkartio)");
+                }
+                Oleta.Tosi(k.Kelvin <= MuseoValo.KattoKelvin && k.Lx == r.Paikka.Valo.Lx, $"{r.Teos.Id}: lämmin, lx ennallaan");
+            }
+            Oleta.Tosi(kulmassa >= s.Ripustukset.Count * 0.9, $"30° pystysuorasta: {kulmassa}/{s.Ripustukset.Count}");
+        }
+
         [Testi] static void PysahdysKertojanMittainen()
         {
             var k = new MuseoKierros(Alankomaat());

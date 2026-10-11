@@ -43,6 +43,7 @@ namespace Matkakirja.Natiivi
         public int Kolmioita { get; private set; }
 
         // Valon painotus (PT 11.10. 09.0x: "maalaus hehkuu seinää kirkkaampana ja sali tummuu reunoilta"): materiaalin _Valokerroin.
+        public const float SeinaToisto = 3f;
         public const float TeosValo = 1.5f, GrafiikkaValo = 1.25f, KehysValo = 1.3f, SeinaValo = 0.72f, KultaHaja = 0.45f;
 
         public MuseoRakennus(Transform isa)
@@ -148,8 +149,10 @@ namespace Matkakirja.Natiivi
 
                 double w = r.Leveys, h = r.Korkeus, ulkoW = w, ulkoH = h;
                 if (paikka.Grafiikka) { ulkoW += 2 * PaspisM; ulkoH += 2 * PaspisM; }
-                var mat = Materiaali("Teos " + r.Teos.Id, Color.white, 0.03f, 0.5f);
+                var mat = Materiaali("Teos " + r.Teos.Id, Color.white, 0.02f, 0.65f);   // matta lakka: ei heijastusta (omistaja 11.10.)
                 mat.SetFloat("_Valokerroin", paikka.Grafiikka ? GrafiikkaValo : TeosValo);
+                var tk = MuseoNayttamo.U(paikka.Keskipiste);
+                mat.SetVector("_TeosKeski", new Vector4(tk.x, tk.y, tk.z, 1));   // tasainen valaistus koko kankaalle
                 mat.mainTexture = Paikkakuva(r.Teos);
                 TeosMateriaalit[r.Teos.Id] = mat;
                 s.Kehykset.TryGetValue(paikka.Kehysprofiili ?? s.Oletuskehys ?? "", out var prof);
@@ -322,6 +325,7 @@ namespace Matkakirja.Natiivi
                     yield return MuseoTekstuurit.Hae(kansio + "tekstuurit/" + o.Pinta + ".astcm", b => d = b);
                     if (juuri == null) yield break;
                     tex = d != null ? DioraamaAstc.Lue(d, "Museo " + o.Pinta, out _, TextureWrapMode.Repeat) : null;
+                    if (tex != null) { tex.filterMode = FilterMode.Trilinear; tex.anisoLevel = 4; }   // vino seinä terävänä kuten JPEG-varalla
                 }
                 else tex = o.Kuva < malli.Kuvat.Count && malli.Kuvat[o.Kuva] != null ? Jpeg(malli.Kuvat[o.Kuva], "Museo " + o.Pinta + " (JPEG)", TextureWrapMode.Repeat) : null;
                 tekstuurit[o.Pinta] = tex;
@@ -368,6 +372,9 @@ namespace Matkakirja.Natiivi
             else if (p.StartsWith("damasti", StringComparison.Ordinal)) karheus = 0.6f;
             var m = Materiaali("Sali " + p, c, kiilto, karheus, metalli);
             m.SetFloat("_Valokerroin", SeinaValo);
+            // Seinän terävyys (omistaja 11.10. 10.0x "miksi seinä näkyy noin epäterävänä"): rijks_harmaa toistui 2 m:n välein (2 mm/px);
+            // pysähdysetäisyydeltä iPadin pikseli on ~0,3 mm → 3× tiheämpi toisto (0,67 mm/px). Kuvioidut (damasti ym.) säilyttävät mittakaavansa.
+            if (p == "rijks_harmaa") m.mainTextureScale = new Vector2(SeinaToisto, SeinaToisto);
             // Lattiaheijastus (juna 180): parketti hillitysti, kiillotettu marmori selvemmin (MuseoNayttamo.PaivitaHeijastus).
             if (p.StartsWith("parketti", StringComparison.Ordinal)) m.SetFloat("_Heijastus", LattiaHeijastusParketti);
             else if (p.StartsWith("kivi_marmori", StringComparison.Ordinal)) m.SetFloat("_Heijastus", LattiaHeijastusMarmori);

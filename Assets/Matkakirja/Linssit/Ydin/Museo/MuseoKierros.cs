@@ -434,7 +434,9 @@ namespace Matkakirja.Linssit.Museo
         }
 
         /// <summary>Teoksen ulkomitat seinällä (m): kangas + passepartout (grafiikka) + kehysprofiilin leveys molemmin puolin.</summary>
-        public (double W, double H) Ulkomitat(Ripustus r)
+        public (double W, double H) Ulkomitat(Ripustus r) => Ulkomitat(sali, r);
+
+        public static (double W, double H) Ulkomitat(Sali sali, Ripustus r)
         {
             var pk = r.Paikka;
             double kehys = sali.Kehykset.TryGetValue(pk.Kehysprofiili ?? sali.Oletuskehys ?? "", out var prof) ? prof.LeveysCm / 100 : 0.08;

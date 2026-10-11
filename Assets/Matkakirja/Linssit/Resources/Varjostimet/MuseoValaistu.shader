@@ -20,6 +20,8 @@
 //  - _MetalliHaja: kulunut lehtikulta sirottaa laajasti (karhea mikropinta) → osa metallista heijastuu kuin hajapinta albedon
 //    värisenä; ilman tätä kultakehys näkyi kohdevalossakin tummanruskeana (vain kapea peiliheijastus).
 //  - _Valokerroin: materiaalin valon kerroin (teokset > 1, seinät ja lattiat < 1): teos hehkuu seinää kirkkaampana.
+//  - TASAINEN TEOS (omistaja 11.10. 10.0x: "koko taulu valaistu tasaisemmin"): _TeosKeski.w > 0 → keilan voimakkuus ja kartio
+//    lasketaan teoksen keskipisteessä (ei kuumaa kohtaa eikä 1/d²-porrasta ylä- ja alareunan välille), suunta ja n·l pikselistä.
 //  - SALIN HIMMENNYS PYSÄHDYKSESSÄ (PT 11.10. 10.0x, omistajan "teos läheltä"): _MuseoHimmennys 0…1 (MuseoNayttamo häivyttää ~0,6 s)
 //    himmentää kaiken paitsi pysähdyksen teoksen kehyksineen (_MuseoKorostus*-laatikko seinän tasossa, 3 cm:n pehmeä reuna)
 //    lähes mustaksi (6 %): pystyssä vaakateoksen ylä- ja alapuolinen seinä ja lattia eivät vie huomiota. 0 = ei himmennystä.
@@ -41,6 +43,7 @@ Shader "Matkakirja/MuseoValaistu"
         _Ymparisto ("Ympäristöheijastus", Range(0, 1)) = 0
         _Valokerroin ("Valon kerroin", Float) = 1
         _MetalliHaja ("Metallin hajaosa", Range(0, 1)) = 0
+        _TeosKeski ("Teoksen keskipiste (w = 1: tasainen valaistus)", Vector) = (0, 0, 0, 0)
     }
     SubShader
     {
@@ -69,6 +72,7 @@ Shader "Matkakirja/MuseoValaistu"
                 float _Heijastus;
                 float4 _Aalto;
                 float _Ymparisto, _Valokerroin, _MetalliHaja;
+                float4 _TeosKeski;
             CBUFFER_END
             TEXTURE2D(_MuseoHeijastusKuva); SAMPLER(sampler_MuseoHeijastusKuva);
             float _MuseoHeijastusMaara;     // 0 = ei heijastusta (peilikameran piirto, kytkin)
@@ -143,9 +147,12 @@ Shader "Matkakirja/MuseoValaistu"
                 [loop] for (int k = 0; k < _MuseoSpotMaara; k++)
                 {
                     float3 d = _MuseoSpotP[k].xyz - i.maailma;
-                    float d2 = max(dot(d, d), 0.04);
-                    float3 l = d * rsqrt(d2);
-                    float keila = smoothstep(_MuseoSpotP[k].w, _MuseoSpotD[k].w, dot(-l, _MuseoSpotD[k].xyz));
+                    float d2p = max(dot(d, d), 0.04);
+                    float3 l = d * rsqrt(d2p);
+                    // Tasainen teos: voimakkuus ja kartio keskipisteestä (koko kangas samassa valossa), suunta pikselistä.
+                    float3 dk = _TeosKeski.w > 0 ? _MuseoSpotP[k].xyz - _TeosKeski.xyz : d;
+                    float d2 = max(dot(dk, dk), 0.04);
+                    float keila = smoothstep(_MuseoSpotP[k].w, _MuseoSpotD[k].w, dot(-dk * rsqrt(d2), _MuseoSpotD[k].xyz));
                     float nl = saturate(dot(n, l));
                     float3 e0 = _MuseoSpotV[k].rgb * (keila / d2);
                     Espot += e0;

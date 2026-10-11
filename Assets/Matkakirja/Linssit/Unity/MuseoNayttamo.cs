@@ -153,7 +153,12 @@ namespace Matkakirja.Natiivi
             keilat.Clear();
             foreach (var r in s.Ripustukset)
             {
-                var k = r.Paikka.Valo; if (k == null) continue;
+                // Omistaja 11.10. 10.0x: keila katossa katsojan pään yläpuolella 30° pystysuorasta, koko teos kehyksineen tasaisesti
+                // (MuseoValo.KattoKeila; LR:n sali.json-keilan lx ja sävy säilyvät).
+                if (r.Paikka.Valo == null) continue;
+                var osa = s.HaeOsa(r.Paikka.Osa);
+                var (uw, uh) = MuseoKierros.Ulkomitat(s, r);
+                var k = MuseoValo.KattoKeila(r.Paikka, osa != null ? osa.Y1 : r.Paikka.Keskipiste.Y + 2.5, uw / 2, uh / 2);
                 double I = MuseoValo.Voimakkuus(k, r.Paikka.Keskipiste, r.Paikka.Normaali);
                 var (ulko, sisa) = MuseoValo.Kartio(k);
                 var c = MuseoValo.Kelvin(k.Kelvin);
