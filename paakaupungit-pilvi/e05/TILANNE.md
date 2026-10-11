@@ -8,8 +8,8 @@ Vaihe 0: kontekstit ja saa-syote.json tuotettu alkuperäisellä konteksti-työka
 
 | kaupunki | A | B | C | D | E | F | huomio |
 |---|---|---|---|---|---|---|---|
-| bamako | kesken | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
-| ouagadougou | jonossa | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
+| bamako | ESTE: karttakohteiden määrä ja lähdekoordinaatit | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
+| ouagadougou | kesken | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
 | niamey | jonossa | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
 | yamoussoukro | jonossa | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
 | accra | jonossa | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
@@ -26,3 +26,7 @@ Vaihe 0: kontekstit ja saa-syote.json tuotettu alkuperäisellä konteksti-työka
 - Kaikki omat kirjoitukset, lähteet, lokit ja TMPDIR/pycache vain tämän NAS-tehtäväjuuren e05-kloonissa tai valiaikainen/e05-alueella. Yhteiseen checkoutiin ei koskettu.
 - Tyhjän kloonin tiedostojen tuonti keskeytettiin ja jatkettiin sparse-tuontina. Pohjan ulkopuolisia muutoksia ei toimiteta.
 - Ei apuagentteja, PR:ää, mergeä, pelikytkentää, julkaisua tai postilaatikkoviestejä.
+
+### Bamako A 11.10.2026
+
+Osioiden 0–9 lähdekooste toimitettu. Kartalle vain kaksi luonnonpaikkaa, niiden pisteet vain Wikivoyagessa; neljä rakennusehdokasta pois oikeus-/koordinaattiepävarmuuden vuoksi. A ei täytä täyden kartan porttia. Turvallisuuslähteenä FCDO, koska UM:n haetut polut eivät palauttaneet maakohtaista tiedotetta. Haetut lähteet ja hylkäykset koosteessa.
