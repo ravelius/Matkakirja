@@ -88,3 +88,16 @@ SEURAAVAKSI: yhdistä eleet (kohta 3: soutaja_yhdista.py tyo/eleet-leikkeet.glb 
 - Natiivi (Siirtoseppä): seinävariantti r 0,3 + solu 0,05 + korkeus 1,75 + minRegionArea 0,25 (7c84c88e1) testissä 16/19/61:lle;
   botin katse kulkusuuntaan (91/92, 12). Datan seinäleikkaus tyokalut-lr/kavely_tri_seinat.py HYLÄTTY (palatsin törmäysnormaalit
   sekaisin → katkoi reittejä); pielivara.py ja navseinat.py jäävät työkaluiksi.
+
+## JATKO 11.10. ~22.xx (uudelleenkäynnistyksen jälkeen)
+- VIETY: v47z (kaistat 16/75/64–65; 1499 012791c059e137ad, NYKY c3e5899fca16c540) → botti 12/17, 64/65 ja 75 korjautuivat.
+  v48b (sis. v48a: keskushallin seinä pois palatsin käytävästä, reitti 12 z 10,9, keittiön Barrel_01 ×2 + codex-noki pois;
+  1499 c0cac3ae6749b812, NYKY 570fadac5b0a09ab). v48a:n NYKY-vienti ei tuottanut tunnusta (vie-blender ohitti) → v48b korvaa.
+- KESKEN (agentti, v47z-agentin jatko): v48c = jumit 16 (kierreportaan oven länsipielen pää (−21,29; −2,90): kävely jatkuu nolla-
+  paksuisen seinälinjan ohi, E102 2,0 m > oviaukko 1,16 m), 55/61 (palatsin pielen pää (−18,71; −2,03)), 19 (portaan kylki 0,41–0,62 m).
+  Ketju kavely.py → v48c-tyo → jumit → kytke_v48c.zsh (ajamatta) → vienti (vie-v47/vie_v48b.zsh-malli).
+- MetaHuman-soutaja v1c (_valmiit/linna-hahmot/metahuman-soutaja-v1/): PT: suunta OK; NS kytki testihaaraan (natiiviseppa/soutaja-
+  metahuman), muistiarvio ~26 Mt/hahmo (×10 ≈ +150–200 Mt), ilmeet toimivat; v1c korjasi tummat kasvot (normaalikartta DX→GL,
+  ihon sävy, parta) → NS:n vertailuajo → PT → omistaja. Ei pakettiin ennen omistajaa.
+- Keittiön HDR v2 (yö, kalkkiseinät, luotaimet, yo-albedo-8k) toimitettu LS2:lle (_valmiit/olavinlinna-keittio-hdr-v1/).
+- Natiivi ei näytä yleisiä valo:-merkkejä (vain koodatut); näkyvät valot = tilat/*.glb:n liekki:/valo:-solmut.
