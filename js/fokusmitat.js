@@ -56,6 +56,9 @@ import { FOKUS_LAUTAPROJEKTIOT, FOKUS_MAANIMET, FOKUS_POHJAT } from './packs/fok
 import { MAATIEDOT } from './sisaltotaulut.js';
 import { HALLINNON_PAIKAT, PAAKAUPUNGIT } from './packs/laudan-paakaupungit.js';
 import { PAAKAUPUNKIPISTEET } from './packs/paakaupungit.js';
+import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
+import { PAAKAUPUNKIEN_ARTIKKELIAVAIMET } from './packs/europe-artikkelit.js';
+import { LUE_LISAA_TEKSTI, avaaKaupunkiesittely } from './kaupunkinosto.js';
 
 /* ------------------------------------------------------- mittakaava */
 
@@ -423,6 +426,19 @@ export function maanPaakaupunki(pack, iso) {
   const piste = PAAKAUPUNKIPISTEET.find((p) => p.maa === iso);
   if (!piste || pack?.id !== 'maailmankartta') return null;
   return { nimi: piste.nimi, asema: piste.asema === 'hallinnon paikka' ? 'hallinnon paikka' : 'pääkaupunki' };
+}
+
+/**
+ * PÄÄKAUPUNKIPISTEEN LEHTI (PT 11.10.2026, pääkaupunkien kytkentä kohta 3; natiivi = Natiivi-UI):
+ * pisteen kaupunki { id, name, wiki }, kun maan pääkaupunki on pääkaupunkipiste ja sillä on
+ * kaupunkilehti (KULTTUURI_KATEGORIAT[id]); muuten null. Laudan pääkaupungin lehti aukeaa
+ * pysäkiltä, joten sille ei tule nappia. Avain on pisteen id (js/packs/paakaupungit.js).
+ */
+export function paakaupunkipisteenLehti(pack, iso) {
+  if (!iso || PAAKAUPUNGIT[iso] || HALLINNON_PAIKAT[iso] || pack?.id !== 'maailmankartta') return null;
+  const piste = PAAKAUPUNKIPISTEET.find((p) => p.maa === iso);
+  if (!piste || !KULTTUURI_KATEGORIAT[piste.id]) return null;
+  return { id: piste.id, name: piste.nimi, wiki: PAAKAUPUNKIEN_ARTIKKELIAVAIMET[piste.id] ?? piste.nimi };
 }
 
 export function maanRivit(ui, iso) {
@@ -846,6 +862,24 @@ function taytaMaataulu(ui, iso) {
     const dd = luo('dd', 'fokus-maataulu-arvo', arvo);
     if (lisa) dd.appendChild(luo('span', 'fokus-maataulu-sija', lisa));
     lista.appendChild(dd);
+  }
+  /*
+   * PÄÄKAUPUNKIPISTEEN "LUE LISÄÄ" pääkaupunkirivin arvoon (PT 11.10.2026): lehden oma
+   * Lue lisää -nappi (.wiki-btn) avaa kaupungin esittelyn samassa lehtiarkissa kuin
+   * laudan kaupungin esittely (avaaKaupunkiesittely). Ei uutta tyyliä.
+   */
+  const pisteenLehti = paakaupunkipisteenLehti(ui.game?.pack, iso);
+  const paakaupunkiArvo = pisteenLehti ? lista.querySelector('dd') : null;
+  if (paakaupunkiArvo) {
+    const nappi = luo('button', 'wiki-btn fokus-maataulu-paakaupunki', LUE_LISAA_TEKSTI);
+    nappi.type = 'button';
+    nappi.setAttribute('aria-label', `${LUE_LISAA_TEKSTI}: ${pisteenLehti.name}`);
+    nappi.addEventListener('click', (e) => {
+      e.stopPropagation();
+      avaaMaataulu(ui, false);
+      avaaKaupunkiesittely(ui, pisteenLehti);
+    });
+    paakaupunkiArvo.appendChild(nappi);
   }
   /*
    * KIELET LIPPUINEEN viimeisenä rivinä (omistaja 25.8.2026). Rivi on

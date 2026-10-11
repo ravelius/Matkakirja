@@ -4307,3 +4307,25 @@ export const EUROPE_ARTIKKELIT = {
     teksti: 'Vaduz sijaitsee Reinin itärannalla Liechtensteinin keskiosassa. Nimen juuri on vanha retoromaaninen auadutg, vesijohto, joka juontuu latinan sanasta aquaeductus, ja ensimmäiset merkinnät kylästä ovat 1100-luvun käsikirjoituksista.\n\nVaduzin kreivikunta muodostettiin 1342 Werdenbergin kreivikunnan osana. Sveitsiläiset polttivat linnan ja koko kylän Švaabin sodassa 1499, ja keisari Rudolf II antoi Vaduzille markkinaoikeudet 1592. Liechtensteinin suku osti Schellenbergin herruuden 1699 ja Vaduzin kreivikunnan 1712, ja Kaarle VI yhdisti alueet ruhtinaskunnaksi 1719.\n\nVuoden 1862 perustuslaki toi kansalaisvapaudet ja ensimmäiset maapäivät, ja kunnallislaki antoi Vaduzille pormestarin ja kunnanvaltuuston 1864. Rautatie rakennettiin 1872, kansallismuseo perustettiin 1800-luvun lopulla ja Kunstmuseum valmistui 2000.',
   },
 };
+
+/*
+ * PÄÄKAUPUNKIPISTEEN ARTIKKELIAVAIN (Pelikoodari 11.10.2026): pisteen id (js/packs/paakaupungit.js) →
+ * EUROPE_ARTIKKELIT-avain. Piste ei ole laudan kaupunki, joten sillä ei ole city.wikiä; maakortin
+ * pääkaupunkirivin esittely (js/fokusmitat.js) hakee tekstin tällä. tools/paakaupungit/kytke-pilvisisalto.mjs.
+ */
+export const PAAKAUPUNKIEN_ARTIKKELIAVAIMET = {
+  belgrad: 'Belgrad',
+  bratislava: 'Bratislava',
+  chisinau: 'Chișinău',
+  minsk: 'Minsk',
+  podgorica: 'Podgorica',
+  skopje: 'Skopje',
+  tirana: 'Tirana',
+  zagreb: 'Zagreb',
+  andorralavella: 'Andorra la Vella',
+  bern: 'Bern',
+  monaco: 'Principality of Monaco',
+  reykjavik: 'Reykjavík',
+  sanmarino: 'San Marino (kaupunki)',
+  vaduz: 'Vaduz',
+};

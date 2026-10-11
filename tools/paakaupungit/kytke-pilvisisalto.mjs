@@ -50,6 +50,9 @@ lisaa('europe-valokuvat.js', 'export const EUROPE_VALOKUVAT = {', kaupungit.filt
 lisaa('europe-questions.js', 'export const EUROPE_QUESTIONS = {', kaupungit.map((k) => r(k.id, k.kysymykset)), kom('Kysymykset (vain dataa: ei pysäkkiä, Päätoimittaja 06.4x)'));
 lisaa('europe-questions.js', 'export const EUROPE_FACTS = {', kaupungit.map((k) => r(k.id, k.tiedot)), kom('Tiedot (vain dataa)'));
 lisaa('europe-artikkelit.js', 'export const EUROPE_ARTIKKELIT = {', kaupungit.map((k) => r(k.kaupunki.wiki, k.artikkeli)), kom('Artikkelit wiki-otsikolla (vain dataa)'));
+// Pisteen id → artikkeliavain (maakortin pääkaupunkirivin esittely, js/fokusmitat.js); taulu on tiedoston lopussa.
+lisaa('europe-artikkelit.js', 'export const PAAKAUPUNKIEN_ARTIKKELIAVAIMET = {', kaupungit.map((k) => r(k.id, k.kaupunki.wiki)),
+  kom('Artikkeliavaimet'));
 lisaa('maakartat.js', 'export const KAUPUNKIKARTAT = {', kaupungit.filter((k) => k.kohdekartta).map((k) => r(k.id,
   { polku: `assets/kartat/${k.id}-keskusta.png`, lahde: '© OpenStreetMap-tekijät (ODbL)', ...k.kohdekartta })), kom('Kohdekartat (piirto tools/piirra-kaupunkikartta.mjs)'));
 writeFileSync(join(repo, '.pk-rajat.json'), JSON.stringify(Object.fromEntries(kaupungit.filter((k) => k.kohdekartta).map((k) => [k.id, k.kohdekartta.rajat])), null, 1));

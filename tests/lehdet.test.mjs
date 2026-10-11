@@ -443,7 +443,10 @@ test('jokainen kohdekartta on avaimistettu laudan kaupunki-id:llä', async () =>
    */
   const { KAUPUNKIKARTAT } = await import('../js/packs/maakartat.js');
   const { PACKS } = await import('../js/pack.js');
+  const { PAAKAUPUNKIPISTEET } = await import('../js/packs/paakaupungit.js');
   const idt = new Set(PACKS.flatMap((p) => (p.cities ?? []).map((c) => c.id)));
+  // Pääkaupunkipisteen kartta avaimistetaan pisteen id:llä (PT 11.10.2026); se ei ole pysäkki.
+  for (const p of PAAKAUPUNKIPISTEET) idt.add(p.id);
   for (const avain of Object.keys(KAUPUNKIKARTAT)) {
     assert.ok(idt.has(avain),
       `kohdekartta "${avain}" ei vastaa yhdenkään laudan kaupunki-id:tä — `

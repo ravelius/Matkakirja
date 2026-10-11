@@ -4902,7 +4902,7 @@ export const SAATIEDOT = {
     alin: [-3, -2, 2, 6, 11, 14, 16, 16, 11, 6, 3, -1],
     sade: [37, 33, 37, 36, 59, 59, 62, 61, 59, 44, 46, 43],
     lahde: {
-      nimi: 'en-Wikipedia, ilmastotaulukko',
+      nimi: 'sääasema Bratislavan lentoasema, en-Wikipedia',
       kausi: '1991–2020',
     },
     luonnehdinta: 'Bratislavassa on lämmin kesä ja nollan tuntumassa pysyttelevä talvi: heinäkuun keskilämpö on 22,0 astetta ja tammikuun 0,3 astetta. Sadetta tulee ympäri vuoden, yhteensä noin 580 millimetriä, eniten heinäkuussa (62 mm) ja vähiten helmikuussa (33 mm).',
@@ -4954,7 +4954,7 @@ export const SAATIEDOT = {
     alin: [-3, -2, 2, 6, 10, 14, 16, 16, 12, 8, 3, -1],
     sade: [30, 29, 38, 40, 43, 54, 38, 36, 34, 49, 45, 48],
     lahde: {
-      nimi: 'en-Wikipedia, ilmastotaulukko',
+      nimi: 'sääasema Skopjen lentoasema, en-Wikipedia',
       kausi: '1991–2020',
     },
     luonnehdinta: 'Skopjessa tammikuun keskilämpö on 0,2 astetta ja heinä- ja elokuun 24,1 astetta, joten talvet ovat kylmiä ja kesät kuumia. Sadetta kertyy vuodessa vain noin 480 millimetriä, eniten kesäkuussa (54 mm) ja vähiten helmikuussa (29 mm).',
@@ -4980,7 +4980,7 @@ export const SAATIEDOT = {
     alin: [-2, -1, 3, 7, 11, 15, 16, 16, 12, 8, 3, -1],
     sade: [46, 45, 48, 61, 77, 91, 80, 86, 104, 89, 87, 62],
     lahde: {
-      nimi: 'en-Wikipedia, ilmastotaulukko',
+      nimi: 'sääasema Zagreb Maksimir, en-Wikipedia',
       kausi: '1991–2020',
     },
     luonnehdinta: 'Tammikuu on kylmin kuukausi keskilämmöllä 1,4 astetta, ja heinäkuu lämpimin 22,2 asteella. Toukokuusta syyskuuhun keskilämpö on 16,7–22,2 astetta. Sadetta tulee ympäri vuoden, yhteensä noin 880 millimetriä, ja sateisin kuukausi on syyskuu (104 mm).',
@@ -4993,7 +4993,7 @@ export const SAATIEDOT = {
     alin: [-2, -2, 0, 2, 5, 9, 11, 11, 9, 5, 1, -1],
     sade: [53, 38, 41, 71, 90, 84, 61, 86, 81, 72, 68, 68],
     lahde: {
-      nimi: 'en-Wikipedia, ilmastotaulukko',
+      nimi: 'sääasema Roc de Sant Pere, en-Wikipedia',
       kausi: '1971–2000',
     },
     luonnehdinta: 'Andorra la Vellassa tammikuu on kylmin kuukausi, keskilämpö 2,2 astetta, ja heinäkuu lämpimin, 18,8 astetta. Sadetta tulee vuodessa noin 810 millimetriä, eniten toukokuussa (90 mm) ja vähiten helmikuussa (38 mm).',
@@ -5006,7 +5006,7 @@ export const SAATIEDOT = {
     alin: [-3, -3, 0, 3, 8, 11, 13, 13, 9, 6, 1, -2],
     sade: [60, 56, 65, 78, 112, 102, 108, 112, 87, 87, 77, 79],
     lahde: {
-      nimi: 'en-Wikipedia, ilmastotaulukko',
+      nimi: 'sääasema Bern-Zollikofen, en-Wikipedia',
       kausi: '1991–2020',
     },
     luonnehdinta: 'Bernissä tammikuu on kylmin kuukausi, keskilämpö 0,2 astetta, ja heinäkuu lämpimin, 18,8 astetta. Sadetta tulee joka kuukausi: kuivin on helmikuu 56 millimetrillä ja sateisimmat touko- ja elokuu 112 millimetrillä. Vuodessa sataa noin 1 020 millimetriä.',
