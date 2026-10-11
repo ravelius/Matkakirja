@@ -71,12 +71,11 @@ namespace Matkakirja.Natiivi
         /// <summary>Lennon luennan tunniste Puhe.SoivaUrl:ssa (Pelikoodari soittaa luennat "lento-alku" koneen lähtiessä).</summary>
         public const string LentoPuheTunniste = "puhe-lento-alku";
         public const string LentoPuhe = "https://media.matkakirja.app/audio/puhe-lento-alku.mp3?v=2";
-        /// <summary>Varalista, jos pelin Lahtokaupungit() ei ole saatavilla (webin ETUSIVUN_KOHTEET).</summary>
-        public static readonly string[] Kohteet =
-        {
-            "ateena", "newyork", "kairo", "rio", "mumbai", "peking", "sydney",
-            "moskova", "tokio", "singapore", "kapkaupunki", "sanfrancisco", "tanger", "istanbul",
-        };
+        /// <summary>
+        /// Varalista, jos pelin Lahtokaupungit() ei ole saatavilla. Varsinainen lista on sisältöpaketin kaupungit.lahtokohde
+        /// (Karttaseppä). Omistaja 11.10.2026 klo 11.5x: aloituskaupungit Ateena, Pariisi ja Tukholma (Istanbul pois, Moskova → Pariisi).
+        /// </summary>
+        public static readonly string[] Kohteet = { "ateena", "pariisi", "tukholma" };
 
         const int Tahti = 190;
         static readonly (Regex Osuu, int Tauko, int Huojunta)[] Tauot =   // kieli: ei (säännölliset lausekkeet välimerkeille, ei näkyvä teksti)

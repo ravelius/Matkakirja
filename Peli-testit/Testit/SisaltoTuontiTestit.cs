@@ -40,15 +40,18 @@ namespace Matkakirja.Peli.Testit
         [Testi] static void LahtokohteetKentasta()
         {
             // Omistaja 10.10. 23.4x: alkulennossa vain merkityt; puuttuva kenttä = false, kun paketissa on kenttä; aloitus ennallaan.
+            // Omistaja 11.10. 11.5x: aloituskaupungit Ateena, Pariisi ja Tukholma (Istanbul pois, Moskova → Pariisi).
             const string json = "{\"nimi\":\"kaupungit\",\"alkiot\":["
                 + "{\"id\":\"lontoo\",\"aloitus\":true,\"lahtokohde\":false},"
                 + "{\"id\":\"ateena\",\"aloitus\":true,\"lahtokohde\":true},"
-                + "{\"id\":\"rooma\",\"aloitus\":true},"
+                + "{\"id\":\"pariisi\",\"aloitus\":true,\"lahtokohde\":true},"
+                + "{\"id\":\"moskova\",\"aloitus\":true,\"lahtokohde\":false},"
+                + "{\"id\":\"istanbul\",\"aloitus\":true},"
                 + "{\"id\":\"tukholma\",\"aloitus\":true,\"lahtokohde\":true}]}";
             var k = SisaltoTuonti.LueKaupungit(json);
-            Oleta.Sama("ateena,tukholma", string.Join(",", Kaupunki.Lahtokohteet(k).Select(x => x.Id)));
-            Oleta.Sama(4, k.Count(x => x.Aloitus), "aloitus ennallaan (Mannerlento, aarteet)");
-            Oleta.Sama(null, k[2].Lahtokohde);
+            Oleta.Sama("ateena,pariisi,tukholma", string.Join(",", Kaupunki.Lahtokohteet(k).Select(x => x.Id)));
+            Oleta.Sama(6, k.Count(x => x.Aloitus), "aloitus ennallaan (Mannerlento, aarteet)");
+            Oleta.Sama(null, k[4].Lahtokohde);
         }
 
         [Testi] static void ReittienTulkinta()
