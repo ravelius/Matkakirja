@@ -60,9 +60,10 @@ namespace Matkakirja.Natiivi
             // Kuunvalo ilmaraosta (valo:tyrma-rako): volumetrinen säde lattialle laatutason salliessa.
             if (M("valo:tyrma-rako") is KavelyMerkki mv) SeikkailuValot.Saede(go.transform, U(mv), (t.istuin - U(mv)) + Vector3.down * 0.5f, new Color(0.62f, 0.7f, 0.85f), 0.9f, 6f, 30f, DioraamaNayttamoKerros());
             // Herätessä katse huoneeseen (omistaja TF 180: kamera tuijotti seinää, merkin kierto_y osoittaa poispäin ovesta): oven ja
-            // pudotettavien avainten välisuuntaan (muunnelma 1), muuten ovelle; ovi ja olki samassa kuvassa.
+            // pudotettavien avainten välisuuntaan (muunnelma 1), muuten ovelle. Ovi painaa kaksinkertaisesti (v6 tyrma-ovi 04.2x: tasan
+            // välissä katse 140°, ovi 178° → 38° sivulla eli kuvan reunan ulkopuolella; nyt ~23°, ovi ja käytävän valo näkyvät).
             Vector3 Suunta(Vector3 a) { var v = a - t.istuin; v.y = 0; return v.sqrMagnitude > 1e-4f ? v.normalized : Vector3.zero; }
-            var kohti = Suunta(t.ovi) + (t.ydin.Muunnelma == 1 ? Suunta(t.avaimet) : t.ydin.Muunnelma == 3 && t.ryomiOn ? Suunta(t.ryomi) : Vector3.zero);
+            var kohti = 2f * Suunta(t.ovi) + (t.ydin.Muunnelma == 1 ? Suunta(t.avaimet) : t.ydin.Muunnelma == 3 && t.ryomiOn ? Suunta(t.ryomi) : Vector3.zero);
             if (kohti.sqrMagnitude > 1e-4f) t.katse = Mathf.Atan2(kohti.x, kohti.z) * Mathf.Rad2Deg;
             t.piilossa = SeikkailuKavely.PiilotaPaallekkaiset(mi.Osa, kirjaa);   // dioraaman keittiö tyrmän ympäriltä (täysmustat levyt)
             p.Siirra(t.istuin + Vector3.up * 0.05f); p.Tila.KameraYaw = p.Tila.HahmoYaw = t.katse; p.Tila.KameraPitch = 4;
