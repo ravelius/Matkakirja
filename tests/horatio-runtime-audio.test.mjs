@@ -68,15 +68,15 @@ const ODOTETUT = [
 
 /*
  * 11.10.2026: Äänittäjän viisi suoraan ämpärin juureen viemää luentaa
- * (ei versions-alikansiota eikä tuotantokuittia). Kesto = aikaleimatiedoston
- * `kesto` (ms) / 1000, ks. js/media.js HORATIO_TUOTANTO.
+ * (ei versions-alikansiota eikä tuotantokuittia). Kesto = äänitteen todellinen kesto
+ * (afinfo, kuten kuitillisilla; PT 11.10.), aikaleimojen kesto ≤ 0,05 s lyhyempi.
  */
 const VERSIOIMATTOMAT = [
-  ['bryssel', 32.96],
-  ['kosice', 36.32],
-  ['ljubljana', 36.32],
-  ['luxemburg', 36.24],
-  ['valletta', 32.72],
+  ['bryssel', 32.993],
+  ['kosice', 36.362],
+  ['ljubljana', 36.362],
+  ['luxemburg', 36.284],
+  ['valletta', 32.758],
 ];
 
 test('Horatio-runtime on exact 45/45 completed-kuittien final-avaimissa ja kestoissa', () => {
@@ -108,7 +108,7 @@ test('versioimattomat luennat: tavallinen audio/-polku, kesto aikaleimoista ja p
     const aikaleimat = JSON.parse(readFileSync(
       new URL(`../assets/aikaleimat/puhe-fokus-matkakirja-${id}.aikaleimat.json`, import.meta.url), 'utf8'));
     assert.equal(aikaleimat.aani.nimi, nimi, id);
-    assert.equal(aikaleimat.kesto / 1000, kesto, id);
+    assert.ok(kesto - aikaleimat.kesto / 1000 >= 0 && kesto - aikaleimat.kesto / 1000 < 0.05, id);
     assert.equal(aikaleimat.teksti, FOKUSVIRRAT[id].matkakirja.teksti, id);
   }
 });
