@@ -54,3 +54,22 @@ tiivistys (sparse) pois viennistä, parran alahuulen alla oleva sahalaita tasoit
 Eyes 8, suun sisus 31, Eyebrows 23, Hair_Beard 34, Hair_Buzzed 1; luut 65, leikkeet 12. Kuvat esikatselu/arkki-suu-parta.jpg,
 suu-sisus-varikoe.png. Avoimet: parran irtoaminen ihosta jawOpenissa (≤ 3,8 mm), poskien parran ulkoreuna yhä sahalaitainen.
 SEURAAVAKSI: yhdistä eleet (kohta 3: soutaja_yhdista.py tyo/eleet-leikkeet.glb → kasvot-v1/glb/soutaja-1500.glb) → hahmot-linkki → vienti → SHA NS:lle.
+
+## JATKO 11.10. ilta (uusi sessio, scratchpad .../5ab64f62-6697-4edf-834c-735c7cfcf3d5/scratchpad/)
+- v47r–t VIETY ja Siirtosepällä (v47t 1499 a8cae107607efe0a, NYKY 0cf47c992992ff69). v47v VIETY: 1499 4c53298feb288633 (blender
+  1d210ae40bd87242), NYKY 010ff7e190873875 (blender 9ffc115357db22ce) = laituri (v47v-laituri: silta lankut, rantakivet v3, aukot matalalla
+  muurilla PT:n kevennyksellä), keittiö (v47v-keittio: keittio-sisatila-raja + oven koristekivet pois) ja harjan reittipisteet 91/92 (v47w,
+  olivat sakarakiven sisällä). Työkansiot olavinlinna-kavely-v1/v47v-laituri/ ja v47v-keittio/ (kytke.zsh, esikatselu/).
+- v47u (soutaja FACEIT 52 + eleet peliin) PERUTTU: omistaja haluaa suomalaiset kasvot ja PT näyttää ne ennen peliä. Yhdistetty glb
+  _valmiit/olavinlinna-soutaja-eleet-v1/glb/soutaja-1500.glb on valmis, mutta hahmot-linkki on ennallaan.
+- Jumit (botti v47t ilman seiniä): 16, 19, 61, 64, 75 auki. Natiivin seinäsääntö kokeiltiin ja peruttiin (11/17). Oma Recast-emulointi
+  tyokalut-lr/navseinat.py (EI_SEINIA=1, SEINAT=1) yhdistää 16/64/75 → odotetaan Siirtosepän NavMesh-dumppia + reittikulmia
+  (pyydetty polkuun proto-3d/lokit/navmesh-v47t/). Jumi 19: kierreportaan juurella tasanne 3,4 koskee portaan kylkeen, jossa törmäys-
+  askelmat 0,41–0,62 m (x −18,4…−18,65, z −18,0…−18,4); oikea sisäänkäynti z −18,8…−19,0 (askel 0,21).
+- JONO (PT): jumit (juna 182) → MetaHuman-pilotti soutajalla (Opus-agentti käynnissä: _valmiit/linna-hahmot/metahuman-soutaja-v1/;
+  kuvapari + video + muistiarvio PT:lle) → kasvoerä 183 (luettelo HYVÄKSYTTY: docs/raportit/linnan-henkilot-kasvot-20261011.md,
+  10 puhujaa + 6 taustakasvoa, voudin MH pidetään).
+- Muut jonossa: keittiön HDR-leivonta TOIMITETTU LS2:lle (_valmiit/olavinlinna-keittio-hdr-v1/). Karttasepän keittiön vertailuaineisto
+  (T7 _tyo/karttaseppa/olavinlinna-keittio-vertailu-20261011/: kalkittu luonnonkivi #EADFD1, liuskekivilattia) ja Sisältökirjurin
+  sisätilojen totuusraportti (PR #4417, korjauslista §6: kappeli kalkittu, soihdut pois, Kuninkaansali, Tott-kammio, ampuma-aukot,
+  tyrmä, porttikäytävä, keittiön rappaus) → kysy PT:ltä järjestys. Pariisi v3c/v3d: odottaa LS2:n pelikuvia.
