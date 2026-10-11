@@ -176,7 +176,7 @@ namespace Matkakirja.Natiivi
         /// otsikko tyylikirjan Otsikko-koossa, jolloin pisimmätkin nimet (Staalmeesters, 56 merkkiä) mahtuvat kahdelle riville
         /// Poistun vasemmalle puolelle; leveämmällä Nimiö kuten ennen.
         /// MATALA vaakaruutu (puhelin vaakana; PT 11.10. 00.3x KIIRE, omistaja TF 180: otsikko peitti taulun yläosan): nimikyltti
-        /// ylös (10 pt) ja pienemmäksi, jolloin kyltti vie vain ylimmän ~15 %:n ja taulu (MuseoKierros.Katseluasento: 20–76 %) jää vapaaksi.
+        /// ylös (10 pt) ja pienemmäksi, jolloin kyltti vie vain ylimmän ~15 %:n ja taulu (MuseoKierros.Katseluasento: teos täyttää 95 % rajaavasta suunnasta, omistaja 11.10.) jää vapaaksi.
         /// </summary>
         void AsetteleNimi()
         {
