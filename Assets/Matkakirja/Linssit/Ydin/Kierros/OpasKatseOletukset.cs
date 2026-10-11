@@ -29,6 +29,24 @@ namespace Matkakirja.Linssit.Kierros
             return null;
         }
 
+        /// <summary>
+        /// AUKION KESKUSMONUMENTTI (PT 11.10. 09.2x, iPhone-ajo e0689c677: pystykuvassa Concorden obeliski oli oikeassa reunassa, koska
+        /// workerin aukion piste on ~19 m obeliskista): pallon pystykuvan aukiokehys kiertää monumenttia (OpasKuvaus.LeveysKuvaan).
+        /// Paikka Wikidatasta (P625). Ei riviä → aukion piste.
+        /// </summary>
+        public static readonly (string nimi, double lat, double lon, double monLat, double monLon)[] AukionMonumentit =
+        {
+            ("Concorden aukio: Luxorin obeliski (Q1503331)", 48.8656331, 2.3212357, 48.865475, 2.321133),
+        };
+        public const double MonumenttiSadeM = 60;
+
+        /// <summary>Aukion (lat, lon) keskusmonumentin paikka tai null.</summary>
+        public static (double lat, double lon)? Monumentti(double lat, double lon)
+        {
+            foreach (var m in AukionMonumentit) if (KierrosLento.EtaisyysM(m.lat, m.lon, lat, lon) < MonumenttiSadeM) return (m.monLat, m.monLon);
+            return null;
+        }
+
         /// <summary>Täydentää workerin kohteen (katse_suunta puuttuu) paikan oletuksella.</summary>
         public static void Taydenna(OpasKohde k)
         {

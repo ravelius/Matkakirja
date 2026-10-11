@@ -45,6 +45,8 @@ namespace Matkakirja.Linssit.Kierros
         /// ei ole pallon Kehysta-kehys), LeveysSuhde = kuvasuhde, jolle kehys laskettiin, LeveysPohja = kehys ennen sovitusta (null = tämä).</summary>
         public double LeveysKoko, LeveysSuhde;
         public Pysahdys LeveysPohja;
+        /// <summary>Aukion keskusmonumentin paikka (pallon aukiokehys; NaN = ei aukio): kapeassa kuvassa kierto sen ympäri.</summary>
+        public double MonumenttiLat = double.NaN, MonumenttiLon = double.NaN;
 
         public static Pysahdys P(string id, string nimi, string alarivi, double lat, double lon, double maa, double nosto,
             double suuntima, double pitch, double etaisyys, string teksti = null) => new Pysahdys

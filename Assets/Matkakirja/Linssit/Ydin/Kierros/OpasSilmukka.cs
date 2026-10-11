@@ -968,18 +968,18 @@ namespace Matkakirja.Linssit.Kierros
         }
 
         /// <summary>
-        /// LEVEÄ KOHDE, LAITE KÄÄNTYI KESKEN PYSÄHDYKSEN (Linssiseppä 11.10. 08.5x): pallon Kehysta-kehys (LeveysKoko &gt; 0, ei tornisääntöä)
+        /// LEVEÄ KOHDE, LAITE KÄÄNTYI KESKEN PYSÄHDYKSEN (Linssiseppä 11.10. 08.5x): pallon Kehysta-kehys (alue LeveysKoko &gt; 0 tai aukio MonumenttiLat, ei tornisääntöä)
         /// lasketaan uudelleen uudelle kuvasuhteelle samasta pohjakehyksestä (OpasKuvaus.LeveysKuvaan) ja vaihtuu pehmeästi kuten
         /// tornisäännössä (AloitaKehysVaihto).
         /// </summary>
         void VaihdaLeveaKehysTarvittaessa(KiertoSuunnitelma ks)
         {
             var vanha = NykyinenKehys;
-            if (siirtoVanha != null || vanha == null || vanha.LeveysKoko <= 0 || vanha.TorniPohja != null) return;
+            if (siirtoVanha != null || vanha == null || (vanha.LeveysKoko <= 0 && double.IsNaN(vanha.MonumenttiLat)) || vanha.TorniPohja != null) return;
             double suhde = OpasKuvaus.KehysSuhde;
             if (Math.Abs(vanha.LeveysSuhde - suhde) < 0.005) return;
             var uusi = OpasKuvaus.LeveysKuvaan(vanha, suhde);
-            if (ReferenceEquals(uusi, vanha) || Math.Abs(uusi.EtaisyysM - vanha.EtaisyysM) < 0.5) { vanha.LeveysSuhde = suhde; return; }
+            if (ReferenceEquals(uusi, vanha) || (Math.Abs(uusi.EtaisyysM - vanha.EtaisyysM) < 0.5 && KierrosLento.EtaisyysM(uusi.Lat, uusi.Lon, vanha.Lat, vanha.Lon) < 0.5)) { vanha.LeveysSuhde = suhde; return; }
             AloitaKehysVaihto(ks, vanha, uusi, true);
         }
 
