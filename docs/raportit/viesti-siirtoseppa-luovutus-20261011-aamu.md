@@ -15,6 +15,8 @@ PelattavaPala.Hash fef286897291691f, esittely 0a36f8bea046b953). v47h tulee LR:l
 siirtoseppa/v47h v47g:n päälle, PelattavaPala.cs + kultaiset olavinlinna-v47h-*.json; ks. 53c3ec890 ja 09c6d28eb) ja kerro Julkaisijalle.
 
 ## SEURAAVAT TEHTÄVÄT (järjestys)
+PT 10.0x: botti-osat-ajo on linnasimun ENSIMMÄINEN vuoro vahdin v47g-käännöksellä (= botin todennus); Laitetestaaja testaa heti perään
+aloituskohdista botin hyväksymät osat. EI LÄPI -osat korjataan saman tien (vahti kääntää). PT:lle osittainen yhteenveto yhdellä rivillä.
 1. **Botti-osat-ajo** heti, kun Julkaisija antaa SIMULAATTORI NYT (pyydetty 7. kierroksen jälkeen; olavinlinna-uusin sisältää e1ad179e5):
    `perl -e 'use POSIX "setsid"; fork and exit; setsid; exec @ARGV' zsh /Users/Shared/Claude/proto-3d/tyokalut/siirtoseppa-ajot/ajo-botti-osat.sh > <scratchpad>/bo.out 2>&1 < /dev/null`
    → raportti <todistuskansio>/botti-osat/RAPORTTI.md. Ensimmäinen OIKEA ajo aloituskohdille ja osa-ajolle (kumpaakaan ei ole ajettu
