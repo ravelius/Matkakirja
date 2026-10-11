@@ -28,6 +28,10 @@ namespace Matkakirja.Linssit.Kierros
         // ~50 % kuvasta (leveys 0,4 → 0,5, korkeus 0,6 → 0,5) ja vähimmäisetäisyydet alas (150/150/220 → 110/100/160 m), jotta alle
         // ~70 m:n kohteet (patsas, pieni kirkko, Agoran rakennukset) eivät jää pieniksi; yläraja ennallaan.
         public const double KuvaPystyAst = 50, KuvaSuhde = 1.8, LeveysOsuus = 0.5, KorkeusOsuus = 0.5, KatseAlasOsuus = 0.06;
+        /// <summary>Laitteen todellinen kuvasuhde (leveys / korkeus; OpasSovitin päivittää pallon kameran Camera.aspectista; oletus
+        /// iPad vaaka 4:3). Vain tornisääntö (OpasSilmukka.TorniKuvaan) käyttää tätä (PT 11.10. 07.3x: iPhonen pystykuva ~0,46);
+        /// muu kehystys suunnitellaan yhä KuvaSuhteelle.</summary>
+        public static double KuvaSuhdeNyt = 4.0 / 3;
         public const double KatuEtMinM = 110, KatuEtMaxM = 350, RakennusEtMinM = 100, RakennusEtMaxM = 600, AlueEtMinM = 160, AlueEtMaxM = 350;   // Päätoimittaja 21.3x: Nyhavn/Tivoli/Strøget liian kaukaa → enintään ~350 m
         public const double SivuKulma = 25;
         public const double PalloMatalampiAst = 6, AukioEtMaxM = 220;

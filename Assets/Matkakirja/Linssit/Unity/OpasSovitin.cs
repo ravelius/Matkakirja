@@ -470,6 +470,13 @@ namespace Matkakirja.Natiivi
                     case KysyOdotus.Tapahtuma.Odotus12: Silta(OpasSiltalauseet.Odotus12, false); break;
                     case KysyOdotus.Tapahtuma.Virhe: o.Kirjaa("opas: kysymykseen ei vastausta 25 s:ssa"); Silta(OpasSiltalauseet.Virhe, false); break;
                 }
+            // Laitteen kuvasuhde tornisäännölle (PT 11.10. 07.3x: iPhonen pystykuva ~0,46; kääntö kesken pysähdyksen → kehys uudelleen).
+            var suhdeKamera = kierto != null ? kierto.GetComponent<Camera>() : null;
+            if (suhdeKamera != null && suhdeKamera.aspect > 0.1f && Math.Abs(suhdeKamera.aspect - OpasKuvaus.KuvaSuhdeNyt) > 0.005)
+            {
+                OpasKuvaus.KuvaSuhdeNyt = suhdeKamera.aspect;
+                o.Kirjaa($"opas: kuvasuhde {suhdeKamera.aspect:F2} (tornisääntö {OpasSilmukka.TorniSuhde:F2})");
+            }
             silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus, () => kaupunki.Valmis);
             // Kaksivaiheinen tarkkuus: pysähdyksellä (ei lento eikä siirto) ja laatat ≥ 99 % → tarkentuminen tavoitekertoimeen.
             // Vapaan tilan liike (LS2 6.10. 19.4x, Eiffel 40 m: venyneet laatat liikkeessä): tapit käytössä → karkea valinta kuten

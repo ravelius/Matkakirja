@@ -544,7 +544,7 @@ namespace Matkakirja.Linssit.Kierros
                 double d = KierrosLento.Kiedo(perus.Suuntima - k.KatseSuunta);
                 ks.Suunta = d >= 0 ? 1 : -1;
                 // Saavuttiin suoraan katsesuuntaan (katse_kaari 0): kierto seuraavan kohteen puolelle (lähtö eteenpäin).
-                if (Math.Abs(d) < 2 && KierroksenSeuraava(p.Lat, p.Lon) is (double sla, double slo))
+                if (Math.Abs(d) < 2 && KierroksenSeuraava(p.OmaLat, p.OmaLon) is (double sla, double slo))
                 {
                     double se = (slo - p.Lon) * R * Math.Cos(p.Lat * A) * A, sn = (sla - p.Lat) * R * A, sero = Math.Atan2(sn, se) - Math.Atan2(e.n, e.e);
                     ks.Suunta = sero - 2 * Math.PI * Math.Floor((sero + Math.PI) / (2 * Math.PI)) >= 0 ? 1 : -1;
@@ -577,7 +577,7 @@ namespace Matkakirja.Linssit.Kierros
             }
             else
             {
-                (double, double)? kohti = KierroksenSeuraava(p.Lat, p.Lon);
+                (double, double)? kohti = KierroksenSeuraava(p.OmaLat, p.OmaLon);
                 if (kohti == null && !lento) kohti = Seuraava != null && !Seuraava.Kysymys ? (Seuraava.Lat, Seuraava.Lon) : OdotettuPaikka;
                 if (kohti is (double la, double lo))
                 {
@@ -665,7 +665,7 @@ namespace Matkakirja.Linssit.Kierros
         sealed class LahtoJatko
         {
             public KiertoSuunnitelma K; public Pysahdys P;
-            public double Fi, W, Wd, X, Xr, DEt, DKall, DSuunta, DKatse, DLat, DLon, T = PalloLahtoHiipuuS, Siirto0 = -1;
+            public double Fi, W, Wd, X, Xr, DEt, DKall, DSuunta, DKatse, DLat, DLon, T = PalloLahtoHiipuuS, Siirto0 = -1, SiirtoS = PalloKehysSiirtoS;
         }
         LahtoJatko lahtoJatko;
 
@@ -686,7 +686,7 @@ namespace Matkakirja.Linssit.Kierros
                 DEt = Asento.EtaisyysM - raaka.EtaisyysM, DKall = Asento.Kallistus - raaka.Kallistus,
                 DSuunta = KierrosLento.Kiedo(Asento.Suuntima - raaka.Suuntima), DKatse = Asento.KatseKorkeusM - raaka.KatseKorkeusM,
                 // Katsepiste: kehyksen vaihto kesken (TorniKuvaan siirtää katsepistettä; ennen vaihto piti sen paikallaan) → ei hyppyä.
-                DLat = Asento.Lat - raaka.Lat, DLon = Asento.Lon - raaka.Lon, Siirto0 = siirtoVanha != null ? siirtoT : -1,
+                DLat = Asento.Lat - raaka.Lat, DLon = Asento.Lon - raaka.Lon, Siirto0 = siirtoVanha != null ? siirtoT : -1, SiirtoS = siirtoS,
             };
             // Jatko ei saa viedä silmää lennon päätepisteen ohi (lyhyt hyppy, Bryssel Manneken Pis → kaupungintalo: jatko vei 15 m
             // eteenpäin ja lento palasi 2,5 m): jatkon matka tangentin suuntaan enintään PalloLahtoJatkoOsuus lennon silmän siirtymästä
@@ -731,7 +731,7 @@ namespace Matkakirja.Linssit.Kierros
             double f = 1;
             if (j.Siirto0 >= 0)
             {
-                double s0 = KierrosLento.Smootherstep(j.Siirto0), s1 = KierrosLento.Smootherstep(Math.Min(1, j.Siirto0 + Math.Max(0, VaiheAika) / PalloKehysSiirtoS));
+                double s0 = KierrosLento.Smootherstep(j.Siirto0), s1 = KierrosLento.Smootherstep(Math.Min(1, j.Siirto0 + Math.Max(0, VaiheAika) / j.SiirtoS));
                 f = s0 < 1 - 1e-9 ? (1 - s1) / (1 - s0) : 0;
             }
             return new Kuvakulma(r.Lat + f * j.DLat, r.Lon + f * j.DLon, r.EtaisyysM + f * j.DEt, r.Kallistus + f * j.DKall, KierrosLento.Kiedo(r.Suuntima + f * j.DSuunta), r.KatseKorkeusM + f * j.DKatse);
@@ -932,10 +932,19 @@ namespace Matkakirja.Linssit.Kierros
         void VaihdaAukionKehysTarvittaessa(KiertoSuunnitelma ks)
         {
             if (siirtoVanha != null || Nykyinen == null || !AukioEsteenVieressa(Nykyinen)
-                || KierrosLento.EtaisyysM(Nykyinen.Lat, Nykyinen.Lon, NykyinenKehys.Lat, NykyinenKehys.Lon) > 80) return;
+                || KierrosLento.EtaisyysM(Nykyinen.Lat, Nykyinen.Lon, NykyinenKehys.OmaLat, NykyinenKehys.OmaLon) > 80) return;
             var vanha = NykyinenKehys;
             Pysahdys uusi;
+            bool kaanto = false;
             if (vanha.Aukio) uusi = KehystaK(Nykyinen, vanha.MaaM, KierrosLento.Kiedo(vanha.Suuntima - OpasKuvaus.SivuKulma));
+            else if (vanha.TorniPohja != null)
+            {
+                // LAITE KÄÄNTYI KESKEN PYSÄHDYKSEN (PT 11.10. 07.3x): tornisääntö uudelleen uudelle kuvasuhteelle samasta pohjakehyksestä.
+                if (Math.Abs(vanha.TorniSuhde - TorniSuhde) < 0.005) return;
+                uusi = TorniKuvaan(vanha.TorniPohja);
+                if (uusi.TorniPohja == null) return;
+                kaanto = true;
+            }
             else
             {
                 // Vanha kehys torin pisteessä, ja korkea torni tuli tietoon vasta nyt (esihaun vastaus perillä): torni kuvaan
@@ -949,12 +958,29 @@ namespace Matkakirja.Linssit.Kierros
             NykyinenKehys = uusi;
             const double A = Math.PI / 180;
             ks.R0 = Math.Max(50, uusi.EtaisyysM * Math.Sin(uusi.Kallistus * A));
-            // Katsepisteen siirto liukuu kierron päälle (smootherstep, huippu 1,875 × matka / PalloKehysSiirtoS): kierto hidastuu sen
-            // verran, ettei silmänopeus ylitä KaariNopeusMS:ää (PalloKaupungitTestit Venetsia ilman kylvöä: 11,1 m/s).
-            double siirtoV = 1.875 * KierrosLento.EtaisyysM(vanha.Lat, vanha.Lon, uusi.Lat, uusi.Lon) / PalloKehysSiirtoS;
-            ks.WMax = Math.Min(PalloKiertoMaxAstS, Math.Max(1, OpasKuvaus.KaariNopeusMS - siirtoV) / ks.R0 / A);
+            if (kaanto)
+            {
+                // Kääntö: silmä voi siirtyä satoja metrejä (pystykuvassa ylemmäs) → vaihto liukuu smootherstepinä, jonka huippukiihtyvyys
+                // (5,77 × siirtymä / kesto²) on PalloTorniKaantoMS2, kesto PalloTorniKaantoMinS…PalloKehysSiirtoS (San Marco 4:3 → 0,46:
+                // ~250 m, ~15 s); lähtö kesken vaihdon jatkaa sitä (LahtoNyt). Kierto jatkuu ennallaan (3 °/s).
+                var e0 = OpasKuvaus.KameraPaikka(OpasKuvaus.Pysahdyksella(vanha, 0, false), vanha.OmaLat, vanha.OmaLon);
+                var e1 = OpasKuvaus.KameraPaikka(OpasKuvaus.Pysahdyksella(uusi, 0, false), vanha.OmaLat, vanha.OmaLon);
+                double ds = Math.Sqrt((e1.e - e0.e) * (e1.e - e0.e) + (e1.n - e0.n) * (e1.n - e0.n) + (e1.u - e0.u) * (e1.u - e0.u));
+                siirtoS = Math.Max(PalloTorniKaantoMinS, Math.Min(PalloKehysSiirtoS, Math.Sqrt(5.77 * ds / PalloTorniKaantoMS2)));
+                ks.WMax = Math.Min(PalloKiertoMaxAstS, OpasKuvaus.KaariNopeusMS / ks.R0 / A);
+            }
+            else
+            {
+                siirtoS = PalloKehysSiirtoS;
+                // Katsepisteen siirto liukuu kierron päälle (smootherstep, huippu 1,875 × matka / PalloKehysSiirtoS): kierto hidastuu sen
+                // verran, ettei silmänopeus ylitä KaariNopeusMS:ää (PalloKaupungitTestit Venetsia ilman kylvöä: 11,1 m/s).
+                double siirtoV = 1.875 * KierrosLento.EtaisyysM(vanha.Lat, vanha.Lon, uusi.Lat, uusi.Lon) / PalloKehysSiirtoS;
+                ks.WMax = Math.Min(PalloKiertoMaxAstS, Math.Max(1, OpasKuvaus.KaariNopeusMS - siirtoV) / ks.R0 / A);
+            }
             AsetaSpiraali(ks, uusi, Nykyinen);
         }
+        /// <summary>Käynnissä olevan kehysvaihdon kesto (s).</summary>
+        double siirtoS = PalloKehysSiirtoS;
         Pysahdys siirtoVanha; KiertoSuunnitelma siirtoVanhaKs; double siirtoT;
         /// <summary>Pysähdyksen kehyksen vaihdon liuku (s; San Marco 129 → 202 m ja silmä 38 → 101 m: säteen ja korkeuden muutos ≤ ~10 m/s).</summary>
         public const double PalloKehysSiirtoS = 20;
@@ -993,15 +1019,23 @@ namespace Matkakirja.Linssit.Kierros
         /// </summary>
         Pysahdys TorniKuvaan(Pysahdys p)
         {
+            if (p?.TorniPohja != null) p = p.TorniPohja;   // uusi sovitus (laite kääntyi) aina sovittamattomasta kehyksestä
             if (!PalloLento || p == null || p.Aukio) return p;
             var t = TorniEste(p);
             if (t == null) return p;
             const double A = Math.PI / 180;
-            double d = KierrosLento.EtaisyysM(t.Lat, t.Lon, p.Lat, p.Lon), w = Math.Max(0, Math.Min(PalloTorniKatseOsuus * d, d - PalloTorniSamaVaraM)) / d;
-            double lat = p.Lat + w * (t.Lat - p.Lat), lon = p.Lon + w * (t.Lon - p.Lon), katse = PalloTorniKatseKorkeus * t.Korkeus;
+            double suhde = TorniSuhde, d = KierrosLento.EtaisyysM(t.Lat, t.Lon, p.Lat, p.Lon);
+            double w0 = Math.Max(0, Math.Min(PalloTorniKatseOsuus * d, d - PalloTorniSamaVaraM)) / d, katse = PalloTorniKatseKorkeus * t.Korkeus;
+            // KAPEA KUVA (PT 11.10. 07.3x: iPhonen pystykuva ~0,46, vaakakulma ±12° — torni 80 m:n päässä leikkautui sivuilta): silmä saa
+            // nousta pidemmälle (kallistus ≥ OpasOhjaus.KallistusMin + 1, jottei Rajoita muuta kehystä) ja katsepiste siirtyä torin ja
+            // tornin puoliväliin (PalloTorniKatseOsuusKapea; SamaPaikka mittaa kohteen omasta pisteestä, Pysahdys.OmaLat). Vaakasäde
+            // pysyy, joten kierto 3 °/s pysyy. 4:3 ja leveämpi: sama haku kuin ennen (iPad vaaka ennallaan).
+            bool kapea = suhde < PalloTorniKuvaSuhde - 1e-6;
+            double wMax = kapea ? Math.Max(w0, PalloTorniKatseOsuusKapea) : w0, nousuMax = kapea ? PalloTorniNousuKapeaM : PalloTorniNousuM;
+            double kallMin = kapea ? OpasOhjaus.KallistusMin + 1 : 0;
             var k0 = OpasKuvaus.Pysahdyksella(p, 0, false);
             double r = k0.EtaisyysM * Math.Sin(k0.Kallistus * A), silma0 = p.NostoM + k0.EtaisyysM * Math.Cos(k0.Kallistus * A);
-            bool Mahtuu(double et, double kall)
+            bool Mahtuu(double lat, double lon, double et, double kall)
             {
                 for (int i = 0; i < 2; i++)
                 {
@@ -1009,22 +1043,32 @@ namespace Matkakirja.Linssit.Kierros
                     for (double fi = 0; fi < 360; fi += 10)
                     {
                         var a = new Kuvakulma(lat, lon, et, kk, fi, p.MaaM + katse);
-                        if (OpasKuvaus.KuvassaOsuus(a, t.Lat, t.Lon, p.MaaM, p.MaaM + t.Korkeus, t.SadeM, PalloTorniKuvaSuhde) > PalloTorniReuna
-                            || OpasKuvaus.KuvassaOsuus(a, p.Lat, p.Lon, p.MaaM, p.MaaM, 0, PalloTorniKuvaSuhde) > PalloTorniReuna) return false;
+                        if (OpasKuvaus.KuvassaOsuus(a, t.Lat, t.Lon, p.MaaM, p.MaaM + t.Korkeus, t.SadeM, suhde) > PalloTorniReuna
+                            || OpasKuvaus.KuvassaOsuus(a, p.Lat, p.Lon, p.MaaM, p.MaaM, 0, suhde) > PalloTorniReuna) return false;
                     }
                 }
                 return true;
             }
             for (int j = 0; j < 30; j++, r *= 1.03)
-                for (double s = Math.Max(silma0, katse + 20); s <= silma0 + 60; s += 5)
-                {
-                    double h = s - katse, et = Math.Sqrt(r * r + h * h), kall = Math.Atan2(r, h) / A;
-                    if (kall > OpasOhjaus.KallistusMax - 1 || !Mahtuu(et, kall)) continue;
-                    return new Pysahdys { Id = p.Id, Nimi = p.Nimi, Alarivi = p.Alarivi, Teksti = p.Teksti, Lat = lat, Lon = lon, MaaM = p.MaaM, NostoM = katse,
-                        Suuntima = p.Suuntima, Kallistus = kall, EtaisyysM = et, MinEtM = Math.Min(p.MinEtM, et), KattoYlaM = p.KattoYlaM, LoppuEtM = 0, Aukio = false };
-                }
+                for (double s = Math.Max(silma0, katse + 20); s <= silma0 + nousuMax; s += 5)
+                    for (double w = w0; w <= wMax + 1e-9; w = w < wMax ? Math.Min(wMax, w + 0.1) : 2)
+                    {
+                        double h = s - katse, et = Math.Sqrt(r * r + h * h), kall = Math.Atan2(r, h) / A;
+                        double lat = p.Lat + w * (t.Lat - p.Lat), lon = p.Lon + w * (t.Lon - p.Lon);
+                        if (kall > OpasOhjaus.KallistusMax - 1 || kall < kallMin || !Mahtuu(lat, lon, et, kall)) continue;
+                        return new Pysahdys { Id = p.Id, Nimi = p.Nimi, Alarivi = p.Alarivi, Teksti = p.Teksti, Lat = lat, Lon = lon, MaaM = p.MaaM, NostoM = katse,
+                            Suuntima = p.Suuntima, Kallistus = kall, EtaisyysM = et, MinEtM = Math.Min(p.MinEtM, et), KattoYlaM = p.KattoYlaM, LoppuEtM = 0, Aukio = false,
+                            KohdeLat = p.Lat, KohdeLon = p.Lon, TorniPohja = p, TorniSuhde = suhde };
+                    }
             return p;
         }
+
+        /// <summary>Tornisäännön kuvasuhde: laitteen kuvasuhde (OpasKuvaus.KuvaSuhdeNyt) 0,01:n tarkkuudella, enintään PalloTorniKuvaSuhde
+        /// (leveämpi kuva mahtuu 4:3:n kehykseen, joten iPad vaaka ja iPhone vaaka saavat saman kehyksen kuin ennen).</summary>
+        public static double TorniSuhde => OpasKuvaus.KuvaSuhdeNyt >= PalloTorniKuvaSuhde - 0.01 ? PalloTorniKuvaSuhde : Math.Max(0.2, Math.Round(OpasKuvaus.KuvaSuhdeNyt, 2));
+        /// <summary>Silmän nousu enintään (m) tavallisessa ja kapeassa kuvassa, katsepisteen siirto kapeassa kuvassa enintään (osuus
+        /// torin ja tornin välistä), laitteen kääntymisen kehysvaihdon huippukiihtyvyys (m/s²) ja lyhin kesto (s).</summary>
+        public const double PalloTorniNousuM = 60, PalloTorniNousuKapeaM = 400, PalloTorniKatseOsuusKapea = 0.5, PalloTorniKaantoMS2 = 6, PalloTorniKaantoMinS = 4;
 
         /// <summary>Esteiden määrä (testit).</summary>
         public int Esteita => esteet.Count;
@@ -2263,7 +2307,7 @@ namespace Matkakirja.Linssit.Kierros
                 // suunnitelma tästä ja kierto kiihtyy levosta KaariAlkuS:ssa.
                 if (pysKierto == null)
                 {
-                    var kk = Nykyinen != null && KierrosLento.EtaisyysM(Nykyinen.Lat, Nykyinen.Lon, NykyinenKehys.Lat, NykyinenKehys.Lon) < 80 ? Nykyinen : null;
+                    var kk = Nykyinen != null && KierrosLento.EtaisyysM(Nykyinen.Lat, Nykyinen.Lon, NykyinenKehys.OmaLat, NykyinenKehys.OmaLon) < 80 ? Nykyinen : null;
                     pysKierto = Suunnittele(NykyinenKehys, kk, false, double.NaN);
                     kaariKulma = 0; kaariW = 0; kaariWd = 0; lipumisAika = 0; lipumisRaaka = 0;
                 }
@@ -2293,7 +2337,7 @@ namespace Matkakirja.Linssit.Kierros
                 if (siirtoVanha != null)
                 {
                     // Kehyksen vaihto pysähdyksellä liukuu PalloKehysSiirtoS:ssä: vanha ja uusi kehys samalla kierron kulmalla.
-                    siirtoT += Math.Max(0, dt) / PalloKehysSiirtoS;
+                    siirtoT += Math.Max(0, dt) / siirtoS;
                     if (siirtoT >= 1) siirtoVanha = null;
                     else uusiA = KierrosLento.Valissa(siirtoVanhaKs.Asento(siirtoVanha, kaariKulma, lipumisRaaka), uusiA, KierrosLento.Smootherstep(siirtoT), 0);
                 }
@@ -2395,7 +2439,7 @@ namespace Matkakirja.Linssit.Kierros
         /// yleiskuva kohteen kohdalla ei ole sama paikka (video3 8.10.: 1. lento lähti 57 %:ssa odottamatta, ilman reitin esilatausta,
         /// ja pysähtyi kesken odottamaan laattoja — matka katsepisteestä oli alle 50 m).</summary>
         bool SamaPaikka() => Seuraava != null && NykyinenKehys != null && kehysKohde != null && kehysKohde.Id != null
-            && KierrosLento.EtaisyysM(NykyinenKehys.Lat, NykyinenKehys.Lon, Seuraava.Lat, Seuraava.Lon) < 50;
+            && KierrosLento.EtaisyysM(NykyinenKehys.OmaLat, NykyinenKehys.OmaLon, Seuraava.Lat, Seuraava.Lon) < 50;
 
         /// <summary>Lähdön valmistelu: ehdot täyttyvät → korostus sammuu ja laatat odotetaan; lento, kun molemmat valmiit.</summary>
         bool LahtoSaa(bool ehdot, bool valmistelu, bool pika, double dt)
@@ -2487,7 +2531,7 @@ namespace Matkakirja.Linssit.Kierros
             // korkeutta → katu, 143 m), ja juna 156:n VIE-este (Eiffel tornin juurella, simu 7.10. 04.1x) syntyi, kun workerin
             // oikea kohde (korkeus 330 m) jäi tämän oikotien takia arviokehykseen. Arviosta lennetään lyhyesti oikeaan kehykseen.
             if (NykyinenKehys != null && kehysKohde != null && kehysKohde.Id != null
-                && KierrosLento.EtaisyysM(NykyinenKehys.Lat, NykyinenKehys.Lon, k.Lat, k.Lon) < 50)
+                && KierrosLento.EtaisyysM(NykyinenKehys.OmaLat, NykyinenKehys.OmaLon, k.Lat, k.Lon) < 50)
             {
                 Nykyinen = k; edellinen = null;
                 // Uusi kohde samassa paikassa: lipuminen alkaa alusta kohti sen seuraavaa (PalloKaupungitTestit: Košice, Tampere,
