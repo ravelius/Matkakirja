@@ -1,4 +1,4 @@
-# Linssisepän luovutus 11.10.2026 ilta (16.4x, nollaus PT:n pyynnöstä)
+# Linssisepän luovutus 11.10.2026 ilta (päivitetty 17.0x, nollaus PT:n pyynnöstä)
 
 Proto-git /Users/Shared/Claude/proto-3d/Matkakirja-proto (paikalliset haarat, ei pushia). Simu- ja käännösvuorot vain Julkaisijalta;
 **LS1 = käännöslinja 2** (`PROTO_LINJA=2`), linja 1 vain Julkaisijan luvalla (ilman PROTO_LINJA:a). Ajoskriptit ja skenaariot:
@@ -17,24 +17,22 @@ Testit: `sh Linssit-testit/kaanna.sh` / `sh Kartta-testit/kaanna.sh` / `sh Peli-
   lokit/todistus-monumentit-jalkeen2-182-20261011-1615/ennen-jalkeen2-9s.jpg.
 - Pariisin KIIRE 11.5x: EI VIKA (omistajan iPad mykistetty; toistot A–F simulla ok).
 
-## Odottaa PT:n kuittausta (junan 182 ehto)
-- **Euroopan loitonnus + houkuttimet** linssiseppa/eurooppa-loitonnus-182 **8ba7da773** (wt proto-linssiseppa-eurooppa):
-  loitonnus koko Eurooppaan (EurooppaLoitonnus.cs), huntu pysyy, rajat ohuina hunnun päällä, himmeät pisteet; houkuttimet
-  (Kartta/Houkuttimet.cs): violetti linssi (alpit, lontoo, edinburgh, istanbul, amsterdam, Andøya vapaa piste ISS-raketille),
-  sininen (berliini, ateena, Olavinlinna vapaa piste); pisteet eivät kasva loitonnettaessa (omistaja 16.0x). Sisältää
-  54cf34839 = NUI:n videopeli-tokenit (cherry-pick e6ac80acb:stä). Tyylikirjan linssi-hehku (#b57bff) web-haarassa
-  linssiseppa-tyylikirja-linssi e9ee7e291 → NUI:n tyylikirja-PR #4409. Arkki rungon päältä (testihaara
-  linssiseppa/testi-182-houkuttimet 4cd085e69 = juna-182 + tämä, wt proto-linssiseppa-testi182h; ristiriidat Tyylikirja.* =
-  junan versio, Kartta-testit/kaanna.sh molemmat): lokit/todistus-houkuttimet-{iphone,ipad}-182b-20261011-162x/arkki-*.jpg.
-  Avoimet: pisteet Euroopassa ~6 px iPadilla (PT/omistaja voi pyytää isommiksi: yksi luku); tavalliset himmeät pisteet jäävät
-  iPhonella Italia–Balkan-alueella Kalusteet-laatikon (luult. Pulu.alue) alle – loki listaa laatikot.
-  Kun kuitattu: SHA Natiivisepälle (yhdistettäessä samat ristiriidat kuin testihaarassa).
+## Kuitattu 182 myös (17.0x)
+- **Euroopan loitonnus + houkuttimet** linssiseppa/eurooppa-loitonnus-182 **1c47a1e52** (⊃ 52d92cec2, 8ba7da773, 412672fc5, 8ca6f2c7f,
+  e357dfd06, 74809bd71, 54cf34839, d271700cc), SHA Natiivisepällä. Loitonnus koko Eurooppaan (EurooppaLoitonnus.cs), huntu pysyy,
+  rajat ohuina hunnun päällä; houkuttimet (Kartta/Houkuttimet.cs): violetti linssi (alpit, lontoo, edinburgh, istanbul, amsterdam,
+  Andøya vapaa piste ISS-raketille), sininen (berliini, ateena, Olavinlinna vapaa piste), ydin 9 pt, hehku < 2×; pallot 84 → 52 pt
+  Euroopassa ja kallistus poispäin houkuttimista. Yhdistys juna-182:een: Tyylikirja.* = junan versio, Kartta-testit/kaanna.sh molemmat
+  (malli testihaarassa linssiseppa/testi-182-houkuttimet 4a075e90d, wt proto-linssiseppa-testi182h). Arkit
+  lokit/todistus-houkuttimet-iphone-182d-20261011-1652/arkki-houkuttimet-iphone.jpg (+ ipad-182d-1654).
+  Avoin (ei pyydetty): tavalliset himmeät pisteet jäävät iPhonella Italia–Balkan-alueella Kalusteet-laatikon (luult. Pulu.alue) alle.
 
 ## Seuraavaksi (juna 183)
-- **Stortorgetin kamera**: Karttaseppä toimitti /Volumes/T7 4TB/koodaus/proto-3d/_tyo/karttaseppa/kippi-tukholma-20261011/
+- **Stortorgetin ja Pariisin aukioiden kamera (PT 17.0x, juna 183)** Karttasepän datasta: Karttaseppä toimitti /Volumes/T7 4TB/koodaus/proto-3d/_tyo/karttaseppa/kippi-tukholma-20261011/
   kippi-aukiot-tukholma.json (+ LAHTEET.md). Pelikoodari lisää Stortorgetin (Q3048023) liiku-listaan ja esittely-v3c:hen;
   LS1 tarkistaa kameran (monumentti = kaivo Q10681422, rivi jo taulukossa) simulla pystykuvassa kun data workerissa.
-  Sergels torg EI kierrokselle (PT).
+  Sergels torg EI kierrokselle (PT). Pariisin aukiot (Concorde, Place des Vosges): tarkista samalla Karttasepän datasta, kun
+  hän toimittaa (kysy polku); kamerasäännöt OpasKuvaus (aukiomonumentti 58 %, silmä ≥ 65 m, aukion puolelta).
 - Kippijatkot luovutuksesta 20261011-paiva: (2) Quattro Canti oletuskorkeus 60 m, (3) kierto < 3 °/s kaukaisilla kehyksillä → kysy PT.
 - Suojatarkastus (Karttaseppä, docs/raportit/kippi-suojatarkastus-20261011.md): A3-lista lokit/linssiseppa-kippi-omat-mallit-20261011.md;
   Eiffelin valot ok (ei omaa valoa/välkettä; maskissa 0 pikseliä). Notre-Damen CC BY-SA -johdannainen PT:llä.
