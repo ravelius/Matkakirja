@@ -140,6 +140,9 @@ namespace Matkakirja.Natiivi
             };
             // Aloituslennon aihe EI käynnisty napautuksesta vaan lennon leikkauksesta (AloitaAloituslento, marssi 28.9.2026).
             if (puhe != null) puhe.Puhuu += koukut.Puhe;
+            // SAAPUMISESITYKSEN MUSIIKKI (omistaja KIIRE TF 180, juna 181): uuden esittelyn kaupungin nopea odottaa trailerin
+            // saapumispuhetta (Saapumistraileri → Aanisoitin.SaapumisPuheAlkoi), ei ala lennon nousussa eikä paikan vaihtuessa.
+            aanisoitin.Tila.NopeaOdottaaPuhetta = SaapumisMusiikkiOdottaa;
             if (lehtiNakyma != null)
             {
                 lehtiNakyma.Avautui += _ => koukut.Lehti(true);
@@ -255,6 +258,15 @@ namespace Matkakirja.Natiivi
             Debug.Log($"MATKAKIRJA ääni: äänitaulut valmiit (maisemakoreja {korit}, maita {t.Maat.Count})");
             aanitaulutValmiit = true;
         }
+
+        /// <summary>
+        /// Odottaako kaupungin jakson nopea trailerin saapumispuhetta: uuden esittelyn kaupunki (SaapumisluentoPois), ei jatkoa hiljaa,
+        /// ja traileri on tulossa (lennolla paikka lähtee jo nousussa) tai käynnissä (maitse paikka lähtee saapumisruudun lopussa).
+        /// Väärä tosi ei jumita: Perilla ja trailerin loppu vapauttavat odotuksen (Aanisoitin.SaapumisMusiikkiVapaa).
+        /// </summary>
+        bool SaapumisMusiikkiOdottaa(string kaupunki) =>
+            kaupunki != null && SaapumisluentoPois?.Invoke(kaupunki) == true && !jatkoHiljaa
+            && (Tila == SilmukanTila.Traileri ? traileriKaupunki == kaupunki : TraileriTarjolla(kaupunki));
 
         /// <summary>Ruudun lopussa (Update): tapahtumat ruudun lopputilasta ja muutokset AaniTilaan.</summary>
         void PaivitaAanet()

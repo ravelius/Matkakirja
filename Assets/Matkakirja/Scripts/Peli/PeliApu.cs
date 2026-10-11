@@ -757,4 +757,38 @@ namespace Matkakirja.Natiivi
             }
         }
     }
+
+    /// <summary>Miksi saapumistraileria ei näytetä (PeliOhjain.TraileriTarjolla, kirjaus "traileri ei tarjolla").</summary>
+    public enum TraileriSyy { Tarjolla, EiKaytossa, Naytetty, VirratLataamatta, EiTekstia }
+
+    /// <summary>
+    /// SAAPUMISTRAILERIN PÄÄTÖS (PT 11.10., simu: Pariisin traileri puuttui ajoittain kehittäjän maailmahypyssä). Traileri vaatii
+    /// fokusvirran matkakirjatekstin; kun virrat (fokusvirrat.json, ~0,9 Mt) eivät vielä olleet muistissa saapumisruudussa,
+    /// traileri ohitettiin hiljaa, ja esittely alkoi ilman puhetta. Nyt PeliOhjain odottaa virtoja enintään VirtaOdotusS.
+    /// </summary>
+    public static class TraileriPaatos
+    {
+        /// <summary>Saapuminen odottaa lataamattomia fokusvirtoja enintään näin kauan ennen trailerin päätöstä.</summary>
+        public const float VirtaOdotusS = 1.5f;
+
+        /// <summary>Järjestys: ei käytössä (ei näkymää, peli ei ohjaa) → näytetty (myös jatko hiljaa) → virrat → teksti.</summary>
+        public static TraileriSyy Syy(bool kaytossa, bool naytetty, bool virratValmiit, bool teksti) =>
+            !kaytossa ? TraileriSyy.EiKaytossa
+            : naytetty ? TraileriSyy.Naytetty
+            : teksti ? TraileriSyy.Tarjolla
+            : !virratValmiit ? TraileriSyy.VirratLataamatta
+            : TraileriSyy.EiTekstia;
+
+        /// <summary>Odotetaanko virtoja ennen päätöstä (vain kun traileri muuten olisi mahdollinen).</summary>
+        public static bool Odota(TraileriSyy syy) => syy == TraileriSyy.VirratLataamatta;
+
+        public static string Teksti(TraileriSyy syy) => syy switch
+        {
+            TraileriSyy.EiKaytossa => "ei käytössä",
+            TraileriSyy.Naytetty => "näytetty",
+            TraileriSyy.VirratLataamatta => "virrat lataamatta",
+            TraileriSyy.EiTekstia => "ei tekstiä",
+            _ => "tarjolla",
+        };
+    }
 }

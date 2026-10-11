@@ -13,6 +13,16 @@
 // Kartta näkyy taustalla himmennettynä (USS:ssä ei backdrop-blurria).
 // Kameran klik kuvan tullessa, kirjainten suhina nimen lentäessä (pulun
 // äänikirjasto).
+//
+// SAAPUMISESITYS JATKAA (omistaja KIIRE TF 180, juna 181: "Musiikki pitää alkaa samaan aikaan kun isoisän ääni sanoo Pariisi ...
+// Ja lisäkuvat tulevat putkeen niiden kolmen aloituskuvan jälkeen"): uuden esittelyn kaupungissa (PeliOhjain.SaapumisluentoPois)
+// kaupungin nopea kappale alkaa samassa ruudussa kuin saapumispuhe (Puhe.Puhuu → Aanisoitin.SaapumisPuheAlkoi; ilman puhetta
+// trailerin alusta), ja kirjaimet lentävät ulos kolmannen kuvan poistuessa, jotta esittelyn C1 tulee heti kuvien perään.
+// Muissa kaupungeissa traileri kuten ennen. Kirjaukset (laitemittaus): "MATKAKIRJA ui saapuminen: puhe alkaa", "traileri kuva n".
+// VARMISTUS (simu fff0b61f0: nopea ei ollut ladattu, musiikki 2,97 s puheen jälkeen): jos esittelyn musiikki ei ole valmis
+// (Aanisoitin.EsitysMusiikkiValmis), ensimmäinen kuva tulee heti ja jää paikalleen, ja puhe sekä muu trailerin ohjelma (kuvat 2–3,
+// kirjaimet, iskulause) odottavat musiikkia enintään MusiikinOdotusMs; sen jälkeen puhe alkaa ilman musiikkia, joka tulee
+// valmistuttuaan. Kirjaus "MATKAKIRJA ui saapuminen: puhe odotti musiikkia <ms>". Ohjelman keskinäiset ajat ennallaan.
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,6 +35,8 @@ namespace Matkakirja.Natiivi
         public const int Kerros = UiKerros.Traileri;
         public const int Kuvia = 3, LiukuMs = 700, PysahdysMs = 2000, UlosMs = 600, LimitysMs = 200;
         public const int PorrasMs = 90, LentoMs = 650, UlosPorrasMs = 20, UlosLentoMs = 450, IskulauseViiveMs = 500, KattoMs = 20000;
+        /// <summary>Esittelyn kaupungissa puhe odottaa musiikkia enintään näin kauan (ensimmäinen kuva pysyy), sitten ilman.</summary>
+        public const int MusiikinOdotusMs = 1000;
 
         readonly UiKerros kerros;
         readonly VisualElement peite, kuvat, nimi;
@@ -32,6 +44,10 @@ namespace Matkakirja.Natiivi
         readonly List<IVisualElementScheduledItem> ajastimet = new List<IVisualElementScheduledItem>();
         Action valmis;
         bool kaynnissa, kuvatValmiit, puheValmis;
+        /// <summary>Trailerin kaupunki ja saapumispuheen alun kuuntelija (Puhe.Puhuu, kerran).</summary>
+        string kaupunkiId;
+        Puhe puheKuunneltu;
+        Action<bool> puheAlkoi;
         readonly HashSet<string> nahty = new HashSet<string>();
 
         public bool Kaynnissa => kaynnissa;
@@ -70,14 +86,18 @@ namespace Matkakirja.Natiivi
                 var lahteet = k?.Avauskuvat.Count > 0 ? k.Avauskuvat : k?.Kansikuvat;
                 if (k == null || lahteet == null || lahteet.Count == 0 || kaynnissa) { kunValmis?.Invoke(); return; }
                 nahty.Add(kaupunki);
-                Aloita(k, lahteet.GetRange(0, Mathf.Min(Kuvia, lahteet.Count)), puheUrl, kunValmis);
+                Aloita(kaupunki, k, lahteet.GetRange(0, Mathf.Min(Kuvia, lahteet.Count)), puheUrl, kunValmis);
             });
         }
 
-        void Aloita(KaupunkiTiedot k, List<Kuvateksti> lahteet, string puheUrl, Action kunValmis)
+        void Aloita(string kaupunki, KaupunkiTiedot k, List<Kuvateksti> lahteet, string puheUrl, Action kunValmis)
         {
             kaynnissa = true;
             alkoi = Time.unscaledTime;
+            kaupunkiId = kaupunki;
+            int esittely = ++aloitusNro;
+            // Uuden esittelyn kaupunki: esittely jatkaa trailerin kuvia (C1 heti perään) ja musiikki alkaa puheen kanssa.
+            bool esittelyJatkaa = PeliOhjain.SaapumisluentoPois?.Invoke(kaupunki) == true;
             valmis = kunValmis;
             kuvatValmiit = false;
             puheValmis = string.IsNullOrEmpty(puheUrl);
@@ -92,6 +112,10 @@ namespace Matkakirja.Natiivi
             float leveys = kerros.Juuri(Kerros).resolvedStyle.width > 0 ? kerros.Juuri(Kerros).resolvedStyle.width : 393f;
             float korkeus = kerros.Juuri(Kerros).resolvedStyle.height > 0 ? kerros.Juuri(Kerros).resolvedStyle.height : 852f;
             int vuoro = LiukuMs + PysahdysMs;
+            // Varmistus: musiikki ei valmis → kuva 1 heti, muu ohjelma ja puhe musiikin valmistuttua (enintään MusiikinOdotusMs).
+            bool odota = esittelyJatkaa && !Aanisoitin.EsitysMusiikkiValmis(kaupunki);
+            var ohjelma = new List<(int Ms, Action Teko)>();
+            void Ohjelmaan(int ms, Action a) => ohjelma.Add((ms, a));
             for (int i = 0; i < lahteet.Count; i++)
             {
                 var kortti = Rakenne.El("mk-traileri__kuva", kuvat, PickingMode.Ignore);
@@ -106,14 +130,17 @@ namespace Matkakirja.Natiivi
                     kortti.style.width = w;
                     kortti.style.height = w / suhde;
                 });
-                int alku = i * (vuoro - LimitysMs);
-                Ajasta(alku, () =>
+                int alku = i * (vuoro - LimitysMs), nro = i + 1;
+                Action sisaan = () =>
                 {
                     kortti.AddToClassList("mk-traileri__kuva--keskella");
                     kortti.style.translate = new Translate(0, 0);
                     Aanet.PulunTehoste("pulu.kamera-klik");
-                });
-                Ajasta(alku + vuoro, () =>
+                    Debug.Log($"MATKAKIRJA ui saapuminen: traileri kuva {nro} sisään {Time.unscaledTime:0.000} (trailerin alusta {Time.unscaledTime - alkoi:0.00} s)");
+                };
+                if (i == 0 && odota) Ajasta(0, sisaan); // ensimmäinen kuva heti ja pysyy odotuksen ajan
+                else Ohjelmaan(alku, sisaan);
+                Ohjelmaan(alku + vuoro, () =>
                 {
                     kortti.RemoveFromClassList("mk-traileri__kuva--keskella");
                     kortti.AddToClassList("mk-traileri__kuva--ulos");
@@ -121,10 +148,16 @@ namespace Matkakirja.Natiivi
                 });
             }
             int kesto = lahteet.Count * (vuoro - LimitysMs) + LimitysMs + UlosMs;
-            Ajasta(kesto, () => { kuvatValmiit = true; YritaLopettaa(); });
-
             // Nimi kirjain kerrallaan; koko nimen pituudesta (mahtuu yhdelle riville).
             string teksti = (k.Nimi ?? "").ToUpperInvariant();
+            // Esittely jatkaa: kirjaimet lentävät ulos viimeisen kuvan poistuessa, jolloin traileri päättyy kuvien kanssa (ei tyhjää väliä).
+            int kuvatOhi = esittelyJatkaa ? Mathf.Max(0, kesto - (teksti.Length * UlosPorrasMs + UlosLentoMs)) : kesto;
+            Ohjelmaan(kuvatOhi, () =>
+            {
+                kuvatValmiit = true;
+                Debug.Log($"MATKAKIRJA ui saapuminen: traileri kuvat ohi {Time.unscaledTime:0.000} (viimeinen kuva ulkona {Time.unscaledTime + (kesto - kuvatOhi) / 1000f:0.000}, trailerin alusta {(kesto / 1000f):0.00} s), puhe {(puheValmis ? "ohi" : "kesken")}");
+                YritaLopettaa();
+            });
             float koko = Mathf.Min(Mathf.Clamp(leveys * 0.09f, 38f, 112f), leveys * 0.88f / (Mathf.Max(1, teksti.Length) * 1.1f));
             nimi.style.fontSize = koko;
             for (int i = 0; i < teksti.Length; i++)
@@ -132,17 +165,76 @@ namespace Matkakirja.Natiivi
                 var kirjain = Rakenne.Teksti(teksti[i] == ' ' ? " " : teksti[i].ToString(), "mk-traileri__kirjain", nimi);
                 kirjain.style.marginRight = koko * 0.35f;
                 int n = i;
-                Ajasta(300 + n * PorrasMs, () => kirjain.AddToClassList("mk-auki"));
+                Ohjelmaan(300 + n * PorrasMs, () => kirjain.AddToClassList("mk-auki"));
             }
-            Ajasta(300, () => Aanet.PulunTehoste("pulu.kirjain-suhina"));
-            Ajasta(300 + teksti.Length * PorrasMs + LentoMs + IskulauseViiveMs, () => iskulause.AddToClassList("mk-auki"));
+            Ohjelmaan(300, () => Aanet.PulunTehoste("pulu.kirjain-suhina"));
+            Ohjelmaan(300 + teksti.Length * PorrasMs + LentoMs + IskulauseViiveMs, () => iskulause.AddToClassList("mk-auki"));
 
-            if (!puheValmis)
+            void Kaynnista()
             {
-                var puhe = Puhe.Hae();
-                if (puhe == null || !puhe.Soita(puheUrl, 0, () => { puheValmis = true; YritaLopettaa(); })) puheValmis = true;
-                Ajasta(KattoMs, () => { puheValmis = true; YritaLopettaa(); });
+                foreach (var (ms, teko) in ohjelma) Ajasta(ms, teko);
+                bool puhuu = false;
+                if (!puheValmis)
+                {
+                    var puhe = Puhe.Hae();
+                    if (esittelyJatkaa && puhe != null) KuunteleAlkua(puhe);
+                    if (puhe == null || !puhe.Soita(puheUrl, 0, () => { puheValmis = true; YritaLopettaa(); })) puheValmis = true;
+                    else puhuu = true;
+                    Ajasta(KattoMs, () => { puheValmis = true; YritaLopettaa(); });
+                }
+                if (esittelyJatkaa && !puhuu)
+                {
+                    // Ei saapumispuhetta: musiikki trailerin alusta.
+                    LopetaKuuntelu();
+                    Debug.Log($"MATKAKIRJA ui saapuminen: puhe alkaa - (ei puhetta), musiikki trailerin alusta {Time.unscaledTime:0.000}");
+                    Aanisoitin.SaapumisPuheAlkoi(kaupunki);
+                }
             }
+            if (!odota)
+            {
+                if (esittelyJatkaa) Debug.Log($"MATKAKIRJA ui saapuminen: musiikki valmis trailerin alussa {Time.unscaledTime:0.000} (puhe ei odota)");
+                Kaynnista();
+                return;
+            }
+            // Musiikki ei valmis: tarkistus ruuduittain, enintään MusiikinOdotusMs (Ohita tai Lopeta pysäyttää ajastimien mukana).
+            bool kaynnistetty = false;
+            ajastimet.Add(peite.schedule.Execute(() =>
+            {
+                if (kaynnistetty || !kaynnissa || esittely != aloitusNro) return;
+                float odotettu = (Time.unscaledTime - alkoi) * 1000f;
+                bool valmisNyt = Aanisoitin.EsitysMusiikkiValmis(kaupunki);
+                if (!valmisNyt && odotettu < MusiikinOdotusMs) return;
+                kaynnistetty = true;
+                Debug.Log($"MATKAKIRJA ui saapuminen: puhe odotti musiikkia {odotettu:0} ms ({(valmisNyt ? "musiikki valmis" : "ei valmis, puhe alkaa ilman, musiikki kun valmis")})");
+                Kaynnista();
+            }).Every(10).Until(() => kaynnistetty || !kaynnissa || esittely != aloitusNro));
+        }
+
+        /// <summary>Trailerin aloituskerta: vanhan trailerin odotusvahti ei käynnistä uuden ohjelmaa.</summary>
+        int aloitusNro;
+
+        /// <summary>Saapumispuheen ensimmäinen alku (Puhuu = true samassa ruudussa kuin Play): kaupungin nopea samaan hetkeen.</summary>
+        void KuunteleAlkua(Puhe puhe)
+        {
+            LopetaKuuntelu();
+            puheKuunneltu = puhe;
+            puheAlkoi = nyt =>
+            {
+                if (!nyt || !kaynnissa) return;
+                var p = puheKuunneltu;
+                LopetaKuuntelu();
+                float viive = p != null ? p.AlkuViive : 0f;
+                Debug.Log($"MATKAKIRJA ui saapuminen: puhe alkaa {Time.unscaledTime + viive:0.000} (dsp {AudioSettings.dspTime + viive:0.000}, esilämmitys {viive:0.0} s, trailerin alusta {Time.unscaledTime + viive - alkoi:0.00} s)");
+                Aanisoitin.SaapumisPuheAlkoi(kaupunkiId, viive);
+            };
+            puhe.Puhuu += puheAlkoi;
+        }
+
+        void LopetaKuuntelu()
+        {
+            if (puheKuunneltu != null && puheAlkoi != null) puheKuunneltu.Puhuu -= puheAlkoi;
+            puheKuunneltu = null;
+            puheAlkoi = null;
         }
 
         /// <summary>Testikomento ohitti trailerin pelin puolella (PeliOhjain ei ole enää Traileri-tilassa).</summary>
@@ -191,6 +283,10 @@ namespace Matkakirja.Natiivi
             if (!kaynnissa) return;
             kaynnissa = false;
             pelista = false;
+            LopetaKuuntelu();
+            Debug.Log($"MATKAKIRJA ui saapuminen: traileri päättyi {Time.unscaledTime:0.000} ({Time.unscaledTime - alkoi:0.00} s{(ohitettu ? ", ohitettu" : "")})");
+            // Puhe ei ehtinyt alkaa (ohitus tai ei puhetta): odottava musiikki alkaa nyt (ei koskaan jää odottamaan).
+            Aanisoitin.SaapumisMusiikkiVapaa(kaupunkiId);
             foreach (var a in ajastimet) a.Pause();
             ajastimet.Clear();
             peite.AddToClassList("mk-traileri--ohitettu");

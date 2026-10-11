@@ -114,6 +114,33 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Kuvasarjan loppu (s musiikin alusta): C5 näkyy täysin, sitten pakka hiljenee kuten luennan jälkeen.</summary>
         public const double KuvasarjaLoppuS = PaluuAlkaaS;
 
+        /// <summary>
+        /// SAAPUMISEN KUVASARJA (omistaja KIIRE TF 180, juna 181: "lisäkuvat tulevat putkeen niiden kolmen aloituskuvan jälkeen"):
+        /// nopea kappale alkaa isoisän saapumispuheen kanssa (Saapumistraileri), joten esittely alkaa vasta trailerin kolmen kuvan
+        /// jälkeen noin 8,3–9 s kappaleen alusta. C1 tulee heti esittelyn alussa (aika 0 = jo ohi), C2–C4 kolmen tahdin välein
+        /// (5,8 s) ja C5 entisellään siirtymän iskulla (Tahti(16), musiikin katko 31,0 s ennallaan): pallointron 3D-otosten
+        /// 11,6 s:n aukkoa C1:n ja C2:n välissä ei jää. Kaikki ajat tahdin iskulla.
+        /// </summary>
+        public static readonly double[] SaapumisAjatS = { 0, Tahti(7), Tahti(10), Tahti(13), Tahti(16) };
+
+        public static IReadOnlyList<(int Kuva, double AlkuS)> SaapumisKuvasarja()
+        {
+            var l = new List<(int, double)>();
+            for (int i = 0; i < SaapumisAjatS.Length; i++) l.Add((i + 1, SaapumisAjatS[i]));
+            return l;
+        }
+
+        /// <summary>Kappaleen kohta, jota pienempi tarkoittaa, että esittely käynnisti kappaleen itse (muuten se soi jo).</summary>
+        public const double MusiikkiAlussaS = 2;
+
+        /// <summary>
+        /// Esittelyn kello kappaleen kohdasta (true) vai esittelyn alusta (false). tahdistettu = nopea alkoi trailerin puheen kanssa
+        /// (AaniTila.EsitysKaupunki): kello on aina kappaleen kohta, kunhan siirtymä (C5) ei ole jo ohi. Muuten kuten ennen: vain
+        /// juuri alkanut kappale tahdistaa (iPad-simu 17.4x: jo pitkään soinut kappale toi kaikki kuvat kerralla).
+        /// </summary>
+        public static bool KelloKappaleesta(double kohta, bool tahdistettu) =>
+            !double.IsNaN(kohta) && kohta >= 0 && kohta < (tahdistettu ? SiirtymaS : MusiikkiAlussaS);
+
         public static IntroOtos Otos(double t)
         {
             foreach (var o in Otokset) if (t >= o.AlkuS && t < o.LoppuS) return o;

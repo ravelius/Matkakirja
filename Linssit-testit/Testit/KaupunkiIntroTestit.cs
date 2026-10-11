@@ -169,5 +169,36 @@ namespace Matkakirja.Linssit.Testit
             foreach (var x in l) Oleta.Tosi(System.Math.Abs(x.AlkuS / KaupunkiIntro.TahtiS - System.Math.Round(x.AlkuS / KaupunkiIntro.TahtiS)) < 1e-9, "tahdin iskulla");
             Oleta.Tosi(KaupunkiIntro.KuvasarjaLoppuS > l[4].AlkuS, "C5 näkyy ennen loppua");
         }
+
+        [Testi] static void SaapumisenKuvatPutkeenTrailerinJalkeen()
+        {
+            // Omistaja KIIRE TF 180 (juna 181): C1 heti trailerin kolmen kuvan jälkeen, ei 11,6 s:n aukkoa, tahti ja katko ennallaan.
+            var l = KaupunkiIntro.SaapumisKuvasarja();
+            Oleta.Sama("1,2,3,4,5", string.Join(",", l.Select(x => x.Kuva)));
+            Oleta.Sama(0.0, l[0].AlkuS, "C1 heti esittelyn alussa");
+            Oleta.Sama(KaupunkiIntro.SiirtymaS, l[4].AlkuS, "C5 siirtymän iskulla kuten ennen");
+            // Esittely alkaa noin 8,3–9,5 s kappaleen alusta (traileri 8,3 s + kirjaimet ulos); C1 näkyy siitä C2:een.
+            Oleta.Tosi(l[1].AlkuS - 9.5 >= 3.5 && l[1].AlkuS - 9.5 <= 6, "C1 näkyy 3,5–6 s: " + (l[1].AlkuS - 9.5));
+            for (int i = 1; i < l.Count; i++)
+            {
+                double vali = l[i].AlkuS - l[i - 1].AlkuS;
+                Oleta.Tosi(i == 1 || vali <= 6.0, $"ei aukkoa C{i}–C{i + 1}: {vali:0.00} s");
+                Oleta.Tosi(System.Math.Abs(l[i].AlkuS / KaupunkiIntro.TahtiS - System.Math.Round(l[i].AlkuS / KaupunkiIntro.TahtiS)) < 1e-9, "tahdin iskulla C" + (i + 1));
+            }
+            Oleta.Tosi(KaupunkiIntro.KuvasarjaLoppuS > l[4].AlkuS, "C5 näkyy ennen loppua");
+            Oleta.Tosi(KaupunkiIntro.MusiikinKatkoS >= l[4].AlkuS, "katko C5:n iskulla");
+        }
+
+        [Testi] static void EsittelynKelloKappaleenKohdasta()
+        {
+            // Tahdistettu (nopea alkoi trailerin puheen kanssa): kello on kappaleen kohta myös 9 s:n kohdalla.
+            Oleta.Tosi(KaupunkiIntro.KelloKappaleesta(9.2, true), "puheen kanssa alkanut: kappaleen kohta");
+            Oleta.Tosi(KaupunkiIntro.KelloKappaleesta(0.1, true));
+            Oleta.Tosi(!KaupunkiIntro.KelloKappaleesta(KaupunkiIntro.SiirtymaS + 0.1, true), "siirtymä jo ohi: esittelyn alusta");
+            // Muuten kuten ennen: vain juuri alkanut kappale tahdistaa.
+            Oleta.Tosi(KaupunkiIntro.KelloKappaleesta(0.5, false));
+            Oleta.Tosi(!KaupunkiIntro.KelloKappaleesta(9.2, false), "pitkään soinut ilman tahdistusta: esittelyn alusta");
+            Oleta.Tosi(!KaupunkiIntro.KelloKappaleesta(double.NaN, true) && !KaupunkiIntro.KelloKappaleesta(-1, true));
+        }
     }
 }
