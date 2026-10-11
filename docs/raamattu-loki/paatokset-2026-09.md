@@ -13778,3 +13778,9 @@ Raamattuun (docs-PR 11.10. yö, Kolme veljestä): Tarina ja hahmot, VAANIJAKAARI
 11.10. 23.0x PT: Riian nähtävyys on nimeltään "Kolme veljestä -talot" ja Euroopan unohdettu aarre "Kolme veljestä -riipus", jotta ne eivät sekoitu. Sisältökirjuri muuttaa datan.
 
 Raamattuun (docs-PR 11.10. yö, Kolme veljestä): Tarina ja hahmot, AARNI (NIMET).
+
+## TALOUS JUNAAN 183: ALKURAHA £300, KYYTI £50, BUSSI £80, LAIVA £200, LENTO £350 (11.10.2026 klo 23.20)
+
+11.10. 23.1x PT: omistajan linjauksen 22.4x (ks. ALKURAHA £300 -kirjaus) toteutus Pelikoodarilta (natiivi 1a60c2655, web #4459). Alkuraha on £300. Liftaus ei ole enää ilmainen: kyytimaksu £50 veloitetaan kerran kaupungista lähdettäessä, ja reitiltä jatketaan ilmaiseksi kuten laivalipussa. Ilman kyytirahaa liftausta ei tarjota, ja jos mihinkään ei pääse, liftauksen paikalla on Odota-nappi, joka kuluttaa vuoron; rahattomuusvaroituksesta poistui "Maateitse pääsee ilmaiseksi". Bussi maksaa £80, laiva £200 ja lento £350 (ennen alkuraha £400, bussi 50, laiva 100, lento 300 ja liftaus ilmainen). Päiväkulut ennallaan: ruoka £8 + majoitus £12 × hintataso 0,6 / 1,0 / 1,6. Halvin reitti Ateenasta Pariisiin nousi £20:stä £470:een (#4459, docs/raportit/talous-300-taulukko-20261011.md).
+
+Raamattuun (docs-PR 11.10. yö, Kolme veljestä): Ydinajatus, PELIT, TALOUS JA LUENTA (kohta 2 TALOUS: päiväkulun erittely, ALKURAHA JA MATKAT -hinnat ja rahattomuuden varoitusaika ilman ilmaista liftausta); Kaupungit, LIIKKUMINEN (kyytimaksu, bussi £80); Talous ja palkkiot, MENOT.
