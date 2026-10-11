@@ -585,6 +585,11 @@ async function avaaPeli(ctx, { sanelu = true, silta = false, lukijaAani = true }
   // Natiivisilta ruiskutetaan ennen pelin skriptejä, kuten oikea kuorikin.
   if (silta) await sivu.addInitScript(SILTA_MOCK);
   if (!lukijaAani) await sivu.addInitScript(OFFLINE_MOCK);
+  /*
+   * IKÄ ON JO KYSYTTY (js/ikaraja.js, 11.10.2026): ensimmäinen live-kysymys odottaa muuten ikäkyselyä, eikä
+   * savukkeen kysymys lähtisi. Savuke on aikuinen (live-tila); kuratoitu tila vartioidaan workerin testeissä.
+   */
+  await sivu.addInitScript("try { localStorage.setItem('matkakirja-aikuinen', '1'); } catch (e) {}");
   await sivu.route((url) => !/127\.0\.0\.1|localhost|pollo\.testi\.invalid/.test(url.href),
     (route) => route.abort());
   await sivu.goto('http://127.0.0.1:8734/index.html', { waitUntil: 'load' });
@@ -720,9 +725,15 @@ const auki = await sivu.evaluate(async () => {
     peittaaRivin: Math.abs(liuku.getBoundingClientRect().left
       - document.querySelector('.toimintorivi-perus').getBoundingClientRect().left) < 2,
     // Perusnapit väistyvät kaikki, jotta rivissä näkyy vain kolme nappia.
+    // Yksirivisessä asussa (v2551, 2.10.2026) liuska nousee rivin yläpuolelle ja monitoiminappi jää
+    // näkyviin avaimeksi, josta liuska suljetaan (css .rivi-yksi.liuku-auki); muut perusnapit väistyvät.
     perusPiilossa: [...document.querySelectorAll('.toimintorivi-perus > *')]
+      .filter((el) => !(rivi.classList.contains('rivi-yksi') && el.classList.contains('monitoimi-nappi')))
       .every((el) => getComputedStyle(el).visibility === 'hidden'
         || getComputedStyle(el).opacity === '0'),
+    // Diagnostiikka: kunkin perusnapin luokka, näkyvyys ja peittävyys.
+    perusTilat: [...document.querySelectorAll('.toimintorivi-perus > *')]
+      .map((el) => `${el.className}:${getComputedStyle(el).visibility}/${getComputedStyle(el).opacity}/${getComputedStyle(el).display}`),
   };
 });
 vaadi('monitoiminappi avaa liu\'un', auki.luokka === true && auki.aria === 'true',
@@ -1104,8 +1115,10 @@ const alarivi = await sivu.evaluate(() => {
 });
 vaadi('nappirivi on paneelin pohjalla', alarivi.pohjalla === true, JSON.stringify(alarivi));
 vaadi('nappirivi on matala (alle 42 px)', alarivi.korkeus <= 42, `${alarivi.korkeus} px`);
-vaadi('rivillä on kolme nappia järjestyksessä näppäimistö, kaiutin, mikrofoni',
-  alarivi.jarjestys.join(' ') === 'pollo-kirjoita pollo-kaiutin pollo-mikki',
+// Pulun äänikeskustelun koenappi (pollo-realtime-koe, kehittäjätila) saa olla rivin viimeisenä.
+vaadi('rivillä on kolme nappia järjestyksessä näppäimistö, kaiutin, mikrofoni (+ koenappi viimeisenä)',
+  alarivi.jarjestys.filter((n) => !/pollo-realtime-koe/.test(n)).join(' ') === 'pollo-kirjoita pollo-kaiutin pollo-mikki'
+  && alarivi.jarjestys.findIndex((n) => /pollo-realtime-koe/.test(n)) in { '-1': 1, 3: 1 },
   alarivi.jarjestys.join(' '));
 vaadi('mikrofoni on yhä levein, näppäimistö ja kaiutin yhtä leveät',
   Math.abs(alarivi.osuusKirjoita - alarivi.osuusKaiutin) < 0.02
