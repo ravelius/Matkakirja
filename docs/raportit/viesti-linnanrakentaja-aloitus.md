@@ -8,7 +8,10 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-1. **NYT (11.10. 13.xx, nollaus):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261011-iltapaiva.md` KOKONAAN (viestiraja: lähettämättä
+1. **NYT (11.10. 16.1x, nollaus):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261011-ilta.md` KOKONAAN: vientijono v47r→s→t
+   taustalla (tunnukset Siirtosepälle yhtenä viestinä kun v47t valmis), jumikorjausten tila, jono: botin uudet mallikohdat → Pariisi
+   v3c/v3d (LS2:n kuvat) → soutajan kasvot + eleet yhdistys ja vienti (junaan 183) → raketti.
+1q. **(vanha) 11.10. 13.xx, nollaus:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261011-iltapaiva.md` KOKONAAN (viestiraja: lähettämättä
    v47k–n-tunnukset Siirtosepälle + PT-rivit; taustaketjut v47m/n; NavMesh-testi; jono: Laitetestaajan 7./8. kierroksen mallikohdat → Pariisi v3: Bourbon pois, Banque, Branly; tunnustaulukko lopussa).
 1r. **(vanha) 11.10. 00.5x, nollaus 50 %:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261011-yo.md` KOKONAAN ja toimi sen JONOn mukaan:
    Olavinlinna v47f odottaa Siirtosepän pelikuvia (PT kuittaa), Siirtosepän mallivirheet erinä → v47g, ND v5g hyväksytty (LS2 paketoi),
