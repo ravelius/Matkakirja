@@ -287,15 +287,7 @@ namespace Matkakirja
                     houkutinJoukko.Add(m.kaupunki.id);
                     houkutinMerkit.Add(m);
                     m.houkutinVari = vari;
-                    if (m.hehku == null)
-                    {
-                        var t = new GameObject("Hehku").transform;
-                        t.SetParent(m.juuri, false);
-                        t.localPosition = new Vector3(0f, 0f, 1f); // kamerasta poispäin: läpinäkyvien lajittelu piirtää sen pisteen alle
-                        t.gameObject.AddComponent<MeshFilter>().sharedMesh = nelio;
-                        t.gameObject.AddComponent<MeshRenderer>().sharedMaterial = pisteMateriaali;
-                        m.hehku = t;
-                    }
+                    LuoHehku(m);
                 }
                 if (m.houkutin != h || h)
                 {
@@ -305,27 +297,103 @@ namespace Matkakirja
                     AsetaPisteenVari(m);
                 }
             }
+            // Vapaat houkuttimet (Olavinlinna, NUI-jako): oma piste paikassaan, ei laudan kaupunki eikä napautettava.
+            if (vapaatHoukuttimet.Count == 0) RakennaVapaat();
+            foreach (var m in vapaatHoukuttimet)
+            {
+                Color vari = Houkuttimet.LajiTunnukselle(m.kaupunki.id) == Houkuttimet.Laji.Linssi ? HoukutinLinssiVari : HoukutinPeliVari;
+                m.houkutin = vari.a > 0f;
+                m.houkutinVari = vari;
+                if (!m.houkutin) { if (m.juuri.gameObject.activeSelf) m.juuri.gameObject.SetActive(false); continue; }
+                LuoHehku(m);
+                houkutinMerkit.Add(m);
+                AsetaPisteenVari(m);
+            }
             if (kaukoHimmeat) PaivitaKaukoHimmeat();
             Likaa();
             Debug.Log("MATKAKIRJA kartta: " + HoukuttimetTila());
         }
 
+        /// <summary>Vapaat houkutinpisteet (Houkuttimet.Houkutin.Vapaa): eivät ole merkit-listassa (ei ladontaa, nimeä eikä napautusta).</summary>
+        readonly List<Merkki> vapaatHoukuttimet = new List<Merkki>();
+
+        void RakennaVapaat()
+        {
+            if (georeferenssi == null || nelio == null || pisteMateriaali == null) return;
+            double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
+            foreach (var h in Houkuttimet.Lista)
+            {
+                if (!h.Vapaa) continue;
+                var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(h.Lon, h.Lat, nosto));
+                double3 u = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
+                var juuri = new GameObject("Houkutin " + h.Id).transform;
+                juuri.SetParent(georeferenssi.transform, false);
+                juuri.localPosition = (float3)u;
+                var p = new GameObject("Piste").transform;
+                p.SetParent(juuri, false);
+                p.gameObject.AddComponent<MeshFilter>().sharedMesh = nelio;
+                p.gameObject.AddComponent<MeshRenderer>().sharedMaterial = pisteMateriaali;
+                juuri.gameObject.SetActive(false);
+                vapaatHoukuttimet.Add(new Merkki
+                {
+                    kaupunki = new Sisalto.Kaupunki { id = h.Id, nimi = h.Kohde, lat = h.Lat, lon = h.Lon },
+                    juuri = juuri, pisteT = p, pisteKoko = tarkeaPiste,
+                    normaali = (float3)math.normalize(u - keskus), pinta = (float3)u,
+                });
+            }
+        }
+
+        /// <summary>Houkuttimen hehkulevy (saman pistepohjan kopio pisteen alla), kerran.</summary>
+        void LuoHehku(Merkki m)
+        {
+            if (m.hehku != null) return;
+            var t = new GameObject("Hehku").transform;
+            t.SetParent(m.juuri, false);
+            t.localPosition = new Vector3(0f, 0f, 1f); // kamerasta poispäin: läpinäkyvien lajittelu piirtää sen pisteen alle
+            t.gameObject.AddComponent<MeshFilter>().sharedMesh = nelio;
+            t.gameObject.AddComponent<MeshRenderer>().sharedMaterial = pisteMateriaali;
+            m.hehku = t;
+        }
+
+        /// <summary>Vapaiden houkuttimien paikka ja näkyvyys (sama ehto ja mitoitus kuin kaupunkimerkeillä LateUpdatessa).</summary>
+        void SijoitaVapaat(Transform kt, Transform gt, float tanPuoli, float pikseleita, IReadOnlyList<Ruutulaatikko> kalusteet)
+        {
+            foreach (var m in vapaatHoukuttimet)
+            {
+                Vector3 paikka = gt.TransformPoint(m.pinta + m.normaali * KorkeusKerroin.Lisays(m.kaupunki.korkeus));
+                Vector3 kohti = kt.position - paikka;
+                float etaisyys = kohti.magnitude;
+                Vector3 ruutu = kamera.WorldToScreenPoint(paikka);
+                bool nakyy = m.houkutin && !LinssiTila && etaisyys > 0f && Houkuttimet.Nakyy(merkitNakyvat, PalloKierto.PorttiSumea, true)
+                             && MerkkiPaivitys.Edessa(Vector3.Dot(gt.TransformDirection(m.normaali), kohti / etaisyys))
+                             && !KalusteenAlla(kalusteet, ruutu);
+                if (m.juuri.gameObject.activeSelf != nakyy) m.juuri.gameObject.SetActive(nakyy);
+                if (!nakyy) continue;
+                float lahella = etaisyys * (1f - Etuna);
+                m.juuri.SetPositionAndRotation(kt.position - kohti / etaisyys * lahella, kt.rotation);
+                m.juuri.localScale = Vector3.one * (2f * lahella * tanPuoli / pikseleita);
+            }
+        }
+
         /// <summary>Houkuttimien tila lokiin ("MATKAKIRJA kartta: houkuttimet …"): pisteet, värit tokeneineen ja piirtojärjestys.</summary>
         public string HoukuttimetTila()
         {
-            int linssi = 0, peli = 0, nakyvissa = 0;
+            int linssi = 0, peli = 0, video = 0, nakyvissa = 0;
+            var loydetyt = new HashSet<string>();
             foreach (var m in houkutinMerkit)
             {
-                if (Houkuttimet.LajiKaupungille(m.kaupunki.id) == Houkuttimet.Laji.Linssi) linssi++; else peli++;
+                var laji = Houkuttimet.LajiTunnukselle(m.kaupunki.id);
+                if (laji == Houkuttimet.Laji.Linssi) linssi++; else if (laji == Houkuttimet.Laji.Videopeli) video++; else peli++;
                 if (m.juuri.gameObject.activeSelf) nakyvissa++;
+                loydetyt.Add(m.kaupunki.id);
             }
             var puuttuvat = new List<string>();
-            foreach (var h in Houkuttimet.Lista) if (!houkutinJoukko.Contains(h.Id)) puuttuvat.Add(h.Id);
+            foreach (var h in Houkuttimet.Lista) if (!loydetyt.Contains(h.Id)) puuttuvat.Add(h.Id);
             int jono = pisteMateriaali != null ? pisteMateriaali.renderQueue : -1;
-            return $"houkuttimet: {houkutinMerkit.Count} pistettä (linssi {linssi}, lautapeli {peli}; näkyvissä {nakyvissa}" +
+            return $"houkuttimet: {houkutinMerkit.Count} pistettä (linssi {linssi}, lautapeli {peli}, videopeli {video} vapaana; näkyvissä {nakyvissa}" +
                    (puuttuvat.Count > 0 ? $"; ei merkkiä tai väriä: {string.Join(", ", puuttuvat)}" : "") + "), " +
                    $"värit linssi #{ColorUtility.ToHtmlStringRGB(HoukutinLinssiVari)} ({Houkuttimet.LinssiToken}), " +
-                   $"lautapeli #{ColorUtility.ToHtmlStringRGB(HoukutinPeliVari)} ({Houkuttimet.PeliToken}), " +
+                   $"lautapeli ja videopeli #{ColorUtility.ToHtmlStringRGB(HoukutinPeliVari)} ({Houkuttimet.PeliToken}), " +
                    $"hunnun päällä {(Houkuttimet.HunnunPaalla(jono) ? "kyllä" : "ei")} (pistejono {jono} > laatat ja huntu {Houkuttimet.LaattaJono}), " +
                    $"syke {(Joutosyke.Elaa ? "elää" : "levossa")}, linssitila {(LinssiTila ? "kyllä (ei hehkua)" : "ei")}";
         }
@@ -1339,6 +1407,8 @@ namespace Matkakirja
                     Kevyt = m.paakaupunki,
                 });
             }
+
+            SijoitaVapaat(kt, gt, tanPuoli, pikseleita, kalusteet);
 
             // 3) Pelinappula (web pinot) ja pisteet ensin, sitten nimiöt, jotka väistävät ikonit, nappulan, muiden
             //    pisteet ja aiemmat nimiöt webin ehdokaskehällä (8 suuntaa; lukittu nimi ei vaihda kylkeä).

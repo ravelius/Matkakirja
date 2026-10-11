@@ -25,6 +25,13 @@ namespace Matkakirja.Kartta.Testit
             var pelit = Houkuttimet.Lista.Where(h => h.Laji == Houkuttimet.Laji.Lautapeli).Select(h => h.Id).ToArray();
             Oleta.Tosi(linssit.SequenceEqual(new[] { "alpit", "lontoo", "edinburgh", "istanbul", "amsterdam" }), "linssikaupungit: " + string.Join(",", linssit));
             Oleta.Tosi(pelit.SequenceEqual(new[] { "berliini", "ateena" }), "lautapelikaupungit: " + string.Join(",", pelit));
+            // Olavinlinna (NUI-jako): vapaa sininen piste, ei laudan kaupunki (ei napautusta), paikka 61,8639 N 28,9011 E.
+            var olavi = Houkuttimet.Lista.Single(h => h.Laji == Houkuttimet.Laji.Videopeli);
+            Oleta.Tosi(olavi.Id == "olavinlinna" && olavi.Vapaa && Math.Abs(olavi.Lat - 61.8639) < 1e-9 && Math.Abs(olavi.Lon - 28.9011) < 1e-9, "Olavinlinna " + olavi);
+            Oleta.Tosi(Houkuttimet.LajiKaupungille("olavinlinna") == null && Houkuttimet.LajiTunnukselle("olavinlinna") == Houkuttimet.Laji.Videopeli,
+                       "Olavinlinna ei ole kaupunki (ei napautusta)");
+            Oleta.Tosi(Houkuttimet.Token(Houkuttimet.Laji.Videopeli) == Houkuttimet.PeliToken, "Olavinlinna videopelien sinisellä");
+            Oleta.Tosi(Houkuttimet.Lista.Length == 8 && Houkuttimet.Lista.Count(h => !h.Vapaa) == 7, "8 houkutinta: 5 linssiä, 2 lautapeliä, Olavinlinna");
             Oleta.Tosi(Houkuttimet.Lista.Select(h => h.Id).Distinct().Count() == Houkuttimet.Lista.Length, "tunnukset yksilöllisiä");
             Oleta.Tosi(Houkuttimet.LajiKaupungille("alpit") == Houkuttimet.Laji.Linssi && Houkuttimet.LajiKaupungille("ateena") == Houkuttimet.Laji.Lautapeli
                        && Houkuttimet.LajiKaupungille("pariisi") == null && Houkuttimet.LajiKaupungille(null) == null, "laji kaupungille");
@@ -75,7 +82,7 @@ namespace Matkakirja.Kartta.Testit
                 double katto = EurooppaLoitonnus.Katto(2_200_000, EurooppaLoitonnus.SovitusKorkeus(EurooppaLoitonnusTestit.Fov, a) * R, EurooppaLoitonnusTestit.KokoPallo(a));
                 foreach (var h in Houkuttimet.Lista)
                 {
-                    var p = Paikat[h.Id];
+                    var p = h.Vapaa ? (h.Lat, h.Lon) : Paikat[h.Id];
                     Oleta.Tosi(EurooppaLoitonnus.Euroopassa(p.Lat, p.Lon), h.Id + " Euroopassa");
                     Oleta.Tosi(EurooppaLoitonnusTestit.Kuvassa(p.Lat, p.Lon, katto / R, a), $"{l.Nimi}: {h.Id} kuvassa katolla {katto / 1000:0} km");
                 }

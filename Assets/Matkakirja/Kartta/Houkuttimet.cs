@@ -12,7 +12,8 @@ namespace Matkakirja
     ///  - LINSSIKAUPUNGIT violetteina (<see cref="LinssiToken"/>): Alpit (Topografia; laudan kaupunki "alpit", alueen piste),
     ///    Lontoo (Maailmanradio), Edinburgh (Keksinnöt), Istanbul (Ihmisen matka) ja Amsterdam (Taidemuseo).
     ///  - LAUTAPELIKAUPUNGIT sinisinä (<see cref="PeliToken"/>, videopelien sininen): Berliini (Mylly) ja Ateena (Tavli).
-    ///    Olavinlinnan sininen merkki on NUI:n (NostotKartalla, UI Toolkit -kerros kartan päällä).
+    ///  - OLAVINLINNA (videopeli) samalla sinisellä vapaana pisteenä (ei laudan kaupunki, ei napautusta; NUI-jako 11.10.).
+    ///    NUI:n nostomerkki (NostotKartalla) hoitaa Olavinlinnan maan sisällä omilla säännöillään.
     ///  - HEHKU: olemassa oleva pistepohja (KaupunkiMerkit: pisteMateriaali, nelio) isompana ja saman pisteen kuultava
     ///    hehkulevy alla; hidas sykähdys koossa ja peitossa Joutosykkeen kellolla (jäätyy levossa keskiasentoon, lämpösääntö).
     ///  - HUNNUN PÄÄLLÄ: huntu on Cesiumin laattojen raster-kerros (laatat geometriajonossa 2000); pisteet piirtyvät
@@ -20,17 +21,26 @@ namespace Matkakirja
     /// </summary>
     public static class Houkuttimet
     {
-        public enum Laji { Linssi, Lautapeli }
+        public enum Laji { Linssi, Lautapeli, Videopeli }
 
         public readonly struct Houkutin
         {
             public readonly string Id, Kohde;
             public readonly Laji Laji;
-            public Houkutin(string id, Laji laji, string kohde) { Id = id; Laji = laji; Kohde = kohde; }
+            /// <summary>Vapaan houkuttimen paikka (ei laudan kaupunki); NaN = laudan kaupungin piste.</summary>
+            public readonly double Lat, Lon;
+            public Houkutin(string id, Laji laji, string kohde, double lat = double.NaN, double lon = double.NaN)
+            { Id = id; Laji = laji; Kohde = kohde; Lat = lat; Lon = lon; }
+            /// <summary>Vapaa piste (ei laudan kaupunki): ei napautettava, ei nimeä (NUI:n nostomerkki hoitaa maan sisällä).</summary>
+            public bool Vapaa => !double.IsNaN(Lat) && !double.IsNaN(Lon);
             public override string ToString() => $"{Id} ({Kohde})";
         }
 
-        /// <summary>Houkuttimet laudan kaupunkien tunnuksin (Sisalto.Kaupunki.id).</summary>
+        /// <summary>
+        /// Houkuttimet laudan kaupunkien tunnuksin (Sisalto.Kaupunki.id) ja vapaat pisteet paikkoineen. Olavinlinna (videopeli,
+        /// NUI-jako 11.10.2026): ei laudan kaupunki (Savonlinna ei ole laudalla, Olavinlinna on maastokohde/nosto), joten vapaa
+        /// piste 61,8639 N 28,9011 E samalla sinisellä kuin lautapelit.
+        /// </summary>
         public static readonly Houkutin[] Lista =
         {
             new Houkutin("alpit", Laji.Linssi, "Topografia"),
@@ -40,20 +50,29 @@ namespace Matkakirja
             new Houkutin("amsterdam", Laji.Linssi, "Taidemuseo"),
             new Houkutin("berliini", Laji.Lautapeli, "Mylly"),
             new Houkutin("ateena", Laji.Lautapeli, "Tavli"),
+            new Houkutin("olavinlinna", Laji.Videopeli, "Olavinlinna 1499", 61.8639, 28.9011),
         };
 
         /// <summary>Tyylikirjan tokenit (tyylikirja.json): linssi = erikois.linssi-hehku, lautapeli = teemat.videopeli.korostus.</summary>
         public const string LinssiToken = "--tk-erikois-linssi-hehku", PeliToken = "--tk-videopeli-korostus";
 
-        /// <summary>Kaupungin houkutinlaji tai null.</summary>
+        /// <summary>Laudan kaupungin houkutinlaji tai null (vapaat pisteet eivät ole kaupunkeja).</summary>
         public static Laji? LajiKaupungille(string id)
+        {
+            if (string.IsNullOrEmpty(id)) return null;
+            foreach (var h in Lista) if (!h.Vapaa && string.Equals(h.Id, id, StringComparison.Ordinal)) return h.Laji;
+            return null;
+        }
+
+        /// <summary>Houkuttimen laji tunnuksella (myös vapaat) tai null.</summary>
+        public static Laji? LajiTunnukselle(string id)
         {
             if (string.IsNullOrEmpty(id)) return null;
             foreach (var h in Lista) if (string.Equals(h.Id, id, StringComparison.Ordinal)) return h.Laji;
             return null;
         }
 
-        /// <summary>Token lajille (kirjaus ja testit).</summary>
+        /// <summary>Token lajille (kirjaus ja testit): linssi violetti, lautapeli ja videopeli videopelien sininen.</summary>
         public static string Token(Laji laji) => laji == Laji.Linssi ? LinssiToken : PeliToken;
 
         // ---- Hehku ja syke ----
