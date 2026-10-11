@@ -248,6 +248,7 @@ namespace Matkakirja.Natiivi
                 return;
             }
             var (teksti, indeksi) = sarja[i];
+            Debug.Log($"MATKAKIRJA livia: avaus {indeksi + 1}/{sarja.Count}");
             float puheMs = -1f;
             // Jatkohiljaisuus vaientaa Livian (Sano ei puhu): sarja päättyy siististi.
             if (PeliOhjain.Jatkohiljaisuus) { Lopeta(true); return; }

@@ -226,6 +226,7 @@ namespace Matkakirja.Natiivi
             var rivi = UiNakymat.Hae().Tilarivi;
             string eka = tervetuloa.Length > 0 ? tervetuloa : OhjeToinen;
             float s = Lukuaika(eka);
+            Debug.Log($"MATKAKIRJA livia: tilarivi {s:F1} s");
             rivi.Viesti(eka, s);
             if (tervetuloa.Length == 0) return;
             Ajasta(() => { if (Voimassa(v)) rivi.Viesti(OhjeToinen, Lukuaika(OhjeToinen)); }, (long)(s * 1000f));
@@ -291,6 +292,7 @@ namespace Matkakirja.Natiivi
             var pulu = Pulu.Hae();
             float puheMs = -1f;
             var aani = AaniUrl(paikkaan, i);
+            Debug.Log($"MATKAKIRJA livia: paljastus {i + 1} {paikkaan} {(aani != null ? "äänellä" : "äänettä")}");
             if (!pulu.Nakyvissa)
             {
                 // Kupla ei mahdu (web polloSaapumiskupla false): luenta heti liikkeelle, ei jäädä odottamaan.
