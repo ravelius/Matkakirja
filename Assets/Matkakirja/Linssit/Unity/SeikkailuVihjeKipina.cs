@@ -18,7 +18,9 @@ namespace Matkakirja.Natiivi
         const float KulmaLento = 0.045f, KulmaPerilla = 0.06f;
         const int Vana = 5;
 
-        static Material materiaali; static Texture2D kuvio;
+        static Material materiaali, paalla; static Texture2D kuvio;
+        /// <summary>Lennon alku (s), jonka kipinä piirretään seinien päälle: lähtöpiste 1,6 m edessä voi olla seinän takana.</summary>
+        const float PaallaAlkuS = 0.5f;
         VihjeLento lento; Transform[] osat; Renderer[] piirrot; Vector3[] historia; int historiaN;
         Color vari; float aika, perillaAika;
         /// <summary>Perillä näkyvyys 0–1 (vihjeen valon kirkkaus suhteessa huippuun); 0 → kipinä häviää.</summary>
