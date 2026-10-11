@@ -2135,6 +2135,19 @@
     opacity: 0.5;
 }
 
+/* Videopelikohteen sykäys (omistaja 11.10.2026 klo 17.0x, Videopelit.KytkeSykaisy): terävä rengas perusrenkaan kohdalla
+ * (IssPiirros.Syke / web .astro-iss-syke, reuna 2 pt), laajenee 1,35-kertaiseksi ja haihtuu koodissa. */
+.mk-videopeli-aalto {
+    position: absolute;
+    left: 22%;
+    top: 22%;
+    right: 22%;
+    bottom: 22%;
+    border-width: 2px;
+    border-radius: 999px;
+    border-color: var(--tk-videopeli-korostus);
+}
+
 /* Maakuntakartta (omistaja 28.9. klo 17.1x): paneeli on pelkkä kuvausruutu, hieman isompi kuva ja teksti, silti kevyt. */
 .mk-selite.mk-selite--karttatila {
     width: 300px;
