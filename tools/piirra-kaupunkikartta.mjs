@@ -219,12 +219,14 @@ const KAUPUNGIT = {
     // poikkeus siinä, että kohteiden väliset "kadut" ovat kujia ja
     // kanavia — ks. KADUT-taulun kommentti jalankulkuluokista.
     //
-    // POHJOINEN LAGUUNI ON YHÄ PAPERIN VÄRINEN (Euroopan meritarkistus
-    // 11.10.2026): laguuni on OSM:ssä vesirelaatio (water=lagoon), ei
-    // rantaviivaa, joten meri + meriHaku ei auta (8 rantaviivaa, ja
-    // relaatio hylätään vahdilla "peittäisi 100 %"). Korjaus vaatii
-    // relaation sisärenkaiden (saaret) leikkauksen rajaukseen.
+    // LAGUUNI VEDEKSI 11.10.2026 (Karttaseppä): laguuni on OSM:ssä
+    // vesirelaatio (water=lagoon), jonka sisärenkaissa EI ole kaupungin
+    // saaria, eikä niillä ole rantaviivaa tai place=island-rajaa. Siksi
+    // täyttö upotti kaupungin 9.8. ja vahti piirsi rantaviivan.
+    // laguuniMaa: laguuni täytetään ja maa piirretään katuverkosta
+    // leveällä vedolla (px 1600 px:n kuvassa; 22 px ≈ 40 m).
     rajat: { pohjoinen: 45.445, etela: 45.4265, lansi: 12.3155, ita: 12.352 },
+    laguuniMaa: 22,
   },
   praha: {
     // Vltavan mutka: Petřínin kukkula ja Hradčany lännessä,
@@ -6970,14 +6972,16 @@ function piirretytRajat({ rajat, laajennus = 1 }) {
  * kainalokartat — kainalossa vain x ja y osoittavat pieneen ruutuun
  * pääkuvan sisällä.
  */
-function kokoaKerrokset(elementit, x, y, rajat, meri = false, rantaLaaja = null) {
+function kokoaKerrokset(elementit, x, y, rajat, meri = false, rantaLaaja = null, laguuniMaa = 0) {
   const pisteet = (geom) => geom.map((p) => `${x(p.lon)},${y(p.lat)}`).join(' ');
   const kerrokset = {
     meri: [], saaret: [], puistot: [], vedet: [], joet: [], radat: [], muurit: [],
-    rauniot: [], raunioviivat: [],
+    rauniot: [], raunioviivat: [], maaveto: [], maavetoLeveys: laguuniMaa,
     kadut: KADUT.map(() => []),
   };
   const rantaviivat = [];
+  const katuViivat = [];
+  let laguuniTaytetty = false;
   const laatikonAla = (rajat.ita - rajat.lansi) * (rajat.pohjoinen - rajat.etela);
   for (const e of elementit) {
     /*
@@ -7044,6 +7048,20 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false, rantaLaaja = null)
          * rajaa sen näkymättömän osan pois ilman reunaviivaa.
          */
         const nakyva = renkaanAla(leikkaaLaatikkoon(rengas, rajat)) / laatikonAla;
+        if (nakyva > 0.5 && laguuniMaa && !laguuniTaytetty) {
+          /*
+           * LAGUUNI, JONKA SAARIA EI OLE RAJATTU (Karttaseppä 11.10.2026,
+           * Venetsia). Laguunin vesirelaatiossa kaupungin saaret eivät ole
+           * sisärenkaina, eikä niillä ole rantaviivaa tai place=island-
+           * rajaa. Laguuni täytetään, ja maa piirretään sen päälle
+           * katuverkosta leveällä paperinvärisellä vedolla (maaveto-
+           * kerros); kanavat ja vedet piirtyvät tämän päälle kuten ennen.
+           */
+          console.log(`  laguuni ${Math.round(nakyva * 100)} %: täytetään, maa katuverkosta (${laguuniMaa} px)`);
+          kerrokset.meri.push(`<path fill-rule="evenodd" d="${polku([rengas, ...sisa])}"/>`);
+          laguuniTaytetty = true;
+          break; // relaation muut renkaat ovat saman laguunin kopioita (kuten vanhassa haarassa)
+        }
         if (nakyva > 0.5) {
           console.log(`  vesirelaatio peittäisi ${Math.round(nakyva * 100)} % —`
             + ' piirretään rantaviivana');
@@ -7063,6 +7081,7 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false, rantaLaaja = null)
     if (t.highway) {
       const i = KADUT.findIndex((k) => k.luokat.includes(t.highway));
       if (i >= 0) kerrokset.kadut[i].push(`<polyline points="${pisteet(e.geometry)}"/>`);
+      katuViivat.push(e.geometry);
     } else if (t.waterway) {
       kerrokset.joet.push(`<polyline points="${pisteet(e.geometry)}"/>`);
     } else if (t.natural === 'coastline') {
@@ -7164,6 +7183,7 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false, rantaLaaja = null)
       }
     }
   }
+  if (laguuniTaytetty) for (const geom of katuViivat) kerrokset.maaveto.push(`<polyline points="${pisteet(geom)}"/>`);
   return kerrokset;
 }
 
@@ -7204,6 +7224,8 @@ function kerrosKuvaus(kerrokset, mitta = 1, rauniokaupunki = false) {
        katoaisivat veden alle. -->
   <g fill="${VESI}" stroke="${VESIREUNA}" stroke-width="${v(1.4)}">${kerrokset.meri.join('')}</g>
   <g fill="${PAPERI}" stroke="${VESIREUNA}" stroke-width="${v(1.4)}">${kerrokset.saaret.join('')}</g>
+  <g fill="none" stroke="${PAPERI}" stroke-width="${v(kerrokset.maavetoLeveys || 0)}" stroke-linecap="round"
+     stroke-linejoin="round">${kerrokset.maaveto.join('')}</g>
   <g fill="${PUISTO}" stroke="none">${kerrokset.puistot.join('')}</g>
   <g fill="${RAUNIO}" stroke="${raunioReuna}" stroke-width="${v(raunioViiva)}">${kerrokset.rauniot.join('')}</g>
   <g fill="none" stroke="${raunioReuna}" stroke-width="${v(raunioViiva + 0.4)}"
@@ -7304,7 +7326,7 @@ function piirraKainalo(kainalo, elementit, W, H, ydinW, rauniokaupunki = false) 
 
 function piirra(kaupunki, elementit, kainaloAineistot = [], rantaLaaja = null) {
   const {
-    kainalot = [], meri = false, laajennus = 1, rauniokaupunki = false,
+    kainalot = [], meri = false, laajennus = 1, rauniokaupunki = false, laguuniMaa = 0,
   } = KAUPUNGIT[kaupunki];
   const rajat = piirretytRajat(KAUPUNGIT[kaupunki]);
   // Ydinrajaus pysyy 1600 pikselinä myös laajennetussa kuvassa, ks.
@@ -7313,7 +7335,7 @@ function piirra(kaupunki, elementit, kainaloAineistot = [], rantaLaaja = null) {
   const H = Math.round(W / kuvasuhde(rajat));
   const x = (lon) => (((lon - rajat.lansi) / (rajat.ita - rajat.lansi)) * W).toFixed(1);
   const y = (lat) => (((rajat.pohjoinen - lat) / (rajat.pohjoinen - rajat.etela)) * H).toFixed(1);
-  const kerrokset = kokoaKerrokset(elementit, x, y, rajat, meri, rantaLaaja);
+  const kerrokset = kokoaKerrokset(elementit, x, y, rajat, meri, rantaLaaja, laguuniMaa);
   const kainaloKuvat = kainalot
     .map((k, i) => piirraKainalo(k, kainaloAineistot[i] ?? [], W, H, W / laajennus, rauniokaupunki))
     .join('\n');
