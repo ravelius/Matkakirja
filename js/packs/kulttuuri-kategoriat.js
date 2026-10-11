@@ -28465,19 +28465,19 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Voytek S, Wikimedia Commons (CC BY-SA 2.5)',
         },
         {
-          otsikko: 'Kolme veljestä kolmelta vuosisadalta',
+          otsikko: 'Kolme veljestä -talot kolmelta vuosisadalta',
           tiedosto: 'The Three Brothers Houses (8531775989).jpg',
           teksti: 'Mazā Pils -kadulla seisoo vierekkäin kolme kapeaa taloa, joita '
-            + 'sanotaan Kolmeksi veljekseksi. Ne ovat Riian vanhin säilynyt '
+            + 'kutsutaan Kolme veljestä -taloiksi. Ne ovat Riian vanhin säilynyt '
             + 'asuintalojen ryhmä. Valkoinen veli on rakennettu 1400-luvun '
             + 'lopulla, keltaisen julkisivussa lukee vuosiluku 1646, ja '
             + 'kolmas valmistui vasta 1700-luvun alussa. Kaikkien päätyseinä '
             + 'on kadulle päin, kuten Itämeren kauppakaupungeissa oli tapana. '
             + 'Talot korjattiin 1950-luvulla, ja nykyään niissä toimii '
             + 'arkkitehtuurimuseo.',
-          lyhyt: 'Kolme veljestä on Riian vanhin säilynyt asuintalojen ryhmä 1400-luvun lopulta 1700-luvun alkuun.',
-          selite: 'Kolme veljestä on Riian vanhin säilynyt asuintalojen '
-            + 'ryhmä: valkoinen on 1400-luvun lopulta, keltaisessa lukee '
+          lyhyt: 'Kolme veljestä -talot ovat Riian vanhin säilynyt asuintalojen ryhmä 1400-luvun lopulta 1700-luvun alkuun.',
+          selite: 'Kolme veljestä -talot ovat Riian vanhin säilynyt '
+            + 'asuintalojen ryhmä: valkoinen on 1400-luvun lopulta, keltaisessa lukee '
             + 'vuosiluku 1646 ja kolmas valmistui 1700-luvun alussa.',
           lahde: 'Guillaume Speurt, Wikimedia Commons (CC BY-SA 2.0)',
         },
@@ -138192,7 +138192,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Kaupunki rakennetaan uusiksi',
-          teksti: 'Isoisän matkavuonna 1873 Belgrad oli keskellä muutosta. Ottomaanien varuskunta oli määrätty pois Kalemegdanin linnoituksesta 18. huhtikuuta 1867, ja kaupunkisuunnittelija Emilijan Josimović laati samana vuonna suunnitelman, jossa mutkaiset kadut korvattiin ruutukaavalla. Knez Mihailovan katua alettiin rakentaa keväällä 1869. Sitä ennen paikalla oli vain lyhyt Delijska-katu, joka on lähteen mukaan ainoa ottomaanikaudelta nimensä säilyttänyt Belgradin katu. Kansallisteatteri nousi Stambolin portin paikalle, ja portti oli purettu vuonna 1866.',
+          teksti: 'Isoisän matkavuonna 1873 Belgrad oli keskellä muutosta. Ottomaanien varuskunta lähti Kalemegdanin linnoituksesta 18. huhtikuuta 1867, ja kaupunkisuunnittelija Emilijan Josimović laati samana vuonna suunnitelman, jossa mutkaiset kadut korvattiin ruutukaavalla. Knez Mihailovan katua alettiin rakentaa keväällä 1869. Sitä ennen paikalla oli vain lyhyt Delijska-katu, joka on lähteen mukaan ainoa ottomaanikaudelta nimensä säilyttänyt Belgradin katu. Kansallisteatteri nousi Stambolin portin paikalle, ja portti oli purettu vuonna 1866.',
           tiedosto: 'National Theatre in Belgrade (DSC04616).jpg',
           lyhyt: 'Kansallisteatteri rakennettiin Stambolin portin paikalle, ja sen peruskivi muurattiin vuonna 1868.',
           selite: 'Teatteri oli Tasavallan aukion ensimmäinen suuri rakennus, ja muutto uusiin tiloihin tehtiin vuonna 1869.',
@@ -138393,10 +138393,10 @@ export const KULTTUURI_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Kruunu, jota varjeltiin kuin vankia',
-          teksti: 'Pyhän Martinin tuomiokirkosta tuli Unkarin kuninkaiden kruunajaiskirkko vuonna 1563, kun osmanit olivat vallanneet vanhan kruunajaiskaupungin Székesfehérvárin. Ensimmäisenä kruunattiin Maximilian II, jonka päähän Pyhän Tapanin kruunu asetettiin 1563. Lähteen mukaan kruunu oli Pressburgin linnassa noin vuodesta 1552 1780-luvulle, ja sitä vartioivat kruunuvartijat ja jalkaväkimiehet. Habsburg-kuninkaat eivät saaneet pitää kruunua itse, vaan he pääsivät sen luo vain kruunajaisissa. Nykyään tornin huipulla on kullattu jäljennös, joka asetettiin paikalleen 1846.',
+          teksti: 'Pyhän Martinin tuomiokirkosta tuli Unkarin kuninkaiden kruunajaiskirkko vuonna 1563, kun osmanit olivat vallanneet vanhan kruunajaiskaupungin Székesfehérvárin. Ensimmäisenä kruunattiin Maximilian II, jonka päähän Pyhän Tapanin kruunu asetettiin 1563. Lähteen mukaan kruunu oli Pressburgin linnassa noin vuodesta 1552 1780-luvulle, ja sitä vartioivat kruunuvartijat ja jalkaväkimiehet. Habsburg-kuninkaat eivät saaneet pitää kruunua itse, vaan he pääsivät sen luo vain kruunajaisissa. Nykyään tornin huipulla on kullattu jäljennös, joka asetettiin paikalleen 1840-luvun lopulla.',
           tiedosto: 'Bratislava Saint Martin\'s Cathedral Tower 01.jpg',
           lyhyt: 'Pyhän Martinin tuomiokirkon torni, jonka huipulla on Pyhän Tapanin kruunun jäljennös.',
-          selite: 'Tornin kullattu kruununjäljennös asetettiin paikalleen 1846.',
+          selite: 'Tornin kullattu kruununjäljennös asetettiin paikalleen 1840-luvun lopulla.',
           lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'St Martin\'s Cathedral, Bratislava',
         },
@@ -138645,7 +138645,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Rautatie tulee',
-          teksti: 'Isoisän matkavuonna 1873 kaupunki oli jo saanut rautatien. Yhteys Tiraspoliin avattiin elokuussa 1871, ja 1870-luvun puolivälissä rata ulottui Unghenin kautta Romaniaan. Romanian-yhteys rakennettiin valmistautumaan Venäjän–Turkin sotaan 1877–1878, ja kaupunki oli hyökkäyksen pääkokoontumisalue. Pormestari Carol Schmidt johti kaupunkia 1800-luvun lopulta 1900-luvun alkuun, ja häntä muistetaan kaupungin uudistajana. Kaupungin asukasluku oli noin 92 000 vuonna 1862 ja 125 787 vuonna 1900. Kaupungintalo valmistui vasta noin 1901.',
+          teksti: 'Isoisän matkavuonna 1873 kaupunki oli jo saanut rautatien. Yhteys Tiraspoliin avattiin elokuussa 1871, ja 1870-luvun puolivälissä rata ulottui Unghenin kautta Romaniaan. Romanian-yhteys rakennettiin valmistautumaan Venäjän–Turkin sotaan 1877–1878, ja kaupunki oli hyökkäyksen pääkokoontumisalue. Pormestari Carol Schmidt johti kaupunkia 1800-luvun lopulta 1900-luvun alkuun, ja häntä muistetaan kaupungin uudistajana. Kaupungin asukasluku oli noin 92 000 vuonna 1862 ja 108 483 vuonna 1897. Kaupungintalo valmistui vasta noin 1901.',
           tiedosto: 'Chisinau Railstation 2.JPG',
           lyhyt: 'Keskusrautatieasemalla on kansainvälinen pääte.',
           selite: 'Ensimmäinen rata kaupungista avattiin vuonna 1871, ja yhteys Romaniaan valmistui 1870-luvun puolivälissä.',
@@ -138917,10 +138917,10 @@ export const KULTTUURI_KATEGORIAT = {
             },
             {
               otsikko: 'Joki ja puistot',
-              teksti: 'Svislač virtaa kaupungin läpi, ja sen rannoilla on puistoja. Gorki-puisto perustettiin 1800–1805, ja siellä on huvipuisto, 54 metriä korkea maailmanpyörä ja planetaario. Muita puistoja ovat Janka Kupalan puisto ja Tšeljuskinilaisten puisto. Zaslawyen tekojärvi on rakennettu 1956, ja se on noin viiden kilometrin päässä kaupungin luoteisreunasta.',
+              teksti: 'Svislač virtaa kaupungin läpi, ja sen rannoilla on puistoja. Gorki-puisto perustettiin 1800–1805, ja siellä on huvipuisto, yli 50 metriä korkea maailmanpyörä ja planetaario. Muita puistoja ovat Janka Kupalan puisto ja Tšeljuskinilaisten puisto. Zaslawyen tekojärvi on rakennettu 1956, ja se on noin viiden kilometrin päässä kaupungin luoteisreunasta.',
               kuva: {
                 tiedosto: 'Минск.Парк Горького.Колесо обозрения. - panoramio.jpg',
-                selite: 'Gorki-puiston maailmanpyörä on 54 metriä korkea.',
+                selite: 'Gorki-puiston maailmanpyörä on yli 50 metriä korkea.',
                 lahde: 'botfor, Wikimedia Commons (CC BY 3.0)',
               },
             },
@@ -139097,7 +139097,7 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         kuva: {
           tiedosto: 'Natural History Museum of Montenegro, Sahat Kula, 2019 (1).jpg',
-          selite: 'Sahat kula on 19 metriä korkea kivitorni, joka seisoi jo ennen Montenegron aikaa.',
+          selite: 'Sahat kula on noin 16–19 metriä korkea kivitorni, joka seisoi jo ennen Montenegron aikaa.',
           lahde: 'Liridon, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Podgorica on keskikokoinen kaupunki, jonka nähtävyydet ovat kuljettavissa jalan, kun majoitus on keskustassa tai joen toisella puolella. Lentoasema TGD on noin kymmenen kilometriä etelään, ja matka keskustaan kestää autolla alle 15 minuuttia. Valuutta on euro. Vanha ja uusi kaupunki ovat kävelymatkan päässä toisistaan, ja kahviloita riittää kävelykaduilla. Kesä on kuuma, ja heinäkuu on vuoden kuivin kuukausi.',
@@ -139324,7 +139324,7 @@ export const KULTTUURI_KATEGORIAT = {
               teksti: 'Skopje International Airport (SKP) on Petrovecissa, noin 20 kilometriä kaupungin itäpuolella, ja sitä hoitaa TAV Airports Holding vuodesta 2008. Pääasema ja linja-autoasema ovat samassa Transportation Center -kompleksissa, ja sieltä on noin 15 minuutin kävely Makedonia-aukiolle. Linja-autoasema avattiin 2000-luvun alussa. Kaupunkibusseja ajaa JSP Skopje. Pitkät junayhteydet kulkevat Belgradista Thessalonikiin ja Skopjesta Pristinaan.',
               kuva: {
                 tiedosto: 'Plaza de Macedonia, Skopie, Macedonia, 2014-04-16, DD 19.JPG',
-                selite: 'Makedonia-aukion pinta-ala on noin 18 000 neliömetriä.',
+                selite: 'Makedonia-aukion pinta-ala on noin 18 500 neliömetriä.',
                 lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
@@ -139433,7 +139433,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Nykytaiteen museo ja lahjoitukset',
-          teksti: 'Skopjen nykytaiteen museo rakennettiin vuoden 1963 maanjäristyksen jälkeen kansainvälisellä avulla. Puolalaisten arkkitehtien suunnittelema museorakennus annettiin kaupungille puolalaisten lahjana. Pablo Picasso lahjoitti uudelle museolle maalauksensa Naisen pää, ja kokoelmassa on lähteen mukaan muun muassa Fernand Légerin, André Massonin, Hans Hartungin, Victor Vasarelyn, Alexander Calderin, Pierre Soulagesin, Alberto Burrin ja Christon töitä. Apua tarjottiin 78 maasta, ja siksi kaupunkia kutsutaan kansainvälisen solidaarisuuden kaupungiksi. Univerzalna sala -konserttisali valmistui 1966 noin 35 maan lahjoituksilla.',
+          teksti: 'Skopjen nykytaiteen museo rakennettiin vuoden 1963 maanjäristyksen jälkeen kansainvälisellä avulla. Puolalaisten arkkitehtien suunnittelema museorakennus annettiin kaupungille puolalaisten lahjana. Pablo Picasso lahjoitti uudelle museolle maalauksensa Naisen pää, ja kokoelmassa on lähteen mukaan muun muassa Fernand Légerin, André Massonin, Hans Hartungin, Victor Vasarelyn, Alexander Calderin, Pierre Soulagesin, Alberto Burrin ja Christon töitä. Apua tarjottiin noin 80 maasta, ja siksi kaupunkia kutsutaan kansainvälisen solidaarisuuden kaupungiksi. Univerzalna sala -konserttisali valmistui 1966 noin 35 maan lahjoituksilla.',
           wiki: 'Museum of Contemporary Art (Skopje)',
         },
         {
@@ -139804,7 +139804,7 @@ export const KULTTUURI_KATEGORIAT = {
             },
             {
               otsikko: 'Milloin kannattaa tulla',
-              teksti: 'Zagrebin ilmasto on lauhkea ja siinä on neljä selvää vuodenaikaa. Tammikuun keskilämpö on 1,4 astetta ja heinäkuun 22,2 astetta. Sadetta tulee ympäri vuoden, noin 880 millimetriä vuodessa, eniten syyskuussa. Adventtina Ban Jelačić -aukio koristellaan joulukuusilla ja valoilla, ja kaupungin joulutori valittiin lähteen mukaan Euroopan parhaaksi kolmena vuonna peräkkäin 2015–2017.',
+              teksti: 'Zagrebin ilmasto on lauhkea ja siinä on neljä selvää vuodenaikaa. Tammikuun keskilämpö on 1,4 astetta ja heinäkuun 22,2 astetta. Sadetta tulee ympäri vuoden, noin 880 millimetriä vuodessa, eniten syyskuussa. Adventtina Ban Jelačić -aukio koristellaan joulukuusilla ja valoilla, ja kaupungin joulutori valittiin lähteen mukaan Euroopan parhaaksi kolmena vuonna peräkkäin.',
             },
           ],
           matkailu: {
@@ -139850,7 +139850,7 @@ export const KULTTUURI_KATEGORIAT = {
               },
               {
                 otsikko: 'Joulutori on kuuluisa',
-                teksti: 'Kaupungin joulutori valittiin lähteen mukaan Euroopan parhaaksi kolmena vuonna peräkkäin 2015–2017.',
+                teksti: 'Kaupungin joulutori valittiin lähteen mukaan Euroopan parhaaksi kolmena vuonna peräkkäin.',
               },
             ],
           },
@@ -140443,7 +140443,7 @@ export const KULTTUURI_KATEGORIAT = {
           jaksot: [
             {
               otsikko: 'Perille ja liikkeelle',
-              teksti: 'Lähin kansainvälinen lentokenttä on Nice Côte d\'Azur Nizzassa. Sieltä Monacoon pääsee junalla, ja Monacossa on myös helikopterikenttä, josta kulkee helikopteriyhteys Nizzan lentokentälle; matka kestää noin kahdeksan minuuttia. Maan ainoa rautatieasema Monaco–Monte-Carlo avattiin 1999, ja se on osittain maan alla. Paikallisbussilla on viisi linjaa, ja sataman yli kulkee Bateau Bus. Monacossa on noin 80 julkista hissiä ja 37 liukuporrasta.',
+              teksti: 'Lähin kansainvälinen lentokenttä on Nice Côte d\'Azur Nizzassa. Sieltä Monacoon pääsee junalla, ja Monacossa on myös helikopterikenttä, josta kulkee helikopteriyhteys Nizzan lentokentälle; matka kestää noin kahdeksan minuuttia. Maan ainoa rautatieasema Monaco–Monte-Carlo avattiin 1999, ja se on kokonaan maan alla. Paikallisbussilla on viisi linjaa, ja sataman yli kulkee Bateau Bus. Monacossa on noin 80 julkista hissiä ja 37 liukuporrasta.',
               kuva: {
                 tiedosto: 'Monaco train station.jpg',
                 lyhyt: 'Monaco–Monte-Carlon asema on maan ainoa rautatieasema, ja se avattiin 1999.',
@@ -140691,7 +140691,7 @@ export const KULTTUURI_KATEGORIAT = {
               kuva: {
                 tiedosto: 'Viðey island view with Esja.jpg',
                 lyhyt: 'Viðey on Kollafjörðurin lahden suurin saari, jonne pääsee lautalla.',
-                selite: 'Saari on pinta-alaltaan 1,7 neliökilometriä, ja sen korkein kohta on 32 metriä.',
+                selite: 'Saari on pinta-alaltaan noin 1,6 neliökilometriä, ja sen korkein kohta on 32 metriä.',
                 lahde: 'Slawojar, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
@@ -141041,7 +141041,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'LIE Vaduz, Schlossweg, Aussicht 0014.jpg',
           lyhyt: 'Vaduz sijaitsee Reinin laaksossa, jonka vastarannalla kohoavat Sveitsin Alpit.',
-          selite: 'Rein muodostaa noin 27 kilometrin pituisen rajan Sveitsin kanssa.',
+          selite: 'Rein muodostaa noin 25–30 kilometrin pituisen rajan Sveitsin kanssa.',
           lahde: '-wuppertaler, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -141205,7 +141205,7 @@ export const KULTTUURI_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Keisarin päätös ja pysyvät rajat',
-          teksti: 'Liechtensteinin suvun ostamilla alueilla ei ollut muuta feodaaliherraa kuin keisari, ja se oli ostosten tärkein etu. Keisari Kaarle VI yhdisti Schellenbergin ja Vaduzin 23.1.1719 ruhtinaskunnaksi nimellä Liechtenstein. Lähteen mukaan nimi annettiin suvun ruhtinaan, keisarin uskollisen palvelijan Anton Florianin, kunniaksi. Siitä päivästä lähtien Liechtenstein oli Pyhän saksalais-roomalaisen keisarikunnan suvereeni jäsen. Rein on maan länsiraja ja muodostaa noin 27 kilometrin pituisen rajan Sveitsin kanssa.',
+          teksti: 'Liechtensteinin suvun ostamilla alueilla ei ollut muuta feodaaliherraa kuin keisari, ja se oli ostosten tärkein etu. Keisari Kaarle VI yhdisti Schellenbergin ja Vaduzin 23.1.1719 ruhtinaskunnaksi nimellä Liechtenstein. Lähteen mukaan nimi annettiin suvun ruhtinaan, keisarin uskollisen palvelijan Anton Florianin, kunniaksi. Siitä päivästä lähtien Liechtenstein oli Pyhän saksalais-roomalaisen keisarikunnan suvereeni jäsen. Rein on maan länsiraja ja muodostaa noin 25–30 kilometrin pituisen rajan Sveitsin kanssa.',
           tiedosto: 'Josef Johann Adam v Liechtenstein.jpg',
           lyhyt: 'Josef Johann Adam von Liechtenstein (1690–1732) oli ruhtinas 1721–1732.',
           selite: 'Vaduzin kreivikunta ostettiin vuonna 1712, ja ruhtinaskunta sai nimensä seitsemän vuotta myöhemmin.',

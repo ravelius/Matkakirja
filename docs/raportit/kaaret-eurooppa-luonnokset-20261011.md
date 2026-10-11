@@ -1,4 +1,4 @@
-# Euroopan 9 laudan kaupungin tarinakaaret: luonnokset (Sisältökirjuri 11.10.2026)
+# Euroopan 9 laudan kaupungin tarinakaaret: luonnokset (Sisältökirjuri 11.10.2026, päivitetty 12.10.2026 PT:n päätösten mukaan)
 
 PT:n tilaus 11.10. klo 21.2x: Äänittäjän inventaarion (`aanet-eurooppa-inventaario-20261011.md` kohdat 1–2) laudan kaupungit Bryssel, Kassa, Ljubljana, Luxemburg, Valletta (saapumisluenta + kaaret + fokus) sekä Bergen, Firenze, Sevilla, Tampere (saapumisluenta + kaaret). **Vain luonnokset; ääntä ei ole generoitu eikä tekstejä viety dataan.** Tekstit on kirjoitettu `docs/moduulit/tarinakaari.md`:n mukaan, kaanon `docs/tarina.md` + `docs/isoisan-raamattu.md`, ja faktat on tarkistettu (liite: `kaaret-eurooppa-faktat-20261011.md`; kolme Sonnet-tarkistajaa, korjaukset tehty).
 
@@ -43,8 +43,8 @@ PT:n tilaus 11.10. klo 21.2x: Äänittäjän inventaarion (`aanet-eurooppa-inven
 - **Sävelet:** lämpö (Ljubljana), hengähdys (Valletta), huumori (Bryssel, Bergen, Firenze, Tampere), arvoitus/ihmetys, haikeus (Kassa, Luxemburg), jännitys vain Luxemburgissa (kaatuva muuri = kommellus). Itseironia täsmälleen kerran: Firenze (tinkimisessä hävinnyt Horatio). Kommellus: Luxemburgin kaatuva muuri, Kassan pantiksi jäänyt avain.
 - **Ei budjettimotiiveja:** ei barometrilukemaa (budjetti 4 täynnä), ei liituristiä, sähkettä, sateenvarjoa, herra G:tä eikä Phileasia. Hevospelko ei esiinny. Tuntematon kulkija (Euroopan mysteeri) näkyy vain havaintoina (Kassan öljytty lukko, Bergenin tuore rivi, Sevillan aamun lukema), ei nimettynä eikä aavemaisena.
 - **Kunnioitus:** piikit osuvat Horatioon (tinkijä, mittausvirhe, pantti), ei paikallisiin; ei sotasisältöä; ei pyhiä paikkoja.
-- **Pituudet (merkkejä):** saapuminen 290–332 (tavoite 280–350), kohtaaminen 189–229 (≤ 260), aarre 164–218 (≤ 220), kohde yhteensä ≤ 753 (≤ 800 ✓).
-- **Kysymykset:** oikean vaihtoehdon paikat vaihtelevat (B, C, C, B, D, D, C, B, B), oikea ei ole yhdessäkään yksiselitteisesti pisin; väärät eivät ole puolitotuuksia (tarkistettu). Fakta-kentät ≤ 3 virkettä.
+- **Pituudet (merkkejä):** saapuminen 290–330 (tavoite 280–350), kohtaaminen 184–252 (≤ 260), aarre 168–218 (≤ 220), kohde yhteensä ≤ 768 (≤ 800 ✓).
+- **Kysymykset:** oikean vaihtoehdon paikat vaihtelevat (B, C, C, B, D, A, C, B, B), oikea ei ole yhdessäkään yksiselitteisesti pisin; väärät eivät ole puolitotuuksia (tarkistettu). Fakta-kentät ≤ 3 virkettä.
 - **1873-ankkurit tositapahtumista:** Brysselin pörssitalo vihitään 27.12.1873 (julkisivutyö kesken kesällä), Kassan lennätin ja uusi rata, Luxemburgin linnoituksen purku (1867–1883), Vallettan oopperatalon palo 25.5.1873 (talo kiinni 1877 asti), Firenze entisenä pääkaupunkina (1865–1871).
 
 ## 3. Luonnokset
@@ -57,8 +57,8 @@ PT:n tilaus 11.10. klo 21.2x: Äänittäjän inventaarion (`aanet-eurooppa-inven
 **Saapuminen** (324 merkkiä):  
 Pörssitalon julkisivua hakataan sateessakin, koska talon pitää valmistua jouluksi. Märästä kivestä nousi kellarin haju. Yksi veistäjistä sanoi nimensä ranskaksi niin nopeasti, että kirjaan mahtui vain R. Hän ojensi minulle sirun koristeesta. Punnitsin sen: neljäsataa grammaa. Palautin sirun, sillä seinästä ei oteta mitään.
 
-**Kohtaaminen** (216):  
-Aline hakkaa telineillä ja puhuu hakkaamisen tahdissa ilman taukoja. "Isoisäsi punnitsi sirun ja toi sen takaisin, vaikka kukaan ei katsonut. Työmaalla se on harvinaista. Siru on yhä tallessa. Vastaa, niin saat sen."
+**Kohtaaminen** (252):  
+Aline hakkaa telineillä ja puhuu hakkaamisen tahdissa. Kun näytät kirjan merkin, hän laskee taltan. "Työmaan vanhassa kirjassa on rivi: vuonna 1873 vieras herra punnitsi sirun ja toi sen takaisin. Harvinaista! Vastaa, niin näytän, minne se laitettiin."
 
 **Kysymys:** Kuka myöhemmin maailmankuuluksi tullut ranskalainen taiteilija veisti 1870-luvun alussa koristeita Brysselin pörssitaloon?  
 - A) Edgar Degas
@@ -73,23 +73,23 @@ Siru oli kääritty nenäliinaan ja piilotettu reliefin takaiseen rakoon. Aline 
 ### 2. Kassa — `kosice`
 
 **Otsikko:** Kassa — avain, jonka pantti jäi  
-**Henkilö:** Lennätinvirkailija Zuzana pitää asemansa pöytäkirjaa, johon on kirjattu kaikki lunastamatta jäänyt.
+**Henkilö:** Arkistonhoitaja Katarína hoitaa kaupungin asiakirja- ja esinekortistoa ja tietää, mitä on jäänyt lunastamatta.
 
 **Saapuminen** (290 merkkiä):  
 Sähke Wieniin kulki minuutissa, mutta sen hinta ei mahtunut taskuuni. Jätin lennätinvirkailijalle pantiksi kellon avaimen ja lupasin palata. Hän kirjasi avaimen pöytäkirjaan kuin se olisi arvopaperi, ja leimasi sivun. Kello kulkee nyt avaimetta, ja minä sen mukana: aika on ostettu velaksi.
 
-**Kohtaaminen** (217):  
-Zuzana ei nosta katsettaan avaimesta. "Pöytäkirjassa lukee: avain, pantiksi, 1873. Pantti on pantti, vaikka lunastaja myöhästyisi sata viisikymmentä vuotta. Ensin yksi kysymys, eikä saa aloittaa hymyilemällä. Vastaa."
+**Kohtaaminen** (203):  
+Katarína asettaa arkistokortin pöydälle ja pitää sormensa sen päällä. "Kortissa lukee: avain, pantiksi, 1873, lunastamatta. Meillä ei hävitetä mitään, mitä ei ole lunastettu. Ensin yksi kysymys. Vastaa."
 
-**Kysymys:** Zuzanan pöytäkirjan leimassa on Kassan vaakuna. Mistä se on Euroopassa kuuluisa?  
+**Kysymys:** Katarínan arkistokortin leimassa on Kassan vaakuna. Mistä se on Euroopassa kuuluisa?  
 - A) Ensimmäinen vaakuna, johon on kuvattu lohikäärme
 - B) Euroopan ainoa vaakuna, jossa on kaksi kruunua
 - C) Euroopan vanhin säilynyt kaupungin vaakunakirja ✓
 - D) Vaakuna, jonka paavi suunnitteli itse  
 *Fakta:* Kuningas Ludvig I Suuri myönsi Kassalle vaakunan 1369. Vaakunakirja on Euroopan vanhin säilynyt kaupungille myönnetty, ja Kassaa sanotaan usein ensimmäiseksi. Isoisäsi aikaan Kassa kuului Unkarin kuningaskuntaan; nykyään se on Slovakian toiseksi suurin kaupunki.
 
-**Aarre** (164, beat: tuore jälki):  
-Avain oli kaapin pohjalla pöytäkirjan alla, messinki puhtaana ja kiiltävänä. "Tätä kaappia ei ole avattu vuosiin", Zuzana sanoi ja katsoi lukkoa. Lukko oli öljytty.
+**Aarre** (168, beat: tuore jälki):  
+Avain oli kaapin pohjalla arkistokortin alla, messinki puhtaana ja kiiltävänä. "Tätä kaappia ei ole avattu vuosiin", Katarína sanoi ja katsoi lukkoa. Lukko oli öljytty.
 
 ### 3. Ljubljana — `ljubljana`
 
@@ -99,8 +99,8 @@ Avain oli kaapin pohjalla pöytäkirjan alla, messinki puhtaana ja kiiltävänä
 **Saapuminen** (294 merkkiä):  
 Torilla kukkakauppias sanoi kukkien nimet kahdella kielellä, ja minä ymmärsin toisen. Ostin kimpun, jonka nimeä en osannut lausua. Vastalahjaksi piirsin hänelle kartan joen mutkista, sillä jokaisella on oikeus tietää, minne joki ehtii. Hän katsoi karttaa ylösalaisin ja sanoi sen olevan kaunis.
 
-**Kohtaaminen** (216):  
-Vesna sitoo kimppua yhdellä kädellä ja osoittaa toisella siltaa. "Isoisäsi sai isoisoäidiltäni kimpun ja antoi sen vastineeksi kartan joen mutkista. Karttaa ei ole, mutta kimpun tarina on. Vastaa, niin kerron lopun."
+**Kohtaaminen** (244):  
+Vesna sitoo kimppua yhdellä kädellä ja osoittaa toisella torin seinän lehtileikettä. "Siinä kerrotaan vieraasta herrasta, joka sai kimpun ja jätti vastalahjaksi kartan joen mutkista. Karttaa en ole nähnyt. Vastaa, niin kerron, mihin se joutui."
 
 **Kysymys:** Ljubljanan tunnuksena on lohikäärme. Kuka legendan mukaan tappoi sen kaupungin suolla?  
 - A) Beowulf ja hänen kaksitoista miestään
@@ -117,11 +117,11 @@ Kätkö oli ruukun pohjalla kuivuneen kimpun alla: kartta, joka oli piirretty yh
 **Otsikko:** Luxemburg — kivi, joka jäi kesken  
 **Henkilö:** Kivenhakkaaja Nic veistää puretun linnoituksen kivistä uusia paasia ja tuntee jokaisen kiven tarinan.
 
-**Saapuminen** (332 merkkiä):  
-Kallio kaikui vasaroista kuin jättimäinen kello. Muuri kaatui sekuntia ennen kuin ehdin ymmärtää huudon. Purkutyöläinen oli vetänyt minut sen taakse, ja pöly nousi kuin vaalea seinä. Kiitin saksaksi, hän vastasi paikallisella murteella, eikä kumpikaan ymmärtänyt toista. Nauroimme silti, koska kallio oli yhä pystyssä, ja minä myös.
+**Saapuminen** (320 merkkiä):  
+Kallio kaikui vasaroista kuin jättimäinen kello. Muuri kaatui sekuntia ennen kuin ehdin ymmärtää huudon. Purkutyöläinen oli vetänyt minut sen taakse, ja pöly nousi kuin vaalea seinä. Kiitin, ja hän vastasi omalla kielellään, eikä kumpikaan ymmärtänyt toista. Nauroimme silti, koska kallio oli yhä pystyssä, ja minä myös.
 
-**Kohtaaminen** (229):  
-Nic pysäyttää talttansa ja katsoo sinua kuin vanhan kirjeen saapumista. "Isoisoisäni jätti yhden kiven kesken. Luulin sitä aina laiskuudeksi. Nyt tiedän: se oli kiitos, jota ei ehditty valmistaa. Vastaa, niin saan sen valmiiksi."
+**Kohtaaminen** (247):  
+Nic pysäyttää talttansa ja kääntää kiven, jonka kyljessä on kaiverrettu merkki ja vuosiluku 1873. "Isoisoisäni jätti tämän kiven kesken, ja suvussa sitä on pidetty laiskuutena. Merkin merkitystä kukaan ei tiedä. Vastaa, niin saan kiven valmiiksi."
 
 **Kysymys:** Luxemburgin kallioon rakennettu linnoitus oli aikanaan Euroopan vahvimpia. Millä lempinimellä sitä kutsuttiin?  
 - A) Reinin Verdun
@@ -130,8 +130,8 @@ Nic pysäyttää talttansa ja katsoo sinua kuin vanhan kirjeen saapumista. "Isoi
 - D) Ardennien Malta  
 *Fakta:* Luxemburgin linnoitusta kutsuttiin Pohjolan Gibraltariksi. Lontoon sopimus 1867 määräsi sen purettavaksi ja maan puolueettomaksi, ja purku kesti vuoteen 1883. Bockin kalliokasematit ovat nykyään osa Unescon maailmanperintöä.
 
-**Aarre** (192, beat: vanha jälki):  
-Nic käänsi kiven. Kyljessä oli isoisän merkki, mutta sen alla toinen, kulunut ja paljon vanhempi: joku oli veistänyt tähän ennen isoisääsi. "Hakkaajan tunnus", Nic mutisi. "Ei meidän sukumme."
+**Aarre** (187, beat: vanha jälki):  
+Nic nosti kiven pois paikaltaan. Sen alla oli toinen merkki, kulunut ja paljon vanhempi: joku oli hakannut tähän jo ennen vuotta 1873. "Hakkaajan tunnus", Nic mutisi. "Ei meidän sukumme."
 
 ### 5. Valletta — `valletta`
 
@@ -142,7 +142,7 @@ Nic käänsi kiven. Kyljessä oli isoisän merkki, mutta sen alla toinen, kulunu
 Oopperatalo oli palanut toukokuussa sisältä tyhjäksi, mutta lippuluukulla istui silti mies. Kysyin, mitä hän myy. Hän vastasi, ettei mitään, mutta ettei hänellä ole muutakaan paikkaa. Maksoin hänelle teen ja piirsin talon julkisivun, joka oli yhä pystyssä. Hän ripusti piirroksen luukkunsa taakse.
 
 **Kohtaaminen** (224):  
-Rita leikkaa lipun ihmiselle, joka ei sitä tarvitse. "Tapa on tapa." Hän osoittaa luukun takana riippuvaa piirrosta. "Isoisäsi piirsi tämän ja sai teen. Tee on juotu, piirros jäänyt. Vastaa, niin kerron, mitä sen takana on."
+Rita leikkaa lipun ihmiselle, joka ei sitä tarvitse. "Tapa on tapa." Hän osoittaa luukun takana riippuvaa vanhaa valokuvaa: mies piirtää palanutta julkisivua. "Kuka hän oli, ei tiedä kukaan. Vastaa, niin avaan lattialaudan."
 
 **Kysymys:** Vallettan kuninkaallisen oopperatalon raunioille on rakennettu uusi teatteri. Millainen se on?  
 - A) Tarkka kopio palaneesta talosta
@@ -162,15 +162,15 @@ Lipukopin lattialaudan alta löytyi toinen piirros: palaneen oopperatalon julkis
 **Saapuminen** (322 merkkiä):  
 Bryggenin lattialankut kitisivät jalkojeni alla kuin talo olisi kuunnellut askeleitani. Kuivattu kala haisi niin, että silmiin nousi vettä. Mestari antoi minulle esiliinan ja kysyi, osaanko erottaa hyvän kalan huonosta. Sanoin osaavani mitata sen. Hän sanoi, ettei se auta, ja antoi vihkon, johon sain kirjata yhden rivin.
 
-**Kohtaaminen** (189):  
-Solveig ei kehu eikä tervehdi. "Isoisäsi kirjasi vihkoomme yhden rivin, väärään sarakkeeseen. Se on yhä väärässä sarakkeessa, koska en korjaa vierasta käsialaa. Vastaa, äläkä seiso tiellä."
+**Kohtaaminen** (184):  
+Solveig ei kehu eikä tervehdi. "Lajittelukirjassamme on 1800-luvulta rivi vierasta käsialaa, väärässä sarakkeessa. En korjaa sitä, vaikka kuinka katsoisit. Vastaa, äläkä seiso tiellä."
 
-**Kysymys:** Bergenin laiturilla lajitellaan norjalaista kuivakalaa, jota on viety vuosisatoja kaukaiseen Italiaan asti. Mistä kalasta se tehdään?  
-- A) Silakasta
-- B) Lohesta
-- C) Hauesta
-- D) Turskasta ✓  
-*Fakta:* Norjalainen tørrfisk on ulkona talven kylmässä ja tuulessa kuivattua turskaa. Sitä on viety Bergenistä Etelä-Eurooppaan jo vuosisatojen ajan, ja se säilyy ilman jääkaappia vuosia.
+**Kysymys:** Bryggenin värikkäät puutalot olivat vuosisatoja yhden kauppaliiton ulkomainen kauppakonttori. Minkä liiton?  
+- A) Hansaliiton ✓
+- B) Hollannin Itä-Intian kauppakomppanian
+- C) Kalmarin unionin
+- D) Englannin Muscovy-yhtiön  
+*Fakta:* Bergenissä oli 1300-luvun puolivälistä alkaen Hansaliiton kauppakonttori, jonka kauppa perustui kuivatun kalan vientiin ja viljan tuontiin. Nykyiset Bryggenin puutalot ovat vuoden 1702 palon jälkeiseltä ajalta, ja alue on Unescon maailmanperintökohde 1979.
 
 **Aarre** (218, beat: tuore jälki):  
 Lajittelukirjan väliin oli painettu kuivunut lehti. Isoisän rivin alla oli uusi merkintä, tämän viikon päivämäärällä. "Kukaan ei ole kirjoittanut tähän kuuteenkymmeneen vuoteen", Solveig sanoi. Muste ei ollut kuivunut.
@@ -183,8 +183,8 @@ Lajittelukirjan väliin oli painettu kuivunut lehti. Isoisän rivin alla oli uus
 **Saapuminen** (330 merkkiä):  
 Firenze oli ollut Italian pääkaupunki kuusi vuotta, ja kun virkamiehet muuttivat Roomaan, kaupunki jäi täyteen tyhjiä huoneita. Vuokrasin yhden puolella hinnalla ja tinkin silti. Isäntä tunnisti tinkijän. Hän laski hintaa vielä, jotta pääsisi minusta eroon. Kirjasin vuokran ja alennuksen vierekkäin, ja alennus oli suurempi luku.
 
-**Kohtaaminen** (224):  
-Ginevra ei nosta katsettaan sormuksesta. "Vihkossa on rivi ilman nimeä, vain vieras käsiala: lasi kompassiin, maksettu puoliksi, hakematta. Pidän koko vihkoa taikauskona ja kirjoitan siihen silti. Vastaa, niin näytän rivin."
+**Kohtaaminen** (214):  
+Ginevra ei nosta katsettaan sormuksesta. "Vihkossa on rivi ilman nimeä, vieras käsiala: lasi kompassiin, maksettu puoliksi, hakematta. Pidän vihkoa taikauskona ja kirjoitan siihen silti. Vastaa, niin avaan vihkon."
 
 **Kysymys:** Ponte Vecchion liikkeissä myytiin ennen kultaseppiä jotakin muuta. Mitä?  
 - A) Silkkiä
@@ -204,8 +204,8 @@ Verstaan lattialaudan alta nousi pieni kehys: tilauksen numero ja puoli kompassi
 **Saapuminen** (302 merkkiä):  
 Triana-sillan raudan alla jokilaivat jonottivat satamaan, ja minä arvioin joen leveyden silmämitalla: erehdyin sata askelta. Luotsi kuuli arvaukseni, mutta ei sanonut mitään, vaan pyyhki otsaansa. Appelsiininkukat tuoksuivat sillalle asti. Hän näytti sormella, missä pohja nousee, ja minä kirjasin sen.
 
-**Kohtaaminen** (213):  
-Amparo katsoo jokea eikä sinua. "Syvyyskirjan rivit jatkavat toisiaan ilman aukkoa. Isoisäsi kirjasi yhden, kun luotsimme oli sairaana. Pidän tapaa vanhanaikaisena ja jatkan sitä silti. Vastaa, niin avaan kirjan."
+**Kohtaaminen** (221):  
+Amparo katsoo jokea eikä sinua. "Satamassa kerrotaan, että luotsin ollessa sairaana vieras herra kirjasi syvyyden kirjaan, eikä rivi katkennut. Pidän tapaa vanhanaikaisena ja jatkan sitä silti. Vastaa, niin avaan kirjan."
 
 **Kysymys:** Torre del Oron rannassa purettiin 1500-luvulla rahtia kaukaisista maista. Minkä kaupan yksinoikeuden Sevilla sai?  
 - A) Itämeren viljan kaupan Hansaliiton kanssa
@@ -225,8 +225,8 @@ Syvyyskirjan viimeiselle riville oli merkitty tämän aamun lukema. Amparo luki 
 **Saapuminen** (316 merkkiä):  
 Laskin sillalta tehtaiden piiput ääneen ja sain viisitoista. Ohikulkija pysähtyi, kysyi, mitä teen, ja laski kanssani. Hän sai kuusitoista. Tehtaan kello soi kesken laskun, ja kumpikin aloitti alusta. Seisoimme sillalla kymmenen minuuttia emmekä sopineet. Kirjasin molemmat luvut, koska kumpikaan ei antanut periksi.
 
-**Kohtaaminen** (197):  
-Vieno pyyhkii käsiään rättiin. "Sukumme kertoo, että tehtaan nainen opetti vieraalle herralle katkenneen langan solmun. Pidän sitä satuna. Solmun osaan silti, ja se pitää. Vastaa, niin näytän sen."
+**Kohtaaminen** (201):  
+Vieno pyyhkii käsiään rättiin. "Sukumme kertoo, että tehtaan nainen opetti vieraalle herralle katkenneen langan solmun. Pidän sitä satuna. Solmun osaan silti, ja se pitää. Vastaa, niin saat nähdä sen."
 
 **Kysymys:** Tammerkoski virtaa Tampereen halki kahden järven välillä. Mitkä järvet ovat?  
 - A) Päijänne ja Vesijärvi
@@ -237,6 +237,23 @@ Vieno pyyhkii käsiään rättiin. "Sukumme kertoo, että tehtaan nainen opetti 
 
 **Aarre** (185, beat: hiljainen loppu):  
 Kätkö oli turbiinihallin oven pielessä: lanka, solmittu isoisän solmulla, ja sen päässä lappu, jossa luki kuusitoista. Vieno luki sen kolmesti. "Eihän se voi olla." Hän lähti laskemaan.
+
+## 3b. Tarkistus 12.10.2026 ja PT:n päätökset (#4466)
+
+Luonnokset tarkistettiin `docs/moduulit/tarinakaari.md`:n listoilla ja kaanonilla (tarina.md, isoisan-raamattu.md; Euroopan aarre = Kolme veljestä 11.10.). **Korjattu:**
+
+1. **Kohtaamishenkilön kolme kiellettyä odotusta (tarina.md, kaanon 7.9.2026):** henkilö ei tunnista Horatiota, ei odota perillistä eikä kanna perittyä lupausta. Ensiversion kohtaamiset sanoivat "Isoisäsi …"; ne kirjoitettiin uusiksi. Kukaan ei tunnista Horatiota: henkilö kertoo 1873:n "vieraasta herrasta".
+2. **PT:n päätös (12.10.): keino ei saa toistua.** Enintään 3 kirjamerkintää, muut vaihdellen (sukutarina, valokuva, kaiverrus, lehtileike, paikallinen tarina, arkistokortti). Nyt: kirja 3 (Bryssel työmaakirja, Bergen lajittelukirja, Firenze vihko), arkistokortti (Kassa), lehtileike (Ljubljana), esineen kaiverrus (Luxemburg), vanha valokuva (Valletta), paikallinen tarina (Sevilla), sukutarina (Tampere).
+3. **Kassa (PT):** lennätinvirkailija jää isoisän 1873-tekstiin (saapuminen); nykyhetken kohtaaja on **arkistonhoitaja Katarína** (kaupungin asiakirja- ja esinekortisto; AIKA-sääntö). Fokusvirran hahmo Zuzana säilyy fokuskortilla; kaaren kohtaamiskuvaa/-hahmoa vastaava kortti voidaan vaihtaa myöhemmin.
+4. **Luxemburg (PT):** kielikohtaus neutraaliksi ("kiitin, ja hän vastasi omalla kielellään"), koska toista lähdettä murteelle ei löytynyt; aarteen vanha jälki: kiven alla vanhempi merkki.
+5. **Bergen (PT):** kysymys vaikeammaksi mutta reiluksi: Bryggenin puutalot ovat vuosisatoja yhden kauppaliiton ulkomainen kauppakonttori (oikea: Hansaliitto; muut: Hollannin Itä-Intian kauppakomppania, Kalmarin unioni, Englannin Muscovy-yhtiö). Faktat Wikipedia (Bryggen) + UNESCO/norgesverdensarv: Kontor 1300-luvun puolivälistä, nykyiset talot vuoden 1702 palon jälkeen, maailmanperintö 1979; Kontorin päättymisvuotta ei väitetä.
+6. **Ei muutosta (PT hyväksyi):** Bryssel (kysymys "koristeita"), Firenze, Sevilla, Tampere.
+7. Toistot: kolmen sanan toistoja ei ole; "Vastaa, niin …" -loppurituaali on tarkoituksellinen. Pituudet: saapuminen 290–330, kohtaaminen 184–252 (≤ 260), aarre 168–218, kohde ≤ 768.
+8. Varallisuussääntö, Aarnin luettelon puuttuminen, AIKA ja faktat (liitteet) ennallaan OK.
+
+**Luennat (PT hyväksyi 12.10.): 18 = 2 per kaupunki (kohtaaminen + aarre; kaaren `saapuminen` jää ilman luentaa).** Järjestys: data-PR ensin (tunnetagit, `mykistetyt`), sitten Äänittäjä generoi (yksi otto/luenta), junaan 184.
+
+**Avoin PT:lle:** Kassan kaaren kohtaamishahmo (Katarína) eroaa fokusvirran hahmosta Zuzanasta; riittääkö, että fokuskortti jää ennalleen.
 
 ## 4. Seuraavat askeleet (päätettävä PT/omistaja)
 

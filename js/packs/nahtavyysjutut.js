@@ -13221,11 +13221,11 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Kolme veljestä': {
+    'Kolme veljestä -talot': {
       aika: '1400-luvun loppu–1746',
       teksti: 'Riian vanhassa kaupungissa, kapealla Mazā Pils -kadulla, '
           + 'seisoo vierekkäin kolme erinäköistä taloa, joita kutsutaan '
-          + 'Kolmeksi veljeksi. Ne ovat koko Riian vanhin säilynyt '
+          + 'Kolme veljestä -taloiksi. Ne ovat koko Riian vanhin säilynyt '
           + 'asuinrakennusten rivi. Vanhin veljeksistä on peräisin '
           + '1400-luvun lopulta, ja alun perin siellä oli vain yksi '
           + 'suuri huone sekä ullakko tavaroiden säilytystä varten.'
@@ -13237,7 +13237,7 @@ export const NAHTAVYYSJUTUT = {
           + 'koristeellinen barokkitalo.'
         + '\n\n'
         + 'Sodan jälkeen talot olivat pahoin rapistuneet, mutta ne '
-          + 'kunnostettiin 1950-luvulla. Vuonna 2020 Kolme veljestä sai '
+          + 'kunnostettiin 1950-luvulla. Vuonna 2020 Kolme veljestä -talot saivat '
           + 'arvostetun Euroopan perintötunnuksen. Nykyään taloissa '
           + 'toimii Latvian arkkitehtuurimuseo, joten sisään pääsee yhä '
           + 'tutustumaan siihen, miltä Riiassa näytti satoja vuosia '
@@ -63651,12 +63651,12 @@ export const NAHTAVYYSJUTUT = {
     },
     'Pyhän Martinin tuomiokirkko': {
       aika: '1311–1452; uudelleengotisointi 1865–1877',
-      teksti: 'Pyhän Martinin tuomiokirkko on goottilainen ristipohjainen basilika, jonka rakentaminen alkoi 1311 aiemman romaanisen kirkon paikalla. Kirkko vihittiin 1452, ja työt jatkuivat vielä 1500-luvulle. Laivan mitat ovat 69,37 × 22,85 metriä, ja noin 85 metriä korkea torni oli osa keskiaikaista kaupunginmuuria. Alttarilla seisoo Georg Raphael Donnerin vuonna 1734 tekemä ratsastajapatsas Pyhästä Martinista, joka on puettu unkarilaisen husaarin asuun.\n\nKirkko kärsi tuhoja: salamanisku vaurioitti sitä 1760, ja barokkihuippu paloi 1833. Nykyisen asunsa kirkko sai uudelleengotisoinnissa 1865–1877, joten isoisän matkavuonna 1873 työt olivat käynnissä. Kirkon alla on katakombit ja useita kryptia. Kirkko on ollut kansallinen kulttuurimonumentti vuodesta 2002.',
+      teksti: 'Pyhän Martinin tuomiokirkko on goottilainen ristipohjainen basilika, jonka rakentaminen alkoi 1311 aiemman romaanisen kirkon paikalla. Kirkko vihittiin 1452, ja työt jatkuivat vielä 1500-luvulle. Laivan mitat ovat 69,37 × 22,85 metriä, ja noin 85 metriä korkea torni oli osa keskiaikaista kaupunginmuuria. Alttarilla seisoo Georg Raphael Donnerin vuonna 1734 tekemä ratsastajapatsas Pyhästä Martinista, joka on puettu unkarilaisen husaarin asuun.\n\nKirkko kärsi tuhoja: salamanisku vaurioitti sitä 1760, ja barokkihuippu paloi 1833. Nykyisen asunsa kirkko sai uudelleengotisoinnissa 1860-luvun puolivälistä vuoteen 1877, joten isoisän matkavuonna 1873 työt olivat käynnissä. Kirkon alla on katakombit ja useita kryptia. Kirkko on ollut kansallinen kulttuurimonumentti vuodesta 2002.',
       kuvat: [
         {
           tiedosto: 'Bratislava Saint Martin\'s Cathedral O 01.jpg',
           lyhyt: 'Pyhän Martinin tuomiokirkko, goottilainen kruunajaiskirkko vanhassa kaupungissa.',
-          selite: 'Kirkon rakennustyöt alkoivat 1311, ja nykyasunsa se sai uudelleengotisoinnissa 1865–1877.',
+          selite: 'Kirkon rakennustyöt alkoivat 1311, ja nykyasunsa se sai uudelleengotisoinnissa 1860-luvun puolivälistä vuoteen 1877.',
           lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -63886,11 +63886,11 @@ export const NAHTAVYYSJUTUT = {
     },
     'Gorki-puisto': {
       aika: '1800–1805',
-      teksti: 'Gorki-puisto laadittiin 1800 ja avattiin 1805 nimellä Kuvernöörin puutarha. Neuvostoaikana se nimettiin Maksim Gorkin mukaan. Puisto on lähellä Voitonaukiota ja Janka Kupalan puistoa, ja Voitonaukion kautta se yhtyy Svislačin rantapuistoon.\n\nNykyään puistossa on huvipuisto ja 54 metriä korkea maailmanpyörä. Lisäksi siellä on opetuksellinen observatorio ja planetaario sekä Jäälinna-halli, joka toimii sisäjäähallina. Puisto yhdistää siis huvipuiston, tähtitieteen ja jääurheilun. Voitonaukio, Gorki-puisto ja Janka Kupalan puisto ovat lähellä toisiaan, joten ne sopivat samalle kävelykierrokselle, ja Svislačin rantapuisto jatkaa reittiä joen varrella.\n\nPuisto oli avattu jo 1805, joten se oli olemassa isoisän matkavuonna 1873.',
+      teksti: 'Gorki-puisto laadittiin 1800 ja avattiin 1805 nimellä Kuvernöörin puutarha. Neuvostoaikana se nimettiin Maksim Gorkin mukaan. Puisto on lähellä Voitonaukiota ja Janka Kupalan puistoa, ja Voitonaukion kautta se yhtyy Svislačin rantapuistoon.\n\nNykyään puistossa on huvipuisto ja yli 50 metriä korkea maailmanpyörä. Lisäksi siellä on opetuksellinen observatorio ja planetaario sekä Jäälinna-halli, joka toimii sisäjäähallina. Puisto yhdistää siis huvipuiston, tähtitieteen ja jääurheilun. Voitonaukio, Gorki-puisto ja Janka Kupalan puisto ovat lähellä toisiaan, joten ne sopivat samalle kävelykierrokselle, ja Svislačin rantapuisto jatkaa reittiä joen varrella.\n\nPuisto oli avattu jo 1805, joten se oli olemassa isoisän matkavuonna 1873.',
       kuvat: [
         {
           tiedosto: 'Minsk. Pedestrian bridge across the Svisloch River in Gorky Park.jpg',
-          selite: 'Gorki-puisto avattiin 1805 Kuvernöörin puutarhana, ja siinä on 54 metriä korkea maailmanpyörä.',
+          selite: 'Gorki-puisto avattiin 1805 Kuvernöörin puutarhana, ja siinä on yli 50 metriä korkea maailmanpyörä.',
           lahde: 'Bestalex, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -63900,7 +63900,7 @@ export const NAHTAVYYSJUTUT = {
   podgorica: {
     'Sahat kula -kellotorni': {
       aika: '1667',
-      teksti: 'Sahat kula on 19 metriä korkea itsenäinen kivitorni Bećir Beg Osmanagićin aukiolla Stara Varošissa. Sen rakennutti Hadži-paša Osmanagić vuonna 1667, ja se on yksi harvoista ottomaanien ajan merkeistä, jotka selvisivät toisen maailmansodan pommituksista.\n\nIsoisän matkavuonna 1873 torni seisoi jo paikallaan, mutta nykyinen koneisto tuli vasta vuonna 1890, ja sen teki italialainen Colbachinin valimo Bassano del Grappassa. Tornin huippu sai metalliristin 1800-luvun lopulla, kun kaupunki oli siirtynyt Montenegrolle.\n\nKellon uusi sähkökoneisto asennettiin tammikuussa 2012. Torni on lailla suojeltu kulttuurimonumentti.',
+      teksti: 'Sahat kula on noin 16–19 metriä korkea itsenäinen kivitorni Bećir Beg Osmanagićin aukiolla Stara Varošissa. Sen rakennutti Hadži-paša Osmanagić vuonna 1667, ja se on yksi harvoista ottomaanien ajan merkeistä, jotka selvisivät toisen maailmansodan pommituksista.\n\nIsoisän matkavuonna 1873 torni seisoi jo paikallaan, mutta nykyinen koneisto tuli vasta vuonna 1890, ja sen teki italialainen Colbachinin valimo Bassano del Grappassa. Tornin huippu sai metalliristin 1800-luvun lopulla, kun kaupunki oli siirtynyt Montenegrolle.\n\nKellon uusi sähkökoneisto asennettiin tammikuussa 2012. Torni on lailla suojeltu kulttuurimonumentti.',
       kuvat: [
         {
           tiedosto: 'Podgorica Clock Tower Sahat kula 01.jpg',
@@ -63976,11 +63976,11 @@ export const NAHTAVYYSJUTUT = {
     },
     'Makedonia-aukio': {
       aika: '2000-luku (uudistettu)',
-      teksti: 'Lähteen mukaan Makedonia-aukio on maan suurin aukio, ja sen pinta-ala on noin 18 000 neliömetriä. Se sijaitsee keskustassa Vardarin molemmin puolin, ja sille yhtyvät muun muassa Maksim Gorki-, Dimitar Vlahov- ja Makedonia-katu. Aukio kuuluu keskustan uudistushankkeeseen, joka toteutettiin 2000-luvulla.\n\nMaksim Gorki -kadun japaninkirsikat aloittavat keväisin aasialaisten kulttuuritapahtumien sarjan. Makedonia-katu yhdistää aukion vanhaan rautatieasemaan, ja aukiolla pidetään joulumarkkinat ja muita tapahtumia.\n\nIsoisän matkavuonna 1873 nykyistä aukiota ei vielä ollut. Rautatieasema oli juuri valmistunut Vardarin eteläpuolelle, ja lähteen mukaan talouselämä alkoi siirtyä joen sille puolelle, jota ei ollut aiemmin kaupunkirakennettu.',
+      teksti: 'Lähteen mukaan Makedonia-aukio on Skopjen pääaukio, ja sen pinta-ala on noin 18 500 neliömetriä. Se sijaitsee keskustassa Vardarin molemmin puolin, ja sille yhtyvät muun muassa Maksim Gorki-, Dimitar Vlahov- ja Makedonia-katu. Aukio kuuluu keskustan uudistushankkeeseen, joka toteutettiin 2000-luvulla.\n\nMaksim Gorki -kadun japaninkirsikat aloittavat keväisin aasialaisten kulttuuritapahtumien sarjan. Makedonia-katu yhdistää aukion vanhaan rautatieasemaan, ja aukiolla pidetään joulumarkkinat ja muita tapahtumia.\n\nIsoisän matkavuonna 1873 nykyistä aukiota ei vielä ollut. Rautatieasema oli juuri valmistunut Vardarin eteläpuolelle, ja lähteen mukaan talouselämä alkoi siirtyä joen sille puolelle, jota ei ollut aiemmin kaupunkirakennettu.',
       kuvat: [
         {
           tiedosto: 'Macedonia Square, Skopje, NMK.jpg',
-          selite: 'Makedonia-aukion pinta-ala on noin 18 000 neliömetriä.',
+          selite: 'Makedonia-aukion pinta-ala on noin 18 500 neliömetriä.',
           lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -64133,12 +64133,12 @@ export const NAHTAVYYSJUTUT = {
     },
     'Tiranan pyramidi': {
       aika: '1988, uudistettu 2023',
-      teksti: 'Pyramidi avattiin vuonna 1988 museona, ja sen suunnittelivat muun muassa Pranvera Hoxha ja Klement Kolaneci. Kompleksin pinta-ala on runsaat puolitoista hehtaaria. Isoisän matkavuonna 1873 sitä ei ollut vielä olemassa.\n\nVuoden 1991 jälkeen rakennus toimi konferenssi- ja näyttelykeskuksena, ja osaa on käytetty 2000-luvun alusta television ja radion lähetyskeskuksena. Purkusuunnitelmia tehtiin useita: historioitsija Ardian Klosi keräsi vetoomukseen tuhansia allekirjoituksia. 2010-luvun lopulla ilmoitettiin, ettei rakennusta puretakaan vaan kunnostetaan.\n\nArkkitehtitoimisto MVRDV muutti rakennuksen nuorten teknologiakeskus TUMO Tiranaksi. Alkuperäinen betonirakenne säilytettiin, ja siihen lisättiin portaat, kattoikkunat ja värikkäitä uusia elementtejä. Huipulle voi kävellä portaita pitkin.',
+      teksti: 'Pyramidi avattiin vuonna 1988 museona, ja sen suunnittelivat muun muassa Pranvera Hoxha ja Klement Kolaneci. Kompleksin pinta-ala on noin 1,7 hehtaaria. Isoisän matkavuonna 1873 sitä ei ollut vielä olemassa.\n\nVuoden 1991 jälkeen rakennus toimi konferenssi- ja näyttelykeskuksena, ja osaa on käytetty 2000-luvun alusta television ja radion lähetyskeskuksena. Purkusuunnitelmia tehtiin useita: historioitsija Ardian Klosi keräsi vetoomukseen tuhansia allekirjoituksia. 2010-luvun lopulla ilmoitettiin, ettei rakennusta puretakaan vaan kunnostetaan.\n\nArkkitehtitoimisto MVRDV muutti rakennuksen nuorten teknologiakeskus TUMO Tiranaksi. Alkuperäinen betonirakenne säilytettiin, ja siihen lisättiin portaat, kattoikkunat ja värikkäitä uusia elementtejä. Huipulle voi kävellä portaita pitkin.',
       kuvat: [
         {
           tiedosto: 'Pyramid of Tirana 1.jpg',
           lyhyt: 'Pyramidin portaat avattiin yleisölle toukokuussa 2023.',
-          selite: 'Kompleksin pinta-ala on runsaat puolitoista hehtaaria.',
+          selite: 'Kompleksin pinta-ala on noin 1,7 hehtaaria.',
           lahde: 'BBB2021, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -64553,7 +64553,7 @@ export const NAHTAVYYSJUTUT = {
     },
     'Viðey': {
       aika: '900-luvulta',
-      teksti: 'Viðey on Kollafjörðurin lahden suurin saari, ja sen pinta-ala on 1,7 neliökilometriä. Saari jakautuu kapealla kannaksella Länsisaareen, Itäsaareen ja Kotisaareen. Lähteen mukaan se oli kahdesta kolmeen miljoonaa vuotta sitten aktiivinen tulivuori. Sinne pääsee lautalla, ja lauttoja kulkee kesäisin päivittäin.\n\nSaarella on arkeologisia jäänteitä 900-luvun alusta ja augustinolaisluostari vuosilta 1225–1539. Länsisaaressa on Viðeyjarstofa-talo, jonka tanskalainen arkkitehti Nicolai Eigtved suunnitteli ja Tanskan hallitus rakennutti 1753–1755. Talossa on nykyään ravintola. Saarella on Richard Serran Áfangar sekä Yoko Onon Imagine Peace Tower, joka sytytetään vuosittain Lennonin syntymäpäivän 9.10. ja kuolinpäivän 8.12. välillä.\n\nIsoisän matkavuonna 1873 saari oli vielä asuttu, sillä viimeiset asukkaat lähtivät sieltä vasta 1943.',
+      teksti: 'Viðey on Kollafjörðurin lahden suurin saari, ja sen pinta-ala on noin 1,6 neliökilometriä. Saari jakautuu kapealla kannaksella Länsisaareen, Itäsaareen ja Kotisaareen. Lähteen mukaan se oli kahdesta kolmeen miljoonaa vuotta sitten aktiivinen tulivuori. Sinne pääsee lautalla, ja lauttoja kulkee kesäisin päivittäin.\n\nSaarella on arkeologisia jäänteitä 900-luvun alusta ja augustinolaisluostari vuosilta 1225–1539. Länsisaaressa on Viðeyjarstofa-talo, jonka tanskalainen arkkitehti Nicolai Eigtved suunnitteli ja Tanskan hallitus rakennutti 1753–1755. Talossa on nykyään ravintola. Saarella on Richard Serran Áfangar sekä Yoko Onon Imagine Peace Tower, joka sytytetään vuosittain Lennonin syntymäpäivän 9.10. ja kuolinpäivän 8.12. välillä.\n\nIsoisän matkavuonna 1873 saari oli vielä asuttu, sillä viimeiset asukkaat lähtivät sieltä vasta 1943.',
       kuvat: [
         {
           tiedosto: 'Viðey island.jpg',

@@ -56,12 +56,10 @@ ja laattakysymys. Kysymystä EI vaihdeta. Kohtaamispiste: Käärmepylväs
 (Hippodromi/Sultanahmet, 41.0058 N, 28.9758 E — rakentaja laskee
 laudat Miller-kaavalla ja tarkistaa laattaa vasten).
 
-## 5. Aarremerkintä (MAA 3 — ENSIMMÄINEN VAANIJAVIHJE, Raamatun kaava)
+## 5. Aarremerkintä — poistettu
 
-> Basaarin kätköä en ehtinyt edes piirtää: mies, joka oli kysellyt
-> minusta satamassa, seisoi jo sillalla. Jätin merkin luetteloon ja
-> nousin yöjunaan — jos hän etsii samaa kuin minä, toivon että sinä
-> ehdit ensin.
+Aarremerkinnät poistettiin pelistä 11.10.2026 (omistaja), eikä niiden tekstejä säilytetä repossa
+(Raamattu, Poistetut ideat).
 
 ## 6. Täkynostopooli (otsikot sitovia; lunastukset rakentaja kokoaa
 takynostot-turkki.md:stä, lupaus lunastetaan)
