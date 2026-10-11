@@ -3,7 +3,6 @@
  "kaupunkiQ": "Q34374",
  "jarjestys": [
   "Q173527",
-  "Q7798352",
   "Q636972",
   "Q603920",
   "Q2942217",
@@ -599,14 +598,5 @@
    "tarkistettu": true
   }
  ],
- "eiKuvaa": [
-  {
-   "q": "Q7798352",
-   "nimi": "Knossoksen valtaistuinsali",
-   "lat": 35.298094,
-   "lon": 25.162928,
-   "peruste": "pelin nosto",
-   "syy": "suojatarkastus: ei vapaata, suojaamatonta kuvaa"
-  }
- ]
+ "eiKuvaa": []
 }

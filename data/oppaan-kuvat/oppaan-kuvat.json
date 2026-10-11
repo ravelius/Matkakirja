@@ -1677,9 +1677,7 @@
     "Q1850614",
     "Q2933758",
     "Q1956214",
-    "Q959632",
-    "Q164150",
-    "Q638278"
+    "Q959632"
    ],
    "kuvat": [
     {
@@ -5276,7 +5274,6 @@
    "lon": 25.304,
    "kohteet": [
     "Q173527",
-    "Q7798352",
     "Q636972",
     "Q603920",
     "Q2942217",
@@ -10031,8 +10028,7 @@
     "Q841581",
     "Q942127",
     "Q1858012",
-    "Q190435",
-    "Q3269914"
+    "Q190435"
    ],
    "kuvat": [
     {
@@ -28203,24 +28199,6 @@
      "tarkistettu": true
     }
    ]
-  },
-  "Q164150": {
-   "nimi": "Romanian parlamenttitalo",
-   "peruste": "pelin nosto",
-   "kaupunki": "bukarest",
-   "kaupunkiQ": "Q19660",
-   "lat": 44.4275,
-   "lon": 26.0875,
-   "kuvat": []
-  },
-  "Q638278": {
-   "nimi": "Riemukaari",
-   "peruste": "pelin nosto",
-   "kaupunki": "bukarest",
-   "kaupunkiQ": "Q19660",
-   "lat": 44.46728,
-   "lon": 26.07836,
-   "kuvat": []
   },
   "Q7343": {
    "nimi": "Iso Valliriutta",
@@ -61278,15 +61256,6 @@
      "tarkistettu": true
     }
    ]
-  },
-  "Q7798352": {
-   "nimi": "Knossoksen valtaistuinsali",
-   "peruste": "pelin nosto",
-   "kaupunki": "kreeta",
-   "kaupunkiQ": "Q34374",
-   "lat": 35.298094,
-   "lon": 25.162928,
-   "kuvat": []
   },
   "Q894613": {
    "nimi": "Bosumtwi-järvi",
@@ -104880,15 +104849,6 @@
      "tarkistettu": true
     }
    ]
-  },
-  "Q3269914": {
-   "nimi": "Kansalliskulttuuripalatsi",
-   "peruste": "pelin nosto",
-   "kaupunki": "sofia",
-   "kaupunkiQ": "Q472",
-   "lat": 42.68472,
-   "lon": 23.31889,
-   "kuvat": []
   },
   "Q482485": {
    "nimi": "Gyeongbokgung",

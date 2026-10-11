@@ -342,14 +342,5 @@
    "tarkistettu": true
   }
  ],
- "eiKuvaa": [
-  {
-   "q": "Q3269914",
-   "nimi": "Kansalliskulttuuripalatsi",
-   "lat": 42.68472,
-   "lon": 23.31889,
-   "peruste": "pelin nosto",
-   "syy": "suojatarkastus: ei vapaata, suojaamatonta kuvaa"
-  }
- ]
+ "eiKuvaa": []
 }

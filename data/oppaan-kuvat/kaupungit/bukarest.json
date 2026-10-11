@@ -476,22 +476,5 @@
    "tarkistettu": true
   }
  ],
- "eiKuvaa": [
-  {
-   "q": "Q164150",
-   "nimi": "Romanian parlamenttitalo",
-   "lat": 44.4275,
-   "lon": 26.0875,
-   "peruste": "pelin nosto",
-   "syy": "suojatarkastus: ei vapaata, suojaamatonta kuvaa"
-  },
-  {
-   "q": "Q638278",
-   "nimi": "Riemukaari",
-   "lat": 44.46728,
-   "lon": 26.07836,
-   "peruste": "pelin nosto",
-   "syy": "suojatarkastus: ei vapaata, suojaamatonta kuvaa"
-  }
- ]
+ "eiKuvaa": []
 }
