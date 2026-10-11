@@ -33,3 +33,10 @@ linssiseppa2/google-429-vara) ja wt/proto-linssiseppa2-museo (linssiseppa2/keitt
 4. **Raketti**: tallenne äänen kanssa ja kuva-arkki PT:lle, kun Pelikoodarin äänet (skeeman 1.63 jälkeen) on kytketty RakettiLaukaisu.Aanet-koukkuihin.
    SHA junaan 183 PT:n kuittauksen jälkeen.
 5. Levy: app-kopiot lokit/linssiseppa2-app-{grafiikka,raketti,madrid,vara} (~460 Mt kpl) pois, kun erät kuitattu.
+
+## PÄIVITYS 20.1x
+- iPhone-jono valmis, SIMU VAPAA ilmoitettu. Kuvat docs/raportit/kaappaukset/linssiseppa2-madrid-429-20261011/ (36f80e3d7), PT:lle raportoitu.
+- Madrid: stencil-korjaus toimii (589aecae0). Raketti: Andøya-fakta ensin, lento perillä (a861c67c9).
+- 429-vara: d56415983 = paluu Googleen vasta seuraavan kohteen lennossa (kokeessa näkyi tyhjää sinistä varan alussa ja paluussa).
+  Käännä + koe (sk-vara2.txt, lisää hyppy toiseen kohteeseen koetuksen jälkeen) uudelleenkäynnistyksen jälkeen.
+- 429-mittaus (ion429/loki.tsv): 18.51–19.31 429 (paitsi 19.21), 19.36→ 200; loppuyhteenveto PT:lle ~21.
