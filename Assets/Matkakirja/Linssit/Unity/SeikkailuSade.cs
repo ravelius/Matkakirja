@@ -18,11 +18,17 @@ namespace Matkakirja.Natiivi
         /// <summary>Muurin tippuminen tyrmässä (PT 11.10. 03.0x, Pelikoodari: tyrmän keskitaso −41,5 dB, tavoite −32…−30 dB; sisällä muuten 0,28;
         /// simu 1a7ebdf2c: 0,6 → −38,6 dB, joten täysi taso ja lisäksi SeikkailuTyrmaAanet-pohja).</summary>
         public const float TyrmaTippuminen = 1f;
+        /// <summary>Laiturin ja rannan äänipohja (PT 11.10. 06.2x, Laitetestaajan 4. kierros: laiturilla paikallaan −36 dB tasainen, myös
+        /// v6:ssa −37…−38 dB eli ei regressio; tavoite tyrmän tapaan −32…−30 dB): Soundly soutu-silmukka-02 "Water, Lap, Waves, Lake,
+        /// Lapping Against Dock" (−23 LUFS, pankissa kytkemättä) muurin ulkopuolella jalan. Tyrmän linna-tila-01 0,9 toi n. +7 dB.</summary>
+        public const string LaituriLaineet = "soutu-silmukka-02";
+        public const float LaituriLaineetTaso = 0.9f;
         internal static readonly string[] Tunnukset = { "sade-kivi", "sade-vesi", "sade-puu", "sade-pressu", "tippuminen-raystas", "tippuminen-muuri", "ukkonen-jyly",
             "tuuli-kostea", "tuuli-korkea",   // Sonniss-tuulet (Pelikoodari 9.10., ämpärissä sonniss-tuulet-v1)
             "tuuli-metsa",   // männikön tuuli muurin ulkopuolella (sonniss-aanet-v2, PT 9.10.)
             "yolinnut", "koira",
-            "kesayo-sirkat", "satama-vesi" };   // sonniss-aanet-v3 (PT 9.10.): kesäyön sirkat ulkona, vesi loiskii kallioon rannalla ja veneessä   // elokuun yön linnut ja kaukainen koira (aanet-lapi-v1, Pelikoodari 9.10.; Tausta-voima)
+            "kesayo-sirkat", "satama-vesi",
+            LaituriLaineet };   // sonniss-aanet-v3 (PT 9.10.): kesäyön sirkat ulkona, vesi loiskii kallioon rannalla ja veneessä   // elokuun yön linnut ja kaukainen koira (aanet-lapi-v1, Pelikoodari 9.10.; Tausta-voima)
         readonly Dictionary<string, AudioSource> lahteet = new Dictionary<string, AudioSource>();
         readonly Dictionary<string, float> tavoite = new Dictionary<string, float>();
         float tarkistusT;
@@ -61,6 +67,8 @@ namespace Matkakirja.Natiivi
             ulos["koira"] = veneessa ? 0.25f : ulkona ? 0.18f : 0f;
             ulos["kesayo-sirkat"] = ulkona && !korkealla ? 0.22f : 0f;
             ulos["satama-vesi"] = veneessa ? 0.4f : vesi ? 0.35f : ulkopuolella ? 0.15f : 0f;
+            // Laituri ja ranta jalan: laineet loiskivat laituria vasten pohjana (veneessä soutu ja satama-vesi riittävät, muurin harjalla ei).
+            ulos[LaituriLaineet] = ulkopuolella && !veneessa && !korkealla ? LaituriLaineetTaso : 0f;
         }
 
         /// <summary>Kävelyosa muurin ulkopuolella (ranta, vesiportti, laituri, ulkoalue; LR:n osat v45x).</summary>
