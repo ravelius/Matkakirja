@@ -68,7 +68,7 @@ Merkkimäärät (laskettu skriptillä, välilyönnit mukana):
 ## Avoimet kohdat omistajalle / juristille / muille (VAHVISTA jää)
 
 1. ~~R2-elinkaarisäännön live-tarkistus~~ **TEHTY** (Julkaisija 10.10.2026: `opas/teksti/` vanhenee 2 päivässä; tekstit sanovat 2 vuorokautta). Jäljellä vain: jos sääntöä muutetaan, päivitä tämä seloste.
-2. **IP-tiivisteen suolaus** (Pelikoodari, ks. todennetut kohdat 2).
+2. ~~IP-tiivisteen suolaus~~ **TEHTY** (PT 11.10.2026: tiiviste on HMAC-SHA-256 workerin salaisuudesta IP_SUOLA, 8 heksamerkkiä, vastausmuoto ennallaan; #4335, 874d97c1b; tuotannossa 11.10. 02.29). Seloste "tiiviste, enintään 30 tuntia" pätee; juristin kannalta tiiviste on silti pseudonyymi (kohta 6).
 3. **"Ilmoita vastauksesta" -toiminto** (alaikäistarkistus kohta 4) ei ole vielä tehty; teksti 2 ja selosteen virke viittaa siihen. Poista maininta, jos toimintoa ei julkaista ennen tekstien käyttöä.
 4. **Kuvat ja pelaajien välinen viestintä**: lauseet "ei kuvien lähettämistä, ei pelaajien välistä viestintää" pitävät tällä hetkellä; päivitä, jos ominaisuuksia lisätään (Anthropicin ohje vaatii silloin tunnistusta ja ilmoituskanavaa).
 5. **Rekisterinpitäjä ja tukisähköposti** puuttuvat ([täydennä], omistaja). Huom.: koodin User-Agentissa on `peli@matkakirja.app` (tools/pollo/opas.js, saa.js); onko se julkinen tukiosoite, päättää omistaja.
