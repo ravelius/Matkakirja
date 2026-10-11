@@ -35,19 +35,6 @@
      "leveys": 6000,
      "korkeus": 4000,
      "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "51-101-1026 002 Odesa reg.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/51-101-1026_002_Odesa_reg.jpg?width=1280",
-     "tekija": "Wadco2",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:51-101-1026_002_Odesa_reg.jpg",
-     "selite": "Portaiden yläpäästä avautuu näkymä satamaan ja merelle.",
-     "leveys": 4650,
-     "korkeus": 3100,
-     "tarkistettu": true
     }
    ]
   },
@@ -182,41 +169,28 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Воронцовський маяк 12.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D1%86%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%BC%D0%B0%D1%8F%D0%BA_12.jpg?width=1280",
-     "tekija": "Nata Naval",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D1%86%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%BC%D0%B0%D1%8F%D0%BA_12.jpg",
-     "selite": "Vorontsovin majakka on valkoinen majakkatorni Odessan sataman aallonmurtajan päässä.",
-     "leveys": 2132,
-     "korkeus": 1422,
+     "tiedosto": "Vue de Odessa Phare Woronztowsky.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vue_de_Odessa_Phare_Woronztowsky.JPG?width=1280",
+     "tekija": "Tuntematon tekijä (reprodusoinut HOBOPOCC)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vue_de_Odessa_Phare_Woronztowsky.JPG",
+     "selite": "Vorontsovin majakka vanhassa albumikuvassa 1900-luvun alusta; valkoinen torni seisoo kivisen laiturin päässä.",
+     "leveys": 1944,
+     "korkeus": 2592,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Vorontsov Lighthouse 2017 G3.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vorontsov_Lighthouse_2017_G3.jpg?width=1280",
-     "tekija": "George Chernilevsky",
+     "tiedosto": "Одесса. Маяк. Почтовая открытка 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%B0._%D0%9C%D0%B0%D1%8F%D0%BA._%D0%9F%D0%BE%D1%87%D1%82%D0%BE%D0%B2%D0%B0%D1%8F_%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%BA%D0%B0_01.jpg?width=1280",
+     "tekija": "Tuntematon kustantaja",
      "lisenssi": "Public domain",
      "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vorontsov_Lighthouse_2017_G3.jpg",
-     "selite": "Majakan punainen lyhty johdattaa laivoja satamaan.",
-     "leveys": 3600,
-     "korkeus": 4800,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Vorontsov Lighthouse 2017 G1.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vorontsov_Lighthouse_2017_G1.jpg?width=1280",
-     "tekija": "George Chernilevsky",
-     "lisenssi": "Public domain",
-     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vorontsov_Lighthouse_2017_G1.jpg",
-     "selite": "Majakka seisoo merellä aallonmurtajan päässä.",
-     "leveys": 4000,
-     "korkeus": 5500,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%B0._%D0%9C%D0%B0%D1%8F%D0%BA._%D0%9F%D0%BE%D1%87%D1%82%D0%BE%D0%B2%D0%B0%D1%8F_%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%BA%D0%B0_01.jpg",
+     "selite": "Vorontsovin majakka ja satamalaituri vuoden 1923 postikortissa; etualalla soutuvene.",
+     "leveys": 1395,
+     "korkeus": 915,
      "tarkistettu": true
     }
    ]

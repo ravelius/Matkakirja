@@ -11554,20 +11554,16 @@ export const NAHTAVYYSJUTUT = {
           + 'suojeluspyhälle, arkkienkeli Mikaelille.',
       kuvat: [
         {
-          tiedosto: '2005-08-15 Maidan Nezalezhnosti Kiev 261.JPG',
-          lyhyt: 'Aukion tunnetuin nähtävyys on 2001 pystytetty 61 metrin Itsenäisyyspatsas kultaisine Berehyniaan.',
-          selite: 'Aukion tunnetuin nähtävyys on vuonna 2001 pystytetty 61 metriä '
-            + 'korkea Itsenäisyyspatsas, jonka huipulla seisoo kultainen '
-            + 'Berehynia, ukrainalaisen tarinaperinteen suojelijatar.',
-          lahde: 'Norbert Aepli, Wikimedia Commons (CC BY 3.0)',
+          tiedosto: "Kyiv-city-duma-c1900.jpg",
+          lyhyt: "Kiovan kaupunginduuma 1800-luvun lopulla",
+          selite: "Vanha valokuva Kiovan kaupunginduuman rakennuksesta, joka sijaitsi nykyisen Itsenäisyydenaukion (Maidan) paikalla. Rakennus on sittemmin tuhoutunut.",
+          lahde: "Tuntematon tekijä, Wikimedia Commons (Public domain)",
         },
         {
-          tiedosto: 'Modern fountain on the Independence square (8162296734).jpg',
-          lyhyt: 'Vuosina 1976–1977 aukion alle rakennettiin metroasema ja suihkulähteitä.',
-          selite: 'Vuosina 1976–1977 aukion alle rakennettiin metroasema, ja '
-            + 'samalla paikalle valmistui suihkulähteitä ja avaria '
-            + 'kävelyalueita.',
-          lahde: 'Guillaume Speurt, Wikimedia Commons (CC BY-SA 2.0)',
+          tiedosto: "Майдан 1850і.jpg",
+          lyhyt: "Hreštšatykin aukio 1850–60-luvuilla",
+          selite: "Vanha kuva Hreštšatykin aukiosta, joka tunnetaan nykyisin Itsenäisyydenaukiona (Maidan Nezalezhnosti). Kuva on tehty vuosien 1850 ja 1870 välillä.",
+          lahde: "Tuntematon tekijä, Wikimedia Commons (Public domain)",
         },
       ],
       lahde: 'Wikipedia',
@@ -11606,12 +11602,10 @@ export const NAHTAVYYSJUTUT = {
           + 'pieni museo.',
       kuvat: [
         {
-          tiedosto: 'Kiev Golden Gate.jpg',
-          lyhyt: 'Jaroslav Viisas rakennutti Kultaisen portin 1017–1024 Konstantinopolin mallin mukaan.',
-          selite: 'Jaroslav Viisas rakennutti portin vuosina 1017–1024 kaupungin '
-            + 'muurien pääsisäänkäynniksi Konstantinopolin Kultaisen portin '
-            + 'mallin mukaan; läpikulkuaukko oli noin 12 metriä korkea.',
-          lahde: 'Луц Фишер-Лампрехт, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: "Zoloty vorota 1860s.jpg",
+          lyhyt: "Kultaisen portin rauniot 1860-luvulla",
+          selite: "Vanha valokuva 1860-luvulta näyttää Kultaisen portin rauniot ja niiden edessä seisovan miesryhmän; Commonsin kuvauksen mukaan kyseessä on vankikomppania.",
+          lahde: "Tuntematon tekijä, Wikimedia Commons (CC BY 4.0)",
         },
         {
           tiedosto: 'Киев. Золотые ворота. Почтовая открытка 04.jpg',
@@ -11620,15 +11614,6 @@ export const NAHTAVYYSJUTUT = {
             + '1240, ja 1970-luvulle tultaessa maan päällä oli enää kaksi '
             + 'muurinpätkää jäljellä.',
           lahde: 'Tuntematon kustantaja, Wikimedia Commons (Public domain)',
-        },
-        {
-          tiedosto: 'Золоті ворота повний вигляд.jpg',
-          lyhyt: 'Kultainen portti rakennettiin uudelleen Kiovan juhlavuoteen 1982 vanhojen kuvausten pohjalta.',
-          selite: 'Portti rakennettiin kokonaan uudelleen Kiovan '
-            + '1500-vuotisjuhlaan vuonna 1982; koska alkuperäisestä ei ole '
-            + 'säilynyt yhtään aitoa kuvaa, ulkonäkö jouduttiin päättelemään '
-            + 'vanhoista kirjallisista kuvauksista.',
-          lahde: 'Ольжич Мушинський, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -12255,13 +12240,10 @@ export const NAHTAVYYSJUTUT = {
           + 'täynnä taidetta - kauas Siperian Novosibirskiin.',
       kuvat: [
         {
-          tiedosto: 'Tretyakov and his gallery.jpg',
-          lyhyt: 'Kauppias Pavel Tretjakov lahjoitti kokoelmansa Moskovalle 1892, galleria avattiin 1893.',
-          selite: 'Kauppias Pavel Tretjakov lahjoitti kokoelmansa Moskovan '
-            + 'kaupungille elokuussa 1892, ja galleria avattiin yleisölle 15. '
-            + 'elokuuta 1893. Satumaisen punatiilisen julkisivun suunnitteli '
-            + 'taiteilija Viktor Vasnetsov vuosina 1902–1904.',
-          lahde: 'Andrey, Wikimedia Commons (CC BY 2.0)',
+          tiedosto: "Municipal Album 1.050 Tretyakovka.jpg",
+          lyhyt: "Tretjakovin galleria 1910-luvulla",
+          selite: "Moskovan kaupungin rakennusalbumin vanha valokuva Tretjakovin veljesten taidegalleriasta Lavrušinskin kujalla, noin vuosilta 1910–1915.",
+          lahde: "Tuntematon valokuvaaja (P. P. Pavlovin valokuvaamo), Wikimedia Commons (Public domain)",
         },
       ],
       lahde: 'Wikipedia',
@@ -12375,22 +12357,6 @@ export const NAHTAVYYSJUTUT = {
           + 'myrskyiltä ja korkeilta aalloilta.',
       kuvat: [
         {
-          tiedosto: 'Воронцовський маяк DSC5033.jpg',
-          lyhyt: 'Odessan lähes 30 metrin majakka on jo kolmas torni samalla paikalla, nykyinen valmistui 1955.',
-          selite: 'Lähes 30 metriin kohoava majakka on jo kolmas torni samalla '
-            + 'paikalla: puisen ja valurautaisen edeltäjänsä jälkeen nykyinen '
-            + 'valmistui vuonna 1955.',
-          lahde: 'Konstantin Brizhnichenko, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'Воронцовський маяк та грузовий порт.jpg',
-          lyhyt: 'Majakan valo näkyy yli 20 kilometrin päähän ja vilkkuu Morse-kirjaimen O tunnuksella.',
-          selite: 'Majakan valo näkyy merelle yli 20 kilometrin päähän ja vilkkuu '
-            + 'aina samalla tunnuksella: kolme pitkää välähdystä, mikä on '
-            + 'Morse-aakkosissa kirjain O – niin kuin Odessa.',
-          lahde: 'SvetlanaM85, Wikimedia Commons (CC BY-SA 3.0)',
-        },
-        {
           tiedosto: 'Vorontsov Lighthouse.jpg',
           lyhyt: 'Majakka on nimetty ruhtinas Vorontsovin mukaan ja yhdistetty rantaan kivisellä aallonmurtajalla.',
           selite: 'Majakka on nimetty Odessan seutua aikanaan hallinneen ruhtinas '
@@ -12423,12 +12389,10 @@ export const NAHTAVYYSJUTUT = {
           + 'on lähtenyt matkalle miljoonia matkustajia vuodessa.',
       kuvat: [
         {
-          tiedosto: 'Вид на морской вокзал (Одесса).jpg',
-          lyhyt: 'Odessan satama sai alkunsa 1793, nykyään siellä on 46 laituripaikkaa ja 52 laituria.',
-          selite: 'Satama sai alkunsa vuonna 1793, kun upseeri José de Ribas oli '
-            + 'etsinyt sille parhaan paikan Mustanmeren rannalta; nykyään '
-            + 'siellä on 46 laituripaikkaa ja 52 laituria.',
-          lahde: 'Georgiy Dolgopskiy, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: "Oděsa, přístav II.jpg",
+          lyhyt: "Odessan satamaa",
+          selite: "Nostureita ja kauppalaivoja Odessan satama-altaassa.",
+          lahde: "Aktron, Wikimedia Commons (CC BY 3.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -13262,24 +13226,6 @@ export const NAHTAVYYSJUTUT = {
           + 'kirjailija Kārlis Skalben sanoin',
       },
       kuvat: [
-        {
-          tiedosto: 'Brīvības laukums.jpg',
-          lyhyt: '42-metrinen Vapaudenpatsas pystytettiin 1935 Latvian itsenäisyyssodassa kaatuneiden muistoksi.',
-          selite: '42 metriä korkea patsas pystytettiin 1935 Latvian '
-            + 'itsenäisyyssodassa kaatuneiden muistoksi. Huipulla seisova '
-            + 'Vapaus — latvialaisittain Milda — pitelee kolmea kultaista '
-            + 'tähteä maan vanhojen maakuntien merkkinä.',
-          lahde: 'DaceX, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'Centrs, Centra rajons, Rīga, Latvia - panoramio (11).jpg',
-          lyhyt: 'Patsas kesti neuvostomiehityksen: sitä pidettiin liian arvokkaana hävitettäväksi.',
-          selite: 'Patsas seisoo paikalla, jossa aiemmin oli tsaari Pietari '
-            + 'Suuren ratsastajapatsas, ja se kesti neuvostomiehityksen: '
-            + 'kuvanveistäjä Vera Muhinan kerrotaan pitäneen sitä liian '
-            + 'arvokkaana hävitettäväksi.',
-          lahde: 'alinco_fan, Wikimedia Commons (CC BY 3.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -13745,14 +13691,6 @@ export const NAHTAVYYSJUTUT = {
             + 'oma pieni armeija ja yli 500 suurlähettilästä ympäri '
             + 'maailmaa.',
           lahde: 'William John Gauthier, Wikimedia Commons (CC BY-SA 2.0)',
-        },
-        {
-          tiedosto: 'The Uzupis Angel (7932213486).jpg',
-          lyhyt: 'Trumpettia puhaltava pronssienkeli pystytettiin Užupikseen 2002 aiemman munaveistoksen tilalle.',
-          selite: 'Trumpettia puhaltava pronssienkeli pystytettiin '
-            + 'Užupikseen vuonna 2002, ja se korvasi paikalla aiemmin '
-            + 'seisseen munan muotoisen veistoksen.',
-          lahde: 'Guillaume Speurt, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Vilnia, Zarečča. Вільня, Зарэчча (S. Fleury, 1896).jpg',
