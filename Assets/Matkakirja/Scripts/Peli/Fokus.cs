@@ -34,8 +34,9 @@ namespace Matkakirja.Natiivi
         public const string KulttuurivisaId = "kulttuurivisa";
         /// <summary>Web NOSTOTEHTAVIA_AARREPISTEESEEN.</summary>
         public const int NostotehtaviaAarrepisteeseen = 1;
-        /// <summary>Web AARREPISTEEN_LUKKOLAPPU.</summary>
-        public const string Lukkolappu = "ratkaise kysymys kartalta";
+        /// <summary>Web AARREPISTEEN_LUKKOLAPPU. "kaupunkilehdestä" (PT 11.10.2026): lehden kysymys on joka kaupungissa,
+        /// karttavisoja ei (esim. Kreikka), joten "kartalta" johti Ateenassa harhaan.</summary>
+        public const string Lukkolappu = "ratkaise kysymys kaupunkilehdestä";
 
         sealed class Kaupunki
         {
@@ -126,7 +127,8 @@ namespace Matkakirja.Natiivi
             var lista = new List<string>();
             if (kaupunki == null || !kaupungit.TryGetValue(kaupunki, out var k)) return lista;
             foreach (var t in k.Tehtavat) if (t.Palkinto != "juliste") lista.Add(Aihe(t.Id));
-            if (k.Kohtaaminen && k.X.HasValue && Kulttuurivisa(kaupunki)) lista.Add(Aihe(KulttuurivisaId));
+            // Sähkekaupunki kelpaa kuten web aarteenAvausMahdollista (PT 11.10.2026, pulla turvaverkkona).
+            if ((k.Kohtaaminen || k.Sahketehtava) && k.X.HasValue && Kulttuurivisa(kaupunki)) lista.Add(Aihe(KulttuurivisaId));
             return lista;
         }
 

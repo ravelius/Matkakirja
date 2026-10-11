@@ -41,7 +41,7 @@ namespace Matkakirja.Natiivi
         public Sahketehtava Sahketehtava;
         /// <summary>Kaupungin omat otsikot sähkehakemistoon: täkyt, kohdenostot, täkynostojen nimiöt.</summary>
         public List<string> Otsikot = new List<string>();
-        /// <summary>Web aarteenAvausMahdollista: kohtaaminen ja sille paikka maailmankartalla.</summary>
+        /// <summary>Web aarteenAvausMahdollista: kohtaaminen tai sähketehtävä ja sille paikka maailmankartalla.</summary>
         public bool AarteenAvaus;
         /// <summary>data.lehtitehtavat raakana (LehtiFokus lukee, jos kokoelma lehtitehtavat puuttuu).</summary>
         public List<object> Lehtitehtavat;
@@ -158,7 +158,9 @@ namespace Matkakirja.Natiivi
                     else if (Rakenne.Lista(kommentit) is List<object> lista)
                         foreach (var r in lista) if (r is string s) v.PuluKommentit.Add(s);
                 }
-                if (MiniJson.Kentta(d, "kohtaaminen") != null
+                // SÄHKEKAUPUNKI KELPAA (PT 11.10.2026): Tukholman piste avaa sähkeen, ja ilman tätä pullaa ei tarjottu, joten
+                // yksi väärä vastaus lehden aarrekysymykseen lukitsi aarteen (Ruotsissa ei karttavisaa). Pulla on turvaverkko.
+                if ((MiniJson.Kentta(d, "kohtaaminen") != null || MiniJson.Kentta(d, "sahketehtava") != null)
                     && MiniJson.Kentta(MiniJson.Kentta(MiniJson.Kentta(d, "kohtaamispiste") as Dictionary<string, object>, "laudat")
                         as Dictionary<string, object>, "maailmankartta") is Dictionary<string, object> piste
                     && MiniJson.Luku(piste, "x") is double px && MiniJson.Luku(piste, "y") is double py
