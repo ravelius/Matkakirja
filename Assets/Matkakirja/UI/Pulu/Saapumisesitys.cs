@@ -24,7 +24,9 @@
 //                                       paikkatieto "Matkalla — X".
 //   laatta kääntyy fokuskaupungissa    → aarremerkintä (web aarreLoytyi: laatta oli
 //                                       kaupungissa ja katosi); voittaa saapumis-
-//                                       merkinnän, kunnes saavutaan muualle.
+//                                       merkinnän, kunnes saavutaan muualle. Ei, jos
+//                                       avattu aarre on Meripihkahuoneen aarre (Euroopan
+//                                       pääaarre; omistaja 11.10.2026, juna 182).
 //   uusi tai jatkettu matka            → kortti pelaajan sijainnista (web visitCity
 //                                       lähtökaupungissa; reitillä arvottu tieto).
 //   aloitusnäkymä                      → kortti piiloon ja tyhjäksi (web pickstart).
@@ -292,7 +294,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Web aarreLoytyi: fokuskaupungin laatta nähtiin ja se on nyt poissa → aarremerkintä
-        /// (kerran per kaupunki), jos laudalla on sellainen.
+        /// (kerran per kaupunki), jos laudalla on sellainen. Omistaja 11.10.2026 (PT 13.5x, juna 182): merkintä vain, kun avattu
+        /// aarre on jokin muu kuin Meripihkahuoneen aarre.
         /// </summary>
         void TarkistaAarre()
         {
@@ -302,8 +305,13 @@ namespace Matkakirja.Natiivi
             if (o.Matka.LaattaTassa(k)) { aarreOdottaa.Add(k); return; }
             if (!aarreOdottaa.Remove(k) || aarreKerrottu.Contains(k)) return;
             aarreKerrottu.Add(k);
+            if (Meripihkahuone(o.Matka, k)) { UnityEngine.Debug.Log("MATKAKIRJA saapuminen: Meripihkahuoneen aarre " + k + ", ei aarremerkintää"); return; }
             Aarre(k);
         }
+
+        /// <summary>Kaupungin käännetty laatta on Euroopan pääaarre (laatat.json mannerTypes.europe.star "Meripihkahuoneen aarre").</summary>
+        static bool Meripihkahuone(Matka m, string k) =>
+            m.Laatat != null && m.Laatat.Kaannetyt.Hae(k) == Laattatyypit.Paaaarre && m.Laatat.MannerOf(k) == "europe";
 
         /// <summary>Aarremerkintä korttiin heti (myös testikomento). false = laudalla ei ole aarremerkintää.</summary>
         public bool Aarre(string k)
