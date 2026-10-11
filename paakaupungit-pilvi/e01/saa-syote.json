@@ -12,7 +12,9 @@
  {
   "id": "tirana",
   "lat": 41.33,
-  "lon": 19.82
+  "lon": 19.82,
+  "artikkeli": "Climate of Albania",
+  "taulukko": "Climate data for Tirana (7)"
  },
  {
   "id": "skopje",

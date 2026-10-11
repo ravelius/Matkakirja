@@ -220,11 +220,11 @@
       },
       {
        "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Mallinnettujen kuukausinormaalien mukaan tammikuun keskilämpötila on 5,1 astetta, heinäkuun 24,4 ja elokuun 25,1. Sateisimmat kuukaudet ovat lokakuu (152 mm) ja maaliskuu (134 mm), kuivin heinäkuu (22 mm). Mukavimpia kävelykuukausia ovat luvuista päätellen toukokuu ja syyskuu: toukokuussa keskilämpötila on 18,0 astetta ja sadetta tulee 49 mm. Luvut ovat mallinnettuja ja lähteiden välillä on eroja, mutta kaikissa kesä on lämmin ja talvi leuto ja kostea.",
+       "teksti": "Tammikuun keskilämpötila on 6,7 astetta ja heinäkuun 24,0 astetta. Sateisimmat kuukaudet ovat marraskuu (172 mm) ja joulukuu (148 mm), ja kuivin on heinäkuu (42 mm); vuodessa sataa noin 1 270 millimetriä. Toukokuussa ja syyskuussa keskilämpötila on 18–21 astetta, mikä sopii kävelyyn. Kesä on lämmin ja kuiva, talvi leuto ja sateinen.",
        "kuva": {
         "tiedosto": "Tirana Snowfall 2017.jpg",
         "lyhyt": "Tiranan talvet ovat leutoja ja kosteita.",
-        "selite": "Mallinnettujen normaalien mukaan tammikuun keskilämpötila on noin 5 astetta, ja sateet osuvat lähteen mukaan pääosin marraskuusta maaliskuuhun.",
+        "selite": "Tammikuun keskilämpötila on noin 7 astetta, ja eniten sataa marras-, joulu- ja tammikuussa.",
         "lahde": "BBB2021, Wikimedia Commons (CC BY-SA 4.0)"
        }
       }
@@ -498,40 +498,20 @@
  "saatiedot": {
   "lat": 41.33,
   "lon": 19.82,
-  "keskilampo": [
-   5.1,
-   6.5,
-   9.8,
-   13.6,
-   18,
-   20.6,
-   24.4,
-   25.1,
-   21.5,
-   17.1,
-   11.3,
-   8.2
-  ],
-  "sade": [
-   58,
-   87,
-   134,
-   99,
-   49,
-   76,
-   22,
-   43,
-   73,
-   152,
-   74,
-   115
-  ],
-  "luonnehdinta": "Tiranassa on lämpimintä elokuussa, jolloin keskilämpötila on 25,1 astetta, ja kylmintä tammikuussa 5,1 asteessa. Sadetta kertyy eniten lokakuussa, 152 millimetriä, ja maaliskuussa, 134 millimetriä, kun heinäkuussa sataa vain 22 millimetriä. Kuukausisummat yhteensä antavat vuodeksi 982 millimetriä."
+  "keskilampo": [6.7, 7.8, 10, 13.4, 18, 21.6, 24, 23.8, 20.7, 16, 11.7, 8.1],
+  "ylin": [12, 13, 16, 19, 24, 28, 31, 31, 27, 22, 17, 13],
+  "alin": [2, 3, 5, 8, 12, 16, 17, 17, 14, 10, 6, 3],
+  "sade": [143, 132, 115, 104, 103, 68, 42, 46, 78, 114, 172, 148],
+  "lahde": {
+   "nimi": "en-Wikipedia, ilmastotaulukko",
+   "kausi": "1961–1990"
+  },
+  "luonnehdinta": "Tiranassa on lämpimintä heinäkuussa, jolloin keskilämpötila on 24,0 astetta, ja kylmintä tammikuussa 6,7 asteessa. Sadetta kertyy eniten marraskuussa, 172 millimetriä, kun heinäkuussa sataa vain 42 millimetriä; vuodessa sitä tulee noin 1 270 millimetriä."
  },
  "ehdotukset": {
   "lentoasema": "Tirana International Airport Nënë Tereza (TIA)",
   "huomiot": [
-   "Sääristiriita: saa.json (Open-Meteo, mallinnetut kuukausinormaalit: tammikuu 5,1 °C, vuosisumma 982 mm, loka 152 mm) ei täsmää en:Tiranan (tammikuu 6,7 °C, 1 266 mm) eikä Wikivoyagen lukuihin; opas pysyy saa.json:n luvuissa ja sanoo ne mallinnetuiksi.",
+   "Säärivi päivitetty 11.10.2026 (Päätoimittaja): en:Tiranan lentoaseman 1991–2020-taulukko on ristiriitainen (vuosisarake 1 252 mm, kuukaudet yhteensä 1 152 mm), joten säärivi on Tiranan kaupunkiaseman normaaleista 1961–1990 (en: Climate of Albania, lähde DWD; saa-syote.json: artikkeli ja taulukko). Luotettava 1991–2020-taulukko korvaa rivin, kun sellainen löytyy.",
    "Tarkistettavat koordinaatit: Kokonozin moskeijan (41.33010, 19.82500; Wikivoyagessa vain 4 desimaalia) ja Tabakkien sillan (41.32642, 19.82605) koordinaattien lähde on vain Wikivoyage, ei Wikipedia eikä Wikidata.",
    "Matkustusturvallisuus: um.fi:n matkustustiedote ei auennut (HTTP 403), joten se on tarkistettava selaimella ennen julkaisua. Wikivoyagen ajankohtainen varoituslaatikko jätettiin tekstistä pois nykypolitiikkarajauksen vuoksi.",
    "Kevyen pisteen kuvaus sanoo pääkaupungiksi nimetyn 1920; lähteen mukaan asema oli 1920 väliaikainen ja vahvistui pysyväksi 1925. Kuvaus väittää myös Tiranan asukkaiden olevan noin kolmannes kansasta, mutta Tiranan kunnan 598 176 on alle kolmannes väestöstä (lähteet ristiriidassa).",

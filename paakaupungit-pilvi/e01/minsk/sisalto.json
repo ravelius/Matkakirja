@@ -208,7 +208,7 @@
       },
       {
        "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Lähteen mukaan Minskiin kannattaa tulla toukokuusta syyskuuhun. Mallinnettujen kuukausinormaalien mukaan tammikuun keskilämpötila on noin −3,7 astetta ja heinäkuun noin 18,9 astetta, ja sadetta tulee eniten elokuussa, noin 100 millimetriä. Lähteen mukaan syksyllä ja keväällä on usein sumua.",
+       "teksti": "Minskiin kannattaa tulla toukokuusta syyskuuhun. Tammikuun keskilämpötila on −4,2 astetta ja heinäkuun 19,1 astetta, ja eniten sataa heinäkuussa, lähes 100 millimetriä. Syksyllä ja keväällä on usein sumua.",
        "kuva": {
         "tiedosto": "Minsk after snow and freezing fog (8217148748) (2).jpg",
         "selite": "Sumu on Minskissä yleinen erityisesti syksyllä ja keväällä.",
@@ -453,35 +453,15 @@
  "saatiedot": {
   "lat": 53.9,
   "lon": 27.56,
-  "keskilampo": [
-   -3.7,
-   -3.4,
-   0.1,
-   5.5,
-   11.5,
-   17.3,
-   18.9,
-   18.6,
-   13.3,
-   7.5,
-   1.8,
-   -0.5
-  ],
-  "sade": [
-   26,
-   31,
-   38,
-   44,
-   73,
-   76,
-   55,
-   100,
-   61,
-   63,
-   44,
-   31
-  ],
-  "luonnehdinta": "Mallinnettujen kuukausinormaalien mukaan Minskin kylmin kuukausi on tammikuu, jolloin keskilämpötila on noin −3,7 astetta, ja lämpimin heinäkuu noin 18,9 asteella. Sadetta tulee kaikkina kuukausina, vähiten tammikuussa (26 mm) ja eniten elokuussa (100 mm). Vuosisumma on näillä luvuilla noin 642 mm."
+  "keskilampo": [-4.2, -3.6, 0.7, 7.6, 13.4, 17.1, 19.1, 18.2, 12.7, 6.7, 1.4, -2.6],
+  "ylin": [-2, -1, 5, 13, 19, 22, 24, 24, 18, 10, 4, -1],
+  "alin": [-6, -6, -3, 3, 8, 12, 14, 13, 9, 4, 0, -4],
+  "sade": [47, 40, 41, 43, 66, 79, 97, 71, 51, 55, 49, 47],
+  "lahde": {
+   "nimi": "en-Wikipedia, ilmastotaulukko",
+   "kausi": "1991–2020"
+  },
+  "luonnehdinta": "Minskin kylmin kuukausi on tammikuu, jolloin keskilämpötila on −4,2 astetta, ja lämpimin heinäkuu 19,1 asteella. Sadetta tulee kaikkina kuukausina, vähiten helmikuussa (40 mm) ja eniten heinäkuussa (97 mm), ja vuodessa sitä kertyy noin 690 millimetriä."
  },
  "ehdotukset": {
   "lentoasema": "Minskin kansallinen lentoasema (MSQ)",

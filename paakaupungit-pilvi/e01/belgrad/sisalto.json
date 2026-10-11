@@ -220,7 +220,7 @@
       },
       {
        "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Lähteen mukaan Belgradin ilmasto on kosteaa subtrooppista ilmastoa lähellä mannerilmastoa, ja vuodenajat ovat selvästi erillään. Mallinnettujen kuukausinormaalien mukaan tammikuun keskilämpötila on 0,2 astetta ja elokuun 24,2 astetta, ja sadetta tulee 598 millimetriä vuodessa, eniten kesäkuussa. Kesä ja alkusyksy sopivat kävelyyn ja jokirantoihin, mutta talvellakin Kalemegdan on lumisena kaunis. Lähteen mukaan kova košava-tuuli on tuhonnut sateenvarjoja ja piknikkejä.",
+       "teksti": "Belgradin ilmasto on kostea subtrooppinen, lähellä mannerilmastoa, ja vuodenajat erottuvat selvästi. Tammikuun keskilämpötila on 1,9 astetta ja heinä- ja elokuun 23,8 astetta, ja sadetta tulee noin 700 millimetriä vuodessa, eniten kesäkuussa. Kesä ja alkusyksy sopivat kävelyyn ja jokirantoihin, mutta talvellakin Kalemegdan on lumisena kaunis. Kylmä ja puuskainen košava-tuuli puhaltaa kaakosta Tonavan laaksoa pitkin, ja se kestää yleensä kaksi tai kolme päivää kerrallaan.",
        "kuva": {
         "tiedosto": "Kalemegdanski park 2021 1.jpg",
         "lyhyt": "Kalemegdanin puisto on lähteen mukaan Belgradin suurin ja kattoi 53 hehtaaria vuonna 2013.",
@@ -506,41 +506,21 @@
  "saatiedot": {
   "lat": 44.82,
   "lon": 20.46,
-  "keskilampo": [
-   0.2,
-   3.7,
-   7,
-   12.9,
-   16.9,
-   20.2,
-   23.2,
-   24.2,
-   19.3,
-   14,
-   7.5,
-   3.2
-  ],
-  "sade": [
-   19,
-   49,
-   47,
-   51,
-   57,
-   107,
-   44,
-   60,
-   30,
-   56,
-   31,
-   47
-  ],
-  "luonnehdinta": "Mallinnettujen kuukausinormaalien mukaan tammikuun keskilämpötila on 0,2 astetta ja heinäkuun 23,2 astetta, ja elokuu on vuoden lämpimin kuukausi 24,2 asteella. Sadetta kertyy samojen normaalien mukaan yhteensä 598 millimetriä vuodessa. Eniten sataa kesäkuussa, 107 millimetriä, ja vähiten tammikuussa, 19 millimetriä."
+  "keskilampo": [1.9, 3.8, 8.3, 13.6, 18.2, 21.9, 23.8, 23.8, 18.5, 13.3, 8.1, 3],
+  "ylin": [5, 8, 13, 19, 24, 27, 29, 30, 24, 19, 12, 6],
+  "alin": [-1, 1, 4, 9, 13, 17, 18, 19, 14, 9, 5, 1],
+  "sade": [48, 44, 49, 52, 72, 96, 67, 55, 59, 55, 50, 55],
+  "lahde": {
+   "nimi": "en-Wikipedia, ilmastotaulukko",
+   "kausi": "1991–2020"
+  },
+  "luonnehdinta": "Belgradissa tammikuu on kylmin kuukausi, keskilämpö 1,9 astetta, ja heinä- ja elokuu ovat lämpimimmät, 23,8 astetta. Sadetta tulee vuodessa noin 700 millimetriä, eniten kesäkuussa (96 mm) ja vähiten helmikuussa (44 mm)."
  },
  "ehdotukset": {
   "lentoasema": "Nikola Tesla (BEG)",
   "huomiot": [
    "Kevyen pisteen kuvauksen lähinosto sanoo linnoituksen alaksi noin 66 hehtaaria; lähteen (Belgrade Fortress) 66 ha on vuoden 2021 laajennetun jokivarsipuiston hankkeen ala, ei linnoituksen. Lukua ei käytetty.",
-   "Sääluvut (saa.json) eivät täsmää en-Wikipedian ilmastotaulukkoon (tammikuu 1,9 vs 0,2 astetta, heinäkuu 23,8 vs 23,2). Luonnehdinta ja opas käyttävät vain saa.json-lukuja (Open-Meteo) ja kertovat ne mallinnettujen kuukausinormaalien mukaan; Wikipedian luvut (tammikuu 1,9, heinäkuu 23,8 astetta, sadetta noin 698 mm) jätettiin pois.",
+   "Säärivi päivitetty 11.10.2026 (Päätoimittaja): Belgradin sääaseman normaalit 1991–2020 en-Wikipedian ilmastotaulukosta (Serbian sääpalvelu RHMSS); WMO:n 1991–2020-normaalit täsmäävät 0,2 asteen ja 1 mm:n tarkkuudella. Vanha Open-Meteo-otos (tammikuu 0,2 astetta, 598 mm) poistettu. Košava-lause perustuu en-Wikipedian artikkeliin Košava (wind).",
    "um.fi:n matkustustiedote ei ollut luettavissa, joten oppaassa ei ole matkustusturvallisuuslausetta. Päätoimittaja voi varmistaa ja lisätä.",
    "Skadarlija on katu ja kortteli, ei aukio; tyyppi aukio on lähin sallittu. Pyhän Savan temppeli on kohteista kaukaisin (noin 2,7 km Tasavallan aukiolta); mahdollinen karttapoisto.",
    "Nostolle K3 (Vinča) ei löytynyt Belgradin kuvaa (Vinča-esineet ovat Kosovon museon esine), joten nosto on ilman kuvaa. Lentoaseman etäisyydestä lähteet ovat ristiriidassa (12 vs 18 km), ilmaisu on noin 12–18 km."

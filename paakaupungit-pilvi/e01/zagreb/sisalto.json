@@ -92,7 +92,7 @@
  "tiedot": [
   "Zagrebin vaijerihissi on lähteen mukaan yksi maailman lyhimmistä julkisen liikenteen vaijerihisseistä: ratapituus on 66 metriä ja matka kestää 64 sekuntia.",
   "Zagrebin Tkalčićevan katu syntyi Medveščak-puron peittämisen jälkeen 1898, ja sen entinen nimi oli Ulica Potok eli Purokatu.",
-  "Zagreb on lähteen mukaan Euroopan yhdeksänneksi sateisin pääkaupunki, ja sen vuosisadanta on noin 840 mm."
+  "Zagrebissa sataa vuodessa noin 880 millimetriä, ja sateisin kuukausi on syyskuu, jolloin sadetta tulee noin 100 millimetriä."
  ],
  "valokuva": {
   "tiedosto": "Kamenita vrata 29102016-002.jpg",
@@ -214,7 +214,7 @@
       },
       {
        "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Zagrebin ilmasto on lauhkea ja siinä on neljä selvää vuodenaikaa. Sääaineiston mukaan tammikuun keskilämpö on 0,4 astetta ja heinä- ja elokuun 22,6 astetta. Sadetta tulee ympäri vuoden. Lähteen mukaan vuosisadanta on noin 840 mm, ja Zagreb on Euroopan yhdeksänneksi sateisin pääkaupunki. Adventtina Ban Jelačić -aukio koristellaan joulukuusilla ja valoilla, ja kaupungin joulutori valittiin lähteen mukaan Euroopan parhaaksi kolmena vuonna peräkkäin 2015–2017."
+       "teksti": "Zagrebin ilmasto on lauhkea ja siinä on neljä selvää vuodenaikaa. Tammikuun keskilämpö on 1,4 astetta ja heinäkuun 22,2 astetta. Sadetta tulee ympäri vuoden, noin 880 millimetriä vuodessa, eniten syyskuussa. Adventtina Ban Jelačić -aukio koristellaan joulukuusilla ja valoilla, ja kaupungin joulutori valittiin lähteen mukaan Euroopan parhaaksi kolmena vuonna peräkkäin 2015–2017."
       }
      ],
      "matkailu": {
@@ -431,35 +431,15 @@
  "saatiedot": {
   "lat": 45.81,
   "lon": 15.98,
-  "keskilampo": [
-   0.4,
-   3.9,
-   6.1,
-   11.9,
-   15.7,
-   19.6,
-   22.6,
-   22.6,
-   18.1,
-   12.4,
-   7.2,
-   3.1
-  ],
-  "sade": [
-   27,
-   43,
-   67,
-   54,
-   80,
-   75,
-   72,
-   103,
-   52,
-   132,
-   59,
-   62
-  ],
-  "luonnehdinta": "Tammikuu on kylmin kuukausi keskilämmöllä 0,4 astetta, ja heinä- ja elokuu ovat lämpimimmät 22,6 asteella. Toukokuusta syyskuuhun keskilämpö on 15,7–22,6 astetta. Sadetta tulee ympäri vuoden, vuosisadanta on noin 840 mm."
+  "keskilampo": [1.4, 3, 7.4, 12.2, 16.7, 20.6, 22.2, 21.8, 16.7, 11.7, 6.8, 1.9],
+  "ylin": [5, 8, 13, 18, 22, 26, 28, 28, 23, 17, 11, 5],
+  "alin": [-2, -1, 3, 7, 11, 15, 16, 16, 12, 8, 3, -1],
+  "sade": [46, 45, 48, 61, 77, 91, 80, 86, 104, 89, 87, 62],
+  "lahde": {
+   "nimi": "en-Wikipedia, ilmastotaulukko",
+   "kausi": "1991–2020"
+  },
+  "luonnehdinta": "Tammikuu on kylmin kuukausi keskilämmöllä 1,4 astetta, ja heinäkuu lämpimin 22,2 asteella. Toukokuusta syyskuuhun keskilämpö on 16,7–22,2 astetta. Sadetta tulee ympäri vuoden, yhteensä noin 880 millimetriä, ja sateisin kuukausi on syyskuu (104 mm)."
  },
  "ehdotukset": {
   "lentoasema": "Zagreb Franjo Tuđman (ZAG)",

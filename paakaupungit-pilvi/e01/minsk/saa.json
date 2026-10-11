@@ -1,1 +1,10 @@
-{"lat":53.9,"lon":27.56,"keskilampo":[-3.7,-3.4,0.1,5.5,11.5,17.3,18.9,18.6,13.3,7.5,1.8,-0.5],"sade":[26,31,38,44,73,76,55,100,61,63,44,31]}
+{
+ "lat": 53.9,
+ "lon": 27.56,
+ "keskilampo": [-4.2,-3.6,0.7,7.6,13.4,17.1,19.1,18.2,12.7,6.7,1.4,-2.6],
+ "ylin": [-2,-1,5,13,19,22,24,24,18,10,4,-1],
+ "alin": [-6,-6,-3,3,8,12,14,13,9,4,0,-4],
+ "sade": [47,40,41,43,66,79,97,71,51,55,49,47],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Minsk","revisio":1378278308,"taulukko":"Climate data for Minsk (1991–2020 normals, extremes 1887–present)","lahteet":"Source 1: Pogoda.ru.net | Source 2: Belarus Department of Hydrometeorology (percent sun from 1938, 1940, and 1945–2000), NOAA","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":686,"luettu":"2026-10-11","huomiot":[]}
+}

@@ -1,1 +1,10 @@
-{"lat":42,"lon":21.43,"keskilampo":[1.4,3.9,7.6,12.5,17.4,20.9,23.8,25.1,20.5,15.1,7.6,3.6],"sade":[32,41,63,84,36,51,22,36,19,42,31,49]}
+{
+ "lat": 42,
+ "lon": 21.43,
+ "keskilampo": [0.2,3,7.7,12.4,17.2,21.7,24.1,24.1,19,13.1,6.9,1.8],
+ "ylin": [5,9,15,19,24,29,32,32,27,20,13,6],
+ "alin": [-3,-2,2,6,10,14,16,16,12,8,3,-1],
+ "sade": [30,29,38,40,43,54,38,36,34,49,45,48],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Skopje","revisio":1377591257,"taulukko":"Climate data for Skopje International Airport (1991–2020 normals, extremes 1949–present)","lahteet":"Source 1: World Meteorological Organization (precipitation days) | Source 2: NOAA (sun, 1961–1990), UHMR (extremes, 1951–present)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":484,"luettu":"2026-10-11","huomiot":[]}
+}

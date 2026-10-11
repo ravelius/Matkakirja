@@ -1,1 +1,10 @@
-{"lat":42.44,"lon":19.26,"keskilampo":[2.7,4.9,8.7,13.3,18.3,21.1,25.4,26,21.6,15.7,9.7,6.3],"sade":[83,146,215,126,62,79,21,63,181,360,128,229]}
+{
+ "lat": 42.44,
+ "lon": 19.26,
+ "keskilampo": [6.6,8,11.4,15.3,20.2,24.8,27.8,28.2,22.7,17.6,12,7.7],
+ "ylin": [11,13,16,21,26,31,34,35,28,23,17,12],
+ "alin": [2,3,6,10,15,19,22,22,17,12,7,4],
+ "sade": [165,164,164,136,98,60,36,54,147,176,261,232],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Podgorica","revisio":1377382364,"taulukko":"Climate data for Podgorica (1991–2020, extremes 1947–present)","lahteet":"Source 1: National Oceanic and Atmospheric Administration | Source 2: Hydrological and Meteorological Service of Montenegro","keskilampo":"(ylin + alin) / 2: taulukossa ei Daily mean -riviä","sade":"Average precipitation mm (inches)","vuosisade":1693,"luettu":"2026-10-11","huomiot":[]}
+}

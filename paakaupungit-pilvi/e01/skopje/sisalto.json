@@ -168,7 +168,7 @@
      "selite": "Mustafa-pasan moskeija valmistui 1492, ja sen kupolin halkaisija on noin 16 metriä.",
      "lahde": "Cacar60, Wikimedia Commons (CC BY 4.0)"
     },
-    "kappale": "Skopje on Pohjois-Makedonian pääkaupunki ja suurin kaupunki, ja se on maan poliittinen, taloudellinen ja kulttuurinen keskus. Historiallinen ydin on kävelymatkan päässä: Kivisilta, Makedonia-aukio, Vanha basaari ja Kale ovat lähellä toisiaan Vardarin molemmin puolin. Pääasema ja linja-autoasema ovat samassa kompleksissa, josta Makedonia-aukiolle on noin 15 minuutin kävely. Ilmasto on kostea subtrooppinen, ja kesät ovat kuumia ja suhteellisen kuivia.",
+    "kappale": "Skopje on Pohjois-Makedonian pääkaupunki ja suurin kaupunki, ja se on maan poliittinen, taloudellinen ja kulttuurinen keskus. Historiallinen ydin on kävelymatkan päässä: Kivisilta, Makedonia-aukio, Vanha basaari ja Kale ovat lähellä toisiaan Vardarin molemmin puolin. Pääasema ja linja-autoasema ovat samassa kompleksissa, josta Makedonia-aukiolle on noin 15 minuutin kävely. Ilmasto on kostea subtrooppinen, ja kesät ovat kuumia.",
     "artikkeli": {
      "nimi": "Matkailijan Skopje",
      "taitto": "opas",
@@ -208,7 +208,7 @@
       },
       {
        "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Kuukausinormaalien mukaan tammikuu on kylmin (keskilämpö 1,4 astetta) ja elokuu lämpimin (25,1 astetta). Kevät on sateisin vuodenaika: huhtikuussa sataa keskimäärin 84 mm, kun syyskuussa vain 19 mm. Ilmasto on kostea subtrooppinen ja vuoden keskilämpötila 12,6 astetta; kesät ovat pitkiä, kuumia ja suhteellisen kuivia ja talvi lyhyt, kylmä ja märkä. Kevät ja syksy ovat 15–24 asteen kausia."
+       "teksti": "Tammikuu on kylmin kuukausi (keskilämpö 0,2 astetta) ja heinä- ja elokuu lämpimimmät (24,1 astetta). Sadetta tulee vähän, noin 480 millimetriä vuodessa; eniten sataa kesäkuussa (54 mm) ja vähiten helmikuussa (29 mm). Ilmasto on kostea subtrooppinen ja vuoden keskilämpötila 12,6 astetta; kesät ovat pitkiä ja kuumia ja talvet lyhyitä ja kylmiä. Huhti- ja lokakuussa päivän ylin lämpötila on keskimäärin noin 20 astetta."
       }
      ],
      "matkailu": {
@@ -460,35 +460,15 @@
  "saatiedot": {
   "lat": 42,
   "lon": 21.43,
-  "keskilampo": [
-   1.4,
-   3.9,
-   7.6,
-   12.5,
-   17.4,
-   20.9,
-   23.8,
-   25.1,
-   20.5,
-   15.1,
-   7.6,
-   3.6
-  ],
-  "sade": [
-   32,
-   41,
-   63,
-   84,
-   36,
-   51,
-   22,
-   36,
-   19,
-   42,
-   31,
-   49
-  ],
-  "luonnehdinta": "Skopjessa tammikuun keskilämpö on 1,4 ja elokuun 25,1 astetta, joten talvet ovat kylmiä ja kesät lämpimiä. Kevät on sateisin vuodenaika: huhtikuussa sataa keskimäärin 84 mm, kun syyskuussa vain 19 mm. Vuodessa sadetta kertyy yhteensä 506 mm."
+  "keskilampo": [0.2, 3, 7.7, 12.4, 17.2, 21.7, 24.1, 24.1, 19, 13.1, 6.9, 1.8],
+  "ylin": [5, 9, 15, 19, 24, 29, 32, 32, 27, 20, 13, 6],
+  "alin": [-3, -2, 2, 6, 10, 14, 16, 16, 12, 8, 3, -1],
+  "sade": [30, 29, 38, 40, 43, 54, 38, 36, 34, 49, 45, 48],
+  "lahde": {
+   "nimi": "en-Wikipedia, ilmastotaulukko",
+   "kausi": "1991–2020"
+  },
+  "luonnehdinta": "Skopjessa tammikuun keskilämpö on 0,2 astetta ja heinä- ja elokuun 24,1 astetta, joten talvet ovat kylmiä ja kesät kuumia. Sadetta kertyy vuodessa vain noin 480 millimetriä, eniten kesäkuussa (54 mm) ja vähiten helmikuussa (29 mm)."
  },
  "ehdotukset": {
   "lentoasema": "Skopje International Airport (SKP)",
@@ -497,7 +477,7 @@
    "Nostojen T2, T3 ja T4 wiki-kentissä on käytetty varmoja otsikoita (1963 Skopje earthquake, Skopje, Old Bazaar, Skopje), koska Nerezin, Ishak Beyn ja nykytaiteen museon omia artikkeleita ei voitu tarkistaa.",
    "Konteksti.json kuvaa Matkan kanjonin luolien 20–176 m pituuksina, en-Wikipedian mukaan ne ovat syvyyksiä.",
    "Oppaan matkustusturvallisuutta ei tarkistettu um.fi:stä eikä Wikivoyagesta (ei saatu); oppaassa ei väitetä mitään poikkeavaa. Scupin bussiyhteys jätettiin pois vanhenevana tietona.",
-   "Sademaksimi: fi-Wikipedia sanoo toukokuun, saa.json huhtikuun (84 mm); teksteissä käytetty saa.json:n lukuja.",
+   "Säärivi päivitetty 11.10.2026 (Päätoimittaja): Skopjen lentoaseman normaalit 1991–2020 en-Wikipedian ilmastotaulukosta (WMO). Sateisin kuukausi on kesäkuu (54 mm); vanhan Open-Meteo-otoksen huhtikuun 84 mm poistettu, samoin ristiriitaiset \"kuivat kesät\" ja \"märkä talvi\".",
    "Valokuvaksi ei löytynyt PD-vedosta (1900 tai aiemmin, vähintään 1200 px); päätiedosto on nykykuva eikä uusi-kenttää ole. Kuvien Unknown author -tekijä on Commonsin Artist-kentän mukainen."
   ]
  }

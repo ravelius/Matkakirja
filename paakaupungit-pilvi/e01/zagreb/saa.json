@@ -1,1 +1,10 @@
-{"lat":45.81,"lon":15.98,"keskilampo":[0.4,3.9,6.1,11.9,15.7,19.6,22.6,22.6,18.1,12.4,7.2,3.1],"sade":[27,43,67,54,80,75,72,103,52,132,59,62]}
+{
+ "lat": 45.81,
+ "lon": 15.98,
+ "keskilampo": [1.4,3,7.4,12.2,16.7,20.6,22.2,21.8,16.7,11.7,6.8,1.9],
+ "ylin": [5,8,13,18,22,26,28,28,23,17,11,5],
+ "alin": [-2,-1,3,7,11,15,16,16,12,8,3,-1],
+ "sade": [46,45,48,61,77,91,80,86,104,89,87,62],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Zagreb","revisio":1379425330,"taulukko":"Climate data for Zagreb Maksimir (1991–2020, extremes 1861–present)","lahteet":"Source 1: Croatian Meteorological and Hydrological Service | Source 2: Weather Atlas","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":876,"luettu":"2026-10-11","huomiot":[]}
+}

@@ -1,1 +1,10 @@
-{"lat":48.15,"lon":17.11,"keskilampo":[-0.8,2.7,5.1,11.1,14.8,19,22.4,21.9,17.4,11.3,6.3,2.3],"sade":[27,30,63,43,68,104,33,80,50,74,38,42]}
+{
+ "lat": 48.15,
+ "lon": 17.11,
+ "keskilampo": [0.3,1.9,6.1,11.7,16.2,20.2,22,21.5,16.2,10.7,5.7,1.1],
+ "ylin": [3,6,11,18,22,26,28,28,22,16,9,4],
+ "alin": [-3,-2,2,6,11,14,16,16,11,6,3,-1],
+ "sade": [37,33,37,36,59,59,62,61,59,44,46,43],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Bratislava","revisio":1376810519,"taulukko":"Climate data for Bratislava Airport (1991–2020 normals, extremes 1951–present)","lahteet":"Source 1: World Meteorological Organisation | Source 2: SHMI (extremes, 1951–present)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":576,"luettu":"2026-10-11","huomiot":[]}
+}

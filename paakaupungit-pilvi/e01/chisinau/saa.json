@@ -1,1 +1,10 @@
-{"lat":47.02,"lon":28.84,"keskilampo":[-2.3,0.3,5.1,10.4,14.8,20.1,22.7,23.5,17.4,12.4,5.5,1.3],"sade":[14,22,47,26,70,86,28,30,47,41,22,32]}
+{
+ "lat": 47.02,
+ "lon": 28.84,
+ "keskilampo": [-1.8,-0.2,4.5,11,16.8,20.7,22.9,22.6,17,10.8,4.8,-0.2],
+ "ylin": [1,3,9,16,22,26,28,28,22,16,8,3],
+ "alin": [-4,-3,1,6,12,16,18,18,13,7,2,-2],
+ "sade": [36,31,35,39,54,65,67,49,48,47,43,41],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Chișinău","revisio":1378536692,"taulukko":"Climate data for Chișinău (1991–2020, extremes 1886–present)","lahteet":"Source 1: Pogoda.ru.net | Source 2: NOAA (sun, 1991–2020)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":555,"luettu":"2026-10-11","huomiot":[]}
+}

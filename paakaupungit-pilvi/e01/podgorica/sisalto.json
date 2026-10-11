@@ -90,7 +90,7 @@
   }
  ],
  "tiedot": [
-  "Podgorican vuosisademäärä on noin 1 660 mm, ja lähteen mukaan se on Euroopan sateisin pääkaupunki.",
+  "Podgoricassa sataa vuodessa noin 1 700 millimetriä, enemmän kuin missään muussa Euroopan pääkaupungissa.",
   "Millennium-sillan pylon kohoaa 57 metriä tien yläpuolelle, ja siltaa kannattelee 12 köyttä, kun 24 muuta kiinnittyy vastapainoihin.",
   "Sahat kula on yksi harvoista ottomaanien ajan rakennuksista, jotka selvisivät Podgorican pommituksista toisessa maailmansodassa."
  ],
@@ -162,7 +162,7 @@
      "selite": "Sahat kula on 19 metriä korkea kivitorni, joka seisoi jo ennen Montenegron aikaa.",
      "lahde": "Liridon, Wikimedia Commons (CC BY-SA 4.0)"
     },
-    "kappale": "Podgorica on keskikokoinen kaupunki, jonka nähtävyydet ovat kuljettavissa jalan, kun majoitus on keskustassa tai joen toisella puolella. Lentoasema TGD on noin kymmenen kilometriä etelään, ja matka keskustaan kestää autolla alle 15 minuuttia. Valuutta on euro. Vanha ja uusi kaupunki ovat kävelymatkan päässä toisistaan, ja kahviloita riittää kävelykaduilla. Mallinnettujen kuukausinormaalien mukaan kesä on kuuma ja heinäkuu on kuivin.",
+    "kappale": "Podgorica on keskikokoinen kaupunki, jonka nähtävyydet ovat kuljettavissa jalan, kun majoitus on keskustassa tai joen toisella puolella. Lentoasema TGD on noin kymmenen kilometriä etelään, ja matka keskustaan kestää autolla alle 15 minuuttia. Valuutta on euro. Vanha ja uusi kaupunki ovat kävelymatkan päässä toisistaan, ja kahviloita riittää kävelykaduilla. Kesä on kuuma, ja heinäkuu on vuoden kuivin kuukausi.",
     "artikkeli": {
      "nimi": "Matkailijan Podgorica",
      "taitto": "opas",
@@ -202,7 +202,7 @@
       },
       {
        "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Mallinnettujen kuukausinormaalien mukaan tammikuun keskilämpötila on noin 2,7 astetta, touko- ja kesäkuussa 18–21 astetta ja elokuussa noin 26 astetta. Sadetta tulee vuodessa lähteen mukaan noin 1 660 millimetriä, ja heinäkuu on kuivin (21 mm). Lämmin ja suhteellisen kuiva ajanjakso on touko–kesäkuu.",
+       "teksti": "Tammikuussa päivän ylin lämpötila on keskimäärin 11 astetta ja yön alin 2 astetta, ja heinä–elokuussa päivät lämpenevät keskimäärin 34–35 asteeseen. Sadetta tulee vuodessa noin 1 700 millimetriä, eniten marraskuussa (261 mm), ja heinäkuu on kuivin (36 mm). Touko- ja kesäkuu ovat lämpimiä ja suhteellisen kuivia, keskilämpö 20–25 astetta.",
        "kuva": {
         "tiedosto": "Moracha.JPG",
         "selite": "Morača virtaa kaupungin läpi kanjonissa, jonka yli kulkee Millennium-silta.",
@@ -245,7 +245,7 @@
        },
        {
         "otsikko": "Sää",
-        "teksti": "Mallinnettujen kuukausinormaalien mukaan kuivin kuukausi on heinäkuu ja kuumimmat heinä- ja elokuu."
+        "teksti": "Kuivin kuukausi on heinäkuu, ja kuumimmat ovat heinä- ja elokuu."
        },
        {
         "otsikko": "Taksi",
@@ -432,35 +432,15 @@
  "saatiedot": {
   "lat": 42.44,
   "lon": 19.26,
-  "keskilampo": [
-   2.7,
-   4.9,
-   8.7,
-   13.3,
-   18.3,
-   21.1,
-   25.4,
-   26,
-   21.6,
-   15.7,
-   9.7,
-   6.3
-  ],
-  "sade": [
-   83,
-   146,
-   215,
-   126,
-   62,
-   79,
-   21,
-   63,
-   181,
-   360,
-   128,
-   229
-  ],
-  "luonnehdinta": "Mallinnettujen kuukausinormaalien mukaan Podgoricassa on talvella leuto, sillä tammikuun keskilämpötila on noin 2,7 astetta. Kesä on kuuma, ja lämpimin kuukausi on elokuu noin 26 asteella. Sadetta tulee vuodessa lähteen mukaan noin 1 660 millimetriä, ja kuivin kuukausi on heinäkuu (21 mm)."
+  "keskilampo": [6.6, 8, 11.4, 15.3, 20.2, 24.8, 27.8, 28.2, 22.7, 17.6, 12, 7.7],
+  "ylin": [11, 13, 16, 21, 26, 31, 34, 35, 28, 23, 17, 12],
+  "alin": [2, 3, 6, 10, 15, 19, 22, 22, 17, 12, 7, 4],
+  "sade": [165, 164, 164, 136, 98, 60, 36, 54, 147, 176, 261, 232],
+  "lahde": {
+   "nimi": "en-Wikipedia, ilmastotaulukko",
+   "kausi": "1991–2020"
+  },
+  "luonnehdinta": "Podgoricassa talvi on leuto: tammikuussa päivän ylin lämpötila on keskimäärin 11 astetta ja yön alin 2 astetta. Kesä on kuuma, ja elokuussa päivät lämpenevät keskimäärin 35 asteeseen. Sadetta tulee vuodessa noin 1 700 millimetriä, eniten marraskuussa (261 mm) ja vähiten heinäkuussa (36 mm)."
  },
  "ehdotukset": {
   "lentoasema": "Podgorican lentoasema (TGD)",
@@ -470,7 +450,7 @@
    "Oppaan ruokajakso kuvaton: ei sopivaa kuvaa.",
    "Vanhan sillan ikä on epävarma (roomalaisaikainen, uusittu myöhemmin); sijainti Wikivoyagen Skaline-kohteesta, likimääräinen.",
    "Macilla tarkistettavaksi: vanhan sillan koordinaatti (42.43951 / 19.25921) ja Ribnican linnoituksen koordinaatti (42.439 / 19.25913) ovat varmistamattomia arvioita, jotka täytyy tarkistaa; varmista Commonsin Starimost.JPG-/Depedogen.JPG-kuvien tai Wikidatan (Adži-paša-silta, Ribnican linnoitus) koordinaateista ennen julkaisua, ja korvaa, jos ero on yli 50 m.",
-   "Sää luettu saa.json:sta (mallinnettu); Wikivoyagen ilmastotaulu poikkeaa (sateisin marraskuu), jätetty pois.",
+   "Säärivi päivitetty 11.10.2026 (Päätoimittaja): Podgorican sääaseman normaalit 1991–2020 en-Wikipedian ilmastotaulukosta (NOAA, Montenegron sääpalvelu); WMO:n 1991–2020-normaalit täsmäävät. Taulukossa ei ole vuorokauden keskilämpöä, joten keskilampo = (ylin + alin) / 2, ja teksteissä käytetään ylin- ja alin-lukuja. Vanha Open-Meteo-otos (tammikuu 2,7 astetta, lokakuu 360 mm) poistettu. \"Euroopan sateisin pääkaupunki\": en:Podgorica (1 659 mm, toisena Ljubljana 1 362 mm) ja WMO 1991–2020 (1 693 mm).",
    "Matkustusturvallisuus tarkistamatta: um.fi ei ollut luettavissa.",
    "Katedraalikuvauksessa käytetty kiertoilmausta (tarkistimen sanatörmäys); Venäjän patriarkka jätetty pois nykypolitiikan välttämiseksi."
   ]
