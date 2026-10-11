@@ -3923,10 +3923,16 @@ const kohdistus = await vihjeSivu.evaluate(async () => {
   const dy = Math.round(kohde.y - (laatikko.top + laatikko.height / 2));
   kehys.style.translate = `${dx}px ${dy}px`;
   await asettuu(vihje);
+  // Diagnoosi (CI): mikä elementti on napautuspisteessä siirron jälkeen.
+  const pisteessa = document.elementFromPoint(kohde.x, kohde.y);
+  const kuplassa = Boolean(pisteessa && vihje.contains(pisteessa));
+  const pisteNimi = pisteessa ? `${pisteessa.tagName.toLowerCase()}.${[...pisteessa.classList].join('.')}` : null;
+  const kr = vihje.getBoundingClientRect();
+  const kuplaRuutu = [Math.round(kr.left), Math.round(kr.top), Math.round(kr.right), Math.round(kr.bottom)];
   // Mittari: pääseekö napautus kuplan ohi dokumenttiin asti.
   window.__kuplanOhi = 0;
   document.addEventListener('click', () => { window.__kuplanOhi += 1; });
-  return { x: kohde.x, y: kohde.y, vaihe: window.matkakirja.game.phase };
+  return { x: kohde.x, y: kohde.y, vaihe: window.matkakirja.game.phase, kuplassa, pisteNimi, kuplaRuutu };
 });
 if (kohdistus.virhe) {
   vaadi('kuplan alle löytyy kohdemerkki', false, kohdistus.virhe);
@@ -3951,7 +3957,8 @@ if (kohdistus.virhe) {
   });
   vaadi('kuplan napautus ei vuoda kartalle',
     vuoto.ohi === 0 && vuoto.haipyi === true && vuoto.vaihe === kohdistus.vaihe,
-    JSON.stringify({ ...vuoto, alku: kohdistus.vaihe }));
+    JSON.stringify({ ...vuoto, alku: kohdistus.vaihe, piste: [kohdistus.x, kohdistus.y], kuplassa: kohdistus.kuplassa,
+      pisteNimi: kohdistus.pisteNimi, kuplaRuutu: kohdistus.kuplaRuutu }));
 }
 
 /*
