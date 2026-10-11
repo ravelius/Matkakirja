@@ -25834,7 +25834,7 @@ body.fokuspohja .toimintorivi-liuku {
 }
 
 .fokus-maataulu-sija { color: rgba(74, 52, 33, 0.6); font-size: 0.7rem; }
-/* Pääkaupunkipisteen Lue lisää (lehden .wiki-btn) rivin perusviivalle, kuten .arrival-card .wiki-btn. */
+/* Pääkaupunkipisteen Lue kaupunkilehti → (lehden .wiki-btn) rivin perusviivalle, kuten .arrival-card .wiki-btn. */
 .fokus-maataulu-arvo .wiki-btn { margin-top: 0; }
 
 /*

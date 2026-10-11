@@ -1,7 +1,7 @@
 /*
  * Pääkaupunkipisteiden lehdet (PT 11.10.2026, pääkaupunkien kytkentä): pilvierien e01–e02 kaupunkilehti,
  * kohdekartta ja esittely on avaimistettu pisteen id:llä (js/packs/paakaupungit.js), ja maakortin
- * pääkaupunkirivi avaa esittelyn (js/fokusmitat.js paakaupunkipisteenLehti).
+ * pääkaupunkirivi avaa koko lehden (js/fokusmitat.js paakaupunkipisteenLehti, openArrival).
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
