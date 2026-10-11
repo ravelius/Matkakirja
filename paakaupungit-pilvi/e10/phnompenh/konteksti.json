@@ -1,0 +1,37 @@
+{
+ "id": "phnompenh",
+ "era": "e10",
+ "nimi": "Phnom Penh",
+ "nimiAlkukieli": "ភ្នំពេញ (Phnum Pénh)",
+ "maa": "KHM",
+ "maanNimi": "Kambodža",
+ "asema": "pääkaupunki",
+ "lat": 11.5696,
+ "lon": 104.921,
+ "wikidata": "Q1850",
+ "kevytSisalto": {
+  "kuvaus": "Phnom Penh on Kambodžan pääkaupunki ja suurin kaupunki, joka sijaitsee Tonlé Sap -joen ja Mekongin yhtymäkohdassa. Nimi tulee Wat Phnom -temppelikukkulasta ja legendan rouva Penhistä. Kaupunki on maan poliittinen, taloudellinen ja kulttuurinen keskus sekä monarkian kotipaikka: kuningas asuu Kuninkaanpalatsissa. Keskustassa on yhä ranskalaisajan rakennuksia.",
+  "tunnusrakennukset": [
+   "Kuninkaanpalatsi (rakennettu 1860-luvulla, Hopeapagodi sen alueella)",
+   "Wat Phnom (kukkulatemppeli, nykyinen asu 1926)",
+   "Keskusmarkkinat Phsar Thmei (1937, Art Deco)",
+   "Kansallismuseo (1920)"
+  ],
+  "asukkaat": {
+   "arvo": 2281951,
+   "vuosi": 2019,
+   "lahde": "National Institute of Statistics (NIS) Cambodia, General Population Census of the Kingdom of Cambodia 2019, National Report on Final Census Results (2021): Phnom Penh 2 281 951 (miehet 1 105 673, naiset 1 176 278; 14,7 % koko väestöstä). Alustava luku oli 2 129 371.",
+   "linkki": "https://www.nis.gov.kh/nis/Census2019/Final%20General%20Population%20Census%202019-English.pdf"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Phnom Penh",
+  "maanAvain": "Kambodža",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

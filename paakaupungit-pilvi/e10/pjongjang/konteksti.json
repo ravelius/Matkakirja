@@ -1,0 +1,37 @@
+{
+ "id": "pjongjang",
+ "era": "e10",
+ "nimi": "Pjongjang",
+ "nimiAlkukieli": "평양 (P'yŏngyang)",
+ "maa": "PRK",
+ "maanNimi": "Pohjois-Korea",
+ "asema": "pääkaupunki",
+ "lat": 39.0167,
+ "lon": 125.7475,
+ "wikidata": "Q18808",
+ "kevytSisalto": {
+  "kuvaus": "Pjongjang on Pohjois-Korean pääkaupunki ja suurin kaupunki, joka sijaitsee Taedong-joen varrella. Kaupunki on hallinnollisesti maakunnan veroinen yksikkö ja maan hallinnon ja puolueen päätöksenteon keskus. Alueella on ollut asutusta ja pääkaupunkeja jo Goguryeon ajalta, ja vanhoja portteja ja paviljonkeja on säilynyt tai korjattu joen varrelle.",
+  "tunnusrakennukset": [
+   "Taedongmun (itäportti, nykyinen rakennus 1635, kansallisaarre)",
+   "Pubyok-paviljonki (Pubyongnu) Moran-kukkulalla",
+   "Pjongjangin linnoitus (Goguryeo-ajan muurit)",
+   "Ryongwang-paviljonki (Ryongwangjong)"
+  ],
+  "asukkaat": {
+   "arvo": 3255288,
+   "vuosi": 2008,
+   "lahde": "Central Bureau of Statistics DPR Korea, 2008 Population Census National Report (2009; UNFPA tuki): Pjongjangin kaupunki yhteensä 3 255 288 (miehet 1 549 778, naiset 1 705 510). YK:n alustava käsilaskentataulukko antoi 3 255 388; lopullinen raportti korvaa sen.",
+   "linkki": "https://dprk.un.org/en/download/1081/10163"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Pjongjang",
+  "maanAvain": "Pohjois-Korea",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

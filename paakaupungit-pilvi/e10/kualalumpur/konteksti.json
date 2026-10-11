@@ -1,0 +1,88 @@
+{
+ "id": "kualalumpur",
+ "era": "e10",
+ "nimi": "Kuala Lumpur",
+ "nimiAlkukieli": "Kuala Lumpur",
+ "maa": "MYS",
+ "maanNimi": "Malesia",
+ "asema": "pääkaupunki",
+ "lat": 3.1478,
+ "lon": 101.6953,
+ "wikidata": "Q1865",
+ "kevytSisalto": {
+  "kuvaus": "Kuala Lumpur on Malesian pääkaupunki ja suurin kaupunki, ja se kasvoi 1800-luvun puolivälissä tinakaivosten kauppapaikasta valtion talous- ja kulttuurikeskukseksi. Kaupunki sijaitsee kahden joen yhtymäkohdassa, ja sen ympärille on kasvanut tiheästi asuttu Klang-laakson kaupunkialue. Vanhassa keskustassa siirtomaa-ajan hallintorakennukset ja kiinalaiset sekä intialaiset temppelit muodostavat vastakohdan nykyaikaiselle pilvenpiirtäjäsiluetille.",
+  "tunnusrakennukset": [
+   "Sultan Abdul Samad -rakennus (1897, maurilaistyylinen entinen hallintorakennus Merdeka-aukion laidalla)",
+   "Masjid Jamek (1909, moskeija jokien yhtymäkohdassa)",
+   "Kuala Lumpurin rautatieasema (1910)",
+   "Petronas-tornit (1998, nykyarkkitehtuuria; ei kuvamotiivina)"
+  ],
+  "asukkaat": {
+   "arvo": 1982112,
+   "vuosi": 2020,
+   "lahde": "Malesian tilastoviranomainen (DOSM), väestö- ja asuntolaskenta MyCensus 2020 (1.-7.7.2020), Kuala Lumpurin liittovaltioalue (DOSM Kawasanku -paneeli, 'Data as of MyCensus 2020'). Kokonaisväestö 32,4 milj.",
+   "linkki": "https://open.dosm.gov.my/dashboard/kawasanku/W.P.%20Kuala%20Lumpur"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Kallo löytyi Helvetin kaivannosta",
+    "Palatsi rakennettiin kirjan mukaan",
+    "Idän vanhin hollantilaistalo",
+    "Hullu Ridley ja kalanruotoviilto"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Riisi keitetään kookosmaidossa",
+    "Liemi tehdään happamaksi",
+    "Tee vedetään astiasta toiseen",
+    "Kuninkaalla on kaksisataa sukua"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Kukka ilman vartta ja lehtiä",
+    "Orpokoti orankien poikasille",
+    "Maailman suurin luolasali",
+    "Nenä on äänenvahvistin"
+   ]
+  },
+  {
+   "id": "kuvataide",
+   "nimi": "Kuvataide",
+   "nostot": [
+    "Kuvio maalataan siveltimellä",
+    "Leija nousee kuunsirppinä",
+    "Varjot heräävät lampun edessä",
+    "Kuvio nähdään ensin unessa"
+   ]
+  },
+  {
+   "id": "rakennukset",
+   "nimi": "Rakennukset",
+   "nostot": [
+    "Silta nostettiin kolmessa päivässä",
+    "Kello löi ensi kerran 1897",
+    "Katu kulkee talojen läpi",
+    "Reiät ja urat sahataan valmiiksi"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Kuala Lumpur",
+  "maanAvain": "Malesia",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

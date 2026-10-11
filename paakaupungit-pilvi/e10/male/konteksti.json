@@ -1,0 +1,54 @@
+{
+ "id": "male",
+ "era": "e10",
+ "nimi": "Malé",
+ "nimiAlkukieli": "Malé (dhivehiksi Maale)",
+ "maa": "MDV",
+ "maanNimi": "Malediivit",
+ "asema": "pääkaupunki",
+ "lat": 4.175,
+ "lon": 73.5083,
+ "wikidata": "Q9347",
+ "kevytSisalto": {
+  "kuvaus": "Malé on Malediivien pääkaupunki ja maan tiheimmin asuttu kaupunki, joka täyttää lähes koko pienen korallisaarensa muutaman neliökilometrin alueella. Saarelle on ahtautunut yli satatuhatta ihmistä, ja uutta asuinaluetta on rakennettu viereiselle tekosaarelle Hulhumaléen. Kaupungin hallinto, kauppa ja kalasatama sijaitsevat saaren sisällä, ja lentokentälle Hulhulén saarelle pääsee sillan kautta.",
+  "tunnusrakennukset": [
+   "Hukuru Miskiy (vanha perjantaimoskeija, 1600-luku)",
+   "Islamic Centre (Grand Friday Mosque)",
+   "Sultanin puisto (Sultan Park)",
+   "Malén kalatori ja satama"
+  ],
+  "asukkaat": {
+   "arvo": 137238,
+   "vuosi": 2022,
+   "lahde": "Maldives Bureau of Statistics (MBS), Statistical Yearbook 2024, taulukko 1.5 'Population, land area, population density... by locality' (väestölaskenta 2022): Malé asuinväestö 137 238 (maldiivilaisia 100 614), pinta-ala 205,54 ha. Luku sisältää vain Malén neljä aluetta (ward); suur-Malé-alue (Malé + Hulhumalé + Villimalé + Hulhulé) on 211 908 (MBS, Population Dynamics in the Maldives).",
+   "linkki": "https://statisticsmaldives.gov.mv/yearbook/2024/wp-content/uploads/sites/11/2024/06/1.5.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Malediivit on Intian valtamerellä, Intian ja Sri Lankan lounaispuolella sijaitseva saarivaltio, joka muodostuu kymmenien atollien tuhansista koralliriutoista ja pienistä saarista. Maan maapinta-ala on vain noin 300 neliökilometriä, ja korkein kohta on vain muutaman metrin merenpinnan yläpuolella, minkä vuoksi ilmastonmuutoksen aiheuttama merenpinnan nousu on maalle erityinen uhka. Talous nojaa matkailuun ja kalastukseen, ja pienet lomasaaret ovat monelle ulkomaiselle matkailijalle maan tunnetuin puoli. Malediivit itsenäistyi Britanniasta vuonna 1965 ja on ollut tasavalta vuodesta 1968.",
+  "genetiivi": "Malediivien",
+  "kielet": [
+   {
+    "kieli": "dhivehi (malediivi)",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "englanti",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Malediivien rufiyaa",
+   "koodi": "MVR"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Malé",
+  "maanAvain": "Malediivit",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

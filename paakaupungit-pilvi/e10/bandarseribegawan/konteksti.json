@@ -1,0 +1,58 @@
+{
+ "id": "bandarseribegawan",
+ "era": "e10",
+ "nimi": "Bandar Seri Begawan",
+ "nimiAlkukieli": "Bandar Seri Begawan",
+ "maa": "BRN",
+ "maanNimi": "Brunei",
+ "asema": "pääkaupunki",
+ "lat": 4.9167,
+ "lon": 114.9167,
+ "wikidata": "Q9279",
+ "kevytSisalto": {
+  "kuvaus": "Bandar Seri Begawan on Brunein pääkaupunki ja hallinnon, kaupan ja uskonnollisen elämän keskus Brunei-joen rannalla. Kaupungin sydämessä on Kampong Ayer, vuosisatojen ikäinen paaluille rakennettu vesikylä, jossa asuu kymmeniä tuhansia ihmisiä ja jonne kuljetaan vesitakseilla. Kaupunki on vehreä ja rauhallinen, ja sen laidoilla on sademetsäpuistoja kuten Tasek Lama.",
+  "tunnusrakennukset": [
+   "Kampong Ayer (vesikylä)",
+   "Omar Ali Saifuddien -moskeija",
+   "Jame' Asr Hassanil Bolkiah -moskeija",
+   "Tasek Lama -virkistyspuisto"
+  ],
+  "asukkaat": {
+   "arvo": 82437,
+   "vuosi": 2021,
+   "lahde": "Brunein talous- ja tilastoviraston (DEPS) väestölaskenta 2021 (maan kokonaisväestö 440 715); Bandar Seri Begawanin kunta-alueen luku on laskettu DEPS:n mukimkohtaisesta aineistosta ja julkaistu citypopulation.de-sivustolla (toissijainen). DEPS:n omaa kuntataulukkoa ei saatu auki.",
+   "linkki": "https://www.citypopulation.de/en/brunei/cities"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Brunei on pieni, öljyn ja maakaasun varassa vaurastunut valtio Borneon saaren pohjoisrannikolla, kahtena erillisenä osana Malesian Sarawakin osavaltion ympäröimänä. Maata johtaa sulttaani, joka on samalla pääministeri, ja lainsäädännössä on islamilaisia piirteitä. Valtaosa väestöstä asuu pääkaupungin ympäristössä Brunei-Muaran piirikunnassa, ja sisämaassa on laajoja sademetsiä; Temburongin piirikunta on säilynyt lähes koskemattomana. Brunei itsenäistyi Britannian suojelusvallasta vuonna 1984 ja liittyi samana vuonna ASEANiin.",
+  "genetiivi": "Brunein",
+  "kielet": [
+   {
+    "kieli": "malaiji",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "englanti",
+    "asema": "muu"
+   },
+   {
+    "kieli": "kiina (hokkien, hakka, mandariini, kantoni)",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Brunein dollari",
+   "koodi": "BND"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Bandar Seri Begawan",
+  "maanAvain": "Brunei",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

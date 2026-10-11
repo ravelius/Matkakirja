@@ -1,0 +1,88 @@
+{
+ "id": "naypyidaw",
+ "era": "e10",
+ "nimi": "Naypyidaw",
+ "nimiAlkukieli": "နေပြည်တော် (Nay Pyi Taw)",
+ "maa": "MMR",
+ "maanNimi": "Myanmar",
+ "asema": "pääkaupunki",
+ "lat": 19.7475,
+ "lon": 96.115,
+ "wikidata": "Q37400",
+ "kevytSisalto": {
+  "kuvaus": "Naypyidaw on Myanmarin hallinnollinen pääkaupunki, joka rakennettiin tyhjästä 2000-luvun alussa maan keskiosaan, noin 320 km Yangonista pohjoiseen. Kaupunki on pinta-alaltaan valtava mutta harvaan asuttu, ja siellä on leveitä puistoteitä, hallintokortteleita, hotelleja ja suuri pagodi. Kaupungin nimi tarkoittaa suunnilleen kuninkaiden asuinpaikkaa.",
+  "tunnusrakennukset": [
+   "Uppatasanti-pagodi (Shwedagonin pagodin kopio, valmistui 2009)",
+   "Leveät puistotiet ja kaupungin hallintokorttelit (eivät kuvamotiiveina)",
+   "Ngalaik-järvi ja sen ympäristö",
+   "Kansallinen luonnonpuisto ja eläintarha (Naypyidawin eläintarha ja safaripuisto)"
+  ],
+  "asukkaat": {
+   "arvo": 1129322,
+   "vuosi": 2024,
+   "lahde": "Myanmarin väestöosasto (Department of Population), väestölaskenta 30.9.2024, Naypyidawin liittoalue (Union Territory); laskettu väestö ilman arvioita alueilta, joilla laskentaa ei voitu tehdä. Edellinen laskenta 29.3.2014: 1 160 242",
+   "linkki": "https://citypopulation.de/en/myanmar/admin/15__naypyitaw/"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Delfiini, joka ajaa kalat verkkoon",
+    "Tulivuori, jolla on kolmekymmentäseitsemän asukasta",
+    "Järvi, joka putosi maan alle",
+    "Puu, joka tylsyttää veitset"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Tee, joka syödään lautaselta",
+    "Sovinto tarjoillaan lokerolautasesta",
+    "Kalatahna, joka on vanhempi kuin kuningaskunnat",
+    "Nuudelit, jotka tulivat vuorilta"
+   ]
+  },
+  {
+   "id": "kuvataide",
+   "nimi": "Kuvataide",
+   "nostot": [
+    "Maalaus, joka tehtiin kuivalle seinälle",
+    "Lakkatyö, joka tuli sotasaaliina",
+    "Kuninkaan kuvat ommeltiin sametille",
+    "Maalari, joka pelasti kuninkaan sukulaisen"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Harppu, joka ei koskaan lakannut soimasta",
+    "Sotavangit toivat uuden sävellajin",
+    "Rumpali istuu rumpujen sisällä",
+    "Nukke sai sanoa sen, mistä ihmistä olisi rangaistu"
+   ]
+  },
+  {
+   "id": "kirjallisuus",
+   "nimi": "Kirjallisuus",
+   "nostot": [
+    "Kivi, joka avasi kadonneen kielen",
+    "Kirja, jonka voi pyyhkiä puhtaaksi",
+    "Runo viidestäkymmenestäviidestä kampauksesta",
+    "Ensimmäinen romaani oli Monte-Criston sukua"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Naypyidaw",
+  "maanAvain": "Myanmar",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}
