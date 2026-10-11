@@ -8,7 +8,9 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-1. **NYT (11.10. 00.5x, nollaus 50 %):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261011-yo.md` KOKONAAN ja toimi sen JONOn mukaan:
+1. **NYT (11.10. 13.xx):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261011-paiva.md` KOKONAAN (viestiraja: lähettämättä
+   v47k–n-tunnukset Siirtosepälle + PT-rivit; taustaketjut v47m/n; NavMesh-testi; jono: Olavinlinnan 8. kierros → Pariisi v3).
+1r. **(vanha) 11.10. 00.5x, nollaus 50 %:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261011-yo.md` KOKONAAN ja toimi sen JONOn mukaan:
    Olavinlinna v47f odottaa Siirtosepän pelikuvia (PT kuittaa), Siirtosepän mallivirheet erinä → v47g, ND v5g hyväksytty (LS2 paketoi),
    museo v2g LS2:lla (RP-P-OB-612/-616 vain pyynnöstä), Pariisi v2 LS2:lla. Worktree wt/linnanrakentaja-linna-v45k auki (vientihaara).
 1s. **(vanha) 10.10. 22.1x, nollaus 50 %:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261010-iltayo.md` KOKONAAN. Valmiit: Olavinlinna
