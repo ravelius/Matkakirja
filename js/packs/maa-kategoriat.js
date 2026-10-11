@@ -5864,7 +5864,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Cremonan viuluja ei ole ylitetty',
-          tiedosto: 'Cremona - Museo del violino - Statua di Stradivari.JPG',
+          tiedosto: "Violino Clisbee.jpg",
           teksti: 'Pienessä Cremonan kaupungissa rakennettiin 1600- ja '
             + '1700-luvuilla maailman parhaat viulut, eikä kukaan ole '
             + 'sen jälkeen tehnyt parempia. Antonio Stradivari valmisti '
@@ -5878,7 +5878,7 @@ export const MAA_KATEGORIAT = {
           selite: 'Antonio Stradivari (n. 1644–1737) teki Cremonassa '
             + 'arviolta 1 116 soitinta, joista noin 650 on säilynyt tähän '
             + 'päivään.',
-          lahde: 'Monica Rondoni, Wikimedia Commons (CC BY-SA 4.0)',
+          lahde: "Waltramp, Wikimedia Commons (CC BY-SA 4.0)",
           wiki: 'Antonio Stradivari',
         },
         {
@@ -11469,13 +11469,12 @@ export const MAA_KATEGORIAT = {
           kohteet: [
             {
               nimi: 'Biblioteca Nacional Digital — Os Lusíadas vuoden 1572 painoksena',
-              tiedosto: 'Large hall in the Biblioteca Nacional de Portugal.jpg',
+              tiedosto: "Portret van Luis de Camões, RP-P-1964-507.jpg",
               teksti: 'Portugalin kansalliskirjaston digitaalinen kokoelma '
                 + 'avattiin vuonna 2002, ja ensimmäinen siihen viety teos oli '
                 + 'Luís de Camõesin Os Lusíadas.',
-              selite: 'Biblioteca Nacional de Portugal on Portugalin '
-                + 'kansalliskirjasto.',
-              lahde: 'Threeohsix, Wikimedia Commons (CC BY-SA 4.0)',
+              selite: "Luís de Camões, Os Lusíadas -eepoksen kirjoittaja, 1600-luvun alun kaiverruksessa kirja ja sulkakynä käsissään.",
+              lahde: "Rijksmuseum, Wikimedia Commons (CC0)",
               linkki: 'https://purl.pt/1/1/',
             },
             {

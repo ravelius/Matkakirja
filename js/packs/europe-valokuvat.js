@@ -12,14 +12,11 @@ export const EUROPE_VALOKUVAT = {
   venetsia: {
     lisat: [
       {
-        tiedosto: 'Vaporetto Canal Grande stazione Santa Lucia Venezia.jpg',
+        tiedosto: "0 Venise, Vaporetto naviguant sur le Grand Canal .JPG",
         vuosi: '2016',
-        lahde: 'CC BY-SA 3.0 (Wolfgang Moroder, Commons)',
-        lyhyt: 'Vaporetto Canal Grandella Venetsiassa vuonna 2016.',
-        selite: 'Vaporetto eli vesibussi Canal Grandella Santa Lucian '
-          + 'rautatieaseman kohdalla. Venetsiassa julkinen liikenne kulkee '
-          + 'vettä pitkin, ja matkustajat seisovat keulassa kuten '
-          + 'päiväkirjassa.',
+        lahde: "Jean-Pol GRANDMONT, Wikimedia Commons (CC BY 4.0)",
+        lyhyt: "Vaporetto Canal Grandella, Venetsia",
+        selite: "Vaporetto eli vesibussi Canal Grandella vanhojen palatsien reunustamalla vesiväylällä. Venetsiassa julkinen liikenne kulkee vettä pitkin.",
       },
       {
         tiedosto: '(Venice) Palazzo Emo alla Maddalena - Facade on Canal Grande.jpg',
