@@ -3,6 +3,7 @@
 import { MUUTOKSET } from './muutokset.js';
 import { asetaKehittajanKerroin, kehittajanKerroin } from './kehittajan-voimat.js';
 import { Game } from './game.js';
+import { nollaaLivianEnsikerta } from './livia.js';
 import { UI, korttiPohjalla, puePohjaDialogiksi } from './ui.js';
 import { paneeliPohjalla, puePilleriPaneeliksi } from './pilleri-paneeli.js';
 import { LINSSIT_AVAA_TAPAHTUMA } from './karttaselite.js';
@@ -540,7 +541,7 @@ function attach(game) {
    */
   nollaaSahke();
   ui = new UI(game, {
-    onNewGame: startGame, onChange: saveGame, onJatkaTurvasta: jatkaTurvasta, turvaOlemassa: () => Boolean(lataaTurva()),
+    onNewGame: uusiMatka, onChange: saveGame, onJatkaTurvasta: jatkaTurvasta, turvaOlemassa: () => Boolean(lataaTurva()),
   });
   ui.mount();
   // PILLERIVALIKKO PANEELI-pohjalla (peruttava ?paneeli=vanha): puetaan kerran, nappien kohde on aina nykyinen UI.
@@ -560,6 +561,16 @@ function startGame() {
   if (winnerDialog.open) winnerDialog.close();
   clearSave();
   attach(new Game({ players: [newPlayer()], pack: packById('maailma') }));
+}
+
+/**
+ * Pelaajan valitsema uusi matka (voittoikkunan Uusi peli ja sen sulkeminen): Pulun alku toistuu kuten
+ * ensimmäisellä kerralla (omistaja 11.10.2026, js/livia.js nollaaLivianEnsikerta). Sivun avaus ilman
+ * talletusta kutsuu startGamea suoraan, jottei esittely toistu pelkästä uudelleenlatauksesta.
+ */
+function uusiMatka() {
+  nollaaLivianEnsikerta();
+  startGame();
 }
 
 // --- äänet ------------------------------------------------------------------
@@ -1684,7 +1695,7 @@ turnPillNappi.addEventListener('click', vaihdaValikko);
 // pelaaja on. Kytketään kerran, koska nappi elää pelin ulkopuolella.
 document.getElementById('palaute-kulma').addEventListener('click', () => ui?.naytaPalauteKulmasta());
 document.getElementById('rules-close').addEventListener('click', () => rulesDialog.close());
-document.getElementById('winner-close').addEventListener('click', startGame);
+document.getElementById('winner-close').addEventListener('click', uusiMatka);
 
 // Palvelutyöntekijä tekee pelistä asennettavan ja offline-toimivan.
 // Ohitetaan hiljaisesti, jos sivu on avattu file://-osoitteesta tai hiekkalaatikossa.
@@ -1903,7 +1914,7 @@ if (lehtiPeli) {
   try { localStorage.setItem('matkakirja-kehittaja', '1'); } catch { /* yksityinen tila */ }
   if (ui) ui.destroy();
   nollaaSahke();
-  ui = new UI(pikatiePeli, { onNewGame: startGame, onChange: () => {} });
+  ui = new UI(pikatiePeli, { onNewGame: uusiMatka, onChange: () => {} });
   ui.mount();
   window.matkakirja = { game: pikatiePeli, ui, sfx };
   window.afrikanTahti = window.matkakirja;

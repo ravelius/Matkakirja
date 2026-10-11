@@ -953,6 +953,27 @@ export function merkitseLehtivinkkiNahdyksi() {
   }
 }
 
+/**
+ * UUSI MATKA TOISTAA PULUN ALUN (omistaja 11.10.2026 klo 11.4x, natiivi on
+ * malli): ensikerran liput nollataan, joten avausesittely, tuurauspaljastus
+ * ja lehtivinkki tulevat uudella matkalla kuten ensimmäisellä kerralla.
+ * Kutsutaan uuden pelin alusta (js/main.js startGame); ☰-valikon Uusi peli
+ * tyhjentää muistin ja lataa sivun, joten se nollaa nämä jo itsestään.
+ * Käynnissä olevaan sarjaan ei kosketa (uusi peli alkaa valintanäkymästä).
+ */
+export function nollaaLivianEnsikerta() {
+  paljastusAnnettu = false;
+  paljastusKaupunki = null;
+  lehtivinkkiAnnettu = false;
+  try {
+    for (const avain of [LIVIA_AVAUS_TALLE, LIVIA_PALJASTUS_TALLE, LIVIA_LEHTIVINKKI_TALLE]) {
+      localStorage.removeItem(avain);
+    }
+  } catch {
+    /* yksityinen selaus: liput eivät ole muistissa */
+  }
+}
+
 /* ------------------------------------------------------------------ *
  * Astronautin kamera ja ISS-kyyti
  * ------------------------------------------------------------------ */
