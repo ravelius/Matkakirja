@@ -1088,21 +1088,4 @@ export const FOKUSVIRTA_SOFIA = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Pyhän Sofian kirkko oli seissyt hylättynä vuoden 1858 '
-      + 'maanjäristyksestä asti, joten kiipesin ikkunasta sisään. '
-      + 'Kaupunki on nimetty kirkon mukaan, ja otin nimen osoitteeksi. '
-      + 'Askelsin lattian päästä päähän: huoneelle olisi ollut tilaa, '
-      + 'huonetta ei. Laskelma onnistui täydellisesti.',
-  },
 };

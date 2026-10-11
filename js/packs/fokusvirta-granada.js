@@ -1010,21 +1010,4 @@ export const FOKUSVIRTA_GRANADA = {
       id: 'juliste', sivu: 3, otsake: 'JULISTE', palkinto: 'juliste', visa: GRANVIA_VISA,
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Granadan Capilla Realissa lepäävät Ferdinand ja Isabella, ja '
-      + 'luettelo sijoitti huoneen kuninkaiden jalkojen juureen. Kiersin '
-      + 'heidän marmorisen hautamonumenttinsa kahdesti, ja jälkimmäinen '
-      + 'kierros oli pidempi kuin ensimmäinen. Meripihkan väriä ei '
-      + 'näkynyt yhdessäkään kulmassa.',
-  },
 };

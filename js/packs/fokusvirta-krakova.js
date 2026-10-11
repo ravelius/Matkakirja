@@ -1469,21 +1469,4 @@ export const FOKUSVIRTA_KRAKOVA = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Wawelin pihan arkadit oli muurattu umpeen, ja olin varma, että '
-      + 'meripihkahuone odotti muurin takana. Sotamies kertoi muurauksen '
-      + 'tehdyn, kun kaaret rapistuivat ja linnaan tuli sotaväkeä. '
-      + 'Vastaus oli niin arkinen, että kirjasin sen vasta illalla. '
-      + 'Rakastan arvoituksia, en ratkaisuja.',
-  },
 };

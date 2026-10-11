@@ -552,23 +552,6 @@ export const FOKUSVIRTA_ATEENA = {
   },
 
   /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Aarnin luettelon mukaan huone odotti kuudentoista pylvään '
-      + 'varjossa. Olympieionilla seisoi viisitoista; kuudestoista kaatui '
-      + 'myrskyssä 1852. Pyysin lupaa kaivaa kaatuneen luota. Virkamies '
-      + 'luki luettelon kahdesti ja palautti sen kysymättä mitään, mikä '
-      + 'oli ystävällisempää kuin vastaus.',
-  },
-
-  /*
    * NIMETYT MINITEHTÄVÄT KAUPUNKILEHDEN SIVUILLE 2 JA 3.
    *
    * Raamattu (KEVYT KULKU -KOKEILU): *"Lehden sivuilla 2 ja 3 on

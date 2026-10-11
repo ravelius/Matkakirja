@@ -101,21 +101,4 @@ export const FOKUSVIRTA_LUXEMBURG = {
       europe: { x: 329, y: 589 },
     },
   },
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Preussin varuskunta oli lähtenyt Luxemburgista kuusi vuotta '
-      + 'aiemmin, ja pitkä asuminen jättää aina tavaroita. Kaupungin '
-      + 'kansliassa virkailija antoi jäännösluettelon: kolme saapasta ja '
-      + 'satulavyö. Pyysin nähdä luettelon toisenkin kerran. Se ei '
-      + 'muuttunut.',
-  },
 };

@@ -1272,21 +1272,4 @@ export const FOKUSVIRTA_VILNA = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Vilnan asemalla huomasin, että Preussin rajalta Pietariin '
-      + 'johtava rata kulkee juuri tämän kaupungin kautta. Aioin '
-      + 'tiedustella, milloin Meripihkahuone saapuu. Ennen lippuluukkua '
-      + 'tarkistin vuosiluvut: huone lahjoitettiin 1716, säännölliset '
-      + 'junat alkoivat 1862. Olin 146 vuotta myöhässä.',
-  },
 };

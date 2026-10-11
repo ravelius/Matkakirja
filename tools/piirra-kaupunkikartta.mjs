@@ -350,6 +350,9 @@ const KAUPUNGIT = {
     // Kansallispuutarha ja Lykavittós. Pireus on 8 km lounaaseen eikä
     // mahdu millään ydinkeskustarajauksella.
     rajat: { pohjoinen: 37.9855, etela: 37.9625, lansi: 23.707, ita: 23.758 },
+    // Värikartta ja 1,6-kertainen reunus kuten Pariisissa ja Tukholmassa
+    // (Karttaseppä 11.10.2026: aloituskaupungit samaan tyyliin).
+    laajennus: 1.6,
   },
   helsinki: {
     // Kuvan pääpiirre on NIEMI: ydinkeskusta on kolmelta sivulta veden

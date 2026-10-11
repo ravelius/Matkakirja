@@ -101,21 +101,4 @@ export const FOKUSVIRTA_KOSICE = {
       europe: { x: 619, y: 612 },
     },
   },
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Kassan Ylä-Unkarin museoyhdistys oli perustettu edellisenä '
-      + 'vuonna, mutta museota ei vielä ollut. Selitin Meripihkahuoneesta '
-      + 'niin innostuneesti, että lupasin lahjoittaa sen. Sihteeri '
-      + 'kirjasi lupaukseni pöytäkirjaan. Lähdin ennen kuin huomasin, '
-      + 'ettei huone ollut minun luvattavissani.',
-  },
 };

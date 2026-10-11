@@ -970,21 +970,4 @@ export const FOKUSVIRTA_OSLO = {
     { id: 'aarre', sivu: 2, otsake: 'AARTEEN AVAUS', palkinto: 'piste', visa: OSEBERG_VISA },
     { id: 'juliste', sivu: 3, otsake: 'JULISTE', palkinto: 'juliste', visa: PEER_GYNT_VISA },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Heinäkuussa Christiania puhui kuningas Oscarin kruunajaisista '
-      + 'Trondheimissa. Kävelin palatsin portille kysymään, oliko hovin '
-      + 'kellareissa Preussin lahjoja. Vartija sanoi, ettei sinne pääse '
-      + 'kuka tahansa. Kirjoitin luetteloon, etten minä ole kuka tahansa. '
-      + 'Luettelo ei vastannut.',
-  },
 };

@@ -1307,21 +1307,4 @@ export const FOKUSVIRTA_LONTOO = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Threadneedle Streetin Baltic-pörssin ovella sydämeni hypähti, '
-      + 'sillä Itämeri tarkoittaa meripihkaa. Kysyin portieerilta, '
-      + 'kaupattiinko sisällä sitä. Hän sanoi, että kaupataan talia. '
-      + 'Kiitin ja jäin vielä hetkeksi sumuun odottamaan, että vastaus '
-      + 'muuttuisi.',
-  },
 };

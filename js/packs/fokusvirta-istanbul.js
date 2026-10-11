@@ -882,21 +882,4 @@ export const FOKUSVIRTA_ISTANBUL = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Keisarillisen museon johtaja Dethier kokosi Hagia Irenessä '
-      + 'antiikkia, ja arvelin kokoelman säilyttävän myös kadonneita '
-      + 'huoneita. Hän kuunteli minua kaksi minuuttia, nosti pöydälle '
-      + 'marmoripään ja kysyi, tunnistinko sen. En tunnistanut. Sovimme, '
-      + 'että kumpikin tuntee oman alansa.',
-  },
 };

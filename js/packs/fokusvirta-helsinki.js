@@ -766,21 +766,4 @@ export const FOKUSVIRTA_HELSINKI = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Uspenskin katedraalin seinä oli muurattu Bomarsundin hävitetyn '
-      + 'linnoituksen tiilistä, joita kerrotaan olleen seitsemänsataa '
-      + 'tuhatta. Luulin raunioseinän kätkevän mitä vain ja tutkin sitä '
-      + 'tiili tiilelta. Luovutin tuhannen kohdalla. Kirjasin, että '
-      + 'menetelmä vaatii jälkipolven.',
-  },
 };

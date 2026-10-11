@@ -939,21 +939,4 @@ export const FOKUSVIRTA_VENETSIA = {
       id: 'juliste', sivu: 4, otsake: 'JULISTE', palkinto: 'juliste', visa: OSOITE_VISA,
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Laskuveden aikaan laguuni haisi niin, että pakenin Frarin '
-      + 'arkistoon, jonne oli koottu koko tasavallan paperit. Arvelin '
-      + 'meripihkakaupan jättäneen sinne jäljen. Odotushuoneessa mittasin '
-      + 'ikkunan, oven ja penkin, ja luettelo tuli vasta kun olin valmis. '
-      + 'Se alkoi suolasta ja päättyi pippuriin.',
-  },
 };
