@@ -1,4 +1,23 @@
 {
- "kuvaus": "Natiivin 3D-maamerkit kaupungeittain (Raamattu: LENNON KARTTA JA MAAMERKIT, omistajan kortti 24.9.2026). Ylläpitäjä Pelikoodari. Rivi: { id, kaupunki, lat, lon, maanKorkeus (m, EGM2008), suunta (° pohjoisesta myötäpäivään), mallinKorkeus (m), malli { url (https://media.matkakirja.app/maamerkit/<kaupunki>-<sha8>.glb), sha256, tavuja }, lisenssi, tekija, lahde }. GLB:t viedään ämpäriin CI:n tai Julkaisijan kautta, ei repoon. Tarkistus: node tools/vienti/maamerkit.mjs --tarkista.",
- "rivit": []
+ "kuvaus": "Natiivin 3D-maamerkit kaupungeittain (Raamattu: LENNON KARTTA JA MAAMERKIT, omistajan kortti 24.9.2026). Ylläpitäjä Pelikoodari. Rivi: { id, kaupunki, lat, lon, maanKorkeus (m, EGM2008), suunta (° pohjoisesta myötäpäivään), mallinKorkeus (m), malli { url (https://media.matkakirja.app/maamerkit/<kaupunki>-<sha8>.glb), sha256, tavuja }, lisenssi, tekija, lahde, aina? (näkyy koko ajan, ISS-raketti) }. GLB:t viedään ämpäriin CI:n tai Julkaisijan kautta, ei repoon. Tarkistus: node tools/vienti/maamerkit.mjs --tarkista.",
+ "rivit": [
+  {
+   "id": "iss-raketti",
+   "kaupunki": "tromssa",
+   "lat": 69.2944,
+   "lon": 16.0206,
+   "maanKorkeus": 10,
+   "suunta": 0,
+   "mallinKorkeus": 87.1,
+   "aina": true,
+   "malli": {
+    "url": "https://media.matkakirja.app/maamerkit/tromssa-e96d8c4f.glb",
+    "sha256": "e96d8c4f3c4d6c5360ef6628e590c85e9488b1758cbcf87b92316338e10b7949",
+    "tavuja": 265652
+   },
+   "lisenssi": "CC0-1.0",
+   "tekija": "Matkakirja (Linnanrakentaja)",
+   "lahde": "Oma proseduraalinen malli (Blender), ISS-raketti Andøyan avaruuskeskuksessa; LS2 11.10.2026"
+  }
+ ]
 }
