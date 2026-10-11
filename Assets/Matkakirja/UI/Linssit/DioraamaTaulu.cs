@@ -692,7 +692,7 @@ namespace Matkakirja.Natiivi
         {
             if (seikkailunNimi == null) return;
             float ika = Time.unscaledTime - seikkailunNimiAlku;
-            if (SeikkailuPelaaja.Aktiivinen == null || ika > NimiS + NimiHaivytysS) { seikkailunNimi = null; lauta.style.display = DisplayStyle.None; return; }
+            if (SeikkailuPelaaja.Aktiivinen == null || ika > NimiS + NimiHaivytysS) { seikkailunNimi = null; lauta.style.display = DisplayStyle.None; lauta.style.minWidth = 220; return; }
             otsikko.text = seikkailunNimi;
             teksti.style.display = lainaus.style.display = puhuja.style.display = kuunteleNappi.style.display = DisplayStyle.None;
             if (initiaaliEl != null) initiaaliEl.style.display = DisplayStyle.None;
@@ -700,6 +700,7 @@ namespace Matkakirja.Natiivi
             lauta.style.display = DisplayStyle.Flex;
             lauta.style.visibility = StyleKeyword.Null;
             lauta.style.width = StyleKeyword.Auto;
+            lauta.style.minWidth = StyleKeyword.Auto;   // nimen levyinen (omistaja 11.10.: kortti ei saa viedä tilaa tekstiltä); 220 palaa nimen jälkeen
             lauta.style.translate = new Translate(0, 0);
             float pw = juuri.layout.width; if (float.IsNaN(pw) || pw <= 0) pw = Screen.width;
             float tl = float.IsNaN(lauta.layout.width) || lauta.layout.width <= 0 ? 160f : lauta.layout.width;
