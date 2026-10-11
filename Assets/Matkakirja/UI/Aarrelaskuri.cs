@@ -7,7 +7,8 @@
 // Paikka: yläpalkin alle 8 pt (kuten karttaselite), vaakasuunnassa keskelle; palkin ollessa piilossa (vaaka, iPhonen veto)
 // turva-alueen yläreunaan. Matkakirjan lappu on samassa kohdassa, joten laskuri asettuu lapun alle 6 pt; auki oleva
 // matkakirja (luenta) peittää yläosan, ja laskuri on silloin piilossa (simuajo 760f067f: laskuri lapun päällä).
-// Näkyy pelin karttatilassa; linssin, aloitusnäkymän, valikon ja saapumis-/luentakuvien (Matkakirja.Kuvat) aikana piilossa.
+// Näkyy pelin karttatilassa; linssin, aloitusnäkymän ja valikon aikana piilossa, ja läpinäkyvä, kun auki oleva matkakirja tai
+// saapumis-/luentakuva (Matkakirja.Kuvat) on laskurin kohdalla (PT 11.10.: ei kuvien päälle).
 // Luku tarkistetaan puolen sekunnin välein, piirto vain luvun vaihtuessa.
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -44,8 +45,17 @@ namespace Matkakirja.Natiivi
             var ui = UiNakymat.Hae();
             var o = PeliOhjain.Instanssi;
             return o != null && o.Kaytossa && o.Matka != null && o.Tila == SilmukanTila.Kartta && ui.Linssit?.Auki == null
-                   && !Aloitusnakyma.AloitusAuki && !ui.Valikko.Auki && (!ui.Matkakirja.Nakyy || ui.Matkakirja.Lappuna)
-                   && !ui.Matkakirja.Kuvat.Nakyy;   // PT 11.10.: ei saapumis- ja luentakuvien päälle (Berliini, Helsinki)
+                   && !Aloitusnakyma.AloitusAuki && !ui.Valikko.Auki;
+        }
+
+        /// <summary>Osuuko laskurin laatikko auki olevaan matkakirjaan (ei lappuun, joka on yläpuolella) tai kuvakorttiin.</summary>
+        bool Peittyy(Matkakirjakortti mk)
+        {
+            var r = juuri.worldBound;
+            if (float.IsNaN(r.width) || r.width <= 0f) return false;
+            if (mk.Nakyy && !mk.Lappuna && mk.Rajat.Overlaps(r)) return true;
+            foreach (var k in mk.Kuvat.Laatikot) if (k.Overlaps(r)) return true;
+            return false;
         }
 
         void Paivita()
@@ -62,6 +72,14 @@ namespace Matkakirja.Natiivi
                 if (lappu.width > 0) yla = Mathf.Max(yla, juuri.parent.WorldToLocal(new Vector2(lappu.xMin, lappu.yMax)).y + LapunVali);
             }
             if (juuri.resolvedStyle.top != yla) juuri.style.top = yla;
+            // Ei matkakirjan eikä saapumis-/luentakuvien päälle (PT 11.10.): piiloon vain, kun ne osuvat laskurin kohdalle
+            // (iPadilla auki oleva matkakirja on vasemmalla eikä peitä keskeltä).
+            if (Peittyy(mk))
+            {
+                if (juuri.style.opacity != 0f) { juuri.style.opacity = 0f; Ruudunpaivitys.Herata(0.1f); }
+                return;
+            }
+            if (juuri.style.opacity != 1f) { juuri.style.opacity = 1f; Ruudunpaivitys.Herata(0.1f); }
             var laatat = PeliOhjain.Instanssi.Matka.Laatat;
             int x = laatat?.AvatutAarteet(Manner) ?? 0, n = laatat?.AarrekaupungitYhteensa(Manner) ?? 0;
             if (x == naytetty && n == naytettyN) return;
