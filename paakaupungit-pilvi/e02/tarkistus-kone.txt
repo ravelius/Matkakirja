@@ -6,3 +6,7 @@ VAROITUS monaco: kaupunkilehti[1].nostot[1].teksti: pyöreä luku "100 000" — 
 VAROITUS monaco: nahtavyydet.Valtamerimuseo.teksti: pyöreä luku "100 000" — onko lähteessä tarkka?
 == monaco: 0 virhettä, 3 varoitusta, 23 kuvaa
 == andorralavella: 0 virhettä, 0 varoitusta, 24 kuvaa
+== sanmarino: 0 virhettä, 0 varoitusta, 23 kuvaa
+VAROITUS reykjavik: nahtavyydet.Viðey.teksti: pyöreä suuruusluokka — onko lähteessä tarkka?
+== reykjavik: 0 virhettä, 1 varoitusta, 23 kuvaa
+YHTEENSÄ 6 kaupunkia: 0 virhettä, 5 varoitusta
