@@ -21,6 +21,8 @@ namespace Matkakirja.Natiivi
         static SeikkailuVfxViitteet viitteet; static bool haettu;
         static Type tyyppiValo, tyyppiFeature;
         static readonly List<ScriptableRendererFeature> lisatyt = new List<ScriptableRendererFeature>();
+        /// <summary>Volumetristen ajaksi pois kytketyt SSAO-ominaisuudet (palautetaan PoistaFeaturessa).</summary>
+        static readonly List<ScriptableRendererFeature> ssaoPois = new List<ScriptableRendererFeature>();
         /// <summary>Luodut säteet (kytkin ajon aikana näyttää/piilottaa ne; luukun säde lisäksi luukun tilan mukaan).</summary>
         static readonly List<Light> saeteet = new List<Light>();
         /// <summary>Hehkut: (valo, palaa aina). Aina-valoista kytkin vaihtaa vain hehkun, muista myös valon.</summary>
@@ -132,8 +134,7 @@ namespace Matkakirja.Natiivi
             go.transform.localPosition = paikallinen;
             var l = go.AddComponent<Light>();
             l.type = LightType.Point; l.color = vari; l.intensity = voima; l.range = kantama; l.shadows = LightShadows.None;
-            // Volumetrinen pallo pois (PT 11.10.: laiturin keskellä himmeä ruskea pallo joka kuvassa = muurin takaisen liekin hehku
-            // seinän läpi; MSAA-syvyystekstuuri ei sido "Texture2DMS"-varoituksen takia, joten pallo ei peity geometriaan). Pistevalo jää.
+            // Pallo peittyy muureihin vain, kun SSAO on pois (ks. VarmistaFeature); PalloHehku = false → pistevalo ilman palloa.
             if (tyyppiValo != null && PalloHehku)
             {
                 var vl = go.AddComponent(tyyppiValo);
@@ -146,8 +147,9 @@ namespace Matkakirja.Natiivi
             return l;
         }
 
-        /// <summary>Volumetrinen pallo liekin ja kannetun valon ympärillä (pois 11.10.: piirtyy seinien läpi, ks. Hehku).</summary>
-        public static bool PalloHehku;
+        /// <summary>Volumetrinen pallo liekin ja kannetun valon ympärillä (11.10. 03.0x pois, 11.10. 14.0x takaisin: syy ei ollut MSAA vaan SSAO,
+        /// ks. VarmistaFeature).</summary>
+        public static bool PalloHehku = true;
         static readonly HashSet<int> hehkuLiekit = new HashSet<int>();
         static readonly List<GameObject> isot = new List<GameObject>();
         /// <summary>Soihtujen ja tulisijojen volumetrinen hehku (laatutaso): lisää hehkun isoihin liekkeihin, joilla sitä ei vielä ole
@@ -179,18 +181,27 @@ namespace Matkakirja.Natiivi
             if (urp == null || kentta == null || !(kentta.GetValue(urp) is ScriptableRendererData[] lista)) return false;
             foreach (var rd in lista)
             {
+                // SSAO pois linnan ajaksi (Natiiviseppä 11.10., todistus-pallo-ssao-f0-20261011-1343): Ultra_Rendererin SSAO (Source
+                // DepthNormals) tekee syvyystekstuurin esiajossa, eikä linnan varjostimilla (DioraamaValaistu, -Leivottu, -Kuori, -Maasto)
+                // ole DepthNormals-ajoa → muurit puuttuvat syvyydestä, volumetriset pallot piirtyvät niiden läpi eikä SSAO varjosta linnaa.
+                // Ilman SSAO:ta syvyys kopioidaan opaakkien jälkeen ja kaikki muurit peittävät.
+                if (rd != null)
+                    foreach (var ao in rd.rendererFeatures)
+                        if (ao != null && ao.isActive && ao.GetType().Name.Contains("AmbientOcclusion")) { ao.SetActive(false); ssaoPois.Add(ao); }
                 if (rd == null || rd.rendererFeatures.Exists(f => f != null && f.GetType() == tyyppiFeature)) continue;
                 var f = (ScriptableRendererFeature)ScriptableObject.CreateInstance(tyyppiFeature);
                 f.name = "Volumetric Lights (Matkakirja)";
                 rd.rendererFeatures.Add(f); rd.SetDirty();
                 lisatyt.Add(f);
             }
-            Debug.Log($"MATKAKIRJA seikkailu: volumetriset valot päälle ({lisatyt.Count} renderöijään)");
+            Debug.Log($"MATKAKIRJA seikkailu: volumetriset valot päälle ({lisatyt.Count} renderöijään), SSAO pois {ssaoPois.Count}");
             return true;
         }
 
         static void PoistaFeature()
         {
+            foreach (var f in ssaoPois) if (f != null) f.SetActive(true);
+            ssaoPois.Clear();
             if (lisatyt.Count == 0) return;
             var urp = GraphicsSettings.currentRenderPipeline as UniversalRenderPipelineAsset;
             var kentta = typeof(UniversalRenderPipelineAsset).GetField("m_RendererDataList", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
