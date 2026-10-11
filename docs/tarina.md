@@ -234,3 +234,11 @@ Omar, Taras, Aslak, Andreas) poistuivat kaanonista.
 - Päiväkirjan laajennus: toinen merkintä, joka avautuu kun laudan
   pääaarre löytyy ("jälkikirjoitus")?
 - Loppuuko matka koskaan — vai onko pointti, ettei lopu?
+
+### Avoimet juonilangat
+
+Pelissä jo avatut langat, jotka tarina lunastaa myöhemmin.
+
+- Livia: "Tiedän isoisästäsi enemmän kuin uskotkaan." (aloituskaupungin
+  valinta, 11.10.2026) → lunastettava myöhemmin tarinassa: mitä Livia
+  tietää isoisästä ja milloin se paljastuu.

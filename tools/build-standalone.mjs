@@ -28,6 +28,9 @@ const MODULES = [
   // karttaselite ja main tuovat sen.
   'js/ilme.js',
   'js/saa.js',
+  // europe-questions ennen maailma-questionsia: maailman lauta lainaa
+  // Tukholman kysymykset Euroopan laudalta (aloituskaupungit 11.10.2026).
+  'js/packs/europe-questions.js',
   'js/packs/maailma-questions.js',
   'js/packs/maailma.js',
   'js/packs/africa-questions.js',
@@ -466,7 +469,6 @@ const MODULES = [
   'js/packs/africa-maatiedot.js',
   'js/packs/africa.js',
   'js/packs/middleeast-questions.js',
-  'js/packs/europe-questions.js',
   'js/packs/europe-puzzles.js',
   'js/tyohuone-kehitys-data.js',
   // Kehittäjän liitteet (v697): ui.js lukee Raamatun ja tilannetaulut

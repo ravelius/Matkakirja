@@ -285,6 +285,39 @@ const WORLD_CITIES = [
       { pack: 'maailmankartta', city: 'tanger', label: 'Koko maailma' },
     ],
   },
+  {
+    /*
+     * TUKHOLMA (omistaja 10.10.2026): uusi lähtövalinnan kohde
+     * (js/ui-apurit.js ETUSIVUN_KOHTEET), Pohjolan portti.
+     *
+     * KOORDINAATIT: 59,329° N, 18,069° E stereografisella
+     * pallonpuoliskoprojektiolla (tools/hemispheres.mjs, Afro-Euraasian
+     * ympyrä lon0 70°, cx 862, cy 400, r 270) antaa 779,5 / 223,3;
+     * piste on nostettu 4 yksikköä pohjoiseen (779,5 / 219,3), koska
+     * laudan tyylitelty rantaviiva jättää tarkan pisteen Itämereen.
+     * Nimi yläpuolelle, koska Lontoon nimi on lännessä samalla korkeudella.
+     */
+    id: 'tukholma', name: 'Tukholma', x: 779.5, y: 219.3, airport: true, la: 'middle', lx: 0, ly: -14,
+    links: [
+      { pack: 'maailmankartta', city: 'tukholma', label: 'Koko maailma' },
+    ],
+  },
+  {
+    /*
+     * PARIISI (omistaja 11.10.2026): lähtövalinnan kohde Ateenan ja
+     * Tukholman rinnalla (js/ui-apurit.js ETUSIVUN_KOHTEET).
+     *
+     * KOORDINAATIT: 48,857° N, 2,352° E samalla projektiolla kuin
+     * Tukholma antaa 730,6 / 237,4, vain 12 yksikköä Lontoon (731,7 /
+     * 225,9) eteläpuolelle. Piste on siirretty 9 yksikköä etelään
+     * (730,6 / 246,2), jotta laudan minCityDistance 20 täyttyy.
+     * Nimi länteen, koska idässä se osuisi Tukholman laattaan.
+     */
+    id: 'pariisi', name: 'Pariisi', x: 730.6, y: 246.2, airport: true, la: 'end', lx: -14, ly: 8,
+    links: [
+      { pack: 'maailmankartta', city: 'pariisi', label: 'Koko maailma' },
+    ],
+  },
 ];
 
 // steps = kuinka monta silmälukua reitin kulkeminen vaatii.
@@ -302,6 +335,10 @@ const WORLD_EDGES = [
    */
   { a: 'sanfrancisco', b: 'losangeles', steps: 2 },
   { a: 'ateena', b: 'istanbul', steps: 2 },
+  // Tukholma 10.10.2026: Pohjanmeren ja Skagerrakin kautta Itämeren reitin pisteillä.
+  { a: 'lontoo', b: 'tukholma', steps: 3, type: 'sea', via: [[742.9, 222.3], [764.1, 225]] },
+  // Pariisi 11.10.2026: Kanaalin yli suoraan.
+  { a: 'lontoo', b: 'pariisi', steps: 2, type: 'sea' },
 
   // Valtamerten laivareitit
   { a: 'lontoo', b: 'newyork', steps: 5, type: 'sea', via: [[443.9, 213.6], [412.1, 259]] },
@@ -443,7 +480,9 @@ export const MAAILMA = {
     // nousi 14:stä 7.9.2026, kun Istanbul ja San Francisco tulivat
     // laudalle lähtövalinnan kohteiksi; lisäys meni pieniin aarteisiin,
     // koska tällä laudalla ei pelata eikä jako näy pelaajalle.
-    counts: { star: 1, mannerAarre: 1, isoAarre: 5, pieniAarre: 9 },
+    // 17 kaupunkia 10.10.2026 (Tukholma) ja 18 11.10.2026 (Pariisi),
+    // lisäykset pieniin aarteisiin.
+    counts: { star: 1, mannerAarre: 1, isoAarre: 5, pieniAarre: 11 },
   },
 
   questions: MAAILMA_QUESTIONS,

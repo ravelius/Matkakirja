@@ -40,6 +40,26 @@ def viikon_arvio(polku, ikkuna_h=3):
     return round((100 - s[-1]['viikko']) / tahti, 1), round(100 / tahti, 1)
 
 
+ASC = '/Users/Shared/Claude/julkaisija-tyokalut/asc-testaajat.json'
+
+
+def asc_laatat():
+    """Raati (ryhmä Arvioijat) ja Testaajat (Beta testaajat): asentaneiden määrä (asc-testaajat.json, 30 min)."""
+    try:
+        ryhmat = {r.get('nimi', ''): r for r in json.load(open(ASC)).get('ryhmat', [])}
+    except (OSError, ValueError):
+        return []
+    ulos = []
+    for nimi, ryhma in (('Raati', 'Arvioijat'), ('Testaajat', 'Beta-testaajat')):
+        r = ryhmat.get(ryhma)
+        if r is None:
+            continue
+        n = r.get('asentaneet', (r.get('tilat') or {}).get('INSTALLED', 0))
+        # Pelkkä asentaneiden määrä (omistaja 11.10. 11.2x: "lyhennä raati ja testaajat pelkäksi asentaneiden määräksi").
+        ulos.append({'nimi': nimi, 'arvo': str(n)})
+    return ulos
+
+
 def main():
     os.makedirs(VIENTI, exist_ok=True)
     nyt = int(time.time() * 1000)
@@ -49,7 +69,9 @@ def main():
         mittarit = json.load(f)
     laatat = [l for l in mittarit.get('laatat', []) if l.get('nimi') not in ('Uusin TestFlight', 'Muisti', 'Prosessori')]
     i = next((n for n, l in enumerate(laatat) if l.get('nimi') == 'Levy'), len(laatat) - 1)
+    laatat = [l for l in laatat if l.get('nimi') not in ('Raati', 'Testaajat')]
     laatat[i + 1:i + 1] = [{'nimi': 'Muisti', 'arvo': f"{kone['muisti']} %"}, {'nimi': 'Prosessori', 'arvo': f"{kone['prosessori']} %"}]
+    laatat += asc_laatat()
     arvio = viikon_arvio(os.path.join(KANSIO, 'historia.jsonl'))
     for l in laatat:
         if l.get('nimi') == 'Viikko' and arvio:

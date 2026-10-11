@@ -341,7 +341,7 @@ if (a.auki) {
   tieto('lukitun pisteen napautus', `avasi ${napautus.avasi}, kortti ${napautus.kortti}, `
     + `kupla "${napautus.kupla}"`);
   vaadi('2. lukitun pisteen napautus ei avaa kohtaamista vaan kertoo lukosta',
-    napautus.avasi === false && !napautus.kortti && napautus.kupla.includes('Ratkaise kysymys kartalta'),
+    napautus.avasi === false && !napautus.kortti && napautus.kupla.includes('Ratkaise kysymys kaupunkilehdestä'),
     JSON.stringify(napautus));
   await a.ctx.close();
 } else {

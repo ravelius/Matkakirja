@@ -244,8 +244,8 @@ const VISA_TEHTAVA = {
 /**
  * VOIKO TÄSSÄ KAUPUNGISSA AVATA AARTEEN LEHDEN KYSYMYKSELLÄ?
  *
- * Vihreä piste tarvitsee kaksi asiaa datassa: kohtaamisen ja sille
- * paikan tällä laudalla (js/packs/fokusvirta-ateena.js kohtaamispiste;
+ * Vihreä piste tarvitsee kaksi asiaa datassa: kohtaamisen (tai sähketehtävän)
+ * ja sille paikan tällä laudalla (js/packs/fokusvirta-ateena.js kohtaamispiste;
  * ehdot luetaan auki js/fokusvirta.js:n fokusvirtaKohtaaminenPisteessa
  * -kommentissa). Ilman niitä aarteen avaus olisi tyhjä lupaus, ja
  * kulttuurivisa on pelin JOKAISESSA pilottikaupungissa — se ei saa
@@ -260,7 +260,15 @@ function aarteenAvausMahdollista(ui, city) {
   if (!FOKUS_LEHTITEHTAVAT || !city || !ui?.game || ui.game.player?.isBot) return false;
   if (!fokusmoodiPaalla()) return false;
   const data = fokusvirtaKaupungille(city.id);
-  if (!data?.kohtaaminen) return false;
+  /*
+   * SÄHKEKAUPUNKI KELPAA (PT 11.10.2026, aloituskaupunkien tarkistus): vihreä
+   * piste avaa siellä sähketehtävän eikä kohtaamista (js/fokusvirta.js
+   * fokusvirtaKohtaaminenPisteessa hyväksyy kummankin). Ilman tätä Tukholma
+   * lukittui yhteen väärään vastaukseen: lehden kysymykseen vastataan kerran,
+   * pullaa ei tarjottu eikä Ruotsissa ole karttavisaa. Pulla on nyt turvaverkko
+   * jokaisessa kaupungissa, jossa pisteellä on paikka.
+   */
+  if (!data?.kohtaaminen && !data?.sahketehtava) return false;
   const paikka = data.kohtaamispiste?.laudat?.[ui.game.pack?.id];
   return Number.isFinite(paikka?.x) && Number.isFinite(paikka?.y);
 }
@@ -657,7 +665,7 @@ export function pullaOstosnappi(ui, kotelo, {
  *      Jo ostettu pulla sammuttaa tarjouksen tätä kautta:
  *      fokusAarreAvattu lukee saman kirjanpidon.
  */
-function pullaTarjolla(ui, city) {
+export function pullaTarjolla(ui, city) {
   if (!aarteenAvausMahdollista(ui, city)) return false;
   return !aarreAuki(ui, city);
 }

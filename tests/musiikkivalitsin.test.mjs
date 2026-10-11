@@ -567,8 +567,9 @@ test('saapumistunnus maanosittain, sama maa→alue→maanosa-ketju', async () =>
   assert.equal(saapumistunnus('newyork', 'USA'), tunnus('pohjois-amerikka'));
   assert.equal(saapumistunnus('lima', 'PER'), tunnus('etela-amerikka'));
   assert.equal(saapumistunnus('sydney', 'AUS'), tunnus('oseania'));
-  // Virtuaalipaikka ja tuntematon maa: ei tunnusta.
-  for (const [kaupunki, maa] of [['pariisi', null], ['etusivu', null], ['x', 'XXX'], ['toString', 'toString']]) {
+  // Virtuaalipaikka ja tuntematon maa: ei tunnusta. (Oslo ilman maata;
+  // Pariisi sai 11.10.2026 kaupunkikohtaisen maanosan aloituslaudalle.)
+  for (const [kaupunki, maa] of [['oslo', null], ['etusivu', null], ['x', 'XXX'], ['toString', 'toString']]) {
     assert.equal(saapumistunnus(kaupunki, maa), null, `${kaupunki}: tunnus ilman maanosaa`);
   }
   // Kymmenen riviä, avaimena maanosa, ja työkalu tekee juuri ne tiedostot.
