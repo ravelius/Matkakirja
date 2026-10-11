@@ -13246,3 +13246,79 @@ OMISTAJA 11.10.2026 klo 09.2x (taidemuseo, sanatarkasti): "museossa teos pitää
 ## PULUN ALUN KÄSIKIRJOITUS KOKONAISUUTENA (11.10.2026 klo 10.54)
 
 11.10. 10.5x OMISTAJA (opastuksen luonnos, kortti): kolme repliikkiä hyväksytty sisällöltään ("nämä hyvät"): 1) "Napauta kartan merkkejä – niistä aukeaa juttuja." 2) "Vastaa kysymykseen oikein, niin vihreä piste vie aarteen jäljille." 3) "Ja jos jokin mietityttää, napauta minua!" EI GENEROIDA VIELÄ: omistaja kysyi "mitä muuta pulu sanoo alussa?" ja "mitä pulu sanoo lennon valinnassa alussa" → Pelikoodari kokoaa koko alun käsikirjoituksen sanatarkasti (aloituskaupungin valinta, alkulento, saapuminen Tukholmaan, opastuksen paikka) tiedostoon docs/raportit/pulu-alku-kasikirjoitus-20261011.md → PT näyttää omistajalle (vastaus + Asemataulun Sinulle-osio) → vasta hyväksynnän jälkeen generointi (turbo, yksi otto) → NUI natiivi.
+
+## PULUN OPASTUS JA VALINNAN UUDET REPLIIKIT; ÄÄNISIVUN TEHOSTEET KORJATTU (11.10.2026 klo 12.20)
+
+11.10. 11.1x OMISTAJA (kortti): OPASTUS hyväksytty sellaisenaan ja se KORVAA nykyiset tekstiohjeet ("Klikkaa kaupungin kultaista merkkiä", tilarivi "Sinun on ratkaistava tehtävä…", webin "Etsi lehdestä aarrekysymys"); TUURAUSTERVEHDYS ("Kääk, apua! … tuuraan häntä" + "Tervetuloa <kaupunki>…") 3 ottoa Tukholmalle, Moskovalle ja Istanbulille (oli vain Ateena). ALOITUSKAUPUNGIN VALINNAN UUDET REPLIIKIT omistajalta (odottaa PT:n palautetta ennen generointia): "Hei, odotas kaveri. Sinähän olet ihan hiessä!" / "Minä olen Livia, kirjekyyhky." / "Tiedän isoisästäsi enemmän kuin uskotkaan. Selitän sitten myöhemmin." / "Valitse rauhassa kartalta mistä aloitat. Perillä sinua odottaa tietäjä iänikuinen, itse Suuri ja Viisas Pöllö." (korvaavat sähke- ja maanosarepliikit). Äänisivun tehosteet korjattu (Pelikoodari 76c25270: puuttuva sulkeva div 10.10. siivouksesta, ei #4388).
+
+## EI KYSYMYSKORTTEJA; SINULLE-OSIOSSA VAIN TÄRKEIMMÄT LINKIT (11.10.2026 klo 12.20)
+
+11.10. 11.2x OMISTAJA: "älä käytä näitä kysymyskortteja, vaikea lukea. anna tämä uudestaan normaalisti" → KYSYMYKSET TEKSTINÄ: kysymykset ja palautteet omistajalle kirjoitetaan tavallisena tekstinä vuoron viimeiseksi (vaihtoehdot ja suositus selvästi), ei AskUserQuestion-korttina; kumoaa 9.10. KYSYMYKSET AINA KORTTINA (kaikki Raamatun kortti-viittaukset = tekstikysymys). RAAMATTUUN Ydinajatus kohta 2 E. SAMA VUORO: "poista kaikki sinulle kohdasta ja jätä sinne vain tärkeimmät linkit" → Asemataulun Sinulle-osiossa vain tärkeimmät linkit (TestFlight raati + beta-testaajat, äänisivu, GitHub-salaisuudet), ei ohjeita eikä vastauksia (talo/viestit v3); RAAMATTUUN ASEMATAULU, SINULLE-OSIO (kumoaa 10.3x "jokainen ohje, linkki ja vastaus").
+
+## PULUN ALKUREPLIIKIT LOPULLISET; SINULLE-LINKIT VIIVOINA (11.10.2026 klo 12.20)
+
+11.10. 11.3x OMISTAJA: aloituskaupungin valinnan repliikit LOPULLISET (PT:n palaute: pilkku, ja omistaja "jätä tuo kerron lisää myöhemmin kokonaan pois. sitten voit generoida"): 1) "Hei, odotas kaveri. Sinähän olet ihan hiessä!" 2) "Minä olen Livia, kirjekyyhky." 3) "Tiedän isoisästäsi enemmän kuin uskotkaan." 4) "Valitse rauhassa kartalta, mistä aloitat. Perillä sinua odottaa tietäjä iänikuinen, itse Suuri ja Viisas Pöllö." → Pelikoodari generoi (turbo, yksi otto) + opastus + tuuraus 3 kaupunkia → NUI natiivi (juna 182). AVOIN JUONILANKA (docs/tarina.md seuraavassa docs-PR:ssä): Livia "tietää isoisästä enemmän kuin uskotkaan" → lunastettava myöhemmin tarinassa (mitä Livia tietää ja milloin se paljastuu). Mahtipontinen Pöllö-pohjustus + saapumisen "Kääk, apua! Pöllö on matkoilla" = tarkoituksellinen koominen käänne. SAMA VUORO 11.3x OMISTAJA: "linkit voivat näkyä suoraan ranskalaisilla viivoilla ilman väkäsiä" → Asemataulun Sinulle-osio: linkit suoraan näkyvissä "– Otsikko: linkki" ilman väkäsiä (Asemataulu v51; tools/asemataulu/asemataulu.html docs-PR:llä tänään).
+
+## ASEMATAULUN SINULLE-OSIO PIENENNETTÄVÄ, EI LIHAVOINTIA (11.10.2026 klo 12.20)
+
+11.10. 11.4x OMISTAJA: "sinulle itsessään pitää olla pienennettävissä ja älä käytä boldausta ranskalaisissa viivoissa ja laita linkki pienemmällä kirjainkoolla jotta mahtuu helpommin" → Sinulle-otsikko pienentää/avaa osion (kiinni oletuksena, tila muistetaan katsojan selaimessa), viivoissa ei lihavointia, linkki 0,78 rem (Asemataulu v52). RAAMATTUUN ASEMATAULU, SINULLE-OSIO + tools/asemataulu/asemataulu.html docs-PR tänään.
+
+## ASEMATAULU: RAATI JA TESTAAJAT PELKKÄNÄ LUKUNA (11.10.2026 klo 12.20)
+
+11.10. 11.2x OMISTAJA (Asemataulu): "lyhennä raati ja testaajat pelkäksi asentaneiden määräksi ja ota muut tekstit pois" → laatat Raati ja Testaajat näyttävät vain luvun (paivita.py asc_laatat; ei "asentanut"-sanaa eikä päivämäärää). RAAMATTUUN ASEMATAULU (Raati ja Testaajat) + tools/asemataulu/paivita.py docs-PR tänään.
+
+## GENEROIDUT ÄÄNET ILMAN KUUNTELUA JA HYVÄKSYNTÄÄ (11.10.2026 klo 12.20)
+
+11.10. 11.3x OMISTAJA: "pulun äänet oikein. niitä ei tarvitse jatkossa sinun kuunnella eikä pyytää minulta hyväksyntää. eleven tekee aina hyvää jälkeä kunhan kieli on vain määritelty suomeksi" → generoitujen äänten ääntämistä ei tarkisteta omistajalta eikä PT:llä; puheentunnistuksen epäilyt eivät pysäytä vientiä, ehtona vain kieli määritelty suomeksi (ElevenLabs language_code fi). Ääniportti (tekniset tarkistukset) pysyy. RAAMATTUUN äänilinjauksiin (Äänet aina turbo / Ääniportti).
+
+## APURAHAKORTTIIN KUVAT MAAPALLOSTA JA KUUMAILMAPALLOSTA (11.10.2026 klo 12.20)
+
+11.10. 11.4x OMISTAJA: "apurahan arvioijille tekstiin voisi ottaa kuvakaappaukset kuumailmapallosta ja maapallosta" → Laitetestaaja ottaa TF 181:llä iPad Pro 13 vaaka -ehdokkaat (maapallo, kuumailmapallo Pariisissa) → PT valitsee ja lisää assets/apuraha/esittely.json kuvat (kappale 2 Maapallo, kappale 3 Kuumailmapallo; enintään 3 kuvaa -sääntö → korvataan tai nostetaan neljään, PT:n päätös) → Pages-julkaisu (natiivi lukee ilman TF:ää).
+
+## UUSI MATKA NOLLAA ENSIMMÄISEN KERRAN LIPUT (11.10.2026 klo 12.20)
+
+11.10. 11.4x OMISTAJA: "pulun ääni saisi toistua aina alussa jos valitsen uusi peli jotta kuulen samat kuin pelaaja ensimmäistä kertaa" → "Uusi matka" nollaa kaikki ensimmäisen kerran liput (valinnan repliikit, tuuraustervehdys, opastus), joten alku kuuluu kuin ensimmäisellä kerralla; "Taas matkaan?" -tervehdykset jäävät pois uudelta matkalta; "Jatka matkaa" ennallaan. NUI natiivi (182), Pelikoodari web. RAAMATTUUN SAAPUMINEN / ENSIMMÄISEN SAAPUMISEN OPASTUS.
+
+## ALOITUSKAUPUNGIN PULU-KOMMENTTI POIS, TEKSTIOHJEET JÄÄVÄT (11.10.2026 klo 12.20)
+
+11.10. 11.5x OMISTAJA: "aloituskaupungissa pulun oman tekstin ja kuvat voi jättää kokonaan pois, jotta ei tule liian pitkää pulun osuutta. nykypelissä ohjeita tulee tekstimuodossa kartalle, mikä on itseasiassa hyvä juttu. pitäisikö pulun repliikkejä vielä miettiä uudestaan ottaen ne huomioon. ne tekstit näkyivät vain hieman liian vähän aikaa ruudulla." → aloituskaupungin Pulun kommentti + kuvat pois; tekstiohjeet JÄÄVÄT (kumoaa 11.1x "opastus korvaa tekstiohjeet") ja näkyvät pidempään (≥ 6 s/rivi tai ensimmäiseen napautukseen); NUI kytkee nyt vain opastuksen lauseen 3 + tuurauksen; lauseet 1–2 odottavat omistajaa (PT:n suositus: pois, koska tekstit kertovat saman).
+
+## JUNA 182 OMISTAJAN SANASTA; PARIISIN SAAPUMISESITYS JA ALKULENNON HORISONTTI (11.10.2026 klo 12.20)
+
+11.10. 11.5x OMISTAJA (TF 181 laitteella): "pariisissa ei vieläkään lähde se musiikki ja esittely käyntiin vaan kuvat näkyvät pieninä oik yläreunassa ilman musiikkia ja isoisän luenta jää kuulumatta koska se näköjään toistuu ilman ääntä taustalla. korjaa tämä kiireellisenä ja lisätään samanlaiset esittelyt kaikkiin aloituskaupunkeihin. toimiiko alun lentoanimaatio myös muihinkin kaupunkeihin kuin vain ateenaan? ateenan lennossa horisontti muuttuu vaaleaksi lennon aikana ja se näyttää hassulta. voisiko horisontti muuttua mustasta vaaleaksi vasta kun kamera on tarpeeksi lähellä maata ... tehdään juna 182 vasta sitten kun sanon, jotta saadaan kaikki tarvittavat korjaukset valmiiksi. yritän saada ensimmäiset betatestaukset tänään jos vain saadaan kaikki kuntoon" → LS1 KIIRE Pariisin saapumisesitys (toisto TF 181 rungolla → korjaus → 182) + suunnitelma saapumisesityksistä kaikkiin aloituskaupunkeihin; Pelikoodari: alkulento muihin kaupunkeihin + horisontti mustasta ilmakehään vasta matalalla; JUNA 182 VASTA OMISTAJAN LUVALLA (kumoaa tänään "juna lähtee kun kuitattua on"); tavoite 1. beta-testaukset tänään.
+
+## SAAPUMISESITYKSET ALOITUSKAUPUNKEIHIN: LS1:N SUUNNITELMA (11.10.2026 klo 12.20)
+
+11.10. 11.5x PT: LS1:n suunnitelma saapumisesityksistä aloituskaupunkeihin (Ateena, Moskova, Istanbul, Tukholma): valmiina isoisän saapumispuhe, matkakirjaluento + kuvat ja avauskuvat; puuttuu nopea kappale (Moskova-nopea 10.10. vain vientiä vaille → vie heti; Ateena, Istanbul, Tukholma uusi Lyria-kappale) ja nykykuvat C1–C5 (4 × 5 Codex-havainnekuvaa); LS1 yleistää KaupunkiIntron kaupunkikohtaiseksi taulukoksi (juna 182; esitys käynnistyy vasta kun kappale + kuvat ämpärissä). 3 kappaletta + 20 kuvaa kysytty omistajalta.
+
+## ALOITUSKAUPUNGIN RAKENNE: OMISTAJAN EHDOTUS JA PT:N PALAUTE (11.10.2026 klo 12.20)
+
+11.10. 11.5x OMISTAJA (ehdotus, "Mitä mieltä?"): ALOITUSKAUPUNGIN UUSI RAKENNE (Tukholma esimerkkinä, muut samalla kaavalla): 1) vauhdikas intro: uusi kertoja (ei isoisä) sanoo kaupungin nimen ja iskulauseen, taustalla moderni nopea musiikki (aluksi sama kuin Pariisissa kaikille), 6 kuvaa lähes koko ruudulla 3 s välein = 18 s; 2) kartta + Pulu: "Kääk! Apua! Pöllö on kadonnut!" + "Kuuntele isoisän matkakirjasta se hurja kohta, minä jatkan etsimistä."; 3) isoisän luenta + kuvat; samaan aikaan tekstit kartalla: "Klikkaa kohteita kartalla, niistä aukeaa juttuja." (5 s luennan alusta, 7 s) ja "Sinun on ratkaistava vähintään yksi tehtävä jotta aarteen sijainti paljastuu kartalla." (10 s); 4) Pulu luennan jälkeen: "Pöllö sähkötti että oli taittanut siipensä ja pyysi että tuuraisin häntä." + "No, jos tulee kysyttävää, niin napauta minua, enköhän minäkin jotain osaa vastata, olenhan sentään kuuluisaa kirjekyyhkyjen sukua!" → PT:n palaute (William kertojaksi, "hurja kohta" yleisemmäksi, Napauta, pilkku, viimeinen repliikki kahdeksi lauseeksi, Pöllö-repliikit vain ensimmäisellä saapumisella, loppurepliikit odottavat avoimen jutun sulkemista, Ohita) → odottaa omistajan vastausta. Korvaa tuuraus- ja opastusäänet; 3 Lyria + 20 Codex -kysymys raukeaa (avauskuvat valmiina, Pariisin kappale kaikille).
+
+## ALOITUSKAUPUNGIT ATEENA, PARIISI JA TUKHOLMA (11.10.2026 klo 12.20)
+
+11.10. 11.5x OMISTAJA: "ota istanbul pois aloituskaupungeista ja vaihda moskova pariisiksi" → ALOITUSKAUPUNGIT: Ateena, Pariisi, Tukholma (NUI lähtökohdelista, Karttasepän Tukholma-haara, LS1 alkulennon testi + saapumisesitykset näihin). RAAMATTUUN aloituskaupungit-kohtaan (kumoaa listan Ateena, Moskova, Istanbul, Tukholma).
+
+## ALOITUSKAUPUNGIN RAKENNE HYVÄKSYTTY (11.10.2026 klo 12.20)
+
+11.10. 12.0x OMISTAJA: "hyväksyn ehdotuksesi ja saat generoida kaiken tarvittavan" → ALOITUSKAUPUNGIN RAKENNE (Ateena, Pariisi, Tukholma; RAAMATTUUN SAAPUMINEN-kohtaan, korvaa 10.5x opastuksen): 1) intro 18 s: William sanoo kaupungin nimen + iskulauseen, Pariisin nopea kappale kaikille, 6 avauskuvaa lähes koko ruudulla 3 s välein, Ohita; 2) kartta + Pulu "Kääk! Apua! Pöllö on kadonnut!" + "Kuuntele sillä välin isoisän matkakirjaa, minä jatkan etsimistä!"; 3) isoisän luenta + kuvat, samaan aikaan tekstit "Napauta kohteita kartalla, niistä aukeaa juttuja." (5 s luennan alusta, 7 s) ja "Sinun on ratkaistava vähintään yksi tehtävä, jotta aarteen sijainti paljastuu kartalla." (10 s), korvaavat vanhat tilarivit aloituskaupungissa; 4) luennan jälkeen Pulu "Pöllö sähkötti, että oli taittanut siipensä, ja pyysi, että tuuraisin häntä." + "No, jos tulee kysyttävää, napauta minua. Enköhän minäkin jotain osaa vastata – olenhan sentään kuuluisaa kirjekyyhkyjen sukua!" (odottaa avoimen noston sulkemista); Pöllö-repliikit vain pelin ensimmäisellä saapumisella ja Uusi matkan jälkeen; aloituskaupungin oma Pulu-kommentti + kuvat pois; tuuraus + opastus 1–3 käyttämättä. Generointi: Pelikoodari (William × 3, Pulu × 4), toteutus LS1 (intro) + NUI (Pulu ja tekstit), juna 182.
+
+## INTROKAPPALEET ATEENAAN JA TUKHOLMAAN, KAUPUNKIEN TAUSTAMUSIIKIT KUUNNELTAVIKSI (11.10.2026 klo 12.20)
+
+11.10. 12.0x OMISTAJA: "kaupunkeihin tarvitaan vielä ne rauhalliset ja yksinkertaiset taustamusiikit. kuuntelen niitä seuraavaksi ja annan palautteet niistä. samalla voisit tehdä pariisin tyyliset kappaleet muihin saapumiskaupunkeihin" → Pelikoodari: Ateenan ja Tukholman nopeat introkappaleet Pariisin tyyliin (Lyria, yksi otto) → ämpäri + äänisivu → LS1 KaupunkiIntron taulukkoon; omistaja kuuntelee kaupunkien rauhalliset taustamusiikit äänisivulla ja antaa palautteen.
+
+## KAUPUNGIN INTRO JOKA SAAPUMISELLA, KUVAT LÄHES KOKO RUUDULLE (11.10.2026 klo 12.20)
+
+11.10. 12.1x OMISTAJA (iPad-kuvakaappaus Pariisin saapumisesta): "musiikki itseasiassa kuuluu, minulla olikin se vain mykistettynä mutta kuvat eivät aukea isona. Saisiko oletuksena että intro tulee joka kerta kun kaupunkiin tullaan" → Pariisin KIIRE ei ollut vika (mykistys; LS1 ei toistanut simulla); KAUPUNGIN INTRO: kuvat lähes koko ruudun kokoisina kaikissa intro-kaupungeissa (Pariisi + aloituskaupungit) ja intro oletuksena joka saapumisella (Ohita aina; ei uutta asetusta); Pulun Pöllö-repliikit edelleen vain ensimmäisellä kerralla / Uusi matka. LS1 juna 182. RAAMATTUUN SAAPUMINEN.
+
+## CLAUDE-SOVELLUKSEN UUDELLEENKÄYNNISTYS JUNAN 182 JÄLKEEN (11.10.2026 klo 12.20)
+
+11.10. 12.1x OMISTAJA: "nollaan kohta viikkokiintiön, koska minulla on yksi reset käytettävissä. sitten kun tulee sopiva hetki voisin käynnistää mac studion clauden uudestaan ohjelmistopäivityksen tekemiseksi" + "tehdään vaikka juna 182 valmiiksi ja sen jälkeen uudelleen käynnistys claudelle" → CLAUDE-SOVELLUKSEN UUDELLEENKÄYNNISTYS JUNAN 182 JÄLKEEN: kun TF 182 on Applella, PT pyytää roolit pushaamaan ja odottamaan käynnissä olevat ajot (viesti scratchpad: uudelleenkaynnistys-viesti.txt) → omistajalle "nyt sopii" → jälkeen PT: CronCreate JONOKIERROS, Asemataulu watch, jatka-viestit rooleille, Julkaisija käynnistää olavinlinna-vahdin, Postivahti cronit.
+
+## CLAUDE-API-AVAIN VAIHDETTU (11.10.2026 klo 12.20)
+
+11.10. 12.1x OMISTAJA: "nyt meni secret päivitys läpi" → uusi ANTHROPIC_API_KEY (Consolen krediittiorganisaatio) GitHub-salaisuudessa → Julkaisija ajaa pollo-julkaisu.yml + savuke-pollo.yml → rivi PT:lle → omistajalle kuittaus. ANTHROPIC_ADMIN_KEY ennallaan (vanha organisaatio).
+
+## OLAVINLINNAN TEKSTIKORJAUKSET PERUTTU, KESKIAIKAISET KYLTIT LUETTAVIKSI (11.10.2026 klo 12.22)
+
+11.10. 12.3x OMISTAJA: "kaikki nuo olavin linnan tekstin korjaukset olivat turhia, palauta vanhat. ongelma oli ne kyltit jotka näkyvät pelin ja esittelyn aikana missä keskiaikainen tyyli. tiedätkö mistä puhun?" → NUI linna-tekstit 25f332fe1 kuittaus PERUTTU (ei junaan 182; tummat kortit, tekstitys ja nimikyltti ennalleen); UUSI: Olavinlinnan keskiaikaisella kirjasimella (fraktuura) olevat kyltit esittelyssä ja pelissä vaihdetaan pelin olemassa olevaan luettavaan kirjasimeen (koko ja paikka ennallaan) → ennen/jälkeen-arkki → omistaja. Sisältökirjurin faktakorjaukset (tietokerros-v2) ennallaan, ellei omistaja toisin sano.
