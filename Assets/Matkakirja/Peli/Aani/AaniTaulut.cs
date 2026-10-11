@@ -30,6 +30,12 @@ namespace Matkakirja.Peli
 
         // --- pohjaraita (ambience-stream.js POHJA_*) ---
         public static int PohjaNousuMs => Asetus.Kokonais("aanet.PohjaNousuMs", 4000);
+        /// <summary>
+        /// Hitaan kaupunkikappaleen taso nopeaan introon nähden (omistaja 11.10.2026 klo 15.5x: "hidas musiikki saa soida hiljempaa
+        /// kuin nopea"). Koskee jakson hidasta ja kaupungin omaa kappaletta pohjakanavalla; nopea intro (jakson vaihe 0) soi täysillä.
+        /// 0,7 ≈ −3 dB miksauksen lisäksi (hitaat masteroitu −16,3 LUFS, nopeat −11,9).
+        /// </summary>
+        public static double HitaanKerroin => Asetus.Luku("aanet.HitaanKerroin", 0.7);
         public static int PohjaVaihtoMs => Asetus.Kokonais("aanet.PohjaVaihtoMs", 1500);
         /// <summary>Saapumisesityksen nopea kappale alkaa isoisän saapumispuheen kanssa (omistaja KIIRE TF 180): nousu ≤ 0,15 s.</summary>
         public static int EsitysNousuMs => Asetus.Kokonais("aanet.EsitysNousuMs", 150);
