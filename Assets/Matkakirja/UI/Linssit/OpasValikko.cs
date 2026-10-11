@@ -1543,10 +1543,14 @@ namespace Matkakirja.Natiivi
                 if (kb > 0f) kirjoitusAla = Mathf.Max(kirjoitusAla, kb - alaVara + KuvaRako);
             }
             if (kirjoitus.style.bottom.value.value != kirjoitusAla) kirjoitus.style.bottom = kirjoitusAla;
-            if (VanhatSirut) PaivitaVanhatSirut();
+            // KYSYMYKSEN VAIHTOEHDOT NÄKYVIIN (Laitetestaaja TF 180 karttakierros 11.10.: Wienissä, Vilnassa, Luxemburgissa ja Marseillessa
+            // opas kysyi ensin, mutta valinnat olivat vain kiinni olevassa chatissa → jumi > 190 s; PT 11.10.): sirurivi neljän napin yläpuolelle,
+            // kun oppaan kysymys odottaa vastausta, ja piiloon valinnan tai vanhenemisen jälkeen. Odotus jatkuu pelaajan valintaan asti (TF 144).
+            if (VanhatSirut || siruNakyy || odotettuKysymys != null || OpasSovitin.Viimeisin?.Kysymys != null) PaivitaVanhatSirut();
         }
 
-        /// <summary>A/B (`ui opasvalikko vanhatsirut 1`): vanha kahden sirun rivi neljän napin tilalla.</summary>
+        /// <summary>A/B (`ui opasvalikko vanhatsirut 1`): vanha kahden sirun rivi neljän napin tilalla. Muuten sirurivi näyttää vain oppaan
+        /// odottavan kysymyksen vaihtoehdot (ilman mikkisirua, joka on jo napeissa) neljän napin yläpuolella.</summary>
         static bool VanhatSirut;
 
         void PaivitaVanhatSirut()
@@ -1563,8 +1567,8 @@ namespace Matkakirja.Natiivi
                 odotettuKysymys = null;
                 if (chat.OppaanJatkot.Count > 0 && vanhat.Contains(chat.OppaanJatkot[0])) chat.TyhjennaOppaanJatkot();
             }
-            var jatkot = chat.OppaanJatkot;
-            bool nayta = !chat.Auki && !Auki && !OpasSovitin.KertojaPuhuu;
+            IReadOnlyList<string> jatkot = VanhatSirut ? chat.OppaanJatkot : (IReadOnlyList<string>)kys?.Vaihtoehdot ?? Array.Empty<string>();
+            bool nayta = !chat.Auki && !Auki && !OpasSovitin.KertojaPuhuu && (VanhatSirut || jatkot.Count > 0);
             int poletti = nayta ? jatkot.Count == 0 ? 0 : string.Join("\n", jatkot).GetHashCode() | 1 : -1;
             if (poletti == siruPoletti) return;
             siruPoletti = poletti;
@@ -1577,7 +1581,7 @@ namespace Matkakirja.Natiivi
                     var b = Rakenne.Nappi(t, "mk-chat__siru", () => Valitse(t), sirurivi);
                     Kirjasimet.Aseta(b, Kirjasin.Moderni);
                 }
-                sirurivi.Add(puhuSiru);
+                if (VanhatSirut) sirurivi.Add(puhuSiru);
             }
             if (nayta == siruNakyy) return;
             siruNakyy = nayta;
@@ -1692,13 +1696,14 @@ namespace Matkakirja.Natiivi
             tapit.Paivita((pysahdys || VapaaTila) && !Auki && !(chat?.Auki ?? false), tappiAla, sivu);
             // Kohteen nimilappu pysähdyksellä (myös valikon aikana; chat peittää sen joka tapauksessa).
             nimilappu.Paivita(pysahdys && !(chat?.Auki ?? false) ? l.Nykyinen.Nimi : null);
-            float siruAla = krediittiAla;
+            // Kysymyksen vaihtoehdot neljän napin (tai esitysrivin) yläpuolelle; A/B:n vanha rivi napin paikalla.
+            float siruAla = VanhatSirut ? krediittiAla : TapitAla;
             if (tapit.Nakyy && siruNakyy && !LeveaRuutu)
             {
                 float leveys = 0f;
                 foreach (var c in sirurivi.Children()) leveys += c.layout.width + 8f;
                 float vapaa = w - 2f * (OpasTapit.Reuna + OpasTapit.Halkaisija + KuvaRako);
-                if (leveys > vapaa) siruAla = tappiAla + OpasTapit.Halkaisija + KuvaRako;
+                if (leveys > vapaa) siruAla = Mathf.Max(siruAla, tappiAla + OpasTapit.Halkaisija + KuvaRako);
             }
             if (sirurivi.style.bottom.value.value != siruAla) sirurivi.style.bottom = siruAla;
         }
@@ -1902,7 +1907,20 @@ namespace Matkakirja.Natiivi
         void Valitse(string teksti)
         {
             Debug.Log("MATKAKIRJA opas: valinta \"" + teksti + "\"");
+            // IKÄKYSELY (PT 11.10. 04.5x): kierrosvalinta (Esittele kaupunki / Lisää tätä kaupunkia) ei ole pelaajan syötettä
+            // tekoälylle: worker käsittelee sen kuten toiveen puuttumisen (opas.js onKierrosToive → toive null) ja kohdekaupungeissa
+            // esigeneroidulla kierroksella. Siksi se menee oppaalle suoraan ilman ikäkyselyä; muut vaihtoehdot (esim. "Näytä jotain
+            // outoa") ohjaavat live-tekoälyn vastausta, joten ne kulkevat chatin kautta ja ikäkysely säilyy.
+            if (OnKierrosToive(teksti) && OpasSovitin.Toive(teksti)) return;
             UiNakymat.Hae()?.Chat?.Kysy(teksti, true);
+        }
+
+        /// <summary>Workerin onKierrosToive (tools/pollo/opas.js): vain kirjaimet a–ö pienellä verrattuna.</summary>
+        static bool OnKierrosToive(string t)
+        {
+            static string Avain(string x) => new string((x ?? "").ToLowerInvariant().Where(c => c >= 'a' && c <= 'z' || c == 'ä' || c == 'ö' || c == 'å').ToArray());
+            string a = Avain(t);
+            return a.Length > 0 && (a == Avain("Esittele kaupunki") || a == Avain("Lisää tätä kaupunkia"));   // kieli: ei (workerin tunnisteet)
         }
 
         void Avaa(Nakyma n)
