@@ -16978,15 +16978,9 @@ export const MAA_KATEGORIAT = {
           kohteet: [
             {
               nimi: 'Eesti Rahva Muuseum — Viron kansallismuseo Tartossa',
-              tiedosto: 'Eesti Rahva Muuseumi peahoone.jpg',
               teksti: 'Viron kansallismuseo sai vuonna 2016 Tartossa uuden talon, '
                 + 'joka nousee maasta vanhan sotilaslentokentän kiitoradan '
                 + 'päästä. Sivuilta pääsee näyttelyihin ja kokoelmiin.',
-              lyhyt: 'Viron kansallismuseo perustettiin 1909 Tartossa esittelemään virolaista kansankulttuuria.',
-              selite: 'Vuonna 1909 Tartossa perustettu Viron kansallismuseo '
-                + 'esittelee virolaista kansatiedettä ja kansantaidetta sekä '
-                + 'muiden suomalais-ugrilaisten kansojen kulttuuria.',
-              lahde: 'Berta Vosman, Wikimedia Commons (CC BY-SA 4.0)',
               linkki: 'https://www.erm.ee/en/',
             },
             {
@@ -17024,15 +17018,9 @@ export const MAA_KATEGORIAT = {
           kohteet: [
             {
               nimi: 'DIGAR — kansalliskirjaston digiarkisto',
-              tiedosto: 'National Library of Estonia (in Tallinn).jpg',
               teksti: 'Viron kansalliskirjaston digiarkistossa on kirjoja, '
                 + 'aikakauslehtiä, karttoja, nuotteja ja pikkupainatteita. '
                 + 'Suuri osa aukeaa suoraan luettavaksi selaimessa.',
-              lyhyt: 'Viron kansalliskirjasto perustettiin 1918 parlamentin kirjastoksi.',
-              selite: 'Viron kansalliskirjasto perustettiin 21. joulukuuta '
-                + '1918 maan parlamentin kirjastoksi, ja se säilyttää '
-                + 'virolaista kansallisaineistoa.',
-              lahde: 'Pauloleong2002, Wikimedia Commons (CC BY-SA 4.0)',
               linkki: 'https://www.digar.ee/arhiiv/',
             },
             {
@@ -17051,12 +17039,6 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Eesti regilaulude andmebaas — 92 134 kansanlaulua',
-              tiedosto: 'Monument of Singing Mother Hilana Taarka, Obinitsa village Setomaa region, Estonia.jpg',
-              lyhyt: 'Setomaan Laulava äiti -patsas kunnioittaa seton laulajaperinnettä ja laulaja Hilana Taarkaa.',
-              selite: 'Setomaan Obinitsassa seisova Laulava äiti -patsas '
-                + 'kunnioittaa seton laulajaperinnettä ja laulaja Hilana '
-                + 'Taarkaa.',
-              lahde: 'Klarqa, Wikimedia Commons (CC BY-SA 4.0)',
               teksti: 'Viron kirjallisuusmuseon kansanrunousarkisto on koonnut '
                 + 'tietokantaan 92 134 regilaulua eli vanhaa '
                 + 'kalevalamittaista laulua. Jokaisesta näkyy, kuka lauloi ja '
@@ -17330,7 +17312,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Nainen joka nostaa kolme tähteä',
           aika: '1935',
-          tiedosto: 'Freedom Monument Latvia 04.jpg',
           teksti: 'Riian vapaudenpatsas paljastettiin vuonna 1935 muistoksi '
             + 'vuosien 1918–1920 itsenäisyyssodassa kaatuneille, ja se '
             + 'rahoitettiin kokonaan kansalaisten lahjoituksilla. Patsaan '
@@ -17342,10 +17323,6 @@ export const MAA_KATEGORIAT = {
             + 'vaarallista ja saattoi johtaa kuulusteluihin. Jalustan '
             + 'reliefeissä on kolmetoista hahmoa, jotka kuvaavat työtä, '
             + 'perhettä ja vapaustaistelua.',
-          lyhyt: 'Vapaudenpatsas paljastettiin 1935 muistoksi itsenäisyyssodan 1918–1920 kaatuneille.',
-          selite: 'Patsaan huipulla seisova Milda kohottaa kolme tähteä, '
-            + 'jotka kuvaavat Latvian kolmea historiallista aluetta.',
-          lahde: 'Scotch Mist, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       tehtava: {
@@ -17518,15 +17495,9 @@ export const MAA_KATEGORIAT = {
           kohteet: [
             {
               nimi: 'Grāmatas — kansalliskirjaston kirjahylly verkossa',
-              tiedosto: 'Gaismas-pils.jpg',
               teksti: 'Sama kirjasto on kuvannut noin 8 000 kirjaa sivu sivulta, '
                 + 'yhteensä puolitoista miljoonaa sivua. Kirjastorakennus '
                 + 'itse on nimeltään Gaismas pils eli Valon linna.',
-              lyhyt: 'Latvian kansalliskirjasto perustettiin 1919, ja sen päärakennus on Gaismas pils, Valon linna.',
-              selite: 'Latvian kansalliskirjasto perustettiin 1919, ja sen '
-                + 'nykyinen päärakennus tunnetaan nimellä Gaismas pils eli '
-                + 'Valon linna.',
-              lahde: 'Rīgas investīciju un tūrisma aģentūra, Wikimedia Commons (CC BY 4.0)',
               linkki: 'https://gramatas.lndb.lv/',
             },
             {
@@ -20109,7 +20080,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Nuorisoseurasta syntyi armeijan siemen',
           aika: '1914',
-          tiedosto: 'Ukrainian Sich Riflemen Monument on Lychakiv Cemetery 04.jpg',
           teksti: 'Galitsian ukrainalaiset olivat 1900-luvun alussa perustaneet '
             + 'satoja Sitš-nimisiä liikunta- ja palokuntaseuroja, jotka hakivat '
             + 'innoituksensa kasakoiden Zaporižžjan Sitšistä. Elokuussa 1914 '
@@ -20120,10 +20090,6 @@ export const MAA_KATEGORIAT = {
             + 'kansantasavallan armeijan ytimen ja taistelivat vielä Puolaa '
             + 'vastaan, kunnes yksikkö hajotettiin toukokuussa 1920. Lvivin '
             + 'Lytšakivin hautausmaalle pystytettiin heille muistomerkki.',
-          lyhyt: 'Ukrainalaiset sitšiläisampujat oli 1914 perustettu galitsialainen vapaaehtoislegioona.',
-          selite: 'Lvivin Lytšakivin hautausmaan muistomerkki ukrainalaisille '
-            + 'sitšiläisampujille, siivekäs hahmo pylvään huipulla.',
-          lahde: 'Dmytro Petishkin, Wikimedia Commons (CC BY 4.0)',
         },
         {
           otsikko: 'Tasavalta eli neljä vuotta ennen kuin se hävisi',
@@ -20149,7 +20115,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Nälänhätä jota valtio yritti salata',
           aika: '1932–1933',
-          tiedosto: 'Holodomor victims Memorial.jpg',
           teksti: 'Neuvostojohtaja Josif Stalinin vuonna 1929 käynnistämä '
             + 'maatalouden pakkokollektivisointi ajoi ukrainalaiset '
             + 'talonpojat luopumaan maastaan ja omaisuudestaan, ja '
@@ -20162,10 +20127,6 @@ export const MAA_KATEGORIAT = {
             + 'mutta parikymmentä valtiota on tunnustanut tapahtuman '
             + 'kansanmurhaksi. Neuvostoliitossa nälänhädästä vaiettiin aina '
             + 'perestroikaan asti.',
-          lyhyt: 'Pakkokollektivisointi ja viljan pakko-otot aiheuttivat Ukrainassa joukkokuoleman 1932–1933.',
-          selite: 'Holodomorin uhrien muistomerkki Kiovassa, taustalla '
-            + 'Petšerskin luostarin kultaiset kupolit.',
-          lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Holodomor',
         },
         {

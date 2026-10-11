@@ -16348,18 +16348,16 @@ export const KULTTUURI_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Laulukaari täyttyy viiden vuoden välein',
-          tiedosto: 'Üldlaulupidu 2014 - 26.JPG',
+          tiedosto: "Filiae Patriae 2014.JPG",
           teksti: 'Viron laulujuhlia on pidetty vuodesta 1869, ja Tallinnan '
             + 'laulukentälle kokoonnutaan viiden vuoden välein. Laulukaaren '
             + 'lavalle mahtuu noin 15 000 laulajaa ja kentälle jopa 100 000 '
             + 'kuulijaa. Syyskuussa 1988 samalle kentälle kokoontui arviolta '
             + '300 000 ihmistä laulamaan lauluja, joita ei silloin saanut '
             + 'laulaa julkisesti. Siitä tuli nimi laulava vallankumous.',
-          lyhyt: 'Laulukaaren lavalle mahtuu noin 15 000 laulajaa ja kentälle jopa 100 000 kuulijaa.',
-          selite: 'Laulukaaren lavalle mahtuu noin 15 000 laulajaa ja '
-            + 'kentälle jopa 100 000 kuulijaa, ja laulujuhlat pidetään '
-            + 'viiden vuoden välein.',
-          lahde: 'Ivo Kruusamägi, Wikimedia Commons (CC BY-SA 4.0)',
+          lyhyt: "Laulujuhlien kulkue Tallinnassa 2014",
+          selite: "Laulujuhlien kulkue Tallinnassa 2014: kansallispukuisia ja ylioppilaslakkisia kulkijoita kantaa lippua; laulujuhlat pidetään viiden vuoden välein.",
+          lahde: "Concord, Wikimedia Commons (CC BY-SA 3.0)",
           wiki: 'Tallinnan laulujuhlat',
           musiikki: 'https://music.apple.com/fi/search?term=estonian%20choir',
           musiikkiNimi: 'Virolaista kuorolaulua Apple Musicissa',
@@ -16644,12 +16642,10 @@ export const KULTTUURI_KATEGORIAT = {
         + 'jonka metroon lasketaan yli sata metriä maan alle.',
       kansikuvat: [
         {
-          tiedosto: 'Golden Gate Kiev 2018 G1.jpg',
-          lyhyt: 'Kultaisen portin porttitorni on vuodelta 1982 ja pelkkä arvaus alkuperäisestä 1000-luvun portista.',
-          selite: 'Kultaisen portin porttitorni on vuodelta 1982 ja pelkkä '
-            + 'arvaus, sillä 1000-luvun portista ei ole säilynyt yhtään '
-            + 'kuvaa — aidot muurinpätkät ovat sen sisällä.',
-          lahde: 'George Chernilevsky, Wikimedia Commons (PD)',
+          tiedosto: "Zoloti virita, 1858.jpg",
+          lyhyt: "Kultaisen portin rauniot 1858",
+          selite: "Kultaisen portin rauniot Vasili Timmin litografiassa vuodelta 1858, kauan ennen nykyistä jälleenrakennusta.",
+          lahde: "Vasili Timm, Wikimedia Commons (CC BY 4.0)",
         },
         {
           tiedosto: 'Saint Andrew\'s Church, Kyiv.jpg',
@@ -16859,7 +16855,6 @@ export const KULTTUURI_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Sata metriä alas ja takaisin',
-          tiedosto: 'Escalators at the deepest metro station of the world Arsenalna (105.5m) (8601894844).jpg',
           teksti: 'Kiovan Arsenalnan metroasema on 105,5 metriä maanpinnan '
             + 'alapuolella. Se oli maailman syvin asema vuoteen 2022 asti, '
             + 'jolloin Kiinan Chongqingiin avattiin 116 metrin syvyyteen '
@@ -16867,11 +16862,6 @@ export const KULTTUURI_KATEGORIAT = {
             + '55,8 ja 46,6 metriä, ja niiden välissä on oma väliaula. Syvyys '
             + 'ei ole kikkailua: Kiova on Dneprin jyrkällä rantatörmällä, ja '
             + 'asema on kaivettu törmän sisään.',
-          lyhyt: 'Arsenalnan metroasema on 105,5 metriä maanpinnan alla, maailman syvin metroasema vuoteen 2022 asti.',
-          selite: 'Arsenalnan metroasema on 105,5 metriä maanpinnan '
-            + 'alapuolella, ja se oli maailman syvin metroasema vuoteen 2022 '
-            + 'asti.',
-          lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Kiovan metro',
         },
         {
@@ -16893,7 +16883,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Kilpi vaihdettiin kesken sodan',
-          tiedosto: 'Mother Ukraine monument with the Ukrainian trident in Kyiv, Ukraine, 2026.jpg',
           teksti: 'Dneprin rinteellä seisoo 62 metriä korkea teräksinen '
             + 'naispatsas, kädessään 16 metrin miekka ja 13 metriä leveä '
             + 'kilpi. Patsas paljastettiin vuonna 1981, ja kilvessä oli '
@@ -16902,11 +16891,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tehtiin kovassa tuulessa ja sateessa ja keskeytyi '
             + 'ilmahälytyksiin, mutta kilpi oli valmis ennen '
             + 'itsenäisyyspäivää 24. elokuuta.',
-          lyhyt: 'Teräksisen 62-metrisen naispatsaan kilvestä irrotettiin Neuvostoliiton vaakuna elokuussa 2023.',
-          selite: 'Teräksinen naispatsas on 62 metriä korkea, ja sen '
-            + 'kilvestä irrotettiin Neuvostoliiton vaakuna elokuussa 2023 '
-            + 'Ukrainan kolmikärjen tieltä.',
-          lahde: 'Світлана 743, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       /*
@@ -17189,7 +17173,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kanavien yli kulkee yli 340 isompaa siltaa, ja '
                 + 'pienemmät mukaan laskien niitä on toista tuhatta. '
                 + 'Kesäisin liikkuu myös kantosiipialuksia.',
-              kuva: { tiedosto: 'Metro SPB Line5 Admiralteyskaya Platform.jpg', lyhyt: 'Pietarin metro avattiin 1955; sen asemat ovat maailman syvimpiä, syvin noin 86 metriä maan alla.', selite: 'Pietarin metro avattiin 15. marraskuuta 1955, ja sen asemat kuuluvat maailman syvimpiin: syvin on noin 86 metriä maanpinnan alapuolella.', lahde: 'Florstein, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: "Spboldmetro.JPG", lyhyt: "Pietarin ylikulkevan metron suunnitelma 1902", selite: "Vuoden 1902 vesiväripiirros Pietarin suunnitellusta ylikulkevasta metrosta; todellinen metro avattiin vasta 15.11.1955, ja sen asemat ovat maailman syvimpiä.", lahde: "Tuntematon, Wikimedia Commons (PD)" },
             },
             {
               otsikko: 'Sata saarta, sitten neljäkymmentä',
@@ -18134,7 +18118,7 @@ export const KULTTUURI_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Maanalainen palatsi',
-          tiedosto: 'Vertical panorama of the Mayakovskaya Metro Station.jpg',
+          tiedosto: "1st train of Moscow Metro.jpg",
           teksti: 'Majakovskajan metroasema avattiin syyskuussa 1938, ja se on 33 '
             + 'metriä maan alla. Pylväät on päällystetty ruostumattomalla '
             + 'teräksellä ja vaaleanpunaisella rodoniitilla, ja katon '
@@ -18143,12 +18127,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Dushkin sai New Yorkin maailmannäyttelyn pääpalkinnon vuonna '
             + '1939. Sodan aikana asemalla suojauduttiin pommituksilta, ja '
             + 'marraskuussa 1941 sen keskushallissa pidettiin suuri kokous.',
-          lyhyt: 'Majakovskajan metroasema avattiin 1938, katon kuopissa on 34 mosaiikkia neuvostotaivaasta.',
-          selite: 'Majakovskajan metroasema avattiin syyskuussa 1938 '
-            + 'kolmenkymmenenkolmen metrin syvyyteen, ja sen katon soikeissa '
-            + 'kuopissa on 34 mosaiikkia sarjasta Vuorokausi '
-            + 'neuvostotaivaalla.',
-          lahde: 'Andrey Kryuchenko, Wikimedia Commons (CC BY-SA 3.0)',
+          lyhyt: "Moskovan metron ensimmäinen juna",
+          selite: "Moskovan metron ensimmäinen juna 14.10.1934 arkistokuvassa; juna on merkitty Sokolniki-asemalle, ja metro avattiin yleisölle 15.5.1935.",
+          lahde: "Главархив Москвы, Wikimedia Commons (CC BY 4.0)",
           wiki: 'Moskovan metro',
         },
       ],
@@ -20020,14 +20001,6 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'DIMSFIKAS, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
-          tiedosto: 'Vorontsov Lighthouse 2017 G1.jpg',
-          lyhyt: 'Vorontsovin majakan valo välähtää kolme pitkää — morseaakkosten O niin kuin Odessa.',
-          selite: 'Vorontsovin majakka on 27 metriä korkea, ja sen valo '
-            + 'välähtää sataman aallonmurtajalta kolme pitkää — '
-            + 'morseaakkosten O niin kuin Odessa.',
-          lahde: 'George Chernilevsky, Wikimedia Commons (PD)',
-        },
-        {
           tiedosto: 'Deribasivska-Street-aerial-2.jpg',
           lyhyt: 'Derybasivska on kaupungin vilkkain kävelykatu, nimetty perustaja José de Ribasin mukaan.',
           selite: 'Derybasivska on kaupungin vilkkain kävelykatu, ja se on '
@@ -20037,12 +20010,10 @@ export const KULTTUURI_KATEGORIAT = {
       ],
       matkailijalle: {
         kuva: {
-          tiedosto: '51-101-1013 Odesa Dworzec DSC 3087.jpg',
-          lyhyt: 'Odessan pääasema valmistui 1883, tuhoutui 1944 ja avattiin jälleenrakennettuna 1952.',
-          selite: 'Odessan pääasema valmistui 1883 arkkitehti Viktor '
-            + 'Schröterin piirustusten mukaan, tuhoutui 1944 ja avattiin '
-            + 'jälleenrakennettuna 12. heinäkuuta 1952.',
-          lahde: 'Haidamac, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "Odesa Railway Station (beginning of 20th century).jpg",
+          lyhyt: "Odessan rautatieasema 1900-luvun alussa",
+          selite: "Odessan päärautatieaseman laituri ja höyryveturi 1900-luvun alussa; nykyinen asemarakennus on vuoden 1952 jälleenrakennus Schröterin alkuperäisen tilalle.",
+          lahde: "Tuntematon, Wikimedia Commons (PD)",
         },
         kappale: 'Odessa on suunniteltu kaupunki: sen ruutukaavan piirsi '
           + 'ranskalainen insinööri 1700-luvun lopulla, ja katujen '
@@ -20249,7 +20220,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Perustaja tuli Napolista',
-          tiedosto: '29 Odessa de Ribas monument.jpg',
           teksti: 'Odessan perusti sotilas nimeltä José de Ribas. Hän syntyi '
             + 'Napolissa espanjalaisen konsulin poikana, siirtyi Venäjän '
             + 'palvelukseen ja valtasi vuonna 1789 Hadžibein turkkilaisen '
@@ -20258,11 +20228,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rantatörmälle rakennettaisiin satama. Käsky annettiin 27. '
             + 'toukokuuta 1794, ja siitä lasketaan kaupungin ikä. Vilkkain '
             + 'kävelykatu on yhä Derybasivska eli de Ribasin katu.',
-          lyhyt: 'José de Ribas valtasi 1789 linnakkeen ja ehdotti satamaa; käsky annettiin 1794.',
-          selite: 'José de Ribas valtasi 1789 Hadžibein linnakkeen ja '
-            + 'ehdotti keisarinna Katariina II:lle satamaa samalle '
-            + 'rantatörmälle; käsky annettiin 27. toukokuuta 1794.',
-          lahde: 'Kojote, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Katariina Suuri',
         },
         {
@@ -20446,7 +20411,6 @@ export const KULTTUURI_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Runoilija karkotettiin tänne',
-          tiedosto: 'Pushkin Statue Odessa.jpg',
           teksti: 'Aleksandr Pushkin lähetettiin Odessaan 1823 '
             + 'rangaistukseksi Moskovassa kirjoittamistaan '
             + 'vallanpitäjiä ärsyttäneistä runoista. Kaupunki oli '
@@ -20457,11 +20421,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'paljasti odessalainen kuvanveistäjä Aleksandr Tokarev '
             + 'vuonna 1999, Pushkinin syntymän 200-vuotisjuhlan '
             + 'kunniaksi.',
-          lyhyt: 'Pushkin karkotettiin Odessaan 1823; patsas museon edessä esittää häntä 24-vuotiaana.',
-          selite: 'Pushkin karkotettiin Odessaan vuonna 1823, ja '
-            + 'patsas museon edessä esittää häntä juuri '
-            + 'saapumisikäisenä, 24-vuotiaana.',
-          lahde: 'Radek Linner, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Aleksandr Puškin',
         },
         {
@@ -20483,7 +20442,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Vuosi, joka riitti Eugen Oneginiin',
-          tiedosto: 'Pushkin monument odessa pushkinskaya street.jpg',
           teksti: 'Reilun vuoden Odessassa Pushkin ehti kirjoittaa '
             + 'toisen luvun keskeneräisestä mestariteoksestaan Jevgeni '
             + 'Onegin, viimeistellä runoelman Bahtšisarain suihkulähde '
@@ -20491,11 +20449,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'muistopatsas kaupungissa, myös vuodelta 1999, seisoo '
             + 'Pushkinskaja-kadulla — kadulla, joka on nimetty hänen '
             + 'mukaansa, vaikka hän ei viihtynyt siellä loppuun asti.',
-          lyhyt: 'Odessan vuoden aikana Pushkin kirjoitti osia Jevgeni Oneginista ja yli 30 runoa.',
-          selite: 'Odessan-vuotenaan Pushkin kirjoitti osia Jevgeni '
-            + 'Oneginista, viimeisteli Bahtšisarain suihkulähteen ja '
-            + 'kirjoitti yli kolmekymmentä runoa.',
-          lahde: 'HOBOPOCC, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
     },
@@ -28273,7 +28226,6 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Kaupungissa ajavat raitiovaunut ja johdinautot: '
                 + 'sähköraitiovaunut aloittivat 1901 ja johdinautot '
                 + '1947. Linjoja on kahdeksan ja kaksikymmentäneljä.',
-              kuva: { tiedosto: 'Riga Airport 2016.jpg', lyhyt: 'Riian lentokenttä rakennettiin 1973 korvaamaan Spilven kentän; 2024 matkustajia oli 7,1 miljoonaa.', selite: 'Riian lentokenttä rakennettiin 1973 korvaamaan vanhentunut Spilven kenttä, ja vuonna 2024 sen kautta kulki 7,1 miljoonaa matkustajaa.', lahde: 'Avio2016, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Joen toinen puoli',
@@ -28673,7 +28625,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Lava, joka mahtuu kolmellekymmenelletuhannelle laulajalle',
-          tiedosto: 'Mežaparks Great Bandstand before concert.jpg',
           teksti: 'Nykyinen laulujuhla huipentuu Mežaparksin suurella '
             + 'lavalla Riiassa, jonne mahtuu esiintymään jopa '
             + 'kolmekymmentätuhatta laulajaa ja tanssijaa samaan aikaan '
@@ -28686,15 +28637,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaikki kokoontuvat samaan aikaan samalle lavalle — '
             + 'logistinen ja musiikillinen ponnistus, joka toistuu '
             + 'nyt viidennen sukupolven latvialaisten kesken.',
-          lyhyt: 'Mežaparksin lavalle Riiassa mahtuu esiintymään jopa 30 000 laulajaa ja tanssijaa.',
-          selite: 'Mežaparksin suuri esiintymislava Riiassa ennen '
-            + 'laulujuhlakonserttia — lavalle mahtuu jopa 30 000 '
-            + 'esiintyjää kerralla.',
-          lahde: 'Gustamons, Wikimedia Commons (CC0)',
         },
         {
           otsikko: 'Perinne, jonka Unesco otti suojaansa',
-          tiedosto: 'View from Mežaparks Great Bandstand side.jpg',
           teksti: 'Unesco lisäsi Latvian, Viron ja Liettuan yhteiset '
             + 'laulu- ja tanssijuhlat ihmiskunnan aineettoman '
             + 'kulttuuriperinnön luetteloonsa vuonna 2003 — '
@@ -28708,11 +28653,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'mutta niitä yhdistää sama perusidea: tavalliset '
             + 'ihmiset, ei ammattilaiset, laulavat yhdessä isoina '
             + 'joukkoina oman kielensä ja kulttuurinsa kunniaksi.',
-          lyhyt: 'Unesco lisäsi Baltian maiden laulu- ja tanssijuhlat aineettoman kulttuuriperinnön luetteloon 2003.',
-          selite: 'Näkymä Mežaparksin lavalta sivulta — perinne, jonka '
-            + 'Unesco tunnusti ihmiskunnan aineettomaksi '
-            + 'kulttuuriperinnöksi 2003.',
-          lahde: 'Gustamons, Wikimedia Commons (CC0)',
         },
         {
           otsikko: 'Kuoro, johon kuka tahansa voi liittyä',
@@ -28812,7 +28752,6 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'helmikuuta 2025; sen tarkoitus on kaksinkertaistaa '
                 + 'kapasiteetti. Kentältä lähtee myös suoria busseja '
                 + 'muihin Baltian kaupunkeihin.',
-              kuva: { tiedosto: 'Vilnius International Airport Departure Terminal, June 2026.jpg', lyhyt: 'Vilnan uusi lähtöterminaali avattiin 2025 kaksinkertaistamaan lentoaseman kapasiteetti.', selite: 'Vilnan uusi lähtöterminaali avattiin 4. helmikuuta 2025, ja sen tarkoitus on kaksinkertaistaa lentoaseman kapasiteetti.', lahde: 'Bdx, Wikimedia Commons (CC0)' },
             },
             {
               otsikko: 'Kylä, josta kasvoi tornikortteli',
@@ -28825,7 +28764,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'alun perin suurruhtinaan metsästysmaata; se '
                 + 'liitettiin kaupunkiin 1901, ja siellä on yhä yli sata '
                 + 'puuhuvilaa.',
-              kuva: { tiedosto: '3bures by Augustas Didzgalvis.jpg', lyhyt: 'Šnipiškėsin puutaloaluetta kutsuttiin Shanghaiksi, ja Baltian korkein rakennus valmistui sinne 2004.', selite: 'Šnipiškėsin puutaloaluetta sanottiin kansanomaisesti Shanghaiksi, ja Baltian korkein rakennus valmistui sinne toukokuussa 2004.', lahde: 'Augustas Didžgalvis, Wikimedia Commons (CC BY-SA 4.0)' },
+              kuva: { tiedosto: "Vilnia, Vialla-Śnipiški, Jezuicki. Вільня, Вяльля-Сьніпішкі, Езуіцкі (H. Poddębski, 1938).jpg", lyhyt: "Šnipiškės Neris-rannalta 1938", selite: "Šnipiškėsin Neris-ranta Henryk Poddębskin valokuvassa vuodelta 1938: markkinaväkeä, hevosia ja kaukana kirkko; alueen puutaloja kutsuttiin Shanghaiksi.", lahde: "Henryk Poddębski, Wikimedia Commons (PD)" },
             },
             {
               otsikko: 'Patsaat, jotka puhuvat',
@@ -28979,18 +28918,16 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tyyppi: 'kuva',
           otsikko: 'Tasavalta, jonka perustuslaissa on 41 pykälää',
-          tiedosto: 'Uzupis Constitution - panoramio.jpg',
+          tiedosto: "Malūnų gatvė.jpg",
           teksti: 'Užupis on Vilnian kaupunginosa joen toisella puolen. '
             + 'Taiteilijat julistivat sen omaksi tasavallakseen '
             + 'aprillipäivänä, ja sillä on presidentti, lippu ja '
             + 'perustuslaki, jossa on 41 pykälää. Ne on kiinnitetty kadun '
             + 'seinään kiiltäville metallilaatoille, yksi laatta kutakin '
             + 'kieltä kohti.',
-          lyhyt: 'Užupisin perustuslaissa on 41 pykälää, kuten \\\'Koiralla on oikeus olla koira\\\'.',
-          selite: 'Užupisin perustuslaissa on 41 pykälää, ja pykälä 12 '
-            + 'kuuluu "Koiralla on oikeus olla koira" ja pykälä 16 '
-            + '"Jokaisella on oikeus olla onnellinen".',
-          lahde: 'AwOiSoAk KaOsIoWa, Wikimedia Commons (CC BY-SA 3.0)',
+          lyhyt: "Malūnų-katu Užupisissa",
+          selite: "Malūnų-katu Užupisin kaupunginosassa Vilnassa; kaupunginosa julistautui tasavallaksi 1997, ja sen perustuslaissa on 41 pykälää.",
+          lahde: "HartOve, Wikimedia Commons (CC BY 4.0)",
           wiki: 'Užupis',
         },
       ],
