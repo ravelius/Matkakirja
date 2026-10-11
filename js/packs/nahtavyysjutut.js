@@ -2098,11 +2098,10 @@ export const NAHTAVYYSJUTUT = {
         + 'suihkulähteellä.',
       kuvat: [
         {
-          tiedosto: 'Estadio Santiago Bernabeu - Field.jpg',
-          lyhyt: 'Santiago Bernabéu avattiin 1947, ja Real Madridin kotistadionille mahtuu nykyään 83 186 katsojaa.',
-          selite: 'Santiago Bernabéu avattiin 14. joulukuuta 1947, ja Real '
-            + 'Madridin kotistadionille mahtuu nykyään 83 186 katsojaa.',
-          lahde: 'Mervat, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "Estadio Santiago Bernabéu 11.jpg",
+          lyhyt: "Real Madridin kotistadion Santiago Bernabéu kuvattuna ulkoa luoteiskulmasta.",
+          selite: "Real Madridin kotistadion Santiago Bernabéu Madridissa, kuvattuna kadulta stadionin luoteiskulmasta.",
+          lahde: "Luis García (Zaqarbal), Wikimedia Commons (CC BY-SA 3.0)",
         },
         {
           tiedosto: 'Fuente de Cibeles - 03.jpg',
