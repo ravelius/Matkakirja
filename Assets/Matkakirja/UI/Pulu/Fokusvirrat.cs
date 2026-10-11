@@ -47,6 +47,9 @@ namespace Matkakirja.Natiivi
         public List<object> Lehtitehtavat;
         /// <summary>Kaupungin täkynostot ja syvennystarinat raakana (web takynostot, takyt; NostoSisalto).</summary>
         public List<object> Takynostot, Takyt;
+
+        /// <summary>Matala kopio (AloitusAarre korvaa tekstin, paikkarivin ja kuvat).</summary>
+        public Saapumisvirta Kopio() => (Saapumisvirta)MemberwiseClone();
     }
 
     public static class Fokusvirrat
@@ -65,8 +68,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Kaikki luetut virrat (tyhjä, kunnes ladattu).</summary>
         public static IEnumerable<Saapumisvirta> Kaikki => virrat != null ? virrat.Values : (IEnumerable<Saapumisvirta>)new Saapumisvirta[0];
 
+        /// <summary>Kaupungin virta; aloituskaupungissa isoisän aarreteksti alkuperäisen merkinnän tilalla (AloitusAarre).</summary>
         public static Saapumisvirta Hae(string kaupunki) =>
-            kaupunki != null && virrat != null && virrat.TryGetValue(kaupunki, out var v) ? v : null;
+            AloitusAarre.Virta(kaupunki, kaupunki != null && virrat != null && virrat.TryGetValue(kaupunki, out var v) ? v : null);
 
         public static void Lataa(Action valmis)
         {

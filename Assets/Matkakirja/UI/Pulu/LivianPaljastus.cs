@@ -11,8 +11,8 @@
 //   5. luennan jälkeen (omistaja 11.10. 13.5x, PT): aarre-1 "Isoisäsi ei tiettävästi koskaan löytänyt sitä aarretta…" +
 //      tuuraus-3 "Pöllö sähkötti…" + tuuraus-4 "No, jos tulee kysyttävää, napauta minua…" + aarre-2 "Onnea aarteen etsintään!";
 //      auki oleva nosto suljetaan ensin (odotetaan). Aloituskaupungin oma Pulu-kommentti ja kuvat jäävät pois (Saapumisesitys, Aloituskaupunki).
-// Myöhemmillä aloituslennoilla (lippu nähty) vain kohta 4. Äänet Pelikoodarilta: aanet/pulu/tuuraus-v2/livia-tuuraus-n.mp3
-// (aarre-1 = 5, aarre-2 = 6; puuttuva ääni → repliikki lukuajan mittaisena).
+// Myöhemmillä aloituslennoilla (lippu nähty) vain kohta 4. Äänet Pelikoodarilta: aanet/pulu/tuuraus-v2/livia-tuuraus-n.mp3;
+// aarre-1 ja aarre-2 aloitusaarteen datasta (AloitusAarre.PuluUrl; puuttuva ääni → repliikki lukuajan mittaisena).
 //
 // LS1:n rajapinta (linssiseppa/aloitusintro-182) heijastuksella, jotta haara kääntyy ilman sitä: TuleeAloitusintro(k) kertoo
 // AloituslentoPaattyi-hetkellä, tuleeko intro; Paattyi-eventtiä odotetaan enintään 40 s. Luenta pysyy lykättynä
@@ -42,9 +42,12 @@ namespace Matkakirja.Natiivi
         static readonly string[] Alku = { "ui.livia.tuuraus-1", "ui.livia.tuuraus-2" };
         static readonly int[] AlkuAanet = { 1, 2 };
         static readonly string[] Loppu = { "ui.livia.aarre-1", "ui.livia.tuuraus-3", "ui.livia.tuuraus-4", "ui.livia.aarre-2" };
-        static readonly int[] LoppuAanet = { 5, 3, 4, 6 };
+        /// <summary>Äänen numero: 1–4 tuuraus-v2, Aarre1/Aarre2 aloitusaarteen pulu[0]/pulu[1].</summary>
+        const int Aarre1 = -1, Aarre2 = -2;
+        static readonly int[] LoppuAanet = { Aarre1, 3, 4, Aarre2 };
 
-        static string AaniUrl(int n) => Aanet.Juuri + "aanet/pulu/tuuraus-v2/livia-tuuraus-" + n + ".mp3";
+        static string AaniUrl(int n) => n == Aarre1 ? AloitusAarre.PuluUrl(0) : n == Aarre2 ? AloitusAarre.PuluUrl(1)
+            : Aanet.Juuri + "aanet/pulu/tuuraus-v2/livia-tuuraus-" + n + ".mp3";
 
         static PeliOhjain ohjain;
         static bool annettu, kesken, luentaSoi, introTulee, ohjeetOdottaa, loppuOdottaa, introKytketty;

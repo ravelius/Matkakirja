@@ -665,6 +665,9 @@ namespace Matkakirja.Natiivi
             o.AloituslentoPaattyi += _ => UiKerros.PaaSaikeessa(() => { AloituslentoPerilla(); Aloitus.AloituslentoPaattyi(); });
             // C16: Livian tuurauspaljastus (ensimmäinen saapuminen koskaan) tai saapumisen ohjekuplat aloituslennon jälkeen.
             LivianPaljastus.Kytke(o);
+            // Aloituskaupungin isoisän aarreteksti (omistaja 11.10.2026, juna 182): luento ja fokusvirta korvautuvat.
+            o.Luennat.Korvaava = AloitusAarre.Luento;
+            AloitusAarre.Lataa();
             if (o.Tila == SilmukanTila.Aloitus) NaytaAloitus(o);
             // Rahan muutos kupliksi (web buildToast kind stamp, "+10 puntaa · Lehden minitehtävä ratkesi").
             o.RahaMuuttui += (muutos, syy, _) => UiKerros.PaaSaikeessa(() => Leima.Raha(muutos, syy));

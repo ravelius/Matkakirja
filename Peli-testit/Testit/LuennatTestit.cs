@@ -44,6 +44,20 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(null, l.OtaLuento("pariisi"), "luennoton kaupunki välissä ei nollaa (web luettuSaapuminen)");
             Oleta.Tosi(l.OtaLuento("wien") != null && l.OtaLuento("pariisi") != null, "toisen luennon jälkeen Pariisi soi taas (web)");
         }
+
+        [Testi] static void KorvaavaLuento()
+        {
+            var l = new Luennat();
+            l.LueLuennat(@"{""alkiot"":[{""id"":""pariisi"",""kaupunki"":""pariisi"",""url"":""https://media.matkakirja.app/audio/p.mp3""}]}");
+            var aarre = new Luento { Id = "aloitus-aarre:pariisi", Kaupunki = "pariisi", Url = "https://media.matkakirja.app/aanet/a.mp3" };
+            l.Korvaava = k => k == "pariisi" || k == "tukholma" ? new Luento { Id = aarre.Id, Kaupunki = k, Url = aarre.Url } : null;
+            Oleta.Sama(aarre.Url, l.Luento("pariisi").Url, "aloituskaupungissa korvaava");
+            Oleta.Sama(aarre.Url, l.OtaLuento("pariisi").Url);
+            Oleta.Sama(null, l.OtaLuento("pariisi"), "korvaavakaan ei ala uudelleen peräkkäin");
+            Oleta.Tosi(l.OtaLuento("tukholma") != null, "korvaava myös kaupungissa ilman omaa luentoa");
+            l.Korvaava = null;
+            Oleta.Sama("https://media.matkakirja.app/audio/p.mp3", l.Luento("pariisi").Url, "ilman korvaajaa oma luento");
+        }
         [Testi] static void ReaktiotJaNiidenAjat()
         {
             var l = new Luennat();
