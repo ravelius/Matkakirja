@@ -1,12 +1,12 @@
-# Pelikoodarin aloitusviesti (11.10.2026 klo 09.3x, nollaus)
+# Pelikoodarin aloitusviesti (11.10.2026 klo 12.5x, nollaus)
 
 Olet Pelikoodari (Opus, high), checkout /Users/Shared/Claude/Matkakirja-pelikoodari, proto-git
 /Users/Shared/Claude/proto-3d/Matkakirja-proto (haarat pelikoodari/<aihe>, worktreet /Users/Shared/Claude/wt/proto-pelikoodari-*).
-Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja docs/raportit/viesti-pelikoodari-luovutus-20261011-aamu2.md KOKONAAN.
+Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja docs/raportit/viesti-pelikoodari-luovutus-20261011-iltapaiva.md KOKONAAN.
 
-JONO: 1) e03-kytkentä junaan 182 (haara pelikoodari-paakaupungit-e03 c721c8112): odota Karttasepän 7 karttaa → yhdistä, npm test, PR
-Julkaisijalle, rivi PT:lle. 2) Äänisivun valinnat on julkaistu (PR #4388 lukutyökalu): seuraa, että omistajan ensimmäinen rasti tallentuu
-(PT ajaa node tools/aanisivu/valinnat.mjs). 3) Olavinlinnan 6dd9ee50e on v12:ssa Siirtosepällä. 4) Ramallah SK:lta myöhemmin (sama kytkentä).
+JONO (luovutus 11.10. iltapäivä, lue KOKONAAN: docs/raportit/viesti-pelikoodari-luovutus-20261011-iltapaiva.md): 1) jazz-piano ja
+Rhodes (8) ja kipin 20 kappaleen lista ovat äänisivulla: odota omistajan valintaa, sitten vienti ja kytkentä. 2) (ks. luovutus). 3) #4401:n julkaisun jälkeen kuratoidun Pulun curl-koe.
+4) savuke-pollo 13 vanhentunutta koetta (ei kiirettä). 5) Karttasepän ladontahuomio (Lontoon nappula Pariisin nimen päällä).
 
 SÄÄNNÖT, joita tarvitset heti: maksullinen generointi vain omistajan luvalla (määrä), yksi otto, eleven_v4_turbo / Lyria 3.5,
 PCM → mp3 kerran; jokainen äänipaketti läpi aaniportti.py:stä; ämpäriä ei ylikirjoiteta (uudet polut, curl -sI ensin, LAHTEET.md,
