@@ -538,33 +538,7 @@ export const EUROPE_VALOKUVAT = {
 
     lisat: [
 
-      {
 
-        tiedosto: 'Knossos fresco of dolphins in queen\'s palace.JPG',
-        vuosi: 'noin 1600–1450 eaa. (kuvattu 2015)',
-        lahde: 'Paginazero, Commons (CC BY-SA 3.0)',
-        lyhyt: 'Delfiinifresko Knossoksen palatsin kuningattaren huoneessa Kreetalla.',
-        selite: 'Delfiinifresko Knossoksen palatsin kuningattaren huoneessa. '
-          + 'Siniset delfiinit ui pienten kalojen seassa, ja alareunassa '
-          + 'kiertää kiehkurakuvio.',
-      },
-
-      {
-
-        tiedosto: 'Grand Staircase Knossos 2015.JPG',
-
-        vuosi: '2015',
-
-        lahde: 'CC0 (Stefan Bellini, Commons)',
-
-        lyhyt: 'Knossoksen suuri portaikko Kreetalla vuonna 2015.',
-        selite: 'Knossoksen suuri portaikko, joka yhdisti palatsin itäsiiven '
-
-          + 'kerroksia. Samasta kohdasta pääsee sekä ylös että alas, mikä '
-
-          + 'tekee palatsista helposti eksyttävän.',
-
-      },
 
     ],
     tiedosto: 'Cnossus - room of (?), columns - north entrance - DPLA - 156faa906e3d69e9b9c71702853f1b8a.jpg',
@@ -574,14 +548,6 @@ export const EUROPE_VALOKUVAT = {
     selite: 'Knossoksen pohjoinen sisäänkäynti kaivausten aikaan. Arthur '
       + 'Evans alkoi kaivaa palatsia 1900 ja rakensi osan siitä '
       + 'uudelleen betonista — tapa, jota arkeologit yhä kiistelevät.',
-    uusi: {
-      tiedosto: 'Knossos North entrance bull fresco.jpg',
-      lahde: 'Jebulon, Commons (CC0)',
-      lyhyt: 'Knossoksen palatsin pohjoinen sisäänkäynti pylväineen ja härkäfreskon jäljennöksineen.',
-      selite: 'Knossoksen palatsin pohjoinen sisäänkäynti. Punaiset pylväät on '
-        + 'pystytetty uudelleen, ja seinällä on jäljennös härkäfreskosta, '
-        + 'jonka alkuperäinen on Herakleionin museossa.',
-    },
   },
 
   sisilia: {
@@ -2020,24 +1986,6 @@ export const EUROPE_VALOKUVAT = {
 
     lisat: [
 
-      {
-
-        tiedosto: 'Avenida de la Unión, Bucarest, Rumanía, 2016-05-29, DD 57.jpg',
-
-        vuosi: '2016',
-
-        lahde: 'CC BY-SA 4.0 (Diego Delso, Commons)',
-
-        lyhyt: 'Unirii-bulevardi ja parlamenttitalo Bukarestissa vuonna 2016.',
-        selite: 'Unirii-bulevardi suihkulähteineen ja sen päässä kohoava '
-
-          + 'parlamenttitalo, päiväkirjan "maailman painavin rakennus". '
-
-          + 'Bulevardi ja palatsi rakennettiin 1980-luvulla vanhan '
-
-          + 'kaupunginosan tilalle.',
-
-      },
 
       {
 

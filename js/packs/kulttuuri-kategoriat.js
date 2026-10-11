@@ -7639,7 +7639,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Evzonit ja tupsukengät',
-          tiedosto: 'Evzones, Presidential Guard (41263349224).jpg',
           teksti: 'Tuntemattoman sotilaan haudalla vartioivat evzonit kävelevät '
             + 'hitaasti kuin unessa, ja jalka nousee jokaisella askelella '
             + 'suoraksi eteen. Sunnuntaisin ja juhlapäivinä heillä on yllään '
@@ -7648,23 +7647,13 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ottomaanivallan vuotta kohti. Punaiset tsarouhia-kengät '
             + 'painavat parina noin kolme kiloa, ja pohjissa on kymmeniä '
             + 'nauloja.',
-          lyhyt: 'Presidentinkaartin evzonien univormu kehittyi ottomaaneja vastustaneiden kleftien vaatteista.',
-          selite: 'Evzonit ovat nykyään presidentinkaartin sotilaita, ja '
-            + 'heidän univormunsa kehittyi ottomaanivaltaa vastaan '
-            + 'taistelleiden kleftien vaatetuksesta.',
-          lahde: 'Luc.T, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Eusonit',
-          galleria: [
-            {
-              otsikko: 'Kenkä, joka kalisee marmorilla',
-              tiedosto: 'EvzoneTsarouhiKaltsodetes.jpg',
-              lyhyt: 'Tsarouhi-kengät painavat parina noin kolme kiloa, ja niiden naulapohjat kalisevat marmorilla.',
-              selite: 'Tsarouhi-kengät painavat parina noin kolme kiloa, ja '
-                + 'niiden pohjissa on kymmeniä nauloja, jotka kalisevat '
-                + 'marmorilla.',
-              lahde: 'Thermos, Wikimedia Commons (CC BY 3.0)',
-            },
-          ],
+          tiedosto: 'EvzoneTsarouhiKaltsodetes.jpg',
+          lyhyt: 'Tsarouhi-kengät painavat parina noin kolme kiloa, ja niiden naulapohjat kalisevat marmorilla.',
+          selite: 'Tsarouhi-kengät painavat parina noin kolme kiloa, ja '
+            + 'niiden pohjissa on kymmeniä nauloja, jotka kalisevat '
+            + 'marmorilla.',
+          lahde: 'Thermos, Wikimedia Commons (CC BY 3.0)',
         },
       ],
       tehtava: {
@@ -18316,7 +18305,6 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'noin kaksikymmentä minuuttia. Lentokenttä on '
                 + 'kymmenen kilometriä itään, ja se vihittiin käyttöön '
                 + 'jo syyskuussa 1937.',
-              kuva: { tiedosto: 'Vitosha metro station, terminus platform.jpg', lyhyt: 'Sofian metro avattiin 1998; siinä on neljä linjaa, 50 asemaa ja 55 kilometriä rataa.', selite: 'Sofian metro avattiin 28. tammikuuta 1998, ja siinä on neljä linjaa, 50 asemaa ja 55 kilometriä rataa.', lahde: 'Robot8A, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Vuori kuuluu kaupunkiin',
@@ -18515,7 +18503,7 @@ export const KULTTUURI_KATEGORIAT = {
          */
         {
           otsikko: 'Kaupungin kaimalla on pöllö kruunussa',
-          tiedosto: 'Sofia statue, Sofia (P1070773).jpg',
+          tiedosto: "Bulgaria-02926 - Saint Sofia Church (11047630053).jpg",
           teksti: 'Nezavisimost-aukiolla, samalla jalustalla jolla ennen '
             + 'seisoi Lenin, kohoaa nyt kahdeksanmetrinen kuparinen '
             + 'naishahmo kuudentoista metrin korkuisella pylväällä. '
@@ -18528,7 +18516,7 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Sofia-patsas seisoo Nezavisimost-aukiolla, kuparinen hahmo on kahdeksan metriä korkea.',
           selite: 'Sofia-patsas seisoo Nezavisimost-aukiolla: kuparinen '
             + 'hahmo on kahdeksan metriä korkea ja jalusta kuusitoista.',
-          lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',
+          lahde: "Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)",
         },
       ],
           /*
@@ -18580,14 +18568,6 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Sofia oli vielä 1878 pieni maakuntakaupunki, ja nykyään '
             + 'siinä asuu lähes 1,3 miljoonaa ihmistä.',
           lahde: 'Deensel, Wikimedia Commons (CC BY 2.0)',
-        },
-        {
-          tiedosto: 'Άποψη του Largo από τα δυτικά.jpg',
-          lyhyt: 'Largo on 1950-luvulla rakennettu kolmen rakennuksen kokonaisuus Itsenäisyydenaukion ympärillä.',
-          selite: 'Largo on 1950-luvulla rakennettu kolmen rakennuksen '
-            + 'kokonaisuus Itsenäisyydenaukion ympärillä, ja aukion pinta on '
-            + 'Sofian keltaista mukulakiveä.',
-          lahde: 'PLAKLE, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Sofia seen from Vitosha 1.jpg',
@@ -18862,14 +18842,6 @@ export const KULTTUURI_KATEGORIAT = {
         + 'sen tieltä.',
       kansikuvat: [
         {
-          tiedosto: 'Bucharest-palace-of-parliament-may-2016-001.jpg',
-          lyhyt: 'Parlamenttipalatsi on maailman painavin rakennus, rakentaminen alkoi Ceaușescun määräyksestä 1984.',
-          selite: 'Parlamenttipalatsi on maailman painavin rakennus, noin 4,1 '
-            + 'miljoonaa tonnia, ja sen rakentaminen alkoi Nicolae '
-            + 'Ceaușescun määräyksestä vuonna 1984.',
-          lahde: 'anisoboy, Wikimedia Commons (CC BY-SA 2.0)',
-        },
-        {
           tiedosto: 'Bucuresti Ateneum 2.jpg',
           lyhyt: 'Romanian Ateneum avattiin konserttitaloksi 1888 pitkän kansalaiskeräyksen tuella.',
           selite: 'Romanian Ateneum avattiin konserttitaloksi 1888 ranskalaisen '
@@ -18916,7 +18888,6 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'siinä on viisi linjaa, 64 asemaa ja 80 kilometriä '
                 + 'rataa. Päärautatieaseman peruskivi laskettiin '
                 + 'syyskuussa 1868 ja asema avattiin 1872.',
-              kuva: { tiedosto: 'Grivița Metro Station, Bucharest, Romania - 1.jpg', lyhyt: 'Grivițan metroasema avattiin 2000 neloslinjan osuudella Gara de Nordin ja 1 Main välillä.', selite: 'Grivițan metroasema avattiin 1. maaliskuuta 2000 neloslinjan ensimmäisellä osuudella Gara de Nordin ja 1 Main välillä.', lahde: 'Mihnea L, Wikimedia Commons (CC BY-SA 4.0)' },
             },
             {
               otsikko: 'Kuusi sektoria',
@@ -19081,7 +19052,6 @@ export const KULTTUURI_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Maailman painavin rakennus',
-          tiedosto: '20260523 124938 May 2026 in Bucharest.jpg',
           teksti: 'Parlamenttipalatsin rakentaminen alkoi vuonna 1984 Nicolae '
             + 'Ceaușescun määräyksestä. Pääarkkitehti oli Anca Petrescu, ja '
             + 'hänen kanssaan piirsi noin 700 muuta arkkitehtia. '
@@ -19091,11 +19061,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kymmenettuhannet asukkaat muuttivat muualle. Nyt talossa '
             + 'kokoontuu Romanian parlamentti, mutta noin 70 prosenttia '
             + 'huoneista on yhä tyhjillään.',
-          lyhyt: 'Parlamenttipalatsissa on lattiaa 365 000 neliömetriä, maailman suurin siviilihallinnon rakennus.',
-          selite: 'Parlamenttipalatsissa on lattiapinta-alaa 365 000 '
-            + 'neliömetriä, ja se on maailman suurin siviilihallinnon '
-            + 'rakennus.',
-          lahde: 'Rakoon, Wikimedia Commons (CC0)',
           wiki: 'Casa Poporului',
         },
         {
@@ -19330,7 +19295,6 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Riemukaari pystytettiin viikoissa sotilaita varten',
           aika: '1878',
-          tiedosto: 'Arcul de Triumf.JPG',
           teksti: 'Vuonna 1878 Romania sai lopulta täyden itsenäisyytensä '
             + 'Osmanivallasta Berliinin sopimuksessa Venäjän-Turkin sodan '
             + 'jälkeen. Kun voitokkaat joukot palasivat Bukarestiin, '
@@ -19341,12 +19305,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Triumf valmistui vasta 1930-luvulla — mutta ensimmäinen '
             + 'kaari vuodelta 1878 loi perinteen, joka jatkuu yhä samalla '
             + 'paikalla.',
-          lyhyt: 'Nykyinen kivinen Arcul de Triumf seisoo samalla '
-            + 'paikalla kuin vuoden 1878 väliaikainen puinen riemukaari.',
-          selite: 'Bukarestin Arcul de Triumf seisoo samalla paikalla '
-            + 'kuin ensimmäinen, vuonna 1878 pystytetty väliaikainen '
-            + 'puinen riemukaari.',
-          lahde: 'Vaivoda Vlad, Wikimedia Commons (CC BY-SA 3.0 ro)',
           wiki: 'Arcul de Triumf',
         },
         {
@@ -19412,14 +19370,6 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Sarajevo on rakennettu 518 metrin korkeuteen kapeaan '
             + 'Miljacka-joen laaksoon, ja sitä ympäröi viisi vuorta.',
           lahde: 'Julian Nyča, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'Loop Bridge 01 (23776388375).jpg',
-          lyhyt: 'Festina lente -kävelysillan kaide kiertyy silmukaksi, nimi tarkoittaa kiirehdi hitaasti.',
-          selite: 'Festina lente -kävelysillan kaide kiertyy keskellä '
-            + 'silmukaksi, ja latinankielinen nimi tarkoittaa kiirehdi '
-            + 'hitaasti.',
-          lahde: 'sundeviljeff, Wikimedia Commons (CC BY 2.0)',
         },
       ],
       matkailijalle: {
@@ -19800,7 +19750,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Bobirata jäi vuorelle',
-          tiedosto: 'Sarajevo – Bob staza (2017) 2.jpg',
           teksti: 'Trebević-vuoren rinteeseen valettiin kisoja varten betoninen '
             + 'bobi- ja kelkkarata, joka valmistui syyskuussa 1982. Kisoissa '
             + 'sitä tuli katsomaan 30 000 ihmistä. Bosnian sodassa rata '
@@ -19808,11 +19757,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja graffitimaalarit. Nyt kaarteet ovat maalauksia täynnä ja '
             + 'radalle pääsee kävelemään: Trebevićille nousee köysirata, '
             + 'jonka gondoli vie kaupungista vuorelle yhdeksässä minuutissa.',
-          lyhyt: 'Trebevićin bobirata valmistui 1982; sodassa vaurioitunut rata on nyt graffitien peitossa.',
-          selite: 'Trebevićin betoninen bobi- ja kelkkarata valmistui '
-            + 'syyskuussa 1982, ja sodassa vaurioitunut rata on nyt täynnä '
-            + 'graffiteja ja avoinna kävelijöille.',
-          lahde: 'Julian Nyča, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Rattikelkkailu',
         },
       ],
@@ -26268,14 +26212,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'osaa siitä uudelleen betonista.',
           lahde: 'Digital Public Library of America (PD)',
         },
-        {
-          tiedosto: 'Knossos North entrance bull fresco.jpg',
-          lyhyt: 'Pohjoisen sisäänkäynnin pylväät on pystytetty uudelleen, ja härkäfresko on jäljennös alkuperäisestä.',
-          selite: 'Pohjoisen sisäänkäynnin punaiset pylväät on pystytetty uudelleen, '
-            + 'ja seinän härkäfresko on jäljennös — alkuperäinen on Herakleionin '
-            + 'museossa.',
-          lahde: 'Jebulon, Commons (CC0)',
-        },
       ],
     },
     {
@@ -26365,7 +26301,6 @@ export const KULTTUURI_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Valtaistuinhuone, jota kukaan ei enää istu',
-          tiedosto: 'Throne of Minos at Knossos Palace.jpg',
           teksti: 'Arkeologi Arthur Evans kaivoi Knossoksen palatsin esiin '
             + 'vuodesta 1900 alkaen ja löysi sen sydämestä huoneen, jonka '
             + 'keskellä seisoo yhä paikoillaan alabasterinen tuoli — '
@@ -26379,11 +26314,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja Evans myös jälleenrakensi osia palatsista betonilla '
             + 'omien tulkintojensa mukaan — ratkaisu, jota myöhemmät '
             + 'arkeologit ovat arvostelleet liian vapaaksi.',
-          lyhyt: 'Knossoksen valtaistuinhuoneen alabasterituoli on Euroopan vanhin säilynyt valtaistuin.',
-          selite: 'Knossoksen palatsin valtaistuinhuone: alabasterinen '
-            + 'tuoli on veistetty noin 1400-luvulla eaa. ja on Euroopan '
-            + 'vanhin säilynyt valtaistuin.',
-          lahde: 'Jebulon, Wikimedia Commons (CC0)',
         },
         {
           otsikko: 'Levy, jota kukaan ei ole pystynyt lukemaan',
@@ -67310,14 +67240,6 @@ export const KULTTUURI_KATEGORIAT = {
                       + 'ja varjot suojaavat sekä auringolta että sateelta.',
                   lahde: 'Vid Gajšek, Wikimedia Commons (PD)',
                 },
-                {
-                  tiedosto: 'Ljubljana Metelkova mesto 07.JPG',
-                  lyhyt: 'Metelkovan värikkäiksi maalatut kaiteet kiertävät puuta '
-                      + 'kasarmialueen pihalla.',
-                  selite: 'Metelkova on entisen kasarmialueen taidekortteli, jossa maalatut '
-                      + 'kaiteet ja graffitit peittävät pihat ja rakennukset.',
-                  lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
-                },
               ],
             },
           ],
@@ -67471,7 +67393,6 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tyyppi: 'kuva',
           otsikko: 'Puisto, joka syntyi Illyrian maakuntien aikana',
-          tiedosto: 'Tivoli City Park, Ljubljana (2019).jpg',
           teksti: 'Tivoli on Ljubljanan suurin puisto, ja se ulottuu keskustan reunalta '
               + 'Rožnikin rinteille. Sen suunnitteli insinööri Jean Blanchard vuonna 1813, '
               + 'kun kaupunki oli Ranskan Illyrian maakuntien pääkaupunki. 1920-luvulla '
@@ -67479,10 +67400,6 @@ export const KULTTUURI_KATEGORIAT = {
               + 'joka muodostaa suoran näköakselin Tivolin linnalta Prešernin aukion ja '
               + 'Kolmoissillan kautta Ljubljanan linnalle. Lammen rannalla toimii '
               + 'lämpiminä kuukausina ulkokirjasto.',
-          lyhyt: 'Jakopičin kävelykatu johtaa Tivolin puistossa kohti Tivolin linnaa.',
-          selite: 'Jakopičin kävelykatu on puiston pääakseli, ja sen päässä kohoaa Tivolin '
-              + 'linna; kävelykadun sivuilla on ulkonäyttelyn kuvatauluja.',
-          lahde: 'Dedo70, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Tivoli City Park',
         },
       ],
@@ -67543,7 +67460,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Ranskalaisten Illyria ja kongressi, jossa Laibach oli maailman keskus',
-          tiedosto: 'Ljubljana, Illyrian Column 01.jpg',
           teksti: 'Vuonna 1809 Napoleon voitti Itävallan, ja Schönbrunnin rauhassa Itävalta '
               + 'luovutti Ranskalle Krainin ja muita alueita. Niistä muodostettiin '
               + 'Illyrian maakunnat, joiden hallinnon pääkaupungiksi tuli Ljubljana, '
@@ -67551,12 +67467,6 @@ export const KULTTUURI_KATEGORIAT = {
               + 'Ljubljanan yliopiston perustamisasiakirjana. Itävalta sai alueen takaisin '
               + '1813–1814, ja vuonna 1821 kaupungissa, silloin Laibachissa, kokoontui '
               + 'kongressi, joka antoi Itävallalle luvan tukahduttaa kapina Napolissa.',
-          lyhyt: 'Illyrian pylväs Ranskan vallankumouksen aukiolla muistuttaa Napoleonin '
-              + 'ajasta.',
-          selite: 'Illyrian pylväs eli Napoleonin pylväs seisoo Ranskan vallankumouksen '
-              + 'aukiolla. Muistomerkki pystytettiin vuonna 1929 Napoleonin ja Illyrian '
-              + 'kunniaksi.',
-          lahde: 'Ajznponar, Wikimedia Commons (CC0)',
           wiki: 'Illyrian Provinces',
         },
         {
@@ -67602,7 +67512,6 @@ export const KULTTUURI_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Kolmoissilta, jolle Plečnik lisäsi kaksi siltaa',
-          tiedosto: 'Tromostovje midden.jpg',
           teksti: 'Tromostovje eli Kolmoissilta koostuu kolmesta sillasta, jotka ylittävät '
               + 'Ljubljanica-joen ja yhdistävät keskiaikaisen vanhankaupungin Prešerenin '
               + 'aukioon. Paikalla mainitaan puusilta jo vuonna 1280, ja nykyisen '
@@ -67610,15 +67519,10 @@ export const KULTTUURI_KATEGORIAT = {
               + 'ahtaana estää liikennettä, Jože Plečnik suunnitteli sen molemmin puolin '
               + 'jalankulkusillat, ja työ valmistui keväällä 1932. Vuonna 2021 silta '
               + 'liitettiin Unescon maailmanperintöluetteloon osana Plečnikin perintöä.',
-          lyhyt: 'Keskisillan kaarella on latinankielinen omistuskirjoitus vuodelta 1842.',
-          selite: 'Keskisillan kaarella on latinankielinen omistuskirjoitus, joka omistaa '
-              + 'sillan arkkiherttua Frans Kaarlelle vuonna 1842.',
-          lahde: 'Marion Golsteijn, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Triple Bridge',
         },
         {
           otsikko: 'Kirjasto, jonka puolesta opiskelijat osoittivat mieltään',
-          tiedosto: 'Jože Plečnik - National and University Library (37211035596).jpg',
           teksti: 'Kansallis- ja yliopistokirjasto NUK perustettiin vuonna 1774, ja se on '
               + 'yksi Slovenian tärkeimmistä kulttuurilaitoksista. Nykyisen talon '
               + 'suunnitteli Jože Plečnik vuosina 1930–1931, ja se rakennettiin 1936–1941. '
@@ -67626,10 +67530,6 @@ export const KULTTUURI_KATEGORIAT = {
               + 'sinnikkäät mielenosoitukset auttoivat sen läpi. Julkisivu yhdistää tiiltä '
               + 'ja kiveä, ja osa kivistä on paikalta löytyneitä arkeologisia jäänteitä. '
               + 'Päänoven kahvojen päissä on Pegasoksen pää.',
-          lyhyt: 'Kirjaston päänoven kahvan päässä on Pegasoksen pää.',
-          selite: 'Plečnikin suunnitteleman kirjaston oven kahvan päässä on Pegasoksen pää, '
-              + 'ja ovi on vihertyneen kuparin värinen.',
-          lahde: 'Andrew Moore, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'National and University Library of Slovenia',
         },
         {

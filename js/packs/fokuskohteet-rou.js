@@ -375,15 +375,6 @@ export const FOKUSKOHTEET_ROU = [
       + 'tulleet aineiston haussa mukaan — keksittyä käännöstä ei tehdä.',
     // Category:Cimitirul Vesel. Commons 25.8.2026: 3024×4235, CC BY-SA 4.0,
     // Chainwit., kuvattu 13.4.2023, kuvaus "Merry Cemetery, Maramures".
-    kuva: {
-      tiedosto: 'Cimitirul Vesel, Săpânța, Maramureș - (2023) - IMG 18.jpg',
-      selite: 'Iloisen hautausmaan maalattuja puuristejä Săpânțassa. '
-        + 'Tammiristejä on kertynyt yli 800.',
-      lahde: 'Chainwit., Wikimedia Commons (CC BY-SA 4.0)',
-      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cimitirul_Vesel,_S%C4%83p%C3%A2n%C8%9Ba,_Maramure%C8%99_-_(2023)_-_IMG_18.jpg',
-      lisenssi: 'CC BY-SA 4.0',
-      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
-    },
   },
   {
     id: 'moldoveanu',
@@ -595,10 +586,9 @@ export const FOKUSKOHTEET_ROU = [
     // 2017 — maanalainen järvi ja katosta riippuvat valaistut rakennelmat,
     // eli täsmälleen se, mistä teksti kertoo.
     kuva: {
-      tiedosto: 'UFO-shaped constructions in the underground lake, Mina Terezia, Turda salt mine, Turda, 2017.jpg',
-      selite: 'Maanalainen järvi ja valaistuja rakennelmia Turdan '
-        + 'suolakaivoksen Terezia-kuilussa.',
-      lahde: 'DimiTalen, Wikimedia Commons (CC0)',
+      tiedosto: "Interior Salina Turda 03.jpg",
+      selite: "Suolalohkareita täynnä oleva kaivosvaunu kiskoillaan suolaseinän edessä Turdan suolakaivoksen Rudolf-kuilussa.",
+      lahde: "Pomptidom, Wikimedia Commons (CC BY-SA 4.0)",
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:UFO-shaped_constructions_in_the_underground_lake,_Mina_Terezia,_Turda_salt_mine,_Turda,_2017.jpg',
       lisenssi: 'CC0',
       lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',

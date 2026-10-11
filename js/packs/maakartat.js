@@ -1283,7 +1283,6 @@ export const MAAKARTAT = {
     // Kuva silmätarkistettu 480 ja 900 px:ssä 8.8.2026.
     nosto: {
       otsikko: 'Kivikasvot vartioivat Tonavan solaa',
-      tiedosto: 'Rock sculpture of Decebalus5.jpg',
       teksti: 'Romanian lounaisnurkassa Tonava kaivautuu Karpaattien '
         + 'ja Balkanvuorten väliin. Solaa sanotaan Rautaportiksi, ja '
         + 'se on 134 kilometriä pitkä. Ahtain kohta on Suuri Kazan: '
@@ -1296,11 +1295,6 @@ export const MAAKARTAT = {
         + 'uuden vartijan: kallioon hakattiin daakialaisten viimeisen '
         + 'kuninkaan Decebaluksen kasvot, jotka ovat yli neljäkymmentä '
         + 'metriä korkeat.',
-      lyhyt: 'Decebaluksen kasvot hakattuna kalliojyrkänteeseen Tonavan yläpuolella.',
-      selite: 'Decebaluksen kasvot hakattuna kalliojyrkänteeseen '
-        + 'Tonavan yläpuolella; leuan alla lukee latinaksi '
-        + '"DECEBALUS REX".',
-      lahde: 'Sadko, Wikimedia Commons (CC BY-SA 4.0)',
       wiki: 'Rautaportti',
     },
   },
@@ -8332,7 +8326,7 @@ export const KAUPUNKIKARTAT = {
           + 'perintönä UNESCOn maailmanperintöön.',
         kuvat: [
           {
-            tiedosto: 'Ljubljana - Central Market.jpg',
+            tiedosto: "Tržni dan na Vodnikovem trgu 1927.jpg",
             lyhyt: 'Keskustorin kojut Plečnikin torihallin edessä ylhäältä nähtynä.',
             selite: 'Ljubljanan keskustori linnan suunnasta katsottuna: kojuja puiden alla ja Plečnikin pitkä torihalli joen rannassa.',
             lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 3.0)',

@@ -603,7 +603,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kaksi siltaa vanhan viereen',
           aika: '1932',
-          tiedosto: 'The Triple Bridge, Ljubljana (49402985288).jpg',
           teksti: 'Ljubljanica-joen ylittävä Kolmoissilta on kaupungin vanhin siltapaikka, '
             + 'sillä puusilta mainitaan täällä jo vuonna 1280. Nykyinen kivisilta '
             + 'valmistui 1842 ja sai nimen Franzin silta arkkiherttua Franz Karlin '
@@ -613,11 +612,6 @@ export const MAA_KATEGORIAT = {
             + 'kaidepylvästä. Vuodesta 2007 kaikki kolme siltaa ovat olleet vain '
             + 'jalankulkijoille, ja vuonna 2021 ne liitettiin Unescon maailmanperintöön '
             + 'osana Plečnikin perintöä.',
-          lyhyt: 'Kolmoissilta on Ljubljanan vanhimman siltapaikan kolmen sillan ryhmä '
-            + 'Ljubljanica-joen yllä.',
-          selite: 'Kolmoissilta ja Ljubljanica-joki, taustalla fransiskaanien Ilmestyskirkko. '
-            + 'Silta yhdistää keskiaikaisen vanhankaupungin Prešerenin aukioon.',
-          lahde: 'David Jones from Isle of Wight, United Kingdom, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Tromostovje',
         },
         {
@@ -642,7 +636,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Pegasos oven kahvana',
           aika: '1936',
-          tiedosto: 'Jože Plečnik - National and University Library (37211035596).jpg',
           teksti: 'Slovenian kansallis- ja yliopistokirjaston suunnitteli Jože Plečnik '
             + 'vuosina 1930–31, ja se rakennettiin vuosina 1936–1941. Hanke kohtasi '
             + 'aluksi vastustusta Belgradin viranomaisten taholta, mutta opiskelijoiden '
@@ -652,11 +645,6 @@ export const MAA_KATEGORIAT = {
             + '32 pylvästä on tehty tummasta Podpečin marmorista, ja rakennuksen ajatus '
             + 'on kulku tietämättömyyden hämärästä tiedon valoon. Kirjasto sai paikkansa '
             + 'Unescon listalla vuonna 2021.',
-          lyhyt: 'Slovenian kansallis- ja yliopistokirjasto on Plečnikin suunnittelema '
-            + 'kirjastorakennus Ljubljanan keskustassa.',
-          selite: 'Hevosenpäinen ovenkahva Slovenian kansallis- ja yliopistokirjaston '
-            + 'pääovessa Ljubljanassa. Rakennuksen suunnitteli Jože Plečnik.',
-          lahde: 'Andrew Moore from Johannesburg, South Africa, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Slovenian kansallis- ja yliopistokirjasto',
         },
         {
@@ -12008,15 +11996,9 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'BSA Digital Collections — hae kaivausarkistosta',
-              tiedosto: 'Knossos Throne-room 20230604 110755.jpg',
               teksti: 'Britannian Ateenan-instituutti on kaivanut Kreikassa '
                 + '1880-luvulta asti, ja sen arkisto on nyt verkossa: 36 048 '
                 + 'kuvallista kohdetta.',
-              lyhyt: 'Knossoksen valtaistuinsali rakennettiin 1400-luvulla eaa. ja on Euroopan vanhin valtaistuinsali.',
-              selite: 'Knossoksen valtaistuinsali rakennettiin seremonioita '
-                + 'varten 1400-luvulla eaa., ja sitä pidetään Euroopan '
-                + 'vanhimpana valtaistuinsalina.',
-              lahde: 'Rigorius, Wikimedia Commons (CC BY-SA 4.0)',
               linkki: 'https://digital.bsa.ac.uk/',
             },
             {
@@ -19064,7 +19046,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Teetä juodaan enemmän kuin missään',
           aika: 'Nykyisin',
-          tiedosto: 'Tarihi cinaralti cay bahcesi.jpg',
+          tiedosto: "Glass tea cup.jpg",
           teksti: 'Turkissa juodaan teetä yli kolme kiloa henkeä kohti vuodessa, '
             + 'enemmän kuin missään muussa maassa. Istanbulissa se näkyy '
             + 'kadulla: teenkantaja kulkee kaupasta kauppaan tarjotin köysien '
@@ -19077,7 +19059,7 @@ export const MAA_KATEGORIAT = {
           selite: 'Turkissa juodaan teetä maailman eniten asukasta kohti, '
             + 'yli kolme kiloa vuodessa, ja maa on viidenneksi suurin teen '
             + 'viejä.',
-          lahde: 'M. Fatih Morgül, Wikimedia Commons (CC BY 4.0)',
+          lahde: "Zeynel Cebeci, Wikimedia Commons (CC BY-SA 4.0)",
           wiki: 'Tee',
         },
         {
@@ -20603,7 +20585,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Suolakaivos, josta tuli huvipuisto',
           aika: '1992',
-          tiedosto: 'Salina Turda, Mina Terezia.JPG',
           teksti: 'Turdan suolakaivoksessa on louhittu suolaa yli 2000 vuoden '
             + 'ajan: työ alkoi maan pinnalla jo antiikin aikana ja siirtyi maan '
             + 'alle roomalaisten valloitettua Daakian. Kaivostyöläiset louhivat '
@@ -20614,10 +20595,6 @@ export const MAA_KATEGORIAT = {
             + '2008–2010 peruskorjaus muutti 120 metrin syvyydessä olevan '
             + 'Terezia-kaivoksen valoisaksi huvipuistoksi, jossa on tivolipyörä, '
             + 'minigolfia ja soutuvene maanalaisella järvellä.',
-          lyhyt: 'Turdan suolakaivos on toiminut yli 2000 vuotta, ja vuodesta 1992 se on ollut huvipuisto.',
-          selite: 'Turdan suolakaivoksen Terezia-osa muutettiin '
-            + 'peruskorjauksessa 2008–2010 valoisaksi maanalaiseksi huvipuistoksi.',
-          lahde: 'Gabriel Tocu, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           otsikko: 'Kivi, joka näyttää kasvoilta',
@@ -64248,7 +64225,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: '461 porrasta pilviin',
           aika: '1851–1974',
-          tiedosto: 'Njegošev mauzolej.JPG',
           teksti: 'Petar II Petrović-Njegoš oli sekä Montenegron ruhtinaspiispa että maan tärkein '
             + 'runoilija, ja hänen toiveensa oli levätä Lovćenin vuoren huipulla. Kuoltuaan '
             + '1851 hänet haudattiin sinne pieneen kappeliin. Ensimmäisessä maailmansodassa '
@@ -64258,11 +64234,6 @@ export const MAA_KATEGORIAT = {
             + 'Meštrović sai valmiiksi uuden mausoleumin Jezerski vrhin huipulle, 1660 metrin '
             + 'korkeuteen. Huipulle kiipeää 461 kiviporrasta, ja mausoleumia pidetään '
             + 'maailman korkeimpana.',
-          lyhyt: 'Runoilijaruhtinas Njegošin mausoleumi Lovćenin huipulla on maailman '
-            + 'korkeimmalla sijaitseva.',
-          selite: 'Kroatialainen kuvanveistäjä Ivan Meštrović suunnitteli mausoleumin, joka '
-            + 'valmistui vasta vuosikymmenten viivytysten jälkeen 1974.',
-          lahde: 'Darko Bulatović, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Njegošin mausoleumi',
         },
         {

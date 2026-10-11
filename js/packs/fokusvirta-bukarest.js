@@ -601,11 +601,11 @@ export const FOKUSVIRTA_BUKAREST = {
      * viimeinen virke puhuu.
      */
     kuva: {
-      tiedosto: 'Curtea Veche 1.jpg',
+      tiedosto: "Curtea Veche - church and building.JPG",
       lyhyt: 'Vanhan ruhtinaanhovin raunioita; Vlad III nimitti paikan asuinpaikakseen 1459.',
       selite: 'Vanhan ruhtinaanhovin raunioita Bukarestin vanhassakaupungissa. '
         + 'Juuri tämän paikan Vlad III nimitti 1459 asuinpaikakseen.',
-      lahde: 'Nicubunu, Wikimedia Commons (CC BY-SA 3.0 ro)',
+      lahde: "Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)",
     },
   },
 
