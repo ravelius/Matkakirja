@@ -53,7 +53,7 @@ Ei muutettu: Reykjavík K2 ("Islannin suurin kirkko" on jo muotoiltu "lähteen m
 
 ## Huomio
 
-Lehtitekstissä (PR #4463, `kulttuuri-kategoriat.js`) Bratislavan kruunun jäljennös on vielä "1846"; yhtenäistä "1840-luvun lopulla" kun #4463 on mergattu.
+Bratislavan kruunun jäljennöksen vuosi yhtenäistettiin myös lehtitekstiin (`kulttuuri-kategoriat.js`, teksti ja selite): "1840-luvun lopulla" (#4463 mergattu).
 
 ## Liite: tarkistajien taulukot
 
