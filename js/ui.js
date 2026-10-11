@@ -837,15 +837,6 @@ const SAAPUMISKORTTI_TEKSTI_MS = 320;
 const SAAPUMISEN_KUPLA_MS = 1800;
 const SAAPUMISEN_KUPLA_VALI_MS = 2500;
 /*
- * OHJEKUPLIEN NÄYTTÖAIKA (omistaja 11.10.2026 klo 11.5x, natiivi on malli):
- * kumpikin ohje näkyy lukuajan, noin 15 merkkiä sekunnissa ja vähintään
- * 6 s, ja häviää sitten itsestään; kuplan napautus poistaa sen jo ennen.
- */
-const OHJEKUPLAN_MERKKIA_S = 15;
-const OHJEKUPLAN_VAHIMMAISAIKA_MS = 6000;
-const ohjekuplanAika = (teksti) => Math.max(OHJEKUPLAN_VAHIMMAISAIKA_MS,
-  Math.round((String(teksti ?? '').length / OHJEKUPLAN_MERKKIA_S) * 1000));
-/*
  * Hengähdys luennan päättymisen ja ensimmäisen kuplan välissä. Kupla
  * heti viimeisen sanan päälle olisi yhtä tungetteleva kuin kesken
  * lauseen — pöllö odottaa, että kertoja on vaiennut.
@@ -22174,18 +22165,9 @@ export class UI {
    */
   saapumisenOhjekuplat(tervetuloa) {
     if (this.dead) return;
-    const eka = tervetuloa || SAAPUMISEN_KUPLA_TOINEN;
-    polloVihje(eka);
-    clearTimeout(this.saapumisKupla2Ajastin);
-    clearTimeout(this.saapumisOhjeAjastin);
-    // Pari häviää yhdessä, kun myöhempi on ehditty lukea (ks. ohjekuplanAika).
-    const kesto = tervetuloa
-      ? Math.max(ohjekuplanAika(eka), SAAPUMISEN_KUPLA_VALI_MS + ohjekuplanAika(SAAPUMISEN_KUPLA_TOINEN))
-      : ohjekuplanAika(eka);
-    this.saapumisOhjeAjastin = setTimeout(() => {
-      if (!this.dead) polloVihjePois();
-    }, kesto);
+    polloVihje(tervetuloa || SAAPUMISEN_KUPLA_TOINEN);
     if (!tervetuloa) return;
+    clearTimeout(this.saapumisKupla2Ajastin);
     this.saapumisKupla2Ajastin = setTimeout(() => {
       if (this.dead) return;
       polloLisavihje(SAAPUMISEN_KUPLA_TOINEN);

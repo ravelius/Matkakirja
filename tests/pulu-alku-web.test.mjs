@@ -1,7 +1,7 @@
 /*
  * PULUN ALKU WEBISSÄ (omistaja 11.10.2026 klo 11.4x–11.5x, natiivi on malli):
- * ohjekuplien näyttöaika, ei Pulun kommenttia aloituskaupungissa ja Uusi matka
- * nollaa ensikerran liput.
+ * ohjekuplat jäävät näkyviin, ei Pulun kommenttia aloituskaupungissa ja Uusi
+ * matka nollaa ensikerran liput.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -48,11 +48,9 @@ test('Uusi matka nollaa avauksen, paljastuksen ja lehtivinkin liput', () => {
   assert.match(MAIN, /'winner-close'\)\.addEventListener\('click', uusiMatka\)/);
 });
 
-test('ohjekuplat näkyvät lukuajan (15 merkkiä/s, vähintään 6 s) ja häviävät sitten', () => {
-  assert.match(UI, /const OHJEKUPLAN_MERKKIA_S = 15;/);
-  assert.match(UI, /const OHJEKUPLAN_VAHIMMAISAIKA_MS = 6000;/);
+test('ohjekuplat jäävät näkyviin ensimmäiseen napautukseen (ei ajastettua piilotusta)', () => {
+  // Omistaja 11.10.2026 (PT): natiivissa ohjeet näkyivät vain 3 s; webissä ne jäävät pinoon, eikä niitä lyhennetä.
   const alku = UI.indexOf('  saapumisenOhjekuplat(tervetuloa) {');
   const runko = UI.slice(alku, UI.indexOf('\n  }\n', alku));
-  assert.match(runko, /polloVihjePois\(\)/);
-  assert.match(runko, /SAAPUMISEN_KUPLA_VALI_MS \+ ohjekuplanAika\(SAAPUMISEN_KUPLA_TOINEN\)/);
+  assert.doesNotMatch(runko, /polloVihjePois/);
 });
