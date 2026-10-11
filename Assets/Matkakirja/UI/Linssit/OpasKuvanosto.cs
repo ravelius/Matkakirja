@@ -71,7 +71,9 @@ namespace Matkakirja.Natiivi
             int v = ++versio;
             nyt = k; iso = false;
             teksti.text = OpasYksityiskohdat.KortinTeksti(k);
-            lahde.text = OpasYksityiskohdat.Tekijarivi(k) ?? "";
+            // Kuvateksti ei näy suurena (omistaja TF 180, 11.10. 00.0x: "ota kuva teksti pois kun kuvat avataan isommiksi"); tekijärivi
+            // (CC-nimeäminen) jää. Havainnekuvan merkintä kokonaan tekijäriville, koska kuvatekstin "Havainnekuva." ei enää näy.
+            lahde.text = OpasYksityiskohdat.Tekijarivi(k, ilmanKuvatekstia: true) ?? "";
             if (Testikuva != null) { Kiinnita(Testikuva, k, v); return; }
             Kuvat.Hae(k.Url, t => Kiinnita(t, k, v));
         }
@@ -154,13 +156,13 @@ namespace Matkakirja.Natiivi
             if (float.IsNaN(w) || w <= 0 || float.IsNaN(h) || h <= 0) return;
             float pad = Tyylikirja.Vali.Xs;
             // Kulmassa paperikehys mukaan lukien napin kokoinen: kuva koko − 2 × reunus.
-            var r = iso ? KuvanostoAsettelu.Iso(w, h, suhde, Kaista)
+            var r = iso ? KuvanostoAsettelu.Iso(w, h, suhde, Kaista, puhelin: !UiKerros.Tabletti)
                 : kulmaKoko > 0f ? KuvanostoAsettelu.Kulmaan(w, h, suhde, kulmaKoko - 2 * pad, kulmaOikea + pad, kulmaAla + pad, kulmaRako + 2 * pad, kulmaVieressa)
                 : KuvanostoAsettelu.Pieni(w, h, suhde);
             kortti.style.left = r.X - pad; kortti.style.top = r.Y - pad;
             kortti.style.width = r.Lev + 2 * pad;
             kehys.style.height = r.Kork;
-            teksti.style.display = iso && teksti.text.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+            teksti.style.display = DisplayStyle.None;
             lahde.style.display = iso && lahde.text.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             kortti.BringToFront();
         }

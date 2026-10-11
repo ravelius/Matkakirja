@@ -13,6 +13,9 @@ namespace Matkakirja.Linssit.Kierros
         public const float PieniOsuus = 0.26f, PieniMin = 96f, PieniMax = 200f, Reuna = 12f, YlaRaja = 64f;
         /// <summary>Iso: leveys osuutena ruudun leveydestä (nykyinen kortti 0,4) ja korkeusraja vaaka / pysty.</summary>
         public const float IsoOsuus = 0.46f, IsoKorkVaaka = 0.76f, IsoKorkPysty = 0.6f;
+        /// <summary>Puhelimella pykälä isompi (omistaja TF 180, 11.10.: "kuvat asteen liian pieniä ainakin iPhonella", koskee myös isoksi
+        /// avattua kuvaa): sama 1,4 ×:n askel kuin kuvanapissa (Nappi.Ohjaus 40 → OhjausIso 56). iPad ennallaan (IsoOsuus).</summary>
+        public const float IsoOsuusPuhelin = 0.64f;
         /// <summary>Kuvasuhteen (leveys / korkeus) rajat: hyvin kapea tai leveä kuva rajataan kehykseen.</summary>
         public const float SuhdeMin = 0.6f, SuhdeMax = 1.6f;
 
@@ -52,10 +55,10 @@ namespace Matkakirja.Linssit.Kierros
         }
 
         /// <summary>Iso kuva keskelle (kuvateksti alle: kaista pt), hieman nykyistä korttia suurempi, korkeus rajattuna.</summary>
-        public static Laatikko Iso(float w, float h, float suhde, float kaista = 0f)
+        public static Laatikko Iso(float w, float h, float suhde, float kaista = 0f, bool puhelin = false)
         {
             float s = Suhde(suhde);
-            float lev = IsoOsuus * w;
+            float lev = (puhelin ? IsoOsuusPuhelin : IsoOsuus) * w;
             float maxKork = (w > h ? IsoKorkVaaka : IsoKorkPysty) * h - kaista;
             float kork = lev / s;
             if (kork > maxKork) { kork = maxKork; lev = kork * s; }
