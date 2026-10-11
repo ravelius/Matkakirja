@@ -1,0 +1,10 @@
+{
+ "lat": -35.29,
+ "lon": 149.13,
+ "keskilampo": [21.4,20.8,17.9,13.7,10,7.3,6.2,7.5,10.4,13.4,16.5,19.3],
+ "ylin": [29,28,25,21,17,13,12,14,17,20,23,27],
+ "alin": [14,14,11,7,3,2,0,1,4,7,10,12],
+ "sade": [61,55,38,27,32,50,44,43,56,51,68,54],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2010"},
+ "tausta": {"artikkeli":"Canberra","revisio":1378788146,"taulukko":"Climate data for Canberra Airport Comparison (1991–2010 averages, extremes 1939–2023); 578 m AMSL; 35.30° S, 149.20° E","lahteet":"Source 1: Climate averages for Canberra Airport Comparison (1939–2010); averages given are for 1991–2010 | Source 2: Records from Canberra Airport for more recent extremes","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":579,"luettu":"2026-10-11","huomiot":[]}
+}

@@ -1,0 +1,10 @@
+{
+ "lat": 7.09,
+ "lon": 171.38,
+ "keskilampo": [27.7,27.8,27.9,27.9,28,27.9,28,28.1,28.1,28.1,27.9,27.9],
+ "ylin": [30,30,30,30,30,30,30,30,31,30,30,30],
+ "alin": [26,26,26,26,26,26,26,26,26,26,26,26],
+ "sade": [209,194,220,282,272,282,278,284,320,350,341,302],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Majuro","revisio":1379637373,"taulukko":"Climate data for Majuro (Marshall Islands International Airport) 1991–2020 normals, extremes 1955–present","lahteet":"Source: NOAA (relative humidity, dew points and sun 1961–1990)","keskilampo":"Daily mean °F (°C)","sade":"Average precipitation inches (mm)","vuosisade":3334,"luettu":"2026-10-11","huomiot":[]}
+}

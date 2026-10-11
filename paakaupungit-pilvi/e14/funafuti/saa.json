@@ -1,0 +1,10 @@
+{
+ "lat": -8.5,
+ "lon": 179.12,
+ "keskilampo": [28.5,28.4,28.6,28.9,28.9,28.8,28.6,28.5,28.7,28.8,28.9,28.7],
+ "ylin": [31,31,31,32,32,31,31,31,31,32,32,32],
+ "alin": [26,26,26,26,26,26,26,26,26,26,26,26],
+ "sade": [414,351,354,275,241,215,243,254,207,254,256,333],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Funafuti","revisio":1378967182,"taulukko":"Climate data for Funafuti International Airport (1991–2020 normals, extremes 1936–2020)","lahteet":"Source 1: National Oceanic and Atmospheric Administration | Source 2: Deutscher Wetterdienst (humidity 1961–1990, sun 1978–1990)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":3397,"luettu":"2026-10-11","huomiot":[]}
+}

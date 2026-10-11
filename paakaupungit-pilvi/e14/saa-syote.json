@@ -3,54 +3,63 @@
   "id": "canberra",
   "lat": -35.29,
   "lon": 149.13,
-  "wikidata": "Q3114"
+  "wikidata": "Q3114",
+  "artikkeli": "Canberra"
  },
  {
   "id": "apia",
   "lat": -13.83,
   "lon": -171.83,
-  "wikidata": "Q36260"
+  "wikidata": "Q36260",
+  "artikkeli": "Apia"
  },
  {
   "id": "nukualofa",
   "lat": -21.13,
   "lon": -175.2,
-  "wikidata": "Q38834"
+  "wikidata": "Q38834",
+  "artikkeli": "Nukuʻalofa"
  },
  {
   "id": "funafuti",
   "lat": -8.5,
   "lon": 179.12,
-  "wikidata": "Q34126"
+  "wikidata": "Q34126",
+  "artikkeli": "Funafuti"
  },
  {
   "id": "southtarawa",
   "lat": 1.33,
   "lon": 172.97,
-  "wikidata": "Q131233"
+  "wikidata": "Q131233",
+  "artikkeli": "South Tarawa"
  },
  {
   "id": "majuro",
   "lat": 7.09,
   "lon": 171.38,
-  "wikidata": "Q12919"
+  "wikidata": "Q12919",
+  "artikkeli": "Majuro"
  },
  {
   "id": "palikir",
   "lat": 6.92,
   "lon": 158.19,
-  "wikidata": "Q42751"
+  "wikidata": "Q42751",
+  "artikkeli": "Palikir"
  },
  {
   "id": "yaren",
   "lat": -0.55,
   "lon": 166.92,
-  "wikidata": "Q31026"
+  "wikidata": "Q31026",
+  "artikkeli": "Yaren"
  },
  {
   "id": "ngerulmud",
   "lat": 7.5,
   "lon": 134.62,
-  "wikidata": "Q515229"
+  "wikidata": "Q515229",
+  "artikkeli": "Ngerulmud"
  }
 ]

@@ -1,0 +1,10 @@
+{
+ "lat": -13.83,
+ "lon": -171.83,
+ "keskilampo": [27.6,27.7,27.7,27.8,27.3,27.1,26.6,26.6,26.8,27,27.4,27.5],
+ "ylin": [31,31,31,31,31,30,30,30,30,30,31,31],
+ "alin": [25,25,25,25,24,24,24,23,24,24,24,24],
+ "sade": [483,406,302,232,245,139,133,112,143,221,261,414],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Apia","revisio":1375634293,"taulukko":"Climate data for Apia (Elevation: 2 m or 6.6 ft) (1991–2020 normals, extremes 1971–2020)","lahteet":"Source 1: World Meteorological Organization | Source 2: World Bank (sunshine 1971–2000)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":3091,"luettu":"2026-10-11","huomiot":[]}
+}
