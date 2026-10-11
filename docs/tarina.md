@@ -69,13 +69,19 @@ Peli on irrotettu Afrikan tähdestä kokonaan: aarre ei ole tähti missään
 tekstissä, symbolissa eikä nimessä. Tilalla on oma tarusto:
 
 **Tutkimusmatkailija Aarni** kirjasi 1800-luvun alussa luetteloonsa
-maailman kuuluisat kadonneet aarteet — Meripihkahuoneen, El Doradon,
+maailman kuuluisat kadonneet aarteet — Kolme veljestä -riipuksen, El Doradon,
 keisarin jadesinetin, Suuren Zimbabwen kivilinnut ja muut — yhden
 jokaisesta maanosasta. Hän kutsui niitä **unohdetuiksi aarteiksi**:
 aarteiksi, joista kerrotaan tarinoita mutta joita kukaan ei enää etsi.
 Aikalaiset pitivät **Aarnin luetteloa** satukirjana. Nimi ei ole
 sattumaa: kansanperinteessä *aarnivalkea* on liekki, joka palaa kätketyn
 aarteen päällä, ja *aarnihauta* on aarrekumpu.
+
+**Euroopan unohdettu aarre on Kolme veljestä** *(kaanonin muutos, omistaja 11.10.2026; korvaa
+Meripihkahuoneen)*: riipus vuodelta 1389 (Juhana Peloton), kateissa 1640-luvulta. Jokainen
+unohdettu aarre on yhden ihmisen kannettavissa: Suuren Zimbabwen kivilintu käy, kokonainen sali ei.
+Euroopan pikkuaarre Itämeren meripihka säilyy. Pelin alussa pelaaja ei vielä tiedä Aarnin
+luettelosta mitään: isoisä kertoo aarteesta, ja luettelo esitellään vasta myöhemmin.
 
 **Aarnin luettelon aarnivalkeat** *(kaanonin lisäys, omistaja 7.10.2026)*: luettelonsa loppuun Aarni
 kirjasi myös aarnivalkeat, eli paikat, joissa kansan mukaan liekki palaa kätketyn aarteen päällä.
