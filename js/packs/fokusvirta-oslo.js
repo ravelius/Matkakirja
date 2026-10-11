@@ -970,18 +970,4 @@ export const FOKUSVIRTA_OSLO = {
     { id: 'aarre', sivu: 2, otsake: 'AARTEEN AVAUS', palkinto: 'piste', visa: OSEBERG_VISA },
     { id: 'juliste', sivu: 3, otsake: 'JULISTE', palkinto: 'juliste', visa: PEER_GYNT_VISA },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: viikinkien
-   * hopeakätkö. Merkintä aukeaa, kun aarre löytyy (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Talonpoika torilla kertoi, että hänen pitäjässään aura osui '
-      + 'arkkuun, jossa oli hopeaa viikinkien ajalta — ja että joka '
-      + 'pitäjässä on peltonsa, josta samaa tarinaa kerrotaan. Useimmat '
-      + 'tarinat ovat tyhjiä. Mutta maa on täällä vanhaa ja aurat uusia, '
-      + 'ja joka kevät kynnetään syvemmältä.',
-  },
 };

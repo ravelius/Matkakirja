@@ -1529,18 +1529,4 @@ export const FOKUSVIRTA_AMSTERDAM = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. Iso
-   * aarre: VOC-kauppalaivan hopealasti. Merkintä aukeaa, kun aarre
-   * löytyy (js/fokusvirta.js fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Satamakonttorin seinällä on lista laivoista, jotka eivät '
-      + 'koskaan palanneet. Yhden kohdalle joku on piirtänyt ristin ja '
-      + 'sanan "hopea". Konttoristi sanoi, että meri on Kompanian '
-      + 'suurin holvi — ja sen ovi on auki sille, joka löytää oikean '
-      + 'hylyn.',
-  },
 };

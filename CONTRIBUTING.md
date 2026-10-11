@@ -113,8 +113,9 @@ Vaiheet:
    aarrekaupunkien määrä (kaupungit miinus aloituskaupungit), ja pääaarteita
    (`star`-laattoja) on aina tasan yksi. **Keksi laudalle oma aarre:**
    Jokaisella laudalla on oma pääaarteensa — se on aina paikallinen
-   legenda, kuten Meripihkahuoneen aarre (Eurooppa), Montezuman aarre
-   (Pohjois-Amerikka) tai Lapin kulta (Suomi). Nimi annetaan
+   legenda, kuten Kolme veljestä -riipus (Eurooppa), Montezuman aarre
+   (Pohjois-Amerikka) tai Lapin kulta (Suomi), ja yhden ihmisen
+   kannettavissa (Raamattu, Tarina ja hahmot: MITTASÄÄNTÖ). Nimi annetaan
    `tokens.types`-kohdassa ja `texts`-teksteissä.
    **Järvet ja kaupunkilaudat:** suuret järvet voi piirtää vetenä maan
    sisään (`map.lakes` — malli: `js/packs/suomi.js`), ja niiden yli voi vetää

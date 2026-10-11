@@ -31,6 +31,10 @@ on:
         description: 'Pilkuin erotetut CFBundleVersionit, jotka irrotetaan ulkoisesta ryhmästä (vain Päätoimittajan/omistajan luvalla)'
         type: string
         default: ''
+      vanhenna_vanhemmat:
+        description: 'CFBundleVersion N: vanhenna kaikki N:ää vanhemmat buildit iOS + Mac (omistaja 11.10.: vain uusin ladattavissa)'
+        type: string
+        default: ''
       bundle_id:
         description: 'Bundle id'
         type: string
@@ -81,11 +85,12 @@ jobs:
           RYHMA: ${{ inputs.ryhma }}
           VANHENNA: ${{ inputs.vanhenna }}
           POISTA: ${{ inputs.poista }}
+          VANHENNA_VANHEMMAT: ${{ inputs.vanhenna_vanhemmat }}
           LUO_RYHMA: ${{ inputs.luo_ryhma }}
         run: |
           set -euo pipefail
           python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
-          python3 tools/testflight/ulkoinen-ryhma.py --bundle-id "${{ inputs.bundle_id }}" --build "$BUILD" --ryhma "$RYHMA" --vanhenna "$VANHENNA" --poista "$POISTA" --luo-ryhma "$LUO_RYHMA"
+          python3 tools/testflight/ulkoinen-ryhma.py --bundle-id "${{ inputs.bundle_id }}" --build "$BUILD" --ryhma "$RYHMA" --vanhenna "$VANHENNA" --poista "$POISTA" --luo-ryhma "$LUO_RYHMA" --vanhenna-vanhemmat "$VANHENNA_VANHEMMAT"
 
       - name: Siivoa avain
         if: always()

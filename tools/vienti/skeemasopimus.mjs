@@ -47,6 +47,10 @@ export const VAATIMUKSET = {
   '1.61': ['paakaupungit.kuvat'],
   // Karttaseppä 10.10.2026: alkulennon valittavat kohteet (omistaja: vain Eurooppa, NUI juna 181).
   '1.62': ['kaupungit.lahtokohde'],
+  // Linssiseppä 2 / Pelikoodari 11.10.2026: ISS-raketti Andøyassa, maamerkki näkyy kartalla koko ajan (natiivi Maamerkit.aina).
+  '1.63': ['maamerkit.aina'],
+  // Sisältökirjuri 11.10.2026: aarremerkinnät pois pelistä (omistaja), fokusvirrat ei enää kanna aarremerkinta-kenttää.
+  '1.64': ['!fokusvirrat.aarremerkinta'],
   '1.9': ['kokoelma:kuvakysymykset', 'kokoelma:lippumaat', 'kokoelma:pulmaaineisto', 'kokoelma:luennat',
     'kokoelma:livianpuhe', 'kokoelma:maat', 'manifest.offline'],
   '1.10': ['kokoelma:karttamerkit', 'kokoelma:karttavalot', 'kokoelma:maastonimet', 'kokoelma:maarajat',

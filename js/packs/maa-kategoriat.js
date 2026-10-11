@@ -603,7 +603,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kaksi siltaa vanhan viereen',
           aika: '1932',
-          tiedosto: 'The Triple Bridge, Ljubljana (49402985288).jpg',
           teksti: 'Ljubljanica-joen ylittävä Kolmoissilta on kaupungin vanhin siltapaikka, '
             + 'sillä puusilta mainitaan täällä jo vuonna 1280. Nykyinen kivisilta '
             + 'valmistui 1842 ja sai nimen Franzin silta arkkiherttua Franz Karlin '
@@ -613,11 +612,6 @@ export const MAA_KATEGORIAT = {
             + 'kaidepylvästä. Vuodesta 2007 kaikki kolme siltaa ovat olleet vain '
             + 'jalankulkijoille, ja vuonna 2021 ne liitettiin Unescon maailmanperintöön '
             + 'osana Plečnikin perintöä.',
-          lyhyt: 'Kolmoissilta on Ljubljanan vanhimman siltapaikan kolmen sillan ryhmä '
-            + 'Ljubljanica-joen yllä.',
-          selite: 'Kolmoissilta ja Ljubljanica-joki, taustalla fransiskaanien Ilmestyskirkko. '
-            + 'Silta yhdistää keskiaikaisen vanhankaupungin Prešerenin aukioon.',
-          lahde: 'David Jones from Isle of Wight, United Kingdom, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Tromostovje',
         },
         {
@@ -642,7 +636,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Pegasos oven kahvana',
           aika: '1936',
-          tiedosto: 'Jože Plečnik - National and University Library (37211035596).jpg',
           teksti: 'Slovenian kansallis- ja yliopistokirjaston suunnitteli Jože Plečnik '
             + 'vuosina 1930–31, ja se rakennettiin vuosina 1936–1941. Hanke kohtasi '
             + 'aluksi vastustusta Belgradin viranomaisten taholta, mutta opiskelijoiden '
@@ -652,11 +645,6 @@ export const MAA_KATEGORIAT = {
             + '32 pylvästä on tehty tummasta Podpečin marmorista, ja rakennuksen ajatus '
             + 'on kulku tietämättömyyden hämärästä tiedon valoon. Kirjasto sai paikkansa '
             + 'Unescon listalla vuonna 2021.',
-          lyhyt: 'Slovenian kansallis- ja yliopistokirjasto on Plečnikin suunnittelema '
-            + 'kirjastorakennus Ljubljanan keskustassa.',
-          selite: 'Hevosenpäinen ovenkahva Slovenian kansallis- ja yliopistokirjaston '
-            + 'pääovessa Ljubljanassa. Rakennuksen suunnitteli Jože Plečnik.',
-          lahde: 'Andrew Moore from Johannesburg, South Africa, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Slovenian kansallis- ja yliopistokirjasto',
         },
         {
@@ -1031,7 +1019,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kolme terhoa kolmen tornin päällä',
           aika: '1732–1733',
-          tiedosto: 'Fort thüngen Dräi Eechelen 01.jpg',
+          tiedosto: "Fuerte Thüngen, ciudad de Luxemburgo, Luxemburgo, 2023-12-16, DD 148.jpg",
           teksti: 'Tornien päällä on kolme terhoa, ja siitä Fort Thüngen sai lempinimensä '
             + 'Dräi Eechelen, Kolme terhoa. Linnake rakennettiin 1732–1733 ja nimettiin '
             + 'sotapäällikkö Adam Sigmund von Thüngenin mukaan. Lontoon sopimus vaati '
@@ -1043,7 +1031,7 @@ export const MAA_KATEGORIAT = {
             + 'Luxemburgin kaupungin Kirchbergissä.',
           selite: 'Fort Thüngenin kolme tornia, joiden päällä on terho. Linnake toimii '
             + 'nykyään museona.',
-          lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+          lahde: "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
           wiki: 'Fort Thüngen',
         },
       ],
@@ -1087,7 +1075,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Lause kaupungintalon päädyssä',
           aika: '1859',
-          tiedosto: 'Fronton City Hall Esch Alzette.JPG',
           teksti: 'Esch-sur-Alzetten kaupungintalon päädyssä kaivostyöläinen ja '
             + 'terästyöläinen tukevat kaupungin vaakunaa, ja alla lukee vanhalla '
             + 'kirjoitusasulla Mir wölle bleiwe wat mer sin, Haluamme pysyä sellaisina '
@@ -1095,11 +1082,6 @@ export const MAA_KATEGORIAT = {
             + 'runosta De Feierwon, jonka hän kirjoitti 1859 kaupungin rautatien '
             + 'vihkiäisiin. Luxemburgin kieltä puhuu noin 400 000 ihmistä. Sen vanhin '
             + 'tunnettu teksti on 1300-luvun alun Codex Mariendalensis.',
-          lyhyt: 'Esch-sur-Alzetten kaupungintalon päätykolmio, jossa on Luxemburgin '
-            + 'kansallinen tunnuslause luxemburgin kielellä.',
-          selite: 'Kaupungintalon päädyssä kaivostyöläinen ja terästyöläinen tukevat '
-            + 'kaupungin vaakunaa. Alla on tunnuslause vanhalla kirjoitusasulla.',
-          lahde: 'Zinneke, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Luxemburgin kieli',
         },
         {
@@ -2847,7 +2829,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Paviljonki, joka puretaan syksyllä',
           aika: '2000',
-          tiedosto: 'Serpentine Pavilion 2016 I (27776972542).jpg',
+          tiedosto: "Serpentine Gallery in the Kensington Gardens, London, spring 2013.JPG",
           teksti: 'Kensington Gardensissa nousee joka kesä uusi paviljonki. '
             + 'Serpentine-galleria on tilannut sellaisen vuodesta 2000 '
             + 'lähtien, ja säännöt ovat tiukat: arkkitehti ei saa olla '
@@ -2857,11 +2839,9 @@ export const MAA_KATEGORIAT = {
             + 'latoi nurmikolle 1 802 lasikuitulaatikkoa, jotka aukeavat '
             + 'suorasta seinästä kaartuvaksi tilaksi. Sisällä oli kahvila, '
             + 'iltaisin esityksiä, eikä pääsy maksanut mitään.',
-          lyhyt: 'Serpentine-galleria tilaa kesäisin väliaikaisen paviljongin; 2016 sen suunnitteli Bjarke Ingels.',
-          selite: 'Kensington Gardensin Serpentine-galleria tilaa kesäksi '
-            + 'arkkitehdilta väliaikaisen paviljongin, ja vuoden 2016 työn '
-            + 'suunnitteli Bjarke Ingels Group.',
-          lahde: 'Images George Rex, Wikimedia Commons (CC BY-SA 2.0)',
+          lyhyt: "Serpentine Gallery Kensington Gardensissa",
+          selite: "Kensington Gardensin Serpentine-galleria toimii 1934 valmistuneessa entisessä teepaviljongissa, ja sen viereen pystytetään joka kesä väliaikainen paviljonki.",
+          lahde: "Chmee2, Wikimedia Commons (CC BY-SA 3.0)",
           wiki: 'Bjarke Ingels',
         },
         {
@@ -2927,7 +2907,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: '42 773 sanaa yhdestä talosta',
-          tiedosto: 'Statue of Hodge - Dr Johnsons cat - in Gough Square (4043318307).jpg',
+          tiedosto: "Dr Johnson's House, Gough Square - geograph.org.uk - 5590547.jpg",
           teksti: 'Samuel Johnson allekirjoitti sanakirjasopimuksen kesäkuussa '
             + '1746 ja sai palkkioksi 1 500 guineaa. Työ tehtiin 17 Gough '
             + 'Squaren talossa Fleet Streetin takana, jonne hän muutti 1748, '
@@ -2938,12 +2918,9 @@ export const MAA_KATEGORIAT = {
             + 'paperiliuskoille. Talon edustalla istuu nykyään pronssinen '
             + 'kissa: Johnsonin Hodge, jolle isäntä kävi itse ostamassa '
             + 'ostereita, jottei palvelusväki suuttuisi elukalle.',
-          lyhyt: 'Gough Squaren talo on Samuel Johnsonin kirjailijakotimuseo; patsas esittää hänen kissaansa Hodgea.',
-          selite: 'Gough Squaren talo on Samuel Johnsonin entinen koti ja '
-            + 'nykyään kirjailijakotimuseo, ja patsas esittää hänen '
-            + 'kissaansa Hodgea, joka tunnetaan Boswellin vuoden 1791 '
-            + 'elämäkerrasta.',
-          lahde: 'Elliott Brown, Commons (CC BY 2.0)',
+          lyhyt: "Dr Johnsonin talo Gough Squarella",
+          selite: "Gough Squaren talo numero 17 on Samuel Johnsonin entinen koti ja nykyään kirjailijakotimuseo; hän asui siinä 1748–1759 ja kirjoitti sanakirjansa.",
+          lahde: "Paul Farmer, Wikimedia Commons (CC BY-SA 2.0)",
           wiki: 'Samuel Johnson',
         },
         {
@@ -3026,7 +3003,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Karhu, jolla on lappu kaulassa',
-          tiedosto: 'Statue of Paddington Bear with offerings.jpg',
+          tiedosto: "Paddington Station (6749517013).jpg",
           teksti: 'Michael Bond osti jouluaattona 1956 Selfridgesin tavaratalosta '
             + 'nallen, joka oli jäänyt yksin hyllylle, ja vei sen lahjaksi '
             + 'vaimolleen. Tarina syntyi kymmenessä päivässä ja kirja '
@@ -3036,11 +3013,9 @@ export const MAA_KATEGORIAT = {
             + 'after this bear. Thank you", ja esikuvana olivat sota-ajan '
             + 'uutisfilmit, joissa lontoolaislapsia lähetettiin maaseudulle '
             + 'turvaan nimilappu kaulassa ja pieni matkalaukku kädessä.',
-          lyhyt: 'Patsas Paddingtonin asemalla esittää karhua, joka ilmestyi ensi kerran kirjassa vuonna 1958.',
-          selite: 'Marcus Cornishin patsas Paddingtonin asemalla esittää '
-            + 'Michael Bondin karhua, joka ilmestyi ensi kerran kirjassa A '
-            + 'Bear Called Paddington 13. lokakuuta 1958.',
-          lahde: 'JRennocks, Commons (CC BY-SA 4.0)',
+          lyhyt: "Paddingtonin aseman Brunelin rautahalli",
+          selite: "Paddingtonin asema avattiin 1854, ja Brunelin rautahalli on yhä käytössä; Michael Bondin karhu ilmestyi kirjassa A Bear Called Paddington 13. lokakuuta 1958.",
+          lahde: "Hugh Llewelyn, Wikimedia Commons (CC BY-SA 2.0)",
           wiki: 'Michael Bond',
         },
         {
@@ -3505,7 +3480,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Kone, joka luki vihollisen postit',
-          tiedosto: 'Alan Turing by Stephen Kettle 2007.jpg',
+          tiedosto: "Bletchley Park Mansion.jpg",
           teksti: 'Saksan Enigma-koodikone vaihtoi asetuksensa joka keskiyö, '
             + 'joten murtajilla oli aikaa yksi vuorokausi. Alan Turing '
             + 'suunnitteli Bletchley Parkissa koneen nimeltä Bombe, joka '
@@ -3519,7 +3494,7 @@ export const MAA_KATEGORIAT = {
           selite: 'Bletchley Parkissa toimi toisen maailmansodan aikana '
             + 'liittoutuneiden koodinmurron pääkeskus, jossa Alan Turing oli '
             + 'purkamassa saksalaisten Enigma-salausta.',
-          lahde: 'DeFacto, Wikimedia Commons (CC BY-SA 4.0)',
+          lahde: "DeFacto, Wikimedia Commons (CC BY-SA 4.0)",
           wiki: 'Alan Turing',
         },
         {
@@ -3642,7 +3617,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Chaplin oli lontoolainen köyhä poika',
-          tiedosto: 'Charlie Chaplin statue, Leicester Square.jpg',
+          tiedosto: "Charlie Chaplin.jpg",
           teksti: 'Charlie Chaplin syntyi 16. huhtikuuta 1889 Walworthissa '
             + 'Etelä-Lontoossa, ja seitsemänvuotiaana hänet vietiin Lambethin '
             + 'vaivaistaloon. Molemmat vanhemmat olivat music hall '
@@ -3653,12 +3628,9 @@ export const MAA_KATEGORIAT = {
             + 'hän myöhemmin kirjoitti muistiin: kaiken piti olla '
             + 'ristiriitaista, housut pussittavat, takki tiukka, hattu pieni '
             + 'ja kengät suuret.',
-          lyhyt: 'John Doubledayn veistos esittää Chaplinia hänen tunnetuimmassa roolissaan Kulkurina.',
-          selite: 'John Doubledayn veistos esittää Chaplinia hänen '
-            + 'tunnetuimmassa roolissaan Kulkurina, ja muistomerkkiä '
-            + 'ehdotettiin hänen synnyinkaupunkiinsa jouluna 1977 pian hänen '
-            + 'kuolemansa jälkeen.',
-          lahde: 'Matt Brown, Wikimedia Commons (CC BY 2.0)',
+          lyhyt: "Charlie Chaplin Kulkurin asussa 1915",
+          selite: "Charlie Chaplin Kulkurin asussa noin vuonna 1915; hän syntyi Lontoossa 1889 ja kuoli jouluna 1977.",
+          lahde: "Hartsook Photo, Wikimedia Commons (PD)",
           wiki: 'Charles Chaplin',
         },
         {
@@ -5600,14 +5572,9 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Bibliotheca Alexandrina — digitoidut aineistot',
-              tiedosto: 'Reading Room in Bibliotheca Alexandrina.jpg',
               teksti: 'Aleksandrian antiikin kirjasto tuhoutui kauan sitten, '
                 + 'mutta sen muistoksi rakennettiin samalle seudulle uusi. '
                 + 'Bibliotheca Alexandrina avattiin vuonna 2002.',
-              lyhyt: 'Bibliotheca Alexandrina avattiin 2002 kirjastona ja kulttuurikeskuksena Aleksandriaan.',
-              selite: 'Bibliotheca Alexandrina avattiin 2002 kirjastona ja '
-                + 'kulttuurikeskuksena Välimeren rannalle Aleksandriaan.',
-              lahde: 'D-Stanley, Wikimedia Commons (CC BY 2.0)',
               linkki: 'https://www.bibalex.org/en/default',
             },
           ],
@@ -5864,7 +5831,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Cremonan viuluja ei ole ylitetty',
-          tiedosto: 'Cremona - Museo del violino - Statua di Stradivari.JPG',
+          tiedosto: "Violino Clisbee.jpg",
           teksti: 'Pienessä Cremonan kaupungissa rakennettiin 1600- ja '
             + '1700-luvuilla maailman parhaat viulut, eikä kukaan ole '
             + 'sen jälkeen tehnyt parempia. Antonio Stradivari valmisti '
@@ -5878,7 +5845,7 @@ export const MAA_KATEGORIAT = {
           selite: 'Antonio Stradivari (n. 1644–1737) teki Cremonassa '
             + 'arviolta 1 116 soitinta, joista noin 650 on säilynyt tähän '
             + 'päivään.',
-          lahde: 'Monica Rondoni, Wikimedia Commons (CC BY-SA 4.0)',
+          lahde: "Waltramp, Wikimedia Commons (CC BY-SA 4.0)",
           wiki: 'Antonio Stradivari',
         },
         {
@@ -9244,12 +9211,12 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Museum Folkwang Essen — valokuvakokoelma',
-              tiedosto: 'Museum Folkwang Essen-10.jpg',
+              tiedosto: "Frontansicht Museum Folkwang.JPG",
               lyhyt: 'Essenin Museum Folkwang syntyi 1922 kaupungin taidemuseon ja Osthausin kokoelman yhdistyessä.',
               selite: 'Essenin Museum Folkwang syntyi 1922, kun kaupungin '
                 + 'taidemuseo ja Karl Ernst Osthausin yksityiskokoelma '
                 + 'yhdistettiin.',
-              lahde: 'Rufus46, Wikimedia Commons (CC BY-SA 3.0)',
+              lahde: "Julius1990, Wikimedia Commons (CC BY-SA 3.0)",
               teksti: 'Essenin Folkwang on yksi Saksan tärkeimmistä '
                 + 'valokuvamuseoista. Se säilyttää kokonaisia valokuvaajien '
                 + 'jäämistöjä negatiiveineen, ja kuvat selataan museon '
@@ -9906,7 +9873,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Tenniskisa on nimetty lentäjän mukaan',
           aika: '1928',
-          tiedosto: 'Court Philippe Chatrier 2024.jpg',
+          tiedosto: "26-5-30 (championnat de France internationaux de tennis à Roland-Garros, de g. à d.) Cochet, Brugnon, Crawford, Moon - btv1b532300696.jpg",
           teksti: 'Roland Garros ei ollut tennispelaaja vaan lentäjä: hän lensi '
             + 'ensimmäisenä yksin Välimeren yli ja kuoli ensimmäisessä '
             + 'maailmansodassa. Kun Pariisiin rakennettiin 1928 stadion Davis '
@@ -9920,7 +9887,7 @@ export const MAA_KATEGORIAT = {
           selite: 'Roland-Garrosin turnaus perustettiin 1891, ja se on '
             + 'vuoden toinen tennisen Grand Slam -kilpailu Australian '
             + 'avointen jälkeen.',
-          lahde: 'MFonzatti, Wikimedia Commons (CC BY-SA 4.0)',
+          lahde: "Agence Rol (BnF Gallica), Wikimedia Commons (PD)",
           lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Court_Philippe_Chatrier_2024.jpg',
           lisenssi: 'CC BY-SA 4.0',
           lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
@@ -10095,28 +10062,16 @@ export const MAA_KATEGORIAT = {
           kohteet: [
             {
               nimi: 'Louvren kokoelmat — koko kokoelma verkossa',
-              tiedosto: 'Cour Napoléon at night - Louvre.jpg',
               teksti: 'Louvren kokoelmatietokannassa on yli 480 000 teosta — eli '
                 + 'paljon enemmän kuin museon seinillä on tilaa.',
-              lyhyt: 'Louvre on Pariisin kansallinen taidemuseo, jonka kokoelmiin kuuluu muun muassa Mona Lisa.',
-              selite: 'Louvre on Pariisin kansallinen taidemuseo, jonka '
-                + 'kokoelmiin kuuluvat muun muassa Mona Lisa, Milon Venus ja '
-                + 'Samothrakein Nike.',
-              lahde: 'Benh Lieu Song, Wikimedia Commons (CC BY 2.5)',
               linkki: 'https://collections.louvre.fr/',
             },
             {
               nimi: 'Centre Pompidou — nykytaiteen kokoelma',
-              tiedosto: 'Interior of the Centre Pompidou 2.jpg',
               teksti: 'Centre Pompidou on Pariisin nykytaiteen museo, ja sen '
                 + 'rakennus on itsessään osa juttua: putket, ilmastointi ja '
                 + 'portaat vietiin julkisivulle, jotta sisälle jäisi '
                 + 'mahdollisimman paljon tyhjää tilaa.',
-              lyhyt: 'Centre Pompidou valmistui high tech -tyyliin Rogersin ja Renzo Pianon suunnitelmien mukaan.',
-              selite: 'Centre Pompidou valmistui high tech -arkkitehtuurin '
-                + 'tyyliin Richard Rogersin, Su Rogersin ja Renzo Pianon '
-                + 'suunnitelmien mukaan.',
-              lahde: 'DiscoA340, Wikimedia Commons (CC BY-SA 4.0)',
               linkki: 'https://www.centrepompidou.fr/en/',
             },
             {
@@ -10238,12 +10193,10 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Angoulêmen sarjakuvamuseo — digitoidut sarjakuvat',
-              tiedosto: 'Cnbdi cognac.jpg',
-              lyhyt: 'Angoulême on ranskalaisen sarjakuvan keskus, jonka festivaali on järjestetty vuodesta 1974.',
-              selite: 'Angoulême on ranskalaisen sarjakuvan keskus, ja '
-                + 'kaupungin sarjakuvafestivaali on järjestetty vuodesta '
-                + '1974 Euroopan suurimpien joukossa.',
-              lahde: 'Nicrid16, Wikimedia Commons (CC BY-SA 3.0)',
+              tiedosto: "Angoulème -16- Cathédrale Saint-Pierre et les remparts photo n°155.JPG",
+              lyhyt: "Angoulêmen Saint-Pierren katedraali",
+              selite: "Angoulêmen katedraali kohoaa vanhankaupungin mäellä; kaupunki on ranskalaisen sarjakuvan keskus, ja sen sarjakuvafestivaali on järjestetty vuodesta 1974.",
+              lahde: "Mj.galais, Wikimedia Commons (CC BY-SA 3.0)",
               teksti: 'Angoulêmen Cité de la BD:llä on Euroopan suurin '
                 + 'sarjakuvakokoelma. Digitoitujen aineistojen sivulta pääsee '
                 + 'piirtäjien ja vanhojen sarjakuvalehtien sivuille, joilla '
@@ -10279,14 +10232,8 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'INA — Ranskan radio- ja tv-arkisto',
-              tiedosto: 'Auditorium de la Maison de la Radio, Paris 2018.jpg',
               teksti: 'INA on Ranskan valtion audiovisuaalinen arkisto, joka '
                 + 'tallentaa maan radio- ja tv-lähetykset.',
-              lyhyt: 'Radio Francen Maison de la Radio on rakennettu 500-metriseksi renkaaksi studioineen ja saleineen.',
-              selite: 'Radio Francen päärakennus Maison de la Radio on '
-                + 'rakennettu 500 metriä ympärysmitaltaan olevaksi '
-                + 'renkaaksi, ja siinä on studioita ja konserttisaleja.',
-              lahde: 'Jean-Pierre Dalbéra, Wikimedia Commons (CC BY 2.0)',
               linkki: 'https://www.ina.fr/',
             },
           ],
@@ -11469,13 +11416,12 @@ export const MAA_KATEGORIAT = {
           kohteet: [
             {
               nimi: 'Biblioteca Nacional Digital — Os Lusíadas vuoden 1572 painoksena',
-              tiedosto: 'Large hall in the Biblioteca Nacional de Portugal.jpg',
+              tiedosto: "Portret van Luis de Camões, RP-P-1964-507.jpg",
               teksti: 'Portugalin kansalliskirjaston digitaalinen kokoelma '
                 + 'avattiin vuonna 2002, ja ensimmäinen siihen viety teos oli '
                 + 'Luís de Camõesin Os Lusíadas.',
-              selite: 'Biblioteca Nacional de Portugal on Portugalin '
-                + 'kansalliskirjasto.',
-              lahde: 'Threeohsix, Wikimedia Commons (CC BY-SA 4.0)',
+              selite: "Luís de Camões, Os Lusíadas -eepoksen kirjoittaja, 1600-luvun alun kaiverruksessa kirja ja sulkakynä käsissään.",
+              lahde: "Rijksmuseum, Wikimedia Commons (CC0)",
               linkki: 'https://purl.pt/1/1/',
             },
             {
@@ -12045,15 +11991,9 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'BSA Digital Collections — hae kaivausarkistosta',
-              tiedosto: 'Knossos Throne-room 20230604 110755.jpg',
               teksti: 'Britannian Ateenan-instituutti on kaivanut Kreikassa '
                 + '1880-luvulta asti, ja sen arkisto on nyt verkossa: 36 048 '
                 + 'kuvallista kohdetta.',
-              lyhyt: 'Knossoksen valtaistuinsali rakennettiin 1400-luvulla eaa. ja on Euroopan vanhin valtaistuinsali.',
-              selite: 'Knossoksen valtaistuinsali rakennettiin seremonioita '
-                + 'varten 1400-luvulla eaa., ja sitä pidetään Euroopan '
-                + 'vanhimpana valtaistuinsalina.',
-              lahde: 'Rigorius, Wikimedia Commons (CC BY-SA 4.0)',
               linkki: 'https://digital.bsa.ac.uk/',
             },
             {
@@ -16285,7 +16225,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Uimala on kylän olohuone',
           aika: 'Ympäri vuoden',
-          tiedosto: 'Laugardalslaug.JPG',
+          tiedosto: "Krossnes swimming pool.jpg",
           teksti: 'Islannissa maan alta saa kuumaa vettä, ja sillä lämmitetään '
             + 'sekä talot että uima-altaat. Lähes joka kylässä on uimala, '
             + 'joka on auki ympäri vuoden ja myös pakkasella. Varsinaisen '
@@ -16294,11 +16234,9 @@ export const MAA_KATEGORIAT = {
             + 'politiikasta ja naapureista. Yksi sääntö on ehdoton: ennen '
             + 'altaaseen menoa peseydytään ilman uimapukua, ja siitä '
             + 'muistuttavat kyltit pukuhuoneen seinällä.',
-          lyhyt: 'Laugardalslaug on Reykjavíkin suurin uimalakokonaisuus altaineen ja höyrysaunoineen.',
-          selite: 'Laugardalslaug on Reykjavíkin suurin uimalakokonaisuus: '
-            + 'siinä on sisä- ja ulkoallas, kahdeksan eri lämpöistä '
-            + 'porealtaista ja höyrysauna.',
-          lahde: '(WT-en) Meltwaterfalls, Wikimedia Commons (CC BY-SA 1.0)',
+          lyhyt: "Krossneslaug on merenrantauimala Länsivuonoilla.",
+          selite: "Krossneslaug on merenrannalla Strandirin alueella Länsivuonoilla, ja sen altaita lämmittää kuuma lähde.",
+          lahde: "Smiley.toerist, Wikimedia Commons (CC BY-SA 4.0)",
         },
         {
           otsikko: 'Syksyllä koko kylä lähtee vuorille',
@@ -16381,7 +16319,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Piispa joka taisteli uskontoaan vastaan ja hävisi',
           aika: '1550',
-          tiedosto: 'Jón Arason.jpg',
+          tiedosto: "Munkaþverá.jpg",
           teksti: 'Tanska määräsi Islannin luterilaiseksi 1500-luvulla, mutta '
             + 'Hólarin piispa Jón Arason kieltäytyi luopumasta katolisesta '
             + 'uskosta. Hän kokosi miehiä, otti vangiksi kilpailevan '
@@ -16392,11 +16330,9 @@ export const MAA_KATEGORIAT = {
             + 'teki kuninkaan kirjuri, koska pelättiin, ettei rauhaa muuten '
             + 'koskaan tulisi. Arasonin kuolema päätti katolisen kirkon '
             + 'vallan Islannissa.',
-          lyhyt: 'Jón Arason oli Islannin viimeinen katolinen piispa, ja hänet mestattiin Skálholtissa 1550.',
-          selite: 'Patsas kuvaa Jón Arasonia, Islannin viimeistä katolista '
-            + 'piispaa, joka mestattiin poikineen vuonna 1550. Patsaan on '
-            + 'veistänyt Guðmundur Einarsson, ja se seisoo Munkaþverássa.',
-          lahde: 'Pietro, Wikimedia Commons (CC BY-SA 3.0)',
+          lyhyt: "Munkaþverán puukirkko Pohjois-Islannissa.",
+          selite: "Munkaþverán musta puukirkko Pohjois-Islannissa; samalla paikkakunnalla seisoo Jón Arasonin patsas.",
+          lahde: "Pietro, Wikimedia Commons (CC BY-SA 3.0)",
           wiki: 'Jón Arason',
         },
         {
@@ -16978,15 +16914,9 @@ export const MAA_KATEGORIAT = {
           kohteet: [
             {
               nimi: 'Eesti Rahva Muuseum — Viron kansallismuseo Tartossa',
-              tiedosto: 'Eesti Rahva Muuseumi peahoone.jpg',
               teksti: 'Viron kansallismuseo sai vuonna 2016 Tartossa uuden talon, '
                 + 'joka nousee maasta vanhan sotilaslentokentän kiitoradan '
                 + 'päästä. Sivuilta pääsee näyttelyihin ja kokoelmiin.',
-              lyhyt: 'Viron kansallismuseo perustettiin 1909 Tartossa esittelemään virolaista kansankulttuuria.',
-              selite: 'Vuonna 1909 Tartossa perustettu Viron kansallismuseo '
-                + 'esittelee virolaista kansatiedettä ja kansantaidetta sekä '
-                + 'muiden suomalais-ugrilaisten kansojen kulttuuria.',
-              lahde: 'Berta Vosman, Wikimedia Commons (CC BY-SA 4.0)',
               linkki: 'https://www.erm.ee/en/',
             },
             {
@@ -17024,15 +16954,9 @@ export const MAA_KATEGORIAT = {
           kohteet: [
             {
               nimi: 'DIGAR — kansalliskirjaston digiarkisto',
-              tiedosto: 'National Library of Estonia (in Tallinn).jpg',
               teksti: 'Viron kansalliskirjaston digiarkistossa on kirjoja, '
                 + 'aikakauslehtiä, karttoja, nuotteja ja pikkupainatteita. '
                 + 'Suuri osa aukeaa suoraan luettavaksi selaimessa.',
-              lyhyt: 'Viron kansalliskirjasto perustettiin 1918 parlamentin kirjastoksi.',
-              selite: 'Viron kansalliskirjasto perustettiin 21. joulukuuta '
-                + '1918 maan parlamentin kirjastoksi, ja se säilyttää '
-                + 'virolaista kansallisaineistoa.',
-              lahde: 'Pauloleong2002, Wikimedia Commons (CC BY-SA 4.0)',
               linkki: 'https://www.digar.ee/arhiiv/',
             },
             {
@@ -17051,12 +16975,6 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Eesti regilaulude andmebaas — 92 134 kansanlaulua',
-              tiedosto: 'Monument of Singing Mother Hilana Taarka, Obinitsa village Setomaa region, Estonia.jpg',
-              lyhyt: 'Setomaan Laulava äiti -patsas kunnioittaa seton laulajaperinnettä ja laulaja Hilana Taarkaa.',
-              selite: 'Setomaan Obinitsassa seisova Laulava äiti -patsas '
-                + 'kunnioittaa seton laulajaperinnettä ja laulaja Hilana '
-                + 'Taarkaa.',
-              lahde: 'Klarqa, Wikimedia Commons (CC BY-SA 4.0)',
               teksti: 'Viron kirjallisuusmuseon kansanrunousarkisto on koonnut '
                 + 'tietokantaan 92 134 regilaulua eli vanhaa '
                 + 'kalevalamittaista laulua. Jokaisesta näkyy, kuka lauloi ja '
@@ -17330,7 +17248,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Nainen joka nostaa kolme tähteä',
           aika: '1935',
-          tiedosto: 'Freedom Monument Latvia 04.jpg',
           teksti: 'Riian vapaudenpatsas paljastettiin vuonna 1935 muistoksi '
             + 'vuosien 1918–1920 itsenäisyyssodassa kaatuneille, ja se '
             + 'rahoitettiin kokonaan kansalaisten lahjoituksilla. Patsaan '
@@ -17342,10 +17259,6 @@ export const MAA_KATEGORIAT = {
             + 'vaarallista ja saattoi johtaa kuulusteluihin. Jalustan '
             + 'reliefeissä on kolmetoista hahmoa, jotka kuvaavat työtä, '
             + 'perhettä ja vapaustaistelua.',
-          lyhyt: 'Vapaudenpatsas paljastettiin 1935 muistoksi itsenäisyyssodan 1918–1920 kaatuneille.',
-          selite: 'Patsaan huipulla seisova Milda kohottaa kolme tähteä, '
-            + 'jotka kuvaavat Latvian kolmea historiallista aluetta.',
-          lahde: 'Scotch Mist, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       tehtava: {
@@ -17518,15 +17431,9 @@ export const MAA_KATEGORIAT = {
           kohteet: [
             {
               nimi: 'Grāmatas — kansalliskirjaston kirjahylly verkossa',
-              tiedosto: 'Gaismas-pils.jpg',
               teksti: 'Sama kirjasto on kuvannut noin 8 000 kirjaa sivu sivulta, '
                 + 'yhteensä puolitoista miljoonaa sivua. Kirjastorakennus '
                 + 'itse on nimeltään Gaismas pils eli Valon linna.',
-              lyhyt: 'Latvian kansalliskirjasto perustettiin 1919, ja sen päärakennus on Gaismas pils, Valon linna.',
-              selite: 'Latvian kansalliskirjasto perustettiin 1919, ja sen '
-                + 'nykyinen päärakennus tunnetaan nimellä Gaismas pils eli '
-                + 'Valon linna.',
-              lahde: 'Rīgas investīciju un tūrisma aģentūra, Wikimedia Commons (CC BY 4.0)',
               linkki: 'https://gramatas.lndb.lv/',
             },
             {
@@ -18272,7 +18179,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kuva, jossa on syvyys',
           aika: '1947',
-          tiedosto: 'Visa Dove Hologram Rainbow.jpg',
+          tiedosto: "Hologram by Ken Harris, 2012 Switzerland.jpg",
           teksti: 'Dénes Gábor yritti parantaa elektronimikroskoopin sumeaa kuvaa '
             + 'ja keksi vuonna 1947 menetelmän, jossa talteen otetaan valon '
             + 'kirkkauden lisäksi se, missä vaiheessa aalto saapuu. Kun '
@@ -18284,7 +18191,7 @@ export const MAA_KATEGORIAT = {
           lyhyt: 'Holografia tallentaa ja palauttaa aaltorintaman, tunnetuimmin kolmiulotteisina kuvina.',
           selite: 'Holografia tallentaa ja palauttaa aaltorintaman, ja se '
             + 'tunnetaan parhaiten kolmiulotteisten kuvien tuottamisesta.',
-          lahde: 'Dominic Alves, Wikimedia Commons (CC BY 2.0)',
+          lahde: "Ken Harris, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       tehtava: {
@@ -19134,7 +19041,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Teetä juodaan enemmän kuin missään',
           aika: 'Nykyisin',
-          tiedosto: 'Tarihi cinaralti cay bahcesi.jpg',
+          tiedosto: "Glass tea cup.jpg",
           teksti: 'Turkissa juodaan teetä yli kolme kiloa henkeä kohti vuodessa, '
             + 'enemmän kuin missään muussa maassa. Istanbulissa se näkyy '
             + 'kadulla: teenkantaja kulkee kaupasta kauppaan tarjotin köysien '
@@ -19147,7 +19054,7 @@ export const MAA_KATEGORIAT = {
           selite: 'Turkissa juodaan teetä maailman eniten asukasta kohti, '
             + 'yli kolme kiloa vuodessa, ja maa on viidenneksi suurin teen '
             + 'viejä.',
-          lahde: 'M. Fatih Morgül, Wikimedia Commons (CC BY 4.0)',
+          lahde: "Zeynel Cebeci, Wikimedia Commons (CC BY-SA 4.0)",
           wiki: 'Tee',
         },
         {
@@ -20109,7 +20016,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Nuorisoseurasta syntyi armeijan siemen',
           aika: '1914',
-          tiedosto: 'Ukrainian Sich Riflemen Monument on Lychakiv Cemetery 04.jpg',
           teksti: 'Galitsian ukrainalaiset olivat 1900-luvun alussa perustaneet '
             + 'satoja Sitš-nimisiä liikunta- ja palokuntaseuroja, jotka hakivat '
             + 'innoituksensa kasakoiden Zaporižžjan Sitšistä. Elokuussa 1914 '
@@ -20120,10 +20026,6 @@ export const MAA_KATEGORIAT = {
             + 'kansantasavallan armeijan ytimen ja taistelivat vielä Puolaa '
             + 'vastaan, kunnes yksikkö hajotettiin toukokuussa 1920. Lvivin '
             + 'Lytšakivin hautausmaalle pystytettiin heille muistomerkki.',
-          lyhyt: 'Ukrainalaiset sitšiläisampujat oli 1914 perustettu galitsialainen vapaaehtoislegioona.',
-          selite: 'Lvivin Lytšakivin hautausmaan muistomerkki ukrainalaisille '
-            + 'sitšiläisampujille, siivekäs hahmo pylvään huipulla.',
-          lahde: 'Dmytro Petishkin, Wikimedia Commons (CC BY 4.0)',
         },
         {
           otsikko: 'Tasavalta eli neljä vuotta ennen kuin se hävisi',
@@ -20149,7 +20051,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Nälänhätä jota valtio yritti salata',
           aika: '1932–1933',
-          tiedosto: 'Holodomor victims Memorial.jpg',
           teksti: 'Neuvostojohtaja Josif Stalinin vuonna 1929 käynnistämä '
             + 'maatalouden pakkokollektivisointi ajoi ukrainalaiset '
             + 'talonpojat luopumaan maastaan ja omaisuudestaan, ja '
@@ -20162,10 +20063,6 @@ export const MAA_KATEGORIAT = {
             + 'mutta parikymmentä valtiota on tunnustanut tapahtuman '
             + 'kansanmurhaksi. Neuvostoliitossa nälänhädästä vaiettiin aina '
             + 'perestroikaan asti.',
-          lyhyt: 'Pakkokollektivisointi ja viljan pakko-otot aiheuttivat Ukrainassa joukkokuoleman 1932–1933.',
-          selite: 'Holodomorin uhrien muistomerkki Kiovassa, taustalla '
-            + 'Petšerskin luostarin kultaiset kupolit.',
-          lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Holodomor',
         },
         {
@@ -20683,7 +20580,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Suolakaivos, josta tuli huvipuisto',
           aika: '1992',
-          tiedosto: 'Salina Turda, Mina Terezia.JPG',
           teksti: 'Turdan suolakaivoksessa on louhittu suolaa yli 2000 vuoden '
             + 'ajan: työ alkoi maan pinnalla jo antiikin aikana ja siirtyi maan '
             + 'alle roomalaisten valloitettua Daakian. Kaivostyöläiset louhivat '
@@ -20694,10 +20590,6 @@ export const MAA_KATEGORIAT = {
             + '2008–2010 peruskorjaus muutti 120 metrin syvyydessä olevan '
             + 'Terezia-kaivoksen valoisaksi huvipuistoksi, jossa on tivolipyörä, '
             + 'minigolfia ja soutuvene maanalaisella järvellä.',
-          lyhyt: 'Turdan suolakaivos on toiminut yli 2000 vuotta, ja vuodesta 1992 se on ollut huvipuisto.',
-          selite: 'Turdan suolakaivoksen Terezia-osa muutettiin '
-            + 'peruskorjauksessa 2008–2010 valoisaksi maanalaiseksi huvipuistoksi.',
-          lahde: 'Gabriel Tocu, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           otsikko: 'Kivi, joka näyttää kasvoilta',
@@ -25065,7 +24957,6 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Museo koottiin kiekoista',
-          tiedosto: 'National Museum of Qatar.jpg',
           teksti: 'Qatarin kansallismuseo avattiin Dohassa vuonna 2019. Sen muoto '
             + 'on lainattu aavikkoruususta: se on kiekkomainen kide, joka '
             + 'syntyy hiekkaan, kun suolainen vesi haihtuu ja jättää '
@@ -25075,11 +24966,6 @@ export const MAA_KATEGORIAT = {
             + 'puolentoista kilometrin mittainen reitti, ja sen keskellä '
             + 'seisoo vanha emiirin palatsi, jonka ympärille museo on '
             + 'rakennettu.',
-          lyhyt: 'Qatarin kansallismuseo (2019) muistuttaa aavikkoruusua ja koostuu betonikiekoista.',
-          selite: 'Vuonna 2019 avatun Qatarin kansallismuseon muoto on '
-            + 'lainattu aavikkoruususta, ja se on rakennettu sadoista '
-            + 'betonikiekoista, joista ei ole kahta samanlaista.',
-          lahde: 'CallMeBarcode, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           otsikko: 'Kauppakuja muurattiin uudelleen entiselleen',
@@ -25100,7 +24986,6 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Islamilaisen taiteen museo seisoo omalla saarellaan',
-          tiedosto: 'Museum of Islamic Art in Doha (3820043632).jpg',
           teksti: 'Dohan lahdelle on tehty pieni tekosaari, jotta museon '
             + 'ympärille ei koskaan rakennettaisi mitään sen viereen. Sillä '
             + 'seisoo Islamilaisen taiteen museo, jonka suunnitteli '
@@ -25110,12 +24995,6 @@ export const MAA_KATEGORIAT = {
             + 'ylöspäin portaittain, ja ylimmässä kerroksessa on ikkuna, '
             + 'josta näkyy merelle. Kokoelmassa on esineitä tuhannen vuoden '
             + 'ajalta.',
-          lyhyt: 'Islamilaisen taiteen museon suunnitteli I. M. Pei Dohan lahden tekosaarelle.',
-          selite: 'Islamilaisen taiteen museon suunnitteli 91-vuotias '
-            + 'arkkitehti I. M. Pei erään kairolaisen moskeijan suihkulähteen '
-            + 'mukaan, ja rakennus seisoo omalla tekosaarellaan Dohan '
-            + 'lahdella.',
-          lahde: 'Mohamed Nanabhay, Wikimedia Commons (CC BY 2.0)',
         },
         {
           otsikko: 'Torni rakennettiin sadeveden vartijaksi',
@@ -25554,7 +25433,6 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Vesitorneja rakennettiin kolmisenkymmentä',
-          tiedosto: 'Kuwait 1982-0128.jpg',
           teksti: 'Kuwaitissa ei ole jokea eikä järveä, ja juomavesi tehdään '
             + 'merivedestä tislaamalla. Sitä on siis varastoitava, ja '
             + '1960–70-luvuilla maahan rakennettiin vesitornien verkosto: '
@@ -25564,16 +25442,9 @@ export const MAA_KATEGORIAT = {
             + 'pystyraidoin. Tornit seisovat useimmiten rivissä, koska yhteen '
             + 'paikkaan tehtiin monta kerralla. Järjestelmä sai vuonna 1980 '
             + 'kansainvälisen arkkitehtuuripalkinnon.',
-          lyhyt: 'Kuwaitiin rakennettiin 1960–70-luvuilla noin 30 vesitornia, palkittu 1980.',
-          selite: 'Kuwaitissa ei ole jokea eikä järveä, joten '
-            + '1960–70-luvuilla rakennettiin kolmisenkymmentä vesitornia '
-            + 'tislatulle merivedelle, ja järjestelmä sai vuonna 1980 '
-            + 'kansainvälisen arkkitehtuuripalkinnon.',
-          lahde: 'Dennis Sylvester Hurd, Wikimedia Commons (CC0)',
         },
         {
           otsikko: 'Vesisäiliöstä tehtiin maan tunnus',
-          tiedosto: 'Rise and shine at seaside.jpg',
           teksti: 'Vesitorniryhmistä viimeinen sai muista poikkeavan muodon: '
             + 'kolme ohutta tornia niemen kärkeen. Korkein '
             + 'on 187 metriä, ja siinä on kaksi palloa. Alemman pallon '
@@ -25582,16 +25453,9 @@ export const MAA_KATEGORIAT = {
             + 'ympäri puolessa tunnissa. Pallot on päällystetty noin 41 000 '
             + 'emaloidulla teräskiekolla kahdeksassa sinisen ja vihreän '
             + 'sävyssä. Tornit avattiin yleisölle maaliskuussa 1979.',
-          lyhyt: 'Kuwaitin tornit (1979): korkein on 187 m ja sisältää pyörivän kahvilan.',
-          selite: 'Kuwaitin tornit avattiin yleisölle maaliskuussa 1979, ja '
-            + 'korkein niistä on 187 metriä ja sisältää 4 500 kuutiometrin '
-            + 'vesisäiliön sekä puolessa tunnissa pyörähtävän '
-            + 'näköalakahvilan.',
-          lahde: 'Criselda Rayo, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           otsikko: 'Kupolin alle mahtuu kymmenentuhatta',
-          tiedosto: 'Kuwait City Grand Mosque Interior 01.jpg',
           teksti: 'Kuwait Cityn suuri moskeija rakennettiin vuosina 1979–1986, '
             + 'ja se on maan suurin. Päärukoussaliin mahtuu kymmenentuhatta '
             + 'ihmistä ja erilliseen naisten saliin lähes tuhat. Keskuskupoli '
@@ -25600,12 +25464,6 @@ export const MAA_KATEGORIAT = {
             + 'nimeä. Sali on tarkoituksella lähes tyhjä: matto, pilarit ja '
             + 'valo riittävät. Rakennuksen mittakaavan huomaa vasta kun katsoo '
             + 'lattialla seisovia ihmisiä.',
-          lyhyt: 'Kuwait Cityn suureen moskeijaan (1979–86) mahtuu 10 000 rukoilijaa.',
-          selite: 'Kuwait Cityn suuri moskeija rakennettiin vuosina '
-            + '1979–1986, sen päärukoussaliin mahtuu kymmenentuhatta ihmistä, '
-            + 'ja 26 metriä leveän keskuskupolin sisäpintaan on kirjoitettu '
-            + 'Jumalan yhdeksänkymmentäyhdeksän nimeä.',
-          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       tehtava: {
@@ -26343,7 +26201,6 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Kupoli on lasikuitua',
-          tiedosto: 'Manama al-Fateh Grand Mosque Interior Gebetshalle Kronleuchter 1.jpg',
           teksti: 'Manaman al-Fatehin moskeija valmistui vuonna 1987, ja siihen '
             + 'mahtuu yli seitsemäntuhatta ihmistä. Erikoisin osa on kupoli: '
             + 'se ei ole kiveä eikä betonia vaan lasikuitua, ja se painaa noin '
@@ -26352,11 +26209,6 @@ export const MAA_KATEGORIAT = {
             + 'Italiasta, kattokruunu Itävallasta ja ovet Intian tiikistä. '
             + 'Seinillä kiertää kulmikasta kufi-kirjoitusta. Vuodesta 2006 '
             + 'rakennuksessa on toiminut myös Bahrainin kansalliskirjasto.',
-          lyhyt: 'Manaman al-Fatehin moskeijaan (1987) mahtuu yli 7000 ihmistä.',
-          selite: 'Vuonna 1987 valmistuneeseen Manaman al-Fatehin moskeijaan '
-            + 'mahtuu yli seitsemäntuhatta ihmistä, ja sen noin '
-            + 'viisikymmentäneljä tonnia painava kupoli on lasikuitua.',
-          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           otsikko: 'Vanhaan tyyliin tehty kahvila',
@@ -33078,7 +32930,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Nimi, josta tuli algoritmi',
           aika: 'n. 780–850',
-          tiedosto: 'Al Khorezmy.jpg',
           teksti: 'Muhammad ibn Musa al-Khwarizmi kokosi noin vuosina '
               + '813–833 Bagdadin viisauden talossa kirjan Al-Jabr, '
               + 'joka esitti ensimmäisenä järjestelmällisen tavan '
@@ -33091,11 +32942,6 @@ export const MAA_KATEGORIAT = {
               + 'sanoo sen olleen Khwarazm, josta liikanimi tulee, '
               + 'kun taas osa tutkijoista sijoittaa syntymän Bagdadin '
               + 'liepeille.',
-          lyhyt: 'Al-Khwarizmista ei ole aikalaiskuvaa; tämä 1900-luvun puuveistos kantaa hänen nimensä arabiaksi.',
-          selite: 'Al-Khwarizmista ei ole aikalaiskuvaa; tämä puuhun veistetty '
-            + 'muotokuva on 1900-luvulta, ja alareunaan on kaiverrettu '
-            + 'hänen nimensä arabialaisin kirjaimin.',
-          lahde: 'Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Al-Khwarizmi',
         },
         {
@@ -38591,7 +38437,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Ensimmäinen latinalaisamerikkalainen Louvressa',
           aika: '1964',
-          tiedosto: 'Dardignac 28 -mural de Violeta Parra -fRF1.jpg',
           teksti: 'Violeta Parra (1917–1967) kiersi Chilen keräämässä '
               + 'kansanlauluja ja perinnetaitoja: samalla matkalla syntyivät '
               + 'hänen keramiikkansa, maalauksensa ja arpillera-kuvakirjontansa. '
@@ -38601,11 +38446,6 @@ export const MAA_KATEGORIAT = {
               + 'latinalaisamerikkalaisen taiteilijan yksityisnäyttely siellä. '
               + 'Laulu "Gracias a la vida" syntyi La Pazissa 1966. Parran '
               + 'syntymäpäivä 4. lokakuuta on Chilen muusikoiden päivä.',
-          lyhyt: 'Santiagon Bellavistassa oleva mosaiikki esittää säveltäjä ja folkloristi Violeta Parraa kitaroineen.',
-          selite: 'Santiagon Bellavistassa oleva mosaiikki esittää Violeta '
-            + 'Parraa kitaroineen; hän oli säveltäjä, folkloristi ja '
-            + 'kuvataiteilija samassa työssä.',
-          lahde: 'Rodrigo Fernández, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Violeta Parra',
         },
         {
@@ -41060,7 +40900,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kansa, joka julistettiin kadonneeksi',
           aika: '1831–1833',
-          tiedosto: 'Guyunusa y Tacuabe.jpg',
           teksti: 'Charrúat olivat puolinomadeja: kesäisin he tulivat '
               + 'rannikolle kalaan ja simpukoita keräämään, talvisin he '
               + 'palasivat sisämaahan metsästämään hirviä ja nandúja '
@@ -41072,11 +40911,6 @@ export const MAA_KATEGORIAT = {
               + 'Vaimaca-Pirú sekä nuoripari Tacuavé ja Guyunusa. Kukaan '
               + 'heistä ei palannut. Jälkeläisiä arvioidaan olevan '
               + '160 000–300 000, ja he perustivat 2005 oman neuvostonsa.',
-          lyhyt: 'Montevideon Los Últimos Charrúas -veistos esittää Guyunusaa ja Tacuavéta, vietyinä 1833 Pariisiin.',
-          selite: 'Montevideon Los Últimos Charrúas -veistos esittää '
-            + 'Guyunusaa ja Tacuavéta, kahta niistä neljästä charrúasta, '
-            + 'jotka vietiin vuonna 1833 Pariisiin.',
-          lahde: 'EVAJADE, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           otsikko: 'Kaupunki, joka vaihtoi lippua sata vuotta',
@@ -41927,7 +41761,6 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Kylä, joka veistää yhä samalla puukolla',
-          tiedosto: 'Sagrada familia - artesania tobateña.JPG',
           teksti: 'Tobatí tunnetaan koko Paraguayssa puutöistä, '
               + 'keramiikasta ja veistoksista. Kylän veistäjät tekevät '
               + 'pyhimyksiä, seimiä ja arkiesineitä paikallisesta puusta, ja '
@@ -41937,11 +41770,6 @@ export const MAA_KATEGORIAT = {
               + 'nimi on Don Zenón Páez. Samaa perinnettä jatkavat '
               + 'naapurikylät omilla erikoisaloillaan, ja käsityö myydään '
               + 'edelleen kadunvarsikojuista ostajan katsellessa vieressä.',
-          lyhyt: 'Tobateñalainen seimiasetelma on veistetty yhdestä puunkappaleesta, ja hahmot ovat erikseen tehtyjä.',
-          selite: 'Tobateñalainen seimiasetelma on veistetty yhdestä '
-            + 'puunkappaleesta, ja hahmot ovat erikseen tehtyjä vaaleampia '
-            + 'figuureja.',
-          lahde: 'Mateuverte, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           otsikko: 'Musta savi ja sammakot',
@@ -42340,7 +42168,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Teos, jonka sisään kävellään',
           aika: '1923–2005',
-          tiedosto: '"Penetrable Amarillo" del artista venezolano Jesús Soto.JPG',
           teksti: 'Jesús Rafael Soto maalasi kuusitoistavuotiaana '
               + 'elokuvajulisteita Ciudad Bolívarissa ja päätyi Pariisiin, '
               + 'jossa hän osallistui 1955 Galerie Denise Renén '
@@ -42351,16 +42178,10 @@ export const MAA_KATEGORIAT = {
               + 'kuutio, johon katsoja kävelee sisään. Taiteilijan mukaan '
               + 'sisällä on tunne siitä, että on valon pyörteessä ja tuntee '
               + 'tilan ruumiillaan.',
-          lyhyt: 'Penetrable-teokset ovat kineettisen taiteen ääriesimerkki, syntyvät katsojan liikkuessa niissä.',
-          selite: 'Penetrable-teokset ovat kineettisen taiteen '
-            + 'ääriesimerkki: teos syntyy vasta, kun katsoja liikkuu sen '
-            + 'sisällä.',
-          lahde: 'TainaHijadeDios, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           otsikko: 'Lattia, joka muuttaa väriä askelten mukaan',
           aika: '1974',
-          tiedosto: 'Piso Corredor Público.JPG',
           teksti: 'Carlos Cruz-Diez asui Pariisissa vuodesta 1960 '
               + 'kuolemaansa 2019 ja tutki koko uransa yhtä asiaa: väriä '
               + 'itsenäisenä ilmiönä, joka syntyy vasta katsojan silmässä '
@@ -42371,11 +42192,6 @@ export const MAA_KATEGORIAT = {
               + 'niistä tunnetuin on Maiquetían lentoaseman mosaiikkilattia '
               + 'vuodelta 1974, jonka värivyöhykkeet muuttuvat sen mukaan, '
               + 'mistä suunnasta niitä katsoo.',
-          lyhyt: 'Maiquetían lentoaseman lattia on Cruz-Diezin teos Ambientación Color Aditivo.',
-          selite: 'Maiquetían lentoaseman lattia on Cruz-Diezin teos '
-            + 'Ambientación Color Aditivo, ja se on monelle matkustajalle '
-            + 'ensimmäinen näky Venezuelasta.',
-          lahde: 'Karla Santos, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
     },
@@ -44491,7 +44307,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kirja, joka syntyi kolmen vuoden eristyksessä',
           aika: '1375–1378',
-          tiedosto: 'Bust of Ibn Khaldun (Casbah of Bejaia, Algeria).jpg',
           teksti: 'Tlemcenin sulttaani lähetti Ibn Khaldunin vuonna 1375 '
               + 'Biskran arabiheimojen luo. Paluumatkalla hän haki turvaa '
               + 'berberiheimolta Länsi-Algerian Qalat Ibn Salaman '
@@ -44503,10 +44318,6 @@ export const MAA_KATEGORIAT = {
               + 'suvun valtaan ja kantaa samalla sen tuhon siementä. '
               + 'Kylässä ei ollut kirjastoa, joten viimeistelyä varten '
               + 'hänen oli palattava 1378 kotikaupunkiinsa Tunisiin.',
-          lyhyt: 'Ibn Khaldunin rintakuva seisoo Béjaïan kasbahissa, samassa maassa jossa Muqaddimah syntyi.',
-          selite: 'Ibn Khaldunin rintakuva seisoo Béjaïan kasbahissa '
-            + 'Algeriassa, samassa maassa, jossa Muqaddimah syntyi.',
-          lahde: 'Reda Kerbouche, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           otsikko: 'Maalivahti, josta tuli Nobel-kirjailija',
@@ -45798,7 +45609,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Musta tähti nousi keskiyöllä',
           aika: '6.3.1957',
-          tiedosto: 'Black Star Gate located in Accra.jpg',
           teksti: 'Kultarannikosta tuli 6. maaliskuuta 1957 ensimmäinen '
               + 'itsenäistynyt siirtomaa Saharan eteläpuolisessa Afrikassa. '
               + 'Accraan saapui yli sata toimittajaa ja valokuvaajaa, ja kun '
@@ -45809,9 +45619,6 @@ export const MAA_KATEGORIAT = {
               + 'tarkoittaa afrikkalaista vapautta. Nkrumah avasi Accraan '
               + 'myös Mustan tähden aukion. Maan nimeksi valittiin '
               + 'keskiaikaisen valtakunnan nimi.',
-          selite: 'Mustan tähden portti Accrassa. Kaarteen otsassa lukee '
-            + 'AD 1957 ja alempana Freedom and Justice.',
-          lahde: 'Uprising Man, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Kwame Nkrumah',
         },
       ],
@@ -46447,7 +46254,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Satamatyöläisestä elokuvan isäksi',
           aika: '1923–2007',
-          tiedosto: 'Monument Ousmane Sembene à l\'UCAD 03.jpg',
           teksti: 'Ousmane Sembène syntyi kalastajan poikana Ziguinchorissa, '
               + 'jätti koulun viisitoistavuotiaana ja teki Dakarissa '
               + 'ruumiillisia töitä. Sotavuosien jälkeen hän matkusti '
@@ -46459,10 +46265,6 @@ export const MAA_KATEGORIAT = {
               + 'Lyhytelokuva Borom Sarret valmistui 1963, ja La Noire de… '
               + 'oli 1966 ensimmäinen Saharan eteläpuolisen afrikkalaisen '
               + 'ohjaama pitkä elokuva.',
-          lyhyt: 'Sembènen muistomerkki Dakarin yliopistolla; Mandabi 1968 oli ensimmäinen wolofinkielinen elokuva.',
-          selite: 'Sembènen muistomerkki Dakarin yliopiston edessä. Hänen '
-            + 'elokuvansa Mandabi (1968) oli ensimmäinen wolofinkielinen.',
-          lahde: '4MAPS, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Ousmane Sembène',
         },
         {
@@ -46655,7 +46457,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Ruhtinas, jonka nimi säilyi vain omissa papereissa',
           aika: '1524',
-          tiedosto: 'Statue of Tecun Uman - Central Plaza - Santa Cruz del Quiche - Quiche - Guatemala (15754040660).jpg',
+          tiedosto: "Buildings in Grand Plaza - K'umarcaaj (Former K'iche' Capital) - Outside Santa Cruz del Quiche - Quiche - Guatemala (15756837547).jpg",
           teksti: 'Kʼicheʼ-mayojen viimeisiä hallitsijoita oli Tecun Uman. '
               + 'Hän kaatui 12. helmikuuta 1524, kun Pedro de Alvarado eteni '
               + 'Quetzaltenangon laaksoon 180 ratsumiehen, 300 jalkamiehen ja '
@@ -46666,11 +46468,9 @@ export const MAA_KATEGORIAT = {
               + '— nimen Tecum Umam säilyttivät kʼicheʼien omat asiakirjat. '
               + 'Guatemala julisti hänet kansallissankariksi 22. maaliskuuta '
               + '1960.',
-          lyhyt: 'Santa Cruz del Quichén patsas esittää Tecun Umania, Guatemalan kansallissankaria vuodesta 1960.',
-          selite: 'Santa Cruz del Quichén keskusaukion patsas esittää Tecun '
-              + 'Umania, joka on ollut Guatemalan virallinen kansallissankari '
-              + 'vuodesta 1960.',
-          lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 2.0)',
+          lyhyt: "Qʼumarkajin rauniot, kʼicheʼ-mayojen entinen pääkaupunki Santa Cruz del Quichén lähellä.",
+          selite: "Qʼumarkajin rauniot lähellä Santa Cruz del Quichéa: kʼicheʼ-mayojen entisen pääkaupungin kivirakennusten jäänteet.",
+          lahde: "Adam Jones, Wikimedia Commons (CC BY-SA 2.0)",
         },
         {
           otsikko: 'Pääkaupunki, joka muutti neljä kertaa',
@@ -48880,7 +48680,6 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Holvi, joka muurataan ilman muottia',
-          tiedosto: 'Gurna Mosque R01.jpg',
           teksti: 'Nubialaisten kirkkojen huomattavin rakennuspiirre on '
               + 'savitiilestä muurattu holvi. Sen erikoisuus on siinä, '
               + 'ettei se tarvitse puista tukimuottia: tiilet ladotaan '
@@ -48892,10 +48691,6 @@ export const MAA_KATEGORIAT = {
               + 'ja teki siitä 1900-luvulla oman rakennustapansa '
               + 'perustan. Sitä pidetään yhä yhtenä ekologisimmista '
               + 'rakennustavoista.',
-          lyhyt: 'Hassan Fathyn New Gournan moskeija on rakennettu savitiilestä nubialaisin holvein ja kupolein.',
-          selite: 'Hassan Fathyn suunnittelema New Gournan moskeija on '
-            + 'rakennettu savitiilestä nubialaisin holvein ja kupolein.',
-          lahde: 'Marc Ryckaert, Wikimedia Commons (CC BY 3.0)',
           wiki: 'Hassan Fathy',
         },
         {
@@ -51463,7 +51258,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kansanäänestys, joka teki kahdesta yhden',
           aika: '1919–1972',
-          tiedosto: 'Reunification monument in Buea.jpg',
+          tiedosto: "Aerial view of Buea from governor's street.jpg",
           teksti: 'Ensimmäisen maailmansodan jälkeen Saksan Kamerun jaettiin kahdeksi '
               + 'Kansainliiton mandaatiksi: suurempi osa Ranskalle, kapea läntinen '
               + 'kaistale Britannialle. Ranskan puoli itsenäistyi 1. tammikuuta 1960 '
@@ -51474,10 +51269,9 @@ export const MAA_KATEGORIAT = {
               + 'hyväksyttiin elokuussa — Buea sai Länsi-Kamerunin pääkaupungin aseman '
               + 'ja Yaoundé liittovaltion. Vuonna 1972 liittovaltio korvattiin '
               + 'yhtenäisvaltiolla.',
-          lyhyt: 'Buea oli Länsi-Kamerunin pääkaupunki; puistossa seisoo yhdistymisen muistomerkki.',
-          selite: 'Buea Kamerunvuoren rinteellä oli Länsi-Kamerunin pääkaupunki, ja '
-            + 'sen puistossa seisoo yhdistymisen muistomerkki.',
-          lahde: 'A.R. Etoyiva, Wikimedia Commons (CC BY-SA 4.0)',
+          lyhyt: "Buean kaupunki",
+          selite: "Näkymä Buean kaupunkiin Lounais-alueen kuvernöörin toimiston suunnasta; kuvassa näkyy myös moskeija.",
+          lahde: "3ch310n 123, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
     },
@@ -52615,7 +52409,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Levypakkaaja, josta tuli kitaran velho',
           aika: '1938–1989',
-          tiedosto: 'Luambo makiadi franco.jpg',
           teksti: 'Franco Luambo Makiadi jäi 11-vuotiaana ilman isää, ja koulu loppui siihen. '
               + 'Äiti myi munkkeja Ngiri-Ngirin torilla, ja poika sai paikan levyjen '
               + 'pakkaajana Ngoma-levy-yhtiöllä. Siellä hän opetteli kitaraa salaa aina, kun '
@@ -52625,10 +52418,6 @@ export const MAA_KATEGORIAT = {
               + 'perustettiin 1956, ja Franco siirsi sebenen kappaleen loppuun ja soitti sen '
               + 'peukalolla ja etusormella. Rolling Stone sijoitti hänet 2023 kaikkien aikojen '
               + 'kitaristien listalla sijalle 71.',
-          lyhyt: 'Yhtyeen tunnuslause oli On entre O.K., on sort K.O. – sisään kunnossa, ulos tyrmättynä.',
-          selite: 'Yhtyeen tunnuslause oli On entre O.K., on sort K.O. — sisään mennään '
-            + 'kunnossa, ulos tullaan tyrmättynä.',
-          lahde: 'Lingabo, Wikimedia Commons (CC0)',
           wiki: 'Franco Luambo',
         },
         {
@@ -54528,7 +54317,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Vehnäntähkä turbaanissa',
           aika: '1747',
-          tiedosto: '1000 Afghanis (2022 - back).jpg',
+          tiedosto: "Le mausolée d'Ahmed Chah Dourrâni (1747-1772) - A58105S.jpg",
           teksti: 'Kun Persian hallitsija Nader Shah murhattiin kesäkuussa 1747, hänen '
               + 'afgaanikaartinsa päällikkö Ahmad Khan Abdali otti vainajan sormuksen ja '
               + 'Koh-i-Noor-timantin ja marssi joukkoineen Kandahariin. Tarun mukaan '
@@ -54538,9 +54327,8 @@ export const MAA_KATEGORIAT = {
               + 'kiinnitti lakkiin vain vihreän oksan. Ahmad Shah otti liikanimen Durr-i '
               + 'Durran, helmien helmi, ja vaihtoi heimonsa nimen abdaleista durraneiksi. '
               + 'Afganistanissa häntä sanotaan yhä nimellä Ahmad Shah Baba, isä.',
-          selite: 'Ahmad Shah Durranin mausoleumi Kandaharissa on kuvattu tuhannen '
-            + 'afgaanin setelin kääntöpuolelle.',
-          lahde: 'Sayfullah Al Maslul, Wikimedia Commons (CC0)',
+          selite: "Ahmad Shah Durranin mausoleumi Kandaharissa on kuvattu myös tuhannen afgaanin setelin kääntöpuolelle; tämä kuva on vuodelta 1928.",
+          lahde: "Frédéric Gadmer, Albert-Kahn-museo, Wikimedia Commons (CC BY-SA 4.0)",
         },
         {
           otsikko: 'Junan nimi, joka ei tarkoita mitä luulee',
@@ -58701,7 +58489,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Rodinin museo täyttyi zimbabwelaisesta kivestä',
           aika: '1968–1971',
-          tiedosto: 'Zimbabwe sculpture at Atlanta airport.JPG',
           teksti: 'Pakotteiden vuodet pitivät maan taidetta poissa '
               + 'maailmalta, mutta McEwen sai näyttelyt liikkeelle. New '
               + 'Yorkin MoMA esitteli työpajakoulun 1968–69, ja 1971 Pariisin '
@@ -58712,11 +58499,6 @@ export const MAA_KATEGORIAT = {
               + 'nousivat Dominic Benhura ja Tapfuma Gutsa; Benhuran veistos '
               + 'seisoo Singaporen kasvitieteellisessä puutarhassa ja '
               + 'McEwenin testamenttaama kokoelma British Museumissa.',
-          lyhyt: 'Atlantan lentoasemalla on 2001 alkaen ollut zimbabwelaisen kivenveiston näyttely matkustajareitillä.',
-          selite: 'Atlantan lentoasemalla on ollut vuodesta 2001 pysyvä '
-            + 'näyttely zimbabwelaista kivenveistoa matkustajien '
-            + 'kulkureitin varrella.',
-          lahde: 'Keizers, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       tehtava: {
@@ -61026,7 +60808,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kananhöyhensivellin maalasi taideauton',
           aika: '1991',
-          tiedosto: 'BMWArtCar-Mahlangu.jpg',
           teksti: 'Ndebelet maalaavat talojensa seinät kirkkain '
             + 'geometrisin kuvioin, ja työ on naisten: tytöt oppivat '
             + 'sen äidiltään ja isoäidiltään ennen kuin saavat oman '
@@ -61039,9 +60820,6 @@ export const MAA_KATEGORIAT = {
             + 'syntyivät BMW 525i:n pintaan kananhöyhenistä sidotulla '
             + 'siveltimellä, ja se oli hänen ensimmäinen työnsä muulle '
             + 'kuin seinälle.',
-          selite: 'Esther Mahlangun vuonna 1991 maalaama BMW 525i oli sarjan '
-            + 'ensimmäinen taideauto, jonka teki nainen.',
-          lahde: 'Olli1800, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Esther Mahlangu',
         },
         {
@@ -61478,7 +61256,6 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Valtaistuin, jonka termiitit allekirjoittivat',
-          tiedosto: 'Throne of Weapons, British Museum 1.jpg',
           teksti: 'Cristóvão Estevão Canhavato, taiteilijanimeltään Kester, kokosi '
               + '2002 valtaistuimen käytöstä poistetuista aseista, jotka hän sai '
               + '"aseista työkaluiksi" -hankkeelta. Osat ovat monesta maasta: '
@@ -61489,8 +61266,6 @@ export const MAA_KATEGORIAT = {
               + 'se on jälki, johon kantohihna oli kiinnitetty. Teoksen on '
               + 'allekirjoittanut hänen lisäkseen termiitti. British Museum osti sen '
               + 'samana vuonna.',
-          selite: 'Trono de Armas on ollut British Museumin kokoelmissa vuodesta 2002.',
-          lahde: 'Mike Peel, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -61802,11 +61577,11 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kahleet putosivat maaliskuussa',
           aika: '1873',
-          tiedosto: "Monumento a la Abolición de la Esclavitud, Barrio Cuarto, Ponce, PR, close-up de 'El Hombre Redimido' (DSC00530).jpg",
+          tiedosto: "Román Baldorioty Castro, La Ilustración Española y Americana.jpg",
           teksti: 'Espanjan kansalliskokous hyväksyi 22. maaliskuuta 1873 niin kutsutun Moret-lain, joka lakkautti orjuuden Puerto Ricossa. Vapaaksi tuli noin 29 000 orjaa, viitisen prosenttia koko saaren väestöstä. Vapautus ei ollut ehdoton: valtio maksoi omistajille korvauksen jokaisesta orjasta, ja vapautetut velvoitettiin jatkamaan työtä entisillä isännillään vielä kolme vuotta ilman äänioikeutta. Lakia ajoivat muun muassa toimittaja Julio Vizcarrondo ja poliitikko Ramón Baldorioty de Castro. Poncen kaupunkiin pystytettiin myöhemmin muistomerkki, jonka keskellä pronssinen mies katkaisee kahleensa symboloiden saavutettua vapautta.',
-          lyhyt: 'Poncen muistomerkki, joka pystytettiin orjuuden lakkauttamisen kunniaksi vuonna 1873.',
-          selite: 'Patsas kuvaa miestä, joka on juuri vapautunut kahleistaan. Se on osa Poncen orjuuden lakkauttamisen muistomerkkiä.',
-          lahde: 'Tito Caraballo, Wikimedia Commons (CC BY-SA 2.0)',
+          lyhyt: "Toimittaja Román Baldorioty de Castro ajoi orjuuden lakkauttamista Puerto Ricossa.",
+          selite: "Toimittaja ja poliitikko Román Baldorioty de Castro (1822–1889) ajoi orjuuden lakkauttamista Puerto Ricossa. Kuva on piirros vuodelta 1889.",
+          lahde: "Arturo Carretero, La Ilustración Española y Americana 1889, Wikimedia Commons (public domain)",
           wiki: 'Orjuus',
         },
         {
@@ -62782,11 +62557,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kuulovirhe joka nimesi kulttuurin',
           aika: '1952',
-          tiedosto: 'National Museum of Ethnology, Osaka - Reconstructed Lapita female.jpg',
           teksti: 'Vuonna 1952 arkeologit Edward Gifford ja Richard Shutler kaivoivat Uuden-Kaledonian Konen seudulla Foué-niemellä muinaista kylää. Kun Gifford kysyi paikalliselta kanakioppaalta löytöpaikan nimeä havaken kielellä, vastaus xapeta’a — paikka, jossa kaivetaan kuoppa — kuultiin väärin ja kirjattiin muistiin muotoon Lapita. Nimestä tuli vahingossa koko kolmituhatvuotisen tyynenmerentakaisen keramiikkakulttuurin nimi, joka ulottuu Uudesta-Guineasta Samoalle asti. Foué on yhä lapitakulttuurin tyyppipaikka, ja sen saviastiat kertovat ensimmäisistä merenkulkijoista, jotka asettuivat saarelle jo kolmisen tuhatta vuotta sitten.',
-          lyhyt: 'Lapitakulttuurin nimi syntyi kuulovirheestä uuskaledonialaisella kaivauksella 1952.',
-          selite: 'Lapitakulttuurin naisen kasvojen kolmiulotteinen rekonstruktio Osakan etnologisessa museossa, tehty säilyneiden ihmisluiden pohjalta.',
-          lahde: 'Yanajin33, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Lapitakulttuuri',
         },
         {
@@ -63044,11 +62815,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Veistetty vartija kulttuurikeskuksessa',
           aika: 'nykyään',
-          tiedosto: 'Kanak Totem (45954416171).jpg',
           teksti: 'Jean-Marie Tjibaoun kulttuurikeskuksen näyttelyissä ja ulkoalueilla seisoo useita puuveistoksia, joita kutsutaan usein toteemeiksi, vaikka termi ei ole täysin osuva kanakikulttuurille: veistokset ovat pikemminkin esi-isien tai suojelevien henkien kuvia kuin klaanitunnuksia länsimaisessa mielessä. Nykykanakiveistäjät jatkavat perinnettä yhdistäen perinteisiä aiheita — kasvoja, käsiä, eläinhahmoja — uusiin materiaaleihin ja mittakaavoihin. Keskus toimii sekä museona että työpajana, jossa nuoret taiteilijat oppivat veistämistä vanhemmilta mestareilta, ja monet keskuksessa esillä olevista teoksista on tehty juuri tätä tarkoitusta varten.',
-          lyhyt: 'Puuveistos Tjibaoun kulttuurikeskuksessa jatkaa kanakien esi-isien kuvaamisen perinnettä.',
-          selite: 'Veistetty puinen hahmo ulkona Jean-Marie Tjibaoun kulttuurikeskuksen alueella Nouméassa.',
-          lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Kanakit',
         },
       ],
@@ -64328,7 +64095,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: '461 porrasta pilviin',
           aika: '1851–1974',
-          tiedosto: 'Njegošev mauzolej.JPG',
           teksti: 'Petar II Petrović-Njegoš oli sekä Montenegron ruhtinaspiispa että maan tärkein '
             + 'runoilija, ja hänen toiveensa oli levätä Lovćenin vuoren huipulla. Kuoltuaan '
             + '1851 hänet haudattiin sinne pieneen kappeliin. Ensimmäisessä maailmansodassa '
@@ -64338,11 +64104,6 @@ export const MAA_KATEGORIAT = {
             + 'Meštrović sai valmiiksi uuden mausoleumin Jezerski vrhin huipulle, 1660 metrin '
             + 'korkeuteen. Huipulle kiipeää 461 kiviporrasta, ja mausoleumia pidetään '
             + 'maailman korkeimpana.',
-          lyhyt: 'Runoilijaruhtinas Njegošin mausoleumi Lovćenin huipulla on maailman '
-            + 'korkeimmalla sijaitseva.',
-          selite: 'Kroatialainen kuvanveistäjä Ivan Meštrović suunnitteli mausoleumin, joka '
-            + 'valmistui vasta vuosikymmenten viivytysten jälkeen 1974.',
-          lahde: 'Darko Bulatović, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Njegošin mausoleumi',
         },
         {

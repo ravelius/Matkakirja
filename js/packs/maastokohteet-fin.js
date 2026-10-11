@@ -279,6 +279,19 @@ export const MAASTOKOHTEET_FIN = [
       + 'näyttämö.',
     lahde: 'en-Wikipedia "Olavinlinna", johdanto-osa sekä osiot "History" ja "Warfare" '
       + '(tarkistettu 6.9.2026).',
+    // Nostokortin visa (PT/NUI 11.10.2026, omistaja 17.3x): vastaus on kortin tekstissä, +£25 kerran (natiivi).
+    visa: {
+      kysymys: 'Mitä varten Olavinlinnan paksut pyöreät tornit suunniteltiin?',
+      vaihtoehdot: [
+        'Kestämään tykkitulta',
+        'Tähystämään järvelle',
+        'Säilyttämään viljaa piirityksen varalta',
+        'Kantamaan linnan kelloja',
+      ],
+      oikea: 0,
+      fakta: 'Olavinlinna oli ensimmäinen ruotsalainen linna, jonka paksut pyöreät tornit '
+        + 'suunniteltiin kestämään tykkitulta.',
+    },
   },
   {
     id: 'turunlinna',

@@ -775,17 +775,4 @@ export const FOKUSVIRTA_KOBENHAVN = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Gallehusin
-   * kultasarvet, jotka varastettiin ja sulatettiin 1802. Merkintä
-   * aukeaa, kun aarre löytyy (js/fokusvirta.js fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Kultaseppä näytti minulle sarvien jäljennökset ja sanoi, että '
-      + 'varas sulatti alkuperäiset rahaksi 1802. Merkitsin luetteloon: tämä '
-      + 'aarre on olemassa enää muistina — ja siksi sitä ei voi enää '
-      + 'varastaa.',
-  },
 };

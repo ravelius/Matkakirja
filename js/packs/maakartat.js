@@ -1283,7 +1283,6 @@ export const MAAKARTAT = {
     // Kuva silmätarkistettu 480 ja 900 px:ssä 8.8.2026.
     nosto: {
       otsikko: 'Kivikasvot vartioivat Tonavan solaa',
-      tiedosto: 'Rock sculpture of Decebalus5.jpg',
       teksti: 'Romanian lounaisnurkassa Tonava kaivautuu Karpaattien '
         + 'ja Balkanvuorten väliin. Solaa sanotaan Rautaportiksi, ja '
         + 'se on 134 kilometriä pitkä. Ahtain kohta on Suuri Kazan: '
@@ -1296,11 +1295,6 @@ export const MAAKARTAT = {
         + 'uuden vartijan: kallioon hakattiin daakialaisten viimeisen '
         + 'kuninkaan Decebaluksen kasvot, jotka ovat yli neljäkymmentä '
         + 'metriä korkeat.',
-      lyhyt: 'Decebaluksen kasvot hakattuna kalliojyrkänteeseen Tonavan yläpuolella.',
-      selite: 'Decebaluksen kasvot hakattuna kalliojyrkänteeseen '
-        + 'Tonavan yläpuolella; leuan alla lukee latinaksi '
-        + '"DECEBALUS REX".',
-      lahde: 'Sadko, Wikimedia Commons (CC BY-SA 4.0)',
       wiki: 'Rautaportti',
     },
   },
@@ -4451,7 +4445,8 @@ export const KAUPUNKIKARTAT = {
       // Juhana II:n hovi istui Paço da Ribeirassa nykyisen Kauppatorin
       // paikalla; hetken oma sivu on lehdessä, tämä on sen karttapaikka.
       {
-        nimi: 'Kolumbus 1484', tyyppi: 'henkilo', lat: 38.7066, lon: -9.1352,
+        // Rannalle Kauppatorin itäpuolelle (oli 38.7066/-9.1352 Tejon päällä; Karttaseppä 11.10.2026).
+        nimi: 'Kolumbus 1484', tyyppi: 'henkilo', lat: 38.708, lon: -9.1345,
         nosto: 'hetki-kolumbus-portugali-1484',
       },
     ],
@@ -4459,7 +4454,7 @@ export const KAUPUNKIKARTAT = {
   barcelona: {
     polku: 'assets/kartat/barcelona-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
-    rajat: { pohjoinen: 41.4085, etela: 41.37, lansi: 2.147, ita: 2.1984 },
+    rajat: { pohjoinen: 41.4105, etela: 41.37, lansi: 2.147, ita: 2.1984 }, // pohjoisreuna +0,002 (Roviran aukio irti reunasta, Karttaseppä 11.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
@@ -4843,7 +4838,11 @@ export const KAUPUNKIKARTAT = {
   ateena: {
     polku: 'assets/kartat/ateena-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
+    // Värikartta ja 1,6-kertainen reunus kuten Pariisissa ja Tukholmassa
+    // (Karttaseppä 11.10.2026: aloituskaupungit samaan tyyliin).
+    varikartta: 'assets/kartat/ateena-varikartta.png',
     rajat: { pohjoinen: 37.9855, etela: 37.9625, lansi: 23.707, ita: 23.758 },
+    piirtoRajat: { pohjoinen: 37.9924, etela: 37.9556, lansi: 23.6917, ita: 23.7733 },
     /*
      * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
@@ -6396,7 +6395,8 @@ export const KAUPUNKIKARTAT = {
        */
       {
         nimi: 'Vädersolstavlan', tyyppi: 'taide', lat: 59.3258, lon: 18.0703,
-        nosto: 'syvennys-tukholma-aurinkotaulu', nimiPuoli: 'vasen',
+        // Ympyrä irti Kuninkaanlinnasta (15 px; Karttaseppä 11.10.2026).
+        nosto: 'syvennys-tukholma-aurinkotaulu', nimiPuoli: 'vasen', siirto: { x: -16, y: 12 },
       },
       {
         nimi: 'Norrström', lat: 59.3286, lon: 18.0713, nosto: 'syvennys-tukholma-lohi',
@@ -6420,7 +6420,8 @@ export const KAUPUNKIKARTAT = {
       },
       {
         nimi: 'Naamiaislaukaus', tyyppi: 'henkilo', lat: 59.3297, lon: 18.0706,
-        nosto: 'skandaali-naamiaisten-laukaus',
+        // Ympyrä irti Norrströmistä (14 px; Karttaseppä 11.10.2026).
+        nosto: 'skandaali-naamiaisten-laukaus', nimiPuoli: 'vasen', siirto: { x: -16, y: -12 },
       },
       {
         nimi: 'Kreuger', tyyppi: 'henkilo', lat: 59.3318, lon: 18.0696,
@@ -7266,7 +7267,7 @@ export const KAUPUNKIKARTAT = {
   pietari: {
     polku: 'assets/kartat/pietari-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
-    rajat: { pohjoinen: 59.9545, etela: 59.9215, lansi: 30.284, ita: 30.347 },
+    rajat: { pohjoinen: 59.9545, etela: 59.9195, lansi: 30.284, ita: 30.347 }, // eteläreuna −0,002 (Mariinski irti mittakaavajanasta, Karttaseppä 11.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linjaus kuin Tallinnassa):
      * esittely kertoo kohteet, ei kanavien ja katujen viivastoja.
@@ -7345,7 +7346,8 @@ export const KAUPUNKIKARTAT = {
       // Jänissaaren länsipää; Pietari-Paavalin linnoituksen piste on saman saaren
       // keskellä.
       {
-        nimi: 'Jänissaari 1703', tyyppi: 'henkilo', lat: 59.9515, lon: 30.312,
+        // Saaren länsiosaan (oli 59.9515/30.312 salmessa; Karttaseppä 11.10.2026).
+        nimi: 'Jänissaari 1703', tyyppi: 'henkilo', lat: 59.9505, lon: 30.3135,
         nosto: 'hetki-pietari-perustus-1703', nimiPuoli: 'vasen',
       },
       // Pietarin yliopisto, Vasilinsaari.
@@ -8332,7 +8334,7 @@ export const KAUPUNKIKARTAT = {
           + 'perintönä UNESCOn maailmanperintöön.',
         kuvat: [
           {
-            tiedosto: 'Ljubljana - Central Market.jpg',
+            tiedosto: "Tržni dan na Vodnikovem trgu 1927.jpg",
             lyhyt: 'Keskustorin kojut Plečnikin torihallin edessä ylhäältä nähtynä.',
             selite: 'Ljubljanan keskustori linnan suunnasta katsottuna: kojuja puiden alla ja Plečnikin pitkä torihalli joen rannassa.',
             lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 3.0)',
@@ -8799,7 +8801,7 @@ export const KAUPUNKIKARTAT = {
       + 'itärannalla. Keskiaikainen muuri purettiin 1800-luvulla, ja '
       + 'sen paikalle tehtiin puisto ja kanava, joka on entinen '
       + 'vallihauta. Puiston laidalla seisoo Vapaudenpatsas, ja '
-      + 'vanhassakaupungissa ovat Kolme veljestä, Riian tuomiokirkko, '
+      + 'vanhassakaupungissa ovat Kolme veljestä -talot, Riian tuomiokirkko, '
       + 'Pyhän Pietarin kirkko ja Mustapäiden talo. Eteläreunassa on '
       + 'keskustorin viisi hallia, jotka koottiin zeppelin-ilmalaivojen '
       + 'hallien teräsrungoista. Jugendkortteli, josta Riika on '
@@ -8817,7 +8819,7 @@ export const KAUPUNKIKARTAT = {
        *    Oikea artikkeli on `Mustapäiden talo (Riika)`.
        */
       { nimi: 'Vapaudenpatsas', lat: 56.9512, lon: 24.1132 },
-      { nimi: 'Kolme veljestä', lat: 56.9497, lon: 24.103 },
+      { nimi: 'Kolme veljestä -talot', lat: 56.9497, lon: 24.103 },
       { nimi: 'Riian tuomiokirkko', lat: 56.9494, lon: 24.1042, wiki: 'Riian tuomiokirkko' },
       { nimi: 'Pyhän Pietarin kirkko', lat: 56.9475, lon: 24.1094, wiki: 'Pyhän Pietarin kirkko (Riika)' },
       {
@@ -17577,6 +17579,2097 @@ export const KAUPUNKIKARTAT = {
         tyyppi: 'luonto',
         lat: 31.88514,
         lon: 35.21642,
+      },
+    ],
+  },
+  // AFRIKAN PÄÄKAUPUNKIPISTEET (Karttaseppä 11.10.2026, PT): kohteet OSM:stä ja Wikipediasta, tekstit myöhemmin.
+  abuja: {
+    polku: 'assets/kartat/abuja-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 9.0767,
+      etela: 9.0413,
+      lansi: 7.4833,
+      ita: 7.5249,
+    },
+    kohteet: [
+      {
+        nimi: 'Abujan kansallismoskeija',
+        wiki: 'Abuja National Mosque',
+        lat: 9.0602,
+        lon: 7.48964,
+      },
+      {
+        nimi: 'Eagle Square',
+        tyyppi: 'aukio',
+        wiki: 'Eagle Square, Abuja',
+        lat: 9.06095,
+        lon: 7.49982,
+      },
+      {
+        nimi: 'Millennium-puisto',
+        tyyppi: 'luonto',
+        wiki: 'Millennium Park (Abuja)',
+        lat: 9.07156,
+        lon: 7.49947,
+      },
+      {
+        nimi: 'State House (Aso Rock Villa)',
+        wiki: 'The State House (Aso Rock Villa)',
+        lat: 9.06227,
+        lon: 7.51853,
+      },
+      {
+        nimi: 'Kansalliskokouksen rakennus',
+        wiki: 'National Assembly Complex',
+        lat: 9.06912,
+        lon: 7.51013,
+      },
+      {
+        nimi: 'Kansallinen kristillinen keskus',
+        wiki: 'National Christian Centre',
+        lat: 9.0484,
+        lon: 7.49488,
+      },
+    ],
+  },
+  accra: {
+    polku: 'assets/kartat/accra-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 5.5582,
+      etela: 5.5268,
+      lansi: -0.2185,
+      ita: -0.1769,
+    },
+    kohteet: [
+      {
+        nimi: 'Mustan tähden aukio',
+        tyyppi: 'aukio',
+        wiki: 'Black Star Square',
+        lat: 5.54742,
+        lon: -0.19256,
+      },
+      {
+        nimi: 'Kwame Nkrumahin mausoleumi',
+        wiki: 'Kwame Nkrumah Mausoleum',
+        lat: 5.54524,
+        lon: -0.20339,
+      },
+      {
+        nimi: 'Osun linna',
+        wiki: 'Osu Castle',
+        lat: 5.54742,
+        lon: -0.18327,
+      },
+      {
+        nimi: 'Pyhän Kolminaisuuden katedraali',
+        wiki: 'Holy Trinity Cathedral (Accra)',
+        lat: 5.54139,
+        lon: -0.20594,
+      },
+      {
+        nimi: 'Makolan tori',
+        tyyppi: 'aukio',
+        wiki: 'Makola Market',
+        lat: 5.54807,
+        lon: -0.20693,
+      },
+      {
+        nimi: 'Jamestownin majakka',
+        wiki: 'Jamestown Lighthouse',
+        lat: 5.53309,
+        lon: -0.21213,
+      },
+      {
+        nimi: 'Ussherin linnake',
+        wiki: 'Ussher Fort',
+        lat: 5.5385,
+        lon: -0.2082,
+      },
+      {
+        nimi: 'Ghanan kansallisteatteri',
+        wiki: 'National Theatre of Ghana',
+        lat: 5.55367,
+        lon: -0.20059,
+      },
+    ],
+  },
+  alger: {
+    polku: 'assets/kartat/alger-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 36.7916,
+      etela: 36.7684,
+      lansi: 3.0512,
+      ita: 3.0679,
+    },
+    kohteet: [
+      {
+        nimi: 'Algerin pääposti',
+        wiki: "Grande Poste d'Alger",
+        lat: 36.77308,
+        lon: 3.05958,
+      },
+      {
+        nimi: 'Ketchaouan moskeija',
+        wiki: 'Ketchaoua Mosque',
+        lat: 36.7851,
+        lon: 3.06075,
+      },
+      {
+        nimi: 'Djamaa el-Djedid -moskeija',
+        wiki: 'Djamaa el Djedid',
+        lat: 36.78494,
+        lon: 3.06305,
+      },
+      {
+        nimi: 'Alin Bitchinin moskeija',
+        wiki: 'Ali Bitchin Mosque',
+        lat: 36.78702,
+        lon: 3.0619,
+      },
+      {
+        nimi: 'Dayn palatsi',
+        wiki: 'Palace of the Dey',
+        lat: 36.78455,
+        lon: 3.05511,
+      },
+      {
+        nimi: 'Raisin palatsi',
+        wiki: 'Palais des Rais',
+        lat: 36.78828,
+        lon: 3.06398,
+      },
+      {
+        nimi: 'Kansallisteatteri',
+        wiki: 'Algerian National Theater Mahieddine Bachtarzi',
+        lat: 36.78125,
+        lon: 3.06004,
+      },
+    ],
+  },
+  antananarivo: {
+    polku: 'assets/kartat/antananarivo-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: -18.9077,
+      etela: -18.9356,
+      lansi: 47.5187,
+      ita: 47.5363,
+    },
+    kohteet: [
+      {
+        nimi: 'Rova',
+        wiki: 'Rova of Antananarivo',
+        lat: -18.92365,
+        lon: 47.53202,
+      },
+      {
+        nimi: 'Andafiavaratran palatsi',
+        wiki: 'Andafiavaratra Palace',
+        lat: -18.92082,
+        lon: 47.533,
+      },
+      {
+        nimi: 'Siitetyn Neitsyt Marian katedraali',
+        wiki: 'Immaculate Conception Cathedral, Antananarivo',
+        lat: -18.9167,
+        lon: 47.5302,
+      },
+      {
+        nimi: 'Pyhän Laurentiuksen katedraali',
+        wiki: 'St. Lawrence Anglican Cathedral Ambohimanoro',
+        lat: -18.9178,
+        lon: 47.5325,
+      },
+      {
+        nimi: 'Anosy-järvi',
+        tyyppi: 'luonto',
+        wiki: 'Lake Anosy',
+        lat: -18.91746,
+        lon: 47.52199,
+      },
+      {
+        nimi: 'Tsimbazazan kasvi- ja eläintarha',
+        tyyppi: 'luonto',
+        wiki: 'Botanical and Zoological Garden of Tsimbazaza',
+        lat: -18.93,
+        lon: 47.52743,
+      },
+      {
+        nimi: 'Ambohitsorohitran palatsi',
+        wiki: 'Ambohitsorohitra Palace',
+        lat: -18.9117,
+        lon: 47.5245,
+      },
+      {
+        nimi: 'Mahamasinan stadion',
+        wiki: 'Mahamasina Municipal Stadium',
+        lat: -18.91936,
+        lon: 47.52569,
+      },
+    ],
+  },
+  asmara: {
+    polku: 'assets/kartat/asmara-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 15.3441,
+      etela: 15.3242,
+      lansi: 38.9219,
+      ita: 38.9485,
+    },
+    kohteet: [
+      {
+        nimi: 'Fiat Tagliero -huoltoasema',
+        wiki: 'Fiat Tagliero Building',
+        lat: 15.32844,
+        lon: 38.92597,
+      },
+      {
+        nimi: 'Eritrean kansallismuseo',
+        wiki: 'National Museum of Eritrea',
+        lat: 15.33349,
+        lon: 38.9272,
+      },
+      {
+        nimi: 'Asmaran oopperatalo',
+        wiki: 'Asmara Theatre',
+        lat: 15.33582,
+        lon: 38.93522,
+      },
+      {
+        nimi: 'Ruusukransin Neitsyt Marian kirkko',
+        wiki: 'Church of Our Lady of the Rosary, Asmara',
+        lat: 15.33674,
+        lon: 38.93791,
+      },
+      {
+        nimi: 'Kidane Mehret -katedraali',
+        wiki: 'Kidane Mehret Cathedral',
+        lat: 15.34095,
+        lon: 38.93682,
+      },
+      {
+        nimi: 'Cinema Impero',
+        wiki: 'Cinema Impero',
+        lat: 15.33667,
+        lon: 38.94028,
+      },
+      {
+        nimi: 'Asmaran suurmoskeija',
+        wiki: 'Great Mosque of Asmara',
+        lat: 15.33889,
+        lon: 38.94167,
+      },
+      {
+        nimi: 'Enda Mariam -katedraali',
+        wiki: 'Enda Mariam Cathedral, Asmara',
+        lat: 15.33985,
+        lon: 38.94443,
+      },
+    ],
+  },
+  bamako: {
+    polku: 'assets/kartat/bamako-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 12.668,
+      etela: 12.6125,
+      lansi: -8.0154,
+      ita: -7.9832,
+    },
+    kohteet: [
+      {
+        nimi: 'Bamakon suurmoskeija',
+        wiki: 'Grand Mosque of Bamako',
+        lat: 12.64689,
+        lon: -7.99318,
+      },
+      {
+        nimi: 'Pyhän sydämen katedraali',
+        wiki: 'Sacred Heart Cathedral, Bamako',
+        lat: 12.64369,
+        lon: -7.99934,
+      },
+      {
+        nimi: 'Marttyyrien silta',
+        wiki: 'Martyrs Bridge (Bamako)',
+        lat: 12.63028,
+        lon: -7.99192,
+      },
+      {
+        nimi: 'Kuningas Fahdin silta',
+        wiki: 'King Fahd Bridge (Bamako)',
+        lat: 12.62361,
+        lon: -8.00478,
+      },
+      {
+        nimi: 'Malin kansallismuseo',
+        wiki: 'National Museum of Mali',
+        lat: 12.65863,
+        lon: -7.9993,
+      },
+      {
+        nimi: 'Koulouban palatsi',
+        wiki: 'Koulouba Palace',
+        lat: 12.66,
+        lon: -8.00667,
+      },
+    ],
+  },
+  bangui: {
+    polku: 'assets/kartat/bangui-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 4.4053,
+      etela: 4.3538,
+      lansi: 18.5527,
+      ita: 18.5826,
+    },
+    kohteet: [
+      {
+        nimi: 'Notre-Damen katedraali',
+        wiki: 'Cathédrale Notre-Dame (Bangui)',
+        lat: 4.37,
+        lon: 18.57806,
+      },
+      {
+        nimi: 'Boganda-kansallismuseo',
+        wiki: 'Boganda National Museum',
+        lat: 4.36411,
+        lon: 18.57698,
+      },
+      {
+        nimi: 'Barthélemy Boganda -stadion',
+        wiki: 'Barthélemy Boganda Stadium',
+        lat: 4.37442,
+        lon: 18.56439,
+      },
+      {
+        nimi: "Notre-Dame d'Afrique -kirkko",
+        wiki: "Notre Dame D'Afrique, Bangui",
+        lat: 4.39786,
+        lon: 18.55727,
+      },
+    ],
+  },
+  banjul: {
+    polku: 'assets/kartat/banjul-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 13.4641,
+      etela: 13.4469,
+      lansi: -16.5888,
+      ita: -16.5683,
+    },
+    kohteet: [
+      {
+        nimi: 'Arch 22',
+        wiki: 'Arch 22',
+        lat: 13.46032,
+        lon: -16.58244,
+      },
+      {
+        nimi: 'Albertin tori',
+        tyyppi: 'aukio',
+        wiki: 'Albert Market',
+        lat: 13.45389,
+        lon: -16.57152,
+      },
+      {
+        nimi: 'Gambian kansallismuseo',
+        wiki: 'Gambian National Museum',
+        lat: 13.45598,
+        lon: -16.57578,
+      },
+      {
+        nimi: 'Neitsyt Marian taivaaseenoton katedraali',
+        wiki: 'Our Lady of the Assumption Cathedral, Banjul',
+        lat: 13.45104,
+        lon: -16.57441,
+      },
+      {
+        nimi: 'Gambian kansalliskokous',
+        wiki: 'National Assembly of the Gambia',
+        lat: 13.46099,
+        lon: -16.5856,
+      },
+    ],
+  },
+  bissau: {
+    polku: 'assets/kartat/bissau-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 11.8671,
+      etela: 11.8533,
+      lansi: -15.5893,
+      ita: -15.5754,
+    },
+    kohteet: [
+      {
+        nimi: 'Bissaun katedraali',
+        wiki: 'Bissau Cathedral',
+        lat: 11.86003,
+        lon: -15.58115,
+      },
+      {
+        nimi: 'São José da Amuran linnake',
+        wiki: 'Fortaleza de São José da Amura',
+        lat: 11.86028,
+        lon: -15.57861,
+      },
+      {
+        nimi: 'Presidentinpalatsi',
+        wiki: 'Presidential Palace, Bissau',
+        lat: 11.864,
+        lon: -15.58491,
+      },
+      {
+        nimi: 'Pidjiguitin satama ja muistomerkki',
+        wiki: 'Pidjiguiti massacre',
+        lat: 11.85722,
+        lon: -15.57974,
+      },
+      {
+        nimi: 'Lino Correian stadion',
+        wiki: 'Estádio Lino Correia',
+        lat: 11.86041,
+        lon: -15.58608,
+      },
+    ],
+  },
+  brazzaville: {
+    polku: 'assets/kartat/brazzaville-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: -4.2548,
+      etela: -4.2892,
+      lansi: 15.2395,
+      ita: 15.2981,
+    },
+    kohteet: [
+      {
+        nimi: 'Sainte-Anne-du-Congon basilika',
+        wiki: 'Basilica of Sainte-Anne-du-Congo in Brazzaville',
+        lat: -4.2685,
+        lon: 15.2844,
+      },
+      {
+        nimi: 'Sacré-Cœurin katedraali',
+        wiki: 'Sacred Heart Cathedral, Brazzaville',
+        lat: -4.27034,
+        lon: 15.27399,
+      },
+      {
+        nimi: 'Nabemba-torni',
+        wiki: 'Nabemba Tower',
+        lat: -4.27212,
+        lon: 15.2891,
+      },
+      {
+        nimi: 'Alphonse Massemba-Débat -stadion',
+        wiki: 'Stade Alphonse Massemba-Débat',
+        lat: -4.27353,
+        lon: 15.24842,
+      },
+    ],
+  },
+  conakry: {
+    polku: 'assets/kartat/conakry-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 9.5394,
+      etela: 9.496,
+      lansi: -13.7249,
+      ita: -13.6768,
+    },
+    kohteet: [
+      {
+        nimi: 'Presidentinpalatsi',
+        wiki: 'Presidential Palace, Conakry',
+        lat: 9.51071,
+        lon: -13.71757,
+      },
+      {
+        nimi: 'Sainte-Marien katedraali',
+        wiki: "St. Mary's Cathedral, Conakry",
+        lat: 9.51017,
+        lon: -13.71545,
+      },
+      {
+        nimi: 'Sandervalian kansallismuseo',
+        wiki: 'Sandervalia National Museum',
+        lat: 9.5047,
+        lon: -13.709,
+      },
+      {
+        nimi: 'Marché du Niger',
+        tyyppi: 'aukio',
+        wiki: 'Marché du Niger',
+        lat: 9.51061,
+        lon: -13.70802,
+      },
+      {
+        nimi: 'Conakryn suurmoskeija',
+        wiki: 'Grand Mosque of Conakry',
+        lat: 9.53318,
+        lon: -13.68413,
+      },
+      {
+        nimi: '22. marraskuuta 1970 -muistomerkki',
+        wiki: 'Monument du 22 Novembre 1970, Conakry',
+        lat: 9.52147,
+        lon: -13.69052,
+      },
+      {
+        nimi: 'Conakryn kasvitieteellinen puutarha',
+        tyyppi: 'luonto',
+        wiki: 'Conakry Botanical Garden',
+        lat: 9.531,
+        lon: -13.686,
+      },
+    ],
+  },
+  djibouti: {
+    polku: 'assets/kartat/djibouti-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 11.6084,
+      etela: 11.588,
+      lansi: 43.136,
+      ita: 43.1545,
+    },
+    kohteet: [
+      {
+        nimi: 'Hamoudin moskeija',
+        wiki: 'Hamoudi Mosque',
+        lat: 11.59231,
+        lon: 43.14612,
+      },
+      {
+        nimi: 'Abdülhamid II:n moskeija',
+        wiki: 'Abdülhamid II Mosque',
+        lat: 11.59315,
+        lon: 43.14191,
+      },
+      {
+        nimi: 'Kansanpalatsi',
+        wiki: "People's Palace, Djibouti City",
+        lat: 11.5995,
+        lon: 43.1473,
+      },
+      {
+        nimi: 'Notre-Dame du Bon-Pasteur -katedraali',
+        wiki: 'Diocese of Djibouti',
+        lat: 11.60009,
+        lon: 43.1513,
+      },
+      {
+        nimi: 'Djiboutin satama',
+        wiki: 'Djiboutin satama',
+        lat: 11.6053,
+        lon: 43.1392,
+      },
+    ],
+  },
+  freetown: {
+    polku: 'assets/kartat/freetown-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 8.502,
+      etela: 8.4658,
+      lansi: -13.2585,
+      ita: -13.1963,
+    },
+    kohteet: [
+      {
+        nimi: 'Pyhän Yrjön katedraali',
+        wiki: "St. George's Cathedral, Freetown",
+        lat: 8.49,
+        lon: -13.2356,
+      },
+      {
+        nimi: 'Freetownin keskusmoskeija',
+        wiki: 'Freetown Central Mosque',
+        lat: 8.49194,
+        lon: -13.23278,
+      },
+      {
+        nimi: 'Sierra Leonen rautatiemuseo',
+        wiki: 'Sierra Leone National Railway Museum',
+        lat: 8.48944,
+        lon: -13.20583,
+      },
+      {
+        nimi: 'Fourah Bay College',
+        wiki: 'Fourah Bay College',
+        lat: 8.4779,
+        lon: -13.221,
+      },
+      {
+        nimi: 'Kansallisstadion',
+        wiki: 'National Stadium (Sierra Leone)',
+        lat: 8.47957,
+        lon: -13.24901,
+      },
+    ],
+  },
+  gaborone: {
+    polku: 'assets/kartat/gaborone-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: -24.6533,
+      etela: -24.6709,
+      lansi: 25.9056,
+      ita: 25.9383,
+    },
+    kohteet: [
+      {
+        nimi: 'Botswanan kansallismuseo ja taidegalleria',
+        wiki: 'Botswana National Museum',
+        lat: -24.6565,
+        lon: 25.9195,
+      },
+      {
+        nimi: 'Kansalliskokouksen rakennus',
+        wiki: 'National Assembly of Botswana',
+        lat: -24.65861,
+        lon: 25.91056,
+      },
+      {
+        nimi: 'Kansallisstadion',
+        wiki: 'Botswana National Stadium',
+        lat: -24.65667,
+        lon: 25.93278,
+      },
+      {
+        nimi: 'Botswanan yliopisto',
+        wiki: 'University of Botswana',
+        lat: -24.66667,
+        lon: 25.93333,
+      },
+    ],
+  },
+  harare: {
+    polku: 'assets/kartat/harare-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: -17.7949,
+      etela: -17.8419,
+      lansi: 31.0321,
+      ita: 31.06,
+    },
+    kohteet: [
+      {
+        nimi: 'Pyhän Marian ja Kaikkien Pyhien katedraali',
+        wiki: 'Cathedral of St Mary and All Saints, Harare',
+        lat: -17.828,
+        lon: 31.0512,
+      },
+      {
+        nimi: 'Pyhän Sydämen katedraali',
+        wiki: 'Sacred Heart Cathedral, Harare',
+        lat: -17.821,
+        lon: 31.0532,
+      },
+      {
+        nimi: 'Zimbabwen kansallisgalleria',
+        wiki: 'National Gallery of Zimbabwe',
+        lat: -17.82528,
+        lon: 31.04889,
+      },
+      {
+        nimi: 'Ihmistieteiden museo',
+        wiki: 'Zimbabwe Museum of Human Sciences',
+        lat: -17.8325,
+        lon: 31.03889,
+      },
+      {
+        nimi: 'Kansallinen kasvitieteellinen puutarha',
+        tyyppi: 'luonto',
+        wiki: 'National Botanic Garden (Zimbabwe)',
+        lat: -17.80167,
+        lon: 31.05083,
+      },
+      {
+        nimi: 'Harare Sports Club',
+        wiki: 'Harare Sports Club',
+        lat: -17.81417,
+        lon: 31.05056,
+      },
+    ],
+  },
+  juba: {
+    polku: 'assets/kartat/juba-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 4.8506,
+      etela: 4.8161,
+      lansi: 31.5779,
+      ita: 31.6227,
+    },
+    kohteet: [
+      {
+        nimi: 'Nyakuron kulttuurikeskus',
+        wiki: 'Nyakuron Cultural Centre',
+        lat: 4.84562,
+        lon: 31.58477,
+      },
+      {
+        nimi: 'Pyhän Teresan katedraali',
+        wiki: 'St. Theresa Cathedral, Juba',
+        lat: 4.82734,
+        lon: 31.60032,
+      },
+      {
+        nimi: 'Juban Niilin silta',
+        wiki: 'Juba Nile Bridge',
+        lat: 4.823,
+        lon: 31.6086,
+      },
+      {
+        nimi: 'Juban stadion',
+        wiki: 'Juba Stadium',
+        lat: 4.84307,
+        lon: 31.61584,
+      },
+    ],
+  },
+  kampala: {
+    polku: 'assets/kartat/kampala-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 0.3432,
+      etela: 0.2923,
+      lansi: 32.5439,
+      ita: 32.5973,
+    },
+    kohteet: [
+      {
+        nimi: 'Ugandan kansallismoskeija',
+        wiki: 'Uganda National Mosque',
+        lat: 0.3156,
+        lon: 32.56856,
+      },
+      {
+        nimi: 'Namirembe-katedraali',
+        wiki: 'Namirembe Cathedral',
+        lat: 0.31489,
+        lon: 32.55944,
+      },
+      {
+        nimi: 'Rubaga-katedraali',
+        wiki: 'Lubaga Cathedral',
+        lat: 0.3025,
+        lon: 32.55208,
+      },
+      {
+        nimi: 'Kasubin kuninkaalliset haudat',
+        wiki: 'Kasubi Tombs',
+        lat: 0.32931,
+        lon: 32.55298,
+      },
+      {
+        nimi: 'Ugandan museo',
+        wiki: 'Uganda Museum',
+        lat: 0.33586,
+        lon: 32.58258,
+      },
+      {
+        nimi: 'Ugandan kansallinen kulttuurikeskus',
+        wiki: 'Uganda National Cultural Centre',
+        lat: 0.31577,
+        lon: 32.58914,
+      },
+      {
+        nimi: 'Nakasero-tori',
+        tyyppi: 'aukio',
+        wiki: 'Nakasero Market',
+        lat: 0.31201,
+        lon: 32.57998,
+      },
+    ],
+  },
+  khartum: {
+    polku: 'assets/kartat/khartum-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 15.6188,
+      etela: 15.5917,
+      lansi: 32.5011,
+      ita: 32.5488,
+    },
+    kohteet: [
+      {
+        nimi: 'Sudanin kansallismuseo',
+        wiki: 'Sudanin kansallismuseo',
+        lat: 15.60608,
+        lon: 32.50835,
+      },
+      {
+        nimi: 'Kansallinen kasvitieteellinen puutarha',
+        tyyppi: 'luonto',
+        wiki: 'Sudan National Botanical Garden',
+        lat: 15.6017,
+        lon: 32.5091,
+      },
+      {
+        nimi: 'Souq al Arabi',
+        tyyppi: 'aukio',
+        wiki: 'Souq al Arabi',
+        lat: 15.601,
+        lon: 32.525,
+      },
+      {
+        nimi: 'Tasavaltalaispalatsi',
+        wiki: 'Republican Palace, Khartoum',
+        lat: 15.60917,
+        lon: 32.52778,
+      },
+      {
+        nimi: 'Pyhän Matteuksen katedraali',
+        wiki: "St. Matthew's Cathedral, Khartoum",
+        lat: 15.6105,
+        lon: 32.5339,
+      },
+      {
+        nimi: 'Khartumin yliopisto',
+        wiki: 'University of Khartoum',
+        lat: 15.61095,
+        lon: 32.54153,
+      },
+    ],
+  },
+  kigali: {
+    polku: 'assets/kartat/kigali-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: -1.9261,
+      etela: -1.9619,
+      lansi: 30.0443,
+      ita: 30.1028,
+    },
+    kohteet: [
+      {
+        nimi: 'Kandtin talo -museo',
+        wiki: 'Kandt House Museum',
+        lat: -1.94663,
+        lon: 30.05322,
+      },
+      {
+        nimi: 'Kigalin kansanmurhan muistokeskus',
+        wiki: 'Kigali Genocide Memorial',
+        lat: -1.93127,
+        lon: 30.06017,
+      },
+      {
+        nimi: 'Sainte-Famillen kirkko',
+        wiki: 'Sainte-Famille Church',
+        lat: -1.94459,
+        lon: 30.06363,
+      },
+      {
+        nimi: 'Kigalin kongressikeskus',
+        wiki: 'Kigali Convention Centre',
+        lat: -1.95472,
+        lon: 30.09389,
+      },
+      {
+        nimi: 'Inema-taidekeskus',
+        wiki: 'Inema Arts Center',
+        lat: -1.94427,
+        lon: 30.09083,
+      },
+    ],
+  },
+  kinshasa: {
+    polku: 'assets/kartat/kinshasa-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: -4.2933,
+      etela: -4.3456,
+      lansi: 15.2724,
+      ita: 15.3229,
+    },
+    kohteet: [
+      {
+        nimi: 'Kinshasan keskustori',
+        tyyppi: 'aukio',
+        wiki: 'Kinshasa Central Market',
+        lat: -4.31028,
+        lon: 15.3125,
+      },
+      {
+        nimi: 'Sainte-Annen kirkko',
+        wiki: 'Paroisse de Sainte-Anne',
+        lat: -4.30087,
+        lon: 15.3152,
+      },
+      {
+        nimi: 'Kansakunnan palatsi',
+        wiki: 'Palais de la Nation (Kinshasa)',
+        lat: -4.3025,
+        lon: 15.2801,
+      },
+      {
+        nimi: 'Kongon Neitsyt Marian katedraali',
+        wiki: 'Our Lady of the Congo Cathedral',
+        lat: -4.32383,
+        lon: 15.29444,
+      },
+      {
+        nimi: 'Kansanpalatsi',
+        wiki: 'Palais du Peuple (Kinshasa)',
+        lat: -4.3322,
+        lon: 15.3031,
+      },
+      {
+        nimi: 'Kongon demokraattisen tasavallan kansallismuseo',
+        wiki: 'National Museum of the Democratic Republic of the Congo',
+        lat: -4.3351,
+        lon: 15.2994,
+      },
+    ],
+  },
+  libreville: {
+    polku: 'assets/kartat/libreville-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 0.402,
+      etela: 0.3879,
+      lansi: 9.4389,
+      ita: 9.4559,
+    },
+    kohteet: [
+      {
+        nimi: 'Palais du bord de mer',
+        wiki: 'Palais du bord de mer',
+        lat: 0.3924,
+        lon: 9.442,
+      },
+      {
+        nimi: "Mont-Bouët'n tori",
+        tyyppi: 'aukio',
+        wiki: 'Mont-Bouët',
+        lat: 0.3989,
+        lon: 9.4528,
+      },
+      {
+        nimi: 'Omar Bongon stadion',
+        wiki: 'Stade Omar Bongo',
+        lat: 0.39181,
+        lon: 9.45217,
+      },
+      {
+        nimi: 'Librevillen urheiluhalli',
+        wiki: 'Palais des Sports de Libreville',
+        lat: 0.39472,
+        lon: 9.45278,
+      },
+    ],
+  },
+  lilongwe: {
+    polku: 'assets/kartat/lilongwe-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: -13.9359,
+      etela: -13.9907,
+      lansi: 33.7452,
+      ita: 33.7971,
+    },
+    kohteet: [
+      {
+        nimi: 'Kamuzu Bandan mausoleumi',
+        wiki: 'Kamuzu Mausoleum',
+        lat: -13.95444,
+        lon: 33.78917,
+      },
+      {
+        nimi: 'Kansalliskokouksen rakennus',
+        wiki: 'National Assembly (Malawi)',
+        lat: -13.9522,
+        lon: 33.7878,
+      },
+      {
+        nimi: 'Lilongwen luonnonsuojelualue',
+        tyyppi: 'luonto',
+        wiki: 'Lilongwe Wildlife Centre',
+        lat: -13.97221,
+        lon: 33.78386,
+      },
+      {
+        nimi: 'Maulan katedraali',
+        wiki: 'Maula Cathedral',
+        lat: -13.97969,
+        lon: 33.76244,
+      },
+      {
+        nimi: 'Bingu-kansallisstadion',
+        wiki: 'Bingu National Stadium',
+        lat: -13.9438,
+        lon: 33.7531,
+      },
+    ],
+  },
+  lome: {
+    polku: 'assets/kartat/lome-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 6.1338,
+      etela: 6.1162,
+      lansi: 1.2089,
+      ita: 1.2306,
+    },
+    kohteet: [
+      {
+        nimi: 'Itsenäisyysmonumentti',
+        wiki: 'Independence Monument (Togo)',
+        lat: 6.12996,
+        lon: 1.21601,
+      },
+      {
+        nimi: 'Togon kansallismuseo',
+        wiki: 'Togon kansallismuseo',
+        lat: 6.13067,
+        lon: 1.21797,
+      },
+      {
+        nimi: 'Kuvernöörien palatsi',
+        wiki: 'Palace of the Governors, Togo',
+        lat: 6.12036,
+        lon: 1.21222,
+      },
+      {
+        nimi: 'Lomén suuri tori',
+        tyyppi: 'aukio',
+        wiki: 'Lomé Grand Market',
+        lat: 6.12603,
+        lon: 1.2273,
+      },
+    ],
+  },
+  luanda: {
+    polku: 'assets/kartat/luanda-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: -8.8049,
+      etela: -8.8284,
+      lansi: 13.2153,
+      ita: 13.2392,
+    },
+    kohteet: [
+      {
+        nimi: 'São Miguelin linnoitus',
+        wiki: 'Fortress of São Miguel',
+        lat: -8.8083,
+        lon: 13.2234,
+      },
+      {
+        nimi: 'Luandan tuomiokirkko',
+        wiki: 'Church of Our Lady of Remedies',
+        lat: -8.81361,
+        lon: 13.22972,
+      },
+      {
+        nimi: 'Rautapalatsi',
+        wiki: 'Palácio de Ferro',
+        lat: -8.81201,
+        lon: 13.23555,
+      },
+      {
+        nimi: 'Angolan kansalliskokous',
+        wiki: 'Angolan kansalliskokous',
+        lat: -8.82278,
+        lon: 13.22431,
+      },
+      {
+        nimi: 'Agostinho Neton mausoleumi',
+        wiki: 'Mausoleum of António Agostinho Neto',
+        lat: -8.82365,
+        lon: 13.21896,
+      },
+    ],
+  },
+  lusaka: {
+    polku: 'assets/kartat/lusaka-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: -15.4072,
+      etela: -15.4346,
+      lansi: 28.2743,
+      ita: 28.3226,
+    },
+    kohteet: [
+      {
+        nimi: 'Cairo Road',
+        tyyppi: 'aukio',
+        wiki: 'Cairo Road',
+        lat: -15.41661,
+        lon: 28.28168,
+      },
+      {
+        nimi: 'Lusakan kansallismuseo',
+        wiki: 'Lusaka National Museum',
+        lat: -15.422,
+        lon: 28.2913,
+      },
+      {
+        nimi: 'FINDECO House',
+        wiki: 'FINDECO House',
+        lat: -15.4243,
+        lon: 28.2838,
+      },
+      {
+        nimi: 'Pyhän Ristin katedraali',
+        wiki: 'Cathedral of the Holy Cross, Lusaka',
+        lat: -15.4188,
+        lon: 28.3037,
+      },
+      {
+        nimi: 'Embassy Parkin presidenttien hautausmaa',
+        tyyppi: 'luonto',
+        wiki: 'Embassy Park Presidential Burial Site',
+        lat: -15.42174,
+        lon: 28.30924,
+      },
+      {
+        nimi: 'Sambian kansallisarkisto',
+        wiki: 'National Archives of Zambia',
+        lat: -15.4264,
+        lon: 28.31098,
+      },
+      {
+        nimi: 'Lapsi Jeesuksen katedraali',
+        wiki: 'Child Jesus Cathedral, Lusaka',
+        lat: -15.41391,
+        lon: 28.3152,
+      },
+    ],
+  },
+  maputo: {
+    polku: 'assets/kartat/maputo-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: -25.9627,
+      etela: -25.988,
+      lansi: 32.5498,
+      ita: 32.5975,
+    },
+    kohteet: [
+      {
+        nimi: 'Maputon katedraali',
+        wiki: 'Cathedral of Our Lady of the Immaculate Conception, Maputo',
+        lat: -25.96892,
+        lon: 32.57445,
+      },
+      {
+        nimi: 'Casa de Ferro',
+        wiki: 'Casa de Ferro',
+        lat: -25.97042,
+        lon: 32.57288,
+      },
+      {
+        nimi: 'Maputon rautatieasema',
+        wiki: 'Maputo Central Railway Station',
+        lat: -25.9711,
+        lon: 32.5645,
+      },
+      {
+        nimi: 'Nossa Senhora da Conceição -linnake',
+        wiki: 'Fort Nossa Senhora da Conceição de Lourenço Marques',
+        lat: -25.97502,
+        lon: 32.57073,
+      },
+      {
+        nimi: 'Maputon pääposti',
+        wiki: 'Maputo Post Office Building',
+        lat: -25.97287,
+        lon: 32.57219,
+      },
+      {
+        nimi: 'Maputo–Katemben silta',
+        wiki: 'Maputo–Katembe bridge',
+        lat: -25.97294,
+        lon: 32.55707,
+      },
+      {
+        nimi: 'Ponta Vermelhan palatsi',
+        wiki: 'Palácio da Ponta Vermelha',
+        lat: -25.98039,
+        lon: 32.59023,
+      },
+    ],
+  },
+  maseru: {
+    polku: 'assets/kartat/maseru-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: -29.3079,
+      etela: -29.3271,
+      lansi: 27.4734,
+      ita: 27.5064,
+    },
+    kohteet: [
+      {
+        nimi: 'Our Lady of Victories -katedraali',
+        wiki: 'Our Lady of Victories Cathedral, Maseru',
+        lat: -29.31688,
+        lon: 27.49487,
+      },
+      {
+        nimi: 'Basotho Hat Shop',
+        wiki: 'Basotho Hat Shop',
+        lat: -29.31301,
+        lon: 27.47842,
+      },
+      {
+        nimi: 'Lesothon parlamenttirakennus',
+        wiki: 'Parliament of Lesotho',
+        lat: -29.32284,
+        lon: 27.49258,
+      },
+      {
+        nimi: 'Setsoton stadion',
+        wiki: 'Setsoto Stadium',
+        lat: -29.31104,
+        lon: 27.50137,
+      },
+      {
+        nimi: 'Lesothon valtionkirjasto ja -arkisto',
+        wiki: 'Lesothon valtionkirjasto ja -arkisto',
+        lat: -29.3147,
+        lon: 27.48506,
+      },
+    ],
+  },
+  mogadishu: {
+    polku: 'assets/kartat/mogadishu-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 2.0439,
+      etela: 2.0283,
+      lansi: 45.3271,
+      ita: 45.3486,
+    },
+    kohteet: [
+      {
+        nimi: 'Mogadishun tuomiokirkko',
+        wiki: 'Mogadishun tuomiokirkko',
+        lat: 2.03578,
+        lon: 45.34161,
+      },
+      {
+        nimi: 'Daljirka Dahsoon (Tuntemattoman sotilaan hauta)',
+        wiki: 'Daljirka Dahsoon',
+        lat: 2.03916,
+        lon: 45.342,
+      },
+      {
+        nimi: 'Somalian kansallisteatteri',
+        wiki: 'National Theatre of Somalia',
+        lat: 2.03748,
+        lon: 45.33747,
+      },
+      {
+        nimi: 'Islamilaisen solidaarisuuden moskeija',
+        wiki: 'Mosque of Islamic Solidarity',
+        lat: 2.03576,
+        lon: 45.33042,
+      },
+      {
+        nimi: 'Villa Somalia',
+        wiki: 'Villa Somalia',
+        lat: 2.0408,
+        lon: 45.3353,
+      },
+      {
+        nimi: 'Mogadishun majakka',
+        wiki: 'Mogadishu Lighthouse',
+        lat: 2.03231,
+        lon: 45.34531,
+      },
+    ],
+  },
+  monrovia: {
+    polku: 'assets/kartat/monrovia-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 6.3232,
+      etela: 6.2945,
+      lansi: -10.8168,
+      ita: -10.795,
+    },
+    kohteet: [
+      {
+        nimi: 'Providencen baptistikirkko',
+        wiki: 'Providence Baptist Church',
+        lat: 6.31711,
+        lon: -10.80426,
+      },
+      {
+        nimi: 'Pyhän Sydämen katedraali',
+        wiki: 'Sacred Heart Cathedral, Monrovia',
+        lat: 6.31906,
+        lon: -10.81022,
+      },
+      {
+        nimi: 'Vapaamuurarien temppeli',
+        wiki: 'Masonic Temple, Monrovia',
+        lat: 6.31814,
+        lon: -10.81349,
+      },
+      {
+        nimi: 'Palm Groven hautausmaa',
+        tyyppi: 'luonto',
+        wiki: 'Palm Grove Cemetery',
+        lat: 6.31176,
+        lon: -10.80616,
+      },
+      {
+        nimi: 'Presidentinlinna (Executive Mansion)',
+        wiki: 'Executive Mansion (Liberia)',
+        lat: 6.30023,
+        lon: -10.79832,
+      },
+    ],
+  },
+  ndjamena: {
+    polku: 'assets/kartat/ndjamena-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 12.1265,
+      etela: 12.0935,
+      lansi: 15.0296,
+      ita: 15.0597,
+    },
+    kohteet: [
+      {
+        nimi: "N'Djamenan suurmoskeija",
+        wiki: "N'Djamena Grand Mosque",
+        lat: 12.11042,
+        lon: 15.05083,
+      },
+      {
+        nimi: 'Rauhan Neitsyt Marian katedraali',
+        wiki: "Our Lady of Peace Cathedral, N'Djamena",
+        lat: 12.1114,
+        lon: 15.0373,
+      },
+      {
+        nimi: 'Charles de Gaullen katu',
+        tyyppi: 'aukio',
+        wiki: 'Avenue Charles de Gaulle',
+        lat: 12.12171,
+        lon: 15.03422,
+      },
+      {
+        nimi: "N'Djamenan yliopisto",
+        wiki: "University of N'Djamena",
+        lat: 12.1047,
+        lon: 15.0444,
+      },
+      {
+        nimi: 'Idriss Mahamat Ouyan stadion',
+        wiki: 'Stade Omnisports Idriss Mahamat Ouya',
+        lat: 12.10008,
+        lon: 15.05514,
+      },
+    ],
+  },
+  niamey: {
+    polku: 'assets/kartat/niamey-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 13.5322,
+      etela: 13.4978,
+      lansi: 2.0975,
+      ita: 2.1391,
+    },
+    kohteet: [
+      {
+        nimi: 'Boubou Haman kansallismuseo',
+        wiki: 'Musée national Boubou-Hama',
+        lat: 13.51122,
+        lon: 2.10704,
+      },
+      {
+        nimi: 'Neitsyt Marian katedraali',
+        wiki: 'Our Lady of Perpetual Help Cathedral, Niamey',
+        lat: 13.5178,
+        lon: 2.1106,
+      },
+      {
+        nimi: 'Niameyn suuri tori',
+        tyyppi: 'aukio',
+        wiki: 'Niamey Grand Market',
+        lat: 13.51639,
+        lon: 2.11694,
+      },
+      {
+        nimi: 'Kennedyn silta',
+        wiki: 'Kennedy Bridge (Niamey)',
+        lat: 13.50472,
+        lon: 2.10389,
+      },
+      {
+        nimi: 'Niameyn suurmoskeija',
+        wiki: 'Grand Mosque of Niamey',
+        lat: 13.52222,
+        lon: 2.13278,
+      },
+      {
+        nimi: 'Seyni Kountchén stadion',
+        wiki: 'Seyni Kountche Stadium',
+        lat: 13.52725,
+        lon: 2.10897,
+      },
+    ],
+  },
+  nouakchott: {
+    polku: 'assets/kartat/nouakchott-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 18.1109,
+      etela: 18.0681,
+      lansi: -15.9892,
+      ita: -15.9637,
+    },
+    kohteet: [
+      {
+        nimi: 'Mauritanian kansallismuseo',
+        wiki: 'National Museum of Mauritania',
+        lat: 18.08552,
+        lon: -15.9748,
+      },
+      {
+        nimi: 'Saudien moskeija',
+        wiki: 'Saudi Mosque',
+        lat: 18.09,
+        lon: -15.97556,
+      },
+      {
+        nimi: 'Marché Capitale',
+        tyyppi: 'aukio',
+        wiki: 'Marché Capitale',
+        lat: 18.08611,
+        lon: -15.97944,
+      },
+      {
+        nimi: 'Marokkolaisten tori',
+        tyyppi: 'aukio',
+        wiki: 'Marocaine market',
+        lat: 18.07667,
+        lon: -15.97917,
+      },
+      {
+        nimi: 'Nouakchottin olympiastadion',
+        wiki: 'Nouakchott Olympic Stadium',
+        lat: 18.10472,
+        lon: -15.98528,
+      },
+      {
+        nimi: 'Nouakchottin yliopisto',
+        wiki: 'University of Nouakchott Al Aasriya',
+        lat: 18.08934,
+        lon: -15.96764,
+      },
+    ],
+  },
+  ouagadougou: {
+    polku: 'assets/kartat/ouagadougou-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 12.3767,
+      etela: 12.3563,
+      lansi: -1.5324,
+      ita: -1.5136,
+    },
+    kohteet: [
+      {
+        nimi: 'Ouagadougoun katedraali',
+        wiki: 'Ouagadougou Cathedral',
+        lat: 12.36197,
+        lon: -1.52701,
+      },
+      {
+        nimi: 'Ouagadougoun suurmoskeija',
+        wiki: 'Grand Mosque of Ouagadougou',
+        lat: 12.36622,
+        lon: -1.52139,
+      },
+      {
+        nimi: 'Maison du peuple',
+        wiki: 'La Maison du peuple (Ouagadougou)',
+        lat: 12.37219,
+        lon: -1.5236,
+      },
+      {
+        nimi: 'Kansallinen musiikkimuseo',
+        wiki: 'National Museum of Music (Burkina Faso)',
+        lat: 12.37351,
+        lon: -1.51683,
+      },
+      {
+        nimi: 'Kunnallisstadion',
+        wiki: 'Stade Dr Issoufou Joseph Conombo',
+        lat: 12.36056,
+        lon: -1.52917,
+      },
+    ],
+  },
+  portlouis: {
+    polku: 'assets/kartat/portlouis-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: -20.1555,
+      etela: -20.1733,
+      lansi: 57.4941,
+      ita: 57.5134,
+    },
+    kohteet: [
+      {
+        nimi: 'Aapravasi Ghat',
+        wiki: 'Aapravasi Ghat',
+        lat: -20.15861,
+        lon: 57.50306,
+      },
+      {
+        nimi: 'Blue Penny -museo',
+        wiki: 'Blue Penny Museum',
+        lat: -20.1609,
+        lon: 57.4975,
+      },
+      {
+        nimi: 'Jummah-moskeija',
+        wiki: 'Jummah Mosque (Mauritius)',
+        lat: -20.15986,
+        lon: 57.50486,
+      },
+      {
+        nimi: 'Luonnonhistoriallinen museo',
+        wiki: 'Natural History Museum, Port Louis',
+        lat: -20.16317,
+        lon: 57.50236,
+      },
+      {
+        nimi: 'Postimuseo',
+        wiki: 'Mauritius Postal Museum',
+        lat: -20.15996,
+        lon: 57.50163,
+      },
+      {
+        nimi: 'Pyhän Ludvigin katedraali',
+        wiki: 'St. Louis Cathedral, Port-Louis',
+        lat: -20.1645,
+        lon: 57.5065,
+      },
+      {
+        nimi: 'Champ de Mars',
+        tyyppi: 'aukio',
+        wiki: 'Champ de Mars Racecourse',
+        lat: -20.16916,
+        lon: 57.51009,
+      },
+    ],
+  },
+  portonovo: {
+    polku: 'assets/kartat/portonovo-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 6.4788,
+      etela: 6.4655,
+      lansi: 2.6135,
+      ita: 2.6313,
+    },
+    kohteet: [
+      {
+        nimi: 'Kuningas Toffan palatsi',
+        wiki: 'Porto-Novon kuninkaallinen palatsi',
+        lat: 6.4694,
+        lon: 2.6247,
+      },
+      {
+        nimi: 'Porto-Novon etnografinen museo',
+        wiki: 'Porto-Novon etnografinen museo',
+        lat: 6.4757,
+        lon: 2.619,
+      },
+      {
+        nimi: 'Porto-Novon suuri moskeija',
+        wiki: 'Great Mosque of Porto-Novo',
+        lat: 6.47174,
+        lon: 2.62811,
+      },
+      {
+        nimi: 'Kansalliskokous',
+        wiki: 'National Assembly (Benin)',
+        lat: 6.47413,
+        lon: 2.61666,
+      },
+    ],
+  },
+  praia: {
+    polku: 'assets/kartat/praia-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 14.9247,
+      etela: 14.8986,
+      lansi: -23.5208,
+      ita: -23.504,
+    },
+    kohteet: [
+      {
+        nimi: 'Praça Alexandre Albuquerque',
+        tyyppi: 'aukio',
+        wiki: 'Praça Alexandre Albuquerque',
+        lat: 14.91768,
+        lon: -23.50914,
+      },
+      {
+        nimi: 'Diogo Gomesin muistomerkki',
+        wiki: 'Monumento de Diogo Gomes',
+        lat: 14.9159,
+        lon: -23.5096,
+      },
+      {
+        nimi: 'Praian etnografinen museo',
+        wiki: 'Museu Etnográfico da Praia',
+        lat: 14.92091,
+        lon: -23.50723,
+      },
+      {
+        nimi: 'Kap Verden kansalliskirjasto',
+        wiki: 'National Library of Cape Verde',
+        lat: 14.9172,
+        lon: -23.51137,
+      },
+      {
+        nimi: 'Kansalliskokouksen palatsi',
+        wiki: 'National Assembly (Cape Verde)',
+        lat: 14.90622,
+        lon: -23.51551,
+      },
+      {
+        nimi: 'Quebra Canelan ranta',
+        tyyppi: 'luonto',
+        wiki: 'Quebra Canela',
+        lat: 14.9038,
+        lon: -23.51751,
+      },
+    ],
+  },
+  rabat: {
+    polku: 'assets/kartat/rabat-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 34.0371,
+      etela: 33.992,
+      lansi: -6.8465,
+      ita: -6.8157,
+    },
+    kohteet: [
+      {
+        nimi: 'Hassanin torni',
+        wiki: 'Hassan Tower',
+        lat: 34.02414,
+        lon: -6.82279,
+      },
+      {
+        nimi: 'Mohammed V:n mausoleumi',
+        wiki: 'Mausoleum of Mohammed V',
+        lat: 34.02266,
+        lon: -6.82142,
+      },
+      {
+        nimi: 'Udayan kasba',
+        wiki: 'Kasbah of the Udayas',
+        lat: 34.03056,
+        lon: -6.83556,
+      },
+      {
+        nimi: 'Chellahin raunioalue',
+        wiki: 'Chellah',
+        lat: 34.00703,
+        lon: -6.82146,
+      },
+      {
+        nimi: 'Bab er-Rouah -portti',
+        wiki: 'Bab er-Rouah',
+        lat: 34.01281,
+        lon: -6.83757,
+      },
+      {
+        nimi: 'Pyhän Pietarin katedraali',
+        wiki: "St. Peter's Cathedral, Rabat",
+        lat: 34.01787,
+        lon: -6.83134,
+      },
+      {
+        nimi: 'Rabatin kuninkaanlinna',
+        wiki: 'Royal Palace of Rabat',
+        lat: 34.00104,
+        lon: -6.84079,
+      },
+      {
+        nimi: 'Mohammed VI:n nykytaiteen museo',
+        wiki: 'Mohammed VI Museum of Modern and Contemporary Art',
+        lat: 34.01523,
+        lon: -6.83288,
+      },
+    ],
+  },
+  saotome: {
+    polku: 'assets/kartat/saotome-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 0.349,
+      etela: 0.3309,
+      lansi: 6.7239,
+      ita: 6.7426,
+    },
+    kohteet: [
+      {
+        nimi: 'Nossa Senhora da Graçan katedraali',
+        wiki: 'Our Lady of Grace Cathedral, São Tomé',
+        lat: 0.3384,
+        lon: 6.7327,
+      },
+      {
+        nimi: 'Nossa Senhora da Conceição -kirkko',
+        wiki: 'Our Lady of Conception Church, São Tomé',
+        lat: 0.339,
+        lon: 6.727,
+      },
+      {
+        nimi: 'São Sebastiãon linnake ja museo',
+        wiki: 'São Sebastião Museum',
+        lat: 0.34583,
+        lon: 6.73944,
+      },
+      {
+        nimi: '12. heinäkuuta -kansallisstadion',
+        wiki: 'Estádio Nacional 12 de Julho',
+        lat: 0.33508,
+        lon: 6.7375,
+      },
+    ],
+  },
+  tunis: {
+    polku: 'assets/kartat/tunis-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 36.8138,
+      etela: 36.7899,
+      lansi: 10.1638,
+      ita: 10.1891,
+    },
+    kohteet: [
+      {
+        nimi: 'Habib Bourguiban katu',
+        tyyppi: 'aukio',
+        wiki: 'Avenue Habib Bourguiba',
+        lat: 36.80005,
+        lon: 10.18518,
+      },
+      {
+        nimi: 'Tunisin kunnallisteatteri',
+        wiki: 'Théâtre municipal de Tunis',
+        lat: 36.79913,
+        lon: 10.18081,
+      },
+      {
+        nimi: 'Bab el Bhar -portti',
+        wiki: 'Bab el Bhar',
+        lat: 36.79918,
+        lon: 10.17562,
+      },
+      {
+        nimi: 'Zitounan moskeija',
+        wiki: 'Al-Zaytuna Mosque',
+        lat: 36.79731,
+        lon: 10.17125,
+      },
+      {
+        nimi: 'Kasbahin moskeija',
+        wiki: 'Kasbah Mosque, Tunis',
+        lat: 36.79667,
+        lon: 10.16778,
+      },
+      {
+        nimi: 'El-Jedidin moskeija',
+        wiki: 'El Jedid Mosque',
+        lat: 36.79471,
+        lon: 10.17375,
+      },
+      {
+        nimi: 'Sidi Mahrezin moskeija',
+        wiki: 'Sidi Mahrez Mosque',
+        lat: 36.80422,
+        lon: 10.16843,
+      },
+      {
+        nimi: 'Tunisin suuri synagoga',
+        wiki: 'Grand Synagogue of Tunis',
+        lat: 36.81038,
+        lon: 10.18011,
+      },
+    ],
+  },
+  victoria: {
+    polku: 'assets/kartat/victoria-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: -4.6183,
+      etela: -4.6399,
+      lansi: 55.4451,
+      ita: 55.475,
+    },
+    kohteet: [
+      {
+        nimi: 'Sir Selwyn Selwyn-Clarke -kauppahalli',
+        tyyppi: 'aukio',
+        wiki: 'Sir Selwyn Selwyn-Clarke Market',
+        lat: -4.62145,
+        lon: 55.45145,
+      },
+      {
+        nimi: 'Seychellien kansallinen historiamuseo',
+        wiki: 'Seychelles National Museum of History',
+        lat: -4.62353,
+        lon: 55.45257,
+      },
+      {
+        nimi: 'Sheikh Mohamed bin Khalifan moskeija',
+        wiki: 'Sheikh Mohamed bin Khalifa Mosque',
+        lat: -4.62558,
+        lon: 55.45243,
+      },
+      {
+        nimi: 'Bel Airin hautausmaa',
+        wiki: 'Bel Air Cemetery',
+        lat: -4.62385,
+        lon: 55.44968,
+      },
+      {
+        nimi: 'Seychellien kansallinen kasvitieteellinen puutarha',
+        tyyppi: 'luonto',
+        wiki: 'National Botanical Garden of Seychelles',
+        lat: -4.63029,
+        lon: 55.45374,
+      },
+      {
+        nimi: 'Stade Linité',
+        wiki: 'Stade Linité',
+        lat: -4.63551,
+        lon: 55.47046,
+      },
+    ],
+  },
+  windhoek: {
+    polku: 'assets/kartat/windhoek-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: -22.5562,
+      etela: -22.5785,
+      lansi: 17.0776,
+      ita: 17.0957,
+    },
+    kohteet: [
+      {
+        nimi: 'Christuskirche',
+        wiki: 'Christuskirche',
+        lat: -22.56775,
+        lon: 17.08732,
+      },
+      {
+        nimi: 'Alte Feste',
+        wiki: 'Alte Feste',
+        lat: -22.5694,
+        lon: 17.0883,
+      },
+      {
+        nimi: 'Tintenpalast',
+        wiki: 'Tintenpalast',
+        lat: -22.5666,
+        lon: 17.0893,
+      },
+      {
+        nimi: 'Zoo Park',
+        tyyppi: 'luonto',
+        wiki: 'Zoo Park',
+        lat: -22.56733,
+        lon: 17.08527,
+      },
+      {
+        nimi: 'Heinitzburg',
+        wiki: 'Heinitzburg',
+        lat: -22.57404,
+        lon: 17.09228,
+      },
+      {
+        nimi: 'Windhoekin rautatieasema',
+        wiki: 'Windhoek railway station',
+        lat: -22.5594,
+        lon: 17.081,
+      },
+      {
+        nimi: 'Pyhän Marian katedraali',
+        wiki: "St. Mary's Cathedral, Windhoek",
+        lat: -22.56467,
+        lon: 17.08228,
+      },
+      {
+        nimi: 'Namibian kansallisteatteri',
+        wiki: 'National Theatre of Namibia',
+        lat: -22.56262,
+        lon: 17.08575,
+      },
+    ],
+  },
+  yaounde: {
+    polku: 'assets/kartat/yaounde-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 3.8809,
+      etela: 3.8329,
+      lansi: 11.4801,
+      ita: 11.5284,
+    },
+    kohteet: [
+      {
+        nimi: 'Voittojen Neitsyt Marian katedraali',
+        wiki: 'Our Lady of Victories Cathedral, Yaoundé',
+        lat: 3.8629,
+        lon: 11.521,
+      },
+      {
+        nimi: 'Yhdistymismonumentti',
+        tyyppi: 'aukio',
+        wiki: 'Reunification Monument',
+        lat: 3.85246,
+        lon: 11.51343,
+      },
+      {
+        nimi: 'Blackitude-museo',
+        wiki: 'Blackitude Museum',
+        lat: 3.86421,
+        lon: 11.51835,
+      },
+      {
+        nimi: 'Yaoundén urheilukeskus',
+        wiki: 'Yaoundé Multipurpose Sports Complex',
+        lat: 3.87397,
+        lon: 11.51204,
+      },
+      {
+        nimi: 'Marie-Reine-des-Apôtres -basilika',
+        wiki: 'Basilique Marie-Reine-des-Apôtres',
+        lat: 3.8425,
+        lon: 11.50778,
+      },
+      {
+        nimi: 'Mvog-Betsin eläintarha',
+        tyyppi: 'luonto',
+        wiki: 'Mvog-Betsi Zoo',
+        lat: 3.8649,
+        lon: 11.48751,
+      },
+    ],
+  },
+  // AFRIKAN PÄÄKAUPUNKIPISTEET LOPPU
+  // VATIKAANI (Karttaseppä 11.10.2026, PT, juna 183): kohteet Wikipediasta ja OSM:stä, tekstit myöhemmin.
+  vatikaanivaltio: {
+    polku: 'assets/kartat/vatikaanivaltio-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 41.9081,
+      etela: 41.8986,
+      lansi: 12.4467,
+      ita: 12.4605,
+    },
+    kohteet: [
+      {
+        nimi: 'Pietarinkirkko',
+        wiki: 'Pietarinkirkko',
+        lat: 41.90216,
+        lon: 12.45371,
+      },
+      {
+        nimi: 'Pietarinaukio',
+        tyyppi: 'aukio',
+        wiki: 'Pietarinaukio',
+        lat: 41.90225,
+        lon: 12.45722,
+      },
+      {
+        nimi: 'Sikstuksen kappeli',
+        wiki: 'Sikstuksen kappeli',
+        lat: 41.90298,
+        lon: 12.45448,
+      },
+      {
+        nimi: 'Apostolinen palatsi',
+        wiki: 'Apostolinen palatsi',
+        lat: 41.90361,
+        lon: 12.45639,
+      },
+      {
+        nimi: 'Vatikaanin museot',
+        wiki: 'Vatikaanin museot',
+        lat: 41.90627,
+        lon: 12.45274,
+      },
+      {
+        nimi: 'Vatikaanin puutarhat',
+        tyyppi: 'luonto',
+        wiki: 'Vatican Gardens',
+        lat: 41.90306,
+        lon: 12.45056,
       },
     ],
   },

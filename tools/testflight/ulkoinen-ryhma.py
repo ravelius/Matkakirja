@@ -56,6 +56,7 @@ def main():
     p.add_argument('--alusta', default='IOS', help='IOS tai MAC_OS: sama build-numero voi olla molemmilla (oletus IOS)')
     p.add_argument('--vanhenna', default='', help='pilkuin erotetut CFBundleVersionit, jotka vanhennetaan ensin')
     p.add_argument('--poista', default='', help='pilkuin erotetut CFBundleVersionit, jotka irrotetaan ulkoisesta ryhmästä (sisäisille jäävät)')
+    p.add_argument('--vanhenna-vanhemmat', default='', help='CFBundleVersion N: vanhenna KAIKKI N:ää vanhemmat buildit (iOS + Mac)')
     a = p.parse_args()
 
     kid = os.environ['ASC_KEY_ID']
@@ -191,6 +192,32 @@ def main():
         if tila != 200:
             virhe('Vanhennus epäonnistui', f'{vb}: {tila}: {d}')
         kirjaa(f'Build {vb}: vanhennettu.')
+
+    # VAIN UUSIN LADATTAVISSA (omistaja 11.10.2026 klo 22.2x PT:n kautta: "TestFlightista saa ladata vain uusimman version"):
+    # --vanhenna-vanhemmat N vanhentaa kaikki voimassa olevat buildit, joiden CFBundleVersion < N, molemmilla alustoilla.
+    # Ajetaan, kun N on hyväksytty beta-arviossa ja jaettu ulkoisille ryhmille. Ei paluuta vanhaan (korjataan uudella buildilla).
+    if a.vanhenna_vanhemmat.strip():
+        raja = int(a.vanhenna_vanhemmat.strip())
+        polku, vanhennetut, virheet = f'/v1/builds?filter[app]={app_id}&filter[expired]=false&limit=200&fields[builds]=version,expired', [], []
+        while polku:
+            tila, d = kutsu('GET', polku)
+            if tila != 200:
+                virhe('Buildien haku epäonnistui', f'{tila}: {d}')
+            for b in d.get('data', []):
+                try:
+                    nro = int(b['attributes'].get('version'))
+                except (TypeError, ValueError):
+                    continue
+                if nro >= raja or b['attributes'].get('expired'):
+                    continue
+                t, r = kutsu('PATCH', f"/v1/builds/{b['id']}", {'data': {
+                    'type': 'builds', 'id': b['id'], 'attributes': {'expired': True}}})
+                (vanhennetut if t == 200 else virheet).append(f"{nro}" if t == 200 else f"{nro}: {t}")
+            seuraava = d.get('links', {}).get('next')
+            polku = seuraava.replace('https://api.appstoreconnect.apple.com', '') if seuraava else None
+        kirjaa(f'Vanhennettu {len(vanhennetut)} {raja}:ää vanhempaa buildia (iOS + Mac): {", ".join(sorted(vanhennetut, key=int)) or "ei yhtään"}.')
+        if virheet:
+            virhe('Osa vanhennuksista epäonnistui', '; '.join(virheet)[:900])
 
     # Irrotus ulkoisista kohderyhmistä (Päätoimittaja 7.10.2026: TF 162 vikainen, jää vain sisäisille).
     for pb in [x.strip() for x in a.poista.split(',') if x.strip()]:

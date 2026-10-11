@@ -160,29 +160,6 @@
    ]
   },
   {
-   "q": "Q16684555",
-   "nimi": "Laboratoriohiiren patsas",
-   "peruste": "sitelinks",
-   "koko_m": 30,
-   "lat": 54.84903,
-   "lon": 83.10606,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Memorial to the lab animals (14604111622).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Memorial_to_the_lab_animals_(14604111622).jpg?width=1280",
-     "tekija": "T",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Memorial_to_the_lab_animals_(14604111622).jpg",
-     "selite": "Akademgorodokin hiiripatsas kunnioittaa laboratorioeläimiä ja istuu kutomassa DNA-ketjua geenitutkimuksen kaupungissa.",
-     "leveys": 3648,
-     "korkeus": 5472,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
    "q": "Q4442786",
    "nimi": "Satohuoneiston talo",
    "peruste": "pelin nosto",

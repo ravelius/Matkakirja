@@ -1204,22 +1204,4 @@ export const FOKUSVIRTA_LISSABON = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. Iso
-   * aarre: kuninkaan kirjaston nide. Merkintä aukeaa, kun aarre löytyy
-   * (js/fokusvirta.js fokusvirtaAarremerkinta).
-   *
-   * MUOTO ON OLIO EIKÄ MERKKIJONO (v1301: jokainen kaupunki kirjoittaa
-   * `{ teksti }`).
-   */
-  aarremerkinta: {
-    teksti: 'Kirjastonhoitaja kertoi kuninkaan kirjastosta, joka pakeni '
-      + 'laivalla valtameren yli keisarin sotia — kymmeniätuhansia niteitä '
-      + 'heiluvissa arkuissa. Kaikki eivät koskaan palanneet. Yksi nide on '
-      + 'hänen mukaansa yhä väärällä mantereella, väärässä hyllyssä, '
-      + 'oikeiden kansien takana. Kirja on helpoin aarre piilottaa: se '
-      + 'katoaa toisten kirjojen sekaan.',
-  },
 };

@@ -1278,20 +1278,4 @@ export const FOKUSVIRTA_EDINBURGH = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Skotlannin
-   * kruununkalleudet, jotka muurattiin arkkuun ja löytyivät 1818.
-   * Merkintä aukeaa, kun aarre löytyy (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Täällä kerrotaan kruunusta, joka muurattiin arkkuun sodan '
-      + 'jaloissa ja unohdettiin niin perusteellisesti, että se löytyi '
-      + 'vasta sadan vuoden päästä omasta linnastaan. Kirjailija löysi '
-      + 'sen, ei sotilas. Aarni sanoisi: parhaat kätköt eivät ole '
-      + 'kaukana — ne ovat paikoissa, joista kaikki luulevat jo '
-      + 'tietävänsä kaiken.',
-  },
 };

@@ -489,19 +489,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Berlin - Potsdamer Platz - 2016.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berlin_-_Potsdamer_Platz_-_2016.jpg?width=1280",
-     "tekija": "Avda",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Berlin_-_Potsdamer_Platz_-_2016.jpg",
-     "selite": "Potsdamer Platz on muuri-ajan jälkeen rakennettu uusi liike- ja viihdekeskus.",
-     "leveys": 2867,
-     "korkeus": 1911,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "Daniel Cox - Potsdamer Platz in Berlin (DEU).jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Daniel_Cox_-_Potsdamer_Platz_in_Berlin_(DEU).jpg?width=1280",
      "tekija": "Daniel Cox",
@@ -514,7 +501,7 @@
      "tarkistettu": true
     },
     {
-     "jarjestys": 3,
+     "jarjestys": 2,
      "tiedosto": "Germany - NARA - 68154987 (cropped).jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Germany_-_NARA_-_68154987_(cropped).jpg?width=1280",
      "tekija": "Unknown authorUnknown author or not provided",
@@ -704,19 +691,6 @@
      "selite": "Päärautatieasema on lasinen risteysasema Spreen rannalla.",
      "leveys": 4720,
      "korkeus": 3063,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "(20260614 100717648 HDR) Berlin Hauptbahnhof.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(20260614_100717648_HDR)_Berlin_Hauptbahnhof.jpg?width=1280",
-     "tekija": "Roy Zuo",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(20260614_100717648_HDR)_Berlin_Hauptbahnhof.jpg",
-     "selite": "Aseman lasikatto kattaa useita raidetasoja.",
-     "leveys": 4096,
-     "korkeus": 3072,
      "tarkistettu": true
     }
    ]

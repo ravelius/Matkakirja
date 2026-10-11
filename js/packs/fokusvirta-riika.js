@@ -987,19 +987,4 @@ export const FOKUSVIRTA_RIIKA = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Kuramaan herttuan
-   * aarre eli herttua Jaakob Kettlerin kadonnut kassa
-   * (js/packs/paikallisaarteet.js, LVA). Merkintä aukeaa, kun aarre
-   * löytyy (js/fokusvirta.js fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Täkäläiset kertovat herttuasta, jolla oli kerran oma laivasto '
-      + 'ja siirtomaita saarilla asti — pieni maa, jolla oli suuret '
-      + 'purjeet. Herttuan rikkauksista puhutaan yhä: mitä laivoihin '
-      + 'lastattiin, kaikki ei ole kirjanpidossa. Pienen herttuakunnan '
-      + 'suuri aarre on juuri sellainen, jonka historia hukkaa mielellään.',
-  },
 };

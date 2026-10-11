@@ -38,19 +38,6 @@
     },
     {
      "jarjestys": 3,
-     "tiedosto": "2018 flower carpet at Grand Place, Brussels (DSCF6849).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018_flower_carpet_at_Grand_Place%2C_Brussels_(DSCF6849).jpg?width=1280",
-     "tekija": "Trougnouf (Benoit Brummer)",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018_flower_carpet_at_Grand_Place%2C_Brussels_(DSCF6849).jpg",
-     "selite": "Joka toinen elokuu aukio peitetään kukkamatolla.",
-     "leveys": 4853,
-     "korkeus": 3102,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 4,
      "tiedosto": "Edificios en la Grand-Place, Bruselas, Bélgica, 2021-12-15, DD 184-186 HDR.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Edificios_en_la_Grand-Place%2C_Bruselas%2C_B%C3%A9lgica%2C_2021-12-15%2C_DD_184-186_HDR.jpg?width=1280",
      "tekija": "Diego Delso",
@@ -457,19 +444,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Mini-Europe @ Brussels (8177227962).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mini-Europe_%40_Brussels_(8177227962).jpg?width=1280",
-     "tekija": "Guilhem Vellut from Annecy, France",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mini-Europe_%40_Brussels_(8177227962).jpg",
-     "selite": "Mini-Europe on Atomiumin vieressä sijaitseva pienoispuisto, jossa Euroopan tunnetuimmat rakennukset on rakennettu pieniksi.",
-     "leveys": 3648,
-     "korkeus": 2736,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "Mini Europe Birds Eye.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mini_Europe_Birds_Eye.jpg?width=1280",
      "tekija": "Gellerj",
@@ -479,19 +453,6 @@
      "selite": "Ylhäältä katsottuna puisto kattaa kymmeniä pienoismalleja.",
      "leveys": 2272,
      "korkeus": 1704,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Mini Europe Brandenburg Gate and Berlin Wall.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mini_Europe_Brandenburg_Gate_and_Berlin_Wall.jpg?width=1280",
-     "tekija": "Frood",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mini_Europe_Brandenburg_Gate_and_Berlin_Wall.jpg",
-     "selite": "Pienoismalleissa nähdään muun muassa Brandenburgin portti.",
-     "leveys": 4048,
-     "korkeus": 3036,
      "tarkistettu": true
     }
    ]

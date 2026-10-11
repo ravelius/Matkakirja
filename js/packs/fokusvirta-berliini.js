@@ -1162,15 +1162,4 @@ export const FOKUSVIRTA_BERLIINI = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Nibelungein
-   * aarre.
-   */
-  aarremerkinta: {
-    teksti: 'Seurasin laulun jälkiä Wormsiin asti ja seisoin Reinin '
-      + 'rannalla kartta kädessä. Joki oli leveä ja välinpitämätön — '
-      + 'kirjoitin: tämä aarre ei odota löytäjää, se odottaa uskojaa.',
-  },
 };

@@ -3,7 +3,6 @@
  "kaupunkiQ": "Q34374",
  "jarjestys": [
   "Q173527",
-  "Q7798352",
   "Q636972",
   "Q603920",
   "Q2942217",
@@ -31,45 +30,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Knossos North entrance bull fresco.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Knossos_North_entrance_bull_fresco.jpg?width=1280",
-     "tekija": "Jebulon",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Knossos_North_entrance_bull_fresco.jpg",
-     "selite": "Knossos oli minolaisen sivilisaation suuri palatsikeskus, jonka pohjoisen sisäänkäynnin seinää koristaa härkäfriisi.",
-     "leveys": 4315,
-     "korkeus": 2872,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Knossos - North Portico 02.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Knossos_-_North_Portico_02.jpg?width=1280",
-     "tekija": "Bernard Gagnon",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Knossos_-_North_Portico_02.jpg",
-     "selite": "Pohjoinen portiikki punaisine pylväineen on yksi palatsialueen tunnetuimmista näkymistä.",
-     "leveys": 3456,
-     "korkeus": 2592,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Knossos, Sept. 2019e.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Knossos%2C_Sept._2019e.jpg?width=1280",
-     "tekija": "Cayambe",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Knossos%2C_Sept._2019e.jpg",
-     "selite": "Palatsin uudelleenrakennetut punaiset pylväät kapenevat alaspäin, kuten minolaisessa arkkitehtuurissa.",
-     "leveys": 5975,
-     "korkeus": 3707,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 4,
      "tiedosto": "Knossos in Crete west court.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Knossos_in_Crete_west_court.jpg?width=1280",
      "tekija": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
@@ -82,7 +42,7 @@
      "tarkistettu": true
     },
     {
-     "jarjestys": 5,
+     "jarjestys": 2,
      "tiedosto": "Theatral area Knossos palace.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Theatral_area_Knossos_palace.jpg?width=1280",
      "tekija": "Jebulon",
@@ -97,42 +57,6 @@
    ]
   },
   {
-   "q": "Q7798352",
-   "nimi": "Knossoksen valtaistuinsali",
-   "peruste": "pelin nosto",
-   "koko_m": 30,
-   "lat": 35.298094,
-   "lon": 25.162928,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Throne room of the Minoan Palace in Knossos.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Throne_room_of_the_Minoan_Palace_in_Knossos.jpg?width=1280",
-     "tekija": "Annatsach",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Throne_room_of_the_Minoan_Palace_in_Knossos.jpg",
-     "selite": "Valtaistuinsali on punaisin kukkamaalauksin koristeltu huone, jossa on kivinen istuin ja matala vesiastia.",
-     "leveys": 4512,
-     "korkeus": 3000,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Throne of Minos at Knossos Palace.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Throne_of_Minos_at_Knossos_Palace.jpg?width=1280",
-     "tekija": "Jebulon",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Throne_of_Minos_at_Knossos_Palace.jpg",
-     "selite": "Kivinen valtaistuin seisoo seinää vasten ja sitä pidetään Euroopan vanhimpana säilyneenä valtaistuimena.",
-     "leveys": 3056,
-     "korkeus": 4090,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
    "q": "Q636972",
    "nimi": "Iraklionin arkeologinen museo",
    "peruste": "sitelinks",
@@ -142,32 +66,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "202610 Archaeological Museum of Heraklion 03.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/202610_Archaeological_Museum_of_Heraklion_03.jpg?width=1280",
-     "tekija": "Jonashtand",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:202610_Archaeological_Museum_of_Heraklion_03.jpg",
-     "selite": "Museon uudistetun rakennuksen punaiset pylväät reunustavat sisäänkäyntiä ja pihaa.",
-     "leveys": 6000,
-     "korkeus": 4000,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "202610 Archaeological Museum of Heraklion 01.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/202610_Archaeological_Museum_of_Heraklion_01.jpg?width=1280",
-     "tekija": "Jonashtand",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:202610_Archaeological_Museum_of_Heraklion_01.jpg",
-     "selite": "Sisäänkäyntihalli avaa tien Euroopan vanhimman sivilisaation aarteisiin.",
-     "leveys": 6000,
-     "korkeus": 4000,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
      "tiedosto": "Bull leaping minoan fresco archmus Heraklion.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bull_leaping_minoan_fresco_archmus_Heraklion.jpg?width=1280",
      "tekija": "Jebulon",
@@ -180,7 +78,7 @@
      "tarkistettu": true
     },
     {
-     "jarjestys": 4,
+     "jarjestys": 2,
      "tiedosto": "Phaistos Disc - Heraklion Archaeological Museum by Joy of Museums.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Phaistos_Disc_-_Heraklion_Archaeological_Museum_by_Joy_of_Museums.jpg?width=1280",
      "tekija": "Joyofmuseums",
@@ -448,19 +346,6 @@
      "selite": "Muuria kiertävä vallihauta on nykyään puistoa ja leikkikenttää.",
      "leveys": 4608,
      "korkeus": 3456,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 4,
-     "tiedosto": "Iraklio, tomba di Nikos Kazantzakis 02.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iraklio%2C_tomba_di_Nikos_Kazantzakis_02.jpg?width=1280",
-     "tekija": "Syrio",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iraklio%2C_tomba_di_Nikos_Kazantzakis_02.jpg",
-     "selite": "Kirjailija Nikos Kazantzakisin hauta on Martinengon bastionin laella ja sen ristissä on vain yksinkertainen kirjoitus.",
-     "leveys": 4000,
-     "korkeus": 3000,
      "tarkistettu": true
     }
    ]

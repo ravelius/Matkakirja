@@ -939,19 +939,4 @@ export const FOKUSVIRTA_VENETSIA = {
       id: 'juliste', sivu: 4, otsake: 'JULISTE', palkinto: 'juliste', visa: OSOITE_VISA,
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta.
-   * Merkintä aukeaa, kun aarre löytyy (js/fokusvirta.js
-   * fokusvirtaAarremerkinta), ja voittaa kortissa sekä virran oman
-   * merkinnän että vanhan saapumistekstin.
-   */
-  aarremerkinta: {
-    teksti: 'Lasinpuhaltaja Muranossa sanoi, että tässä kaupungissa '
-      + 'mikään ei katoa — se vain vajoaa. Kanaalien pohjassa makaa '
-      + 'sormuksia, kolikoita ja vähintään yksi dogen sinetti, ja joka '
-      + 'kuivatuksessa jotain nousee. Kaupunki joka seisoo veden päällä '
-      + 'pitää aarteensa veden alla.',
-  },
 };

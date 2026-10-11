@@ -5,7 +5,6 @@
   "Q12220316",
   "Q12195545",
   "Q2548705",
-  "Q4115837",
   "Q12204207",
   "Q13668725",
   "Q13668727"
@@ -180,55 +179,6 @@
      "selite": "Moskeijan rukoussalin pylväät ja matot ovat osa sen vanhaa sisätilaa.",
      "leveys": 2560,
      "korkeus": 1920,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
-   "q": "Q4115837",
-   "nimi": "Al-Salehin moskeija",
-   "peruste": "sitelinks",
-   "koko_m": 300,
-   "lat": 15.3258,
-   "lon": 44.2077,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Al Saleh Mosque - Sana'a 2013.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Saleh_Mosque_-_Sana'a_2013.jpg?width=1280",
-     "tekija": "Om Eshak",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Saleh_Mosque_-_Sana'a_2013.jpg",
-     "selite": "Al-Salehin moskeija on Jemenin suurin moskeija, jossa on useita minareetteja ja kultaisia kupoleita.",
-     "leveys": 3200,
-     "korkeus": 2008,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Al Saleh Mosque, Sana'a.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Saleh_Mosque%2C_Sana'a.jpg?width=1280",
-     "tekija": "Rod Waddington",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Saleh_Mosque%2C_Sana'a.jpg",
-     "selite": "Moskeijan korkeat minareetit hallitsevat Sanan uudempia kaupunginosia.",
-     "leveys": 3820,
-     "korkeus": 5870,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Al Saleh Mosque.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Saleh_Mosque.jpg?width=1280",
-     "tekija": "Fuad Al-Qrize",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Saleh_Mosque.jpg",
-     "selite": "Palmujen reunustama moskeijan julkisivu ja minareetit.",
-     "leveys": 4160,
-     "korkeus": 2340,
      "tarkistettu": true
     }
    ]

@@ -209,29 +209,6 @@
    ]
   },
   {
-   "q": "Q208389",
-   "nimi": "Sabha",
-   "peruste": "sitelinks",
-   "koko_m": 2500,
-   "lat": 27.03333,
-   "lon": 14.43333,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Al-Fadl ibn Abbas Mosque, Sabha.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Fadl_ibn_Abbas_Mosque%2C_Sabha.jpg?width=1280",
-     "tekija": "مريم محمد الروادي",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-Fadl_ibn_Abbas_Mosque%2C_Sabha.jpg",
-     "selite": "Sabha on Fezzanin suurin kaupunki, ja sen moskeijat ovat kaupungin keskeisiä maamerkkejä.",
-     "leveys": 3264,
-     "korkeus": 2448,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
    "q": "Q285287",
    "nimi": "Qatrun",
    "peruste": "sitelinks",

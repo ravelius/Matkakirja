@@ -238,42 +238,6 @@
    ]
   },
   {
-   "q": "Q2384491",
-   "nimi": "Dubai Fountain",
-   "peruste": "sitelinks",
-   "koko_m": 300,
-   "lat": 25.19519,
-   "lon": 55.27506,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Dubai Fountain 7.JPG",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubai_Fountain_7.JPG?width=1280",
-     "tekija": "Nealt",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dubai_Fountain_7.JPG",
-     "selite": "Dubai Fountain ammuttaa vettä Burj Khalifan juurella olevasta tekolammesta musiikin tahtiin.",
-     "leveys": 3264,
-     "korkeus": 2448,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "At the Top SKY @ Burj Khalifa @ Dubai (15698484788).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_the_Top_SKY_%40_Burj_Khalifa_%40_Dubai_(15698484788).jpg?width=1280",
-     "tekija": "Guilhem Vellut from Annecy, France",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_the_Top_SKY_%40_Burj_Khalifa_%40_Dubai_(15698484788).jpg",
-     "selite": "Ylhäältä katsottuna suihkulähteen tekojärvi ympäröi Downtownin rakennuksia.",
-     "leveys": 3968,
-     "korkeus": 2976,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
    "q": "Q20386392",
    "nimi": "Dubai Frame",
    "peruste": "sitelinks",
@@ -305,42 +269,6 @@
      "selite": "Hämärässä kehys erottuu kaupungin siluetista kultaisena viivana.",
      "leveys": 1240,
      "korkeus": 930,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
-   "q": "Q22948398",
-   "nimi": "Tulevaisuuden museo",
-   "peruste": "sitelinks",
-   "koko_m": 120,
-   "lat": 25.21912,
-   "lon": 55.2821,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Museum of the Future.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum_of_the_Future.jpg?width=1280",
-     "tekija": "Александр Сигачёв",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museum_of_the_Future.jpg",
-     "selite": "Tulevaisuuden museon soikean rakennuksen julkisivua koristavat arabialaisen kalligrafian säkeet.",
-     "leveys": 6000,
-     "korkeus": 8000,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Museum of the Future 9.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum_of_the_Future_9.jpg?width=1280",
-     "tekija": "EditQ",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museum_of_the_Future_9.jpg",
-     "selite": "Rengasmainen rakennus nousee Sheikh Zayed Roadin varrelle Dubain keskustassa.",
-     "leveys": 4000,
-     "korkeus": 3000,
      "tarkistettu": true
     }
    ]

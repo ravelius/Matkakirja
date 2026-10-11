@@ -1155,12 +1155,12 @@ export const FOKUSVIRTA_LONTOO = {
         + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
         + 'karttauudistuksen erässä 10, 13.9.2026.',
       kuva: {
-        tiedosto: '2024-09-26 Leake Street, London graffiti tunnel 01.jpg',
+        tiedosto: "Underneath the arches. Leake Street.jpg",
         lyhyt: 'Leake Streetin tunneli avautui katutaiteelle toukokuussa 2008 Banksyn Cans Festivalissa.',
         selite: 'Leake Streetin noin kolmesataa metriä pitkässä tunnelissa seinien '
           + 'maalaaminen on sallittua, ja se avautui taiteelle toukokuussa '
           + '2008 Banksyn Cans Festivalissa.',
-        lahde: 'Ted Potters, Wikimedia Commons (PD)',
+        lahde: "maggie jones., Wikimedia Commons (PD)",
       },
       kysymykset: [
         'Miksi juuri tässä tunnelissa maalaaminen sallittiin?',
@@ -1194,12 +1194,12 @@ export const FOKUSVIRTA_LONTOO = {
         + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
         + 'karttauudistuksen erässä 10, 13.9.2026.',
       kuva: {
-        tiedosto: 'Gormley-OneandOther-4thPlinth-TrafalgarSq-20090706.jpg',
+        tiedosto: "Empty Fourth Plinth.jpg",
         lyhyt: 'One & Other -teoksessa 2 400 ihmistä sai vuorollaan tunnin Trafalgar Squaren jalustalla 2009.',
         selite: 'One & Other -teoksessa 2 400 tavallista ihmistä sai kukin tunnin '
           + 'Trafalgar Squaren neljännellä jalustalla sadan päivän ajan '
           + 'kesällä 2009.',
-        lahde: 'Simon Lee, Wikimedia Commons (CC BY 2.0)',
+        lahde: "Matt Brown, Wikimedia Commons (CC BY 2.0)",
       },
       kysymykset: [
         'Mitä ihmiset tekivät sillä tunnilla, jonka saivat jalustan päällä?',
@@ -1233,12 +1233,12 @@ export const FOKUSVIRTA_LONTOO = {
         + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
         + 'karttauudistuksen erässä 10, 13.9.2026.',
       kuva: {
-        tiedosto: 'Turbine Hall - Tate Modern - geograph.org.uk - 7509077.jpg',
-        lyhyt: 'Tate Modernin 155-metrinen turbiinihalli täyttyy kerrallaan yhdellä jättimäisellä teoksella.',
-        selite: 'Tate Modernin turbiinihalli on 155 metriä pitkä ja 35 metriä '
-          + 'korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen '
-          + 'teoksen.',
-        lahde: 'Mr Ignavy, Wikimedia Commons (CC BY-SA 2.0)',
+        tiedosto: "Tate Modern - Bankside Power Station.jpg",
+        lyhyt: 'Tate Modern toimii entisessä voimalassa, ja sen 155-metriseen turbiinihalliin tilataan kerrallaan yksi jättimäinen teos.',
+        selite: 'Tate Modern toimii entisessä Banksiden voimalassa. Sen '
+          + 'turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo '
+          + 'tilaa siihen kerrallaan yhden jättimäisen teoksen.',
+        lahde: "Acabashi, Wikimedia Commons (CC BY-SA 4.0)",
       },
       kysymykset: [
         'Miltä sadan miljoonan siemenen päällä käveleminen tuntui?',
@@ -1307,18 +1307,4 @@ export const FOKUSVIRTA_LONTOO = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: kuningas Juhanan
-   * jalokivet, jotka upposivat Wash-lahdella 1216. Merkintä aukeaa,
-   * kun aarre löytyy (js/fokusvirta.js fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Washin lahdella vanha kalastaja näytti, missä kuningas '
-      + 'Juhanan kuormasto upposi liejuun — vuorovesi oli syönyt sen '
-      + 'kuudessasadassa vuodessa syvemmälle kuin yksikään lapio yltää. '
-      + 'Kirjoitin luetteloon: tämä aarre ei ole kadonnut, se on vain '
-      + 'kärsivällisempi kuin me.',
-  },
 };

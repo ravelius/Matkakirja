@@ -601,11 +601,11 @@ export const FOKUSVIRTA_BUKAREST = {
      * viimeinen virke puhuu.
      */
     kuva: {
-      tiedosto: 'Curtea Veche 1.jpg',
+      tiedosto: "Curtea Veche - church and building.JPG",
       lyhyt: 'Vanhan ruhtinaanhovin raunioita; Vlad III nimitti paikan asuinpaikakseen 1459.',
       selite: 'Vanhan ruhtinaanhovin raunioita Bukarestin vanhassakaupungissa. '
         + 'Juuri tämän paikan Vlad III nimitti 1459 asuinpaikakseen.',
-      lahde: 'Nicubunu, Wikimedia Commons (CC BY-SA 3.0 ro)',
+      lahde: "Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)",
     },
   },
 
@@ -844,22 +844,4 @@ export const FOKUSVIRTA_BUKAREST = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * Kaanon, kohta 5 — teksti sellaisenaan. Isoisän merkintä, joka aukeaa
-   * kun aarre löytyy.
-   *
-   * KAKSI ASIAA, JOTKA EIVÄT SAA MUUTTUA. Ensimmäinen virke nojaa
-   * tarkistettuun faktaan (Peleșin peruskivi 22.8.1873,
-   * fokuskohteet-romania.md kohde 3), ja viimeinen virke kuittaa
-   * Istanbulin vaanijan poissaolon — kaari hengittää, ja siksi tässä
-   * kaupungissa EI ole vaanijaa.
-   */
-  aarremerkinta: {
-    teksti: 'Kätkin lippaani samana elokuuna, jona kuningas muurasi '
-      + 'Sinaiassa linnansa peruskiven. Hänen lippaansa tarvitsee linnan — '
-      + 'minun tarvitsee vain tarkan silmän. Sillalla ei tällä kertaa '
-      + 'seissyt ketään.',
-  },
 };

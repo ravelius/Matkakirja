@@ -3,57 +3,8 @@
  "kaupunkiQ": "Q1773",
  "kohteet": [
   {
-   "q": "Q337179",
-   "nimi": "Vapauden muistomerkki",
-   "peruste": "pelin nosto",
-   "koko_m": 60,
-   "lat": 56.95156,
-   "lon": 24.11322,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Freedom Monument, Riga (09.09.2022).01.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Freedom_Monument%2C_Riga_(09.09.2022).01.jpg?width=1280",
-     "tekija": "Nenea hartia",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Freedom_Monument%2C_Riga_(09.09.2022).01.jpg",
-     "selite": "Vapauden muistomerkki on Riian keskustan korkea obeliskimainen muistomerkki, jonka huipulla seisoo Vapaus-patsas.",
-     "leveys": 3648,
-     "korkeus": 5472,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "0873 LVA Riga freedom monument pedestal.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/0873_LVA_Riga_freedom_monument_pedestal.jpg?width=1280",
-     "tekija": "Virtual-Pano",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:0873_LVA_Riga_freedom_monument_pedestal.jpg",
-     "selite": "Muistomerkin jalustaa koristavat kuvanveistäjä Kārlis Zāleen veistokset ja kirjoitus isänmaan ja vapauden puolesta.",
-     "leveys": 5025,
-     "korkeus": 5025,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "0873 LVA Riga freedom monument SE.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/0873_LVA_Riga_freedom_monument_SE.jpg?width=1280",
-     "tekija": "Virtual-Pano",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:0873_LVA_Riga_freedom_monument_SE.jpg",
-     "selite": "Muistomerkki valmistui 1935, ja sen huipulla seisoo kolmea tähteä kantava nainen.",
-     "leveys": 4267,
-     "korkeus": 8463,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
    "q": "Q282196",
-   "nimi": "Kolme veljestä",
+   "nimi": "Kolme veljestä -talot",
    "peruste": "pelin nosto",
    "koko_m": 60,
    "lat": 56.95033,
@@ -67,7 +18,7 @@
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
      "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dz%C4%ABvojamo_namu_komplekss_%22Tr%C4%ABs_br%C4%81%C4%BCi%22.jpg",
-     "selite": "Kolme veljestä on Riian vanhimpia asuintalorivistöjä, jonka kolme taloa edustavat kolmea eri vuosisataa.",
+     "selite": "Kolme veljestä -talot ovat Riian vanhimpia asuintalorivistöjä, ja niiden kolme taloa edustavat kolmea eri vuosisataa.",
      "leveys": 7712,
      "korkeus": 4352,
      "tarkistettu": true
@@ -257,19 +208,6 @@
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Skylines of Riga by Nasta Faley.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skylines_of_Riga_by_Nasta_Faley.jpg?width=1280",
-     "tekija": "Nasta Faley",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skylines_of_Riga_by_Nasta_Faley.jpg",
-     "selite": "Ilmasta näkyvät markkinahallien kaarevat katot ja kaukana Daugavan sillat.",
-     "leveys": 6000,
-     "korkeus": 4000,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
      "tiedosto": "Maskavas Forštate, Latgale Suburb, Riga, Latvia - panoramio (86).jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maskavas_For%C5%A1tate%2C_Latgale_Suburb%2C_Riga%2C_Latvia_-_panoramio_(86).jpg?width=1280",
      "tekija": "bynyalcin",
@@ -426,104 +364,6 @@
      "selite": "Torni toimii nykyään Latvian sotamuseona.",
      "leveys": 3120,
      "korkeus": 4160,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
-   "q": "Q1133733",
-   "nimi": "Latvian kansalliskirjasto",
-   "peruste": "sitelinks",
-   "koko_m": 120,
-   "lat": 56.94134,
-   "lon": 24.09664,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "National Bibliothek Lettlands 1.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Bibliothek_Lettlands_1.jpg?width=1280",
-     "tekija": "Yeti-Hunter",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Bibliothek_Lettlands_1.jpg",
-     "selite": "Latvian kansalliskirjasto eli Valon linna on moderni kirjastorakennus Daugavan rannalla.",
-     "leveys": 3328,
-     "korkeus": 1872,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "2023 Riga Daugava river.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2023_Riga_Daugava_river.jpg?width=1280",
-     "tekija": "Qasinka",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2023_Riga_Daugava_river.jpg",
-     "selite": "Kirjaston lasinen kolmiopäätyrakennus erottuu joen yli nähtynä.",
-     "leveys": 3443,
-     "korkeus": 2582,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "27. trolejbuss Mūkusalas ielā.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/27._trolejbuss_M%C5%ABkusalas_iel%C4%81.jpg?width=1280",
-     "tekija": "Driver24",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:27._trolejbuss_M%C5%ABkusalas_iel%C4%81.jpg",
-     "selite": "Rakennus nousee porrasmaisesti taivasta kohti.",
-     "leveys": 3576,
-     "korkeus": 2656,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
-   "q": "Q830319",
-   "nimi": "Riian radio- ja televisiotorni",
-   "peruste": "sitelinks",
-   "koko_m": 368,
-   "lat": 56.92389,
-   "lon": 24.13694,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "16-08-31-View from Latvian Academy of Sciences building-RR2 4242.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/16-08-31-View_from_Latvian_Academy_of_Sciences_building-RR2_4242.jpg?width=1280",
-     "tekija": "Ralf Roletschek",
-     "lisenssi": "CC BY-SA 3.0 at",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:16-08-31-View_from_Latvian_Academy_of_Sciences_building-RR2_4242.jpg",
-     "selite": "Riian radio- ja televisiotorni kohoaa Daugavan saaressa kaupungin keskustan eteläpuolella.",
-     "leveys": 4288,
-     "korkeus": 2848,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Aerial view, sun and clouds in Riga.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view%2C_sun_and_clouds_in_Riga.jpg?width=1280",
-     "tekija": "Aleksejs Bergmanis",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view%2C_sun_and_clouds_in_Riga.jpg",
-     "selite": "Ilmasta torni ja Daugavan sillat erottuvat aamun pilvissä.",
-     "leveys": 5364,
-     "korkeus": 3014,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Daugava River and Riga Radio and Television Tower.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Daugava_River_and_Riga_Radio_and_Television_Tower.jpg?width=1280",
-     "tekija": "Tim Adams",
-     "lisenssi": "CC BY 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Daugava_River_and_Riga_Radio_and_Television_Tower.jpg",
-     "selite": "Torni on yksi Euroopan korkeimmista rakennuksista.",
-     "leveys": 3127,
-     "korkeus": 4691,
      "tarkistettu": true
     }
    ]

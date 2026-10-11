@@ -40,10 +40,12 @@
   "1.59": "5e17497c5f6372ab",
   "1.60": "4a8ca22618c14a91",
   "1.61": "ed66e0c3065b1cbe",
-  "1.62": "13e83718a06b3ebd"
+  "1.62": "13e83718a06b3ebd",
+  "1.63": "bc9bd2680b093976",
+  "1.64": "a7d69237b2a11d79"
  },
  "uusin": {
-  "skeemaversio": "1.62",
+  "skeemaversio": "1.64",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -115,7 +117,6 @@
     "id"
    ],
    "fokusvirrat": [
-    "aarremerkinta",
     "data",
     "id",
     "kaupunki",
@@ -457,7 +458,20 @@
     "maa",
     "sivut"
    ],
-   "maamerkit": [],
+   "maamerkit": [
+    "aina",
+    "id",
+    "kaupunki",
+    "lahde",
+    "lat",
+    "lisenssi",
+    "lon",
+    "maanKorkeus",
+    "malli",
+    "mallinKorkeus",
+    "suunta",
+    "tekija"
+   ],
    "maarajat": [
     "bbox",
     "id",

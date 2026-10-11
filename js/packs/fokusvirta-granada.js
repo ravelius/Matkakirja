@@ -1010,18 +1010,4 @@ export const FOKUSVIRTA_GRANADA = {
       id: 'juliste', sivu: 3, otsake: 'JULISTE', palkinto: 'juliste', visa: GRANVIA_VISA,
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Vigon lahden
-   * hopealasti. Merkintä aukeaa, kun aarre löytyy (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Täällä joka toinen mies vannoo, että maurit kätkivät '
-      + 'kultansa linnan alle lähtiessään, ja joka kolmas on kaivanut '
-      + 'sitä. Vanha opas nauroi heille: kaivavat väärässä päässä '
-      + 'maata, sanoi hän — oikea aarre upposi meren pohjaan luoteessa, '
-      + 'laivojen mukana, ja sen päällä on vettä eikä kiveä.',
-  },
 };

@@ -12,14 +12,11 @@ export const EUROPE_VALOKUVAT = {
   venetsia: {
     lisat: [
       {
-        tiedosto: 'Vaporetto Canal Grande stazione Santa Lucia Venezia.jpg',
+        tiedosto: "0 Venise, Vaporetto naviguant sur le Grand Canal .JPG",
         vuosi: '2016',
-        lahde: 'CC BY-SA 3.0 (Wolfgang Moroder, Commons)',
-        lyhyt: 'Vaporetto Canal Grandella Venetsiassa vuonna 2016.',
-        selite: 'Vaporetto eli vesibussi Canal Grandella Santa Lucian '
-          + 'rautatieaseman kohdalla. Venetsiassa julkinen liikenne kulkee '
-          + 'vettä pitkin, ja matkustajat seisovat keulassa kuten '
-          + 'päiväkirjassa.',
+        lahde: "Jean-Pol GRANDMONT, Wikimedia Commons (CC BY 4.0)",
+        lyhyt: "Vaporetto Canal Grandella, Venetsia",
+        selite: "Vaporetto eli vesibussi Canal Grandella vanhojen palatsien reunustamalla vesiväylällä. Venetsiassa julkinen liikenne kulkee vettä pitkin.",
       },
       {
         tiedosto: '(Venice) Palazzo Emo alla Maddalena - Facade on Canal Grande.jpg',
@@ -541,33 +538,7 @@ export const EUROPE_VALOKUVAT = {
 
     lisat: [
 
-      {
 
-        tiedosto: 'Knossos fresco of dolphins in queen\'s palace.JPG',
-        vuosi: 'noin 1600–1450 eaa. (kuvattu 2015)',
-        lahde: 'Paginazero, Commons (CC BY-SA 3.0)',
-        lyhyt: 'Delfiinifresko Knossoksen palatsin kuningattaren huoneessa Kreetalla.',
-        selite: 'Delfiinifresko Knossoksen palatsin kuningattaren huoneessa. '
-          + 'Siniset delfiinit ui pienten kalojen seassa, ja alareunassa '
-          + 'kiertää kiehkurakuvio.',
-      },
-
-      {
-
-        tiedosto: 'Grand Staircase Knossos 2015.JPG',
-
-        vuosi: '2015',
-
-        lahde: 'CC0 (Stefan Bellini, Commons)',
-
-        lyhyt: 'Knossoksen suuri portaikko Kreetalla vuonna 2015.',
-        selite: 'Knossoksen suuri portaikko, joka yhdisti palatsin itäsiiven '
-
-          + 'kerroksia. Samasta kohdasta pääsee sekä ylös että alas, mikä '
-
-          + 'tekee palatsista helposti eksyttävän.',
-
-      },
 
     ],
     tiedosto: 'Cnossus - room of (?), columns - north entrance - DPLA - 156faa906e3d69e9b9c71702853f1b8a.jpg',
@@ -577,14 +548,6 @@ export const EUROPE_VALOKUVAT = {
     selite: 'Knossoksen pohjoinen sisäänkäynti kaivausten aikaan. Arthur '
       + 'Evans alkoi kaivaa palatsia 1900 ja rakensi osan siitä '
       + 'uudelleen betonista — tapa, jota arkeologit yhä kiistelevät.',
-    uusi: {
-      tiedosto: 'Knossos North entrance bull fresco.jpg',
-      lahde: 'Jebulon, Commons (CC0)',
-      lyhyt: 'Knossoksen palatsin pohjoinen sisäänkäynti pylväineen ja härkäfreskon jäljennöksineen.',
-      selite: 'Knossoksen palatsin pohjoinen sisäänkäynti. Punaiset pylväät on '
-        + 'pystytetty uudelleen, ja seinällä on jäljennös härkäfreskosta, '
-        + 'jonka alkuperäinen on Herakleionin museossa.',
-    },
   },
 
   sisilia: {
@@ -2023,24 +1986,6 @@ export const EUROPE_VALOKUVAT = {
 
     lisat: [
 
-      {
-
-        tiedosto: 'Avenida de la Unión, Bucarest, Rumanía, 2016-05-29, DD 57.jpg',
-
-        vuosi: '2016',
-
-        lahde: 'CC BY-SA 4.0 (Diego Delso, Commons)',
-
-        lyhyt: 'Unirii-bulevardi ja parlamenttitalo Bukarestissa vuonna 2016.',
-        selite: 'Unirii-bulevardi suihkulähteineen ja sen päässä kohoava '
-
-          + 'parlamenttitalo, päiväkirjan "maailman painavin rakennus". '
-
-          + 'Bulevardi ja palatsi rakennettiin 1980-luvulla vanhan '
-
-          + 'kaupunginosan tilalle.',
-
-      },
 
       {
 
@@ -2111,16 +2056,6 @@ export const EUROPE_VALOKUVAT = {
 
     lisat: [
 
-      {
-
-        tiedosto: 'Arsenalna station. Kyiv metro.jpg',
-        vuosi: '2012',
-        lahde: 'Ahernar, Commons (CC BY-SA 4.0)',
-        lyhyt: 'Arsenalnan metroaseman laiturihalli Kiovassa vuonna 2012.',
-        selite: 'Arsenalnan aseman laiturihalli Kiovassa. Marmoripilarit ja '
-          + 'matala holvi ovat 105 metrin syvyydessä maan alla, ja halli on '
-          + 'poikkeuksellisen lyhyt.',
-      },
 
       {
 
@@ -2241,24 +2176,6 @@ export const EUROPE_VALOKUVAT = {
 
       },
 
-      {
-
-        tiedosto: 'Komsomolskaya-KL MosMetro station 02-2015 platform.jpg',
-
-        vuosi: '2015',
-
-        lahde: 'A. Savin, Commons (CC BY-SA 3.0)',
-
-        lyhyt: 'Komsomolskajan metroasema Moskovassa vuonna 2015.',
-        selite: 'Komsomolskajan asema Moskovan metron kehälinjalla. Pylväsrivit '
-
-          + 'kannattavat holvia, katossa on mosaiikkeja ja rivi '
-
-          + 'kattokruunuja — tällaiselta asemalta päiväkirjan kirjoittaja '
-
-          + 'unohti nousta pois.',
-
-      },
 
     ],
     tiedosto: 'Church of St. Basil, Red Square Moscow LCCN2017660946.jpg',
@@ -2432,22 +2349,6 @@ export const EUROPE_VALOKUVAT = {
 
       },
 
-      {
-
-        tiedosto: 'Latvian Song festival 2008.jpg',
-
-        vuosi: '2008',
-
-        lahde: 'Laima Gūtmane (simka), Commons (CC BY-SA 3.0)',
-
-        lyhyt: 'Latvian laulujuhla Riian Mežaparksin laulukentällä vuonna 2008.',
-        selite: 'Latvian laulujuhla Riian Mežaparksin suurella laulukentällä '
-
-          + 'vuonna 2008. Ensimmäiset yleiset latvialaiset laulujuhlat '
-
-          + 'pidettiin Riiassa kesällä 1873, ja perinne jatkuu yhä.',
-
-      },
 
       {
         tiedosto: 'Latvia Riga Cathedral weather cock.jpg',
@@ -2503,24 +2404,6 @@ export const EUROPE_VALOKUVAT = {
 
       },
 
-      {
-
-        tiedosto: 'Mermaid of Užupis.jpg',
-
-        vuosi: '2024',
-
-        lahde: 'Michał Derela, Commons (CC BY-SA 4.0)',
-
-        lyhyt: 'Užupiksen merenneitopatsas Vilnia-joen rannassa vuonna 2024.',
-        selite: 'Užupiksen merenneito istuu muurin kolossa Vilnia-joen rannassa, '
-
-          + 'aivan sillan vieressä. Pronssiveistos on kaupunginosan '
-
-          + 'tunnetuin maamerkki, ja se on siinä samassa kohdassa, jonka '
-
-          + 'päiväkirja mainitsee.',
-
-      },
 
     ],
     tiedosto: 'Vilnia, Vostraja Brama. Вільня, Вострая Брама (S. Fleury, 1900).jpg',
@@ -2751,13 +2634,10 @@ export const EUROPE_VALOKUVAT = {
       + 'lakit päässä, ja kosken takana avautuu Hämeenkatu kivitaloineen. '
       + 'Oikealla puistossa on koristeellinen puinen paviljonki.',
     uusi: {
-      tiedosto: 'Hämeensilta 2021.jpg',
-      lahde: 'Tiia Monto, Commons (CC BY-SA 4.0)',
-      lyhyt: 'Sama silta tänään: vuoden 1929 kivisilta korvattiin 2019 uudella, graniitilla verhoiltuna.',
-      selite: 'Sama silta tänään. Vuoden 1929 kivisilta korvattiin 2019 '
-        + 'uudella, joka rakennettiin vanhan näköiseksi ja verhoiltiin '
-        + 'punertavalla graniitilla. Kaiteella seisoo yhä yksi Wäinö '
-        + 'Aaltosen neljästä pronssiveistoksesta.',
+      tiedosto: "Hämeensilta bridge in Tampere, Finland, 2024 July.jpg",
+      lahde: "Pete, Wikimedia Commons (CC BY 2.0)",
+      lyhyt: "Hämeensilta ylittää Tammerkosken Tampereen keskustassa.",
+      selite: "Hämeensilta kaartuu Tammerkosken yli Tampereen keskustassa; etualalla on joen kirkas vesi ja pohjakasvillisuutta.",
     },
   },
 

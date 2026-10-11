@@ -1356,25 +1356,4 @@ export const FOKUSVIRTA_PIETARI = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. Iso
-   * aarre: tsaarin kadonnut pääsiäismuna. Merkintä aukeaa, kun aarre
-   * löytyy (js/fokusvirta.js fokusvirtaAarremerkinta), samaan
-   * matkakirjakorttiin kuin saapumismerkintä.
-   *
-   * HUOM AJOITUKSESTA: ks. tiedoston alun osio "AARREMERKINTÄ ON ENNE,
-   * EI HISTORIAA". Merkintä on kirjoitettu enteeksi, ja täky `faberge`
-   * kertoo pelaajalle, mitä enteestä lopulta tuli.
-   */
-  aarremerkinta: {
-    teksti: 'Kultasepän liikkeessä Suurella Merikadulla hoidettiin hovin '
-      + 'tilauksia väliverhon takana. Oppipoika kertoi minulle '
-      + 'puoliääneen, että keisarinnalle suunnitellaan lahjaa, jollaista '
-      + 'ei ole ennen tehty — pieni esine, jonka sisään kätketään '
-      + 'toinen. Sellainen esine on tehty katoamaan kauniisti. Merkitsen '
-      + 'tämän ylös: pidä silmällä pieniä esineitä, joiden sisällä on '
-      + 'salaisuus.',
-  },
 };

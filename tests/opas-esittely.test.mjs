@@ -190,9 +190,9 @@ test('esittely-indeksi: pilotti pariisi, praha, wien (vienti 7.10.)', async () =
   // Äänettömät 31 (omistaja 7.10. 18.2x): kaikki sallitut kaupungit, jokaisella oma polku esittely-aaneton-v3:ssa (8.10. avaukseen pallovirke).
   const { OPAS_SALLITUT } = await import('../tools/pollo/sallitut.js');
   assert.deepEqual([...OPAS_AINEISTOT.esittely].sort(), OPAS_SALLITUT.sallitut.map((x) => x.id).sort());
-  // Kehityskaupunki Tukholma (omistaja 8.10. 20.4x): kertojan äänet, oma polku; 9.10. lähikohteet esittely-v3, v3b Vasan katse_suunta.
+  // Kehityskaupunki Tukholma (omistaja 8.10. 20.4x): kertojan äänet, oma polku; 9.10. lähikohteet esittely-v3, v3b Vasan katse_suunta, v3c Stortorget (juna 183).
   // LS1 11.10.: Bryssel ja Firenze v2a (korkeus_m tornillisille rakennuksille, natiivin kierroksen esteet).
-  const AANELLISET = { tukholma: 'opas/esittely-v3b/tukholma.json', bryssel: 'opas/esittely-v2a/bryssel.json', firenze: 'opas/esittely-v2a/firenze.json' };
+  const AANELLISET = { tukholma: 'opas/esittely-v3c/tukholma.json', bryssel: 'opas/esittely-v2a/bryssel.json', firenze: 'opas/esittely-v2a/firenze.json' };
   for (const id of OPAS_AINEISTOT.esittely.slice(6)) assert.equal(OPAS_AINEISTOT.esittely_polut[id], AANELLISET[id] ?? `opas/esittely-v2/${id}.json`);
 });
 
@@ -250,7 +250,7 @@ test('sana-ajat (LS1 7.10.): aani_ajat vain kun R2:ssa on <sha>.ajat.json; GET p
 
 test('yksityiskohdat_polut: 6 äänellistä + kaikki 31 äänetöntä (Sisältökirjuri 10.10.; 33 havainnekuvakaupunkia, Sevilla perässä)', async () => {
   const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
-  assert.deepEqual(OPAS_AINEISTOT.yksityiskohdat_polut, { pariisi: 'esittely/pariisi-v3/pariisi-yksityiskohdat.json',
+  assert.deepEqual(OPAS_AINEISTOT.yksityiskohdat_polut, { pariisi: 'esittely/pariisi-v4/pariisi-yksityiskohdat.json',
     praha: 'esittely/praha-v2/praha-yksityiskohdat.json', wien: 'esittely/wien-v2/wien-yksityiskohdat.json',
     rooma: 'esittely/rooma-v5/rooma-yksityiskohdat.json', lontoo: 'esittely/lontoo-v3/lontoo-yksityiskohdat.json',
     koopenhamina: 'esittely/koopenhamina-v5/koopenhamina-yksityiskohdat.json',
@@ -258,7 +258,7 @@ test('yksityiskohdat_polut: 6 äänellistä + kaikki 31 äänetöntä (Sisältö
     berliini: 'esittely/berliini-v3/berliini-yksityiskohdat.json', amsterdam: 'esittely/amsterdam-v2/amsterdam-yksityiskohdat.json',
     madrid: 'esittely/madrid-v2/madrid-yksityiskohdat.json', ateena: 'esittely/ateena-v2/ateena-yksityiskohdat.json',
     firenze: 'esittely/firenze-v3/firenze-yksityiskohdat.json',
-    lissabon: 'esittely/lissabon-v2/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v6/tukholma-yksityiskohdat.json',
+    lissabon: 'esittely/lissabon-v2/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v7/tukholma-yksityiskohdat.json',
     helsinki: 'esittely/helsinki-v3/helsinki-yksityiskohdat.json', budapest: 'esittely/budapest-v2/budapest-yksityiskohdat.json',
     edinburgh: 'esittely/edinburgh-v2/edinburgh-yksityiskohdat.json', dublin: 'esittely/dublin-v2/dublin-yksityiskohdat.json',
     krakova: 'esittely/krakova-v2/krakova-yksityiskohdat.json', sevilla: 'esittely/sevilla-v1/sevilla-yksityiskohdat.json',
@@ -313,9 +313,9 @@ test('historia_polut: kehityskaupunkien historiaosiot (Tukholma, Pariisi) omasta
   assert.deepEqual(Object.keys(OPAS_AINEISTOT.historia_yksityiskohdat_polut).sort(), Object.keys(OPAS_AINEISTOT.historia_polut).sort());
 });
 
-test('esittely_polut: Pariisi v1g (v1f + Notre-Damen katse_suunta/katse_loppu/lasku_osuus), äänet ennallaan', async () => {
+test('esittely_polut: Pariisi v1h (v1g + kipin aukiot Vendôme, Bastille, République, Saint-Michel; juna 183), äänet ennallaan', async () => {
   const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
-  assert.equal(OPAS_AINEISTOT.esittely_polut.pariisi, 'opas/esittely-v1g/pariisi.json');
+  assert.equal(OPAS_AINEISTOT.esittely_polut.pariisi, 'opas/esittely-v1h/pariisi.json');
 });
 
 test('esittelyn omat lat/lon voittavat kohdelistan (Louvren pyramidi, LS1/PT 10.10.)', async () => {
@@ -352,9 +352,11 @@ test('katse_suunta (LS1/PT 9.10., juna 174): esittelyn kohteen kenttä pysähdyk
   assert.equal(toka.d.id, 'Q101'); assert.ok(!('katse_suunta' in toka.d), 'kenttä puuttuu → ei vastauksessa');
 });
 
-test('esittely_polut: Tukholma v3b (Vasa-museo katse_suunta 40, juna 174)', async () => {
+test('esittely_polut: Tukholma v3c (v3b + Stortorget katse_suunta 270 / kaari 20, Sergels torg pois; juna 183) ja kuvat-v10 (+ Pariisin aukiot)', async () => {
   const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
-  assert.equal(OPAS_AINEISTOT.esittely_polut.tukholma, 'opas/esittely-v3b/tukholma.json');
+  assert.equal(OPAS_AINEISTOT.esittely_polut.tukholma, 'opas/esittely-v3c/tukholma.json');
+  const { KUVALISTA_URL } = await import('../tools/pollo/opas-kuvat.js');
+  assert.equal(KUVALISTA_URL, 'https://media.matkakirja.app/opas/kuvat-v10/kuvat.json');
 });
 
 test('katse_kaari (LS1/PT 9.10., juna 174): litteä kenttä pysähdykseen, rajattu 0–45, puuttuva/virheellinen pois', async () => {

@@ -766,17 +766,4 @@ export const FOKUSVIRTA_HELSINKI = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Ivalojoen
-   * kultahippu. Merkintä aukeaa, kun aarre löytyy (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Kuulin Ivalojoen kullasta jo laivalla: kolme vuotta sitten '
-      + 'joelta alkoi löytyä hippuja, ja pohjoiseen kulkee nyt miehiä lapio '
-      + 'selässä. Lappi oli minulle liian kaukana — merkitsin joen '
-      + 'luetteloon ja jätin sen sinulle.',
-  },
 };

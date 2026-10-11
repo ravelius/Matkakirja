@@ -906,17 +906,4 @@ export const FOKUSVIRTA_TUKHOLMA = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Kronan-laivan
-   * kultakolikot; Kronan upposi 1676 Öölannin edustalla. Merkintä
-   * aukeaa, kun aarre löytyy (js/fokusvirta.js fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Kalastaja Öölannin edustalla vannoi, että Kronanin kulta makaa '
-      + 'hänen verkkojensa alla, eikä suostunut näyttämään paikkaa edes '
-      + 'rahasta. Kirjoitin luetteloon: meri pitää sen minkä ottaa — kunnes '
-      + 'joku kysyy oikein.',
-  },
 };

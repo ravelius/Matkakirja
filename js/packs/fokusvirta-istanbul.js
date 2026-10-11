@@ -882,18 +882,4 @@ export const FOKUSVIRTA_ISTANBUL = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * Kaanon, kohta 5 — teksti sellaisenaan. Isoisän merkintä, joka
-   * aukeaa kun aarre löytyy. Kaanon merkitsee tämän MAAN 3
-   * ENSIMMÄISEKSI VAANIJAVIHJEEKSI: merkintä ei enää kerro vain siitä,
-   * että aarre jäi kaivamatta, vaan siitä, että joku muukin etsii.
-   */
-  aarremerkinta: {
-    teksti: 'Basaarin kätköä en ehtinyt edes piirtää: mies, joka oli '
-      + 'kysellyt minusta satamassa, seisoi jo sillalla. Jätin merkin '
-      + 'luetteloon ja nousin yöjunaan — jos hän etsii samaa kuin minä, '
-      + 'toivon että sinä ehdit ensin.',
-  },
 };

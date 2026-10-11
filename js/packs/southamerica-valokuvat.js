@@ -372,16 +372,6 @@ export const SOUTHAMERICA_VALOKUVAT = {
           + 'teräslevyistä koottu muistomerkki.',
       },
       {
-        tiedosto: 'Horn albatros.JPG',
-        vuosi: '2006',
-        lahde: 'Rémi Jouan, Commons (CC BY-SA 3.0)',
-        lyhyt: 'Kap Hornin caphornier-merimiesten muistomerkki vuonna 2006.',
-        selite: 'Kap Hornin muistomerkki, joka on omistettu kapinkiertäjille eli '
-          + 'caphornier-merimiehille. Teräslevyistä leikattu muoto esittää '
-          + 'albatrossia, ja se on pystytetty niiden muistoksi, jotka jäivät '
-          + 'näille vesille.',
-      },
-      {
         tiedosto: 'Cape Horn, Chile (6315052275).jpg',
         vuosi: '2011',
         lahde: 'Liam Quinn, Commons (CC BY-SA 2.0)',
@@ -1261,16 +1251,6 @@ export const SOUTHAMERICA_VALOKUVAT = {
       + 'Ferrez kuvasi Rion maisemat lasilevyille, ja tämä vedos on hänen '
       + 'kokoelmastaan.',
     lisat: [
-      {
-        tiedosto: 'Escadaria Selarón - Rio de Janeiro - 20240417062601.jpg',
-        vuosi: '2024',
-        lahde: 'Donatas Dabravolskas, Commons (CC BY-SA 4.0)',
-        lyhyt: 'Selarónin laatoitetut portaat Rio de Janeirossa vuonna 2024.',
-        selite: 'Selarónin portaat Lapan kaupunginosassa. Chileläinen Jorge '
-          + 'Selarón alkoi laatoittaa talonsa edustan rappuja 1990-luvulla ja '
-          + 'jatkoi työtä kuolemaansa asti; laattoja on lähetetty hänelle '
-          + 'ympäri maailmaa.',
-      },
       {
         tiedosto: 'Scene at Feira De Sao Cristovao - Zona Norte - Rio de Janeiro - Brazil - 01 (17556944211).jpg',
         vuosi: '2015',

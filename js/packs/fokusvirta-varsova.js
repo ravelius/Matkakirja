@@ -1129,23 +1129,4 @@ export const FOKUSVIRTA_VARSOVA = {
       id: 'juliste', sivu: 3, otsake: 'JULISTE', palkinto: 'juliste', visa: WIELICZKA_VISA,
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Merkintä aukeaa, kun aarre
-   * löytyy (js/fokusvirta.js fokusvirtaAarremerkinta).
-   *
-   * MERKINTÄ EI NIMEÄ YHTÄKÄÄN ESINETTÄ, JA SE ON TARKOITUS: Puolan
-   * iso aarre on Krakovan Rafael, ja Varsovan merkintä kuvaa tavan
-   * eikä kohdetta. Tämän paketin täyt ja oppitunti ovat saman tavan
-   * kolme esimerkkiä — taulut, kirjat ja yksi kallo — eikä yksikään
-   * niistä ole se aarre, jota pelaaja etsii.
-   */
-  aarremerkinta: {
-    teksti: 'Kirjakauppias sanoi: tämä kansa on oppinut, että aarre jota ei '
-      + 'voi puolustaa, pitää piilottaa tai lähettää matkalle. Kirjastot, '
-      + 'sydämet, taulut — kaikki tärkein on täällä liikkunut ja liikkuu '
-      + 'vielä. Ruhtinaiden kokoelmatkin pakataan kärryihin, kun idästä '
-      + 'tai lännestä kuuluu jyrinää. Kaikki ei ole palannut vieläkään.',
-  },
 };

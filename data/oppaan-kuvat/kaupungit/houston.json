@@ -97,15 +97,15 @@
     },
     {
      "jarjestys": 2,
-     "tiedosto": "170131-H-NI589-0597.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/170131-H-NI589-0597.jpg?width=1280",
-     "tekija": "CBP Photography",
-     "lisenssi": "Public domain",
-     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:170131-H-NI589-0597.jpg",
-     "selite": "Stadionin julkisivulla näkyy suuri NRG-logo ja Super Bowlin mainos.",
-     "leveys": 5016,
-     "korkeus": 3365,
+     "tiedosto": "NRGStadiumnew.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/NRGStadiumnew.jpg?width=1280",
+     "tekija": "WhisperToMe",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:NRGStadiumnew.jpg",
+     "selite": "NRG Stadium kohoaa katuristeyksen takana vaaleine julkisivuineen ja teräksisine kattorakenteineen.",
+     "leveys": 3264,
+     "korkeus": 2448,
      "tarkistettu": true
     }
    ]
@@ -192,28 +192,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Sam Houston monument, Hermann Park.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sam_Houston_monument%2C_Hermann_Park.jpg?width=1280",
+     "tiedosto": "Hermann Park, Houston, ducks at McGovern Lake.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hermann_Park%2C_Houston%2C_ducks_at_McGovern_Lake.JPG?width=1280",
      "tekija": "Another Believer",
      "lisenssi": "CC BY-SA 3.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sam_Houston_monument%2C_Hermann_Park.jpg",
-     "selite": "Hermann Parkin sisäänkäynnillä seisoo Sam Houstonin ratsastajapatsas valtavan kaaren päällä.",
-     "leveys": 2816,
-     "korkeus": 2112,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "'Atropos Key', sculpture by Hannah Holliday Stewart.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/'Atropos_Key'%2C_sculpture_by_Hannah_Holliday_Stewart.jpg?width=1280",
-     "tekija": "Brandon Price (Flickr user BPPrice)",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:'Atropos_Key'%2C_sculpture_by_Hannah_Holliday_Stewart.jpg",
-     "selite": "Hermann Parkin nurmikentällä seisoo Atropos Key -veistos sinistä taivasta vasten.",
-     "leveys": 5704,
-     "korkeus": 3808,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hermann_Park%2C_Houston%2C_ducks_at_McGovern_Lake.JPG",
+     "selite": "Hermann Parkin McGovern-järven matalassa rantavedessä seisoo kolme ruskeaa sorsaa.",
+     "leveys": 4000,
+     "korkeus": 3000,
      "tarkistettu": true
     }
    ]

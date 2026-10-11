@@ -192,8 +192,16 @@ const KAUPUNGIT = {
     // OSM:ssä vesirelaatioita — ja niiden sisärenkaat (Kungsholmen,
     // Södermalm) tulevat vasta 9.8.2026 tehdyn reikäkorjauksen
     // jälkeen oikein. Ennen sitä puoli kaupunkia oli veden alla.
+    //
+    // KORJATTU 11.10.2026 (Karttaseppä, Euroopan karttatarkistus): Saltsjö,
+    // Strömmen ja Nybroviken jäivät paperin värisiksi, eli ne näyttivät
+    // maalta, vaikka Tukholma on aloituskaupunki. meri: true + meriHaku:
+    // rantaviiva haetaan 0,05° (N/S) ja 0,1° (I/L) laajemmalta alueelta,
+    // jolloin Djurgårdenin ranta sulkeutuu saareksi eikä täyttö upota sitä.
     rajat: { pohjoinen: 59.342, etela: 59.313, lansi: 18.03, ita: 18.11 },
     laajennus: 1.6,
+    meri: true,
+    meriHaku: 0.05,
   },
   venetsia: {
     /*
@@ -210,7 +218,15 @@ const KAUPUNGIT = {
     // Arsenaali) osuvat alueelle. Muut Venetsian kartat ovat tästä
     // poikkeus siinä, että kohteiden väliset "kadut" ovat kujia ja
     // kanavia — ks. KADUT-taulun kommentti jalankulkuluokista.
+    //
+    // LAGUUNI VEDEKSI 11.10.2026 (Karttaseppä): laguuni on OSM:ssä
+    // vesirelaatio (water=lagoon), jonka sisärenkaissa EI ole kaupungin
+    // saaria, eikä niillä ole rantaviivaa tai place=island-rajaa. Siksi
+    // täyttö upotti kaupungin 9.8. ja vahti piirsi rantaviivan.
+    // laguuniMaa: laguuni täytetään ja maa piirretään katuverkosta
+    // leveällä vedolla (px 1600 px:n kuvassa; 22 px ≈ 40 m).
     rajat: { pohjoinen: 45.445, etela: 45.4265, lansi: 12.3155, ita: 12.352 },
+    laguuniMaa: 22,
   },
   praha: {
     // Vltavan mutka: Petřínin kukkula ja Hradčany lännessä,
@@ -334,6 +350,9 @@ const KAUPUNGIT = {
     // Kansallispuutarha ja Lykavittós. Pireus on 8 km lounaaseen eikä
     // mahdu millään ydinkeskustarajauksella.
     rajat: { pohjoinen: 37.9855, etela: 37.9625, lansi: 23.707, ita: 23.758 },
+    // Värikartta ja 1,6-kertainen reunus kuten Pariisissa ja Tukholmassa
+    // (Karttaseppä 11.10.2026: aloituskaupungit samaan tyyliin).
+    laajennus: 1.6,
   },
   helsinki: {
     // Kuvan pääpiirre on NIEMI: ydinkeskusta on kolmelta sivulta veden
@@ -456,7 +475,7 @@ const KAUPUNGIT = {
     // Rajaus on neliö, koska ruudukko on itse 45 asteen kulmassa.
     // Park Güell jää 630 m pohjoisrajan yläpuolelle: mukaan ottaminen
     // liimaisi sen ja Kolumbuksen patsaan kumpikin omaan laitaansa.
-    rajat: { pohjoinen: 41.4085, etela: 41.37, lansi: 2.147, ita: 2.1984 },
+    rajat: { pohjoinen: 41.4105, etela: 41.37, lansi: 2.147, ita: 2.1984 }, // pohjoisreuna +0,002 (Roviran aukio irti reunasta, Karttaseppä 11.10.2026)
     meri: true,
   },
   granada: {
@@ -708,6 +727,10 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 35.9035, etela: 35.8925, lansi: 14.5085, ita: 14.5205 },
     laajennus: 1.6,
+    // Grand Harbour ja Marsamxett jäivät paperin värisiksi (Euroopan
+    // meritarkistus 11.10.2026: 2 % GSHHG:n merestä näkyi vetenä).
+    meri: true,
+    meriHaku: 0.05,
   },
   luxemburg: {
     /*
@@ -1005,7 +1028,7 @@ const KAUPUNGIT = {
     // 59.944–59.953 / 30.385–30.406 ajettiin: 242 elementtiä, Nevan
     // mutka ja pari katua, itse katedraali on rakennus jota ei piirretä.
     // Lisäksi Pietarissa ei ole tyhjää nurkkaa mihin ruutu sopisi.
-    rajat: { pohjoinen: 59.9545, etela: 59.9215, lansi: 30.284, ita: 30.347 },
+    rajat: { pohjoinen: 59.9545, etela: 59.9195, lansi: 30.284, ita: 30.347 }, // eteläreuna −0,002 (Mariinski irti mittakaavajanasta, Karttaseppä 11.10.2026)
   },
   moskova: {
     // TÄMÄ RAJAUS ON TAHALLAAN ISOMPI KUIN PITÄISI, ja syy on mitattu.
@@ -6151,6 +6174,159 @@ const KAUPUNGIT = {
   ramallah: {
     rajat: { pohjoinen: 31.908, etela: 31.8824, lansi: 35.1877, ita: 35.2196 },
   },
+  // AFRIKAN PÄÄKAUPUNKIPISTEET (Karttaseppä 11.10.2026, PT): kohteet OSM:stä ja Wikipediasta, tekstit myöhemmin.
+  abuja: {
+    rajat: { pohjoinen: 9.0767, etela: 9.0413, lansi: 7.4833, ita: 7.5249 },
+  },
+  accra: {
+    rajat: { pohjoinen: 5.5582, etela: 5.5268, lansi: -0.2185, ita: -0.1769 },
+    meri: true,
+  },
+  alger: {
+    rajat: { pohjoinen: 36.7916, etela: 36.7684, lansi: 3.0512, ita: 3.0679 },
+    meri: true,
+  },
+  antananarivo: {
+    rajat: { pohjoinen: -18.9077, etela: -18.9356, lansi: 47.5187, ita: 47.5363 },
+  },
+  asmara: {
+    rajat: { pohjoinen: 15.3441, etela: 15.3242, lansi: 38.9219, ita: 38.9485 },
+  },
+  bamako: {
+    rajat: { pohjoinen: 12.668, etela: 12.6125, lansi: -8.0154, ita: -7.9832 },
+  },
+  bangui: {
+    rajat: { pohjoinen: 4.4053, etela: 4.3538, lansi: 18.5527, ita: 18.5826 },
+  },
+  banjul: {
+    rajat: { pohjoinen: 13.4641, etela: 13.4469, lansi: -16.5888, ita: -16.5683 },
+    meri: true,
+  },
+  bissau: {
+    rajat: { pohjoinen: 11.8671, etela: 11.8533, lansi: -15.5893, ita: -15.5754 },
+    meri: true,
+  },
+  brazzaville: {
+    rajat: { pohjoinen: -4.2548, etela: -4.2892, lansi: 15.2395, ita: 15.2981 },
+  },
+  conakry: {
+    rajat: { pohjoinen: 9.5394, etela: 9.496, lansi: -13.7249, ita: -13.6768 },
+    meri: true,
+  },
+  djibouti: {
+    rajat: { pohjoinen: 11.6084, etela: 11.588, lansi: 43.136, ita: 43.1545 },
+    meri: true,
+  },
+  freetown: {
+    rajat: { pohjoinen: 8.502, etela: 8.4658, lansi: -13.2585, ita: -13.1963 },
+    meri: true,
+  },
+  gaborone: {
+    rajat: { pohjoinen: -24.6533, etela: -24.6709, lansi: 25.9056, ita: 25.9383 },
+  },
+  harare: {
+    rajat: { pohjoinen: -17.7949, etela: -17.8419, lansi: 31.0321, ita: 31.06 },
+  },
+  juba: {
+    rajat: { pohjoinen: 4.8506, etela: 4.8161, lansi: 31.5779, ita: 31.6227 },
+  },
+  kampala: {
+    rajat: { pohjoinen: 0.3432, etela: 0.2923, lansi: 32.5439, ita: 32.5973 },
+  },
+  khartum: {
+    rajat: { pohjoinen: 15.6188, etela: 15.5917, lansi: 32.5011, ita: 32.5488 },
+  },
+  kigali: {
+    rajat: { pohjoinen: -1.9261, etela: -1.9619, lansi: 30.0443, ita: 30.1028 },
+  },
+  kinshasa: {
+    rajat: { pohjoinen: -4.2933, etela: -4.3456, lansi: 15.2724, ita: 15.3229 },
+  },
+  libreville: {
+    rajat: { pohjoinen: 0.402, etela: 0.3879, lansi: 9.4389, ita: 9.4559 },
+    meri: true,
+  },
+  lilongwe: {
+    rajat: { pohjoinen: -13.9359, etela: -13.9907, lansi: 33.7452, ita: 33.7971 },
+  },
+  lome: {
+    rajat: { pohjoinen: 6.1338, etela: 6.1162, lansi: 1.2089, ita: 1.2306 },
+    meri: true,
+  },
+  luanda: {
+    rajat: { pohjoinen: -8.8049, etela: -8.8284, lansi: 13.2153, ita: 13.2392 },
+    meri: true,
+  },
+  lusaka: {
+    rajat: { pohjoinen: -15.4072, etela: -15.4346, lansi: 28.2743, ita: 28.3226 },
+  },
+  maputo: {
+    rajat: { pohjoinen: -25.9627, etela: -25.988, lansi: 32.5498, ita: 32.5975 },
+    meri: true,
+  },
+  maseru: {
+    rajat: { pohjoinen: -29.3079, etela: -29.3271, lansi: 27.4734, ita: 27.5064 },
+  },
+  mogadishu: {
+    rajat: { pohjoinen: 2.0439, etela: 2.0283, lansi: 45.3271, ita: 45.3486 },
+    meri: true,
+  },
+  monrovia: {
+    rajat: { pohjoinen: 6.3232, etela: 6.2945, lansi: -10.8168, ita: -10.795 },
+    meri: true,
+  },
+  ndjamena: {
+    rajat: { pohjoinen: 12.1265, etela: 12.0935, lansi: 15.0296, ita: 15.0597 },
+  },
+  niamey: {
+    rajat: { pohjoinen: 13.5322, etela: 13.4978, lansi: 2.0975, ita: 2.1391 },
+  },
+  nouakchott: {
+    rajat: { pohjoinen: 18.1109, etela: 18.0681, lansi: -15.9892, ita: -15.9637 },
+    meri: true,
+  },
+  ouagadougou: {
+    rajat: { pohjoinen: 12.3767, etela: 12.3563, lansi: -1.5324, ita: -1.5136 },
+  },
+  portlouis: {
+    rajat: { pohjoinen: -20.1555, etela: -20.1733, lansi: 57.4941, ita: 57.5134 },
+    meri: true,
+  },
+  portonovo: {
+    rajat: { pohjoinen: 6.4788, etela: 6.4655, lansi: 2.6135, ita: 2.6313 },
+    meri: true,
+  },
+  praia: {
+    rajat: { pohjoinen: 14.9247, etela: 14.8986, lansi: -23.5208, ita: -23.504 },
+    meri: true,
+  },
+  rabat: {
+    rajat: { pohjoinen: 34.0371, etela: 33.992, lansi: -6.8465, ita: -6.8157 },
+    meri: true,
+  },
+  saotome: {
+    rajat: { pohjoinen: 0.349, etela: 0.3309, lansi: 6.7239, ita: 6.7426 },
+    meri: true,
+  },
+  tunis: {
+    rajat: { pohjoinen: 36.8138, etela: 36.7899, lansi: 10.1638, ita: 10.1891 },
+    meri: true,
+  },
+  victoria: {
+    rajat: { pohjoinen: -4.6183, etela: -4.6399, lansi: 55.4451, ita: 55.475 },
+    meri: true,
+  },
+  windhoek: {
+    rajat: { pohjoinen: -22.5562, etela: -22.5785, lansi: 17.0776, ita: 17.0957 },
+  },
+  yaounde: {
+    rajat: { pohjoinen: 3.8809, etela: 3.8329, lansi: 11.4801, ita: 11.5284 },
+  },
+  // AFRIKAN PÄÄKAUPUNKIPISTEET LOPPU
+  // VATIKAANI (PT 11.10.2026, juna 183): Euroopan viimeinen pääkaupunkipiste ilman karttaa.
+  vatikaanivaltio: {
+    rajat: { pohjoinen: 41.9081, etela: 41.8986, lansi: 12.4467, ita: 12.4605 },
+  },
 };
 
 /*
@@ -6799,14 +6975,16 @@ function piirretytRajat({ rajat, laajennus = 1 }) {
  * kainalokartat — kainalossa vain x ja y osoittavat pieneen ruutuun
  * pääkuvan sisällä.
  */
-function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
+function kokoaKerrokset(elementit, x, y, rajat, meri = false, rantaLaaja = null, laguuniMaa = 0) {
   const pisteet = (geom) => geom.map((p) => `${x(p.lon)},${y(p.lat)}`).join(' ');
   const kerrokset = {
     meri: [], saaret: [], puistot: [], vedet: [], joet: [], radat: [], muurit: [],
-    rauniot: [], raunioviivat: [],
+    rauniot: [], raunioviivat: [], maaveto: [], maavetoLeveys: laguuniMaa,
     kadut: KADUT.map(() => []),
   };
   const rantaviivat = [];
+  const katuViivat = [];
+  let laguuniTaytetty = false;
   const laatikonAla = (rajat.ita - rajat.lansi) * (rajat.pohjoinen - rajat.etela);
   for (const e of elementit) {
     /*
@@ -6873,6 +7051,20 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
          * rajaa sen näkymättömän osan pois ilman reunaviivaa.
          */
         const nakyva = renkaanAla(leikkaaLaatikkoon(rengas, rajat)) / laatikonAla;
+        if (nakyva > 0.5 && laguuniMaa && !laguuniTaytetty) {
+          /*
+           * LAGUUNI, JONKA SAARIA EI OLE RAJATTU (Karttaseppä 11.10.2026,
+           * Venetsia). Laguunin vesirelaatiossa kaupungin saaret eivät ole
+           * sisärenkaina, eikä niillä ole rantaviivaa tai place=island-
+           * rajaa. Laguuni täytetään, ja maa piirretään sen päälle
+           * katuverkosta leveällä paperinvärisellä vedolla (maaveto-
+           * kerros); kanavat ja vedet piirtyvät tämän päälle kuten ennen.
+           */
+          console.log(`  laguuni ${Math.round(nakyva * 100)} %: täytetään, maa katuverkosta (${laguuniMaa} px)`);
+          kerrokset.meri.push(`<path fill-rule="evenodd" d="${polku([rengas, ...sisa])}"/>`);
+          laguuniTaytetty = true;
+          break; // relaation muut renkaat ovat saman laguunin kopioita (kuten vanhassa haarassa)
+        }
         if (nakyva > 0.5) {
           console.log(`  vesirelaatio peittäisi ${Math.round(nakyva * 100)} % —`
             + ' piirretään rantaviivana');
@@ -6892,6 +7084,7 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
     if (t.highway) {
       const i = KADUT.findIndex((k) => k.luokat.includes(t.highway));
       if (i >= 0) kerrokset.kadut[i].push(`<polyline points="${pisteet(e.geometry)}"/>`);
+      katuViivat.push(e.geometry);
     } else if (t.waterway) {
       kerrokset.joet.push(`<polyline points="${pisteet(e.geometry)}"/>`);
     } else if (t.natural === 'coastline') {
@@ -6962,7 +7155,16 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
     if (!meri) {
       nauhaksi();
     } else {
-      const { renkaat, saaret } = merenTaytto(ketjutaSuunnassa(rantaviivat), rajat,
+      /*
+       * MERIHAKU (Karttaseppä 11.10.2026, Tukholman Saltsjö): kun
+       * rantaviiva on haettu piirtoalaa laajemmalta alueelta, täyttö
+       * tehdään siinä laatikossa. Saaret, joiden ranta poistuu
+       * piirtoalasta (Djurgården), sulkeutuvat silloin renkaiksi, ja
+       * laatikon reunasulut osuvat kauas kuvan ulkopuolelle. SVG leikkaa
+       * ylimenevän osan kuvan reunaan.
+       */
+      const tayttoRajat = rantaLaaja?.rajat ?? rajat;
+      const { renkaat, saaret } = merenTaytto(ketjutaSuunnassa(rantaLaaja?.viivat ?? rantaviivat), tayttoRajat,
         meri === 'maa' ? 'maa' : 'vesi');
       /*
        * Näkyvä vesi = meri miinus saaret. Ero on olennainen
@@ -6971,9 +7173,10 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
        */
       const pintaAla = renkaat.reduce((summa, rengas) => summa + renkaanAla(rengas), 0)
         - saaret.reduce((summa, saari) => summa + renkaanAla(saari), 0);
-      if (!renkaat.length || pintaAla > laatikonAla * 0.85) {
+      const tayttoAla = (tayttoRajat.ita - tayttoRajat.lansi) * (tayttoRajat.pohjoinen - tayttoRajat.etela);
+      if (!renkaat.length || pintaAla > tayttoAla * 0.85) {
         if (renkaat.length) {
-          console.log(`  VAROITUS: meri peittäisi ${Math.round((pintaAla / laatikonAla) * 100)} %`
+          console.log(`  VAROITUS: meri peittäisi ${Math.round((pintaAla / tayttoAla) * 100)} %`
             + ' rajauksesta — piirretään rantanauha. Tarkista rajaus.');
         }
         nauhaksi();
@@ -6983,6 +7186,7 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
       }
     }
   }
+  if (laguuniTaytetty) for (const geom of katuViivat) kerrokset.maaveto.push(`<polyline points="${pisteet(geom)}"/>`);
   return kerrokset;
 }
 
@@ -7023,6 +7227,8 @@ function kerrosKuvaus(kerrokset, mitta = 1, rauniokaupunki = false) {
        katoaisivat veden alle. -->
   <g fill="${VESI}" stroke="${VESIREUNA}" stroke-width="${v(1.4)}">${kerrokset.meri.join('')}</g>
   <g fill="${PAPERI}" stroke="${VESIREUNA}" stroke-width="${v(1.4)}">${kerrokset.saaret.join('')}</g>
+  <g fill="none" stroke="${PAPERI}" stroke-width="${v(kerrokset.maavetoLeveys || 0)}" stroke-linecap="round"
+     stroke-linejoin="round">${kerrokset.maaveto.join('')}</g>
   <g fill="${PUISTO}" stroke="none">${kerrokset.puistot.join('')}</g>
   <g fill="${RAUNIO}" stroke="${raunioReuna}" stroke-width="${v(raunioViiva)}">${kerrokset.rauniot.join('')}</g>
   <g fill="none" stroke="${raunioReuna}" stroke-width="${v(raunioViiva + 0.4)}"
@@ -7121,9 +7327,9 @@ function piirraKainalo(kainalo, elementit, W, H, ydinW, rauniokaupunki = false) 
   ${teksti}`;
 }
 
-function piirra(kaupunki, elementit, kainaloAineistot = []) {
+function piirra(kaupunki, elementit, kainaloAineistot = [], rantaLaaja = null) {
   const {
-    kainalot = [], meri = false, laajennus = 1, rauniokaupunki = false,
+    kainalot = [], meri = false, laajennus = 1, rauniokaupunki = false, laguuniMaa = 0,
   } = KAUPUNGIT[kaupunki];
   const rajat = piirretytRajat(KAUPUNGIT[kaupunki]);
   // Ydinrajaus pysyy 1600 pikselinä myös laajennetussa kuvassa, ks.
@@ -7132,7 +7338,7 @@ function piirra(kaupunki, elementit, kainaloAineistot = []) {
   const H = Math.round(W / kuvasuhde(rajat));
   const x = (lon) => (((lon - rajat.lansi) / (rajat.ita - rajat.lansi)) * W).toFixed(1);
   const y = (lat) => (((rajat.pohjoinen - lat) / (rajat.pohjoinen - rajat.etela)) * H).toFixed(1);
-  const kerrokset = kokoaKerrokset(elementit, x, y, rajat, meri);
+  const kerrokset = kokoaKerrokset(elementit, x, y, rajat, meri, rantaLaaja, laguuniMaa);
   const kainaloKuvat = kainalot
     .map((k, i) => piirraKainalo(k, kainaloAineistot[i] ?? [], W, H, W / laajennus, rauniokaupunki))
     .join('\n');
@@ -7170,7 +7376,37 @@ for (const [i, kainalo] of (KAUPUNGIT[kaupunki].kainalot ?? []).entries()) {
   console.log(`  ${osat.length} elementtiä.`);
   kainaloAineistot.push(osat);
 }
-const svg = piirra(kaupunki, elementit, kainaloAineistot);
+/*
+ * MERIHAKU: `meriHaku: <asteita>` hakee rantaviivan (natural=coastline)
+ * piirtoalaa sen verran laajemmalta alueelta joka suuntaan, ja meri
+ * täytetään siinä laatikossa (ks. kokoaKerrokset). Tukholma 11.10.2026.
+ */
+let rantaLaaja = null;
+if (KAUPUNGIT[kaupunki].meriHaku) {
+  const r0 = piirretytRajat(KAUPUNGIT[kaupunki]);
+  const m = KAUPUNGIT[kaupunki].meriHaku;
+  const laaja = { pohjoinen: r0.pohjoinen + m, etela: r0.etela - m, lansi: r0.lansi - m * 2, ita: r0.ita + m * 2 };
+  await new Promise((r) => setTimeout(r, 4000));
+  console.log('Haetaan rantaviiva laajemmalta alueelta (meriHaku)…');
+  const kysely = `[out:json][timeout:120];way["natural"="coastline"](${laaja.etela},${laaja.lansi},${laaja.pohjoinen},${laaja.ita});out geom;`;
+  let viivat = null;
+  for (let i = 1; !viivat; i++) {
+    const palvelin = OVERPASS_PALVELIMET[(i - 1) % OVERPASS_PALVELIMET.length];
+    try {
+      const v = await fetch(palvelin, { method: 'POST', headers: { 'User-Agent': 'matkakirja/1.0 (opetuspeli)' },
+        body: new URLSearchParams({ data: kysely }), signal: AbortSignal.timeout(180000) });
+      if (!v.ok) throw new Error(`Overpass ${v.status}`);
+      viivat = ((await v.json()).elements ?? []).filter((e) => e.geometry?.length).map((e) => e.geometry);
+    } catch (virhe) {
+      if (i >= 10) throw virhe;
+      console.log(`  ${virhe.message} — uusi yritys ${15 * i} s kuluttua…`);
+      await new Promise((r) => setTimeout(r, 15000 * i));
+    }
+  }
+  console.log(`  ${viivat.length} rantaviivaa.`);
+  rantaLaaja = { viivat, rajat: laaja };
+}
+const svg = piirra(kaupunki, elementit, kainaloAineistot, rantaLaaja);
 mkdirSync(resolve(JUURI, 'assets/kartat'), { recursive: true });
 /*
  * Värinäyte EI korvaa julistetta vaan menee omaan tiedostoonsa

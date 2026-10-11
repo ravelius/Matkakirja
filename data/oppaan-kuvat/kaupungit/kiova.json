@@ -123,15 +123,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Maidan Nezalezhnosti view.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maidan_Nezalezhnosti_view.jpg?width=1280",
-     "tekija": "Juan Antonio Segal",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Maidan_Nezalezhnosti_view.jpg",
-     "selite": "Itsenäisyydenaukio eli Maidan on Kiovan keskusaukio, jonka keskellä seisoo itsenäisyyspatsas.",
-     "leveys": 6000,
-     "korkeus": 4000,
+     "tiedosto": "Виды Киева (светопечать С. В. Кульженко), 2-09.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%92%D0%B8%D0%B4%D1%8B_%D0%9A%D0%B8%D0%B5%D0%B2%D0%B0_(%D1%81%D0%B2%D0%B5%D1%82%D0%BE%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D1%8C_%D0%A1._%D0%92._%D0%9A%D1%83%D0%BB%D1%8C%D0%B6%D0%B5%D0%BD%D0%BA%D0%BE)%2C_2-09.jpg?width=1280",
+     "tekija": "S. V. Kulženko (albumin kustantaja)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%B8%D0%B4%D1%8B_%D0%9A%D0%B8%D0%B5%D0%B2%D0%B0_(%D1%81%D0%B2%D0%B5%D1%82%D0%BE%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D1%8C_%D0%A1._%D0%92._%D0%9A%D1%83%D0%BB%D1%8C%D0%B6%D0%B5%D0%BD%D0%BA%D0%BE)%2C_2-09.jpg",
+     "selite": "Kiovan kaupunginduuman rakennus vanhassa valokuvassa (1800-luvun loppu tai 1900-luvun alku); samalla paikalla on nykyisin Itsenäisyydenaukio.",
+     "leveys": 1720,
+     "korkeus": 1190,
      "tarkistettu": true
     }
    ]
@@ -146,28 +146,28 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Golden Gate Kiev 2018 G1.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Golden_Gate_Kiev_2018_G1.jpg?width=1280",
-     "tekija": "George Chernilevsky",
-     "lisenssi": "Public domain",
-     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Kiev_2018_G1.jpg",
-     "selite": "Kultainen portti oli 1000-luvun kaupunkimuurin pääportti, ja se on osin jälleenrakennettu.",
-     "leveys": 5120,
-     "korkeus": 3616,
+     "tiedosto": "Zoloti virita, 1858.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zoloti_virita%2C_1858.jpg?width=1280",
+     "tekija": "Vasili Timm",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zoloti_virita%2C_1858.jpg",
+     "selite": "Kultaisen portin rauniot Vasili Timmin litografiassa vuodelta 1858, kauan ennen nykyistä jälleenrakennusta.",
+     "leveys": 3154,
+     "korkeus": 1654,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Golden Gate (Kiev) 20190505-1.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Golden_Gate_(Kiev)_20190505-1.jpg?width=1280",
-     "tekija": "Suicasmo",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Golden_Gate_(Kiev)_20190505-1.jpg",
-     "selite": "Portin puinen suojarakennelma ja punatiilinen kappeli on rakennettu muinaisen mallin mukaan.",
-     "leveys": 5184,
-     "korkeus": 3456,
+     "tiedosto": "The Golgen Gate from the west by Westerveld.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Golgen_Gate_from_the_west_by_Westerveld.jpg?width=1280",
+     "tekija": "Abraham van Westerveld",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Golgen_Gate_from_the_west_by_Westerveld.jpg",
+     "selite": "Kultaisen portin rauniot Abraham van Westervelden piirustuksessa vuodelta 1651.",
+     "leveys": 1961,
+     "korkeus": 1365,
      "tarkistettu": true
     }
    ]
@@ -266,42 +266,6 @@
      "selite": "Portaat johtavat valaistulle kirkolle mäen laella.",
      "leveys": 5826,
      "korkeus": 3884,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
-   "q": "Q142917",
-   "nimi": "Äiti Ukraina",
-   "peruste": "sitelinks",
-   "koko_m": 100,
-   "lat": 50.4265,
-   "lon": 30.56311,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Kyiv - Motherland monument and Patona bridge.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kyiv_-_Motherland_monument_and_Patona_bridge.jpg?width=1280",
-     "tekija": "Віктор Полянко",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kyiv_-_Motherland_monument_and_Patona_bridge.jpg",
-     "selite": "Äiti Ukraina on suuri teräspatsas, joka kohoaa Dneprin rantakukkulalla.",
-     "leveys": 2048,
-     "korkeus": 1536,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Mother Ukraine monument with the Ukrainian trident in Kyiv, Ukraine, 2026.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mother_Ukraine_monument_with_the_Ukrainian_trident_in_Kyiv%2C_Ukraine%2C_2026.jpg?width=1280",
-     "tekija": "Світлана 743",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mother_Ukraine_monument_with_the_Ukrainian_trident_in_Kyiv%2C_Ukraine%2C_2026.jpg",
-     "selite": "Patsaan kilvessä on Ukrainan kolmikärki.",
-     "leveys": 2121,
-     "korkeus": 2878,
      "tarkistettu": true
     }
    ]
@@ -447,19 +411,6 @@
      "leveys": 4070,
      "korkeus": 2712,
      "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "21 Khreshchatyk Street, Kiev.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/21_Khreshchatyk_Street%2C_Kiev.jpg?width=1280",
-     "tekija": "Maksym Kozlenko",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:21_Khreshchatyk_Street%2C_Kiev.jpg",
-     "selite": "Kadun varrella on kaareva portti ja stalinistisen ajan kerrostaloja.",
-     "leveys": 2048,
-     "korkeus": 1365,
-     "tarkistettu": true
     }
    ]
   },
@@ -522,15 +473,15 @@
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Київський фунікулер Нижня станція.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9A%D0%B8%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D1%84%D1%83%D0%BD%D1%96%D0%BA%D1%83%D0%BB%D0%B5%D1%80_%D0%9D%D0%B8%D0%B6%D0%BD%D1%8F_%D1%81%D1%82%D0%B0%D0%BD%D1%86%D1%96%D1%8F.jpg?width=1280",
-     "tekija": "Lenka:)",
-     "lisenssi": "CC BY 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9A%D0%B8%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D1%84%D1%83%D0%BD%D1%96%D0%BA%D1%83%D0%BB%D0%B5%D1%80_%D0%9D%D0%B8%D0%B6%D0%BD%D1%8F_%D1%81%D1%82%D0%B0%D0%BD%D1%86%D1%96%D1%8F.jpg",
-     "selite": "Alaaseman kaarimainen sisäänkäynti avautuu Podilin puolella.",
-     "leveys": 2560,
-     "korkeus": 1920,
+     "tiedosto": "Фунікулер 1905.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A4%D1%83%D0%BD%D1%96%D0%BA%D1%83%D0%BB%D0%B5%D1%80_1905.jpg?width=1280",
+     "tekija": "Dmitri Markov",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%A4%D1%83%D0%BD%D1%96%D0%BA%D1%83%D0%BB%D0%B5%D1%80_1905.jpg",
+     "selite": "Kiovan funikulaari vuoden 1905 paikkeilla; taustalla näkyy muun muassa Pyhän Andreaan kirkko.",
+     "leveys": 2362,
+     "korkeus": 1470,
      "tarkistettu": true
     }
    ]

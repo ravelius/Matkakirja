@@ -1064,18 +1064,4 @@ export const FOKUSVIRTA_WIEN = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre:
-   * Florentiner-timantti. Isoisän pyöristys "sata karaattia" on hänen
-   * omaa puhettaan (kivi on noin 137 karaattia) ja kaanonissa
-   * nimenomaan sallittu.
-   */
-  aarremerkinta: {
-    teksti: 'Hovin mies lupasi näyttää keisarinnan timantin, jos '
-      + 'odottaisin syksyyn. En odottanut — laivani lähti, ja '
-      + 'kirjoitin luetteloon: keltainen kivi, sata karaattia, liian '
-      + 'vartioitu.',
-  },
 };

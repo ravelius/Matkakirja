@@ -1417,14 +1417,4 @@ export const FOKUSVIRTA_PARIISI = {
     // ei muutu.
     ...MAALEHTINOSTOT_FRA,
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: kruununjalokivien
-   * safiiri.
-   */
-  aarremerkinta: {
-    teksti: 'Näin kruunun safiirin ministeriön holvissa virkamiehen luvalla ja piirsin sen ääriviivat luetteloon. Vartija katsoi minua niin pitkään, että jätin '
-      + 'lyijykynänkin taskuun ja tulin ulos hitaasti kuin syytön mies.',
-  },
 };

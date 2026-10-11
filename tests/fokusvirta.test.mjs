@@ -638,10 +638,6 @@ test('Sofian pelitestattu sisältö on ennallaan sähkepilotin jälkeen', () => 
   assert.deepEqual(sofia.lehtitehtavat.map((t) => [t.id, t.sivu, t.otsake]),
     [['aarre', 2, 'AARTEEN AVAUS'], ['juliste', 3, 'JULISTE']], 'lehtitehtävät muuttuivat');
   assert.match(sofia.lehtitehtavat[0].visa.kysymys, /banitsa/i, 'AARTEEN AVAUS -visa muuttui');
-  assert.match(sofia.aarremerkinta.teksti, /^Konakin varjossa punnitsin lapion ostamista/,
-    'aarremerkintä muuttui');
-  assert.match(sofia.aarremerkinta.teksti, /jotkut aarteet saavat odottaa rohkeampaa\.$/,
-    'aarremerkintä muuttui');
   // Nadia on tallessa, vaikka sähke voittaa hänet kortilla: pilotin
   // peruminen on yksi rivi vain, jos data on yhä paikallaan.
   assert.equal(sofia.kohtaaminen?.hahmo, 'Lähteenvartija Nadia',
@@ -804,20 +800,32 @@ test('fokusvirtakaupungin matkakirjateksti ei vaihdu laatan ratkettua', () => {
   }
 });
 
-test('aarremerkintä voittaa saapumismerkinnän myös laatan ratkettua', () => {
+/*
+ * AARREMERKINNÄT POIS PELISTÄ (omistaja 11.10.2026: eivät loogisia aarteen
+ * avaamisen jälkeen). Moottorin aarremerkintäpolku (js/fokusvirta.js) jäi
+ * yleiseksi mekanismiksi, mutta yksikään kaupunki ei anna sille dataa:
+ * aarteen jälkeen matkakirja näyttää saman tavallisen merkinnän kuin ennen.
+ * Vanhat tekstit poistettiin myös arkistosta (omistaja 11.10.2026), ettei niitä palaa peliin vahingossa.
+ */
+test('yhdelläkään fokusvirtakaupungilla ei ole aarremerkintää', () => {
+  for (const [cityId, virta] of Object.entries(FOKUSVIRRAT)) {
+    assert.equal(virta.aarremerkinta, undefined,
+      `${cityId}: aarremerkintä on poistettu pelistä (11.10.2026)`);
+  }
+});
+
+test('aarteen jälkeen kortissa on yhä tavallinen saapumismerkintä', () => {
   const game = ateenaPeli();
   const city = game.board.cityById.get('ateena');
   laattaRatkaistu(game, 'ateena');
   const ui = uiTynka(game);
-  // Lipun nostaa js/fokusvirta.js avaaAarremerkinta aarteen löytyessä.
+  const ennen = fokusvirtaMatkakirja(ui, city);
+  // Lipun nostaisi js/fokusvirta.js avaaAarremerkinta, mutta ilman dataa se
+  // ei nosta sitä; nostetaan lippu silti käsin ja varmistetaan, ettei kortti vaihdu.
   ui.fokusaarreMerkinta = { avain: 'maailmankartta:ateena', kuitattu: false };
-  const merkinta = fokusvirtaMatkakirja(ui, city);
-  // Aarremerkintä on olio (`{ teksti }`) jokaisessa kaupungissa v1301:stä
-  // lähtien; moottori kelpuuttaa yhä myös vanhan merkkijonomuodon.
-  assert.equal(merkinta.teksti, ATEENA.aarremerkinta.teksti,
-    'aarteen jälkeen kortissa on isoisän myöhempi sivu');
-  assert.ok(merkinta.avain.startsWith('fokusaarre:'),
-    'aarremerkinnällä on oma korttiavain (ui.js tunnistaa siitä äänitesäännön)');
+  const jalkeen = fokusvirtaMatkakirja(ui, city);
+  assert.deepEqual(jalkeen, ennen, 'aarremerkinnätön kaupunki ei saa uutta korttia aarteen jälkeen');
+  assert.ok(!jalkeen.avain.startsWith('fokusaarre:'), 'aarremerkinnän korttiavain ei saa ilmestyä');
 });
 
 test('kaupunki ilman fokusvirtaa jää vanhan saapumispolun varaan', () => {

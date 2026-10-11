@@ -375,13 +375,11 @@ export const AFRICA_VALOKUVAT = {
   orjarannikko: {
     lisat: [
       {
-        tiedosto: 'Sculpture of Amazon Female Warrior - Slave Route - Ouidah - Benin.jpg',
+        tiedosto: "Street of whidah in 1892.jpg",
         vuosi: '2010',
-        lahde: 'Adam Jones, Commons (CC BY-SA 3.0)',
-        lyhyt: 'Dahomeyn naissoturin patsas Ouidahin orjatien varrella.',
-        selite: 'Dahomeyn naissoturin patsas Ouidahin orjatien varrella. '
-          + 'Kaupungilta rannalle vievän hiekkatien varteen on pystytetty '
-          + 'muistomerkkejä.',
+        lahde: "Tuntematon, Wikimedia Commons (public domain)",
+        lyhyt: "Whydahin katu vuonna 1892",
+        selite: "Vanha kaiverros vuodelta 1892 näyttää olkikattoisia taloja ja pensaiden reunustaman kujan Whydahissa eli nykyisessä Ouidahissa.",
       },
       {
         tiedosto: 'Beach of Ouidah Benin 2.jpg',
@@ -399,12 +397,10 @@ export const AFRICA_VALOKUVAT = {
       + 'historian vartiopaikka. Isoisän aikaan sen muurit olivat jo '
       + 'rapistumassa.',
     uusi: {
-      tiedosto: 'Benin UNESCO à la Porte du non-retour à Ouidah.jpg',
-      lahde: 'Rachad Sanoussi, Commons (CC BY-SA 4.0)',
-      lyhyt: 'Muistomerkin kivilaatta Ouidahin rannalla, portti pystytetty 1995.',
-      selite: 'Muistomerkin kivilaatta Ouidahin rannalla. Siihen on kaiverrettu '
-        + 'portin nimi ranskaksi sekä Beninin ja Unescon tunnukset; portti '
-        + 'pystytettiin 1995.',
+      tiedosto: "Marché à Ouidah (Dahomey).jpg",
+      lahde: "Tuntematon, Wikimedia Commons (public domain)",
+      lyhyt: "Tori Ouidahissa Dahomeyn aikaan",
+      selite: "Vanhalla postikortilla väkijoukko kokoontuu torille suuren puun alle Ouidahissa, ranskalaisessa Dahomeyn siirtomaassa.",
     },
   },
   kano: {

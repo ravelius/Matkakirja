@@ -786,17 +786,4 @@ export const FOKUSVIRTA_DUBROVNIK = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Ragusan laivaston
-   * kulta. Merkintä aukeaa, kun aarre löytyy (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Arkistonhoitaja näytti laivaston tilikirjat: kultaa lähti '
-      + 'maailmalle sadalla purjeella, eikä kaikki koskaan palannut '
-      + 'kirjoihin. Merkitsin kolme haaksirikkoa luetteloon ja jätin '
-      + 'neljännen merkitsemättä — sen kohdalla vanhus lakkasi puhumasta.',
-  },
 };

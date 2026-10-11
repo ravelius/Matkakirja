@@ -22,19 +22,6 @@
      "leveys": 4608,
      "korkeus": 3456,
      "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Baiterek August.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baiterek_August.jpg?width=1280",
-     "tekija": "Quarot",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Baiterek_August.jpg",
-     "selite": "Tornin latvassa on kultainen pallo, joka kuvaa kansantarun elämänpuuta ja sen oksille munivaa lintua.",
-     "leveys": 4000,
-     "korkeus": 6000,
-     "tarkistettu": true
     }
    ]
   },
@@ -160,42 +147,6 @@
    ]
   },
   {
-   "q": "Q4494668",
-   "nimi": "Hazrat Sultanin moskeija",
-   "peruste": "sitelinks",
-   "koko_m": 150,
-   "lat": 51.125,
-   "lon": 71.47222,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Kazakhstan P9130238 (28303684079).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kazakhstan_P9130238_(28303684079).jpg?width=1280",
-     "tekija": "t_y_l",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kazakhstan_P9130238_(28303684079).jpg",
-     "selite": "Hazrat Sultan on yksi Keski-Aasian suurimmista moskeijoista, ja sen valkoiset minareetit näkyvät kauas.",
-     "leveys": 4608,
-     "korkeus": 3456,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Rustam Minnikhanov on Expo 2017 72.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rustam_Minnikhanov_on_Expo_2017_72.jpg?width=1280",
-     "tekija": "Лаззат Хайдаров",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rustam_Minnikhanov_on_Expo_2017_72.jpg",
-     "selite": "Moskeijan julkisivua koristavat koristeelliset kaaret, ja portaat johtavat laajalle aukiolle.",
-     "leveys": 5568,
-     "korkeus": 3712,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
    "q": "Q21371563",
    "nimi": "Astana Opera",
    "peruste": "sitelinks",
@@ -205,19 +156,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "The State Opera and Ballet Theatre “Astana Opera”.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_State_Opera_and_Ballet_Theatre_%E2%80%9CAstana_Opera%E2%80%9D.jpg?width=1280",
-     "tekija": "Nikolamikovic82",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_State_Opera_and_Ballet_Theatre_%E2%80%9CAstana_Opera%E2%80%9D.jpg",
-     "selite": "Astana Operan valkoinen pylväsjulkisivu on rakennettu klassisen oopperatalon mallin mukaan.",
-     "leveys": 3024,
-     "korkeus": 4032,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "Astana Opera 02.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Astana_Opera_02.jpg?width=1280",
      "tekija": "Davide Mauro",
@@ -255,42 +193,6 @@
    ]
   },
   {
-   "q": "Q1813417",
-   "nimi": "Nur-Astanan moskeija",
-   "peruste": "sitelinks",
-   "koko_m": 100,
-   "lat": 51.12656,
-   "lon": 71.41574,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Astana-2021-10 - 41.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Astana-2021-10_-_41.jpg?width=1280",
-     "tekija": "Vyacheslav Bukharov",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Astana-2021-10_-_41.jpg",
-     "selite": "Nur-Astanan moskeijan kultainen kupoli ja valkoiset minareetit erottuvat syksyisen puiston takaa.",
-     "leveys": 3929,
-     "korkeus": 2013,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Nur-Sultan - 190217 DSC 3720.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nur-Sultan_-_190217_DSC_3720.jpg?width=1280",
-     "tekija": "Ilya Varlamov",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nur-Sultan_-_190217_DSC_3720.jpg",
-     "selite": "Talvella lumi peittää puiston, mutta moskeijan kultakupoli hohtaa lasitornien keskellä.",
-     "leveys": 4887,
-     "korkeus": 3258,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
    "q": "Q713955",
    "nimi": "Nurjol-bulevardi",
    "peruste": "pelin nosto",
@@ -300,19 +202,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Вид на Бульвар Нуржол.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D0%91%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80_%D0%9D%D1%83%D1%80%D0%B6%D0%BE%D0%BB.jpg?width=1280",
-     "tekija": "Шалкер Гам",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D0%91%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80_%D0%9D%D1%83%D1%80%D0%B6%D0%BE%D0%BB.jpg",
-     "selite": "Nurjol-bulevardi on hallintokeskuksen pääakseli, jonka päissä kohoavat kaksi korkeaa tornia.",
-     "leveys": 3024,
-     "korkeus": 4032,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "Astana DSC04189 (7709788152).jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Astana_DSC04189_(7709788152).jpg?width=1280",
      "tekija": "jtstewart",
@@ -322,29 +211,6 @@
      "selite": "Kukkapenkit ja valtavat asuinrakennukset reunustavat bulevardin kävelyaukioita.",
      "leveys": 4912,
      "korkeus": 3264,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
-   "q": "Q18405670",
-   "nimi": "Kazakstanin kansallismuseo",
-   "peruste": "pelin nosto",
-   "koko_m": 200,
-   "lat": 51.1178,
-   "lon": 71.4701,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "National Museum of Kazakhstan 04.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Museum_of_Kazakhstan_04.jpg?width=1280",
-     "tekija": "Davide Mauro",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Museum_of_Kazakhstan_04.jpg",
-     "selite": "Kansallismuseon sinivalkoinen lasirakennus erottuu suihkulähteen takaa Astanan uudella museoalueella.",
-     "leveys": 6000,
-     "korkeus": 4000,
      "tarkistettu": true
     }
    ]

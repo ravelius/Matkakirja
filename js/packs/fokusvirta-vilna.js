@@ -1272,22 +1272,4 @@ export const FOKUSVIRTA_VILNA = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Vilnan katedraalin
-   * kätkö (js/packs/paikallisaarteet.js, LTU). Merkintä aukeaa, kun
-   * aarre löytyy (js/fokusvirta.js fokusvirtaAarremerkinta).
-   *
-   * MERKINTÄ EI PALJASTA LÖYTÖVUOTTA, JA SE ON TARKOITUS. Isoisä
-   * kirjoittaa vuonna 1873 eikä voi tietää vuodesta 1985; oppitunti
-   * kertoo koko tarinan, merkintä jättää sen auki.
-   */
-  aarremerkinta: {
-    teksti: 'Suntio kertoi äänellä, joka oli puoliksi kuiskaus: kun sota tai '
-      + 'tuli uhkaa, katedraalin holveihin kätketään mitä kallisarvoisinta '
-      + 'on, ja aina ei muisteta hakea kaikkea takaisin. Kirkon kivet '
-      + 'pitävät salaisuutensa kauemmin kuin ihmiset elävät. Joskus vielä '
-      + 'joku avaa väärän seinän oikeasta kohdasta.',
-  },
 };

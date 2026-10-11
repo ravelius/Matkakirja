@@ -133,19 +133,6 @@
      "leveys": 4820,
      "korkeus": 3218,
      "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Stoa of Attalos, Ancient Agora, Athens, Greece (3966275331).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stoa_of_Attalos%2C_Ancient_Agora%2C_Athens%2C_Greece_(3966275331).jpg?width=1280",
-     "tekija": "Tilemahos Efthimiadis from Athens, Greece",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Stoa_of_Attalos%2C_Ancient_Agora%2C_Athens%2C_Greece_(3966275331).jpg",
-     "selite": "Rekonstruoitu pylväskäytävä toimii nykyään agoran museona.",
-     "leveys": 2414,
-     "korkeus": 1812,
-     "tarkistettu": true
     }
    ]
   },
@@ -293,15 +280,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "New Acropolis Museum building in Athens, Greece.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/New_Acropolis_Museum_building_in_Athens%2C_Greece.jpg?width=1280",
-     "tekija": "philip.mallis",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:New_Acropolis_Museum_building_in_Athens%2C_Greece.jpg",
-     "selite": "Akropolis-museo on lasi- ja betonirakennus Akropolin juurella, ja siellä säilytetään linnavuoren veistoksia.",
-     "leveys": 3856,
-     "korkeus": 2265,
+     "tiedosto": "Athens Acropolis Museum Marble Parthenon Frieze (28406643046).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Athens_Acropolis_Museum_Marble_Parthenon_Frieze_(28406643046).jpg?width=1280",
+     "tekija": "Gary Todd",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Athens_Acropolis_Museum_Marble_Parthenon_Frieze_(28406643046).jpg",
+     "selite": "Akropolis-museossa esillä oleva Parthenonin friisin marmorilaatta; reliefissä on kulkueen hahmoja ja eläin.",
+     "leveys": 5184,
+     "korkeus": 3456,
      "tarkistettu": true
     }
    ]

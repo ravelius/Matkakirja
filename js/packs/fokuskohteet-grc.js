@@ -1990,17 +1990,17 @@ export const FOKUSKOHTEET_GRC = [
      * 27.8.2026: CC0, Jebulon, 4315×2872, Restrictions tyhjä; kuva
      * katsottu silmin.
      */
+    // SUOJATARKASTUS 11.10.2026: pohjoisen sisäänkäynnin härkäfreskon
+    // jäljennös (Gilliéron/de Jong, suojattu) vaihdettu raunionäkymään.
     kuva: {
-      tiedosto: 'Knossos North entrance bull fresco.jpg',
-      lyhyt: 'Knossoksen pohjoinen sisäänkäynti: Arthur Evans pystytti punaiset pylväät uudelleen betonista.',
-      selite: 'Palatsin pohjoinen sisäänkäynti kaivettiin esiin '
-        + '1900-luvun alussa. Arthur Evans pystytti sen punaiset pylväät '
-        + 'uudelleen betonista ja teetti seinään jäljennöksen '
-        + 'härkäfreskosta, jonka alkuperäinen on Iraklionin museossa.',
-      lahde: 'Jebulon, Wikimedia Commons (CC0)',
-      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Knossos_North_entrance_bull_fresco.jpg',
-      lisenssi: 'CC0',
-      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
+      tiedosto: 'Ruins of the Minoan Palace in Knossos.jpg',
+      lyhyt: 'Knossoksen minolaisen palatsin rauniot Kreetalla.',
+      selite: 'Knossoksen minolaisen palatsin rauniot Kreetan pohjoisrannikon '
+        + 'lähellä.',
+      lahde: 'Annatsach, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ruins_of_the_Minoan_Palace_in_Knossos.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
     },
     /*
      * MATKAKIRJAN IHME (ks. lohko tiedoston alussa). `kadonnut: false`:

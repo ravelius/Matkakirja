@@ -1149,11 +1149,11 @@ export const FOKUSVIRTA_MADRID = {
         + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
         + 'karttauudistuksen erässä 10, 13.9.2026.',
       kuva: {
-        tiedosto: 'Estadio Santiago Bernabeu - Field.jpg',
+        tiedosto: 'Estadio Santiago Bernabéu 11.jpg',
         lyhyt: 'Santiago Bernabéu avattiin 1947, ja Real Madridin kotistadionille mahtuu nykyään 83 186 katsojaa.',
         selite: 'Santiago Bernabéu avattiin 14. joulukuuta 1947, ja Real Madridin '
           + 'kotistadionille mahtuu nykyään 83 186 katsojaa.',
-        lahde: 'Mervat, Wikimedia Commons (CC BY-SA 4.0)',
+        lahde: 'Luis García (Zaqarbal), Wikimedia Commons (CC BY-SA 3.0)',
       },
       /*
        * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Lehden noston
@@ -1275,17 +1275,4 @@ export const FOKUSVIRTA_MADRID = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Vigon lahden
-   * hopealasti. Merkintä aukeaa, kun aarre löytyy (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Vigossa soutumies näytti kohdan, jossa hopealaivat '
-      + 'makaavat, ja pyysi viikon palkan sukelluksesta. Minulla oli '
-      + 'viikko aikaa muttei uskallusta — merkitsin syvyyden ja soudin '
-      + 'takaisin.',
-  },
 };

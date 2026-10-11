@@ -1,0 +1,79 @@
+# Sovelluksen nimi App Store Connectissa ja TestFlightissä.
+# Omistaja 11.10.2026 klo 22.2x (Päätoimittajan kautta): nimen pitää olla kaikkialla pelkkä "Matkakirja"
+# (beta-testaajat näkivät "Matkakirja 3D"). Oletuksena vain luku; vaihda=true korvaa vanhan nimen uudella
+# nimessä, alaotsikossa, TestFlightin kuvauksessa, ryhmien nimissä ja Testattavaa-teksteissä.
+# Skripti: tools/testflight/sovellusnimi.py.
+
+name: TestFlight sovelluksen nimi
+
+on:
+  workflow_dispatch:
+    inputs:
+      vaihda:
+        description: 'true = vaihda vanha nimi uuteen (false = vain luku)'
+        type: boolean
+        default: false
+      vanha:
+        description: 'Korvattava nimi'
+        type: string
+        default: 'Matkakirja 3D'
+      uusi:
+        description: 'Uusi nimi'
+        type: string
+        default: 'Matkakirja'
+      bundle_id:
+        description: 'Bundle id'
+        type: string
+        default: 'fi.matkakirja.peli'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: testflight-sovellusnimi
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: nice -n 15 bash --noprofile --norc -eo pipefail {0}
+
+jobs:
+  nimi:
+    name: Sovelluksen nimi
+    runs-on: [self-hosted, macOS, ARM64, testit]
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pura App Store Connect -avain
+        env:
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+        run: |
+          set -euo pipefail
+          hakemisto="$RUNNER_TEMP/asc"
+          mkdir -p "$hakemisto"; chmod 700 "$hakemisto"
+          polku="$hakemisto/AuthKey.p8"
+          if [[ "$ASC_KEY_P8" == *"BEGIN PRIVATE KEY"* ]]; then
+            printf '%s\n' "$ASC_KEY_P8" > "$polku"
+          else
+            printf '%s' "$ASC_KEY_P8" | openssl base64 -d -A -out "$polku"
+          fi
+          chmod 600 "$polku"
+          grep -q "BEGIN PRIVATE KEY" "$polku" || { echo "::error title=Avain ei purkautunut::ASC_KEY_P8"; exit 1; }
+          echo "ASC_AVAIN_POLKU=$polku" >> "$GITHUB_ENV"
+
+      - name: Lue ja vaihda nimi
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          VANHA: ${{ inputs.vanha }}
+          UUSI: ${{ inputs.uusi }}
+        run: |
+          set -euo pipefail
+          python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
+          lippu=""; [ "${{ inputs.vaihda }}" = "true" ] && lippu="--vaihda"
+          python3 tools/testflight/sovellusnimi.py --bundle-id "${{ inputs.bundle_id }}" --vanha "$VANHA" --uusi "$UUSI" $lippu
+
+      - name: Siivoa avain
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/asc" || true

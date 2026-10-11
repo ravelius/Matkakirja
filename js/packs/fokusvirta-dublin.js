@@ -1203,26 +1203,4 @@ export const FOKUSVIRTA_DUBLIN = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable 29.8.2026) — teksti sellaisenaan. Iso aarre: Irlannin
-   * kruununjalokivet. Merkintä aukeaa, kun aarre löytyy
-   * (js/fokusvirta.js fokusvirtaAarremerkinta).
-   *
-   * VUOSILUKUKURI (ks. tiedoston alku): isoisä on Dublinissa vuonna
-   * 1873 ja jalokivet varastetaan vasta heinäkuussa 1907. Merkintä ei
-   * siksi tiedä varkaudesta mitään — se panee muistiin vartijan
-   * huolettoman lauseen ja toteaa, etteivät sellaiset lauseet vanhene
-   * hyvin. Varkaus kerrotaan pelaajalle vasta aarteen omassa
-   * faktarivissä (js/packs/paikallisaarteet.js, IRL isoAarre), eli
-   * täsmälleen silloin kun merkinnän viimeinen virke lunastuu.
-   */
-  aarremerkinta: {
-    teksti: 'Linnassa säilytetään jalokiviä, joilla ritarikunta '
-      + 'koristautuu juhlissaan. Näin ne lasin takana: tähti ja käädyt, '
-      + 'timantteja ja smaragdeja. Vartija kehui, ettei niitä vahdi öisin '
-      + 'kukaan, sillä kuka nyt linnasta varastaisi. Kirjoitan tämän '
-      + 'muistiin, koska sellainen lause ei yleensä vanhene hyvin.',
-  },
 };

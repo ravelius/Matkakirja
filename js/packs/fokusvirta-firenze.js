@@ -908,19 +908,4 @@ export const FOKUSVIRTA_FIRENZE = {
       id: 'juliste', sivu: 3, otsake: 'JULISTE', palkinto: 'juliste', visa: PIHVI_VISA,
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Caravaggion
-   * kadonnut maalaus. Merkintä aukeaa, kun aarre löytyy
-   * (js/fokusvirta.js fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Taidekauppias kertoi minulle maalarista, joka pakeni miekka '
-      + 'kädessä kaupungista toiseen ja jätti jälkeensä tauluja, joista '
-      + 'kaikkia ei ole koskaan laskettu. Yksi niistä on hänen mukaansa '
-      + 'yhä väärässä huoneessa, väärän nimen alla, eikä kukaan ole '
-      + 'katsonut sitä kunnolla kahteensataan vuoteen. Pimeästä ne '
-      + 'hänen taulunsa syntyivät — pimeään ne osaavat myös kadota.',
-  },
 };
