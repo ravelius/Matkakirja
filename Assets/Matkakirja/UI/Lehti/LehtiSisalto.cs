@@ -163,6 +163,14 @@ namespace Matkakirja.Natiivi
             bool kaupunkiValmis = false;
             UiSisalto.Lataa(() => kaupunkiValmis = true);
             while (!kaupunkiValmis) yield return null;
+            // Kevyen pääkaupungin lehti (PT 11.10. 06.4x; Pelikoodarin vienti: kaupunkilehdet/<id>.json, kaupunki null, id = pisteen id):
+            // koko kokoelmassa sitä ei välttämättä ole, joten haetaan oma tiedosto kerran ja liitetään tauluun.
+            if (laji == LehtiLaji.Kaupunki && omistaja != null && !kaupungit.ContainsKey(omistaja) && UiSisalto.OnPaakaupunki(omistaja))
+            {
+                string pk = null;
+                yield return Sisalto.HaeTeksti("kaupunkilehdet/" + omistaja, t => pk = t, valinnainen: true);
+                if (pk != null) foreach (var kv in Taulu(pk, "kaupunki")) kaupungit[kv.Key] = kv.Value;
+            }
             valmis(laji == LehtiLaji.Kaupunki ? Kaupunkilehti(omistaja) : Maalehti(omistaja?.ToUpperInvariant()));
         }
 
