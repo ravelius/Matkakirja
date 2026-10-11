@@ -37,6 +37,8 @@ namespace Matkakirja.Natiivi
             if (pohja) { AddToClassList("mk-kortti-kehys--pohja"); Sisus.AddToClassList("mk-kortti--pohja"); }
             else Rakenne.Tausta(Sisus, Kuviot.Pergamentti);
             Kirjasimet.Aseta(Sisus, Kirjasin.Luku);
+            // iPadilla tumman kortin leipä pykälää isompi (PT 11.10.: omistaja pelaa iPadilla), kuten mk-kartuscha--tabletti.
+            RegisterCallback<AttachToPanelEvent>(_ => EnableInClassList("mk-kortti-kehys--tabletti", UiKerros.Tabletti));
         }
 
         /// <summary>Katkoviivainen pyöristetty suorakulmio (väri = USS border-color, paksuus 1).</summary>
