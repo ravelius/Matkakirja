@@ -23,7 +23,7 @@ namespace Matkakirja.Natiivi
             public string Tunnus, Hahmo, Aani, Juuri; public double KestoS; public AudioClip Klippi; public bool Haussa;
             // Kasvot (Natiiviseppä 11.10.): merkkikohdistus (manifestin "kohdistus" tai <aani>.kohdistus.json, Pelikoodari) ja
             // Siirtosepän merkinnät "kasvot": { ilme, katse, eleet[] { sana | t, ele } }.
-            public Kohdistus Kohdistus; public bool KohdistusHaettu; public string Ilme, Katse; public List<(string Sana, double T, string Ele)> Eleet;
+            public Kohdistus Kohdistus; public bool KohdistusHaettu; public float[] Verho; public string Ilme, Katse; public List<(string Sana, double T, string Ele)> Eleet;
         }
         /// <summary>Puhuvan hahmon tila kasvoille (DioraamaHahmot3D.IrrallisenKasvot): kohta klipissä, kohdistus, merkinnät, voimakkuus.</summary>
         public readonly struct PuheTila
@@ -94,6 +94,7 @@ namespace Matkakirja.Natiivi
             r.Haussa = false;
             if (p.result != UnityWebRequest.Result.Success) { kirjaa?.Invoke($"seikkailu: repliikki {r.Tunnus} ei latautunut ({p.error})"); yield break; }
             r.Klippi = DownloadHandlerAudioClip.GetContent(p); r.Klippi.name = "Repliikki:" + r.Tunnus;
+            r.Verho = Verho(r.Klippi);
             // Huulisynkan kohdistus äänen vieressä (Pelikoodari 11.10.: <tunnus>.kohdistus.json); puuttuva = suu voimakkuudesta.
             if (r.Kohdistus == null && !r.KohdistusHaettu && !string.IsNullOrEmpty(r.Aani))
             {
@@ -129,19 +130,34 @@ namespace Matkakirja.Natiivi
                 var r = kv.Value; string h = r.Hahmo;
                 if (string.IsNullOrEmpty(h) || !(henkiloId == h || henkiloId.StartsWith(h + "-", StringComparison.Ordinal))) continue;
                 if (!puhujat.TryGetValue(kv.Key, out var a) || a == null || !a.isPlaying || a.clip != r.Klippi) continue;
-                tila = new PuheTila(r.Tunnus, a.time, r.Kohdistus, r.Ilme, r.Katse, r.Eleet, Taso(a));
+                tila = new PuheTila(r.Tunnus, a.time, r.Kohdistus, r.Ilme, r.Katse, r.Eleet, Taso(r, a.time));
                 return true;
             }
             return false;
         }
         readonly Dictionary<string, Repliikki> nykyiset = new Dictionary<string, Repliikki>(StringComparer.Ordinal);
-        static readonly float[] tasoNaytteet = new float[256];
-        /// <summary>Lähteen hetkellinen RMS (0–1) ennen 3D-vaimennusta kanavalta 0.</summary>
-        static float Taso(AudioSource a)
+        public const int VerhoHz = 50;
+        /// <summary>Klipin voimakkuuskäyrä (RMS 20 ms:n ikkunoissa) latauksessa: leuka ei riipu mikseristä eikä mykistyksestä
+        /// (simulaattorin testimykistyksessä GetOutputData antoi nollaa, ajo 11.10. 15.03).</summary>
+        static float[] Verho(AudioClip c)
         {
-            a.GetOutputData(tasoNaytteet, 0);
-            double s = 0; foreach (var x in tasoNaytteet) s += x * x;
-            return (float)Math.Sqrt(s / tasoNaytteet.Length);
+            if (c == null || c.samples <= 0) return null;
+            var d = new float[c.samples * c.channels];
+            if (!c.GetData(d, 0)) return null;
+            int ikkuna = Math.Max(1, c.frequency * c.channels / VerhoHz), n = (d.Length + ikkuna - 1) / ikkuna;
+            var v = new float[n];
+            for (int i = 0; i < n; i++)
+            {
+                double s = 0; int a = i * ikkuna, b = Math.Min(d.Length, a + ikkuna);
+                for (int j = a; j < b; j++) s += d[j] * d[j];
+                v[i] = (float)Math.Sqrt(s / Math.Max(1, b - a));
+            }
+            return v;
+        }
+        static float Taso(Repliikki r, double kohta)
+        {
+            if (r.Verho == null || r.Verho.Length == 0) return 0f;
+            return r.Verho[Math.Clamp((int)(kohta * VerhoHz), 0, r.Verho.Length - 1)];
         }
 
         /// <summary>Repliikki kiinteästä paikasta (tilan hahmo, jolla ei ole omaa Transformia seikkailussa, esim. kokki liedellä).</summary>
