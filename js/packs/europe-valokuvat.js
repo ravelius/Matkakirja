@@ -3255,4 +3255,183 @@ export const EUROPE_VALOKUVAT = {
                 + '000.',
     },
   },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e01–e02, tarkistettu 14 kaupunkia 0 virhettä):
+   * Valokuva (vain dataa: ei pysäkkiä, ei kuluttajaa vielä). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e01-pilvi ja -e02-pilvi.
+   */
+  belgrad: {
+    tiedosto: 'Belgrade – Kalemegdan (2021) 02.jpg',
+    vuosi: '2021',
+    lahde: 'Imeao, Commons (CC0)',
+    lyhyt: 'Belgradin linnoitus on kaupungin vanhin osa.',
+    selite: 'Linnoituksen edustan kentältä alettiin muotoilla Kalemegdanin puistoa 1860-luvun lopulla, ja sen näköalat avautuvat Savan ja Tonavan yhtymäkohtaan.',
+  },
+  bratislava: {
+    tiedosto: 'Bratislava Castle (view from Slavín), Slovakia.JPG',
+    vuosi: 'nykyisin',
+    lahde: 'Kiwiev, Commons (CC0)',
+    lyhyt: 'Bratislavan linna kohoaa vanhan kaupungin yläpuolella kukkulalla.',
+    selite: 'Linna paloi raunioksi 1811 ja oli yhä raunio isoisän matkavuonna 1873, ja sitä kunnostettiin 1950-luvulta alkaen.',
+  },
+  chisinau: {
+    tiedosto: 'Arco del triunfo, Chisináu, Moldavia, 2023-11-03, DD 27.jpg',
+    vuosi: '2023',
+    lahde: 'Diego Delso, Commons (CC BY-SA 4.0)',
+    lyhyt: 'Riemukaari valmistui 1840-luvulla muistoksi Venäjän voitosta Turkin sodassa.',
+    selite: 'Arkkitehti Luka Zaushkevichin suunnittelema kaari on 13 metriä korkea ja kaksikerroksinen.',
+  },
+  minsk: {
+    tiedosto: 'Svislach river in Minsk.jpg',
+    vuosi: '2018',
+    lahde: 'Viktar Palstsiuk, Commons (CC BY-SA 4.0)',
+    lyhyt: 'Svislač on 327 kilometriä pitkä Berezinan sivujoki, ja se virtaa Minskin halki.',
+    selite: 'Svislač on Minskin halki virtaava joki, jonka varrella kaupunki sijaitsee Minskin kukkuloiden kaakkoisrinteellä.',
+  },
+  podgorica: {
+    tiedosto: 'View of Hram Hristovog Vaskrsenja in Podgorica.jpg',
+    lahde: 'Vux33, Commons (CC BY-SA 4.0)',
+    lyhyt: 'Katedraali pyhitettiin vuonna 2013 kahden vuosikymmenen rakennustyön jälkeen.',
+    selite: 'Kristuksen ylösnousemuksen katedraalin rakennus alkoi vuonna 1993, ja se pyhitettiin vuonna 2013. Se on Montenegron ja Rannikon metropoliitan kirkko.',
+  },
+  skopje: {
+    tiedosto: 'Stone Bridge (44229534855).jpg',
+    vuosi: '2018',
+    lahde: 'jjmusgrove from Glen Allen, VA, United States, Commons (CC BY 2.0)',
+    lyhyt: 'Kivisilta on 214 metriä pitkä ja 12-kaarinen, ja se on kaupungin vaakunan pääaihe.',
+    selite: 'Kivisilta on 214 metriä pitkä ja 12-kaarinen, ja se on kaupungin vaakunan pääaihe. Se valmistui 1400-luvulla, viimeistään 1469, ja yhdistää Makedonia-aukion Vanhaan basaariin.',
+  },
+  tirana: {
+    tiedosto: 'Clock Tower and Mosque of Tirana (night).jpg',
+    vuosi: '2015',
+    lahde: 'Liridon, Commons (CC0)',
+    lyhyt: 'Et\'hem Beyn moskeija ja kellotorni muodostavat Skanderbeg-aukion historiallisen kulmauksen.',
+    selite: 'Moskeija valmistui 1819 tai 1821 ja kellotorni 1822 tai 1830, joten molemmat seisoivat jo isoisän matkavuonna 1873.',
+  },
+  zagreb: {
+    tiedosto: 'Kamenita vrata 29102016-002.jpg',
+    vuosi: '2016',
+    lahde: 'Yamen, Commons (CC BY-SA 4.0)',
+    lyhyt: 'Kivinen portti on Gradecin muurien ainoa säilynyt kaupunginportti.',
+    selite: 'Kivinen portti rakennettiin 1200-luvulla osana Gradecin muureja, ja sen holvin alla on Neitsyt Marian maalaus, joka säilyi vuoden 1731 tulipalossa.',
+  },
+  andorralavella: {
+    tiedosto: 'Casa de la Vall. 1580. Andorra 149.jpg',
+    vuosi: '2013',
+    lahde: 'Luis Miguel Bugallo Sánchez (Lmbuga), Commons (CC BY-SA 3.0)',
+    lyhyt: 'Casa de la Vall oli Andorran parlamentin paikka vuoteen 2011.',
+    selite: 'Casa de la Vall rakennettiin Busquetsin suvun kartanoksi, ja talon vaakunassa on vuosiluku 1580. Andorran yleiskokous osti sen 1700-luvun alussa, ja se toimi parlamenttitalona vuoteen 2011.',
+  },
+  bern: {
+    tiedosto: 'Bear pit, Berne, Switzerland-LCCN2001701111.jpg',
+    vuosi: 'noin 1890–1900',
+    lahde: 'Photochrom Print Collection, Commons (PD)',
+    lyhyt: 'Bärengraben, Bernin karhukuoppa, jonka neljäs versio avattiin 1857.',
+    selite: 'Bärengraben on Bernin karhukuoppa Nydeggbrücken päässä: nykyinen, neljäs kuoppa avattiin 1857.',
+  },
+  monaco: {
+    tiedosto: 'Monaco Rocher de Monaco Vue sur le Port Hercule 01.jpg',
+    vuosi: '2021',
+    lahde: 'Zairon, Commons (CC BY-SA 4.0)',
+    lyhyt: 'Port Hercule on Monacon ainoa syvänmeren satama, ja sitä on käytetty antiikista asti.',
+    selite: 'Sataman nimi viittaa Herkuleeseen, jonka palvonnasta Monoikoksen siirtokunta sai nimensä.',
+  },
+  reykjavik: {
+    tiedosto: 'Austurvöllur 2023.jpg',
+    vuosi: '2023',
+    lahde: 'APK, Commons (CC BY-SA 4.0)',
+    lyhyt: 'Austurvöllur on Reykjavíkin keskustan aukio, jonka laidalla ovat tuomiokirkko ja Alþingin talo.',
+    selite: 'Austurvöllur oli 1700-luvun alussa paljon nykyistä suurempi. Nykyään aukion ympärillä on kahviloita ja baareja.',
+  },
+  sanmarino: {
+    tiedosto: 'Guaita Fortress and San Marino (2023).jpg',
+    vuosi: '2023',
+    lahde: 'Terragio67, Commons (CC BY-SA 4.0)',
+    lyhyt: 'Guaitan linnake on yksi Monte Titanon kolmesta tornista.',
+    selite: 'Linnake on kuvattu San Marinon lipussa ja vaakunassa, ja sitä on vahvistettu useasti vuosisatojen aikana.',
+  },
+  vaduz: {
+    tiedosto: 'Schloss Vaduz. Ansicht von Westen. 2015-10-03 17-52-32.jpg',
+    vuosi: '2015',
+    lahde: 'Shesmax, Commons (CC BY-SA 4.0)',
+    lyhyt: 'Vaduzin linna on Liechtensteinin ruhtinaan palatsi ja kaupungin tunnetuin maamerkki.',
+    selite: 'Linnan vanhimmat osat ovat 1100-luvulta, ja ruhtinasperheen vakituinen asuinpaikka se on ollut vuodesta 1938.',
+  },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e03, 7 kaupunkia):
+   * Valokuva (vain dataa: ei pysäkkiä, ei kuluttajaa vielä). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03-pilvi.
+   */
+  abudhabi: {
+    tiedosto: 'Qasr al Hosn.jpg',
+    lahde: 'Darthjipsu, Commons (CC BY-SA 4.0)',
+    lyhyt: 'Qasr Al Hosn on Abu Dhabin vanhin kivirakennus ja nykyään museo.',
+    selite: 'Qasr Al Hosn on Abu Dhabin vanhin kivirakennus. Linnake oli emiirin palatsi ja hallituspaikka vuoteen 1966, ja nykyään se on museo ja kulttuurikohde.',
+  },
+  amman: {
+    tiedosto: 'Amman Odeum c 1900.jpg',
+    vuosi: 'noin 1900',
+    lahde: 'American Colony (Jerusalem), Commons (PD)',
+    lyhyt: 'Roomalaisajan raunio Ammanissa noin vuonna 1900.',
+    selite: 'Noin vuonna 1900 Amman oli pieni tšerkessien asuttama kylä, jossa seisoi yhä roomalaisajan raunioita.',
+  },
+  baku: {
+    tiedosto: 'Baku, 1861.jpg',
+    vuosi: '1861',
+    lahde: 'Alexander Ulsky (1837–1868), Commons (PD)',
+    lyhyt: 'Baku vuonna 1861: muurien ympäröity kaupunki Bakunlahden rannalla.',
+    selite: 'Baku oli tuolloin Venäjän keisarikunnan lääninpääkaupunki, ja muurien sisäpuolinen kaupunki erottui muurien ulkopuolisesta.',
+  },
+  beirut: {
+    tiedosto: 'View of Beirut, looking towards body of water) - Bonfils LCCN2004668094.jpg',
+    vuosi: 'noin 1867',
+    lahde: 'Maison Bonfils (Beirut, Lebanon), photographer, Commons (PD)',
+    lyhyt: 'Beirut 1800-luvulla, kasvava satama- ja kauppakaupunki.',
+    selite: 'Beirut oli 1800-luvulla kasvava satama- ja kauppakaupunki, jolla oli tiiviit yhteydet Eurooppaan.',
+  },
+  jerevan: {
+    tiedosto: 'Caucase. Mosquée Géhu. Erivan - (mission) de Baye ; (photogr.) de Baye ; (photogr. reprod. par) Molteni (pour la conférence donnée par) de Baye - btv1b53251410k.jpg',
+    vuosi: '1898',
+    lahde: 'Baye, Joseph de (1853-1931), Commons (PD)',
+    lyhyt: 'Sininen moskeija Erivanissa ranskalaisen Joseph de Bayen retkikunnan vedoksessa 1898.',
+    selite: 'Vedoksessa näkyy moskeijan laatoitettu kupoli puiden takana ja ihmisiä pihalla. Moskeija rakennettiin 1765–66 Erivanin kaanin Hoseyn Ali Khanin tilauksesta, ja vedoksen tekijä on ranskalainen Joseph de Baye.',
+  },
+  manama: {
+    tiedosto: 'Portuguese Fort Bahrain 1870.jpg',
+    vuosi: 'noin 1870',
+    lahde: 'Unknown / Anonymous photographer, Commons (PD)',
+    lyhyt: 'Vanha linnake Bahrainissa noin vuonna 1870, muutamaa vuotta ennen isoisän matkavuotta.',
+    selite: 'Vanha valokuva linnakkeesta Bahrainissa noin vuodelta 1870. Kuvan tarkkaa kohdetta ei ole varmistettu.',
+    uusi: {
+      tiedosto: 'Bahrain Fort March 2015.JPG',
+      lahde: 'Martin Falbisoner, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Qal\'at al-Bahrain nykyään: UNESCOn maailmanperintökohde noin kuuden kilometrin päässä Manamasta.',
+      selite: 'Qal\'at al-Bahrainin linnake on osittain kaivettu esiin ja nimetty UNESCOn maailmanperintökohteeksi. Se sijaitsee noin kuuden kilometrin päässä Manamasta länteen.',
+    },
+  },
+  tbilisi: {
+    tiedosto: 'Tbilisi XIXc 04.jpg',
+    vuosi: '1800-luvun loppu',
+    lahde: 'Dmitri Yermakov, Commons (PD)',
+    lyhyt: 'Tiflisin katunäkymä 1800-luvun lopulta, ajalta ennen sähköraitiotietä.',
+    selite: 'Tiflisin katunäkymä 1800-luvun lopulta. Kaupungissa liikennöi hevosraitiotie 1800-luvun lopulta, ja sähköraitiotie avattiin vasta 1900-luvun alussa.',
+  },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierä e03b, Ramallah):
+   * Valokuva (vain dataa: ei pysäkkiä, ei kuluttajaa vielä). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03b-ramallah.
+   */
+  ramallah: {
+    tiedosto: 'A bride\'s arrival before the house of her bridegroom - a wedding, Ramallah, Palestine - DPLA - 3b81a2b05b83c9447910b7487c7606e8 (page 1).jpg',
+    vuosi: '1900',
+    lahde: 'Underwood & Underwood, Commons (PD)',
+    lyhyt: 'Häät Ramallahissa noin vuonna 1900: väkijoukko kokoontuu, kun morsian saapuu sulhasen talolle.',
+    selite: 'Kuva on Underwood & Underwoodin stereokuva, jossa kyläläisiä seisoo puun ja kivimuurin luona morsiamen saapuessa. Isoisän matkavuonna 1873 Ramallah oli vielä kivitalojen kylä, jonka asukkaat olivat enimmäkseen kreikkalaisen riituksen kristittyjä.',
+    uusi: {
+      tiedosto: '2010-08 Ramallah 43.jpg',
+      lahde: 'Ralf Lotys (Sicherlich), Commons (CC BY 3.0)',
+      lyhyt: 'Moskeija ja kerrostaloja Ramallahin rinteillä nykyään.',
+      selite: 'Kivitalojen kylästä on kasvanut kerrostalojen täyttämä kaupunki: Ramallahin kaupungissa asui vuonna 2017 noin 39 000 ihmistä.',
+    },
+  },
 };

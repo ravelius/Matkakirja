@@ -2666,7 +2666,7 @@ async function hoidaSahke(pyynto, env, kors, runko) {
 /*
  * ELÄVÄ OPAS (omistaja 5.10.2026 klo 17.5x; opas.js). POST /opas/seuraava (tai tehtava 'opas'):
  *   { kaupunki?, sijainti?: { lat, lon }, toive?, kaydyt|nahdyt?: [Wikidata-tunnus tai otsikko], isoisa?, istunto? }
- * → { tyyppi: 'pysahdys', id, nimi, alarivi, lat, lon, koko_m, korkeus_m?, katse_suunta?, katse_kaari?, teksti, aani, kesto_s, wiki, kuva }
+ * → { tyyppi: 'pysahdys', id, nimi, alarivi, lat, lon, koko_m, korkeus_m?, katse_suunta?, katse_kaari?, katse_loppu?, lasku_osuus?, teksti, aani, kesto_s, wiki, kuva }
  *   tai { tyyppi: 'kysymys', teksti, vaihtoehdot: [2], aani, kesto_s }.
  * Sonnet (OPAS_MALLI, oletus Sonnet 5.5) valitsee Wikipedian ehdokkaista; koordinaatit Wikipediasta. Ääni William
  * (eleven_v4_turbo, Sokrateen asetukset) valmiiksi tallennettuna: GET /opas/aani/<sha>.mp3 (R2 tai reunavälimuisti),
@@ -3278,7 +3278,8 @@ async function hoidaOppaanLiiku(pyynto, env, kors) {
   const omat = omatKohteet(kaupunki, env);
   if (omat) {
     return vastaa({ kaupunki, kohteet: omat.kohteet.map((k, i) => ({ id: k.id, nimi: k.nimi, lat: k.lat, lon: k.lon, alarivi: k.kuvaus ?? null,
-      luokka: k.luokka ?? null, tarkeys: i + 1, kuva: kohteenKuvat(kuvaLista, k.id)[0] ?? null, kuvat: kohteenKuvat(kuvaLista, k.id) })),
+      luokka: k.luokka ?? null, ...(Number.isFinite(k.korkeus_m) ? { korkeus_m: k.korkeus_m } : {}),
+      tarkeys: i + 1, kuva: kohteenKuvat(kuvaLista, k.id)[0] ?? null, kuvat: kohteenKuvat(kuvaLista, k.id) })),
       kierros: omat.kierros }, kors);
   }
   const lukitut = kaupunginKohteet(kuvaLista, kaupunki).filter((k) => pisteSallittu(k, kaupunki, env));
@@ -3286,9 +3287,18 @@ async function hoidaOppaanLiiku(pyynto, env, kors) {
     // Kaupunkikierros-rivi (omistaja 6.10. 23.4x, natiivi lukee kentän junasta 156): 8 tärkeintä lyhimpänä reittinä
     // sijaintia lähimmästä alkaen; kohteet pysyvät tärkeysjärjestyksessä listaa varten.
     const alku = Number.isFinite(lat) && Number.isFinite(lon) && !(lat === 0 && lon === 0) ? { lat, lon } : null;
-    return vastaa({ kaupunki, kohteet: lukitut.map((k, i) => ({ id: k.id, nimi: k.nimi, lat: k.lat, lon: k.lon, alarivi: null,
-      luokka: null, tarkeys: i + 1, kuva: k.kuvat[0] ?? null, kuvat: k.kuvat })),
-      kierros: liikunKierros(lukitut, alku, esittelynAlku(await oppaanEsittely(env, kaupunki), kaupunki)) }, kors);
+    // Luokka ja korkeus esittelystä (id = Wikidata-tunnus): natiivin kierros kehystää aukiot ja väistää esteitä (San Marco / kellotorni).
+    // Sama esittely palvelee kierroksen alkua; puuttuva esittely → luokka null kuten ennen.
+    const esittely = await oppaanEsittely(env, kaupunki);
+    const esittelyKohde = new Map((esittely?.kohteet ?? []).map((e) => [e.id, e]));
+    return vastaa({ kaupunki, kohteet: lukitut.map((k, i) => {
+      const e = esittelyKohde.get(k.id);
+      return { id: k.id, nimi: k.nimi, lat: k.lat, lon: k.lon, alarivi: null,
+        luokka: typeof e?.luokka === 'string' && e.luokka ? e.luokka : null,
+        ...(Number.isFinite(e?.korkeus_m) ? { korkeus_m: e.korkeus_m } : {}),
+        tarkeys: i + 1, kuva: k.kuvat[0] ?? null, kuvat: k.kuvat };
+    }),
+      kierros: liikunKierros(lukitut, alku, esittelynAlku(esittely, kaupunki)) }, kors);
   }
   try {
     const viite = await tarkistettuSijainti(kaupunki, Number.isFinite(lat) && Number.isFinite(lon) && !(lat === 0 && lon === 0) ? { lat, lon } : null);
@@ -3490,6 +3500,19 @@ export function katseKaari(arvo) {
   return Number.isFinite(n) ? { katse_kaari: Math.min(45, Math.max(0, n)) } : {};
 }
 
+/** Kohteen katse_loppu (LS1/PT 11.10., juna 181): true = pysähdyksen kierto päättyy niin, että kamera katsoo katse_suunta-suuntaan
+ *  (esim. Notre-Damen länsijulkisivu). Valinnainen litteä kenttä: vain täsmälleen true kelpaa; muuten kenttä pois. Vanha natiivi ohittaa kentän. */
+export function katseLoppu(arvo) {
+  return arvo === true ? { katse_loppu: true } : {};
+}
+
+/** Kohteen lasku_osuus (LS1/PT 11.10., juna 181): laskeutumisen kesto osuutena pysähdyksestä, 0,2–1. Valinnainen litteä kenttä:
+ *  vain äärellinen luku, rajataan 0,2–1; muuten pois (natiivi käyttää oletusta). Vanha natiivi ohittaa kentän. */
+export function laskuOsuus(arvo) {
+  const n = typeof arvo === 'number' ? arvo : typeof arvo === 'string' && arvo.trim() ? Number(arvo) : NaN;
+  return Number.isFinite(n) ? { lasku_osuus: Math.min(1, Math.max(0.2, n)) } : {};
+}
+
 async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   if (!env.ANTHROPIC_API_KEY) return vastaa({ virhe: 'asetus', viesti: 'Opas ei ole vielä käytössä.' }, { status: 503, ...kors });
   const ip = pyynto.headers.get('cf-connecting-ip');
@@ -3629,7 +3652,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     tuloksenPaikka = { nimi, koko_m: valmis.koko_m, ...paikka };
     tulos = { tyyppi: 'pysahdys', id: paikka.id, nimi, alarivi: valmis.kuvaus ?? null, lat: paikka.lat, lon: paikka.lon,
       koko_m: valmis.koko_m ?? paikka.koko_m ?? 150, ...(valmis.korkeus_m ? { korkeus_m: valmis.korkeus_m } : {}),
-      ...katseSuunta(valmis.katse_suunta), ...katseKaari(valmis.katse_kaari),
+      ...katseSuunta(valmis.katse_suunta), ...katseKaari(valmis.katse_kaari), ...katseLoppu(valmis.katse_loppu), ...laskuOsuus(valmis.lasku_osuus),
       ...(valmis.luokka ? { luokka: valmis.luokka } : {}), teksti: (p.lyhyt && valmis.lyhyt) || valmis.teksti, valmis: true,
       wiki: paikka.wiki ?? null, kuva: null, vaihtoehdot: valmis.syventava ? [valmis.syventava] : [], koordinaatit: paikka.lahde,
       ...(seuraava ? { kierros: { numero: seuraava.numero, maara: seuraava.maara } } : {}),
@@ -3654,7 +3677,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
       tuloksenPaikka = { nimi, wikipedia: vastaus.wikipedia, koko_m: vastaus.koko_m, ...paikka };
       tulos = { tyyppi: 'pysahdys', id: paikka.id, nimi, alarivi: paikka.alarivi ?? vastaus.kuvaus ?? null, lat: paikka.lat, lon: paikka.lon,
         koko_m: seuraava?.paikka.koko_m ?? vastaus.koko_m, ...(vastaus.korkeus_m ? { korkeus_m: vastaus.korkeus_m } : {}),
-        ...katseSuunta(seuraava?.paikka.katse_suunta), ...katseKaari(seuraava?.paikka.katse_kaari),
+        ...katseSuunta(seuraava?.paikka.katse_suunta), ...katseKaari(seuraava?.paikka.katse_kaari), ...katseLoppu(seuraava?.paikka.katse_loppu), ...laskuOsuus(seuraava?.paikka.lasku_osuus),
         ...(vastaus.luokka ? { luokka: vastaus.luokka } : {}), teksti: vastaus.teksti,
         wiki: paikka.wiki, kuva: null, vaihtoehdot: vastaus.vaihtoehdot, koordinaatit: paikka.lahde,
         ...(seuraava ? { kierros: { numero: seuraava.numero, maara: seuraava.maara } } : {}),

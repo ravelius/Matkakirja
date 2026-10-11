@@ -1,0 +1,70 @@
+# TestFlight-testaajien seuranta neljästi päivässä (PT 11.10. 10.2x: omistajalle riittää muutama kerta päivässä;
+# 9.07, 13.07, 17.07 ja 21.07 Suomen kesäaikaa = UTC 6/10/14/18, talviaikana tunnin aiemmin), VAIN LUKU (omistaja 11.10.2026 09.5x: "haluan vain nähdä milloin
+# raatilaiset lataavat pelin itselleen"). Ajuri on Mac Studiolla, joten tulos kirjoitetaan suoraan
+# /Users/Shared/Claude/julkaisija-tyokalut/asc-testaajat.json (Julkaisija lukee ja raportoi PT:lle).
+# Skripti: tools/testflight/testaajaseuranta.py. Ei muuta mitään App Store Connectissa.
+name: ASC-testaajat (vain luku)
+
+on:
+  schedule:
+    - cron: '7 6,10,14,18 * * *'
+  workflow_dispatch:
+    inputs:
+      bundle_id:
+        description: 'Bundle id'
+        type: string
+        default: 'fi.matkakirja.peli'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: asc-testaajat
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: nice -n 15 bash --noprofile --norc -eo pipefail {0}
+
+jobs:
+  seuranta:
+    name: Ryhmät, asennukset ja testaajat
+    runs-on: [self-hosted, macOS, ARM64, testit]
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: tools/testflight
+
+      - name: Pura App Store Connect -avain
+        env:
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+        run: |
+          set -euo pipefail
+          hakemisto="$RUNNER_TEMP/asc"
+          mkdir -p "$hakemisto"; chmod 700 "$hakemisto"
+          polku="$hakemisto/AuthKey.p8"
+          if [[ "$ASC_KEY_P8" == *"BEGIN PRIVATE KEY"* ]]; then
+            printf '%s\n' "$ASC_KEY_P8" > "$polku"
+          else
+            printf '%s' "$ASC_KEY_P8" | openssl base64 -d -A -out "$polku"
+          fi
+          chmod 600 "$polku"
+          grep -q "BEGIN PRIVATE KEY" "$polku" || { echo "::error title=Avain ei purkautunut::ASC_KEY_P8"; exit 1; }
+          echo "ASC_AVAIN_POLKU=$polku" >> "$GITHUB_ENV"
+
+      - name: Testaajaseuranta
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          BUNDLE_ID: ${{ inputs.bundle_id || 'fi.matkakirja.peli' }}
+        run: |
+          set -euo pipefail
+          python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
+          ulos=/Users/Shared/Claude/julkaisija-tyokalut/asc-testaajat.json
+          [[ -d ${ulos%/*} ]] || ulos="$RUNNER_TEMP/asc-testaajat.json"
+          python3 tools/testflight/testaajaseuranta.py --bundle-id "$BUNDLE_ID" --ulos "$ulos" | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Siivoa avain
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/asc" || true

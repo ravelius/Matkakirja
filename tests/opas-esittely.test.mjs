@@ -2,7 +2,7 @@
 // mallikutsua; kohde ilman valmista tekstiä ja vapaat toiveet live-mallilla.
 import test, { beforeEach } from 'node:test';
 import assert from 'node:assert/strict';
-import worker, { katseSuunta, katseKaari } from '../tools/pollo/worker.js';
+import worker, { katseSuunta, katseKaari, katseLoppu, laskuOsuus } from '../tools/pollo/worker.js';
 import { tyhjennaReunamuisti } from '../tools/pollo/reuna.js';
 import { tyhjennaKuvalista } from '../tools/pollo/opas-kuvat.js';
 import { oppaanEsittely, kaupunkiId, tyhjennaEsittelyt, valmisKohde, valmiinPaikka } from '../tools/pollo/opas-esittely.js';
@@ -191,7 +191,8 @@ test('esittely-indeksi: pilotti pariisi, praha, wien (vienti 7.10.)', async () =
   const { OPAS_SALLITUT } = await import('../tools/pollo/sallitut.js');
   assert.deepEqual([...OPAS_AINEISTOT.esittely].sort(), OPAS_SALLITUT.sallitut.map((x) => x.id).sort());
   // Kehityskaupunki Tukholma (omistaja 8.10. 20.4x): kertojan äänet, oma polku; 9.10. lähikohteet esittely-v3, v3b Vasan katse_suunta.
-  const AANELLISET = { tukholma: 'opas/esittely-v3b/tukholma.json' };
+  // LS1 11.10.: Bryssel ja Firenze v2a (korkeus_m tornillisille rakennuksille, natiivin kierroksen esteet).
+  const AANELLISET = { tukholma: 'opas/esittely-v3b/tukholma.json', bryssel: 'opas/esittely-v2a/bryssel.json', firenze: 'opas/esittely-v2a/firenze.json' };
   for (const id of OPAS_AINEISTOT.esittely.slice(6)) assert.equal(OPAS_AINEISTOT.esittely_polut[id], AANELLISET[id] ?? `opas/esittely-v2/${id}.json`);
 });
 
@@ -312,9 +313,9 @@ test('historia_polut: kehityskaupunkien historiaosiot (Tukholma, Pariisi) omasta
   assert.deepEqual(Object.keys(OPAS_AINEISTOT.historia_yksityiskohdat_polut).sort(), Object.keys(OPAS_AINEISTOT.historia_polut).sort());
 });
 
-test('esittely_polut: Pariisi v1f (v1e + Louvren paikka pyramidille), äänet ennallaan', async () => {
+test('esittely_polut: Pariisi v1g (v1f + Notre-Damen katse_suunta/katse_loppu/lasku_osuus), äänet ennallaan', async () => {
   const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
-  assert.equal(OPAS_AINEISTOT.esittely_polut.pariisi, 'opas/esittely-v1f/pariisi.json');
+  assert.equal(OPAS_AINEISTOT.esittely_polut.pariisi, 'opas/esittely-v1g/pariisi.json');
 });
 
 test('esittelyn omat lat/lon voittavat kohdelistan (Louvren pyramidi, LS1/PT 10.10.)', async () => {
@@ -368,4 +369,55 @@ test('katse_kaari (LS1/PT 9.10., juna 174): litteä kenttä pysähdykseen, rajat
   assert.equal(d.id, 'Q100'); assert.equal(d.katse_suunta, 295); assert.equal(d.katse_kaari, 12);
   const toka = await opas(env, { kaydyt: ['Q100'], istunto: 'kk1' });
   assert.ok(!('katse_kaari' in toka.d), 'kenttä puuttuu → ei vastauksessa');
+});
+
+test('katse_loppu ja lasku_osuus (LS1/PT 11.10., juna 181): litteät kentät pysähdykseen, rajaukset, puuttuva/virheellinen pois', async () => {
+  assert.deepEqual(katseLoppu(true), { katse_loppu: true });
+  for (const v of [false, undefined, null, 'true', 1, 0, '']) assert.deepEqual(katseLoppu(v), {}, String(v));
+  assert.deepEqual(laskuOsuus(0.5), { lasku_osuus: 0.5 });
+  assert.deepEqual(laskuOsuus(0.05), { lasku_osuus: 0.2 });
+  assert.deepEqual(laskuOsuus(3), { lasku_osuus: 1 });
+  assert.deepEqual(laskuOsuus('0.7'), { lasku_osuus: 0.7 });
+  for (const v of [undefined, null, '', 'hidas', NaN, Infinity]) assert.deepEqual(laskuOsuus(v), {}, String(v));
+  const env = ymparisto();
+  env.OPAS_ESITTELY_TESTI.testila = { ...ESITTELY, kohteet: ESITTELY.kohteet.map((k, i) => (i === 0 ? { ...k, katse_suunta: 117, katse_loppu: true, lasku_osuus: 0.5 } : k)) };
+  const { d } = await opas(env, { toive: 'Esittele kaupunki', istunto: 'kl1' });
+  assert.equal(d.id, 'Q100'); assert.equal(d.katse_suunta, 117); assert.equal(d.katse_loppu, true); assert.equal(d.lasku_osuus, 0.5);
+  const toka = await opas(env, { kaydyt: ['Q100'], istunto: 'kl1' });
+  assert.ok(!('katse_loppu' in toka.d) && !('lasku_osuus' in toka.d), 'kentät puuttuvat → ei vastauksessa');
+});
+
+test('Liiku: lukitun kaupungin kohteille luokka ja korkeus_m esittelystä; puuttuva esittely → luokka null kuten ennen', async () => {
+  const vanha = globalThis.fetch; globalThis.fetch = async () => new Response('{}');
+  try {
+    const e = ymparisto();
+    e.OPAS_ESITTELY_TESTI = { testila: { ...ESITTELY, kohteet: ESITTELY.kohteet.map((k, i) => ({ ...k,
+      luokka: i === 1 ? 'torni' : i === 2 ? undefined : 'aukio', ...(i === 1 ? { korkeus_m: 99 } : i === 3 ? { korkeus_m: 'korkea' } : {}) })) } };
+    const hae = async (env) => (await (await worker.fetch(new Request('https://pollo.example/opas/liiku?kaupunki=Testil%C3%A4&lat=60&lon=25',
+      { headers: H }), env, { waitUntil() {} })).json());
+    const d = await hae(e);
+    const k = (id) => d.kohteet.find((x) => x.id === id);
+    assert.equal(k('Q100').luokka, 'aukio'); assert.equal('korkeus_m' in k('Q100'), false);
+    assert.equal(k('Q101').luokka, 'torni'); assert.equal(k('Q101').korkeus_m, 99);
+    assert.equal(k('Q102').luokka, null, 'esittelyn kohteella ei luokkaa → null');
+    assert.equal('korkeus_m' in k('Q103'), false, 'ei-luku ei välity');
+    assert.equal(k('Q109').luokka, null, 'kohde ilman esittelyriviä → null');
+    assert.deepEqual(d.kohteet.map((x) => x.id), Array.from({ length: 10 }, (_, i) => `Q${100 + i}`), 'järjestys ennallaan');
+    assert.ok(d.kohteet.every((x) => x.alarivi === null && x.kuvat.length === 1), 'muut kentät ennallaan');
+    // Esittely puuttuu → luokka null, korkeutta ei
+    const ilman = await hae({ ...ymparisto(), OPAS_ESITTELY_TESTI: {} });
+    assert.ok(ilman.kohteet.length >= 8);
+    assert.ok(ilman.kohteet.every((x) => x.luokka === null && !('korkeus_m' in x)));
+  } finally { globalThis.fetch = vanha; }
+});
+
+test('Liiku: omat kohteet (Giza) välittävät luokan ja korkeus_m:n', async () => {
+  const vanha = globalThis.fetch; globalThis.fetch = async () => new Response('{}');
+  try {
+    const e = { ...ymparisto(), OPAS_ESITTELY_TESTI: undefined, OPAS_SALLITUT_ESTO: '1' };
+    const d = await (await worker.fetch(new Request('https://pollo.example/opas/liiku?kaupunki=Gizan%20pyramidit',
+      { headers: { ...H, 'x-matkakirja-kokeilu': 'giza' } }), e, {})).json();
+    const kheops = d.kohteet.find((x) => x.id === 'Q37200');
+    assert.equal(kheops.luokka, 'rakennus'); assert.equal(kheops.korkeus_m, 139);
+  } finally { globalThis.fetch = vanha; }
 });

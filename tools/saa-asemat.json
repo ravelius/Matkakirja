@@ -1,0 +1,439 @@
+{
+ "ahaggar": {
+  "ehdokkaat": [
+   "Tamanrasset"
+  ],
+  "asema": "Tamanrasset"
+ },
+ "alkufra": {
+  "ehdokkaat": [
+   "Kufra",
+   "Tazirbu",
+   "Al Kufrah District"
+  ]
+ },
+ "angola": {
+  "ehdokkaat": [
+   "Luanda"
+  ],
+  "asema": "Luandan lentoasema"
+ },
+ "appalakit": {
+  "ehdokkaat": [
+   "Asheville, North Carolina"
+  ],
+  "asema": "Ashevillen lentoasema"
+ },
+ "bahrelghazal": {
+  "ehdokkaat": [
+   "Aweil",
+   "Rumbek",
+   "Raga, South Sudan",
+   "Wau, South Sudan"
+  ],
+  "asema": "Rumbek"
+ },
+ "bali": {
+  "ehdokkaat": [
+   "Denpasar"
+  ],
+  "asema": "Denpasarin lentoasema"
+ },
+ "bananal": {
+  "ehdokkaat": [
+   "Bananal Island",
+   "São Félix do Araguaia",
+   "Palmas, Tocantins"
+  ],
+  "asema": "Palmas"
+ },
+ "birdsville": {
+  "ehdokkaat": [
+   "Birdsville"
+  ],
+  "asema": "Birdsville"
+ },
+ "boavista": {
+  "ehdokkaat": [
+   "Sal Rei",
+   "Boa Vista, Cape Verde",
+   "Sal, Cape Verde"
+  ],
+  "asema": "Salin lentoasema"
+ },
+ "broome": {
+  "ehdokkaat": [
+   "Broome, Western Australia"
+  ],
+  "asema": "Broomen lentoasema"
+ },
+ "campogrande": {
+  "ehdokkaat": [
+   "Campo Grande"
+  ],
+  "asema": "Campo Grande"
+ },
+ "caphorn": {
+  "ehdokkaat": [
+   "Cape Horn",
+   "Puerto Williams",
+   "Ushuaia"
+  ],
+  "asema": "Puerto Williamsin lentoasema"
+ },
+ "cayenne": {
+  "ehdokkaat": [
+   "Cayenne"
+  ],
+  "asema": "Cayenne"
+ },
+ "churchill": {
+  "ehdokkaat": [
+   "Churchill, Manitoba"
+  ],
+  "asema": "Churchillin lentoasema"
+ },
+ "cooberpedy": {
+  "ehdokkaat": [
+   "Coober Pedy"
+  ],
+  "asema": "Coober Pedy"
+ },
+ "darfur": {
+  "ehdokkaat": [
+   "El Fasher"
+  ],
+  "asema": "El Fasher"
+ },
+ "exmouth": {
+  "ehdokkaat": [
+   "Exmouth, Western Australia",
+   "Learmonth, Western Australia"
+  ],
+  "asema": "Learmonthin lentoasema"
+ },
+ "galapagos": {
+  "ehdokkaat": [
+   "Puerto Ayora",
+   "Galápagos Islands"
+  ],
+  "asema": "San Cristóbal (Galápagos)"
+ },
+ "gao": {
+  "ehdokkaat": [
+   "Gao"
+  ],
+  "asema": "Gao"
+ },
+ "geraldton": {
+  "ehdokkaat": [
+   "Geraldton"
+  ],
+  "asema": "Geraldtonin lentoasema"
+ },
+ "grandcanyon": {
+  "ehdokkaat": [
+   "Grand Canyon Village, Arizona",
+   "Grand Canyon National Park"
+  ],
+  "asema": "Grand Canyon Village"
+ },
+ "hawaii": {
+  "ehdokkaat": [
+   "Honolulu"
+  ],
+  "asema": "Honolulun lentoasema"
+ },
+ "iguazu": {
+  "ehdokkaat": [
+   "Puerto Iguazú",
+   "Foz do Iguaçu"
+  ],
+  "asema": "Puerto Iguazún lentoasema"
+ },
+ "joaopessoa": {
+  "ehdokkaat": [
+   "Cabedelo",
+   "Recife",
+   "Natal, Rio Grande do Norte"
+  ],
+  "asema": "Recife"
+ },
+ "kalgoorlie": {
+  "ehdokkaat": [
+   "Kalgoorlie",
+   "Boulder, Western Australia",
+   "City of Kalgoorlie–Boulder"
+  ]
+ },
+ "kamerun": {
+  "ehdokkaat": [
+   "Buea",
+   "Limbe, Cameroon",
+   "Douala"
+  ],
+  "asema": "Douala"
+ },
+ "kappalmas": {
+  "ehdokkaat": [
+   "Cape Point",
+   "Simon's Town",
+   "Cape Town"
+  ],
+  "asema": "Kapkaupungin lentoasema"
+ },
+ "karthago": {
+  "ehdokkaat": [
+   "Carthage",
+   "Tunis"
+  ],
+  "asema": "Tunis–Carthagen lentoasema"
+ },
+ "kimberley": {
+  "ehdokkaat": [
+   "Kimberley, Northern Cape"
+  ],
+  "asema": "Kimberley"
+ },
+ "kongo": {
+  "ehdokkaat": [
+   "Yangambi",
+   "Isangi",
+   "Basoko",
+   "Kisangani"
+  ],
+  "asema": "Basoko"
+ },
+ "labrador": {
+  "ehdokkaat": [
+   "Happy Valley-Goose Bay"
+  ],
+  "asema": "Goose Bayn lentoasema"
+ },
+ "macapa": {
+  "ehdokkaat": [
+   "Macapá"
+  ],
+  "asema": "Macapá"
+ },
+ "machupicchu": {
+  "ehdokkaat": [
+   "Machu Picchu",
+   "Aguas Calientes, Peru"
+  ],
+  "asema": "Machu Picchu"
+ },
+ "madagaskar": {
+  "ehdokkaat": [
+   "Antananarivo"
+  ],
+  "asema": "Antananarivo"
+ },
+ "managua": {
+  "ehdokkaat": [
+   "Managua"
+  ],
+  "asema": "Managuan lentoasema"
+ },
+ "milfordsound": {
+  "ehdokkaat": [
+   "Milford Sound"
+  ],
+  "asema": "Milford Soundin lentoasema"
+ },
+ "mosambik": {
+  "ehdokkaat": [
+   "Island of Mozambique",
+   "Nacala",
+   "Angoche",
+   "Pemba, Mozambique"
+  ],
+  "asema": "Pemba"
+ },
+ "mountisa": {
+  "ehdokkaat": [
+   "Mount Isa"
+  ],
+  "asema": "Mount Isa"
+ },
+ "mountrushmore": {
+  "ehdokkaat": [
+   "Mount Rushmore",
+   "Keystone, South Dakota",
+   "Rapid City, South Dakota"
+  ],
+  "asema": "Mount Rushmore"
+ },
+ "murzuk": {
+  "ehdokkaat": [
+   "Murzuk",
+   "Sabha, Libya"
+  ],
+  "asema": "Sabha"
+ },
+ "namib": {
+  "ehdokkaat": [
+   "Gobabeb",
+   "Walvis Bay",
+   "Swakopmund"
+  ]
+ },
+ "nome": {
+  "ehdokkaat": [
+   "Nome, Alaska"
+  ],
+  "asema": "Nomen lentoasema"
+ },
+ "norfolk": {
+  "ehdokkaat": [
+   "Norfolk Island"
+  ],
+  "asema": "Norfolkinsaaren lentoasema"
+ },
+ "noumea": {
+  "ehdokkaat": [
+   "Nouméa"
+  ],
+  "asema": "Nouméa"
+ },
+ "nullarbor": {
+  "ehdokkaat": [
+   "Eucla, Western Australia",
+   "Forrest, Western Australia",
+   "Nullarbor Plain"
+  ],
+  "asema": "Eucla"
+ },
+ "orjarannikko": {
+  "ehdokkaat": [
+   "Ouidah",
+   "Cotonou"
+  ],
+  "asema": "Cotonou"
+ },
+ "ouropreto": {
+  "ehdokkaat": [
+   "Ouro Preto"
+  ]
+ },
+ "portovelho": {
+  "ehdokkaat": [
+   "Porto Velho"
+  ],
+  "asema": "Porto Velho"
+ },
+ "puertomontt": {
+  "ehdokkaat": [
+   "Puerto Montt"
+  ],
+  "asema": "Puerto Monttin lentoasema"
+ },
+ "rashafun": {
+  "ehdokkaat": [
+   "Bandarbeyla",
+   "Eyl",
+   "Bosaso"
+  ]
+ },
+ "robinsoncrusoe": {
+  "ehdokkaat": [
+   "Robinson Crusoe Island",
+   "Juan Fernández Islands"
+  ],
+  "asema": "Juan Fernández -saaret"
+ },
+ "sahara": {
+  "ehdokkaat": [
+   "In Salah"
+  ],
+  "asema": "In Salah"
+ },
+ "sanambrosio": {
+  "ehdokkaat": [
+   "Desventuradas Islands",
+   "San Félix Island"
+  ]
+ },
+ "sanjuan": {
+  "ehdokkaat": [
+   "San Juan, Puerto Rico"
+  ],
+  "asema": "San Juanin lentoasema"
+ },
+ "santarem": {
+  "ehdokkaat": [
+   "Santarém, Pará"
+  ],
+  "asema": "Santarém"
+ },
+ "saoluis": {
+  "ehdokkaat": [
+   "São Luís, Maranhão"
+  ],
+  "asema": "São Luís"
+ },
+ "sepik": {
+  "ehdokkaat": [
+   "Wewak"
+  ],
+  "asema": "Wewak"
+ },
+ "sierraleone": {
+  "ehdokkaat": [
+   "Freetown"
+  ],
+  "asema": "Freetown"
+ },
+ "sthelena": {
+  "ehdokkaat": [
+   "Jamestown, Saint Helena",
+   "Saint Helena"
+  ]
+ },
+ "suakin": {
+  "ehdokkaat": [
+   "Suakin",
+   "Port Sudan"
+  ],
+  "asema": "Port Sudan"
+ },
+ "tanganjika": {
+  "ehdokkaat": [
+   "Kigoma"
+  ],
+  "asema": "Kigoma"
+ },
+ "titicaca": {
+  "ehdokkaat": [
+   "Puno"
+  ],
+  "asema": "Puno"
+ },
+ "tshadjarvi": {
+  "ehdokkaat": [
+   "Bol, Chad",
+   "N'Djamena"
+  ],
+  "asema": "Bol"
+ },
+ "uluru": {
+  "ehdokkaat": [
+   "Yulara, Northern Territory",
+   "Uluru"
+  ],
+  "asema": "Yulara"
+ },
+ "viktoria": {
+  "ehdokkaat": [
+   "Mwanza"
+  ],
+  "asema": "Mwanza"
+ },
+ "yellowstone": {
+  "ehdokkaat": [
+   "Old Faithful",
+   "Yellowstone National Park"
+  ],
+  "asema": "Yellowstone Lake"
+ }
+}

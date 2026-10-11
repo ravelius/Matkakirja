@@ -6070,6 +6070,87 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 35.6930, etela: 35.6600, lansi: -105.9620, ita: -105.9120 },
   },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e01–e02): rajat sisalto.json:n kohdekartasta (kohteet + n. 300 m).
+   * Monaco ja Reykjavík rannalla: meri-lippu.
+   */
+  belgrad: {
+    rajat: { pohjoinen: 44.8343, etela: 44.7953, lansi: 20.432, ita: 20.4723 },
+  },
+  bratislava: {
+    rajat: { pohjoinen: 48.1519, etela: 48.139, lansi: 17.096, ita: 17.1208 },
+  },
+  chisinau: {
+    rajat: { pohjoinen: 47.0288, etela: 47.0099, lansi: 28.8241, ita: 28.8508 },
+  },
+  minsk: {
+    rajat: { pohjoinen: 53.9126, etela: 53.8938, lansi: 27.543, ita: 27.579 },
+  },
+  podgorica: {
+    rajat: { pohjoinen: 42.4484, etela: 42.43286, lansi: 19.24465, ita: 19.2664 },
+  },
+  skopje: {
+    rajat: { pohjoinen: 42.0058, etela: 41.99342, lansi: 21.42807, ita: 21.44059 },
+  },
+  tirana: {
+    rajat: { pohjoinen: 41.3328, etela: 41.3204, lansi: 19.8145, ita: 19.8297 },
+  },
+  zagreb: {
+    rajat: { pohjoinen: 45.8186, etela: 45.8045, lansi: 15.9691, ita: 15.9836 },
+  },
+  andorralavella: {
+    // Etelä- ja länsireunaa laskettu (Karttaseppä 11.10.): Santa Coloma osui mittakaavajanan päälle.
+    rajat: { pohjoinen: 42.5144, etela: 42.4891, lansi: 1.4906, ita: 1.5405 },
+  },
+  bern: {
+    rajat: { pohjoinen: 46.9508, etela: 46.9438, lansi: 7.4403, ita: 7.4636 },
+  },
+  monaco: {
+    rajat: { pohjoinen: 43.7421, etela: 43.7275, lansi: 7.4102, ita: 7.4326 },
+    meri: true,
+  },
+  reykjavik: {
+    rajat: { pohjoinen: 64.153, etela: 64.1265, lansi: -21.9487, ita: -21.9005 },
+    meri: true,
+  },
+  sanmarino: {
+    rajat: { pohjoinen: 43.9396, etela: 43.9274, lansi: 12.443, ita: 12.4563 },
+  },
+  vaduz: {
+    rajat: { pohjoinen: 47.1421, etela: 47.1335, lansi: 9.5185, ita: 9.5284 },
+  },
+  /*
+   * PÄÄKAUPUNKIPISTEET e03 (Päätoimittaja 11.10.2026, Kaukasus ja Lähi-itä): rajat sisalto.json:n kohdekartasta. Rannikolla meri-lippu.
+   */
+  abudhabi: {
+    rajat: { pohjoinen: 24.4875, etela: 24.4545, lansi: 54.3, ita: 54.361 },
+    meri: true,
+  },
+  amman: {
+    rajat: { pohjoinen: 31.9582, etela: 31.947, lansi: 35.9302, ita: 35.9431 },
+  },
+  baku: {
+    rajat: { pohjoinen: 40.37464, etela: 40.3573, lansi: 49.82789, ita: 49.8407 },
+    meri: true,
+  },
+  beirut: {
+    rajat: { pohjoinen: 33.903, etela: 33.8755, lansi: 35.4945, ita: 35.5225 },
+    meri: true,
+  },
+  jerevan: {
+    rajat: { pohjoinen: 40.1948, etela: 40.1715, lansi: 44.4987, ita: 44.5246 },
+  },
+  manama: {
+    rajat: { pohjoinen: 26.2433, etela: 26.2162, lansi: 50.5703, ita: 50.6013 },
+    meri: true,
+  },
+  tbilisi: {
+    rajat: { pohjoinen: 41.6983, etela: 41.6834, lansi: 44.798, ita: 44.8147 },
+  },
+  // e03b (Päätoimittaja 11.10.2026): Ramallah, sisalto.json:n kohdekartan rajat.
+  ramallah: {
+    rajat: { pohjoinen: 31.908, etela: 31.8824, lansi: 35.1877, ita: 35.2196 },
+  },
 };
 
 /*
@@ -7103,34 +7184,20 @@ writeFileSync(svgPolku, svg);
 // Rasterointi PNG:ksi pelin Chromiumilla: SVG:n koko katuverkko on
 // selaimelle raskas joka avauksella — PNG piirtyy heti.
 const pngPolku = resolve(JUURI, `assets/kartat/${tiedosto}.png`);
-const skripti = `
-(async () => {
+// Rasterointi samassa prosessissa (Pelikoodari 11.10.2026): #3636 vaihtoi alihaun node -e -skriptin chromium.launchin
+// tools/selain.mjs:n avaaChromiumiin, mutta node -e ei näe tämän moduulin tuontia ("avaaChromium is not defined").
+{
   const selain = await avaaChromium({});
   const sivu = await (await selain.newContext({ viewport: { width: 10, height: 10 } })).newPage();
-  await sivu.goto('file://${svgPolku}');
+  await sivu.goto(`file://${svgPolku}`);
   const koko = await sivu.evaluate(() => {
     const s = document.querySelector('svg');
     return { w: Number(s.getAttribute('width')), h: Number(s.getAttribute('height')) };
   });
   await sivu.setViewportSize({ width: koko.w, height: koko.h });
-  await sivu.screenshot({ path: '${pngPolku}' });
+  await sivu.screenshot({ path: pngPolku });
   await selain.close();
-})();`;
-/*
- * NODE_PATH mukaan, koska playwright ei ole pelin riippuvuus vaan
- * ympäristön: kontissa se on /opt/node22/lib/node_modules. Ilman tätä
- * rasterointi kaatui "Cannot find module 'playwright-core'" -virheeseen
- * vasta SVG:n valmistuttua, eli työ oli jo tehty kun se kaatui.
- */
-execFileSync('node', ['-e', skripti], {
-  cwd: JUURI,
-  stdio: 'inherit',
-  env: {
-    ...process.env,
-    NODE_PATH: [process.env.NODE_PATH, '/opt/node22/lib/node_modules']
-      .filter(Boolean).join(':'),
-  },
-});
+}
 const rajat = KAUPUNGIT[kaupunki].rajat;
 const piirto = piirretytRajat(KAUPUNGIT[kaupunki]);
 console.log(`Valmis: assets/kartat/${tiedosto}.png`);

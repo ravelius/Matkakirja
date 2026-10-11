@@ -277,7 +277,9 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
   const KULTTUURIT = S.KULTTUURIT[LAUDAN_TUNNUS] ?? {};
   const KIELET = S.KIELET[LAUDAN_TUNNUS] ?? {};
   const MAATIEDOT = S.MAATIEDOT[LAUDAN_TUNNUS] ?? {};
-  const maaKaupungille = (id) => P.map.cityCountry?.[id] ?? null;
+  // Pääkaupunkipiste (PAAKAUPUNKIPISTEET, ei laudan pysäkki) saa maansa pisteestä (Pelikoodari 11.10.2026).
+  const pisteenMaa = new Map(hae('js/packs/paakaupungit.js').PAAKAUPUNKIPISTEET.map((p) => [p.id, p.maa]));
+  const maaKaupungille = (id) => P.map.cityCountry?.[id] ?? pisteenMaa.get(id) ?? null;
   const kaupunkiIdt = new Set(P.cities.map((c) => c.id));
 
   // Kaupunkilehti: kansi + aiheet (+ lainattu Menovinkit lehtikaupungille).
@@ -430,7 +432,8 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
   const kohdekartat = Object.keys(KAUPUNKIKARTAT).sort().map((kaupunki) => {
     const k = KAUPUNKIKARTAT[kaupunki];
     return {
-      id: kaupunki, kaupunki,
+      // Pääkaupunkipisteen kartta (id = pisteen id) ei viittaa laudan kaupunkiin (eheysvartijan orvot).
+      id: kaupunki, kaupunki: kaupunkiIdt.has(kaupunki) ? kaupunki : null,
       // Web näyttää värikartan, kun sellainen on (omistaja 15.8.2026), muuten julisteen.
       kuva: karttakuva(k.varikartta ?? k.polku), juliste: karttakuva(k.polku), varikartta: karttakuva(k.varikartta),
       lahde: k.lahde ?? null, rajat: k.rajat, piirtoRajat: k.piirtoRajat ?? null, kainalot: k.kainalot ?? [],

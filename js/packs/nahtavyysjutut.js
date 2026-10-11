@@ -64000,4 +64000,1929 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e01–e02, tarkistettu 14 kaupunkia 0 virhettä):
+   * Kohdekartan nähtävyysjutut. Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e01-pilvi ja -e02-pilvi.
+   */
+  belgrad: {
+    'Belgradin linnoitus': {
+      aika: 'keltit 200-luvulta eaa., nykyasu 1700-luvulta',
+      teksti: 'Belgradin linnoitus on lähteen mukaan kaupungin vanhin osa, ja asukkaat asuivat vuosisatoja vain sen muurien sisällä. Linnoitus muodostuu ylä- ja alakaupungista, ja sen edustalla ovat Suuri ja Pieni Kalemegdan -puistot. Rooman aikana paikalla oli neliskulmainen castrum, jonka muurit rakennettiin valkoisesta Tašmajdanin kalkkikivestä.\n\nItävaltalaiset rakensivat linnoituksen uudelleen 1700-luvun alkupuoliskolla. Ottomaanit lähtivät sieltä vuonna 1867, kun ensimmäinen serbialaisjoukko korvasi vartiot 18. huhtikuuta. Kulttuurimuistomerkiksi linnoitus julistettiin vuonna 1979.\n\nIsoisän matkavuonna 1873 linnoitusta vartioivat serbialaiset joukot, mutta Itävalta-Unkari ei tunnustanut Serbiaa sen omistajaksi. Muurien sisällä kaupunki oli siis jo siirtynyt uuteen aikaan, vaikka maiden välinen tilanne oli yhä avoin.',
+      kuvat: [
+        {
+          tiedosto: 'Belgrade Fortress (13806788265).jpg',
+          lyhyt: 'Belgradin linnoitus on kaupungin vanhin osa.',
+          selite: 'Linnoitus koostuu ylä- ja alakaupungista.',
+          lahde: 'Jorge Láscar from Melbourne, Australia, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kalemegdanin puisto': {
+      aika: '1860-luvun lopulta',
+      teksti: 'Kalemegdan on Belgradin suurin puisto: se on noin 50 hehtaarin laajuinen (Suuri ja Pieni Kalemegdan) ja siinä kasvaa yli 3 400 puuta. Nimi tulee turkin sanoista kale, linnoitus, ja meydan, kenttä, sillä alue oli ottomaanien harjoituskenttä. Böömiläinen kirjailija Siegfried Kapper kuvasi kenttää 1850-luvulla puuttomaksi ja kuivaksi, mutta näköalaltaan hienoksi.\n\nPuiston järjestelytyöt alkoivat 1860-luvun lopulla, ja ensimmäinen istutusvaihe kesti vuoteen 1875. Milan Obrenović sai innoituksen Ranskan puistoista. Pieni portaikko valmistui vuonna 1903 Jelisaveta Načićin suunnitelman mukaan, ja hän oli lähteen mukaan Serbian ensimmäinen naisarkkitehti. Suuri portaikko valmistui vuonna 1928.\n\nIsoisän matkavuonna 1873 istutukset olivat kesken: ensimmäinen istutusvaihe kesti vuoteen 1875, ja polut raivattiin vasta 1890-luvun alussa. Kenttä oli kuitenkin jo muuttumassa kaupunkilaisten kävelypaikaksi.',
+      kuvat: [
+        {
+          tiedosto: 'Belgrade Fortress (13807712985).jpg',
+          lyhyt: 'Kalemegdanin puisto syntyi ottomaanien harjoituskentän paikalle.',
+          selite: 'Puiston järjestelytyöt alkoivat 1860-luvun lopulla.',
+          lahde: 'Jorge Láscar from Melbourne, Australia, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nebojšan torni': {
+      aika: 'noin 1460',
+      teksti: 'Nebojšan torni on linnoituksen ainoa säilynyt keskiaikainen torni. Unkarilaiset rakensivat sen noin vuonna 1460. Nimi Nebojša tarkoittaa pelotonta, ja alkuperäinen torni, jonka despootti Stefan Lazarević rakennutti 1400-luvun alussa, tuhoutui 1600-luvulla. Tornia on sanottu myös Valkoiseksi torniksi, joka mainitaan 1500-luvulla, ja Temišvarin torniksi.\n\nOttomaanien aikana torni toimi vankilana, ja kreikkalainen vallankumouksellinen Rigas Feraios kuoli siellä vuonna 1798. Tornin edessä pelattiin Serbian ensimmäinen jalkapallo-ottelu 19. toukokuuta 1896. Torni kunnostettiin 1960-luvulla, ja siitä tuli museo 2010-luvun alussa.\n\nIsoisän matkavuonna 1873 torni oli ottomaanien rakentama vanha vankila, jonka ympäristö kuului Serbian valvomaan linnoitukseen.',
+      kuvat: [
+        {
+          tiedosto: 'Nebojša Tower, February 2022.jpg',
+          lyhyt: 'Nebojšan torni on linnoituksen ainoa säilynyt keskiaikainen torni.',
+          selite: 'Unkarilaiset rakensivat sen noin vuonna 1460, ja nykyään siinä toimii museo.',
+          lahde: 'Imeao, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän arkkienkeli Mikaelin katedraali': {
+      aika: '1837–1840',
+      teksti: 'Pyhän arkkienkeli Mikaelin katedraali on Belgradin katedraalikirkko ja yksi harvoista säilyneistä 1800-luvun alkupuoliskon rakennuksista Belgradissa. Se rakennettiin vuosina 1837–1840 ruhtinas Milošin määräyksestä, ja vanha kirkko purettiin vuonna 1836.\n\nIkonostaasin veisti Dimitrije Petrović, ja seinämaalaukset teki Dimitrije Avramović vuosina 1841–1845. Rakennus edustaa klassismia, johon on yhdistetty barokkityylinen torni itävaltalaisten kirkkojen tapaan. Vuonna 1853 kirkossa perustettiin ensimmäinen Belgradin laulajaseura.\n\nIsoisän matkavuonna 1873 katedraali oli ollut käytössä yli kolme vuosikymmentä, ja se kuului kaupungin vakiintuneeseen vanhaan ytimeen uusien ruutukaavakatujen vierellä.',
+      kuvat: [
+        {
+          tiedosto: 'Beograd Saborna crkva 1.JPG',
+          lyhyt: 'Mikaelin katedraali rakennettiin vuosina 1837–1840 ruhtinas Milošin määräyksestä.',
+          selite: 'Se on yksi harvoista säilyneistä 1800-luvun alkupuoliskon rakennuksista Belgradissa.',
+          lahde: 'Nemezis, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tasavallan aukio': {
+      aika: '1860-luvulta; nykyasu 1882–',
+      teksti: 'Tasavallan aukion paikalla oli Stambolin portti, joka purettiin vuonna 1866. Portti oli kaupungin kauneimpana pidetty, ja sen nimi tuli Istanbulin tieltä. Kansallisteatteri valmistui vuonna 1869, ja se oli yli 30 vuotta aukion ainoa suuri rakennus. Aukio tunnettiin nimellä Pozorišni trg, teatteriaukio, kommunistiaikaan asti, ja siellä pidettiin myös maalaismarkkinoita, joilla myytiin sian- ja lampaanlihaa, pekonia ja kajmakia.\n\nRuhtinas Mihailon ratsastajapatsas, jonka teki Enrico Pazzi, pystytettiin joulukuussa 1882. Josimovićin vuoden 1867 vihreän vyöhykkeen suunnitelmasta toteutui aukion osalta vain osa.\n\nIsoisän matkavuonna 1873 aukiota ei vielä ollut kaupunkitilana. Teatteri seisoi suon ja rotkojen reunalla, ja patsas ja ympäröivät rakennukset tulivat vasta myöhemmin.',
+      kuvat: [
+        {
+          tiedosto: 'Republic Square (27420599076).jpg',
+          lyhyt: 'Tasavallan aukion keskellä on ruhtinas Mihailon ratsastajapatsas.',
+          selite: 'Patsas pystytettiin joulukuussa 1882 Enrico Pazzin veistämänä.',
+          lahde: 'Erik Cleves Kristensen, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Skadarlija: {
+      aika: '1800-luku, boheemi erityisesti 1901 jälkeen',
+      teksti: 'Skadarlija on Belgradin boheemikortteli. Alue oli romaniasutusta vielä 1870-luvun alkuun asti, ja jo vuoden 1854 kaupunkisuunnitelmassa majat oli korvattu tiilirakennuksilla. Skadarska-katu nimettiin vuonna 1872 akveduktin suurimman kaaren mukaan.\n\nBoheemi luonne vahvistui vuoden 1901 jälkeen, kun Dardaneli-krouvin vieraat, kirjailijat ja näyttelijät, siirtyivät tänne. Vuosisadan alussa kafanoita oli useita, ja Tri šešira, joka perustettiin vuonna 1864, on lähteen mukaan yksi vanhimmista yhä toimivista. Alue suojeltiin vuonna 1967 ja kunnostus alkoi pian sen jälkeen. 1800-luvun lopulla pienpanimon rakennustöissä löytyi mammuttien luita.\n\nIsoisän matkavuonna 1873 katu oli vasta saanut nimensä, ja kafanat olivat vasta syntymässä. Lähteen mukaan alue on nykyään Belgradin toiseksi vierailluin kohde Kalemegdanin jälkeen.',
+      kuvat: [
+        {
+          tiedosto: 'Skadarska street, Belgrade.jpg',
+          lyhyt: 'Skadarska-katu nimettiin vuonna 1872 akveduktin suurimman kaaren mukaan.',
+          selite: 'Alueen boheemi luonne vahvistui erityisesti vuoden 1901 jälkeen.',
+          lahde: 'Imeao, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Savan temppeli': {
+      aika: '1935–2020',
+      teksti: 'Pyhän Savan temppeli on yksi maailman suurimmista kirkoista. Se pystytettiin paikalle, jossa ottomaanien kerrotaan polttaneen Pyhän Savan pyhäinjäännökset vuonna 1595. Hanke sai alkunsa 1890-luvulla, noin kolmensadan vuoden kuluttua tapahtumasta, ja rakennustyöt alkoivat 10. toukokuuta 1935. Työt keskeytyivät, ja ne jatkuivat 12. elokuuta 1985.\n\nKupoli painaa 4 000 tonnia, ja se nostettiin paikalleen hydraulisilla nostimilla vuonna 1989. Julkisivu on valkoista Volakas-marmoria Kreikasta, ja reunalistat ovat punaista Balmoral-graniittia Suomesta. Pohjapiirros on risti, jonka mitat ovat 91 × 81 metriä. Ulkopuoli valmistui vuonna 2004 ja sisätyöt vuonna 2020.\n\nIsoisän matkavuonna 1873 Vračarin kukkulalla ei ollut temppeliä, ja sen suunnittelu alkoi vasta 1890-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Church of Saint Sava (Belgrade, Serbia).jpg',
+          lyhyt: 'Pyhän Savan temppelin julkisivu on valkoista Volakas-marmoria Kreikasta.',
+          selite: 'Reunalistat ovat punaista Balmoral-graniittia Suomesta.',
+          lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Church of Saint Sava 2.jpg',
+          lyhyt: 'Temppelin sisätyöt valmistuivat vuonna 2020.',
+          selite: 'Rakennustyöt alkoivat vuonna 1935 ja jatkuivat vuosikymmeniä.',
+          lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Suuri sotasaari': {
+      aika: '1400-luvulta, luonnonsuojelualue',
+      teksti: 'Suuri sotasaari on 2,11 neliökilometrin kokoinen, matala ja tulvaherkkä saari Savan suulla Tonavassa. Se muodostui täydeksi saareksi 1400-luvulla hiekkasärkästä. Ottomaanien vuoden 1521 hyökkäykset linnoitusta vastaan tehtiin pääosin saarelta, ja 1700-luvulla Itävalta ja Turkki jakoivat saaren rajasopimuksella.\n\nNykyään saari on suojelualue yli 180 lintulajille. Saaren vesissä on 53 kalalajia, ja yli puolet saaresta on metsää. Merikotkapari pesii saarella 2010-luvun alusta.\n\nIsoisän matkavuonna 1873 saarella oli käytössä useita nimiä, ja nykyinen nimi Suuri sotasaari vakiintui lopullisesti vasta myöhemmin.',
+      kuvat: [
+        {
+          tiedosto: 'Lido veliko ratno ostrvo.jpg',
+          lyhyt: 'Suuri sotasaari on Savan suulla Tonavassa sijaitseva matala ja tulvaherkkä saari.',
+          selite: 'Saari muodostui täydeksi saareksi 1400-luvulla hiekkasärkästä.',
+          lahde: 'Gmihail at Serbian Wikipedia, Wikimedia Commons (CC BY-SA 3.0 RS)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  bratislava: {
+    'Bratislavan linna': {
+      aika: '800-luku–nykypäivä; raunioina 1811–1950-luvulle',
+      teksti: 'Bratislavan linna on suuri nelikulmainen rakennus, jonka jokaisessa kulmassa on torni. Se seisoo eristäytyneellä kalliolla noin 85 metriä Tonavan yläpuolella, ja paikka on ollut asuttu jo kivikauden ja pronssikauden taitteesta. Kelttien akropolis, roomalaisten Tonavan raja ja suuri slaavilainen linnoitettu asutus seurasivat toisiaan, ja 800-luvulla kukkulalla oli esiromaaninen kivibasilika.\n\nLinnaa muokattiin vuosisatojen mittaan: Sigismundin aikana 1400-luvun alkupuolella siitä tehtiin goottilainen linnoitus hussilaisia vastaan, 1562 renessanssilinna ja 1600-luvulla barokkilinna. Maria Teresian aikana 1760-luvulla siitä tuli kuninkaallinen asunto, ja portaat tehtiin loivemmiksi, jotta hän pääsi ratsastamaan niillä. Sisäpihan kaivo on yli 80 metriä syvä.\n\nTulipalo tuhosi linnan 28. toukokuuta 1811, kun siellä majoittuneet sotilaat olivat huolimattomia, ja palo levisi osaan kaupunkia. Isoisän matkavuonna 1873 linna oli yhä raunio, jonka materiaalia sotilaat myivät rakennusaineeksi. Raunioina se pysyi 1950-luvulle, jolloin kunnostus 1700-luvun asuun alkoi.',
+      kuvat: [
+        {
+          tiedosto: 'Bratislava Castle Pano S 01.jpg',
+          lyhyt: 'Bratislavan linna, nelikulmainen kulmatornillinen linna Tonavan yläpuolella.',
+          selite: 'Linna paloi raunioksi 1811 ja kunnostettiin 1950-luvulta alkaen 1700-luvun asuunsa.',
+          lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Martinin tuomiokirkko': {
+      aika: '1311–1452; uudelleengotisointi 1865–1877',
+      teksti: 'Pyhän Martinin tuomiokirkko on goottilainen ristipohjainen basilika, jonka rakentaminen alkoi 1311 aiemman romaanisen kirkon paikalla. Kirkko vihittiin 1452, ja työt jatkuivat vielä 1500-luvulle. Laivan mitat ovat 69,37 × 22,85 metriä, ja noin 85 metriä korkea torni oli osa keskiaikaista kaupunginmuuria. Alttarilla seisoo Georg Raphael Donnerin vuonna 1734 tekemä ratsastajapatsas Pyhästä Martinista, joka on puettu unkarilaisen husaarin asuun.\n\nKirkko kärsi tuhoja: salamanisku vaurioitti sitä 1760, ja barokkihuippu paloi 1833. Nykyisen asunsa kirkko sai uudelleengotisoinnissa 1865–1877, joten isoisän matkavuonna 1873 työt olivat käynnissä. Kirkon alla on katakombit ja useita kryptia. Kirkko on ollut kansallinen kulttuurimonumentti vuodesta 2002.',
+      kuvat: [
+        {
+          tiedosto: 'Bratislava Saint Martin\'s Cathedral O 01.jpg',
+          lyhyt: 'Pyhän Martinin tuomiokirkko, goottilainen kruunajaiskirkko vanhassa kaupungissa.',
+          selite: 'Kirkon rakennustyöt alkoivat 1311, ja nykyasunsa se sai uudelleengotisoinnissa 1865–1877.',
+          lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mikaelin portti': {
+      aika: '1300-luku; nykyasu 1753–1758',
+      teksti: 'Mikaelin portti on lähteen mukaan ainoa säilynyt keskiaikaisista kaupunginporteista, ja se rakennettiin 1300-luvulla. Ensimmäinen kirjallinen maininta on 1400-luvun alusta. Kaupungin muut kolme porttia olivat Laurincin portti idässä, Kalastajien portti etelässä ja Vydrican portti lännessä.\n\nTornia on korotettu ja rakennettu uudelleen, ja nykyinen asu on vuosilta 1753–1758. Nykyinen 51-metrinen torni on tuolta ajalta, ja sen huipulla on Pyhän Mikaelin ja lohikäärmeen patsas. Portin sisäpuolella oleva kivikyltti kertoo, että kaupunginvaltuusto ja asukkaat korjasivat tornin 1758. Kaupungin ympärillä olleet muurit purettiin 1700-luvulla, koska ne estivät kaupungin kasvun, joten isoisän matkavuonna 1873 muureja ei ollut enää juuri jäljellä.\n\nNykyään tornissa toimii Bratislavan kaupunginmuseon asemuseo, ja tornin parvekkeelta näkee vanhan kaupungin, linnan ja ympäristön. Portin edessä on tiilinen Mikaelin silta 1700-luvulta.',
+      kuvat: [
+        {
+          tiedosto: 'Bratislava - Michalská - Michalská brána.jpg',
+          lyhyt: 'Mikaelin portti, vanhan kaupungin tornillinen portti.',
+          selite: 'Tornin nykyasu on vuosilta 1753–1758, ja huipulla on Pyhän Mikaelin patsas.',
+          lahde: 'Txllxt TxllxT, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanha raatihuone': {
+      aika: '1200–1300-luku–nykypäivä; kaupungintalona 1400-luvulta 1800-luvun loppuun',
+      teksti: 'Vanha raatihuone on vanhan kaupungin sydämessä päätorin ja Primasin aukion välissä oleva rakennuskompleksi. Se on yksi Bratislavan vanhimmista rakennuksista. Sen torni on peräisin 1200-luvun lopulta tai 1300-luvulta. Kompleksi syntyi 1400-luvulla, kun kolme kaupunkitaloa ja Apponyin palatsi yhdistettiin; Apponyin palatsi rakennettiin 1700-luvulla.\n\nRaatihuone toimi kaupungintalona 1400-luvulta 1800-luvun lopulle, ja se oli välillä myös vankila ja rahapaja. Isoisän matkavuonna 1873 se oli yhä kaupungin hallinnon käytössä. Renessanssikunnostus tehtiin 1599 maanjäristyksen jälkeen, ja uusrenessanssisiipi lisättiin 1912.\n\nNapoleonin sotilaat ampuivat 1800-luvun alussa tykinkuulan torniin, ja kuula on kerrotusti yhä seinässä. Nykyään rakennuksessa on Bratislavan kaupunginmuseo, joka perustettiin 1868, ja tornin näköalatasanteelta avautuu näkymä vanhaan kaupunkiin.',
+      kuvat: [
+        {
+          tiedosto: 'Bratislava Old Town Hall.jpg',
+          lyhyt: 'Vanha raatihuone, kaupunginmuseon koti vanhan kaupungin sydämessä.',
+          selite: 'Raatihuone syntyi 1400-luvulla useiden kaupunkitalojen yhdistämisestä.',
+          lahde: 'Valerio2468, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hviezdoslavin aukio': {
+      aika: '1700-luku–nykypäivä',
+      teksti: 'Hviezdoslavin aukio on vanhan kaupungin pitkä kävelyaukio Uuden sillan ja Slovakian kansallisteatterin välissä. Se on nimetty runoilija Pavol Országh Hviezdoslavin mukaan, mutta aiemmin sillä on ollut nimiä Kossuth Lajos tér, Radetzky tér ja Séta tér. Aukion halki kulkee kaksi suihkulähderiviä, ja se uudistettiin myöhemmin kävelyalueeksi.\n\nMaaliskuussa 1848 Lajos Kossuth puhui väkijoukolle Zöldfa-hotellin parvekkeelta. Neorenessanssiteatteri, jonka suunnittelivat Fellner ja Helmer, rakennettiin 1885–1886 ja avattiin 22. syyskuuta 1886 oopperalla Bánk bán. Isoisän matkavuonna 1873 paikalla oli vielä vanhempi kaupunginteatteri, joka oli avattu 1776 ja jonka tilalle nykyinen rakennus nousi 1880-luvulla.\n\nTeatterin edustalla on 1800-luvun lopun Ganymedes-suihkulähde, ja runoilija Petőfin patsas pystytettiin aukiolle 1900-luvun alussa.',
+      kuvat: [
+        {
+          tiedosto: 'Bratislava - Statue of Pavol Országh Hviezdoslav.jpg',
+          lyhyt: 'Hviezdoslavin aukio ja runoilija Pavol Országh Hviezdoslavin patsas.',
+          selite: 'Aukio sijaitsee Uuden sillan ja Slovakian kansallisteatterin välissä.',
+          lahde: 'Ladislav Luppa, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sininen kirkko': {
+      aika: '1900-luvun alku–1913',
+      teksti: 'Sininen kirkko, virallisesti Pyhän Elisabetin kirkko, on unkarilaisen jugendin edustaja vanhan kaupungin itäosassa. Se on omistettu Unkarin Elisabetille, joka lähteen mukaan kasvoi Pressburgin linnassa. Kirkon suunnitteli Ödön Lechner, ja se rakennettiin 1900-luvun alussa, ja se valmistui 1913. Alun perin se oli viereisen lukion kappeli.\n\nKirkon pohjapiirros on soikea, ja sylinterimäinen torni on noin 37 metriä korkea. Kupolia suunniteltiin, mutta lopulta rakennettiin tynnyriholvi. Katto on lasitettua tiiltä, ja julkisivu oli alun perin vaaleanpastellia ennen kuin siitä tuli sininen.\n\nIsoisän matkavuonna 1873 kirkkoa ei vielä ollut, sillä sen rakennustyöt alkoivat vasta 1900-luvun alussa. Pienoismalli kirkosta on Brysselin Mini-Europe-puistossa.',
+      kuvat: [
+        {
+          tiedosto: 'Blue Church, Bratislava 01.jpg',
+          lyhyt: 'Sininen kirkko eli Pyhän Elisabetin kirkko, Ödön Lechnerin suunnittelema jugendkirkko.',
+          selite: 'Kirkko rakennettiin 1900-luvun alussa Unkarin Elisabetille omistettuna.',
+          lahde: 'Thomas Ledl, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Grassalkovichin palatsi': {
+      aika: '1760',
+      teksti: 'Grassalkovichin palatsi on rokokoo- ja myöhäisbarokkityylinen palatsi, jonka ympärillä on ranskalaistyylinen puutarha Hodžovo-aukion vieressä. Arkkitehti Andreas Mayerhoffer suunnitteli sen kreivi Antal Grassalkovichille, joka toimi Unkarin kuninkaallisen kamarin puheenjohtajana. Palatsi valmistui 1760.\n\nKappelin seinillä on Joseph von Pichlerin freskoja, ja pääportaikon barokkiveistokset kuvaavat vuodenaikoja; ne on liitetty kuvanveistäjä Johann Wilhelm Beyeriin. Isoisän matkavuonna 1873 palatsi oli olemassa, ja viimeiset omistajat ennen Itävalta-Unkarin loppua olivat arkkiherttua Fredrik Teschenistä ja hänen puolisonsa.\n\nPalatsi restauroitiin 1990-luvulla. Vuodesta 1996 se on ollut Slovakian presidentin virka-asunto, ja puutarha on avoin julkinen puisto.',
+      kuvat: [
+        {
+          tiedosto: 'Bratislava Grassalkovich Palace 01.jpg',
+          lyhyt: 'Grassalkovichin palatsi, kreivi Antal Grassalkovichin kesäpalatsi vuodelta 1760.',
+          selite: 'Palatsi on nykyisin Slovakian presidentin virka-asunto.',
+          lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  chisinau: {
+    'Kristuksen syntymän katedraali': {
+      aika: '1830–1836',
+      teksti: 'Kristuksen syntymän katedraali on uusklassinen kirkko Chișinăun keskustassa. Sen rakennuttivat Uuden Venäjän kuvernööri Mihail Voroncov ja metropoliitta Gavril Bănulescu-Bodoni, ja rakennustyö kesti vuodesta 1830 vuoteen 1836. Suunnittelija oli arkkitehti Abram eli Avraam Melnikov, ja sisäänkäyntiportiikissa on kuusi doorilaista pylvästä. Vastaava kirkko on rakennettu Bolhradiin.\n\nIsoisän matkavuonna 1873 katedraali oli ollut valmiina yli 35 vuotta, joten se kuului jo kaupungin vakiintuneeseen kuvaan. Toisessa maailmansodassa rakennusta pommitettiin, ja sen kellotorni purettiin Neuvostoaikana 1960-luvulla. Torni rakennettiin uudelleen 1990-luvun lopulla.\n\nNeuvostoaikana kirkko toimi näyttelykeskuksena, ja uskonnollinen käyttö palasi 1980- ja 1990-lukujen taitteessa. Kunnostus kesti vuoteen 1996, ja nykyinen sinkkikupoli ja risti ovat 1990-luvulta. Moldovan pankki on lyönyt katedraalin 180-vuotismuistokolikon.',
+      kuvat: [
+        {
+          tiedosto: 'Nativity Cathedral, Chișinău 02.jpg',
+          lyhyt: 'Katedraalin rakennuttivat kuvernööri Voroncov ja metropoliitta Bănulescu-Bodoni.',
+          selite: 'Nykyinen sinkkikupoli ja risti ovat 1990-luvulta.',
+          lahde: 'Tomasz Bladyniec, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Riemukaari: {
+      aika: '1840-luku',
+      teksti: 'Riemukaari on 13 metriä korkea, kaksikerroksinen rakennelma, jonka pohja on neliömäinen ja pylväänpäät korinttilaisia. Arkkitehti Luka Zaushkevich suunnitteli sen muistoksi Venäjän voitosta Venäjän–Turkin sodassa 1828–1829. Valmistumisvuodeksi lähteet antavat 1840 tai 1841, joten kirjoitetaan noin 1840.\n\nKaaren sisällä oli yli kuuden tonnin kello, joka pysyi paikallaan 2010-luvun alkuun asti. Se valettiin osmanilta vallattujen tykkien kuparista ja oli alun perin tarkoitettu katedraalin kellotorniin, mutta osoittautui liian suureksi. Ensimmäinen kello tuli Odessasta, tuuli repi kellotaulun irti, ja uusi mekanismi hankittiin Itävallasta 1800-luvun lopulla.\n\nIsoisän matkavuonna 1873 kaari seisoi siis jo paikallaan. Kaari vaurioitui toisessa maailmansodassa ja kunnostettiin 1900-luvun jälkipuoliskolla.',
+      kuvat: [
+        {
+          tiedosto: 'Triumphal arch, Chișinău 03.jpg',
+          lyhyt: 'Riemukaari on kaksikerroksinen ja 13 metriä korkea.',
+          selite: 'Arkkitehti Luka Zaushkevichin suunnittelema kaari valmistui 1840-luvulla.',
+          lahde: 'Tomasz Bladyniec, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tapani Suuren keskuspuisto': {
+      aika: '1818',
+      teksti: 'Tapani Suuren keskuspuisto perustettiin vuonna 1818 venäläisten sotilasinsinöörien toimesta, ja se on Moldovan vanhin puisto. Puisto on noin seitsemän hehtaarin kokoinen, siellä kasvaa kymmeniä puulajeja, ja mulperit ja akaasiat ovat yli satavuotiaita. Arkkitehti Bogdan Eitner loi nykyiset käytävät ja istutti satoja akaasioita ja lehmuksia sekä kukkapenkkejä.\n\nPuiston aita oli alun perin pajusta. 1800-luvun jälkipuoliskolla arkkitehti Bernardazzin ehdotuksesta tilalle hankittiin Odessasta valurautaaita. Isoisän matkavuonna 1873 puisto oli siis ollut olemassa yli 50 vuotta, mutta Tapani Suuren patsas ei vielä seissyt sisäänkäynnillä. Patsas paljastettiin vuonna 1928, ja sen suunnitteluun osallistui Alexandru Plămădeală.\n\nPuistossa on kävellyt 1820-luvun alussa runoilija Aleksandr Puškin. Klassikoiden puistokuja avattiin vuonna 1958, ja nykyisin puistossa on useita suihkulähteitä. Sen lempinimi on Rakastavaisten puisto.',
+      kuvat: [
+        {
+          tiedosto: 'Ștefan cel Mare Central Park 2021 01.jpg',
+          lyhyt: 'Tapani Suuren keskuspuisto perustettiin vuonna 1818 venäläisten sotilasinsinöörien toimesta.',
+          selite: 'Puiston mulperit ja akaasiat ovat yli satavuotiaita.',
+          lahde: 'Tomasz Bladyniec, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kaupungintalo: {
+      aika: 'noin 1901',
+      teksti: 'Kaupungintalo on italialaista goottia edustava rakennus, joka valmistui noin vuonna 1901 alun perin kaupunginduumalle. Suunnittelijoihin kuuluivat kaupunginarkkitehti Mitrofan Elladi ja arkkitehti Alexander Bernardazzi, joka suunnitteli myös Pyhän Teodora de la Sihlan kirkon 1800-luvun lopulla.\n\nDuuma ja pormestarin virka perustettiin Chișinăuhun jo vuonna 1817, ja ensimmäinen pormestari oli kapteeni Anghel Nour. Pormestari Carol Schmidt johti kaupunkia 1800-luvun lopulta 1900-luvun alkuun, ja häntä muistetaan yhä kaupungin uudistajana. Isoisän matkavuonna 1873 nykyistä kaupungintaloa ei vielä ollut. Vuonna 1837 kaupunginduuman päämajaksi rakennettiin talo, josta tuli 1842 poikien lukio, ja se seisoi nykyisen historiamuseon paikalla.\n\nToisessa maailmansodassa kaupungintalo tuhoutui lähes kokonaan. Rakennus jälleenrakennettiin sodan jälkeen säilyneiden kuvien ja rakennussuunnitelmien pohjalta.',
+      kuvat: [
+        {
+          tiedosto: 'Ayuntamiento, Chisináu, Moldavia, 2023-11-03, DD 22.jpg',
+          lyhyt: 'Kaupungintalo rakennettiin alun perin kaupunginduumalle noin vuonna 1901.',
+          selite: 'Italialaista goottia edustava rakennus jälleenrakennettiin sodan jälkeen säilyneiden kuvien ja suunnitelmien pohjalta.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Măzărache-kirkko': {
+      aika: '1752',
+      teksti: 'Măzărache-kirkko on Chișinăun vanhimmaksi katsottu kirkko. Vasile Măzărache rakennutti sen vuonna 1752, ja rakennus edustaa perinteistä moldavialaista kirkkoarkkitehtuuria. Kirkko nousi osmanien tuhoaman linnoituksen paikalle.\n\nMäen juurella oleva kivilohkare merkitsee kaupungin nimen antaneen lähteen paikkaa, sillä chisla noua tarkoittaa uutta lähdettä. Kaupunki paloi Venäjän–Turkin sotien aikana 1739 ja 1788, ja kirkko valmistui näiden paloja väliin.\n\nIsoisän matkavuonna 1873 kirkko oli seissyt jo 121 vuotta. Toinen vanha kirkko on Râșcani-kirkko vuodelta 1777, jonka rakennutti bojaari Constantin Râșcanu ja joka seisoo Bîc-joen yläpuolisella kukkulalla.',
+      kuvat: [
+        {
+          tiedosto: 'MD.C.C - Măzărache church - aug 2020 - 01.jpg',
+          lyhyt: 'Măzărache-kirkkoa pidetään Chișinăun vanhimpana kirkkona.',
+          selite: 'Vasile Măzărache rakennutti kirkon vuonna 1752.',
+          lahde: 'Gikü ( talk ), Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ciuflea-luostari': {
+      aika: '1854–1858',
+      teksti: 'Ciuflea-luostari on omistettu Pyhälle Teodor Amaseialaiselle. Sen rahoitti Anastase Ciufli veljensä Teodor Ciuflin testamentin mukaan. Veljekset olivat aromunikauppiaita, jotka muuttivat Makedoniasta Bessarabiaan vuonna 1821.\n\nRakennuslupa saatiin 1854, ja kirkko vihittiin vuonna 1858. Teodorin jäännökset ovat eteläsiivessä, ja Anastase (1801–1870) liittyi hänen viereensä kuoltuaan.\n\nIsoisän matkavuonna 1873 kirkko oli ollut valmiina 15 vuotta. 1960-luvulla katedraalin sulkemisen vuoksi kirkon johto muutti Ciufleaan, josta tuli katedraali. Luostariksi se muuttui 2000-luvun alussa.',
+      kuvat: [
+        {
+          tiedosto: 'Ciuflea Monastery, Chișinău.jpg',
+          lyhyt: 'Ciuflea-luostari on omistettu Pyhälle Teodor Amaseialaiselle.',
+          selite: 'Aromunikauppiasveljekset Ciuflit rahoittivat kirkon, joka vihittiin vuonna 1858.',
+          lahde: 'Pudelek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kansallinen historiamuseo': {
+      aika: '1837 ja 1987',
+      teksti: 'Moldovan kansallinen arkeologia- ja historiamuseo toimii talossa, jonka julkisivu perustuu vuonna 1837 valmistuneeseen rakennukseen. Alkuperäinen talo tehtiin kaupunginduuman päämajaksi, ja vuonna 1842 siitä tuli poikien lukio numero 1. Isoisän matkavuonna 1873 rakennus oli siis lukio, ei museo.\n\nVuoden 1977 maanjäristys vahingoitti rakennusta niin pahoin, ettei sitä voitu korjata. Se purettiin, ja uusi rakennus valmistui 1987 vanhan julkisivun mukaan eklektiseen tyyliin.\n\nMuseo perustettiin 21.12.1983. Pihassa on Kapitolinuksen naaraasuden kopio, ja osoite on 31 Augusti 1989 -katu 121A.',
+      kuvat: [
+        {
+          tiedosto: 'Museum of History (AP4L0086 1PS) (28922487610).jpg',
+          lyhyt: 'Historiamuseon rakennus valmistui 1987 vanhan julkisivun mukaan.',
+          selite: 'Alkuperäinen vuonna 1837 valmistunut rakennus purettiin maanjäristysvaurioiden jälkeen.',
+          lahde: 'Alexandru Panoiu from Bucharest, Romania, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  minsk: {
+    'Kolminaisuuden esikaupunki': {
+      aika: '1100-luvulta',
+      teksti: 'Kolminaisuuden esikaupunki eli valkovenäjäksi Trajeckaje pradmiescie, Kolminaisuusmäki, on historiallinen alue keskustan koillisosassa Svislačin vasemmalla rannalla. Se oli aikanaan kaupan ja hallinnon keskus. Nimi tulee todennäköisimmin Jogailan vuonna 1390 perustamasta Kolminaisuuden kirkosta, ja toisen selityksen mukaan se viittaa Pyhän Kolminaisuuden puolustuslinnakkeeseen.\n\nAlue on vanhaa asutusta. Lipkatataarit asettuivat Tatarskaja Slabadaan 1400-luvulta, ja ensimmäinen asutus ajoitetaan vuoteen 1428, joten tataariasutus oli vanhaa jo isoisän matkavuonna 1873. Minskin ensimmäinen katolinen kirkko oli alueella.\n\nNykyään alueella on Kansallinen ooppera- ja balettiteatteri. Läheinen Kyynelten saari liittyy esikaupunkiin sillalla.',
+      kuvat: [
+        {
+          tiedosto: 'Trajeckaje pradmiescie (Minsk, February 2020) p44.jpg',
+          selite: 'Kolminaisuuden esikaupunki on historiallinen alue Svislačin vasemmalla rannalla.',
+          lahde: 'Homoatrox, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Hengen katedraali': {
+      aika: '1633–1642',
+      teksti: 'Pyhän Hengen katedraali rakennettiin vuosina 1633–1642 bernardiiniluostarin osaksi paikalle, jossa oli aiemmin luostari. Barokkikirkko vaurioitui sodassa 1654–67 ja vihittiin uudelleen elokuussa 1687. Tulipalo koetteli sitä 1741, ja suurpalo 1835 vaurioitti myös luostarirakennuksia. Bernardiinien luostari suljettiin 1852, ja kirkko oli ollut sen osana vuodesta 1642 lähtien.\n\nKirkko palautettiin itäkirkon käyttöön 1860, kunnostus alkoi 1869, ja se vihittiin uudelleen 22.10.1870. Isoisän matkavuonna 1873 katedraali oli siis vasta kolmen vuoden ikäinen uudelleen vihitty kirkko.\n\nVuonna 1961 siitä tuli hiippakunnan katedraali, ja nykyään se on Valko-Venäjän oikeauskoisen kirkon päätuomiokirkko. Ikonistasissa on Minskin Jumalanäidin ikoni vuodelta 1500.',
+      kuvat: [
+        {
+          tiedosto: 'Cathedral of Holy Spirit in Minsk 20190502-2.jpg',
+          selite: 'Pyhän Hengen katedraali rakennettiin 1633–1642 ja palautettiin itäkirkon käyttöön 1860.',
+          lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Neitsyt Marian arkkikatedraali': {
+      aika: '1700–1710',
+      teksti: 'Neitsyt Marian nimen arkkikatedraali on barokkikirkko, joka valmistui 1710 jesuiittakollegion kirkkona. Jesuiittajärjestö lakkautettiin 1773, ja palo 1797 vaati kunnostuksen. Isoisän matkavuonna 1873 kirkko oli jo vanha, ja hiippakunta oli lakkautettu 1869.\n\nHiippakunta palautettiin marraskuussa 1917, mutta kirkko suljettiin 1934 ja kellotornit purettiin 1951. Kirkko palautettiin käyttöön 1993, kunnostettiin 1997, ja sille hankittiin uudet urut 2005. Hiippakunnan lakkauttamisesta 1869 sen palauttamiseen 1917 kului lähes puoli vuosisataa, ja kellotornien purkamisesta 1951 kirkon palauttamiseen 1993 yli neljä vuosikymmentä.\n\nKatedraali sijaitsee Vapauden aukion laidalla. Siitä näkee uudelleen rakennetulle vanhalle raatihuoneelle.',
+      kuvat: [
+        {
+          tiedosto: 'Minsk Catholic Mary church.jpg',
+          selite: 'Neitsyt Marian arkkikatedraali on barokkikirkko, joka valmistui jesuiittakollegion kirkkona 1710.',
+          lahde: 'A.Savin, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Punainen kirkko': {
+      aika: '1905–1910',
+      teksti: 'Punainen kirkko eli Pyhien Simeonin ja Helenan kirkko on uusromaaninen. Sen suunnittelivat arkkitehdit Tomasz Pajzderski ja Władysław Marconi, peruskivi muurattiin lähteistä riippuen 1905 tai 1906, ja kirkko vihittiin 1910. Tiilet tuotiin Częstochowasta ja kattotiilet Włocławekista. Isoisän matkavuonna 1873 kirkkoa ei ollut vielä olemassa.\n\nRahoittaja oli Edward Woyniłłowicz, ja kirkko nimettiin hänen kahden kuolleen lapsensa, Szymonin ja Helenan, muistoksi. Vuonna 1903 noin 2 000 katolilaista oli anonut tonttia kirkolle.\n\nKirkko suljettiin 1932 ja sitä käytettiin muun muassa elokuvateatterina. Se palautettiin kirkolle 1990. Lähteen mukaan sen siluetti on suosittu matkamuistoissa.',
+      kuvat: [
+        {
+          tiedosto: 'Church of Saints Simon and Helena (Aug 2019).jpg',
+          selite: 'Punainen kirkko vihittiin 1910 Pyhien Simeonin ja Helenan kirkkona.',
+          lahde: 'KpokeJlJla, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kyynelten saari': {
+      aika: '1988–1996',
+      teksti: 'Kyynelten saari, virallisesti Rohkeuden ja surun saari, on pieni muistosaari Svislač-joessa. Siltaa pitkin pääsee Kolminaisuuden esikaupunkiin. Saari on muistomerkki ulkomailla sotatoimissa kuolleille valkovenäläisille.\n\nKokonaisuuteen kuuluu veistoksia, muistokiviä ja kappeli. Arkkitehtuuri syntyi kuvanveistäjä J. Pavlovin johdolla, ja muistomerkki rakennettiin 1988–1996 ja vihittiin 3.8.1996. Saari sijaitsee aivan Kolminaisuuden esikaupungin vieressä, joten sen voi liittää samaan kävelykierrokseen vanhan Minskin kanssa.\n\nSuomenkielisen lähteen mukaan Afganistanin sodassa 1979–89 menehtyi 771 valkovenäläistä ja sotaan osallistui 30 000. Isoisän matkavuonna 1873 saarta ei ollut.',
+      kuvat: [
+        {
+          tiedosto: 'Island of tears Sons of the Fatherland monument Minsk.JPG',
+          selite: 'Kyynelten saari on muistomerkki ulkomailla sotatoimissa kuolleille valkovenäläisille.',
+          lahde: 'Herbert wie, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Voitonaukio: {
+      aika: '1954',
+      teksti: 'Voitonaukio on historiallisessa keskustassa Itsenäisyydenkadun ja Zaharaŭ-kadun risteyksessä. Ennen vuotta 1958 sen nimi oli Kruglaja, pyöreä. Keskellä on 38 metrin graniittipylväs, jonka huipulla on Voiton ritarikunnan kunniamerkin kolmen metrin kopio. Pylväs pystytettiin 1954, ja sen ympärillä on neljä pronssireliefiä ja neljä pronssista seppelettä.\n\nIkuinen tuli sytytettiin 3.7.1961. Aukio muotoiltiin soikeaksi 1984 metroaseman uloskäyntien vuoksi. Kaksi kaarevaa asuintaloa rakennettiin 1936–39, ja lähteen mukaan ne valmistuivat 1947.\n\nPuisto ulottuu aukiolta Svislačille ja Gorki-puistoon. Lähteen mukaan vihkiparit kuvauttavat itsensä aukiolla. Isoisän matkavuonna 1873 pylvästä ei ollut vielä pystytetty.',
+      kuvat: [
+        {
+          tiedosto: 'Victory square, Minsk 01.jpg',
+          selite: 'Voitonaukion graniittipylväs on 38 metriä korkea ja pystytettiin 1954.',
+          lahde: 'User:Redline, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Gorki-puisto': {
+      aika: '1800–1805',
+      teksti: 'Gorki-puisto laadittiin 1800 ja avattiin 1805 nimellä Kuvernöörin puutarha. Neuvostoaikana se nimettiin Maksim Gorkin mukaan. Puisto on lähellä Voitonaukiota ja Janka Kupalan puistoa, ja Voitonaukion kautta se yhtyy Svislačin rantapuistoon.\n\nNykyään puistossa on huvipuisto ja 54 metriä korkea maailmanpyörä. Lisäksi siellä on opetuksellinen observatorio ja planetaario sekä Jäälinna-halli, joka toimii sisäjäähallina. Puisto yhdistää siis huvipuiston, tähtitieteen ja jääurheilun. Voitonaukio, Gorki-puisto ja Janka Kupalan puisto ovat lähellä toisiaan, joten ne sopivat samalle kävelykierrokselle, ja Svislačin rantapuisto jatkaa reittiä joen varrella.\n\nPuisto oli avattu jo 1805, joten se oli olemassa isoisän matkavuonna 1873.',
+      kuvat: [
+        {
+          tiedosto: 'Minsk. Pedestrian bridge across the Svisloch River in Gorky Park.jpg',
+          selite: 'Gorki-puisto avattiin 1805 Kuvernöörin puutarhana, ja siinä on 54 metriä korkea maailmanpyörä.',
+          lahde: 'Bestalex, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  podgorica: {
+    'Sahat kula -kellotorni': {
+      aika: '1667',
+      teksti: 'Sahat kula on 19 metriä korkea itsenäinen kivitorni Bećir Beg Osmanagićin aukiolla Stara Varošissa. Sen rakennutti Hadži-paša Osmanagić vuonna 1667, ja se on yksi harvoista ottomaanien ajan merkeistä, jotka selvisivät toisen maailmansodan pommituksista.\n\nIsoisän matkavuonna 1873 torni seisoi jo paikallaan, mutta nykyinen koneisto tuli vasta vuonna 1890, ja sen teki italialainen Colbachinin valimo Bassano del Grappassa. Tornin huippu sai metalliristin 1800-luvun lopulla, kun kaupunki oli siirtynyt Montenegrolle.\n\nKellon uusi sähkökoneisto asennettiin tammikuussa 2012. Torni on lailla suojeltu kulttuurimonumentti.',
+      kuvat: [
+        {
+          tiedosto: 'Podgorica Clock Tower Sahat kula 01.jpg',
+          selite: 'Sahat kula valmistui vuonna 1667, ja se on harvoja ottomaanien ajan merkkejä, jotka säilyivät.',
+          lahde: 'MOs810, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ribnican linnoitus': {
+      aika: '1400-luvun loppu',
+      teksti: 'Ribnican linnoitus eli Depedogen, turkiksi Depedöğen, on ottomaanien linnoitus Stara Varošissa Ribnican ja Moračan yhtymäkohdan yläpuolella. Se rakennettiin 1400-luvun lopulla, lähteiden mukaan noin vuosina 1477–1479, ja se oli toinen kahdesta Stara Varošia ympäröineestä linnoituksesta.\n\nLinnoitus oli pitkään ammusvarastona. Salamanisku sytytti myöhemmin 1800-luvun lopulla räjähdyksen, joka vaurioitti linnoitusta pahoin, joten isoisän matkavuonna 1873 tuhoa ei ollut vielä tapahtunut.\n\nUskotaan, että linnoitus periytyy 1100-luvulta.',
+      kuvat: [
+        {
+          tiedosto: 'Depedogen.JPG',
+          selite: 'Ribnican linnoitus rakennettiin 1400-luvun lopulla, ja salamanisku vaurioitti sitä pahoin 1878.',
+          lahde: 'Rasho992, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanha silta Ribnican yli': {
+      aika: 'uusittu 1700-luvulla',
+      teksti: 'Vanha silta ylittää Ribnica-joen Stara Varošin kupeessa. Stara Varošin nähtävyyksien luettelossa sitä kutsutaan Adži-paša-sillaksi. Siltaa pidetään hyvin vanhana: sen alkuperä ulottuu roomalaisaikaan, ja sitä on uusittu myöhemmin. Vezirov most on eri silta: se ylittää Moračan.\n\nSilta on kohdassa, jossa Ribnica laskee Moračaan. Samassa paikassa ovat Skaline-portaat. Kaupunki kehittyi Ribnican vasemmalle rannalle ottomaanikaupungin tapaan, ja joen ylitys oli osa vanhan kaupungin arkea.\n\nSilta kuuluu Stara Varošin ytimeen, jota 1400–1800-luvuilla edusti myös Sahat kula, Ribnican linnoitus ja kaksi moskeijaa. Isoisän matkavuonna 1873 Stara Varoš oli yhä kaupungin ydin.',
+      kuvat: [
+        {
+          tiedosto: 'Starimost.JPG',
+          selite: 'Vanha silta yhdistää Stara Varošin Ribnican yli kohdassa, jossa joki laskee Moračaan.',
+          lahde: 'Rasho992, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Itsenäisyydenaukio': {
+      aika: 'uudistettu 2006',
+      teksti: 'Itsenäisyydenaukio on Podgorican keskusaukio Nova Varošissa, uuden kaupungin hallinnollisessa ja sosiokulttuurisessa sydämessä. Isoisän matkavuonna 1873 Nova Varošia ei vielä ollut, joten aukiotakaan ei ollut.\n\nVuoteen 2006 aukion nimi oli Ivan Milutinovićin aukio. Montenegron itsenäistymisvuonna 2006 aukio uusittiin kokonaan: sitä laajennettiin, päällystettiin ja siitä tehtiin autoton alue, ja sille rakennettiin iso keskussuihkulähde, kolonnadit ja vesikanavat sekä istutettiin palmuja.\n\nAukion laidalla on kaupunginkirjasto ja valtion galleria Art. Aukiota reunustavat Slobode- ja Njegoševa-kadut ovat kävelykatuja.',
+      kuvat: [
+        {
+          tiedosto: 'Podgorica - Independence Square PG.jpg',
+          selite: 'Itsenäisyydenaukio uusittiin kokonaan Montenegron itsenäistymisvuonna 2006.',
+          lahde: 'Desemeus, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Millennium-silta': {
+      aika: '2005',
+      teksti: 'Millennium-silta on vinoköysisilta Moračan yli. Se avattiin liikenteelle 13.7.2005, Montenegron kansallispäivänä, ja se yhdistää Ivan Crnojevićin bulevardin ja 13. heinäkuuta -kadun. Isoisän matkavuonna 1873 siltaa ei ollut, ja Moračan yli kuljettiin muilla silloilla.\n\nSillan suunnittelijat ovat Marjan Pipenbaher (Ponting Bridges) ja Mladen Ulićević, ja rakentaja oli slovenialainen Primorje. Pituutta sillalla on 173 metriä, ja pylon nousee 57 metriä tien yläpuolelle. Kaksitoista köyttä kantaa kantta, ja 24 muuta kiinnittyy vastapainoihin.\n\nSillan kustannus oli noin 7 miljoonaa euroa. Siinä on kaksi ajokaistaa sekä jalkakäytävä kumpaankin suuntaan.',
+      kuvat: [
+        {
+          tiedosto: 'Titograd.jpg',
+          selite: 'Millennium-silta avattiin 13.7.2005, Montenegron kansallispäivänä.',
+          lahde: 'Milos58, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kristuksen ylösnousemuksen katedraali': {
+      aika: '1993–2013',
+      teksti: 'Kristuksen ylösnousemuksen katedraali on Montenegron ja Rannikon metropoliitan kirkko, Serbian kirkon alainen. Sen rakentaminen alkoi vuonna 1993 Predrag Ristićin suunnitelmin, ja se pyhitettiin vuonna 2013 Milanon ediktin 1 700-vuotisjuhlan yhteydessä. Isoisän matkavuonna 1873 katedraalia ei vielä ollut.\n\nArkkitehtuurissa on kaksi tornia ja näkyvä kaari, ja esikuvana oli keskiaikainen Pyhän Tryfonin katedraali Kotorissa. Siinä on romaanisia, italialaisia ja bysanttilaisia vaikutteita. Sisätilat ovat täynnä kultataustaisia ikonimaalauksia, ja lattiat ovat marmoria.\n\nPyhitykseen osallistui useita patriarkkoja, muun muassa Serbian patriarkka Irinej ja ekumeeninen patriarkka Bartolomeos. Metropoliitta Amfilohije Radović, joka toimi tehtävässä 1990–2020, haudattiin katedraalin kryptaan vuonna 2020.',
+      kuvat: [
+        {
+          tiedosto: 'SaborniHram.JPG',
+          selite: 'Katedraalin rakentaminen alkoi vuonna 1993, ja se pyhitettiin vuonna 2013.',
+          lahde: 'Rasho992, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  skopje: {
+    Kivisilta: {
+      aika: '1451–1469',
+      teksti: 'Kivisilta yhdistää Makedonia-aukion ja Vanhan basaarin Vardarin yli. Se on 214 metriä pitkä ja 6 metriä leveä, ja sillä on 12 puolipyöreää kaarta. Silta rakennettiin roomalaisten perustusten päälle Mehmed II:n suojeluksessa vuosina 1451–1469, ja se on kaupungin vaakunan pääaihe.\n\nVuoden 1555 maanjäristys vaurioitti siltaa, ja korjaukset tehtiin samana vuonna. Viimeisin laaja kunnostus alkoi 1990-luvulla ja kesti useita vuosia; silta oli sen ajan suljettu liikenteeltä, mikä vaikutti basaarin käsityöläisiin. Mihrabin muotoinen vartiotorni rekonstruoitiin 2000-luvulla.\n\nIsoisän matkavuonna 1873 silta oli jo yli 400 vuotta vanha: se oli valmistunut viimeistään 1469, joten kaupunkilaiset kulkivat sen yli samoin kuin nykyäänkin.',
+      kuvat: [
+        {
+          tiedosto: 'Stone Bridge (Skopje).JPG',
+          selite: 'Kivisilta on 214 metriä pitkä, ja sillä on 12 puolipyöreää kaarta.',
+          lahde: 'Avi1111 dr. avishai teicher, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Makedonia-aukio': {
+      aika: '2000-luku (uudistettu)',
+      teksti: 'Lähteen mukaan Makedonia-aukio on maan suurin aukio, ja sen pinta-ala on noin 18 000 neliömetriä. Se sijaitsee keskustassa Vardarin molemmin puolin, ja sille yhtyvät muun muassa Maksim Gorki-, Dimitar Vlahov- ja Makedonia-katu. Aukio kuuluu keskustan uudistushankkeeseen, joka toteutettiin 2000-luvulla.\n\nMaksim Gorki -kadun japaninkirsikat aloittavat keväisin aasialaisten kulttuuritapahtumien sarjan. Makedonia-katu yhdistää aukion vanhaan rautatieasemaan, ja aukiolla pidetään joulumarkkinat ja muita tapahtumia.\n\nIsoisän matkavuonna 1873 nykyistä aukiota ei vielä ollut. Rautatieasema oli juuri valmistunut Vardarin eteläpuolelle, ja lähteen mukaan talouselämä alkoi siirtyä joen sille puolelle, jota ei ollut aiemmin kaupunkirakennettu.',
+      kuvat: [
+        {
+          tiedosto: 'Macedonia Square, Skopje, NMK.jpg',
+          selite: 'Makedonia-aukion pinta-ala on noin 18 000 neliömetriä.',
+          lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Skopjen linnoitus (Kale)': {
+      aika: '500-luku',
+      teksti: 'Skopjen linnoitus eli Kale kohoaa kaupungin korkeimmalle kohdalle. Ensimmäinen linnoitus rakennettiin 500-luvulla keltaisesta kalkkikivestä ja travertiinista, ja lähteen mukaan materiaalia otettiin tuhoutuneesta Scupista; lähteiden mukaan myöhempiä vaiheita on 900–1000-luvuilta. Alueen vanhin asutus on Kale-kallionokalla jo noin vuodesta 4000 eaa.\n\nStefan Dušan kruunattiin keisariksi Skopjessa 1346, ja Skopje oli yksi Serbian valtakunnan pääkaupungeista. Evliya Çelebi kuvasi 1600-luvulla linnoituksen kaksoismuureineen. Vuoden 1963 maanjäristys tuhosi osan linnoituksesta, ja se on sittemmin kunnostettu keskiaikaiseen ulkoasuunsa.\n\nIsoisän matkavuonna 1873 linnoitus oli ottomaanien Üskübin yllä, ja se on vaakunassa yhä.',
+      kuvat: [
+        {
+          tiedosto: 'Skopje Fortress, 2026.jpg',
+          selite: 'Kale on kaupungin korkeimmalla kohdalla, ja sen ensimmäinen vaihe on 500-luvulta.',
+          lahde: 'Julian Lupyan, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanha basaari': {
+      aika: '1100-luvulta ottomaanikauteen',
+      teksti: 'Vanha basaari ulottuu Kivisillalta Bit-Pazarille ja Kale-linnoituksesta Serava-joelle. Lähteen mukaan se on ollut kaupan keskus ainakin 1100-luvulta ja yksi Balkanin vanhimmista ja suurimmista markkinapaikoista. Ottomaanikaudelta on jäljellä noin kolmekymmentä moskeijaa sekä lukuisia karavaanisarajeja ja hanejä, ja ottomaanikaudella basaari saavutti kaupunkirakenteellisen ja taloudellisen huippunsa.\n\nBezisten, katettu kauppahalli, rakennettiin 1400-luvulla. Se tuhoutui tulipalossa, on kunnostettu ja näyttää 1800-luvun lopun kunnostuksen jälkeiseltä. Kellotorni on kuusikulmainen, ja järistys vaurioitti sitä 1963, mutta se korjattiin pian. Kapan Han on yksi kolmesta jäljellä olevasta karavaanisarajista.\n\nIsoisän matkavuonna 1873 basaari oli kaupungin elävä ydin: moskeijat, sarajit ja hamamit olivat jo paikallaan. Pohjois-Makedonian parlamentti suojeli sen kulttuuriperintönä 2000-luvun lopulla.',
+      kuvat: [
+        {
+          tiedosto: 'Skopje Old Bazaar 1.jpg',
+          selite: 'Vanhassa basaarissa on noin kolmekymmentä ottomaanikauden moskeijaa ja karavaanisarajeja.',
+          lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mustafa-pasan moskeija': {
+      aika: '1492',
+      teksti: 'Mustafa-pasan moskeija valmistui 1492. Sen rakennutti Çoban Mustafa-pasa, josta tuli myöhemmin Selim I:n visiiri. Moskeija seisoo tasanteella basaarin yläpuolella lähellä Kalea, ja siitä avautuu näköala basaarille. Lähteen mukaan se rakennettiin vanhalle kristilliselle paikalle.\n\nKupolin halkaisija on noin 16 metriä, ja minareetin korkeudeksi lähteet antavat noin 40–50 metriä. Portiikki lepää marmoripilareilla, joita koristavat stalaktiittimaiset yksityiskohdat. Moskeijan piha on täynnä ruusuja.\n\nVieressä on türbe: Mustafa-pasa on haudattu kuusikulmaiseen marmoriseen türbeen, ja hänen tyttärensä Umi lepää koristeellisessa sarkofagissa, jonka kahdella seinällä on persialaisia kirjoituksia. Turkin valtion rahoittama kunnostus valmistui 2010-luvun alussa. Isoisän matkavuonna 1873 moskeija oli jo yli 380 vuotta vanha.',
+      kuvat: [
+        {
+          tiedosto: 'Mustafa Paşa Mosque, Skopje.jpg',
+          selite: 'Mustafa-pasan moskeijan minareetti ja kupoli kohoavat basaarin yläpuolelle.',
+          lahde: 'Pudelek, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Mustafa Pasha Mosque Skopje 2.jpg',
+          selite: 'Moskeijan portiikki lepää marmoripilareilla.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kuršumli An': {
+      aika: '1500-luku',
+      teksti: 'Kuršumli An on ottomaanien karavaanisaraji Vanhassa basaarissa, ja se on toiminut majatalona ja vankilana. Se rakennettiin 1500-luvulla, todennäköisesti vuosisadan puolivälissä. Se on yksi Vanhan basaarin kolmesta jäljellä olevasta karavaanisarajista.\n\nRakennus on neliömäinen, ja sen kupolit ovat pyramidin muotoisia. Kupolit katettiin alun perin lyijyllä, minkä vuoksi paikkaa on kutsuttu Lyijyn basaariksi tai Lyijyn majataloksi. Alakerta toimi varastona tai eläinten tilana, yläkerta yöpyjien majoituksena.\n\nSen yhteydessä ollut moskeija ja suurin osa hamamista tuhoutuivat 1900-luvulla. Nykyään siellä on museon kivimuistomerkkien kokoelma (lapidarium). Isoisän matkavuonna 1873 sarajissa oli yli kolmesataa vuotta takana.',
+      kuvat: [
+        {
+          tiedosto: 'Kursumli an, Skopje.jpg',
+          selite: 'Kuršumli Anin kaksikerroksinen kaaripiha oli alun perin karavaanien majatalo.',
+          lahde: 'Veraumka, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Daut-pasan hamam': {
+      aika: '1400-luku',
+      teksti: 'Daut-pasan hamam on Vanhan basaarin tunnetuin kylpylä. Itä-Rumelian suurvisiiri Daut-pasa rahoitti basaarin rakennuksia, ja hamam rakennettiin 1400-luvulla. Rakennusta peittää 13 kupolia: suurimmat kupolit peittävät pukuhuoneet ja loput yksittäisiä kylpyhuoneita.\n\nKansallisgalleria on toiminut rakennuksessa vuodesta 1948, ja se esittelee 1300-luvulta alkaen ajoittuvia maalauksia kahdessa entisessä hamamissa. Lähellä on Čifte Hamam, kaksoishamam, jossa on myöhemmin toiminut nykytaidegalleria.\n\nIsoisän matkavuonna 1873 hamam oli jo yli 370 vuotta vanha: se rakennettiin 1400-luvulla, ja läheinen Čifte Hamam toimi vielä kylpylänä.',
+      kuvat: [
+        {
+          tiedosto: 'Daut Pa$a Amam (9).JPG',
+          selite: 'Daut-pasan hamamissa on 13 kupolia, ja galleria on toiminut siinä vuodesta 1948.',
+          lahde: 'Darko Nikolovski, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  tirana: {
+    'Skanderbeg-aukio': {
+      aika: '1910-luvulla, uudistettu 2017',
+      teksti: 'Skanderbeg-aukio on Tiranan pääaukio, ja sen pinta-ala on noin neljä hehtaaria. Aukio on nimetty Albanian kansallissankarin Skanderbegin mukaan, ja sitä hallitsee hänen monumenttinsa, jonka kuvanveistäjä oli Odhise Paskali. Itävaltalaiset rakensivat julkisen aukion paikalle 1910-luvulla, joten isoisän matkavuonna 1873 aukiota ei vielä ollut.\n\nKaupungin suunnitelman laati ensin Armando Brasini 1925, ja sitä jatkoi Florestano Di Fausto uusrenessanssityylillä. Gherardo Bosio päivitti pääsuunnitelman 1939. Kuningaskunnan aikana aukiolla oli liikenneympyrä ja suihkulähde.\n\nAukio uudistettiin jalankulkualueeksi 51N4E-toimiston ja Anri Salan suunnitelman mukaan, ja se valmistui vuonna 2017. Se sai Euroopan julkisen kaupunkitilan palkinnon 2018. Aukion ympärillä ovat oopperatalo, kansalliskirjasto, kansallinen historiallinen museo, Et\'hem Beyn moskeija, kellotorni ja kaupungintalo.',
+      kuvat: [
+        {
+          tiedosto: 'Tirana - Skanderbeg Square (Sheshi Skënderbej) - by Pudelek.jpg',
+          lyhyt: 'Skanderbeg-aukio on Tiranan pääaukio, jota hallitsee kansallissankarin monumentti.',
+          selite: 'Aukion nykyinen jalankulkuilme valmistui 2017, ja ympärillä ovat muun muassa oopperatalo ja kansalliskirjasto.',
+          lahde: 'Pudelek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Et\'hem Beyn moskeija': {
+      aika: '1790-luvulta 1819–1821',
+      teksti: 'Virallisesti Haji Et\'hem Beyn moskeija on sunnalaismoskeija, jonka rakentaminen alkoi 1791 tai 1794 Molla Beyn johdolla. Se valmistui 1819 tai 1821 hänen poikansa Haxhi Ethem Beyn aikana, joten isoisän matkavuonna 1873 moskeija oli seissyt jo yli viisikymmentä vuotta. Rakennuksessa on kupolilla katettu neliöpohjainen rukoushuone, pohjoispuolinen portiikki ja minareetti.\n\nJulkisivun ja sisätilan seinämaalauksissa on puita, vesiputouksia ja siltoja, ja useimmat kohtaukset ovat mielikuvitusmaisemia. Moskeija ja viereinen kellotorni muodostavat rakennuskokonaisuuden. Sen edessä oli vanha basaari ja idässä Sulejman Pashan moskeija vuodelta 1614, joka tuhoutui toisessa maailmansodassa.\n\nKommunistiajan uskonnonvastaisen politiikan aikana moskeija suljettiin, julistettiin kulttuurimonumentiksi ja kunnostettiin kommunistiajan kuluessa. 1990-luvun alussa tuhannet ihmiset astuivat sisään lippujen kanssa, ja moskeija avattiin uskonnolliseen käyttöön.',
+      kuvat: [
+        {
+          tiedosto: 'Ethem Bey mosque, Tirana (by Pudelek).jpg',
+          lyhyt: 'Et\'hem Beyn moskeija on sunnalaismoskeija, jossa on kupolilla katettu rukoushuone.',
+          selite: 'Rakennuksen pohjoispuolella on portiikki, ja kupolissa ei ole ikkunoita.',
+          lahde: 'Pudelek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tiranan kellotorni': {
+      aika: '1822 tai 1830',
+      teksti: 'Kellotorni on ottomaanien aikainen kulttuuriperintökohde, joka tunnistettiin ensimmäisen kerran 1940-luvulla. Et\'hem Bey rakennutti tornin minareetin jälkeen, ja valmistumista juhlisti runoilija Shaban Hulusi Bey Toptani kronogrammilla. Valmistumisvuosi on lähteen mukaan 1822 tai 1830, joten torni seisoi jo isoisän matkavuonna 1873.\n\nTorni on yli 30 metriä korkea ja neliöpohjainen, ja sen kivet tuotiin Priskën kukkuloilta. Se sai nykyisen ulkoasunsa vuoden 1928 remontissa, mutta ensimmäinen kerros on alkuperäinen. Pohjoisseinän kiviriviin on veistetty reliefit: lohikäärme ja kasvikuvio. Kellon kunnossapidosta huolehti vuoteen 1973 asti Tufina-suku.\n\nTornin varhaisin kuvadokumentti on Edward Learin kaksi akvarellia syyskuulta 1848. Laaja kunnostus valmistui vuonna 2010. Ramadanin ja bajramin aikaan tornin ja moskeijan minareetin väliin ripustetaan toisinaan mahya-valoja.',
+      kuvat: [
+        {
+          tiedosto: 'Tirana-Clock Tower.JPG',
+          lyhyt: 'Tiranan kellotorni on ottomaanien aikainen kulttuuriperintökohde.',
+          selite: 'Torni on neliöpohjainen, ja sen kivet tuotiin Priskën kukkuloilta.',
+          lahde: 'David.r.1929, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tiranan linnoitus': {
+      aika: 'ennen vuotta 1300',
+      teksti: 'Tiranan linnoitus eli albaniaksi Kalaja e Tiranës on bysanttilaiskauden jäänne, jonka historia ulottuu lähteen mukaan ennen vuotta 1300. Mahdollinen varhaisempi nimi Tirkan liittyy linnoitukseen. Linnoitus sijaitsi kohdassa, jossa risteävät itä–länsi- ja pohjois–etelä-suuntaiset tiet, ja se muodosti Tiranan sydämen.\n\nLinnoituksessa tunnetaan useita torneja. Maanpäällä on jäljellä noin kuusi metriä korkea, viiniköynnöksen peittämä ottomaanien aikainen muuri, ja muurin perustukset on liitetty Murat Toptanin jalankulkukatuun. Isoisän matkavuonna 1873 muuri oli jo vanhaa kaupunkia.\n\nLinnoitus julistettiin ensimmäisen luokan kulttuurimonumentiksi 1970-luvulla. Alueelle avattiin perinteinen basaari joulukuussa 2018: siellä on käsityöliikkeitä ja perinneravintoloita. Alueella on myös hotelleja ja kulttuurilaitoksia.',
+      kuvat: [
+        {
+          tiedosto: 'Fortress Walls, Tirana.JPG',
+          lyhyt: 'Tiranan linnoitus on bysanttilaiskauden jäänne, ja sen muuri on ottomaanien ajalta.',
+          selite: 'Maanpäällä on jäljellä noin kuusi metriä korkea ottomaanien aikainen muuri.',
+          lahde: 'Imfishy, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tabakkien silta': {
+      aika: '1700-luku',
+      teksti: 'Tabakkien silta eli albaniaksi Ura e Tabakëve on 1700-luvun ottomaanien aikainen kivinen jalankulkusilta. Se sijaitsee Tabakkien moskeijan lähellä. Nimi tulee nahkureista: heitä kutsuttiin nimellä tabakë, ja tunnettuja nahanparkitsijasukuja olivat muun muassa Xheleti ja Kuka.\n\nSilta kuului tiehen, joka yhdisti Tiranan Debariin Priskë e Madhen, Qafe Priskën, Domjen, Shëngjergjin, Bizën, Martaneshin ja Zerqanin kautta. Tietä käyttivät pääasiassa maanviljelijät tuodessaan tuotteita ja karjaa kaupunkiin. Silta ylitti Lanë-puron paikassa, jonka lähellä oli lihakauppiaiden ja nahkureiden alue, ja se oli isoisän matkavuonna 1873 jo vanha.\n\nLanë ohjattiin pois vanhalta uomaltaan 1930-luvulla, ja silta jäi rappiolle. Se puhdistettiin ja kunnostettiin myöhemmin, ja kunnostuksessa paljastuivat sillan perustukset. Kaupunki pitää siltaa yhtenä tärkeimmistä kulttuuriperintökohteistaan.',
+      kuvat: [
+        {
+          tiedosto: 'Tanners\' Bridge, Tirana, Albania 02.jpg',
+          lyhyt: 'Tabakkien silta on 1700-luvun ottomaanien aikainen kivinen jalankulkusilta.',
+          selite: 'Silta kuului Tiranasta Debariin johtaneeseen tiehen.',
+          lahde: 'Pasztilla aka Attila Terbócs, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kokonozin moskeija': {
+      aika: '1750',
+      teksti: 'Virallisesti Mahmut Agë Kokonozin moskeija tunnetaan myös nimellä Uuden basaarin moskeija. Nimi tulee ottomaanien aikaisesta aga-arvonimestä. Moskeija rakennettiin 1750 ottomaanien aikana, joten isoisän matkavuonna 1873 se oli seissyt jo yli sata vuotta.\n\nKommunistiajan uskonnonvastainen politiikka kosketti myös tätä moskeijaa: 1960-luvulla se suljettiin ja muutettiin ruokavarastoksi, myöhemmin tupakkakaupaksi. Lähteen mukaan se on silti yksi harvoista moskeijoista, jotka selvisivät kommunistiajasta. Moskeija avattiin uudelleen 1990-luvun alussa, ja nimensä mukaisesti se kuuluu yhä Uuden basaarin ympäristöön.',
+      kuvat: [
+        {
+          tiedosto: 'Pazari i Ri, Tirana Albania 2017.jpg',
+          lyhyt: 'Kokonozin moskeija kohoaa Uuden basaarin torin laidalla Tiranan keskustassa.',
+          selite: 'Moskeijan kerrotaan rakennetun 1750, ja se on yksi harvoista Tiranan moskeijoista, jotka selvisivät kommunistiajasta.',
+          lahde: 'Kevin Jasini, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tiranan pyramidi': {
+      aika: '1988, uudistettu 2023',
+      teksti: 'Pyramidi avattiin vuonna 1988 museona, ja sen suunnittelivat muun muassa Pranvera Hoxha ja Klement Kolaneci. Kompleksin pinta-ala on runsaat puolitoista hehtaaria. Isoisän matkavuonna 1873 sitä ei ollut vielä olemassa.\n\nVuoden 1991 jälkeen rakennus toimi konferenssi- ja näyttelykeskuksena, ja osaa on käytetty 2000-luvun alusta television ja radion lähetyskeskuksena. Purkusuunnitelmia tehtiin useita: historioitsija Ardian Klosi keräsi vetoomukseen tuhansia allekirjoituksia. 2010-luvun lopulla ilmoitettiin, ettei rakennusta puretakaan vaan kunnostetaan.\n\nArkkitehtitoimisto MVRDV muutti rakennuksen nuorten teknologiakeskus TUMO Tiranaksi. Alkuperäinen betonirakenne säilytettiin, ja siihen lisättiin portaat, kattoikkunat ja värikkäitä uusia elementtejä. Huipulle voi kävellä portaita pitkin.',
+      kuvat: [
+        {
+          tiedosto: 'Pyramid of Tirana 1.jpg',
+          lyhyt: 'Pyramidin portaat avattiin yleisölle toukokuussa 2023.',
+          selite: 'Kompleksin pinta-ala on runsaat puolitoista hehtaaria.',
+          lahde: 'BBB2021, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Rinian puisto': {
+      aika: '1950',
+      teksti: 'Rinian puisto eli Parku Rinia, nuorisopuisto, on Tiranan keskeinen yleinen puisto. Se rakennettiin noin 1950 kommunistiajalla, pinta-ala on noin kolme hehtaaria ja se sijaitsee noin 500 metrin päässä keskusaukiolta. Isoisän matkavuonna 1873 puistoa ei ollut.\n\nPuisto alkoi saada ironisesti nimen Taiwan, ja sen länsireunan terassoitu valkoinen Taivani-keskus on nimetty sen mukaan. Keskuksessa on kahviloita, ravintoloita, suihkulähteitä ja keilarata kellarissa. Vuoden 1991 jälkeen puiston ympärille nousi luvattomia rakennuksia, ja vuoden 2000 siivouksessa niitä purettiin runsaasti.\n\nJoka vuosi 14. maaliskuuta vietetään Kesäpäivää eli Dita e Verësiä, joka merkitsee talven päättymistä ja luonnon heräämistä. Pääjuhla on Elbasanissa, mutta Tiranassa järjestetään tapahtumia ja sirkusesityksiä Rinian puistossa.',
+      kuvat: [
+        {
+          tiedosto: 'Rinia Park Tirana (1).jpg',
+          lyhyt: 'Rinian puisto rakennettiin noin 1950 Tiranan keskeiseksi yleiseksi puistoksi.',
+          selite: 'Puiston länsireunalla on Taivani-keskus, jonka nimi viittaa puiston ironiseen lempinimeen Taiwan.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 PL)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  zagreb: {
+    'Kivinen portti': {
+      aika: '1200-luku',
+      teksti: 'Kivinen portti on ainoa säilynyt Gradecin neljästä kaupunginportista; muut olivat Mesnička, Opatička ja Dverce. Se rakennettiin 1200-luvulla osana Gradecin muureja, ja nykyilmeensä se sai myöhemmin. Isoisän matkavuonna 1873 portti oli yhä kaupunginportti Yläkaupungin itälaidalla.\n\nToukokuun lopussa 1731 syttyi tulipalo Pyhän Joosefin seminaarissa, ja se levisi Yläkaupunkiin ja Kaptoliin. Kolmantena päivänä raunioista löytyi vahingoittumaton Neitsyt Marian maalaus, josta vain puinen kehys oli palanut. Hurskas leski rakennutti maalaukselle pienen alttarin portin holvin alle.\n\nKivinen portti esiintyy August Šenoan romaanissa Zlatarevo zlato, ja holvin syvennyksessä on Dora Krupićin pieni patsas. Kardinaali Kuharić julisti Kivisen portin Neitsyt Marian Zagrebin suojeluspyhimykseksi 31.5.1991.',
+      kuvat: [
+        {
+          tiedosto: 'Puerta de Piedra, Zagreb, Croacia, 2014-04-20, DD 02.JPG',
+          lyhyt: 'Kivisen portin holvin alla on Neitsyt Marian maalaukselle rakennettu alttari.',
+          selite: 'Kivisen portin holvin alla on pieni alttari, joka rakennettiin 1731 tulipalosta säilyneelle Neitsyt Marian maalaukselle.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Lotrščakin torni': {
+      aika: '1200-luku',
+      teksti: 'Lotrščakin torni rakennettiin osana Gradecin muureja, jotka valmistuivat 1260-luvulla, puolustamaan eteläistä Dverce-porttia. Nimi tulee latinan sanoista campana latrunculorum, varkaiden kello. Kello soi merkiksi porttien sulkemisesta, ja Dverce-portti purettiin 1812 eteläisen kävelykadun tieltä.\n\nVuonna 1857 romanttisessa restauroinnissa torniin lisättiin kaksi kerrosta ja puinen palotähystys. Isoisän matkavuonna 1873 nämä lisäykset olivat jo paikallaan, mutta tykkiä ei vielä ollut. Kaupunki päätti hankkia sen myöhemmin 1800-luvulla, ja ensimmäinen laukaus ammuttiin 1.1.1877. Laukaus toimi merkkinä kirkonkellojen soittajille.\n\nTykki ammutaan neljännen kerroksen eteläikkunasta. Laukaukset keskeytyivät ensimmäisen maailmansodan ajaksi ja jatkuivat 1927. Pohjakerroksessa toimi aikoinaan kahvila, ja nykyisin tornissa on näköalatasanne, joka kuuluu Klovićevi Dvori -galleriaan.',
+      kuvat: [
+        {
+          tiedosto: 'Kula Lotrščak i Dverce.jpg',
+          lyhyt: 'Lotrščakin torni sijaitsee Yläkaupungin eteläreunalla.',
+          selite: 'Lotrščakin torni rakennettiin Gradecin muurien eteläisen Dverce-portin puolustukseksi.',
+          lahde: 'Bobonajbolji, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Zagrebin tuomiokirkko': {
+      aika: '1217, 1880-luvulta alkaen',
+      teksti: 'Zagrebin tuomiokirkon virallinen nimi on Neitsyt Marian taivaaseenottamisen ja pyhien Tapanin ja Ladislauksen katedraali. Piispanistuin perustettiin 1094, ja ensimmäinen katedraali valmistui ja vihittiin 1217. Lähteen mukaan se on Kroatian korkein sakraalirakennus. Tataarit tuhosivat Kaptolin 1242, ja piispa Timotej jälleenrakensi kirkon 1263–1287.\n\nIsoisän matkavuonna 1873 tuomiokirkko oli vielä keskiajan ja barokin sekoitus ilman kaksoistorneja. Vuoden 1880 maanjäristys romahdutti päälaivan, ja arkkitehti Hermann Bollén johtama uusgoottilainen kunnostus kesti 1880-luvulta 1900-luvun alkuun. Tornit rakennettiin 1889–1899, ja ne ovat noin 105–108 metriä korkeat.\n\nJäristys 22.3.2020 pudotti eteläisen tornin kärjen arkkipiispanpalatsin katolle, ja pohjoisen tornin kärki poistettiin 17.4.2020. Kunnostus jatkui lähteen mukaan vielä 2020-luvun puolivälissä.',
+      kuvat: [
+        {
+          tiedosto: 'Zagreb Cathedral 03.jpg',
+          lyhyt: 'Tuomiokirkon kaksi tornia kohoavat Kaptolin yllä.',
+          selite: 'Tuomiokirkon kaksi uusgoottilaista tornia rakennettiin 1889–1899 ja ne ovat noin 105–108 metriä korkeat.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Zrinjevac: {
+      aika: '1800-luvun alkupuoli',
+      teksti: 'Zrinjevac eli virallisesti Nikola Šubić Zrinski -aukio on 12 540 neliömetrin puisto-aukio Alakaupungissa. Karjamarkkina siirrettiin sen paikalle 1800-luvun alkupuolella. Isoisän matkavuonna 1873 puiston musiikkipaviljonkia ei vielä ollut, sillä se tuli 1891 Eduard Pristerin lahjoituksena.\n\nAukio kuuluu Lenucin vihreään hevosenkenkään, Alakaupungin aukioiden ketjuun. Lähteen mukaan ketjussa on seitsemän aukiota. Eteläosassa on merkittävien kroatialaisten rintakuvat, muiden muassa Julije Klovićin ja Ivan Mažuranićin.\n\nAukion ympärillä on arkeologinen museo lännessä, Kroatian tiedeakatemia ja Strossmayerin vanhojen mestarien galleria etelässä sekä korkein oikeus pohjoisessa. Moderni galleria on toiminut Vranyczanyn palatsissa Zrinjevacin laidalla vuodesta 1934.',
+      kuvat: [
+        {
+          tiedosto: 'Zrinjevac Park, Zagreb, May 2025.jpg',
+          lyhyt: 'Zrinjevac on Alakaupungin puisto-aukio ja yksi vihreän hevosenkengän seitsemästä aukiosta.',
+          selite: 'Zrinjevac eli Nikola Šubić Zrinski -aukio on 12 540 neliömetrin puisto-aukio Alakaupungissa, ja sen keskellä on Eduard Pristerin lahjoittama musiikkipaviljonki vuodelta 1891.',
+          lahde: 'Hijerovit, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Taidepaviljonki: {
+      aika: '1898',
+      teksti: 'Taidepaviljonki valmistui Zagrebin näyttelytilaksi 1898. Maalari Vlaho Bukovac esitti ajatuksen 1895, ja Budapestin vuosituhatnäyttelyyn 1896 pystytettiin esivalmistetun rautarungon varaan paviljonki, jotta se voitaisiin siirtää Zagrebiin. Rakennuksen uuden version suunnittelivat wieniläiset Fellner ja Helmer. Isoisän matkavuonna 1873 paviljonkia ei vielä ollut.\n\nAvajaiset olivat 15.12.1898. Lähteen mukaan paviljonki on Kaakkois-Euroopan vanhin galleria. Se on järjestänyt satoja näyttelyitä, joissa on ollut esillä muiden muassa Rodinin, Miron ja Warholin töitä.\n\nRakennus sijaitsee Tomislav-aukion pohjoislaidalla päärautatieaseman edessä. Julkisivun rintakuvat esittävät idässä Klovićia, Medulićia ja Carpaccioa sekä lännessä Michelangeloa, Raffaelloa ja Tizianoa. Lasikatto kunnostettiin 2000-luvulla, ja paviljonki vaurioitui vuoden 2020 järistyksessä, joten avoinnaolo kannattaa tarkistaa.',
+      kuvat: [
+        {
+          tiedosto: 'Umjetnički paviljon, Zagreb.jpg',
+          lyhyt: 'Taidepaviljonki sijaitsee Tomislav-aukion pohjoislaidalla.',
+          selite: 'Taidepaviljonki on Zagrebin näyttelytila, jonka lasikatto kunnostettiin 2000-luvulla.',
+          lahde: 'ScF, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  andorralavella: {
+    'Casa de la Vall': {
+      aika: '1500-luvun loppu',
+      teksti: 'Casa de la Vall on historiallinen talo Andorra la Vellan vanhassa keskustassa, ja se toimi Andorran parlamentin, General Councilin, paikkana vuoteen 2011. Busquetsin suku rakennutti sen kartanoksi ja puolustustorniksi 1500-luvun lopulla, ja pääoven yläpuolisessa vaakunassa on vuosiluku 1580. Talo seisoo kalliolla, josta avautuu näkymä Valira-joen laaksoon.\n\nAndorran yleiskokous osti talon 1700-luvun alussa ja kokoontui siellä vuodesta 1702. Sisällä on oikeussali, neuvostosali ja pyhälle Ermengolille omistettu kappeli sekä seitsemän avaimen kaappi, jossa on lukko jokaiselle Andorran seurakunnalle. Kulmassa on kyyhkyslän muotoinen torni, ja pihassa on creu de terme.\n\nIsoisän matkavuonna 1873 talo oli ollut parlamentin käytössä noin 170 vuotta. Peruskorjauksessa 1960-luvulla ulkorappaus poistettiin ja taloon lisättiin torni. Talo on kuvattu Andorran yhden euron kolikossa.',
+      kuvat: [
+        {
+          tiedosto: 'Casa de la Vall, Andorra la Vieja, Andorra, 2013-12-30, DD 01.JPG',
+          selite: 'Casa de la Vallin kulmassa on kyyhkyslän muotoinen torni.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sant Esteven kirkko': {
+      aika: '1000-1100-luku',
+      teksti: 'Sant Esteven kirkko on roomalaiskatolinen kirkko, joka seisoo Plaça del Príncep Benlloch -aukiolla Andorra la Vellassa. Se rakennettiin 1000-1100-luvuilla romaanisessa tyylissä. Kirkko on säilyttänyt alkuperäisen puoliympyrän muotoisen apsiksensa, joka on lähteen mukaan ruhtinaskunnan suurin, sekä 1100-luvun alttaritaulun.\n\nKirkko oli olemassa jo isoisän matkavuonna 1873, mutta sitä on muutettu sen jälkeen. Arkkitehti Josep Puig i Cadafalch muotoili kellotornin ja sivusisäänkäynnin uudelleen 1940-luvulla, ja 1960-luvulla kirkkoon rakennettiin uusi nave.\n\nKirkossa oli freskoja, jotka poistettiin pääosin 1900-luvun alussa; osa niistä on nykyisin Museu Nacional d\'Art de Catalunyassa Barcelonassa ja osa Espai Columbassa. Sisällä on kaksi barokkialttaritaulua, joiden aiheet ovat Johannes Kastaja ja pyhä Lucia. Kirkko kuuluu Andorran kulttuuriperintörekisteriin.',
+      kuvat: [
+        {
+          tiedosto: 'Iglesia de San Esteve, Andorra la Vieja, Andorra, 2013-12-30, DD 02.JPG',
+          selite: 'Sant Esteven kirkko kuuluu Andorran kulttuuriperintörekisteriin.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Santa Coloman kirkko': {
+      aika: '700- tai 800-luku',
+      teksti: 'Santa Coloman kirkko on lähteen mukaan Andorran vanhin kirkko. Se sijaitsee Santa Coloman kylässä Andorra la Vellan seurakunnassa ja on omistettu Sensin Columballe, jota lähteen mukaan pidetään Andorran suojeluspyhimyksenä. Runkohuone on rakennettu 700- tai 800-luvulla ja kellotorni 1100-luvulla.\n\nSeinät on tehty kiilleliuskeesta ja graniitista kalkkilaastilla, ja tornin ikkunakehyksissä on travertiinista veistettyjä päitä. Kirkossa oli 1100-luvun seinämaalauksia, jotka irrotettiin pääosin 1933. Ne olivat Berliinissä vuoteen 2007, ja nykyisin ne ovat esillä Espai Columba -museossa kirkon vieressä.\n\nKirkko oli olemassa jo 1873. Sitä on kunnostettu muun muassa 1740-1749, 1930-luvulla Cèsar Martinellin johdolla ja 1970-luvulla. Kirkko on esillä joissakin Andorran euro-kolikoissa.',
+      kuvat: [
+        {
+          tiedosto: 'Iglesia de Santa Coloma de Andorra, Santa Coloma, Andorra, 2013-12-30, DD 05.JPG',
+          selite: 'Santa Coloman kirkko on omistettu Sensin Columballe.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pont de la Margineda': {
+      aika: '1300-1400-luku',
+      teksti: 'Pont de la Margineda on keskiaikainen kivisilta Santa Coloman kylässä Andorra la Vellan seurakunnassa. Lähteen mukaan se on rakennettu 1300-1400-luvulla, ja se ylittää Gran Valiran. Silta on noin 3,5 km:n päässä vanhasta keskustasta, ja Gran Valira muodostuu kahden vuoristopuron yhtymästä Escaldes–Engordanyssä.\n\nSillan seinät ovat graniittia, ja kaarikivet on tehty pimssistä keveyden vuoksi. Silta kuuluu Andorran kulttuuriperintörekisteriin. Andorran romaanisen taiteen kohteiden joukossa mainitaan Margineda- ja Escalls-sillat.\n\nIsoisän matkavuonna 1873 silta oli seissyt jo satoja vuosia. Lähteet eivät kerro sen myöhemmästä rakennushistoriasta.',
+      kuvat: [
+        {
+          tiedosto: 'Puente de la Margineda, Santa Coloma, Andorra, 2013-12-30, DD 05.JPG',
+          selite: 'Pont de la Margineda ylittää Gran Valiran Santa Coloman kylässä.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Caldea: {
+      aika: '1994',
+      teksti: 'Caldea on kylpyläkeskus Escaldes–Engordanyssä, joka sijaitsee Andorra la Vellan vieressä ja kuuluu samaan kaupunkialueeseen. Se valmistui 1994, ja rakennuksessa on 18 kerrosta. Lähteen mukaan Caldea on yksi Euroopan suurimmista kylpylöistä ja Andorran korkein rakennus, 80 metriä korkea.\n\nEscaldes-Engordany erotettiin omaksi kunnakseen 1978, ja Caldea kuuluu sen alueeseen. Andorran palvelutalous alkoi 1800-luvun uudistusten jälkeen rakentaa hotelleja, kylpylöitä, teitä ja lennätinlinjoja.\n\nIsoisän matkavuonna 1873 Caldeaa ei vielä ollut, sillä rakennus valmistui vasta 1994. Kylpyläkeskus on kaupunkialueen nykyaikaisia rakennuksia vastapainona vanhan keskustan romaanisille kirkoille.',
+      kuvat: [
+        {
+          tiedosto: 'Caldea 20231205 122111.jpg',
+          selite: 'Caldea on Escaldes–Engordanyssä sijaitseva kylpyläkeskus, joka valmistui 1994.',
+          lahde: 'FrankAndProust, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Madriu-Perafita-Claror': {
+      aika: 'maailmanperintö 2004',
+      teksti: 'Madriu-Perafita-Claror on jäätikön muovaama laakso Andorran kaakkoisosassa. Se on kulttuurimaisema, jossa on asumuksia, peltoterasseja, polkuja ja rautatyön jäänteitä yli 700 vuoden ajalta. Unesco hyväksyi laakson maailmanperintökohteeksi 2004.\n\nLaaksossa on kaksi asutusta, Entremesaigües ja Ramio, joissa on yhteensä 12 taloa. Vain noin 1 % laaksosta on yksityisomistuksessa. Kesäisin laiduntivat lampaat, lehmät ja hevoset, ja paimenet asuivat turvekattoisissa kivimajoissa. Laaksoon pääsee vain jalkapolkuja pitkin, ja läpi kulkevat GR 7, GR 11 ja GRP-kierros.\n\nMadriu-joen rannalla sulatettiin rautaa paikallisesta malmista, ja ahjo hylättiin 1790. Metsiä hoidettiin hiilen tekoon 1800-luvulle asti. Laakso on osittain Andorra la Vellan kunnan alueella.',
+      kuvat: [
+        {
+          tiedosto: 'Vall del Madriu-Perafita-Claror - 49.jpg',
+          selite: 'Madriu-Perafita-Claror on Unescon maailmanperintökohde vuodesta 2004.',
+          lahde: 'Ferran Llorens, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  bern: {
+    Zytglogge: {
+      aika: 'noin 1218–1220',
+      teksti: 'Zytglogge eli kelloportti rakennettiin noin 1218–1220 kaupungin läntisen muurin porttitorniksi. Kun muuri siirtyi 1344–1346, tornista tuli naisvankila. Nimi Zytglogge, aikakello, on kirjattu ensi kerran 1413.\n\nTorni paloi tyhjäksi 1405, ja samana vuonna valettiin uusi suuri kello. Tähtitieteellisen kellon mekanismi uusittiin noin 1530 Kaspar Brunnerin työnä. Noin kolme minuuttia ennen tasatuntia kellon eläinhahmot ja narri esiintyvät, ja kultainen Kronos-hahmo lyö kelloa.\n\nIsoisän matkavuonna 1873 portti oli seissyt paikallaan yli 600 vuotta. Nykyinen ulkoasu on pääosin vuosien 1770–71 kunnostuksesta, ja palautus tehtiin 1981–83. Lähteen mukaan se on kaupungin vanhin muistomerkki.',
+      kuvat: [
+        {
+          tiedosto: 'Zytglogge in Bern Switzerland by Robbie Conceptuel.png',
+          lyhyt: 'Zytglogge on rakennettu noin 1218–1220 kaupungin läntisen muurin porttitorniksi.',
+          selite: 'Zytglogge on rakennettu noin 1218–1220 kaupungin läntisen muurin porttitorniksi, ja sen tähtitieteellinen kello on uusittu noin 1530.',
+          lahde: 'Conceptuel, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bernin tuomiokirkko': {
+      aika: '1421–1893',
+      teksti: 'Bernin tuomiokirkon, Münsterin, rakentaminen aloitettiin 11.3.1421 Matthäus Ensingerin johdolla. Rakentaminen pysähtyi lähes kolmeksi vuosisadaksi 1500-luvun lopulla, ja noin 100 metrin torni valmistui lopulta 1893.\n\nUrut rakennettiin ja laajennettiin 1700-luvulla. Suurin kello painaa noin 10 tonnia, ja kellot soivat päivittäin. Sisätilassa on säilynyt lasimaalauksia 1440-luvulta ja kuoripenkit, vaikka reformaation myötä 1528 poistettiin sivualttarit.\n\nIsoisän matkavuonna 1873 tornista puuttui vielä huippu: kello- ja tornityö valmistui vasta 1893, ja lähteen mukaan torni on Sveitsin korkein kirkontorni.',
+      kuvat: [
+        {
+          tiedosto: 'Bern munster.jpg',
+          lyhyt: 'Münsterin rakentaminen aloitettiin 1421, ja sen kellot soivat päivittäin.',
+          selite: 'Münsterin rakentaminen aloitettiin 1421 Matthäus Ensingerin johdolla, ja kellot soivat päivittäin.',
+          lahde: 'Pugefco, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Liittopalatsi: {
+      aika: '1852–1902',
+      teksti: 'Bundeshaus on kolmen rakennuksen kokonaisuus, joka on yli 300 metriä pitkä. Länsisiipi rakennettiin 1852–1857 Jakob Friedrich Studerin suunnitelmien mukaan, ja siihen sijoitettiin hallinto, hallitus ja parlamentti. Itäsiipi valmistui 1892, ja kupolilla varustettu parlamenttirakennus rakennettiin 1894–1902 Hans Wilhelm Auerin johdolla.\n\nParlamenttirakennuksen kupolin ulkokorkeus on noin 60 metriä, ja sen mosaiikissa on vaakuna ja motto Unus pro omnibus, omnes pro uno. Rakennuksessa on käytetty kiveä yli kymmenestä kantonista, ja sen koristeluun osallistui 38 sveitsiläistä taiteilijaa.\n\nIsoisän matkavuonna 1873 vain länsisiipi oli valmis. Se tunnettiin silloin nimellä Bundes-Rathaus, eikä itäsiipeä tai kupolirakennusta ollut vielä olemassa.',
+      kuvat: [
+        {
+          tiedosto: 'Bundeshauskuppel-von-Süden.JPG',
+          lyhyt: 'Parlamenttirakennus rakennettiin 1894–1902, ja sen kupoli on ulkoa noin 60 metriä korkea.',
+          selite: 'Parlamenttirakennus rakennettiin 1894–1902 Hans Wilhelm Auerin johdolla, ja sen kupoli on ulkoa noin 60 metriä korkea.',
+          lahde: 'Absolutely new, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Bundesplatz: {
+      aika: '1991–2004',
+      teksti: 'Bundesplatzin länsikolmannes on entisen toisen kaupunginmuurin vallihaudan paikalla. Nimenä oli Parlamentplatz vuoteen 1909, ja vuosikymmenien ajan aukio toimi pysäköintialueena.\n\nKansallinen kilpailu järjestettiin 1991, ja voittaja oli ehdotus Platz als Platz. Aukio valmistui 31.7.2004 ja vihittiin 1.8.2004. Hanke palkittiin 2006 Yhdysvaltain arkkitehtiyhdistyksen kaupunkisuunnittelupalkinnolla. Kivilaatoituksen länsiosassa on 26 vesisuihkua, yksi kutakin kantonia kohti.\n\nIsoisän matkavuonna 1873 nykyistä parlamenttirakennusta ei vielä ollut, ja aukion laidalla oli 1820-luvulla rakennettu kasino.',
+      kuvat: [
+        {
+          tiedosto: 'Bern Bundesplatz view from above IMG 4365.JPG',
+          lyhyt: 'Bundesplatz sai nykyisen ilmeensä vuonna 2004.',
+          selite: 'Bundesplatz sai nykyisen ilmeensä vuonna 2004, ja sen suunnittelukilpailun voitti ehdotus Platz als Platz.',
+          lahde: 'Hadi, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bärengraben ja BärenPark': {
+      aika: '1857 ja 2009',
+      teksti: 'Bärengraben on Bernin karhukuoppa Nydeggbrücken päässä, ja se on kansallisesti merkittävä kulttuurikohde. Nykyinen, neljäs kuoppa avattiin 1857. Vuonna 1925 viereen lisättiin pienempi kuoppa pennuille, ja kuoppa saneerattiin 1994–1996. Kuoppa kuuluu Dählhölzlin eläintarhan hallintoon.\n\nBärenPark avattiin 2009 luonnonmukaisempana tarhana Aare-rinteeseen, ja sen ja kuopan välillä on tunneli. Kalteva hissi, Bärenbähnli, rakennettiin 2010-luvulla. Karhu on sekä kaupungin että kantonin vaakunassa, ja Mary Plain -lastenkirjasarjan nuori karhu asuu kuopassa. Lähteen mukaan kuoppa näkyy myös Bond-elokuvassa On Her Majesty\'s Secret Service.\n\nIsoisän matkavuonna 1873 karhut olivat asuneet nykyisessä kuopassa jo kuusitoista vuotta, mutta BärenParkia ei ollut.',
+      kuvat: [
+        {
+          tiedosto: 'Bern 126.jpg',
+          lyhyt: 'Bärengraben avattiin 1857, ja viereinen BärenPark 2009.',
+          selite: 'Bärengraben, Bernin karhukuoppa, avattiin 1857, ja viereinen BärenPark avattiin 2009.',
+          lahde: 'FrDr, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Einsteinhaus: {
+      aika: '1903–1905',
+      teksti: 'Einsteinhaus on Kramgasse 49:ssä, ja Albert Einstein asui talon toisessa kerroksessa vaimonsa Mileva Marićin ja poikansa Hansin kanssa 1903–1905. Annus mirabilis -artikkelit kirjoitettiin tässä talossa. Samaan aikaan Einstein työskenteli liittovaltion henkisen omaisuuden toimistossa.\n\nNykyisin talossa on museo. Toisessa kerroksessa on aikakauden kalusteilla sisustettu asunto, ja kolmannessa kerroksessa kerrotaan Einsteinin elämäkerta. Pienempi näyttely on Bernin historiallisessa museossa.\n\nIsoisän matkavuonna 1873 Einsteinin asuminen talossa ei ollut vielä alkanut: se tapahtui vasta 1903–1905.',
+      kuvat: [
+        {
+          tiedosto: 'Einstein Haus.jpg',
+          lyhyt: 'Einsteinhaus Kramgasse 49:ssä on museo talossa, jossa Einstein asui 1903–1905.',
+          selite: 'Einsteinhaus Kramgasse 49:ssä on museo talossa, jossa Albert Einstein asui perheineen 1903–1905.',
+          lahde: 'Aliman5040, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  monaco: {
+    'Monte Carlon kasino': {
+      aika: '1863, laajennettu 1878–81',
+      teksti: 'Monte Carlon kasino on Place du Casino -aukion laidalla oleva pelikasino ja Monacon tunnetuimpia rakennuksia. Nykyiselle paikalle Spélugues-alueelle rakennettiin vuodesta 1858, ja rakennus valmistui 1863 arkkitehti Gobineau de la Bretonnerien suunnitelmin. Hôtel de Paris, saman arkkitehdin työ, avattiin vuotta kasinon jälkeen, 1864. François Blanc sai 50 vuoden toimiluvan, ja Société des Bains de Mer perustettiin 1863.\n\nIsoisän matkavuonna 1873 kasino oli siis jo toiminnassa mutta vielä alkuperäisessä asussaan. Englantilainen Joseph Jagger rikkoi pankin huomattuaan rulettipyörän vinoutuman; lähteet ajoittavat tapauksen eri tavoin, 1873 tai noin 1881. Charles Garnier, Pariisin oopperan arkkitehti, laajensi kasinoa Jules Dutroun kanssa 1878–79, ja 1880–81 lisättiin Trente-et-Quarante-sali, jonka Garnierin osat ovat suureksi osaksi hävinneet.\n\nKasino on yhä Société des Bains de Mer -yhtiön käytössä. Monégasqueilta on pääsy pelisaleihin kielletty, ja sääntö oli ruhtinatar Carolinen aloite.',
+      kuvat: [
+        {
+          tiedosto: 'Casino de Montecarlo, Mónaco, 2016-06-23, DD 05.jpg',
+          lyhyt: 'Monte Carlon kasino valmistui 1863 ja on Beaux-Arts-tyylinen.',
+          selite: 'Kasinoa laajensi 1878–79 Charles Garnier, Pariisin oopperan arkkitehti.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Salle Garnier': {
+      aika: '1879',
+      teksti: 'Salle Garnier on Monte Carlon oopperan sali kasinon yhteydessä. Sali rakennettiin kasinon yhteyteen, koska Monacossa oli 1870-luvulla vähän kulttuuritarjontaa. Pariisin oopperan arkkitehti Charles Garnier suunnitteli sen, ja se valmistui 8,5 kuukaudessa. Paikkoja on 524, kun Pariisin Palais Garnierissa niitä on noin 2 000.\n\nIsoisän matkavuonna 1873 salia ei vielä ollut. Avajaiset pidettiin 25. tammikuuta 1879, kun Sarah Bernhardt esiintyi nymfinä, ja ensimmäinen ooppera oli Robert Planquetten Le Chevalier Gaston 8. helmikuuta 1879.\n\nRaoul Gunsbourg johti oopperaa vuodesta 1892 kuuden vuosikymmenen ajan. Hector Berliozin La damnation de Faust ensiesitettiin salissa 1893, ja 1909 esitettiin Wagnerin Nibelungin sormus kokonaan ranskaksi. Salia muutettiin 1898–99 ja uudistettiin 2004–05.',
+      kuvat: [
+        {
+          tiedosto: 'Opéra de Monte-Carlo (50326975807).jpg',
+          lyhyt: 'Salle Garnier on Monte Carlon oopperan sali, ja se avattiin 1879.',
+          selite: 'Sali rakennettiin kasinon yhteyteen Charles Garnierin suunnitelmin, ja siinä on 524 paikkaa.',
+          lahde: 'Jorge Láscar from Australia, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Port Hercule': {
+      aika: 'antiikista, nykyinen satama 1926',
+      teksti: 'Port Hercule on Monacon syvänmeren satama, jonka pinta-ala on noin 16 hehtaaria. Nimi liittyy Herkuleeseen: kreikkalaiset siirtokuntalaiset perustivat Monoikoksen 500-luvulla eaa. Plinius vanhempi ja Tacitus mainitsevat sataman, ja Virgilius kuvaa Aeneiksessa linnoitettua kalliota, Monoecusta, meren rannalla.\n\nIsoisän matkavuonna 1873 satama oli nykyistä vanhempi, sillä nykyinen satama valmistui vasta 1926. Sitä uudistettiin 1970-luvulla, ja suomalainen Marinetek toimitti kolme uutta ponttonia vuoteen 2011 mennessä.\n\nSatamassa voi ankkuroida jopa 700 alusta. Vesi on tavallisilla laitureilla seitsemän metriä syvää ja ulkolaitureilla jopa 40 metriä. Satamasta kulkee myös Monacon Grand Prix -kierros.',
+      kuvat: [
+        {
+          tiedosto: 'Monaco Port Hercule 02.jpg',
+          lyhyt: 'Port Hercule on Monacon syvänmeren satama, jossa voi ankkuroida jopa 700 alusta.',
+          selite: 'Nykyinen satama valmistui 1926, mutta paikka on ollut satamana antiikista asti.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Jardin Exotique': {
+      aika: '1913–1933',
+      teksti: 'Jardin Exotique on rinteeseen rakennettu kallioinen kasvitarha, jossa kasvaa pääosin sukkulentteja. Augustin Gastaud alkoi viljellä sukkulentteja Saint-Martinin puutarhassa 1895. Albert I osti observatorion kallion 1912 ja tilasi puutarhan Louis Notarilta. Rakennustyöt alkoivat 1913, puutarha avattiin 1931 ja vihittiin virallisesti helmikuussa 1933.\n\nIsoisän matkavuonna 1873 puutarhaa ei vielä ollut. Sukkulentteja oli tuotu Eurooppaan Meksikosta 1860-luvun lopulla, ja Monacossa niitä alettiin viljellä vasta 1895.\n\nVuonna 1916 puutarhan alueelta löytyi luola, jossa oli asumisen jälkiä. Esihistoriallisen antropologian museo siirtyi puutarhaan 1959. Kokoelmassa on lähteen mukaan yli 1 000 lajia ja 6 000 lajiketta, ja ensimmäinen johtaja Louis Vatrican toimi tehtävässä 1933–1969.',
+      kuvat: [
+        {
+          tiedosto: 'Jardin exotique de Monaco D190408 g.jpg',
+          lyhyt: 'Jardin Exotique on Monacon kallioinen kasvitarha, jossa kasvaa pääosin sukkulentteja.',
+          selite: 'Puutarha rakennettiin Albert I:n tilauksesta 1913 alkaen, ja se avattiin yleisölle 1931.',
+          lahde: 'Tangopaso, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Valtamerimuseo: {
+      aika: '1890-luvun lopulta 1910',
+      teksti: 'Valtamerimuseo on Monacon merentutkimukseen keskittyvä museo, jonka ruhtinas Albert I vihki 1910. Uusbarokkinen julkisivu kohoaa 85 metrin korkeuteen jyrkän kallion yläpuolelle. Rakentaminen kesti 11 vuotta (1899–1910), ja rakennus on tehty pääosin La Turbien valkoisesta kalkkikivestä. Julkisivun friisissä on 20 tutkimusaluksen nimeä.\n\nIsoisän matkavuonna 1873 museota ei vielä ollut, ja sen rakentaminen alkoi vasta 1890-luvun lopulla. Ensimmäisessä kerroksessa on A Sailor\'s Career -näyttely ja Hirondellen laboratorio. Anafylaksian löytö, josta Charles Richet sai Nobelin 1913, tehtiin Albert I:n tutkimusretkellä Princesse Alice II -jahdilla.\n\nJacques-Yves Cousteau johti museota 1957–1988. Akvaariossa on satoja lajeja ja noin 6 000 yksilöä. Museo juhli satavuotista taivaltaan maaliskuussa 2010 laajan kunnostuksen jälkeen.',
+      kuvat: [
+        {
+          tiedosto: 'Musée Océanographique de Monaco 20150807.jpg',
+          lyhyt: 'Valtamerimuseo vihittiin 1910, ja sen perusti ruhtinas Albert I.',
+          selite: 'Museon julkisivun friisissä on 20 oseanografisen tutkimusaluksen nimeä.',
+          lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Ruhtinaanlinna: {
+      aika: '1215 (linnoitus), 1500–1800-luvut',
+      teksti: 'Ruhtinaanlinna on Monacon ruhtinaan virallinen asuinpaikka kallion päällä. Paikalle rakennettiin 1191 genovalaisten linnake, ja 1215 aloitettu linnoitus, jossa oli neljä tornia ja muuri, muodostaa palatsin ytimen. Grimaldit ovat pitäneet linnoitusta hallussaan vuodesta 1297.\n\nIsoisän matkavuonna 1873 hallitsi Charles III, joka kunnosti palatsia muun muassa rakentamalla Pyhän Marian tornin uudelleen sekä uusimalla kappelin ja julkisivumaalaukset. Edellisen vuosisadan lopulla, 1793, Ranskan vallankumouksen joukot olivat vallanneet palatsin, vanginneet ruhtinaan ja ryöstäneet rakennuksen.\n\nHonoré II:n arkkitehti Jacques Catone pehmensi ulkoasua, ja 1600-luvulla syntyi valtiohuoneiden jono. Herkuleen galleria on saanut nimensä Orazio de Ferrarin 1600-luvulla maalaamista Herkuleen urotöistä, ja Peilien galleria on mallinnettu Versailles\'n peilisalin mukaan.',
+      kuvat: [
+        {
+          tiedosto: 'Exterior of the Prince\'s Palace (Monaco).jpg',
+          lyhyt: 'Ruhtinaanlinna on Monacon ruhtinaan virallinen asuinpaikka, ja sen ydin on 1215 aloitettu linnoitus.',
+          selite: 'Grimaldit ovat hallinneet linnoitusta vuodesta 1297, ja Charles III kunnosti sitä 1800-luvulla.',
+          lahde: 'Joseolgon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Monacon katedraali': {
+      aika: '1875–1903, vihitty 1911',
+      teksti: 'Monacon katedraali on Notre-Dame-Immaculée, ja sen valkoinen julkisivu on romaanis-bysanttilaista tyyliä. Nykyinen katedraali rakennettiin 1875–1903 ja vihittiin 11. kesäkuuta 1911. Paikalla oli aiemmin Pyhän Nikolauksen kirkko, Monacon ensimmäinen seurakuntakirkko vuodelta 1252.\n\nIsoisän matkavuonna 1873 nykyistä katedraalia ei vielä ollut: vanha Pyhän Nikolauksen katedraali purettiin vasta 1874, ja uuden rakennustyöt alkoivat 1875.\n\nKorkea-alttari ja piispantuoli on tehty valkoisesta Carrara-marmorista, ja retaabeli on noin vuodelta 1500. Katedraalissa ovat monien Grimaldien haudat, muun muassa Rainier III:n ja Gracen. Pyhä Devota on suojeluspyhimys, ja nelimanuaalinen urku vihittiin 1976.',
+      kuvat: [
+        {
+          tiedosto: 'Cathedral of Our Lady Immaculate, Monaco (frontage).jpg',
+          lyhyt: 'Monacon katedraali rakennettiin 1875–1903, ja siellä ovat monien Grimaldien haudat.',
+          selite: 'Katedraalin paikalla oli aiemmin Pyhän Nikolauksen kirkko, joka purettiin 1874.',
+          lahde: 'Uhooep, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  reykjavik: {
+    'Hallgrímskirkja': {
+      aika: '1945–1986',
+      teksti: 'Hallgrímskirkja on luterilainen seurakuntakirkko Skólavörðuholt-kukkulalla lähellä keskustaa. Kirkon korkeus on noin 74 metriä, ja lähteen mukaan se on Islannin suurin kirkko. Nimi tulee runoilija ja pappi Hallgrímur Péturssonin (1614–1674) mukaan, joka kirjoitti Passiovirret.\n\nValtion arkkitehti Guðjón Samúelsson sai suunnittelutehtävän 1937, ja hänen sanotaan suunnitelleen kirkon muistuttamaan Islannin basalttipylväsmuodostumia. Rakentaminen alkoi 1945 ja päättyi 1986: krypta vihittiin 1948, torni ja siivet valmistuivat 1974 ja laivasto vihittiin 1986. Lähteen mukaan kirkko on ekspressionistista arkkitehtuuria.\n\nTornissa on 29 kellon kellopeli, ja suuremmat Klais-urut valmistuivat joulukuussa 1992. Kirkon edessä on Leif Erikssonin patsas, lahja Yhdysvalloista Alþingin tuhatvuotisjuhlaan 1930. Isoisän matkavuonna 1873 kukkulalla ei vielä ollut kirkkoa, sillä suunnittelu tilattiin vasta 1937.',
+      kuvat: [
+        {
+          tiedosto: 'Hallgrimskirkja 2026.jpg',
+          lyhyt: 'Hallgrímskirkja on Reykjavíkin luterilainen seurakuntakirkko Skólavörðuholt-kukkulalla.',
+          selite: 'Kirkon rakentaminen kesti vuodesta 1945 vuoteen 1986.',
+          lahde: 'VeraVidiVici, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Harpa: {
+      aika: '2007–2011',
+      teksti: 'Harpa on konsertti- ja kongressitalo, jonka avajaiskonsertti pidettiin 4.5.2011 ja jossa toimii Islannin sinfoniaorkesteri. Talon suunnittelivat tanskalainen Henning Larsen Architects ja taiteilija Olafur Eliasson. Rakennustyöt alkoivat 2007, ja 2008 alkanut rahoituskriisi pysäytti hankkeen, kunnes työt jatkuivat 2009 valtion ja kaupungin päätöksellä. Nimi Harpa annettiin 11.12.2009 islantilaisen musiikin päivänä.\n\nJulkisivussa on 714 LED-valoa, jotka näyttävät Eliassonin suunnittelemaa videoteosta. Vuonna 2021 hän teki 12 uutta valoteosta, yhden kullekin kuukaudelle. Harpa sai Euroopan unionin Mies van der Rohe -arkkitehtuuripalkinnon 2013.\n\nTalon edessä vedessä on Ólöf Pálsdóttirin veistos Selloa soittava muusikko, jonka malli oli tanskalainen sellisti Erling Blöndal Bengtsson. Veistos seurasi orkesteria Harpaan 2014. Isoisän matkavuonna 1873 talosta ei ollut vielä suunnitelmaakaan.',
+      kuvat: [
+        {
+          tiedosto: 'Blua ĉielo kaj blankaj nuboj super la kongresejo Harpa.jpg',
+          lyhyt: 'Harpa on Henning Larsen Architectsin ja Olafur Eliassonin suunnittelema konsertti- ja kongressitalo.',
+          selite: 'Talo avattiin 2011, ja se on Reykjavíkin ensimmäinen konserttitaloksi rakennettu talo.',
+          lahde: 'RG72, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tjörnin': {
+      aika: 'lampi; silta 1920, uusi silta 1942',
+      teksti: 'Tjörnin on pieni lampi Reykjavíkin keskustassa, ja useimmat kaupunkiin tulijat kulkevat sen rantaa. Lampea ruokkii Vatnsmýrin suo, ja lammella käy noin 40 vesilintulajia. Etelässä on Hljómskálagarður-puisto patsaineen, ja lammen eteläpuolella Hringbrautin toisella puolella on Reykjavík Airport.\n\nLammen luonnollinen laskupuro Lækurinn kulki aiemmin avoimena kanavana keskustan läpi, ja se on ollut viemärijärjestelmän osa Lækjargatan alla vuodesta 1911. Lammen yli rakennettiin 1920 puinen jalankulkusilta, jonka tilalle tuli 1942 betonisilta, joka on yhä käytössä.\n\nIsoisän matkavuonna 1873 kumpaakaan siltaa ei vielä ollut. Suojelualue Vatnsmýri on heikentynyt, ja lintulajiston parantamiseksi suunnitellaan toimenpiteitä.',
+      kuvat: [
+        {
+          tiedosto: 'Lago Tjörnin, Reikiavik, Distrito de la Capital, Islandia, 2014-08-13, DD 087.JPG',
+          lyhyt: 'Tjörnin on Reykjavíkin keskustan lampi, jonka rannalla käy kymmeniä vesilintulajeja.',
+          selite: 'Lampi jäätyy talvella ajoittain, ja jäällä luistellaan.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Austurvöllur': {
+      aika: '1700-luvun alussa nykyistä suurempi',
+      teksti: 'Austurvöllur on Reykjavíkin julkinen aukio, joka on suosittu kokoontumispaikka etenkin hyvällä säällä aukion laidan kahviloiden vuoksi. Aukion ympäröivät kadut ovat Vallarstræti, Pósthússtræti, Kirkjustræti ja Thorvaldsensstræti. Lähteen mukaan se oli 1700-luvun alussa paljon nykyistä suurempi.\n\nAukiolla on itsenäisyysliikkeen johtajan Jón Sigurðssonin iso patsas. Thorvaldsensstræti on nimetty kuvanveistäjä Bertel Thorvaldsenin mukaan, jonka patsas oli aukion keskellä pitkään ennen Sigurðssonin patsasta. Aukion laidalla ovat Alþingishúsið, tuomiokirkko Dómkirkjan, Hotel Borg ja kahviloita.\n\nAlþingishúsið on klassismin tyylinen rakennus, jonka suunnitteli Ferdinand Meldahl ja joka rakennettiin hakatusta dolerittikivestä 1880–1881. Tuomiokirkko vihittiin käyttöön 1796, ja sitä suurennettiin 1840-luvun lopulla. Isoisän matkavuonna 1873 aukion laidalla ei siis vielä ollut Alþingishúsiðia, mutta kirkko seisoi jo.',
+      kuvat: [
+        {
+          tiedosto: 'Austurvöllur panoramic.jpg',
+          lyhyt: 'Austurvöllur on Reykjavíkin keskustan aukio, jonka laidalla ovat Alþingin talo ja tuomiokirkko.',
+          selite: 'Aukiolla seisoo Jón Sigurðssonin patsas.',
+          lahde: 'APK, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Perlan: {
+      aika: '1939–1991',
+      teksti: 'Perlan seisoo Öskjuhlíð-kukkulalla 61 metrin korkeudessa merenpinnasta. Paine riittää viemään kukkulan säiliöistä vettä 38 metrin korkeudella merenpinnasta olevan rakennuksen kymmenenteen kerrokseen. Jokaiseen säiliöön mahtuu noin neljä miljoonaa litraa vettä, mikä vastaa noin 4 000 kuutiometriä.\n\nNäyttelyihin kuuluvat Wonders of Iceland, revontulista kertova Áróra-planetaariohjelma ja Lava Show sekä Látrabjargin lintuvuoren kymmenen metrin korkuinen kopio. Näköalatasanteelta näkee kaupungin, ympäristön vuoret ja Atlantin, ja sisällä on ravintola, joka kiertää 360 astetta.\n\nEnsimmäinen säiliö valmistui 1939 ja loput viisi seuraavien kahden vuosikymmenen aikana. Isoisän matkavuonna 1873 Öskjuhlíð oli vielä rakentamaton kukkula. Perlan sijaitsee kauempana keskustasta kuin useimmat muut kohteet.',
+      kuvat: [
+        {
+          tiedosto: 'Winter Light (6842178797).jpg',
+          lyhyt: 'Perlan on kuuman veden säiliöiden päälle rakennettu museo Öskjuhlíð-kukkulalla.',
+          selite: 'Museo avattiin yleisölle 21.6.1991.',
+          lahde: 'Axel Kristinsson from Reykjavík, Iceland, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Höfði': {
+      aika: '1909',
+      teksti: 'Höfði on vuonna 1909 rakennettu talo, joka valmistettiin osina Norjassa ja pystytettiin Reykjavíkiin Ranskan konsulille Jean-Paul Brillouinille. Rakennuslupaa ei ollut vielä myönnetty, kun talo pystytettiin, ja tuolloin se oli lähteen mukaan kaupungin suurin yksityinen kiinteistö. Kaupunki osti talon 1958 ja kunnosti sen, ja sitä käytetään juhlavastaanottoihin.\n\nRunoilija Einar Benediktsson asui talossa 1910-luvulla, ja Louisa Matthíasdóttir kasvoi siinä 1920- ja 1930-luvuilla. Sisällä on ristiin ripustetut Yhdysvaltojen ja Neuvostoliiton liput 1986 pidetyn huippukokouksen muistoksi. Tulipalo vaurioitti taloa syyskuussa 2009 sen 100-vuotispäivänä, mutta korvaamattomat esineet pelastettiin. Talossa kerrotaan kummittelevan nuoren naisen henki.\n\nIsoisän matkavuonna 1873 paikalla ei vielä ollut taloa. Radioantenni tuli paikalle vasta 1905.',
+      kuvat: [
+        {
+          tiedosto: 'Höfði 5528.JPG',
+          lyhyt: 'Höfði on vuonna 1909 pystytetty talo, jonka osat valmistettiin Norjassa.',
+          selite: 'Talo tunnetaan Reaganin ja Gorbatšovin kokouksen paikkana 1986.',
+          lahde: 'Hedwig Storch, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Viðey': {
+      aika: '900-luvulta',
+      teksti: 'Viðey on Kollafjörðurin lahden suurin saari, ja sen pinta-ala on 1,7 neliökilometriä. Saari jakautuu kapealla kannaksella Länsisaareen, Itäsaareen ja Kotisaareen. Lähteen mukaan se oli kahdesta kolmeen miljoonaa vuotta sitten aktiivinen tulivuori. Sinne pääsee lautalla, ja lauttoja kulkee kesäisin päivittäin.\n\nSaarella on arkeologisia jäänteitä 900-luvun alusta ja augustinolaisluostari vuosilta 1225–1539. Länsisaaressa on Viðeyjarstofa-talo, jonka tanskalainen arkkitehti Nicolai Eigtved suunnitteli ja Tanskan hallitus rakennutti 1753–1755. Talossa on nykyään ravintola. Saarella on Richard Serran Áfangar sekä Yoko Onon Imagine Peace Tower, joka sytytetään vuosittain Lennonin syntymäpäivän 9.10. ja kuolinpäivän 8.12. välillä.\n\nIsoisän matkavuonna 1873 saari oli vielä asuttu, sillä viimeiset asukkaat lähtivät sieltä vasta 1943.',
+      kuvat: [
+        {
+          tiedosto: 'Viðey island.jpg',
+          lyhyt: 'Viðey on Kollafjörðurin lahden suurin saari aivan Reykjavíkin edustalla.',
+          selite: 'Saaren nimen arvellaan viittaavan siihen, että se oli metsäinen tai että sinne ajautui ajopuuta.',
+          lahde: 'Slawojar, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  sanmarino: {
+    'Guaitan torni': {
+      aika: '1000-luku; nykymuoto 1400-luku',
+      teksti: 'Guaita on yksi Monte Titanon kolmesta tornista ja lähteen mukaan niistä vanhin: se rakennettiin 1000-luvulla. Nimi tarkoittaa San Marinon murteessa vartioimista. Linnake on kuvattu San Marinon lipussa ja vaakunassa.\n\nLinnaketta vahvistettiin useasti ja se rakennettiin uudelleen 1400-luvun lopulla, ja myöhemmin siihen lisättiin viistokatto. Sitä suojaa kaksinkertainen muuri, jonka ulompi osa on varustettu tykkimuurein ja torneilla. Vanhin osa, mastio, on säilynyt muuttumattomana, ja ylempää porttia puolustaa bertesca. Sisällä on Pyhän Barbaran kappeli, ja linnakkeesta on haettu suojaa piiritysten aikana.\n\nSisämuurin tiloja käytettiin alle kuuden kuukauden tuomioiden vankilana vielä 1900-luvun jälkipuoliskolla. Vuonna 1873 Guaita oli jo vuosisatoja vanha. Ulkopihalla on kaksi mörssäriä ja kaksi tykkiä, jotka ovat lahjoja Viktor Emanuel II:lta ja III:lta.',
+      kuvat: [
+        {
+          tiedosto: 'Torre Guaita (San Marino) large view.jpg',
+          lyhyt: 'Guaita on Monte Titanon tornien vartiolinnake, jossa on kaksinkertainen muuri.',
+          selite: 'Sisämuurin tiloja käytettiin vankilana vielä 1900-luvun jälkipuoliskolla.',
+          lahde: 'Terragio67, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Cestan torni': {
+      aika: '1000-luvun loppu tai 1200-luku',
+      teksti: 'Cesta seisoo lähteen mukaan Monte Titanon korkeimmalla huipulla, ja sen toinen nimi on Fratta. Torni on rakennettu vanhan roomalaisen linnakkeen jäännösten päälle, ja sen pohja on viisikulmainen. Rakennusajaksi lähteet antavat joko 1000-luvun lopun tai 1200-luvun.\n\nPäätornissa on vartiotupa ja muutamia vankilasoluja. Sisällä on Pyhän Marinuksen kunniaksi vuonna 1956 perustettu museo, jossa on aseita keskiajalta nykypäivään. Museon esineisiin kuuluu miekka, jonka Garibaldin kerrotaan lahjoittaneen San Marinolle.\n\nVuonna 1873 torni oli jo vuosisatoja vanha, mutta museota ei vielä ollut. Cesta on kuvattu San Marinon lipussa ja vaakunassa.',
+      kuvat: [
+        {
+          tiedosto: 'Torre Cesta - San Marino - GT 01 - 2024 04 30.jpg',
+          lyhyt: 'Cestan torni seisoo vanhan roomalaisen linnakkeen jäännösten päällä.',
+          selite: 'Sisällä on vuonna 1956 perustettu asemuseo.',
+          lahde: 'Terragio67, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Montalen torni': {
+      aika: '1300-luku',
+      teksti: 'Montale on Monte Titanon kolmesta tornista pienin ja lähteen mukaan nuorin, ja se on yksityisessä omistuksessa. Rakennusajaksi lähteet antavat 1300-luvun. Tornin arvellaan rakennetun suojaksi Malatestojen kasvavaa valtaa vastaan.\n\nTorni on viisikulmainen. Katto on puurunkoinen ja päällystetty paanuilla. Torni seisoo suoraan kallion päällä erillään muista rakennuksista. Sisäänkäynti on ovi korkealla maanpinnan yläpuolella, kuten tuon ajan vankiloissa, ja tornia on käytetty vankilana.\n\nLaaja restaurointi tehtiin vuonna 1935, eli vuonna 1873 sitä ei ollut vielä tehty. Lähteen mukaan torni ei ole koskaan ollut yleisölle avoin.',
+      kuvat: [
+        {
+          tiedosto: 'Montale Tower - San Marino.jpg',
+          lyhyt: 'Montalen torni on viisikulmainen.',
+          selite: 'Tornin sisäänkäynti on korkealla maanpinnan yläpuolella, kuten tuon ajan vankiloissa.',
+          lahde: 'Commonists, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Palazzo Pubblico': {
+      aika: '1884–1894',
+      teksti: 'Palazzo Pubblico on San Marinon kaupungintalo ja valtiollisten seremonioiden paikka. Siellä istuvat kapteenivaltionhoitajat, Suuri ja yleinen neuvosto, Kahdentoista neuvosto ja Valtionkongressi. Rakennus kuuluu Piazza della Libertàn historialliseen ympäristöön.\n\nNykyinen palatsi on 1800-luvun lopun rakennus: Francesco Azzurri suunnitteli sen, työ alkoi 17.5.1884 ja rakennus valmistui 1894. Paikalla oli aiemmin 1300-luvulla rakennettu Domus Magna Comunis, mutta vuonna 1873 nykyistä rakennusta ei vielä ollut. Julkisivun yläosaa kruunaa tykkimuuri ja konsolit, ja kellotornissa on sama rakenne. Ulkoasu muistuttaa Firenzen Palazzo Vecchiota, mutta on paljon pienempi.\n\nGae Aulenti johti laajaa kunnostusta, jonka uudelleenvihkiäiset olivat 30.9.1996. Kahdentoista neuvoston salissa on Guercinon maalaus San Marino che benedice la città.',
+      kuvat: [
+        {
+          tiedosto: 'Palazzo Pubblico (San Marino) 2.jpg',
+          lyhyt: 'Palazzo Pubblico on San Marinon kaupungintalo, jonka suunnitteli Francesco Azzurri.',
+          selite: 'Gae Aulenti johti laajaa kunnostusta, jonka uudelleenvihkiäiset olivat 30.9.1996.',
+          lahde: 'Terragio67, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'San Marinon basilika': {
+      aika: '1826–1838',
+      teksti: 'San Marinon basilika on kaupungin pääkirkko, omistettu valtion perustajalle ja suojeluspyhimykselle Marinukselle. Se on San Marinon-Montefeltron hiippakunnan rinnakkaiskatedraali, ja se nostettiin basilikaksi 21.7.1926.\n\nAiempi kirkko purettiin 1807. Uusi rakennus aloitettiin 28.7.1826, ja Montefeltron piispa Crispino Agostinucci vihki sen 5.2.1838, joten vuonna 1873 basilika oli jo valmis. Uusklassisen rakennuksen pääovella on kahdeksan korinttilaista pylvästä ja sisällä kuusitoista.\n\nPyhän Marinuksen patsas on Adamo Tadolinin, Canovan oppilaan, työ, ja pyhimyksen jäännökset löytyivät 3.3.1586. Pääovella on latinankielinen omistuskirjoitus suojelijalle ja vapauden luojalle. Basilika on kuvattu San Marinon 10 sentin eurokolikossa.',
+      kuvat: [
+        {
+          tiedosto: 'San Marino - Concattedrale (2023).jpg',
+          lyhyt: 'San Marinon basilika on kaupungin pääkirkko.',
+          selite: 'Pääovella on latinankielinen omistuskirjoitus suojelijalle ja vapauden luojalle.',
+          lahde: 'Terragio67, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Piazza della Libertà': {
+      aika: 'Vapauden patsas 1876',
+      teksti: 'Piazza della Libertà on San Marinon kaupungin aukio Palazzo Pubblicon edessä. Aukion ympärillä ovat Palazzo Pubblico ja Statua della Libertà eli Vapauden patsas. Köysiradan yläpysäkiltä aukiolle on matkaa alle 200 metriä.\n\nPatsas on tehty valkoisesta Carraran marmorista, ja se on uusklassinen. Kuvanveistäjä oli Stefano Galletti, ja patsaan lahjoitti vuonna 1876 kreivitär Otilia Heyroth Wagener Berliinistä. Patsaan päässä on kolmen tornin kruunu, joka symboloi linnoitettua kaupunkia. Patsas on kuvattu San Marinon 2 sentin eurokolikossa.\n\nVuonna 1873 patsasta ei vielä ollut, eikä nykyistä Palazzo Pubblicoa. Alueen keskeisiin paikkoihin kuuluu myös Teatro Titano, joka rakennettiin 1700-luvulla ja joka oli siis jo olemassa 1873.',
+      kuvat: [
+        {
+          tiedosto: 'Piazza della Libertà - San Marino - 2024 02 13 - GT 01.jpg',
+          lyhyt: 'Piazza della Libertà on San Marinon kaupungin aukio Palazzo Pubblicon edessä.',
+          selite: 'Aukiolta on alle 200 metriä köysiradan yläpysäkille.',
+          lahde: 'Terragio67, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Monte Titano': {
+      aika: 'UNESCO 2008',
+      teksti: 'Monte Titano on Apenniinien kalkkikivinen kallioharjanne noin 10–13 kilometrin päässä Adrianmerestä. Vuoren korkeus on noin 740 metriä. Sillä on kolme huippua, ja kullakin on torni.\n\nSan Marino: Historic Centre and Mount Titano merkittiin UNESCOn maailmanperintöluetteloon vuonna 2008. Alueen koko on 55 hehtaaria ja suoja-alueen 167 hehtaaria. Perusteluna on vapaan tasavallan jatkuvuus keskiajalta. UNESCO-asemaa ei vuonna 1873 vielä ollut.\n\nRinteiltä on löydetty kalojen ja erityisesti haiden hampaiden fossiileja, osa mioseenikaudelta. Kasvillisuuteen kuuluvat kastanja, tammi, sypressi ja pihta, ja eläimiä ovat metsäkauris, villisika, jänis ja kettu. Italialaiset kutsuvat huippua Monte Brugolaksi, koska muoto muistuttaa kuusiokoloavainta Po-tasangolta katsottuna.',
+      kuvat: [
+        {
+          tiedosto: 'San Marino - Cloudy sunset.jpg',
+          lyhyt: 'Monte Titano on kalkkikivinen kallioharjanne, jolla on kolme huippua.',
+          selite: 'Rinteiltä on löydetty kalojen ja erityisesti haiden hampaiden fossiileja, osa mioseenikaudelta.',
+          lahde: 'Terragio67, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  vaduz: {
+    'Vaduzin linna': {
+      aika: '1100-luku–',
+      teksti: 'Vaduzin linna on Liechtensteinin ruhtinaan palatsi ja virallinen asuinpaikka sekä kaupungin tunnetuin maamerkki. Se kohoaa rinteellä kaupungin yllä ja näkyy lähes joka puolelle. Linnan vanhimmat osat ovat 1100-luvun torni ja itäpuolen rakenteet, ja linna mainitaan lähteissä 1322. Tornin pohja on noin 12 × 13 metriä ja alkuperäinen sisäänkäynti on yhdentoista metrin korkeudessa. Rakentajiksi oletetaan Werdenberg-Sargansin kreivit.\n\nSveitsin valaliitto poltti linnan Švaabin sodassa 1499. Kreivi Kaspar von Hohenems laajensi länsisiipeä 1613–1640, ja Liechtensteinin suku osti linnan 1712. Linnassa on Anna-kappeli, jossa on myöhäisgoottilainen pääalttari. Suurkunnostus tehtiin 1900-luvun alussa, ja ruhtinasperheen vakituinen asuinpaikka linnasta tuli 1938.\n\nIsoisän matkavuonna 1873 linna oli ollut suvun omaisuutta jo yli puolitoista vuosisataa, mutta ruhtinas ei asunut maassa. Linnan tarkkaa kuntoa tuolloin lähteet eivät kuvaa. Nykyään linna ei ole yleisölle avoin, koska ruhtinassuku asuu siellä.',
+      kuvat: [
+        {
+          tiedosto: 'LIE Vaduz, Schloss Vaduz 0007.jpg',
+          lyhyt: 'Vaduzin linnan pyöreä torni rakennettiin 1500-luvulla.',
+          selite: 'Linnan tornit ja siivet ovat syntyneet eri vuosisatoina, ja vanhin osa on 1100-luvun itätorni.',
+          lahde: '-wuppertaler, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'St. Florinin katedraali': {
+      aika: '1869–1873',
+      teksti: 'St. Florinin katedraali on uusgoottilainen kirkko ja Vaduzin arkkihiippakunnan keskus. Sen suojeluspyhimys on Remüsin Florinus, Vinschgaun laaksosta kotoisin oleva pyhimys. Kirkon arkkitehti oli Friedrich von Schmidt, ja se rakennettiin 1869–1873 vanhan kappelin viereen. Katedraali on kansallisten ja ruhtinassuvun seremonioiden paikka.\n\nPappilakirkosta katedraali tuli 1997, kun paavi Johannes Paavali II perusti arkkihiippakunnan 2. joulukuuta 1997. Aiemmin seurakunta kuului Churin hiippakunnan dekanaattiin.\n\nKatedraalin vieressä on ruhtinaiden hautakappeli, joka on avoin yleisölle vain 1. marraskuuta. Sinne on haudattu muun muassa Franz Joseph II (1989) ja prinssi Alois (1869–1955). Kirkko rakennettiin 1869–1873 ja valmistui 1873, joten isoisän matkavuonna 1873 se oli juuri valmistunut.',
+      kuvat: [
+        {
+          tiedosto: 'Vaduz Kathedrale StFlorin.jpg',
+          lyhyt: 'St. Florinin katedraali on uusgoottilainen kirkko.',
+          selite: 'Kirkon arkkitehti oli Friedrich von Schmidt, ja se rakennettiin 1869–1873 vanhan kappelin viereen.',
+          lahde: 'AuHaidhausen, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Liechtensteinin kansallismuseo': {
+      aika: '1400-luku',
+      teksti: 'Liechtensteinin kansallismuseo toimii rakennuksessa, joka ajoitetaan lähteen mukaan vuoteen 1438. Rakennus oli ruhtinaallinen taverna, tullihuone ja hallituksen kokouspaikka. Feldkirchin ja Churin välisen kauppareitin tavarat tarkastettiin siellä.\n\nHallitus toimi rakennuksessa 1800-luvun lopulta vuoteen 1905, ja goottilaisia kellareita käytettiin vankilana. Museo perustettiin 1800-luvun lopulla linnaan kuvernööri Friedrich Stellwag von Carionin aloitteesta, ja nykyisessä rakennuksessa se on ollut vuodesta 1972. Rakennus vaurioitui 1992 ja museo suljettiin, ja laajennus avattiin 28.11.2003.\n\nMuseossa on neljä osaa: päärakennus, postimuseo, aarrekammio (2015) ja maatalomuseo. Näyttelytilaa on 2 000 neliömetriä ja noin 40 huonetta. Isoisän matkavuonna 1873 museota ei vielä ollut, mutta rakennus oli hallituksen paikka.',
+      kuvat: [
+        {
+          tiedosto: 'Liechtensteinisches Landesmuseum in Vaduz (2018).jpg',
+          lyhyt: 'Kansallismuseo esittelee Liechtensteinin kulttuuri- ja luonnonhistoriaa.',
+          selite: 'Museon näyttelytilaa on yhteensä 2 000 neliömetriä ja noin 40 huonetta.',
+          lahde: 'JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kunstmuseum Liechtenstein': {
+      aika: '2000',
+      teksti: 'Kunstmuseum Liechtenstein on valtion taidemuseo ja maan kansallinen taidekokoelma. Se esittelee kansainvälistä modernia ja nykytaidetta, ja kokoelman painotus on 1900–2000-lukujen veistoksissa ja installaatioissa. Rakennus on arkkitehtien Meinrad Morgerin, Heinrich Degelon ja Christian Kerezin työ, ja se valmistui marraskuussa 2000.\n\nUlkopuoli on värjättyä betonia ja mustaa basalttia, ja ulkopintaan on upotettu jokikiviä. Sisällä on kuusi näyttelytilaa ja kaksi vastakkaista porrasta, joiden ansiosta rakennuksen läpi näkee vinottain. Rakennus lahjoitettiin valtiolle vuosituhannen lahjana elokuussa 2000, ja avajaisia vietettiin 12.11.2000. Hilti Art Foundationin näyttelyrakennus lisättiin viereen vuonna 2015.\n\nKokoelman perusta on vuonna 1967 saaduissa kymmenessä maalauksessa, ja valtion taidekokoelma perustettiin 1968. Isoisän matkavuonna 1873 museota ei vielä ollut, sillä se rakennettiin yli sata vuotta myöhemmin.',
+      kuvat: [
+        {
+          tiedosto: 'Kunstmuseum Liechtenstein (Vaduz, 2018).jpg',
+          lyhyt: 'Kunstmuseum Liechtensteinin rakennus on väritettyä betonia ja mustaa basalttia.',
+          selite: 'Museon rakennus on lahjoitettu valtiolle vuosituhannen lahjana, ja se avattiin yleisölle 12.11.2000.',
+          lahde: 'JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Schalunin linnanraunio': {
+      aika: '1100-luvun loppu',
+      teksti: 'Schalunin linnanraunio, puhekielessä Wildschloss eli linna erämaassa, on Vaduzin kunnan alueella vuorilla noin kilometrin koilliseen keskustasta. Linna rakennettiin todennäköisesti 1100-luvun lopulla, ja ensimmäinen kirjallinen maininta on vuodelta 1237, jolloin nimenä oli Schalun.\n\nKaivaukset ovat tuottaneet vähän löytöjä, ja linna on voitu tyhjentää ja polttaa myöhemmin. Parhaiten ovat säilyneet suuri sali ja osa vartiotornia. Linna siirtyi 1700-luvulla ruhtinaan omistukseen, ja kunnalle se tuli 1933.\n\nLähteet eivät kuvaa linnan tilaa isoisän matkavuonna 1873. Nykyään raunio on vapaasti avoin, ja sinne pääsee jalan tai pyörällä paikallista polkua pitkin.',
+      kuvat: [
+        {
+          tiedosto: 'Schalun Castle.jpg',
+          lyhyt: 'Schalunin linnanraunio on Vaduzin kunnan alueella vuorilla.',
+          selite: 'Raunion parhaiten säilyneet osat ovat suuri sali ja osa vartiotornia.',
+          lahde: 'Lucas Kendall, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e03, 7 kaupunkia):
+   * Kohdekartan nähtävyysjutut. Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03-pilvi.
+   */
+  abudhabi: {
+    'Qasr Al Hosn': {
+      aika: '1700-luvulta',
+      teksti: 'Qasr Al Hosn on linnake ja museo Abu Dhabin keskustassa. Nykyinen muotonsa on peräisin 1930-luvun lopun laajennuksesta, joka lähteen mukaan rahoitettiin ensimmäisen öljylupasopimuksen tuloilla. Se oli emiirin palatsi ja hallituspaikka vuoteen 1966.\n\nKoska nykyinen muoto syntyi vasta 1930-luvun lopun laajennuksessa, isoisän matkavuonna 1873 linnake oli pienempi. Nimi Valkoinen linnake ei ole alkuperäinen: linnake maalattiin kirkkaan valkoiseksi vasta 1900-luvun lopun kunnostuksissa.\n\nNykyään Qasr Al Hosn on museo ja kulttuurikohde, joka avattiin uudelleen 2010-luvun lopulla pitkän entisöinnin jälkeen. Sen vieressä on Abu Dhabin kulttuurisäätiö, ja koko alueeseen kuuluu myös käsityöpaja House of Artisans.',
+      kuvat: [
+        {
+          tiedosto: 'Qasr al Hosn.jpg',
+          selite: 'Qasr Al Hosn on Abu Dhabin vanhin kivirakennus ja nykyään museo.',
+          lahde: 'Darthjipsu, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Qasr Al Watan': {
+      aika: '2010-luvun loppu',
+      teksti: 'Qasr Al Watan eli Kansakunnan palatsi on Arabiemiirikuntien presidentin palatsi. Sitä käytetään juhla- ja valtiovierailuihin sekä ministerineuvoston tarpeisiin, eikä se ole asuinkäytössä.\n\nRakennus valmistui 2010-luvun lopulla ja avattiin yleisölle maaliskuussa 2019. Julkisivu on valkoista graniittia ja kalkkikiveä, ja sisällä on iso kupoli sekä kristallikruunu. Palatsin Great Hallin itäsiivessä on House of Knowledge, jossa on esillä diplomaattilahjoja ja jonka kirjastossa on tuhansia teoksia.\n\nIsoisän matkavuonna 1873 palatsia ei vielä ollut. Lähteen mukaan hallitsijan pysyvä asuinpaikka oli tuolloin linnake Qasr Al Hosn,.',
+      kuvat: [
+        {
+          tiedosto: 'Qasr Al Watan 13.jpg',
+          selite: 'Qasr Al Watan avattiin yleisölle maaliskuussa 2019, ja se on Arabiemiirikuntien presidentin palatsi.',
+          lahde: 'EditQ, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Emirates Palace': {
+      aika: '2005',
+      teksti: 'Emirates Palace on viiden tähden hotelli Cornichen eteläpäässä. Se avattiin vuonna 2005, ja sen suunnitteli arkkitehtitoimisto WATG. Rakennuksessa on islamilaisen rakennustaiteen elementtejä, kuten symmetriaa ja geometrisia kuvioita, sekä keskikupoli ja kymmeniä pienempiä kupoleita.\n\nHotellilla on oma ranta ja marina. Lähteen mukaan sitä pidetään hotellina myös suosittuna nähtävyytenä. Palatsilla on rooli myös taidehistoriassa: Louvre Abu Dhabin kokoelman ensimmäinen esittely oli täällä 2000-luvun lopulla, vuosia ennen museon avaamista.\n\nIsoisän matkavuonna 1873 tällaista rakennusta ei ollut. Cornichen paikalla oli lähteen mukaan ennen 1970-lukua ranta, jolla dhow-alukset ankkuroituivat, ja öljy löydettiin vasta 1900-luvun puolivälin tienoilla.',
+      kuvat: [
+        {
+          tiedosto: 'Emirates Palace - 55482143859.jpg',
+          selite: 'Emirates Palace avattiin hotellina vuonna 2005 Cornichen eteläpäähän.',
+          lahde: 'xiquinhosilva, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Etihad Towers': {
+      aika: '2010-luku',
+      teksti: 'Etihad Towers on viiden tornin kokonaisuus Emirates Palacea vastapäätä. Tornien korkeudet ovat suunnilleen 200–300 metriä, ja niissä on toimistoja, asuntoja ja hotelli. Lähteen mukaan toinen torneista on yksi kaupungin korkeimmista, ja sen yläkerroksessa on katselutaso.\n\n2010-luvun alussa tornit otettiin käyttöön, ja hotelli avattiin pian sen jälkeen. Kokonaisuus kuuluu siihen rakennusryhmään, joka on antanut Abu Dhabin länsirannalle sen tämänhetkisen siluetin. Tornit ovat esiintyneet myös elokuvassa Furious 7, jossa autolla ajetaan tornien läpi.\n\nIsoisän matkavuonna 1873 tällä kohdalla ei seissyt yhtään tällaista rakennusta: rannikolla oli asutus, ja korkeat tornit kuuluvat öljyn jälkeiseen aikaan.',
+      kuvat: [
+        {
+          tiedosto: 'The Big Six in Abu Dhabi.jpg',
+          selite: 'Etihad Towers on viiden tornin kokonaisuus, jossa on toimistoja, asuntoja ja hotelli.',
+          lahde: 'Tms2007, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  amman: {
+    'Suuri temppeli': {
+      aika: '100-luku',
+      teksti: 'Suuri temppeli kohoaa linnavuoren ylätasanteella. Se rakennettiin 100-luvun jälkipuoliskolla, kun Arabian provinssia hallitsi kuvernööri Geminius Marcianus, samoihin aikoihin kuin Rooman teatteri.\n\nNimi Herkuleen temppeli on lähteen mukaan epätarkka, koska jumaluutta ei tunneta varmasti. Arkkitraavin kirjoituksessa mainitaan Herkuleen pyhäkkö ja juhlapaikka, mikä tukee Herkules-tulkintaa, mutta kirjoituksen tulkinnasta on esitetty myös epäilyjä.\n\nIsoisän matkavuonna 1873 linnavuori oli lähteen mukaan hylätty rauniokasa; kaivauksia on tehty 1920-luvulta alkaen, ja iso osa kukkulasta on yhä kaivamatta.',
+      kuvat: [
+        {
+          tiedosto: 'Sunrise over the Temple of Hercules.jpg',
+          lyhyt: 'Suuren temppelin pylväät Ammanin linnavuorella.',
+          selite: 'Suuri temppeli rakennettiin Philadelphian akropolikselle 100-luvun jälkipuoliskolla.',
+          lahde: 'andryn2006, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Umaijadien palatsi': {
+      aika: '700-luku',
+      teksti: 'Umaijadien palatsi on linnavuoren ylätason pohjoisosassa. Sen rakennutti lähteen mukaan kalifi Hisham ibn Abd al-Malik, joka hallitsi 700-luvun alkupuoliskolla, ja rakennuksen on oletettu olleen hallintorakennus tai umaijadivirkamiehen asuinpaikka.\n\nKompleksiin kuuluu vastaanottosali, useita kokoushuoneita ja pylväikkötie. Arkkitehtuuri yhdistää bysanttilaista, sassanidista ja selvästi islamilaista tyyliä. Palatsin eteläpuolella on moskeija, jonka pylväsmetsä-malli esiintyy lähteen mukaan yleensä vain Persiassa ja Mesopotamiassa, ja lähellä on suuri vesisäiliö, joka toimitti vettä kylpylöihin ja muihin tiloihin.\n\nPalatsi rapistui abbasidien ja fatimidien aikana, ja kaupunkia oli jo aiemmin vaurioittanut voimakas maanjäristys 700-luvun puolivälissä. Isoisän matkavuonna 1873 paikka oli lähteen mukaan rauniona, ja kaivauksia on tehty 1920-luvulta alkaen.',
+      kuvat: [
+        {
+          tiedosto: 'Amman citadel - Umayyad Palace entrance.jpg',
+          lyhyt: 'Umaijadien palatsi Ammanin linnavuoren pohjoisosassa.',
+          selite: 'Palatsi sijaitsee linnavuoren pohjoisosassa ja on peräisin kalifi Hishamin ajalta.',
+          lahde: 'AliAbuRas, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Rooman teatteri': {
+      aika: '100-luku',
+      teksti: 'Rooman teatteri on rakennettu rinteeseen Jabal al-Joufahin juurelle linnavuorta vastapäätä. Siinä oli useita tuhansia paikkoja, ja jyrkkä katsomo on jaettu vaakasuoriin osiin. Kreikankielinen kirjoitus yhdistää teatterin keisari Antoninus Piuksen aikaan, ja hän hallitsi 100-luvun puolivälissä.\n\nTeatteri on suunnattu pohjoiseen, jotta aurinko ei lähteen mukaan häikäisisi katsojia. Lähteen mukaan ylimmille riveille kuuluu ja näkyy erinomaisesti jyrkän rakenteen ansiosta. Sivuovien takana ovat Jordan Folklore Museum ja Museum of Popular Tradition. Nykyään teatteri on kulttuuritapahtumien käytössä, ja esimerkiksi Al-Balad Music Festival järjestetään siellä ja viereisessä odeonissa.\n\nIsoisän matkavuonna 1873 teatteri oli rauniona. Kun tšerkessit asettuivat sen viereen 1870-luvun lopulla, he rakensivat talonsa teatterin kivistä.',
+      kuvat: [
+        {
+          tiedosto: 'Roman theater of Amman 01.jpg',
+          lyhyt: 'Rooman teatteri on rakennettu rinteeseen, ja siinä oli useita tuhansia paikkoja.',
+          selite: 'Rooman teatteri on peräisin 100-luvun puolivälistä, ja nykyään siellä pidetään kulttuuritapahtumia.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Odeon: {
+      aika: '100-luku',
+      teksti: 'Odeon on pieni teatteri Hashemite Plazan itälaidalla. Se on pieni, ja se rakennettiin 100-luvulla samoihin aikoihin viereisen suuren teatterin kanssa. Kaksi katsomoa sijaitsevat lähellä toisiaan: suuri teatteri Hashemite Plazan eteläpuolella ja pieni odeon plazan itäpuolella.\n\nArkeologien arvion mukaan odeon oli peitetty puukatolla tai tilapäisellä kangaskatoksella. Rakennus on kunnostettu äskettäin yhdessä nymfaionin kanssa, ja nykyään siellä pidetään konsertteja. Lähteen mukaan tunnetuin niistä on Al-Balad Music Festival, joka järjestetään Rooman teatterissa ja odeonissa.\n\nIsoisän matkavuonna 1873 laakso, jossa odeon sijaitsee, oli lähteen mukaan autio rauniopaikka, jossa kävivät vain viljelijät ja beduiinit.',
+      kuvat: [
+        {
+          tiedosto: 'Amman Odeon 03.jpg',
+          lyhyt: 'Odeon on pieni roomalaisajan teatteri Hashemite Plazan laidalla.',
+          selite: 'Odeon oli pieni teatteri, ja nykyään siellä järjestetään konsertteja.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Nymfaion: {
+      aika: '100-luku',
+      teksti: 'Nymfaion oli roomalaisen Philadelphian julkinen suihkulähde, josta on säilynyt osa. Se rakennettiin samoihin aikoihin teatterin ja odeonin kanssa, ja se sijaitsi Seil-puron vieressä. Lähteen mukaan siinä oli arviolta useiden satojen neliömetrien allas, joka täytettiin jatkuvasti vedellä.\n\nNykyisin nymfaionin jäänteet ovat Ibn al-Atheer- ja Quraysh-katujen risteyksessä alakaupungin keskellä. Forum sijaitsi lähteen mukaan nykyisen Hashemite Plazan paikalla. Kunnostus alkoi 2010-luvun puolivälissä: työhön osallistui arkeologian opiskelijoita ja ammattilaisia useasta jordanialaisesta yliopistosta, ja rahoittajana oli Yhdysvaltain suurlähetystö.\n\nPuro peitettiin 1900-luvulla, ja sen paikalla kulkee nykyään katu. Isoisän matkavuonna 1873 laakso oli lähteen mukaan autio rauniopaikka, ja asutus levisi sen päälle ja ympärille vasta 1870-luvun lopun jälkeen.',
+      kuvat: [
+        {
+          tiedosto: 'Amman Nymphaeum 0138.jpg',
+          lyhyt: 'Nymfaion oli roomalaisen Philadelphian julkinen suihkulähde.',
+          selite: 'Nymfaionin allas täytettiin jatkuvasti vedellä, ja rakennus sijaitsi Seil-puron vieressä.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Suuri Husseinin moskeija': {
+      aika: '1920-luku',
+      teksti: 'Suuri Husseinin moskeija on perjantaimoskeija alakaupungissa ja lähteen mukaan yksi kaupungin vanhimmista moskeijoista. Se sijaitsee vanhemman moskeijan paikalla; alkuperäinen Omari-moskeija rakennettiin lähteen mukaan umaijadien aikana bysanttilaisen basilikan paikalle.\n\nAl-Muqaddasi kuvasi 900-luvulla kaupungin kaunista moskeijaa, jonka lattia oli mosaiikkia. Brittiläinen tutkija Charles Warren kuvasi paikalla ollutta vanhaa moskeijaa 1860-luvulla, ja C. R. Conder valokuvasi sen 1880-luvun alussa. Tšerkessiasutuksen jälkeen rukoussali tyhjennettiin ja katto rakennettiin uudelleen.\n\nNykyinen moskeija rakennettiin 1920-luvulla emiiri Abdullahin määräyksestä, ja se nimettiin hänen isänsä Sharif Hussein bin Alin mukaan. Se oli yksi emiirikunnan perustamisen jälkeisistä ensimmäisistä uusista rakennuksista. Isoisän matkavuoden molemmin puolin paikalla oli yhä vanha moskeija.',
+      kuvat: [
+        {
+          tiedosto: 'Grand Husseini Mosque na 2026 (2).jpg',
+          lyhyt: 'Suuri Husseinin moskeija on perjantaimoskeija Ammanin alakaupungissa.',
+          selite: 'Suuri Husseinin moskeija rakennettiin 1920-luvulla vanhemman moskeijan paikalle ja nimettiin Sharif Hussein bin Alin mukaan.',
+          lahde: 'Justwiki, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Duke\'s Diwan': {
+      aika: '1920-luku',
+      teksti: 'Duke\'s Diwan on historiallinen talo King Faisal Streetillä, joka lähteen mukaan kuuluu kaupungin vanhimpiin rakennuksiin. Talo rakennettiin 1920-luvulla, ja Transjordanian hallitus vuokrasi sen lähteen mukaan Ammanin ensimmäiseksi postitoimistoksi. Posti toimi talossa 1940-luvulle asti.\n\nSen jälkeen talossa toimi hetken valtiovarainministeriö, ja 1900-luvun jälkipuoliskolla se oli Haifa-hotelli. Vuosituhannen vaihteessa Mamdouh Bisharat vuokrasi talon estääkseen sen purkamisen. Diwan on arabiaksi huone, joka on aina avoin vieraille.\n\nNykyään talossa on antiikkia, valokuvia ja 1920-luvun huonekaluja, ja siellä järjestetään musiikki-, maalaus-, kirjallisuus- ja runotapahtumia. King Faisal Street oli emiirikunnan aikana kaupungin keskeisimpiä katuja. Isoisän matkavuonna 1873 taloa ei ollut vielä rakennettu.',
+      kuvat: [
+        {
+          tiedosto: 'Diwan al Duq.jpg',
+          lyhyt: 'Duke\'s Diwan oli Ammanin ensimmäinen postitoimisto 1920-luvulta.',
+          selite: 'Duke\'s Diwan rakennettiin 1920-luvulla Ammanin ensimmäiseksi postitoimistoksi, ja nykyään siellä on kulttuuri- ja taidekeskus.',
+          lahde: 'Fjmustak, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  baku: {
+    Neitotorni: {
+      aika: '1100-luku',
+      teksti: 'Neitotorni on lieriömäinen, kahdeksankerroksinen torni vanhankaupungin rannan puolella. Sen korkeus on lähteestä ja mittauspuolesta riippuen noin 28–31 metriä ja perushalkaisija noin 16–16,5 metriä, ja seinät ovat alaosassa useita metrejä paksut. Torni on rakennettu kallion päälle, ja sen perustuksista on löytynyt korkeita puupalkkeja. Etelämuurin kufi-kirjoituksessa mainitaan nimi Qubbeye Masud ibn Davud; häntä on pidetty arkkitehtina, mutta kirjoitus ei välttämättä tarkoita tornin rakentajaa.\n\nTornin ikä on kiistanalainen. Yleisesti sen ajoitetaan 1100-luvulle, mutta osa tutkijoista pitää perustuksia ja alimpia kerroksia paljon vanhempina. Lähteen mukaan tornista kerrotaan useita legendoja, joista tunnetuin kertoo tulenpunatukkaisesta neidosta, joka pelasti kaupunkilaiset.\n\nIsoisän matkavuonna 1873 torni seisoi vanhankaupungin muurien rannan puolella, ja Venäjä oli valtauksen jälkeen korjannut muureja ja laajentanut linnoitusta. Meri on lähteen mukaan sittemmin vetäytynyt, ja tornin edustalle on syntynyt maakaistale. Nykyään tornissa on museo, ja katolta näkyvät vanhankaupungin kujat, minareetit ja Bakunlahti.',
+      kuvat: [
+        {
+          tiedosto: 'Torre de la Doncella, Baku, Azerbaiyán, 2016-09-26, DD 212-214 HDR.jpg',
+          lyhyt: 'Neitotorni kuuluu Bakun vanhankaupungin UNESCO-kohteeseen.',
+          selite: 'Neitotorni ja Širvanšahien palatsi inskriboitiin yhdessä UNESCOn maailmanperintöluetteloon vanhankaupungin kanssa.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Širvanšahien palatsi': {
+      aika: '1400-luku',
+      teksti: 'Širvanšahien palatsi kohoaa vanhankaupungin kukkulalla. Päärakennus aloitettiin 1411, ja se oli alun perin kaksikerroksinen rakennus, jossa oli useita kymmeniä huoneita ja kapeita kierreportaita. Kompleksiin kuuluvat Divan-khana, hautaholvit, hovimoskeija minareetteineen, Seyyid Yahya Bakuvin mausoleumi, itäportaali eli Muradin portti, vesisäiliö ja kylpylän jäänteet. Shirvanshah Khalilullah I haudattiin perheineen palatsin alueelle.\n\nSafavidit valtasivat Bakun 1501, ja osmanit saivat kaupungin haltuunsa 1578. Palatsi oli tyhjillään 1600-luvulta, ja Venäjän joukkojen pommitus vaurioitti sen kaakkoisjulkisivua 1723, kun Pietari Suuren käskystä Bakua vallattiin.\n\nIsoisän matkavuonna 1873 palatsi oli Venäjän sotilasosaston hallussa. Osasto oli 1800-luvulla tehnyt siihen osittaisen kunnostuksen ja muuttanut tiloja varastoiksi. Kei-Kubad-moskeija tuhoutui 1900-luvun alussa, ja kunnostustöitä tehtiin neuvostoaikana. Museo-suojelualueeksi palatsi julistettiin 1960-luvulla, ja restaurointi alkoi uudelleen 1990-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Palace of the Shirvanshahs, Baku (Şirvanşahlar sarayı).jpg',
+          lyhyt: 'Širvanšahien palatsi on 1400-luvun palatsikompleksi vanhankaupungin kukkulalla.',
+          selite: 'Palatsin tiloissa toimii nykyään museo, ja se on kuulunut maailmanperintöön vuodesta 2000.',
+          lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Juma-moskeija': {
+      aika: '1100-luku ja 1899',
+      teksti: 'Bakun ensimmäinen Jame-moskeija rakennettiin 1100-luvulla paikalle, jolle se rakennettiin useita kertoja uudelleen. Kirjoituksen mukaan Amir Sharaf al-Din Mahmud määräsi sen kunnostettavaksi 709 AH eli 1309–1310. Stalaktiittikoristeinen minaretti rakennettiin pohjoisseinälle 1437, ja pihassa oli 1400-luvun medresan huoneita, joista yksi on säilynyt.\n\nNykyinen moskeija rakennettiin 1899 kauppias ja hyväntekijä Haji Sheikhali Agha Dadashovin rahoituksella. Lähteen mukaan rakennuksessa on jälkiä zarathustralaisesta temppelistä, ja yksi tutkija uskoi sen nousseen tulenpalvojien temppelin jäänteille.\n\nIsoisän matkavuonna 1873 nykyistä moskeijaa ei vielä ollut, vaan paikalla oli vanha Jame-moskeija. Neuvostoaikana rakennus toimi kilimimuseona, ja sen jälkeen se palasi moskeijakäyttöön. Se restauroitiin täysin 2000-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Juma Mosque (Baku) 14.JPG',
+          lyhyt: 'Juma-moskeijan nykyinen rakennus valmistui 1899.',
+          selite: 'Moskeija sijaitsee vanhassakaupungissa, ja sen edeltäjä rakennettiin 1100-luvulla.',
+          lahde: 'Urek Meniashvili, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanhankaupungin muurit ja Shemakhan portti': {
+      aika: '1000–1100-luku',
+      teksti: 'Bakun vanhakaupunki on muurien ympäröimä, ja lähteen mukaan Bakuun ja sen ympäristöön rakennettiin 1100–1300-luvuilla massiivisia linnoituksia. Keskiajan monumentteja ovat Synyg Galan minaretti 1000-luvulta, muurit ja tornit 1000–1100-luvulta sekä Multanin karavaaniseraiji ja Haji Gayyibin kylpylä 1400-luvulta. Vanhakaupunki jaettiin asuinalueisiin, joista Gemichiler oli laivanrakentajien ja Noyutchuler öljytyöläisten.\n\nVenäjä valtasi Bakun 1806, ja muureja korjattiin ja linnoitusta laajennettiin pian sen jälkeen. Muureille sijoitettiin kymmeniä tykkejä. Alun perin muureissa oli kaksi porttia, Salyan ja Shemakha.\n\nIsoisän matkavuonna 1873 muurit olivat vielä pitkälti ennallaan, mutta merenpuoleinen osa oli purettu 1800-luvun puolivälissä. Kivet myytiin, ja tuotto käytettiin bulevardin rakentamiseen. Bulevardin ensimmäiset suihkulähteet ilmestyivät 1860-luvulla. Taghiyevin portti avattiin vasta 1800-luvun lopulla. Vanhakaupunki oli 2000-luvulla jonkin aikaa UNESCOn vaaralistalla.',
+      kuvat: [
+        {
+          tiedosto: 'Walls of the fortress of the Baku Old City (Azerbaijan) - 10-12centuries6.jpg',
+          lyhyt: 'Vanhankaupungin muurit ovat peräisin 1000–1100-luvulta.',
+          selite: 'Venäjä valtasi Bakun 1806, ja muureja korjattiin pian sen jälkeen; niissä oli alun perin kaksi porttia, Salyan ja Shemakha.',
+          lahde: 'Самый древний, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Taza Pirin moskeija': {
+      aika: '1905–1914',
+      teksti: 'Taza Pirin moskeija rakennettiin 1905–1914 Nabat Khanum Ashurbeyovan rakennuttamana ja rahoittamana. Arkkitehti oli Eugeniusz Skibiński. Moskeija seisoo 1300–1400-luvun pyhimyksen Abu Seyid Abdullan haudan paikalla, ja se oli ensimmäinen Bakun uskonnollinen rakennus, jossa käytettiin valkoista kiveä. Sisäpinta-ala on 1 400 neliömetriä.\n\nHankkeeseen osallistui myös Zeynalabdin Taghiyev. Balkanin sota ja viranomaisvalvonta hidastivat rakentamista. Moskeija suljettiin vallankumouksen yhteydessä, ja sitä käytettiin elokuvateatterina ja jyväaittana. Moskeijaksi se palasi 1900-luvun puolivälissä, ja restaurointi tehtiin 2000-luvulla.\n\nIsoisän matkavuonna 1873 moskeijaa ei vielä ollut, vaan paikalla oli vain pyhimyksen hautapaikka.',
+      kuvat: [
+        {
+          tiedosto: 'Təzəpir məscidinin Mərkəzi parkdan görünüşü.jpg',
+          lyhyt: 'Taza Pirin moskeija rakennettiin 1905–1914 pyhimyksen haudan paikalle.',
+          selite: 'Moskeija oli ensimmäinen Bakun uskonnollinen rakennus, jossa käytettiin valkoista kiveä.',
+          lahde: 'Sefer azeri, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bakun bulevardi': {
+      aika: '1900-luvun alku',
+      teksti: 'Bakun bulevardi on merenrantapromenadi, jonka pituus on nykyään noin neljä kilometriä. Municipal Horticultural Commission päätti 1900-luvun alussa istuttaa meren rantaan puita ja pensaita, ja puolalainen insinööri Kazimierz Skurewicz suunnitteli penkereen. Pitkään toisella puolella olivat kartanot ja toisella meri, eikä alueella ollut puita, joten multaa tuotiin muualta. Mammad Hassan Hajinski paransi puistoa myöhemmin. Kilpailun voitti ehdotus Zvezda eli Tähti, jossa oli uimala, ravintola ja tusina paviljonkia, ja työt valmistuivat 1910-luvun alussa.\n\nPuolalaisen arkkitehdin Józef Plośkon suunnittelema Phenomenon-rakennus valmistui 1910-luvulla kasinoksi, elokuvateatteriksi ja ravintolaksi, ja nykyään siinä toimii nukketeatteri. Laskuvarjotorni rakennettiin 1930-luvulla ja kunnostettiin 2000-luvun lopulla. Bulevardi julistettiin kansallispuistoksi 1990-luvun lopulla.\n\nIsoisän matkavuonna 1873 bulevardia ei vielä ollut. Muurien merenpuoleinen osa oli kuitenkin purettu 1800-luvun puolivälissä ja kivien myynnistä saadut rahat osoitettu bulevardin rakentamiseen, ja ensimmäiset suihkulähteet ilmestyivät 1860-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Promenade, Baku (P1090242).jpg',
+          lyhyt: 'Bakun bulevardi on Bakunlahden rantaa seuraava promenadi.',
+          selite: 'Bulevardin nykyinen puisto on peräisin 1900-luvun alusta, ja sen laskuvarjotorni rakennettiin 1930-luvulla.',
+          lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  beirut: {
+    'Raouchén Kyyhkyskalliot': {
+      aika: 'Luonnonmuodostelma',
+      teksti: 'Raouché on Beirutin länsireunalla sijaitseva asuin- ja liikekaupunginosa, jonka edustalla kohoaa rannikolta kaksi kalliota. Kalliot tunnetaan nimellä Kyyhkyskalliot (Pigeons\' Rock) tai Raouchén kallio, ja ne ovat luonnonmuodostelma.\n\nCorniche-rantabulevardi nousee Raouchén kohdalla korkeimmilleen meren yläpuolelle, ja kaupunginosa on rakennettu valkoisen kalkkikivijyrkänteen päälle. Jyrkänteen reunaa seuraavan Avenue de Parisin varrella on kahviloita ja ravintoloita. Lähteen mukaan kalliot ovat tunnistettava luonnonmaamerkki.\n\nSeudun rannoilta on löytynyt alueen vanhimmat todisteet ihmisasutuksesta, piikiviä ja yksinkertaisia kivityökaluja, jotka ovat esillä American University of Beirutin arkeologisessa museossa. Kalliot olivat paikallaan jo isoisän matkavuonna 1873.',
+      kuvat: [
+        {
+          tiedosto: 'Beirut-Rouche rock.jpg',
+          lyhyt: 'Raouchén Kyyhkyskalliot Beirutin rannikolla.',
+          selite: 'Kyyhkyskalliot ovat Raouchén edustalla kohoava luonnonmuodostelma, joka koostuu kahdesta kalliosta.',
+          lahde: 'Oussama Tahmaz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Beirutin kansallismuseo': {
+      aika: '1930-luku',
+      teksti: 'Beirutin kansallismuseo on Libanonin tärkein arkeologinen museo. Rakennus on ranskalaistyylistä egyptiläistä uusklassismia, ja sen suunnittelivat arkkitehdit Antoine Nahas ja Pierre Leprince-Ringuet. Materiaalina on libanonilainen okran värinen kalkkikivi, ja keskiosassa on lasikatto, joka tuo päivänvalon sisään.\n\nRakentaminen alkoi 1930-luvun alussa, ja museo avattiin virallisesti 1940-luvun alussa. Tontin antoi kaupunki, ja se sijaitsee Beirutin hipodromin lähellä. Kokoelmassa on lähteen mukaan suuri määrä esineitä, pääosin antiikin ja keskiajan löytöjä, ja esillä on esineitä esihistoriasta mamelukkien aikaan.\n\nAlakerran gallerian kokoelmiin kuuluu foinikialaisia ihmishahmoisia sarkofageja sekä Neitsyt Marian kuva, jonka lähde ajoittaa 200-luvulle ja jonka mukaan se on yksi vanhimmista löydetyistä Marian kuvauksista. Isoisän matkavuonna 1873 museota ei vielä ollut, sillä rakennus valmistui vasta 1900-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Beirut National Museum, Main Entrance, March 2017.jpg',
+          lyhyt: 'Beirutin kansallismuseo on Libanonin tärkein arkeologinen museo.',
+          selite: 'Museon rakennus on egyptiläistä uusklassismia, ja sen kokoelmat ulottuvat esihistoriasta mamelukkien aikaan.',
+          lahde: 'Bdx, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sursock-museo': {
+      aika: '1912',
+      teksti: 'Sursock-museo on moderni- ja nykytaiteen museo huvilassa Rmeilin kaupunginosassa Rue Sursockilla. Huvilan rakennutti vuonna 1912 aatelismies Nicolas Ibrahim Sursock, joka määräsi testamentissaan sen muutettavaksi museoksi. Hän kuoli vuonna 1952, ja huvila periytyi Beirutin kaupungille.\n\nRakennuksessa on italialaisia eli venetsialaisia ja osmanien arkkitehtuurin vaikutteita, ja se on yksi harvoista säilyneistä saman aikakauden huviloista Beirutissa. Museo avattiin 1960-luvun alussa näyttelyllä, jossa oli nykyisten libanonilaistaiteilijoiden töitä. Pysyvään kokoelmaan kuuluu satoja teoksia 1800- ja 1900-luvuilta: maalauksia, veistoksia ja grafiikkaa, myös japanilaisia puupiirroksia ja islamilaista taidetta.\n\nMuseon tilat ovat kasvaneet moninkertaisiksi, kun puutarhan alle rakennettiin uusia maanalaisia kerroksia. Ulkopuolella on esillä Youssef Hoyekin veistos Les Pleureuses eli itkevät naiset, joka oli alun perin Marttyyrien aukion muistomerkki. Sursock-suku oli yksi 1800-luvun kauppasuvuista, mutta isoisän matkavuonna 1873 huvilaa ei vielä ollut.',
+      kuvat: [
+        {
+          tiedosto: 'The Sursock Museum façade.jpg',
+          lyhyt: 'Sursock-museo toimii huvilassa Rmeilin kaupunginosassa.',
+          selite: 'Sursock-museo toimii 1900-luvun alussa rakennetussa huvilassa Rmeilin kaupunginosassa.',
+          lahde: 'murielkahwagi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Marttyyrien aukio': {
+      aika: '1700-luvulta',
+      teksti: 'Marttyyrien aukio on Beirutin historiallinen pääaukio. Sen vanhin nimi on Sahat al-Burj eli Tornin aukio. Aukio oli kaupunginmuurin ulkopuolinen avoin tori, ja muinainen Burj al-Kashefin vartiotorni merkitsi sen ulkoreunaa.\n\nAukion nimi on vaihtunut useita kertoja. 1700-luvulla se sai nimen Place du Canon Burj-tornin lähelle sijoitetun venäläisen tykin mukaan, ja myöhemmin se tunnettiin nimellä Place des Canons. Sulttaani Abdul Hamid II:n mukaan sitä kutsuttiin Hamidiyyeh-aukioksi, ja nuorturkkilaisten vallankumouksen jälkeen Vapauden aukioksi. Nykyisen nimensä aukio sai 1930-luvulla muistoksi teloitetuille nationalisteille, jotka edustivat eri uskontokuntia.\n\nIsoisän matkavuonna 1873 aukio tunnettiin nimellä Place des Canons, ja kunta uudisti sen kaupungin pääkokoontumispaikaksi 1870-luvun lopulla. Aukiota katsoi Petit Serail, kuvernöörin virka-asunto. Ratikka tuli aukiolle 1900-luvun alussa, ja 1950-luvulla siitä tuli bussi- ja taksiterminaali sekä elokuvateattereiden ja kahviloiden paikka.',
+      kuvat: [
+        {
+          tiedosto: 'Martyrs Square (48706314).jpg',
+          lyhyt: 'Marttyyrien muistomerkki Beirutin keskustan pääaukiolla.',
+          selite: 'Marttyyrien aukio sai nykyisen nimensä 1930-luvulla ensimmäisen maailmansodan aikana teloitettujen nationalistien muistoksi.',
+          lahde: 'upyernoz from Haverford, USA, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mohammad Al-Aminin moskeija': {
+      aika: '2000-luku',
+      teksti: 'Mohammad Al-Aminin moskeija on sunnalaisuuden moskeija Beirutin keskustassa, ja sitä kutsutaan myös Siniseksi moskeijaksi. Sen suunnitteli Azmi Fakhoury, ja tyyli muistuttaa osmanien aikaista arkkitehtuuria. Kupoleissa on vaaleansinistä laattaa, ja moskeijaan mahtuu tuhansia rukoilijoita.\n\nMoskeija vihittiin käyttöön 2000-luvulla. Paikalla oli 1800-luvulla zawiya eli sufilaisluostari, jonka vieressä toimi tori. Rakennustyön aikana kaivauksissa paljastui osa roomalaisen kaupungin pääkadun Decumanus Maximuksen päällysteestä ja pylväistä.\n\nMoskeija seisoo aivan Pyhän Yrjänän maroniittikatedraalin vieressä. Isoisän matkavuonna 1873 nykyistä moskeijaa ei vielä ollut.',
+      kuvat: [
+        {
+          tiedosto: 'Mohammad Al-Amin Mosque and St. George Maronite Cathedral, Beirut (3).jpg',
+          lyhyt: 'Mohammad Al-Aminin moskeija, jota kutsutaan myös Siniseksi moskeijaksi.',
+          selite: 'Moskeija vihittiin käyttöön 2000-luvulla, ja se seisoo keskustassa aivan Pyhän Yrjänän katedraalin vieressä.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 PL)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Yrjänän maroniittikatedraali': {
+      aika: '1800-luvun loppu',
+      teksti: 'Pyhän Yrjänän maroniittikatedraali on maroniittien Beirutin arkkihiippakunnan katedraali keskustassa. Nykyinen kolmilaivainen basilika rakennettiin 1800-luvun lopulla arkkipiispa Joseph Debsin johdolla 1700-luvun puolivälissä rakennetun pienemmän Pyhän Yrjänän kirkon paikalle.\n\nUusklassisen julkisivun suunnitteli italialainen arkkitehti Giuseppe Maggiore, ja sisätila muistuttaa Santa Maria Maggioren basilikaa Roomassa. Katossa on kullattu kassettikatto, ja seinissä on stukkia ja marmoria. Rakentamisessa käytettiin roomalaisia pylväitä Beit Meryn Deir El Qalaan temppelistä.\n\nEsipihan alta on säilytetty hellenistinen rakennelma, osa roomalaista pylväskatua ja osmanien aikainen muuri. Uusi kellotorni on noin 70 metriä korkea, ja lähteen mukaan arkkipiispa kertoi sen korkeuden vastaavan viereisen moskeijan minareetteja uskontojen välisen sovun viestinä. Isoisän matkavuonna 1873 nykyistä katedraalia ei vielä ollut.',
+      kuvat: [
+        {
+          tiedosto: 'Mohammad Al-Amin Mosque and St. George Maronite Cathedral, Beirut (1).jpg',
+          lyhyt: 'Pyhän Yrjänän maroniittikatedraali ja sen kellotorni.',
+          selite: 'Katedraalin esipihan alla on säilytetty osa roomalaista pylväskatua.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 PL)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nejmehin aukio': {
+      aika: '1920-luku',
+      teksti: 'Nejmehin aukio eli Place de l\'Étoile on Beirutin keskustan pääaukio. Ranskalaiset purkivat 1920-luvulla vanhat basaarit ja muuttivat alueen nykyaikaiseksi kaupunginosaksi, ja aukio tunnetaan art deco -arkkitehtuuristaan.\n\nAukion kaunistus on 1930-luvun kellotorni, jonka lahjoitti libanonilaistaustainen siirtolainen Michel Abed. Parlamenttirakennuksen suunnitteli Mardiros Altounian, joka suunnitteli myös kellotornin. Rakennus yhdistää Beaux-Arts-tyylin paikallisiin piirteisiin, kuten kaksois- ja kolmoiskaariin, ja sen julkisivu on kalkkikiveä.\n\nAukion kreikkalainen Pyhän Yrjänän katedraali valmistui 1700-luvulla, ja sen alla on maanalainen museo, jossa on usean samalle paikalle rakennetun kirkon kerrostumia. Aukiota tunnetaan kyyhkysistään. Isoisän matkavuonna 1873 nykyistä aukiota ei vielä ollut: alueella oli vanhoja basaareja.',
+      kuvat: [
+        {
+          tiedosto: 'Beirut, Central District, Nejmeh Square.jpg',
+          lyhyt: 'Nejmehin aukio on Beirutin keskustan pääaukio.',
+          selite: 'Aukio syntyi 1920-luvulla, kun vanhat basaarit purettiin ja alue rakennettiin uudelleen.',
+          lahde: 'Heinz Hövel, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Suuri Serail': {
+      aika: '1800-luku',
+      teksti: 'Suuri Serail eli al-Sarāy al-Kabir, hallituspalatsi, kohoaa kukkulalla Beirutin keskustassa, ja nykyään se on Libanonin pääministerin virkapaikka. Rakennus syntyi osmanien sotilas- ja siviilihallinnon päämajaksi, ja beirutilaiset kutsuivat sitä nimellä Al-Quishleh eli varuskunta.\n\nLinnoittaminen alkoi 1800-luvun puolivälissä, ja rakennukseen lisättiin toinen kerros. Sulttaani Abdülazizin määräämä sotilassairaala valmistui 1860-luvulla. Isoisän matkavuonna 1873 rakennus oli siis jo olemassa kasarmina ja sotilashallinnon rakennuksena, mutta lopullisen muotonsa se sai vasta myöhemmissä muutoksissa 1800-luvun lopulla.\n\nSuunnittelu noudatti osmanien uuden sotilasjärjestyksen arkkitehtuuria, ja korkealla sijaitseva vaatimaton julkisivu jäljittelee Istanbulin Selimiye-kasarmia. Ranskalaiset muuttivat rakennuksen Ylikomissariaatiksi 1900-luvun alussa. Lähellä on Hamidiyyeh-kellotorni, joka rakennettiin 1800-luvun lopulla.',
+      kuvat: [
+        {
+          tiedosto: 'Grand Serail, Government Palace, Beirut.jpg',
+          lyhyt: 'Suuri Serail on Libanonin pääministerin virkapaikka.',
+          selite: 'Suuri Serail rakennettiin osmanien aikana kasarmiksi ja hallinnon päämajaksi.',
+          lahde: 'Pjposullivan1, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  jerevan: {
+    'Tasavallan aukio': {
+      aika: '1926–1977',
+      teksti: 'Tasavallan aukio on Jerevanin keskusaukio. Siihen kuuluvat soikea liikenneympyrä, jonka keskellä oleva kivikuvio on tehty näyttämään perinteiseltä armenialaiselta matolta, sekä puolisuunnikkaan muotoinen osa, jossa on allas ja musiikkisuihkulähteet. Uudistetut suihkulähteet avattiin 2000-luvun lopulla.\n\nAukiota ympäröi viisi pääasiassa vaaleanpunaisesta ja keltaisesta tuffista tehtyä uusklassista rakennusta: hallituksen talo, historiamuseo ja kansallisgalleria, hotelli sekä kaksi entistä ministeriörakennusta. Aukion suunnitteli arkkitehti Alexander Tamanian vuoden 1924 yleissuunnitelmassa, rakentaminen alkoi 1926 hallituksen talosta, ja viimeinen rakennus, kansallisgalleria, valmistui 1977. Aukio on ollut myös nimeltään Leninin aukio, kunnes kaupunginvaltuusto nimesi sen Tasavallan aukioksi 1990-luvun taitteessa.\n\nIsoisän matkavuonna 1873 aukiota ei vielä ollut, vaan paikalla oli vanhaa Erivania. 2000-luvun alun kunnostuksessa tehdyissä kaivauksissa löytyi 1700–1800-lukujen kellareita ja tuffista tehtyjä vesiputkia, jotka ajoitetaan 800–1000-luvuille.',
+      kuvat: [
+        {
+          tiedosto: 'Yerevan, Musical fountain, Republic Square, Armenia.jpg',
+          lyhyt: 'Tasavallan aukion musiikkisuihkulähteet avattiin uudistettuina 2000-luvun lopulla.',
+          selite: 'Musiikkisuihkulähteet esiintyvät useimpina iltoina huhti–lokakuussa, ja niiden takana on hallituksen talo.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sininen moskeija': {
+      aika: '1765–1766',
+      teksti: 'Sininen moskeija rakennettiin 1765–66 Erivanin kaanikunnan hallitsijan Hoseyn Ali Khanin tilauksesta kaupungin pääasialliseksi perjantaimoskeijaksi. Kun venäläiset valtasivat kaupungin 1827, se oli suurin kahdeksasta Jerevanin moskeijasta. Minaretti oli 1800-luvun Jerevanin korkein rakennelma.\n\nMoskeijassa toimi 1700-luvun lopulta madrasa, ja saksalainen August von Haxthausen kuvasi 1840-luvulla koulun, jossa joukko poikia opiskeli persiaa. Länsimaiset matkailijat H. F. B. Lynch ja Luigi Villari kutsuivat moskeijaa nimellä Gök Jami, \'taivaansininen moskeija\'. Laatoitus tehtiin 1800-luvun lopulla, ja rakennus uudistettiin 1900-luvun alussa.\n\nIsoisän matkavuonna 1873 moskeija oli toiminnassa. 1920-luvulta se ei enää toiminut uskonnollisena laitoksena, ja sisäpihan teehuoneessa kävi kirjailijoita ja taiteilijoita, muun muassa Yeghishe Charents, Martiros Saryan ja William Saroyan. Restauroinnin jälkeen 1990-luvulla se on ollut jälleen uskonnollisessa käytössä, ja sen yhteydessä on Persian kielen kirjasto, joka avattiin 2010-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Dome of Blue Mosque, Yerevan, Armenia.jpg',
+          lyhyt: 'Sinisen moskeijan laatoitus tehtiin 1800-luvun lopulla, ja rakennus uudistettiin 1900-luvun alussa.',
+          selite: 'Moskeijan nimi Gök Jami tarkoittaa \'taivaansinistä moskeijaa\'.',
+          lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Sargiksen katedraali': {
+      aika: '1835–1842',
+      teksti: 'Pyhän Sargiksen katedraali on Armenian apostolisen kirkon Araratin hiippakunnan keskus. Nykyinen kirkko rakennettiin 1835–1842 Hrazdanin vasemmalle rannalle Kentronin alueelle, ja se seisoi Dzoragyughin kylän yläosan vieressä vastapäätä vanhaa Erivanin linnoitusta.\n\nPaikalla oli alkukristillisestä ajasta lähtien erakkoluostari, jonka kirkot olivat pyhien Sargiksen, Georgin ja Jaakobin kirkot. Vuoden 1679 maanjäristys tuhosi sen, ja se rakennettiin uudelleen katolikos Nahabetin aikana 1600-luvun lopulla.\n\nIsoisän matkavuonna 1873 kirkko oli jo valmiina. Nykyinen ulkoasu on myöhempi: kunnostus tehtiin Rafayel Israyelianin suunnitelman mukaan 1970-luvulla, jolloin julkisivu verhoiltiin Anin oranssilla tuffilla ja vanha kupoli korvattiin korkeammalla. Kellotorni valmistui 2000-luvun vaihteessa, ja kunnostuksen rahoittivat Lontoossa asuvat lahjoittajat Sarkis Kurkjian poikineen.',
+      kuvat: [
+        {
+          tiedosto: 'Saint Sarkis Cathedral, Yerevan 25.jpg',
+          lyhyt: 'Pyhän Sargiksen katedraali valmistui 1835–1842 Hrazdanin vasemmalle rannalle.',
+          selite: 'Julkisivu verhoiltiin Anin oranssilla tuffilla Rafayel Israyelianin 1970-luvun suunnitelman mukaan.',
+          lahde: '23artashes, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Zoravorin kirkko': {
+      aika: '1693–94',
+      teksti: 'Zoravor Surp Astvatsatsin on kupoliton kolminaavinen basilika Shaharin vanhassa kaupunginosassa, jossa oli aiemmin apostoli Ananiaan hauta ja kappeli. Nimi Zoravor tarkoittaa \'voimakas\', ja se lisättiin, koska kirkossa säilytettiin 1200-luvun Zoravor-Raamattua.\n\n1600-luvun alkupuoliskolla munkki Movses Syunetsi rakensi paikalle luostarikompleksin jerevanilaisten rahoituksella katolikos Pilipoksen aikana, ja vuoden 1679 maanjäristys tuhosi sen. Nykyinen kirkko rakennettiin 1693–94 samalle paikalle jerevanilaisen kauppiaan Khoja Panosin lahjoituksella. Sisä- ja ulkoasu ovat yksinkertaiset, ja ulkoseinillä on 1600-luvun khachkar-ristikiviä.\n\nIsoisän matkavuonna 1873 kirkko oli olemassa, mutta Pyhän Ananiaan kappeli sen koillispuolella rakennettiin vasta 1800-luvun lopulla. Neuvostoaikana kirkkoa käytettiin muihin tarkoituksiin; se palautettiin kirkolle 1970-luvulla ja kunnostettiin täysin.',
+      kuvat: [
+        {
+          tiedosto: 'Surp Zoravor Astvatsatsin Church.JPG',
+          lyhyt: 'Zoravorin kirkko on kupoliton kolminaavinen basilika, joka rakennettiin 1693–94.',
+          selite: 'Kirkon ulkoseinillä on 1600-luvun khachkar-ristikiviä, ja kirkko sijaitsee Shaharin vanhassa kaupunginosassa.',
+          lahde: '© Travis K. Witt, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Oopperatalo: {
+      aika: '1930-luku–1953',
+      teksti: 'Virallisesti rakennus on Alexander Spendiaryanin kansallinen akateeminen ooppera- ja balettiteatteri, mutta paikalliset sanovat sitä yksinkertaisesti Operaksi. Perustuskivi laskettiin 1930-luvun alussa, ja teatteri avattiin 1933 Spendiaryanin oopperalla Almast. Rakennuksen suunnitteli Alexander Tamanian; salin rakentaminen valmistui 1939 ja koko rakennus 1953.\n\nTalossa on kaksi salia: Aram Khachaturianin konserttisali sekä Spendiaryanin ooppera- ja balettisali, ja kummassakin on yli tuhat paikkaa. Teatterin ensimmäinen balettiesitys oli Tšaikovskin Joutsenlampi, ja ensimmäinen armenialainen baletti oli Khachaturianin Onni, josta syntyi Gayane. Armen Tigranianin ooppera Anoush on ollut ohjelmistossa teatterin alkuvuosista asti.\n\nIsoisän matkavuonna 1873 oopperataloa ei vielä ollut. Rakennuksen eteläpuolella on Vapaudenaukio, jossa seisovat Tumanyanin ja Spendiaryanin patsaat, ja Joutsenjärvi rakennettiin 1960-luvun alussa muodoltaan Sevan-järveä muistuttavaksi.',
+      kuvat: [
+        {
+          tiedosto: 'Ópera, Ereván, Armenia, 2016-10-03, DD 13.jpg',
+          lyhyt: 'Jerevanin oopperatalo avattiin 1933, ja sen suunnitteli Alexander Tamanian.',
+          selite: 'Talossa toimii kansallinen akateeminen ooppera- ja balettiteatteri, jossa on kaksi salia.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kaskadi: {
+      aika: '1970-luku–2009',
+      teksti: 'Kaskadi on portaikkokompleksi, joka yhdistää keskustan Kanaker-Zeytunin kukkuloihin ja kuuluu Tamanianin kaupunkisuunnitelmassa määriteltyyn akseliin. Siinä on useita terasseja, satoja askelmia noin 300 metrin matkalla ja sisäpuolella liukuportaat. Rakenne on maidonvalkoista tuffia ja travertiinia, ja koristeissa on khachkar-ristikivien, viiniköynnösten, granaattiomenoiden ja elämänpuun aiheita.\n\nArkkitehdit Jim Torosyan, Sargis Gurzadyan ja Aslan Mkhitaryan alkoivat suunnitella portaikkoa 1970-luvun alussa. Rakentaminen alkoi lähteiden mukaan 1970- tai 1980-luvulla, ja se keskeytyi 1980-luvun lopulla; hallitus päätti 2000-luvun alussa saattaa kompleksin loppuun, ja sisälle avattiin Cafesjian Center for the Arts 2009.\n\nIsoisän matkavuonna 1873 Kaskadia ei vielä ollut. Sisällä on muun muassa Khanjyan-galleria, jossa on Grigor Khanjyanin triptyykki Armenian historia, sekä Sasuntsi Davit -galleria, jossa on Artashes Hovsepyanin reliefejä armenialaisesta eepoksesta. Keväästä alkusyksyyn portailla pidetään klassisen musiikin ja jazzin konsertteja.',
+      kuvat: [
+        {
+          tiedosto: '2014 Erywań, Kaskady (18).jpg',
+          lyhyt: 'Kaskadin alaterassit ovat osa terassien portaikkoa keskustan pohjoislaidalla.',
+          selite: 'Portaikon rakenne on maidonvalkoista tuffia ja travertiinia.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Matenadaran: {
+      aika: '1900-luvun puoliväli',
+      teksti: 'Matenadaran on armenialaisten käsikirjoitusten arkisto. Harmaalla basaltilla verhoiltu rakennus kohoaa Mashtotsin kadun koillispäähän ja muodostaa kadun näköalan päätteen. Sen suunnitteli kaupungin ylikaupunginarkkitehti Mark Grigorian, ja rakentaminen kesti 1900-luvun puolivälissä useita vuosia. Julkisivun esikuvana on Anin Pyhien apostolien kirkon 1100-luvun eteishallin itäjulkisivu.\n\nEdessä seisovat Mashtotsin ja hänen oppilaansa Koryunin patsas sekä keskiaikaisten oppineiden patsaat, jotka edustavat muun muassa käsikirjoitusten kuvitusta, filosofiaa, kosmologiaa ja historiaa. Sisäänkäynnin aulassa on Van Khachaturin mosaiikki Avarayrin taistelusta ja portaikon ympärillä kolmen aikakauden seinämaalaus. Uusi rakennus arkkitehti Arthur Meschianin suunnittelemana vihittiin käyttöön 2010-luvun alussa.\n\nIsoisän matkavuonna 1873 Matenadarania ei vielä ollut, ja käsikirjoitukset olivat Etchmiadzinissa. Kävijöitä oli yli satatuhatta vuodessa 2010-luvun lopulla.',
+      kuvat: [
+        {
+          tiedosto: 'Մատենադարան, Երևան - Matenadaran, Yerevan (2019) 45.jpg',
+          lyhyt: 'Matenadaranin basalttijulkisivun esikuvana on Anin keskiaikaisten kirkkojen rakennustaide.',
+          selite: 'Julkisivun esikuvana on Anin Pyhien apostolien kirkon 1100-luvun eteishallin itäjulkisivu.',
+          lahde: 'Gardmanahay, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Englantilainen puisto': {
+      aika: '1800-luvun puoliväli',
+      teksti: 'Englantilainen puisto on yksi Jerevanin vanhimmista puistoista. Lähteiden mukaan se on peräisin 1800-luvun puolivälistä. Puisto sijaitsee Kentronin alueella Italian kadun varrella aivan Tasavallan aukion eteläpuolella.\n\nPuistoa uusittiin usein ensimmäiseen maailmansotaan asti, ja 1900-luvun alussa siinä oli suuri kunnostus. Siellä pelattiin 1920-luvun alussa Armenian modernin historian ensimmäinen jalkapallo-ottelu Jerevanin ja Aleksandropolin joukkueiden välillä. 2000-luvun alussa uusi Italian katu jakoi puiston kahtia, ja erotettu osa kunnostettiin erilliseksi puistoksi.\n\nIsoisän matkavuonna 1873 puisto oli todennäköisesti jo olemassa. Puiston laidalla sijaitsee Sundukyanin akateeminen teatteri, ja keskellä olevat suihkulähteet ovat suosittu hääkuvauspaikka.',
+      kuvat: [
+        {
+          tiedosto: 'English Park of Yerevan 05.jpg',
+          lyhyt: 'Englantilainen puisto on yksi kaupungin vanhimmista puistoista Tasavallan aukion eteläpuolella.',
+          selite: 'Puiston keskellä olevat suihkulähteet ovat suosittu hääkuvauspaikka.',
+          lahde: '23artashes, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  manama: {
+    'Bab Al Bahrain': {
+      aika: '1940-luvun lopulta',
+      teksti: 'Bab Al Bahrain eli Bahrainin portti on valkoinen porttirakennus Customs Squaren eli Tullitorin laidalla Manaman liikealueella. Se on Manaman soukin pääsisäänkäynti. Lähteen mukaan rakennus avattiin 1940-luvun lopulla, ja sen suunnitteli Bahrainin hallitsijan brittiläinen neuvonantaja Charles Belgrave.\n\nRakennusta on uudistettu useaan otteeseen, viimeksi 2010-luvulla, jolloin julkisivut ja sisätilat kunnostettiin. Pohjakerroksessa toimivat nykyään matkailuneuvonta ja käsityökauppa. Portin ympärille on kertynyt kauppoja ja kahviloita: lähteen mukaan Naseef Cafe oli maan ensimmäinen jäätelökauppa, ja aukio on lähteen mukaan alueen ensimmäinen virallinen julkinen tila.\n\nIsoisän matkavuonna 1873 porttia ei vielä ollut. Lähteen mukaan kaupunki rajoittui historiallisesti soukiin ja etelässä olevaan linnakkeeseen.',
+      kuvat: [
+        {
+          tiedosto: 'Bab Al Bahrain, Manama, Baréin, 2024-08-18, DD 72.jpg',
+          selite: 'Bab Al Bahrain on Manaman soukin pääsisäänkäynti.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Manaman souk': {
+      aika: 'vanha basaari',
+      teksti: 'Manaman souk on pääkaupungin vanha basaari, joka sijaitsee kaupungin pohjoisosassa vanhan kaupungin ja liikealueen välissä. Pääsisäänkäynti on Bab Al Bahrain. Lähteen mukaan kaupunki rajoittui historiallisesti soukiin ja etelässä olevaan linnakkeeseen.\n\nSouk on kapeiden kujien verkko, jossa myydään matkamuistoja, kultaa ja koruja sekä räätälin palveluita. Alue on jaettu uuteen jalankulkualueeseen ja vanhaan osaan, jossa on sekä autotie että jalkakäytävät; uudistettu alue avattiin yleisölle 2010-luvulla. Keskustassa on lähteen mukaan myös pieniä työpajoja ja kauppiaita, ja alueella on maan ainoa synagoga.\n\nIsoisän matkavuonna 1873 Manama oli helmenpyynnin ja kaupan satamakaupunki. Vuosina 1911–12 Manamassa kävi lähteen mukaan kymmeniä höyrylaivoja, enimmäkseen brittiläisiä, ja tuontitavaroina mainitaan riisi, tekstiilit, kahvi, taatelit, tee ja tupakka.',
+      kuvat: [
+        {
+          tiedosto: 'Manama Bab al-Bahrain Souq 1.jpg',
+          selite: 'Manaman souk on pääkaupungin vanha basaari.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bahrain Financial Harbour': {
+      aika: '2000-luvun alusta',
+      teksti: 'Bahrain Financial Harbour on kaupallinen rantakompleksi Manaman pohjoisrannalla King Faisal Highwayn varrella. Se on rakennettu pääosin täytemaalle entisen Manaman laiturin paikalle. Rakentaminen alkoi 2000-luvun alussa, ja tornit valmistuivat 2000-luvun puolivälissä.\n\nKompleksin kaksi päätornia ovat yli 250 metriä korkeat, ja niissä on yli 50 kerrosta. Torneissa toimii pankkeja ja kansainvälisiä yrityksiä. Harbour Gate -rakennuksessa toimii Bahrainin pörssi. Finanssikriisi viivästytti joitakin hankkeen osia.\n\nIsoisän matkavuonna 1873 kompleksia ei vielä ollut.',
+      kuvat: [
+        {
+          tiedosto: 'Manama Bahrain Financial Harbour Panoramablick 4.jpg',
+          selite: 'Bahrain Financial Harbour on Manaman pohjoisrannan kaupallinen kompleksi.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bahrain World Trade Center': {
+      aika: '2000-luvun lopulta',
+      teksti: 'Bahrain World Trade Center sijaitsee King Faisal Highwayn lähellä Bahrain Financial Harbourin tuntumassa. Kaksi purjeen muotoista tornia valmistui 2000-luvun lopulla, ja turbiinit käynnistyivät ensimmäisen kerran 2000-luvun lopulla. Rakennuksen alakerrassa on ostoskeskus.\n\nTornien välisissä silloissa on tuuliturbiineja. Lähteen mukaan turbiinien odotetaan pyörivän noin puolet ajasta, ja niiden tarkoitus on tuottaa osa tornien sähköstä. Rakennus on voittanut kestävän rakentamisen palkintoja, muun muassa LEAF Award -palkinnon.\n\nIsoisän matkavuonna 1873 tornia ei ollut, sillä rakennus valmistui vasta 2000-luvun lopulla.',
+      kuvat: [
+        {
+          tiedosto: 'Manama Bahrain World Trade Centre & Bahrain Financial Harbour 1.jpg',
+          selite: 'Bahrain World Trade Centerin tornit valmistuivat 2000-luvun lopulla.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Beit Al Quran': {
+      aika: '1980-luvulta',
+      teksti: 'Beit Al Quran eli Koraanin talo on islamilaisen taiteen monitoimikeskus Hooran kaupunginosassa. Rakentaminen alkoi 1980-luvulla, ja museo avattiin 1990-luvun kynnyksellä. Kompleksiin kuuluvat moskeija, kirjasto, auditorio, koraanikoulu ja museo, jossa on useita näyttelysaleja.\n\nKokoelman ydin on liikemies Abdul Latif Jassim Kanoon oma käsikirjoituskokoelma, jonka hän lahjoitti museolle. Lähteen mukaan rahoitus tuli kokonaan lahjoituksina valtionpäämiehistä koululaisiin. Rakennuksen ulkoasu perustuu 1100-luvun moskeijaan. Kirjastossa on lähteen mukaan kymmeniä tuhansia kirjoja ja käsikirjoituksia, ja kokoelma kattaa kalligrafiaperinteen varhaisimmilta vuosisadoilta nykypäivään.\n\nIsoisän matkavuonna 1873 talo ei ollut vielä olemassa.',
+      kuvat: [
+        {
+          tiedosto: 'Beit Al Quran 001.tiff',
+          selite: 'Beit Al Quran on islamilaisen taiteen monitoimikeskus Hooran kaupunginosassa.',
+          lahde: 'Mohamsuraj, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bahrainin kansallismuseo': {
+      aika: '1988',
+      teksti: 'Bahrainin kansallismuseo avattiin vuonna 1988, ja se on lähteen mukaan maan suurin julkinen museo. Sen suunnittelivat tanskalaiset arkkitehdit Krohn & Hartvig Rasmussen, ja rakennus seisoo keinotekoisella niemellä Muharraqin saarta vastapäätä. Museossa on useita pysyviä näyttelysaleja.\n\nDilmunin salissa on leimasinsinettejä sekä Barbarin temppelin ja Saarin löytöjä, ja museossa on esillä jäljennös Durand-kivestä. Tylos–islamin sali käsittelee hellenististä aikaa ja islamin aikaa 700-luvulta, ja siellä on esillä Khamisin moskeijan esineitä. Perinteisten ammattien salissa on jäljennös perinteisestä soukista, ja Dilmun-hautojen salissa on A\'alista siirretty ja museossa uudelleen koottu hautakumpu.\n\nIsoisän matkavuonna 1873 museota ei vielä ollut; se on rakennettu keinotekoiselle niemelle.',
+      kuvat: [
+        {
+          tiedosto: 'Manama Bahrain National Museum Exterior 1.jpg',
+          selite: 'Bahrainin kansallismuseo avattiin vuonna 1988.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al-Fatih-suurmoskeija': {
+      aika: '1980-luvulta',
+      teksti: 'Al-Fatih-suurmoskeija sijaitsee Juffairin kaupunginosassa Al Fateh Highwayn vieressä, ja se rakennettiin 1980-luvulla. Moskeija on nimetty Ahmed Al Fatehin kunniaksi, ja siinä on tilaa tuhansille rukoilijoille.\n\nSisätiloissa lattia on italialaista marmoria, kattokruunu on tehty Itävallassa ja ovet ovat intialaista tiikkiä. Kufi-kalligrafiaa on kauttaaltaan. Moskeijan keskuksen kirjastossa on tuhansia kirjoja. Moskeija on avoinna kävijöille kaikkina päivinä paitsi perjantaina, ja kierroksia järjestetään useilla kielillä.\n\nIsoisän matkavuonna 1873 moskeijaa ei ollut.',
+      kuvat: [
+        {
+          tiedosto: 'Manama al-Fateh Grand Mosque Exterior Norden 1.jpg',
+          selite: 'Al-Fatih-suurmoskeija sijaitsee Juffairin kaupunginosassa.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  tbilisi: {
+    'Narikalan linnoitus': {
+      aika: '300-luvulta; nykyiset linnoitteet 1600-luvulta tai vanhempia',
+      teksti: 'Narikala on muinainen linnoitus Tbilisin ja Kuran yllä, jyrkällä kukkulalla rikkikylpylöiden ja kasvitieteellisen puutarhan välissä. Ensimmäinen kirjallinen maininta on 300-luvulta kuningas Varaz-Bakurin ajalta, ja legendan mukaan linnoituksen rakensi kuningas Vakhtang I Gorgasali. Umayyadit laajensivat sitä 600-luvulla, ja kuningas Davit Rakentaja rakennutti sitä edelleen. Mongolit antoivat sille nimen Narin Qala, pieni linnoitus.\n\nNykyiset linnoitteet ovat pääosin 1600-luvun tai sitä aiempaa rakentamista. Muurien ympäröimässä linnoituksessa on kaksi osaa, ja alapihalla on Pyhän Nikolauksen kirkko, joka on uusi rakennus tulipalossa tuhoutuneen vanhan kirkon tilalla.\n\nOsia linnoituksesta oli purettu vuoden 1827 maanjäristyksen jälkeen. Isoisän matkavuonna 1873 linnoitus oli siis osin vaurioitunut. 2010-luvulta sinne on noussut gondolihissi Rike-puistosta.',
+      kuvat: [
+        {
+          tiedosto: '2014 Tbilisi, Ruiny twierdzy Narikala (02).jpg',
+          selite: 'Narikalan linnoitteet ovat pääosin 1600-luvun tai sitä aiempaa rakentamista.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Metekhin kirkko': {
+      aika: '1200-luvulta',
+      teksti: 'Metekhin kirkko on Neitsyt Marian kuolonuneen kirkko, jonka kuningas Demetrios II rakennutti 1200-luvulla. Se seisoo kalliolla Kuran yllä, ja nimi tarkoittaa palatsin ympäristöä; nimi on peräisin 1100-luvulta. Perinteen mukaan Vakhtang rakensi alueelle kirkon ja linnakkeen, mutta mikään niistä ei säilynyt mongolien hyökkäyksestä. Nykyinen kirkko on tiilestä ja veistetystä kivestä, ja siinä on useita ulkonevia apsiksia ja vapaita pilareita kupolin alla.\n\nKuningas Rostom linnoitti alueen, ja Venäjän vallan aikana kirkko oli kasarmina. Linnake purettiin 1800-luvun alussa ja tilalle rakennettiin vankila, joka toimi vielä Neuvostoaikana. Isoisän matkavuonna 1873 paikalla siis toimi vankila.\n\nKirkko palautettiin patriarkaatille ja otettiin uudelleen käyttöön 1900-luvun lopulla. Vakhtang I Gorgaslanin ratsastajapatsas pystytettiin 1900-luvulla, ja Kuran yli vievä betonisilta rakennettiin vanhojen siltojen paikalle.',
+      kuvat: [
+        {
+          tiedosto: '2014 Tbilisi, Cerkiew Metechi (02).jpg',
+          selite: 'Metekhin kirkon edessä on Vakhtang I Gorgaslanin ratsastajapatsas, joka pystytettiin 1900-luvulla.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Abanotubanin rikkikylpylät': {
+      aika: 'legendan mukaan 400-luvulta; kylpylät kirjattu 1200-luvulla',
+      teksti: 'Abanotubani on kylpyläkaupunginosa Mtkvarin itärannalla Narikalan juurella, Metekhin vastapäätä. Nimi tarkoittaa kirjaimellisesti kylpylän aluetta. Legendan mukaan juuri tähän kuninkaan haukka putosi, ja kuumat lähteet johtivat uuden pääkaupungin perustamiseen. Kaupungin nimikin tulee lämpimistä, rikkipitoisista lähteistä.\n\nKylpylät ovat kaupungin vanhimpia tunnettuja paikkoja: 1200-luvun loppuun mennessä Tbilisissä oli kirjattu kymmeniä kylpylöitä, ja ne olivat muslimiasukkaille ilmaisia. Alueen tunnistaa pienistä kupoleista, jotka kohoavat maanpinnalta. Isoisän matkavuonna 1873 kylpylöillä oli siis takanaan vuosisatojen historia.\n\nAlueen vieressä on turkkilainen sunnimoskeija. Abanotubani kuuluu hallinnollisesti Krtsanisin piiriin.',
+      kuvat: [
+        {
+          tiedosto: '2014 Tbilisi, Łaźnie siarkowe w Abanotubani (01).jpg',
+          selite: 'Abanotubanin kylpylät sijaitsevat Narikalan juurella, ja kaupungin nimi tulee lähteistä.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Siionin katedraali': {
+      aika: '500–600-luvuilta; nykyinen rakenne 1100-luvulta',
+      teksti: 'Siionin katedraali on Georgian kirkon Neitsyt Marian kuolonuneen katedraali Sionin kadulla. Nimi tulee Siionin vuoresta Jerusalemissa. Alkuperäinen kirkko rakennettiin lähteen mukaan 500–600-luvuilla, ja keskiaikaisten kronikoiden mukaan rakentamisen aloitti jo kuningas Vakhtang Gorgasali. Kuningas Davit Rakentaja rakennutti kirkon uudelleen 1100-luvulla, ja nykyisen rakenteen peruselementit ovat tältä ajalta. Lähteet antavat nykyiselle rakenteelle eri ajoituksia; peruselementit ovat 1100-luvulta.\n\nKatedraali on kärsinyt vaurioita monta kertaa vihollisten hyökkäyksissä ja maanjäristyksessä, viimeksi Persian hyökkäyksessä 1795. Kellotorni on 1400-luvulta, ja se on palautettu nykyiseen asuunsa 1900-luvulla. Keltainen tuffi on tuotu Bolnisista, ja alttarin vasemmalla puolella on viiniköynnösristi, joka muistuttaa Pyhän Ninon rististä.\n\nIsoisän matkavuonna 1873 katedraalin sisäasu oli jo muuttunut: Grigori Gagarin maalasi seinämaalausten sarjan ja suunnitteli kivisen ikonostaasin 1800-luvun puolivälissä, ja osa keskiaikaisista freskoista katosi. Katedraali oli maan pääkatedraali ja katolikos-patriarkan istuin, kunnes Pyhän Kolminaisuuden katedraali vihittiin 2000-luvun alussa.',
+      kuvat: [
+        {
+          tiedosto: 'Sioni Cathedral, Tbilisi. Western façade with the main entrance.jpg',
+          selite: 'Siionin katedraalin nykyisen rakenteen peruselementit ovat 1100-luvulta.',
+          lahde: 'Kober, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Anchiskhatin basilika': {
+      aika: '500-luvulta',
+      teksti: 'Anchiskhatin basilika on lähteen mukaan Tbilisin vanhin säilynyt kirkko, ja se on peräisin 500-luvulta. Kronikoiden mukaan sen rakennutti kuningas Dachi. Kirkko on kolmilaivainen basilika, jonka konkat ovat hevosenkengän muotoisia, ja se rakennettiin alun perin keltaisesta tuffikivestä.\n\nNimi Anchiskhati tarkoittaa Anchan ikonia. Se otettiin käyttöön 1600-luvulla, kun Beka Opizarin 1100-luvulla tekemä Vapahtajan ikoni tuotiin Klarjetin Anchan luostarista Tbilisiin ottomaanien uhkaa pakoon. Ikoni on nykyään Georgian taidemuseossa. Tiilinen kellotorni on peräisin samalta ajalta katolikos Domentin ajalta.\n\nKirkon ulkoasu muuttui rajusti 1800-luvulla, kun siihen lisättiin kupoli. Neuvostoaikana jumalanpalvelukset keskeytettiin ja kirkko oli käsityömuseo ja taidestudio; entisöinti 1900-luvun puolivälissä palautti 1600-luvun ilmeen, ja uskonnollinen käyttö palasi Georgian itsenäistymisen jälkeen.',
+      kuvat: [
+        {
+          tiedosto: 'Anchiskhati Basilica of Saint Mary 1.jpg',
+          selite: 'Anchiskhatin basilika on lähteen mukaan Tbilisin vanhin säilynyt kirkko.',
+          lahde: 'Kakhi Kuloshvili, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Vapaudenaukio: {
+      aika: 'Venäjän vallan ajalta; nimi Vapaudenaukio 1900-luvulta',
+      teksti: 'Vapaudenaukio on aukio keskustassa Rustaveli-kadun itäpäässä. Sieltä haarautuu useita katuja, kuten Rustaveli, Pushkin ja Kote Apkhazi. Aukion pohjoispuolella on pieni puistikko suihkulähteineen ja Pushkinin rintakuva, ja Tbilisin kaupunginvaltuusto toimii aukiolla.\n\nAukion nimi on vaihdellut. Venäjän vallan aikana, siis myös isoisän matkavuonna 1873, se oli Erivanin aukio. Nimi tuli kenraali Ivan Paskevichin mukaan, joka sai kreivin arvon Erivanin valtauksesta. Ensimmäisen Georgian tasavallan perustamisen aikaan aukio sai nimekseen Vapaudenaukio, ja Neuvostoaikana sitä kutsuttiin Berian ja Leninin aukioksi.\n\n2000-luvulla aukiolle paljastettiin Vapauden muistomerkki, jossa Pyhä Yrjö surmaa lohikäärmettä. Sen on tehnyt kuvanveistäjä Zurab Tsereteli.',
+      kuvat: [
+        {
+          tiedosto: 'Freedom Square, Tbilisi (50497944841).jpg',
+          selite: 'Vapaudenaukiolta haarautuu useita katuja, ja aukion nimi on vaihtunut useita kertoja.',
+          lahde: 'Andrew Milligan sumo, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kansallinen kasvitieteellinen puutarha': {
+      aika: 'varhaisemmista kuninkaallisista puutarhoista; virallisesti 1845',
+      teksti: 'Kansallinen kasvitieteellinen puutarha sijaitsee Tsavkisis-Tskalin rotkossa Sololakin vuoriston etelärinteillä. Lähteen mukaan sen pinta-ala on yli sata hehtaaria. Jean Chardin kuvasi alueen 1600-luvulla kuninkaallisina puutarhoina, ja myös Tournefort ja prinssi Vakhushtin kartta mainitsevat sen.\n\nPersian hyökkäyksessä 1795 puutarha ryöstettiin, mutta se elvytettiin 1800-luvun alussa ja perustettiin virallisesti 1845. Isoisän matkavuonna 1873 puutarha oli siis ollut virallisesti perustettu jo lähes kolme vuosikymmentä. 1800-luvun lopulla se toimi kasvistokeskuksena, ja sitä laajennettiin länteen.\n\nEntisen muslimihautausmaan alue liitettiin puutarhaan 1900-luvun puolivälissä; säilyneiden hautojen joukossa on azerbaidžanilaisen kirjailijan Mirza Fatali Akhundovin hauta. Pääsisäänkäynti on Narikalan linnoituksen juurella, ja kävely- ja pyöräreitit valmistuivat 2010-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Waterfall on the Tsavkisistsqali river in the National Botanical Gardens, Tbilisi.jpg',
+          lyhyt: 'Puutarha sijaitsee Tsavkisis-Tskalin rotkossa.',
+          selite: 'Puutarha sijaitsee Tsavkisis-Tskalin rotkossa, ja Chardin kuvasi sen 1600-luvulla kuninkaallisina puutarhoina.',
+          lahde: 'Alf Altendorf, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierä e03b, Ramallah):
+   * Kohdekartan nähtävyysjutut. Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03b-ramallah.
+   */
+  ramallah: {
+    'Al-Manaran aukio': {
+      aika: '1900-luku',
+      teksti: 'Al-Manaran aukio (arabiaksi Maydan al-Manara) on Ramallahin keskusaukio ja lähteen mukaan yksi Palestiinan tunnetuista julkisista tiloista. Isoisän matkavuonna 1873 aukiota ei vielä ollut: paikalla kulki multatie, joka yhdisti Ramallahin ja viereisen al-Birehin. Tie sai 1900-luvun alussa yhä enemmän merkitystä, ja 1930-luvulla Ramallah ja al-Bireh yhdistettiin sähköverkkoon. Katuvalojen kytkintaulu asetettiin tolppaan tien varteen, ja paikkaa alettiin kutsua al-Manaraksi eli majakaksi.\n\n1950-luvun alussa tolppa korvattiin muistomerkillä, jossa kivipylvään ympärillä oli viisi leijonaa; ne edustivat viittä sukua, jotka kaikki polveutuvat Rashid al-Haddadinin suvusta. Leijonat ovat lähteen mukaan perinteisiä rohkeuden, voiman ja ylpeyden symboleita, ja nykyisessä muistomerkissä ne ovat pylvään juurella suihkulähteen ja kukkapenkkien ympärillä. Muistomerkki rakennettiin myöhemmin uudelleen alkuperäisen mallin mukaan, ja työ valmistui vuoden 2000 paikkeilla.\n\nAukion laidalla toimii Silwadi-mehubaari, ja Hisbeh-tuoretori on lähellä aukiota.',
+      kuvat: [
+        {
+          tiedosto: '2010-08 Ramallah 22.jpg',
+          lyhyt: 'Al-Manaran aukio Ramallahissa: pylväs ja leijonapatsaat pylvään juurella.',
+          selite: 'Aukion muistomerkin leijonat edustavat Ramallahin perustajasukuja, jotka polveutuvat Haddadin-suvusta.',
+          lahde: 'Ralf Lotys (Sicherlich), Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän perheen kirkko': {
+      aika: '1910-luku',
+      teksti: 'Pyhän perheen kirkko on Ramallahin latinalaiskatolinen kirkko. Isoisän matkavuonna 1873 kirkkoa ei vielä ollut: latinalaiskatolinen yhteisö oli pieni, ja messu vietettiin talossa. Katolisia asettui Ramallahiin 1800-luvun jälkipuoliskolla sen jälkeen, kun Pyhän Joosefin sisaret ja Rosary-sisaret olivat perustaneet kouluja. Kirkon rakentamislupa myönnettiin vasta useita vuosikymmeniä myöhemmin, ja rakentaminen alkoi 1910-luvun alussa ottomaanien viranomaisten luvalla.\n\nKirkon yhteydessä on pappila, luostari ja koulu. Katolinen kirkko on kaupungin toiseksi suurin kristillinen kirkkokunta, ja Pyhän Joosefin tyttökoulu ja Al-Ahliyyah College ovat katolisia kouluja.',
+      kuvat: [
+        {
+          tiedosto: '2010-08 Ramallah 56.jpg',
+          lyhyt: 'Pyhän perheen kirkon pitkä kylki ja nelikulmainen kellotorni Ramallahissa.',
+          selite: 'Kirkon rakentaminen alkoi 1910-luvun alussa ottomaanien viranomaisten luvalla.',
+          lahde: 'Ralf Lotys (Sicherlich), Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ramallahin Friends-koulut': {
+      aika: '1860-luvun loppu',
+      teksti: 'Ramallahin Friends-koulut ovat amerikkalaisten kveekarien perustamia. Isoisän matkavuonna 1873 tyttöjen koulutyö oli jo alkanut: Jones-pariskunta aloitti sen 1860-luvun lopulla, ja koulun myöhempi nimi oli Ramallahin tyttöjen koulutuskoti. Koulu syntyi ottomaanien aikana Jerusalemin hallintoalueella. Poikien koulun rakentaminen alkoi 1900-luvun alussa. Alakoulun kampus, entinen tyttökoulu, on vanhan kaupungin keskustan lähellä, ja yläkoulun kampus, entinen poikakoulu, on al-Birehin puolella.\n\nKoulu on avoin tytöille ja pojille, ja opetus on arabiaksi ja englanniksi; nykyään koulut tarjoavat kansainvälistä IB-ohjelmaa. Entisiin oppilaisiin kuuluvat kansanperinteen tutkija Widad Kawar, joka on tutkinut palestiinalaisia pukuja, sekä kirjailija ja historioitsija Serene Husseini Shahid.',
+      kuvat: [
+        {
+          tiedosto: 'Ramallah Friends Schools2.JPG',
+          lyhyt: 'Friends-koulun piha ja Friends Boys School -rakennus Ramallahissa.',
+          selite: 'Rakennus kuuluu kveekarien kouluihin, joiden tyttöjen koulutyö alkoi 1860-luvun lopulla.',
+          lahde: 'Palobserver, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kulttuuripalatsi ja Mahmoud Darwish -museo': {
+      aika: '2000-luku',
+      teksti: 'Ramallahin Kulttuuripalatsi (Ramallah Cultural Palace) avattiin 2000-luvun alussa. Isoisän matkavuonna 1873 kukkulalla ei vielä ollut kumpaakaan rakennusta. Lähteen mukaan palatsi on Palestiinan hallinnoimilla alueilla ainoa laatuaan oleva kulttuurikeskus: siellä on noin 700-paikkainen sali, kokoushuoneita, näyttelysaleja ja elokuvatiloja. Hankkeen toteuttivat yhdessä Palestiinan hallinto, YK:n kehitysohjelma UNDP ja Japanin hallitus, ja palatsi on kaupungin pääpaikka esityksille ja konserteille.\n\nPalatsin viereen kukkulan laelle on haudattu runoilija Mahmoud Darwish, jonka muistolle on Ramallahissa museo ja mausoleumi. Museo on aivan palatsin lähellä, kadun toisella puolella.',
+      kuvat: [
+        {
+          tiedosto: 'Mahmoud Darwish Museum IMG 4086.jpg',
+          lyhyt: 'Mahmoud Darwish -museon piha Ramallahissa: pitkä vesiallas kalkkikivimuurien välissä.',
+          selite: 'Museo ja mausoleumi on rakennettu runoilijan muistolle Kulttuuripalatsin viereen.',
+          lahde: 'بدارين, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tell en-Nasbeh': {
+      aika: 'rautakausi',
+      teksti: 'Tell en-Nasbeh on pieni muinainen kumpu heti Ramallahin eteläpuolella, ja se on yksi kolmesta kohteesta, jotka usein yhdistetään Raamatun Mispaan; muut ehdokkaat ovat Nabi Samwil ja Shuafat. Isoisän matkavuonna 1873 kohdetta ei vielä ollut kaivettu.\n\nKumpu sijaitsi muinaisen tien varrella Jerusalemista pohjoiseen, ja rautakaudella se oli Juudan pohjoinen rajalinnoitus. Rautakaudella paikka oli muurein ja massiivisin kaupunginportein ympäröity asutus, ja babylonialaisten aikaan Jerusalemin tuhon jälkeen Mispa nousi lähteen mukaan alueen hallintokeskukseksi. Kaivauksia tehtiin 1920- ja 1930-luvuilla yhdysvaltalaisen William Frederic Badèn johdolla, ja ne olivat lähteen mukaan yksi alueen varhaisimmista tieteellisistä kaivauksista. Löydöt, tuhansia esineitä, ovat Badèn museossa Berkeleyssä. Kukkulan ympäri voi kävellä.',
+      kuvat: [
+        {
+          tiedosto: 'Tel a-Nasba.jpg',
+          lyhyt: 'Tell en-Nasbeh, jonka usein katsotaan olevan raamatullinen Mispa, ilmasta kuvattuna.',
+          selite: 'Kumpua ympäröivät nykyään kaupungin kerrostalot, ja sen kaivauksia tehtiin 1920- ja 1930-luvuilla.',
+          lahde: 'דניאל צבי, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al-Kasaba-teatteri': {
+      aika: 'vuosituhannen vaihde',
+      teksti: 'Al-Kasaba (arabiaksi القصبة) on teatteri ja elokuva-arkisto, Al-Kasaba Theatre and Cinematheque, Ramallahin keskustassa lähellä Al-Manaran aukiota ja Khalil Sakakini -kulttuurikeskusta. Isoisän matkavuonna 1873 sitä ei vielä ollut: toiminta alkoi vasta vuonna 1970 Jerusalemissa, ja Ramallahin teatteri ja elokuvateatteri avattiin vuosituhannen vaihteessa entisen elokuvateatterin tiloihin.\n\nLähteen mukaan Al-Kasaba on yksi harvoista alueen paikoista, joissa palestiinalaiset taiteilijat, näyttelijät ja elokuvantekijät voivat tuottaa ja esittää töitään. Sen salit tarjoavat tilan sekä palestiinalaisille että kansainvälisille esitysryhmille, ja siellä esitetään näytelmiä, tanssia, elokuvia ja konsertteja sekä järjestetään konferensseja.\n\nTeatteri on yksi Ramallahin kulttuuripaikoista Kulttuuripalatsin ja Khalil Sakakini -kulttuurikeskuksen rinnalla.',
+      kuvat: [
+        {
+          tiedosto: 'Théâtre Al-Kasaba en 2017.jpg',
+          lyhyt: 'Al-Kasaba-teatterin sisäänkäynti Ramallahissa: kaarikatos ja arabian- ja englanninkielinen kyltti.',
+          selite: 'Al-Kasaba Theatre and Cinematheque toimii Ramallahin keskustassa, ja sen toiminta alkoi Jerusalemissa vuonna 1970.',
+          lahde: 'Djex93, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

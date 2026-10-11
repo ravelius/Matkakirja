@@ -13062,3 +13062,187 @@ Työn alla:
 ## PELIKOODARI 10.10. 22.07: PULUN ELEET KOHDISTETTU, SOUNDLY-LISENSSI, KIPIN ÄÄNIÄ EI OSTETA (10.10.2026 klo 22.13)
 
 10.10. 22.07 Pelikoodari (nollaus, luovutus -yo 0afd086de): Pulun 45 v4-äänen eleet kohdistettu (forced alignment EI kuluta ElevenLabs-krediittejä: saldo 278 291 ennen ja jälkeen), vienti + PR #4370. Kipin Soundly-portti 47/98 puhdasta, tuuli 0/22 → aukkohaku. SOUNDLY-LISENSSI: pelissä lisensoitu vain tilauksen aikana tehdyt versiot; tilauksen päätyttyä uusista pääversioista poistettava Soundly-äänet → Raamattuun MAKSULLISET LÄHTEET -kohtaan (omistajalle kerrottu). OMISTAJA 22.0x: kipin puuttuvia ääniä ei osteta ("ei osteta"), Soundly-tilauksesta haetaan.
+
+## ALOITUSKAUPUNGIT VAIN EUROOPASTA (11.10.2026 klo 04.50)
+
+Omistaja 10.10.2026 klo 23.4x: "Tee Eurooppaan yksi Aloitus kaupunki lisää ja poista toistaiseksi kaikki muiden maanosien aloitus kaupungit alku lento näkymästä"; kortti → "Tukholma (suositus)"; omistaja: "Lontoo ei ole aloitus kaupunki" (se on lähtöpaikka). Alkulennon aloituskaupungit (ETUSIVUN_KOHTEET) Ateena, Moskova, Istanbul + Tukholma; muiden maanosien 11 aloituskaupunkia piilotetaan alkulennosta palautettavasti (Karttaseppä #4380 Julkaisijan pidossa TF 181:een asti, natiivi NUI 5a57b42b5 junassa 181). Raamattuun NATIIVIN ALOITUSKAAVAN perään.
+
+## KIPIN MATKAMUSIIKKI SOITTOLISTAKSI (11.10.2026 klo 04.50)
+
+Omistaja 10.10.2026 klo 23.0x: parhaat Pariisi harppu + Tukholma piano (Tukholman marimbamainen sointi sopi); pitkällä lennolla lyhyt luuppi rasittaa → noin 20 kappaleen soittolista satunnaisjärjestyksessä kaikissa kipeissä; ensin 8 tyylinäytettä (viulu, fagotti, lyyriset soittimet, myös moderni miksaus; yksinkertainen, kevyt, ei liian nopea). Omistaja kuuntelee näytteet sellaisinaan (sello ja kitara eivät onnistuneet, ei uusintoja); näytteet äänisivulla odottavat valintaa.
+
+## KAUPUNKIMUSIIKIN KOKEET (11.10.2026 klo 04.50)
+
+Omistaja 10.10.2026 klo 23.1x: perinnetyylin 16 koetta arkistoon; uudet hitaat yhden soittimen kokeet (Rhodes, piano, viulu, kuorolaulu + kora, duduk, koto), kaikki hidastempoisia taustamusiikkina. 7 koetta äänisivulla odottaa omistajan valintaa.
+
+## TAIDEMUSEON KERTOJAN TEKSTIT JA KERTOJA V2 (11.10.2026 klo 04.50)
+
+Omistaja 10.10.2026 klo 23.3x, kortti "Luen ensin itse": pääsalin 20 ja grafiikkasalin 13 tekstiä (55–77 sanaa, koukku + Katso + loppu) luettiin ennen generointia ja hyväksyttiin yöllä → kertoja v2 33/33 äänitetty (William, turbo, tempo 1,10×, kestot 32–48 s, 16 yli 40 s), Julkaisija vei, LS2 kytki 33 pysähdystä (2c92d79da). Aamulla kysymys omistajalle pisimpien lyhentämisestä noin 55 sanaan (uusi generointi vain luvalla).
+
+## PALLO 40 FPS (11.10.2026 klo 04.50)
+
+Omistaja 11.10.2026 klo 00.0x, kortti "40 kuvaa sekunnissa (suositus)"; Natiivisepän akku- ja lämpömittaus TF 180: Pariisin pallo 60 fps täytti GPU:n ja iPad Pro 13 kuumeni 2 min 10 s:ssa. Kuumailmapallo 40 fps myös viileänä, lämpöhidastus jo lämpimänä, kartan lepo 10 Hz; resoluutio- ja piirtovälimuutokset vasta uuden mittauksen jälkeen. Natiiviseppä 5eb15ef80 junassa 181: GPU 59 % (ennen noin 100 %), kuumeni 4 min 50 s:ssa; lämmin-sääntö ei laukea, koska iPad hyppää normaalista suoraan kuumaan → jatkokorjaus. Raamattuun LÄMPÖ JA VIRRANKULUTUS NATIIVISSA -kohtaan.
+
+## PARIISIN KIPPI JA SAAPUMISESITYS (TF 180 -PALAUTE) (11.10.2026 klo 04.50)
+
+Omistaja 10.–11.10.2026 klo 23.5x–00.0x: saapumisesityksen musiikki alkaa isoisän "Pariisi"-sanan kanssa ja iskulause heti perään, lisäkuvat heti kolmen aloituskuvan jälkeen; Notre-Dame laskeutuu nopeammin ja kaartaa etupuolelle; metrolinjan nimikyltti pienemmäksi ja koko ajan näkyviin; kipin kuvat pykälän isommiksi iPhonella ja kuvateksti pois isonnetusta kuvasta. Toteutus junaan 181: LS1 6839cc2db (musiikki ja "Pariisi" samassa ruudussa, aanet.EsitysMusiikinKerroin ×6,8 dataan, PT:n päätös) ja 2961b872d (ei seisahduksia, Notre-Dame edestä, Concorde lähellä); NUI 0fb0ad5bf (metrokyltti 26 pt koko ajan, reunan kuvat 40 → 56 pt, isonnetusta kuvasta kuvateksti pois; kuvaajan nimi ja lisenssi jäävät, koska käyttölupa vaatii).
+
+## PULU CYP -PISTOKOE JA PILVIOHJEEN LUKUSÄÄNTÖ (11.10.2026 klo 04.50)
+
+SK 11.10.2026 klo 00.1x: Pulu CYP -pistokoe (37 väitettä: 17 oikein, 19 epätarkkaa, 1 virhe) → 20 korjausta haaraan pulu-cyp-pilvi 959e99b95 → Julkaisija vie. Toistuva virhetyyppi pilviohjeeseen ennen seuraavia maita: tarkat luvut ja vuodet (asukasluvut, lajimäärät, perustamisvuodet) vain yhdestä Wikipedia-lähteestä → tarkistetaan toisesta lähteestä tai jätetään pois; syy-seuraus-selitykset vain lähteen sanoin.
+
+## TAIDEMUSEON OPASTETTU KIERROS 33 TEOKSELLA (11.10.2026 klo 04.50)
+
+PT 11.10.2026 klo 00.4x (omistajan "taulut liian kaukaa ja matalalta" -palautteen jatkona): opastettu kierros pysähtyy jokaisella 33 kertojatekstin teoksella (pääsali 20 + grafiikka 13), kamera teoksen eteen keskikorkeudelle, teos 60–70 % ruudun korkeudesta; muut 29 ripustettua teosta näkyvät matkalla, ⏭ ohittaa.
+
+## OLAVINLINNA: MINIKARTTA POIS JA YÖTYÖ PAREMMAKSI (11.10.2026 klo 04.50)
+
+Omistaja 11.10.2026 klo 00.4x: "Ota linnan vasen yläkulman mini kartta pois" → "minikartta" oli levossa näkynyt liikkumistatti, joka ilmestyy nyt vasta kosketuksesta (Siirtoseppä 9c59fcf3b). 00.3x: "Testaa itse Olavinlinnan peliä ja tee siitä paljon parempi" → yösuunnitelma scratchpad/olavinlinna-yosuunnitelma-20261011.md (A estäjät: varoitus aina ennen kiinniottoa, liike lattiassa, tyrmästä alle 60 s, vihjeet näkyviin, vieraat kyltit pois, botti koko peliin; B tuntuma: pimeys pelattavaksi, kynttilä, äänet, historia; C laatuportti: Laitetestaajan ensikertalainen → PT katsoo arkit itse → vasta sitten juna 181 ja omistaja). PULU EI OLE VIDEOPELISSÄ (omistaja 8.10.). Laitetestaajan ensikertalainen ei päässyt läpi TF 180:llä, 181d:llä eikä v6:lla (3. kierros: pelaaja ei löytänyt tyrmän ovea itse) → v7 olavinlinna-yhdistetty-181g ja v8 (ovi oikeilla kosketuksilla, hälytyksen kameralukko, laiturin kallistus, tyrmän alarajavalo) → 4. kierros.
+
+## OPPAAN KIERROSVALINTA ILMAN IKÄKYSELYÄ (11.10.2026 klo 04.50)
+
+PT 11.10.2026 klo 04.5x: elävän oppaan kierrosvalinnat Esittele kaupunki ja Lisää tätä kaupunkia menevät suoraan oppaalle ilman ikäkyselyä, koska kohdekaupungeissa kierros on esigeneroitu (worker kohtelee valintaa kuten toiveen puuttumista); muut valinnat kulkevat chatin kautta ikäkyselyineen. NUI b65f6507b junaan 181 (samalla oppaan kysymyksen sirurivi Wien, Vilna, Luxemburg ja Marseille).
+
+## PÄÄKAUPUNKIEN SÄÄLUVUT JA LUKUTARKISTUS (11.10.2026 klo 04.50)
+
+PT 11.10.2026 klo 03.4x–04.5x: pilvierät e01 (8 kaupunkia) ja e02 (6) valmiit; SK:n pistokoe 78 oikein / 46 epätarkkaa / 7 virhettä, kuvien lisenssit kunnossa. Säätietojen juurisyy: tools/hae-saaperusdata.mjs laski Open-Meteon noin 25 km:n ruudusta vain 3 vuodesta → työkalu käyttää sääaseman normaaleja en-Wikipedian ilmastotaulukosta (kausi lahde-kenttään); 14/14 päivitetty (vertailu WMO, Météo-France ja Islannin IL ≤ 0,2 °C), PILVIOHJE luku 13 (laajuus, kuvateksti, säädata). SK korjasi 4 otoskaupunkia, muiden 10 lukutarkistus pilvessä (t01, t02). Pelin saatiedot.js:n 66 kaupunkia on tehty samalla virheellä ja graafi väittää "ERA5 1991–2020" → Pelikoodarin korjauserä. e03 (Tbilisi, Jerevan, Baku, Amman, Beirut, Abu Dhabi, Manama) käynnissä vanhalla säätyökalulla → säärivit uudelleen; Ramallah jätetty pois herkkänä → omistajalle. Ei vientiä peliin ennen QA:ta.
+
+## MAAKORTTI PYSÄKKIMAISSA (YÖN OLETUS) (11.10.2026 klo 09.13)
+
+11.10. 04.5x–06.0x PT (MAAKORTTI PYSÄKKIMAISSA, yön oletus aamun korttiin): vaihtoehto (a) NUI natiivi-ui/maakortti-pysakki c1a3d534e: oman maan tyhjän kohdan napautus avaa kartussin, kun maalla ei ole pääkaupunkipistettä (pääkaupunki on pysäkki, esim. Ranska, UK); kaupungin kyltin napautus on kaupunkikortin käytössä; samalla napautuksella maakuntapaneeli ei avaudu (muuten peittää kartussin), seuraava napautus kuten ennen. Ei junaan ennen omistajan vastausta.
+
+## VERKKOLÄHTEET: MEDIAWIKIN JA WIKIDATAN RAJAPINTA (11.10.2026 klo 09.13)
+
+11.10. 05.0x PT (VERKKOLÄHTEET): MediaWikin ja Wikidatan api.php on virallinen rajapinta → sallittu kuvaavalla User-Agentilla ja peräkkäisillä pyynnöillä, vaikka robots.txt kieltää /w/-polun indeksoijilta; /wiki/-haku käy myös. Pelikoodarin sääerä #4383: 59 kaupunkia sääaseman normaaleiksi, 7 poistettu (ei kelvollista taulukkoa).
+
+## OLAVINLINNA: KARTAN HILJAISUUS LINNAN JÄLKEEN EI OLE VIKA (11.10.2026 klo 09.13)
+
+11.10. 05.1x PT: Laitetestaajan 3. kierroksen vika 6 (kartta hiljaa linnan sulkemisen jälkeen) ei ole vika: KERRAN LÄPI -linjaus (30.9.), pohjaraita soi kerran ja hiljenee.
+
+## KAUPUNKIPUUT JUNAAN 182, PALLOKOMPASSI JA KIPPI JUNAAN 181 (11.10.2026 klo 09.13)
+
+11.10. 05.2x PT: LS1:n kaupunkipuut eivät junaan 181 (Pariisin katutasolla pitkät tummat rungot, Tukholman tuplalatvukset Googlen puiden kanssa, iPad-muistiajo tekemättä) → 182 kuvaparilla (tupla 0/auto/1); Soundly v2 Tukholma → 182; pöllö-PR #4384 tuotantoon (TF 179/180 eivät lue uusia kenttiä); pallokompassi 89e2d373a ja kippi-kärki 901178b19 kuitattu 181.
+
+## TAIDEMUSEO KUITATTU JUNAAN 181 (11.10.2026 klo 09.13)
+
+11.10. 05.4x PT: taidemuseo 2c92d79da kuitattu 181 (64 teosta, 33 pysähdystä, kertoja v2, saliääni −47 LUFS); näkyy linssivalitsimessa vain Alankomaissa (Raamattu TAIDEMUSEO-LINSSI: ovet kaupunkilehdistä).
+
+## OLAVINLINNAN 4. KIERROS (V8) (11.10.2026 klo 09.13)
+
+11.10. 06.0x PT: OLAVINLINNAN 4. KIERROS v8 (Laitetestaaja): C-portti ei läpi (pako vain ajastimella 82/95/445 s, muunnelma 3:n karmit, kamera seinässä kiinniotossa, paluuvene 50 s lukossa); korjattu vihje näkyy, hälytyssilmukka, Jatketaanko-napit, laiturilta porttikäytävään (v9). → Siirtoseppä v10 + Pelikoodari 02cd4d6ba (tyrmän harvat äänitapahtumat, epäilyrepliikki kerran) → 5. kierros. Aamun kortti: juna 181 valmiilla osilla (suositus).
+
+## KARTUSSIN TYHJÄ LIPPU KORJATTU (JUNA 181) (11.10.2026 klo 09.13)
+
+11.10. 06.2x PT: NUI lippu-valimuisti b39f3486b kuitattu 181 (kartussin tyhjä lippukehys kaikissa maissa TF 180:ssä: lipun ?v=-kysely jäi välimuistitiedoston nimeen, joten file://-luku ei löytänyt sitä); Sulje linna → kartta pystyyn on simun sivuvaikutus (oikea laite pysyy vaakana) ja Lontoon paneeli dialogin takana on Vahvistus-pohjan himmennys, ei vikoja.
+
+## OLAVINLINNA: KYNTTILÄ PALAA OLETUKSENA TYRMÄSSÄ (11.10.2026 klo 09.13)
+
+11.10. 06.2x PT (OLAVINLINNA, 4. kierroksen havainto: ensikertalaisen tyrmä lähes musta, koska kynttilä oli ensimmäisellä käynnillä sammuksissa ja kuvakkeella ei selitettä): kynttilä palaa oletuksena tyrmään tultaessa, kuvake sammuttaa ja sytyttää; ei uutta tekstiä eikä pohjaa (NUI).
+
+## PÄÄKAUPUNGIT E01 JA E02: LUKUTARKISTUKSEN PÄÄTÖKSET (11.10.2026 klo 09.13)
+
+11.10. 06.2x PT (PÄÄKAUPUNGIT e01+e02, pilven lukutarkistukset t01/t02: 0 tarkistinvirhettä, noin 30–50 lukua per kaupunki pyöristetty): yhden riippumattoman lähteen tarkat luvut pyöristetään tai poistetaan, toista kierrosta virallisiin tilastoihin ei tehdä nyt; lisenssit Commonsin tarkassa muodossa (CC BY-SA 3.0 RS, CC BY 3.0 PL); alle 440 merkin nostoja ei täytetä; Tirana noin neljännes kansasta (kunta 2023), Bernin karhu sinetissä 1200-luvulla, Vaduzin kansikuva 2 vaihtoon (linna pääosaan), Redutan nosto nykyrakennukseen (1913–1919). Sisältökirjuri yhdistää ja korjaa; peliin vasta kytkentäpäätöksen jälkeen.
+
+## PÄÄKAUPUNKIEN KYTKENTÄ PELIIN (JUNA 182) (11.10.2026 klo 09.13)
+
+11.10. 06.4x PT (PÄÄKAUPUNKIEN KYTKENTÄ, Pelikoodarin suunnitelma hyväksytty): pilven täysi sisältö kopioidaan pelin tauluihin pääkaupunkipisteen id:llä (kaupunkilehti, kohdekartta, nähtävyydet, sää, valokuva; artikkeli ja kysymykset vain dataan, ei kuluttajaa ilman pysäkkiä); maakortin pääkaupunkirivillä olemassa oleva "Lue lisää" (web) / Avauskortin "Lue kaupunkilehti" (natiivi) avaa lehden; ei skeemanostoa, vanhat appit eivät näe uutta sisääntuloa; data + web + vienti Pelikoodarilta yhtenä PR:nä ja natiivi NUI:lta, molemmat junaan 182. Ensin 14 Euroopan pääkaupunkia (e01, e02).
+
+## NOTRE-DAME V5G JA MAAKORTIN PARI3 (11.10.2026 klo 09.13)
+
+11.10. 06.5x PT: Notre-Dame v5g (katto oikean ilmakuvan sävyyn, julkisivu hieman lämpimämpi) osoitinvaihto PT:n kuittauksella ilman omistajan korttia (OIKOTIET 1): ero v5d:hen pieni ja oikean kuvan suuntaan; LS2 paketoi omat-mallit v6k16, Julkaisija vie. NUI maakortti pysäkkimaissa: c1a3d534e ei toiminut (lappu ja korostus avautuivat kartussin kanssa) → 70b2d75ca, pari3 todistettu (1. napautus vain kartussi lipun kanssa, 2. maakunta) → omistajan aamukorttiin. Natiivin pääkaupunkilehti 3447a1d2f odottaa Pelikoodarin vientiä.
+
+## OLAVINLINNAN 5. KIERROS (V10) (11.10.2026 klo 09.13)
+
+11.10. 07.0x PT: OLAVINLINNAN 5. KIERROS v10 (181j dbaebe31d): korjattu pako omalla liikkeellä (4/5), kynttilä heti, ei vieraita kylttejä, paluun katse vapaa, oven vihje 20 s, ei välkettä lähitasolla 0,05 m; EI läpi: tyrmästä palattua Etsintä 3 s:ssa ja 6 kiinniottoa 11 minuutissa (linnaan ei päästy), karmit painavat kameran seinään, lukko 60 s (muunnelmat 1 ja 3), laiturin täysmustat lohkot, varoitus 2 s ilman näkyvää vartijaa → Siirtoseppä v11 (turva-aika ≥ 60 s ja kasvava helpotus, karmin törmäyssäde, oma pako < 60 s, pielten renderöijä, varoitus ≥ 3 s näkyvällä vartijalla), Pelikoodari äänet (laituri +3 dB, tyrmä 3:n tapahtumat). Laiturin valkopaitainen hahmo on NPC.
+
+## PARITEETTI: PÄÄKAUPUNKIEN LEHTI WEBISSÄ (11.10.2026 klo 09.13)
+
+11.10. 07.0x PT (PARITEETTI, pääkaupunkien lehti): natiivi on malli → web avaa koko lehden "Lue kaupunkilehti →" kuten natiivi, jos lehtinäkymä on olemassa oleva web-pohja; pääkaupunkien kansikuvat peilataan ämpäriin junan mukana vie-paketti.sh:lla.
+
+## OPITTU VIRHE: TIEDOSTON MUOKKAUS SKRIPTILLÄ (11.10.2026 klo 09.13)
+
+11.10. 07.1x PT (OPITTU VIRHE, tiedostojen muokkaus skriptillä): Päätoimittajan Python-lisäys avasi scratchpad/tyojonot.md:n kirjoitustilaan ennen kuin uusi sisältö oli valmis, ja virhe (TypeError) jätti tiedoston tyhjäksi; palautettu transkripteista toistamalla kaikki muokkaukset 10.10. klo 09.16:n täydestä kopiosta (scratchpad/tyojonot-palautus.py, 658 riviä, rakenne tarkistettu). Jatkossa muokkaus kirjoitetaan ensin väliaikaistiedostoon ja vaihdetaan os.replace-kutsulla, ja tyojonot.varakopio.md päivitetään jonokierroksella.
+
+## OLAVINLINNA V11: VARTIJAN VAROITUS JA KATSEKÄÄNNÖS (11.10.2026 klo 09.13)
+
+11.10. 07.3x PT (OLAVINLINNA v11, vartijan varoitus): varoitus 3 s, vapautuksen jälkeen rauhalliset vartijat ja 60 s:n turva, helpotus kasvaa portaittain (Siirtoseppä 0eef98927); katse kääntyy varoittavaan vartijaan pehmeästi 0,6 s:ssa VAIN jakson ensimmäisellä varoituksella, ja pelaajan kosketus keskeyttää käännön heti (ei kameralukkoa); muilla varoituksilla vain ääni ja valo. Botti v10: 67/94 reittipistettä, tyrmät 12/14/68 s.
+
+## JUNA 181 NYT, MAAN KARTUSSI AINA NÄKYVISSÄ, RAMALLAH, PILVIKREDIITTI (11.10.2026 klo 09.13)
+
+11.10. 09.0x OMISTAJA (aamun kortti): JUNA 181 LÄHTEE NYT valmiilla osilla ("Kyllä, nyt (suositus)"), Olavinlinnan keskeneräiset osat seuraavaan junaan; 181:n Olavinlinna = testattu yhdistelmä 181k (v11, e3c5dd17b). MAAN KARTUSSI AINA NÄKYVISSÄ (omistaja sanatarkasti: "Maan kartussi pitää näkyä kokoajan vas alareunassa ja sitä napauttamalla se laajenee maakortiksi niin kuin ennenkin."): oman maan kartussi ei häivy, vaan pysyy vasemmassa alareunassa, ja sen napautus laajentaa sen maakortiksi; NUI:n tyhjän kohdan napautus (70b2d75ca) ei mene peliin; kartussikorjaus junaan 181 (omistaja 08.5x: "Odota hetki vielä junaa että nämä korjaukset ehtivät siihen mukaan"). RAMALLAH: pääkaupunkilehti neutraalisti ("Kyllä, neutraalisti (suositus)"), tehdään paikallisesti. PILVIKREDIITTI: omistaja ei ehtinyt katsoa → uusia pilvieriä ei aloiteta ennen lukemaa.
+
+## TAIDEMUSEON KEHYKSET JA YLEISILME (11.10.2026 klo 09.13)
+
+11.10. 09.0x OMISTAJA: "Miksi taidemuseon kehykset jäävät niin mustiksi ja miten yleisilmeestä saisi vaikuttavamman" → PT: kehykset ovat tarkoituksella 1600-luvun ebonoituja aaltolistakehyksiä (golflijst), mutta pelissä ilman lakan kiiltoa ja aaltokuviota ne näkyvät tasaisena mustana renkaana. LS2:n erä junaan 182: kehyksiin lakan kiilto, valoa poimiva aaltokuvio ja kapea kultainen sisäreuna (tärkeimmille kultakehys), jokaiselle teokselle lämmin kohdevalo (maalaus seinää kirkkaampi, sali tummuu reunoilta), pysähdyksen kamera hieman kauemmas; ennen/jälkeen-arkki PT:lle ja omistajalle.
+
+## MAAKORTIN NOSTOT TIIVIINÄ (11.10.2026 klo 09.13)
+
+11.10. 09.1x OMISTAJA (MAAKORTIN NOSTOT TIIVIINÄ, sanatarkasti): "jos noita maakuntia tulee lisää niin tuo kortti täyttyy niistä. otetaan pois kuvat ja maakuntien nimet tuosta. voisi olla jotenkin todella tiiviissä muodossa ilmaistuna kuinka monta nostoa pelaaja on avannut jne." → maakortin maakuntarivit (pikkukuvat, käsialanimet, mustepisteet) pois; avattujen nostojen määrä yhdellä tiiviillä rivillä olemassa olevalla tilastorivipohjalla (NOSTOT avatut/kaikki + ohut palkki). NUI junaan 181 kartussikorjauksen kanssa, web myöhemmin samaan malliin (Pelikoodari). Omistaja 08.5x: "Odota hetki vielä junaa että nämä korjaukset ehtivät siihen mukaan" → juna 181 odottaa näitä.
+
+## LUPAIKKUNAT EIVÄT PYSÄYTÄ ROOLEJA (11.10.2026 klo 09.13)
+
+11.10. 09.2x OMISTAJA (LUPAIKKUNAT EIVÄT PYSÄYTÄ ROOLEJA, kortti "Kyllä, kaikki (suositus)"; kysymys: "miksi minun piti sanoa kyllä eri sessioille ... ne hidastavat kehitystä todella paljon"): 1) hylätty lupa estää vain sen yhden komennon: rooli ei pysähdy kokonaan, vaan jatkaa jonon muuta työtä ja ilmoittaa JUMI → FABLE, ja Päätoimittaja antaa toisen toteutustavan (toinen sessio ei anna lupaa hylättyyn komentoon); 2) poistot ja siirrot tehdään vain valmiilla työkaluilla, jotka eivät avaa lupaikkunaa (ei rm:ää muuttujapoluilla, ei shell -c:tä); 3) Päätoimittaja nollaa Postivahdin kuten muut roolit ilman omistajan kyllä-vastausta. Raamattuun TYÖTAPA JA SESSIOT -kohtaan seuraavassa docs-PR:ssä.
+
+## TAIDEMUSEO: TEOS KATSOTAAN MAHDOLLISIMMAN LÄHELTÄ (11.10.2026 klo 09.21)
+
+OMISTAJA 11.10.2026 klo 09.2x (taidemuseo, sanatarkasti): "museossa teos pitää nähdä mahdollisimman läheltä. riitää että ympäristö näkyy kun siirrytään teoksen luo mutta varsinainen katselukokemus pitää olla mahdollisimman läheltä niin että seinää ei tarvitse näkyä juuri ollenkaan". Kumoaa 11.10. klo 00.4x:n linjan (kamera teoksen eteen 60–70 % ruudun korkeudesta) ja aamun kehyserän kohdan "pysähdyksen kamera hieman kauemmas". PT:n toteutusohje LS2:lle: pysähdyksessä koko teos (kehyksen sisäreuna) täyttää ruudun rajaavassa suunnassa noin 95 % ilman rajausta; kehys saa näkyä reunoilla, seinä enintään kapeina kaistoina kuvasuhde-eron vuoksi, ja kohdevalon reunatummennus pitää ne tummina; sali ja muut teokset näkyvät vain siirtymissä teoksesta toiseen; etäisyys lasketaan teoksen koosta, ruudun kuvasuhteesta ja näkökentästä laitekohtaisesti ja lähitaso tarkistetaan. Kehysten lakka, aaltokuvio, kultainen sisäreuna ja kohdevalot pysyvät erässä (juna 182); ennen/jälkeen-arkki kolmesta teoksesta iPadilla ja iPhonella PT:lle ja omistajalle.
+
+## OLAVINLINNAN KEHITYKSEN NOPEUTUS: ALOITUSKOHDAT, BOTTI JA AUTOMAATTIKÄÄNNÖS (11.10.2026 klo 10.54)
+
+11.10. 09.2x PT (LINNAN NOPEUTUS, omistajan kysymys "miten linnan kehitystä saisi nopeutettua?"): juurisyy = jokainen testikierros pelattiin alusta ja pysähtyi ensimmäiseen esteeseen (4. tyrmä, 5. vartijat, 6. musta keittiö), joten viat löytyivät yksi kerrallaan ja kierros vei noin 1,5 h. Päätökset: 1) Siirtoseppä tekee kehittäjätilan aloituskohdat jokaiseen linnan osaan (laituri, porttikäytävä, keittiö, sisäpihat, kappeli, tyrmä, paluu; tila kuin pelaaja olisi tullut sinne, ei näy pelaajalle); 2) kävelevä botti ajaa jokaisen osan erikseen Unity-editorissa jokaisen linnacommitin jälkeen, ja botin läpäisy on portti ennen Laitetestaajan läpipeluuta; 3) Julkaisijan olavinlinna-vahti (julkaisija-tyokalut/olavinlinna-vahti.zsh, haaralista olavinlinna-haarat.txt) kääntää linnan yhdistelmän automaattisesti 3 min pushihiljaisuuden jälkeen polkuun lokit/olavinlinna-uusin, taukolippu /tmp/matkakirja-linnavahti-tauko junan, VIE:n ja muistiajon ajaksi; yksi simupaikka linnalle päivällä. Tavoite noin 30 min kierros. Piste 20 (kappelin ovi): Siirtoseppä b 209fffc21 (lukko vasta kappalaisen kohtauksessa), LR:n jonoon a (ovi:paaovi-merkki käsikirjoituksen pääovelle).
+
+## OLAVINLINNAN TEKSTIT LUETTAVIKSI (11.10.2026 klo 10.54)
+
+11.10. 09.3x OMISTAJA (Olavinlinna, sanatarkasti): "teksteistä on vaikea saada selvää linnassa ja itse kortti vie paljon tilaa suhteessa tekstiin" → NUI (nollauksen jälkeen 1. tehtävä, juna 182): kaikki linnan tekstit kuvataan iPadilla ja iPhonella (tietokerroksen kortit kuten 3 Perustamistaulu ja 4 Keittiö, historian tekstitys, huoneen nimikyltti, Jatketaanko); tumma kortti mitoitetaan sisällön mukaan ilman tyhjää tilaa, leipäteksti isommaksi ja kirkkaammaksi tk-tumma-tokeneilla (ei uusia värejä); historian tekstitys ja nimikyltit erottuvat tummasta 3D-näkymästä olemassa olevalla keinolla; muutos tumman kortin pohjaan koskee kaikkia tummia kortteja; ennen/jälkeen-arkki PT:lle ja omistajalle.
+
+## ÄÄNISIVUN VALINTARUUDUT JA LÄHETÄ CLAUDELLE (11.10.2026 klo 10.54)
+
+11.10. 09.3x OMISTAJA (äänisivu, sanatarkasti): "saisiko äänisivuille suoraan checkboxit niille jotka ovat hyviä näytteitä ja napin ylös \"lähetä claudelle\" tms" → Pelikoodari (KIIRE ennen e03:a): jokaiseen näyteriviin valintaruutu, joka tallentuu heti palvelimelle (Pages Function + tallennus Accessin takana), ja ylös "Lähetä Claudelle (N)" + valinnainen viesti; lukutyökalu tulostaa uudet lähetykset, PT ajaa sen jonokierroksella ja reitittää; aanisivu-lisaa.py (Julkaisija) pysyy yhteensopivana.
+
+## JUNA 181: KAIKKI VALMIIT MUKAAN (11.10.2026 klo 10.54)
+
+11.10. 09.4x OMISTAJA: "voiko kaikki valmiit siirtää junaan 181 ja sitten julkaista vai kannattaako odottaa vielä hetki jotain?" → PT: kyllä, ei odoteta. Juna 181 = runko + NUI faf1090bc + 043409780 + juna 182:n kuitatut, jotka eivät lisää muistia (LS1 5ed2754c8 + esittely v2a, kippi-pysty-182 9642efcd7, Soundly v2 229141f7c; NUI c448e8f2e metro, 3447a1d2f pääkaupunkien lehti + sisältöpaketti VIE:ssä); LS1 puut 52d927252 + a0b4c5240 vain, jos Pariisin muistiajo lopullisella rungolla menee läpi (muuten puut pois ilman uutta odotusta). Ei mukaan: Olavinlinna v12 (7. kierros kesken; 181:ssä v11), LS1 4d56dcf7f (uusinta), NUI 79fbb7a35 (museon ☰, kuittaamatta). Loput junaan 182 illalla (2. TF tänään).
+
+## ULKOINEN TESTFLIGHT AUKI JUNASTA 181 (11.10.2026 klo 10.54)
+
+11.10. 09.5x OMISTAJA (kortti "Kyllä, junasta 181 alkaen (suositus)"; kysymys: "miten saan jaettua testflight koodeja beta testaajille"): ULKOINEN TESTFLIGHT-RYHMÄ AUKI UUSILLE BUILDEILLE: ulkoinen-kielletty-esto (10.10., ikäkysely ja kuratoitu tila ensin) poistetaan, koska ikäkysely (juna 177) ja kuratoitu live (worker #4337) ovat pelissä; junasta 181 alkaen ulkoinen ryhmä Arvioijat (julkinen linkki https://testflight.apple.com/join/KxKekB4n, raja 100) saa jokaisen PASS-buildin sisäisen rinnalla Applen beta-arvioon (30.9. linja palaa voimaan); Mitä testata -teksti junan muutoslokista. ASC 11.10.: ulkoisessa uusin TF 165 (beta-arvio hyväksytty 8.10.), liittyneitä 0; sisäinen Beta testaajat 1. RAAMATTUUN seuraavassa docs-PR:ssä: LIVE-TEKOÄLY-kohdan lause "ulkoiseen ryhmään ei viedä uusia buildeja ennen ikäkyselyä ja kuratoitua tilaa" → auki 181:stä.
+
+## TESTAAJIEN OMA TESTFLIGHT-LINKKI (11.10.2026 klo 10.54)
+
+11.10. 09.5x OMISTAJA (kortti, kysymys "onko tuo linkki sama apuraha raadille vai onko heille oma?"; vastaus sanatarkasti): "oma linkki testaajille, mutta sama versio kummallekin. haluan vain nähdä milloin raatilaiset lataavat pelin itselleen" → Julkaisija luo ulkoisen ryhmän Beta-testaajat omalla julkisella linkillä (raja 100); junasta 181 alkaen molemmat ryhmät (Arvioijat = apurahahakemuksen linkki KxKekB4n ja Beta-testaajat) saavat jokaisen PASS-buildin samaan aikaan; ASC-tila-ajo 30 min välein kirjoittaa ryhmittäiset asennukset tiedostoon julkaisija-tyokalut/asc-testaajat.json → Asemataululle laatat Raati ja Testaajat (Postivahti) ja PT kertoo omistajalle, kun raadista ladataan peli.
+
+## TAIDEMUSEO: SEINÄN TERÄVYYS JA VALAISTUS KATOSTA (11.10.2026 klo 10.54)
+
+11.10. 10.0x OMISTAJA (taidemuseon ennen/jälkeen-arkki, Hals; sanatarkasti): "miksi seinä näkyy noin epäterävänä? lisäksi parhaissa museoissa taulu valaistaan katsojan pään yläpuolelta niin että koko taulu on valaistu tasaisemmin" → LS2: seinän epäterävyyden syy selvitetään ja seinä teoksen vierestä teräväksi pysähdysetäisyydellä (simu ja iPad); kohdevalo kattoon katsojan pään yläpuolelle teoksen eteen noin 30° pystysuorasta, tasainen leveä keila koko teoksen ja kehyksen yli (ei kuumaa kohtaa, ei kehyksen varjoa teoksen yläosaan, ei heijastusta), lämmin sävy; yhdessä pysähdyksen salihimmennyksen kanssa (PT 09.5x: iPhone pystyssä vaakateosten ympärillä valaistu seinä ja lattia → sali lähes mustaksi pysähdyksen ajaksi). RAAMATTUUN TAIDEMUSEO-LINSSI: valaistus.
+
+## RAADIN SEURANTA POSTIVAHDILLE (11.10.2026 klo 10.54)
+
+11.10. 10.1x OMISTAJA: "postivahti varmaan kannattaa olla se seuraaja ja ei tarvitse kuin muutaman kerran päivässä seurata" → raadin (Arvioijat) asennusten seuranta Postivahdille neljästi päivässä (asc-testaajat.json, Julkaisijan ajo harvennettu 30 min → 4×/vrk); Postivahti lähettää PT:lle rivin RAATI: +N, PT kertoo omistajalle; Asemataulun laatat Raati ja Testaajat. Testaajien oma linkki https://testflight.apple.com/join/BBAT7tBm (ryhmä Beta-testaajat, raja 100), sama build kuin Arvioijilla (#4389).
+
+## TOINEN KÄÄNNÖSLINJA (11.10.2026 klo 10.54)
+
+11.10. 10.2x OMISTAJA: "miksi suurin osa rooleista on levossa vaikka taidemuseossa yms. on työstettävää?" → PT: syy on yksi Unity-käännöslukko ja kaksi simua (lukkojono 10.1x: NUI ×2 → juna 181 → linnavahti → LS2 museo182e → LS1 kippi); osa "levossa" näkyvistä ajaa taustalla (LR:n vienti, Natiivisepän käännös). PÄÄTÖS (TYÖNJOHTAJAN HARKINTA, kone vapaa omistajan poissa ollessa ma 12.10. asti): TOINEN KÄÄNNÖSLINJA heti (Julkaisija + Natiiviseppä): linja 1 juna/TF + olavinlinna-vahti, linja 2 roolien testikäännökset; nice 15, memory_pressure-vapaa ≥ 20 % ennen käynnistystä, simuja enintään 2 (toinen linnalle). RAAMATTUUN, jos pysyvä.
+
+## CLAUDE-API CONSOLE-KREDIITEILLÄ (11.10.2026 klo 10.54)
+
+11.10. 10.3x OMISTAJA (kortti "Nyt iPadilla (suositus)"; kysymys: "minulla on myös ilmaisia kredittejä jotka eivät näy tässä mutta ilmeisesti claude consolessa. voisiko ne ohjata pulun api käyttön tai kaikki mahdollinen käyttö joka vaatii nimen oman clauden apia voisi ohjata käyttämään niitä kredittejä"): CLAUDE-API KREDIITEILLE: omistaja luo Consolessa (organisaatio, jossa krediitit; todennäköisesti VVI, Claude for Startups) uuden API-avaimen ja vaihtaa sen GitHub-salaisuuteen ANTHROPIC_API_KEY (ei chattiin); Julkaisija ajaa pollo-julkaisu.yml → workerin salaisuus → Pulun live-testi. Nykyinen avain luotiin 18.9. ennen VVI-organisaatiota. ANTHROPIC_ADMIN_KEY (kulut) mahdollisesti vanhaan organisaatioon → selvitys. RAAMATTUUN AVAIMET-kohtaan: API-käyttö Console-krediiteillä.
+
+## ASEMATAULU: SINULLE-OSIO (11.10.2026 klo 10.54)
+
+11.10. 10.3x OMISTAJA: "voisiko tekstit yms. mitä toimitat minulle lisätä asematauluun oman väkäsen alle ja laita ne niin että saan ne luettua myös etä claudella (käytän läppärin työpöytäsovellusta)" → ASEMATAULUUN osio "Sinulle (N)" (väkänen, kiinni oletuksena; uusin ensin, enintään 30; linkit napautettavina): dokumentti talo/viestit {rivit: [{otsikko, aika, teksti}]}; PT lisää sinne jokaisen omistajalle toimitetun ohjeen, linkin ja vastauksen, jota hän tarvitsee myöhemmin (Asemataulu v50, 1. sisältö: API-avaimen vaihto, TestFlight-linkit, äänisivu, museon seinä ja valo). RAAMATTUUN ASEMATAULU-kohtaan + tools/asemataulu/asemataulu.html docs-PR:llä samana päivänä.
+
+## ASEMATAULU: JUNAN ETENEMINEN 5 MIN VÄLEIN (11.10.2026 klo 10.54)
+
+11.10. 10.4x OMISTAJA: "päivittyykö junan eteneminen oikein asemataulussa?" + "kun juna lähtee, päivitystiheyttä voisi nostaa junan osalta" → junan edistys (1 lukittu, 2 arkistoitu ja allekirjoitettu, 3 lähetetty Applelle, 4 VALID, 5 TestFlightissa) + valmis_arvio Postivahdin 5 min kierrokselle aina kun juna on käännöksessä (TF-työnkulun vaiheista), katsojan sykkeestä riippumatta. RAAMATTUUN ASEMATAULU-kohtaan.
+
+## PULU OPASTAA ENSIMMÄISELLÄ SAAPUMISELLA (11.10.2026 klo 10.54)
+
+11.10. 10.5x OMISTAJA (kortti "Pulu opastaa kerran (suositus)"; kysymys: "pelaajan saapuessa kohdekaupunkiin ensimmäistä kertaa, mitä hänelle selitetään pelistä?"): ENSIMMÄISEN SAAPUMISEN OPASTUS: vain ensimmäisellä kaupunkiin saapumisella, saapumisesityksen jälkeen, Pulu kertoo puheena kolmella lyhyellä lauseella mitä kartalla voi napauttaa (nostot), mistä aarre löytyy ja miten Pulua kysytään; kohteet korostuvat hetken olemassa olevalla korostuksella; ei uusia ikkunoita eikä tekstiä (PUHE ÄÄNENÄ). Pelikoodari luonnostelee repliikit → PT hyväksyy → generointi Pulun äänellä (turbo, yksi otto; lupa kortissa) → NUI natiivi. RAAMATTUUN SAAPUMINEN-kohtaan. Käännöslinja 2 käytössä 10.46 (Natiiviseppä).
+
+## PULUN OPASTUKSEN KÄSIKIRJOITUS ENNEN GENEROINTIA (11.10.2026 klo 10.54)
+
+11.10. 10.5x OMISTAJA: "näytä ne pulun tekstit (koko juttu mikä tulisi) ennen kun generoit" → opastuksen koko käsikirjoitus (repliikit, ajoitus, korostukset) omistajalle hyväksyttäväksi ennen generointia; Pelikoodari ei generoi ennen PT:n ilmoitusta omistajan hyväksynnästä.
+
+## PULUN ALUN KÄSIKIRJOITUS KOKONAISUUTENA (11.10.2026 klo 10.54)
+
+11.10. 10.5x OMISTAJA (opastuksen luonnos, kortti): kolme repliikkiä hyväksytty sisällöltään ("nämä hyvät"): 1) "Napauta kartan merkkejä – niistä aukeaa juttuja." 2) "Vastaa kysymykseen oikein, niin vihreä piste vie aarteen jäljille." 3) "Ja jos jokin mietityttää, napauta minua!" EI GENEROIDA VIELÄ: omistaja kysyi "mitä muuta pulu sanoo alussa?" ja "mitä pulu sanoo lennon valinnassa alussa" → Pelikoodari kokoaa koko alun käsikirjoituksen sanatarkasti (aloituskaupungin valinta, alkulento, saapuminen Tukholmaan, opastuksen paikka) tiedostoon docs/raportit/pulu-alku-kasikirjoitus-20261011.md → PT näyttää omistajalle (vastaus + Asemataulun Sinulle-osio) → vasta hyväksynnän jälkeen generointi (turbo, yksi otto) → NUI natiivi.
