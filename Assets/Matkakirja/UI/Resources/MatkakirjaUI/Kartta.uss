@@ -1766,6 +1766,29 @@
     color: var(--muted);
 }
 
+/* Punnan merkki omana tekstinään Luku-kirjasimella kuten pillerissä (Leima.TekstiPunnalla; Kone-kirjasimen £ näytti
+   &-merkiltä, PT 11.10.2026). Palat riviin ilman Labelin oletusvälejä; väli £:n eteen, kun pala päättyi välilyöntiin. */
+.mk-leima__rivi {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.mk-leima__rivi > Label {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.mk-leima__punta {
+    -unity-font-style: normal;
+}
+
+.mk-leima__rivi > .mk-leima__punta--vali {
+    margin-left: var(--tk-vali-xs);
+}
+
 /* Kartuschan radio (web .maapaneeli-radio): merkkivalo ja pieni "radio" maston oikeassa laidassa,
  * vain avattuna ja vain maille, joilla on asema. Valo palaa soidessa ja vilkkuu kanavan haun ajan. */
 .mk-kartuscha__radio {

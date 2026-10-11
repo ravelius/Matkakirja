@@ -1,12 +1,12 @@
 // TYYLIKIRJA — generoitu tiedostosta tyylikirja/tyylikirja.json (webin repo, node tools/tyylikirja.mjs --natiivi).
-// ÄLÄ MUOKKAA KÄSIN. lähde d6b293ff1c57. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
+// ÄLÄ MUOKKAA KÄSIN. lähde 10b6297ec042. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
 {
     public static class Tyylikirja
     {
-        public const string Lahde = "d6b293ff1c57";
+        public const string Lahde = "10b6297ec042";
 
         public static class Kehys
         {
@@ -84,6 +84,7 @@ namespace Matkakirja.Natiivi
         public static readonly Teema Tumma = new Teema("tumma", new Color32(32, 26, 20, 255), new Color32(241, 230, 208, 255), new Color32(201, 180, 143, 255), new Color32(217, 161, 59, 255), new Color32(217, 161, 59, 97), new Color32(217, 161, 59, 255));
         public static readonly Teema Lasi = new Teema("lasi", new Color32(46, 33, 20, 224), new Color32(243, 230, 208, 255), new Color32(201, 180, 143, 255), new Color32(217, 161, 59, 255), new Color32(217, 161, 59, 115), new Color32(217, 161, 59, 255));
         public static readonly Teema LasiAvaruus = new Teema("lasi-avaruus", new Color32(4, 12, 9, 230), new Color32(223, 246, 232, 255), new Color32(159, 201, 176, 255), new Color32(93, 255, 168, 255), new Color32(93, 255, 168, 71), new Color32(93, 255, 168, 255));
+        public static readonly Teema Videopeli = new Teema("videopeli", new Color32(19, 40, 74, 255), new Color32(232, 240, 251, 255), new Color32(169, 192, 222, 255), new Color32(127, 196, 255, 255), new Color32(127, 196, 255, 102), new Color32(217, 161, 59, 255));
         public static readonly Teema Harmaa = new Teema("harmaa", new Color32(130, 130, 130, 107), new Color32(224, 224, 224, 255), new Color32(189, 189, 189, 255), new Color32(255, 255, 255, 255), new Color32(170, 170, 170, 255), new Color32(170, 170, 170, 140));
         public static readonly Teema HarmaaKuulto = new Teema("harmaa-kuulto", new Color32(130, 130, 130, 0), new Color32(240, 240, 240, 255), new Color32(189, 189, 189, 255), new Color32(255, 255, 255, 255), new Color32(224, 224, 224, 153), new Color32(130, 130, 130, 107));
         public static readonly Teema Lcd = new Teema("lcd", new Color32(12, 34, 20, 255), new Color32(132, 255, 160, 255), new Color32(132, 255, 160, 158), new Color32(132, 255, 160, 255), new Color32(124, 255, 158, 71), new Color32(132, 255, 160, 255));
@@ -101,6 +102,8 @@ namespace Matkakirja.Natiivi
             public static readonly Color32 Virhe = new Color32(176, 58, 43, 255);
             public static readonly Color32 Live = new Color32(232, 137, 46, 255);
             public static readonly Color32 LiveKuulto = new Color32(232, 137, 46, 166);
+            public static readonly Color32 RahaVahenee = new Color32(255, 107, 87, 255);
+            public static readonly Color32 RahaKasvaa = new Color32(111, 207, 134, 255);
         }
 
         public static class Kuulto
@@ -308,6 +311,7 @@ namespace Matkakirja.Natiivi
             public static readonly Color32 Leima1A62 = new Color32(72, 74, 116, 158);
             public static readonly Color32 Leima2A55 = new Color32(120, 168, 108, 140);
             public static readonly Color32 Leima3 = new Color32(226, 102, 76, 255);
+            public static readonly Color32 LinssiHehku = new Color32(181, 123, 255, 255);
             public static readonly Color32 Muu1 = new Color32(59, 59, 59, 255);
             public static readonly Color32 Muu2A95 = new Color32(112, 42, 24, 242);
             public static readonly Color32 Muu3 = new Color32(138, 74, 28, 255);

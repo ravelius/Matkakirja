@@ -63,6 +63,9 @@ namespace Matkakirja.Peli
 
         const string Audio = AaniOsoite.Juuri + "audio/", Freesound = AaniOsoite.Juuri + "aanet/freesound-";
 
+        /// <summary>Vain natiivissa olevat tehosteet (web-peli tauolla): AaniTestit vertaa muita webin jälkeen.</summary>
+        public static readonly HashSet<string> VainNatiivi = new HashSet<string> { "kukkaro" };
+
         static Tehoste T(string nimi, string url, string aloitus, float kesto, float gain, float? vire = null, bool tasavire = false)
             => new Tehoste { Nimi = nimi, Url = url, Aloitus = aloitus, Kesto = kesto, Gain = gain, Vire = vire, Tasavire = tasavire };
 
@@ -76,6 +79,8 @@ namespace Matkakirja.Peli
             T("click", Audio + "efekti-klik.mp3", "alusta", 0.5f, 0.35f),
             T("paper", Audio + "efekti-paperi.mp3", "alusta", 1.2f, 0.35f),
             T("coin", Audio + "efekti-kolikot.mp3", "alusta", 1.3f, 0.40f),
+            // Kukkaron palaute, raha vähenee (omistaja 11.10.2026, juna 182): Sonniss GDC 2020, Stack Coin Bag 04.
+            T("kukkaro", Audio + "efekti-kukkaro-v1.mp3", "alusta", 0.96f, 0.40f),
             T("correct", Audio + "efekti-oikein.mp3", "alusta", 1.5f, 0.40f),
             T("wrong", Audio + "efekti-vaarin.mp3", "alusta", 1.1f, 0.40f),
             T("swipe", Audio + "efekti-pyyhkaisy.mp3", "alusta", 0.8f, 0.30f),
