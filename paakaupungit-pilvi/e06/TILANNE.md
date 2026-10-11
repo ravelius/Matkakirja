@@ -12,8 +12,8 @@ Vaihe 0: yhdeksän kontekstia ja saa-syote.json luotu alkuperäisellä tyokalu.m
 | ciudaddelapaz | lähdepaketti tehty; täysi A estyy: 0 karttakohdetta, opas/teema vajaat | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | saotome | A koottu; 6 ehdotusta, Obô-rajaus ja 2 kirkon oikeusportti avoin | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | bangui | lähdepaketti tehty; täysi A estyy karttaminimiin, 1 ruokanostoon ja opasminimiin | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
-| brazzaville | lähteiden luku käynnissä | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
-| kinshasa | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
+| brazzaville | A koottu; 6 ehdotusta, 1 koordinaattipoikkeus ja katedraalin vanhan kuvan portti | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
+| kinshasa | lähteiden luku käynnissä | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | luanda | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | kigali | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | gitega | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
@@ -45,3 +45,7 @@ Nykykaupunki uusi; ei lähteistettyä historiallista keskustakantaa. Konteksti j
 ## Bangui A-este
 
 UNESCO metallurginen historia luettu. FOP-yhteenveto ei kata still-valokuvia suojatuista teoksista; modernit rakennukset/patsaat pois. Käyttövalmiita kuutta keskustakohdetta ei löytynyt; UNESCO-koordinaatti vaatii lähdesäännön poikkeuksen, Ubangin paikallinen piste puuttuu, Boali ei kuulu keskustakarttaan. Ruokanoston T3 varsinainen faktamäärä 3, lisälähde tarvitaan. FCDO 11.10.2026: Banguihin muu kuin välttämätön matkustus vältettävä; muu maa ei matkasuositukseksi. Täyttä A:ta ei merkitä valmiiksi.
+
+## Brazzaville A
+
+0–9 koottu, musiikkiteema UNESCO City/Rumba-lähteillä. Kuusi ehdotusta, Ramsar-piste ensisijaislähteestä poikkeusehdotuksena, ei Wikipedia/Wikidata. Ile Mbamou -hallintoalueen väärä kaupunkipiste hylätty; Mbamu-saaren oikea piste luettu. Erell-teokset pois; katedraalista vain varmennettava vapaa ennen suojattuja uudistuksia oleva vanha asu. Luontopaikkojen mahdollinen yhdistäminen ja rajaus pääsession ratkaistava. Kinshasaan ei samaa rumbateemaa.
