@@ -6,8 +6,7 @@
   "Q12184607",
   "Q826118",
   "Q66134031",
-  "Q125676954",
-  "Q6852243"
+  "Q125676954"
  ],
  "kohteet": [
   {
@@ -163,42 +162,6 @@
      "selite": "Palatsin muurit ja kellotorni sijaitsevat kaupungin keskustassa meren lähellä.",
      "leveys": 4928,
      "korkeus": 3264,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
-   "q": "Q6852243",
-   "nimi": "Suitsukemaan museo",
-   "peruste": "pelin nosto",
-   "koko_m": 150,
-   "lat": 17.00936,
-   "lon": 54.13611,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Salalah, museo della terra degli incensi, entrata.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salalah%2C_museo_della_terra_degli_incensi%2C_entrata.jpg?width=1280",
-     "tekija": "Francesco Bini",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Salalah%2C_museo_della_terra_degli_incensi%2C_entrata.jpg",
-     "selite": "Suitsukemaan museo kertoo Dhofarin suitsukekaupan historiasta Al-Baleedin vieressä.",
-     "leveys": 5805,
-     "korkeus": 4000,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Salalah, museo della terra degli incensi, cortile 01.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salalah%2C_museo_della_terra_degli_incensi%2C_cortile_01.jpg?width=1280",
-     "tekija": "Francesco Bini",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Salalah%2C_museo_della_terra_degli_incensi%2C_cortile_01.jpg",
-     "selite": "Museon sisäpihalla kasvaa suitsukepuu, ja ympäröivissä saleissa esitellään alueen perintöä.",
-     "leveys": 6720,
-     "korkeus": 4480,
      "tarkistettu": true
     }
    ]

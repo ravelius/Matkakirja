@@ -3,42 +3,6 @@
  "kaupunkiQ": "Q3861",
  "kohteet": [
   {
-   "q": "Q1148353",
-   "nimi": "Islamilaisen taiteen museo",
-   "peruste": "pelin nosto",
-   "koko_m": 250,
-   "lat": 25.29502,
-   "lon": 51.53927,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Museum of Islamic Art Park, Doha.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum_of_Islamic_Art_Park%2C_Doha.jpg?width=1280",
-     "tekija": "Sandra Doha",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museum_of_Islamic_Art_Park%2C_Doha.jpg",
-     "selite": "Islamilaisen taiteen museo kohoaa keinotekoisella saarella Dohan lahden rannalla puistonsa takana.",
-     "leveys": 4032,
-     "korkeus": 3024,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "View of the Persian Gulf and the Museum of Islamic Art in Qatar at dusk.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_the_Persian_Gulf_and_the_Museum_of_Islamic_Art_in_Qatar_at_dusk.jpg?width=1280",
-     "tekija": "Alex Sergeev (www.asergeev.com)",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_the_Persian_Gulf_and_the_Museum_of_Islamic_Art_in_Qatar_at_dusk.jpg",
-     "selite": "Illansuussa museon geometrinen rakennus heijastuu tyyneen Persianlahden veteen.",
-     "leveys": 1634,
-     "korkeus": 1087,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
    "q": "Q4117959",
    "nimi": "Souq Waqif",
    "peruste": "pelin nosto",
@@ -159,19 +123,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "National Museum of Qatar.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Museum_of_Qatar.jpg?width=1280",
-     "tekija": "CallMeBarcode",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Museum_of_Qatar.jpg",
-     "selite": "Vanhan palatsin portin läpi näkyy museon aavikon ruusua muistuttava uudisrakennus.",
-     "leveys": 4032,
-     "korkeus": 1960,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "National Museum of Qatar building and skyline of Old Salata.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Museum_of_Qatar_building_and_skyline_of_Old_Salata.jpg?width=1280",
      "tekija": "Michael Coghlan @ Flickr",
@@ -290,19 +241,6 @@
      "leveys": 1634,
      "korkeus": 1087,
      "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Marsa Malaz Kempinski Hotel in Porto Arabia.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marsa_Malaz_Kempinski_Hotel_in_Porto_Arabia.jpg?width=1280",
-     "tekija": "Alex Sergeev (www.asergeev.com)",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marsa_Malaz_Kempinski_Hotel_in_Porto_Arabia.jpg",
-     "selite": "Porto Arabian rannalla kohoaa palatsimainen hotelli Venetsiaa muistuttavien kanavien äärellä.",
-     "leveys": 1605,
-     "korkeus": 1068,
-     "tarkistettu": true
     }
    ]
   },
@@ -316,19 +254,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Qatar National Library-03.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Qatar_National_Library-03.jpg?width=1280",
-     "tekija": "Mohammed Abdul Mutallib",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Qatar_National_Library-03.jpg",
-     "selite": "Kansalliskirjaston avoimessa salissa kirjahyllyt nousevat portaikon tavoin tasoilta toisille.",
-     "leveys": 5922,
-     "korkeus": 3948,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "Qatar National Library 2.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Qatar_National_Library_2.jpg?width=1280",
      "tekija": "Sharawi13",

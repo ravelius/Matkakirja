@@ -2445,7 +2445,6 @@
    "lat": 25.286,
    "lon": 51.529,
    "kohteet": [
-    "Q1148353",
     "Q4117959",
     "Q1234812",
     "Q3084218",
@@ -2497,9 +2496,7 @@
     "Q62939",
     "Q277294",
     "Q1262853",
-    "Q2384491",
     "Q20386392",
-    "Q22948398",
     "Q1135647",
     "Q2298717",
     "Q292826",
@@ -5349,11 +5346,7 @@
    "lat": 29.375,
    "lon": 47.98,
    "kohteet": [
-    "Q1335640",
-    "Q557933",
-    "Q1432832",
     "Q3564897",
-    "Q80688",
     "Q1392962",
     "Q15156679",
     "Q4702482",
@@ -5930,7 +5923,6 @@
     "Q311581",
     "Q932622",
     "Q260386",
-    "Q1878362",
     "Q6811142",
     "Q750212"
    ],
@@ -6481,14 +6473,11 @@
    "lat": 23.614,
    "lon": 58.592,
    "kohteet": [
-    "Q1548443",
     "Q2121461",
     "Q12208363",
     "Q5470708",
     "Q1166791",
-    "Q3329080",
-    "Q3330063",
-    "Q1332652"
+    "Q3329080"
    ],
    "kuvat": [
     {
@@ -6887,9 +6876,6 @@
     "Q1637149",
     "Q445830",
     "Q2579175",
-    "Q2635425",
-    "Q2561905",
-    "Q17611440",
     "Q2384518"
    ],
    "kuvat": [
@@ -8428,9 +8414,9 @@
     "Q109236300",
     "Q1088438",
     "Q5352538",
-    "Q55628557",
     "Q5651329",
     "Q1633327",
+    "Q6429071",
     "Q2289928",
     "Q106322306",
     "Q4746418"
@@ -9072,8 +9058,7 @@
     "Q12184607",
     "Q826118",
     "Q66134031",
-    "Q125676954",
-    "Q6852243"
+    "Q125676954"
    ],
    "kuvat": [
     {
@@ -9240,7 +9225,6 @@
     "Q12220316",
     "Q12195545",
     "Q2548705",
-    "Q4115837",
     "Q12204207",
     "Q13668725",
     "Q13668727"
@@ -10323,7 +10307,6 @@
     "Q723951",
     "Q4810130",
     "Q4810167",
-    "Q2569026",
     "Q4746621",
     "Q4810730",
     "Q5964315"
@@ -13881,19 +13864,6 @@
      "selite": "Kaupunginkirjaston punatiilinen rakennus seisoo puiden varjossa keskustassa.",
      "leveys": 4032,
      "korkeus": 3024,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "ASPL exterior mural (i) 02.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ASPL_exterior_mural_(i)_02.jpg?width=1280",
-     "tekija": "Alice Springs Public Library",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ASPL_exterior_mural_(i)_02.jpg",
-     "selite": "Rakennuksen seinää koristaa keskisen Australian maisemaa esittävä seinämaalaus.",
-     "leveys": 2048,
-     "korkeus": 1365,
      "tarkistettu": true
     }
    ]
@@ -18937,19 +18907,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Courtyard of the Iraq Museum in Baghdad, Iraq.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Courtyard_of_the_Iraq_Museum_in_Baghdad%2C_Iraq.jpg?width=1280",
-     "tekija": "Osama Shukir Muhammed Amin FRCP(Glasg)",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Courtyard_of_the_Iraq_Museum_in_Baghdad%2C_Iraq.jpg",
-     "selite": "Irakin kansallismuseon sisäpiha ja rakennus säilyttävät Mesopotamian vanhimpia esineitä.",
-     "leveys": 6016,
-     "korkeus": 4016,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "Prehistory Hall. the Iraq Museum in Baghdad, Iraq.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prehistory_Hall._the_Iraq_Museum_in_Baghdad%2C_Iraq.jpg?width=1280",
      "tekija": "Osama Shukir Muhammed Amin FRCP(Glasg)",
@@ -19111,15 +19068,15 @@
     },
     {
      "jarjestys": 3,
-     "tiedosto": "Al-Mutanabbi Street Gate.png",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Mutanabbi_Street_Gate.png?width=1280",
-     "tekija": "Ayham4002",
+     "tiedosto": "Almutanabi street 2017 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Almutanabi_street_2017_2.jpg?width=1280",
+     "tekija": "MohammadHuzam",
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-Mutanabbi_Street_Gate.png",
-     "selite": "Kadun portti on koristeltu tiilikuviolla ja kaarella, joka johdattaa kirjamarkkinalle.",
-     "leveys": 2936,
-     "korkeus": 3797,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Almutanabi_street_2017_2.jpg",
+     "selite": "Mutanabbin katu Bagdadin Rusafan puolella: kapeaa katua reunustavat vanhat parvekkeelliset talot, ja jalankulkijat täyttävät sen.",
+     "leveys": 3264,
+     "korkeus": 1836,
      "tarkistettu": true
     }
    ]
@@ -34219,43 +34176,6 @@
    "lon": 125.52472,
    "kuvat": []
   },
-  "Q1148353": {
-   "nimi": "Islamilaisen taiteen museo",
-   "peruste": "pelin nosto",
-   "kaupunki": "doha",
-   "kaupunkiQ": "Q3861",
-   "lat": 25.29502,
-   "lon": 51.53927,
-   "koko_m": 250,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Museum of Islamic Art Park, Doha.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum_of_Islamic_Art_Park%2C_Doha.jpg?width=1280",
-     "tekija": "Sandra Doha",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museum_of_Islamic_Art_Park%2C_Doha.jpg",
-     "selite": "Islamilaisen taiteen museo kohoaa keinotekoisella saarella Dohan lahden rannalla puistonsa takana.",
-     "leveys": 4032,
-     "korkeus": 3024,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "View of the Persian Gulf and the Museum of Islamic Art in Qatar at dusk.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_the_Persian_Gulf_and_the_Museum_of_Islamic_Art_in_Qatar_at_dusk.jpg?width=1280",
-     "tekija": "Alex Sergeev (www.asergeev.com)",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_the_Persian_Gulf_and_the_Museum_of_Islamic_Art_in_Qatar_at_dusk.jpg",
-     "selite": "Illansuussa museon geometrinen rakennus heijastuu tyyneen Persianlahden veteen.",
-     "leveys": 1634,
-     "korkeus": 1087,
-     "tarkistettu": true
-    }
-   ]
-  },
   "Q4117959": {
    "nimi": "Souq Waqif",
    "peruste": "pelin nosto",
@@ -34380,19 +34300,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "National Museum of Qatar.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Museum_of_Qatar.jpg?width=1280",
-     "tekija": "CallMeBarcode",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Museum_of_Qatar.jpg",
-     "selite": "Vanhan palatsin portin läpi näkyy museon aavikon ruusua muistuttava uudisrakennus.",
-     "leveys": 4032,
-     "korkeus": 1960,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "National Museum of Qatar building and skyline of Old Salata.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Museum_of_Qatar_building_and_skyline_of_Old_Salata.jpg?width=1280",
      "tekija": "Michael Coghlan @ Flickr",
@@ -34514,19 +34421,6 @@
      "leveys": 1634,
      "korkeus": 1087,
      "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Marsa Malaz Kempinski Hotel in Porto Arabia.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marsa_Malaz_Kempinski_Hotel_in_Porto_Arabia.jpg?width=1280",
-     "tekija": "Alex Sergeev (www.asergeev.com)",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marsa_Malaz_Kempinski_Hotel_in_Porto_Arabia.jpg",
-     "selite": "Porto Arabian rannalla kohoaa palatsimainen hotelli Venetsiaa muistuttavien kanavien äärellä.",
-     "leveys": 1605,
-     "korkeus": 1068,
-     "tarkistettu": true
     }
    ]
   },
@@ -34541,19 +34435,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Qatar National Library-03.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Qatar_National_Library-03.jpg?width=1280",
-     "tekija": "Mohammed Abdul Mutallib",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Qatar_National_Library-03.jpg",
-     "selite": "Kansalliskirjaston avoimessa salissa kirjahyllyt nousevat portaikon tavoin tasoilta toisille.",
-     "leveys": 5922,
-     "korkeus": 3948,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "Qatar National Library 2.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Qatar_National_Library_2.jpg?width=1280",
      "tekija": "Sharawi13",
@@ -34842,43 +34723,6 @@
     }
    ]
   },
-  "Q2384491": {
-   "nimi": "Dubai Fountain",
-   "peruste": "sitelinks",
-   "kaupunki": "dubai",
-   "kaupunkiQ": "Q612",
-   "lat": 25.19519,
-   "lon": 55.27506,
-   "koko_m": 300,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Dubai Fountain 7.JPG",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubai_Fountain_7.JPG?width=1280",
-     "tekija": "Nealt",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dubai_Fountain_7.JPG",
-     "selite": "Dubai Fountain ammuttaa vettä Burj Khalifan juurella olevasta tekolammesta musiikin tahtiin.",
-     "leveys": 3264,
-     "korkeus": 2448,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "At the Top SKY @ Burj Khalifa @ Dubai (15698484788).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_the_Top_SKY_%40_Burj_Khalifa_%40_Dubai_(15698484788).jpg?width=1280",
-     "tekija": "Guilhem Vellut from Annecy, France",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_the_Top_SKY_%40_Burj_Khalifa_%40_Dubai_(15698484788).jpg",
-     "selite": "Ylhäältä katsottuna suihkulähteen tekojärvi ympäröi Downtownin rakennuksia.",
-     "leveys": 3968,
-     "korkeus": 2976,
-     "tarkistettu": true
-    }
-   ]
-  },
   "Q20386392": {
    "nimi": "Dubai Frame",
    "peruste": "sitelinks",
@@ -34912,43 +34756,6 @@
      "selite": "Hämärässä kehys erottuu kaupungin siluetista kultaisena viivana.",
      "leveys": 1240,
      "korkeus": 930,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q22948398": {
-   "nimi": "Tulevaisuuden museo",
-   "peruste": "sitelinks",
-   "kaupunki": "dubai",
-   "kaupunkiQ": "Q612",
-   "lat": 25.21912,
-   "lon": 55.2821,
-   "koko_m": 120,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Museum of the Future.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum_of_the_Future.jpg?width=1280",
-     "tekija": "Александр Сигачёв",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museum_of_the_Future.jpg",
-     "selite": "Tulevaisuuden museon soikean rakennuksen julkisivua koristavat arabialaisen kalligrafian säkeet.",
-     "leveys": 6000,
-     "korkeus": 8000,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Museum of the Future 9.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum_of_the_Future_9.jpg?width=1280",
-     "tekija": "EditQ",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museum_of_the_Future_9.jpg",
-     "selite": "Rengasmainen rakennus nousee Sheikh Zayed Roadin varrelle Dubain keskustassa.",
-     "leveys": 4000,
-     "korkeus": 3000,
      "tarkistettu": true
     }
    ]
@@ -48509,15 +48316,15 @@
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Balikli Kadin statue Kemeralti Izmir 2024.jpeg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Balikli_Kadin_statue_Kemeralti_Izmir_2024.jpeg?width=1280",
-     "tekija": "Furkan Akkurt",
+     "tiedosto": "Izmir Kemeraltı Çarşısı 5906.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Izmir_Kemeralt%C4%B1_%C3%87ar%C5%9F%C4%B1s%C4%B1_5906.jpg?width=1280",
+     "tekija": "Dosseman",
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Balikli_Kadin_statue_Kemeralti_Izmir_2024.jpeg",
-     "selite": "Balıklı Kadın -patsas seisoo Kemeraltın basaarin laidalla.",
-     "leveys": 1920,
-     "korkeus": 2560,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Izmir_Kemeralt%C4%B1_%C3%87ar%C5%9F%C4%B1s%C4%B1_5906.jpg",
+     "selite": "Kemeraltın basaarin ahtaalla kujalla kulkee ostajia kauppojen välissä, ja taustalla kohoaa moskeija.",
+     "leveys": 3008,
+     "korkeus": 2000,
      "tarkistettu": true
     }
    ]
@@ -50883,19 +50690,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Jerusalem Chords Bridge 7.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem_Chords_Bridge_7.jpg?width=1280",
-     "tekija": "Shabatashtiot",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jerusalem_Chords_Bridge_7.jpg",
-     "selite": "Jerusalemin kielisilta on kaupungin sisäänkäynnillä kohoava, harpun kielten näköinen riippusilta.",
-     "leveys": 4000,
-     "korkeus": 2250,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "Jerusalem Chords Bridge.JPG",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem_Chords_Bridge.JPG?width=1280",
      "tekija": "Petdad",
@@ -50908,7 +50702,7 @@
      "tarkistettu": true
     },
     {
-     "jarjestys": 3,
+     "jarjestys": 2,
      "tiedosto": "Jerusalem Chords Bridge 5.JPG",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem_Chords_Bridge_5.JPG?width=1280",
      "tekija": "Little Savage",
@@ -60552,156 +60346,6 @@
     }
    ]
   },
-  "Q1335640": {
-   "nimi": "Kuwait-tornit",
-   "peruste": "pelin nosto",
-   "kaupunki": "kuwait",
-   "kaupunkiQ": "Q35178",
-   "lat": 29.39,
-   "lon": 48.00306,
-   "koko_m": 250,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Kuwait (31420655062).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait_(31420655062).jpg?width=1280",
-     "tekija": "Jaafar Alnasser",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_(31420655062).jpg",
-     "selite": "Kuwait-tornit kohoavat yöllä Persianlahden rannalla ja heijastuvat tummaan veteen.",
-     "leveys": 4856,
-     "korkeus": 2374,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Kuwait towers.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait_towers.jpg?width=1280",
-     "tekija": "Mikael Lindmark",
-     "lisenssi": "CC BY-SA 2.5 se",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5/se/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_towers.jpg",
-     "selite": "Kuwait-tornit erottuvat Kuwaitin kaupungin rannikkosiluetissa hopeanvärisinä neulamaisina torneina.",
-     "leveys": 1600,
-     "korkeus": 1200,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Kuwait Towers at night (4283818686).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait_Towers_at_night_(4283818686).jpg?width=1280",
-     "tekija": "Divya Thakur",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_Towers_at_night_(4283818686).jpg",
-     "selite": "Valaistut tornit ovat kaupungin tunnetuin tunnusmerkki meren puolelta katsottuna.",
-     "leveys": 4288,
-     "korkeus": 2848,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q557933": {
-   "nimi": "Al Hamra -torni",
-   "peruste": "pelin nosto",
-   "kaupunki": "kuwait",
-   "kaupunkiQ": "Q35178",
-   "lat": 29.37861,
-   "lon": 47.99278,
-   "koko_m": 200,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Kuwait City Kuwait Towers View to the al-Hamra Tower.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait_City_Kuwait_Towers_View_to_the_al-Hamra_Tower.jpg?width=1280",
-     "tekija": "Zairon",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_City_Kuwait_Towers_View_to_the_al-Hamra_Tower.jpg",
-     "selite": "Al Hamra -torni on Kuwaitin korkein rakennus, ja sen kiertyvä kivijulkisivu erottuu pilvenpiirtäjien joukosta.",
-     "leveys": 4486,
-     "korkeus": 3140,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Kuwait Alhamra Tower (37472150).jpeg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait_Alhamra_Tower_(37472150).jpeg?width=1280",
-     "tekija": "Ghala Alrefaei",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_Alhamra_Tower_(37472150).jpeg",
-     "selite": "Auringonlasku värjää Al Hamra -tornin lasipinnan ja keskustan tornit oransseiksi.",
-     "leveys": 2048,
-     "korkeus": 1997,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Al-Hamra-Tower-night-001.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Hamra-Tower-night-001.jpg?width=1280",
-     "tekija": "Aziz J.Hayat",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-Hamra-Tower-night-001.jpg",
-     "selite": "Illan hämärässä Al Hamra -tornin siluetti piirtyy sinistä taivasta vasten.",
-     "leveys": 3730,
-     "korkeus": 2916,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q1432832": {
-   "nimi": "Kuwaitin suurmoskeija",
-   "peruste": "pelin nosto",
-   "kaupunki": "kuwait",
-   "kaupunkiQ": "Q35178",
-   "lat": 29.36972,
-   "lon": 47.97833,
-   "koko_m": 250,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Kuwait City Grand Mosque Exterior South Facade 5.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait_City_Grand_Mosque_Exterior_South_Facade_5.jpg?width=1280",
-     "tekija": "Zairon",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_City_Grand_Mosque_Exterior_South_Facade_5.jpg",
-     "selite": "Suurmoskeija on Kuwaitin valtionmoskeija, jonka kupoli ja minareetti kohoavat Arabian Gulf Streetin varrella.",
-     "leveys": 4544,
-     "korkeus": 2864,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Kuwait City Grand Mosque Interior 04.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait_City_Grand_Mosque_Interior_04.jpg?width=1280",
-     "tekija": "Zairon",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_City_Grand_Mosque_Interior_04.jpg",
-     "selite": "Rukoussalin pylväät ja kullatut yksityiskohdat kehystävät moskeijan laajaa sisätilaa.",
-     "leveys": 4353,
-     "korkeus": 3429,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Kuwait City Grand Mosque Exterior Doors.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait_City_Grand_Mosque_Exterior_Doors.jpg?width=1280",
-     "tekija": "Zairon",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_City_Grand_Mosque_Exterior_Doors.jpg",
-     "selite": "Moskeijan puiset ovet ovat koristeellisesti veistetyt.",
-     "leveys": 3442,
-     "korkeus": 3447,
-     "tarkistettu": true
-    }
-   ]
-  },
   "Q3564897": {
    "nimi": "Seifin palatsi",
    "peruste": "pelin nosto",
@@ -60722,43 +60366,6 @@
      "selite": "Seifin palatsin edustaa reunustavat palmut ja valaisimet johtavat hallintorakennuksen portille.",
      "leveys": 3264,
      "korkeus": 2448,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q80688": {
-   "nimi": "Vapautustorni",
-   "peruste": "sitelinks",
-   "kaupunki": "kuwait",
-   "kaupunkiQ": "Q35178",
-   "lat": 29.36828,
-   "lon": 47.97495,
-   "koko_m": 100,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Kuwait cosmopolis - don't miss the details - zoom in (540280595).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait_cosmopolis_-_don't_miss_the_details_-_zoom_in_(540280595).jpg?width=1280",
-     "tekija": "Snap® from Kuwait, Kuwait",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_cosmopolis_-_don't_miss_the_details_-_zoom_in_(540280595).jpg",
-     "selite": "Vapautustorni nousee Kuwaitin keskustan yläpuolelle valaistuna tv- ja tietoliikennetornina.",
-     "leveys": 3456,
-     "korkeus": 2304,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Kuwait highway.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuwait_highway.jpg?width=1280",
-     "tekija": "Fawaz",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuwait_highway.jpg",
-     "selite": "Moottoritien yllä kohoaa Vapautustornin merkkivalaistu huippu.",
-     "leveys": 3100,
-     "korkeus": 2325,
      "tarkistettu": true
     }
    ]
@@ -66313,43 +65920,6 @@
     }
    ]
   },
-  "Q1878362": {
-   "nimi": "Luxorin museo",
-   "peruste": "sitelinks",
-   "kaupunki": "luxor",
-   "kaupunkiQ": "Q130514",
-   "lat": 25.70772,
-   "lon": 32.64449,
-   "koko_m": 150,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Luxor Museum 2010.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Luxor_Museum_2010.jpg?width=1280",
-     "tekija": "Michiel1972",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Luxor_Museum_2010.jpg",
-     "selite": "Luxorin museo esittelee Theeban alueen esineistöä.",
-     "leveys": 2592,
-     "korkeus": 1944,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "1975 wurde das Luxor-Museum eröffnet. 01.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1975_wurde_das_Luxor-Museum_er%C3%B6ffnet._01.jpg?width=1280",
-     "tekija": "Holger Uwe Schmitt",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1975_wurde_das_Luxor-Museum_er%C3%B6ffnet._01.jpg",
-     "selite": "Museon rakennus avattiin vuonna 1975 Niilin rannalle.",
-     "leveys": 5906,
-     "korkeus": 3941,
-     "tarkistettu": true
-    }
-   ]
-  },
   "Q6811142": {
    "nimi": "Sfinksikuja",
    "peruste": "pelin nosto",
@@ -70871,69 +70441,6 @@
     }
    ]
   },
-  "Q1548443": {
-   "nimi": "Sulttaani Qaboosin suurmoskeija",
-   "peruste": "sitelinks",
-   "kaupunki": "masqat",
-   "kaupunkiQ": "Q3826",
-   "lat": 23.58389,
-   "lon": 58.38917,
-   "koko_m": 400,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Sultan Qaboos Grand Mosque (19889998133).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sultan_Qaboos_Grand_Mosque_(19889998133).jpg?width=1280",
-     "tekija": "Riyadh Al Balushi",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sultan_Qaboos_Grand_Mosque_(19889998133).jpg",
-     "selite": "Suurmoskeijan minareetit ja kupoli hohtavat auringonlaskun aikaan puistomaisen pihan takana.",
-     "leveys": 5184,
-     "korkeus": 3456,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Sultan Qaboos Grand Mosque (1).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sultan_Qaboos_Grand_Mosque_(1).jpg?width=1280",
-     "tekija": "Mostafameraji",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sultan_Qaboos_Grand_Mosque_(1).jpg",
-     "selite": "Moskeijan puutarhan kukkaistutukset johtavat katsetta kohti moskeijan minareettia.",
-     "leveys": 5000,
-     "korkeus": 3333,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Muscat, moschea del sultano qaboos, interno, grande sala di preghiera 01.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Muscat%2C_moschea_del_sultano_qaboos%2C_interno%2C_grande_sala_di_preghiera_01.jpg?width=1280",
-     "tekija": "Francesco Bini",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Muscat%2C_moschea_del_sultano_qaboos%2C_interno%2C_grande_sala_di_preghiera_01.jpg",
-     "selite": "Suuri rukoussali on katettu valtavalla kristallikruunulla ja koristeellisella kupolilla.",
-     "leveys": 5787,
-     "korkeus": 4480,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 4,
-     "tiedosto": "Muscat, moschea del sultano qaboos, esterno 04.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Muscat%2C_moschea_del_sultano_qaboos%2C_esterno_04.jpg?width=1280",
-     "tekija": "Francesco Bini",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Muscat%2C_moschea_del_sultano_qaboos%2C_esterno_04.jpg",
-     "selite": "Moskeijan kaari kehystää minareetin kirkasta taivasta vasten.",
-     "leveys": 4181,
-     "korkeus": 6271,
-     "tarkistettu": true
-    }
-   ]
-  },
   "Q2121461": {
    "nimi": "Al Alamin palatsi",
    "peruste": "pelin nosto",
@@ -71180,93 +70687,6 @@
      "selite": "Museon sisäpiha ja valkoiset rakennukset sijaitsevat vuoren juurella.",
      "leveys": 2592,
      "korkeus": 1944,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q3330063": {
-   "nimi": "Masqatin portti",
-   "peruste": "pelin nosto",
-   "kaupunki": "masqat",
-   "kaupunkiQ": "Q3826",
-   "lat": 23.6175,
-   "lon": 58.5869,
-   "koko_m": 100,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Muscat Gate Museum.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Muscat_Gate_Museum.jpg?width=1280",
-     "tekija": "Tristan from Luxembourg, Luxembourg",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Muscat_Gate_Museum.jpg",
-     "selite": "Masqatin portti on Vanhan Masqatin muurin kaksikaarinen portti, jonka yläkerrassa on museo.",
-     "leveys": 4928,
-     "korkeus": 3264,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Puerta de Mascate, Omán, 2024-08-14, DD 56.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puerta_de_Mascate%2C_Om%C3%A1n%2C_2024-08-14%2C_DD_56.jpg?width=1280",
-     "tekija": "Diego Delso",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Puerta_de_Mascate%2C_Om%C3%A1n%2C_2024-08-14%2C_DD_56.jpg",
-     "selite": "Portin tiilikaarien läpi kulkee katu Vanhaan Masqatiin.",
-     "leveys": 4962,
-     "korkeus": 4206,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Muscat-Gate-Museum.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Muscat-Gate-Museum.jpg?width=1280",
-     "tekija": "Firoze Edassery",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Muscat-Gate-Museum.jpg",
-     "selite": "Illalla muurin valaistus korostaa portin kivipintaa.",
-     "leveys": 1522,
-     "korkeus": 1015,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q1332652": {
-   "nimi": "Masqatin kuninkaallinen ooppera",
-   "peruste": "sitelinks",
-   "kaupunki": "masqat",
-   "kaupunkiQ": "Q3826",
-   "lat": 23.61406,
-   "lon": 58.46872,
-   "koko_m": 150,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Royal Opera House Muscat - Outside View I.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Royal_Opera_House_Muscat_-_Outside_View_I.jpg?width=1280",
-     "tekija": "Taha Al-Hayali",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Royal_Opera_House_Muscat_-_Outside_View_I.jpg",
-     "selite": "Kuninkaallisen oopperatalon valkoinen sisäänkäynti on koristeltu perinteisillä omanilaisilla kaarimuodoilla.",
-     "leveys": 3468,
-     "korkeus": 4624,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Royal Opera House Muscat, Muscat, Sultanate of Oman.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Royal_Opera_House_Muscat%2C_Muscat%2C_Sultanate_of_Oman.jpg?width=1280",
-     "tekija": "Chief National Guard Bureau",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Royal_Opera_House_Muscat%2C_Muscat%2C_Sultanate_of_Oman.jpg",
-     "selite": "Oopperatalon salin parvet ja puuverhoilu ovat osa Persianlahden alueen ensimmäistä varsinaista oopperataloa.",
-     "leveys": 3300,
-     "korkeus": 1856,
      "tarkistettu": true
     }
    ]
@@ -72370,28 +71790,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Coop's Shot Tower in Melbourne Australia in February 2015.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coop's_Shot_Tower_in_Melbourne_Australia_in_February_2015.jpg?width=1280",
-     "tekija": "Tim Adams",
-     "lisenssi": "CC BY 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Coop's_Shot_Tower_in_Melbourne_Australia_in_February_2015.jpg",
-     "selite": "Lyijyhaulien valmistukseen rakennettu tiilitorni on nykyään lasikatteisen ostoskeskuksen sisällä.",
-     "leveys": 4792,
-     "korkeus": 3188,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Coop's Shot Tower, Melbourne Central 09.06.18.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coop's_Shot_Tower%2C_Melbourne_Central_09.06.18.jpg?width=1280",
-     "tekija": "FotesEtc",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Coop's_Shot_Tower%2C_Melbourne_Central_09.06.18.jpg",
-     "selite": "Lasikartio kohoaa tiilitornin ympärille.",
-     "leveys": 4000,
-     "korkeus": 4000,
+     "tiedosto": "Melbourne City Loop Museum Station, now Melbourne Central, under construction 1974 with Coop's Shot Tower 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Melbourne_City_Loop_Museum_Station%2C_now_Melbourne_Central%2C_under_construction_1974_with_Coop's_Shot_Tower_1.jpg?width=1280",
+     "tekija": "Leone Mills, State Library of Victoria",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Melbourne_City_Loop_Museum_Station%2C_now_Melbourne_Central%2C_under_construction_1974_with_Coop's_Shot_Tower_1.jpg",
+     "selite": "Heinäkuussa 1974 otetussa mustavalkokuvassa Coopin haulitorni kohoaa avoimena Museum Stationin työmaan ja keskustan rakennusten yllä.",
+     "leveys": 1600,
+     "korkeus": 1267,
      "tarkistettu": true
     }
    ]
@@ -75156,91 +74563,6 @@
      "selite": "Matalat pastellinsävyiset kerrostalot muistuttavat Minskin vanhasta kauppiaskaupungista.",
      "leveys": 5472,
      "korkeus": 3648,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q2635425": {
-   "nimi": "Voiton aukio",
-   "peruste": "sitelinks",
-   "kaupunki": "minsk",
-   "kaupunkiQ": "Q2280",
-   "lat": 53.90853,
-   "lon": 27.57478,
-   "koko_m": 250,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Victory square, Minsk 01.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Victory_square%2C_Minsk_01.jpg?width=1280",
-     "tekija": "User:Redline",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Victory_square%2C_Minsk_01.jpg",
-     "selite": "Aukion keskellä kohoaa toisen maailmansodan voittomonumentti, jota ympäröivät stalinistiset kerrostalot.",
-     "leveys": 3008,
-     "korkeus": 2000,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q2561905": {
-   "nimi": "Valko-Venäjän kansallisooppera ja -baletti",
-   "peruste": "sitelinks",
-   "kaupunki": "minsk",
-   "kaupunkiQ": "Q2280",
-   "lat": 53.91028,
-   "lon": 27.56139,
-   "koko_m": 120,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Нацыянальны акадэмічны Вялікі тэатар опэры і балету г. Менск 2.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9D%D0%B0%D1%86%D1%8B%D1%8F%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B_%D0%B0%D0%BA%D0%B0%D0%B4%D1%8D%D0%BC%D1%96%D1%87%D0%BD%D1%8B_%D0%92%D1%8F%D0%BB%D1%96%D0%BA%D1%96_%D1%82%D1%8D%D0%B0%D1%82%D0%B0%D1%80_%D0%BE%D0%BF%D1%8D%D1%80%D1%8B_%D1%96_%D0%B1%D0%B0%D0%BB%D0%B5%D1%82%D1%83_%D0%B3._%D0%9C%D0%B5%D0%BD%D1%81%D0%BA_2.jpg?width=1280",
-     "tekija": "Антон Алегавіч Макоўскі",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B0%D1%86%D1%8B%D1%8F%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B_%D0%B0%D0%BA%D0%B0%D0%B4%D1%8D%D0%BC%D1%96%D1%87%D0%BD%D1%8B_%D0%92%D1%8F%D0%BB%D1%96%D0%BA%D1%96_%D1%82%D1%8D%D0%B0%D1%82%D0%B0%D1%80_%D0%BE%D0%BF%D1%8D%D1%80%D1%8B_%D1%96_%D0%B1%D0%B0%D0%BB%D0%B5%D1%82%D1%83_%D0%B3._%D0%9C%D0%B5%D0%BD%D1%81%D0%BA_2.jpg",
-     "selite": "Vuonna 1939 valmistunut suuri teatterirakennus seisoo suihkulähteellä kaunistetun puiston reunalla.",
-     "leveys": 3386,
-     "korkeus": 2712,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q17611440": {
-   "nimi": "Kaupungin portit",
-   "peruste": "kaupungin päänähtävyys",
-   "kaupunki": "minsk",
-   "kaupunkiQ": "Q2280",
-   "lat": 53.8918,
-   "lon": 27.5517,
-   "koko_m": 150,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Babrujskaja, Minsk.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Babrujskaja%2C_Minsk.jpg?width=1280",
-     "tekija": "Viktar Palstsiuk",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Babrujskaja%2C_Minsk.jpg",
-     "selite": "Rautatieaseman edustan kaksi vuonna 1954 valmistunutta tornitaloa muodostavat Minskin portin.",
-     "leveys": 3727,
-     "korkeus": 2795,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "2025.08.07 Minsk Tower Kirava street 1.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2025.08.07_Minsk_Tower_Kirava_street_1.jpg?width=1280",
-     "tekija": "Tess Mattew",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2025.08.07_Minsk_Tower_Kirava_street_1.jpg",
-     "selite": "Stalinistisen ajan tornitalon koristeellinen huippu erottuu Kiravan kadun yllä.",
-     "leveys": 2899,
-     "korkeus": 3906,
      "tarkistettu": true
     }
    ]
@@ -88427,30 +87749,6 @@
     }
    ]
   },
-  "Q55628557": {
-   "nimi": "Papua-Uuden-Guinean kansallismuseo",
-   "peruste": "pelin nosto",
-   "kaupunki": "portmoresby",
-   "kaupunkiQ": "Q36526",
-   "lat": -9.42561,
-   "lon": 147.19011,
-   "koko_m": 200,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Papua New Guinea National Museum May 2015.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Papua_New_Guinea_National_Museum_May_2015.jpg?width=1280",
-     "tekija": "Nick-D",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Papua_New_Guinea_National_Museum_May_2015.jpg",
-     "selite": "Museon puutarhassa kohoaa perinteiseen tyyliin tehty talo, jossa säilytetään maan kulttuuriesineitä.",
-     "leveys": 3780,
-     "korkeus": 2832,
-     "tarkistettu": true
-    }
-   ]
-  },
   "Q5651329": {
    "nimi": "Hanuabada",
    "peruste": "pelin nosto",
@@ -88495,6 +87793,30 @@
      "selite": "Stadion sijaitsee Konedobun rinteen alla, ja sen takana avautuu Port Moresbyn lahti.",
      "leveys": 1900,
      "korkeus": 1052,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q6429071": {
+   "nimi": "Konedobu",
+   "peruste": "kaupungin päänähtävyys",
+   "kaupunki": "portmoresby",
+   "kaupunkiQ": "Q36526",
+   "lat": -9.46972,
+   "lon": 147.15972,
+   "koko_m": 1000,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Papua New Guinea 1991-063 View over Konedobu, Port Moresby (33594032542).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Papua_New_Guinea_1991-063_View_over_Konedobu%2C_Port_Moresby_(33594032542).jpg?width=1280",
+     "tekija": "Brian ireland",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Papua_New_Guinea_1991-063_View_over_Konedobu%2C_Port_Moresby_(33594032542).jpg",
+     "selite": "Konedobun rinteeltä näkyy lahti, urheilukenttä ja Port Moresbyn kuivat vuoret.",
+     "leveys": 6560,
+     "korkeus": 4304,
      "tarkistettu": true
     }
    ]
@@ -94431,43 +93753,6 @@
     }
    ]
   },
-  "Q6852243": {
-   "nimi": "Suitsukemaan museo",
-   "peruste": "pelin nosto",
-   "kaupunki": "salalah",
-   "kaupunkiQ": "Q1294439",
-   "lat": 17.00936,
-   "lon": 54.13611,
-   "koko_m": 150,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Salalah, museo della terra degli incensi, entrata.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salalah%2C_museo_della_terra_degli_incensi%2C_entrata.jpg?width=1280",
-     "tekija": "Francesco Bini",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Salalah%2C_museo_della_terra_degli_incensi%2C_entrata.jpg",
-     "selite": "Suitsukemaan museo kertoo Dhofarin suitsukekaupan historiasta Al-Baleedin vieressä.",
-     "leveys": 5805,
-     "korkeus": 4000,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Salalah, museo della terra degli incensi, cortile 01.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salalah%2C_museo_della_terra_degli_incensi%2C_cortile_01.jpg?width=1280",
-     "tekija": "Francesco Bini",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Salalah%2C_museo_della_terra_degli_incensi%2C_cortile_01.jpg",
-     "selite": "Museon sisäpihalla kasvaa suitsukepuu, ja ympäröivissä saleissa esitellään alueen perintöä.",
-     "leveys": 6720,
-     "korkeus": 4480,
-     "tarkistettu": true
-    }
-   ]
-  },
   "Q5572706": {
    "nimi": "Salvadorin historiallinen keskusta (Pelourinho)",
    "peruste": "UNESCO",
@@ -95916,56 +95201,6 @@
      "selite": "Moskeijan rukoussalin pylväät ja matot ovat osa sen vanhaa sisätilaa.",
      "leveys": 2560,
      "korkeus": 1920,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q4115837": {
-   "nimi": "Al-Salehin moskeija",
-   "peruste": "sitelinks",
-   "kaupunki": "sana",
-   "kaupunkiQ": "Q2471",
-   "lat": 15.3258,
-   "lon": 44.2077,
-   "koko_m": 300,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Al Saleh Mosque - Sana'a 2013.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Saleh_Mosque_-_Sana'a_2013.jpg?width=1280",
-     "tekija": "Om Eshak",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Saleh_Mosque_-_Sana'a_2013.jpg",
-     "selite": "Al-Salehin moskeija on Jemenin suurin moskeija, jossa on useita minareetteja ja kultaisia kupoleita.",
-     "leveys": 3200,
-     "korkeus": 2008,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Al Saleh Mosque, Sana'a.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Saleh_Mosque%2C_Sana'a.jpg?width=1280",
-     "tekija": "Rod Waddington",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Saleh_Mosque%2C_Sana'a.jpg",
-     "selite": "Moskeijan korkeat minareetit hallitsevat Sanan uudempia kaupunginosia.",
-     "leveys": 3820,
-     "korkeus": 5870,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Al Saleh Mosque.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Saleh_Mosque.jpg?width=1280",
-     "tekija": "Fuad Al-Qrize",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Saleh_Mosque.jpg",
-     "selite": "Palmujen reunustama moskeijan julkisivu ja minareetit.",
-     "leveys": 4160,
-     "korkeus": 2340,
      "tarkistettu": true
     }
    ]
@@ -105703,43 +104938,6 @@
      "selite": "Paviljonki heijastuu puiston altaaseen puiden ympäröimänä.",
      "leveys": 4200,
      "korkeus": 2800,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q2569026": {
-   "nimi": "Runoilijoiden mausoleumi",
-   "peruste": "pelin nosto",
-   "kaupunki": "tabriz",
-   "kaupunkiQ": "Q80053",
-   "lat": 38.08367,
-   "lon": 46.30344,
-   "koko_m": 100,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Maqbaratoshoara 4.JPG",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maqbaratoshoara_4.JPG?width=1280",
-     "tekija": "Elmju",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Maqbaratoshoara_4.JPG",
-     "selite": "Runoilijoiden mausoleumi on rakennettu muistoksi Tabrizin runoilijoille ja oppineille.",
-     "leveys": 3072,
-     "korkeus": 2304,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "--Şairlər məqbərəsi, Təbriz 20220 (1).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/--%C5%9Eairl%C9%99r_m%C9%99qb%C9%99r%C9%99si%2C_T%C9%99briz_20220_(1).jpg?width=1280",
-     "tekija": "Rəcəb Yaxşı",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:--%C5%9Eairl%C9%99r_m%C9%99qb%C9%99r%C9%99si%2C_T%C9%99briz_20220_(1).jpg",
-     "selite": "Mausoleumin kulmikkaat betonirakenteet muodostavat taivasta vasten leikkautuvan siluetin.",
-     "leveys": 3024,
-     "korkeus": 2449,
      "tarkistettu": true
     }
    ]

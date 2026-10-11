@@ -16335,25 +16335,6 @@ export const NAHTAVYYSJUTUT = {
         + 'aukesivat uudelleen 4. lokakuuta 2022: saleja oli 18 ja esillä '
         + 'yli 1 100 esinettä.',
       kuvat: [
-        {
-          tiedosto: 'Doha Museum of Islamic Arts Interior Hall 01.jpg',
-          lyhyt: 'Näyttelysalit on ryhmitelty keskusaulan ympärille; sisustuksen suunnitteli Wilmotte & Associés.',
-          selite: 'Näyttelysalit on ryhmitelty tämän keskusaulan ympärille, '
-            + 'ja pohjoissivulla kaikki viisi kerrosta on verhottu '
-            + 'lasiseinällä. Salien sisustuksen suunnitteli Wilmotte & '
-            + 'Associés, sama toimisto kuin Louvren hankkeessa.',
-          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
-        },
-        {
-          tiedosto: 'Doha Museum of Islamic Arts Interior Hall Ceiling 1.jpg',
-          lyhyt: 'Aulan monikulmaiseen kupoliin on jätetty tähdenmuotoinen aukko, josta päivänvalo putoaa alas.',
-          selite: 'Aulan valo tulee ylhäältä: monikulmainen kupoli on koottu '
-            + 'kolmiomaisista pinnoista, ja sen lakeen on jätetty '
-            + 'tähdenmuotoinen aukko, josta päivänvalo putoaa suoraan alas. '
-            + 'Museo avattiin yleisölle 8. joulukuuta 2008 ja remontin '
-            + 'jälkeen uudelleen 4. lokakuuta 2022.',
-          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -16488,16 +16469,6 @@ export const NAHTAVYYSJUTUT = {
         + 'hiekkakenttä, palmuja ja kaksikerroksinen päärakennus, jonka '
         + 'yläkerrassa on rivi kaariaukkoja.',
       kuvat: [
-        {
-          tiedosto: 'Old Palace at National Museum of Qatar.jpg',
-          lyhyt: 'Sheikki Jassim bin Mohammed Al Thanin merenrantapalatsi avattiin kansallismuseona 1975.',
-          selite: 'Sheikki Jassim bin Mohammed Al Thanin merenrantapalatsi '
-            + 'jäi ilman tehtävää vuonna 1923, kun hallinto siirtyi '
-            + 'keskustaan, ja rapistui. Vuonna 1972 valtaan noussut Khalifa '
-            + 'bin Hamad Al Thani päätti tehdä siitä maan kansallismuseon, '
-            + 'joka avattiin 23. kesäkuuta 1975.',
-          lahde: 'Manjri Saxena, Wikimedia Commons (CC BY-SA 4.0)',
-        },
         {
           tiedosto: 'Courtyard of the Palace.jpg',
           lyhyt: 'Palatsikokonaisuudesta tunnistettiin 2010 yhdeksän osaa; berliiniläinen ZRS kunnosti sen 2015.',
@@ -16996,26 +16967,6 @@ export const NAHTAVYYSJUTUT = {
         + 'Kunnostuksen ajan maaliskuusta 2012 maaliskuuhun 2016 tornit '
         + 'olivat suljettuina.',
       kuvat: [
-        {
-          tiedosto: 'Kuwait towers -2005 2006 Winter- (302658101).jpg',
-          lyhyt: 'Malene Bjørnin suunnittelema torniryhmä rakennettiin 1971–1976 ruotsalaisen VBB:n hankkeessa.',
-          selite: 'Tanskalaisen arkkitehdin Malene Bjørnin suunnittelema '
-            + 'ryhmä rakennettiin 1971–1976 ruotsalaisen insinööritoimisto '
-            + 'VBB:n hankkeessa. Kolmas torni on kapea neula ilman palloa: '
-            + 'siihen sijoitettiin laitteet, joilla kaksi muuta valaistaan '
-            + 'pimeän tultua.',
-          lahde: 'radiant guy from Den Haag, The Netherlands, Wikimedia Commons (CC BY-SA 2.0)',
-        },
-        {
-          tiedosto: 'Kuwait City\'s popular landmarks Liberty Tower & Kuwait Towers.jpg',
-          lyhyt: 'Pallojen kuori on koottu emaloiduista teräskiekoista; kuvio muistuttaa moskeijoiden kaakelointia.',
-          selite: 'Pallojen kuori on koottu pienistä emaloiduista '
-            + 'teräskiekoista, jotka on ladottu kierteisiksi nauhoiksi '
-            + 'pallon ympäri, joten pallo näyttää eri suunnista ja eri '
-            + 'valossa eri väriseltä. Kuvio muistuttaa vanhojen '
-            + 'moskeijoiden kaakeloituja kupoleita.',
-          lahde: 'Mahrs Multiverse, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -17048,26 +16999,6 @@ export const NAHTAVYYSJUTUT = {
         + 'kellarikaivuiden. Gary Haneyn ja Skidmore, Owings & Merrillin '
         + 'suunnittelema torni valmistui 2011.',
       kuvat: [
-        {
-          tiedosto: 'Kuwait City Kuwait Towers View to the al-Hamra Tower.jpg',
-          lyhyt: '412-metrinen torni on 80-kerroksinen; leikattu neljännes pohjakaavasta saa sen näyttämään kiertyvän.',
-          selite: 'Torni on 412 metriä korkea ja siinä on 80 kerrosta, '
-            + 'joista noin 72 toimistokerroksia. Pohjakaavasta on leikattu '
-            + 'neljännes pois, ja koska viilto siirtyy kerros kerrokselta, '
-            + 'torni näyttää kiertyvän.',
-          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
-        },
-        {
-          tiedosto: 'Al Hamra Kuwait Mai 2010.jpg',
-          lyhyt: 'Kuwait Cityn leveyspiiri saneli muodon: poistettu neljännes kääntää toimistokerrokset merelle.',
-          selite: 'Muodon sanelee aurinko: Kuwait City on 29. '
-            + 'leveyspiirillä, joten poistettu neljännes siirtää '
-            + 'toimistokerrokset pois eteläsivulta ja kääntää ne merelle '
-            + 'päin. Kantavat betoniseinät ovat alhaalla 1 200 millimetriä '
-            + 'paksuja ja ohenevat huipulla 300 millimetriin; torni '
-            + 'valmistui 2011.',
-          lahde: 'J.Stiegler, Wikimedia Commons (CC BY-SA 3.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -17148,25 +17079,6 @@ export const NAHTAVYYSJUTUT = {
         + 'käyttöön id al-fitr -juhlana, hijri-vuoden 1407 shawwal-kuun '
         + 'ensimmäisenä päivänä.',
       kuvat: [
-        {
-          tiedosto: 'Kuwait City Grand Mosque Interior 12.jpg',
-          lyhyt: 'Päärukoussali on 72-metrinen neliö; päivänvalo tulee 144 ikkunasta seinien yläosassa.',
-          selite: 'Päärukoussali on neliö, jonka jokainen sivu on 72 metriä, '
-            + 'ja päivänvalo tulee saliin 144 ikkunasta korkealla seinien '
-            + 'yläosassa. Ovet ovat tiikkiä, ja seinustalla on rivi matalia '
-            + 'puisia lukutelineitä.',
-          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
-        },
-        {
-          tiedosto: 'Kuwait City Grand Mosque Interior Dome 2.jpg',
-          lyhyt: 'Moskeija peittää 20 000 neliömetriä ja maksoi 13 miljoonaa Kuwaitin dinaaria.',
-          selite: 'Salin katossa on yksi ainoa kupoli, ja sen keskellä '
-            + 'olevan medaljongin kahdessa kehässä kiertää kullattu '
-            + 'kalligrafia. Moskeija peittää 20 000 neliömetriä, hanke '
-            + 'maksoi 13 miljoonaa Kuwaitin dinaaria, ja rakennus otettiin '
-            + 'käyttöön id al-fitr -juhlana.',
-          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -17309,27 +17221,6 @@ export const NAHTAVYYSJUTUT = {
         + 'niiden päällä rivi kapeita kaari-ikkunoita ja hammastettu '
         + 'harja, ja kummassakin päässä pyöreä torni.',
       kuvat: [
-        {
-          tiedosto: 'Muscat Gate Museum.jpg',
-          lyhyt: 'Vanhan Maskatin muuri rakennettiin 1625; sen sisään avattiin 2001 Muscat Gate Museum.',
-          selite: 'Vanhaa Maskatia kiertävä muuri rakennettiin vuonna 1625 '
-            + 'portugalilaisten kaudella, ja sen läpi vievä Al Saidiyan '
-            + 'katu on yhä se reitti, jota myöten vanhaan kaupunkiin '
-            + 'ajetaan. Muurin sisään avattiin tammikuussa 2001 Muscat Gate '
-            + 'Museum, jonka näyttely kulkee Omanin historian läpi '
-            + 'nuoremmasta kivikaudesta nykypäivään.',
-          lahde: 'Tristan from Luxembourg, Luxembourg, Wikimedia Commons (CC BY 2.0)',
-        },
-        {
-          tiedosto: 'The gate to Muscat (8727196402).jpg',
-          lyhyt: 'Muuri kulkee vain länsi- ja etelälaidalla; portit suljettiin kolme tuntia hämärän jälkeen.',
-          selite: 'Muuri kulkee vain kaupungin länsi- ja eteläsivulla: '
-            + 'idässä ja pohjoisessa raja syntyy itsestään merestä ja '
-            + 'kalliosta. Portit suljettiin kolme tuntia hämärän jälkeen, '
-            + 'ja tapa jatkui 1900-luvun puoliväliin asti — sen jälkeen '
-            + 'kadulla liikkuvan oli kannettava mukanaan lyhtyä.',
-          lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -17886,16 +17777,6 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Museo perustettiin vuonna 1970 Tigriksen lähelle Rusafan '
             + 'puolelle kaupunkia, ja rakennus itse on vuodelta 1869.',
           lahde: 'Ayat Jaryan, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'Photos from the Al Baghdadi Museum- Baghdadi cafe.jpg',
-          lyhyt: 'Museon kokoelma on 385 hahmoa 77 kohtauksessa, jotka kuvaavat bagdadilaisperheiden elämää.',
-          selite: 'Museon kokoelma on 385 täysikokoista hahmoa 77 '
-            + 'kohtauksessa, ja se rajaa tarkoituksella yhden ajanjakson: '
-            + 'sen, miten bagdadilaiset perheet elivät ja miten juhlat '
-            + 'vietettiin. Kohtauksiin kuuluu hahmojen lisäksi ajan '
-            + 'työkaluja, astioita ja huonekaluja.',
-          lahde: 'Mustafa alsalhi, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -19382,16 +19263,6 @@ export const NAHTAVYYSJUTUT = {
           + 'tunnistusta ei pidetä varmana.',
       kuvat: [
         {
-          tiedosto: 'Luxor Museum 1.JPG',
-          lyhyt: 'Museo avattiin 1975 Niilin itärannalle; esillä on tarkoituksella vähän esineitä ja väljä ripustus.',
-          selite: 'Museo avattiin 1975 Niilin itärannalle rantakadun '
-            + 'varteen, ja kaksikerroksisen talon piirsi Mahmud El Hakim jo '
-            + '1962. Esillä on tarkoituksella paljon vähemmän kuin Kairon '
-            + 'egyptiläisessä museossa: vähän esineitä, väljä ripustus ja '
-            + 'monikieliset selitteet.',
-          lahde: 'Charlesdrakew at English Wikipedia, Wikimedia Commons (PD)',
-        },
-        {
           tiedosto: 'Luxor Museum Amenophis III. Statue 05.jpg',
           lyhyt: 'Patsas löytyi 1989 Luxorin temppelin aurinkopihan kätköstä; kartuššeista on hakattu Amunin nimi.',
           selite: 'Patsas tuli esiin vuonna 1989, kun Luxorin temppelin '
@@ -20195,16 +20066,6 @@ export const NAHTAVYYSJUTUT = {
             + 'jaa. Esineet on enimmäkseen kaivettu Iranin Azerbaidžanista, '
             + 'mutta kokoelmassa on löytöjä koko maasta.',
           lahde: 'Navid Sadighi, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'Detail of Anxiety - Sculpture by Ahad Hosseini - Azerbaijan Museum - Tabriz - Iranian Azerbaijan - Iran (7421593886).jpg',
-          lyhyt: 'Tabrizilainen Ahad Hosseini teki kellarissaan sarjan Misery Around the World museolle.',
-          selite: 'Tabrizilainen Ahad Hosseini (s. 1944) opiskeli Firenzen '
-            + 'taideakatemiassa ja teki paluunsa jälkeen viisi vuotta '
-            + 'kellarissaan kaksitoista veistosta, sarjan Misery Around the '
-            + 'World. Hän lahjoitti ne museolle, ja niille on varattu '
-            + 'kokonainen sali.',
-          lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -24244,16 +24105,6 @@ export const NAHTAVYYSJUTUT = {
           + 'kertoo eniten siitä miltä Salalah näyttää nyt: leveitä '
           + 'katuja, hiekanväristä kiveä ja paljon tilaa.',
       kuvat: [
-        {
-          tiedosto: 'Sultan Qaboos Mosque 14.JPG',
-          lyhyt: 'Salalahin suurin moskeija valmistui 2009 ja mahtuu 14 000 rukoilijaa.',
-          selite: 'Salalahin suurin moskeija valmistui vuonna 2009, ja '
-            + 'siihen mahtuu neljätoistatuhatta rukoilijaa. Marmoripihaa '
-            + 'kiertävän kaarikäytävän teräväkärkiset kaaret ja hammastettu '
-            + 'muuri ovat samaa muotokieltä, jolla Omanissa on tuhat vuotta '
-            + 'rakennettu linnakkeita.',
-          lahde: 'Rrburke, Wikimedia Commons (CC BY 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -24365,16 +24216,6 @@ export const NAHTAVYYSJUTUT = {
           + 'sipulikupoli on vihreä. Sisään mennessä kengät jätetään '
           + 'ulos, ja naisilta odotetaan huivia.',
       kuvat: [
-        {
-          tiedosto: 'Salalah, tomba del profeta Imran, ossia Gioacchino padre di maria (Nabi Umran mausoleum), 01.jpg',
-          lyhyt: 'Nabi Imranin hauta on ainoa Salalahin neljästä profeetanhaudasta kaupungin sisällä.',
-          selite: 'Nabi Imranin hauta on ainoa Salalahin seudun neljästä '
-            + 'profeetanhaudasta, joka on kaupungin sisällä, ja sen '
-            + 'pituudesta lähteet ovat eri mieltä: kahdestatoista metristä '
-            + 'kolmeenkymmeneenkolmeen. Rakennus itse on vaatimaton — matala '
-            + 'kaarikäytävä, laatoitettu piha ja yksi minareetti.',
-          lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -24491,16 +24332,6 @@ export const NAHTAVYYSJUTUT = {
           + 'kulttuurikeskuksessa lännempänä, ja siellä on muun muassa '
           + 'pysyvä näyttely Wilfred Thesigerin valokuvista.',
       kuvat: [
-        {
-          tiedosto: 'Salalah, museo della terra degli incensi, entrata.jpg',
-          lyhyt: 'Museo avattiin 2007 Al-Baleedin puistoon sulttaani Qaboosin rahoituksella.',
-          selite: 'Museo rakennettiin kahdessa vuodessa Al-Baleedin puiston '
-            + 'sisään ja avattiin vuonna 2007 sulttaani Qaboosin '
-            + 'rahoituksella. Sen kaksi salia kertovat Omanin merenkulusta '
-            + 'ja Dhofarin historiasta, ja suitsuke kulkee molempien läpi '
-            + 'myös uskonnollisten menojen ja perinnelääkinnän aineena.',
-          lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -45842,10 +45673,9 @@ export const NAHTAVYYSJUTUT = {
           + 'nykyään pieni museo.',
       kuvat: [
         {
-          tiedosto: 'Melbourne Central abseiling shot tower.jpg',
-          selite: 'Tiilitorni seisoo kokonaisena kartiomaisen lasikaton alla; '
-            + 'köysilaskijat antavat mittakaavan.',
-          lahde: 'Stephen Bain, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: "Melbourne City Loop Museum Station, now Melbourne Central, under construction 1974 with Coop's Shot Tower 3.jpg",
+          selite: "Vuoden 1974 kuvassa haulitorni nousee kerrostalon vieressä Museum Stationin rakennusaidan takaa, ennen nykyistä ostoskeskusta.",
+          lahde: "Leone Mills, State Library of Victoria, Wikimedia Commons (CC BY 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -64044,11 +63874,6 @@ export const NAHTAVYYSJUTUT = {
       aika: '1988–1996',
       teksti: 'Kyynelten saari, virallisesti Rohkeuden ja surun saari, on pieni muistosaari Svislač-joessa. Siltaa pitkin pääsee Kolminaisuuden esikaupunkiin. Saari on muistomerkki ulkomailla sotatoimissa kuolleille valkovenäläisille.\n\nKokonaisuuteen kuuluu veistoksia, muistokiviä ja kappeli. Arkkitehtuuri syntyi kuvanveistäjä J. Pavlovin johdolla, ja muistomerkki rakennettiin 1988–1996 ja vihittiin 3.8.1996. Saari sijaitsee aivan Kolminaisuuden esikaupungin vieressä, joten sen voi liittää samaan kävelykierrokseen vanhan Minskin kanssa.\n\nSuomenkielisen lähteen mukaan Afganistanin sodassa 1979–89 menehtyi 771 valkovenäläistä ja sotaan osallistui 30 000. Isoisän matkavuonna 1873 saarta ei ollut.',
       kuvat: [
-        {
-          tiedosto: 'Island of tears Sons of the Fatherland monument Minsk.JPG',
-          selite: 'Kyynelten saari on muistomerkki ulkomailla sotatoimissa kuolleille valkovenäläisille.',
-          lahde: 'Herbert wie, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -64056,11 +63881,6 @@ export const NAHTAVYYSJUTUT = {
       aika: '1954',
       teksti: 'Voitonaukio on historiallisessa keskustassa Itsenäisyydenkadun ja Zaharaŭ-kadun risteyksessä. Ennen vuotta 1958 sen nimi oli Kruglaja, pyöreä. Keskellä on 38 metrin graniittipylväs, jonka huipulla on Voiton ritarikunnan kunniamerkin kolmen metrin kopio. Pylväs pystytettiin 1954, ja sen ympärillä on neljä pronssireliefiä ja neljä pronssista seppelettä.\n\nIkuinen tuli sytytettiin 3.7.1961. Aukio muotoiltiin soikeaksi 1984 metroaseman uloskäyntien vuoksi. Kaksi kaarevaa asuintaloa rakennettiin 1936–39, ja lähteen mukaan ne valmistuivat 1947.\n\nPuisto ulottuu aukiolta Svislačille ja Gorki-puistoon. Lähteen mukaan vihkiparit kuvauttavat itsensä aukiolla. Isoisän matkavuonna 1873 pylvästä ei ollut vielä pystytetty.',
       kuvat: [
-        {
-          tiedosto: 'Victory square, Minsk 01.jpg',
-          selite: 'Voitonaukion graniittipylväs on 38 metriä korkea ja pystytettiin 1954.',
-          lahde: 'User:Redline, Wikimedia Commons (CC BY-SA 3.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -64130,11 +63950,6 @@ export const NAHTAVYYSJUTUT = {
       aika: '2005',
       teksti: 'Millennium-silta on vinoköysisilta Moračan yli. Se avattiin liikenteelle 13.7.2005, Montenegron kansallispäivänä, ja se yhdistää Ivan Crnojevićin bulevardin ja 13. heinäkuuta -kadun. Isoisän matkavuonna 1873 siltaa ei ollut, ja Moračan yli kuljettiin muilla silloilla.\n\nSillan suunnittelijat ovat Marjan Pipenbaher (Ponting Bridges) ja Mladen Ulićević, ja rakentaja oli slovenialainen Primorje. Pituutta sillalla on 173 metriä, ja pylon nousee 57 metriä tien yläpuolelle. Kaksitoista köyttä kantaa kantta, ja 24 muuta kiinnittyy vastapainoihin.\n\nSillan kustannus oli noin 7 miljoonaa euroa. Siinä on kaksi ajokaistaa sekä jalkakäytävä kumpaankin suuntaan.',
       kuvat: [
-        {
-          tiedosto: 'Titograd.jpg',
-          selite: 'Millennium-silta avattiin 13.7.2005, Montenegron kansallispäivänä.',
-          lahde: 'Milos58, Wikimedia Commons (CC BY-SA 3.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -64142,11 +63957,6 @@ export const NAHTAVYYSJUTUT = {
       aika: '1993–2013',
       teksti: 'Kristuksen ylösnousemuksen katedraali on Montenegron ja Rannikon metropoliitan kirkko, Serbian kirkon alainen. Sen rakentaminen alkoi vuonna 1993 Predrag Ristićin suunnitelmin, ja se pyhitettiin vuonna 2013 Milanon ediktin 1 700-vuotisjuhlan yhteydessä. Isoisän matkavuonna 1873 katedraalia ei vielä ollut.\n\nArkkitehtuurissa on kaksi tornia ja näkyvä kaari, ja esikuvana oli keskiaikainen Pyhän Tryfonin katedraali Kotorissa. Siinä on romaanisia, italialaisia ja bysanttilaisia vaikutteita. Sisätilat ovat täynnä kultataustaisia ikonimaalauksia, ja lattiat ovat marmoria.\n\nPyhitykseen osallistui useita patriarkkoja, muun muassa Serbian patriarkka Irinej ja ekumeeninen patriarkka Bartolomeos. Metropoliitta Amfilohije Radović, joka toimi tehtävässä 1990–2020, haudattiin katedraalin kryptaan vuonna 2020.',
       kuvat: [
-        {
-          tiedosto: 'SaborniHram.JPG',
-          selite: 'Katedraalin rakentaminen alkoi vuonna 1993, ja se pyhitettiin vuonna 2013.',
-          lahde: 'Rasho992, Wikimedia Commons (CC BY-SA 3.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -64961,11 +64771,6 @@ export const NAHTAVYYSJUTUT = {
       aika: '2010-luku',
       teksti: 'Etihad Towers on viiden tornin kokonaisuus Emirates Palacea vastapäätä. Tornien korkeudet ovat suunnilleen 200–300 metriä, ja niissä on toimistoja, asuntoja ja hotelli. Lähteen mukaan toinen torneista on yksi kaupungin korkeimmista, ja sen yläkerroksessa on katselutaso.\n\n2010-luvun alussa tornit otettiin käyttöön, ja hotelli avattiin pian sen jälkeen. Kokonaisuus kuuluu siihen rakennusryhmään, joka on antanut Abu Dhabin länsirannalle sen tämänhetkisen siluetin. Tornit ovat esiintyneet myös elokuvassa Furious 7, jossa autolla ajetaan tornien läpi.\n\nIsoisän matkavuonna 1873 tällä kohdalla ei seissyt yhtään tällaista rakennusta: rannikolla oli asutus, ja korkeat tornit kuuluvat öljyn jälkeiseen aikaan.',
       kuvat: [
-        {
-          tiedosto: 'The Big Six in Abu Dhabi.jpg',
-          selite: 'Etihad Towers on viiden tornin kokonaisuus, jossa on toimistoja, asuntoja ja hotelli.',
-          lahde: 'Tms2007, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -65200,12 +65005,6 @@ export const NAHTAVYYSJUTUT = {
       aika: '2000-luku',
       teksti: 'Mohammad Al-Aminin moskeija on sunnalaisuuden moskeija Beirutin keskustassa, ja sitä kutsutaan myös Siniseksi moskeijaksi. Sen suunnitteli Azmi Fakhoury, ja tyyli muistuttaa osmanien aikaista arkkitehtuuria. Kupoleissa on vaaleansinistä laattaa, ja moskeijaan mahtuu tuhansia rukoilijoita.\n\nMoskeija vihittiin käyttöön 2000-luvulla. Paikalla oli 1800-luvulla zawiya eli sufilaisluostari, jonka vieressä toimi tori. Rakennustyön aikana kaivauksissa paljastui osa roomalaisen kaupungin pääkadun Decumanus Maximuksen päällysteestä ja pylväistä.\n\nMoskeija seisoo aivan Pyhän Yrjänän maroniittikatedraalin vieressä. Isoisän matkavuonna 1873 nykyistä moskeijaa ei vielä ollut.',
       kuvat: [
-        {
-          tiedosto: 'Mohammad Al-Amin Mosque and St. George Maronite Cathedral, Beirut (3).jpg',
-          lyhyt: 'Mohammad Al-Aminin moskeija, jota kutsutaan myös Siniseksi moskeijaksi.',
-          selite: 'Moskeija vihittiin käyttöön 2000-luvulla, ja se seisoo keskustassa aivan Pyhän Yrjänän katedraalin vieressä.',
-          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 PL)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -65214,10 +65013,10 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Pyhän Yrjänän maroniittikatedraali on maroniittien Beirutin arkkihiippakunnan katedraali keskustassa. Nykyinen kolmilaivainen basilika rakennettiin 1800-luvun lopulla arkkipiispa Joseph Debsin johdolla 1700-luvun puolivälissä rakennetun pienemmän Pyhän Yrjänän kirkon paikalle.\n\nUusklassisen julkisivun suunnitteli italialainen arkkitehti Giuseppe Maggiore, ja sisätila muistuttaa Santa Maria Maggioren basilikaa Roomassa. Katossa on kullattu kassettikatto, ja seinissä on stukkia ja marmoria. Rakentamisessa käytettiin roomalaisia pylväitä Beit Meryn Deir El Qalaan temppelistä.\n\nEsipihan alta on säilytetty hellenistinen rakennelma, osa roomalaista pylväskatua ja osmanien aikainen muuri. Uusi kellotorni on noin 70 metriä korkea, ja lähteen mukaan arkkipiispa kertoi sen korkeuden vastaavan viereisen moskeijan minareetteja uskontojen välisen sovun viestinä. Isoisän matkavuonna 1873 nykyistä katedraalia ei vielä ollut.',
       kuvat: [
         {
-          tiedosto: 'Mohammad Al-Amin Mosque and St. George Maronite Cathedral, Beirut (1).jpg',
+          tiedosto: "Berytus ruins and St. George Maronite Cathedral, Beirut.jpg",
           lyhyt: 'Pyhän Yrjänän maroniittikatedraali ja sen kellotorni.',
           selite: 'Katedraalin esipihan alla on säilytetty osa roomalaista pylväskatua.',
-          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 PL)',
+          lahde: "Radosław Botev, Wikimedia Commons (CC BY 3.0 PL)",
         },
       ],
       lahde: 'Wikipedia',
@@ -65420,11 +65219,6 @@ export const NAHTAVYYSJUTUT = {
       aika: '1988',
       teksti: 'Bahrainin kansallismuseo avattiin vuonna 1988, ja se on lähteen mukaan maan suurin julkinen museo. Sen suunnittelivat tanskalaiset arkkitehdit Krohn & Hartvig Rasmussen, ja rakennus seisoo keinotekoisella niemellä Muharraqin saarta vastapäätä. Museossa on useita pysyviä näyttelysaleja.\n\nDilmunin salissa on leimasinsinettejä sekä Barbarin temppelin ja Saarin löytöjä, ja museossa on esillä jäljennös Durand-kivestä. Tylos–islamin sali käsittelee hellenististä aikaa ja islamin aikaa 700-luvulta, ja siellä on esillä Khamisin moskeijan esineitä. Perinteisten ammattien salissa on jäljennös perinteisestä soukista, ja Dilmun-hautojen salissa on A\'alista siirretty ja museossa uudelleen koottu hautakumpu.\n\nIsoisän matkavuonna 1873 museota ei vielä ollut; se on rakennettu keinotekoiselle niemelle.',
       kuvat: [
-        {
-          tiedosto: 'Manama Bahrain National Museum Exterior 1.jpg',
-          selite: 'Bahrainin kansallismuseo avattiin vuonna 1988.',
-          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -65432,11 +65226,6 @@ export const NAHTAVYYSJUTUT = {
       aika: '1980-luvulta',
       teksti: 'Al-Fatih-suurmoskeija sijaitsee Juffairin kaupunginosassa Al Fateh Highwayn vieressä, ja se rakennettiin 1980-luvulla. Moskeija on nimetty Ahmed Al Fatehin kunniaksi, ja siinä on tilaa tuhansille rukoilijoille.\n\nSisätiloissa lattia on italialaista marmoria, kattokruunu on tehty Itävallassa ja ovet ovat intialaista tiikkiä. Kufi-kalligrafiaa on kauttaaltaan. Moskeijan keskuksen kirjastossa on tuhansia kirjoja. Moskeija on avoinna kävijöille kaikkina päivinä paitsi perjantaina, ja kierroksia järjestetään useilla kielillä.\n\nIsoisän matkavuonna 1873 moskeijaa ei ollut.',
       kuvat: [
-        {
-          tiedosto: 'Manama al-Fateh Grand Mosque Exterior Norden 1.jpg',
-          selite: 'Al-Fatih-suurmoskeija sijaitsee Juffairin kaupunginosassa.',
-          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },

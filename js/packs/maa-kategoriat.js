@@ -24957,7 +24957,6 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Museo koottiin kiekoista',
-          tiedosto: 'National Museum of Qatar.jpg',
           teksti: 'Qatarin kansallismuseo avattiin Dohassa vuonna 2019. Sen muoto '
             + 'on lainattu aavikkoruususta: se on kiekkomainen kide, joka '
             + 'syntyy hiekkaan, kun suolainen vesi haihtuu ja jättää '
@@ -24967,11 +24966,6 @@ export const MAA_KATEGORIAT = {
             + 'puolentoista kilometrin mittainen reitti, ja sen keskellä '
             + 'seisoo vanha emiirin palatsi, jonka ympärille museo on '
             + 'rakennettu.',
-          lyhyt: 'Qatarin kansallismuseo (2019) muistuttaa aavikkoruusua ja koostuu betonikiekoista.',
-          selite: 'Vuonna 2019 avatun Qatarin kansallismuseon muoto on '
-            + 'lainattu aavikkoruususta, ja se on rakennettu sadoista '
-            + 'betonikiekoista, joista ei ole kahta samanlaista.',
-          lahde: 'CallMeBarcode, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           otsikko: 'Kauppakuja muurattiin uudelleen entiselleen',
@@ -24992,7 +24986,6 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Islamilaisen taiteen museo seisoo omalla saarellaan',
-          tiedosto: 'Museum of Islamic Art in Doha (3820043632).jpg',
           teksti: 'Dohan lahdelle on tehty pieni tekosaari, jotta museon '
             + 'ympärille ei koskaan rakennettaisi mitään sen viereen. Sillä '
             + 'seisoo Islamilaisen taiteen museo, jonka suunnitteli '
@@ -25002,12 +24995,6 @@ export const MAA_KATEGORIAT = {
             + 'ylöspäin portaittain, ja ylimmässä kerroksessa on ikkuna, '
             + 'josta näkyy merelle. Kokoelmassa on esineitä tuhannen vuoden '
             + 'ajalta.',
-          lyhyt: 'Islamilaisen taiteen museon suunnitteli I. M. Pei Dohan lahden tekosaarelle.',
-          selite: 'Islamilaisen taiteen museon suunnitteli 91-vuotias '
-            + 'arkkitehti I. M. Pei erään kairolaisen moskeijan suihkulähteen '
-            + 'mukaan, ja rakennus seisoo omalla tekosaarellaan Dohan '
-            + 'lahdella.',
-          lahde: 'Mohamed Nanabhay, Wikimedia Commons (CC BY 2.0)',
         },
         {
           otsikko: 'Torni rakennettiin sadeveden vartijaksi',
@@ -25446,7 +25433,6 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Vesitorneja rakennettiin kolmisenkymmentä',
-          tiedosto: 'Kuwait 1982-0128.jpg',
           teksti: 'Kuwaitissa ei ole jokea eikä järveä, ja juomavesi tehdään '
             + 'merivedestä tislaamalla. Sitä on siis varastoitava, ja '
             + '1960–70-luvuilla maahan rakennettiin vesitornien verkosto: '
@@ -25456,16 +25442,9 @@ export const MAA_KATEGORIAT = {
             + 'pystyraidoin. Tornit seisovat useimmiten rivissä, koska yhteen '
             + 'paikkaan tehtiin monta kerralla. Järjestelmä sai vuonna 1980 '
             + 'kansainvälisen arkkitehtuuripalkinnon.',
-          lyhyt: 'Kuwaitiin rakennettiin 1960–70-luvuilla noin 30 vesitornia, palkittu 1980.',
-          selite: 'Kuwaitissa ei ole jokea eikä järveä, joten '
-            + '1960–70-luvuilla rakennettiin kolmisenkymmentä vesitornia '
-            + 'tislatulle merivedelle, ja järjestelmä sai vuonna 1980 '
-            + 'kansainvälisen arkkitehtuuripalkinnon.',
-          lahde: 'Dennis Sylvester Hurd, Wikimedia Commons (CC0)',
         },
         {
           otsikko: 'Vesisäiliöstä tehtiin maan tunnus',
-          tiedosto: 'Rise and shine at seaside.jpg',
           teksti: 'Vesitorniryhmistä viimeinen sai muista poikkeavan muodon: '
             + 'kolme ohutta tornia niemen kärkeen. Korkein '
             + 'on 187 metriä, ja siinä on kaksi palloa. Alemman pallon '
@@ -25474,16 +25453,9 @@ export const MAA_KATEGORIAT = {
             + 'ympäri puolessa tunnissa. Pallot on päällystetty noin 41 000 '
             + 'emaloidulla teräskiekolla kahdeksassa sinisen ja vihreän '
             + 'sävyssä. Tornit avattiin yleisölle maaliskuussa 1979.',
-          lyhyt: 'Kuwaitin tornit (1979): korkein on 187 m ja sisältää pyörivän kahvilan.',
-          selite: 'Kuwaitin tornit avattiin yleisölle maaliskuussa 1979, ja '
-            + 'korkein niistä on 187 metriä ja sisältää 4 500 kuutiometrin '
-            + 'vesisäiliön sekä puolessa tunnissa pyörähtävän '
-            + 'näköalakahvilan.',
-          lahde: 'Criselda Rayo, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           otsikko: 'Kupolin alle mahtuu kymmenentuhatta',
-          tiedosto: 'Kuwait City Grand Mosque Interior 01.jpg',
           teksti: 'Kuwait Cityn suuri moskeija rakennettiin vuosina 1979–1986, '
             + 'ja se on maan suurin. Päärukoussaliin mahtuu kymmenentuhatta '
             + 'ihmistä ja erilliseen naisten saliin lähes tuhat. Keskuskupoli '
@@ -25492,12 +25464,6 @@ export const MAA_KATEGORIAT = {
             + 'nimeä. Sali on tarkoituksella lähes tyhjä: matto, pilarit ja '
             + 'valo riittävät. Rakennuksen mittakaavan huomaa vasta kun katsoo '
             + 'lattialla seisovia ihmisiä.',
-          lyhyt: 'Kuwait Cityn suureen moskeijaan (1979–86) mahtuu 10 000 rukoilijaa.',
-          selite: 'Kuwait Cityn suuri moskeija rakennettiin vuosina '
-            + '1979–1986, sen päärukoussaliin mahtuu kymmenentuhatta ihmistä, '
-            + 'ja 26 metriä leveän keskuskupolin sisäpintaan on kirjoitettu '
-            + 'Jumalan yhdeksänkymmentäyhdeksän nimeä.',
-          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       tehtava: {
@@ -26235,7 +26201,6 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Kupoli on lasikuitua',
-          tiedosto: 'Manama al-Fateh Grand Mosque Interior Gebetshalle Kronleuchter 1.jpg',
           teksti: 'Manaman al-Fatehin moskeija valmistui vuonna 1987, ja siihen '
             + 'mahtuu yli seitsemäntuhatta ihmistä. Erikoisin osa on kupoli: '
             + 'se ei ole kiveä eikä betonia vaan lasikuitua, ja se painaa noin '
@@ -26244,11 +26209,6 @@ export const MAA_KATEGORIAT = {
             + 'Italiasta, kattokruunu Itävallasta ja ovet Intian tiikistä. '
             + 'Seinillä kiertää kulmikasta kufi-kirjoitusta. Vuodesta 2006 '
             + 'rakennuksessa on toiminut myös Bahrainin kansalliskirjasto.',
-          lyhyt: 'Manaman al-Fatehin moskeijaan (1987) mahtuu yli 7000 ihmistä.',
-          selite: 'Vuonna 1987 valmistuneeseen Manaman al-Fatehin moskeijaan '
-            + 'mahtuu yli seitsemäntuhatta ihmistä, ja sen noin '
-            + 'viisikymmentäneljä tonnia painava kupoli on lasikuitua.',
-          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           otsikko: 'Vanhaan tyyliin tehty kahvila',
@@ -62597,11 +62557,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kuulovirhe joka nimesi kulttuurin',
           aika: '1952',
-          tiedosto: 'National Museum of Ethnology, Osaka - Reconstructed Lapita female.jpg',
           teksti: 'Vuonna 1952 arkeologit Edward Gifford ja Richard Shutler kaivoivat Uuden-Kaledonian Konen seudulla Foué-niemellä muinaista kylää. Kun Gifford kysyi paikalliselta kanakioppaalta löytöpaikan nimeä havaken kielellä, vastaus xapeta’a — paikka, jossa kaivetaan kuoppa — kuultiin väärin ja kirjattiin muistiin muotoon Lapita. Nimestä tuli vahingossa koko kolmituhatvuotisen tyynenmerentakaisen keramiikkakulttuurin nimi, joka ulottuu Uudesta-Guineasta Samoalle asti. Foué on yhä lapitakulttuurin tyyppipaikka, ja sen saviastiat kertovat ensimmäisistä merenkulkijoista, jotka asettuivat saarelle jo kolmisen tuhatta vuotta sitten.',
-          lyhyt: 'Lapitakulttuurin nimi syntyi kuulovirheestä uuskaledonialaisella kaivauksella 1952.',
-          selite: 'Lapitakulttuurin naisen kasvojen kolmiulotteinen rekonstruktio Osakan etnologisessa museossa, tehty säilyneiden ihmisluiden pohjalta.',
-          lahde: 'Yanajin33, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Lapitakulttuuri',
         },
         {
@@ -62859,11 +62815,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Veistetty vartija kulttuurikeskuksessa',
           aika: 'nykyään',
-          tiedosto: 'Kanak Totem (45954416171).jpg',
           teksti: 'Jean-Marie Tjibaoun kulttuurikeskuksen näyttelyissä ja ulkoalueilla seisoo useita puuveistoksia, joita kutsutaan usein toteemeiksi, vaikka termi ei ole täysin osuva kanakikulttuurille: veistokset ovat pikemminkin esi-isien tai suojelevien henkien kuvia kuin klaanitunnuksia länsimaisessa mielessä. Nykykanakiveistäjät jatkavat perinnettä yhdistäen perinteisiä aiheita — kasvoja, käsiä, eläinhahmoja — uusiin materiaaleihin ja mittakaavoihin. Keskus toimii sekä museona että työpajana, jossa nuoret taiteilijat oppivat veistämistä vanhemmilta mestareilta, ja monet keskuksessa esillä olevista teoksista on tehty juuri tätä tarkoitusta varten.',
-          lyhyt: 'Puuveistos Tjibaoun kulttuurikeskuksessa jatkaa kanakien esi-isien kuvaamisen perinnettä.',
-          selite: 'Veistetty puinen hahmo ulkona Jean-Marie Tjibaoun kulttuurikeskuksen alueella Nouméassa.',
-          lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Kanakit',
         },
       ],

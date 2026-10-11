@@ -12,19 +12,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Courtyard of the Iraq Museum in Baghdad, Iraq.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Courtyard_of_the_Iraq_Museum_in_Baghdad%2C_Iraq.jpg?width=1280",
-     "tekija": "Osama Shukir Muhammed Amin FRCP(Glasg)",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Courtyard_of_the_Iraq_Museum_in_Baghdad%2C_Iraq.jpg",
-     "selite": "Irakin kansallismuseon sisäpiha ja rakennus säilyttävät Mesopotamian vanhimpia esineitä.",
-     "leveys": 6016,
-     "korkeus": 4016,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "Prehistory Hall. the Iraq Museum in Baghdad, Iraq.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prehistory_Hall._the_Iraq_Museum_in_Baghdad%2C_Iraq.jpg?width=1280",
      "tekija": "Osama Shukir Muhammed Amin FRCP(Glasg)",
@@ -182,15 +169,15 @@
     },
     {
      "jarjestys": 3,
-     "tiedosto": "Al-Mutanabbi Street Gate.png",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Mutanabbi_Street_Gate.png?width=1280",
-     "tekija": "Ayham4002",
+     "tiedosto": "Almutanabi street 2017 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Almutanabi_street_2017_2.jpg?width=1280",
+     "tekija": "MohammadHuzam",
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-Mutanabbi_Street_Gate.png",
-     "selite": "Kadun portti on koristeltu tiilikuviolla ja kaarella, joka johdattaa kirjamarkkinalle.",
-     "leveys": 2936,
-     "korkeus": 3797,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Almutanabi_street_2017_2.jpg",
+     "selite": "Mutanabbin katu Bagdadin Rusafan puolella: kapeaa katua reunustavat vanhat parvekkeelliset talot, ja jalankulkijat täyttävät sen.",
+     "leveys": 3264,
+     "korkeus": 1836,
      "tarkistettu": true
     }
    ]

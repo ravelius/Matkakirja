@@ -340,42 +340,6 @@
    ]
   },
   {
-   "q": "Q1878362",
-   "nimi": "Luxorin museo",
-   "peruste": "sitelinks",
-   "koko_m": 150,
-   "lat": 25.70772,
-   "lon": 32.64449,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Luxor Museum 2010.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Luxor_Museum_2010.jpg?width=1280",
-     "tekija": "Michiel1972",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Luxor_Museum_2010.jpg",
-     "selite": "Luxorin museo esittelee Theeban alueen esineistöä.",
-     "leveys": 2592,
-     "korkeus": 1944,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "1975 wurde das Luxor-Museum eröffnet. 01.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1975_wurde_das_Luxor-Museum_er%C3%B6ffnet._01.jpg?width=1280",
-     "tekija": "Holger Uwe Schmitt",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1975_wurde_das_Luxor-Museum_er%C3%B6ffnet._01.jpg",
-     "selite": "Museon rakennus avattiin vuonna 1975 Niilin rannalle.",
-     "leveys": 5906,
-     "korkeus": 3941,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
    "q": "Q6811142",
    "nimi": "Sfinksikuja",
    "peruste": "pelin nosto",
