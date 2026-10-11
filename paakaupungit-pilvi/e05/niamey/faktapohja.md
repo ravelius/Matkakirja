@@ -26,6 +26,27 @@ Hakupäivä kaikille 11.10.2026, yhteinen robots/redirect/1s-apuri `sallittu_hak
 
 **1873:** nykyisen kaupungin alueella oli jokivarren kyliä. Goudel, Gamkalé ja myöhemmät Maourey, Kalley, Gaweye sekä oikean rannan fula-kylät edelsivät siirtomaa-asemaa (N/H). Gounti Yéna erotti kylien viljelymaita (G). Nykyinen pääkaupunki kasvoi kyläryhmästä vasta myöhemmin, ja Ranskan asema perustettiin 1900-luvun alussa (N/H). Ei väitettä tyhjästä paikasta eikä keksittyä isoisän matkaa. N/H ovat osin samaa tekstiä, eivät kaksi riippumatonta vuoden vahvistusta.
 
+### Pääsession saatietolähteen metadata
+
+Pääsession kirjoittama `saa.json` on NAS-työpuussa. Tässä tallennetaan vain tausta ja normaalikausi; ei kuukausi- tai vuosisade-/lämpölukujen käsikopiointia, omaa säätyökaluajoa tai säärivin hyväksyntää. Aiemmat odotusmaininnat tarkoittavat jatkovaiheen säätekstejä; tämän metadatan kirjauksen hetkellä tiedosto on olemassa. Näitä säärivejä ei lisätä tämän faktakokoajan Git-committiin.
+
+Normaalikausi: 1991–2020.
+
+```json
+{
+  "artikkeli": "Niamey",
+  "revisio": 1378113383,
+  "taulukko": "Climate data for Niamey Airport (1991–2020, extremes 1961–present)",
+  "lahteet": "Source 1: NOAA NCEI / World Meteorological Organization (1991–2020 WMO Region I Africa Normals) | Source 2: Deutscher Wetterdienst (humidity 1961–1990)",
+  "keskilampo": "Daily mean °C (°F)",
+  "sade": "Average rainfall mm (inches)",
+  "luettu": "2026-10-11",
+  "huomiot": [
+    "sade = vain vesisade (Average rainfall)"
+  ]
+}
+```
+
 ## 1. Perusfaktat
 
 Nigerin pääkaupunki läntisessä Nigerissä, Tillabérin ympäröimänä; Nigerjoki, vasemman rannan ylänkö ja oikean rannan tulvatasanko (N/Geography). Niger on kaupungin ainoa pysyvä joki; korit ovat ajoittain vettä kuljettavia uomia (N). Suulliset perustamis- ja nimitarinat eroavat kansanryhmittäin: yhtä etymologiaa ei valita (N/H).
@@ -107,3 +128,15 @@ Perustamisen suulliset kertomukset eroavat, ei yhden perustajan tai etymologian 
 Kontekstissa ei maalehteä, läheistä kaupunkilehteä tai lähinostoja; kevyen pisteen nykykuvaus ei anna lupaa toistaa virheellistä tyhjästä syntymistä. Gaoa ei käytetä visan oikeana kaupunkivastauksena. Nykypolitiikka, vaalit, rikollisuus, hyökkäykset ja sotilastukikohdat pois. Modernit sillat, suuri moskeija, uudet rakennukset ja museon veistokset eivät kohteita. W-kansallispuisto ja Kourén kirahvit maalehden/alueen aiheita, eivät pääkaupungin kartan täytettä. Saarten asukkaat kuvataan elävinä toimijoina, ei ulkopuolisen kulissina.
 
 **A-jatkoportti:** lisää hyväksyttäviä paikallisia paikkoja lähdekoordinaatteineen tai päätoimittajan dokumentoima pienempi kartta; väestöennusteen alkuperäislähde. A-valmis ei ole toimitusvalmis, eikä tämä A vielä täytä kartan määrää.
+
+
+## Säätausta — pääsession alkuperäinen sääajo
+
+- Lähdeartikkeli: Niamey, revisio 1378113383; luettu 2026-10-11.
+- Taulukko: Climate data for Niamey Airport (1991–2020, extremes 1961–present).
+- Normaalikausi: 1991–2020; lämpöpoiminta: Daily mean °C (°F).
+- Saderivi: Average rainfall mm (inches); vuosisade 555 mm.
+- Taulukon lähteet: "Source 1: NOAA NCEI / World Meteorological Organization (1991–2020 WMO Region I Africa Normals) | Source 2: Deutscher Wetterdienst (humidity 1961–1990)".
+- Huomiot: ["sade = vain vesisade (Average rainfall)"].
+
+Luvut C:hen saa.json:sta ilman tausta-kenttää. Sääteksti vain sarjan luvuista; ei toisen aseman käsin kopioitua kuvausta.

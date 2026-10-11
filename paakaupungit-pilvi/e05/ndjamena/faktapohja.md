@@ -1,6 +1,6 @@
 # N’Djamena — A-vaiheen faktapohja
 
-ndjamena, TCD Tšad, e05, wiki N'Djamena (suomenkielinen otsikko tarkistettava C:ssä kontekstin ehdotuksesta). Luettu 11.10.2026. **A-ESTE: täysi kuuden hyväksyttävän paikallisen karttakohteen joukko puuttuu; yksi joen yhtymäkohta varmistettu.** Osioiden 0–9 kooste tallennettu. B–F tekemättä.
+ndjamena, TCD Tšad, e05, wiki N'Djamena (kontekstin ehdotus). Luettu 11.10.2026. **A-ESTE: täysi kuuden hyväksyttävän paikallisen karttakohteen joukko puuttuu; yksi joen yhtymäkohta varmistettu.** Osioiden 0–9 kooste tallennettu. B–F tekemättä.
 
 ## 0. Lähteet ja 1873
 
@@ -23,6 +23,27 @@ Kaikki 11.10.2026 robots-/redirect-/1s-apurilla sallittu_haku.py, Claude-User/Ma
 | T | FCDO Chad Warnings and insurance, current 11 October 2026 | https://www.gov.uk/foreign-travel-advice/chad |
 
 **1873:** nykyinen Fort-Lamyksi perustettu kaupunki syntyi vasta 1900-luvun alkuvaiheessa. F kuvaa aiemman kotoko-kylän paikalla, mutta sen 1873:n tarkkaa nimettyä asutustilaa ei todistettu. Ei väitettä tyhjästä alueesta eikä joen nykyisen kanavan muuttumattomuudesta. Joki-/rajamaantiede ja myöhempi siirtomaa-asema eri kerroksia. Ei isoisän käyntiä/reittiä/repliikkejä.
+
+### Pääsession saatietolähteen metadata
+
+Pääsession kirjoittama `saa.json` on NAS-työpuussa. Tässä tallennetaan vain tausta ja normaalikausi; ei kuukausi- tai vuosisade-/lämpölukujen käsikopiointia, omaa säätyökaluajoa tai säärivin hyväksyntää. Aiemmat odotusmaininnat tarkoittavat jatkovaiheen säätekstejä; tämän metadatan kirjauksen hetkellä tiedosto on olemassa. Näitä säärivejä ei lisätä tämän faktakokoajan Git-committiin.
+
+Normaalikausi: 1991–2020.
+
+```json
+{
+  "artikkeli": "N'Djamena",
+  "revisio": 1379274285,
+  "taulukko": "Climate data for N'Djamena (1991–2020, extremes 1985–present)",
+  "lahteet": "Source 1: Météo Climat, World Meteorological Organization (rainfall/rain days) | Source 2: NOAA (sun, humidity 1961–1990 and extremes), Extreme Temperature Around The World",
+  "keskilampo": "Daily mean °C (°F)",
+  "sade": "Average rainfall mm (inches)",
+  "luettu": "2026-10-11",
+  "huomiot": [
+    "sade = vain vesisade (Average rainfall)"
+  ]
+}
+```
 
 ## 1. Perusfaktat
 
@@ -52,7 +73,7 @@ Johdanto: kansallismuseon palaeoantropologia yhdistää pääkaupungin Tšadin f
 
 **L3 Abel ei ole kokonainen luuranko**, wiki Australopithecus bahrelghazali: Abel-lempinimi; aineistossa leukaa/hampaita; Koro Toron/Bahr el Gazelin löytöalue; nimitys Australopithecus bahrelghazali; miljoonien vuosien ikä; lajiluokittelusta/ikämenetelmistä keskustelua; museon lähde M nimeää valoksen. A/johdanto, Discovery/Classification; M. Ei löytöpaikkaa N’Djamena-kartalle tai tarkkaa miljoonien vuosien lukua ilman riippumatonta vahvistusta.
 
-**L4 Nimi ja näyttelyesine eri asioita**, wiki Chad National Museum: museolähde nimeää Tchadanthropus uxoris -valoksen; vanha taksoninimi H:n mukaan nykyisessä Homo erectus -artikkelissa historiallisten nimien joukossa; museo esittelee valoksia eri löydöistä; alkuperäinen fossiili, valos ja tulkinnallinen ihmishahmorekonstruktio ovat eri asioita; Toumaïn varma esi-isäväite ei seuraa näyttelynimikylttistä S/M:n ristiriidan perusteella. M/Description; H/historiallinen nimistö; S/luokittelun epävarmuus. Valosta ei nimitetä alkuperäiseksi, eikä tätä käytetä Hominini-/Homo-luokituksen varmennettuna sukupuuna.
+**L4 Nimi ja näyttelyesine eri asioita**, wiki Chad National Museum: museolähde nimeää Tchadanthropus uxoris -valoksen; vanha taksoninimi H:n mukaan nykyisessä Homo erectus -artikkelissa historiallisten nimien joukossa; museo esittelee valoksia eri löydöistä; alkuperäinen fossiili, valos ja tulkinnallinen ihmishahmorekonstruktio ovat eri asioita; Toumaïn varma esi-isäväite ei seuraa näyttelyn nimikyltistä S/M:n ristiriidan perusteella. M/Description; H/historiallinen nimistö; S/luokittelun epävarmuus. Valosta ei nimitetä alkuperäiseksi, eikä tätä käytetä Hominini-/Homo-luokituksen varmennettuna sukupuuna.
 
 Minitehtävä: Mitä museolähde kertoo esittelevänsä näistä fossiileista — valoksia vai kaikkia alkuperäisiä kokonaisia luurankoja? Oikea valoksia; L1/L4. Visa ei kysy tätä. Omin sanoin ilman palkkiota.
 
@@ -99,3 +120,15 @@ N:n johdanto ja History sekä F/konteksti antavat eri perustamisvuosia; N:n johd
 Maalehti varaa Kanem/Bornu/Baguirmi-valtioiden, Sao-savikylän, kalliotaiteen, ruokasäilytyksen/boulen/levän/hibiskuksen, perinnemusiikin sekä kirjailijoiden tarinat. Niitä ei toisteta kaupungissa. Charin valmis fokusnosto varaa joen pituuden/vesimäärän/Tšad-järven riippuvuuden: kaupungissa vain paikallisen yhtymäkohdan maantiede, ei sama koko jokialueen juttu. Nykypolitiikka, konfliktit, rikollisuus ja suojatut modernit palatsit/patsaat/sillat pois. Museo ei oikeuta esineitä karttapisteiksi.
 
 **A-jatkoportti:** kuusi hyväksyttävää historiallista/luontopaikkaa lähdekoordinaatteineen tai dokumentoitu pienemmän kartan poikkeus; museon nykytilan ja tieteellisen kuvamateriaalin varmistus ennen C:tä. Ei täyden A:n/toimituksen/julkaisun kuittausta.
+
+
+## Säätausta — pääsession alkuperäinen sääajo
+
+- Lähdeartikkeli: N'Djamena, revisio 1379274285; luettu 2026-10-11.
+- Taulukko: Climate data for N'Djamena (1991–2020, extremes 1985–present).
+- Normaalikausi: 1991–2020; lämpöpoiminta: Daily mean °C (°F).
+- Saderivi: Average rainfall mm (inches); vuosisade 509 mm.
+- Taulukon lähteet: "Source 1: Météo Climat, World Meteorological Organization (rainfall/rain days) | Source 2: NOAA (sun, humidity 1961–1990 and extremes), Extreme Temperature Around The World".
+- Huomiot: ["sade = vain vesisade (Average rainfall)"].
+
+Luvut C:hen saa.json:sta ilman tausta-kenttää. Sääteksti vain sarjan luvuista; ei toisen aseman käsin kopioitua kuvausta.

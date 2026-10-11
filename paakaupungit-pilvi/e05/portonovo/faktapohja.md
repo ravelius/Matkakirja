@@ -99,3 +99,10 @@ H/fr kutsuu kohdetta virheellisesti varsinaiseksi UNESCO-maailmanperinnöksi: U 
 Kontekstin Lagos-lehti varaa paluumuuttajien kaupunginrakentamistarina-aiheen; Porto-Novo ei toista sitä Da-Silvan/afrobrasilialaisen arkkitehtuurin uudella kuvalla. Badagry-nosto varaa lähialueen kauppahistoriaa: ei sen kauppareitti-/vuositarkkaa tarinaa uudelleen. Maalehteä ei kontekstissa. Nykypolitiikka, konfliktit, rikollisuus ja nykyhenkilöiden palatsit pois. Uudet Avessan-/Zangbeto-monumentaaliset temppelit, patsaat, modernit freskot ja suojatut perinne-esineet eivät karttatäytettä. Paalutalojen/laguunisiltojen tarina jätetään Lagosille. A:n puutteita ei peitetä puuttuvilla kuvilla tai keksityillä pisteillä.
 
 **Jatkoportti:** kuusi hyväksyttävää paikallista karttapaikkaa ja niiden rakennus-/oikeusketjut tai dokumentoitu pienemmän kartan poikkeus; nimettyyn opasruokalajiin lähde. Ei täyden A:n tai toimituksen hyväksyntää.
+
+
+## Säätausta — pääsession alkuperäinen sääajo
+
+Ei sääriviä: Taulukon otsikossa ei ole normaalikautta. Vuosiväliä ei arvata. saatiedot:null; ei aste- tai mm-lukuja teksteihin.
+
+Luvut C:hen saa.json:sta ilman tausta-kenttää. Sääteksti vain sarjan luvuista; ei toisen aseman käsin kopioitua kuvausta.

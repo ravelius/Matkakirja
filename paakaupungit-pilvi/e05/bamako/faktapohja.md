@@ -24,6 +24,25 @@ Konteksti on luettu kokonaan. Lisäksi luettiin Bògòlanfini, Seydou Keïta, Ma
 
 **1873:** Bamako oli olemassa ennen Ranskan hallintokeskusta. B kuvaa paikallisen kafun ja Niaré-, Touré- ja Dravé-suvut; H sijoittaa paikallisen asutuksen ja Mungo Parkin vierailun ennen vuotta 1873. Nykyinen rautatie ja siirtomaakauden hallintorakennukset tulivat myöhemmin. Tarkkaa perustamisvuotta ei kirjoiteta: B, H ja F ovat ristiriitaisia. Ei isoisän käyntiä, reittiä, puhetta tai matkakirjamerkintää. Katedraalin, rautatieaseman ja museon nykyiset rakennukset eivät olleet olemassa 1873 (myöhempi rakennus-/laitoshistoria C/H/M).
 
+### Pääsession saatietolähteen metadata
+
+Pääsession kirjoittama `saa.json` on NAS-työpuussa. Tässä tallennetaan vain tausta ja normaalikausi; ei kuukausi- tai vuosisade-/lämpölukujen käsikopiointia, omaa säätyökaluajoa tai säärivin hyväksyntää. Aiemmat odotusmaininnat tarkoittavat jatkovaiheen säätekstejä; tämän metadatan kirjauksen hetkellä tiedosto on olemassa. Näitä säärivejä ei lisätä tämän faktakokoajan Git-committiin.
+
+Normaalikausi: 1991–2020.
+
+```json
+{
+  "artikkeli": "Bamako",
+  "revisio": 1379116869,
+  "taulukko": "Climate data for Bamako (1991–2020, extremes 1949–present)",
+  "lahteet": "Source 1: NOAA (sun, 1961–1990), World Meteorological Organization | Source 2: Deutscher Wetterdienst (extremes and humidity), Extreme Temperature Around The World",
+  "keskilampo": "Daily mean °C (°F)",
+  "sade": "Average precipitation mm (inches)",
+  "luettu": "2026-10-11",
+  "huomiot": []
+}
+```
+
 ## 1. Perusfaktat
 
 - Mali, maan pääkaupunki ja hallintokeskus; lounainen sijainti Nigerjoen varressa. B/johdanto, Geography.
@@ -141,3 +160,15 @@ Kontekstin maalehti varaa Sundiatan, suullisen perustuslain, Mansa Musan, Songha
 Nykypolitiikka, vaalit, konfliktit, rikollisuus ja lentokenttähyökkäykset pois. Grand Mosque, BCEAO-torni, itsenäisyys-/rauhanmuistomerkit, moderni kulttuuripalatsi ja museon nykyarkkitehtuuri pois suojattuina/epävarmoina teoskohteina. Nykyinen lääketieteellinen `Point G`-artikkeli käsittelee G-pistettä eikä Bamakon kukkulaa: sitä ei käytetä. Parkin yleistietoon ohjannut AKDN-linkki ei ollut puiston kohdesivu eikä todista sen rakennushistoriaa.
 
 **A:n jatkoportti:** kuuden hyväksyttävän paikallisen karttakohteen lähdeaineisto ja koordinaatit on ratkaistava tai päätoimittajan on hyväksyttävä dokumentoitu pienempi kartta. Tämä tiedosto ei ole C-, D-, F- tai julkaisuhyväksyntä.
+
+
+## Säätausta — pääsession alkuperäinen sääajo
+
+- Lähdeartikkeli: Bamako, revisio 1379116869; luettu 2026-10-11.
+- Taulukko: Climate data for Bamako (1991–2020, extremes 1949–present).
+- Normaalikausi: 1991–2020; lämpöpoiminta: Daily mean °C (°F).
+- Saderivi: Average precipitation mm (inches); vuosisade 948 mm.
+- Taulukon lähteet: "Source 1: NOAA (sun, 1961–1990), World Meteorological Organization | Source 2: Deutscher Wetterdienst (extremes and humidity), Extreme Temperature Around The World".
+- Huomiot: [].
+
+Luvut C:hen saa.json:sta ilman tausta-kenttää. Sääteksti vain sarjan luvuista; ei toisen aseman käsin kopioitua kuvausta.

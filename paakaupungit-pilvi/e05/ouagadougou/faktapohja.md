@@ -23,6 +23,25 @@ Kaikki robots- ja redirect-tarkistukset yhteisellä `sallittu_haku.py`:llä (Cla
 
 **1873-kehys:** Ouagadougou oli mossien hovin ja valtakunnan keskus ennen siirtomaahallintoa. O erottaa varhaisen kaupungin, mossien valtakunnan ja hovin pysyvän sijoittumisen. Kaupunki oli olemassa 1873; myöhempi siirtomaakauden hallintokeskus ja rautatie eivät vielä olleet. Metsä Bangr Weogon paikalla oli paikallisten päälliköiden pyhänä pitämä alue (P/Histoire). Ei väitettä isoisän käynnistä, seremonian seuraamisesta tai omasta matkakirjamerkinnästä.
 
+### Pääsession saatietolähteen metadata
+
+Pääsession kirjoittama `saa.json` on NAS-työpuussa. Tässä tallennetaan vain tausta ja normaalikausi; ei kuukausi- tai vuosisade-/lämpölukujen käsikopiointia, omaa säätyökaluajoa tai säärivin hyväksyntää. Aiemmat odotusmaininnat tarkoittavat jatkovaiheen säätekstejä; tämän metadatan kirjauksen hetkellä tiedosto on olemassa. Näitä säärivejä ei lisätä tämän faktakokoajan Git-committiin.
+
+Normaalikausi: 1991–2020.
+
+```json
+{
+  "artikkeli": "Ouagadougou",
+  "revisio": 1378478303,
+  "taulukko": "Climate data for Ouagadougou (1991–2020, extremes 1902–present)",
+  "lahteet": "Source 1: World Meteorological Organization, Meteo Climat (record highs and lows) | Source 2: Deutscher Wetterdienst (humidity, 1961–1967)",
+  "keskilampo": "Daily mean °C (°F)",
+  "sade": "Average precipitation mm (inches)",
+  "luettu": "2026-10-11",
+  "huomiot": []
+}
+```
+
 ## 1. Perusfaktat
 
 - Burkina Fason pääkaupunki maan keskiosassa; hallinnon, kaupan ja kulttuurin keskus. O/johdanto, Economy.
@@ -118,3 +137,15 @@ Matkailijalle 1 nykyinen maltillinen pysty 0.60–0.85 metsän kasvillisuudesta.
 Kontekstissa ei maalehteä, läheistä kaupunkilehteä tai lähinostoa. Kevyen pisteen FESPACO/hovi/markkinat ovat johdannon pohjaa, eivät uuden nostoilmaisun kopiota. FESPACOn teeman MICA-kysymys erotettu visasta. Nykyhallinto, vaalit, konfliktit ja rikollisuus pois. Suojattu Naba Koom -patsas, Laongon modernit veistokset, Flambeau ja uudet palatsit/rakennukset pois kohdekuvista; ne eivät ole kuuden pisteen täytettä. Ei koko maan perustus-/nimihistoriasta kaupunkinostoa.
 
 **Jatkoportti:** muut hyväksyttävät karttakohteet tai dokumentoidun pienemmän kartan hyväksyntä, sekä väestöluvun hallinto-/taajamatermi. A-kooste ei ole toimitus-/julkaisuhyväksyntä.
+
+
+## Säätausta — pääsession alkuperäinen sääajo
+
+- Lähdeartikkeli: Ouagadougou, revisio 1378478303; luettu 2026-10-11.
+- Taulukko: Climate data for Ouagadougou (1991–2020, extremes 1902–present).
+- Normaalikausi: 1991–2020; lämpöpoiminta: Daily mean °C (°F).
+- Saderivi: Average precipitation mm (inches); vuosisade 818 mm.
+- Taulukon lähteet: "Source 1: World Meteorological Organization, Meteo Climat (record highs and lows) | Source 2: Deutscher Wetterdienst (humidity, 1961–1967)".
+- Huomiot: [].
+
+Luvut C:hen saa.json:sta ilman tausta-kenttää. Sääteksti vain sarjan luvuista; ei toisen aseman käsin kopioitua kuvausta.

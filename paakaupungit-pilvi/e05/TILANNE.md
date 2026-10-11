@@ -1,6 +1,6 @@
 # e05 — A-vaiheen tilanne
 
-Alkuaika: 11.10.2026 noin 20.00 Europe/Helsinki. Päivitetty: 2026-10-11T21:07:58+03:00
+Alkuaika: 11.10.2026 noin 20.00 Europe/Helsinki. Päivitetty: 2026-10-11T21:28:39+03:00
 
 Oma klooni: NAS sessio-72-20261011/e05. Haara: paakaupungit-e05-codex. Pohja: e4f2845b3a82874550481fda26528df065820232.
 
@@ -8,16 +8,16 @@ Vaihe 0: kontekstit ja saa-syote.json tuotettu alkuperäisellä konteksti-työka
 
 | kaupunki | A | B | C | D | E | F | huomio |
 |---|---|---|---|---|---|---|---|
-| bamako | ESTE: karttakohteiden määrä ja lähdekoordinaatit | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
-| ouagadougou | ESTE: kartan kohdemäärä ja väestöalueen täsmennys | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
-| niamey | ESTE: kartan kohdemäärä ja väestöennusteen alkuperäinen vahvistus | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
-| yamoussoukro | ESTE: paikallinen 1873-varmistus ja hyväksyttävä kartta | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
-| accra | valmis: A, 6 kohde-ehdotusta | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
-| lome | ESTE: kartan kohdemäärä ja rakennusten oikeusketjut | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
-| portonovo | ESTE: kartan kohdemäärä ja rakennusten oikeusketjut | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
-| abuja | ESTE: kartan kohdemäärä ja osa nykytilalähteistä | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
-| ndjamena | ESTE: kartan kohdemäärä ja museo-/opaslisälähteet | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
-| yaounde | kesken | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
+| bamako | ESTE: karttakohteiden määrä ja lähdekoordinaatit | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | A-valmis ei ole toimitusvalmis |
+| ouagadougou | ESTE: kartan kohdemäärä ja väestöalueen täsmennys | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | A-valmis ei ole toimitusvalmis |
+| niamey | ESTE: kartan kohdemäärä ja väestöennusteen alkuperäinen vahvistus | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | A-valmis ei ole toimitusvalmis |
+| yamoussoukro | ESTE: paikallinen 1873-varmistus ja hyväksyttävä kartta | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | A-valmis ei ole toimitusvalmis |
+| accra | valmis: A, 6 kohde-ehdotusta | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | A-valmis ei ole toimitusvalmis |
+| lome | ESTE: kartan kohdemäärä ja rakennusten oikeusketjut | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | A-valmis ei ole toimitusvalmis |
+| portonovo | ESTE: kartan kohdemäärä ja rakennusten oikeusketjut | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | A-valmis ei ole toimitusvalmis |
+| abuja | ESTE: kartan kohdemäärä ja osa nykytilalähteistä | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | A-valmis ei ole toimitusvalmis |
+| ndjamena | ESTE: kartan kohdemäärä ja museo-/opaslisälähteet | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | A-valmis ei ole toimitusvalmis |
+| yaounde | ESTE: kartan kohdemäärä ja väestöalueen täsmennys | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | A-valmis ei ole toimitusvalmis |
 
 ## Lähde- ja eräpoikkeukset
 
@@ -62,3 +62,13 @@ Osioiden 0–9 kooste, Aso ja Jabi lähdekoordinaatteineen. Uusi pääkaupunki e
 ### ndjamena A-vaiheen lähdekooste 11.10.2026 21.07
 
 Osioiden 0–9 kooste ja Logonen suu Charissa varmistettu Wiki-koordinaatista. Kaupunkilähteiden ristiriitaiset perustamis-/nimeämisvuodet pehmennetty. Museon valokset erotettu alkuperäisistä fossiileista, Toumaïn varma esi-isä-superlatiivi hylätty. Charin maalehti/fokusnostotoistot rajattu pois. Viisi muuta karttaehdokasta eivät läpäisseet oikeus-/lähdeporttia.
+
+## A-vaiheen koontitila
+
+10/10 kaupungille lähdekooste osioihin 0–9. A-portin täyttävä kaupunki 1/10: Accra. Muut 9 on merkitty esteellisiksi; niitä ei kuitata A-valmiiksi. B–F ovat tekemättä. Ei erätoimitusta, pelikytkentää tai julkaisua.
+
+Kaupungit/maat ja osioiden 0–9 rakenne tarkistettu kaikista kymmenestä. Kontekstit ja saa-syote.json: 10 kaupunkia. Ei sisalto.json:ia tai kuvat.md:tä. npm test ja sisalto.json-tarkistin eivät kuulu tähän A-rajaukseen, eikä niitä ajettu. Rakennetarkistus ei ole riippumaton faktantarkistus.
+
+Pääsession työpuuhun lisätyt saa.json-tiedostot: bamako, ouagadougou, niamey, yamoussoukro, accra, lome, abuja, ndjamena, yaounde. Niiden taustametadata kirjattu A-pohjiin; kuukausi-/vuosilukuja ei käsinkopioitu tai säätyökalua ajettu tässä sessiossa. Porto-Novon säärivi puuttuu. Yamoussoukron tausta.lahteet ei nimeä lähdeorganisaatioita: säätekstin lähdeportti avoin. Pääsession saa-syote.json-muutos ja saa.json-tiedostot jätetään pääsession Git-työksi.
+
+Ei apuagentteja. Tarkkaa tämän session tokenkulutusta ei ole saatavilla työkaluraportista, eikä sitä arvioitu. Alkuaika noin 20.00 Europe/Helsinki 11.10.2026; viimeisin kellonaika päivitysrivillä.

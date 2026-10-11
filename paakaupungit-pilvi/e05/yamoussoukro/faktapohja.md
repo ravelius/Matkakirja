@@ -24,6 +24,27 @@ Kaikki luettu 11.10.2026 yhteisen robots-/redirect-/1s-apurin `sallittu_haku.py`
 
 **1873:** F kuvaa baoulé-asutuksen seudun historiaa ennen siirtomaakautta. Nykyisen suunnitellun pääkaupungin rakennukset ja pääkaupunkiasema tulivat vasta myöhemmin (Y/F). N'Gokron/Yamousson tarkkaa tilannetta juuri 1873 ei luetuista lähteistä voitu todistaa: ei lausetta "kaupunkia ei ollut" eikä tarkkaa kylän perustamisvuotta. F/Y:n 1900-luvun kylähistoria ei yksin todista nimettyä kylää 1873. Isoisän tekemisiä, reittiä tai lainauksia ei luoda.
 
+### Pääsession saatietolähteen metadata
+
+Pääsession kirjoittama `saa.json` on NAS-työpuussa. Tässä tallennetaan vain tausta ja normaalikausi; ei kuukausi- tai vuosisade-/lämpölukujen käsikopiointia, omaa säätyökaluajoa tai säärivin hyväksyntää. Aiemmat odotusmaininnat tarkoittavat jatkovaiheen säätekstejä; tämän metadatan kirjauksen hetkellä tiedosto on olemassa. Näitä säärivejä ei lisätä tämän faktakokoajan Git-committiin.
+
+Normaalikausi: 1991–2020.
+
+```json
+{
+  "artikkeli": "Yamoussoukro",
+  "revisio": 1377060435,
+  "taulukko": "Climate data for Yamoussoukro (1991-2020) normals",
+  "lahteet": "Source 1: | Source 2:",
+  "keskilampo": "Daily mean °C (°F)",
+  "sade": "Average precipitation mm (inches)",
+  "luettu": "2026-10-11",
+  "huomiot": []
+}
+```
+
+**Säälähteen lisäportti:** tausta.lahteet sisältää vain tyhjät Source 1/Source 2 -otsikot. Pääsession on varmistettava nimetyt sääpalvelu-/WMO-/NOAA-lähteet ennen numeroihin perustuvaa pelaajatekstiä.
+
 ## 1. Perusfaktat
 
 Maan virallinen pääkaupunki keskisessä Norsunluurannikossa; Abidjanissa edelleen talouden ja monien hallintotoimintojen painopiste (Y/johdanto, Since independence; F/Nouvelle capitale). Vanhasta N'Gokron kylästä käytetään Yamousson nimeen liittyvää kaupunginnimeä; kro on baoulén kylä-/paikkapääte (F/Toponymie). Y:n ja F:n sukulaisuussuhteet/vuodet eroavat, niitä ei käytetä. Kaupungin nykyinen laaja katuverkko on myöhempää suunnittelua (F/Urbanisme).
@@ -102,3 +123,15 @@ Y/F Yamousson aika ja sukulaisuus eroavat; ei niitä täsmällisinä. Väestöal
 Kontekstissa ei maalehteä/lähikaupunkilehteä/lähinostoa. Abidjanin tarinaa ei kirjoiteta uudelleen; mainitaan vain virallisen ja taloudellisen pääkaupungin ero. Nykypolitiikka, puolueet, konfliktit ja rikollisuus pois. Modernit palatsit, säätiörakennus, basilika, kampukset ja stadion eivät karttatäytettä. Koko maan esihistoria ja Queen Pokou -kertomus eivät kaupungin todennettuja 1873-faktoja. Mukulakasvin ja ruokabanaanin nostoille eri aiheet; attiékén valmistusta ei tehdä toiseksi saman tarinan nostoksi.
 
 **A:n jatkoportti:** paikallinen 1873-lähde ja hyväksyttävät karttapaikat, tai päätoimittajan nimenomainen dokumentoitu poikkeus. Tämä kooste ei ole täyden A:n, toimituksen tai julkaisun hyväksyntä.
+
+
+## Säätausta — pääsession alkuperäinen sääajo
+
+- Lähdeartikkeli: Yamoussoukro, revisio 1377060435; luettu 2026-10-11.
+- Taulukko: Climate data for Yamoussoukro (1991-2020) normals.
+- Normaalikausi: 1991–2020; lämpöpoiminta: Daily mean °C (°F).
+- Saderivi: Average precipitation mm (inches); vuosisade 1176 mm.
+- Taulukon lähteet: "Source 1: | Source 2:".
+- Huomiot: [].
+
+Luvut C:hen saa.json:sta ilman tausta-kenttää. Sääteksti vain sarjan luvuista; ei toisen aseman käsin kopioitua kuvausta.

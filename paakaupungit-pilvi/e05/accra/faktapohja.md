@@ -31,6 +31,25 @@ Hakupäivä kaikille 11.10.2026. Robots Claude-User/Matkakirja ja redirectit yht
 
 Konteksti luettu kokonaan. **1873:** rannikon Ga-yhteisöt ja kauppalinnoitukset olivat jo olemassa; Accra ei vielä ollut myöhemmin muodostuneen Kultarannikon hallintopääkaupunki (A/History). UNESCO N vahvistaa kauppalinnoitusten vanhan rannikkokerroksen ja nimetyt kohteet. Nykyinen Holy Trinity rakennettiin vasta myöhemmin (C). Ei isoisän reittiä, käyntiä tai lausumia. Luonnonrantojen yksityiskohtaista 1873-ilmettä ei ole todistettu: ei vanhan kuvan kaltaisen maiseman keksimistä.
 
+### Pääsession saatietolähteen metadata
+
+Pääsession kirjoittama `saa.json` on NAS-työpuussa. Tässä tallennetaan vain tausta ja normaalikausi; ei kuukausi- tai vuosisade-/lämpölukujen käsikopiointia, omaa säätyökaluajoa tai säärivin hyväksyntää. Aiemmat odotusmaininnat tarkoittavat jatkovaiheen säätekstejä; tämän metadatan kirjauksen hetkellä tiedosto on olemassa. Näitä säärivejä ei lisätä tämän faktakokoajan Git-committiin.
+
+Normaalikausi: 1991–2020.
+
+```json
+{
+  "artikkeli": "Accra",
+  "revisio": 1378555914,
+  "taulukko": "Climate data for Accra (Accra International Airport), 1991–2020 normals, extremes 1936–present",
+  "lahteet": "Source 1: NOAA | Source 2: Deutscher Wetterdienst (extremes 1936–1990, humidity 1952–1967)",
+  "keskilampo": "Daily mean °C (°F)",
+  "sade": "Average precipitation mm (inches)",
+  "luettu": "2026-10-11",
+  "huomiot": []
+}
+```
+
 ## 1. Perusfaktat
 
 Ghanan pääkaupunki maan etelärannikolla, Guineanlahden/Atlantin äärellä; Ga-yhteisöjen historiallinen alue (A). Nykyinen kaupunki syntyi erillisten rannikon asutusten yhteenkasvusta; pääkaupunkiasema 1800-luvun loppupuolella (A, ei tarkkaa vuotta ilman riippumatonta vahvistusta).
@@ -112,3 +131,15 @@ Accran väestöalueet erotettu, ei pienpiirin/Greater Accran/metropolin lukuja k
 ## 9. Poisjätetyt toistot
 
 Maalehti varaa Ghanan nimen lainan, Asanten palatsin, kaakaon tuontitarinan, Black Starin, waakyen/kenkeyn/maustebanaanin, kenten/adinkran/kultapunnukset/fantasia-arkut, highlifen/azonton, nimipäivät/Homowon/hiljaisuusrituaalin/perimysjärjestelmän. Niitä ei nosteta uudelleen. Osu-fokusnoston tarina säilyy omana, vain kartalle täydentävät paikka-/rakennuskerrosfaktat. Modernit Black Star Gate, National Theatre, patsaat, nykyinen majakka ja suojatut kampus-/hotellirakennukset eivät karttakohteita. Aburi ei Accran kartalla, eikä sen kaakaotarinaa toisteta. Nykypolitiikka/sodat/rikollisuus pois. A:n jälkeen B:n on hylättävä jokainen teos- tai tiedostooikeudeltaan epävarma kuva.
+
+
+## Säätausta — pääsession alkuperäinen sääajo
+
+- Lähdeartikkeli: Accra, revisio 1378555914; luettu 2026-10-11.
+- Taulukko: Climate data for Accra (Accra International Airport), 1991–2020 normals, extremes 1936–present.
+- Normaalikausi: 1991–2020; lämpöpoiminta: Daily mean °C (°F).
+- Saderivi: Average precipitation mm (inches); vuosisade 799 mm.
+- Taulukon lähteet: "Source 1: NOAA | Source 2: Deutscher Wetterdienst (extremes 1936–1990, humidity 1952–1967)".
+- Huomiot: [].
+
+Luvut C:hen saa.json:sta ilman tausta-kenttää. Sääteksti vain sarjan luvuista; ei toisen aseman käsin kopioitua kuvausta.

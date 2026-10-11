@@ -25,6 +25,25 @@ Kaikki lähteet yhteisellä sallittu_haku.py-apurilla: robots Claude-User/Matkak
 
 **1873:** lähteet erottavat rannikon aiemman ewe-asutuksen (Bè ja paikalliset perustamistraditiot) sekä 1800-luvun loppupuolella kasvaneen kauppakaupungin (L/F/B). Lomé ei vielä ollut myöhemmin syntyneen siirtomaapääkaupungin asemassa. Tarkka nimetyn kaupunkiasutuksen määrä/ulkoasu 1873 ei varmistettu. Katedraali, palatsi ja metallinen wharf ovat myöhemmät rakennukset (D/P/W). Dzitri-perinne on perinne, ei todistettu yksittäisen miehen perustamisvuosi. Ei isoisän käyntiä, reittiä tai repliikkiä.
 
+### Pääsession saatietolähteen metadata
+
+Pääsession kirjoittama `saa.json` on NAS-työpuussa. Tässä tallennetaan vain tausta ja normaalikausi; ei kuukausi- tai vuosisade-/lämpölukujen käsikopiointia, omaa säätyökaluajoa tai säärivin hyväksyntää. Aiemmat odotusmaininnat tarkoittavat jatkovaiheen säätekstejä; tämän metadatan kirjauksen hetkellä tiedosto on olemassa. Näitä säärivejä ei lisätä tämän faktakokoajan Git-committiin.
+
+Normaalikausi: 1991–2020.
+
+```json
+{
+  "artikkeli": "Lomé",
+  "revisio": 1378608421,
+  "taulukko": "Climate data for Lomé (Lomé Airport) 1991-2020 normals, extremes 1892-present",
+  "lahteet": "Source 1: NOAA (humidity and sunshine 1961–1990) | Source 2: Meteo Climat (record highs and lows)",
+  "keskilampo": "Daily mean °C (°F)",
+  "sade": "Average precipitation mm (inches)",
+  "luettu": "2026-10-11",
+  "huomiot": []
+}
+```
+
 ## 1. Perusfaktat
 
 Togon pääkaupunki maan lounaisrannikolla Guineanlahdella, lähellä Ghanan rajaa; vanha kaupunkitila meren/laguunin/Bèn/Aflaon välissä (L/Geography). Ewe-kauppiaat olivat kaupungin toimijoita ennen siirtomaahallintoa (L/F). Nimi liitetään ewe-kielen alo-puustoa kuvaavaan ilmaukseen (L/F), ei yhtä perustamisvuotta. Satama kaupan solmukohtana, ei lähteetöntä alueen suurin/ainoa-superlatiivia.
@@ -100,3 +119,15 @@ L/F perustaminen ja Bèn perinne eri kerroksia, ei yksi varma perustamisvuosi. F
 Kontekstissa ei maalehteä/lähikaupunkilehteä/lähinostoa. Kevyen kuvauksen tavalliset pohjafaktat vain johdannossa. Ei nykypolitiikkaa, sopimus-/konfliktiaiheita, rikollisuutta tai Akodessewan perinne-esineitä eksoottisena huvina. Suojattu itsenäisyysmuistomerkki, uudet kongressi-/hotellirakennukset ja nykytaide pois. Bèn kaupunginosaa ei merkitä aukiona/metsänä. Kaksi nostoaihetta eivät toista Nana Benz -tarinaa eri kuvalla: K2 kaupalliset toimijat, K3 tavallinen muu torivalikoima.
 
 **A-jatkoportti:** kuusi hyväksyttävää paikallista karttakohdetta ja epävarmojen tekijä-/koordinaattiketjujen ratkaisu tai päätoimittajan dokumentoima pienemmän kartan poikkeus. Ei täyden A:n/toimituksen/julkaisun kuittausta.
+
+
+## Säätausta — pääsession alkuperäinen sääajo
+
+- Lähdeartikkeli: Lomé, revisio 1378608421; luettu 2026-10-11.
+- Taulukko: Climate data for Lomé (Lomé Airport) 1991-2020 normals, extremes 1892-present.
+- Normaalikausi: 1991–2020; lämpöpoiminta: Daily mean °C (°F).
+- Saderivi: Average precipitation mm (inches); vuosisade 829 mm.
+- Taulukon lähteet: "Source 1: NOAA (humidity and sunshine 1961–1990) | Source 2: Meteo Climat (record highs and lows)".
+- Huomiot: [].
+
+Luvut C:hen saa.json:sta ilman tausta-kenttää. Sääteksti vain sarjan luvuista; ei toisen aseman käsin kopioitua kuvausta.

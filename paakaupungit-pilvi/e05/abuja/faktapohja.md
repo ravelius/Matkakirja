@@ -21,6 +21,25 @@ Kaikki 11.10.2026 yhteisellä sallittu_haku.py-apurilla: robots Claude-User/Matk
 
 **1873:** nykyistä suunniteltua pääkaupunkia ei ollut; rakentaminen alkoi 1900-luvun loppupuoliskolla (A/History). Alue ei ollut tyhjä: alkuperäisiin paikallisiin yhteisöihin A nimeää gbagyit/gwarit, basat, gwandarat sekä muita ryhmiä. Nykypääkaupunki, koko FCT ja kyläasutukset eivät sama asia. Aso on luonnonkallio, ei pääkaupunkiprojektin rakennelma R:n mukaan. Ei isoisän reittiä, puhetta tai vierailua.
 
+### Pääsession saatietolähteen metadata
+
+Pääsession kirjoittama `saa.json` on NAS-työpuussa. Tässä tallennetaan vain tausta ja normaalikausi; ei kuukausi- tai vuosisade-/lämpölukujen käsikopiointia, omaa säätyökaluajoa tai säärivin hyväksyntää. Aiemmat odotusmaininnat tarkoittavat jatkovaiheen säätekstejä; tämän metadatan kirjauksen hetkellä tiedosto on olemassa. Näitä säärivejä ei lisätä tämän faktakokoajan Git-committiin.
+
+Normaalikausi: 1991–2020.
+
+```json
+{
+  "artikkeli": "Abuja",
+  "revisio": 1376903060,
+  "taulukko": "Climate data for Abuja, Nigeria (1991-2020)",
+  "lahteet": "Source 1: NOAA | Source 2: Weather.Directory",
+  "keskilampo": "Daily mean °C (°F)",
+  "sade": "Average precipitation mm (inches)",
+  "luettu": "2026-10-11",
+  "huomiot": []
+}
+```
+
 ## 1. Perusfaktat
 
 Nigeria, maan keskiosan Federal Capital Territory; nykyinen pääkaupunki suunniteltu rakennettavaksi 1900-luvun lopulla; hallinnon siirto Lagosista myöhempi (A, ei tarkkaa vuotta ilman riippumatonta vahvistusta). Kaupungin sisäiset alueet levittäytyvät Ason etelä-/länsipuolelle. Paikalliset yhteisöt omina toimijoina A/History.
@@ -92,3 +111,15 @@ Ason suhteellinen ja merenpintakorkeus eri mittareita, kaikki korkeudet pois. As
 Maalehti varaa Nigerian valtakunta-/itsehallintohistorian, jollofin/suyan/egusin/jamssin, perinnemusiikin/afrobeatin, Nok-taiteen/ovet/tekstiilit ja kirjailijat. Niitä ei toisteta. Zuma Rockin valmis fokusnosto ja geologinen tarina jää omaan paikkaansa. Modernit kansallismoskeija, kristillinen keskus, tornit, palatsit, Ship House ja Millennium Park eivät suojattuja teoksia kiertävää karttatäytettä. Nykypolitiikka, vaalit, konfliktit, rikollisuus tai keksitty isoisä pois.
 
 **A-jatkoportti:** kuusi hyväksyttävää paikallista historiallista/luontopaikkaa Wiki/P625-pisteineen tai päätoimittajan dokumentoima pienempi kartta; eläinaiheen ajantasainen varmistus. Ei täyden A:n, toimituksen tai julkaisun kuittausta.
+
+
+## Säätausta — pääsession alkuperäinen sääajo
+
+- Lähdeartikkeli: Abuja, revisio 1376903060; luettu 2026-10-11.
+- Taulukko: Climate data for Abuja, Nigeria (1991-2020).
+- Normaalikausi: 1991–2020; lämpöpoiminta: Daily mean °C (°F).
+- Saderivi: Average precipitation mm (inches); vuosisade 1421 mm.
+- Taulukon lähteet: "Source 1: NOAA | Source 2: Weather.Directory".
+- Huomiot: [].
+
+Luvut C:hen saa.json:sta ilman tausta-kenttää. Sääteksti vain sarjan luvuista; ei toisen aseman käsin kopioitua kuvausta.
