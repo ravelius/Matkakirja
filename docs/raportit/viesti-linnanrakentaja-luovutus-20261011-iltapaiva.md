@@ -93,3 +93,16 @@ Siirtosepälle lähetetty v47g–j; v47k–n LÄHETTÄMÄTTÄ (viestiraja).
 - PT 14.0x: botin mallikohdat Siirtosepältä heti ajon jälkeen ja ne ensin. Uudet jonossa (linna edellä): ISS-raketti LS2:lle (Opus-agentti
   tekee `_valmiit/iss-raketti-v1/`, tarkista ennen lähetystä), soutajan kasvot Natiivisepälle (ARKit 52, ele_puhe_istuen, ele_osoitus_portti,
   Eyes/Eyebrows-painot; PT antaa järjestyksen).
+
+## JATKO 14.4x–15.3x: Siirtosepän botti 14.02 (8/17) → v47q, v47r
+- Juurisyy (PathComplete mutta kapseli jumissa): NavMesh rakennetaan vain kävelypinnoista, kavennus lattian reunasta → lattia seinän alla
+  vie kapselin seinään. **kavely.py `kavely_seinista()`**: kaikkien osien törmäyslaatikoiden (Osa.laatikko, palatsin lt()) ja pystysuorien
+  törmäystahkojen (Osa.quad) pohjapiirrot leikataan kävelystä kapselin korkeudella (0,35…1,75). Konfliktit (scratchpad `seinakonfliktit.py`)
+  kirkkotorni/kappeli/palatsi 7 841 → 31. Lisäksi kierreportaan ovet 45° (1,16 m), tott-kammion kävely seinän sisäpintaan + ovipaikat,
+  risteys 19/42/72 (muuriporras-2 avoin 0,6, paaovi-porras-b avoin 0,6 k=1, sulkuseinä, avoimen sivun jäännepylväät pois).
+  Reitti 2→94 ennallaan 90/93. Työkalut scratchpad d510e6ef…: kapselireitti.py, seinakonfliktit.py, vali.py, fp_kuva.py, ylakuva.
+  v47q vienti käynnissä (vie_v47q.log). Ehdotettu Siirtosepälle natiiviin: törmäyksen pystykolmiot NavMeshiin Not Walkable -lähteinä.
+- **v47r (valmis vietäväksi)**: kuori_kavely.py: ulkoalueen kävely, jossa silmä on kuoren sisällä, pois (277 kolm.), kiilalle (3,6 m²)
+  rajaseinä törmäykseen. Aja kuori_kavely.py (huippu + tilat/laituri.glb) v44/kavely-kopiolle → ulkoalue-*.glb + osat.json ulkoalue.
+- Auki Siirtosepältä: muuriportaan juuren silmä 1,22 (ei matalaa pintaa mallissa), ampumakäytävän 77 musta ruutu (kuva pyydetty), kapselin mitat.
+- Raketti v1.1 + erilliset + karttaversio LS2:lla (Opus-agentti teki, tarkistettu). Soutajan kasvot seuraavana linnan jälkeen (PT:n järjestys).
