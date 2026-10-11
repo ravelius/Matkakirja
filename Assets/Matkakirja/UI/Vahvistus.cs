@@ -58,6 +58,8 @@ namespace Matkakirja.Natiivi
             peruttu = kunPeruttu;
             peru.style.display = DisplayStyle.Flex;
             Auki = true;
+            // Aina päällimmäiseksi omassa kerroksessaan: rahapulan ilmoitus jäi auki olevan nostokortin alle (simuajo d868ab8d).
+            himmennys.BringToFront();
             Rakenne.Nayta(himmennys, true, 320);
             SyoteLukko.Esta(this);
         }
