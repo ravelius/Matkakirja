@@ -1,6 +1,6 @@
 # e05 — A-vaiheen tilanne
 
-Alkuaika: 11.10.2026 noin 20.00 Europe/Helsinki. Päivitetty: 2026-10-11T20:20:57+03:00
+Alkuaika: 11.10.2026 noin 20.00 Europe/Helsinki. Päivitetty: 2026-10-11T20:25:18+03:00
 
 Oma klooni: NAS sessio-72-20261011/e05. Haara: paakaupungit-e05-codex. Pohja: e4f2845b3a82874550481fda26528df065820232.
 
@@ -10,8 +10,8 @@ Vaihe 0: kontekstit ja saa-syote.json tuotettu alkuperäisellä konteksti-työka
 |---|---|---|---|---|---|---|---|
 | bamako | ESTE: karttakohteiden määrä ja lähdekoordinaatit | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
 | ouagadougou | ESTE: kartan kohdemäärä ja väestöalueen täsmennys | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
-| niamey | kesken | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
-| yamoussoukro | jonossa | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
+| niamey | ESTE: kartan kohdemäärä ja väestöennusteen alkuperäinen vahvistus | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
+| yamoussoukro | kesken | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
 | accra | jonossa | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
 | lome | jonossa | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
 | portonovo | jonossa | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
@@ -34,3 +34,7 @@ Osioiden 0–9 lähdekooste toimitettu. Kartalle vain kaksi luonnonpaikkaa, niid
 ### ouagadougou A-vaiheen lähdekooste 11.10.2026 20.20
 
 Osioiden 0–9 kooste kirjoitettu, kaksi hyväksyttävää karttapaikkaa lähdekoordinaatteineen. Muut neljä ehdokasta hylätty oikeus- tai lähdepuutteiden vuoksi. FESPACOn perustamisvuosi 1969 vahvistettu Wikipediasta ja järjestäjän sivulta. Ei B–F-töitä.
+
+### niamey A-vaiheen lähdekooste 11.10.2026 20.25
+
+Osioiden 0–9 kooste ja kolme paikallista luonnonkohdetta varmistettu Wiki-koordinaateista. Rakennusehdokkaat ja kauemmat saaret pois oikeus- tai rajausepävarmuuden vuoksi. Väestöennusteen kontekstin lähdehuomio säilytetty; lukua ei käsitelty uutena laskentatuloksena.
