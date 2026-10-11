@@ -1,0 +1,130 @@
+{
+ "id": "abudhabi",
+ "era": "e03",
+ "nimi": "Abu Dhabi",
+ "nimiAlkukieli": "أبوظبي (Abū Ẓaby)",
+ "maa": "ARE",
+ "maanNimi": "Arabiemiirikunnat",
+ "asema": "pääkaupunki",
+ "lat": 24.4539,
+ "lon": 54.3773,
+ "wikidata": "Q1519",
+ "kevytSisalto": {
+  "kuvaus": "Abu Dhabi on Arabiemiirikuntien liittovaltion pääkaupunki ja samannimisen emiirikunnan hallintokeskus. Kaupunki sijaitsee Persianlahden saarella, ja sen rannikolla kulkee pitkä Corniche-rantakatu. Maan öljyvarat ovat rahoittaneet nopean kasvun ja suuret kulttuurihankkeet, ja nykyään kaupunki tunnetaan myös museoistaan ja moskeijoistaan.",
+  "tunnusrakennukset": [
+   "Qasr Al Hosn (kaupungin vanhin säilynyt rakennus)",
+   "Sheikh Zayedin suurmoskeija",
+   "Emirates Palace",
+   "Louvre Abu Dhabi"
+  ],
+  "asukkaat": {
+   "arvo": 2823340,
+   "vuosi": 2024,
+   "lahde": "Statistics Centre Abu Dhabi (SCAD), Abu Dhabi Census -raportti 'Abu Dhabi Population Trends 2024': Abu Dhabin alue (Abu Dhabi Region) 2 823 340; koko emiirikunnan luku 4 135 985 (julkaistu 1.7.2025)",
+   "linkki": "https://census.scad.gov.ae/home/PReport?lang=en"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "aavikko",
+   "nimi": "Aavikko",
+   "nostot": [
+    "Valkoinen antilooppi katosi ja palasi",
+    "Puu, joka juo kymmenien metrien syvyydestä",
+    "Haukalla on oma passi",
+    "Dyyni, joka on muuttunut kiveksi"
+   ]
+  },
+  {
+   "id": "keidas",
+   "nimi": "Keidas",
+   "nostot": [
+    "Vesi johdetaan vuorilta kanavia pitkin",
+    "Taatelitertut suojataan verkkopusseilla",
+    "Kahvi kaadetaan kupin pohjalle",
+    "Vuori kerää veden keitaalle"
+   ]
+  },
+  {
+   "id": "ranta",
+   "nimi": "Ranta ja rata",
+   "nostot": [
+    "Metsä, joka kasvaa suolavedessä",
+    "Flamingot seisovat kaupungin laidalla",
+    "Kilpakameli juoksee ilman ihmistä",
+    "Toisella puolella maata on toinen meri"
+   ]
+  },
+  {
+   "id": "rakennukset",
+   "nimi": "Rakennukset",
+   "nostot": [
+    "Pyöreä hauta viideltä vuosituhannelta",
+    "Savilinnake keitaan reunalla",
+    "Tuulitorni oli talon ilmastointi",
+    "Torni kapenee kolmeen suuntaan"
+   ]
+  },
+  {
+   "id": "menovinkit",
+   "nimi": "Menovinkit",
+   "nostot": []
+  }
+ ],
+ "lahiKaupungit": [
+  {
+   "id": "dubai",
+   "nimi": "Dubai",
+   "km": 127,
+   "lehti": [
+    {
+     "id": "kaupunki",
+     "nimi": "Dubai",
+     "nostot": [
+      "Näin Lontoo näki helmenpyynnin",
+      "Metrossa ei ole kuljettajaa",
+      "Kulta myydään painon mukaan"
+     ]
+    },
+    {
+     "id": "rakennukset",
+     "nimi": "Rakennukset",
+     "nostot": [
+      "Torni, jonka huipulla paastotaan pidempään",
+      "Saari, joka on merenpohjaa",
+      "Juomavesi tehdään merestä"
+     ]
+    }
+   ],
+   "kohdekartta": [
+    "Kultasuuk",
+    "Dhow-satama",
+    "Al Shindagha",
+    "Abra-laiturit",
+    "Bastakian kaupunginosa",
+    "Al Fahidin linnoitus",
+    "Al Ahmadiyan koulu",
+    "Maustesuuk",
+    "Suuri moskeija",
+    "Tekstiilisuuk"
+   ]
+  }
+ ],
+ "lahiNostot": [
+  {
+   "id": "kohde:qasralhosn",
+   "nimi": "Qasr al-Hosn",
+   "lahde": "fokuskohde",
+   "laji": "historia",
+   "km": 4,
+   "teksti": "Qasr al-Hosn on Abu Dhabin vanhin kivirakennus. Se pystytettiin 1761 kartiomaiseksi vartiotorniksi puolustamaan saaren ainoaa makean veden kaivoa, ja rakennustyötä valvoi Mohammed Al Bastaki. Vuonna 1793 hallitsija Shakhbut bin Dhiyab Al N…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Abu Dhabi",
+  "maanAvain": "Arabiemiirikunnat",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

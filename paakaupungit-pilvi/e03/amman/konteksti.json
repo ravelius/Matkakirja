@@ -1,0 +1,123 @@
+{
+ "id": "amman",
+ "era": "e03",
+ "nimi": "Amman",
+ "nimiAlkukieli": "عمّان (ʿAmmān)",
+ "maa": "JOR",
+ "maanNimi": "Jordania",
+ "asema": "pääkaupunki",
+ "lat": 31.95,
+ "lon": 35.93,
+ "wikidata": "Q3805",
+ "kevytSisalto": {
+  "kuvaus": "Amman on Jordanian pääkaupunki ja maan suurin kaupunki, joka levittyy kukkulalta toiselle Jordanin itäiselle ylängölle. Vanha keskusta on kasvanut linnavuoren ja roomalaisen teatterin ympärille, ja valkoiset kalkkikivitalot peittävät rinteitä kauas ympärille. Kaupunki on maan hallinnollinen, taloudellinen ja kulttuurinen keskus.",
+  "tunnusrakennukset": [
+   "Ammanin linnavuori (Jabal al-Qalaʿa) Herkuleen temppeleineen ja Umayyadien palatsikortteleineen",
+   "Rooman teatteri (2. vuosisata jaa.)",
+   "Odeon (roomalainen pieni teatteri)",
+   "Kuningas Abdullah I:n moskeija"
+  ],
+  "asukkaat": {
+   "arvo": 4311387,
+   "vuosi": 2025,
+   "lahde": "Jordanian tilastoviranomainen (Department of Statistics), Estimated Population of the Kingdom by Municipality and Sex, end-year 2025: Greater Amman Municipality (Amanet Amman Alkubrah) 4 311 387 (miehiä 2 302 327, naisia 2 009 060); Ammanin kuvernementti yhteensä 5 004 600 (DoS, Estimated Population by Administrative Divisions, end-2025)",
+   "linkki": "https://dosweb.dos.gov.jo/DataBank/Population/Population_Estimares/Municipalities.pdf"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "vedet",
+   "nimi": "Vedet",
+   "nostot": [
+    "Vesi kannattelee ihmistä kuin patja",
+    "Ranta siirtyy kauemmas joka vuosi",
+    "Maan kapein merenranta on korallien peitossa",
+    "Rotkossa kuljetaan vastavirtaan vedessä"
+   ]
+  },
+  {
+   "id": "rauniot",
+   "nimi": "Rauniot",
+   "nostot": [
+    "Kaupungin tori tehtiin pyöreähköksi",
+    "Kuudesta pylväästä pystyssä on kolme",
+    "Aavikkolinnan katossa on tähtitaivas",
+    "Kahdeksansataa porrasta ylös kallion kylkeen"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Kansallisruoka syödään seisten ja oikealla kädellä",
+    "Jogurtti kuivataan koviksi palloiksi",
+    "Uuni kaivetaan hiekkaan",
+    "Sipulipiirakka leivotaan oliivinkorjuun juhlaksi"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Kalliot on kirjoitettu täyteen",
+    "Yksi laakso, neljä kasvillisuusvyöhykettä",
+    "Keidas kuivui, kun pumput käynnistyivät",
+    "Kansalliskukka on melkein musta"
+   ]
+  }
+ ],
+ "lahiKaupungit": [
+  {
+   "id": "jerusalem",
+   "nimi": "Jerusalem",
+   "km": 70,
+   "lehti": [
+    {
+     "id": "kaupunki",
+     "nimi": "Jerusalem",
+     "nostot": [
+      "Muurit ovat nuoremmat kuin luulisi",
+      "Kolmetuhatta vuotta hautoja yhdellä rinteellä",
+      "Talo ja sen vesisäiliö samasta kuopasta",
+      "Ensimmäinen kortteli muurien ulkopuolella"
+     ]
+    },
+    {
+     "id": "tiede",
+     "nimi": "Vesi",
+     "nostot": [
+      "Lähde, joka ratkaisi kaupungin paikan",
+      "Viisisataakolmekymmentäkolme metriä kahdesta suunnasta",
+      "Allas, johon pysähdyttiin ennen temppeliä",
+      "Vettä Betlehemin altailta"
+     ]
+    }
+   ],
+   "kohdekartta": [
+    "Damaskoksen portti",
+    "Pyhän haudan kirkko",
+    "Kalliomoskeija",
+    "Läntinen muuri",
+    "Jaffan portti",
+    "Al-Aqsa-moskeija"
+   ]
+  }
+ ],
+ "lahiNostot": [
+  {
+   "id": "kohde:madaba",
+   "nimi": "Madaba",
+   "lahde": "fokuskohde",
+   "laji": "kulttuuri",
+   "km": 29,
+   "teksti": "Madaba on kaupunki Keski-Jordaniassa, ja se tunnetaan bysanttilaisen ja umaijadikauden mosaiikeistaan — ennen muuta suuresta 500-luvun mosaiikkikartasta. Vuonna 1880 yhdeksänkymmentä arabikristittyä perhettä muutti Al-Karakista Madaban rau…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Amman",
+  "maanAvain": "Jordania",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

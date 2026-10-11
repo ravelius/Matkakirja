@@ -1,0 +1,37 @@
+{
+ "id": "tbilisi",
+ "era": "e03",
+ "nimi": "Tbilisi",
+ "nimiAlkukieli": "თბილისი (Tbilisi)",
+ "maa": "GEO",
+ "maanNimi": "Georgia",
+ "asema": "pääkaupunki",
+ "lat": 41.7151,
+ "lon": 44.8271,
+ "wikidata": "Q994",
+ "kevytSisalto": {
+  "kuvaus": "Tbilisi on Georgian pääkaupunki ja suurin kaupunki, joka sijaitsee Mtkvari-joen laaksossa kukkuloiden ympäröimänä. Vanhassa kaupungissa kapeat kadut, parvekkeelliset puutalot ja Narikalan linnoitus kertovat vuosisatojen kerroksista. Kaupunki on Georgian hallinnon, kulttuurin ja talouden keskus, ja se tunnetaan myös rikkaasta ruokakulttuuristaan.",
+  "tunnusrakennukset": [
+   "Narikalan linnoitus",
+   "Metehin kirkko",
+   "Abanotubanin rikkikylpylät (tiilikupolikatot)",
+   "Siionin katedraali"
+  ],
+  "asukkaat": {
+   "arvo": 1369400,
+   "vuosi": 2026,
+   "lahde": "Geostat (Georgian kansallinen tilastotoimisto), 'Number of Population as of January 1, 2026', julkaistu 24.4.2026 (C. Tbilisi 1 369,4 tuhatta; luvut uudelleenlaskettu vuoden 2024 väestölaskennan pohjalta; ei sisällä miehitettyjä alueita)",
+   "linkki": "https://geostat.ge/media/78328/Number-of-Population-as-of-January-1%2C-2026.pdf"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Tbilisi",
+  "maanAvain": "Georgia",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

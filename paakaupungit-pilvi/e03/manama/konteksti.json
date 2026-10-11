@@ -1,0 +1,141 @@
+{
+ "id": "manama",
+ "era": "e03",
+ "nimi": "Manama",
+ "nimiAlkukieli": "المنامة (al-Manāma)",
+ "maa": "BHR",
+ "maanNimi": "Bahrain",
+ "asema": "pääkaupunki",
+ "lat": 26.2167,
+ "lon": 50.5833,
+ "wikidata": "Q3882",
+ "kevytSisalto": {
+  "kuvaus": "Manama on Bahrainin pääsaaren koillisrannikolla sijaitseva maan pääkaupunki ja talouskeskus. Vanhassa kaupungissa on perinteinen basaari eli souk, ja pankkitoiminnan ja kaupan keskittymä on kasvanut rannikolle. Kaupunki on ollut tärkeä satama ja helmikauppapaikka jo vuosisatojen ajan.",
+  "tunnusrakennukset": [
+   "Manaman souk (perinteinen basaari)",
+   "Al-Fatih-suurmoskeija (Al Fateh Grand Mosque)",
+   "Bahrainin kansallismuseo",
+   "Bahrainin linnoitus (Qal'at al-Bahrain, UNESCOn maailmanperintökohde)"
+  ],
+  "asukkaat": {
+   "arvo": 548345,
+   "vuosi": 2020,
+   "lahde": "Information & eGovernment Authority (IGA), väestölaskenta 2020, taulukko Population by Governorate, Nationality and Sex (Capital Governorate: bahrainilaisia 169 192, ulkomaalaisia 379 153; koko maa 1 501 635), luettu IGA:n omasta Open Data -portaalista (API), ei GLMM:n kautta",
+   "linkki": "https://bahrain.opendatasoft.com/explore/dataset/population-by-governorate-nationality-and-sex-census-2020/"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Bahrain on Persianlahdella Saudi-Arabian ja Qatarin välissä sijaitseva saarivaltio, johon kuuluu 33 luonnonsaarta ja noin 50 tekosaarta. Alue oli muinaisen Dilmun-sivilisaation keskus, ja helmenpyynti oli vuosisatojen ajan sen tärkeä elinkeino. Brittiläisen suojeluksen alainen Bahrain itsenäistyi vuonna 1971 ja muuttui kuningaskunnaksi vuonna 2002. Nykyään taloutta kannattelevat öljyn lisäksi pankkitoiminta, kauppa ja matkailu, ja noin puolet asukkaista on ulkomaalaisia.",
+  "genetiivi": "Bahrainin",
+  "kielet": [
+   {
+    "kieli": "arabia",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "englanti",
+    "asema": "muu"
+   },
+   {
+    "kieli": "persia",
+    "asema": "muu"
+   },
+   {
+    "kieli": "urdu",
+    "asema": "muu"
+   },
+   {
+    "kieli": "hindi",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Bahrainin dinaari",
+   "koodi": "BHD"
+  }
+ },
+ "maalehti": [
+  {
+   "id": "helmet",
+   "nimi": "Helmet",
+   "nostot": [
+    "Neljä kuukautta merellä",
+    "Talo, jonka helmet maksoivat",
+    "Helmi ilman sukeltajaa",
+    "Simpukat avattiin vasta veneellä"
+   ]
+  },
+  {
+   "id": "muinaisuus",
+   "nimi": "Muinaisuus",
+   "nostot": [
+    "Kumpu palmujen keskellä",
+    "Mäki, jonka ihmiset rakensivat",
+    "Puu keskellä tyhjää",
+    "Temppeli rakennettiin lähteen päälle"
+   ]
+  },
+  {
+   "id": "rakennukset",
+   "nimi": "Rakennukset",
+   "nostot": [
+    "Portti seisoo siellä, missä oli ranta",
+    "Linnake muurattiin merestä nostetusta kivestä",
+    "Kupoli on lasikuitua",
+    "Vanhaan tyyliin tehty kahvila"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Sahramipallot paistetaan omassa muotissaan",
+    "Taikinapallot upotetaan siirappiin",
+    "Leipä on lautanen ja lusikka",
+    "Grilliliha tuodaan leivän päällä"
+   ]
+  }
+ ],
+ "lahiKaupungit": [
+  {
+   "id": "doha",
+   "nimi": "Doha",
+   "km": 140,
+   "lehti": [
+    {
+     "id": "kaupunki",
+     "nimi": "Doha",
+     "nostot": [
+      "Kaikki hyllyt ovat samassa salissa",
+      "Katsomo, jossa kaksi rakennustapaa kohtaa",
+      "Asemat tunnistaa muodosta"
+     ]
+    },
+    {
+     "id": "ruoka",
+     "nimi": "Ruoka",
+     "nostot": [
+      "Riisi ja liha samassa padassa",
+      "Torin halutuin kala vaihtaa sukupuolta",
+      "Pussi kaulassa ovelta ovelle"
+     ]
+    }
+   ],
+   "kohdekartta": [
+    "Islamilaisen taiteen museo",
+    "Corniche",
+    "Souq Waqif",
+    "Qatarin kansallismuseo",
+    "Al Koot -linnake",
+    "Msheireb"
+   ]
+  }
+ ],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Manama",
+  "maanAvain": "Bahrain",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

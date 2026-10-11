@@ -1,0 +1,96 @@
+{
+ "id": "beirut",
+ "era": "e03",
+ "nimi": "Beirut",
+ "nimiAlkukieli": "بيروت (Bayrūt)",
+ "maa": "LBN",
+ "maanNimi": "Libanon",
+ "asema": "pääkaupunki",
+ "lat": 33.8869,
+ "lon": 35.5131,
+ "wikidata": "Q3820",
+ "kevytSisalto": {
+  "kuvaus": "Beirut on Libanonin pääkaupunki, suurin kaupunki ja tärkein satama, joka sijaitsee Välimeren rannalla niemellä Libanonvuorten juurella. Kaupunki on ollut asuttu yli viisituhatta vuotta, ja sen alta löytyy foinikialaisten, roomalaisten ja myöhempien aikojen kerrostumia. Beirut on maan kulttuuri-, kustannus-, pankki- ja yliopistokeskus, ja sen rantabulevardilla ovat tunnetut Raouchén kalliot.",
+  "tunnusrakennukset": [
+   "Raouchén Kyyhkyskalliot (Pigeon Rocks)",
+   "Pyhän Yrjänän maroniittikatedraali (Saint George Maronite Cathedral)",
+   "Beirutin kansallismuseo",
+   "Rooman kylpylät ja Berytuksen jäänteet"
+  ],
+  "asukkaat": {
+   "arvo": 433249,
+   "vuosi": 2017,
+   "lahde": "Libanonin kansanterveysministeriön (Ministry of Public Health) arvio 31.12.2017 (Beirutin kuvernementti, joka vastaa kaupunkikuntaa); luettu citypopulation.de-sivustolta. Libanonissa ei ole pidetty virallista väestönlaskentaa vuoden 1932 jälkeen, joten kaikki luvut ovat arvioita. Luku sisältää rekisteröityjä syyrialaispakolaisia; aiemmat arviot: 361 366 (2007), 384 725 (2011). Suur-Beirut noin 2,4 milj.",
+   "linkki": "https://citypopulation.de/en/lebanon/cities/"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Libanon on Välimeren itärannalla Syyrian ja Israelin välissä sijaitseva pieni vuoristoinen valtio, joka tunnetaan setripuustaan ja muinaisista foinikialaisista satamakaupungeistaan. Maassa asuu rinnakkain useita uskontokuntia, ja sen poliittinen järjestelmä jakaa valtaa niiden kesken. Libanon oli pitkään alueen pankki- ja kulttuurikeskus, ja sen lähihistoriaan on vaikuttanut raskaasti sisällissota 1975–1990. Maan ruoka, musiikki ja kirjallisuus ovat tunnettuja kaikkialla arabimaailmassa.",
+  "genetiivi": "Libanonin",
+  "kielet": [
+   {
+    "kieli": "arabia",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "ranska",
+    "asema": "muu"
+   },
+   {
+    "kieli": "englanti",
+    "asema": "muu"
+   },
+   {
+    "kieli": "armenia",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Libanonin punta",
+   "koodi": "LBP"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [
+  {
+   "id": "damaskos",
+   "nimi": "Damaskos",
+   "km": 83,
+   "lehti": [
+    {
+     "id": "kaupunki",
+     "nimi": "Damaskos",
+     "nostot": [
+      "Parturi kirjasi, mistä marmori tuli",
+      "Keittiö, majatalo ja moskeija samalla pihalla",
+      "Aseman piirsi espanjalainen arkkitehti"
+     ]
+    },
+    {
+     "id": "arki",
+     "nimi": "Arki ja tavat",
+     "nostot": [
+      "Talo ei näytä kadulle mitään",
+      "Neljä huonetta samassa järjestyksessä",
+      "Hedelmä keitetään levyksi ja kuivataan auringossa"
+     ]
+    }
+   ],
+   "kohdekartta": [
+    "Damaskoksen linnoitus",
+    "Umaijadien moskeija",
+    "Hamidiyyan suuki",
+    "Khan As'ad Pashan",
+    "Itäportti",
+    "Kisanin portti"
+   ]
+  }
+ ],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Beirut",
+  "maanAvain": "Libanon",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

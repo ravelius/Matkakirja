@@ -1,0 +1,37 @@
+{
+ "id": "jerevan",
+ "era": "e03",
+ "nimi": "Jerevan",
+ "nimiAlkukieli": "Երևան (Yerevan)",
+ "maa": "ARM",
+ "maanNimi": "Armenia",
+ "asema": "pääkaupunki",
+ "lat": 40.1814,
+ "lon": 44.5144,
+ "wikidata": "Q1953",
+ "kevytSisalto": {
+  "kuvaus": "Jerevan on Armenian pääkaupunki ja maan suurin kaupunki, jossa asuu noin kolmasosa kansalaisista. Se sijaitsee Hrazdan-joen varrella kukkuloiden ja Araratin tasangon reunalla, ja keskusta on rakennettu pitkälti vaaleasta vulkaanisesta tuffikivestä, mikä antaa sille vaaleanpunertavan sävyn. Kaupunki on maan hallinnon, kulttuurin ja talouden keskus.",
+  "tunnusrakennukset": [
+   "Tasavallan aukio (Hanrapetutyan hraparak) ympäröivine tuffikivirakennuksineen",
+   "Erebunin linnoitus (urartulaislinnoitus, perustettu 782 eaa.)",
+   "Kaskadi (portaikkorakennelma kaupungin pohjoisosassa)",
+   "Matenadaran (käsikirjoitusmuseo)"
+  ],
+  "asukkaat": {
+   "arvo": 1147600,
+   "vuosi": 2026,
+   "lahde": "Armenian tilastokomitea (Armstat), väestöarvio 1.1.2026, siteerattu ARKA-uutistoimiston raportissa 6.2.2026",
+   "linkki": "https://arka.am/en/news/society/armenia-s-resident-population-increased-in-2025-exceeding-3-09-million"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Jerevan",
+  "maanAvain": "Armenia",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

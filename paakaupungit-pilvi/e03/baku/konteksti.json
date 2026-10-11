@@ -1,0 +1,37 @@
+{
+ "id": "baku",
+ "era": "e03",
+ "nimi": "Baku",
+ "nimiAlkukieli": "Bakı",
+ "maa": "AZE",
+ "maanNimi": "Azerbaidžan",
+ "asema": "pääkaupunki",
+ "lat": 40.3667,
+ "lon": 49.8352,
+ "wikidata": "Q9248",
+ "kevytSisalto": {
+  "kuvaus": "Baku on Azerbaidžanin pääkaupunki ja koko Kaukasuksen suurin kaupunki. Se sijaitsee Kaspianmeren rannalla Absheronin niemimaalla, ja kaupungin maine perustuu pitkään öljynporauksen historiaan. Muurien ympäröimä vanhakaupunki ja nykyaikaiset rantabulevardit muodostavat vahvan vastakohdan toisilleen.",
+  "tunnusrakennukset": [
+   "Neitotorni (Qız Qalası)",
+   "Širvanšahien palatsi",
+   "Icheri Sheherin (vanhakaupungin) muurit ja portit",
+   "Juma-moskeija vanhassa kaupungissa"
+  ],
+  "asukkaat": {
+   "arvo": 2344900,
+   "vuosi": 2024,
+   "lahde": "Azerbaidžanin valtion tilastokomitea, Azərbaycanın statistik göstəriciləri / Statistical Yearbook of Azerbaijan 2024, taulukko 2.17 (Bakı şəhəri - cəmi): väkiluku 1.1.2024 2 344,9 tuhatta (koko maa 10 180,8 tuhatta, Baku 23,0 %)",
+   "linkki": "https://www.stat.gov.az/menu/6/statistical_yearbooks/source/stat-yearbook_2024.pdf"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Baku",
+  "maanAvain": "Azerbaidžan",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}
