@@ -1,6 +1,6 @@
 # Pääkaupungit e04 — toimeksiannot #72 ja #73
 
-Päivitetty 2026-10-11T18:22:27.384073+00:00
+Päivitetty 2026-10-11T19:56:41.292209+00:00
 
 Haara `paakaupungit-e04-codex`, pohja `e4f2845b3a82874550481fda26528df065820232`. Uusi työ, vain e04–e14; aiemmat #70/#71-kuvatilaukset pysyvät palauteportissa. Ei generointia, R2-toimitusta, pelikytkentää tai julkaisua. Kaikki tämän työn tiedostot ja väliaineisto NASilla.
 
@@ -17,9 +17,9 @@ Aiempi Sää/Commons-rajapintaeste: 11.10.2026 robots.txt kieltää en/fi-Wikipe
 | nouakchott | poikkeama avoin | — | — | — | — | — | 6 WP-paikkapistettä löydetty, 4 kohteen faktavaje ja museorajaus avoin |
 | praia | valmis | poikkeama avoin | — | — | — | — | A: 5 kohdetta perustellen; B: 13 kuvaa, 8 puuttuu |
 | banjul | valmis | poikkeama avoin | korjattu luonnos | osittain | tekstikorjaukset tehty | 3 kuvavirhettä | 16 kuvaa; K3 hylätty, pysty ja Albertin torin kuva puuttuvat |
-| bissau | valmis | poikkeama avoin | luonnos | kesken | — | — | 16 kuvaa kaavio mukaan lukien; 3 kohdekuvaa puuttuu |
-| conakry | valmis | kesken | — | — | — | — | A valmis, B työn alla; luonnonsaaret ensisijaiset |
-| monrovia | valmis | — | — | — | — | — | A: 6 lähdekoordinaattikohdetta ja sääaseman ero kirjattu |
+| bissau | valmis | poikkeama avoin | korjattu luonnos | osittain | tekstikorjaukset tehty | 3 kuvavirhettä | 16 kuvaa kaavio mukaan lukien; 3 kohdekuvaa puuttuu |
+| conakry | valmis | poikkeama avoin | työn alla | — | — | — | 21 kuvaa; Camayennen kohdekuva puuttuu, C etenee |
+| monrovia | valmis | työn alla | — | — | — | — | A: 6 lähdekoordinaattikohdetta ja sääaseman ero kirjattu |
 | tunis | valmis | — | — | — | — | — | A: kevyt, 6 vanhan ytimen kohdetta; ei Karthagon toistoa |
 
 Vastaanotto ei tarkoita valmista erää, Sisältökirjurin hyväksyntää, pelikytkentää tai julkaisua.
@@ -44,6 +44,6 @@ Edistyminen: varmennetut A–F-vaiheet /558 (93×6), ei käytetyn ajan arvio. Ra
 
 Banjul D: 3 VÄÄRIN ja 1 EPÄVARMA. E:n 4/4 kokonaisen kentän korvausta toteutettu; 12 JSON-arvoa muuttui ja K3-lauttakuva poistettiin luettavien kasvojen vuoksi. Pääsession F-tarkistus: 3 virhettä, 2 varoitusta, 16 kuvaa. Ei valmis-C/E/F tai valmis-kaupunki.
 
-Bissau: H1:n sisäpiha, H2:n yleinen bastionikaavio, H3:n Pidjiguiti ja H4:n yleinen uudempi satama on erotettu kuvateksteissä; kaavio ei ole Amuran piirros eikä satamakuva Tulliaukio. Kaikki 16 kuvaa katsottu B/C:ssä, D työn alla. C:n 3 virhettä johtuvat N1/N2/N3-kohdekuvista; 1 kohdemäärän varoitus.
+Bissau: H1:n sisäpiha, H2:n yleinen bastionikaavio, H3:n Pidjiguiti ja H4:n yleinen uudempi satama on erotettu kuvateksteissä; kaavio ei ole Amuran piirros eikä satamakuva Tulliaukio. Kaikki 16 kuvaa katsottu B/C/D:ssä. D:n kolme tekstikorjausta toteutettiin E:ssä, ja E2 korjasi kaksi en-Wiki-otsikkoa varmennettuihin artikkeleihin. Pääsession F: 3 virhettä N1/N2/N3-kohdekuvista ja 1 kohdemäärän varoitus. Ei valmis-C/E/F tai valmis-kaupunki.
 
 Viisi kuvaporttien tulkintakysymystä postilaatikossa: #74-kuvattomuus vs 0-virheportti, 70 vuoden teoskohderaja vs kaupallinen FOP, vanha luonnonpysty, alkuperäisen painotuotteen kuvateksti sekä saman paikan kuvan käyttö nostossa ja kohdejutussa. Poikkeuksia ei sovelleta hiljaa; alkuperäiset konevirheet jäävät näkyviin. Työ jatkuu muissa kaupungeissa.

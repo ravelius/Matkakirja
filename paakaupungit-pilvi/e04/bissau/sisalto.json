@@ -84,7 +84,7 @@
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Varhaisen linnakkeen jälkeen paikalla rakennettiin ja korjattiin lisää.",
+      "hint": "Linnoitus sijaitsee Bissaun vanhassa satamaytimessä.",
       "fact": "Ensimmäinen linnoitusvaihe ei säilynyt koko nykyisen rakennuksen perustana, ja Amuraa rakennettiin sekä korjattiin myöhemmin.",
       "source": "https://en.wikipedia.org/wiki/Fortaleza_de_S%C3%A3o_Jos%C3%A9_da_Amura"
     }
@@ -156,8 +156,8 @@
         },
         {
           "otsikko": "Pieni vedos säilytti suuren muistin",
-          "teksti": "Kansallisen etnografisen museon historiassa pieni valokuvan koevedos osoittautui arvokkaaksi. Esineitä ja valokuvia oli menetetty myöhäisen 1900-luvun kriiseissä, mutta pieniä vedoksia säilyi. Niitä digitoitiin kokoelmien historian kokoamiseksi. Kuvat auttoivat tunnistamaan esineiden alkuperää ja sitä, miten esineitä oli käytetty. Näyttelytyössä säilyneet esineet, uudet hankinnat ja kuvallinen tausta täydensivät toisiaan. Pienen paperikuvan sisältämä tieto ulottui sen omaa kokoa paljon pidemmälle.",
-          "wiki": "Museu Etnográfico Nacional da Guiné-Bissau",
+          "teksti": "Kansallisen etnografisen museon historiassa pieni valokuvan koevedos osoittautui arvokkaaksi. Esineitä ja valokuvia oli menetetty myöhäisen 1900-luvun kriiseissä, mutta pieniä vedoksia säilyi. Niitä digitoitiin kokoelmien historian kokoamiseksi. Näyttelyssä kuvien rinnalla kerrottiin esineiden kulttuurisesta taustasta. Säilyneet esineet, uudet hankinnat ja kuvallinen aineisto täydensivät toisiaan. Pienen paperikuvan sisältämä tieto ulottui sen omaa kokoa paljon pidemmälle.",
+          "wiki": "National Ethnographic Museum (Guinea-Bissau)",
           "tiedosto": "ScanerFromInside.jpg",
           "lyhyt": "Avattu skanneri havainnollistaa digitoinnin välinettä.",
           "selite": "Yleinen tasoskannerin koneisto havainnollistaa kuvien digitointiin käytettävää välinettä vuoden 2007 valokuvassa.",
@@ -305,7 +305,7 @@
         {
           "otsikko": "Satama oli ennen nykyistä laituria",
           "teksti": "Bissaun satamakauppa on vanhempaa kuin sen nykyisin tunnetut laiturirakenteet. Yritykset käyttivät varhain puisia lastaus- ja maihinnousulaitureita. Pidjiguitin julkinen laiturivaihe kuuluu 1800-luvun loppupuolelle, ja sen alkuvaiheessa yhdistettiin puuta ja muurattua rakennetta. Laituri tunnettiin nimellä Ponte-cais Correia e Lança. Myöhemmin sataman muualle rakennettiin uudempia laitureita. Satamapaikan historia ja yhden laiturin rakennushistoria ovat siksi eri pituisia kertomuksia.",
-          "wiki": "Porto de Bissau",
+          "wiki": "Port of Bissau",
           "tiedosto": "Pidjiguiti.jpg",
           "lyhyt": "Pidjiguitin satamapaikka veneineen vuonna 2007.",
           "selite": "Pidjiguitin satamapaikan veneet vuonna 2007 kuuluvat vanhan laituriympäristön näkymään, jossa kauempana erottuu myös muita satamarakenteita.",
@@ -360,7 +360,7 @@
     },
     "Pidjiguitin laituri": {
       "aika": "1800-luvun loppupuoli ja myöhemmät muutokset",
-      "teksti": "Pidjiguiti on tunnistettu laituripaikka Bissaun satamassa. Sen julkinen laiturivaihe kuuluu 1800-luvun loppupuolelle. Varhaisessa rakenteessa yhdistettiin puuta ja muurausta, ja paikka tunnettiin nimellä Ponte-cais Correia e Lança. Sataman ja laiturin tarinat alkavat kuitenkin eri kohdista.\n\nBissaussa käytiin satamakauppaa jo ennen tätä julkista laituria. Yritykset olivat käyttäneet puisia lastaus- ja maihinnousulaitureita. Isoisän matkavuonna 1873 rannalla oli siis kaupankäynnin rakenteita, mutta nykyisen nimellä tunnetun julkisen Pidjiguitin laiturin vaihe ei vielä ollut valmis.\n\nMyöhemmin Bissaun sataman muualle rakennettiin uudempia laitureita. Ne kuuluvat saman sataman historiaan mutta ovat eri paikkoja kuin vanha Pidjiguiti. Laiturin nimi kohdistuu alusten ja tavaroiden maihin kytkeytyvään työympäristöön. Sen vaiheita voi seurata erottamalla vanhan satamapaikan, julkisen laiturin ja myöhemmän satamainfrastruktuurin toisistaan.",
+      "teksti": "Pidjiguiti on tunnistettu laituripaikka Bissaun satamassa. Sen julkinen laiturivaihe kuuluu 1800-luvun loppupuolelle. Varhaisessa rakenteessa yhdistettiin puuta ja muurausta, ja paikka tunnettiin nimellä Ponte-cais Correia e Lança. Sataman ja laiturin tarinat alkavat kuitenkin eri kohdista.\n\nBissaussa käytiin satamakauppaa jo ennen tätä julkista laituria. Satamassa oli myös yritysten käyttämiä puisia lastaus- ja maihinnousulaitureita, mutta niiden tarkkaa tilannetta isoisän matkavuonna 1873 ei ole ajoitettu. Bissau oli tuolloin jo kauppapaikka, kun taas Pidjiguitin julkisen laiturin rakennusvaihe kuuluu myöhempään aikaan.\n\nMyöhemmin Bissaun sataman muualle rakennettiin uudempia laitureita. Ne kuuluvat saman sataman historiaan mutta ovat eri paikkoja kuin vanha Pidjiguiti. Laiturin nimi kohdistuu alusten ja tavaroiden maihin kytkeytyvään työympäristöön. Sen vaiheita voi seurata erottamalla vanhan satamapaikan, julkisen laiturin ja myöhemmän satamainfrastruktuurin toisistaan.",
       "kuvat": [],
       "lahde": "Wikipedia"
     },

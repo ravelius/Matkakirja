@@ -4,6 +4,14 @@
 
 Kirjoitettu vain tämän kaupungin `sisalto.json` ja tämä muistiinpano. Omat väliaineistot NASin `valiaikainen/bissau-C`-kansiossa. Ei gittoimia, Commons-hakuja, kuvanmuokkausta, pelitiedostojen muutoksia tai uusia agentteja.
 
+## Nykytila kahden E-kierroksen jälkeen 11.10.2026
+
+D tarkisti kaikki 16 valittua kuvaa ja hyväksyi ne nykyisillä roolirajoilla; H2 on yleinen bastionikaavio ja H4 satamakaupan yleiskuva. D:n VÄÄRIN 1 / EPÄVARMA 2 korvattiin ensimmäisessä E-kierroksessa sanatarkasti (Q5-vihje, Pidjiguitin vuoden 1873 puulaiturirajaus ja K4:n museoväitteen tarkkuus). Nämä kolme korvausta säilyvät 3/3 sanatarkasti. Nykyinen K4 on 477 ja Pidjiguitin juttu 988 merkkiä / kolme kappaletta; alemmat C:n mittarivit ovat kirjoitushetken tuloksia.
+
+Toisessa rajatussa E-kierroksessa muutettiin vain kaksi wiki-arvoa: K4:n `Museu Etnográfico Nacional da Guiné-Bissau` → `National Ethnographic Museum (Guinea-Bissau)` ja H3:n `Porto de Bissau` → `Port of Bissau`. Molemmat omat en-artikkelit varmennettiin robots-sallituilta lähdesivuilta ja sisältö luettiin; sataman WD Q20646352 en-sitelink täsmää. Portugalinkieliset S3/S8 ja Camões S9 säilyvät faktalähteinä, eikä linkin korjaus muuta faktaväitteitä. Muu teksti, sää ja kuvavalinnat säilyivät. Täsmälliset polut, lähteet ja revisiot ovat tarkistus.md:n Korjattu-osiossa.
+
+Alkuperäinen --verkko-tarkistin toisen kierroksen jälkeen: 3 kuvavirhettä, 1 kohdemäärävaroitus, 16 kuvaa, exit 1. Kaksi ensimmäisessä verkkoajossa paljastunutta wiki-virhettä poistui. Amuran, Pidjiguitin ja Tulliaukion erilliset kohdekuvat puuttuvat yhä. Ei valmis-C/E/F-merkintää tai toimitusvalmiutta; tarvitaan hyväksyttävät erilliset kohdekuvat ja niiden D-jälkitarkistus sekä kompaktin satamaytimen perustelu. Alla säilyy C:n alkuperäinen työjälki, myös sen tuolloin vielä tulevaa D:tä koskevat merkinnät.
+
 ## Syötteet ja ohjeet
 
 Luettu tämän e04-kloonin AGENTS.md, CODEX.md, PILVIOHJEen C-kehote sekä luvut 3, 4, 7, 13 ja LISÄSÄÄNTÖ; lehtityöreseptin faktakuri, kuvat ja mitat, kaupunkilehden kuvatekstisäännöt sekä spec-mantereet yhteiset linjaukset. Dakar-mallista tarkistettiin rakenne; sen tekstiä ei käytetty. Bissaun faktapohja, konteksti, sää ja lopullisesti päivitetty kuvat.md/selected.json/provenance.json luettu. Lähdetekstien ja koordinaattien jälki on A:ssa, kuvalähteiden metadatan/oikeuksien jälki B:ssä.

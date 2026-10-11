@@ -11,3 +11,11 @@ Säätyökalulle syötetään sallittu kaupungin Wikipedia-HTML ja sen oikea rev
 ## SVG:n alkuperäismittojen lähdesivumuoto
 
 Yhteinen File-sivun lukija tukee nyt myös MediaWikin muotoa “Original file (SVG file, nominally 5,300 × 4,600 pixels)”. Arvot poimitaan todelliselta sivulta; niitä ei muuteta tai arvioida. Plan type bastion Vauban.svg: 5300×4600, Ludwig Dupas, CC BY-SA 4.0, revisio 1180048003; D varmisti itsenäisesti. Sama lukija tarkistettiin myös Interior da Fortaleza de São José de Amura, Bissau.jpg -rasterilla: 4608×2592, Joehawkins, CC BY-SA 4.0, revisio 1021029034. Alkuperäinen tarkistin ja sen 1200 px / lisenssi- / muotosäännöt ennallaan.
+
+## Sivun nimenomainen attribuutiokrediitti
+
+Jos Artist/Author-taulurivi puuttuu mutta lisenssilaatikko antaa yhden yksiselitteisen licensetpl_attr-krediitin, lähdesivulukija säilyttää sen sanatarkasti. artistFieldSource kertoo erikseen, että lähde on lisenssin Attribution-krediitti, ei Author-taulukko tai uploaderista päätelty henkilöllisyys. Tämä ei ole väite alkuperäisen API Artist -kentän lukemisesta. Conakry.jpg: sivu nimenomaan vaatii Joelguinea-krediitin; nimettyä oikeaa henkilöä ei arvata. D arvioi koko kuvan/lisenssin/oikeusketjun erikseen. Puuttuva tai monimerkityksinen krediitti aiheuttaa edelleen virheen.
+
+## Summary-kappaleen nimenomainen Photo-krediitti
+
+Jos Author/Artist-rivi ja lisenssin Attribution-krediitti puuttuvat, lukija hyväksyy vain lähdesivun sisältökappaleen yhden yksiselitteisen Photo:-krediitin. File:Conakry3.JPG sanoo ”Conakry, Guinea. Photo: Soman”; Soman on sivun nimenomainen tekijäkrediitti, ei uploaderista päätelty henkilöllisyys. artistFieldSource säilyttää alkuperäksi Explicit Summary Photo credit. Todellinen sivurevisio 1244844324, alkuperäismitat 2048×1536 ja tarjottu CC BY-SA 3.0. Conakry.jpg:n erillinen Joelguinea-attribuutio ja Amuran rasterin Author-rivi tarkistettiin samalla. Yksiselitteisen krediitin puuttuessa lähdesovitus edelleen pysähtyy. Alkuperäistä tarkistusalgoritmia ei muutettu.
