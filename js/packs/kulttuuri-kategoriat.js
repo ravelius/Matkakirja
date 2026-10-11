@@ -141287,7 +141287,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Pääkaupunki, joka ei ollut ensimmäinen suunnitelma',
           teksti: 'Arabiemiirikunnat perustettiin 2. joulukuuta 1971, kun Abu Dhabi ja viisi muuta emiirikuntaa liittyivät yhteen. Lähteen mukaan perustuslain ensimmäisessä versiossa pääkaupungiksi oli tarkoitettu uutta kaupunkia nimeltä Al Karama Abu Dhabin ja Dubain väliin. Abu Dhabista tehtiin ensin väliaikainen ja sitten pysyvä pääkaupunki. Sheikh Zayed bin Sultan Al Nahyan nimitettiin ensimmäiseksi presidentiksi, ja hän pysyi virassa yli kolmekymmentä vuotta. Hän ja Dubain hallitsija olivat sopineet liitosta periaatteessa jo 1960-luvun lopulla.',
           tiedosto: 'Qasr Al Watan, Abu Dhabi (P1100960).jpg',
-          selite: 'Kansakunnan palatsi Qasr Al Watan on presidentin palatsi ja avattiin yleisölle 2019.',
+          selite: 'Qasr Al Watanin puutarhan suihkulähteiden takaa avautuu näkymä Abu Dhabin keskustan pilvenpiirtäjiin.',
           lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Abu Dhabi',
         },
@@ -141314,7 +141314,7 @@ export const KULTTUURI_KATEGORIAT = {
               teksti: 'Qasr Al Hosn avattiin museona ja kulttuurikohteena uudelleen 2010-luvun lopulla pitkän entisöinnin jälkeen, ja sen vieressä on Abu Dhabin kulttuurisäätiö. Qasr Al Watan eli presidentin palatsi on avoinna vierailijoille maaliskuusta 2019 alkaen. Emirates Palace on hotelli, jota lähteen mukaan pidetään myös suosittuna nähtävyytenä. Etihad Towers on viiden tornin kokonaisuus, ja Corniche on usean kilometrin pituinen rantakatu puistoineen.',
               kuva: {
                 tiedosto: 'Qasr Al Watan in March 2022 10.jpg',
-                selite: 'Qasr Al Watan on Arabiemiirikuntien presidentin palatsi, johon vierailijat pääsevät tutustumaan.',
+                selite: 'Qasr Al Watanin puutarhan vesiallas ja kukkaistutukset, taustalla häämöttävät Abu Dhabin pilvenpiirtäjät.',
                 lahde: 'Renek78, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
