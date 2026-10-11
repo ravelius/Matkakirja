@@ -1331,5 +1331,7 @@
  "ui.museo.vapaa-kulku": "Vapaa kulku",
  "ui.museo.kierros": "Esittelykierros",
  "ui.museo.takaisin-kierrokselle": "Takaisin kierrokselle",
- "ui.museo.esittele": "Esittele teos"
+ "ui.museo.esittele": "Esittele teos",
+ "ui.museo.zoom": "Tutki läheltä",
+ "ui.museo.zoom-pois": "Takaisin koko teokseen"
 }

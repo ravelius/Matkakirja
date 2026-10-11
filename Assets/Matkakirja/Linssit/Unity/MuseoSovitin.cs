@@ -284,6 +284,10 @@ namespace Matkakirja.Natiivi
         // UI:n napit (MuseoTaulu).
         public static void Tauko() { var k = Aktiivinen?.Kierros; if (k == null) return; if (k.Vaihe == MuseoVaihe.Vapaa) k.Kierrokselle(); else k.Tauko(!k.Tauolla); }
         public static void Seuraava() => Aktiivinen?.Kierros?.Seuraava();
+        /// <summary>Zoom (omistaja 11.10. 12.4x): suurennuslasi vaihtaa, nipistys asettaa; veto tutkii teosta zoomissa.</summary>
+        public static void Zoom() { var k = Aktiivinen?.Kierros; k?.AsetaZoom(!k.Zoom); }
+        public static void Zoom(bool paalla) => Aktiivinen?.Kierros?.AsetaZoom(paalla);
+        public static void ZoomVeda(double dx, double dy) => Aktiivinen?.Kierros?.ZoomVeda(dx, dy);
         public static void Edellinen() => Aktiivinen?.Kierros?.Edellinen();
         public static void VapaaTaiKierros() { var k = Aktiivinen?.Kierros; if (k == null) return; if (k.Vaihe == MuseoVaihe.Vapaa) k.Kierrokselle(); else k.Vapaa(); }
         public static void Esittele(bool? auki = null)
@@ -387,6 +391,9 @@ namespace Matkakirja.Natiivi
                 case "tekstitys" when osat.Length > 2: AsetaTekstitys(osat[2] == "1" || osat[2] == "paalla"); break;
                 case "siirry" when osat.Length > 2: Kierros.Siirry(int.Parse(osat[2], CultureInfo.InvariantCulture) - 1); break;
                 case "esittele": Esittele(osat.Length > 2 ? osat[2] != "0" : (bool?)null); break;
+                // QA (zoom, omistaja 11.10. 12.4x): "zoom 1|0" kuten suurennuslasi, "zoomveda dx dy" sormen siirto ruudun osuuksina.
+                case "zoom": Kierros.AsetaZoom(osat.Length < 3 || osat[2] != "0"); o.Kirjaa($"museo: zoom {(Kierros.Zoom ? "päällä" : "pois")}"); break;
+                case "zoomveda" when osat.Length > 3: Kierros.ZoomVeda(L(osat[2]), L(osat[3])); o.Kirjaa($"museo: zoomveto {Kierros.Nykyinen}"); break;
                 case "huone": HuoneKortti(osat.Length > 2 ? osat[2] != "0" : (bool?)null); break;
                 case "liiku" when osat.Length > 5:
                     if (Kierros.Vaihe != MuseoVaihe.Vapaa) Kierros.Vapaa();

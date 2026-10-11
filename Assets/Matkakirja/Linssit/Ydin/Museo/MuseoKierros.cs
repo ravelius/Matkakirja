@@ -16,6 +16,10 @@
 //    ollenkaan"): pysähdyksessä teos (kehyksen sisäreuna) täyttää 95 % ruudun rajaavasta suunnasta, kamera saa tulla seinän
 //    lähelle (KatseluVaraM, kehyksen syvyys + lähitaso). Siirtymä peruuttaa ensin teoksen edestä saliin (Takaa-piste, ~1,6 m)
 //    ja tulee seuraavan teoksen eteen sen Takaa-pisteen kautta: sali ja muut teokset näkyvät vain siirtymissä.
+//  - KOKO KEHYS (omistaja 11.10. 12.4x, kumoaa "teos 95 %, kehys saa leikkautua"): pysähdyksessä kehyksen ULKOREUNA täyttää 93 %
+//    rajaavasta suunnasta; seinää saa näkyä sivuilla tai ylä- ja alapuolella.
+//  - ZOOM (omistaja 11.10. 12.4x): pysähdyksessä suurennuslasi vie kameran ZoomKerroin kertaa lähemmäs teosta, vetämällä tutkitaan
+//    teosta (rajattu kehyksen sisään), uusi napautus palauttaa. Kierros ei etene zoomin aikana.
 // Puhdas C#: MuseoTestit.
 using System;
 using System.Collections.Generic;
@@ -64,6 +68,15 @@ namespace Matkakirja.Linssit.Museo
         MuseoAsento lahto;
         double yaw, pitch, vapaaY = SilmaY;
 
+        // --- Zoom (omistaja 11.10. 12.4x) ---------------------------------------------------------------------------------------
+        /// <summary>Zoomissa kamera on näin monta kertaa lähempänä teosta kuin pysähdyksessä (vähintään LahinEtaisyys).</summary>
+        public const double ZoomKerroin = 2.5, ZoomS = 0.45;
+        /// <summary>Zoom päällä (napautus tai nipistys); zoomaus/palautus liukuu ZoomS:ssa.</summary>
+        public bool Zoom { get; private set; }
+        /// <summary>Zoomin edistyminen 0 (pysähdys) … 1 (lähellä).</summary>
+        public double ZoomOsuus { get; private set; }
+        double zoomU, zoomV;   // tutkimissiirtymä teoksen tasossa (m): oikealle, ylös
+
         /// <param name="teokset">Teoskierros: pysähdykset näille teoksille tässä järjestyksessä (null = LR:n reitti).</param>
         public MuseoKierros(Sali s, IList<string> teokset = null)
         {
@@ -110,6 +123,7 @@ namespace Matkakirja.Linssit.Museo
         /// <summary>Siirtymä nykyisestä asennosta pysähdykseen k reittipisteiden kautta (edellinen = viimeksi ohitettu reittipiste).</summary>
         void AloitaSiirtyma(int k, int edellinen)
         {
+            NollaaZoom();
             if (k >= Pysahdykset.Count) { Vaihe = MuseoVaihe.Valmis; Versio++; return; }
             Kohta = k;
             int loppu = Pysahdykset[k];
@@ -248,6 +262,13 @@ namespace Matkakirja.Linssit.Museo
 
         public void Paivita(double dt)
         {
+            if (Vaihe == MuseoVaihe.Pysahtyy && (Zoom || ZoomOsuus > 0))
+            {
+                ZoomOsuus = Math.Max(0, Math.Min(1, ZoomOsuus + (Zoom ? dt : -dt) / ZoomS));
+                if (ZoomOsuus == 0) zoomU = zoomV = 0;
+                Nykyinen = ZoomAsento();
+                if (Zoom) return;   // kierros ei etene zoomin aikana
+            }
             if (Tauolla || Vaihe == MuseoVaihe.Vapaa || Vaihe == MuseoVaihe.Valmis) return;
             VaiheenAika += dt;
             if (Vaihe == MuseoVaihe.Siirtyy)
@@ -274,6 +295,61 @@ namespace Matkakirja.Linssit.Museo
             else if (Vaihe == MuseoVaihe.Pysahtyy && VaiheenAika >= VaiheenKesto) AloitaSiirtyma(Kohta + 1, Mista);
         }
 
+        /// <summary>Zoom päälle/pois (vain pysähdyksessä; muualla aina pois).</summary>
+        public void AsetaZoom(bool paalla)
+        {
+            if (paalla && (Vaihe != MuseoVaihe.Pysahtyy || NykyinenTeos == null)) return;
+            if (Zoom != paalla) { Zoom = paalla; Versio++; }
+        }
+
+        /// <summary>Tutkiminen zoomissa: sormen siirto ruudun osuuksina (x oikealle, y alas); teos seuraa sormea, näkymä pysyy
+        /// kehyksen sisällä (ei seinää, jos teos on näkymää suurempi).</summary>
+        public void ZoomVeda(double dxOsuus, double dyOsuus)
+        {
+            if (!Zoom || NykyinenTeos == null) return;
+            var (hw, hv) = ZoomPuolikkaat();
+            zoomU -= dxOsuus * 2 * hw; zoomV += dyOsuus * 2 * hv;
+            RajaaZoom(hw, hv);
+        }
+
+        void NollaaZoom() { Zoom = false; ZoomOsuus = 0; zoomU = zoomV = 0; }
+
+        /// <summary>Näkymän puolileveys ja -korkeus (m) teoksen tasossa zoomin etäisyydellä.</summary>
+        (double hw, double hv) ZoomPuolikkaat()
+        {
+            double t = Math.Tan(KameraFovAste / 2 * Math.PI / 180), hv = ZoomEtaisyys() * t;
+            return (hv * (Kuvasuhde > 0 ? Kuvasuhde : 4.0 / 3), hv);
+        }
+
+        void RajaaZoom(double hw, double hv)
+        {
+            var r = NykyinenTeos; if (r == null) return;
+            var (W, H) = Ulkomitat(r);
+            double mu = Math.Max(0, W / 2 - hw), mv = Math.Max(0, H / 2 - hv);
+            zoomU = Math.Max(-mu, Math.Min(mu, zoomU)); zoomV = Math.Max(-mv, Math.Min(mv, zoomV));
+        }
+
+        double PysahdysEtaisyys()
+        {
+            var r = NykyinenTeos; var k = Pysahdys(Kohta); if (r == null || k == null) return 1;
+            var c = r.Paikka.Keskipiste; return Math.Sqrt((k.P.X - c.X) * (k.P.X - c.X) + (k.P.Z - c.Z) * (k.P.Z - c.Z));
+        }
+
+        double ZoomEtaisyys() { var r = NykyinenTeos; double d = PysahdysEtaisyys(); return r == null ? d : Math.Min(d, Math.Max(LahinEtaisyys(r), d / ZoomKerroin)); }
+
+        /// <summary>Pysähdyksen asento zoomin osuudella: lähemmäs teosta normaalia pitkin ja sivuun/ylös tutkimissiirtymällä.</summary>
+        MuseoAsento ZoomAsento()
+        {
+            var k = Pysahdys(Kohta); var r = NykyinenTeos;
+            if (k == null || r == null) return Nykyinen;
+            var n = r.Paikka.Normaali; double nl = Math.Sqrt(n.X * n.X + n.Z * n.Z); if (nl < 1e-9) return new MuseoAsento(k.P, k.Katse);
+            double nx = n.X / nl, nz = n.Z / nl;
+            double e = Kamerakayrat.Pehmea(ZoomOsuus), d0 = PysahdysEtaisyys(), lahemmas = (d0 - ZoomEtaisyys()) * e;
+            // Katse = −n; oikea = (nz, 0, −nx).
+            var p = new V3(k.P.X - nx * lahemmas + nz * zoomU * e, k.P.Y + zoomV * e, k.P.Z - nz * lahemmas - nx * zoomU * e);
+            return new MuseoAsento(p, new V3(p.X - nx * KatseEteenM, p.Y, p.Z - nz * KatseEteenM));
+        }
+
         /// <summary>Pysähdys kestää vähintään s sekuntia (kertojan äänite, MuseoKertoja); vain pysähdyksessä.</summary>
         public void PidennaPysahdys(double s) { if (Vaihe == MuseoVaihe.Pysahtyy && s > VaiheenKesto) VaiheenKesto = s; }
 
@@ -293,6 +369,7 @@ namespace Matkakirja.Linssit.Museo
         /// <summary>Vapaa kulku nykyisestä asennosta.</summary>
         public void Vapaa()
         {
+            NollaaZoom();
             var d = Nykyinen.Suunta;
             yaw = Math.Atan2(d.X, -d.Z) * 180 / Math.PI;
             pitch = Math.Asin(Math.Max(-1, Math.Min(1, d.Y))) * 180 / Math.PI;
@@ -354,7 +431,7 @@ namespace Matkakirja.Linssit.Museo
         public const double KameraFovAste = 58;
         /// <summary>Teos kehyksineen täyttää tämän osan ruudun korkeudesta (PT 11.10. 09.0x: kauempaa, seinää ja kehystä näkyy luontevasti; enintään TayttoLeveys leveydestä) ja sen keskipiste on
         /// KeskiY:n kohdalla ylhäältä: vapaa kaista nimikyltin (ylin ~15 %) ja ohjausnappien (alin ~20 %) välissä.</summary>
-        public const double TayttoKorkeus = 0.95, TayttoLeveys = 0.95, KeskiY = 0.5, LahinM = 0.12, PaspisM = 0.065;
+        public const double TayttoKorkeus = 0.93, TayttoLeveys = 0.93, KeskiY = 0.5, LahinM = 0.12, PaspisM = 0.065;
         /// <summary>Katseluasennon vara osan seinistä (ei kävelyn SeinaVaraM: kamera saa tulla teoksen eteen) ja peruutuspisteen etäisyys.</summary>
         public const double KatseluVaraM = 0.08, TakaaM = 1.6, LahitasoM = 0.05;
         readonly Dictionary<int, (V3 P, V3 Katse)> lrAsennot = new Dictionary<int, (V3, V3)>();
@@ -367,7 +444,7 @@ namespace Matkakirja.Linssit.Museo
         {
             if (r?.Paikka == null || kuvasuhde <= 0) return null;
             var pk = r.Paikka;
-            var (W, H) = Nakoala(r);
+            var (W, H) = Ulkomitat(r);   // omistaja 11.10. 12.4x: koko kehys näkyvissä
             double t = Math.Tan(KameraFovAste / 2 * Math.PI / 180);
             double dMin = LahinEtaisyys(r);
             double d = Math.Max(dMin, Math.Max(H / 2 / (TayttoKorkeus * t), W / 2 / (TayttoLeveys * kuvasuhde * t)));
@@ -459,7 +536,7 @@ namespace Matkakirja.Linssit.Museo
                 rp.P = a?.P ?? lr.P; rp.Katse = a?.Katse ?? lr.Katse;
                 if (teoskierros && rr != null) { if (TakaaPiste(rr, rp.P) is V3 tp) takaa[i] = tp; else takaa.Remove(i); }
             }
-            if (Vaihe == MuseoVaihe.Pysahtyy) { var k = reitti[Pysahdykset[Kohta]]; Nykyinen = new MuseoAsento(k.P, k.Katse); Versio++; }
+            if (Vaihe == MuseoVaihe.Pysahtyy) { var k = reitti[Pysahdykset[Kohta]]; Nykyinen = new MuseoAsento(k.P, k.Katse); if (ZoomOsuus > 0) { RajaaZoom(ZoomPuolikkaat().hw, ZoomPuolikkaat().hv); Nykyinen = ZoomAsento(); } Versio++; }
             else if (Vaihe == MuseoVaihe.Siirtyy && polku != null && polku.Count > 1)
             { polku[polku.Count - 1] = reitti[Pysahdykset[Kohta]].P; Mittaa(); }   // matkalla oleva siirtymä uuteen päätepisteeseen
         }
