@@ -1,0 +1,468 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "baku",
+  "maa": "AZE",
+  "era": "e03",
+  "kaupunki": {
+    "id": "baku",
+    "name": "Baku",
+    "wiki": "Baku",
+    "ambience": "satama",
+    "pallo": {
+      "lat": 40.3667,
+      "lon": 49.8352
+    }
+  },
+  "artikkeli": {
+    "intro": "Baku on Azerbaidžanin pääkaupunki ja lähteen mukaan koko Kaukasuksen ja Kaspianmeren suurin kaupunki. Se sijaitsee Absheronin niemimaan eteläreunalla Bakunlahden rannalla, 28 metriä merenpinnan alapuolella. Kaupunkia kutsutaan **Tuulten kaupungiksi**, sillä pohjoinen khazri ja lämmin eteläinen gilavar puhaltavat siellä vuoden ympäri.\n\nMuurien ympäröimä **vanhakaupunki**, azeriksi Icheri Sheher, on ollut UNESCOn maailmanperintökohde vuodesta 2000. Sen korkeimmalla kohdalla seisoo 1400-luvun Širvanšahien palatsi, ja rannan puolella kohoaa Neitotorni. Muurien ulkopuolelle kaupunki alkoi levitä 1800-luvun alussa.\n\nIsoisän matkavuonna 1873 Baku oli Venäjän keisarikunnan lääninpääkaupunki, jonka asukasluku oli 1860-luvulla noin 13 000. Samana vuonna Bakuun saapuivat Nobelin veljekset, sillä laaja **öljynetsintä** oli alkanut edellisenä vuonna maa-alueiden huutokaupalla. Vuoteen 1900 mennessä kaupungissa oli yli 3 000 öljykaivoa, ja nykyään Bakussa asuu 2 344 900 ihmistä (1.1.2024).",
+    "teksti": "Lähteen mukaan nimi Baku juontuu sanasta Baguan tai Bagavan, jonka ensimmäinen osa baga tarkoittaa muinaispersiaksi jumalaa. Azeriksi kaupungin nimi kirjoitetaan Bakı. Tuulesta kertoo 1800-luvulla suosittu kansanetymologia, jonka mukaan nimi tulisi persian sanasta Bâd-kube, tuulen piiskaama kaupunki. Alueella on asuttu kivikaudesta, ja Bayilin lähellä on pronssikauden kalliopiirroksia.\n\nShirvanshahien hovi siirtyi Bakuun Shamakhin maanjäristysten jälkeen, lähteiden mukaan 1100-luvulla tai viimeistään 1400-luvun alussa, ja palatsin päärakennus aloitettiin 1411. Safavidit valtasivat Bakun 1501, osmanit 1578, ja 1723 Pietari Suuren piiritys vaurioitti palatsia. Venäjän valloituksen jälkeen muurit ja tornit vahvistettiin 1806.\n\nShamakhin maanjäristyksen jälkeen 1859 Baku sai läänin pääkaupungin aseman. Lennätinlinja Tiflisiin valmistui 1868, mutta rautatietä ei vielä ollut, sillä rata Tiflisiin valmistui vasta 8.5.1883. Muurien merenpuoleinen osa purettiin 1865, ja kivien myynnistä saadut 44 000 ruplaa käytettiin bulevardin rakentamiseen."
+  },
+  "kysymykset": [
+    {
+      "q": "Minkä meren rannalla Baku sijaitsee?",
+      "options": [
+        "Kaspianmeren",
+        "Mustanmeren",
+        "Välimeren",
+        "Azovinmeren"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Kaupunki seisoo meren länsirannalla, Absheronin niemimaan eteläreunalla.",
+      "fact": "Baku sijaitsee Kaspianmeren rannalla Absheronin niemimaan eteläreunalla Bakunlahden äärellä.",
+      "source": "https://en.wikipedia.org/wiki/Baku"
+    },
+    {
+      "q": "Minkä maan pääkaupunki Baku on?",
+      "options": [
+        "Azerbaidžanin",
+        "Georgian",
+        "Kazakstanin",
+        "Turkmenistanin"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Maa on Kaukasuksen ja Kaspianmeren välissä.",
+      "fact": "Baku on Azerbaidžanin pääkaupunki ja lähteen mukaan koko Kaukasuksen suurin kaupunki.",
+      "source": "https://en.wikipedia.org/wiki/Baku"
+    },
+    {
+      "q": "Miksi Bakua kutsutaan Tuulten kaupungiksi?",
+      "options": [
+        "Kaupungissa tuulee voimakkaasti ympäri vuoden",
+        "Kaupungin satamassa purjelaivat odottivat tuulta",
+        "Nimi tulee vanhoista tuulimyllyistä",
+        "Kaupunki on rakennettu korkealle vuoristosolaan"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Nimi liittyy ilmastoon, ei rakennuksiin.",
+      "fact": "Lähteen mukaan Baku on hyvin tuulinen ympäri vuoden: pohjoinen khazri ja lämmin eteläinen gilavar ovat tyypillisiä kaikkina vuodenaikoina.",
+      "source": "https://en.wikipedia.org/wiki/Baku"
+    },
+    {
+      "q": "Mikä raaka-aine teki Bakusta 1800- ja 1900-luvun vaihteessa yhden maailman vilkkaimmista teollisuuskaupungeista?",
+      "options": [
+        "Öljy",
+        "Puuvilla",
+        "Suola",
+        "Kupari"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Robert ja Ludvig Nobel perustivat kaupunkiin tislaamon 1876.",
+      "fact": "Ensimmäinen kaivo porattiin Bibi-Heybatissa 1846, ja Nobelin veljekset saapuivat Bakuun 1873. Vuoteen 1900 mennessä kaupungissa oli yli 3 000 öljykaivoa.",
+      "source": "https://en.wikipedia.org/wiki/History_of_Baku"
+    },
+    {
+      "q": "Kuinka monta metriä merenpinnan alapuolella Baku sijaitsee?",
+      "options": [
+        "28 metriä",
+        "12 metriä",
+        "47 metriä",
+        "85 metriä"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Kaspianmeren pinta on valtamerten pintaa alempana, ja kaupunki on sen rannalla.",
+      "fact": "Baku sijaitsee 28 metriä merenpinnan alapuolella, ja lähteen mukaan se on maailman alimmalla sijaitseva pääkaupunki.",
+      "source": "https://en.wikipedia.org/wiki/Baku"
+    }
+  ],
+  "tiedot": [
+    "Baku on 28 metriä merenpinnan alapuolella, ja lähteen mukaan se on maailman alimmalla sijaitseva pääkaupunki.",
+    "Villa Petrolean puiston multa tuotiin Lankaranista ja makea vesi Volgalta laivojen painolastina.",
+    "Bakun bulevardin laskuvarjotorni rakennettiin 1936 ja kunnostettiin 2008."
+  ],
+  "valokuva": {
+    "tiedosto": "Baku, 1861.jpg",
+    "vuosi": "1861",
+    "lahde": "Alexander Ulsky (1837–1868), Commons (PD)",
+    "lyhyt": "Baku vuonna 1861: muurien ympäröity kaupunki Bakunlahden rannalla.",
+    "selite": "Baku oli tuolloin Venäjän keisarikunnan lääninpääkaupunki, ja muurien sisäpuolinen kaupunki erottui muurien ulkopuolisesta."
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Baku",
+      "johdanto": "Baku on Kaspianmeren rannalla 28 metriä merenpinnan alapuolella, ja lähteen mukaan se on koko Kaukasuksen suurin kaupunki. Muurien sisällä seisovat Neitotorni ja Širvanšahien palatsi, ja muurien ulkopuolella meri, tuuli ja öljy ovat muovanneet kaupunkia vuosisatoja.",
+      "kansikuvat": [
+        {
+          "tiedosto": "Baku Skyline qiz qalasi.jpg",
+          "lyhyt": "Icheri Sheher on Bakun muurien ympäröimä vanhakaupunki.",
+          "selite": "Vanhakaupunki eli Icheri Sheher on muurien ympäröimä kaupunginosa, joka on kuulunut UNESCOn maailmanperintöön vuodesta 2000.",
+          "lahde": "Viceskeeni2, Wikimedia Commons (CC0)"
+        },
+        {
+          "tiedosto": "Baku Boulevard 2024.jpg",
+          "lyhyt": "Bakun bulevardi on Bakunlahden rantaa seuraava promenadi.",
+          "selite": "Bulevardin istutuksista päätettiin vuonna 1900, ja nykyään promenadi on 3,75 kilometriä pitkä.",
+          "lahde": "Rufatazizzade, Wikimedia Commons (CC BY-SA 4.0)"
+        },
+        {
+          "tiedosto": "Vista de Baku, Azerbaiyán, 2016-09-26, DD 138.jpg",
+          "lyhyt": "Baku sijaitsee Bakunlahden rannalla Kaspianmeren länsirannalla.",
+          "selite": "Kaupunki on Absheronin niemimaan eteläreunalla, ja Bakunlahti avautuu Kaspianmerelle.",
+          "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)"
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Öljyn kaupunki",
+          "teksti": "Bakun öljystä kertoi lähteen mukaan jo 900-luvulla arabimatkailija Marudee, jonka mukaan alueelta saatiin luonnostaan sekä valkoista että mustaa öljyä. Ensimmäinen öljynjalostamo rakennettiin Balaxaniin 1837, ja ensimmäinen kaivo porattiin Bibi-Heybatissa 1846.\n\nLaaja öljynetsintä alkoi 1872, kun Venäjän viranomaiset huutokauppasivat öljyrikkaita maa-alueita yksityisille sijoittajille. Nobelin veljekset saapuivat Bakuun 1873 ja Rothschildit 1882. Robert ja Ludvig Nobelin perustama tislaamo aloitti 1876, ja siitä kasvoi Branobel. Jalostamoalue, Musta kaupunki, kehittyi 1880-luvun alkuun mennessä.\n\nVuoteen 1900 mennessä Bakussa oli yli 3 000 öljykaivoa.",
+          "tiedosto": "Naftaproduktionsbolaget Bröderna Nobel 4.jpg",
+          "lyhyt": "Nobelin veljesten öljyliiketoiminta Bakussa alkoi tislaamosta 1876.",
+          "selite": "Robert ja Ludvig Nobelin perustamasta tislaamosta kasvoi Branobel-yhtiö, joka rakennutti Villa Petrolean työntekijöilleen.",
+          "lahde": "Fotograf okänd, Wikimedia Commons (CC0)",
+          "wiki": "Baku"
+        },
+        {
+          "otsikko": "Neitotorni",
+          "teksti": "Neitotorni on lieriömäinen, kahdeksankerroksinen torni, jonka korkeus on 29,5 metriä ja perushalkaisija 16,5 metriä. Torni on rakennettu kallion päälle, ja 1962–1963 kaivauksissa sen perustuksista löytyi 14 metriä korkeita puupalkkeja, joiden tulkitaan olleen maanjäristyksen kestävä rakenne.\n\nTornin ikä on kiistanalainen. Yleisesti sen ajoitetaan 1100-luvulle, mutta osa tutkijoista pitää perustuksia ja alimpia kerroksia paljon vanhempina. Etelämuurissa 14 metrin korkeudella on kufi-kirjoitus, jossa mainitaan arkkitehti Qubbeye Masud ibn Davud.\n\nTornissa on museo, ja katolta näkyvät vanhankaupungin kujat, minareetit ja Bakunlahti.",
+          "tiedosto": "Baku Maiden Tower 004 7736.jpg",
+          "lyhyt": "Neitotornin seinät ovat alaosassa viisi metriä paksut.",
+          "selite": "Torni on rakennettu kallion päälle, ja se on kuvattu Azerbaidžanin setelissä ja kolikoissa.",
+          "lahde": "Ludvig14, Wikimedia Commons (CC BY-SA 4.0)",
+          "wiki": "Maiden Tower (Baku)"
+        },
+        {
+          "otsikko": "Širvanšahien palatsi",
+          "teksti": "Širvanšahien palatsi kohoaa vanhankaupungin korkeimmalla kohdalla. Päärakennus aloitettiin 1411, ja se oli alun perin kaksikerroksinen 52 huoneen rakennus, jossa oli kolme kapeaa kierreporrasta. Kompleksiin kuuluvat Divan-khana, hautaholvit, hovimoskeija, vesisäiliö ja kylpylän jäänteet.\n\nSafavidit valtasivat Bakun 1501, ja osmanit saivat sen haltuunsa 1578. Palatsi oli tyhjillään 1600-luvulta, ja Pietari Suuren piiritys vaurioitti sitä 1723. 1800-luvun puolivälissä se siirtyi Venäjän sotilasosastolle.\n\nMuseo-suojelualueeksi palatsi julistettiin 1964, ja maailmanperintölistalle se tuli 2000.",
+          "tiedosto": "Palacio de los Shirvanshah, Baku, Azerbaiyán, 2016-09-28, DD 08-10 HDR.jpg",
+          "lyhyt": "Širvanšahien palatsin päärakennus aloitettiin 1411.",
+          "selite": "Palatsikompleksiin kuuluvat muun muassa Divan-khana, hovimoskeija ja hautaholvit.",
+          "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
+          "wiki": "Palace of the Shirvanshahs"
+        },
+        {
+          "otsikko": "Tuulten kaupunki",
+          "teksti": "Bakua kutsutaan Tuulten kaupungiksi, azeriksi Küləklər şəhəri. Kaupunki on hyvin tuulinen ympäri vuoden: pohjoistuuli khazri voi yltää 144 kilometriin tunnissa, ja eteläinen lämmin tuuli on nimeltään gilavar. Talvella khazri tuo pakkasta ja lumimyrskyjä.\n\nAbsheronin niemimaa on Azerbaidžanin kuivin alue. Sadetta tulee noin 200 millimetriä vuodessa tai vähemmän, koska Kaukasuksen vuoret luovat sadevarjon. Samoilla leveysasteilla Mustallamerellä sataa keskimäärin 2 300 millimetriä tai enemmän.\n\nVettä on tuotu kaupunkiin kaukaa: Zeynalabdin Taghiyev rahoitti Shollar-vesiputken, joka valmistui 1916 ja johti vettä Kaukasuksen vuorilta Quban läheltä.",
+          "tiedosto": "A view of the Baku bay, Azerbaijan.jpg",
+          "lyhyt": "Absheronin niemimaa on Azerbaidžanin kuivin alue.",
+          "selite": "Sadetta tulee Bakussa noin 200 millimetriä vuodessa tai vähemmän, koska Kaukasuksen vuoret luovat sadevarjon.",
+          "lahde": "AlixSaz, Wikimedia Commons (CC BY-SA 4.0)",
+          "wiki": "Baku"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "Torre de la Doncella, Baku, Azerbaiyán, 2016-09-26, DD 08.jpg",
+          "lyhyt": "Neitotorni kuuluu vanhankaupungin UNESCO-kohteeseen.",
+          "selite": "Neitotorni ja Širvanšahien palatsi kuuluvat samaan UNESCOn maailmanperintökohteeseen, ja tornissa on museo.",
+          "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)"
+        },
+        "kappale": "Baku on Azerbaidžanin pääkaupunki, jonne saavutaan lentäen Heydar Aliyev International Airportille (GYD) noin 25 kilometrin päähän keskustasta. Tammikuusta 2026 alkaen maan rajat naapurimaihin ovat olleet suljetut siviililiikenteeltä, joten maahan pääsee vain kansainvälisten lentokenttien kautta. Vanhakaupunki, bulevardi ja Fountains Square ovat jalankulkuvyöhykkeitä, ja metro kulkee kello 6–24. Kaupunki on tavallisella maalaisjärjellä turvallinen suurkaupunki, mutta liikenne vaatii tarkkuutta.",
+        "artikkeli": {
+          "nimi": "Matkailijan Baku",
+          "taitto": "opas",
+          "teksti": "Kaupunki, jossa tuuli kulkee muurien ja pilvenpiirtäjien välissä, kannattaa kävellä.",
+          "nosto": "Bakun vanhakaupunki, bulevardi ja Fountains Square ovat jalankulkuvyöhykkeitä. Kesä on kuuma ja kuiva, ja viileällä säällä pohjoistuuli khazri tuntuu purevalta.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Heydar Aliyev International Airport (GYD) sijaitsee noin 25 kilometrin päässä keskustasta itään, ja sen entinen nimi oli Bina International Airport. Bussi T1 yhdistää lentoaseman rautatieasemaan Koroglun metroaseman kautta, ja bussi N16 kulkee Samed Vurgun -puistoon. Metron ensimmäinen osuus avattiin 6.11.1967, ja nykyään siinä on kolme linjaa ja 27 asemaa. Metro kulkee kello 6–24, ja asemilla valokuvaus on kielletty. Tammikuusta 2026 alkaen maan rajat naapurimaihin ovat olleet suljetut siviililiikenteeltä, joten Bakuun tullaan lentäen.",
+              "kuva": {
+                "tiedosto": "Terminal 1 (Baku airport).jpg",
+                "lyhyt": "Heydar Aliyev International Airport on Bakun lentoasema.",
+                "selite": "Lentoaseman entinen nimi oli Bina International Airport, ja se sijaitsee noin 25 kilometrin päässä keskustasta.",
+                "lahde": "Xoqoni Said, Wikimedia Commons (CC0)"
+              }
+            },
+            {
+              "otsikko": "Vanhakaupunki",
+              "teksti": "Icheri Sheher on muurien ympäröimä kaupunginosa, jossa on kaksi karavaaniseraijia, kylpylöitä ja Juma-moskeija. Kaiken ehtii nähdä jalan yhdessä päivässä. Muurien sisällä asui vuonna 2007 noin 3 000 ihmistä. Neitotorni ja Širvanšahien palatsi kuuluvat samaan maailmanperintökohteeseen vanhankaupungin kanssa.",
+              "kuva": {
+                "tiedosto": "Baku Icheri-Sheher Portal 004 7861.jpg",
+                "lyhyt": "Vanhakaupunki jaettiin perinteisiin asuinalueisiin.",
+                "selite": "Gemichiler oli laivanrakentajien ja Noyutchuler öljytyöläisten asuinalue vanhankaupungin muurien sisällä.",
+                "lahde": "Ludvig14, Wikimedia Commons (CC BY-SA 4.0)"
+              }
+            },
+            {
+              "otsikko": "Bulevardi ja nykykaupunki",
+              "teksti": "Bakun bulevardi on merenrantapromenadi, joka on Yeni Bulvar- ja White City -osuuksien myötä 2012 jälkeen 3,75 kilometriä pitkä. Alueella on huvipuisto, jachtiklubi, musiikkisuihkulähde ja patsaita, ja vuonna 1936 rakennettu laskuvarjotorni on yksi sen maamerkeistä. Nykyaikaista arkkitehtuuria edustavat muun muassa Flame Towers -pilvenpiirtäjät.",
+              "kuva": {
+                "tiedosto": "Baku Boulevard Park.jpg",
+                "lyhyt": "Bakun bulevardi julistettiin kansallispuistoksi 1999.",
+                "selite": "Bulevardin istutuksista päätettiin 1900, ja puiston multa tuotiin muualta.",
+                "lahde": "Antoloji, Wikimedia Commons (CC BY-SA 4.0)"
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Ateria jakautuu lähteen mukaan kolmeen osaan, joihin kuuluvat alkupalat tai keitot ja pääruoka. Plov eli riisiruoka on perusruoka. Kaspianmeren kalaa, erityisesti sampea, grillataan vartaassa ja tarjotaan granaattiomenakastikkeella nimeltä narsharab. Musta tee juodaan aterian jälkeen ja tarjotaan vieraille tervetuliaisjuomana, usein hillon kanssa. Teehuoneissa, çayxanalar, pelataan nardea eli backgammonia tai dominoa. Jälkiruoiksi sopivat pakhlava ja shaki halva.",
+              "kuva": {
+                "tiedosto": "Azerbaijani plov.JPG",
+                "lyhyt": "Plovista tunnetaan Azerbaidžanin keittiössä yli 200 lajia.",
+                "selite": "Plov on azerbaidžanilaisen keittiön perusruoka, josta tunnetaan lähteen mukaan yli 200 lajia.",
+                "lahde": "Urek Meniashvili, Wikimedia Commons (CC BY-SA 3.0)"
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Vuosien 1991–2020 keskiarvojen mukaan Bakun ilmasto on kylmä puolikuiva: kesät ovat kuumia ja kosteita, talvet viileitä ja tuuli puhaltaa ympäri vuoden. Heinä–elokuun keskilämpötila on 26,4 °C ja tammi–helmikuun 4,3 °C. Toukokuun keskilämpötila on 18,0 °C ja lokakuun 16,7 °C. Sadetta tulee noin 200 millimetriä vuodessa tai vähemmän: heinäkuu on kuivin 3,9 millimetrillä ja marraskuu sateisin 44,3 millimetrillä. Talvella lumimyrskyt ovat satunnaisia, ja lumi sulaa yleensä muutamassa päivässä."
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Vanhakaupunki (Icheri Sheher)",
+                "tahdet": 3,
+                "selite": "UNESCOn maailmanperintökohde vuodesta 2000, ja kaiken ehtii nähdä jalan yhdessä päivässä."
+              },
+              {
+                "mita": "Näkymä Neitotornin katolta",
+                "tahdet": 3,
+                "selite": "Tornin katolta näkyvät vanhankaupungin kujat, minareetit ja Bakunlahti."
+              },
+              {
+                "mita": "Širvanšahien palatsi",
+                "tahdet": 3,
+                "selite": "1400-luvun palatsikompleksi vanhankaupungin korkeimmalla kohdalla."
+              },
+              {
+                "mita": "Bakun bulevardi",
+                "tahdet": 2,
+                "selite": "Merenrantapromenadi, jonka pituus on 3,75 kilometriä."
+              },
+              {
+                "mita": "Gobustanin kalliopiirrokset",
+                "tahdet": 2,
+                "selite": "Noin 70 kilometrin päässä Bakusta lounaaseen on UNESCO-kohde, jossa on yli 6 000 kalliopiirrosta."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Liikenne vaatii tarkkuutta",
+                "teksti": "Monet kuljettajat eivät noudata sääntöjä, eivätkä suojatiet ole aina turvallisia, etenkään yöllä."
+              },
+              {
+                "otsikko": "Turvatarkastukset",
+                "teksti": "Joillakin nähtävyyksillä ja metroasemilla tehdään tavallisia turvatarkastuksia, ja metroasemilla valokuvaus on kielletty."
+              },
+              {
+                "otsikko": "Maahan tullaan lentäen",
+                "teksti": "Tammikuusta 2026 alkaen maan rajat naapurimaihin ovat olleet suljetut siviililiikenteeltä, eikä meritse saapuminen ole mahdollista."
+              },
+              {
+                "otsikko": "Tuuli tuntuu viileällä säällä",
+                "teksti": "Pohjoistuuli khazri tuntuu viileällä säällä purevalta, joten lämmin takki kannattaa pakata."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "musiikki",
+      "nimi": "Mugham ja ooppera",
+      "johdanto": "Bakussa laulettu ja soitettu mugham on runouden ja improvisaation taidemuoto, jonka UNESCO on ottanut ihmiskunnan aineettoman perinnön luetteloon. Samassa kaupungissa kantaesitettiin 1908 ooppera, joka yhdisti itäisen ja läntisen musiikin.",
+      "tehtava": {
+        "kysymys": "Millä soittimella soitettu azerimughamin pätkä lähetettiin Voyager-luotainten mukana avaruuteen?",
+        "vaihtoehdot": [
+          "Balaban",
+          "Kamancha",
+          "Tar",
+          "Daf"
+        ],
+        "oikea": 0,
+        "fakta": "Balaban on puhallinsoitin, jonka ääni kuuluu Voyager-luotainten Golden Recordilla."
+      },
+      "nostot": [
+        {
+          "otsikko": "Mugham",
+          "teksti": "Mugham on taidemuoto, joka yhdistää klassisen runouden ja musiikillisen improvisaation tietyissä paikallisissa moodeissa. Moodi ei ole pelkkä asteikko, vaan suullisesti siirtyvä kokoelma melodioita, joita esittäjä käyttää improvisoidessaan. Lähteen mukaan pääasteikkoja on seitsemän, ja Rast, Shur ja Segah ovat erityisen yleisiä.\n\nEsitys voi kestää tunteja, ja runojen yleinen aihe on rakkaus, usein mystisenä rakkautena Jumalaan.\n\nUNESCO julisti mughamin mestariteokseksi 2003 ja otti sen aineettoman perinnön luetteloon 2008. Voyager-luotainten Golden Recordille valittiin lyhyt azerimughamin pätkä, jota soitetaan balaban-puhallinsoittimella.",
+          "tiedosto": "Seyid Shushinski ansambl.jpg",
+          "lyhyt": "Mugham yhdistää klassisen runouden ja musiikillisen improvisaation.",
+          "selite": "Mughamin esitys voi kestää tunteja, ja UNESCO otti taidemuodon aineettoman perinnön luetteloon 2008.",
+          "lahde": "Unknown author, Wikimedia Commons (PD)",
+          "wiki": "Mugham"
+        },
+        {
+          "otsikko": "Leyli ja Majnun, 1908",
+          "teksti": "Uzeyir Hajibeyovin ooppera Leyli ja Majnun kirjoitettiin 1907, ja sen kantaesitys oli 25.1.1908 Taghiyevin teatterissa Bakussa. Sitä pidetään muslimi-idän ensimmäisenä oopperana.\n\nLibretto syntyi Uzeyir Hajibeyovin ja hänen veljensä Jeyhun Hajibeyovin yhteistyönä, ja sen pohjana on 1400-luvun runoilija Muhammad Fuzulin runo Leyla ja Majnun. Kantaesityksessä Hajibeyov soitti itse viulua, ja johtajana oli Huseyn Arablinski.\n\nOoppera yhdistää itäisiä ja läntisiä musiikkimuotoja, ja sitä on kuvattu kahden musiikkikulttuurin vuoropuheluksi. Lähteen mukaan se on esitetty yli 2 000 kertaa Azerbaidžanin valtion oopperassa ja ulkomailla.",
+          "tiedosto": "Azerbaijan State Academic Opera and Ballet Theater, 2019.jpg",
+          "lyhyt": "Azerbaidžanin valtion akateeminen ooppera- ja balettiteatteri sai rakennuksensa Taghiyevin tuella.",
+          "selite": "Taghiyev kattoi 1911 kaikki rakennuksen kulut, ja siitä tuli myöhemmin Azerbaidžanin valtion akateeminen ooppera- ja balettiteatteri.",
+          "lahde": "Dmitry Karyshev, Wikimedia Commons (CC BY 2.0)",
+          "wiki": "Leyli and Majnun (opera)"
+        },
+        {
+          "otsikko": "Taghiyevin teatteri",
+          "teksti": "Zeynalabdin Taghiyev oli kenkien tekijän poika Bakun vanhastakaupungista, ja hän nousi muurarista urakoitsijaksi 18-vuotiaana. Hän oli itse lukutaidoton, mutta tuki stipendeillä nuorten opintoja.\n\nTaghiyev rahoitti ensimmäisen azerbaidžanilaisen kansallisteatterin 1883 ja kunnosti sen 1909 palon jälkeen. Teatterissa kantaesitettiin Leyli ja Majnun 1908. Vuonna 1911 hän kattoi kaikki kulut rakennukseen, josta tuli myöhemmin Azerbaidžanin valtion akateeminen ooppera- ja balettiteatteri.\n\nHän rahoitti myös Lähi-idän ensimmäisen sekulaarin muslimityttöjen koulun 1898–1900 sekä Bakun palokunnan perustamisen 1886.",
+          "tiedosto": "Haji Zeynalabdin Taghiyev.jpg",
+          "lyhyt": "Zeynalabdin Taghiyev rahoitti Bakussa teatteria, tyttökoulua ja palokuntaa.",
+          "selite": "Taghiyev oli itse lukutaidoton, mutta tuki stipendeillä nuorten opintoja.",
+          "lahde": "Unknown author, Wikimedia Commons (PD)",
+          "wiki": "Zeynalabdin Taghiyev"
+        },
+        {
+          "otsikko": "Mugham-keskus ja jazz",
+          "teksti": "Kansainvälinen mugham-keskus perustettiin 2005, ja peruskivi laskettiin Bakun bulevardin alueella elokuussa 2005. Keskus avattiin 27.12.2008. Sen ala on 7 500 neliömetriä, ja siihen kuuluvat 350 hengen konserttisali, äänitysstudio ja harjoitustilat.\n\nMughamin ja jazzin yhdistäminen on oma haaransa: Vagif Mustafazadeh yhdisti jazzin ja mughamin, ja 1995 Jeff Buckley esitti Alim Qasimovin kanssa duetin Ranskassa. Bakun kansainvälinen jazzfestivaali on yksi kaupungin vuosittaisista tapahtumista.\n\nHajibeyov julkaisi 1900-luvun alussa mughamin teoriaa käsittelevän kirjan The Principles of Azerbaijan Folk Music.",
+          "tiedosto": "International Mugham Center of Azerbaijan.2.jpg",
+          "lyhyt": "Kansainvälinen mugham-keskus avattiin 27.12.2008 Bakun bulevardin vieressä.",
+          "selite": "Keskuksen konserttisalissa on 350 paikkaa, ja rakennukseen kuuluvat myös äänitysstudio ja harjoitustilat.",
+          "lahde": "Natella.M, Wikimedia Commons (CC BY-SA 4.0)",
+          "wiki": "Baku"
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Vanhakaupunki kohoaa Bakunlahden rannalla, ja sen ympärille kaupunki on kasvanut muurien ulkopuolelle. Lähteen mukaan vanhin osa on asuttu kivikaudesta, ja keskiajan Shirvanshahien rakennukset, moskeijat ja linnoituksen muurit seisovat edelleen. Rannalla on 1900-luvun alussa istutettu bulevardi.",
+    "rajat": {
+      "pohjoinen": 40.37464,
+      "etela": 40.3573,
+      "lansi": 49.82789,
+      "ita": 49.8407
+    },
+    "kohteet": [
+      {
+        "nimi": "Neitotorni",
+        "lat": 40.3661,
+        "lon": 49.8372
+      },
+      {
+        "nimi": "Širvanšahien palatsi",
+        "lat": 40.36615,
+        "lon": 49.83344
+      },
+      {
+        "nimi": "Juma-moskeija",
+        "lat": 40.3653,
+        "lon": 49.8356
+      },
+      {
+        "nimi": "Vanhankaupungin muurit ja Shemakhan portti",
+        "lat": 40.36853,
+        "lon": 49.83632
+      },
+      {
+        "nimi": "Taza Pirin moskeija",
+        "lat": 40.37194,
+        "lon": 49.83139
+      },
+      {
+        "nimi": "Bakun bulevardi",
+        "tyyppi": "luonto",
+        "lat": 40.36,
+        "lon": 49.8371
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "Neitotorni": {
+      "aika": "1100-luku",
+      "teksti": "Neitotorni on lieriömäinen, kahdeksankerroksinen torni vanhankaupungin rannan puolella. Sen korkeus on 29,5 metriä ja perushalkaisija 16,5 metriä, ja seinät ovat alaosassa viisi metriä paksut. Torni on rakennettu kallion päälle, ja sen perustuksista on löytynyt 14 metriä korkeita puupalkkeja. Etelämuurin kufi-kirjoituksessa mainitaan 1100-luvun arkkitehti Qubbeye Masud ibn Davud.\n\nTornin ikä on kiistanalainen. Yleisesti sen ajoitetaan 1100-luvulle, mutta osa tutkijoista pitää perustuksia ja alimpia kerroksia paljon vanhempina. Lähteen mukaan tornista kerrotaan jopa 20 legendaa, joista tunnetuin kertoo tulenpunatukkaisesta neidosta, joka pelasti kaupunkilaiset.\n\nIsoisän matkavuonna 1873 torni seisoi vanhankaupungin muurien rannan puolella, ja muurit ja tornit oli vahvistettu 1806. Meri on lähteen mukaan sittemmin vetäytynyt, ja tornin edustalle on syntynyt maakaistale. Nykyään tornissa on museo, ja katolta näkyvät vanhankaupungin kujat, minareetit ja Bakunlahti.",
+      "kuvat": [
+        {
+          "tiedosto": "Torre de la Doncella, Baku, Azerbaiyán, 2016-09-26, DD 212-214 HDR.jpg",
+          "lyhyt": "Neitotorni kuuluu Bakun vanhankaupungin UNESCO-kohteeseen.",
+          "selite": "Neitotorni ja Širvanšahien palatsi inskriboitiin yhdessä UNESCOn maailmanperintöluetteloon vanhankaupungin kanssa.",
+          "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)"
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Širvanšahien palatsi": {
+      "aika": "1400-luku",
+      "teksti": "Širvanšahien palatsi kohoaa vanhankaupungin korkeimmalla kohdalla. Päärakennus aloitettiin 1411, ja se oli alun perin kaksikerroksinen rakennus, jossa oli 52 huonetta ja kolme kapeaa kierreporrasta. Nykyään toisessa kerroksessa on 16 huonetta. Kompleksiin kuuluvat Divan-khana, hautaholvit, hovimoskeija minareetteineen, Seyyid Yahya Bakuvin mausoleumi, itäportaali eli Muradin portti, vesisäiliö ja kylpylän jäänteet. Shirvanshah Khalilullah I haudattiin perheineen palatsin alueelle.\n\nSafavidit valtasivat Bakun 1501, ja osmanit saivat kaupungin haltuunsa 1578. Palatsi oli tyhjillään 1600-luvulta, ja Pietari Suuren piiritys vaurioitti sen kaakkoisjulkisivua 1723.\n\nIsoisän matkavuonna 1873 palatsi oli Venäjän sotilasosaston hallussa. Osasto oli 1800-luvun puolivälissä tehnyt siihen osittaisen kunnostuksen ja muuttanut tiloja varastoiksi. Kei-Kubad-moskeija paloi 1918, ja kunnostustöitä tehtiin 1932–1934. Museo-suojelualueeksi palatsi julistettiin 1964, ja restaurointi alkoi uudelleen 1992.",
+      "kuvat": [
+        {
+          "tiedosto": "Palace of the Shirvanshahs, Baku (Şirvanşahlar sarayı).jpg",
+          "lyhyt": "Širvanšahien palatsi on 1400-luvun palatsikompleksi vanhankaupungin korkeimmalla kohdalla.",
+          "selite": "Palatsin tiloissa toimii nykyään museo, ja se on kuulunut maailmanperintöön vuodesta 2000.",
+          "lahde": "Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)"
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Juma-moskeija": {
+      "aika": "1100-luku ja 1899",
+      "teksti": "Bakun ensimmäinen Jame-moskeija rakennettiin 1100-luvulla paikalle, jolle se rakennettiin useita kertoja uudelleen. Kirjoituksen mukaan Amir Sharaf al-Din Mahmud määräsi sen kunnostettavaksi 709 AH eli 1309–1310. Stalaktiittikoristeinen minaretti rakennettiin pohjoisseinälle 1437, ja pihassa oli 1400-luvun medresan huoneita, joista yksi on säilynyt.\n\nNykyinen moskeija rakennettiin 1899 kauppias ja hyväntekijä Haji Sheikhali Agha Dadashovin rahoituksella. Lähteen mukaan rakennuksessa on jälkiä zarathustralaisesta temppelistä, ja yksi tutkija uskoi sen nousseen tulenpalvojien temppelin jäänteille.\n\nIsoisän matkavuonna 1873 nykyistä moskeijaa ei vielä ollut, vaan paikalla oli vanha Jame-moskeija. Neuvostoaikana rakennus toimi kilimimuseona, ja 1990-luvulla se palasi moskeijakäyttöön. Se restauroitiin täysin 2008.",
+      "kuvat": [
+        {
+          "tiedosto": "Juma Mosque (Baku) 14.JPG",
+          "lyhyt": "Juma-moskeijan nykyinen rakennus valmistui 1899.",
+          "selite": "Moskeija sijaitsee vanhassakaupungissa, ja sen edeltäjä rakennettiin 1100-luvulla.",
+          "lahde": "Urek Meniashvili, Wikimedia Commons (CC BY-SA 3.0)"
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Vanhankaupungin muurit ja Shemakhan portti": {
+      "aika": "1000–1100-luku",
+      "teksti": "Bakun vanhakaupunki on muurien ympäröimä, ja lähteen mukaan Bakuun ja sen ympäristöön rakennettiin 1100–1300-luvuilla massiivisia linnoituksia. Keskiajan monumentteja ovat Synyg Galan minaretti 1000-luvulta, muurit ja tornit 1000–1100-luvulta sekä Multanin karavaaniseraiji ja Haji Gayyibin kylpylä 1400-luvulta. Vanhakaupunki jaettiin asuinalueisiin, joista Gemichiler oli laivanrakentajien ja Noyutchuler öljytyöläisten.\n\nVenäjän valloituksen jälkeen muurit vahvistettiin 1806 ja korjattiin 1807–1811, ja linnoitusta laajennettiin. Muureille sijoitettiin kymmeniä tykkejä. Alun perin muureissa oli kaksi porttia, Salyan ja Shemakha.\n\nIsoisän matkavuonna 1873 muurit olivat vielä pitkälti ennallaan, mutta merenpuoleinen osa oli purettu 1865. Kivet myytiin, ja 44 000 ruplan tuotto käytettiin bulevardin rakentamiseen. Bulevardin ensimmäiset suihkulähteet ilmestyivät 1867. Taghiyevin portti avattiin vasta 1877. Vanhakaupunki oli 2000-luvun alussa UNESCOn vaaralistalla vuoteen 2009 asti.",
+      "kuvat": [
+        {
+          "tiedosto": "Walls of the fortress of the Baku Old City (Azerbaijan) - 10-12centuries6.jpg",
+          "lyhyt": "Vanhankaupungin muurit ovat peräisin 1000–1100-luvulta.",
+          "selite": "Muurit vahvistettiin Venäjän valloituksen jälkeen 1806, ja niissä oli alun perin kaksi porttia, Salyan ja Shemakha.",
+          "lahde": "Самый древний, Wikimedia Commons (PD)"
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Taza Pirin moskeija": {
+      "aika": "1905–1914",
+      "teksti": "Taza Pirin moskeija rakennettiin 1905–1914 Nabat Khanum Ashurbeyovan rakennuttamana ja rahoittamana. Arkkitehti oli Eugeniusz Skibiński. Moskeija seisoo 1300–1400-luvun pyhimyksen Abu Seyid Abdullan haudan paikalla, ja se oli ensimmäinen Bakun uskonnollinen rakennus, jossa käytettiin valkoista kiveä. Sisäpinta-ala on 1 400 neliömetriä.\n\nHankkeeseen osallistui myös Zeynalabdin Taghiyev. Balkanin sota 1911 ja viranomaisvalvonta hidastivat rakentamista. Moskeija suljettiin 1917 vallankumouksen yhteydessä, ja sitä käytettiin elokuvateatterina ja jyväaittana. Moskeijaksi se palasi 1943, ja restaurointi tehtiin 2006–2009.\n\nIsoisän matkavuonna 1873 moskeijaa ei vielä ollut, vaan paikalla oli vain pyhimyksen hautapaikka.",
+      "kuvat": [
+        {
+          "tiedosto": "Təzəpir məscidinin Mərkəzi parkdan görünüşü.jpg",
+          "lyhyt": "Taza Pirin moskeija rakennettiin 1905–1914 pyhimyksen haudan paikalle.",
+          "selite": "Moskeija oli ensimmäinen Bakun uskonnollinen rakennus, jossa käytettiin valkoista kiveä.",
+          "lahde": "Sefer azeri, Wikimedia Commons (CC BY-SA 4.0)"
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Bakun bulevardi": {
+      "aika": "1900–1911",
+      "teksti": "Bakun bulevardi on merenrantapromenadi, jonka pituus on 2012 jälkeen ollut 3,75 kilometriä. Municipal Horticultural Commission päätti 1900 istuttaa meren rantaan puita ja pensaita, ja puolalainen insinööri Kazimierz Skurewicz suunnitteli 20 metriä leveän penkereen. Pitkään toisella puolella olivat kartanot ja toisella meri, eikä alueella ollut puita, joten multaa tuotiin muualta. Vuonna 1909 Mammad Hassan Hajinski paransi puistoa 60 000 ruplalla. Kilpailun voitti ehdotus Zvezda eli Tähti, jossa oli uimala, ravintola ja tusina paviljonkia, ja työt valmistuivat 1911.\n\nPuolalaisen arkkitehdin Józef Ploškon suunnittelema Phenomenon-rakennus valmistui 1912 kasinoksi, elokuvateatteriksi ja ravintolaksi, ja nykyään siinä toimii nukketeatteri. Laskuvarjotorni rakennettiin 1936 ja kunnostettiin 2008. Bulevardi julistettiin kansallispuistoksi 1999.\n\nIsoisän matkavuonna 1873 bulevardia ei vielä ollut. Muurien merenpuoleinen osa oli kuitenkin purettu 1865 ja kivien myynnistä saadut 44 000 ruplaa osoitettu bulevardin rakentamiseen, ja ensimmäiset suihkulähteet ilmestyivät 1867.",
+      "kuvat": [
+        {
+          "tiedosto": "Promenade, Baku (P1090242).jpg",
+          "lyhyt": "Bakun bulevardi on Bakunlahden rantaa seuraava promenadi.",
+          "selite": "Bulevardin nykyinen puisto on peräisin 1900-luvun alusta, ja sen laskuvarjotorni rakennettiin 1936.",
+          "lahde": "Matti Blume, Wikimedia Commons (CC BY-SA 4.0)"
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Heydar Aliyev International Airport (GYD)",
+    "huomiot": [
+      "Saatiedot ovat null, koska Open-Meteo-dataa ei ollut. Oppaan sääjakso perustuu en-Wikipedian Baku-artikkelin ilmasto-osioon: ajanjakso 1991–2020, mittauspiste Maştağa; keskilämpötilat 26,4 ja 4,3 sekä kuukausiluvut heinä 3,9 mm ja marras 44,3 mm tarkistettu artikkelin raakatekstistä 11.10.2026.",
+      "Matkustusturvallisuus (maarajat suljettu siviililiikenteeltä tammikuusta 2026) perustuu vain en.wikivoyage.org-lähteeseen, koska um.fi palautti 403. Päätoimittaja tarkistaa sanamuodon.",
+      "Juma-moskeijan koordinaatti on en.wikivoyagesta (40.3653, 49.8356); en-Wikipedian artikkelin koordinaatti on virheellinen.",
+      "Neitotornin ikä, Shirvanshahien siirtyminen Bakuun (1100-luku vai 1400-luvun alku) ja UNESCOn vaaralistan vuodet ovat lähteissä ristiriitaisia; tekstissä käytetty varovia muotoiluja.",
+      "Kohdekartassa 6 kohdetta; lisäkohteita (Synyg Gala, Buharan karavaaniseraiji, Haji Gayyibin kylpylä) ei ole luettu riittävästi.",
+      "Taghiyev-nostoon ja mugham-nostoon valitut historialliset kuvat ovat Commonsissa tekijältä Unknown author; tekijä ratkaistaan tarkista --verkko -ajolla. Taghiyev-kuva on historiallinen lähikuvamuotokuva; tulkinta jää Päätoimittajalle.",
+      "Heydar Aliyev -keskus ja nimeämiskysymykset jätetty pois nykypoliittisena kontekstina."
+    ]
+  }
+}
