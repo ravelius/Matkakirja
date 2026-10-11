@@ -105,6 +105,25 @@
     background-color: var(--tk-videopeli-pinta);
 }
 
+/* Ylärivin selain ja lukija sinisellä (simuajo f6d9b3ab: ‹ NOSTOT › AUTO ja kaiutin jäivät tummiksi). */
+.mk-nosto--videopeli .mk-lukija,
+.mk-nosto--videopeli .mk-nostoselain__askel,
+.mk-nosto--videopeli .mk-nostoselain__auto.mk-valittu,
+.mk-nosto--videopeli .mk-lukija__valikkonappi.mk-valittu {
+    color: var(--tk-videopeli-muste);
+}
+
+.mk-nosto--videopeli .mk-nostoselain__avaaja,
+.mk-nosto--videopeli .mk-nostoselain__auto {
+    color: var(--tk-videopeli-korostus);
+}
+
+.mk-nosto--videopeli .mk-nostoselain__avaajaikoni,
+.mk-nosto--videopeli .mk-lukija__valikkonappi,
+.mk-nosto--videopeli .mk-lukija.mk-mykistetty {
+    color: var(--tk-videopeli-muste-pehmea);
+}
+
 .mk-nosto__kimmelala {
     display: none;
     position: absolute;
