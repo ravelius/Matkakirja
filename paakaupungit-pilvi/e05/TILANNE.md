@@ -1,6 +1,6 @@
 # e05 — A-vaiheen tilanne
 
-Alkuaika: 11.10.2026 noin 20.00 Europe/Helsinki. Päivitetty: 2026-10-11T20:43:32+03:00
+Alkuaika: 11.10.2026 noin 20.00 Europe/Helsinki. Päivitetty: 2026-10-11T20:52:21+03:00
 
 Oma klooni: NAS sessio-72-20261011/e05. Haara: paakaupungit-e05-codex. Pohja: e4f2845b3a82874550481fda26528df065820232.
 
@@ -14,8 +14,8 @@ Vaihe 0: kontekstit ja saa-syote.json tuotettu alkuperäisellä konteksti-työka
 | yamoussoukro | ESTE: paikallinen 1873-varmistus ja hyväksyttävä kartta | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
 | accra | valmis: A, 6 kohde-ehdotusta | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
 | lome | ESTE: kartan kohdemäärä ja rakennusten oikeusketjut | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
-| portonovo | kesken | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
-| abuja | jonossa | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
+| portonovo | ESTE: kartan kohdemäärä ja rakennusten oikeusketjut | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
+| abuja | kesken | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
 | ndjamena | jonossa | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
 | yaounde | jonossa | pääsessio | pääsessio | pääsessio | pääsessio | pääsessio | A-valmis ei ole toimitusvalmis |
 
@@ -50,3 +50,7 @@ Kaikki 0–9 osiot, neljä kansi- ja teema-aihetta, opas ja kuusi karttakohdetta
 ### lome A-vaiheen lähdekooste 11.10.2026 20.43
 
 Osioiden 0–9 lähdekooste ja yksi merirannan luontopiste. Vanhat palatsi, kirkko ja wharf lähteistetty, mutta suunnittelijoiden oikeusketjuihin jää puutteita. Moderni kauppahalli hylätty. Bè-kaupunginosan pistettä ei siirretty metsän tai laguunin pisteeksi.
+
+### portonovo A-vaiheen lähdekooste 11.10.2026 20.52
+
+Osioiden 0–9 lähdekooste ja yksi varmistettu puutarhan luontopiste. UNESCO-tila erotettu aielistaksi, ei maailmanperintöhyväksynnäksi. Viiden rakennus-/aukiovaihtoehdon avoimet lähde- ja oikeusketjut kirjattu. Lagosin paluumuuttajien kaupunkirakentamistarinan toisto rajattu pois.
