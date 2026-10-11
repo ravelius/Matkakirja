@@ -37,6 +37,10 @@ test('kuvat kappaleensa vieressä (versio 7): ISS-kupola ISS-kappaleeseen, Olavi
   assert.equal(raaka.versio, 7);
   const kohta = (nimi) => d.kappaleet.find((k) => k.otsikko === nimi).kuvat.map((k) => k.tiedosto);
   assert.deepEqual(kohta('ISS'), ['assets/apuraha/iss-kupola-lansi-eurooppa.jpg']);
+  // Omistaja 11.10.2026: Maapallo- ja Kuumailmapallo-kappaleisiin pelin kuvakaappaukset (TF 181, iPad).
+  assert.deepEqual(kohta('Maapallo'), ['assets/apuraha/maapallo-eurooppa.jpg']);
+  assert.deepEqual(kohta('Kuumailmapallo'), ['assets/apuraha/kuumailmapallo-pariisi.jpg']);
+  for (const k of raaka.kuvat) assert.ok(existsSync(new URL(`../${k.tiedosto}`, import.meta.url)), `kuva puuttuu: ${k.tiedosto}`);
   assert.deepEqual(kohta('Työn alla'), ['assets/apuraha/olavinlinna-hamara.jpg']);
   assert.equal(raaka.kuvat.find((k) => k.tiedosto.includes('olavinlinna')).rivi, 1, 'Olavinlinna-rivin viereen');
   assert.equal(d.kuvat.length, 0, 'kaikilla kuvilla on kappale, loppuriviä ei ole');
