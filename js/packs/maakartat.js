@@ -16525,6 +16525,696 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kansantaiteen museo', lat: 35.66406, lon: -105.92618 },
     ],
   },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e01–e02, tarkistettu 14 kaupunkia 0 virhettä):
+   * Kohdekartat (piirto tools/piirra-kaupunkikartta.mjs). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e01-pilvi ja -e02-pilvi.
+   */
+  belgrad: {
+    polku: 'assets/kartat/belgrad-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Belgradin ydin on kahden joen yhtymäkohdan kalliolla. Kohteet kulkevat linnoituksesta ja sen puistosta pääkaupungin 1800-luvun keskustaan, Vračarin kukkulalle ja joen saarelle.',
+    rajat: {
+      pohjoinen: 44.8343,
+      etela: 44.7953,
+      lansi: 20.432,
+      ita: 20.4723,
+    },
+    kohteet: [
+      {
+        nimi: 'Belgradin linnoitus',
+        lat: 44.82333,
+        lon: 20.45028,
+      },
+      {
+        nimi: 'Kalemegdanin puisto',
+        tyyppi: 'luonto',
+        lat: 44.82259,
+        lon: 20.45307,
+      },
+      {
+        nimi: 'Nebojšan torni',
+        lat: 44.82737,
+        lon: 20.44788,
+      },
+      {
+        nimi: 'Pyhän arkkienkeli Mikaelin katedraali',
+        lat: 44.81806,
+        lon: 20.45216,
+      },
+      {
+        nimi: 'Tasavallan aukio',
+        tyyppi: 'aukio',
+        lat: 44.81644,
+        lon: 20.46011,
+      },
+      {
+        nimi: 'Skadarlija',
+        tyyppi: 'aukio',
+        lat: 44.8178,
+        lon: 20.4643,
+      },
+      {
+        nimi: 'Pyhän Savan temppeli',
+        lat: 44.79806,
+        lon: 20.46854,
+      },
+      {
+        nimi: 'Suuri sotasaari',
+        tyyppi: 'luonto',
+        lat: 44.83163,
+        lon: 20.4358,
+      },
+    ],
+  },
+  bratislava: {
+    polku: 'assets/kartat/bratislava-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Bratislavan vanhan ytimen kohteet kertovat kaupungin eri aikakausista: Unkarin kruunajaiskaupungista, 1700-luvun palatseista ja 1900-luvun alun jugendista. Linna ja tuomiokirkko vartioivat Tonavaa, raatihuone ja aukiot ovat kaupungin arjen keskus, ja Mikaelin portti on säilynyt keskiaikaisen muurin ajalta.',
+    rajat: {
+      pohjoinen: 48.1519,
+      etela: 48.139,
+      lansi: 17.096,
+      ita: 17.1208,
+    },
+    kohteet: [
+      {
+        nimi: 'Bratislavan linna',
+        lat: 48.14222,
+        lon: 17.1,
+      },
+      {
+        nimi: 'Pyhän Martinin tuomiokirkko',
+        lat: 48.14214,
+        lon: 17.10478,
+      },
+      {
+        nimi: 'Mikaelin portti',
+        lat: 48.14515,
+        lon: 17.10667,
+      },
+      {
+        nimi: 'Vanha raatihuone',
+        lat: 48.14389,
+        lon: 17.10911,
+      },
+      {
+        nimi: 'Hviezdoslavin aukio',
+        tyyppi: 'aukio',
+        lat: 48.14167,
+        lon: 17.10833,
+      },
+      {
+        nimi: 'Sininen kirkko',
+        lat: 48.14339,
+        lon: 17.11683,
+      },
+      {
+        nimi: 'Grassalkovichin palatsi',
+        lat: 48.14924,
+        lon: 17.10775,
+      },
+    ],
+  },
+  chisinau: {
+    polku: 'assets/kartat/chisinau-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Chișinăun historiallinen ydin muotoutui 1800-luvulla: katedraali ja riemukaari muodostavat akselin, keskuspuisto perustettiin vuonna 1818 ja vanhin kirkko on vuodelta 1752. Kohteet ovat kävellen ulottuvilla, Ciuflea itäisimpänä.',
+    rajat: {
+      pohjoinen: 47.0288,
+      etela: 47.0099,
+      lansi: 28.8241,
+      ita: 28.8508,
+    },
+    kohteet: [
+      {
+        nimi: 'Kristuksen syntymän katedraali',
+        lat: 47.02606,
+        lon: 28.83453,
+      },
+      {
+        nimi: 'Riemukaari',
+        lat: 47.02472,
+        lon: 28.8325,
+      },
+      {
+        nimi: 'Tapani Suuren keskuspuisto',
+        tyyppi: 'luonto',
+        lat: 47.025,
+        lon: 28.828,
+      },
+      {
+        nimi: 'Kaupungintalo',
+        lat: 47.023,
+        lon: 28.8343,
+      },
+      {
+        nimi: 'Măzărache-kirkko',
+        lat: 47.02083,
+        lon: 28.83028,
+      },
+      {
+        nimi: 'Ciuflea-luostari',
+        lat: 47.01263,
+        lon: 28.84691,
+      },
+      {
+        nimi: 'Kansallinen historiamuseo',
+        lat: 47.0225,
+        lon: 28.82806,
+      },
+    ],
+  },
+  minsk: {
+    polku: 'assets/kartat/minsk-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Minskin historiallinen ydin on Svislač-joen varrella, jossa Yläkaupungin barokkikirkot ja Kolminaisuuden esikaupunki kertovat vanhasta Minskistä. Vanhan Minskin kohteet ovat Niamiha- ja Kastryčnickaja-asemien tuntumassa, ja Voitonaukio ja Gorki-puisto Pieramohi-aseman lähellä.',
+    rajat: {
+      pohjoinen: 53.9126,
+      etela: 53.8938,
+      lansi: 27.543,
+      ita: 27.579,
+    },
+    kohteet: [
+      {
+        nimi: 'Kolminaisuuden esikaupunki',
+        lat: 53.90854,
+        lon: 27.55598,
+      },
+      {
+        nimi: 'Pyhän Hengen katedraali',
+        lat: 53.905,
+        lon: 27.5562,
+      },
+      {
+        nimi: 'Neitsyt Marian arkkikatedraali',
+        lat: 53.90313,
+        lon: 27.55461,
+      },
+      {
+        nimi: 'Punainen kirkko',
+        lat: 53.89652,
+        lon: 27.54748,
+      },
+      {
+        nimi: 'Kyynelten saari',
+        tyyppi: 'luonto',
+        lat: 53.9099,
+        lon: 27.5547,
+      },
+      {
+        nimi: 'Voitonaukio',
+        tyyppi: 'aukio',
+        lat: 53.90833,
+        lon: 27.57444,
+      },
+      {
+        nimi: 'Gorki-puisto',
+        tyyppi: 'luonto',
+        lat: 53.90417,
+        lon: 27.57139,
+      },
+    ],
+  },
+  podgorica: {
+    polku: 'assets/kartat/podgorica-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Vanha ja uusi Podgorica ovat kävelymatkan päässä toisistaan. Ribnican rannalla seisovat kellotorni ja linnoituksen muurit, ja Moračan yli vie nykyajan silta, jonka toisella puolella kohoaa katedraali.',
+    rajat: {
+      pohjoinen: 42.4484,
+      etela: 42.43286,
+      lansi: 19.24465,
+      ita: 19.2664,
+    },
+    kohteet: [
+      {
+        nimi: 'Sahat kula -kellotorni',
+        lat: 42.43556,
+        lon: 19.26001,
+      },
+      {
+        nimi: 'Ribnican linnoitus',
+        lat: 42.439,
+        lon: 19.25913,
+      },
+      {
+        nimi: 'Vanha silta Ribnican yli',
+        lat: 42.43951,
+        lon: 19.25921,
+      },
+      {
+        nimi: 'Itsenäisyydenaukio',
+        tyyppi: 'aukio',
+        lat: 42.44126,
+        lon: 19.2628,
+      },
+      {
+        nimi: 'Millennium-silta',
+        lat: 42.4452,
+        lon: 19.2581,
+      },
+      {
+        nimi: 'Kristuksen ylösnousemuksen katedraali',
+        lat: 42.44569,
+        lon: 19.24825,
+      },
+    ],
+  },
+  skopje: {
+    polku: 'assets/kartat/skopje-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Skopjen historiallinen ydin kokoontuu Kivisillan ympärille: Vanhassa basaarissa on hamameja, karavaanisarajeja ja moskeijoita, ja Kale-linnoitus kohoaa kaupungin korkeimmalle kohdalle. Silta on yli 500 vuotta vanha ja kaupungin vaakunan pääaihe.',
+    rajat: {
+      pohjoinen: 42.0058,
+      etela: 41.99342,
+      lansi: 21.42807,
+      ita: 21.44059,
+    },
+    kohteet: [
+      {
+        nimi: 'Kivisilta',
+        lat: 41.99699,
+        lon: 21.43307,
+      },
+      {
+        nimi: 'Makedonia-aukio',
+        tyyppi: 'aukio',
+        lat: 41.99612,
+        lon: 21.4317,
+      },
+      {
+        nimi: 'Skopjen linnoitus (Kale)',
+        lat: 42,
+        lon: 21.43444,
+      },
+      {
+        nimi: 'Vanha basaari',
+        tyyppi: 'aukio',
+        lat: 42.00076,
+        lon: 21.43696,
+      },
+      {
+        nimi: 'Mustafa-pasan moskeija',
+        lat: 42.00194,
+        lon: 21.43542,
+      },
+      {
+        nimi: 'Kuršumli An',
+        lat: 42.0031,
+        lon: 21.4369,
+      },
+      {
+        nimi: 'Daut-pasan hamam',
+        lat: 41.9986,
+        lon: 21.4356,
+      },
+    ],
+  },
+  tirana: {
+    polku: 'assets/kartat/tirana-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Tiranan historiallinen ydin on tiivis: samalla noin kilometrin säteellä ovat 1700- ja 1800-luvun moskeijat ja silta, kellotorni, linnoituksen muuri ja 1900-luvun pääkaupunkisuunnitelman aukio. Kauempana ydintä kohoavat pyramidi ja puisto näyttävät, miten kaupunki on sen jälkeen kasvanut.',
+    rajat: {
+      pohjoinen: 41.3328,
+      etela: 41.3204,
+      lansi: 19.8145,
+      ita: 19.8297,
+    },
+    kohteet: [
+      {
+        nimi: 'Skanderbeg-aukio',
+        tyyppi: 'aukio',
+        lat: 41.32833,
+        lon: 19.81833,
+      },
+      {
+        nimi: 'Et\'hem Beyn moskeija',
+        lat: 41.32778,
+        lon: 19.81917,
+      },
+      {
+        nimi: 'Tiranan kellotorni',
+        lat: 41.32772,
+        lon: 19.81965,
+      },
+      {
+        nimi: 'Tiranan linnoitus',
+        lat: 41.32639,
+        lon: 19.82194,
+      },
+      {
+        nimi: 'Tabakkien silta',
+        lat: 41.32642,
+        lon: 19.82605,
+      },
+      {
+        nimi: 'Kokonozin moskeija',
+        lat: 41.3301,
+        lon: 19.825,
+      },
+      {
+        nimi: 'Tiranan pyramidi',
+        lat: 41.32306,
+        lon: 19.82139,
+      },
+      {
+        nimi: 'Rinian puisto',
+        tyyppi: 'luonto',
+        lat: 41.32472,
+        lon: 19.81806,
+      },
+    ],
+  },
+  zagreb: {
+    polku: 'assets/kartat/zagreb-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Historiallinen ydin on Yläkaupunki ja Kaptol sekä niiden alapuolella oleva keskusaukio. Alakaupunki jatkuu etelään vihreän hevosenkengän aukioina. Kohteet ovat kävelymatkan sisällä toisistaan.',
+    rajat: {
+      pohjoinen: 45.8186,
+      etela: 45.8045,
+      lansi: 15.9691,
+      ita: 15.9836,
+    },
+    kohteet: [
+      {
+        nimi: 'Kivinen portti',
+        lat: 45.8158,
+        lon: 15.9753,
+      },
+      {
+        nimi: 'Lotrščakin torni',
+        lat: 45.81472,
+        lon: 15.97306,
+      },
+      {
+        nimi: 'Zagrebin tuomiokirkko',
+        lat: 45.81444,
+        lon: 15.97972,
+      },
+      {
+        nimi: 'Zrinjevac',
+        lat: 45.81028,
+        lon: 15.97806,
+        tyyppi: 'aukio',
+      },
+      {
+        nimi: 'Taidepaviljonki',
+        lat: 45.80722,
+        lon: 15.97861,
+      },
+    ],
+  },
+  andorralavella: {
+    polku: 'assets/kartat/andorralavella-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan ydin on Gran Valiran laakso, jossa vanha keskusta, Santa Coloma ja Pont de la Margineda ovat rinnakkain. Mukana on myös Escaldesin kylpylä ja Madriun maailmanperintölaakso idässä.',
+    rajat: {
+      pohjoinen: 42.5144,
+      etela: 42.4815,
+      lansi: 1.4882,
+      ita: 1.5993,
+    },
+    kohteet: [
+      {
+        nimi: 'Casa de la Vall',
+        lat: 42.50667,
+        lon: 1.52056,
+      },
+      {
+        nimi: 'Sant Esteven kirkko',
+        lat: 42.5072,
+        lon: 1.5217,
+      },
+      {
+        nimi: 'Santa Coloman kirkko',
+        lat: 42.4942,
+        lon: 1.4976,
+      },
+      {
+        nimi: 'Pont de la Margineda',
+        lat: 42.48417,
+        lon: 1.49192,
+      },
+      {
+        nimi: 'Caldea',
+        lat: 42.5117,
+        lon: 1.5368,
+      },
+      {
+        nimi: 'Madriu-Perafita-Claror',
+        tyyppi: 'luonto',
+        lat: 42.49472,
+        lon: 1.59556,
+      },
+    ],
+  },
+  bern: {
+    polku: 'assets/kartat/bern-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Bernin ydin kulkee Aaren niemekkeen harjalla Bundesplatzilta Zytgloggen ja tuomiokirkon ohi karhukuopalle. Kohteet ovat parin kilometrin kävelyn sisällä toisistaan.',
+    rajat: {
+      pohjoinen: 46.9508,
+      etela: 46.944,
+      lansi: 7.4402,
+      ita: 7.4635,
+    },
+    kohteet: [
+      {
+        nimi: 'Zytglogge',
+        lat: 46.94806,
+        lon: 7.44778,
+      },
+      {
+        nimi: 'Bernin tuomiokirkko',
+        lat: 46.94722,
+        lon: 7.45139,
+      },
+      {
+        nimi: 'Liittopalatsi',
+        lat: 46.94667,
+        lon: 7.44417,
+      },
+      {
+        nimi: 'Bundesplatz',
+        tyyppi: 'aukio',
+        lat: 46.94701,
+        lon: 7.44412,
+      },
+      {
+        nimi: 'Bärengraben ja BärenPark',
+        lat: 46.94802,
+        lon: 7.45963,
+      },
+      {
+        nimi: 'Einsteinhaus',
+        lat: 46.94767,
+        lon: 7.44997,
+      },
+    ],
+  },
+  monaco: {
+    polku: 'assets/kartat/monaco-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Monacon vanha kaupunki, ruhtinaanlinna ja katedraali ovat kalliolla, jonka vieressä on Port Hercule -satama. Satamasta itään rinne nousee Monte Carloon, jossa sijaitsevat kasino ja oopperasali.',
+    rajat: {
+      pohjoinen: 43.7421,
+      etela: 43.7275,
+      lansi: 7.4102,
+      ita: 7.4326,
+    },
+    kohteet: [
+      {
+        nimi: 'Monte Carlon kasino',
+        lat: 43.73944,
+        lon: 7.42889,
+      },
+      {
+        nimi: 'Salle Garnier',
+        lat: 43.73889,
+        lon: 7.42833,
+      },
+      {
+        nimi: 'Port Hercule',
+        tyyppi: 'aukio',
+        lat: 43.735,
+        lon: 7.426,
+      },
+      {
+        nimi: 'Jardin Exotique',
+        tyyppi: 'luonto',
+        lat: 43.73151,
+        lon: 7.41378,
+      },
+      {
+        nimi: 'Valtamerimuseo',
+        lat: 43.73083,
+        lon: 7.42528,
+      },
+      {
+        nimi: 'Ruhtinaanlinna',
+        lat: 43.73142,
+        lon: 7.42028,
+      },
+      {
+        nimi: 'Monacon katedraali',
+        lat: 43.73021,
+        lon: 7.42266,
+      },
+    ],
+  },
+  reykjavik: {
+    polku: 'assets/kartat/reykjavik-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Reykjavíkin kohteet ovat lähellä toisiaan Seltjarnarnesin niemen pohjoisrannalla ja kukkuloilla. Lammen, aukion ja kukkulalla seisovan kirkon lisäksi mukana ovat Harpa, Höfði ja Perlan, ja yksi kohde on saaressa.',
+    rajat: {
+      pohjoinen: 64.171,
+      etela: 64.126,
+      lansi: -21.948,
+      ita: -21.83,
+    },
+    kohteet: [
+      {
+        nimi: 'Hallgrímskirkja',
+        lat: 64.1417,
+        lon: -21.9266,
+      },
+      {
+        nimi: 'Harpa',
+        lat: 64.15028,
+        lon: -21.9325,
+      },
+      {
+        nimi: 'Tjörnin',
+        tyyppi: 'luonto',
+        lat: 64.14444,
+        lon: -21.9425,
+      },
+      {
+        nimi: 'Austurvöllur',
+        tyyppi: 'aukio',
+        lat: 64.1472,
+        lon: -21.9398,
+      },
+      {
+        nimi: 'Perlan',
+        lat: 64.1292,
+        lon: -21.9189,
+      },
+      {
+        nimi: 'Höfði',
+        lat: 64.14639,
+        lon: -21.90667,
+      },
+      {
+        nimi: 'Viðey',
+        tyyppi: 'luonto',
+        lat: 64.1639,
+        lon: -21.85,
+      },
+    ],
+  },
+  sanmarino: {
+    polku: 'assets/kartat/sanmarino-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'San Marinon historiallinen keskusta ja Monte Titanon harja kuuluvat UNESCOn maailmanperintöön. Mukana ovat kolme tornia, kaupungin hallinnon ja uskonnon keskukset sekä itse vuori.',
+    rajat: {
+      pohjoinen: 43.9396,
+      etela: 43.9274,
+      lansi: 12.443,
+      ita: 12.4563,
+    },
+    kohteet: [
+      {
+        nimi: 'Guaitan torni',
+        lat: 43.9354,
+        lon: 12.4496,
+      },
+      {
+        nimi: 'Cestan torni',
+        lat: 43.9328,
+        lon: 12.4515,
+      },
+      {
+        nimi: 'Montalen torni',
+        lat: 43.9301,
+        lon: 12.4526,
+      },
+      {
+        nimi: 'Palazzo Pubblico',
+        lat: 43.9369,
+        lon: 12.4466,
+      },
+      {
+        nimi: 'San Marinon basilika',
+        lat: 43.93694,
+        lon: 12.44667,
+      },
+      {
+        nimi: 'Piazza della Libertà',
+        tyyppi: 'aukio',
+        lat: 43.9365,
+        lon: 12.4467,
+      },
+      {
+        nimi: 'Monte Titano',
+        tyyppi: 'luonto',
+        lat: 43.935,
+        lon: 12.45,
+      },
+    ],
+  },
+  vaduz: {
+    polku: 'assets/kartat/vaduz-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Vaduzin ydin on pieni: linna, katedraali ja kaksi museota ovat lyhyen kävelymatkan päässä toisistaan, ja Schalunin linnanraunio on noin kilometrin koilliseen.',
+    rajat: {
+      pohjoinen: 47.154,
+      etela: 47.1335,
+      lansi: 9.519,
+      ita: 9.537,
+    },
+    kohteet: [
+      {
+        nimi: 'Vaduzin linna',
+        lat: 47.13944,
+        lon: 9.52444,
+      },
+      {
+        nimi: 'St. Florinin katedraali',
+        lat: 47.1362,
+        lon: 9.5227,
+      },
+      {
+        nimi: 'Liechtensteinin kansallismuseo',
+        lat: 47.13811,
+        lon: 9.52267,
+      },
+      {
+        nimi: 'Kunstmuseum Liechtenstein',
+        lat: 47.13944,
+        lon: 9.5225,
+      },
+      {
+        nimi: 'Schalunin linnanraunio',
+        lat: 47.1509,
+        lon: 9.5336,
+      },
+    ],
+  },
 };
 
 /*
