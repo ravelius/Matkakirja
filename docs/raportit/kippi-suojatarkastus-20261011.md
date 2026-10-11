@@ -41,14 +41,19 @@ Commons-tiedostonimet on käyty läpi, kertojan tekstit haettu hakusanoilla.
 | Tukholma | Kaupungintalo | 3 kuvaa | Ragnar Östberg k. 1945 | Vapaa vuodesta 2016 |
 | Pariisi | Louvre | (ei kuvaa pyramidista; I.M. Pein muotokuva 1980) | Pyramidi 1989, I. M. Pei k. 2019 | Muotokuva ei ole teoksen jäljennös. Pyramidi ks. B ja C |
 
-### A3. Omat 3D-mallit ja korvaukset (LS1:n monumenttitaulukko ym.)
+### A3. Omat 3D-mallit ja korvaukset (LS1:n luettelo 11.10.: proto-3d/lokit/linssiseppa-kippi-omat-mallit-20261011.md)
 
-LS1:ltä pyydetty luettelo (11.10.). Tiedossa nyt:
-- **Kristallvertikalaccent** (Öhrström k. 1994): PT:n linjalla pois. LS1 poistaa rivin.
-- **Stortorgsbrunnen** (1778): vapaa.
-- **Notre-Damen oma malli** (Linnanrakentaja, ND v5g): keskiaikainen ja Viollet-le-Ducin
-  (k. 1879) torni. Uusi torni (2024) on uskollinen jäljennös vapaasta teoksesta, joten vapaa.
-- Muut rivit täydennetään, kun LS1:n luettelo tulee.
+| Kohde | Malli | Teos ja tekijä | Arvio |
+|---|---|---|---|
+| Notre-Dame (Q2981) | oma Blender v5g | Keskiaikainen rakennus ja Viollet-le-Ducin torni (k. 1879), vapaa | Rakennus vapaa. RISKI (LS1): julkisivupinnoissa Codex-tekoälyä, ja länsijulkisivun detalji on johdannainen Commons-kuvasta (The wub 2025, CC BY-SA 4.0). Krediitti on Lähteissä, ja CC BY-SA vaatii johdannaiselle saman lisenssin (share-alike) → PT:n päätös |
+| Kuninkaanlinna (Q750444), Riddarholmskyrkan (Q657118) | omat | 1700-luku ja keskiaika, vapaa | Ei toimenpidettä (pinnoissa tekoälyä) |
+| Concorde: Luxorin obeliski, Fleuves/Mers-suihkulähteet, rostraalipylväät, 148 valaisinta | omat | 1830–40-luku (Hittorff k. 1867), vapaa | Ei toimenpidettä |
+| Préfecture de Police -kortteli | oma | 1800-luku, vapaa | Ei toimenpidettä |
+| Ilmapallo, puut, vesi, liikenne | proseduraaliset ja omat | Verne/Riou (vapaa), OSM, Meta/WRI CC BY 4.0 | Ei toimenpidettä |
+| Pariisin intron kuvat C1–C5 | Codex-havainnekuvat | Omat | Tarkista, ettei niissä ole Louvren pyramidia tai muuta suojattua (havainnekuvakin on jäljennös) |
+| Monumenttitaulukko (kamerapisteet, ei malleja) | Concorde-obeliski, Ludvig XIII:n patsas (1829), Stortorgsbrunnen | Vapaat | Kristallvertikalaccent poistettu (LS1 f40982d9d) |
+| Eiffelin valot | Oma kultavalo ja välke poistettu 9.10. (PT, SETE) | Valaistus 1985/2003 suojattu | Karttasepän ikkunamaski (yovalot-ikkunat-pariisi.png) tarkistettu: 0 valopikseliä 32 m:n säteellä tornin keskeltä, eikä torni ole rakennuslistassa. 57–60 m:n päässä on kaksi pientä rakennusta jalkojen kohdalla (OSM way/69034165 ja way/335101043, tavallinen ikkunaosuus), mikä ei ole tornin valaistusta |
+| Ei livenä | Eiffelin malli (ei valoja), Tukholman kaupungintalo, Vasa-museon mastot | Vapaa tai Ruotsin rakennus | Ei toimenpidettä |
 
 ## B. Googlen 3D-laatoissa näkyvät kohteet (kippi kehystää ne, mutta mallia ei ole meidän)
 
