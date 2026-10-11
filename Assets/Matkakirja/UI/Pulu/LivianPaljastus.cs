@@ -8,9 +8,11 @@
 //   4. LUENNAN JÄLKEEN tilarivi: ohje-1 1 s luennan lopusta 7 s, heti perään ohje-2 10 s (korvaavat vanhat "Tervetuloa <maahan>…"
 //      ja "Klikkaa kaupungin kultaista merkkiä" -rivit aloituskaupungissa). PT 11.10. 13.5x: rivi ei saa peittää luettavaa
 //      matkakirjatekstiä; tilaripohjalla ei ole toista paikkaa (yläkolmannes, kortin päällä puhelimella), joten vasta luennan jälkeen.
-//   5. luennan jälkeen: tuuraus-3 "Pöllö sähkötti…" + tuuraus-4 "No, jos tulee kysyttävää, napauta minua…"; auki oleva nosto
-//      suljetaan ensin (odotetaan). Aloituskaupungin oma Pulu-kommentti ja kuvat jäävät pois (Saapumisesitys, Aloituskaupunki).
-// Myöhemmillä aloituslennoilla (lippu nähty) vain kohta 4. Äänet Pelikoodarilta: aanet/pulu/tuuraus-v2/livia-tuuraus-n.mp3.
+//   5. luennan jälkeen (omistaja 11.10. 13.5x, PT): aarre-1 "Isoisäsi ei tiettävästi koskaan löytänyt sitä aarretta…" +
+//      tuuraus-3 "Pöllö sähkötti…" + tuuraus-4 "No, jos tulee kysyttävää, napauta minua…" + aarre-2 "Onnea aarteen etsintään!";
+//      auki oleva nosto suljetaan ensin (odotetaan). Aloituskaupungin oma Pulu-kommentti ja kuvat jäävät pois (Saapumisesitys, Aloituskaupunki).
+// Myöhemmillä aloituslennoilla (lippu nähty) vain kohta 4. Äänet Pelikoodarilta: aanet/pulu/tuuraus-v2/livia-tuuraus-n.mp3
+// (aarre-1 = 5, aarre-2 = 6; puuttuva ääni → repliikki lukuajan mittaisena).
 //
 // LS1:n rajapinta (linssiseppa/aloitusintro-182) heijastuksella, jotta haara kääntyy ilman sitä: TuleeAloitusintro(k) kertoo
 // AloituslentoPaattyi-hetkellä, tuleeko intro; Paattyi-eventtiä odotetaan enintään 40 s. Luenta pysyy lykättynä
@@ -38,7 +40,9 @@ namespace Matkakirja.Natiivi
         const float Ohje1S = 7f, Ohje2S = 10f;
 
         static readonly string[] Alku = { "ui.livia.tuuraus-1", "ui.livia.tuuraus-2" };
-        static readonly string[] Loppu = { "ui.livia.tuuraus-3", "ui.livia.tuuraus-4" };
+        static readonly int[] AlkuAanet = { 1, 2 };
+        static readonly string[] Loppu = { "ui.livia.aarre-1", "ui.livia.tuuraus-3", "ui.livia.tuuraus-4", "ui.livia.aarre-2" };
+        static readonly int[] LoppuAanet = { 5, 3, 4, 6 };
 
         static string AaniUrl(int n) => Aanet.Juuri + "aanet/pulu/tuuraus-v2/livia-tuuraus-" + n + ".mp3";
 
@@ -208,7 +212,7 @@ namespace Matkakirja.Natiivi
                 annettu = true;
                 loppuOdottaa = true;
                 try { PlayerPrefs.SetInt(Avain, 1); PlayerPrefs.Save(); } catch (Exception) { }
-                Repliikki(v, Alku, 0, 1, () => VapautaLuenta(v));
+                Repliikki(v, Alku, AlkuAanet, 0, () => VapautaLuenta(v));
                 return;
             }
             VapautaLuenta(v);
@@ -230,7 +234,7 @@ namespace Matkakirja.Natiivi
             Kello.schedule.Execute(() => { if (v == versio && !luentaSoi && luennanLoppu != null) { luennanLoppu = null; Loppuosa(v); } }).StartingIn(LuentaVaraMs);
         }
 
-        /// <summary>Kohta 5: tuuraus-3 ja -4; auki oleva nosto (tai chat, linssi, kertoja) odotetaan kiinni.</summary>
+        /// <summary>Kohta 5: aarre-1, tuuraus-3, tuuraus-4 ja aarre-2; auki oleva nosto (tai chat, linssi, kertoja) odotetaan kiinni.</summary>
         static void Loppuosa(int v)
         {
             if (!Voimassa(v) || !loppuOdottaa) { Lopeta(); return; }
@@ -238,7 +242,7 @@ namespace Matkakirja.Natiivi
             bool chat = UiNakymat.Olemassa && UiNakymat.Hae().Chat.Auki;
             if (nosto || chat || luentaSoi || LinssiUi.Rekisteri?.Auki != null || Aanet.KertojaPuhuu) { Ajasta(() => Loppuosa(v), NostoOdotusMs); return; }
             loppuOdottaa = false;
-            Repliikki(v, Loppu, 0, 3, Lopeta);
+            Repliikki(v, Loppu, LoppuAanet, 0, Lopeta);
         }
 
         /// <summary>Kohta 4: tilarivit luennan jälkeen (aloituskaupunki, kaikilla aloituslennoilla).</summary>
@@ -262,13 +266,13 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Repliikki ilman kuplaa (kartan kohtaus, 6.10.): ääni + ele, jatko lukuajan tai puheen loppuun + 400 ms.</summary>
-        static void Repliikki(int v, string[] avaimet, int i, int aaniNro, Action valmis)
+        static void Repliikki(int v, string[] avaimet, int[] aanet, int i, Action valmis)
         {
             ajastin?.Pause();
             ajastin = null;
             if (!Voimassa(v)) { Lopeta(true); return; }
             // Linssi päällä: sarja odottaa vuoroaan eikä katkea (web linssiEstaa, omistaja 4.9.2026).
-            if (LinssiUi.Rekisteri?.Auki != null) { Ajasta(() => Repliikki(v, avaimet, i, aaniNro, valmis), LinssiValiMs); return; }
+            if (LinssiUi.Rekisteri?.Auki != null) { Ajasta(() => Repliikki(v, avaimet, aanet, i, valmis), LinssiValiMs); return; }
             if (i >= avaimet.Length) { valmis?.Invoke(); return; }
             var pulu = Pulu.Hae();
             if (!pulu.Nakyvissa) { valmis?.Invoke(); return; }
@@ -278,9 +282,10 @@ namespace Matkakirja.Natiivi
             {
                 if (kuitattu++ > 0 || v != versio) return;
                 ajastin?.Pause();
-                Repliikki(v, avaimet, i + 1, aaniNro + 1, valmis);
+                Repliikki(v, avaimet, aanet, i + 1, valmis);
             }
             float puheMs = -1f;
+            int aaniNro = aanet[i];
             Debug.Log($"MATKAKIRJA livia: tuuraus {aaniNro}");
             pulu.Sano(teksti, AaniUrl(aaniNro), null, Jatka, klippi => puheMs = klippi != null ? klippi.length * 1000f : 0f, kuplaton: true);
             float lukuaika = PuluKuplat.Lukuaika(teksti);
@@ -320,7 +325,7 @@ namespace Matkakirja.Natiivi
             if (ohjain == null) return;
             kaupunki = ohjain.PelaajanKaupunki;
             int v = ++versio;
-            if (loppu) Repliikki(v, Loppu, 0, 3, null); else Repliikki(v, Alku, 0, 1, null);
+            if (loppu) Repliikki(v, Loppu, LoppuAanet, 0, null); else Repliikki(v, Alku, AlkuAanet, 0, null);
         }
     }
 }
