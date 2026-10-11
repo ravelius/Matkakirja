@@ -67,16 +67,18 @@ namespace Matkakirja.Linssit.Testit
             return OpasKohde.Lue(j);
         }
 
-        static readonly Dictionary<(Profiili, string, double, double, bool), Ajo> ajot = new Dictionary<(Profiili, string, double, double, bool), Ajo>();
+        static readonly Dictionary<(Profiili, string, double, double, bool, bool), Ajo> ajot = new Dictionary<(Profiili, string, double, double, bool, bool), Ajo>();
 
         /// <summary>Pariisin kierros kaupunkitilan avauksesta (1,1 km / 50°, siirto ja avauksen kierto) kuten sovitin.</summary>
         /// <param name="tuloSuunta">Mistä suunnasta (°) kaupunkiin tullaan (siirron lähtöpaikka 50 km:n päässä; NaN = kaupungin päältä):
         /// avausnäkymä katsoo tulosuuntaan, joten 1. kohteen kehys riippuu siitä (simu 984010db6: San Marco idästä).</param>
         /// <param name="avausS">Avauksen ja opastuksen kesto ennen kierrosta (s; simu 984010db6 / 7f65898c3: ~51 s).</param>
         /// <param name="workerV1g">Notre-Damen katse workerin kentistä (esittely-v1g) eikä Ydin-oletuksesta.</param>
-        public static Ajo Aja(Profiili p = Profiili.Normaali, string kaupunki = "pariisi", double tuloSuunta = double.NaN, double avausS = 14, bool workerV1g = false)
+        /// <param name="kylvo">Sovitin syöttää kierroksen listan tornit ja kirkot esteiksi kierroksen alussa (false: listassa ei luokkaa,
+        /// este selviää vasta esihaun vastauksesta perillä; simu 40f578863 San Marco).</param>
+        public static Ajo Aja(Profiili p = Profiili.Normaali, string kaupunki = "pariisi", double tuloSuunta = double.NaN, double avausS = 14, bool workerV1g = false, bool kylvo = true)
         {
-            var avain = (p, kaupunki, tuloSuunta, avausS, workerV1g);
+            var avain = (p, kaupunki, tuloSuunta, avausS, workerV1g, kylvo);
             if (ajot.TryGetValue(avain, out var valmis)) return valmis;
             v1g = workerV1g;
             bool vanha = OpasSilmukka.PalloLento; OpasSilmukka.PalloLento = true;
@@ -114,7 +116,8 @@ namespace Matkakirja.Linssit.Testit
                     if (!kierrosAlkoi && s.Vaihe == OpasVaihe.Odottaa && s.VaiheAika >= avausS)
                     {
                         kierrosAlkoi = true; s.AloitaKierros(reitti.Select(k => (k.Nimi, k.Lat, k.Lon)).ToList()); loki.Append($"{t:F1} kierros alkaa; ");
-                        foreach (var k in reitti) s.LisaaEste(k.Lat, k.Lon, OpasSilmukka.EsteKorkeusLuokasta(k.Luokka));   // kuten sovitin (listan luokka)
+                        // Kuten sovitin: listan luokka (kylvo) tai lukitun kaupungin luokaton lista (ei kylvöä, korkeus tuntematon).
+                        if (kylvo) foreach (var k in reitti) s.LisaaEste(k.Lat, k.Lon, OpasSilmukka.EsteKorkeusLuokasta(k.Luokka), OpasSilmukka.PalloEsteSadeM, k.Luokka != null);
                     }
                     for (int j = vastaukset.Count - 1; j >= 0; j--)
                     {
@@ -498,6 +501,22 @@ namespace Matkakirja.Linssit.Testit
                 Console.WriteLine($"      San Marco ({(double.IsNaN(su) ? "-" : su.ToString("F0"))}°): saapuessa et {x[0].EtM:F0} m, silmä {s0:F0} m, kallistus {x[0].Kallistus:F0}°, silmä enintään {smax:F0} m");
                 if (x[0].EtM < 200 || s0 < 60) viat.Add($"San Marco {su}: ei vanhaa kehystä (et {x[0].EtM:F0}, silmä {s0:F0})");
                 if (smax > s0 + 10) viat.Add($"San Marco {su}: silmä nousi {s0:F0} → {smax:F0} m");
+            }
+            // Este selviää vasta perillä (simu 40f578863: lukitun kaupungin lista ilman luokkaa, kellotornin korkeus vasta esihaun
+            // vastauksesta San Marcon pysähdyksellä): kierroksen tuntemattoman korkeuden naapuri alle 150 m:n päässä → vanha kehys heti.
+            foreach (double su in new[] { double.NaN, 0, 315 })
+            {
+                var a2 = Aja(Profiili.Normaali, "venetsia", su, 14, false, false); var x2 = Asennot(a2, "Q217527");
+                double vmax = 0; for (int i = 1; i < x2.Count; i++)
+                {
+                    var (p0, p1) = (x2[i - 1], x2[i]);
+                    double dh = p1.SilmaM - p0.SilmaM, dv = p1.VaakaM - p0.VaakaM;
+                    vmax = Math.Max(vmax, Math.Sqrt(dh * dh + dv * dv) / 0.5);
+                }
+                Console.WriteLine($"      San Marco ilman kylvöä ({(double.IsNaN(su) ? "-" : su.ToString("F0"))}°): saapuessa et {x2[0].EtM:F0} m / silmä {x2[0].SilmaM:F0} m, lopussa et {x2[^1].EtM:F0} m / silmä {x2[^1].SilmaM:F0} m, silmä enintään {x2.Max(y => y.SilmaM):F0} m, säteen ja korkeuden muutos enintään {vmax:F1} m/s");
+                if (x2[0].EtM < 190 || x2[0].SilmaM < 85) viat.Add($"San Marco ilman kylvöä {su}: saapuessa et {x2[0].EtM:F0}, silmä {x2[0].SilmaM:F0}");
+                if (x2.Max(y => y.SilmaM) > 110) viat.Add($"San Marco ilman kylvöä {su}: silmä nousi {x2.Max(y => y.SilmaM):F0} m:iin");
+                if (vmax > OpasKuvaus.KaariNopeusMS + 1) viat.Add($"San Marco ilman kylvöä {su}: kehyksen vaihto {vmax:F1} m/s");
             }
             var v = Asennot(Aja(Profiili.Normaali, "praha"), "Q847613"); var vs = Asennot(Aja(Profiili.Normaali, "praha"), "Q421678");
             Console.WriteLine($"      Venceslas: et {v[0].EtM:F0} → {v[^1].EtM:F0} m, silmä {v.Min(y => y.SilmaM):F0}–{v.Max(y => y.SilmaM):F0} m; Vanhankaupungin aukio (kello 97 m): et {vs[0].EtM:F0} m, silmä {vs[0].SilmaM:F0} m");
