@@ -63,6 +63,8 @@ namespace Matkakirja.Natiivi
         public readonly Aloitusnakyma Aloitus;
         /// <summary>Kello ja "Päivä 1/80" aloituskaupungin valinnassa ja lennolla (v3f).</summary>
         public readonly Pelikellonaytto Kellonaytto;
+        /// <summary>"Etsityt kaupungit X/50" kartan yläreunan keskellä (omistaja 11.10.2026).</summary>
+        public readonly Aarrelaskuri Aarrelaskuri;
         public readonly Huipennus Huipennus;
         public readonly Nostokortti Nostokortti;
         public readonly Lehtinakyma Lehti;
@@ -456,6 +458,7 @@ namespace Matkakirja.Natiivi
             Valikko.MitaUutta.TarkistaPaivitys(); // web: "Peli päivittyi", kun laitteella oli aiempi versio
             Aloitus = new Aloitusnakyma(kerros);
             Kellonaytto = new Pelikellonaytto(kerros);
+            Aarrelaskuri = new Aarrelaskuri(kerros);
             // Löydökset 81/82: yläpalkki pois aloitusnäytöltä. Sulkeutuessa päivitys seuraavassa ruudussa, jotta
             // valinnan Aloita ehtii merkitä aloituslennon (palkki ei välähdä valinnan ja lennon välissä).
             Aloitusnakyma.AukiMuuttui += auki =>
@@ -662,6 +665,9 @@ namespace Matkakirja.Natiivi
             o.AloituslentoPaattyi += _ => UiKerros.PaaSaikeessa(() => { AloituslentoPerilla(); Aloitus.AloituslentoPaattyi(); });
             // C16: Livian tuurauspaljastus (ensimmäinen saapuminen koskaan) tai saapumisen ohjekuplat aloituslennon jälkeen.
             LivianPaljastus.Kytke(o);
+            // Aloituskaupungin isoisän aarreteksti (omistaja 11.10.2026, juna 182): luento ja fokusvirta korvautuvat.
+            o.Luennat.Korvaava = AloitusAarre.Luento;
+            AloitusAarre.Lataa();
             if (o.Tila == SilmukanTila.Aloitus) NaytaAloitus(o);
             // Rahan muutos kupliksi (web buildToast kind stamp, "+10 puntaa · Lehden minitehtävä ratkesi").
             o.RahaMuuttui += (muutos, syy, _) => UiKerros.PaaSaikeessa(() => Leima.Raha(muutos, syy));
