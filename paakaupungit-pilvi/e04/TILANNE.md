@@ -23,3 +23,8 @@ Sää/Commons-rajapintaeste: 11.10.2026 robots.txt kieltää en/fi-Wikipedian, W
 | tunis | kesken | — | — | — | — | — | kevyt; ei Karthagon toistoa |
 
 Vastaanotto ei tarkoita valmista erää, Sisältökirjurin hyväksyntää, pelikytkentää tai julkaisua.
+
+
+## Tarkennus #74 — kaupalliset Commons-kuvat
+
+Lähde c046a5646f63d5977f105edde637fd3ddc042c25, blob 2bbea68faeb4f6e8df760bbe30be9045596c6f1f, luettu 2026-10-11T16:22:14.812623+00:00. Peli on kaupallinen: rakennuksen tai julkisen taideteoksen kuva hyväksytään vain, jos kuvausmaan panoraamavapaus sallii kaupallisen käytön juuri teostyypille (Commons COM:FOP). Ei-kaupallinen panoraamavapaus ei riitä. Epävarma kuva korvataan vapaalla kuvalla tai kohde jätetään kuvattomaksi ja kirjataan RAPORTTI.md:hen. Kuvia ei ole vielä valittu; sääntö sovelletaan kaikkiin ehdokkaisiin ennen toimitusta. #73, vanhojen #70/#71-kuvajonojen palauteportti ja NAS-tallennus säilyvät.
