@@ -31,6 +31,9 @@ Testit: `sh Linssit-testit/kaanna.sh` / `sh Kartta-testit/kaanna.sh` / `sh Peli-
 - **Houkuttimet 182e KUITATTU** (PT 18.0x) linssiseppa/eurooppa-loitonnus-182 **0d83ffedb**: Berliinin ja Ateenan sininen houkutin pois
   (omistaja 17.1x: lautapeleihin ei värikorostusta), SHA Natiivisepällä. Testihaara linssiseppa/testi-182-houkuttimet-e 79e9a201f
   (wt proto-linssiseppa-testi182h). Kuva lokit/todistus-houkuttimet-iphone-182e-20261011-1751/kuvat/h2-eurooppa.png.
+- **Pulu 182 KUITATTU** (PT 18.1x) linssiseppa/pulu-vaisto-182 **e4050506a** (wt proto-linssiseppa-testi182h): Pulun väistö vertaa
+  linnun laatikkoa (kosketus 62 × 82 pt), ei koko kuplatilaa — Euroopan näkymässä Pariisin pallo nosti Pulun kartan keskelle
+  (omistaja 17.5x). SHA Natiivisepällä. Kuvat lokit/todistus-pulu-iphone-182f-20261011-1804/kuvat/.
 - **Pariisin aukiot 183** linssiseppa/aukiot-pariisi-183 **e5ce4097d** (⊃ cacc9ce4f; wt proto-linssiseppa-monumentit): Vendôme, Bastille,
   République, Saint-Michel AukionMonumentit-tauluun Karttasepän datasta (T7 _tyo/karttaseppa/kippi-pariisi-20261011/); Tertre pois (PT 17.4x).
   Kamera noudattaa workerin katse_suunta/katse_kaari (Bastille 0 ±20: Opéra Bastille ei näy) — tarkista että Pelikoodari vie ne workeriin.
