@@ -31,6 +31,9 @@ namespace Matkakirja.Linssit.Kierros
         /// korkeudesta); 0 = ei lähestymistä (kierto saapumisetäisyydellä).</summary>
         public double LoppuEtM;
         public double KatseKorkeusM => MaaM + NostoM;
+        /// <summary>Aukio tai tori (workerin luokka; OpasKuvaus.Kehysta): pallon kierto väistää lähellä olevat korkeat rakenteet
+        /// (OpasSilmukka.EsteNosto) ja silmä pysyy ympäröivien kattojen yllä (PalloAukioKattoMinM).</summary>
+        public bool Aukio;
 
         public static Pysahdys P(string id, string nimi, string alarivi, double lat, double lon, double maa, double nosto,
             double suuntima, double pitch, double etaisyys, string teksti = null) => new Pysahdys

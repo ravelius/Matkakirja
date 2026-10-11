@@ -53,6 +53,10 @@ namespace Matkakirja.Natiivi
         public static bool Testi;
         /// <summary>Kamera pysäytetty paikalleen (komento "opas pysayta 1|0"; kuvaparit samasta kulmasta), silmukka odottaa.</summary>
         public static bool Pysaytetty;
+        /// <summary>QA (PT juna 181, omistaja TF 180 "kippi pysähtyy vieläkin välillä"): pallon nopeusloki 0,1 s:n välein konsoliin,
+        /// "MATKAKIRJA opas nopeus t=… v=… kulma=… kohde=… vaihe=…" (OpasNopeusloki; komento "opas nopeusloki 0|1"). Pois oletuksena.</summary>
+        public static bool NopeusLoki;
+        OpasNopeusloki nopeusloki; double nopeuslokiAlku;
         /// <summary>Testiotsake (komento "opas testiotsake 1"): worker palauttaa kerronnan ilman ääntä (ei ElevenLabs-kulutusta simussa).</summary>
         public static bool Testiotsake;
         /// <summary>PCM-suoratoisto (Pöllön aani_pcm) käytössä. OLETUS PÄÄLLÄ (Päätoimittaja 6.10. 13.2x, juna 148): Pöllön kylmä mp3 alkaa
@@ -485,6 +489,13 @@ namespace Matkakirja.Natiivi
                 + (silmukka.Vaihe == OpasVaihe.Lentaa && silmukka.LahtoOdottiS > 0 ? $", lähtö odotti laattoja {silmukka.LahtoOdottiS:F1} s" : ""));
             if (silmukka.Vaihe != ennen && silmukka.Vaihe == OpasVaihe.Lentaa) { OpasKorostusKuva.Piilota(); KohdeKorostus.Piilota(); }
             y.Kuvaa(introKamera ?? silmukka.Asento);   // Pariisin nykyintron Eiffel-otos (OpasSovitin.Intro), muuten silmukka
+            if (NopeusLoki)
+            {
+                if (nopeusloki == null) { nopeusloki = new OpasNopeusloki(); nopeuslokiAlku = Time.unscaledTimeAsDouble; }
+                if (nopeusloki.Paivita(Time.unscaledTimeAsDouble - nopeuslokiAlku, silmukka.Asento, silmukka.Nykyinen?.Id, OpasNopeusloki.Vaihe(silmukka)) is OpasNopeusloki.Nayte nn)
+                    Debug.LogFormat(LogType.Log, LogOption.NoStacktrace, null, "{0}", OpasNopeusloki.Rivi(nn));
+            }
+            else nopeusloki = null;
             PaivitaKameraTila();
             // Yövalot v4: nykyinen kohde saa yöllä lämpimän valonheiton (KaupunkiYovalot; Päätoimittaja 22.3x "Eiffel kultaisena").
             KaupunkiYovalot.KaupunkiId = NykyinenKaupunkiId;
@@ -1457,6 +1468,9 @@ namespace Matkakirja.Natiivi
             v.o.Kirjaa($"opas: kaupunkikierros {jono.Count} kohdetta");
             v.kellotSoineet.Clear();   // kirkonkellot kerran kierroksella
             v.silmukka.AloitaKierros(jono);
+            // Aukion kierron esteet (juna 181, San Marcon kellotorni): listan tornit ja kirkot nimelliskorkeudella, tarkentuu vastauksista.
+            // Luokaton lista (lukittu kaupunki, worker "luokka": null): korkeus tuntematon → lähellä oleva aukio vanhalla kehyksellä.
+            foreach (var t in v.kierrosKohteet ?? v.kohteet) v.silmukka.LisaaEste(t.Lat, t.Lon, OpasSilmukka.EsteKorkeusLuokasta(t.Luokka), OpasSilmukka.PalloEsteSadeM, t.Luokka != null);
             v.Silta(OpasSiltalauseet.Aloitus, true);
             return true;
         }

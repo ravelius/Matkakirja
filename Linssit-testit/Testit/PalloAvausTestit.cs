@@ -1,7 +1,7 @@
 // PALLON ESITYKSEN ALKU (omistaja TF 168, 9.10.: "parin kertojan lauseen jälkeen kip kääntyy kovalla vauhdilla 180 astetta ja matkaa
 // seinen puolelta toiselle ihan turhaan … vauhti alkaa ja loppuu melkein seinään"): kaupunkitilan avaus kuten sovittimessa
 // (avausnäkymä 1 100 m / 50° kohti 1. kohdetta, siirtoruutu, avaus, sitten kierros) Pariisissa ja Tukholmassa. Ensimmäinen lento:
-// suunnan muutos pieni, kääntö ≤ PalloKaantoAstS, silmä jää kohteen samalle puolelle (ei joen ylitystä), kiihtyvyys ja nykäys rajattuja.
+// suunnan muutos lennolla pieni (avausnäkymän oma tasainen kierto ei kuulu siihen), kääntö ≤ PalloKaantoAstS, silmä jää kohteen samalle puolelle (ei joen ylitystä), kiihtyvyys ja nykäys rajattuja.
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,7 +50,9 @@ namespace Matkakirja.Linssit.Testit
                 // Avauksen alusta (siirtymän jälkeen) 1. kohteen saapumiseen.
                 int a = r.FindIndex(x => x.t >= avausLoppu - 19 + 0.5), b = r.Count - 1;   // siirron sauma (kamera avauskehyksessä) ohi
                 if (a < 1) return tulos;
-                tulos.SuuntaMuutos = Math.Abs(KierrosLento.Kiedo(r[b].suunta - r[a].suunta));
+                // Suunnan muutos lennon alusta (11.10.: avausnäkymä kiertää tasaisesti koko avauksen, PalloAvausKiertoAstS; lento jatkaa sitä).
+                int l0 = Math.Max(a, r.FindIndex(x => x.t >= avausLoppu));
+                tulos.SuuntaMuutos = Math.Abs(KierrosLento.Kiedo(r[b].suunta - r[l0].suunta));
                 var (ke, kn) = ((eka.Lon - c.Lon) * 6371000 * Math.Cos(c.Lat * Math.PI / 180) * Math.PI / 180, (eka.Lat - c.Lat) * 6371000 * Math.PI / 180);
                 double ae = r[a].e - ke, an = r[a].n - kn, be = r[b].e - ke, bn = r[b].n - kn;
                 tulos.PuoliDot = (ae * be + an * bn) / Math.Max(1, Math.Sqrt(ae * ae + an * an) * Math.Sqrt(be * be + bn * bn));

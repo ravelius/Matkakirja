@@ -21,7 +21,7 @@ namespace Matkakirja.Linssit.Testit
         const string Tiedosto = "opas-kierrokset-20261008.json";
 
         public sealed class Kaupunki { public string Id, Nimi; public double Lat, Lon; public OpasKohde[] Kohteet; }
-        struct Ruutu { public double T, E, N, U, EtM, Suunta, Kall; public OpasVaihe Vaihe; public int Kohde; public bool Leijuu; }
+        internal struct Ruutu { public double T, E, N, U, EtM, Suunta, Kall; public OpasVaihe Vaihe; public int Kohde; public bool Leijuu; }
 
         public static List<Kaupunki> Lue()
         {
@@ -41,7 +41,7 @@ namespace Matkakirja.Linssit.Testit
 
         static OpasKohde Kopio(OpasKohde k) => new OpasKohde { Id = k.Id, Nimi = k.Nimi, Lat = k.Lat, Lon = k.Lon, KokoM = k.KokoM, KorkeusM = k.KorkeusM, Luokka = k.Luokka, KestoS = k.KestoS, Kierros = true };
 
-        static List<Ruutu> Aja(Kaupunki c, bool hidas, List<(double t, string laji, string kohde, double kesto)> tap = null, List<(double t, Kuvakulma? esi, Kuvakulma asento, string kohde)> esit = null, Action<OpasSilmukka, double> kehys = null)
+        internal static List<Ruutu> Aja(Kaupunki c, bool hidas, List<(double t, string laji, string kohde, double kesto)> tap = null, List<(double t, Kuvakulma? esi, Kuvakulma asento, string kohde)> esit = null, Action<OpasSilmukka, double> kehys = null)
         {
             bool vanha = OpasSilmukka.PalloLento; OpasSilmukka.PalloLento = true;
             try
