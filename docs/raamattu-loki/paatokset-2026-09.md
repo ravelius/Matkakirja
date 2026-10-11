@@ -13791,7 +13791,7 @@ Raamattuun (docs-PR 11.10. yö, Kolme veljestä): Ydinajatus, PELIT, TALOUS JA L
 
 Juna: omistaja poisti 23.2x lukitusajan, ja juna 183 kootaan vasta, kun kaikki on valmista (ks. JUNA 183 VASTA KUN KAIKKI ON VALMISTA, EI KELLONAIKARAJAA).
 
-Raamattuun (docs-PR 11.10. yö 2, kipin ohjaimet): Karttalinssit, ELÄVÄ OPAS (OHJAIMET KIERROKSELLA: kierroksen aikana vain tauko, tauolla muut ohjaimet ilman vapaata ohjausta, lopetuksen vahvistus, oma ohjaus pois). Katse vetämällä ja muut korjaukset vain lokissa.
+Raamattuun (docs-PR 11.10. yö 2, kipin ohjaimet): Karttalinssit, ELÄVÄ OPAS (OHJAIMET KIERROKSELLA: kierroksen aikana vain tauko, tauolla muut ohjaimet ilman vapaata ohjausta, lopetuksen vahvistus, oma ohjaus pois, katse vetämällä peilikuvana ja pehmeä paluu keskelle; PÄIVÄ, SÄÄ JA LIVE: AIKA JA SÄÄ ☰-VALIKOSSA, ei erillistä ☾/☀-nappia yläkulmassa, ensikerran vihje hampurilaisen luona). Muut korjaukset (törmäysvälys, autot ja varjot, kompassi, köydet, laattojen piirto) vain lokissa.
 
 ## GOOGLEN RUUHKAVARA: BING AERIAL SALLITTU 429-VARANA, KOSKA SE EI NÄY GOOGLEN LAATTOJEN KANSSA (PT:n tarkennus 11.10.2026 klo 23.1x) (11.10.2026 klo 23.51)
 
