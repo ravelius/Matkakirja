@@ -306,19 +306,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Ferry Building San Francisco from Hyatt Regency with R-Evolution and Bay Bridge 2026 dllu.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ferry_Building_San_Francisco_from_Hyatt_Regency_with_R-Evolution_and_Bay_Bridge_2026_dllu.jpg?width=1280",
-     "tekija": "Daniel Lu (User:dllu)",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ferry_Building_San_Francisco_from_Hyatt_Regency_with_R-Evolution_and_Bay_Bridge_2026_dllu.jpg",
-     "selite": "Ferry Building seisoo Embarcaderolla, ja sen takana kaartuu Bay Bridge.",
-     "leveys": 10638,
-     "korkeus": 7092,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "Ferry Building clock tower as seen from the North.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ferry_Building_clock_tower_as_seen_from_the_North.jpg?width=1280",
      "tekija": "Frank Schulenburg",
@@ -331,7 +318,7 @@
      "tarkistettu": true
     },
     {
-     "jarjestys": 3,
+     "jarjestys": 2,
      "tiedosto": "San Francisco Ferry Building clock tower, night (Dec 2013).jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Francisco_Ferry_Building_clock_tower%2C_night_(Dec_2013).jpg?width=1280",
      "tekija": "Hugh Nelson",
@@ -364,19 +351,6 @@
      "selite": "Bay Bridgen uusi ja vanha itäosa kaartuvat rinnakkain lahden yli Yerba Buena -saarelle.",
      "leveys": 4914,
      "korkeus": 3100,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "San Francisco Bay Bridge Western Span at night.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Francisco_Bay_Bridge_Western_Span_at_night.jpg?width=1280",
-     "tekija": "Dllu",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:San_Francisco_Bay_Bridge_Western_Span_at_night.jpg",
-     "selite": "Sillan läntistä osaa valaisevat yöllä pitkät valonauhat.",
-     "leveys": 6999,
-     "korkeus": 3937,
      "tarkistettu": true
     }
    ]
@@ -665,19 +639,6 @@
      "selite": "Salesforce Tower on San Franciscon korkein pilvenpiirtäjä, ja sen pyöristetty latva erottuu kauas.",
      "leveys": 2000,
      "korkeus": 3320,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Salesforce Tower Roof.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salesforce_Tower_Roof.jpg?width=1280",
-     "tekija": "InvadingInvader",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Salesforce_Tower_Roof.jpg",
-     "selite": "Ylhäältä torni näkyy soikeana rakennuksena kortteleiden keskellä.",
-     "leveys": 4000,
-     "korkeus": 2250,
      "tarkistettu": true
     }
    ]

@@ -46552,7 +46552,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Ruhtinas, jonka nimi säilyi vain omissa papereissa',
           aika: '1524',
-          tiedosto: 'Statue of Tecun Uman - Central Plaza - Santa Cruz del Quiche - Quiche - Guatemala (15754040660).jpg',
+          tiedosto: "Buildings in Grand Plaza - K'umarcaaj (Former K'iche' Capital) - Outside Santa Cruz del Quiche - Quiche - Guatemala (15756837547).jpg",
           teksti: 'Kʼicheʼ-mayojen viimeisiä hallitsijoita oli Tecun Uman. '
               + 'Hän kaatui 12. helmikuuta 1524, kun Pedro de Alvarado eteni '
               + 'Quetzaltenangon laaksoon 180 ratsumiehen, 300 jalkamiehen ja '
@@ -46563,11 +46563,9 @@ export const MAA_KATEGORIAT = {
               + '— nimen Tecum Umam säilyttivät kʼicheʼien omat asiakirjat. '
               + 'Guatemala julisti hänet kansallissankariksi 22. maaliskuuta '
               + '1960.',
-          lyhyt: 'Santa Cruz del Quichén patsas esittää Tecun Umania, Guatemalan kansallissankaria vuodesta 1960.',
-          selite: 'Santa Cruz del Quichén keskusaukion patsas esittää Tecun '
-              + 'Umania, joka on ollut Guatemalan virallinen kansallissankari '
-              + 'vuodesta 1960.',
-          lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 2.0)',
+          lyhyt: "Qʼumarkajin rauniot, kʼicheʼ-mayojen entinen pääkaupunki Santa Cruz del Quichén lähellä.",
+          selite: "Qʼumarkajin rauniot lähellä Santa Cruz del Quichéa: kʼicheʼ-mayojen entisen pääkaupungin kivirakennusten jäänteet.",
+          lahde: "Adam Jones, Wikimedia Commons (CC BY-SA 2.0)",
         },
         {
           otsikko: 'Pääkaupunki, joka muutti neljä kertaa',
@@ -61699,11 +61697,11 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kahleet putosivat maaliskuussa',
           aika: '1873',
-          tiedosto: "Monumento a la Abolición de la Esclavitud, Barrio Cuarto, Ponce, PR, close-up de 'El Hombre Redimido' (DSC00530).jpg",
+          tiedosto: "Román Baldorioty Castro, La Ilustración Española y Americana.jpg",
           teksti: 'Espanjan kansalliskokous hyväksyi 22. maaliskuuta 1873 niin kutsutun Moret-lain, joka lakkautti orjuuden Puerto Ricossa. Vapaaksi tuli noin 29 000 orjaa, viitisen prosenttia koko saaren väestöstä. Vapautus ei ollut ehdoton: valtio maksoi omistajille korvauksen jokaisesta orjasta, ja vapautetut velvoitettiin jatkamaan työtä entisillä isännillään vielä kolme vuotta ilman äänioikeutta. Lakia ajoivat muun muassa toimittaja Julio Vizcarrondo ja poliitikko Ramón Baldorioty de Castro. Poncen kaupunkiin pystytettiin myöhemmin muistomerkki, jonka keskellä pronssinen mies katkaisee kahleensa symboloiden saavutettua vapautta.',
-          lyhyt: 'Poncen muistomerkki, joka pystytettiin orjuuden lakkauttamisen kunniaksi vuonna 1873.',
-          selite: 'Patsas kuvaa miestä, joka on juuri vapautunut kahleistaan. Se on osa Poncen orjuuden lakkauttamisen muistomerkkiä.',
-          lahde: 'Tito Caraballo, Wikimedia Commons (CC BY-SA 2.0)',
+          lyhyt: "Toimittaja Román Baldorioty de Castro ajoi orjuuden lakkauttamista Puerto Ricossa.",
+          selite: "Toimittaja ja poliitikko Román Baldorioty de Castro (1822–1889) ajoi orjuuden lakkauttamista Puerto Ricossa. Kuva on piirros vuodelta 1889.",
+          lahde: "Arturo Carretero, La Ilustración Española y Americana 1889, Wikimedia Commons (public domain)",
           wiki: 'Orjuus',
         },
         {
