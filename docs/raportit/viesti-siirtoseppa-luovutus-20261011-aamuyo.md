@@ -50,3 +50,13 @@ appit proto-3d/lokit/olavinlinna-yhdistetty-181{b,c,d,e}). Simuvuorot Julkaisija
 - Siirto (`poikki kavely siirra`) säilyttää kameran suunnan → "tatti taakse" voi viedä kohti vartijaa; käytä `kavely kohti <merkki>`.
 - Skriptisyöte (`kavely tapit`) ja siirrot eivät todista kosketusta: tyrmä meni läpi skriptillä mutta ei Laitetestaajan HID-vedoilla.
 - Ytimen pysähdyssääntö pitää kytkeä tilakoneen saapumisehtoon (pelkkä Vauhti = 0 jätti etsijän "matkalle" → 11 testiä punaiseksi).
+
+## PÄIVITYS 04.3x: v6 f1041376 ajettu (SIMU VAPAA 04.23)
+- todistus-tyrma-hid-20261011-0402: tekniset OK, mutta sokeat vedot seinää päin, ovea ei nähty (ei todista korjausta).
+- todistus-laituri-a1-20261011-0407: A1 turva + varoitus → ote OK; muunnelma 1 ulos oviaukolta 43 s (heti oven avautuessa → skenaario
+  epätahtiin, muunnelmat 2–3 todentamatta; skenaario korjattu: oleta heti oven jälkeen).
+- todistus-tyrma-ovi-20261011-0418 (uusi skenaario tyrma-ovi.txt): Pulun 60 s → `kavely kohti ovi:tyrma` → ulos 70 s OK. Kuvissa ovi
+  38° kuvan ulkopuolella (katse 140°, ovi 178°) → korjattu.
+- Kärki nyt **d289911c7**: 8baa0e0ce (oviaukko vasta 1,2 s oven avautumisesta) + d289911c7 (herätessä ovi painaa 2×, ovi ~23°).
+  Pyydetty Julkaisijalta v7:ään. v7:llä: tyrma-ovi.txt (o00/o02 ovi + valo näkyvissä) + laituri-a1.txt (muunnelmat 2–3).
+- v47f-kuvat t0–t6 + huonekuvat lähetetty LR:lle 04.0x.
