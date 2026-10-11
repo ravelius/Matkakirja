@@ -1,6 +1,6 @@
 # e05 — A-vaiheen tilanne
 
-Alkuaika: 11.10.2026 noin 20.00 Europe/Helsinki. Päivitetty: 2026-10-11T21:28:39+03:00
+Alkuaika: 11.10.2026 noin 20.00 Europe/Helsinki. Päivitetty: 2026-10-11T21:39:29.562673+00:00
 
 Oma klooni: NAS sessio-72-20261011/e05. Haara: paakaupungit-e05-codex. Pohja: e4f2845b3a82874550481fda26528df065820232.
 
@@ -12,7 +12,7 @@ Vaihe 0: kontekstit ja saa-syote.json tuotettu alkuperäisellä konteksti-työka
 | ouagadougou | ESTE: kartan kohdemäärä ja väestöalueen täsmennys | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | A-valmis ei ole toimitusvalmis |
 | niamey | ESTE: kartan kohdemäärä ja väestöennusteen alkuperäinen vahvistus | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | A-valmis ei ole toimitusvalmis |
 | yamoussoukro | ESTE: paikallinen 1873-varmistus ja hyväksyttävä kartta | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | A-valmis ei ole toimitusvalmis |
-| accra | valmis: A, 6 kohde-ehdotusta | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | A-valmis ei ole toimitusvalmis |
+| accra | valmis: A, 6 kohde-ehdotusta | osittain: 12/24 kuvaa | jonossa | — | — | — | Rakennusten erillinen PD-maksu-/oikeusketju ja vähintään10 pakollista kuvaa avoinna |
 | lome | ESTE: kartan kohdemäärä ja rakennusten oikeusketjut | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | A-valmis ei ole toimitusvalmis |
 | portonovo | ESTE: kartan kohdemäärä ja rakennusten oikeusketjut | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | A-valmis ei ole toimitusvalmis |
 | abuja | ESTE: kartan kohdemäärä ja osa nykytilalähteistä | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | tekemättä (pääsessio) | A-valmis ei ole toimitusvalmis |
@@ -72,3 +72,9 @@ Kaupungit/maat ja osioiden 0–9 rakenne tarkistettu kaikista kymmenestä. Konte
 Pääsession työpuuhun lisätyt saa.json-tiedostot: bamako, ouagadougou, niamey, yamoussoukro, accra, lome, abuja, ndjamena, yaounde. Niiden taustametadata kirjattu A-pohjiin; kuukausi-/vuosilukuja ei käsinkopioitu tai säätyökalua ajettu tässä sessiossa. Porto-Novon säärivi puuttuu. Yamoussoukron tausta.lahteet ei nimeä lähdeorganisaatioita: säätekstin lähdeportti avoin. Pääsession saa-syote.json-muutos ja saa.json-tiedostot jätetään pääsession Git-työksi.
 
 Ei apuagentteja. Tarkkaa tämän session tokenkulutusta ei ole saatavilla työkaluraportista, eikä sitä arvioitu. Alkuaika noin 20.00 Europe/Helsinki 11.10.2026; viimeisin kellonaika päivitysrivillä.
+
+## Pääsession Accra B -kierros
+
+12/24 kuvaehdotusta katsottu ja tallennettu; yksikään tiedosto ei toistu. Yksi tuore matkailijapysty löytyi Labadin luonnonrannasta (2022, suhde 0,74980). Puuttuvat C1/C2/K1/L3/O1/O2/O5/N1/N2/N3/N4/N6; oppaassa vain kaksi kuvaa, joten sen vähintään kolmen kuvan portti ei täyty. B ei ole valmis. 64 rajattua ehdokasyritystä ja 54 henkilökohtaisesti katsottua esikatselua; lähde-/lisenssi- ja oikeusrajaukset kuvat.md:ssä sekä NAS-väliaineistossa accra-B/.
+
+Korlen laguunin kolme eri tiedostoa ovat saman alueen eri kuvakulmia, eivät kolme eri nähtävyyttä. K2 Makolan myyntikotilot, K3 yleinen ghanalainen tro tro, K4 yleinen kirjoittava käsi; Aburi on eri paikkakunta ja opasretki, ei Accran keskusta. Rakennuskuvat jätetty ehdolle Ghanan lain §38(3):n mahdollisen PD-käytön maksuehdon vuoksi; lain §76:n sanamuotoa ei yksin esitetä maksuvapaaksi kaupalliseksi FOP:ksi. C voi kirjoittaa luonnoksen puutteet säilyttäen; ei erätoimitusta tai F-valmis-kuittausta.
