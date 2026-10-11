@@ -1,0 +1,10 @@
+{
+ "lat": 13.1,
+ "lon": -59.62,
+ "keskilampo": [26,25.9,26.3,27,27.7,27.8,27.8,27.9,27.9,27.7,27.2,26.6],
+ "ylin": [29,29,30,30,31,31,31,31,31,31,30,30],
+ "alin": [23,23,23,24,25,25,25,25,25,25,25,24],
+ "sade": [68,42,39,58,74,101,122,151,163,180,173,91],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Bridgetown","revisio":1375155845,"taulukko":"Climate data for Bridgetown (Grantley Adams International Airport) 1991–2020, extremes 1944–present","lahteet":"Source 1: Barbados Meteorological Services | Source 2: Meteo Climat (record highs and lows)","keskilampo":"Daily mean °C (°F)","sade":"Average rainfall mm (inches)","vuosisade":1262,"luettu":"2026-10-11","huomiot":["sade = vain vesisade (Average rainfall)"]}
+}

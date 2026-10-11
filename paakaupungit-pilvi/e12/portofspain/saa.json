@@ -1,0 +1,10 @@
+{
+ "lat": 10.67,
+ "lon": -61.52,
+ "keskilampo": [26.6,26.7,27.3,28.2,28.5,28,28,28.2,28.5,28.3,27.7,27],
+ "ylin": [31,31,32,33,33,32,32,33,33,33,32,31],
+ "alin": [22,22,23,24,24,24,24,24,24,24,24,23],
+ "sade": [80,49,41,52,109,243,229,255,179,193,223,149],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Port of Spain","revisio":1379276900,"taulukko":"Climate data for Port of Spain (Piarco International Airport) (1991-2020 normals, extremes 1961-2020)","lahteet":"Source: NOAA","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":1802,"luettu":"2026-10-11","huomiot":[]}
+}

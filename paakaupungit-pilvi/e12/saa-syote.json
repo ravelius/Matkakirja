@@ -3,54 +3,63 @@
   "id": "nassau",
   "lat": 25.08,
   "lon": -77.34,
-  "wikidata": "Q2467"
+  "wikidata": "Q2467",
+  "artikkeli": "Nassau, Bahamas"
  },
  {
   "id": "saintjohns",
   "lat": 17.12,
   "lon": -61.84,
-  "wikidata": "Q36262"
+  "wikidata": "Q36262",
+  "artikkeli": "St. John's, Antigua and Barbuda"
  },
  {
   "id": "basseterre",
   "lat": 17.3,
   "lon": -62.73,
-  "wikidata": "Q41295"
+  "wikidata": "Q41295",
+  "artikkeli": "Basseterre"
  },
  {
   "id": "roseau",
   "lat": 15.3,
   "lon": -61.38,
-  "wikidata": "Q36281"
+  "wikidata": "Q36281",
+  "artikkeli": "Roseau"
  },
  {
   "id": "castries",
   "lat": 14.01,
   "lon": -60.99,
-  "wikidata": "Q41699"
+  "wikidata": "Q41699",
+  "artikkeli": "Castries"
  },
  {
   "id": "kingstown",
   "lat": 13.16,
   "lon": -61.23,
-  "wikidata": "Q41474"
+  "wikidata": "Q41474",
+  "artikkeli": "Kingstown"
  },
  {
   "id": "bridgetown",
   "lat": 13.1,
   "lon": -59.62,
-  "wikidata": "Q36168"
+  "wikidata": "Q36168",
+  "artikkeli": "Bridgetown"
  },
  {
   "id": "stgeorges",
   "lat": 12.05,
   "lon": -61.75,
-  "wikidata": "Q41547"
+  "wikidata": "Q41547",
+  "artikkeli": "St. George's, Grenada"
  },
  {
   "id": "portofspain",
   "lat": 10.67,
   "lon": -61.52,
-  "wikidata": "Q39178"
+  "wikidata": "Q39178",
+  "artikkeli": "Port of Spain"
  }
 ]
