@@ -1,6 +1,6 @@
 # ISS-raketti: kertojan ja Pulun käsikirjoitus v2 (omistajan muokkaus 11.10.2026 klo 23.4x + PT:n kolme korjausta)
 
-v2: MUUTTUNEET REPLIIKIT (7, merkitty [v2]) äänitetään uudelleen, muut 11 v3-manifestista ennallaan.
+v2: MUUTTUNEET REPLIIKIT (6, merkitty [v2]) äänitetään uudelleen, muut 12 v3-manifestista ennallaan (omistaja 12.10. 00.1x: "Kolkuta, kolkuta" jää, v3:n otto).
 
 Äänet: KERTOJA = William (ajattelijoiden kertoja), PULU = Livia (flicker). Yksi otto per repliikki, eleven_v4_turbo, pcm_44100.
 Kesto n. 95 s (lento pelissä 104 s). Vaiheet = pelin lennon vaiheet; repliikit alkavat vaiheen alussa.
@@ -36,12 +36,12 @@ PULU: Me putoamme koko ajan, mutta ohitamme Maan. Fysiikka on outoa.
 
 8. LÄHESTYMINEN (n. 11 s)
 KERTOJA: Edessä on Kansainvälinen avaruusasema noin neljänsadan kilometrin korkeudella.
-PULU: Kirjekyyhky tuo postia avaruuteen! Kop kop! [v2]
+PULU: Kirjekyyhky tuo postia avaruuteen! Kolkuta, kolkuta!
 
 9. CUPOLA (n. 9 s)
 KERTOJA: Perillä. Cupola-kupolin seitsemästä ikkunasta näkyy Maa ja sen ohut sininen ilmakehä. [v2]
 PULU (huohottaen): Ensi kerralla istun kyllä sisällä. [v2]
 
 
-PT:n korjaukset omistajan v2:een: (1) Max-Q "Max Pulu" → "Max Livia" (sama nimi kuin vaiheessa 5; kaanon: Pulu eli Columba livia), (2) Cupolasta ei näy koko Maata (400 km:stä n. 3 % pinnasta) → "Maa ja sen ohut sininen ilmakehä", (3) "Kolkuta, kolkuta" → "Kop kop" (luonteva suomi). Pilkut "Muista, pulu, ..." puheen tauoiksi.
+PT:n korjaukset omistajan v2:een (kaksi voimassa): (1) Max-Q "Max Pulu" → "Max Livia" (sama nimi kuin vaiheessa 5; kaanon: Pulu eli Columba livia), (2) Cupolasta ei näy koko Maata (400 km:stä n. 3 % pinnasta) → "Maa ja sen ohut sininen ilmakehä". (Kolmas ehdotus "Kop kop" peruttu: omistaja piti "Kolkuta, kolkuta" -vitsistä.) Pilkut "Muista, pulu, ..." puheen tauoiksi.
 AJOITUS: ohjauspaneelin lentoaika (T+) seuraa kertojan aikoja (max-Q T+1:00, 1. vaihe T+2:30, kiertorata T+9:00) eli kello kulkee nopeutettuna; LS2 sovittaa lennon pituuden puheeseen.
