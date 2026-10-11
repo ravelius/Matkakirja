@@ -42,6 +42,10 @@ vie_v47n.zsh). Lokit `vie_v47{l,m,n}.log`. v47n:n MUUTOKSET.md-rivi kirjoittuu v
   merkit (paketissa muiden jälkimuokkauksia: ote:kellotorni-*, tuuli:puuska-2, lakaisu).
 
 ## JONO
+0. **Siirtoseppä 11.10. 13.xx (seuraava paketti v47o):** komero:kellotorni 0,85 × 0,56 m, ja esine-arkku-komero (61 × 41 × 48 cm) täyttää sen;
+   kiipeilyn loppu osuu arkun päälle (lattia 15,21, silmä ~16,8, kaaren laki 16,75) → komero ja pako alkavat kamera seinässä. Syvennä
+   komero ≥ 1,0 m ja korota (kaari), tai siirrä arkku sisemmäs. kavely.py muurikaytava: komero K(…)/'komero'-leikkaus (−50,761; 15,775; −5,445),
+   merkit koysi:krampi-komero, esine arkku. Aja navtesti/jumit 91→94 jälkeen.
 1. Olavinlinna: Laitetestaajan 8. kierros (juna 182 vain jos läpi tänään) → mallilöydökset erinä.
 2. Pariisin korttelit v3 (LS2 11.10., Matkakirja 40a584921 RAPORTTI.md): Palais Bourbon POIS (PT); Banque: pohjoiskärjen valkoinen kiila
    (leikkausalue ilman maata/kattoa) + julkisivu tummempi/vihertävämpi kuin naapurit; Branly: piha/tontti valkoinen (IGN-maskattu orto) →
