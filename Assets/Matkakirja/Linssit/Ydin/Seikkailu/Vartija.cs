@@ -94,7 +94,8 @@ namespace Matkakirja.Linssit.Seikkailu
         // kiinniottoa tai jahtia kiinni ottava hahmo pysähtyy, kääntyy pelaajaan ja huudahtaa (sovitin: VaroitusPyydetty → repliikki ja
         // SeikkailuVartijat.VaroitusAlkoi) ja seisoo VaroitusSeisoS; vasta sitten jahti tai ote, jos pelaaja on yhä näkyvissä.
         // Turvallinen alku (TurvaS): mittari jää alle täyden ja kuultu ääni vain kääntää katseen (ei juoksua äänen luo).
-        public const double VaroitusSeisoS = 2.0, TurvaS = 60, TurvaKatto = 0.95;
+        // Laitetestaaja 5. kierros 11.10. (PT 07.0x): 2 s oli liian lyhyt reagoida → 3 s.
+        public const double VaroitusSeisoS = 3.0, TurvaS = 60, TurvaKatto = 0.95;
         // PT 11.10. (simuajon kuvat): varoitus tapahtui kameran edessä ja vartija käveli pelaajan sisään. Varoitus alkaa viimeistään
         // VaroitusM:n päässä (vartija näkee pelaajan, mittari ≥ raja), eikä vartija kävele PysahdysM:ää lähemmäs pelaajaa.
         public const double VaroitusM = 3.5, PysahdysM = 1.0;
@@ -108,8 +109,17 @@ namespace Matkakirja.Linssit.Seikkailu
         public VartijaProfiili Profiili = VartijaProfiili.Vartija;
         /// <summary>Piilot ja varjot vaiheen 3 etsintään (sovitin antaa piilo:-merkeistä).</summary>
         public List<(double X, double Z)> Piilot = new List<(double, double)>();
-        /// <summary>Anteeksianto (kohta 4.2): toinen kiinnijäänti samassa huoneessa → näkö −15 %, epäilyraja 0,4.</summary>
-        public bool Helpotettu;
+        /// <summary>Anteeksianto portaittain (kohta 4.2; PT 07.0x, Laitetestaaja 5. kierros 11.10.: bool ei näkynyt pelissä): taso =
+        /// kiinnijäännit samassa huoneessa − 1, enintään HelpotusMax. Per taso näkö ja kuulo −15 %, epäilyraja +0,1 (2. kerta 0,85 / 0,4,
+        /// 3. 0,70 / 0,5, 4.+ 0,55 / 0,6).</summary>
+        public int Helpotus { get => helpotus; set => helpotus = Math.Max(0, Math.Min(HelpotusMax, value)); }
+        int helpotus;
+        public const int HelpotusMax = 3;
+        public const double HelpotusAskel = 0.15, HelpotusRajaAskel = 0.1;
+        /// <summary>Helpotettu (taso ≥ 1); asetus true = vähintään taso 1, false = 0.</summary>
+        public bool Helpotettu { get => helpotus > 0; set => Helpotus = value ? Math.Max(1, helpotus) : 0; }
+        /// <summary>Näön ja kuulon kerroin helpotustasolla.</summary>
+        public double HelpotusKerroin => 1 - HelpotusAskel * helpotus;
         /// <summary>Valppautta jäljellä (s).</summary>
         public double Valppaus { get; private set; }
         /// <summary>Hälytyshuuto pyydetty (sovitin soittaa repliikin ja kutsuu muut; nollaa itse).</summary>
@@ -133,7 +143,7 @@ namespace Matkakirja.Linssit.Seikkailu
         public bool Ulottumaton(double pelaajaX, double pelaajaZ) => Profiili.JahtiM > 0 && reitti.Count > 0
             && Etaisyys(reitti[0].X, reitti[0].Z, pelaajaX, pelaajaZ) > Profiili.JahtiM + KiinniM - PerillaM;
         double varoitusS, sydanLoppuS, huippu, etsiiS, halytysS, eiNaeS; bool merkki, huudettu; readonly List<(double X, double Z)> etsittavat = new List<(double, double)>();
-        double Raja => Helpotettu ? 0.4 : Valppaus > 0 ? ValpasRaja : EpailyRaja;
+        double Raja => helpotus > 0 ? EpailyRaja + HelpotusRajaAskel * helpotus : Valppaus > 0 ? ValpasRaja : EpailyRaja;
         // Irtipääsy (kohta 3.4, omistajan päätös 1 suosituksen mukaan): otteen jälkeen 1,0 s:n ikkuna, toiminto → hahmo horjahtaa ja
         // pelaaja saa 3 s etumatkan; kerran per hahmo 60 sekunnissa.
         public const double IrtiIkkunaS = 1.0, HorjahdusS = 3.0, IrtiValiS = 60;
@@ -206,7 +216,7 @@ namespace Matkakirja.Linssit.Seikkailu
             double dx = s.PelaajaX - s.VartijaX, dz = s.PelaajaZ - s.VartijaZ, d = Math.Sqrt(dx * dx + dz * dz);
             double nako = Riita > 0 ? RiitaNakoM : Valppaus > 0 ? Math.Max(Profiili.NakoM, ValpasNakoM * Profiili.NakoM / NakoM) : Profiili.NakoM;
             double liike = s.PelaajaVauhti is double pv ? (pv < 0.15 ? 0.8 : pv > 2.5 ? 1.25 : 1.0) : 1.0;
-            double ulottuma = nako * (0.35 + 0.65 * Math.Max(0, Math.Min(1, s.Valoisuus))) * (s.Hiipii ? 0.7 : 1) * liike * (Helpotettu ? 0.85 : 1);
+            double ulottuma = nako * (0.35 + 0.65 * Math.Max(0, Math.Min(1, s.Valoisuus))) * (s.Hiipii ? 0.7 : 1) * liike * HelpotusKerroin;
             if (d > ulottuma) return 0;
             double ero = Math.Abs(Kulma(Suunta(dx, dz) - Yaw));
             bool lahella = d < LahiM && Riita <= 0 && !Uppoutunut;   // aivan vieressä vartija tuntee pelaajan selkänsäkin takaa (ei riidan tuoksinassa eikä uppoutuneena)
@@ -254,7 +264,8 @@ namespace Matkakirja.Linssit.Seikkailu
                     foreach (var a in s.Aanet)
                     {
                         double dx = a.X - s.VartijaX, dz = a.Z - s.VartijaZ;
-                        if (dx * dx + dz * dz <= a.KuuluvuusM * a.KuuluvuusM) { herasi = true; EpailyX = a.X; EpailyZ = a.Z; break; }
+                        double km = a.KuuluvuusM * HelpotusKerroin;
+                        if (dx * dx + dz * dz <= km * km) { herasi = true; EpailyX = a.X; EpailyZ = a.Z; break; }
                     }
                 double vk = NakoVoima(s);
                 if (vk > 0) { Mittari = Math.Min(1, Mittari + vk * dt); EpailyX = s.PelaajaX; EpailyZ = s.PelaajaZ; if (Mittari >= Raja) herasi = true; }
@@ -306,7 +317,8 @@ namespace Matkakirja.Linssit.Seikkailu
                 foreach (var a in s.Aanet)
                 {
                     double dx = a.X - s.VartijaX, dz = a.Z - s.VartijaZ;
-                    if (dx * dx + dz * dz <= a.KuuluvuusM * a.KuuluvuusM) { AloitaVaihe(Turva > 0 ? VartijanTila.Epaily : VartijanTila.Etsinta); EpailyX = a.X; EpailyZ = a.Z; katseluS = 0; rauhaS = 0; break; }
+                    double km = a.KuuluvuusM * HelpotusKerroin;
+                    if (dx * dx + dz * dz <= km * km) { AloitaVaihe(Turva > 0 ? VartijanTila.Epaily : VartijanTila.Etsinta); EpailyX = a.X; EpailyZ = a.Z; katseluS = 0; rauhaS = 0; break; }
                 }
             if (voima > 0 && Mittari >= Raja && (Tila == VartijanTila.Partio || Tila == VartijanTila.Paluu || Tila == VartijanTila.Etsii)) AloitaVaihe(VartijanTila.Epaily);
             // Luovutus: näkee pelaajan, mutta ei pääse lähemmäs (ulottumattomissa tai jahti ei etene) LuovutusS → paluu partioon valppaana.
@@ -451,6 +463,11 @@ namespace Matkakirja.Linssit.Seikkailu
             varoitusS = 0; merkki = false; varoitusTehty = false; varoitusJaljella = 0; VaroitusPyydetty = false; SydanS = 0; SydanTempo = 0; Huuto = false; huudettu = false; etsittavat.Clear();
             Valppaus = valpas ? ValppausS : 0; tunnistusS = 0; jumiS = 0; jaahy = 0; luovutettu = false;
         }
+
+        /// <summary>Vapautus kiinnijäännin jälkeen (tyrmästä paluu tai tarkistuspiste; PT 07.0x, Laitetestaaja 5. kierros 11.10.: paluussa
+        /// Etsintä 3 s:ssa, kiinni 7–9 s:ssa, 6 kiinniottoa 11 min): partioon rauhallisena (ei valppautta) ja turva-aika TurvaS kuten pelin
+        /// alussa. Helpotus säilyy (sovitin asettaa tason).</summary>
+        public void Vapauta(double x, double z) { Nollaa(x, z); Turva = TurvaS; }
     }
     /// <summary>
     /// SYKE HÄLYTYKSESSÄ (PT 10.10., juna 175): rauhallinen sydän (sydan-silmukka-02, 58 BPM) ristihäivyttyy nopeaan (sydan-nopea-01, 100 BPM),
