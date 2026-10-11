@@ -52540,10 +52540,9 @@ export const NAHTAVYYSJUTUT = {
           + 'mukaan kuvattu nainen on Ilmestyskirjan luvun 12 vaimo.',
       kuvat: [
         {
-          tiedosto: 'Virgen del Panecillo.jpg',
-          selite: 'Alumiininen Neitsyt seisoo kukkulan laella, ja rinne on '
-            + 'rakennettu täyteen taloja lakea myöten.',
-          lahde: 'Josuadaniel, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "Vista de Quito desde El Panecillo, Ecuador, 2015-07-22, DD 60.JPG",
+          selite: "Quiton rinteille nousevat värikkäät talot näkyvät El Panecillon laelta; kukkula tarjoaa laajan näkymän pääkaupungin ylle.",
+          lahde: "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -53757,11 +53756,10 @@ export const NAHTAVYYSJUTUT = {
           + 'piirustusta, käsintehtyä paperia ja veistoa.',
       kuvat: [
         {
-          tiedosto: 'Museu de Arte Moderna da Bahia Solar do Unhão Escada Helicoidal 2021-8567 01.jpg',
-          lyhyt: 'Lina Bo Bardin portaikon askelmat on liitetty vanhan myllyn puuhun ilman nauloja.',
-          selite: 'Lina Bo Bardin portaikko lähikuvassa: askelmat on liitetty '
-            + 'vanhan myllyn puuhun ilman nauloja tai betonia.',
-          lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "Lateral da Capela de Nossa Senhora da Conceição 2021-0960.jpg",
+          lyhyt: "Solar do Unhãon kappeli Salvadorissa",
+          selite: "Solar do Unhãon entisen kartanon alueen valkoinen kappeli punaisine ikkunoineen; kompleksi on nykyään Bahian nykytaiteen museo.",
+          lahde: "Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -54150,11 +54148,10 @@ export const NAHTAVYYSJUTUT = {
           + 'Cádizissa.',
       kuvat: [
         {
-          tiedosto: 'Galeria de Arte Nacional, em Caracas 23.JPG',
-          lyhyt: 'Salien renkaassa on marmoriveistos ja siirtomaa-ajasta nykypäivään ulottuvia maalauksia.',
-          selite: 'Salien renkaassa marmoriveistos osoittaa ulos kuvasta, ja '
-            + 'seinillä on maalauksia siirtomaa-ajalta nykypäivään.',
-          lahde: 'Béria Lima de Rodríguez, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: "Arturo Michelena 00.JPG",
+          lyhyt: "Arturo Michelena: Escenas del circo (1891), Galería de Arte Nacional",
+          selite: "Arturo Michelenan öljymaalaus Escenas del circo (1891) esittää sirkuksen kulisseja: balerinan, harlekiinin ja pierrot'n sekä koiran.",
+          lahde: "Arturo Michelena (k. 1898), Wikimedia Commons (Public domain)",
         },
       ],
       lahde: 'Wikipedia',
@@ -57211,10 +57208,9 @@ export const NAHTAVYYSJUTUT = {
           + '1931. Sen takaa alkavat kiviportaat huipulle.',
       kuvat: [
         {
-          tiedosto: 'Monumento a Guemes - Salta.JPG',
-          selite: 'Ratsastajapatsas piirtyy iltataivasta vasten kivikasan '
-            + 'päällä kaupungin yläpuolella.',
-          lahde: 'Gabo2013, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "Vista panorámica de la Ciudad de Salta 2.JPG",
+          selite: "Salta levittyy laaksoon punaisine kattoineen ja kerrostaloineen; näkymä avautuu Cerro San Bernardon rinteeltä kohti sumuista vuoristoa.",
+          lahde: "Marcos Combet, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',

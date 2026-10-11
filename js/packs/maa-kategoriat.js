@@ -38488,7 +38488,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Ensimmäinen latinalaisamerikkalainen Louvressa',
           aika: '1964',
-          tiedosto: 'Dardignac 28 -mural de Violeta Parra -fRF1.jpg',
           teksti: 'Violeta Parra (1917–1967) kiersi Chilen keräämässä '
               + 'kansanlauluja ja perinnetaitoja: samalla matkalla syntyivät '
               + 'hänen keramiikkansa, maalauksensa ja arpillera-kuvakirjontansa. '
@@ -38498,11 +38497,6 @@ export const MAA_KATEGORIAT = {
               + 'latinalaisamerikkalaisen taiteilijan yksityisnäyttely siellä. '
               + 'Laulu "Gracias a la vida" syntyi La Pazissa 1966. Parran '
               + 'syntymäpäivä 4. lokakuuta on Chilen muusikoiden päivä.',
-          lyhyt: 'Santiagon Bellavistassa oleva mosaiikki esittää säveltäjä ja folkloristi Violeta Parraa kitaroineen.',
-          selite: 'Santiagon Bellavistassa oleva mosaiikki esittää Violeta '
-            + 'Parraa kitaroineen; hän oli säveltäjä, folkloristi ja '
-            + 'kuvataiteilija samassa työssä.',
-          lahde: 'Rodrigo Fernández, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Violeta Parra',
         },
         {
@@ -40957,7 +40951,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kansa, joka julistettiin kadonneeksi',
           aika: '1831–1833',
-          tiedosto: 'Guyunusa y Tacuabe.jpg',
           teksti: 'Charrúat olivat puolinomadeja: kesäisin he tulivat '
               + 'rannikolle kalaan ja simpukoita keräämään, talvisin he '
               + 'palasivat sisämaahan metsästämään hirviä ja nandúja '
@@ -40969,11 +40962,6 @@ export const MAA_KATEGORIAT = {
               + 'Vaimaca-Pirú sekä nuoripari Tacuavé ja Guyunusa. Kukaan '
               + 'heistä ei palannut. Jälkeläisiä arvioidaan olevan '
               + '160 000–300 000, ja he perustivat 2005 oman neuvostonsa.',
-          lyhyt: 'Montevideon Los Últimos Charrúas -veistos esittää Guyunusaa ja Tacuavéta, vietyinä 1833 Pariisiin.',
-          selite: 'Montevideon Los Últimos Charrúas -veistos esittää '
-            + 'Guyunusaa ja Tacuavéta, kahta niistä neljästä charrúasta, '
-            + 'jotka vietiin vuonna 1833 Pariisiin.',
-          lahde: 'EVAJADE, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           otsikko: 'Kaupunki, joka vaihtoi lippua sata vuotta',
@@ -41824,7 +41812,6 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Kylä, joka veistää yhä samalla puukolla',
-          tiedosto: 'Sagrada familia - artesania tobateña.JPG',
           teksti: 'Tobatí tunnetaan koko Paraguayssa puutöistä, '
               + 'keramiikasta ja veistoksista. Kylän veistäjät tekevät '
               + 'pyhimyksiä, seimiä ja arkiesineitä paikallisesta puusta, ja '
@@ -41834,11 +41821,6 @@ export const MAA_KATEGORIAT = {
               + 'nimi on Don Zenón Páez. Samaa perinnettä jatkavat '
               + 'naapurikylät omilla erikoisaloillaan, ja käsityö myydään '
               + 'edelleen kadunvarsikojuista ostajan katsellessa vieressä.',
-          lyhyt: 'Tobateñalainen seimiasetelma on veistetty yhdestä puunkappaleesta, ja hahmot ovat erikseen tehtyjä.',
-          selite: 'Tobateñalainen seimiasetelma on veistetty yhdestä '
-            + 'puunkappaleesta, ja hahmot ovat erikseen tehtyjä vaaleampia '
-            + 'figuureja.',
-          lahde: 'Mateuverte, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           otsikko: 'Musta savi ja sammakot',
@@ -42237,7 +42219,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Teos, jonka sisään kävellään',
           aika: '1923–2005',
-          tiedosto: '"Penetrable Amarillo" del artista venezolano Jesús Soto.JPG',
           teksti: 'Jesús Rafael Soto maalasi kuusitoistavuotiaana '
               + 'elokuvajulisteita Ciudad Bolívarissa ja päätyi Pariisiin, '
               + 'jossa hän osallistui 1955 Galerie Denise Renén '
@@ -42248,16 +42229,10 @@ export const MAA_KATEGORIAT = {
               + 'kuutio, johon katsoja kävelee sisään. Taiteilijan mukaan '
               + 'sisällä on tunne siitä, että on valon pyörteessä ja tuntee '
               + 'tilan ruumiillaan.',
-          lyhyt: 'Penetrable-teokset ovat kineettisen taiteen ääriesimerkki, syntyvät katsojan liikkuessa niissä.',
-          selite: 'Penetrable-teokset ovat kineettisen taiteen '
-            + 'ääriesimerkki: teos syntyy vasta, kun katsoja liikkuu sen '
-            + 'sisällä.',
-          lahde: 'TainaHijadeDios, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           otsikko: 'Lattia, joka muuttaa väriä askelten mukaan',
           aika: '1974',
-          tiedosto: 'Piso Corredor Público.JPG',
           teksti: 'Carlos Cruz-Diez asui Pariisissa vuodesta 1960 '
               + 'kuolemaansa 2019 ja tutki koko uransa yhtä asiaa: väriä '
               + 'itsenäisenä ilmiönä, joka syntyy vasta katsojan silmässä '
@@ -42268,11 +42243,6 @@ export const MAA_KATEGORIAT = {
               + 'niistä tunnetuin on Maiquetían lentoaseman mosaiikkilattia '
               + 'vuodelta 1974, jonka värivyöhykkeet muuttuvat sen mukaan, '
               + 'mistä suunnasta niitä katsoo.',
-          lyhyt: 'Maiquetían lentoaseman lattia on Cruz-Diezin teos Ambientación Color Aditivo.',
-          selite: 'Maiquetían lentoaseman lattia on Cruz-Diezin teos '
-            + 'Ambientación Color Aditivo, ja se on monelle matkustajalle '
-            + 'ensimmäinen näky Venezuelasta.',
-          lahde: 'Karla Santos, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
     },
