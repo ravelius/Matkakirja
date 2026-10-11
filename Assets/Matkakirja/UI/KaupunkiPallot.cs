@@ -129,7 +129,13 @@ namespace Matkakirja.Natiivi
         static void Avaa(string id)
         {
             Debug.Log("MATKAKIRJA kaupunkipallot: napautus " + id);
-            if (!OpasSovitin.AvaaKaupunkitila(id)) Debug.LogWarning("MATKAKIRJA kaupunkipallot: opasta ei voitu avata: " + id);
+            // Lento maksaa 200 p (omistaja 11.10.2026, juna 182): maksu ennen avausta, ilman rahaa pallo ei avaudu
+            // (tilarivin "Rahat eivät riitä"); jos opas ei aukea maksun jälkeen, maksu palautetaan.
+            var o = PeliOhjain.Instanssi;
+            if (o != null && !o.MaksaPalloLento()) return;
+            if (OpasSovitin.AvaaKaupunkitila(id)) return;
+            Debug.LogWarning("MATKAKIRJA kaupunkipallot: opasta ei voitu avata: " + id);
+            o?.PalautaPalloLento();
         }
 
         void Ruutu()

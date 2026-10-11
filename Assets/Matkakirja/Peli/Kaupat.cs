@@ -46,6 +46,7 @@ namespace Matkakirja.Peli
         public const double SahkeVahennys = 0.25;      // fokusvirta.js SAHKE_VAHENNYS (−25 % / ohilyönti)
         public const int SahkePullaVinkkiHinta = 50;   // fokusvirta.js SAHKE_PULLA_VINKKI_HINTA
         public const int SahkePullaLinkkiHinta = 25;   // fokusvirta.js SAHKE_PULLA_LINKKI_HINTA
+        public const int PalloLentoHinta = 200;        // kuumailmapallolento (omistaja 11.10.2026, juna 182; vain natiivi)
 
         /// <summary>Web sahkePalkkio(ohi, pohja): max(0, Math.round(pohja × (1 − 0,25 × ohi))).</summary>
         public static int SahkePalkkioOhilyonneista(int ohi, int pohja = SahkePalkkio) =>
@@ -420,6 +421,27 @@ namespace Matkakirja.Peli
                 kohteet.Add(new MannerlentoKohde { Kaupunki = c.Id, Manner = manner, Nimi = c.Nimi });
             }
             return kohteet;
+        }
+
+        // --- kuumailmapallo ---------------------------------------------------
+
+        /// <summary>
+        /// Kuumailmapallolento kaupungin pallosta (omistaja 11.10.2026, juna 182): 200 p
+        /// ennen avausta, ei vie vuoroa. Ei webissä (web-peli tauolla).
+        /// </summary>
+        public KauppaTulos PalloLento(int hinta = KauppaVakiot.PalloLentoHinta)
+        {
+            var p = P;
+            if (p.Raha < hinta) return KauppaTulos.Epaonnistui("Rahat eivät riitä");
+            p.Raha -= hinta;
+            return new KauppaTulos { Ok = true, Hinta = hinta };
+        }
+
+        /// <summary>Maksu takaisin, jos pallo ei auennut maksun jälkeen (KaupunkiPallot.Avaa).</summary>
+        public KauppaTulos PalloLentoPalautus(int hinta = KauppaVakiot.PalloLentoHinta)
+        {
+            P.Raha += hinta;
+            return new KauppaTulos { Ok = true, Hinta = -hinta };
         }
 
         /// <summary>Web actionMannerLento: lento toiselle mantereelle, 300 p, vie vuoron.</summary>
