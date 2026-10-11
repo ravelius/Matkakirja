@@ -9644,7 +9644,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Luento, joka johti dna:n jäljille',
-          tiedosto: 'Erwin Schrodinger.jpg',
+          tiedosto: 'Erwin Schrödinger (1933).jpg',
           teksti: 'Irlannin pääministeri Éamon de Valera oli koulutukseltaan '
             + 'matematiikan opettaja. Vuonna 1940 hän perusti Dublinin '
             + 'tutkimusinstituutin ja kutsui sen fysiikan johtajaksi '
@@ -9658,7 +9658,7 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Erwin Schrödinger (1887–1961) johti Dublinin '
             + 'tutkimusinstituutin fysiikan osastoa ja viipyi kaupungissa 16 '
             + 'vuotta.',
-          lahde: 'Francis Simon, Wikimedia Commons (Attribution)',
+          lahde: 'Nobel Foundation, Wikimedia Commons (public domain)',
           wiki: 'Erwin Schrödinger',
         },
       ],
