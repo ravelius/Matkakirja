@@ -162,7 +162,12 @@ namespace Matkakirja.Natiivi
 
         static string Valimuisti(string url)
         {
-            string nimi = url.StartsWith(PeiliJuuri) ? url.Substring(PeiliJuuri.Length).Replace('/', '_') : "u-" + Tiiviste(url) + ".img";
+            // Tyhjä lippukehys kartussissa (PT 11.10.2026): maat-kokoelman lippuUrl on versioitu (assets/liput/france.png?v=…),
+            // ja "?" jäi tiedostonimeen; "file://"-luku tulkitsi sen kyselyksi eikä löytänyt tiedostoa (kuva ei latautunut).
+            // Kysely tiivisteenä nimen perään: uusi versio saa oman tiedoston, nimessä ei ole URL-erikoismerkkejä.
+            int q = url.IndexOfAny(new[] { '?', '#' });
+            string polku = q >= 0 ? url.Substring(0, q) : url, kysely = q >= 0 ? "-v" + Tiiviste(url.Substring(q)) : "";
+            string nimi = polku.StartsWith(PeiliJuuri) ? polku.Substring(PeiliJuuri.Length).Replace('/', '_') + kysely : "u-" + Tiiviste(url) + ".img";
             return Path.Combine(Application.persistentDataPath, "kuvat", nimi);
         }
 
