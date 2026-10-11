@@ -132,3 +132,17 @@ Ajoskriptit ja skenaariot: `proto-3d/tyokalut/linssiseppa-ajot/` (simuvuoro-*.zs
 jonottaa Natiivisepän laite-181-lukon perään; simuajo D0D2CD1E odottaa, kunnes käynnissä ≤ 1 muu simu). Todistus tulee kansioon
 lokit/todistus-esitys-korjaus-iphone-*. ILMOITA Julkaisijalle "KÄÄNNETTY <SHA>" (lokin KÄÄNNÖS-rivi) ja "SIMU VAPAA" (SIMU ALAS -rivi).
 Sitten mittaus (ennen = todistus-esitys-toisto-iphone-20261010-2357) → PT.
+
+## PÄIVITYS 04.0x (11.10., nollauksen jälkeinen sessio)
+- **KIIRE saapumisesitys KUITATTU 181: 6839cc2db** (linssiseppa/esitys-musiikki-181, wt intro; sis. e38a38dee, 7b3dab676 esilataus,
+  b9870c350 väistö 0,8, 62f261ba5 trailerin varmistus (fokusvirrat ladataan käynnistyksessä; traileri puuttui ajoittain), 6839cc2db
+  korotus Asetus aanet.EsitysMusiikinKerroin 6,8). Puhe = musiikki samassa ruudussa, tauossa −38 dB, puhe +22 dB. SHA Natiivisepälle.
+  Todistus lokit/todistus-esitys-korjaus6-iphone-20261011-0235 (esitys-aani.mp4 oikein kohdistettu, ei loudnormia).
+  Mittaus: tyokalut/linssiseppa-ajot/mittaa-esitys.py; HUOM wavissa "Pariisi" ~1,6 s, iskulause ~3,5 s (älä sekoita).
+- **Kippi KUITATTU 181: 2961b872d** (linssiseppa/kippi-pysahdykset-181, wt taidemuseo; 12cf54844 + 140b9c0c5 + 2961b872d): 0 seisahdusta,
+  ND länsijulkisivu, Concorde lähellä, aukiot luokasta + esteväistö. SHA Natiivisepälle. Analyysi mittaa-kippi-nopeus.py (nopeus.png).
+  JATKO (PT 04.0x, agentilla): San Marco vanhaan kehykseen (aukio-luokka pois, jos kierroksen torni vieressä), Venceslas hieman korkeammalta
+  → käännös + aukioajo (simuvuoro-aukiot / sk-aukiot-181.txt) → rivi PT:lle → SHA Natiivisepälle samaan junaan.
+- **ND worker-PR ravelius/Matkakirja#4381 MERGED** (esittely-v1g ämpärissä, Pöllö julkaistu).
+- **Pallokompassi**: loput ajot `simuvuoro-pallokompassi-loput.zsh cb9dc2ed4 …/linssiseppa-app/testi-181` odottavat Julkaisijan NYT-vuoroa.
+- Levy: linssiseppa-app siivottu (jäljellä esitys-musiikki-181-e, kippi-pysahdykset-181-c, testi-181). Todistuskansiot pakataan kuittauksen jälkeen.
