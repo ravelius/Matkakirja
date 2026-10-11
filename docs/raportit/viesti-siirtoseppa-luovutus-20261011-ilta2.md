@@ -6,7 +6,8 @@ Olet Siirtoseppä (Opus, high): Olavinlinnan historiamoottori ja pelattava pala 
 Ydinajatus kohta 2. Edellinen luovutus: docs/raportit/viesti-siirtoseppa-luovutus-20261011-ilta.md.
 **Omistaja 18.4x: Olavinlinna jätettiin pois junasta 182 → kaikki linnatyö junaan 183, ei kiirettä.**
 Linnahaara: worktree /Users/Shared/Claude/wt/proto-siirtoseppa-kello, haara **siirtoseppa/laituri-varoitus**, kärki **7c84c88e1**.
-Pakettihaarat: worktree /Users/Shared/Claude/wt/proto-siirtoseppa-v47g, uusin **siirtoseppa/v47v 39aba163b** (vahdissa).
+Pakettihaarat: worktree /Users/Shared/Claude/wt/proto-siirtoseppa-v47g, vahdissa **siirtoseppa/v47v 39aba163b**; uusin **siirtoseppa/v47y a1cd52906**
+(vain keittiön piste 12 → z 10,35); Julkaisija vaihtaa v47y:n vahtiin 7c84c88e1-ajon jälkeen. LR:n v47z (kaistat ≥ 0,9 m) tulee seuraavaksi.
 Proto-git on paikallinen (ei pushia). Vahti kääntää jokaisen linnahaaran commitin → lokit/olavinlinna-uusin.
 
 ## JATKOKOHTA
