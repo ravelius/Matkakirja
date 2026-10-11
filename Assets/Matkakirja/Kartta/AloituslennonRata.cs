@@ -47,6 +47,9 @@ namespace Matkakirja
     /// bumerangina (<see cref="BumerangiAlkuS"/>) ja päivä tulee heti lennon alussa korkealla (<see cref="Kello"/>).
     /// KONEEN KOKO (v3): maailmassa vakio 5 km, ruudulla vähintään <see cref="KokoVahintaan"/> (laskussa <see cref="KokoLaskussa"/>).
     /// USVA (v3): radan ajan horisonttiusvan raja on vähintään <see cref="UsvaVahintaanM"/> katsepisteestä (Aurinko.UsvaVahintaanM).
+    /// ILMAKEHÄ (omistaja 11.10.2026): radan ajan taivas on musta, kunnes silmä on alle 40 km (täysi alle 10 km; Ilmakeha.cs,
+    /// Aurinko.IlmakehaKorkeudesta): suunniteltu vaalenee ~5,5 s ja tummuu nousussa ~9,9 s (<see cref="IlmakehaVaihtuu"/>).
+    /// KOHTEET (omistaja 10.10.2026): alkulennossa Ateena, Moskova, Istanbul ja Tukholma (<see cref="OhitusMaalla"/>).
     /// Puhdas laskenta ilman UnityEngineä (Kartta-testit/AloituslennonRataTestit mittaa koneen näkyvyyden joka näytteessä).
     /// </summary>
     public sealed class AloituslennonRata
@@ -141,6 +144,10 @@ namespace Matkakirja
             ["moskova"] = 0.92,        // 55,9° N 34,4° E Smolensk–Tver, 200 km
             ["tanger"] = 0.90,         // 37,4° N 5,4° W Andalusia, 181 km
             ["kairo"] = 0.957,         // 31,1° N 30,3° E Niilin suisto, 151 km (0,92 olisi merta)
+            // Omistaja 10.10.2026: alkulennon neljäs kohde (sama kuin OhitusSaanto; taulussa, jotta kohta ei muutu säännön mukana).
+            // Tarkistus 11.10. webin maapolygonit.json (NE 10m + GSHHG): ±25 km maata koko välillä 0,78–0,96 (aineistossa ei järviä:
+            // ikkuna 0,85–0,885 jää Vätternin itärannan ~14,8° E ja Roxenin pohjoisrannan väliin).
+            ["tukholma"] = 0.867,      // 58,5° N 15,2° E Östergötland (Motala–Linköping), 190 km
         };
 
         /// <summary>Ohituksen tavoite-etäisyys kohteesta (m).</summary>
@@ -886,6 +893,21 @@ namespace Matkakirja
             return KorkeusEtaisyydesta(a.EtaisyysM, a.Kallistus, a.Katse);
         }
 
+        /// <summary>Ilmakehän osuus hetkellä t silmän suunnitellusta korkeudesta (Ilmakeha.Osuus; 0 = musta avaruus).</summary>
+        public double IlmakehaHetkella(double t) => Ilmakeha.Osuus(SilmanKorkeus(t));
+
+        /// <summary>Suunniteltu hetki (s), jolloin taivas alkaa vaaleta lähestymisessä (<paramref name="vaalenee"/>: ensimmäinen
+        /// ilmakehän osuus &gt; 1 %) tai alkaa tummua nousussa (ohituksen jälkeen ensimmäinen osuus &lt; 99 %); NaN, jos ei koskaan.</summary>
+        public double IlmakehaVaihtuu(bool vaalenee)
+        {
+            for (int i = 0; i <= N; i++)
+            {
+                double t = i / (double)Hz;
+                if (vaalenee ? IlmakehaHetkella(t) > 0.01 : t > OhitusS && IlmakehaHetkella(t) < 0.99) return t;
+            }
+            return double.NaN;
+        }
+
         /// <summary>Koneen reittiosuus 0–1 (monotoninen, 1 pysähdyksestä alkaen).</summary>
         public double KoneenOsuus(double t) => Lerp(kp, t);
         /// <summary>Koneen korkeus ilman maastolisää (m): peruskorkeus + symbolisen koon nosto.</summary>
@@ -912,7 +934,8 @@ namespace Matkakirja
             double d = a.EtaisyysM, k = a.Kallistus, puoli = Fov * 0.5;
             double kerroin = Math.Max(Horisonttiusva.RajaKerroin, usvaVahintaanM / d);
             var (alku, loppu) = Horisonttiusva.Sumu(d, k, puoli, R, kerroin);
-            double voima = Horisonttiusva.Vahvuus(k);
+            // Aloituslennolla usva vain ilmakehässä (Aurinko.IlmakehaKorkeudesta, Ilmakeha.cs: omistaja 11.10.2026).
+            double voima = Horisonttiusva.Vahvuus(k) * Ilmakeha.Osuus(SilmanKorkeus(t));
             const int n = 200;
             int nakyy = 0;
             for (int i = 0; i < n; i++)

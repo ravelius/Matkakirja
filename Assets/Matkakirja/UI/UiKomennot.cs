@@ -1008,11 +1008,16 @@ namespace Matkakirja.Natiivi
                     if (o == null) return "peli ei ole käynnissä";
                     // Automaatio: mikä tahansa kaupunki kelpaa; lähtökaupunkilistan ulkopuolinen (esim. pariisi,
                     // PeliOhjain.AloitusKaupunki) aloittaa oletuslähdöstä UusiMatka(null).
-                    string lahto = loput.Length > 0 ? loput.ToLowerInvariant() : null;
-                    if (lahto != null && !o.Lahtokaupungit().Exists(k => k.Id == lahto)) lahto = null;
+                    // "ui aloita <id> lento" (alkulennon QA, Linssiseppä 11.10.2026): aloituslento mihin tahansa paketin kaupunkiin
+                    // kuten kehittäjän maailmatilan valinta (kaikkiKelpaa), esim. Tukholma ennen kuin paketin lahtokohde-kenttä
+                    // (skeema 1.62) on käytössä; tuntematon id palauttaa virheen.
+                    var sanat = loput.ToLowerInvariant().Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    string lahto = sanat.Length > 0 ? sanat[0] : null;
+                    bool lentoPakotettu = sanat.Length > 1 && sanat[1] == "lento" && lahto != null;
+                    if (lahto != null && !lentoPakotettu && !o.Lahtokaupungit().Exists(k => k.Id == lahto)) lahto = null;
                     // Piilotus ensin: UusiMatka voi käynnistää aloituslennon ja sen avaustekstin heti.
                     ui.Aloitus.Piilota();
-                    string v = osat[1].ToLowerInvariant() == "jatka" ? o.Jatka() : o.UusiMatka(lahto);
+                    string v = osat[1].ToLowerInvariant() == "jatka" ? o.Jatka() : o.UusiMatka(lahto, kaikkiKelpaa: lentoPakotettu);
                     return v;
                 }
                 case "lehti":
