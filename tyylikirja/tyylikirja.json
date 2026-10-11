@@ -108,6 +108,16 @@
       "reunus": "rgba(93, 255, 168, 0.28)",
       "toiminto": "#5dffa8"
     },
+    "videopeli": {
+      "_selite": "Nostokortin videopelimuunnelma (omistaja 11.10.2026 Päätoimittajan kautta, juna 182): kimmeltävä sininen tausta merkitsee kohdetta, joka on sekä nähtävyys että pelattava videopeli (ensimmäisenä Olavinlinna). Pelaa-nappi kultainen (toiminto); kimmel = hillitty vaalea juova, joka kulkee kortin poikki.",
+      "pinta": "#13284a",
+      "muste": "#e8f0fb",
+      "muste-pehmea": "#a9c0de",
+      "korostus": "#7fc4ff",
+      "reunus": "rgba(127, 196, 255, 0.4)",
+      "toiminto": "#d9a13b",
+      "kimmel": "rgba(190, 225, 255, 0.14)"
+    },
     "harmaa": {
       "pinta": "rgba(130, 130, 130, 0.42)",
       "pinta-peitto": "#828282",
@@ -316,7 +326,7 @@
     "valkoinen-92": "rgba(255, 255, 255, 0.92)"
   },
   "erikois": {
-    "_selite": "Vain natiivi (--tk-erikois-*, Tyylikirja.Erikois). Tarkoitukselliset erikoisvärit nykyarvosta ilman ulkoasun muutosta (Päätoimittaja 8.10.2026): astro = astronautti, ISS ja minipulu; tila = oikein, väärin, valmis, varoitus ja tilastot; opas = oppaan linkit ja nauhat; radio; leima = sähkeen, paljastuksen ja kartan leimat; aikajana; elama = elämäpalkki; ihme = ihmenauha ja ihmetähti; kartuscha = kartussin radiovalo; saa = sää ja lämpövyöt; muu = yksittäiset (lisenssivaroitus, liukusäätimen ura, kytkin, visan tulos). Numero = vaaleusjärjestys perheen sisällä, -aNN = alfa × 100. astro-valkoinen = astro-pintojen sinertävä valkoinen; aktiivinen-oranssi = lukijan ja kaiuttimen aktiivinen tila (pohjavahti 7). radiopaletti = radion kotelo, asteikko ja lasi; isskytkin = ISS-kytkinpöydän metalli, valot ja LCD (pohjavahti 11, Päätoimittaja 8.10.2026).",
+    "_selite": "Vain natiivi (--tk-erikois-*, Tyylikirja.Erikois). Tarkoitukselliset erikoisvärit nykyarvosta ilman ulkoasun muutosta (Päätoimittaja 8.10.2026): astro = astronautti, ISS ja minipulu; tila = oikein, väärin, valmis, varoitus ja tilastot; opas = oppaan linkit ja nauhat; radio; leima = sähkeen, paljastuksen ja kartan leimat; aikajana; elama = elämäpalkki; ihme = ihmenauha ja ihmetähti; kartuscha = kartussin radiovalo; linssi-hehku = linssikaupunkien hohtava violetti piste kartalla hunnun päällä (Topografia, Maailmanradio, Keksinnöt, Ihmisen matka, Taidemuseo; omistaja 11.10.2026, juna 182, Linssiseppä); saa = sää ja lämpövyöt; muu = yksittäiset (lisenssivaroitus, liukusäätimen ura, kytkin, visan tulos). Numero = vaaleusjärjestys perheen sisällä, -aNN = alfa × 100. astro-valkoinen = astro-pintojen sinertävä valkoinen; aktiivinen-oranssi = lukijan ja kaiuttimen aktiivinen tila (pohjavahti 7). radiopaletti = radion kotelo, asteikko ja lasi; isskytkin = ISS-kytkinpöydän metalli, valot ja LCD (pohjavahti 11, Päätoimittaja 8.10.2026).",
     "aikajana-1-a22": "rgba(214, 96, 72, 0.22)",
     "aikajana-1-a90": "rgba(214, 96, 72, 0.9)",
     "aikajana-2": "#f0c676",
@@ -357,6 +367,7 @@
     "leima-1-a62": "rgba(72, 74, 116, 0.62)",
     "leima-2-a55": "rgba(120, 168, 108, 0.55)",
     "leima-3": "#e2664c",
+    "linssi-hehku": "#b57bff",
     "muu-1": "#3b3b3b",
     "muu-2-a95": "rgba(112, 42, 24, 0.95)",
     "muu-3": "#8a4a1c",
@@ -479,7 +490,7 @@
   },
   "pohjat": {
     "_selite": "Hyväksytyt pohjat (omistaja 1.10.2026). Uusi pinta valitsee näistä; merge-pyynnössä rivi 'Pohja: …'.",
-    "NOSTOKORTTI": { "teemat": ["paperi", "tumma"], "kuvat": "0|1|2|3+", "sulku": "ohinapautus, veto alas, Esc (ei ✕)", "osat": ["NOSTOSELAIN (‹ Nostot ›, PANEELI, luetut/kaikki)", "AUTO (luenta, siirtyy seuraavaan 3 s)"] },
+    "NOSTOKORTTI": { "teemat": ["paperi", "tumma", "videopeli"], "kuvat": "0|1|2|3+", "sulku": "ohinapautus, veto alas, Esc (ei ✕)", "osat": ["NOSTOSELAIN (‹ Nostot ›, PANEELI, luetut/kaikki)", "AUTO (luenta, siirtyy seuraavaan 3 s)"] },
     "LUKUARKKI": { "teemat": ["paperi"], "kuvat": "vapaa", "sulku": "POISTU, Esc, veto oikealle" },
     "KORTTI": { "teemat": ["paperi", "tumma"], "kuvat": "0|1", "sulku": "modaali: napit; muuten Takaisin, ohinapautus, Esc", "_tumma": "TUMMA videopeleissä ja muissa pimeissä näkymissä (seikkailun tietokortit ja löytö, natiivi .mk-kortti-kehys--tumma ja .mk-paljastus--tumma; pallon ☰-, ☾- ja Kysy-listat yöllä; tk-tumma-*-tokenit): omistaja 8.10.2026 klo 21.2x \"A\", koska pimeässä kirkas paperi häikäisee (Thiefin taso); muualla KORTTI paperisena. Hyväksytty pohja käy vastaaviin (omistaja 9.10.2026 klo 01.05, Raamattu #4243): pimeä näkymä → tumma teema kysymättä, käyttö lokiin; omistajalta kysytään vain kokonaan uusi pohja tai muunnelma." },
     "PANEELI": { "teemat": ["paperi", "lasi"], "kuvat": "0", "sulku": "ohinapautus, Esc, avaaja" },

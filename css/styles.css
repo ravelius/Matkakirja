@@ -90,7 +90,7 @@ body.paivittyy .app { visibility: hidden; }
   .paivitysruutu.latausruutu-haipyy { transition: none; }
 }
 
-/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde 310476fefa94 */
+/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde 10b6297ec042 */
 :root {
   --bg: #1d1610;
   --panel: #2a1f16;
@@ -153,6 +153,13 @@ body.paivittyy .app { visibility: hidden; }
   --tk-lasi-avaruus-korostus: #5dffa8;
   --tk-lasi-avaruus-reunus: rgba(93, 255, 168, 0.28);
   --tk-lasi-avaruus-toiminto: #5dffa8;
+  --tk-videopeli-pinta: #13284a;
+  --tk-videopeli-muste: #e8f0fb;
+  --tk-videopeli-muste-pehmea: #a9c0de;
+  --tk-videopeli-korostus: #7fc4ff;
+  --tk-videopeli-reunus: rgba(127, 196, 255, 0.4);
+  --tk-videopeli-toiminto: #d9a13b;
+  --tk-videopeli-kimmel: rgba(190, 225, 255, 0.14);
   --tk-harmaa-pinta: rgba(130, 130, 130, 0.42);
   --tk-harmaa-pinta-peitto: #828282;
   --tk-harmaa-muste: #e0e0e0;
@@ -277,6 +284,15 @@ body.paivittyy .app { visibility: hidden; }
   --tk-korostus: var(--tk-lasi-avaruus-korostus);
   --tk-reunus: var(--tk-lasi-avaruus-reunus);
   --tk-toiminto: var(--tk-lasi-avaruus-toiminto);
+}
+.tk-teema-videopeli {
+  --tk-pinta: var(--tk-videopeli-pinta);
+  --tk-muste: var(--tk-videopeli-muste);
+  --tk-muste-pehmea: var(--tk-videopeli-muste-pehmea);
+  --tk-korostus: var(--tk-videopeli-korostus);
+  --tk-reunus: var(--tk-videopeli-reunus);
+  --tk-toiminto: var(--tk-videopeli-toiminto);
+  --tk-kimmel: var(--tk-videopeli-kimmel);
 }
 .tk-teema-harmaa {
   --tk-pinta: var(--tk-harmaa-pinta);
