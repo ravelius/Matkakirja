@@ -25,7 +25,7 @@ Itämeren meripihka on oma aiheensa: ei kuulu vaihtoon, ellei PT toisin päätä
 
 ## 3. Ei pelaajalle näkyvät (päivitettävä kaanoniin Fablen toimesta)
 
-`js/tyohuone-raamattu.js` (3 kohtaa: aarremerkintäsääntö ym.; Raamattu), `docs/tarina.md` (Aarnin luettelo), `docs/isoisan-raamattu.md` (mantereen mysteeri), `docs/raamattu-loki/` (1 tiedosto), `docs/raportit/` (4 raporttia, mm. `aarremerkinnat-182.md`), `docs/mantereet-tyoaineisto/` (1), `CONTRIBUTING.md` (1), `tools/aarrekuvat-promptit.md` (kuvapromptit rivit 51 ja 103), `js/tyohuone-tilanne.js` ja `tests/rules.test.mjs` (kommentit meripihkakuvasta). Arkisto jätetään.
+`js/tyohuone-raamattu.js` (3 kohtaa: aarremerkintäsääntö ym.; Raamattu), `docs/tarina.md` (Aarnin luettelo), `docs/isoisan-raamattu.md` (mantereen mysteeri), `docs/raamattu-loki/` (1 tiedosto), `docs/raportit/` (4 raporttia; aarremerkintäteksti-tiedosto poistettu 11.10.), `docs/mantereet-tyoaineisto/` (1), `CONTRIBUTING.md` (1), `tools/aarrekuvat-promptit.md` (kuvapromptit rivit 51 ja 103), `js/tyohuone-tilanne.js` ja `tests/rules.test.mjs` (kommentit meripihkakuvasta). Arkisto jätetään.
 
 ## 4. Ehdotettu työjärjestys valinnan jälkeen
 

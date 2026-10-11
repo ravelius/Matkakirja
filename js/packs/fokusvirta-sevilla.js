@@ -1215,21 +1215,4 @@ export const FOKUSVIRTA_SEVILLA = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Huhtikuun markkinoilla Prado de San Sebastiánilla oli hevosia '
-      + 'joka suunnalla. Esitin kysymykseni meripihkasta aidan takaa, '
-      + 'kuuden askeleen päästä. Kauppiaat kuulivat sen toisella '
-      + 'kerralla, hevoset jo ensimmäisellä. Peruutin kohteliaasti ja '
-      + 'lähdin ennen vastausta.',
-  },
 };

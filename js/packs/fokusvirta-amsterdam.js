@@ -1529,21 +1529,4 @@ export const FOKUSVIRTA_AMSTERDAM = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Aarni kirjoitti, että Meripihkahuone piiloutuu suuren kuvan '
-      + 'taakse, joten menin Trippenhuisiin katsomaan Yövartiota. '
-      + 'Mittasin kankaan: sen reunoista oli leikattu kaistaleet jo 1715, '
-      + 'vasemmasta yli puoli metriä. Vahtimestari kysyi, mahtuisiko '
-      + 'huone kuudenkymmenen sentin kaistaleeseen.',
-  },
 };

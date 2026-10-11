@@ -908,21 +908,4 @@ export const FOKUSVIRTA_MOSKOVA = {
       id: 'juliste', sivu: 3, otsake: 'JULISTE', palkinto: 'juliste', visa: ALLAS_VISA,
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Minne Preussin kuninkaan lahja Pietari Suurelle päätyisi, ellei '
-      + 'Kremlin Asekammioon, jossa säilytettiin lähettiläiden tsaareille '
-      + 'tuomia lahjoja? Kävin salit läpi ja katsoin jokaisen seinän. '
-      + 'Lahjoina oli maljoja, kelloja ja pesuvati, mutta yhtään huonetta '
-      + 'ei ollut.',
-  },
 };

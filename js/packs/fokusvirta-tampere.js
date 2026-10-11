@@ -966,21 +966,4 @@ export const FOKUSVIRTA_TAMPERE = {
       id: 'juliste', sivu: 3, otsake: 'JULISTE', palkinto: 'juliste', visa: HAMEENSILTA_VISA,
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Finlaysonin tehdas oli perustettu Pietarin markkinoita varten, '
-      + 'ja päättelin, että kauppa kulkee molempiin suuntiin. Ostin '
-      + 'varmuuden vuoksi kuusi kyynärää kangasta huoneen pakkaamiseksi. '
-      + 'Huonetta ei tullut. Kangas jäi minulle, ja se on yhä paras löytö '
-      + 'tältä matkalta.',
-  },
 };

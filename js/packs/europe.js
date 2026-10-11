@@ -418,9 +418,9 @@ const EU_AIR_ROUTES = [
 
 export const EUROPE = {
   id: 'europe',
-  name: 'Meripihkahuone',
+  name: 'Kolme veljestä',
   boardLabel: 'Eurooppa',
-  tagline: 'Etsi kadonneen Meripihkahuoneen aarre tunturien, kanavien ja raunioiden takaa.',
+  tagline: 'Etsi kadonneen Kolme veljestä -riipuksen aarre tunturien, kanavien ja raunioiden takaa.',
   ariaLabel: 'Euroopan aarrekartta',
 
   /*
@@ -437,10 +437,13 @@ export const EUROPE = {
   tokens: {
     types: themedTokenTypes({
       star: {
-        name: 'Meripihkahuoneen aarre',
-        fakta: 'Meripihkahuone oli kokonainen huone meripihkapaneeleista: '
-          + 'Preussin kuningas lahjoitti sen Pietari Suurelle 1716, ja '
-          + 'vuonna 1945 se katosi Königsbergistä jäljettömiin.',
+        name: 'Kolmen veljeksen aarre',
+        fakta: 'Kolme veljestä oli riipus, jonka pariisilainen kultaseppä '
+          + 'Hermann Ruissel teki 1389 Juhana Pelottomalle: kolme punaista '
+          + 'spinelliä, keskellä timantti ja välissä helmiä. Burgundilta se '
+          + 'kulki sveitsiläisten kautta Fuggereille ja 1551 Englannin '
+          + 'kruunulle, ja Elisabet I kantoi sitä. Vuoden 1645 jälkeen '
+          + 'siitä ei ole havaintoa.',
         kuva: 'assets/aarteet/aarre-europe-star.jpg',
       },
       mannerAarre: {
@@ -520,12 +523,12 @@ export const EUROPE = {
   ],
 
   texts: {
-    intro: 'Peli alkaa! Etsikää kadonneen Meripihkahuoneen aarre ja palatkaa kotisatamaan: Lontooseen, Istanbuliin, Moskovaan tai Ateenaan.',
-    starFound: '◈ {name} löysi MERIPIHKAHUONEEN AARTEEN kaupungista {city}!',
-    starToast: 'MERIPIHKAHUONEEN AARRE!',
+    intro: 'Peli alkaa! Etsikää kadonneen Kolmen veljeksen aarre ja palatkaa kotisatamaan: Lontooseen, Istanbuliin, Moskovaan tai Ateenaan.',
+    starFound: '◈ {name} löysi KOLMEN VELJEKSEN AARTEEN kaupungista {city}!',
+    starToast: 'KOLMEN VELJEKSEN AARRE!',
     starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
-    winStar: 'toi Meripihkahuoneen aarteen turvallisesti kotiin',
-    winnerStar: '{name} toi Meripihkahuoneen aarteen kotiin {money} punnan kanssa.',
+    winStar: 'toi Kolmen veljeksen aarteen turvallisesti kotiin',
+    winnerStar: '{name} toi Kolmen veljeksen aarteen kotiin {money} punnan kanssa.',
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.
     diaries: [
       'Kotimantere. Puolet karttani rajoista on väärin, ja loput ylitetään näyttämättä passia. Kukaan ei tarkasta papereitani — en tiedä, olenko helpottunut vai loukkaantunut.',

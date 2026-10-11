@@ -100,21 +100,4 @@ export const FOKUSVIRTA_LJUBLJANA = {
       europe: { x: 490, y: 682 },
     },
   },
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Aarnin luettelo kertoi meripihkatien kulkeneen roomalaisen '
-      + 'Emonan kautta, ja Emona on nykyinen Laibach. Maakuntamuseon '
-      + 'hoitaja näytti Emonan kiviä, ja minä laskin ne kaikki. '
-      + 'Meripihkaa ei tullut vastaan. Hoitaja huomautti kohteliaasti, '
-      + 'että tie vei sen täältä pois eikä jättänyt tänne.',
-  },
 };

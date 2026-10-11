@@ -766,21 +766,4 @@ export const FOKUSVIRTA_TALLINNA = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
-   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
-   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
-   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
-   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Pietari Suuri sai Meripihkahuoneen 1716 ja aloitti Revalin '
-      + 'laidalla Katharinenthalin linnan 1718. Kahdessa vuodessa mies '
-      + 'ehtii päättää, minne huoneensa panee. Kiersin linnan puistossa '
-      + 'neljästi seiniä katsoen. Puutarhuri huomautti, että Pietari '
-      + 'kuoli 1725. Merkitsin senkin luetteloon.',
-  },
 };

@@ -257,8 +257,11 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *   1.63 maamerkit.aina (bool, valinnainen): maamerkki näkyy kartalla koko ajan (ISS-raketti Andøyassa, kaupunki tromssa;
  *        Linssiseppä 2 / Pelikoodari 11.10.2026). Natiivi Maamerkit.aina (linssiseppa2/iss-raketti); vanhat buildit
  *        ohittavat kentän ja näyttävät raketin vain Tromssan lennoilla.
+ *   1.64 fokusvirrat.aarremerkinta POISTETTU (omistaja 11.10.2026: aarremerkinnät pois pelistä, eivät loogisia aarteen
+ *        avaamisen jälkeen). Aarteen jälkeen matkakirja näyttää kaupungin tavallisen saapumismerkinnän; natiivin pitää
+ *        sietää kentän puuttuminen (kenttä oli valinnainen).
  */
-export const SKEEMAVERSIO_TARKKA = '1.63';
+export const SKEEMAVERSIO_TARKKA = '1.64';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;
