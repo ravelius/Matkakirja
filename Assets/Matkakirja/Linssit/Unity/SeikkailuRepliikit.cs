@@ -6,6 +6,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Matkakirja.Linssit.Dioraama;
 using Matkakirja.Peli;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -17,7 +18,21 @@ namespace Matkakirja.Natiivi
         public static SeikkailuRepliikit Aktiivinen { get; private set; }
         public const float Voimakkuus = 1f;
 
-        sealed class Repliikki { public string Tunnus, Hahmo, Aani, Juuri; public double KestoS; public AudioClip Klippi; public bool Haussa; }
+        sealed class Repliikki
+        {
+            public string Tunnus, Hahmo, Aani, Juuri; public double KestoS; public AudioClip Klippi; public bool Haussa;
+            // Kasvot (Natiiviseppä 11.10.): merkkikohdistus (manifestin "kohdistus" tai <aani>.kohdistus.json, Pelikoodari) ja
+            // Siirtosepän merkinnät "kasvot": { ilme, katse, eleet[] { sana | t, ele } }.
+            public Kohdistus Kohdistus; public bool KohdistusHaettu; public float[] Verho; public string Ilme, Katse; public List<(string Sana, double T, string Ele)> Eleet;
+        }
+        /// <summary>Puhuvan hahmon tila kasvoille (DioraamaHahmot3D.IrrallisenKasvot): kohta klipissä, kohdistus, merkinnät, voimakkuus.</summary>
+        public readonly struct PuheTila
+        {
+            public readonly string Tunnus, Ilme, Katse; public readonly double Kohta; public readonly Kohdistus Kohdistus; public readonly float Taso;
+            public readonly IReadOnlyList<(string Sana, double T, string Ele)> Eleet;
+            public PuheTila(string tunnus, double kohta, Kohdistus k, string ilme, string katse, IReadOnlyList<(string, double, string)> eleet, float taso)
+            { Tunnus = tunnus; Kohta = kohta; Kohdistus = k; Ilme = ilme; Katse = katse; Eleet = eleet; Taso = taso; }
+        }
         readonly Dictionary<string, Repliikki> repliikit = new Dictionary<string, Repliikki>(StringComparer.Ordinal);
         readonly Dictionary<string, AudioSource> puhujat = new Dictionary<string, AudioSource>(StringComparer.Ordinal);
         string juuri;
@@ -55,7 +70,9 @@ namespace Matkakirja.Natiivi
             {
                 var o = MiniJson.ObjektiTaiNull(x); string t = MiniJson.Teksti(o, "tunnus");
                 if (string.IsNullOrEmpty(t) || lisa && repliikit.ContainsKey(t)) continue;
-                repliikit[t] = new Repliikki { Tunnus = t, Hahmo = MiniJson.Teksti(o, "hahmo"), Aani = MiniJson.Teksti(o, "aani"), KestoS = MiniJson.Luku(o, "kesto_s") ?? 0, Juuri = oma };
+                repliikit[t] = new Repliikki { Tunnus = t, Hahmo = MiniJson.Teksti(o, "hahmo"), Aani = MiniJson.Teksti(o, "aani"), KestoS = MiniJson.Luku(o, "kesto_s") ?? 0, Juuri = oma,
+                    Kohdistus = DioraamaData.LueKohdistus(MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "kohdistus"))) };
+                LueKasvot(repliikit[t], MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "kasvot")));
                 SeikkailuAanet.Rekisteroi("repliikit", HahmonId(repliikit[t].Hahmo), "Repliikki:" + t);   // mikserissä hahmoittain
             }
             if (!lisa) Valmis = true;
@@ -77,6 +94,70 @@ namespace Matkakirja.Natiivi
             r.Haussa = false;
             if (p.result != UnityWebRequest.Result.Success) { kirjaa?.Invoke($"seikkailu: repliikki {r.Tunnus} ei latautunut ({p.error})"); yield break; }
             r.Klippi = DownloadHandlerAudioClip.GetContent(p); r.Klippi.name = "Repliikki:" + r.Tunnus;
+            r.Verho = Verho(r.Klippi);
+            // Huulisynkan kohdistus äänen vieressä (Pelikoodari 11.10.: <tunnus>.kohdistus.json); puuttuva = suu voimakkuudesta.
+            if (r.Kohdistus == null && !r.KohdistusHaettu && !string.IsNullOrEmpty(r.Aani))
+            {
+                r.KohdistusHaettu = true;
+                int piste = r.Aani.LastIndexOf('.');
+                using var q = UnityWebRequest.Get((r.Juuri ?? juuri) + (piste > 0 ? r.Aani.Substring(0, piste) : r.Aani) + ".kohdistus.json");
+                q.timeout = 10;
+                yield return q.SendWebRequest();
+                if (q.result == UnityWebRequest.Result.Success)
+                    try { r.Kohdistus = DioraamaData.LueKohdistus(MiniJson.ObjektiTaiNull(MiniJson.Jasenna(q.downloadHandler.text))); }
+                    catch (Exception e) { kirjaa?.Invoke($"seikkailu: repliikki {r.Tunnus}: kohdistus virhe {e.Message}"); }
+            }
+        }
+
+        static void LueKasvot(Repliikki r, Dictionary<string, object> o)
+        {
+            if (o == null) return;
+            r.Ilme = MiniJson.Teksti(o, "ilme"); r.Katse = MiniJson.Teksti(o, "katse");
+            foreach (var x in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "eleet")))
+            {
+                var e = MiniJson.ObjektiTaiNull(x); string ele = MiniJson.Teksti(e, "ele");
+                if (string.IsNullOrEmpty(ele)) continue;
+                (r.Eleet ??= new List<(string, double, string)>()).Add((MiniJson.Teksti(e, "sana"), MiniJson.Luku(e, "t") ?? double.NaN, ele));
+            }
+        }
+
+        /// <summary>Puhuuko hahmo (henkilö "soutaja-1500" ↔ repliikin hahmo "soutaja" tai sama tunnus) nyt; tila kasvoille.</summary>
+        public bool Puhuu(string henkiloId, out PuheTila tila)
+        {
+            tila = default;
+            foreach (var kv in nykyiset)
+            {
+                var r = kv.Value; string h = r.Hahmo;
+                if (string.IsNullOrEmpty(h) || !(henkiloId == h || henkiloId.StartsWith(h + "-", StringComparison.Ordinal))) continue;
+                if (!puhujat.TryGetValue(kv.Key, out var a) || a == null || !a.isPlaying || a.clip != r.Klippi) continue;
+                tila = new PuheTila(r.Tunnus, a.time, r.Kohdistus, r.Ilme, r.Katse, r.Eleet, Taso(r, a.time));
+                return true;
+            }
+            return false;
+        }
+        readonly Dictionary<string, Repliikki> nykyiset = new Dictionary<string, Repliikki>(StringComparer.Ordinal);
+        public const int VerhoHz = 50;
+        /// <summary>Klipin voimakkuuskäyrä (RMS 20 ms:n ikkunoissa) latauksessa: leuka ei riipu mikseristä eikä mykistyksestä
+        /// (simulaattorin testimykistyksessä GetOutputData antoi nollaa, ajo 11.10. 15.03).</summary>
+        static float[] Verho(AudioClip c)
+        {
+            if (c == null || c.samples <= 0) return null;
+            var d = new float[c.samples * c.channels];
+            if (!c.GetData(d, 0)) return null;
+            int ikkuna = Math.Max(1, c.frequency * c.channels / VerhoHz), n = (d.Length + ikkuna - 1) / ikkuna;
+            var v = new float[n];
+            for (int i = 0; i < n; i++)
+            {
+                double s = 0; int a = i * ikkuna, b = Math.Min(d.Length, a + ikkuna);
+                for (int j = a; j < b; j++) s += d[j] * d[j];
+                v[i] = (float)Math.Sqrt(s / Math.Max(1, b - a));
+            }
+            return v;
+        }
+        static float Taso(Repliikki r, double kohta)
+        {
+            if (r.Verho == null || r.Verho.Length == 0) return 0f;
+            return r.Verho[Math.Clamp((int)(kohta * VerhoHz), 0, r.Verho.Length - 1)];
         }
 
         /// <summary>Repliikki kiinteästä paikasta (tilan hahmo, jolla ei ole omaa Transformia seikkailussa, esim. kokki liedellä).</summary>
@@ -124,6 +205,7 @@ namespace Matkakirja.Natiivi
                 puhujat[avain] = a;
             }
             puhujaT[avain] = puhuja;
+            nykyiset[avain] = r;
             a.Stop(); a.clip = r.Klippi; a.volume = Voimakkuus * SeikkailuAanet.Taso("repliikit", HahmonId(r.Hahmo)); a.Play();   // ☰-mikseri "Hahmojen repliikit", hahmoittain
             kirjaa?.Invoke($"seikkailu: repliikki {r.Tunnus} ({r.Hahmo}, {r.KestoS:F1} s)");
         }

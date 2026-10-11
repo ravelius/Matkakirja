@@ -71,7 +71,7 @@ namespace Matkakirja.Natiivi
         /// (AsetaGlb) — siihen asti hahmo on täysin näkymätön (2D-kortti on varalla tälle ajalle, ks. tiedoston
         /// yläkommentti — POIKKEAMA: toisin kuin 2D-atlas, jolla on harmaa paikkamerkki latauksen ajaksi, 3D:llä
         /// ei ole yleistä paikkamerkkigeometriaa; lyhyt latausviive näkyy hahmon puuttumisena, ei harmaana).</summary>
-        sealed class Esiintyma
+        sealed partial class Esiintyma
         {
             /// <summary>FACEIT: blend shape -kasvot (renderer, Visemit.Nimet-indeksit, silmien räpäytys); null = ei muotoja.</summary>
             public List<(SkinnedMeshRenderer R, int[] Suu, int Vasen, int Oikea)> Kasvot;
@@ -183,6 +183,7 @@ namespace Matkakirja.Natiivi
                 else tr.localScale = new Vector3(sk.S[i * 3], sk.S[i * 3 + 1], sk.S[i * 3 + 2]);
             }
             if (e.IrrallinenJalat) IkJalat(e, leike);
+            IrrallisenKasvot(e);   // FACEIT-kasvot, katse ja eleet repliikkien tahdissa (DioraamaHahmot3D.Kasvot.cs)
         }
 
         /// <summary>Keskustelun puhuja (KuunnelmaKaistale.PuhuvaHahmo; DioraamaSovitin asettaa joka kehys) ja tila. Saman huoneen
@@ -489,6 +490,7 @@ namespace Matkakirja.Natiivi
                         for (int v = 0; v < suu.Length; v++) suu[v] = sm.Mesh.GetBlendShapeIndex(Visemit.Nimet[v]);
                         (e.Kasvot ??= new List<(SkinnedMeshRenderer, int[], int, int)>()).Add(
                             (smr, suu, sm.Mesh.GetBlendShapeIndex("eyeBlinkLeft"), sm.Mesh.GetBlendShapeIndex("eyeBlinkRight")));
+                        LisaaKasvoIndeksit(e, sm.Mesh);   // ilme ja silmät (DioraamaHahmot3D.Kasvot.cs)
                     }
                 }
                 if (e.Kasvot != null) Debug.Log($"MATKAKIRJA linssit: kasvot {e.HahmoId}: {e.Kasvot.Count} muotomeshiä");

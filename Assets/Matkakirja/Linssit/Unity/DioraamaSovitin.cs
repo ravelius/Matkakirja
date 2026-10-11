@@ -2275,6 +2275,19 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa($"poikki: puolilähikuva {(Puolilahi ? "päällä" : "pois")}");
                 return;
             }
+            // "poikki kasvot 0|1 | ilme <ilme>|pois | soita <tunnus> | tila": irrallisten hahmojen kasvot (soutaja 11.10., DioraamaHahmot3D.Kasvot.cs).
+            if (mita == "kasvot")
+            {
+                if (arvo == "0" || arvo == "1") DioraamaHahmot3D.KasvotPaalla = arvo == "1";
+                else if (arvo == "ilme" && osat.Length > 3) DioraamaHahmot3D.PakotettuIlme = osat[3] == "pois" ? null : osat[3];
+                else if (arvo == "soita" && osat.Length > 3 && SeikkailuRepliikit.Aktiivinen != null)
+                {
+                    var paa = nayttamo?.Hahmot3D?.IrrallisenSolmu("soutaja-1500", "Head");
+                    o.Kirjaa($"poikki: kasvot soita {osat[3]} {(paa != null ? SeikkailuRepliikit.Aktiivinen.Soita(osat[3], paa) : SeikkailuRepliikit.Aktiivinen.Soita(osat[3], Vector3.zero)):F1} s");
+                }
+                o.Kirjaa($"poikki: kasvot {(DioraamaHahmot3D.KasvotPaalla ? "päällä" : "pois")}, ilme {DioraamaHahmot3D.PakotettuIlme ?? "merkinnän mukaan"}; {DioraamaHahmot3D.KasvoTila}");
+                return;
+            }
             // "poikki eleet 0|1": eleet puheen tahdissa (ajoitetut kertaeleet, nyökkäykset, katse, harhailu) pois/päällä A/B:tä varten.
             if (mita == "eleet")
             {
