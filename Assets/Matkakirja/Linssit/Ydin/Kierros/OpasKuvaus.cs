@@ -696,6 +696,37 @@ namespace Matkakirja.Linssit.Kierros
             return new Kuvakulma(a.Lat + (b.Lat - a.Lat) * s, a.Lon + (b.Lon - a.Lon) * s, et, Math.Atan2(vaaka, du) / A, suunta, ku);
         }
 
+        /// <summary>
+        /// Pystysuoran rakenteen (juuri alaM, huippu ylaM, m ellipsoidista; säde sadeM) paikka kuvassa: suurin |x| tai |y|
+        /// normalisoiduissa kuvakoordinaateissa (−1…1 = kuvan reunat; pystykulma KuvaPystyAst, kuvasuhde suhde) juuren ja huipun
+        /// neljästä reunapisteestä; kameran takana → PositiveInfinity. PT 11.10. 05.2x: San Marcon kellotorni kuvassa koko kierron.
+        /// </summary>
+        public static double KuvassaOsuus(Kuvakulma k, double lat, double lon, double alaM, double ylaM, double sadeM, double suhde)
+        {
+            const double R = 6371000, A = Math.PI / 180;
+            var s = KameraPaikka(k, lat, lon);   // silmä rakenteen juuren ENU:ssa
+            double te = (k.Lon - lon) * R * Math.Cos(lat * A) * A - s.e, tn = (k.Lat - lat) * R * A - s.n, tu = k.KatseKorkeusM - s.u;
+            double fl = Math.Sqrt(te * te + tn * tn + tu * tu);
+            if (fl < 1e-6) return double.PositiveInfinity;
+            double fe = te / fl, fn = tn / fl, fu = tu / fl;
+            // Oikea = eteen × ylös (vaakataso), ylös = oikea × eteen.
+            double re = fn, rn = -fe, rl = Math.Sqrt(re * re + rn * rn);
+            if (rl < 1e-9) return double.PositiveInfinity;
+            re /= rl; rn /= rl;
+            double ue = -rn * fu, un = re * fu, uu = rn * fe - re * fn;
+            double tanY = Math.Tan(KuvaPystyAst * A / 2), tanX = tanY * suhde, suurin = 0;
+            foreach (double z in new[] { alaM, ylaM })
+                for (int i = 0; i < 4; i++)
+                {
+                    double de = -s.e + (i == 0 ? sadeM : i == 1 ? -sadeM : 0), dn = -s.n + (i == 2 ? sadeM : i == 3 ? -sadeM : 0), du = z - s.u;
+                    double sz = de * fe + dn * fn + du * fu;
+                    if (sz <= 1) return double.PositiveInfinity;
+                    double x = (de * re + dn * rn) / sz / tanX, y = (de * ue + dn * un + du * uu) / sz / tanY;
+                    suurin = Math.Max(suurin, Math.Max(Math.Abs(x), Math.Abs(y)));
+                }
+            return suurin;
+        }
+
         /// <summary>Kameran paikka (m) paikallisessa ENU:ssa pisteestä (lat0, lon0): katsekohde − katsesuunta × etäisyys.</summary>
         public static (double e, double n, double u) KameraPaikka(Kuvakulma k, double lat0, double lon0)
         {

@@ -499,7 +499,8 @@ namespace Matkakirja.Linssit.Testit
                 var a = Aja(Profiili.Normaali, "venetsia", su); var x = Asennot(a, "Q217527");
                 double s0 = x[0].SilmaM, smax = x.Max(y => y.SilmaM);
                 Console.WriteLine($"      San Marco ({(double.IsNaN(su) ? "-" : su.ToString("F0"))}°): saapuessa et {x[0].EtM:F0} m, silmä {s0:F0} m, kallistus {x[0].Kallistus:F0}°, silmä enintään {smax:F0} m");
-                if (x[0].EtM < 200 || s0 < 60) viat.Add($"San Marco {su}: ei vanhaa kehystä (et {x[0].EtM:F0}, silmä {s0:F0})");
+                // PT 11.10. 05.2x (TorniKuvaan): katsepiste tornin puolelle ja ylemmäs, katse-etäisyys ~200 m (vaakasäde sama), raja 200 → 190 m.
+                if (x[0].EtM < 190 || s0 < 60) viat.Add($"San Marco {su}: ei vanhaa kehystä (et {x[0].EtM:F0}, silmä {s0:F0})");
                 if (smax > s0 + 10) viat.Add($"San Marco {su}: silmä nousi {s0:F0} → {smax:F0} m");
             }
             // Este selviää vasta perillä (simu 40f578863: lukitun kaupungin lista ilman luokkaa, kellotornin korkeus vasta esihaun
@@ -521,6 +522,64 @@ namespace Matkakirja.Linssit.Testit
             var v = Asennot(Aja(Profiili.Normaali, "praha"), "Q847613"); var vs = Asennot(Aja(Profiili.Normaali, "praha"), "Q421678");
             Console.WriteLine($"      Venceslas: et {v[0].EtM:F0} → {v[^1].EtM:F0} m, silmä {v.Min(y => y.SilmaM):F0}–{v.Max(y => y.SilmaM):F0} m; Vanhankaupungin aukio (kello 97 m): et {vs[0].EtM:F0} m, silmä {vs[0].SilmaM:F0} m");
             if (v[0].EtM < 180 || v[0].SilmaM < 50) viat.Add($"Venceslas: alku {v[0].EtM:F0} m, silmä {v[0].SilmaM:F0} m");
+            Oleta.Tosi(viat.Count == 0, string.Join("; ", viat));
+        }
+
+        // ---- TORNI KOKONAAN KUVASSA (PT 11.10. 05.2x, todistus-aukiot-jalkeen4-181: San Marcon pysähdyksen lopussa kellotorni
+        // valui kierron mukana kuvan oikeaan reunaan) ----
+        /// <summary>Tornin (juuri ja huippu, säde min(15, koko/2)) ja torin pisteen paikka kuvassa joka 0,5 s saapumisesta lähtöön:
+        /// suurin |x|/|y| (−1…1 = reuna, iPad vaaka 4:3, pystykulma 50°) koko pysähdyksellä ja lopussa.</summary>
+        public static (double koko, double loppu, double tori, int n) TorniKuvassa(Ajo a, string aukio, string torni, double alkaenS = 0)
+        {
+            var q = a.Reitti.First(x => x.Id == aukio); var t = a.Reitti.First(x => x.Id == torni);
+            double h = t.KorkeusM > 0 ? t.KorkeusM : OpasSilmukka.EsteKorkeusLuokasta(t.Luokka);   // kuten kylvö: luokan nimelliskorkeus
+            double t0 = a.Saapui[aukio], t1 = a.Lahti.TryGetValue(aukio, out var l) ? l : a.R[^1].t, seur = t0 + alkaenS, koko = 0, loppu = 0, tori = 0; int n = 0;
+            foreach (var r in a.R)
+            {
+                if (r.t < seur - 1e-6 || r.t > t1 + 1e-6 || r.kohde != aukio) continue;
+                seur += 0.5; n++;
+                double m = OpasKuvaus.KuvassaOsuus(r.a, t.Lat, t.Lon, MaaM, MaaM + h, Math.Min(15, 0.5 * t.KokoM), 4.0 / 3);
+                koko = Math.Max(koko, m); loppu = m;
+                tori = Math.Max(tori, OpasKuvaus.KuvassaOsuus(r.a, q.Lat, q.Lon, MaaM, MaaM, 0, 4.0 / 3));
+            }
+            return (koko, loppu, tori, n);
+        }
+
+        /// <summary>Raja: torni ja tori kuvassa 5 %:n marginaalilla (kuvan reunassa korin köydet).</summary>
+        public const double TorniReuna = 0.9;
+
+        [Testi] static void SanMarcoKellotorniKuvassaKokoKierron()
+        {
+            var viat = new List<string>();
+            // Kellotorni (Q754194, 99 m, 81 m torin pisteestä itään) joka tulosuunnasta, kylvö tuotannon tapaan (liiku-listan luokka ja korkeus_m).
+            foreach (double su in new[] { double.NaN, 0, 45, 90, 135, 180, 225, 270, 315 })
+            {
+                var a = Aja(Profiili.Normaali, "venetsia", su); var x = Asennot(a, "Q217527");
+                var m = TorniKuvassa(a, "Q217527", "Q754194");
+                double kaari = 0; for (int i = 1; i < x.Count; i++) kaari += Math.Abs(KierrosLento.Kiedo(x[i].SilmaSuunta - x[i - 1].SilmaSuunta));
+                double kesto = x.Count > 1 ? x[^1].T - x[0].T : 0;
+                Console.WriteLine($"      San Marco ({(double.IsNaN(su) ? "-" : su.ToString("F0"))}°): torni enintään {m.koko:F2}, lopussa {m.loppu:F2}, tori enintään {m.tori:F2} ({m.n} näytettä), kierto {kaari:F0}° / {kesto:F0} s, silmä {x[0].SilmaM:F0}–{x.Max(y => y.SilmaM):F0} m");
+                if (m.n < 10) viat.Add($"San Marco {su}: näytteitä {m.n}");
+                if (m.koko > TorniReuna) viat.Add($"San Marco {su}: torni {m.koko:F2} (lopussa {m.loppu:F2})");
+                if (m.tori > TorniReuna) viat.Add($"San Marco {su}: tori {m.tori:F2}");
+            }
+            // Ilman kylvöä (lista ilman luokkaa, simu 40f578863): torni selviää vasta perillä, kehys siirtyy PalloKehysSiirtoS:ssä → lopussa kuvassa.
+            foreach (double su in new[] { double.NaN, 0, 315 })
+            {
+                var a = Aja(Profiili.Normaali, "venetsia", su, 14, false, false);
+                var m = TorniKuvassa(a, "Q217527", "Q754194");
+                Console.WriteLine($"      San Marco ilman kylvöä ({(double.IsNaN(su) ? "-" : su.ToString("F0"))}°): torni enintään {m.koko:F2}, lopussa {m.loppu:F2}, tori enintään {m.tori:F2}");
+                if (m.loppu > TorniReuna || m.tori > TorniReuna) viat.Add($"San Marco ilman kylvöä {su}: lopussa torni {m.loppu:F2}, tori {m.tori:F2}");
+            }
+            // Muut aukiot korkean (≥ 60 m) tornin tai kirkon vieressä (alle 150 m): sama tilanne ja sama kehys (Concorde, Venceslas ym. ennallaan).
+            foreach (var (kaupunki, aukio, torni) in new[] { ("praha", "Q421678", "Q729370"), ("helsinki", "Q1329554", "Q738015"), ("krakova", "Q770631", "Q1143171"), ("sisilia", "Q1665695", "Q2066497") })
+            {
+                var a = Aja(Profiili.Normaali, kaupunki);
+                if (!a.Saapui.ContainsKey(aukio)) { viat.Add($"{kaupunki} {aukio}: ei saavuttu"); continue; }
+                var p = TorniKuvassa(a, aukio, torni);
+                Console.WriteLine($"      {a.Reitti.First(x => x.Id == aukio).Nimi}: {a.Reitti.First(x => x.Id == torni).Nimi} enintään {p.koko:F2}, lopussa {p.loppu:F2}, aukio enintään {p.tori:F2}");
+                if (p.koko > TorniReuna || p.tori > TorniReuna) viat.Add($"{kaupunki} {aukio}: torni {p.koko:F2}, aukio {p.tori:F2}");
+            }
             Oleta.Tosi(viat.Count == 0, string.Join("; ", viat));
         }
 }
