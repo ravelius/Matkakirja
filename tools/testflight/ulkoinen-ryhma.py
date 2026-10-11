@@ -2,7 +2,9 @@
 """Ulkoinen TestFlight-ryhmä (apurahan arvioijien julkinen linkki).
 
 Omistaja 30.9.2026: ulkoisen ryhmän pitää saada AINA uusin PASS-build
-(korvaa 23.9.:n säännön "vain omistajan kortilla").
+(korvaa 23.9.:n säännön "vain omistajan kortilla"). Omistaja 11.10.2026: raadille
+oma ryhmä "Beta-testaajat" omalla linkillä, sama build kaikille julkisen linkin
+ryhmille (--ryhma tyhjä = kaikki ne; --luo-ryhma luo uuden ryhmän).
 
 Tila (aina): ulkoiset ryhmät, julkinen linkki ja sen raja, testaajien määrä,
 ryhmän uusimmat buildit sekä käyttötilastot (publicLinkUsages,
@@ -48,7 +50,8 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument('--bundle-id', required=True)
     p.add_argument('--build', default='')
-    p.add_argument('--ryhma', default='', help='ulkoisen ryhmän nimi (tyhjä = ainoa tai julkisen linkin ryhmä)')
+    p.add_argument('--ryhma', default='', help='ulkoisten ryhmien nimet pilkuin (tyhjä = kaikki julkisen linkin ryhmät)')
+    p.add_argument('--luo-ryhma', default='', help='luo ulkoinen ryhmä julkisella linkillä (raja 100), ellei ole')
     p.add_argument('--odota-min', type=int, default=45)
     p.add_argument('--vanhenna', default='', help='pilkuin erotetut CFBundleVersionit, jotka vanhennetaan ensin')
     p.add_argument('--poista', default='', help='pilkuin erotetut CFBundleVersionit, jotka irrotetaan ulkoisesta ryhmästä (sisäisille jäävät)')
@@ -87,9 +90,36 @@ def main():
         virhe('Testiryhmiä ei saatu', f'{tila}: {d}')
     ulkoiset = [g for g in d.get('data', []) if not g['attributes'].get('isInternalGroup')]
     if not ulkoiset:
-        virhe('Ulkoista testiryhmää ei ole', 'Luo ulkoinen ryhmä ja julkinen linkki kerran App Store Connectissa.')
+        if not a.luo_ryhma:
+            virhe('Ulkoista testiryhmää ei ole', 'Luo ulkoinen ryhmä: --luo-ryhma <nimi>.')
 
-    kirjaa('## Ulkoinen TestFlight-ryhmä')
+    # UUSI RYHMÄ (omistaja 11.10.2026 09.5x: "oma linkki testaajille, mutta sama versio kummallekin"): --luo-ryhma luo
+    # ulkoisen ryhmän julkisella linkillä (raja 100) ja liittää siihen samat voimassa olevat buildit kuin julkisen linkin
+    # ryhmissä on, jotta molemmissa on sama versio heti. Olemassa olevaa samannimistä ryhmää ei luoda uudelleen.
+    if a.luo_ryhma and not any(g['attributes'].get('name') == a.luo_ryhma for g in ulkoiset):
+        tila, d = kutsu('POST', '/v1/betaGroups', {'data': {
+            'type': 'betaGroups',
+            'attributes': {'name': a.luo_ryhma, 'publicLinkEnabled': True, 'publicLinkLimitEnabled': True,
+                           'publicLinkLimit': 100, 'feedbackEnabled': True},
+            'relationships': {'app': {'data': {'type': 'apps', 'id': app_id}}}}})
+        if tila not in (200, 201):
+            virhe('Ryhmän luonti epäonnistui', f'{a.luo_ryhma}: {tila}: {d}')
+        uusi = d['data']
+        kirjaa(f"Ryhmä {a.luo_ryhma} luotu: julkinen linkki {uusi['attributes'].get('publicLink')}, raja 100.")
+        lahteet = [g for g in ulkoiset if g['attributes'].get('publicLinkEnabled')]
+        liitettavat = set()
+        for g in lahteet:
+            tila, r = kutsu('GET', f"/v1/betaGroups/{g['id']}/builds?limit=200&fields[builds]=version,expired")
+            liitettavat |= {b['id'] for b in r.get('data', []) if not b['attributes'].get('expired')} if tila == 200 else set()
+        if liitettavat:
+            tila, r = kutsu('POST', f"/v1/betaGroups/{uusi['id']}/relationships/builds",
+                            {'data': [{'type': 'builds', 'id': i} for i in sorted(liitettavat)]})
+            if tila not in (200, 204):
+                virhe('Buildien liitos uuteen ryhmään epäonnistui', f'{tila}: {r}')
+            kirjaa(f'Uuteen ryhmään liitetty {len(liitettavat)} voimassa olevaa buildia (sama versio kuin muissa).')
+        ulkoiset.append(uusi)
+
+    kirjaa('## Ulkoiset TestFlight-ryhmät')
     for g in ulkoiset:
         at = g['attributes']
         tila, t = kutsu('GET', f"/v1/betaGroups/{g['id']}/betaTesters?limit=1")
@@ -98,48 +128,53 @@ def main():
         kirjaa(f"- **{at.get('name')}**: julkinen linkki {'päällä' if at.get('publicLinkEnabled') else 'pois'}"
                f" ({at.get('publicLink') or '–'}), raja {raja} (max 100), testaajia {maara}")
 
+    # KOHDERYHMÄT (omistaja 11.10.2026: Arvioijat + Beta-testaajat saavat saman buildin): --ryhma pilkuin erotettuina;
+    # tyhjä = kaikki ulkoiset ryhmät, joilla julkinen linkki on päällä (tai ainoa ulkoinen ryhmä).
     if a.ryhma:
-        ryhma = next((g for g in ulkoiset if g['attributes'].get('name') == a.ryhma), None)
-        if not ryhma:
-            virhe('Ryhmää ei löydy', a.ryhma)
+        nimet = [x.strip() for x in a.ryhma.split(',') if x.strip()]
+        ryhmat = [g for g in ulkoiset if g['attributes'].get('name') in nimet]
+        puuttuu = set(nimet) - {g['attributes'].get('name') for g in ryhmat}
+        if puuttuu:
+            virhe('Ryhmää ei löydy', ', '.join(sorted(puuttuu)))
     elif len(ulkoiset) == 1:
-        ryhma = ulkoiset[0]
+        ryhmat = ulkoiset
     else:
-        linkilliset = [g for g in ulkoiset if g['attributes'].get('publicLinkEnabled')]
-        if len(linkilliset) != 1:
-            virhe('Ryhmä epäselvä', 'Useita ulkoisia ryhmiä; anna --ryhma.')
-        ryhma = linkilliset[0]
-    ryhma_id = ryhma['id']
-    kirjaa(f"Kohderyhmä: {ryhma['attributes'].get('name')}")
+        ryhmat = [g for g in ulkoiset if g['attributes'].get('publicLinkEnabled')]
+        if not ryhmat:
+            virhe('Ryhmä epäselvä', 'Useita ulkoisia ryhmiä ilman julkista linkkiä; anna --ryhma.')
+    kirjaa(f"Kohderyhmät: {', '.join(g['attributes'].get('name') for g in ryhmat)}")
 
-    tila, d = kutsu('GET', f'/v1/betaGroups/{ryhma_id}/builds?limit=5&fields[builds]=version,uploadedDate,expired,processingState')
-    if tila == 200:
-        buildit = sorted(d.get('data', []), key=lambda b: b['attributes'].get('uploadedDate') or '', reverse=True)
-        if buildit:
-            kirjaa('Ryhmän uusimmat buildit:')
-            for b in buildit[:3]:
-                bat = b['attributes']
-                vanha = ' (vanhentunut)' if bat.get('expired') else ''
-                kirjaa(f"  - {bat.get('version')} ladattu {bat.get('uploadedDate')}{vanha}")
+    for ryhma in ryhmat:
+        ryhma_id = ryhma['id']
+        nimi = ryhma['attributes'].get('name')
+        tila, d = kutsu('GET', f'/v1/betaGroups/{ryhma_id}/builds?limit=5&fields[builds]=version,uploadedDate,expired,processingState')
+        if tila == 200:
+            buildit = sorted(d.get('data', []), key=lambda b: b['attributes'].get('uploadedDate') or '', reverse=True)
+            if buildit:
+                kirjaa(f'{nimi}: uusimmat buildit:')
+                for b in buildit[:3]:
+                    bat = b['attributes']
+                    vanha = ' (vanhentunut)' if bat.get('expired') else ''
+                    kirjaa(f"  - {bat.get('version')} ladattu {bat.get('uploadedDate')}{vanha}")
+            else:
+                kirjaa(f'{nimi}: ryhmässä ei ole buildeja.')
         else:
-            kirjaa('Ryhmässä ei ole buildeja.')
-    else:
-        kirjaa(f'::warning::Ryhmän buildeja ei saatu: {tila}')
+            kirjaa(f'::warning::{nimi}: ryhmän buildeja ei saatu: {tila}')
 
-    # betaTesterUsages vaatii groupBy=betaTesters (ilman sitä 400, ajo 36689621711).
-    for mittari, kysely in (('publicLinkUsages', ''), ('betaTesterUsages', '?groupBy=betaTesters&period=P365D')):
-        tila, d = kutsu('GET', f'/v1/betaGroups/{ryhma_id}/metrics/{mittari}{kysely}')
-        if tila != 200:
-            syy = '; '.join(e.get('detail') or e.get('title', '') for e in d.get('errors', [])) if isinstance(d, dict) else ''
-            kirjaa(f'- {mittari}: ei saatu ({tila}) {syy[:200]}')
-            continue
-        yhteensa = {}
-        for sarja in d.get('data', []):
-            for piste in sarja.get('dataPoints', []):
-                for k, v in (piste.get('values') or {}).items():
-                    if isinstance(v, (int, float)):
-                        yhteensa[k] = yhteensa.get(k, 0) + v
-        kirjaa(f"- {mittari}: {', '.join(f'{k} {v}' for k, v in sorted(yhteensa.items())) or 'ei käyttöä'}")
+        # betaTesterUsages vaatii groupBy=betaTesters (ilman sitä 400, ajo 36689621711).
+        for mittari, kysely in (('publicLinkUsages', ''), ('betaTesterUsages', '?groupBy=betaTesters&period=P365D')):
+            tila, d = kutsu('GET', f'/v1/betaGroups/{ryhma_id}/metrics/{mittari}{kysely}')
+            if tila != 200:
+                syy = '; '.join(e.get('detail') or e.get('title', '') for e in d.get('errors', [])) if isinstance(d, dict) else ''
+                kirjaa(f'- {nimi} {mittari}: ei saatu ({tila}) {syy[:200]}')
+                continue
+            yhteensa = {}
+            for sarja in d.get('data', []):
+                for piste in sarja.get('dataPoints', []):
+                    for k, v in (piste.get('values') or {}).items():
+                        if isinstance(v, (int, float)):
+                            yhteensa[k] = yhteensa.get(k, 0) + v
+            kirjaa(f"- {nimi} {mittari}: {', '.join(f'{k} {v}' for k, v in sorted(yhteensa.items())) or 'ei käyttöä'}")
 
     for vb in [x.strip() for x in a.vanhenna.split(',') if x.strip()]:
         tila, d = kutsu('GET', f'/v1/builds?filter[app]={app_id}&filter[version]={vb}&limit=5')
@@ -156,22 +191,24 @@ def main():
             virhe('Vanhennus epäonnistui', f'{vb}: {tila}: {d}')
         kirjaa(f'Build {vb}: vanhennettu.')
 
-    # Irrotus ulkoisesta ryhmästä (Päätoimittaja 7.10.2026: TF 162 vikainen, jää vain sisäisille).
+    # Irrotus ulkoisista kohderyhmistä (Päätoimittaja 7.10.2026: TF 162 vikainen, jää vain sisäisille).
     for pb in [x.strip() for x in a.poista.split(',') if x.strip()]:
         tila, d = kutsu('GET', f'/v1/builds?filter[app]={app_id}&filter[version]={pb}&limit=5')
-        loydetyt = d.get('data', []) if tila == 200 else []
-        # Sama CFBundleVersion voi olla iOS- ja macOS-buildilla (TF 162: 2 osumaa) → vain ryhmään liitetyt.
-        tila_r, r = kutsu('GET', f'/v1/betaGroups/{ryhma_id}/relationships/builds?limit=200')
-        ryhmassa = {x['id'] for x in r.get('data', [])} if tila_r == 200 else set()
-        loydetyt = [b for b in loydetyt if b['id'] in ryhmassa]
-        if not loydetyt:
-            kirjaa(f'Build {pb}: ei ryhmässä, ei irrotettavaa.')
-            continue
-        tila, d = kutsu('DELETE', f'/v1/betaGroups/{ryhma_id}/relationships/builds',
-                        {'data': [{'type': 'builds', 'id': b['id']} for b in loydetyt]})
-        if tila not in (200, 204):
-            virhe('Irrotus ulkoisesta ryhmästä epäonnistui', f'{pb}: {tila}: {d}')
-        kirjaa(f'Build {pb}: irrotettu ulkoisesta ryhmästä.')
+        kaikki_osumat = d.get('data', []) if tila == 200 else []
+        for ryhma in ryhmat:
+            ryhma_id, nimi = ryhma['id'], ryhma['attributes'].get('name')
+            # Sama CFBundleVersion voi olla iOS- ja macOS-buildilla (TF 162: 2 osumaa) → vain ryhmään liitetyt.
+            tila_r, r = kutsu('GET', f'/v1/betaGroups/{ryhma_id}/relationships/builds?limit=200')
+            ryhmassa = {x['id'] for x in r.get('data', [])} if tila_r == 200 else set()
+            loydetyt = [b for b in kaikki_osumat if b['id'] in ryhmassa]
+            if not loydetyt:
+                kirjaa(f'Build {pb}: ei ryhmässä {nimi}, ei irrotettavaa.')
+                continue
+            tila, d = kutsu('DELETE', f'/v1/betaGroups/{ryhma_id}/relationships/builds',
+                            {'data': [{'type': 'builds', 'id': b['id']} for b in loydetyt]})
+            if tila not in (200, 204):
+                virhe('Irrotus ulkoisesta ryhmästä epäonnistui', f'{pb} {nimi}: {tila}: {d}')
+            kirjaa(f'Build {pb}: irrotettu ryhmästä {nimi}.')
 
     if not a.build:
         return
@@ -193,12 +230,14 @@ def main():
         time.sleep(60)
     build_id = build['id']
 
-    tila, d = kutsu('POST', f'/v1/betaGroups/{ryhma_id}/relationships/builds',
-                    {'data': [{'type': 'builds', 'id': build_id}]})
-    if tila not in (200, 204):
-        virhe('Buildin liitos ulkoiseen ryhmään epäonnistui', f'{tila}: {d}')
-    kirjaa(f'Build {a.build} liitetty ulkoiseen ryhmään.')
+    for ryhma in ryhmat:
+        tila, d = kutsu('POST', f"/v1/betaGroups/{ryhma['id']}/relationships/builds",
+                        {'data': [{'type': 'builds', 'id': build_id}]})
+        if tila not in (200, 204):
+            virhe('Buildin liitos ulkoiseen ryhmään epäonnistui', f"{ryhma['attributes'].get('name')}: {tila}: {d}")
+        kirjaa(f"Build {a.build} liitetty ryhmään {ryhma['attributes'].get('name')}.")
 
+    # Beta-arvio on buildikohtainen: yksi lähetys kattaa kaikki ulkoiset ryhmät.
     tila, d = kutsu('GET', f'/v1/builds/{build_id}/betaAppReviewSubmission')
     olemassa = d.get('data') if tila == 200 else None
     if olemassa:

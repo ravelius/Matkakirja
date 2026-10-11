@@ -2,6 +2,7 @@
 # Omistaja 30.9.2026 (suora lupa Julkaisijan sessiossa): ulkoinen ryhmä saa
 # AINA uusimman PASS-buildin — build liitetään ryhmään ja lähetetään Applen
 # beta-arvioon. Korvaa 23.9.:n säännön "vain omistajan kortilla".
+# Omistaja 11.10.2026: oma linkki raadille ("Beta-testaajat"), sama build kaikille julkisen linkin ryhmille.
 # Tyhjä build_numero = vain tila ja käyttötilastot (publicLinkUsages,
 # betaTesterUsages) yhteenvetoon. Skripti: tools/testflight/ulkoinen-ryhma.py.
 
@@ -15,11 +16,15 @@ on:
         type: string
         default: ''
       ryhma:
-        description: 'Ulkoisen ryhmän nimi (tyhjä = ainoa tai julkisen linkin ryhmä)'
+        description: 'Ulkoisten ryhmien nimet pilkuin (tyhjä = kaikki julkisen linkin ryhmät: Arvioijat + Beta-testaajat)'
         type: string
         default: ''
       vanhenna:
         description: 'Pilkuin erotetut CFBundleVersionit, jotka vanhennetaan ensin (vain omistajan luvalla)'
+        type: string
+        default: ''
+      luo_ryhma:
+        description: 'Luo ulkoinen ryhmä julkisella linkillä (raja 100) ja samoilla buildeilla, ellei ole (omistajan luvalla)'
         type: string
         default: ''
       poista:
@@ -76,10 +81,11 @@ jobs:
           RYHMA: ${{ inputs.ryhma }}
           VANHENNA: ${{ inputs.vanhenna }}
           POISTA: ${{ inputs.poista }}
+          LUO_RYHMA: ${{ inputs.luo_ryhma }}
         run: |
           set -euo pipefail
           python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
-          python3 tools/testflight/ulkoinen-ryhma.py --bundle-id "${{ inputs.bundle_id }}" --build "$BUILD" --ryhma "$RYHMA" --vanhenna "$VANHENNA" --poista "$POISTA"
+          python3 tools/testflight/ulkoinen-ryhma.py --bundle-id "${{ inputs.bundle_id }}" --build "$BUILD" --ryhma "$RYHMA" --vanhenna "$VANHENNA" --poista "$POISTA" --luo-ryhma "$LUO_RYHMA"
 
       - name: Siivoa avain
         if: always()
