@@ -2,8 +2,18 @@
 // Tämä moduuli ei tiedä mitään DOM:ista, joten sen voi testata suoraan Nodella.
 
 // Matkustamisen hinnat ovat samat kaikilla laudoilla.
-export const SEA_FEE = 100;
-export const FLIGHT_PRICE = 300;
+// TALOUS 300 (omistaja 11.10.2026 klo 22.4x PT:n kautta, juna 183): matkustus kalliimmaksi, niin että
+// ilman tuloja ei pääse Ateenasta Pariisiin eikä aloituskaupungista Euroopan toiseen laitaan
+// (ennen laiva 100, lento 300, bussi 50). Arvot kulkevat sisältöpaketin saannot-kokoelmassa natiiviin
+// (Peli/Sopimukset.cs Hinnasto.Nykyinen; mitoitus proto tyokalut/talouslaskuri.py).
+export const SEA_FEE = 200;
+export const FLIGHT_PRICE = 350;
+/*
+ * KYYTIMAKSU (juna 183, VAIN NATIIVI): liftaus maksaa natiivissa 50 £ kerran
+ * kaupungista lähdettäessä (kuten laivalippu). Webin peli ei veloita sitä;
+ * vakio on tässä, jotta arvo kulkee paketin saannot-kokoelmassa natiiviin.
+ */
+export const KYYTI_HINTA = 50;
 /*
  * BUSSILIPPU (omistaja 13.9.2026, karttauudistuksen Liiku-nappi,
  * sanatarkasti: *"bussi kahden vierekkaisen kaupungin valilla (50p)"*).
@@ -19,7 +29,7 @@ export const FLIGHT_PRICE = 300;
  * (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 1 kohta 4: *"pelaaja voi
  * valita rahan puutteessa hitaamman tavan edeta"*).
  */
-export const BUS_FARE = 50;
+export const BUS_FARE = 80; // juna 183 (ennen 50)
 
 /**
  * Sijainti on joko kaupungissa tai reitin varrella:
