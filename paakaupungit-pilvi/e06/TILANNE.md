@@ -13,8 +13,8 @@ Vaihe 0: yhdeksän kontekstia ja saa-syote.json luotu alkuperäisellä tyokalu.m
 | saotome | A koottu; 6 ehdotusta, Obô-rajaus ja 2 kirkon oikeusportti avoin | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | bangui | lähdepaketti tehty; täysi A estyy karttaminimiin, 1 ruokanostoon ja opasminimiin | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | brazzaville | A koottu; 6 ehdotusta, 1 koordinaattipoikkeus ja katedraalin vanhan kuvan portti | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
-| kinshasa | lähteiden luku käynnissä | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
-| luanda | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
+| kinshasa | A koottu; 6 Wiki/Wikidata-ehdotusta, retkirajaus/zoo-nykytila/Lola-lupa avoin | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
+| luanda | lähteiden luku käynnissä | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | kigali | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | gitega | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 
@@ -49,3 +49,7 @@ UNESCO metallurginen historia luettu. FOP-yhteenveto ei kata still-valokuvia suo
 ## Brazzaville A
 
 0–9 koottu, musiikkiteema UNESCO City/Rumba-lähteillä. Kuusi ehdotusta, Ramsar-piste ensisijaislähteestä poikkeusehdotuksena, ei Wikipedia/Wikidata. Ile Mbamou -hallintoalueen väärä kaupunkipiste hylätty; Mbamu-saaren oikea piste luettu. Erell-teokset pois; katedraalista vain varmennettava vapaa ennen suojattuja uudistuksia oleva vanha asu. Luontopaikkojen mahdollinen yhdistäminen ja rajaus pääsession ratkaistava. Kinshasaan ei samaa rumbateemaa.
+
+## Kinshasa A
+
+0–9 koottu, kuusi luontopainotteista koordinaattia Wikipedia/Wikidata. Maalehden ruokaa/rumbaa ei toisteta; teema kasvipuutarhan toimintaan ja bonobosuojaan. UM:n nykyinen matkustustiedote luettu. Eteläiset kolme kohdetta erillinen retkialue: karttarajauspoikkeus avoin. Zoo-domain ei ratkennut, nykytilaa ei luvata. Lolan virallinen kuvauspolitiikka ammattilaisille lupa / puhelinkuvat henkilökohtaisia; valittavan kaupallisen tiedoston ja paikkaluvan portti avoin. Ei kuva- tai karttahyväksyntää.
