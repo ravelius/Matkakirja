@@ -322,6 +322,8 @@ namespace Matkakirja.Natiivi
                     var h = m.Hehku;
                     h.schedule.Execute(() =>
                     {
+                        // Hidas häivytys vain "Vähennä liikettä" -asetuksella; muuten sykäys (Videopelit.KytkeSykaisy).
+                        if (!LinssiUi.VahennettyLiike()) { h.RemoveFromClassList("mk-nosto-merkki__hehku--syke"); return; }
                         if (!h.ClassListContains("mk-nosto-merkki__hehku--videopeli") || h.resolvedStyle.display == DisplayStyle.None || h.panel == null) return;
                         h.ToggleInClassList("mk-nosto-merkki__hehku--syke");
                         Ruudunpaivitys.Herata(2.6f);
@@ -329,6 +331,7 @@ namespace Matkakirja.Natiivi
                 }
                 if (m.HehkuKuva != hehkuTex) { m.HehkuKuva = hehkuTex; m.Hehku.style.backgroundImage = new StyleBackground(hehkuTex); }
                 m.Hehku.EnableInClassList("mk-nosto-merkki__hehku--videopeli", peli);
+                if (peli) Videopelit.KytkeSykaisy(m.Hehku);
                 float koko = ruutuPx * HehkunKoko;
                 m.Hehku.style.width = m.Hehku.style.height = koko;
                 m.Hehku.style.left = m.Hehku.style.top = (ruutuPx - koko) / 2f;
