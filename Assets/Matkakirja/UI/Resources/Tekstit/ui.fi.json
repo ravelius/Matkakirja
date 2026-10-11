@@ -243,6 +243,8 @@
  "ui.nosto.lehti": "Lehti",
  "ui.nosto.pelaa": "Pelaa {0}",
  "ui.lautapelinosto.pelaa": "Pelaa: {0}",
+ "ui.lautapelinosto.luokka": "Lautapeli",
+ "ui.nosto.pelaa-ilmaiseksi": "Pelaa",
  "ui.nosto.jatka": "Jatka",
  "ui.nosto.aloita-alusta": "Aloita alusta {0}",
  "ui.nosto.suurenna-kartta": "Suurenna kartta",

@@ -1,6 +1,7 @@
 // LAUTAPELINOSTOT (Natiivi-UI; omistaja hyväksyi 11.10.2026 klo 14.2x Päätoimittajan kautta, juna 182): lautapelit nostoina omissa
 // kaupungeissaan, Mylly Berliinissä ja Tavli Ateenassa (Peliluettelo.Koti). Sama sininen videopeliteema kuin Olavinlinnalla
-// (tyylikirja teemat.videopeli, Videopelit.Hehku), mutta aina ilmaisia: napautus avaa pelin suoraan (MyllyNakyma/TavliNakyma.
+// (tyylikirja teemat.videopeli, Videopelit.Hehku), mutta aina ilmaisia: napautus avaa videopeliteeman nostokortin (lyhyt
+// esittely + ilmainen Pelaa, Videopelit.Lautapelinosto; PT 11.10. "tee molemmat"), Pelaa avaa pelin (MyllyNakyma/TavliNakyma.
 // AvaaPeli). Kaupunkikortin tehtävätarjous (Peliluettelo.Odottaa) säilyy ennallaan.
 //
 //  - Karttaobjekti ERIKOISNOSTOT-pohjalla kuten kipsipäät ja kaupunkipallot: pyöreä sininen levy, jossa pelin viivaikoni
@@ -23,7 +24,6 @@ namespace Matkakirja.Natiivi
         sealed class Kohde
         {
             public PeliKuvaus Peli;
-            public System.Action<string> Avaa;
             public Button Nappi;
             public double Lat, Lon;
             public string Maa;
@@ -43,14 +43,13 @@ namespace Matkakirja.Natiivi
             juuri = Rakenne.El("mk-erikoisnostot", kerros.Juuri(UiKerros.Nostot), PickingMode.Ignore);
             juuri.name = "lautapelinostot";
             juuri.style.display = DisplayStyle.None;
-            Lisaa(Peliluettelo.Mylly, MyllyNakyma.AvaaPeli);
-            Lisaa(Peliluettelo.Tavli, TavliNakyma.AvaaPeli);
+            foreach (var p in Peliluettelo.Kaikki) Lisaa(p);
             kerros.JokaRuutu += Ruutu;
         }
 
-        void Lisaa(PeliKuvaus peli, System.Action<string> avaa)
+        void Lisaa(PeliKuvaus peli)
         {
-            var k = new Kohde { Peli = peli, Avaa = avaa, Lat = double.NaN, Lon = double.NaN };
+            var k = new Kohde { Peli = peli, Lat = double.NaN, Lon = double.NaN };
             var b = Rakenne.Nappi(null, "mk-erikoisnosto-paa mk-lautapelinosto", () => Avaa(k), juuri);
             b.name = "lautapelinosto-" + peli.Id;   // todistusajon haku
             b.tooltip = Kieli.T("ui.lautapelinosto.pelaa", peli.Nimi);   // VoiceOver
@@ -71,8 +70,9 @@ namespace Matkakirja.Natiivi
 
         static void Avaa(Kohde k)
         {
+            // PT 11.10.: napautus avaa videopeliteeman nostokortin (esittely + ilmainen Pelaa).
             Debug.Log("MATKAKIRJA lautapelinosto: " + k.Peli.Id);
-            k.Avaa(k.Peli.Id);
+            if (UiNakymat.Olemassa) UiNakymat.Hae().Nostokortti.Avaa(Videopelit.PeliEtuliite + k.Peli.Id);
         }
 
         static bool Sallittu()

@@ -2,6 +2,8 @@
 // että pelattava videopeli, saavat sinisen videopelimuunnelman (tyylikirja teemat.videopeli): nostokortti (Nostokortti,
 // mk-nosto--videopeli, kimmel) ja kartan merkki (NostotKartalla: sininen hehkurengas merkin alla, hillitty syke). Ensimmäisenä
 // Olavinlinna (pelattava pala, SeikkailuTapit.AvaaPelaajalle).
+using System;
+using Matkakirja.Peli.Pelit;
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
@@ -20,8 +22,39 @@ namespace Matkakirja.Natiivi
             return System.Array.IndexOf(Valot, v) >= 0;
         }
 
-        /// <summary>Kohdenosto (laji Kohde, tunnus ilman etuliitettä) videopelikohteena.</summary>
-        public static bool Kohde(Nosto n) => n != null && n.Laji == NostoLaji.Kohde && Valo("kohde:" + n.Id);
+        /// <summary>Kohdenosto (laji Kohde, tunnus ilman etuliitettä) videopelikohteena; myös lautapelinosto.</summary>
+        public static bool Kohde(Nosto n) => n != null && n.Laji == NostoLaji.Kohde && (Valo("kohde:" + n.Id) || Lautapeli(n) != null);
+
+        /// <summary>Lautapelinoston valotunnuksen etuliite (Lautapelinostot → Nostokortti.Avaa("peli:mylly")).</summary>
+        public const string PeliEtuliite = "peli:";
+        const string PeliId = "peli-";
+
+        /// <summary>
+        /// LAUTAPELINOSTON KORTTI (PT 11.10.2026: "tee molemmat"): videopeliteeman nostokortti, otsikkona pelin nimi, lyhyt
+        /// esittely ensimmäisen laudan historiatekstistä (Peliluettelo, Sisältökirjuri/Siirtoseppä) ja ilmainen Pelaa-nappi.
+        /// </summary>
+        public static Nosto Lautapelinosto(string valo)
+        {
+            var p = valo != null && valo.StartsWith(PeliEtuliite, StringComparison.Ordinal) ? Peliluettelo.Hae(valo.Substring(PeliEtuliite.Length)) : null;
+            if (p == null) return null;
+            return new Nosto
+            {
+                Laji = NostoLaji.Kohde, Id = PeliId + p.Id, Iso = p.Maat.Length > 0 ? p.Maat[0].Maa : null, Kaupunki = p.Koti,
+                Luokka = Kieli.T("ui.lautapelinosto.luokka"), Otsikko = p.Nimi, Teksti = p.Laudat.Length > 0 ? p.Laudat[0].Historia : null,
+            };
+        }
+
+        /// <summary>Lautapelinoston peli, tai null.</summary>
+        public static PeliKuvaus Lautapeli(Nosto n) =>
+            n != null && n.Id != null && n.Id.StartsWith(PeliId, StringComparison.Ordinal) ? Peliluettelo.Hae(n.Id.Substring(PeliId.Length)) : null;
+
+        /// <summary>Lautapelin avaus suoraan (aina ilmainen).</summary>
+        public static void AvaaLautapeli(PeliKuvaus p)
+        {
+            Debug.Log("MATKAKIRJA videopelit: lautapeli " + p.Id);
+            if (p == Peliluettelo.Mylly) MyllyNakyma.AvaaPeli(p.Id);
+            else if (p == Peliluettelo.Tavli) TavliNakyma.AvaaPeli(p.Id);
+        }
 
         /// <summary>Syke: hehku himmenee ja kirkastuu vuorotellen (siirtymä 2,4 s USS:ssä, ympäristöanimaatio).</summary>
         public const long SykeValiMs = 4000;

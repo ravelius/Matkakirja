@@ -327,6 +327,14 @@ namespace Matkakirja.Natiivi
                 jalkeen?.Invoke(m != null);
                 yield break;
             }
+            if (valoId != null && valoId.StartsWith(Videopelit.PeliEtuliite, StringComparison.Ordinal))
+            {
+                var pn = Videopelit.Lautapelinosto(valoId);
+                if (pn != null) { napit.Clear(); valo = valoId; Nayta(pn); MittaaAvaus(valoId, v); }
+                else Debug.Log("MATKAKIRJA ui nostot: ei lautapeliä " + valoId);
+                jalkeen?.Invoke(pn != null);
+                yield break;
+            }
             var odotus = VerkkoOdotus.Alku("nosto", valoId);
             Lisakaupunki lk = null;
             yield return NostoSisalto.HaeLisakaupunki(valoId, x => lk = x);
@@ -917,7 +925,7 @@ namespace Matkakirja.Natiivi
                 Toimintorivi(n);
                 // Livian leikekirja on toimintorivin Lehti-nappi (web avaaKohdePohjalla, omistaja 2.10.2026: kohdekortti pysyvä).
                 // Reaktiot kortin loppuun: tunniste on kohteen oma id (web kohdeReaktioTunniste).
-                Reaktiot.Piirra(sisus, Reaktiot.KohdeAvain(n.Id), n.Otsikko);
+                if (Videopelit.Lautapeli(n) == null) Reaktiot.Piirra(sisus, Reaktiot.KohdeAvain(n.Id), n.Otsikko);
             }
             if (kuvaEnnen.HasValue)
             {
@@ -1109,7 +1117,10 @@ namespace Matkakirja.Natiivi
             // pelattavan palan, tallennuksen ollessa "Jatka" (ilmainen) ja "Aloita alusta £10". Maksu ennen avausta (Pelikoodarin
             // PeliOhjain.MaksaOlavinlinna; rahat eivät riitä → tilarivi), palautus, jos pala ei aukea.
             bool peli = Videopeli(n);
-            if (peli)
+            var lautapeli = Videopelit.Lautapeli(n);
+            if (lautapeli != null)
+                Nappi("pelaa", Kieli.T("ui.nosto.pelaa-ilmaiseksi"), () => { Sulje(); Videopelit.AvaaLautapeli(lautapeli); }, true);
+            else if (peli)
             {
                 string Hinta(bool alusta) => PeliApu.Valuutta + Matkakirja.Peli.Kaupat.OlavinlinnanHinta(alusta);
                 if (SeikkailuTapit.PalaTallennettu())
