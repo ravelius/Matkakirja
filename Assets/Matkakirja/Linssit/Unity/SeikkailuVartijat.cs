@@ -41,6 +41,8 @@ namespace Matkakirja.Natiivi
             public float RepliikkiAsti; public int RepliikkiLaskuri; public float TyoAsti, VaroitusAsti, PuhuiS = -99f;
             /// <summary>Kannetun valon säde (lyhty 4 m, soihtu 6 m), 0 = ei kanna.</summary>
             public float ValoM;
+            /// <summary>Kannettu valo ja sen perusvoima (varoituksen ajan kirkkaampi).</summary>
+            public Light Valo; public float ValoPerus;
             public bool Tunnisti;
             public Vector3 Alku;
             /// <summary>Huone 8: talonpoika kääntyy kerran (kaantyy_s) kohti käytävää 5 s pelaajan tultua 8 m:n päähän; 0 ei, 1 odottaa, 2 kääntynyt, 3 tehty.</summary>
@@ -232,7 +234,8 @@ namespace Matkakirja.Natiivi
                     var kasi = soihtu ? new Vector3(0.3f, 1.55f, 0.2f) : new Vector3(0.28f, 0.95f, 0.12f);
                     var liekki = DioraamaHahmot3D.LyhdynLuoja?.Invoke(vg.transform);
                     if (liekki != null) { liekki.transform.localPosition = kasi; if (soihtu) liekki.transform.localScale *= 2.5f; }
-                    SeikkailuValot.Hehku(vg.transform, kasi + Vector3.up * 0.08f, new Color(1f, 0.62f, 0.3f), soihtu ? 1.6f : 1.1f, v.ValoM, true, DioraamaNayttamo.Kerros);
+                    v.Valo = SeikkailuValot.Hehku(vg.transform, kasi + Vector3.up * 0.08f, new Color(1f, 0.62f, 0.3f), soihtu ? 1.6f : 1.1f, v.ValoM, true, DioraamaNayttamo.Kerros);
+                    if (v.Valo != null) v.ValoPerus = v.Valo.intensity;
                 }
                 v.Alku = alku; v.KaantyyS = eka.KaantyyS; v.AlkuYaw = yaw0;
                 sv.vartijat.Add(v);
@@ -469,7 +472,11 @@ namespace Matkakirja.Natiivi
                 }
                 // Kävelytahti nopeuden mukaan (silmukka on mitoitettu sykliMs:iin), ei liukuvia jalkoja.
                 // Leike tilasta (torkku / syo / nousu_istumasta v44p); vaihtuessa aika alusta (nousu ei silmukka).
-                string leike = v.Aivot.Torkkuu ? (v.Aivot.Syo ? "syo" : "torkku") : v.Aivot.Horjuu && v.Aivot.Profiili == VartijaProfiili.Torkku ? "nousu_istumasta" : v.Kavelee ? "kavely" : "idle";
+                // Varoitus näkyy (PT 11.10., Laitetestaaja 181d: "vain ääni"): hahmo huutaa (puhe-leike; puuttuessa Hahmot3D:n varaketju idleen)
+                // ja kannettu valo kirkastuu 1,8-kertaiseksi varoituksen ajaksi.
+                bool varoittaa = v.Aivot.Varoittaa;
+                if (v.Valo != null) v.Valo.intensity = Mathf.MoveTowards(v.Valo.intensity, v.ValoPerus * (varoittaa ? 1.8f : 1f), dt * 4f * v.ValoPerus);
+                string leike = v.Aivot.Torkkuu ? (v.Aivot.Syo ? "syo" : "torkku") : v.Aivot.Horjuu && v.Aivot.Profiili == VartijaProfiili.Torkku ? "nousu_istumasta" : varoittaa ? "puhe" : v.Kavelee ? "kavely" : "idle";
                 if (leike != v.Leike) { v.Leike = leike; v.KavelyAika = 0; }
                 v.KavelyAika += v.Kavelee ? dt * (v2 / Math.Max(0.1, sykliMs)) * 1.0 : dt;
             }
