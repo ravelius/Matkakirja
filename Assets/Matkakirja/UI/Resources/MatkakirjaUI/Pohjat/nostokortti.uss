@@ -105,30 +105,30 @@
     background-color: var(--tk-videopeli-pinta);
 }
 
-/* Ylärivin selain ja lukija sinisellä (simuajo f6d9b3ab: ‹ NOSTOT › AUTO ja kaiutin jäivät tummiksi). */
-.mk-nosto--videopeli .mk-lukija,
-.mk-nosto--videopeli .mk-nostoselain__askel,
-.mk-nosto--videopeli .mk-nostoselain__auto.mk-valittu,
-.mk-nosto--videopeli .mk-lukija__valikkonappi.mk-valittu {
-    color: var(--tk-videopeli-muste);
-}
-
-.mk-nosto--videopeli .mk-nostoselain__avaaja,
-.mk-nosto--videopeli .mk-nostoselain__auto {
-    color: var(--tk-videopeli-korostus);
-}
-
-.mk-nosto--videopeli .mk-nostoselain__avaajaikoni,
-.mk-nosto--videopeli .mk-lukija__valikkonappi,
-.mk-nosto--videopeli .mk-lukija.mk-mykistetty {
-    color: var(--tk-videopeli-muste-pehmea);
-}
-
-/* Selaimen napit ja kategoria-/ylärivin tekstit ovat omia Label-lapsiaan tarkemmilla valitsimilla (nostoselain.uss), joten
- * ne ylikirjoitetaan yhtä tarkoilla (simuajo 23afc880: NOSTOT, AUTO ja HISTORIA jäivät tummiksi). */
+/* Ylärivin selain ja lukija sinisellä (simuajot f6d9b3ab, 23afc880, d868ab8d: NOSTOT, AUTO ja kaiutin jäivät tummiksi):
+ * nostoselain.uss:n säännöt (.mk-nostoselain .x, .mk-nosto__lukija .mk-lukija) ovat kahden luokan ja tulevat myöhemmin, joten
+ * ylikirjoitus on yhtä luokkaa tarkempi. */
+.mk-nosto--videopeli .mk-nostoselain .mk-nostoselain__askel,
+.mk-nosto--videopeli .mk-nostoselain .mk-nostoselain__auto.mk-valittu,
+.mk-nosto--videopeli .mk-nostoselain .mk-lukija.mk-nosto__pin,
+.mk-nosto--videopeli .mk-nosto__lukija .mk-lukija,
+.mk-nosto--videopeli .mk-nosto__lukija .mk-lukija.mk-lukee,
+.mk-nosto--videopeli .mk-nosto__lukija .mk-lukija__valikkonappi.mk-valittu,
 .mk-nosto--videopeli .mk-nostoselain .mk-nappi__teksti,
 .mk-nosto--videopeli .mk-nostoselain .mk-ikoni {
     color: var(--tk-videopeli-muste);
+}
+
+.mk-nosto--videopeli .mk-nostoselain .mk-nostoselain__avaaja,
+.mk-nosto--videopeli .mk-nostoselain .mk-nostoselain__auto,
+.mk-nosto--videopeli .mk-nostoselain .mk-lukija.mk-nosto__pin.mk-valittu {
+    color: var(--tk-videopeli-korostus);
+}
+
+.mk-nosto--videopeli .mk-nostoselain .mk-nostoselain__avaajaikoni,
+.mk-nosto--videopeli .mk-nosto__lukija .mk-lukija__valikkonappi,
+.mk-nosto--videopeli .mk-nosto__lukija .mk-lukija.mk-mykistetty {
+    color: var(--tk-videopeli-muste-pehmea);
 }
 
 .mk-nosto--videopeli .mk-nostoselain .mk-nostoselain__sivu .mk-nosto__ylarivi-teksti,
