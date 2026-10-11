@@ -79,3 +79,9 @@ Yhteenveto: VÄÄRIN 6, EPÄVARMA 14.
 | teksti ja metateksti | ei huutomerkkejä, ei "Wikipedian mukaan" -metatekstiä; "lähteen mukaan" vain leipätekstissä | PILVIOHJE 4.10 | OK |
 | nykypolitiikka, verokiistat, sota | ei nykypolitiikkaa, vaaleja eikä verokiistoja; historia neutraalisti | PILVIOHJE 4.6 | OK |
 | kysymykset: correct kaikissa 0 | sallittu, peli sekoittaa | PILVIOHJE luku 5 (kysymykset) | OK |
+
+## Korjattu
+
+Kaikki 6 VÄÄRIN-kohtaa korjattu sanatarkasti: Halévy-nosto (niemimaasota, asevelvollisuus), tehtava.fakta, kysymykset[3] (sukunimivaihtoehdot, pisin ei oikea), Andorre-L'Hospitalet-aseman etäisyys pois, Madriu "lähteen mukaan ainoa", Santa Coloman seinämaalaukset "suurin osa" (tiedot[2], nosto, opas).
+EPÄVARMA pehmennetty tai poistettu: 1812-1814 Ranska, kysymykset[1].hint, lämpötilat ja sademäärät (13-139 mm pois), korkeus "noin 1 020 m", Urgellin kreivi -virke, trinxat/mató, Kaarle Suuri (ei "ei todennettu"), Caldean "siitä lähtien" pois, Santa Coloman etäisyys, Toulouse/Barcelona-etäisyydet "Andorrasta", lentokenttä "kiinteäsiipisille", kysymykset[4] vaihtoehdot.
+Ei muutettu (Päätoimittajan päätettävät): Halévy-noston kuva, valokuva.vuosi.
