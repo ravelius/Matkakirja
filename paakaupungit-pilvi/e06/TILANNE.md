@@ -15,8 +15,8 @@ Vaihe 0: yhdeksän kontekstia ja saa-syote.json luotu alkuperäisellä tyokalu.m
 | brazzaville | A koottu; 6 ehdotusta, 1 koordinaattipoikkeus ja katedraalin vanhan kuvan portti | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | kinshasa | A koottu; 6 Wiki/Wikidata-ehdotusta, retkirajaus/zoo-nykytila/Lola-lupa avoin | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | luanda | A koottu; 6 historiallista ydinkohdetta, Jesusin uudet osat B-oikeusportissa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
-| kigali | lähteiden luku käynnissä | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
-| gitega | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
+| kigali | A koottu; 6 Wiki/Wikidata-ehdotusta, luontokartan rajaus ja talon B-oikeusportti | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
+| gitega | lähteiden luku käynnissä | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 
 A-valmis tarkoittaa vain lähteistettyä faktapohjaa. Kaupunkia ei ole kirjoitettu, kuvitettu, kytketty tai julkaistu.
 
@@ -57,3 +57,7 @@ UNESCO metallurginen historia luettu. FOP-yhteenveto ei kata still-valokuvia suo
 ## Luanda A
 
 0–9 koottu, kuusi vanhan ytimen historiallista/naturapaikkaa Wikipedia/Wikidata-koordinaatein. São Miguelin olemassa oleva lähinosto pois uudesta nostosta/kartasta. Lentoasemaksi NBJ (Airlinkin oma vaihtoilmoitus + kenttäartikkeli), vanha LDA ei nykyoppaaksi. Väestö maakunta. Sé/Conceição vs Remédios -nimisekaannus ja Carmon/São Miguelin vuosiristiriidat kirjattu. HPIP TLS-este, ei sisällön lukuväitettä. Jesusin modernien osien FOP/tekijä sekä kaikkien varsinaisten kuvatiedostojen lisenssit jäävät B-porttiin.
+
+## Kigali A
+
+0–9 koottu; kuusi Wiki/Wikidata-paikkaa. Viisi luonnonympäristöä ja Kandtin vanha talopaikka, ei moderneja suojattuja tunnusrakennuksia/monumentteja. Nyandungu ministeriölähde ja Umusambi järjestäjän lähde luettu. Laaja kaupunkiluontokartta vs historiallinen keskustarajaus pääsession poikkeuspäätös; Kandtin alkuperäinen rakenne/modernit muutokset B-oikeusportti. History of Kigali = redirect pääartikkeliin, ei riippumaton lähde.
