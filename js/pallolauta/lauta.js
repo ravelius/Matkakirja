@@ -2195,7 +2195,26 @@ export async function avaaPallolauta(ui) {
     : null;
   sykkiiNyt = () => Boolean(glSovitin?.sykkii?.());
   // Nappula rungolle; kun rasteri valmistuu tai runko syntyy, sama lista asetetaan uudestaan (jako aseta-kutsussa).
-  const peliUudestaan = () => { const l = glSovitin?.viimeisetPeli(); if (l) merkit.aseta('peli', l, { haivyta: false }); };
+  /*
+   * KOHDENIMI VÄISTÄÄ NAPPULAA (merkit.js vaistaNappulaa; Karttasepän
+   * havainto 11.10.2026: lähtövalinnassa Lontoon nappula Pariisin nimen
+   * päällä). Ajetaan ladonnassa JA kahden kehyksen päästä merkkien
+   * vaihtuessa: CSS2D-kohde syntyy kirjaston seuraavassa kehyksessä ja
+   * GL-nappula vasta rasterin valmistuttua, eikä kumpikaan pyydä uutta
+   * ladontaa, jos kamera ei liikkunut (ladontaTarpeen).
+   */
+  const vaistaNappulaa = () => merkit.vaistaNappulaa(merkit.nappulanLaatikko() ?? glSovitin?.nappulanLaatikko?.() ?? null);
+  let vaistoAjastin = 0;
+  const vaistoSeuraavaan = () => {
+    if (vaistoAjastin) return;
+    const raf = globalThis.requestAnimationFrame ?? ((f) => setTimeout(f, 16));
+    vaistoAjastin = raf(() => raf(() => { vaistoAjastin = 0; if (!ui.dead) vaistaNappulaa(); }));
+  };
+  const peliUudestaan = () => {
+    const l = glSovitin?.viimeisetPeli();
+    if (l) merkit.aseta('peli', l, { haivyta: false });
+    vaistoSeuraavaan();
+  };
   if (glSovitin) pelinJako = (lista) => glSovitin.peli(lista, peliUudestaan);
   const nimet = luoNimet({
     ui, merkit, asteet: pallonAsteet, ruudulla, kotelo, pack, glSovitin, lisakaupungit: paakaupungit,
@@ -4842,6 +4861,8 @@ export async function avaaPallolauta(ui) {
      * luenta riittää kaikille kolmelle.
      */
     const pelinLaatikot = [...merkit.laatikot('peli'), ...(glSovitin?.pelinLaatikot() ?? [])];
+    // Kohdenimi halon alle, jos nappula peittäisi sen (ks. vaistaNappulaa). Luenta samassa vaiheessa kuin yllä.
+    vaistaNappulaa();
     /*
      * KUOREN POHJA VAIHTUU NYT (nimet.js LADONTA JA KUORI VAIHTUVAT
      * SAMASSA KEHYKSESSÄ): ladonnan mitta talteen ja kerroin heti sen
@@ -5255,6 +5276,7 @@ export async function avaaPallolauta(ui) {
     // Ablaatiotikas (kerrokset.js): nappula omana portaanaan (kohteet yllä).
     if (!kerrosKaytossa('nappula')) merkit.paivita({ nappula: null, kohteet });
     else merkit.paivita({ nappula: liikkuu || lento || linssiPaalla() ? null : nappulanKohta, kohteet });
+    vaistoSeuraavaan();
     paivitaPisteet();
     pyydaLadonta();
     /*
