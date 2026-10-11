@@ -1061,7 +1061,7 @@ namespace Matkakirja.Natiivi
         /// VIDEOPELIMUUNNELMA (omistaja 11.10.2026 Päätoimittajan kautta, juna 182): kohde, joka on myös pelattava videopeli
         /// (Olavinlinna, SeikkailuTapit.AvaaPelaajalle), saa kimmeltävän sinisen kortin (tyylikirja teemat.videopeli).
         /// </summary>
-        static bool Videopeli(Nosto n) => n != null && n.Laji == NostoLaji.Kohde && n.Id == "olavinlinna";
+        static bool Videopeli(Nosto n) => Videopelit.Kohde(n);
 
         /// <summary>Videopelin avaus nostosta: Jatka ilmaiseksi, muuten maksu ensin (alusta = Aloita alusta).</summary>
         void Pelaa(bool jatka, bool alusta)
