@@ -44,3 +44,9 @@ vie-paketti.sh:lla (_valmiit/<nimi>-vienti-<pvm>/ + SHA256SUMS + LAHTEET.md). Pe
 - Käännökset: pyydä AINA KÄÄNNÖS NYT; linja 2 = PROTO_LINJA=2 (linjan 2 iPad-simuun tulee käynnistyksessä Development Console -rivejä,
   Natiivisepän juurisyyjonossa). Älä tapa proto-kaanna.sh:ta, jos lukko on jo oma.
 - JONO nyt: Pariisin korttelit v2 (kohta 2 alla), sitten vapaan kulun pikkuviat.
+
+## PÄIVITYS 11.10. klo 12.3x: PARIISIN KORTTELIT V2 KUVATTU, EI JUNAAN 182
+- proto `linssiseppa2/pariisi-korttelit-182` **8decb5018** (juna-182 + "leikkaukset" + osoitin uusin-5/vara uusin-4), käännös 0974a6026.
+  Paketti v6k17 `_tyo/linssiseppa2/pariisi-v2/v6k17` (portti 0, LAHTEET.md valmiina), ei viety. Raportti + arkit 40a584921
+  (docs/raportit/kaappaukset/linssiseppa2-pariisi-v2-20261011/). Bourbon ei sumennettu (Google parempi), Banque/Branly LR:lle.
+- JONO: kohta 4 (kaukolaatat karkeina v6k17:llä: pidempi odotus + muistimittaus), sitten LR:n korjausten jälkeen v6k17 uudelleen + kuvat.
