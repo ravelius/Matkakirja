@@ -328,6 +328,14 @@ namespace Matkakirja.Natiivi
             avainsanaSanat = Rakenne.Teksti("", "mk-aikajana-havainne__kuvateksti", avainsana);
             Kirjasimet.Aseta(avainsanaSanat, Kirjasin.Antiikva);
             avainsanaSanat.style.fontSize = 19; avainsanaSanat.style.unityTextAlign = TextAnchor.UpperLeft;
+            // Erottuvuus tummasta 3D-näkymästä (omistaja 11.10. 09.3x: "jääkauden jälkeen" tummaa vettä vasten): tumman teeman
+            // kirkkain muste ja Ihmisen matkan kertomuksen leveä pehmeä varjo (0 2 14, tumma pinta 0,95) kapean 2 pt:n tilalle.
+            var varjo = (Color)Tyylikirja.Tumma.Pinta; varjo.a = 0.95f;
+            foreach (var l in new[] { avainsanaVuosi, avainsanaSanat })
+            {
+                l.style.color = (Color)Tyylikirja.Tumma.Muste;
+                l.style.textShadow = new TextShadow { offset = new Vector2(0f, 2f), blurRadius = 14f, color = varjo };
+            }
 
             DioraamaSovitin.PeittaaRuutu = OsuukoPaneeliin;
             DioraamaSovitin.Vaihtui += Kytke;
