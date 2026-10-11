@@ -179,7 +179,7 @@ namespace Matkakirja.Linssit.Kierros
             if (!OpasSilmukka.PalloLento) return pk;
             if (aukioKehys)
             {
-                var mon = OpasKatseOletukset.Monumentti(k.Lat, k.Lon) ?? (k.Lat, k.Lon);
+                var mon = OpasKatseOletukset.Monumentti(k.Id, k.Lat, k.Lon) ?? (k.Lat, k.Lon);
                 pk.MonumenttiLat = mon.lat; pk.MonumenttiLon = mon.lon;
             }
             // Loitonnus vain workerin alue-luokille (PT 09.2x; OpasKohde.Luokka kertoo vain aukiot, ja koosta päätelty Alue kattaisi myös
