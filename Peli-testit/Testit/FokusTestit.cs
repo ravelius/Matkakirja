@@ -65,6 +65,25 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(!f.Piste(kb).Lukittu && !f.AarreAvattu(kb, "pariisi"), "yksi nosto avaa pisteen, ei aarteen jälkeä");
         }
 
+        // Sähkekaupunki (Tukholman malli): piste avaa sähkeen, ei kohtaamista (PT 11.10.2026).
+        const string SahkeJson = @"{""alkiot"":[
+ {""id"":""pariisi"",""data"":{""sahketehtava"":{""id"":""testi-sahke""},""kohtaamispiste"":{""nimi"":""Laituri"",""laudat"":{""maailmankartta"":{""x"":6000.5,""y"":1500.25}}},
+   ""lehtitehtavat"":[{""id"":""aarre"",""palkinto"":""piste""}]}}]}";
+
+        [Testi] static void SahkekaupunkiEiLukituVaaraanVastaukseen()
+        {
+            var f = Fokusdata.Lue(SahkeJson);
+            f.Kulttuurivisa = k => k == "pariisi";
+            Oleta.Sama("fokus:aarre,fokus:kulttuurivisa", string.Join(",", f.Avaajat("pariisi")), "kulttuurivisa myös sähkekaupungissa");
+            PeliJossaLaattaPariisissa(out var ka);
+            Oleta.Tosi(f.Piste(ka).Teko == Fokusdata.Lukkolappu && Fokusdata.Lukkolappu.EndsWith("kaupunkilehdestä"), "lukkoviesti ohjaa lehteen");
+            ka.Minitehtava("pariisi", "fokus:aarre", false);
+            ka.Minitehtava("pariisi", "fokus:kulttuurivisa", false);
+            Oleta.Tosi(f.AarreVastattu(ka, "pariisi") && !f.AarreAvattu(ka, "pariisi"), "väärät vastaukset eivät avaa");
+            Oleta.Tosi(ka.PullaVinkki("pariisi").Ok, "pulla myydään");
+            Oleta.Tosi(f.AarreAvattu(ka, "pariisi") && f.Piste(ka).Teko == "lue pöllön sähke", "pulla avaa sähkepisteen");
+        }
+
         [Testi] static void TehtavaNappiKutenWeb()
         {
             var m = PeliJossaLaattaPariisissa(out _);
