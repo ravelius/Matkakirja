@@ -291,6 +291,47 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(kauimmas <= VartijaProfiili.Portinvartija.JahtiM + 1e-6, $"jahti vartiopaikan lähellä ({kauimmas:F2} m)");
         }
 
+        [Testi] static void HalytysRaukeaaUlottumattomissaEikaSyttyUudelleen()
+        {
+            // Laitetestaaja v6 3. kierros 11.10.: tyrmästä palannut seisoi laiturilla portinvartijan näkyvissä mutta ulottumattomissa;
+            // Halytys → Etsii → Halytys 20 s:n välein 6 min. Nyt hälytys raukeaa LuovutusS:ssa reunalla, ei syty uudelleen niin kauan
+            // kuin pelaaja pysyy ulottumattomissa, ja ulottumaan palaava saa varoituksen ja jää kiinni.
+            var v = new Vartija(new List<(double, double, double)> { (0, 0, 8.0) }, yaw: 0) { Profiili = VartijaProfiili.Portinvartija };
+            double alku = -1, halytysAlkoi = -1, pisinHalytys = 0; int halytyksia = 0; var oli = v.Tila;
+            var r = Laituri(v, 0, 5, t =>
+            {
+                if (alku < 0 && v.Varoittaa) alku = t;
+                if (v.Tila == VartijanTila.Halytys && oli != VartijanTila.Halytys) { halytyksia++; halytysAlkoi = t; }
+                if (v.Tila == VartijanTila.Halytys) pisinHalytys = Math.Max(pisinHalytys, t - halytysAlkoi);
+                oli = v.Tila;
+                return alku < 0 ? (0, 5, true) : (0, 8, true);   // varoituksesta laiturin päähän (8 m vartiopaikasta)
+            }, 120);
+            Oleta.Tosi(!r.Kiinni, $"ulottumattomissa ei kiinni ({v.Tila})");
+            Oleta.Tosi(halytyksia <= 1, $"hälytys ei toistu ({halytyksia} kertaa)");
+            Oleta.Tosi(pisinHalytys < Vartija.HalytysS, $"hälytys raukesi ennen 20 s:n jaksoa ({pisinHalytys:F1} s)");
+            Oleta.Tosi(v.Tila == VartijanTila.Partio && v.Mittari < Vartija.TutkiHuippu && v.SydanTempo == 0, $"rauhassa partiossa ({v.Tila}, mittari {v.Mittari:F2}, syke {v.SydanTempo:F0})");
+            // Takaisin ulottumaan (1,5 m vartiopaikasta): varoitus ensin, sitten ote.
+            var r2 = Laituri(v, 0, 8, t => (0, 1.5, true), 30);
+            Oleta.Tosi(r2.Kiinni && r2.VaroitusT >= 0 && r2.KiinniT - r2.VaroitusT >= Vartija.VaroitusSeisoS - 1e-6, $"ulottumaan palannut: varoitus {r2.VaroitusT:F1} s → kiinni {r2.KiinniT:F1} s");
+        }
+
+        [Testi] static void HalytysRaukeaaKunJahtiEiEtene()
+        {
+            // Jahti ei etene (NavMesh ei vie pelaajan luo: vartija ei liiku, vaikka Vauhti > 0), pelaaja 5 m edessä näkyvissä.
+            var v = new Vartija(Reitti, yaw: 0); double alku = -1, pisin = 0; var oli = v.Tila; bool kiinni = false;
+            for (double t = 0; t < 90 && !kiinni; t += 1 / 30.0)
+            {
+                v.Paivita(1 / 30.0, new VartijanSyote { VartijaX = 0, VartijaZ = 0, PelaajaX = 0, PelaajaZ = 5, NakolinjaVapaa = true, Valoisuus = 1, PelaajaVauhti = 0 });
+                v.VaroitusPyydetty = false;
+                if (v.Tila == VartijanTila.Halytys && oli != VartijanTila.Halytys) alku = t;
+                if (v.Tila == VartijanTila.Halytys) pisin = Math.Max(pisin, t - alku);
+                kiinni = v.Tila == VartijanTila.Kiinni; oli = v.Tila;
+            }
+            Oleta.Tosi(!kiinni, "5 m:stä ei otetta");
+            Oleta.Tosi(alku >= 0, "hälytys alkoi");
+            Oleta.Tosi(pisin <= Vartija.LuovutusS + 0.5, $"jumiutunut jahti raukeaa ({pisin:F1} s)");
+        }
+
         [Testi] static void UusiVaroitusKunNakoKatkesi()
         {
             // Varoitus (pelaaja 3 m) → kulman taakse 3,5 s → näkyviin 6 m:iin: ote vasta toisen varoituksen jälkeen.
