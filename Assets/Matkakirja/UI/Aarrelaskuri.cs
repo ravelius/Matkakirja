@@ -7,7 +7,7 @@
 // Paikka: yläpalkin alle 8 pt (kuten karttaselite), vaakasuunnassa keskelle; palkin ollessa piilossa (vaaka, iPhonen veto)
 // turva-alueen yläreunaan. Matkakirjan lappu on samassa kohdassa, joten laskuri asettuu lapun alle 6 pt; auki oleva
 // matkakirja (luenta) peittää yläosan, ja laskuri on silloin piilossa (simuajo 760f067f: laskuri lapun päällä).
-// Näkyy pelin karttatilassa; linssin, aloitusnäkymän ja valikon aikana piilossa.
+// Näkyy pelin karttatilassa; linssin, aloitusnäkymän, valikon ja saapumis-/luentakuvien (Matkakirja.Kuvat) aikana piilossa.
 // Luku tarkistetaan puolen sekunnin välein, piirto vain luvun vaihtuessa.
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -44,7 +44,8 @@ namespace Matkakirja.Natiivi
             var ui = UiNakymat.Hae();
             var o = PeliOhjain.Instanssi;
             return o != null && o.Kaytossa && o.Matka != null && o.Tila == SilmukanTila.Kartta && ui.Linssit?.Auki == null
-                   && !Aloitusnakyma.AloitusAuki && !ui.Valikko.Auki && (!ui.Matkakirja.Nakyy || ui.Matkakirja.Lappuna);
+                   && !Aloitusnakyma.AloitusAuki && !ui.Valikko.Auki && (!ui.Matkakirja.Nakyy || ui.Matkakirja.Lappuna)
+                   && !ui.Matkakirja.Kuvat.Nakyy;   // PT 11.10.: ei saapumis- ja luentakuvien päälle (Berliini, Helsinki)
         }
 
         void Paivita()
