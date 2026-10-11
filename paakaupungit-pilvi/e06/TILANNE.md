@@ -11,8 +11,8 @@ Vaihe 0: yhdeksän kontekstia ja saa-syote.json luotu alkuperäisellä tyokalu.m
 | libreville | A koottu; 6 karttakandidaattia, rajaus-/tyyppipoikkeus ja turvallisuuslähde avoin | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | ciudaddelapaz | lähdepaketti tehty; täysi A estyy: 0 karttakohdetta, opas/teema vajaat | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | saotome | A koottu; 6 ehdotusta, Obô-rajaus ja 2 kirkon oikeusportti avoin | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
-| bangui | lähteiden luku käynnissä | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
-| brazzaville | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
+| bangui | lähdepaketti tehty; täysi A estyy karttaminimiin, 1 ruokanostoon ja opasminimiin | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
+| brazzaville | lähteiden luku käynnissä | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | kinshasa | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | luanda | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | kigali | jonossa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
@@ -41,3 +41,7 @@ Nykykaupunki uusi; ei lähteistettyä historiallista keskustakantaa. Konteksti j
 ## São Tomé A
 
 0–9-lähdepaketti koottu. Linnakkeen/perustamisen vuosiristiriidat vuosisatamuotoon. Kuusi karttakandidaattia, mutta Obô on erillinen retkikohde ja kahden kirkon nykyjulkisivujen FOP/historiallisuus vaatii lisävahvistuksen. WIPO-lain metatiedot luettu, PDF 403 ja vaihtoehtoinen /edocs/lexdocs/ robots-kielletty: ei lain sisällön lukuväitettä. Palatsi pois kuvauskiellon vuoksi. Ei valmiin kartan tai kuvien hyväksyntää.
+
+## Bangui A-este
+
+UNESCO metallurginen historia luettu. FOP-yhteenveto ei kata still-valokuvia suojatuista teoksista; modernit rakennukset/patsaat pois. Käyttövalmiita kuutta keskustakohdetta ei löytynyt; UNESCO-koordinaatti vaatii lähdesäännön poikkeuksen, Ubangin paikallinen piste puuttuu, Boali ei kuulu keskustakarttaan. Ruokanoston T3 varsinainen faktamäärä 3, lisälähde tarvitaan. FCDO 11.10.2026: Banguihin muu kuin välttämätön matkustus vältettävä; muu maa ei matkasuositukseksi. Täyttä A:ta ei merkitä valmiiksi.
