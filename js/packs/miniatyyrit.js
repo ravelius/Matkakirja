@@ -755,7 +755,7 @@ export const MINIATYYRIT = {
   },
   riika: {
     Vapaudenpatsas: 'assets/kartat/miniatyyrit/riika-vapaudenpatsas.webp',
-    'Kolme veljestä': 'assets/kartat/miniatyyrit/riika-kolme-veljesta.webp',
+    'Kolme veljestä -talot': 'assets/kartat/miniatyyrit/riika-kolme-veljesta.webp',
     'Riian tuomiokirkko': 'assets/kartat/miniatyyrit/riika-riian-tuomiokirkko.webp',
     'Pyhän Pietarin kirkko': 'assets/kartat/miniatyyrit/riika-pyhan-pietarin-kirkko.webp',
     'Mustapäiden talo': 'assets/kartat/miniatyyrit/riika-mustapaiden-talo.webp',

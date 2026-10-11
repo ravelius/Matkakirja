@@ -8801,7 +8801,7 @@ export const KAUPUNKIKARTAT = {
       + 'itärannalla. Keskiaikainen muuri purettiin 1800-luvulla, ja '
       + 'sen paikalle tehtiin puisto ja kanava, joka on entinen '
       + 'vallihauta. Puiston laidalla seisoo Vapaudenpatsas, ja '
-      + 'vanhassakaupungissa ovat Kolme veljestä, Riian tuomiokirkko, '
+      + 'vanhassakaupungissa ovat Kolme veljestä -talot, Riian tuomiokirkko, '
       + 'Pyhän Pietarin kirkko ja Mustapäiden talo. Eteläreunassa on '
       + 'keskustorin viisi hallia, jotka koottiin zeppelin-ilmalaivojen '
       + 'hallien teräsrungoista. Jugendkortteli, josta Riika on '
@@ -8819,7 +8819,7 @@ export const KAUPUNKIKARTAT = {
        *    Oikea artikkeli on `Mustapäiden talo (Riika)`.
        */
       { nimi: 'Vapaudenpatsas', lat: 56.9512, lon: 24.1132 },
-      { nimi: 'Kolme veljestä', lat: 56.9497, lon: 24.103 },
+      { nimi: 'Kolme veljestä -talot', lat: 56.9497, lon: 24.103 },
       { nimi: 'Riian tuomiokirkko', lat: 56.9494, lon: 24.1042, wiki: 'Riian tuomiokirkko' },
       { nimi: 'Pyhän Pietarin kirkko', lat: 56.9475, lon: 24.1094, wiki: 'Pyhän Pietarin kirkko (Riika)' },
       {
