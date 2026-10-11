@@ -191,7 +191,8 @@ test('esittely-indeksi: pilotti pariisi, praha, wien (vienti 7.10.)', async () =
   const { OPAS_SALLITUT } = await import('../tools/pollo/sallitut.js');
   assert.deepEqual([...OPAS_AINEISTOT.esittely].sort(), OPAS_SALLITUT.sallitut.map((x) => x.id).sort());
   // Kehityskaupunki Tukholma (omistaja 8.10. 20.4x): kertojan äänet, oma polku; 9.10. lähikohteet esittely-v3, v3b Vasan katse_suunta.
-  const AANELLISET = { tukholma: 'opas/esittely-v3b/tukholma.json' };
+  // LS1 11.10.: Bryssel ja Firenze v2a (korkeus_m tornillisille rakennuksille, natiivin kierroksen esteet).
+  const AANELLISET = { tukholma: 'opas/esittely-v3b/tukholma.json', bryssel: 'opas/esittely-v2a/bryssel.json', firenze: 'opas/esittely-v2a/firenze.json' };
   for (const id of OPAS_AINEISTOT.esittely.slice(6)) assert.equal(OPAS_AINEISTOT.esittely_polut[id], AANELLISET[id] ?? `opas/esittely-v2/${id}.json`);
 });
 
