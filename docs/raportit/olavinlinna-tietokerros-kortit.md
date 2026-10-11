@@ -63,9 +63,9 @@ keskiaikaisen portin tarkkaa ulkoasua ei tunneta. Pelin portti on tulkinta.
 ### 3. Pikkupiha ja perustamistaulu
 
 Pikkupiha on päälinnan pieni sisäpiha. Linnan salin ulkoseinään perustaja pani kivitaulun. Siinä luki
-suunnilleen näin: "Herran vuonna 1475 rakensin minä, Eerik Akselinpoika, Lagnön ritari, tämän linnan Jumalan
+suunnilleen näin: "Herran vuonna 1475 rakennutin minä, Eerik Akselinpoika, Lagnön ritari, tämän linnan Jumalan
 kunniaksi ja pyhän kristinuskon vahvistukseksi." Kirjoituksen alla olivat Tottin ja Sturen sukujen vaakunat.
-Taulu tuhoutui linnanpalossa 1631, mutta sanamuoto on säilynyt.
+Taulu tuhoutui myöhemmin linnanpalossa, mutta sanamuoto on säilynyt.
 
 - Lähteet:
   - https://savonhistoria.fi/vuoteen-1533/16-olavinlinnan-suojassa/ (kivitaulu salin ulkoseinässä, kirjoituksen sisältö, vaakunat kirjoituksen alla)
@@ -80,8 +80,7 @@ Taulu tuhoutui linnanpalossa 1631, mutta sanamuoto on säilynyt.
 ### 4. Keittiö ja ruoka
 
 Linnassa laitettiin ruokaa vuosisatojen mittaan monessa paikassa. Varsinainen keittiö oli pienellä linnanpihalla.
-Ruoka keitettiin avotulella isoissa padoissa ja kattiloissa. Kalaa ja kasviksia syötiin paljon, sillä kalapäiviä
-oli noin kaksisataa vuodessa. Arkeologisen selvityksen mukaan päälinnan eteläsiivessä oli keittiöksi tulkittu
+Ruokaa laitettiin avotulella isoissa padoissa, ja kalaa halstrattiin. Kalaa ja kasviksia syötiin paljon, sillä kalapäiviä oli vuodessa yli sata. Arkeologisen selvityksen mukaan päälinnan eteläsiivessä oli keittiöksi tulkittu
 rakennus, joka purettiin 1720-luvulla.
 
 - Lähteet:
@@ -139,8 +138,7 @@ mainitaan vuonna 1499. Yksi lähde sijoittaa sen kuitenkin Kellotorniin.
 
 Linnan perusti vuonna 1475 tanskalaissyntyinen ritari Erik Akselinpoika Tott. Hän oli Viipurin linnan
 käskynhaltija ja vastasi itärajasta. Linnan nimi oli Pyhän Olavin linna. Hänen puolisonsa Elin Kustaantytär oli Sturen
-sukua. Tott kuoli vuonna 1481, ja hänen veljensä Lauri jatkoi Viipurissa. Kolmitorninen päälinna valmistui
-1480-luvulla, ja ulkomuurit vuonna 1495.
+sukua. Tott kuoli vuonna 1481, ja hänen veljensä Lauri jatkoi Viipurissa. Kolmitorninen päälinna valmistui 1480-luvulla, ja esilinna sen jälkeen 1400-luvun loppuun mennessä.
 
 - Lähteet:
   - https://en.wikipedia.org/wiki/Erik_Axelsson_Tott (synty Skånessa, kuolema 1481, veli Lauri jatkoi Viipurissa)
@@ -157,8 +155,8 @@ sukua. Tott kuoli vuonna 1481, ja hänen veljensä Lauri jatkoi Viipurissa. Kolm
 ### 8. Hyökkäys vuonna 1495 ja vouti Pietari Kylliäinen
 
 Sota Ruotsin ja Moskovan suuriruhtinaskunnan välillä toi hyökkääjät linnalle vuonna 1495. Linnan voutina oli
-Pietari Kylliäinen. Hänellä oli käytössään noin sataviisikymmentä nihtiä sekä talonpoikia. Hyökkäys torjuttiin ilman
-suuria tappioita. Kesällä 1496 linnaa piiritettiin uudelleen, mutta se kesti. Kylliäinen teki myös oman
+Pietari Kylliäinen. Hän puolusti linnaa linnaväen ja talonpoikaisen nostoväen turvin. Hyökkäys torjuttiin ilman
+suuria tappioita. Vuonna 1496 linnaa piiritettiin uudelleen, mutta se kesti. Kylliäinen teki myös oman
 vastahyökkäyksensä rajan taakse.
 
 - Lähteet:
@@ -172,8 +170,7 @@ vastahyökkäyksensä rajan taakse.
 ### 9. Vuosi 1499 ja Erik Turesson Bielke
 
 Kesällä 1499 linnalla oli uusi herra. Erik Turesson Bielke sai Viipurin ja Olavinlinnan käskynhaltijuuden ja
-vastasi koko itärajasta. Elokuussa 1499 rajalta tuli hälyttäviä uutisia: rajapyykkejä yritettiin siirtää niin,
-että linnan seutu jäisi rajan toiselle puolelle. Bielken puoliso oli Gunilla Bese. Miehensä kuoltua vuonna 1511 hän
+vastasi koko itärajasta. Syksyllä 1499 venäläiset katkaisivat välirauhan ja hyökkäsivät linnan edustalle, ja seuraavana vuonna he yrittivät asettaa rajapyykkejä niin, että linna jäisi Venäjän puolelle. Bielken puoliso oli Gunilla Bese. Miehensä kuoltua vuonna 1511 hän
 hoiti Viipurin linnaa itse kaksi vuotta.
 
 - Lähteet:

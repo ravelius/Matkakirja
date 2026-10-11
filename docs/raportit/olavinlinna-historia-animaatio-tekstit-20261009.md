@@ -14,7 +14,7 @@
 | "1480-luvun päälinna ja tornit" | Päälinna valmis noin **1483–85** (±2 v; Museovirasto: ensimmäinen vaihe 1490-luvulle). Torninimet: Kellotorni (luoteessa), Kirkkotorni (pohjoisessa, kappeli 3. krs), **Pyhän Eerikin torni** (kaakossa). **"Pyhän Yrjänän tornia" ei ole.** Kijlin ja Paksu torni lisättiin myöhemmin | [1][2][5][7] |
 | "1499" | Bielke haltijaksi **1499–1511** (ei aiemmin); Pentti Pentinpoika luovutti kaluston **14.9.1499**. Viipurin pamaus 1495 ei liity Olavinlinnaan. Älä nimeä Possea linnan päälliköksi 1495–97 | [1][7][22b] |
 | "Jääkausi ja Kyrönsalmi" | Saimaan synty on kaksi vaihetta (itsenäinen järvi n. 9 500 v sitten; Vuoksen purkautuminen Imatran kautta n. 5 700 v sitten). **Kyrönsalmen oma syntyprosessi [EI LÖYDETTY]** → sanotaan vain, että Saimaa nousi esiin ja vesi kulkee salmen läpi | [13][14][16][17] |
-| "Kivikautinen asutus" | Lähin varma kivikautinen asuinpaikka **Pääskylahti (Sääminki)**, ei Kyrönsalmi/linnan kallio. Ensiasutuksen ajoitus vaihtelee (11 000 vs 8 000–8 500 v sitten) → ei lukua tekstiin | [18][19][20][21] |
+| "Kivikautinen asutus" | Tutkituin kivikautinen asuinpaikka seudulla **Pääskylahti (Sääminki)**; Museoviraston rekisterin lähimmät ovat Metsäkonttorinkuja (noin 0,7 km linnasta) ja Majakkaniemi (noin 1,6 km), ei Kyrönsalmi/linnan kallio (korjattu 11.10.2026 faktatarkistuksessa). Ensiasutuksen ajoitus vaihtelee (11 000 vs 8 000–8 500 v sitten) → ei lukua tekstiin | [18][19][20][21] |
 | "Restaurointi 1870-luvulta 1900-luvulle" | Ensimmäinen restaurointi **1872–78** (Konstantin Kiseleff); suuri restaurointi **1961–75**, yleisölle 1975; oopperajuhlat 1912 (viisi juhlaa, uudelleen **1967** ja vuosittain) | [2][5][6][12][24][26] |
 
 Avoimet epävarmuudet (ei käytetä teksteissä): Paksun tornin räjähdysvuosi (1791 / ennen 1788), 1600-luvun linnanpalo (1631 / 1654), 1499 piirityksen kuukausi, varuskunnan lähtö (1847 / 1836), Pyhän Eerikin tornin purun vuosi (1714 / myöhemmin), restaurointi 1912–16 (vain RKY).
@@ -101,7 +101,7 @@ Yleinen huomio lähteistä: J. R. Aspelinin *Savonlinna 1475–1875* [1] on rake
 - Savonlinnan alueen kivikautisia asuinpaikkoja on tutkittu kaivaen: Vehkarannassa koekaivaus 1985–86 ja Lamminniemenlammella 2006 (hakutulosten tiivistelmä, Savonlinnan maakuntamuseon luettelo; sivua ei avattu suoraan) [22].
 
 ### Korjaukset ennakko-oletuksiin
-- Kyrönsalmen tai Olavinlinnan saarelta ei löydy lähteistä kivikautista asuinpaikkaa: lähimmät varmat kivikautiset paikat ovat Pääskylahti ja Vehkaranta Savonlinnan seudulla muualla. Älä sijoita animaation kivikautista asutusta suoraan linnan kalliolle.
+- Kyrönsalmen tai Olavinlinnan saarelta ei löydy lähteistä kivikautista asuinpaikkaa: lähimmät rekisteröidyt kivikautiset paikat ovat Metsäkonttorinkuja (noin 0,7 km) ja Majakkaniemi (noin 1,6 km); tutkituin on Pääskylahti Savonlinnan seudulla muualla. Älä sijoita animaation kivikautista asutusta suoraan linnan kalliolle.
 
 ### Epävarmaa
 - [EPÄVARMA] Ensiasutuksen ajankohta: 11 000 v sitten [18] vs. 8 000–8 500 v sitten [19] (Savon alue) eroavat; Saimaa Geopark tarkoittaa koko Saimaan aluetta, Savon historia Savoa.
