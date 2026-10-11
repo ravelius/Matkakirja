@@ -92,6 +92,16 @@ namespace Matkakirja
         /// <summary>Usvan raja vähintään (m katsepisteestä; 0 = vain webin raja UsvaRaja × korkeus). Aloituslennon rata asettaa
         /// lennon ajaksi (AloituslennonRata.UsvaVahintaanM, v3): lähikuvassa webin raja hukutti maan sumuun.</summary>
         public static double UsvaVahintaanM;
+        /// <summary>
+        /// ALOITUSLENNON ILMAKEHÄ KORKEUDESTA (omistaja 11.10.2026 klo 11.5x: musta avaruus vaihtuu vaaleaksi ilmakehäksi vasta
+        /// lähellä maata; Ilmakeha.cs): Nappula asettaa radan ajaksi. Horisonttiusvan voima (tausta, sumu, Karttataivas, merkit)
+        /// kerrotaan Ilmakeha.Osuus(silmän korkeus): yli 40 km musta, alle 10 km täysi. Avaruudessa pallon reunalla ohut sininen
+        /// kaari (Taivas.shader _Kaari), joka häivytetään sisään ja ulos <see cref="KaariHaivytysS"/>:ssa. false = kartan
+        /// tavallinen usva kallistuksen mukaan.
+        /// </summary>
+        public static bool IlmakehaKorkeudesta;
+        /// <summary>Ilmakehän kaaren häivytys päälle ja pois (s): leikkauksessa ei ilmesty kaarta kerralla.</summary>
+        public const float KaariHaivytysS = 1.0f;
 
         /// <summary>Tämän kehyksen usvan rajakerroin (× korkeus): UsvaRaja, tai suurempi jos UsvaVahintaanM on asetettu.</summary>
         static double UsvaKerroin(double korkeusM) =>
@@ -109,12 +119,18 @@ namespace Matkakirja
             UsvaVari = new Color(250f / 255f, 244f / 255f, 214f / 255f);
             UsvaRaja = Horisonttiusva.RajaKerroin;
             UsvaVahintaanM = 0;
+            IlmakehaKorkeudesta = false;
         }
 
         /// <summary>Rinnevalon osuus tässä kehyksessä (0 = kameravalo, 1 = matala aurinko ja täysi tasaus).</summary>
         public float Rinne { get; private set; }
         /// <summary>Horisonttiusvan vahvuus tässä kehyksessä (0–1).</summary>
         public float Usva { get; private set; }
+        /// <summary>Ilmakehän osuus silmän korkeudesta tässä kehyksessä (1 = täysi; vain aloituslennolla alle 1).</summary>
+        public float Ilma { get; private set; } = 1f;
+        /// <summary>Silmän korkeus WGS84-ellipsoidista (m) tässä kehyksessä.</summary>
+        public double SilmanKorkeusM { get; private set; } = double.NaN;
+        float kaari;   // ilmakehän kaaren häivytys 0–1
 
         float perusIntensiteetti = (float)Karttavalo.VanhaIntensiteetti;
         Color perusAmbientti, perusTausta;
@@ -192,7 +208,10 @@ namespace Matkakirja
                 kyydinKierto = Quaternion.LookRotation(-ka.Value.suunta, kamera != null ? kamera.up : Vector3.up);
                 kyydinVari = ka.Value.vari;
             }
-            liukuu = osuus > 0f || osuus != osuus0 || kartta != kartta0 || taustaKartta != tausta0 || rinne != rinne0 || kyyti != kyyti0;
+            float kaari0 = kaari;
+            kaari = Mathf.MoveTowards(kaari, IlmakehaKorkeudesta ? 1f : 0f, dt / KaariHaivytysS);
+            liukuu = osuus > 0f || osuus != osuus0 || kartta != kartta0 || taustaKartta != tausta0 || rinne != rinne0 || kyyti != kyyti0
+                     || kaari != kaari0;
             Rinne = rinne * rinne * (3f - 2f * rinne) * kartta * (1f - s);
 
             // Kameran alapisteen normaali n0 (geosentrinen, kuten tileset-varjostimen tasaus).
@@ -206,6 +225,8 @@ namespace Matkakirja
                     (float3)gt.InverseTransformPoint(kamera.position));
                 if (math.lengthsq(kameraEcef) > 1.0)
                 {
+                    // Korkeus ellipsoidista (kuten PalloKierto ja rata): pallon maksimisäteestä Ateenassa ~8 km liian matala.
+                    SilmanKorkeusM = CesiumWgs84Ellipsoid.EarthCenteredEarthFixedToLongitudeLatitudeHeight(kameraEcef).z;
                     n0Ecef = math.normalize(kameraEcef);
                     n0 = gt.TransformDirection((float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(n0Ecef)).normalized;
                     n0On = true;
@@ -245,8 +266,10 @@ namespace Matkakirja
             KorkeusKerroin.Tasaus(Rinne);
             Kompensoi(n0, kartta * (1f - s));
 
+            // Aloituslennolla usva (vaalea taivas) vasta, kun silmä on lähellä maata (Ilmakeha.cs); muuten kallistuksen mukaan.
+            Ilma = IlmakehaKorkeudesta && !double.IsNaN(SilmanKorkeusM) ? (float)Ilmakeha.Osuus(SilmanKorkeusM) : 1f;
             Usva = UsvaSallittu && kierto != null && kameraKomp != null
-                ? (float)Horisonttiusva.Vahvuus(kierto.KaytettyKallistus) * taustaKartta * (1f - s) : 0f;
+                ? (float)Horisonttiusva.Vahvuus(kierto.KaytettyKallistus) * taustaKartta * (1f - s) * Ilma : 0f;
             if (kameraKomp != null && perusOn && (kk == null || !kk.OmaTausta))
             {
                 var tausta = Color.Lerp(perusTausta, UsvaVari, Usva);
@@ -320,6 +343,7 @@ namespace Matkakirja
             return $"rinne {Rinne:0.00} (sallittu {RinnevaloSallittu}, atsimuutti {Atsimuutti:0}°, korkeus {KorkeusAst:0}°, voima {Voima:0.00}), " +
                    $"tasaus {KorkeusKerroin.TasausArvo:0.00}, intensiteetti {valo?.intensity:0.000}, ambientti {RenderSettings.ambientLight}, " +
                    $"ambientProbe[0,0] {RenderSettings.ambientProbe[0, 0]:0.0000}, N·L(kameran akseli) {Vector3.Dot(n0, valo != null ? -valo.transform.forward : n0):0.000}, " +
+                   $"ilmakehä {Ilma:0.00} (korkeudesta {IlmakehaKorkeudesta}, silmä {SilmanKorkeusM / 1000.0:0.0} km, kaari {kaari:0.00}), " +
                    $"usva {Usva:0.00} (sallittu {UsvaSallittu}, raja {UsvaRaja:0.00}, vähintään {UsvaVahintaanM / 1000.0:0} km, taustakartta {taustaKartta:0.00}), " +
                    $"tausta {(kameraKomp != null ? kameraKomp.backgroundColor.ToString() : "-")} {(kameraKomp != null ? kameraKomp.clearFlags.ToString() : "")}, " +
                    $"kyydin aurinko {(kyyti > 0f ? $"{kyyti:0.00} suunta {-(kyydinKierto * Vector3.forward)} väri {kyydinVari}" : "pois")}, " +
@@ -336,11 +360,13 @@ namespace Matkakirja
         /// Sininen taivas lennon ajaksi (häivytys samalla osuudella kuin aurinko): kameran tausta vaihtuu
         /// skyboxiin, jonka väri lasketaan pallon reunan kulmasta. Muulloin pelin oma yksivärinen tausta
         /// (linssit, esim. astronautin musta avaruus, asettavat sen KarttaKerrokset.Taustavarilla).
+        /// Aloituslennolla (<see cref="IlmakehaKorkeudesta"/>) skybox on taustan värinen (_Osuus 0) ja piirtää pallon reunalle
+        /// ohuen sinisen ilmakehän kaaren (_Kaari: leveys ja peitto silmän korkeudesta, Ilmakeha.cs).
         /// </summary>
         void Taivas(Camera kamera)
         {
             if (taivas == null || kamera == null || georeferenssi == null) return;
-            if (osuus <= 0f)
+            if (osuus <= 0f && kaari <= 0f)
             {
                 if (taivasPaalla) { kamera.clearFlags = CameraClearFlags.SolidColor; taivasPaalla = false; }
                 return;
@@ -360,6 +386,10 @@ namespace Matkakirja
             taivas.SetFloat("_Raja", Mathf.Asin(Mathf.Clamp01(r / Mathf.Max(r, d))));
             taivas.SetColor("_Tausta", kamera.backgroundColor);
             taivas.SetFloat("_Osuus", osuus * osuus * (3f - 2f * osuus));
+            double h = double.IsNaN(SilmanKorkeusM) ? Ilmakeha.AvaruusM : SilmanKorkeusM;
+            float k = kaari * kaari * (3f - 2f * kaari);
+            taivas.SetVector("_Kaari", new Vector4((float)Ilmakeha.KaarenLeveys(h, CesiumWgs84Ellipsoid.GetMaximumRadius()),
+                (float)Ilmakeha.KaarenPeitto(h) * k, 0f, 0f));
         }
 
         /// <summary>Aurinko niin, että pituusasteella lon on paikallinen aurinkoaika tunti (deklinaatio päivämäärästä).</summary>

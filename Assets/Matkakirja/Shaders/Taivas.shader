@@ -2,6 +2,8 @@
 // musta vain astronauttilinssissä). Skybox: väri riippuu kulmasta pallon reunaan (limb) nähden —
 // reunalla vaalea usva, kauempana sininen. Pinnan lähellä reuna on horisontti, kaukaa pallon kehä,
 // joten sama kaava antaa sekä taivaan että ilmakehän hehkun. Aurinko.cs asettaa _Nadir ja _Raja.
+// _Kaari (aloituslento, omistaja 11.10.2026, Kartta/Ilmakeha.cs): avaruudesta pallon reunalla ohut sininen ilmakehän kaari
+// taustan päällä: x = kulmaleveys (rad, silmän korkeudesta), y = peitto (0 = ei kaarta, oletus; vanha lento ennallaan).
 Shader "Matkakirja/Taivas"
 {
     Properties
@@ -12,6 +14,7 @@ Shader "Matkakirja/Taivas"
         _Osuus("Osuus", Range(0, 1)) = 1
         _Nadir("Nadir", Vector) = (0, -1, 0, 0)
         _Raja("Reunan kulma (rad)", Float) = 1.5
+        _Kaari("Ilmakehän kaari: leveys (rad), peitto", Vector) = (0.01, 0, 0, 0)
     }
     SubShader
     {
@@ -32,6 +35,7 @@ Shader "Matkakirja/Taivas"
                 half _Osuus;
                 float4 _Nadir;
                 float _Raja;
+                float4 _Kaari;
             CBUFFER_END
 
             struct Tulo { float4 positionOS : POSITION; };
@@ -52,7 +56,12 @@ Shader "Matkakirja/Taivas"
                 // 0 pallon reunalla, 1 suoraan poispäin pallosta.
                 float s = saturate((kulma - _Raja) / max(1e-3, PI - _Raja));
                 half3 c = lerp(_BaseColor.rgb, _Zeniitti.rgb, pow(s, 0.45));
-                return half4(lerp(_Tausta.rgb, c, _Osuus), 1);
+                half3 tulos = lerp(_Tausta.rgb, c, _Osuus);
+                // Ilmakehän kaari reunan molemmin puolin (sisäpuolen peittää pallo): vaalea reunalla, sininen ulompana.
+                float e = abs(kulma - _Raja) / max(1e-5, _Kaari.x);
+                half a = (half)(_Kaari.y * exp(-e));
+                half3 kaari = lerp(_Zeniitti.rgb, _BaseColor.rgb, (half)exp(-2.0 * e));
+                return half4(lerp(tulos, kaari, a), 1);
             }
             ENDHLSL
         }

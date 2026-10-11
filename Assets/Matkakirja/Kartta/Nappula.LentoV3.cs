@@ -187,6 +187,7 @@ namespace Matkakirja
             EnnakkoPois();
             KelloPois();
             Aurinko.UsvaVahintaanM = 0;
+            Aurinko.IlmakehaKorkeudesta = false;
             LiikeLaatat.LentoKarkeaSse = 0f;
             Laattapalvelin.AsetaSaapumistila(TaustaTaukoSyy, false);
             LentoV3Odotus = -1f;
@@ -471,6 +472,9 @@ namespace Matkakirja
             {
                 // v3: horisonttiusvan raja vähintään 250 km radan ajan (ohituksen ja saapumisen lähikuvissa maa näkyy).
                 Aurinko.UsvaVahintaanM = AloituslennonRata.UsvaVahintaanM;
+                // Omistaja 11.10. 11.5x: musta avaruus vaihtuu vaaleaksi ilmakehäksi vasta silmän ollessa lähellä maata
+                // (yli 40 km musta, alle 10 km täysi; Ilmakeha.cs), ei kallistuksen mukaan kuten kartalla.
+                Aurinko.IlmakehaKorkeudesta = true;
                 TeeJalki(rata.LentoReitti());
                 // v3e: siivenkärkien ja pakoputken vanat sekä loppukohtauksen linnut (AloituslennonIlma).
                 aloitusIlma = AloituslennonIlma.Luo(georeferenssi, kamera);
@@ -481,7 +485,8 @@ namespace Matkakirja
                           + $"{rata.Nopeus1:0.00}/{rata.Nopeus2:0.00} etäisyyttä/s, ohitus {mo.EtaisyysM / 1000:0.0} km α {mo.Alfa:0}° "
                           + $"{mo.Koko:P0}, kosketus {mk.EtaisyysM / 1000:0} km {mk.Koko:P1}, usva vähintään {Aurinko.UsvaVahintaanM / 1000:0} km, "
                           + $"ohitus reitin kohdassa {rata.Ohitus:0.000}, bumerangi n {rata.BumerangiEksponentti:0.0}, kaarto "
-                          + $"{AloituslennonRata.KaartoKallistusEnintaan:0}°");
+                          + $"{AloituslennonRata.KaartoKallistusEnintaan:0}°, ilmakehä {Ilmakeha.ValmisM / 1000:0}–{Ilmakeha.AvaruusM / 1000:0} km "
+                          + $"(suunniteltu: vaalenee {rata.IlmakehaVaihtuu(true):0.0} s, tummuu {rata.IlmakehaVaihtuu(false):0.0} s)");
             }
 
             // 3. LENTO 15,0 s.
@@ -492,6 +497,7 @@ namespace Matkakirja
             float seuraavaNayte = 0f;
             double edEtaisyys = double.NaN, kallMin = 0, kallMax = 0, kierrMin = 9, kierrMax = 0, kameraMax = 0, katseMin = 0, katseMax = -90;
             float alku = Time.unscaledTime, edellinen = alku;
+            int ilmaVaihe = -1;   // aloitusradan ilmakehä lokiin: 0 avaruus, 1 vaihtuu, 2 täysi
             while (true)
             {
                 float nyt = Time.unscaledTime;
@@ -570,6 +576,14 @@ namespace Matkakirja
                     // v3b: kiri ja ylilento karkeammalla laattavalinnalla (latausjono ei täyty ennen saapumista).
                     LiikeLaatat.LentoKarkeaSse = AloituslennonRata.Karkea(t) ? AloituslennonRata.KarkeaSse : 0f;
                     PaivitaJalki(u, ra.EtaisyysM, kamera);
+                    if (aurinko != null)
+                    {
+                        int iv = aurinko.Ilma <= 0.01f ? 0 : aurinko.Ilma >= 0.99f ? 2 : 1;
+                        if (iv != ilmaVaihe)
+                            Debug.Log($"MATKAKIRJA aloitusrata: ilmakehä {(iv == 0 ? "avaruus" : iv == 2 ? "täysi" : "vaihtuu")} t={t:0.00} s, "
+                                      + $"silmä {aurinko.SilmanKorkeusM / 1000:0.0} km, kallistus {ra.Kallistus:0}°, usva {aurinko.Usva:0.00}");
+                        ilmaVaihe = iv;
+                    }
                     if (aloitusIlma != null && v3Kone != null) aloitusIlma.Paivita((float)t, v3Kone.Runko, siipi, rata.Mitta(t).Koko);
                     // Ennakkokamerat: [0] ohituksen lähikuva, sen jälkeen kosketus; [1] saapumisen lähin kohta (~200 km, tarkimmat
                     // laatat; esi-isät kattavat kosketuksen 490 km:n näkymän), sitten kamera itse; kosketuksesta pois.
@@ -613,6 +627,7 @@ namespace Matkakirja
                     $"{(aloitus ? "aloituslento" : "lento")} v3 {kohdeId ?? "?"} {LennonV3.KestoS:0.0} s (oikea kamera)"));
             Laattapalvelin.AsetaSaapumistila(TaustaTaukoSyy, false);
             Aurinko.UsvaVahintaanM = 0;
+            Aurinko.IlmakehaKorkeudesta = false;
             LiikeLaatat.LentoKarkeaSse = 0f;
             IlmaPois();
             // v3f: kello perillä lähtö + lentoaika; päivän ja yön raja häivyy (Paivanvalo), kun lento ei enää pidä kelloa.
