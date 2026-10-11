@@ -152,6 +152,22 @@
   "kasvot": "+Z",
   "lahde": "_valmiit/linna-hahmot/v1 (LOD ~9 k, perusväri 512)"
  },
+ "vartija2-1500": {
+  "leikkeet": {
+   "idle": "idle",
+   "kavely": "kavely",
+   "katselu": "idle",
+   "kaanto": null,
+   "puhe": "puhe",
+   "tyo": "tyo"
+  },
+  "kavely_sykli_m": 1.273,
+  "kavely_kesto_s": 1.333,
+  "pituus_m": 1.844,
+  "skaala": 0.9544,
+  "kasvot": "+Z",
+  "lahde": "kopio vartija-1500:sta (vartija B, 12.10.; kasvot MetaHuman -mh.glb)"
+ },
  "vesipoika-1500": {
   "leikkeet": {
    "idle": "idle",

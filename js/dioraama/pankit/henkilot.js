@@ -113,6 +113,23 @@ export const HENKILOT = {
       esine: 'keihas',
     },
   },
+  'vartija2-1500': {
+    nimi: 'Vartija (ranta)',
+    paikkamerkki: { vari: '#6b6259', paine: 'kypara' },
+    ruutu: [128, 192], sarakkeet: 8, pivot: [0.5, 0.04], korkeus_m: 1.76,
+    silmukat: {
+      idle: { rivi: 0, ruudut: 4, fps: 6 }, tyo: { rivi: 1, ruudut: 8, fps: 10 },
+      puhe: { rivi: 2, ruudut: 4, fps: 8 }, kavely: { rivi: 3, ruudut: 8, fps: 10 },
+      kanto: { rivi: 3, ruudut: 8, fps: 10 }, // erä 3: atlasvarassa kävelyrivi (3D-hahmo käyttää liikepankin kantoa)
+    },
+    lisenssi: 'oma paikkamerkki',
+    malli3d: {
+      mittasuhteet: { pituus_m: 1.76, hartiat_m: 0.431, lantio_m: 0.352, paa_m: 0.238 },
+      vaatteet: { paita: true, housut: true, paahine: 'kypara' },
+      varit: { vaate: '#6b6259', vaate2: '#504a43' },
+      esine: 'keihas',
+    },
+  },
   'portinvartija-1500': {
     nimi: 'Portinvartija',
     paikkamerkki: { vari: '#5a4a3a', paine: 'kypara' },

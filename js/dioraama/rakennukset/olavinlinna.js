@@ -51,7 +51,7 @@ export const RAKENNUS = {
   // (Siirtoseppä 7.10.: maailmaan false = ei piirretä maailman origoon).
   ymparistoMallit: { vene: { maailmaan: false } },
   // Pystyleikkeen portinvartija (Siirtoseppä 7.10.): paikka ja reitti käsikirjoituksesta, kun kohtaus lukittu.
-  lisaHenkilot: ['portinvartija-1500'],
+  lisaHenkilot: ['portinvartija-1500', 'vartija2-1500'],   // vartija2: vartija B (ranta, harja; oma MetaHuman-kasvo 12.10.)
   lisaPinnat: ['rantakivi'],   // ranta-1499:n kivet (Blender-kävely), natiivi ottaa värin ja kuvan rakennus.jsonin pinnoista
   otsikko: 'Olavinlinna – elävä linna',
   versio: 1,
