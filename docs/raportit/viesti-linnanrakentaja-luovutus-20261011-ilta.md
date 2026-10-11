@@ -46,3 +46,11 @@ Jos jokin ketju kaatuu: lue loki, korjaa, aja vie-skripti uudelleen (perl setsid
    Natiivisepälle (hän tekee ajonaikaisen puolen haarassa natiiviseppa/soutaja-kasvot; tarvitsee 52 muotoa + Eyes 8 eyeLook*).
 4. ISS-raketti (LS2): v1.1 + glb-erillinen/ + karttaversio toimitettu (`_valmiit/iss-raketti-v1/`). Lähikuvan hionta myöhemmin; ei
    vientiä ennen LS2:n hyväksyntää (ämpäriin vain vie-paketti.sh).
+
+## 4. LISÄYS 16.3x: soutajan kasvot VALMIIT (agentin tulos)
+`_valmiit/olavinlinna-soutaja-kasvot-v1/glb/soutaja-1500-faceit52.glb` ja `glb/soutaja-1500.glb` (+ ele_soutu), aja.sh ajettu kokonaan:
+suun sisus korjattu (ihonvärinen sisähuulen pala pois hahmo_paa.py:ssä, tumma suupussi ihon sisällä, 8 hammasta kaarella), muotojen
+tiivistys (sparse) pois viennistä, parran alahuulen alla oleva sahalaita tasoitettu kaareksi (leuan kaistale säilyy). Muotoja: pää 52,
+Eyes 8, suun sisus 31, Eyebrows 23, Hair_Beard 34, Hair_Buzzed 1; luut 65, leikkeet 12. Kuvat esikatselu/arkki-suu-parta.jpg,
+suu-sisus-varikoe.png. Avoimet: parran irtoaminen ihosta jawOpenissa (≤ 3,8 mm), poskien parran ulkoreuna yhä sahalaitainen.
+SEURAAVAKSI: yhdistä eleet (kohta 3: soutaja_yhdista.py tyo/eleet-leikkeet.glb → kasvot-v1/glb/soutaja-1500.glb) → hahmot-linkki → vienti → SHA NS:lle.
