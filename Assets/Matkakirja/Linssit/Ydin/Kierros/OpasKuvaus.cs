@@ -116,7 +116,9 @@ namespace Matkakirja.Linssit.Kierros
                 // kauemmas (Tukholman kaupungintalo, koko 130 m ilman korkeutta: kehys 150 → 523 m kiersi saapuessa 166°).
                 string ln = (luokka ?? k?.Luokka ?? "").Trim().ToLowerInvariant();
                 bool aukio = korkeus <= 0 && AukioLuokat.Contains(ln), mitattu = korkeus > 0 || aukio;
-                double hKoko = korkeus > 0 ? korkeus : aukio ? AukioKohdeKorkeusM : koko / KuvaSuhde;
+                // ISO AUKIO (PT 11.10., simu 4409d1dfa Venceslauksen aukio 750 m: lähikuvassa Googlen laatan ruma geometria täytti aukion
+                // keskustan): koko ≥ PalloAukioIsoM → kehys PalloAukioIsoKerroin kauempaa (silmä ~+15 m).
+                double hKoko = korkeus > 0 ? korkeus : aukio ? AukioKohdeKorkeusM * (koko >= PalloAukioIsoM ? PalloAukioIsoKerroin : 1) : koko / KuvaSuhde;
                 double luokanMax = korkeus >= KorkeaRajaM ? KorkeaEtMaxM : l == Luokka.Katu ? KatuEtMaxM : l == Luokka.Alue ? AlueEtMaxM : RakennusEtMaxM;
                 loppuEt = Rajaa(hKoko / (KolmannesOsuus * 2 * tanPysty), Math.Max(PalloLoppuMinM, minEt), luokanMax);
                 // AUKIO LÄHEMPÄÄ (omistaja TF 180, Concorde: "kierretään yhä liian kaukaa"; PT 11.10.: alussa 110–140 m, lopussa 70–90 m,
@@ -177,6 +179,8 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Aukion kierron kattoraja vähintään (m maasta; oletettu kattolinja ~26 m + KattoVaraM), kun ympäröivien kattojen
         /// mittaus jää matalaksi.</summary>
         public const double PalloAukioKattoMinM = 38;
+        /// <summary>Iso aukio (m) ja sen kehyksen etäisyyskerroin.</summary>
+        public const double PalloAukioIsoM = 500, PalloAukioIsoKerroin = 1.5;
 
         /// <summary>Pysähdyksen asento hetkellä aikaS saapumisesta: pehmeästi alkava hidas kierto ja kevyt dolly sisään.
         /// aikaS = 0 antaa täsmälleen kehyksen (lennon loppu), joten saapuminen on jatkuva.</summary>

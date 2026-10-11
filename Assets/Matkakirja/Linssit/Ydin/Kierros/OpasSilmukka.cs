@@ -769,7 +769,7 @@ namespace Matkakirja.Linssit.Kierros
             if (double.IsNaN(m)) return false;
             double arvio = kohdeKehys.MaaM;
             kehysVanha = KehysAsento(kohdeKehys, 0); kehysVaihto = 0;
-            if (kehysKohde != null) { kohdeKehys = OpasKuvaus.Kehysta(kehysKohde, m, kehysTulo); kehysYmparys = kehysKohde.YmparysM; kehysKorkeus = kehysKohde.KorkeusM; }
+            if (kehysKohde != null) { kohdeKehys = KehystaK(kehysKohde, m, kehysTulo); kehysYmparys = kehysKohde.YmparysM; kehysKorkeus = kehysKohde.KorkeusM; }
             else kohdeKehys.MaaM = m;   // kaupungin yläkuva (oma olio)
             kehysArvio = false; maaTunnettu = VaiheAika;
             KehysKorjattu?.Invoke(arvio, m);
@@ -793,14 +793,14 @@ namespace Matkakirja.Linssit.Kierros
             if (!ymp && Math.Abs(kehysKorkeus - kehysKohde.KorkeusM) <= 0.5) return false;
             // Lyhyen hypyn säädetty kehys (KehysKohteelle: silmä ei perääntyisi tai kulkisi seuraavan ohi) pysyy: uusi laskenta ilman
             // säätöä veisi silmää taaksepäin. Säädetty = kehys poikkeaa saman laskennan tuloksesta vanhoilla tiedoilla.
-            var ennen = OpasKuvaus.Kehysta(KehysKopio(kehysKohde, kehysYmparys, kehysKorkeus), kohdeKehys.MaaM, kehysTulo);
+            var ennen = KehystaK(KehysKopio(kehysKohde, kehysYmparys, kehysKorkeus), kohdeKehys.MaaM, kehysTulo);
             bool saadetty = Math.Abs(KierrosLento.Kiedo(ennen.Suuntima - kohdeKehys.Suuntima)) > 0.5 || Math.Abs(ennen.Kallistus - kohdeKehys.Kallistus) > 0.5
                 || Math.Abs(ennen.EtaisyysM - kohdeKehys.EtaisyysM) > 1;
             kehysYmparys = kehysKohde.YmparysM; kehysKorkeus = kehysKohde.KorkeusM;
             double jaljella = LentoKestoS - VaiheAika;
             if (saadetty || jaljella < 1.5) return false;   // liian myöhään liu'ulle: kehys pysyy (pysähdys alkaa tästä)
             var vanha = KohdeAsento();
-            kohdeKehys = EsteKehys(OpasKuvaus.Kehysta(kehysKohde, kohdeKehys.MaaM, kehysTulo));
+            kohdeKehys = EsteKehys(KehystaK(kehysKohde, kohdeKehys.MaaM, kehysTulo));
             // Suora laskeutuminen: liuku lennon loppuun asti kuten kohteen vaihdossa (lyhyt liuku nosti kiihtyvyyttä), muuten ≤ 6 s.
             kehysVanha = vanha; kehysVaihto = 0; kehysVaihtoS = suoraLasku ? Math.Max(AvausVaihtoS, jaljella - 1) : Math.Max(KehysVaihtoS, Math.Min(jaljella - 1, 6));
             // Kierron suunnitelma uudelle kehykselle (säde ja spiraali), jos saapumisen sulautus ei ole vielä alkanut.
@@ -864,6 +864,28 @@ namespace Matkakirja.Linssit.Kierros
                 Suuntima = p.Suuntima, Kallistus = Math.Atan2(vaaka, pysty) / A, EtaisyysM = Math.Sqrt(vaaka * vaaka + pysty * pysty), MinEtM = p.MinEtM,
                 KattoYlaM = p.KattoYlaM, LoppuEtM = 0, Aukio = true };   // ei lähestymistä esteen vieressä
         }
+
+        /// <summary>
+        /// AUKIO TORNIN VIERESSÄ VANHALLA KEHYKSELLÄ (PT 11.10., simu 4409d1dfa: San Marcon lähikehys nousi kellotornin yli ~115 m:iin ja
+        /// katsoi jyrkästi alas, torni ja basilika eivät näkyneet; ennen 12cf54844:ää torni ja tori näkyivät korkealta kauniisti): aukion
+        /// luokkaa (lähikehys) ei käytetä, kun kierroksen korkea este on alle PalloAukioEsteRajaM:n päässä aukion pisteestä — kehys koon
+        /// mukaan kuten ennen. Muut aukiot lähikehyksessä.
+        /// </summary>
+        public const double PalloAukioEsteRajaM = 150;
+        public bool AukioEsteenVieressa(OpasKohde k)
+        {
+            if (k == null || !OpasKuvaus.AukioLuokka(k.Luokka)) return false;
+            foreach (var x in esteet)
+            {
+                double d = KierrosLento.EtaisyysM(x.Lat, x.Lon, k.Lat, k.Lon);
+                if (d > 20 && d < PalloAukioEsteRajaM && x.Korkeus >= PalloEsteMinM) return true;
+            }
+            return false;
+        }
+        // Vanha kehys = koon mukaan ilman esittelykorkeutta (ympäröivät katot tuntemattomina, kuten 1. kohteella ennen 12cf54844:ää:
+        // San Marco et 202 m, silmä ~100 m, kellotorni ja tori kuvassa).
+        Pysahdys KehystaK(OpasKohde k, double maa, double tulo) =>
+            AukioEsteenVieressa(k) ? OpasKuvaus.Kehysta(KehysKopio(k, double.NaN, k.KorkeusM), maa, tulo, "") : OpasKuvaus.Kehysta(k, maa, tulo);
 
         /// <summary>Esteiden määrä (testit).</summary>
         public int Esteita => esteet.Count;
@@ -1813,7 +1835,7 @@ namespace Matkakirja.Linssit.Kierros
                         // Pallo: suunta pysyy arviokehyksen (kääntörajan sisällä lasketun) suuntana; vain paikka ja koko vaihtuvat
                         // (PalloKaupungitTestit: kesken lennon laskettu tulo otti lennon hetkellisen suuntiman, ja kehysten sekoitus heilutti
                         // suuntaa 40 → 61 → 55 → 69°, kääntö 14 °/s).
-                        if (PalloLento) { kTulo = KierrosLento.Kiedo(vanha.Suuntima - OpasKuvaus.SivuKulma); kehys = EsteKehys(OpasKuvaus.Kehysta(k, kehys.MaaM, kTulo)); }
+                        if (PalloLento) { kTulo = KierrosLento.Kiedo(vanha.Suuntima - OpasKuvaus.SivuKulma); kehys = EsteKehys(KehystaK(k, kehys.MaaM, kTulo)); }
                         AsetaKohdeKehys(kehys, kArvio, k, kTulo);
                         kehysVanha = vanha; kehysVaihto = 0; kehysVaihtoS = AvausVaihtoS;
                         // Suora laskeutuminen: vaihto liukuu lennon loppuun asti (3 s:n liuku nosti kiihtyvyyden 4,5 → 9 m/s²).
@@ -1912,7 +1934,7 @@ namespace Matkakirja.Linssit.Kierros
                 tulo = PalloTulosuunta(Asento.Suuntima - sivu * OpasKuvaus.SivuKulma, tulo, LennonKesto(matkaM));
                 if (sivu != 1) tulo = KierrosLento.Kiedo(tulo + (sivu - 1) * OpasKuvaus.SivuKulma);   // Kehysta lisää SivuKulman: kehys sivu × SivuKulma tulosuunnasta
             }
-            var p = OpasKuvaus.Kehysta(k, maa, tulo);   // luokka k.Luokasta, muuten koosta ja korkeudesta
+            var p = KehystaK(k, maa, tulo);   // luokka k.Luokasta (aukio tornin vieressä koon mukaan), muuten koosta ja korkeudesta
             if (PalloLento && matkaM < SiirtoRajaM)
             {
                 // Lyhyt hyppy pienestä suureen kehykseen (PalloKaupungitTestit: Praha 75 m 40 → 200 m, Sevilla 172 m 60 → 400 m):

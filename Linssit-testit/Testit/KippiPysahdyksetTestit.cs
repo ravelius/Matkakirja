@@ -428,7 +428,7 @@ namespace Matkakirja.Linssit.Testit
         /// se ole rakenteen huipun + PalloEsteVaraM:n yläpuolella. Rakenteet: saman kierroksen muut kohteet (korkeus_m tai luokka
         /// torni/kirkko nimelliskorkeudella), säde min(15, koko/2).</summary>
         public const double EsteVaraM = 30;
-        public sealed class AukioMittaus { public string Kaupunki, Aukio, Este = "-"; public double Vapaa = double.MaxValue, SilmaMin = double.MaxValue; public int Rikkeita; }
+        public sealed class AukioMittaus { public string Kaupunki, Aukio, Este = "-"; public double Vapaa = double.MaxValue, SilmaMin = double.MaxValue; public int Rikkeita; public bool VanhaKehys; }
         public static List<AukioMittaus> MittaaAukiot(string kaupunki, double tuloSuunta = double.NaN)
         {
             var a = Aja(Profiili.Normaali, kaupunki, tuloSuunta); var tulos = new List<AukioMittaus>();
@@ -437,6 +437,9 @@ namespace Matkakirja.Linssit.Testit
                 if (!a.Saapui.TryGetValue(q.Id, out double t0)) continue;
                 double t1 = a.Lahti.TryGetValue(q.Id, out var l) ? l : a.R[^1].t;
                 var m = new AukioMittaus { Kaupunki = kaupunki, Aukio = q.Nimi };
+                // PT 11.10.: torni tai korkea kohde alle 150 m:n päässä → vanha kehys (OpasSilmukka.AukioEsteenVieressa).
+                m.VanhaKehys = a.Reitti.Any(x => x.Id != q.Id && (x.KorkeusM > 0 ? x.KorkeusM : OpasSilmukka.EsteKorkeusLuokasta(x.Luokka)) >= OpasSilmukka.PalloEsteMinM
+                    && KierrosLento.EtaisyysM(x.Lat, x.Lon, q.Lat, q.Lon) is double dd && dd > 20 && dd < OpasSilmukka.PalloAukioEsteRajaM);
                 foreach (var x in a.Reitti)
                 {
                     if (x.Id == q.Id || KierrosLento.EtaisyysM(x.Lat, x.Lon, q.Lat, q.Lon) > 400) continue;
@@ -461,14 +464,14 @@ namespace Matkakirja.Linssit.Testit
         [Testi] static void AukionKiertoVaistaaKorkeatRakenteet()
         {
             var viat = new List<string>(); int n = 0;
-            Console.WriteLine("      | Kaupunki | aukio | lähin este (silmä alle huipun + 15 m) | vapaa m | silmä min m | rikkeitä |");
+            Console.WriteLine("      | Kaupunki | aukio | kehys | lähin este (silmä alle huipun + 15 m) | vapaa m | silmä min m | rikkeitä |");
             foreach (var c in PalloKaupungitTestit.Lue().Where(c => c.Kohteet.Any(k => OpasKuvaus.AukioLuokka(k.Luokka))))
                 foreach (var m in MittaaAukiot(c.Id))
                 {
                     n++;
-                    Console.WriteLine($"      | {c.Nimi} | {m.Aukio} | {m.Este} | {(m.Vapaa == double.MaxValue ? "-" : m.Vapaa.ToString("F0"))} | {m.SilmaMin:F0} | {m.Rikkeita} |");
+                    Console.WriteLine($"      | {c.Nimi} | {m.Aukio} | {(m.VanhaKehys ? "vanha (este < 150 m)" : "aukio")} | {m.Este} | {(m.Vapaa == double.MaxValue ? "-" : m.Vapaa.ToString("F0"))} | {m.SilmaMin:F0} | {m.Rikkeita} |");
                     if (m.Rikkeita > 0) viat.Add($"{c.Nimi} {m.Aukio}: {m.Este} {m.Vapaa:F0} m");
-                    if (m.SilmaMin < OpasKuvaus.PalloAukioKattoMinM - 1) viat.Add($"{c.Nimi} {m.Aukio}: silmä {m.SilmaMin:F0} m");
+                    if (!m.VanhaKehys && m.SilmaMin < OpasKuvaus.PalloAukioKattoMinM - 1) viat.Add($"{c.Nimi} {m.Aukio}: silmä {m.SilmaMin:F0} m");
                 }
             // San Marco joka tulosuunnasta (simu: idästä, kierto kellotornin läpi): kellotorni ohitetaan yläpuolelta tai ≥ EsteVaraM:n päästä.
             for (int su = 0; su < 360; su += 45)
@@ -478,6 +481,27 @@ namespace Matkakirja.Linssit.Testit
                 if (sm.Rikkeita > 0) viat.Add($"San Marco {su}°: {sm.Este} {sm.Vapaa:F0} m");
             }
             Oleta.Tosi(n >= 18, $"aukioita mitattu {n}");
+            Oleta.Tosi(viat.Count == 0, string.Join("; ", viat));
+        }
+
+        /// <summary>
+        /// PT 11.10. (simu 4409d1dfa): San Marco kellotornin vieressä vanhalla kehyksellä (koon mukaan, ei aukion lähikehystä eikä
+        /// esteen yli nousua; torni ja tori korkealta), Venceslauksen aukio (750 m) kauempaa ja korkeammalta kuin muut aukiot.
+        /// </summary>
+        [Testi] static void SanMarcoVanhallaKehyksellaJaVenceslasKauempaa()
+        {
+            var viat = new List<string>();
+            foreach (double su in new[] { double.NaN, 0, 315 })
+            {
+                var a = Aja(Profiili.Normaali, "venetsia", su); var x = Asennot(a, "Q217527");
+                double s0 = x[0].SilmaM, smax = x.Max(y => y.SilmaM);
+                Console.WriteLine($"      San Marco ({(double.IsNaN(su) ? "-" : su.ToString("F0"))}°): saapuessa et {x[0].EtM:F0} m, silmä {s0:F0} m, kallistus {x[0].Kallistus:F0}°, silmä enintään {smax:F0} m");
+                if (x[0].EtM < 200 || s0 < 60) viat.Add($"San Marco {su}: ei vanhaa kehystä (et {x[0].EtM:F0}, silmä {s0:F0})");
+                if (smax > s0 + 10) viat.Add($"San Marco {su}: silmä nousi {s0:F0} → {smax:F0} m");
+            }
+            var v = Asennot(Aja(Profiili.Normaali, "praha"), "Q847613"); var vs = Asennot(Aja(Profiili.Normaali, "praha"), "Q421678");
+            Console.WriteLine($"      Venceslas: et {v[0].EtM:F0} → {v[^1].EtM:F0} m, silmä {v.Min(y => y.SilmaM):F0}–{v.Max(y => y.SilmaM):F0} m; Vanhankaupungin aukio (kello 97 m): et {vs[0].EtM:F0} m, silmä {vs[0].SilmaM:F0} m");
+            if (v[0].EtM < 180 || v[0].SilmaM < 50) viat.Add($"Venceslas: alku {v[0].EtM:F0} m, silmä {v[0].SilmaM:F0} m");
             Oleta.Tosi(viat.Count == 0, string.Join("; ", viat));
         }
 }
