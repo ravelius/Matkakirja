@@ -554,19 +554,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Bosphorus Bridge (1973) in Istanbul.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bosphorus_Bridge_(1973)_in_Istanbul.jpg?width=1280",
-     "tekija": "Huseyinakbas63",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bosphorus_Bridge_(1973)_in_Istanbul.jpg",
-     "selite": "Bosporinsalmen silta yhdistää Euroopan ja Aasian ja valaistaan öisin eri väreillä.",
-     "leveys": 4000,
-     "korkeus": 2571,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "Bosphorus Bridge(15 July Martyrs Bridge), Istanbul, Turkey (Ank Kumar) 04.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bosphorus_Bridge(15_July_Martyrs_Bridge)%2C_Istanbul%2C_Turkey_(Ank_Kumar)_04.jpg?width=1280",
      "tekija": "Ank Kumar",
@@ -579,7 +566,7 @@
      "tarkistettu": true
     },
     {
-     "jarjestys": 3,
+     "jarjestys": 2,
      "tiedosto": "15 Temmuz Şehitler Köprüsü.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/15_Temmuz_%C5%9Eehitler_K%C3%B6pr%C3%BCs%C3%BC.jpg?width=1280",
      "tekija": "g",

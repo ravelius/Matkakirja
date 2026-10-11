@@ -133,28 +133,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "StNedelyaChurch Sofia.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/StNedelyaChurch_Sofia.jpg?width=1280",
-     "tekija": "MrPanyGoff",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:StNedelyaChurch_Sofia.jpg",
-     "selite": "Sveta Nedelyan kirkko on Sofian keskustan aukion ortodoksinen pääkirkko.",
-     "leveys": 2668,
-     "korkeus": 1900,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Saint Nedelya Church, Sofia (2).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Nedelya_Church%2C_Sofia_(2).jpg?width=1280",
-     "tekija": "Radosław Botev",
-     "lisenssi": "CC BY 3.0 pl",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_Nedelya_Church%2C_Sofia_(2).jpg",
-     "selite": "Kirkon kupoli ja pylväskäytävä erottuvat kaupungin keskiaikaisesta kerroksesta.",
-     "leveys": 4000,
-     "korkeus": 3000,
+     "tiedosto": "La cathédrale de Sofia (Sainte-Nédélia) après l'attentat (du 16 avril 1925) - btv1b53145478f.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/La_cath%C3%A9drale_de_Sofia_(Sainte-N%C3%A9d%C3%A9lia)_apr%C3%A8s_l'attentat_(du_16_avril_1925)_-_btv1b53145478f.jpg?width=1280",
+     "tekija": "Agence Rol (kuvaaja tuntematon)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:La_cath%C3%A9drale_de_Sofia_(Sainte-N%C3%A9d%C3%A9lia)_apr%C3%A8s_l'attentat_(du_16_avril_1925)_-_btv1b53145478f.jpg",
+     "selite": "Sveta Nedelyan kirkko Sofiassa huhtikuun 1925 pommi-iskun jälkeen; kirkon katto on vaurioitunut ja aukiolle on kerääntynyt väkeä.",
+     "leveys": 6186,
+     "korkeus": 8447,
      "tarkistettu": true
     }
    ]
@@ -214,42 +201,6 @@
      "selite": "Sofian yliopisto on Bulgarian vanhin korkeakoulu, ja sen päärakennus seisoo kaupungin keskustassa.",
      "leveys": 3712,
      "korkeus": 3006,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
-   "q": "Q3269914",
-   "nimi": "Kansalliskulttuuripalatsi",
-   "peruste": "pelin nosto",
-   "koko_m": 300,
-   "lat": 42.68472,
-   "lon": 23.31889,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "National Palace of Culture, Sofia 2.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Palace_of_Culture%2C_Sofia_2.jpg?width=1280",
-     "tekija": "Ivano Giambattista",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Palace_of_Culture%2C_Sofia_2.jpg",
-     "selite": "Kansalliskulttuuripalatsi on Bulgarian suurin kongressi- ja kulttuurikeskus, jonka edustalla on suihkulähteitä.",
-     "leveys": 4000,
-     "korkeus": 2701,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "National Palace of Culture (23997858848).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Palace_of_Culture_(23997858848).jpg?width=1280",
-     "tekija": "Deensel",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Palace_of_Culture_(23997858848).jpg",
-     "selite": "Palatsin edustalta johtaa puiston läpi pitkä suihkulähdeaukio kohti Vitoshaa.",
-     "leveys": 2992,
-     "korkeus": 3992,
      "tarkistettu": true
     }
    ]
@@ -391,5 +342,14 @@
    "tarkistettu": true
   }
  ],
- "eiKuvaa": []
+ "eiKuvaa": [
+  {
+   "q": "Q3269914",
+   "nimi": "Kansalliskulttuuripalatsi",
+   "lat": 42.68472,
+   "lon": 23.31889,
+   "peruste": "pelin nosto",
+   "syy": "suojatarkastus: ei vapaata, suojaamatonta kuvaa"
+  }
+ ]
 }

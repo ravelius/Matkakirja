@@ -1666,12 +1666,10 @@
    "lat": 44.413,
    "lon": 26.098,
    "kohteet": [
-    "Q164150",
     "Q755457",
     "Q3390456",
     "Q1319192",
     "Q1514860",
-    "Q638278",
     "Q5010221",
     "Q3119683",
     "Q1855757",
@@ -1679,7 +1677,9 @@
     "Q1850614",
     "Q2933758",
     "Q1956214",
-    "Q959632"
+    "Q959632",
+    "Q164150",
+    "Q638278"
    ],
    "kuvat": [
     {
@@ -10029,10 +10029,10 @@
     "Q520753",
     "Q790052",
     "Q841581",
-    "Q3269914",
     "Q942127",
     "Q1858012",
-    "Q190435"
+    "Q190435",
+    "Q3269914"
    ],
    "kuvat": [
     {
@@ -18169,19 +18169,6 @@
      "leveys": 4820,
      "korkeus": 3218,
      "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Stoa of Attalos, Ancient Agora, Athens, Greece (3966275331).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stoa_of_Attalos%2C_Ancient_Agora%2C_Athens%2C_Greece_(3966275331).jpg?width=1280",
-     "tekija": "Tilemahos Efthimiadis from Athens, Greece",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Stoa_of_Attalos%2C_Ancient_Agora%2C_Athens%2C_Greece_(3966275331).jpg",
-     "selite": "Rekonstruoitu pylväskäytävä toimii nykyään agoran museona.",
-     "leveys": 2414,
-     "korkeus": 1812,
-     "tarkistettu": true
     }
    ]
   },
@@ -18333,15 +18320,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "New Acropolis Museum building in Athens, Greece.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/New_Acropolis_Museum_building_in_Athens%2C_Greece.jpg?width=1280",
-     "tekija": "philip.mallis",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:New_Acropolis_Museum_building_in_Athens%2C_Greece.jpg",
-     "selite": "Akropolis-museo on lasi- ja betonirakennus Akropolin juurella, ja siellä säilytetään linnavuoren veistoksia.",
-     "leveys": 3856,
-     "korkeus": 2265,
+     "tiedosto": "Athens Acropolis Museum Marble Parthenon Frieze (28406643046).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Athens_Acropolis_Museum_Marble_Parthenon_Frieze_(28406643046).jpg?width=1280",
+     "tekija": "Gary Todd",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Athens_Acropolis_Museum_Marble_Parthenon_Frieze_(28406643046).jpg",
+     "selite": "Akropolis-museossa esillä oleva Parthenonin friisin marmorilaatta; reliefissä on kulkueen hahmoja ja eläin.",
+     "leveys": 5184,
+     "korkeus": 3456,
      "tarkistettu": true
     }
    ]
@@ -27760,56 +27747,6 @@
     }
    ]
   },
-  "Q164150": {
-   "nimi": "Romanian parlamenttitalo",
-   "peruste": "pelin nosto",
-   "kaupunki": "bukarest",
-   "kaupunkiQ": "Q19660",
-   "lat": 44.4275,
-   "lon": 26.0875,
-   "koko_m": 400,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Palace of the Parliament in Bucharest (51878975552).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palace_of_the_Parliament_in_Bucharest_(51878975552).jpg?width=1280",
-     "tekija": "William John Gauthier from Denmark",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palace_of_the_Parliament_in_Bucharest_(51878975552).jpg",
-     "selite": "Parlamenttipalatsi on yksi maailman suurimmista hallintorakennuksista, ja se kohoaa Bukarestin keskustassa.",
-     "leveys": 5184,
-     "korkeus": 3456,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Avenida de la Unión, Bucarest, Rumanía, 2016-05-29, DD 58.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Avenida_de_la_Uni%C3%B3n%2C_Bucarest%2C_Ruman%C3%ADa%2C_2016-05-29%2C_DD_58.jpg?width=1280",
-     "tekija": "Diego Delso",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Avenida_de_la_Uni%C3%B3n%2C_Bucarest%2C_Ruman%C3%ADa%2C_2016-05-29%2C_DD_58.jpg",
-     "selite": "Palatsiin johtavan Unirii-bulevardin suihkulähteet muodostavat pitkän aksiaalisen näkymän.",
-     "leveys": 8390,
-     "korkeus": 5593,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Fountains in front of the Romanian Palace of Parliament in Bucharest (47981521036).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fountains_in_front_of_the_Romanian_Palace_of_Parliament_in_Bucharest_(47981521036).jpg?width=1280",
-     "tekija": "dronepicr",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fountains_in_front_of_the_Romanian_Palace_of_Parliament_in_Bucharest_(47981521036).jpg",
-     "selite": "Illalla valaistu palatsi näkyy bulevardin päässä suihkulähteiden takana.",
-     "leveys": 3996,
-     "korkeus": 2664,
-     "tarkistettu": true
-    }
-   ]
-  },
   "Q755457": {
    "nimi": "Romanian ateneum",
    "peruste": "pelin nosto",
@@ -27871,41 +27808,28 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "2019 Revolution Square, Bucharest (47555248382).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2019_Revolution_Square%2C_Bucharest_(47555248382).jpg?width=1280",
-     "tekija": "Noah Meyerhans from Seattle, USA",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2019_Revolution_Square%2C_Bucharest_(47555248382).jpg",
-     "selite": "Vallankumouksen aukiolla seisoo Jälleensyntymän muistomerkki vuoden 1989 vallankumouksen uhrien muistoksi.",
-     "leveys": 4032,
-     "korkeus": 3024,
+     "tiedosto": "Burnt out buildings on nothern edge of Revolution Square, Bucharest.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Burnt_out_buildings_on_nothern_edge_of_Revolution_Square%2C_Bucharest.jpg?width=1280",
+     "tekija": "Lklundin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Burnt_out_buildings_on_nothern_edge_of_Revolution_Square%2C_Bucharest.jpg",
+     "selite": "Vallankumouksen aukion pohjareunaa: tulipalosta ja luodeista kärsineitä rakennuksia korjauksessa; vasemmalla yliopiston vanha kirjasto.",
+     "leveys": 3486,
+     "korkeus": 2402,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Revolution Square (AP4K1406-1PSP) (29213730282).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Revolution_Square_(AP4K1406-1PSP)_(29213730282).jpg?width=1280",
-     "tekija": "Alexandru Panoiu from Bucharest, Romania",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Revolution_Square_(AP4K1406-1PSP)_(29213730282).jpg",
-     "selite": "Muistomerkki valaistaan illalla aukion keskeisenä kohteena.",
-     "leveys": 3072,
-     "korkeus": 2048,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Revolution Square, Bucharest ( DSC6305).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Revolution_Square%2C_Bucharest_(_DSC6305).jpg?width=1280",
-     "tekija": "Matti Blume",
+     "tiedosto": "(6) Bucuresti, Romania. Piata Palatului - Piata Revolutiei. Biblioteca Centrala Universitara - Fundatia Regala Carol I.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(6)_Bucuresti%2C_Romania._Piata_Palatului_-_Piata_Revolutiei._Biblioteca_Centrala_Universitara_-_Fundatia_Regala_Carol_I.jpg?width=1280",
+     "tekija": "Britchi Mirela",
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Revolution_Square%2C_Bucharest_(_DSC6305).jpg",
-     "selite": "Aukiolla seisoo myös kuningas Carol I:n ratsastajapatsas.",
-     "leveys": 3872,
-     "korkeus": 2592,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(6)_Bucuresti%2C_Romania._Piata_Palatului_-_Piata_Revolutiei._Biblioteca_Centrala_Universitara_-_Fundatia_Regala_Carol_I.jpg",
+     "selite": "Yliopiston keskuskirjaston rakennus Vallankumouksen aukion laidalla Bukarestissa.",
+     "leveys": 3648,
+     "korkeus": 2736,
      "tarkistettu": true
     }
    ]
@@ -27921,28 +27845,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "The National Museum of Art of Romania (11321261983).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_National_Museum_of_Art_of_Romania_(11321261983).jpg?width=1280",
-     "tekija": "Jorge Láscar from Australia",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_National_Museum_of_Art_of_Romania_(11321261983).jpg",
-     "selite": "Kansallinen taidemuseo toimii entisessä kuninkaanlinnassa Vallankumouksen aukion laidalla.",
-     "leveys": 4288,
-     "korkeus": 2848,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Centre part of the façade of the Royal Palace in Bucharest (Romania), now the National Museum of Art of Romania.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Centre_part_of_the_fa%C3%A7ade_of_the_Royal_Palace_in_Bucharest_(Romania)%2C_now_the_National_Museum_of_Art_of_Romania.jpg?width=1280",
-     "tekija": "Neoclassicism Enthusiast",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Centre_part_of_the_fa%C3%A7ade_of_the_Royal_Palace_in_Bucharest_(Romania)%2C_now_the_National_Museum_of_Art_of_Romania.jpg",
-     "selite": "Entisen kuninkaanlinnan julkisivun keskiosa katsoo aukiolle.",
-     "leveys": 3969,
-     "korkeus": 2154,
+     "tiedosto": "Palais royal de Bucarest - btv1b6952864j.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palais_royal_de_Bucarest_-_btv1b6952864j.jpg?width=1280",
+     "tekija": "Agence Rol (kuvaaja tuntematon)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palais_royal_de_Bucarest_-_btv1b6952864j.jpg",
+     "selite": "Bukarestin kuninkaanlinna joulukuussa 1916; linnassa toimii nykyisin Romanian kansallinen taidemuseo.",
+     "leveys": 4040,
+     "korkeus": 3016,
      "tarkistettu": true
     }
    ]
@@ -27980,30 +27891,6 @@
      "selite": "Kirkko seisoo Dealul Mitropolieillä korkealla kukkulalla.",
      "leveys": 4032,
      "korkeus": 3024,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q638278": {
-   "nimi": "Riemukaari",
-   "peruste": "pelin nosto",
-   "kaupunki": "bukarest",
-   "kaupunkiQ": "Q19660",
-   "lat": 44.46728,
-   "lon": 26.07836,
-   "koko_m": 60,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Arcul de Triumf.JPG",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arcul_de_Triumf.JPG?width=1280",
-     "tekija": "Vaivoda Vlad",
-     "lisenssi": "CC BY-SA 3.0 ro",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arcul_de_Triumf.JPG",
-     "selite": "Riemukaari seisoo Kiseleff-bulevardin päässä pohjoisen Bukarestin puistoalueen laidalla.",
-     "leveys": 3408,
-     "korkeus": 2272,
      "tarkistettu": true
     }
    ]
@@ -28230,19 +28117,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Hotel Continental - Calea Victoriei.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hotel_Continental_-_Calea_Victoriei.jpg?width=1280",
-     "tekija": "Mihai Petre",
-     "lisenssi": "CC BY-SA 3.0 ro",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hotel_Continental_-_Calea_Victoriei.jpg",
-     "selite": "Calea Victoriei eli Voitonkatu on Bukarestin vanhin ja tunnetuin pääkatu.",
-     "leveys": 1920,
-     "korkeus": 1080,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "2017 Calea Victoriei noiembie.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2017_Calea_Victoriei_noiembie.jpg?width=1280",
      "tekija": "Babu",
@@ -28329,6 +28203,24 @@
      "tarkistettu": true
     }
    ]
+  },
+  "Q164150": {
+   "nimi": "Romanian parlamenttitalo",
+   "peruste": "pelin nosto",
+   "kaupunki": "bukarest",
+   "kaupunkiQ": "Q19660",
+   "lat": 44.4275,
+   "lon": 26.0875,
+   "kuvat": []
+  },
+  "Q638278": {
+   "nimi": "Riemukaari",
+   "peruste": "pelin nosto",
+   "kaupunki": "bukarest",
+   "kaupunkiQ": "Q19660",
+   "lat": 44.46728,
+   "lon": 26.07836,
+   "kuvat": []
   },
   "Q7343": {
    "nimi": "Iso Valliriutta",
@@ -48807,19 +48699,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Bosphorus Bridge (1973) in Istanbul.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bosphorus_Bridge_(1973)_in_Istanbul.jpg?width=1280",
-     "tekija": "Huseyinakbas63",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bosphorus_Bridge_(1973)_in_Istanbul.jpg",
-     "selite": "Bosporinsalmen silta yhdistää Euroopan ja Aasian ja valaistaan öisin eri väreillä.",
-     "leveys": 4000,
-     "korkeus": 2571,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "Bosphorus Bridge(15 July Martyrs Bridge), Istanbul, Turkey (Ank Kumar) 04.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bosphorus_Bridge(15_July_Martyrs_Bridge)%2C_Istanbul%2C_Turkey_(Ank_Kumar)_04.jpg?width=1280",
      "tekija": "Ank Kumar",
@@ -48832,7 +48711,7 @@
      "tarkistettu": true
     },
     {
-     "jarjestys": 3,
+     "jarjestys": 2,
      "tiedosto": "15 Temmuz Şehitler Köprüsü.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/15_Temmuz_%C5%9Eehitler_K%C3%B6pr%C3%BCs%C3%BC.jpg?width=1280",
      "tekija": "g",
@@ -60850,45 +60729,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Knossos North entrance bull fresco.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Knossos_North_entrance_bull_fresco.jpg?width=1280",
-     "tekija": "Jebulon",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Knossos_North_entrance_bull_fresco.jpg",
-     "selite": "Knossos oli minolaisen sivilisaation suuri palatsikeskus, jonka pohjoisen sisäänkäynnin seinää koristaa härkäfriisi.",
-     "leveys": 4315,
-     "korkeus": 2872,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Knossos - North Portico 02.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Knossos_-_North_Portico_02.jpg?width=1280",
-     "tekija": "Bernard Gagnon",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Knossos_-_North_Portico_02.jpg",
-     "selite": "Pohjoinen portiikki punaisine pylväineen on yksi palatsialueen tunnetuimmista näkymistä.",
-     "leveys": 3456,
-     "korkeus": 2592,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Knossos, Sept. 2019e.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Knossos%2C_Sept._2019e.jpg?width=1280",
-     "tekija": "Cayambe",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Knossos%2C_Sept._2019e.jpg",
-     "selite": "Palatsin uudelleenrakennetut punaiset pylväät kapenevat alaspäin, kuten minolaisessa arkkitehtuurissa.",
-     "leveys": 5975,
-     "korkeus": 3707,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 4,
      "tiedosto": "Knossos in Crete west court.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Knossos_in_Crete_west_court.jpg?width=1280",
      "tekija": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
@@ -60901,7 +60741,7 @@
      "tarkistettu": true
     },
     {
-     "jarjestys": 5,
+     "jarjestys": 2,
      "tiedosto": "Theatral area Knossos palace.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Theatral_area_Knossos_palace.jpg?width=1280",
      "tekija": "Jebulon",
@@ -60911,43 +60751,6 @@
      "selite": "Teatterialueen leveät kiviportaat johtivat palatsin vanhaa kuninkaan tietä pitkin.",
      "leveys": 4592,
      "korkeus": 3056,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q7798352": {
-   "nimi": "Knossoksen valtaistuinsali",
-   "peruste": "pelin nosto",
-   "kaupunki": "kreeta",
-   "kaupunkiQ": "Q34374",
-   "lat": 35.298094,
-   "lon": 25.162928,
-   "koko_m": 30,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Throne room of the Minoan Palace in Knossos.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Throne_room_of_the_Minoan_Palace_in_Knossos.jpg?width=1280",
-     "tekija": "Annatsach",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Throne_room_of_the_Minoan_Palace_in_Knossos.jpg",
-     "selite": "Valtaistuinsali on punaisin kukkamaalauksin koristeltu huone, jossa on kivinen istuin ja matala vesiastia.",
-     "leveys": 4512,
-     "korkeus": 3000,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Throne of Minos at Knossos Palace.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Throne_of_Minos_at_Knossos_Palace.jpg?width=1280",
-     "tekija": "Jebulon",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Throne_of_Minos_at_Knossos_Palace.jpg",
-     "selite": "Kivinen valtaistuin seisoo seinää vasten ja sitä pidetään Euroopan vanhimpana säilyneenä valtaistuimena.",
-     "leveys": 3056,
-     "korkeus": 4090,
      "tarkistettu": true
     }
    ]
@@ -60963,32 +60766,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "202610 Archaeological Museum of Heraklion 03.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/202610_Archaeological_Museum_of_Heraklion_03.jpg?width=1280",
-     "tekija": "Jonashtand",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:202610_Archaeological_Museum_of_Heraklion_03.jpg",
-     "selite": "Museon uudistetun rakennuksen punaiset pylväät reunustavat sisäänkäyntiä ja pihaa.",
-     "leveys": 6000,
-     "korkeus": 4000,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "202610 Archaeological Museum of Heraklion 01.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/202610_Archaeological_Museum_of_Heraklion_01.jpg?width=1280",
-     "tekija": "Jonashtand",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:202610_Archaeological_Museum_of_Heraklion_01.jpg",
-     "selite": "Sisäänkäyntihalli avaa tien Euroopan vanhimman sivilisaation aarteisiin.",
-     "leveys": 6000,
-     "korkeus": 4000,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
      "tiedosto": "Bull leaping minoan fresco archmus Heraklion.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bull_leaping_minoan_fresco_archmus_Heraklion.jpg?width=1280",
      "tekija": "Jebulon",
@@ -61001,7 +60778,7 @@
      "tarkistettu": true
     },
     {
-     "jarjestys": 4,
+     "jarjestys": 2,
      "tiedosto": "Phaistos Disc - Heraklion Archaeological Museum by Joy of Museums.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Phaistos_Disc_-_Heraklion_Archaeological_Museum_by_Joy_of_Museums.jpg?width=1280",
      "tekija": "Joyofmuseums",
@@ -61275,19 +61052,6 @@
      "leveys": 4608,
      "korkeus": 3456,
      "tarkistettu": true
-    },
-    {
-     "jarjestys": 4,
-     "tiedosto": "Iraklio, tomba di Nikos Kazantzakis 02.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iraklio%2C_tomba_di_Nikos_Kazantzakis_02.jpg?width=1280",
-     "tekija": "Syrio",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iraklio%2C_tomba_di_Nikos_Kazantzakis_02.jpg",
-     "selite": "Kirjailija Nikos Kazantzakisin hauta on Martinengon bastionin laella ja sen ristissä on vain yksinkertainen kirjoitus.",
-     "leveys": 4000,
-     "korkeus": 3000,
-     "tarkistettu": true
     }
    ]
   },
@@ -61514,6 +61278,15 @@
      "tarkistettu": true
     }
    ]
+  },
+  "Q7798352": {
+   "nimi": "Knossoksen valtaistuinsali",
+   "peruste": "pelin nosto",
+   "kaupunki": "kreeta",
+   "kaupunkiQ": "Q34374",
+   "lat": 35.298094,
+   "lon": 25.162928,
+   "kuvat": []
   },
   "Q894613": {
    "nimi": "Bosumtwi-järvi",
@@ -65191,41 +64964,28 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "2021-07-28 Ljubljana-0769.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2021-07-28_Ljubljana-0769.jpg?width=1280",
-     "tekija": "Sieglinde Hankele",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2021-07-28_Ljubljana-0769.jpg",
-     "selite": "Tromostovje eli Kolmoissilta ylittää Ljubljanica-joen Prešerenin aukion kupeessa.",
-     "leveys": 6000,
-     "korkeus": 4000,
+     "tiedosto": "Frančiškanski most in Špitalska ulica 1880.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fran%C4%8Di%C5%A1kanski_most_in_%C5%A0pitalska_ulica_1880.jpg?width=1280",
+     "tekija": "Alois Beer",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fran%C4%8Di%C5%A1kanski_most_in_%C5%A0pitalska_ulica_1880.jpg",
+     "selite": "Franzin silta Ljubljanassa vuonna 1880; sama silta on nykyisen Tromostovjen keskiosa.",
+     "leveys": 1486,
+     "korkeus": 996,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Ljubljana (11992532396).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ljubljana_(11992532396).jpg?width=1280",
-     "tekija": "Jorge Láscar from Australia",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ljubljana_(11992532396).jpg",
-     "selite": "Plečnikin suunnittelemat jalankulkusillat seisovat vanhan kivisillan rinnalla.",
-     "leveys": 4288,
-     "korkeus": 2848,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "August 2006, Ljubljana 4.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/August_2006%2C_Ljubljana_4.jpg?width=1280",
-     "tekija": "Syced",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:August_2006%2C_Ljubljana_4.jpg",
-     "selite": "Siltojen kaaret ja kivinen kaide heijastuvat joen veteen.",
-     "leveys": 2272,
-     "korkeus": 1704,
+     "tiedosto": "Ladislav Benesch - Pogled na Ljubljanico, Francov most in frančiškansko cerkev v Ljubljani.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ladislav_Benesch_-_Pogled_na_Ljubljanico%2C_Francov_most_in_fran%C4%8Di%C5%A1kansko_cerkev_v_Ljubljani.jpg?width=1280",
+     "tekija": "Ladislav Benesch",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ladislav_Benesch_-_Pogled_na_Ljubljanico%2C_Francov_most_in_fran%C4%8Di%C5%A1kansko_cerkev_v_Ljubljani.jpg",
+     "selite": "Ladislav Beneschin piirros: näkymä Ljubljanicalle, Franzin silta ja frančiskaanikirkko.",
+     "leveys": 1623,
+     "korkeus": 2000,
      "tarkistettu": true
     }
    ]
@@ -65241,41 +65001,28 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "COVID-19 pandemic in Slovenia (Ljubljana downtown, center).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/COVID-19_pandemic_in_Slovenia_(Ljubljana_downtown%2C_center).jpg?width=1280",
-     "tekija": "Petar Milošević",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:COVID-19_pandemic_in_Slovenia_(Ljubljana_downtown%2C_center).jpg",
-     "selite": "Prešerenin aukio on Ljubljanan keskustan aukio, jota hallitsee vaaleanpunainen Fransiskaanikirkko.",
-     "leveys": 7440,
-     "korkeus": 3808,
+     "tiedosto": "Marijin trg prešernov spomenik frančiškanska cerkev čopova ulica ljubljana 1920.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marijin_trg_pre%C5%A1ernov_spomenik_fran%C4%8Di%C5%A1kanska_cerkev_%C4%8Dopova_ulica_ljubljana_1920.jpg?width=1280",
+     "tekija": "Tuntematon",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marijin_trg_pre%C5%A1ernov_spomenik_fran%C4%8Di%C5%A1kanska_cerkev_%C4%8Dopova_ulica_ljubljana_1920.jpg",
+     "selite": "Prešerenin aukio eli Marijin trg noin vuonna 1920: keskellä Prešerenin patsas, takana frančiskaanikirkko.",
+     "leveys": 1920,
+     "korkeus": 1250,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Tromostovje in Prešernov trg (Tromostovje and Prešeren Square).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tromostovje_in_Pre%C5%A1ernov_trg_(Tromostovje_and_Pre%C5%A1eren_Square).jpg?width=1280",
-     "tekija": "Petar Milošević",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tromostovje_in_Pre%C5%A1ernov_trg_(Tromostovje_and_Pre%C5%A1eren_Square).jpg",
-     "selite": "Ilmasta aukion pyöreä kuvio ja sillat hohtavat illan valoissa.",
-     "leveys": 5280,
-     "korkeus": 3956,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Crossing the triple bridge (34834748760).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Crossing_the_triple_bridge_(34834748760).jpg?width=1280",
-     "tekija": "Francisco Anzola from United States",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Crossing_the_triple_bridge_(34834748760).jpg",
-     "selite": "Aukiolta alkavat kävelykadut vanhaan kaupunkiin.",
-     "leveys": 6016,
-     "korkeus": 4000,
+     "tiedosto": "1895 Ljubljana earthquake by Helfer - Prešernov trg (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1895_Ljubljana_earthquake_by_Helfer_-_Pre%C5%A1ernov_trg_(1).jpg?width=1280",
+     "tekija": "Wilhelm Helfer",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1895_Ljubljana_earthquake_by_Helfer_-_Pre%C5%A1ernov_trg_(1).jpg",
+     "selite": "Wilhelm Helferin kuva Prešerenin aukiolta Ljubljanan maanjäristyksen jälkeen 1895; apteekkirakennusta tuetaan puupalkein.",
+     "leveys": 1572,
+     "korkeus": 1198,
      "tarkistettu": true
     }
    ]
@@ -65378,41 +65125,28 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Ljubljana - Central Market.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ljubljana_-_Central_Market.jpg?width=1280",
-     "tekija": "Tiia Monto",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ljubljana_-_Central_Market.jpg",
-     "selite": "Ljubljanan keskustori on Plečnikin suunnittelema kauppahallien ja arkadien kokonaisuus Ljubljanican rannalla.",
-     "leveys": 3712,
-     "korkeus": 2320,
+     "tiedosto": "Tržni dan na Vodnikovem trgu 1927.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tr%C5%BEni_dan_na_Vodnikovem_trgu_1927.jpg?width=1280",
+     "tekija": "Tuntematon",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tr%C5%BEni_dan_na_Vodnikovem_trgu_1927.jpg",
+     "selite": "Markkinapäivä Vodnikin aukiolla Ljubljanassa 1927; vasemmalla Pyhän Nikolauksen seurakunnan pappila, oikealla seminaari.",
+     "leveys": 1508,
+     "korkeus": 794,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Ljubljana - Pogačarjev trg (2008-07).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ljubljana_-_Poga%C4%8Darjev_trg_(2008-07).jpg?width=1280",
-     "tekija": "Szeder László",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ljubljana_-_Poga%C4%8Darjev_trg_(2008-07).jpg",
-     "selite": "Torin viherraidalliset markiisit ja arkadit johtavat tuomiokirkon varjoon.",
-     "leveys": 1600,
-     "korkeus": 1200,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Ljubljana Central Market, view from Ljubljana Castle.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ljubljana_Central_Market%2C_view_from_Ljubljana_Castle.jpg?width=1280",
-     "tekija": "Ajznponar",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ljubljana_Central_Market%2C_view_from_Ljubljana_Castle.jpg",
-     "selite": "Linnavuorelta nähtynä tori levittäytyy joen ja kattojen väliin.",
-     "leveys": 4000,
-     "korkeus": 3000,
+     "tiedosto": "Vodnikov trg s semeniščem in škofijskim župniščem 1930.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vodnikov_trg_s_semeni%C5%A1%C4%8Dem_in_%C5%A1kofijskim_%C5%BEupni%C5%A1%C4%8Dem_1930.jpg?width=1280",
+     "tekija": "Tuntematon",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vodnikov_trg_s_semeni%C5%A1%C4%8Dem_in_%C5%A1kofijskim_%C5%BEupni%C5%A1%C4%8Dem_1930.jpg",
+     "selite": "Vodnikin aukio markkinoineen Ljubljanassa vuonna 1930; kuvassa seminaari ja piispan pappila.",
+     "leveys": 1458,
+     "korkeus": 1002,
      "tarkistettu": true
     }
    ]
@@ -65438,32 +65172,6 @@
      "leveys": 6994,
      "korkeus": 4633,
      "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Tivoli City Park, Ljubljana (2013).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tivoli_City_Park%2C_Ljubljana_(2013).jpg?width=1280",
-     "tekija": "Dedo70",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tivoli_City_Park%2C_Ljubljana_(2013).jpg",
-     "selite": "Puiston pääkäytävä on kulkureitti, jonka varrella pidetään valokuvanäyttelyitä.",
-     "leveys": 3456,
-     "korkeus": 2304,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Tivoli City Park, Ljubljana (2019).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tivoli_City_Park%2C_Ljubljana_(2019).jpg?width=1280",
-     "tekija": "Dedo70",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tivoli_City_Park%2C_Ljubljana_(2019).jpg",
-     "selite": "Käytävää reunustavat suuret puut ja avoimet nurmialueet.",
-     "leveys": 4608,
-     "korkeus": 3456,
-     "tarkistettu": true
     }
    ]
   },
@@ -65485,19 +65193,6 @@
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
      "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kri%C5%BEanke_(1).JPG",
      "selite": "Križanke on entinen ritarikunnan luostari, josta on tullut kesäteatteri ja kulttuurikeskus.",
-     "leveys": 4000,
-     "korkeus": 3000,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Krizanke, sculpture at 01.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Krizanke%2C_sculpture_at_01.jpg?width=1280",
-     "tekija": "Ajznponar",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Krizanke%2C_sculpture_at_01.jpg",
-     "selite": "Luostarin portit ja pihat ovat Plečnikin ajan uudistamia.",
      "leveys": 4000,
      "korkeus": 3000,
      "tarkistettu": true
@@ -105001,28 +104696,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "StNedelyaChurch Sofia.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/StNedelyaChurch_Sofia.jpg?width=1280",
-     "tekija": "MrPanyGoff",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:StNedelyaChurch_Sofia.jpg",
-     "selite": "Sveta Nedelyan kirkko on Sofian keskustan aukion ortodoksinen pääkirkko.",
-     "leveys": 2668,
-     "korkeus": 1900,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Saint Nedelya Church, Sofia (2).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Nedelya_Church%2C_Sofia_(2).jpg?width=1280",
-     "tekija": "Radosław Botev",
-     "lisenssi": "CC BY 3.0 pl",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_Nedelya_Church%2C_Sofia_(2).jpg",
-     "selite": "Kirkon kupoli ja pylväskäytävä erottuvat kaupungin keskiaikaisesta kerroksesta.",
-     "leveys": 4000,
-     "korkeus": 3000,
+     "tiedosto": "La cathédrale de Sofia (Sainte-Nédélia) après l'attentat (du 16 avril 1925) - btv1b53145478f.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/La_cath%C3%A9drale_de_Sofia_(Sainte-N%C3%A9d%C3%A9lia)_apr%C3%A8s_l'attentat_(du_16_avril_1925)_-_btv1b53145478f.jpg?width=1280",
+     "tekija": "Agence Rol (kuvaaja tuntematon)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:La_cath%C3%A9drale_de_Sofia_(Sainte-N%C3%A9d%C3%A9lia)_apr%C3%A8s_l'attentat_(du_16_avril_1925)_-_btv1b53145478f.jpg",
+     "selite": "Sveta Nedelyan kirkko Sofiassa huhtikuun 1925 pommi-iskun jälkeen; kirkon katto on vaurioitunut ja aukiolle on kerääntynyt väkeä.",
+     "leveys": 6186,
+     "korkeus": 8447,
      "tarkistettu": true
     }
    ]
@@ -105084,43 +104766,6 @@
      "selite": "Sofian yliopisto on Bulgarian vanhin korkeakoulu, ja sen päärakennus seisoo kaupungin keskustassa.",
      "leveys": 3712,
      "korkeus": 3006,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q3269914": {
-   "nimi": "Kansalliskulttuuripalatsi",
-   "peruste": "pelin nosto",
-   "kaupunki": "sofia",
-   "kaupunkiQ": "Q472",
-   "lat": 42.68472,
-   "lon": 23.31889,
-   "koko_m": 300,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "National Palace of Culture, Sofia 2.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Palace_of_Culture%2C_Sofia_2.jpg?width=1280",
-     "tekija": "Ivano Giambattista",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Palace_of_Culture%2C_Sofia_2.jpg",
-     "selite": "Kansalliskulttuuripalatsi on Bulgarian suurin kongressi- ja kulttuurikeskus, jonka edustalla on suihkulähteitä.",
-     "leveys": 4000,
-     "korkeus": 2701,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "National Palace of Culture (23997858848).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Palace_of_Culture_(23997858848).jpg?width=1280",
-     "tekija": "Deensel",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Palace_of_Culture_(23997858848).jpg",
-     "selite": "Palatsin edustalta johtaa puiston läpi pitkä suihkulähdeaukio kohti Vitoshaa.",
-     "leveys": 2992,
-     "korkeus": 3992,
      "tarkistettu": true
     }
    ]
@@ -105235,6 +104880,15 @@
      "tarkistettu": true
     }
    ]
+  },
+  "Q3269914": {
+   "nimi": "Kansalliskulttuuripalatsi",
+   "peruste": "pelin nosto",
+   "kaupunki": "sofia",
+   "kaupunkiQ": "Q472",
+   "lat": 42.68472,
+   "lon": 23.31889,
+   "kuvat": []
   },
   "Q482485": {
    "nimi": "Gyeongbokgung",

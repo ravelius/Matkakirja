@@ -42,6 +42,18 @@
   "syy": "ei vapaata kuvaa >= 1200 px"
  },
  {
+  "q": "Q164150",
+  "nimi": "Romanian parlamenttitalo",
+  "kaupunki": "bukarest",
+  "syy": "suojatarkastus: ei vapaata, suojaamatonta kuvaa"
+ },
+ {
+  "q": "Q638278",
+  "nimi": "Riemukaari",
+  "kaupunki": "bukarest",
+  "syy": "suojatarkastus: ei vapaata, suojaamatonta kuvaa"
+ },
+ {
   "q": "Q589099",
   "nimi": "Cloud Gate",
   "kaupunki": "chicago",
@@ -160,6 +172,12 @@
   "nimi": "Miklušin vankila",
   "kaupunki": "kosice",
   "syy": "vain sisätilakuvia museonäyttelystä, ei tunnistettavaa ulkokuvaa"
+ },
+ {
+  "q": "Q7798352",
+  "nimi": "Knossoksen valtaistuinsali",
+  "kaupunki": "kreeta",
+  "syy": "suojatarkastus: ei vapaata, suojaamatonta kuvaa"
  },
  {
   "q": "Q7398110",
@@ -340,6 +358,12 @@
   "nimi": "Orchard Road",
   "kaupunki": "singapore",
   "syy": "ei vapaata ulkokuvaa ilman ihmispääosaa; vain ostoskeskuksia ja väkijoukkoja"
+ },
+ {
+  "q": "Q3269914",
+  "nimi": "Kansalliskulttuuripalatsi",
+  "kaupunki": "sofia",
+  "syy": "suojatarkastus: ei vapaata, suojaamatonta kuvaa"
  },
  {
   "q": "Q12217059",

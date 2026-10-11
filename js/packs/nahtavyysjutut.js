@@ -5532,12 +5532,6 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Hefaistoksen temppeli on kestänyt agoran laidalla lähes koskemattomana yli 2 400 vuotta, vaikka moni muu aukion rakennus on murentunut ajan saatossa.',
           lahde: 'Jebulon, Wikimedia Commons (CC0)',
         },
-        {
-          tiedosto: 'Attalos Stoa.jpg',
-          lyhyt: 'Attaloksen pylväikkö rakennettiin uudelleen 1950-luvulla alkuperäisin mitoin.',
-          selite: 'Attaloksen pylväikkö rakennettiin uudelleen 1950-luvulla alkuperäisin mitoin — sen varjoisa käytävä on sama, jossa ateenalaiset kävelivät 2 100 vuotta sitten.',
-          lahde: 'Mirjanamimi, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -10502,31 +10496,6 @@ export const NAHTAVYYSJUTUT = {
           + 'näyttävän kulttuurin kodin. Vuonna 2005 rakennus '
           + 'palkittiin maailman parhaana kongressikeskuksena.',
       kuvat: [
-        {
-          tiedosto: 'The National Palace of Culture, Sofia, 2012 - 004.jpg',
-          lyhyt: 'Sofian kulttuurikeskus rakennettiin 1978–1981 Bulgarian juhlavuoteen, tilaa 123 000 neliömetriä.',
-          selite: 'Sofian suurin kulttuurikeskus rakennettiin vuosina 1978–1981 '
-            + 'ja avattiin juuri kun Bulgaria juhli 1300-vuotista taivaltaan; '
-            + 'tilaa on 123 000 neliömetriä kahdeksassa maanpäällisessä '
-            + 'kerroksessa.',
-          lahde: 'Peter Kirkov, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'National Palace of Culture (23997858848).jpg',
-          lyhyt: 'Kulttuurikeskuksessa on yli 80 taideteosta tunnetuilta bulgarialaisilta taiteilijoilta.',
-          selite: 'Rakennuksen sisällä ja ulkopuolella on yli 80 taideteosta – '
-            + 'seinämaalauksia, mosaiikkeja ja veistoksia – jotka tunnetut '
-            + 'bulgarialaiset taiteilijat loivat.',
-          lahde: 'Deensel, Wikimedia Commons (CC BY 2.0)',
-        },
-        {
-          tiedosto: 'National Palace of Culture, Sofia 1.jpg',
-          lyhyt: 'Idean palatsista antoi Ljudmila Živkova, rakennus palkittiin 2005 parhaana kongressikeskuksena.',
-          selite: 'Idean koko palatsista antoi Ljudmila Živkova, '
-            + 'kommunistijohtaja Todor Živkovin tytär, ja vuonna 2005 '
-            + 'rakennus palkittiin maailman parhaana kongressikeskuksena.',
-          lahde: 'Ivano Giambattista, Wikimedia Commons (CC0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -10614,11 +10583,10 @@ export const NAHTAVYYSJUTUT = {
         + 'Viisautta. Minulla ei ole tähän mitään lisättävää.',
       kuvat: [
         {
-          tiedosto: 'Sofia statue, Sofia (P1070773).jpg',
-          lyhyt: 'Kahdeksan metriä korkea kuparinen Sofia-patsas seisoo 16 metrin jalustalla Nezavisimost-aukiolla.',
-          selite: 'Sofia-patsas Nezavisimost-aukiolla. Kuparinen hahmo on kahdeksan '
-            + 'metriä korkea ja seisoo 16 metrin jalustalla.',
-          lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "Bulgaria-02926 - Saint Sofia Church (11047630053).jpg",
+          lyhyt: "Pyhän Sofian kirkko on 500-luvulta ja antoi kaupungille nimen.",
+          selite: "Pyhän Sofian kirkko on Sofian toiseksi vanhin kirkko ja ajoittuu 500-luvulle. Commonsin kuvauksen mukaan kirkko antoi kaupungille nimensä 1300-luvulla.",
+          lahde: "Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -10917,23 +10885,6 @@ export const NAHTAVYYSJUTUT = {
           + 'rakentamiseen käytettiin miljoona kuutiometriä marmoria. '
           + 'Nykyään rakennuksessa istuu Romanian parlamentti.',
       kuvat: [
-        {
-          tiedosto: 'Palatul Parlamentului 1.jpg',
-          lyhyt: 'Ceaușescun palatsin piti valmistua kahdessa vuodessa, rakentaminen kesti 13 vuotta.',
-          selite: 'Diktaattori Nicolae Ceaușescun rakennuttaman palatsin piti '
-            + 'valmistua kahdessa vuodessa, mutta rakentaminen kesti 13 '
-            + 'vuotta ja päättyi vasta vuonna 1997.',
-          lahde: 'Mihai Petre, Wikimedia Commons (CC BY-SA 3.0)',
-        },
-        {
-          tiedosto: 'Palace București 23 BG.jpg',
-          lyhyt: 'Palatsissa on 1100 huonetta ja pommisuoja, maailman raskain rakennus lähes 2 miljoonaa tonnia.',
-          selite: 'Palatsissa on 1100 huonetta, ja se ulottuu 92 metriä maan '
-            + 'alle, jonne rakennettiin ydinpommisuoja 1,5 metriä paksuine '
-            + 'betoniseinineen. Se on maailman raskain rakennus, arviolta '
-            + 'lähes 2 miljoonaa tonnia.',
-          lahde: 'Bingar1234, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -63745,13 +63696,10 @@ export const NAHTAVYYSJUTUT = {
           + 'pihoista tunnetaan nimellä Helvetin piha.',
       kuvat: [
         {
-          tiedosto: 'Krizanke, main courtyard 01.jpg',
-          lyhyt: 'Križanken pääpiha ja sen kaariholvit.',
-          selite: 'Križanken pääpiha: matalissa kaarissa ja '
-            + 'sgrafittokoristeissa näkyy, miten luostarin goottilaiset '
-            + 'yksityiskohdat peittyivät vähitellen renessanssin ja '
-            + 'barokin alle.',
-          lahde: 'Ajznponar, Wikimedia Commons (CC0)',
+          tiedosto: "Gor v višave.jpg",
+          lyhyt: "Križankejen luostarikirkon barokkijulkisivu kuvattuna alhaalta.",
+          selite: "Križankejen luostarikirkon (Commonsissa Neitsyt Marian Auttajan kirkko) julkisivua jäsentävät pilasterit.",
+          lahde: "Ninca.pugelj86, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Wikipedia',
