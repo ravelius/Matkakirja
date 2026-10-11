@@ -214,8 +214,13 @@ namespace Matkakirja.Natiivi
                 ag.obstacleAvoidanceType = ObstacleAvoidanceType.LowQualityObstacleAvoidance;
                 // Kapseli pelaajan kävelyä vasten (PT 11.10.: kamera hahmon sisällä): oletuskerros, joten näkölinjat, napautus ja kameran
                 // kattoraja (DioraamaNayttamo.Kerros) eivät osu siihen, mutta pelaajan CharacterController ei kulje hahmon läpi.
-                var kg = new GameObject("Kapseli") { layer = 0 }; kg.transform.SetParent(vg.transform, false);
-                var kc = kg.AddComponent<CapsuleCollider>(); kc.radius = HahmoSadeM; kc.height = 1.8f; kc.center = new Vector3(0f, 0.9f, 0f);
+                // Vain liikkuville (partio): istuva tai seisova hahmo kapeassa käytävässä tukki kulun (v5 eb0b01fe: tyrmän torkkuva vartija
+                // 0,7 m uloskäynnistä, pelaaja jäi jumiin).
+                if (!istuu && !seisoo)
+                {
+                    var kg = new GameObject("Kapseli") { layer = 0 }; kg.transform.SetParent(vg.transform, false);
+                    var kc = kg.AddComponent<CapsuleCollider>(); kc.radius = HahmoSadeM; kc.height = 1.8f; kc.center = new Vector3(0f, 0.9f, 0f);
+                }
                 // kierto_y kääntää glTF:n +Z:aa; Unityssa z peilattu → katseen yaw = 180° − kierto_y (LS2 8.10.: −kierto_y katsoi väärään suuntaan).
                 double yaw0 = eka.KiertoY is double ky0 ? 180 - ky0 * 180 / Math.PI : 0;
                 var v = new V { Aivot = new Vartija(pisteet, yaw0) { Profiili = (seisoo || istuu) && eka.Profiili == null ? VartijaProfiili.Linnavaki : VartijaProfiili.Hae(eka.Profiili),
