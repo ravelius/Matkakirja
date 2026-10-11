@@ -29,3 +29,10 @@ Scratchpad (skenaariot, simu2.sh): /private/tmp/claude-502/-Users-Shared-Claude-
 - Hiljaisuus linnan jälkeen = KERRAN LÄPI -linjaus (Pelikoodari), ei vika. Maakortti: PT kysyy omistajalta.
 - Levy: pakka-180 ja poistu3-180 poistettu. Jäljellä appit metro-181 ja sirut-181 (poista, kun juna 181 on TF:ssä).
 - SEURAAVAKSI: Wienin todennus junan 181 käännöksellä (sirut + ei ikäkyselyä Esittele kaupungista), muuten levossa.
+
+## Päivitys 05.4x
+- natiivi-ui/maakortti-pysakki **2137299e2** (käännös 221b4173d, EI junaan; aamun kortti): oman maan tyhjä napautus avaa kartussin maissa ilman
+  pääkaupunkipistettä. Kuvapari proto-3d/lokit/todistus-maakortti-pari-20261011.jpg: toimii, MUTTA maakuntapaneeli peittää avatun kartussin.
+  Kysytty PT:ltä: estetäänkö maakuntapaneeli sillä yhdellä napautuksella. Asettelutesti pallo: aikaraja kuormassa, maakorttikohdat OK.
+- natiivi-ui/taidemuseo-ui **2e409cc62** (linssiseppa2/museo-180 2c92d79da:n päällä; LS2 todentaa): tekijärivi Kehys.Paper + 18 pt, ui puu nimi = tooltip.
+- Jäljellä appit: natiivi-ui-app-metro-181, -sirut-181, -maakortti (poista junan 181 jälkeen). Wienin todennus junan 181 käännöksellä.
