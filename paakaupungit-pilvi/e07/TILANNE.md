@@ -9,8 +9,8 @@ Oma NAS-klooni, haara paakaupungit-e07-codex; pohja e4f2845b3a82874550481fda2652
 | khartum | osittain | — | — | — | — | — | poiminta tehty; lähdemetadata erikseen |
 | juba | osittain | — | — | — | — | — | null; syy SAA-VALMISTELU.md:ssä |
 | asmara | osittain | — | — | — | — | — | poiminta tehty; lähdemetadata erikseen |
-| djibouti | työn alla | — | — | — | — | — | null; lähdehylkäys SAA-LAHDEHYLKAYKSET.md:ssä |
-| mogadishu | jonossa | — | — | — | — | — | null; syy SAA-VALMISTELU.md:ssä |
+| djibouti | osittain | — | — | — | — | — | null; lähdehylkäys SAA-LAHDEHYLKAYKSET.md:ssä |
+| mogadishu | työn alla | — | — | — | — | — | null; syy SAA-VALMISTELU.md:ssä |
 | kampala | jonossa | — | — | — | — | — | null; lähdehylkäys SAA-LAHDEHYLKAYKSET.md:ssä |
 | dodoma | jonossa | — | — | — | — | — | poiminta tehty; lähdemetadata erikseen |
 | lilongwe | jonossa | — | — | — | — | — | poiminta tehty; lähdemetadata erikseen |
@@ -21,3 +21,5 @@ Suojattuja teoksia ei kohteiksi eikä kuviksi. #74 kaupallinen FOP kuvatulle suo
 ## A-lähdekoosteet, kartta- ja oikeuspuutteet avoinna
 
 Khartumin, Juban ja Asmaran osiot 0–9 on kirjoitettu, mutta A-portteja ei merkitä valmiiksi. Khartumissa jokisuun geotyyppi ja eräiden vanhojen rakennusten nykyiset osat ovat avoinna; UM kehottaa poistumaan maasta. Jubassa ei löytynyt vaadittua historiallista karttaydintä hyväksytyillä omilla WP/WD-koordinaateilla; UM kehottaa poistumaan maasta. Asmarassa modernien tunnettujen rakennusten tekijäketju ja alle 70 vuoden suoja estävät nykyisen kohdevalinnan, ja lupaavien vanhojen Medebarin/Dege Selamin paikkojen omat koordinaatit puuttuvat. Asmaran Fiat Taglieron virheellistä Wikidata-arkkitehtia ei otettu lähdetodisteeksi. Tarkemmat rajaukset kaupunkien faktapohja.md-tiedostoissa. Djibouti A etenee.
+
+Djibouti A: osiot 0–9 ja 32 lähdetallennetta, mutta historiallisesta karttaytimestä vain kaksi omaa lähdekoordinaattia; Hamoudin tuntematon rakennustekijä ja myöhemmät osat vaativat B:n oikeustarkistuksen. Sää null vuosikausien epävarmuuden vuoksi. Ei valmis-A-merkintää. Mogadishu A etenee.
