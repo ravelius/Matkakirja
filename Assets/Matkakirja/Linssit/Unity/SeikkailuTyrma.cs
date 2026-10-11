@@ -128,7 +128,7 @@ namespace Matkakirja.Natiivi
             var maali = ryomii ? aukonSuu : ulos;
             // Oviaukko riittää (Laitetestaaja 181d, HID-toisto 03.51: liike toimii, mutta auki oleva ovi ja käytävä näkyivät mustina aukkoina).
             bool perilla = Vector3.Distance(p.transform.position, maali) < (ryomii ? RyomiM : UlosM)
-                || !ryomii && Vector3.Distance(p.transform.position, ovi) < OviLapiM;
+                || !ryomii && Vector3.Distance(p.transform.position, ovi) < OviLapiM && oviAukesi >= 0 && Time.unscaledTime - oviAukesi >= OviNakyyS;
             if (ydin.Vaihe == TyrmanVaihe.OviAuki && perilla && ydin.Ulos()) StartCoroutine(Ulos());
         }
 
@@ -175,12 +175,14 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Kova ääni tyrmässä (muunnelmat 2–3): käytävän vartija vain mutisee (malli 4.1), enintään 12 s:n välein.</summary>
         float kolinaAsti; bool rotatKuultu, puluAvasi, tyonnetty;
-        const float TyontoM = 1.3f, RyomiM = 1.0f, OviLapiM = 0.8f;
-        Light oviValo;
+        // Oviaukko vasta, kun ovi on ollut auki OviNakyyS (v6 laituri-a1 04.11: avain lukkoon ovella → ulos samalla sekunnilla, ovea ei nähty).
+        const float TyontoM = 1.3f, RyomiM = 1.0f, OviLapiM = 0.8f, OviNakyyS = 1.2f;
+        Light oviValo; float oviAukesi = -1f;
         /// <summary>Käytävän lämmin valo oven avautuessa (soihtu käytävän päässä): auki oleva ovi erottuu pimeästä tyrmästä.</summary>
         void OviValo()
         {
             if (oviValo != null) return;
+            oviAukesi = Time.unscaledTime;
             var g = new GameObject("Tyrmän käytävän valo") { layer = DioraamaNayttamo.Kerros }; g.transform.SetParent(transform, false);
             g.transform.position = Vector3.Lerp(ovi, ulos, 0.6f) + Vector3.up * 1.6f;
             oviValo = g.AddComponent<Light>(); oviValo.type = LightType.Point; oviValo.color = new Color(1f, 0.64f, 0.32f);
