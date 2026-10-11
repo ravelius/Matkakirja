@@ -1,4 +1,5 @@
-# TestFlight-testaajien seuranta 30 min välein, VAIN LUKU (omistaja 11.10.2026 09.5x: "haluan vain nähdä milloin
+# TestFlight-testaajien seuranta neljästi päivässä (PT 11.10. 10.2x: omistajalle riittää muutama kerta päivässä;
+# 9.07, 13.07, 17.07 ja 21.07 Suomen kesäaikaa = UTC 6/10/14/18, talviaikana tunnin aiemmin), VAIN LUKU (omistaja 11.10.2026 09.5x: "haluan vain nähdä milloin
 # raatilaiset lataavat pelin itselleen"). Ajuri on Mac Studiolla, joten tulos kirjoitetaan suoraan
 # /Users/Shared/Claude/julkaisija-tyokalut/asc-testaajat.json (Julkaisija lukee ja raportoi PT:lle).
 # Skripti: tools/testflight/testaajaseuranta.py. Ei muuta mitään App Store Connectissa.
@@ -6,7 +7,7 @@ name: ASC-testaajat (vain luku)
 
 on:
   schedule:
-    - cron: '7,37 * * * *'
+    - cron: '7 6,10,14,18 * * *'
   workflow_dispatch:
     inputs:
       bundle_id:
