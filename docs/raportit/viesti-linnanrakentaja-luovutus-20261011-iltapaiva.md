@@ -106,3 +106,15 @@ Siirtosepälle lähetetty v47g–j; v47k–n LÄHETTÄMÄTTÄ (viestiraja).
   rajaseinä törmäykseen. Aja kuori_kavely.py (huippu + tilat/laituri.glb) v44/kavely-kopiolle → ulkoalue-*.glb + osat.json ulkoalue.
 - Auki Siirtosepältä: muuriportaan juuren silmä 1,22 (ei matalaa pintaa mallissa), ampumakäytävän 77 musta ruutu (kuva pyydetty), kapselin mitat.
 - Raketti v1.1 + erilliset + karttaversio LS2:lla (Opus-agentti teki, tarkistettu). Soutajan kasvot seuraavana linnan jälkeen (PT:n järjestys).
+
+## JATKO 15.3x–16.xx
+- Kapseli (Siirtoseppä): CharacterController r 0,30, h 1,75, step 0,35, slope 40°, skin 0,03 (vapaata ≥ 0,66 m); NavMesh r 0,30, h 1,8,
+  climb 0,35. Natiivi otti käyttöön NavMesh-seinälähteet (9c7c77a4f, pystytahkot Not Walkable).
+- v47q 1499 6619d8a1d8fdc525 (5843ae9faf23540b); v47r (ulkoalue) ja **v47s** (harjan päätyseinä s 18,85 + kävely matalien näkyvien
+  pintojen alta, paikallinen korkeusvertailu) jonossa: vie_v47r.log → vie_v47s.log (scratchpad d510e6ef…).
+- Piste 77: tilat/kappeli.glb:ssä säteittäinen pystytaso 230° (r 0,1–6,6, y → 15,8) leikkaa ampumakäytävän; kysytty Siirtosepältä
+  piilottaako natiivi tilan leikkauskannen seikkailussa vai poistetaanko tilasta.
+- Muuriportaan juuri: mallissa ei näkyvää pintaa < 1,9 m → SilmaVaran osuma muualta (pyydetty lokitus).
+- Soutaja: FACEIT 52 (agentti, _valmiit/olavinlinna-soutaja-kasvot-v1, pää 52 / Eyes 8 eyeLook, painot korjattu) + suun sisus ja parran
+  sahalaitainen reuna (PT, junaan 183) agentilla; eleet _valmiit/olavinlinna-soutaja-eleet-v1 (ele_puhe_istuen 8 s, ele_osoitus_portti
+  1,5 s, airot t 1,45 s, LAHTEET.md). Yhdistys faceit52-glb:hen agentin jälkeen → Natiivisepälle haara + SHA.
