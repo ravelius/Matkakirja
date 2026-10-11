@@ -36916,12 +36916,6 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Milad-torni on 435 metriä korkea.',
           lahde: 'Salehi1990mohsen, Wikimedia Commons (CC BY-SA 4.0)',
         },
-        {
-          tiedosto: 'Azadi Square (2022).jpg',
-          selite: 'Azadin torni on verhottu marmorilla, ja sen ympäri '
-            + 'kiertää leveä monikaistainen liikenneympyrä.',
-          lahde: 'Parsa 2au, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       /*
        * AVAUSKUVAT (18.8.2026, E00-täydennys): etusivun iso kuvapaikka
@@ -37013,12 +37007,6 @@ export const KULTTUURI_KATEGORIAT = {
          * tyhjää taivasta vasten. Teheranin oma maamerkki ja
          * tunnistettava pienessäkin koossa.
          */
-        kuva: {
-          tiedosto: 'Azadibybagtash01.jpg',
-          selite: 'Azadin torni on Teheranin tunnetuin maamerkki, ja sen '
-            + 'holvit on muurattu valkoisesta marmorista.',
-          lahde: 'Zahrabagtash, Wikimedia Commons (CC BY 4.0)',
-        },
         kappale: 'Teheran on nuori pääkaupunki vanhassa maassa, ja se '
           + 'nousee Elbursin etelärinnettä niin jyrkästi, että '
           + 'pohjoisosassa on useita asteita viileämpää kuin '
@@ -37069,12 +37057,6 @@ export const KULTTUURI_KATEGORIAT = {
                   selite: 'Moottoripyörä on Teheranin oma kulkuneuvo, joka '
                     + 'mahtuu ruuhkan läpi.',
                   lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
-                },
-                {
-                  tiedosto: 'Tabi\'at Bridge - panoramio.jpg',
-                  selite: 'Tabiat-silta vie jalankulkijat moottoritien yli '
-                    + 'kahden puiston välillä.',
-                  lahde: 'Ali Safdarian, Wikimedia Commons (CC BY 3.0)',
                 },
               ],
             },
@@ -39900,14 +39882,6 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Pohjoisasemalta kulkeva rata pysähtyy maan alle '
                 + 'louhitulla Badalingin asemalla, josta noustaan '
                 + 'suoraan muurin juurelle.',
-              kuva: {
-                tiedosto: 'Beijing Daxing International Airport Terminal 20191005.jpg',
-                lyhyt: 'Daxingin lentoaseman terminaali Pekingin eteläpuolella on maailman suurin yhtenäinen asemarakennus.',
-                selite: 'Daxingin lentoasema avattiin Pekingin '
-                  + 'eteläpuolelle, ja sen terminaali on maailman suurin '
-                  + 'yhtenäinen asemarakennus.',
-                lahde: 'Tyg728, Wikimedia Commons (CC BY-SA 4.0)',
-              },
             },
             {
               otsikko: 'Alueen rakenne',
@@ -41293,12 +41267,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Jean-Pierre Dalbéra, Flickr (CC BY 2.0)',
         },
         {
-          tiedosto: 'flickr-48966437893.jpg',
-          lyhyt: 'Vanhan itäportin kupeeseen valmistui Zaha Hadidin Dongdaemun Design Plaza kävelypuistoineen.',
-          selite: 'Vanhan itäportin kupeeseen valmistui Zaha Hadidin ja '
-            + 'Samoon suunnittelema Dongdaemun Design Plaza, jonka '
-            + 'katolla kulkee kävelypuisto.',
-          lahde: 'Jean-Pierre Dalbéra, Flickr (CC BY 2.0)',
+          tiedosto: "Dongdaemun Gate or Heunginjimun gate.jpg",
+          lyhyt: "Heunginjimun, Soulin itäportti yöllä",
+          selite: "Heunginjimun eli Itäportti on yksi Soulin entisen kaupunginmuurin kahdeksasta portista, ja nykyinen rakennus on vuodelta 1869.",
+          lahde: "TealAlligator, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       /*
@@ -41349,12 +41321,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'maan ensimmäinen useaa tv- ja radiokanavaa palvellut '
             + 'masto.',
           lahde: 'Kristoffer Trolle, Flickr (CC BY 2.0)',
-        },
-        {
-          tiedosto: 'flickr-23010178486.jpg',
-          selite: 'Han-joen eteläpuolinen Gangnam on rakennettu pääosin '
-            + '1970-luvun jälkeen.',
-          lahde: 'Carmine.shot, Flickr (CC BY 2.0)',
         },
       ],
       ennenNyt: [
@@ -41978,12 +41944,6 @@ export const KULTTUURI_KATEGORIAT = {
          * kiertyy alhaalta katsottuna kierteeksi taivasta vasten, eikä
          * kuvassa ole muuta.
          */
-        kuva: {
-          tiedosto: 'Shanghai Shanghai Tower 5166304.jpg',
-          selite: 'Shanghain torni on 632 metriä korkea ja Kiinan '
-            + 'korkein rakennus.',
-          lahde: 'Ermell, Wikimedia Commons (CC0)',
-        },
         kappale: 'Shanghain jakaa kahtia Huangpu-joki: länsipuoli on Puxi '
           + 'ja itäpuoli Pudong. Matkailijan Shanghai on Puxin puolella, '
           + 'ja se on kolmessa kerroksessa. Kiinalainen vanhakaupunki '
@@ -42104,13 +42064,6 @@ export const KULTTUURI_KATEGORIAT = {
                     + 'kohtaa.',
                   lahde: 'King of Hearts, Wikimedia Commons (CC BY-SA 4.0)',
                 },
-                {
-                  tiedosto: 'flickr-50101388983.jpg',
-                  selite: 'Yun puutarhan laidalla lammen päällä seisoo '
-                    + 'teehuone, jonne johtaa yhdeksän kertaa kääntyvä '
-                    + 'silta.',
-                  lahde: 'Steve FUNG, Flickr (CC BY-SA 2.0)',
-                },
               ],
             },
             {
@@ -42182,12 +42135,6 @@ export const KULTTUURI_KATEGORIAT = {
                     + 'varastoja ja peltoa, kunnes siitä tehtiin '
                     + 'rahoituskeskuksen kehitysalue.',
                   lahde: 'Ermell, Wikimedia Commons (CC0)',
-                },
-                {
-                  tiedosto: 'flickr-45493688424.jpg',
-                  selite: 'Shanghain tornin näköalataso 121. kerroksessa '
-                    + 'oli avatessaan maailman korkein.',
-                  lahde: 'Franck Michel, Flickr (CC BY 2.0)',
                 },
               ],
             },
@@ -43228,12 +43175,6 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'tarpeisiin. Alaa kaupungilla on 1 111 neliökilometriä. '
                 + 'Kaupungin länsipuolella Pervouralskin suunnalla seisoo '
                 + 'obeliski Euroopan ja Aasian rajalla.',
-              kuva: {
-                tiedosto: 'Стела Европа-Азия - panoramio.jpg',
-                selite: 'Euroopan ja Aasian raja-obeliski seisoo kaupungin '
-                  + 'länsipuolella Pervouralskin suunnalla.',
-                lahde: 'Михаил Притчин, Wikimedia Commons (CC BY 3.0)',
-              },
             },
             {
               otsikko: 'Arjen ilmiö: kivi ja rauta',
@@ -44264,12 +44205,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       matkailijalle: {
-        kuva: {
-          tiedosto: 'Museum - Permafrost Kingdom (Yakutsk) 09.jpg',
-          selite: 'Kaupungin alla maa on jäässä yli kahdensadan metrin '
-            + 'syvyyteen.',
-          lahde: 'JukoFF, Wikimedia Commons (CC BY-SA 4.0)',
-        },
         kappale: 'Jakutsk on Sahan tasavallan pääkaupunki noin '
           + 'neljänsadanviidenkymmenen kilometrin päässä napapiiristä '
           + 'etelään. Kaupunki on Lenan länsirannalla Tuimaadan '
@@ -44565,7 +44500,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Kukkulalle nousivat viidentoista metrin kasvot',
-          tiedosto: 'Маска Скорби.jpg',
           teksti: 'Sverdlovskissa 1925 syntynyt kuvanveistäjä Ernst '
             + 'Neizvestny oli asunut Yhdysvalloissa neljätoista vuotta, kun '
             + 'hän toi kesällä 1990 Magadaniin diakuvat '
@@ -44578,11 +44512,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'monumentin sisään on tehty vankisellin jäljennös. '
             + 'Kozajevilta on peräisin myös ajatus muuttaa muistomerkki '
             + 'museoksi.',
-          lyhyt: 'Viisitoistametrinen Surun maski paljastettiin 1996 entisellä vankisaattueiden reitillä.',
-          selite: 'Viisitoistametrinen Surun maski paljastettiin 12. '
-            + 'kesäkuuta 1996 Krutaja-kukkulalla, jossa oli aikanaan '
-            + 'toiminut vankisaattueiden kauttakulkupaikka.',
-          lahde: 'Сергей Ковалев, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Ernst Neizvestny',
         },
         {
@@ -45462,14 +45391,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       matkailijalle: {
-        kuva: {
-          tiedosto: '2025-06-07-ys-mosaic-komm-avenue.jpg',
-          lyhyt: 'Južno-Sahalinsk alkoi 1882 pakkotyöläisten kylänä ja oli välillä Japanin Karafuton pääkaupunki.',
-          selite: 'Južno-Sahalinsk alkoi vuonna 1882 pakkotyöläisten '
-            + 'perustamana Vladimirovkan kylänä ja oli välillä Japanin '
-            + 'Karafuton pääkaupunki Toyohara.',
-          lahde: 'I13Robin, Wikimedia Commons (CC BY 4.0)',
-        },
         kappale: 'Sahalinin portti on Južno-Sahalinsk, saaren ainoa '
           + 'suuri kaupunki, joka alkoi 1882 pakkotyöläisten '
           + 'perustamana Vladimirovkan kylänä ja oli välillä Japanin '
@@ -45765,7 +45686,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Kauppahuoneen pojasta tuli kuningas',
-          tiedosto: 'Brynner\'s Plaque.jpg',
           teksti: 'Juli Borisovitš Briner syntyi Vladivostokissa 11. '
             + 'heinäkuuta 1920. Suku oli sveitsiläisperäinen ja varakas — '
             + 'maanomistusta, hopeakaivoshankkeita ja isoisä Jules Brinerin '
@@ -45777,9 +45697,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jälkeläinen, vaikka sukututkimus ei ole sitä vahvistanut, ja '
             + 'levytti 1967 Aljoša Dimitrijevitšin kanssa levyn The Gypsy '
             + 'and I.',
-          selite: 'Yul Brynner syntyi Vladivostokissa 11. heinäkuuta '
-            + '1920 sveitsiläisperäiseen kauppiassukuun.',
-          lahde: 'Michael Goodine from Incheon, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Yul Brynner',
           musiikki: 'https://music.apple.com/fi/album/two-guitars/351069215?i=351069234',
           musiikkiNimi: 'Yul Brynner: Two Guitars Apple Musicissa',
@@ -50069,10 +49986,9 @@ export const KULTTUURI_KATEGORIAT = {
       ],
       matkailijalle: {
         kuva: {
-          tiedosto: 'Ulan Bator.- Gandan Monastery (3).JPG',
-          selite: 'Megzed Janraisegin kullattu patsas ulottuu Gandanin '
-            + 'luostarin korkeimmassa temppelissä kattoon asti.',
-          lahde: 'PIERRE ANDRE LECLERCQ, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "Gandantegchinlen Monastery - Gandan - Ulan Bator Ulaanbaatar Mongolia (6248611575).jpg",
+          selite: "Gandanin luostarin pihalla seisoo valkoisia stuupia, joiden edessä on rukouspyöriä.",
+          lahde: "David Berkowitz, Wikimedia Commons (CC BY 2.0)",
         },
         kappale: 'Ulan Bator on Mongolian ainoa suurkaupunki, ja siellä '
           + 'asuu noin puolet koko maan väestöstä. Matkailijan kaupunki on '
@@ -50851,7 +50767,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Gorkha valtaa laakson',
-          tiedosto: 'The Great King Prithivi Narayan Shah.jpg',
           teksti: 'Gorkhan vuoristoruhtinaskunta lännessä aloitti '
             + 'laakson saartamisen kuningas Prithvi Narayan Shahin '
             + 'johdolla. Nuwakot vallattiin 1744, ja noin vuonna 1756 '
@@ -50864,9 +50779,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pihalle. Patan antautui viikkoja myöhemmin ja '
             + 'Bhaktapur yön aikana 25. marraskuuta 1769; '
             + 'Kathmandusta tuli yhdistyneen kuningaskunnan pääkaupunki.',
-          selite: 'Kathmandusta tuli Prithvi Narayan Shahin yhdistämän '
-            + 'kuningaskunnan pääkaupunki vuoden 1768 jälkeen.',
-          lahde: 'GB Ryan771, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Prithvi Narayan Shah',
         },
       ],
@@ -51047,14 +50959,6 @@ export const KULTTUURI_KATEGORIAT = {
         + 'jälkeen, kun hallinto muutti tänne vuonna 1997.',
       kansikuvat: [
         {
-          tiedosto: 'Вид на Бульвар Нуржол.jpg',
-          lyhyt: 'Nurjol-bulevardi on hallintokeskuksen pääakseli Khan Shatyrista Akordaan, ja varrella on Bajterek.',
-          selite: 'Nurjol-bulevardi on uuden hallintokeskuksen pääakseli, joka '
-            + 'kulkee Khan Shatyrista Akordaan ja jonka varrella Bajterek '
-            + 'seisoo.',
-          lahde: 'Шалкер Гам, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
           tiedosto: 'Nur-Sultan - 190217 DSC 3461.jpg',
           lyhyt: 'Akorda on Kazakstanin presidentin työpaikka, rakennettu 2001-2004, harja 80 metrin korkeudessa.',
           selite: 'Akorda on Kazakstanin presidentin virallinen työpaikka, joka '
@@ -51210,12 +51114,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       matkailijalle: {
-        kuva: {
-          tiedosto: 'Kazakhstan P9130255 (39373641624).jpg',
-          selite: 'Hazrat Sultanin moskeija valmistui 6. heinäkuuta 2012, ja '
-            + 'siihen mahtuu kymmenentuhatta rukoilijaa.',
-          lahde: 't_y_l, Wikimedia Commons (CC BY-SA 2.0)',
-        },
         kappale: 'Astana on Kazakstanin pääkaupunki ja maan toiseksi suurin '
           + 'kaupunki; asukkaita on runsaat puolitoista miljoonaa. '
           + 'Matkailijan Astana on kapea kaistale Esil-joen molemmin '
@@ -51746,7 +51644,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Viisi pässiä ja kukkien kaupunki',
-          tiedosto: '五羊城雕 - Five Rams Sculpture - 2012.04 - panoramio.jpg',
           teksti: 'Kaupungin nimi on vaihtunut monta kertaa. Se '
             + 'perustettiin Panyuna, sai vuonna 226 Guang-prefektuurin '
             + 'pääpaikkana nimen, josta tuli nykyinen Guangzhou, ja '
@@ -51759,11 +51656,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kuolematonta ratsasti pässeillä kaupunkiin ja opetti '
             + 'asukkaat viljelemään riisiä; kukkien kaupunki taas '
             + 'viittaa yksinkertaisesti seudun vehreyteen.',
-          lyhyt: 'Pässien kaupunki juontuu tarusta viidestä kuolemattomasta, jotka opettivat riisinviljelyn.',
-          selite: 'Pässien kaupunki tulee tarusta, jonka mukaan viisi '
-            + 'kuolematonta ratsasti pässeillä kaupunkiin ja opetti '
-            + 'asukkaat viljelemään riisiä.',
-          lahde: 'Yin Jichang / Chen Benzong / Kong Fanwei, Wikimedia Commons (CC BY 3.0)',
           wiki: 'Yuexiu Hill',
         },
       ],
@@ -53173,7 +53065,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Kuningas joka lähetti oppilaita Eurooppaan',
-          tiedosto: 'King-Mindon.jpg',
           teksti: 'Mindon Min hallitsi 18. helmikuuta 1853 alkaen '
             + 'kuolemaansa 1. lokakuuta 1878. Hän nousi valtaan '
             + 'velipuolensa Pagan Minin tilalle yhdessä nuoremman '
@@ -53187,11 +53078,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'valtakunnan omaa hopearahaa. Kanaung kävi tehtailla '
             + 'varhain talviaamuina huopa harteillaan kyselemässä '
             + 'koneenkäyttäjiltä, miten laitteet toimivat.',
-          lyhyt: 'Mindon Min hallitsi 1853-1878 ja lähetti oppineita Eurooppaan katsomaan teollistumista.',
-          selite: 'Mindon Min hallitsi 18. helmikuuta 1853 alkaen '
-            + 'kuolemaansa 1. lokakuuta 1878 ja lähetti oppineita '
-            + 'Eurooppaan katsomaan teollistumista.',
-          lahde: 'Yarzaryeni, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Mindon Min',
         },
         {
@@ -54636,7 +54522,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Itsenäisyys ja uusi pääkaupunki',
-          tiedosto: 'Monumen Nasional, Jakarta, Indonesia.jpg',
           teksti: 'Indonesian itsenäisyys julistettiin Jakartassa '
             + '17. elokuuta 1945. Valta kaupungissa oli kiistanalainen '
             + 'vielä vuosia: tasavallan johto siirsi väliaikaisen '
@@ -54649,9 +54534,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'asema vastaa maakuntaa. Vuoden 2022 lain mukaan '
             + 'pääkaupunki siirtyy Borneolle rakennettavaan '
             + 'Nusantaraan, kun presidentin asetus vahvistaa siirron.',
-          selite: 'Monasin mitoissa toistuvat luvut 17, 8 ja 45 eli päivä, '
-            + 'jona Indonesian itsenäisyys julistettiin.',
-          lahde: 'Ramayoni, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'National Monument (Indonesia)',
         },
       ],

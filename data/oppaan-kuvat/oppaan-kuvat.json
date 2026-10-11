@@ -636,12 +636,9 @@
     "Q671484",
     "Q413579",
     "Q2119741",
-    "Q4494668",
     "Q21371563",
     "Q746559",
-    "Q1813417",
-    "Q713955",
-    "Q18405670"
+    "Q713955"
    ],
    "kuvat": [
     {
@@ -2050,7 +2047,6 @@
    "kohteet": [
     "Q5521071",
     "Q1492279",
-    "Q3449463",
     "Q2033487",
     "Q2667449",
     "Q814829",
@@ -3372,7 +3368,6 @@
     "Q206219",
     "Q1202019",
     "Q1151254",
-    "Q874234",
     "Q1186292",
     "Q1923783",
     "Q2670019",
@@ -4005,8 +4000,6 @@
    "lat": -6.21,
    "lon": 106.845,
    "kohteet": [
-    "Q145151",
-    "Q475379",
     "Q55519",
     "Q25053359",
     "Q1356004",
@@ -4016,7 +4009,6 @@
     "Q7813650",
     "Q1975437",
     "Q2025537",
-    "Q1068044",
     "Q685790",
     "Q2361543"
    ],
@@ -4817,7 +4809,6 @@
     "Q6122177",
     "Q7144236",
     "Q5269090",
-    "Q1050042",
     "Q1001415",
     "Q5300315",
     "Q5522383",
@@ -6128,7 +6119,6 @@
    "lat": 59.567,
    "lon": 150.8,
    "kohteet": [
-    "Q1635369",
     "Q2369683",
     "Q1112052",
     "Q1142859",
@@ -7846,7 +7836,6 @@
     "Q603289",
     "Q564114",
     "Q83627",
-    "Q16684555",
     "Q4442786",
     "Q16653742"
    ],
@@ -10067,9 +10056,7 @@
     "Q490497",
     "Q488678",
     "Q488824",
-    "Q69134",
     "Q495437",
-    "Q494895",
     "Q482631",
     "Q465345",
     "Q482852",
@@ -10655,19 +10642,13 @@
    "lat": 35.689,
    "lon": 51.39,
    "kohteet": [
-    "Q1140026",
-    "Q622796",
     "Q210610",
     "Q1548608",
     "Q1631008",
     "Q1969012",
-    "Q5691633",
     "Q1984633",
     "Q737835",
     "Q1165599",
-    "Q970335",
-    "Q1756399",
-    "Q653535",
     "Q1641913",
     "Q50826657",
     "Q5945207",
@@ -17362,19 +17343,6 @@
      "leveys": 4608,
      "korkeus": 3456,
      "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Baiterek August.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baiterek_August.jpg?width=1280",
-     "tekija": "Quarot",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Baiterek_August.jpg",
-     "selite": "Tornin latvassa on kultainen pallo, joka kuvaa kansantarun elämänpuuta ja sen oksille munivaa lintua.",
-     "leveys": 4000,
-     "korkeus": 6000,
-     "tarkistettu": true
     }
    ]
   },
@@ -17502,43 +17470,6 @@
     }
    ]
   },
-  "Q4494668": {
-   "nimi": "Hazrat Sultanin moskeija",
-   "peruste": "sitelinks",
-   "kaupunki": "astana",
-   "kaupunkiQ": "Q1520",
-   "lat": 51.125,
-   "lon": 71.47222,
-   "koko_m": 150,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Kazakhstan P9130238 (28303684079).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kazakhstan_P9130238_(28303684079).jpg?width=1280",
-     "tekija": "t_y_l",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kazakhstan_P9130238_(28303684079).jpg",
-     "selite": "Hazrat Sultan on yksi Keski-Aasian suurimmista moskeijoista, ja sen valkoiset minareetit näkyvät kauas.",
-     "leveys": 4608,
-     "korkeus": 3456,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Rustam Minnikhanov on Expo 2017 72.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rustam_Minnikhanov_on_Expo_2017_72.jpg?width=1280",
-     "tekija": "Лаззат Хайдаров",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rustam_Minnikhanov_on_Expo_2017_72.jpg",
-     "selite": "Moskeijan julkisivua koristavat koristeelliset kaaret, ja portaat johtavat laajalle aukiolle.",
-     "leveys": 5568,
-     "korkeus": 3712,
-     "tarkistettu": true
-    }
-   ]
-  },
   "Q21371563": {
    "nimi": "Astana Opera",
    "peruste": "sitelinks",
@@ -17550,19 +17481,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "The State Opera and Ballet Theatre “Astana Opera”.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_State_Opera_and_Ballet_Theatre_%E2%80%9CAstana_Opera%E2%80%9D.jpg?width=1280",
-     "tekija": "Nikolamikovic82",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_State_Opera_and_Ballet_Theatre_%E2%80%9CAstana_Opera%E2%80%9D.jpg",
-     "selite": "Astana Operan valkoinen pylväsjulkisivu on rakennettu klassisen oopperatalon mallin mukaan.",
-     "leveys": 3024,
-     "korkeus": 4032,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "Astana Opera 02.jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Astana_Opera_02.jpg?width=1280",
      "tekija": "Davide Mauro",
@@ -17600,43 +17518,6 @@
     }
    ]
   },
-  "Q1813417": {
-   "nimi": "Nur-Astanan moskeija",
-   "peruste": "sitelinks",
-   "kaupunki": "astana",
-   "kaupunkiQ": "Q1520",
-   "lat": 51.12656,
-   "lon": 71.41574,
-   "koko_m": 100,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Astana-2021-10 - 41.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Astana-2021-10_-_41.jpg?width=1280",
-     "tekija": "Vyacheslav Bukharov",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Astana-2021-10_-_41.jpg",
-     "selite": "Nur-Astanan moskeijan kultainen kupoli ja valkoiset minareetit erottuvat syksyisen puiston takaa.",
-     "leveys": 3929,
-     "korkeus": 2013,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Nur-Sultan - 190217 DSC 3720.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nur-Sultan_-_190217_DSC_3720.jpg?width=1280",
-     "tekija": "Ilya Varlamov",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nur-Sultan_-_190217_DSC_3720.jpg",
-     "selite": "Talvella lumi peittää puiston, mutta moskeijan kultakupoli hohtaa lasitornien keskellä.",
-     "leveys": 4887,
-     "korkeus": 3258,
-     "tarkistettu": true
-    }
-   ]
-  },
   "Q713955": {
    "nimi": "Nurjol-bulevardi",
    "peruste": "pelin nosto",
@@ -17648,19 +17529,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Вид на Бульвар Нуржол.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D0%91%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80_%D0%9D%D1%83%D1%80%D0%B6%D0%BE%D0%BB.jpg?width=1280",
-     "tekija": "Шалкер Гам",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D0%91%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80_%D0%9D%D1%83%D1%80%D0%B6%D0%BE%D0%BB.jpg",
-     "selite": "Nurjol-bulevardi on hallintokeskuksen pääakseli, jonka päissä kohoavat kaksi korkeaa tornia.",
-     "leveys": 3024,
-     "korkeus": 4032,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "Astana DSC04189 (7709788152).jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Astana_DSC04189_(7709788152).jpg?width=1280",
      "tekija": "jtstewart",
@@ -17670,30 +17538,6 @@
      "selite": "Kukkapenkit ja valtavat asuinrakennukset reunustavat bulevardin kävelyaukioita.",
      "leveys": 4912,
      "korkeus": 3264,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q18405670": {
-   "nimi": "Kazakstanin kansallismuseo",
-   "peruste": "pelin nosto",
-   "kaupunki": "astana",
-   "kaupunkiQ": "Q1520",
-   "lat": 51.1178,
-   "lon": 71.4701,
-   "koko_m": 200,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "National Museum of Kazakhstan 04.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Museum_of_Kazakhstan_04.jpg?width=1280",
-     "tekija": "Davide Mauro",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Museum_of_Kazakhstan_04.jpg",
-     "selite": "Kansallismuseon sinivalkoinen lasirakennus erottuu suihkulähteen takaa Astanan uudella museoalueella.",
-     "leveys": 6000,
-     "korkeus": 4000,
      "tarkistettu": true
     }
    ]
@@ -20573,15 +20417,15 @@
     },
     {
      "jarjestys": 3,
-     "tiedosto": "Unfolding Bangkok -- Light show & exhibitions at Hua Lamphong Station (2023 March) 05.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Unfolding_Bangkok_--_Light_show_%26_exhibitions_at_Hua_Lamphong_Station_(2023_March)_05.jpg?width=1280",
+     "tiedosto": "Bangkok Station Hua Lamphong as it is in 2026 - IMG 07.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bangkok_Station_Hua_Lamphong_as_it_is_in_2026_-_IMG_07.jpg?width=1280",
      "tekija": "Chainwit.",
      "lisenssi": "CC BY 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Unfolding_Bangkok_--_Light_show_%26_exhibitions_at_Hua_Lamphong_Station_(2023_March)_05.jpg",
-     "selite": "Aseman rautarunkoinen laituri-halli kaartuu raiteiden yllä.",
-     "leveys": 4032,
-     "korkeus": 3024,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bangkok_Station_Hua_Lamphong_as_it_is_in_2026_-_IMG_07.jpg",
+     "selite": "Hua Lamphongin aseman rautarunkoinen laituri-halli kaartuu raiteiden yllä; laitureilla seisoo vetureita.",
+     "leveys": 5712,
+     "korkeus": 4284,
      "tarkistettu": true
     }
    ]
@@ -31203,56 +31047,6 @@
      "selite": "Nurmikenttä oli alun perin hevoskilparata, ja nykyään sieltä näkee Colombon pilvenpiirtäjät.",
      "leveys": 4000,
      "korkeus": 3000,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q3449463": {
-   "nimi": "Lotus Tower",
-   "peruste": "sitelinks",
-   "kaupunki": "colombo",
-   "kaupunkiQ": "Q35381",
-   "lat": 6.92694,
-   "lon": 79.85833,
-   "koko_m": 150,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Blue lotus tower.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_lotus_tower.jpg?width=1280",
-     "tekija": "Mohamed Rilwan1210",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blue_lotus_tower.jpg",
-     "selite": "Lotus Tower on Colombon lootuksenkukkaa muistuttava tv- ja näkötorni.",
-     "leveys": 2369,
-     "korkeus": 2064,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "ColomboSkyline - November 2017 (1).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ColomboSkyline_-_November_2017_(1).jpg?width=1280",
-     "tekija": "Rehman Abubakr",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ColomboSkyline_-_November_2017_(1).jpg",
-     "selite": "Torni kohoaa Colombon keskustan pilvenpiirtäjien rinnalla.",
-     "leveys": 2966,
-     "korkeus": 1669,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "ColomboSkyline - November 2017 (2).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ColomboSkyline_-_November_2017_(2).jpg?width=1280",
-     "tekija": "Rehman Abubakr",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ColomboSkyline_-_November_2017_(2).jpg",
-     "selite": "Torni on kaupungin korkein rakennelma ja erottuu kauas horisontissa.",
-     "leveys": 3138,
-     "korkeus": 1765,
      "tarkistettu": true
     }
    ]
@@ -42933,56 +42727,6 @@
     }
    ]
   },
-  "Q874234": {
-   "nimi": "Ho Chi Minhin mausoleumi",
-   "peruste": "sitelinks",
-   "kaupunki": "hanoi",
-   "kaupunkiQ": "Q1858",
-   "lat": 21.03667,
-   "lon": 105.83472,
-   "koko_m": 200,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Hanoi Vietnam Mausoleum-of-Ho-Chi-Minh-03.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hanoi_Vietnam_Mausoleum-of-Ho-Chi-Minh-03.jpg?width=1280",
-     "tekija": "CEphoto, Uwe Aranas",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hanoi_Vietnam_Mausoleum-of-Ho-Chi-Minh-03.jpg",
-     "selite": "Ho Chi Minhin mausoleumi on Ba Đìnhin aukion laidalla seisova harmaa muistomerkki.",
-     "leveys": 3349,
-     "korkeus": 2233,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Hanoi Vietnam Mausoleum-of-Ho-Chi-Minh-01.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hanoi_Vietnam_Mausoleum-of-Ho-Chi-Minh-01.jpg?width=1280",
-     "tekija": "CEphoto, Uwe Aranas",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hanoi_Vietnam_Mausoleum-of-Ho-Chi-Minh-01.jpg",
-     "selite": "Mausoleumia ympäröivät hoidetut nurmikot ja palmut.",
-     "leveys": 2270,
-     "korkeus": 1513,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Ho chi minh mausoleum.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ho_chi_minh_mausoleum.jpg?width=1280",
-     "tekija": "Gregor Dodson",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ho_chi_minh_mausoleum.jpg",
-     "selite": "Pylväikkö ja kolmikerroksinen jalusta tekevät rakennuksesta arvokkaan ja ankaran.",
-     "leveys": 3024,
-     "korkeus": 1998,
-     "tarkistettu": true
-    }
-   ]
-  },
   "Q1186292": {
    "nimi": "Yhden pilarin pagodi",
    "peruste": "pelin nosto",
@@ -49233,93 +48977,6 @@
     }
    ]
   },
-  "Q145151": {
-   "nimi": "Kansallismonumentti Monas",
-   "peruste": "pelin nosto",
-   "kaupunki": "jakarta",
-   "kaupunkiQ": "Q3630",
-   "lat": -6.17539,
-   "lon": 106.82714,
-   "koko_m": 400,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Around Monas Jakarta (2025) (cropped).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Around_Monas_Jakarta_(2025)_(cropped).jpg?width=1280",
-     "tekija": "Chainwit.",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Around_Monas_Jakarta_(2025)_(cropped).jpg",
-     "selite": "Monas on Merdeka-aukion keskellä kohoava itsenäisyysmonumentti, jonka huipulla on kullattu liekki.",
-     "leveys": 3211,
-     "korkeus": 2141,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Monumen Nasional, Jakarta, Indonesia.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monumen_Nasional%2C_Jakarta%2C_Indonesia.jpg?width=1280",
-     "tekija": "Ramayoni",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monumen_Nasional%2C_Jakarta%2C_Indonesia.jpg",
-     "selite": "Monumentti ja sitä ympäröivä laaja Merdeka-aukio ylhäältä katsottuna.",
-     "leveys": 4160,
-     "korkeus": 2352,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q475379": {
-   "nimi": "Istiqlal-moskeija",
-   "peruste": "pelin nosto",
-   "kaupunki": "jakarta",
-   "kaupunkiQ": "Q3630",
-   "lat": -6.16972,
-   "lon": 106.83083,
-   "koko_m": 250,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Masjid Istiqlal.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid_Istiqlal.jpg?width=1280",
-     "tekija": "Michael Coghlan",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Masjid_Istiqlal.jpg",
-     "selite": "Istiqlal on Kaakkois-Aasian suurimpia moskeijoja, ja sen valkoinen kupoli kohoaa marmoriseinän takaa.",
-     "leveys": 2553,
-     "korkeus": 1944,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Masjid Istiqlal Jakarta.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid_Istiqlal_Jakarta.jpg?width=1280",
-     "tekija": "AR El Syarif",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Masjid_Istiqlal_Jakarta.jpg",
-     "selite": "Moskeijan sisäänkäynti ja kerroksittain nouseva julkisivu.",
-     "leveys": 1280,
-     "korkeus": 855,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Jakarta - Istiqlal Mosque, interior.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jakarta_-_Istiqlal_Mosque%2C_interior.jpg?width=1280",
-     "tekija": "P. Hughes",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jakarta_-_Istiqlal_Mosque%2C_interior.jpg",
-     "selite": "Rukoussalin kiillotetut teräspylväät kannattavat suurta kupolia.",
-     "leveys": 6048,
-     "korkeus": 4024,
-     "tarkistettu": true
-    }
-   ]
-  },
   "Q55519": {
    "nimi": "Jakartan katedraali",
    "peruste": "pelin nosto",
@@ -49675,43 +49332,6 @@
      "selite": "Temppelin portti ja punaiset seinät Jakartan Chinatownissa.",
      "leveys": 2916,
      "korkeus": 3888,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q1068044": {
-   "nimi": "Gelora Bung Karnon stadion",
-   "peruste": "sitelinks",
-   "kaupunki": "jakarta",
-   "kaupunkiQ": "Q3630",
-   "lat": -6.21858,
-   "lon": 106.80251,
-   "koko_m": 400,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "BungKarno-indonoob.JPG",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/BungKarno-indonoob.JPG?width=1280",
-     "tekija": "Original uploader was Indonoob at en.wikipedia",
-     "lisenssi": "Public domain",
-     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:BungKarno-indonoob.JPG",
-     "selite": "Gelora Bung Karno on Indonesian suurin urheilustadion ja kansallinen jalkapallon näyttämö.",
-     "leveys": 3264,
-     "korkeus": 2448,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "GBK -2.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GBK_-2.jpg?width=1280",
-     "tekija": "Joe Sampouw",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:GBK_-2.jpg",
-     "selite": "Stadionin renkaanmuotoinen katto ja valaistu kenttä yöllä.",
-     "leveys": 3144,
-     "korkeus": 1186,
      "tarkistettu": true
     }
    ]
@@ -50143,19 +49763,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Central Stadium, Yekaterinburg (August 2022) - 2.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Central_Stadium%2C_Yekaterinburg_(August_2022)_-_2.jpg?width=1280",
-     "tekija": "Vyacheslav Bukharov",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Central_Stadium%2C_Yekaterinburg_(August_2022)_-_2.jpg",
-     "selite": "Keskusstadionin vanha julkisivu säilytettiin, kun areena uudistettiin vuoden 2018 jalkapallon MM-kisoja varten.",
-     "leveys": 5472,
-     "korkeus": 3078,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "Estadio Central (Ekaterinburg-arena).jpg",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estadio_Central_(Ekaterinburg-arena).jpg?width=1280",
      "tekija": "Фальшивомонетчик",
@@ -50304,15 +49911,15 @@
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Plotinka in Yekaterinburg (September 2023) - 5.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plotinka_in_Yekaterinburg_(September_2023)_-_5.jpg?width=1280",
-     "tekija": "Vyacheslav Bukharov",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plotinka_in_Yekaterinburg_(September_2023)_-_5.jpg",
-     "selite": "Aukion kivi- ja metallipinnat muistuttavat ruukkiajasta, jolloin padon vieressä toimi tehdas.",
-     "leveys": 6000,
-     "korkeus": 3376,
+     "tiedosto": "Dam in Yekaterinburg.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dam_in_Yekaterinburg.jpg?width=1280",
+     "tekija": "Denis Denisov",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dam_in_Yekaterinburg.jpg",
+     "selite": "Plotinka eli Iset-joen pato Jekaterinburgin keskustassa: padon yläpuolella on kaupunkilampi ja suihkulähde, rannalla kivetty aukio.",
+     "leveys": 3264,
+     "korkeus": 2448,
      "tarkistettu": true
     }
    ]
@@ -56373,52 +55980,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "DHARAHARA TOWER.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/DHARAHARA_TOWER.jpg?width=1280",
-     "tekija": "SUMIR SHRESTHA",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:DHARAHARA_TOWER.jpg",
-     "selite": "Dharahara on korkea torni Kathmandun keskustassa, joka rakennettiin uudelleen maanjäristyksen jälkeen.",
-     "leveys": 8108,
-     "korkeus": 10135,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q1050042": {
-   "nimi": "Narayanhitin palatsi",
-   "peruste": "sitelinks",
-   "kaupunki": "kathmandu",
-   "kaupunkiQ": "Q3037",
-   "lat": 27.71556,
-   "lon": 85.32,
-   "koko_m": 300,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Narayanhiti Palace Museum.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Narayanhiti_Palace_Museum.jpg?width=1280",
-     "tekija": "Suraj Belbase",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Narayanhiti_Palace_Museum.jpg",
-     "selite": "Narayanhitin palatsi oli Nepalin kuninkaiden asuinpalatsi, ja nykyään se on museona.",
-     "leveys": 5896,
-     "korkeus": 3817,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Narayanhiti Palace-070A1259.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Narayanhiti_Palace-070A1259.jpg?width=1280",
-     "tekija": "Bijay Chaurasia",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Narayanhiti_Palace-070A1259.jpg",
-     "selite": "Palatsi kohoaa vihreiden puiden keskellä Kathmandun laakson keskustassa.",
-     "leveys": 6720,
-     "korkeus": 2411,
+     "tiedosto": "Dharahara 2011.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dharahara_2011.jpg?width=1280",
+     "tekija": "Swagat Raj Pyakurel",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dharahara_2011.jpg",
+     "selite": "Dharahara eli Bhimsenin torni Kathmandun keskustassa ennen vuoden 2015 maanjäristystä; maanjäristys kaatoi tornin, ja uusi rakennettiin sen paikalle.",
+     "leveys": 2736,
+     "korkeus": 3648,
      "tarkistettu": true
     }
    ]
@@ -68685,43 +68255,6 @@
      "selite": "Auringonlaskussa tornit piirtyvät terävinä siluetteina horisonttia vasten.",
      "leveys": 4000,
      "korkeus": 3000,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q1635369": {
-   "nimi": "Surun naamio",
-   "peruste": "pelin nosto",
-   "kaupunki": "magadan",
-   "kaupunkiQ": "Q7968",
-   "lat": 59.59166,
-   "lon": 150.81214,
-   "koko_m": 60,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "«Маска Скорби» (ракурс).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%C2%AB%D0%9C%D0%B0%D1%81%D0%BA%D0%B0_%D0%A1%D0%BA%D0%BE%D1%80%D0%B1%D0%B8%C2%BB_(%D1%80%D0%B0%D0%BA%D1%83%D1%80%D1%81).jpg?width=1280",
-     "tekija": "Сергей Ковалев",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%C2%AB%D0%9C%D0%B0%D1%81%D0%BA%D0%B0_%D0%A1%D0%BA%D0%BE%D1%80%D0%B1%D0%B8%C2%BB_(%D1%80%D0%B0%D0%BA%D1%83%D1%80%D1%81).jpg",
-     "selite": "Surun naamio on Neuvostoliiton vankileirien uhrien muistomerkki Magadanin kukkulalla.",
-     "leveys": 1600,
-     "korkeus": 1067,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Маска скорби вид сзади.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9C%D0%B0%D1%81%D0%BA%D0%B0_%D1%81%D0%BA%D0%BE%D1%80%D0%B1%D0%B8_%D0%B2%D0%B8%D0%B4_%D1%81%D0%B7%D0%B0%D0%B4%D0%B8.jpg?width=1280",
-     "tekija": "Timofeevandrew",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B0%D1%81%D0%BA%D0%B0_%D1%81%D0%BA%D0%BE%D1%80%D0%B1%D0%B8_%D0%B2%D0%B8%D0%B4_%D1%81%D0%B7%D0%B0%D0%B4%D0%B8.jpg",
-     "selite": "Muistomerkin sisällä on pieni kappeli, jonka ristiinnaulitun kuva näkyy illalla valaistuna.",
-     "leveys": 1536,
-     "korkeus": 2048,
      "tarkistettu": true
     }
    ]
@@ -83710,30 +83243,6 @@
     }
    ]
   },
-  "Q16684555": {
-   "nimi": "Laboratoriohiiren patsas",
-   "peruste": "sitelinks",
-   "kaupunki": "novosibirsk",
-   "kaupunkiQ": "Q883",
-   "lat": 54.84903,
-   "lon": 83.10606,
-   "koko_m": 30,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Memorial to the lab animals (14604111622).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Memorial_to_the_lab_animals_(14604111622).jpg?width=1280",
-     "tekija": "T",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Memorial_to_the_lab_animals_(14604111622).jpg",
-     "selite": "Akademgorodokin hiiripatsas kunnioittaa laboratorioeläimiä ja istuu kutomassa DNA-ketjua geenitutkimuksen kaupungissa.",
-     "leveys": 3648,
-     "korkeus": 5472,
-     "tarkistettu": true
-    }
-   ]
-  },
   "Q4442786": {
    "nimi": "Satohuoneiston talo",
    "peruste": "pelin nosto",
@@ -86435,15 +85944,15 @@
     },
     {
      "jarjestys": 3,
-     "tiedosto": "Gate of Heavenly Peace, Tiananmen - panoramio.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gate_of_Heavenly_Peace%2C_Tiananmen_-_panoramio.jpg?width=1280",
-     "tekija": "konget",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gate_of_Heavenly_Peace%2C_Tiananmen_-_panoramio.jpg",
-     "selite": "Portin edessä seisoo marmorinen koristepilari.",
-     "leveys": 2560,
-     "korkeus": 1920,
+     "tiedosto": "Huabiao (Gate of Heavenly Peace).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Huabiao_(Gate_of_Heavenly_Peace).jpg?width=1280",
+     "tekija": "Dquai",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Huabiao_(Gate_of_Heavenly_Peace).jpg",
+     "selite": "Marmorinen huabiao-pilari seisoo Taivaallisen rauhan portin edessä, ja sen pintaan on veistetty lohikäärme.",
+     "leveys": 2816,
+     "korkeus": 2112,
      "tarkistettu": true
     }
    ]
@@ -104554,43 +104063,6 @@
     }
    ]
   },
-  "Q69134": {
-   "nimi": "Namsan Seoul Tower",
-   "peruste": "sitelinks",
-   "kaupunki": "soul",
-   "kaupunkiQ": "Q8684",
-   "lat": 37.55122,
-   "lon": 126.98828,
-   "koko_m": 150,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Seoul Aerial Shot 08.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Seoul_Aerial_Shot_08.jpg?width=1280",
-     "tekija": "Republic of Korea",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Seoul_Aerial_Shot_08.jpg",
-     "selite": "N Seoul Tower seisoo Namsan-vuoren huipulla kaupungin keskellä.",
-     "leveys": 5463,
-     "korkeus": 3624,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Namsan Tower sunset, Seoul.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Namsan_Tower_sunset%2C_Seoul.jpg?width=1280",
-     "tekija": "Rtflakfizer",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Namsan_Tower_sunset%2C_Seoul.jpg",
-     "selite": "Torni erottuu siluettina laskevan auringon edessä.",
-     "leveys": 2808,
-     "korkeus": 2098,
-     "tarkistettu": true
-    }
-   ]
-  },
   "Q495437": {
    "nimi": "Cheonggyecheon",
    "peruste": "sitelinks",
@@ -104611,56 +104083,6 @@
      "selite": "Cheonggyecheon on kaupungin halki virtaava kunnostettu oja, jonka yllä oli ennen valtatie.",
      "leveys": 6555,
      "korkeus": 4370,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Cheonggyecheon stream with flowers and bridge at sunrise near Cheonggye Plaza in Seoul.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cheonggyecheon_stream_with_flowers_and_bridge_at_sunrise_near_Cheonggye_Plaza_in_Seoul.jpg?width=1280",
-     "tekija": "Basile Morin",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cheonggyecheon_stream_with_flowers_and_bridge_at_sunrise_near_Cheonggye_Plaza_in_Seoul.jpg",
-     "selite": "Oja alkaa Cheonggye-aukiolta ja kulkee pilvenpiirtäjien välissä.",
-     "leveys": 6653,
-     "korkeus": 4435,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q494895": {
-   "nimi": "Lotte World Tower",
-   "peruste": "sitelinks",
-   "kaupunki": "soul",
-   "kaupunkiQ": "Q8684",
-   "lat": 37.5125,
-   "lon": 127.1025,
-   "koko_m": 300,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Lotte World morning view 8.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lotte_World_morning_view_8.jpg?width=1280",
-     "tekija": "kallerna",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lotte_World_morning_view_8.jpg",
-     "selite": "Lotte World Tower on yksi maailman korkeimmista pilvenpiirtäjistä.",
-     "leveys": 6000,
-     "korkeus": 4100,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Lotte World day view 5.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lotte_World_day_view_5.jpg?width=1280",
-     "tekija": "kallerna",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lotte_World_day_view_5.jpg",
-     "selite": "Torni kohoaa Seokchon-järven ja huvipuiston yllä.",
-     "leveys": 8200,
-     "korkeus": 4500,
      "tarkistettu": true
     }
    ]
@@ -104787,15 +104209,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "National Museum of Korea, Seoul (4) (41131638041).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Museum_of_Korea%2C_Seoul_(4)_(41131638041).jpg?width=1280",
-     "tekija": "Richard Mortel from Riyadh, Saudi Arabia",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Museum_of_Korea%2C_Seoul_(4)_(41131638041).jpg",
-     "selite": "Korean kansallismuseo on yksi Itä-Aasian suurimpia museoita.",
-     "leveys": 6000,
-     "korkeus": 4000,
+     "tiedosto": "Pensive Bodhisattva (National Treasure No. 78) 01 cropped.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pensive_Bodhisattva_(National_Treasure_No._78)_01_cropped.jpg?width=1280",
+     "tekija": "Korean kansallismuseo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pensive_Bodhisattva_(National_Treasure_No._78)_01_cropped.jpg",
+     "selite": "Kullattu pronssinen mietiskelevä Maitreya-patsas kuuluu Korean kansallismuseon kokoelmiin (kansallisaarre nro 78).",
+     "leveys": 3000,
+     "korkeus": 3000,
      "tarkistettu": true
     },
     {
@@ -107242,15 +106664,15 @@
     },
     {
      "jarjestys": 3,
-     "tiedosto": "2008-02-05 roof decoration of the Taipei Bao-an Temple.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2008-02-05_roof_decoration_of_the_Taipei_Bao-an_Temple.jpg?width=1280",
-     "tekija": "Pascal Terjan",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2008-02-05_roof_decoration_of_the_Taipei_Bao-an_Temple.jpg",
-     "selite": "Kattoharjan värikkäät hahmot ja koristeet ovat temppelin tunnuspiirre.",
-     "leveys": 3906,
-     "korkeus": 2602,
+     "tiedosto": "2010-06-22 Taipei Bao-an Temple 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2010-06-22_Taipei_Bao-an_Temple_01.jpg?width=1280",
+     "tekija": "tomscoffin",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2010-06-22_Taipei_Bao-an_Temple_01.jpg",
+     "selite": "Baoan-temppelin pihasalin kattoharjalla on värikkäitä koristehahmoja.",
+     "leveys": 3645,
+     "korkeus": 2425,
      "tarkistettu": true
     }
    ]
@@ -109074,106 +108496,6 @@
    "lon": 44.79932,
    "kuvat": []
   },
-  "Q1140026": {
-   "nimi": "Azadin torni",
-   "peruste": "sitelinks",
-   "kaupunki": "teheran",
-   "kaupunkiQ": "Q3616",
-   "lat": 35.69972,
-   "lon": 51.33806,
-   "koko_m": 120,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Azadi Tower, Tehran.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Azadi_Tower%2C_Tehran.jpg?width=1280",
-     "tekija": "Bernard Gagnon",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Azadi_Tower%2C_Tehran.jpg",
-     "selite": "Azadin torni on Teheranin tunnetuin maamerkki, ja sen kaareva marmoriristikko avautuu kaupungin länsiportille.",
-     "leveys": 4828,
-     "korkeus": 3219,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "\"Azadi(Shahyad)\" tower full view.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Azadi(Shahyad)%22_tower_full_view.jpg?width=1280",
-     "tekija": "Mojde fr",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Azadi(Shahyad)%22_tower_full_view.jpg",
-     "selite": "Torni valmistui 1971, ja se rakennettiin alun perin Persian valtakunnan 2500-vuotisjuhlan muistomerkiksi.",
-     "leveys": 6000,
-     "korkeus": 4000,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "\"Azadi(Shahyad)\" tower side view.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Azadi(Shahyad)%22_tower_side_view.jpg?width=1280",
-     "tekija": "Mojde fr",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Azadi(Shahyad)%22_tower_side_view.jpg",
-     "selite": "Tornin julkisivu on koottu tuhansista leikatuista valkoisista kivilaatoista.",
-     "leveys": 6000,
-     "korkeus": 4000,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 4,
-     "tiedosto": "\"Azadi(Shahyad)\" tower under view.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Azadi(Shahyad)%22_tower_under_view.jpg?width=1280",
-     "tekija": "Mojde fr",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Azadi(Shahyad)%22_tower_under_view.jpg",
-     "selite": "Kaaren alapintaa peittää turkoosilaattojen koristama ristikko.",
-     "leveys": 5723,
-     "korkeus": 4000,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q622796": {
-   "nimi": "Milad-torni",
-   "peruste": "pelin nosto",
-   "kaupunki": "teheran",
-   "kaupunkiQ": "Q3616",
-   "lat": 35.74461,
-   "lon": 51.37533,
-   "koko_m": 150,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "برج میلاد و کوه دماوند از آزادراه تهران کرج - panoramio.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D8%A8%D8%B1%D8%AC_%D9%85%DB%8C%D9%84%D8%A7%D8%AF_%D9%88_%DA%A9%D9%88%D9%87_%D8%AF%D9%85%D8%A7%D9%88%D9%86%D8%AF_%D8%A7%D8%B2_%D8%A2%D8%B2%D8%A7%D8%AF%D8%B1%D8%A7%D9%87_%D8%AA%D9%87%D8%B1%D8%A7%D9%86_%DA%A9%D8%B1%D8%AC_-_panoramio.jpg?width=1280",
-     "tekija": "‫سید محمود جوادی‬‎",
-     "lisenssi": "CC BY 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D8%A8%D8%B1%D8%AC_%D9%85%DB%8C%D9%84%D8%A7%D8%AF_%D9%88_%DA%A9%D9%88%D9%87_%D8%AF%D9%85%D8%A7%D9%88%D9%86%D8%AF_%D8%A7%D8%B2_%D8%A2%D8%B2%D8%A7%D8%AF%D8%B1%D8%A7%D9%87_%D8%AA%D9%87%D8%B1%D8%A7%D9%86_%DA%A9%D8%B1%D8%AC_-_panoramio.jpg",
-     "selite": "Milad-torni kohoaa Teheranin pohjoisosassa, ja kaukana taustalla erottuu Damavand-tulivuori.",
-     "leveys": 1778,
-     "korkeus": 1000,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Sharif University and Milad tower in a frame - Tehran, Iran.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sharif_University_and_Milad_tower_in_a_frame_-_Tehran%2C_Iran.jpg?width=1280",
-     "tekija": "Md4956",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sharif_University_and_Milad_tower_in_a_frame_-_Tehran%2C_Iran.jpg",
-     "selite": "Torni näkyy lähes kaikkialle kaupunkiin Elburzin vuorten edessä.",
-     "leveys": 4032,
-     "korkeus": 3024,
-     "tarkistettu": true
-    }
-   ]
-  },
   "Q210610": {
    "nimi": "Golestanin palatsi",
    "peruste": "UNESCO",
@@ -109374,56 +108696,6 @@
     }
    ]
   },
-  "Q5691633": {
-   "nimi": "Tabiat-silta",
-   "peruste": "pelin nosto",
-   "kaupunki": "teheran",
-   "kaupunkiQ": "Q3616",
-   "lat": 35.75442,
-   "lon": 51.4205,
-   "koko_m": 300,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Tabiat bridge itself.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tabiat_bridge_itself.jpg?width=1280",
-     "tekija": "IRANforeever",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tabiat_bridge_itself.jpg",
-     "selite": "Tabiat-silta on kolmitasoinen jalankulkusilta, joka yhdistää kaksi puistoa moottoritien yli.",
-     "leveys": 4096,
-     "korkeus": 1840,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Tabiat-Bridge-by-DIBA-group.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tabiat-Bridge-by-DIBA-group.jpg?width=1280",
-     "tekija": "Diba Tensile Architecture",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tabiat-Bridge-by-DIBA-group.jpg",
-     "selite": "Silta kaartuu puiden yli ja Elburz-vuoret erottuvat taustalla.",
-     "leveys": 1772,
-     "korkeus": 1181,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 3,
-     "tiedosto": "Tabiat bridge scenery.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tabiat_bridge_scenery.jpg?width=1280",
-     "tekija": "IRANforeever",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tabiat_bridge_scenery.jpg",
-     "selite": "Sillan takana avautuu Teheranin kaupunkimaisema.",
-     "leveys": 4096,
-     "korkeus": 1840,
-     "tarkistettu": true
-    }
-   ]
-  },
   "Q1984633": {
    "nimi": "Niavaranin palatsialue",
    "peruste": "sitelinks",
@@ -109531,104 +108803,6 @@
      "selite": "Sisäänkäynnin kaareva portaali on koristeltu sinisin laatoin.",
      "leveys": 1836,
      "korkeus": 2940,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q970335": {
-   "nimi": "Iranin mattomuseo",
-   "peruste": "sitelinks",
-   "kaupunki": "teheran",
-   "kaupunkiQ": "Q3616",
-   "lat": 35.71414,
-   "lon": 51.39092,
-   "koko_m": 80,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "2011 Carpet Museum of Iran Tehran 6224109834.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2011_Carpet_Museum_of_Iran_Tehran_6224109834.jpg?width=1280",
-     "tekija": "reibai",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2011_Carpet_Museum_of_Iran_Tehran_6224109834.jpg",
-     "selite": "Iranin mattomuseo sijaitsee Laleh-puiston reunalla Teheranin keskustassa.",
-     "leveys": 5184,
-     "korkeus": 3456,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "2011 Carpet Museum of Iran Tehran 6223587791.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2011_Carpet_Museum_of_Iran_Tehran_6223587791.jpg?width=1280",
-     "tekija": "reibai",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2011_Carpet_Museum_of_Iran_Tehran_6223587791.jpg",
-     "selite": "Museon salissa on esillä satoja vuosia vanhoja mattoja.",
-     "leveys": 5184,
-     "korkeus": 3456,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q1756399": {
-   "nimi": "Teheranin nykytaiteen museo",
-   "peruste": "sitelinks",
-   "kaupunki": "teheran",
-   "kaupunkiQ": "Q3616",
-   "lat": 35.71139,
-   "lon": 51.39056,
-   "koko_m": 150,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "موزه هنرهای معاصر.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D9%85%D9%88%D8%B2%D9%87_%D9%87%D9%86%D8%B1%D9%87%D8%A7%DB%8C_%D9%85%D8%B9%D8%A7%D8%B5%D8%B1.jpg?width=1280",
-     "tekija": "Setinas",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D9%85%D9%88%D8%B2%D9%87_%D9%87%D9%86%D8%B1%D9%87%D8%A7%DB%8C_%D9%85%D8%B9%D8%A7%D8%B5%D8%B1.jpg",
-     "selite": "Nykytaiteen museo on 1970-luvulla rakennettu betonirakennus, jota ympäröi veistospuisto.",
-     "leveys": 4032,
-     "korkeus": 3024,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Tehran Museum of Contemporary Art-1.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tehran_Museum_of_Contemporary_Art-1.jpg?width=1280",
-     "tekija": "Farid.R",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tehran_Museum_of_Contemporary_Art-1.jpg",
-     "selite": "Museon kokoelmissa on länsimaisen modernin taiteen mestariteoksia.",
-     "leveys": 3120,
-     "korkeus": 4160,
-     "tarkistettu": true
-    }
-   ]
-  },
-  "Q653535": {
-   "nimi": "Azadin stadion",
-   "peruste": "sitelinks",
-   "kaupunki": "teheran",
-   "kaupunkiQ": "Q3616",
-   "lat": 35.72442,
-   "lon": 51.27553,
-   "koko_m": 400,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Azadi Stadium ACL 2018.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Azadi_Stadium_ACL_2018.jpg?width=1280",
-     "tekija": "Mahdi Zare/Fars News Agency",
-     "lisenssi": "CC BY 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Azadi_Stadium_ACL_2018.jpg",
-     "selite": "Azadin stadion on Iranin kansallisstadion, jolle mahtuu ennätysyleisö.",
-     "leveys": 1280,
-     "korkeus": 675,
      "tarkistettu": true
     }
    ]
@@ -110700,15 +109874,15 @@
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Asahi Breweries headquarters building with the Asahi Flame and Skytree at blue hour with full moon, Sumida-ku, Tokyo, Japan.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Asahi_Breweries_headquarters_building_with_the_Asahi_Flame_and_Skytree_at_blue_hour_with_full_moon%2C_Sumida-ku%2C_Tokyo%2C_Japan.jpg?width=1280",
+     "tiedosto": "Worm's-eye view of Tokyo Skytree with vertical symmetry impression, a sunny day, in Japan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Worm's-eye_view_of_Tokyo_Skytree_with_vertical_symmetry_impression%2C_a_sunny_day%2C_in_Japan.jpg?width=1280",
      "tekija": "Basile Morin",
      "lisenssi": "CC BY-SA 4.0",
      "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Asahi_Breweries_headquarters_building_with_the_Asahi_Flame_and_Skytree_at_blue_hour_with_full_moon%2C_Sumida-ku%2C_Tokyo%2C_Japan.jpg",
-     "selite": "Asahin olutpanimon kultainen liekki ja Skytree erottuvat Sumida-joen yli.",
-     "leveys": 4735,
-     "korkeus": 3788,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Worm's-eye_view_of_Tokyo_Skytree_with_vertical_symmetry_impression%2C_a_sunny_day%2C_in_Japan.jpg",
+     "selite": "Tokyo Skytreen teräsristikkorunko kohoaa alhaalta katsottuna taivasta kohti, ylhäällä pyöreä tasanne.",
+     "leveys": 6241,
+     "korkeus": 4161,
      "tarkistettu": true
     },
     {
@@ -111133,15 +110307,15 @@
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Sotokanda, Akihabara Electric Town at night 20231114.png",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sotokanda%2C_Akihabara_Electric_Town_at_night_20231114.png?width=1280",
-     "tekija": "Phineyes",
+     "tiedosto": "20240114 Yodobashi Akiba 21.31.17.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20240114_Yodobashi_Akiba_21.31.17.jpg?width=1280",
+     "tekija": "Matthide127",
      "lisenssi": "CC0",
      "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sotokanda%2C_Akihabara_Electric_Town_at_night_20231114.png",
-     "selite": "Akihabaran neonvalot syttyvät illalla.",
-     "leveys": 4032,
-     "korkeus": 3024,
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20240114_Yodobashi_Akiba_21.31.17.jpg",
+     "selite": "Akihabaran Yodobashi-tavaratalon julkisivu loistaa illalla valotauluja ja mainoksia täynnä.",
+     "leveys": 4000,
+     "korkeus": 3000,
      "tarkistettu": true
     }
    ]
@@ -114008,28 +113182,28 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Zaisan Memorial in Ulaanbaatar, Mongolia.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zaisan_Memorial_in_Ulaanbaatar%2C_Mongolia.jpg?width=1280",
-     "tekija": "Quintin Soloviev",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zaisan_Memorial_in_Ulaanbaatar%2C_Mongolia.jpg",
-     "selite": "Zaisanin muistomerkki kohoaa kukkulalla Ulan Batorin eteläpuolella.",
-     "leveys": 8007,
-     "korkeus": 5719,
+     "tiedosto": "Zaisan Memorial from the North.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zaisan_Memorial_from_the_North.jpg?width=1280",
+     "tekija": "Chinneeb",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zaisan_Memorial_from_the_North.jpg",
+     "selite": "Zaisanin muistomerkki kohoaa kukkulan huipulla; etualalla on ovoo-kivikasa, johon on sidottu rukouslippuja.",
+     "leveys": 2448,
+     "korkeus": 3264,
      "tarkistettu": true
     },
     {
      "jarjestys": 2,
-     "tiedosto": "Zaisan Memorial 04.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zaisan_Memorial_04.jpg?width=1280",
-     "tekija": "Bernard Gagnon",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zaisan_Memorial_04.jpg",
-     "selite": "Muistomerkin kehämosaiikki kertoo Neuvostoliiton ja Mongolian ystävyydestä.",
-     "leveys": 4905,
-     "korkeus": 3061,
+     "tiedosto": "Zaisan Hill.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zaisan_Hill.jpg?width=1280",
+     "tekija": "Ulaanbaatour (kuvaaja Gereltuv Dashdoorov)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zaisan_Hill.jpg",
+     "selite": "Zaisanin muistomerkin jyrkkä sotilashahmo ja reliefikoristeltu rengasmuuri kohoavat taivasta vasten.",
+     "leveys": 4608,
+     "korkeus": 3072,
      "tarkistettu": true
     }
    ]
@@ -120869,19 +120043,6 @@
      "selite": "Karaweik on kuninkaallista proomua muistuttava kultainen rakennus Kandawgyi-järven rannalla.",
      "leveys": 5184,
      "korkeus": 3456,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Karaweik at night.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Karaweik_at_night.jpg?width=1280",
-     "tekija": "Thrillseekr",
-     "lisenssi": "CC BY 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Karaweik_at_night.jpg",
-     "selite": "Illalla valaistu Karaweik heijastuu järveen.",
-     "leveys": 1280,
-     "korkeus": 853,
      "tarkistettu": true
     }
    ]

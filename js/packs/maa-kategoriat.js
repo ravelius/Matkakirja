@@ -32975,7 +32975,6 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Nimi, josta tuli algoritmi',
           aika: 'n. 780–850',
-          tiedosto: 'Al Khorezmy.jpg',
           teksti: 'Muhammad ibn Musa al-Khwarizmi kokosi noin vuosina '
               + '813–833 Bagdadin viisauden talossa kirjan Al-Jabr, '
               + 'joka esitti ensimmäisenä järjestelmällisen tavan '
@@ -32988,11 +32987,6 @@ export const MAA_KATEGORIAT = {
               + 'sanoo sen olleen Khwarazm, josta liikanimi tulee, '
               + 'kun taas osa tutkijoista sijoittaa syntymän Bagdadin '
               + 'liepeille.',
-          lyhyt: 'Al-Khwarizmista ei ole aikalaiskuvaa; tämä 1900-luvun puuveistos kantaa hänen nimensä arabiaksi.',
-          selite: 'Al-Khwarizmista ei ole aikalaiskuvaa; tämä puuhun veistetty '
-            + 'muotokuva on 1900-luvulta, ja alareunaan on kaiverrettu '
-            + 'hänen nimensä arabialaisin kirjaimin.',
-          lahde: 'Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Al-Khwarizmi',
         },
         {
@@ -54425,7 +54419,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Vehnäntähkä turbaanissa',
           aika: '1747',
-          tiedosto: '1000 Afghanis (2022 - back).jpg',
+          tiedosto: "Le mausolée d'Ahmed Chah Dourrâni (1747-1772) - A58105S.jpg",
           teksti: 'Kun Persian hallitsija Nader Shah murhattiin kesäkuussa 1747, hänen '
               + 'afgaanikaartinsa päällikkö Ahmad Khan Abdali otti vainajan sormuksen ja '
               + 'Koh-i-Noor-timantin ja marssi joukkoineen Kandahariin. Tarun mukaan '
@@ -54435,9 +54429,8 @@ export const MAA_KATEGORIAT = {
               + 'kiinnitti lakkiin vain vihreän oksan. Ahmad Shah otti liikanimen Durr-i '
               + 'Durran, helmien helmi, ja vaihtoi heimonsa nimen abdaleista durraneiksi. '
               + 'Afganistanissa häntä sanotaan yhä nimellä Ahmad Shah Baba, isä.',
-          selite: 'Ahmad Shah Durranin mausoleumi Kandaharissa on kuvattu tuhannen '
-            + 'afgaanin setelin kääntöpuolelle.',
-          lahde: 'Sayfullah Al Maslul, Wikimedia Commons (CC0)',
+          selite: "Ahmad Shah Durranin mausoleumi Kandaharissa on kuvattu myös tuhannen afgaanin setelin kääntöpuolelle; tämä kuva on vuodelta 1928.",
+          lahde: "Frédéric Gadmer, Albert-Kahn-museo, Wikimedia Commons (CC BY-SA 4.0)",
         },
         {
           otsikko: 'Junan nimi, joka ei tarkoita mitä luulee',

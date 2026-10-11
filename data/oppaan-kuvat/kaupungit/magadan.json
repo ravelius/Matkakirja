@@ -3,42 +3,6 @@
  "kaupunkiQ": "Q7968",
  "kohteet": [
   {
-   "q": "Q1635369",
-   "nimi": "Surun naamio",
-   "peruste": "pelin nosto",
-   "koko_m": 60,
-   "lat": 59.59166,
-   "lon": 150.81214,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "«Маска Скорби» (ракурс).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%C2%AB%D0%9C%D0%B0%D1%81%D0%BA%D0%B0_%D0%A1%D0%BA%D0%BE%D1%80%D0%B1%D0%B8%C2%BB_(%D1%80%D0%B0%D0%BA%D1%83%D1%80%D1%81).jpg?width=1280",
-     "tekija": "Сергей Ковалев",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%C2%AB%D0%9C%D0%B0%D1%81%D0%BA%D0%B0_%D0%A1%D0%BA%D0%BE%D1%80%D0%B1%D0%B8%C2%BB_(%D1%80%D0%B0%D0%BA%D1%83%D1%80%D1%81).jpg",
-     "selite": "Surun naamio on Neuvostoliiton vankileirien uhrien muistomerkki Magadanin kukkulalla.",
-     "leveys": 1600,
-     "korkeus": 1067,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Маска скорби вид сзади.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9C%D0%B0%D1%81%D0%BA%D0%B0_%D1%81%D0%BA%D0%BE%D1%80%D0%B1%D0%B8_%D0%B2%D0%B8%D0%B4_%D1%81%D0%B7%D0%B0%D0%B4%D0%B8.jpg?width=1280",
-     "tekija": "Timofeevandrew",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B0%D1%81%D0%BA%D0%B0_%D1%81%D0%BA%D0%BE%D1%80%D0%B1%D0%B8_%D0%B2%D0%B8%D0%B4_%D1%81%D0%B7%D0%B0%D0%B4%D0%B8.jpg",
-     "selite": "Muistomerkin sisällä on pieni kappeli, jonka ristiinnaulitun kuva näkyy illalla valaistuna.",
-     "leveys": 1536,
-     "korkeus": 2048,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
    "q": "Q2369683",
    "nimi": "Nagajevanlahti",
    "peruste": "pelin nosto",
