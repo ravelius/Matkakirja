@@ -515,14 +515,5 @@
    "tarkistettu": true
   }
  ],
- "eiKuvaa": [
-  {
-   "q": "Q142917",
-   "nimi": "Äiti Ukraina",
-   "lat": 50.4265,
-   "lon": 30.56311,
-   "peruste": "sitelinks",
-   "syy": "suojatarkastus: ei vapaata, suojaamatonta kuvaa"
-  }
- ]
+ "eiKuvaa": []
 }

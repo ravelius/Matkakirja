@@ -397,30 +397,5 @@
    "tarkistettu": true
   }
  ],
- "eiKuvaa": [
-  {
-   "q": "Q337179",
-   "nimi": "Vapauden muistomerkki",
-   "lat": 56.95156,
-   "lon": 24.11322,
-   "peruste": "pelin nosto",
-   "syy": "suojatarkastus: ei vapaata, suojaamatonta kuvaa"
-  },
-  {
-   "q": "Q830319",
-   "nimi": "Riian radio- ja televisiotorni",
-   "lat": 56.92389,
-   "lon": 24.13694,
-   "peruste": "sitelinks",
-   "syy": "suojatarkastus: ei vapaata, suojaamatonta kuvaa"
-  },
-  {
-   "q": "Q1133733",
-   "nimi": "Latvian kansalliskirjasto",
-   "lat": 56.94134,
-   "lon": 24.09664,
-   "peruste": "sitelinks",
-   "syy": "suojatarkastus: ei vapaata, suojaamatonta kuvaa"
-  }
- ]
+ "eiKuvaa": []
 }

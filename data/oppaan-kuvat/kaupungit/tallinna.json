@@ -453,14 +453,5 @@
    "tarkistettu": true
   }
  ],
- "eiKuvaa": [
-  {
-   "q": "Q1365010",
-   "nimi": "Tallinnan televisiotorni",
-   "lat": 59.47111,
-   "lon": 24.8875,
-   "peruste": "sitelinks",
-   "syy": "suojatarkastus: ei vapaata, suojaamatonta kuvaa"
-  }
- ]
+ "eiKuvaa": []
 }

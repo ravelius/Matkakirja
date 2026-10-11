@@ -4996,8 +4996,7 @@
     "Q1417441",
     "Q1076911",
     "Q2429499",
-    "Q1575425",
-    "Q142917"
+    "Q1575425"
    ],
    "kuvat": [
     {
@@ -8810,10 +8809,7 @@
     "Q190670",
     "Q1026415",
     "Q322183",
-    "Q186097",
-    "Q337179",
-    "Q830319",
-    "Q1133733"
+    "Q186097"
    ],
    "kuvat": [
     {
@@ -10451,8 +10447,7 @@
     "Q12378759",
     "Q914562",
     "Q7722735",
-    "Q1253709",
-    "Q1365010"
+    "Q1253709"
    ],
    "kuvat": [
     {
@@ -58597,15 +58592,6 @@
     }
    ]
   },
-  "Q142917": {
-   "nimi": "Äiti Ukraina",
-   "peruste": "sitelinks",
-   "kaupunki": "kiova",
-   "kaupunkiQ": "Q1899",
-   "lat": 50.4265,
-   "lon": 30.56311,
-   "kuvat": []
-  },
   "Q1356352": {
    "nimi": "Victoria Memorial",
    "peruste": "sitelinks",
@@ -93212,33 +93198,6 @@
     }
    ]
   },
-  "Q337179": {
-   "nimi": "Vapauden muistomerkki",
-   "peruste": "pelin nosto",
-   "kaupunki": "riika",
-   "kaupunkiQ": "Q1773",
-   "lat": 56.95156,
-   "lon": 24.11322,
-   "kuvat": []
-  },
-  "Q830319": {
-   "nimi": "Riian radio- ja televisiotorni",
-   "peruste": "sitelinks",
-   "kaupunki": "riika",
-   "kaupunkiQ": "Q1773",
-   "lat": 56.92389,
-   "lon": 24.13694,
-   "kuvat": []
-  },
-  "Q1133733": {
-   "nimi": "Latvian kansalliskirjasto",
-   "peruste": "sitelinks",
-   "kaupunki": "riika",
-   "kaupunkiQ": "Q1773",
-   "lat": 56.94134,
-   "lon": 24.09664,
-   "kuvat": []
-  },
   "Q79961": {
    "nimi": "Rio de Janeiron Kristus-patsas",
    "peruste": "sitelinks",
@@ -108597,15 +108556,6 @@
      "tarkistettu": true
     }
    ]
-  },
-  "Q1365010": {
-   "nimi": "Tallinnan televisiotorni",
-   "peruste": "sitelinks",
-   "kaupunki": "tallinna",
-   "kaupunkiQ": "Q1770",
-   "lat": 59.47111,
-   "lon": 24.8875,
-   "kuvat": []
   },
   "Q1190334": {
    "nimi": "Näsinneula",
