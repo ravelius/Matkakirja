@@ -1091,13 +1091,18 @@ export const FOKUSVIRTA_SOFIA = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * Kaanon, kohta 5 — teksti sellaisenaan. Isoisän merkintä, joka aukeaa
-   * kun aarre löytyy.
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Konakin varjossa punnitsin lapion ostamista, mutta torilla '
-      + 'kysyttiin jo, kuka on se muukalainen joka utelee vanhoista '
-      + 'kätköistä. Lähdin aamulla — jotkut aarteet saavat odottaa '
-      + 'rohkeampaa.',
+    teksti: 'Pyhän Sofian kirkko oli seissyt hylättynä vuoden 1858 '
+      + 'maanjäristyksestä asti, joten kiipesin ikkunasta sisään. '
+      + 'Kaupunki on nimetty kirkon mukaan, ja otin nimen osoitteeksi. '
+      + 'Askelsin lattian päästä päähän: huoneelle olisi ollut tilaa, '
+      + 'huonetta ei. Laskelma onnistui täydellisesti.',
   },
 };

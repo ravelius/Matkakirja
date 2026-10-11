@@ -552,34 +552,20 @@ export const FOKUSVIRTA_ATEENA = {
   },
 
   /*
-   * ISOISÄN AARREMERKINTÄ — matkakirjan myöhempi sivu (omistaja
-   * 25.8.2026).
-   *
-   * Kun MAAN AARRE LÖYTYY, tämä teksti aukeaa SAMAAN perinteiseen
-   * matkakirjakorttiin kuin saapumismerkintä, ja vasta sen jälkeen
-   * pöllö kuittaa löydön (js/fokusvirta.js, ks. AARREMERKINTÄ).
-   * Paikkarivi tulee koodista muodossa "Isoisän merkintä · Ateena":
-   * tämä ei ole saapumispäivän havainto eikä siinä siksi ole
-   * päivämäärää eikä ilmanpuntaria.
-   *
-   * TEKSTI ON KAANONIA EIKÄ SITÄ SAA MUOTOILLA UUSIKSI (Fable
-   * 25.8.2026). Se sitoo Ateenan kaaren umpeen: saapumismerkinnässä
-   * isoisä kuuli torilla miehestä, joka löysi kullan mutta jota kukaan
-   * ei nähnyt kaivamassa — tässä hän myöntää seisseensa itse saman
-   * kysymyksen äärellä ja jättäneensä kaivamatta.
-   *
-   * MUOTO ON OLIO EIKÄ MERKKIJONO (v1301). Moottori on aina kelpuuttanut
-   * molemmat (js/fokusvirta.js aarremerkinnanTeksti kääntää merkkijonon
-   * olioksi), mutta Ateena oli viimeinen paikka, jossa vanha muoto
-   * eli — jokainen muu kaupunki kirjoittaa `{ teksti }`. Yksi muoto
-   * riittää: näin uusi lauta ei joudu arvaamaan kumpaa kopioida, eikä
-   * kukaan lukija tarvitse haaraa. TEKSTI ON SAMA SANASTA SANAAN.
+   * ---------- AARREMERKINTÄ ----------
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Seisoin samalla kalliolla enkä uskaltanut kaivaa '
-      + 'vartijan nähden — piirsin vain ristin luettelon reunaan. Jos '
-      + 'sinä pitelet nyt sitä, mitä minä vain katselin, olemme '
-      + 'molemmat löytäneet omamme.',
+    teksti: 'Aarnin luettelon mukaan huone odotti kuudentoista pylvään '
+      + 'varjossa. Olympieionilla seisoi viisitoista; kuudestoista kaatui '
+      + 'myrskyssä 1852. Pyysin lupaa kaivaa kaatuneen luota. Virkamies '
+      + 'luki luettelon kahdesti ja palautti sen kysymättä mitään, mikä '
+      + 'oli ystävällisempää kuin vastaus.',
   },
 
   /*

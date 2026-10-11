@@ -980,15 +980,18 @@ export const FOKUSVIRTA_MARSEILLE = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Ranskan
-   * kruununjalokivien safiiri, sama kuin Pariisilla. Merkintä aukeaa,
-   * kun aarre löytyy (js/fokusvirta.js fokusvirtaAarremerkinta).
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Vanha merimies kertoi safiirista, joka katosi Pariisin '
-      + 'kruununjalokivien mukana vallankumouksen sekasorrossa — osa '
-      + 'löytyi, osa ei, ja hänen mukaansa yksi kivistä kulki tämän '
-      + 'sataman kautta etelään. Satama muistaa kaiken mikä sen läpi '
-      + 'kulkee, hän sanoi, mutta ei kerro mihin se meni.',
+    teksti: 'Mistral kantoi Palais Longchampin kaskadin suihkun suoraan '
+      + 'kasvoilleni. Rakennus oli pystytetty juhlimaan Durancen veden '
+      + 'tuloa kaupunkiin, ja Aarnin luettelo kuvasi huonetta, jota vesi '
+      + 'ympäröi. Kiersin vesilinnan kolmesti ja löysin kaksi museota ja '
+      + 'yhden märän takin.',
   },
 };

@@ -855,14 +855,18 @@ export const FOKUSVIRTA_PRAHA = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Rudolf II:n
-   * kabinetin helmi. Merkintä aukeaa, kun aarre löytyy
-   * (js/fokusvirta.js fokusvirtaAarremerkinta).
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Linnan vanha palvelija vannoi, että Rudolfin kabinetista jäi '
-      + 'laatikko, jota ruotsalaiset eivät 1648 löytäneet. Ovi, jonka hän '
-      + 'näytti, oli muurattu umpeen — koputin siihen ja kuulin ontton '
-      + 'vastauksen, mutta muuria en käynyt purkamaan.',
+    teksti: 'Prahan linnan portilla kerroin vartijalle etsiväni kuninkaiden '
+      + 'meripihkasalia. Hän vastasi, että linnassa asuu yhä entinen '
+      + 'keisari Ferdinand, joka ei vastaanota vieraita ilman ilmoitusta. '
+      + 'Minulla oli mittanauha, ei ilmoitusta. Mittasin portin ja '
+      + 'kiitin.',
   },
 };

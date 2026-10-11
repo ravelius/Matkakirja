@@ -99,4 +99,21 @@ export const FOKUSVIRTA_VALLETTA = {
       europe: { x: 490, y: 949 },
     },
   },
+
+  /*
+   * ---------- AARREMERKINTÄ ----------
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
+   */
+  aarremerkinta: {
+    teksti: 'Vallettassa etsin saksalaisten ritarien majataloa, koska '
+      + 'saksalaiset tuntevat Preussin ja Preussi meripihkan. Majatalo '
+      + 'oli purettu jo 1839, ja sen paikalla seisoi anglikaaninen '
+      + 'kirkko. Astuin sisään kohteliaisuudesta ja katsoin kattoa kauan. '
+      + 'Siellä oli hunajanvärisiä penkkejä, ei muuta.',
+  },
 };

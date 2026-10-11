@@ -818,14 +818,18 @@ export const FOKUSVIRTA_BUDAPEST = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Attilan
-   * hauta-aarre. Merkintä aukeaa, kun aarre löytyy (js/fokusvirta.js
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
    * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Tarun mukaan Attila haudattiin kolmessa arkussa joen uoman '
-      + 'alle, ja joki päästettiin takaisin päälle. Seisoin Tiszan '
-      + 'rannalla ja ymmärsin: hautaa ei vartioi kukaan, koska '
-      + 'vartijaksi pantiin virta itse.',
+    teksti: 'Kansallismuseon mineraaliosaston hoitaja kuunteli kuvaukseni '
+      + 'Meripihkahuoneesta ja huomautti, ettei meripihka ole kivi vaan '
+      + 'puun hartsia. Olin merkinnyt sen luetteloon kivenä. Pyyhin '
+      + 'merkinnän ja kävin kasvikokoelmassa, mutta sielläkään ei ollut '
+      + 'huonetta, vain kuivattuja kasveja.',
   },
 };

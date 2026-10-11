@@ -909,14 +909,17 @@ export const FOKUSVIRTA_TUKHOLMA = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Kronan-laivan
-   * kultakolikot; Kronan upposi 1676 Öölannin edustalla. Merkintä
-   * aukeaa, kun aarre löytyy (js/fokusvirta.js fokusvirtaAarremerkinta).
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Kalastaja Öölannin edustalla vannoi, että Kronanin kulta makaa '
-      + 'hänen verkkojensa alla, eikä suostunut näyttämään paikkaa edes '
-      + 'rahasta. Kirjoitin luetteloon: meri pitää sen minkä ottaa — kunnes '
-      + 'joku kysyy oikein.',
+    teksti: 'Kysyin Meripihkahuoneesta Riddarholmenin kirkon suntiolta. Hän '
+      + 'muistutti, että Preussin kuningas lahjoitti huoneen tsaarille '
+      + 'liiton sinetiksi, ja liitto solmittiin Ruotsia vastaan. Täältä '
+      + 'sitä on turha etsiä, hän sanoi ja sulki oven nenäni edestä.',
   },
 };

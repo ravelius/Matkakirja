@@ -1359,22 +1359,18 @@ export const FOKUSVIRTA_PIETARI = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. Iso
-   * aarre: tsaarin kadonnut pääsiäismuna. Merkintä aukeaa, kun aarre
-   * löytyy (js/fokusvirta.js fokusvirtaAarremerkinta), samaan
-   * matkakirjakorttiin kuin saapumismerkintä.
-   *
-   * HUOM AJOITUKSESTA: ks. tiedoston alun osio "AARREMERKINTÄ ON ENNE,
-   * EI HISTORIAA". Merkintä on kirjoitettu enteeksi, ja täky `faberge`
-   * kertoo pelaajalle, mitä enteestä lopulta tuli.
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Kultasepän liikkeessä Suurella Merikadulla hoidettiin hovin '
-      + 'tilauksia väliverhon takana. Oppipoika kertoi minulle '
-      + 'puoliääneen, että keisarinnalle suunnitellaan lahjaa, jollaista '
-      + 'ei ole ennen tehty — pieni esine, jonka sisään kätketään '
-      + 'toinen. Sellainen esine on tehty katoamaan kauniisti. Merkitsen '
-      + 'tämän ylös: pidä silmällä pieniä esineitä, joiden sisällä on '
-      + 'salaisuus.',
+    teksti: 'Talvipalatsin portilla kysyin vartijalta Preussin kuninkaan '
+      + 'lahjaa, joka oli lahjoitettu 1716. Hän kysyi kohteliaasti, mitä '
+      + 'vuotta oikein elin. Huone oli siirretty Tsarskoje Seloon jo '
+      + '1755. Merkitsin muistiin lukeneeni tarinaa lähes neljäkymmentä '
+      + 'vuotta liian lyhyesti.',
   },
 };

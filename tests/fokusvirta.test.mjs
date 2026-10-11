@@ -638,9 +638,9 @@ test('Sofian pelitestattu sisältö on ennallaan sähkepilotin jälkeen', () => 
   assert.deepEqual(sofia.lehtitehtavat.map((t) => [t.id, t.sivu, t.otsake]),
     [['aarre', 2, 'AARTEEN AVAUS'], ['juliste', 3, 'JULISTE']], 'lehtitehtävät muuttuivat');
   assert.match(sofia.lehtitehtavat[0].visa.kysymys, /banitsa/i, 'AARTEEN AVAUS -visa muuttui');
-  assert.match(sofia.aarremerkinta.teksti, /^Konakin varjossa punnitsin lapion ostamista/,
+  assert.match(sofia.aarremerkinta.teksti, /^Pyhän Sofian kirkko oli seissyt hylättynä/,
     'aarremerkintä muuttui');
-  assert.match(sofia.aarremerkinta.teksti, /jotkut aarteet saavat odottaa rohkeampaa\.$/,
+  assert.match(sofia.aarremerkinta.teksti, /Laskelma onnistui täydellisesti\.$/,
     'aarremerkintä muuttui');
   // Nadia on tallessa, vaikka sähke voittaa hänet kortilla: pilotin
   // peruminen on yksi rivi vain, jos data on yhä paikallaan.

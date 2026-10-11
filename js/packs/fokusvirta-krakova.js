@@ -1472,23 +1472,18 @@ export const FOKUSVIRTA_KRAKOVA = {
 
   /*
    * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Rafaelin kadonnut
-   * muotokuva (js/packs/paikallisaarteet.js, POL). Merkintä aukeaa, kun
-   * aarre löytyy (js/fokusvirta.js fokusvirtaAarremerkinta).
-   *
-   * MERKINTÄ EI NIMEÄ TAULUA EIKÄ KERRO SEN KOHTALOA, JA SE ON
-   * TARKOITUS. Isoisä kirjoittaa vuonna 1873 eikä voi tietää vuodesta
-   * 1945; oppitunti kertoo koko tarinan, merkintä aavistaa vain.
-   * Merkinnän ajoituksesta ks. oppituntilohkon "AJOITUSKYSYMYS".
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
    */
   aarremerkinta: {
-    teksti: 'Ruhtinaan kokoelma on paennut viime sotaa Pariisiin, ja '
-      + 'siellä näin keväällä muotokuvan, jonka edessä unohdin '
-      + 'hengittää: nuori mies turkiskauluksessa, ja katse joka seuraa '
-      + 'huoneen poikki. Mestarin käsialaa Roomasta, sanoi hoitaja, eikä '
-      + 'maailmassa ole montaa sen vertaista. Täällä sanotaan, että '
-      + 'kokoelma palaa pian kotiin. Kirjoitan tämän muistiin siksi, '
-      + 'että sellaisilla tauluilla on tapana lähteä liikkeelle, kun '
-      + 'ajat huononevat — ja pysyä kateissa kauan.',
+    teksti: 'Wawelin pihan arkadit oli muurattu umpeen, ja olin varma, että '
+      + 'meripihkahuone odotti muurin takana. Sotamies kertoi muurauksen '
+      + 'tehdyn, kun kaaret rapistuivat ja linnaan tuli sotaväkeä. '
+      + 'Vastaus oli niin arkinen, että kirjasin sen vasta illalla. '
+      + 'Rakastan arvoituksia, en ratkaisuja.',
   },
 };

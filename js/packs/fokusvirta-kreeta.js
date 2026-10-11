@@ -170,4 +170,21 @@ export const FOKUSVIRTA_KREETA = {
       lahde: 'Matkakirjan havainnekuva',
     },
   },
+
+  /*
+   * ---------- AARREMERKINTÄ ----------
+   * UUSI MALLI (omistaja 11.10.2026, juna 182): isoisä kertoo, miten hän
+   * etsi Meripihkahuoneen aarretta juuri tästä kaupungista 1873 ja miksi
+   * se ei ollut täällä. Merkintä näytetään vain, kun avattu aarre on jokin
+   * muu kuin Meripihkahuoneen aarre; kaupungin paikallisaarretta ei nimetä
+   * (aarre arvotaan). Vain teksti — ei ääntä (js/fokusvirta.js
+   * fokusvirtaAarremerkinta).
+   */
+  aarremerkinta: {
+    teksti: 'Laskin Kandian venetsialaisten muurien bastionit kolmesti: '
+      + 'seitsemän, joka kerta. Kuvittelin huoneen mahtuvan paksun muurin '
+      + 'sisään ja tutkin saumoja kolme aamua. Vartija toi minulle '
+      + 'lopulta jakkaran. Muuri vastasi aina samalla hiljaisuudella, '
+      + 'mikä oli ainakin johdonmukaista.',
+  },
 };
