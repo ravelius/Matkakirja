@@ -39,6 +39,7 @@ namespace Matkakirja.Natiivi
             public VartijanTila EdellinenTila;
             public AudioSource Askeleet;
             public float RepliikkiAsti; public int RepliikkiLaskuri; public float TyoAsti, VaroitusAsti, PuhuiS = -99f;
+            public bool KatseKaannetty;   // jakson 1. varoitus käänsi katseen (nollautuu Partioon ja Kiinniin)
             /// <summary>Kannetun valon säde (lyhty 4 m, soihtu 6 m), 0 = ei kanna.</summary>
             public float ValoM;
             /// <summary>Kannettu valo ja sen perusvoima (varoituksen ajan kirkkaampi).</summary>
@@ -399,6 +400,7 @@ namespace Matkakirja.Natiivi
                 {
                     kirjaa?.Invoke($"seikkailu: vartija {v.Osa} {v.EdellinenTila} → {v.Aivot.Tila} (mittari {v.Aivot.Mittari:F2})");
                     Repliikki(v, v.EdellinenTila, v.Aivot.Tila, s.NakolinjaVapaa && v.Aivot.Mittari > 0);
+                    if (v.Aivot.Tila == VartijanTila.Partio || v.Aivot.Tila == VartijanTila.Kiinni) v.KatseKaannetty = false;
                     v.EdellinenTila = v.Aivot.Tila;
                 }
                 if (v.Aivot.VaroitusPyydetty) { v.Aivot.VaroitusPyydetty = false; Varoita(v, p); }
@@ -908,7 +910,8 @@ namespace Matkakirja.Natiivi
         void Varoita(V v, SeikkailuPelaaja p)
         {
             var vp = v.Agentti.transform.position;
-            if (p != null && SeikkailuPelaaja.Ensimmainen) StartCoroutine(KatseVaroittajaan(v, p));
+            // PT 07.3x: katse kääntyy vain jakson ensimmäisellä varoituksella; muilla vain ääni ja valo.
+            if (p != null && SeikkailuPelaaja.Ensimmainen && !v.KatseKaannetty) { v.KatseKaannetty = true; StartCoroutine(KatseVaroittajaan(v, p)); }
             kirjaa?.Invoke($"seikkailu: vartija {v.Osa} varoittaa ({Vartija.VaroitusSeisoS:F1} s, mittari {v.Aivot.Mittari:F2})");
             var r = SeikkailuRepliikit.Aktiivinen;
             var pr = v.Aivot.Profiili;
@@ -923,7 +926,7 @@ namespace Matkakirja.Natiivi
 
         // VAROITTAJA KUVAAN (PT 07.0x, Laitetestaaja 5. kierros 11.10.: varoitus selän takaa, vartija ei näkynyt eikä lyhty päivällä):
         // ensimmäisessä persoonassa katse kääntyy KatseS:ssa varoittajaan, jos tämä on yli KatseKulma sivussa; pää nousee vaakatasoon.
-        // Muutos lisätään pelaajan oman vedon päälle (ei lukitse katsetta).
+        // Muutos lisätään pelaajan oman vedon päälle; PT 07.3x: mikä tahansa kosketus (tai hiiri/näppäin) keskeyttää heti, ei kameralukkoa.
         const float KatseKulma = 35f, KatseS = 0.6f;
         IEnumerator KatseVaroittajaan(V v, SeikkailuPelaaja p)
         {
@@ -936,12 +939,20 @@ namespace Matkakirja.Natiivi
             for (float t = 0; t < KatseS; )
             {
                 t += Time.unscaledDeltaTime;
-                if (p == null || p.Otteessa || p.Ohjataan || ote != null) yield break;
+                if (p == null || p.Otteessa || p.Ohjataan || ote != null || PelaajaKoskee()) yield break;
                 double u = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(t / KatseS)), du = u - tehty; tehty = u;
                 p.Tila.KameraYaw = p.Tila.HahmoYaw = p.Tila.KameraYaw + ero * du;
                 p.Tila.KameraPitch += pitch * du;
                 yield return null;
             }
+        }
+
+        static bool PelaajaKoskee()
+        {
+            var ts = Touchscreen.current;
+            if (ts != null) foreach (var k in ts.touches) if (k.press.isPressed) return true;
+            var m = Mouse.current; var kb = Keyboard.current;
+            return m != null && (m.leftButton.isPressed || m.rightButton.isPressed || m.delta.ReadValue().sqrMagnitude > 0f) || kb != null && kb.anyKey.isPressed;
         }
 
         // VAROITUSÄÄNI (PT B3, Laitetestaaja TF 180: "ääni ei kerro, mistä vartija tulee", vain sydän 1 s ennen kiinniottoa): kun
