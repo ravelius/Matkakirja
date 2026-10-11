@@ -99,7 +99,7 @@ namespace Matkakirja.Natiivi
                 SeikkailuAanet.SoitaTaiVara("salpa-2", null, ovi + Vector3.up, 0.6f);         // salpa auki (sonniss-aanet-v3)
                 SeikkailuRepliikit.SoitaTaiVara("tyrma-vesipoika-1", null, ovi + Vector3.up * 1.4f);   // "Vettä sinulle. Ovi taisi jäädä auki."
                 SeikkailuAanet.SoitaJokin(SeikkailuAanet.PaksuOviNarina, "luukku-narahdus", ovi + Vector3.up, 0.8f);   // ovi jää raolleen
-                SeikkailuEsineet.Aktiivinen?.OviLehti("tyrma", true);
+                SeikkailuEsineet.Aktiivinen?.OviLehti("tyrma", true); OviValo();
                 kirjaa?.Invoke("seikkailu: tyrmä: vesipoika jätti oven raolleen");
             }
             if (ydin.Vihje) { ydin.Vihje = false; SeikkailuVihjeet.Aktiivinen?.Pakota(2, "tyrmä 20 s"); }   // kieli: ei (tekninen)
@@ -109,7 +109,7 @@ namespace Matkakirja.Natiivi
                 // 60 s (pelattavuusmalli 4.1): ovi aukeaa oikeasti (A3: ennen vain lokiin), myös irtokiven muunnelmassa ulos oven kautta.
                 ydin.PuluAvasi = false; puluAvasi = true;
                 SeikkailuAanet.SoitaJokin(SeikkailuAanet.LukkoAuki, "avain-lukko", ovi + Vector3.up, 0.8f);
-                SeikkailuEsineet.Aktiivinen?.OviLehti("tyrma", false);
+                SeikkailuEsineet.Aktiivinen?.OviLehti("tyrma", false); OviValo();
                 kirjaa?.Invoke("seikkailu: tyrmä: lukko aukesi (60 s), ovi auki");
             }
             // Muunnelma 2: raollaan oleva ovi aukeaa kävelemällä (pelaaja oven luona).
@@ -126,7 +126,10 @@ namespace Matkakirja.Natiivi
             // kävellen ei pääse (A3, Laitetestaaja TF 180: irtokiven pakoa ei saatu tehtyä).
             bool ryomii = ydin.Muunnelma == 3 && ryomiOn && !puluAvasi;
             var maali = ryomii ? aukonSuu : ulos;
-            if (ydin.Vaihe == TyrmanVaihe.OviAuki && Vector3.Distance(p.transform.position, maali) < (ryomii ? RyomiM : UlosM) && ydin.Ulos()) StartCoroutine(Ulos());
+            // Oviaukko riittää (Laitetestaaja 181d, HID-toisto 03.51: liike toimii, mutta auki oleva ovi ja käytävä näkyivät mustina aukkoina).
+            bool perilla = Vector3.Distance(p.transform.position, maali) < (ryomii ? RyomiM : UlosM)
+                || !ryomii && Vector3.Distance(p.transform.position, ovi) < OviLapiM;
+            if (ydin.Vaihe == TyrmanVaihe.OviAuki && perilla && ydin.Ulos()) StartCoroutine(Ulos());
         }
 
         /// <summary>Toimintonappi ovella avaimet kädessä (SeikkailuEsineet kysyy verbin ja kutsuu).</summary>
@@ -138,7 +141,7 @@ namespace Matkakirja.Natiivi
             p.KasiEle("luukku");
             SeikkailuAanet.SoitaJokin(SeikkailuAanet.LukkoAuki, "avain-lukko", ovi + Vector3.up, 0.8f);
             if (avainId != null) SeikkailuEsineet.Aktiivinen?.Piilota(avainId);
-            SeikkailuEsineet.Aktiivinen?.OviLehti("tyrma", false);
+            SeikkailuEsineet.Aktiivinen?.OviLehti("tyrma", false); OviValo();
             kirjaa?.Invoke("seikkailu: tyrmä: ovi auki");
         }
 
@@ -172,7 +175,18 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Kova ääni tyrmässä (muunnelmat 2–3): käytävän vartija vain mutisee (malli 4.1), enintään 12 s:n välein.</summary>
         float kolinaAsti; bool rotatKuultu, puluAvasi, tyonnetty;
-        const float TyontoM = 1.3f, RyomiM = 1.0f;
+        const float TyontoM = 1.3f, RyomiM = 1.0f, OviLapiM = 0.8f;
+        Light oviValo;
+        /// <summary>Käytävän lämmin valo oven avautuessa (soihtu käytävän päässä): auki oleva ovi erottuu pimeästä tyrmästä.</summary>
+        void OviValo()
+        {
+            if (oviValo != null) return;
+            var g = new GameObject("Tyrmän käytävän valo") { layer = DioraamaNayttamo.Kerros }; g.transform.SetParent(transform, false);
+            g.transform.position = Vector3.Lerp(ovi, ulos, 0.6f) + Vector3.up * 1.6f;
+            oviValo = g.AddComponent<Light>(); oviValo.type = LightType.Point; oviValo.color = new Color(1f, 0.64f, 0.32f);
+            oviValo.range = 5f; oviValo.intensity = 1.4f; oviValo.shadows = LightShadows.None; SeikkailuValot.MerkitseLiikkuvaksi(oviValo);
+            SeikkailuValot.Liekki(g.transform, DioraamaNayttamo.Kerros);
+        }
         Vector3 aukonSuu;
         void Kolina(Vector3 _)
         {
