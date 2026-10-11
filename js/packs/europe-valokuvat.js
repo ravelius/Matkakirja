@@ -3416,4 +3416,22 @@ export const EUROPE_VALOKUVAT = {
     lyhyt: 'Tiflisin katunäkymä 1800-luvun lopulta, ajalta ennen sähköraitiotietä.',
     selite: 'Tiflisin katunäkymä 1800-luvun lopulta. Kaupungissa liikennöi hevosraitiotie 1800-luvun lopulta, ja sähköraitiotie avattiin vasta 1900-luvun alussa.',
   },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierä e03b, Ramallah):
+   * Valokuva (vain dataa: ei pysäkkiä, ei kuluttajaa vielä). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03b-ramallah.
+   */
+  ramallah: {
+    tiedosto: 'A bride\'s arrival before the house of her bridegroom - a wedding, Ramallah, Palestine - DPLA - 3b81a2b05b83c9447910b7487c7606e8 (page 1).jpg',
+    vuosi: '1900',
+    lahde: 'Underwood & Underwood, Commons (PD)',
+    lyhyt: 'Häät Ramallahissa noin vuonna 1900: väkijoukko kokoontuu, kun morsian saapuu sulhasen talolle.',
+    selite: 'Kuva on Underwood & Underwoodin stereokuva, jossa kyläläisiä seisoo puun ja kivimuurin luona morsiamen saapuessa. Isoisän matkavuonna 1873 Ramallah oli vielä kivitalojen kylä, jonka asukkaat olivat enimmäkseen kreikkalaisen riituksen kristittyjä.',
+    uusi: {
+      tiedosto: '2010-08 Ramallah 43.jpg',
+      lahde: 'Ralf Lotys (Sicherlich), Commons (CC BY 3.0)',
+      lyhyt: 'Moskeija ja kerrostaloja Ramallahin rinteillä nykyään.',
+      selite: 'Kivitalojen kylästä on kasvanut kerrostalojen täyttämä kaupunki: Ramallahin kaupungissa asui vuonna 2017 noin 39 000 ihmistä.',
+    },
+  },
 };

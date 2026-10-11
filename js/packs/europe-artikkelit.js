@@ -4339,6 +4339,15 @@ export const EUROPE_ARTIKKELIT = {
     intro: 'Tbilisi on Georgian pääkaupunki ja suurin kaupunki, ja se levittyy Mtkvari- eli Kura-joen molemmille puolille vuorten rajaamaan laaksoon. Nimi tulee vanhasta georgian sanasta tpili, **lämmin**, ja viittaa kaupungin rikkipitoisiin kuumiin lähteisiin. Perimätiedon mukaan Iberian kuningas Vakhtang I perusti kaupungin 400-luvulla, ja kuningas Dachi siirsi Iberian pääkaupungin Mtshetasta Tbilisiin 500-luvun alussa.\n\nIsoisän matkavuonna 1873 kaupunkia kutsuttiin nimellä **Tiflis**, ja se oli Venäjän keisarikunnan Tiflisin kuvernementin pääkaupunki. Edellisenä vuonna oli avattu maan ensimmäinen rautatie Potiin, mutta raitiotietä ei vielä ollut. Nykyinen nimi vakiintui virallisesti vasta 1936.\n\nTbilisin kaupungissa asuu yli 1,3 miljoonaa ihmistä, eli noin kolmannes koko maan väestöstä. Vanhassa kaupungissa kirkot, kylpylät ja linnoitus seisovat lähekkäin, ja kaupunki on **rakennettu uudestaan monta kertaa**. Risteyskaupungissa elää yli sata etnistä ryhmää.',
     teksti: 'Tbilisin synnystä kerrotaan legenda: kuningas Vakhtang I metsästi haukan kanssa, ja haukka ja sen saalis putosivat kuumaan lähteeseen. Kuningas ihastui lähteisiin ja päätti rakentaa niiden viereen kaupungin. Arkeologisen aineiston mukaan Vakhtang kuitenkin elvytti tai rakensi uudelleen vain osia olemassa olevasta asutuksesta, joka juontuu 4. vuosituhannelta eaa.\n\nVenäjän keisarikunta liitti Kartli-Kakhetin itseensä 1801, ja Tbilisi oli myöhemmin, vuodesta 1846, Tiflisin kuvernementin pääkaupunki. Hyvin harva rakennus oli säilynyt vuoden 1795 tuhosta, joten suuri osa nykyisistä historiallisista rakennuksista on Venäjän vallan ajalta. Pääväylä oli Golovin-katu, nykyinen Rustaveli-katu, ja kaupunkiin nousi uusia lännenmallisia kortteleita.\n\nGeorgian kulttuuri elää kaupungissa vahvasti: Shota Rustavelin keskiaikainen eepos on kansallisaarre, ja kaupunki oli UNESCOn maailman kirjapääkaupunki 2021. Pöydässä kokoonnutaan supraan, yhteiseen juhla-ateriaan, jota johtaa maljanpuhuja eli tamada.',
   },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierä e03b, Ramallah):
+   * Artikkelit wiki-otsikolla (vain dataa). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03b-ramallah.
+   */
+  Ramallah: {
+    intro: 'Ramallah on Länsirannan keskiosassa Juudean vuoristossa, noin 870 metrin korkeudessa ja noin 10–15 kilometriä Jerusalemista pohjoiseen. Nimi tarkoittaa arabiaksi **Jumalan korkeutta**. Ramallahin kaupungissa asui vuonna 2017 noin 39 000 ihmistä; luku ei sisällä viereistä al-Birehiä, jota hallitaan erikseen. Kaupungissa toimii Palestiinan hallinnon keskeisiä toimielimiä, ja presidentin virasto on Mukataassa.\n\nIsoisän matkavuonna 1873 Ramallah oli vielä kivitalojen kylä Jerusalemin pohjoispuolella, jonka asukkaat olivat enimmäkseen kreikkalaisen riituksen kristittyjä. Kveekarit aloittivat kylässä tyttöjen koulutyön 1860-luvun lopulla, ja heidän Friends-koulunsa toimivat yhä. Omaksi kunnakseen Ramallah tuli 1900-luvun alussa.\n\nLähteen mukaan Ramallahia pidetään yleisesti palestiinalaiskaupunkien kulttuurisimpana, ja se on kotina monille runoilijoille, taiteilijoille ja muusikoille. Runoilija **Mahmoud Darwish** asui täällä ja on haudattu Kulttuuripalatsin viereen kukkulalle. Keskustan sydän on Al-Manaran aukio.',
+    teksti: 'Ramallah on Palestiinan hallinnon keskeisten toimielinten paikka Länsirannan keskiosassa. Kaupungin nimi tarkoittaa arabiaksi Jumalan korkeutta, ja sen keskikorkeus on noin 870 metriä merenpinnan yläpuolella.\n\n== Kylästä kaupungiksi ==\nRamallah mainitaan 1300-luvun alun säätiöasiakirjoissa, ja sen hedelmätarhat erottivat sen monista naapureista. Perimätiedon mukaan nykyisen kaupungin perustivat Haddadin-suvun veljekset, jotka tulivat Karakin seudulta 1500-luvulla. Isoisän matkavuonna 1873 paikka oli vielä kivitalojen kylä, ja omaksi kunnakseen se tuli 1900-luvun alussa.\n\n== Kulttuurin kaupunki ==\nRamallahissa on Mahmoud Darwish -museo, Kulttuuripalatsi ja Khalil Sakakini -kulttuurikeskus, jossa järjestetään näyttelyitä, runoiltoja ja elokuvanäytöksiä. Heti kaupungin eteläpuolella on Tell en-Nasbehin muinainen kukkula.',
+  },
 };
 
 /*
@@ -4373,4 +4382,10 @@ export const PAAKAUPUNKIEN_ARTIKKELIAVAIMET = {
   jerevan: 'Jerevan',
   manama: 'Manama',
   tbilisi: 'Tbilisi',
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierä e03b, Ramallah):
+   * Artikkeliavaimet. Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03b-ramallah.
+   */
+  ramallah: 'Ramallah',
 };

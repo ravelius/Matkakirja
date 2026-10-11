@@ -17528,6 +17528,57 @@ export const KAUPUNKIKARTAT = {
       },
     ],
   },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierä e03b, Ramallah):
+   * Kohdekartat (piirto tools/piirra-kaupunkikartta.mjs). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03b-ramallah.
+   */
+  ramallah: {
+    polku: 'assets/kartat/ramallah-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Ramallahin kartta kattaa kaupungin ytimen: Al-Manaran aukion ja Al-Kasaba-teatterin, vanhan kaupungin Pyhän perheen kirkon ja Friends-koulut sekä lounaisella kukkulalla olevan Kulttuuripalatsin ja Darwish-museon. Kaupungin eteläpuolella nousee Tell en-Nasbehin muinainen kukkula.',
+    rajat: {
+      pohjoinen: 31.908,
+      etela: 31.8824,
+      lansi: 35.1877,
+      ita: 35.2196,
+    },
+    kohteet: [
+      {
+        nimi: 'Al-Manaran aukio',
+        tyyppi: 'aukio',
+        lat: 31.905,
+        lon: 35.20444,
+      },
+      {
+        nimi: 'Al-Kasaba-teatteri',
+        lat: 31.90247,
+        lon: 35.20392,
+      },
+      {
+        nimi: 'Pyhän perheen kirkko',
+        lat: 31.905,
+        lon: 35.19972,
+      },
+      {
+        nimi: 'Ramallahin Friends-koulut',
+        lat: 31.9054,
+        lon: 35.2081,
+      },
+      {
+        nimi: 'Kulttuuripalatsi ja Mahmoud Darwish -museo',
+        lat: 31.8917,
+        lon: 35.1909,
+      },
+      {
+        nimi: 'Tell en-Nasbeh',
+        tyyppi: 'luonto',
+        lat: 31.88514,
+        lon: 35.21642,
+      },
+    ],
+  },
 };
 
 /*

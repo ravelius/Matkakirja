@@ -65840,4 +65840,89 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierä e03b, Ramallah):
+   * Kohdekartan nähtävyysjutut. Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03b-ramallah.
+   */
+  ramallah: {
+    'Al-Manaran aukio': {
+      aika: '1900-luku',
+      teksti: 'Al-Manaran aukio (arabiaksi Maydan al-Manara) on Ramallahin keskusaukio ja lähteen mukaan yksi Palestiinan tunnetuista julkisista tiloista. Isoisän matkavuonna 1873 aukiota ei vielä ollut: paikalla kulki multatie, joka yhdisti Ramallahin ja viereisen al-Birehin. Tie sai 1900-luvun alussa yhä enemmän merkitystä, ja 1930-luvulla Ramallah ja al-Bireh yhdistettiin sähköverkkoon. Katuvalojen kytkintaulu asetettiin tolppaan tien varteen, ja paikkaa alettiin kutsua al-Manaraksi eli majakaksi.\n\n1950-luvun alussa tolppa korvattiin muistomerkillä, jossa kivipylvään ympärillä oli viisi leijonaa; ne edustivat viittä sukua, jotka kaikki polveutuvat Rashid al-Haddadinin suvusta. Leijonat ovat lähteen mukaan perinteisiä rohkeuden, voiman ja ylpeyden symboleita, ja nykyisessä muistomerkissä ne ovat pylvään juurella suihkulähteen ja kukkapenkkien ympärillä. Muistomerkki rakennettiin myöhemmin uudelleen alkuperäisen mallin mukaan, ja työ valmistui vuoden 2000 paikkeilla.\n\nAukion laidalla toimii Silwadi-mehubaari, ja Hisbeh-tuoretori on lähellä aukiota.',
+      kuvat: [
+        {
+          tiedosto: '2010-08 Ramallah 22.jpg',
+          lyhyt: 'Al-Manaran aukio Ramallahissa: pylväs ja leijonapatsaat pylvään juurella.',
+          selite: 'Aukion muistomerkin leijonat edustavat Ramallahin perustajasukuja, jotka polveutuvat Haddadin-suvusta.',
+          lahde: 'Ralf Lotys (Sicherlich), Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän perheen kirkko': {
+      aika: '1910-luku',
+      teksti: 'Pyhän perheen kirkko on Ramallahin latinalaiskatolinen kirkko. Isoisän matkavuonna 1873 kirkkoa ei vielä ollut: latinalaiskatolinen yhteisö oli pieni, ja messu vietettiin talossa. Katolisia asettui Ramallahiin 1800-luvun jälkipuoliskolla sen jälkeen, kun Pyhän Joosefin sisaret ja Rosary-sisaret olivat perustaneet kouluja. Kirkon rakentamislupa myönnettiin vasta useita vuosikymmeniä myöhemmin, ja rakentaminen alkoi 1910-luvun alussa ottomaanien viranomaisten luvalla.\n\nKirkon yhteydessä on pappila, luostari ja koulu. Katolinen kirkko on kaupungin toiseksi suurin kristillinen kirkkokunta, ja Pyhän Joosefin tyttökoulu ja Al-Ahliyyah College ovat katolisia kouluja.',
+      kuvat: [
+        {
+          tiedosto: '2010-08 Ramallah 56.jpg',
+          lyhyt: 'Pyhän perheen kirkon pitkä kylki ja nelikulmainen kellotorni Ramallahissa.',
+          selite: 'Kirkon rakentaminen alkoi 1910-luvun alussa ottomaanien viranomaisten luvalla.',
+          lahde: 'Ralf Lotys (Sicherlich), Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ramallahin Friends-koulut': {
+      aika: '1860-luvun loppu',
+      teksti: 'Ramallahin Friends-koulut ovat amerikkalaisten kveekarien perustamia. Isoisän matkavuonna 1873 tyttöjen koulutyö oli jo alkanut: Jones-pariskunta aloitti sen 1860-luvun lopulla, ja koulun myöhempi nimi oli Ramallahin tyttöjen koulutuskoti. Koulu syntyi ottomaanien aikana Jerusalemin hallintoalueella. Poikien koulun rakentaminen alkoi 1900-luvun alussa. Alakoulun kampus, entinen tyttökoulu, on vanhan kaupungin keskustan lähellä, ja yläkoulun kampus, entinen poikakoulu, on al-Birehin puolella.\n\nKoulu on avoin tytöille ja pojille, ja opetus on arabiaksi ja englanniksi; nykyään koulut tarjoavat kansainvälistä IB-ohjelmaa. Entisiin oppilaisiin kuuluvat kansanperinteen tutkija Widad Kawar, joka on tutkinut palestiinalaisia pukuja, sekä kirjailija ja historioitsija Serene Husseini Shahid.',
+      kuvat: [
+        {
+          tiedosto: 'Ramallah Friends Schools2.JPG',
+          lyhyt: 'Friends-koulun piha ja Friends Boys School -rakennus Ramallahissa.',
+          selite: 'Rakennus kuuluu kveekarien kouluihin, joiden tyttöjen koulutyö alkoi 1860-luvun lopulla.',
+          lahde: 'Palobserver, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kulttuuripalatsi ja Mahmoud Darwish -museo': {
+      aika: '2000-luku',
+      teksti: 'Ramallahin Kulttuuripalatsi (Ramallah Cultural Palace) avattiin 2000-luvun alussa. Isoisän matkavuonna 1873 kukkulalla ei vielä ollut kumpaakaan rakennusta. Lähteen mukaan palatsi on Palestiinan hallinnoimilla alueilla ainoa laatuaan oleva kulttuurikeskus: siellä on noin 700-paikkainen sali, kokoushuoneita, näyttelysaleja ja elokuvatiloja. Hankkeen toteuttivat yhdessä Palestiinan hallinto, YK:n kehitysohjelma UNDP ja Japanin hallitus, ja palatsi on kaupungin pääpaikka esityksille ja konserteille.\n\nPalatsin viereen kukkulan laelle on haudattu runoilija Mahmoud Darwish, jonka muistolle on Ramallahissa museo ja mausoleumi. Museo on aivan palatsin lähellä, kadun toisella puolella.',
+      kuvat: [
+        {
+          tiedosto: 'Mahmoud Darwish Museum IMG 4086.jpg',
+          lyhyt: 'Mahmoud Darwish -museon piha Ramallahissa: pitkä vesiallas kalkkikivimuurien välissä.',
+          selite: 'Museo ja mausoleumi on rakennettu runoilijan muistolle Kulttuuripalatsin viereen.',
+          lahde: 'بدارين, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tell en-Nasbeh': {
+      aika: 'rautakausi',
+      teksti: 'Tell en-Nasbeh on pieni muinainen kumpu heti Ramallahin eteläpuolella, ja se on yksi kolmesta kohteesta, jotka usein yhdistetään Raamatun Mispaan; muut ehdokkaat ovat Nabi Samwil ja Shuafat. Isoisän matkavuonna 1873 kohdetta ei vielä ollut kaivettu.\n\nKumpu sijaitsi muinaisen tien varrella Jerusalemista pohjoiseen, ja rautakaudella se oli Juudan pohjoinen rajalinnoitus. Rautakaudella paikka oli muurein ja massiivisin kaupunginportein ympäröity asutus, ja babylonialaisten aikaan Jerusalemin tuhon jälkeen Mispa nousi lähteen mukaan alueen hallintokeskukseksi. Kaivauksia tehtiin 1920- ja 1930-luvuilla yhdysvaltalaisen William Frederic Badèn johdolla, ja ne olivat lähteen mukaan yksi alueen varhaisimmista tieteellisistä kaivauksista. Löydöt, tuhansia esineitä, ovat Badèn museossa Berkeleyssä. Kukkulan ympäri voi kävellä.',
+      kuvat: [
+        {
+          tiedosto: 'Tel a-Nasba.jpg',
+          lyhyt: 'Tell en-Nasbeh, jonka usein katsotaan olevan raamatullinen Mispa, ilmasta kuvattuna.',
+          selite: 'Kumpua ympäröivät nykyään kaupungin kerrostalot, ja sen kaivauksia tehtiin 1920- ja 1930-luvuilla.',
+          lahde: 'דניאל צבי, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al-Kasaba-teatteri': {
+      aika: 'vuosituhannen vaihde',
+      teksti: 'Al-Kasaba (arabiaksi القصبة) on teatteri ja elokuva-arkisto, Al-Kasaba Theatre and Cinematheque, Ramallahin keskustassa lähellä Al-Manaran aukiota ja Khalil Sakakini -kulttuurikeskusta. Isoisän matkavuonna 1873 sitä ei vielä ollut: toiminta alkoi vasta vuonna 1970 Jerusalemissa, ja Ramallahin teatteri ja elokuvateatteri avattiin vuosituhannen vaihteessa entisen elokuvateatterin tiloihin.\n\nLähteen mukaan Al-Kasaba on yksi harvoista alueen paikoista, joissa palestiinalaiset taiteilijat, näyttelijät ja elokuvantekijät voivat tuottaa ja esittää töitään. Sen salit tarjoavat tilan sekä palestiinalaisille että kansainvälisille esitysryhmille, ja siellä esitetään näytelmiä, tanssia, elokuvia ja konsertteja sekä järjestetään konferensseja.\n\nTeatteri on yksi Ramallahin kulttuuripaikoista Kulttuuripalatsin ja Khalil Sakakini -kulttuurikeskuksen rinnalla.',
+      kuvat: [
+        {
+          tiedosto: 'Théâtre Al-Kasaba en 2017.jpg',
+          lyhyt: 'Al-Kasaba-teatterin sisäänkäynti Ramallahissa: kaarikatos ja arabian- ja englanninkielinen kyltti.',
+          selite: 'Al-Kasaba Theatre and Cinematheque toimii Ramallahin keskustassa, ja sen toiminta alkoi Jerusalemissa vuonna 1970.',
+          lahde: 'Djex93, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

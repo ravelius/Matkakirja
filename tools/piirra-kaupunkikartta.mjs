@@ -6147,6 +6147,10 @@ const KAUPUNGIT = {
   tbilisi: {
     rajat: { pohjoinen: 41.6983, etela: 41.6834, lansi: 44.798, ita: 44.8147 },
   },
+  // e03b (Päätoimittaja 11.10.2026): Ramallah, sisalto.json:n kohdekartan rajat.
+  ramallah: {
+    rajat: { pohjoinen: 31.908, etela: 31.8824, lansi: 35.1877, ita: 35.2196 },
+  },
 };
 
 /*

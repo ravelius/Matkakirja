@@ -4351,6 +4351,83 @@ export const PAAKAUPUNKIEN_KYSYMYKSET = {
       source: 'https://en.wikipedia.org/wiki/Tbilisi',
     },
   ],
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierä e03b, Ramallah):
+   * Kysymykset (vain dataa: ei pysäkkiä, Päätoimittaja 06.4x). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03b-ramallah.
+   */
+  ramallah: [
+    {
+      q: 'Minkä runoilijan museo ja mausoleumi on Ramallahissa?',
+      options: [
+        'Mahmoud Darwish',
+        'Khalil Gibran',
+        'Nizar Qabbani',
+        'Rabindranath Tagore',
+      ],
+      correct: 0,
+      level: 1,
+      hint: 'Lähteen mukaan häntä pidetään laajasti palestiinalaisten kansallisrunoilijana.',
+      fact: 'Mahmoud Darwish asui Ramallahissa, ja hänen museonsa ja mausoleuminsa on kaupungissa. Hänen nimellään jaetaan myös vuosittain kansainvälinen luovuuspalkinto.',
+      source: 'https://en.wikipedia.org/wiki/Mahmoud_Darwish',
+    },
+    {
+      q: 'Mitä Ramallahin nimi tarkoittaa arabiaksi?',
+      options: [
+        'Jumalan korkeus',
+        'Jumalan lähde',
+        'Jumalan portti',
+        'Jumalan laakso',
+      ],
+      correct: 0,
+      level: 2,
+      hint: 'Nimen loppuosa on arabian sana, jota käytetään Jumalasta puhuttaessa.',
+      fact: 'Nimi tarkoittaa sanatarkasti Jumalan korkeutta, ja kaupunki on noin 870 metrin korkeudessa Juudean vuoristossa.',
+      source: 'https://en.wikipedia.org/wiki/Ramallah',
+    },
+    {
+      q: 'Minkä suvun perimätieto kertoo perustaneen nykyisen Ramallahin?',
+      options: [
+        'Haddadin',
+        'Nashashibi',
+        'Tamimi',
+        'Khoury',
+      ],
+      correct: 0,
+      level: 2,
+      hint: 'Suvun nimi tarkoittaa arabiaksi ammattia, jossa taotaan metallia.',
+      fact: 'Perimätiedon mukaan nykyisen Ramallahin perustivat Rashid al-Haddadinin viisi poikaa. Haddadin tarkoittaa arabiaksi seppiä.',
+      source: 'https://en.wikipedia.org/wiki/Ramallah',
+    },
+    {
+      q: 'Mitä Al-Manaran aukion nimi tarkoittaa nimen selityksen mukaan?',
+      options: [
+        'majakkaa',
+        'kaupungin porttia',
+        'vanhaa siltaa',
+        'kyläkaivoa',
+      ],
+      correct: 0,
+      level: 3,
+      hint: 'Nimi liittyy 1930-luvun sähkölaitteeseen, joka asennettiin tien varteen.',
+      fact: 'Aukion nimi juontuu siitä, että katuvalojen kytkintaulu asetettiin 1930-luvulla tolppaan Ramallahin ja al-Birehin väliselle multatielle, ja paikkaa alettiin kutsua majakaksi.',
+      source: 'https://en.wikipedia.org/wiki/Al-Manara_Square',
+    },
+    {
+      q: 'Minkä viereisen kaupungin kanssa Ramallah on kasvanut käytännössä yhteen, vaikka kaupungit hallitaan erikseen?',
+      options: [
+        'al-Bireh',
+        'Birzeit',
+        'Beit Sahour',
+        'Beit Jala',
+      ],
+      correct: 0,
+      level: 3,
+      hint: 'Kaupunki on Ramallahin välitön naapuri eikä lähikylä.',
+      fact: 'Al-Bireh on kasvanut Ramallahiin kiinni, mutta kaupungit ovat omat hallintoyksikkönsä.',
+      source: 'https://en.wikipedia.org/wiki/Ramallah',
+    },
+  ],
 };
 
 export const PAAKAUPUNKIEN_TIEDOT = {
@@ -4468,5 +4545,15 @@ export const PAAKAUPUNKIEN_TIEDOT = {
     'Tbilisissä oli 1200-luvun loppuun mennessä kirjattu kymmeniä kylpylöitä, ja kuumat lähteet antoivat koko kaupungille nimen.',
     'Kaupunki on rakentunut vuorten sisään amfiteatterin muotoon, ja korkeusero on satoja metrejä.',
     'Funikulaari avattiin 1905, ja se nousee noin 300 metriä Mtatsmindan huipulle.',
+  ],
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierä e03b, Ramallah):
+   * Tiedot (vain dataa). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03b-ramallah.
+   */
+  ramallah: [
+    'Ramallahilaisten naisten puvuissa oli selkäpaneelissa usein ristipistoin kirjailtu palmunmotiivi, ja morsiamen smadeh-päähineen kolikkorivi oli samalla hänen varallisuuttaan.',
+    'Huhtikuussa 2010 Ramallahin seudulla valmistettiin jättimäinen musakhan, joka hyväksyttiin Guinnessin ennätyskirjaan; sen leivän halkaisija oli 4 metriä.',
+    'Ramallahissa toimivan Ashtar-teatterin draamakoulu on lähteen mukaan Palestiinan ensimmäinen draamakoulu.',
   ],
 };

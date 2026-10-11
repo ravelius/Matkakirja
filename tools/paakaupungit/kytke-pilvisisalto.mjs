@@ -19,13 +19,14 @@ function js(v, sisennys) {
   return `{\n${e.map(([k, x]) => `${s}  ${JS_ID.test(k) ? k : js(k, 0)}: ${js(x, sisennys + 2)}`).join(',\n')},\n${s}}`;
 }
 const kaupungit = [];
-for (const era of readdirSync(data).filter((x) => /^e\d+$/.test(x)).sort())
+for (const era of readdirSync(data).filter((x) => /^e\d+[a-z]?$/.test(x)).sort())
   for (const id of readdirSync(join(data, era)).sort()) {
     const p = join(data, era, id, 'sisalto.json');
     if (existsSync(p)) kaupungit.push(JSON.parse(readFileSync(p, 'utf8')));
   }
 // Lisää taulun loppuun (ennen sulkevaa "};") rivit; taulu tunnistetaan otsikkorivistä.
 function lisaa(tiedosto, otsikko, rivit, kommentti) {
+  if (!rivit.length) return; // ei tyhjää kommenttilohkoa (esim. erä ilman säärivejä)
   const polku = join(repo, 'js/packs', tiedosto);
   let s = readFileSync(polku, 'utf8');
   const a = s.indexOf(otsikko);
