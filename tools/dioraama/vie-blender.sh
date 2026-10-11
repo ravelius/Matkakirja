@@ -119,6 +119,8 @@ for g in "$LAHDE"/tilat/*.glb; do
     # Huippu/Täysi (8.10.2026): 8192²-atlas samalle UV1:lle, jos leivottu (leivo_tila.py --iso 8192).
     for f in "$id$v-8k.jpg" "$id$v-8k-6x6.astcm"; do [ -f "$LAHDE/valot/$f" ] && lisaa "valot/$f" "valot/$f"; done
   done
+  # HDR-valo (11.10.2026, Linssiseppä 2 / grafiikan pystyleike V2–V3): albedo + irradianssi (RGBM) + valoluotaimet, jos viety.
+  for f in "$id-hdr-albedo.png" "$id-hdr-albedo-6x6.astcm" "$id-hdr-irr.png" "$id-luotaimet.json"; do [ -f "$LAHDE/valot/$f" ] && lisaa "valot/$f" "valot/$f"; done
 done
 
 # 2. sha256, koko, sisältöhash ja blender.json (aakkosjärjestys, ei aikaleimoja → sama sisältö = sama hash).

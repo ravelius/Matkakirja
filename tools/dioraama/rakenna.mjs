@@ -496,6 +496,13 @@ export function lisaaBlender(rakennusJson, blender) {
     if (on.has(`valot/${t.id}.jpg`)) {
       t.valoatlas = atlas(t.id, '');
       if (on.has(`valot/${t.id}-hamara.jpg`)) t.valoatlas.hamara = atlas(t.id, '-hamara');
+      // HDR-valo (11.10.2026, Linssiseppä 2: keittiö V3): albedo (png + ASTC 6×6) ja irradianssi RGBM-kertoimella sekä
+      // valoluotaimet (0,5 m hila); natiivi purkaa RGBM:n ja valaisee irtoesineet luotaimilla. Vain jos viety.
+      if (on.has(`valot/${t.id}-hdr-albedo.png`) && on.has(`valot/${t.id}-hdr-irr.png`)) {
+        t.valoatlas.hdr = { albedo: B(`valot/${t.id}-hdr-albedo.png`), irradianssi: B(`valot/${t.id}-hdr-irr.png`), kerroin: 32,
+          ...(on.has(`valot/${t.id}-hdr-albedo-6x6.astcm`) ? { albedoAstc: B(`valot/${t.id}-hdr-albedo-6x6.astcm`) } : {}),
+          ...(on.has(`valot/${t.id}-luotaimet.json`) ? { luotaimet: B(`valot/${t.id}-luotaimet.json`) } : {}) };
+      }
     }
   }
   rakennusJson.tilat.push(...aanitilat);
