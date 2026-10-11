@@ -468,8 +468,7 @@ export const EUROPE_VALOKUVAT = {
     lyhyt: 'Akropolis ja Hefaistoksen temppeli Ateenassa 1890-luvulla.',
     selite: 'Akropolis ja etualalla Hefaistoksen temppeli '
       + 'käsinvärittynä photochrom-vedoksena. Kaupunki oli tuolloin '
-      + 'pieni: Ateenassa asui noin 100 000 ihmistä, ja temppelien '
-      + 'ympärillä oli peltoa.',
+      + 'pieni, ja temppelien ympärillä oli peltoa.',
     uusi: {
       tiedosto: 'The Acropolis of Athens with the Parthenon, the Erecththeion and the Mycenean Fountain from Monastiraki Square on March 11, 2020.jpg',
       lahde: 'George E, Commons (CC BY-SA 4.0)',

@@ -434,8 +434,7 @@ export const KAARI_PAKETIT = {
         oikea: 0,
         fakta: 'Bouquin on ranskaa ja tarkoittaa vanhaa kirjaa — bukinisti '
           + 'on siis vanhojen kirjojen kauppias. Vihreät laatikot ovat '
-          + 'kuuluneet Seinen kaiteille satojen vuosien ajan, ja '
-          + 'myyntipaikat periytyvät jonossa, jota odotetaan vuosia.',
+          + 'kuuluneet Seinen kaiteille satojen vuosien ajan, ja vapautuvat myyntipaikat jakaa kaupunki hakukierroksilla (lupa myönnetään viideksi vuodeksi).',
       },
       aarre: 'Kirjan viimeinen, avaamaton sivu kätki litteän kätkön. '
         + 'Colette leikkasi sivun auki: "Tämä ei ole isoisoisäni '

@@ -2391,20 +2391,22 @@ export const NAHTAVYYSJUTUT = {
      */
     'Vädersolstavlan': {
       nosto: 'syvennys-tukholma-aurinkotaulu',
-      teksti: 'Huhtikuun 20. päivänä 1535 tukholmalaiset näkivät aamutaivaalla '
-        + 'valkoisia renkaita ja niiden kehällä useita hehkuvia auringonkuvia. '
-        + 'Kyse oli halosta: ilmassa leijuvat jääkiteet taittavat auringonvaloa '
-        + 'kuin lasiprismat. Näky pelotti, ja siitä teetettiin maalaus — '
-        + 'perimätiedon mukaan pappi Olaus Petrin toimesta. Samalla syntyi vanhin '
-        + 'tunnettu värikuva Tukholmasta: kaupunki muureineen, kirkontorneineen '
-        + 'ja ympäröivine hirsiaitoineen. Ja tässä on se kohta, joka isoisääsi '
+      teksti: 'Huhtikuun 20. päivänä 1535 tukholmalaiset näkivät '
+        + 'aamutaivaalla valkoisia renkaita ja niiden kehällä useita '
+        + 'hehkuvia auringonkuvia. Kyse oli halosta: ilmassa leijuvat '
+        + 'jääkiteet taittavat auringonvaloa kuin lasiprismat. Näky pelotti, '
+        + 'ja siitä teetettiin maalaus — perimätiedon mukaan pappi Olaus '
+        + 'Petrin toimesta. Samalla syntyi vanhin tunnettu värikuva '
+        + 'Tukholmasta: kaupunki porttitorneineen, kirkkoineen ja veteen '
+        + 'lyötyine paalurivineen. Ja tässä on se kohta, joka isoisääsi '
         + 'kiinnostaisi. Taulu, joka Storkyrkanissa riippuu, on öljymaalaus '
         + 'puupaneelille, 163 senttiä leveä ja 110 korkea, ja siihen on '
-        + 'kirjoitettu kaksi vuosilukua: 1535 ja "renovoitu 1636". Vuonna 1999 '
-        + 'taulu tutkittiin, ja se osoittautui kokonaan 1600-luvun työksi: '
-        + 'renovointi olikin kopiointi, jonka teki Jacob Heinrich Elbfas. '
-        + 'Alkuperäinen on kadonnut, eikä kukaan tiedä minne. Kaupungin vanhin '
-        + 'kuva on siis kuva kuvasta, jota ei enää ole.',
+        + 'kirjoitettu kaksi vuosilukua: 1535 ja "renovoitu 1636". Vuonna '
+        + '1999 taulu tutkittiin, ja se osoittautui kokonaan 1600-luvun '
+        + 'työksi: renovointi olikin kopiointi, jonka teki Jacob Heinrich '
+        + 'Elbfas. Alkuperäinen on kadonnut, eikä kukaan tiedä minne. '
+        + 'Kaupungin vanhin tunnettu värikuva on siis kuva kuvasta, jota ei '
+        + 'enää ole.',
       kuvat: [
         {
           tiedosto: 'Vädersolstavlan 1535.jpg',
@@ -2418,17 +2420,17 @@ export const NAHTAVYYSJUTUT = {
     },
     'Norrström': {
       nosto: 'syvennys-tukholma-lohi',
-      teksti: 'Se kohta, jossa makea vesi purkautuu suolaiseen, on kalalle portti. '
-        + 'Norrström on virta, jota pitkin Mälarenin vesi syöksyy mereen aivan '
-        + 'eduskuntatalon vierestä, ja siitä nostetaan joka vuosi satoja lohia ja '
-        + 'meritaimenia: vuonna 2000 saatiin lohi, joka painoi lähes '
-        + 'kaksikymmentäkaksi kiloa. Vedessä elää noin kolmekymmentä kalalajia, '
-        + 'enemmän kuin missään muualla Tukholman seudun vesissä. Aina ei ollut '
-        + 'näin. Kalat palasivat vasta 1970-luvulla aloitettujen istutusten '
-        + 'myötä, ja vuonna 2024 vanha vuoden 1850 sulku muutettiin kalatieksi, '
-        + 'jota myöten kalat pääsevät nousemaan järveen asti. Keskellä '
-        + 'miljoonakaupunkia seisoo siis mies onki kädessä siinä samassa '
-        + 'virrassa, jonka yli parlamentti katsoo ikkunastaan.',
+      teksti: 'Se kohta, jossa makea vesi purkautuu suolaiseen, on kalalle '
+        + 'portti. Norrström on virta, jota pitkin Mälarenin vesi syöksyy '
+        + 'mereen aivan eduskuntatalon vierestä, ja siitä kalastetaan lohia '
+        + 'ja meritaimenia: vuonna 2000 saatiin lohi, joka painoi noin '
+        + 'kaksikymmentä kiloa. Vedessä elää kymmeniä kalalajeja. Aina ei '
+        + 'ollut näin. 1970-luvulla alkaneet istutukset ovat elvyttäneet '
+        + 'lohi- ja taimenkantaa, ja vuonna 2024 Slussenin vanha Nils '
+        + 'Ericsonin sulku (1850) muutettiin kalatieksi, jota myöten kalat '
+        + 'pääsevät nousemaan Mälareniin. Keskellä miljoonakaupunkia seisoo '
+        + 'siis mies onki kädessä siinä samassa virrassa, jonka yli '
+        + 'parlamentti katsoo ikkunastaan.',
       kuvat: [
         {
           tiedosto: 'Fishing in Strömmen, Stockholm - panoramio.jpg',
@@ -2468,7 +2470,7 @@ export const NAHTAVYYSJUTUT = {
         + 'naamio, eikä kukaan ihmettele, miksi joku lähestyy kuningasta. '
         + 'Kustaa III oli saanut varoituskirjeenkin, mutta meni tanssiaisiin '
         + 'silti. Jälkimaailma sai aiheesta oopperan; Ruotsi sai '
-        + 'perustuslakikriisin.',
+        + 'holhoojahallituksen.',
       lahde: 'Wikipedia',
     },
     Kreuger: {
@@ -4582,7 +4584,7 @@ export const NAHTAVYYSJUTUT = {
         + 'koomisina ja että lopun kuolema jää kulkueiden, balettien ja '
         + 'riemufanfaarien varjoon. Lupaukset eivät riittäneet, ja de Leuven '
         + 'erosi teatterista alkuvuodesta 1874. Nimiroolikin oli vaikea täyttää: '
-        + 'Marie Roze kieltäytyi kuultuaan, että hänen olisi kuoltava lavalla.'
+        + 'Marie Roze kieltäytyi roolista (Winton Deanin elämäkerran mukaan siksi, että hänen olisi kuoltava lavalla), ja rooli meni lopulta Célestine Galli-Mariélle.'
         + '\n\n'
         + 'Ensi-ilta oli 3. maaliskuuta 1875, ja salissa istui puoli '
         + 'musiikki-Pariisia — Massenet, Offenbach, Delibes, Gounod. Ensimmäinen '
@@ -4593,8 +4595,7 @@ export const NAHTAVYYSJUTUT = {
         + 'yksi kriitikko kutsui pääosan tulkintaa paheen ruumiillistumaksi. '
         + 'Taloa ei saatu täyteen edes jakamalla lippuja ilmaiseksi. Bizet kuoli '
         + '3. kesäkuuta 1875, kolmannenkymmenennenkolmannen esityksen jälkeen, '
-        + '36-vuotiaana ja hääpäivänsä vuosipäivänä. Maine tuli muualta: Wien '
-        + '1875, Bryssel 1876, Lontoo ja New York 1878 — Pariisiin ooppera palasi '
+        + '36-vuotiaana ja hääpäivänsä vuosipäivänä. Maine tuli muualta: ensin Wien 1875, Bryssel 1876, Lontoo ja New York 1878 — Pariisiin ooppera palasi '
         + 'vasta 1883. Se sijoittuu Sevillaan, mutta kaikki tämä tapahtui täällä, '
         + 'Place Boïeldieun varrella. Sekin sali paloi 1887; paikalla seisoo nyt '
         + 'kolmas samanniminen teatteri.',
@@ -4653,7 +4654,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Uhrikseen hän valitsi André Poissonin, joka halusi nousta Pariisin '
         + 'liike-elämän sisäpiiriin, ja sai tältä sekä lahjuksen että '
-        + 'kauppasumman — noin 70 000 frangia. Sitten hän pakeni Itävaltaan ja '
+        + 'kauppasumman. Sitten hän pakeni Itävaltaan ja '
         + 'luki lehtiä: Poisson ei ollut ilmoittanut poliisille, koska häpesi. '
         + 'Niinpä Lustig palasi Pariisiin saman vuoden puolella tekemään saman '
         + 'tempun uudestaan. Tällä kertaa joku ilmoitti, ja hän pakeni '
@@ -4673,8 +4674,7 @@ export const NAHTAVYYSJUTUT = {
       aika: '1861–1870',
       nosto: 'skandaali-vrain-lucas-kirjevaarennokset',
       teksti: 'Kleopatra kirjoitti Julius Caesarille ranskaksi, vesileimatulle '
-        + 'paperille — ja kuuluisa matemaatikko osti kirjeen ilomielin, ja perään '
-        + '27 000 muuta. Kansallisylpeys teki ostajasta sokean: olihan kirjeissä '
+        + 'paperille — ja kuuluisa matemaatikko osti kirjeen ilomielin, ja perään kymmeniätuhansia muita. Kansallisylpeys teki ostajasta sokean: olihan kirjeissä '
         + 'todiste, että painovoima keksittiin Ranskassa. Tiedeakatemia ei ollut '
         + 'aivan yhtä ilahtunut.',
       lahde: 'Wikipedia',
@@ -4685,9 +4685,9 @@ export const NAHTAVYYSJUTUT = {
         + 'Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa '
         + 'näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. '
         + 'Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, '
-        + 'Renoir, Pissarro, Sisley, Cézanne, Berthe Morisot, Degas ja joukko '
+        + 'Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko '
         + 'muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja '
-        + 'jäseneksi liittyvän piti luopua Salonista kokonaan. Ensimmäinen '
+        + 'jäseniltä odotettiin Salonista luopumista. Ensimmäinen '
         + 'näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja '
         + 'mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi '
         + 'Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa '
@@ -4710,7 +4710,7 @@ export const NAHTAVYYSJUTUT = {
         + 'sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat '
         + 'katkaistiin 19. päivä ja Seinen pohjassa kulkenut salakaapeli '
         + 'löydettiin ja katkaistiin 27. päivä. Kaupunkiin päin ainoa toimiva '
-        + 'reitti oli kirjekyyhky. Kyyhkyt vietiin ulos kuumailmapalloilla, ja '
+        + 'reitti oli kirjekyyhky. Kyyhkyt vietiin ulos ilmapalloilla, ja '
         + 'valokuvaaja René Dagron — mikrofilmin patentin haltija vuodesta 1859 — '
         + 'tarjoutui pienentämään viestit. Sopimus allekirjoitettiin 11. '
         + 'marraskuuta 1870: viisitoista frangia tuhatta merkkiä kohti. Dagron '
@@ -4735,22 +4735,16 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'syvennys-pariisi-tuileriat',
       teksti: 'Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli '
         + 'vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja '
-        + 'kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin '
-        + 'uudelleen jo 1870-luvulla. Tuileriat jäivät sen sijaan paikoilleen '
+        + 'kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen '
         + 'Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät '
         + 'ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas '
         + 'tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; '
-        + 'vastaan olivat muun muassa Georges-Eugène Haussmann ja joukko '
-        + 'historioitsijoita. Purku alkoi helmikuussa 1883 ja päättyi 30. '
-        + 'syyskuuta samana vuonna. Sitten palatsi levisi ympäri maailman: '
+        + 'vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: '
         + 'yrittäjä Achille Picart myi kiviä ja marmoria matkamuistoina, ja '
-        + 'osista rakennettiin Korsikalle Ajaccion lähelle kokonainen palatsi, '
-        + 'Château de la Punta. Keskuspaviljongin päätykolmio seisoo Pariisissa '
+        + 'osista rakennettiin Korsikalle Ajaccion lähelle Château de la Punta. Keskuspaviljongin päätykolmio seisoo Pariisissa '
         + 'Square Georges Cainissa, ja paloja on Louvressa, Trocadéron '
         + 'puutarhassa, Berliinissä, Italian Bordigherassa ja Quiton '
-        + 'presidentinpalatsissa asti. Huonekalut ja maalaukset olivat koko ajan '
-        + 'tallessa: ne oli viety varastoon, kun sota alkoi 1870. Vuonna 2003 '
-        + 'perustettiin komitea, joka esittää palatsin rakentamista takaisin.',
+        + 'presidentinpalatsissa asti. Suuri osa huonekaluista ja maalauksista oli tallessa: ne oli viety varastoon, kun sota alkoi 1870. 2000-luvun alussa perustettiin komitea, joka esittää palatsin rakentamista takaisin.',
       kuvat: [
         {
           osoite: 'assets/kartat/nostot/nosto-tuileriat-loistoaika.webp',
@@ -4774,11 +4768,10 @@ export const NAHTAVYYSJUTUT = {
     '72 nimeä': {
       nosto: 'nosto-pariisin-72-nimea',
       teksti: 'Gustave Eiffel halusi, että hänen torninsa on tieteen '
-        + 'muistomerkki. Ensimmäisen kerroksen ympäri kiertää 65 metrin '
-        + 'korkeudella nimilista: 18 nimeä tornin jokaisella sivulla, '
+        + 'muistomerkki. Ensimmäisen kerroksen parvekkeen alla kiertää nimilista: 18 nimeä tornin jokaisella sivulla, '
         + 'yhteensä 72 ranskalaista tiedemiestä ja insinööriä. Kirjaimet '
         + 'ovat kullattuja ja 60 senttiä korkeita. Nimet peitettiin '
-        + 'maalilla 1900-luvun alussa ja paljastettiin vasta 1986–1987. '
+        + 'maalilla 1900-luvun alussa ja tehtiin näkyviin uudelleen 1980-luvun lopulla. '
         + 'Yhtään naista listalla ei ole. Siksi tammikuussa 2026 '
         + 'julkistettiin toinen 72 nimen lista, pelkkiä naistutkijoita, '
         + 'jotka on tarkoitus kaivertaa miesten nimien yläpuolelle vuonna '
@@ -4787,8 +4780,7 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Chevreul, Flachat, Navier.001 - Torre Eiffel.jpg',
           lyhyt: 'Eiffel-tornin ensimmäistä kerrosta kiertää 72 ranskalaisen tiedemiehen nimi kullatuin kirjaimin.',
-          selite: 'Eiffel-tornin ensimmäisen kerroksen ympäri kiertää 65 metrin '
-            + 'korkeudella 72 ranskalaisen tiedemiehen ja insinöörin nimeä '
+          selite: 'Eiffel-tornin ensimmäisen kerroksen parvekkeen alla kiertää 72 ranskalaisen tiedemiehen ja insinöörin nimeä '
             + 'kullatuin, 60 senttiä korkein kirjaimin.',
           lahde: 'Fernando Losada Rodríguez, Wikimedia Commons (CC BY-SA 4.0)',
         },
@@ -4804,13 +4796,11 @@ export const NAHTAVYYSJUTUT = {
         + 'valurautaisia vakio-osia, jotka sopivat yhteen kuin '
         + 'rakennussarja: samoista paloista sai kasattua sopivan '
         + 'sisäänkäynnin mihin tahansa kadunkulmaan. Niitä tehtiin 167. '
-        + 'Sitten tyyli meni pois muodista ja puolet purettiin. Jäljellä '
-        + 'olevat 86 rauhoitettiin vuonna 1978.',
+        + 'Sitten tyyli meni pois muodista ja puolet purettiin. Jäljellä olevista 88:sta 86 on rauhoitettu, suurin osa vuonna 1978.',
       kuvat: [
         {
           tiedosto: "01 Guimard's Métropolitain.jpg",
-          selite: 'Guimardin metrosisäänkäyntejä tehtiin 167, ja jäljellä olevat '
-            + '86 rauhoitettiin vuonna 1978.',
+          selite: 'Guimardin metrosisäänkäyntejä tehtiin 167, ja jäljellä olevista 88:sta 86 on rauhoitettu.',
           lahde: 'Terrazzo (Flickr), Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -4843,19 +4833,17 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'nosto-pariisi-soi',
       teksti: 'Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan '
         + 'hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa '
-        + 'lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla '
-        + 'ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée '
+        + 'lukee sairaala. Teininä hän lauloi kolikoista Pariisin kaduilla ja pihoissa ystävänsä Simone Berteautin kanssa. Yökerhon omistaja Louis Leplée '
         + 'kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf '
         + '— piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. '
-        + 'Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose '
-        + 'ilmestyi 1946, ja sen sanat hän kirjoitti itse.'
+        + 'Laulaja oli alle 150 senttiä pitkä. Tunnetuin laulu La Vie en rose esitettiin ensi kerran 1946 ja ilmestyi levynä 1947, ja sen sanat hän kirjoitti itse.'
         + '\n\n'
         + 'Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin '
           + 'porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo '
-          + 'lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä '
+          + 'lapsena. Marraskuun 2. päivän yönä 1928 vaunussa syttyi tulipalo: kynttilä '
           + 'kaatui selluloidikukkien päälle. Vasemman käden nimetön ja '
           + 'pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei '
-          + 'hän soita enää. Veli toi sairaalaan kitaran, ja Django opetteli '
+          + 'hän soita enää. Veli osti hänelle kitaran, ja Django opetteli '
           + 'soittamaan soolot kahdella sormella. Vuonna 1934 hän perusti '
           + 'Pariisissa yhtyeen Quintette du Hot Club de France.',
       kuvat: [
@@ -4873,14 +4861,12 @@ export const NAHTAVYYSJUTUT = {
     'Paras patonki': {
       nosto: 'nosto-pariisin-patonki',
       teksti: 'Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta '
-        + 'perinteisestä patongista, ja säännöt ovat tarkat: leivän pitää '
-        + 'olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Mitä '
+        + 'perinteisestä patongista, ja säännöt ovat tarkat: leivän pituudelle ja painolle on omat rajansa. Mitä '
         + 'patongissa saa olla, on määrätty laissa — käytännössä vain '
         + 'vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa missään '
-        + 'vaiheessa pakastaa. Leivät numeroidaan ennen maistamista, jottei '
+        + 'vaiheessa pakastaa. Leivät ovat anonyymejä, jottei '
         + 'raati tiedä kenen leipää se arvostelee, ja raadissa istuu '
-        + 'ammattilaisia, toimittajia ja kuusi arvottua tavallista '
-        + 'pariisilaista. Voittaja saa rahapalkinnon ja yhden velvollisuuden: '
+        + 'ammattilaisia, toimittajia ja arvottuja tavallisia pariisilaisia. Voittaja saa rahapalkinnon ja yhden velvollisuuden: '
         + 'hän toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.',
       kuvat: [
         {
@@ -4903,15 +4889,13 @@ export const NAHTAVYYSJUTUT = {
         + 'kuningatar haluaa nauhan salaa ja tarvitsee välikäden. '
         + 'Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen '
         + 'Versailles\'n puistossa, jossa kuningatarta esitti palkattu nuori '
-        + 'nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla '
-        + 'livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja '
+        + 'nainen. Rohan osti nauhan tammi–helmikuun vaihteessa 1785 hintaan 1,6 miljoonaa livreä ja luovutti sen huijarin lähetille; kivet pilkottiin ja '
         + 'myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä '
         + 'erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen '
         + 'ja kardinaali pidätettiin Versailles\'ssa. Oikeus vapautti '
         + 'Rohanin 1786, mutta kuningattaren maine ei toipunut.'
         + '\n\n'
-        + 'Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel '
-          + 'Chasles\'lle noin 27 000 käsin kirjoitettua kirjettä, joiden '
+        + 'Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel Chasles\'lle kymmeniätuhansia käsin kirjoitettuja kirjeitä, joiden '
           + 'lähettäjiksi oli merkitty muun muassa Julius Caesar, Kleopatra, '
           + 'Aristoteles ja Kaarle Suuri. Kaikki oli kirjoitettu 1800-luvun '
           + 'ranskaksi. Chasles maksoi kokoelmasta noin 140 000 frangia ja '
@@ -5787,14 +5771,15 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
     'Iliou Melathron': {
-      teksti: 'Kesäkuussa 1873, kaivauksen viimeisenä päivänä, Heinrich '
-          + 'Schliemann löysi Hisarlikin kummulta kultaa, jonka uskoi '
+      teksti: 'Kevään ja kesän 1873 taitteessa, kaivauskauden loppupuolella, '
+          + 'Heinrich Schliemann löysi Hisarlikin kummulta kultaa, jonka uskoi '
           + 'kuningas Priamoksen aarteeksi. Muutamaa vuotta myöhemmin hän '
           + 'rakennutti Ateenaan kadun varteen komean palatsin, Iliou '
           + 'Melathronin — Troijan palatsin. Se seisoo paikallaan yhä: '
           + 'nykyään talossa lasketaan vanhoja kolikoita, sillä se on '
-          + 'numismaattinen museo. Talon friisissä Schliemann kaivaa '
-          + 'ikuisesti, lapio kädessä.',
+          + 'numismaattinen museo. Seinillä on pompeijilaistyylisiä '
+          + 'maalauksia, ja lattioiden mosaiikit esittävät Schliemannin '
+          + 'kaivauslöytöjä tai niiden innoittamia aiheita.',
       kuvat: [
         {
           tiedosto: 'The Numismatic Museum of Athens (Iliou Melathron) on August 2, 2020.jpg',
@@ -5842,16 +5827,16 @@ export const NAHTAVYYSJUTUT = {
         + 'Kun eräs nuorukainen kerran rikkoi hänen astiansa, ateenalaiset eivät '
         + 'suuttuneet vaan hankkivat uuden tilalle — omituista kunnioitusta '
         + 'miehelle, joka kulki päivällä lyhty kädessä ja väitti etsivänsä '
-        + '"rehellistä ihmistä", ikään kuin kirkkainkaan valo ei siihen '
+        + '"ihmistä", ikään kuin kirkkainkaan valo ei siihen '
         + 'riittäisi. Isoisäsi mainitsee torin tingittyine oliiveineen — hänkin '
         + 'olisi kävellyt Diogeneen astian ohi tietämättään.',
       kuvat: [
         {
           tiedosto: 'At Wikimedia Hackathon Athens (MP) 2023 365.jpg',
-          lyhyt: 'Myöhäisroomalainen pithos Ateenasta, samaa lajia kuin Diogeneen viljanastia-asumus.',
+          lyhyt: 'Myöhäisroomalainen pithos Ateenan lentokentän arkeologisesta kokoelmasta, samaa lajia kuin Diogeneen astia.',
           selite: 'Tällaisessa viljanastiassa Diogenes majaili: myöhäisroomalainen '
-            + 'pithos Ateenasta. Astia on samaa lajia kuin filosofin asumus, ei '
-            + 'se itse.',
+            + 'pithos Ateenan lentokentän arkeologisesta kokoelmasta. Astia on '
+            + 'samaa lajia kuin filosofin asumus, ei se itse.',
           lahde: 'Mike Peel, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -5860,11 +5845,13 @@ export const NAHTAVYYSJUTUT = {
     'Niken temppeli': {
       nosto: 'syvennys-ateena-nike',
       teksti: 'Kiipeä Propylaian ohi Akropoliin lounaiskulmaan, niin löydät pienimmän '
-        + 'mutta ehkä ovelimman temppelin: Athena Niken pyhäkön. Sen kaidetta '
-        + 'koristi aikoinaan marmoripatsas voitonjumalattaresta — mutta '
-        + 'kuvanveistäjä oli jättänyt siltä siivet pois. Myöhemmät ateenalaiset '
-        + 'selittivät asian omalla tavallaan: Voitto ei koskaan saisi lentää pois '
-        + 'heidän kaupungistaan, joten sen siivet piti riisua. Isoisäsi ei taida '
+        + 'mutta ehkä ovelimman temppelin: Athena Niken pyhäkön. Sen sisällä '
+        + 'seisoi puinen jumalatar-patsas ilman siipiä — ateenalaiset kutsuivat '
+        + 'sitä siivettömäksi Voitoksi, Nike Apterokseksi — vaikka temppelin '
+        + 'kaiteen kuvissa Voitot lentävät siivet levällään. Myöhemmät '
+        + 'ateenalaiset selittivät asian omalla tavallaan: Voitto ei koskaan '
+        + 'saisi lentää pois heidän kaupungistaan, joten patsas tehtiin '
+        + 'siivettömäksi. Isoisäsi ei taida '
         + 'mainita tätä matkakirjassaan — hän kirjoitti enemmän toreista kuin '
         + 'temppeleistä — mutta veikkaan, että hänkin pysähtyi tähän kulmaan '
         + 'hetkeksi.',

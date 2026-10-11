@@ -253,7 +253,7 @@ export const NOSTO_MAAT = {
       // lisätilaus 28.8.2026 ilta). Otsikko on lause, nimiö on nimi —
       // ja nimen on oltava sen paikan nimi, jossa merkki seisoo.
       nimio: 'Mykene',
-      otsikko: 'Valokuva paljasti aarrevarkauden — rouva poseerasi Troijan koruissa',
+      otsikko: 'Aarre vietiin salaa Kreikkaan — ja rouva poseerasi valokuvassa Troijan koruissa',
       /*
        * LÖÖPPITAITTO, PILOTTI (omistaja 3.9.2026): tämä nosto taitetaan
        * lehden muotoon — nimiö, päiväysrivi, pääotsikko isolla, ingressi,
@@ -264,13 +264,15 @@ export const NOSTO_MAAT = {
        */
       taitto: 'lehti',
       paivays: 'Ateena · Mykene · 1873–1876',
-      ingressi: 'Kun Sofia Schliemann asettui valokuvaajan eteen kullassa, '
-        + 'jonka piti olla yhä Troijan maassa, Ottomaanien viranomaiset '
-        + 'tiesivät vihdoin, minne Priamoksen aarre oli kadonnut.',
+      ingressi: 'Schliemann julkisti löydön, ja kun Sofia asettui '
+        + 'valokuvaajan eteen kullassa, jonka piti olla yhä Troijan '
+        + 'maassa, Ottomaanien viranomaiset saivat tietää, minne '
+        + 'Priamoksen aarre oli kadonnut.',
       teksti: 'Heinrich Schliemann salakuljetti Priamoksen aarteen ulos '
-        + 'Ottomaanien valtakunnasta Kreikkaan. Viranomaisille asia '
-        + 'paljastui vasta, kun hänen vaimonsa Sofia esiintyi julkisesti '
-        + 'yllään "Helenan korut" — kultainen otsapanta ja kaulakorut. '
+        + 'Ottomaanien valtakunnasta Kreikkaan. Viranomaisten tietoon '
+        + 'asia tuli, kun Schliemann julkaisi löydön ja hänen vaimonsa '
+        + 'Sofia esiintyi kuvissa yllään "Helenan korut" — kultainen '
+        + 'otsapanta ja kaulakorut. '
         + 'Tarinan kuuluisin kohta on silti keksitty: Schliemann kertoi '
         + 'yhä uudelleen, että Sofia oli kantanut kullan pois '
         + 'kaivaukselta huivissaan, ja myönsi myöhemmin sepittäneensä '
@@ -279,11 +281,12 @@ export const NOSTO_MAAT = {
         + 'Seuraukset osuivat muihin. Kaivausta valvomaan määrätty '
         + 'ottomaanivirkamies Amin Effendi sai vankeustuomion, '
         + 'Schliemannin kaivauslupa peruttiin ja Ottomaanien hallitus '
-        + 'haastoi hänet oikeuteen osuudestaan kultaan. Schliemann '
-        + 'siirtyi Mykeneen — ja Kreikan arkeologinen seura lähetti '
+        + 'haastoi hänet oikeuteen osuudestaan kultaan. Myöhemmin '
+        + 'Schliemann siirtyi Mykeneen — ja Kreikan arkeologinen seura lähetti '
         + 'hänen peräänsä oman miehensä valvomaan, mitä maasta nousee. '
-        + 'Aarre itse on nykyään Moskovassa Puškin-museossa, joka '
-        + 'myönsi omistavansa sen vasta vuonna 1994.',
+        + 'Aarteen suurin osa on nykyään Moskovassa Puškin-museossa, '
+        + 'joka myönsi omistavansa sen vasta 1990-luvulla; osa on '
+        + 'Istanbulissa.',
       lahde: 'en-Wikipedia "Priam\'s Treasure", osiot "Art collection" ja '
         + '"Authenticity", sekä "Heinrich Schliemann", osio Troijan '
         + 'kaivauksista (tarkistettu 1.9.2026); pisteen paikka '
@@ -309,8 +312,9 @@ export const NOSTO_MAAT = {
       },
       kuva: {
         tiedosto: 'Sophia Schliemann wearing gold jewelry.jpg',
-        selite: 'Sofia Schliemann "Helenan koruissa". Juuri tämä kuva '
-          + 'kertoi viranomaisille, missä Troijan kulta oli.',
+        selite: 'Sofia Schliemann "Helenan koruissa". Kuva otettiin joulun '
+          + '1873 tienoilla, kun Priamoksen aarteen löytö oli jo '
+          + 'Euroopan puheenaihe.',
         lahde: 'Tuntematon kuvaaja n. 1873, Wikimedia Commons (public domain)',
       },
     },
@@ -332,13 +336,13 @@ export const NOSTO_MAAT = {
       otsikko: 'Kokonainen kylä istui oraakkelin päällä — eikä lähtenyt '
         + 'ennen kuin maa järisi',
       teksti: 'Kun ranskalaiset halusivat kaivaa Delfoin pyhäkön esiin, '
-        + 'sen päällä seisoi Kastrin kylä: noin sata taloa ja 200 asukasta, '
-        + 'jotka olivat louhineet antiikin kiviä omiin seiniinsä siitä '
+        + 'sen päällä seisoi Kastrin kylä, jonka asukkaat olivat '
+        + 'louhineet antiikin kiviä omiin seiniinsä siitä '
         + 'asti kun paikka tuhottiin 300-luvulla.\n\n'
         + 'Kylä olisi pitänyt siirtää ennen kaivauksia, mutta asukkaat '
         + 'kieltäytyivät. Tilaisuus tuli vasta kun maanjäristys vaurioitti '
         + 'kylää pahoin: asukkaille tarjottiin kokonaan uusi kylä vanhan '
-        + 'paikan tilalle, ja 1893 Ranskan arkeologinen koulu kuori pois '
+        + 'paikan tilalle, ja vuodesta 1892 alkaen Ranskan arkeologinen koulu kuori pois '
         + 'maanvyöryjen massat ja paljasti Apollonin pyhäkön.',
       lahde: 'en-Wikipedia "Delphi", osio "Archaeology of the precinct" '
         + '(tarkistettu 28.8.2026).',

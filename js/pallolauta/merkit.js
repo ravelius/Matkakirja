@@ -244,6 +244,16 @@ export function kohdeElementti(kohde) {
     nimi.setAttribute('x', '0');
     // Nimi HALON yläpuolelle, ei renkaan (ks. paivitaFokusKohdeMitat).
     nimi.setAttribute('y', String(-(nimenSade + KOHDEMERKIN_NIMI_RAKO_PX)));
+    /*
+     * NIMEN TOINEN ASENTO: HALON ALLE (Karttasepän havainto 11.10.2026:
+     * lähtövalinnassa Lontoon pelinappula osui Pariisin nimen päälle).
+     * Nappula on kiinteä este, joka ei väistä, joten nimi vaihtaa
+     * puolta (luoMerkit vaistaNappulaa). Perusviiva on halon alla yhtä
+     * kaukana kuin yläasennossa, ja kirjasimen yläosa mahtuu raon ja
+     * svg:n varan väliin.
+     */
+    nimi.dataset.yla = String(-(nimenSade + KOHDEMERKIN_NIMI_RAKO_PX));
+    nimi.dataset.ala = String(nimenSade + KOHDEMERKIN_NIMI_RAKO_PX + KOHDEMERKIN_NIMI_PX);
     nimi.setAttribute('class', 'target-nimi');
     nimi.setAttribute('text-anchor', 'middle');
     nimi.setAttribute('font-size', String(KOHDEMERKIN_NIMI_PX));
@@ -458,9 +468,58 @@ export function luoMerkit({
     return ulos;
   };
 
+  /** CSS2D-nappulan laatikko kotelon pikseleinä tai null (GL-nappula: glnimiot-sovitin). */
+  const nappulanLaatikko = () => {
+    const d = (osat.get('peli') ?? []).find((x) => x.laji === 'nappula');
+    const el = d?.el;
+    const koti = kotelo?.getBoundingClientRect?.();
+    if (!koti || !el?.isConnected || d.poistuu || el.classList.contains('pallolauta-takana')) return null;
+    const r = (el.querySelector('svg') ?? el).getBoundingClientRect();
+    if (!(r.width > 0)) return null;
+    return { x0: r.left - koti.left, y0: r.top - koti.top, x1: r.right - koti.left, y1: r.bottom - koti.top };
+  };
+
+  /**
+   * KOHDENIMI VÄISTÄÄ NAPPULAA (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 32
+   * kohta 5: nimi ei saa olla pelinappulan päällä). `laatikko` on
+   * nappulan laatikko kotelon pikseleinä tai null. Jos nimen YLÄASENTO
+   * osuisi siihen, nimi siirtyy halon alle; muuten se palaa ylös.
+   * Yläasennon laatikko lasketaan nykyisestä asennosta siirtämällä,
+   * joten päätös ei riipu siitä, kummalla puolella nimi juuri on (ei
+   * edestakaista vaihtoa). Koskee CSS2D-kohteita: GL-kohteen nimi on
+   * rungon sprite (glnimiot-sovitin), ja lähtövalinnan huomiokohde on
+   * aina CSS2D:ssä.
+   */
+  const vaistaNappulaa = (laatikko) => {
+    const koti = kotelo?.getBoundingClientRect?.();
+    if (!koti) return;
+    for (const d of osat.get('peli') ?? []) {
+      if (d.laji !== 'kohde') continue;
+      const t = d.el?.querySelector?.('.target-nimi');
+      if (!t?.dataset.yla) continue;
+      const yla = Number(t.dataset.yla);
+      const nyt = Number(t.getAttribute('y'));
+      let alle = false;
+      if (laatikko) {
+        const r = t.getBoundingClientRect();
+        if (!(r.width > 0)) continue;
+        const siirto = yla - nyt;
+        const y0 = r.top - koti.top + siirto;
+        const y1 = r.bottom - koti.top + siirto;
+        const x0 = r.left - koti.left;
+        const x1 = r.right - koti.left;
+        alle = x0 < laatikko.x1 && laatikko.x0 < x1 && y0 < laatikko.y1 && laatikko.y0 < y1;
+      }
+      const y = alle ? Number(t.dataset.ala) : yla;
+      if (nyt !== y) t.setAttribute('y', String(y));
+    }
+  };
+
   return {
     paivita,
     aseta,
+    nappulanLaatikko,
+    vaistaNappulaa,
     /** Tahdista HTML-merkkien etu/taka-tila nykyisestä renderkamerasta. */
     tahdistaNakyvyys,
     laatikot,

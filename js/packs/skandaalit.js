@@ -2286,8 +2286,7 @@ export const SKANDAALIT = {
       paikka: 'Institut de France (tiedeakatemia), Pariisi',
       lat: 48.8573, lon: 2.3372,
       kortti: 'Kleopatra kirjoitti Julius Caesarille ranskaksi, vesileimatulle '
-        + 'paperille — ja kuuluisa matemaatikko osti kirjeen ilomielin, ja '
-        + 'perään 27 000 muuta. Kansallisylpeys teki ostajasta sokean: olihan '
+        + 'paperille — ja kuuluisa matemaatikko osti kirjeen ilomielin, ja perään kymmeniätuhansia muita. Kansallisylpeys teki ostajasta sokean: olihan '
         + 'kirjeissä todiste, että painovoima keksittiin Ranskassa. '
         + 'Tiedeakatemia ei ollut aivan yhtä ilahtunut.',
       teksti: 'Denis Vrain-Lucas oli lakikirjuriksi kouluttautunut ranskalainen, '
@@ -2318,8 +2317,7 @@ export const SKANDAALIT = {
         tiedosto: 'Denis Vrain-Lucas.jpg',
         lyhyt: 'Denis Vrain-Lucas noin vuonna 1870, ennen kuin väärennysten laajuus paljastui.',
         selite: 'Denis Vrain-Lucas noin vuonna 1870 — lakikirjuriksi kouluttautunut '
-          + 'mies, joka väärensi kuudessatoista vuodessa noin 27 000 historiallista '
-          + 'kirjettä.',
+          + 'mies, joka väärensi vuosien varrella kymmeniätuhansia historiallisia kirjeitä ja asiakirjoja.',
         lahde: 'Tuntematon tekijä n. 1870, Wikimedia Commons (PD)',
       },
       visa: {
@@ -5291,11 +5289,11 @@ export const SKANDAALIT = {
         + 'Tarkistettu 2.9.2026.',
       kuva: {
         tiedosto: 'Sweden-Credityf-Zedels.jpg',
-        lyhyt: 'Stockholms Bancon kreditiivseteli vuodelta 1666 — Euroopan ensimmäinen painettu seteli.',
-        selite: 'Stockholms Bancon kreditiivseteli vuodelta 1666 — sata taaleria '
-          + 'hopeaa, käsin allekirjoitettuna ja sinetöitynä. Euroopan ensimmäinen '
-          + 'painettu seteli, ja Johan Palmstruchin keksintö, joka vei pankin '
-          + 'lopulta konkurssiin.',
+        lyhyt: 'Stockholms Bancon seteli vuodelta 1666 — sata hopeataaleria.',
+        selite: 'Stockholms Bancon seteli vuodelta 1666 — sata hopeataaleria '
+          + '(daler silvermynt), käsin allekirjoitettuna ja sinetöitynä. Pankki '
+          + 'antoi Euroopan ensimmäiset setelit jo 1661, ja Johan Palmstruchin '
+          + 'keksintö vei sen lopulta konkurssiin.',
         lahde: 'Tuntematon tekijä 1666, Wikimedia Commons (PD)',
       },
       visa: {
@@ -5325,7 +5323,7 @@ export const SKANDAALIT = {
         + 'naamio, eikä kukaan ihmettele, miksi joku lähestyy kuningasta. '
         + 'Kustaa III oli saanut varoituskirjeenkin, mutta meni tanssiaisiin '
         + 'silti. Jälkimaailma sai aiheesta oopperan; Ruotsi sai '
-        + 'perustuslakikriisin.',
+        + 'holhoojahallituksen.',
       teksti: 'Kustaa III saapui oopperataloon 16. maaliskuuta 1792 hyvissä ajoin '
         + 'illastamaan ystäviensä kanssa. Illallisella hänelle ojennettiin nimetön '
         + 'ranskankielinen kirje, jossa pyydettiin peruuttamaan tanssiaiset: rosvot '
@@ -5386,7 +5384,7 @@ export const SKANDAALIT = {
         + 'tulivat — ennen kuin kevät 1932 vastasi kysymykseen kaikkien '
         + 'puolesta.',
       teksti: 'Ivar Kreuger aloitti ruotsalaisista tulitikkutehtaista ja päätyi '
-        + 'hallitsemaan kahdesta kolmasosasta kolmeen neljäsosaan maailman '
+        + 'hallitsemaan yli puolta, huipussaan jopa kahta kolmasosaa maailman '
         + 'tulitikkutuotannosta. Menetelmä oli helppo selittää: hän lainasi valtiolle '
         + 'rahaa ja pyysi vastineeksi maan tulitikkumonopolin. Kaupan tekivät muun '
         + 'muassa Puola, Romania, Turkki, Latvia, Liettua, Viro, Bolivia, Guatemala ja '
@@ -5405,9 +5403,8 @@ export const SKANDAALIT = {
         + 'löydettiin kuolleena asuntonsa vuoteesta, pistooli vieressä ja kirje, jossa '
         + 'luki hänen sotkeneen asiat niin pahoin, että tämä tuntui kaikkien kannalta '
         + 'parhaalta ratkaisulta.'
-        + '\n\nPrice Waterhouse kävi kirjanpidon läpi ja totesi, että manipulaatiot '
-        + 'olivat niin lapsellisia, että alkeellisinkin kirjanpidon tuntemus olisi '
-        + 'paljastanut kirjojen olevan väärennettyjä. Tuhannet ruotsalaiset menettivät '
+        + '\n\nPrice Waterhouse kävi kirjanpidon läpi ja totesi sen väärennetyksi. '
+        + 'Tuhannet ruotsalaiset menettivät '
         + 'säästönsä. Yhdysvallat kirjoitti arvopaperilakinsa uusiksi 1933 ja 1934 — '
         + 'pitkälti Kreugerin takia.',
       lahde: 'en-Wikipedia "Ivar Kreuger". Tarkistettu 2.9.2026.',

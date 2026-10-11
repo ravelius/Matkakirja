@@ -1,3 +1,5 @@
+> **Päivitys 11.10.2026 (faktatarkistus + toinen lähde, PT:n pyynnöstä):** aikajanan korjaukset tehty tähän dokumenttiin: dendro ei todista alkamisvuotta, Kirkkotorni on keskimmäinen, Saimaa 11 000–9 500 v sitten, restaurointi 1870-luvulla, Kijlin torni 1600-luvun vaihteessa, Paksun tornin räjähdysvuotta ei anneta. Kertojan puhe ja pelitekstit ennallaan. Ks. `docs/raportit/olavinlinna-faktat/`.
+
 # Olavinlinnan historia-animaatio: faktatarkistus ja kertojan tekstit (Sisältökirjuri 9.10.2026)
 
 **HYVÄKSYTTY 9.10.2026 (PT) kahdella korjauksella (rivit 1 ja 9, tehty alla).** Tilaus: Päätoimittaja (Siirtosepän suunnitelma, hyväksytty). Vain raportti; **ääntä ei ole generoitu** (omistajan lupa tarvitaan; PT tarkistaa tekstit ensin). Faktat tarkistettiin verkosta 9.10.2026 (fi/sv/en-Wikipedia, Museovirasto KYPPI ja RKY, Aspelin 1875, Savon historia, SBL, EBIDAT, Rekola 1950, Lyytinen/Hakanpää 2019); täysi lähdeluettelo ja per vaihe "varmat/epävarmat" ovat liitteessä (§4). Lähdenumerot [n] viittaavat liitteen luetteloon.
@@ -7,15 +9,15 @@
 | PT:n lista | Tarkistettu | Lähteet |
 |---|---|---|
 | "1800-luvun palo (vuosi?)" | **Kaksi paloa: 1868 ja 1869** (ei 1834/1856/1860). Varuskunta lähti **1847**, vankila 1850-luvulla (1855–59/61), linna autioitui sen jälkeen | [1][2][11] |
-| "Vesiportin bastioni (1602–03?)" | **Ei 1602–03.** Silloin rakennettiin *uusi esilinna*. Vesiportin bastioni on **1750-luvulta** (korjaus alkoi 1749, rakennus 1751–55, muutoksia 1790-luvulla); Kijlin torni 1604–08; Paksu torni 1560–62 | [1][5][10][11] |
+| "Vesiportin bastioni (1602–03?)" | **Ei 1602–03.** Silloin rakennettiin *uusi esilinna*. Vesiportin bastioni on **1750-luvulta** (korjaus alkoi 1749, rakennus 1751–55, muutoksia 1790-luvulla); Kijlin torni 1600-luvun vaihteessa (Aspelin 1604–08, Museovirasto 1595); Paksu torni 1560–62 | [1][5][10][11] |
 | "Kellobastioni" | Rakennusvuosi **[EI LÖYDETTY]**; oli olemassa 1751, kuuluu Venäjän ajan (1743–) rakenteisiin. Ei vuotta tekstiin | [10][11] |
 | "1700-luvun venäläinen kausi (1743)" | Venäläiset valtasivat linnan jo **8.8.1742** (pikkuviha); Turun rauha **1743** vahvisti omistuksen (en-wikin "8.8.1743" on virhe). Isonvihan aikana linna antautui **29.7.1714** ja palasi Ruotsille 1721. Ruotsalaisten piiritys vain kesällä 1788 (2.7.–20.8.) | [1][2][4][8][9] |
-| "1475 Tott ja telineet" | Rakentaminen alkoi **1475** (dendro tukee), mutta **kivilinna vasta 1477**; ensin puuvarustus. **Telineistä ei ole lähteessä mitään** → älä väitä | [1][4][7][28] |
-| "1480-luvun päälinna ja tornit" | Päälinna valmis noin **1483–85** (±2 v; Museovirasto: ensimmäinen vaihe 1490-luvulle). Torninimet: Kellotorni (luoteessa), Kirkkotorni (pohjoisessa, kappeli 3. krs), **Pyhän Eerikin torni** (kaakossa). **"Pyhän Yrjänän tornia" ei ole.** Kijlin ja Paksu torni lisättiin myöhemmin | [1][2][5][7] |
+| "1475 Tott ja telineet" | Rakentaminen alkoi **1475** (dendro ei todista alkamisvuotta: Zetterbergin raporttien aikaisimmat valmistumisvuodet Kirkkotorni 1476, Kellotorni 1479, kappeli 1480), mutta **kivilinna vasta 1477**; ensin puuvarustus. **Telineistä ei ole lähteessä mitään** → älä väitä | [1][4][7][28] |
+| "1480-luvun päälinna ja tornit" | Päälinna valmis noin **1483–85** (±2 v; Museovirasto: ensimmäinen vaihe 1490-luvulle). Torninimet: Kellotorni (luoteessa), Kirkkotorni (keskimmäinen, kappeli 3. krs), **Pyhän Eerikin torni** (kaakossa). **"Pyhän Yrjänän tornia" ei ole.** Kijlin ja Paksu torni lisättiin myöhemmin | [1][2][5][7] |
 | "1499" | Bielke haltijaksi **1499–1511** (ei aiemmin); Pentti Pentinpoika luovutti kaluston **14.9.1499**. Viipurin pamaus 1495 ei liity Olavinlinnaan. Älä nimeä Possea linnan päälliköksi 1495–97 | [1][7][22b] |
-| "Jääkausi ja Kyrönsalmi" | Saimaan synty on kaksi vaihetta (itsenäinen järvi n. 9 500 v sitten; Vuoksen purkautuminen Imatran kautta n. 5 700 v sitten). **Kyrönsalmen oma syntyprosessi [EI LÖYDETTY]** → sanotaan vain, että Saimaa nousi esiin ja vesi kulkee salmen läpi | [13][14][16][17] |
-| "Kivikautinen asutus" | Lähin varma kivikautinen asuinpaikka **Pääskylahti (Sääminki)**, ei Kyrönsalmi/linnan kallio. Ensiasutuksen ajoitus vaihtelee (11 000 vs 8 000–8 500 v sitten) → ei lukua tekstiin | [18][19][20][21] |
-| "Restaurointi 1870-luvulta 1900-luvulle" | Ensimmäinen restaurointi **1872–78** (Konstantin Kiseleff); suuri restaurointi **1961–75**, yleisölle 1975; oopperajuhlat 1912 (viisi juhlaa, uudelleen **1967** ja vuosittain) | [2][5][6][12][24][26] |
+| "Jääkausi ja Kyrönsalmi" | Saimaan synty on kaksi vaihetta (itsenäinen järvi noin 11 000–9 500 v sitten: eteläinen Saimaa n. 11 000, pohjoiset altaat n. 10 700, pohjoisimmat n. 9 500; Vuoksen purkautuminen Imatran kautta n. 5 700 v sitten). **Kyrönsalmen oma syntyprosessi [EI LÖYDETTY]** → sanotaan vain, että Saimaa nousi esiin ja vesi kulkee salmen läpi | [13][14][16][17] |
+| "Kivikautinen asutus" | Tutkituin kivikautinen asuinpaikka seudulla **Pääskylahti (Sääminki)**; Museoviraston rekisterin lähimmät ovat Metsäkonttorinkuja (noin 0,7 km linnasta) ja Majakkaniemi (noin 1,6 km), ei Kyrönsalmi/linnan kallio (korjattu 11.10.2026 faktatarkistuksessa). Ensiasutuksen ajoitus vaihtelee (11 000 vs 8 000–8 500 v sitten) → ei lukua tekstiin | [18][19][20][21] |
+| "Restaurointi 1870-luvulta 1900-luvulle" | Ensimmäinen restaurointi **1870-luvulla** (tarkat vuodet 1872–78 vain EBIDAT; Kiseleffin nimi ei vahvistunut toisesta lähteestä); suuri restaurointi **1961–75**, yleisölle 1975; oopperajuhlat 1912 (viisi juhlaa, uudelleen **1967** ja vuosittain) | [2][5][6][12][24][26] |
 
 Avoimet epävarmuudet (ei käytetä teksteissä): Paksun tornin räjähdysvuosi (1791 / ennen 1788), 1600-luvun linnanpalo (1631 / 1654), 1499 piirityksen kuukausi, varuskunnan lähtö (1847 / 1836), Pyhän Eerikin tornin purun vuosi (1714 / myöhemmin), restaurointi 1912–16 (vain RKY).
 
@@ -39,15 +41,15 @@ Sävy: rauhallinen, konkreettinen kertoja; 13+ ja aikuisille; ei kaanonmuutoksia
 
 | # | perusteet ja rajaukset |
 |---|---|
-| 1 | Saimaan allas itsenäiseksi järveksi noin 9 500 v sitten; Kyrönsalmi on Haapaveden kolmesta salmesta itäisin ja virtavin [13][17]. Salmen oma syntyprosessi [EI LÖYDETTY], siksi ei väitetä. |
+| 1 | Saimaan allas itsenäiseksi järveksi noin 11 000–9 500 v sitten (eteläinen Saimaa n. 11 000, pohjoisimmat altaat n. 9 500); Kyrönsalmi on Haapaveden kolmesta salmesta itäisin ja virtavin [13][17]. Salmen oma syntyprosessi [EI LÖYDETTY], siksi ei väitetä. |
 | 2 | Pääskylahti (Säämingin, nyk. Savonlinna): kampakeraaminen asuinpaikka n. 3900–3400 eaa., saviastiaa, palaneita luita [20][21]. Linnan kalliolta ei löydy kivikautista asuinpaikkaa, joten teksti puhuu "rannoilla". |
-| 3 | Aloitus 1475 [1][2][5][23]; kivirakentaminen 1477, ensin puuvarustus [1][4][7]; dendro 1475 [28]. **Telineistä ei ole lähdettä; ei väitetä.** |
+| 3 | Aloitus 1475 [1][2][5][23]; kivirakentaminen 1477, ensin puuvarustus [1][4][7]; dendro ei todista alkamisvuotta [28]. **Telineistä ei ole lähdettä; ei väitetä.** |
 | 4 | Kuusitoista ulkomaista muurarimestaria [1][7]; päälinna valmis 1483 (Pirinen) / n. 1485 (fi/en-wiki) / 1490-luvulle (Museovirasto) [5][7][2][3] → "1480-luvun puolivälin tienoilla" on suuruusluokka ±2 v. |
 | 5 | Bielke haltijaksi 1499 (SBL) [22b]; Pentti Pentinpoika luovutti kaluston 14.9.1499 [1][7]; venäläisten piiritys 1499 torjuttiin [22b][7]. Piirityksen kuukausi (elokuu/syyskuu) [EPÄVARMA], ei mainita. |
-| 6 | Tornien korotus ja esilinnan vahvistus 1500-luvun puolivälissä (RKY, Museovirasto) [2][5][6]; uusi esilinna 1602–03 [1]; Kijlin torni 1604–08 [1][5] (Sadan vuoden satoa antaa 1595; PT 9.10.: "1600-luvun vaihteessa" kattaa molemmat). |
+| 6 | Tornien korotus ja esilinnan vahvistus 1500-luvun puolivälissä (RKY, Museovirasto) [2][5][6]; uusi esilinna 1602–03 [1]; Kijlin torni 1600-luvun vaihteessa, ei tarkkaa vuotta (Aspelin 1604–08, Museovirasto 1595) [1][5] (Sadan vuoden satoa antaa 1595; PT 9.10.: "1600-luvun vaihteessa" kattaa molemmat). |
 | 7 | Linna antautui venäläisille 8.8.1742 [1][4]; Turun rauha 1743 [2][3][5]; Vesiportin bastionin ja kurtiinien työt 1749–55, Museovirasto 1750-luku [5][10][11]. |
 | 8 | Varuskunta 1847 (useimmat lähteet; Rekolan tiivistelmä 1836 [EPÄVARMA]) [2][4][12]; palot 1868 (höyrylaivojen kipinät, iso linnapiha) ja 1869 (esilinnat) [1][2][11]. |
-| 9 | Ensimmäinen restaurointi 1872–78 (Kiseleff) [12][24]; suuri restaurointi 1961–75, avattu yleisölle 1975 [2][5][6]; oopperajuhlat uudelleen 1967 ja vuosittain siitä lähtien (ensimmäinen 1912) [2][26]. Alkuvuosi 1959/1961 vaihtelee, ei mainita. |
+| 9 | Ensimmäinen restaurointi 1870-luvulla (EBIDAT 1872–78) [12][24]; suuri restaurointi 1961–75, avattu yleisölle 1975 [2][5][6]; oopperajuhlat uudelleen 1967 ja vuosittain siitä lähtien (ensimmäinen 1912) [2][26]. Alkuvuosi 1959/1961 vaihtelee, ei mainita. |
 
 ## 4. Liite: täysi faktatarkistus (Sonnet-agentti, 9.10.2026)
 
@@ -67,7 +69,7 @@ Yleinen huomio lähteistä: J. R. Aspelinin *Savonlinna 1475–1875* [1] on rake
 - Nuoremman dryaskauden kylmän jakson aikana jäätikön reuna pysähtyi, ja Ensimmäinen Salpausselkä syntyi noin 12 300–12 100 vuotta sitten ja Toinen noin 11 800–11 600 vuotta sitten (toinen lähde antaa 12 250–12 050 ja 11 790–11 590) [14][15].
 - Toinen Salpausselkä muodostaa Suur-Saimaassa Kyläniemen kannaksen ja kulkee Pihlajaveden ja Puruveden kaakkoisrantoja pitkin [15].
 - Jäätikön sulaessa Saimaan alue oli aluksi Baltian jääjärven alla, ja maa kohosi vähitellen vedestä kallioperän kallistuessa niin, että Saimaan altaat nousivat esiin yksi kerrallaan eri aikoina [13][14].
-- Saimaan allas muuttui itsenäiseksi järveksi Ancylus-järven vaiheessa noin 9 500 vuotta sitten, ja se yhdistyi eteläisiin järviin muodostaen Suur-Saimaan [13].
+- Saimaan allas muuttui itsenäiseksi järveksi Ancylus-järven vaiheessa noin 11 000–9 500 vuotta sitten (eteläinen Saimaa n. 11 000, pohjoiset altaat n. 10 700, pohjoisimmat n. 9 500), ja se yhdistyi eteläisiin järviin muodostaen Suur-Saimaan [13].
 - Maan kallistuminen kaakkoon avasi Saimaalle uusia laskuväyliä (Ristiina noin 6 900, Lappeenranta noin 6 300 ja lopulta Imatra noin 5 700 vuotta sitten), minkä jälkeen vesi laskee Vuoksea pitkin Laatokkaan [13]; englanninkielinen artikkeli antaa saman tapahtuman ajaksi "noin 6 000 vuotta sitten" [16].
 - Haapaveden laajat selät laskevat kolmen ahtaan salmen (länsimmäinen Laitaatsalmi, keskimmäinen Haapasalmi, itäisin ja virtavin Kyrönsalmi) kautta Pihlajaveteen [1][17].
 - Kyrönsalmen kalliosaari Kyrönsaari on Kyrönniemen (itä) ja Vääräsaaren (länsi) välissä, ja Tallisaari on sen vieressä [1].
@@ -76,7 +78,7 @@ Yleinen huomio lähteistä: J. R. Aspelinin *Savonlinna 1475–1875* [1] on rake
 
 ### Korjaukset ennakko-oletuksiin
 - Salmen "syntyä" ei voi liittää johonkin yksittäiseen jääkauden tapahtumaan: lähteissä ei kerrota Kyrönsalmen omaa syntyprosessia (ks. Epävarmaa). Turvallinen muotoilu on "jäätikön sulaminen, Salpausselät ja maankohoaminen muovasivat Saimaan, ja Kyrönsalmi on yksi sen kolmesta ahtaasta salmesta".
-- "Saimaan synty" ei ole yksi vuosiluku: Ancylus-vaihe (noin 9 500 v sitten) ja Vuoksen purkautuminen Imatran kautta (noin 5 700 v sitten, englanninkielisessä lähteessä noin 6 000) ovat eri vaiheita.
+- "Saimaan synty" ei ole yksi vuosiluku: Ancylus-vaihe (noin 11 000–9 500 v sitten) ja Vuoksen purkautuminen Imatran kautta (noin 5 700 v sitten, englanninkielisessä lähteessä noin 6 000) ovat eri vaiheita.
 
 ### Epävarmaa
 - [EI LÖYDETTY] Mikään avattu lähde ei selitä, miten Kyrönsalmi itse syntyi (kallioperän ruhje, jäätikköeroosio tai muu). Ei tässä ajossa löytynyt myöskään GTK:n tai Saimaa Geoparkin selvitystä Kyrönsalmen kohdalta.
@@ -101,7 +103,7 @@ Yleinen huomio lähteistä: J. R. Aspelinin *Savonlinna 1475–1875* [1] on rake
 - Savonlinnan alueen kivikautisia asuinpaikkoja on tutkittu kaivaen: Vehkarannassa koekaivaus 1985–86 ja Lamminniemenlammella 2006 (hakutulosten tiivistelmä, Savonlinnan maakuntamuseon luettelo; sivua ei avattu suoraan) [22].
 
 ### Korjaukset ennakko-oletuksiin
-- Kyrönsalmen tai Olavinlinnan saarelta ei löydy lähteistä kivikautista asuinpaikkaa: lähimmät varmat kivikautiset paikat ovat Pääskylahti ja Vehkaranta Savonlinnan seudulla muualla. Älä sijoita animaation kivikautista asutusta suoraan linnan kalliolle.
+- Kyrönsalmen tai Olavinlinnan saarelta ei löydy lähteistä kivikautista asuinpaikkaa: lähimmät rekisteröidyt kivikautiset paikat ovat Metsäkonttorinkuja (noin 0,7 km) ja Majakkaniemi (noin 1,6 km); tutkituin on Pääskylahti Savonlinnan seudulla muualla. Älä sijoita animaation kivikautista asutusta suoraan linnan kalliolle.
 
 ### Epävarmaa
 - [EPÄVARMA] Ensiasutuksen ajankohta: 11 000 v sitten [18] vs. 8 000–8 500 v sitten [19] (Savon alue) eroavat; Saimaa Geopark tarkoittaa koko Saimaan aluetta, Savon historia Savoa.
@@ -125,7 +127,7 @@ Yleinen huomio lähteistä: J. R. Aspelinin *Savonlinna 1475–1875* [1] on rake
 - Kalkkikiveä louhittiin Kalkkiniemen murtopaikalta Vääräsaaren itäkulmalta (Aspelinin mukaan, 1875, perimätieto) [1].
 - Kivitaulun teksti kuului suunnilleen: "Herran vuonna 1475 rakennutin minä Erkki Akselinpoika, Lagnön ritari, tämän linnan Jumalan kunniaksi", ja alla oli valtionhoitaja Sturen ja Tottin vaakuna; taulu on kadonnut [1].
 - Tott kuoli Viipurin linnassa 1481 [23]; hänen jälkeensä veli Lauri Akselinpoika jatkoi rakennustyötä Viipurin ja Savonlinnan hallitsijana [1][7].
-- Dendrokronologiset ajoitukset (fatabuurin lauta 1475, kattohirsi 1474 jälkeen) tukevat vuotta 1475 [28].
+- Dendrokronologiset ajoitukset (fatabuurin lauta 1475, kattohirsi 1474 jälkeen) eivät todista alkamisvuotta 1475; aikaisimmat mahdolliset valmistumisvuodet Kirkkotorni 1476, Kellotorni 1479, kappeli 1480 (Zetterberg 1990, 2003) [28].
 - Nimi Uusilinna esiintyy ensi kerran 1481 (saksaksi) ja 1484 (ruotsiksi) [7][28].
 
 ### Korjaukset ennakko-oletuksiin
@@ -150,7 +152,7 @@ Yleinen huomio lähteistä: J. R. Aspelinin *Savonlinna 1475–1875* [1] on rake
 
 ### Varmat faktat
 - Päälinna on kolmion muotoinen: kolme pyöreää tornia ja niitä yhdistävä kehämuuri; torneista kaksi on yhä pystyssä (Kirkkotorni ja Kellotorni), kolmas on osin purettu [2][5][6][7].
-- Nimet ja sijainnit Aspelinin (1875) mukaan: Kellotorni luoteiskulmassa (nimi riippuvista kirkonkelloista tornin 4. kerroksessa), Kirkkotorni pohjoisessa (nimi kappelista tornin 3. kerroksessa) ja Pyhän Eerikin torni kaakkoiskulmassa; Eerikin tornin Tott "luultavasti" nimesi suojeluspyhänsä mukaan [1].
+- Nimet ja sijainnit Aspelinin (1875) mukaan: Kellotorni luoteiskulmassa (nimi riippuvista kirkonkelloista tornin 4. kerroksessa), Kirkkotorni keskimmäinen (Aspelin: pohjoisessa; Senaatin selvityksen mukaan keskimmäinen; nimi kappelista tornin 3. kerroksessa) ja Pyhän Eerikin torni kaakkoiskulmassa; Eerikin tornin Tott "luultavasti" nimesi suojeluspyhänsä mukaan [1].
 - Pirinen kertoo päälinnan tornien ja kehämuurin valmistuneen "todennäköisesti" 1483 mennessä ja linnan olleen puolustuskuntoinen 1495 [7]; fi- ja en-wikipedia antavat päälinnan valmistumisen noin 1485 [2][3]; Museovirasto kirjaa ensimmäisen rakennusvaiheen 1490-luvulle asti [5]; EBIDAT sanoo linnan olleen ainakin osittain valmis 1483 [12].
 - Päälinnan valmistuttua alettiin rakentaa itäpuolista esilinnaa, jonka kaksi tornia ovat keskiaikaisia; esilinna valmistui 1400-luvun loppupuolella (en.wikipedia: kehämuurit torneineen 1495) [2][3][7][12].
 - Pyhän Eerikin torni oli huonolla perustuksella ja halkeili jo Kustaa Vaasan aikana; sen ylimmät kerrokset purettiin 1700-luvun alussa, ja jäljellä on vain alin kerros tai kaksi alinta kerrosta [1][2][11].
@@ -223,7 +225,7 @@ Yleinen huomio lähteistä: J. R. Aspelinin *Savonlinna 1475–1875* [1] on rake
 
 ### Korjaukset ennakko-oletuksiin
 - "Vesiportin bastioni 1602–03" on virheellinen: vuosina 1602–03 rakennettiin uusi esilinna, ja Vesiportin bastioni on rakennettu myöhemmin sen paikalle (Aspelin: Suvorovin aikaa; Lyytinen/Museovirasto: 1751–55, osin 1790-luku; ks. vaihe 7) [1][5][11].
-- Kijlin torni on 1600-luvun alkua (1604–08), ei keskiaikainen eikä 1500-luvun [1][2][5].
+- Kijlin torni on 1600-luvun alkua (vuosi 1595 tai 1604–08, ei tarkkaa vuotta), ei keskiaikainen eikä 1500-luvun [1][2][5].
 - Paksu torni on 1560-luvun rakennus (Paksu bastioni on sen paikalle tehty myöhempi 1700-luvun rakennus) [1][4][5].
 - "Kellobastioni": ajoitus [EI LÖYDETTY] ennen 1700-lukua: Rekola (Laskovskijn mukaan) mainitsee Kellobastionin (IV) olemassa vuonna 1751 [10], eikä Aspelin mainitse sitä lainkaan; se kuuluu Venäjän ajan (1743 alkaen) rakenteisiin Museoviraston ajoituskartassa [11].
 - Esilinnan "kivipatterit" (Eteläpatteri, Itäpatteri) ajoittuvat Lyytisen ajoituskartassa Vaasa-aikaan: Eteläpatteri 1540– ja 1550–65, tiilimuuri 1590-luvulle [11].
@@ -251,7 +253,7 @@ Yleinen huomio lähteistä: J. R. Aspelinin *Savonlinna 1475–1875* [1] on rake
 - Vuonna 1749 alettiin korjata ja laajentaa Vesiportin bastionia, ja 1751–55 Vesiportin ja Kellobastionin välistä kurtiinia, Vesiportin ja Vähäportin välistä kurtiinia sekä Kirkkotornin ja Kijlin tornin välistä kurtiinia [10]; Museovirasto ajoittaa Vesiportin ja Pikkuportin bastionit 1750-luvulle [5], ja Lyytisen ajoituskartta kurtiinin ja Vesiportin bastionin rakennusajaksi 1751–55 (kurtiini myös 1795, bastioni myös 1790-luku) [11].
 - Heinäkuussa 1788 Hastferin ruotsalaisjoukot valtasivat kaupungin ja piirittivät linnaa 2.7.–20.8.1788 tuloksetta (linnassa oli vain kaksi venäläistä jääkärikomppaniaa) [1][9]; Hastfer vetäytyi Rantasalmelle 20.8. [1].
 - Piirityksen jälkeen (Suvorovin johdolla, Katariina II:n käskystä) rakennettiin 1790-luvulla mm. Suvorovin esilinna, suojamuurattu vesikanava ja tornien tiilikorotukset [1][3][5][11].
-- Paksu torni tuhoutui ruutivaraston räjähdyksessä, ja sen paikalle rakennettiin kolmikertainen Paksu bastioni; fi.wikipedia ja en.wikipedia antavat vuoden 1791 [2][3].
+- Paksu torni tuhoutui ruutivaraston räjähdyksessä, ja sen paikalle rakennettiin kolmikertainen Paksu bastioni; Senaatin selvityksen mukaan torni tuhoutui 1700-luvun lopulla ja bastioni valmistui mahdollisesti 1793; vuotta ei anneta (1791 vain wikipedia) [2][3].
 - Linnan sotilaallinen merkitys päättyi, kun Suomesta tuli Venäjän suuriruhtinaskunta 1809 [2][3].
 - Adjutantin talo on ainoa 1700-luvun Venäjän ajan säilynyt rakennus linnoituksessa [5][6].
 
@@ -304,7 +306,7 @@ Yleinen huomio lähteistä: J. R. Aspelinin *Savonlinna 1475–1875* [1] on rake
 ### 9. Restaurointi 1870-luvulta 1900-luvulle
 
 ### Varmat faktat
-- Linnaa alettiin kunnostaa historiallisena muistomerkkinä 1870-luvulla; EBIDAT antaa ensimmäisten restaurointitöiden ajaksi 1872–78 [2][11][12].
+- Linnaa alettiin kunnostaa historiallisena muistomerkkinä 1870-luvulla; ensimmäiset restaurointityöt 1870-luvulla (tarkat vuodet 1872–78 vain EBIDAT) [2][11][12].
 - Restaurointia johti arkkitehti Konstantin Kiseleff, joka oli Mikkelin lääninrakennustoimiston päällikkö vuodesta 1871 [24]; Kansallisarkistossa on tämän työn asiakirjoja [11].
 - Aspelinin *Savonlinna 1475–1875* julkaistiin 1875 Valtionarkiston toimesta ja Senaatin aloitteesta (linnan 400-vuotisjuhlavuonna) [1][10].
 - fi.wikipedia kertoo linnan 400-vuotisjuhlassa 1875 pitäneen puheet J. V. Snellmanin ja August Ahlqvistin (lähde Gardberg & Welin, 1L) [2].

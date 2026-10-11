@@ -736,8 +736,7 @@ const JAKO = [
       + 'runsaat kaksisataa ja vihreitä peltilaatikoita lähes '
       + 'yhdeksänsataa kolmen kilometrin matkalla. Säännöt ovat '
       + 'tiukat: yksi myyjä saa kahdeksan metriä kaidetta ja '
-      + 'enintään neljä laatikkoa, ja maali on aina sama vaunuvihreä '
-      + 'kuin ensimmäisen metron kylteissä. Kesällä 2024 laatikot '
+      + 'enintään neljä laatikkoa, ja maali on aina sama vaunuvihreä, jota käytettiin jo ensimmäisessä metrossa. Kesällä 2024 laatikot '
       + 'piti purkaa olympialaisten tieltä, mutta päätös peruttiin.',
     // 2,34728 E / 48,85296 N — en-Wikipedia "Bouquinistes",
     // prop=coordinates (haettu 14.9.2026). Paikka on tekstissä:
@@ -753,8 +752,7 @@ const JAKO = [
       kysymys: 'Kuinka monta laatikkoa yksi kirjamyyjä saa enintään?',
       vaihtoehdot: ['Neljä', 'Kaksikymmentä', 'Kolmesataa'],
       oikea: 0,
-      fakta: 'Maali on aina sama vaunuvihreä kuin ensimmäisen metron '
-        + 'kylteissä.',
+      fakta: 'Maali on aina sama vaunuvihreä, jota käytettiin jo ensimmäisessä metrossa.',
     },
   },
 ];
