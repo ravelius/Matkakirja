@@ -35,7 +35,7 @@ Testit: `sh Linssit-testit/kaanna.sh` / `sh Kartta-testit/kaanna.sh` / `sh Peli-
   B kompassi v3 (_valmiit/ilmapallo-v1/pallokompassi-v3, ämpärissä v3), C köydet kantorenkaaseen + ydin, D autot + pisaravarjo (agentti),
   E OpasValys (korkeusnäytteet, agentti), vapaan lennon esityskorjaus 574bb5c31.
 - **Aukiot 183** f170db3e1 KUITATTU ja NS:llä. **Puut-portti** 6323b5204 KUITATTU (junassa 867ff6b8f); tarkkuuskorjaus **ba5edb2db**
-  NS:n Tuileries-vertailussa (odottaa tulosta → PT kuittaa → NS).
+  KUITATTU 02.1x (NS:n Tuileries-kuvapari lokit/todistus-puut-1-b-20261012-0158) ja NS:llä. kippi-183 f6e438497 KUITATTU ja NS:llä.
 - Vedokset: lokit/linssiseppa-vedokset-kippi-183/, lokit/linssiseppa-vedokset-minihampurilainen-183/, lokit/linssiseppa-vedokset-auto-183/.
 - Worktreet: wt/proto-linssiseppa-{monumentit,ikkunat,autot,vali,puut}; poista kun juna 183 TF:ssä.
 
