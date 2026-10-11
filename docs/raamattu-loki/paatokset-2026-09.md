@@ -13062,3 +13062,47 @@ Työn alla:
 ## PELIKOODARI 10.10. 22.07: PULUN ELEET KOHDISTETTU, SOUNDLY-LISENSSI, KIPIN ÄÄNIÄ EI OSTETA (10.10.2026 klo 22.13)
 
 10.10. 22.07 Pelikoodari (nollaus, luovutus -yo 0afd086de): Pulun 45 v4-äänen eleet kohdistettu (forced alignment EI kuluta ElevenLabs-krediittejä: saldo 278 291 ennen ja jälkeen), vienti + PR #4370. Kipin Soundly-portti 47/98 puhdasta, tuuli 0/22 → aukkohaku. SOUNDLY-LISENSSI: pelissä lisensoitu vain tilauksen aikana tehdyt versiot; tilauksen päätyttyä uusista pääversioista poistettava Soundly-äänet → Raamattuun MAKSULLISET LÄHTEET -kohtaan (omistajalle kerrottu). OMISTAJA 22.0x: kipin puuttuvia ääniä ei osteta ("ei osteta"), Soundly-tilauksesta haetaan.
+
+## ALOITUSKAUPUNGIT VAIN EUROOPASTA (11.10.2026 klo 04.50)
+
+Omistaja 10.10.2026 klo 23.4x: "Tee Eurooppaan yksi Aloitus kaupunki lisää ja poista toistaiseksi kaikki muiden maanosien aloitus kaupungit alku lento näkymästä"; kortti → "Tukholma (suositus)"; omistaja: "Lontoo ei ole aloitus kaupunki" (se on lähtöpaikka). Alkulennon aloituskaupungit (ETUSIVUN_KOHTEET) Ateena, Moskova, Istanbul + Tukholma; muiden maanosien 11 aloituskaupunkia piilotetaan alkulennosta palautettavasti (Karttaseppä #4380 Julkaisijan pidossa TF 181:een asti, natiivi NUI 5a57b42b5 junassa 181). Raamattuun NATIIVIN ALOITUSKAAVAN perään.
+
+## KIPIN MATKAMUSIIKKI SOITTOLISTAKSI (11.10.2026 klo 04.50)
+
+Omistaja 10.10.2026 klo 23.0x: parhaat Pariisi harppu + Tukholma piano (Tukholman marimbamainen sointi sopi); pitkällä lennolla lyhyt luuppi rasittaa → noin 20 kappaleen soittolista satunnaisjärjestyksessä kaikissa kipeissä; ensin 8 tyylinäytettä (viulu, fagotti, lyyriset soittimet, myös moderni miksaus; yksinkertainen, kevyt, ei liian nopea). Omistaja kuuntelee näytteet sellaisinaan (sello ja kitara eivät onnistuneet, ei uusintoja); näytteet äänisivulla odottavat valintaa.
+
+## KAUPUNKIMUSIIKIN KOKEET (11.10.2026 klo 04.50)
+
+Omistaja 10.10.2026 klo 23.1x: perinnetyylin 16 koetta arkistoon; uudet hitaat yhden soittimen kokeet (Rhodes, piano, viulu, kuorolaulu + kora, duduk, koto), kaikki hidastempoisia taustamusiikkina. 7 koetta äänisivulla odottaa omistajan valintaa.
+
+## TAIDEMUSEON KERTOJAN TEKSTIT JA KERTOJA V2 (11.10.2026 klo 04.50)
+
+Omistaja 10.10.2026 klo 23.3x, kortti "Luen ensin itse": pääsalin 20 ja grafiikkasalin 13 tekstiä (55–77 sanaa, koukku + Katso + loppu) luettiin ennen generointia ja hyväksyttiin yöllä → kertoja v2 33/33 äänitetty (William, turbo, tempo 1,10×, kestot 32–48 s, 16 yli 40 s), Julkaisija vei, LS2 kytki 33 pysähdystä (2c92d79da). Aamulla kysymys omistajalle pisimpien lyhentämisestä noin 55 sanaan (uusi generointi vain luvalla).
+
+## PALLO 40 FPS (11.10.2026 klo 04.50)
+
+Omistaja 11.10.2026 klo 00.0x, kortti "40 kuvaa sekunnissa (suositus)"; Natiivisepän akku- ja lämpömittaus TF 180: Pariisin pallo 60 fps täytti GPU:n ja iPad Pro 13 kuumeni 2 min 10 s:ssa. Kuumailmapallo 40 fps myös viileänä, lämpöhidastus jo lämpimänä, kartan lepo 10 Hz; resoluutio- ja piirtovälimuutokset vasta uuden mittauksen jälkeen. Natiiviseppä 5eb15ef80 junassa 181: GPU 59 % (ennen noin 100 %), kuumeni 4 min 50 s:ssa; lämmin-sääntö ei laukea, koska iPad hyppää normaalista suoraan kuumaan → jatkokorjaus. Raamattuun LÄMPÖ JA VIRRANKULUTUS NATIIVISSA -kohtaan.
+
+## PARIISIN KIPPI JA SAAPUMISESITYS (TF 180 -PALAUTE) (11.10.2026 klo 04.50)
+
+Omistaja 10.–11.10.2026 klo 23.5x–00.0x: saapumisesityksen musiikki alkaa isoisän "Pariisi"-sanan kanssa ja iskulause heti perään, lisäkuvat heti kolmen aloituskuvan jälkeen; Notre-Dame laskeutuu nopeammin ja kaartaa etupuolelle; metrolinjan nimikyltti pienemmäksi ja koko ajan näkyviin; kipin kuvat pykälän isommiksi iPhonella ja kuvateksti pois isonnetusta kuvasta. Toteutus junaan 181: LS1 6839cc2db (musiikki ja "Pariisi" samassa ruudussa, aanet.EsitysMusiikinKerroin ×6,8 dataan, PT:n päätös) ja 2961b872d (ei seisahduksia, Notre-Dame edestä, Concorde lähellä); NUI 0fb0ad5bf (metrokyltti 26 pt koko ajan, reunan kuvat 40 → 56 pt, isonnetusta kuvasta kuvateksti pois; kuvaajan nimi ja lisenssi jäävät, koska käyttölupa vaatii).
+
+## PULU CYP -PISTOKOE JA PILVIOHJEEN LUKUSÄÄNTÖ (11.10.2026 klo 04.50)
+
+SK 11.10.2026 klo 00.1x: Pulu CYP -pistokoe (37 väitettä: 17 oikein, 19 epätarkkaa, 1 virhe) → 20 korjausta haaraan pulu-cyp-pilvi 959e99b95 → Julkaisija vie. Toistuva virhetyyppi pilviohjeeseen ennen seuraavia maita: tarkat luvut ja vuodet (asukasluvut, lajimäärät, perustamisvuodet) vain yhdestä Wikipedia-lähteestä → tarkistetaan toisesta lähteestä tai jätetään pois; syy-seuraus-selitykset vain lähteen sanoin.
+
+## TAIDEMUSEON OPASTETTU KIERROS 33 TEOKSELLA (11.10.2026 klo 04.50)
+
+PT 11.10.2026 klo 00.4x (omistajan "taulut liian kaukaa ja matalalta" -palautteen jatkona): opastettu kierros pysähtyy jokaisella 33 kertojatekstin teoksella (pääsali 20 + grafiikka 13), kamera teoksen eteen keskikorkeudelle, teos 60–70 % ruudun korkeudesta; muut 29 ripustettua teosta näkyvät matkalla, ⏭ ohittaa.
+
+## OLAVINLINNA: MINIKARTTA POIS JA YÖTYÖ PAREMMAKSI (11.10.2026 klo 04.50)
+
+Omistaja 11.10.2026 klo 00.4x: "Ota linnan vasen yläkulman mini kartta pois" → "minikartta" oli levossa näkynyt liikkumistatti, joka ilmestyy nyt vasta kosketuksesta (Siirtoseppä 9c59fcf3b). 00.3x: "Testaa itse Olavinlinnan peliä ja tee siitä paljon parempi" → yösuunnitelma scratchpad/olavinlinna-yosuunnitelma-20261011.md (A estäjät: varoitus aina ennen kiinniottoa, liike lattiassa, tyrmästä alle 60 s, vihjeet näkyviin, vieraat kyltit pois, botti koko peliin; B tuntuma: pimeys pelattavaksi, kynttilä, äänet, historia; C laatuportti: Laitetestaajan ensikertalainen → PT katsoo arkit itse → vasta sitten juna 181 ja omistaja). PULU EI OLE VIDEOPELISSÄ (omistaja 8.10.). Laitetestaajan ensikertalainen ei päässyt läpi TF 180:llä, 181d:llä eikä v6:lla (3. kierros: pelaaja ei löytänyt tyrmän ovea itse) → v7 olavinlinna-yhdistetty-181g ja v8 (ovi oikeilla kosketuksilla, hälytyksen kameralukko, laiturin kallistus, tyrmän alarajavalo) → 4. kierros.
+
+## OPPAAN KIERROSVALINTA ILMAN IKÄKYSELYÄ (11.10.2026 klo 04.50)
+
+PT 11.10.2026 klo 04.5x: elävän oppaan kierrosvalinnat Esittele kaupunki ja Lisää tätä kaupunkia menevät suoraan oppaalle ilman ikäkyselyä, koska kohdekaupungeissa kierros on esigeneroitu (worker kohtelee valintaa kuten toiveen puuttumista); muut valinnat kulkevat chatin kautta ikäkyselyineen. NUI b65f6507b junaan 181 (samalla oppaan kysymyksen sirurivi Wien, Vilna, Luxemburg ja Marseille).
+
+## PÄÄKAUPUNKIEN SÄÄLUVUT JA LUKUTARKISTUS (11.10.2026 klo 04.50)
+
+PT 11.10.2026 klo 03.4x–04.5x: pilvierät e01 (8 kaupunkia) ja e02 (6) valmiit; SK:n pistokoe 78 oikein / 46 epätarkkaa / 7 virhettä, kuvien lisenssit kunnossa. Säätietojen juurisyy: tools/hae-saaperusdata.mjs laski Open-Meteon noin 25 km:n ruudusta vain 3 vuodesta → työkalu käyttää sääaseman normaaleja en-Wikipedian ilmastotaulukosta (kausi lahde-kenttään); 14/14 päivitetty (vertailu WMO, Météo-France ja Islannin IL ≤ 0,2 °C), PILVIOHJE luku 13 (laajuus, kuvateksti, säädata). SK korjasi 4 otoskaupunkia, muiden 10 lukutarkistus pilvessä (t01, t02). Pelin saatiedot.js:n 66 kaupunkia on tehty samalla virheellä ja graafi väittää "ERA5 1991–2020" → Pelikoodarin korjauserä. e03 (Tbilisi, Jerevan, Baku, Amman, Beirut, Abu Dhabi, Manama) käynnissä vanhalla säätyökalulla → säärivit uudelleen; Ramallah jätetty pois herkkänä → omistajalle. Ei vientiä peliin ennen QA:ta.
