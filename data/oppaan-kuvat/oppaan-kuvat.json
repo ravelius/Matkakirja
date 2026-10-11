@@ -1,6 +1,6 @@
 {
  "skeema": 1,
- "versio": "2026-10-08",
+ "versio": "2026-10-11",
  "kaupungit": {
   "addisabeba": {
    "nimi": "Addis Abeba",
@@ -114794,28 +114794,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Sergels torg.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sergels_torg.jpg?width=1280",
-     "tekija": "Original photographer: Anders Bengtsson; Image merging / retouching: Waldir",
-     "lisenssi": "CC BY-SA 2.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sergels_torg.jpg",
-     "selite": "Sergelin tori on Tukholman keskustan nykyaikainen pääaukio lasisen obeliskin ympärillä.",
-     "leveys": 3484,
-     "korkeus": 3466,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "00 5329 Stockholm - Sergels torg (T-centralen).jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_5329_Stockholm_-_Sergels_torg_(T-centralen).jpg?width=1280",
-     "tekija": "W. Bulach",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_5329_Stockholm_-_Sergels_torg_(T-centralen).jpg",
-     "selite": "Aukion mustavalkoinen kuviointi on tunnettu tukholmalainen piirre.",
-     "leveys": 3600,
-     "korkeus": 2400,
+     "tiedosto": "Brunkebergstorg ombyggnad 1969.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brunkebergstorg_ombyggnad_1969.jpg?width=1280",
+     "tekija": "Ingemar Gram",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Brunkebergstorg_ombyggnad_1969.jpg",
+     "selite": "Perustustöitä Brunkebergstorgin kupeessa vuonna 1969, kun Sergelin torin ympäristöä rakennettiin uusiksi.",
+     "leveys": 2839,
+     "korkeus": 2100,
      "tarkistettu": true
     }
    ]
