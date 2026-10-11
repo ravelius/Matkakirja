@@ -1,0 +1,513 @@
+{
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "sanmarino",
+ "maa": "SMR",
+ "era": "e02",
+ "kaupunki": {
+  "id": "sanmarino",
+  "name": "San Marino",
+  "wiki": "San Marino (kaupunki)",
+  "ambience": "vuoristo",
+  "pallo": {
+   "lat": 43.935,
+   "lon": 12.447
+  }
+ },
+ "artikkeli": {
+  "intro": "**San Marinon kaupunki** eli Città di San Marino on San Marinon tasavallan pääkaupunki ja yksi maan yhdeksästä kunnasta. Se nojaa Monte Titanon länsirinteeseen Apenniinien koillisosassa lähellä Riminiä. Perimätiedon mukaan Marinus-niminen kivenhakkaaja perusti yhteisön vuonna 301 paetessaan Rooman vainoja.\n\nVuoren kolmella huipulla on kullakin torni: Guaita, Cesta ja Montale. Nämä **kolme tornia** on kuvattu sekä maan lipussa että vaakunassa. Harjan alapuolella ovat Piazza della Libertà, Palazzo Pubblico ja uusklassinen basilika.\n\nHistoriallinen keskusta ja Titano-vuori kuuluvat UNESCOn maailmanperintöön vuodesta 2008. Kivenlouhinta ja -veisto olivat pitkään pääelinkeinoja, ja nykyään paikallinen talous nojaa matkailuun, kauppaan ja postimerkkeihin. Autot on suurelta osin kielletty keskustassa, ja kadut ovat mutkaisia ja mukulakivisiä. Kunnassa asui vuoden 2025 lopussa 4 158 ihmistä.",
+  "teksti": "Perimätiedon mukaan Marinus lähti Rabin saarelta ystävänsä Leon kanssa Riminiin kivenhakkaajaksi ja nousi sieltä Monte Titanolle, jossa hän rakensi pienen kirkon. Lähteen mukaan tiedot kirjattiin vasta vuosisatoja myöhemmin, ja varhaisin historiallinen todiste luostariyhteisöstä on 400- tai 500-luvulta. Kaupunki on nimetty pyhän Marinuksen mukaan.\n\nTunnettuja varhaisia hallintoelimiä oli Arengo, perheiden päämiesten kokous, ja kapteenivaltionhoitajan tehtävät eli kaksi yhteistä valtionpäämiestä perustettiin vuonna 1243. Vanhimmat säädökset ovat vuodelta 1263. Wienin kongressi vahvisti San Marinon itsenäisyyden 1815, ja sopimus Italian kanssa vuonna 1862 vahvisti sen uudelleen.\n\nNykyinen Palazzo Pubblico valmistui vuonna 1894, ja Vapauden patsas lahjoitettiin kaupungille 1876. Köysirata Borgo Maggioresta vihittiin 1959, ja sitä ennen Riminin ja San Marinon välillä kulki sähköistetty kapearaiteinen rautatie vuosina 1932–1944. Pienellä tasavallalla on ollut oma postisopimus Italian kanssa maaliskuusta 1877, ja postimerkeistä tuli merkittävä tulolähde."
+ },
+ "kysymykset": [
+  {
+   "q": "Minkä vuoren rinteellä San Marinon kaupunki sijaitsee?",
+   "options": [
+    "Monte Titano",
+    "Monte Baldo",
+    "Monte Cimone",
+    "Monte Conero"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Vuori on Apenniinien kalkkikivinen kallioharjanne.",
+   "fact": "San Marinon kaupunki sijaitsee Monte Titanon länsirinteellä. Vuoren kolmella huipulla on kullakin torni.",
+   "source": "https://en.wikipedia.org/wiki/City_of_San_Marino"
+  },
+  {
+   "q": "Montako tornia on kuvattu San Marinon lipussa ja vaakunassa?",
+   "options": [
+    "Kolme",
+    "Kaksi",
+    "Neljä",
+    "Viisi"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Jokaisella vuoren huipulla on oma torni.",
+   "fact": "Guaita, Cesta ja Montale on kuvattu sekä lipussa että vaakunassa.",
+   "source": "https://en.wikipedia.org/wiki/Three_Towers_of_San_Marino"
+  },
+  {
+   "q": "Missä rakennuksessa istuvat San Marinon kapteenivaltionhoitajat ja Suuri ja yleinen neuvosto?",
+   "options": [
+    "Palazzo Pubblicossa",
+    "Basilikassa",
+    "Teatro Titanossa",
+    "Guaitan tornissa"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Nykyinen rakennus valmistui vuonna 1894.",
+   "fact": "Palazzo Pubblico on kaupungintalo ja valtiollisten seremonioiden paikka. Siellä kokoontuvat myös Kahdentoista neuvosto ja Valtionkongressi.",
+   "source": "https://en.wikipedia.org/wiki/Palazzo_Pubblico_(San_Marino)"
+  },
+  {
+   "q": "Mistä materiaalista Vapauden patsas on tehty?",
+   "options": [
+    "Marmorista",
+    "Graniitista",
+    "Pronssista",
+    "Kalkkikivestä"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Patsas on väriltään vaalea.",
+   "fact": "Uusklassinen patsas on valkoisesta Carraran marmorista, ja kreivitär Otilia Heyroth Wagener lahjoitti sen vuonna 1876.",
+   "source": "https://en.wikipedia.org/wiki/Statua_della_Libertà"
+  },
+  {
+   "q": "Minä vuonna Monte Titano ja San Marinon historiallinen keskusta merkittiin UNESCOn maailmanperintöluetteloon?",
+   "options": [
+    "2008",
+    "1998",
+    "2001",
+    "2015"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Samana vuonna pidettiin Pekingin kesäolympialaiset.",
+   "fact": "Kohde on nimeltään San Marino: Historic Centre and Mount Titano, ja se täyttää kriteerin iii.",
+   "source": "https://en.wikipedia.org/wiki/Monte_Titano"
+  }
+ ],
+ "tiedot": [
+  "Rimini–San Marino -rautatien tunnelit toimivat sodan aikana pakolaisten suojana, ja 800 metrin osuus avattiin museoliikenteeseen vuonna 2012.",
+  "Pyhä Marinus esitetään perinteisesti niin, että hän pitää Monte Titanoa käsissään.",
+  "San Marinon köysiradan ensimmäinen matkustaja oli Fátiman Neitsyt Marian patsas 1.8.1959."
+ ],
+ "valokuva": {
+  "tiedosto": "Guaita Fortress and San Marino (2023).jpg",
+  "vuosi": "2023",
+  "lahde": "Terragio67, Commons (CC BY-SA 4.0)",
+  "lyhyt": "Guaitan linnake on yksi Monte Titanon kolmesta tornista.",
+  "selite": "Linnake on kuvattu San Marinon lipussa ja vaakunassa, ja sitä on vahvistettu useasti vuosisatojen aikana."
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "San Marino",
+   "johdanto": "San Marinon kaupunki nojaa Monte Titanon rinteeseen, ja vuoren kolmea huippua kruunaavat tornit näkyvät kaupungin yli. Pienen tasavallan pääkaupunki on perimätiedon mukaan perustettu vuonna 301, ja sen historiallinen keskusta kuuluu UNESCOn maailmanperintöön.",
+   "kansikuvat": [
+    {
+     "tiedosto": "Guaita fortress and the City of San Marino (2023).jpg",
+     "lyhyt": "Guaitan linnake on yksi Monte Titanon kolmesta tornista ja kuvattu maan lipussa.",
+     "selite": "Guaita-sana tarkoittaa San Marinon murteessa vartioimista.",
+     "lahde": "Terragio67, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+     "tiedosto": "San marino, veduta del monte titano 00.jpg",
+     "lyhyt": "San Marinon kaupunki sijaitsee Monte Titanon länsirinteellä.",
+     "selite": "Vuori ja historiallinen keskusta kuuluvat UNESCOn maailmanperintöön.",
+     "lahde": "Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+     "tiedosto": "San Marino dal Monte San Paolo al tramonto.jpg",
+     "lyhyt": "San Marino on Italian kokonaan ympäröimä pieni valtio Apenniinien koillisrinteillä.",
+     "selite": "Pääkaupunki sijaitsee noin kymmenen kilometrin päässä Adrianmeren rannikosta lähellä Riminiä.",
+     "lahde": "Naioli, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Kolme tornia vuoren harjalla",
+     "teksti": "Monte Titanon kolmella huipulla on kullakin torni: Guaita, Cesta ja Montale. Guaita on lähteen mukaan niistä vanhin, rakennettu 1000-luvulla, ja nykymuotonsa se sai 1400-luvulla San Marinon ja Malatestojen välisen sodan aikana. Cestan rakennusajaksi lähteet antavat 1000-luvun lopun tai 1200-luvun, ja sen sisällä on vuonna 1956 perustettu museo, jossa on yli 1 550 asetta keskiajalta nykypäivään. Montale on lähteen mukaan pienin ja nuorin, 1300-luvulta, eikä se ole yleisön käytössä. Sen sisäänkäynti on noin seitsemän metrin korkeudessa, kuten tuon ajan vankiloissa.",
+     "tiedosto": "Torri, Cesta e Montale - San Marino - GT 02 v3 - 2024-03-25.jpg",
+     "lyhyt": "Cesta ja Montale ovat kaksi San Marinon kolmesta tornista.",
+     "selite": "Kansantarun mukaan Noitien polku yhdistää tornit vuoren harjalla.",
+     "lahde": "Terragio67, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Three Towers of San Marino"
+    },
+    {
+     "otsikko": "Palazzo Pubblico",
+     "teksti": "Palazzo Pubblico on San Marinon kaupungintalo ja valtiollisten seremonioiden paikka. Siellä istuvat kapteenivaltionhoitajat, Suuri ja yleinen neuvosto, Kahdentoista neuvosto ja Valtionkongressi. Nykyisen rakennuksen suunnitteli roomalainen arkkitehti Francesco Azzurri; työ alkoi 17.5.1884, ja vihkiäisiä vietettiin 30.9.1894. Paikalla oli aiemmin 1300-luvulla rakennettu Domus Magna Comunis, ja vuonna 1873 nykyistä palatsia ei vielä ollut. Julkisivua kruunaa tykkimuuri, ja ulkoasu muistuttaa Firenzen Palazzo Vecchiota pienemmässä mittakaavassa. Gae Aulentin johtama laaja kunnostus vihittiin 30.9.1996.",
+     "tiedosto": "Palazzo Pubblico - View from place in front of Galleria arte moderna e contemporanea - San Marino (2022).jpg",
+     "lyhyt": "Palazzo Pubblicossa istuvat kapteenivaltionhoitajat ja Suuri ja yleinen neuvosto.",
+     "selite": "Palatsin paikalla oli aiemmin 1300-luvulla rakennettu Domus Magna Comunis.",
+     "lahde": "Terragio67, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Palazzo Pubblico (San Marino)"
+    },
+    {
+     "otsikko": "Basilika ja sen edeltäjät",
+     "teksti": "San Marinon basilika on kaupungin pääkirkko, omistettu valtion perustajalle Marinukselle. Se on San Marinon-Montefeltron hiippakunnan sivukatedraali, ja se nostettiin basilikaksi 21.7.1926. Vanha kirkko purettiin 1807, ja uusklassinen rakennus tehtiin 1826–1838; Montefeltron piispa Crispino Agostinucci vihki sen 5.2.1838. Pääovella on kahdeksan korinttilaista pylvästä ja sisällä kuusitoista. Pyhän Marinuksen patsas on Canovan oppilaan Adamo Tadolinin työ. Vieressä on Chiesa di San Pietro, jonka krypassa on kaksi kallioon hakattua syvennystä; perimätiedon mukaan Marinus ja Leo nukkuivat niissä.",
+     "tiedosto": "Basilica del Santo Marino, San Marino, 2022-09-20, DD 11.jpg",
+     "lyhyt": "Basilika on omistettu valtion perustajalle Marinukselle.",
+     "selite": "Pyhän Marinuksen jäännökset ovat basilikan alttarin alla.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Basilica di San Marino"
+    },
+    {
+     "otsikko": "Köysirata ja rautatie",
+     "teksti": "Köysirata yhdistää Borgo Maggioren ja San Marinon kaupungin. Kahden minuutin matka kulkee 15 minuutin välein, rata on 338 metriä pitkä ja nousee 166 metriä. Rakennus alkoi 1956, ja rata vihittiin 1.8.1959; ensimmäisenä matkustajana oli Fátiman Neitsyt Marian patsas. Ennen köysirataa Riminin ja San Marinon välillä kulki 31,5 kilometrin sähköistetty kapearaiteinen rautatie vuosina 1932–1944. Sota-aikana se pommitettiin ja suljettiin, ja tunnelit toimivat pakolaisten suojana.",
+     "tiedosto": "Funivia di San Marino.jpg",
+     "lyhyt": "San Marinon köysirata yhdistää Borgo Maggioren ja kaupungin.",
+     "selite": "Rata on 338 metriä pitkä ja nousee 166 metriä.",
+     "lahde": "NikonZ7II, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Funivia di San Marino"
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "Torre Guaita, San Marino, 2022-09-20, DD 43.jpg",
+     "lyhyt": "Guaitan linnakkeen pihalla on kaksi mörssäriä ja kaksi 75 mm:n tykkiä.",
+     "selite": "Tykit ovat lahjoja Viktor Emanuel II:lta ja III:lta.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "kappale": "San Marinoon pääsee yleensä Riministä, ja Riminiin kulkevan linja-autovuoron päätepysäkki on kaupungin keskusbussipysäkki Piazzale Marino Calcignilla. Lähimpiä lentoasemia ovat Federico Fellini Riminissä, Forlì, Ancona ja Bologna. Rajalla Italian kanssa ei ole muodollisuuksia. Keskustassa autot on suurelta osin kielletty, ja kadut ovat mutkaisia ja mukulakivisiä. Köysirata Borgo Maggioresta tuo kaupunkiin 15 minuutin välein. Guaita ja Cesta ovat vierailtavissa, mutta Montale ei ole yleisön käytössä.",
+    "artikkeli": {
+     "nimi": "Matkailijan San Marino",
+     "taitto": "opas",
+     "teksti": "Mutkaiset mukulakivikadut, kolmen tornin harjapolku ja Piazza della Libertà tekevät pienestä vuorikaupungista kävelijän kohteen.",
+     "nosto": "Rimini on lähin rannikkokaupunki, ja köysirata tuo Borgo Maggiorelta kaupunkiin kahdessa minuutissa.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Lähimmät lentoasemat ovat Federico Fellini Riminissä, Forlì, Ancona ja Bologna, ja Riminin lentoasema on virallisesti nimeltään Rimini–San Marino. Riministä kulkee linja-autovuoro kaupungin keskusbussipysäkille, joka on seitsemälle maan kahdeksasta bussilinjasta pääteasema. Köysirata Borgo Maggioresta kulkee 15 minuutin välein, ja sen yläpysäkki on historiallisen keskustan pohjoispäässä alle 200 metrin päässä basilikasta ja Piazza della Libertàsta. Hissit yhdistävät ylä- ja alakaupunkia.",
+       "kuva": {
+        "tiedosto": "San Marion-Ropeway-Bottom-up-21.jpg",
+        "lyhyt": "Köysirata uudistettiin 1990-luvulla ja uudelleen vuonna 2017.",
+        "selite": "Vuonna 1959 vihityn radan uudistuksessa 1995–1996 asennettiin kaksoiskannatinköydet.",
+        "lahde": "Asurnipal, Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      },
+      {
+       "otsikko": "Tornit ja muurit",
+       "teksti": "Kolmen tornin harjapolulla Guaita ja Cesta ovat vierailtavissa. Cestassa on asemuseo, jossa on yli 1 550 asetta keskiajalta nykypäivään. Montale on yksityisessä omistuksessa eikä ole yleisön käytössä, joten sitä katsellaan ulkoa. Kansantarun mukaan Noitien polku yhdistää tornit harjalla."
+      },
+      {
+       "otsikko": "Aukio ja valtion keskus",
+       "teksti": "Piazza della Libertàlla seisovat Palazzo Pubblico ja Vapauden patsas. Basilika ja Chiesa di San Pietro ovat noin 200 metrin päässä köysiradan yläpysäkiltä. Basilikan krypassa on kaksi kallioon hakattua syvennystä, joiden perimätiedon mukaan Marinus ja Leo nukkuivat.",
+       "kuva": {
+        "tiedosto": "Piazza della Liberta din San Marino2.jpg",
+        "lyhyt": "Vapauden patsaan päässä on kolmen tornin kruunu.",
+        "selite": "Valkoisesta Carraran marmorista tehdyn patsaan lahjoitti vuonna 1876 kreivitär Otilia Heyroth Wagener Berliinistä.",
+        "lahde": "Cezar Suceveanu, Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Keittiö on hyvin lähellä Keski-Italian, erityisesti Emilia-Romagnan ja Marchen ruokaa. Lähteen mukaan tunnetuin oma tuote on Torta Tre Monti, vohvelikerroksista valmistettu ja suklaalla peitetty kakku, joka kuvaa kolmea tornia. Maassa on myös pieni viiniteollisuus. Talvisin suosittua on härkäpapukeitto, ympäri vuoden jänismuhennos fenkolilla ja jälkiruokana cacciatello-kakku."
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Alueen ilmasto on kostea subtrooppinen: kesä on lämmin tai kuuma ja talvi viileä, ja yli 400–500 metrin korkeudessa sataa lunta lähes joka talvi. Open-Meteon säädatan mukaan tammikuun keskilämpö on 2,8 °C ja elokuun 22,0 °C. Sadetta tulee vuodessa yhteensä noin 703 mm, ja kuivin kuukausi on heinäkuu (24 mm) ja sateisin joulukuu (87 mm).",
+       "kuva": {
+        "tiedosto": "San Marino panorama.jpg",
+        "lyhyt": "San Marino on Italian kokonaan ympäröimä, Apenniinien rinteillä sijaitseva tasavalta.",
+        "selite": "Maan kaupunki on kostean subtrooppisen ilmaston alueella, ja Adrianmeren rannikolle on matkaa noin kymmenen kilometriä.",
+        "lahde": "Max_Ryazanov, Wikimedia Commons (CC BY-SA 3.0)"
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Kolmen tornin harjakävely",
+        "tahdet": 3,
+        "selite": "Guaita ja Cesta ovat vierailtavissa, ja Montale näkyy ulkoa."
+       },
+       {
+        "mita": "Köysirata Borgo Maggiorelta",
+        "tahdet": 2,
+        "selite": "Kahden minuutin matka tarjoaa näkymiä Adrianmerelle."
+       },
+       {
+        "mita": "Piazza della Libertà ja Palazzo Pubblico",
+        "tahdet": 3,
+        "selite": "Francesco Azzurrin suunnittelema kaupungintalo ja Vapauden patsas ovat saman aukion varrella."
+       },
+       {
+        "mita": "Basilika ja San Pietron kirkko",
+        "tahdet": 2,
+        "selite": "Uusklassisen basilikan viereisen kirkon krypassa on kallioon hakatut syvennykset."
+       },
+       {
+        "mita": "Cestan asemuseo",
+        "tahdet": 2,
+        "selite": "Näyttelyssä on yli 1 550 asetta keskiajalta nykypäivään."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Kadut",
+        "teksti": "Kaupungin kadut ovat mutkaisia ja mukulakivisiä, ja autot on suurelta osin kielletty keskustassa."
+       },
+       {
+        "otsikko": "Kaksi pysäkkiä",
+        "teksti": "Köysiradan yläpysäkki on historiallisen keskustan pohjoispäässä, ja bussit pysähtyvät Piazzale Marino Calcignilla."
+       },
+       {
+        "otsikko": "Raja",
+        "teksti": "Rajalla Italian kanssa ei ole muodollisuuksia, mutta matkailutoimistosta voi ostaa passiin leimattuja matkamuistopostimerkkejä."
+       },
+       {
+        "otsikko": "Montale",
+        "teksti": "Montalen torni ei ole yleisölle avoin, joten sitä kannattaa katsella ulkoa."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "historia",
+   "nimi": "Tasavalta vuoren päällä",
+   "johdanto": "San Marinon tasavalta on perimätiedon mukaan perustettu vuonna 301, ja se on säilyttänyt itsenäisyytensä vuosisatojen ajan. Sivu kertoo, miten hallinto syntyi, miten rajat vakiintuivat ja miten pieni valtio selvisi Italian yhdistymisestä.",
+   "tehtava": {
+    "kysymys": "Keneltä Yhdysvaltain presidentiltä San Marino pyysi hyväksyntää kunniakansalaisuudelle keväällä 1861?",
+    "vaihtoehdot": [
+     "Abraham Lincoln",
+     "George Washington",
+     "Thomas Jefferson",
+     "Ulysses Grant"
+    ],
+    "oikea": 0,
+    "fakta": "Tarjous tehtiin keväällä 1861, ja Lincoln vastasi hyväksyvänsä kunnian."
+   },
+   "nostot": [
+    {
+     "otsikko": "Kivenhakkaaja ja vuori",
+     "teksti": "Perimätiedon mukaan Marinus lähti Rabin saarelta ystävänsä Leon kanssa Riminiin kivenhakkaajaksi ja pakeni Diocletianuksen vainoja Monte Titanolle, jossa hän rakensi pienen kirkon. Lähteen mukaan tiedot kirjattiin vasta vuosisatoja hänen oletetun elinaikansa jälkeen, ja kertomukset ovat sekoitus tarua ja ihmeitä. Toisen version mukaan Marinus saapui Riminiin vuonna 257 ja vuoren omistaja Donna Felicita luovutti vuoren 301 kiitokseksi sairaan lapsensa paranemisesta. Varhaisin historiallinen todiste luostariyhteisöstä on 400- tai 500-luvulta.",
+     "tiedosto": "A 000002 24 - No Copyright - Other Known Legal Restrictions.jpg",
+     "lyhyt": "Monte Titano on kalkkikivinen kallioharjanne, jonka rinteellä San Marinon kaupunki sijaitsee.",
+     "selite": "Pyhä Marinus esitetään perinteisesti niin, että hän pitää Monte Titanoa käsissään.",
+     "lahde": "Alessandro Cassarini, Wikimedia Commons (PD)",
+     "wiki": "History of San Marino"
+    },
+    {
+     "otsikko": "Arengo ja kaksi valtionpäämiestä",
+     "teksti": "Arengo oli perheiden päämiesten kokous, ja sen perustamisajaksi eräs lähde antaa noin vuoden 1000. Vuonna 1243 perustettiin kapteenivaltionhoitajan tehtävät eli kaksi yhteistä valtionpäämiestä. Vanhimmat säädökset ovat vuodelta 1263. Suuri ja yleinen neuvosto luotiin 1400-luvulla, ja siihen kuului 60 Arengon jäsentä; Arengoa ei koottu enää vuoden 1571 jälkeen. Perustuslain ensimmäiset osat tulivat voimaan 1.9.1600, mutta onko kyse kirjoitetusta perustuslaista, riippuu määritelmästä.",
+     "tiedosto": "Chamber of the Grand and General Council of San Marino.JPG",
+     "lyhyt": "Suuri ja yleinen neuvosto istuu Palazzo Pubblicossa.",
+     "selite": "Neuvosto luotiin 1400-luvulla, ja siihen kuului 60 Arengon jäsentä.",
+     "lahde": "Ninetyone, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "History of San Marino"
+    },
+    {
+     "otsikko": "Rajat vakiintuvat",
+     "teksti": "Vuoteen 1463 asti San Marino rajoittui Monte Titanon alueeseen. Silloin se liittyi liittoumaan, joka voitti Sigismondo Malatestan, ja paavi Pius II antoi palkkioksi Fiorentinon, Montegiardinon ja Serravallen; Faetano liittyi samana vuonna. Lähteen mukaan rajat eivät ole sen jälkeen muuttuneet. Cesare Borgia miehitti tasavallan kuudeksi kuukaudeksi 1503, kunnes paavi Julius II palautti sen. Kun Napoleonin joukot lähestyivät 1797, tasavalta voitti hänen ystävyytensä, ja tarjous alueen laajentamisesta torjuttiin.",
+     "tiedosto": "San Marino cliff c1855.jpg",
+     "lyhyt": "San Marinon alue on pysynyt samana vuodesta 1463.",
+     "selite": "Paavi Pius II antoi San Marinolle palkkioksi Fiorentinon, Montegiardinon ja Serravallen.",
+     "lahde": "McLeod, Wikimedia Commons (PD)",
+     "wiki": "History of San Marino"
+    },
+    {
+     "otsikko": "Italian yhdistymisen varjossa",
+     "teksti": "Wienin kongressi vahvisti itsenäisyyden 1815, ja yritykset alistaa tasavalta paaville epäonnistuivat 1825 ja 1853. Garibaldi pakeni 1849 San Marinoon 250 seuraajansa kanssa, ja hän painosti 1860 kuningas Viktor Emanuel II:ta perumaan liittämissuunnitelman. Keväällä 1861 tasavalta tarjosi kunniakansalaisuutta presidentti Abraham Lincolnille, joka hyväksyi sen. Italian kanssa tehty sopimus vuonna 1862 vahvisti itsenäisyyden, ja sitä tarkistettiin 1872.",
+     "tiedosto": "Abraham Lincoln to the Regent Captains of San Marino - DPLA - 151f131a858b8d91c0d33ca0778641da.jpg",
+     "lyhyt": "Lincoln vastasi San Marinon kapteenivaltionhoitajille hyväksyen kunniakansalaisuuden.",
+     "selite": "Kirje on osa Yhdysvaltain ulkoministeriön arkistoa.",
+     "lahde": "Department of State. Bureau of Indexes and Archives. 7/1/1873-1/1/1931, Wikimedia Commons (PD)",
+     "wiki": "History of San Marino"
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "San Marinon historiallinen keskusta ja Monte Titanon harja kuuluvat UNESCOn maailmanperintöön. Mukana ovat kolme tornia, kaupungin hallinnon ja uskonnon keskukset sekä itse vuori.",
+  "rajat": {
+   "pohjoinen": 43.9396,
+   "etela": 43.9274,
+   "lansi": 12.443,
+   "ita": 12.4563
+  },
+  "kohteet": [
+   {
+    "nimi": "Guaitan torni",
+    "lat": 43.9354,
+    "lon": 12.4496
+   },
+   {
+    "nimi": "Cestan torni",
+    "lat": 43.9328,
+    "lon": 12.4515
+   },
+   {
+    "nimi": "Montalen torni",
+    "lat": 43.9301,
+    "lon": 12.4526
+   },
+   {
+    "nimi": "Palazzo Pubblico",
+    "lat": 43.9369,
+    "lon": 12.4466
+   },
+   {
+    "nimi": "San Marinon basilika",
+    "lat": 43.93694,
+    "lon": 12.44667
+   },
+   {
+    "nimi": "Piazza della Libertà",
+    "tyyppi": "aukio",
+    "lat": 43.9365,
+    "lon": 12.4467
+   },
+   {
+    "nimi": "Monte Titano",
+    "tyyppi": "luonto",
+    "lat": 43.935,
+    "lon": 12.45
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Guaitan torni": {
+   "aika": "1000-luku; nykymuoto 1400-luku",
+   "teksti": "Guaita on yksi Monte Titanon kolmesta tornista ja lähteen mukaan niistä vanhin: se rakennettiin 1000-luvulla. Nimi tarkoittaa San Marinon murteessa vartioimista. Linnake on kuvattu San Marinon lipussa ja vaakunassa.\n\nLinnaketta vahvistettiin useasti ja se rakennettiin uudelleen 1400-luvun lopulla; 1500-luvulla siihen lisättiin viistokatto. Sitä suojaa kaksinkertainen muuri, jonka ulompi osa on varustettu tykkimuurein ja torneilla. Vanhin osa, mastio, on säilynyt muuttumattomana, ja ylempää porttia puolustaa vuodelta 1481 peräisin oleva bertesca. Sisällä on Pyhän Barbaran kappeli, ja linnakkeesta on haettu suojaa piiritysten aikana.\n\nSisämuurin tiloja käytettiin alle kuuden kuukauden tuomioiden vankilana lokakuuhun 1970 asti. Vuonna 1873 Guaita oli jo vuosisatoja vanha. Ulkopihalla on kaksi mörssäriä ja kaksi 75 mm:n tykkiä, jotka ovat lahjoja Viktor Emanuel II:lta ja III:lta.",
+   "kuvat": [
+    {
+     "tiedosto": "Torre Guaita (San Marino) large view.jpg",
+     "lyhyt": "Guaita on Monte Titanon tornien vartiolinnake, jossa on kaksinkertainen muuri.",
+     "selite": "Sisämuurin tiloja käytettiin vankilana lokakuuhun 1970 asti.",
+     "lahde": "Terragio67, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Cestan torni": {
+   "aika": "1000-luvun loppu tai 1200-luku",
+   "teksti": "Cesta seisoo lähteen mukaan Monte Titanon korkeimmalla huipulla, ja sen toinen nimi on Fratta. Torni on rakennettu vanhan roomalaisen linnakkeen jäännösten päälle, ja sen pohja on viisikulmainen. Rakennusajaksi lähteet antavat joko 1000-luvun lopun tai 1200-luvun.\n\nPäätornissa on vartiotupa ja muutamia vankilasoluja. Sisällä on Pyhän Marinuksen kunniaksi vuonna 1956 perustettu museo, jossa on yli 1 550 asetta keskiajalta nykypäivään. Museon esineisiin kuuluu miekka, jonka Garibaldin kerrotaan lahjoittaneen San Marinolle.\n\nVuonna 1873 torni oli jo vuosisatoja vanha, mutta museota ei vielä ollut. Cesta on kuvattu San Marinon lipussa ja vaakunassa.",
+   "kuvat": [
+    {
+     "tiedosto": "Torre Cesta - San Marino - GT 01 - 2024 04 30.jpg",
+     "lyhyt": "Cestan torni seisoo vanhan roomalaisen linnakkeen jäännösten päällä.",
+     "selite": "Sisällä on vuonna 1956 perustettu asemuseo, jossa on yli 1 550 asetta.",
+     "lahde": "Terragio67, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Montalen torni": {
+   "aika": "1300-luku",
+   "teksti": "Montale on Monte Titanon kolmesta tornista pienin ja lähteen mukaan nuorin, ja se on yksityisessä omistuksessa. Rakennusajaksi lähteet antavat 1300-luvun, ja yksi artikkeli mainitsee vuoden 1278. Tornin arvellaan rakennetun suojaksi Malatestojen kasvavaa valtaa vastaan.\n\nTorni on viisikulmainen, 17,68 metriä korkea ja kolmikerroksinen, ja sen seinät ovat noin metrin paksuiset. Katto on puurunkoinen ja päällystetty paanuilla. Torni seisoo suoraan kallion päällä erillään muista rakennuksista. Sisäänkäynti on ovi noin seitsemän metrin korkeudessa, kuten tuon ajan vankiloissa, ja tornia on käytetty vankilana.\n\nLaaja restaurointi tehtiin vuonna 1935, eli vuonna 1873 sitä ei ollut vielä tehty. Lähteen mukaan torni ei ole koskaan ollut yleisölle avoin.",
+   "kuvat": [
+    {
+     "tiedosto": "Montale Tower - San Marino.jpg",
+     "lyhyt": "Montalen torni on viisikulmainen ja 17,68 metriä korkea.",
+     "selite": "Tornin sisäänkäynti on noin seitsemän metrin korkeudessa, kuten tuon ajan vankiloissa.",
+     "lahde": "Commonists, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Palazzo Pubblico": {
+   "aika": "1884–1894",
+   "teksti": "Palazzo Pubblico on San Marinon kaupungintalo ja valtiollisten seremonioiden paikka. Siellä istuvat kapteenivaltionhoitajat, Suuri ja yleinen neuvosto, Kahdentoista neuvosto ja Valtionkongressi. Rakennus kuuluu Piazza della Libertàn historialliseen ympäristöön.\n\nNykyinen palatsi on 1800-luvun lopun rakennus: Francesco Azzurri suunnitteli sen, työ alkoi 17.5.1884 ja rakennus valmistui 1894. Paikalla oli aiemmin 1300-luvulla rakennettu Domus Magna Comunis, mutta vuonna 1873 nykyistä rakennusta ei vielä ollut. Julkisivun yläosaa kruunaa tykkimuuri ja konsolit, ja kellotornissa on sama rakenne. Ulkoasu muistuttaa Firenzen Palazzo Vecchiota, mutta on paljon pienempi.\n\nGae Aulenti johti laajaa kunnostusta, jonka uudelleenvihkiäiset olivat 30.9.1996. Kahdentoista neuvoston salissa on Guercinon maalaus San Marino che benedice la città.",
+   "kuvat": [
+    {
+     "tiedosto": "Palazzo Pubblico (San Marino) 2.jpg",
+     "lyhyt": "Palazzo Pubblico on San Marinon kaupungintalo, jonka suunnitteli Francesco Azzurri.",
+     "selite": "Gae Aulenti johti laajaa kunnostusta, jonka uudelleenvihkiäiset olivat 30.9.1996.",
+     "lahde": "Terragio67, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "San Marinon basilika": {
+   "aika": "1826–1838",
+   "teksti": "San Marinon basilika on kaupungin pääkirkko, omistettu valtion perustajalle ja suojeluspyhimykselle Marinukselle. Se on San Marinon-Montefeltron hiippakunnan sivukatedraali, ja se nostettiin basilikaksi 21.7.1926.\n\nAiempi kirkko purettiin 1807. Uusi rakennus aloitettiin 28.7.1826, ja Montefeltron piispa Crispino Agostinucci vihki sen 5.2.1838, joten vuonna 1873 basilika oli jo valmis. Uusklassisen rakennuksen pääovella on kahdeksan korinttilaista pylvästä ja sisällä kuusitoista.\n\nPyhän Marinuksen patsas on Adamo Tadolinin, Canovan oppilaan, työ, ja pyhimyksen jäännökset löytyivät 3.3.1586. Pääovella on latinankielinen omistuskirjoitus perustajalle ja vapauden luojalle. Basilika on kuvattu San Marinon 10 sentin eurokolikossa.",
+   "kuvat": [
+    {
+     "tiedosto": "San Marino - Concattedrale (2023).jpg",
+     "lyhyt": "San Marinon basilika on kaupungin pääkirkko.",
+     "selite": "Pääovella on latinankielinen omistuskirjoitus perustajalle ja vapauden luojalle.",
+     "lahde": "Terragio67, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Piazza della Libertà": {
+   "aika": "Vapauden patsas 1876",
+   "teksti": "Piazza della Libertà on San Marinon kaupungin aukio Palazzo Pubblicon edessä. Aukion ympärillä ovat Palazzo Pubblico ja Statua della Libertà eli Vapauden patsas. Köysiradan yläpysäkiltä aukiolle on matkaa alle 200 metriä.\n\nPatsas on tehty valkoisesta Carraran marmorista, ja se on uusklassinen. Kuvanveistäjä oli Stefano Galletti, ja patsaan lahjoitti vuonna 1876 kreivitär Otilia Heyroth Wagener Berliinistä. Patsaan päässä on kolmen tornin kruunu, joka symboloi linnoitettua kaupunkia. Patsas on kuvattu San Marinon 2 sentin eurokolikossa.\n\nVuonna 1873 patsasta ei vielä ollut, eikä nykyistä Palazzo Pubblicoa. Alueen keskeisiin paikkoihin kuuluu myös Teatro Titano, joka rakennettiin vuonna 1750 ja joka oli siis jo olemassa 1873.",
+   "kuvat": [
+    {
+     "tiedosto": "Piazza della Libertà - San Marino - 2024 02 13 - GT 01.jpg",
+     "lyhyt": "Piazza della Libertà on San Marinon kaupungin aukio Palazzo Pubblicon edessä.",
+     "selite": "Aukiolta on alle 200 metriä köysiradan yläpysäkille.",
+     "lahde": "Terragio67, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Monte Titano": {
+   "aika": "UNESCO 2008",
+   "teksti": "Monte Titano on Apenniinien kalkkikivinen kallioharjanne noin 10–13 kilometrin päässä Adrianmerestä. Vuoren korkeudeksi lähteet antavat noin 740 metriä. Sillä on kolme huippua, ja kullakin on torni.\n\nSan Marino: Historic Centre and Mount Titano merkittiin UNESCOn maailmanperintöluetteloon vuonna 2008. Alueen koko on 55 hehtaaria ja suoja-alueen 167 hehtaaria. Perusteluna on vapaan tasavallan jatkuvuus keskiajalta. UNESCO-asemaa ei vuonna 1873 vielä ollut.\n\nRinteiltä on löydetty hailla ja kaloilla kuuluvia fossiileja, osa mioseenikaudelta. Kasvillisuuteen kuuluvat kastanja, tammi, sypressi ja kuusi, ja eläimiä ovat metsäkauris, villisika, jänis ja kettu. Italialaiset kutsuvat huippua Monte Brugolaksi, koska muoto muistuttaa kuusiokoloavainta Po-tasangolta katsottuna.",
+   "kuvat": [
+    {
+     "tiedosto": "San Marino - Cloudy sunset.jpg",
+     "lyhyt": "Monte Titano on kalkkikivinen kallioharjanne, jolla on kolme huippua.",
+     "selite": "Rinteiltä on löydetty hailla ja kaloilla kuuluvia fossiileja, osa mioseenikaudelta.",
+     "lahde": "Terragio67, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": {
+  "lat": 43.94,
+  "lon": 12.45,
+  "keskilampo": [
+   2.8,
+   4.9,
+   6.3,
+   10.7,
+   15.1,
+   18.5,
+   21.8,
+   22,
+   18.2,
+   13.3,
+   9.2,
+   5.4
+  ],
+  "sade": [
+   39,
+   37,
+   82,
+   78,
+   46,
+   54,
+   24,
+   60,
+   72,
+   78,
+   46,
+   87
+  ],
+  "luonnehdinta": "Tammikuu on vuoden kylmin kuukausi keskilämmöllä 2,8 °C, ja lämpimin on elokuu 22,0 °C:lla. Sadetta tulee vuodessa yhteensä 703 mm. Kuivin kuukausi on heinäkuu (24 mm) ja sateisin joulukuu (87 mm)."
+ },
+ "ehdotukset": {
+  "lentoasema": "Rimini–San Marino (Federico Fellini)",
+  "huomiot": [
+   "Ennen–nyt-paria ei tehty: Cassarinin albumiinivedoksen ajoitus on epävarma (Commonsissa ei vuotta, toimintakausi 1800-luvun loppupuoli) ja se on käytetty nostossa T1 ilman vuotta. Jos ajoitus varmistuu, pari Cassarini + Guaita Fortress and San Marino (2023).jpg voidaan tehdä ja valokuva-osio vaihtaa vanhaksi.",
+   "Kuvapäällekkäisyys: Bini 00 on kansi 2 ja Bini 01 jätettiin pois (sama näkymä); valokuva (Guaita Fortress 2023) muistuttaa kansi 1:tä mutta on eri tiedosto.",
+   "Nosto T4: Lincolnin kirjeen kuvassa on käsinkirjoitettua tekstiä, koska kuva on asiakirja itse (kuvat.md ei hylännyt). Tarkista sopivuus.",
+   "Faktapohjan säärivi sanoo heinäkuun keskilämmöksi 22,0 °C, mutta saa.json:n mukaan 22,0 on elokuun ja heinäkuun 21,8 °C; teksteissä käytetty elokuuta.",
+   "Oppaan jaksot 2 ja 4 kuvattomia (ruokakuvaa ja Cesta-museon sisäkuvaa ei ole).",
+   "Minitehtävän aiheeksi valittiin Lincoln, ja kysymys 5 vaihdettiin UNESCO-vuoteen, jotta tehtävä ei toista kaupungin kysymystä.",
+   "IATA-koodia ei ole luetuissa lähteissä, joten lentoasemakentässä ei ole koodia."
+  ]
+ }
+}
