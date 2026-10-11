@@ -15,8 +15,12 @@ namespace Matkakirja.Natiivi
         static readonly string[] Tipat = { "kaivo-01", "kaivo-02", "kaivo-03", "kaivo-04", "kaivo-05", "kaivo-06" };
         /// <summary>Askelia kauempana käytävällä ja väli (s): ohikulku sivusuunnassa oven takana.</summary>
         const int AskelMaara = 8; const float AskelValiS = 0.62f, KaytavaM = 3.5f, OhikulkuM = 7f, TippaKorkeusM = 2.3f;
-        /// <summary>Tapahtumien tasot (4. kierros: pohja −30 dB peitti 0,35–0,55:n askeleet ja 0,6–0,9:n pisarat): pisara, askel, metalli.</summary>
-        const float PisaraTaso = 1f, AskelPerus = 0.6f, AskelKeski = 0.3f, MetalliTaso = 0.7f;
+        /// <summary>Tapahtumien tasot (4. kierros: pohja −30 dB peitti 0,35–0,55:n askeleet ja 0,6–0,9:n pisarat): pisara, askel, metalli.
+        /// 5. kierros (v10, viides1.wav, Pelikoodari 11.10. 07.xx): ajastin laukesi (loki), mutta istuessa tapahtumat jäivät alle +4 dB pohjasta,
+        /// koska 3D-lähde vaimeni jo 2 m:stä (askeleet ja metalli 5–8 m oven takana ≈ −10 dB). Siksi lähiraja 6 m ja tasot ylös.</summary>
+        const float PisaraTaso = 1f, AskelPerus = 0.9f, AskelKeski = 0.1f, MetalliTaso = 1f;
+        /// <summary>Tapahtuman 3D-lähteen lähiraja (m): tämän sisällä ei vaimennusta, suunta säilyy.</summary>
+        const float TapahtumaLahiM = 6f;
         /// <summary>Tyrmän pohja (olavinlinna-soundly-v2 linna-tila-01 "Underground, Dungeon, Dark, Water Droplets, Constant Hum",
         /// −23 LUFS, 2D-silmukka) ja sen taso; simu 1a7ebdf2c: tyrmä −38,6 dB ilman sitä, tavoite (PT) −32…−30 dB.</summary>
         const string Pohja = "linna-tila-01"; const float PohjaTaso = 0.9f, PohjaNousuS = 2f;
@@ -79,7 +83,7 @@ namespace Matkakirja.Natiivi
                     // Vartijan varusteet kalahtavat käytävällä oven takana, sivussa (ei näy): kaukainen ja tumma.
                     var ulos = ovi - istuin; ulos.y = 0; ulos = ulos.sqrMagnitude > 1e-4f ? ulos.normalized : Vector3.forward;
                     var sivu = Vector3.Cross(Vector3.up, ulos) * (r < 0.5f ? 1f : -1f);
-                    SeikkailuAanet.Soita("varusteet", ovi + ulos * KaytavaM + sivu * 2.5f + Vector3.up, MetalliTaso, 0.85f + 0.1f * (float)ajastin.Satunnainen());
+                    SeikkailuAanet.Soita("varusteet", ovi + ulos * KaytavaM + sivu * 2.5f + Vector3.up, MetalliTaso, 0.85f + 0.1f * (float)ajastin.Satunnainen(), TapahtumaLahiM);
                     break;
                 }
                 case TyrmanAani.AvainRaossa: SeikkailuAanet.Soita("avainnippu", rako, 0.55f); break;
@@ -94,7 +98,7 @@ namespace Matkakirja.Natiivi
         {
             for (int i = 0; i < maara; i++)
             {
-                SeikkailuAanet.Soita(Tipat[(int)(ajastin.Satunnainen() * Tipat.Length) % Tipat.Length], paikka, PisaraTaso, 0.85f + 0.25f * (float)ajastin.Satunnainen());
+                SeikkailuAanet.Soita(Tipat[(int)(ajastin.Satunnainen() * Tipat.Length) % Tipat.Length], paikka, PisaraTaso, 0.85f + 0.25f * (float)ajastin.Satunnainen(), TapahtumaLahiM);
                 yield return new WaitForSeconds(0.4f + 0.5f * (float)ajastin.Satunnainen());
             }
         }
@@ -110,7 +114,7 @@ namespace Matkakirja.Natiivi
                 var klippi = SeikkailuAanet.Askel("kivi", false) ?? SeikkailuVartijat.AskelKlippi;
                 if (klippi == null) yield break;
                 float osuus = i / (float)(AskelMaara - 1);
-                var l = SeikkailuKuulija.Lahde("Tehoste:" + SeikkailuVartijat.VartijanAskeleet, 2f, 25f);
+                var l = SeikkailuKuulija.Lahde("Tehoste:" + SeikkailuVartijat.VartijanAskeleet, TapahtumaLahiM, 25f);
                 SeikkailuKuulija.Aseta(l, keski + sivu * Mathf.Lerp(-OhikulkuM, OhikulkuM, osuus) * 0.5f);
                 // Kaukana ja holvin takana: hiljainen ja tumma (sävel alas), keskellä kuuluvin.
                 l.clip = klippi; l.pitch = 0.88f; l.volume = (AskelPerus + AskelKeski * Mathf.Sin(osuus * Mathf.PI)) * SeikkailuAanet.Taso("tehosteet", SeikkailuVartijat.VartijanAskeleet);

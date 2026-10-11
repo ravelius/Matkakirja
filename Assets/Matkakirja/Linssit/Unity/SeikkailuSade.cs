@@ -22,7 +22,8 @@ namespace Matkakirja.Natiivi
         /// v6:ssa −37…−38 dB eli ei regressio; tavoite tyrmän tapaan −32…−30 dB): Soundly soutu-silmukka-02 "Water, Lap, Waves, Lake,
         /// Lapping Against Dock" (−23 LUFS, pankissa kytkemättä) muurin ulkopuolella jalan. Tyrmän linna-tila-01 0,9 toi n. +7 dB.</summary>
         public const string LaituriLaineet = "soutu-silmukka-02";
-        public const float LaituriLaineetTaso = 0.9f;
+        /// <remarks>Laitetestaajan 5. kierros (v10, viides1.wav): laiturilla paikallaan −32…−35 dB 0,9:llä, tavoite −31 → +3 dB (PT 07.0x).</remarks>
+        public const float LaituriLaineetTaso = 1.27f;
         internal static readonly string[] Tunnukset = { "sade-kivi", "sade-vesi", "sade-puu", "sade-pressu", "tippuminen-raystas", "tippuminen-muuri", "ukkonen-jyly",
             "tuuli-kostea", "tuuli-korkea",   // Sonniss-tuulet (Pelikoodari 9.10., ämpärissä sonniss-tuulet-v1)
             "tuuli-metsa",   // männikön tuuli muurin ulkopuolella (sonniss-aanet-v2, PT 9.10.)
