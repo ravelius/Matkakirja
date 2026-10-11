@@ -218,6 +218,12 @@ const KAUPUNGIT = {
     // Arsenaali) osuvat alueelle. Muut Venetsian kartat ovat tästä
     // poikkeus siinä, että kohteiden väliset "kadut" ovat kujia ja
     // kanavia — ks. KADUT-taulun kommentti jalankulkuluokista.
+    //
+    // POHJOINEN LAGUUNI ON YHÄ PAPERIN VÄRINEN (Euroopan meritarkistus
+    // 11.10.2026): laguuni on OSM:ssä vesirelaatio (water=lagoon), ei
+    // rantaviivaa, joten meri + meriHaku ei auta (8 rantaviivaa, ja
+    // relaatio hylätään vahdilla "peittäisi 100 %"). Korjaus vaatii
+    // relaation sisärenkaiden (saaret) leikkauksen rajaukseen.
     rajat: { pohjoinen: 45.445, etela: 45.4265, lansi: 12.3155, ita: 12.352 },
   },
   praha: {
@@ -716,6 +722,10 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 35.9035, etela: 35.8925, lansi: 14.5085, ita: 14.5205 },
     laajennus: 1.6,
+    // Grand Harbour ja Marsamxett jäivät paperin värisiksi (Euroopan
+    // meritarkistus 11.10.2026: 2 % GSHHG:n merestä näkyi vetenä).
+    meri: true,
+    meriHaku: 0.05,
   },
   luxemburg: {
     /*
