@@ -2665,14 +2665,6 @@ export const NAHTAVYYSJUTUT = {
             + 'tähtitieteilijä.',
           lahde: 'Julian Herzog, Wikimedia Commons (CC BY 4.0)',
         },
-        {
-          tiedosto: 'St Paul\'s Survives.jpg',
-          lyhyt: 'Valokuva St Paul\'sin kupolista savun keskellä 1940 pommitusyönä teki kirkosta maan symbolin.',
-          selite: 'Joulukuun 1940 pommitusyönä savun keskellä seisovasta kupolista '
-            + 'otettu valokuva kiersi maailman ja teki kirkosta koko maan '
-            + 'symbolin.',
-          lahde: 'Herbert Mason, Wikimedia Commons (PD)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -3051,12 +3043,10 @@ export const NAHTAVYYSJUTUT = {
         + 'iltaan mennessä kadonnut toisen alle.',
       kuvat: [
         {
-          tiedosto: '2024-09-26 Leake Street, London graffiti tunnel 01.jpg',
-          lyhyt: 'Leake Streetin tunneli avautui katutaiteelle toukokuussa 2008 Banksyn Cans Festivalissa.',
-          selite: 'Leake Streetin noin kolmesataa metriä pitkässä tunnelissa '
-            + 'seinien maalaaminen on sallittua, ja se avautui taiteelle '
-            + 'toukokuussa 2008 Banksyn Cans Festivalissa.',
-          lahde: 'Ted Potters, Wikimedia Commons (PD)',
+          tiedosto: "Underneath the arches. Leake Street.jpg",
+          lyhyt: "Leake Streetin tunnelien holveja Waterloon aseman alla",
+          selite: "Pimeä holvikäytävä Leake Streetin tunneleissa Waterloon aseman alla. Kuva on mustavalkoinen ja vuodelta 2011.",
+          lahde: "maggie jones., Wikimedia Commons (PD)",
         },
       ],
       lahde: 'Wikipedia',
@@ -3072,12 +3062,10 @@ export const NAHTAVYYSJUTUT = {
         + 'ihmistä sai kukin tunnin jalustan päällä ja teki siellä mitä halusi.',
       kuvat: [
         {
-          tiedosto: 'Gormley-OneandOther-4thPlinth-TrafalgarSq-20090706.jpg',
-          lyhyt: 'One & Other -teoksessa 2 400 ihmistä sai vuorollaan tunnin Trafalgar Squaren jalustalla 2009.',
-          selite: 'One & Other -teoksessa 2 400 tavallista ihmistä sai kukin '
-            + 'tunnin Trafalgar Squaren neljännellä jalustalla sadan päivän '
-            + 'ajan kesällä 2009.',
-          lahde: 'Simon Lee, Wikimedia Commons (CC BY 2.0)',
+          tiedosto: "Empty Fourth Plinth.jpg",
+          lyhyt: "Tyhjä neljäs jalusta Trafalgar Squarella",
+          selite: "Tyhjä neljäs jalusta Trafalgar Squarella. Taustalla näkyvät National Galleryn kupoli ja St Martin-in-the-Fields -kirkon torni.",
+          lahde: "Matt Brown, Wikimedia Commons (CC BY 2.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -3094,12 +3082,10 @@ export const NAHTAVYYSJUTUT = {
         + 'pääsee sisään ilmaiseksi.',
       kuvat: [
         {
-          tiedosto: 'Turbine Hall - Tate Modern - geograph.org.uk - 7509077.jpg',
-          lyhyt: 'Tate Modernin 155-metrinen turbiinihalli täyttyy kerrallaan yhdellä jättimäisellä teoksella.',
-          selite: 'Tate Modernin turbiinihalli on 155 metriä pitkä ja 35 metriä '
-            + 'korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen '
-            + 'teoksen.',
-          lahde: 'Mr Ignavy, Wikimedia Commons (CC BY-SA 2.0)',
+          tiedosto: "Tate Modern - Bankside Power Station.jpg",
+          lyhyt: "Tate Modern Thames-joen toiselta puolelta",
+          selite: "Tate Modernin rakennus ja korkea savupiippu Thames-joelta katsottuna. Rakennus toimi aiemmin Bankside-voimalana.",
+          lahde: "Acabashi, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -4187,13 +4173,10 @@ export const NAHTAVYYSJUTUT = {
           + 'seisoo yhä paikallaan.',
       kuvat: [
         {
-          tiedosto: 'Eiffel tower from trocadero.jpg',
-          lyhyt: 'Eiffel-torni pystytettiin 1889 maailmannäyttelyyn 18 038 metalliosasta ja 2,5 miljoonasta niitistä.',
-          selite: 'Gustave Eiffelin toimisto pystytti noin 300 metriä korkean '
-            + 'rautatornin reilussa kahdessa vuodessa vuoden 1889 '
-            + 'maailmannäyttelyyn 18 038 metalliosasta ja 2,5 miljoonasta '
-            + 'niitistä.',
-          lahde: 'NonOmnisMoriar, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: "Eiffel Tower and Pont d'Iéna, Paris 3 December 2016.jpg",
+          lyhyt: "Eiffel-torni Seinen yli kuvattuna",
+          selite: "Eiffel-torni kohoaa Seinen rannalla kirkkaana päivänä. Joella kulkee proomu ja rannassa on asuntolaivoja.",
+          lahde: "Guilhem Vellut, Wikimedia Commons (CC BY 2.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -4280,12 +4263,10 @@ export const NAHTAVYYSJUTUT = {
           + 'maamerkeistä.',
       kuvat: [
         {
-          tiedosto: 'Louvre Museum Wikimedia Commons.jpg',
-          lyhyt: 'I. M. Pein lasipyramidi nousi Louvren pihalle 1989, aluksi moni pariisilainen paheksui sitä.',
-          selite: 'I. M. Pein lasipyramidi nousi palatsin sisäpihalle vuonna 1989 '
-            + 'museon pääsisäänkäynniksi, ja aluksi moni pariisilainen paheksui '
-            + 'sitä.',
-          lahde: 'Benh Lieu Song, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: "Paris 1er Louvre Colonnade 559.jpg",
+          lyhyt: "Louvren kolonnadi",
+          selite: "Louvren itäjulkisivun kolonnadi, jossa kaksoispylväät kantavat rikkaasti koristeltua kattolistaa. Kuva on otettu Pariisin 1. kaupunginosassa.",
+          lahde: "GFreihalter, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -7120,12 +7101,10 @@ export const NAHTAVYYSJUTUT = {
       },
       kuvat: [
         {
-          tiedosto: '"Beeindruckende Architektur". 5.jpg',
-          lyhyt: 'MuCEM avattiin 2013 Marseillen kulttuuripääkaupunkivuonna, silta yhdistää sen Saint-Jeanin linnaan.',
-          selite: 'MuCEM avattiin vuonna 2013, kun Marseille oli Euroopan '
-            + 'kulttuuripääkaupunki, ja 130 metriä pitkä silta yhdistää sen '
-            + 'viereiseen Saint-Jeanin linnaan.',
-          lahde: 'Holger Uwe Schmitt, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "Fort-Jean à Marseille 3.jpg",
+          lyhyt: "Fort Saint-Jean Marseillen Vanhan sataman suulla",
+          selite: "Fort Saint-Jean Marseillen Vanhan sataman suulla kuvattuna Pharon puutarhasta. Kuva on otettu maaliskuussa 2008.",
+          lahde: "Robert Valette, Wikimedia Commons (CC BY-SA 3.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -7263,12 +7242,6 @@ export const NAHTAVYYSJUTUT = {
           + 'miljoonaa matkustajaa vuodessa, mutta vuonna 2024 luku oli '
           + 'jo lähes 18 miljoonaa.',
       kuvat: [
-        {
-          tiedosto: 'Gare Saint Charles Marseille 02.jpg',
-          lyhyt: 'Marseillen asema avattiin 1848 vanhan hautausmaan paikalle Pariisi–Marseille-radan pääteasemaksi.',
-          selite: 'Asema avattiin 8. tammikuuta 1848 vanhan hautausmaan paikalle, ja siitä tuli Pariisi–Marseille-radan eteläinen pääteasema.',
-          lahde: 'Houss 2020, Wikimedia Commons (CC BY-SA 4.0)',
-        },
         {
           tiedosto: 'Gare Marseille Saint Charles - Marseille I (FR13) - 2023-07-22 - 3.jpg',
           lyhyt: 'Asemalla on 16 raidetta, matkustajamäärä on kasvanut seitsemästä lähes 18 miljoonaan vuodessa.',
