@@ -1,7 +1,8 @@
 // AARRELASKURI (Natiivi-UI; omistaja 11.10.2026 klo 13.4x–13.5x Päätoimittajan kautta, juna 182): kartan yläreunan keskelle
 // "Etsityt kaupungit X/N", X = pelaajan avaamat aarteet Euroopassa (Laattamaailma.AvatutAarteet("europe")), N = tämän pelin
-// Euroopan kaupungit, joissa on aarrelaatta (AarrekaupungitYhteensa, yleensä 50; PT 11.10.: X ≤ N, jotta N/N on saavutettavissa). Tyyli: olemassa oleva päivälaskuri (Pelikellonaytto: mk-pelikello -lasipilleri ja mk-pelikello__paiva
-// -kapiteeli, isoin kirjaimin kuten "PÄIVÄ 1/80"); ei uusia tyylejä.
+// Euroopan kaupungit, joissa on aarrelaatta (AarrekaupungitYhteensa, yleensä 50; PT 11.10.: X ≤ N, jotta N/N on saavutettavissa).
+// Tyyli: olemassa oleva päivälaskuri (Pelikellonaytto: mk-pelikello -lasipilleri ja sen kellorivi mk-pelikello__kello); ei uusia
+// tyylejä. Kapiteelirivin (mk-pelikello__paiva) harvennus levitti pitkän tekstin koko leveydelle (simuajo f6d9b3ab).
 //
 // Paikka: yläpalkin alle 8 pt (kuten karttaselite), vaakasuunnassa keskelle; palkin ollessa piilossa (vaaka, iPhonen veto)
 // turva-alueen yläreunaan. Matkakirjan lappu on samassa kohdassa, joten laskuri asettuu lapun alle 6 pt; auki oleva
@@ -28,8 +29,8 @@ namespace Matkakirja.Natiivi
             juuri.name = "aarrelaskuri";
             juuri.style.left = Length.Percent(50);
             juuri.style.translate = new Translate(Length.Percent(-50), 0);
-            rivi = Rakenne.Teksti("", "mk-pelikello__paiva", juuri);
-            Kirjasimet.Aseta(rivi, Kirjasin.Kone);
+            rivi = Rakenne.Teksti("", "mk-pelikello__kello", juuri);
+            Kirjasimet.Aseta(rivi, Kirjasin.KoneBold);
             juuri.style.display = DisplayStyle.None;
             juuri.schedule.Execute(Paivita).Every(500);
         }
@@ -64,7 +65,7 @@ namespace Matkakirja.Natiivi
             int x = laatat?.AvatutAarteet(Manner) ?? 0, n = laatat?.AarrekaupungitYhteensa(Manner) ?? 0;
             if (x == naytetty && n == naytettyN) return;
             naytetty = x; naytettyN = n;
-            rivi.text = Kieli.T("ui.aarrelaskuri", x, n).ToUpperInvariant();
+            rivi.text = Kieli.T("ui.aarrelaskuri", x, n);
             Ruudunpaivitys.Herata(0.1f);
         }
     }
