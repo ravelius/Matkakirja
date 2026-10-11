@@ -185,8 +185,17 @@ syntymäpaikka. (Lähteet: [B] Culture; [Pa]; [Gr]; [Hu].)
 7. Hänen pianokonserttonsa ja -musiikkinsa vaikuttivat Chopiniin, Lisztiin ja Mendelssohniin ([Hu]).
 
 ### M4 — Soittosali on orkesteria vanhempi (wiki: Slovak Philharmonic)
-1. Slovakian filharmonia perustettiin 1949 ja se on 1950-luvulta soittanut barokkiaikaisessa Redutassa, joka
-   valmistui 1773 ([Fil]).
+1. (Korjattu 11.10.2026, Päätoimittajan päätös: nosto nykyrakennuksen kulmaan.) Nykyinen Reduta rakennettiin
+   1913–1919 vanhan viljamakasiinin (1700-luku; de: 1773–74, purettu 1911) paikalle; suunnittelijat budapestilaiset
+   Dezső Jakab ja Marcell Komor; ensimmäinen maailmansota hidasti työtä; yksi Bratislavan ensimmäisistä
+   teräsbetonirakennuksista; yksi kaupungin ensimmäisistä elokuvateattereista (1916); toisen maailmansodan jälkeen
+   valtiollistettu ja annettu Slovakian filharmonialle, jonka koti se on ollut 1950-luvulta (filharmonia.sk: "early
+   1950s"; deReduta: 1949 — ristiriita, teksti sanoo "1950-luvulta"). Lähteet: filharmonia.sk/en/about-us/history-of-reduta
+   (1913–1919, teräsbetoni, elokuvateatteri, 1950-luvun alku, makasiini 1773); sk.wikipedia Reduta (Bratislava)
+   (1913–1919, Jakab ja Komor, sýpka, WWI, filharmonia sodan jälkeen); de.wikipedia Reduta (Bratislava) (1913–1919,
+   Jakab ja Komor, Stahlbeton, Kino, WWI, verstaatlicht). Ristiriitainen tyyli (neobarokki / eklektinen /
+   uusklassinen) ja rakennusvuodet (visitbratislava 1911–1915) jätetty pois tekstistä. Aiempi väite "perustettiin 1949,
+   barokkiaikainen Reduta 1773" poistettu.
 2. Vuonna 1820 yhdeksänvuotias Franz Liszt soitti De Paulin palatsissa ([HB] 1784–1900).
 3. Franz Schmidt syntyi Pozsonyssa 22.12.1874 (siis vuotta isoisän matkan jälkeen) ja sai musiikin teorian
    perustan Pressburgin fransiskaanikirkon urkurilta Felizian Josef Moczikilta ([Sch]).
@@ -303,8 +312,10 @@ runoilija Pavol Országh Hviezdoslavin mukaan; 3) Aiempia nimiä Kossuth Lajos t
 4) Maaliskuussa 1848 Lajos Kossuth puhui väkijoukolle Zöldfa-hotellin parvekkeelta ([HB]; [Hv]); 5) Kaupunginteatteri
 (neorenessanssi, Fellner & Helmer) rakennettiin 1885–1886 ja avattiin 22.9.1886 oopperalla Bánk bán; 6) Ganymedes-
 suihkulähde (Tilgner) 1888; 7) Petőfin patsas pystytettiin 1911 ja se vaurioitui dynamiitti-iskussa 1918 jälkeen;
-8) Aukio uudistettiin 1900-luvun lopussa kävelyalueeksi; 9) Kaksi suihkulähderiviä kulkee aukion halki. 1873: ei vielä
-teatterirakennusta; aukio kantoi eri nimeä ("Promenade" mahdollinen, ei yksiselitteistä lähteessä).
+8) Aukio uudistettiin 1900-luvun lopussa kävelyalueeksi; 9) Kaksi suihkulähderiviä kulkee aukion halki. 1873: paikalla vielä
+vanhempi kaupunginteatteri (avattu 9.11.1776, Csákyn rakennuttama; snd.sk "stood here as early as in 1776", nykyrakennus
+"stands on the site of the former city theatre"; deSND: purettu 1884; uusi 1885–1886) — teksti sanoo "tilalle nykyinen
+rakennus nousi 1880-luvulla"; väite aukion nimistä 1873 poistettu (ei lähdettä).
 
 ### 6. Sininen kirkko (Pyhän Elisabetin kirkko) — rakennus — 48.14339, 17.11683 [Sk]; aika "1908–1913"
 Faktat ([Sk]): 1) Unkarilaisen jugendin kirkko vanhan kaupungin itäosassa; 2) Omistettu Unkarin Elisabetille, joka

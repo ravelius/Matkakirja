@@ -35,3 +35,5 @@ Kaikki 25 kuvaa katsottu esikatselulla (`tyokalu.mjs esikatselu`). Ei kuvanvaiht
 - Redutan nosto-teksti (kaupunkilehti[1].nostot[3]) sanoo rakennuksen valmistuneen 1773 ja olevan "barokkiaikainen"; kuvassa on uusbarokkinen nykyrakennus, joten tekstin vuosi/luonnehdinta on tarkistettava L:llä samalla.
 - Starý most -kuvan siltaa ei voi varmistaa 1891 rakennetuksi; vuosi on jätetty ensimmäisen sillan vuodeksi.
 - Vaihtoja ei ehdoteta.
+
+**Päivitys 11.10.2026:** kaupunkilehti[1].nostot[3] (Reduta): kuva ennallaan; lyhyt "Redutan runsaskoristeinen julkisivu, Slovakian filharmonian koti." ja selite "Reduta rakennettiin 1913–1919 viljamakasiinin paikalle, ja nykyään siellä on Slovakian filharmonian koti." (tyylimääre pois, lähteet ristiriidassa). Nosto-teksti kirjoitettu nykyrakennuksen kulmaan, ks. luvut.md.

@@ -1,6 +1,6 @@
 # Belgrad (e01) — kuvat
 
-Kaikki katsottu esikatselulla. Tekijä haku-komennon tekijäsarakkeesta; "CC BY-SA 3.0 rs" -lisenssi kirjattu lähderiville muotoon CC BY-SA 3.0 (tarkista `--verkko`-vertailulla). Yhtäkään tiedostoa ei löydy kansioista js/packs/ eikä docs/.
+Kaikki katsottu esikatselulla. Tekijä haku-komennon tekijäsarakkeesta; Gmihail-kuvien lisenssi kirjattu Commonsin tarkassa muodossa "CC BY-SA 3.0 RS". Yhtäkään tiedostoa ei löydy kansioista js/packs/ eikä docs/.
 
 | kohta | tiedosto | leveys×korkeus | lisenssi | lähderivi | mitä kuvassa näkyy | vuosi |
 |---|---|---|---|---|---|---|
@@ -13,7 +13,7 @@ Kaikki katsottu esikatselulla. Tekijä haku-komennon tekijäsarakkeesta; "CC BY-
 | Nosto L1 | Veliko ratno ostrvo 52.jpg | 4032×3024 | CC BY-SA 4.0 | Stasa 1234, Wikimedia Commons (CC BY-SA 4.0) | Tonavan leveä virta ja vastarannan tiheä metsä, etualalla rinteen puita ja kaide | |
 | Nosto L2 | Morski neogeni sprud na Kalemegdanu (1).jpg | 5184×3284 | CC BY-SA 4.0 | BrankaVV, Wikimedia Commons (CC BY-SA 4.0) | linnoituksen muurin alla paljastunut vaalea hiekkakivirinne, ylhäällä Pobednik-patsas | |
 | Nosto L3 | Belgrade. Forts above the Sava River.jpg | 2560×1920 | CC BY-SA 4.0 | Алексей Белобородов, Wikimedia Commons (CC BY-SA 4.0) | puiston vanhoja puita nurmikolla, taustalla tiilinen linnoituksen muuri vahtitorneineen ja Sava | |
-| Nosto L4 | Ada Ciganlija lake.jpg | 2048×1536 | CC BY-SA 3.0 rs | Gmihail at Serbian Wikipedia, Wikimedia Commons (CC BY-SA 3.0) | ilmakuva Ada Ciganlijan järvestä suihkulähteineen ja ympäröivästä metsäisestä niemestä | |
+| Nosto L4 | Ada Ciganlija lake.jpg | 2048×1536 | CC BY-SA 3.0 RS | Gmihail at Serbian Wikipedia, Wikimedia Commons (CC BY-SA 3.0 RS) | ilmakuva Ada Ciganlijan järvestä suihkulähteineen ja ympäröivästä metsäisestä niemestä | |
 | Nosto (8.) | Church of Saint Sava 2.jpg | 5100×3450 | CC BY-SA 4.0 | kallerna, Wikimedia Commons (CC BY-SA 4.0) | Pyhän Savan temppelin sisätila: kultaiset mosaiikit, kaarten holvit ja ikonostaasi | |
 | Matkailijalle (pysty 0,75) | Pobednik kalemegdan 06.jpg | 2448×3264 | CC BY-SA 4.0 | Zvezdazvezdica, Wikimedia Commons (CC BY-SA 4.0) | Pobednik-patsas vihreänä pronssina korkean hiekkakivipylvään päällä, sininen taivas ja laskevan auringon valo | |
 | Opas 1 | Belgrade Nikola Tesla Airport 4.jpg | 5100×3400 | CC BY-SA 4.0 | kallerna, Wikimedia Commons (CC BY-SA 4.0) | Nikola Tesla -lentoaseman lasipintainen terminaali illansuussa, bussi ja taksit saapumistasolla | |
@@ -28,7 +28,7 @@ Kaikki katsottu esikatselulla. Tekijä haku-komennon tekijäsarakkeesta; "CC BY-
 | Kohde 5 | Republic Square (27420599076).jpg | 3058×1818 | CC BY 2.0 | Erik Cleves Kristensen, Wikimedia Commons (CC BY 2.0) | Tasavallan aukio: ratsastajapatsas, Kansallismuseon kupoli ja Kansallisteatterin julkisivu | |
 | Kohde 6 | Skadarska street, Belgrade.jpg | 4096×3072 | CC0 | Imeao, Wikimedia Commons (CC0) | Skadarska-katu mukulakivineen, punainen vanha pieni auto ja talojen rivi | |
 | Kohde 7 | Church of Saint Sava (Belgrade, Serbia).jpg | 4608×3456 | CC BY-SA 4.0 | Petar Milošević, Wikimedia Commons (CC BY-SA 4.0) | valaistu Pyhän Savan temppeli yötaivasta vasten ja Karađorđen patsas vasemmalla | |
-| Kohde 8 | Lido veliko ratno ostrvo.jpg | 2048×1536 | CC BY-SA 3.0 rs | The original uploader was Gmihail at Serbian Wikipedia ., Wikimedia Commons (CC BY-SA 3.0) | hiekkaranta ja joenhaara, kauempana veneitä ja vastaranta | |
+| Kohde 8 | Lido veliko ratno ostrvo.jpg | 2048×1536 | CC BY-SA 3.0 RS | The original uploader was Gmihail at Serbian Wikipedia ., Wikimedia Commons (CC BY-SA 3.0 RS) | hiekkaranta ja joenhaara, kauempana veneitä ja vastaranta | |
 | Valokuva 1 | Belgrade – Kalemegdan (2021) 02.jpg | 4096×3072 | CC0 | Imeao, Commons (CC0) | linnoituksen muuri ja kävijät auringonlaskussa, joki ja saaret kaukana | |
 
 ## HYLÄTYT
@@ -46,5 +46,5 @@ Kaikki katsottu esikatselulla. Tekijä haku-komennon tekijäsarakkeesta; "CC BY-
 
 - Nosto K3 (Vinča): lisätty kuva "Винча — Бело брдо 1.jpg" (Sanja2509, CC BY-SA 3.0, 4608×3072), Vinča-Belo Brdon asuinpaikka Belgradin alueella; kuvateksti kertoo paikasta, ei kuvasta.
 - Kohde 8 (Lido veliko ratno ostrvo.jpg): tekijäksi lähderiville "Gmihail at Serbian Wikipedia" (Artist-kenttä; "The original uploader was" jätetty pois). Sama tekijä nostossa L4.
-- Gmihail-kuvien Commons-lisenssi on "CC BY-SA 3.0 rs"; työkalu hyväksyy lähderivillä vain muodon "CC BY-SA 3.0", joten `--verkko`-ajossa on kaksi varoitusta (lisenssi ≠ "CC BY-SA 3.0 rs").
+- Gmihail-kuvien Commons-lisenssi on "CC BY-SA 3.0 rs"; lähderiville ja lisenssisarakkeeseen kirjattu "CC BY-SA 3.0 RS" (Päätoimittajan päätös 11.10.2026).
 - Valokuva: Belgrade – Kalemegdan (2021) 02.jpg, nykykuva (isoisän aikaista PD-vedosta ei etsitty); ennenNyt-paria ei ole. Käyttämätön varakuva: ei jäänyt.
