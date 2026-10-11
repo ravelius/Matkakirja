@@ -19,3 +19,7 @@ Jos Artist/Author-taulurivi puuttuu mutta lisenssilaatikko antaa yhden yksiselit
 ## Summary-kappaleen nimenomainen Photo-krediitti
 
 Jos Author/Artist-rivi ja lisenssin Attribution-krediitti puuttuvat, lukija hyväksyy vain lähdesivun sisältökappaleen yhden yksiselitteisen Photo:-krediitin. File:Conakry3.JPG sanoo ”Conakry, Guinea. Photo: Soman”; Soman on sivun nimenomainen tekijäkrediitti, ei uploaderista päätelty henkilöllisyys. artistFieldSource säilyttää alkuperäksi Explicit Summary Photo credit. Todellinen sivurevisio 1244844324, alkuperäismitat 2048×1536 ja tarjottu CC BY-SA 3.0. Conakry.jpg:n erillinen Joelguinea-attribuutio ja Amuran rasterin Author-rivi tarkistettiin samalla. Yksiselitteisen krediitin puuttuessa lähdesovitus edelleen pysähtyy. Alkuperäistä tarkistusalgoritmia ei muutettu.
+
+## Photographer-rivi ja Creator-mallin nimi
+
+File-sivun nimenomainen Photographer-rivi rinnastetaan Artist/Author-krediittiriviin. Jos tämän rivin Creator-malli sisältää yhden span.fn#creator-nimen, vain se säilytetään tekijäkrediittinä: ei mallin CSS:ää, elämäkertaa, auktoriteettiluetteloa tai uploaderista pääteltyä nimeä. ASC Leidenin Providence Island -tiedostot 05-021 ja 05-022: Fred van der Kraaij, CC BY-SA 4.0, 6589×4358, revisiot 776026942/776026948. artistFieldSource kertoo Photographer table / Creator fn -alkuperän. Somanin aiempi nimenomainen Summary Photo-krediitti säilyi. Alkuperäisen tarkistimen algoritmi on ennallaan.

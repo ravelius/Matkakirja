@@ -18,8 +18,8 @@ Aiempi Sää/Commons-rajapintaeste: 11.10.2026 robots.txt kieltää en/fi-Wikipe
 | praia | valmis | poikkeama avoin | — | — | — | — | A: 5 kohdetta perustellen; B: 13 kuvaa, 8 puuttuu |
 | banjul | valmis | poikkeama avoin | korjattu luonnos | osittain | tekstikorjaukset tehty | 3 kuvavirhettä | 16 kuvaa; K3 hylätty, pysty ja Albertin torin kuva puuttuvat |
 | bissau | valmis | poikkeama avoin | korjattu luonnos | osittain | tekstikorjaukset tehty | 3 kuvavirhettä | 16 kuvaa kaavio mukaan lukien; 3 kohdekuvaa puuttuu |
-| conakry | valmis | poikkeama avoin | luonnos | työn alla | — | — | 21 kuvaa; 1 kuvavirhe / 0 varoitusta, riippumaton D etenee |
-| monrovia | valmis | työn alla | — | — | — | — | A: 6 lähdekoordinaattikohdetta ja sääaseman ero kirjattu |
+| conakry | valmis | poikkeama avoin | korjattu luonnos | osittain | E1/E2 tehty | 1 kuvavirhe | 21 kuvaa, vain Camayennen kohdekuva puuttuu |
+| monrovia | valmis | poikkeama avoin | luonnos | työn alla | — | — | 14 kuvaa, 8 kuvavirhettä; riippumaton D etenee |
 | tunis | valmis | — | — | — | — | — | A: kevyt, 6 vanhan ytimen kohdetta; ei Karthagon toistoa |
 
 Vastaanotto ei tarkoita valmista erää, Sisältökirjurin hyväksyntää, pelikytkentää tai julkaisua.
@@ -47,3 +47,5 @@ Banjul D: 3 VÄÄRIN ja 1 EPÄVARMA. E:n 4/4 kokonaisen kentän korvausta toteut
 Bissau: H1:n sisäpiha, H2:n yleinen bastionikaavio, H3:n Pidjiguiti ja H4:n yleinen uudempi satama on erotettu kuvateksteissä; kaavio ei ole Amuran piirros eikä satamakuva Tulliaukio. Kaikki 16 kuvaa katsottu B/C/D:ssä. D:n kolme tekstikorjausta toteutettiin E:ssä, ja E2 korjasi kaksi en-Wiki-otsikkoa varmennettuihin artikkeleihin. Pääsession F: 3 virhettä N1/N2/N3-kohdekuvista ja 1 kohdemäärän varoitus. Ei valmis-C/E/F tai valmis-kaupunki.
 
 Viisi kuvaporttien tulkintakysymystä postilaatikossa: #74-kuvattomuus vs 0-virheportti, 70 vuoden teoskohderaja vs kaupallinen FOP, vanha luonnonpysty, alkuperäisen painotuotteen kuvateksti sekä saman paikan kuvan käyttö nostossa ja kohdejutussa. Poikkeuksia ei sovelleta hiljaa; alkuperäiset konevirheet jäävät näkyviin. Työ jatkuu muissa kaupungeissa.
+
+Conakry D: 2 VÄÄRIN, 2 EPÄVARMA. E1 teki seitsemän sanatarkkaa JSON-korjausta ja hylkäsi luettavien kasvojen kuvan. Uusi K2:n kaupallisen sataman aluskuva B/C/D-katsottu, E2 lisäsi neljä hyväksyttyä kuvakenttää; R3:n alkuperäisen keulamaalauksen oikeuksia ei väitetä ratkaistuiksi. Pääsession F: 1 virhe / 0 varoitusta / 21 kuvaa, vain Camayenne. Monrovia C: 8 virhettä / 0 varoitusta / 14 kuvaa. Ei valmis-C/E/F tai valmis-kaupunki kummallekaan.

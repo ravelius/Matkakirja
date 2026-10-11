@@ -138,12 +138,12 @@
         },
         {
           "otsikko": "Kalasatama on oma kaupunginosansa",
-          "teksti": "Boulbinet on Conakryn kaupunginosa, johon liittyy kalastussatama. Se kuuluu Kaloumin rannikkoympäristöön, jossa sijaitsee myös kaupungin kaupallinen satama. Kalastusveneiden paikka ja konttiliikenteen satama ovat kuitenkin eri kohteita. Keskustan kalatorin suunnalta on kuvattu myös meriyhteyksiä edustan saaristoon. Boulbinet yhdistää näin kalastuksen ja kaupungin rantaa, mutta saaristomatkan tämänhetkiset järjestelyt on varmistettava erikseen. Sataman nimestä ei voi päätellä yhden veneen lastia tai reittiä.",
+          "teksti": "Boulbinet on Conakryn kaupunginosa, johon liittyy kalastussatama. Se kuuluu Kaloumin rannikkoympäristöön, jossa sijaitsee myös kaupungin kaupallinen satama. Kalastusveneiden paikka ja konttiliikenteen satama ovat kuitenkin eri kohteita. Keskustan kalatorin suunnalta on kuvattu myös meriyhteyksiä edustan saaristoon. Boulbinet tuo kalastuksen osaksi kaupungin rantaympäristöä, mutta saaristomatkan tämänhetkiset järjestelyt on varmistettava erikseen. Sataman nimestä ei voi päätellä yhden veneen lastia tai reittiä.",
           "wiki": "Conakry",
-          "tiedosto": "Port de Boulbinet1.jpg",
-          "lyhyt": "Boulbinetin veneet kuuluvat kalasataman ympäristöön.",
-          "selite": "Boulbinetin veneet vuoden 2020 kuvassa kuuluvat Conakryn kalastussataman kaupunginosan rantaan.",
-          "lahde": "Flucco, Wikimedia Commons (CC BY-SA 4.0)"
+          "tiedosto": "Bateau au port de Conakry.jpg",
+          "lyhyt": "Rahtialus Conakryn kaupallisessa satamassa vuonna 2019.",
+          "selite": "Conakryn kaupallisen sataman rahtialus vuonna 2019 näyttää satamien vertailun kaupallisen puolen, kun Boulbinet on erillinen kalasatama.",
+          "lahde": "Aboubacarkhoraa, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
           "otsikko": "Satamassa lasti kulkee molempiin suuntiin",
@@ -377,8 +377,8 @@
       "kuvat": [
         {
           "tiedosto": "Un aperçu de la ville de conakry.jpg",
-          "lyhyt": "Tombon ja Kaloumin vanha ydin vuonna 2019.",
-          "selite": "Tombon ja Kaloumin vanhan kaupunkiytimen vuoden 2019 näkymä liittää Conakryn korttelit ympäröivään mereen.",
+          "lyhyt": "Tombon ja Kaloumin vanha ydin Conakryssa.",
+          "selite": "Tombon ja Kaloumin vanhan kaupunkiytimen näkymä liittää Conakryn korttelit ympäröivään mereen.",
           "lahde": "Alpha hmd, Wikimedia Commons (CC BY-SA 4.0)"
         }
       ],

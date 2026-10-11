@@ -1,0 +1,496 @@
+{
+  "$skeema": "matkakirja-paakaupunki/1",
+  "id": "monrovia",
+  "maa": "LBR",
+  "era": "e04",
+  "kaupunki": {
+    "id": "monrovia",
+    "name": "Monrovia",
+    "wiki": "Monrovia",
+    "ambience": "satama",
+    "pallo": {
+      "lat": 6.3106,
+      "lon": -10.8047
+    }
+  },
+  "artikkeli": {
+    "intro": "**Monrovia** on Liberian pääkaupunki Atlantin rannalla Mesuradojoen äärellä. Vanha keskusta levittäytyy Cape Mesuradon niemimaalle, ja Bushrod Island jää veden erottamaksi saareksi sen pohjoispuolelle. Broad Streetin katujen pohjoispuolella Watersiden markkina-alue yhdistää asiointipaikkoja ja satamavettä.\n\nKaupunki kasvoi 1800-luvun alun uudisasutuksesta alueella, jolla paikalliset yhteisöt jo kalastivat, viljelivät ja kävivät kauppaa. Nimi annettiin James Monroen mukaan. Isoisän matkavuonna **1873** kaupungissa olivat jo vanha oikeustalo, Providence Baptistin historiallinen pyhäkkö, sanomalehdet ja Liberia College.\n\nKansallismuseo toimii myöhemmin uuteen käyttöön otetussa oikeustalossa. Kaupungin muistia säilyy myös painetuissa teksteissä ja varhaisissa valokuvissa. **Mesuradon mangrovemetsät** puolestaan pidättävät sedimenttiä ja vakauttavat rantaviivaa aivan kaupunkielämän rinnalla.",
+    "teksti": "Monrovian vanhan keskustan pääakseliin kuuluu Broad Street. Watersiden markkina-alue sijaitsee sen pohjoispuolella satamaveden äärellä. Kaupungin asiointia voi seurata sekä kaduilla että markkinan sisä- ja ulkotilojen kapeilla käytävillä.\n\n1800-luvun kaupunki tallensi itseään monella tavalla. Liberia Heraldin varhaisia toimitustekstejä kuuluu museon aineistoon, ja Augustus Washington teki Monroviassa daguerreotyyppimuotokuvia. Kirjoja, tiiliä ja puutavaraa lahjoitettiin puolestaan Liberia Collegen rakentamiseen ja opetukseen.\n\nVesi erottaa kaupungin paikkoja toisistaan. Bushrod Islandin ympärillä ovat Atlantti, Saint Paul -joki, Mesuradojoki ja Stockton Creek. West Point on oma niemekkeen asuinalueensa, jonka synty liittyy 1900-luvun kalastukseen. Mesuradon kosteikkojen mangrove tuo tähän rantakaupunkiin myös lintujen ruokailupaikat ja elinkeinoihin liittyvän luontoympäristön."
+  },
+  "kysymykset": [
+    {
+      "q": "Minkä maan pääkaupunki Monrovia on?",
+      "options": [
+        "Liberian",
+        "Sierra Leonen",
+        "Norsunluurannikon",
+        "Guinean"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Maa sijaitsee Länsi-Afrikan Atlantin rannikolla.",
+      "fact": "Monrovia on Liberian pääkaupunki ja tärkeä satamakaupunki.",
+      "source": "https://en.wikipedia.org/wiki/Monrovia"
+    },
+    {
+      "q": "Minkä valtameren rannalla Monrovia sijaitsee?",
+      "options": [
+        "Atlantin",
+        "Tyynenmeren",
+        "Intian valtameren",
+        "Pohjoisen jäämeren"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Kaupungin rannikko avautuu Afrikan länsipuolelle.",
+      "fact": "Monrovia sijaitsee Atlantin rannikolla Mesuradojoen äärellä.",
+      "source": "https://en.wikipedia.org/wiki/Monrovia"
+    },
+    {
+      "q": "Mikä oli kansallismuseon rakennuksen aiempi käyttötapa?",
+      "options": [
+        "Oikeustalo",
+        "Tullivarasto",
+        "Sairaalatalo",
+        "Lentoterminaali"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Rakennuksen varhaiseen tehtävään kuului lakiasioiden käsittely.",
+      "fact": "Liberian kansallismuseo toimii vanhassa Supreme Court -oikeustalossa.",
+      "source": "https://en.wikipedia.org/wiki/Liberian_National_Museum"
+    },
+    {
+      "q": "Millä varhaisella valokuvausmenetelmällä Augustus Washington työskenteli?",
+      "options": [
+        "Daguerreotypialla",
+        "Ambrotypialla",
+        "Stereokuvauksella",
+        "Fotogrammitekniikalla"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Hän teki Monroviassa muotokuvia jo 1800-luvun puolivälissä.",
+      "fact": "Augustus Washington toimi Monroviassa daguerreotypistinä.",
+      "source": "https://en.wikipedia.org/wiki/Augustus_Washington"
+    },
+    {
+      "q": "Miksi Providence Baptistin vanha ja suurempi pyhäkkö edustavat eri aikakausia?",
+      "options": [
+        "Ne rakennettiin eri vuosisadoilla",
+        "Niiden paikat vaihtuivat keskenään",
+        "Vanha oli uuden rakennuksen siipi",
+        "Molemmat koottiin toisessa kaupungissa"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Pienen historiallisen tilan rinnalle tuli myöhemmin laajempi tila.",
+      "fact": "Vanha pyhäkkö on 1800-luvulta, ja suurempi modernistinen naapuri rakennettiin 1900-luvun jälkipuolella.",
+      "source": "https://en.wikipedia.org/wiki/Providence_Baptist_Church"
+    }
+  ],
+  "tiedot": [
+    "Monroviassa vesi erottaa niemimaan, saaret ja rannikon asuinalueet toisistaan. Bushrod Island on eri paikka kuin vanhan keskustan niemimaa.",
+    "Kansallismuseon talo oli aiemmin oikeustalo. Museolaitoksen historia alkoi myöhemmin kuin sen nykyisen rakennuksen historia.",
+    "Providence Baptistin pieni historiallinen pyhäkkö säilyi suuremman modernistisen rakennuksen rinnalla. Samalla kirkkopaikalla on näin eri aikakausien tiloja."
+  ],
+  "valokuva": {
+    "tiedosto": "Liberia, Africa - panoramio (270).jpg",
+    "lyhyt": "Palmut ja Atlantti Monroviassa vuonna 2013.",
+    "selite": "Monrovian rannikon palmut ja Atlantin meri vuoden 2013 valokuvassa muodostavat kaupungin luontomaisemaa.",
+    "lahde": "blk24ga, Commons (CC BY 3.0)",
+    "vuosi": "2013"
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Monrovia",
+      "johdanto": "Niemimaa, joet ja saaret jakavat Monrovian kaupunkimaisemaa. Rantametsien, torikäytävien ja vanhan oikeustalon kautta kaupunki avautuu veden ja muistin paikkana.",
+      "kansikuvat": [
+        {
+          "tiedosto": "Liberia, Africa - panoramio (267).jpg",
+          "lyhyt": "Monrovian kaupunki Atlantin rannalla vuonna 2013.",
+          "selite": "Monrovian laaja rantakaupunkimaisema vuoden 2013 kuvassa liittää keskustan Atlantin rannikkoon.",
+          "lahde": "blk24ga, Wikimedia Commons (CC BY 3.0)"
+        },
+        {
+          "tiedosto": "Liberia, Africa - panoramio (265).jpg",
+          "lyhyt": "Mesuradojoki jakaa Monrovian kaupunkimaisemaa.",
+          "selite": "Mesuradojoki, saaret ja rannat vuoden 2013 näkymässä kuuluvat Monrovian veden jakamaan kaupunkirakenteeseen.",
+          "lahde": "blk24ga, Wikimedia Commons (CC BY 3.0)"
+        },
+        {
+          "tiedosto": "Liberia, Africa - panoramio (252).jpg",
+          "lyhyt": "Broad Streetin keskustaympäristö vuonna 2013.",
+          "selite": "Broad Streetin keskustaympäristö vuoden 2013 yleiskuvassa näyttää Monrovian katuverkon ja jokirannan kaupunkimaisemaa.",
+          "lahde": "blk24ga, Wikimedia Commons (CC BY 3.0)"
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Rantametsä pitää maata paikallaan",
+          "teksti": "Mesuradon kosteikkojen mangrove kuuluu Monrovian ja Montserradon alueen vesimaisemaan. Rantakasvillisuus auttaa vakauttamaan rantaviivaa, ja kosteikko pidättää veden mukana kulkevaa sedimenttiä. Metsän tehtävä ulottuu siis sen puiden ulkopuolelle, veden ja maan rajaan. Linnut käyttävät kosteikkoa ravinnonhakuun. Kalat ja äyriäiset liittävät ympäristön myös kaupunkilaisten ruokaan ja elinkeinoihin. Kaupungin rinnalla kasvava rantametsä on samalla ruokapaikka, elinympäristö ja rannan rakennetta ylläpitävä alue.",
+          "wiki": "Monrovia",
+          "tiedosto": "Mangroves near Marshall, Liberia 2.jpg",
+          "lyhyt": "Marshallin mangrove Liberiassa on yleiskuva vuodelta 2013.",
+          "selite": "Liberian Marshallin mangrove vuoden 2013 kuvassa havainnollistaa yleistä rantakasvillisuutta.",
+          "lahde": "(c) B. Phalan, some rights reserved (CC BY), Wikimedia Commons (CC BY 4.0)"
+        },
+        {
+          "otsikko": "Torikäytävä on keskustan toinen katu",
+          "teksti": "Waterside on Monrovian historiallisen keskustan pohjoispuolella sijaitseva markkina-alue. Satamaveden äärellä asioidaan sekä sisällä että ulkona. Kojut ja niiden väliset kapeat kulkuväylät rytmittävät markkinalla liikkumista. Keskustan katukaupassa myydään esimerkiksi käytettyjä vaatteita ja kodin tavaroita. Kaupunkikauppaan kuuluvat myös tuontitavaroita myyvät supermarketit. Monrovian asiointireitit kulkevat näin monenlaisten tilojen läpi: katu jatkuu käytävänä, jonka varrelta etsitään arjen tarvikkeita.",
+          "wiki": "Monrovia"
+        },
+        {
+          "otsikko": "Oikeustalosta tuli muistin talo",
+          "teksti": "Liberian kansallismuseo toimii Monroviassa vanhassa Supreme Court -oikeustalossa. Rakennus kuuluu 1800-luvun kaupunkiin, museolaitos myöhempään aikaan. Museon aineistoon kuuluu asiakirjoja, karttoja, valokuvia, huonekaluja ja arkisia käyttöesineitä. Sen tehtävä on säilyttää ja esitellä Liberian kulttuurista ja historiasta kertovia aineistoja. Rakennuksen käytön muutos tarjoaa yhteyden kahdenlaiseen muistiin: oikeustalo käsitteli asiakirjoja, ja museossa niistä tuli osa säilytettävää historiaa.",
+          "wiki": "Liberian National Museum"
+        },
+        {
+          "otsikko": "Samassa kaupungissa on myös falafelia",
+          "teksti": "Monrovian ruokapaikkojen kirjoon kuuluu liberialaisen ruoan lisäksi lebanonilaista ja muuta kansainvälistä tarjontaa. Cook shops -nimellä tunnetuissa paikoissa tarjoillaan liberialaista ruokaa, kuten riisiä ja mausteisia kastikkeita. Kaupungin ruokakuvauksissa mainitaan myös lebanonilaisia voileipiä ja falafelia. Hedelmiä ja kasviksia myydään kaupunkikaupoissa, ja Sinkorin suunnalla on kuvattu tuoreen kalan myyntiä. Satamakaupungin ruokailu löytyy sekä pienistä arkipaikoista että kansainvälisen keittiön pöydistä.",
+          "wiki": "Monrovia",
+          "tiedosto": "20240815 Falafel Plate Restaurant The Hummusapiens Berlin anagoria.jpg",
+          "lyhyt": "Berliinissä kuvattu falafel-annos on yleiskuva vuodelta 2024.",
+          "selite": "Berliinissä vuonna 2024 kuvattu falafel-annos toimii yleisenä ruokaesimerkkinä kaupunkien kansainvälisen tarjonnan yhteydessä.",
+          "lahde": "Anagoria, Wikimedia Commons (CC BY-SA 4.0)"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {},
+        "kappale": "Tutustu Monrovian vanhaan keskustaan päivänvalossa ja sovi kuljetukset etukäteen. Broad Streetin ympäristö, Watersiden arki ja historiallisten rakennusten käyttö kertovat kaupungin eri puolista. Varmista museon ja kirkon nykyiset käyntijärjestelyt paikallisesti. Veden äärellä liikkuminen vaatii ajantasaista neuvoa, eikä rantaa voi olettaa uimapaikaksi. Varaudu käteiseen ja jätä kuljetuksiin sadevaraa.",
+        "artikkeli": {
+          "nimi": "Matkailijan Monrovia",
+          "taitto": "opas",
+          "teksti": "Tutustu Monroviaan vanhan keskustan, saarten ja kaupungin muistin kautta.",
+          "nosto": "Varaa kuljetukset etukäteen ja varmista nykyinen pääsy vierailupaikoille päivänvalossa.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Monroviaa palvelee Roberts International Airport (ROB) kaupungin itäpuolella Harbelin suunnalla. Varaa nouto etukäteen ja jätä siirtymiseen joustoa tieolojen ja liikenteen vuoksi. Kaupungissa kannattaa käyttää ennalta sovittua kuljettajaa tai majoituksen järjestämää kuljetusta. Vältä pimeäajoa ja moottoripyörätakseja; sateet voivat vaikeuttaa tieoloja.",
+              "kuva": {
+                "tiedosto": "Cookies Town, Monrovia - kakata highway; Montserrado.jpg",
+                "lyhyt": "Cookies Town ja Monrovia–Kakata-tie vuonna 2020.",
+                "selite": "Cookies Town Monrovian ulkoreunalla ja Monrovia–Kakata-tie vuoden 2020 ilmakuvassa havainnollistavat alueen tieympäristöä.",
+                "lahde": "Bethel. Anthony Chisom, Wikimedia Commons (CC BY-SA 4.0)"
+              }
+            },
+            {
+              "otsikko": "Niemimaa ja vanha keskusta",
+              "teksti": "Broad Street on vanhan keskustan pääakseli, ja Watersiden markkinat ovat sen pohjoispuolella. Kansallismuseon rakennuksen aiempi käyttö ja Providence Baptistin historiallinen pyhäkkö avaavat kaupungin menneisyyttä. Bushrod Island on veden erottama saari, kun taas Mamba Point ja Sinkor ovat keskustan eri puolilla. Suunnittele käynnit päivänvaloon ja varmista paikallinen pääsy sekä kuljetus."
+            },
+            {
+              "otsikko": "Vesi ja kaupungin muisti",
+              "teksti": "Providence Island on Mesuradojoen saari, jonka paikkakuvauksessa esiintyvät kasvillisuus ja vanhat fyysiset jäljet. Mesuradon kosteikot muodostavat laajan luontoympäristön kaupungin rinnalle. Varmista mahdollinen vierailu paikallisesti; satamaan tai kosteikolle ei voi olettaa vapaata pääsyä. Vältä syrjäisiä rantoja ja hanki ajantasainen neuvo veden äärellä liikkumiseen. Voimakkaiden virtausten vuoksi rantaa ei voi pitää automaattisesti uimapaikkana."
+            },
+            {
+              "otsikko": "Ruokapaikka arjen ääreltä",
+              "teksti": "Cook shops -ruokapaikoissa tarjotaan liberialaista ruokaa, kuten riisiä ja mausteisia kastikkeita. Kaupungista on dokumentoitu myös lebanonilaista ja muuta kansainvälistä ruokaa. Kasvikset, hedelmät ja kala kuuluvat kaupunkikaupan ruokatarjontaan. Kysy päivän tarjonta paikasta ja varaudu käteismaksuun, sillä kortin tai automaatin toimivuutta ei voi olettaa.",
+              "kuva": {
+                "tiedosto": "Cooked Rice 2.jpg",
+                "lyhyt": "Nepalissa kuvattu riisi on ruoka-aineen yleiskuva.",
+                "selite": "Nepalissa vuonna 2022 kuvattu keitetty riisi toimii yleisenä ruoka-aineen havainnollistuksena.",
+                "lahde": "Gaurav Dhwaj Khadka, Wikimedia Commons (CC BY-SA 4.0)"
+              }
+            },
+            {
+              "otsikko": "Sateeseen on varattava aikaa",
+              "teksti": "Robertsin lentoaseman seudulla kaupungin itäpuolella kuukausien keskilämpötilat pysyvät noin 25–28 asteessa. Runsaat sateet painottuvat touko–lokakuuhun, ja syyskuu on sateisin kuukausi. Loppu- ja alkuvuosi ovat kuivempia, mutta silloinkin sataa. Jätä aikatauluun sadevaraa ja sovita kuljetukset tieoloihin. Merenrantaisen keskustan yksittäisen päivän olot voivat erota lentoaseman seudusta."
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Broad Street ja Waterside",
+                "tahdet": 2,
+                "selite": "Vanhan keskustan katujen ja markkinakäytävien arki jatkuu päivänvalossa."
+              },
+              {
+                "mita": "Kansallismuseon rakennushistoria",
+                "tahdet": 2,
+                "selite": "Oikeustalon muuttunut käyttö avaa kaupungin muistin kerroksia, kun nykyinen pääsy on varmistettu."
+              },
+              {
+                "mita": "Providence Baptistin vanha pyhäkkö",
+                "tahdet": 2,
+                "selite": "Historiallinen rakennus kertoo eri aikakaudesta kuin sen suurempi naapuri."
+              },
+              {
+                "mita": "Saarten ja niemimaan maisema",
+                "tahdet": 2,
+                "selite": "Providence Island ja Bushrod auttavat ymmärtämään veden jakamaa kaupunkia."
+              },
+              {
+                "mita": "Kaupungin ruokapaikkojen kirjo",
+                "tahdet": 2,
+                "selite": "Arkiset ruokapaikat ja kansainväliset keittiöt tarjoavat erilaisia näkökulmia kaupunkiruokailuun."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Sovi kuljetukset",
+                "teksti": "Varaa kuljetus etukäteen ja vältä kävelyä pimeän jälkeen sekä syrjäisiä rantoja."
+              },
+              {
+                "otsikko": "Varaudu käteiseen",
+                "teksti": "Korttimaksut ja automaatit eivät aina toimi, ja myös käteisen saatavuus voi vaihdella."
+              },
+              {
+                "otsikko": "Asiakirjat ja matkaterveys",
+                "teksti": "Tarkista omat passi-, viisumi- ja rokotustodistusvaatimukset sekä varaa matkaterveysneuvonta ja vakuutus evakuointiturvalla."
+              },
+              {
+                "otsikko": "Vesi ja vierailupaikat",
+                "teksti": "Varmista nykyinen pääsy ja kuvausohjeet; uiminen ja veneen kyyti eivät ole automaattisesti turvallisia."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "historia",
+      "nimi": "Kaupunki säilyi paperilla ja kuvassa",
+      "johdanto": "Monrovian muistia säilyy sanomalehden toimitustekstissä, muotokuvassa ja opetuksen aineistossa. Vanhan pyhäkön asiakirjat liittävät rakennuksen samaan muistien kokonaisuuteen.",
+      "tehtava": {
+        "kysymys": "Mitä Liberia College sai lahjoituksina?",
+        "vaihtoehdot": [
+          "Kirjoja, tiiliä ja puutavaraa",
+          "Karttoja, tykkejä ja laivoja",
+          "Naamioita, kankaita ja mausteita",
+          "Kameroita, vaunuja ja kivihiiltä"
+        ],
+        "oikea": 0,
+        "fakta": "Collegen tukemiseen kuului sekä opetuksessa luettavaa aineistoa että rakennukseen tarvittavia materiaaleja."
+      },
+      "nostot": [
+        {
+          "otsikko": "Toimitusteksti päätyi museoon",
+          "teksti": "Liberia Herald kuuluu Monrovian varhaiseen 1800-luvun sanomalehtihistoriaan. Charles Force liittyy lehden perustamisvaiheeseen ja John B. Russwurm sen varhaiseen toimitustyöhön. Russwurm oli ennen muuttoaan mukana New Yorkin Freedom’s Journalissa. Liberia Heraldin varhaisia toimitustekstejä kuuluu nykyään kansallismuseon aineistoon. Sanomalehden ääni voi näin säilyä kauemmin kuin yksi painopäivä: ajankohtaiseksi kirjoitettu teksti muuttuu myöhemmin lähteeksi kaupungin menneisyyteen.",
+          "wiki": "Liberia Herald",
+          "tiedosto": "Colenso press.jpg",
+          "lyhyt": "Painopuristin Paihian museorekonstruktiossa vuonna 2008.",
+          "selite": "Paihian Haven of History -museorekonstruktiossa oleva painopuristin havainnollistaa painomenetelmää vuoden 2008 valokuvassa.",
+          "lahde": "Kaihsu Tai, Wikimedia Commons (CC BY-SA 4.0)"
+        },
+        {
+          "otsikko": "Muotokuva rakensi kaupunkikuvaa",
+          "teksti": "Augustus Washington avasi Monroviaan valokuvausstudion 1800-luvun puolivälissä. Hän työskenteli daguerreotypistinä ja kuvasi kauppiaita sekä kaupungin laitosten edustajia. Pukeutuminen, asennot, huonekalut ja esineet valittiin kuviin huolellisesti. American Colonization Society tilasi muotokuvia myös yhdysvaltalaisille yleisöille. Kuvat rakensivat mielikuvaa uudesta maasta valittujen ihmisten kautta. Washington siirtyi myöhemmin muun muassa sokeriruokoviljelyyn, mutta hänen valokuvaustyönsä jäi osaksi kaupungin muistia.",
+          "wiki": "Augustus Washington",
+          "tiedosto": "Susse Frères Daguerreotype camera 1839.jpg",
+          "lyhyt": "Wienin Susse Frères -kamera havainnollistaa daguerreotypiaa.",
+          "selite": "Wienin Westlicht-museon Susse Frères -daguerreotyyppikamera vuoden 2010 valokuvassa toimii kuvausmenetelmän yleisenä havainnollistuksena.",
+          "lahde": "Liudmila & Nelson, Wikimedia Commons (PD)"
+        },
+        {
+          "otsikko": "Kirjat tulivat rakennusaineiden mukana",
+          "teksti": "Liberia College perustettiin Monroviaan 1800-luvulla. Nykyisen Liberian yliopiston edeltäjä sai tukea yhdysvaltalaisilta organisaatioilta. Lahjoituksina saatiin kirjoja, tiiliä ja puutavaraa: opiskelun sisältö ja sen tarvitsemat rakennusaineet tulivat samaan kaupunkiin. Opetukseen kuului retoriikkaa ja latinaa tuon ajan yhdysvaltalaisen college-mallin tapaan. Valtuutus, vihkiminen ja oppituntien alku olivat eri vaiheita. Isoisän matkavuonna 1873 college ja opetuksen alku kuuluivat jo Monrovian kaupunkielämään.",
+          "wiki": "University of Liberia"
+        },
+        {
+          "otsikko": "Pieni pyhäkkö jäi suuren viereen",
+          "teksti": "Providence Baptistin seurakunta syntyi 1800-luvun alun uudisasutusvaiheessa. Sen historiallinen pyhäkkö kuuluu saman vuosisadan Monroviaan. Siellä hyväksyttiin Liberian itsenäisyysjulistukseen ja perustuslakiin liittyneet asiakirjat. Pastori Hilary Teage osallistui historiallisen julistuksen kirjoittamiseen. Seurakunnan kasvu johti paljon suuremman viereisen pyhäkön rakentamiseen 1900-luvun jälkipuolella. Pieni historiallinen rakennus säilyi käytössä uuden rinnalla, ja sama kirkkopaikka sisältää nyt eri aikakausien tiloja.",
+          "wiki": "Providence Baptist Church"
+        }
+      ]
+    }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Vanhan oikeustalon ja historiallisen pyhäkön ympärillä Monrovia jatkuu saariin, jokiveteen ja rantakosteikkoon. Rakennusten käytöt ja veden erottamat luonnonpaikat kertovat kaupungin eri aikakerroksista.",
+    "rajat": {
+      "pohjoinen": 6.3602,
+      "etela": 6.2973,
+      "lansi": -10.80912,
+      "ita": -10.74728
+    },
+    "kohteet": [
+      {
+        "nimi": "Kansallismuseon vanha oikeustalo",
+        "lat": 6.3158,
+        "lon": -10.804
+      },
+      {
+        "nimi": "Providence Baptist Church, historiallinen pyhäkkö",
+        "lat": 6.3168,
+        "lon": -10.8044
+      },
+      {
+        "nimi": "Providence Island",
+        "tyyppi": "luonto",
+        "lat": 6.32,
+        "lon": -10.802
+      },
+      {
+        "nimi": "Bushrod Island",
+        "tyyppi": "luonto",
+        "lat": 6.3575,
+        "lon": -10.78556
+      },
+      {
+        "nimi": "West Point",
+        "tyyppi": "luonto",
+        "lat": 6.3273,
+        "lon": -10.8064
+      },
+      {
+        "nimi": "Mesuradon kosteikkoalue",
+        "tyyppi": "luonto",
+        "lat": 6.3,
+        "lon": -10.75
+      }
+    ]
+  },
+  "nahtavyydet": {
+    "Kansallismuseon vanha oikeustalo": {
+      "aika": "1800-luvun oikeustalo, myöhempi museokäyttö",
+      "teksti": "Liberian kansallismuseo toimii Monroviassa vanhassa Supreme Court -oikeustalossa. Rakennuksen historiallinen käyttö ajoittuu 1800-luvulle. Museo laitoksena syntyi myöhemmin, joten talon ja kokoelman historiat alkavat eri aikoina. Rakennuksen käyttötavan muutos liittää saman paikan oikeuden asiakirjoihin ja kulttuuriperinnön säilyttämiseen.\n\nMuseon tehtävänä on hankkia, säilyttää ja esitellä Liberian kulttuurista ja historiasta kertovaa aineistoa. Asiakirjat, kartat ja valokuvat ovat osa tätä muistia. Huonekalut ja arkiset käyttöesineet täydentävät kirjallista aineistoa. Museo on aiemmin sijainnut muualla, myös Providence Islandilla.\n\nIsoisän matkavuonna 1873 vanha oikeustalo kuului kaupungin rakennuksiin, mutta kansallismuseokäyttö oli vielä tulevaisuutta. Myöhemmän museon voi näin tunnistaa rakennuksesta, jonka alkuperäinen tehtävä oli toinen. Nykyinen näyttely ja käynnin järjestyminen on varmistettava erikseen.",
+      "kuvat": [],
+      "lahde": "Wikipedia"
+    },
+    "Providence Baptist Church, historiallinen pyhäkkö": {
+      "aika": "1800-luvun historiallinen pyhäkkö",
+      "teksti": "Providence Baptistin kirkkopaikka sijaitsee Monroviassa Broad-, Center- ja Ashmun-katujen ympäristössä. Seurakunta sai alkunsa 1800-luvun alun uudisasutusvaiheessa, ja sen historiallinen pyhäkkö rakennettiin saman vuosisadan aikana. Pieni vanha rakennus on säilynyt seurakunnan käytössä.\n\nPyhäkössä hyväksyttiin Liberian itsenäisyysjulistukseen ja perustuslakiin liittyneet historialliset asiakirjat. Hilary Teage osallistui julistuksen kirjoittamiseen ja oli seurakunnan pastori. Uskonnollinen tila oli näin myös asiakirjojen historiallinen tapahtumapaikka.\n\nIsoisän matkavuonna 1873 vanha pyhäkkö oli jo olemassa. Seurakunnan kasvu johti paljon suuremman viereisen pyhäkön rakentamiseen 1900-luvun jälkipuolella. Modernistinen naapuri kuuluu eri aikakauteen, vaikka molemmat rakennukset ovat samalla kirkkopaikalla. Vanhan tilan ja nykyisen suuremman rakennuksen historia avautuu niiden rinnakkaisesta käytöstä.",
+      "kuvat": [],
+      "lahde": "Wikipedia"
+    },
+    "Providence Island": {
+      "aika": "Vanha jokisaari, myöhempiä paikkakäytön kerroksia",
+      "teksti": "Providence Island sijaitsee Monroviassa Mesuradojoen vesialueella. Saaren paikkakuvaus liittyy myös Stockton Creekiin ja kaupungin rantojen väliseen vesimaisemaan. Saarta on tunnettu historiallisilla nimillä Dozoa tai Darzoe sekä Perseverance. Sen nimen alla säilyy monta kaupungin historian kerrosta.\n\nSaaren kaakkoisosaan on dokumentoitu mangrovea. Paikkakuvauksessa esiintyvät myös vanha kaivo, suuren puun ympäristö ja historiallisen rantautumislaiturin jälkiä. Myöhemmin saarelle on rakennettu vanhaa tyyliä jäljitteleviä majoja ja kokoontumistilaa. Saari kuuluu Liberian UNESCO-ehdotuslistalle.\n\nVuonna 1873 saari ja sen vanha paikankäyttö kuuluivat jo Monrovian ympäristöön. Myöhemmät rakennelmat eivät kuitenkaan ole matkavuoden alkuperäistä maisemaa. Yksittäisen nykyisen puun tai kaivon ikää ei tunneta riittävän tarkasti. Saarella luonnonpaikka ja sen myöhempi muistikäyttö kulkevat rinnakkain, ja nykyinen vierailujärjestely on varmistettava ennen käyntiä.",
+      "kuvat": [
+        {
+          "tiedosto": "ASC Leiden - F. van der Kraaij Collection - 05 - 022 - A close up of Providence Island in full, in the Mesurado river - Monrovia, Mamba Point, Montserrado, Liberia, 1975.tif",
+          "lyhyt": "Providence Island Mesuradojoessa vuonna 1975.",
+          "selite": "Providence Island Mesuradojoessa vuoden 1975 kuvassa näyttää Monrovian jokisaaren historiallisen maisemakerroksen.",
+          "lahde": "Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)"
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Bushrod Island": {
+      "aika": "Vanha luonnon- ja käyttöpaikka, myöhempiä kaupunkivaiheita",
+      "teksti": "Bushrod Island on Monrovian keskustan niemimaan pohjoispuolella sijaitseva saari. Sitä ympäröivät Atlantti, Saint Paul -joki, Mesuradojoki ja Stockton Creek. Stockton Creek yhdistää jokien vesialueita vuorovesikanavana. Vesi erottaa saaren vanhasta keskustasta ja liittää sen samalla kaupungin laajempaan rannikkorakenteeseen.\n\nDei-yhteisöt käyttivät saarta ennen 1800-luvun uudisasutusvaihetta. Saaren nimi liittyy Bushrod Washingtoniin. Asuinalueisiin kuuluvat muun muassa Vai Town, New Kru Town, Logan Town ja Clara Town. Nykyinen Freeport of Monrovia ja muuta kaupallista toimintaa sijaitsee saarella.\n\nIsoisän matkavuonna 1873 saari, sen paikalliset yhteisöt ja vesireitit olivat jo osa ympäristöä. Nykyinen Freeport ja tämän päivän kaupunginosien rajat ovat myöhempää kaupunkihistoriaa. Bushrodin rannat näyttävät veden toiselle puolelle jatkavan kaupungin, jonka eri osat kuuluvat samaan kaupunkiseutuun.",
+      "kuvat": [
+        {
+          "tiedosto": "Bushrod Island, Monrovia, Liberia.JPG",
+          "lyhyt": "Mesuradon vesi ja Monrovian rantarakenne vuonna 2010.",
+          "selite": "West Pointin etuala, Mesuradon vesi ja joen takainen kaupunkiranta kuuluvat Monrovian vuoden 2010 näkymään.",
+          "lahde": "Rjruiziii, Wikimedia Commons (CC BY-SA 3.0)"
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "West Point": {
+      "aika": "Nykyinen asuinalue 1900-luvulta",
+      "teksti": "West Point on Monrovian nimetty asuinalue Atlanttiin työntyvällä niemekkeellä. Se sijaitsee Watersiden luoteispuolella, erillään Mamba Pointista. Alue kuuluu kaupungin Mesuradon ja Saint Paul -joen vesien yhteydessä kuvattuun rannikkoympäristöön. Vesi ja tiiviiksi kasvanut asutus ovat osa samaa paikallista maisemaa.\n\nKalastajien asettuminen liittyy West Pointin 1900-luvun syntyyn. Kalastus, pienkauppa ja palvelutyö yhdistävät aluetta muun keskustan arkeen. Rantaeroosio on muuttanut niemekkeen reunaa, joten paikan rantaviiva ei ole pysynyt muuttumattomana.\n\nIsoisän matkavuonna 1873 nykyistä West Pointin asuinaluetta ei vielä ollut. Rannikon luonnonpaikka ja myöhemmin kehittynyt kaupunginosa ovat eri aikatasoja. Tämän päivän West Pointista kertova laaja paikkakuva näyttää kaupungin oman asuin- ja työympäristön. Niemekkeen sijainti meren äärellä ei itsessään tee siitä uimapaikkaa.",
+      "kuvat": [
+        {
+          "tiedosto": "An aerial view of the West Point area of Monrovia.jpg",
+          "lyhyt": "West Pointin niemeke ja rannikko vuonna 2014.",
+          "selite": "West Pointin niemeke, asuinalue ja rantaviiva vuoden 2014 kuvassa kuuluvat Monrovian paikalliseen kaupunkimaisemaan.",
+          "lahde": "Mark Fischer, Wikimedia Commons (CC BY-SA 2.0)"
+        }
+      ],
+      "lahde": "Wikipedia"
+    },
+    "Mesuradon kosteikkoalue": {
+      "aika": "Luonnonpaikka, nykyinen suojeluvaihe myöhempi",
+      "teksti": "Mesuradon kosteikkoalue on nimetty luontopaikka Monrovian ja Montserradon alueella. Sen keskeistä kasvillisuutta on mangrove. Rantakasvillisuus vakauttaa rantaviivaa ja kosteikko pidättää sedimenttiä, joten puusto, veden liike ja maan kertyminen liittyvät toisiinsa.\n\nLinnut käyttävät kosteikkoa ravinnonhakuun. Kalastus ja äyriäiset yhdistävät ympäristön myös kaupunkilaisten ruokaan ja elinkeinoihin. Kosteikon historiasta on dokumentoitu polttopuun ja hiilen keruuta sekä teollista kuormitusta luontoympäristön paineina. Rantametsä on näin sekä ekologinen että kaupunkilaisten käyttämä paikka.\n\nVuoden 1873 maisemaan kuuluu rannikon luonnonympäristö, mutta nykyinen Ramsar-suojelustatus on myöhempi vaihe. Myös kasvillisuus, käyttö ja suojelualueen rajat ovat eri aikoina dokumentoituja asioita. Kosteikon laajuus ei tarkoita valmista vierailureittiä: mahdollinen käynti ja sen järjestely on varmistettava paikallisesti.",
+      "kuvat": [
+        {
+          "tiedosto": "ASC Leiden - F. van der Kraaij Collection - 05 - 021 - Providence Island in the Mesurado river - Monrovia, Mamba Point, Montserrado, Liberia, 1975.tif",
+          "lyhyt": "Mesuradojoen ja taustan kosteikon maisema vuonna 1975.",
+          "selite": "Mesuradojoki ja taustan kosteikkokasvillisuus vuoden 1975 kuvassa kertovat Monrovian historiallisesta vesimaisemasta.",
+          "lahde": "Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)"
+        }
+      ],
+      "lahde": "Wikipedia"
+    }
+  },
+  "saatiedot": {
+    "lat": 6.31,
+    "lon": -10.8,
+    "keskilampo": [
+      26.9,
+      27.5,
+      27.9,
+      27.5,
+      26.9,
+      26.1,
+      25.3,
+      25,
+      25.5,
+      26.4,
+      26.7,
+      27
+    ],
+    "ylin": [
+      31,
+      32,
+      32,
+      31,
+      30,
+      29,
+      28,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "alin": [
+      23,
+      23,
+      24,
+      24,
+      24,
+      23,
+      23,
+      23,
+      23,
+      23,
+      23,
+      23
+    ],
+    "sade": [
+      25,
+      48,
+      97,
+      160,
+      417,
+      818,
+      696,
+      561,
+      914,
+      587,
+      191,
+      48
+    ],
+    "lahde": {
+      "nimi": "en-Wikipedia, ilmastotaulukko",
+      "kausi": "1991–2020"
+    },
+    "luonnehdinta": "Robertsin lentoaseman seudulla kuukausikeskilämpötilat pysyvät noin 25–28 asteessa. Runsaat sateet painottuvat touko–lokakuuhun, ja syyskuu on sateisin kuukausi. Loppu- ja alkuvuosi ovat kuivempia, mutta silloinkin sataa."
+  },
+  "ehdotukset": {
+    "lentoasema": "Roberts International Airport (ROB)",
+    "huomiot": [
+      "C-luonnos, ei C/E/F-valmis: 14/22 vähimmäiskuvaa. Puuttuvat K2,K3,H3,H4,Matkailijalle-pysty,N1,N2 ja oppaan kolmas kuva O3. O2/O5 ovat kaksi sallittua kuvatonta jaksoa; O3 jää niiden lisäksi aidoksi puutteeksi.",
+      "Puuttuvat nostokuvat jätetään ilman kuva-attribuutteja, matkailijalle.kuva tyhjäksi olioksi, N1/N2 tyhjiksi kuvalistoiksi ja O3 ilman kuvaa. Konevirheitä ei peitetä korvikkeilla.",
+      "K1 on Marshallin mangrovea Liberiassa, ei Monroviassa/Mesuradolla otettu kuva. K4 on Berliinissä kuvattu falafel-annos ja O4 Nepalissa kuvattua riisiä, molemmat yleiskuvitusta.",
+      "H1 on Paihian museorekonstruktion painopuristin Uudessa-Seelannissa, ei todistettu alkuperäinen 1800-luvun esine tai Liberia Heraldin oma laite. H2 on Wienin Susse Frères -daguerreotyyppikamera, ei Washingtonin oma kamera tai Monrovian studio.",
+      "O1 on Cookies Townin ulkoreuna ja Monrovia–Kakata-tie vuonna 2020, ei keskustan katu tai todistettu lentokenttäkuljetusreitti. N3/N6 ovat vuoden 1975 historiallisia aluekuvia, eivät nykyinen retkipaikka/pääsy/status.",
+      "N4:n etuala on West Point, B:n taustaranta Bushrod; D varmistaa taustan paikannuksen. N6:n taustan kosteikko B:n RSIS-2006-kartan mukaan; D tarkistaa alueen identiteetin, ei nykyinen lajisto/status.",
+      "Fred van der Kraaij -krediitti nimenomaisen Photographer-taulukon Creator fn -muodosta, ei uploaderista tai Creator-biodatasta arvaus. Sallittu lähdelukija kirjaa artistFieldSource-rajan.",
+      "Vanha oikeustalo ja historiallinen Providence Baptist -pyhäkkö erotetaan museolaitoksesta ja viereisestä modernista kirkosta. Nykyiset suojatut teokset/rakennusosat eivät saa vapautta vanhan paikan iästä; kuvaportit B:ssä/D:ssä.",
+      "Montserradon kaupunkiväestö 2022 jätetty pois: kontekstin 1 761 032 ei Monrovia City Corporationin alueen luku. Ei väestölähteen aluevaihtoa.",
+      "Karttapisteet A:n nimetyistä WP/WD-paikoista. Museon WP-rakennuspiste voittaa tässä WD:n eri paikan; Bushrod WP-piste eikä eri WD-pituusaste; Mesurado Wetlands -rivi eikä koko joen piste jokisuuna.",
+      "Rajat laskettu lähdepisteiden minimi-/maksimiarvoista noin 300 m marginaalilla. Laajojen saari-/kosteikkoalueiden koko rantaviivan näkyvyys tarkistetaan Mac-karttapiirrossa; aluepiste ei lähtölaituri tai sisäänkäynti.",
+      "Sääarvot alkuperäisestä saa.json:sta ilman tausta-kenttää. Roberts International Airportin 1991–2020 normaalit noin 60 km itään keskustasta; kaupungin tallennetut lat/lon eivät mittausaseman piste. Rainfall ja alkuperäisen työkalun pyöristykset säilyvät.",
+      "UM-LR-polulta ei saatu maakohtaista sisältöä. Virallinen vaihtoehtoinen käytännön kanava FCDO Liberia, luettu 11.10.2026; ei keksittyä UM-luokkaa. UK-passi-/viisumi-/rokotusrajoja ei siirretä suomalaisen täsmällisiksi ehdoiksi.",
+      "Ei maalehden valan/lipun/merimiesten/laivarekisterin, kansallisruoan, naamioiden, Vai-kirjoituksen tai musiikin tarinoiden toistoa. Providence Island -lähinoston ACS/Stockton/rantautumistarinaa ei uusita.",
+      "Ei ennen–nyt-paria tai ≤1900 historiallista valokuvaa; matkakirjan valokuva on Monrovian rannikon nykyajan luontokuva vuodelta 2013."
+    ]
+  }
+}

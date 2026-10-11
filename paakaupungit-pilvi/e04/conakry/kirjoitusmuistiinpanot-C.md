@@ -1,6 +1,6 @@
 # Conakry — C:n sisältöluonnos 11.10.2026
 
-**Luonnos, ei valmis C/F tai toimitusvalmis kaupunki.** `sisalto.json` sisältää tekstiosat, kuuden paikan kartan ja B:n lopulliset 21 kuvaa. Camayennen paikallinen erillinen kohdekuva puuttuu: `nahtavyydet.Camayennen kasvitieteellinen puutarha.kuvat` on tyhjä lista. O1/O2 ovat sallitut kaksi kuvatonta opasjaksoa. Näillä valinnoilla vähimmäispaketti olisi 22 kuvaa; käytössä 21.
+**Nykytila E2-korjausten jälkeen: luonnos, ei valmis C/E/F tai toimitusvalmis kaupunki.** `sisalto.json` sisältää tekstiosat, kuuden paikan kartan ja **21 käytössä olevaa kuvaa**. K2:n tyhjiin kuvakenttiin on lisätty D-lisätarkistuksen hyväksymä Bateau au port de Conakry.jpg sanatarkasti: se havainnollistaa satamavertailun kaupallista puolta, ei Boulbinetiä. Alkuperäinen Port de Boulbinet1.jpg on yhä hylätty luettavien kasvojen vuoksi, ja sen kilpimaalauksen R3-oikeuksia ei ratkaistu. Camayennen paikallinen erillinen kohdekuva puuttuu edelleen: `nahtavyydet.Camayennen kasvitieteellinen puutarha.kuvat` on tyhjä lista. O1/O2 ovat sallitut kaksi kuvatonta opasjaksoa. Näillä rooleilla vähimmäispaketti olisi 22 kuvaa; käytössä 21. Alla oleva C:n alkuperäinen 21 kuvan katselutaulukko ja E1:n 20 kuvan tarkistusloki ovat kirjoitushetkiensä historiallista aineistoa, eivät nykyisen kuvapaketin hyväksyntä.
 
 Kirjoitettu vain tämän kaupungin `sisalto.json` ja tämä muistiinpano. Omat väliaineistot NASin `valiaikainen/conakry-C`-kansiossa. Ei Git-operaatioita, Commons-kuvahakuja, kuvanmuokkausta, pelitiedostojen muutoksia tai uusia agentteja.
 
@@ -134,3 +134,15 @@ Paikallinen: `node paakaupungit-pilvi/tyokalu.mjs tarkista e04 conakry`.
 Verkko session NAS-juuresta: `node --import ./valiaikainen/lahdesovitus.mjs e04/paakaupungit-pilvi/tyokalu.mjs tarkista e04 conakry --verkko`.
 
 **Ainoa konevirhe jää näkyviin todellisena puuttuvana Camayennen paikallisena kohdekuvana.** Teksti-, skeema- ja wikiarvovirheitä tai konevaroituksia ei jäänyt. Tämä ei ole D:n riippumaton faktan-/kuvantarkistus, parvekkeen toimituksellinen hyväksyntä, veneen pintatunnuksen erillinen oikeusratkaisu, F-valmius tai pelitoimitus. Camayennen puu-/puutarhaympäristön erillinen paikallinen kohdekuva tarvitaan yhä.
+
+## Nykytilan päivitys — E1
+
+Erillinen E-korjaaja toteutti vain D:n määräämät seitsemän kokonaisarvoa: R1:n nostoteksti, R2:n neljä tyhjää kuvakenttää ja R4:n kaksi vuosiluvutonta kuvatekstiä. R3:n kilpimaalauksen oikeusketju jäi ratkaisematta; hylätyn kuvan poistaminen poisti käytön eikä todistanut maalausta vapaaksi. Nykyiset kuvatekstit eivät väitä N1:n ristiriitaista vuotta 2019/2018 varmaksi. B:n provenance ja D:n todisteet säilyvät.
+
+Paikallinen ja sallittu alkuperäinen verkkotarkistus: **2 virhettä, 0 varoitusta, 20 kuvaa**, kumpikin exit 1. Virheet ovat K2:n puuttuva tiedosto ja Camayennen puuttuva paikallinen kohdekuva. Muita tekstejä, ilmastolukuja, koordinaatteja, wikiarvoja tai kuvavalintoja ei muutettu. Muutokset ja säilymisen todisteet `valiaikainen/conakry-E/`; sisältö SHA-256 `0d7b0400af3f5704a84073e927c8da189f69c7af364c3dd1973dd4aa521d7701`. Tämä nykytilamerkintä ei ole C/E/F-valmius, valmis kaupunki, pelikytkentä tai julkaisu.
+
+## Nykytilan päivitys — E2
+
+Vain K2:n neljä kuvakenttää muutettiin sanatarkasti D-lisätarkistuksen hyväksymään uuteen rahtialuskuvaan. E1:n R1/R4-korjaukset, hylätyn Port de Boulbinet1.jpg:n poisjättö ja kaikki muut JSON-arvot säilyvät. Alkuperäisen veneen luettavat kasvot tai kilpimaalauksen erillinen oikeusketju eivät muuttuneet hyväksytyiksi.
+
+Paikallinen ja sallittu alkuperäinen verkkotarkistus: **1 virhe, 0 varoitusta, 21 kuvaa**, kumpikin exit 1. Ainoa konevirhe on Camayennen paikallisen kohdekuvan puute. Toisen kierroksen sanatarkkuus- ja säilymistodisteet `valiaikainen/conakry-E/kierros2/`; sisältö SHA-256 `a535ddac39f2744f502ac017ceac3eb95bd43958fdac482f3273760b98b7fca3`. Kaksi E-kierrosta käytetty; tämä ei ole valmis-C/E/F, valmis kaupunki, pelikytkentä tai julkaisu.

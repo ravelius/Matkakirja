@@ -336,3 +336,56 @@ Toistot eri tehtävissä ja eri tiedostoina: Conakryn kaupunki/satama yleiskuva,
 C saa21 kuvan esikatselut, lähdesivut, täsmälliset nimet/lähderivit ja selected.jsonin. C/D katsovat jokaisen kuvan uudelleen. Tarkat lähdenimen rajat säilyvät: Ratoma ei Tombo; yleinen vesiranta ei Boulbinet; Ecuador-kapokki ei Camayenne; Ghana-juoma ei Guineassa kuvattu resepti; satama ei kalasatama.
 
 **Puuttuva N3 sekä muuttuneet alkuperäiset kuvaroolit kirjataan RAPORTTIin ja koneen todelliset virheet säilyvät.** Ei nollavirhe-, valmis B/F-, game-/julkaisu- tai vuoden2026 tilanteen hyväksyntää. Roolivaihdot eivät saa johtaa uusiin lähteettömiin saari-/paikka-/teko-/resepti-/lajiväitteisiin.
+
+## B-lisäys 11.10.2026 — D:n hylkäys ja rajattu täydennys
+
+**Tämä lisäys ohittaa vanhan B-taulukon K2-valinnan `Port de Boulbinet1.jpg`.** D hylkäsi sen luettavien kasvojen vuoksi; keulakilven oikeusketju jäi myös epävarmaksi. Kuvaa EI palauteta. Alkuperäinen B-provenance ja tämä hylkäys säilyvät jälkenä; lisäys ei kirjoita sisalto.jsonia eikä poista toisen tarkastajan havaintoa.
+
+20 uutta varteenotettavaa File-ehdokasta tutkittu ja katsottu,30 enimmäiskierrosta ei täytetty väkisin. **Yksi uusi K2-roolin valinta**, mutta sen aihe on Conakryn kaupallinen satama, EI Boulbinetin kalasatama. **N3 Camayennen oma hyväksytty kuva puuttuu edelleen.** Ecuadorin puu, Camayenne-hotelli, Dixinnin muu puu tai jo käytössä oleva tiedosto eivät täytä kohteen paikkaa.
+
+K2:n sisältörajauksen tueksi A:n N2-fakta4 kertoo Kaloumin kaupallisen ja kalastussataman rinnakkaisuudesta. C voi kytkeä laivan tähän vertailuun; selite nimeää vain kaupallisen sataman/rahtialuksen. Kuvassa ei kalasteta eikä se todista Boulbinet-paikkaa. Alkuperäinen Boulbinet-kuvatarve jää kirjattavaksi roolivaihtona. K2 tarkoittaa nimenomaan kaupunkilehti[0].nostot[1]-kansinostoa, ei C2-laajaa kansikuvaa; vertailurooli vahvistettu pääsessiossa.
+
+## B-lisäyksen valittu tiedosto
+
+| Kohta | Tiedosto | Alkuperäiskoko | Lisenssi | Lähderivi | Mitä näkyy | Kuvausvuosi |
+|---|---|---|---|---|---|---|
+| K2, roolivaihto | `Bateau au port de Conakry.jpg` | 2119×1330 | CC BY-SA4.0 | Aboubacarkhoraa, Wikimedia Commons (CC BY-SA 4.0) | Kaupallisen rahtialuksen korkea valkoinen sivu merivedessä Conakryn satamassa; aluksen oma nimi ja pieni yksinkertainen C-tunniste savupiipussa. Ei ihmisiä, keulakilpeä, muotokuvaa, vesileimaa tai lisättyä kehystä. | 2019 |
+
+- Rooli/identiteetti: ROOLIVAIHTO: Conakryn KAUPALLINEN satama ja rahtialus. Ei Boulbinetin kalasatama, kalastusvene tai kuvassa näkyvän nykyisen lastin väite. A:n N2-fakta4 tukee kaupallisen ja kalastussataman rinnakkaisuutta Kaloumissa. K2:n teksti/selite on sovitettava tähän rajaan; puuttuva varsinainen Boulbinet-paikkakuva kirjataan edelleen. Ei korvaa C2-laajaa kansikuvaa, sillä aluksen sivu on yksityiskohtaisempi.
+- Kuvaajan lisenssi: CC BY-SA4.0, Author sanatarkasti Aboubacarkhoraa; kaupallinen käyttö ja muuntelu sallittu lisenssin ehdoilla.
+- Kuvauskohteen oikeudet: Tavallinen tekninen käyttöalus, standardeja runko-/kansi-/aukkopintoja ja aluksen nimi. Ei suojattu teos tai kansanperinteen kuvio päämotiivina. Pieni yksinkertainen C-kirjain ympäristön tunniste; ei mainossommittelu. Kuvaajan CC BY-SA 4.0 ei lisensoi mahdollista erillistä teosta, mutta sellaista ei tässä erotu. Ei vanhentuneen PD-kuvan kaupalliseen käyttöön liittyvän art45-portin tapaus.
+- Kuvausaika:4.4.2019 lähdesivunDate/Exif; ei kuvan upload-vuosi.
+- Lähdesivu: [Bateau au port de Conakry.jpg](https://commons.wikimedia.org/wiki/File:Bateau_au_port_de_Conakry.jpg), revisio1279710108, haettu 2026-10-11T23:25:50+0300.
+- Evidence: `/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/conakry-B-taydennys/candidate-17.html`, SHA-256 `902a16008d8d73e0a5cffb0643c6ca310c8eb250a45a16e79696465c8d165921`.
+- Katsottu itse: `/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/conakry-B-taydennys/preview-17.jpg`, SHA-256 `c0a73ebd40e3d2f3e15272362b4b37d7f85a658372e81fde88f6ab8d8f366f7a`.
+- Eri tiedosto kuin kaikki alkuperäisen B:n valinnat,0 osumaa js/packsissa kanonisella/alaviiva/JS-heittomerkkimuodolla. C/D katsovat tämänkin uudelleen.
+
+## Täydennyskierroksen hylkäykset
+
+Lisäyksen oma NAS-kansio `/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/conakry-B-taydennys`: metadata.json20 ehdokasta, selected.json1 uusi valinta, provenance.json, kaikki esikatselut. Pirogue a Conakry.jpg katsottiin lisäksi alkuperäisessä2560px koossa: oikealla keskellä luettavat kasvot, joten ei hyväksyttyä kasvopoikkeusta.
+
+| Nro | Tiedosto | Syy |
+|---:|---|---|
+| 1 | [Parking privée à kamsar 11.jpg](https://commons.wikimedia.org/wiki/File:Parking_priv%C3%A9e_%C3%A0_kamsar_11.jpg) | Luettavia matkustajien kasvoja kaikkialla etualalla; tiedostonimi Kamsar ja Boulbinet-luokitus myös ristiriita, ei paikan arvausta. |
+| 2 | [Pirogieur à Conakry.jpg](https://commons.wikimedia.org/wiki/File:Pirogieur_%C3%A0_Conakry.jpg) | Kahden veneilijän kasvojen sivuprofiilit luettavissa. |
+| 3 | [Pirogue a Conakry.jpg](https://commons.wikimedia.org/wiki/File:Pirogue_a_Conakry.jpg) | 960px vaikutti etäiseltä, mutta alkuperäisestä2560px kuvasta kahden keskellä oikealla istuvan kasvot luettavissa. Hylätty; ei kierretä pienellä esikatselulla. |
+| 4 | [Pirogue à Conakry.jpg](https://commons.wikimedia.org/wiki/File:Pirogue_%C3%A0_Conakry.jpg) | Luettavia kasvoja veneessä, mm. vasemmanpuoleinen lapsi. |
+| 5 | [Restaurant au port de Boulbinet.jpg](https://commons.wikimedia.org/wiki/File:Restaurant_au_port_de_Boulbinet.jpg) | Nykyinen ravintolarakennus näkyy kokonaisena päämotiivina; sen arkkitehtuurin oikeusketju ei ratkea CC:llä, eikä tämä ole kalastusveneen ympäristökuva. |
+| 6 | [Camayenne, jardin - btv1b53207141n.jpg](https://commons.wikimedia.org/wiki/File:Camayenne,_jardin_-_btv1b53207141n.jpg) | Arkistonumerot ja musta kehys lasinegatiivin skannissa; ei omaa rajausta. |
+| 7 | [Camayenne, jardin botanique - btv1b53207130s.jpg](https://commons.wikimedia.org/wiki/File:Camayenne,_jardin_botanique_-_btv1b53207130s.jpg) | Arkistonumero K257667 ja musta reuna; lisäksi BnF:n Camayenne-identiteetin kysymysmerkki. |
+| 8 | [Camayenne, jardin botanique - btv1b53207132p.jpg](https://commons.wikimedia.org/wiki/File:Camayenne,_jardin_botanique_-_btv1b53207132p.jpg) | Arkistonumero K257665 ja musta reuna; lisäksi BnF:n puutarha-identiteetin kysymysmerkki. |
+| 9 | [Jardin en Guinée (Camayenne) - btv1b532071245.jpg](https://commons.wikimedia.org/wiki/File:Jardin_en_Guin%C3%A9e_(Camayenne)_-_btv1b532071245.jpg) | Arkistonumerot/käsin lisätty reunateksti ja musta kehys. |
+| 10 | [Allée des Eucalyptus au Jardin d'essais de Camayenne (Guinée française) (Début XXème siècle) - btv1b10120095h (2 of 2).jpg](https://commons.wikimedia.org/wiki/File:All%C3%A9e_des_Eucalyptus_au_Jardin_d%27essais_de_Camayenne_(Guin%C3%A9e_fran%C3%A7aise)_(D%C3%A9but_XX%C3%A8me_si%C3%A8cle)_-_btv1b10120095h_(2_of_2).jpg) | Arkistomonttauksen ruudukko-/paperireuna mukana; ei nykyinen kapokkikuva. Vanhentuneen PD-kuvan art45-kaupallisen käytön ehto ei ratkea pelkälläPD-tagilla. |
+| 11 | [Piroguier a Dixinn.jpg](https://commons.wikimedia.org/wiki/File:Piroguier_a_Dixinn.jpg) | Veneentekijä/työntäjä kasvot luettavissa; ei kaukainen piste tai selin. |
+| 12 | [Piroguier de Conakry.jpg](https://commons.wikimedia.org/wiki/File:Piroguier_de_Conakry.jpg) | Saman toimijan luettava sivuprofiili; ei palauteta pienellä esikatselulla hyväksytyksi. |
+| 13 | [Cinnamomum zeylanicum planté en mai 1898. Jardin d'essais de Conakry (Guinée française) - btv1b10120866r (2 of 2).jpg](https://commons.wikimedia.org/wiki/File:Cinnamomum_zeylanicum_plant%C3%A9_en_mai_1898._Jardin_d%27essais_de_Conakry_(Guin%C3%A9e_fran%C3%A7aise)_-_btv1b10120866r_(2_of_2).jpg) | Arkistomonttauksen ruudukkoreuna; kasvitieteellinen Cinnamomum-laji eikä kapokki. PD-käyttöehdot erikseen avoimet. |
+| 14 | [Garcinia mangostana - Jardin d'essai de Conakry (Guinée Française) - btv1b101230587 (2 of 2).jpg](https://commons.wikimedia.org/wiki/File:Garcinia_mangostana_-_Jardin_d%27essai_de_Conakry_(Guin%C3%A9e_Fran%C3%A7aise)_-_btv1b101230587_(2_of_2).jpg) | Kasvitieteellinen mangostaninäyte valkoista taustakangasta vasten, mukana mounttaus-/paperireuna. Ei kapokki/puutarhan yleispaikka; PD-käyttöehto ja puuttuvaAuthor erikseen. |
+| 15 | [Plantation de bananiers au jardin d'essais de Camayenne (Guinée française) - M. Mangin - btv1b101112887.jpg](https://commons.wikimedia.org/wiki/File:Plantation_de_bananiers_au_jardin_d%27essais_de_Camayenne_(Guin%C3%A9e_fran%C3%A7aise)_-_M._Mangin_-_btv1b101112887.jpg) | Aito vanha Camayennen banaaniympäristö ja käsikäyttöinen kaivo; kuvanPD-tagista huolimatta Guinean art45 kaupallisen vanhentuneenPD-kuvan käyttöehto/soveltaminen tähän ulkomaiseen arkistokuvaan avoin. Mangin,M. -krediitin henkilöllisyyttä/kuolinvuotta ei arvata. Ei hyväksyttyä vanhaa kuvaa oppaaseen. |
+| 16 | [Guinée, palmiers et bananiers (Conakry) - btv1b53207195h.jpg](https://commons.wikimedia.org/wiki/File:Guin%C3%A9e,_palmiers_et_bananiers_(Conakry)_-_btv1b53207195h.jpg) | K257689 arkistonumero ja musta negatiivireuna. Ei kapokkia nimetä palmu-/banaanikuvaan; yleinenConakry ei vielä omaCamayenne-piste. |
+| 18 | [Africa Mercy au port autonome de Conakry.jpg](https://commons.wikimedia.org/wiki/File:Africa_Mercy_au_port_autonome_de_Conakry.jpg) | Aluskuva voi sinänsä esittää satamaa, mutta sairaalalaiva ei A:n K2:n kaupallisen/kalastussataman vertailun rahtirooli.17 valittu; ei lähteettömiä palveluväitteitä. |
+| 19 | [Africa Mercy à Conakry.jpg](https://commons.wikimedia.org/wiki/File:Africa_Mercy_%C3%A0_Conakry.jpg) | MercyShips-sivuteksti ja järjestön tunnus pääaihetta lähellä; ei mainos-/järjestökuvaa K2:n kalasatamaksi. |
+| 20 | [Merci Ships à Conakry.jpg](https://commons.wikimedia.org/wiki/File:Merci_Ships_%C3%A0_Conakry.jpg) | MercyShips.org/tunnus näkyvät suurina, sairaala-aluksen palvelurooli ei A:n tekstissä;17 valittu. |
+
+Camayennen historiallisen puutarhan yksilöinti ja kuvanPD-status ovat erillisiä kaupallisen käytön ehdoista. Guinean2019 alkuperäislain art45:n vanhentuneenPD-teoksen käyttöehtoa ei ohiteta BnF:nPD-tagilla. Nykykuvan luonnonpuu ei itsessään suojattu teos; ongelma tässä on nykyisen hyväksyttävän paikallisen kuvan puute ja arkistovedosten muut ehdot/merkinnät. B/F tai nollavirheportti eivät valmistu tässä lisäyksessä.
+
+- B-lisäyksen alkuperäinen2119×1330 kuva katsottu11.10.2026: `/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/conakry-B-taydennys/original-17.jpg`, SHA-256 `caaffca7260843a79aa77a75c273f1a50679ce9609eeb364802f713c3de38a1f`. Ei kasvoja tai erillistä keulakilpeä. C ja riippumaton D katsovat uuden kuvan ennen E:n liittämistä.
