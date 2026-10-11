@@ -1,0 +1,37 @@
+{
+ "id": "asgabat",
+ "era": "e09",
+ "nimi": "Ašgabat",
+ "nimiAlkukieli": "Aşgabat",
+ "maa": "TKM",
+ "maanNimi": "Turkmenistan",
+ "asema": "pääkaupunki",
+ "lat": 37.95,
+ "lon": 58.3833,
+ "wikidata": "Q23438",
+ "kevytSisalto": {
+  "kuvaus": "Ašgabat on Turkmenistanin pääkaupunki ja suurin kaupunki, ja se sijaitsee Köpet Dag -vuoriston ja Karakum-aavikon välisellä kaistaleella. Vuoden 1948 voimakas maanjäristys tuhosi suurimman osan vanhasta kaupungista, ja nykyinen kaupunkikuva on rakennettu pääosin sen jälkeen. Viime vuosikymmeninä keskustaan on rakennettu runsaasti vaaleaa marmoria käyttäviä julkisia rakennuksia ja puistoja.",
+  "tunnusrakennukset": [
+   "Vanha Nisa (partialaisten linnoituksen rauniot, Unescon maailmanperintö 2007, noin 18 km länteen)",
+   "Köpet Dag -vuoristo kaupungin eteläpuolella",
+   "Turkmenistanin kansallismuseo (nykyrakennus; ei kuvamotiivina)",
+   "Itsenäisyyden, Neutraalisuuden ja muut kaupungin muistomerkit (nykyrakenteita; eivät kuvamotiiveina)"
+  ],
+  "asukkaat": {
+   "arvo": 1030063,
+   "vuosi": 2022,
+   "lahde": "Turkmenistanin tilastokomitea (Госкомстат), väestö- ja asuntolaskenta 17.12.2022, tulostaulukko 'Распределение численности населения по полу и территориям'; luku 1 030 063 (miehet 501 910, naiset 528 153; summa täsmää) luettu suoraan komitean PDF:n tekstikerroksesta, maan väestö 7 057 841. PDF:n rivin nimikesolu on fonttikoodattu, joten Ašgabat-rivi tunnistettu luvun perusteella ja citypopulation.de:n kanssa yhtäpitävänä.",
+   "linkki": "https://stat.gov.tm/population-census-pdfs/results/ru/1.pdf"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Ašgabat",
+  "maanAvain": "Turkmenistan",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

@@ -1,0 +1,88 @@
+{
+ "id": "taskent",
+ "era": "e09",
+ "nimi": "Taškent",
+ "nimiAlkukieli": "Toshkent (Тошкент)",
+ "maa": "UZB",
+ "maanNimi": "Uzbekistan",
+ "asema": "pääkaupunki",
+ "lat": 41.3111,
+ "lon": 69.2797,
+ "wikidata": "Q269",
+ "kevytSisalto": {
+  "kuvaus": "Taškent on Uzbekistanin pääkaupunki ja Keski-Aasian suurimpia kaupunkeja. Se on ollut Silkkitien kauppakeskus vuosisatojen ajan, ja vuoden 1966 voimakas maanjäristys tuhosi suuren osan vanhasta kaupungista, joten nykyinen kaupunkikuva on pääosin neuvostoaikainen ja uudempi. Vanhankaupungin mausoleumit ja medresat sekä leveät lehtikujat ja kanavat luovat kaupunkiin erikoisen sekoituksen.",
+  "tunnusrakennukset": [
+   "Kukeldash-medresa (1570-luku)",
+   "Hazrati Imam -kompleksi (Barak Khan -medresa 1500-luvulta, Tillya Sheikh -moskeija 1856)",
+   "Chorsun basaari",
+   "Taškentin metro (1977, ei kuvamotiivina)"
+  ],
+  "asukkaat": {
+   "arvo": 3164030,
+   "vuosi": 2025,
+   "lahde": "Uzbekistanin kansallinen tilastokomitea (stat.uz), pysyvä väestö Taškentin kaupungissa 1.10.2025",
+   "linkki": "https://stat.uz/en/press-center/news-of-committee/64960-ajsi-udud-a-olisi-eng-k-p-4"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Kirjeet, jotka jäivät vartiotorniin",
+    "Rakennus, jota valloittajat eivät nähneet",
+    "Kaupunki, jota hän ei saanut pitää",
+    "Aamu, joka rakensi pääkaupungin uusiksi"
+   ]
+  },
+  {
+   "id": "tiede",
+   "nimi": "Tiede",
+   "nostot": [
+    "Nimi, josta tuli algoritmi",
+    "Vuori, jolta mitattiin maapallo",
+    "Kahdeksantoista kysymystä naapurille",
+    "Maili, joka vei Kolumbuksen harhaan"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Kattila, josta syö tuhat vierasta",
+    "Leipä, jota ei lasketa maahan",
+    "Pata, joka kypsyy yön yli",
+    "Teetä ilman maitoa ja sokeria"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Kuusi sävellajia ja yksi ilta",
+    "Kaksi kieltä, jotka tulivat Kiinasta",
+    "Laulajat, jotka veivät Buharan New Yorkiin",
+    "Tanssi, joka alkaa sormenpäistä"
+   ]
+  },
+  {
+   "id": "kuvataide",
+   "nimi": "Kuvataide",
+   "nostot": [
+    "Kirjonta, joka kuului myötäjäisiin",
+    "Sumea reuna on tarkoitus",
+    "Savi, joka riittää koko kaupungille",
+    "Maanalainen galleria, jota ei saanut kuvata"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Taškent",
+  "maanAvain": "Uzbekistan",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

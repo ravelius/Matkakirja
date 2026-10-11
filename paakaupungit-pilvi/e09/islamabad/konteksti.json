@@ -1,0 +1,97 @@
+{
+ "id": "islamabad",
+ "era": "e09",
+ "nimi": "Islamabad",
+ "nimiAlkukieli": "اسلام آباد (Islāmābād)",
+ "maa": "PAK",
+ "maanNimi": "Pakistan",
+ "asema": "pääkaupunki",
+ "lat": 33.6989,
+ "lon": 73.0369,
+ "wikidata": "Q1362",
+ "kevytSisalto": {
+  "kuvaus": "Islamabad on Pakistanin pääkaupunki ja suunniteltu kaupunki, joka rakennettiin 1960-luvulla Margalla-kukkuloiden juurelle korvaamaan Karachin pääkaupunkina. Kaupunki on jaettu ruudukkomaisiin sektoreihin, ja siinä on runsaasti puita ja puistoja, joten se tunnetaan Pakistanin muita kaupunkeja vehreämpänä. Sen vieressä on Rawalpindin vanha kaupunki, joka oli väliaikaisena pääkaupunkina rakennusvaiheen ajan.",
+  "tunnusrakennukset": [
+   "Faisal-moskeija (1986; nykyarkkitehtuuria, ei kuvamotiivina)",
+   "Pakistanin muistomerkki (2007; ei kuvamotiivina)",
+   "Daman-e-Koh (näköalapaikka Margalla-kukkuloilla)",
+   "Saidpurin kylä (1500-luvun mogulikylä, entisöity 2000-luvulla)"
+  ],
+  "asukkaat": {
+   "arvo": 2363863,
+   "vuosi": 2023,
+   "lahde": "Pakistan Bureau of Statistics (PBS), 7th Population and Housing Census 2023 (digitaalinen laskenta, viitepäivä 1.3.2023), District Census Report Islamabad (ICT): koko väestö 2 363 863 (kasvu +17,99 % vuodesta 2017), kaupunki 1 108 872, maaseutu 1 254 991; 2017: 2 003 368. Luettu suoraan PBS:n PDF:stä.",
+   "linkki": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/District-Census-Report-2023-Islamabad.pdf"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Allas tiivistettiin maapiellä",
+    "Luostari kukkulan laella",
+    "Palkka nostettiin, kunnes muurit nousivat",
+    "Kymmenen neliökilometriä hautoja"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Uuni, joka oli koko kylän",
+    "Haudukka syödään aamurukouksen jälkeen",
+    "Pihvi on sandaalin kokoinen",
+    "Kansallishedelmä kypsyy viidessä kuukaudessa"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Vuori, jolla ei ollut nimeä",
+    "Karhuja oli jäljellä yhdeksäntoista",
+    "Puolet suolasta jätetään pylväiksi",
+    "Miljoona tainta yhdessä päivässä"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Laulaja, jonka isä toivoi lääkäriä",
+    "Soitin veistetään yhdestä puunrungosta",
+    "Rummut kutsuvat vuosijuhlaan",
+    "Aavikon runoilija palasi kaupunkiin lauluina"
+   ]
+  },
+  {
+   "id": "kuvataide",
+   "nimi": "Kuvataide",
+   "nostot": [
+    "Kuorma-auto maalataan kuin koti",
+    "Huivi painetaan puupalikoilla",
+    "Moskeija, jonka seinät ovat laattaa",
+    "Ihmemuseo ja paastoava prinssi"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "kohde:taxila",
+   "nimi": "Taxila",
+   "lahde": "fokuskohde",
+   "laji": "historia",
+   "km": 24,
+   "teksti": "Taxila eli Takshashila on Punjabin Pothohar-ylängöllä ja yksi Etelä-Aasian vanhimmista kaupungeista: se perustettiin noin 1000 eaa. Vanha Taxila oli aikanaan Gandhāran kuningaskunnan pääkaupunki, ja se seisoi Indus-joen itärannalla eli juu…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Islamabad",
+  "maanAvain": "Pakistan",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

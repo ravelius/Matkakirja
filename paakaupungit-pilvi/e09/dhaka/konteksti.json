@@ -1,0 +1,37 @@
+{
+ "id": "dhaka",
+ "era": "e09",
+ "nimi": "Dhaka",
+ "nimiAlkukieli": "ঢাকা (Ḍhākā; ent. Dacca)",
+ "maa": "BGD",
+ "maanNimi": "Bangladesh",
+ "asema": "pääkaupunki",
+ "lat": 23.7289,
+ "lon": 90.3944,
+ "wikidata": "Q1354",
+ "kevytSisalto": {
+  "kuvaus": "Dhaka on Bangladeshin pääkaupunki ja suurin kaupunki, joka sijaitsee Gangesin suistoalueen jokien ympäröimänä Buriganga-joen rannalla. Kaupunki kasvoi Mughal-ajalla Bengalin maakunnan hallintokeskukseksi ja kauppakaupungiksi, ja vanhassa kaupungissa on yhä Mughal- ja brittiajan rakennuksia. Nykyään Dhaka on maan poliittinen, taloudellinen ja kulttuurinen keskus, ja se on yksi maailman tiheimmin asutuista suurkaupungeista.",
+  "tunnusrakennukset": [
+   "Lalbaghin linnake (Mughal-aikainen linnoitus, rakennus alkoi 1678)",
+   "Ahsan Manzil (nawabin vaaleanpunainen palatsi Burigangan rannalla, valmistunut 1800-luvulla)",
+   "Tähtimoskeija (Tara Masjid)",
+   "Jatiya Sangsad Bhaban (parlamenttitalo, arkkitehti Louis Kahn; tekijänoikeussuojattu)"
+  ],
+  "asukkaat": {
+   "arvo": 10295786,
+   "vuosi": 2022,
+   "lahde": "Bangladesh Bureau of Statistics (BBS), Population and Housing Census 2022, National Report Volume 1 (marraskuu 2023): Dhaka North City Corporation 5 990 723 + Dhaka South City Corporation 4 305 063 = 10 295 786 (enumeroitu luku, ei oikaistu PEC-alilaskentakorjauksella).",
+   "linkki": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/9ce5bd160bb14a1ab1eabe886adddb9a.pdf"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Dhaka",
+  "maanAvain": "Bangladesh",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

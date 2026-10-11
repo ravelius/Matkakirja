@@ -1,0 +1,37 @@
+{
+ "id": "dusanbe",
+ "era": "e09",
+ "nimi": "Dušanbe",
+ "nimiAlkukieli": "Душанбе (Dushanbe)",
+ "maa": "TJK",
+ "maanNimi": "Tadžikistan",
+ "asema": "pääkaupunki",
+ "lat": 38.5731,
+ "lon": 68.7864,
+ "wikidata": "Q9365",
+ "kevytSisalto": {
+  "kuvaus": "Dušanbe on Tadžikistanin pääkaupunki ja ylivoimaisesti suurin kaupunki, ja se sijaitsee Hissarin laaksossa vuorten ympäröimänä. Kylästä kasvoi pääkaupunki vasta Neuvostoliiton aikana, ja kaupungin keskustaa leimaavat leveät lehtikujat ja puistot. Nimi tarkoittaa tadžikiksi maanantaita, sillä paikalla pidettiin ennen maanantaisin markkinoita.",
+  "tunnusrakennukset": [
+   "Ayni-ooppera- ja balettiteatteri (1941)",
+   "Rudaki-puisto ja Rudaki-katu",
+   "Hisorin linnoitus (lähialueella, noin 25-30 km länteen)",
+   "Itsenäisyysmuistomerkit ja Tadžikistanin kansalliskirjasto (2010-luvun uudisrakennuksia; eivät kuvamotiiveina)"
+  ],
+  "asukkaat": {
+   "arvo": 1178251,
+   "vuosi": 2020,
+   "lahde": "Tadžikistanin presidentinalainen tilastovirasto (Agency on Statistics), väestölaskenta 1.10.2020, Dušanben kaupunki; luettu citypopulation.de-sivustolta, joka viittaa tilastovirastoon. Kaupungin rajoja laajennettiin 2020 Rudakin piirin alueilla (noin 77 km2, 230 000 asukasta), joten luku ei ole vertailukelpoinen aiempien kanssa. Seuraava laskenta on suunniteltu vuodelle 2030.",
+   "linkki": "https://www.citypopulation.de/en/tajikistan/admin/4__du%C5%A1anbe/"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Dušanbe",
+  "maanAvain": "Tadžikistan",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

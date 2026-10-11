@@ -1,0 +1,37 @@
+{
+ "id": "biskek",
+ "era": "e09",
+ "nimi": "Biškek",
+ "nimiAlkukieli": "Бишкек (Biškek); 1926-1991 Frunze, ennen sitä Pišpek",
+ "maa": "KGZ",
+ "maanNimi": "Kirgisia",
+ "asema": "pääkaupunki",
+ "lat": 42.8667,
+ "lon": 74.5667,
+ "wikidata": "Q9361",
+ "kevytSisalto": {
+  "kuvaus": "Biškek on Kirgisian pääkaupunki ja suurin kaupunki, joka sijaitsee Tian Shanin vuoriston pohjoisjuurella Tšuin laaksossa. Kaupunki on rakennettu säännölliseen ruutuasemakaavaan, ja leveiden katujen varsilla kulkevat vesiojat ruokkivat puurivejä. Biškek on maan hallinnon, kaupan ja rahoituksen keskus, ja sen päällä kohoavat lumihuippuiset Ala-Too-vuoret.",
+  "tunnusrakennukset": [
+   "Ala-Toon aukio ja Valtion historiallinen museo",
+   "Valkoinen talo (hallituksen rakennus)",
+   "Tammipuisto (Dubovy-puisto, istutettu 1890-luvulta)",
+   "Osh-tori (Osh Bazaar)"
+  ],
+  "asukkaat": {
+   "arvo": 1120827,
+   "vuosi": 2022,
+   "lahde": "Kirgisian kansallinen tilastokomitea (National Statistical Committee), väestö- ja asuntolaskenta 25.3.2022, Biškekin kaupunki (Biškek Šaary; kaupunkiväestö 1 114 584, maaseutu 6 243); luettu citypopulation.de-sivustolta, joka viittaa komiteeseen. Komitean tiivistelmän pinta-ala 169,6 km2 ja tiheys 6 608,6/km2 tukevat lukua. Eräs uutinen (24.kg, 2023) ilmoitti 1 137 882.",
+   "linkki": "https://citypopulation.de/en/kyrgyzstan/admin/11__bi%C5%A1kek_%C5%A1aary/"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Biškek",
+  "maanAvain": "Kirgisia",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

@@ -1,0 +1,44 @@
+[
+ {
+  "id": "taskent",
+  "lat": 41.31,
+  "lon": 69.28,
+  "wikidata": "Q269"
+ },
+ {
+  "id": "biskek",
+  "lat": 42.87,
+  "lon": 74.57,
+  "wikidata": "Q9361"
+ },
+ {
+  "id": "dusanbe",
+  "lat": 38.57,
+  "lon": 68.79,
+  "wikidata": "Q9365"
+ },
+ {
+  "id": "asgabat",
+  "lat": 37.95,
+  "lon": 58.38,
+  "wikidata": "Q23438"
+ },
+ {
+  "id": "islamabad",
+  "lat": 33.7,
+  "lon": 73.04,
+  "wikidata": "Q1362"
+ },
+ {
+  "id": "thimphu",
+  "lat": 27.47,
+  "lon": 89.63,
+  "wikidata": "Q9270"
+ },
+ {
+  "id": "dhaka",
+  "lat": 23.73,
+  "lon": 90.39,
+  "wikidata": "Q1354"
+ }
+]

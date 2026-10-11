@@ -1,0 +1,37 @@
+{
+ "id": "thimphu",
+ "era": "e09",
+ "nimi": "Thimphu",
+ "nimiAlkukieli": "ཐིམ་ཕུག (Thimphu)",
+ "maa": "BTN",
+ "maanNimi": "Bhutan",
+ "asema": "pääkaupunki",
+ "lat": 27.4713,
+ "lon": 89.6337,
+ "wikidata": "Q9270",
+ "kevytSisalto": {
+  "kuvaus": "Thimphu on Bhutanin pääkaupunki ja suurin kaupunki, joka sijaitsee Wang Chhu -joen kapeassa vuoristolaaksossa yli kahden kilometrin korkeudessa. Se on yksi maailman korkeimmalla sijaitsevista pääkaupungeista, ja Aasian korkein. Kaupungissa toimivat hallitus, parlamentti ja kuninkaan toimistot, ja uudet rakennukset noudattavat perinteistä bhutanilaista rakennustapaa.",
+  "tunnusrakennukset": [
+   "Tashichho Dzong (linnoitusluostari ja hallituksen paikka, nykyinen rakennus 1960-luvulta, vanhempi dzong 1600-luvulta)",
+   "Simtokhan dzong (maan vanhin dzong, 1629)",
+   "Kansalliskokouksen rakennus",
+   "Changlimithangin stadion"
+  ],
+  "asukkaat": {
+   "arvo": 114551,
+   "vuosi": 2017,
+   "lahde": "National Statistics Bureau (NSB) Bhutan, 'Thimphu Thromde at a Glance 2022', kohta Population (PHCB 2017): miehet 58 996, naiset 55 555, yhteensä 114 551; tiheys 4 406/km2, pinta-ala 26 km2.",
+   "linkki": "https://web.archive.org/web/2025/https://nsb.gov.bt/download/11051"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Thimphu",
+  "maanAvain": "Bhutan",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}
