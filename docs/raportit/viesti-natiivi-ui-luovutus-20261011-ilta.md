@@ -11,7 +11,7 @@ Testikomennot (kehitysversio): `ui pelaaja 1` (pelaajan näkymä Debugissa: muut
 `komento aja <lat> <lon> <kaari°>` (kamera).
 
 ## JUNA 182: KAIKKI NUI-HAARAT YHDESSÄ KOOSTEESSA
-`natiivi-ui/kooste-182` **118635797** (PT kuittasi 46234f6b6:n; 118635797 = + sykäys, odottaa PT:n kuittausta) (juna-182 c5e255c81 + neljä haaraa alla; ristiriidat ratkaistu; tyylikirja generoitu
+`natiivi-ui/kooste-182` **81d463634 KUITATTU JUNAAN 182** (PT 17.3x; SHA Natiivisepällä; sisältää sykäyksen ja lautapelit ilman korostusta) (juna-182 c5e255c81 + neljä haaraa alla; ristiriidat ratkaistu; tyylikirja generoitu
 webin mainista 33439cb57, PR #4409). tarkista.sh 0, Peli-testit 498/498, Kartta-testit 468/468. Natiiviseppä ottaa koosteen.
 Arkit PT:lle: lokit/todistus-kooste3-pari-{iphone,ipad}-20261011.jpg (6c85f062, kaikki PT:n korjauslistan 6 kohtaa näkyvät
 oikein). Sykäyksen vaiheet: lokit/todistus-sykaisy2-vaiheet-iphone-20261011.jpg (käännös 09653a0b). Sykäyksen kuittaus: tarkista posti.
@@ -23,12 +23,13 @@ oikein). Sykäyksen vaiheet: lokit/todistus-sykaisy2-vaiheet-iphone-20261011.jpg
      - Laskuri on lapun alla ja läpinäkyvä, kun auki oleva matkakirja tai kuvakortti on sen kohdalla.
    - Aarremerkintää ei näytetä Meripihkahuoneelle.
    - AloitusAarre: isoisän aarreteksti, sumea kuva ja luenta aloituskaupungissa (aarre.json, Luennat.Korvaava).
-2. `natiivi-ui/olavinlinna-nosto-182` 42123a9ec (⊃ Pelikoodari b6f15b061)
+2. `natiivi-ui/olavinlinna-nosto-182` 726ac5dc8 (⊃ Pelikoodari b6f15b061)
    - Kortti: videopeliteema, kimmel 4 s:n välein, napit Pelaa £20 / Jatka / Aloita alusta £10, rahapula.
    - Kortin ylärivit ylikirjoitetaan tarkemmilla valitsimilla.
    - Kategoriarivi ilman ellipsiä. Tämä koskee kaikkia nostokortteja.
-   - Lautapelinostot Berliiniin ja Ateenaan.
-   - Merkin sininen rengas ja SYKÄYS (Videopelit.KytkeSykaisy: terävä 2 pt:n rengas .mk-videopeli-aalto, 1 → 1,35, 0,9 s, 3 s:n välein).
+   - Lautapelinostot Berliiniin ja Ateenaan ILMAN värikorostusta (omistaja 17.1x): paperinen levy, tavallinen nostokortti ja
+     ilmainen Pelaa (arkki lokit/todistus-lautapelit-pari-iphone-20261011.jpg).
+   - Vain Olavinlinnalla merkin sininen rengas ja SYKÄYS (Videopelit.KytkeSykaisy: terävä 2 pt:n rengas .mk-videopeli-aalto, 1 → 1,35, 0,9 s, 3 s:n välein).
    - Avaus vaatii Siirtosepän f2bae0ac6:n (AvaaPelattavaPala(bool)). Ilman sitä peli ei aukea ja maksu palautetaan.
 3. `natiivi-ui/pallo-hintalappu-182` 19dabd434
    - Hintalappu.Nayta (kellorivi): muun maan pallo näyttää lapun, ja sama funktio on LS2:n raketille.
@@ -39,7 +40,7 @@ oikein). Sykäyksen vaiheet: lokit/todistus-sykaisy2-vaiheet-iphone-20261011.jpg
 
 ## AVOIMET
 1. Pallot koko Euroopan näkymässä pienemmiksi tekee LS1 (sovittu, KaupunkiPalloMitat.Koko, hänen haaransa).
-2. N = 50 aina: tarvitaanko? Jos kyllä, tämä on Pelikoodarin laattajako. Odottaa PT:n tai omistajan vastausta.
+2. N: RATKAISTU (PT 17.2x). 182:ssa N tulee datasta; 183:ssa Pelikoodari tasaa arvonnan 50:een, eikä NUI:lta tarvita muutosta.
 3. Taidemuseolinssiltä puuttuu kuva (Linssivalitsin.FotoIsot / havainnekuva).
 4. Laskuri iPadilla: tarkista arkista, ettei se osu Kutsuminiatyyriin tai lippuun.
 
