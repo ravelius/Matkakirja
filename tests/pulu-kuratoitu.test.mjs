@@ -78,6 +78,9 @@ test('kehote: kuratoitu osio omana lohkonaan pohjan perässä, pohja sama kuin a
   assert.equal(kur.lohkot[1], KURATOITU_KEHOTE);
   assert.ok(!live.lohkot.includes(KURATOITU_KEHOTE));
   assert.match(KURATOITU_KEHOTE, /MIELI ry:n Sekasin-chatista/);
+  // PT 11.10.2026: pelin ulkopuoliset ajankohtaisaiheet (MM-kisat, Messi) ohjataan pelin paikkoihin; urheilu nähtävyytenä sallittu.
+  assert.match(KURATOITU_KEHOTE, /urheilukilpailujen tulokset, urheilijat ja muut julkkikset/);
+  assert.match(KURATOITU_KEHOTE, /olympiastadion/);
   assert.match(realtimeIstunto({ kuratoitu: true }).instructions, /KURATOITU TILA/);
   assert.doesNotMatch(realtimeIstunto({}).instructions, /KURATOITU TILA/);
 });
