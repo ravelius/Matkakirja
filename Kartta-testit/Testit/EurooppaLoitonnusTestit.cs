@@ -18,7 +18,7 @@ namespace Matkakirja.Kartta.Testit
         static readonly (string Nimi, double Lat, double Lon)[] Kaupungit =
         {
             ("Reykjavík", 64.15, -21.94), ("Lissabon", 38.72, -9.14), ("Moskova", 55.76, 37.62), ("Nikosia", 35.17, 33.36),
-            ("Nordkapp", 71.17, 25.78), ("Pariisi", 48.857, 2.352), ("Tukholma", 59.33, 18.07), ("Ateena", 37.98, 23.73),
+            ("Nordkapp", 71.17, 25.78), ("Istanbul", 41.01, 28.98), ("Andøya", 69.29, 16.02), ("Cabo da Roca", 38.78, -9.5), ("Pariisi", 48.857, 2.352), ("Tukholma", 59.33, 18.07), ("Ateena", 37.98, 23.73),
         };
 
         /// <summary>Näkyykö piste kamerassa, joka katsoo Euroopan keskipistettä korkeudelta h (säteinä), pohjoinen ylös.</summary>
@@ -123,15 +123,18 @@ namespace Matkakirja.Kartta.Testit
                 Oleta.Tosi(tiheys >= EurooppaLoitonnus.RajojenKynnys, $"{l.Nimi}: tiheys {tiheys:0.0} px/° ≥ kynnys katolla");
                 Console.WriteLine($"  eurooppa-loitonnus {l.Nimi}: rajojen tiheys katolla {tiheys:0.0} px/°, peitto {EurooppaLoitonnus.RajojenPeitto(1f, tiheys):0.00} ×");
             }
-            Oleta.Tosi(Math.Abs(EurooppaLoitonnus.RajojenPeitto(0.2f, 15) - 0.2f * EurooppaLoitonnus.RajojenKaukoOsuus) < 1e-6, "kynnyksellä kevyt");
+            // Kaukana (alle 30 px/°) ohut yhtenäinen viiva hillityllä peitolla, lähellä webin katkoviiva ennallaan (PT 15.5x).
+            Oleta.Tosi(EurooppaLoitonnus.RajatYhtenaisena(15) && EurooppaLoitonnus.RajatYhtenaisena(29.9)
+                       && !EurooppaLoitonnus.RajatYhtenaisena(30) && !EurooppaLoitonnus.RajatYhtenaisena(double.NaN), "yhtenäinen vain kaukana");
+            Oleta.Tosi(Math.Abs(EurooppaLoitonnus.RajojenPeitto(0.2f, 23) - 0.2f * EurooppaLoitonnus.RajojenKaukoOsuus) < 1e-6, "kaukana hillitty");
             Oleta.Tosi(EurooppaLoitonnus.RajojenPeitto(0.2f, 30) == 0.2f && EurooppaLoitonnus.RajojenPeitto(0.2f, 80) == 0.2f, "lähellä ennallaan");
-            float edellinen = 0f;
-            for (double t = 10; t <= 40; t += 2.5)
-            {
-                float p = EurooppaLoitonnus.RajojenPeitto(0.2f, t);
-                Oleta.Tosi(p >= edellinen && p <= 0.2f, $"monotoninen {t}: {p}");
-                edellinen = p;
-            }
+            // Tehollinen peitto kaukana: yhtenäinen 0,4 × on katkoviivan keskiarvoa (muste/jakso = 1/3) vahvempi mutta matala.
+            double keskiarvo = Vektorisolut.RajaKatkoM / (Vektorisolut.RajaKatkoM + Vektorisolut.RajaValiM);
+            Oleta.Tosi(EurooppaLoitonnus.RajojenKaukoOsuus > keskiarvo && EurooppaLoitonnus.RajojenKaukoOsuus <= 0.5, $"hillitty mutta näkyvä ({keskiarvo:0.00})");
+            // Rajakerros piirtyy laattojen ja hunnun jälkeen.
+            Oleta.Tosi(EurooppaLoitonnus.RajatHunnunPaalla(2996) && !EurooppaLoitonnus.RajatHunnunPaalla(2000), "rajat hunnun päällä (jono 2996)");
+            Oleta.Tosi(System.IO.File.ReadAllText("../Assets/Matkakirja/Kartta/Rajat.cs").Contains("RajaJono = 2996;")
+                       && System.IO.File.ReadAllText("../Assets/Matkakirja/Kartta/Vektorikerros.cs").Contains("renderQueue = Jono"), "Rajat.RajaJono käytössä");
         }
 
         [Testi]

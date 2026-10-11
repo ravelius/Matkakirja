@@ -115,5 +115,12 @@ namespace Matkakirja
         /// </summary>
         public static bool Nakyy(bool merkitNakyvat, bool porttiSumea, bool linssiSuodatinSallii) =>
             merkitNakyvat && !porttiSumea && linssiSuodatinSallii;
+
+        /// <summary>
+        /// Piilottavatko ruudun kalusteiden laatikot (UI ja erikoismallit, KaupunkiMerkit.Kalusteet) merkin: houkutinta EI
+        /// (PT 11.10. 15.5x: iPhonen Euroopan näkymässä keski-alaosan näkymätön kalustelaatikko piilotti Alpit, Istanbulin ja
+        /// Ateenan; käyttöliittymä piirtyy joka tapauksessa kartan päälle). Linssitilassa houkutin on tavallinen merkki.
+        /// </summary>
+        public static bool KalusteetPiilottavat(bool houkutin, bool linssiTila) => !(houkutin && !linssiTila);
     }
 }

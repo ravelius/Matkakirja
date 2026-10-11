@@ -72,6 +72,9 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Tosi(!Houkuttimet.HunnunPaalla(Houkuttimet.LaattaJono), "laatat eivät");
             // Näkyvyys ei riipu korkeudesta, maasta eikä pelin rajauksesta: vain merkit päällä, portti ja linssin suodatin.
             Oleta.Tosi(Houkuttimet.Nakyy(true, false, true), "näkyy");
+            // Kalusteiden laatikot eivät piilota houkutinta (PT 15.5x, iPhonen Eurooppa); tavallisen merkin kyllä, linssissä kaikkien.
+            Oleta.Tosi(!Houkuttimet.KalusteetPiilottavat(true, false) && Houkuttimet.KalusteetPiilottavat(false, false)
+                       && Houkuttimet.KalusteetPiilottavat(true, true), "kalusteet eivät piilota houkutinta");
             Oleta.Tosi(!Houkuttimet.Nakyy(false, false, true) && !Houkuttimet.Nakyy(true, true, true) && !Houkuttimet.Nakyy(true, false, false), "piiloon vain merkit pois, portti tai linssin suodatin");
         }
 

@@ -58,15 +58,17 @@ namespace Matkakirja
         protected override int Jono => RajaJono;
         protected override Color Muste => RajaMuste;
         /// <summary>
-        /// Peitto: komennon ohitus, muuten webin 0,34 lineaarisena; Euroopan loitonnuksessa (omistaja 11.10.2026, juna 182)
-        /// kevyempi kaukana: 0,55 × kynnyksellä 15 px/° → täysi 30 px/°:sta (EurooppaLoitonnus.RajojenPeitto).
+        /// Peitto: komennon ohitus, muuten webin 0,34 lineaarisena; Euroopan säännöllä kaukana (alle 30 px/°) ohut yhtenäinen
+        /// viiva 0,4 × peitto hunnun päällä (PT 11.10. 15.5x, EurooppaLoitonnus.RajojenPeitto ja RajatYhtenaisena).
         /// </summary>
         public override float PeittoNyt => PeittoOhitus >= 0f && PeittoOhitus <= 1f ? PeittoOhitus
             : EurooppaVoimassa ? EurooppaLoitonnus.RajojenPeitto(PeittoNatiivi, NykyTiheys) : PeittoNatiivi;
         protected override double LeveysPt(double tiheys) => Viivaleveys.Pt(tiheys, Viivaleveys.RajaKaukana, Viivaleveys.RajaLahella);
         protected override int Pakotettu => PakotettuTaso;
         protected override bool LinssinPaallaOma => LinssinPaalla;
-        protected override float KatkoM => (float)Vektorisolut.RajaKatkoM;
+        protected override float KatkoM => Yhtenainen ? 0f : (float)Vektorisolut.RajaKatkoM;
+        /// <summary>Kaukana Euroopan säännöllä yhtenäinen viiva (katkoviivan jakso alle pikselin näkyi vain paikoin).</summary>
+        bool Yhtenainen => EurooppaVoimassa && EurooppaLoitonnus.RajatYhtenaisena(NykyTiheys);
         protected override float ValiM => (float)Vektorisolut.RajaValiM;
         /// <summary>
         /// Piirtokynnys: webin 30 px/°; Euroopan maassa pelaajan rajojen ollessa voimassa 15 px/°, jotta rajat näkyvät kevyesti
@@ -78,7 +80,9 @@ namespace Matkakirja
         /// <summary>Euroopan loitonnuksen kirjaus: tiheys, kynnys, peitto ja piirtyykö kerros.</summary>
         public string EurooppaTila() =>
             $"tiheys {NykyTiheys:0.0} px/° (kynnys {MinTiheys:0} px/°, Euroopan säännöllä {(EurooppaVoimassa ? "kyllä" : "ei")}), " +
-            $"peitto {PeittoNyt:0.000} lineaarisena (lähellä {PeittoNatiivi:0.000}), piirtyy {(Piirtyy && NykyTiheys >= MinTiheys ? "kyllä" : "ei")}";
+            $"peitto {PeittoNyt:0.000} lineaarisena (lähellä {PeittoNatiivi:0.000}), {(Yhtenainen ? "yhtenäinen" : "katkoviiva")}, " +
+            $"hunnun päällä {(EurooppaLoitonnus.RajatHunnunPaalla(RajaJono) ? "kyllä" : "ei")} (jono {RajaJono} > laatat {Houkuttimet.LaattaJono}), " +
+            $"piirtyy {(Piirtyy && NykyTiheys >= MinTiheys ? "kyllä" : "ei")}";
         protected override string OmaSyy() => !Sallittu ? "komento pois" : !Nakyvissa ? "Rajat.Nakyvissa = false" : null;
     }
 }

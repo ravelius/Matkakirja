@@ -343,6 +343,16 @@ namespace Matkakirja
             }
         }
 
+        /// <summary>
+        /// Onko merkki kalusteen alla. HOUKUTIN ei piiloudu kalusteiden laatikoihin lainkaan: käyttöliittymä piirtyy joka
+        /// tapauksessa kartan päälle, joten piilotus ei ole tarpeen. PT:n simukäännös bb7d1200a (11.10. 15.5x, iPhone pysty,
+        /// koko Eurooppa): Alpit, Istanbul ja Ateena puuttuivat, koska ruudun keski-alaosassa (Italia–Balkan–Kreikka–Länsi-Turkki)
+        /// oli näkymätön kalustelaatikko, jonka alla kaikki pisteet piiloutuivat (myös Rooma, Tirana, Sarajevo; iPadilla
+        /// laatikko oli muualla). Muilla merkeillä kalusteet kuten ennen (löydös 164).
+        /// </summary>
+        bool Peitossa(Merkki m, IReadOnlyList<Ruutulaatikko> kalusteet, Vector3 ruutu) =>
+            Houkuttimet.KalusteetPiilottavat(m.houkutin, LinssiTila) && KalusteenAlla(kalusteet, ruutu);
+
         /// <summary>Houkuttimen hehkulevy (saman pistepohjan kopio pisteen alla), kerran.</summary>
         void LuoHehku(Merkki m)
         {
@@ -366,7 +376,7 @@ namespace Matkakirja
                 Vector3 ruutu = kamera.WorldToScreenPoint(paikka);
                 bool nakyy = m.houkutin && !LinssiTila && etaisyys > 0f && Houkuttimet.Nakyy(merkitNakyvat, PalloKierto.PorttiSumea, true)
                              && MerkkiPaivitys.Edessa(Vector3.Dot(gt.TransformDirection(m.normaali), kohti / etaisyys))
-                             && !KalusteenAlla(kalusteet, ruutu);
+                             && !Peitossa(m, kalusteet, ruutu);
                 if (m.juuri.gameObject.activeSelf != nakyy) m.juuri.gameObject.SetActive(nakyy);
                 if (!nakyy) continue;
                 float lahella = etaisyys * (1f - Etuna);
@@ -395,7 +405,25 @@ namespace Matkakirja
                    $"värit linssi #{ColorUtility.ToHtmlStringRGB(HoukutinLinssiVari)} ({Houkuttimet.LinssiToken}), " +
                    $"lautapeli ja videopeli #{ColorUtility.ToHtmlStringRGB(HoukutinPeliVari)} ({Houkuttimet.PeliToken}), " +
                    $"hunnun päällä {(Houkuttimet.HunnunPaalla(jono) ? "kyllä" : "ei")} (pistejono {jono} > laatat ja huntu {Houkuttimet.LaattaJono}), " +
-                   $"syke {(Joutosyke.Elaa ? "elää" : "levossa")}, linssitila {(LinssiTila ? "kyllä (ei hehkua)" : "ei")}";
+                   $"syke {(Joutosyke.Elaa ? "elää" : "levossa")}, linssitila {(LinssiTila ? "kyllä (ei hehkua)" : "ei")}, " +
+                   $"kalusteet (eivät piilota houkuttimia) {KalusteKuvaus()}";
+        }
+
+        /// <summary>Kalusteiden määrä ja laatikot (px, y ylös) lokiin: UI-kalusteet ja erikoismallit erikseen (iPhonen Euroopan katve).</summary>
+        static string KalusteKuvaus()
+        {
+            var ui = uiKalusteet?.Invoke();
+            int nUi = ui?.Count ?? 0;
+            var sb = new System.Text.StringBuilder();
+            sb.Append("UI ").Append(nUi);
+            if (ui != null) for (int i = 0; i < ui.Count; i++)
+                sb.Append(i == 0 ? " [" : "; ").Append($"{ui[i].X0:0},{ui[i].Y0:0}–{ui[i].X1:0},{ui[i].Y1:0}").Append(i == ui.Count - 1 ? "]" : "");
+            var mallit = new List<Ruutulaatikko>();
+            Symbolimallit.LisaaKalusteet(mallit);
+            sb.Append(", mallit ").Append(mallit.Count);
+            for (int i = 0; i < mallit.Count && i < 8; i++)
+                sb.Append(i == 0 ? " [" : "; ").Append($"{mallit[i].X0:0},{mallit[i].Y0:0}–{mallit[i].X1:0},{mallit[i].Y1:0}").Append(i == Mathf.Min(mallit.Count, 8) - 1 ? "]" : "");
+            return sb.ToString();
         }
 
         /// <summary>Houkuttimen koko ja hehku joka kehys (7 merkkiä, ei allokointeja; arvot kirjoitetaan vain muuttuessa).</summary>
@@ -1221,7 +1249,7 @@ namespace Matkakirja
             return (merkitNakyvat || LinssiTila) && !PalloKierto.PorttiSumea
                 && (m.paakaupunki ? KevytSuodatettu(m.kaupunki) : Suodatettu(m.kaupunki.id))
                 && MerkkiPaivitys.Edessa(Vector3.Dot(gt.TransformDirection(m.normaali), kohti / etaisyys))
-                && ((m.valintamerkki && !LinssiTila) || !KalusteenAlla(kalusteet, ruutu));
+                && ((m.valintamerkki && !LinssiTila) || !Peitossa(m, kalusteet, ruutu));
         }
 
         /// <summary>Merkkien tila muuttui (renkaat, suodattimet, tyyli): seuraava LateUpdate päivittää, vaikka kehys jäisi piirtämättä.</summary>
@@ -1351,7 +1379,7 @@ namespace Matkakirja
                     && MerkkiPaivitys.Edessa(Vector3.Dot(normaali, kohti / etaisyys))
                     // Löydös 164 jatko (Fable 26.9.): kalusteen (kartussi, Liiku, pulu, yläpalkki) alle jäävä piste ja sen
                     // nimi piiloon; valittavan kaupungin merkki näkyy aina.
-                    && ((m.valintamerkki && !LinssiTila) || !KalusteenAlla(kalusteet, ruutu));
+                    && ((m.valintamerkki && !LinssiTila) || !Peitossa(m, kalusteet, ruutu));
                 if (m.juuri.gameObject.activeSelf != edessa) m.juuri.gameObject.SetActive(edessa);
                 m.oliRuudulla = m.ruudulla;
                 m.ruudulla = edessa && NimiLadonta.Ruudulla(ruutu.x, ruutu.y, Screen.width, Screen.height, kerroin);

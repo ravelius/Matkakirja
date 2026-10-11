@@ -15,7 +15,10 @@ namespace Matkakirja
     ///  - PANOROINTI: maan katon yläpuolella panorointiraja laajenee pehmeästi kohti Euroopan laatikkoa (<see cref="Osuus"/>,
     ///    <see cref="Laajenna"/>); lähennettäessä raja kutistuu jatkuvasti, joten kamera palaa maahan ilman hyppyä.
     ///  - HUNTU: kaukoraja (huntu pois) vähintään <see cref="HunnunVara"/> × Euroopan katto (<see cref="HunnunKaukoraja"/>).
-    ///  - RAJAT: kynnys <see cref="RajojenKynnys"/> px/° (oli 30) ja kaukana kevyempi peitto (<see cref="RajojenPeitto"/>).
+    ///  - RAJAT: kynnys <see cref="RajojenKynnys"/> px/° (oli 30). Kaukana (alle 30 px/°) ohut YHTENÄINEN viiva matalalla
+    ///    peitolla (<see cref="RajojenPeitto"/>, <see cref="RajatYhtenaisena"/>; PT 11.10. 15.5x "huntu + pisteet + rajat"):
+    ///    katkoviivan jakso (2,1 km) on silloin alle pikselin, jolloin varjostin liu'utti sen keskiarvoon 1/3 × peitto ja rajat
+    ///    näkyivät hunnun päällä vain paikoin. Rajakerros piirtyy laattojen ja hunnun jälkeen (jono 2996 > 2000).
     ///  - PISTEET: maan katon yläpuolella (<see cref="Kaukana"/>) Euroopan laudan kaupungit himmeinä pisteinä ilman nimeä.
     /// </summary>
     public static class EurooppaLoitonnus
@@ -31,8 +34,8 @@ namespace Matkakirja
         public const double HunnunVara = 1.3;
         /// <summary>Rajojen kynnys Euroopan loitonnuksessa (laitepikseliä/aste); webin VEKTORIT_RAJAT_PX_ASTE 30 muualla.</summary>
         public const double RajojenKynnys = 15;
-        /// <summary>Rajojen peiton osuus kynnyksellä (kevyesti); täysi peitto tiheydestä <see cref="RajojenLahiTiheys"/>.</summary>
-        public const double RajojenKaukoOsuus = 0.55;
+        /// <summary>Kaukana yhtenäisen rajaviivan peitto osuutena webin rajapeitosta (hillitty: houkuttimet erottuvat).</summary>
+        public const double RajojenKaukoOsuus = 0.4;
         public const double RajojenLahiTiheys = 30;
 
         const double Rad = Math.PI / 180.0;
@@ -136,13 +139,16 @@ namespace Matkakirja
         public static double RajojenMinTiheys(bool eurooppaVoimassa, double oletus) =>
             eurooppaVoimassa ? Math.Min(oletus, RajojenKynnys) : oletus;
 
-        /// <summary>Rajojen peitto tiheyden mukaan: lähellä (≥ 30 px/°) ennallaan, kynnyksellä <see cref="RajojenKaukoOsuus"/> × peitto.</summary>
-        public static float RajojenPeitto(float peitto, double tiheys)
-        {
-            if (double.IsNaN(tiheys) || tiheys >= RajojenLahiTiheys) return peitto;
-            double t = Math.Max(0, Math.Min(1, (tiheys - RajojenKynnys) / (RajojenLahiTiheys - RajojenKynnys)));
-            return (float)(peitto * (RajojenKaukoOsuus + (1 - RajojenKaukoOsuus) * t));
-        }
+        /// <summary>Piirretäänkö raja kaukana yhtenäisenä (ei katkoviivaa): alle <see cref="RajojenLahiTiheys"/> px/°.</summary>
+        public static bool RajatYhtenaisena(double tiheys) => !double.IsNaN(tiheys) && tiheys < RajojenLahiTiheys;
+
+        /// <summary>Rajojen peitto: lähellä (≥ 30 px/°) webin katkoviivan peitto ennallaan, kaukana yhtenäinen viiva
+        /// <see cref="RajojenKaukoOsuus"/> × peitto (tehollisesti hieman katkoviivan keskiarvoa 1/3 × peitto vahvempi, tasainen).</summary>
+        public static float RajojenPeitto(float peitto, double tiheys) =>
+            RajatYhtenaisena(tiheys) ? (float)(peitto * RajojenKaukoOsuus) : peitto;
+
+        /// <summary>Rajakerroksen piirtojono (Rajat.RajaJono): hunnun päällä, kun jono on laattojen (2000) jälkeen.</summary>
+        public static bool RajatHunnunPaalla(int jono) => jono > Houkuttimet.LaattaJono;
 
         /// <summary>Web Mercator -laattojen määrä alueella tasolla z (kirjaus: arvio hunnun ja pohjan laattamäärästä).</summary>
         public static int LaattojaAlueella(double lat0, double lat1, double lon0, double lon1, int z)
