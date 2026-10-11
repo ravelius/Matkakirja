@@ -49,7 +49,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Varakutsu (Pelikoodarin huomio 25.9.): jos pulun sarja ei päästä luentaa (kupla kaatui, näkymä suljettiin),
-        /// lykätty luento soi viimeistään 30 s kuluttua. Sarja kestää tavallisesti 12–15 s (1,8 s + kaksi kuplaa).
+        /// lykätty luento soi viimeistään 60 s kuluttua. Sarja kestää intron kanssa noin 30 s (intro 18 s + kaksi repliikkiä).
         /// </summary>
         System.Collections.IEnumerator Varakutsu(string kaupunki, Luento l)
         {
@@ -59,7 +59,8 @@ namespace Matkakirja.Natiivi
             AloitaLykattyLuenta();
         }
 
-        const float LykkayksenKattoS = 30f;
+        // Omistaja 11.10.2026: aloituskaupungin intro (18 s, LS1) + Pulun kaksi tuurausrepliikkiä ennen luentaa → katto 60 s.
+        const float LykkayksenKattoS = 60f;
 
         /// <summary>Lippu alas ja lykätty luento pois (paikan puheen vaiennus, uusi matka).</summary>
         void PeruLykkays()
