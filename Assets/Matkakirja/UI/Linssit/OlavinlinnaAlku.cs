@@ -19,12 +19,24 @@ namespace Matkakirja.Natiivi
         static Action pelaa, historia;
         static string viimeisin = "-";
 
+        /// <summary>
+        /// Seuraava avaus suoraan peliin ilman valintaa (Olavinlinnan nosto, omistaja 11.10.2026: Pelaa valittiin jo nostossa);
+        /// kuluu ensimmäisessä Nahty-luvussa eikä muuta muistettua valintaa.
+        /// </summary>
+        public static bool OhitaKerran;
+
         /// <summary>Pelaaja on jo valinnut kerran: seuraavalla kerralla suoraan peliin.</summary>
         public static bool Nahty
         {
-            get { try { return PlayerPrefs.GetInt(NahtyAvain, 0) == 1; } catch { return false; } }
+            get
+            {
+                if (OhitaKerran) { OhitaKerran = false; return true; }
+                return Muistettu;
+            }
             private set { try { PlayerPrefs.SetInt(NahtyAvain, value ? 1 : 0); PlayerPrefs.Save(); } catch { } }
         }
+
+        static bool Muistettu { get { try { return PlayerPrefs.GetInt(NahtyAvain, 0) == 1; } catch { return false; } } }
 
         public static bool Auki { get; private set; }
 
@@ -118,7 +130,7 @@ namespace Matkakirja.Natiivi
                 case "sulje": if (Auki) { Auki = false; Rakenne.Nayta(himmennys, false, 250); SyoteLukko.Vapauta(himmennys); } break;
             }
             string Laatikko(Kortti k) => k == null ? "-" : $"{k.worldBound.xMin:0},{k.worldBound.yMin:0} {k.worldBound.width:0}×{k.worldBound.height:0}";
-            return $"olavinlinna-alku {(Auki ? "auki" : "kiinni")} ({viimeisin}), nähty {Nahty}, pelaa @ {Laatikko(pelaaKortti)}, historia @ "
+            return $"olavinlinna-alku {(Auki ? "auki" : "kiinni")} ({viimeisin}), nähty {Muistettu}, pelaa @ {Laatikko(pelaaKortti)}, historia @ "
                  + $"{(historiaKortti != null && historiaKortti.style.display != DisplayStyle.None ? Laatikko(historiaKortti) : "piilossa")}";
         }
     }

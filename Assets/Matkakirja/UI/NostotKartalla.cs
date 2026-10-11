@@ -120,6 +120,8 @@ namespace Matkakirja.Natiivi
             /// piilossa erikoismallin kalustelaatikon alla, ja merkki on laatikon reunalla pienenä mustepisteenä.
             /// </summary>
             public bool MallinAlla;
+            /// <summary>Hehkun nykyinen kuva (pääkohteen kulta tai videopelin sininen rengas; merkki kiertää nostolta toiselle).</summary>
+            public Texture2D HehkuKuva;
             /// <summary>Noston taso 1–3 (mallin koko PeitaMallienAlta:ssa).</summary>
             public int Taso;
             /// <summary>Nimiön kylki (web SOVITTELUN_KYLJET) ja näkyvyys väistön jälkeen.</summary>
@@ -305,17 +307,28 @@ namespace Matkakirja.Natiivi
             if (!loyto && !Mathf.Approximately(m.El.resolvedStyle.opacity, peitto)) m.El.style.opacity = peitto;
             // 3D-mallin korvaama merkki ilman hehkua: UI piirtyy mallin päälle, ja merkin laatikko on mallin levyinen, joten hehku
             // haalensi mallin (Český Krumlov 43329fe5, kun oma malli ei enää peitä merkkiä).
-            bool hehku = loydetty && !ryhma && s.Luokka == NostoKerros.MusteLuokka.Paakohde && !Symbolimallit.OnMalli(s.Id);
-            var hehkuTex = hehku ? MusteJaljet.Hehku() : null;
+            // VIDEOPELI (omistaja 11.10.2026 PT:n kautta, juna 182): sininen hehkurengas ja hillitty syke myös löytämättömänä ja
+            // 3D-mallin kanssa (keskus läpinäkyvä), jotta pelaaja näkee jo kartalta, että kohde on peli.
+            bool peli = !ryhma && Videopelit.Valo(s.Id);
+            bool hehku = peli || loydetty && !ryhma && s.Luokka == NostoKerros.MusteLuokka.Paakohde && !Symbolimallit.OnMalli(s.Id);
+            var hehkuTex = peli ? Videopelit.Hehku() : hehku ? MusteJaljet.Hehku() : null;
             if (hehkuTex != null)
             {
                 if (m.Hehku == null)
                 {
                     m.Hehku = new VisualElement { pickingMode = PickingMode.Ignore };
                     m.Hehku.AddToClassList("mk-nosto-merkki__hehku");
-                    m.Hehku.style.backgroundImage = new StyleBackground(hehkuTex);
                     m.El.Insert(0, m.Hehku);
+                    var h = m.Hehku;
+                    h.schedule.Execute(() =>
+                    {
+                        if (!h.ClassListContains("mk-nosto-merkki__hehku--videopeli") || h.resolvedStyle.display == DisplayStyle.None || h.panel == null) return;
+                        h.ToggleInClassList("mk-nosto-merkki__hehku--syke");
+                        Ruudunpaivitys.Herata(2.6f);
+                    }).Every(Videopelit.SykeValiMs);
                 }
+                if (m.HehkuKuva != hehkuTex) { m.HehkuKuva = hehkuTex; m.Hehku.style.backgroundImage = new StyleBackground(hehkuTex); }
+                m.Hehku.EnableInClassList("mk-nosto-merkki__hehku--videopeli", peli);
                 float koko = ruutuPx * HehkunKoko;
                 m.Hehku.style.width = m.Hehku.style.height = koko;
                 m.Hehku.style.left = m.Hehku.style.top = (ruutuPx - koko) / 2f;
