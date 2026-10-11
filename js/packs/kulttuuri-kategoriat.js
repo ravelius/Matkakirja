@@ -31076,14 +31076,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vuonna 2006 vanhaa muotoaan kunnioittaen.',
           lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
         },
-        {
-          tiedosto: 'Museum of Islamic Art Park, Doha.jpg',
-          lyhyt: 'Islamilaisen taiteen museo rakennettiin Pein vaatimuksesta keinosaarelle dhow-sataman viereen.',
-          selite: 'Islamilaisen taiteen museo rakennettiin I. M. Pein '
-            + 'vaatimuksesta omalle keinosaarelleen vanhan dhow-sataman '
-            + 'viereen.',
-          lahde: 'Sandra Doha, Wikimedia Commons (CC BY 2.0)',
-        },
       ],
       /*
        * VAIHE B, ERÄ 3 (Opus 20.8.2026): Dohan lehteen on lisätty
@@ -31189,7 +31181,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Katsomo, jossa kaksi rakennustapaa kohtaa',
-          tiedosto: 'Outside the Amphitheatre, Katara (10995278063).jpg',
+          tiedosto: "Qatar - Al Zubarah Fort 01.jpg",
           teksti: 'Kataran kulttuurikylä avattiin lokakuussa 2010 rannalle '
             + 'täytetylle maalle. Se on rakennettu matalaksi kyläksi: '
             + 'hiekanvärisiä taloja, tasakattoja, varjoisia kujia ja '
@@ -31202,9 +31194,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nähtiin täällä lokakuussa 2012, kun ohjelmassa oli Verdin '
             + 'Aida. Kylässä on lisäksi maan ainoa oopperatalo, jossa on '
             + '550 paikkaa.',
-          selite: 'Kataran marmorinen amfiteatteri on alaltaan 3 275 '
-            + 'neliömetriä, ja siihen mahtuu 5 000 katsojaa.',
-          lahde: 'Paul Trafford, Wikimedia Commons (CC BY 2.0)',
+          selite: "Al Zubarahin linnake Qatarissa: hiekanväriset muurit ja kulmatornit kohoavat tasaisella, kivisellä maalla.",
+          lahde: "P. Hughes, Wikimedia Commons (CC BY 4.0)",
         },
         {
           otsikko: 'Asemat tunnistaa muodosta',
@@ -31272,13 +31263,6 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'lentoasemalle joulukuussa 2019. Aiheeksi rakennukseen '
                 + 'on valittu keidas, ja se näkyy aaltoilevina kattoina '
                 + 'ja kierrätysvedellä kasteltuina aavikkokasveina.',
-              kuva: {
-                tiedosto: 'Aerial view of Hamad Airport, May 2014.jpg',
-                selite: 'Hamadin lentoasema levittäytyy 36 '
-                  + 'neliökilometrille, josta puolet on merestä täytettyä '
-                  + 'maata.',
-                lahde: 'Chris Hoare, Wikimedia Commons (CC BY 2.0)',
-              },
             },
             {
               otsikko: 'Alueen rakenne',
@@ -32416,12 +32400,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       matkailijalle: {
-        kuva: {
-          tiedosto: 'Kuwait International Airport.jpg',
-          selite: 'Kuwaitin lentoaseman ykkösterminaalin piirsi japanilainen '
-            + 'Kenzo Tange, ja se avattiin vuonna 1979.',
-          lahde: 'Dhaval Surana, Wikimedia Commons (CC BY 4.0)',
-        },
         kappale: 'Kuwait City on Kuwaitinlahden eteläisellä rannalla '
           + 'Persianlahden pohjukassa. Kaupunkiseudulla asui vuonna 2018 '
           + 'noin kolme miljoonaa ihmistä eli yli seitsemänkymmentä '
@@ -32679,12 +32657,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pitivät Masqatia yli vuosisadan.',
           lahde: 'Eduard Marmet, Wikimedia Commons (CC BY-SA 2.0)',
         },
-        {
-          tiedosto: 'Riyam Park with incense burner Mabkhara (47954080007).jpg',
-          selite: 'Riyamin puiston monumentti on veistetty mabkharan eli '
-            + 'omanilaisen suitsutusastian muotoon.',
-          lahde: 'Eduard Marmet, Wikimedia Commons (CC BY 2.0)',
-        },
       ],
       /*
        * AVAUSKUVAT (vaihe B, erä 6, 20.8.2026): lahti, satama ja vuori
@@ -32764,7 +32736,6 @@ export const KULTTUURI_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Varastokin kuuluu näyttelyyn',
-          tiedosto: 'National museum of Oman in Muscat (53697743211).jpg',
           teksti: 'Omanin kansallismuseo avattiin vanhassa Maskatissa 30. '
             + 'heinäkuuta 2016; perustamisasetus oli annettu kolme vuotta '
             + 'aiemmin. Rakennuksen pinta-ala on 13 700 neliömetriä, ja '
@@ -32776,15 +32747,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vitriiniin. Museo oli ensimmäinen Lähi-idässä, jonka '
             + 'opasteissa on näkövammaisille tarkoitettua arabiankielistä '
             + 'pistekirjoitusta.',
-          lyhyt: 'Omanin kansallismuseo avattiin 2016 ensimmäisenä Lähi-idässä arabiankielisin pistekirjoitusopastein.',
-          selite: 'Omanin kansallismuseo avattiin 30. heinäkuuta 2016, ja se '
-            + 'oli ensimmäinen Lähi-idässä, jonka opasteissa on '
-            + 'arabiankielistä pistekirjoitusta.',
-          lahde: 'dronepicr, Wikimedia Commons (CC BY 2.0)',
         },
         {
           otsikko: 'Turandot avasi talon',
-          tiedosto: 'Royal Opera House Muscat 2.jpg',
           teksti: 'Sulttaani Qaboos määräsi vuonna 2001 rakennettavaksi '
             + 'talon, jonka työnimi oli Musiikkitaiteiden talo. Se '
             + 'avattiin 12. lokakuuta 2011 Puccinin Turandotilla, jota '
@@ -32795,14 +32760,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lavalla nähtiin Domingon lisäksi Andrea Bocelli ja Renée '
             + 'Fleming, myöhemmin muun muassa sellisti Yo-Yo Ma ja '
             + 'Mariinski-teatterin Joutsenlampi.',
-          lyhyt: 'Masqatin oopperatalo avattiin 2011 Puccinin Turandotilla, ja saliin mahtuu enintään 1 100 kuulijaa.',
-          selite: 'Masqatin oopperatalo avattiin 12. lokakuuta 2011 Puccinin '
-            + 'Turandotilla, ja saliin mahtuu enintään 1 100 kuulijaa.',
-          lahde: 'Juozas Šalna, Wikimedia Commons (CC BY 2.0)',
         },
         {
           otsikko: 'Yksi matto peittää koko lattian',
-          tiedosto: 'Muscat, moschea del sultano qaboos, interno, grande sala di preghiera 01.jpg',
           teksti: 'Sulttaani Qaboosin suurmoskeija Bawsharissa vihittiin 4. '
             + 'toukokuuta 2001. Rukoussali on 4 343 neliömetriä, ja sen '
             + 'lattian peittää yksi ainoa matto: siinä on 1,7 miljoonaa '
@@ -32812,11 +32772,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kruunu, jossa on 600 000 kristallia ja 1 122 lamppua, ja '
             + 'kruunun sisällä on portaat, joita pitkin lamput '
             + 'vaihdetaan. Samanlaisia pienempiä kruunuja on talossa 34.',
-          lyhyt: 'Suurmoskeijan rukoussalin lattian peittää yksi matto, jossa on 1,7 miljoonaa solmua.',
-          selite: 'Suurmoskeijan rukoussalin lattian peittää yksi ainoa '
-            + 'matto, jossa on 1,7 miljoonaa solmua ja joka painaa 21 '
-            + 'tonnia.',
-          lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       /*
@@ -33131,14 +33086,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'länsipuoli Karkh.',
           lahde: 'Samir Al-Ibrahem, Wikimedia Commons (CC BY-SA 4.0)',
         },
-        {
-          tiedosto: 'كهرمانة 03.jpg',
-          lyhyt: 'Kahramana-suihkulähde vuodelta 1971 kertoo Ali Baban tarinasta orjatytöstä ja kuumasta öljystä.',
-          selite: 'Mohammed Ghani Hikmatin Kahramana-suihkulähde vuodelta '
-            + '1971 kertoo Ali Baban tarinan kohdan, jossa orjatyttö kaataa '
-            + 'kuumaa öljyä rosvojen piiloruukkuihin.',
-          lahde: 'Hussein A.Al-mukhtar, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       /*
        * AVAUSKUVAT (18.8.2026, E00-täydennys): etusivun iso kuvapaikka
@@ -33300,13 +33247,10 @@ export const KULTTUURI_KATEGORIAT = {
                   lahde: 'Ali.tinbo, Wikimedia Commons (CC BY-SA 4.0)',
                 },
                 {
-                  tiedosto: 'Al-Mutanabbi Street Gate.png',
-                  lyhyt: 'Mutanabbin katu on nimetty runoilija al-Mutanabbin mukaan, ja kadun päässä seisoo hänen patsaansa.',
-                  selite: 'Mutanabbin katu on nimetty runoilija Abu '
-                    + 'at-Tayyib al-Mutanabbin (n. 915–965) mukaan, ja kadun '
-                    + 'toisessa päässä Tigrisin rannalla seisoo hänen '
-                    + 'patsaansa.',
-                  lahde: 'Ayham4002, Wikimedia Commons (CC BY-SA 4.0)',
+                  tiedosto: "Almutanabi street 2017 2.jpg",
+                  lyhyt: "Mutanabbin katu Bagdadissa.",
+                  selite: "Mutanabbin katu Bagdadin Rusafan puolella: kapeaa katua reunustavat vanhat parvekkeelliset talot, ja jalankulkijat täyttävät sen.",
+                  lahde: "MohammadHuzam, Wikimedia Commons (CC BY-SA 4.0)",
                 },
                 {
                   tiedosto: 'An Iraqi man sells fruit at a market in Al Rashid, Baghdad, Iraq.jpg',
@@ -33540,7 +33484,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Viisikymmentä metriä oikealta vasemmalle',
-          tiedosto: '(نصب التحرير( ساحه التحرير 01.jpg',
           teksti: 'Tahririn aukion laidalla seisoo travertiiniseinä, joka on '
             + '50 metriä pitkä ja 10 metriä korkea ja nostettu kuuden '
             + 'metrin päähän maasta. Siihen on kiinnitetty 14 '
@@ -33552,11 +33495,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'viittaa babylonialaisiin ja assyrialaisiin kaiverruksiin. '
             + 'Salim kuoli tammikuussa 1961, ja työn saattoivat valmiiksi '
             + 'hänen puolisonsa Lorna Selim ja Mohammed Ghani Hikmat.',
-          lyhyt: 'Vapauden monumentin travertiiniseinä on 50 metriä pitkä, pronssivalut luetaan oikealta vasemmalle.',
-          selite: 'Vapauden monumentin travertiiniseinä on 50 metriä pitkä, '
-            + 'ja sen 14 pronssivalua luetaan kuin arabialainen runosäe '
-            + 'oikealta vasemmalle.',
-          lahde: 'Hussein A.Al-mukhtar, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -34256,12 +34194,10 @@ export const KULTTUURI_KATEGORIAT = {
        */
       matkailijalle: {
         kuva: {
-          tiedosto: 'Anıtkabir, Ankara, Turquía, 2024-10-03, DD 20.jpg',
-          lyhyt: 'Anıtkabir rakennettiin Rasattepen kukkulalle 1944–1953; suunnittelukilpailuun tuli 49 ehdotusta.',
-          selite: 'Anıtkabir rakennettiin Rasattepen kukkulalle vuosina '
-            + '1944–1953, ja sen suunnittelukilpailuun tuli 49 ehdotusta '
-            + 'kuudesta maasta.',
-          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "Monumento de Ancira, Ankara, Turquía, 2024-10-03, DD 48.jpg",
+          lyhyt: "Augustuksen ja Rooman temppelin jäänteet Ankarassa.",
+          selite: "Augustuksen ja Rooman temppelin korkea kiviseinä Ankarassa; seinän vieressä näkyy teräsrunkoinen telinerakennelma.",
+          lahde: "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
         },
         kappale: 'Ankara on Anatolian ylängöllä 938 metrin korkeudessa, ja '
           + 'keskustaajamassa asuu yli 5,3 miljoonaa ihmistä. Kaupunki on '
@@ -35227,14 +35163,6 @@ export const KULTTUURI_KATEGORIAT = {
        * ja umaijadien pääkaupunkikauden.
        */
       matkailijalle: {
-        kuva: {
-          tiedosto: 'Sayyida Ruqayya\'s shrine in Damascus 01.jpg',
-          lyhyt: 'Sayyida Ruqayyan moskeija on shiialaisten pyhiinvaelluskohde, Husayn ibn Alin tyttären hauta.',
-          selite: 'Sayyida Ruqayyan moskeija Al-Amaran kaupunginosassa on '
-            + 'shiialaisten pyhiinvaelluskohde, ja siihen on haudattu '
-            + 'Husayn ibn Alin nuori tytär Ruqayya.',
-          lahde: 'Emir Ghazi, Wikimedia Commons (CC BY-SA 4.0)',
-        },
         kappale: 'Damaskos on 680 metrin tasangolla, 80 kilometriä '
           + 'Välimereltä sisämaahan, Anti-Libanonin vuoriston itäisillä '
           + 'juurilla. Kaupungin ala on 105 neliökilometriä. Muurien '
@@ -36129,12 +36057,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kausiuoma, joka tulvii lyhyiden rankkasateiden jälkeen.',
           lahde: 'Peter Dowley from Dubai, United Arab Emirates, Wikimedia Commons (CC BY 2.0)',
         },
-        {
-          tiedosto: 'KING KHALED INTL.TER.1 - panoramio.jpg',
-          selite: 'Kuningas Khalidin lentoasema avattiin 16. marraskuuta '
-            + '1983, ja siinä on neljä terminaalia.',
-          lahde: 'Kayhan ERTUGRUL, Wikimedia Commons (CC BY-SA 3.0)',
-        },
       ],
       ennenNyt: [
         {
@@ -36389,7 +36311,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Kuusi raidetta saman katon alla',
-          tiedosto: 'KAFD Metro Station Riyadh Saudi Arabia 006.jpg',
           teksti: 'KAFD-asema on al-Aqeeqin kaupunginosassa '
             + 'rahoituskaupunginosan kupeessa. Suunnittelukilpailun '
             + 'voitti Zaha Hadid Architects vuonna 2013, rakennustyöt '
@@ -36401,11 +36322,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tuuli piirtää hiekkaan. Vuonna 2019 rakennus oli '
             + 'kaupunkikuvassa vielä paljas teräsrunko, ja asema avattiin '
             + 'joulukuussa 2024.',
-          lyhyt: 'KAFD-aseman suunnittelukilpailun voitti Zaha Hadid Architects mashrabiya-julkisivulla.',
-          selite: 'KAFD-aseman suunnittelukilpailun voitti Zaha Hadid '
-            + 'Architects, ja julkisivun kuvioinnin aiheiksi kerrotaan '
-            + 'mashrabiya-ristikot ja tuulen jäljet hiekassa.',
-          lahde: 'Kolaiel, Wikimedia Commons (CC0)',
         },
         {
           otsikko: 'Teräskatos lepää vinon seinän varassa',
@@ -36529,13 +36445,6 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Nasser Ghassembaglou, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Saat Tower - 4R9A0823.jpg',
-          lyhyt: 'Saat-tornin rakennus on Tabrizin kaupungintalo, Itä-Azerbaidžanin maakunnan pääkaupungissa.',
-          selite: 'Saat-tornin rakennus on Tabrizin kaupungintalo, ja '
-            + 'kaupunki on Itä-Azerbaidžanin maakunnan pääkaupunki.',
-          lahde: 'Monaesfandiar, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
           tiedosto: 'Tabriz Bazaar Bridge.jpg',
           selite: 'Tabriz on Quru-joen laaksossa 1 350–1 600 metrin '
             + 'korkeudella merenpinnasta.',
@@ -36564,7 +36473,6 @@ export const KULTTUURI_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Kolmetoista nimeä, tuhat vuotta väliä',
-          tiedosto: 'Maghbaratolshoara Tabriz, Iran.jpg',
           teksti: 'Surkhabin kaupunginosassa on hautausmaa nimeltä '
             + 'Maqbarat-o-shoara, runoilijoiden mausoleumi. Sinne on '
             + 'haudattu iranilaisia runoilijoita ja mystikkoja: Asadi '
@@ -36577,10 +36485,6 @@ export const KULTTUURI_KATEGORIAT = {
             + '(1906–1988), jonka runoelma Heydar Babaya Salam on '
             + 'käännetty yli kolmellekymmenelle kielelle. Nykyinen '
             + 'muistorakennus on pystytetty paikalle 1970-luvulta alkaen.',
-          lyhyt: 'Maqbarat-o-shoaraan on haudattu 13 nimeä, vanhimman ja tuoreimman väli yli tuhat vuotta.',
-          selite: 'Maqbarat-o-shoaraan on haudattu kolmetoista nimeä, ja '
-            + 'vanhimman ja tuoreimman väli on yli tuhat vuotta.',
-          lahde: 'Arashk rp2, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           otsikko: 'Allas näyttää kelluvan laakson yllä',
@@ -38958,14 +38862,6 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Kaupungin sisällä oli vuoteen 2018 asti vain takseja; '
                 + 'ne ovat oranssivalkoisia, mittarittomia ja hinta '
                 + 'sovitaan ennen matkaa.',
-              kuva: {
-                tiedosto: 'Salalah Airport.jpg',
-                lyhyt: 'Salalahin uusi lentoasema avattiin 2015, ja vanha jäi kotimaan ja hätätilanteiden käyttöön.',
-                selite: 'Salalahin uusi lentoasema avattiin 15. kesäkuuta '
-                  + '2015, ja vanha jäi kotimaan ja hätätilanteiden '
-                  + 'käyttöön.',
-                lahde: 'Silvio Taverna, Wikimedia Commons (CC BY-SA 2.0)',
-              },
             },
             {
               otsikko: 'Alueen rakenne',
@@ -64755,10 +64651,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nykyään useita satoja dharug-ihmisiä, joukossa ainakin '
             + 'sata hänen omaa sukuaan olevaa gadigalia. Lokakuussa '
             + '2023 keskustan uusi metroasema nimettiin Gadigaliksi.',
-          tiedosto: '20250326 Gadigal Station - Platform 1.jpg',
-          selite: 'Gadigal-asema oli rakennusaikana nimeltään Pitt '
-            + 'Street, ja se nimettiin uudelleen lokakuussa 2023.',
-          lahde: 'Windmemories, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Gadigal',
         },
         {
@@ -64957,14 +64849,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kerroksittain nousevat siirtomaa-ajan huvilat ovat kaupungin '
             + 'tunnetuin näky.',
           lahde: 'Octagon, Wikimedia Commons (CC BY 3.0)',
-        },
-        {
-          tiedosto: 'The Bucket Fountain.jpg',
-          lyhyt: 'Cuba Streetin Bucket Fountain on Wellingtonin kulttuurin pienoismalliksi mielletyn kadun veistos.',
-          selite: 'Cuba Streetin Bucket Fountain on kaupungin tunnetuimpia '
-            + 'veistoksia, ja katua pidetään Wellingtonin kulttuurin '
-            + 'pienoismallina.',
-          lahde: 'Matt Boulton, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'General view - Wellington Botanic Garden - Wellington, NZ - DSC09259.jpg',
@@ -73907,7 +73791,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Tunnustus tässä ajassa',
-          tiedosto: 'Yagan Square - Wirin, March 2018 03.jpg',
           teksti: 'Liittovaltion tuomioistuin totesi syyskuussa 2006 '
             + 'tapauksessa Bennell vastaan Länsi-Australia, että noongarien '
             + 'alkuperäinen maaoikeus oli säilynyt Perthin '
@@ -73918,11 +73801,6 @@ export const KULTTUURI_KATEGORIAT = {
             + '2021. Keskustaan avattiin 3. maaliskuuta 2018 Yagan Square, '
             + 'jonka yhdeksänmetrisen Wirin-veistoksen teki '
             + 'noongar-taiteilija Tjyllyungoo.',
-          lyhyt: 'Tjyllyungoon veistämä Wirin kohoaa yhdeksän metriä Yagan Squarella elämän voimana.',
-          selite: 'Tjyllyungoon veistämä Wirin kohoaa yhdeksän metriä Yagan '
-            + 'Squarella, ja nimi tarkoittaa kaiken elämän yhdistävää '
-            + 'luovaa voimaa.',
-          lahde: 'Samuel Wiki, Wikimedia Commons (CC0)',
           wiki: 'Yagan Square',
         },
       ],
@@ -82714,7 +82592,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Valonsäde talvipäivänseisauksena',
-          tiedosto: 'Spectra from Tasman Bridge (9105303787).jpg',
           teksti: 'MONAn omistaja David Walsh, ohjaaja Leigh Carmichael ja '
             + 'muusikko Brian Ritchie käynnistivät 2013 talvifestivaalin, '
             + 'jonka piti alun perin vain houkutella museoon kävijöitä '
@@ -82725,9 +82602,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Ohjelmaan kuuluu Winter Feast -ruokajuhla, ja Salamanca Placen '
             + 'puut koristellaan punaisilla valoilla. Vuonna 2023 kävijöitä '
             + 'laskettiin 427 000.',
-          selite: 'Ryoji Ikedan spectra on valoteos, joka nousee Hobartin yltä '
-            + 'pilviin Dark Mofon aikaan.',
-          lahde: 'Christopher Neugebauer from Hobart, Australia, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Dark Mofo',
         },
         {
@@ -83985,13 +83859,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       matkailijalle: {
-        kuva: {
-          tiedosto: 'Office and apartment tower on Ela Beach at the bottom of Musgrave Street.jpg',
-          lyhyt: 'Musgrave Street laskeutuu keskustasta Ela Beachille, tunnetuimpien asuintornien luo.',
-          selite: 'Musgrave Street laskeutuu keskustasta Ela Beachille, ja sen '
-            + 'päässä seisoo kaupungin tunnetuimpia toimisto- ja asuintorneja.',
-          lahde: 'Masalai, Wikimedia Commons (CC BY-SA 3.0)',
-        },
         kappale: 'Port Moresby on Papua-Uuden-Guinean pääkaupunki ja maan '
           + 'ainoa suurkaupunki: vuoden 2024 laskennassa asukkaita oli '
           + '756 754. Se on Uuden-Guinean saaren eteläisellä rannikolla, ja '
@@ -84341,7 +84208,6 @@ export const KULTTUURI_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Talo esi-isille',
-          tiedosto: 'Papua New Guinea National Museum May 2015.jpg',
           teksti: 'Papua-Uuden-Guinean kansallismuseo ja -galleria avattiin '
             + 'yleisölle 27. kesäkuuta 1977 Waiganissa, ja rakennustyö oli '
             + 'alkanut kaksi vuotta aiemmin. Museo kutsuu itseään nimellä Haus '
@@ -84352,9 +84218,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Papuanlahden savipatakauppaa ja päätyi siihen, että vaihtoa '
             + 'Australian suuntaan oli käyty todennäköisesti jo kahden '
             + 'vuosituhannen ajan.',
-          selite: 'Kansallismuseon maalattu päätykolmio kohoaa Waiganin '
-            + 'puistoalueella kivimuurin takaa.',
-          lahde: 'Nick-D, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Papua New Guinea National Museum and Art Gallery',
         },
         {
@@ -93283,13 +93146,6 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'syöksyhammasta esittävä monumentti, kauppahallia '
                 + 'vastapäätä värikäs seinämaalaus ja kukkulalla '
                 + 'pitkulainen kaupungintalo.',
-              kuva: {
-                tiedosto: 'PortVilaPresbyterianChurch.jpg',
-                selite: 'Presbyteerikirkon keltainen harjakatto '
-                  + 'laskeutuu nurmelle asti Independence Parkia '
-                  + 'vastapäätä.',
-                lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 3.0)',
-              },
             },
             {
               otsikko: 'Arjen ilmiö: kauppahalli rannan tuntumassa',
@@ -129990,15 +129846,6 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'syrjäisimmäksi: avajaisissa esiintyi jazzmuusikko James '
                 + 'Morrison, ja tilaisuutta varten sävelletty Matthew Deweyn '
                 + 'Symphony of the Inland Sea sai kantaesityksensä.',
-              kuva: {
-                tiedosto: 'Sculpture in Mount Isa, Queensland, 2023, 01.jpg',
-                lyhyt: 'Ruostuneista teräslevyistä koottu härkä laskee päänsä puskuasentoon.',
-                selite: 'Kerroksittain leikatuista, ruostuneista '
-                  + 'teräslevyistä koottu härkäveistos seisoo rakennuksen '
-                  + 'edustalla Mount Isassa pää alas laskettuna ja sarvet '
-                  + 'eteenpäin, kuin valmiina rodeoareenalle.',
-                lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
-              },
             },
             {
               otsikko: 'Järvi, aavekaupunki ja vihreä rotko',
@@ -135775,11 +135622,8 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Puputan – viimeinen taisto',
           teksti:
             'Syyskuun 20. päivänä 1906 hollantilaiset joukot etenivät Sanurin rannalta Denpasariin syyttäen Badungin ruhtinasta haaksirikkoisen laivan ryöstämisestä. Badungin raja perheineen, pappeineen ja seuralaisineen käveli palatsistaan valkoisiin, ruumiinpolton väriin pukeutuneina, kris-tikarit ja korut mukanaan, suoraan hollantilaisten kivääreitä kohti. Kun tulitus ei pysäyttänyt heitä, moni käänsi terän itseensä tai toisiinsa – puputan, "viimeinen taisto", jossa kuoli yhden aamun aikana yli tuhat balilaista. Denpasarin puistoon pystytetty patsas muistuttaa yhä tapahtumasta, jota balilaiset pitävät esimerkkinä vastarinnasta vierasta valtaa vastaan.',
-          tiedosto: 'Taman Puputan 1906-Denpasar Bali.JPG',
-          lyhyt: 'Patsas kolmesta aseistetusta balilaismiehestä Denpasarin Puputan-puistossa.',
           selite:
             'Pronssipatsas esittää kolmea kris-tikarein ja keihäin aseistautunutta balilaismiestä hyökkäysasennossa – muistomerkki vuoden 1906 puputanille, jossa satoja Badungin asukkaita kuoli taistellessaan hollantilaisia joukkoja vastaan.',
-          lahde: 'Eric Bajart, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Puputan',
         },
       ],
@@ -135884,15 +135728,6 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'lautalla Ketapangista Gilimanukiin puolessa tunnissa ympäri '
                 + 'vuorokauden.',
               kuva: [
-                {
-                  tiedosto: 'Terminal Internasional Bandara Ngurah Rai Bali.jpg',
-                  lyhyt: 'Matkailijat odottavat laukkuineen Ngurah Rain kansainvälisessä terminaalissa.',
-                  selite: 'Ngurah Rain lentoaseman kansainvälisen terminaalin '
-                    + 'korkean valkoisen kattokaaren alla matkailijat odottavat '
-                    + 'matkalaukkujensa kanssa lentotietotaulun edessä '
-                    + 'marraskuussa 2023.',
-                  lahde: 'Ardfeb, Wikimedia Commons (CC BY-SA 4.0)',
-                },
                 {
                   tiedosto: 'Traffic on Monkey Forest Road in Ubud, Bali (15009547799).jpg',
                   lyhyt: 'Skootterit ja autot jonottavat Jalan Monkey Forestilla Ubudin keskustassa.',
@@ -136117,11 +135952,8 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Päivä, jolloin koko saari vaikenee',
           teksti:
             'Sakan uudenvuoden aattona balilaiset kantavat kylän kaduilla jättimäisiä, bambusta ja paperista rakennettuja hirviöhahmoja, ogoh-ogoheja, jotka esittävät pahoja henkiä. Illan päätteeksi hahmot poltetaan roihuavissa nuotioissa – rituaali, jonka on tarkoitus karkottaa pahuus saarelta ennen uutta vuotta. Seuraava päivä, Nyepi eli hiljaisuuden päivä, on täydellinen pysähdys: ei valoja, ei matkustamista, ei työtä eikä huvia, ei edes turisteille myönnettyjä poikkeuksia. Balilaiset uskovat, että hiljaisuus ja pimeys saavat pahat henget luulemaan saaren autioksi, jolloin ne lentävät ohi eivätkä jää seuraavaksi vuodeksi tuomaan onnettomuutta.',
-          tiedosto: 'Ritual Ogoh Ogoh.jpg',
-          lyhyt: 'Ogoh-ogoh-hirviöhahmon polttaminen Nyepin aattona.',
           selite:
             'Bambusta ja paperista rakennettu tummahahmoinen ogoh-ogoh-hirviö palaa liekeissä nurmikentällä, kun valkoisiin juhlapukuihin pukeutuneet balilaiset seuraavat rituaalia vieressä.',
-          lahde: 'Ivuvisual, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Nyepi',
         },
         {
@@ -138604,12 +138436,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       matkailijalle: {
-        kuva: {
-          tiedosto: 'Pobednik kalemegdan 06.jpg',
-          lyhyt: 'Pobednik-patsas on yksi linnoituksen yläkaupungin nähtävyyksistä.',
-          selite: 'Pobednik-patsaan alla on linnoituksen hiekkaharjun profiili, joka on suojeltu luonnonmuistomerkkinä.',
-          lahde: 'Zvezdazvezdica, Wikimedia Commons (CC BY-SA 4.0)',
-        },
         kappale: 'Belgradiin saapuu lentäen Nikola Tesla -lentoasemalle (BEG), joka on Surčinin lähellä. Lentoasemalta kulkevat bussit ja pikavuoro keskustaan. Lähteiden mukaan kaupungin joukkoliikenne on ilmaista, mutta ajantasainen tilanne kannattaa tarkistaa. Useimmat kohteet ovat lähteen mukaan lähellä Kalemegdania, joten keskustassa pärjää hyvin jalan. Valuutta on serbian dinaari (RSD), ja englantia ja saksaa ymmärretään laajalti. Kafanoissa soitetaan usein elävää musiikkia, ja tunnetuin keskittymä on Skadarlijassa.',
         artikkeli: {
           nimi: 'Matkailijan Belgrad',
@@ -139314,11 +139140,6 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Perille ja liikkeelle',
               teksti: 'Minskin kansallinen lentoasema (MSQ) avattiin 1982, ja se on lähteestä riippuen 37–42 kilometrin päässä keskustasta. Rautatieasema on Minsk-Pasažyrski, ja kaukobussit liikennöivät kaupungista eri suuntiin. Joukkoliikenteessä on kahdeksan raitiolinjaa, yli 70 johdinautolinjaa, kolme metrolinjaa ja yli sata bussilinjaa. Metro avattiin 1984, ja keskusta kulkee lähteen mukaan helposti jalan.',
-              kuva: {
-                tiedosto: 'Stream of people coming to Minsk National Airport terminal.jpg',
-                selite: 'Minskin kansallinen lentoasema avattiin 1982, ja se on noin 40 kilometrin päässä keskustasta.',
-                lahde: 'Vasyatka1, Wikimedia Commons (CC BY-SA 4.0)',
-              },
             },
             {
               otsikko: 'Vanha kaupunki jalan',
@@ -139447,9 +139268,6 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Näyttämöt ja kirjallisuusmuseot',
           teksti: 'Minskin suuriin teattereihin kuuluvat Kansallinen ooppera- ja balettiteatteri, Valtion musiikkiteatteri, Maksim Gorkin kansallinen draamateatteri, jonka esitykset ovat venäjäksi, ja Janka Kupalan kansallisteatteri, jonka esitykset ovat valkovenäjäksi. Kirjallisuudesta kertovat muun muassa Maksim Bahdanovitšin ja Janka Kupalan museot. Ooppera ja baletti sijaitsee Kolminaisuuden esikaupungissa, ja sen oopperatalo valmistui 1939.',
-          tiedosto: 'Belarus-Minsk-Opera and Ballet Theatre-1.jpg',
-          selite: 'Ooppera- ja balettiteatteri sijaitsee Kolminaisuuden esikaupungissa, ja talo valmistui 1939.',
-          lahde: 'Hanna Zelenko, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Minsk',
         },
       ],
@@ -139527,11 +139345,6 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Perille ja liikkeelle',
               teksti: 'Podgorican lentoasema (TGD) on noin kymmenen kilometriä kaupungista etelään, ja lentoyhteyksiä on Euroopan solmukohtiin. Taksin hinta kannattaa sopia etukäteen. Rautatieasema ja linja-autoasema ovat lähellä toisiaan, noin 1,5 kilometrin päässä pääaukiosta kaakkoon. Belgrad–Bar-rata palvelee henkilöliikennettä, ja Nikšićiin kulkee junia vuodesta 2012; Shkodërin rata on vain tavaraliikenteelle. Kaupungissa on noin 30 bussilinjaa. Sozinan tunnelin ansiosta rannikolle pääsee noin puolessa tunnissa.',
-              kuva: {
-                tiedosto: 'Podgorica Airport.JPG',
-                selite: 'Podgorican lentoasema on nimetty tunnuksella TGD kaupungin entisen nimen Titograd mukaan.',
-                lahde: 'Avi1111 dr. avishai teicher, Wikimedia Commons (CC BY-SA 4.0)',
-              },
             },
             {
               otsikko: 'Vanha kaupunki Ribnican rannalla',
@@ -139856,10 +139669,6 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Nykytaiteen museo ja lahjoitukset',
           teksti: 'Skopjen nykytaiteen museo rakennettiin vuoden 1963 maanjäristyksen jälkeen kansainvälisellä avulla. Puolalaisten arkkitehtien suunnittelema museorakennus annettiin kaupungille puolalaisten lahjana. Pablo Picasso lahjoitti uudelle museolle maalauksensa Naisen pää, ja kokoelmassa on lähteen mukaan muun muassa Fernand Légerin, André Massonin, Hans Hartungin, Victor Vasarelyn, Alexander Calderin, Pierre Soulagesin, Alberto Burrin ja Christon töitä. Apua tarjottiin 78 maasta, ja siksi kaupunkia kutsutaan kansainvälisen solidaarisuuden kaupungiksi. Univerzalna sala -konserttisali valmistui 1966 noin 35 maan lahjoituksilla.',
-          tiedosto: 'Museum of Contemporary Art Skopje 1.jpg',
-          lyhyt: 'Skopjen nykytaiteen museo rakennettiin maanjäristyksen jälkeen kansainvälisten lahjoitusten turvin.',
-          selite: 'Skopjen nykytaiteen museo rakennettiin maanjäristyksen jälkeen kansainvälisten lahjoitusten turvin.',
-          lahde: 'Kallerna, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Museum of Contemporary Art (Skopje)',
         },
         {
@@ -141031,10 +140840,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'McKay Savage from London, UK, Wikimedia Commons (CC BY 2.0)',
         },
         {
-          tiedosto: 'Harpa From Arnarhóll (33650129491).jpg',
-          lyhyt: 'Harpa on Reykjavíkin konsertti- ja kongressitalo.',
-          selite: 'Harpa avattiin 4.5.2011, ja siellä toimii Islannin sinfoniaorkesteri.',
-          lahde: 'Gary J. Wood from Toronto, ON, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+          tiedosto: "Reykjavik 1860s.jpg",
+          lyhyt: "Reykjavík 1860-luvulla",
+          selite: "Sigfús Eymundssonin valokuva Reykjavíkista ennen vuotta 1870: matalia taloja, tuomiokirkko keskellä ja Tjörn-lampi oikealla.",
+          lahde: "Sigfús Eymundsson, Wikimedia Commons (public domain)",
         },
       ],
       nostot: [
@@ -141050,10 +140859,10 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Lasi, jonka valot vaihtuvat',
           teksti: 'Harpa on konsertti- ja kongressitalo, jonka avajaiskonsertti pidettiin 4.5.2011. Sen suunnittelivat tanskalainen Henning Larsen Architects ja tanskalais-islantilainen taiteilija Olafur Eliasson. Julkisivu on teräsrungon päälle asennettuja värillisiä lasipaneeleita, ja sen kerrotaan saaneen innoituksensa Islannin basalttimaisemasta. Julkisivun 714 LED-valoa näyttävät Eliassonin suunnittelemaa videoteosta. Rakennustyöt alkoivat 2007, ja 2008 alkanut rahoituskriisi pysäytti hankkeen, kunnes työt jatkuivat 2009 valtion ja kaupungin päätöksellä. Talo sai Mies van der Rohe -arkkitehtuuripalkinnon 2013.',
-          tiedosto: '*Das Opern- und Konzerthaus in Reykjavik. 02.jpg',
-          lyhyt: 'Harpan julkisivu koostuu teräsrungon päälle asennetuista värillisistä lasipaneeleista.',
-          selite: 'Julkisivun kerrotaan saaneen innoituksensa Islannin basalttimaisemasta, ja siinä on 714 LED-valoa.',
-          lahde: 'Holger Uwe Schmitt, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "Hallgrímskirkja, Reykjavík, Iceland, 20230506 1701 5380.jpg",
+          lyhyt: "Hallgrímskirkja Reykjavíkissa",
+          selite: "Hallgrímskirkjan porrastettu betonitorni on Reykjavíkin tunnetuin maamerkki, ja sen edessä seisoo Leifur Eiríkssonin patsas.",
+          lahde: "Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)",
           wiki: 'Harpa (concert hall)',
         },
         {
@@ -141092,12 +140901,6 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Perille ja liikkeelle',
               teksti: 'Kansainvälinen Keflavík International Airport (KEF) on noin 50 kilometrin päässä kaupungista lounaaseen ja palvelee suurinta osaa Islannin kansainvälisestä liikenteestä. Reykjavík Airport (RKV) on kaupungin sisällä, parin kilometrin päässä keskustasta, ja palvelee kotimaan lentoja, yleisilmailua ja lääkintälentoja. Kaupungin ja ympäristön linja-autoliikenteestä vastaa Strætó bs. Satamia on kaksi: vanha satama keskustan lähellä ja Sundahöfn idässä, jonne tulevat suuremmat risteilijät.',
-              kuva: {
-                tiedosto: 'Keflavík International Airport (31664385142).jpg',
-                lyhyt: 'Keflavík International Airport palvelee suurinta osaa Islannin kansainvälisestä liikenteestä.',
-                selite: 'Lentoasema on noin 50 kilometrin päässä Reykjavíkista, ja sen tunnus on KEF.',
-                lahde: 'Jeff Hitchcock from Seattle, WA, USA, Wikimedia Commons (CC BY 2.0)',
-              },
             },
             {
               otsikko: 'Vanha keskusta',
@@ -141207,10 +141010,10 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Kuvanveistäjän oma talo',
           teksti: 'Ásmundarsafn avattiin 1983, ja se on omistettu kuvanveistäjä Ásmundur Sveinssonin (1893–1982) veistoksille ja piirustuksille. Museo on taiteilijan entinen koti ja työpaja Laugardalurissa, jonka hän suunnitteli ja rakensi enimmäkseen itse 1940- ja 1950-luvuilla. Arkkitehtuurissa leikitellään arabialaisen kulttuurin teemalla ja välimerellisellä vaikutuksella. Talon ympärillä oleva veistospuutarha on avoinna yleisölle ympäri vuoden. Sveinsson oli lähteen mukaan yksi Islannin kuvanveiston uranuurtajista, ja hänen töitään on eri puolilla maata.',
-          tiedosto: 'Ásmundarsafn - front view with sculptures by Ásmundur Sveinsson.jpg',
-          lyhyt: 'Ásmundarsafn on kuvanveistäjä Ásmundur Sveinssonin entinen koti ja työpaja Laugardalurissa.',
-          selite: 'Taiteilija rakensi talon enimmäkseen itse 1940- ja 1950-luvuilla, ja museo avattiin 1983.',
-          lahde: 'Slawojar2, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "Reykjavik Cathedral 2023.jpg",
+          lyhyt: "Reykjavíkin tuomiokirkko",
+          selite: "Reykjavíkin tuomiokirkko Dómkirkjan on yksi kaupungin vanhimmista kirkoista, ja sen tornissa on kello.",
+          lahde: "APK, Wikimedia Commons (CC BY-SA 4.0)",
           wiki: 'Reykjavik Art Museum',
         },
         {
@@ -141225,10 +141028,6 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Yhdeksän paria saaressa',
           teksti: 'Yhdysvaltalainen taiteilija Richard Serra sai Islannin kansallisgalleriasta kutsun tehdä teoksen ja valitsi paikaksi Viðeyn. Valmistunut 1990 teos Áfangar sijaitsee Viðeyn luoteisosassa, Vesturey-osan reunoilla, ja siinä on yhdeksän paria basalttipylväitä. Parien pylväät ovat 9 ja 10 metrin korkeudella merenpinnasta; ylempi pylväs on 3 ja alempi 4 metriä korkea, joten pylväiden päät ovat samalla tasolla. Viðey on Kollafjörðurin lahden suurin saari, ja sinne pääsee lautalla. Saarella pesii monia lintulajeja.',
-          tiedosto: 'Viðey island basalt columns and Milestones sculpture.jpg',
-          lyhyt: 'Richard Serran Áfangar on basalttipylväistä tehty teos Viðeyn saarella.',
-          selite: 'Teos valmistui 1990, ja basaltti on islantilaista kiveä.',
-          lahde: 'Slawojar, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Viðey',
         },
       ],
@@ -141700,9 +141499,9 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'FritzDaCat, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
-          tiedosto: 'Sheikh Zayed Grand Mosque @ Abu Dhabi (15856602738).jpg',
-          selite: 'Sheikh Zayedin suurmoskeija avattiin joulukuussa 2007 ja on lähteen mukaan maan suurin.',
-          lahde: 'Guilhem Vellut from Annecy, France, Wikimedia Commons (CC BY 2.0)',
+          tiedosto: "Qasr al Hosn.jpg",
+          selite: "Qasr al-Hosnin valkoinen linnake ja sen vartiotorni Abu Dhabin keskustassa; taustalla näkyvät kaupungin nykyaikaiset pilvenpiirtäjät.",
+          lahde: "Darthjipsu, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       nostot: [
@@ -141717,9 +141516,6 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Saari, joka kasvoi sillan jälkeen',
           teksti: 'Abu Dhabin saari on vain kapean salmen päässä mantereesta. Lähteen mukaan ensimmäinen silta, Al Maqta, rakennettiin 1960-luvun lopulla yhdistämään manner aiemmin pieneen kalastajakylään. Kaupunkisuunnitelman laati 1960-luvun lopulla japanilainen arkkitehti Katsuhiko Takahashi, ja kaupunki kasvoi pian suunnitelmia suuremmaksi. Sittemmin saaria ja uusia siltoja on lisätty, ja Zaha Hadidin suunnittelema Sheikh Zayed -silta avattiin vuonna 2010.',
-          tiedosto: 'Abu Dhabi 2013 - panoramio.jpg',
-          selite: 'Sheikh Zayed -silta avattiin vuonna 2010 yhdistämään saari mantereeseen; sen suunnitteli Zaha Hadid.',
-          lahde: 'Валерий Дед, Wikimedia Commons (CC BY 3.0)',
           wiki: 'Abu Dhabi',
         },
         {
@@ -141733,18 +141529,10 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Moskeija, joka kokosi aineet kaikkialta',
           teksti: 'Sheikh Zayedin suurmoskeija on lähteen mukaan maan suurin moskeija. Rakennustyö aloitettiin 1990-luvulla, ja rukoussalit otettiin käyttöön joulukuussa 2007. Hankkeessa oli lähteen mukaan mukana tuhansia työntekijöitä, ja materiaaleja ja tekijöitä tuli muun muassa Italiasta, Saksasta, Intiasta, Turkista, Iranista, Kiinasta, Britanniasta ja Uudesta-Seelannista. Moskeijassa on 82 kupolia, ja siihen mahtuu kymmeniä tuhansia rukoilijoita. Lähteen mukaan pihan kukkakuvioinen marmorimosaiikki voi olla maailman suurin.',
-          tiedosto: 'Abu dhabi, Moschea dello Sceicco Zayed, loggiati, pilastri, capitelli dorati 01 a palmizio.jpg',
-          selite: 'Suurmoskeijan valkoisessa marmoriseinässä on kullanvärisiä palmunlehtiaiheisia koristeita.',
-          lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Sheikh Zayed Grand Mosque',
         },
       ],
       matkailijalle: {
-        kuva: {
-          tiedosto: 'Abu dhabi, Moschea dello Sceicco Zayed, loggiati, 2.jpg',
-          selite: 'Sheikh Zayedin suurmoskeija on avoin myös ei-muslimivieraille, kunhan vaatetus on peittävä.',
-          lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
-        },
         kappale: 'Abu Dhabi on Arabiemiirikuntien pääkaupunki, mutta maan kaupallinen ja matkailun keskus on Dubai. Kaupunki on Persianlahden saarella, ja siltoja pitkin pääsee mantereelle. Nähtävää löytyy moskeijasta, linnakkeesta, palatsista ja Saadiyat-saaren museoista. Rantakatu Corniche sopii kävelyyn ja pyöräilyyn, ja ruoka on enimmäkseen halal-ruokaa. Kesä on erittäin kuuma, joten matkailuun sopii parhaiten marraskuun ja maaliskuun välinen aika. Ajantasainen matkustustilanne kannattaa tarkistaa ennen matkaa.',
         artikkeli: {
           nimi: 'Matkailijan Abu Dhabi',
@@ -141755,11 +141543,6 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Perille ja liikkeelle',
               teksti: 'Zayed International Airport (AUH) on noin kolmenkymmenen kilometrin päässä kaupungin itäpuolella, ja sen nimi on annettu Sheikh Zayedin mukaan. Vaihtoehtona on lentää Dubaihin ja jatkaa sieltä bussilla tai taksilla. Saarella liikutaan busseilla ja takseilla, ja bussiin tarvitaan lähteen mukaan Hafilat-älykortti, sillä kuljettaja ei ota käteistä. Cornichen varrella kulkee erillinen pyörätie lähes koko matkan.',
-              kuva: {
-                tiedosto: 'Shore view.jpg',
-                selite: 'Siltayhteydet liittävät saarikaupungin mantereeseen.',
-                lahde: 'Akhilmohan89, Wikimedia Commons (CC BY-SA 4.0)',
-              },
             },
             {
               otsikko: 'Nähtävää: linnake, palatsi ja ranta',
@@ -141884,9 +141667,6 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Muotokuva, joka riippuu kaapeleissa',
           teksti: 'The Founder\'s Memorial on muistomerkki ja kävijäkeskus Sheikh Zayedille, joka oli Arabiemiirikuntien ensimmäinen presidentti ja kuoli vuonna 2004. Sanctuary Gardenin keskellä on kuutiomainen paviljonki, jonka sisällä on teos The Constellation. Ralph Helmickin suunnittelema kolmiulotteinen muotokuva Zayedista koostuu yli tuhannesta geometrisesta kappaleesta, jotka riippuvat kaapeleissa. Kappaleet ovat viittä eri säännöllistä monitahokasta eli Platonin kappaletta. Teos valaistaan öisin, ja sitä ympäröi korotettu kävelysilta.',
-          tiedosto: 'Abu Dhabi, Founder\'s Memorial.jpg',
-          selite: 'The Founder\'s Memorial on muistomerkki Arabiemiirikuntien ensimmäiselle presidentille.',
-          lahde: 'Olivier Teyssandier, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'The Founder\'s Memorial',
         },
         {
@@ -141990,12 +141770,6 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Linnavuori ja alakaupunki',
               teksti: 'Linnavuorella ovat Suuri temppeli, bysanttilaisen kirkon jäänteet, Umaijadien palatsi ja keskiajan vartiotorni sekä museo; kukkulan näköalapaikka on suosittu auringonlaskun katseluun. Alakaupungissa Rooman teatteri ja odeon sijaitsevat Hashemite Plazan laidalla, ja teatterin sivuilla ovat Jordan Folklore Museum ja Museum of Popular Traditions. Läheltä löytyvät myös nymfaion ja Suuri Husseinin moskeija. Jordan Museum Ras al-Einissa esittelee muun muassa Ayn Ghazalin patsaat ja Kuolleenmeren kääröjä.',
-              kuva: {
-                tiedosto: 'متحف الأردن 2.jpg',
-                lyhyt: 'Jordan Museum Ras al-Einissa esittelee muun muassa Ayn Ghazalin patsaat.',
-                selite: 'Jordan Museumin kokoelmiin kuuluvat Ayn Ghazalin patsaat ja Kuolleenmeren kääröjä.',
-                lahde: 'Freedom\'s Falcon, Wikimedia Commons (PD)',
-              },
             },
             {
               otsikko: 'Jabal Amman ja kukkulat',
@@ -142141,10 +141915,10 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Viceskeeni2, Wikimedia Commons (CC0)',
         },
         {
-          tiedosto: 'Baku Boulevard 2024.jpg',
+          tiedosto: "A view to Baku and it's Boulevard.JPG",
           lyhyt: 'Bakun bulevardi on Bakunlahden rantaa seuraava promenadi.',
           selite: 'Bulevardin istutuksista päätettiin 1900-luvun alussa, ja promenadi on noin neljä kilometriä pitkä.',
-          lahde: 'Rufatazizzade, Wikimedia Commons (CC BY-SA 4.0)',
+          lahde: "Okinawa, Wikimedia Commons (CC BY-SA 3.0)",
         },
         {
           tiedosto: 'Vista de Baku, Azerbaiyán, 2016-09-26, DD 138.jpg',
@@ -142208,12 +141982,6 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Perille ja liikkeelle',
               teksti: 'Heydar Aliyev International Airport (GYD) sijaitsee parinkymmenen kilometrin päässä keskustasta, ja sen entinen nimi oli Bina International Airport. Bussi T1 yhdistää lentoaseman rautatieasemaan Koroglun metroaseman kautta, ja bussi N16 kulkee Samed Vurgun -puistoon. Metron ensimmäinen osuus avattiin marraskuussa 1967, ja nykyään siinä on kolme linjaa ja yli kaksikymmentä asemaa. Metro kulkee aamusta keskiyöhön, ja asemilla valokuvaus on kielletty. Lähteen mukaan maan maarajat naapurimaihin ovat suljetut siviililiikenteeltä, joten Bakuun tullaan yleensä lentäen.',
-              kuva: {
-                tiedosto: 'Terminal 1 (Baku airport).jpg',
-                lyhyt: 'Heydar Aliyev International Airport on Bakun lentoasema.',
-                selite: 'Lentoaseman entinen nimi oli Bina International Airport, ja se sijaitsee parinkymmenen kilometrin päässä keskustasta.',
-                lahde: 'Xoqoni Said, Wikimedia Commons (CC0)',
-              },
             },
             {
               otsikko: 'Vanhakaupunki',
@@ -142363,10 +142131,10 @@ export const KULTTUURI_KATEGORIAT = {
       johdanto: 'Beirut on kaivojen kaupunki: nimi tulee foinikian sanasta, joka tarkoittaa kaivoja, ja kaupunki on ollut asuttu yli viisi tuhatta vuotta. Isoisän matkavuonna 1873 Beirut oli kasvava satamakaupunki, ja 1800-luvun jälkipuoliskolla sieltä vietiin silkkiä Eurooppaan, ja kukkulalla opetti jo koulu, josta tuli myöhemmin yliopisto.',
       kansikuvat: [
         {
-          tiedosto: 'Mohammad Al-Amin Mosque and Saint George Maronite Cathedral – Beirut, Lebanon.jpg',
-          lyhyt: 'Moskeija ja katedraali seisovat Beirutin keskustassa vierekkäin.',
-          selite: 'Mohammad Al-Aminin moskeija ja Pyhän Yrjänän maroniittikatedraali seisovat Beirutin keskustassa aivan vierekkäin.',
-          lahde: 'Habibhelou, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "Pigeon Rocks at sunset, Beirut, Lebanon.jpg",
+          lyhyt: "Kyyhkyskallio Beirutin rannikolla auringonlaskussa.",
+          selite: "Raouchén Kyyhkyskallio nousee Välimerestä Beirutin rannikolla; kuva on otettu auringonlaskun aikaan.",
+          lahde: "Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)",
         },
         {
           tiedosto: 'Pigeon Rocks of Beirut, Rock of Raouche, Beirut, Lebanon.jpg',
@@ -142421,10 +142189,10 @@ export const KULTTUURI_KATEGORIAT = {
       ],
       matkailijalle: {
         kuva: {
-          tiedosto: 'Mohammad Al-Amin Mosque in 2026 01.jpg',
-          lyhyt: 'Mohammad Al-Aminin moskeija Beirutin keskustassa.',
-          selite: 'Moskeija vihittiin käyttöön 2000-luvulla, ja sen tyyli muistuttaa osmanien aikaista arkkitehtuuria.',
-          lahde: 'باسم, Wikimedia Commons (PD)',
+          tiedosto: "BeirutRomanBaths.jpg",
+          lyhyt: "Beirutin roomalaisen kylpylän jäänteet.",
+          selite: "Beirutin roomalaisen kylpylän jäänteet on kaivettu esiin kaupungin keskustassa; kuvassa näkyvät lattian alla olleet tiilipilarit.",
+          lahde: "Elgaard, Wikimedia Commons (CC BY-SA 3.0)",
         },
         kappale: 'Beirut on Välimeren rannalla sijaitseva vilkas pääkaupunki, jossa arabia on virallinen kieli, mutta ranskan ja englannin taito on yleistä. Keskustassa on kävelyreitti, joka yhdistää tärkeimmät arkeologiset kohteet ja historialliset rakennukset, ja rantabulevardi Corniche kiertää niemeä noin viiden kilometrin matkalla. Kaupungissa liikutaan taksilla, mikrobusseilla ja busseilla. Libanonin tilanne voi muuttua nopeasti, joten ajankohtaista matkustustietoa kannattaa seurata ennen matkaa.',
         artikkeli: {
@@ -142634,10 +142402,6 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Portaikko, josta tuli taidemuseo',
           teksti: 'Kaskadin idea oli jo Tamanianin 1920-luvun suunnitelmassa: keskusta oli tarkoitus yhdistää pohjoisille kukkuloille terasseilla, vesiputouksilla ja kukkapenkeillä, mutta hanke jäi rahoituksen puutteessa toteuttamatta. Portaikon suunnittelu alkoi 1970-luvun alussa, ja rakentaminen keskeytyi 1980-luvun lopulla. Hallitus päätti 2000-luvun alussa saattaa kompleksin loppuun, ja Cafesjian Center for the Arts avattiin 2009. Portaikossa on terasseja, satoja askelmia ja sisällä kulkevat liukuportaat. Taidekeskuksen kokoelmat perustuvat Gerard L. Cafesjianin kokoelmaan, jossa on lähteen mukaan tuhansia teoksia.',
-          tiedosto: 'CCA Cafesjian Sculpture Garden.jpg',
-          lyhyt: 'Cafesjianin veistospuutarha Kaskadin edustalla, jossa on kansainvälisten taiteilijoiden töitä.',
-          selite: 'Veistospuutarhassa on muun muassa Fernando Boteron, Jaume Plensan, Lynn Chadwickin ja Barry Flanaganin töitä.',
-          lahde: 'Maria.hovsepyan, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Yerevan Cascade',
         },
       ],
@@ -142788,10 +142552,6 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Kirjakulttuuri Erivanissa',
           teksti: 'Jerevanin kansalliskirjasto perustettiin 1800-luvulla, ja nykyinen rakennus Teryanin kadulla on 1900-luvun alkupuoliskolta. Ensimmäinen kirjapaino perustettiin kaupunkiin 1870-luvulla, ja ensimmäinen yleinen kirjasto avattiin 1900-luvun alussa. Khachatur Abovian syntyi 1800-luvun alussa Kanakerin kylässä, joka on nykyisin osa Jerevania. Hänen romaaninsa Armenian haavat kirjoitettiin 1840-luvulla ja julkaistiin 1858: se oli ensimmäinen modernilla armenian kielellä julkaistu romaani, ja sen kieli perustuu Jerevanin murteeseen klassisen armenian sijaan. Abovian oli myös ensimmäinen armenialainen kirjailija, joka kirjoitti lapsille.',
-          tiedosto: 'Khachatur Abovian statue Yerevan 2022.jpg',
-          lyhyt: 'Khachatur Abovianin patsas Jerevanissa, kirjailijan syntymäkylän Kanakerin kaupunginosassa.',
-          selite: 'Abovianin romaani Armenian haavat on kirjoitettu Jerevanin murteen pohjalta.',
-          lahde: 'Yerevantsi, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Khachatur Abovian',
         },
         {
@@ -142856,9 +142616,6 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Talo, jonka rahoittivat lahjoittajat valtionpäämiehistä koululaisiin',
           teksti: 'Beit Al Quran eli Koraanin talo on islamilaisen taiteen monitoimikeskus Hooran kaupunginosassa. Rakentaminen alkoi 1980-luvulla, ja museo avattiin 1990-luvun kynnyksellä. Lähteen mukaan rahoitus tuli kokonaan lahjoituksina, joita antoivat valtionpäämiehistä koululaisiin. Kokoelman ydin on liikemies Abdul Latif Jassim Kanoon oma käsikirjoituskokoelma, jonka hän lahjoitti museolle. Kompleksiin kuuluvat moskeija, kirjasto, auditorio, koraanikoulu ja museo, jossa on useita näyttelysaleja. Pääsy on lähteen mukaan ilmainen.',
-          tiedosto: 'Museum-Beit-Al-Quran (318).jpg',
-          selite: 'Beit Al Quranin museossa on esillä kalligrafiaa ja käsikirjoituksia.',
-          lahde: 'Ibrahim.ID, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Beit Al Quran',
         },
       ],
@@ -142891,11 +142648,6 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Museot ja rannan kävely',
               teksti: 'Bahrainin kansallismuseo on lähteen mukaan maan suurin julkinen museo, ja se avattiin vuonna 1988 keinotekoiselle niemelle Muharraqin saarta vastapäätä. Beit Al Quranin pääsy on lähteen mukaan ilmainen. Al Fateh Grand Mosque on avoinna kävijöille muina päivinä paitsi perjantaina, ja opastettuja kierroksia on usealla kielellä. Corniche al-Fateh on rannan kävelykatu, jolta näkee pilvenpiirtäjiä ja lentokoneiden nousuja. Qal\'at al-Bahrain on noin kuuden kilometrin päässä länteen, ja se on UNESCOn maailmanperintökohde.',
-              kuva: {
-                tiedosto: 'Manama Bahrain National Museum Exterior Vorplatz 04.jpg',
-                selite: 'Bahrainin kansallismuseo avattiin vuonna 1988.',
-                lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
-              },
             },
             {
               otsikko: 'Mitä täällä syödään',
@@ -142904,11 +142656,6 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Milloin kannattaa tulla',
               teksti: 'Manamassa kuukausien keskilämpötila vaihtelee tammikuun noin 17,5 asteesta heinä- ja elokuun noin 35 asteeseen, ja heinä- ja elokuussa päivän ylin lämpötila on keskimäärin noin 40 astetta. Kesäkuusta syyskuuhun ei sada lainkaan, ja sade osuu talvikuukausiin: marraskuusta maaliskuuhun sataa kuukaudessa noin 13–18 millimetriä, ja vuodessa sataa yhteensä noin 95 millimetriä. Paras aika matkailuun on marraskuusta maaliskuuhun, jolloin keskilämpötila on noin 18–25 °C; kesäkuusta syyskuuhun se on noin 33–35 °C.',
-              kuva: {
-                tiedosto: 'Manama Bahrain National Museum Exterior The Pearl Diver.jpg',
-                selite: 'Bahrainin kansallismuseon edustalla on rantakävelyreitti, jolta näkee Muharraqin saarelle.',
-                lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
-              },
             },
           ],
           matkailu: {
@@ -143029,11 +142776,6 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Metekhin kirkko on rakennettu 1200-luvulla Kuran yllä kohoavalle kalliolle.',
           lahde: 'Kober, Wikimedia Commons (CC0)',
         },
-        {
-          tiedosto: 'Tbilisi - Freedom Square - 2025-10 - p17.jpg',
-          selite: 'Vapaudenaukio on Rustaveli-kadun itäpää, ja Venäjän vallan aikana sitä kutsuttiin Erivanin aukioksi.',
-          lahde: 'Александр Сигачёв, Wikimedia Commons (CC0)',
-        },
       ],
       nostot: [
         {
@@ -143087,12 +142829,6 @@ export const KULTTUURI_KATEGORIAT = {
             {
               otsikko: 'Perille ja liikkeelle',
               teksti: 'Shota Rustaveli Tbilisin kansainvälinen lentoasema (TBS) on noin 18 kilometriä kaakkoon keskustasta, ja siellä käy vuosittain noin kolme miljoonaa matkustajaa. Metro aloitettiin 1952 ja valmistui 1966; siinä on kaksi linjaa ja yli 20 asemaa, ja osa niistä on maan päällä. Asemat on koristeltu Neuvostoliiton tyyliin runsaasti, ja kyltit ovat georgiaksi ja englanniksi. Raitiotie suljettiin 2000-luvun alussa, mutta keskusta on osin kävelykelpoinen. Kukkuloille pääsee funikulaarilla Mtatsmindaan ja gondolihissillä Rike-puistosta Narikalaan.',
-              kuva: {
-                tiedosto: 'Tbilisi Peace Bridge and Rike Park.jpg',
-                lyhyt: 'Rauhan silta yhdistää Vanhan kaupungin Rike-puistoon.',
-                selite: 'Rauhan silta avattiin 2010-luvun alussa, ja se yhdistää Vanhan kaupungin Kuran yli Rike-puistoon, josta kulkee gondolihissi Narikalan linnoitukselle.',
-                lahde: 'falco, Wikimedia Commons (CC0)',
-              },
             },
             {
               otsikko: 'Vanha kaupunki kävellen',
@@ -143196,9 +142932,6 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Pantterinnahkaan pukeutunut ritari',
           teksti: 'Shota Rustaveli eli 1100- ja 1200-lukujen vaihteessa ja oli georgialaisen kultakauden johtava runoilija. Hänen runoelmansa Vepkhistqaosani, suomeksi Pantterinnahkaan pukeutunut ritari, on yli tuhannen nelisäkeen eepos ja Georgian kansalliseepos. Tapahtumat sijoittuvat kuvitteellisiin Intiaan ja Arabiaan, ja kertomus on värikäs allegoria kuningatar Tamarin ajasta. Juonen keskellä ovat ystävät Avtandil ja Tariel sekä heidän etsintänsä Nestan-Darejanille. Nimen eläin on epävarma: tiikeri, pantteri tai leopardi, mutta nykytutkimus kallistuu pantteriin. Tbilisin pääkatu, teatteri, metroasema ja lentoasema on nimetty hänen mukaansa.',
-          tiedosto: 'Shota Rustaveli Monument (Tbilisi).jpg',
-          selite: 'Shota Rustaveli oli keskiaikainen runoilija, jonka mukaan Tbilisin pääkatu on nimetty.',
-          lahde: 'Ephraim Stillberg, Wikimedia Commons (PD)',
           wiki: 'The Knight in the Panther\'s Skin',
         },
         {

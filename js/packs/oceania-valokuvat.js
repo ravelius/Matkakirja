@@ -942,15 +942,6 @@ export const OCEANIA_VALOKUVAT = {
           + 'Australian suurkaupunkiverkoista, jota ei purettu autoilun '
           + 'tieltä 1900-luvun puolivälissä.',
       },
-      {
-        tiedosto: 'Hosier Lane Melbourne Australia 2.jpg',
-        vuosi: '2014',
-        lahde: 'MusikAnimal, Commons (CC BY-SA 4.0)',
-        lyhyt: 'Hosier Lane, Melbournen katutaidekuja keskustan huoltokujien joukossa.',
-        selite: 'Hosier Lane, yksi keskustan kapeista huoltokujista. Seinät '
-          + 'maalataan uudelleen jatkuvasti, ja kaupunki on antanut osalle '
-          + 'kujista luvan katutaiteeseen sen sijaan että poistaisi sen.',
-      },
     ],
     uusi: {
       tiedosto: 'Collins Street east end.jpg',

@@ -709,19 +709,6 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Jerusalem Chords Bridge 7.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem_Chords_Bridge_7.jpg?width=1280",
-     "tekija": "Shabatashtiot",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jerusalem_Chords_Bridge_7.jpg",
-     "selite": "Jerusalemin kielisilta on kaupungin sisäänkäynnillä kohoava, harpun kielten näköinen riippusilta.",
-     "leveys": 4000,
-     "korkeus": 2250,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
      "tiedosto": "Jerusalem Chords Bridge.JPG",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem_Chords_Bridge.JPG?width=1280",
      "tekija": "Petdad",
@@ -734,7 +721,7 @@
      "tarkistettu": true
     },
     {
-     "jarjestys": 3,
+     "jarjestys": 2,
      "tiedosto": "Jerusalem Chords Bridge 5.JPG",
      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem_Chords_Bridge_5.JPG?width=1280",
      "tekija": "Little Savage",

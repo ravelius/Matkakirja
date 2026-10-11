@@ -72,29 +72,6 @@
    ]
   },
   {
-   "q": "Q55628557",
-   "nimi": "Papua-Uuden-Guinean kansallismuseo",
-   "peruste": "pelin nosto",
-   "koko_m": 200,
-   "lat": -9.42561,
-   "lon": 147.19011,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Papua New Guinea National Museum May 2015.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Papua_New_Guinea_National_Museum_May_2015.jpg?width=1280",
-     "tekija": "Nick-D",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Papua_New_Guinea_National_Museum_May_2015.jpg",
-     "selite": "Museon puutarhassa kohoaa perinteiseen tyyliin tehty talo, jossa säilytetään maan kulttuuriesineitä.",
-     "leveys": 3780,
-     "korkeus": 2832,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
    "q": "Q5651329",
    "nimi": "Hanuabada",
    "peruste": "pelin nosto",
@@ -136,6 +113,29 @@
      "selite": "Stadion sijaitsee Konedobun rinteen alla, ja sen takana avautuu Port Moresbyn lahti.",
      "leveys": 1900,
      "korkeus": 1052,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6429071",
+   "nimi": "Konedobu",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 1000,
+   "lat": -9.46972,
+   "lon": 147.15972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Papua New Guinea 1991-063 View over Konedobu, Port Moresby (33594032542).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Papua_New_Guinea_1991-063_View_over_Konedobu%2C_Port_Moresby_(33594032542).jpg?width=1280",
+     "tekija": "Brian ireland",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Papua_New_Guinea_1991-063_View_over_Konedobu%2C_Port_Moresby_(33594032542).jpg",
+     "selite": "Konedobun rinteeltä näkyy lahti, urheilukenttä ja Port Moresbyn kuivat vuoret.",
+     "leveys": 6560,
+     "korkeus": 4304,
      "tarkistettu": true
     }
    ]
