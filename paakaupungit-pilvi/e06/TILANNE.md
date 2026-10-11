@@ -11,7 +11,7 @@ Vaihe 0: yhdeksän kontekstia ja saa-syote.json luotu alkuperäisellä tyokalu.m
 | libreville | A koottu; 6 karttakandidaattia, rajaus-/tyyppipoikkeus ja turvallisuuslähde avoin | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | ciudaddelapaz | lähdepaketti tehty; täysi A estyy: 0 karttakohdetta, opas/teema vajaat | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | saotome | A koottu; 6 ehdotusta, Obô-rajaus ja 2 kirkon oikeusportti avoin | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
-| bangui | lähdepaketti tehty; täysi A estyy karttaminimiin, 1 ruokanostoon ja opasminimiin | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
+| bangui | lähdepaketti tehty; täysi A estyy kartta-/opasminimiin; ruokanosto korjattu | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | brazzaville | A koottu; 6 ehdotusta, 1 koordinaattipoikkeus ja katedraalin vanhan kuvan portti | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | kinshasa | A koottu; 6 Wiki/Wikidata-ehdotusta, retkirajaus/zoo-nykytila/Lola-lupa avoin | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
 | luanda | A koottu; 6 historiallista ydinkohdetta, Jesusin uudet osat B-oikeusportissa | pääsession jonossa | pääsession jonossa | tekemättä | tekemättä | tekemättä |
@@ -44,7 +44,7 @@ Nykykaupunki uusi; ei lähteistettyä historiallista keskustakantaa. Konteksti j
 
 ## Bangui A-este
 
-UNESCO metallurginen historia luettu. FOP-yhteenveto ei kata still-valokuvia suojatuista teoksista; modernit rakennukset/patsaat pois. Käyttövalmiita kuutta keskustakohdetta ei löytynyt; UNESCO-koordinaatti vaatii lähdesäännön poikkeuksen, Ubangin paikallinen piste puuttuu, Boali ei kuulu keskustakarttaan. Ruokanoston T3 varsinainen faktamäärä 3, lisälähde tarvitaan. FCDO 11.10.2026: Banguihin muu kuin välttämätön matkustus vältettävä; muu maa ei matkasuositukseksi. Täyttä A:ta ei merkitä valmiiksi.
+UNESCO metallurginen historia luettu. FOP-yhteenveto ei kata still-valokuvia suojatuista teoksista; modernit rakennukset/patsaat pois. Käyttövalmiita kuutta keskustakohdetta ei löytynyt; UNESCO-koordinaatti vaatii lähdesäännön poikkeuksen, Ubangin paikallinen piste puuttuu, Boali ei kuulu keskustakarttaan. Ruokanoston T3 varsinainen faktamäärä täydennetty viiteen Fufu/Cassava-lähteiden avulla. FCDO 11.10.2026: Banguihin muu kuin välttämätön matkustus vältettävä; muu maa ei matkasuositukseksi. Täyttä A:ta ei merkitä valmiiksi.
 
 ## Brazzaville A
 
@@ -61,3 +61,7 @@ UNESCO metallurginen historia luettu. FOP-yhteenveto ei kata still-valokuvia suo
 ## Kigali A
 
 0–9 koottu; kuusi Wiki/Wikidata-paikkaa. Viisi luonnonympäristöä ja Kandtin vanha talopaikka, ei moderneja suojattuja tunnusrakennuksia/monumentteja. Nyandungu ministeriölähde ja Umusambi järjestäjän lähde luettu. Laaja kaupunkiluontokartta vs historiallinen keskustarajaus pääsession poikkeuspäätös; Kandtin alkuperäinen rakenne/modernit muutokset B-oikeusportti. History of Kigali = redirect pääartikkeliin, ei riippumaton lähde.
+
+## Korjattu väliaineiston polkuvirhe
+
+Yhdessä lukukomennossa PYTHONPYCACHEPREFIX oli kirjoitettu väärin. Se loi oman stdlib-välimuistin NAS-tehtäväjuuren ulkopuolelle (72 tiedostoa, vain .pyc/AppleDouble). Sisältö tarkistettiin ja koko oma välimuisti siirrettiin tehtäväjuureen valiaikainen/e06/korjattu-polkuvirheen-cache. Väärä ulkopuolinen hakemistopolku on poissa. Käyttäjän aineistoa ei muokattu; oikea TMPDIR ja pycache-polku käytössä.

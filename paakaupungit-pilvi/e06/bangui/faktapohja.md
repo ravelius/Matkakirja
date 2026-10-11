@@ -20,6 +20,8 @@ Haettu yhteisellä sallittu_haku.py-apurilla: robots Claude-User ja Matkakirja, 
 | B10 | FCDO Central African Republic: Warnings and insurance, voimassa 11.10.2026 | https://www.gov.uk/foreign-travel-advice/central-african-republic |
 | B11 | Commons Copyright rules by territory / Central African Republic: General rules, Freedom of panorama; oikeusohje, ei kuvahaku | https://commons.wikimedia.org/wiki/Commons:Copyright_rules_by_territory/Central_African_Republic |
 | B12 | UM:n matkustustiedotteiden maaluettelo, maan lähteen saatavuuden tarkistus | https://um.fi/matkustustiedotteet-a-o |
+| B13 | Fufu, en: alku ja Names (Keski-Afrikan tasavallan foufou), luettu 11.10.2026 | https://en.wikipedia.org/wiki/Fufu |
+| B14 | Cassava, en: alku ja kasvin syötävä tärkkelysjuuri; ei valmistus-/terveys-/ravintolukuja, luettu 11.10.2026 | https://en.wikipedia.org/wiki/Cassava |
 
 Britannica Bangui palautti 403: ei luettua sisältöä. Gbazabangui/Forêt de Gbazabangui, Bangui Zoo, Port de Bangui ja Banguin Place de la République -kokeilut palauttivat 404; ei kohdefaktoja tai koordinaatteja niiden varaan.
 
@@ -50,10 +52,10 @@ Johdanto: kaupungin ruokalähde kuvaa ruokaa arkisten kasvien, kalan ja kastikke
 |---|---|
 | **T1 Pöydän perusta** / `Bangui` | Maniokki, riisi, kurpitsat ja keittobanaanit ovat lähteen nimeämiä perusruokia; niitä tarjoillaan kastikkeen kanssa; ei väitetä kaikkia saman aterian aineksiksi. |
 | **T2 Kastikkeen ainekset** / `Bangui` | Okra/gombo on yleinen vihannes; maapähkinöitä käytetään; maapähkinätahnaa käytetään; kastike kuuluu lähteen perusruokakuvaukseen; grillattua lihaa mainitaan rinnalla. Ei omaa valmistusreseptiä. |
-| **T3 Kala ja fufu** / `Bangui` | Maboké on kalaan perustuva ruoka; soussou on toinen lähteen nimeämä kalaruoka; maniokkijauhoa käytetään fufuun; kala ja maniokki ovat eri raaka-aineet, ei väitettä fufun olevan kalaruoka; valmistustapaa tai tarjoiluastiaa ei lähde kerro. Neljäs viimeinen kohta on kirjoittajan erotteluraja, ei uutta nostoainesta: tähän nostoon tarvitaan lisälähde, jos 440–660 merkkiä ei riitä kolmella varsinaisella faktalla. |
+| **T3 Kala ja fufu** / `Bangui` | Maboké on kalaan perustuva ruoka; soussou on toinen lähteen nimeämä kalaruoka; maniokkijauhoa käytetään Banguin fufuun; maniokin syötävä osa on tärkkelyspitoinen varastojuuri (B14 alku); foufou on Keski-Afrikan tasavallassa käytetty nimimuoto saman laajan ruokaperheen nimelle (B13 Names). Nämä viisi varsinaista faktaa eivät sisällä valmistusohjetta; muiden maiden fufu-reseptejä ei siirretä Banguihin. |
 | **T4 Juomien nimet** / `Bangui` | Paikallisesti valmistettu olut; palmuviini; banaaniviini; alkoholiton ginger beer mainitaan. Ei vahvuuksia, makujen tai käymistavan selitystä eikä alkoholisuositusta alaikäiselle. |
 
-Minitehtävä: mitä raaka-ainetta lähde nimeää fufun valmistukseen? Maniokkijauho. Muut vaihtoehdot maissi-/riisi-/vehnäjauho; tarkista C:ssä vaihtoehtojen uskottavuus ilman väitettä ettei muualla käytettäisi muita aineita. Vastaus T3:ssa eri sanoin, ei osion 6 visassa. **T3:n neljän varsinaisen faktan vähimmäismäärä jää vajaaksi**; sitä ei peitetä täytetekstillä.
+Minitehtävä: mitä raaka-ainetta lähde nimeää fufun valmistukseen? Maniokkijauho. Muut vaihtoehdot maissi-/riisi-/vehnäjauho; tarkista C:ssä vaihtoehtojen uskottavuus ilman väitettä ettei muualla käytettäisi muita aineita. Vastaus T3:ssa eri sanoin, ei osion 6 visassa. T3 täydennetty B13/B14-lähteistä viiteen varsinaiseen faktapisteeseen, ilman yleisen reseptin siirtämistä paikalliseksi.
 
 ## 4. Opas: viisi jaksoa
 
@@ -89,10 +91,10 @@ Kansi 3: jokimaisema / vanhan keskustan leveä katu ilman suojattua teosta pää
 
 ## 8. Ristiriidat ja epävarmat
 
-B1 perustamispäivä 26.6.1889 / B6 24.7.1889 → vain 1889. B1 siirtää vertailukohteen Gbabirin ajoitusta mahdollisena Banguin ajoitukseksi; B6 vertaa Gbabiriin, ei todista Pendèrè-Senguèn täsmäikää → ei 900-lukua eaa. B4 museon perustaminen 1964 / avaaminen 1966 eivät ole sama tapahtuma → 1960-luku; nykyinen aukiolo ei vahvistunut. B5 katedraali / B9 Fatima-nimen sekoitus → rakennusartikkelin nimi, ei Fatima-synonyymiä. Boalin putoukset: B8 metadata 120 / suurin 50 ja teksti 50, B7 50; ei korkeuslukua. Väestö kontekstissa arvio, ei laskenta. B1:n balafonin valmistus "horns" epäilyttävä, ei käytetä. FOP koskee audiovisuaalista muotoa eikä valokuvia; still-kuvaa ei rinnasteta filmiin. Nykyinen turvallisuus B10, ei B9:n 2020-teksti. T3 ruokanoston faktoja vain kolme; lisälähde tarvitaan. Karttaminimi ei täyty eikä nimetyt luontopaikat/koordinaattipoikkeukset ole hyväksyttyjä.
+B1 perustamispäivä 26.6.1889 / B6 24.7.1889 → vain 1889. B1 siirtää vertailukohteen Gbabirin ajoitusta mahdollisena Banguin ajoitukseksi; B6 vertaa Gbabiriin, ei todista Pendèrè-Senguèn täsmäikää → ei 900-lukua eaa. B4 museon perustaminen 1964 / avaaminen 1966 eivät ole sama tapahtuma → 1960-luku; nykyinen aukiolo ei vahvistunut. B5 katedraali / B9 Fatima-nimen sekoitus → rakennusartikkelin nimi, ei Fatima-synonyymiä. Boalin putoukset: B8 metadata 120 / suurin 50 ja teksti 50, B7 50; ei korkeuslukua. Väestö kontekstissa arvio, ei laskenta. B1:n balafonin valmistus "horns" epäilyttävä, ei käytetä. FOP koskee audiovisuaalista muotoa eikä valokuvia; still-kuvaa ei rinnasteta filmiin. Nykyinen turvallisuus B10, ei B9:n 2020-teksti. T3 täydennetty Fufu/Cassava-lähteistä viiteen faktapisteeseen. Karttaminimi ei täyty eikä nimetyt luontopaikat/koordinaattipoikkeukset ole hyväksyttyjä.
 
 ## 9. Poisjätöt ja toistot
 
 Konteksti luettu: maalehti null, lähikaupungit/lähinostot tyhjät. Kevyen pisteen jokisijaintia ja perustamista laajennetaan kaupungin perusjohdatuksena; metallurgia ja ruoka antavat uusia aiheita. Ei nykykonfliktin osapuolia, rikoksia, poliitikkojen henkilönostoja, julmuuksia, norsunluuostoksia, modernin veistostaiteen kohteita, hintoja tai keksittyä isoisää. Suljettua museota tai maaseudun putouksia ei tarjota nyt toimivaksi retkeksi.
 
-**A-loppu:** lähde- ja tekstifaktapaketti tehty; täysi A estyy 6–8 hyväksyttävän keskustakohteen puutteeseen, yhden ruokanoston faktaminimiin ja varsinaisen viiden käyntikohteen oppaan puutteeseen. Jatkokorjaus tarvitsee historiallisten vapautuneiden paikkojen lisälähteet tai pääsession päätöksen kevyenä pitämisestä. Ei B/C/D/E/F-tuotoksia.
+**A-loppu:** lähde- ja tekstifaktapaketti tehty; täysi A estyy 6–8 hyväksyttävän keskustakohteen ja varsinaisen viiden käyntikohteen oppaan puutteeseen; ruokanoston faktaminimi on korjattu. Jatkokorjaus tarvitsee historiallisten vapautuneiden paikkojen lisälähteet tai pääsession päätöksen kevyenä pitämisestä. Ei B/C/D/E/F-tuotoksia.
