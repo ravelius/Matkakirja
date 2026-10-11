@@ -249,6 +249,30 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
   }
 });
 
+test('pääkaupunkipisteen lehti ja kohdekartta: kaupunki null, maa pisteestä (PT 11.10.2026)', () => {
+  /*
+   * Pääkaupunkipiste (js/packs/paakaupungit.js) ei ole laudan kaupunki, joten sen lehden ja kohdekartan
+   * kaupunki-viittaus on null (eheysvartija laskisi muun orvoksi) ja maa tulee pisteestä. Natiivi hakee
+   * lehden kokoelmat/kaupunkilehdet/<pisteen id> (Natiivi-UI 3447a1d2f).
+   */
+  const { PAAKAUPUNKIPISTEET } = eka.nimiavaruudet.get('js/packs/paakaupungit.js');
+  const lehdet = new Map(JSON.parse(tiedostot.get('kokoelmat/kaupunkilehdet.json')).alkiot.map((a) => [a.id, a]));
+  const kartat = new Map(JSON.parse(tiedostot.get('kokoelmat/kohdekartat.json')).alkiot.map((a) => [a.id, a]));
+  let lehtia = 0;
+  for (const p of PAAKAUPUNKIPISTEET) {
+    const lehti = lehdet.get(p.id);
+    if (!lehti) continue;
+    lehtia += 1;
+    assert.equal(lehti.kaupunki, null, `${p.id}: kaupunki`);
+    assert.equal(lehti.maa, p.maa, `${p.id}: maa`);
+    assert.equal(lehti.laji, 'lehti', `${p.id}: laji`);
+    assert.ok(lehti.kansi, `${p.id}: kansi`);
+    const kartta = kartat.get(p.id);
+    if (kartta) assert.equal(kartta.kaupunki, null, `${p.id}: kartan kaupunki`);
+  }
+  assert.ok(lehtia >= 14, `pääkaupunkipisteiden lehtiä ${lehtia}`);
+});
+
 test('mediaviitteet osoittavat vientiin ja ämpärilajeilla on ämpärin osoite', () => {
   const { viitteet } = JSON.parse(tiedostot.get('media.json'));
   const valimuisti = new Map();
