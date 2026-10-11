@@ -355,6 +355,19 @@ namespace Matkakirja
         bool Peitossa(Merkki m, IReadOnlyList<Ruutulaatikko> kalusteet, Vector3 ruutu) =>
             Houkuttimet.KalusteetPiilottavat(m.houkutin, LinssiTila) && KalusteenAlla(kalusteet, ruutu);
 
+        /// <summary>Näkyvien houkuttimien ruutupisteet (pikselit, y ylös) listaan (KaupunkiPallot: pallo väistää houkuttimia).</summary>
+        public void HoukutinRuutupisteet(List<Vector2> ulos)
+        {
+            ulos.Clear();
+            if (kamera == null) return;
+            foreach (var m in houkutinMerkit)
+            {
+                if (!m.juuri.gameObject.activeSelf) continue;
+                Vector3 r = kamera.WorldToScreenPoint(m.juuri.position);
+                if (r.z > 0f) ulos.Add(new Vector2(r.x, r.y));
+            }
+        }
+
         /// <summary>Houkuttimen hehkulevy (saman pistepohjan kopio pisteen alla), kerran.</summary>
         void LuoHehku(Merkki m)
         {

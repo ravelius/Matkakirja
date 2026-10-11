@@ -147,7 +147,9 @@ namespace Matkakirja.Natiivi
                 foreach (var p in pallot) Nayta(p, false);
                 return;
             }
-            float koko = KaupunkiPalloMitat.Koko(korkeus);
+            // Koko Euroopan näkymässä pienempi pallo (PT 16.5x): Koko pienenee Euroopan sovituskorkeuteen 52 pt:hen.
+            float koko = KaupunkiPalloMitat.Koko(korkeus, kierto.EuroopanSovitusM());
+            KeraaHoukuttimet();
             // Kutsukortti (pelaajan kaupunki, Kutsuminiatyyri): pallo kortista poispäin (omistaja 7.10. 12.4x, Ateena).
             var kortti = UiNakymat.Olemassa ? UiNakymat.Hae().Kutsu?.Laatikko ?? default : default;
             Vector2 kk = kortti.width > 0 ? juuri.WorldToLocal(kortti.center) : new Vector2(float.NaN, float.NaN);
@@ -195,6 +197,7 @@ namespace Matkakirja.Natiivi
                     if (oikea != p.Oikea) { p.Oikea = oikea; ((PalloNappi)p.Nappi).Oikea = oikea; p.Kuva.style.scale = new Scale(new Vector3(oikea ? -1f : 1f, 1f, 1f)); }
                     Debug.Log($"MATKAKIRJA kaupunkipallot: {p.Id} {(oikea ? "oikealle" : "vasemmalle")} (kortti {(kk.x < q.x ? "vasemmalla" : "oikealla")}, {kk.x - q.x:0},{kk.y - q.y:0} pt)");
                 }
+                Vaista(p, q, pk);
                 p.Nappi.style.left = x;
                 p.Nappi.style.top = y;
                 p.Nappi.style.width = pk;
@@ -236,6 +239,37 @@ namespace Matkakirja.Natiivi
             foreach (var p in pallot)
                 if (p.Nakyy && p.Kuva.panel != null && p.Kuva.worldBound.height > 0)
                     yield return p.Kuva.worldBound;
+        }
+
+        // ---- HOUKUTTIMIEN VÄISTÖ (PT 11.10. 16.5x, juna 182): koko Euroopan näkymässä pallo kallistuu sille puolelle, jolla se
+        //      jää kauemmas houkutinpisteistä (KaupunkiPalloMitat.VaistavaPuoli); muualla kortin mukainen puoli (p.Oikea). ----
+
+        readonly List<Vector2> houkutinRuutu = new List<Vector2>();
+        readonly List<(float X, float Y)> houkutinPaneeli = new List<(float X, float Y)>();
+        bool eurooppaNakyma;
+
+        void KeraaHoukuttimet()
+        {
+            houkutinPaneeli.Clear();
+            eurooppaNakyma = kierto != null && kierto.EuroopanLoitonnuksessa;
+            var merkit = eurooppaNakyma ? KarttaKerrokset.Instanssi?.merkit : null;
+            if (merkit == null) return;
+            merkit.HoukutinRuutupisteet(houkutinRuutu);
+            foreach (var r in houkutinRuutu)
+            {
+                var q = juuri.WorldToLocal(RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(r.x, Screen.height - r.y)));
+                houkutinPaneeli.Add((q.x, q.y));
+            }
+        }
+
+        void Vaista(Pallo p, Vector2 q, float pk)
+        {
+            bool puoli = eurooppaNakyma ? KaupunkiPalloMitat.VaistavaPuoli(q.x, q.y, pk, houkutinPaneeli, p.Oikea) : p.Oikea;
+            var pn = (PalloNappi)p.Nappi;
+            if (pn.Oikea == puoli) return;
+            pn.Oikea = puoli;
+            p.Kuva.style.scale = new Scale(new Vector3(puoli ? -1f : 1f, 1f, 1f));
+            Debug.Log($"MATKAKIRJA kaupunkipallot: {p.Id} {(puoli ? "oikealle" : "vasemmalle")} ({(eurooppaNakyma ? $"houkuttimien väistö, vara {KaupunkiPalloMitat.Vara(q.x, q.y, pk, puoli, houkutinPaneeli):0.0} pt, koko {pk:0} pt" : "kortin puoli")})");
         }
 
         /// <summary>Testikomento `ui kaupunkipallot`: lista, näkyvyys ja paikka.</summary>
