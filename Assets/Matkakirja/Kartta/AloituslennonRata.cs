@@ -49,7 +49,7 @@ namespace Matkakirja
     /// USVA (v3): radan ajan horisonttiusvan raja on vähintään <see cref="UsvaVahintaanM"/> katsepisteestä (Aurinko.UsvaVahintaanM).
     /// ILMAKEHÄ (omistaja 11.10.2026): radan ajan taivas on musta, kunnes silmä on alle 40 km (täysi alle 10 km; Ilmakeha.cs,
     /// Aurinko.IlmakehaKorkeudesta): suunniteltu vaalenee ~5,5 s ja tummuu nousussa ~9,9 s (<see cref="IlmakehaVaihtuu"/>).
-    /// KOHTEET (omistaja 10.10.2026): alkulennossa Ateena, Moskova, Istanbul ja Tukholma (<see cref="OhitusMaalla"/>).
+    /// KOHTEET (omistaja 11.10.2026 klo 11.5x): alkulennossa Ateena, Pariisi ja Tukholma (<see cref="OhitusMaalla"/>).
     /// Puhdas laskenta ilman UnityEngineä (Kartta-testit/AloituslennonRataTestit mittaa koneen näkyvyyden joka näytteessä).
     /// </summary>
     public sealed class AloituslennonRata
@@ -140,11 +140,13 @@ namespace Matkakirja
         public static readonly Dictionary<string, double> OhitusMaalla = new Dictionary<string, double>(StringComparer.Ordinal)
         {
             ["ateena"] = 0.92,         // 39,2° N 22,2° E Thessalia (Othrys), 191 km ennen Ateenaa
-            ["istanbul"] = 0.92,       // 42,1° N 27,1° E Bulgaria (Strandža), 200 km
-            ["moskova"] = 0.92,        // 55,9° N 34,4° E Smolensk–Tver, 200 km
             ["tanger"] = 0.90,         // 37,4° N 5,4° W Andalusia, 181 km
             ["kairo"] = 0.957,         // 31,1° N 30,3° E Niilin suisto, 151 km (0,92 olisi merta)
-            // Omistaja 10.10.2026: alkulennon neljäs kohde (sama kuin OhitusSaanto; taulussa, jotta kohta ei muutu säännön mukana).
+            // Omistaja 11.10.2026 klo 11.5x: aloituskaupungit Ateena, Pariisi ja Tukholma (Istanbul ja Moskova pois, sääntö riittää).
+            // Pariisi: reitti vain 343 km, joten sääntö (190 km ennen) rajautuisi 0,5:een = 50,2° N 1,15° E Sommen rannikolla
+            // (±25 km ikkunassa Kanaalia); 0,66 on ensimmäinen kohta, jonka ikkuna on kokonaan maata (Picardie), 117 km ennen.
+            ["pariisi"] = 0.66,        // 49,8° N 1,5° E Picardie (Beauvais'n luoteispuoli), 117 km
+            // Omistaja 10.10.2026: alkulennon kohde (sama kuin OhitusSaanto; taulussa, jotta kohta ei muutu säännön mukana).
             // Tarkistus 11.10. webin maapolygonit.json (NE 10m + GSHHG): ±25 km maata koko välillä 0,78–0,96 (aineistossa ei järviä:
             // ikkuna 0,85–0,885 jää Vätternin itärannan ~14,8° E ja Roxenin pohjoisrannan väliin).
             ["tukholma"] = 0.867,      // 58,5° N 15,2° E Östergötland (Motala–Linköping), 190 km

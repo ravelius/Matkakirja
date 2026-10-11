@@ -59,14 +59,14 @@ namespace Matkakirja.Kartta.Testit
             return s * Math.Cos(LennonV3.Kulmaero(reitti, suunta) * Math.PI / 180.0);
         }
 
-        /// <summary>Alkulennon kohteet (omistaja 10.10.2026 klo 23.4x: vain Ateena, Moskova, Istanbul ja Tukholma; webin
-        /// ETUSIVUN_KOHTEET, paketin kaupungit.lahtokohde). Koordinaatit kuten Kohteet.</summary>
-        static readonly string[] Alkulento = { "ateena", "moskova", "istanbul", "tukholma" };
+        /// <summary>Alkulennon kohteet (omistaja 11.10.2026 klo 11.5x: Ateena, Pariisi ja Tukholma; 10.10. Moskova ja Istanbul
+        /// poistuivat; webin ETUSIVUN_KOHTEET, paketin kaupungit.lahtokohde). Koordinaatit kuten Kohteet.</summary>
+        static readonly string[] Alkulento = { "ateena", "pariisi", "tukholma" };
 
         [Testi]
-        static void AlkulentoNeljaanKaupunkiin()
+        static void AlkulentoKolmeenKaupunkiin()
         {
-            // Omistaja 11.10. 11.5x: toimiiko alkulento Moskovaan, Istanbuliin ja Tukholmaan (ajettu vain Ateenaan)? Kaupunkikohtaisesti:
+            // Omistaja 11.10. 11.5x: toimiiko alkulento muihinkin kuin Ateenaan (Pariisi vain 343 km Lontoosta)? Kaupunkikohtaisesti:
             // ohituskohta taulussa (maan päällä), rata jatkuva (kamera ja kone ilman hyppyjä), päättyy kaupungin kohdalle, ei mene maan
             // alle, kesto ja nopeudet järkevät, pelikello +6 h ja taivas musta, kunnes silmä on lähellä maata.
             foreach (var id in Alkulento)
@@ -75,9 +75,13 @@ namespace Matkakirja.Kartta.Testit
                 Oleta.Tosi(k.Id == id, $"{id} kohteissa");
                 Oleta.Tosi(AloituslennonRata.OhitusMaalla.ContainsKey(id), $"{id} ohituskohta taulussa (tarkistettu maaksi)");
                 var r = Rata(k);
-                Oleta.Tosi(r.ReittiM > 1_000_000 && r.ReittiM < 2_700_000, $"{id} reitti {r.ReittiM / 1000:F0} km");
+                Oleta.Tosi(r.ReittiM > 300_000 && r.ReittiM < 2_700_000, $"{id} reitti {r.ReittiM / 1000:F0} km");
+                // Ohitus reitillä lähdön jälkeen ja ennen kohdetta, kone ohituskohdassa ohitushetkellä (Pariisi 0,66 = 226 km Lontoosta).
+                Oleta.Tosi(r.Ohitus * r.ReittiM > 150_000 && (1 - r.Ohitus) * r.ReittiM > 100_000
+                           && Math.Abs(r.KoneenOsuus(AloituslennonRata.OhitusS) - r.Ohitus) < 0.02,
+                    $"{id} ohitus {r.Ohitus:F3}: {r.Ohitus * r.ReittiM / 1000:F0} km lähdöstä, {(1 - r.Ohitus) * r.ReittiM / 1000:F0} km ennen");
                 Oleta.Tosi(Pelikello.LentoTunnit(LontooLat, LontooLon, k.Lat, k.Lon) == 6, $"{id} lentoaika +6 h");
-                Oleta.Tosi(r.Nopeus1 > 0.05 && r.Nopeus1 < 2 && r.Nopeus2 > 0.05 && r.Nopeus2 < 2,
+                Oleta.Tosi(r.Nopeus1 > 0.01 && r.Nopeus1 < 2 && r.Nopeus2 > 0.05 && r.Nopeus2 < 2,
                     $"{id} matkanopeudet {r.Nopeus1:F2} / {r.Nopeus2:F2} kameran etäisyyttä/s");
                 // Jatkuvuus 1/120 s välein: kone ja silmän maapiste eivät hyppää (nopeuden muutos näytteestä toiseen pieni suhteessa
                 // nopeuteen; symbolikone kiitää lähestymisessä yli 1 000 km/s kameran mukana), eikä mikään arvo ole NaN. Radan näyte 0
@@ -296,7 +300,7 @@ namespace Matkakirja.Kartta.Testit
                 Oleta.Tosi(kv.Value >= 0.3 && kv.Value <= 0.97, $"{kv.Key} ohitus {kv.Value}");
             Oleta.Tosi(AloituslennonRata.OhitusKohteelle("ateena") == 0.92 && AloituslennonRata.OhitusKohteelle(null) == 0.5
                        && Math.Abs(AloituslennonRata.OhitusKohteelle("rooma", 1_434_000) - (1 - 190.0 / 1434)) < 1e-9
-                       && AloituslennonRata.OhitusKohteelle("pariisi", 343_000) == 0.5
+                       && AloituslennonRata.OhitusKohteelle("amsterdam", 358_000) == 0.5 && AloituslennonRata.OhitusKohteelle("pariisi", 343_000) == 0.66
                        && AloituslennonRata.OhitusKohteelle("sydney", 16_994_000) == 0.93, "ateena 0,92, muut säännöllä");
             // Ääripää (0,95): kone silti ohituskohdassa ohitushetkellä ja perillä ajallaan.
             var r = new AloituslennonRata(LontooLat, LontooLon, 37.98, 23.73, Napautus,
