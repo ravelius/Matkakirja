@@ -13512,3 +13512,105 @@ SAAPUMINEN UUTEEN KAUPUNKIIN (voimassa 20.9.2026 klo 11.15): saapumisen kamera-a
 Kohta ÄÄNET PCM (osio "Äänet ja luennat"):
 
 ÄÄNET PCM:NÄ, PAKKAUS KERRAN (omistaja 5.10.2026 klo 13.4x, sitova): kaikki generoitavat äänet tilataan muodossa pcm_44100, tasoitus ja limitteri tehdään PCM:nä, ja mp3 pakataan vain kerran lopullisesta masterista. Koosteet tehdään WAV-mastereista, eikä jo pakattua ääntä pakata uudelleen. LYHYET KERTAÄÄNET (Pelikoodari 10.10.2026 klo 01.4x: 61 lyhyttä kertaääntä oli tasoitettu integroituun LUFSiin, ja ne jäivät +18…+24 dB liian koviksi ja yli 0 dBTP:n, esim. Olavinlinnan askeleet): alle noin sekunnin kertaäänet tasoitetaan huippuun tai lyhyen aikavälin kovuuteen, ja kaikkien äänten true peak on PCM-masterissa enintään −1 dBTP. ÄÄNIPORTTI (Pelikoodari ja Päätoimittaja 10.10.2026 klo 04.5x): kaikki äänipaketit läpäisevät proto-3d/tyokalut/aaniportti.py:n ennen vientiä (vie-paketti.sh:n pakollinen vaihe): true peak enintään 0 dBTP (tavoite −1 dBTP PCM:nä) ja lyhyiden kertaäänten kovuus lyhyen aikavälin mittarilla. Perustellut poikkeukset ovat portin POIKKEUKSET-listalla (esim. Lyria-raidat omistajan linjalla ilman tasokorjauksia), ja määräaikainen poikkeus poistetaan, kun korjaus on tehty. GENEROIDUT ÄÄNET ILMAN KUUNTELUA (omistaja 11.10.2026 klo 11.3x: "pulun äänet oikein. niitä ei tarvitse jatkossa sinun kuunnella eikä pyytää minulta hyväksyntää. eleven tekee aina hyvää jälkeä kunhan kieli on vain määritelty suomeksi"): ääntämistä ei tarkisteta kuuntelemalla eikä omistajalta, puheentunnistuksen epäilyt eivät pysäytä vientiä; ehtona kieli määritelty suomeksi (language_code fi); ääniportin tekniset tarkistukset pysyvät.
+
+## JUNA 182: JULKAISULUPA, KUN KAIKKI OMISTAJAN PYYTÄMÄT MUUTOKSET ON KUITATTU (11.10.2026 klo 18.48)
+
+11.10. 15.4x OMISTAJA: "juna heti kun nämä kaikki ovat oikeasti valmiita mistä olen pyytänyt muutokset" → JUNAN 182 JULKAISULUPA ehdolla: PT lähettää Natiivisepälle LUKITSE 182, kun viimeinenkin omistajan pyytämä muutos on kuitattu kuvien perusteella (NUI aloitus-aarre/olavinlinna-nosto/pallo-hintalappu/linssikortti, LS1 aukiot + Euroopan loitonnus + houkuttimet ⊃ Andøya, Pelikoodari kukkaro v2 aa4509f0e, Olavinlinna botti 17/17 + LT 8. kierros + soutajan repliikit, NS soutajan suu + räpytys); raketti ja soutajan täydet kasvot 183; musiikit omistajan valinnan jälkeen.
+
+## SUOJATUT TEOKSET: SUOJATTU TAIDETEOS POIS KAIKISTA OMISTA JÄLJENNÖKSISTÄ, ARKKITEHTUURI MAAN LAIN MUKAAN (11.10.2026 klo 18.48)
+
+11.10. 15.5x PT (SUOJATUT TEOKSET, Karttasepän kipin suojatarkastus docs/raportit/kippi-suojatarkastus-20261011.md): RAAMATTUUN linjaus — "suojattu kohde pois" koskee taideteoksia (veistokset, installaatiot, muistomerkit, valaistukset; tekijä k. < 70 v tai elossa) kaikissa omissa jäljennöksissä (kuvat, mallit); arkkitehtuuri maan lain mukaan (rakennusten kuvausvapaus Ruotsi, Suomi ym. → jää; Ranska ym. → ei omia kuvia/malleja suojatusta rakennuksesta); Googlen laattojen kohteet ja kertojan maininnat sallittu, Ranskan suojattu arkkitehtuuri (Louvren pyramidi, Pompidou, Grande Arche) App Store -julkaisun tarkistuslistalle. Toimet: Sergels torgin 2 kuvaa + Kristall-malli pois, Orsayn Aulenti-sisätilakuva → asemakuva ~1900 (Karttaseppä data-PR), LS1 tarkistaa Eiffelin oman välke-/kultavalaistusefektin (pois jos on).
+
+Raamattuun (docs-PR 11.10. ilta 2): Ydinajatus, SUOJATUT TEOKSET KAIKISSA OMISSA JÄLJENNÖKSISSÄ (SUOJATUT TEOKSET HAVAINNEKUVISSA -kohdan jatkoksi; nimi säilyi, koska AGENTS.md viittaa siihen) ja viittaus Karttalinssien KUVIEN KÄYTTÖOIKEUS -kohdasta.
+
+## KAUPUNKIMUSIIKKI: SOITTOSÄÄNTÖ, WIENIN NOPEA UUDESTAAN, KYMMENEN HIDASTA ARVOTTUNA (11.10.2026 klo 18.48)
+
+11.10. 15.5x OMISTAJA (musiikit): "uudet. musiikit hyvät. ainoastaan wienin nopea pitää tehdä uudestaan, siinä oli häiriöitä. hidas musiikki saa soida hiljempaa kuin nopea ja hidas myös vain yhden kerran jonka jälkeen ei musiikkia ennen seuraavaa kaupunkia. generoi kaikki loput nopeat kappaleet sekä hitaat kappaleet" → 9/10 hyväksytty (Wien nopea uudestaan); SOITTOSÄÄNTÖ (RAAMATTUUN kaupunkimusiikki): hidas kaupunkikappale hiljempaa kuin nopea intro ja vain kerran, sitten hiljaisuus seuraavaan kaupunkiin (junaan 182, Pelikoodari); kaikki loput Euroopan kaupunkien nopeat + hitaat 10 kpl erissä, yksi otto + automaattinen häiriötarkistus, viallinen kerran uudestaan, vienti + äänisivu Pelissä.
+
+11.10. 15.5x OMISTAJA (tarkennus): "tai generoi vain viisi hidasta lisää ja pyöritetään niitä kymmentä hidasta kappaletta arvottuna kaupunkien kesken. ne eivät ole vielä hyviä, niin ei tehdä niitä enempää" → hitaita vain 5 lisää (yht. 10 uutta); ne arvotaan joka saapumisella kaupungeille ilman omaa pelissä olevaa 1800-luvun kappaletta (Ateena, Pariisi, Lontoo, Rooma, Istanbul, Kairo, Pietari pitävät omansa), ei samaa peräkkäin; nopeat ennallaan kaikille loput Euroopan kaupungit.
+
+Raamattuun (docs-PR 11.10. ilta 2): Viisas Pöllö, KARTAN MUSIIKKI, SOITTOSÄÄNTÖ.
+
+## KIINTIÖ 73 %: EI-KRIITTISET TAUOLLE 17.30 ASTI; BRANLYN ORTODOKSINEN KESKUS NEUTRAALIKSI (11.10.2026 klo 18.48)
+
+11.10. 16.1x PT: 5 h -kiintiö 73 % (nollautuu 17.30), kulutus ~21 %/h → ei-kriittiset tauolle 17.30 asti (Karttaseppä nollaus, SK tauko, LS2 raketti nollauksen jälkeen); nollauspyynnöt yli 50 %: Pelikoodari 82, LS2 72, LR 68, KS 61, NUI 56, LS1 55 (182-erän jälkeen), Siirtoseppä 52 (botin jälkeen). Omat mallit v6k18 (Banque + Branly + ND CC BY-SA) pelissä 16.10 (uusin-4). PT: Branlyn ortodoksinen keskus (Wilmotte 2016) Ranskassa suojattu → ei tunnistettavaa mallia, neutraali täyte (LR, ennen v3c-pakettia).
+
+## OLAVINLINNAN HENKILÖT: ILMEIKKÄÄT SUOMALAISET KASVOT JA METAHUMAN-PILOTTI (JUNA 183) (11.10.2026 klo 18.48)
+
+11.10. 16.5x OMISTAJA (kuvat Olavinlinnasta, soutajan kasvorivi): "soutajalle pitää saada paljon ilmeikkäämmät kasvot. hän ei näytä yhtään suomalaiselle myöskään" → PT: junaan 183 (182 ei odota, koska ulkonäkö vaatii omistajan kuvakatselmuksen): LR uusi ulkonäkö 1400-luvun savolaiseksi (vaalea iho, vaaleat hiukset ja parta/sänki, siniset/harmaat silmät, suomalaiset piirteet), linnan muille henkilöille omat pohjoiset kasvot (kokki = sama pää nyt); FACEIT 52 + eleet isommalla liikeradalla (kulmat, posket, suupielet, siristys; pään ja hartioiden liike); kuvapari + video omistajalle ennen peliä.
+
+11.10. 16.5x OMISTAJA (keittiökuva): "henkilö näyttää samalle kuin soutaja vaikka on varmaan eri henkilö? pitäisikö henkilöitä tehdä lisää ja muuttaa kaikki suomalaisen näköisiksi" → PT: kyllä; junaan 183 LR: jokainen puhuva/lähelle tuleva henkilö omat kasvot, taustaväelle 4–6 kasvoa (miehiä ja naisia, eri-ikäisiä), kaikki suomalaisen/pohjoisen näköisiä; naisia linnan arkeen lähteiden mukaan; henkilöluettelo PT:lle ennen mallinnusta.
+
+11.10. 16.5x OMISTAJA: "miten nuo henkilöt tehdään?" → PT: nyt Quaternius/Mixamo-pohjat + Blender + FACEIT 52 (sama pää kaikilla, 512² ilman normaalikarttaa); PT:n päätös junaan 183: MetaHuman-pilotti soutajalla (UE 5.8.3 + Core Data asennettu 9.10., Unity-käyttö sallittu UE 5.6:sta, ilmainen < 1 milj. $) → kuvapari nykyinen vs MetaHuman + iPadin muistiarvio → jos parempi, kaikki henkilöt samalla tavalla; Unreal kiinni ennen ti 13.10. aamua.
+
+## OLAVINLINNAN LAITURI: TEKSTUURIVIAT JUNAN 182 EHDOKSI (11.10.2026 klo 18.48)
+
+11.10. 16.5x OMISTAJA (laiturikuva Olavinlinnasta): "tässä näyttää olevan virhe tekstuurissa ja muutenkin näyttää oudolle" → LR junan 182 ehdoksi botin rinnalle: kulkupinta ilman tekstuuria (kävelypinta näkyvissä?), kallioranta venyvä tekstuuri ja litteät tahkot, laatikkomainen muuri toistuvalla pienellä kuviolla, mustat sahalaitaiset muodot ja aukko, kattolevyt leikkaavat seinään; kuvapari ennen/jälkeen PT:lle.
+
+## OLAVINLINNAN SISÄTILOJEN TOTUUS JA GRAFIIKAN PYSTYLEIKE (11.10.2026 klo 18.48)
+
+11.10. 16.5x OMISTAJA: "Onko Linnan sisusta totuudenmukainen ja miten grafiikkaa ylipäätään saataisiin oleellisesti paremmaksi? Pelin pitäisi kuitenkin olla houkuttelevan näköinen vuoden 2026 verrokkien joukossa." → PT: SK sisätilojen totuustarkistus (huone kerrallaan, lähteet, 1499) → raportti olavinlinna-sisatilat-totuus-20261011.md; GRAFIIKAN PYSTYLEIKE keittiöstä (LS2 valaistus + jälkikäsittely, LR materiaalit + rekvisiitta, NS fps/muisti): valmiiksi laskettu valo, PBR-materiaalit (Poly Haven CC0), kuluma/tarrat, värimäärittely, STP; verrokit The Room ja AC Mirage iPadilla; kuvapari ennen/jälkeen omistajalle; sitten koko linnaan; MetaHuman henkilöille.
+
+11.10. 17.5x SK: Olavinlinnan sisätilojen totuusraportti (docs-PR #4417, Julkaisija mergeää PT:n luvalla): osittain totta – rakenne ja kerrokset oikein; väärin 1499:lle: kappelin seinä valkoinen kalkki (pelissä ruskea) ja 12 pientä ristiä (pelissä 5–7 isoa), sisäsoihduille ei lähteitä, Kuninkaansalin tumma koristekaappi ja sydänlippu, muurikäytäviltä puuttuu 8 ampuma-aukkoa tykinalustoineen, tyrmä fiktiota (laastilattia, ei ikkunoita); Senaatin rakennushistoria 2019 ja Sinisalo 1986 eivät verkossa → PT: korjaukset LR:lle junaan 183 v47v:n jälkeen (grafiikan pystyleikkeen yhteydessä).
+
+11.10. 18.0x OMISTAJA (chat) sanatarkasti: "voisiko näitä löytää mistään netistä: Senaatin rakennushistoria vuodelta 2019 ja Sinisalo 1986" → PT haki: Senaatin Olavinlinnan RHS 2019 ei ole verkossa (verkossa vain saman vuoden arkeologinen selvitys ja muurinkorjaukset/laastit, jotka SK luki); Sinisalo 1986 = kirja Olavinlinnan rakentamisen vaiheet suuresta Pohjan sodasta nykypäiviin (Pyhän Olavin kilta, 202 s.) – käsittelee 1700-lukua→, ei 1499:ää; antikvariaateissa (~20 €) ja kirjastoissa, ei verkossa; 1499:lle tärkeämmät Sinisalon kappelitutkimus 1966/67 ja Museoviraston restaurointiraportit vain Museovirastolta.
+
+## LAUTAPELEIHIN EI VÄRIKOROSTUSTA; OLAVINLINNAN ESITTELYYN LUKIJAN KYSYMYS £25 (11.10.2026 klo 18.48)
+
+11.10. 17.2x OMISTAJA (chat) sanatarkasti: "Lautapeleihin ei tule väri korostusta" → PT: junaan 182 Myllyltä ja Tavlilta sininen rengas, sykäys ja videopeliväri pois (kartan merkki ja nostokortti tavallisena nostona), Olavinlinna ennallaan → NUI (nollaus siirtyy tämän jälkeen); NUI:n sykäys 118635797 kuitattu välivaiheena (terävä 2 pt:n rengas 1 → 1,35, 0,9 s, 3 s:n välein). PT: N = 50 -laskuri ei muutu 182:ssa (N datasta), 183:ssa Pelikoodari tasaa, jos kyse on vain arvonnasta.
+
+11.10. 17.3x OMISTAJA (chat) sanatarkasti: "Olavin linnan esittely on ilmainen ja siitä voi ansaita rahaa. Lopussa voisi olla kysymys mistä rahan saisi." → PT: Olavinlinnan nostokortin loppuun lukijan kysymys olemassa olevalla minivisapohjalla (£25 = noston visa, kerran, kukkaron pilleri); kysymys (PT) "Mitä varten Olavinlinnan paksut pyöreät tornit suunniteltiin?" – kestämään tykkitulta / tähystämään järvelle / säilyttämään viljaa piirityksen varalta / kantamaan linnan kelloja; NUI (+ Pelikoodari data); juna 182 jos valmis ennen Olavinlinna-yhdistelmää, muuten 183. LISÄKSI PT 17.3x: "lautapeleihin ei värikorostusta" koskee myös hunnun päällä olevia houkuttimia → Berliinin ja Ateenan sininen houkutin pois (LS1, 182), Olavinlinnan sininen ja linssien violetit ennallaan. Natiiviseppä ja NUI nollattu 17.3x (NS runko 996638465 ⊃ NUI 81d463634).
+
+Raamattuun (docs-PR 11.10. ilta 2): Ydinajatus, PELIT, TALOUS JA LUENTA: OLAVINLINNA JA LAUTAPELIT NOSTOINA (Olavinlinnan sykkivä sininen merkki, esittelyn visa £25 kerran), LAUTAPELEIHIN EI VÄRIKOROSTUSTA (Mylly ja Tavli tavallisina paperisina nostoina) ja HOUKUTTIMET HUNNUN PÄÄLLÄ (vain Olavinlinna sinisenä, lautapeleille ei sinistä houkutinta).
+
+## UUDET MUSIIKIT ÄÄNISIVULLE ERÄ KERRALLAAN (11.10.2026 klo 18.48)
+
+11.10. 17.4x OMISTAJA (chat) sanatarkasti: "sano kun uudet musiikit ovat kuunneltavissa" → PT: 37 nopean Lyria-ajo oli kuollut erässä 2 (10 ok, Dublin estetty; Pelikoodarin nollaus 16.1x) → Pelikoodari ENSIN: äänisivulle Wien nopea v2 + 5 uutta hidasta (Madrid, Praha, Budapest, Oslo, Venetsia), sitten 10 valmista nopeaa käsiteltyinä, loput 27 uudelleen (lupa 15.5x) erä kerrallaan; PT kertoo omistajalle, kun kuunneltavissa.
+
+## CODEX: PÄÄKAUPUNGIT E04–E14 CODEXILLE, PYÖRIMISLINSSI TAUOLLA (11.10.2026 klo 18.48)
+
+11.10. 17.5x OMISTAJA (chat) sanatarkasti: "voisiko jotain koodausta ulkoistaa codexille? minulla on siellä todella paljon kredittejä käytettävissä. voisiko antaa vaikka tuon jos maa lakkaisi pyörimästä linssin antaa sille? mitä olet mieltä? tai joku muu, esimerkiksi lähi-idän rakentaminen samanlaiseen kuntoon kuin eurooppa tai yhden uuden kuumailmapallo kaupungin viimeistely?" + "tai missä vaiheessa nämä ovat?" (kuva: Kaikki maat ja pääkaupungit, Kaupunkien omat kappaleet) + "pilvikreditit ovat näköjään jo kaikki käytetty" → PT: suositus pyörimislinssi Codexille (rajattu, data valmis KS:llä, LS2:n prototyyppi 724848ad0, oma kansio, meidän kuvakuittaus; muuttaa 15.9.:n työnjakoa omistajan päätöksellä), Lähi-itä ei nyt (vain Eurooppa, koko sisältöputki), uusi pallokaupunki ei Codexille (tiivis kytkös LS1/LS2/LR/NUI-tiedostoihin); ei uusia pilviajoja. Asemataulun tilanteet korjattu.
+
+11.10. 17.5x OMISTAJA (chat) sanatarkasti: "tuo pääkaupunkien viimeistely loppuun koko maailmassa olisi kiireellisempi kuin uusi linssi. olisiko se sopiva tehtävä codexille?" → PT: kyllä (tekstisisältöä valmiilla ohjeella, Codexin alue 15.9.:n työnjaossa) → TILAUS CODEXILLE: erät e04–e14 (96 pääkaupunkia) PILVIOHJE-paakaupungit.md:n mukaan + paakaupungit-pilvi/CODEX.md (Mac-sovitus: haara per erä paakaupungit-<erä>-codex, vain oma kansio, robots.txt, Commons-osoitteet, herkät viimeisinä, tarkista = 0, RAPORTTI, rivi posti/codex-fable-paakaupungit.md); pohjahaara paakaupungit-codex-pohja e4f2845b3, posti 77b04d95a. Meidän puoli: SK pistokoe → Pelikoodari kytkee → Julkaisija vie. Pyörimislinssi pysyy tauolla.
+
+11.10. 18.3x PT: Codexille tarkennus baa84fbb1 (Freetown ja Kotte pois → 93 kaupunkia, Tunis ja Antananarivo kevyinä). #4423 (KS:n e04–e14 laudan tiedot) Julkaisijalle merge-luvalla.
+
+Raamattuun (docs-PR 11.10. ilta 2): Ydinajatus, TYONJAKO FABLE / CODEX: PÄÄKAUPUNGIT JA PEKING CODEXILLE; VAIN EUROOPPA: pääkaupunkien tekstisisältö (e01–e03 pilvisessioissa, e04–e14 Codex).
+
+## PULU VÄISTI KUUMAILMAPALLOA EUROOPAN NÄKYMÄSSÄ: KORJAUS JUNAAN 182 (11.10.2026 klo 18.48)
+
+11.10. 17.5x OMISTAJA (LS1:n kuvasta h2-eurooppa): "miksi pulu on tuolla ylhäällä?" → LS1: VIKA (Pulu väistää kuumailmapalloa koko kuplatilallaan ~160 × 312 pt, joten Euroopan näkymässä Pariisin pallo nostaa sen kartan keskelle) → korjaus junaan 182 + uusi kuva. LS1 0d83ffedb (Berliinin ja Ateenan sininen houkutin pois) KUITATTU 182.
+
+11.10. 18.1x KUITATTU 182: LS1 pulu-vaisto-182 e4050506a (Pulu alakulmaan Euroopan näkymässä).
+
+## PEKING CODEXILLE PÄÄKAUPUNKIEN JÄLKEEN; CMAB-AINEISTOA EI KÄYTETÄ (11.10.2026 klo 18.48)
+
+11.10. 18.0x OMISTAJA (chat) sanatarkasti: "codexille voisi antaa pääkaupunkien jälkeen pekingin tehtäväksi. haluan nähdä miten se onnistuisi tekemään 3d rakennukset niistä muista lähteistä. miten hyvän niistä sinun mielestä muuten pystyy tekemään kohtuullisella määrällä työtä verrattuna googlen valmiiseen aineistoon?" → PT: Peking Codexin jonoon pääkaupunkien jälkeen (tilaus erikseen, kun e04–e14 valmistuu; syötteet KS:n Peking-data + LR:n Kielletty kaupunki v5, ei Googlen laattoja); arvio: avoimesta aineistosta siistit massat + säännölliset julkisivut ja hutongit hyvin, maamerkit käsin, ei Googlen todellisuudentuntua mutta ei käyttöehtorajoja.
+
+11.10. 18.3x OMISTAJA (chat) sanatarkasti: "eli avoimesta puuttuu talojen pintojen oikea tekstuuri? tuleeko niistä siis vain yksivärisiä?" + "löytyykö pekingistä paremmin dataa kiinalaisista palveluista?" → PT: ei yksivärisiä (materiaalikirjastot, ikkunarivit, OSM-värit, satelliitin kattosävyt); kiinalaiset palvelut (Baidu, Gaode, Tencent) parempia mutta ehdot + Kiinan kartoituslaki estävät; avoin tutkimusaineisto CMAB (Tsinghua 2025, 31 milj. rakennusta: katto, korkeus, käyttö, tyyli, ikä) → KS tarkistaa lisenssin ja Google Earth -johdannaisriskin ennen Pekingin Codex-tilausta.
+
+11.10. 18.3x KS: CMAB EI KÄYTETÄ (CC BY 4.0, mutta pohjat Google Earthista massaladattuina + Baidun katukuvat → ehtoriski; korkeudet huonommat kuin 3D-GloBFP).
+
+Raamattuun (docs-PR 11.10. ilta 2): Ydinajatus, VAIN EUROOPPA: KOEKAUPUNKI PEKING (koekaupungin tekee Codex pääkaupunkien jälkeen) ja TYONJAKO FABLE / CODEX.
+
+## JUNA 182 AIKAISINTAAN MYÖHÄÄN ILLALLA; LOPUT LYRIA-AJOT HETI (11.10.2026 klo 18.48)
+
+11.10. 18.1x OMISTAJA: "miten pian 182 on pelattavissa?" + "onko googlen musiikki jo työn alla?" (Asemataulun Laitteet: Googlen musiikki Vapaa) → PT: 182 aikaisintaan myöhään illalla (Olavinlinna: botti 12/17, jumit 16, 19, 61, 64, 75 + 91/92 mallidataa → LR v47v; NavMesh-seinät 11/17 peruttu), muuten huomenna; musiikki ei ollut käynnissä → Pelikoodarille HETI loput 27 Lyria-ajoon + valmiit äänisivulle.
+
+## SUOJATUT TEOKSET: KAUPALLISESSA PELISSÄ EI-KAUPALLINEN PANORAAMAVAPAUS EI RIITÄ (11.10.2026 klo 18.48)
+
+11.10. 18.2x PT (SUOJATUT TEOKSET, SK:n Euroopan 50 kaupungin suojatarkastus #4420: 2123 tiedostoa, 101 POIS, 86 RISKI, 14 EPÄSELVÄ): RAAMATTUUN linjauksen "arkkitehtuuri maan lain mukaan" tarkennus – kaupallinen peli: ei-kaupallinen panoraamavapaus = ei panoraamavapautta (Bulgaria, Romania, Slovenia, Latvia, Ukraina, Kreikka, Viro/Liettua osin); Islanti (Harpa, Perlan, kaupungintalo, patsas) POIS; Pieni merenneito, Sibelius-monumentti pääaiheena, MuCEM, Tretjakov-patsas POIS; East Side Gallery, Retiro, Valletta, Lissabon vain jos maan FoP sallii kaupallisen käytön teostyypille; RISKI ja EPÄSELVÄ → vapaa korvaaja, muuten pois. SK korjaa data-PR:inä kaupunkiryhmittäin.
+
+Raamattuun (docs-PR 11.10. ilta 2): Ydinajatus, SUOJATUT TEOKSET KAIKISSA OMISSA JÄLJENNÖKSISSÄ (yleissääntö; maa- ja kohdekohtaiset POIS-päätökset vain tässä lokissa ja SK:n data-PR:issä).
+
+## UUSI ROOLI ÄÄNITTÄJÄ (SONNET 5.5, HIGH): MUSIIKKI, ÄÄNET, ÄÄNISIVU JA VIENNIT (11.10.2026 klo 18.48)
+
+11.10. 18.3x OMISTAJA (chat) sanatarkasti: "voisiko musiikille ja äänille perustaa oman uuden session, jotta niitä ei joutuisi odottelemaan niin pitkään? sonnet saattaisi riittää?" → PT: kyllä – uusi rooli ÄÄNITTÄJÄ (Sonnet 5.5, high): musiikki (Lyria), äänet (ElevenLabs), äänisivu, ääniportti/häiriötarkistus, viennit Julkaisijan kautta; Pelikoodari pitää pelin kytkennät (AaniTaulut, arvonta). Checkout /Users/Shared/Claude/Matkakirja-aanittaja (worktree), sessio appia ohjaamalla. Pelikoodari: äänisivulla 11.10. ilta Wien v2 + 5 hidasta + 20 nopeaa (erät 1–2), erä 3 ajossa; levy 79 Gi siivouksen jälkeen.
+
+11.10. 18.3x PT: UUSI ROOLI ÄÄNITTÄJÄ (Sonnet 5.5, high) luotu appia ohjaamalla: session local_0275bc7a-a851-4f44-91d7-718735f6525b, checkout /Users/Shared/Claude/Matkakirja-aanittaja (worktree, haara aanittaja-tyo-20261011), aloitusviesti docs/raportit/viesti-aanittaja-aloitus.md (vastuu: Lyria-musiikki, ElevenLabs-äänet, äänisivu, ääniportti + häiriötarkistus, vienti vie-paketti.sh:lla; pelin kytkennät Pelikoodarille); ottaa 37 nopean ajon erän 3 jälkeen. Postivahti ja Julkaisija tiedotettu.
+
+Raamattuun (docs-PR 11.10. ilta 2): Ydinajatus, TYÖTAPA JA SESSIOT: A) ROOLIT (ÄÄNITTÄJÄ; Pelikoodarille äänten kytkennät peliin) ja ROOLIEN KANSIOT JA MALLIT; Viisas Pöllö, ÄÄNISIVU (Äänittäjä lisää kappaleet, lukee ja reitittää valinnat, Päätoimittaja kuittaa omistajalle); TYONJAKO FABLE / CODEX (Clauden puolella musiikki ja äänet Äänittäjälle).
+
+## APPLE MAPSIN 3D-KAUPUNGIT: EI OMAAN 3D-MAAILMAAN, MAPKIT-PILOTTI MYÖHEMMIN (11.10.2026 klo 18.48)
+
+11.10. 18.3x OMISTAJA (chat) sanatarkasti: "apple mapsiin on tullut todella vaikuttavat 3d grafiikat kaupunkeihin. voiko niitä jotenkin hyödyntää pelissä?" → PT: ei omaan 3D-maailmaan (ei rajapintaa malleihin, ehdot kieltävät tallennuksen/irrotuksen), mutta Applen oman karttanäkymän (MapKit) kautta iPhonella/iPadilla/Macilla: realistinen 3D-kaupunkinäkymä ja Look Around -katunäkymä; rajoitukset: ei omia 3D-esineitä (pallot, Pulu) Applen näkymään, siirtymä on leikkaus, ulkoasua ei voi sovittaa; ehdotus pilotiksi myöhemmin (esim. Pariisin aukioiden Look Around), ei 182/183.
