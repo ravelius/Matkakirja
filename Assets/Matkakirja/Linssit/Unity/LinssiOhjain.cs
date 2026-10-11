@@ -2228,9 +2228,11 @@ namespace Matkakirja.Natiivi
                     else if (osat.Length > 2 && osat[1] == "puut")
                     {
                         if (osat[2] == "0" || osat[2] == "1") KaupunkiPuut.Aseta(osat[2] == "1");
+                        else if (osat[2] == "tupla" && osat.Length > 3) KaupunkiPuut.AsetaTupla(osat[3] == "auto" ? (bool?)null : osat[3] == "1");
                         else if (osat.Length > 3 && float.TryParse(osat[3], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var pv))
                         { if (osat[2] == "lahi") KaupunkiPuut.LahiM = pv; else if (osat[2] == "kauko") KaupunkiPuut.KaukoM = pv; else if (osat[2] == "peitto") KaupunkiPuut.Peitto = pv; }
                         Kirjaa("opas: " + KaupunkiPuut.Tila());
+                        if (osat[2] == "tila") KaupunkiPuut.KirjaaMuisti();   // muistiportin rivi (Natiiviseppä)
                     }
                     else if (osat.Length > 2 && osat[1] == "liput") { if (osat[2] != "tila") ElavaSavuLiput.LiputPaalla = osat[2] == "1"; Kirjaa("opas: " + ElavaKaupunki.Tila()); }
                     else if (osat.Length > 3 && osat[1] == "pinta")

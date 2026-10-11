@@ -1,5 +1,6 @@
 // Kaupunkien puut (Linssiseppä 10.10.2026, juna 181): Ydin PuuRuudukko (Karttasepän puut-<kohde>.bytes: otsake, ruututaulu, purku),
 // ruutuvalinta, näkymäkartio, LOD ja koodi; oikea tiedosto Karttasepän kansiosta tai vientipaketista, jos koneella.
+// 11.10. (iPad-ajo 181): runko–latvus-suhde (Muoto), tyvi maahan pintamallista (MaaPinnasta), Googlen puut ensin (GooglellaPuu), muistirivi.
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -43,6 +44,89 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Heittaa<FormatException>(() => PuuRuudukko.Lue(new byte[] { (byte)'P', (byte)'U', (byte)'U', (byte)'2', 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 }));
             var vaara = (byte[])b.Clone(); vaara[12] = 9;   // puita ≠ taulun loppu
             Oleta.Heittaa<FormatException>(() => PuuRuudukko.Lue(vaara));
+        }
+
+        [Testi] static void RunkoEnintaanKolmannes()
+        {
+            // iPad-ajo 181: OSM-puun oletuslatvus 0,45 × h ja vanha latvus clamp(0,6 h, 0,7 l, 1,2 l) → näkyvä runko 0,46 h (rajattu l 0,3 h → 0,64 h).
+            foreach (float h in new[] { 3f, 8f, 12.25f, 20f, 35f, 63.75f })
+                foreach (float lk in new[] { 0.3f, 0.45f, 0.8f, 1.2f })
+                    foreach (bool havu in new[] { false, true })
+                    {
+                        var m = PuuRuudukko.Muoto(h, lk * h, havu);
+                        string t = $"h {h}, l {lk} h, havu {havu}";
+                        Oleta.Tosi(m.RunkoM <= h / 3f + 1e-4f && m.RunkoM > 0, "runko ≤ h / 3: " + t + " → " + m.RunkoM);
+                        Oleta.Tosi(Math.Abs(m.RunkoM + m.LatvusK - h) < 1e-4, "latvus + runko = h: " + t);
+                        Oleta.Tosi(havu ? m.LatvusL >= 0.3f * h - 1e-4 && m.LatvusL <= 0.6f * h + 1e-4 : m.LatvusL >= 0.5f * h - 1e-4 && m.LatvusL <= 1.2f * h + 1e-4, "leveys: " + t);
+                        // Varjostimen näkyvä alareuna sivulta: keskipiste h − K/2, kortti ±1,05 × Peitto 1,15 × K/2 → ≥ 0 ja ≤ h / 3.
+                        double ala = h - m.LatvusK * 0.5 - 1.05 * 1.15 * m.LatvusK * 0.5;
+                        Oleta.Tosi(ala >= 0 && ala <= h / 3.0, "näkyvä latvuksen alareuna " + t + " → " + ala);
+                    }
+            var osm = PuuRuudukko.Muoto(14f, PuuRuudukko.LatvusKerroin * 14f, false);
+            Oleta.Tosi(Math.Abs(osm.RunkoM - 0.3f * 14f) < 1e-4 && Math.Abs(osm.LatvusL - 7f) < 1e-4, "OSM-oletus 14 m: runko 4,2 m, latvus 7 m leveä");
+            string v = File.ReadAllText(Polku("Assets", "Matkakirja", "Linssit", "Resources", "Varjostimet", "KaupunkiPuu.shader"));
+            Oleta.Tosi(v.Contains("float latvusK = h * (havu > 0.5 ? 0.8 : 0.7);") && v.Contains("clamp(l, 0.3 * h, 0.6 * h) : clamp(l, 0.5 * h, 1.2 * h)")
+                && PuuRuudukko.LehtiLatvus == 0.7f && PuuRuudukko.HavuLatvus == 0.8f, "varjostin laskee saman muodon kuin PuuRuudukko.Muoto");
+            Oleta.Tosi(v.Contains("lerp(-0.3, h - latvusK * 0.5, kulma.y)"), "runko tyvestä (0,3 m maan alle) latvuksen keskelle");
+        }
+
+        [Testi] static void TyviMaahanPintamallista()
+        {
+            // Maa 50 m; puisto: latvusto 65 m 20 m:n säteellä origosta. Vanha 4 suunnan kehä latvus/2 + 3 = 7 m osui latvustoon (65 m).
+            Func<double, double, double> puisto = (x, z) => x * x + z * z < 400 ? 65 : 50;
+            double vanha = puisto(0, 0); foreach (var (dx, dz) in new[] { (1, 0), (-1, 0), (0, 1), (0, -1) }) vanha = Math.Min(vanha, puisto(dx * 7, dz * 7));
+            Oleta.Sama(65.0, vanha, "vanha kehä: tyvi latvuksessa (ilmassa)");
+            Oleta.Sama(50.0, PuuRuudukko.MaaPinnasta(puisto, 0, 0, 8f), "uusi: ulompi kehä (26 m) osuu maahan");
+            // Yksittäinen kuoppa (joki laiturin alla) ei vedä puuta alas: toiseksi pienin.
+            Func<double, double, double> kuoppa = (x, z) => x > 13 && x < 15 && Math.Abs(z) < 1 ? 40 : 50;
+            Oleta.Sama(50.0, PuuRuudukko.MaaPinnasta(kuoppa, 0, 0, 8f), "yksi kuoppa ohitetaan");
+            // Rinne 10 %: puu painuu enintään ulomman kehän verran (26 m × 0,1), ei nouse ilmaan.
+            double rinne = PuuRuudukko.MaaPinnasta((x, z) => 50 + 0.1 * x, 0, 0, 8f);
+            Oleta.Tosi(rinne <= 50 && rinne >= 50 - 2.7, "rinne: " + rinne);
+            Oleta.Tosi(double.IsNaN(PuuRuudukko.MaaPinnasta((x, z) => double.NaN, 0, 0, 8f)), "ei pintaa → NaN");
+            Oleta.Sama(52.0, PuuRuudukko.MaaPinnasta((x, z) => x == 0 && z == 0 ? 52 : double.NaN, 0, 0, 8f), "yksi näyte riittää");
+            string u = File.ReadAllText(Polku("Assets", "Matkakirja", "Linssit", "Unity", "KaupunkiPuut.cs"));
+            Oleta.Tosi(u.Contains("PuuRuudukko.MaaPinnasta(pintaNayte, x, z, latvusM)") && u.Contains("m.KorkeusEnu(x, z)") && u.Contains("OpasSovitin.MaanpintaMalli(lat0, lon0)"),
+                "Unity: DTM ensin, sitten 25 näytettä pinnasta, näytteet mallin ENU:sta");
+        }
+
+        [Testi] static void GooglenPuutEnsin()
+        {
+            var b = Tiedosto(new[] { ((short)0, (short)0, (byte)40, (byte)0, (byte)5), ((short)2, (short)0, (byte)40, (byte)0, (byte)1),
+                ((short)4, (short)0, (byte)0, (byte)0, (byte)1), ((short)6, (short)0, (byte)0, (byte)0, (byte)9) },
+                new (short, short, byte, byte, byte)[0], new (short, short, byte, byte, byte)[0], new (short, short, byte, byte, byte)[0]);
+            var r = PuuRuudukko.Lue(b);
+            var puut = new PuuRuudukko.Puu[4];
+            PuuRuudukko.Pura(b, (int)r.Siirto(0), 4, puut);
+            Oleta.Tosi(puut[0].Chm && puut[0].KorkeusTunnettu && PuuRuudukko.GooglellaPuu(puut[0]), "latvusmallin puu → Googlella");
+            Oleta.Tosi(!puut[1].Chm && PuuRuudukko.GooglellaPuu(puut[1]), "OSM-puu, korkeus datassa (latvus nähty) → Googlella");
+            Oleta.Tosi(!puut[2].KorkeusTunnettu && puut[2].KorkeusM == PuuRuudukko.OletusKorkeusM && !PuuRuudukko.GooglellaPuu(puut[2]), "OSM-puu ilman korkeutta → piirretään");
+            Oleta.Tosi(!PuuRuudukko.GooglellaPuu(puut[3]), "arvio-bitti (puurivi) ei muuta");
+            Oleta.Tosi(Array.Find(PuuRuudukko.Kaupungit, x => x.Id == "tukholma").GooglenPuut && !Array.Find(PuuRuudukko.Kaupungit, x => x.Id == "pariisi").GooglenPuut,
+                "PT 11.10.: Tukholmassa Googlen puut ensin, Pariisissa kortit peittävät möykyt");
+            string u = File.ReadAllText(Polku("Assets", "Matkakirja", "Linssit", "Unity", "KaupunkiPuut.cs"));
+            string o = File.ReadAllText(Polku("Assets", "Matkakirja", "Linssit", "Unity", "LinssiOhjain.cs"));
+            Oleta.Tosi(u.Contains("if (ohita && PuuRuudukko.GooglellaPuu(p)) { googlenOhitettu++; continue; }") && o.Contains("KaupunkiPuut.AsetaTupla("), "ohitus latauksessa, komento opas puut tupla");
+        }
+
+        [Testi] static void MuistiriviPortille()
+        {
+            string u = File.ReadAllText(Polku("Assets", "Matkakirja", "Linssit", "Unity", "KaupunkiPuut.cs"));
+            string o = File.ReadAllText(Polku("Assets", "Matkakirja", "Linssit", "Unity", "LinssiOhjain.cs"));
+            Oleta.Tosi(u.Contains("Debug.Log($\"MATKAKIRJA kaupunki: puut muisti {n.id}: CPU {Mt(cpu)} Mt, GPU {Mt(gpu)} Mt, puita {n.ladattuPuita}\");"),
+                "rivi \"MATKAKIRJA kaupunki: puut muisti <kaupunki>: CPU x Mt, GPU y Mt, puita z\"");
+            Oleta.Tosi(u.Contains("ToString(\"F1\", System.Globalization.CultureInfo.InvariantCulture).Replace('.', ',')"), "desimaalipilkku laitteen kielestä riippumatta");
+            Oleta.Tosi(o.Contains("if (osat[2] == \"tila\") KaupunkiPuut.KirjaaMuisti();") && u.Contains("jonoKohta >= halutut.Count && halutut.Count > 0"), "komennolla tila ja latauksen valmistuttua");
+        }
+
+        [Testi] static void KatutasonLahitaso()
+        {
+            // Kaupunkinäkymässä maasto 0 → lähitaso puolet silmän ellipsoidikorkeudesta (Pariisi 3 m maan yllä ≈ 43 m). Kiinteä kamera antaa maan.
+            string k = File.ReadAllText(Polku("Assets", "Matkakirja", "Kartta", "PalloKierto.cs"));
+            string s = File.ReadAllText(Polku("Assets", "Matkakirja", "Linssit", "Unity", "OpasSovitin.cs"));
+            Oleta.Tosi(k.Contains("if (maastoRakoPois && LahitasonMaa != null)") && k.Contains("math.max(1.0, (silmanKorkeus - maaLahi) * 0.5)"), "PalloKierto: lähitaso maan mukaan");
+            Oleta.Tosi(s.Contains("kierto.LahitasonMaa = LahitasonMaaFn;") && s.Contains("kierto.LahitasonMaa = null;") && s.Contains("lähitaso {kam.nearClipPlane:F1} m"),
+                "vain kiinteä kamera (normaali peli ennallaan), lähitaso lokiin");
         }
 
         [Testi] static void RuutuvalintaLahinEnsin()
@@ -123,6 +207,12 @@ namespace Matkakirja.Linssit.Testit
                     summa += n;
                 }
                 Oleta.Tosi(summa > puita / 10, $"{id}: näytteessä {summa} puuta");
+                // Googlen puut ensin: koko tiedosto (Tukholma: 4 026 OSM-puuta ilman latvusmallin korkeutta jää piirrettäväksi).
+                var kaikki = new PuuRuudukko.Puu[r.Puita];
+                PuuRuudukko.Pura(b, (int)r.PuidenAlku, r.Puita, kaikki);
+                int jaa = 0; foreach (var p in kaikki) if (!PuuRuudukko.GooglellaPuu(p)) jaa++;
+                Console.WriteLine($"      {id}: Googlen puut ensin -säännöllä piirrettäväksi jää {jaa} / {r.Puita} puuta ({(kk.GooglenPuut ? "käytössä" : "ei käytössä")})");
+                if (id == "tukholma") Oleta.Tosi(jaa > 1000 && jaa < r.Puita / 100, "tukholma: alle 1 % jää piirrettäväksi: " + jaa);
                 // Ruutuvalinta keskustassa: KaukoM 2500 m → kymmeniä tuhansia puita ja alle LadattuMax:n (muistiarvio).
                 var l = r.Ruudut(0, 0, 2500 + 250);
                 long lahi = 0; foreach (int ru in l) lahi += r.Maara(ru);
@@ -139,7 +229,7 @@ namespace Matkakirja.Linssit.Testit
             string ov = File.ReadAllText(Polku("Assets", "Matkakirja", "UI", "Linssit", "OpasValikko.cs"));
             Oleta.Tosi(u.Contains("Graphics.RenderPrimitives(rp, MeshTopology.Triangles, lahia * 12, 1)") && u.Contains("kaukoja * 6, 1)"), "GPU-instanssit: lähi 12, kauko 6 kärkeä");
             Oleta.Tosi(!u.Contains("Resources.Load<TextAsset>") && u.Contains("DownloadHandlerFile") && u.Contains("tiedosto.Position = ruudukko.Siirto(r)"), "data ämpäristä levylle, vain ruudut muistiin");
-            Oleta.Tosi(u.Contains("OpasSovitin.MaanpintaValmis(lat0, lon0)") && u.Contains("OpasSovitin.OmaMaanpinta("), "tyvi maanpinnasta, ruudut vasta kun maanpinta ratkennut");
+            Oleta.Tosi(u.Contains("OpasSovitin.MaanpintaValmis(lat0, lon0)") && u.Contains("OpasSovitin.PintaMalli(lat0, lon0)"), "tyvi maanpinnasta, ruudut vasta kun maanpinta ratkennut");
             Oleta.Tosi(v.Contains("StructuredBuffer<PuuGpu> _Puut") && v.Contains("SV_VertexID") && v.Contains("\"DepthOnly\"") && v.Contains("\"DepthNormals\"") && v.Contains("kd * siirto"), "varjostin: proseduraalinen, syvyyspassit, latvus möykyn edessä");
             Oleta.Tosi(o.Contains("osat[1] == \"puut\"") && o.Contains("KaupunkiPuut.Tila()"), "komento opas puut 0|1|tila");
             Oleta.Tosi(ov.Contains("KaupunkiPuut.Krediitti"), "krediitti Lähteet-näkymässä");

@@ -7,6 +7,7 @@
 // int16 x, int16 y (ENU 0,5 m; x itä, y pohjoinen), uint8 korkeus 0,25 m, uint8 latvus 0,1 m (halkaisija), uint8 tyyppi (bitit 0–1
 // lehti: 0 tuntematon, 1 lehtipuu, 2 havupuu; bit 2 chm, bit 3 arvio), uint8 suku. Ruutu (i, j) alkaa (−säde + i·ruutu_m, −säde + j·ruutu_m).
 // Koordinaatit kuten elävässä kaupungissa: X itä, Z pohjoinen (m, paketin origo = Karttasepän origo, sama kuin yövaloilla ja kaduilla).
+// 11.10. (iPad-ajo 181): Muoto (runko ≤ 1/3, latvus loput), MaaPinnasta (tyvi DSM:stä 25 näytteellä), GooglellaPuu (Tukholma: Googlen puut ensin).
 using System;
 using System.Collections.Generic;
 
@@ -20,9 +21,10 @@ namespace Matkakirja.Linssit.Elava
         /// <summary>Ämpärin kansio (vientipaketti tyokalut/kaupunki_puut_paketti.py → kartta/puut/v1/puut-&lt;id&gt;.bytes).</summary>
         public const string Juuri = "https://media.matkakirja.app/kartta/puut/v1/";
         public const string Krediitti = "Puut: © OpenStreetMap contributors (ODbL); Meta and World Resources Institute (WRI), High Resolution Canopy Height Maps, CC BY 4.0";
-        /// <summary>Kaupungit, joiden puut ovat ämpärissä: origo = Karttasepän metan origo (sama kuin ElavaKaupunki.Paketit).</summary>
-        public static readonly (string Id, double Lat, double Lon, long Tavua)[] Kaupungit =
-            { ("pariisi", 48.86122, 2.35092, 4064212), ("tukholma", 59.3299, 18.07382, 8420972) };
+        /// <summary>Kaupungit, joiden puut ovat ämpärissä: origo = Karttasepän metan origo (sama kuin ElavaKaupunki.Paketit).
+        /// GooglenPuut = Googlen laattojen puut ensin (<see cref="GooglellaPuu"/>): PT 11.10. Tukholma (iPad-ajo 181, t07 tuplalatvukset).</summary>
+        public static readonly (string Id, double Lat, double Lon, long Tavua, bool GooglenPuut)[] Kaupungit =
+            { ("pariisi", 48.86122, 2.35092, 4064212, false), ("tukholma", 59.3299, 18.07382, 8420972, true) };
 
         public int RuutujaX { get; private set; }
         public int RuutujaY { get; private set; }
@@ -39,8 +41,12 @@ namespace Matkakirja.Linssit.Elava
         public struct Puu
         {
             public float X, Z, KorkeusM, LatvusM; public byte Tyyppi, Suku;
+            /// <summary>Korkeus datassa (OSM-tagi tai latvusmallin huippu); false = oletus <see cref="OletusKorkeusM"/>.</summary>
+            public bool KorkeusTunnettu;
             public bool Havu => (Tyyppi & 3) == 2;
             public bool Lehti => (Tyyppi & 3) == 1;
+            /// <summary>Lähde latvusmalli (bitti 2): latvushuippu ilmakuvasta, ei OSM-puuta 4 m:n säteellä.</summary>
+            public bool Chm => (Tyyppi & 4) != 0;
         }
 
         /// <summary>Ruututaulun pituus tavuina 16 tavun otsakkeesta (lukija lukee sen jälkeen taulun); heittää, jos otsake ei ole PUU1.</summary>
@@ -91,9 +97,10 @@ namespace Matkakirja.Linssit.Elava
                 int o = alku + k * PuuTavua;
                 short x = (short)(b[o] | b[o + 1] << 8), y = (short)(b[o + 2] | b[o + 3] << 8);
                 float h = b[o + 4] * 0.25f, l = b[o + 5] * 0.1f;
-                if (h <= 0f) h = OletusKorkeusM;
+                bool tunnettu = h > 0f;
+                if (!tunnettu) h = OletusKorkeusM;
                 if (l <= 0f) l = LatvusKerroin * h;
-                ulos[ulosAlku + k] = new Puu { X = x * 0.5f, Z = y * 0.5f, KorkeusM = h, LatvusM = l, Tyyppi = b[o + 6], Suku = b[o + 7] };
+                ulos[ulosAlku + k] = new Puu { X = x * 0.5f, Z = y * 0.5f, KorkeusM = h, LatvusM = l, Tyyppi = b[o + 6], Suku = b[o + 7], KorkeusTunnettu = tunnettu };
             }
         }
 
@@ -153,6 +160,51 @@ namespace Matkakirja.Linssit.Elava
             s ^= s >> 13; s = unchecked(s * 0x5bd1e995u); s ^= s >> 15;
             return kh | kl << 8 | (uint)(p.Tyyppi & 3) << 16 | (s & 0x3FFFu) << 18;
         }
+
+        /// <summary>RUNKO JA LATVUS (iPad-ajo 181, 11.10.: rungot pitkiä ja ohuita, latvukset ilmassa): latvus on puun yläosa, näkyvä runko
+        /// enintään kolmannes korkeudesta. Lehtipuu: latvus 0,7 × korkeus, leveys 0,5–1,2 × korkeus (OSM-oletus 0,45 × h oli kapea, ja vanha
+        /// 0,6 × h rajattuna 1,2 × leveyteen jätti rungon jopa 0,64 × h:ksi); havupuu: latvus 0,8 × h, leveys 0,3–0,6 × h. Varjostin
+        /// KaupunkiPuu laskee saman (LatvusK / LatvusL); RunkoM = latvuksen alareuna tyvestä.</summary>
+        public const float LehtiLatvus = 0.7f, HavuLatvus = 0.8f;
+        public static (float LatvusL, float LatvusK, float RunkoM) Muoto(float h, float l, bool havu)
+        {
+            float lk = h * (havu ? HavuLatvus : LehtiLatvus);
+            float ll = havu ? Math.Min(0.6f * h, Math.Max(0.3f * h, l)) : Math.Min(1.2f * h, Math.Max(0.5f * h, l));
+            return (ll, lk, h - lk);
+        }
+
+        /// <summary>TYVI PINTAMALLISTA (DSM), kun maanpintaa (DTM) ei ole pisteessä: DSM:ssä puu on latvassa, joten maa haetaan ympäriltä.
+        /// Vanha 4 suunnan kehä latvuksen säteellä osui tiheässä puurivissä ja puistossa naapurilatvuksiin (iPad-ajo 181: 41 015 / 65 247 puuta
+        /// DSM-kehältä, latvukset ilmassa). Nyt 25 näytettä: piste + 8 suuntaa × 3 kehää (latvus/2 + 3 m, max(12, latvus + 6), max(25, 2·latvus + 10))
+        /// ja toiseksi pienin (yksittäinen kuoppa, esim. laiturin alla joki, ei vedä puuta alas). Pariisin DTM-alueella mitattuna (3 % näyte,
+        /// LiDAR-DSM 2 m): yli 5 m ilmassa 12,2 % → 0,3 %, yli 5 m maan alla 0,2 % → 2,7 % (DSM 10 m: 26 % → 2,5 %). NaN = ei pintaa.</summary>
+        public static double MaaPinnasta(Func<double, double, double> pinta, double x, double z, float latvusM)
+        {
+            double pienin = double.PositiveInfinity, toinen = double.PositiveInfinity;
+            void Lisaa(double h)
+            {
+                if (double.IsNaN(h)) return;
+                if (h < pienin) { toinen = pienin; pienin = h; } else if (h < toinen) toinen = h;
+            }
+            Lisaa(pinta(x, z));
+            double l = latvusM;
+            for (int k = 0; k < 3; k++)
+            {
+                double r = k == 0 ? l * 0.5 + 3 : k == 1 ? Math.Max(12, l + 6) : Math.Max(25, 2 * l + 10);
+                for (int s = 0; s < 8; s++) Lisaa(pinta(x + Suunnat[s].x * r, z + Suunnat[s].z * r));
+            }
+            return !double.IsInfinity(toinen) ? toinen : !double.IsInfinity(pienin) ? pienin : double.NaN;
+        }
+        static readonly (double x, double z)[] Suunnat =
+            { (1, 0), (-1, 0), (0, 1), (0, -1), (0.70711, 0.70711), (-0.70711, 0.70711), (0.70711, -0.70711), (-0.70711, -0.70711) };
+
+        /// <summary>GOOGLEN PUUT ENSIN (PT 11.10., Tukholma t07: omat latvukset Googlen sulaneiden puiden päällä tuplana; Googlen laattoihin ei
+        /// kosketa): puu jätetään piirtämättä, kun sen latvus on nähty ilmasta, jolloin Googlen ilmakuvista tehdyssä laatassa on puu samassa
+        /// kohdassa: latvusmallin puu (Meta/WRI-huippu satelliittikuvasta) tai OSM-puu, jonka korkeus on datassa (Tukholmassa 98 OSM-tagia,
+        /// muut latvusmallin huipusta 3 m:n säteeltä, ≥ 3 m). Jäljelle jäävät OSM-puut, joiden kohdalla latvusmalli ei nähnyt latvusta (nuoret,
+        /// uudet; Tukholmassa 4 026). Pintamallista tätä ei voi päätellä: Tukholman DSM on GLO-30 (30 m tutka) + OSM-rakennukset, ja
+        /// Kungsträdgårdenissa DSM − maa ≈ 0 puiden kohdalla. Ei näytteitä: pelkkä bittitesti latauksessa.</summary>
+        public static bool GooglellaPuu(in Puu p) => p.Chm || p.KorkeusTunnettu;
 
         public static float KoodiKorkeus(uint k) => (k & 255) * 0.25f;
         public static float KoodiLatvus(uint k) => (k >> 8 & 255) * 0.1f;

@@ -4,8 +4,10 @@
 // DATA: ämpäri kartta/puut/v1/puut-<id>.bytes (4,1 / 8,4 Mt; tyokalut/kaupunki_puut_paketti.py) → laitteen välimuisti
 // persistentDataPath/kuvat/kaupunkipuut/v1 kerran; sitten tiedostosta luetaan vain kameran lähiruudut (250 m) FileStreamilla. Resources
 // ei käy: TextAsset pitäisi koko 8,4 Mt:n tiedoston muistissa (jetsam-historia Pariisissa).
-// PAIKKA: CesiumGlobeAnchor Karttasepän origoon kuten ElavaKaupunki (x itä, y ylös, z pohjoinen, m); puun tyvi maanpinnasta
-// (OpasSovitin.OmaMaanpintaDtm), sen ulkopuolella pienin oman pinnan (DSM) näyte latvuksen kehältä (DSM:ssä puu on latvassa).
+// PAIKKA: CesiumGlobeAnchor Karttasepän origoon kuten ElavaKaupunki (x itä, y ylös, z pohjoinen, m); puun tyvi maanpinnasta (DTM),
+// sen ulkopuolella pintamallista (DSM) Ydin PuuRuudukko.MaaPinnasta (25 näytettä, toiseksi pienin; 11.10., iPad-ajo 181: vanha 4 näytteen
+// kehä jätti latvuksia ilmaan). Näytteet suoraan mallin ENU:sta (OmaKorkeus.KorkeusEnu): Karttasepän puut ja korkeusruudukot käyttävät
+// samaa ENU-kaavaa ja origoa, joten lat/lon-kierros (111 132 m/° ≠ Mr) ja KorkeusId-haku jäävät pois.
 // Ruudut ladataan vasta, kun maanpinta on ratkennut (kuten katuliikenne), enintään PuitaKehyksessa puuta kehyksessä.
 // PIIRTO: GPU-instanssit GraphicsBufferissa (16 t / puu), Graphics.RenderPrimitives kahdesti: lähipuut (< LahiM) latvus + runko
 // (12 kärkeä), kaukopuut (< KaukoM) pelkkä latvus (6 kärkeä); kauempana ei mitään (Googlen laatat riittävät; häivytys reunalla).
@@ -14,7 +16,12 @@
 // Peitto × latvuksen kokoinen ja siirretty latvuksen säteen verran kameraa kohti (näytön koko korjattu): kortti on aina Googlen
 // puumöykyn (sama latvus, sama korkeus) edessä ja peittää sen siluetin joka suunnasta. Googlen laattoihin ei kosketa (Map Tiles:
 // geometria ja kuva ennallaan; maski laattavarjostimessa vaatisi geometrian muutoksen tai jättäisi reiän möykyn alle).
-// KYTKIN: asetus "elava.Puut" (oletus 1), komento `opas puut 0|1|tila` (heti), `opas puut lahi|kauko|peitto N`.
+// GOOGLEN PUUT ENSIN (PT 11.10., Tukholma t07: latvusmallin arviot ovat Googlen puita matalampia ja leveämpiä → tupla): kaupungeissa,
+// joilla PuuRuudukko.Kaupungit.GooglenPuut (Tukholma), ilmasta nähdyt puut (PuuRuudukko.GooglellaPuu) ohitetaan jo latauksessa;
+// komento `opas puut tupla 0|1|auto` pakottaa (auki oleva kaupunki ladataan uudelleen).
+// KYTKIN: asetus "elava.Puut" (oletus 1), komento `opas puut 0|1|tila` (heti), `opas puut lahi|kauko|peitto N`, `opas puut tupla 0|1|auto`.
+// MUISTIPORTTI (Natiiviseppä): rivi "MATKAKIRJA kaupunki: puut muisti <id>: CPU x Mt, GPU y Mt, puita z" komennolla `opas puut tila` ja
+// kun ruutujono tyhjenee (ensimmäinen kerta kaupungissa, sitten kun puiden määrä muuttuu > 10 %, enintään 5 s:n välein).
 // MUISTI (iPad Pro 13, tavoite < 15 Mt): ruututaulu 16 kt, ladatut ruudut (KaukoM + 250 m) ≤ ~75 000 puuta × 16 t ≈ 1,2 Mt,
 // koottu lista ja GPU-puskuri (LahiMax + KaukoMax) × 16 t = 1,1 Mt kumpikin → ≈ 3,5 Mt; tiedosto levyllä (ei muistissa).
 using System;
@@ -25,6 +32,7 @@ using System.Runtime.InteropServices;
 using CesiumForUnity;
 using Matkakirja.Linssit;
 using Matkakirja.Linssit.Elava;
+using Matkakirja.Linssit.Kierros;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -39,6 +47,8 @@ namespace Matkakirja.Natiivi
         public static bool Paalla => Pakko ?? Matkakirja.Peli.Asetus.Luku("elava.Puut", 1) != 0;
         /// <summary>LOD-rajat (m kamerasta) ja latvuskortin koko latvukseen nähden (Googlen möykyn peitto).</summary>
         public static float LahiM = 400f, KaukoM = 2500f, Peitto = 1.15f;
+        /// <summary>Googlen puut ensin -pakotus (null = kaupungin oletus PuuRuudukko.Kaupungit.GooglenPuut).</summary>
+        public static bool? TuplaPakko;
         public const int LahiMax = 20000, KaukoMax = 50000, PuitaKehyksessa = 4000;
         public const float PoistoVaraM = 600f;
         public static KaupunkiPuut Nykyinen { get; private set; }
@@ -50,11 +60,14 @@ namespace Matkakirja.Natiivi
         struct PuuGpu { public float X, Y, Z; public uint Koodi; }
         sealed class Ruutu { public PuuGpu[] Puut; public float MinY, MaxY; }
 
-        string id; double lat0, lon0; long tavua;
+        string id; double lat0, lon0; long tavua; bool googlenPuut;
+        bool OhitaGooglen => TuplaPakko ?? googlenPuut;
         PuuRuudukko ruudukko; FileStream tiedosto; string tila = "ei aloitettu";
         readonly Dictionary<int, Ruutu> ladatut = new Dictionary<int, Ruutu>();
         readonly List<int> halutut = new List<int>(), poistettavat = new List<int>();
-        int keskiI = int.MinValue, keskiJ = int.MinValue, jonoKohta, ladattuPuita, ilmanMaata, dsmPuita;
+        int keskiI = int.MinValue, keskiJ = int.MinValue, jonoKohta, ladattuPuita, ilmanMaata, dsmPuita, googlenOhitettu, muistiPuita = -1;
+        float muistiAika = -100f;
+        OmaKorkeus maaMalli, pintaMalli; bool maaEnu, pintaEnu; Func<double, double, double> pintaNayte;
         byte[] lukuPuskuri = new byte[0]; PuuRuudukko.Puu[] puraPuskuri = new PuuRuudukko.Puu[0];
         PuuGpu[] valmis; GraphicsBuffer puskuri; int lahia, kaukoja;
         Material mat; MaterialPropertyBlock lahiMp, kaukoMp;
@@ -96,7 +109,7 @@ namespace Matkakirja.Natiivi
             ankkuri.longitudeLatitudeHeight = new double3(kk.Lon, kk.Lat, 0);
             ankkuri.rotationEastUpNorth = quaternion.identity;
             var p2 = go.AddComponent<KaupunkiPuut>();
-            p2.id = kk.Id; p2.lat0 = kk.Lat; p2.lon0 = kk.Lon; p2.tavua = kk.Tavua;
+            p2.id = kk.Id; p2.lat0 = kk.Lat; p2.lon0 = kk.Lon; p2.tavua = kk.Tavua; p2.googlenPuut = kk.GooglenPuut;
             Nykyinen = p2;
             p2.StartCoroutine(p2.Lataa());
         }
@@ -107,6 +120,13 @@ namespace Matkakirja.Natiivi
             Pakko = paalla;
             if (!paalla) { if (Nykyinen != null) Destroy(Nykyinen.gameObject); Nykyinen = null; }
             else if (Nykyinen == null && viimeKaupunki != null) Avaa(viimeKaupunki);
+        }
+
+        /// <summary>Komento `opas puut tupla 0|1|auto`: Googlen puut ensin pakotettuna (null = kaupungin oletus); auki oleva kaupunki uudelleen.</summary>
+        public static void AsetaTupla(bool? ohita)
+        {
+            TuplaPakko = ohita;
+            if (Nykyinen != null && viimeKaupunki != null) Avaa(viimeKaupunki);
         }
 
         IEnumerator Lataa()
@@ -184,33 +204,33 @@ namespace Matkakirja.Natiivi
             return true;
         }
 
-        /// <summary>Maan korkeus paikallisessa ENU:ssa (ellipsoidi → kaarevuuden lasku d²/2R kuten ElavaKaupunki): maanpinta (DTM) pisteessä,
-        /// sen ulkopuolella pienin oman pinnan (DSM) näyte keskeltä ja neljästä pisteestä kehältä (DSM:ssä puu on latvassa).
-        /// NaN = korkeusmalli ei muistissa.</summary>
-        static readonly (double, double)[] Keha = { (1.0, 0.0), (-1.0, 0.0), (0.0, 1.0), (0.0, -1.0) };
-        double Maa(double x, double z, double kehaM)
+        /// <summary>Korkeusmallit tälle kehykselle: suoraan ENU:sta, kun mallin origo on puiden origo (Karttasepän sama ENU-kaava).</summary>
+        void Mallit()
         {
-            double cl = Math.Cos(lat0 * Math.PI / 180);
-            double La(double zz) => lat0 + zz / 111132.0;
-            double Lo(double xx) => lon0 + xx / (111320.0 * cl);
-            double h = OpasSovitin.OmaMaanpintaDtm(La(z), Lo(x));
-            if (double.IsNaN(h))
-            {
-                h = OpasSovitin.OmaMaanpinta(La(z), Lo(x));
-                foreach (var (dx, dz) in Keha)
-                {
-                    double hk = OpasSovitin.OmaMaanpinta(La(z + dz * kehaM), Lo(x + dx * kehaM));
-                    if (!double.IsNaN(hk)) h = double.IsNaN(h) ? hk : Math.Min(h, hk);
-                }
-                if (!double.IsNaN(h)) dsmPuita++;
-            }
+            maaMalli = OpasSovitin.MaanpintaMalli(lat0, lon0); pintaMalli = OpasSovitin.PintaMalli(lat0, lon0);
+            maaEnu = maaMalli != null && SamaOrigo(maaMalli); pintaEnu = pintaMalli != null && SamaOrigo(pintaMalli);
+            pintaNayte ??= (x, z) => Nayte(pintaMalli, pintaEnu, x, z);
+        }
+        bool SamaOrigo(OmaKorkeus m) => Math.Abs(m.Lat0 - lat0) < 1e-6 && Math.Abs(m.Lon0 - lon0) < 1e-6;
+        double Nayte(OmaKorkeus m, bool enu, double x, double z) => m == null ? double.NaN : enu ? m.KorkeusEnu(x, z)
+            : m.Korkeus(lat0 + z / 111132.0, lon0 + x / (111320.0 * Math.Cos(lat0 * Math.PI / 180)));
+
+        /// <summary>Maan korkeus paikallisessa ENU:ssa (ellipsoidi → kaarevuuden lasku d²/2R kuten ElavaKaupunki): maanpinta (DTM) pisteessä,
+        /// sen ulkopuolella pintamallista (DSM) PuuRuudukko.MaaPinnasta (dsm = true). NaN = korkeusmalli ei muistissa.</summary>
+        double Maa(double x, double z, float latvusM, out bool dsm)
+        {
+            double h = Nayte(maaMalli, maaEnu, x, z);
+            dsm = double.IsNaN(h);
+            if (dsm) h = PuuRuudukko.MaaPinnasta(pintaNayte, x, z, latvusM);
             return double.IsNaN(h) ? h : h - (x * x + z * z) / (2 * 6371000.0);
         }
 
         void LataaRuutuja()
         {
             int budjetti = PuitaKehyksessa;
-            dtm = OpasSovitin.MaanpintaLadattu(lat0, lon0);
+            Mallit();
+            dtm = maaMalli != null;
+            bool ohita = OhitaGooglen;
             while (jonoKohta < halutut.Count && budjetti > 0)
             {
                 int r = halutut[jonoKohta++];
@@ -221,19 +241,22 @@ namespace Matkakirja.Natiivi
                 try { tiedosto.Position = ruudukko.Siirto(r); Lue(lukuPuskuri, n * PuuRuudukko.PuuTavua); }
                 catch (Exception e) { tila = "luku " + e.Message; Debug.Log("MATKAKIRJA kaupunki: puut: " + tila); enabled = false; return; }
                 PuuRuudukko.Pura(lukuPuskuri, 0, n, puraPuskuri);
-                var puut = new PuuGpu[n]; int m = 0; float ala = float.MaxValue, yla = float.MinValue;
+                var puut = new PuuGpu[n]; int m = 0, kulu = n / 4; float ala = float.MaxValue, yla = float.MinValue;
                 for (int k = 0; k < n; k++)
                 {
                     var p = puraPuskuri[k];
-                    double maa = Maa(p.X, p.Z, p.LatvusM * 0.5 + 3);
+                    if (ohita && PuuRuudukko.GooglellaPuu(p)) { googlenOhitettu++; continue; }
+                    double maa = Maa(p.X, p.Z, p.LatvusM, out bool dsm);
+                    kulu += dsm ? 5 : 1;   // DSM: 25 näytettä; luku ja purku n / 4 (ohitetut Googlen puut eivät ole ilmaisia)
                     if (double.IsNaN(maa)) { ilmanMaata++; continue; }
+                    if (dsm) dsmPuita++;
                     uint koodi = PuuRuudukko.Koodi(p);
                     puut[m++] = new PuuGpu { X = p.X, Y = (float)maa, Z = p.Z, Koodi = koodi };
                     ala = Mathf.Min(ala, (float)maa); yla = Mathf.Max(yla, (float)maa + PuuRuudukko.KoodiKorkeus(koodi));
                 }
                 if (m < n) Array.Resize(ref puut, m);
                 ladatut[r] = new Ruutu { Puut = puut, MinY = m > 0 ? ala : 0f, MaxY = m > 0 ? yla : 0f };
-                ladattuPuita += m; budjetti -= Math.Max(1, n); likainen = true;
+                ladattuPuita += m; budjetti -= Math.Max(1, kulu); likainen = true;
             }
         }
 
@@ -257,6 +280,10 @@ namespace Matkakirja.Natiivi
                 likainen = true;
             }
             if (jonoKohta < halutut.Count && OpasSovitin.MaanpintaValmis(lat0, lon0)) LataaRuutuja();
+            // Muistiportti: jono tyhjä (lataus valmis tälle näkymälle) → rivi ensimmäisellä kerralla ja kun määrä muuttuu > 10 % (≥ 5 s välein).
+            if (jonoKohta >= halutut.Count && halutut.Count > 0 && Time.realtimeSinceStartup - muistiAika > 5f
+                && (muistiPuita < 0 || Math.Abs(ladattuPuita - muistiPuita) > 0.1 * Math.Max(1, muistiPuita)))
+                KirjaaMuisti();
             Vector3 f = transform.InverseTransformDirection(kamera.transform.forward).normalized;
             if (likainen || (c - viimeC).sqrMagnitude > 4f || Vector3.Dot(f, viimeF) < 0.99985f || Mathf.Abs(kamera.fieldOfView - viimeFov) > 0.2f)
                 Rakenna(c, f);
@@ -327,17 +354,37 @@ namespace Matkakirja.Natiivi
             AsetaKamera(n.mat, n.transform, k);
         }
 
+        (long cpu, long gpu) Muisti()
+        {
+            long cpu = (long)ladattuPuita * 16 + (valmis?.Length ?? 0) * 16L + (ruudukko != null ? (ruudukko.Ruutuja + 1) * 4L : 0)
+                + lukuPuskuri.Length + puraPuskuri.Length * 20L + 4096;
+            long gpu = puskuri != null ? (long)puskuri.count * puskuri.stride : 0;
+            return (cpu, gpu);
+        }
+
+        static string Mt(long t) => (t / 1048576.0).ToString("F1", System.Globalization.CultureInfo.InvariantCulture).Replace('.', ',');
+
+        /// <summary>Muistiportin rivi (Natiiviseppä): "MATKAKIRJA kaupunki: puut muisti &lt;id&gt;: CPU x Mt, GPU y Mt, puita z" (pilkku desimaalina,
+        /// laitteen kielestä riippumatta). Komento `opas puut tila` ja latauksen valmistuminen (LateUpdate).</summary>
+        public static void KirjaaMuisti()
+        {
+            var n = Nykyinen;
+            if (n == null) return;
+            var (cpu, gpu) = n.Muisti();
+            n.muistiAika = Time.realtimeSinceStartup; n.muistiPuita = n.ladattuPuita;
+            Debug.Log($"MATKAKIRJA kaupunki: puut muisti {n.id}: CPU {Mt(cpu)} Mt, GPU {Mt(gpu)} Mt, puita {n.ladattuPuita}");
+        }
+
         /// <summary>Diagnoosi (`opas puut tila`): tiedosto, ruudut, instanssit ja muisti.</summary>
         public static string Tila()
         {
             var n = Nykyinen;
-            if (n == null) return $"puut: {(Paalla ? "ei auki" : "pois")} (lähi {LahiM:F0} m, kauko {KaukoM:F0} m, peitto {Peitto:F2})";
-            long cpu = (long)n.ladattuPuita * 16 + (n.valmis?.Length ?? 0) * 16L + (n.ruudukko != null ? (n.ruudukko.Ruutuja + 1) * 4L : 0)
-                + n.lukuPuskuri.Length + n.puraPuskuri.Length * 20L;
-            long gpu = n.puskuri != null ? (long)n.puskuri.count * n.puskuri.stride : 0;
+            if (n == null) return $"puut: {(Paalla ? "ei auki" : "pois")} (lähi {LahiM:F0} m, kauko {KaukoM:F0} m, peitto {Peitto:F2}, Googlen puut ensin {(TuplaPakko is bool tp ? (tp ? "1" : "0") : "kaupungin mukaan")})";
+            var (cpu, gpu) = n.Muisti();
             return $"puut {n.id}: {n.tila}, ruutuja {n.ladatut.Count}/{n.halutut.Count} (jono {n.jonoKohta}), puita muistissa {n.ladattuPuita}" +
                 $"{(n.ilmanMaata > 0 ? $" (ilman maata ohitettu {n.ilmanMaata})" : "")}, piirretään lähi {n.lahia}/{LahiMax} + kauko {n.kaukoja}/{KaukoMax}, " +
-                $"muisti CPU {cpu / 1048576.0:F1} Mt + GPU {gpu / 1048576.0:F1} Mt, maa {(n.dtm ? "DTM" : "ei DTM:ää")} (DSM-kehältä {n.dsmPuita} puuta), lähi {LahiM:F0} m, kauko {KaukoM:F0} m, peitto {Peitto:F2}";
+                $"muisti CPU {Mt(cpu)} Mt + GPU {Mt(gpu)} Mt, maa {(n.dtm ? "DTM" : "ei DTM:ää")} (DSM-kehältä {n.dsmPuita} puuta), " +
+                $"Googlen puut ensin {(n.OhitaGooglen ? $"päällä (ohitettu {n.googlenOhitettu})" : "pois")}{(TuplaPakko.HasValue ? " pakotettu" : "")}, lähi {LahiM:F0} m, kauko {KaukoM:F0} m, peitto {Peitto:F2}";
         }
     }
 }

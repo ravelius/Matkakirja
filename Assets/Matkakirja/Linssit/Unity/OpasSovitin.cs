@@ -434,6 +434,7 @@ namespace Matkakirja.Natiivi
             KrediititTiivis.Paivita(true);   // kapealla ruudulla logot + "Data sources" (Googlen policy)
             if (KiinteaKamera is Kuvakulma kk)   // kuvaparit samasta kulmasta (testi)
             {
+                if (kierto != null) kierto.LahitasonMaa = LahitasonMaaFn;   // katutaso: lähitaso maan mukaan (PalloKierto.LahitasonMaa)
                 y.Kuvaa(kk); kaupunki.AsetaEsikamera(kk);
                 if (!kiinteaKirjattu) { kiinteaKirjattu = true; kiinteaAlku = Time.realtimeSinceStartup; kiinteaLaski = false; o.Kirjaa($"opas: kiinteä kamera käytössä {kk}"); }
                 // Latausaika kiinnityksestä 99 %:iin (Päätoimittaja: kolmikon latausajat); vasta kun aste on ensin laskenut tai 3 s.
@@ -445,13 +446,14 @@ namespace Matkakirja.Natiivi
                         o.Kirjaa($"opas: kiinteä kamera: laatat 99 % {Time.realtimeSinceStartup - kiinteaAlku:F1} s:ssa (kerroin {CesiumKaupunki.SseKerroin:F2})"); kiinteaAlku = -1f;
                         // Kulma ei toistunut istunnosta toiseen (6.10. kolmikko 1,71/1,3/1,0): kameran todellinen asento vertailuun.
                         var kam = kierto != null ? kierto.GetComponent<Camera>() : null;
-                        if (kam != null) o.Kirjaa($"opas: kiinteä kamera: fov {kam.fieldOfView:F2}, aspect {kam.aspect:F3}, paikka {kam.transform.position}, kulmat {kam.transform.eulerAngles}, korkeuskerroin {Matkakirja.KorkeusKerroin.Arvo:F3}, origo {kaupunki.OrigoTeksti}");
+                        if (kam != null) o.Kirjaa($"opas: kiinteä kamera: fov {kam.fieldOfView:F2}, aspect {kam.aspect:F3}, paikka {kam.transform.position}, kulmat {kam.transform.eulerAngles}, korkeuskerroin {Matkakirja.KorkeusKerroin.Arvo:F3}, origo {kaupunki.OrigoTeksti}, lähitaso {kam.nearClipPlane:F1} m");
                     }
                 }
                 if (kaupunki.KarkeaKaytossa && kaupunki.Latausaste >= CesiumKaupunki.ValmisProsentti) kaupunki.Tarkenna();
                 return;
             }
             kiinteaKirjattu = false;
+            if (kierto != null) kierto.LahitasonMaa = null;
             if (Pysaytetty) { y.Kuvaa(silmukka.Asento); return; }
             var ennen = silmukka.Vaihe;
             LueTapit();
@@ -2727,6 +2729,12 @@ namespace Matkakirja.Natiivi
             string id = KorkeusId(lat, lon);
             return id != null && maaMallit.TryGetValue(id, out var m) ? m.Korkeus(lat, lon) : double.NaN;
         }
+        /// <summary>Kiinteän kameran lähitason maa (PalloKierto.LahitasonMaa, katutasokuvat 11.10.): maanpinta, muuten pinta.</summary>
+        static readonly Func<double, double, double> LahitasonMaaFn = OmaMaanpinta;
+        /// <summary>KaupunkiPuut (11.10.): maanpinnan (DTM) ja pinnan (DSM) mallit suoraan ENU-näytteisiin (25 näytettä puuta kohti ilman
+        /// KorkeusId-hakua ja lat/lon-kierrosta); null = ei muistissa.</summary>
+        public static OmaKorkeus MaanpintaMalli(double lat, double lon) { string id = KorkeusId(lat, lon); return id != null && maaMallit.TryGetValue(id, out var m) ? m : null; }
+        public static OmaKorkeus PintaMalli(double lat, double lon) { string id = KorkeusId(lat, lon); return id != null && korkeusMallit.TryGetValue(id, out var m) ? m : null; }
         /// <summary>Maa kohteen ympäriltä: pienin pinta keskeltä ja 8 pisteestä 70 m:n kehältä (tornin huippu ei ole maa; Eiffel).</summary>
         public static double OmaMaaKehalla(double lat, double lon)
         {

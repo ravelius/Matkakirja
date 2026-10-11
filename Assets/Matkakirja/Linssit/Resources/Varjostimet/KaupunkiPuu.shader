@@ -6,6 +6,8 @@
 // sivulta latvuksen korkeus ja ylhäältä latvus; siirretty säteen verran kameraa kohti (koko kerrottu (d − siirto)/d: näytöllä sama), joten
 // kortti on Googlen puumöykyn edessä ja peittää sen siluetin. Valo pallonormaalista kuten ElavaKohde (_ElavaAurinko jne.), ilmaperspektiivi
 // kuten IlmakehaLaatat (sama kuva kuin laatoilla), sumu MixFogilla. RUNKO: pystyakselin ympäri kääntyvä kapea kortti tyvestä latvukseen.
+// MUOTO (11.10., iPad-ajo 181: rungot pitkiä ja ohuita): sama kuin Ydin PuuRuudukko.Muoto: latvus 0,7 × h (havu 0,8), leveys 0,5–1,2 × h
+// (havu 0,3–0,6), näkyvä runko ≤ kolmannes; runko 0,045 × h (0,25–1,1 m).
 // Häivytys ditheröiden: kaukorajalla (_PuuParam.y, viimeiset 15 %) ja kun kamera on latvuksen sisällä.
 Shader "Matkakirja/Linssit/KaupunkiPuu"
 {
@@ -47,8 +49,9 @@ Shader "Matkakirja/Linssit/KaupunkiPuu"
             float l = (float)((P.k >> 8) & 255u) * 0.1;
             float havu = ((P.k >> 16) & 3u) == 2u ? 1.0 : 0.0;
             float vaiht = (float)((P.k >> 18) & 16383u) / 16383.0;
-            // Latvuksen korkeus: havupuu suippo ja pitkä, lehtipuu 0,6 × korkeus latvuksen leveyden rajoissa.
-            float latvusK = havu > 0.5 ? h * 0.8 : clamp(h * 0.6, l * 0.7, l * 1.2);
+            // Latvus (PuuRuudukko.Muoto): yläosa 0,7 × h (havu 0,8 × h), leveys 0,5–1,2 × h (havu 0,3–0,6 × h); runko ≤ h / 3.
+            float latvusK = h * (havu > 0.5 ? 0.8 : 0.7);
+            l = havu > 0.5 ? clamp(l, 0.3 * h, 0.6 * h) : clamp(l, 0.5 * h, 1.2 * h);
             float3 tyvi = P.p;
             float3 keski = tyvi + float3(0.0, h - latvusK * 0.5, 0.0);
             keski.xz += sin(_Time.y * 0.9 + vaiht * 40.0) * 0.012 * h * float2(0.8, 0.6);   // tuuli: latvus huojuu hieman
@@ -74,7 +77,7 @@ Shader "Matkakirja/Linssit/KaupunkiPuu"
                 float3 kv = _PuuKamera.xyz - tyvi;
                 kv.y = 0.0;
                 float3 sivu = dot(kv, kv) > 1e-4 ? normalize(cross(float3(0.0, 1.0, 0.0), kv)) : _PuuOikea.xyz;
-                float lev = clamp(h * 0.035, 0.2, 0.9);
+                float lev = clamp(h * 0.045, 0.25, 1.1);
                 uv = float2(kulma.x * 2.0 - 1.0, kulma.y);
                 paikka = tyvi + sivu * (uv.x * lev * 0.5) + float3(0.0, lerp(-0.3, h - latvusK * 0.5, kulma.y), 0.0);
             }
