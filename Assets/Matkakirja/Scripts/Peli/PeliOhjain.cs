@@ -379,6 +379,7 @@ namespace Matkakirja.Natiivi
         {
             if (Instanssi != null && Instanssi != this) { Destroy(gameObject); return; }
             Instanssi = this;
+            KytkeAloitusintro();
         }
 
         void OnDestroy()
@@ -968,6 +969,7 @@ namespace Matkakirja.Natiivi
             jatkoHiljaa = false;
             LopetaJatkohiljaisuus("uusi matka");
             PeruLykkays();
+            Matkakirja.Linssit.Kierros.KaupunkiIntro.Nollaa();
             UusiPeli(siemen, lahtokaupunki);
             // Aloituskaava (omistaja 24.9.2026 klo 16.1x): intro soi avausruudulla ennen karttaa (Natiivi-UI,
             // SoitaIntro); valintaan siirtyminen ohittaa sen, ja kone lentää Lontoosta valittuun kaupunkiin (PeliOhjain.Aloitus.cs).
@@ -1672,6 +1674,8 @@ namespace Matkakirja.Natiivi
             SaapumisluentaAlkaa(kaupunki);
             // C16: aloituslennon kohteen luenta voi odottaa pulun paljastusta (PeliOhjain.Lykkays.cs).
             AsetaLykkays(kaupunki, aloituslento);
+            // Aloitusintro (juna 182): tuleeko tähän saapumiseen intro (ennen MatkaPerilla-tapahtumaa; PeliOhjain.Aloitusintro.cs).
+            AloitusintroSaapuminen(kaupunki, aloituslento, hiljaa);
             // Nappula laskeutui: reitit lähtöpaikasta pois; toisessa kaupungissa sessio päättyy (B9, löydös 60).
             siirtoLahto = null;
             PaivitaMatkareitit();
@@ -1684,6 +1688,8 @@ namespace Matkakirja.Natiivi
             // Kaupunkiin päättynyt matka: kamera saapumisnäkymään (web ui.js palaaMaanRajaukseen ja siirto.js laske
             // → lauta.saavu; avauslento → kamera.kotiin ilman maan laatikkoa). Reitin varrella kamera jää paikalleen.
             if (kaupunki != null && !kameraPerilla) Saavu(maaRajaus: !aloituslento);
+            // Aloitusintro trailerin paikalla (ei odota fokusvirtoja).
+            if (NaytaAloitusintro(kaupunki)) return;
             // Fokusvirrat eivät vielä muistissa (nopea saapuminen käynnistyksen jälkeen): päätös odottaa niitä enintään 1,5 s.
             if (kaupunki != null && TraileriPaatos.Odota(TraileriSyyNyt(kaupunki))) { StartCoroutine(OdotaVirratJaPaata(kaupunki, hiljaa)); return; }
             PaataTraileri(kaupunki, hiljaa);
@@ -1798,12 +1804,14 @@ namespace Matkakirja.Natiivi
             // PARIISIN UUSI ESITTELY KORVAA LUENNAN (omistaja 10.10. 20.0x, kortti "Uusi korvaa vanhan"): isoisän kolmen kuvan luenta
             // jää pois kaupungeissa, joissa saapumisesitys soittaa nykyintron (Saapumisesitys.UusiEsittely); saapumisluenta päättyy heti.
             if (l != null && SaapumisluentoPois?.Invoke(kaupunki) == true) { Debug.Log("MATKAKIRJA peli: saapumisluento pois (uusi esittely) " + kaupunki); l = null; }
+            // PT 12.3x: Pariisin aloitusintro muilla kuin alkulennon käynneillä korvaa luennan kuten vanha esittely.
+            if (l != null && Matkakirja.Linssit.Kierros.KaupunkiIntro.KorvaaLuennan(kaupunki)) { Debug.Log("MATKAKIRJA peli: saapumisluento pois (aloitusintro) " + kaupunki); l = null; }
             if (l != null && LykkaaLuento(kaupunki, l)) return; // saapumisluenta pysyy kesken lykkäyksen ajan (löydös 162)
             // Löydökset 86/89 (omistaja, build 13): ei paikkarivin ilmoitusta luennan alkaessa (web aloitaMerkinta ei näytä
             // ilmoitusta; tumma laatikko "Ateena, elokuussa 1873. Pölyä ja puhetta kullasta." näytti väärän väriseltä
             // matkakirjalta). Paikkarivi on matkakirjan merkinnässä.
             // Löydös 162: luento jonoon saapumisluennaksi; ei luentoa tai kertoja pois → saapumisluenta päättyy heti.
-            SoitaSaapumisluento(kaupunki, l, 0.6f);
+            SoitaSaapumisluento(kaupunki, l, SaapumisluennanViive(kaupunki));
         }
 
         /// <summary>Kaupunki, jonka lehti (tai jonka kautta maalehti) avattiin: Suljettu antaa maalehdessä ISO3:n.</summary>

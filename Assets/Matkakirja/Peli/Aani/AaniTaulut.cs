@@ -165,6 +165,13 @@ namespace Matkakirja.Peli
         public int TaukoMs = 3000;
         public string Hidas;
         public string Tausta;
+        /// <summary>
+        /// ALOITUSINTRO (omistaja 11.10. 11.5x, juna 182): nopea soi vain, kun saapumisesitys odottaa sitä (NopeaOdottaaPuhetta,
+        /// Williamin repliikki → JaksonNopeaAlkaa); muulloin jakso alkaa suoraan hitaasta (kaupungin oma raita), joten tavallinen
+        /// saapuminen soi kuten ennen (Hidas vain intron jälkeen, muuten kaupungin oma raita tai hiljaisuus). Jakso alkaa myös
+        /// kaupungissa ilman omaa raitaa (Tukholma: Hidas = pohjolan alueraita, PT 12.3x).
+        /// </summary>
+        public bool VainEsitykseen;
     }
 
     public sealed class AaniTaulut
@@ -280,6 +287,13 @@ namespace Matkakirja.Peli
             foreach (var k in new[] { "pariisi", "lontoo", "rooma", "istanbul", "kairo", "pietari" }) t.Kaupunkiraidat.Add(k);
             // Kaupunkijakson pilotti (PT 9.10., omistajan valinta "Pariisi nyt 2: nopea nu-jazz" avaukseen): nopea → 3 s → hidas → pohja.
             t.Jaksot["pariisi"] = new KaupunkiJakso { Nopea = "musa-kaupunki-pariisi-nopea", TaukoMs = 3000 };
+            // Aloitusintron nopeat (omistaja 11.10. 11.5x, juna 182): Ateena 90,1 s ja Tukholma 95,5 s, vain intron kanssa.
+            t.Jaksot["ateena"] = new KaupunkiJakso { Nopea = "musa-kaupunki-ateena-nopea", TaukoMs = 3000, VainEsitykseen = true };
+            // PT 12.3x: Tukholmalla ei ole omaa kartan kappaletta, joten intron jälkeen nopea häivytetään pohjolan alueraitaan.
+            t.Jaksot["tukholma"] = new KaupunkiJakso
+            {
+                Nopea = "musa-kaupunki-tukholma-nopea", TaukoMs = 3000, VainEsitykseen = true, Hidas = "musa-kaupunki-pohjola",
+            };
             // Pallon latausraidat (omistaja 22.1x): Pariisi 1 bassoriffi ja harjat −16,1 LUFS (+4,6 dB), Tukholma 2 kontrabasso ja
             // marimba −16,0 LUFS (+4,5 dB).
             t.Latausraidat["pariisi"] = ("musa-pallo-pariisi", 1.70);

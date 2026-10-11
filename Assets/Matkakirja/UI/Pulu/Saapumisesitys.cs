@@ -58,6 +58,11 @@ namespace Matkakirja.Natiivi
 
         PeliOhjain ohjain;
         Matka nahtyMatka;
+        /// <summary>
+        /// ISOT KUVAT (omistaja 12.1x PT:n kautta, juna 182): C1–C5 lähes koko ruudun kokoisina samalla esityspohjalla kuin
+        /// aloitusintro (UiNakymat kytkee). null = vanha pieni pakka (kortti.Kuvat).
+        /// </summary>
+        public Introesitys Esitys;
         /// <summary>Saapuminen, joka näytetään kun silmukka on kartalla (MatkaPerilla → Kartta).</summary>
         string odottavaSaapuminen;
         /// <summary>Kaupungit, joiden luento on alkanut tässä istunnossa (Luennat.OtaLuento soittaa kerran).</summary>
@@ -365,7 +370,8 @@ namespace Matkakirja.Natiivi
             if (introKaupunki == k) return;
             // PARIISIN ESITTELY (omistaja 10.10. 17.3x, sitova): saapumisesitys jatkuu samalla pakalla ja Ohitalla nykyintron
             // kuvilla C1–C5 musiikin tahdissa; Livian vuoro sen jälkeen (LoppuiJatko).
-            if (IntroSaapuessa && KaupunkiIntro.OnIntro(k) && ohjain?.LuentoOhitettu != true && !introSoitettu.Contains(k) && NykyIntro(k))
+            if (IntroSaapuessa && KaupunkiIntro.OnIntro(k) && !KaupunkiIntro.AloitusSaapumisella(k) && ohjain?.LuentoOhitettu != true
+                && !introSoitettu.Contains(k) && NykyIntro(k))
             {
                 introSoitettu.Add(k);
                 return;
@@ -431,8 +437,11 @@ namespace Matkakirja.Natiivi
         /// istunnossa kuten ennen. Aiemmin esittely jäi välillä kokonaan pois: se käynnistyi vain luennan Loppui-tapahtumasta
         /// (kehittäjän hypyssä luento oli jo kuultu → ei Loppuita), sama merkintä kortissa palasi ennen sitä, ja kerran-istunnossa-raja.
         /// </summary>
-        public static bool UusiEsittely(string k) => IntroSaapuessa && k != null && KaupunkiIntro.OnIntro(k);
-        bool EsittelySaa(string k) => UusiEsittely(k) && ohjain != null && (Asetukset.Kehittaja || !introSoitettu.Contains(k));
+        // INTRO JOKA KERTA (omistaja 12.1x PT:n kautta, juna 182): kerran istunnossa -raja poistettu, esittely tulee jokaisella
+        // saapumisella myös pelaajilla (Ohita aina käytössä). ALOITUSINTRO (juna 182): alkulennon ensisaapumisella Pariisiin tulee
+        // vain aloitusintro (KaupunkiIntro.AloitusSaapumisella): ei tätä esittelyä, ja isoisän luenta soi Pulun jälkeen.
+        public static bool UusiEsittely(string k) => IntroSaapuessa && k != null && KaupunkiIntro.OnIntro(k) && !KaupunkiIntro.AloitusSaapumisella(k);
+        bool EsittelySaa(string k) => UusiEsittely(k) && ohjain != null;
 
         void AloitaUusiEsittely(string k, Saapumisvirta v, Merkinta m)
         {
@@ -484,7 +493,11 @@ namespace Matkakirja.Natiivi
             // PT 10.10. 19.3x (omistaja: "kohdekaupungit eivät näy kartalla nyt ollenkaan tai jos näkyvät, niin häviävät"): luentatila
             // koski koko intron (8 kuvaa) ja piilotti nappulan ja kohteet. Luentatila vain luennan kuville; jatkossa pelkkä Ohita.
             kortti.Kuvat.LuentoKaynnissa = false;
-            kortti.Kuvat.IntroOhita = true;
+            // Isot kuvat (12.1x): esityspohjan oma Ohita (sama nappi ja sama reitti PeliOhjain.OhitaLuento → VaiennaPaikanPuhe →
+            // LopetaIntro); ilman esitystä vanha pakka ja kortin Ohita.
+            introKuvat.Clear();
+            if (Esitys != null) Esitys.Aloita("nykyintro " + k, () => ohjain?.OhitaLuento());
+            else kortti.Kuvat.IntroOhita = true;
             UnityEngine.Debug.Log($"MATKAKIRJA ui saapuminen: {k} nykyintro alkaa ({sarja.Count} kuvaa, musiikki {(soi ? "odotetaan" : "ei")})");
             int seuraava = 0;
             introAjo = Ajastin.Execute(() =>
@@ -498,11 +511,13 @@ namespace Matkakirja.Natiivi
                 while (seuraava < sarja.Count && t.Value >= sarja[seuraava].AlkuS)
                 {
                     int nro = sarja[seuraava++].Kuva;
-                    kortti.Kuvat.Lisaa(new VirtaKuva
+                    var vk = new VirtaKuva
                     {
                         Osoite = KaupunkiIntro.KuvaUrl(nro), Lyhyt = Kieli.T("ui.nosto.havainnekuva"),
                         Selite = Kieli.T("ui.nosto.havainnekuva"), Lahde = Kieli.T("ui.opas.lahde.havainnekuva"),
-                    });
+                    };
+                    if (Esitys != null) { Esitys.Kuva(vk.Osoite, k + " c" + nro); introKuvat.Add(vk); }
+                    else kortti.Kuvat.Lisaa(vk);
                     UnityEngine.Debug.Log($"MATKAKIRJA ui saapuminen: {k} nykyintro kuva c{nro} {t.Value:0.0} s (kello {nyt:0.000})");
                 }
                 if (t.Value >= KaupunkiIntro.KuvasarjaLoppuS)
@@ -517,6 +532,8 @@ namespace Matkakirja.Natiivi
         }
 
         Action introLopetus;
+        /// <summary>Isossa esityksessä näytetyt C-kuvat: lopussa matkakirjakortin pikkukuviksi (kuten pakan kuvat ennen).</summary>
+        readonly List<VirtaKuva> introKuvat = new List<VirtaKuva>();
 
         /// <summary>Intron ajastin ja musiikkikuuntelija pois; vaienna = Ohita tai lähtö (nopea jakso pois kuten oppaan ohituksessa).</summary>
         void LopetaIntro(bool vaienna)
@@ -524,6 +541,9 @@ namespace Matkakirja.Natiivi
             // Ohita, lähtö, loppu ja keskeytykset: Ohita pois ja luentatila ei jää päälle (myös ilman käynnissä olevaa introa).
             kortti.Kuvat.IntroOhita = false;
             if (introKaupunki == null) return;
+            if (Esitys != null && Esitys.Kaynnissa && Esitys.Tunnus == "nykyintro " + introKaupunki) Esitys.Lopeta(vaienna);
+            foreach (var vk in introKuvat) kortti.LisaaPikkukuva(vk);
+            introKuvat.Clear();
             kortti.Kuvat.LuentoKaynnissa = false;
             introAjo?.Pause(); introAjo = null;
             introLopetus?.Invoke(); introLopetus = null;

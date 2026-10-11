@@ -906,6 +906,16 @@ namespace Matkakirja.Natiivi
         /// Lataa äänitteen levyvälimuistiin soittamatta (löydös 118: intro-puhe portin aikana, jotta luenta alkaa
         /// Aloita seikkailu -painalluksesta heti). Ei tee mitään, jos tiedosto on jo välimuistissa tai latauksessa.
         /// </summary>
+        /// <summary>
+        /// Onko äänite valmiina soitettavaksi ilman verkkoa (buildissa tai levyvälimuistissa, esilataus ei kesken). Aloitusintro
+        /// (juna 182, simu 25a2dca37: William alkoi 2,47 s myöhässä) odottaa tätä hetken ennen kuin kello, kuva 1 ja musiikki alkavat.
+        /// </summary>
+        public static bool Valmiina(string url)
+        {
+            if (string.IsNullOrEmpty(url) || esiladataan.Contains(url)) return false;
+            return Mukana.Polku(url) != null || File.Exists(Path.Combine(Kansio, Tiiviste(url) + Paate(url)));
+        }
+
         public void Esilataa(string url, Taso taso = Taso.SeuraavaRuutu)
         {
             if (string.IsNullOrEmpty(url) || esiladataan.Contains(url)) return;
