@@ -294,6 +294,26 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(!ulkona && m.NykyinenTeos.Teos.Id == "SK-C-5", "Siirry Yövartioon oviaukoista");
         }
 
+        [Testi] static void VapaaanLaskeutuuPehmeasti()
+        {
+            // PT 11.10. 09.0x: vapaaseen kulkuun siirryttäessä silmä ei hyppää pysähdyksen korkeudelta 1,6 m:iin vaan laskeutuu.
+            var s = Alankomaat(); var k = new MuseoKierros(s, KierrosTeokset()); k.SovitaPysahdykset(4.0 / 3);
+            int kg = k.Pysahdykset.Count - 2;   // korkealla roikkuva kabinettigallerian teos (SK-A-44)
+            k.Siirry(kg); for (int i = 0; i < 20000 && k.Vaihe != MuseoVaihe.Pysahtyy; i++) k.Paivita(0.05);
+            double y0 = k.Nykyinen.P.Y;
+            Oleta.Tosi(y0 > MuseoKierros.SilmaY + 0.5, $"pysähdys korkealla ({y0:F2} m)");
+            k.Vapaa();
+            Oleta.Tosi(Math.Abs(k.Nykyinen.P.Y - y0) < 1e-9, "ei hyppyä vapaaseen siirryttäessä");
+            double ed = y0, maxAskel = 0;
+            for (int i = 0; i < 60; i++) { k.VapaaLiike(0, 0, 0, 0, 0.05); maxAskel = Math.Max(maxAskel, Math.Abs(k.Nykyinen.P.Y - ed)); ed = k.Nykyinen.P.Y; }
+            Oleta.Tosi(maxAskel < 0.25, $"laskeutuminen pehmeä (suurin askel {maxAskel:F3} m / 50 ms)");
+            Oleta.Tosi(Math.Abs(k.Nykyinen.P.Y - MuseoKierros.SilmaY) < 0.01, $"3 s:ssa kävelykorkeudella ({k.Nykyinen.P.Y:F3})");
+            var r = s.Ripustukset.Find(x => x.Teos.Id == "SK-C-5");
+            Oleta.Tosi(k.NaytaTeos(r), "QA: teos katseluasentoon");
+            double yq = k.Nykyinen.P.Y; for (int i = 0; i < 40; i++) k.VapaaLiike(0, 0, 0, 0, 0.05);
+            Oleta.Tosi(Math.Abs(k.Nykyinen.P.Y - yq) < 1e-9, "QA-kuvan korkeus pysyy");
+        }
+
         [Testi] static void PysahdysKertojanMittainen()
         {
             var k = new MuseoKierros(Alankomaat());

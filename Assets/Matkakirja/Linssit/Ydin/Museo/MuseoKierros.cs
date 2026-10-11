@@ -33,7 +33,7 @@ namespace Matkakirja.Linssit.Museo
     public sealed class MuseoKierros
     {
         public const double KavelyMs = 1.1, SiirtymaMinS = 2.5, PysahdysMinS = 6, SilmaY = 1.6, SeinaVaraM = 0.35, KatseEteenM = 3;
-        public const double VapaaMs = 1.4, VapaaKaantoAs = 70, KallistusMax = 35;
+        public const double VapaaMs = 1.4, VapaaKaantoAs = 70, KallistusMax = 35, LaskuS = 0.4;
 
         readonly Sali sali;
         /// <summary>LR:n reitti (sali.Reitti) tai teoskierroksen pisteet: alku + yksi pysähdys teosta kohden.</summary>
@@ -58,7 +58,7 @@ namespace Matkakirja.Linssit.Museo
         /// <summary>Kaaripituustaulukko: näytteen matka ja parametri u = väli + t (tasainen kävelyvauhti epätasaisillakin väleillä).</summary>
         readonly List<double> naytteetS = new List<double>(), naytteetU = new List<double>();
         MuseoAsento lahto;
-        double yaw, pitch;
+        double yaw, pitch, vapaaY = SilmaY;
 
         /// <param name="teokset">Teoskierros: pysähdykset näille teoksille tässä järjestyksessä (null = LR:n reitti).</param>
         public MuseoKierros(Sali s, IList<string> teokset = null)
@@ -281,7 +281,8 @@ namespace Matkakirja.Linssit.Museo
             var d = Nykyinen.Suunta;
             yaw = Math.Atan2(d.X, -d.Z) * 180 / Math.PI;
             pitch = Math.Asin(Math.Max(-1, Math.Min(1, d.Y))) * 180 / Math.PI;
-            Nykyinen = new MuseoAsento(new V3(Nykyinen.P.X, SilmaY, Nykyinen.P.Z), Nykyinen.P + d);
+            Nykyinen = new MuseoAsento(Nykyinen.P, Nykyinen.P + d);   // silmä laskeutuu pysähdyksen korkeudelta pehmeästi (VapaaLiike)
+            vapaaY = SilmaY;
             Vaihe = MuseoVaihe.Vapaa; Tauolla = false; VaiheenAika = 0; Versio++;
         }
 
@@ -307,12 +308,15 @@ namespace Matkakirja.Linssit.Museo
         /// Seinät rajaavat akseleittain (liukuu seinää pitkin), aukoista pääsee läpi.</summary>
         public void VapaaLiike(double eteen, double sivulle, double kaanto, double kallistus, double dt)
         {
+            // Silmän korkeus lähestyy vapaaY:tä (vapaaseen siirryttäessä pysähdyksen katseluasennosta kävelykorkeudelle 1,6 m;
+            // PT 11.10. 09.0x: ennen hyppy jopa 1,4 m): eksponentiaalinen lähestyminen, aikavakio LaskuS.
             if (Vaihe != MuseoVaihe.Vapaa) return;
             yaw += kaanto * VapaaKaantoAs * dt;
             pitch = Math.Max(-KallistusMax, Math.Min(KallistusMax, pitch + kallistus * VapaaKaantoAs * dt));
             double yr = yaw * Math.PI / 180, pr = pitch * Math.PI / 180;
             var f = new V3(Math.Sin(yr), 0, -Math.Cos(yr)); var r = new V3(Math.Cos(yr), 0, Math.Sin(yr));
             var p = Nykyinen.P;
+            if (Math.Abs(p.Y - vapaaY) > 1e-4) p = new V3(p.X, vapaaY + (p.Y - vapaaY) * Math.Exp(-dt / LaskuS), p.Z);
             var siirto = (f * eteen + r * sivulle) * (VapaaMs * dt);
             var px = new V3(p.X + siirto.X, p.Y, p.Z); if (Sallittu(px)) p = px;
             var pz = new V3(p.X, p.Y, p.Z + siirto.Z); if (Sallittu(pz)) p = pz;
@@ -386,7 +390,7 @@ namespace Matkakirja.Linssit.Museo
             if (Vaihe != MuseoVaihe.Vapaa) Vapaa();
             var d = a.Value.Suunta;
             yaw = Math.Atan2(d.X, -d.Z) * 180 / Math.PI; pitch = 0;
-            Nykyinen = a.Value; Versio++;
+            Nykyinen = a.Value; vapaaY = a.Value.P.Y; Versio++;   // QA-kuva: silmä pysyy katseluasennon korkeudella
             return true;
         }
 
@@ -398,7 +402,7 @@ namespace Matkakirja.Linssit.Museo
             if (!Sallittu(p)) return false;
             if (Vaihe != MuseoVaihe.Vapaa) Vapaa();
             yaw = yawAste; pitch = Math.Max(-KallistusMax, Math.Min(KallistusMax, pitchAste));
-            Nykyinen = new MuseoAsento(p, p);
+            Nykyinen = new MuseoAsento(p, p); vapaaY = SilmaY;
             VapaaLiike(0, 0, 0, 0, 0);
             Versio++;
             return true;
