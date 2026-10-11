@@ -86,3 +86,27 @@ LS1:ltä pyydetty luettelo (11.10.). Tiedossa nyt:
    mukaan vapaasti kuvattavia. PT:n sääntö "suojattu kohde pois" kuitenkin kattaisi ne, jos
    sitä sovelletaan arkkitehtuuriin. Tarvitaan linjaus, koskeeko sääntö rakennuksia.
 4. **Avoinna:** LS1:n omien mallien luettelo (A3).
+
+## PÄÄTÖKSET (PT 11.10.2026)
+
+1. **POIS:** Sergels torgin kaksi kipin kuvaa (Sergels torg 1967 Glase.jpg, Sergels Torg.jpg) ja
+   Kristall-malli (LS1 poistaa rivin). → vientipaketti `esittely-suoja-vienti-20261011`
+   (esittely/tukholma-v7, 84 kuvaa) ja data-PR karttaseppa-esittely-suoja (worker osoittaa v7:ään).
+2. **Orsayn sisätila (Aulenti) vaihdettu** vapaaseen asemakuvaan: tulva tammikuussa 1910,
+   Agence Rol (PD). → esittely/pariisi-v4 (samassa paketissa ja PR:ssä).
+3. **Linjaus:** "suojattu pois" koskee taideteoksia (veistokset, installaatiot, muistomerkit,
+   valaistukset) kaikissa omissa jäljennöksissämme. Arkkitehtuuri ratkaistaan maan lain mukaan:
+   Ruotsin ja Suomen rakennukset jäävät, eikä Ranskan suojatusta rakennuksesta tehdä omia kuvia tai malleja.
+4. **Googlen laatoissa näkyvät** (Louvren pyramidi, Pompidou, Grande Arche) **ja kertojan
+   maininnat jäävät.** Ne lisätään App Store -julkaisun tarkistuslistalle.
+
+## JATKOTOIMET (linjauksen 3 piirissä, ei vielä tehty; muiden roolien aineistoa)
+
+- **Tukholman kaupunkilehti, nähtävyysjuttu Sergels torg** (js/packs/nahtavyysjutut.js):
+  kuva `Sergels torg-Stockholm-DSC 0115w.jpg` esittää Öhrströmin obeliskia (selite nimeää sen)
+  → pois tai vaihto. Plattan-kuva `Sergels Torg.jpg` on sama kuin kipissä poistettu.
+  Jutun teksti mainitsee obeliskin, ja maininta saa jäädä.
+- **Oppaan kuvat** (data/oppaan-kuvat/kaupungit/tukholma.json): `Sergels torg.jpg` ja
+  `00 5329 Stockholm - Sergels torg (T-centralen).jpg` pitää tarkistaa, näkyykö obeliski.
+- **Muiden kaupunkien esittelykuvat** (esittely-tyo/kuvat: Lontoo, Rooma, Praha, Wien,
+  Kööpenhamina) on tarkastamatta samalla linjauksella.
