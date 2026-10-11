@@ -58,6 +58,10 @@ namespace Matkakirja.Linssit.Kierros
         /// (PalloKatsePitoAstS) kunnes lähtö. false = katse_suunta on kierron keskikulma kuten Concorde ja Vasa.
         /// </summary>
         public bool KatseLoppu;
+        /// <summary>Kierto katsesuuntaan lyhyintä kaarta myös saapumisen vastaisesti (PT 11.10. 14.4x, pystykuvan aukiomonumentti,
+        /// OpasSilmukka.MonumenttiKatse): kääntöraja jättää kehyksen usein 90–110° akselista, ja saapumisen suuntaan kierto veisi silmän
+        /// yhä kauemmas aukion reunan kattojen ylle (Puerta del Sol). Ei workerin kenttä.</summary>
+        public bool KatseLyhin;
         /// <summary>Spiraalin (laskeutuminen ja lähestyminen) kesto osuutena odotetusta pysähdyksestä (worker "lasku_osuus" 0,2–1,
         /// valinnainen; Notre-Dame 0,5: laskeutuminen valmis kierron puolivälissä). 1 = koko pysähdys kuten ennen.</summary>
         public double LaskuOsuus = 1;
@@ -558,7 +562,7 @@ namespace Matkakirja.Linssit.Kierros
                 // Kierto päättyy katsesuuntaan (Notre-Dame): lyhyt kaari (≤ PalloKatseLoppuLyhytAst) kuljetaan aina suoraan katsesuuntaan,
                 // myös saapumisen vastaisesti ja täydellä nopeudella (simu 7f65898c3: 51 s:n avaus kiersi avausnäkymää julkisivua kohti,
                 // kehys jäi 21° ennen julkisivua tulosuunnan väärälle puolelle, ja pitkä kaari vei kameran kirkon eteläpuolelle).
-                bool lyhytLoppu = k.KatseLoppu && kaari <= PalloKatseLoppuLyhytAst;
+                bool lyhytLoppu = (k.KatseLoppu || k.KatseLyhin) && kaari <= PalloKatseLoppuLyhytAst;
                 if (lento && sisaan != 0 && sisaan != ks.Suunta && !lyhytLoppu) { ks.Suunta = sisaan; kaari = 360 - kaari; }
                 ristiVapaa = lyhytLoppu;
                 ks.Raja = double.MaxValue;   // kierto kulkee katsesuunnan kautta ja jatkuu koko kertomuksen (PT 10.10. 20.5x)
@@ -1021,6 +1025,27 @@ namespace Matkakirja.Linssit.Kierros
         Pysahdys siirtoVanha; KiertoSuunnitelma siirtoVanhaKs; double siirtoT;
         /// <summary>Pysähdyksen kehyksen vaihdon liuku (s; San Marco 129 → 202 m ja silmä 38 → 101 m: säteen ja korkeuden muutos ≤ ~10 m/s).</summary>
         public const double PalloKehysSiirtoS = 20;
+
+        /// <summary>
+        /// ETUALA ESTEETÖN PYSTYKUVAN AUKIOLLA (PT 11.10. 14.4x, simu: Puerta del Solissa etualan aurinkopaneelikatto vei kuvan, kun silmä
+        /// kiersi monumenttia aukion eteläpuolen rakennusten yllä): käytettävissä on vain kierroksen korkeat rakenteet (esteet: listan
+        /// torni/kirkko ja korkeus_m) ja ympäröivien kattojen yksi luku (oma korkeusmalli), OSM-pohjat vain Pariisista ja Tukholmasta,
+        /// joten rakennuksia ei tunneta suunnittain. Avoin aukio on monumentista aukion pisteen suunnassa: katsesuunta (KatseSuunta,
+        /// kierron keskikulma kuten Concorde) aukion pisteestä monumenttiin, jolloin silmä on aukion puolella ja etuala (kuvan alareuna
+        /// ~50 m silmästä) on aukiota eikä reunan kattoja. Saapuminen PalloMonumenttiKaariAst sivusta ja kierto akselin yli; kääntöraja
+        /// pätee (KohteenTulo). Vain kapea kuva (vaaka ja iPad ennallaan), aukion luokka, ei tornisääntöä (AukioEsteenVieressa), ei
+        /// workerin omaa katse_suuntaa, ja monumentti vähintään OpasKatseOletukset.MonumenttiSuuntaMinM pisteestä (muuten suunta ei kerro mitään).
+        /// </summary>
+        void MonumenttiKatse(OpasKohde k)
+        {
+            if (!PalloLento || k == null || k.Kysymys || !double.IsNaN(k.KatseSuunta) || OpasKuvaus.KehysSuhde >= OpasKuvaus.VaakaSuhde - 1e-6
+                || !OpasKuvaus.AukioLuokka(k.Luokka) || AukioEsteenVieressa(k)) return;
+            double s = OpasKatseOletukset.MonumenttiSuunta(k.Id, k.Lat, k.Lon);
+            if (double.IsNaN(s)) return;
+            k.KatseSuunta = s; k.KatseKaari = PalloMonumenttiKaariAst; k.KatseLyhin = true;
+        }
+        /// <summary>Pystykuvan aukiomonumentin saapumiskaari katsesuunnan sivusta (°; kierto ~3 °/s, pysähdys ~20 s → akseli keskellä).</summary>
+        public const double PalloMonumenttiKaariAst = 20;
 
         Pysahdys KehystaK(OpasKohde k, double maa, double tulo) =>
             AukioEsteenVieressa(k) ? TorniKuvaan(OpasKuvaus.Kehysta(KehysKopio(k, double.NaN, k.KorkeusM), maa, tulo, "")) : OpasKuvaus.Kehysta(k, maa, tulo);
@@ -2187,6 +2212,7 @@ namespace Matkakirja.Linssit.Kierros
 
         Pysahdys KehysKohteelle(OpasKohde k, Func<OpasKohde, double> maaKorkeus, out bool arvio, out double tulo)
         {
+            MonumenttiKatse(k);
             double maa = maaKorkeus?.Invoke(k) ?? double.NaN;
             if (double.IsNaN(maa)) maa = MaaPisteessa?.Invoke(k.Lat, k.Lon) ?? double.NaN;
             arvio = double.IsNaN(maa);

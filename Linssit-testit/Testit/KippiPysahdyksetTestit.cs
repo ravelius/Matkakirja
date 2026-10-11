@@ -693,6 +693,80 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(viat.Count == 0, string.Join("; ", viat));
         }
 
+        // ---- AUKIOIDEN KESKUSMONUMENTIT (Linssiseppä 11.10., kippi 182: OpasKatseOletukset.AukionMonumentit 24 aukiota, Wikidata P625;
+        // tunnistus ensin aukion Q-tunnisteella, varalla paikalla) ----
+        [Testi] static void AukioidenKeskusmonumentit()
+        {
+            var viat = new List<string>();
+            var t = OpasKatseOletukset.AukionMonumentit;
+            // Taulukko: Q-tunnisteet yksilöllisiä, monumentti aukion sisällä (< 80 m pisteestä; Guillaume II 74 m), paikkatunnistus yksikäsitteinen.
+            for (int i = 0; i < t.Length; i++)
+            {
+                double d = KierrosLento.EtaisyysM(t[i].lat, t[i].lon, t[i].monLat, t[i].monLon);
+                if (d >= 80) viat.Add($"{t[i].nimi}: monumentti {d:F0} m pisteestä");
+                for (int j = i + 1; j < t.Length; j++)
+                {
+                    if (t[i].q == t[j].q) viat.Add($"{t[i].q} kahdesti");
+                    if (KierrosLento.EtaisyysM(t[i].lat, t[i].lon, t[j].lat, t[j].lon) < 2 * OpasKatseOletukset.MonumenttiSadeM) viat.Add($"{t[i].q} ja {t[j].q} päällekkäin");
+                }
+            }
+            // Q-tunniste voittaa paikan: Navona tunnistetaan, vaikka workerin piste olisi 200 m sivussa (suuri aukio, siirtynyt piste).
+            var navona = OpasKatseOletukset.Monumentti("Q463400", 41.89871 + 0.0018, 12.47316);
+            if (navona is not (double nla, double nlo) || KierrosLento.EtaisyysM(nla, nlo, 41.898953, 12.473075) > 1) viat.Add($"Navona Q-tunnisteella: {navona}");
+            // Varalla paikka: Trafalgar ilman tunnistetta 30 m pisteestä → Nelsonin pylväs; vanha kahden parametrin muoto (Concorde) toimii.
+            var traf = OpasKatseOletukset.Monumentti(null, 51.508055555556 + 0.00027, -0.12805555555556);
+            if (traf is not (double tla, double tlo) || KierrosLento.EtaisyysM(tla, tlo, 51.50775, -0.127944) > 1) viat.Add($"Trafalgar paikalla: {traf}");
+            var conc = OpasKatseOletukset.Monumentti(48.8656331, 2.3212357);
+            if (conc is not (double cla, double clo) || KierrosLento.EtaisyysM(cla, clo, 48.865475, 2.321133) > 1) viat.Add($"Concorde: {conc}");
+            // Ei riviä → null (aukion piste): San Marco ja Grand-Place (tornisääntö), Venceslas (patsas 381 m), Kauppatori.
+            foreach (var (q, la, lo) in new[] { ("Q217527", 45.434, 12.338), ("Q215429", 50.84671, 4.35254), ("Q847613", 50.082308, 14.426141), ("Q541933", 60.167, 24.955) })
+            {
+                if (OpasKatseOletukset.Monumentti(q, la, lo) != null) viat.Add($"{q}: rivi, vaikka ei pitäisi");
+                if (OpasKatseOletukset.Monumentti(null, la, lo) != null) viat.Add($"{q} paikalla: rivi, vaikka ei pitäisi");
+            }
+            // Tuntematon tunniste tunnetussa paikassa → paikka ratkaisee (Navona).
+            if (OpasKatseOletukset.Monumentti("Q1", 41.89871, 12.47316) == null) viat.Add("Navona: tuntematon tunniste ohitti paikan");
+
+            // Kierros pystykuvassa 0,46: monumentti vaakasuunnassa PalloAukioMonumenttiX ± 0,03 ja kokonaan kuvassa koko pysähdyksen ajan
+            // (kuten Concorde LeveaKohdeKapeassaKuvassa-testissä); kauimmat monumentit (Dam 65 m, Guillaume II 74 m, Sol 43 m) ja Navona.
+            foreach (var (kaupunki, id) in new[] { ("amsterdam", "Q839050"), ("luxemburg", "Q359872"), ("madrid", "Q427163"), ("rooma", "Q463400") })
+            {
+                var a = Aja(Profiili.Normaali, kaupunki, double.NaN, 14, false, true, 0.46);
+                var q0 = a.Reitti.First(y => y.Id == id);
+                var mon = OpasKatseOletukset.Monumentti(id, q0.Lat, q0.Lon).Value;
+                if (!a.Saapui.TryGetValue(id, out double ta) || !a.Lahti.TryGetValue(id, out double tb)) { viat.Add($"{kaupunki} {id}: ei pysähdystä"); continue; }
+                double xMin = double.MaxValue, xMaks = double.MinValue, kMax = 0, vinoMin = double.MaxValue, silmaMin = double.MaxValue;
+                // Etuala (PT 14.4x): kulma monumentista silmään vs. monumentista aukion pisteeseen (0° = silmä aukion puolella).
+                var pe = OpasKuvaus.KameraPaikka(new Kuvakulma(q0.Lat, q0.Lon, 0, 0, 0, 0), mon.lat, mon.lon);
+                double puoli0 = double.NaN, puoli1 = 0, puoliMin = 180;
+                foreach (var r in a.R)
+                {
+                    if (r.t < ta || r.t > tb || r.kohde != id) continue;
+                    double xo = (OpasKuvaus.KuvassaX(r.a, mon.lat, mon.lon, MaaM + 0.5 * OpasKuvaus.AukioKohdeKorkeusM, 0.46) + 1) / 2;
+                    xMin = Math.Min(xMin, xo); xMaks = Math.Max(xMaks, xo);
+                    kMax = Math.Max(kMax, OpasKuvaus.KuvassaOsuus(r.a, mon.lat, mon.lon, MaaM, MaaM + OpasKuvaus.AukioKohdeKorkeusM, 2, 0.46));
+                    var e = OpasKuvaus.KameraPaikka(r.a, mon.lat, mon.lon);
+                    double h = e.u - MaaM, vaaka = Math.Sqrt(e.e * e.e + e.n * e.n);
+                    vinoMin = Math.Min(vinoMin, Math.Sqrt(vaaka * vaaka + h * h)); silmaMin = Math.Min(silmaMin, h);
+                    double kulma = Math.Abs(KierrosLento.Kiedo((Math.Atan2(e.n, e.e) - Math.Atan2(pe.n, pe.e)) * 180 / Math.PI));
+                    if (double.IsNaN(puoli0)) puoli0 = kulma;
+                    puoli1 = kulma; puoliMin = Math.Min(puoliMin, kulma);
+                }
+                double siirto = KierrosLento.EtaisyysM(q0.Lat, q0.Lon, mon.lat, mon.lon);
+                Console.WriteLine($"      {kaupunki} {id} {q0.Nimi} pysty: monumentti {siirto:F0} m pisteestä, {xMin:F3}–{xMaks:F3} leveydestä vasemmalta, kokonaan kuvassa enintään {kMax:F2}, " +
+                    $"vino etäisyys monumentista ≥ {vinoMin:F0} m, silmä ≥ {silmaMin:F0} m, silmä aukion puolelta {puoli0:F0}° → {puoli1:F0}° (pienin {puoliMin:F0}°)");
+                if (xMin < OpasKuvaus.PalloAukioMonumenttiX - 0.03 || xMaks > OpasKuvaus.PalloAukioMonumenttiX + 0.03 || kMax > TorniReuna)
+                    viat.Add($"{kaupunki} {id}: monumentti {xMin:F3}–{xMaks:F3} / {kMax:F2}");
+                // PT 14.4x: ei lähempänä kuin ennen (vanha kehys: vino 128 → 80 m, silmä 38 m) — vino ≥ PalloMonumenttiMinEtM, silmä ≥ 55 m.
+                if (vinoMin < OpasKuvaus.PalloMonumenttiMinEtM - 2 || silmaMin < OpasKuvaus.PalloMonumenttiSilmaM - 10)
+                    viat.Add($"{kaupunki} {id}: vino {vinoMin:F0} m, silmä {silmaMin:F0} m");
+                // Etuala: kierto vie silmää aukion puolelle (kulma pienenee vähintään 30°) tai silmä käy aukion puolella (≤ 60°).
+                if (siirto >= OpasKatseOletukset.MonumenttiSuuntaMinM && puoliMin > 60 && puoli1 > puoli0 - 30)
+                    viat.Add($"{kaupunki} {id}: silmä ei aukion puolella ({puoli0:F0}° → {puoli1:F0}°)");
+            }
+            Oleta.Tosi(viat.Count == 0, string.Join("; ", viat));
+        }
+
         // ---- LEVEÄ KOHDE KAPEASSA KUVASSA (Linssiseppä 11.10. 08.5x: Kehysta laski leveyden kuvasuhteella 1,8, joten iPhonen
         // pystykuvassa 0,46 Louvre ja Concorde olivat kehyksen alussa ~2 ruudun levyisiä; OpasKuvaus.LeveysKuvaan) ----
         [Testi] static void LeveaKohdeKapeassaKuvassa()
@@ -730,7 +804,9 @@ namespace Matkakirja.Linssit.Testit
                         // PT 10.0x: pystykuvassa obeliski 58 %:ssa vasemmalta (otsikon alta oikealle) ± 0,03 koko pysähdyksen.
                         if (suhde < 1 && (xMin < OpasKuvaus.PalloAukioMonumenttiX - 0.03 || xKMax > OpasKuvaus.PalloAukioMonumenttiX + 0.03 || kMax > TorniReuna))
                             viat.Add($"Concorde {suhde:F2}: obeliski {xMin:F3}–{xKMax:F3} / {kMax:F2}");
-                        if (suhde < 1 && x0.EtM > v.EtM + 1e-6) viat.Add($"Concorde {suhde:F2}: loittoni {v.EtM:F0} → {x0.EtM:F0} m");
+                        // PT 14.4x: monumentti ei lähempänä kuin ennen (vino ≥ PalloMonumenttiMinEtM, silmä ≥ 65 m), mutta ei loitonnusta
+                        // kauas (PT 09.2x: 129 → 375 m, obeliski pieni): enintään 1,15 × max(vaakakuvan etäisyys, PalloMonumenttiMinEtM).
+                        if (suhde < 1 && x0.EtM > 1.15 * Math.Max(v.EtM, OpasKuvaus.PalloMonumenttiMinEtM)) viat.Add($"Concorde {suhde:F2}: loittoni {v.EtM:F0} → {x0.EtM:F0} m");
                     }
                     Console.WriteLine($"      {id} {suhde:F2}: alussa et {x0.EtM:F0} m (vaaka {v.EtM:F0}), silmä {x0.SilmaM:F0} m, kallistus {x0.Kallistus:F0}°, kohde {osuus:F2} leveydestä{lisa}, lopussa et {x[^1].EtM:F0} m, kierto {kaari / Math.Max(1, x[^1].T - x[0].T):F1} °/s");
                     if (suhde >= 4.0 / 3 && Math.Abs(x0.EtM - v.EtM) > 1e-6) viat.Add($"{id} {suhde:F2}: et {x0.EtM:F1} ≠ vaaka {v.EtM:F1}");
