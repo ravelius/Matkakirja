@@ -334,6 +334,23 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("Se on ultramariinia (n. 1663)!", t.Virke(2.5), "näytetty teksti puhutun ajoituksella (lyhenne ei katkaise)");
             Oleta.Sama("Loppu.", t.Virke(5.2));
             Oleta.Tosi(t.Virke(5.0 + MuseoTekstitys.JalkiS + 0.1) == null, "lopun jälkeen tyhjä");
+            // Pitkä virke (> PitkaMerkit) kahteen osaan keskikohtaa lähimmän pilkun kohdalta puheen tahdissa.
+            string pitka = "Vuonna 1971 hotellitarjoilija piiloutui näyttelyssä sähkökaappiin, leikkasi maalauksen irti kehyksestä, " +
+                           "piilotti sen tyynyliinaan ja vaati lunnaiksi rahaa nälkää näkevien ihmisten avuksi.";
+            var sb = new System.Text.StringBuilder(); double ts = 0; bool eka = true;
+            foreach (var w in pitka.Split(' ')) { sb.Append(eka ? "" : ",").Append($"{{\"sana\":\"{w}\",\"alku_s\":{ts.ToString(System.Globalization.CultureInfo.InvariantCulture)},\"loppu_s\":{(ts + 0.3).ToString(System.Globalization.CultureInfo.InvariantCulture)}}}"); ts += 0.4; eka = false; }
+            var tp = MuseoTekstitys.Lue($"{{\"teksti\":\"{pitka}\",\"sanat\":[{sb}]}}");
+            Oleta.Sama(2, tp.Virkkeet.Count, "pitkä virke kahdeksi");
+            Oleta.Tosi(tp.Virkkeet[0].Teksti.Length <= MuseoTekstitys.PitkaMerkit && tp.Virkkeet[1].Teksti.Length <= MuseoTekstitys.PitkaMerkit,
+                       $"osat pilkun kohdalta ({tp.Virkkeet[0].Teksti.Length} + {tp.Virkkeet[1].Teksti.Length})");
+            Oleta.Tosi(Math.Abs(tp.Virkkeet[1].Alku - tp.Virkkeet[0].Loppu) < 1e-9 && tp.Virkkeet[1].Alku > tp.Virkkeet[0].Alku, "jako puheen tahdissa");
+            // SK-A-1595:n pisin virke (234 merkkiä, pilkku kolmanneksessa): jako keskeltä, kumpikin osa enintään PitkaMerkit.
+            string sk = "Vuonna 1971 hotellitarjoilija piiloutui Brysselin näyttelyssä sähkökaappiin, leikkasi tämän maalauksen irti kehyksestä " +
+                        "perunankuorimaveitsellä ja vaati lunnaita nälkää näkevien Itä-Pakistanin eli nykyisen Bangladeshin ihmisten avuksi.";
+            sb.Clear(); ts = 0; eka = true;
+            foreach (var w in sk.Split(' ')) { sb.Append(eka ? "" : ",").Append($"{{\"sana\":\"{w}\",\"alku_s\":{ts.ToString(System.Globalization.CultureInfo.InvariantCulture)},\"loppu_s\":{(ts + 0.3).ToString(System.Globalization.CultureInfo.InvariantCulture)}}}"); ts += 0.4; eka = false; }
+            var ts2 = MuseoTekstitys.Lue($"{{\"teksti\":\"{sk}\",\"sanat\":[{sb}]}}");
+            Oleta.Tosi(ts2.Virkkeet.Count == 2 && ts2.Virkkeet.TrueForAll(v => v.Teksti.Length <= MuseoTekstitys.PitkaMerkit), "SK-A-1595 kahtena enintään 120 merkin osana");
         }
 
         [Testi] static void KehyksenKultaJaAalto()

@@ -12,6 +12,9 @@ namespace Matkakirja.Linssit.Museo
     {
         /// <summary>Virke jää näkyviin näin kauan viimeisen sanan jälkeen (s).</summary>
         public const double JalkiS = 1.5;
+        /// <summary>Tätä pidempi virke jaetaan kahteen osaan keskikohtaa lähimmän pilkun kohdalta puheen tahdissa (NUI/PT 11.10.:
+        /// puhelin pystyssä kaistale enintään kolme riviä; pisin virke 234 merkkiä).</summary>
+        public const int PitkaMerkit = 120;
 
         public readonly List<(string Teksti, double Alku, double Loppu)> Virkkeet = new List<(string, double, double)>();
 
@@ -36,12 +39,14 @@ namespace Matkakirja.Linssit.Museo
             var alku = new double[pv.Count]; var loppu = new double[pv.Count];
             for (int i = 0; i < pv.Count; i++) { alku[i] = double.NaN; loppu[i] = double.NaN; }
             int kohta = 0;
+            var sanaPaikat = new List<(int Merkki, double Alku)>();
             foreach (var (sana, a, l) in sanat)
             {
                 string t = sana.Trim(); if (t.Length == 0) continue;
                 int i = puhuttu.IndexOf(t, kohta, StringComparison.Ordinal);
                 if (i < 0) continue;
                 kohta = i + t.Length;
+                sanaPaikat.Add((i, a));
                 int v = pv.FindLastIndex(x => x.Alku <= i); if (v < 0) v = 0;
                 if (double.IsNaN(alku[v])) alku[v] = a;
                 loppu[v] = l;
@@ -50,9 +55,52 @@ namespace Matkakirja.Linssit.Museo
             for (int i = 0; i < pv.Count; i++)
             {
                 if (double.IsNaN(alku[i])) continue;   // virke ilman ajoitettuja sanoja (ei pitäisi tapahtua)
-                r.Virkkeet.Add(((naytetyt ? nv[i].Teksti : pv[i].Teksti), alku[i], loppu[i]));
+                string teksti = naytetyt ? nv[i].Teksti : pv[i].Teksti;
+                if (teksti.Length > PitkaMerkit && Jaa(pv[i], naytetyt ? nv[i].Teksti : null, sanaPaikat) is var (t1, t2, tj) && t1 != null)
+                {
+                    r.Virkkeet.Add((t1, alku[i], tj));
+                    r.Virkkeet.Add((t2, tj, loppu[i]));
+                }
+                else r.Virkkeet.Add((teksti, alku[i], loppu[i]));
             }
             return r.Virkkeet.Count > 0 ? r : null;
+        }
+
+        /// <summary>Pitkä virke kahteen osaan (pilkku, jos osat mahtuvat rajaan, muuten keskimmäinen väli); jakohetki = jakokohdan jälkeisen
+        /// sanan alku. Näytetty teksti jaetaan samasta suhteellisesta kohdasta. null, jos jakokohtaa ei löydy.</summary>
+        static (string, string, double) Jaa((string Teksti, int Alku) p, string naytetty, List<(int Merkki, double Alku)> sanat)
+        {
+            // Jakokohta: keskikohtaa lähin pilkku, jos kumpikin osa jää PitkaMerkit-rajan alle; muuten keskikohtaa lähin väli.
+            int L = p.Teksti.Length; int jako = Kohta(p.Teksti, ',', 0, 1);
+            bool pilkku = jako >= 0 && Math.Max(jako + 1, L - jako - 1) <= PitkaMerkit;
+            if (!pilkku) jako = Kohta(p.Teksti, ' ', 0, 1) - 1;
+            if (jako < 0) return (null, null, 0);
+            int raja = p.Alku + jako;
+            double tj = double.NaN;
+            foreach (var (m, a) in sanat) if (m > raja) { tj = a; break; }
+            if (double.IsNaN(tj)) return (null, null, 0);
+            string lahde = p.Teksti;
+            if (naytetty != null)
+            {
+                // Näytetty teksti samasta suhteellisesta kohdasta (pilkku tai väli lähimpänä).
+                double suhde = (double)jako / L;
+                int nj = pilkku ? Kohta(naytetty, ',', Math.Max(0, suhde - 0.15), Math.Min(1, suhde + 0.15), suhde) : Kohta(naytetty, ' ', 0, 1, suhde) - 1;
+                if (nj >= 0) { lahde = naytetty; jako = nj; }
+            }
+            return (lahde.Substring(0, jako + 1).Trim(), lahde.Substring(jako + 1).Trim(), tj);
+        }
+
+        /// <summary>Merkin c (jota seuraa väli; välille itse) paikka lähimpänä suhdetta keski (oletus 0,5) väliltä [a, b]; −1 = ei.</summary>
+        static int Kohta(string t, char c, double a, double b, double keski = 0.5)
+        {
+            int paras = -1; double pd = double.MaxValue;
+            for (int k = 1; k < t.Length - 1; k++)
+            {
+                if (t[k] != c || (c != ' ' && !char.IsWhiteSpace(t[k + 1]))) continue;
+                double x = (double)k / t.Length; if (x < a || x > b) continue;
+                double dd = Math.Abs(x - keski); if (dd < pd) { pd = dd; paras = c == ' ' ? k + 1 : k; }
+            }
+            return paras;
         }
 
         /// <summary>Virke soitossa ajan t (s äänitteen alusta) kohdalla: viimeisin alkanut virke, kunnes seuraava alkaa tai
