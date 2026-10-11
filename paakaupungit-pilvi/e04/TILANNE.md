@@ -12,8 +12,8 @@ Aiempi Sää/Commons-rajapintaeste: 11.10.2026 robots.txt kieltää en/fi-Wikipe
 
 | id | A | B | C | D | E | F | huomio |
 |---|---|---|---|---|---|---|---|
-| rabat | valmis | kesken | — | — | — | — | A säätaustoineen valmis; B kesken |
-| alger | kesken | — | — | — | — | — |  |
+| rabat | valmis | valmis | kesken | — | — | — | A ja23kuvanBvalmis; C työnalla |
+| alger | valmis | kesken | — | — | — | — | A valmis; B työnalla; säänull |
 | nouakchott | kesken | — | — | — | — | — | A-agentti työn alla |
 | praia | kesken | — | — | — | — | — |  |
 | banjul | kesken | — | — | — | — | — |  |
