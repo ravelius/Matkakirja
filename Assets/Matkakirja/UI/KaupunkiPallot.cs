@@ -16,6 +16,9 @@
 //    jos pelaajan kaupungin kutsukortti (Kutsuminiatyyri) on pisteen lähellä vasemmalla, pallo peilataan oikealle. Kortin paikka on
 //    lukittu kaupunkia kohden, joten puoli päätetään kerran (KaupunkiPalloMitat.Oikealle) eikä vaihdu zoomatessa; vain korttia
 //    lähin pallo, ja maan vaihtuessa puolet päätetään uudelleen.
+//  - Muun maan pallo (omistaja 11.10.2026 PT:n kautta, juna 182): napautus ei avaa eikä veloita, vaan pallon viereen tulee 3 s:ksi
+//    hintalappu "KUUMAILMAPALLO £200" päivälaskurin pohjalla (mk-pelikello + mk-pelikello__paiva, kuten aarrelaskuri; sama pohja
+//    LS2:n raketille "ISS £500"). Pelaajan maassa napautus avaa ja veloittaa kuten ennen.
 //  - Tyylit: olemassa oleva ERIKOISNOSTOT-pohja (mk-erikoisnosto-paa, __kuva); nimi vain VoiceOverille.
 //  - Napautus: OpasSovitin.AvaaKaupunkitila(id) (LS1:n kaupunkitila, juna 159); lista OpasSovitin.SallitutLista / LataaSallitut. Pulu väistää palloa (Pulu.Alareuna, NakyvaAlueet).
 using System.Collections.Generic;
@@ -113,7 +116,8 @@ namespace Matkakirja.Natiivi
                 if (string.IsNullOrEmpty(k.Id) || double.IsNaN(k.Lat) || double.IsNaN(k.Lon)) continue;
                 string id = k.Id;
                 // Kosketusnappi ilman oletusteeman ja mk-nappi-tyylejä: pallo läpinäkyvällä taustalla (kuten päät).
-                var b = new PalloNappi(() => Avaa(id)) { text = "" };
+                Pallo pl = null;
+                var b = new PalloNappi(() => Avaa(pl)) { text = "" };
                 b.RemoveFromClassList(Button.ussClassName);
                 b.AddToClassList("mk-erikoisnosto-paa");
                 b.tooltip = Kieli.T("ui.pallo.kaupunkiopas", k.Nimi);   // vain VoiceOverille ja vihjeenä
@@ -125,7 +129,8 @@ namespace Matkakirja.Natiivi
                 // Kehityskaupunki: värillinen pallo; muut kipsinä (omistaja 8.10.2026 klo 20.4x), toimivat samoin.
                 var oma = Kehityskaupunki(id) || kipsiKuva?.Kuva == null ? kuva : kipsiKuva;
                 if (oma?.Kuva != null) kv.style.backgroundImage = new StyleBackground(Background.FromRenderTexture(oma.Kuva));
-                pallot.Add(new Pallo { Id = id, Nimi = k.Nimi, Lat = k.Lat, Lon = k.Lon, Nappi = b, Kuva = kv, Aina = Kehityskaupunki(id) });
+                pl = new Pallo { Id = id, Nimi = k.Nimi, Lat = k.Lat, Lon = k.Lon, Nappi = b, Kuva = kv, Aina = Kehityskaupunki(id) };
+                pallot.Add(pl);
             }
             Debug.Log($"MATKAKIRJA kaupunkipallot: {pallot.Count} kaupunkia: {string.Join(", ", pallot.Select(p => p.Id))}");
         }
@@ -134,9 +139,13 @@ namespace Matkakirja.Natiivi
         /// suoraan (9.10.: heijastus pois, puuttuva rajapinta kaatuu käännökseen; KehityskaupungitTestit).</summary>
         static bool Kehityskaupunki(string id) => Matkakirja.Linssit.Kehityskaupungit.On(id);
 
-        static void Avaa(string id)
+        void Avaa(Pallo p)
         {
+            string id = p.Id;
             Debug.Log("MATKAKIRJA kaupunkipallot: napautus " + id);
+            // Muun maan pallo: hintalappu, ei avausta eikä veloitusta (omistaja 11.10.2026).
+            var nk = NostoKerros.Instanssi;
+            if (!ErikoisnostoMitat.OmaMaa(PallonMaa(p), nk != null ? nk.NykyinenMaa : null)) { NaytaHinta(p); return; }
             // Lento maksaa 200 p (omistaja 11.10.2026, juna 182): maksu ennen avausta, ilman rahaa pallo ei avaudu
             // (tilarivin "Rahat eivät riitä"); jos opas ei aukea maksun jälkeen, maksu palautetaan.
             var o = PeliOhjain.Instanssi;
@@ -159,6 +168,7 @@ namespace Matkakirja.Natiivi
             if (!sallittu || kierto == null || juuri.panel == null || float.IsNaN(W) || W <= 0 || kuva == null || !kuva.Valmis)
             {
                 foreach (var p in pallot) Nayta(p, false);
+                Hintalappu(W);
                 return;
             }
             float koko = KaupunkiPalloMitat.Koko(korkeus);
@@ -217,6 +227,47 @@ namespace Matkakirja.Natiivi
                 p.Nappi.pickingMode = oma ? PickingMode.Position : PickingMode.Ignore;   // pois häivyttyvää ei napauteta
                 Nayta(p, true);
             }
+            Hintalappu(W);
+        }
+
+        // --- hintalappu (muun maan pallo) ---------------------------------------------------------------------------------
+
+        const float HintaS = 3f;
+        VisualElement hintalappu;
+        Label hintaTeksti;
+        Pallo hinnanPallo;
+        float hintaLoppuu;
+
+        void NaytaHinta(Pallo p)
+        {
+            if (hintalappu == null)
+            {
+                hintalappu = Rakenne.El("mk-pelikello", juuri, PickingMode.Ignore);
+                hintalappu.name = "kaupunkipallo-hinta";
+                hintaTeksti = Rakenne.Teksti("", "mk-pelikello__paiva", hintalappu);
+                Kirjasimet.Aseta(hintaTeksti, Kirjasin.Kone);
+            }
+            hintaTeksti.text = Kieli.T("ui.pallo.hinta", PeliApu.Valuutta + Matkakirja.Peli.KauppaVakiot.PalloLentoHinta).ToUpperInvariant();
+            hinnanPallo = p;
+            hintaLoppuu = Time.unscaledTime + HintaS;
+            hintalappu.style.display = DisplayStyle.None;   // paikka asetetaan seuraavassa ruudussa (Hintalappu)
+            Debug.Log("MATKAKIRJA kaupunkipallot: hinta " + p.Id + " (muu maa)");
+        }
+
+        /// <summary>Hintalappu pallon kyljessä (oikealla, vasemmalle kallistuneen pallon vastakkaisella puolella); 3 s.</summary>
+        void Hintalappu(float W)
+        {
+            if (hintalappu == null) return;
+            var p = hinnanPallo;
+            bool nayta = p != null && p.Nakyy && Time.unscaledTime < hintaLoppuu;
+            if (!nayta) { hintalappu.style.display = DisplayStyle.None; hinnanPallo = null; return; }
+            float px = p.Nappi.resolvedStyle.left, py = p.Nappi.resolvedStyle.top, pk = p.Nappi.resolvedStyle.width;
+            float lw = hintalappu.resolvedStyle.width;
+            if (float.IsNaN(lw)) lw = 0f;
+            float x = p.Oikea ? px - lw + pk * 0.15f : px + pk * 0.85f;
+            hintalappu.style.left = Mathf.Clamp(x, 4f, Mathf.Max(4f, W - lw - 4f));
+            hintalappu.style.top = py + pk * 0.3f;
+            hintalappu.style.display = DisplayStyle.Flex;
         }
 
         string edellinenMaa = "";
@@ -283,8 +334,8 @@ namespace Matkakirja.Natiivi
         {
             var p = int.TryParse(kohde, out int i) ? (i >= 0 && i < pallot.Count ? pallot[i] : null) : pallot.FirstOrDefault(x => x.Id == kohde);
             if (p == null) return "kaupunkipallot: ei palloa " + kohde;
-            Avaa(p.Id);
-            return "kaupunkipallot: napautettu " + p.Id;
+            Avaa(p);
+            return "kaupunkipallot: napautettu " + p.Id + (hinnanPallo == p ? " (muu maa: hintalappu)" : "");
         }
     }
 
