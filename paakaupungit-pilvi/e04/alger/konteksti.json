@@ -1,0 +1,97 @@
+{
+ "id": "alger",
+ "era": "e04",
+ "nimi": "Alger",
+ "nimiAlkukieli": "الجزائر (El Djazaïr; ransk. Alger)",
+ "maa": "DZA",
+ "maanNimi": "Algeria",
+ "asema": "pääkaupunki",
+ "lat": 36.7764,
+ "lon": 3.0586,
+ "wikidata": "Q3561",
+ "kevytSisalto": {
+  "kuvaus": "Alger (arabiaksi El Djazaïr) on Algerian pääkaupunki ja maan suurin kaupunki. Se levittäytyy amfiteatterin tavoin Välimeren rannalle Algerin lahden ympärille, ja rakennukset nousevat portaittain Sahelin kukkuloiden rinteille. Vanha Casbah on Unescon maailmanperintökohde, ja uudemmat kaupunginosat ulottuvat rannikolta kohti Mitidjan tasankoa.",
+  "tunnusrakennukset": [
+   "Casbah (vanha kaupunki, Unescon maailmanperintökohde 1992)",
+   "Notre-Dame d'Afrique (kukkulakirkko, 1872)",
+   "Grande Poste (uusmaurilaistyylinen pääpostitalo, 1910-luvulta)",
+   "Ketchaoua-moskeija"
+  ],
+  "asukkaat": {
+   "arvo": 2988145,
+   "vuosi": 2008,
+   "lahde": "Office National des Statistiques (ONS), RGPH 2008 -laskennan julkaisu 'Armature urbaine' (syyskuu 2011), taulukko väestön kehityksestä wilayoittain: Alger-wilaya 2 988 145 (1998: 2 562 826); Alger-taajama (13 kuntaa, Grand Alger) 2 364 230. Uudempaa julkaistua virallista laskentalukua ei löytynyt (RGPH 2022:n tuloksia ei ole julkaistu 10.10.2026).",
+   "linkki": "https://www.ons.dz/IMG/pdf/armature_urbaine_2008.pdf"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Imaamivaltio, joka otti vastaan toisinajattelijat",
+    "Merikaupunki, joka valitsi itselleen hallitsijan",
+    "Emiiri, joka rakensi valtion sodan keskelle",
+    "Kaksi kansanäänestystä ja sama päivämäärä"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Jyvä, joka pyöritetään käsin",
+    "Taateli, jonka läpi näkee valon",
+    "Nuudeli, joka kuuluu juhlaan",
+    "Viinimaa, joka lakkasi olemasta"
+   ]
+  },
+  {
+   "id": "kirjallisuus",
+   "nimi": "Kirjallisuus",
+   "nostot": [
+    "Kirja, joka syntyi kolmen vuoden eristyksessä",
+    "Maalivahti, josta tuli Nobel-kirjailija",
+    "Tähti, joka oli myös serkku",
+    "Luokkansa ainoa ja akatemian ensimmäinen"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Sana, joka tarkoittaa mielipidettä",
+    "Kansan musiikki, joka alkoi paheksuttuna",
+    "Laulu, joka lähti ja tuli takaisin",
+    "Kehtolaulu kabyylin kielellä"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Puu, jolla ei ole äitiä",
+    "Afrikan ainoa oma hirvi",
+    "Gepardi, joka ei juo",
+    "Lammas, joka hyppää kaksi metriä"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "skandaali:karpasviuhka-1827",
+   "nimi": "Kärpäsviuhka",
+   "lahde": "skandaalit",
+   "laji": "skandaali",
+   "km": 1,
+   "teksti": "Livornosta 1600-luvulla saapuneet juutalaiset kauppiassuvut Bakri ja Busnach nousivat Algerin kaupan johtoon ja perustivat 1700-luvun lopulla yhtiön, joka hallitsi elintarvikkeiden — etenkin vehnän — vientiä Ranskaan. Vallankumouksen ja Na…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Alger",
+  "maanAvain": "Algeria",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

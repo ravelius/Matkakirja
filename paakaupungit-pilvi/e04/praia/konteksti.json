@@ -1,0 +1,54 @@
+{
+ "id": "praia",
+ "era": "e04",
+ "nimi": "Praia",
+ "nimiAlkukieli": "Praia",
+ "maa": "CPV",
+ "maanNimi": "Kap Verde",
+ "asema": "pääkaupunki",
+ "lat": 14.9177,
+ "lon": -23.5092,
+ "wikidata": "Q3751",
+ "kevytSisalto": {
+  "kuvaus": "Praia on Kap Verden pääkaupunki ja suurin kaupunki, joka sijaitsee Santiagon saaren eteläosassa. Vanha keskusta sijaitsee Plateau-tasanteella meren yläpuolella, ja sen siirtomaa-ajan kujilla on värikkäitä rakennuksia, kirkko ja aukioita. Kaupunki on hallinnon ja kaupan keskus ja saarivaltion tärkein satama.",
+  "tunnusrakennukset": [
+   "Praça Alexandre Albuquerque -aukio",
+   "Nossa Senhora da Graça -kirkko",
+   "Presidentinpalatsi (Plateau)",
+   "Cidade Velhan vanha asutus (lähellä, UNESCO-kohde)"
+  ],
+  "asukkaat": {
+   "arvo": 141219,
+   "vuosi": 2021,
+   "lahde": "INE Cabo Verde (Instituto Nacional de Estatística), 5. väestö- ja asuntolaskenta RGPH 2021, lopulliset tulokset, Praian kaupunki; Praian kunta (concelho) n. 145 400 (INE: 29,6 % koko maan 491 233 asukkaasta).",
+   "linkki": "https://ine.cv/"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Kap Verde on Atlantin valtamerellä, noin 570 kilometrin päässä Afrikan länsirannikosta sijaitseva saarivaltio. Kymmenestä pääsaaresta koostuva ryhmä on tulivuorten muovaama, ja asuttamattomia saaria on vain yksi. Portugalilaisten asuttama maa itsenäistyi 1975, ja virallinen kieli on portugali, mutta arkipäivässä puhutaan kapverdenkreolia. Talous nojaa matkailuun, ulkomailla asuvien kapverdeläisten rahalähetyksiin ja kalastukseen, ja kapverdeläinen musiikki, kuten morna, on maailmalla tunnettua.",
+  "genetiivi": "Kap Verden",
+  "kielet": [
+   {
+    "kieli": "portugali",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "kapverdenkreoli (kabuverdianu)",
+    "asema": "kansallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Kap Verden escudo",
+   "koodi": "CVE"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Praia",
+  "maanAvain": "Kap Verde",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

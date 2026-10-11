@@ -1,0 +1,66 @@
+{
+ "id": "nouakchott",
+ "era": "e04",
+ "nimi": "Nouakchott",
+ "nimiAlkukieli": "نواكشوط (Nouakchott)",
+ "maa": "MRT",
+ "maanNimi": "Mauritania",
+ "asema": "pääkaupunki",
+ "lat": 18.0858,
+ "lon": -15.9785,
+ "wikidata": "Q3688",
+ "kevytSisalto": {
+  "kuvaus": "Nouakchott on Mauritanian pääkaupunki ja suurin kaupunki, joka rakennettiin 1950-luvun lopussa pienen kalastajakylän paikalle. Kaupunki kasvoi nopeasti etenkin 1970-luvun kuivuuden jälkeen, kun paimentolaiset muuttivat sinne. Se sijaitsee Atlantin rannalla autiomaan reunalla, ja sen elämää leimaavat kalasatama, torit sekä hiekan ja tuulen kanssa eläminen.",
+  "tunnusrakennukset": [
+   "Suuri moskeija (Saudi-Arabian rahoittama)",
+   "Kansallismuseo (Musée national)",
+   "Marché Capitale (pääkaupungin tori)",
+   "Kalastajaranta (Plage des Pêcheurs)"
+  ],
+  "asukkaat": {
+   "arvo": 1446761,
+   "vuosi": 2023,
+   "lahde": "ANSADE (Mauritania), RGPH-5 (laskenta 25.12.2023-8.1.2024) tuloseste: Nouakchott-Ouest 204 881, Nouakchott-Nord 614 465, Nouakchott-Sud 627 415 = 1 446 761; esite toteaa Nouakchottin osuudeksi 29,4 % väestöstä",
+   "linkki": "https://centre-rachad.org/wp-content/uploads/2024/10/Depliant-RGPH5_vf.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Mauritania on laaja Länsi-Afrikan maa, jonka suurin osa on Saharan autiomaata ja jonka länsirajalla on Atlantin rannikko. Maa itsenäistyi Ranskasta vuonna 1960, ja se kuuluu sekä arabimaailmaan että Saharan eteläpuolisen Afrikan raja-alueeseen. Perinteisesti elinkeinoina ovat olleet karjanhoito ja kalastus, ja nykyään tärkeitä vientituotteita ovat rautamalmi, kulta ja kala. Maan kulttuurissa yhdistyvät maurien, afrikkalaisten halpulaarien, soninkejen ja wolofien perinteet, ja pääkaupunki sijaitsee lähellä rannikkoa, jossa aavikko kohtaa valtameren.",
+  "genetiivi": "Mauritanian",
+  "kielet": [
+   {
+    "kieli": "arabia (hassaniya-murre arkikielenä)",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "pulaar (fulani)",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "soninke",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "wolof",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "ranska",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "uusi ouguiya",
+   "koodi": "MRU"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Nouakchott",
+  "maanAvain": "Mauritania",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

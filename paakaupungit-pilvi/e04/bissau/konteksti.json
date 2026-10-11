@@ -1,0 +1,62 @@
+{
+ "id": "bissau",
+ "era": "e04",
+ "nimi": "Bissau",
+ "nimiAlkukieli": "Bissau",
+ "maa": "GNB",
+ "maanNimi": "Guinea-Bissau",
+ "asema": "pääkaupunki",
+ "lat": 11.86,
+ "lon": -15.5833,
+ "wikidata": "Q3739",
+ "kevytSisalto": {
+  "kuvaus": "Bissau on Guinea-Bissaun pääkaupunki ja päämerisatama Geba-joen suistossa. Portugalilaiset perustivat sen kauppa-asemaksi vuonna 1687, ja vanhassa kaupunginosassa on siirtomaa-ajan rakennuksia sekä 1600-luvun lopulla rakennettu Amuran linnoitus. Kaupunki on maan hallinnon, kaupan ja kulttuurin keskus, ja sen suuri Bandimin tori on tärkeä kauppapaikka.",
+  "tunnusrakennukset": [
+   "Fortaleza de São José da Amura (Amuran linnoitus)",
+   "Nossa Senhora da Candelárian katedraali (vihitty 1950)",
+   "Bandimin tori",
+   "Pidjiguitin satamalaituri ja muistomerkki"
+  ],
+  "asukkaat": {
+   "arvo": 466716,
+   "vuosi": 2025,
+   "lahde": "INE Guiné-Bissau, Projeções da população da Guiné-Bissau 2014-2063 (marraskuu 2022), Tabela 14, tendenssiskenaario: Sector Autónomo de Bissau 2025 466 716 (2024: 457 564; koko maa 2025 1 852 784); pohjana 2009 laskenta",
+   "linkki": "https://www.stat-guinebissau.com/Menu_principal/IV_RGPH/rgph1/projecoes/relatorio_projecao_2014_2063.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Guinea-Bissau on pieni Länsi-Afrikan rannikkovaltio Senegalin ja Guinean välissä, jonka rannikkoa rikkovat mangrovemetsät ja Bijagósin saaristo. Portugalin entinen siirtomaa julistautui itsenäiseksi vuonna 1973 pitkän vapaussodan jälkeen, ja Portugali tunnusti itsenäisyyden 1974. Portugali on virallinen kieli, mutta yleiskielenä käytetään guineanbissaunkreolia. Maan vienti nojaa pääosin cashewpähkinöihin, ja poliittinen epävakaus on ollut tavallista: itsenäistymisen jälkeen maassa on nähty useita vallankaappauksia ja vallankaappausyrityksiä.",
+  "genetiivi": "Guinea-Bissaun",
+  "kielet": [
+   {
+    "kieli": "portugali",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "guineanbissaunkreoli (kriol)",
+    "asema": "muu"
+   },
+   {
+    "kieli": "balanta",
+    "asema": "muu"
+   },
+   {
+    "kieli": "fula",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Länsi-Afrikan CFA-frangi",
+   "koodi": "XOF"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Bissau",
+  "maanAvain": "Guinea-Bissau",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

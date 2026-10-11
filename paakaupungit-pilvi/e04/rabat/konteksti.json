@@ -1,0 +1,97 @@
+{
+ "id": "rabat",
+ "era": "e04",
+ "nimi": "Rabat",
+ "nimiAlkukieli": "الرباط (Ar-Ribāṭ)",
+ "maa": "MAR",
+ "maanNimi": "Marokko",
+ "asema": "pääkaupunki",
+ "lat": 34.0211,
+ "lon": -6.8414,
+ "wikidata": "Q3551",
+ "kevytSisalto": {
+  "kuvaus": "Rabat on Marokon pääkaupunki ja hallinnon keskus Atlantin rannalla Bou Regreg -joen suulla. Kaupungin vanhimmat osat ovat 1100-luvulta almohadien ajalta, ja ranskalaiset siirsivät pääkaupungin Rabatiin vuonna 1912. UNESCO merkitsi kaupungin historiallisen ja modernin yhdistelmän maailmanperintöluetteloon vuonna 2012.",
+  "tunnusrakennukset": [
+   "Hassanin torni",
+   "Udayan kasbah",
+   "Chellah (Marinidien hautausmaa ja roomalaiset rauniot)",
+   "Kuninkaanlinna (Dar al-Makhzen)"
+  ],
+  "asukkaat": {
+   "arvo": 515619,
+   "vuosi": 2024,
+   "lahde": "Haut-Commissariat au Plan (HCP), RGPH 2024: Note sur les principaux résultats, Région de Rabat-Salé-Kénitra (lokakuu 2025): Rabatin prefektuurin laillinen väestö 1.9.2024 on 515 619 asukasta",
+   "linkki": "https://www.hcp.ma/region-kenitra/attachment/2801611"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Prinssi, joka pakeni ja perusti valtion",
+    "Yliopisto, jonka perusti kauppiaan tytär",
+    "Taistelu, jossa kuoli kolme kuningasta",
+    "Kultainen sulttaani ja retki Nigerille"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Puu, joka antaa litran kerrallaan",
+    "Piiras, joka on sekä suolainen että makea",
+    "Mauste, jossa on kaksikymmentäseitsemän ainesta",
+    "Keitto, joka katkaisee paaston"
+   ]
+  },
+  {
+   "id": "kasityo",
+   "nimi": "Käsityö",
+   "nostot": [
+    "Altaat, joissa väri on kasvia",
+    "Palapeli, joka ladotaan nurin päin",
+    "Kello, jota kukaan ei enää osaa korjata",
+    "Kaupunki, joka teki savesta ammatin"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Sarja jokaiselle vuorokauden tunnille",
+    "Runoutta, jota lauloivat käsityöläiset",
+    "Banjo, joka muutti maan musiikin",
+    "Tanssi, jota ei voi viedä pois kylästä"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Metsä, joka kasvaa kahden kilometrin korkeudessa",
+    "Leijona, jonka harja ulottui kyynärpäihin",
+    "Laguuni, jossa lasketaan satatuhatta lintua",
+    "Putous, jonka nimi tarkoittaa jauhamista"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "kohde:hassantorni",
+   "nimi": "Hassan-torni",
+   "lahde": "fokuskohde",
+   "laji": "historia",
+   "km": 2,
+   "teksti": "Rabatin Hassan-torni on keskeneräisen moskeijan minareetti. Almohadikalifi Abu Yusuf Yaqub al-Mansur aloitti sen rakentamisen 1191 osana uutta linnoitettua pääkaupunkia, jota kutsuttiin nimellä Ribat al-Fath. Minareetista piti tulla maailm…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Rabat",
+  "maanAvain": "Marokko",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

@@ -1,0 +1,97 @@
+{
+ "id": "monrovia",
+ "era": "e04",
+ "nimi": "Monrovia",
+ "nimiAlkukieli": "Monrovia",
+ "maa": "LBR",
+ "maanNimi": "Liberia",
+ "asema": "pääkaupunki",
+ "lat": 6.3106,
+ "lon": -10.8047,
+ "wikidata": "Q3748",
+ "kevytSisalto": {
+  "kuvaus": "Monrovia on Liberian pääkaupunki ja suurin kaupunki Mesuradon niemellä Atlantin rannalla. Se sai alkunsa 1800-luvun alussa asutuksena, jonka Yhdysvalloista tulleet vapautetut mustat perustivat, ja nimi tulee presidentti James Monroelta. Nykyään kaupunki on maan hallinnon, kaupan ja sataman keskus, ja sen väkiluku on kasvanut nopeasti 2000-luvulla.",
+  "tunnusrakennukset": [
+   "Providence Island (uudisasukkaiden maihinnousupaikka 1822)",
+   "Masonic Temple (Mamba Point)",
+   "Liberian kansallismuseo",
+   "Waterside Market"
+  ],
+  "asukkaat": {
+   "arvo": 1761032,
+   "vuosi": 2022,
+   "lahde": "LISGIS, 2022 Liberia Population and Housing Census, Final Results, taulukko A4: Montserradon piirikunnan KAUPUNKIVÄESTÖ (urban) on 1 761 032 eli 91,7 % piirikunnan 1 920 965 asukkaasta (maaseutu 159 933). Luku kattaa Suur-Monrovian kaupunkialueen (mm. Paynesville, Gardnersville, New Georgia, Caldwell), ei Monrovian kaupunginhallinnon aluetta. Hallinnollinen 'Greater Monrovia' -piiri on taulukossa B6 vain 161 891. Siis Wikipedian ja citypopulation.de:n 'Monrovia 1 761 032' on tarkalleen Montserradon urbaani väestö.",
+   "linkki": "https://web.archive.org/web/2025/https://www.lisgis.gov.lr/document/LiberiaCensus2022Report.pdf"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Kauppias, joka vannoi valan tammikuussa",
+    "Seitsemän naista ompeli valtion tunnuksen",
+    "Miehet, jotka neuvottelivat työnsä ulapalla",
+    "Lippu, jota vuokrataan maailman laivoille"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Liemi, jota sanotaan keitoksi",
+    "Kassava survotaan palloksi",
+    "Mauste, joka antoi rannikolle nimen",
+    "Kahvipuu, joka pelasti toisten plantaasit"
+   ]
+  },
+  {
+   "id": "kuvataide",
+   "nimi": "Kuvataide",
+   "nostot": [
+    "Peitto, jota ommeltiin 25 vuotta",
+    "Maakunnan lippu on tilkkutyötä",
+    "Naamio, joka tulee sovittelemaan",
+    "Naamio, jota tanssivat naiset"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Kitara, joka tuli laivan mukana",
+    "Sana, jota yritettiin vaihtaa kansallislaulusta",
+    "Laulaja, joka lähti saadakseen laulaa",
+    "Rap, joka puhuu kolokwaa"
+   ]
+  },
+  {
+   "id": "kirjallisuus",
+   "nimi": "Kirjallisuus",
+   "nostot": [
+    "Kirjaimisto, joka keksittiin kylässä",
+    "Pienoisromaani, jota luetaan yhä kouluissa",
+    "Kolme seminaaria sanoi ei",
+    "Kieli, jolla kauppa käy"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "kohde:providence-island",
+   "nimi": "Providence Island",
+   "lahde": "fokuskohde",
+   "laji": "historia",
+   "km": 1,
+   "teksti": "Providence Island oli paikka, johon American Colonization Society sai ensimmäisenä pysyvästi asutetuksi Yhdysvalloista tuodut vapautetut mustat siirtolaiset. Useiden epäonnistuneiden yritysten jälkeen seura lähetti Robert F. Stocktonin ja …"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Monrovia",
+  "maanAvain": "Liberia",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

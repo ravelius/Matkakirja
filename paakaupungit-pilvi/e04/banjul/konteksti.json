@@ -1,0 +1,75 @@
+{
+ "id": "banjul",
+ "era": "e04",
+ "nimi": "Banjul",
+ "nimiAlkukieli": "Banjul",
+ "maa": "GMB",
+ "maanNimi": "Gambia",
+ "asema": "pääkaupunki",
+ "lat": 13.4531,
+ "lon": -16.5775,
+ "wikidata": "Q3726",
+ "kevytSisalto": {
+  "kuvaus": "Banjul on Gambian pääkaupunki, joka sijaitsee pienellä Saint Maryn saarella Gambia-joen suulla. Britit perustivat sen vuonna 1816 kauppa- ja tukikohdaksi orjakaupan vastaisia merivartiotoimia varten ja nimesivät sen Bathurstiksi; nykyinen nimi tuli käyttöön vuonna 1973. Varsinainen kaupunki on pieni, mutta sen ympärillä oleva Suur-Banjulin alue Kanifingin kunnan kanssa on maan tihein asuttu seutu, ja lautta yhdistää kaupungin joen toiselle rannalle Barraan.",
+  "tunnusrakennukset": [
+   "Albert Market",
+   "Gambian kansallismuseo",
+   "King Fahd -moskeija",
+   "Banjulin oikeustalo (Court House)"
+  ],
+  "asukkaat": {
+   "arvo": 26461,
+   "vuosi": 2024,
+   "lahde": "Gambian väestölaskenta 2024 (GBoS), Banjulin kaupunki (LGA); Suur-Banjul Kanifingin kanssa 405 809",
+   "linkki": "https://citypopulation.de/en/gambia/cities/"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Gambia on Länsi-Afrikan pienin mannermaavaltio: kapea kaistale Gambia-joen molemmin puolin, ja Senegal ympäröi sitä kolmelta suunnalta. Entinen brittiläinen siirtomaa itsenäistyi vuonna 1965, ja englanti on virallinen kieli, vaikka mandinka, fula ja wolof ovat arjen kieliä. Talous nojaa maatalouteen, erityisesti maapähkinöihin, sekä matkailuun, ja joki on tärkein kulkuväylä. Presidentti Yahya Jammeh jätti vallan tammikuussa 2017 vaalitappion ja alueellisen painostuksen jälkeen, minkä jälkeen presidentti on valittu monipuoluevaaleilla.",
+  "genetiivi": "Gambian",
+  "kielet": [
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "mandinka",
+    "asema": "muu"
+   },
+   {
+    "kieli": "fula",
+    "asema": "muu"
+   },
+   {
+    "kieli": "wolof",
+    "asema": "muu"
+   },
+   {
+    "kieli": "diola",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "dalasi",
+   "koodi": "GMD"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "kohde:saloumin-suisto",
+   "nimi": "Saloumin suisto",
+   "lahde": "fokuskohde",
+   "laji": "joki",
+   "km": 28,
+   "teksti": "Saloumin suiston kansallispuisto perustettiin 1976 sinne, missä Saloumjoki laskee Atlanttiin. Puisto on 760 neliökilometriä ja osa 1 800 neliökilometrin biosfäärialuetta sekä maailmanperintökohdetta; vettä siitä on 610, vuorovesialueen man…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Banjul",
+  "maanAvain": "Gambia",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

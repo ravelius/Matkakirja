@@ -1,0 +1,93 @@
+{
+ "id": "conakry",
+ "era": "e04",
+ "nimi": "Conakry",
+ "nimiAlkukieli": "Conakry (Kɔnakiri)",
+ "maa": "GIN",
+ "maanNimi": "Guinea",
+ "asema": "pääkaupunki",
+ "lat": 9.5092,
+ "lon": -13.7122,
+ "wikidata": "Q3733",
+ "kevytSisalto": {
+  "kuvaus": "Conakry on Guinean pääkaupunki ja suurin kaupunki, joka levittäytyy kapealle, noin 36 kilometrin pituiselle Kaloumin niemimaalle Atlantin rannalla. Se sai alkunsa Tombon saarella sen jälkeen, kun Britannia luovutti saaren Ranskalle vuonna 1887, ja kasvoi siirtomaa-ajan satamakaupungiksi. Nykyään se on maan hallinnon, sataman ja talouden keskus, ja sen edustalla on Îles de Los -saaristo.",
+  "tunnusrakennukset": [
+   "Conakryn Suuri moskeija (Grande Mosquée)",
+   "Sainte-Marie-katedraali (rakennus aloitettu 1928)",
+   "Guinean kansallismuseo",
+   "Boulbinetin kalasatama ja Îles de Los -saaret"
+  ],
+  "asukkaat": {
+   "arvo": 3407327,
+   "vuosi": 2025,
+   "lahde": "Guinean tilastoinstituutti INS, RGPH-4 2025 alustavat tulokset, Conakryn erityisvyöhyke (13 kaupunginosaa/kommuunia)",
+   "linkki": "https://citypopulation.de/en/guinea/cities/"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Guinea on Länsi-Afrikan rannikkovaltio, jonka Fouta Djallonin ylängöiltä saavat alkunsa mm. Niger-, Senegal- ja Gambia-joki. Maa itsenäistyi Ranskasta vuonna 1958 ensimmäisenä Ranskan Länsi-Afrikan siirtomaana, ja sen suurimpia luonnonvaroja ovat bauksiitti, rautamalmi ja kulta. Guinea ei ole sama maa kuin Päiväntasaajan Guinea tai Guinea-Bissau; ranska on virallinen kieli, ja suurimmat kansalliskielet ovat fula, malinke ja susu. Maan poliittista historiaa leimaavat sotilasvallan jaksot, viimeksi vuoden 2021 vallankaappaus, jonka jälkeen maa on uudistanut perustuslakiaan.",
+  "genetiivi": "Guinean",
+  "kielet": [
+   {
+    "kieli": "ranska",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "fula (pular)",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "malinke (maninka)",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "susu",
+    "asema": "kansallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Guinean frangi",
+   "koodi": "GNF"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [
+  {
+   "id": "sierraleone",
+   "nimi": "Sierra Leone",
+   "km": 133,
+   "lehti": [
+    {
+     "id": "kaupunki",
+     "nimi": "Sierra Leone",
+     "nostot": [
+      "Puu, jonka alle vapaus istutettiin",
+      "Länsi-Afrikan vanhin korkeakoulu",
+      "Lääkäri, joka piirsi Afrikan uudelleen",
+      "Leijonavuorten satama",
+      "Kerhotalo kuvalehden sivulla"
+     ]
+    },
+    {
+     "id": "historia",
+     "nimi": "Vapautettujen kaupunki",
+     "nostot": [
+      "Saari, joka myi ihmisiä",
+      "Portti vapauteen",
+      "Pieni laiva, joka jahtasi orjalaivoja",
+      "Kapteeni, joka rahoitti oman laivansa matkan",
+      "Orjalaivasta piispaksi"
+     ]
+    }
+   ],
+   "kohdekartta": []
+  }
+ ],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Conakry",
+  "maanAvain": "Guinea",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

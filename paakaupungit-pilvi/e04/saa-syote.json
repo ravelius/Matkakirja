@@ -1,0 +1,56 @@
+[
+ {
+  "id": "rabat",
+  "lat": 34.02,
+  "lon": -6.84,
+  "wikidata": "Q3551"
+ },
+ {
+  "id": "alger",
+  "lat": 36.78,
+  "lon": 3.06,
+  "wikidata": "Q3561"
+ },
+ {
+  "id": "nouakchott",
+  "lat": 18.09,
+  "lon": -15.98,
+  "wikidata": "Q3688"
+ },
+ {
+  "id": "praia",
+  "lat": 14.92,
+  "lon": -23.51,
+  "wikidata": "Q3751"
+ },
+ {
+  "id": "banjul",
+  "lat": 13.45,
+  "lon": -16.58,
+  "wikidata": "Q3726"
+ },
+ {
+  "id": "bissau",
+  "lat": 11.86,
+  "lon": -15.58,
+  "wikidata": "Q3739"
+ },
+ {
+  "id": "conakry",
+  "lat": 9.51,
+  "lon": -13.71,
+  "wikidata": "Q3733"
+ },
+ {
+  "id": "monrovia",
+  "lat": 6.31,
+  "lon": -10.8,
+  "wikidata": "Q3748"
+ },
+ {
+  "id": "tunis",
+  "lat": 36.81,
+  "lon": 10.18,
+  "wikidata": "Q3572"
+ }
+]

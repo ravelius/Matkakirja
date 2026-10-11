@@ -1,0 +1,136 @@
+{
+ "id": "tunis",
+ "era": "e04",
+ "nimi": "Tunis",
+ "nimiAlkukieli": "تونس (Tūnis)",
+ "maa": "TUN",
+ "maanNimi": "Tunisia",
+ "asema": "pääkaupunki",
+ "lat": 36.8065,
+ "lon": 10.1815,
+ "wikidata": "Q3572",
+ "kevytSisalto": {
+  "kuvaus": "Tunis on Tunisian pääkaupunki ja maan hallinnon, talouden ja kulttuurin keskus, joka sijaitsee Välimeren rannikolla Tunisinjärven äärellä. Kaupungin vanha osa, medina, on 600-luvun lopulta periytyvä sokkeloinen kortteli moskeijoineen ja basaareineen, ja se kuuluu Unescon maailmanperintöluetteloon vuodesta 1979. Medinan ympärille on rakentunut uudempi, ranskalaistyylinen kaupunginosa ja lähiöitä.",
+  "tunnusrakennukset": [
+   "Zitouna-moskeija (Oliivimoskeija) medinassa",
+   "Kasbahin moskeija",
+   "Bab el Bahr (Merenportti, ent. Porte de France)",
+   "Dar Ben Abdallah (medinan palatsi)"
+  ],
+  "asukkaat": {
+   "arvo": 1075306,
+   "vuosi": 2024,
+   "lahde": "Institut National de la Statistique (INS) Tunisie, väestö- ja asuntolaskenta RGPH 2024 (6.11.2024), Tunisin kuvernementti (gouvernorat de Tunis); INS:n Bilan démographique -raportti ja kuvernementtiprofiili",
+   "linkki": "https://www.ins.tn/sites/default/files-ftp3/files/2025-05/Bilan%20D%C3%A9mographique_0.pdf"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Kaupunki, joka mahtui härännahan sisään",
+    "Provinssi, joka ruokki miljoonakaupungin",
+    "Kapinallinen amiraali avasi tien Sisiliaan",
+    "Arabimaailman ensimmäinen perustuslaki"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Tahna, joka tuli Amerikasta ja jäi",
+    "Öljy, joka matkustaa toisen nimellä",
+    "Taskussa on kokonainen kananmuna",
+    "Leivos, joka on nimetty muotonsa mukaan"
+   ]
+  },
+  {
+   "id": "kuvataide",
+   "nimi": "Kuvataide",
+   "nostot": [
+    "Kaksi viikkoa, jotka muuttivat maalaustaidetta",
+    "Koulukunta, joka perustettiin omaa maalaustaidetta varten",
+    "Ryhmän ainoa nainen, koulun ensimmäinen johtaja",
+    "Kylä, joka maalattiin kahdella värillä"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Kolmetoista sarjaa, jotka jäivät jäljelle",
+    "Paroni, joka kirjoitti musiikin kuuteen niteeseen",
+    "Säkkipilli, jossa on kaksi lehmänsarvea",
+    "Luuttu, joka löysi tiensä jazzlavoille"
+   ]
+  },
+  {
+   "id": "meri",
+   "nimi": "Meri",
+   "nostot": [
+    "Järvi, jonka padot melkein tappoivat",
+    "Aita, joka rakennetaan mereen joka vuosi",
+    "Välimeren voimakkain vuorovesi",
+    "Saari, jolta Odysseus ei tahtonut lähteä"
+   ]
+  }
+ ],
+ "lahiKaupungit": [
+  {
+   "id": "karthago",
+   "nimi": "Karthago",
+   "km": 15,
+   "lehti": [
+    {
+     "id": "kaupunki",
+     "nimi": "Karthago",
+     "nostot": [
+      "Kylpylä hiekan alla",
+      "Puunilaisten kaupunkikortteli",
+      "Kaksi satamaa muurien sisällä",
+      "Englantilaisen kaivajan mosaiikit",
+      "Katedraali Byrsan huipulle",
+      "Kristityn Afrikan suurin basilika"
+     ]
+    },
+    {
+     "id": "historia",
+     "nimi": "Karthagon nousu ja tuho",
+     "nostot": [
+      "Härännahan kokoinen valtakunta",
+      "Norsut yli Alppien",
+      "Kaupunki joka ei noussut enää",
+      "Vesi sadan mailin päästä"
+     ]
+    }
+   ],
+   "kohdekartta": []
+  }
+ ],
+ "lahiNostot": [
+  {
+   "id": "skandaali:bardon-sopimus",
+   "nimi": "Bardon sopimus",
+   "lahde": "skandaalit",
+   "laji": "skandaali",
+   "km": 4,
+   "teksti": "Bardon sopimus eli Ksar Saïdin sopimus perusti Ranskan protektoraatin Tunisiaan, ja järjestely kesti toiseen maailmansotaan asti. Sopimus allekirjoitettiin 12. toukokuuta 1881 Ranskan edustajien ja Tunisian beyn Muhammed as-Sadiqin välillä…"
+  },
+  {
+   "id": "kohde:karthagon-sotasatama",
+   "nimi": "Karthagon pyöreä sotasatama",
+   "lahde": "fokuskohde",
+   "laji": "merenkulku",
+   "km": 14,
+   "teksti": "Karthagon kaksi sisäsatamaa olivat käsin kaivettuja altaita kaupungin kaakkoislaidalla: suorakaiteen muotoinen kauppasatama ja sen takana pyöreä sotasatama. Punilainen nimi oli kothon. Kreikkalainen Appianos kuvasi laitosta Polybioksen kad…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Tunis",
+  "maanAvain": "Tunisia",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}
