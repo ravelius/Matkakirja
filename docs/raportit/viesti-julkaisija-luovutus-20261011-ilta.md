@@ -13,7 +13,9 @@ Pitolista: `julkaisija-tyokalut/pidossa.txt` (tyhjä). Päätoimittaja: SendMess
   Ketju: TF → sisäinen → vienti ⊇ muutosloki → ulkoinen (Arvioijat + Beta-testaajat + beta-arvio).
 - **Testattavaa** = NS:n `proto-3d/tyokalut/natiiviseppa-skriptit/juna182/muutosloki-182.txt` rivit 2–13
   (`julkaisija-tyokalut/testattavaa-182.txt`): erillinen `testflight-sisainen.yml -f testattavaa=…` -ajo SISAINEN-rivin jälkeen.
-  Jos tämä ajo katosi uudelleenkäynnistyksessä, aja se käsin (tila alla kohdassa 5).
+  TEHTY: 38158939556 success 20.1x (1. yritys hylättiin: ☰ ei kelpaa whatsNew-tekstiin).
+- **TF 182 iOS Applella 20.04** (38156401738), SISÄINEN 38158107226 success 20.08; Asemataulu talo/eteneminen = edistys 5 (v3).
+  Ketju odottaa vientiä ⊇ 689ae366a → ULKOINEN (beta-arvio).
 - **Mac 182**: 38156210986 SUCCESS 19.5x (lataa + sisäinen). Ei ulkoista Macille.
 - Uudelleenkäynnistyksen jälkeen: tarkista `tail tf182-ketju.log`, `gh run view 38156401738`, beta-arvion tila
   (beta-arvio-181.sh-malli) → rivi PT:lle "lähetetty arvioon" ja "hyväksytty".
@@ -55,11 +57,15 @@ v6k18 + **v6k19** (osoitin uusin-4 → v6k19 19.4x, varmuuskopiot `osoitin-varmu
 1. `pgrep -f olavinlinna-vahti.zsh` – jos poissa, käynnistä setsid-perlillä (komento edellisessä luovutuksessa
    `viesti-julkaisija-luovutus-20261011-iltapaiva.md` kohta 2; lisää `--ohita-nykyiset`).
 2. `pgrep -f tf182.sh` + `tail tf182-ketju.log`; jos ketju kuoli, jatka käsin pohjan `tf-ketju-pohja.sh` vaiheista.
-3. Testattavaa-ajo (kohta 0), jos `gh run list --workflow testflight-sisainen.yml -L 3` ei näytä sitä.
+3. Beta-arvion seuranta (beta-arvio-181.sh-malli) → rivi PT "lähetetty arvioon" + "hyväksytty"; Asemataulu-vaihe päivitys.
+3b. Siirtoseppä: kun BOTTI 147d72aef valmis → lista v47v → **v47y a1cd52906** (ei ennen).
 4. Peilaa + vie-sisalto e169c4d0f (kohta 3).
 5. Monitorit: vahti-loki + linjan 2 lukko + tf182-ketju.
 
 ## 6. Opit
+
+- TestFlightin whatsNew hylkää merkin ☰ (409 INVALID_TEXT) → poista symbolit Testattavaa-tekstistä.
+- Asemataulu (omistaja 19.5x): talo/eteneminen, Julkaisija kirjoittaa vaiheet 4 (TF-lataus) ja 5 (Applella/TF); get → update if_version.
 
 - `merge-vihreana-sha.zsh` jää ikuisesti odottamaan docs-haaroja, joilla ei ole CI:tä → merge käsin (`gh pr merge --squash
   --match-head-commit`), kun PT on kuitannut.
