@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """TestFlight-testaajien seuranta, VAIN LUKU (omistaja 11.10.2026 09.5x: "haluan vain nähdä milloin raatilaiset lataavat
 pelin itselleen"). Kirjoittaa JSONin (--ulos) ryhmittäin: liittyneet, tilat (INSTALLED/ACCEPTED/…), julkisen linkin
-käyttö (näytöt, hyväksynnät, viimeisin liittymispäivä), buildeittain asennukset/istunnot/kaatumiset ja viimeisin
-asennuspäivä sekä testaajarivit (nimi tai nimetön, kutsutapa, tila, istunnot, kaatumiset). Sähköposteja ei tallenneta.
+käyttö (näytöt, hyväksynnät, viimeisin liittymispäivä), asentaneet testaajat (tila INSTALLED), buildeittain
+asennukset/istunnot/kaatumiset (koko buildin luvut, kaikki ryhmät yhteensä) sekä testaajarivit (nimi tai nimetön, kutsutapa, tila, istunnot, kaatumiset). Sähköposteja ei tallenneta.
 Applen mittarit ovat päiväkohtaisia (dataPoints start/end), joten "viimeisin" on päivä, ei kellonaika.
 EI muuta mitään App Store Connectissa. Ympäristö: ASC_KEY_ID, ASC_ISSUER_ID, ASC_AVAIN_POLKU."""
 import argparse
@@ -116,8 +116,10 @@ def main():
             'kutsutavat': dict(collections.Counter(r['kutsutapa'] or '?' for r in rivit)),
             'nimettomia': sum(r['nimeton'] for r in rivit),
             'linkin_kaytto': linkki and {'summat': linkki['summat'], 'viimeisin_paiva': linkki['viimeisin_paiva']},
-            'asennukset_yhteensa': sum(x['asennukset'] or 0 for x in buildit),
-            'viimeisin_asennuspaiva': max((x['viimeisin_asennuspaiva'] or '' for x in buildit), default='') or None,
+            # Ryhmän asentaneet testaajien tilasta; buildien mittarit (betaBuildUsages) ovat koko buildin, kaikkien ryhmien.
+            'asentaneita': sum(r['tila'] == 'INSTALLED' for r in rivit),
+            'buildien_asennukset_kaikki_ryhmat': sum(x['asennukset'] or 0 for x in buildit),
+            'viimeisin_asennuspaiva_kaikki_ryhmat': max((x['viimeisin_asennuspaiva'] or '' for x in buildit), default='') or None,
             'buildit': buildit[:10],
             'testaajat': rivit,
         })
@@ -130,7 +132,7 @@ def main():
     os.replace(valiaik, a.ulos)
     for r in ryhmat:
         print(f"{r['nimi']}: liittyneitä {r['liittyneita']} {r['tilat']}, nimettömiä {r['nimettomia']}, "
-              f"asennuksia {r['asennukset_yhteensa']} (viimeisin {r['viimeisin_asennuspaiva']}), linkki {r['julkinen_linkki']}")
+              f"asentaneita {r['asentaneita']}, linkki {r['julkinen_linkki']}")
     for v in varoitukset:
         print(f'::warning::{v}')
 
