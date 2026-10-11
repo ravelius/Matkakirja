@@ -91,6 +91,7 @@ namespace Matkakirja.Natiivi
             alarivi = Rakenne.Teksti("", "mk-aikajana-havainne__kuvateksti", otsikko);
             Kirjasimet.Aseta(alarivi, Kirjasin.Moderni);
             alarivi.style.fontSize = Tyylikirja.Koko.Valiotsikko; alarivi.style.whiteSpace = WhiteSpace.Normal;
+            alarivi.style.unityTextAlign = TextAnchor.UpperLeft;   // rivittynyt rivi alkaa otsikon kohdalta (PT 11.10.; pohja keskittää)
             // Tekijärivi luettavaksi punaisella damastilla ja tummalla seinällä (LS2 11.10., kierros 33 pysähdystä: k11–k15, k24–k33):
             // vaaleampi paperisävy (Kehys.Paper, sama kuin otsikon --paper) tumman --paper-dark-sävyn sijaan.
             alarivi.style.color = (Color)Tyylikirja.Kehys.Paper;
