@@ -1,0 +1,10 @@
+{
+ "lat": -16.5,
+ "lon": -68.13,
+ "keskilampo": [9.4,9.4,9.1,8.3,6.6,5.3,5.1,6,7.5,8.8,9.7,9.9],
+ "ylin": [15,15,15,15,15,14,14,15,16,16,17,16],
+ "alin": [4,4,3,1,-2,-4,-4,-3,-1,1,2,4],
+ "sade": [134,105,72,32,14,5,7,15,36,38,51,95],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"La Paz","revisio":1379318434,"taulukko":"Climate data for El Alto, Bolivia (El Alto International Airport), elevation 4,058 m (13,314 ft), (1991–2020 normals, extremes 1942–present)","lahteet":"Source 1: Deutscher Wetterdienst (precipitation 1961–1990, humidity 1951–1981), | Source 2: Meteo Climat Servicio Nacional de Meteorología e Hidrología de Bolivia (snowy days 1981–2010)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":604,"luettu":"2026-10-11","huomiot":[]}
+}

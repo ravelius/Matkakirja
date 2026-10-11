@@ -3,30 +3,35 @@
   "id": "georgetown",
   "lat": 6.81,
   "lon": -58.15,
-  "wikidata": "Q10717"
+  "wikidata": "Q10717",
+  "artikkeli": "Georgetown, Guyana"
  },
  {
   "id": "paramaribo",
   "lat": 5.85,
   "lon": -55.2,
-  "wikidata": "Q3001"
+  "wikidata": "Q3001",
+  "artikkeli": "Paramaribo"
  },
  {
   "id": "brasilia",
   "lat": -15.79,
   "lon": -47.88,
-  "wikidata": "Q2844"
+  "wikidata": "Q2844",
+  "artikkeli": "Brasília"
  },
  {
   "id": "lapaz",
   "lat": -16.5,
   "lon": -68.13,
-  "wikidata": "Q1491"
+  "wikidata": "Q1491",
+  "artikkeli": "La Paz"
  },
  {
   "id": "santiagodechile",
   "lat": -33.44,
   "lon": -70.65,
-  "wikidata": "Q2887"
+  "wikidata": "Q2887",
+  "artikkeli": "Santiago"
  }
 ]

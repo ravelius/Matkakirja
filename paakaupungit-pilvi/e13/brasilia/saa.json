@@ -1,0 +1,10 @@
+{
+ "lat": -15.79,
+ "lon": -47.88,
+ "keskilampo": [21.9,21.9,21.8,21.6,20.3,19.3,19.3,21,22.8,23.1,21.7,21.7],
+ "ylin": [27,27,27,27,26,25,26,27,29,29,27,27],
+ "alin": [18,18,18,18,16,14,14,15,18,19,18,18],
+ "sade": [206,180,226,145,27,3,2,16,38,142,253,241],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Brasília","revisio":1378304880,"taulukko":"Climate data for Brasília (1991–2020, extremes 1961–present)","lahteet":"Source 1: Instituto Nacional de Meteorologia | Source 2: Meteo Climat (record highs and lows), NOAA (dew point)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":1479,"luettu":"2026-10-11","huomiot":[]}
+}

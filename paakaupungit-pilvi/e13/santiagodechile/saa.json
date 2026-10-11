@@ -1,0 +1,10 @@
+{
+ "lat": -33.44,
+ "lon": -70.65,
+ "keskilampo": [22,21.4,19.7,16.1,12.9,10.4,9.8,11.2,13.5,15.8,18.5,20.6],
+ "ylin": [30,30,28,23,19,16,16,18,20,23,27,29],
+ "alin": [14,13,12,9,7,5,4,5,7,9,10,12],
+ "sade": [1,1,4,18,43,80,50,44,25,12,5,3],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Santiago","revisio":1379044065,"taulukko":"Climate data for Quinta Normal, Santiago (1991–2020 normals, extremes 1911–present)","lahteet":"Source 1: Dirección Meteorológica de Chile | Source 2: NOAA (precipitation days 1991–2020) Deutscher Wetterdienst (humidity 1961–1990)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":286,"luettu":"2026-10-11","huomiot":[]}
+}

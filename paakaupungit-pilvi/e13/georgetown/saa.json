@@ -1,0 +1,10 @@
+{
+ "lat": 6.81,
+ "lon": -58.15,
+ "keskilampo": [25.8,25.8,26.4,26.9,26.9,26.7,26.8,27.3,27.7,27.7,27.2,26.4],
+ "ylin": [30,31,31,32,31,31,31,32,33,33,32,31],
+ "alin": [21,21,21,22,23,23,22,22,22,22,22,22],
+ "sade": [227,138,114,190,341,358,298,229,150,135,193,267],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Georgetown, Guyana","revisio":1378964866,"taulukko":"Climate data for Cheddi Jagan Airport (1991–2020)","lahteet":"Source: NOAA NCEI","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":2640,"luettu":"2026-10-11","huomiot":[]}
+}

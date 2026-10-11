@@ -1,0 +1,10 @@
+{
+ "lat": 5.85,
+ "lon": -55.2,
+ "keskilampo": [27.1,27.3,27.7,27.9,27.6,27.4,27.8,28.7,29.3,29.3,28.5,27.5],
+ "ylin": [29,29,29,30,30,30,31,32,32,32,31,30],
+ "alin": [24,23,24,25,24,24,24,25,25,25,25,24],
+ "sade": [173,146,131,216,307,296,234,148,90,87,126,184],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Paramaribo","revisio":1377354125,"taulukko":"Climate data for Paramaribo (Zorg en Hoop Airport) (1991–2020)","lahteet":"Source 1: NOAA | Source 2: World Meteorological Organization (Average precipitation days)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":2138,"luettu":"2026-10-11","huomiot":[]}
+}
