@@ -1,0 +1,53 @@
+{
+ "id": "mbabane",
+ "era": "e08",
+ "nimi": "Mbabane",
+ "nimiAlkukieli": "Mbabane",
+ "maa": "SWZ",
+ "maanNimi": "Swazimaa",
+ "asema": "pääkaupunki",
+ "lat": -26.3167,
+ "lon": 31.1333,
+ "wikidata": "Q3904",
+ "kevytSisalto": {
+  "kuvaus": "Mbabane on Swazimaan hallinnollinen pääkaupunki, joka sijaitsee Mdzimba-vuoriston rinteillä yli kilometrin korkeudessa. Kaupunki syntyi 1880-luvun lopulla kauppareitin joenylityspaikalle ja sai hallintokeskuksen aseman vuonna 1902. Kuninkaallinen ja lainsäädännöllinen keskus on läheisessä Lobambassa Ezulwinin laaksossa.",
+  "tunnusrakennukset": [
+   "Sibebe-kallio (valtava graniittimonoliitti kaupungin tuntumassa)",
+   "Mbabanen Swazi-tori (Swazi Market)",
+   "Ezulwini-laakso (kuninkaallinen seutu Lobambaan päin)"
+  ],
+  "asukkaat": {
+   "arvo": 60691,
+   "vuosi": 2017,
+   "lahde": "Eswatinin tilastotoimisto (Central Statistical Office), väestö- ja asuntolaskenta 11.5.2017, Mbabanen kaupunki; uudempaa laskentaa ei ole. Luku luettu citypopulation.de:n taulukosta, joka nimeää CSO:n lähteeksi.",
+   "linkki": "https://citypopulation.de/en/eswatini/cities/"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Swazimaa eli virallisesti Eswatini on Etelä-Afrikan ja Mosambikin väliin jäävä pieni sisämaavaltio, jonka maisemaa hallitsevat vuoristot, savannit ja itäinen Lubombo-vuoriharju. Maa nimettiin uudelleen Eswatiniksi vuonna 2018, kun kuningas Mswati III ilmoitti palauttavansa siswatinkielisen nimen. Se on yksi maailman harvoista absoluuttisista monarkioista, jossa kuningas nimittää hallituksen ja poliittiset puolueet eivät osallistu vaaleihin. Taloutta kannattelevat sokeriruoko, tekstiilit ja tiivis kauppa Etelä-Afrikan kanssa.",
+  "genetiivi": "Swazimaan",
+  "kielet": [
+   {
+    "kieli": "siswati",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "lilangeni (monikko emalangeni)",
+   "koodi": "SZL"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Mbabane",
+  "maanAvain": "Swazimaa",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

@@ -1,0 +1,58 @@
+{
+ "id": "victoria",
+ "era": "e08",
+ "nimi": "Victoria",
+ "nimiAlkukieli": "Victoria",
+ "maa": "SYC",
+ "maanNimi": "Seychellit",
+ "asema": "pääkaupunki",
+ "lat": 4.6236,
+ "lon": 55.4544,
+ "wikidata": "Q3940",
+ "kevytSisalto": {
+  "kuvaus": "Victoria on Mahén saaren koillisrannikon satamakaupunki ja Seychellien pääkaupunki, joka on yksi maailman pienimmistä pääkaupungeista. Kaupungin keskus on kompakti: siellä ovat kellotorni, kauppahalli, katedraali ja valtion virastot. Vehreät vuoret rajaavat kaupunkia taustalta, ja sataman kautta kulkee suurin osa maan tuonnista.",
+  "tunnusrakennukset": [
+   "Kellotorni (Lorloz)",
+   "Immaculate Conceptionin katedraali",
+   "Sir Selwyn Selwyn-Clarke -kauppahalli",
+   "Victorian kasvitieteellinen puutarha"
+  ],
+  "asukkaat": {
+   "arvo": 30145,
+   "vuosi": 2022,
+   "lahde": "National Bureau of Statistics Seychelles, Population and Housing Census 2022, Volume 2: Main Census Report (maaliskuu 2024), taulukko 2.3: Central-alue, yhdeksän piiriä pääkaupunki Victorian ympärillä (Île Perseverance 5 410, English River 3 508, Mont Buxton 2 778, Saint Louis 3 267, Bel Air 2 619, Mont Fleuri 3 506, Plaisance 3 685, Roche Caiman 3 157, Les Mamelles 2 215) = 30 145 laskettuna asukkaina (ei oikaistu alilaskennalla). NBS ei julkaise Victoriaa erillisenä yksikkönä. citypopulation.de:n Victoria-sarjan vuoden 2010 luku 26 450 on täsmälleen NBS:n Central-alueen luku, joten sama rajaus; sen 2022-luku 29 664 ei toistu NBS:n taulukoissa.",
+   "linkki": "https://www.nbs.gov.sc/downloads/1555-seychelles-population-and-housing-census-2022"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Seychellit on Intian valtamerellä, Itä-Afrikan rannikon edustalla sijaitseva saaristovaltio, johon kuuluu yli sata saarta. Suurin osa asukkaista asuu graniittisella Mahén saarella, jossa sijaitsee myös pääkaupunki Victoria. Maa itsenäistyi Britanniasta vuonna 1976, ja sen kolme virallista kieltä ovat kreoli, englanti ja ranska. Talous nojaa matkailuun ja kalastukseen, ja suuri osa maan pinta-alasta on suojeltua luontoa.",
+  "genetiivi": "Seychellien",
+  "kielet": [
+   {
+    "kieli": "seychellienkreoli",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "ranska",
+    "asema": "virallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Seychellien rupia",
+   "koodi": "SCR"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Victoria",
+  "maanAvain": "Seychellit",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

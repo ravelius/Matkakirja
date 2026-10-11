@@ -1,0 +1,97 @@
+{
+ "id": "harare",
+ "era": "e08",
+ "nimi": "Harare",
+ "nimiAlkukieli": "Harare",
+ "maa": "ZWE",
+ "maanNimi": "Zimbabwe",
+ "asema": "pääkaupunki",
+ "lat": -17.829,
+ "lon": 31.052,
+ "wikidata": "Q3921",
+ "kevytSisalto": {
+  "kuvaus": "Harare on Zimbabwen pääkaupunki ja suurin kaupunki, joka sijaitsee viileähkössä Highveld-ylängössä noin 1 500 metrin korkeudessa. Kaupungin perusti vuonna 1890 brittiläinen siirtokunta Fort Salisburyna, ja nykyisen nimensä se sai itsenäistymisen jälkeen 1982. Siellä ovat maan hallinto, rahoitus- ja kauppakeskus sekä leveät, jakarandapuiden reunustamat kadut.",
+  "tunnusrakennukset": [
+   "Harare Kopje -kallioharjanne",
+   "Pyhän Marian ja Kaikkien Pyhien katedraali (anglikaaninen)",
+   "Harare Gardens ja Africa Unity Square",
+   "Kansallisgalleria"
+  ],
+  "asukkaat": {
+   "arvo": 1491754,
+   "vuosi": 2022,
+   "lahde": "Zimbabwen kansallinen tilastovirasto (ZIMSTAT), väestö- ja asuntolaskenta 20.4.2022, Harare Urban -kaupunkipiiri; luku City Populationin välityksellä",
+   "linkki": "https://www.citypopulation.de/en/zimbabwe/admin/"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Valtakunta, joka jäi eurooppalaisiin karttoihin",
+    "Kuningas, joka lähti Shakan luota pohjoiseen",
+    "Meedio, jonka nimi palasi kahdeksankymmentä vuotta myöhemmin",
+    "Nimi valittiin kokouksessa"
+   ]
+  },
+  {
+   "id": "kuvataide",
+   "nimi": "Kuvataide",
+   "nostot": [
+    "Galleria, joka lähti etsimään veistäjiä",
+    "Tupakkatila, josta tuli veistäjäkylä",
+    "Kivi, jolla on veistäjän mukaan oma tahtonsa",
+    "Rodinin museo täyttyi zimbabwelaisesta kivestä"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Soitin, johon kiinnitetään pullonkorkkeja",
+    "Nainen, jolle kukaan ei halunnut opettaa",
+    "Hiiritanssi, joka sai raamatullisen nimen",
+    "Jit, joka sai levyjuontajan itkemään"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Sama jauho, kaksi ateriaa",
+    "Toukka, joka kerätään ja myydään tonneittain",
+    "Kalastus alkaa lampun sytyttämisestä",
+    "Ruoka, jonka pavut kypsyvät maan alla"
+   ]
+  },
+  {
+   "id": "urheilu",
+   "nimi": "Urheilu",
+   "nostot": [
+    "Kutsu tuli, kun muut jäivät pois",
+    "Ensimmäinen maaottelu, ensimmäinen yllätys",
+    "Bulawayolainen, joka avasi Valioliigan oven",
+    "Seitsemän mitalia yhdeltä uimarilta"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "skandaali:ruddin-myonnytys",
+   "nimi": "Rudd 1888",
+   "lahde": "skandaalit",
+   "laji": "skandaali",
+   "km": 5,
+   "teksti": "Ruddin myönnytys oli kirjallinen sopimus yksinoikeudesta kaivostoimintaan Matabelemaassa, Mashonamaassa ja niiden naapurialueilla. Kuningas Lobengula myönsi sen 30. lokakuuta 1888 Charles Ruddille, James Rochfort Maguirelle ja Francis Thom…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Harare",
+  "maanAvain": "Zimbabwe",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

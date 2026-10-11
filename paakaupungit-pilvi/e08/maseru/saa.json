@@ -1,0 +1,10 @@
+{
+ "lat": -29.32,
+ "lon": 27.48,
+ "keskilampo": [21.4,20.6,18.8,14.8,11.2,8.1,7.9,11.2,15.5,17.6,19.1,20.6],
+ "ylin": [28,27,25,22,19,17,17,20,24,26,27,28],
+ "alin": [15,14,12,8,3,0,-1,2,7,10,12,14],
+ "sade": [147,121,98,56,28,19,12,17,27,61,94,106],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Maseru","revisio":1377338556,"taulukko":"Climate data for Mejametala Airport (1991–2020)","lahteet":"Source: World Meteorological Organization","keskilampo":"Daily mean °C (°F)","sade":"Average rainfall mm (inches)","vuosisade":786,"luettu":"2026-10-11","huomiot":["sade = vain vesisade (Average rainfall)"]}
+}

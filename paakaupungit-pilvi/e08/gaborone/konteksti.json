@@ -1,0 +1,54 @@
+{
+ "id": "gaborone",
+ "era": "e08",
+ "nimi": "Gaborone",
+ "nimiAlkukieli": "Gaborone",
+ "maa": "BWA",
+ "maanNimi": "Botswana",
+ "asema": "pääkaupunki",
+ "lat": -24.6569,
+ "lon": 25.9086,
+ "wikidata": "Q3919",
+ "kevytSisalto": {
+  "kuvaus": "Gaborone on Botswanan pääkaupunki, joka rakennettiin suunnitelmallisesti uudeksi hallintokeskukseksi ennen itsenäistymistä. Se on maan suurin kaupunki ja hallinnon, rahoituksen ja kaupan keskus. Kaupunki sijaitsee maan kaakkoisosassa lähellä Etelä-Afrikan rajaa, ja sen läheisyydessä on pato, riistapuisto ja kukkuloita.",
+  "tunnusrakennukset": [
+   "Kansallismuseo ja taidegalleria (National Museum and Art Gallery)",
+   "Kansalliskokouksen rakennus",
+   "Gaborone-pato (Gaborone Dam)",
+   "Kgale Hill -kukkula"
+  ],
+  "asukkaat": {
+   "arvo": 246325,
+   "vuosi": 2022,
+   "lahde": "Statistics Botswana, Population and Housing Census 2022, Population of Cities, Towns and Villages (Version 2, kesäkuu 2022), Gaborone City (de facto -väestö). Koko maa 2 359 609.",
+   "linkki": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20of%20Cities%20Towns%20and%20Villages%20%202022.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Botswana on Etelä-Afrikan sisämaavaltio, jonka suurimman osan pinta-alasta peittävät Kalaharin hiekka-alueet ja savannit. Maa itsenäistyi Britanniasta 1966, ja se on pysynyt monipuoluejärjestelmällä toimivana tasavaltana itsenäistymisestä lähtien. Talous on perustunut ennen kaikkea timanttikaivostoimintaan, minkä lisäksi matkailu ja karjatalous ovat tärkeitä. Maan väestö on harvassa: asukkaita on keskimäärin vain muutama neliökilometriä kohden.",
+  "genetiivi": "Botswanan",
+  "kielet": [
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "setswana",
+    "asema": "kansallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "pula",
+   "koodi": "BWP"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Gaborone",
+  "maanAvain": "Botswana",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

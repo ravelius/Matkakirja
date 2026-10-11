@@ -1,0 +1,10 @@
+{
+ "lat": -18.91,
+ "lon": 47.53,
+ "keskilampo": [21.9,21.9,21.7,20.7,18.8,16.5,15.6,16.3,18,20.2,21.5,22.1],
+ "ylin": [26,26,26,26,24,21,20,22,24,26,27,27],
+ "alin": [17,18,17,16,14,12,11,11,12,14,16,17],
+ "sade": [312,237,156,45,15,6,6,5,8,39,117,226],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Antananarivo","revisio":1375911652,"taulukko":"Climate data for Antananarivo (1991–2020)","lahteet":"Source 1: NOAA (sun, 1961-1990) | Source 2: Pogoda (humidity, 1981-2010)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":1172,"luettu":"2026-10-11","huomiot":[]}
+}

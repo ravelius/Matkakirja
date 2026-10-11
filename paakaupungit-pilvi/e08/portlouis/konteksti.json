@@ -1,0 +1,62 @@
+{
+ "id": "portlouis",
+ "era": "e08",
+ "nimi": "Port Louis",
+ "nimiAlkukieli": "Port-Louis",
+ "maa": "MUS",
+ "maanNimi": "Mauritius",
+ "asema": "pääkaupunki",
+ "lat": -20.1619,
+ "lon": 57.4989,
+ "wikidata": "Q3929",
+ "kevytSisalto": {
+  "kuvaus": "Port Louis on Mauritiuksen pääkaupunki ja sen tärkein satama, joka sijaitsee pääsaaren luoteisrannikolla vuorten ja meren välissä. Ranskalaiset perustivat sen 1700-luvulla, ja kaupungissa näkyvät sekä siirtomaa-ajan kerrokset että monikulttuurinen nykyelämä. Keskusta on tiivis kauppa-, hallinto- ja satamakeskus, jossa on historiallinen tori ja vanha maahanmuuttajien vastaanottopaikka.",
+  "tunnusrakennukset": [
+   "Aapravasi Ghat (UNESCOn maailmanperintökohde)",
+   "Keskustori (Bazar Central)",
+   "Fort Adelaide (La Citadelle)",
+   "Champ de Mars -ravirata"
+  ],
+  "asukkaat": {
+   "arvo": 140403,
+   "vuosi": 2022,
+   "lahde": "Statistics Mauritius, 2022 Housing and Population Census, Volume III (Geographic and Migration Characteristics): asuinväestö kunnallisvaltuuston alueittain. Town of Port Louis (Municipal Council Area) = Port Louisin piiri 106 332 (sis. ward 2-North 8 055 ja wardit 3-8 yhteensä 98 277) + kaupungin osat Black Riverin ja Moka-piirin puolella (ward 2-South 12 143, ward 1-West 21 359, ward 2-West 569) = 140 403. Summa laskettu viraston omista ward-luvuista; täsmää citypopulation.de:n lukuun. Kaupungin osuus saaren väestöstä 11,80 % (taulukko G5).",
+   "linkki": "https://statsmauritius.govmu.org/Documents/Census_and_Surveys/Census2022/HPC_Vol3_Geo_Migration_Yr22_%20120126.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Mauritius on saarivaltio Intian valtamerellä, noin 2 000 kilometrin päässä Afrikan itärannikosta. Pääsaari on tulivuoriperäinen, ja sen rannikoilla on koralliriuttoja, laguuneja ja vehreitä vuoria. Maa itsenäistyi Britanniasta vuonna 1968, ja sen asukkaiden juuret ovat Intiassa, Afrikassa, Kiinassa ja Euroopassa, mikä näkyy kielissä, uskonnoissa ja ruoassa. Talous perustuu matkailuun, rahoituspalveluihin, vaatetukseen ja sokeriruokoon, ja maan poliittinen järjestelmä on monipuoluedemokratia.",
+  "genetiivi": "Mauritiuksen",
+  "kielet": [
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "ranska",
+    "asema": "muu"
+   },
+   {
+    "kieli": "Mauritiuksen kreoli",
+    "asema": "muu"
+   },
+   {
+    "kieli": "bhodžpuri",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Mauritiuksen rupia",
+   "koodi": "MUR"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Port Louis",
+  "maanAvain": "Mauritius",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

@@ -1,0 +1,72 @@
+[
+ {
+  "id": "harare",
+  "lat": -17.83,
+  "lon": 31.05,
+  "wikidata": "Q3921",
+  "artikkeli": "Harare"
+ },
+ {
+  "id": "maputo",
+  "lat": -25.97,
+  "lon": 32.57,
+  "wikidata": "Q3889",
+  "artikkeli": "Maputo"
+ },
+ {
+  "id": "mbabane",
+  "lat": -26.32,
+  "lon": 31.13,
+  "wikidata": "Q3904",
+  "artikkeli": "Mbabane"
+ },
+ {
+  "id": "maseru",
+  "lat": -29.32,
+  "lon": 27.48,
+  "wikidata": "Q3909",
+  "artikkeli": "Maseru"
+ },
+ {
+  "id": "gaborone",
+  "lat": -24.66,
+  "lon": 25.91,
+  "wikidata": "Q3919",
+  "artikkeli": "Gaborone"
+ },
+ {
+  "id": "windhoek",
+  "lat": -22.57,
+  "lon": 17.08,
+  "wikidata": "Q3935",
+  "artikkeli": "Windhoek"
+ },
+ {
+  "id": "moroni",
+  "lat": -11.7,
+  "lon": 43.25,
+  "wikidata": "Q3901",
+  "artikkeli": "Moroni, Comoros"
+ },
+ {
+  "id": "portlouis",
+  "lat": -20.16,
+  "lon": 57.5,
+  "wikidata": "Q3929",
+  "artikkeli": "Port Louis"
+ },
+ {
+  "id": "victoria",
+  "lat": 4.62,
+  "lon": 55.45,
+  "wikidata": "Q3940",
+  "artikkeli": "Victoria, Seychelles"
+ },
+ {
+  "id": "antananarivo",
+  "lat": -18.91,
+  "lon": 47.53,
+  "wikidata": "Q3915",
+  "artikkeli": "Antananarivo"
+ }
+]

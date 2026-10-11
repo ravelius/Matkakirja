@@ -1,0 +1,97 @@
+{
+ "id": "maputo",
+ "era": "e08",
+ "nimi": "Maputo",
+ "nimiAlkukieli": "Maputo",
+ "maa": "MOZ",
+ "maanNimi": "Mosambik",
+ "asema": "pääkaupunki",
+ "lat": -25.9689,
+ "lon": 32.5733,
+ "wikidata": "Q3889",
+ "kevytSisalto": {
+  "kuvaus": "Maputo on Mosambikin pääkaupunki, suurin kaupunki ja tärkein satama Maputonlahden länsirannalla Intian valtameren äärellä. Kaupunki kasvoi Portugalin siirtomaa-aikana linnakkeen ympärille, ja sen vanha keskusta on täynnä 1900-luvun alun rakennuksia. Vuonna 1976 itsenäistymisen jälkeen kaupunki sai nykyisen nimensä.",
+  "tunnusrakennukset": [
+   "Maputon rautatieasema",
+   "Casa de Ferro (Rautatalo)",
+   "Nossa Senhora da Conceição -linnake",
+   "Kaupungintalo"
+  ],
+  "asukkaat": {
+   "arvo": 1136296,
+   "vuosi": 2024,
+   "lahde": "Instituto Nacional de Estatística (INE) Moçambique, 'Projecções Anuais da População por Província 2017-2050', luettu INE:n Anuário Estatístico, Cidade de Maputo 2024, Quadro 2.1.1 ja 2.1.2: Cidade de Maputo 2024: 1 136 296 (2023: 1 133 235; 2025: 1 139 476; IV RGPH 2017 -pohja 1 118 378). Projektio, ei laskenta.",
+   "linkki": "https://ine.gov.mz/documents/20119/334674/Anuario_Cidade%20_Maputo%202024.pdf/8fe4a582-cfb0-cacd-6ce8-7aad1789c6b5?version=1.0&t=1753101965274&download=true"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Tila, joka periytyi tyttäreltä tyttärelle",
+    "Vesi, joka sitoo",
+    "Yhtiö, jolla oli oma pankki ja oma raha",
+    "Postimerkit, joita ei ollut tarkoitettu kirjeisiin"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Metsä, joka löytyi satelliittikuvasta",
+    "Kraatteri, jonka seinät ovat seitsemänsataa metriä",
+    "Vuori, jonne palattiin 66 vuoden jälkeen",
+    "Järvi, jossa on enemmän kalalajeja kuin missään"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Kansallisruoka jauhetaan huhmaressa",
+    "Perusruoka, joka ei ole kotoisin täältä",
+    "Curry, joka ei tarvitse curryjauhetta",
+    "Pähkinä, jonka kuori polttaa"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Orkesteri, jossa on kymmenen ksylofonia",
+    "Sävellys, jossa pilkataan naapuria",
+    "Kitara peltipurkista",
+    "Rytmi, joka ei ole Mosambikista"
+   ]
+  },
+  {
+   "id": "kuvataide",
+   "nimi": "Kuvataide",
+   "nostot": [
+    "Yksi puunkappale, kolme tyyliä",
+    "Tennisklubin pallopoika",
+    "Savi, joka on vihreää grafiitista",
+    "Valtaistuin, jonka termiitit allekirjoittivat"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "kohde:maputo-kaupunki",
+   "nimi": "Maputo",
+   "lahde": "fokuskohde",
+   "laji": "kaupunki",
+   "km": 0,
+   "teksti": "Maputo, vuoteen 1976 Lourenço Marques, on Mosambikin pääkaupunki Delagoan lahden pohjoisrannalla. Paikka sai nimensä portugalilaiselta merenkulkijalta, joka tutki lahden jokia 1544, ja nykyinen kaupunki juontuu 1781 perustetusta linnakkees…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Maputo",
+  "maanAvain": "Mosambik",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

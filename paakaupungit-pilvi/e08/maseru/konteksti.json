@@ -1,0 +1,54 @@
+{
+ "id": "maseru",
+ "era": "e08",
+ "nimi": "Maseru",
+ "nimiAlkukieli": "Maseru",
+ "maa": "LSO",
+ "maanNimi": "Lesotho",
+ "asema": "pääkaupunki",
+ "lat": -29.3167,
+ "lon": 27.4833,
+ "wikidata": "Q3909",
+ "kevytSisalto": {
+  "kuvaus": "Maseru on Lesothon pääkaupunki, joka sijaitsee maan luoteisosassa Mohokare- eli Caledon-joen rannalla suoraan Etelä-Afrikan rajalla. Britit perustivat sen poliisileiriksi vuonna 1869, ja nimi tarkoittaa sesothoksi punaisten hiekkakivien paikkaa. Kaupunki on maan hallinnon, kaupan ja teollisuuden keskus, ja siellä on siirtomaa-ajan rakennuksia ja vilkkaita kauppakatuja.",
+  "tunnusrakennukset": [
+   "Thaba Bosiu (kuningas Moshoeshoen vuoristolinnake lähellä Maseruja)",
+   "Our Lady of Victories -katedraali (valmistui 1955)",
+   "Basotho Hat -rakennus (hatun muotoinen käsityökeskus)",
+   "Mohokaren (Caledonin) joen raja-asema"
+  ],
+  "asukkaat": {
+   "arvo": 343541,
+   "vuosi": 2016,
+   "lahde": "Lesotho Bureau of Statistics, 2016 Population and Housing Census, Volume IV: Census Tables (2018), taulukko 1.10 Population in Urban and Peri-Urban: Maseru 160 948 miestä + 182 593 naista = 343 541",
+   "linkki": "https://catalog.ihsn.org/catalog/8293/download/89064"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Lesotho on Etelä-Afrikan kokonaan ympäröimä vuoristoinen kuningaskunta, jonka alin kohta on yli 1 400 metrin korkeudessa ja jonka asukkaat tunnetaan basothoina. Basuto-kuningas Moshoeshoe I yhdisti heimoja 1820-luvulta alkaen, ja Britannian suojeluksessa ollut Basutomaa itsenäistyi vuonna 1966. Maan tärkeitä tulonlähteitä ovat vaatetusteollisuus, Etelä-Afrikassa työskentelevien lähettämät rahat sekä Lesotho Highlands -vesihanke, joka myy vettä naapurimaalle. Lesotho on perustuslaillinen monarkia, ja sen raha loti on sidottu Etelä-Afrikan randiin.",
+  "genetiivi": "Lesothon",
+  "kielet": [
+   {
+    "kieli": "sesotho",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "englanti",
+    "asema": "virallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "loti (monikko maloti)",
+   "koodi": "LSL"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Maseru",
+  "maanAvain": "Lesotho",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

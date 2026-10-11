@@ -1,0 +1,97 @@
+{
+ "id": "antananarivo",
+ "era": "e08",
+ "nimi": "Antananarivo",
+ "nimiAlkukieli": "Antananarivo",
+ "maa": "MDG",
+ "maanNimi": "Madagaskar",
+ "asema": "pääkaupunki",
+ "lat": -18.91,
+ "lon": 47.525,
+ "wikidata": "Q3915",
+ "kevytSisalto": {
+  "kuvaus": "Antananarivo on Madagaskarin pääkaupunki ja suurin kaupunki, ja se levittyy pitkälle kallioharjanteelle saaren keskiylängöllä. Kuninkaallinen Rova-linnoitus hallitsee yläkaupunkia, ja rinteet täyttävät punatiiliset talot ja portaikot. Ympäröivät riisipellot ja Ikopa-joki ovat kaupungille tärkeitä, mutta sadekaudella tulvaherkkiä.",
+  "tunnusrakennukset": [
+   "Rova (Manjakamiadanan palatsi)",
+   "Andafiavaratran palatsi",
+   "Analakelyn tori ja portaat",
+   "Anosy-järvi"
+  ],
+  "asukkaat": {
+   "arvo": 1274225,
+   "vuosi": 2018,
+   "lahde": "INSTAT Madagascar, RGPH-3 (kolmas väestö- ja asuntolaskenta, 1.6.2018), Résultats globaux du RGPH-3 (joulukuu 2020), taulukko 7: Antananarivo Renivohitra -piiri 1 274 225 (kaikki kaupunkiväestöä)",
+   "linkki": "https://www.instat.mg/documents/upload/main/INSTAT_RGPH3-Definitif-ResultatsGlogaux-Tome2_17-2021.pdf"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Kanootti, joka toi kielen 7 300 kilometrin päästä",
+    "Neljäsataa univormua ja uudet aakkoset",
+    "Pääministeri, joka nai kolme kuningatarta",
+    "Yö, jona kuninkaanmäki paloi"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Yöeläin, joka koputtaa puuta kuin tikka",
+    "Muna, joka painoi kymmenen kiloa",
+    "Saaren ainoa iso peto",
+    "Rikkakasvi, josta tuli syöpälääke"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Riisi ei ole ruokalaji vaan ateria",
+    "Kansallisruoka, joka puuduttaa kielen",
+    "Kukka, joka on pölytettävä kahdessatoista tunnissa",
+    "Jälkiruoka, jota keitetään kaksi vuorokautta"
+   ]
+  },
+  {
+   "id": "musiikki",
+   "nimi": "Musiikki",
+   "nostot": [
+    "Bambuputki, jonka kielet kuorittiin siitä itsestään",
+    "Päivän mittainen näytelmä, joka alkaa puheella",
+    "Kaksisataayhdeksänkymmentä iskua minuutissa",
+    "Huilisti, joka päätyi setelin kuvaksi"
+   ]
+  },
+  {
+   "id": "kirjallisuus",
+   "nimi": "Kirjallisuus",
+   "nostot": [
+    "Suuret kirjoitukset, joita vain viisaat lukivat",
+    "Eepos, jonka sankari paljastuu soittotaidosta",
+    "Se, joka hallitsee sanat, hallitsee valtakunnan",
+    "Runoilija, joka jäi siirtomaan seurapiirien ulkopuolelle"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "kohde:ambohimanga",
+   "nimi": "Ambohimanga",
+   "lahde": "fokuskohde",
+   "laji": "historia",
+   "km": 17,
+   "teksti": "Ambohimanga on kukkula ja linnoitettu kuninkaallinen asuinpaikka eli rova noin 24 kilometriä Antananarivosta koilliseen. Se on merinojen kulttuuri-identiteetin tärkein tunnus ja parhaiten säilynyt esikoloniaalisen Merinan kuningaskunnan mu…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Antananarivo",
+  "maanAvain": "Madagaskar",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

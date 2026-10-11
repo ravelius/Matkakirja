@@ -1,0 +1,88 @@
+{
+ "id": "windhoek",
+ "era": "e08",
+ "nimi": "Windhoek",
+ "nimiAlkukieli": "Windhoek (afrikaans), Windhuk (saksa), Otjomuise (herero)",
+ "maa": "NAM",
+ "maanNimi": "Namibia",
+ "asema": "pääkaupunki",
+ "lat": -22.57,
+ "lon": 17.0836,
+ "wikidata": "Q3935",
+ "kevytSisalto": {
+  "kuvaus": "Windhoek on Namibian pääkaupunki ja suurin kaupunki keskellä maata Khomasin ylängöllä. Se kasvoi 1800-luvun lopulla saksalaisen siirtomaavallan aikana, ja kaupungin keskustassa on yhä saksalaistyylisiä rakennuksia. Namibia itsenäistyi vuonna 1990, ja Windhoek on sen jälkeen kasvanut nopeasti muuttoliikkeen vuoksi.",
+  "tunnusrakennukset": [
+   "Christuskirche (Kristuksen kirkko)",
+   "Alte Feste (Vanha linnake)",
+   "Tintenpalast (parlamenttirakennus)",
+   "Independence Memorial Museum"
+  ],
+  "asukkaat": {
+   "arvo": 486186,
+   "vuosi": 2023,
+   "lahde": "Namibia Statistics Agency (NSA), Namibia 2023 Population and Housing Census Main Report (28.10.2024), taulukko 4.5 Population by town and census years (2011 ja 2023) sekä liitetaulukko: Windhoek 486 186 (2011: 325 858). Raportin tekstissä mainitaan myös luku 486 301.",
+   "linkki": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Tuulinen kulma, jonka kapteeni valitsi",
+    "Kori päälaella",
+    "Satama, joka jäi naapurille",
+    "Nimi, joka annettiin YK:ssa"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Kasvi, joka ei voi kuolla",
+    "Ympyrät, joita ei ole saatu selitettyä",
+    "Kuoriainen, joka seisoo päällään",
+    "Gepardi asuu farmarin mailla"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Liha, jonka hinnasta neuvotellaan",
+    "Hirssi, joka myös juodaan",
+    "Sieni, joka kasvaa termiittien katolla",
+    "Meloni, jonka juuri yltää pohjaveteen"
+   ]
+  },
+  {
+   "id": "tiede",
+   "nimi": "Tiede",
+   "nostot": [
+    "Viisi peiliä ylängöllä",
+    "Verkko, joka kalastaa sumua",
+    "Suojelualue, jonka aarre on pimeys",
+    "Vanhin kuori — ja reikä siinä"
+   ]
+  },
+  {
+   "id": "kuvataide",
+   "nimi": "Kuvataide",
+   "nostot": [
+    "Seitsemän laattaa, jotka nimettiin kuulennon mukaan",
+    "Leijonamies ja kuusi varvasta",
+    "Linoleikkaaja, joka kirjoitti kuviinsa",
+    "Puku, joka kertoo lehmistä"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Windhoek",
+  "maanAvain": "Namibia",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

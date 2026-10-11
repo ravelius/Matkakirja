@@ -1,0 +1,58 @@
+{
+ "id": "moroni",
+ "era": "e08",
+ "nimi": "Moroni",
+ "nimiAlkukieli": "Moroni (arabia: موروني)",
+ "maa": "COM",
+ "maanNimi": "Komorit",
+ "asema": "pääkaupunki",
+ "lat": -11.7036,
+ "lon": 43.2536,
+ "wikidata": "Q3901",
+ "kevytSisalto": {
+  "kuvaus": "Moroni on Komorien pääkaupunki ja satamakaupunki Ngazidjan saaren länsirannikolla, tulivuori Karthalan juurella. Sen historiallinen ydin on vanha medina kapeine kujineen ja Badjanani-moskeijoineen, ja satamasta lähtee vaniljaa ja eteerisiä öljyjä. Kaupungin lähellä on laajoja torialueita, kuten Volo Volo.",
+  "tunnusrakennukset": [
+   "Badjanani-moskeija (vanha perjantaimoskeija, 1427)",
+   "Moronin medina (vanha kaupunginosa)",
+   "Moronin satama",
+   "Volo Volo -tori"
+  ],
+  "asukkaat": {
+   "arvo": 74747,
+   "vuosi": 2017,
+   "lahde": "INSEED (Komorit), RGPH 2017, Rapport d'analyse Thème 0: Résultats globaux, kuntataulukko: Commune de Moroni 74 747 (miehiä 38 507, naisia 36 240); saman raportin teemataulukko 12 antaa kaupungille Moroni 74 749",
+   "linkki": "https://www.nada.inseed-comores.org/index.php/catalog/8/download/70"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Komorit on kolmen suuren ja useiden pienten tulivuorisaarten saaristovaltio Intian valtameressä Mosambikin salmessa, Afrikan manner- ja Madagaskarin välissä. Maalla ei ole maarajoja, ja sen asukkaat puhuvat komoria, ranskaa ja arabiaa, jotka kaikki ovat virallisia kieliä. Talous nojaa maatalouteen, erityisesti vaniljaan, mausteneilikkaan ja ylang-ylang-eteerisiin öljyihin, sekä ulkomailla asuvien komorilaisten rahalähetyksiin. Saaristoon kuuluu myös Mayotte, joka on Ranskan hallinnassa ja jota Komorit vaatii omakseen.",
+  "genetiivi": "Komorien",
+  "kielet": [
+   {
+    "kieli": "komori (shikomori)",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "ranska",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "arabia",
+    "asema": "virallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Komorien frangi",
+   "koodi": "KMF"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Moroni",
+  "maanAvain": "Komorit",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

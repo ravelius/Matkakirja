@@ -1,0 +1,10 @@
+{
+ "lat": -24.66,
+ "lon": 25.91,
+ "keskilampo": [26.3,25.7,24.1,20.8,16.9,13.7,13.4,16.8,21.2,24.5,25.1,25.9],
+ "ylin": [33,32,31,28,25,22,23,26,30,32,32,33],
+ "alin": [20,19,18,14,8,5,4,8,12,17,18,19],
+ "sade": [94,83,64,26,8,4,1,2,11,41,68,86],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Gaborone","revisio":1379657447,"taulukko":"Climate data for Gaborone (Sir Seretse Khama International Airport) 1991–2020 normals, extremes 1950–present","lahteet":"Source 1: | Source 2: Weatherbase (records)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":488,"luettu":"2026-10-11","huomiot":[]}
+}

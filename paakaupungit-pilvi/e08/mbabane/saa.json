@@ -1,0 +1,10 @@
+{
+ "lat": -26.32,
+ "lon": 31.13,
+ "keskilampo": [20.4,20,19.5,17.5,14.9,12.6,12.5,14.5,16.8,18.1,18.9,19.9],
+ "ylin": [26,25,25,23,21,19,19,21,23,24,24,25],
+ "alin": [15,15,14,12,9,6,6,8,11,12,14,15],
+ "sade": [205,161,118,64,21,15,16,22,44,93,139,142],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Mbabane","revisio":1378731318,"taulukko":"Climate data for Mbabane (1991-2020 normals, extremes 1957-present)","lahteet":"Source 1: WMO | Source 2: NOAA (extremes, sunshine 1970-1975)","keskilampo":"Daily mean °C (°F)","sade":"Average rainfall mm (inches)","vuosisade":1040,"luettu":"2026-10-11","huomiot":["sade = vain vesisade (Average rainfall)"]}
+}

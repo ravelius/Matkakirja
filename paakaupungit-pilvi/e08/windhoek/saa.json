@@ -1,0 +1,10 @@
+{
+ "lat": -22.57,
+ "lon": 17.08,
+ "keskilampo": [23.8,22.8,21.6,19.4,16.5,13.9,13.7,16.3,20.6,22.6,23.3,24.1],
+ "ylin": [31,29,28,26,23,21,21,24,29,30,31,31],
+ "alin": [17,17,15,13,10,7,6,9,13,15,16,17],
+ "sade": [91,96,79,19,3,1,0,0,2,11,27,47],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Windhoek","revisio":1379280685,"taulukko":"Climate data for Windhoek (Eros Airport) 1991–2020 normals, extremes 1897–present","lahteet":"Source 1: Deutscher Wetterdienst Danish Meteorological Institute (sun only) | Source 2: Namibia Meteorological Service / World Meteorological Organization Climate Data","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":376,"luettu":"2026-10-11","huomiot":[]}
+}
