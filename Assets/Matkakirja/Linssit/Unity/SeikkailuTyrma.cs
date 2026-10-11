@@ -73,6 +73,9 @@ namespace Matkakirja.Natiivi
             if (SeikkailuVihjeet.Aktiivinen != null) SeikkailuVihjeet.Aktiivinen.Ydin.Tyrmassa = true;
             SeikkailuRepliikit.SoitaTaiVara("tyrma-vartija-vienti-1", null, t.ovi + Vector3.up * 1.6f);   // vartija sulkee oven (repliikit-lapi-v1)
             SeikkailuEsineet.Kolahti += t.Kolina;
+            // Alarajavalo (Laitetestaaja v6 3. kierros: ilman kynttilää lähes musta): käytävän soihdun kajo oven raoista sisään.
+            var sisaan = t.istuin - t.ovi; sisaan.y = 0; sisaan = sisaan.sqrMagnitude > 1e-4f ? sisaan.normalized : Vector3.zero;
+            t.Kajo("Tyrmän oven raon kajo", t.ovi + sisaan * 0.45f + Vector3.up * 0.35f, new Color(1f, 0.62f, 0.34f), 0.55f, 3.2f);
             go.AddComponent<SeikkailuTyrmaAanet>().Alusta(t, t.istuin, t.ovi, t.rako, t.avaimet, t.ryomiOn ? t.ryomi : t.ovi, kirjaa);   // tippuva vesi, askeleet, ohjaava ääni (Pelikoodari 11.10., PT B3)
             kirjaa?.Invoke($"seikkailu: tyrmä (muunnelma {t.ydin.Muunnelma}: {(t.ydin.Muunnelma == 1 ? "avaimet ilmaraosta" : t.ydin.Muunnelma == 2 ? "vesipojan ovi" : "irtokivi")})");
             return true;
@@ -90,6 +93,7 @@ namespace Matkakirja.Natiivi
                 SeikkailuAanet.SoitaTaiVara("avainnippu", "avain-lukko", rako, 0.8f);
                 if (avainId != null) SeikkailuEsineet.Aktiivinen?.Nayta(avainId, avaimet);
                 SeikkailuAanet.Soita("kivi-lasku", avaimet, 0.4f, 1.6f);   // avaimet kilahtavat olkiin
+                Kajo("Tyrmän kuunsäde avaimilla", avaimet + Vector3.up * 0.6f, new Color(0.62f, 0.71f, 0.85f), 0.45f, 1.6f);   // ilmaraon kuu avaimiin
                 kirjaa?.Invoke("seikkailu: tyrmä: avaimet pudotettiin ilmaraosta");
             }
             if (ydin.VesipoikaAvasi)
@@ -191,6 +195,13 @@ namespace Matkakirja.Natiivi
             SeikkailuValot.Liekki(g.transform, DioraamaNayttamo.Kerros);
         }
         Vector3 aukonSuu;
+        /// <summary>Heikko pistevalo tyrmän alarajaksi (ovi ja avaimet erottuvat ilman kynttilää); poistuu tyrmän mukana.</summary>
+        void Kajo(string nimi, Vector3 paikka, Color vari, float voima, float sade)
+        {
+            var g = new GameObject(nimi) { layer = DioraamaNayttamo.Kerros }; g.transform.SetParent(transform, false); g.transform.position = paikka;
+            var l = g.AddComponent<Light>(); l.type = LightType.Point; l.color = vari; l.intensity = voima; l.range = sade; l.shadows = LightShadows.None;
+            SeikkailuValot.MerkitseLiikkuvaksi(l);
+        }
         void Kolina(Vector3 _)
         {
             if (ydin.Muunnelma < 2 || Time.unscaledTime < kolinaAsti) return;
