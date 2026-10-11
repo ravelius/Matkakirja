@@ -246,7 +246,7 @@ namespace Matkakirja
                 || (kaukoHimmeat && kaukoJoukko.Contains(id)) || houkutinJoukko.Contains(id));
 
         // ---- HOUKUTTIMET (omistaja 11.10.2026 PT:n kautta, juna 182; Houkuttimet) ----
-        // Linssikaupungit violetteina ja lautapelikaupungit videopelien sinisellä hehkuvat pisteinä koko ajan, kaikilla zoomeilla
+        // Linssikaupungit violetteina ja Olavinlinna videopelien sinisellä hehkuvat pisteinä koko ajan, kaikilla zoomeilla
         // ja pelin rajauksesta riippumatta (Suodatettu). Piste ja hehkulevy ovat olemassa olevaa pistepohjaa (pisteMateriaali,
         // Transparent+1), joka piirtyy Cesiumin laattojen ja siis hunnun päälle. Värit UI:n puolelta tyylikirjan tokeneista
         // (UI/HoukutinVarit.cs → HoukutinLinssiVari ja HoukutinPeliVari; alfa 0 = ei asetettu → ei houkuttimia). Syke
@@ -403,22 +403,22 @@ namespace Matkakirja
         /// <summary>Houkuttimien tila lokiin ("MATKAKIRJA kartta: houkuttimet …"): pisteet, värit tokeneineen ja piirtojärjestys.</summary>
         public string HoukuttimetTila()
         {
-            int linssi = 0, peli = 0, video = 0, nakyvissa = 0;
+            int linssi = 0, video = 0, nakyvissa = 0;
             var loydetyt = new HashSet<string>();
             foreach (var m in houkutinMerkit)
             {
                 var laji = Houkuttimet.LajiTunnukselle(m.kaupunki.id);
-                if (laji == Houkuttimet.Laji.Linssi) linssi++; else if (laji == Houkuttimet.Laji.Videopeli) video++; else peli++;
+                if (laji == Houkuttimet.Laji.Linssi) linssi++; else video++;
                 if (m.juuri.gameObject.activeSelf) nakyvissa++;
                 loydetyt.Add(m.kaupunki.id);
             }
             var puuttuvat = new List<string>();
             foreach (var h in Houkuttimet.Lista) if (!loydetyt.Contains(h.Id)) puuttuvat.Add(h.Id);
             int jono = pisteMateriaali != null ? pisteMateriaali.renderQueue : -1;
-            return $"houkuttimet: {houkutinMerkit.Count} pistettä (linssi {linssi}, lautapeli {peli}, videopeli {video} vapaana; näkyvissä {nakyvissa}" +
+            return $"houkuttimet: {houkutinMerkit.Count} pistettä (linssi {linssi}, videopeli {video} vapaana; näkyvissä {nakyvissa}" +
                    (puuttuvat.Count > 0 ? $"; ei merkkiä tai väriä: {string.Join(", ", puuttuvat)}" : "") + "), " +
                    $"värit linssi #{ColorUtility.ToHtmlStringRGB(HoukutinLinssiVari)} ({Houkuttimet.LinssiToken}), " +
-                   $"lautapeli ja videopeli #{ColorUtility.ToHtmlStringRGB(HoukutinPeliVari)} ({Houkuttimet.PeliToken}), " +
+                   $"videopeli #{ColorUtility.ToHtmlStringRGB(HoukutinPeliVari)} ({Houkuttimet.PeliToken}), " +
                    $"hunnun päällä {(Houkuttimet.HunnunPaalla(jono) ? "kyllä" : "ei")} (pistejono {jono} > laatat ja huntu {Houkuttimet.LaattaJono}), " +
                    $"syke {(Joutosyke.Elaa ? "elää" : "levossa")}, linssitila {(LinssiTila ? "kyllä (ei hehkua)" : "ei")}, " +
                    $"kalusteet (eivät piilota houkuttimia) {KalusteKuvaus()}";
@@ -957,7 +957,7 @@ namespace Matkakirja
             public bool himmea; // pelaajan näkymä: rajauksen ulkopuolinen pelin kaupunki, piste 40 %, ei nimeä
             public bool kaukoHimmea; // Euroopan loitonnus: rajauksen ulkopuolinen Euroopan kaupunki, piste 40 %, ei nimeä, ei napautusta
             public bool houkutin; // houkutin (Houkuttimet): hehkuva piste hunnun päällä koko ajan, pelin rajauksesta riippumatta
-            public Color houkutinVari; // tyylikirjan token (HoukutinVarit): linssi violetti, lautapeli videopelien sininen
+            public Color houkutinVari; // tyylikirjan token (HoukutinVarit): linssi violetti, videopeli sininen
             public Transform hehku; // houkuttimen kuultava hehkulevy pisteen alla (sama pistepohja), luodaan tarvittaessa
             public Vector2 teksti; // nimen piirretty koko pisteinä (ilman pistettä ja rakoa)
             public bool lukittu; // nimen paikka lukittu (web LUKKO): vapautuu, kun kaupunki poistuu näkyvistä tai asu vaihtuu

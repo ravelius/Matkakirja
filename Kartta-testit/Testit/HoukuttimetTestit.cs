@@ -15,28 +15,28 @@ namespace Matkakirja.Kartta.Testit
         static readonly Dictionary<string, (double Lat, double Lon)> Paikat = new Dictionary<string, (double, double)>
         {
             ["alpit"] = (46.5, 9.8), ["lontoo"] = (51.507, -0.128), ["edinburgh"] = (55.953, -3.188), ["istanbul"] = (41.008, 28.978),
-            ["amsterdam"] = (52.37, 4.895), ["berliini"] = (52.52, 13.405), ["ateena"] = (37.984, 23.728),
+            ["amsterdam"] = (52.37, 4.895),
         };
 
         [Testi]
         static void HoukutinLista()
         {
             var linssit = Houkuttimet.Lista.Where(h => h.Laji == Houkuttimet.Laji.Linssi && !h.Vapaa).Select(h => h.Id).ToArray();
-            var pelit = Houkuttimet.Lista.Where(h => h.Laji == Houkuttimet.Laji.Lautapeli).Select(h => h.Id).ToArray();
             Oleta.Tosi(linssit.SequenceEqual(new[] { "alpit", "lontoo", "edinburgh", "istanbul", "amsterdam" }), "linssikaupungit: " + string.Join(",", linssit));
-            Oleta.Tosi(pelit.SequenceEqual(new[] { "berliini", "ateena" }), "lautapelikaupungit: " + string.Join(",", pelit));
+            // Lautapeleihin ei värikorostusta (omistaja 11.10. 17.1x): Berliini ja Ateena eivät ole houkuttimia.
+            Oleta.Tosi(Houkuttimet.LajiTunnukselle("berliini") == null && Houkuttimet.LajiTunnukselle("ateena") == null, "lautapelikaupungit ilman houkutinta");
             // Olavinlinna (NUI-jako): vapaa sininen piste, ei laudan kaupunki (ei napautusta), paikka 61,8639 N 28,9011 E.
             var olavi = Houkuttimet.Lista.Single(h => h.Laji == Houkuttimet.Laji.Videopeli);
             Oleta.Tosi(olavi.Id == "olavinlinna" && olavi.Vapaa && Math.Abs(olavi.Lat - 61.8639) < 1e-9 && Math.Abs(olavi.Lon - 28.9011) < 1e-9, "Olavinlinna " + olavi);
             Oleta.Tosi(Houkuttimet.LajiKaupungille("olavinlinna") == null && Houkuttimet.LajiTunnukselle("olavinlinna") == Houkuttimet.Laji.Videopeli,
                        "Olavinlinna ei ole kaupunki (ei napautusta)");
             Oleta.Tosi(Houkuttimet.Token(Houkuttimet.Laji.Videopeli) == Houkuttimet.PeliToken, "Olavinlinna videopelien sinisellä");
-            Oleta.Tosi(Houkuttimet.Lista.Length == 9 && Houkuttimet.Lista.Count(h => !h.Vapaa) == 7, "9 houkutinta: 5 linssiä, 2 lautapeliä, Olavinlinna, Andøya");
+            Oleta.Tosi(Houkuttimet.Lista.Length == 7 && Houkuttimet.Lista.Count(h => !h.Vapaa) == 5, "7 houkutinta: 5 linssiä, Olavinlinna, Andøya");
             var andoya = Houkuttimet.Lista.First(h => h.Id == "andoya");
             Oleta.Tosi(andoya.Vapaa && andoya.Laji == Houkuttimet.Laji.Linssi && Math.Abs(andoya.Lat - 69.2944) < 1e-9 && Math.Abs(andoya.Lon - 16.0206) < 1e-9
                 && Houkuttimet.LajiKaupungille("andoya") == null, "Andøya vapaa violetti piste " + andoya);
             Oleta.Tosi(Houkuttimet.Lista.Select(h => h.Id).Distinct().Count() == Houkuttimet.Lista.Length, "tunnukset yksilöllisiä");
-            Oleta.Tosi(Houkuttimet.LajiKaupungille("alpit") == Houkuttimet.Laji.Linssi && Houkuttimet.LajiKaupungille("ateena") == Houkuttimet.Laji.Lautapeli
+            Oleta.Tosi(Houkuttimet.LajiKaupungille("alpit") == Houkuttimet.Laji.Linssi && Houkuttimet.LajiKaupungille("ateena") == null
                        && Houkuttimet.LajiKaupungille("pariisi") == null && Houkuttimet.LajiKaupungille(null) == null, "laji kaupungille");
             foreach (var h in Houkuttimet.Lista) Oleta.Tosi(!string.IsNullOrEmpty(h.Kohde), h.Id + ": kohde");
         }
