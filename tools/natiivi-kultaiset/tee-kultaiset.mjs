@@ -17,7 +17,7 @@ const TAMA = path.dirname(fileURLToPath(import.meta.url));
 const JS = path.resolve(process.argv[2] ?? '/Users/Shared/Claude/Matkakirja-pelikoodari/js');
 const tuo = (nimi) => import(pathToFileURL(path.join(JS, nimi)).href);
 
-const { buildBoard, findMoves, reachableCities, posKey } = await tuo('rules.js');
+const { buildBoard, findMoves, reachableCities, posKey, SEA_FEE } = await tuo('rules.js');
 const { packById } = await tuo('pack.js');
 const { mulberry32 } = await tuo('game.js');
 
@@ -43,7 +43,7 @@ pKaaret.forEach((r, i) => {
   const e = board.edges[i];
   const d = r.data;
   const pType = d.type ?? 'land';
-  const pFee = pType === 'sea' ? (d.fee ?? 100) : 0;
+  const pFee = pType === 'sea' ? (d.fee ?? SEA_FEE) : 0; // juna 183: oletus SEA_FEE (ennen kovakoodattu 100)
   if (!e || e.a !== d.a || e.b !== d.b || e.steps !== d.steps || e.type !== pType || e.fee !== pFee) {
     erot.push(`kaari #${i}: paketti ${d.a}|${d.b} ${pType} ${d.steps}/${pFee}, lauta ${e && `${e.id} ${e.type} ${e.steps}/${e.fee}`}`);
   }
