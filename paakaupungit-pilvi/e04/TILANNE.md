@@ -12,10 +12,10 @@ Aiempi Sää/Commons-rajapintaeste: 11.10.2026 robots.txt kieltää en/fi-Wikipe
 
 | id | A | B | C | D | E | F | huomio |
 |---|---|---|---|---|---|---|---|
-| rabat | valmis | valmis | kesken | — | — | — | A ja23kuvanBvalmis; C työnalla |
+| rabat | valmis | valmis | valmis | kesken | — | — | C0virhetta1varoitus; D työnalla |
 | alger | valmis | kesken | — | — | — | — | A valmis; B työnalla; säänull |
-| nouakchott | kesken | — | — | — | — | — | A-agentti työn alla |
-| praia | kesken | — | — | — | — | — |  |
+| nouakchott | poikkeama avoin | — | — | — | — | — | Faktat koottu, kartta2WPpistetta; A ei vielä valmis |
+| praia | kesken | — | — | — | — | — | A työnalla |
 | banjul | kesken | — | — | — | — | — |  |
 | bissau | kesken | — | — | — | — | — |  |
 | conakry | kesken | — | — | — | — | — |  |
