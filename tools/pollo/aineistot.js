@@ -73,7 +73,7 @@ export const OPAS_AINEISTOT = Object.freeze({
   // Yksityiskohtakuvat (Sisältökirjuri 7.10.; natiivi lentää kuvan sivuun ankkurisanan kohdalla): luettelo media-juuresta.
   // 10.10. (Päätoimittajan kuittaus 09.3x): 63 uutta Codex-havainnekuvaa 20 kaupunkiin (paketit opas-havainnekuvat-vienti-20261010 ja opas-havainnekuvat-7okt-vienti-20261010: + Pariisi 5, Praha 1, Wien 1, Kööpenhamina 1 kuvaa 7.10. toimituksista; Sevilla perässä, kun Codex toimittaa).
   yksityiskohdat_polut: {
-    pariisi: 'esittely/pariisi-v3/pariisi-yksityiskohdat.json',
+    pariisi: 'esittely/pariisi-v4/pariisi-yksityiskohdat.json',   // v4 11.10. (PT, suojatarkastus): Orsayn Aulenti-sisätila → tulvakuva 1910 (PD)
     praha: 'esittely/praha-v2/praha-yksityiskohdat.json', wien: 'esittely/wien-v2/wien-yksityiskohdat.json',
     rooma: 'esittely/rooma-v5/rooma-yksityiskohdat.json', lontoo: 'esittely/lontoo-v3/lontoo-yksityiskohdat.json',
     koopenhamina: 'esittely/koopenhamina-v5/koopenhamina-yksityiskohdat.json',
@@ -83,7 +83,7 @@ export const OPAS_AINEISTOT = Object.freeze({
     madrid: 'esittely/madrid-v2/madrid-yksityiskohdat.json', ateena: 'esittely/ateena-v2/ateena-yksityiskohdat.json',
     firenze: 'esittely/firenze-v3/firenze-yksityiskohdat.json',
     // erät 3–4 (8.10.)
-    lissabon: 'esittely/lissabon-v2/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v6/tukholma-yksityiskohdat.json',   // v5 9.10.: + Kuninkaanlinnan aarrekammio ja Erik XIV:n kruunu
+    lissabon: 'esittely/lissabon-v2/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v7/tukholma-yksityiskohdat.json',   // v7 11.10. (PT, suojatarkastus): Sergels torgin obeliski- ja Plattan-kuva pois. v5 9.10.: + Kuninkaanlinnan aarrekammio ja Erik XIV:n kruunu
     helsinki: 'esittely/helsinki-v3/helsinki-yksityiskohdat.json', budapest: 'esittely/budapest-v2/budapest-yksityiskohdat.json',
     // erät 5–6 (8.10.)
     edinburgh: 'esittely/edinburgh-v2/edinburgh-yksityiskohdat.json', dublin: 'esittely/dublin-v2/dublin-yksityiskohdat.json',

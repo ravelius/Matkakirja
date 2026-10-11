@@ -250,7 +250,7 @@ test('sana-ajat (LS1 7.10.): aani_ajat vain kun R2:ssa on <sha>.ajat.json; GET p
 
 test('yksityiskohdat_polut: 6 äänellistä + kaikki 31 äänetöntä (Sisältökirjuri 10.10.; 33 havainnekuvakaupunkia, Sevilla perässä)', async () => {
   const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
-  assert.deepEqual(OPAS_AINEISTOT.yksityiskohdat_polut, { pariisi: 'esittely/pariisi-v3/pariisi-yksityiskohdat.json',
+  assert.deepEqual(OPAS_AINEISTOT.yksityiskohdat_polut, { pariisi: 'esittely/pariisi-v4/pariisi-yksityiskohdat.json',
     praha: 'esittely/praha-v2/praha-yksityiskohdat.json', wien: 'esittely/wien-v2/wien-yksityiskohdat.json',
     rooma: 'esittely/rooma-v5/rooma-yksityiskohdat.json', lontoo: 'esittely/lontoo-v3/lontoo-yksityiskohdat.json',
     koopenhamina: 'esittely/koopenhamina-v5/koopenhamina-yksityiskohdat.json',
@@ -258,7 +258,7 @@ test('yksityiskohdat_polut: 6 äänellistä + kaikki 31 äänetöntä (Sisältö
     berliini: 'esittely/berliini-v3/berliini-yksityiskohdat.json', amsterdam: 'esittely/amsterdam-v2/amsterdam-yksityiskohdat.json',
     madrid: 'esittely/madrid-v2/madrid-yksityiskohdat.json', ateena: 'esittely/ateena-v2/ateena-yksityiskohdat.json',
     firenze: 'esittely/firenze-v3/firenze-yksityiskohdat.json',
-    lissabon: 'esittely/lissabon-v2/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v6/tukholma-yksityiskohdat.json',
+    lissabon: 'esittely/lissabon-v2/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v7/tukholma-yksityiskohdat.json',
     helsinki: 'esittely/helsinki-v3/helsinki-yksityiskohdat.json', budapest: 'esittely/budapest-v2/budapest-yksityiskohdat.json',
     edinburgh: 'esittely/edinburgh-v2/edinburgh-yksityiskohdat.json', dublin: 'esittely/dublin-v2/dublin-yksityiskohdat.json',
     krakova: 'esittely/krakova-v2/krakova-yksityiskohdat.json', sevilla: 'esittely/sevilla-v1/sevilla-yksityiskohdat.json',
