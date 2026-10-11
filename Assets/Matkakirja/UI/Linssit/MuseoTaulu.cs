@@ -61,6 +61,9 @@ namespace Matkakirja.Natiivi
             alarivi = Rakenne.Teksti("", "mk-aikajana-havainne__kuvateksti", otsikko);
             Kirjasimet.Aseta(alarivi, Kirjasin.Antiikva);
             alarivi.style.fontSize = Tyylikirja.Koko.Valiotsikko; alarivi.style.whiteSpace = WhiteSpace.Normal;
+            // Tekijärivi luettavaksi punaisella damastilla ja tummalla seinällä (LS2 11.10., kierros 33 pysähdystä: k11–k15, k24–k33):
+            // vaaleampi paperisävy (Kehys.Paper, sama kuin otsikon --paper) tumman --paper-dark-sävyn sijaan.
+            alarivi.style.color = (Color)Tyylikirja.Kehys.Paper;
             foreach (var t in new[] { nimi, alarivi })
             {
                 t.style.textShadow = new TextShadow { offset = new Vector2(0, 2), blurRadius = 14, color = Tyylikirja.Himmennys.Kuva };
@@ -182,7 +185,7 @@ namespace Matkakirja.Natiivi
             bool matala = h > 0 && h < MatalaKorkeus;
             float koko = w < KapeaLeveys || matala ? Tyylikirja.Koko.Otsikko : Tyylikirja.Koko.Nimio;
             if (nimi.resolvedStyle.fontSize != koko) nimi.style.fontSize = koko;
-            float ala = matala ? Tyylikirja.Koko.Leipa : Tyylikirja.Koko.Valiotsikko;
+            float ala = Tyylikirja.Koko.Valiotsikko;   // matalassakin (LS2 11.10.: Leipa 16 oli lukukelvoton seinää vasten)
             if (alarivi.resolvedStyle.fontSize != ala) alarivi.style.fontSize = ala;
             float yla = matala ? 10f : 76f;
             if (otsikko.resolvedStyle.top != yla) otsikko.style.top = yla;

@@ -384,7 +384,9 @@ namespace Matkakirja.Natiivi
                     if (ruudulla && (!string.IsNullOrEmpty(teksti) || (piirtaa && r.width >= 16 && r.height >= 16)))
                     {
                         if (n++ > 0) sb.Append(',');
-                        sb.Append("{\"kerros\":").Append(kerros).Append(",\"nimi\":").Append(J(e.name))
+                        // Nimi: elementin name tai VoiceOver-nimi (tooltip; Ohjausnappi.Nappi), jotta todistusajon tap-teksti löytää
+                        // kuvakenapit nimellä ("Seuraava teos", "Vapaa kulku"; LS2 11.10.).
+                        sb.Append("{\"kerros\":").Append(kerros).Append(",\"nimi\":").Append(J(string.IsNullOrEmpty(e.name) ? e.tooltip : e.name))
                           .Append(",\"luokat\":").Append(J(string.Join(" ", e.GetClasses())))
                           .Append(",\"tyyppi\":").Append(J(e.GetType().Name));
                         if (!string.IsNullOrEmpty(teksti)) sb.Append(",\"teksti\":").Append(J(teksti)).Append(",\"fontti\":").Append(L(rs.fontSize));
