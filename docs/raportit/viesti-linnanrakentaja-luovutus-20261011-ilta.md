@@ -101,3 +101,16 @@ SEURAAVAKSI: yhdistä eleet (kohta 3: soutaja_yhdista.py tyo/eleet-leikkeet.glb 
   ihon sävy, parta) → NS:n vertailuajo → PT → omistaja. Ei pakettiin ennen omistajaa.
 - Keittiön HDR v2 (yö, kalkkiseinät, luotaimet, yo-albedo-8k) toimitettu LS2:lle (_valmiit/olavinlinna-keittio-hdr-v1/).
 - Natiivi ei näytä yleisiä valo:-merkkejä (vain koodatut); näkyvät valot = tilat/*.glb:n liekki:/valo:-solmut.
+
+## JATKO 12.10. ~02.xx (yö)
+- VIETY: v48c (soutaja-MH + keittiön HDR: 1499 d346e7617d4e3553 / NYKY 63caeaeaef86cb74), v48d (jumit 19 + 55/61, MH-hahmot;
+  161328b95757469f / ffe91b0e640479e5), v48e = 17/17-ehdokas (jumi 16: kierreportaan sisäänkäynti 45° → 60°, kavely.py rivi ~632;
+  86fa5566a0939114 / 4876c22f12e09b1a). Kappalainen/aitan hoitaja MH POISSA v48e:stä (v1 ei junaan; hahmot/ennen-v48e/).
+- OMISTAJA HYVÄKSYI MetaHumanin. Agentti tekee puhujat (linna-hahmot/metahuman-<id>-v1/, VALMIS-tiedosto). Paketointi:
+  tyokalut-lr/mh_pakettiin.zsh <id> → hahmot/<id>-mh.glb + -mh-<i>-6x6.astcm. Valmiit (paketissa): soutaja v1d, portinvartija v1c,
+  vartija v1c, vartija2 v1c (uusi henkilö: henkilot.js + hahmot-skin.json + olavinlinna.js lisaHenkilot, 24ce8745c; merkit ranta/harja),
+  kokki v1c, vouti, apulainen v1b. Aitan hoitaja v1b valmis (ei paketissa) → v48f. Kappalainen v1b, vesipoika, renki kesken.
+  Unreal: avaa hahmo kerrallaan ja sulje (PT: 64 Gt muistia 01.0x).
+- v48f = aitan hoitaja v1b + kappalainen v1b (+ vesipoika, renki) junaan 183 jos ehtii ennen lukitusta, muuten 184.
+- Jumiagentti (v48c-kavely.py-muutokset) jäi jumiin; kytkin itse: 16:n pielileikkaus V48C_16-lipun taakse (katkaisi 15→16).
+- rakenna.mjs: tilan valoatlas.hdr (24dc95a94); vie-blender vie HDR-tiedostot.
