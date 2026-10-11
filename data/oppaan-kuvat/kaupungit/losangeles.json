@@ -526,28 +526,15 @@
    "kuvat": [
     {
      "jarjestys": 1,
-     "tiedosto": "Fort Moore Pioneer Memorial, Downtown Los Angeles.JPG",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fort_Moore_Pioneer_Memorial%2C_Downtown_Los_Angeles.JPG?width=1280",
-     "tekija": "Los Angeles",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fort_Moore_Pioneer_Memorial%2C_Downtown_Los_Angeles.JPG",
-     "selite": "Fort Moore -muistomuuri kertoo sotilaiden ja uudisasukkaiden vaiheista Bunker Hillin rinteellä.",
-     "leveys": 2752,
-     "korkeus": 2018,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Los Angeles, California (September 9, 2022) - 242.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Los_Angeles%2C_California_(September_9%2C_2022)_-_242.jpg?width=1280",
-     "tekija": "Another Believer",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Los_Angeles%2C_California_(September_9%2C_2022)_-_242.jpg",
-     "selite": "Muistomuurin vieressä on pitkä vesiallas ja tiilimuuri.",
-     "leveys": 4032,
-     "korkeus": 3024,
+     "tiedosto": "Exterior view of second Los Angeles High School, Fort Moore Hill, Los Angeles, 1908 (CHS-5349).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Exterior_view_of_second_Los_Angeles_High_School%2C_Fort_Moore_Hill%2C_Los_Angeles%2C_1908_(CHS-5349).jpg?width=1280",
+     "tekija": "Tuntematon tekijä (California Historical Society -kokoelma)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Exterior_view_of_second_Los_Angeles_High_School%2C_Fort_Moore_Hill%2C_Los_Angeles%2C_1908_(CHS-5349).jpg",
+     "selite": "Punatiilinen, nelikerroksinen lukiorakennus kellotorneineen seisoo Hill Streetin varrella Fort Moore Hillillä vuonna 1908.",
+     "leveys": 4200,
+     "korkeus": 5209,
      "tarkistettu": true
     }
    ]

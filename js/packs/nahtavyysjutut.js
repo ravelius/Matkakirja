@@ -43821,10 +43821,9 @@ export const NAHTAVYYSJUTUT = {
           + 'kaupunkinsa lehti-ilmoituksessa 1836.',
       kuvat: [
         {
-          tiedosto: 'Sam Houston Monument in Hermann Park.JPG',
-          selite: 'Ratsastajapatsas seisoo kaariportin päällä puiston '
-            + 'pohjoispäässä kaupungin tornien edessä.',
-          lahde: 'Agsftw, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: "Hermann Park, Houston Texas.jpg",
+          selite: "Hermann Parkin lammen rannalla kasvaa tiheää puustoa, ja kuvan oikealla puolella lampea ylittää matala puusilta.",
+          lahde: "Zp 2298, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -44581,10 +44580,10 @@ export const NAHTAVYYSJUTUT = {
           + 'ensimmäisten neljän kuukauden aikana.',
       kuvat: [
         {
-          tiedosto: 'PAMM MRD 08.jpg',
+          tiedosto: "Perez museum, Miami, Florida, Usa (51015332721).jpg",
           selite: 'Riippuvat kasvipylväät varjostavat museon '
             + 'julkisivua lahden puolelta.',
-          lahde: 'Erik Cleves Kristensen, Wikimedia Commons (CC BY 2.0)',
+          lahde: "Paolo Gamba, Wikimedia Commons (CC BY 2.0)",
         },
         {
           tiedosto: 'Wynwood Walls Miami Florida October 2013.jpg',
@@ -47741,12 +47740,6 @@ export const NAHTAVYYSJUTUT = {
           + 'kuivuudesta lähtien ja avattiin uudelleen joulukuussa '
           + '2018.',
       kuvat: [
-        {
-          tiedosto: 'Los Angeles, California (September 9, 2022) - 241.jpg',
-          selite: 'Kreisin terrakottapaneeli vasemmalla ja 24 metriä leveä '
-            + 'vesiputous, joka avattiin uudelleen 2018.',
-          lahde: 'Another Believer, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -48033,12 +48026,10 @@ export const NAHTAVYYSJUTUT = {
           + 'syyskuussa 2026.',
       kuvat: [
         {
-          tiedosto: 'Art in Pershing Square Park, a public park in downtown Los Angeles, California LCCN2013632114.tif',
-          lyhyt: 'Legorretan ja Olinin 1994 aukiolla on violetti kellotorni ja oranssit pallot.',
-          selite: 'Legorretan ja Olinin vuoden 1994 aukio: violetti '
-            + 'kellotorni, oranssit pallot ja kivetys, jonka alla on 1952 '
-            + 'kaivettu pysäköintilaitos.',
-          lahde: 'Carol M. Highsmith, Wikimedia Commons (PD)',
+          tiedosto: "Pershing Square, Biltmore Hotel to the left, Los Angeles, California (64208).jpg",
+          lyhyt: "Pershing Square vanhassa postikortissa: palmuja, nurmikoita ja Biltmore-hotelli.",
+          selite: "Vanhassa postikortissa Pershing Squaren puisto, jonka palmut ja nurmikot ulottuvat vasemmalla kohoavan Biltmore-hotellin ja muiden korkeiden rakennusten juurelle.",
+          lahde: "Tichnor Brothers / Boston Public Library, Wikimedia Commons (Public domain)",
         },
       ],
       lahde: 'Wikipedia',
@@ -48905,12 +48896,10 @@ export const NAHTAVYYSJUTUT = {
           + '2009 sulkemispäätös peruttiin.',
       kuvat: [
         {
-          tiedosto: 'TremeTombUnknownSlave.jpg',
-          lyhyt: 'Tuntemattoman orjan hauta on raskaista ketjuista taivutettu risti kirkon puutarhassa.',
-          selite: 'Tuntemattoman orjan hauta on raskaista ketjuista '
-            + 'taivutettu risti kirkon puutarhassa, lasimaalausikkunoiden '
-            + 'alla.',
-          lahde: 'Infrogmation of New Orleans, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: "St augustine church 23 march 2023.jpg",
+          lyhyt: "St. Augustinen kirkon kellotorni ja julkisivu Tremén kaupunginosassa.",
+          selite: "St. Augustinen kirkon kellotorni ja julkisivu Tremén kaupunginosassa New Orleansissa.",
+          lahde: "Ryan Nixon, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Wikipedia',

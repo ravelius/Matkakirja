@@ -1043,15 +1043,6 @@ export const NORTHAMERICA_VALOKUVAT = {
           + 'josta heidät aikanaan siirrettiin pois.',
       },
       {
-        tiedosto: 'Crazy Horse Memorial from Visitors Center.jpg',
-        vuosi: '2018',
-        lahde: 'Jeffreylcooke, Commons (CC BY-SA 4.0)',
-        lyhyt: 'Crazy Horse Memorial samassa vuoristossa vuonna 2018.',
-        selite: 'Crazy Horse Memorial samassa vuoristossa. Lakotapäällikköä '
-          + 'esittävää veistosta on louhittu vuodesta 1948, se on yhä kesken '
-          + 'ja rahoitetaan ilman valtion tukea.',
-      },
-      {
         tiedosto: 'Mount Rushmore and the Avenue of Flags SD.jpg',
         vuosi: '2012',
         lahde: 'MPSharwood, Commons (CC BY-SA 4.0)',

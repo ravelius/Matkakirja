@@ -71341,7 +71341,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Neljätuhatta vuotta Fraserin suulla',
-          tiedosto: 'Musqueam House post MOA.jpg',
+          tiedosto: "Marpole Midden monument.JPG",
           teksti: 'Musqueam-kansa on asunut Point Greyn seudulla ja '
             + 'Fraser-joen suulla ainakin 4 000 vuotta. Marpolen '
             + 'kuoppakeon kohdalla oli c̓əsnaʔəm, kansan suurin kylä '
@@ -71353,11 +71353,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'johtaa bändineuvosto päällikkönään Wayne Sparrow, ja '
             + 'Musqueam Capital Corporation hoitaa sen kiinteistöjä '
             + 'ympäri Vancouverin seutua.',
-          lyhyt: 'Musqueam-taiteilija Susan Point veisti talopaalun yliopiston antropologisen museon taakse.',
-          selite: 'Musqueam-taiteilija Susan Point veisti talopaalun '
-            + 'British Columbian yliopiston antropologisen museon taakse; '
-            + 'hän suunnitteli myös kansan lipun.',
-          lahde: 'Leoboudv, Wikimedia Commons (CC BY-SA 3.0)',
+          lyhyt: "Marpole Midden -muistokiviröykkiö seisoo nurmikolla puiden ja talojen keskellä Vancouverissa.",
+          selite: "Muistolaatalla varustettu kiviröykkiö seisoo nurmikolla puiden ja asuinrakennusten keskellä Marpole Midden -paikalla Vancouverissa.",
+          lahde: "Holbytlan, Wikimedia Commons (CC BY-SA 3.0)",
           wiki: 'Musqueam First Nation',
         },
         {
@@ -80101,7 +80099,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Puku joka ommellaan uudestaan joka vuosi',
-          tiedosto: 'New Orleans, Fauborg Tremé, Backstreet Cultural Museum 22214.jpg',
           teksti: 'Mardi Gras Indianit eli Black Masking Indianit ovat mustia '
             + 'kaupunginosayhteisöjä, jotka pukeutuvat karnevaaliin itse '
             + 'käsin ompelemiinsa helmi- ja sulkapukuihin. Perinne juontaa '
@@ -80112,10 +80109,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'materiaalit maksavat tuhansia dollareita ja valmis asu voi '
             + 'painaa yli neljäkymmentä kiloa. Puvut paljastetaan Super '
             + 'Sunday -paraatissa, ja seuraavan vuoden työ alkaa alusta.',
-          lyhyt: 'Tremén Backstreet Cultural Museum säilyttää karnevaalipukuja käsin tehdyllä helmityöllä.',
-          selite: 'Tremén Backstreet Cultural Museum säilyttää kokonaisia '
-            + 'karnevaalipukuja, joiden helmityö on kokonaan käsin tehtyä.',
-          lahde: 'Barry Solow, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Mardi Gras Indians',
         },
         {
@@ -95823,10 +95816,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaupunki perustettiin saman vuoden heinäkuun 28. päivänä. '
             + 'Perustamiskokouksessa oli 502 äänestäjää — äänioikeus oli '
             + 'rajattu Miamissa ja Daden piirikunnassa asuviin miehiin.',
-          tiedosto: 'Julia Tuttle Statue.jpg',
-          selite: 'Julia Tuttlen patsaan jalustaan on veistetty '
-            + 'appelsiininkukka, ruuhi ja alligaattori.',
-          lahde: 'Juleskramer, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "Julia tuttle tomb 02.jpg",
+          selite: "Harmaa muistopylväs, jossa lukee TUTTLE, seisoo palmun ja nurmikon keskellä Miamin kaupunginhautausmaalla.",
+          lahde: "Daniel Di Palma, Wikimedia Commons (CC BY-SA 4.0)",
           wiki: 'Julia Tuttle',
         },
         {
@@ -98422,10 +98414,9 @@ export const KULTTUURI_KATEGORIAT = {
          * erikoisuus, ja pysty 3312 x 4416 on suhteeltaan 0,75.
          */
         kuva: {
-          tiedosto: 'Palacio de Correos Guatemala (3746538892).jpg',
-          selite: 'Postipalatsin holvikaari kaartaa 12. kadun yli '
-            + 'kahden rakennussiiven välissä.',
-          lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
+          tiedosto: "Catedral Metropolitana de Guatemala.jpg",
+          selite: "Guatemala Cityn Metropolitan-katedraalin hiekanvärinen julkisivu ja kellotorni kohoavat aukion laidalla, jonka etualalla kulkee jalankulkijoita ja autoja.",
+          lahde: "Padaguan, Wikimedia Commons (CC BY-SA 4.0)",
         },
         kappale: 'Guatemala City on Guatemalan pääkaupunki ja '
           + 'Väli-Amerikan suurin kaupunki, noin 1 500 metrin '
@@ -105661,12 +105652,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Sinne se jäi. Vuodesta 1924 karhua kävi katsomassa '
             + 'A. A. Milnen poika Christopher Robin, joka vaihtoi oman '
             + 'nallensa nimen Edward Bearista Winnie the Poohiksi.',
-          tiedosto: 'ZSL London - Harry Colebourn and Winnie the Bear (01).jpg',
-          lyhyt: 'Lontoon eläintarhan pronssipatsaassa Colebourn kumartuu karhunpennun puoleen, vieressä muistolaatta.',
-          selite: 'Lontoon eläintarhan pronssipatsaassa Colebourn '
-            + 'kumartuu karhunpennun puoleen, ja vieressä on '
-            + 'muistolaatta.',
-          lahde: 'Katie Chan, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Winnipeg (bear)',
         },
       ],
@@ -112356,33 +112341,33 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Puisto joka syntyi taistelukentälle',
           teksti:
             'Venäläisten voiton jälkeen Sitkasta tuli heidän uusi linnoituksensa Linnamäelle, mutta paikka jäi elämään myös Tlingit-suvun historiassa taistelupaikkana. Presidentti William H. Taft rauhoitti alueen Sitkan kansallismonumentiksi 23. maaliskuuta 1910 nimenomaan suojellakseen sekä vuoden 1804 linnoituksen paikkaa että sinne koottua totemipylväskokoelmaa — siitä kasvoi myöhemmin nykyinen Sitkan kansallinen historiallinen puisto. Puisto kattaa noin 45 hehtaaria rannikkometsää, jonka läpi kulkee kaksi kilometriä polkuja Itäisen kanavan rantaviivaa myötäillen aina taistelupaikalle asti.',
-          tiedosto: 'Centennial Pole as seen from the beach (480f12eb-984a-4db6-9617-4cc04abe2352).JPG',
-          lyhyt: 'Presidentti Taft rauhoitti taistelupaikan puistoksi vuonna 1910.',
+          tiedosto: "Color post card. Indian village, Alaska. - NARA - 297742.jpg",
+          lyhyt: "Vanhassa värikortissa Alaskan rannikkokylän talot ja totemipylväät seisovat metsänreunassa veden äärellä.",
           selite:
             'Kuvassa värikäs, tuoreelta näyttävä totemipylväs seisoo sorarannalla tumman kuusimetsän reunassa iltavalossa — tällaisia pylväitä puisto on perustamisestaan asti suojellut yhdessä taistelupaikan kanssa.',
-          lahde: 'NPS Photo, Wikimedia Commons (Public domain)',
+          lahde: "Tuntematon tekijä / National Archives, Wikimedia Commons (Public domain)",
           wiki: 'Sitka National Historical Park',
         },
         {
           otsikko: 'Pylväät jotka kertovat suvusta',
           teksti:
             'Tlingit-kansa jakautuu kahteen puoliskoon, Korppiin ja Kotkaan, jotka jakautuvat edelleen lukuisiin sukuihin; suku ja omaisuus periytyvät äidin kautta, ja jokainen lapsi kuuluu äitinsä puoliskoon. Suvun tunnukset — korppi, kotka, susi, karhu tai muu eläinolento — veistettiin totemipylväisiin, kanoottien kylkiin ja hirsitalojen seinäpylväisiin kertomaan katsojalle, kenen suvun ja puoliskon alueella tämä oli. Sitkan alkuperäinen väestö tunnetaan nimellä Sheetʼká Ḵwáan, ja juuri Kiksʼádi-suku puolusti vuonna 1804 aluettaan venäläisiä vastaan. Pylväät eivät olleet jumalankuvia vaan sukujen kirjoittamatonta historiaa ja omistusoikeutta puuhun kaiverrettuna.',
-          tiedosto: 'Native Alaskan Totem Pole.JPG',
-          lyhyt: 'Värikkäästi maalattu totemipylväs kertoo veistoksin suvun tarinaa.',
+          tiedosto: "Color Post card. The Memorial Totem, Sitka, Alaska. - NARA - 297726.jpg",
+          lyhyt: "Vanhassa postikortissa Sitkan korkea Memorial Totem kohoaa nurmikon yllä pienempien pylväiden keskellä.",
           selite:
             'Kuvassa on korkea, kirkkain värein — turkoosilla, mustalla ja punaisella — maalattu totemipylväs metsäpolun varressa; siihen on veistetty päällekkäin useita eläin- ja ihmishahmoja.',
-          lahde: 'Lordkinbote, Wikimedia Commons (CC BY-SA 2.5)',
+          lahde: "Tuntematon tekijä / National Archives, Wikimedia Commons (Public domain)",
           wiki: 'Tlingit',
         },
         {
           otsikko: 'Kielen ja väen paluu',
           teksti:
             'Vuosina 1903–1905 Alaskan silloinen kuvernööri John G. Brady kokosi kaakkoisalaskalaisilta päälliköiltä totemipylväitä, joita esiteltiin muun muassa vuoden 1904 maailmannäyttelyssä St. Louisissa ennen kuin ne tuotiin pysyvästi Sitkaan. Kokoelma muistuttaa, ettei Tlingit-kansa hävinnyt 1804 tappion jälkeen: vuoden 2020 väestönlaskennan mukaan Alaskassa asuu yhä noin 22 600 tlingitiä. Kieli sen sijaan on vaarassa kadota — sitä puhuu äidinkielenään enää parisataa ihmistä — minkä vuoksi muun muassa Sealaska Heritage Institute järjestää tlingitin kielikursseja eri puolilla Kaakkois-Alaskaa kielen pelastamiseksi.',
-          tiedosto: 'Wolf Pole (72f2e9ca-b680-4942-8228-563fb8b81ea5).jpg',
-          lyhyt: 'Vanha, säänkuluttama totemipylväs metsäpolun varressa Sitkan puistossa.',
+          tiedosto: "FMIB 38747 Indian Grave and Totems, Klinkwan.jpeg",
+          lyhyt: "Vuoden 1899 valokuvassa kolme totemipylvästä seisoo Klinkwanin kylässä Alaskassa.",
           selite:
             'Kuvassa harmaaksi kuluneen puun sävyinen, osin maalinsa menettänyt totemipylväs seisoo soratien varrella vehreän havumetsän keskellä; pylvään huipulla on hattupäinen ihmishahmo.',
-          lahde: 'NPS Photo, Wikimedia Commons (Public domain)',
+          lahde: "Jefferson Moser, Wikimedia Commons (Public domain)",
           wiki: 'Tlingit',
         },
       ],
@@ -130695,13 +130680,10 @@ export const KULTTUURI_KATEGORIAT = {
        */
       matkailijalle: {
         kuva: {
-          tiedosto: 'Silhouette SANDINO à Managua.JPG',
-          lyhyt: 'Augusto C. Sandinon teräksinen siluetti vartioi Managuaa Tiscapan mäen laelta.',
-          selite: 'Sandinon siluetti seisoo Tiscapan mäellä entisen '
-            + 'presidentinpalatsin paikalla, jonka portilla Sandino '
-            + 'pysäytettiin helmikuussa 1934 hänen lähtiessään '
-            + 'neuvotteluista presidentin luota.',
-          lahde: 'Chrisletram, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: "Managua.jpg",
+          lyhyt: "Tiscapan mäeltä avautuu näkymä Managuan kaupungin yli kaukaiselle vesialueelle.",
+          selite: "Loma de Tiscapalta näkyy matalaa Managuan kaupunkia puiden takaa, ja horisontissa siintävät vesialue ja kukkulat.",
+          lahde: "Haakon S. Krohn, Wikimedia Commons (CC BY-SA 3.0)",
         },
         kappale: 'Managualla ei ole keskustaa siinä mielessä kuin '
           + 'eurooppalainen sen käsittää. Vuoden 1972 järistyksen jälkeen '
@@ -130744,14 +130726,6 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Masayaan, Granadaan ja Leóniin, ja kaukobussit ajavat '
                 + 'maan pohjoisosiin ja Karibian puolelle asti.',
               kuva: [
-                {
-                  tiedosto: 'Security entrance managua airport.jpg',
-                  lyhyt: 'Lentoaseman aulassa matkailijaa tervehtii Augusto C. Sandinon muotokuva.',
-                  selite: 'Managuan lentoasema on kantanut helmikuusta 2007 '
-                    + 'Augusto C. Sandinon nimeä, ja sen aulan seinää '
-                    + 'hallitsee sissijohtajan muotokuva.',
-                  lahde: 'Stefan Krasowski, Wikimedia Commons (CC BY 2.0)',
-                },
                 {
                   tiedosto: 'La Uca Terminal (Managua, Nicaragua) (29127892735).jpg',
                   lyhyt: 'UCA:n terminaalista lähtevät pikkubussit Masayaan, Granadaan ja Leóniin.',
@@ -130820,13 +130794,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'vuoden 2018 mielenosoituksissa osa niistä kaadettiin. '
                 + 'Poliittisia kokoontumisia matkailijan kannattaa välttää.',
               kuva: {
-                tiedosto: 'Loma de Tiscapa.JPG',
-                lyhyt: 'Tiscapan mäen laella Sandinon siluetti ja keltainen elämänpuu seisovat rinnakkain.',
-                selite: 'Tiscapan mäki oli pitkään Nicaraguan vallan '
-                  + 'keskus, ja sen laella on nykyään historiallinen '
-                  + 'puisto, jonka Sandinon siluetti ja metallinen '
-                  + 'elämänpuu näkyvät kauas kaupungille.',
-                lahde: 'Kollemy, Wikimedia Commons (CC BY-SA 4.0)',
+                tiedosto: "Laguna de Tiscapa.jpg",
+                lyhyt: "Tiscapan laguuni levittäytyy metsäisten rinteiden väliin Managuan kaupungin tuntumassa.",
+                selite: "Tiscapan laguuni täyttää jyrkkien, metsäisten rinteiden ympäröimän kuopan, ja sen takana jatkuu Managuan kaupunki.",
+                lahde: "Haakon S. Krohn, Wikimedia Commons (CC BY-SA 3.0)",
               },
             },
             {
@@ -134823,13 +134794,10 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'itsensä yli.',
               kuva: [
                 {
-                  tiedosto: 'Calvin Coolidge statue (54721038957).jpg',
-                  lyhyt: 'Calvin Coolidge nostaa hattuaan Rapid Cityn keskustan kadunkulmassa.',
-                  selite: 'Rapid Cityn keskustassa on pronssipatsas '
-                    + 'jokaisesta entisestä presidentistä. Calvin Coolidge '
-                    + 'vietti kesän 1927 Mustilla vuorilla ja puhui Mount '
-                    + 'Rushmoren vihkiäisissä.',
-                  lahde: 'Gage Skidmore, Wikimedia Commons (CC BY-SA 4.0)',
+                  tiedosto: "Mount Rushmore National Memorial - President Calvin Coolidge speaking at dedication.jpg",
+                  lyhyt: "Presidentti Calvin Coolidge puhumassa Mount Rushmoren vihkiäisissä 10.8.1927.",
+                  selite: "Presidentti Calvin Coolidge seisoo ratsastussaappaissa puhumassa Mount Rushmoren vihkiäisissä elokuussa 1927, ja hänen takanaan istuu hattupäisiä miehiä.",
+                  lahde: "National Park Service, Wikimedia Commons (Public domain)",
                 },
                 {
                   tiedosto: 'Through a tunnel on Iron Mountain Road. (f5007327-155d-4519-3e33-b713ab24ae16).jpg',
@@ -135056,11 +135024,8 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Toinen kasvo kalliossa',
           teksti:
             'Vuonna 1939 lakotavanhin Henry Standing Bear pyysi kuvanveistäjä Korczak Ziolkowskia veistämään lähistön toiseen kallioon muistomerkin sotapäällikkö Crazy Horsesta, jotta myös alkuperäiskansoilla olisi oma jättiveistoksensa. Ensimmäinen räjäytys tehtiin kesäkuussa 1948, ja hanke on jatkunut siitä lähtien täysin yksityisin lahjoituksin, ilman valtion tukea. Kasvot valmistuivat vasta 1998, ja koko veistoksesta, joka on suunniteltu suuremmaksi kuin Rushmoren neljä päätä yhteensä, on valmiina yhä vain osa.',
-          tiedosto: 'Crazy Horse Memorial.jpg',
-          lyhyt: 'Crazy Horse -muistomerkin keskeneräinen kallio puiden yläpuolella.',
           selite:
             'Kuva näyttää suuren kallion, johon on veistetty kasvot ja niiden alle jätetty aukko käsivarren kohdalle — suurin osa kalliosta on yhä muokkaamatonta luonnonkiveä hahmotellun veistoksen ympärillä.',
-          lahde: 'Ahzoov, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Crazy Horse Memorial',
         },
       ],
