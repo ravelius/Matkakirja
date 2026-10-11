@@ -85,10 +85,10 @@ namespace Matkakirja.Natiivi
         public static void KytkeSykaisy(VisualElement hehku)
         {
             if (hehku == null || hehku.Q(AaltoNimi) != null) return;
+            // Terävä 2 pt:n rengas perusrenkaan säteellä (mk-videopeli-aalto), kuten IssPiirros.Syke; pehmeä hehku jäi stilleissä
+            // erottumattomaksi (simuajo a3c912f4).
             var aalto = new VisualElement { name = AaltoNimi, pickingMode = PickingMode.Ignore };
-            aalto.AddToClassList("mk-nosto-merkki__hehku");
-            aalto.style.left = aalto.style.top = aalto.style.right = aalto.style.bottom = 0;
-            aalto.style.backgroundImage = new StyleBackground(Hehku());
+            aalto.AddToClassList("mk-videopeli-aalto");
             aalto.style.opacity = 0f;
             hehku.Add(aalto);
             hehku.schedule.Execute(() =>
