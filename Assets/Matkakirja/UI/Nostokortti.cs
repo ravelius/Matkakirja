@@ -1063,8 +1063,18 @@ namespace Matkakirja.Natiivi
         /// </summary>
         static bool Videopeli(Nosto n) => n != null && n.Laji == NostoLaji.Kohde && n.Id == "olavinlinna";
 
-        /// <summary>Kimmeljuova kulkee vuorosuuntiin (siirtymä 2,4 s USS:ssä); vain kortin ollessa auki videopelimuunnelmana.</summary>
-        const long KimmelValiMs = 8000;
+        /// <summary>Videopelin avaus nostosta: Jatka ilmaiseksi, muuten maksu ensin (alusta = Aloita alusta).</summary>
+        void Pelaa(bool jatka, bool alusta)
+        {
+            var o = PeliOhjain.Instanssi;
+            if (!jatka && o != null && !o.MaksaOlavinlinna(alusta)) return;
+            Sulje();
+            if (SeikkailuTapit.AvaaPelaajalle(jatka)) return;
+            if (!jatka) o?.PalautaOlavinlinna(alusta);
+        }
+
+        /// <summary>Kimmeljuova kulkee vuorosuuntiin 4 s:n välein (siirtymä 2,4 s USS:ssä; PT 11.10.: "hieman elävä"); vain kortin ollessa auki videopelimuunnelmana.</summary>
+        const long KimmelValiMs = 4000;
 
         void Kimmel()
         {
@@ -1095,6 +1105,20 @@ namespace Matkakirja.Natiivi
                 Kirjasimet.Aseta(b, Kirjasin.KoneLihava);
                 napit[nimi] = a;
             }
+            // VIDEOPELI (omistaja 11.10.2026 PT:n kautta, juna 182): kortin teksti ja luenta ilmaiseksi kuten ennen; "Pelaa £20" avaa
+            // pelattavan palan, tallennuksen ollessa "Jatka" (ilmainen) ja "Aloita alusta £10". Maksu ennen avausta (Pelikoodarin
+            // PeliOhjain.MaksaOlavinlinna; rahat eivät riitä → tilarivi), palautus, jos pala ei aukea.
+            bool peli = Videopeli(n);
+            if (peli)
+            {
+                string Hinta(bool alusta) => PeliApu.Valuutta + Matkakirja.Peli.Kaupat.OlavinlinnanHinta(alusta);
+                if (SeikkailuTapit.PalaTallennettu())
+                {
+                    Nappi("jatka", Kieli.T("ui.nosto.jatka"), () => Pelaa(true, false), true);
+                    Nappi("alusta", Kieli.T("ui.nosto.aloita-alusta", Hinta(true)), () => Pelaa(false, true));
+                }
+                else Nappi("pelaa", Kieli.T("ui.nosto.pelaa", Hinta(false)), () => Pelaa(false, false), true);
+            }
             // Napit kuten web avaaKohdePohjalla (#3788, omistaja 2.10.2026 pysyväksi): Kysy vain kysymyksillä, Visa, Kierros,
             // Lehti = kohteen oma täkynosto (Livian leikekirja), ei kaupungin/maan lehteä. Esim. Ateena: vain Kysy.
             if (n.Kysymykset.Count > 0)
@@ -1109,7 +1133,7 @@ namespace Matkakirja.Natiivi
             if (n.LeikekirjaValo != null)
             {
                 string valo = n.LeikekirjaValo;
-                Nappi("lehti", Kieli.T("ui.nosto.lehti"), () => Avaa(valo), true);
+                Nappi("lehti", Kieli.T("ui.nosto.lehti"), () => Avaa(valo), !peli);   // videopelissä kulta on pelin nappi
                 napit["leikekirja"] = napit["lehti"]; // testikomento ui leikekirja
             }
             if (toimintorivi.childCount == 0) PoistaToimintorivi();

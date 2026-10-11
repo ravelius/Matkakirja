@@ -56,7 +56,7 @@
 /* NOSTOKORTIN VIDEOPELIMUUNNELMA (omistaja 11.10.2026 Päätoimittajan kautta, juna 182; tyylikirja teemat.videopeli,
    NOSTOKORTTI.teemat): kimmeltävä sininen tausta merkitsee kohdetta, joka on sekä nähtävyys että pelattava videopeli
    (ensimmäisenä Olavinlinna). Teksti vaalealla, Pelaa-nappi kultainen (toiminto). Kimmel = hillitty vaalea juova, joka kulkee
-   kortin poikki vuorosuuntiin noin 8 s:n välein (Nostokortti.Kimmel); ei osumia. */
+   kortin poikki vuorosuuntiin noin 4 s:n välein (Nostokortti.Kimmel); ei osumia. */
 .mk-nosto--videopeli {
     background-color: var(--tk-videopeli-pinta);
     border-color: var(--tk-videopeli-reunus);
