@@ -17580,6 +17580,237 @@ export const KAUPUNKIKARTAT = {
       },
     ],
   },
+  // AFRIKAN PÄÄKAUPUNKIPISTEET (Karttaseppä 11.10.2026, PT): kohteet OSM:stä ja Wikipediasta, tekstit myöhemmin.
+  alger: {
+    polku: 'assets/kartat/alger-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 36.7916,
+      etela: 36.7684,
+      lansi: 3.0512,
+      ita: 3.0679,
+    },
+    kohteet: [
+      {
+        nimi: 'Algerin pääposti',
+        wiki: "Grande Poste d'Alger",
+        lat: 36.77308,
+        lon: 3.05958,
+      },
+      {
+        nimi: 'Ketchaouan moskeija',
+        wiki: 'Ketchaoua Mosque',
+        lat: 36.7851,
+        lon: 3.06075,
+      },
+      {
+        nimi: 'Djamaa el-Djedid -moskeija',
+        wiki: 'Djamaa el Djedid',
+        lat: 36.78494,
+        lon: 3.06305,
+      },
+      {
+        nimi: 'Alin Bitchinin moskeija',
+        wiki: 'Ali Bitchin Mosque',
+        lat: 36.78702,
+        lon: 3.0619,
+      },
+      {
+        nimi: 'Dayn palatsi',
+        wiki: 'Palace of the Dey',
+        lat: 36.78455,
+        lon: 3.05511,
+      },
+      {
+        nimi: 'Raisin palatsi',
+        wiki: 'Palais des Rais',
+        lat: 36.78828,
+        lon: 3.06398,
+      },
+      {
+        nimi: 'Kansallisteatteri',
+        wiki: 'Algerian National Theater Mahieddine Bachtarzi',
+        lat: 36.78125,
+        lon: 3.06004,
+      },
+    ],
+  },
+  rabat: {
+    polku: 'assets/kartat/rabat-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 34.0371,
+      etela: 33.992,
+      lansi: -6.8465,
+      ita: -6.8157,
+    },
+    kohteet: [
+      {
+        nimi: 'Hassanin torni',
+        wiki: 'Hassan Tower',
+        lat: 34.02414,
+        lon: -6.82279,
+      },
+      {
+        nimi: 'Mohammed V:n mausoleumi',
+        wiki: 'Mausoleum of Mohammed V',
+        lat: 34.02266,
+        lon: -6.82142,
+      },
+      {
+        nimi: 'Udayan kasba',
+        wiki: 'Kasbah of the Udayas',
+        lat: 34.03056,
+        lon: -6.83556,
+      },
+      {
+        nimi: 'Chellahin raunioalue',
+        wiki: 'Chellah',
+        lat: 34.00703,
+        lon: -6.82146,
+      },
+      {
+        nimi: 'Bab er-Rouah -portti',
+        wiki: 'Bab er-Rouah',
+        lat: 34.01281,
+        lon: -6.83757,
+      },
+      {
+        nimi: 'Pyhän Pietarin katedraali',
+        wiki: "St. Peter's Cathedral, Rabat",
+        lat: 34.01787,
+        lon: -6.83134,
+      },
+      {
+        nimi: 'Rabatin kuninkaanlinna',
+        wiki: 'Royal Palace of Rabat',
+        lat: 34.00104,
+        lon: -6.84079,
+      },
+      {
+        nimi: 'Mohammed VI:n nykytaiteen museo',
+        wiki: 'Mohammed VI Museum of Modern and Contemporary Art',
+        lat: 34.01523,
+        lon: -6.83288,
+      },
+    ],
+  },
+  tunis: {
+    polku: 'assets/kartat/tunis-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 36.8138,
+      etela: 36.7899,
+      lansi: 10.1638,
+      ita: 10.1891,
+    },
+    kohteet: [
+      {
+        nimi: 'Habib Bourguiban katu',
+        tyyppi: 'aukio',
+        wiki: 'Avenue Habib Bourguiba',
+        lat: 36.80005,
+        lon: 10.18518,
+      },
+      {
+        nimi: 'Tunisin kunnallisteatteri',
+        wiki: 'Théâtre municipal de Tunis',
+        lat: 36.79913,
+        lon: 10.18081,
+      },
+      {
+        nimi: 'Bab el Bhar -portti',
+        wiki: 'Bab el Bhar',
+        lat: 36.79918,
+        lon: 10.17562,
+      },
+      {
+        nimi: 'Zitounan moskeija',
+        wiki: 'Al-Zaytuna Mosque',
+        lat: 36.79731,
+        lon: 10.17125,
+      },
+      {
+        nimi: 'Kasbahin moskeija',
+        wiki: 'Kasbah Mosque, Tunis',
+        lat: 36.79667,
+        lon: 10.16778,
+      },
+      {
+        nimi: 'El-Jedidin moskeija',
+        wiki: 'El Jedid Mosque',
+        lat: 36.79471,
+        lon: 10.17375,
+      },
+      {
+        nimi: 'Sidi Mahrezin moskeija',
+        wiki: 'Sidi Mahrez Mosque',
+        lat: 36.80422,
+        lon: 10.16843,
+      },
+      {
+        nimi: 'Tunisin suuri synagoga',
+        wiki: 'Grand Synagogue of Tunis',
+        lat: 36.81038,
+        lon: 10.18011,
+      },
+    ],
+  },
+  khartum: {
+    polku: 'assets/kartat/khartum-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 15.6188,
+      etela: 15.5917,
+      lansi: 32.5011,
+      ita: 32.5488,
+    },
+    kohteet: [
+      {
+        nimi: 'Sudanin kansallismuseo',
+        wiki: 'Sudanin kansallismuseo',
+        lat: 15.60608,
+        lon: 32.50835,
+      },
+      {
+        nimi: 'Kansallinen kasvitieteellinen puutarha',
+        tyyppi: 'luonto',
+        wiki: 'Sudan National Botanical Garden',
+        lat: 15.6017,
+        lon: 32.5091,
+      },
+      {
+        nimi: 'Souq al Arabi',
+        tyyppi: 'aukio',
+        wiki: 'Souq al Arabi',
+        lat: 15.601,
+        lon: 32.525,
+      },
+      {
+        nimi: 'Tasavaltalaispalatsi',
+        wiki: 'Republican Palace, Khartoum',
+        lat: 15.60917,
+        lon: 32.52778,
+      },
+      {
+        nimi: 'Pyhän Matteuksen katedraali',
+        wiki: "St. Matthew's Cathedral, Khartoum",
+        lat: 15.6105,
+        lon: 32.5339,
+      },
+      {
+        nimi: 'Khartumin yliopisto',
+        wiki: 'University of Khartoum',
+        lat: 15.61095,
+        lon: 32.54153,
+      },
+    ],
+  },
+  // AFRIKAN PÄÄKAUPUNKIPISTEET LOPPU
 };
 
 /*

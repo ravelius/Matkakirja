@@ -6151,6 +6151,23 @@ const KAUPUNGIT = {
   ramallah: {
     rajat: { pohjoinen: 31.908, etela: 31.8824, lansi: 35.1877, ita: 35.2196 },
   },
+  // AFRIKAN PÄÄKAUPUNKIPISTEET (Karttaseppä 11.10.2026, PT): kohteet OSM:stä ja Wikipediasta, tekstit myöhemmin.
+  alger: {
+    rajat: { pohjoinen: 36.7916, etela: 36.7684, lansi: 3.0512, ita: 3.0679 },
+    meri: true,
+  },
+  rabat: {
+    rajat: { pohjoinen: 34.0371, etela: 33.992, lansi: -6.8465, ita: -6.8157 },
+    meri: true,
+  },
+  tunis: {
+    rajat: { pohjoinen: 36.8138, etela: 36.7899, lansi: 10.1638, ita: 10.1891 },
+    meri: true,
+  },
+  khartum: {
+    rajat: { pohjoinen: 15.6188, etela: 15.5917, lansi: 32.5011, ita: 32.5488 },
+  },
+  // AFRIKAN PÄÄKAUPUNKIPISTEET LOPPU
 };
 
 /*
