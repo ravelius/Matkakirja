@@ -323,7 +323,8 @@ namespace Matkakirja.Natiivi
             avainsana.style.alignItems = Align.FlexStart;
             avainsana.style.opacity = 0f;
             avainsanaVuosi = Rakenne.Teksti("", "mk-aikajana-havainne__otsikko", avainsana);
-            Kirjasimet.Aseta(avainsanaVuosi, Kirjasin.Goottilainen);
+            // Luettava kirjasin fraktuuran tilalle (omistaja 11.10. 12.3x: linnan keskiaikaiset kyltit vaikeita lukea), koko ja paikka ennallaan.
+            Kirjasimet.Aseta(avainsanaVuosi, Kirjasin.LukuLihava);
             avainsanaVuosi.style.fontSize = 44; avainsanaVuosi.style.unityTextAlign = TextAnchor.LowerLeft;
             avainsanaSanat = Rakenne.Teksti("", "mk-aikajana-havainne__kuvateksti", avainsana);
             Kirjasimet.Aseta(avainsanaSanat, Kirjasin.Antiikva);
@@ -1012,7 +1013,8 @@ namespace Matkakirja.Natiivi
             var k = KeskiaikaTyyliHae(LappuTyyli);
             AsetaTausta(lauta, k.Kortti, k.KorttiSlice);
             lauta.style.paddingLeft = k.KorttiSis[0]; lauta.style.paddingTop = k.KorttiSis[1]; lauta.style.paddingRight = k.KorttiSis[2]; lauta.style.paddingBottom = k.KorttiSis[3];
-            Kirjasimet.Aseta(otsikko, Kirjasin.Goottilainen); Kirjasimet.Aseta(teksti, Kirjasin.Antiikva); Kirjasimet.Aseta(lainaus, Kirjasin.AntiikvaKursiivi);
+            // Huoneen ja paikan nimi luettavalla kirjasimella fraktuuran tilalle (omistaja 11.10. 12.3x), koko ja paikka ennallaan.
+            Kirjasimet.Aseta(otsikko, Kirjasin.LukuLihava); Kirjasimet.Aseta(teksti, Kirjasin.Antiikva); Kirjasimet.Aseta(lainaus, Kirjasin.AntiikvaKursiivi);
             Kirjasimet.Aseta(puhuja, Kirjasin.Antiikva);
             otsikko.style.fontSize = 22;
             otsikko.style.color = k.Otsikko; teksti.style.color = lainaus.style.color = kuunteleNappi.style.color = k.Teksti;
@@ -1061,7 +1063,7 @@ namespace Matkakirja.Natiivi
             var k = KeskiaikaTyyliHae(LappuTyyli);
             AsetaTausta(lappu, k.Nimilappu, k.LappuSlice);
             lappu.style.color = k.LappuTeksti;
-            Kirjasimet.Aseta(lappu, Kirjasin.Goottilainen); lappu.style.fontSize = 15;
+            Kirjasimet.Aseta(lappu, Kirjasin.LukuLihava); lappu.style.fontSize = 15;   // nimilappu luettavaksi (omistaja 11.10. 12.3x)
             lappu.style.paddingLeft = k.LappuSis[0]; lappu.style.paddingTop = k.LappuSis[1]; lappu.style.paddingRight = k.LappuSis[2]; lappu.style.paddingBottom = k.LappuSis[3];
             nasta.style.backgroundColor = k.Viiva; viiva.style.backgroundColor = k.Viiva;
         }

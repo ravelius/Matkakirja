@@ -536,6 +536,10 @@ namespace Matkakirja.Natiivi
                 case "olavinlinna":
                     // "ui olavinlinna alku|loppu|nollaa|sulje|tila": Olavinlinnan alun valinta (OlavinlinnaAlku, juna 171).
                     return "=" + OlavinlinnaAlku.Testi(loput.Trim().Length > 0 ? loput.Trim() : "tila");
+                case "konsoli":
+                    // "ui konsoli pois|paalle": kehitysversion Development Console -rivit pois stilleistä (PT 11.10.: arkit ilman konsolia).
+                    Debug.developerConsoleEnabled = loput.Trim() != "pois"; Debug.developerConsoleVisible = false;
+                    return "=konsoli " + (Debug.developerConsoleEnabled ? "päällä" : "pois");
                 case "seikkailutapit":
                     // "ui seikkailutapit [on|off|auto]": seikkailun kävelytapit (SeikkailuTapit) ilman SeikkailuPelaajaa testiin.
                     if (loput.Trim() == "on") SeikkailuTapit.TestiNakyy = true;
@@ -545,6 +549,12 @@ namespace Matkakirja.Natiivi
                     else if (loput.Trim().StartsWith("toiminto ")) SeikkailuTapit.TestiToiminto = loput.Trim().Substring(9).Trim();
                     // "ui seikkailutapit loyto": seikkailun löytö pergamenttipohjalla (testiteksti).
                     // "ui seikkailutapit tietokerros|tietokortti": tietokerros tarjolle (3 testikorttia) tai tietokortin merkki.
+                    // "ui seikkailutapit tietokerros oikea": linnan oikeat kortit (SeikkailuTietokerros.Loppu, pelattava pala käynnissä).
+                    else if (loput.Trim() == "tietokerros oikea") { var tk = SeikkailuTietokerros.Aktiivinen; if (tk?.Ydin == null) return "=seikkailutapit: tietokerros ei ladattu"; tk.Loppu(); return $"=seikkailutapit: oikea tietokerros tarjolla ({tk.Ydin.Kortit.Count} korttia)"; }
+                    // "ui seikkailutapit jatkokysely": palan Jatketaanko-dialogi ilman tallennusta (ei käynnistä mitään; stillit).
+                    else if (loput.Trim() == "jatkokysely") { UiNakymat.Hae().Vahvistus.Kysy(Kieli.T("ui.seikkailu.olavinlinna"), Kieli.T("ui.seikkailu.jatketaanko-siita-mihin-jait"), Kieli.T("ui.seikkailu.alusta"), Kieli.T("ui.seikkailu.jatka"), () => { }, kunPeruttu: () => { }); return "=seikkailutapit: jatkokysely auki"; }
+                    // "ui seikkailutapit nimi [teksti]": pelattavan palan paikan nimi (DioraamaTaulu.NaytaSeikkailunNimi, oletus tyrmä).
+                    else if (loput.Trim() == "nimi" || loput.Trim().StartsWith("nimi ")) { var n = loput.Trim().Length > 5 ? loput.Trim().Substring(5) : Kieli.T("olavinlinna.seikkailu.tyrma.nimi"); DioraamaTaulu.NaytaSeikkailunNimi(n); return "=seikkailutapit: nimi " + n; }
                     else if (loput.Trim() == "tietokerros") { SeikkailuTapit.NaytaTietokerros(new[] { "Pyhä Olavi", "Kappeli", "Torni" }, new[] { "Testiteksti 1.", "Testiteksti 2.", "Testiteksti 3." }, new[] { "Lyhyt 1", null, "Lyhyt 3" }); return "=seikkailutapit: tietokerros tarjolla (napauta Pulua)"; }
                     // "ui seikkailutapit oikeatappi on|off" (testikytkin) ja "veto suora|selaus" (katseen vetosuunta).
                     else if (loput.Trim().StartsWith("oikeatappi ")) SeikkailuTapit.OikeaTappi = loput.Trim().EndsWith("on");
