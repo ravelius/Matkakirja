@@ -312,7 +312,9 @@ namespace Matkakirja.Natiivi
             // Puolilähikuvan lähileikkaus (DioraamaSovitin): kameran ja puhujan väliin jäävä lähigeometria (kynttiläjalka, seinän reuna)
             // ei peitä puhujaa (Päätoimittaja 7.10.); pehmeä muutos, ettei leikkaus nyi.
             lahiNyt = Mathf.MoveTowards(lahiNyt, LahiLeikkaus, 2f * Time.unscaledDeltaTime);
-            Kamera.nearClipPlane = Mathf.Max(ymparisto ? 0.5f : 0.3f, lahiNyt);
+            // Silmistä (1. persoona) lähitaso 0,05 m kuten silmälinssissä (11.10., PT 06.0x: 0,5 m leikkasi seinät ja holvin auki).
+            bool silmista = SeikkailuPelaaja.Aktiivinen != null && SeikkailuPelaaja.Ensimmainen;
+            Kamera.nearClipPlane = (float)Kameraliike.Lahitaso(silmista, ymparisto, lahiNyt);
             Kamera.farClipPlane = ymparisto ? 16000f : 2000f;
             float sumuLoppu = ymparisto ? 9000f : Mathf.Min(d * SumuLoppuKerroin, Kamera != null ? Kamera.farClipPlane * 0.9f : 1800f);
             float sumuAlku = ymparisto ? Mathf.Max(d * 3f, 300f) : Mathf.Min(d * SumuAlkuKerroin, sumuLoppu * 0.6f);

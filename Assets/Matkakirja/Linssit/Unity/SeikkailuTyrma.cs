@@ -1,8 +1,9 @@
 // HISTORIAMOOTTORI: TYRMÄ UNITYSSA (Siirtoseppä 7.10.2026; pelattavuusmalli 4.1 muunnelma 1; ydin Seikkailu.Tyrma; LR v44n osa
 // tyrma-E101). Kiinnijäännin himmennyksen jälkeen pelaaja herää oljilta (istuu:pelaaja-tyrma, silmät 1,0 m, katse kierto_y:n suuntaan),
 // valoa vain ilmaraosta. 3 s: Pulu kujertaa ilmaraosta ja avaimet (esine:avainnippu-tyrma) putoavat olkiin → poimi → "Avaa" ovella
-// (ovi:tyrma, avain-lukko) → käytävän pää (ovi:tyrma-ulos) → himmennys ja viimeisin tarkistuspiste valppaana. 20 s ilman tekoa → Pulun
-// vihje, 60 s → Pulu avaa oven. Ei puhetta ensimmäisessä palassa. Puuttuvat merkit → vanha kulku (suoraan tarkistuspisteeseen).
+// (ovi:tyrma, avain-lukko) → käytävän pää (ovi:tyrma-ulos) → himmennys ja viimeisin tarkistuspiste valppaana. 10 s ilman tekoa → vihje
+// (toistuu 15 s), 45 s → lukko aukeaa (Ydin Tyrma). Avainten päälle astuminen poimii ja ovelle käveleminen avaimet kädessä avaa (11.10.,
+// PT 07.0x, Laitetestaaja 5. kierros: avaimia ei poimittu kahdella käynnillä, lukko ratkaisi). Puuttuvat merkit → vanha kulku.
 using System;
 using System.Collections;
 using Matkakirja.Linssit.Seikkailu;
@@ -43,6 +44,10 @@ namespace Matkakirja.Natiivi
             t.ydin = new Tyrma(mu1);
             SeikkailuEsineet.Irrotettiin += t.KiviIrti; SeikkailuEsineet.Raapaistiin += t.Yritys;
             Aktiivinen = t;
+            // Kynttilä palaa tyrmään tultaessa (PT 11.10. 06.2x, Laitetestaajan 4. kierros: ensikertalaisen tyrmä lähes musta, kun oma
+            // kynttilä oli sammuksissa); toimintonappi sammuttaa ja sytyttää kuten ennen. Pöydälle asetettu kynttilä jää paikalleen.
+            var kyn = SeikkailuKynttilat.Aktiivinen;
+            if (kyn != null && kyn.Ydin.OmaKynttila && !kyn.Ydin.OmaPalaa && kyn.OmaAsetettu == null) { kyn.Ydin.AsetaOma(true); kirjaa?.Invoke("seikkailu: tyrmä: oma kynttilä sytytetty"); }
             // Käsittely käsin (pelattavuusmalli 6): oven veto avaimet kädessä; 60° = auki, nopea veto narahtaa (4 m). Napautus avaa kuten ennen.
             float kertyma = 0f;
             SeikkailuKasittely.Lisaa(new SeikkailuKasittely.Kasiteltava
@@ -108,14 +113,23 @@ namespace Matkakirja.Natiivi
                 kirjaa?.Invoke("seikkailu: tyrmä: vesipoika jätti oven raolleen");
             }
             if (ydin.Vihje) { ydin.Vihje = false; SeikkailuVihjeet.Aktiivinen?.Pakota(2, "tyrmä 20 s"); }   // kieli: ei (tekninen)
+            // Oven vihje (PT 06.0x, Laitetestaaja 4. kierros: muunnelma 3 lukko auki 630 s, ilman vihjettä ulos vasta 1015 s; pyydetty
+            // vihje vei ulos 14 s:ssa): heti Pulun avatessa ja 20 s:n välein, kunnes pelaaja on ulkona.
+            if (ydin.OviVihje) { ydin.OviVihje = false; SeikkailuVihjeet.Aktiivinen?.Pakota(2, "tyrma-ovi-auki"); }   // kieli: ei (tekninen)
             if (ydin.Vaihe == TyrmanVaihe.AvaimetOlissa && avainId != null && SeikkailuEsineet.Aktiivinen?.Kadessa == avainId) ydin.Poimi();
+            // Muunnelma 1 ilman nappia (PT 07.0x, Laitetestaaja 5. kierros: avaimet mustilla oljilla, kahdella käynnillä ei poimintaa):
+            // avainten päälle astuminen poimii (toiminto vain, kun avaimet ovat valitsimen lähin), ovelle käveleminen avaimet kädessä avaa.
+            var es = SeikkailuEsineet.Aktiivinen;
+            if (ydin.Vaihe == TyrmanVaihe.AvaimetOlissa && avainId != null && es != null && es.Lahin == avainId && es.Paikka(avainId) is Vector3 ak
+                && Vaaka(p.transform.position, ak) < AstuPoimiM) SeikkailuEsineet.ToimintoPyydetty = true;
+            if (ydin.Vaihe == TyrmanVaihe.AvaimetKadessa && Vaaka(p.transform.position, ovi) < KavelyAvaaM) AvaaOvi(p);
             if (ydin.PuluAvasi)
             {
-                // 60 s (pelattavuusmalli 4.1): ovi aukeaa oikeasti (A3: ennen vain lokiin), myös irtokiven muunnelmassa ulos oven kautta.
+                // Tyrma.PuluAvaaS (45 s, ennen 60): ovi aukeaa oikeasti (A3: ennen vain lokiin), myös irtokiven muunnelmassa ulos oven kautta.
                 ydin.PuluAvasi = false; puluAvasi = true;
                 SeikkailuAanet.SoitaJokin(SeikkailuAanet.LukkoAuki, "avain-lukko", ovi + Vector3.up, 0.8f);
                 SeikkailuEsineet.Aktiivinen?.OviLehti("tyrma", false); OviValo();
-                kirjaa?.Invoke("seikkailu: tyrmä: lukko aukesi (60 s), ovi auki");
+                kirjaa?.Invoke($"seikkailu: tyrmä: lukko aukesi ({Tyrma.PuluAvaaS:F0} s), ovi auki");
             }
             // Muunnelma 2: raollaan oleva ovi aukeaa kävelemällä (pelaaja oven luona).
             if (ydin.Muunnelma == 2 && ydin.Vaihe == TyrmanVaihe.OviAuki && !tyonnetty && Vector3.Distance(p.transform.position, ovi) < TyontoM)
@@ -129,11 +143,12 @@ namespace Matkakirja.Natiivi
             { rotatKuultu = true; SeikkailuRepliikit.SoitaTaiVara("tyrma-vartija-rotat-1", null, ovi + Vector3.up * 1.6f); }
             // Muunnelma 3: ryömintä alkaa aukon suulta (irtokiven paikka); merkin ovi:tyrma-ryomi pää on seinän takana (~2 m), jonne
             // kävellen ei pääse (A3, Laitetestaaja TF 180: irtokiven pakoa ei saatu tehtyä).
-            bool ryomii = ydin.Muunnelma == 3 && ryomiOn && !puluAvasi;
-            var maali = ryomii ? aukonSuu : ulos;
+            // Aukko kelpaa aina, kun kivi on irti (myös Pulun avattua oven); ennen avausta ovi on kiinni, joten ulos ja ovi eivät täyty.
+            bool aukko = ydin.Muunnelma == 3 && ryomiOn && ydin.AukkoAuki;
             // Oviaukko riittää (Laitetestaaja 181d, HID-toisto 03.51: liike toimii, mutta auki oleva ovi ja käytävä näkyivät mustina aukkoina).
-            bool perilla = Vector3.Distance(p.transform.position, maali) < (ryomii ? RyomiM : UlosM)
-                || !ryomii && Vector3.Distance(p.transform.position, ovi) < OviLapiM && oviAukesi >= 0 && Time.unscaledTime - oviAukesi >= OviNakyyS;
+            var pp = p.transform.position;
+            bool perilla = aukko && Vector3.Distance(pp, aukonSuu) < RyomiM || Vector3.Distance(pp, ulos) < UlosM
+                || Vector3.Distance(pp, ovi) < OviLapiM && oviAukesi >= 0 && Time.unscaledTime - oviAukesi >= OviNakyyS;
             if (ydin.Vaihe == TyrmanVaihe.OviAuki && perilla && ydin.Ulos()) StartCoroutine(Ulos());
         }
 
@@ -172,8 +187,11 @@ namespace Matkakirja.Natiivi
             if (ydin.Vaihe == TyrmanVaihe.AvaimetKadessa) return ovi;
             if (ydin.Vaihe == TyrmanVaihe.Istuu && ydin.Muunnelma == 3) return SeikkailuEsineet.Aktiivinen?.Irrottamaton(ryomi) ?? ryomi;
             // Muunnelma 3: kivi irti → aukon suu (ryömintä alkaa siitä); Pulun 60 s:n avauksen jälkeen ulos oven kautta (A3).
-            if (ydin.Muunnelma == 3 && ryomiOn && !puluAvasi) return aukonSuu;
-            return ydin.Vaihe == TyrmanVaihe.OviAuki ? ulos : ovi;
+            if (ydin.Muunnelma == 3 && ryomiOn && ydin.AukkoAuki && !puluAvasi) return aukonSuu;
+            // Ovi auki: ensin itse ovi huoneesta näkyvänä (v8: kohde käytävän päässä seinän takana), oven luona käytävän pää.
+            var pl = SeikkailuPelaaja.Aktiivinen;
+            if (ydin.Vaihe == TyrmanVaihe.OviAuki) return pl != null && Vector3.Distance(pl.transform.position, ovi) > OviVihjeM ? ovi : ulos;
+            return ovi;
         }
 
         void KiviIrti(string id) { if (id.StartsWith("irtokivi", StringComparison.Ordinal) && ydin.KiviIrti()) { kirjaa?.Invoke("seikkailu: tyrmä: irtokivi irti, aukko auki"); Kolina(ovi); } }
@@ -181,7 +199,11 @@ namespace Matkakirja.Natiivi
         /// <summary>Kova ääni tyrmässä (muunnelmat 2–3): käytävän vartija vain mutisee (malli 4.1), enintään 12 s:n välein.</summary>
         float kolinaAsti; bool rotatKuultu, puluAvasi, tyonnetty;
         // Oviaukko vasta, kun ovi on ollut auki OviNakyyS (v6 laituri-a1 04.11: avain lukkoon ovella → ulos samalla sekunnilla, ovea ei nähty).
-        const float TyontoM = 1.3f, RyomiM = 1.0f, OviLapiM = 0.8f, OviNakyyS = 1.2f;
+        const float TyontoM = 1.3f, RyomiM = 1.0f, OviLapiM = 0.8f, OviNakyyS = 1.2f, OviVihjeM = 1.5f;
+        /// <summary>Avainten päälle astuminen (vaaka) ja ovelle käveleminen avaimet kädessä (oven keskikohta seinän sisällä 0,4 m:n
+        /// syvyydellä: kapseli pysähtyy oven eteen ~0,5 m:n päähän).</summary>
+        public const float AstuPoimiM = 0.6f, KavelyAvaaM = 0.9f;
+        static float Vaaka(Vector3 a, Vector3 b) { a.y = b.y = 0f; return Vector3.Distance(a, b); }
         Light oviValo; float oviAukesi = -1f;
         /// <summary>Käytävän lämmin valo oven avautuessa (soihtu käytävän päässä): auki oleva ovi erottuu pimeästä tyrmästä.</summary>
         void OviValo()

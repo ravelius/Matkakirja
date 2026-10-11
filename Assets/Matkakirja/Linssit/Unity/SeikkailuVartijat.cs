@@ -42,6 +42,7 @@ namespace Matkakirja.Natiivi
             /// <summary>Epäilyrepliikki on jo kuultu tässä jaksossa (partiosta poistumisesta paluuseen): Laitetestaajan 4. kierros, sama
             /// "portinvartija-epaily-3" soi Epäilyssä ja varoituksessa 2–3 kertaa → kerran per jakso (PT 11.10. 06.0x).</summary>
             public bool EpailyKuultu;
+            public bool KatseKaannetty;   // jakson 1. varoitus käänsi katseen (nollautuu Partioon ja Kiinniin)
             /// <summary>Kannetun valon säde (lyhty 4 m, soihtu 6 m), 0 = ei kanna.</summary>
             public float ValoM;
             /// <summary>Kannettu valo ja sen perusvoima (varoituksen ajan kirkkaampi).</summary>
@@ -129,7 +130,7 @@ namespace Matkakirja.Natiivi
         Action<string> kirjaa;
         Vector3 tarkistus; SeikkailuPelaaja tarkistusPelaaja;
         double tarkistusYaw = double.NaN;   // kulkusuunta tarkistuspisteessä (paluussa katse siihen, vaakatasoon)
-        string pelaajanOsa; float osaTarkistus, hehkuTarkistus; string kiinniOsa; int kiinniOsassa;
+        string pelaajanOsa; float osaTarkistus, hehkuTarkistus; string kiinniOsa, paluuOsa; int kiinniOsassa;
         bool oliKiipeily; float kiipeilyAlkuY;
         /// <summary>Viimeisimmän tarkistuspisteen osa ja tapahtuma (V6 tallennus kuuntelee).</summary>
         public static string TarkistusOsa;
@@ -296,7 +297,7 @@ namespace Matkakirja.Natiivi
             if (p != null && !riitaKaynnissa && (riitaAsti -= dt) <= 0) { riitaAsti = RiitaValiS; StartCoroutine(Riita(p)); }
             if (p != null && p != tarkistusPelaaja) { tarkistus = p.transform.position; tarkistusYaw = p.Tila.KameraYaw; tarkistusPelaaja = p; }   // uusi pelaaja = uusi tarkistuspiste
             // Turvallinen alku (A1, PT 11.10.): ensimmäiset 60 s pelaajan saatua ohjauksen kukaan ei jahtaa eikä ota kiinni; huomaaminen ja
-            // kääntyminen äänen suuntaan opettavat. Kerran per peli (ei tyrmän tai tarkistuspisteen jälkeen).
+            // kääntyminen äänen suuntaan opettavat. Kerran per peli; kiinnijäännin jälkeen sama turva Vartija.Vapauta-kutsussa (Kiinni).
             if (p != null && !turvaAnnettu)
             {
                 turvaAnnettu = true;
@@ -318,7 +319,8 @@ namespace Matkakirja.Natiivi
                         Tarkistuspiste?.Invoke(osaNyt, pp1);
                     }
                     pelaajanOsa = osaNyt;
-                    if (kiinniOsa != null && osaNyt != kiinniOsa) { kiinniOsa = null; kiinniOsassa = 0; foreach (var x in vartijat) x.Aivot.Helpotettu = false; }   // helpotus päättyy huoneen vaihtuessa
+                    // Helpotus päättyy huoneen vaihtuessa; paluupaikan osa ei ole uusi huone (laituri: tarkistus ulkoalueella, ote vesiportilla).
+                    if (kiinniOsa != null && osaNyt != kiinniOsa && osaNyt != paluuOsa) { kiinniOsa = null; paluuOsa = null; kiinniOsassa = 0; foreach (var x in vartijat) x.Aivot.Helpotus = 0; }
                 }
             }
             // Tarkistuspiste tikkaiden yläpäähän (PT 10.10., pelattavuusmalli 4.3 "tarkistuspiste huoneen alussa"): harja on samaa
@@ -401,9 +403,10 @@ namespace Matkakirja.Natiivi
                 {
                     kirjaa?.Invoke($"seikkailu: vartija {v.Osa} {v.EdellinenTila} → {v.Aivot.Tila} (mittari {v.Aivot.Mittari:F2})");
                     Repliikki(v, v.EdellinenTila, v.Aivot.Tila, s.NakolinjaVapaa && v.Aivot.Mittari > 0);
+                    if (v.Aivot.Tila == VartijanTila.Partio || v.Aivot.Tila == VartijanTila.Kiinni) v.KatseKaannetty = false;
                     v.EdellinenTila = v.Aivot.Tila;
                 }
-                if (v.Aivot.VaroitusPyydetty) { v.Aivot.VaroitusPyydetty = false; Varoita(v); }
+                if (v.Aivot.VaroitusPyydetty) { v.Aivot.VaroitusPyydetty = false; Varoita(v, p); }
                 if (v.Aivot.Tila == VartijanTila.Kiinni) { if (SeikkailuPelaaja.Ensimmainen && p != null) StartCoroutine(Ote(v, p)); else Kiinni(v); break; }
                 if (v.Aivot.Huuto)
                 {
@@ -615,7 +618,7 @@ namespace Matkakirja.Natiivi
         }
 
         Vector3? edellinenJalka; float askelMatka; AudioSource omatKerta;
-        const float PiiloM = 0.7f, HuutoM = 20f, LyhtyM = 4f, SoihtuM = 6f, LahinM = 0.9f, HahmoSadeM = 0.28f;
+        const float PiiloM = 0.7f, HuutoM = 20f, LyhtyM = 4f, SoihtuM = 6f, LahinM = 0.9f, HahmoSadeM = 0.28f, RauhaM = 6f;
         readonly HashSet<string> henkilot = new HashSet<string>(StringComparer.Ordinal);
         static int Numero(string tunnus) { int vi = tunnus.LastIndexOf('-'); return vi > 0 && int.TryParse(tunnus.Substring(vi + 1), out int n) ? n : 0; }
         bool piiloPaljastui;
@@ -711,7 +714,7 @@ namespace Matkakirja.Natiivi
             // vasta paon jälkeen (armoaika ja valppaus silloin).
             if (p != null && SeikkailuTyrma.Aloita(transform.parent, p, () => { Kiinni(v, otePaikka); }, kirjaa))
             {
-                foreach (var x in vartijat) { var xp = x.Agentti.transform.position; x.Aivot.Nollaa(xp.x, xp.z, valpas: !x.Aivot.Torkkuu); x.EdellinenTila = VartijanTila.Partio; }
+                foreach (var x in vartijat) { var xp = x.Agentti.transform.position; x.Aivot.Nollaa(xp.x, xp.z); x.EdellinenTila = VartijanTila.Partio; }
                 tyrmassa = true;
                 while (SeikkailuTyrma.Aktiivinen != null) yield return null;
                 tyrmassa = false; ote = null;
@@ -731,20 +734,32 @@ namespace Matkakirja.Natiivi
             {
                 string osa = otePaikka ?? Askelaani.Osa(SeikkailuKavely.Data, p.transform.position.x, p.transform.position.y, -p.transform.position.z);
                 Kiinnijaatiin?.Invoke(osa);
-                // Anteeksianto (pelattavuusmalli 4.2): 2. kiinnijäänti samassa huoneessa → näkö −15 % ja epäilyraja 0,4; 3. → Pulun taso 2 heti.
+                // Anteeksianto portaittain (pelattavuusmalli 4.2; PT 07.0x, Laitetestaaja 5. kierros 11.10.): taso = kiinnijäännit samassa
+                // huoneessa − 1 (näkö ja kuulo −15 % per taso, epäilyraja +0,1; Vartija.Helpotus); 3. → Pulun taso 2 heti.
                 kiinniOsassa = osa == kiinniOsa ? kiinniOsassa + 1 : 1; kiinniOsa = osa;
-                if (kiinniOsassa >= 2) foreach (var x in vartijat) x.Aivot.Helpotettu = true;
+                paluuOsa = Askelaani.Osa(SeikkailuKavely.Data, tarkistus.x, tarkistus.y, -tarkistus.z);
+                foreach (var x in vartijat) x.Aivot.Helpotus = kiinniOsassa - 1;
                 if (kiinniOsassa >= 3) SeikkailuVihjeet.Aktiivinen?.Pakota(2, "3. kiinnijäänti");   // kieli: ei (tekninen)
-                kirjaa?.Invoke($"seikkailu: kiinnijäänti {kiinniOsassa}. kerran osassa {osa}{(kiinniOsassa >= 2 ? " (helpotus)" : "")}");
+                kirjaa?.Invoke($"seikkailu: kiinnijäänti {kiinniOsassa}. kerran osassa {osa}{(kiinniOsassa >= 2 ? $" (helpotus {Math.Min(kiinniOsassa - 1, Vartija.HelpotusMax)})" : "")}");
             }
             // Tarkistuspisteen osa nykyiseksi (kuten Huonesimulaatio.Kiinnijaanti): paluu ei ole osanvaihto, joka päättäisi helpotuksen.
             if (p != null) { p.Siirra(tarkistus); pelaajanOsa = Askelaani.Osa(SeikkailuKavely.Data, tarkistus.x, tarkistus.y, -tarkistus.z) ?? pelaajanOsa; }
             // Paluussa katse vaakatasoon kulkusuuntaan (PT 05.4x, v8 laituri-a1 a1-08: katse 60–70° alas lankkuihin ja veneeseen).
             if (p != null) { if (!double.IsNaN(tarkistusYaw)) p.Tila.KameraYaw = p.Tila.HahmoYaw = tarkistusYaw; p.Tila.KameraPitch = 0; }
             armoAsti = Time.unscaledTime + ArmoS;   // E1-ajo 7.10.: tarkistuspiste vartijan näkyvissä → kiinni uudelleen heti
-            // Torkkuva vartija ei valpastu muiden kiinniotosta (Siirtoseppä 10.10., PT): valppaana hän näki Tott-kammion reitin 0,7 m:n päästä,
-            // ja kiinni muuriportailla (68) maksoi ~100 s odotusta; nyt 63 s (OlavinlinnaMOsaTestit.KiinniJokaPisteessa).
-            foreach (var x in vartijat) { var vp = x.Agentti.transform.position; x.Aivot.Nollaa(vp.x, vp.z, valpas: !x.Aivot.Torkkuu); x.EdellinenTila = VartijanTila.Partio; }   // tyrmästä palatessa valppaus 60 s
+            // VAPAUTUS (PT 07.0x, Laitetestaaja 5. kierros 11.10.: paluussa Etsintä 3 s:ssa ja kiinni 7–9 s:ssa, 6 kiinniottoa 11 min, linnaan
+            // ei päässyt): kaikki rauhallisina partioon (ei valppautta, ennen 60 s) ja turva-aika 60 s kuten pelin alussa (Vartija.Vapauta).
+            // Paluupaikan lähellä (≤ RauhaM) seisova vartija palaa vartiopaikalleen (ote jätti portinvartijan laiturin päähän pelaajan
+            // viereen), ja tyrmän aikana jonoon jääneet äänet (oven narahdus) eivät kuulu laiturille.
+            jono.Clear();
+            foreach (var x in vartijat)
+            {
+                var ag = x.Agentti; var vp = ag.transform.position;
+                if (ag.isOnNavMesh && (vp - tarkistus).sqrMagnitude < RauhaM * RauhaM && (x.Alku - tarkistus).sqrMagnitude > (vp - tarkistus).sqrMagnitude)
+                { ag.Warp(x.Alku); vp = x.Alku; x.Kohde = new Vector3(float.NaN, 0, 0); kirjaa?.Invoke($"seikkailu: vartija {x.Osa} vartiopaikalle"); }
+                x.Aivot.Vapauta(vp.x, vp.z); x.EdellinenTila = VartijanTila.Partio;
+            }
+            kirjaa?.Invoke($"seikkailu: vapautus, turva {Vartija.TurvaS:F0} s");
         }
 
         /// <summary>Tila lokiin ("poikki vartijat"): tila, mittari ja paikka per vartija.</summary>
@@ -897,9 +912,11 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Näkyvä varoitus (A1): hahmo seisoo VaroitusSeisoS ja katsoo pelaajaa; huudahdus profiilin epäilyrepliikillä
         /// (4 s:n repliikkitauosta välittämättä, koska varoitus on pelaajan ainoa merkki) ja suunnallinen varoitusääni (VaroitusAlkoi).</summary>
-        void Varoita(V v)
+        void Varoita(V v, SeikkailuPelaaja p)
         {
             var vp = v.Agentti.transform.position;
+            // PT 07.3x: katse kääntyy vain jakson ensimmäisellä varoituksella; muilla vain ääni ja valo.
+            if (p != null && SeikkailuPelaaja.Ensimmainen && !v.KatseKaannetty) { v.KatseKaannetty = true; StartCoroutine(KatseVaroittajaan(v, p)); }
             kirjaa?.Invoke($"seikkailu: vartija {v.Osa} varoittaa ({Vartija.VaroitusSeisoS:F1} s, mittari {v.Aivot.Mittari:F2})");
             var r = SeikkailuRepliikit.Aktiivinen;
             var pr = v.Aivot.Profiili;
@@ -912,6 +929,37 @@ namespace Matkakirja.Natiivi
         }
 
         bool turvaAnnettu;
+
+        // VAROITTAJA KUVAAN (PT 07.0x, Laitetestaaja 5. kierros 11.10.: varoitus selän takaa, vartija ei näkynyt eikä lyhty päivällä):
+        // ensimmäisessä persoonassa katse kääntyy KatseS:ssa varoittajaan, jos tämä on yli KatseKulma sivussa; pää nousee vaakatasoon.
+        // Muutos lisätään pelaajan oman vedon päälle; PT 07.3x: mikä tahansa kosketus (tai hiiri/näppäin) keskeyttää heti, ei kameralukkoa.
+        const float KatseKulma = 35f, KatseS = 0.6f;
+        IEnumerator KatseVaroittajaan(V v, SeikkailuPelaaja p)
+        {
+            var ag = v.Agentti; if (ag == null || p == null) yield break;
+            var e = ag.transform.position - p.transform.position; e.y = 0; if (e.sqrMagnitude < 1e-4f) yield break;
+            double ero = Mathf.DeltaAngle((float)p.Tila.KameraYaw, Mathf.Atan2(e.x, e.z) * Mathf.Rad2Deg);
+            if (Math.Abs(ero) <= KatseKulma) yield break;
+            kirjaa?.Invoke($"seikkailu: katse varoittajaan {v.Osa} ({ero:F0}°)");
+            double pitch = -p.Tila.KameraPitch, tehty = 0;
+            for (float t = 0; t < KatseS; )
+            {
+                t += Time.unscaledDeltaTime;
+                if (p == null || p.Otteessa || p.Ohjataan || ote != null || PelaajaKoskee()) yield break;
+                double u = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(t / KatseS)), du = u - tehty; tehty = u;
+                p.Tila.KameraYaw = p.Tila.HahmoYaw = p.Tila.KameraYaw + ero * du;
+                p.Tila.KameraPitch += pitch * du;
+                yield return null;
+            }
+        }
+
+        static bool PelaajaKoskee()
+        {
+            var ts = Touchscreen.current;
+            if (ts != null) foreach (var k in ts.touches) if (k.press.isPressed) return true;
+            var m = Mouse.current; var kb = Keyboard.current;
+            return m != null && (m.leftButton.isPressed || m.rightButton.isPressed || m.delta.ReadValue().sqrMagnitude > 0f) || kb != null && kb.anyKey.isPressed;
+        }
 
         // VAROITUSÄÄNI (PT B3, Laitetestaaja TF 180: "ääni ei kerro, mistä vartija tulee", vain sydän 1 s ennen kiinniottoa): kun
         // kiinni ottava hahmo havahtuu partiosta, sen suunnasta kuuluu varusteiden kalahdus ja terän sihahdus (repliikin lisäksi).

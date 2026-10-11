@@ -406,7 +406,7 @@ namespace Matkakirja.Natiivi
             {
                 // Silmät: kamera lukittu silmäpisteeseen ja sen kiertoon (Ytimen kulmat), ei vaimennusta eikä heiluntaa.
                 p.KapseliPiiloon();
-                var fl = LensSettings.Default; fl.FieldOfView = FpFov; fl.NearClipPlane = 0.05f; fl.FarClipPlane = 4000f;
+                var fl = LensSettings.Default; fl.FieldOfView = FpFov; fl.NearClipPlane = (float)Kameraliike.SilmaLahitasoM; fl.FarClipPlane = 4000f;   // DioraamaNayttamo.Paivita pitää saman (Kameraliike.Lahitaso)
                 p.kamera.Lens = fl;
                 cg.AddComponent<CinemachineHardLockToTarget>();
                 cg.AddComponent<CinemachineRotateWithFollowTarget>();
@@ -574,7 +574,7 @@ namespace Matkakirja.Natiivi
                 if (float.IsNaN(silmaMaailma)) { silmaMaailma = tavoite; silmaNopeus = 0f; }
                 silmaMaailma = Mathf.SmoothDamp(silmaMaailma, tavoite, ref silmaNopeus, PortaatViive, Mathf.Infinity, dt);
                 silmaMaailma = Mathf.Clamp(silmaMaailma, tavoite - PortaatMaxJalki, tavoite + PortaatMaxJalki);
-                silmaMaailma = KattoRaja(silmaMaailma);
+                silmaMaailma = NakyvaRaja(KattoRaja(silmaMaailma));
                 olka.localPosition = new Vector3(0f, silmaMaailma - transform.position.y, 0f);
                 AsetaTakakuva(olka.position, olka.rotation);   // paluu takakuvasta silmiin
             }
@@ -607,6 +607,18 @@ namespace Matkakirja.Natiivi
                 raja = Mathf.Min(raja, alaY + o.distance);
             }
             return raja;
+        }
+
+        // NÄKYVÄ RAJA (11.10., PT 07.0x, Laitetestaaja 5. kierros v10-30/60/76): tyrmän näkyvä holvi (rappaus, ei törmäystä) alkaa
+        // 1,60 m:stä ja peittää oviaukon yläosan; silmät 1,62 m kulkivat sen läpi ("kattolevy + seinä täyttää ruudun"). Silmä laskee
+        // näkyvän mallin alle SilmaVara.VaraM:n päähän (oviaukossa ~1,45 m, kumarrus); ennakko liikesuuntaan, ettei pudotus nytkähdä.
+        public const float NakyvaEnnakkoS = 0.25f;
+        float NakyvaRaja(float silmaY)
+        {
+            var pp = transform.position; float alaY = pp.y + 1.0f;
+            if (silmaY <= alaY) return silmaY;
+            var ennakko = pp + new Vector3((float)kavely.NopeusX, 0f, (float)kavely.NopeusZ) * NakyvaEnnakkoS;
+            return Mathf.Min(SeikkailuKavely.SilmaRaja(pp, silmaY, alaY), SeikkailuKavely.SilmaRaja(ennakko, silmaY, alaY));
         }
 
         /// <summary>Leike liiketavasta ja vauhdista: idle / kyykky_idle seistessä, kavely / juoksu / hiipiminen liikkeessä; toistonopeus =

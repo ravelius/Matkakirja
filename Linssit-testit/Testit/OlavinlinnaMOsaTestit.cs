@@ -147,7 +147,8 @@ namespace Matkakirja.Linssit.Testit
                 Console.WriteLine($"      kiinni {k + 1}: tarkistus ({tarkistus.X:F1}, {tarkistus.Y:F1}, {tarkistus.Z:F1}), komeroon {komeroon:F1} m");
                 if (k == 69) Oleta.Tosi(komeroon <= 2 && Math.Abs(tarkistus.Y - komero.Y) <= 2, $"kiinni 70: tarkistuspiste komerossa ({komeroon:F1} m)");
                 Oleta.Tosi(koe.PX == tarkistus.X && koe.PZ == tarkistus.Z && koe.Seuraava <= k + 1, $"kiinni {k + 1}: tarkistuspisteeseen (seuraava {koe.Seuraava + 1})");
-                foreach (var h in koe.Hahmot) if (h.Aktiivinen && !h.Aivot.Torkkuu) Oleta.Tosi(h.Aivot.Valppaus > 59, $"{h.Nimi} valppaana");
+                // Vapautus (PT 07.0x 11.10., Laitetestaaja 5. kierros): rauhallisina ja turva 60 s (ennen kaikki valppaiksi 60 s).
+                foreach (var h in koe.Hahmot) if (h.Aktiivinen) Oleta.Tosi(h.Aivot.Valppaus == 0 && h.Aivot.Turva > 59, $"{h.Nimi} rauhallinen ja turva ({h.Aivot.Valppaus:F0} / {h.Aivot.Turva:F0} s)");
                 var tulos = ThiefAjuri.Aja(koe, koe.Seuraava, KiipeilyAlku, budjetti: 600); var loppu = tulos.Loppu;
                 if (loppu == null) { Console.WriteLine($"      jumissa pisteessä {tulos.Pisin + 1}:"); ThiefAjuri.Tulosta(tulos.PisinTila); }
                 Console.WriteLine($"      kiinni pisteessä {k + 1} → tarkistus pisteeseen {koe.Seuraava + 1}: {(loppu != null ? $"loppuun {loppu.T - t0:F0} s, kiinni {loppu.Kiinni}" : "JUMI")}");
