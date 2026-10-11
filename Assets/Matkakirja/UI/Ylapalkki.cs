@@ -258,8 +258,10 @@ namespace Matkakirja.Natiivi
             var pp = RuntimePanelUtils.ScreenToPanel(elama.panel, new Vector2(ruutu.x, UiRuutu.Korkeus - ruutu.y));
             if (!elama.worldBound.Contains(pp)) SuljeElamaSelite();
         }
-        IVisualElementScheduledItem ilmoitusAjastin, valahdysAjastin, rahaOdotus, rahaPienenee, rahaPalaa;
+        IVisualElementScheduledItem ilmoitusAjastin, valahdysAjastin, rahaOdotus, rahaPienenee, rahaPalaa, rahaKeskelle, rahaVapauta;
         string odottavaRaha;
+        /// <summary>Kukkaron animaatio käynnissä: pillerin leveys lukittu, päivä ("1 pv") häivytetty.</summary>
+        bool rahaAnimaatio;
 
         /// <summary>Ratas- ja valikkonappi (Paavalikko ja Aanentasot ankkuroituvat näihin).</summary>
         public readonly Button Ratas, Valikko;
@@ -1310,14 +1312,19 @@ namespace Matkakirja.Natiivi
         string RahaNyt => (punta.style.display == DisplayStyle.Flex ? "£" : "") + raha.text;
 
         /*
-         * KUKKARON PALAUTE (omistaja 11.10.2026, juna 182). Summa vaihtuu samalla hetkellä kuin rahaleima
-         * (RahaPalaute ohjaimen RahaMuuttui-tapahtumasta, UiNakymat): vähennys punaisena, lisäys vihreänä,
-         * lihavana ja pienesti suurennettuna noin sekunnin, sitten takaisin; ääni "kukkaro" tai "coin".
+         * KUKKARON PALAUTE (omistaja 11.10.2026, juna 182; tarkennus 15.2x: "rahapäivitys saisi tulla näkyviin pelkästään
+         * oikeaan yläkulmaan. päivitysanimaation ajaksi päivämäärä voi jäädä piiloon. myös punnan merkki pitää muuttua
+         * vihreäksi tai punaiseksi ja koko tekstin pitää animoidusti suurentua ja pienentyä. teksti myös boldattuna kunnes
+         * palautuu takaisin normaaliin tilaan"). Ei keskelle tulevaa leimaa (UiNakymat). Summa (£ ja luku) punaisena tai
+         * vihreänä ja lihavana, suurenee ja pienenee (tyylikirjan liike.avaus/sulku), päivä piilossa animaation ajan;
+         * ääni "kukkaro" tai "coin" ja puhelimella haptiikka (MatkakirjaHaptiikka.mm).
          * Tilarivin uusi summa jää siihen asti odottamaan. Varalla summa näytetään itse VaraMs:n jälkeen
          * (pelistreak ja muut muutokset ilman leimaa), ellei RahaLykkays pidä sitä: reitillä kertyvät
          * matkakulut (suunta −1) ja kysymyksen aikana tullut aarre (suunta +1) odottavat UiNakymatin vapautusta.
          */
-        const int VaraMs = 1500, SuuriMs = 450, PalaaMs = 1000;
+        const int VaraMs = 1500, SuuriMs = 450, PalaaMs = 1000, VapautaMs = 260;
+        /// <summary>Summan suurin koko ja väli pillerin reunoihin huipussa (PT 11.10.: "mahtuu pillerin sisään tasaisin välein").</summary>
+        const float Suurennus = 1.25f, ReunaVaraPx = 8f;
 
         /// <summary>Pidetäänkö summan muutos (suunta −1 / +1) vielä odottamassa (UiNakymat asettaa).</summary>
         public Func<int, bool> RahaLykkays;
@@ -1351,25 +1358,88 @@ namespace Matkakirja.Natiivi
         {
             odottavaRaha = null;
             int ero = Luku(uusi) - Luku(RahaNyt);
+            if (ero == 0) { AsetaRahaTeksti(uusi); SovitaPilleri(); return; }
+            /*
+             * PILLERI PYSYY SAMAN LEVYISENÄ (PT 11.10.2026: leveys hyppäsi, kun "1 pv" poistui ja palasi). Leveys lukitaan
+             * animaation ajaksi, päivä häivytetään (opacity, ei display), ja summa siirretään pillerin keskelle ja
+             * suurennetaan keskeltä (KeskitaJaSuurenna) niin, että suurin koko mahtuu sisään tasaisin välein.
+             */
+            if (!rahaAnimaatio && pilleri.resolvedStyle.width > 0) pilleri.style.width = pilleri.resolvedStyle.width;
+            rahaVapauta?.Pause();
             AsetaRahaTeksti(uusi);
-            SovitaPilleri();
-            if (ero == 0) return;
-            raha.EnableInClassList("mk-pilleri__raha--vahenee", ero < 0);
-            raha.EnableInClassList("mk-pilleri__raha--kasvaa", ero > 0);
-            raha.AddToClassList("mk-pilleri__raha--suuri");
+            foreach (var l in new[] { raha, punta })
+            {
+                l.EnableInClassList("mk-pilleri__summa--vahenee", ero < 0);
+                l.EnableInClassList("mk-pilleri__summa--kasvaa", ero > 0);
+            }
             Kirjasimet.Aseta(raha, Kirjasin.KoneLihava);
+            Kirjasimet.Aseta(punta, Kirjasin.LukuLihava);
+            rahaAnimaatio = true;
+            kello.AddToClassList("mk-pilleri__kello--piilo");
             Aanet.Tehoste(ero > 0 ? "coin" : "kukkaro");
+            if (ero > 0) MatkakirjaHaptiikka_RahaKasvoi(); else MatkakirjaHaptiikka_RahaVaheni();
+            rahaKeskelle?.Pause();
             rahaPienenee?.Pause();
             rahaPalaa?.Pause();
-            rahaPienenee = raha.schedule.Execute(() => raha.RemoveFromClassList("mk-pilleri__raha--suuri")).StartingIn(SuuriMs);
+            // Asettelu ehtii päivittyä (lihava kirjasin, uusi luku) ennen mittausta.
+            rahaKeskelle = raha.schedule.Execute(KeskitaJaSuurenna).StartingIn(16);
+            rahaPienenee = raha.schedule.Execute(() =>
+            {
+                foreach (var l in new[] { raha, punta })
+                {
+                    l.RemoveFromClassList("mk-pilleri__summa--suuri");
+                    l.style.scale = StyleKeyword.Null;
+                }
+            }).StartingIn(SuuriMs);
             rahaPalaa = raha.schedule.Execute(() =>
             {
-                raha.RemoveFromClassList("mk-pilleri__raha--vahenee");
-                raha.RemoveFromClassList("mk-pilleri__raha--kasvaa");
-                // Rahattomuuden varoitus pitää lihavoinnin (NaytaTalous).
+                foreach (var l in new[] { raha, punta })
+                {
+                    l.RemoveFromClassList("mk-pilleri__summa--vahenee");
+                    l.RemoveFromClassList("mk-pilleri__summa--kasvaa");
+                    l.style.translate = StyleKeyword.Null;
+                }
+                // Rahattomuuden varoitus pitää lihavoinnin (NaytaTalous); punta palaa Luku-kirjasimeen.
                 if (!raha.ClassListContains("mk-pilleri__raha--rahaton")) raha.style.unityFontDefinition = StyleKeyword.Null;
+                Kirjasimet.Aseta(punta, Kirjasin.Luku);
+                kello.RemoveFromClassList("mk-pilleri__kello--piilo");
+                // Lukitus pois vasta, kun summa on liukunut paikalleen ja päivä palannut (liike.sulku + varmuus).
+                rahaVapauta = raha.schedule.Execute(() =>
+                {
+                    rahaAnimaatio = false;
+                    foreach (var l in new[] { raha, punta }) l.style.transformOrigin = StyleKeyword.Null;
+                    pilleri.style.width = StyleKeyword.Null;
+                    SovitaPilleri();
+                }).StartingIn(VapautaMs);
             }).StartingIn(PalaaMs);
         }
+
+        /// <summary>Summa (£ + luku) pillerin keskelle ja suurennus keskeltä niin, että se mahtuu sisään tasaisin välein.</summary>
+        void KeskitaJaSuurenna()
+        {
+            var p = pilleri.worldBound;
+            var b = raha.worldBound;
+            var a = punta.resolvedStyle.display == DisplayStyle.Flex ? punta.worldBound : b;
+            float vas = Mathf.Min(a.xMin, b.xMin), oik = Mathf.Max(a.xMax, b.xMax), leveys = Mathf.Max(1f, oik - vas);
+            float keski = (vas + oik) / 2f, dx = p.center.x - keski;
+            float sisa = p.width - pilleri.resolvedStyle.borderLeftWidth - pilleri.resolvedStyle.borderRightWidth - 2f * ReunaVaraPx;
+            float s = Mathf.Clamp(sisa / leveys, 1f, Suurennus);
+            foreach (var l in new[] { raha, punta })
+            {
+                l.AddToClassList("mk-pilleri__summa--suuri");
+                l.style.transformOrigin = new TransformOrigin(new Length(keski - l.worldBound.xMin, LengthUnit.Pixel), new Length(50, LengthUnit.Percent));
+                l.style.translate = new Translate(dx, 0);
+                l.style.scale = new Scale(new Vector2(s, s));
+            }
+        }
+
+#if UNITY_IOS && !UNITY_EDITOR
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern void MatkakirjaHaptiikka_RahaKasvoi();
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern void MatkakirjaHaptiikka_RahaVaheni();
+#else
+        static void MatkakirjaHaptiikka_RahaKasvoi() { }
+        static void MatkakirjaHaptiikka_RahaVaheni() { }
+#endif
 
         static int Luku(string s) => int.TryParse(s.TrimStart('£').Replace("\u00a0", "").Trim(), out var n) ? n : 0;
 
