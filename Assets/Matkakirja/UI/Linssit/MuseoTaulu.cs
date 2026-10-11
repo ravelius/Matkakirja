@@ -164,8 +164,17 @@ namespace Matkakirja.Natiivi
             MuseoSovitin.HuoneVaihtui += HuoneVaihtui;
             Nappaimisto.Rekisteroi("museo-huone", 60, () => MuseoSovitin.HuoneKorttiAuki, null, null, () => MuseoSovitin.HuoneKortti(false));
 
+            // KERTOJAN TEKSTITYS (LS2 11.10., PT: juna 182, oletus pois; Raamattu PUHE ÄÄNENÄ): Ihmisen matkan kertomus-pohja
+            // (mk-aikajana-kertomus: tumma läpikuultava laatikko, keskitetty teksti) ohjausnappien yläpuolelle, ei teoksen päälle.
+            virke = Rakenne.El("mk-aikajana-kertomus", turva, PickingMode.Ignore);
+            virke.style.display = DisplayStyle.None;
+            virkeLaatikko = Rakenne.El("mk-aikajana-kertomus__laatikko", virke, PickingMode.Ignore);
+            virkeTeksti = Rakenne.Teksti("", "mk-aikajana-kertomus__teksti", virkeLaatikko);
+            Kirjasimet.Aseta(virkeTeksti, Kirjasin.Luku);
+            MuseoSovitin.KertojanVirkeVaihtui += _ => PaivitaVirke();
+
             MuseoSovitin.Vaihtui += Paivita;
-            kerros.JokaRuutu += () => { if (auki) { AsetteleKortti(); AsetteleNimi(); } };
+            kerros.JokaRuutu += () => { if (auki) { AsetteleKortti(); AsetteleNimi(); AsetteleVirke(); } };
         }
 
         void AsetaKuva(RenderTexture kuva) =>
@@ -242,6 +251,31 @@ namespace Matkakirja.Natiivi
             });
         }
 
+        readonly VisualElement virke, virkeLaatikko;
+        readonly Label virkeTeksti;
+
+        /// <summary>Kertojan virke kaistaleelle (MuseoSovitin.KertojanVirke; null = piiloon). Esittely- ja huonekortti peittävät sen.</summary>
+        void PaivitaVirke()
+        {
+            string v = auki && !korttiNakyy && !huoneAuki ? MuseoSovitin.KertojanVirke : null;
+            if (v != null && virkeTeksti.text != v) virkeTeksti.text = v;
+            var d = v != null ? DisplayStyle.Flex : DisplayStyle.None;
+            if (virke.style.display != d) virke.style.display = d;
+            virkeLaatikko.EnableInClassList("mk-nakyy", v != null);
+        }
+
+        /// <summary>Kaistale ohjausnappien yläpuolelle (8 pt väli); pohjan bottom 14 px on aikaselaimen paikka, museossa napit.</summary>
+        void AsetteleVirke()
+        {
+            if (virke.style.display == DisplayStyle.None || virke.parent == null || ryhma.resolvedStyle.display == DisplayStyle.None) return;
+            float ala = virke.parent.worldBound.yMax - ryhma.worldBound.yMin + 8f;
+            if (!float.IsNaN(ala) && Mathf.Abs(virke.resolvedStyle.bottom - ala) > 0.5f) virke.style.bottom = ala;
+        }
+
+        /// <summary>Testi (`ui museo tekstitys`): kaistaleen tila.</summary>
+        public string VirkeKuvaus() => virke.style.display == DisplayStyle.None ? "museo-tekstitys: piilossa (tekstitys " + (MuseoSovitin.TekstitysPaalla ? "päällä" : "pois") + ")"
+            : $"museo-tekstitys: \"{(virkeTeksti.text.Length > 40 ? virkeTeksti.text.Substring(0, 40) + "…" : virkeTeksti.text)}\" @ {virkeLaatikko.worldBound.xMin:0},{virkeLaatikko.worldBound.yMin:0} {virkeLaatikko.worldBound.width:0}×{virkeLaatikko.worldBound.height:0}";
+
         void Paivita()
         {
             var s = MuseoSovitin.Aktiivinen;
@@ -250,7 +284,7 @@ namespace Matkakirja.Natiivi
             ryhma.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
             poistuRivi.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
             if (UiNakymat.Olemassa) UiNakymat.Hae().Linssit?.PaivitaSulku();
-            if (!auki) { otsikko.style.display = DisplayStyle.None; NaytaKortti(false); NaytaHuone(false); return; }
+            if (!auki) { otsikko.style.display = DisplayStyle.None; NaytaKortti(false); NaytaHuone(false); PaivitaVirke(); return; }
             var k = s.Kierros;
             bool vapaana = k != null && k.Vaihe == MuseoVaihe.Vapaa;
             nakyma.pickingMode = vapaana ? PickingMode.Ignore : PickingMode.Position;
@@ -284,6 +318,7 @@ namespace Matkakirja.Natiivi
             }
             NaytaKortti(MuseoSovitin.EsittelyAuki && r != null);
             NaytaHuone(MuseoSovitin.HuoneKorttiAuki && s.NykyinenHuone != null);
+            PaivitaVirke();
         }
 
         void HuoneVaihtui(Huone h)
