@@ -379,7 +379,7 @@ test('tilojen valot[] ovat oikeamuotoiset (erä 2b kohta 1: paikka, sade, voima,
     }
   }
   // Regressio (kohta 1: "Tulisijalla lepatus 0,35"): keittiön ensimmäinen valo on tulisijan valo.
-  const keittio = tilaLoytyy('keittio');
+  const keittio = tilaLoytyy('keittio-g102');   // 11.10.2026: vanha 'keittio' pois, G 102 on linssin keittiö
   assert.ok(keittio.valot?.length >= 1, 'keittiö: valot puuttuu');
   assert.equal(keittio.valot[0].lepatus, 0.35, 'keittiön tulisijan valo: lepatus 0,35');
   assert.ok(keittio.valot[0].vari, 'keittiön tulisijan valo: vari puuttuu');
@@ -417,7 +417,7 @@ test('elävä linna: jokaisella kohdistettavalla tilalla on elava.kohde, vihje v
     assert.equal(typeof r.edestakaisin, 'boolean', `${tila.id}: reitti.edestakaisin ei ole totuusarvo`);
   }
   assert.equal(vihjeita, 1, 'sykkivä vihje (elava.vihje) täsmälleen yhdellä tilalla');
-  assert.equal(RAKENNUS.tilat.find((t) => t.elava?.vihje)?.id, 'keittio');
+  assert.equal(RAKENNUS.tilat.find((t) => t.elava?.vihje)?.id, 'keittio-g102');
 });
 
 test('elävä linna: RAKENNUS.saapuminen ja nimilaput ovat oikeamuotoiset', () => {

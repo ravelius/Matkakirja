@@ -22,8 +22,9 @@ import { TILA as TILA_KIERREPORTAAT } from './olavinlinna/kierreportaat.js';
 import { TILA as TILA_MUURINHARJA } from './olavinlinna/muurinharja.js';
 import { TILA as TILA_KAPPELI } from './olavinlinna/kappeli.js';
 import { TILA as TILA_KESKUSHALLI } from './olavinlinna/keskushalli.js';
-import { TILA as TILA_KEITTIO } from './olavinlinna/keittio.js';
-// Keittiö G 102 (7.10.2026): uusi keittiö lähteiden mukaiseen eteläsiipeen, kohdistettava: false natiivin todennukseen asti.
+// Keittiö G 102 (7.10.2026): keittiö lähteiden mukaiseen eteläsiipeen. 11.10.2026 (PT, vaihtoehto B): vanha itäsiiven
+// keittiö (olavinlinna/keittio.js, tila 'keittio') pois tiloista ja kiertueelta; G 102 on linssin Keittiö (kohdistettava).
+// keittio.js jää G 102:n tietolähteeksi (nimi, infotaulu, etsintä).
 import { TILA as TILA_KEITTIO_G102 } from './olavinlinna/keittio-g102.js';
 import { TILA as TILA_TUNNELMA } from './olavinlinna/tunnelma.js';
 import { TILA_LINNANTUPA, TILA_VOUDIN_SALI } from './olavinlinna/palatsi.js';
@@ -133,7 +134,7 @@ export const RAKENNUS = {
   // matkamuisto (ei Aarnin luettelon aarre): PeliOhjain.LoydaMatkamuisto('voudin-sinetti') (Pelikoodari). Kortin
   // faktat ovat yleistä keskiajan sinettitietoa (Sisältökirjuri era4 S1, S3: Olavinlinnan voudin sinetistä ei lähdettä).
   etsinnat: [{
-    id: 'voudin-sinetti', nimi: 'Voudin sinetti', vaiheet: ['keittio', 'kappeli', 'fatabuuri'],
+    id: 'voudin-sinetti', nimi: 'Voudin sinetti', vaiheet: ['keittio-g102', 'kappeli', 'fatabuuri'],
     kuvaus: 'Vouti on hukannut sinettisormuksensa.',
     kortti: {
       tila: 'tarkistettu',
@@ -147,10 +148,10 @@ export const RAKENNUS = {
   pulu: { laskeutuminen: [-10, 0.5, 0] },
   taulu: TAULU_LINNA,
   // Pulun kiertue (erä 3 kohta 5): laiturilta portille, torneihin ja muurille, lopuksi saliin ja keittiöön.
-  kiertue: ['laituri', 'fatabuuri', 'kierreportaat', 'muurinharja', 'kappeli', 'keskushalli', 'keittio'],
+  kiertue: ['laituri', 'fatabuuri', 'kierreportaat', 'muurinharja', 'kappeli', 'keskushalli', 'keittio-g102'],
   tilat: [
     TILA_MASSA, TILA_LAITURI, TILA_FATABUURI, TILA_KIERREPORTAAT, TILA_MUURINHARJA,
-    TILA_KAPPELI, TILA_KESKUSHALLI, TILA_KEITTIO, TILA_TUNNELMA, TILA_KEITTIO_G102,
+    TILA_KAPPELI, TILA_KESKUSHALLI, TILA_TUNNELMA, TILA_KEITTIO_G102,
     TILA_LINNANTUPA, TILA_VOUDIN_SALI,
   ].map(kohtauksetV3), // kohtaukset v3 (5.10.): kertoja + keskustelu, käsikirjoitus pulu-lenna + taulu (olavinlinna/kohtaukset-v3.js)
 };

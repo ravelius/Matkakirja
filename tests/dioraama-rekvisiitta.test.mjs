@@ -188,18 +188,15 @@ test('rakenna.mjs: keittiön rakennus.json:n valot sisältävät rekvisiitan kyn
   try {
     await rakennaData(OLAVINLINNA, { ulos: tmp, saateita: 8 });
     const json = JSON.parse(readFileSync(join(tmp, OLAVINLINNA.id, 'rakennus.json'), 'utf8'));
-    const keittio = json.tilat.find((t) => t.id === 'keittio');
-    assert.ok(keittio, "tila 'keittio' puuttuu rakennus.json:sta");
+    const keittio = json.tilat.find((t) => t.id === 'keittio-g102');   // 11.10.2026: vanha 'keittio' pois, G 102 on linssin keittiö
+    assert.ok(keittio, "tila 'keittio-g102' puuttuu rakennus.json:sta");
 
     const omat = keittio.valot.filter((v) => v.lahde !== 'rekvisiitta');
     const rekvisiitasta = keittio.valot.filter((v) => v.lahde === 'rekvisiitta');
-    // Lähdedatassa (olavinlinna.js) keittiössä on 2 kynttilänjalkaa + 1 öljylamppu.
-    assert.equal(rekvisiitasta.length, 3, `odotettiin 3 rekvisiittavaloa, oli ${rekvisiitasta.length}`);
+    // Lähdedatassa (keittio-g102.js) G 102:ssa on 2 kynttilänjalkaa (ei öljylamppua).
+    assert.equal(rekvisiitasta.length, 2, `odotettiin 2 rekvisiittavaloa, oli ${rekvisiitasta.length}`);
     assert.equal(
       rekvisiitasta.filter((v) => v.lepatus === 0.2).length, 2, 'odotettiin 2 kynttilänjalan valoa (lepatus 0,2)',
-    );
-    assert.equal(
-      rekvisiitasta.filter((v) => v.lepatus === 0.1).length, 1, 'odotettiin 1 öljylampun valo (lepatus 0,1)',
     );
     for (const v of rekvisiitasta) {
       assert.equal(v.paikka.length, 3, 'valo.paikka ei ole [x,y,z]');

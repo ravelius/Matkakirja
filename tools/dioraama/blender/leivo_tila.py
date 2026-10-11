@@ -66,6 +66,9 @@ if KUORI:
         lk = tila.get('leikkaus') or {}
         r = lk if lk.get('min') else tila['rajat']; mn = Vector(bl(r['min'])); mx = Vector(bl(r['max']))
         la = float(lk.get('laajennus', 1.0)); ylos = 0 if lk.get('min') else 30
+        # --ylos M (LR 11.10.2026, keittio-g102:n ulkopinnat): leikkaus jatkuu M m ylöspäin, jotta taivas valaisee tilan ulkoseinät
+        # (kävelyssä pihalta näkyvät; muuten kuoren siipimassa varjosti ne mustiksi: päivä 84 %, hämärä 98 %).
+        ylos = float(arg('--ylos', ylos))
         lo = Vector((min(mn.x, mx.x) - la, min(mn.y, mx.y) - la, min(mn.z, mx.z) - (min(la, 0.2) if lk.get('min') else la)))
         hi = Vector((max(mn.x, mx.x) + la, max(mn.y, mx.y) + la, max(mn.z, mx.z) + la))
         kameraan = lk.get('kameraan', True)

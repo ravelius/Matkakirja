@@ -283,7 +283,7 @@ export const TILA = {
   rajat: { min: [-22, 0, -18.5], max: [-7.5, 5, -9] },
   // Leikkaus pohjoissiiven katon (≈ 13,8 → lähteessä 10,9) yli.
   leikkaus: { laajennus: 1.0, kameraan: true, min: [-22, 0, -18.5], max: [-7.5, 11.5, -9] },
-  naapurit: ['massa', 'fatabuuri', 'muurinharja', 'kappeli', 'keittio'],
+  naapurit: ['massa', 'fatabuuri', 'muurinharja', 'kappeli'],
   kamera: { kohde: [-14.75, 1.6, -13.8], atsimuutti: 170, korkeus: 22, etaisyys: 17, fov: 38, aukko: 0.8 },
   kameraPysty: { kohde: [-13.02, -4, -14.04], // pysty 30.9.: noppapeli ja apulainen näkyviin (x 0,63–0,86)
      atsimuutti: 172, korkeus: 24, etaisyys: 43, fov: 38, aukko: 0.8 },

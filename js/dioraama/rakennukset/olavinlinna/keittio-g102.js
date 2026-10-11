@@ -1,6 +1,6 @@
 // OLAVINLINNA / keittiö G 102 (Linnanrakentaja 7.10.2026; Päätoimittajan päätös: keittiö lähteiden mukaiseen paikkaan,
 // pikkupihan eteläsiipeen G 102, joka purettiin 1720-luvulla ja rakennetaan dioraamaan uudelleen). Vanha keittiö
-// (keittio.js, itäsiiven alakerta) JÄÄ ENNALLEEN; tämä tila on kohdistettava: false, kunnes natiivi on todennut sen.
+// (keittio.js, itäsiiven alakerta) poistettiin tiloista 11.10.2026 (PT, vaihtoehto B); tämä on nyt linssin Keittiö.
 //
 // GEOMETRIA = vapaan kävelyn malli (_valmiit/olavinlinna-kavely-v1/lahde/reitti.json + kavely.py, funktio keittio)
 // TÄSMÄLLEEN, koska kävelyn törmäys ja leikkaukset on tehty sen mukaan. Maailmakoordinaatit suoraan (ei sijoitusta),
@@ -151,9 +151,9 @@ export const TILA = {
     { id: 'keittio-g102-kertoja', puhuja: 'kertoja', nimi: 'Kertoja', aani: 'keittio-kertoja', teksti: V3.kertoja },
     { id: 'keittio-g102-keskustelu', puhuja: 'keskustelu', nimi: '', aani: 'keittio-keskustelu', teksti: V3.vuorot.map((v) => v.teksti).join(' '), vuorot: V3.vuorot },
   ],
-  // Ei linssin huonevalinnassa ennen natiivin todennusta (vaihto: kohdistettava true + lappujarjestys 1 + elava.vihje
-  // tänne, ja vanha 'keittio' pois kiertueelta/tiloista; ks. luovutusraportti).
-  kohdistettava: false,
+  // 11.10.2026 (PT, vaihtoehto B): linssin Keittiö — kohdistettava, lappu 1 ja sykkivä vihje siirretty vanhasta 'keittio'-tilasta.
+  kohdistettava: true,
+  lappujarjestys: 1,
   rajat: { min: [-24.35, Y, 11.05], max: [-15.05, y(H), 16.1] },
   // Leikkausikkuna kuoreen koko siiven ja kehämuurin yli (G 102 puuttuu kuoresta: piha ja muuri leikataan pois).
   leikkaus: { laajennus: 1.0, kameraan: false, min: [-25.4, -2.85, 10.0], max: [-14.0, 3.1, 17.0] },
@@ -166,7 +166,7 @@ export const TILA = {
   pulu: { ...KEITTIO.pulu, laskeutuminen: [-20.6, y(0.45), 13.36] },
   taulu: TAULU,
   // Pihan puolen julkisivu ikkunoiden kohdalla (ei vihjettä: se on vanhalla keittiöllä, kunnes tämä vaihtuu tilalle).
-  elava: { kohde: [-17.3, y(2.0), 10.15], sade: 6 },
+  elava: { kohde: [-17.3, y(2.0), 10.15], sade: 6, vihje: true },
   valot: [
     // Tulisija kantaa tunnelman kuten vanhassa keittiössä (lepatus 0,35); hiilloksen keskellä, Blender nostaa 0,9 m.
     { paikka: tl(0, 0, 0.5), sade: 8, voima: 2.4, vari: '#ff9a4a', lepatus: 0.35 },

@@ -37,7 +37,7 @@ export const TILA = {
   nimi: 'Olavinlinna (yleisnäkymä)',
   kohdistettava: false,
   rajat: { min: [-58, -10, -48], max: [58, 42, 36] },
-  naapurit: ['tunnelma', 'laituri', 'fatabuuri', 'kierreportaat', 'muurinharja', 'kappeli', 'keskushalli', 'keittio'],
+  naapurit: ['tunnelma', 'laituri', 'fatabuuri', 'kierreportaat', 'muurinharja', 'kappeli', 'keskushalli'],
   hahmot: [],
   // Massan äänisilmukat: tuuli linnan muureilla + järven laineet rannassa (era2 kohta 2 "AANET").
   // Äänet (Linnanrakentaja 30.9., CC0/PD, suunnitelma docs/raportit/linna-aanet-suunnitelma-20260930.md kohta 2).
