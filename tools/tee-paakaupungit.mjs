@@ -56,6 +56,16 @@ const ASEMA = { PSE: 'hallinnon paikka', BOL: 'hallinnon paikka' };
 const PELIN_TUNNUS = { SSD: 'SDS' };
 // Kortin nimi lyhyenä; Sisältökirjurin muoto "Washington (Washington, D.C.)" on selite.
 const NIMI = { USA: 'Washington' };
+/*
+ * SIJAINTIKORJAUS (Karttaseppä 11.10.2026, PT): Wikidatan piste on näissä
+ * 2–5 km sivussa keskustasta, joten kohdekartta ja pallon piste osuivat
+ * esikaupunkiin. Arvo = keskustan [lat, lon].
+ */
+const SIJAINTIKORJAUS = {
+  RWA: [-1.9441, 30.0619], // Kigali: Wikidata 5 km itään (Kimironko)
+  SOM: [2.0369, 45.3387], // Mogadishu: Wikidata 3 km länteen vanhasta kaupungista
+  ERI: [15.3366, 38.9363], // Asmara: Wikidata 2 km länteen Harnet-kadusta
+};
 const LAUDAN_KAUPUNKI_EI_PISTETTA = { ISR: 'jerusalem' };
 // "paakaupunki"-rivien maa-objektissa on vain tunnus, nimi ja genetiivi
 // (maa on jo laudalla omine tietoineen); perustiedot vain täysistä riveistä.
@@ -89,7 +99,8 @@ for (const polku of syotteet) {
     const id = o?.id ? tunnus(o.id) : tunnus(k.nimi_fi);
     if (LAUDAN_KAUPUNKI_EI_PISTETTA[iso] === id) { pisteet.delete(iso); continue; }
     if (laudanKaupungit.has(id)) throw new Error(`${iso}: pääkaupungin id ${id} on jo laudan kaupunki — se on pysäkki, ei pistettä`);
-    const lat = k.sijainti?.lat ?? o?.lat; const lon = k.sijainti?.lon ?? o?.lon;
+    const korjattu = SIJAINTIKORJAUS[iso];
+    const lat = korjattu?.[0] ?? k.sijainti?.lat ?? o?.lat; const lon = korjattu?.[1] ?? k.sijainti?.lon ?? o?.lon;
     if (!Number.isFinite(lat) || !Number.isFinite(lon)) throw new Error(`${iso}: pääkaupungilta puuttuu sijainti`);
     pisteet.set(iso, {
       id, nimi: NIMI[iso] ?? k.nimi_fi, nimiAlkukieli: k.nimi_alkukieli ?? null, maa: iso, lat: Number(lat.toFixed(4)), lon: Number(lon.toFixed(4)),
