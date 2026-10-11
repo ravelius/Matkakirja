@@ -124,6 +124,24 @@
     color: var(--tk-videopeli-muste-pehmea);
 }
 
+/* Selaimen napit ja kategoria-/ylärivin tekstit ovat omia Label-lapsiaan tarkemmilla valitsimilla (nostoselain.uss), joten
+ * ne ylikirjoitetaan yhtä tarkoilla (simuajo 23afc880: NOSTOT, AUTO ja HISTORIA jäivät tummiksi). */
+.mk-nosto--videopeli .mk-nostoselain .mk-nappi__teksti,
+.mk-nosto--videopeli .mk-nostoselain .mk-ikoni {
+    color: var(--tk-videopeli-muste);
+}
+
+.mk-nosto--videopeli .mk-nostoselain .mk-nostoselain__sivu .mk-nosto__ylarivi-teksti,
+.mk-nosto--videopeli .mk-nosto__ylarivi.mk-nosto__ylarivi--kategoria .mk-nosto__ylarivi-teksti,
+.mk-nosto--videopeli .mk-nosto__ylarivi .mk-nosto__ylarivi-teksti {
+    color: var(--tk-videopeli-korostus);
+}
+
+.mk-nosto--videopeli .mk-nostoselain .mk-nosto__ylarivi-symboli,
+.mk-nosto--videopeli .mk-nosto__ylarivi.mk-nosto__ylarivi--kategoria .mk-nosto__ylarivi-symboli {
+    -unity-background-image-tint-color: var(--tk-videopeli-korostus);
+}
+
 .mk-nosto__kimmelala {
     display: none;
     position: absolute;
