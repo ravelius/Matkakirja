@@ -53,6 +53,10 @@ namespace Matkakirja.Natiivi
         public static bool Testi;
         /// <summary>Kamera pysäytetty paikalleen (komento "opas pysayta 1|0"; kuvaparit samasta kulmasta), silmukka odottaa.</summary>
         public static bool Pysaytetty;
+        /// <summary>QA (PT juna 181, omistaja TF 180 "kippi pysähtyy vieläkin välillä"): pallon nopeusloki 0,1 s:n välein konsoliin,
+        /// "MATKAKIRJA opas nopeus t=… v=… kulma=… kohde=… vaihe=…" (OpasNopeusloki; komento "opas nopeusloki 0|1"). Pois oletuksena.</summary>
+        public static bool NopeusLoki;
+        OpasNopeusloki nopeusloki; double nopeuslokiAlku;
         /// <summary>Testiotsake (komento "opas testiotsake 1"): worker palauttaa kerronnan ilman ääntä (ei ElevenLabs-kulutusta simussa).</summary>
         public static bool Testiotsake;
         /// <summary>PCM-suoratoisto (Pöllön aani_pcm) käytössä. OLETUS PÄÄLLÄ (Päätoimittaja 6.10. 13.2x, juna 148): Pöllön kylmä mp3 alkaa
@@ -434,6 +438,7 @@ namespace Matkakirja.Natiivi
             KrediititTiivis.Paivita(true);   // kapealla ruudulla logot + "Data sources" (Googlen policy)
             if (KiinteaKamera is Kuvakulma kk)   // kuvaparit samasta kulmasta (testi)
             {
+                if (kierto != null) kierto.LahitasonMaa = LahitasonMaaFn;   // katutaso: lähitaso maan mukaan (PalloKierto.LahitasonMaa)
                 y.Kuvaa(kk); kaupunki.AsetaEsikamera(kk);
                 if (!kiinteaKirjattu) { kiinteaKirjattu = true; kiinteaAlku = Time.realtimeSinceStartup; kiinteaLaski = false; o.Kirjaa($"opas: kiinteä kamera käytössä {kk}"); }
                 // Latausaika kiinnityksestä 99 %:iin (Päätoimittaja: kolmikon latausajat); vasta kun aste on ensin laskenut tai 3 s.
@@ -445,13 +450,14 @@ namespace Matkakirja.Natiivi
                         o.Kirjaa($"opas: kiinteä kamera: laatat 99 % {Time.realtimeSinceStartup - kiinteaAlku:F1} s:ssa (kerroin {CesiumKaupunki.SseKerroin:F2})"); kiinteaAlku = -1f;
                         // Kulma ei toistunut istunnosta toiseen (6.10. kolmikko 1,71/1,3/1,0): kameran todellinen asento vertailuun.
                         var kam = kierto != null ? kierto.GetComponent<Camera>() : null;
-                        if (kam != null) o.Kirjaa($"opas: kiinteä kamera: fov {kam.fieldOfView:F2}, aspect {kam.aspect:F3}, paikka {kam.transform.position}, kulmat {kam.transform.eulerAngles}, korkeuskerroin {Matkakirja.KorkeusKerroin.Arvo:F3}, origo {kaupunki.OrigoTeksti}");
+                        if (kam != null) o.Kirjaa($"opas: kiinteä kamera: fov {kam.fieldOfView:F2}, aspect {kam.aspect:F3}, paikka {kam.transform.position}, kulmat {kam.transform.eulerAngles}, korkeuskerroin {Matkakirja.KorkeusKerroin.Arvo:F3}, origo {kaupunki.OrigoTeksti}, lähitaso {kam.nearClipPlane:F1} m");
                     }
                 }
                 if (kaupunki.KarkeaKaytossa && kaupunki.Latausaste >= CesiumKaupunki.ValmisProsentti) kaupunki.Tarkenna();
                 return;
             }
             kiinteaKirjattu = false;
+            if (kierto != null) kierto.LahitasonMaa = null;
             if (Pysaytetty) { y.Kuvaa(silmukka.Asento); return; }
             var ennen = silmukka.Vaihe;
             LueTapit();
@@ -466,6 +472,13 @@ namespace Matkakirja.Natiivi
                     case KysyOdotus.Tapahtuma.Odotus12: Silta(OpasSiltalauseet.Odotus12, false); break;
                     case KysyOdotus.Tapahtuma.Virhe: o.Kirjaa("opas: kysymykseen ei vastausta 25 s:ssa"); Silta(OpasSiltalauseet.Virhe, false); break;
                 }
+            // Laitteen kuvasuhde tornisäännölle (PT 11.10. 07.3x: iPhonen pystykuva ~0,46; kääntö kesken pysähdyksen → kehys uudelleen).
+            var suhdeKamera = kierto != null ? kierto.GetComponent<Camera>() : null;
+            if (suhdeKamera != null && suhdeKamera.aspect > 0.1f && Math.Abs(suhdeKamera.aspect - OpasKuvaus.KuvaSuhdeNyt) > 0.005)
+            {
+                OpasKuvaus.KuvaSuhdeNyt = suhdeKamera.aspect;
+                o.Kirjaa($"opas: kuvasuhde {suhdeKamera.aspect:F2} (tornisääntö {OpasSilmukka.TorniSuhde:F2})");
+            }
             silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus, () => kaupunki.Valmis);
             // Kaksivaiheinen tarkkuus: pysähdyksellä (ei lento eikä siirto) ja laatat ≥ 99 % → tarkentuminen tavoitekertoimeen.
             // Vapaan tilan liike (LS2 6.10. 19.4x, Eiffel 40 m: venyneet laatat liikkeessä): tapit käytössä → karkea valinta kuten
@@ -485,6 +498,13 @@ namespace Matkakirja.Natiivi
                 + (silmukka.Vaihe == OpasVaihe.Lentaa && silmukka.LahtoOdottiS > 0 ? $", lähtö odotti laattoja {silmukka.LahtoOdottiS:F1} s" : ""));
             if (silmukka.Vaihe != ennen && silmukka.Vaihe == OpasVaihe.Lentaa) { OpasKorostusKuva.Piilota(); KohdeKorostus.Piilota(); }
             y.Kuvaa(introKamera ?? silmukka.Asento);   // Pariisin nykyintron Eiffel-otos (OpasSovitin.Intro), muuten silmukka
+            if (NopeusLoki)
+            {
+                if (nopeusloki == null) { nopeusloki = new OpasNopeusloki(); nopeuslokiAlku = Time.unscaledTimeAsDouble; }
+                if (nopeusloki.Paivita(Time.unscaledTimeAsDouble - nopeuslokiAlku, silmukka.Asento, silmukka.Nykyinen?.Id, OpasNopeusloki.Vaihe(silmukka)) is OpasNopeusloki.Nayte nn)
+                    Debug.LogFormat(LogType.Log, LogOption.NoStacktrace, null, "{0}", OpasNopeusloki.Rivi(nn));
+            }
+            else nopeusloki = null;
             PaivitaKameraTila();
             // Yövalot v4: nykyinen kohde saa yöllä lämpimän valonheiton (KaupunkiYovalot; Päätoimittaja 22.3x "Eiffel kultaisena").
             KaupunkiYovalot.KaupunkiId = NykyinenKaupunkiId;
@@ -1298,6 +1318,19 @@ namespace Matkakirja.Natiivi
             v.o.Kirjaa(ok ? $"opas: kierros hyppää {nyk} → {i} ({(i < KierrosKohteet.Count ? KierrosKohteet[i].nimi : "-")})" : $"opas: kierroshyppy {i} ei käy");
             return ok;
         }
+        /// <summary>QA "opas hyppy &lt;Q-tunnus|nimi&gt;" (PT 11.10.): kohteen indeksi KierrosKohteet-listassa (haku kierroksen tai
+        /// liiku-listan kohteista, OpasTaky.Etsi); −1 = ei löydy tai ei kierroksella.</summary>
+        public static int KierrosIndeksiKohteelle(string tunnusTaiNimi)
+        {
+            if (!Auki) return -1;
+            var v = Viimeisin;
+            var t = OpasTaky.Etsi(v.kierrosKohteet ?? v.kohteet, tunnusTaiNimi);
+            if (t == null) return -1;
+            var jono = KierrosKohteet;
+            for (int i = 0; i < jono.Count; i++)
+                if (jono[i].nimi == t.Nimi && Math.Abs(jono[i].lat - t.Lat) < 1e-6 && Math.Abs(jono[i].lon - t.Lon) < 1e-6) return i;
+            return -1;
+        }
         int hyppyLahto = int.MinValue;
 
         // ---- VAPAA LENTO JA PALUU KIERROKSELLE (omistaja 9.10., Päätoimittaja juna 170; napit Natiivi-UI heijastuksella,
@@ -1457,6 +1490,10 @@ namespace Matkakirja.Natiivi
             v.o.Kirjaa($"opas: kaupunkikierros {jono.Count} kohdetta");
             v.kellotSoineet.Clear();   // kirkonkellot kerran kierroksella
             v.silmukka.AloitaKierros(jono);
+            // Aukion kierron esteet (juna 181, San Marcon kellotorni): listan tornit ja kirkot nimelliskorkeudella, tarkentuu vastauksista.
+            // Luokaton lista (lukittu kaupunki, worker "luokka": null): korkeus tuntematon → lähellä oleva aukio vanhalla kehyksellä.
+            foreach (var t in v.kierrosKohteet ?? v.kohteet) v.silmukka.LisaaEste(t.Lat, t.Lon, OpasSilmukka.EsteKorkeus(t.Luokka, t.KorkeusM), OpasSilmukka.PalloEsteSadeM,
+                t.Luokka != null || !double.IsNaN(t.KorkeusM), t.Luokka);
             v.Silta(OpasSiltalauseet.Aloitus, true);
             return true;
         }
@@ -2734,6 +2771,24 @@ namespace Matkakirja.Natiivi
             string id = KorkeusId(lat, lon);
             return id != null && (maaMallit.ContainsKey(id) || maaPuuttuu.Contains(id)) && !double.IsNaN(OmaMaa(lat, lon));
         }
+        /// <summary>Onko maanpinnan malli (DTM) muistissa (KaupunkiPuut: tila).</summary>
+        public static bool MaanpintaLadattu(double lat, double lon)
+        {
+            string id = KorkeusId(lat, lon);
+            return id != null && maaMallit.ContainsKey(id);
+        }
+        /// <summary>Pelkkä maanpinta (DTM) ilman DSM-varaa; NaN mallin ulkopuolella (KaupunkiPuut: DSM:ssä puu on latvassa).</summary>
+        public static double OmaMaanpintaDtm(double lat, double lon)
+        {
+            string id = KorkeusId(lat, lon);
+            return id != null && maaMallit.TryGetValue(id, out var m) ? m.Korkeus(lat, lon) : double.NaN;
+        }
+        /// <summary>Kiinteän kameran lähitason maa (PalloKierto.LahitasonMaa, katutasokuvat 11.10.): maanpinta, muuten pinta.</summary>
+        static readonly Func<double, double, double> LahitasonMaaFn = OmaMaanpinta;
+        /// <summary>KaupunkiPuut (11.10.): maanpinnan (DTM) ja pinnan (DSM) mallit suoraan ENU-näytteisiin (25 näytettä puuta kohti ilman
+        /// KorkeusId-hakua ja lat/lon-kierrosta); null = ei muistissa.</summary>
+        public static OmaKorkeus MaanpintaMalli(double lat, double lon) { string id = KorkeusId(lat, lon); return id != null && maaMallit.TryGetValue(id, out var m) ? m : null; }
+        public static OmaKorkeus PintaMalli(double lat, double lon) { string id = KorkeusId(lat, lon); return id != null && korkeusMallit.TryGetValue(id, out var m) ? m : null; }
         /// <summary>Maa kohteen ympäriltä: pienin pinta keskeltä ja 8 pisteestä 70 m:n kehältä (tornin huippu ei ole maa; Eiffel).</summary>
         public static double OmaMaaKehalla(double lat, double lon)
         {

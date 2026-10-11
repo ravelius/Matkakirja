@@ -128,14 +128,15 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Kertaääni paikassa (Unity, dioraaman koordinaatit). Puuttuva tai lataamaton tunnus ohitetaan hiljaa. Jos tunnukselle on
-        /// ladattu Soundly-muunnelmia (Korvaavat), soi satunnainen niistä korvattavan tunnuksen mikseritasolla.</summary>
-        public static void Soita(string tunnus, Vector3 paikka, float voimakkuus = 1f, float savel = 1f)
+        /// ladattu Soundly-muunnelmia (Korvaavat), soi satunnainen niistä korvattavan tunnuksen mikseritasolla. lahiM = etäisyys, jonka
+        /// sisällä ääni ei vaimene (tyrmän tapahtumat 6 m: koko huone ja käytävä kuuluvat täysinä).</summary>
+        public static void Soita(string tunnus, Vector3 paikka, float voimakkuus = 1f, float savel = 1f, float lahiM = 2f)
         {
             var s = Aktiivinen; if (s == null) return;
             var klippi = Muunnelma(tunnus);
             if (klippi == null) { if (!s.aanet.TryGetValue(tunnus, out var a) || a.Klippi == null) return; klippi = a.Klippi; }
             else KirjaaPankki(tunnus, klippi);
-            var l = SeikkailuKuulija.Lahde("Tehoste:" + tunnus, 2f, 25f);
+            var l = SeikkailuKuulija.Lahde("Tehoste:" + tunnus, lahiM, 25f);
             SeikkailuKuulija.Aseta(l, paikka); l.clip = klippi; l.volume = voimakkuus * MikserinTaso(tunnus); l.pitch = savel; l.Play();
             Destroy(l.gameObject, klippi.length / Mathf.Max(0.1f, savel) + 0.2f);
         }

@@ -27,13 +27,13 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void ValoreittiKiinniVaroituksenJalkeen()
         {
-            // Sama reitti kävellen pysähtymättä: ensimmäinen kiinniotto ≤ 10 s ensimmäisestä epäilystä, aina varoituksen jälkeen.
+            // Sama reitti kävellen pysähtymättä: jää kiinni palan aikana, aina näkyvän varoituksen (seisoo 2 s) jälkeen. A1 (PT 11.10.):
+            // ennen ≤ 10 s ensimmäisestä epäilystä; nyt portinvartijan varoituksen aikana kävelijä ehtii pimeään (5,5 m) ja jää kiinni myöhemmin.
             var w = Huonesimulaatio.Uusi(); double kiinniT = -1;
             for (int k = 1; k <= PalaLoppu && kiinniT < 0 && w.T < 300; k++)
                 for (int i = 0; i < 6000 && kiinniT < 0; i++) { if (w.Askel(Huonesimulaatio.Reitti[k], false)) break; if (w.Kiinni > 0) kiinniT = w.T; }
             Console.WriteLine($"      valoreitti: ensimmäinen epäily {w.EnsiHavainto:F1} s, kiinni {kiinniT:F1} s");
             Oleta.Tosi(kiinniT > 0 && w.EnsiHavainto >= 0, "valossa kävellen jää kiinni");
-            Oleta.Tosi(kiinniT - w.EnsiHavainto <= 10, $"kiinni ≤ 10 s epäilystä ({kiinniT - w.EnsiHavainto:F1} s)");
             Oleta.Tosi(!w.VaroitusRikki, "varoitus ennen kiinniottoa");
         }
 

@@ -65,6 +65,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Skeema 1.60: pääkaupungin (tai hallinnon paikan) nimi maat.*.paakaupunki-viitteestä ja asema ("pääkaupunki" /
         /// "hallinnon paikka"); null = ei tietoa (PT 10.10.: maakortin ensimmäinen rivi).</summary>
         public string Paakaupunki, PaakaupunkiAsema;
+        /// <summary>Kevyen pääkaupunkipisteen id (kokoelma "paakaupungit", esim. "zagreb"), null laudan kaupungille: pääkaupungin
+        /// lehti kokoelmat/kaupunkilehdet/&lt;id&gt; (PT 11.10. 06.4x, Pelikoodarin suunnitelma kohta 4).</summary>
+        public string PaakaupunkiId;
         /// <summary>Skeema 1.61: pääkaupungin Codex-havainnekuvat (maat.*.paakaupunki.kuvat; PT 10.10. 20.5x): maakortin pikkukuvarivi
         /// pääkaupunkirivin alla, napautus Kuvasuurennokseen. Selite = kuvateksti ("… Havainnekuva."; motiivi on vain kirjain A/B), lähderivi datan
         /// lahde ("Matkakirjan havainnekuva", puuttuessa "Havainnekuva").</summary>
@@ -118,9 +121,16 @@ namespace Matkakirja.Natiivi
 
         public static bool Valmis => kaupungit != null;
 
-        /// <summary>Kaupungin tiedot, tai null (ei vielä ladattu tai tuntematon).</summary>
+        /// <summary>Kaupungin tiedot, tai null (ei vielä ladattu tai tuntematon). Myös kevyt pääkaupunki (oma lehti), joka ei ole
+        /// laudalla eikä siksi Kaikki-luettelossa.</summary>
         public static KaupunkiTiedot Kaupunki(string id) =>
-            id != null && kaupungit != null && kaupungit.TryGetValue(id, out var k) ? k : null;
+            id == null || kaupungit == null ? null : kaupungit.TryGetValue(id, out var k) ? k : paakaupungit.TryGetValue(id, out var pk) ? pk : null;
+
+        /// <summary>Kevyet pääkaupungit (kokoelma "paakaupungit", ei laudalla): lehden nimi ja maa. Kaikki-luettelo ei sisällä näitä.</summary>
+        static Dictionary<string, KaupunkiTiedot> paakaupungit = new Dictionary<string, KaupunkiTiedot>();
+
+        /// <summary>Onko id kevyt pääkaupunki (ei laudan kaupunki).</summary>
+        public static bool OnPaakaupunki(string id) => id != null && paakaupungit.ContainsKey(id) && (kaupungit == null || !kaupungit.ContainsKey(id));
 
         /// <summary>Kaikki kaupungit (tyhjä, kunnes ladattu).</summary>
         public static IEnumerable<KaupunkiTiedot> Kaikki => kaupungit != null ? kaupungit.Values : (IEnumerable<KaupunkiTiedot>)new KaupunkiTiedot[0];
@@ -201,7 +211,9 @@ namespace Matkakirja.Natiivi
             lehtiHaussa.Remove(id);
             if (teksti == null)
             {
-                // 404: vanha paketti (ei kaupungeittain) tai kaupungilla ei ole lehteä → koko kokoelma kerran.
+                // 404: vanha paketti (ei kaupungeittain) tai kaupungilla ei ole lehteä → koko kokoelma kerran. Pääkaupungilla 404 = ei lehteä
+                // (14 ensimmäistä 11.10.; muut maat ilman), ei 16 Mt:n varareittiä jokaisesta maakortista.
+                if (OnPaakaupunki(id)) { lehtiLuettu.Add(id); yield break; }
                 if (!kokoLehtiVaralla) { kokoLehtiVaralla = true; UiKerros.Hae().StartCoroutine(LehdetPerassa()); }
                 yield break;
             }
@@ -228,7 +240,8 @@ namespace Matkakirja.Natiivi
             if (kaupungit == null) return 0;
             foreach (var kv in valiaikaiset)
             {
-                if (!kaupungit.TryGetValue(kv.Key, out var k)) continue;
+                // Kevyt pääkaupunki (PT 11.10. 06.4x): kuvat ja johdanto sen omaan olioon (ennen ei-laudan id hylättiin).
+                if (!kaupungit.TryGetValue(kv.Key, out var k) && !paakaupungit.TryGetValue(kv.Key, out k)) continue;
                 var v = kv.Value;
                 k.Lehti = v.Lehti;
                 if (v.Johdanto != null) k.Johdanto = v.Johdanto;
@@ -306,6 +319,7 @@ namespace Matkakirja.Natiivi
         static void JasennaMaat(string teksti, Dictionary<string, KaupunkiTiedot> kaupungit, string paakaupungit = null)
         {
             var t = new Dictionary<string, MaaTiedot>();
+            var pt = new Dictionary<string, KaupunkiTiedot>();
             var pkNimet = new Dictionary<string, string>();
             foreach (var p in Alkiot(paakaupungit))
             {
@@ -329,6 +343,11 @@ namespace Matkakirja.Natiivi
                         ? (kaupungit != null && kaupungit.TryGetValue(pkId, out var pkK) ? pkK.Nimi : null)
                         : pkNimet.TryGetValue(pkId, out var pkN) ? pkN : null;
                     if (m.Paakaupunki != null) m.PaakaupunkiAsema = MiniJson.Teksti(pk, "asema");
+                    if (m.Paakaupunki != null && MiniJson.Teksti(pk, "kokoelma") != "kaupungit" && (kaupungit == null || !kaupungit.ContainsKey(pkId)))
+                    {
+                        m.PaakaupunkiId = pkId;
+                        pt[pkId] = new KaupunkiTiedot { Id = pkId, Nimi = m.Paakaupunki, Maa = iso, MaaNimi = m.Nimi };
+                    }
                     // Skeema 1.61: kuvat [{ url, motiivi, kuvateksti, havainnekuva, … }]; vanhassa paketissa kenttää ei ole.
                     foreach (var o in Rakenne.Lista(MiniJson.Kentta(pk, "kuvat")) ?? new List<object>())
                     {
@@ -396,6 +415,7 @@ namespace Matkakirja.Natiivi
                     if (k.Maa != null && !t.ContainsKey(k.Maa) && k.MaaNimi != null)
                         t[k.Maa] = new MaaTiedot { Iso3 = k.Maa, Nimi = k.MaaNimi, Lippu = k.Lippu };
             maat = t;
+            UiSisalto.paakaupungit = pt;
         }
 
         /// <summary>

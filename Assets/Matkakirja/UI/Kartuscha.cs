@@ -47,17 +47,6 @@ namespace Matkakirja.Natiivi
         /// <summary>Pelaajan todellinen maa testimaan asetushetkellä: kun se vaihtuu, testi raukeaa.</summary>
         string testinTodellinen;
         bool auki, sallittu = true, sijatAuki;
-        readonly Nimikyltti kyltti;
-        string kylttiKaupunki;
-
-        /// <summary>Pelaajan nykyinen kaupunki (saapuminen tuo nimikyltin esiin), muuten null.</summary>
-        static string NykyinenKaupunki()
-        {
-            var o = PeliOhjain.Instanssi;
-            if (o == null || o.Matka == null) return null;
-            var s = o.Matka.Tila.Pelaaja.Sijainti;
-            return s.Kaupungissa ? s.Kaupunki?.ToString() : null;
-        }
 
         public Kartuscha(UiKerros kerros)
         {
@@ -67,8 +56,8 @@ namespace Matkakirja.Natiivi
             kortti = Rakenne.El("mk-kartuscha", turva, PickingMode.Ignore);
             kortti.style.display = DisplayStyle.None;
             Kirjasimet.Aseta(kortti, Kirjasin.Kone);
-            // NIMIKYLTTI (omistaja 5.10.2026, juna 146): maan nimi näkyy saapuessa ~3 s ja häivytetään; avattuna pysyy.
-            kyltti = new Nimikyltti(kortti);
+            // AINA NÄKYVISSÄ (omistaja 11.10.2026 09.1x, kortti: "Maan kartussi pitää näkyä kokoajan vas alareunassa ja sitä napauttamalla
+            // se laajenee maakortiksi niin kuin ennenkin."): ei Nimikyltti-häivytystä (juna 146 → pois).
 
             // Ylhäältä alas (web): masto (nimi + lippu, viiva, alarivi) ja sen alla sisus (rivit, aiheet).
             masto = Rakenne.Nappi(null, "mk-kartuscha__masto", Vaihda, kortti);
@@ -111,6 +100,7 @@ namespace Matkakirja.Natiivi
             radio.RegisterCallback<GeometryChangedEvent>(_ => TasaaNimirivi());
 
             kerros.TurvaMuuttui += Asettele;
+            UiSisalto.LehdetSaapuivat += PaivitaPaakaupunkiLehti;
             kerros.JokaRuutu += TarkistaOhiNapautus;
             // Pelaajan maa tarkistetaan harvakseltaan (kaupunki vaihtuu vain saapuessa).
             kortti.schedule.Execute(Seuraa).Every(400);
@@ -227,13 +217,7 @@ namespace Matkakirja.Natiivi
             // testin KREIKKA jäi kartalle Lontooseen ja lennolle (Laitetestaaja 24.9., 161fa35).
             if (testiIso != null && uusi != testinTodellinen) { testiIso = null; if (auki) Sulje(); }
             if (testiIso != null) uusi = testiIso;
-            string kaupunki = NykyinenKaupunki();
-            if (uusi == iso)
-            {
-                // Saapuminen saman maan toiseen kaupunkiin: kyltti esiin uudelleen ~3 s.
-                if (iso != null && kaupunki != kylttiKaupunki) { kylttiKaupunki = kaupunki; kyltti.Nayta(); }
-                return;
-            }
+            if (uusi == iso) return;
             // Maa vaihtui: auki jäänyt kortti ei siirry uuteen maahan auki.
             if (auki && testiIso == null) Sulje();
             iso = uusi;
@@ -249,8 +233,6 @@ namespace Matkakirja.Natiivi
             Mediarivi.AsetaRadionMaa(radio, iso, mt?.Nimi ?? iso);
             Asettele();
             kortti.style.display = DisplayStyle.Flex;
-            kylttiKaupunki = kaupunki;
-            kyltti.Nayta();
         }
 
         /// <summary>
@@ -468,12 +450,15 @@ namespace Matkakirja.Natiivi
             valtiomuotoRivi.style.display = DisplayStyle.None;
             foreach (var vanha in tilastot.Query(className: "mk-kartuscha__rivi").ToList()) vanha.RemoveFromHierarchy();
             pkKuvat?.RemoveFromHierarchy(); pkKuvat = null;
+            pkLehti?.RemoveFromHierarchy(); pkLehti = null; pkLehtiId = null; pkRivi = null;
             vertailut.Clear();
             // Pääkaupunki ensimmäisenä rivinä (PT 10.10., sama kuin web): "HALLINNON PAIKKA", kun asema on "hallinnon paikka"
             // (ISR → Jerusalem, PSE → Ramallah); ilman tietoa ei riviä.
             if (m.Paakaupunki != null)
                 Tilasto(Kieli.T(m.PaakaupunkiAsema == "hallinnon paikka" ? "ui.kartuscha.hallinnon-paikka" : "ui.kartuscha.paakaupunki"), m.Paakaupunki, null);
+            if (m.Paakaupunki != null) pkRivi = tilastot.Query(className: "mk-kartuscha__rivi").First();
             if (m.Paakaupunki != null && m.PaakaupunkiKuvat.Count > 0) PaakaupunkiKuvat(m.PaakaupunkiKuvat);
+            if (m.PaakaupunkiId != null) { pkLehtiId = m.PaakaupunkiId; UiSisalto.LataaLehti(pkLehtiId); PaivitaPaakaupunkiLehti(); }
             if (m.OnTiedot)
             {
                 Tilasto(Kieli.T("ui.kartuscha.vakiluku"), m.Vakiluku, m.VakilukuSija);
@@ -532,7 +517,9 @@ namespace Matkakirja.Natiivi
         const float NimikeMin = 78f;
         bool nimikkeetSovitettu;
 
-        List<VisualElement> Nimikkeet() => tilastot.Query(className: "mk-kartuscha__nimike").ToList();
+        // NOSTOT/MAAKUNNAT-rivit (muste) samaan sarakkeeseen kuin tilastot (PT 11.10.: arvot olivat ~6 pt vasemmempana kuin PÄÄKAUPUNKI-rivillä).
+        List<VisualElement> Nimikkeet() => tilastot.Query(className: "mk-kartuscha__nimike").ToList()
+            .Concat(muste != null ? muste.Query(className: "mk-kartuscha__nimike").ToList() : new List<VisualElement>()).ToList();
 
         void NollaaNimikkeet()
         {
@@ -581,12 +568,36 @@ namespace Matkakirja.Natiivi
                 });
             }
         }
-        VisualElement pkKuvat;
+        VisualElement pkKuvat, pkRivi;
         Kuvasuurennos suurennos;
 
+        /// <summary>
+        /// PÄÄKAUPUNGIN LEHTI (PT 11.10.2026 06.4x, Pelikoodarin suunnitelma kohta 4): kevyen pääkaupunkipisteen (Zagreb, Bern …) lehti
+        /// avautuu Avauskortin "Lue kaupunkilehti →" -painikkeella (sama pohja mk-avauskortti__lehti) pääkaupunkirivin ja kuvarivin alla.
+        /// Painike näkyy vasta, kun kokoelmat/kaupunkilehdet/&lt;id&gt; on liitetty (UiSisalto.LehdetSaapuivat); 404 = ei painiketta.
+        /// </summary>
+        void PaivitaPaakaupunkiLehti()
+        {
+            bool on = pkLehtiId != null && UiSisalto.Kaupunki(pkLehtiId)?.Lehti == true && pkRivi?.parent == tilastot;
+            if (!on) { pkLehti?.RemoveFromHierarchy(); pkLehti = null; return; }
+            if (pkLehti != null) return;
+            string id = pkLehtiId;
+            pkLehti = Rakenne.Nappi(Kieli.T("ui.avauskortti.lue-kaupunkilehti"), "mk-avauskortti__lehti", () =>
+            {
+                string virhe = PeliOhjain.Instanssi != null ? PeliOhjain.Instanssi.LueLehti(id) : "peli ei ole valmis";
+                Debug.Log("MATKAKIRJA ui kartuscha: pääkaupungin lehti " + id + (virhe != null ? " ei avautunut: " + virhe : " avattu"));
+            }, null);
+            Kirjasimet.Aseta(pkLehti, Kirjasin.Kone);
+            pkLehti.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());   // ei avaa sijoja (tilastot)
+            tilastot.Insert(tilastot.IndexOf(pkKuvat?.parent == tilastot ? pkKuvat : pkRivi) + 1, pkLehti);
+        }
+        Button pkLehti;
+        string pkLehtiId;
+
         /// <summary>Testi (`ui kartuscha pkkuvat`): pääkaupungin kuvarivin tila.</summary>
-        public string PaakaupunkiKuvatKuvaus() => pkKuvat == null ? "pääkaupungin kuvat: ei riviä"
-            : $"pääkaupungin kuvat: {pkKuvat.childCount} kuvaa @ {pkKuvat.worldBound.xMin:0},{pkKuvat.worldBound.yMin:0} {pkKuvat.worldBound.width:0}×{pkKuvat.worldBound.height:0}";
+        public string PaakaupunkiKuvatKuvaus() => (pkKuvat == null ? "pääkaupungin kuvat: ei riviä"
+            : $"pääkaupungin kuvat: {pkKuvat.childCount} kuvaa @ {pkKuvat.worldBound.xMin:0},{pkKuvat.worldBound.yMin:0} {pkKuvat.worldBound.width:0}×{pkKuvat.worldBound.height:0}")
+            + $"; lehti {pkLehtiId ?? "-"}: {(pkLehti != null ? "painike" : pkLehtiId != null && UiSisalto.LehtiLuettu(pkLehtiId) ? "ei lehteä" : "ei painiketta")}";
 
         void Tilasto(string nimike, string arvo, string sija)
         {
@@ -752,7 +763,6 @@ namespace Matkakirja.Natiivi
         {
             if (auki || iso == null) return;
             auki = true;
-            kyltti.Pida(true);
             float h0 = kortti.layout.height;
             Liike?.Pause(); Vapauta();
             kortti.AddToClassList("mk-auki");
@@ -797,7 +807,6 @@ namespace Matkakirja.Natiivi
         {
             if (!auki) return;
             auki = false;
-            kyltti.Pida(false);
             if (aalto != null) aalto.Nakyy = false; // löydös 144: ei aaltoa kiinni
             NollaaNimenSovitus(); // löydös 143b
             sijatAuki = false;

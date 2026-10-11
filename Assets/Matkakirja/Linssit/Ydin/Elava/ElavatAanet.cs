@@ -14,6 +14,7 @@
 //    SOUNDLY-ERÄ 1 (juna 173): pyörän kelloon lisävaihtoehdot pyora-kello-01…04, laivan torveen laivan-torvi-03…04 (lautat) ja isolla
 //    vedellä (saaristo- ja höyrylaivojen tai yli IsoVesiM:n reittien päät) myös 01…02 (valtamerilaiva, Hurtigruten kaukaa); torvi
 //    enintään TorviValiMinS välein (harvoin). Saatavilla suodattaa lataamattomat klipit pois (null = kaikki).
+//    SOUNDLY v2 (juna 182, PalloSoundly2Aanet): pyörän kelloon polkupyora-kello-01…06 ja laituritorviin laivan-torvi-lahi-01…03.
 // Puhdas C#: ElavatAanetTestit.
 using System;
 using System.Collections.Generic;
@@ -157,8 +158,9 @@ namespace Matkakirja.Linssit.Elava
         public readonly HashSet<int> IsoVesi = new HashSet<int>();
         /// <summary>Onko klippi saatavilla (Unity: ladattu); null = kaikki. Suodattaa sarjan, tyhjä → alkuperäinen.</summary>
         public Predicate<string> Saatavilla;
-        public static readonly string[] PyoranKellot = Yhdista(Yhdista(PalloElavaAanet.PyoranKello, PalloSoundlyAanet.PyoraKello), PalloKaupunkiAanet.PyoranKelloPisteet),   // + kaupunki-pisteet-v1 (Pelikoodari 10.10.)
-            Torvet = Yhdista(PalloElavaAanet.LaivanTorvi, PalloSoundlyAanet.TorviLautta), TorvetIso = Yhdista(Torvet, PalloSoundlyAanet.TorviIso);
+        public static readonly string[] PyoranKellot = Yhdista(Yhdista(Yhdista(PalloElavaAanet.PyoranKello, PalloSoundlyAanet.PyoraKello), PalloKaupunkiAanet.PyoranKelloPisteet),   // + kaupunki-pisteet-v1 (Pelikoodari 10.10.)
+                PalloSoundly2Aanet.PolkupyoraKello),   // + Soundly v2 (juna 182)
+            Torvet = Yhdista(Yhdista(PalloElavaAanet.LaivanTorvi, PalloSoundlyAanet.TorviLautta), PalloSoundly2Aanet.TorviLahi), TorvetIso = Yhdista(Torvet, PalloSoundlyAanet.TorviIso);
         static string[] Yhdista(string[] a, string[] b) { var c = new string[a.Length + b.Length]; a.CopyTo(c, 0); b.CopyTo(c, a.Length); return c; }
         readonly Random rnd;
         double seuraava = double.NaN, soittajaSeuraava = double.NaN, torviSeuraava = double.NegativeInfinity, nytS;

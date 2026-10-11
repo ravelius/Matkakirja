@@ -210,9 +210,10 @@ namespace Matkakirja.Natiivi
             {
                 float lyhyt = Mathf.Min(Juuri.layout.width, Juuri.layout.height);
                 // Omistaja 7.10. 21.4x ("vievät nyt liikaa huomiota"): pienemmäksi, iPadilla enintään 1,15 × (ennen ruudun suhteessa ~2 ×),
-                // puhelimella nappi.ohjaus (40) iso-koon (56) sijaan.
+                // puhelimella nappi.ohjaus (40) iso-koon (56) sijaan. Omistaja TF 180 (11.10. 00.0x: "Kuvat näkyvät nyt asteen liian pieninä
+                // ainakin iphonella"): puhelimella pykälä isommaksi eli iso-koko (56); iPad ennallaan (iso × enintään 1,15).
                 float suhde = UiKerros.Tabletti && lyhyt > 0f && !float.IsNaN(lyhyt) ? Mathf.Clamp(lyhyt / KuvaViiteLyhyt, 1f, 1.15f) : 1f;
-                return Mathf.Round((UiKerros.Tabletti ? Tyylikirja.Nappi.OhjausIso : Tyylikirja.Nappi.Ohjaus) * suhde);
+                return Mathf.Round(Tyylikirja.Nappi.OhjausIso * suhde);
             }
         }
         readonly VisualElement kuvaKortti, kuvaEl;
@@ -1542,10 +1543,14 @@ namespace Matkakirja.Natiivi
                 if (kb > 0f) kirjoitusAla = Mathf.Max(kirjoitusAla, kb - alaVara + KuvaRako);
             }
             if (kirjoitus.style.bottom.value.value != kirjoitusAla) kirjoitus.style.bottom = kirjoitusAla;
-            if (VanhatSirut) PaivitaVanhatSirut();
+            // KYSYMYKSEN VAIHTOEHDOT NÄKYVIIN (Laitetestaaja TF 180 karttakierros 11.10.: Wienissä, Vilnassa, Luxemburgissa ja Marseillessa
+            // opas kysyi ensin, mutta valinnat olivat vain kiinni olevassa chatissa → jumi > 190 s; PT 11.10.): sirurivi neljän napin yläpuolelle,
+            // kun oppaan kysymys odottaa vastausta, ja piiloon valinnan tai vanhenemisen jälkeen. Odotus jatkuu pelaajan valintaan asti (TF 144).
+            if (VanhatSirut || siruNakyy || odotettuKysymys != null || OpasSovitin.Viimeisin?.Kysymys != null) PaivitaVanhatSirut();
         }
 
-        /// <summary>A/B (`ui opasvalikko vanhatsirut 1`): vanha kahden sirun rivi neljän napin tilalla.</summary>
+        /// <summary>A/B (`ui opasvalikko vanhatsirut 1`): vanha kahden sirun rivi neljän napin tilalla. Muuten sirurivi näyttää vain oppaan
+        /// odottavan kysymyksen vaihtoehdot (ilman mikkisirua, joka on jo napeissa) neljän napin yläpuolella.</summary>
         static bool VanhatSirut;
 
         void PaivitaVanhatSirut()
@@ -1562,8 +1567,8 @@ namespace Matkakirja.Natiivi
                 odotettuKysymys = null;
                 if (chat.OppaanJatkot.Count > 0 && vanhat.Contains(chat.OppaanJatkot[0])) chat.TyhjennaOppaanJatkot();
             }
-            var jatkot = chat.OppaanJatkot;
-            bool nayta = !chat.Auki && !Auki && !OpasSovitin.KertojaPuhuu;
+            IReadOnlyList<string> jatkot = VanhatSirut ? chat.OppaanJatkot : (IReadOnlyList<string>)kys?.Vaihtoehdot ?? Array.Empty<string>();
+            bool nayta = !chat.Auki && !Auki && !OpasSovitin.KertojaPuhuu && (VanhatSirut || jatkot.Count > 0);
             int poletti = nayta ? jatkot.Count == 0 ? 0 : string.Join("\n", jatkot).GetHashCode() | 1 : -1;
             if (poletti == siruPoletti) return;
             siruPoletti = poletti;
@@ -1576,7 +1581,7 @@ namespace Matkakirja.Natiivi
                     var b = Rakenne.Nappi(t, "mk-chat__siru", () => Valitse(t), sirurivi);
                     Kirjasimet.Aseta(b, Kirjasin.Moderni);
                 }
-                sirurivi.Add(puhuSiru);
+                if (VanhatSirut) sirurivi.Add(puhuSiru);
             }
             if (nayta == siruNakyy) return;
             siruNakyy = nayta;
@@ -1691,13 +1696,14 @@ namespace Matkakirja.Natiivi
             tapit.Paivita((pysahdys || VapaaTila) && !Auki && !(chat?.Auki ?? false), tappiAla, sivu);
             // Kohteen nimilappu pysähdyksellä (myös valikon aikana; chat peittää sen joka tapauksessa).
             nimilappu.Paivita(pysahdys && !(chat?.Auki ?? false) ? l.Nykyinen.Nimi : null);
-            float siruAla = krediittiAla;
+            // Kysymyksen vaihtoehdot neljän napin (tai esitysrivin) yläpuolelle; A/B:n vanha rivi napin paikalla.
+            float siruAla = VanhatSirut ? krediittiAla : TapitAla;
             if (tapit.Nakyy && siruNakyy && !LeveaRuutu)
             {
                 float leveys = 0f;
                 foreach (var c in sirurivi.Children()) leveys += c.layout.width + 8f;
                 float vapaa = w - 2f * (OpasTapit.Reuna + OpasTapit.Halkaisija + KuvaRako);
-                if (leveys > vapaa) siruAla = tappiAla + OpasTapit.Halkaisija + KuvaRako;
+                if (leveys > vapaa) siruAla = Mathf.Max(siruAla, tappiAla + OpasTapit.Halkaisija + KuvaRako);
             }
             if (sirurivi.style.bottom.value.value != siruAla) sirurivi.style.bottom = siruAla;
         }
@@ -1901,7 +1907,20 @@ namespace Matkakirja.Natiivi
         void Valitse(string teksti)
         {
             Debug.Log("MATKAKIRJA opas: valinta \"" + teksti + "\"");
+            // IKÄKYSELY (PT 11.10. 04.5x): kierrosvalinta (Esittele kaupunki / Lisää tätä kaupunkia) ei ole pelaajan syötettä
+            // tekoälylle: worker käsittelee sen kuten toiveen puuttumisen (opas.js onKierrosToive → toive null) ja kohdekaupungeissa
+            // esigeneroidulla kierroksella. Siksi se menee oppaalle suoraan ilman ikäkyselyä; muut vaihtoehdot (esim. "Näytä jotain
+            // outoa") ohjaavat live-tekoälyn vastausta, joten ne kulkevat chatin kautta ja ikäkysely säilyy.
+            if (OnKierrosToive(teksti) && OpasSovitin.Toive(teksti)) return;
             UiNakymat.Hae()?.Chat?.Kysy(teksti, true);
+        }
+
+        /// <summary>Workerin onKierrosToive (tools/pollo/opas.js): vain kirjaimet a–ö pienellä verrattuna.</summary>
+        static bool OnKierrosToive(string t)
+        {
+            static string Avain(string x) => new string((x ?? "").ToLowerInvariant().Where(c => c >= 'a' && c <= 'z' || c == 'ä' || c == 'ö' || c == 'å').ToArray());
+            string a = Avain(t);
+            return a.Length > 0 && (a == Avain("Esittele kaupunki") || a == Avain("Lisää tätä kaupunkia"));   // kieli: ei (workerin tunnisteet)
         }
 
         void Avaa(Nakyma n)
@@ -1989,6 +2008,9 @@ namespace Matkakirja.Natiivi
                     // Elävän kaupungin aineistot (LS1 8.10.2026: ElavaKaupunki.Krediitti, esim. OSM ODbL ja ESA WorldCover; null = ei riviä).
                     string elava = ElavaKrediitti();
                     if (!string.IsNullOrWhiteSpace(elava)) Kirjasimet.Aseta(Rakenne.Teksti(elava.Trim(), "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
+                    // Kaupunkipuut (LS1 10.10.2026, juna 181: OSM ODbL + Meta & WRI Canopy Height Maps CC BY 4.0; null = ei riviä).
+                    string puut = KaupunkiPuut.Krediitti;
+                    if (!string.IsNullOrWhiteSpace(puut)) Kirjasimet.Aseta(Rakenne.Teksti(puut.Trim(), "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
                     // Oma vesipinta (LS2: OSM, ESA WorldCover) kartan ruudulta tänne (omistaja 9.10. 09.5x: ruudulla vain © OpenStreetMap).
                     string vesi = KaupunkiVesi.KrediittiNyt;
                     if (!string.IsNullOrWhiteSpace(vesi)) Kirjasimet.Aseta(Rakenne.Teksti(vesi.Trim(), "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);

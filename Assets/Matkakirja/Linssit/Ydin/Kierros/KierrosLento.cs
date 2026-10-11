@@ -31,6 +31,22 @@ namespace Matkakirja.Linssit.Kierros
         /// korkeudesta); 0 = ei lähestymistä (kierto saapumisetäisyydellä).</summary>
         public double LoppuEtM;
         public double KatseKorkeusM => MaaM + NostoM;
+        /// <summary>Aukio tai tori (workerin luokka; OpasKuvaus.Kehysta): pallon kierto väistää lähellä olevat korkeat rakenteet
+        /// (OpasSilmukka.EsteNosto) ja silmä pysyy ympäröivien kattojen yllä (PalloAukioKattoMinM).</summary>
+        public bool Aukio;
+        /// <summary>Tornisääntö (OpasSilmukka.TorniKuvaan, PT 11.10.): katsepiste voi olla siirretty torin pisteestä tornia kohti;
+        /// KohdeLat/KohdeLon on kohteen oma piste (NaN = Lat/Lon), TorniPohja kehys ennen sovitusta ja TorniSuhde kuvasuhde, jolle
+        /// sovitettiin (laite kääntyy → sovitus uudelleen); null = ei sovitettu.</summary>
+        public double KohdeLat = double.NaN, KohdeLon = double.NaN, TorniSuhde;
+        public Pysahdys TorniPohja;
+        public double OmaLat => double.IsNaN(KohdeLat) ? Lat : KohdeLat;
+        public double OmaLon => double.IsNaN(KohdeLon) ? Lon : KohdeLon;
+        /// <summary>Leveyssovitus kapeaan kuvaan (OpasKuvaus.LeveysKuvaan, Linssiseppä 11.10. 08.5x): LeveysKoko = kohteen koko (m; 0 = kehys
+        /// ei ole pallon Kehysta-kehys), LeveysSuhde = kuvasuhde, jolle kehys laskettiin, LeveysPohja = kehys ennen sovitusta (null = tämä).</summary>
+        public double LeveysKoko, LeveysSuhde;
+        public Pysahdys LeveysPohja;
+        /// <summary>Aukion keskusmonumentin paikka (pallon aukiokehys; NaN = ei aukio): kapeassa kuvassa kierto sen ympäri.</summary>
+        public double MonumenttiLat = double.NaN, MonumenttiLon = double.NaN;
 
         public static Pysahdys P(string id, string nimi, string alarivi, double lat, double lon, double maa, double nosto,
             double suuntima, double pitch, double etaisyys, string teksti = null) => new Pysahdys

@@ -68,6 +68,19 @@ namespace Matkakirja.Linssit.Testit
                 "{\"paiva\":\"2026-10-06\",\"kohteet\":[{\"id\":\"Q1\",\"nimi\":\"Canal Grande\",\"koukku\":\"Kaupunki vedellä.\",\"kaupunki\":\"Venetsia\",\"iso\":\"IT\",\"lat\":45.43,\"lon\":12.33,\"kuva\":{\"url\":\"u\"}},"
                 + "{\"nimi\":\"rikki\",\"lat\":95,\"lon\":0}]}"));
             Oleta.Sama(1, t.Count); Oleta.Tosi(t[0].Iso2 == "IT" && t[0].Kaupunki == "Venetsia" && t[0].KuvaUrl == "u");
+            Oleta.Tosi(double.IsNaN(t[0].KorkeusM), "korkeus_m puuttuu → NaN");
+        }
+
+        [Testi] static void ListanKorkeaRakennusOnEste()
+        {
+            // Aukiot 182 (simu b5c8dcb5): Grand-Placen kaupungintalo ja Palazzo Vecchio luokassa rakennus → torni leikkautui reunaan.
+            var t = OpasTaky.Lue((Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna(
+                "{\"kohteet\":[{\"id\":\"Q271928\",\"nimi\":\"Palazzo Vecchio\",\"lat\":43.7694,\"lon\":11.2559,\"luokka\":\"rakennus\",\"korkeus_m\":94}]}"));
+            Oleta.Sama(94.0, t[0].KorkeusM);
+            Oleta.Sama(94.0, OpasSilmukka.EsteKorkeus(t[0].Luokka, t[0].KorkeusM));
+            Oleta.Sama(OpasSilmukka.PalloEsteTorniM, OpasSilmukka.EsteKorkeus("torni", double.NaN));
+            Oleta.Sama(0.0, OpasSilmukka.EsteKorkeus("rakennus", double.NaN));
+            Oleta.Sama(120.0, OpasSilmukka.EsteKorkeus("torni", 120));
         }
 
         [Testi] static void LiikunArviokehysVaihtuuOikeaan()
@@ -125,6 +138,19 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("A,B,C", string.Join(",", OpasTaky.Kierros(ilman, OpasTaky.Lue(ilman)).ConvertAll(t => t.Nimi)), "ilman kenttää lista sellaisenaan");
             var tyhja = (Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna("{" + K3 + ",\"kierros\":[\"x\"]}");
             Oleta.Sama(3, OpasTaky.Kierros(tyhja, OpasTaky.Lue(tyhja)).Count, "ei osumia → lista");
+        }
+
+        [Testi] static void HyppyKohteenTunnuksellaTaiNimella()
+        {
+            // QA "opas hyppy Q1889515" / "opas hyppy Prešerenin aukio" (PT 11.10.): Id täsmälleen, nimi kirjainkoosta välittämättä.
+            var j = (Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna("{\"kohteet\":[{\"id\":\"Q1889515\",\"nimi\":\"Prešerenin aukio\",\"lat\":46.05,\"lon\":14.5},"
+                + "{\"id\":\"Q170285\",\"nimi\":\"Ljubljanan linna\",\"lat\":46.049,\"lon\":14.508}]}");
+            var l = OpasTaky.Lue(j);
+            Oleta.Sama("Prešerenin aukio", OpasTaky.Etsi(l, "Q1889515")?.Nimi, "Wikidata-tunnus");
+            Oleta.Sama("Q170285", OpasTaky.Etsi(l, "ljubljanan LINNA")?.Id, "nimi kirjainkoosta välittämättä");
+            Oleta.Sama("Q1889515", OpasTaky.Etsi(l, " Prešerenin aukio ")?.Id, "reunavälit");
+            Oleta.Tosi(OpasTaky.Etsi(l, "q1889515") == null, "tunnus täsmälleen");
+            Oleta.Tosi(OpasTaky.Etsi(l, "Tuntematon") == null && OpasTaky.Etsi(l, "") == null && OpasTaky.Etsi(null, "Q1") == null, "ei löydy");
         }
 
         [Testi] static void KaupunginVaihtoLentaaHeti()

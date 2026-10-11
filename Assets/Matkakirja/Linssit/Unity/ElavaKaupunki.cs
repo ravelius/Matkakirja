@@ -24,6 +24,11 @@
 // lokki-parvi hiljaisena 2D-taustana matalalla veden äärellä, kyyhkyt aukioilla ja kyyhkyparvissa, raitiovaunun kello näkyvissä
 // raitiovaunuissa, tuntilyönnit lähimmästä kirkosta (OmatLyonnit: KaupunkiAanimaisemaSoittimen 2D-lyönnit pois). Kun uudet klipit on
 // ladattu, vanha lokkiparven silmukka ja kyyhkyjen 2D-siivet (elava-kaupunki-v1) vaikenevat, ettei samaa lintua kuulu kahdesti.
+// SOUNDLY v2 (juna 182; Ydin Soundly2Aanet, PalloSoundly2Aanet, aanet/pallo-soundly-v2): lokit laitureilla ja kyyhkyt toreilla ja
+// aukioilla 3D-poolista (erän 1 laituri-lokit, aukio-kyyhkyt ja raitiovaunun kello vaikenevat, kun v2:n klipit on ladattu; parvet
+// jatkuvat), raitiovaunun kello osassa raitiovaunun ohiajoista samassa vaunussa, laivan torvi kaukaa 2D-lähteestä satamakaupungeissa,
+// tuuli 2D-silmukkana pallon korkeuden mukaan; tornikellot (tuntisarja, puolen tunnin lyönti) ja kirkonkellojen soitto Ydin
+// KaupunkiAanetista, pyörän kellot ja laiturin torvet IhmisAanetista. Kuuntelu `opas kaupunkiaanet lokki2|kyyhky2|torvi|puoli`.
 using System.Collections.Generic;
 using CesiumForUnity;
 using Matkakirja.Linssit;
@@ -132,6 +137,9 @@ namespace Matkakirja.Natiivi
             if (l != null) e2.veneOhi = new Ohiajot(siemen + 4, true);
             if (e2.ihmiset != null) e2.ihmiset.Saatavilla = ElavaAaniPankki.Ladattu;
             e2.soundly = new SoundlyAanet(siemen + 5, e2.kaupunkiAanet?.Laiturit, e2.kaupunkiAanet?.Aukiot);
+            var toritJaAukiot = new List<(double X, double Z)>();
+            if (e2.kaupunkiAanet != null) { toritJaAukiot.AddRange(e2.kaupunkiAanet.Torit); toritJaAukiot.AddRange(e2.kaupunkiAanet.Aukiot); e2.kaupunkiAanet.Saatavilla = ElavaAaniPankki.Ladattu; }
+            e2.soundly2 = new Soundly2Aanet(siemen + 6, e2.kaupunkiAanet?.Laiturit, toritJaAukiot) { Saatavilla = ElavaAaniPankki.Ladattu };
             e2.taso = taso; e2.varaTuuliAst = siemen % 360;   // savu ja liput samaan suuntaan kuin muut pallot, kun LIVE-säätä ei ole
             if (kj != null && (kj.Contains("\"piiput\"") || kj.Contains("\"liput\"")))
             {
@@ -247,11 +255,13 @@ namespace Matkakirja.Natiivi
         static readonly int IdAurinko = Shader.PropertyToID("_ElavaAurinko"), IdAurinkoVari = Shader.PropertyToID("_ElavaAurinkoVari"),
             IdYla = Shader.PropertyToID("_ElavaTaivasYla"), IdAla = Shader.PropertyToID("_ElavaTaivasAla");
 
-        void AsetaValo()
+        /// <summary>Kaupunkikohteiden valo globaaleiksi (ElavaKohde, KaupunkiPuu); t = paikallinen ENU-kehys (itä, ylös, pohjoinen).
+        /// KaupunkiPuut kutsuu itse, kun elävä kaupunki on pois.</summary>
+        public static void AsetaValo(Transform t)
         {
             double[] C(Color c) => new double[] { c.r, c.g, c.b };
             var k = KoriValaistus.Laske(KaupunkiKuva.KoriAurinkoKorkeus, KaupunkiKuva.KoriAtsimuutti, C(KaupunkiKuva.KoriLaki), C(KaupunkiKuva.KoriHorisontti), KaupunkiKuva.Saa.Harmaus);
-            var s = transform.TransformDirection(new Vector3((float)k.AurinkoX, (float)k.AurinkoY, (float)k.AurinkoZ)).normalized;
+            var s = t.TransformDirection(new Vector3((float)k.AurinkoX, (float)k.AurinkoY, (float)k.AurinkoZ)).normalized;
             Shader.SetGlobalVector(IdAurinko, s);
             Shader.SetGlobalVector(IdAurinkoVari, new Vector4((float)k.AurinkoVari[0], (float)k.AurinkoVari[1], (float)k.AurinkoVari[2], 0));
             Shader.SetGlobalVector(IdYla, new Vector4((float)k.TaivasYla[0], (float)k.TaivasYla[1], (float)k.TaivasYla[2], 0));
@@ -331,7 +341,7 @@ namespace Matkakirja.Natiivi
         {
             if (kamera == null || !kamera.isActiveAndEnabled) kamera = Camera.main;
             float dt = Time.deltaTime, t = Time.time;
-            AsetaValo();
+            AsetaValo(transform);
             VeneAanet.Paivita();
             Vector3 c = kamera != null ? transform.InverseTransformPoint(kamera.transform.position) : Vector3.zero;
             RakennaKatu();
@@ -649,6 +659,12 @@ namespace Matkakirja.Natiivi
                 {
                     var tt = o.Avain >= RaitioAvain ? raitioT[o.Avain - RaitioAvain] : autoT[o.Avain];
                     ohiKahva = pooli.Soita(o.Tunnus, (float)o.Taso, 1f, tt.localPosition, tt, vaisto);
+                    // Soundly v2: raitiovaunun kello osassa ohiajoista samassa vaunussa (Ydin Soundly2Aanet.OhiajonKello).
+                    if (o.Laji == Ohiajot.Laji.Raitiovaunu && ohiKahva != 0 && soundly2 != null)
+                    {
+                        var (kello, kTaso) = soundly2.OhiajonKello(nyt, o.LahinM);
+                        if (kello != null) pooli.Soita(kello, (float)kTaso, 1f, tt.localPosition, tt, vaisto);
+                    }
                 }
             }
             if (pallot != null && poltinAanet != null)
@@ -713,6 +729,7 @@ namespace Matkakirja.Natiivi
                 if (o != null && paalla) { var tt = veneet[o.Avain].T; veneKahva = pooli.Soita(o.Tunnus, (float)o.Taso, 1f, tt.localPosition, tt, vaisto); }
             }
             PaivitaSoundly(c, nyt, dt, paalla, vaisto);
+            PaivitaSoundly2(c, nyt, dt, paalla, vaisto);
             if (kaupunkiAanet == null) return;
             float pakko = KaupunkiKuva.TuntiNyt;   // paikallinen kello kuten valaistus (opas tunti pakottaa)
             double tunti = pakko >= 0 ? pakko : KaupunkiValo.PaikallinenTunti(System.DateTime.UtcNow, lon0);
@@ -723,7 +740,7 @@ namespace Matkakirja.Natiivi
                 {
                     double m = Maa(k.X, k.Z); if (double.IsNaN(m)) m = maaKamera;
                     pooli.Soita(k.Tunnus, (float)k.Taso, 1f, new Vector3((float)k.X, (float)(m + k.Y), (float)k.Z), null, vaisto);
-                    if (k.Tunnus != PalloKaupunkiAanet.Maitovaahdotin && k.Lyonti <= 1) Debug.Log($"MATKAKIRJA kaupunki: kaupunkiääni {k.Tunnus}{(k.Lyonti == 1 ? " (tuntilyönnit)" : k.Tasatunti ? " (tasatunti)" : "")} {k.EtaisyysM:F0} m, taso {k.Taso:F2}");
+                    if (k.Tunnus != PalloKaupunkiAanet.Maitovaahdotin && k.Lyonti <= 1) Debug.Log($"MATKAKIRJA kaupunki: kaupunkiääni {k.Tunnus}{(k.Lyonti == 1 ? " (tuntilyönnit)" : k.Tasatunti ? " (tasatunti)" : k.Puolitunti ? " (puolitunti)" : "")} {k.EtaisyysM:F0} m, taso {k.Taso:F2}");
                 }
             // Suihkulähteet ja satamat: 3D-silmukka pisteessä; Ydin häivyttää valinnan vaihtuessa, poistuva soi nollaan ennen kierrätystä.
             float nosto = kaupunki != null && kaupunki.Vesi?.Juuri != null ? KaupunkiVesi.NostoM : VesiNostoM;
@@ -785,6 +802,10 @@ namespace Matkakirja.Natiivi
         {
             if (soundly == null) return;
             soundly.Aloita(nyt, c.x, c.y, c.z, kameraKorkeus);
+            // Soundly v2 ladattu → sen laituri-lokit, tori-kyyhkyt ja ohiajon kello korvaavat erän 1 vastaavat (ei kahdesti).
+            soundly.LaituriLokit = !ElavaAaniPankki.Ladattu(PalloSoundly2Aanet.Lokki[0]);
+            soundly.AukioKyyhkyt = !ElavaAaniPankki.Ladattu(PalloSoundly2Aanet.KyyhkyKujerrus[0]);
+            soundly.RaitioKellot = !ElavaAaniPankki.Ladattu(PalloSoundly2Aanet.RaitioKello[0]);
             for (int i = 0; i < parvet.Count; i++)
                 if (parvet[i].Juuri.activeSelf && parvet[i].Lokit.Length > 0) { var p = parvet[i].Lokit[0].localPosition; soundly.Parvi(i, p.x, p.y, p.z, parvet[i].Paikka.Kyyhky); }
             for (int i = 0; i < raitioT.Count; i++)
@@ -801,6 +822,42 @@ namespace Matkakirja.Natiivi
             lokkiParviSilmukka.Paivita(lt, Time.unscaledDeltaTime, paalla ? KaupunkiLiukuS : (float)PalloElavaAanet.SilmukkaHaivytysS);
         }
 
+        // ---- SOUNDLY v2 (juna 182): lokit laitureilla, kyyhkyt toreilla, laivan torvi kaukaa (2D) ja tuuli korkeuden mukaan ----
+        Soundly2Aanet soundly2; ElavaSilmukka tuuliSilmukka; AudioSource kerta2D; string kerta2DTunnus; float kerta2DPerus;
+
+        void PaivitaSoundly2(Vector3 c, double nyt, float dt, bool paalla, bool vaisto)
+        {
+            if (soundly2 == null) return;
+            soundly2.Aloita(nyt, c.x, c.y, c.z, kameraKorkeus);
+            soundly2.Valitse(dt);
+            if (paalla)
+                foreach (var t in soundly2.Kerrat)
+                {
+                    if (t.KolmeD) { pooli.Soita(t.Tunnus, (float)t.Taso, 1f, new Vector3((float)t.X, (float)t.Y, (float)t.Z), null, vaisto); continue; }
+                    if (Soita2D(t.Tunnus, (float)t.Taso, vaisto)) Debug.Log($"MATKAKIRJA kaupunki: kaupunkiääni {t.Tunnus} (2D kaukaa), taso {t.Taso:F2}");
+                }
+            // 2D-kerta-ääni: taso joka kehys (väistö kertojan alla ja mikseri kuten poolissa); pois päältä → hiljaa.
+            if (kerta2D != null && kerta2D.isPlaying)
+            {
+                if (!paalla) kerta2D.Stop();
+                else kerta2D.volume = (float)OpasAanitasot.Maisema(kerta2DPerus, vaisto) * ElavaAaniPankki.Kerroin(kerta2DTunnus);
+            }
+            tuuliSilmukka ??= new ElavaSilmukka(transform, PalloSoundly2Aanet.TuuliTasainen, false);
+            float tt = paalla ? (float)OpasAanitasot.Maisema(soundly2.Tuuli, vaisto) * ElavaAaniPankki.Kerroin(PalloSoundly2Aanet.TuuliTasainen) : 0f;
+            tuuliSilmukka.Paivita(tt, Time.unscaledDeltaTime, paalla ? KaupunkiLiukuS : (float)PalloElavaAanet.SilmukkaHaivytysS);
+        }
+
+        /// <summary>Kaukainen kerta-ääni 2D:nä (ei paikkaa); false, jos klippiä ei ole (hiljaisuus).</summary>
+        bool Soita2D(string tunnus, float perus, bool vaisto)
+        {
+            var klippi = ElavaAaniPankki.Klippi(tunnus);
+            if (klippi == null) return false;
+            if (kerta2D == null) { kerta2D = gameObject.AddComponent<AudioSource>(); kerta2D.playOnAwake = false; kerta2D.loop = false; kerta2D.spatialBlend = 0f; }
+            kerta2DTunnus = tunnus; kerta2DPerus = perus;
+            kerta2D.clip = klippi; kerta2D.volume = (float)OpasAanitasot.Maisema(perus, vaisto) * ElavaAaniPankki.Kerroin(tunnus); kerta2D.Play();
+            return true;
+        }
+
         /// <summary>Diagnoosi (`opas kaupunkiaanet tila`): Ytimen tila, manifestit ja soivat kaupunkisilmukat.</summary>
         public static string KaupunkiAanetTila()
         {
@@ -811,11 +868,12 @@ namespace Matkakirja.Natiivi
             if (n != null) foreach (var s in n.suihkuSilmukat.Values) if (s.Taso > 0.001f) soi.Add($"{s.Tunnus} {s.Taso:F3}");
             if (n != null) foreach (var s in n.satamaSilmukat.Values) if (s.Taso > 0.001f) soi.Add($"{s.Tunnus} {s.Taso:F3}");
             if (n?.lokkiParviSilmukka != null && n.lokkiParviSilmukka.Taso > 0.001f) soi.Add($"{PalloSoundlyAanet.LokkiParvi} {n.lokkiParviSilmukka.Taso:F3}");
-            return $"{ydin}; {n?.soundly?.Tila() ?? "linnut -"}; omat lyönnit {(OmatLyonnit ? "kyllä" : "ei")}; soi [{string.Join(", ", soi)}]; vene-ohi {(n?.veneOhi != null ? $"{n.veneet.FindAll(v => v.Pieni).Count} pientä venettä" : "-")}; {ElavaAaniPankki.Tila()}";
+            if (n?.tuuliSilmukka != null && n.tuuliSilmukka.Taso > 0.001f) soi.Add($"{PalloSoundly2Aanet.TuuliTasainen} {n.tuuliSilmukka.Taso:F3}");
+            return $"{ydin}; {n?.soundly?.Tila() ?? "linnut -"}; {n?.soundly2?.Tila() ?? "Soundly v2 -"}; omat lyönnit {(OmatLyonnit ? "kyllä" : "ei")}; soi [{string.Join(", ", soi)}]; vene-ohi {(n?.veneOhi != null ? $"{n.veneet.FindAll(v => v.Pieni).Count} pientä venettä" : "-")}; {ElavaAaniPankki.Tila()}";
         }
 
         /// <summary>Kuuntelu: seuraava kirkonkello tai maitovaahdotin heti, kun ehdot täyttyvät (kamera matalalla, kirkko/café lähellä).</summary>
-        public static void PakotaKaupunkiAani(string mita) { Nykyinen?.kaupunkiAanet?.Pakota(mita); Nykyinen?.ihmiset?.Pakota(mita); }   // pyora: IhmisAanet
+        public static void PakotaKaupunkiAani(string mita) { Nykyinen?.kaupunkiAanet?.Pakota(mita); Nykyinen?.ihmiset?.Pakota(mita); Nykyinen?.soundly2?.Pakota(mita); }   // pyora: IhmisAanet; lokki2, kyyhky2, torvi: Soundly v2; puoli: KaupunkiAanet
 
         void OhiEhdokkaat(ReittiLiike l, List<Transform> tt, bool raitio, Vector3 c, Vector3 kv, int avain)
         {

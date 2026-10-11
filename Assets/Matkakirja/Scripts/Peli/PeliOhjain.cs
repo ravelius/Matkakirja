@@ -215,10 +215,11 @@ namespace Matkakirja.Natiivi
         public bool TallennusOn => jatkettava != null;
         Matka jatkettava;
 
-        /// <summary>Lähtökaupungit (web start: true; paketin kaupungit.aloitus) laudan järjestyksessä.</summary>
+        /// <summary>Alkulennon kohteet laudan järjestyksessä: paketin kaupungit.lahtokohde (omistaja 10.10. 23.4x: vain neljä),
+        /// vanhassa paketissa kaupungit.aloitus (web start: true). Kaupunki.Lahtokohteet.</summary>
         public List<(string Id, string Nimi)> Lahtokaupungit() =>
             verkko == null ? new List<(string, string)>()
-                : verkko.KaupunkiLista.Where(k => k.Aloitus).Select(k => (k.Id, k.Nimi)).ToList();
+                : Kaupunki.Lahtokohteet(verkko.KaupunkiLista).Select(k => (k.Id, k.Nimi)).ToList();
 
         /// <summary>
         /// Kaikki unohdetut aarteet löytyivät (web NATIIVI_SAAVUTUKSET.kaikkiAarteet, kerran
@@ -557,6 +558,8 @@ namespace Matkakirja.Natiivi
             VerkkoOdotus.PeliVaihe = VerkkoVaihe;
             // Ruudunpaivitys: linssin ollessa auki täysi taajuus (aikajanat, radion mittarit, kamera-ajot; lämpöerä 25.9.).
             Ruudunpaivitys.Aktiivinen.Add(() => LinssiOhjain.Rekisteri?.Auki != null);
+            // Säästökatto (omistaja 11.10.2026, akku- ja lämpömittaus TF 180): opas-linssin pallokierros 40/30 fps (KuvataajuusPaatos).
+            Ruudunpaivitys.PalloKierros = () => LinssiOhjain.Rekisteri?.Auki?.Tiedot.Id == "opas";
             AloituslentoPaattyi += _ => verkkoSaapui = Time.realtimeSinceStartup;
             MatkaPerilla += k => { if (k != null) verkkoSaapui = Time.realtimeSinceStartup; };
             // Verkko-odotus: pelin sisältö (kaupungit, reitit) ennen aloitusta; aloitusnäkymä odottaa tätä.
@@ -595,6 +598,8 @@ namespace Matkakirja.Natiivi
             KaynnistaSahke();
             yield return HaeKysymykset();
             yield return HaeLuennat();
+            // Saapumistraileri tarvitsee fokusvirrat (TraileriTarjolla): luetaan heti, ei vasta ensimmäisen saapumisen UI-esilatauksessa.
+            Fokusvirrat.Lataa(null);
             StartCoroutine(HaeMuste()); // Elävä kartta: karttavalot taustalla (PeliOhjain.Muste.cs)
             EsilataaIntro();
             TilaVaihtui += (_, uusi) => { if (uusi == SilmukanTila.Aloitus) EsilataaIntro(); };
@@ -1652,6 +1657,7 @@ namespace Matkakirja.Natiivi
         void Perilla(bool aloituslento, bool kameraPerilla = false)
         {
             if (Tila != SilmukanTila.Matkalla) return;
+            virtaOdotusNro++; // kesken jäänyt trailerin virtaodotus ei jatka tämän saapumisen yli
             Lentoaani(false);
             PaataLento();
             var kaupunki = saapumisKaupunki;
@@ -1678,7 +1684,41 @@ namespace Matkakirja.Natiivi
             // Kaupunkiin päättynyt matka: kamera saapumisnäkymään (web ui.js palaaMaanRajaukseen ja siirto.js laske
             // → lauta.saavu; avauslento → kamera.kotiin ilman maan laatikkoa). Reitin varrella kamera jää paikalleen.
             if (kaupunki != null && !kameraPerilla) Saavu(maaRajaus: !aloituslento);
-            if (kaupunki != null && TraileriTarjolla(kaupunki))
+            // Fokusvirrat eivät vielä muistissa (nopea saapuminen käynnistyksen jälkeen): päätös odottaa niitä enintään 1,5 s.
+            if (kaupunki != null && TraileriPaatos.Odota(TraileriSyyNyt(kaupunki))) { StartCoroutine(OdotaVirratJaPaata(kaupunki, hiljaa)); return; }
+            PaataTraileri(kaupunki, hiljaa);
+        }
+
+        int virtaOdotusNro;
+
+        /// <summary>
+        /// Saapumisen traileripäätös odottaa fokusvirtoja (Fokusvirrat.Lataa) enintään TraileriPaatos.VirtaOdotusS; tila pysyy
+        /// Matkalla odotuksen ajan. Uusi saapuminen tai tilan vaihto (uusi matka) peruu odotuksen. Ohitus- ja jatko hiljaa -polut
+        /// eivät odota (näytetty).
+        /// </summary>
+        IEnumerator OdotaVirratJaPaata(string kaupunki, bool hiljaa)
+        {
+            int nro = virtaOdotusNro;
+            float alku = Time.unscaledTime;
+            Debug.Log($"MATKAKIRJA ui saapuminen: traileri odottaa fokusvirtoja {kaupunki}");
+            Fokusvirrat.Lataa(null);
+            while (!Fokusvirrat.Valmis && Time.unscaledTime - alku < TraileriPaatos.VirtaOdotusS && nro == virtaOdotusNro) yield return null;
+            if (nro != virtaOdotusNro || Tila != SilmukanTila.Matkalla || saapumisKaupunki != null)
+            {
+                Debug.Log($"MATKAKIRJA ui saapuminen: trailerin virtaodotus peruttu {kaupunki} (tila {Tila})");
+                yield break;
+            }
+            Debug.Log($"MATKAKIRJA ui saapuminen: fokusvirrat {(Fokusvirrat.Valmis ? "valmiit" : "eivät valmistuneet")} {(Time.unscaledTime - alku) * 1000f:0} ms, {kaupunki}");
+            PaataTraileri(kaupunki, hiljaa);
+        }
+
+        /// <summary>Perillan loppu: traileri (jos tarjolla) tai suoraan kartalle ja luentaan.</summary>
+        void PaataTraileri(string kaupunki, bool hiljaa)
+        {
+            var syy = kaupunki != null ? TraileriSyyNyt(kaupunki) : TraileriSyy.EiKaytossa;
+            if (kaupunki != null && syy != TraileriSyy.Tarjolla)
+                Debug.Log($"MATKAKIRJA ui saapuminen: traileri ei tarjolla {kaupunki}: {(hiljaa ? "jatko hiljaa" : TraileriPaatos.Teksti(syy))}");
+            if (kaupunki != null && syy == TraileriSyy.Tarjolla)
             {
                 // Traileri ennen isoisän luentoa (web render: naytaSaapumistraileri → aloitaMerkinta); lehti ei aukea itsestään.
                 trailerinaytetty.Add(kaupunki);
@@ -1691,12 +1731,15 @@ namespace Matkakirja.Natiivi
                     {
                         if (valmis) return;
                         valmis = true;
+                        Aanisoitin.SaapumisMusiikkiVapaa(kaupunki); // traileri ilman puhetta / ei näytetty: musiikki ei jää odottamaan
                         TraileriValmis(kaupunki);
                     });
                 }
-                catch (Exception e) { Debug.LogException(e); TraileriValmis(kaupunki); }
+                catch (Exception e) { Debug.LogException(e); Aanisoitin.SaapumisMusiikkiVapaa(kaupunki); TraileriValmis(kaupunki); }
                 return;
             }
+            // Ei traileria (jatko hiljaa, jo nähty): lennolla odottamaan jäänyt nopea alkaa nyt tavallisesti.
+            if (kaupunki != null) Aanisoitin.SaapumisMusiikkiVapaa(kaupunki);
             SaavuLehteen(kaupunki);
             // Luento on jonossa (0,6 s viive): vaiennus samaa reittiä kuin Ohita-nappi (luentakuvat matkakirjakorttiin,
             // Pulun kommentti ei ala). Pelaaja voi aloittaa luennan itse kaiuttimesta.
@@ -1715,9 +1758,11 @@ namespace Matkakirja.Natiivi
         /// fokusvirtaMatkakirja ja ~13790; kuvat tarkistaa näkymä). Laatta ei vaikuta: aarrekaupungissakin traileri näkyy
         /// (liikkumisen pariteetti C4; ennen natiivi ohitti laattakaupungit ja näytti fokusvirrattomat).
         /// </summary>
-        bool TraileriTarjolla(string kaupunki) =>
-            PeliNakymat.Saapumistraileri != null && Kaytossa && !trailerinaytetty.Contains(kaupunki)
-            && !string.IsNullOrEmpty(Fokusvirrat.Hae(kaupunki)?.Teksti);
+        bool TraileriTarjolla(string kaupunki) => TraileriSyyNyt(kaupunki) == TraileriSyy.Tarjolla;
+
+        TraileriSyy TraileriSyyNyt(string kaupunki) => TraileriPaatos.Syy(
+            PeliNakymat.Saapumistraileri != null && Kaytossa, trailerinaytetty.Contains(kaupunki), Fokusvirrat.Valmis,
+            !string.IsNullOrEmpty(Fokusvirrat.Hae(kaupunki)?.Teksti));
 
         /// <summary>Ohittaa trailerin ohjaimen puolelta (testikomento 'ohita-traileri'); näkymä piilottaa itsensä Tilan vaihtuessa.</summary>
         public string OhitaTraileri()

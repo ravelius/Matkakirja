@@ -60,7 +60,8 @@ namespace Matkakirja
         void Update()
         {
             float ms = Time.unscaledDeltaTime * 1000f;
-            if (Time.frameCount > 5)
+            // PAIKALLAAN-kehykset (10 fps, KuvataajuusPaatos) eivät kuulu lepotilastoon, jonka tavoite on 30 fps.
+            if (Time.frameCount > 5 && Ruudunpaivitys.Instanssi?.Nyt != Ruudunpaivitys.Tila.Paikallaan)
                 (pallo == null ? lepo : pallo.Peitetty ? peitto : pallo.Liikkeessa ? liike : lepo).Add(ms);
             kehyksia++;
             if (UnityEngine.Rendering.OnDemandRendering.willCurrentFrameRender) piirretty++;

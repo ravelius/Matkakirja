@@ -1,7 +1,7 @@
 // METROLINJA (omistaja 7.10.2026 klo 10.2x, Päätoimittajan kortti; Pariisin kaupunkiesitys): kierroksen eteneminen pystyviivana
 // METROLINJA-pohjalla (Pohjat/metrolinja.uss). Kaikki asemat nimineen himmeinä, nykyinen tummana ja lihavoituna; kuljettu osuus
 // viivasta korostusvärillä. Data LS1:ltä (OpasSovitin.KierrosKohteet, KierrosIndeksi, KierrosVaihtui). Paikka ja korkeus OpasValikolta.
-// Omistaja 7.10. 12.3x: ei taustaa; porrastus nykyinen (välitotsikko, lihava) > viereiset (apuri) > muut (kapiteeli, hennompi),
+// Omistaja 7.10. 12.3x: ei taustaa; porrastus nykyinen (välitotsikko, lihava) > muut (apuri, täysi peitto; PT 11.10.: kapiteeli hukkui vaaleaan kaupunkiin),
 // teksti ja viiva oppaan otsikon tyylillä (valkoinen, Himmennys-varjo ja ääriviiva). Kuumailmapallon lähtiessä (LS1
 // KierrosLahtee) seuraava suurenee ja nykyinen pienenee pehmeästi ~1 s: sisältöanimaatio koodista joka ruudulla, ei USS-siirtymä.
 using System.Collections.Generic;
@@ -50,7 +50,9 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static string HistoriaOtsikko;
         public const float HistoriaNakyyS = 3f;
-        const float KorostusKoko = 44f;   // KierrosTaulun kohdeotsikon koko (nimi 44 pt)
+        /// <summary>Korostetun nimen enimmäiskoko. Omistaja TF 180 (11.10. 00.0x): "Metro linjan nimikyltti on suurena liian iso mutta
+        /// kyltti saisi pysyä koko ajan esillä" → 44 pt → Arkki (26 pt), ja korostus pysyy koko kohteen ajan kuten selite.</summary>
+        const float KorostusKoko = Tyylikirja.Koko.Arkki;
         const float KorostusVaihto = 0.6f;
         float korostusTaso;
         /// <summary>
@@ -288,8 +290,9 @@ namespace Matkakirja.Natiivi
             if (nytTaso.Length != n) { nytTaso = new float[n]; alkuTaso = new float[n]; for (int k = 0; k < n; k++) nytTaso[k] = alkuTaso[k] = Taso(k, kohde); }
             float t = Mathf.Clamp01((Time.unscaledTime - vaihtoAlku) / Vaihto);
             float e = t * t * (3f - 2f * t);
-            // Korostus (kohdeotsikko metrolinjassa): taso 0 → 1 pehmeästi; nimi ja selite samassa tahdissa.
-            bool korostus = Korostus && kohde >= 0 && kohde < n;
+            // Korostus (kohdeotsikko metrolinjassa): taso 0 → 1 pehmeästi; nimi ja selite samassa tahdissa. Nimi pysyy korostettuna
+            // saapumisesta lähtöön (kohde == naytettyIndeksi; lähdössä kohde siirtyy seuraavaan), ei vain KierrosTaulun ~3 s:n ajan.
+            bool korostus = (Korostus || kohde == naytettyIndeksi) && kohde >= 0 && kohde < n;
             korostusTaso = Mathf.MoveTowards(korostusTaso, korostus ? 1f : 0f, Time.unscaledDeltaTime / KorostusVaihto);
             float kt = korostusTaso * korostusTaso * (3f - 2f * korostusTaso);
             if (kohde >= 0 && kohde < n && kt > 0f) (korostusKoko, korostusRivit) = SovitaKorostus(asemat[kohde].Nimi, asemat[kohde].Rivi);
@@ -305,11 +308,11 @@ namespace Matkakirja.Natiivi
                 float taso = Mathf.Lerp(alkuTaso.Length == n ? alkuTaso[k] : 0f, Taso(k, kohde), e);
                 nytTaso[k] = taso;
                 var (rivi, nimi, paikka) = asemat[k];
-                // Koko: kapiteeli 12 → apuri 14 → väliotsikko 18; peitto 0,85 → 0,85 → 1; piste 6 → 8 → 12 pt. Kauempien peitto 0,6 → 0,85
-                // (pallon UI-katselmointi TF 172, PT 9.10.2026): 0,6 himmensi myös varjon ja ääriviivan, ja nimet hukkuivat yöllä tummaan ja
-                // päivällä vaaleaan kaupunkiin. Porrastus jää kokoon ja painoon; ei taustaa (omistaja 7.10. 12.3x).
-                float koko = taso < 1f ? Mathf.Lerp(Tyylikirja.Koko.Kapiteeli, Tyylikirja.Koko.Apuri, taso) : Mathf.Lerp(Tyylikirja.Koko.Apuri, Tyylikirja.Koko.Valiotsikko, taso - 1f);
-                float peitto = taso < 1f ? 0.85f : Mathf.Lerp(0.85f, 1f, taso - 1f);
+                // Koko: muut ja viereiset apuri 14 → nykyinen väliotsikko 18; peitto aina 1; piste 6 → 8 → 12 pt. Kauempien peitto 0,6 → 0,85
+                // (pallon UI-katselmointi TF 172, PT 9.10.2026) → 1 ja kapiteeli 12 → apuri 14 (Laitetestaajan karttakierros 180 kohta 4, PT 11.10.
+                // 06.5x: muut rivit hukkuivat vaaleaan Pariisiin). Porrastus nykyiseen painolla (lihava) ja korostuksella; ei taustaa (omistaja 7.10. 12.3x).
+                float koko = taso < 1f ? Tyylikirja.Koko.Apuri : Mathf.Lerp(Tyylikirja.Koko.Apuri, Tyylikirja.Koko.Valiotsikko, taso - 1f);
+                const float peitto = 1f;
                 float piste = taso < 1f ? Mathf.Lerp(6f, 8f, taso) : Mathf.Lerp(8f, 12f, taso - 1f);
                 // Korostettu nimi yhdellä rivillä, koko leveyden mukaan (SovitaKorostus); kahdelle riville vain, jos ei mahdu muuten.
                 if (k == kohde && kt > 0f) koko = Mathf.Lerp(koko, korostusKoko, kt);

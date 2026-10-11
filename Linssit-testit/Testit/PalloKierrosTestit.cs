@@ -7,7 +7,8 @@
 // Neljä tarkistusta:
 //  1 TAAKSEPÄIN: silmän eteneminen osuuden suunnassa (pysähdys i → i+1) ei palaa yli 1 m:ä osuuden siihenastisesta parhaasta
 //    lähdöstä alkaen (omistaja 10.10.: pysähdyksellä pallo kiertää ja lähestyy kohdetta, joten silmä saa liikkua myös seuraavasta
-//    poispäin — sama raja kuin PalloKaupungitTestit 9.10.; lähtö kierron tangentin suuntaan ei saa palata).
+//    poispäin — sama raja kuin PalloKaupungitTestit 9.10.). PT 10.10. 20.5x: lähtö kierron tangentin suuntaan myös seuraavasta
+//    poispäin (lento kaartaa pehmeästi), joten mittaus alkaa vasta, kun lähdön jatko on hiipunut (PalloLahtoHiipuuS).
 // Kaksi verkkoprofiilia: Nopea (laatat aina valmiit) ja Hidas (Googlen laattojen latausaste jää 95 %:iin eli alle LahtoValmis 98 %:n,
 // ja kohteen laatat valmistuvat 2,5 s lennon lopun jälkeen; simu 18.39: saapuessa 28–45 %) — kumpikin on pelaajalle tavallinen tilanne.
 //  2 PAIKALLAAN: silmän vaakanopeus ei ole alle SeisooMS yli SeisooMaxS sekuntia, kun seuraava kohde on tiedossa (kierroksen jono);
@@ -154,7 +155,10 @@ namespace Matkakirja.Linssit.Testit
                     double ue = qe - pe, un = qn - pn, l = Math.Sqrt(ue * ue + un * un); ue /= l; un /= l;
                     double paras = double.MinValue, pahin = 0; int pahinK = a, parasK = a;
                     int lahtoK = Math.Max(a, r.FindLastIndex(b, b - a + 1, x => x.Kohde == i && Pysahdyksella(x.Vaihe)));   // viimeinen pysähdysruutu
-                    for (int k = lahtoK; k <= b; k++)
+                    // PT 10.10. 20.5x: lähtö kierron tangentin suuntaan myös seuraavasta poispäin, lento kaartaa → mitataan, kun lähdön
+                    // kierron jatko on hiipunut (OpasSilmukka.PalloLahtoHiipuuS).
+                    int mittausK = Math.Min(b, lahtoK + (int)(OpasSilmukka.PalloLahtoHiipuuS / Dt));
+                    for (int k = mittausK; k <= b; k++)
                     {
                         double ete = (r[k].E - pe) * ue + (r[k].N - pn) * un;
                         if (ete > paras) { paras = ete; parasK = k; }

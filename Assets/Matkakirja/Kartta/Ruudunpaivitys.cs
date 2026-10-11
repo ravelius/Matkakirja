@@ -14,7 +14,7 @@ namespace Matkakirja
     ///             (PalloKierto.Liikkeessa), nappulan lento, <see cref="Herata"/>-kutsu (UI-animaatiot, linssiajot) tai
     ///             <see cref="Aktiivinen"/>-ehto. Pysyy 0,5 s viimeisestä liikkeestä.
     ///   LEPO      30 fps; piirto joka kehys, kun jokin muuttuu (laatat latautuvat, UI ei ole rauhassa).
-    ///   PAIKALLAAN  30 fps silmukka, mutta piirto vain joka <see cref="PaikallaanVali"/>. kehys (webin lepopiirron
+    ///   PAIKALLAAN  10 fps silmukka (<see cref="KuvataajuusPaatos.PaikallaanFps"/>, ennen 30), piirto vain joka <see cref="PaikallaanVali"/>. kehys (webin lepopiirron
     ///             vastine): kamera levossa, laatat valmiit ja muuttumatta, UI rauhassa (<see cref="UiRauhassa"/>,
     ///             Natiivi-UI; ilman sitä ei koskaan PAIKALLAAN). Kosketus tai muutos palauttaa piirron heti.
     /// Koko ruudun peitossa (PalloKierto.Peitetty, esim. lehti) pallon kamera on pois: UI piirtyy omalla tahdillaan
@@ -22,6 +22,8 @@ namespace Matkakirja
     /// mikä hidasti myös UI:n (löydös 101).
     /// Lämpö (Lampo): Kuuma → katto 30 fps, renderScale 0,7 (PalloSumennus.PerusSkaala), bloom pois;
     /// Kriittinen → katto 20 fps.
+    /// SÄÄSTÖKATOT (omistaja 11.10.2026, akku- ja lämpömittaus TF 180; <see cref="KuvataajuusPaatos"/>): opas-linssin pallokierros
+    /// (<see cref="PalloKierros"/>) ja lämmin laite (thermalState fair) → 40 fps ProMotionilla, 30 fps 60 Hz:n näytöllä.
     /// Testikomento `ruutu` (peli-komento.txt) kertoo tilan; `lampo …` pakottaa lämpötason.
     /// Löydös S10 (Natiiviseppä 26.9.): TÄYDEN tilan katto <see cref="LiikeKatto"/> A/B-mittaukseen (komento `ruutu liike
     /// 120|60` komento.txt:ssä, Komennot.cs).
@@ -39,8 +41,8 @@ namespace Matkakirja
         public static float SkaalaKatto = 1f;
         public const float TaysiPitoS = 0.5f;
         public const int LepoFps = 30, KuumaFps = 30, KriittinenFps = 20;
-        /// <summary>PAIKALLAAN-tilan piirtoväli kehyksinä (30 fps:llä 2 s).</summary>
-        public const int PaikallaanVali = 60;
+        /// <summary>PAIKALLAAN-tilan piirtoväli kehyksinä (10 fps:llä 2 s; ennen 60 kehystä 30 fps:llä).</summary>
+        public const int PaikallaanVali = KuvataajuusPaatos.PaikallaanVali;
         public const float KuumaSkaala = 0.7f;
 
         /// <summary>KERROS (löydös 161 B, ElavaKerros): kuten PAIKALLAAN, mutta elävän kerroksen animaatiot piirtyvät omalla
@@ -71,6 +73,8 @@ namespace Matkakirja
         long paikallaanHaut;
         /// <summary>UI rauhassa: ei animaatiota, kirjoituskonetta, pulun liikettä tai siirtymää (Natiivi-UI asettaa).</summary>
         public static Func<bool> UiRauhassa;
+        /// <summary>Opas-linssin pallokierros auki (PeliOhjain asettaa): säästökatto <see cref="KuvataajuusPaatos.Katto"/>.</summary>
+        public static Func<bool> PalloKierros;
         /// <summary>Lisäehdot täydelle taajuudelle (esim. linssin ajo): mikä tahansa tosi = TÄYSI.</summary>
         public static readonly List<Func<bool>> Aktiivinen = new List<Func<bool>>();
 
@@ -125,7 +129,7 @@ namespace Matkakirja
         public static void Vierita() => vieritysAsti = Time.unscaledTime + VieritysPitoS;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void Nollaa() { Instanssi = null; UiRauhassa = null; Aktiivinen.Clear(); herattyAsti = vieritysAsti = 0; LiikeKatto = LiikeKattoOletus; NakymanKatto = 0; }
+        static void Nollaa() { Instanssi = null; UiRauhassa = null; PalloKierros = null; Aktiivinen.Clear(); herattyAsti = vieritysAsti = 0; LiikeKatto = LiikeKattoOletus; NakymanKatto = 0; }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         static void Kaynnista()
@@ -272,11 +276,15 @@ namespace Matkakirja
 
             int katto = Lampo.Taso == Lampotaso.Kriittinen ? KriittinenFps : Lampo.Taso == Lampotaso.Kuuma ? KuumaFps : Naytto;
             if (NakymanKatto > 0) katto = Math.Min(katto, NakymanKatto);
+            bool pallo;
+            try { pallo = PalloKierros != null && PalloKierros(); } catch (Exception) { pallo = false; }
+            katto = KuvataajuusPaatos.Sovella(katto, KuvataajuusPaatos.Katto(Naytto, Lampo.ThermalState, pallo));
             // Vieritys 120 Hz (Fablen ehdot 27.9.): ProMotion, kartta pois piirrosta, lämpö normaali — muuten liikkeen katto.
             bool vieritys120 = syy == "vieritys" && kameraPois && Naytto > 60
                 && Lampo.Taso == Lampotaso.Normaali && Lampo.ThermalState < 2;
             int taysi = Syy == "verho" || vieritys120 ? Naytto : LiikeLaatatPaatos.Katto(Naytto, LiikeKatto);   // löydös S10: liikkeen katto
-            int fps = Math.Min(uusi == Tila.Taysi ? taysi : uusi == Tila.Kerros ? kerrosFps : LepoFps, katto);
+            int fps = Math.Min(uusi == Tila.Taysi ? taysi : uusi == Tila.Kerros ? kerrosFps
+                : uusi == Tila.Paikallaan ? KuvataajuusPaatos.PaikallaanFps : LepoFps, katto);
             int vali = uusi == Tila.Paikallaan ? PaikallaanVali : 1;
 #if UNITY_STANDALONE_OSX && !UNITY_EDITOR
             fps = MacLepo(fps, ref vali);

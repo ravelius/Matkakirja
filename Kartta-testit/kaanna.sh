@@ -52,6 +52,7 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/LennonV3Kaytava.cs
 ../Assets/Matkakirja/Kartta/Lentopeli.cs
 ../Assets/Matkakirja/Kartta/LiikeLaatatPaatos.cs
+../Assets/Matkakirja/Kartta/KuvataajuusPaatos.cs
 ../Assets/Matkakirja/Kartta/Maakuntajako.cs
 ../Assets/Matkakirja/Kartta/MaastoLaatat.cs
 ../Assets/Matkakirja/Kartta/MastoGeometria.cs

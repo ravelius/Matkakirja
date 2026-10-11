@@ -52,7 +52,7 @@ namespace Matkakirja.Natiivi
         public static float KatseYlos;
         /// <summary>Kompassin merkki (OpasSovitin): suunta seuraavaan kohteeseen (°, 0 = pohjoinen, myötäpäivään), null = ei kohdetta.</summary>
         public static double? SeuraavaSuunta;
-        // KORIN KOMPASSI (omistaja 9.10. "teetä", PT 00.45; Ydin KoriKompassi): messinkinen nestekompassi korin vasemmalla reunalla (19.0x).
+        // KORIN KOMPASSI (omistaja 9.10. "teetä", PT 00.45; Ydin KoriKompassi): messinkinen pallokompassi (21.5x) korin vasemmalla reunalla.
         // Runko keinuu korin mukana, kardaani kompensoi keinunnan, ruusu osoittaa pohjoiseen ja merkki seuraavaan kohteeseen.
         // Linnanrakentajan kompassi_nakyma.glb (solmut kompassi_runko, _kardaani, _ruusu, _merkki, _lasi) korvaa väliaikaisen mallin.
         readonly KoriKompassi kompassi = new KoriKompassi();
@@ -64,7 +64,13 @@ namespace Matkakirja.Natiivi
         const float KompassiXMax = 0.40f, KompassiXOsuus = 0.62f, KompassiRunkoAla = 0.006f;
         static readonly Vector3 KompassiPaikkaVara = new Vector3(-0.30f, 0.02f, 0.085f);   // korin solmussa, jos reunusta ei löydy
         float kompassiX = -0.30f;
-        public const string KompassiOsoite = "https://media.matkakirja.app/kartta/ilmapallo/v1/kompassi_nakyma.glb";
+        // PALLOKOMPASSI (omistajan päätös 10.10. 21.5x, PT, juna 181): laivojen ja lentokoneiden pallokompassi (messinkikaulus, lasipallo,
+        // pystysuora asteikkonauha luetaan sivulta ilman kallistusta; Linssisepän _valmiit/ilmapallo-v1/pallokompassi) korvaa v1:n
+        // nestekompassin. Solmut samat (kompassi_kardaani → kompassi_ruusu, kompassi_merkki), joten Ydin KoriKompassi ja asento ennallaan.
+        public const string KompassiOsoite = "https://media.matkakirja.app/kartta/ilmapallo/v2/pallokompassi.glb";
+        /// <summary>Kompassi kokonaan kuvassa (omistaja 21.5x: "ruudun alareuna ei saa leikata"; 6c9d434df:ssä kotelo leikkautui iPadilla):
+        /// kauluksen alareuna vähintään tämän osuuden ruudun alalaidasta (keinunnan vara), nosto tolpan varassa enintään KompassiNostoMax.</summary>
+        const float KompassiAlaVara = 0.035f, KompassiSivuVara = 0.02f, KompassiNostoMax = 0.15f, KompassiKaulusR = 0.052f;
         static GlbMalli kompassiMalli; static bool kompassiHaussa;
         static readonly System.Collections.Generic.Dictionary<int, Texture2D> kompassiTekstuurit = new System.Collections.Generic.Dictionary<int, Texture2D>();
         bool kompassiGlb;
@@ -367,7 +373,7 @@ namespace Matkakirja.Natiivi
             if (kupuMalli == null && !kupuHaussa && ohjain != null)
                 ohjain.StartCoroutine(HaeGlb("kupu_nakyma.glb", "pallokupu-v1.glb", KupuOsoite, h => kupuHaussa = h, m => kupuMalli = m));
             if (kompassiMalli == null && !kompassiHaussa && ohjain != null)
-                ohjain.StartCoroutine(HaeGlb("kompassi_nakyma.glb", "pallokompassi-v1.glb", KompassiOsoite, h => kompassiHaussa = h, m => kompassiMalli = m));
+                ohjain.StartCoroutine(HaeGlb("pallokompassi.glb", "pallokompassi-v2.glb", KompassiOsoite, h => kompassiHaussa = h, m => kompassiMalli = m));
             if (malli != null)
             {
                 if (malliJuuri == null) RakennaMalli();
@@ -455,6 +461,35 @@ namespace Matkakirja.Natiivi
                     }
                 }
             kompassiJuuri.localPosition = p + new Vector3(0, KompassiRunkoAla, 0);
+            // Nosto tolpan varassa ja siirto sisään, kunnes kaulus on kokonaan kuvassa (iPhone pysty: kapea ruutu, iPad: reunus matalalla).
+            if (overlay == null) return;
+            float nosto = 0, sisaan = 0;
+            for (int i = 0; i < 40; i++)
+            {
+                var (alin, vasen) = KompassinReunat();
+                bool ala = alin < KompassiAlaVara && nosto < KompassiNostoMax, sivu = vasen < KompassiSivuVara && sisaan < 0.2f;
+                if (!ala && !sivu) break;
+                if (ala) nosto += 0.005f;
+                if (sivu) sisaan += 0.005f;
+                kompassiJuuri.localPosition = p + new Vector3(sisaan, KompassiRunkoAla + nosto, 0);
+            }
+        }
+
+        /// <summary>Kompassin kauluksen alin ja vasemmanpuoleisin kohta korin kameran näkymässä (0–1): pohjarengas ja pallon kehä.</summary>
+        (float alin, float vasen) KompassinReunat()
+        {
+            float alin = 1, vasen = 1;
+            for (int i = 0; i < 12; i++)
+            {
+                float a = i * Mathf.PI / 6;
+                foreach (var y in new[] { 0f, 0.05f, 0.095f })
+                {
+                    var v = overlay.WorldToViewportPoint(kompassiJuuri.TransformPoint(new Vector3(KompassiKaulusR * Mathf.Cos(a), y, KompassiKaulusR * Mathf.Sin(a))));
+                    if (v.z <= 0) continue;
+                    alin = Mathf.Min(alin, v.y); vasen = Mathf.Min(vasen, v.x);
+                }
+            }
+            return (alin, vasen);
         }
 
         /// <summary>Kompassi korin reunalle: Linnanrakentajan kompassi_nakyma.glb (solmut kompassi_kardaani → kompassi_ruusu,

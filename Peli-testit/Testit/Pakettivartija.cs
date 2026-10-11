@@ -267,7 +267,7 @@ namespace Matkakirja.Peli.Testit
         {
             Saanto("kaupungit", "SisaltoTuonti.LueKaupungit", p => (SisaltoTuonti.LueKaupungit(p.Teksti("kaupungit")).Count, null))
                 .Pakko("id", T).Pakko("nimi", T).Pakko("manner", T).Pakko("lat", L).Pakko("lon", L)
-                .Voi("maa", T).Voi("maa2", T).Voi("saari", B).Voi("lentokentta", B).Voi("aloitus", B).Voi("tyyppi", T)
+                .Voi("maa", T).Voi("maa2", T).Voi("saari", B).Voi("lentokentta", B).Voi("aloitus", B).Voi("lahtokohde", B).Voi("tyyppi", T)
                 .Uniikki("id"),
 
             Saanto("reitit", "SisaltoTuonti.LueReitit + Reittiverkko", p =>

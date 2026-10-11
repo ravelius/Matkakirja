@@ -13,6 +13,8 @@
 // SOUNDLY-ERÄ 1 (juna 173; Ydin PalloSoundlyAanet): kolmas manifesti aanet/pallo-soundly-v1; v2:n kanssa päällekkäiset tunnukset
 //  (laivan-torvi-01…03) sisäisellä nimellä soundly-<tunnus>.
 // LENTOÄÄNET (Soundly-erä 1c, 10.10.; Ydin PalloLentoAanet): neljäs manifesti aanet/pallo-lento-soundly-v1, korin poltin ja keinunta.
+// SOUNDLY v2 (juna 182; Ydin PalloSoundly2Aanet): viides manifesti aanet/pallo-soundly-v2; erän 1 kanssa päällekkäiset tunnukset
+//  (kyyhkyt, raitiovaunun kello) sisäisellä nimellä soundly2-<tunnus>.
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -44,6 +46,8 @@ namespace Matkakirja.Natiivi
                 Lue = j => { var d = new Dictionary<string, string>(); foreach (var a in PalloSoundlyAanet.Lue(j).Aanet.Values) d[a.Tunnus] = a.Osoite; return d; } },
             new Lahde { Nimi = "lentoäänet 1c", Osoite = PalloLentoAanet.ManifestiOsoite, Tunnukset = PalloLentoAanet.Tunnukset,
                 Lue = j => { var d = new Dictionary<string, string>(); foreach (var a in PalloLentoAanet.Lue(j).Aanet.Values) d[a.Tunnus] = a.Osoite; return d; } },
+            new Lahde { Nimi = "Soundly v2", Osoite = PalloSoundly2Aanet.ManifestiOsoite, Tunnukset = PalloSoundly2Aanet.Tunnukset,
+                Lue = j => { var d = new Dictionary<string, string>(); foreach (var a in PalloSoundly2Aanet.Lue(j).Aanet.Values) d[a.Tunnus] = a.Osoite; return d; } },
         };
 
         /// <summary>Diagnoosi: manifestien tila (opas kaupunkiaanet tila).</summary>
@@ -65,6 +69,7 @@ namespace Matkakirja.Natiivi
             foreach (var m in PalloKaupunkiAanet.Mikseri) Aanimikseri.Yhteinen.Rekisteroi("pallo", m.Ryhma, m.Id, m.Nimi, m.Klipit);
             foreach (var m in PalloSoundlyAanet.Mikseri) Aanimikseri.Yhteinen.Rekisteroi("pallo", m.Ryhma, m.Id, m.Nimi, m.Klipit);
             foreach (var m in PalloLentoAanet.Mikseri) Aanimikseri.Yhteinen.Rekisteroi("pallo", m.Ryhma, m.Id, m.Nimi, m.Klipit);
+            foreach (var m in PalloSoundly2Aanet.Mikseri) Aanimikseri.Yhteinen.Rekisteroi("pallo", m.Ryhma, m.Id, m.Nimi, m.Klipit);
         }
 
         /// <summary>Mikserin kerroin tunnukselle (ryhmän taso nykyisessä kontekstissa × äänen oma kerroin).</summary>
@@ -74,6 +79,7 @@ namespace Matkakirja.Natiivi
             if (id == null) (id, ryhma) = PalloKaupunkiAanet.MikseriAani(tunnus);
             if (id == null) (id, ryhma) = PalloSoundlyAanet.MikseriAani(tunnus);
             if (id == null) (id, ryhma) = PalloLentoAanet.MikseriAani(tunnus);
+            if (id == null) (id, ryhma) = PalloSoundly2Aanet.MikseriAani(tunnus);
             return id != null ? Aanimikseri.Yhteinen.Kerroin(ryhma, id) : 0f;
         }
 

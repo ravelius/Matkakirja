@@ -31,6 +31,21 @@ namespace Matkakirja.Peli
         // --- pohjaraita (ambience-stream.js POHJA_*) ---
         public static int PohjaNousuMs => Asetus.Kokonais("aanet.PohjaNousuMs", 4000);
         public static int PohjaVaihtoMs => Asetus.Kokonais("aanet.PohjaVaihtoMs", 1500);
+        /// <summary>Saapumisesityksen nopea kappale alkaa isoisän saapumispuheen kanssa (omistaja KIIRE TF 180): nousu ≤ 0,15 s.</summary>
+        public static int EsitysNousuMs => Asetus.Kokonais("aanet.EsitysNousuMs", 150);
+        /// <summary>
+        /// Saapumisesityksen nopean väistö puheen alla (tavallinen puheväistö 0,25 tuntui alkavan vasta puheen jälkeen). 0,8 (PT 11.10.,
+        /// simu d81fbd209): 0,6:lla puheen tauossa kaappaus −56 dB, koska nopean alku on hiljainen (tiedoston RMS 0–4 s −24…−36 dB);
+        /// vaatimus ≥ −40 dB (perustaso kaappauksessa ~−37 dB, 0,8 → ~−39 dB).
+        /// </summary>
+        public static double EsitysVaistoPuhe => Asetus.Luku("aanet.EsitysVaistoPuhe", 0.8);
+        /// <summary>
+        /// Saapumisesityksen nopean korotus koko esityksen ajan (PT 11.10., simu 8aaca5953: puheen tauossa −55…−61 dB): 6,8 ≈ +16 dB
+        /// PohjaTasoon (AaniTila.EsitysKorotus); taso rajataan 1,0:aan. Asetus-avain, säädettävä osoitinvaihdolla.
+        /// </summary>
+        public static double EsitysMusiikinKerroin => Asetus.Luku("aanet.EsitysMusiikinKerroin", 6.8);
+        /// <summary>Esityksen loputtua (nykyintro loppui, Ohita, lähtö) yhä soiva nopea laskee tavalliselle tasolle tässä ajassa.</summary>
+        public static int EsitysLaskuMs => Asetus.Kokonais("aanet.EsitysLaskuMs", 3000);
 
         // --- visamusiikki (MUSIIKKI_VOIMA = perustaso × 1,3) ---
         public static double VisanKerroin => Asetus.Luku("aanet.VisanKerroin", 1.3);
@@ -180,6 +195,13 @@ namespace Matkakirja.Peli
         public HashSet<string> Kaupunkiraidat = new HashSet<string>();
         /// <summary>Kaupunkikohtaiset musiikkijaksot (KaupunkiJakso); muut kaupungit soittavat ketjun kuten ennen.</summary>
         public Dictionary<string, KaupunkiJakso> Jaksot = new Dictionary<string, KaupunkiJakso>();
+        /// <summary>
+        /// PALLON LATAUSRAIDAT (omistaja 10.10.2026 klo 22.1x, äänisivun "Kuumailmapallo: nykyaikaiset taustat"): kaupunki →
+        /// latausruudun oma raita, joka voittaa kaupungin kappaleen ja alueraidan (AaniTila.KaupunginPolku). Kerroin = tiedoston
+        /// äänekkyysero pelin musiikkiraitoihin (lähde −16 LUFS, pelin Lyria-raidat ≈ −11,5 LUFS); soitin kertoo sillä vain
+        /// Lataus-kanavan lähteen (Aanisoitin.AsetaTaso), joten mikserin taso pysyy A-linjauksen mukaisena ilman toista mp3-pakkausta.
+        /// </summary>
+        public Dictionary<string, (string Tunnus, double Kerroin)> Latausraidat = new Dictionary<string, (string, double)>();
         public Dictionary<string, string> KaupunginAlue = new Dictionary<string, string>();
         public HashSet<string> Alueraidat = new HashSet<string>();
         public Dictionary<string, string> AlueenMaat = new Dictionary<string, string>();
@@ -258,6 +280,10 @@ namespace Matkakirja.Peli
             foreach (var k in new[] { "pariisi", "lontoo", "rooma", "istanbul", "kairo", "pietari" }) t.Kaupunkiraidat.Add(k);
             // Kaupunkijakson pilotti (PT 9.10., omistajan valinta "Pariisi nyt 2: nopea nu-jazz" avaukseen): nopea → 3 s → hidas → pohja.
             t.Jaksot["pariisi"] = new KaupunkiJakso { Nopea = "musa-kaupunki-pariisi-nopea", TaukoMs = 3000 };
+            // Pallon latausraidat (omistaja 22.1x): Pariisi 1 bassoriffi ja harjat −16,1 LUFS (+4,6 dB), Tukholma 2 kontrabasso ja
+            // marimba −16,0 LUFS (+4,5 dB).
+            t.Latausraidat["pariisi"] = ("musa-pallo-pariisi", 1.70);
+            t.Latausraidat["tukholma"] = ("musa-pallo-tukholma", 1.68);
             t.KaupunginAlue["marseille"] = "valimeri";
             foreach (var a in new[] { "britteinsaaret", "pohjola", "keski-eurooppa", "valimeri", "balkan", "ita-eurooppa" }) t.Alueraidat.Add(a);
             void Alue(string alue, params string[] maat) { foreach (var m in maat) t.AlueenMaat[m] = alue; }

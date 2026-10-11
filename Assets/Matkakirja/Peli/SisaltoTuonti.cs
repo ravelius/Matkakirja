@@ -42,6 +42,7 @@ namespace Matkakirja.Peli
                     Saari = MiniJson.Totuus(o, "saari"),
                     Lentokentta = MiniJson.Totuus(o, "lentokentta"),
                     Aloitus = MiniJson.Totuus(o, "aloitus"),
+                    Lahtokohde = o.ContainsKey("lahtokohde") ? MiniJson.Totuus(o, "lahtokohde") : (bool?)null,
                     Tyyppi = MiniJson.Teksti(o, "tyyppi"),
                 });
             }

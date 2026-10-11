@@ -54,6 +54,8 @@ namespace Matkakirja.Peli
         public int? KestoMs;
         /// <summary>Ramppi tasainen desibeleissä (Tasoramppi; latausmusiikin jatko kartan tasolle).</summary>
         public bool Desibeli;
+        /// <summary>Poistuvan häivytys desibeleissä tasainen (latausmusiikin ristihäivytys, Tasoramppi.HaivytysLattiaDb).</summary>
+        public bool PoisDesibeli;
         /// <summary>Uusi soitin: lataa Url ja aloita kohdasta Alku (edellinen soitin, jos oli, häivytetään PoisMs:ssä).</summary>
         public bool Uusi;
         /// <summary>Edellinen soitin häivytetään nollaan ja vapautetaan (0 = heti); null = ei poistuvaa soitinta.</summary>
@@ -158,6 +160,49 @@ namespace Matkakirja.Peli
         /// <summary>Kasvaa jokaisella jakson tauolla; soitin ajastaa JaksonTaukoMs:n ja kutsuu JaksonTaukoOhi(nro).</summary>
         public int JaksonTaukoNro { get; private set; }
         public int JaksonTaukoMs { get; private set; }
+        /// <summary>
+        /// SAAPUMISESITYKSEN MUSIIKKI (omistaja KIIRE TF 180, juna 181: "Musiikki pitää alkaa samaan aikaan kun isoisän ääni sanoo
+        /// Pariisi"): uuden esittelyn kaupungissa jakson nopea ei ala paikan vaihtuessa (lennolla jo nousussa) vaan ladataan tauolla
+        /// valmiiksi ja alkaa JaksonNopeaAlkaa-kutsusta samassa ruudussa kuin trailerin saapumispuhe (Saapumistraileri → Aanisoitin),
+        /// nousu EsitysNousuMs ja puheen alla kevyempi väistö (EsitysVaistoPuhe). PeliOhjain antaa ehdon (traileri ja esittely
+        /// tulossa); JaksonOdotusPois vapauttaa odotuksen tavallisena alkuna (traileri ohitettiin ennen puhetta tai sitä ei tullut).
+        /// null = ei koskaan odoteta (testit, web-vertailut).
+        /// </summary>
+        public Func<string, bool> NopeaOdottaaPuhetta { get; set; }
+        /// <summary>Kaupunki, jonka jakson nopea odottaa trailerin puhetta (null = ei odotusta).</summary>
+        public string OdottaaPuhetta => odottaaPuhetta;
+        /// <summary>Kaupunki, jonka nopea alkoi trailerin puheen kanssa ja soi yhä (esittelyn kello kappaleen kohdasta); muuten null.</summary>
+        public string EsitysKaupunki => esitysSoi && jaksoVaihe == 0 ? jaksoKaupunki : null;
+        string odottaaPuhetta, puheEnnenJaksoa;
+        Soitin odottavaNopea;
+        bool esitysSoi;
+        /// <summary>Esityksen korotus päättyi (EsitysLoppui), vaikka nopea soisi vielä; nollautuu, kun uusi esitys alkaa.</summary>
+        bool esitysKorotusPois;
+
+        /// <summary>
+        /// SAAPUMISESITYKSEN KOROTUS (PT 11.10., simu 8aaca5953: väistö 0,8 voimassa, mutta musiikki −55…−61 dB puheen tauossa):
+        /// saapumisesityksen nopea (traileri + nykyintro C1–C5) soi EsitysMusiikinKerroin-kertaisena (oletus 6,8 ≈ +16 dB), puheen
+        /// alla väistö EsitysVaistoPuhe päälle. Ei koske muita kappaleita, linssin pitoa (introPito), visaa, hiljennyksiä (lehti,
+        /// linssi, pollo …) eikä näytteen tai visan väistöä: silloin taso on tavallinen. Päättyy EsitysLoppui-kutsusta (EsitysLaskuMs),
+        /// katkosta (nopea häipyy), paikan vaihdosta ja nopean lopusta.
+        /// </summary>
+        public double EsitysKorotus =>
+            esitysSoi && !esitysKorotusPois && jaksoVaihe == 0 && !introPito && hiljennykset.Count == 0 && !VisaAuki
+            && pyydetty >= AaniVakiot.VaistoPuhe - 1e-9
+                ? Math.Max(1, AaniVakiot.EsitysMusiikinKerroin) : 1;
+
+        /// <summary>
+        /// Esitys loppui (nykyintro loppui, Ohita, lähtö): korotus pois, ja yhä soiva nopea laskee tavalliselle tasolle
+        /// laskuMs:ssä (EsitysLaskuMs 3 s). Ilman korotusta ei tee mitään.
+        /// </summary>
+        public void EsitysLoppui(int laskuMs) => Tee(() =>
+        {
+            if (!esitysSoi || esitysKorotusPois) return;
+            bool korotettu = EsitysKorotus > 1;
+            esitysKorotusPois = true;
+            if (korotettu && pohja != null && pohja != odottavaNopea && jaksoVaihe == 0) Ramppi(pohja, PohjaTaso(Voimassa), laskuMs);
+        });
+
         /// <summary>Testeille ja lokiin: "pariisi:nopea" tms. tai null (ei jaksoa).</summary>
         public string Jakso => jaksoKaupunki == null ? null : jaksoKaupunki + ":" + new[] { "nopea", "tauko", "hidas", "tausta" }[jaksoVaihe];
 
@@ -188,6 +233,7 @@ namespace Matkakirja.Peli
 
         int tapahtuma = -1;
         readonly int?[] pois = new int?[Kanavia];
+        readonly bool[] poisDb = new bool[Kanavia];
         readonly Queue<Action> jono = new Queue<Action>();
         readonly Toive[] toiveet = new Toive[Kanavia];
 
@@ -195,6 +241,8 @@ namespace Matkakirja.Peli
         public Toive Toive(Kanava k) => toiveet[(int)k];
         public double Voimassa => Vaisto.Voimassa(pyydetty, hiljennykset);
         public double Pyydetty => pyydetty;
+        /// <summary>Puhujien laskuri (kertoja, Pulu, dioraaman repliikki); QA-loki.</summary>
+        public int Puhujia => puhujia;
         public IReadOnlyList<string> Hiljennykset => hiljennykset;
         public double MusiikinKerroin => Musiikkitaso.Kerroin(Liuku);
 
@@ -206,7 +254,12 @@ namespace Matkakirja.Peli
         /// </summary>
         public void Paikka(string paikka, string tyyppi) => Tee(() =>
         {
-            if (paikka != this.paikka) { soinutPolku = null; jaksoKaupunki = null; jaksoVaihe = 0; introPito = false; } // uusi laukaisu: musiikki (ja jakso) alusta
+            if (paikka != this.paikka)
+            {
+                soinutPolku = null; jaksoKaupunki = null; jaksoVaihe = 0; introPito = false; // uusi laukaisu: musiikki (ja jakso) alusta
+                odottaaPuhetta = null; odottavaNopea = null; esitysSoi = false;
+                if (puheEnnenJaksoa != paikka) puheEnnenJaksoa = null;
+            }
             this.paikka = paikka;
             paikanTyyppi = paikka == null ? null : tyyppi;
             SoitaPaikka();
@@ -309,7 +362,7 @@ namespace Matkakirja.Peli
                 latausKantoi = false;
                 SoitaPaikka();
                 // Kierroksen raita jatkuu kartalle vain, jos kartan pohja on sama raita (LatausKantaa); muuten ristiin pois.
-                if (LatausJatkuu && !latausKantoi) LopetaLataus(AaniVakiot.LatausRistiMs);
+                if (LatausJatkuu && !latausKantoi) LopetaLataus(AaniVakiot.LatausRistiMs, desibeli: true);
             }
         });
 
@@ -385,7 +438,7 @@ namespace Matkakirja.Peli
             if (uusi == Liuku) return;
             Liuku = uusi;
             if (visa != null) Ramppi(visa, VisaTaso(Voimassa), AaniVakiot.SaadinMs);
-            if (pohja != null) Ramppi(pohja, PohjaTaso(Voimassa), AaniVakiot.SaadinMs);
+            if (pohja != null && pohja != odottavaNopea) Ramppi(pohja, PohjaTaso(Voimassa), AaniVakiot.SaadinMs);
             if (siirtyma != null) Ramppi(siirtyma, RaidanTaso(siirtymaLaji), AaniVakiot.SaadinMs);
             if (aarre != null) Aseta(aarre, AarreTaso());
             KaynnistaLataus(AaniVakiot.SaadinMs); // liuku 0 → latausmusiikki pois; nosto käynnistää sen uudelleen
@@ -540,12 +593,77 @@ namespace Matkakirja.Peli
         {
             if (!pito || kaupunki == null || !Aanimaisema || !Musiikki || !t.Jaksot.ContainsKey(kaupunki)) return;
             introPito = true;
+            odottaaPuhetta = null; odottavaNopea = null; esitysSoi = false; // pallon intro omistaa jakson
             musiikinPaikka = kaupunki;
             musiikinMaa = t.Maa(kaupunki);
             jaksoKaupunki = kaupunki;
             jaksoVaihe = 0;
             JatkaJaksoa();
         });
+
+        /// <summary>
+        /// Trailerin saapumispuhe alkoi soida (Saapumistraileri; myös traileri ilman puhetta): odottava nopea alkaa nyt nousulla
+        /// EsitysNousuMs. Jos jakso ei ole vielä alkanut (maitse saavuttaessa paikka lähtee ruudun lopussa), nopea alkaa heti, kun
+        /// paikka vaihtuu tähän kaupunkiin. Muuten (nopea soi jo, tilaraita, muu vaihe) ei tee mitään.
+        /// </summary>
+        public void JaksonNopeaAlkaa(string kaupunki) => Tee(() =>
+        {
+            if (kaupunki == null) return;
+            if (jaksoKaupunki != kaupunki) { puheEnnenJaksoa = kaupunki; return; }
+            if (odottaaPuhetta != kaupunki) return;
+            odottaaPuhetta = null;
+            if (jaksoVaihe != 0) { odottavaNopea = null; return; }
+            esitysSoi = true; esitysKorotusPois = false;
+            JatkaOdottanutta(AaniVakiot.EsitysNousuMs);
+        });
+
+        /// <summary>
+        /// Odotus pois ilman puhetta (traileri ohitettiin ennen puhetta tai sitä ei näytetty): odottava nopea alkaa tavallisesti
+        /// (PohjaNousuMs, tavallinen väistö). Ei odotusta = ei mitään.
+        /// </summary>
+        public void JaksonOdotusPois(string kaupunki) => Tee(() =>
+        {
+            if (puheEnnenJaksoa == kaupunki) puheEnnenJaksoa = null;
+            if (odottaaPuhetta == null || (kaupunki != null && odottaaPuhetta != kaupunki)) return;
+            odottaaPuhetta = null;
+            if (jaksoVaihe != 0) { odottavaNopea = null; return; }
+            JatkaOdottanutta(AaniVakiot.PohjaNousuMs);
+        });
+
+        /// <summary>Tauolla valmiiksi ladattu nopea soimaan (sama soitin, ei uutta latausta); soitin puuttui → jakso tavalliseen tapaan.</summary>
+        void JatkaOdottanutta(int nousuMs)
+        {
+            var s = odottavaNopea;
+            odottavaNopea = null;
+            if (s == null || pohja != s) { KaynnistaPohja(musiikinPaikka, musiikinMaa); return; }
+            Soita(s, () =>
+            {
+                if (pohja != s) { s.Tauko = true; return; }
+                Ramppi(s, PohjaTaso(Voimassa), nousuMs);
+            });
+        }
+
+        /// <summary>Jakson alku uudessa kaupungissa: odottaako nopea trailerin puhetta (vai alkoiko puhe jo).</summary>
+        void JaksoAlkaa(string kaupunki)
+        {
+            esitysSoi = false;
+            odottavaNopea = null;
+            odottaaPuhetta = null;
+            if (puheEnnenJaksoa == kaupunki) { puheEnnenJaksoa = null; esitysSoi = true; esitysKorotusPois = false; return; }
+            if (NopeaOdottaaPuhetta?.Invoke(kaupunki) == true) odottaaPuhetta = kaupunki;
+        }
+
+        /// <summary>
+        /// Saapumisesityksen esilataus (omistaja KIIRE TF 180): kaupungin jakson nopean täysi osoite täsmälleen siinä muodossa, jolla
+        /// pohjasoitin sen pyytää (AaniOsoite.Url, sama avain Aanisoittimen klippivälimuistissa), tai null, jos jakso ei soisi
+        /// (musiikki tai äänimaisema pois, ei kerran läpi -tilaa, ei jaksoa, nopea merkitty puuttuvaksi).
+        /// </summary>
+        public string EsitysNopeaOsoite(string kaupunki)
+        {
+            if (!KerranLapi || !JaksoVoiSoida(kaupunki)) return null;
+            var polku = JaksonNopea(kaupunki);
+            return polku == null || puuttuvat.Contains(polku) ? null : AaniOsoite.Url(polku);
+        }
 
         /// <summary>Voiko kaupungin jakso soida (musiikki ja äänimaisema päällä, jakso olemassa); false = intron kello käy hiljaa.</summary>
         public bool JaksoVoiSoida(string kaupunki) => Aanimaisema && Musiikki && kaupunki != null && t.Jaksot.ContainsKey(kaupunki);
@@ -569,7 +687,7 @@ namespace Matkakirja.Peli
             if (alkaa == AvausKaynnissa) return;
             AvausKaynnissa = alkaa;
             var kesto = alkaa ? AaniVakiot.AvauksenLiukuMs : AaniVakiot.HaivytysMs;
-            if (pohja != null) Ramppi(pohja, PohjaTaso(Voimassa), kesto);
+            if (pohja != null && pohja != odottavaNopea) Ramppi(pohja, PohjaTaso(Voimassa), kesto);
             if (nykyinen?.Audio != null) Ramppi(nykyinen.Audio, MaisemaTaso(nykyinen), kesto);
         });
 
@@ -622,12 +740,15 @@ namespace Matkakirja.Peli
         }
 
         /// <summary>
-        /// Kaupungin oma raita (ketju ilman tiloja); jos sitä ei ole, VARARAITA (Päätoimittaja 10.10. 20.2x, kunnes uudet
+        /// Pallon latausraita (AaniTaulut.Latausraidat), muuten kaupungin oma raita (ketju ilman tiloja); jos sitä ei ole, VARARAITA (Päätoimittaja 10.10. 20.2x, kunnes uudet
         /// kaupunkikappaleet tulevat) on kartan alueraita samalla valinnalla (Musiikkivalitsin.Alueraita). Puuttuvat ohi.
         /// </summary>
         string KaupunginPolku(string kaupunki)
         {
             if (string.IsNullOrEmpty(kaupunki)) return null;
+            // Pallon oma latausraita (AaniTaulut.Latausraidat) ensin; jos se puuttuu (404), kaupungin kappale tai alueraita.
+            string oma = t.Latausraidat.TryGetValue(kaupunki, out var lr) ? t.MusaPolku(lr.Tunnus) : null;
+            if (oma != null && !latausPuuttuvat.Contains(AaniOsoite.Url(oma))) return oma;
             var maa = t.Maa(kaupunki);
             var ketju = valitsin.Ketju(null, kaupunki, maa);
             var alue = valitsin.Alueraita(kaupunki, maa);
@@ -648,7 +769,7 @@ namespace Matkakirja.Peli
             if (!avautui) { LopetaLataus(AaniVakiot.LatausPoisMs); return; }
             if (!latausJatko || lataus == null || (pohja != null && pohjaPolku != lataus.Polku))
             {
-                LopetaLataus(AaniVakiot.LatausRistiMs);
+                LopetaLataus(AaniVakiot.LatausRistiMs, desibeli: true);
                 return;
             }
             // Sama raita jo pohjana (kaksi kopiota eri kohdissa): latausraita jatkaa, pohja pois.
@@ -710,7 +831,7 @@ namespace Matkakirja.Peli
             }
             var vaistyva = lataus;
             lataus = null;
-            if (vaistyva != null) { Ramppi(vaistyva, 0, AaniVakiot.LatausRistiMs); Vapauta(vaistyva); }
+            if (vaistyva != null) { Ramppi(vaistyva, 0, AaniVakiot.LatausRistiMs, desibeli: true); Vapauta(vaistyva); }
             var s = Uusi(Kanava.Lataus, latausUrl, true);
             s.Polku = latausPolku;
             lataus = s;
@@ -729,17 +850,19 @@ namespace Matkakirja.Peli
         {
             if (!LatausJatkuu || lataus == null) return false;
             if (polku != null && lataus.Polku == polku) { latausKantoi = true; return true; }
-            LopetaLataus(AaniVakiot.LatausRistiMs);
+            LopetaLataus(AaniVakiot.LatausRistiMs, desibeli: true);
             return false;
         }
 
-        void LopetaLataus(int laskuMs)
+        /// <summary>Latausraita pois: desibeli = ristihäivytys desibeleissä tasaisena (PT 10.10. 21.5x: linnan ristihäivytys samalla
+        /// kaavalla kuin pallon jatko), muuten lineaarinen (ohitus, säädin).</summary>
+        void LopetaLataus(int laskuMs, bool desibeli = false)
         {
             var vanha = lataus;
             lataus = null;
             LatausJatkuu = false;
             if (vanha == null) return;
-            Ramppi(vanha, 0, laskuMs);
+            Ramppi(vanha, 0, laskuMs, desibeli);
             Vapauta(vanha);
         }
 
@@ -760,6 +883,7 @@ namespace Matkakirja.Peli
             LopetaMaisema(); LopetaVisaSoitin(); LopetaPohja(); LopetaSiirtyma();
             VisaAuki = false;
             soinutPolku = null;
+            odottaaPuhetta = puheEnnenJaksoa = null; odottavaNopea = null; esitysSoi = false;
         });
 
         // --- tapahtuman runko -----------------------------------------------------
@@ -767,7 +891,7 @@ namespace Matkakirja.Peli
         void Tee(Action teko)
         {
             tapahtuma++;
-            for (int i = 0; i < pois.Length; i++) pois[i] = null;
+            for (int i = 0; i < pois.Length; i++) { pois[i] = null; poisDb[i] = false; }
             teko();
             while (jono.Count > 0) jono.Dequeue()();
             PaivitaToiveet();
@@ -787,6 +911,7 @@ namespace Matkakirja.Peli
                 w.Desibeli = s != null && s.MuutosT == tapahtuma && s.MuutosDb;
                 w.Uusi = s != null && s.SyntyiT == tapahtuma;
                 w.PoisMs = pois[i];
+                w.PoisDesibeli = pois[i] > 0 && poisDb[i];
                 w.Tauko = s?.Tauko ?? false;
                 w.Alku = s?.Alku ?? 0;
                 w.Silmukka = s?.Silmukka ?? false;
@@ -856,12 +981,23 @@ namespace Matkakirja.Peli
         {
             var i = (int)s.Kanava;
             pois[i] = Math.Max(pois[i] ?? 0, PoisKesto(s));
+            if (s.RamppiT == tapahtuma && s.RamppiKohde == 0 && s.MuutosDb) poisDb[i] = true;
         }
 
         // --- tasot ----------------------------------------------------------------
 
-        double PohjaTaso(double kerroin) =>
-            AaniVakiot.MusiikinPerustaso * (introPito ? 1 : kerroin) * MusiikinKerroin * (AvausKaynnissa ? AaniVakiot.AvauksenMusiikki : 1);
+        double PohjaTaso(double kerroin) => Math.Min(1,
+            AaniVakiot.MusiikinPerustaso * (introPito ? 1 : EsityksenKerroin(kerroin)) * MusiikinKerroin * (AvausKaynnissa ? AaniVakiot.AvauksenMusiikki : 1)
+            * EsitysKorotus);
+
+        /// <summary>
+        /// Saapumisesityksen nopea puheen alla: aina EsitysVaistoPuhe (hiljennykset ennallaan, 0,45), ei koskaan tavallista 0,25:tä.
+        /// Ehto ei vaadi pyydetty == VaistoPuhe (liukulukuvertailu, toinen puhuja); näytteen ja visan syvempi väistö (0,15)
+        /// pätee kuten muualla. Muuten kerroin sellaisenaan.
+        /// </summary>
+        double EsityksenKerroin(double kerroin) =>
+            esitysSoi && jaksoVaihe == 0 && puhujia > 0 && pyydetty >= AaniVakiot.VaistoPuhe - 1e-9
+                ? Math.Max(kerroin, Vaisto.Voimassa(AaniVakiot.EsitysVaistoPuhe, hiljennykset)) : kerroin;
 
         double VisaTaso(double kerroin) =>
             Math.Min(1, AaniVakiot.MusiikinPerustaso * AaniVakiot.VisanKerroin * visanVoima * kerroin * MusiikinKerroin);
@@ -899,7 +1035,8 @@ namespace Matkakirja.Peli
             vaistonPohja = pyydetty;
             if (siirtyma != null) Ramppi(siirtyma, RaidanTaso(siirtymaLaji), kesto != 0 ? kesto : t.Siirtyma(siirtymaLaji).NousuMs);
             if (visa != null && k < 1) Ramppi(visa, VisaTaso(k), kesto);
-            if (pohja != null) Ramppi(pohja, PohjaTaso(k), kesto);
+            // Tauolla odottava nopea ei rampata: Aanisoitin ottaisi ensimmäisen rampin nousuksi (puheväistö 650 ms ennen EsitysNousuMs:ää).
+            if (pohja != null && pohja != odottavaNopea) Ramppi(pohja, PohjaTaso(k), kesto);
             if (LatausJatkuu) KaynnistaLataus(kesto); // kierroksen latausraita väistää kuten pohja
             if (nykyinen == null) return;
             nykyinen.Vaimennus = LinssinVaimennus(nykyinen, k);
@@ -950,7 +1087,7 @@ namespace Matkakirja.Peli
             if (KerranLapi && cityId != null && t.Jaksot.TryGetValue(cityId, out var jakso))
             {
                 var oma = Musiikkivalitsin.Valitse(valitsin.Ketju(null, cityId, maa), puuttuvat);
-                if (polku == oma) { if (jaksoKaupunki != cityId) { jaksoKaupunki = cityId; jaksoVaihe = 0; } SoitaJakso(jakso, oma); return; }
+                if (polku == oma) { if (jaksoKaupunki != cityId) { jaksoKaupunki = cityId; jaksoVaihe = 0; JaksoAlkaa(cityId); } SoitaJakso(jakso, oma); return; }
                 // Tilaraita (lehti, kohtaaminen …) keskeyttää: saapumisen nopea ja tauko jäävät väliin, paluussa hidas.
                 if (jaksoKaupunki == cityId && jaksoVaihe < 2) jaksoVaihe = 2;
             }
@@ -985,7 +1122,7 @@ namespace Matkakirja.Peli
             if (polku == null || puuttuvat.Contains(polku)) { LopetaPohja(); return; }
             if (pohja != null && pohjaPolku == polku) return;
             // Jakson vaihe tarvitsee oman soittimen (PohjaLoppui): jatkuva latausraita ristiin pois.
-            if (LatausJatkuu) LopetaLataus(AaniVakiot.LatausRistiMs);
+            if (LatausJatkuu) LopetaLataus(AaniVakiot.LatausRistiMs, desibeli: true);
             var vaistyva = pohja;
             pohja = null;
             pohjaPolku = null;
@@ -994,7 +1131,10 @@ namespace Matkakirja.Peli
             s.Polku = polku;
             pohja = s;
             pohjaPolku = polku;
-            var nousu = vaistyva != null ? AaniVakiot.PohjaVaihtoMs : AaniVakiot.PohjaNousuMs;
+            // Saapumisesitys: nopea latautuu tauolla (Toive.Tauko) ja alkaa trailerin puheen kanssa (JaksonNopeaAlkaa).
+            if (jaksoVaihe == 0 && odottaaPuhetta != null && odottaaPuhetta == jaksoKaupunki) { odottavaNopea = s; return; }
+            var nousu = jaksoVaihe == 0 && esitysSoi ? AaniVakiot.EsitysNousuMs
+                : vaistyva != null ? AaniVakiot.PohjaVaihtoMs : AaniVakiot.PohjaNousuMs;
             Soita(s, () =>
             {
                 if (pohja != s) { s.Tauko = true; return; }

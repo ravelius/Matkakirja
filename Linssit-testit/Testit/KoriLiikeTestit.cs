@@ -41,8 +41,8 @@ namespace Matkakirja.Linssit.Testit
                 // Päätoimittaja 8.10. 07.5x: rampit vähintään PalloRamppiS, huippunopeus kuten TF 163 (kesto pitenee).
                 var (_, osuus) = OpasSilmukka.PalloProfiili(m);
                 double huippu = 1 / (T * (1 - osuus)), huippuEnnen = 1 / (vanha * (1 - OpasKuvaus.RamppiOsuus(m)));
-                Oleta.Tosi(huippu <= huippuEnnen + 1e-9 && (osuus >= 0.5 - 1e-9 || huippu >= huippuEnnen - 1e-9),
-                    $"{m} m: huippunopeus kuten TF 163 ({huippu:F4} / {huippuEnnen:F4} per s, kesto {vanha:F1} → {T:F1} s)");
+                // PT 10.10. 20.5x kumosi "huippunopeus kuten TF 163": pallolennot lyhyemmiksi (OpasSilmukka.LennonKesto ∝ √matka).
+                Oleta.Tosi(T >= OpasSilmukka.PalloLentoMinS - 1e-9 && T <= OpasSilmukka.PalloLentoMaxS + 1e-9, $"{m} m: kesto {T:F1} s (ennen {vanha:F1} s, huippu {huippu:F4} / {huippuEnnen:F4})");
                 Oleta.Tosi(osuus * T >= Math.Min(OpasSilmukka.PalloRamppiS, T / 2) - 1e-9, $"{m} m: ramppi {osuus * T:F1} s");
                 // Suunta etenee etenemisen mukana: 1 %:n kohdalla enintään ~1 % koko käännöksestä (pitkä lento kääntyy enemmän).
                 double kokoKaanto = Math.Abs(KierrosLento.Kiedo(OpasSilmukka.PalloTulosuunta(180, 0, T) - 180));

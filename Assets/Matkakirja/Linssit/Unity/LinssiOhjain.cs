@@ -26,7 +26,7 @@
 // Pelikoodarin maisemakanavalla ilman linssiä); elävälle kartalle "elava kreikka [alku s] [nopeus] | kuva <s> | jatka |
 // saapuminen <kaupunki> | saato | ui | pois | tila" (ElavaKartta); ISS:n radalle "iss tila | lataa" (IssTleLataaja).
 // Lontoo-pilotille (Linssiseppä 5.10.2026) "linssi lontoo" ja "lontoo ohita | data google|ion|oma | tila"; elävälle
-// oppaalle "linssi opas" ja "opas testi 0|1 | testiotsake 0|1 | pysayta 0|1 | kaupunki <nimi> | toive <teksti> | data google|ion|oma | steamaudio 0|1|tila | tila" (LontooSovitin; kehitystunnus
+// oppaalle "linssi opas" ja "opas testi 0|1 | testiotsake 0|1 | pysayta 0|1 | kaupunki <nimi> | toive <teksti> | data google|ion|oma | steamaudio 0|1|tila | nopeusloki 0|1 | tila" (LontooSovitin; kehitystunnus
 // Documents/cesium-ion-tunnus.txt).
 // Tulos lokiin ja Documents/linssi-loki.txt:hen.
 using System;
@@ -2174,6 +2174,8 @@ namespace Matkakirja.Natiivi
                         Kirjaa($"opas: kamera kiinteä {OpasSovitin.KiinteaKamera}");
                     }
                     else if (osat.Length > 2 && osat[1] == "pcm") OpasSovitin.PcmKaytossa = osat[2] == "1";
+                    // QA (juna 181): pallon nopeusloki 0,1 s:n välein (OpasNopeusloki; "MATKAKIRJA opas nopeus t=… v=… kulma=… kohde=… vaihe=…").
+                    else if (osat.Length > 2 && osat[1] == "nopeusloki") { OpasSovitin.NopeusLoki = osat[2] == "1"; Kirjaa($"opas: nopeusloki {(OpasSovitin.NopeusLoki ? "päällä" : "pois")}"); }
                     // Laitekokeet ilman kosketusta (juna 151): kierros, Liiku-kohde, lopetus, jatko ja kysymys kuten napeista.
                     else if (osat.Length > 1 && osat[1] == "testi429") OpasSovitin.TestiGoogle429();
                     else if (osat.Length > 1 && osat[1] == "kierros") Kirjaa($"opas: kierros → {OpasSovitin.Kaupunkikierros()}");
@@ -2181,7 +2183,14 @@ namespace Matkakirja.Natiivi
                     else if (osat.Length > 1 && osat[1] == "seuraava") Kirjaa($"opas: seuraava → {OpasSovitin.Seuraava()}");
                     else if (osat.Length > 1 && osat[1] == "jatka") Kirjaa($"opas: jatka → {OpasSovitin.JatkaKierrosta()}");
                     // "opas hyppy <i>": metrolinjan aseman napautus (Natiivi-UI, juna 180) → kierroksen kohde i.
-                    else if (osat.Length > 2 && osat[1] == "hyppy" && int.TryParse(osat[2], out int hi)) Kirjaa($"opas: hyppy {hi} → {OpasSovitin.KierrosKohteeseen(hi)}");
+                    // "opas hyppy <Q-tunnus|nimi>" (QA, PT 11.10.): kohde Wikidata-tunnuksella tai nimellä, sama reitti kuin indeksillä.
+                    else if (osat.Length > 2 && osat[1] == "hyppy")
+                    {
+                        string ha = string.Join(" ", osat.Skip(2));
+                        bool luku = int.TryParse(ha, out int hi);
+                        if (!luku) hi = OpasSovitin.KierrosIndeksiKohteelle(ha);
+                        Kirjaa(!luku && hi < 0 ? $"opas: hyppy {ha} → ei löydy" : $"opas: hyppy {ha} → {OpasSovitin.KierrosKohteeseen(hi)}");
+                    }
                     else if (osat.Length > 2 && osat[1] == "kysy") Kirjaa($"opas: kysy → {OpasSovitin.Kysy(string.Join(" ", osat.Skip(2)))}");
                     // Kartan kaupunkielementti (juna 159): opas suoraan kaupunkitilaan sallittujen listan id:llä tai nimellä.
                     else if (osat.Length > 3 && osat[1] == "kori" && osat[2] == "aanet") { PalloKori.AaniSarja = osat[3]; Kirjaa($"opas: kori äänet {PalloKori.AaniSarja}"); }
@@ -2226,6 +2235,16 @@ namespace Matkakirja.Natiivi
                     else if (osat.Length > 2 && osat[1] == "savu") { if (osat[2] != "tila") ElavaSavuLiput.SavuPaalla = osat[2] == "1"; Kirjaa("opas: " + ElavaKaupunki.Tila()); }
                     // Steam Audio HRTF -koe (9.10., oletus pois): 0|1 ohittaa asetuksen pallo.SteamAudio istunnon ajaksi; tila = diagnoosi.
                     else if (osat.Length > 2 && osat[1] == "steamaudio") Kirjaa("opas: " + SteamAudioKoe.Komento(osat[2]));
+                    // Kaupunkipuut (juna 181, KaupunkiPuut): 0|1 heti voimaan, tila = ruudut, instanssit ja muisti; lahi|kauko|peitto N = viritys.
+                    else if (osat.Length > 2 && osat[1] == "puut")
+                    {
+                        if (osat[2] == "0" || osat[2] == "1") KaupunkiPuut.Aseta(osat[2] == "1");
+                        else if (osat[2] == "tupla" && osat.Length > 3) KaupunkiPuut.AsetaTupla(osat[3] == "auto" ? (bool?)null : osat[3] == "1");
+                        else if (osat.Length > 3 && float.TryParse(osat[3], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var pv))
+                        { if (osat[2] == "lahi") KaupunkiPuut.LahiM = pv; else if (osat[2] == "kauko") KaupunkiPuut.KaukoM = pv; else if (osat[2] == "peitto") KaupunkiPuut.Peitto = pv; }
+                        Kirjaa("opas: " + KaupunkiPuut.Tila());
+                        if (osat[2] == "tila") KaupunkiPuut.KirjaaMuisti();   // muistiportin rivi (Natiiviseppä)
+                    }
                     else if (osat.Length > 2 && osat[1] == "liput") { if (osat[2] != "tila") ElavaSavuLiput.LiputPaalla = osat[2] == "1"; Kirjaa("opas: " + ElavaKaupunki.Tila()); }
                     else if (osat.Length > 3 && osat[1] == "pinta")
                     {

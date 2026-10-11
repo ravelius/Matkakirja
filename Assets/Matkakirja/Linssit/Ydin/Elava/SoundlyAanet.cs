@@ -7,6 +7,8 @@
 //  KYYHKYT: kamera alle KyyhkyKorkeusM; lähin näkyvä kyyhkyparvi tai aukio alle KyyhkyM → kujerrus tai siivet (parvessa siivet
 //    useammin) KyyhkyValiMinS–KyyhkyValiMaxS välein, ei samaa peräkkäin.
 //  RAITIOVAUNUN KELLO: lähin näkyvä raitiovaunu alle RaitioKelloM (3D) RaitioValiMinS–RaitioValiMaxS välein (harvoin).
+//  SOUNDLY v2 (juna 182, Soundly2Aanet): LaituriLokit, AukioKyyhkyt ja RaitioKellot = false, kun v2:n vastaavat klipit on ladattu
+//    (Unity asettaa joka kehys): laiturien lokit, aukioiden kyyhkyt ja raitiovaunun kello soivat silloin v2:sta; parvet ennallaan.
 // Puhdas C#: KaupunkiAanetTestit.
 using System;
 using System.Collections.Generic;
@@ -24,6 +26,8 @@ namespace Matkakirja.Linssit.Elava
         public sealed class Tapahtuma { public string Tunnus; public Laji Laji; public int Avain = -1; public double X, Y, Z, Taso, EtaisyysM; }
 
         public readonly List<Tapahtuma> Kerrat = new List<Tapahtuma>();
+        /// <summary>Soundly v2 (juna 182): false = laiturin lokki, aukion kyyhky tai raitiovaunun kello soi v2:sta (Soundly2Aanet).</summary>
+        public bool LaituriLokit = true, AukioKyyhkyt = true, RaitioKellot = true;
         /// <summary>lokki-parvi-silmukan liu'utettu taso (ennen maisemaa, väistöä ja mikseriä).</summary>
         public double LokkiParvi;
 
@@ -82,7 +86,7 @@ namespace Matkakirja.Linssit.Elava
             {
                 Tapahtuma t = null;
                 if (lp >= 0 && lpD < LokkiM) t = new Tapahtuma { Avain = parvet[lp].Avain, X = parvet[lp].X, Y = parvet[lp].Y, Z = parvet[lp].Z, EtaisyysM = lpD };
-                else if (matala && la >= 0)
+                else if (matala && la >= 0 && LaituriLokit)
                 {
                     double y = double.IsNaN(laiturit[la].Y) ? maa : laiturit[la].Y + 6;
                     t = new Tapahtuma { X = laiturit[la].X, Y = y, Z = laiturit[la].Z, EtaisyysM = D3(laiturit[la].X, y, laiturit[la].Z) };
@@ -108,7 +112,7 @@ namespace Matkakirja.Linssit.Elava
                     double d = D3(parvet[i].X, parvet[i].Y, parvet[i].Z);
                     if (d < KyyhkyHiljaM && d < paras) { paras = d; parvessa = true; t = new Tapahtuma { Avain = parvet[i].Avain, X = parvet[i].X, Y = parvet[i].Y, Z = parvet[i].Z, EtaisyysM = d }; }
                 }
-                int au = Lahin(aukioR, i => aukiot[i], KyyhkyM, out double auD);
+                double auD = 0; int au = AukioKyyhkyt ? Lahin(aukioR, i => aukiot[i], KyyhkyM, out auD) : -1;
                 if (au >= 0)
                 {
                     double d = Math.Sqrt(auD * auD + korkeus * korkeus);
@@ -124,7 +128,7 @@ namespace Matkakirja.Linssit.Elava
             }
 
             // ---- raitiovaunun kello ----
-            if (nyt >= seuraavaRaitio)
+            if (nyt >= seuraavaRaitio && RaitioKellot)
             {
                 int rp = -1; double rD = double.MaxValue;
                 for (int i = 0; i < raitiot.Count; i++) { double d = D3(raitiot[i].X, raitiot[i].Y, raitiot[i].Z); if (d < rD) { rp = i; rD = d; } }

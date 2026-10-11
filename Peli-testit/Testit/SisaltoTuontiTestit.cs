@@ -29,6 +29,28 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(k.Count, k.Select(x => x.Id).Distinct().Count(), "tunnukset uniikkeja");
         }
 
+        [Testi] static void LahtokohteetVanhassaPaketissaAloituksesta()
+        {
+            // Kultaisessa paketissa ei ole lahtokohde-kenttää: alkulennon kohteet = aloitus (ennallaan).
+            var k = SisaltoTuonti.LueKaupungit(File.ReadAllText(Path.Combine(KultaisetApu.Paketti, "kaupungit.json")));
+            Oleta.Sama(true, k.All(x => x.Lahtokohde == null), "kenttä puuttuu");
+            Oleta.Sama(string.Join(",", k.Where(x => x.Aloitus).Select(x => x.Id)), string.Join(",", Kaupunki.Lahtokohteet(k).Select(x => x.Id)));
+        }
+
+        [Testi] static void LahtokohteetKentasta()
+        {
+            // Omistaja 10.10. 23.4x: alkulennossa vain merkityt; puuttuva kenttä = false, kun paketissa on kenttä; aloitus ennallaan.
+            const string json = "{\"nimi\":\"kaupungit\",\"alkiot\":["
+                + "{\"id\":\"lontoo\",\"aloitus\":true,\"lahtokohde\":false},"
+                + "{\"id\":\"ateena\",\"aloitus\":true,\"lahtokohde\":true},"
+                + "{\"id\":\"rooma\",\"aloitus\":true},"
+                + "{\"id\":\"tukholma\",\"aloitus\":true,\"lahtokohde\":true}]}";
+            var k = SisaltoTuonti.LueKaupungit(json);
+            Oleta.Sama("ateena,tukholma", string.Join(",", Kaupunki.Lahtokohteet(k).Select(x => x.Id)));
+            Oleta.Sama(4, k.Count(x => x.Aloitus), "aloitus ennallaan (Mannerlento, aarteet)");
+            Oleta.Sama(null, k[2].Lahtokohde);
+        }
+
         [Testi] static void ReittienTulkinta()
         {
             var r = SisaltoTuonti.LueReitit(File.ReadAllText(Path.Combine(KultaisetApu.Paketti, "reitit.json")));
