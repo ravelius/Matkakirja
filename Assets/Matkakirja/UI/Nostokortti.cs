@@ -194,6 +194,11 @@ namespace Matkakirja.Natiivi
                 Sulje();
             });
             kortti = Rakenne.El("mk-nosto", kerros);
+            // Videopelimuunnelman kimmel (omistaja 11.10.2026): ensimmäisenä lapsena, joten piirtyy sisällön alle; näkyy vain
+            // mk-nosto--videopeli-luokalla (Pohjat/nostokortti.uss).
+            var kimmelala = Rakenne.El("mk-nosto__kimmelala", kortti, PickingMode.Ignore);
+            kimmel = Rakenne.El("mk-nosto__kimmel", kimmelala, PickingMode.Ignore);
+            kimmel.schedule.Execute(Kimmel).Every(KimmelValiMs);
             // Osuma-ala kortin yläpuolelle (savuke 110): poimittava kaista, jonka painallus tulee kortille (EleAlkoi).
             kahvaAlue = Rakenne.El("mk-vetokahva mk-nosto__vetoalue", kortti);
             kahva = Rakenne.El("mk-nosto__kahva", kortti, PickingMode.Ignore);
@@ -451,6 +456,7 @@ namespace Matkakirja.Natiivi
             laajennettu = false;
             kortti.EnableInClassList("mk-nosto--looppi", n.Looppi);
             kortti.EnableInClassList("mk-nosto--kohde", n.Laji == NostoLaji.Kohde);
+            kortti.EnableInClassList("mk-nosto--videopeli", Videopeli(n));
             VapautaPaikka();
             Mitoita();
             // Kohdekortti (omistaja 1.10.2026 kokeiluun, loki f344f1034): suoraan koko korttiin ilman kuva edellä -vaihetta.
@@ -717,6 +723,7 @@ namespace Matkakirja.Natiivi
             kortti.RemoveFromClassList("mk-nosto--looppi");
             kortti.RemoveFromClassList("mk-nosto--kohde");
             kortti.RemoveFromClassList("mk-nosto--esittely");
+            kortti.RemoveFromClassList("mk-nosto--videopeli");
             VapautaPaikka();
             Mitoita();
             sisus.Clear();
@@ -1048,7 +1055,23 @@ namespace Matkakirja.Natiivi
         /// </summary>
         // --- NOSTOKORTTI-pohjan toimintorivi (kohdekortti, omistaja 1.10.2026 kokeiluun) ---------------------
 
-        VisualElement toimintorivi;
+        VisualElement toimintorivi, kimmel;
+
+        /// <summary>
+        /// VIDEOPELIMUUNNELMA (omistaja 11.10.2026 Päätoimittajan kautta, juna 182): kohde, joka on myös pelattava videopeli
+        /// (Olavinlinna, SeikkailuTapit.AvaaPelaajalle), saa kimmeltävän sinisen kortin (tyylikirja teemat.videopeli).
+        /// </summary>
+        static bool Videopeli(Nosto n) => n != null && n.Laji == NostoLaji.Kohde && n.Id == "olavinlinna";
+
+        /// <summary>Kimmeljuova kulkee vuorosuuntiin (siirtymä 2,4 s USS:ssä); vain kortin ollessa auki videopelimuunnelmana.</summary>
+        const long KimmelValiMs = 8000;
+
+        void Kimmel()
+        {
+            if (kerros.style.display == DisplayStyle.None || !kortti.ClassListContains("mk-nosto--videopeli")) return;
+            kimmel.ToggleInClassList("mk-nosto__kimmel--kulku");
+            Ruudunpaivitys.Herata(2.6f);
+        }
 
         void PoistaToimintorivi()
         {

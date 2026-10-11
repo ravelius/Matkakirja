@@ -627,6 +627,34 @@ namespace Matkakirja.Natiivi
                 () => Aloita(true), kunPeruttu: () => Aloita(false));
         }
 
+        /// <summary>Onko Olavinlinnan pelattavasta palasta tallennus (Jatka mahdollinen).</summary>
+        public static bool PalaTallennettu()
+        {
+            var asm = typeof(SeikkailuTapit).Assembly;
+            var sovitin = asm.GetType("Matkakirja.Natiivi.DioraamaSovitin");
+            string hash = sovitin?.GetField("PelattavaPalaHash", BindingFlags.Public | BindingFlags.Static)?.GetValue(null) as string;
+            var lue = asm.GetType("Matkakirja.Natiivi.SeikkailuTallentaja")?.GetMethod("LueTiedosto", BindingFlags.Public | BindingFlags.Static, null, new[] { typeof(string), typeof(string) }, null);
+            try { return hash != null && lue?.Invoke(null, new object[] { "olavinlinna", hash }) != null; }
+            catch (System.Exception e) { Debug.LogException(e); return false; }
+        }
+
+        /// <summary>
+        /// PELATTAVA PALA PELAAJALLE (Olavinlinnan nosto, omistaja 11.10.2026 PT:n kautta, juna 182): Jatka tai alusta ilman
+        /// Vahvistus-dialogia ja ilman alkuvalintaa (OlavinlinnaAlku.OhitaKerran), saatavuus ohitettuna (Siirtosepän
+        /// LinssiOhjain.AvaaPelattavaPala(bool), f2bae0ac6). false = rajapinta puuttuu, pala ei aukea (maksu palautetaan).
+        /// </summary>
+        public static bool AvaaPelaajalle(bool jatka)
+        {
+            var asm = typeof(SeikkailuTapit).Assembly;
+            var avaa = asm.GetType("Matkakirja.Natiivi.LinssiOhjain")?.GetMethod("AvaaPelattavaPala", BindingFlags.Public | BindingFlags.Static, null, new[] { typeof(bool) }, null);
+            if (avaa == null) { Debug.LogWarning("MATKAKIRJA seikkailutapit: LinssiOhjain.AvaaPelattavaPala(bool) puuttuu"); return false; }
+            asm.GetType("Matkakirja.Natiivi.DioraamaSovitin")?.GetField("PelattavaPalaJatka", BindingFlags.Public | BindingFlags.Static)?.SetValue(null, jatka);
+            OlavinlinnaAlku.OhitaKerran = !jatka;
+            Debug.Log("MATKAKIRJA seikkailutapit: pelattava pala pelaajalle " + (jatka ? "jatkaa tallennuksesta" : "alusta"));
+            try { avaa.Invoke(null, new object[] { true }); return true; }
+            catch (System.Exception e) { Debug.LogException(e); OlavinlinnaAlku.OhitaKerran = false; return false; }
+        }
+
         /// <summary>Testi: tila, arvot ja laatikot.</summary>
         public static string Kuvaus()
         {

@@ -52,3 +52,87 @@
     background-color: var(--tk-paperi-toiminto);
     border-color: var(--accent-dark);
 }
+
+/* NOSTOKORTIN VIDEOPELIMUUNNELMA (omistaja 11.10.2026 Päätoimittajan kautta, juna 182; tyylikirja teemat.videopeli,
+   NOSTOKORTTI.teemat): kimmeltävä sininen tausta merkitsee kohdetta, joka on sekä nähtävyys että pelattava videopeli
+   (ensimmäisenä Olavinlinna). Teksti vaalealla, Pelaa-nappi kultainen (toiminto). Kimmel = hillitty vaalea juova, joka kulkee
+   kortin poikki vuorosuuntiin noin 8 s:n välein (Nostokortti.Kimmel); ei osumia. */
+.mk-nosto--videopeli {
+    background-color: var(--tk-videopeli-pinta);
+    border-color: var(--tk-videopeli-reunus);
+    color: var(--tk-videopeli-muste);
+}
+
+.mk-nosto--videopeli .mk-nosto__otsikko--kohde,
+.mk-nosto--videopeli .mk-nosto__paivaysteksti,
+.mk-nosto--videopeli .mk-nosto__kysyotsikko,
+.mk-nosto--videopeli .mk-nosto__toiminto {
+    color: var(--tk-videopeli-muste);
+}
+
+.mk-nosto--videopeli .mk-nosto__ylarivi,
+.mk-nosto--videopeli .mk-nosto__lahde--linkki {
+    color: var(--tk-videopeli-korostus);
+}
+
+.mk-nosto--videopeli .mk-nosto__nimio,
+.mk-nosto--videopeli .mk-nosto__meta,
+.mk-nosto--videopeli .mk-nosto__kuvateksti,
+.mk-nosto--videopeli .mk-nosto__lahde {
+    color: var(--tk-videopeli-muste-pehmea);
+}
+
+.mk-nosto--videopeli .mk-nosto__kahva {
+    background-color: var(--tk-videopeli-reunus);
+}
+
+.mk-nosto--videopeli .mk-nosto__toiminnot {
+    border-color: var(--tk-videopeli-reunus);
+    background-color: var(--tk-videopeli-pinta);
+}
+
+.mk-nosto--videopeli .mk-nosto__toiminto {
+    border-color: var(--tk-videopeli-reunus);
+}
+
+.mk-nosto--videopeli .mk-nosto__toiminto.mk-nappi--kulta {
+    background-color: var(--tk-videopeli-toiminto);
+    border-color: var(--accent-dark);
+    color: var(--tk-paperi-muste);
+}
+
+.mk-nosto--videopeli .mk-nosto__lukija.mk-nosto__lukija--irti {
+    background-color: var(--tk-videopeli-pinta);
+}
+
+.mk-nosto__kimmelala {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    border-radius: var(--tk-kulma-kortti);
+}
+
+.mk-nosto--videopeli .mk-nosto__kimmelala {
+    display: flex;
+}
+
+.mk-nosto__kimmel {
+    position: absolute;
+    top: -20%;
+    bottom: -20%;
+    left: -45%;
+    width: 30%;
+    rotate: 16deg;
+    background-color: var(--tk-videopeli-kimmel);
+    transition-property: translate;
+    transition-duration: 2400ms; /* ympäristöanimaatio: videopelinoston kimmel (omistaja 11.10.2026), ei käyttöliittymän siirtymä */
+    transition-timing-function: ease-in-out;
+}
+
+.mk-nosto__kimmel--kulku {
+    translate: 500% 0;
+}
