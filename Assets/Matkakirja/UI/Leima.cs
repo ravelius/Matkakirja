@@ -45,6 +45,30 @@ namespace Matkakirja.Natiivi
             if (!naytetaan) Seuraava();
         }
 
+        /*
+         * PUNNAN MERKKI LUKU-KIRJASIMELLA (PT 11.10.2026: leiman "−£50" näytti &-merkiltä). Kone-kirjasimen £ on koukku;
+         * pilleri (Ylapalkki punta) ja pillerivalikon päivärivi (Linssivalitsin.ValikkoV2 Punta) käyttävät £:lle omaa
+         * Luku-kirjasimen tekstiä, joten leima tekee samoin: teksti paloiksi £:n kohdalta riviin. Ilman £:ää yksi teksti kuten ennen.
+         * Palan lopun välilyönti ei mitoitu, joten väli £:n eteen tulee luokasta mk-leima__punta--vali.
+         */
+        static void TekstiPunnalla(string teksti, string luokka, VisualElement isa, Kirjasin kirjasin)
+        {
+            if (teksti.IndexOf('£') < 0) { Kirjasimet.Aseta(Rakenne.Teksti(teksti, luokka, isa), kirjasin); return; }
+            var rivi = Rakenne.El("mk-leima__rivi", isa, PickingMode.Ignore);
+            var osat = teksti.Split('£');
+            for (int i = 0; i < osat.Length; i++)
+            {
+                if (i > 0)
+                {
+                    var p = Kirjasimet.Aseta(Rakenne.Teksti("£", luokka, rivi), Kirjasin.Luku);
+                    p.AddToClassList("mk-leima__punta");
+                    if (osat[i - 1].EndsWith(" ")) p.AddToClassList("mk-leima__punta--vali");
+                }
+                var pala = osat[i].TrimEnd(' ');
+                if (pala.Length > 0) Kirjasimet.Aseta(Rakenne.Teksti(pala, luokka, rivi), kirjasin);
+            }
+        }
+
         void Seuraava()
         {
             if (jono.Count == 0) { naytetaan = false; return; }
@@ -53,8 +77,8 @@ namespace Matkakirja.Natiivi
             var kupla = Rakenne.El("mk-leima", juuri, PickingMode.Ignore);
             if (ikoni != null && Ikonit.Viiva.TryGetValue(ikoni, out var merkinta)) Rakenne.Ikoni(merkinta, "mk-leima__ikoni", kupla);
             var tekstit = Rakenne.El("mk-leima__tekstit", kupla, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-leima__teksti", tekstit), Kirjasin.KoneLihava);
-            if (!string.IsNullOrEmpty(ala)) Kirjasimet.Aseta(Rakenne.Teksti(ala, "mk-leima__ala", tekstit), Kirjasin.Kone);
+            TekstiPunnalla(teksti, "mk-leima__teksti", tekstit, Kirjasin.KoneLihava);
+            if (!string.IsNullOrEmpty(ala)) TekstiPunnalla(ala, "mk-leima__ala", tekstit, Kirjasin.Kone);
             kupla.schedule.Execute(() => kupla.AddToClassList("mk-auki")).StartingIn(16);
             kupla.schedule.Execute(() => { kupla.RemoveFromClassList("mk-auki"); kupla.AddToClassList("mk-leima--lahtee"); })
                 .StartingIn(SisaanMs + ms);
