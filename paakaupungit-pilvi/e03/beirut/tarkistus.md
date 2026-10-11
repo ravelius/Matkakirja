@@ -104,3 +104,9 @@ Polkulyhenne: kl = kaupunkilehti[0], mj = kl.matkailijalle.artikkeli, nv = nahta
 ## Yhteenveto
 
 VÄÄRIN 14, EPÄVARMA 17.
+
+## Korjattu
+
+Kaikki 14 VÄÄRIN-kohtaa korjattu sanatarkasti (Pompeius/Augustus, 551 uhrimäärä, vihjeet kysymyksissä 0, 1 ja 4, Michel Abedin kuvaus, Nejmehin katedraali ("ortodoksinen" korvattu sanalla "kreikkalainen" paikkamerkkitarkistuksen vuoksi), Raouchén maamerkkilause, Raouchén koordinaatti 33.88986, 35.47033 ja rajaus (länsi 35.467, noin 300 m marginaali), kansallismuseon esinemäärät, Place du Canon, Marttyyrien aukion 1873-väite ja kuvateksti, mezzen annosmäärä kolmessa paikassa, sääkausi).
+EPÄVARMA-kohdat pehmennetty tai poistettu: silkkivienti ja USJ (1800-luvun jälkipuolisko), zawiya-väite, lentokenttä- ja taksivirkkeet (luvut, tukikohta, service, katunumerot pois), kävelykatuväite (kävelyreitti), kielikyltit, pukeutumis-, valokuvaus- ja rajavaroitukset (yleisluontoinen matkustustietolause; Päätoimittaja tarkistaa Wikivoyagesta ja um.fi:stä), AUB-portti, jälkiruokalista, pullovesi, lämpötilat (31 / 17 / 11 °C), ka'ak-kuvaus, Raouchén auringonlasku ja kahvilat, hiilillä grillattu baba ghanoush.
+Kuvia ei vaihdettu. Työkalu: 0 virhettä, 7 varoitusta (vanhat: lisenssi "CC BY 3.0 pl", saatiedot null, kansi.johdanto).
