@@ -391,6 +391,9 @@ namespace Matkakirja.Natiivi
                 case "tekstitys" when osat.Length > 2: AsetaTekstitys(osat[2] == "1" || osat[2] == "paalla"); break;
                 case "siirry" when osat.Length > 2: Kierros.Siirry(int.Parse(osat[2], CultureInfo.InvariantCulture) - 1); break;
                 case "esittele": Esittele(osat.Length > 2 ? osat[2] != "0" : (bool?)null); break;
+                // QA (zoom, omistaja 11.10. 12.4x): "zoom 1|0" kuten suurennuslasi, "zoomveda dx dy" sormen siirto ruudun osuuksina.
+                case "zoom": Kierros.AsetaZoom(osat.Length < 3 || osat[2] != "0"); o.Kirjaa($"museo: zoom {(Kierros.Zoom ? "päällä" : "pois")}"); break;
+                case "zoomveda" when osat.Length > 3: Kierros.ZoomVeda(L(osat[2]), L(osat[3])); o.Kirjaa($"museo: zoomveto {Kierros.Nykyinen}"); break;
                 case "huone": HuoneKortti(osat.Length > 2 ? osat[2] != "0" : (bool?)null); break;
                 case "liiku" when osat.Length > 5:
                     if (Kierros.Vaihe != MuseoVaihe.Vapaa) Kierros.Vapaa();
