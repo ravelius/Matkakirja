@@ -252,6 +252,18 @@ namespace Matkakirja.Linssit.Testit
             return l;
         }
 
+        [Testi] static void InfokortinTiedot()
+        {
+            // Omistaja 11.10.: infokortti = taiteilija (elinvuodet), nimi, vuosi, tekniikka, koko, kokoelma, esittely kaikille 64 teokselle.
+            var s = Alankomaat();
+            Oleta.Sama(64, s.Teokset.Count);
+            foreach (var t in s.Teokset)
+            {
+                Oleta.Tosi(t.Elinvuodet != null && System.Text.RegularExpressions.Regex.IsMatch(t.Elinvuodet, @"1[5-9]\d\d–1[5-9]\d\d"), $"{t.Id}: elinvuodet ({t.Elinvuodet})");
+                Oleta.Tosi(!string.IsNullOrEmpty(t.Otsikko) && !string.IsNullOrEmpty(t.Vuosi) && !string.IsNullOrEmpty(t.Lahde) && !string.IsNullOrEmpty(t.Kuvateksti), $"{t.Id}: nimi, vuosi, kokoelma, esittely");
+            }
+        }
+
         [Testi] static void ZoomPysahdyksessa()
         {
             // Omistaja 11.10. 12.4x: suurennuslasi vie lähemmäs teosta, veto tutkii kehyksen sisällä, kierros ei etene, palautus takaisin.
