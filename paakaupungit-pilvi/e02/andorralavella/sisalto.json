@@ -208,7 +208,7 @@
       },
       {
        "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Hiihtokausi kestää yleensä marraskuun lopusta huhtikuun alkuun sään mukaan. Kesällä hiihtohissit kulkevat osittain näköalapaikoille, kuten Tristaina-näköalapaikalle. Wikipedian ilmasto-osion mukaan kylmin kuukausi on tammikuu, noin 2 °C, ja lämpimin heinäkuu, noin 18 °C. Korkeuden vuoksi lämpötilat ovat matalat verrattuna alankoihin.",
+       "teksti": "Hiihtokausi kestää yleensä marraskuun lopusta huhtikuun alkuun sään mukaan. Kesällä hiihtohissit kulkevat osittain näköalapaikoille, kuten Tristaina-näköalapaikalle. Kylmin kuukausi on tammikuu, keskilämpö noin 2 astetta, ja lämpimin heinäkuu, noin 19 astetta. Korkeuden vuoksi lämpötilat ovat alankoja matalammat, ja heinäkuun öinä lämpötila laskee keskimäärin noin 11 asteeseen.",
        "kuva": {
         "tiedosto": "Aliga slope in El Tarter (1).jpg",
         "selite": "Andorran hiihtokausi kestää yleensä marraskuun lopusta huhtikuun alkuun.",
@@ -438,35 +438,15 @@
  "saatiedot": {
   "lat": 42.51,
   "lon": 1.52,
-  "keskilampo": [
-   1.2,
-   3,
-   5.1,
-   8.3,
-   13.6,
-   14.9,
-   19.7,
-   18.7,
-   15,
-   9.7,
-   7.4,
-   2.2
-  ],
-  "sade": [
-   79,
-   13,
-   89,
-   72,
-   89,
-   139,
-   82,
-   61,
-   93,
-   88,
-   52,
-   46
-  ],
-  "luonnehdinta": "Nämä kuukausiluvut ovat suuntaa-antavia. Kylmin kuukausi on tammikuu, noin 1-2 °C, ja lämpimin heinäkuu, noin 18-20 °C. Sademäärät vaihtelevat kuukausittain paljon."
+  "keskilampo": [2.2, 3.5, 5.8, 7.5, 11.5, 15.4, 18.8, 18.5, 14.9, 10.3, 5.7, 3],
+  "ylin": [7, 9, 12, 13, 18, 22, 26, 25, 21, 16, 11, 8],
+  "alin": [-2, -2, 0, 2, 5, 9, 11, 11, 9, 5, 1, -1],
+  "sade": [53, 38, 41, 71, 90, 84, 61, 86, 81, 72, 68, 68],
+  "lahde": {
+   "nimi": "en-Wikipedia, ilmastotaulukko",
+   "kausi": "1971–2000"
+  },
+  "luonnehdinta": "Andorra la Vellassa tammikuu on kylmin kuukausi, keskilämpö 2,2 astetta, ja heinäkuu lämpimin, 18,8 astetta. Sadetta tulee vuodessa noin 810 millimetriä, eniten toukokuussa (90 mm) ja vähiten helmikuussa (38 mm)."
  },
  "ehdotukset": {
   "lentoasema": "Andorra–La Seu d'Urgell (LEU)",
@@ -476,7 +456,7 @@
    "Caldea on Escaldes-Engordanyn kunnassa, ei Andorra la Vellan kunnassa.",
    "Ennen-nyt-paria ei ole: isoisän aikaista PD-vedosta ei löytynyt.",
    "Nosto T1 -karttalehden Artist-kenttä on Commonsissa sekava; lähderivi on kentän sanatarkka sisältö.",
-   "Säädata (saa.json) on epäilyttävä (helmikuun sade 13 mm, kesäkuun 139 mm, kesäkuun keskilämpö 14,9 ja heinäkuun 19,7 °C); luonnehdinta kirjoitettu varovasti suuntaa-antavana."
+   "Säärivi päivitetty 11.10.2026 (Päätoimittaja): Roc de Sant Peren aseman (1 075 m) normaalit 1971–2000 en-Wikipedian ilmastotaulukosta (lähde ACDA); vanha Open-Meteo-otos (helmikuu 13 mm, kesäkuu 139 mm) poistettu. Uudempia luotettavia normaaleja ei löytynyt; jos 1991–2020-normaalit löytyvät, ne korvaavat rivin."
   ]
  }
 }

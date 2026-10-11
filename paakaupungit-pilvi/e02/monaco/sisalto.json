@@ -208,7 +208,7 @@
       },
       {
        "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Kuukausinormaalien mukaan lämpimimmät kuukaudet ovat heinäkuu, 24,3 astetta, ja elokuu, 23,8 astetta, ja kylmin kuukausi on tammikuu, 8,1 astetta. Sateisin kuukausi on lokakuu, jolloin sataa 144 millimetriä, ja kuivimmat ovat huhtikuu ja heinäkuu, 29 millimetriä. Lähteen mukaan kesä on lämmin ja kuiva, talvi leuto ja sateinen, ja yli 30 asteen helteet ovat harvinaisia merituulen vuoksi. Monacon Grand Prix ajetaan toukokuun lopulla tai kesäkuun alussa.",
+       "teksti": "Lämpimin kuukausi on elokuu, keskilämpö 24,2 astetta, ja kylmimmät ovat tammi- ja helmikuu, 10,2 astetta. Sateisin kuukausi on lokakuu, jolloin sataa noin 130 millimetriä, ja kuivin heinäkuu, noin 14 millimetriä; vuodessa sataa noin 740 millimetriä. Kesä on lämmin ja kuiva ja talvi leuto ja sateinen, ja yli 30 asteen helteet ovat harvinaisia jatkuvan merituulen vuoksi. Monacon Grand Prix ajetaan toukokuun lopulla tai kesäkuun alussa.",
        "kuva": {
         "tiedosto": "Port Hercule (Monaco) en novembre 2021 (2).jpg",
         "lyhyt": "Port Hercule on ollut satamapaikka antiikista asti, ja nykyinen satama valmistui 1926.",
@@ -468,35 +468,15 @@
  "saatiedot": {
   "lat": 43.73,
   "lon": 7.42,
-  "keskilampo": [
-   8.1,
-   9,
-   10.5,
-   13.5,
-   18,
-   20.1,
-   24.3,
-   23.8,
-   20.8,
-   15.8,
-   13.1,
-   9.4
-  ],
-  "sade": [
-   39,
-   30,
-   57,
-   29,
-   58,
-   68,
-   29,
-   41,
-   82,
-   144,
-   40,
-   94
-  ],
-  "luonnehdinta": "Monacossa kuukauden keskilämpötila on alimmillaan tammikuussa, 8,1 astetta, ja korkeimmillaan heinäkuussa, 24,3 astetta. Sateisin kuukausi on lokakuu 144 millimetrillä, kun huhtikuussa ja heinäkuussa sataa vain 29 millimetriä. Vuoden sademäärä on näillä luvuilla yhteensä 711 millimetriä."
+  "keskilampo": [10.2, 10.2, 12, 13.8, 17.5, 20.9, 23.8, 24.2, 21.1, 17.9, 13.8, 11.2],
+  "ylin": [13, 13, 15, 17, 20, 24, 27, 27, 24, 21, 17, 14],
+  "alin": [7, 7, 9, 11, 15, 18, 21, 21, 18, 15, 11, 9],
+  "sade": [68, 48, 41, 71, 49, 33, 14, 27, 73, 129, 103, 89],
+  "lahde": {
+   "nimi": "en-Wikipedia, ilmastotaulukko",
+   "kausi": "1981–2010"
+  },
+  "luonnehdinta": "Monacossa kuukauden keskilämpötila on alimmillaan tammi- ja helmikuussa, 10,2 astetta, ja korkeimmillaan elokuussa, 24,2 astetta. Sateisin kuukausi on lokakuu 129 millimetrillä, kun heinäkuussa sataa vain 14 millimetriä. Vuodessa sataa noin 740 millimetriä."
  },
  "ehdotukset": {
   "lentoasema": "Nice Côte d'Azur (NCE)",

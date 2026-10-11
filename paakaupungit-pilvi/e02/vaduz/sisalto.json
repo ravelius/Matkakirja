@@ -208,7 +208,7 @@
       },
       {
        "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Sääaineiston mittauspisteessä tammikuu on kylmin, keskilämpö −0,6 astetta, ja heinäkuu lämpimin, 20,3 astetta. Sadetta tulee joka kuukausi, eniten elokuussa. Lähteen ilmastotietojen mukaan heinäkuun keskimaksimi on 25 astetta, tammikuun 3 astetta ja vuosisade noin 900 millimetriä, joten mittauspisteen sademääriä kannattaa pitää suuntaa-antavina. Schalunin raunioille on noin kilometri keskustasta, ja polku on avoin jalan tai pyörällä. Sadetta tulee ympäri vuoden, joten sadevaatteet kannattaa pitää mukana. Maan ainoa hiihtoalue on Malbun.",
+       "teksti": "Tammikuu on kylmin kuukausi, keskilämpö 1,4 astetta, ja heinäkuu lämpimin, 19,4 astetta; heinäkuun päivinä lämpötila nousee keskimäärin noin 25 asteeseen. Sadetta tulee joka kuukausi, vuodessa noin 940 millimetriä, eniten elokuussa ja vähiten helmikuussa, joten sadevaatteet kannattaa pitää mukana. Schalunin raunioille on noin kilometri keskustasta, ja polku on avoin jalan tai pyörällä. Maan ainoa hiihtoalue on Malbun.",
        "kuva": {
         "tiedosto": "LIE Vaduz, Burgruine Schalun 0017.jpg",
         "lyhyt": "Schalunin linnanraunio on Vaduzin kunnan alueella vuorilla.",
@@ -430,42 +430,22 @@
  "saatiedot": {
   "lat": 47.14,
   "lon": 9.52,
-  "keskilampo": [
-   -0.6,
-   2.6,
-   4.9,
-   9.4,
-   13.9,
-   17,
-   20.3,
-   18.8,
-   16.7,
-   11.1,
-   7.1,
-   2.1
-  ],
-  "sade": [
-   49,
-   155,
-   164,
-   131,
-   150,
-   195,
-   136,
-   257,
-   117,
-   146,
-   123,
-   101
-  ],
-  "luonnehdinta": "Tammikuu on kylmin kuukausi, keskilämpö −0,6 astetta, ja heinäkuu lämpimin, 20,3 astetta. Mittauspisteen aineiston mukaan sadetta kertyy joka kuukausi, eniten elokuussa (257 mm) ja vähiten tammikuussa (49 mm), mutta luvut ovat vain suuntaa-antavia: vuosisumma niissä on 1 724 mm, kun lähde antaa vuosisateeksi noin 900 mm."
+  "keskilampo": [1.4, 2.7, 6.8, 10.7, 14.7, 17.9, 19.4, 19.1, 15, 11.1, 5.7, 2.2],
+  "ylin": [5, 7, 12, 16, 20, 23, 25, 24, 20, 16, 10, 6],
+  "alin": [-2, -1, 2, 6, 10, 13, 15, 15, 11, 7, 2, -1],
+  "sade": [41, 34, 54, 57, 90, 116, 130, 144, 96, 68, 56, 54],
+  "lahde": {
+   "nimi": "en-Wikipedia, ilmastotaulukko",
+   "kausi": "1991–2020"
+  },
+  "luonnehdinta": "Tammikuu on kylmin kuukausi, keskilämpö 1,4 astetta, ja heinäkuu lämpimin, 19,4 astetta. Sadetta kertyy joka kuukausi, eniten elokuussa (144 mm) ja vähiten helmikuussa (34 mm), ja vuodessa sitä tulee noin 940 millimetriä."
  },
  "ehdotukset": {
   "lentoasema": null,
   "huomiot": [
    "Kohdekartassa 5 kohdetta: lähteissä koordinaatit vain viidelle; hallitusrakennuksen (Regierungsgebäude, Q2137745) koordinaatit puuttuvat, ja kuudes kohde voidaan lisätä myöhemmin.",
    "Kunstmuseumin koordinaatti vahvistettu OSM:stä (ero noin 30 m).",
-   "Saa.json sademäärät (vuosisumma 1 724 mm) poikkeavat Wikipedian noin 900 mm:stä; selitetty oppaan sääjaksossa.",
+   "Säärivi päivitetty 11.10.2026 (Päätoimittaja): Vaduzin normaalit 1991–2020 en-Wikipedian ilmastotaulukosta (NOAA, MeteoSwiss); vanhan ruututiedon 1 724 mm oli lähes kaksinkertainen, ja opas ja luonnehdinta on kirjoitettu uusista luvuista.",
    "Nosto T1 kuvateksti korjattu: Vaduzin osti 1712 ruhtinas Johann Adam Andreas, ja kuvan Josef Johann Adam oli ruhtinas 1721–1732.",
    "Lentoaseman IATA-koodia ei ole luettu lähteestä, joten ei merkitty."
   ]

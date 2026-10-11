@@ -1,1 +1,10 @@
-{"lat":46.95,"lon":7.45,"keskilampo":[-0.5,2.1,4,8.6,12.9,15.6,19.5,17.7,15.3,9.7,5.7,1.7],"sade":[32,85,114,108,103,112,66,144,97,121,88,80]}
+{
+ "lat": 46.95,
+ "lon": 7.45,
+ "keskilampo": [0.2,1.1,5.2,9,13.2,16.9,18.8,18.4,14.1,9.5,4.2,0.9],
+ "ylin": [3,5,10,15,19,23,25,24,19,14,8,4],
+ "alin": [-3,-3,0,3,8,11,13,13,9,6,1,-2],
+ "sade": [60,56,65,78,112,102,108,112,87,87,77,79],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Bern","revisio":1376667313,"taulukko":"Climate data for Bern (Zollikofen), elevation: 553 m (1,814 ft), 1991–2020 normals, extremes 1901–present","lahteet":"Source 1: NOAA | Source 2: MeteoSwissKNMI","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":1023,"luettu":"2026-10-11","huomiot":[]}
+}

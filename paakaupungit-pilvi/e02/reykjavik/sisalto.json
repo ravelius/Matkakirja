@@ -12,7 +12,7 @@
  },
  "artikkeli": {
   "intro": "Reykjavík on Islannin pääkaupunki ja **maan suurin kaupunki**, joka sijaitsee Faxaflói-lahden etelärannalla Lounais-Islannissa. Nimi tulee vanhan norjan sanoista reykr, savu, ja vík, lahti, ja sen kerrotaan viittaavan alueen kuumista lähteistä nousseeseen höyryyn. Lähteen mukaan se on maailman pohjoisin itsenäisen valtion pääkaupunki.\n\nKaupungille myönnettiin kauppaoikeudet 1786, ja vuotta pidetään sen perustamisvuotena. Isoisän matkavuonna 1873 Reykjavík oli vielä pieni kauppakaupunki, jossa kauppa oli rajattu Tanskan kruunun alamaisille. Kansallismuseo oli perustettu kymmenen vuotta aiemmin, 1863, ja vapaakauppa laajennettiin kaikille kansallisuuksille vasta 1880 jälkeen.\n\nNykyään kaupungissa asuu 139 804 ihmistä (1.1.2026, Hagstofa Íslands). Koko kaupunki lämmitetään **geotermisesti**, ja kuumalla vedellä sulatetaan jopa keskustan katuja. Valo vaihtelee jyrkästi: kesällä 20.5.–24.7. aurinko ei laske yli viittä astetta horisontin alapuolelle, mutta 2.12.–10.1. päivä on alle viisi tuntia.",
-  "teksti": "Reykjavík on enimmäkseen Seltjarnarnesin niemellä, ja lähiöt ulottuvat kauas etelään ja itään. Kaupungissa on kymmenen kaupunginosaa. Lähialueen korkein vuori Esja on 914 metriä korkea, ja Elliðaá-joesta voi kalastaa lohta kaupungin rajojen sisällä. Öskjuhlíð ja Skólavörðuholt ovat lähteen mukaan jääkauden kilpitulivuorten jäänteitä.\n\nIlmasto on subpolaarinen merellinen. Talvet ovat leutoja, ja pakkanen laskee harvoin alle −15 asteen. Kesällä lämpötila on yleensä 10–15 astetta eikä yleensä ylitä 20:tä. Tuulta on paljon, ja talvella tulee myrskyjä. Auringonpaistetunteja on noin 1 300 vuodessa.\n\nKoko kaupunki lämmitetään geotermisesti. Kuumalla vedellä lämmitetään myös uima-altaat, ja keskustan katuja ja jalkakäytäviä sulatetaan geotermisillä järjestelmillä. Perlan-museon säiliöt kuuluvat samaan kaukolämpöjärjestelmään."
+  "teksti": "Reykjavík on enimmäkseen Seltjarnarnesin niemellä, ja lähiöt ulottuvat kauas etelään ja itään. Kaupungissa on kymmenen kaupunginosaa. Lähialueen korkein vuori Esja on 914 metriä korkea, ja Elliðaá-joesta voi kalastaa lohta kaupungin rajojen sisällä. Öskjuhlíð ja Skólavörðuholt ovat lähteen mukaan jääkauden kilpitulivuorten jäänteitä.\n\nIlmasto on subpolaarinen merellinen. Talvet ovat leutoja, ja pakkanen laskee harvoin alle −15 asteen. Kesällä lämpötila on yleensä 10–15 astetta eikä yleensä ylitä 20:tä. Tuulta on paljon, ja talvella tulee myrskyjä. Auringonpaistetunteja on noin 1 400 vuodessa.\n\nKoko kaupunki lämmitetään geotermisesti. Kuumalla vedellä lämmitetään myös uima-altaat, ja keskustan katuja ja jalkakäytäviä sulatetaan geotermisillä järjestelmillä. Perlan-museon säiliöt kuuluvat samaan kaukolämpöjärjestelmään."
  },
  "kysymykset": [
   {
@@ -172,7 +172,7 @@
       },
       {
        "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Kesällä valoa riittää: aurinko ei laske yli viittä astetta horisontin alapuolelle 20.5.–24.7., kun taas 2.12.–10.1. päivä on alle viisi tuntia. Kesäpäivinä lämpötila on 10–15 astetta ja yli 20 asteen lukemia on harvoin. Kaupungin säädatan kuukausikeskiarvot liikkuvat välillä −0,1 (maaliskuu) ja 10,6 astetta (heinä- ja elokuu). Sadetta tulee joka kuukausi, eniten tammikuussa."
+       "teksti": "Kesällä valoa riittää: aurinko ei laske yli viittä astetta horisontin alapuolelle 20.5.–24.7., kun taas 2.12.–10.1. päivä on alle viisi tuntia. Kesäpäivinä lämpötila on 10–15 astetta ja yli 20 asteen lukemia on harvoin. Kuukausien keskilämpötila vaihtelee helmikuun 0,5 asteesta heinäkuun 11,6 asteeseen. Sadetta tulee joka kuukausi, eniten joulukuussa ja vähiten kesäkuussa."
       },
       {
        "otsikko": "Lämpö maan alta",
@@ -368,9 +368,15 @@
  "saatiedot": {
   "lat": 64.15,
   "lon": -21.94,
-  "keskilampo": [1, 0.4, -0.1, 2.3, 6.2, 9, 10.6, 10.6, 7.9, 4.3, 0.4, 0],
-  "sade": [199, 140, 108, 105, 104, 123, 71, 113, 129, 102, 138, 148],
-  "luonnehdinta": "Kuukausien keskilämpötila pysyy talvella lähellä nollaa ja nousee lämpimimmillään 10,6 asteessa heinä- ja elokuussa. Sadetta tulee joka kuukausi: eniten tammikuussa (199 mm) ja vähiten heinäkuussa (71 mm)."
+  "keskilampo": [0.7, 0.5, 1.2, 3.7, 6.7, 9.8, 11.6, 11, 8.5, 4.9, 2.2, 0.8],
+  "ylin": [3, 3, 4, 7, 10, 13, 15, 14, 11, 8, 5, 3],
+  "alin": [-2, -2, -1, 1, 4, 7, 9, 9, 6, 3, 0, -2],
+  "sade": [87, 91, 81, 59, 53, 43, 50, 65, 87, 80, 87, 95],
+  "lahde": {
+   "nimi": "en-Wikipedia, ilmastotaulukko",
+   "kausi": "1991–2020"
+  },
+  "luonnehdinta": "Kuukausien keskilämpötila pysyy talvella hieman nollan yläpuolella ja nousee lämpimimmillään 11,6 asteeseen heinäkuussa. Sadetta tulee joka kuukausi, yhteensä noin 880 millimetriä: eniten joulukuussa (95 mm) ja vähiten kesäkuussa (43 mm)."
  },
  "ehdotukset": {
   "lentoasema": "Keflavík International Airport (KEF)",
@@ -380,7 +386,7 @@
     "Ennen–nyt-pari jätetty pois: ainoa löytynyt PD-vedos (No-nb bldsa 3b203.jpg) on 1881–1888, ei isoisän matkavuodelta. Päätoimittaja päättää, kelpaako.",
     "Oppaan jaksot 3 ja 4 ovat kuvattomia (keskiyön auringon ja revontulten haut tyhjiä, Nauthólsvík-kuvat hylätty); raja kaksi kuvatonta täyttyy.",
     "Matkustusturvallisuutta ei tarkistettu (um.fi ei ollut lähteenä), joten oppaassa ei ole turvallisuusvaroitusta.",
-    "Säädata on Open-Meteon ruutuarvoja: kuukausisade (yht. noin 1 480 mm) on selvästi suurempi kuin tavanomaiset asemahavainnot, joten oppaassa mainitaan vain suhteellinen sadejärjestys ja saatiedot-luonnehdinnassa luvut sellaisenaan; tarkista halutessasi.",
+    "Säärivi päivitetty 11.10.2026 (Päätoimittaja): Reykjavíkin normaalit 1991–2020 en-Wikipedian ilmastotaulukosta (Islannin ilmatieteen laitos); laitoksen omista kuukausiarvoista laskettu 1991–2020-keskiarvo täsmää. Vanha ruututieto (noin 1 480 mm) poistettu; auringonpaiste 1 368 tuntia vuodessa samasta taulukosta.",
     "Kjarvalsstaðir: sama vuosi 1973 sekä museon perustamiselle että talon avaamiselle lähteessä; tekstissä käytetään vain avaamista."
   ]
  }

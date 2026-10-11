@@ -1,1 +1,10 @@
-{"lat":42.51,"lon":1.52,"keskilampo":[1.2,3,5.1,8.3,13.6,14.9,19.7,18.7,15,9.7,7.4,2.2],"sade":[79,13,89,72,89,139,82,61,93,88,52,46]}
+{
+ "lat": 42.51,
+ "lon": 1.52,
+ "keskilampo": [2.2,3.5,5.8,7.5,11.5,15.4,18.8,18.5,14.9,10.3,5.7,3],
+ "ylin": [7,9,12,13,18,22,26,25,21,16,11,8],
+ "alin": [-2,-2,0,2,5,9,11,11,9,5,1,-1],
+ "sade": [53,38,41,71,90,84,61,86,81,72,68,68],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1971–2000"},
+ "tausta": {"artikkeli":"Andorra la Vella","revisio":1378341643,"taulukko":"Climate data for Andorra La Vella (Roc de Sant Pere), elevation: 1,075m (1971–2000, extremes 1934–present)","lahteet":"Source 1: ACDA | Source 2: Meteo Climat (record highs and lows)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":813,"luettu":"2026-10-11","huomiot":[]}
+}

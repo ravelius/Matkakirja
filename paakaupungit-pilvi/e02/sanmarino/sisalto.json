@@ -208,7 +208,7 @@
       },
       {
        "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Alueen ilmasto on kostea subtrooppinen: kesä on lämmin tai kuuma ja talvi viileä, ja yli 400–500 metrin korkeudessa sataa lunta lähes joka talvi. Open-Meteon säädatan mukaan tammikuun keskilämpö on 2,8 °C ja elokuun 22,0 °C. Sadetta tulee vuodessa yhteensä noin 703 mm, ja kuivin kuukausi on heinäkuu (24 mm) ja sateisin joulukuu (87 mm).",
+       "teksti": "Alueen ilmasto on kostea subtrooppinen: kesä on lämmin tai kuuma ja talvi viileä, ja yli 400–500 metrin korkeudessa sataa lunta lähes joka talvi. Tammikuun keskilämpö on 4,2 astetta ja heinäkuun 23,5 astetta. Sadetta tulee vuodessa noin 750 millimetriä; kuivin kuukausi on heinäkuu (40 mm) ja sateisin marraskuu (99 mm).",
        "kuva": {
         "tiedosto": "San Marino panorama.jpg",
         "lyhyt": "San Marinon kaupunki sijaitsee Apenniinien rinteillä Italian ympäröimässä tasavallassa.",
@@ -468,35 +468,15 @@
  "saatiedot": {
   "lat": 43.94,
   "lon": 12.45,
-  "keskilampo": [
-   2.8,
-   4.9,
-   6.3,
-   10.7,
-   15.1,
-   18.5,
-   21.8,
-   22,
-   18.2,
-   13.3,
-   9.2,
-   5.4
-  ],
-  "sade": [
-   39,
-   37,
-   82,
-   78,
-   46,
-   54,
-   24,
-   60,
-   72,
-   78,
-   46,
-   87
-  ],
-  "luonnehdinta": "Tammikuu on vuoden kylmin kuukausi keskilämmöllä 2,8 °C, ja lämpimin on elokuu 22,0 °C:lla. Sadetta tulee vuodessa yhteensä 703 mm. Kuivin kuukausi on heinäkuu (24 mm) ja sateisin joulukuu (87 mm)."
+  "keskilampo": [4.2, 4.7, 7.3, 11.6, 15.7, 20.8, 23.5, 22.5, 17.5, 13, 8.6, 5.2],
+  "ylin": [6, 7, 10, 15, 20, 25, 27, 26, 21, 16, 11, 7],
+  "alin": [2, 3, 5, 9, 12, 17, 20, 19, 15, 11, 7, 3],
+  "sade": [50, 64, 65, 59, 70, 54, 40, 41, 75, 70, 99, 61],
+  "lahde": {
+   "nimi": "en-Wikipedia, ilmastotaulukko",
+   "kausi": "2006–2023"
+  },
+  "luonnehdinta": "Tammikuu on vuoden kylmin kuukausi keskilämmöllä 4,2 astetta, ja lämpimin on heinäkuu 23,5 asteella. Sadetta tulee vuodessa noin 750 millimetriä. Kuivin kuukausi on heinäkuu (40 mm) ja sateisin marraskuu (99 mm)."
  },
  "ehdotukset": {
   "lentoasema": "Rimini–San Marino (Federico Fellini)",
@@ -505,7 +485,7 @@
    "Ennen–nyt-paria ei tehty: Cassarinin albumiinivedoksen ajoitus on epävarma (Commonsissa ei vuotta, toimintakausi 1800-luvun loppupuoli) ja se on käytetty nostossa T1 ilman vuotta. Jos ajoitus varmistuu, pari Cassarini + Guaita Fortress and San Marino (2023).jpg voidaan tehdä ja valokuva-osio vaihtaa vanhaksi.",
    "Kuvapäällekkäisyys: Bini 00 on kansi 2 ja Bini 01 jätettiin pois (sama näkymä); valokuva (Guaita Fortress 2023) muistuttaa kansi 1:tä mutta on eri tiedosto.",
    "Nosto T4: Lincolnin kirjeen kuvassa on käsinkirjoitettua tekstiä, koska kuva on asiakirja itse (kuvat.md ei hylännyt). Tarkista sopivuus.",
-   "Faktapohjan säärivi sanoo heinäkuun keskilämmöksi 22,0 °C, mutta saa.json:n mukaan 22,0 on elokuun ja heinäkuun 21,8 °C; teksteissä käytetty elokuuta.",
+   "Säärivi päivitetty 11.10.2026 (Päätoimittaja): San Marinon normaalit 2006–2023 en-Wikipedian San Marino -artikkelin ilmastotaulukosta (lähde Arpae Emilia-Romagna); kaupunkiartikkelin taulukossa ei ole normaalikautta eikä virallista lähdettä, joten sitä ei käytetty.",
    "Oppaan jaksot 2 ja 4 kuvattomia (ruokakuvaa ja Cesta-museon sisäkuvaa ei ole).",
    "Minitehtävän aiheeksi valittiin Lincoln, ja kysymys 5 vaihdettiin UNESCO-vuoteen, jotta tehtävä ei toista kaupungin kysymystä.",
    "IATA-koodia ei ole luetuissa lähteissä, joten lentoasemakentässä ei ole koodia."

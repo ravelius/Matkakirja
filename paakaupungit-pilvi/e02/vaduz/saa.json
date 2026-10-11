@@ -1,1 +1,10 @@
-{"lat":47.14,"lon":9.52,"keskilampo":[-0.6,2.6,4.9,9.4,13.9,17,20.3,18.8,16.7,11.1,7.1,2.1],"sade":[49,155,164,131,150,195,136,257,117,146,123,101]}
+{
+ "lat": 47.14,
+ "lon": 9.52,
+ "keskilampo": [1.4,2.7,6.8,10.7,14.7,17.9,19.4,19.1,15,11.1,5.7,2.2],
+ "ylin": [5,7,12,16,20,23,25,24,20,16,10,6],
+ "alin": [-2,-1,2,6,10,13,15,15,11,7,2,-1],
+ "sade": [41,34,54,57,90,116,130,144,96,68,56,54],
+ "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
+ "tausta": {"artikkeli":"Vaduz","revisio":1376955250,"taulukko":"Climate data for Vaduz, elevation 457 m (1,499 ft), (1991–2020 normals, extremes 1973–present)","lahteet":"Source 1: NOAA | Source 2: MeteoSwiss (snow 1981–2010)","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":940,"luettu":"2026-10-11","huomiot":[]}
+}

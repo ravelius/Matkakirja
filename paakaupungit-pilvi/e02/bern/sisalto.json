@@ -220,7 +220,7 @@
       },
       {
        "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Bernin ilmasto on valtamerinen, lähes mannerilmaston rajalla. Kuukausinormaalien mukaan tammikuu on kylmin, keskilämpö −0,5 astetta, ja heinäkuu lämpimin, 19,5 astetta. Sadetta tulee joka kuukausi: kuivin on tammikuu 32 millimetrillä ja sateisin elokuu 144 millimetrillä. Marraskuussa kaupunki täyttyy Zibelemäritistä, ja lokakuun alussa järjestetään shnit-lyhytelokuvafestivaali.",
+       "teksti": "Bernin ilmasto on valtamerinen, lähes mannerilmaston rajalla. Tammikuu on kylmin, keskilämpö 0,2 astetta, ja heinäkuu lämpimin, 18,8 astetta. Sadetta tulee joka kuukausi, vuodessa noin 1 020 millimetriä: vähiten helmikuussa (56 mm) ja eniten touko- ja elokuussa (112 mm). Marraskuussa kaupunki täyttyy Zibelemäritistä, ja lokakuun alussa järjestetään shnit-lyhytelokuvafestivaali.",
        "kuva": {
         "tiedosto": "Bern Rosengarten Brunnen 20211007.jpg",
         "lyhyt": "Ruusutarha oli ennen hautausmaa, joka muutettiin puistoksi 1913.",
@@ -461,35 +461,15 @@
  "saatiedot": {
   "lat": 46.95,
   "lon": 7.45,
-  "keskilampo": [
-   -0.5,
-   2.1,
-   4,
-   8.6,
-   12.9,
-   15.6,
-   19.5,
-   17.7,
-   15.3,
-   9.7,
-   5.7,
-   1.7
-  ],
-  "sade": [
-   32,
-   85,
-   114,
-   108,
-   103,
-   112,
-   66,
-   144,
-   97,
-   121,
-   88,
-   80
-  ],
-  "luonnehdinta": "Bernissä tammikuu on kylmin kuukausi, keskilämpö −0,5 astetta, ja heinäkuu lämpimin, 19,5 astetta. Sadetta tulee joka kuukausi: kuivin on tammikuu 32 millimetrillä ja sateisin elokuu 144 millimetrillä. Vuoden sademäärä on näillä luvuilla yhteensä 1150 millimetriä."
+  "keskilampo": [0.2, 1.1, 5.2, 9, 13.2, 16.9, 18.8, 18.4, 14.1, 9.5, 4.2, 0.9],
+  "ylin": [3, 5, 10, 15, 19, 23, 25, 24, 19, 14, 8, 4],
+  "alin": [-3, -3, 0, 3, 8, 11, 13, 13, 9, 6, 1, -2],
+  "sade": [60, 56, 65, 78, 112, 102, 108, 112, 87, 87, 77, 79],
+  "lahde": {
+   "nimi": "en-Wikipedia, ilmastotaulukko",
+   "kausi": "1991–2020"
+  },
+  "luonnehdinta": "Bernissä tammikuu on kylmin kuukausi, keskilämpö 0,2 astetta, ja heinäkuu lämpimin, 18,8 astetta. Sadetta tulee joka kuukausi: kuivin on helmikuu 56 millimetrillä ja sateisimmat touko- ja elokuu 112 millimetrillä. Vuodessa sataa noin 1 020 millimetriä."
  },
  "ehdotukset": {
   "lentoasema": "Bern-Belp (BRN)",
@@ -497,7 +477,7 @@
    "Kohdekartalla 6 kohdetta (Zytglogge, tuomiokirkko, liittopalatsi, Bundesplatz, Bärengraben ja BärenPark, Einsteinhaus). Nydeggbrücke ja Marzilibahn jätetty pois, koska ne ovat silta ja funikulaari eivätkä rakennus/aukio/luonto; luontokohteena voisi harkita Ruusutarhaa tai Aaren rantaa, jos koordinaatit haetaan.",
    "Valokuva (karhukuoppa-vedos): alareunassa on vedoksen oma pieni painettu otsikkoteksti. Käytetty, koska se on himmeä ja kuuluu historialliseen vedokseen eikä ole lisätty päälle, eikä kuvat.md:ssä ole toista PD-vedosta; jos Päätoimittaja ei hyväksy, vaihtoehto on jokin nykykuva.",
    "Valokuvalle ei ole nykykuvaparia (uusi-kenttä pois), koska kuvat.md:ssä ei ole vapaata nykykuvaa: Bärengraben-aiheiset nykykuvat on jo käytetty nostossa N4 ja kohteessa. Ennen–nyt-paria ei tehty.",
-   "Sääjakso ja saatiedot käyttävät saa.json-lukuja (ruututieto). Wikipedian ilmastotaulukko (Zollikofen 1981–2010) poikkeaa: heinäkuu 18,3 astetta, vuosisade noin 910 mm (fi) ja sateisin elokuu noin 110 mm; lukuja ei sekoitettu, ristiriita kirjattu tähän.",
+   "Säärivi päivitetty 11.10.2026 (Päätoimittaja): Bern-Zollikofenin normaalit 1991–2020 en-Wikipedian ilmastotaulukosta (NOAA, MeteoSwiss); WMO:n 1991–2020-normaalit täsmäävät. Vanha ruututieto (heinäkuu 19,5 astetta, noin 1 150 mm) poistettu.",
    "Faktapohjan kohta 8 ratkaistu: perustaminen 1191 perimätiedon mukaan; Goldene Handfeste 1218 jätetty pois; karhut 1400-luvun puolivälistä tai 1513; Münsterin torni noin 100 m; kello noin 10 t; Marzilibahn 105 m ilman lyhin-väitettä; Gurtenin korkeutta ei käytetty; parlamenttirakennus 1894–1902.",
    "Orjakauppa (Bern South Sea Company), nykypolitiikka, Gurlitt-perintö ja Internationaalit jätetty pois; orjakauppa Päätoimittajan harkittavaksi.",
    "Faktapohjassa Zollikoferin luvut ja Niklaus Manuelin kuoleman tanssi (1516–1519) ovat ristiriidassa lasimaalausten 1441–1450 kanssa; Manuelia ei käytetty L2-nostossa. Käytännön tietoihin (aukioloajat, hinnat) ei ole luettu Wikivoyagea eikä um.fi:tä; turvallisuuskappaletta ei kirjoitettu."
