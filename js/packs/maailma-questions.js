@@ -796,6 +796,8 @@ export const MAAILMA_QUESTIONS = {
    * viisi kysymystä ovat samat kuin Euroopan laudalla.
    */
   tukholma: EUROPE_QUESTIONS.tukholma,
+  // Pariisi 11.10.2026 aloitusnäytön laudalle samoin perustein.
+  pariisi: EUROPE_QUESTIONS.pariisi,
 };
 
 /**
@@ -941,4 +943,5 @@ export const MAAILMA_FACTS = {
   ],
   // Tukholma 10.10.2026: samat tiedot kuin Euroopan laudalla (ks. kysymykset).
   tukholma: EUROPE_FACTS.tukholma,
+  pariisi: EUROPE_FACTS.pariisi,
 };

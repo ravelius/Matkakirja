@@ -130,16 +130,17 @@ export const JALJEN_PYYHKAISY = 0.06;
  * Ateenasta, kuten tarina menee.
  */
 /*
- * VAIN EUROOPPA ALKULENNOSSA (omistaja 10.10.2026 PT:n kautta): kohteina
- * Ateena, Moskova, Istanbul ja uusi TUKHOLMA. Muiden maanosien yksitoista
- * kohdetta ovat TAUOLLA (ETUSIVUN_KOHTEET_TAUOLLA), eivät poistettuja:
+ * VAIN EUROOPPA ALKULENNOSSA (omistaja 10.10.2026 PT:n kautta; tarkennus
+ * 11.10.2026: Istanbul ja Moskova pois): kohteina Ateena, PARIISI ja
+ * TUKHOLMA. Muut kohteet ovat TAUOLLA (ETUSIVUN_KOHTEET_TAUOLLA), eivät poistettuja:
  * palautus on siirto takaisin tähän joukkoon. Laudan data (start,
  * aloitus) pysyy ennallaan, koska mantereiden väliset lennot ja aarteiden
  * jako nojaavat siihen; natiivi saa joukon kaupungit-kokoelman
  * lahtokohde-kentästä (tools/vienti/kokoelmat.mjs).
  */
-export const ETUSIVUN_KOHTEET = new Set(['ateena', 'moskova', 'istanbul', 'tukholma']);
+export const ETUSIVUN_KOHTEET = new Set(['ateena', 'pariisi', 'tukholma']);
 export const ETUSIVUN_KOHTEET_TAUOLLA = new Set([
+  'moskova', 'istanbul',
   'newyork', 'kairo', 'rio', 'mumbai', 'peking', 'sydney',
   'tokio', 'singapore', 'kapkaupunki', 'sanfrancisco', 'tanger',
 ]);

@@ -334,6 +334,8 @@ export const KAUPUNGIN_MAANOSA = {
   moskova: 'ita-eurooppa',
   // Tukholma 10.10.2026 aloitusnäytön laudalle: sama kuin SWE-maan kautta.
   tukholma: 'lansi-eurooppa',
+  // Pariisi 11.10.2026 aloitusnäytön laudalle (laudalla ei maata).
+  pariisi: 'lansi-eurooppa',
   istanbul: 'valimeri',
   ateena: 'valimeri',
   tanger: 'lahi-ita',

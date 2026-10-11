@@ -278,15 +278,15 @@ test('terävä tila on pakotettuna valinnan ajan ja vapautuu purussa', () => {
  * kaikki kohdekaupungit takaisin mitä aiemmin oli käytössä"* ja *"Ja
  * valittavien kohdekaupunkien huomioympyrää voisi hieman tehostaa."*
  */
-test('lähtövalinnassa on neljä Euroopan kohdetta, muut tauolla palautettavina', () => {
+test('lähtövalinnassa on kolme Euroopan kohdetta, muut tauolla palautettavina', () => {
   /*
-   * OMISTAJA 10.10.2026 (PT:n kautta): alkulennossa vain Eurooppa —
-   * Ateena, Moskova, Istanbul ja uusi Tukholma. Muiden maanosien
-   * yksitoista kohdetta ovat ETUSIVUN_KOHTEET_TAUOLLA-joukossa, joten
+   * OMISTAJA 10.10.2026 (PT:n kautta): alkulennossa vain Eurooppa;
+   * 11.10.2026 kohteet Ateena, Pariisi ja Tukholma. Istanbul, Moskova
+   * ja muiden maanosien yksitoista ovat ETUSIVUN_KOHTEET_TAUOLLA-joukossa, joten
    * palautus on siirto takaisin, ja Los Angeles (7.9.2026) pysyy poissa.
    */
-  assert.deepEqual([...ETUSIVUN_KOHTEET].sort(), ['ateena', 'istanbul', 'moskova', 'tukholma']);
-  assert.equal(ETUSIVUN_KOHTEET_TAUOLLA.size, 11);
+  assert.deepEqual([...ETUSIVUN_KOHTEET].sort(), ['ateena', 'pariisi', 'tukholma']);
+  assert.equal(ETUSIVUN_KOHTEET_TAUOLLA.size, 13);
   for (const id of ETUSIVUN_KOHTEET_TAUOLLA) {
     assert.ok(!ETUSIVUN_KOHTEET.has(id) && !ETUSIVUN_NAKYVAT.has(id), `${id} on tauolla eikä näy`);
   }
