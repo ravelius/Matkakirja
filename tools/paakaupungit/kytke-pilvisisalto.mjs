@@ -37,9 +37,9 @@ function lisaa(tiedosto, otsikko, rivit, kommentti) {
 }
 const era = (k) => `${k.era}`;
 const kom = (mita) => [
-  `PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e01–e02, tarkistettu ${kaupungit.length} kaupunkia 0 virhettä):`,
+  `PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät ${[...new Set(kaupungit.map((k) => k.era))].join(', ')}, ${kaupungit.length} kaupunkia):`,
   `${mita}. Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa`,
-  'maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e01-pilvi ja -e02-pilvi.',
+  `maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat ${[...new Set(kaupungit.map((k) => `paakaupungit-${k.era}-pilvi`))].join(', ')}.`,
 ];
 const r = (k, arvo) => `  ${JS_ID.test(k) ? k : js(k, 0)}: ${js(arvo, 2)},`;
 lisaa('kulttuuri-kategoriat.js', 'export const KULTTUURI_KATEGORIAT = {', kaupungit.map((k) => r(k.id, k.kaupunkilehti)), kom('Kaupunkilehti (kansi + teemasivut)'));

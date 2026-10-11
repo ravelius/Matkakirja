@@ -17187,6 +17187,353 @@ export const KAUPUNKIKARTAT = {
       },
     ],
   },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e03, 7 kaupunkia):
+   * Kohdekartat (piirto tools/piirra-kaupunkikartta.mjs). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03-pilvi.
+   */
+  abudhabi: {
+    polku: 'assets/kartat/abudhabi-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Abu Dhabin länsiranta on kaupungin nykyinen julkinen kasvo. Vanha linnake kertoo asutuksen alusta, ja rantakadun palatsit, hotelli ja tornit kertovat, kuinka nopeasti kaupunki on kasvanut.',
+    rajat: {
+      pohjoinen: 24.4851,
+      etela: 24.4566,
+      lansi: 54.3025,
+      ita: 54.3578,
+    },
+    kohteet: [
+      {
+        nimi: 'Qasr Al Hosn',
+        lat: 24.48239,
+        lon: 54.35482,
+      },
+      {
+        nimi: 'Qasr Al Watan',
+        lat: 24.46225,
+        lon: 54.30551,
+      },
+      {
+        nimi: 'Emirates Palace',
+        lat: 24.46194,
+        lon: 54.31667,
+      },
+      {
+        nimi: 'Etihad Towers',
+        lat: 24.45932,
+        lon: 54.3213,
+      },
+    ],
+  },
+  amman: {
+    polku: 'assets/kartat/amman-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Ammanin vanha ydin on alakaupungin laakso ja sen pohjoispuolella nouseva linnavuori. Laaksossa seisovat roomalainen teatteri, odeon ja nymfaion, ja kukkulan harjalla Suuri temppeli ja Umaijadien palatsi. Lisäksi kartalla on kaksi alakaupungin 1920-luvun rakennusta.',
+    rajat: {
+      pohjoinen: 31.9582,
+      etela: 31.947,
+      lansi: 35.9302,
+      ita: 35.9431,
+    },
+    kohteet: [
+      {
+        nimi: 'Suuri temppeli',
+        lat: 31.9538,
+        lon: 35.9349,
+      },
+      {
+        nimi: 'Umaijadien palatsi',
+        lat: 31.9555,
+        lon: 35.9342,
+      },
+      {
+        nimi: 'Rooman teatteri',
+        lat: 31.95169,
+        lon: 35.93931,
+      },
+      {
+        nimi: 'Odeon',
+        lat: 31.95233,
+        lon: 35.93989,
+      },
+      {
+        nimi: 'Nymfaion',
+        lat: 31.95033,
+        lon: 35.93617,
+      },
+      {
+        nimi: 'Suuri Husseinin moskeija',
+        lat: 31.9497,
+        lon: 35.9347,
+      },
+      {
+        nimi: 'Duke\'s Diwan',
+        lat: 31.9519,
+        lon: 35.9334,
+      },
+    ],
+  },
+  baku: {
+    polku: 'assets/kartat/baku-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Vanhakaupunki kohoaa Bakunlahden rannalla, ja sen ympärille kaupunki on kasvanut muurien ulkopuolelle. Lähteen mukaan vanhin osa on asuttu kivikaudesta, ja keskiajan Shirvanshahien rakennukset, moskeijat ja linnoituksen muurit seisovat edelleen. Rannalla on 1900-luvun alussa istutettu bulevardi.',
+    rajat: {
+      pohjoinen: 40.37464,
+      etela: 40.3573,
+      lansi: 49.82789,
+      ita: 49.8407,
+    },
+    kohteet: [
+      {
+        nimi: 'Neitotorni',
+        lat: 40.3661,
+        lon: 49.8372,
+      },
+      {
+        nimi: 'Širvanšahien palatsi',
+        lat: 40.36615,
+        lon: 49.83344,
+      },
+      {
+        nimi: 'Juma-moskeija',
+        lat: 40.3653,
+        lon: 49.8356,
+      },
+      {
+        nimi: 'Vanhankaupungin muurit ja Shemakhan portti',
+        lat: 40.36853,
+        lon: 49.83632,
+      },
+      {
+        nimi: 'Taza Pirin moskeija',
+        lat: 40.37194,
+        lon: 49.83139,
+      },
+      {
+        nimi: 'Bakun bulevardi',
+        tyyppi: 'luonto',
+        lat: 40.3608,
+        lon: 49.835,
+      },
+    ],
+  },
+  beirut: {
+    polku: 'assets/kartat/beirut-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Beirutin historiallinen ydin ulottuu niemen kärjestä kukkuloille, ja Rooman, osmanien ja ranskalaisen mandaatin ajan kerrostumat ovat vierekkäin. Rantakalliot, kirkot ja moskeijat, aukiot ja museot kertovat, miten kaupunki on elänyt Välimeren kauppasatamana.',
+    rajat: {
+      pohjoinen: 33.8993,
+      etela: 33.8755,
+      lansi: 35.467,
+      ita: 35.5194,
+    },
+    kohteet: [
+      {
+        nimi: 'Raouchén Kyyhkyskalliot',
+        tyyppi: 'luonto',
+        lat: 33.88986,
+        lon: 35.47033,
+      },
+      {
+        nimi: 'Beirutin kansallismuseo',
+        lat: 33.87822,
+        lon: 35.5149,
+      },
+      {
+        nimi: 'Sursock-museo',
+        lat: 33.89294,
+        lon: 35.51623,
+      },
+      {
+        nimi: 'Marttyyrien aukio',
+        tyyppi: 'aukio',
+        lat: 33.89639,
+        lon: 35.50722,
+      },
+      {
+        nimi: 'Mohammad Al-Aminin moskeija',
+        lat: 33.89497,
+        lon: 35.50637,
+      },
+      {
+        nimi: 'Pyhän Yrjänän maroniittikatedraali',
+        lat: 33.89527,
+        lon: 35.50531,
+      },
+      {
+        nimi: 'Nejmehin aukio',
+        tyyppi: 'aukio',
+        lat: 33.89664,
+        lon: 35.50449,
+      },
+      {
+        nimi: 'Suuri Serail',
+        lat: 33.89593,
+        lon: 35.50093,
+      },
+    ],
+  },
+  jerevan: {
+    polku: 'assets/kartat/jerevan-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Jerevanin historiallinen ydin on pieni. Hrazdanin rotkon tuntumassa ovat säilyneet kirkot ja moskeija, ja keskustassa Tamanianin suunnittelema tuffiaukio, oopperatalo, Kaskadi ja Matenadaran kertovat 1900-luvun kaupungista.',
+    rajat: {
+      pohjoinen: 40.1948,
+      etela: 40.1715,
+      lansi: 44.4987,
+      ita: 44.5246,
+    },
+    kohteet: [
+      {
+        nimi: 'Tasavallan aukio',
+        tyyppi: 'aukio',
+        lat: 40.17753,
+        lon: 44.51257,
+      },
+      {
+        nimi: 'Sininen moskeija',
+        lat: 40.1781,
+        lon: 44.5056,
+      },
+      {
+        nimi: 'Pyhän Sargiksen katedraali',
+        lat: 40.17698,
+        lon: 44.50215,
+      },
+      {
+        nimi: 'Zoravorin kirkko',
+        lat: 40.1861,
+        lon: 44.5095,
+      },
+      {
+        nimi: 'Oopperatalo',
+        lat: 40.18583,
+        lon: 44.515,
+      },
+      {
+        nimi: 'Kaskadi',
+        lat: 40.19138,
+        lon: 44.51552,
+      },
+      {
+        nimi: 'Matenadaran',
+        lat: 40.19207,
+        lon: 44.52113,
+      },
+      {
+        nimi: 'Englantilainen puisto',
+        tyyppi: 'luonto',
+        lat: 40.17417,
+        lon: 44.50806,
+      },
+    ],
+  },
+  manama: {
+    polku: 'assets/kartat/manama-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Manaman vanha ydin on pieni: kauppa-alue portin ja basaarin ympärillä. Lähellä sitä ovat nykyajan pankkikaupunginosa, museot ja moskeija.',
+    rajat: {
+      pohjoinen: 26.2433,
+      etela: 26.2162,
+      lansi: 50.5703,
+      ita: 50.6013,
+    },
+    kohteet: [
+      {
+        nimi: 'Bab Al Bahrain',
+        lat: 26.23473,
+        lon: 50.57466,
+      },
+      {
+        nimi: 'Manaman souk',
+        tyyppi: 'aukio',
+        lat: 26.23125,
+        lon: 50.57696,
+      },
+      {
+        nimi: 'Bahrain Financial Harbour',
+        lat: 26.23778,
+        lon: 50.57333,
+      },
+      {
+        nimi: 'Bahrain World Trade Center',
+        lat: 26.23917,
+        lon: 50.58139,
+      },
+      {
+        nimi: 'Beit Al Quran',
+        lat: 26.23972,
+        lon: 50.59167,
+      },
+      {
+        nimi: 'Bahrainin kansallismuseo',
+        lat: 26.24056,
+        lon: 50.59833,
+      },
+      {
+        nimi: 'Al-Fatih-suurmoskeija',
+        lat: 26.21889,
+        lon: 50.59806,
+      },
+    ],
+  },
+  tbilisi: {
+    polku: 'assets/kartat/tbilisi-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Tbilisin historiallinen ydin levittyy Kuran rannoille Narikalan rinteestä Vapaudenaukiolle. Kohteet kertovat kaupungin kerroksista keskiajan linnoituksesta ja kylpylöistä 1800-luvun aukioon ja puutarhaan.',
+    rajat: {
+      pohjoinen: 41.6983,
+      etela: 41.6834,
+      lansi: 44.798,
+      ita: 44.8147,
+    },
+    kohteet: [
+      {
+        nimi: 'Narikalan linnoitus',
+        lat: 41.68778,
+        lon: 44.80861,
+      },
+      {
+        nimi: 'Metekhin kirkko',
+        lat: 41.69,
+        lon: 44.81111,
+      },
+      {
+        nimi: 'Abanotubanin rikkikylpylät',
+        lat: 41.68778,
+        lon: 44.81111,
+      },
+      {
+        nimi: 'Siionin katedraali',
+        lat: 41.6914,
+        lon: 44.8075,
+      },
+      {
+        nimi: 'Anchiskhatin basilika',
+        lat: 41.69556,
+        lon: 44.80694,
+      },
+      {
+        nimi: 'Vapaudenaukio',
+        tyyppi: 'aukio',
+        lat: 41.69333,
+        lon: 44.80167,
+      },
+      {
+        nimi: 'Kansallinen kasvitieteellinen puutarha',
+        tyyppi: 'luonto',
+        lat: 41.68611,
+        lon: 44.8075,
+      },
+    ],
+  },
 };
 
 /*
