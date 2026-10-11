@@ -60,3 +60,13 @@ appit proto-3d/lokit/olavinlinna-yhdistetty-181{b,c,d,e}). Simuvuorot Julkaisija
 - Kärki nyt **d289911c7**: 8baa0e0ce (oviaukko vasta 1,2 s oven avautumisesta) + d289911c7 (herätessä ovi painaa 2×, ovi ~23°).
   Pyydetty Julkaisijalta v7:ään. v7:llä: tyrma-ovi.txt (o00/o02 ovi + valo näkyvissä) + laituri-a1.txt (muunnelmat 2–3).
 - v47f-kuvat t0–t6 + huonekuvat lähetetty LR:lle 04.0x.
+
+## PÄIVITYS 04.5x: v7 8e0b0bf6 ajettu (SIMU VAPAA 04.46), v8-kärki bf1938773 Julkaisijalle
+- v7: tyrmästä ulos oviaukolta OK (avaimet 46 s, Pulu 60 s → 70 s). Ovi yhä kuvan reunassa → fd4c127e4 (ovi 4×, ~13°).
+- Mustat levyt = tyrma-E101:n oma kuori (o00 vs o00b `poikki kavelyosat 0`), LR:lle v47g. Keittiö/tunnelma piilossa jo 9d56fbe0d.
+- PT:n v8-lista (Laitetestaaja 3. kierros): 4) alarajavalo d87c3f836+972857148; 2) hälytys ratkeaa bf1938773 (apuagentti: nousu:laituri
+  ~11 m vartiopaikasta, jahti 6 m → luovutus 4 s, jäähy 12 s, testit); kameralukko hälytyksessä EI syytä koodissa → todenna halytys.txt;
+  3) lattiaan kallistus = laiturin juuren kivipinta/törmäys (LR), ei kamera.
+- Skenaariot: laituri-a1.txt kierros 4 kävellen (ei siirtoa), tyrmässä kohti ovi:tyrma; uusi halytys.txt.
+- v8-ajo: tyrma-ovi + halytys + laituri-a1 (v7.sh-pohja: 181g → v8-kansio, --haara bf1938773).
+- Sivulöydös: SeikkailuVartijat r. 723 kirjaa tyrmän jälkeisen kiinnijäännin osaan tyrma-E101 → helpotus nollautuu. Korjaamatta.
