@@ -155,6 +155,8 @@ namespace Matkakirja
         // Mittarit (komento "tila").
         int taso = -1;
         float tiheys;
+        /// <summary>Ruudun tiheys (laitepikseliä/aste) viimeisimmästä solupäivityksestä (Rajat: kevyempi peitto kaukana).</summary>
+        protected double NykyTiheys => tiheys;
         double porras;
         Vektorisolut.Alue alue;
         bool alueOn;

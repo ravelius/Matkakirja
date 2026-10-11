@@ -81,8 +81,16 @@ namespace Matkakirja
         // (Kohdemerkki, 2,4 s) ovat jatkuva idle-animaatio koko lähtövalinnan (ja lennon punaisten renkaiden) ajan.
         // Fable 25.9. klo 20.1x: ne jäätyvät keskiasentoon 3 s levon jälkeen ja jatkuvat heti aktiivisuudesta (Joutosyke,
         // varjostimien _SykeAika ja _SykeVoima); jäätyneinä ehto on false, ja pallo saa levätä.
-        void OnEnable() => PallonLepo.Animoi(RenkaatSykkivat, "kaupungit: huomiorenkaat");
-        void OnDisable() => PallonLepo.Poista(RenkaatSykkivat);
+        void OnEnable()
+        {
+            PallonLepo.Animoi(RenkaatSykkivat, "kaupungit: huomiorenkaat");
+            PallonLepo.Animoi(HoukuttimetSykkivat, "kaupungit: houkuttimet");
+        }
+        void OnDisable()
+        {
+            PallonLepo.Poista(RenkaatSykkivat);
+            PallonLepo.Poista(HoukuttimetSykkivat);
+        }
 
         bool RenkaatSykkivat()
         {
@@ -198,6 +206,7 @@ namespace Matkakirja
         {
             peliSuodatin = kaupungit == null ? null : new HashSet<string>(kaupungit);
             peliMaa = kaupungit == null ? null : maa;
+            if (kaukoHimmeat) PaivitaKaukoHimmeat();
             Likaa();
         }
         HashSet<string> peliSuodatin;
@@ -233,7 +242,277 @@ namespace Matkakirja
         /// <summary>Sallivatko NaytaVain- ja pelisuodatin kaupungin (leikkaus).</summary>
         bool Suodatettu(string id) =>
             (suodatin == null || suodatin.Contains(id))
-            && (LinssiTila || peliSuodatin == null || peliSuodatin.Contains(id) || (himmeat != null && himmeat.Contains(id)));
+            && (LinssiTila || peliSuodatin == null || peliSuodatin.Contains(id) || (himmeat != null && himmeat.Contains(id))
+                || (kaukoHimmeat && kaukoJoukko.Contains(id)) || houkutinJoukko.Contains(id));
+
+        // ---- HOUKUTTIMET (omistaja 11.10.2026 PT:n kautta, juna 182; Houkuttimet) ----
+        // Linssikaupungit violetteina ja lautapelikaupungit videopelien sinisellä hehkuvat pisteinä koko ajan, kaikilla zoomeilla
+        // ja pelin rajauksesta riippumatta (Suodatettu). Piste ja hehkulevy ovat olemassa olevaa pistepohjaa (pisteMateriaali,
+        // Transparent+1), joka piirtyy Cesiumin laattojen ja siis hunnun päälle. Värit UI:n puolelta tyylikirjan tokeneista
+        // (UI/HoukutinVarit.cs → HoukutinLinssiVari ja HoukutinPeliVari; alfa 0 = ei asetettu → ei houkuttimia). Syke
+        // Joutosykkeen kellolla (jäätyy levossa keskiasentoon). Napautus = olemassa oleva kaupungin napautus.
+
+        /// <summary>Linssikaupungin pisteen väri (Tyylikirja.Erikois.LinssiHehku, --tk-erikois-linssi-hehku).</summary>
+        public static Color HoukutinLinssiVari;
+        /// <summary>Lautapelikaupungin pisteen väri (Tyylikirja.Videopeli.Korostus, --tk-videopeli-korostus).</summary>
+        public static Color HoukutinPeliVari;
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void NollaaHoukuttimet() { HoukutinLinssiVari = default; HoukutinPeliVari = default; }
+
+        readonly HashSet<string> houkutinJoukko = new HashSet<string>();
+        readonly List<Merkki> houkutinMerkit = new List<Merkki>();
+        int houkutinRakennettu = -1;
+        Color houkutinLinssiNyt, houkutinPeliNyt;
+        bool houkutinLinssiTila;
+        /// <summary>Kaupunkipisteiden mittakerroin tässä kehyksessä (Houkuttimet.PisteenMittakerroin, omistaja 16.0x).</summary>
+        float pisteMitta = 1f;
+        MaterialPropertyBlock hehkuLohko;
+        static readonly int PisteVariId = Shader.PropertyToID("_BaseColor"), PisteKehysId = Shader.PropertyToID("_Kehys");
+
+        /// <summary>Merkitsee houkuttimet (merkit rakennettu tai värit vaihtuivat) ja kirjaa ne.</summary>
+        void PaivitaHoukuttimet()
+        {
+            houkutinRakennettu = merkit.Count;
+            houkutinLinssiNyt = HoukutinLinssiVari;
+            houkutinPeliNyt = HoukutinPeliVari;
+            houkutinLinssiTila = LinssiTila;
+            houkutinJoukko.Clear();
+            houkutinMerkit.Clear();
+            foreach (var m in merkit)
+            {
+                var laji = Houkuttimet.LajiKaupungille(m.kaupunki.id);
+                Color vari = laji == Houkuttimet.Laji.Linssi ? HoukutinLinssiVari : HoukutinPeliVari;
+                bool h = laji.HasValue && vari.a > 0f;
+                if (h)
+                {
+                    houkutinJoukko.Add(m.kaupunki.id);
+                    houkutinMerkit.Add(m);
+                    m.houkutinVari = vari;
+                    LuoHehku(m);
+                }
+                if (m.houkutin != h || h)
+                {
+                    m.houkutin = h;
+                    if (m.hehku != null && m.hehku.gameObject.activeSelf != h) m.hehku.gameObject.SetActive(h);
+                    if (!h) Tyyli(m);
+                    AsetaPisteenVari(m);
+                }
+            }
+            // Vapaat houkuttimet (Olavinlinna, NUI-jako): oma piste paikassaan, ei laudan kaupunki eikä napautettava.
+            if (vapaatHoukuttimet.Count == 0) RakennaVapaat();
+            foreach (var m in vapaatHoukuttimet)
+            {
+                Color vari = Houkuttimet.LajiTunnukselle(m.kaupunki.id) == Houkuttimet.Laji.Linssi ? HoukutinLinssiVari : HoukutinPeliVari;
+                m.houkutin = vari.a > 0f;
+                m.houkutinVari = vari;
+                if (!m.houkutin) { if (m.juuri.gameObject.activeSelf) m.juuri.gameObject.SetActive(false); continue; }
+                LuoHehku(m);
+                houkutinMerkit.Add(m);
+                AsetaPisteenVari(m);
+            }
+            if (kaukoHimmeat) PaivitaKaukoHimmeat();
+            Likaa();
+            Debug.Log("MATKAKIRJA kartta: " + HoukuttimetTila());
+        }
+
+        /// <summary>Vapaat houkutinpisteet (Houkuttimet.Houkutin.Vapaa): eivät ole merkit-listassa (ei ladontaa, nimeä eikä napautusta).</summary>
+        readonly List<Merkki> vapaatHoukuttimet = new List<Merkki>();
+
+        void RakennaVapaat()
+        {
+            if (georeferenssi == null || nelio == null || pisteMateriaali == null) return;
+            double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
+            foreach (var h in Houkuttimet.Lista)
+            {
+                if (!h.Vapaa) continue;
+                var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(h.Lon, h.Lat, nosto));
+                double3 u = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
+                var juuri = new GameObject("Houkutin " + h.Id).transform;
+                juuri.SetParent(georeferenssi.transform, false);
+                juuri.localPosition = (float3)u;
+                var p = new GameObject("Piste").transform;
+                p.SetParent(juuri, false);
+                p.gameObject.AddComponent<MeshFilter>().sharedMesh = nelio;
+                p.gameObject.AddComponent<MeshRenderer>().sharedMaterial = pisteMateriaali;
+                juuri.gameObject.SetActive(false);
+                vapaatHoukuttimet.Add(new Merkki
+                {
+                    kaupunki = new Sisalto.Kaupunki { id = h.Id, nimi = h.Kohde, lat = h.Lat, lon = h.Lon },
+                    juuri = juuri, pisteT = p, pisteKoko = tarkeaPiste,
+                    normaali = (float3)math.normalize(u - keskus), pinta = (float3)u,
+                });
+            }
+        }
+
+        /// <summary>
+        /// Onko merkki kalusteen alla. HOUKUTIN ei piiloudu kalusteiden laatikoihin lainkaan: käyttöliittymä piirtyy joka
+        /// tapauksessa kartan päälle, joten piilotus ei ole tarpeen. PT:n simukäännös bb7d1200a (11.10. 15.5x, iPhone pysty,
+        /// koko Eurooppa): Alpit, Istanbul ja Ateena puuttuivat, koska ruudun keski-alaosassa (Italia–Balkan–Kreikka–Länsi-Turkki)
+        /// oli näkymätön kalustelaatikko, jonka alla kaikki pisteet piiloutuivat (myös Rooma, Tirana, Sarajevo; iPadilla
+        /// laatikko oli muualla). Muilla merkeillä kalusteet kuten ennen (löydös 164).
+        /// </summary>
+        bool Peitossa(Merkki m, IReadOnlyList<Ruutulaatikko> kalusteet, Vector3 ruutu) =>
+            Houkuttimet.KalusteetPiilottavat(m.houkutin, LinssiTila) && KalusteenAlla(kalusteet, ruutu);
+
+        /// <summary>Näkyvien houkuttimien ruutupisteet (pikselit, y ylös) listaan (KaupunkiPallot: pallo väistää houkuttimia).</summary>
+        public void HoukutinRuutupisteet(List<Vector2> ulos)
+        {
+            ulos.Clear();
+            if (kamera == null) return;
+            foreach (var m in houkutinMerkit)
+            {
+                if (!m.juuri.gameObject.activeSelf) continue;
+                Vector3 r = kamera.WorldToScreenPoint(m.juuri.position);
+                if (r.z > 0f) ulos.Add(new Vector2(r.x, r.y));
+            }
+        }
+
+        /// <summary>Houkuttimen hehkulevy (saman pistepohjan kopio pisteen alla), kerran.</summary>
+        void LuoHehku(Merkki m)
+        {
+            if (m.hehku != null) return;
+            var t = new GameObject("Hehku").transform;
+            t.SetParent(m.juuri, false);
+            t.localPosition = new Vector3(0f, 0f, 1f); // kamerasta poispäin: läpinäkyvien lajittelu piirtää sen pisteen alle
+            t.gameObject.AddComponent<MeshFilter>().sharedMesh = nelio;
+            t.gameObject.AddComponent<MeshRenderer>().sharedMaterial = pisteMateriaali;
+            m.hehku = t;
+        }
+
+        /// <summary>Vapaiden houkuttimien paikka ja näkyvyys (sama ehto ja mitoitus kuin kaupunkimerkeillä LateUpdatessa).</summary>
+        void SijoitaVapaat(Transform kt, Transform gt, float tanPuoli, float pikseleita, IReadOnlyList<Ruutulaatikko> kalusteet)
+        {
+            foreach (var m in vapaatHoukuttimet)
+            {
+                Vector3 paikka = gt.TransformPoint(m.pinta + m.normaali * KorkeusKerroin.Lisays(m.kaupunki.korkeus));
+                Vector3 kohti = kt.position - paikka;
+                float etaisyys = kohti.magnitude;
+                Vector3 ruutu = kamera.WorldToScreenPoint(paikka);
+                bool nakyy = m.houkutin && !LinssiTila && etaisyys > 0f && Houkuttimet.Nakyy(merkitNakyvat, PalloKierto.PorttiSumea, true)
+                             && MerkkiPaivitys.Edessa(Vector3.Dot(gt.TransformDirection(m.normaali), kohti / etaisyys))
+                             && !Peitossa(m, kalusteet, ruutu);
+                if (m.juuri.gameObject.activeSelf != nakyy) m.juuri.gameObject.SetActive(nakyy);
+                if (!nakyy) continue;
+                float lahella = etaisyys * (1f - Etuna);
+                m.juuri.SetPositionAndRotation(kt.position - kohti / etaisyys * lahella, kt.rotation);
+                m.juuri.localScale = Vector3.one * (2f * lahella * tanPuoli / pikseleita);
+            }
+        }
+
+        /// <summary>Houkuttimien tila lokiin ("MATKAKIRJA kartta: houkuttimet …"): pisteet, värit tokeneineen ja piirtojärjestys.</summary>
+        public string HoukuttimetTila()
+        {
+            int linssi = 0, peli = 0, video = 0, nakyvissa = 0;
+            var loydetyt = new HashSet<string>();
+            foreach (var m in houkutinMerkit)
+            {
+                var laji = Houkuttimet.LajiTunnukselle(m.kaupunki.id);
+                if (laji == Houkuttimet.Laji.Linssi) linssi++; else if (laji == Houkuttimet.Laji.Videopeli) video++; else peli++;
+                if (m.juuri.gameObject.activeSelf) nakyvissa++;
+                loydetyt.Add(m.kaupunki.id);
+            }
+            var puuttuvat = new List<string>();
+            foreach (var h in Houkuttimet.Lista) if (!loydetyt.Contains(h.Id)) puuttuvat.Add(h.Id);
+            int jono = pisteMateriaali != null ? pisteMateriaali.renderQueue : -1;
+            return $"houkuttimet: {houkutinMerkit.Count} pistettä (linssi {linssi}, lautapeli {peli}, videopeli {video} vapaana; näkyvissä {nakyvissa}" +
+                   (puuttuvat.Count > 0 ? $"; ei merkkiä tai väriä: {string.Join(", ", puuttuvat)}" : "") + "), " +
+                   $"värit linssi #{ColorUtility.ToHtmlStringRGB(HoukutinLinssiVari)} ({Houkuttimet.LinssiToken}), " +
+                   $"lautapeli ja videopeli #{ColorUtility.ToHtmlStringRGB(HoukutinPeliVari)} ({Houkuttimet.PeliToken}), " +
+                   $"hunnun päällä {(Houkuttimet.HunnunPaalla(jono) ? "kyllä" : "ei")} (pistejono {jono} > laatat ja huntu {Houkuttimet.LaattaJono}), " +
+                   $"syke {(Joutosyke.Elaa ? "elää" : "levossa")}, linssitila {(LinssiTila ? "kyllä (ei hehkua)" : "ei")}, " +
+                   $"kalusteet (eivät piilota houkuttimia) {KalusteKuvaus()}";
+        }
+
+        /// <summary>Kalusteiden määrä ja laatikot (px, y ylös) lokiin: UI-kalusteet ja erikoismallit erikseen (iPhonen Euroopan katve).</summary>
+        static string KalusteKuvaus()
+        {
+            var ui = uiKalusteet?.Invoke();
+            int nUi = ui?.Count ?? 0;
+            var sb = new System.Text.StringBuilder();
+            sb.Append("UI ").Append(nUi);
+            if (ui != null) for (int i = 0; i < ui.Count; i++)
+                sb.Append(i == 0 ? " [" : "; ").Append($"{ui[i].X0:0},{ui[i].Y0:0}–{ui[i].X1:0},{ui[i].Y1:0}").Append(i == ui.Count - 1 ? "]" : "");
+            var mallit = new List<Ruutulaatikko>();
+            Symbolimallit.LisaaKalusteet(mallit);
+            sb.Append(", mallit ").Append(mallit.Count);
+            for (int i = 0; i < mallit.Count && i < 8; i++)
+                sb.Append(i == 0 ? " [" : "; ").Append($"{mallit[i].X0:0},{mallit[i].Y0:0}–{mallit[i].X1:0},{mallit[i].Y1:0}").Append(i == Mathf.Min(mallit.Count, 8) - 1 ? "]" : "");
+            return sb.ToString();
+        }
+
+        /// <summary>Houkuttimen koko ja hehku joka kehys (7 merkkiä, ei allokointeja; arvot kirjoitetaan vain muuttuessa).</summary>
+        void PaivitaHehku()
+        {
+            if (houkutinMerkit.Count == 0) return;
+            float aika = Joutosyke.Aika, voima = Joutosyke.Voima;
+            bool paalla = !LinssiTila;
+            float koko = paalla ? (float)Houkuttimet.Koko(aika, voima) : 1f;
+            float hehkuKoko = (float)Houkuttimet.HehkunKoko(aika, voima), hehkuPeitto = (float)Houkuttimet.HehkunPeitto(aika, voima);
+            hehkuLohko ??= new MaterialPropertyBlock();
+            foreach (var m in houkutinMerkit)
+            {
+                if (!m.juuri.gameObject.activeSelf) continue;
+                float oma = m.pisteKoko * (m.korostettu ? 1.5f : 1f);
+                float k = (paalla ? (float)Houkuttimet.YtimenKokoPt(oma, pisteMitta) : oma) * koko;   // PT 16.5x: ydin ≥ 9,5 pt
+                if (Mathf.Abs(m.pisteT.localScale.x - k) > 0.01f) m.pisteT.localScale = new Vector3(k, k, 1f);
+                bool hehkuu = paalla && !m.valintamerkki;
+                if (m.hehku.gameObject.activeSelf != hehkuu) m.hehku.gameObject.SetActive(hehkuu);
+                if (!hehkuu) continue;
+                float hk = k * hehkuKoko;
+                if (Mathf.Abs(m.hehku.localScale.x - hk) > 0.01f) m.hehku.localScale = new Vector3(hk, hk, 1f);
+                var v = m.houkutinVari;
+                v.a *= hehkuPeitto * (m.usva < 0f ? 1f : m.usva);
+                hehkuLohko.SetColor(PisteVariId, v);
+                hehkuLohko.SetColor(PisteKehysId, v); // ei vaaleaa kehää hehkuun: koko levy samaa väriä
+                m.hehku.GetComponent<MeshRenderer>().SetPropertyBlock(hehkuLohko);
+            }
+        }
+
+        /// <summary>Houkuttimet sykkivät ruudulla (PallonLepo.Animoi): pallo ei lepää, kun syke elää.</summary>
+        bool HoukuttimetSykkivat()
+        {
+            if (!Joutosyke.Elaa || houkutinMerkit.Count == 0 || LinssiTila || kamera == null) return false;
+            foreach (var m in houkutinMerkit)
+                if (m.juuri.gameObject.activeSelf && PallonLepo.Ruudulla(kamera, m.juuri.position, 30f * PalloKierto.Pistekerroin)) return true;
+            return false;
+        }
+
+        // ---- EUROOPPA-LOITONNUS (omistaja 11.10.2026 PT:n kautta, juna 182, kuumailmapallojen kohta c; EurooppaLoitonnus) ----
+        // Kun pelaaja loitontaa maan katon yläpuolelle Euroopan maassa (PalloKierto.EuroopanLoitonnuksessa), pelin rajauksen
+        // ulkopuoliset Euroopan kaupungit näkyvät himmeinä pisteinä olemassa olevalla himmeällä pohjalla (40 %, ei nimeä). Ne
+        // eivät ole napautettavia (pelaajan napautus ei saa siirtää eikä lentää); lähennettäessä ne katoavat.
+
+        bool kaukoHimmeat;
+        readonly HashSet<string> kaukoJoukko = new HashSet<string>();
+
+        void PaivitaKaukoHimmeat()
+        {
+            kaukoJoukko.Clear();
+            foreach (var m in merkit)
+            {
+                bool h = kaukoHimmeat && !LinssiTila && peliSuodatin != null && !peliSuodatin.Contains(m.kaupunki.id)
+                         && !houkutinJoukko.Contains(m.kaupunki.id) && EurooppaLoitonnus.Euroopassa(m.kaupunki.lat, m.kaupunki.lon);
+                if (h) kaukoJoukko.Add(m.kaupunki.id);
+                if (m.kaukoHimmea == h) continue;
+                m.kaukoHimmea = h;
+                AsetaPisteenVari(m);
+            }
+            Likaa();
+        }
+
+        /// <summary>Euroopan loitonnuksen pisteet lokiin: himmeitä Euroopan kaupunkeja ja niistä näkyvissä, pelaajan pisteet.</summary>
+        public string EurooppaTila()
+        {
+            int k = 0, n = 0, oma = 0;
+            foreach (var m in merkit)
+            {
+                if (m.kaukoHimmea) { k++; if (m.juuri.gameObject.activeSelf) n++; }
+                else if (m.juuri.gameObject.activeSelf) oma++;
+            }
+            return $"{(kaukoHimmeat ? "himmeät päällä" : "himmeät pois")}, himmeitä {k} (näkyvissä {n}), muita näkyviä pisteitä {oma}, " +
+                   $"pelin rajaus {(peliSuodatin != null ? peliSuodatin.Count + " kaupunkia" : "ei")}";
+        }
 
         /// <summary>
         /// Pääkaupunkipiste (<see cref="kevyet"/>): linssin suodatin kuten kaupungeilla (luettelossa id), ei aloitusvalinnan aikana (vain
@@ -343,9 +622,10 @@ namespace Matkakirja
         void AsetaPisteenVari(Merkki m)
         {
             var r = m.pisteT.GetComponent<MeshRenderer>();
-            float nak = (m.usva < 0f ? 1f : m.usva) * (m.himmea ? HimmeanPeitto : 1f) * (m.paakaupunki ? m.kevytPeitto : 1f);
-            if (!m.korostus.HasValue && nak >= 0.999f) { r.SetPropertyBlock(null); return; }
-            var v = m.korostus ?? (pisteMateriaali != null ? pisteMateriaali.GetColor("_BaseColor") : Color.black);
+            bool houkutin = m.houkutin && !LinssiTila && !m.korostus.HasValue;
+            float nak = (m.usva < 0f ? 1f : m.usva) * (m.himmea || m.kaukoHimmea ? HimmeanPeitto : 1f) * (m.paakaupunki ? m.kevytPeitto : 1f);
+            if (!m.korostus.HasValue && !houkutin && nak >= 0.999f) { r.SetPropertyBlock(null); return; }
+            var v = houkutin ? m.houkutinVari : m.korostus ?? (pisteMateriaali != null ? pisteMateriaali.GetColor("_BaseColor") : Color.black);
             v.a *= nak;
             korostusLohko ??= new MaterialPropertyBlock();
             korostusLohko.SetColor("_BaseColor", v);
@@ -675,6 +955,10 @@ namespace Matkakirja
             public TextMeshPro lentoaika; // aloitusvalinnan lentoaika renkaan alla ("+6 h", v3f), luodaan tarvittaessa
             public bool valintamerkki; // valittava kaupunki: kohdemerkki, ei pistettä, nimi renkaan yläpuolella
             public bool himmea; // pelaajan näkymä: rajauksen ulkopuolinen pelin kaupunki, piste 40 %, ei nimeä
+            public bool kaukoHimmea; // Euroopan loitonnus: rajauksen ulkopuolinen Euroopan kaupunki, piste 40 %, ei nimeä, ei napautusta
+            public bool houkutin; // houkutin (Houkuttimet): hehkuva piste hunnun päällä koko ajan, pelin rajauksesta riippumatta
+            public Color houkutinVari; // tyylikirjan token (HoukutinVarit): linssi violetti, lautapeli videopelien sininen
+            public Transform hehku; // houkuttimen kuultava hehkulevy pisteen alla (sama pistepohja), luodaan tarvittaessa
             public Vector2 teksti; // nimen piirretty koko pisteinä (ilman pistettä ja rakoa)
             public bool lukittu; // nimen paikka lukittu (web LUKKO): vapautuu, kun kaupunki poistuu näkyvistä tai asu vaihtuu
             public NimiLadonta.NimenPaikka lukko; // pikseleinä
@@ -949,6 +1233,7 @@ namespace Matkakirja
             var kalusteet = Kalusteet?.Invoke();
             foreach (var m in merkit)
             {
+                if (m.kaukoHimmea) continue; // Euroopan loitonnuksen himmeät pisteet eivät ole napautettavia
                 if (!Nakyvissa(m, kt, gt, kalusteet, out Vector3 p)) continue; // suodatetut ja takapuolen merkit
                 float d = Vector2.Distance(ruutu, p);
                 // Huomiorenkaan sisällä napautus osuu (raja suurempi säteistä: rengas 27 pt, osumaSade 44 pt).
@@ -980,7 +1265,7 @@ namespace Matkakirja
             return (merkitNakyvat || LinssiTila) && !PalloKierto.PorttiSumea
                 && (m.paakaupunki ? KevytSuodatettu(m.kaupunki) : Suodatettu(m.kaupunki.id))
                 && MerkkiPaivitys.Edessa(Vector3.Dot(gt.TransformDirection(m.normaali), kohti / etaisyys))
-                && ((m.valintamerkki && !LinssiTila) || !KalusteenAlla(kalusteet, ruutu));
+                && ((m.valintamerkki && !LinssiTila) || !Peitossa(m, kalusteet, ruutu));
         }
 
         /// <summary>Merkkien tila muuttui (renkaat, suodattimet, tyyli): seuraava LateUpdate päivittää, vaikka kehys jäisi piirtämättä.</summary>
@@ -1039,6 +1324,14 @@ namespace Matkakirja
         void LateUpdate()
         {
             if (merkit.Count == 0 || kamera == null) return;
+            // Euroopan loitonnus: himmeät pisteet päälle tai pois (kerran tilan vaihtuessa).
+            bool kauko = !LinssiTila && peliSuodatin != null && kierto != null && kierto.EuroopanLoitonnuksessa;
+            if (kauko != kaukoHimmeat) { kaukoHimmeat = kauko; PaivitaKaukoHimmeat(); }
+            // Houkuttimet: merkit rakennettu tai värit asetettu/vaihtuneet → merkitse; syke ja hehku joka kehys.
+            if (houkutinRakennettu != merkit.Count || houkutinLinssiNyt != HoukutinLinssiVari || houkutinPeliNyt != HoukutinPeliVari
+                || houkutinLinssiTila != LinssiTila)
+                PaivitaHoukuttimet();
+            PaivitaHehku();
             var kt = kamera.transform;
             var gt = georeferenssi.transform;
             // Kehyksen hinta (Pelikoodari 25.9.): kehystä ei piirretä (Ruudunpaivitys PAIKALLAAN, 59/60) → ei ladontaa.
@@ -1078,6 +1371,7 @@ namespace Matkakirja
             //    LADOTTUA NIMEÄ EI NÄYTETÄ); valittavat ja lennon renkaat jäävät.
             //  - budjetti = round(40 · 20° / näkymän korkeus °) [6, 40] × liikevaran ala (NimiLadonta.Nimibudjetti).
             float zoom = LinssiTila || nk == null ? 1f : nk.ZoomKerroin;
+            pisteMitta = (float)Houkuttimet.PisteenMittakerroin(zoom);
             bool lattialla = zoom <= (float)NostoSaannot.KarttakerroinMin / 1.0025f;
             int katto = LinssiTila || valintamerkkeja > 0 || kierto == null ? int.MaxValue
                 : NimiLadonta.LiikevaranKatto(NimiLadonta.Nimibudjetti(NakymanKorkeusAsteina(tanPuoli)), NimiLadonta.LiikevaraOsuus);
@@ -1102,7 +1396,7 @@ namespace Matkakirja
                     && MerkkiPaivitys.Edessa(Vector3.Dot(normaali, kohti / etaisyys))
                     // Löydös 164 jatko (Fable 26.9.): kalusteen (kartussi, Liiku, pulu, yläpalkki) alle jäävä piste ja sen
                     // nimi piiloon; valittavan kaupungin merkki näkyy aina.
-                    && ((m.valintamerkki && !LinssiTila) || !KalusteenAlla(kalusteet, ruutu));
+                    && ((m.valintamerkki && !LinssiTila) || !Peitossa(m, kalusteet, ruutu));
                 if (m.juuri.gameObject.activeSelf != edessa) m.juuri.gameObject.SetActive(edessa);
                 m.oliRuudulla = m.ruudulla;
                 m.ruudulla = edessa && NimiLadonta.Ruudulla(ruutu.x, ruutu.y, Screen.width, Screen.height, kerroin);
@@ -1134,7 +1428,14 @@ namespace Matkakirja
                 }
                 var ala = NimenAla(m, ruutu, kerroin);
                 var suorakulmio = new Rect(ala.x - 4 * kerroin, ala.y - 2 * kerroin, ala.width + 8 * kerroin, ala.height + 4 * kerroin);
-                float pp = m.pisteKoko * kerroin * (m.korostettu ? 1.5f : 1f);
+                // Pisteet eivät kasva loitonnettaessa (omistaja 16.0x, Houkuttimet.PisteenMittakerroin); houkuttimet PaivitaHehkussa.
+                float pm = valinta || LinssiTila ? 1f : pisteMitta;
+                if (!m.houkutin || LinssiTila)
+                {
+                    float ps = m.pisteKoko * (m.korostettu ? 1.5f : 1f) * pm;
+                    if (Mathf.Abs(m.pisteT.localScale.x - ps) > 0.01f) m.pisteT.localScale = new Vector3(ps, ps, 1f);
+                }
+                float pp = m.pisteKoko * kerroin * (m.korostettu ? 1.5f : 1f) * pm;
                 nakyvat.Add(m);
                 ehdokkaat.Add(new NimiLadonta.KaupunkiEhdokas
                 {
@@ -1143,7 +1444,7 @@ namespace Matkakirja
                     Pakko = valinta,
                     // Siirtokohteen nimen piirtää kohdemerkki (Siirtokohdemerkit.NimeaaKaupungin): nimi kerran kuten webissä.
                     // UI-pariteetti rivi 2 (Fable 26.9., web on malli): aloitusvalinnan aikana vain valittavien nimet.
-                    Sallittu = valinta || (valintamerkkeja == 0 && (nimiotNakyvat || LinssiTila) && !m.himmea
+                    Sallittu = valinta || (valintamerkkeja == 0 && (nimiotNakyvat || LinssiTila) && !m.himmea && !m.kaukoHimmea
                                            && (!lattialla || m.etuoikeus == EtuRengas)
                                            && !(Siirtokohdemerkit.Instanssi?.NimeaaKaupungin(m.kaupunki.id) ?? false)),
                     X = ruutu.x, Y = ruutu.y,
@@ -1158,6 +1459,8 @@ namespace Matkakirja
                     Kevyt = m.paakaupunki,
                 });
             }
+
+            SijoitaVapaat(kt, gt, tanPuoli, pikseleita, kalusteet);
 
             // 3) Pelinappula (web pinot) ja pisteet ensin, sitten nimiöt, jotka väistävät ikonit, nappulan, muiden
             //    pisteet ja aiemmat nimiöt webin ehdokaskehällä (8 suuntaa; lukittu nimi ei vaihda kylkeä).

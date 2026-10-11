@@ -34,8 +34,10 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/ErikoisnostoMitat.cs
 ../Assets/Matkakirja/Kartta/KaupunkiPalloMitat.cs
 ../Assets/Matkakirja/Kartta/EtusivunLento.cs
+../Assets/Matkakirja/Kartta/EurooppaLoitonnus.cs
 ../Assets/Matkakirja/Kartta/Geojson.cs
 ../Assets/Matkakirja/Kartta/Horisonttiusva.cs
+../Assets/Matkakirja/Kartta/Houkuttimet.cs
 ../Assets/Matkakirja/Kartta/Ilmakeha.cs
 ../Assets/Matkakirja/Kartta/KategoriaKartoitus.cs
 ../Assets/Matkakirja/Kartta/KameraEleet.cs
