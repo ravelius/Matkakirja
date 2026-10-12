@@ -36,6 +36,8 @@ Ajoskriptit tämän session scratchpadissa: /private/tmp/claude-502/-Users-Share
 - **Napit läpinäkyviksi** (omistaja 14.5x, juna 184): linna natiivi-ui/linna-kuulto-184 57d0142cc (wt/proto-natiivi-ui-linnakuulto,
   pohja siirtoseppa/laituri-varoitus; Siirtosepän kanssa sovittava linnahaaraan tuonti) → kuvapari scratchpad linnakuulto-ajo.sh
   (nyk = vahdin appi olavinlinna-auto-1012-1346, uusi = vahdin haarat + tämä, LINJA=2). Oletus kaikkiin: natiivi-ui/napit-kuulto-184
-  bf6d0f805 (wt/proto-natiivi-ui-napitkuulto); poikkeukset PT:llä päätettävänä (paperipinnat, ISS LCD, lautapelin kytkimet, kiinteät uss-taustat).
+  439ce04a2 (wt/proto-natiivi-ui-napitkuulto). PT:n päätös: paperipinnat, ISS LCD/kamera ja lautapelin kytkimet ennallaan; astronautin
+  ▾ ja ISS-ohjauksen nahkanapit kuulto (tehty); pikkukuvat kiinteät. Kuvat: napitkuulto-ajo.sh (nyk: APPDIR=lokit/natiivi-ui-app-metro
+  NIMI=nyk HAARA=natiivi-ui/metro-vapaa-183; uusi: kaanna + iphone/ipad) → linnan jälkeen samaan arkkiin kohta 2 + d.
 - Julkaisijan ikkuna ~15.05: 1) linna-kuulto 2) aarre-lajit (aarrekartta-ajo.sh) 3) asettelutesti (taidehalli-parit.sh).
 - **184**: varivakiot 2c2054d8a + web #4482; museo-nyt-184 b2599db7f; Pelikoodarin säädin-paperi 028764614.
