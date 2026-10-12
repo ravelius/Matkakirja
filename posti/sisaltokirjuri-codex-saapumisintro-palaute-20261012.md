@@ -31,3 +31,20 @@ Samat linjaukset koskevat kaikkia tulevia saapumisintron ja pääkaupunkien kuvi
 ### Toimitus
 
 PNG 1536 × 1024 (sRGB, läpinäkymätön); tiedosto `<kaupunki>-<nro>-<aihe>-v2.png`; R2 `julisteet/saapumisintro/<kaupunki>/<pvm>-v2/`; manifesti `posti/kuvatoimitus-saapumisintro-<kaupunki>-v2-<pvm>.json` ja kuittaus `posti/codex-fable-saapumisintro-<kaupunki>-v2-<pvm>.md`. Ei main-mergeä, versionnostoa eikä julkaisua Codexilta.
+
+---
+
+## TÄYDENNYS (PT 12.10.): pois jätettyjen tilalle kolme uutta kuvaa, jotta jokaisella pilottikaupungilla on 8 kuvaa
+
+Edellä kohdassa "Aiemmin pois jätetyt … odottavat erillistä päätöstä" oleva rajaus **kumotaan**: Pariisi 4, Tukholma 4 ja Ateena 7 korvataan uusilla aiheilla (alla). **Generointimäärä nyt enintään 9** (6 uusintaa + 3 korvaavaa, yksi per kuva, ei lisävariantteja). Samat säännöt: 1800-luvun kuvat mustavalkoisina (näissä kolmessa ei ole 1873-kuvaa, kaikki ovat nykyaikaa), ei tekstiä, kylttejä, logoja eikä kasvoja, ei suojattuja teoksia, havainnekuva-merkintä, VAIN EUROOPPA. Jos jokin kohta ei onnistu turvallisesti, jätä se tekemättä ja kerro syy.
+
+**Pariisi 4 (korvaava) / arki ja ihmiset — Jardin du Luxembourgin vihreät tuolit.**
+Mitä kuvataan: Luxembourgin puutarhan keskialtaan ympärillä vihreitä metallituoleja, muutama ihminen selin lukemassa tai istumassa, lapsi kauempana, kastanjapuut, pehmeä iltapäivävalo. Kulma: vaakakuva, altaan reunalta silmänkorkeudelta. Ei saa näkyä: tekstiä, kasvoja, markiiseja tai kylttejä (edellisen yrityksen virhe), nykybrändejä, Luxembourgin palatsin yksityiskohtia (rajaa kaukaiseksi taustaksi).
+
+**Tukholma 4 (korvaava) / arki ja ihmiset — Monteliusvägen ja näkymä Riddarfjärdenille.**
+Mitä kuvataan: Mariabergetin kalliolla kulkeva puinen kävelyreitti ja kaide, pari ihmistä selin katsomassa vettä, näkymä Riddarfjärdenin yli Gamla stanin ja Riddarholmenin suuntaan, lämmin iltapäivävalo. Kulma: vaakakuva, reitin alusta silmänkorkeudelta. Ei saa näkyä: Börshusetin opasteita (edellisen yrityksen virhe), kaupungintaloa kuvassa, tekstiä, kylttejä, kasvoja.
+
+**Ateena 7 (korvaava) / ilta ja kaupungin valot — Ateenan katot Lykavittos-kukkulalta.**
+Mitä kuvataan: sininen hetki, kaupungin valkoiset talot ja ikkunavalot alhaalla, Akropoliin kallio kaukana kuvan reunassa lämpimästi valaistuna, rinteen mäntyjä etualalla; ei ihmisiä. Kulma: vaakakuva, kukkulan rinteeltä (EI Areiospagoksen kalliolta eikä lounaisen rinteen kulmasta, joka epäonnistui). Ei saa näkyä: mainosvaloja, ravintolakylttejä, tekstiä, kasvoja, rakennustelineitä Parthenonilla.
+
+Toimitus kuten yllä (`-v2`-tiedostonimet ja -manifestit).
