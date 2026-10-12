@@ -1,0 +1,101 @@
+{
+  "id": "paakaupungit-havainnekuvat-20261012",
+  "taskNumber": 78,
+  "requestedConcreteFirstImages": 1,
+  "imageCount": 1,
+  "generationRequestsIssued": 1,
+  "generationCallsCompleted": 1,
+  "allR2ReadbacksByteExact": true,
+  "candidateOtherRolesPendingBrief": 36,
+  "overallIllustrationProgramComplete": false,
+  "sourceVersions": [
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvaputki/tilaus.json",
+      "sha256": "7c2d874d072633e77d07f7976a71c4b65ed47c9ace821ee4becdae4a0641c737",
+      "bytes": 17223,
+      "readInFull": true,
+      "reviewScope": "full-order"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvaputki/TILAUS.md",
+      "sha256": "fbd12608a939dc493e340dd573269ddeb85348cb090b843740ed5a52a216d096",
+      "bytes": 1408,
+      "readInFull": true,
+      "reviewScope": "full-order"
+    }
+  ],
+  "roleAssets": [
+    {
+      "city": "conakry",
+      "era": "e04",
+      "role": "Camayennen kasvitieteellisen puutarhan kohdejuttu",
+      "targetJsonPath": "$.nahtavyydet[\"Camayennen kasvitieteellinen puutarha\"].kuvat[0]",
+      "targetSlotObservedEmpty": true,
+      "assetID": "conakry-camayenne-havainne",
+      "imageKind": "havainnekuva",
+      "AIgenerated": true,
+      "realPlacePhotograph": false,
+      "commonsFile": null,
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/conakry-camayenne-havainne.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-e04-e14/conakry-camayenne-havainne.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvaputki/production/conakry-camayenne-havainne/production/conakry-camayenne-havainne.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "b306d76686c9816fc72400329515884dca114f633b1bb8478c86d542ad6f0d4d",
+      "bytes": 3709853,
+      "caption": "Kapokkipuun tyvipönkät. Havainnekuva.",
+      "originalCaptionProposal": "Camayennen kapokkipuiden tyvipönkät. Havainnekuva.",
+      "provenanceLabel": "Havainnekuva, tekoälyllä tuotettu; ei aito paikkavalokuva eikä nykyisen puutarhan tarkan ulkoasun todiste.",
+      "illustratedTaxon": "Ceiba pentandra (lähteisiin perustuva havainnollistus, ei kuvasta varmennettu lajitunnistus)",
+      "sources": [
+        {
+          "title": "Kew Plants of the World Online — Ceiba pentandra",
+          "url": "https://powo.science.kew.org/taxon/1166232-2",
+          "type": "primary-taxonomic-source",
+          "supports": "Accepted Ceiba pentandra name, Guinea listed as introduced distribution. No claim of African nativeness used."
+        },
+        {
+          "title": "World Agroforestry — Useful Trees and Shrubs of Ethiopia, Ceiba pentandra",
+          "url": "https://apps.worldagroforestry.org/usefultrees/pdflib/Ceiba_pentandra_ETH.pdf",
+          "type": "primary-botanical-description",
+          "supports": "Mature kapok trees have pronounced buttresses and grey relatively smooth old bark; compound radiating narrow leaflets. Used for general form, not exact Conakry specimens."
+        },
+        {
+          "title": "Guinea forestry programme hosted by FAO — Camayenne botanical garden",
+          "url": "https://www.fao.org/4/x5639f/x5639f0j.htm",
+          "type": "primary-place-institution-source",
+          "supports": "Camayenne garden is a Conakry green/research space with botanical collections. Does not establish exact tree species or current layout."
+        },
+        {
+          "title": "Conakry Botanical Garden",
+          "url": "https://en.wikipedia.org/wiki/Conakry_Botanical_Garden",
+          "type": "secondary-place-source",
+          "supports": "Garden in Camayenne noted for kapok trees, sourced to Lonely Planet. Does not individually identify every tree; botanical identification used illustratively."
+        }
+      ],
+      "limits": [
+        "Kuva on lähteisiin perustuva AI-havainnollistus, ei aito nykyinen kuva Camayennen puutarhasta.",
+        "Puiden, kasvillisuuden, valaistuksen ja järjestyksen täsmällinen nykyinen paikannus ei ole varmennettu.",
+        "Pelkät generoituun kuvaan perustuvat juuret/kaarna eivät vahvista laji-identiteettiä; taustan puulajeja ei ole yksilöity.",
+        "Kuvatekstisuositus on yksikkömuodossa pääpuun mukaan; taustan toista puuta ei nimetä varmasti kapokiksi."
+      ],
+      "sourceFactSheet": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/faktapohja.md",
+        "sha256": "ca09e32579a2f5f080c90bdcc86bc910ea64b82216e3c4b179f330e17d85597b",
+        "bytes": 59557,
+        "readInFull": false,
+        "reviewScope": "Camayenne section 5.3 plus linked source table and image constraints"
+      },
+      "r2ReadbackByteExact": true,
+      "canonicalHTTP": 200,
+      "contentAcceptanceVerified": false,
+      "appliedToSisaltoJSON": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "deliveryStatus": "first-Camayenne-illustration-delivered-for-content-review",
+  "updatedAt": "2026-10-12T02:21:25.617511+00:00"
+}
