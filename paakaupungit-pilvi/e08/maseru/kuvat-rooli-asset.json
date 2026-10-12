@@ -1,0 +1,2019 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e08",
+  "city": "maseru",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+  "assets": [
+    {
+      "era": "e08",
+      "city": "maseru",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e08-maseru-TRAVELER-illustration-v1-20261012",
+      "galleryImageID": "e08-maseru-TRAVELER-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-TRAVELER-illustration-v1-20261012-95c1dd33bc5a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva mokorotlo-olkihatusta.",
+        "lyhyt": "Havainnekuva mokorotlo-olkihatusta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-TRAVELER-illustration-v1-20261012-95c1dd33bc5a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva mokorotlo-olkihatusta.",
+        "lyhyt": "Havainnekuva mokorotlo-olkihatusta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "95c1dd33bc5a42f6ea1f6d4d10bf99623e94e3567a78254b099edee94f66be5a",
+      "exportSHA256": "af19e9eda20f1f2433e53d7517895b617b6bd7999a9a8d30d9c306c1ebfdd62d",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-TRAVELER-illustration-v1-20261012-95c1dd33bc5a.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-TRAVELER-illustration-v1-20261012-95c1dd33bc5a.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maseru/e08-maseru-TRAVELER-illustration-v1-20261012-95c1dd33bc5a.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+      "sourceContentSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "403010a40810fa715ad983cf31dd7ab92e2f03ea1441bdf933b5774d80db6ab9",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic sourced natural/food/material subject or traditional functional object; no named protected artwork or fabricated city scene.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/assets/e08-maseru-TRAVELER-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "95c1dd33bc5a42f6ea1f6d4d10bf99623e94e3567a78254b099edee94f66be5a",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kartiomainen punottu hattu ja ylälenkki pöydällä, luonnolliset kuidut ja ehjä muoto. Ei henkilöitä, tekstiä, brändiä tai rakennuksen jäljennöstä.",
+            "captionFi": "Havainnekuva mokorotlo-olkihatusta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+            "contentSha256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+            "targetCurrentlyPresent": true,
+            "targetText": "",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+            "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+            "topicEvidence": "Oppaan käsityöjakso nimeää mokorotlon. Havainneselite ei esitä tietyn myyjän tuotetta.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+              "sourceContentSha256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+              "targetText": "Maserun keskusta rakentuu Kingswayn kauppa-alueiden ympärille. Basotho Hat -kaupassa voi tutustua paikallisiin käsitöihin. Rajasilta yhdistää kaupungin Etelä-Afrikan maanteihin, ja minibusseilla jatketaan Lesothon muihin osiin. Thaba Bosiu kuuluu kaupungin ulkopuoliseen retkipäivään. Talvella myös pääkaupungissa voi olla pakkasta, joten vuoristoon jatkavan kannattaa varautua lämpimiin vaatteisiin.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+              "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+              "supportingContext": "Current travel panel and the same city's sourced flora, fauna, food or material topics.",
+              "subjectBasis": "One ordinary traditional mokorotlo hat woven from natural straw, conical form and simple top loop, on a plain table. No building, human, commercial pattern, logo or flag."
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Mokorotlo-hattu sopii oppaan käsityöaiheeseen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva mokorotlo-olkihatusta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
+        "fileSHA256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e08-maseru-TRAVELER-illustration-v1-20261012",
+          "sha256": "95c1dd33bc5a42f6ea1f6d4d10bf99623e94e3567a78254b099edee94f66be5a",
+          "verdict": "accepted",
+          "reason": "Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Mokorotlo-hattu sopii oppaan käsityöaiheeseen.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/assets/e08-maseru-TRAVELER-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "95c1dd33bc5a42f6ea1f6d4d10bf99623e94e3567a78254b099edee94f66be5a",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kartiomainen punottu hattu ja ylälenkki pöydällä, luonnolliset kuidut ja ehjä muoto. Ei henkilöitä, tekstiä, brändiä tai rakennuksen jäljennöstä.",
+            "captionFi": "Havainnekuva mokorotlo-olkihatusta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+            "contentSha256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+            "targetCurrentlyPresent": true,
+            "targetText": "",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+            "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+            "topicEvidence": "Oppaan käsityöjakso nimeää mokorotlon. Havainneselite ei esitä tietyn myyjän tuotetta.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+              "sourceContentSha256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+              "targetText": "Maserun keskusta rakentuu Kingswayn kauppa-alueiden ympärille. Basotho Hat -kaupassa voi tutustua paikallisiin käsitöihin. Rajasilta yhdistää kaupungin Etelä-Afrikan maanteihin, ja minibusseilla jatketaan Lesothon muihin osiin. Thaba Bosiu kuuluu kaupungin ulkopuoliseen retkipäivään. Talvella myös pääkaupungissa voi olla pakkasta, joten vuoristoon jatkavan kannattaa varautua lämpimiin vaatteisiin.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+              "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+              "supportingContext": "Current travel panel and the same city's sourced flora, fauna, food or material topics.",
+              "subjectBasis": "One ordinary traditional mokorotlo hat woven from natural straw, conical form and simple top loop, on a plain table. No building, human, commercial pattern, logo or flag."
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T19:06:56.526919+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa.json",
+            "sha256": "3230eda7ff0420a242f5fc68069cb73e2d73c28e9d78bf3f7aefd5a75e1475c2"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
+            "sha256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-TRAVELER-illustration-v1-20261012-95c1dd33bc5a.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-TRAVELER-illustration-v1-20261012-95c1dd33bc5a.png?t=af19e9eda20f1f24",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-TRAVELER-illustration-v1-20261012-95c1dd33bc5a.png",
+        "sha256": "af19e9eda20f1f2433e53d7517895b617b6bd7999a9a8d30d9c306c1ebfdd62d",
+        "bytes": 2358040,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-maseru-TRAVELER-illustration-v1-20261012",
+        "nativeSHA256": "95c1dd33bc5a42f6ea1f6d4d10bf99623e94e3567a78254b099edee94f66be5a",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maseru/e08-maseru-TRAVELER-illustration-v1-20261012-95c1dd33bc5a.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "maseru",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T19:07:29.949538+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maseru/e08-maseru-TRAVELER-illustration-v1-20261012-95c1dd33bc5a.png",
+        "sha256": "af19e9eda20f1f2433e53d7517895b617b6bd7999a9a8d30d9c306c1ebfdd62d",
+        "bytes": 2358040,
+        "SHAReadAt": "2026-10-12T19:32:06.103608+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "95c1dd33bc5a42f6ea1f6d4d10bf99623e94e3567a78254b099edee94f66be5a",
+        "rgbPixelSHA256": "573029ae295f16661f02e5f5533709c27d7e15443a59faa24adab80dc03e3dfb",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "403010a40810fa715ad983cf31dd7ab92e2f03ea1441bdf933b5774d80db6ab9"
+    },
+    {
+      "era": "e08",
+      "city": "maseru",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e08-maseru-O4-illustration-v1-20261012",
+      "galleryImageID": "e08-maseru-O4-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-O4-illustration-v1-20261012-ca55ad6a0f0b.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Mitä täällä syödään.",
+        "lyhyt": "Havainnekuva: Mitä täällä syödään."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-O4-illustration-v1-20261012-ca55ad6a0f0b.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Mitä täällä syödään.",
+        "lyhyt": "Havainnekuva: Mitä täällä syödään."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ca55ad6a0f0b338c45aa16cc9ba704989aae30c24484b746580764ecac7943a1",
+      "exportSHA256": "a255a1e16136f73bf919996a6fffc2dcfd6dd35ff17d4443ec63830aef50a5c9",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-O4-illustration-v1-20261012-ca55ad6a0f0b.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-O4-illustration-v1-20261012-ca55ad6a0f0b.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maseru/e08-maseru-O4-illustration-v1-20261012-ca55ad6a0f0b.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+      "sourceContentSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "13645d2e247118f083841ed51cac0ba8717fca90efe0c39fa2e382a724732efb",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic natural subject, ordinary materials or unbranded objects; no named copyrighted building or contemporary artwork reproduced.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/assets/e08-maseru-O4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "ca55ad6a0f0b338c45aa16cc9ba704989aae30c24484b746580764ecac7943a1",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Paistettu kanan koipipala, kellertävä puuromainen lisuke ja kasviksia lautasella. Luonteva paistopinta ja varjot, ei ihmisiä tai tekstiä.",
+            "captionFi": "Havainnekuva: Mitä täällä syödään.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+            "contentSha256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+            "targetCurrentlyPresent": true,
+            "targetText": "Maserun lounasarkeen kuuluvat mukaan pakatut ruoka-annokset. Kingswayn ruokamyyjiltä on tarjolla esimerkiksi kanaa, sianlihaa, riisiä ja papaa. Papa on maissista tehtyä puuroa, jota syödään muun ruoan rinnalla. Näissä annoksissa pääkaupunki näkyy työpaikkana: ruokaa ostavat myös keskustan toimistojen työntekijät. Ruokalajit ja myyjät vaihtelevat, joten katso päivän tarjontaa sen sijaan, että etsisit yhtä koko kaupungin virallista ateriaa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+            "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+            "topicEvidence": "O4 mainitsee kanan ja maissista tehdyn papa-puuron. Kuva on yleinen aterian havainnollistus.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+              "sourceContentSha256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+              "targetText": "Maserun lounasarkeen kuuluvat mukaan pakatut ruoka-annokset. Kingswayn ruokamyyjiltä on tarjolla esimerkiksi kanaa, sianlihaa, riisiä ja papaa. Papa on maissista tehtyä puuroa, jota syödään muun ruoan rinnalla. Näissä annoksissa pääkaupunki näkyy työpaikkana: ruokaa ostavat myös keskustan toimistojen työntekijät. Ruokalajit ja myyjät vaihtelevat, joten katso päivän tarjontaa sen sijaan, että etsisit yhtä koko kaupungin virallista ateriaa.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+              "wiki": null,
+              "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+              "supportingSourceUrls": [
+                "https://en.wikivoyage.org/wiki/Maseru",
+                "https://en.wikivoyage.org/wiki/Lesotho"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Maseru",
+                "https://en.wikivoyage.org/wiki/Lesotho",
+                "https://en.wikipedia.org/wiki/Mokorotlo"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Kana ja maissipuuroa havainnollistava lisuke vastaavat ruokajakson aineksia. Selite ei väitä kuvaa Kingswayn todelliseksi annokseksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: Mitä täällä syödään.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
+        "fileSHA256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e08-maseru-O4-illustration-v1-20261012",
+          "sha256": "ca55ad6a0f0b338c45aa16cc9ba704989aae30c24484b746580764ecac7943a1",
+          "verdict": "accepted",
+          "reason": "Kana ja maissipuuroa havainnollistava lisuke vastaavat ruokajakson aineksia. Selite ei väitä kuvaa Kingswayn todelliseksi annokseksi.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/assets/e08-maseru-O4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "ca55ad6a0f0b338c45aa16cc9ba704989aae30c24484b746580764ecac7943a1",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Paistettu kanan koipipala, kellertävä puuromainen lisuke ja kasviksia lautasella. Luonteva paistopinta ja varjot, ei ihmisiä tai tekstiä.",
+            "captionFi": "Havainnekuva: Mitä täällä syödään.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+            "contentSha256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+            "targetCurrentlyPresent": true,
+            "targetText": "Maserun lounasarkeen kuuluvat mukaan pakatut ruoka-annokset. Kingswayn ruokamyyjiltä on tarjolla esimerkiksi kanaa, sianlihaa, riisiä ja papaa. Papa on maissista tehtyä puuroa, jota syödään muun ruoan rinnalla. Näissä annoksissa pääkaupunki näkyy työpaikkana: ruokaa ostavat myös keskustan toimistojen työntekijät. Ruokalajit ja myyjät vaihtelevat, joten katso päivän tarjontaa sen sijaan, että etsisit yhtä koko kaupungin virallista ateriaa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+            "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+            "topicEvidence": "O4 mainitsee kanan ja maissista tehdyn papa-puuron. Kuva on yleinen aterian havainnollistus.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+              "sourceContentSha256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+              "targetText": "Maserun lounasarkeen kuuluvat mukaan pakatut ruoka-annokset. Kingswayn ruokamyyjiltä on tarjolla esimerkiksi kanaa, sianlihaa, riisiä ja papaa. Papa on maissista tehtyä puuroa, jota syödään muun ruoan rinnalla. Näissä annoksissa pääkaupunki näkyy työpaikkana: ruokaa ostavat myös keskustan toimistojen työntekijät. Ruokalajit ja myyjät vaihtelevat, joten katso päivän tarjontaa sen sijaan, että etsisit yhtä koko kaupungin virallista ateriaa.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+              "wiki": null,
+              "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+              "supportingSourceUrls": [
+                "https://en.wikivoyage.org/wiki/Maseru",
+                "https://en.wikivoyage.org/wiki/Lesotho"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Maseru",
+                "https://en.wikivoyage.org/wiki/Lesotho",
+                "https://en.wikipedia.org/wiki/Mokorotlo"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:19:49.201350+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa.json",
+            "sha256": "3230eda7ff0420a242f5fc68069cb73e2d73c28e9d78bf3f7aefd5a75e1475c2"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
+            "sha256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-O4-illustration-v1-20261012-ca55ad6a0f0b.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-O4-illustration-v1-20261012-ca55ad6a0f0b.png?t=a255a1e16136f73b",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-O4-illustration-v1-20261012-ca55ad6a0f0b.png",
+        "sha256": "a255a1e16136f73bf919996a6fffc2dcfd6dd35ff17d4443ec63830aef50a5c9",
+        "bytes": 2327678,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-maseru-O4-illustration-v1-20261012",
+        "nativeSHA256": "ca55ad6a0f0b338c45aa16cc9ba704989aae30c24484b746580764ecac7943a1",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maseru/e08-maseru-O4-illustration-v1-20261012-ca55ad6a0f0b.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "maseru",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:22:48.629898+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maseru/e08-maseru-O4-illustration-v1-20261012-ca55ad6a0f0b.png",
+        "sha256": "a255a1e16136f73bf919996a6fffc2dcfd6dd35ff17d4443ec63830aef50a5c9",
+        "bytes": 2327678,
+        "SHAReadAt": "2026-10-12T18:29:52.814090+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "ca55ad6a0f0b338c45aa16cc9ba704989aae30c24484b746580764ecac7943a1",
+        "rgbPixelSHA256": "d2c138d495a82972b8081c082febf6ad5b363f552f19f4306151ef0afe1c028b",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "13645d2e247118f083841ed51cac0ba8717fca90efe0c39fa2e382a724732efb"
+    },
+    {
+      "era": "e08",
+      "city": "maseru",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "e08-maseru-K4-illustration-v1-20261012",
+      "galleryImageID": "e08-maseru-K4-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-K4-illustration-v1-20261012-13060df45065.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Hattu, joka antaa muodon.",
+        "lyhyt": "Havainnekuva: Hattu, joka antaa muodon."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-K4-illustration-v1-20261012-13060df45065.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Hattu, joka antaa muodon.",
+        "lyhyt": "Havainnekuva: Hattu, joka antaa muodon."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "13060df45065d7c004a1580b97ddd1bb12ce47d8e53470a812436fb2fb5ad508",
+      "exportSHA256": "9038033e104659a3e54f72d6739c61dc91112218aa483ab62eefd72f16df6edf",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-K4-illustration-v1-20261012-13060df45065.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-K4-illustration-v1-20261012-13060df45065.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maseru/e08-maseru-K4-illustration-v1-20261012-13060df45065.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+      "sourceContentSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "6440087cef49d31e2eeb4d9868c09aafaf58f1666559a7c46db3d667342e0163",
+        "semanticContextSHA256": "6440087cef49d31e2eeb4d9868c09aafaf58f1666559a7c46db3d667342e0163",
+        "subjectTitle": "Hattu, joka antaa muodon",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic natural subject, ordinary materials or unbranded objects; no named copyrighted building or contemporary artwork reproduced.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/assets/e08-maseru-K4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "13060df45065d7c004a1580b97ddd1bb12ce47d8e53470a812436fb2fb5ad508",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi kartiomainen luonnonkuituhattu, yläosan lenkki ja leveä reuna. Punoksissa luontevaa kuituvaihtelua; ei henkilöitä, tekstiä tai logoja.",
+            "captionFi": "Havainnekuva: Hattu, joka antaa muodon.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+            "contentSha256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+            "targetCurrentlyPresent": true,
+            "targetText": "Mokorotlo on basothojen kartiomainen olkihattu ja Lesothon kansallinen tunnus. Se esiintyy lipussa ja ajoneuvojen rekisterikilvissä, ja Maserussa hatun muoto on lainattu myös Basotho Hat -käsityökaupan rakennukseen. Kingswaylla sijaitsevassa kaupassa myydään paikallisia käsitöitä. Hatun muoto yhdistetään perinteessä Thaba Bosiun lähellä kohoavaan Qiloane-vuoreen. Pieni käyttöesine kulkee näin maisemasta kansalliseen tunnukseen ja edelleen kaupungin arkkitehtuuriin.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+            "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+            "topicEvidence": "K4 kuvaa mokorotlon kartiomaiseksi olkihatuksi ja käsittelee sen muodon merkitystä.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+              "sourceContentSha256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+              "targetText": "Mokorotlo on basothojen kartiomainen olkihattu ja Lesothon kansallinen tunnus. Se esiintyy lipussa ja ajoneuvojen rekisterikilvissä, ja Maserussa hatun muoto on lainattu myös Basotho Hat -käsityökaupan rakennukseen. Kingswaylla sijaitsevassa kaupassa myydään paikallisia käsitöitä. Hatun muoto yhdistetään perinteessä Thaba Bosiun lähellä kohoavaan Qiloane-vuoreen. Pieni käyttöesine kulkee näin maisemasta kansalliseen tunnukseen ja edelleen kaupungin arkkitehtuuriin.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+              "wiki": "Mokorotlo",
+              "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+              "supportingSourceUrls": [
+                "https://en.wikipedia.org/wiki/Mokorotlo"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Maseru",
+                "https://en.wikivoyage.org/wiki/Lesotho",
+                "https://en.wikipedia.org/wiki/Mokorotlo"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Kartiomainen punottu olkihattu vastaa mokorotlo-aihetta. Kuva ei jäljittele Basotho Hat -rakennusta tai nimeä tiettyä kaupan tuotetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: Hattu, joka antaa muodon.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
+        "fileSHA256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "e08-maseru-K4-illustration-v1-20261012",
+          "sha256": "13060df45065d7c004a1580b97ddd1bb12ce47d8e53470a812436fb2fb5ad508",
+          "verdict": "accepted",
+          "reason": "Kartiomainen punottu olkihattu vastaa mokorotlo-aihetta. Kuva ei jäljittele Basotho Hat -rakennusta tai nimeä tiettyä kaupan tuotetta.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/assets/e08-maseru-K4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "13060df45065d7c004a1580b97ddd1bb12ce47d8e53470a812436fb2fb5ad508",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi kartiomainen luonnonkuituhattu, yläosan lenkki ja leveä reuna. Punoksissa luontevaa kuituvaihtelua; ei henkilöitä, tekstiä tai logoja.",
+            "captionFi": "Havainnekuva: Hattu, joka antaa muodon.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+            "contentSha256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+            "targetCurrentlyPresent": true,
+            "targetText": "Mokorotlo on basothojen kartiomainen olkihattu ja Lesothon kansallinen tunnus. Se esiintyy lipussa ja ajoneuvojen rekisterikilvissä, ja Maserussa hatun muoto on lainattu myös Basotho Hat -käsityökaupan rakennukseen. Kingswaylla sijaitsevassa kaupassa myydään paikallisia käsitöitä. Hatun muoto yhdistetään perinteessä Thaba Bosiun lähellä kohoavaan Qiloane-vuoreen. Pieni käyttöesine kulkee näin maisemasta kansalliseen tunnukseen ja edelleen kaupungin arkkitehtuuriin.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+            "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+            "topicEvidence": "K4 kuvaa mokorotlon kartiomaiseksi olkihatuksi ja käsittelee sen muodon merkitystä.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+              "sourceContentSha256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+              "targetText": "Mokorotlo on basothojen kartiomainen olkihattu ja Lesothon kansallinen tunnus. Se esiintyy lipussa ja ajoneuvojen rekisterikilvissä, ja Maserussa hatun muoto on lainattu myös Basotho Hat -käsityökaupan rakennukseen. Kingswaylla sijaitsevassa kaupassa myydään paikallisia käsitöitä. Hatun muoto yhdistetään perinteessä Thaba Bosiun lähellä kohoavaan Qiloane-vuoreen. Pieni käyttöesine kulkee näin maisemasta kansalliseen tunnukseen ja edelleen kaupungin arkkitehtuuriin.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+              "wiki": "Mokorotlo",
+              "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+              "supportingSourceUrls": [
+                "https://en.wikipedia.org/wiki/Mokorotlo"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Maseru",
+                "https://en.wikivoyage.org/wiki/Lesotho",
+                "https://en.wikipedia.org/wiki/Mokorotlo"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:19:36.773011+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa.json",
+            "sha256": "3230eda7ff0420a242f5fc68069cb73e2d73c28e9d78bf3f7aefd5a75e1475c2"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
+            "sha256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-K4-illustration-v1-20261012-13060df45065.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-K4-illustration-v1-20261012-13060df45065.png?t=9038033e104659a3",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-K4-illustration-v1-20261012-13060df45065.png",
+        "sha256": "9038033e104659a3e54f72d6739c61dc91112218aa483ab62eefd72f16df6edf",
+        "bytes": 2161396,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-maseru-K4-illustration-v1-20261012",
+        "nativeSHA256": "13060df45065d7c004a1580b97ddd1bb12ce47d8e53470a812436fb2fb5ad508",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maseru/e08-maseru-K4-illustration-v1-20261012-13060df45065.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "maseru",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-12T18:22:47.049490+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maseru/e08-maseru-K4-illustration-v1-20261012-13060df45065.png",
+        "sha256": "9038033e104659a3e54f72d6739c61dc91112218aa483ab62eefd72f16df6edf",
+        "bytes": 2161396,
+        "SHAReadAt": "2026-10-12T18:29:52.713064+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "13060df45065d7c004a1580b97ddd1bb12ce47d8e53470a812436fb2fb5ad508",
+        "rgbPixelSHA256": "87cf30d5fa02012ba5d5a657a001584305ea10f752dcb40896cd3a16da206f29",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+      "targetAfterSHA256": "6440087cef49d31e2eeb4d9868c09aafaf58f1666559a7c46db3d667342e0163",
+      "contextAfterSHA256": "6440087cef49d31e2eeb4d9868c09aafaf58f1666559a7c46db3d667342e0163"
+    },
+    {
+      "era": "e08",
+      "city": "maseru",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e08-maseru-L4-illustration-v2-20261012",
+      "galleryImageID": "e08-maseru-L4-illustration-v2-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-L4-illustration-v2-20261012-a635cf37b1cf.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Peite on myös vaate.",
+        "lyhyt": "Havainnekuva: Peite on myös vaate."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-L4-illustration-v2-20261012-a635cf37b1cf.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Peite on myös vaate.",
+        "lyhyt": "Havainnekuva: Peite on myös vaate."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "a635cf37b1cfd8b33a93c0146cbf00e55c7b54e96a3ed87d4b79081108712de5",
+      "exportSHA256": "db92ad2319381bdc35652d51881c94f1ef34e88d4c29d8270375a8569b6d9d09",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-L4-illustration-v2-20261012-a635cf37b1cf.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-L4-illustration-v2-20261012-a635cf37b1cf.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maseru/e08-maseru-L4-illustration-v2-20261012-a635cf37b1cf.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+      "sourceContentSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "63c0b53a774e9dcf4af57150438bca0584428053e9f449f0f1bbe23cc40c03f8",
+        "semanticContextSHA256": "63c0b53a774e9dcf4af57150438bca0584428053e9f449f0f1bbe23cc40c03f8",
+        "subjectTitle": "Peite on myös vaate",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic natural subject, ordinary materials or unbranded objects; no named copyrighted building or contemporary artwork reproduced.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/assets/e08-maseru-L4-illustration-v2-20261012/image.png",
+            "nativeSha256Verified": "a635cf37b1cfd8b33a93c0146cbf00e55c7b54e96a3ed87d4b79081108712de5",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Rajattu nimetön vartalo, jonka hartioilla on ruskea kuvioimaton kudottu peite. Luonteva kudos ja laskokset, ei kasvoja, käsiä tai merkintöjä.",
+            "captionFi": "Havainnekuva: Peite on myös vaate.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+            "contentSha256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+            "targetCurrentlyPresent": true,
+            "targetText": "Basothojen peite on Lesothossa myös hartioilla kannettava vaate. Sen käyttötavat liittyvät arkeen ja erilaisiin elämänvaiheisiin, eivät vain nukkumiseen. Perinteisen eläimennahkaisen viitan rinnalle ja tilalle tuli kudottuja tekstiilejä, ja peitteen historia kuuluu siten myös valmistuksen ja kaupankäynnin historiaan. Maserun kaupoissa näitä vaatteita myydään edelleen. Kaikki peitteet eivät ole samaa mallia tai materiaalia, eikä yksi kuvio edusta koko basothojen vaatetusperinnettä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+            "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+            "topicEvidence": "L4 kertoo peitteestä myös hartioilla kannettavana vaatteena ja eri mallien vaihtelusta.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+              "sourceContentSha256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+              "targetText": "Basothojen peite on Lesothossa myös hartioilla kannettava vaate. Sen käyttötavat liittyvät arkeen ja erilaisiin elämänvaiheisiin, eivät vain nukkumiseen. Perinteisen eläimennahkaisen viitan rinnalle ja tilalle tuli kudottuja tekstiilejä, ja peitteen historia kuuluu siten myös valmistuksen ja kaupankäynnin historiaan. Maserun kaupoissa näitä vaatteita myydään edelleen. Kaikki peitteet eivät ole samaa mallia tai materiaalia, eikä yksi kuvio edusta koko basothojen vaatetusperinnettä.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+              "wiki": "Basotho_blanket",
+              "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+              "supportingSourceUrls": [
+                "https://en.wikipedia.org/wiki/Basotho_blanket"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Maseru",
+                "https://en.wikivoyage.org/wiki/Lesotho",
+                "https://en.wikipedia.org/wiki/Mokorotlo"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Hartioilla kannettu yleinen peite havainnollistaa käyttötapaa jäljittelemättä tiettyä suojattua peitekuviota. Kasvot ja kädet jäävät pois."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: Peite on myös vaate.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
+        "fileSHA256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e08-maseru-L4-illustration-v2-20261012",
+          "sha256": "a635cf37b1cfd8b33a93c0146cbf00e55c7b54e96a3ed87d4b79081108712de5",
+          "verdict": "accepted",
+          "reason": "Hartioilla kannettu yleinen peite havainnollistaa käyttötapaa jäljittelemättä tiettyä suojattua peitekuviota. Kasvot ja kädet jäävät pois.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/assets/e08-maseru-L4-illustration-v2-20261012/image.png",
+            "nativeSha256Verified": "a635cf37b1cfd8b33a93c0146cbf00e55c7b54e96a3ed87d4b79081108712de5",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Rajattu nimetön vartalo, jonka hartioilla on ruskea kuvioimaton kudottu peite. Luonteva kudos ja laskokset, ei kasvoja, käsiä tai merkintöjä.",
+            "captionFi": "Havainnekuva: Peite on myös vaate.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+            "contentSha256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+            "targetCurrentlyPresent": true,
+            "targetText": "Basothojen peite on Lesothossa myös hartioilla kannettava vaate. Sen käyttötavat liittyvät arkeen ja erilaisiin elämänvaiheisiin, eivät vain nukkumiseen. Perinteisen eläimennahkaisen viitan rinnalle ja tilalle tuli kudottuja tekstiilejä, ja peitteen historia kuuluu siten myös valmistuksen ja kaupankäynnin historiaan. Maserun kaupoissa näitä vaatteita myydään edelleen. Kaikki peitteet eivät ole samaa mallia tai materiaalia, eikä yksi kuvio edusta koko basothojen vaatetusperinnettä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+            "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+            "topicEvidence": "L4 kertoo peitteestä myös hartioilla kannettavana vaatteena ja eri mallien vaihtelusta.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+              "sourceContentSha256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+              "targetText": "Basothojen peite on Lesothossa myös hartioilla kannettava vaate. Sen käyttötavat liittyvät arkeen ja erilaisiin elämänvaiheisiin, eivät vain nukkumiseen. Perinteisen eläimennahkaisen viitan rinnalle ja tilalle tuli kudottuja tekstiilejä, ja peitteen historia kuuluu siten myös valmistuksen ja kaupankäynnin historiaan. Maserun kaupoissa näitä vaatteita myydään edelleen. Kaikki peitteet eivät ole samaa mallia tai materiaalia, eikä yksi kuvio edusta koko basothojen vaatetusperinnettä.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+              "wiki": "Basotho_blanket",
+              "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+              "supportingSourceUrls": [
+                "https://en.wikipedia.org/wiki/Basotho_blanket"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Maseru",
+                "https://en.wikivoyage.org/wiki/Lesotho",
+                "https://en.wikipedia.org/wiki/Mokorotlo"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:19:59.873653+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa.json",
+            "sha256": "3230eda7ff0420a242f5fc68069cb73e2d73c28e9d78bf3f7aefd5a75e1475c2"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
+            "sha256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-L4-illustration-v2-20261012-a635cf37b1cf.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-L4-illustration-v2-20261012-a635cf37b1cf.png?t=db92ad2319381bdc",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-L4-illustration-v2-20261012-a635cf37b1cf.png",
+        "sha256": "db92ad2319381bdc35652d51881c94f1ef34e88d4c29d8270375a8569b6d9d09",
+        "bytes": 2609187,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-maseru-L4-illustration-v2-20261012",
+        "nativeSHA256": "a635cf37b1cfd8b33a93c0146cbf00e55c7b54e96a3ed87d4b79081108712de5",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maseru/e08-maseru-L4-illustration-v2-20261012-a635cf37b1cf.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "maseru",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T18:22:50.039676+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maseru/e08-maseru-L4-illustration-v2-20261012-a635cf37b1cf.png",
+        "sha256": "db92ad2319381bdc35652d51881c94f1ef34e88d4c29d8270375a8569b6d9d09",
+        "bytes": 2609187,
+        "SHAReadAt": "2026-10-12T18:29:52.912632+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "a635cf37b1cfd8b33a93c0146cbf00e55c7b54e96a3ed87d4b79081108712de5",
+        "rgbPixelSHA256": "f82a1885f8468ff658ba3f39b21d87ca8744fb90e016731e18f7d547540168b6",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+      "targetAfterSHA256": "63c0b53a774e9dcf4af57150438bca0584428053e9f449f0f1bbe23cc40c03f8",
+      "contextAfterSHA256": "63c0b53a774e9dcf4af57150438bca0584428053e9f449f0f1bbe23cc40c03f8"
+    },
+    {
+      "era": "e08",
+      "city": "maseru",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e08-maseru-photo-362d6f05a0163bbb",
+      "galleryImageID": "capital-cc-e08-maseru-photo-362d6f05a0163bbb",
+      "commonsFile": "ISS024-E-12750 - View of Lesotho - Maseru - Caledon River - mountains Qoaling Quotsaneng Likotsi - Maqalika Lake - Platbergsdrift (cropped).jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/photo-362d6f05a0163bbb38ee.jpg",
+        "suora": true,
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)",
+        "selite": "Maseru ja Mohokare-jokilaakso näkyvät ISS:ltä otetussa ilmakuvassa.",
+        "lyhyt": "Maseru ja Mohokare-jokilaakso näkyvät ISS:ltä otetussa ilmakuvassa.",
+        "tiedosto": "ISS024-E-12750 - View of Lesotho - Maseru - Caledon River - mountains Qoaling Quotsaneng Likotsi - Maqalika Lake - Platbergsdrift (cropped).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)",
+        "selite": "Maseru ja Mohokare-jokilaakso näkyvät ISS:ltä otetussa ilmakuvassa.",
+        "lyhyt": "Maseru ja Mohokare-jokilaakso näkyvät ISS:ltä otetussa ilmakuvassa.",
+        "tiedosto": "ISS024-E-12750 - View of Lesotho - Maseru - Caledon River - mountains Qoaling Quotsaneng Likotsi - Maqalika Lake - Platbergsdrift (cropped).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/photo-362d6f05a0163bbb38ee.jpg",
+        "suora": true,
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)",
+        "selite": "Maseru ja Mohokare-jokilaakso näkyvät ISS:ltä otetussa ilmakuvassa.",
+        "lyhyt": "Maseru ja Mohokare-jokilaakso näkyvät ISS:ltä otetussa ilmakuvassa.",
+        "tiedosto": "ISS024-E-12750 - View of Lesotho - Maseru - Caledon River - mountains Qoaling Quotsaneng Likotsi - Maqalika Lake - Platbergsdrift (cropped).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "362d6f05a0163bbb38ee8070b647a332a6f03cc3c9114f4fbe7f5fd88dd5f6ad",
+      "exportSHA256": "362d6f05a0163bbb38ee8070b647a332a6f03cc3c9114f4fbe7f5fd88dd5f6ad",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/photo-362d6f05a0163bbb38ee.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/photo-362d6f05a0163bbb38ee.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e08/maseru/1d0dc174938ced335e616f7cc2d3d0ef5015a1212b0ac1c009423c48a202803d.jpg",
+      "dimensions": [
+        1963,
+        1546
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+      "sourceContentSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e8e50d49fdb36f8973b7fadbfeadafd2d0f9d084e06c444dbc7491869ec10e08",
+        "semanticContextSHA256": "e8e50d49fdb36f8973b7fadbfeadafd2d0f9d084e06c444dbc7491869ec10e08",
+        "subjectTitle": "maseru — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:ISS024-E-12750_-_View_of_Lesotho_-_Maseru_-_Caledon_River_-_mountains_Qoaling_Quotsaneng_Likotsi_-_Maqalika_Lake_-_Platbergsdrift_(cropped).jpg#Licensing",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS024-E-12750_-_View_of_Lesotho_-_Maseru_-_Caledon_River_-_mountains_Qoaling_Quotsaneng_Likotsi_-_Maqalika_Lake_-_Platbergsdrift_(cropped).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/93/ISS024-E-12750_-_View_of_Lesotho_-_Maseru_-_Caledon_River_-_mountains_Qoaling_Quotsaneng_Likotsi_-_Maqalika_Lake_-_Platbergsdrift_%28cropped%29.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Tiedostosivun nimenomainen Author/Source ja kuvan Licensing-osio tarkistettu; ei uploaderista pääteltyä tekijää.",
+            "placeLayer": "English: View of Lesotho taken during ISS Expedition 24.",
+            "workLayer": "Aito NASA:n ISS-valokuva, ei AI tai piirretty kartta;alkuperäinen ISS024-E-12750 ja sen alue-/Features-metadata nimeävät Maseru/Caledon River, sijainti 29.3S 27.5E. Aluepinnan ilmakuva ei toisinna yksilöidyn nykytaideteoksen tai rakennuksen luovia yksityiskohtia. Cropista ei uusia karttamerkintöjä/kehystä.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/cc58ddb901714bf7-preview.jpg",
+            "pixelSHA256": "362d6f05a0163bbb38ee8070b647a332a6f03cc3c9114f4fbe7f5fd88dd5f6ad",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/cc58ddb901714bf7.html",
+            "reservation": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/maseru/PHOTO/owner.json",
+            "freshnessBoundary": "Kuvauspäivä tallennettu. Ei väitettä tuoreesta TRAVELER/opaskuvasta; PHOTO-tuoreus ei ole automaattinen portti.",
+            "independentQA": "avoin; CC-search-ehdokas",
+            "locationSupplement": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/e8d3385018d57d48.html"
+          },
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa-evidence/cc-9a60f358a0aaabc7/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa-evidence/cc-9a60f358a0aaabc7/source.html",
+            "sourceHTMLSHA256": "6af0ebf6ce56ee9d10260a26acb52385cc3c4960ea2f70f8fa02e477b20b4b3c",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS024-E-12750_-_View_of_Lesotho_-_Maseru_-_Caledon_River_-_mountains_Qoaling_Quotsaneng_Likotsi_-_Maqalika_Lake_-_Platbergsdrift_(cropped).jpg",
+            "sourceDescription": "English: View of Lesotho taken during ISS Expedition 24.",
+            "sourceDate": "28 August 2010, 12:41:10",
+            "author": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+            "license": "Public domain",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:ISS024-E-12750_-_View_of_Lesotho_-_Maseru_-_Caledon_River_-_mountains_Qoaling_Quotsaneng_Likotsi_-_Maqalika_Lake_-_Platbergsdrift_(cropped).jpg#Licensing",
+            "width": 1963,
+            "height": 1546,
+            "rightsEvidence": {
+              "photoLayer": "Tiedostosivun nimenomainen Author/Source ja kuvan Licensing-osio tarkistettu; ei uploaderista pääteltyä tekijää.",
+              "placeLayer": "English: View of Lesotho taken during ISS Expedition 24.",
+              "workLayer": "Aito NASA:n ISS-valokuva, ei AI tai piirretty kartta;alkuperäinen ISS024-E-12750 ja sen alue-/Features-metadata nimeävät Maseru/Caledon River, sijainti 29.3S 27.5E. Aluepinnan ilmakuva ei toisinna yksilöidyn nykytaideteoksen tai rakennuksen luovia yksityiskohtia. Cropista ei uusia karttamerkintöjä/kehystä.",
+              "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/cc58ddb901714bf7-preview.jpg",
+              "pixelSHA256": "362d6f05a0163bbb38ee8070b647a332a6f03cc3c9114f4fbe7f5fd88dd5f6ad",
+              "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/cc58ddb901714bf7.html",
+              "reservation": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/maseru/PHOTO/owner.json",
+              "freshnessBoundary": "Kuvauspäivä tallennettu. Ei väitettä tuoreesta TRAVELER/opaskuvasta; PHOTO-tuoreus ei ole automaattinen portti.",
+              "independentQA": "avoin; CC-search-ehdokas",
+              "locationSupplement": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/e8d3385018d57d48.html"
+            },
+            "sourceContentSHA256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+            "reviewedAt": "2026-10-12T19:20:19.212415+00:00"
+          },
+          "qaReason": "Alkuperäinen aito ISS-valokuva katsottu: kaupunki ja jokilaakso laajana aluepintana, ei kasvokuvia/nykyteoksen luovia yksityiskohtia tai kuvaan lisättyjä karttamerkintöjä. Commonsin Features-kenttä nimeää Maseru ja Caledon River, PhotoID ISS024-E-12750; Author Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center. Licensing sanoo nimenomaisesti solely created by NASA / public domain, ei vain NASA-ID:stä päätelty lupaa. Vuosi2010 on lähteestä ja PHOTOlle sallittu. Rajaus ei muuta tätä kuvitukseksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Maseru ja Mohokare-jokilaakso näkyvät ISS:ltä otetussa ilmakuvassa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa.json",
+        "fileSHA256": "3230eda7ff0420a242f5fc68069cb73e2d73c28e9d78bf3f7aefd5a75e1475c2",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "ISS024-E-12750 - View of Lesotho - Maseru - Caledon River - mountains Qoaling Quotsaneng Likotsi - Maqalika Lake - Platbergsdrift (cropped).jpg",
+          "sha256": "362d6f05a0163bbb38ee8070b647a332a6f03cc3c9114f4fbe7f5fd88dd5f6ad",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen aito ISS-valokuva katsottu: kaupunki ja jokilaakso laajana aluepintana, ei kasvokuvia/nykyteoksen luovia yksityiskohtia tai kuvaan lisättyjä karttamerkintöjä. Commonsin Features-kenttä nimeää Maseru ja Caledon River, PhotoID ISS024-E-12750; Author Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center. Licensing sanoo nimenomaisesti solely created by NASA / public domain, ei vain NASA-ID:stä päätelty lupaa. Vuosi2010 on lähteestä ja PHOTOlle sallittu. Rajaus ei muuta tätä kuvitukseksi.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa-evidence/cc-9a60f358a0aaabc7/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa-evidence/cc-9a60f358a0aaabc7/source.html",
+            "sourceHTMLSHA256": "6af0ebf6ce56ee9d10260a26acb52385cc3c4960ea2f70f8fa02e477b20b4b3c",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS024-E-12750_-_View_of_Lesotho_-_Maseru_-_Caledon_River_-_mountains_Qoaling_Quotsaneng_Likotsi_-_Maqalika_Lake_-_Platbergsdrift_(cropped).jpg",
+            "sourceDescription": "English: View of Lesotho taken during ISS Expedition 24.",
+            "sourceDate": "28 August 2010, 12:41:10",
+            "author": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+            "license": "Public domain",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:ISS024-E-12750_-_View_of_Lesotho_-_Maseru_-_Caledon_River_-_mountains_Qoaling_Quotsaneng_Likotsi_-_Maqalika_Lake_-_Platbergsdrift_(cropped).jpg#Licensing",
+            "width": 1963,
+            "height": 1546,
+            "rightsEvidence": {
+              "photoLayer": "Tiedostosivun nimenomainen Author/Source ja kuvan Licensing-osio tarkistettu; ei uploaderista pääteltyä tekijää.",
+              "placeLayer": "English: View of Lesotho taken during ISS Expedition 24.",
+              "workLayer": "Aito NASA:n ISS-valokuva, ei AI tai piirretty kartta;alkuperäinen ISS024-E-12750 ja sen alue-/Features-metadata nimeävät Maseru/Caledon River, sijainti 29.3S 27.5E. Aluepinnan ilmakuva ei toisinna yksilöidyn nykytaideteoksen tai rakennuksen luovia yksityiskohtia. Cropista ei uusia karttamerkintöjä/kehystä.",
+              "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/cc58ddb901714bf7-preview.jpg",
+              "pixelSHA256": "362d6f05a0163bbb38ee8070b647a332a6f03cc3c9114f4fbe7f5fd88dd5f6ad",
+              "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/cc58ddb901714bf7.html",
+              "reservation": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/maseru/PHOTO/owner.json",
+              "freshnessBoundary": "Kuvauspäivä tallennettu. Ei väitettä tuoreesta TRAVELER/opaskuvasta; PHOTO-tuoreus ei ole automaattinen portti.",
+              "independentQA": "avoin; CC-search-ehdokas",
+              "locationSupplement": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/e8d3385018d57d48.html"
+            },
+            "sourceContentSHA256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+            "reviewedAt": "2026-10-12T19:20:19.212415+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa.json",
+            "sha256": "3230eda7ff0420a242f5fc68069cb73e2d73c28e9d78bf3f7aefd5a75e1475c2"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
+            "sha256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "maseru",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "ISS024-E-12750 - View of Lesotho - Maseru - Caledon River - mountains Qoaling Quotsaneng Likotsi - Maqalika Lake - Platbergsdrift (cropped).jpg",
+        "sha256": "362d6f05a0163bbb38ee8070b647a332a6f03cc3c9114f4fbe7f5fd88dd5f6ad",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS024-E-12750_-_View_of_Lesotho_-_Maseru_-_Caledon_River_-_mountains_Qoaling_Quotsaneng_Likotsi_-_Maqalika_Lake_-_Platbergsdrift_(cropped).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/93/ISS024-E-12750_-_View_of_Lesotho_-_Maseru_-_Caledon_River_-_mountains_Qoaling_Quotsaneng_Likotsi_-_Maqalika_Lake_-_Platbergsdrift_%28cropped%29.jpg",
+        "author": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:ISS024-E-12750_-_View_of_Lesotho_-_Maseru_-_Caledon_River_-_mountains_Qoaling_Quotsaneng_Likotsi_-_Maqalika_Lake_-_Platbergsdrift_(cropped).jpg#Licensing",
+        "width": 1963,
+        "height": 1546,
+        "originalSHA256": "362d6f05a0163bbb38ee8070b647a332a6f03cc3c9114f4fbe7f5fd88dd5f6ad",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/photo-362d6f05a0163bbb38ee.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/photo-362d6f05a0163bbb38ee.jpg",
+        "bytes": 836317,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:21:43.484299+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "ISS024-E-12750 - View of Lesotho - Maseru - Caledon River - mountains Qoaling Quotsaneng Likotsi - Maqalika Lake - Platbergsdrift (cropped).jpg",
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)",
+        "selite": "Maseru ja Mohokare-jokilaakso näkyvät ISS:ltä otetussa ilmakuvassa.",
+        "lyhyt": "Maseru ja Mohokare-jokilaakso näkyvät ISS:ltä otetussa ilmakuvassa."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)",
+        "selite": "Maseru ja Mohokare-jokilaakso näkyvät ISS:ltä otetussa ilmakuvassa.",
+        "lyhyt": "Maseru ja Mohokare-jokilaakso näkyvät ISS:ltä otetussa ilmakuvassa.",
+        "tiedosto": "ISS024-E-12750 - View of Lesotho - Maseru - Caledon River - mountains Qoaling Quotsaneng Likotsi - Maqalika Lake - Platbergsdrift (cropped).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+      "targetAfterSHA256": "e8e50d49fdb36f8973b7fadbfeadafd2d0f9d084e06c444dbc7491869ec10e08",
+      "contextAfterSHA256": "e8e50d49fdb36f8973b7fadbfeadafd2d0f9d084e06c444dbc7491869ec10e08"
+    },
+    {
+      "era": "e08",
+      "city": "maseru",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e08-maseru-c1-65557ebd1921fd70",
+      "galleryImageID": "capital-cc-e08-maseru-c1-65557ebd1921fd70",
+      "commonsFile": "Maseru Lower Thetsane seen from Greater Heights Guesthouse.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/c1-65557ebd1921fd709adc.jpg",
+        "suora": true,
+        "lahde": "Ymblanter, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Lower Thetsanen kaupunginosaa Maserussa, 2025.",
+        "lyhyt": "Lower Thetsanen kaupunginosaa Maserussa, 2025.",
+        "tiedosto": "Maseru Lower Thetsane seen from Greater Heights Guesthouse.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Ymblanter, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Lower Thetsanen kaupunginosaa Maserussa, 2025.",
+        "lyhyt": "Lower Thetsanen kaupunginosaa Maserussa, 2025.",
+        "tiedosto": "Maseru Lower Thetsane seen from Greater Heights Guesthouse.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/c1-65557ebd1921fd709adc.jpg",
+        "suora": true,
+        "lahde": "Ymblanter, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Lower Thetsanen kaupunginosaa Maserussa, 2025.",
+        "lyhyt": "Lower Thetsanen kaupunginosaa Maserussa, 2025.",
+        "tiedosto": "Maseru Lower Thetsane seen from Greater Heights Guesthouse.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "65557ebd1921fd709adc0617e04f9bd9467b19e33e4f9ed8e6b7ebd568457d9a",
+      "exportSHA256": "65557ebd1921fd709adc0617e04f9bd9467b19e33e4f9ed8e6b7ebd568457d9a",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/c1-65557ebd1921fd709adc.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/c1-65557ebd1921fd709adc.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e08/maseru/8589f6578f37b633f8a90a2a9c6a91eefb066ad170488bb464cf656f787d9128.jpg",
+      "dimensions": [
+        5820,
+        3784
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+      "sourceContentSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "859a0ed7df2cd36866d834b1fb9e9ee7370118c1bc461b869dc1a73b9d3b66bc",
+        "semanticContextSHA256": "859a0ed7df2cd36866d834b1fb9e9ee7370118c1bc461b869dc1a73b9d3b66bc",
+        "subjectTitle": "Maseru",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Ymblanter",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Maseru_Lower_Thetsane_seen_from_Greater_Heights_Guesthouse.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Maseru_Lower_Thetsane_seen_from_Greater_Heights_Guesthouse.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Tiedostosivun nimenomainen Author, Source ja kuvan oma kaupallinen CC/PD-lisenssi tarkistettu.",
+            "workLayer": "Tavallisten asuin-/käyttörakennusten kokonaisuus, tiestö ja luonnollinen kukkula. Ei yksittäistä nimettyä suojattua luovaa arkkitehtuurikohdetta tai nykytaideteosta pääaiheena. Etäisten pienikokoisten ihmisten kasvonpiirteet eivät erotu. Ei lisättyä tekstiä, vesileimaa tai kehystä. Lesothon yleistä valokuva-FOP:ia ei oleteta.",
+            "placeBoundary": "Valokuvaajan oma Description nimeää Lower Thetsanen ja Maserun; kuvaus Greater Heights Guesthouselta 3.4.2025. Laaja todellinen asuinalueen ja luonnollisen kukkulamaaston näkymä.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/c67f9f4590a94159-preview.jpg",
+            "pixelSHA256": "65557ebd1921fd709adc0617e04f9bd9467b19e33e4f9ed8e6b7ebd568457d9a",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/c67f9f4590a94159.html",
+            "sourceSHA256": "4e70f252ce071b62474e9841a46f270f9645c54b0e5f9bcf01bbb5e5367ab4f3",
+            "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/maseru/C1/owner.json",
+            "notAlreadyInPack": "Täsmällinen tiedostonimi, underscore-nimi ja originalUrl haettu e08/js/packs: ei osumia.",
+            "independentQA": "avoin",
+            "searchRound": 2
+          },
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa-evidence/cc-c06475c0cdcf9973/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa-evidence/cc-c06475c0cdcf9973/source.html",
+            "sourceHTMLSHA256": "4e70f252ce071b62474e9841a46f270f9645c54b0e5f9bcf01bbb5e5367ab4f3",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Maseru_Lower_Thetsane_seen_from_Greater_Heights_Guesthouse.jpg",
+            "sourceDescription": "English: Lower Thetsane seen from Greater Heights Guesthouse, Maseru, Maseru District, Lesotho",
+            "sourceDate": "3 April 2025, 06:02:48 +01:00",
+            "author": "Ymblanter",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "width": 5820,
+            "height": 3784,
+            "rightsEvidence": {
+              "photoLayer": "Tiedostosivun nimenomainen Author, Source ja kuvan oma kaupallinen CC/PD-lisenssi tarkistettu.",
+              "workLayer": "Tavallisten asuin-/käyttörakennusten kokonaisuus, tiestö ja luonnollinen kukkula. Ei yksittäistä nimettyä suojattua luovaa arkkitehtuurikohdetta tai nykytaideteosta pääaiheena. Etäisten pienikokoisten ihmisten kasvonpiirteet eivät erotu. Ei lisättyä tekstiä, vesileimaa tai kehystä. Lesothon yleistä valokuva-FOP:ia ei oleteta.",
+              "placeBoundary": "Valokuvaajan oma Description nimeää Lower Thetsanen ja Maserun; kuvaus Greater Heights Guesthouselta 3.4.2025. Laaja todellinen asuinalueen ja luonnollisen kukkulamaaston näkymä.",
+              "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/c67f9f4590a94159-preview.jpg",
+              "pixelSHA256": "65557ebd1921fd709adc0617e04f9bd9467b19e33e4f9ed8e6b7ebd568457d9a",
+              "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/c67f9f4590a94159.html",
+              "sourceSHA256": "4e70f252ce071b62474e9841a46f270f9645c54b0e5f9bcf01bbb5e5367ab4f3",
+              "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/maseru/C1/owner.json",
+              "notAlreadyInPack": "Täsmällinen tiedostonimi, underscore-nimi ja originalUrl haettu e08/js/packs: ei osumia.",
+              "independentQA": "avoin",
+              "searchRound": 2
+            },
+            "sourceContentSHA256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+            "reviewedAt": "2026-10-12T20:03:45.559987+00:00",
+            "inputFragment": "cc-selection.json",
+            "selectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-selection.json",
+            "selectionSHA256": "22a31410590d2c03afce406ce435070bb75a62ce42826b26cbabadebe45cb14f",
+            "pixelInspection": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa-evidence/C1-people-pixel-proof.png",
+              "cropHeight": 600,
+              "cropWidth": 750,
+              "cropOffsetY": 3150,
+              "cropOffsetX": 3150,
+              "method": "native sips PNG-katseluote alkuperäispikseleistä; lähdeassetia ei muokattu"
+            }
+          },
+          "qaReason": "Alkuperäinen ja lähimpien ihmisten natiivipikseliote katsottu itse. Todellinen laaja Lower Thetsanen asuinalue, katuverkko, puusto ja kukkulamaisema; lähteen Description nimeää Maseru/Greater Heights Guesthouse. Lähin mies selkäviistoon, kasvot jäävät pehmeiksi/tummiksi ilman luettavia piirteitä; lapsi osin pylvään takana ja muut ihmiset kaukana. Ei lisättyä tekstiä/kehystä/vesileimaa tai yksilöityä nykytaidetta pääaiheena. Tavanomaiset asuin-/käyttörakenteet ovat laajan kaupunginosan kokonaisuutta; tästä ei johdeta kaikkien Lesothon rakennusten FOP/PD-lupaa. Ymblanter/CC BY-SA4.0 nimenomaisista Author/Licensing-kentistä,5820×3784 ja nativeSHA varmistettu; Date3.4.2025 ja caption2025 vastaavat. Eri tiedosto kuin C2."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Lower Thetsanen kaupunginosaa Maserussa, 2025.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa.json",
+        "fileSHA256": "3230eda7ff0420a242f5fc68069cb73e2d73c28e9d78bf3f7aefd5a75e1475c2",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "Maseru Lower Thetsane seen from Greater Heights Guesthouse.jpg",
+          "sha256": "65557ebd1921fd709adc0617e04f9bd9467b19e33e4f9ed8e6b7ebd568457d9a",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen ja lähimpien ihmisten natiivipikseliote katsottu itse. Todellinen laaja Lower Thetsanen asuinalue, katuverkko, puusto ja kukkulamaisema; lähteen Description nimeää Maseru/Greater Heights Guesthouse. Lähin mies selkäviistoon, kasvot jäävät pehmeiksi/tummiksi ilman luettavia piirteitä; lapsi osin pylvään takana ja muut ihmiset kaukana. Ei lisättyä tekstiä/kehystä/vesileimaa tai yksilöityä nykytaidetta pääaiheena. Tavanomaiset asuin-/käyttörakenteet ovat laajan kaupunginosan kokonaisuutta; tästä ei johdeta kaikkien Lesothon rakennusten FOP/PD-lupaa. Ymblanter/CC BY-SA4.0 nimenomaisista Author/Licensing-kentistä,5820×3784 ja nativeSHA varmistettu; Date3.4.2025 ja caption2025 vastaavat. Eri tiedosto kuin C2.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa-evidence/cc-c06475c0cdcf9973/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa-evidence/cc-c06475c0cdcf9973/source.html",
+            "sourceHTMLSHA256": "4e70f252ce071b62474e9841a46f270f9645c54b0e5f9bcf01bbb5e5367ab4f3",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Maseru_Lower_Thetsane_seen_from_Greater_Heights_Guesthouse.jpg",
+            "sourceDescription": "English: Lower Thetsane seen from Greater Heights Guesthouse, Maseru, Maseru District, Lesotho",
+            "sourceDate": "3 April 2025, 06:02:48 +01:00",
+            "author": "Ymblanter",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "width": 5820,
+            "height": 3784,
+            "rightsEvidence": {
+              "photoLayer": "Tiedostosivun nimenomainen Author, Source ja kuvan oma kaupallinen CC/PD-lisenssi tarkistettu.",
+              "workLayer": "Tavallisten asuin-/käyttörakennusten kokonaisuus, tiestö ja luonnollinen kukkula. Ei yksittäistä nimettyä suojattua luovaa arkkitehtuurikohdetta tai nykytaideteosta pääaiheena. Etäisten pienikokoisten ihmisten kasvonpiirteet eivät erotu. Ei lisättyä tekstiä, vesileimaa tai kehystä. Lesothon yleistä valokuva-FOP:ia ei oleteta.",
+              "placeBoundary": "Valokuvaajan oma Description nimeää Lower Thetsanen ja Maserun; kuvaus Greater Heights Guesthouselta 3.4.2025. Laaja todellinen asuinalueen ja luonnollisen kukkulamaaston näkymä.",
+              "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/c67f9f4590a94159-preview.jpg",
+              "pixelSHA256": "65557ebd1921fd709adc0617e04f9bd9467b19e33e4f9ed8e6b7ebd568457d9a",
+              "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/c67f9f4590a94159.html",
+              "sourceSHA256": "4e70f252ce071b62474e9841a46f270f9645c54b0e5f9bcf01bbb5e5367ab4f3",
+              "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/maseru/C1/owner.json",
+              "notAlreadyInPack": "Täsmällinen tiedostonimi, underscore-nimi ja originalUrl haettu e08/js/packs: ei osumia.",
+              "independentQA": "avoin",
+              "searchRound": 2
+            },
+            "sourceContentSHA256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+            "reviewedAt": "2026-10-12T20:03:45.559987+00:00",
+            "inputFragment": "cc-selection.json",
+            "selectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-selection.json",
+            "selectionSHA256": "22a31410590d2c03afce406ce435070bb75a62ce42826b26cbabadebe45cb14f",
+            "pixelInspection": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa-evidence/C1-people-pixel-proof.png",
+              "cropHeight": 600,
+              "cropWidth": 750,
+              "cropOffsetY": 3150,
+              "cropOffsetX": 3150,
+              "method": "native sips PNG-katseluote alkuperäispikseleistä; lähdeassetia ei muokattu"
+            }
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa.json",
+            "sha256": "3230eda7ff0420a242f5fc68069cb73e2d73c28e9d78bf3f7aefd5a75e1475c2"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
+            "sha256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "maseru",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Maseru Lower Thetsane seen from Greater Heights Guesthouse.jpg",
+        "sha256": "65557ebd1921fd709adc0617e04f9bd9467b19e33e4f9ed8e6b7ebd568457d9a",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Maseru_Lower_Thetsane_seen_from_Greater_Heights_Guesthouse.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Maseru_Lower_Thetsane_seen_from_Greater_Heights_Guesthouse.jpg",
+        "author": "Ymblanter",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 5820,
+        "height": 3784,
+        "originalSHA256": "65557ebd1921fd709adc0617e04f9bd9467b19e33e4f9ed8e6b7ebd568457d9a",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/c1-65557ebd1921fd709adc.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/c1-65557ebd1921fd709adc.jpg",
+        "bytes": 15121274,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:04:13.001635+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Maseru Lower Thetsane seen from Greater Heights Guesthouse.jpg",
+        "lahde": "Ymblanter, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Lower Thetsanen kaupunginosaa Maserussa, 2025.",
+        "lyhyt": "Lower Thetsanen kaupunginosaa Maserussa, 2025."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Ymblanter, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Lower Thetsanen kaupunginosaa Maserussa, 2025.",
+        "lyhyt": "Lower Thetsanen kaupunginosaa Maserussa, 2025.",
+        "tiedosto": "Maseru Lower Thetsane seen from Greater Heights Guesthouse.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+      "targetAfterSHA256": "859a0ed7df2cd36866d834b1fb9e9ee7370118c1bc461b869dc1a73b9d3b66bc",
+      "contextAfterSHA256": "859a0ed7df2cd36866d834b1fb9e9ee7370118c1bc461b869dc1a73b9d3b66bc"
+    },
+    {
+      "era": "e08",
+      "city": "maseru",
+      "slot": "C2",
+      "type": "commons",
+      "assetID": "capital-cc-e08-maseru-c2-a0589b122f0d9dad",
+      "galleryImageID": "capital-cc-e08-maseru-c2-a0589b122f0d9dad",
+      "commonsFile": "Maseru Moretele Street and Qoaling Mountain seen from Greater Heights Guesthouse.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/c2-a0589b122f0d9dad85df.jpg",
+        "suora": true,
+        "lahde": "Ymblanter, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Moretele Street ja Qoalingin vuorimaisema Maserussa, 2025.",
+        "lyhyt": "Moretele Street ja Qoalingin vuorimaisema Maserussa, 2025.",
+        "tiedosto": "Maseru Moretele Street and Qoaling Mountain seen from Greater Heights Guesthouse.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Ymblanter, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Moretele Street ja Qoalingin vuorimaisema Maserussa, 2025.",
+        "lyhyt": "Moretele Street ja Qoalingin vuorimaisema Maserussa, 2025.",
+        "tiedosto": "Maseru Moretele Street and Qoaling Mountain seen from Greater Heights Guesthouse.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/c2-a0589b122f0d9dad85df.jpg",
+        "suora": true,
+        "lahde": "Ymblanter, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Moretele Street ja Qoalingin vuorimaisema Maserussa, 2025.",
+        "lyhyt": "Moretele Street ja Qoalingin vuorimaisema Maserussa, 2025.",
+        "tiedosto": "Maseru Moretele Street and Qoaling Mountain seen from Greater Heights Guesthouse.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "a0589b122f0d9dad85dffd9cd8d5f5f93ad7f8475977f12436f7ace0583545fc",
+      "exportSHA256": "a0589b122f0d9dad85dffd9cd8d5f5f93ad7f8475977f12436f7ace0583545fc",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/c2-a0589b122f0d9dad85df.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/c2-a0589b122f0d9dad85df.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e08/maseru/a16639b8e873ef7810df20ae97b0cd992f7d19632dd07f46cd6796938e31a63a.jpg",
+      "dimensions": [
+        6000,
+        4000
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+      "sourceContentSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "4ce0c4bb08644871a964c6cd762d6569d6710191206d6db6873774bd782ce66d",
+        "semanticContextSHA256": "4ce0c4bb08644871a964c6cd762d6569d6710191206d6db6873774bd782ce66d",
+        "subjectTitle": "Maseru",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Ymblanter",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Maseru_Moretele_Street_and_Qoaling_Mountain_seen_from_Greater_Heights_Guesthouse.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Maseru_Moretele_Street_and_Qoaling_Mountain_seen_from_Greater_Heights_Guesthouse.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Tiedostosivun nimenomainen Author, Source ja kuvan oma kaupallinen CC/PD-lisenssi tarkistettu.",
+            "workLayer": "Laaja tavallisen asutuksen, tien, käyttörakenteiden ja luonnollisen kukkulan näkymä. Ei yksittäistä nimettyä suojattua luovaa arkkitehtuurikohdetta tai taideteosta pääaiheena. Ihmiset etäisiä, kasvot eivät erotu; aidot kauppakyltit sivuosassa, ei mainoskuva tai lisätty teksti. Ei kehystä tai vesileimaa.",
+            "placeBoundary": "Kuvaajan oma Description: Moretele Street and Qoaling Mountain, Maseru; 3.4.2025. Sama Greater Heights -kuvauspaikka kuin C1, mutta eri suunta/alue, ei saman tiedoston rajaus. Kukkulan ja kaupunginosan todellinen asettelu näkyy.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/4c78081002c4317d-preview.jpg",
+            "pixelSHA256": "a0589b122f0d9dad85dffd9cd8d5f5f93ad7f8475977f12436f7ace0583545fc",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/4c78081002c4317d.html",
+            "sourceSHA256": "2371f952de45f159d31398af69002aa5782e52c43bdd55fc6759a522b840c99f",
+            "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/maseru/C2/owner.json",
+            "notAlreadyInPack": "Täsmällinen tiedostonimi, underscore-nimi ja originalUrl haettu e08/js/packs: ei osumia.",
+            "independentQA": "avoin",
+            "searchRound": 2
+          },
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa-evidence/cc-0af0bc515c2d3b21/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa-evidence/cc-0af0bc515c2d3b21/source.html",
+            "sourceHTMLSHA256": "2371f952de45f159d31398af69002aa5782e52c43bdd55fc6759a522b840c99f",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Maseru_Moretele_Street_and_Qoaling_Mountain_seen_from_Greater_Heights_Guesthouse.jpg",
+            "sourceDescription": "English: Moretele Street and Qoaling Mountain seen from Greater Heights Guesthouse, Maseru, Maseru District, Lesotho",
+            "sourceDate": "3 April 2025, 06:02:39 +01:00",
+            "author": "Ymblanter",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "width": 6000,
+            "height": 4000,
+            "rightsEvidence": {
+              "photoLayer": "Tiedostosivun nimenomainen Author, Source ja kuvan oma kaupallinen CC/PD-lisenssi tarkistettu.",
+              "workLayer": "Laaja tavallisen asutuksen, tien, käyttörakenteiden ja luonnollisen kukkulan näkymä. Ei yksittäistä nimettyä suojattua luovaa arkkitehtuurikohdetta tai taideteosta pääaiheena. Ihmiset etäisiä, kasvot eivät erotu; aidot kauppakyltit sivuosassa, ei mainoskuva tai lisätty teksti. Ei kehystä tai vesileimaa.",
+              "placeBoundary": "Kuvaajan oma Description: Moretele Street and Qoaling Mountain, Maseru; 3.4.2025. Sama Greater Heights -kuvauspaikka kuin C1, mutta eri suunta/alue, ei saman tiedoston rajaus. Kukkulan ja kaupunginosan todellinen asettelu näkyy.",
+              "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/4c78081002c4317d-preview.jpg",
+              "pixelSHA256": "a0589b122f0d9dad85dffd9cd8d5f5f93ad7f8475977f12436f7ace0583545fc",
+              "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/4c78081002c4317d.html",
+              "sourceSHA256": "2371f952de45f159d31398af69002aa5782e52c43bdd55fc6759a522b840c99f",
+              "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/maseru/C2/owner.json",
+              "notAlreadyInPack": "Täsmällinen tiedostonimi, underscore-nimi ja originalUrl haettu e08/js/packs: ei osumia.",
+              "independentQA": "avoin",
+              "searchRound": 2
+            },
+            "sourceContentSHA256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+            "reviewedAt": "2026-10-12T20:03:48.317575+00:00",
+            "inputFragment": "cc-selection.json",
+            "selectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-selection.json",
+            "selectionSHA256": "22a31410590d2c03afce406ce435070bb75a62ce42826b26cbabadebe45cb14f",
+            "pixelInspection": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa-evidence/C2-people-pixel-proof.png",
+              "cropHeight": 500,
+              "cropWidth": 1200,
+              "cropOffsetY": 2650,
+              "cropOffsetX": 2300,
+              "method": "native sips PNG-katseluote alkuperäispikseleistä; lähdeassetia ei muokattu"
+            }
+          },
+          "qaReason": "Alkuperäinen ja kolmen lähimmän jalankulkijan natiivipikseliote katsottu itse. Aito laaja Moretele Streetin, asuinkorttelien ja Qoalingin vuorireunan kaupunkiasettelu; lähteen Description yksilöi Maserun ja kuvauspaikan. Kaikkia ihmisiä ei väitetä selin oleviksi, mutta pienistä pehmeistä päistä ei erotu tunnistettavia kasvonpiirteitä. Luonnolliset kauppakyltit ovat kaupunkikokonaisuuden sivussa, kuva ei mainos-/pakkauskuva eikä päälle lisättyä tekstiä/vesileimaa/kehystä ole. Yksittäistä nykytaide-/arkkitehtuuriteosta ei nosteta pääaiheeksi; ei blanketFOP-lupaa muille Lesothon kuville. Ymblanter/CC BY-SA4.0 lähdekentistä,6000×4000/nativeSHA varmistettu; päivä3.4.2025 säilytetään. C1/C2 eri tiedostot ja suunta, ei saman kuvan kierrätys."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Moretele Street ja Qoalingin vuorimaisema Maserussa, 2025.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa.json",
+        "fileSHA256": "3230eda7ff0420a242f5fc68069cb73e2d73c28e9d78bf3f7aefd5a75e1475c2",
+        "item": {
+          "slot": "C2",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+          "commonsFile": "Maseru Moretele Street and Qoaling Mountain seen from Greater Heights Guesthouse.jpg",
+          "sha256": "a0589b122f0d9dad85dffd9cd8d5f5f93ad7f8475977f12436f7ace0583545fc",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen ja kolmen lähimmän jalankulkijan natiivipikseliote katsottu itse. Aito laaja Moretele Streetin, asuinkorttelien ja Qoalingin vuorireunan kaupunkiasettelu; lähteen Description yksilöi Maserun ja kuvauspaikan. Kaikkia ihmisiä ei väitetä selin oleviksi, mutta pienistä pehmeistä päistä ei erotu tunnistettavia kasvonpiirteitä. Luonnolliset kauppakyltit ovat kaupunkikokonaisuuden sivussa, kuva ei mainos-/pakkauskuva eikä päälle lisättyä tekstiä/vesileimaa/kehystä ole. Yksittäistä nykytaide-/arkkitehtuuriteosta ei nosteta pääaiheeksi; ei blanketFOP-lupaa muille Lesothon kuville. Ymblanter/CC BY-SA4.0 lähdekentistä,6000×4000/nativeSHA varmistettu; päivä3.4.2025 säilytetään. C1/C2 eri tiedostot ja suunta, ei saman kuvan kierrätys.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa-evidence/cc-0af0bc515c2d3b21/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa-evidence/cc-0af0bc515c2d3b21/source.html",
+            "sourceHTMLSHA256": "2371f952de45f159d31398af69002aa5782e52c43bdd55fc6759a522b840c99f",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Maseru_Moretele_Street_and_Qoaling_Mountain_seen_from_Greater_Heights_Guesthouse.jpg",
+            "sourceDescription": "English: Moretele Street and Qoaling Mountain seen from Greater Heights Guesthouse, Maseru, Maseru District, Lesotho",
+            "sourceDate": "3 April 2025, 06:02:39 +01:00",
+            "author": "Ymblanter",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "width": 6000,
+            "height": 4000,
+            "rightsEvidence": {
+              "photoLayer": "Tiedostosivun nimenomainen Author, Source ja kuvan oma kaupallinen CC/PD-lisenssi tarkistettu.",
+              "workLayer": "Laaja tavallisen asutuksen, tien, käyttörakenteiden ja luonnollisen kukkulan näkymä. Ei yksittäistä nimettyä suojattua luovaa arkkitehtuurikohdetta tai taideteosta pääaiheena. Ihmiset etäisiä, kasvot eivät erotu; aidot kauppakyltit sivuosassa, ei mainoskuva tai lisätty teksti. Ei kehystä tai vesileimaa.",
+              "placeBoundary": "Kuvaajan oma Description: Moretele Street and Qoaling Mountain, Maseru; 3.4.2025. Sama Greater Heights -kuvauspaikka kuin C1, mutta eri suunta/alue, ei saman tiedoston rajaus. Kukkulan ja kaupunginosan todellinen asettelu näkyy.",
+              "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/4c78081002c4317d-preview.jpg",
+              "pixelSHA256": "a0589b122f0d9dad85dffd9cd8d5f5f93ad7f8475977f12436f7ace0583545fc",
+              "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/4c78081002c4317d.html",
+              "sourceSHA256": "2371f952de45f159d31398af69002aa5782e52c43bdd55fc6759a522b840c99f",
+              "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/maseru/C2/owner.json",
+              "notAlreadyInPack": "Täsmällinen tiedostonimi, underscore-nimi ja originalUrl haettu e08/js/packs: ei osumia.",
+              "independentQA": "avoin",
+              "searchRound": 2
+            },
+            "sourceContentSHA256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+            "reviewedAt": "2026-10-12T20:03:48.317575+00:00",
+            "inputFragment": "cc-selection.json",
+            "selectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-selection.json",
+            "selectionSHA256": "22a31410590d2c03afce406ce435070bb75a62ce42826b26cbabadebe45cb14f",
+            "pixelInspection": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa-evidence/C2-people-pixel-proof.png",
+              "cropHeight": 500,
+              "cropWidth": 1200,
+              "cropOffsetY": 2650,
+              "cropOffsetX": 2300,
+              "method": "native sips PNG-katseluote alkuperäispikseleistä; lähdeassetia ei muokattu"
+            }
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa.json",
+            "sha256": "3230eda7ff0420a242f5fc68069cb73e2d73c28e9d78bf3f7aefd5a75e1475c2"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
+            "sha256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "maseru",
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "Maseru Moretele Street and Qoaling Mountain seen from Greater Heights Guesthouse.jpg",
+        "sha256": "a0589b122f0d9dad85dffd9cd8d5f5f93ad7f8475977f12436f7ace0583545fc",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Maseru_Moretele_Street_and_Qoaling_Mountain_seen_from_Greater_Heights_Guesthouse.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Maseru_Moretele_Street_and_Qoaling_Mountain_seen_from_Greater_Heights_Guesthouse.jpg",
+        "author": "Ymblanter",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 6000,
+        "height": 4000,
+        "originalSHA256": "a0589b122f0d9dad85dffd9cd8d5f5f93ad7f8475977f12436f7ace0583545fc",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/c2-a0589b122f0d9dad85df.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/c2-a0589b122f0d9dad85df.jpg",
+        "bytes": 18545400,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:04:17.535263+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Maseru Moretele Street and Qoaling Mountain seen from Greater Heights Guesthouse.jpg",
+        "lahde": "Ymblanter, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Moretele Street ja Qoalingin vuorimaisema Maserussa, 2025.",
+        "lyhyt": "Moretele Street ja Qoalingin vuorimaisema Maserussa, 2025."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Ymblanter, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Moretele Street ja Qoalingin vuorimaisema Maserussa, 2025.",
+        "lyhyt": "Moretele Street ja Qoalingin vuorimaisema Maserussa, 2025.",
+        "tiedosto": "Maseru Moretele Street and Qoaling Mountain seen from Greater Heights Guesthouse.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+      "targetAfterSHA256": "4ce0c4bb08644871a964c6cd762d6569d6710191206d6db6873774bd782ce66d",
+      "contextAfterSHA256": "4ce0c4bb08644871a964c6cd762d6569d6710191206d6db6873774bd782ce66d"
+    },
+    {
+      "era": "e08",
+      "city": "maseru",
+      "slot": "C3",
+      "type": "commons",
+      "assetID": "capital-cc-e08-maseru-c3-a48bcede3c90e176",
+      "galleryImageID": "capital-cc-e08-maseru-c3-a48bcede3c90e176",
+      "commonsFile": "Maseru South West Phase III (Masowe III) Housing Estate - panoramio.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/c3-a48bcede3c90e17606b2.jpg",
+        "suora": true,
+        "lahde": "Paramente Phamotse, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Historiallinen näkymä Masowe III -asutukseen Maserun lounaispuolella; julkaistu 2010.",
+        "lyhyt": "Historiallinen näkymä Masowe III -asutukseen Maserun lounaispuolella; julkaistu 2010.",
+        "tiedosto": "Maseru South West Phase III (Masowe III) Housing Estate - panoramio.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Paramente Phamotse, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Historiallinen näkymä Masowe III -asutukseen Maserun lounaispuolella; julkaistu 2010.",
+        "lyhyt": "Historiallinen näkymä Masowe III -asutukseen Maserun lounaispuolella; julkaistu 2010.",
+        "tiedosto": "Maseru South West Phase III (Masowe III) Housing Estate - panoramio.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/c3-a48bcede3c90e17606b2.jpg",
+        "suora": true,
+        "lahde": "Paramente Phamotse, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Historiallinen näkymä Masowe III -asutukseen Maserun lounaispuolella; julkaistu 2010.",
+        "lyhyt": "Historiallinen näkymä Masowe III -asutukseen Maserun lounaispuolella; julkaistu 2010.",
+        "tiedosto": "Maseru South West Phase III (Masowe III) Housing Estate - panoramio.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "a48bcede3c90e17606b26bc5904f6be334517d9b2b7bf3f257e2b4320bb86c01",
+      "exportSHA256": "a48bcede3c90e17606b26bc5904f6be334517d9b2b7bf3f257e2b4320bb86c01",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/c3-a48bcede3c90e17606b2.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/c3-a48bcede3c90e17606b2.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e08/maseru/2a8db40bcd8d66c1167fd3383d0badb1c28e98aeb52fc60f0e0b16794788b881.jpg",
+      "dimensions": [
+        1498,
+        878
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+      "sourceContentSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e8e89995a7aecc05e7026bc889d6bf5c2ed718bbbc83fec5f7f111977dbd33d1",
+        "semanticContextSHA256": "e8e89995a7aecc05e7026bc889d6bf5c2ed718bbbc83fec5f7f111977dbd33d1",
+        "subjectTitle": "Maseru",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Paramente Phamotse",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Maseru_South_West_Phase_III_(Masowe_III)_Housing_Estate_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Maseru_South_West_Phase_III_%28Masowe_III%29_Housing_Estate_-_panoramio.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Tiedostosivun nimenomainen Author, Source ja kuvan oma kaupallinen CC/PD-lisenssi tarkistettu.",
+            "workLayer": "Laaja asutus- ja maastokokonaisuus, tavallisia matalia toiminnallisia asuintaloja ja luonnollista maisemaa. Ei yksittäistä nimettyä suojattua luovaa teosta pääaiheena, tunnistettavia kasvoja, lisättyä tekstiä, vesileimaa tai kehystä.",
+            "placeBoundary": "Commonsin Description nimeää Maseru South West Phase III (Masowe III) Housing Estate. Date on 20.7.2010 alkuperäinen julkaisu, ei varmistettu kuvauspäivä. Ei väitetä nykyiseksi tai tuoreeksi kaupunginosan tilanteeksi. Eri kuvauspaikka/alue kuin C1/C2 Greater Heightsin näkymät.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/0e4d4ad45c68554d-preview.jpg",
+            "pixelSHA256": "a48bcede3c90e17606b26bc5904f6be334517d9b2b7bf3f257e2b4320bb86c01",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/0e4d4ad45c68554d.html",
+            "sourceSHA256": "a642ea2b06ae984a824c21d2e5f72646515d62f2f6b23ab50827ceb16dfb7ec0",
+            "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/maseru/C3/owner.json",
+            "notAlreadyInPack": "Täsmällinen tiedostonimi, underscore-nimi ja originalUrl haettu e08/js/packs: ei osumia.",
+            "independentQA": "avoin",
+            "searchRound": 2
+          },
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa-evidence/cc-b800f9425401e641/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa-evidence/cc-b800f9425401e641/source.html",
+            "sourceHTMLSHA256": "a642ea2b06ae984a824c21d2e5f72646515d62f2f6b23ab50827ceb16dfb7ec0",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Maseru_South_West_Phase_III_(Masowe_III)_Housing_Estate_-_panoramio.jpg",
+            "sourceDescription": "Maseru South West Phase III (Masowe III) Housing Estate",
+            "sourceDate": "20 July 2010 (original upload date)",
+            "author": "Paramente Phamotse",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "width": 1498,
+            "height": 878,
+            "rightsEvidence": {
+              "photoLayer": "Tiedostosivun nimenomainen Author, Source ja kuvan oma kaupallinen CC/PD-lisenssi tarkistettu.",
+              "workLayer": "Laaja asutus- ja maastokokonaisuus, tavallisia matalia toiminnallisia asuintaloja ja luonnollista maisemaa. Ei yksittäistä nimettyä suojattua luovaa teosta pääaiheena, tunnistettavia kasvoja, lisättyä tekstiä, vesileimaa tai kehystä.",
+              "placeBoundary": "Commonsin Description nimeää Maseru South West Phase III (Masowe III) Housing Estate. Date on 20.7.2010 alkuperäinen julkaisu, ei varmistettu kuvauspäivä. Ei väitetä nykyiseksi tai tuoreeksi kaupunginosan tilanteeksi. Eri kuvauspaikka/alue kuin C1/C2 Greater Heightsin näkymät.",
+              "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/0e4d4ad45c68554d-preview.jpg",
+              "pixelSHA256": "a48bcede3c90e17606b26bc5904f6be334517d9b2b7bf3f257e2b4320bb86c01",
+              "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/0e4d4ad45c68554d.html",
+              "sourceSHA256": "a642ea2b06ae984a824c21d2e5f72646515d62f2f6b23ab50827ceb16dfb7ec0",
+              "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/maseru/C3/owner.json",
+              "notAlreadyInPack": "Täsmällinen tiedostonimi, underscore-nimi ja originalUrl haettu e08/js/packs: ei osumia.",
+              "independentQA": "avoin",
+              "searchRound": 2
+            },
+            "sourceContentSHA256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+            "reviewedAt": "2026-10-12T20:05:00.927736+00:00",
+            "inputFragment": "cc-selection.json",
+            "selectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-selection.json",
+            "selectionSHA256": "bdb2a1e3f682f74ae43ca7ca3c518392b19b9a96af27f19ae4803edb632e70f0"
+          },
+          "qaReason": "Oma natiivikatselu1498×878: aito laaja Masowe III -asutusalueen ja maaston näkymä, kaupunginosan oikea rakennusten/tiestön/luonnon asettelu näkyy. Ei tunnistettavia kasvoja, lisättyä tekstiä/vesileimaa/kehystä tai yksittäistä nimettyä nykytaideteosta päämotiivina. Tavanomaiset matalat asuintalot aluekokonaisuutena, ei yhden luovan rakennuskohteen detaljikuva tai blanket-lupa kaikille Lesothon teoksille. Lähde Description yksilöi Maseru South West Phase III/Masowe III. Author Paramente Phamotse ja CC BY-SA3.0 nimenomaisista lähdekentistä, nativeSHA ja minileveys varmistettu. Date20.7.2010 on alkuperäinen upload, ei varmennettu kuvaushetki; caption sanoo julkaistu2010 ja historiallinen näkymä. C3 ei O/TRAVELER-tuoreusrooli eikä nykyisen asutuksen tilanteeksi väitetty. Eri tiedosto/alue kuin C1 ja C2."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Historiallinen näkymä Masowe III -asutukseen Maserun lounaispuolella; julkaistu 2010.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa.json",
+        "fileSHA256": "3230eda7ff0420a242f5fc68069cb73e2d73c28e9d78bf3f7aefd5a75e1475c2",
+        "item": {
+          "slot": "C3",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+          "commonsFile": "Maseru South West Phase III (Masowe III) Housing Estate - panoramio.jpg",
+          "sha256": "a48bcede3c90e17606b26bc5904f6be334517d9b2b7bf3f257e2b4320bb86c01",
+          "verdict": "accepted",
+          "reason": "Oma natiivikatselu1498×878: aito laaja Masowe III -asutusalueen ja maaston näkymä, kaupunginosan oikea rakennusten/tiestön/luonnon asettelu näkyy. Ei tunnistettavia kasvoja, lisättyä tekstiä/vesileimaa/kehystä tai yksittäistä nimettyä nykytaideteosta päämotiivina. Tavanomaiset matalat asuintalot aluekokonaisuutena, ei yhden luovan rakennuskohteen detaljikuva tai blanket-lupa kaikille Lesothon teoksille. Lähde Description yksilöi Maseru South West Phase III/Masowe III. Author Paramente Phamotse ja CC BY-SA3.0 nimenomaisista lähdekentistä, nativeSHA ja minileveys varmistettu. Date20.7.2010 on alkuperäinen upload, ei varmennettu kuvaushetki; caption sanoo julkaistu2010 ja historiallinen näkymä. C3 ei O/TRAVELER-tuoreusrooli eikä nykyisen asutuksen tilanteeksi väitetty. Eri tiedosto/alue kuin C1 ja C2.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa-evidence/cc-b800f9425401e641/original.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa-evidence/cc-b800f9425401e641/source.html",
+            "sourceHTMLSHA256": "a642ea2b06ae984a824c21d2e5f72646515d62f2f6b23ab50827ceb16dfb7ec0",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Maseru_South_West_Phase_III_(Masowe_III)_Housing_Estate_-_panoramio.jpg",
+            "sourceDescription": "Maseru South West Phase III (Masowe III) Housing Estate",
+            "sourceDate": "20 July 2010 (original upload date)",
+            "author": "Paramente Phamotse",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "width": 1498,
+            "height": 878,
+            "rightsEvidence": {
+              "photoLayer": "Tiedostosivun nimenomainen Author, Source ja kuvan oma kaupallinen CC/PD-lisenssi tarkistettu.",
+              "workLayer": "Laaja asutus- ja maastokokonaisuus, tavallisia matalia toiminnallisia asuintaloja ja luonnollista maisemaa. Ei yksittäistä nimettyä suojattua luovaa teosta pääaiheena, tunnistettavia kasvoja, lisättyä tekstiä, vesileimaa tai kehystä.",
+              "placeBoundary": "Commonsin Description nimeää Maseru South West Phase III (Masowe III) Housing Estate. Date on 20.7.2010 alkuperäinen julkaisu, ei varmistettu kuvauspäivä. Ei väitetä nykyiseksi tai tuoreeksi kaupunginosan tilanteeksi. Eri kuvauspaikka/alue kuin C1/C2 Greater Heightsin näkymät.",
+              "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/0e4d4ad45c68554d-preview.jpg",
+              "pixelSHA256": "a48bcede3c90e17606b26bc5904f6be334517d9b2b7bf3f257e2b4320bb86c01",
+              "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-evidence/0e4d4ad45c68554d.html",
+              "sourceSHA256": "a642ea2b06ae984a824c21d2e5f72646515d62f2f6b23ab50827ceb16dfb7ec0",
+              "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/maseru/C3/owner.json",
+              "notAlreadyInPack": "Täsmällinen tiedostonimi, underscore-nimi ja originalUrl haettu e08/js/packs: ei osumia.",
+              "independentQA": "avoin",
+              "searchRound": 2
+            },
+            "sourceContentSHA256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+            "reviewedAt": "2026-10-12T20:05:00.927736+00:00",
+            "inputFragment": "cc-selection.json",
+            "selectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/cc-selection.json",
+            "selectionSHA256": "bdb2a1e3f682f74ae43ca7ca3c518392b19b9a96af27f19ae4803edb632e70f0"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa.json",
+            "sha256": "3230eda7ff0420a242f5fc68069cb73e2d73c28e9d78bf3f7aefd5a75e1475c2"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
+            "sha256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "maseru",
+        "slot": "C3",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+        "commonsFile": "Maseru South West Phase III (Masowe III) Housing Estate - panoramio.jpg",
+        "sha256": "a48bcede3c90e17606b26bc5904f6be334517d9b2b7bf3f257e2b4320bb86c01",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Maseru_South_West_Phase_III_(Masowe_III)_Housing_Estate_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Maseru_South_West_Phase_III_%28Masowe_III%29_Housing_Estate_-_panoramio.jpg",
+        "author": "Paramente Phamotse",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 1498,
+        "height": 878,
+        "originalSHA256": "a48bcede3c90e17606b26bc5904f6be334517d9b2b7bf3f257e2b4320bb86c01",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/c3-a48bcede3c90e17606b2.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/c3-a48bcede3c90e17606b2.jpg",
+        "bytes": 628146,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:05:21.195088+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Maseru South West Phase III (Masowe III) Housing Estate - panoramio.jpg",
+        "lahde": "Paramente Phamotse, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Historiallinen näkymä Masowe III -asutukseen Maserun lounaispuolella; julkaistu 2010.",
+        "lyhyt": "Historiallinen näkymä Masowe III -asutukseen Maserun lounaispuolella; julkaistu 2010."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Paramente Phamotse, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Historiallinen näkymä Masowe III -asutukseen Maserun lounaispuolella; julkaistu 2010.",
+        "lyhyt": "Historiallinen näkymä Masowe III -asutukseen Maserun lounaispuolella; julkaistu 2010.",
+        "tiedosto": "Maseru South West Phase III (Masowe III) Housing Estate - panoramio.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+      "targetAfterSHA256": "e8e89995a7aecc05e7026bc889d6bf5c2ed718bbbc83fec5f7f111977dbd33d1",
+      "contextAfterSHA256": "e8e89995a7aecc05e7026bc889d6bf5c2ed718bbbc83fec5f7f111977dbd33d1"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

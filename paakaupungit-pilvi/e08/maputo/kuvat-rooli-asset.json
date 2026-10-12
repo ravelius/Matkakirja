@@ -1,0 +1,979 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e08",
+  "city": "maputo",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+  "assets": [
+    {
+      "era": "e08",
+      "city": "maputo",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e08-maputo-TRAVELER-illustration-v1-20261012",
+      "galleryImageID": "e08-maputo-TRAVELER-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-TRAVELER-illustration-v1-20261012-c16f2dc9ce45.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva rannikon kala-ateriasta.",
+        "lyhyt": "Havainnekuva rannikon kala-ateriasta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-TRAVELER-illustration-v1-20261012-c16f2dc9ce45.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva rannikon kala-ateriasta.",
+        "lyhyt": "Havainnekuva rannikon kala-ateriasta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c16f2dc9ce451e6e1ae33598ffeaea7fb614baff44c253eb68c88eec891a5c5c",
+      "exportSHA256": "2c7e89de560f83d615601a939908ed7d24306a3abf11dcd40fd3ebe04f213369",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-TRAVELER-illustration-v1-20261012-c16f2dc9ce45.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-TRAVELER-illustration-v1-20261012-c16f2dc9ce45.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maputo/e08-maputo-TRAVELER-illustration-v1-20261012-c16f2dc9ce45.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+      "sourceContentSHA256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e3d959a794d1402f539b9d4155d62d10ced0f5e99c7803e91b3d7f282380da74",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic sourced natural/food/material subject or traditional functional object; no named protected artwork or fabricated city scene.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-TRAVELER-illustration-v1-20261012/image.png",
+            "width": 1024,
+            "height": 1536,
+            "sha256": "c16f2dc9ce451e6e1ae33598ffeaea7fb614baff44c253eb68c88eec891a5c5c",
+            "nativeGeometry": {
+              "rawWidth": 1024,
+              "rawHeight": 1536,
+              "exifOrientation": 1,
+              "width": 1024,
+              "height": 1536
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/13bab4c4b247-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
+              "sha256": "51f52ccf86850de1109cbe98a96d92a310faf4d2ccfe2c01318a1d78b5be16a4",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-maputo-TRAVELER-illustration-v1-20261012",
+              "nativeSHA256": "c16f2dc9ce451e6e1ae33598ffeaea7fb614baff44c253eb68c88eec891a5c5c",
+              "verdict": "accepted",
+              "reason": "Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Kala-ateria vastaa oppaan ruoka-aihetta, ja selite merkitsee havainnollistuksen.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-TRAVELER-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "c16f2dc9ce451e6e1ae33598ffeaea7fb614baff44c253eb68c88eec891a5c5c",
+                "nativeWidth": 1024,
+                "nativeHeight": 1536,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kokonainen grillattu kala, perunaa ja salaattia lautasella pystyrajauksessa. Luonteva kalan paistopinta ja evät, pehmeä valo; ei henkilöitä tai tekstiä.",
+                "captionFi": "Havainnekuva rannikon kala-ateriasta.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                "contentSha256": "479f68cbb38f43dae61bbf4edc33a938e42808669b08bbd17be2a50c689816d4",
+                "targetCurrentlyPresent": true,
+                "targetText": "",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                "topicEvidence": "Matkailijalle-osio mainitsee rannikon kala-ateriat. Kuva ei todista tietyn Maputon ravintolan tarjontaa.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                  "sourceContentSha256": "479f68cbb38f43dae61bbf4edc33a938e42808669b08bbd17be2a50c689816d4",
+                  "targetText": "Aloita Maputon historiallisesta Baixasta, jossa rautatieasema, torihalli ja linnoitus kertovat kaupungin yhteydestä satamaan. Tundurun puutarha tarjoaa toisenlaisen pysähdyksen keskellä kaupunkia. Rannikon ravintoloissa kala ja äyriäiset ovat luonteva lounasvalinta. Suunnittele kävelyt päiväsaikaan ja sovi pidemmät siirtymät luotettavan kyydin avulla. Maputon matkalla tarvitaan varovaisuutta, ja pimeällä liikkumista tulee välttää.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                  "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                  "supportingContext": "Current travel panel and the same city's sourced flora, fauna, food or material topics.",
+                  "subjectBasis": "A simple generic grilled fish meal on plain ceramic tableware, photographed vertically, natural daylight and no restaurant identity. No labels, packaging or coastline."
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "51272f3727542c7dbf629ab35d26dc9b4f08ef54facd7a27c5f9340065475498",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/extra-review-snapshots/51f52ccf86850de1109cbe98a96d92a310faf4d2ccfe2c01318a1d78b5be16a4.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva rannikon kala-ateriasta.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-2 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Kala-ateria vastaa oppaan ruoka-aihetta, ja selite merkitsee havainnollistuksen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva rannikon kala-ateriasta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa.json",
+        "fileSHA256": "f7e7c9bbec86b0a7248cee089a53626d3f19ae6f9a31f57cdb452085e18616d9",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e08-maputo-TRAVELER-illustration-v1-20261012",
+          "sha256": "c16f2dc9ce451e6e1ae33598ffeaea7fb614baff44c253eb68c88eec891a5c5c",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-2 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Kala-ateria vastaa oppaan ruoka-aihetta, ja selite merkitsee havainnollistuksen.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-TRAVELER-illustration-v1-20261012/image.png",
+            "width": 1024,
+            "height": 1536,
+            "sha256": "c16f2dc9ce451e6e1ae33598ffeaea7fb614baff44c253eb68c88eec891a5c5c",
+            "nativeGeometry": {
+              "rawWidth": 1024,
+              "rawHeight": 1536,
+              "exifOrientation": 1,
+              "width": 1024,
+              "height": 1536
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/13bab4c4b247-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
+              "sha256": "51f52ccf86850de1109cbe98a96d92a310faf4d2ccfe2c01318a1d78b5be16a4",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-maputo-TRAVELER-illustration-v1-20261012",
+              "nativeSHA256": "c16f2dc9ce451e6e1ae33598ffeaea7fb614baff44c253eb68c88eec891a5c5c",
+              "verdict": "accepted",
+              "reason": "Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Kala-ateria vastaa oppaan ruoka-aihetta, ja selite merkitsee havainnollistuksen.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-TRAVELER-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "c16f2dc9ce451e6e1ae33598ffeaea7fb614baff44c253eb68c88eec891a5c5c",
+                "nativeWidth": 1024,
+                "nativeHeight": 1536,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kokonainen grillattu kala, perunaa ja salaattia lautasella pystyrajauksessa. Luonteva kalan paistopinta ja evät, pehmeä valo; ei henkilöitä tai tekstiä.",
+                "captionFi": "Havainnekuva rannikon kala-ateriasta.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                "contentSha256": "479f68cbb38f43dae61bbf4edc33a938e42808669b08bbd17be2a50c689816d4",
+                "targetCurrentlyPresent": true,
+                "targetText": "",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                "topicEvidence": "Matkailijalle-osio mainitsee rannikon kala-ateriat. Kuva ei todista tietyn Maputon ravintolan tarjontaa.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                  "sourceContentSha256": "479f68cbb38f43dae61bbf4edc33a938e42808669b08bbd17be2a50c689816d4",
+                  "targetText": "Aloita Maputon historiallisesta Baixasta, jossa rautatieasema, torihalli ja linnoitus kertovat kaupungin yhteydestä satamaan. Tundurun puutarha tarjoaa toisenlaisen pysähdyksen keskellä kaupunkia. Rannikon ravintoloissa kala ja äyriäiset ovat luonteva lounasvalinta. Suunnittele kävelyt päiväsaikaan ja sovi pidemmät siirtymät luotettavan kyydin avulla. Maputon matkalla tarvitaan varovaisuutta, ja pimeällä liikkumista tulee välttää.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                  "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                  "supportingContext": "Current travel panel and the same city's sourced flora, fauna, food or material topics.",
+                  "subjectBasis": "A simple generic grilled fish meal on plain ceramic tableware, photographed vertically, natural daylight and no restaurant identity. No labels, packaging or coastline."
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "51272f3727542c7dbf629ab35d26dc9b4f08ef54facd7a27c5f9340065475498",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/extra-review-snapshots/51f52ccf86850de1109cbe98a96d92a310faf4d2ccfe2c01318a1d78b5be16a4.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva rannikon kala-ateriasta.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
+              "sha256": "51f52ccf86850de1109cbe98a96d92a310faf4d2ccfe2c01318a1d78b5be16a4",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-maputo-TRAVELER-illustration-v1-20261012",
+              "nativeSHA256": "c16f2dc9ce451e6e1ae33598ffeaea7fb614baff44c253eb68c88eec891a5c5c",
+              "verdict": "accepted",
+              "reason": "Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Kala-ateria vastaa oppaan ruoka-aihetta, ja selite merkitsee havainnollistuksen.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-TRAVELER-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "c16f2dc9ce451e6e1ae33598ffeaea7fb614baff44c253eb68c88eec891a5c5c",
+                "nativeWidth": 1024,
+                "nativeHeight": 1536,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kokonainen grillattu kala, perunaa ja salaattia lautasella pystyrajauksessa. Luonteva kalan paistopinta ja evät, pehmeä valo; ei henkilöitä tai tekstiä.",
+                "captionFi": "Havainnekuva rannikon kala-ateriasta.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                "contentSha256": "479f68cbb38f43dae61bbf4edc33a938e42808669b08bbd17be2a50c689816d4",
+                "targetCurrentlyPresent": true,
+                "targetText": "",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                "topicEvidence": "Matkailijalle-osio mainitsee rannikon kala-ateriat. Kuva ei todista tietyn Maputon ravintolan tarjontaa.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                  "sourceContentSha256": "479f68cbb38f43dae61bbf4edc33a938e42808669b08bbd17be2a50c689816d4",
+                  "targetText": "Aloita Maputon historiallisesta Baixasta, jossa rautatieasema, torihalli ja linnoitus kertovat kaupungin yhteydestä satamaan. Tundurun puutarha tarjoaa toisenlaisen pysähdyksen keskellä kaupunkia. Rannikon ravintoloissa kala ja äyriäiset ovat luonteva lounasvalinta. Suunnittele kävelyt päiväsaikaan ja sovi pidemmät siirtymät luotettavan kyydin avulla. Maputon matkalla tarvitaan varovaisuutta, ja pimeällä liikkumista tulee välttää.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                  "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                  "supportingContext": "Current travel panel and the same city's sourced flora, fauna, food or material topics.",
+                  "subjectBasis": "A simple generic grilled fish meal on plain ceramic tableware, photographed vertically, natural daylight and no restaurant identity. No labels, packaging or coastline."
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "51272f3727542c7dbf629ab35d26dc9b4f08ef54facd7a27c5f9340065475498",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/extra-review-snapshots/51f52ccf86850de1109cbe98a96d92a310faf4d2ccfe2c01318a1d78b5be16a4.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T19:06:13.462755+00:00",
+          "contentSHA256": "479f68cbb38f43dae61bbf4edc33a938e42808669b08bbd17be2a50c689816d4",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa.json",
+            "sha256": "f7e7c9bbec86b0a7248cee089a53626d3f19ae6f9a31f57cdb452085e18616d9"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
+            "sha256": "51f52ccf86850de1109cbe98a96d92a310faf4d2ccfe2c01318a1d78b5be16a4"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-TRAVELER-illustration-v1-20261012-c16f2dc9ce45.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-TRAVELER-illustration-v1-20261012-c16f2dc9ce45.png?t=2c7e89de560f83d6",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-TRAVELER-illustration-v1-20261012-c16f2dc9ce45.png",
+        "sha256": "2c7e89de560f83d615601a939908ed7d24306a3abf11dcd40fd3ebe04f213369",
+        "bytes": 2581017,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-maputo-TRAVELER-illustration-v1-20261012",
+        "nativeSHA256": "c16f2dc9ce451e6e1ae33598ffeaea7fb614baff44c253eb68c88eec891a5c5c",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maputo/e08-maputo-TRAVELER-illustration-v1-20261012-c16f2dc9ce45.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "maputo",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T19:03:26.942885+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maputo/e08-maputo-TRAVELER-illustration-v1-20261012-c16f2dc9ce45.png",
+        "sha256": "2c7e89de560f83d615601a939908ed7d24306a3abf11dcd40fd3ebe04f213369",
+        "bytes": 2581017,
+        "SHAReadAt": "2026-10-12T19:03:36.406323+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "c16f2dc9ce451e6e1ae33598ffeaea7fb614baff44c253eb68c88eec891a5c5c",
+        "rgbPixelSHA256": "f769f76e012cb23fc33b9ac605790e83e9fe97504f71baaa264a588aa28cd336",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "e3d959a794d1402f539b9d4155d62d10ced0f5e99c7803e91b3d7f282380da74"
+    },
+    {
+      "era": "e08",
+      "city": "maputo",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e08-maputo-O4-illustration-v1-20261012",
+      "galleryImageID": "e08-maputo-O4-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-O4-illustration-v1-20261012-be0ecb6075db.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Lounas meren äärellä.",
+        "lyhyt": "Havainnekuva: Lounas meren äärellä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-O4-illustration-v1-20261012-be0ecb6075db.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Lounas meren äärellä.",
+        "lyhyt": "Havainnekuva: Lounas meren äärellä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "be0ecb6075dbf0b59362aaf3b34cf1de89be2b37dd9c5ae4a277fb781da586af",
+      "exportSHA256": "79ffcf2ccb07c570ffe83f0856ab279c9b72312ae22071a81abec07337130b82",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-O4-illustration-v1-20261012-be0ecb6075db.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-O4-illustration-v1-20261012-be0ecb6075db.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maputo/e08-maputo-O4-illustration-v1-20261012-be0ecb6075db.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+      "sourceContentSHA256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "2de052d67fa7b9d794adc383620c5b24fd77245486a1156df8853ee20b0cba1f",
+        "subjectTitle": "Lounas meren äärellä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic natural subject, ordinary materials or unbranded objects; no named copyrighted building or contemporary artwork reproduced.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-O4-illustration-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "be0ecb6075dbf0b59362aaf3b34cf1de89be2b37dd9c5ae4a277fb781da586af",
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/f32743251bb0-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
+              "sha256": "ecb14ec8fa378899cf3c62cbced30ed7d40b4f4c3e36c7cfcc4653df98a5add8",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-maputo-O4-illustration-v1-20261012",
+              "nativeSHA256": "be0ecb6075dbf0b59362aaf3b34cf1de89be2b37dd9c5ae4a277fb781da586af",
+              "verdict": "accepted",
+              "reason": "Kala, riisi ja paistokset havainnollistavat oppaan ruoka-aiheita. Selite merkitsee kuvan havainnollistukseksi eikä nimetyn ravintolan aidoksi annokseksi.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-O4-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "be0ecb6075dbf0b59362aaf3b34cf1de89be2b37dd9c5ae4a277fb781da586af",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Paistettu kalafilee, riisiä ja kolme epäsäännöllistä kullankeltaista paistosta lautasella. Luontevat paistopinnat ja riisinjyvät; ei henkilöitä tai merkintöjä.",
+                "captionFi": "Havainnekuva: Lounas meren äärellä.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                "contentSha256": "479f68cbb38f43dae61bbf4edc33a938e42808669b08bbd17be2a50c689816d4",
+                "targetCurrentlyPresent": true,
+                "targetText": "Maputon keittiössä kohtaavat afrikkalaiset, portugalilaiset sekä Intian valtameren ympäriltä tulleet vaikutteet. Kalaa ja äyriäisiä tarjotaan rannikon ravintoloissa, ja myös grillattu kana on tavallinen valinta. Pienistä ruokapaikoista löytyy riisin kanssa tarjoiltuja aterioita, kahviloista voileipiä ja leivonnaisia. Bhajia-papupaistokset sopivat pieneksi maistiaiseksi. Juomavesi kannattaa hankkia pullossa, sillä vesijohtovesi ei ole juotavaa.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                "topicEvidence": "O4 mainitsee kalan, riisiateriat ja bhajia-papupaistokset.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                  "sourceContentSha256": "479f68cbb38f43dae61bbf4edc33a938e42808669b08bbd17be2a50c689816d4",
+                  "targetText": "Maputon keittiössä kohtaavat afrikkalaiset, portugalilaiset sekä Intian valtameren ympäriltä tulleet vaikutteet. Kalaa ja äyriäisiä tarjotaan rannikon ravintoloissa, ja myös grillattu kana on tavallinen valinta. Pienistä ruokapaikoista löytyy riisin kanssa tarjoiltuja aterioita, kahviloista voileipiä ja leivonnaisia. Bhajia-papupaistokset sopivat pieneksi maistiaiseksi. Juomavesi kannattaa hankkia pullossa, sillä vesijohtovesi ei ole juotavaa.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                  "wiki": null,
+                  "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                  "supportingSourceUrls": [
+                    "https://en.wikivoyage.org/wiki/Maputo"
+                  ],
+                  "factSheetBibliographyUrls": [
+                    "https://en.wikivoyage.org/wiki/Maputo"
+                  ]
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              }
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva: Lounas meren äärellä.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-2 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Kala, riisi ja paistokset havainnollistavat oppaan ruoka-aiheita. Selite merkitsee kuvan havainnollistukseksi eikä nimetyn ravintolan aidoksi annokseksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: Lounas meren äärellä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa.json",
+        "fileSHA256": "f7e7c9bbec86b0a7248cee089a53626d3f19ae6f9a31f57cdb452085e18616d9",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e08-maputo-O4-illustration-v1-20261012",
+          "sha256": "be0ecb6075dbf0b59362aaf3b34cf1de89be2b37dd9c5ae4a277fb781da586af",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-2 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Kala, riisi ja paistokset havainnollistavat oppaan ruoka-aiheita. Selite merkitsee kuvan havainnollistukseksi eikä nimetyn ravintolan aidoksi annokseksi.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-O4-illustration-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "be0ecb6075dbf0b59362aaf3b34cf1de89be2b37dd9c5ae4a277fb781da586af",
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/f32743251bb0-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
+              "sha256": "ecb14ec8fa378899cf3c62cbced30ed7d40b4f4c3e36c7cfcc4653df98a5add8",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-maputo-O4-illustration-v1-20261012",
+              "nativeSHA256": "be0ecb6075dbf0b59362aaf3b34cf1de89be2b37dd9c5ae4a277fb781da586af",
+              "verdict": "accepted",
+              "reason": "Kala, riisi ja paistokset havainnollistavat oppaan ruoka-aiheita. Selite merkitsee kuvan havainnollistukseksi eikä nimetyn ravintolan aidoksi annokseksi.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-O4-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "be0ecb6075dbf0b59362aaf3b34cf1de89be2b37dd9c5ae4a277fb781da586af",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Paistettu kalafilee, riisiä ja kolme epäsäännöllistä kullankeltaista paistosta lautasella. Luontevat paistopinnat ja riisinjyvät; ei henkilöitä tai merkintöjä.",
+                "captionFi": "Havainnekuva: Lounas meren äärellä.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                "contentSha256": "479f68cbb38f43dae61bbf4edc33a938e42808669b08bbd17be2a50c689816d4",
+                "targetCurrentlyPresent": true,
+                "targetText": "Maputon keittiössä kohtaavat afrikkalaiset, portugalilaiset sekä Intian valtameren ympäriltä tulleet vaikutteet. Kalaa ja äyriäisiä tarjotaan rannikon ravintoloissa, ja myös grillattu kana on tavallinen valinta. Pienistä ruokapaikoista löytyy riisin kanssa tarjoiltuja aterioita, kahviloista voileipiä ja leivonnaisia. Bhajia-papupaistokset sopivat pieneksi maistiaiseksi. Juomavesi kannattaa hankkia pullossa, sillä vesijohtovesi ei ole juotavaa.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                "topicEvidence": "O4 mainitsee kalan, riisiateriat ja bhajia-papupaistokset.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                  "sourceContentSha256": "479f68cbb38f43dae61bbf4edc33a938e42808669b08bbd17be2a50c689816d4",
+                  "targetText": "Maputon keittiössä kohtaavat afrikkalaiset, portugalilaiset sekä Intian valtameren ympäriltä tulleet vaikutteet. Kalaa ja äyriäisiä tarjotaan rannikon ravintoloissa, ja myös grillattu kana on tavallinen valinta. Pienistä ruokapaikoista löytyy riisin kanssa tarjoiltuja aterioita, kahviloista voileipiä ja leivonnaisia. Bhajia-papupaistokset sopivat pieneksi maistiaiseksi. Juomavesi kannattaa hankkia pullossa, sillä vesijohtovesi ei ole juotavaa.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                  "wiki": null,
+                  "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                  "supportingSourceUrls": [
+                    "https://en.wikivoyage.org/wiki/Maputo"
+                  ],
+                  "factSheetBibliographyUrls": [
+                    "https://en.wikivoyage.org/wiki/Maputo"
+                  ]
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              }
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva: Lounas meren äärellä.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
+              "sha256": "ecb14ec8fa378899cf3c62cbced30ed7d40b4f4c3e36c7cfcc4653df98a5add8",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-maputo-O4-illustration-v1-20261012",
+              "nativeSHA256": "be0ecb6075dbf0b59362aaf3b34cf1de89be2b37dd9c5ae4a277fb781da586af",
+              "verdict": "accepted",
+              "reason": "Kala, riisi ja paistokset havainnollistavat oppaan ruoka-aiheita. Selite merkitsee kuvan havainnollistukseksi eikä nimetyn ravintolan aidoksi annokseksi.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-O4-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "be0ecb6075dbf0b59362aaf3b34cf1de89be2b37dd9c5ae4a277fb781da586af",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Paistettu kalafilee, riisiä ja kolme epäsäännöllistä kullankeltaista paistosta lautasella. Luontevat paistopinnat ja riisinjyvät; ei henkilöitä tai merkintöjä.",
+                "captionFi": "Havainnekuva: Lounas meren äärellä.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                "contentSha256": "479f68cbb38f43dae61bbf4edc33a938e42808669b08bbd17be2a50c689816d4",
+                "targetCurrentlyPresent": true,
+                "targetText": "Maputon keittiössä kohtaavat afrikkalaiset, portugalilaiset sekä Intian valtameren ympäriltä tulleet vaikutteet. Kalaa ja äyriäisiä tarjotaan rannikon ravintoloissa, ja myös grillattu kana on tavallinen valinta. Pienistä ruokapaikoista löytyy riisin kanssa tarjoiltuja aterioita, kahviloista voileipiä ja leivonnaisia. Bhajia-papupaistokset sopivat pieneksi maistiaiseksi. Juomavesi kannattaa hankkia pullossa, sillä vesijohtovesi ei ole juotavaa.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                "topicEvidence": "O4 mainitsee kalan, riisiateriat ja bhajia-papupaistokset.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                  "sourceContentSha256": "479f68cbb38f43dae61bbf4edc33a938e42808669b08bbd17be2a50c689816d4",
+                  "targetText": "Maputon keittiössä kohtaavat afrikkalaiset, portugalilaiset sekä Intian valtameren ympäriltä tulleet vaikutteet. Kalaa ja äyriäisiä tarjotaan rannikon ravintoloissa, ja myös grillattu kana on tavallinen valinta. Pienistä ruokapaikoista löytyy riisin kanssa tarjoiltuja aterioita, kahviloista voileipiä ja leivonnaisia. Bhajia-papupaistokset sopivat pieneksi maistiaiseksi. Juomavesi kannattaa hankkia pullossa, sillä vesijohtovesi ei ole juotavaa.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                  "wiki": null,
+                  "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                  "supportingSourceUrls": [
+                    "https://en.wikivoyage.org/wiki/Maputo"
+                  ],
+                  "factSheetBibliographyUrls": [
+                    "https://en.wikivoyage.org/wiki/Maputo"
+                  ]
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              }
+            },
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
+              "sha256": "ecb14ec8fa378899cf3c62cbced30ed7d40b4f4c3e36c7cfcc4653df98a5add8",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-maputo-O4-illustration-v1-20261012",
+              "nativeSHA256": "be0ecb6075dbf0b59362aaf3b34cf1de89be2b37dd9c5ae4a277fb781da586af",
+              "verdict": "accepted",
+              "reason": "Kala, riisi ja paistokset havainnollistavat oppaan ruoka-aiheita. Selite merkitsee kuvan havainnollistukseksi eikä nimetyn ravintolan aidoksi annokseksi.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-O4-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "be0ecb6075dbf0b59362aaf3b34cf1de89be2b37dd9c5ae4a277fb781da586af",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Paistettu kalafilee, riisiä ja kolme epäsäännöllistä kullankeltaista paistosta lautasella. Luontevat paistopinnat ja riisinjyvät; ei henkilöitä tai merkintöjä.",
+                "captionFi": "Havainnekuva: Lounas meren äärellä.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                "contentSha256": "479f68cbb38f43dae61bbf4edc33a938e42808669b08bbd17be2a50c689816d4",
+                "targetCurrentlyPresent": true,
+                "targetText": "Maputon keittiössä kohtaavat afrikkalaiset, portugalilaiset sekä Intian valtameren ympäriltä tulleet vaikutteet. Kalaa ja äyriäisiä tarjotaan rannikon ravintoloissa, ja myös grillattu kana on tavallinen valinta. Pienistä ruokapaikoista löytyy riisin kanssa tarjoiltuja aterioita, kahviloista voileipiä ja leivonnaisia. Bhajia-papupaistokset sopivat pieneksi maistiaiseksi. Juomavesi kannattaa hankkia pullossa, sillä vesijohtovesi ei ole juotavaa.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                "topicEvidence": "O4 mainitsee kalan, riisiateriat ja bhajia-papupaistokset.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                  "sourceContentSha256": "479f68cbb38f43dae61bbf4edc33a938e42808669b08bbd17be2a50c689816d4",
+                  "targetText": "Maputon keittiössä kohtaavat afrikkalaiset, portugalilaiset sekä Intian valtameren ympäriltä tulleet vaikutteet. Kalaa ja äyriäisiä tarjotaan rannikon ravintoloissa, ja myös grillattu kana on tavallinen valinta. Pienistä ruokapaikoista löytyy riisin kanssa tarjoiltuja aterioita, kahviloista voileipiä ja leivonnaisia. Bhajia-papupaistokset sopivat pieneksi maistiaiseksi. Juomavesi kannattaa hankkia pullossa, sillä vesijohtovesi ei ole juotavaa.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                  "wiki": null,
+                  "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                  "supportingSourceUrls": [
+                    "https://en.wikivoyage.org/wiki/Maputo"
+                  ],
+                  "factSheetBibliographyUrls": [
+                    "https://en.wikivoyage.org/wiki/Maputo"
+                  ]
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "6cb635ee6673ee21fb8d1928cecabcf983f09936c3095526b15e6966b75403a8",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/extra-review-snapshots/ecb14ec8fa378899cf3c62cbced30ed7d40b4f4c3e36c7cfcc4653df98a5add8.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T18:48:20.607778+00:00",
+          "contentSHA256": "479f68cbb38f43dae61bbf4edc33a938e42808669b08bbd17be2a50c689816d4",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa.json",
+            "sha256": "f7e7c9bbec86b0a7248cee089a53626d3f19ae6f9a31f57cdb452085e18616d9"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
+            "sha256": "51f52ccf86850de1109cbe98a96d92a310faf4d2ccfe2c01318a1d78b5be16a4"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-O4-illustration-v1-20261012-be0ecb6075db.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-O4-illustration-v1-20261012-be0ecb6075db.png?t=79ffcf2ccb07c570",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-O4-illustration-v1-20261012-be0ecb6075db.png",
+        "sha256": "79ffcf2ccb07c570ffe83f0856ab279c9b72312ae22071a81abec07337130b82",
+        "bytes": 2605966,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-maputo-O4-illustration-v1-20261012",
+        "nativeSHA256": "be0ecb6075dbf0b59362aaf3b34cf1de89be2b37dd9c5ae4a277fb781da586af",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maputo/e08-maputo-O4-illustration-v1-20261012-be0ecb6075db.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "maputo",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:22:45.605929+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maputo/e08-maputo-O4-illustration-v1-20261012-be0ecb6075db.png",
+        "sha256": "79ffcf2ccb07c570ffe83f0856ab279c9b72312ae22071a81abec07337130b82",
+        "bytes": 2605966,
+        "SHAReadAt": "2026-10-12T18:29:52.593841+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "be0ecb6075dbf0b59362aaf3b34cf1de89be2b37dd9c5ae4a277fb781da586af",
+        "rgbPixelSHA256": "ba343ea3170d8204a6064de5c0528217996a7f5ea9e7361e40f3417b06fbdb72",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "2de052d67fa7b9d794adc383620c5b24fd77245486a1156df8853ee20b0cba1f"
+    },
+    {
+      "era": "e08",
+      "city": "maputo",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e08-maputo-photo-9f519ada75c1a4ad",
+      "galleryImageID": "capital-cc-e08-maputo-photo-9f519ada75c1a4ad",
+      "commonsFile": "Costa do Sol – estruturas de protecção costeira na Avenida Marginal 03.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maputo/photo-9f519ada75c1a4ad5e1d.jpg",
+        "suora": true,
+        "lahde": "Salazar Sérgio, Commons (CC BY-SA 4.0)",
+        "selite": "Costa do Solin ranta sijaitsee Maputonlahdella Avenida Marginalin varrella.",
+        "lyhyt": "Costa do Solin ranta sijaitsee Maputonlahdella Avenida Marginalin varrella.",
+        "tiedosto": "Costa do Sol – estruturas de protecção costeira na Avenida Marginal 03.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Salazar Sérgio, Commons (CC BY-SA 4.0)",
+        "selite": "Costa do Solin ranta sijaitsee Maputonlahdella Avenida Marginalin varrella.",
+        "lyhyt": "Costa do Solin ranta sijaitsee Maputonlahdella Avenida Marginalin varrella.",
+        "tiedosto": "Costa do Sol – estruturas de protecção costeira na Avenida Marginal 03.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maputo/photo-9f519ada75c1a4ad5e1d.jpg",
+        "suora": true,
+        "lahde": "Salazar Sérgio, Commons (CC BY-SA 4.0)",
+        "selite": "Costa do Solin ranta sijaitsee Maputonlahdella Avenida Marginalin varrella.",
+        "lyhyt": "Costa do Solin ranta sijaitsee Maputonlahdella Avenida Marginalin varrella.",
+        "tiedosto": "Costa do Sol – estruturas de protecção costeira na Avenida Marginal 03.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "9f519ada75c1a4ad5e1d3168279947cade9172f71ac633193d32c46728797004",
+      "exportSHA256": "9f519ada75c1a4ad5e1d3168279947cade9172f71ac633193d32c46728797004",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maputo/photo-9f519ada75c1a4ad5e1d.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maputo/photo-9f519ada75c1a4ad5e1d.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e08/maputo/8a91c8a623c2f6dae08d3af4cafcb6000b25d63c3104592cd7528aabda026b2f.jpg",
+      "dimensions": [
+        3024,
+        4032
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+      "sourceContentSHA256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "22cd8cc13719870f51ca1f52d4cb1cc463bf3a15f16fbe61b457fcb2acd9c8c0",
+        "semanticContextSHA256": "22cd8cc13719870f51ca1f52d4cb1cc463bf3a15f16fbe61b457fcb2acd9c8c0",
+        "subjectTitle": "maputo — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Salazar Sérgio",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Costa_do_Sol_%E2%80%93_estruturas_de_protec%C3%A7%C3%A3o_costeira_na_Avenida_Marginal_03.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/13/Costa_do_Sol_%E2%80%93_estruturas_de_protec%C3%A7%C3%A3o_costeira_na_Avenida_Marginal_03.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Tiedostosivun Author Salazar Sérgio, Source Own work ja CC BY-SA 4.0 tarkistettu; EXIF/Date 6.10.2026.",
+            "placeLayer": "Português: Vista da praia da Costa do Sol, em Maputo, Moçambique, a partir da Avenida Marginal, com estruturas de protecção costeira que se prolongam para a Baía de Maputo.",
+            "workLayer": "Katsottu alkuperäiset 3024x4032 pikselit: ranta, vesi, tavalliset rantakasvit, vene ja kivinen rantasuojarakenne. Ei nimettyä suojattua rakennusta tai taideteosta pääaiheena, ei tunnistettavia kasvoja, lisättyä tekstiä/vesileimaa/kehystä.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/cc-evidence/b7393989e65d2bb6-preview.jpg",
+            "pixelSHA256": "9f519ada75c1a4ad5e1d3168279947cade9172f71ac633193d32c46728797004",
+            "reservation": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/maputo/PHOTO/owner.json",
+            "independentQA": "avoin; ehdokas, ei hyväksyntä tai julkaisu"
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/d9f9a7e73b7b-original.jpg",
+            "width": 3024,
+            "height": 4032,
+            "sha256": "9f519ada75c1a4ad5e1d3168279947cade9172f71ac633193d32c46728797004",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Costa_do_Sol_%E2%80%93_estruturas_de_protec%C3%A7%C3%A3o_costeira_na_Avenida_Marginal_03.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/cc-source-snapshots/ddb92c82041e90b8c6ca8be41d1a2321e0fd45d7c3dbe698b52627fedb8eddcd.html",
+            "sourcePageSHA256": "ddb92c82041e90b8c6ca8be41d1a2321e0fd45d7c3dbe698b52627fedb8eddcd",
+            "sourceFields": {
+              "Date": "6 October 2026, 07:09:42",
+              "Source": "Own work",
+              "Author": "Salazar Sérgio"
+            },
+            "authors": [
+              "Salazar Sérgio"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 4.0"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/d9f9a7e73b7b-technical-source.json",
+            "visualViewedByThisSession": true,
+            "visualObservation": "Aito Costa do Solin rannikkonäkymä Maputossa, alkuperäislähteessä kuvauspaikka ja koordinaatit. Meri, kasvillisuus ja tavanomainen kivinen rantasuoja ovat pääaihe. Etäisten pienten ihmisten piirteet eivät erotu. Veneen luonnollinen merkintä ei tee kuvasta mainosta; ei lisättyä tekstiä, kehystä tai suojattua yksittäisteosta. PHOTO voi olla pysty luontokuva.",
+            "visualReviewStage": "native original viewed in preceding uninterrupted QA context",
+            "workLayerAssessment": "Aito Costa do Solin rannikkonäkymä Maputossa, alkuperäislähteessä kuvauspaikka ja koordinaatit. Meri, kasvillisuus ja tavanomainen kivinen rantasuoja ovat pääaihe. Etäisten pienten ihmisten piirteet eivät erotu. Veneen luonnollinen merkintä ei tee kuvasta mainosta; ei lisättyä tekstiä, kehystä tai suojattua yksittäisteosta. PHOTO voi olla pysty luontokuva.",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/b7393989e65d2bb62c922f3c98a4f18d3f34c8e5d9edeb5b49235adcc81c56aa.body",
+            "immutableSourceSnapshot": true
+          },
+          "qaReason": "Aito Costa do Solin rannikkonäkymä Maputossa, alkuperäislähteessä kuvauspaikka ja koordinaatit. Meri, kasvillisuus ja tavanomainen kivinen rantasuoja ovat pääaihe. Etäisten pienten ihmisten piirteet eivät erotu. Veneen luonnollinen merkintä ei tee kuvasta mainosta; ei lisättyä tekstiä, kehystä tai suojattua yksittäisteosta. PHOTO voi olla pysty luontokuva."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Costa do Solin ranta sijaitsee Maputonlahdella Avenida Marginalin varrella.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa.json",
+        "fileSHA256": "f7e7c9bbec86b0a7248cee089a53626d3f19ae6f9a31f57cdb452085e18616d9",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Costa do Sol – estruturas de protecção costeira na Avenida Marginal 03.jpg",
+          "type": "commons",
+          "sha256": "9f519ada75c1a4ad5e1d3168279947cade9172f71ac633193d32c46728797004",
+          "verdict": "accepted",
+          "reason": "Aito Costa do Solin rannikkonäkymä Maputossa, alkuperäislähteessä kuvauspaikka ja koordinaatit. Meri, kasvillisuus ja tavanomainen kivinen rantasuoja ovat pääaihe. Etäisten pienten ihmisten piirteet eivät erotu. Veneen luonnollinen merkintä ei tee kuvasta mainosta; ei lisättyä tekstiä, kehystä tai suojattua yksittäisteosta. PHOTO voi olla pysty luontokuva.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/d9f9a7e73b7b-original.jpg",
+            "width": 3024,
+            "height": 4032,
+            "sha256": "9f519ada75c1a4ad5e1d3168279947cade9172f71ac633193d32c46728797004",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Costa_do_Sol_%E2%80%93_estruturas_de_protec%C3%A7%C3%A3o_costeira_na_Avenida_Marginal_03.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/cc-source-snapshots/ddb92c82041e90b8c6ca8be41d1a2321e0fd45d7c3dbe698b52627fedb8eddcd.html",
+            "sourcePageSHA256": "ddb92c82041e90b8c6ca8be41d1a2321e0fd45d7c3dbe698b52627fedb8eddcd",
+            "sourceFields": {
+              "Date": "6 October 2026, 07:09:42",
+              "Source": "Own work",
+              "Author": "Salazar Sérgio"
+            },
+            "authors": [
+              "Salazar Sérgio"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 4.0"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/d9f9a7e73b7b-technical-source.json",
+            "visualViewedByThisSession": true,
+            "visualObservation": "Aito Costa do Solin rannikkonäkymä Maputossa, alkuperäislähteessä kuvauspaikka ja koordinaatit. Meri, kasvillisuus ja tavanomainen kivinen rantasuoja ovat pääaihe. Etäisten pienten ihmisten piirteet eivät erotu. Veneen luonnollinen merkintä ei tee kuvasta mainosta; ei lisättyä tekstiä, kehystä tai suojattua yksittäisteosta. PHOTO voi olla pysty luontokuva.",
+            "visualReviewStage": "native original viewed in preceding uninterrupted QA context",
+            "workLayerAssessment": "Aito Costa do Solin rannikkonäkymä Maputossa, alkuperäislähteessä kuvauspaikka ja koordinaatit. Meri, kasvillisuus ja tavanomainen kivinen rantasuoja ovat pääaihe. Etäisten pienten ihmisten piirteet eivät erotu. Veneen luonnollinen merkintä ei tee kuvasta mainosta; ei lisättyä tekstiä, kehystä tai suojattua yksittäisteosta. PHOTO voi olla pysty luontokuva.",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/b7393989e65d2bb62c922f3c98a4f18d3f34c8e5d9edeb5b49235adcc81c56aa.body",
+            "immutableSourceSnapshot": true
+          },
+          "checkedAt": "2026-10-12T19:08:39.560959+00:00",
+          "contentSHA256": "479f68cbb38f43dae61bbf4edc33a938e42808669b08bbd17be2a50c689816d4",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa.json",
+            "sha256": "f7e7c9bbec86b0a7248cee089a53626d3f19ae6f9a31f57cdb452085e18616d9"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
+            "sha256": "51f52ccf86850de1109cbe98a96d92a310faf4d2ccfe2c01318a1d78b5be16a4"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "maputo",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Costa do Sol – estruturas de protecção costeira na Avenida Marginal 03.jpg",
+        "sha256": "9f519ada75c1a4ad5e1d3168279947cade9172f71ac633193d32c46728797004",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Costa_do_Sol_%E2%80%93_estruturas_de_protec%C3%A7%C3%A3o_costeira_na_Avenida_Marginal_03.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/13/Costa_do_Sol_%E2%80%93_estruturas_de_protec%C3%A7%C3%A3o_costeira_na_Avenida_Marginal_03.jpg",
+        "author": "Salazar Sérgio",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 3024,
+        "height": 4032,
+        "originalSHA256": "9f519ada75c1a4ad5e1d3168279947cade9172f71ac633193d32c46728797004",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maputo/photo-9f519ada75c1a4ad5e1d.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maputo/photo-9f519ada75c1a4ad5e1d.jpg",
+        "bytes": 1972973,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:29:44.762977+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Costa do Sol – estruturas de protecção costeira na Avenida Marginal 03.jpg",
+        "lahde": "Salazar Sérgio, Commons (CC BY-SA 4.0)",
+        "selite": "Costa do Solin ranta sijaitsee Maputonlahdella Avenida Marginalin varrella.",
+        "lyhyt": "Costa do Solin ranta sijaitsee Maputonlahdella Avenida Marginalin varrella."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Salazar Sérgio, Commons (CC BY-SA 4.0)",
+        "selite": "Costa do Solin ranta sijaitsee Maputonlahdella Avenida Marginalin varrella.",
+        "lyhyt": "Costa do Solin ranta sijaitsee Maputonlahdella Avenida Marginalin varrella.",
+        "tiedosto": "Costa do Sol – estruturas de protecção costeira na Avenida Marginal 03.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+      "targetAfterSHA256": "22cd8cc13719870f51ca1f52d4cb1cc463bf3a15f16fbe61b457fcb2acd9c8c0",
+      "contextAfterSHA256": "22cd8cc13719870f51ca1f52d4cb1cc463bf3a15f16fbe61b457fcb2acd9c8c0"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

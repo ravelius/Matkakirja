@@ -1,0 +1,2178 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e08",
+  "city": "moroni",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+  "assets": [
+    {
+      "era": "e08",
+      "city": "moroni",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e08-moroni-TRAVELER-illustration-v1-20261012",
+      "galleryImageID": "e08-moroni-TRAVELER-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-TRAVELER-illustration-v1-20261012-5e11413e3750.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva vulkaanisen rannikon kivestä ja merestä.",
+        "lyhyt": "Havainnekuva vulkaanisen rannikon kivestä ja merestä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-TRAVELER-illustration-v1-20261012-5e11413e3750.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva vulkaanisen rannikon kivestä ja merestä.",
+        "lyhyt": "Havainnekuva vulkaanisen rannikon kivestä ja merestä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5e11413e37507a64eee4cd302ce58eaa4b5486a411c42e19a43a5ad1c634ed48",
+      "exportSHA256": "377a79d50adcd465e66bc294ae16d4139233413060feb297c730be2bdfbd8e7d",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-TRAVELER-illustration-v1-20261012-5e11413e3750.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-TRAVELER-illustration-v1-20261012-5e11413e3750.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-TRAVELER-illustration-v1-20261012-5e11413e3750.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+      "sourceContentSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "d53527dbf8c757f626939736ecd97890d8bd5eea70e2671380d3fcdee67d73a4",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic sourced natural/food/material subject or traditional functional object; no named protected artwork or fabricated city scene.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/assets/e08-moroni-TRAVELER-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "5e11413e37507a64eee4cd302ce58eaa4b5486a411c42e19a43a5ad1c634ed48",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Huokoisia tummia kiviä ja vaihtelevasti aaltoilevaa vettä sekä vaahtoa. Luontevat pinnat ja veden liike, ei maamerkkiä, henkilöitä tai tekstiä.",
+            "captionFi": "Havainnekuva vulkaanisen rannikon kivestä ja merestä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+            "contentSha256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1",
+            "targetCurrentlyPresent": true,
+            "targetText": "",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+            "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+            "topicEvidence": "Moronin rannikon vulkaanisuus kuuluu teksti- ja faktapohjaan. Kuva ei ole todellisen rantakohdan valokuva.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+              "sourceContentSha256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1",
+              "targetText": "Tutustu medinan kujiin ja sataman ympäristöön kävellen. Volo Volo -torilla voi yhdistää ostokset ja paikallisen aterian. Kansallismuseo antaa taustaa sekä kaupunkihistorialle että Karthalan luonnolle. Hahayan lentoasemalta tarvitaan erillinen siirtymä Moroniin. Kaupungissa liikutaan jaetuilla takseilla, joiden reitti riippuu matkustajien määränpäistä. Karthalan retki on erillinen vuoristoretki, johon lähdetään paikallisen oppaan kanssa vasta ajankohtaisen tilanteen tarkistamisen jälkeen.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+              "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+              "supportingContext": "Current travel panel and the same city's sourced flora, fauna, food or material topics.",
+              "subjectBasis": "A close vertical detail of naturally rough dark volcanic basalt rock touched by seawater and a little sea foam. No identifiable coast, harbor, buildings, tourist beach or mountain."
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Vulkaaninen kivi ja meri sopivat paikalliseen materiaaliteemaan, selite on yleinen havainnekuva."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva vulkaanisen rannikon kivestä ja merestä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
+        "fileSHA256": "c5ad4271318bb784242abb84f4e82b0221fcce48bfc462acd743006817e995bf",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e08-moroni-TRAVELER-illustration-v1-20261012",
+          "sha256": "5e11413e37507a64eee4cd302ce58eaa4b5486a411c42e19a43a5ad1c634ed48",
+          "verdict": "accepted",
+          "reason": "Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Vulkaaninen kivi ja meri sopivat paikalliseen materiaaliteemaan, selite on yleinen havainnekuva.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/assets/e08-moroni-TRAVELER-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "5e11413e37507a64eee4cd302ce58eaa4b5486a411c42e19a43a5ad1c634ed48",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Huokoisia tummia kiviä ja vaihtelevasti aaltoilevaa vettä sekä vaahtoa. Luontevat pinnat ja veden liike, ei maamerkkiä, henkilöitä tai tekstiä.",
+            "captionFi": "Havainnekuva vulkaanisen rannikon kivestä ja merestä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+            "contentSha256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1",
+            "targetCurrentlyPresent": true,
+            "targetText": "",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+            "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+            "topicEvidence": "Moronin rannikon vulkaanisuus kuuluu teksti- ja faktapohjaan. Kuva ei ole todellisen rantakohdan valokuva.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+              "sourceContentSha256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1",
+              "targetText": "Tutustu medinan kujiin ja sataman ympäristöön kävellen. Volo Volo -torilla voi yhdistää ostokset ja paikallisen aterian. Kansallismuseo antaa taustaa sekä kaupunkihistorialle että Karthalan luonnolle. Hahayan lentoasemalta tarvitaan erillinen siirtymä Moroniin. Kaupungissa liikutaan jaetuilla takseilla, joiden reitti riippuu matkustajien määränpäistä. Karthalan retki on erillinen vuoristoretki, johon lähdetään paikallisen oppaan kanssa vasta ajankohtaisen tilanteen tarkistamisen jälkeen.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+              "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+              "supportingContext": "Current travel panel and the same city's sourced flora, fauna, food or material topics.",
+              "subjectBasis": "A close vertical detail of naturally rough dark volcanic basalt rock touched by seawater and a little sea foam. No identifiable coast, harbor, buildings, tourist beach or mountain."
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T19:07:22.218726+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa.json",
+            "sha256": "8a88ce1d6f82a761fb504e85980e12f68dd33259da3b685261a5b022e4537f32"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
+            "sha256": "c5ad4271318bb784242abb84f4e82b0221fcce48bfc462acd743006817e995bf"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-TRAVELER-illustration-v1-20261012-5e11413e3750.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-TRAVELER-illustration-v1-20261012-5e11413e3750.png?t=377a79d50adcd465",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-TRAVELER-illustration-v1-20261012-5e11413e3750.png",
+        "sha256": "377a79d50adcd465e66bc294ae16d4139233413060feb297c730be2bdfbd8e7d",
+        "bytes": 3000607,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-moroni-TRAVELER-illustration-v1-20261012",
+        "nativeSHA256": "5e11413e37507a64eee4cd302ce58eaa4b5486a411c42e19a43a5ad1c634ed48",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-TRAVELER-illustration-v1-20261012-5e11413e3750.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "moroni",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T19:07:32.004344+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-TRAVELER-illustration-v1-20261012-5e11413e3750.png",
+        "sha256": "377a79d50adcd465e66bc294ae16d4139233413060feb297c730be2bdfbd8e7d",
+        "bytes": 3000607,
+        "SHAReadAt": "2026-10-12T19:32:06.300306+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "5e11413e37507a64eee4cd302ce58eaa4b5486a411c42e19a43a5ad1c634ed48",
+        "rgbPixelSHA256": "6fe93764b36cc39d9cebaf8bc1ae396b643192c0b8005ee6abca476b84985044",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "d53527dbf8c757f626939736ecd97890d8bd5eea70e2671380d3fcdee67d73a4"
+    },
+    {
+      "era": "e08",
+      "city": "moroni",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e08-moroni-O4-illustration-v1-20261012",
+      "galleryImageID": "e08-moroni-O4-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-O4-illustration-v1-20261012-2361faf47cfc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Mitä täällä syödään.",
+        "lyhyt": "Havainnekuva: Mitä täällä syödään."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-O4-illustration-v1-20261012-2361faf47cfc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Mitä täällä syödään.",
+        "lyhyt": "Havainnekuva: Mitä täällä syödään."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "2361faf47cfcf5179d98554349d7abf424b267d8522664e049d6e372003bd0b4",
+      "exportSHA256": "4bf0b2695d46703f3eb8ff52becb7239a14ee1ba721d36cf9114ab206a74f396",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-O4-illustration-v1-20261012-2361faf47cfc.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-O4-illustration-v1-20261012-2361faf47cfc.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-O4-illustration-v1-20261012-2361faf47cfc.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+      "sourceContentSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "3a74a54dbdd9ba59c941d81d39d98859b63f4f92d565a2b89a22f2ce3a49cf8e",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic natural subject, ordinary materials or unbranded objects; no named copyrighted building or contemporary artwork reproduced.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/assets/e08-moroni-O4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "2361faf47cfcf5179d98554349d7abf424b267d8522664e049d6e372003bd0b4",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kokonainen paistettu kala evineen ja paistettuja banaaniviipaleita lautasella. Luonteva rakenne ja paistopinta; ei henkilöitä, tekstiä tai logoja.",
+            "captionFi": "Havainnekuva: Mitä täällä syödään.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+            "contentSha256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1",
+            "targetCurrentlyPresent": true,
+            "targetText": "Volo Volo -torin ruokapaikoissa voi kokeilla paistettua kalaa ja banaaneja tai riisiä lihan kanssa. Kaupungin iltaruokaan kuuluvat myös vartaat, kana, bataatti ja maniokki. Ruoka näkyy sekä torin pienissä ruokapaikoissa että katujen grilleissä. Kysy annoksen sisältöä paikan päällä ja valitse tuoreeltaan valmistettua ruokaa. Torikierroksen voi näin päättää ateriaan samoissa kortteleissa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+            "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+            "topicEvidence": "O4 mainitsee paistetun kalan ja banaanit.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+              "sourceContentSha256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1",
+              "targetText": "Volo Volo -torin ruokapaikoissa voi kokeilla paistettua kalaa ja banaaneja tai riisiä lihan kanssa. Kaupungin iltaruokaan kuuluvat myös vartaat, kana, bataatti ja maniokki. Ruoka näkyy sekä torin pienissä ruokapaikoissa että katujen grilleissä. Kysy annoksen sisältöä paikan päällä ja valitse tuoreeltaan valmistettua ruokaa. Torikierroksen voi näin päättää ateriaan samoissa kortteleissa.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+              "wiki": null,
+              "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+              "supportingSourceUrls": [
+                "https://en.wikivoyage.org/wiki/Moroni_(Comoros"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Moroni_(Comoros",
+                "https://volcano.si.edu/volcano.cfm?vn=233010`"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Paistettu kala ja banaaniviipaleet sopivat oppaan ruoka-aiheeseen. Selite merkitsee kuvan havainnollistukseksi eikä tietyn Volo Volo -ruokapaikan valokuvaksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: Mitä täällä syödään.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
+        "fileSHA256": "c5ad4271318bb784242abb84f4e82b0221fcce48bfc462acd743006817e995bf",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e08-moroni-O4-illustration-v1-20261012",
+          "sha256": "2361faf47cfcf5179d98554349d7abf424b267d8522664e049d6e372003bd0b4",
+          "verdict": "accepted",
+          "reason": "Paistettu kala ja banaaniviipaleet sopivat oppaan ruoka-aiheeseen. Selite merkitsee kuvan havainnollistukseksi eikä tietyn Volo Volo -ruokapaikan valokuvaksi.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/assets/e08-moroni-O4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "2361faf47cfcf5179d98554349d7abf424b267d8522664e049d6e372003bd0b4",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kokonainen paistettu kala evineen ja paistettuja banaaniviipaleita lautasella. Luonteva rakenne ja paistopinta; ei henkilöitä, tekstiä tai logoja.",
+            "captionFi": "Havainnekuva: Mitä täällä syödään.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+            "contentSha256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1",
+            "targetCurrentlyPresent": true,
+            "targetText": "Volo Volo -torin ruokapaikoissa voi kokeilla paistettua kalaa ja banaaneja tai riisiä lihan kanssa. Kaupungin iltaruokaan kuuluvat myös vartaat, kana, bataatti ja maniokki. Ruoka näkyy sekä torin pienissä ruokapaikoissa että katujen grilleissä. Kysy annoksen sisältöä paikan päällä ja valitse tuoreeltaan valmistettua ruokaa. Torikierroksen voi näin päättää ateriaan samoissa kortteleissa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+            "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+            "topicEvidence": "O4 mainitsee paistetun kalan ja banaanit.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+              "sourceContentSha256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1",
+              "targetText": "Volo Volo -torin ruokapaikoissa voi kokeilla paistettua kalaa ja banaaneja tai riisiä lihan kanssa. Kaupungin iltaruokaan kuuluvat myös vartaat, kana, bataatti ja maniokki. Ruoka näkyy sekä torin pienissä ruokapaikoissa että katujen grilleissä. Kysy annoksen sisältöä paikan päällä ja valitse tuoreeltaan valmistettua ruokaa. Torikierroksen voi näin päättää ateriaan samoissa kortteleissa.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+              "wiki": null,
+              "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+              "supportingSourceUrls": [
+                "https://en.wikivoyage.org/wiki/Moroni_(Comoros"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Moroni_(Comoros",
+                "https://volcano.si.edu/volcano.cfm?vn=233010`"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:23:33.540881+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa.json",
+            "sha256": "8a88ce1d6f82a761fb504e85980e12f68dd33259da3b685261a5b022e4537f32"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
+            "sha256": "c5ad4271318bb784242abb84f4e82b0221fcce48bfc462acd743006817e995bf"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-O4-illustration-v1-20261012-2361faf47cfc.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-O4-illustration-v1-20261012-2361faf47cfc.png?t=4bf0b2695d46703f",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-O4-illustration-v1-20261012-2361faf47cfc.png",
+        "sha256": "4bf0b2695d46703f3eb8ff52becb7239a14ee1ba721d36cf9114ab206a74f396",
+        "bytes": 2539470,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-moroni-O4-illustration-v1-20261012",
+        "nativeSHA256": "2361faf47cfcf5179d98554349d7abf424b267d8522664e049d6e372003bd0b4",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-O4-illustration-v1-20261012-2361faf47cfc.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "moroni",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:27:55.059563+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-O4-illustration-v1-20261012-2361faf47cfc.png",
+        "sha256": "4bf0b2695d46703f3eb8ff52becb7239a14ee1ba721d36cf9114ab206a74f396",
+        "bytes": 2539470,
+        "SHAReadAt": "2026-10-12T18:29:53.343187+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "2361faf47cfcf5179d98554349d7abf424b267d8522664e049d6e372003bd0b4",
+        "rgbPixelSHA256": "8948580ef84c1b73e388ef57b72d572dc02059799e151cea42b07dde81cc954b",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "3a74a54dbdd9ba59c941d81d39d98859b63f4f92d565a2b89a22f2ce3a49cf8e"
+    },
+    {
+      "era": "e08",
+      "city": "moroni",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e08-moroni-L4-illustration-v1-20261012",
+      "galleryImageID": "e08-moroni-L4-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-L4-illustration-v1-20261012-e70f4080f232.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Pääkaupungin rannassa on laavakiveä.",
+        "lyhyt": "Havainnekuva: Pääkaupungin rannassa on laavakiveä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-L4-illustration-v1-20261012-e70f4080f232.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Pääkaupungin rannassa on laavakiveä.",
+        "lyhyt": "Havainnekuva: Pääkaupungin rannassa on laavakiveä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "e70f4080f232f7ff425ca381f308c40c7cb31e941299ffd17a324564e528585d",
+      "exportSHA256": "03468efdf4f9473bca93077dbaf1454043fdfb35f7887fc6c90b4e5af8909fef",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-L4-illustration-v1-20261012-e70f4080f232.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-L4-illustration-v1-20261012-e70f4080f232.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-L4-illustration-v1-20261012-e70f4080f232.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+      "sourceContentSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0dfb6915d2a493c46ca043b07907a7054e8574b0c4ccc6d70bdf43511f18b1eb",
+        "semanticContextSHA256": "0dfb6915d2a493c46ca043b07907a7054e8574b0c4ccc6d70bdf43511f18b1eb",
+        "subjectTitle": "Pääkaupungin rannassa on laavakiveä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic natural subject, ordinary materials or unbranded objects; no named copyrighted building or contemporary artwork reproduced.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/assets/e08-moroni-L4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "e70f4080f232f7ff425ca381f308c40c7cb31e941299ffd17a324564e528585d",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tummia huokoisia rantakiviä ja läpinäkyvää merivettä epäsäännöllisine vaahtoreunoineen. Luonteva veden liike ja vaihtelevat pinnat, ei rakennuksia tai merkintöjä.",
+            "captionFi": "Havainnekuva: Pääkaupungin rannassa on laavakiveä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+            "contentSha256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1",
+            "targetCurrentlyPresent": true,
+            "targetText": "Moronin rannikko on vulkaanista ja kallioista; kaupungin ranta ei ole kauttaaltaan hiekkarantaa. Tämä näkyy myös siinä, mihin rantaretki suuntautuu. Moronin pohjoispuolinen Itsandra tunnetaan hiekkarannastaan, kun taas kaupungin rannassa meri kohtaa paljon kivistä maastoa. Ngazidjan tulivuoriperäinen maisema ulottuu siten vuoren rinteiltä meren ääreen. Kaupungin ja rannan välinen yhteys on monimuotoinen: satama, kallioranta ja läheisen Itsandran uimapaikka eivät ole keskenään samanlaisia ympäristöjä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+            "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+            "topicEvidence": "L4 käsittelee vulkaanista kalliorantaa. Kuva hyväksytään materiaalin ja ympäristötyypin havainnollistuksena.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+              "sourceContentSha256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1",
+              "targetText": "Moronin rannikko on vulkaanista ja kallioista; kaupungin ranta ei ole kauttaaltaan hiekkarantaa. Tämä näkyy myös siinä, mihin rantaretki suuntautuu. Moronin pohjoispuolinen Itsandra tunnetaan hiekkarannastaan, kun taas kaupungin rannassa meri kohtaa paljon kivistä maastoa. Ngazidjan tulivuoriperäinen maisema ulottuu siten vuoren rinteiltä meren ääreen. Kaupungin ja rannan välinen yhteys on monimuotoinen: satama, kallioranta ja läheisen Itsandran uimapaikka eivät ole keskenään samanlaisia ympäristöjä.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+              "wiki": "Moroni, Comoros",
+              "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+              "supportingSourceUrls": [
+                "https://en.wikipedia.org/wiki/Moroni%2C_Comoros"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Moroni_(Comoros",
+                "https://volcano.si.edu/volcano.cfm?vn=233010`"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Laavakivi ja meren aaltoilu sopivat rannikon materiaaliaiheeseen. Havainne-merkintä on pakollinen; tämä ei ole Moronin todellisen rantakohdan valokuva."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: Pääkaupungin rannassa on laavakiveä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
+        "fileSHA256": "c5ad4271318bb784242abb84f4e82b0221fcce48bfc462acd743006817e995bf",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e08-moroni-L4-illustration-v1-20261012",
+          "sha256": "e70f4080f232f7ff425ca381f308c40c7cb31e941299ffd17a324564e528585d",
+          "verdict": "accepted",
+          "reason": "Laavakivi ja meren aaltoilu sopivat rannikon materiaaliaiheeseen. Havainne-merkintä on pakollinen; tämä ei ole Moronin todellisen rantakohdan valokuva.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/assets/e08-moroni-L4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "e70f4080f232f7ff425ca381f308c40c7cb31e941299ffd17a324564e528585d",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tummia huokoisia rantakiviä ja läpinäkyvää merivettä epäsäännöllisine vaahtoreunoineen. Luonteva veden liike ja vaihtelevat pinnat, ei rakennuksia tai merkintöjä.",
+            "captionFi": "Havainnekuva: Pääkaupungin rannassa on laavakiveä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+            "contentSha256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1",
+            "targetCurrentlyPresent": true,
+            "targetText": "Moronin rannikko on vulkaanista ja kallioista; kaupungin ranta ei ole kauttaaltaan hiekkarantaa. Tämä näkyy myös siinä, mihin rantaretki suuntautuu. Moronin pohjoispuolinen Itsandra tunnetaan hiekkarannastaan, kun taas kaupungin rannassa meri kohtaa paljon kivistä maastoa. Ngazidjan tulivuoriperäinen maisema ulottuu siten vuoren rinteiltä meren ääreen. Kaupungin ja rannan välinen yhteys on monimuotoinen: satama, kallioranta ja läheisen Itsandran uimapaikka eivät ole keskenään samanlaisia ympäristöjä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+            "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+            "topicEvidence": "L4 käsittelee vulkaanista kalliorantaa. Kuva hyväksytään materiaalin ja ympäristötyypin havainnollistuksena.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+              "sourceContentSha256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1",
+              "targetText": "Moronin rannikko on vulkaanista ja kallioista; kaupungin ranta ei ole kauttaaltaan hiekkarantaa. Tämä näkyy myös siinä, mihin rantaretki suuntautuu. Moronin pohjoispuolinen Itsandra tunnetaan hiekkarannastaan, kun taas kaupungin rannassa meri kohtaa paljon kivistä maastoa. Ngazidjan tulivuoriperäinen maisema ulottuu siten vuoren rinteiltä meren ääreen. Kaupungin ja rannan välinen yhteys on monimuotoinen: satama, kallioranta ja läheisen Itsandran uimapaikka eivät ole keskenään samanlaisia ympäristöjä.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+              "wiki": "Moroni, Comoros",
+              "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+              "supportingSourceUrls": [
+                "https://en.wikipedia.org/wiki/Moroni%2C_Comoros"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Moroni_(Comoros",
+                "https://volcano.si.edu/volcano.cfm?vn=233010`"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:26:47.567913+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa.json",
+            "sha256": "8a88ce1d6f82a761fb504e85980e12f68dd33259da3b685261a5b022e4537f32"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
+            "sha256": "c5ad4271318bb784242abb84f4e82b0221fcce48bfc462acd743006817e995bf"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-L4-illustration-v1-20261012-e70f4080f232.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-L4-illustration-v1-20261012-e70f4080f232.png?t=03468efdf4f9473b",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-L4-illustration-v1-20261012-e70f4080f232.png",
+        "sha256": "03468efdf4f9473bca93077dbaf1454043fdfb35f7887fc6c90b4e5af8909fef",
+        "bytes": 3125107,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-moroni-L4-illustration-v1-20261012",
+        "nativeSHA256": "e70f4080f232f7ff425ca381f308c40c7cb31e941299ffd17a324564e528585d",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-L4-illustration-v1-20261012-e70f4080f232.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "moroni",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T18:27:57.089380+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-L4-illustration-v1-20261012-e70f4080f232.png",
+        "sha256": "03468efdf4f9473bca93077dbaf1454043fdfb35f7887fc6c90b4e5af8909fef",
+        "bytes": 3125107,
+        "SHAReadAt": "2026-10-12T18:29:53.457095+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "e70f4080f232f7ff425ca381f308c40c7cb31e941299ffd17a324564e528585d",
+        "rgbPixelSHA256": "6630a8bb3f51334fb36d0f5ef2c19851c29eaca7e7f11f29710d6bd343e21680",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "targetAfterSHA256": "0dfb6915d2a493c46ca043b07907a7054e8574b0c4ccc6d70bdf43511f18b1eb",
+      "contextAfterSHA256": "0dfb6915d2a493c46ca043b07907a7054e8574b0c4ccc6d70bdf43511f18b1eb"
+    },
+    {
+      "era": "e08",
+      "city": "moroni",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e08-moroni-photo-d4eaf30a13ce56ac",
+      "galleryImageID": "capital-cc-e08-moroni-photo-d4eaf30a13ce56ac",
+      "commonsFile": "Moroni sunset palm trees.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/photo-d4eaf30a13ce56acca1e.jpg",
+        "suora": true,
+        "lahde": "Radosław Botev, Commons (CC BY-SA 4.0)",
+        "selite": "Palmut ja auringonlasku Moronin rannikolla, 2019.",
+        "lyhyt": "Palmut ja auringonlasku Moronin rannikolla, 2019.",
+        "tiedosto": "Moroni sunset palm trees.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Radosław Botev, Commons (CC BY-SA 4.0)",
+        "selite": "Palmut ja auringonlasku Moronin rannikolla, 2019.",
+        "lyhyt": "Palmut ja auringonlasku Moronin rannikolla, 2019.",
+        "tiedosto": "Moroni sunset palm trees.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/photo-d4eaf30a13ce56acca1e.jpg",
+        "suora": true,
+        "lahde": "Radosław Botev, Commons (CC BY-SA 4.0)",
+        "selite": "Palmut ja auringonlasku Moronin rannikolla, 2019.",
+        "lyhyt": "Palmut ja auringonlasku Moronin rannikolla, 2019.",
+        "tiedosto": "Moroni sunset palm trees.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "d4eaf30a13ce56acca1e69b10ed4e5aacda71abcd99c18302e19c8a6dca7c980",
+      "exportSHA256": "d4eaf30a13ce56acca1e69b10ed4e5aacda71abcd99c18302e19c8a6dca7c980",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/photo-d4eaf30a13ce56acca1e.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/photo-d4eaf30a13ce56acca1e.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e08/moroni/9a6201c802f9610543cefc639e485cfb82dcd4df1b015e0b7a51c0cc9a59043e.jpg",
+      "dimensions": [
+        4000,
+        3000
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+      "sourceContentSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "3cb39ce32c50470e399603d3b872e503b9ffdb1c3d72c60e0dc8da03332ad091",
+        "semanticContextSHA256": "3cb39ce32c50470e399603d3b872e503b9ffdb1c3d72c60e0dc8da03332ad091",
+        "subjectTitle": "moroni — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Radosław Botev",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Moroni_sunset_palm_trees.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Moroni_sunset_palm_trees.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Lähdesivun nimenomainen Author ja Licensing tarkistettu; Source own work. Alkuperäinen kuva paikallisesti silmin katsottu.",
+            "workLayer": "Luonnolliset palmut, rannan kasvillisuus, meri ja tavallinen tienpinta. Ei ihmisiä, rakennusta tai kuvataidetta pääaiheena; ei lisättyä tekstiä, vesileimaa tai kehystä.",
+            "placeBoundary": "Kuvaajan oma Description: Sunset and palm trees, Moroni, Comoros.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/cc-evidence/ab4a047baf40ed03-preview.jpg",
+            "pixelSHA256": "d4eaf30a13ce56acca1e69b10ed4e5aacda71abcd99c18302e19c8a6dca7c980",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/cc-evidence/ab4a047baf40ed03.html",
+            "sourceSHA256": "0ea4917e4e12af832fc42370e05a14cd46d49d4ed0fc5a20017389af0631268b",
+            "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/moroni/PHOTO/owner.json",
+            "notAlreadyInPack": "Tarkistus korjattu: väärä paakaupungit-pilvi/js/packs-polku ei ollut olemassa. rg täsmällisillä tiedostonimillä todellisesta e08/js/packs-kansiosta: ei osumia (exit 1).",
+            "independentQA": "avoin"
+          },
+          "QA": {
+            "rows": [
+              [
+                "Description Moroni sunset palm trees.jpg",
+                "English: Sunset and palm trees, Moroni, Comoros"
+              ],
+              [
+                "Date",
+                "6 July 2019, 17:49:03"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Radosław Botev"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 4.0"
+            ],
+            "pageDimensions": [
+              4000,
+              3000
+            ],
+            "actualDimensions": [
+              4000,
+              3000
+            ],
+            "pageSha256": "0ea4917e4e12af832fc42370e05a14cd46d49d4ed0fc5a20017389af0631268b",
+            "nativeSha256": "d4eaf30a13ce56acca1e69b10ed4e5aacda71abcd99c18302e19c8a6dca7c980",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Moroni_sunset_palm_trees.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa-evidence/source-photo-ab4a047baf40.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/cc-evidence/ab4a047baf40ed03-preview.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa-evidence/source-photo-ab4a047baf40.json",
+            "author": "Radosław Botev",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; name and original URL variants",
+            "captionFi": "Palmut ja auringonlasku Moronin rannikolla, 2019.",
+            "sourceContentSHA256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1"
+          },
+          "qaReason": "Alkuperäinen Description nimeää Moronin, Komorit ja palmujen auringonlaskun. Aito luonnonmaisema, palmut ja meren pinta uskottavat; matala vastavalo ja auringonhäikäisy ovat todellisen iltavalokuvan piirteitä. Ei kasvoja, lisättyjä merkintöjä tai jäljennettyä suojattua teosta; etualan tavallinen ajoradan reuna ei ole teospääaihe. PHOTO saa olla paikallinen luontomaisema, vuosi2019 kirjataan."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Palmut ja auringonlasku Moronin rannikolla, 2019.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa.json",
+        "fileSHA256": "8a88ce1d6f82a761fb504e85980e12f68dd33259da3b685261a5b022e4537f32",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Moroni sunset palm trees.jpg",
+          "sha256": "d4eaf30a13ce56acca1e69b10ed4e5aacda71abcd99c18302e19c8a6dca7c980",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen Description nimeää Moronin, Komorit ja palmujen auringonlaskun. Aito luonnonmaisema, palmut ja meren pinta uskottavat; matala vastavalo ja auringonhäikäisy ovat todellisen iltavalokuvan piirteitä. Ei kasvoja, lisättyjä merkintöjä tai jäljennettyä suojattua teosta; etualan tavallinen ajoradan reuna ei ole teospääaihe. PHOTO saa olla paikallinen luontomaisema, vuosi2019 kirjataan.",
+          "required": true,
+          "reviewedAt": "2026-10-12T19:24:18.062381+00:00",
+          "evidence": {
+            "rows": [
+              [
+                "Description Moroni sunset palm trees.jpg",
+                "English: Sunset and palm trees, Moroni, Comoros"
+              ],
+              [
+                "Date",
+                "6 July 2019, 17:49:03"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Radosław Botev"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 4.0"
+            ],
+            "pageDimensions": [
+              4000,
+              3000
+            ],
+            "actualDimensions": [
+              4000,
+              3000
+            ],
+            "pageSha256": "0ea4917e4e12af832fc42370e05a14cd46d49d4ed0fc5a20017389af0631268b",
+            "nativeSha256": "d4eaf30a13ce56acca1e69b10ed4e5aacda71abcd99c18302e19c8a6dca7c980",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Moroni_sunset_palm_trees.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa-evidence/source-photo-ab4a047baf40.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/cc-evidence/ab4a047baf40ed03-preview.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa-evidence/source-photo-ab4a047baf40.json",
+            "author": "Radosław Botev",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; name and original URL variants",
+            "captionFi": "Palmut ja auringonlasku Moronin rannikolla, 2019.",
+            "sourceContentSHA256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa.json",
+            "sha256": "8a88ce1d6f82a761fb504e85980e12f68dd33259da3b685261a5b022e4537f32"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
+            "sha256": "c5ad4271318bb784242abb84f4e82b0221fcce48bfc462acd743006817e995bf"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "moroni",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Moroni sunset palm trees.jpg",
+        "sha256": "d4eaf30a13ce56acca1e69b10ed4e5aacda71abcd99c18302e19c8a6dca7c980",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Moroni_sunset_palm_trees.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Moroni_sunset_palm_trees.jpg",
+        "author": "Radosław Botev",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 4000,
+        "height": 3000,
+        "originalSHA256": "d4eaf30a13ce56acca1e69b10ed4e5aacda71abcd99c18302e19c8a6dca7c980",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/photo-d4eaf30a13ce56acca1e.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/photo-d4eaf30a13ce56acca1e.jpg",
+        "bytes": 1308472,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:25:00.227893+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Moroni sunset palm trees.jpg",
+        "lahde": "Radosław Botev, Commons (CC BY-SA 4.0)",
+        "selite": "Palmut ja auringonlasku Moronin rannikolla, 2019.",
+        "lyhyt": "Palmut ja auringonlasku Moronin rannikolla, 2019."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Radosław Botev, Commons (CC BY-SA 4.0)",
+        "selite": "Palmut ja auringonlasku Moronin rannikolla, 2019.",
+        "lyhyt": "Palmut ja auringonlasku Moronin rannikolla, 2019.",
+        "tiedosto": "Moroni sunset palm trees.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "targetAfterSHA256": "3cb39ce32c50470e399603d3b872e503b9ffdb1c3d72c60e0dc8da03332ad091",
+      "contextAfterSHA256": "3cb39ce32c50470e399603d3b872e503b9ffdb1c3d72c60e0dc8da03332ad091"
+    },
+    {
+      "era": "e08",
+      "city": "moroni",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e08-moroni-c1-13c766767964f582",
+      "galleryImageID": "capital-cc-e08-moroni-c1-13c766767964f582",
+      "commonsFile": "Moroni beach.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/c1-13c766767964f582d625.jpg",
+        "suora": true,
+        "lahde": "Radosław Botev, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Itsandran rantaa Moronissa, 2019.",
+        "lyhyt": "Itsandran rantaa Moronissa, 2019.",
+        "tiedosto": "Moroni beach.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Radosław Botev, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Itsandran rantaa Moronissa, 2019.",
+        "lyhyt": "Itsandran rantaa Moronissa, 2019.",
+        "tiedosto": "Moroni beach.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/c1-13c766767964f582d625.jpg",
+        "suora": true,
+        "lahde": "Radosław Botev, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Itsandran rantaa Moronissa, 2019.",
+        "lyhyt": "Itsandran rantaa Moronissa, 2019.",
+        "tiedosto": "Moroni beach.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "13c766767964f582d6256c0ea7097ba2c672adcafc65f3ba419fea9188293ec2",
+      "exportSHA256": "13c766767964f582d6256c0ea7097ba2c672adcafc65f3ba419fea9188293ec2",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/c1-13c766767964f582d625.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/c1-13c766767964f582d625.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e08/moroni/7bbe87f38081692d6b5e5bad10fba43039e32a8d6980a43eb4784bf67afda992.jpg",
+      "dimensions": [
+        4000,
+        3000
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+      "sourceContentSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "f4f5582229ea673675ff9999029f0f86b5beee63f93e1e4ade7dcfaa2a6c36e5",
+        "semanticContextSHA256": "f4f5582229ea673675ff9999029f0f86b5beee63f93e1e4ade7dcfaa2a6c36e5",
+        "subjectTitle": "Moroni",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Radosław Botev",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Moroni_beach.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/Moroni_beach.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Lähdesivun nimenomainen Author ja Licensing tarkistettu; Source own work. Alkuperäinen kuva paikallisesti silmin katsottu.",
+            "workLayer": "Laaja todellinen rantamaisema: meri, hiekkaranta ja tavallisten asuinrakennusten rivistö. Ei yksittäistä nimettyä suojattua teosta tai arkkitehtuurikohdetta pääaiheena. Rakennukset muodostavat asuinympäristön kokonaisuuden; ei veistoksia, muraaleja tai tunnistettavia kasvoja. Ei lisättyjä tekstejä tai kehyksiä.",
+            "placeBoundary": "Kuvaajan oma Description: Itsandra beach, the city beach of Moroni, Grande Comore, Comoros.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/cc-evidence/5ca4cae96b535efd-preview.jpg",
+            "pixelSHA256": "13c766767964f582d6256c0ea7097ba2c672adcafc65f3ba419fea9188293ec2",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/cc-evidence/5ca4cae96b535efd.html",
+            "sourceSHA256": "670cc6c2565d6ecaed2c04254a19f1fb63c6da8d03ce96c34da3b2300e7a3e91",
+            "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/moroni/C1/owner.json",
+            "notAlreadyInPack": "Tarkistus korjattu: väärä paakaupungit-pilvi/js/packs-polku ei ollut olemassa. rg täsmällisillä tiedostonimillä todellisesta e08/js/packs-kansiosta: ei osumia (exit 1).",
+            "independentQA": "avoin"
+          },
+          "QA": {
+            "rows": [
+              [
+                "Description Moroni beach.jpg",
+                "English: Itsandra beach, the city beach of Moroni, Grande Comore, Comoros"
+              ],
+              [
+                "Date",
+                "7 July 2019, 09:55:31"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Radosław Botev"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 4.0"
+            ],
+            "pageDimensions": [
+              4000,
+              3000
+            ],
+            "actualDimensions": [
+              4000,
+              3000
+            ],
+            "pageSha256": "670cc6c2565d6ecaed2c04254a19f1fb63c6da8d03ce96c34da3b2300e7a3e91",
+            "nativeSha256": "13c766767964f582d6256c0ea7097ba2c672adcafc65f3ba419fea9188293ec2",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Moroni_beach.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa-evidence/source-c1-5ca4cae96b53.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/cc-evidence/5ca4cae96b535efd-preview.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa-evidence/source-c1-5ca4cae96b53.json",
+            "author": "Radosław Botev",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; name and original URL variants",
+            "captionFi": "Itsandran rantaa Moronissa, 2019.",
+            "sourceContentSHA256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1"
+          },
+          "qaReason": "Alkuperäinen Description nimeää Itsandran Moronin kaupunkirannaksi. Aito laaja hiekan, meren, rantakallion ja asutuksen näkymä, ei tunnistettavia kasvoja tai lisättyä tekstiä/vesileimaa. Kuva ei esittele erillistä rakennus-/taideteosta päämotiivina; tavalliset rantatalot ovat osa kokonaisen rannikon asettelua, ei lähikuvaa nimetystä nykyteoksesta. Hyväksyntä koskee tätä kokonaista rantakuvaa, ei irrotettua julkisivukuvaa. Vuosi2019, ei nykyhetkiväitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Itsandran rantaa Moronissa, 2019.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa.json",
+        "fileSHA256": "8a88ce1d6f82a761fb504e85980e12f68dd33259da3b685261a5b022e4537f32",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "Moroni beach.jpg",
+          "sha256": "13c766767964f582d6256c0ea7097ba2c672adcafc65f3ba419fea9188293ec2",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen Description nimeää Itsandran Moronin kaupunkirannaksi. Aito laaja hiekan, meren, rantakallion ja asutuksen näkymä, ei tunnistettavia kasvoja tai lisättyä tekstiä/vesileimaa. Kuva ei esittele erillistä rakennus-/taideteosta päämotiivina; tavalliset rantatalot ovat osa kokonaisen rannikon asettelua, ei lähikuvaa nimetystä nykyteoksesta. Hyväksyntä koskee tätä kokonaista rantakuvaa, ei irrotettua julkisivukuvaa. Vuosi2019, ei nykyhetkiväitettä.",
+          "required": true,
+          "reviewedAt": "2026-10-12T19:24:18.062381+00:00",
+          "evidence": {
+            "rows": [
+              [
+                "Description Moroni beach.jpg",
+                "English: Itsandra beach, the city beach of Moroni, Grande Comore, Comoros"
+              ],
+              [
+                "Date",
+                "7 July 2019, 09:55:31"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Radosław Botev"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 4.0"
+            ],
+            "pageDimensions": [
+              4000,
+              3000
+            ],
+            "actualDimensions": [
+              4000,
+              3000
+            ],
+            "pageSha256": "670cc6c2565d6ecaed2c04254a19f1fb63c6da8d03ce96c34da3b2300e7a3e91",
+            "nativeSha256": "13c766767964f582d6256c0ea7097ba2c672adcafc65f3ba419fea9188293ec2",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Moroni_beach.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa-evidence/source-c1-5ca4cae96b53.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/cc-evidence/5ca4cae96b535efd-preview.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa-evidence/source-c1-5ca4cae96b53.json",
+            "author": "Radosław Botev",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; name and original URL variants",
+            "captionFi": "Itsandran rantaa Moronissa, 2019.",
+            "sourceContentSHA256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa.json",
+            "sha256": "8a88ce1d6f82a761fb504e85980e12f68dd33259da3b685261a5b022e4537f32"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
+            "sha256": "c5ad4271318bb784242abb84f4e82b0221fcce48bfc462acd743006817e995bf"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "moroni",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Moroni beach.jpg",
+        "sha256": "13c766767964f582d6256c0ea7097ba2c672adcafc65f3ba419fea9188293ec2",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Moroni_beach.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/Moroni_beach.jpg",
+        "author": "Radosław Botev",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 4000,
+        "height": 3000,
+        "originalSHA256": "13c766767964f582d6256c0ea7097ba2c672adcafc65f3ba419fea9188293ec2",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/c1-13c766767964f582d625.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/c1-13c766767964f582d625.jpg",
+        "bytes": 1026596,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:25:02.123840+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Moroni beach.jpg",
+        "lahde": "Radosław Botev, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Itsandran rantaa Moronissa, 2019.",
+        "lyhyt": "Itsandran rantaa Moronissa, 2019."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Radosław Botev, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Itsandran rantaa Moronissa, 2019.",
+        "lyhyt": "Itsandran rantaa Moronissa, 2019.",
+        "tiedosto": "Moroni beach.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "targetAfterSHA256": "f4f5582229ea673675ff9999029f0f86b5beee63f93e1e4ade7dcfaa2a6c36e5",
+      "contextAfterSHA256": "f4f5582229ea673675ff9999029f0f86b5beee63f93e1e4ade7dcfaa2a6c36e5"
+    },
+    {
+      "era": "e08",
+      "city": "moroni",
+      "slot": "L1",
+      "type": "commons",
+      "assetID": "capital-cc-e08-moroni-l1-0b81e7b7e4a1077b",
+      "galleryImageID": "capital-cc-e08-moroni-l1-0b81e7b7e4a1077b",
+      "commonsFile": "Volcan Karthala vue du grand cratere 13 août 2019.jpg",
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/l1-0b81e7b7e4a1077b9cfe.jpg",
+        "suora": true,
+        "lahde": "Lolodevenelles, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Karthalan kraatteria elokuussa 2019.",
+        "lyhyt": "Karthalan kraatteria elokuussa 2019.",
+        "tiedosto": "Volcan Karthala vue du grand cratere 13 août 2019.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Lolodevenelles, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Karthalan kraatteria elokuussa 2019.",
+        "lyhyt": "Karthalan kraatteria elokuussa 2019.",
+        "tiedosto": "Volcan Karthala vue du grand cratere 13 août 2019.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/l1-0b81e7b7e4a1077b9cfe.jpg",
+        "suora": true,
+        "lahde": "Lolodevenelles, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Karthalan kraatteria elokuussa 2019.",
+        "lyhyt": "Karthalan kraatteria elokuussa 2019.",
+        "tiedosto": "Volcan Karthala vue du grand cratere 13 août 2019.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "0b81e7b7e4a1077b9cfed958ea12bbb3acd8edf0e437971bec48825d303fa2b4",
+      "exportSHA256": "0b81e7b7e4a1077b9cfed958ea12bbb3acd8edf0e437971bec48825d303fa2b4",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/l1-0b81e7b7e4a1077b9cfe.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/l1-0b81e7b7e4a1077b9cfe.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e08/moroni/5991659720436ac9e904e90ec939ef14cf6290ebb18a99bb1adae2964aaac7b2.jpg",
+      "dimensions": [
+        3024,
+        4032
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+      "sourceContentSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "bf2f020612105d433151914c7d4b2f1ecdd533cde0b8c7f0501b266264da690b",
+        "semanticContextSHA256": "bf2f020612105d433151914c7d4b2f1ecdd533cde0b8c7f0501b266264da690b",
+        "subjectTitle": "Tulivuori, jonka huippu muuttuu",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Lolodevenelles",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Volcan_Karthala_vue_du_grand_cratere_13_ao%C3%BBt_2019.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Volcan_Karthala_vue_du_grand_cratere_13_ao%C3%BBt_2019.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Tiedostosivun Author, kuvan oma CC-lisenssi ja Source own work tarkistettu.",
+            "workLayer": "Luonnollinen kallio-/kraatteri-/vesimaisema pääaiheena. Ei tunnistettavia kasvoja, nimettyjä suojattuja teoksia, lisättyä tekstiä, logoa, vesileimaa tai kehystä; mahdollinen kaukainen tavallinen käyttöasutus sivuosassa. Karthalan kuvat näyttävät nimetyn kraatterin todellisen kuvauspäivän tilanteen, eivät AI:lla keksittyä geologiaa.",
+            "placeBoundary": "Valokuvaajan Description ja nimi nimeävät Karthalan suuren kraatterin, 13.8.2019. Todellinen Karthala, ei Moronin keskusta tai nykyhetken tilan takuu.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/cc-evidence/1fda48c46f1cfba4-preview.jpg",
+            "pixelSHA256": "0b81e7b7e4a1077b9cfed958ea12bbb3acd8edf0e437971bec48825d303fa2b4",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/cc-evidence/1fda48c46f1cfba4.html",
+            "sourceSHA256": "d1bc164fd7af284a31a15763a666f0bb6bef05c533b90c5b0669d27205dd99ae",
+            "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/moroni/L1/owner.json",
+            "notAlreadyInPack": "rg täsmällisillä tiedostonimillä e08/js/packs: ei osumia",
+            "independentQA": "avoin"
+          },
+          "QA": {
+            "rows": [
+              [
+                "Description Volcan Karthala vue du grand cratere 13 août 2019.jpg",
+                "Français : 13 août 2019, volcan Karthala, île de la Grande Comore, océan Indien"
+              ],
+              [
+                "Date",
+                "13 August 2019"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Lolodevenelles"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 4.0"
+            ],
+            "pageDimensions": [
+              3024,
+              4032
+            ],
+            "actualDimensions": [
+              4032,
+              3024
+            ],
+            "pageSha256": "d1bc164fd7af284a31a15763a666f0bb6bef05c533b90c5b0669d27205dd99ae",
+            "nativeSha256": "0b81e7b7e4a1077b9cfed958ea12bbb3acd8edf0e437971bec48825d303fa2b4",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Volcan_Karthala_vue_du_grand_cratere_13_ao%C3%BBt_2019.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa-evidence/source-l1-1fda48c46f1c.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/cc-evidence/1fda48c46f1cfba4-preview.jpg",
+            "localMatchesManifestSHA": true,
+            "exifOrientation": 6,
+            "orientedDisplayDimensions": [
+              3024,
+              4032
+            ],
+            "dimensionsMatchAfterOrientation": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa-evidence/source-l1-1fda48c46f1c.json",
+            "author": "Lolodevenelles",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename and original URL aliases",
+            "captionFi": "Karthalan kraatteria elokuussa 2019.",
+            "sourceContentSHA256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1",
+            "currentContentExcerpt": "Karthala on kilpitulivuori ja kuuluu Ngazidjan muodostaneisiin tulivuoriin. Sen huipulla on laaja kaldera, jonka muotoa purkaukset ovat muuttaneet. Moronista katsottu vuori voi näyttää pysyvältä taustalta, vaikka sen huipun maisema ei pysy samanlaisena. Karthalan toiminta kuuluu saaren luonnonhistoriaan, ja vuori on edelleen aktiivinen. Kaupungin läheisyydessä maapallon sisäiset prosessit näkyvät poikkeuksellisen suoraan: saman maiseman osia ovat sekä asuttu rannikko että toimiva tulivuori.",
+            "rightsEvidence": "Luonnollinen tulivuori/kraatteri, ei kuvattua ihmisteosta; valokuvan tekijä ja kaupallinen CC BY-SA4.0 erikseen alkuperäisestä Commons Licensing/Author-osiosta."
+          },
+          "qaReason": "Aito Karthalan suuri kraatteri, alkuperäinen Description nimeää tulivuoren ja Grande Comoren sekä kuvauspäivän13.8.2019. Kivikerrokset, karkeat pinnat ja pilvet luontevat, ei ihmisiä tai ihmisteoksia/lisättyjä merkintöjä. Sopii Tulivuori, jonka huippu muuttuu -nostoon. Natiivi JPEG on4032×3024 ja EXIF Orientation6 kääntää esityksen3024×4032: tämä vastaa Commonsin ja manifestin pystymittoja, ei väärää tiedostoa. Pystymuoto sallittu L1:ssä. Ei väitetä kuvaa historialliseksi purkaushetkeksi tai vuoden1873 näkymäksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Karthalan kraatteria elokuussa 2019.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa.json",
+        "fileSHA256": "8a88ce1d6f82a761fb504e85980e12f68dd33259da3b685261a5b022e4537f32",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "commonsFile": "Volcan Karthala vue du grand cratere 13 août 2019.jpg",
+          "sha256": "0b81e7b7e4a1077b9cfed958ea12bbb3acd8edf0e437971bec48825d303fa2b4",
+          "verdict": "accepted",
+          "reason": "Aito Karthalan suuri kraatteri, alkuperäinen Description nimeää tulivuoren ja Grande Comoren sekä kuvauspäivän13.8.2019. Kivikerrokset, karkeat pinnat ja pilvet luontevat, ei ihmisiä tai ihmisteoksia/lisättyjä merkintöjä. Sopii Tulivuori, jonka huippu muuttuu -nostoon. Natiivi JPEG on4032×3024 ja EXIF Orientation6 kääntää esityksen3024×4032: tämä vastaa Commonsin ja manifestin pystymittoja, ei väärää tiedostoa. Pystymuoto sallittu L1:ssä. Ei väitetä kuvaa historialliseksi purkaushetkeksi tai vuoden1873 näkymäksi.",
+          "required": true,
+          "reviewedAt": "2026-10-12T19:32:24.604669+00:00",
+          "evidence": {
+            "rows": [
+              [
+                "Description Volcan Karthala vue du grand cratere 13 août 2019.jpg",
+                "Français : 13 août 2019, volcan Karthala, île de la Grande Comore, océan Indien"
+              ],
+              [
+                "Date",
+                "13 August 2019"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Lolodevenelles"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 4.0"
+            ],
+            "pageDimensions": [
+              3024,
+              4032
+            ],
+            "actualDimensions": [
+              4032,
+              3024
+            ],
+            "pageSha256": "d1bc164fd7af284a31a15763a666f0bb6bef05c533b90c5b0669d27205dd99ae",
+            "nativeSha256": "0b81e7b7e4a1077b9cfed958ea12bbb3acd8edf0e437971bec48825d303fa2b4",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Volcan_Karthala_vue_du_grand_cratere_13_ao%C3%BBt_2019.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa-evidence/source-l1-1fda48c46f1c.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/cc-evidence/1fda48c46f1cfba4-preview.jpg",
+            "localMatchesManifestSHA": true,
+            "exifOrientation": 6,
+            "orientedDisplayDimensions": [
+              3024,
+              4032
+            ],
+            "dimensionsMatchAfterOrientation": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa-evidence/source-l1-1fda48c46f1c.json",
+            "author": "Lolodevenelles",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename and original URL aliases",
+            "captionFi": "Karthalan kraatteria elokuussa 2019.",
+            "sourceContentSHA256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1",
+            "currentContentExcerpt": "Karthala on kilpitulivuori ja kuuluu Ngazidjan muodostaneisiin tulivuoriin. Sen huipulla on laaja kaldera, jonka muotoa purkaukset ovat muuttaneet. Moronista katsottu vuori voi näyttää pysyvältä taustalta, vaikka sen huipun maisema ei pysy samanlaisena. Karthalan toiminta kuuluu saaren luonnonhistoriaan, ja vuori on edelleen aktiivinen. Kaupungin läheisyydessä maapallon sisäiset prosessit näkyvät poikkeuksellisen suoraan: saman maiseman osia ovat sekä asuttu rannikko että toimiva tulivuori.",
+            "rightsEvidence": "Luonnollinen tulivuori/kraatteri, ei kuvattua ihmisteosta; valokuvan tekijä ja kaupallinen CC BY-SA4.0 erikseen alkuperäisestä Commons Licensing/Author-osiosta."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa.json",
+            "sha256": "8a88ce1d6f82a761fb504e85980e12f68dd33259da3b685261a5b022e4537f32"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
+            "sha256": "c5ad4271318bb784242abb84f4e82b0221fcce48bfc462acd743006817e995bf"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "moroni",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "commonsFile": "Volcan Karthala vue du grand cratere 13 août 2019.jpg",
+        "sha256": "0b81e7b7e4a1077b9cfed958ea12bbb3acd8edf0e437971bec48825d303fa2b4",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Volcan_Karthala_vue_du_grand_cratere_13_ao%C3%BBt_2019.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Volcan_Karthala_vue_du_grand_cratere_13_ao%C3%BBt_2019.jpg",
+        "author": "Lolodevenelles",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 3024,
+        "height": 4032,
+        "originalSHA256": "0b81e7b7e4a1077b9cfed958ea12bbb3acd8edf0e437971bec48825d303fa2b4",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/l1-0b81e7b7e4a1077b9cfe.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/l1-0b81e7b7e4a1077b9cfe.jpg",
+        "bytes": 5979673,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:32:53.792009+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Volcan Karthala vue du grand cratere 13 août 2019.jpg",
+        "lahde": "Lolodevenelles, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Karthalan kraatteria elokuussa 2019.",
+        "lyhyt": "Karthalan kraatteria elokuussa 2019."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Lolodevenelles, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Karthalan kraatteria elokuussa 2019.",
+        "lyhyt": "Karthalan kraatteria elokuussa 2019.",
+        "tiedosto": "Volcan Karthala vue du grand cratere 13 août 2019.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "targetAfterSHA256": "bf2f020612105d433151914c7d4b2f1ecdd533cde0b8c7f0501b266264da690b",
+      "contextAfterSHA256": "bf2f020612105d433151914c7d4b2f1ecdd533cde0b8c7f0501b266264da690b"
+    },
+    {
+      "era": "e08",
+      "city": "moroni",
+      "slot": "L2",
+      "type": "commons",
+      "assetID": "capital-cc-e08-moroni-l2-24550644cd83bd54",
+      "galleryImageID": "capital-cc-e08-moroni-l2-24550644cd83bd54",
+      "commonsFile": "Overviewing to Karthala crater.jpg",
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/l2-24550644cd83bd549bbc.jpg",
+        "suora": true,
+        "lahde": "Rokaso, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Karthalan kraatteri retkellä vuonna 2018.",
+        "lyhyt": "Karthalan kraatteri retkellä vuonna 2018.",
+        "tiedosto": "Overviewing to Karthala crater.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Rokaso, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Karthalan kraatteri retkellä vuonna 2018.",
+        "lyhyt": "Karthalan kraatteri retkellä vuonna 2018.",
+        "tiedosto": "Overviewing to Karthala crater.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/l2-24550644cd83bd549bbc.jpg",
+        "suora": true,
+        "lahde": "Rokaso, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Karthalan kraatteri retkellä vuonna 2018.",
+        "lyhyt": "Karthalan kraatteri retkellä vuonna 2018.",
+        "tiedosto": "Overviewing to Karthala crater.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "24550644cd83bd549bbce4254b89bfa226bee0edf967704ee3c2ff52c726c102",
+      "exportSHA256": "24550644cd83bd549bbce4254b89bfa226bee0edf967704ee3c2ff52c726c102",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/l2-24550644cd83bd549bbc.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/l2-24550644cd83bd549bbc.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e08/moroni/1f9b83aaa4a94fda905bfb9b33d704f33c96b91f4fc1b68849d5a8b3aba6d3f8.jpg",
+      "dimensions": [
+        6547,
+        2444
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+      "sourceContentSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "9271eec7a17ea1000eb3cf2c90b74c158dd7db2513dc05ab99a5404768d6f421",
+        "semanticContextSHA256": "9271eec7a17ea1000eb3cf2c90b74c158dd7db2513dc05ab99a5404768d6f421",
+        "subjectTitle": "Kraatterijärvi katosi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Rokaso",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Overviewing_to_Karthala_crater.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/46/Overviewing_to_Karthala_crater.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Tiedostosivun Author, kuvan oma CC-lisenssi ja Source own work tarkistettu.",
+            "workLayer": "Luonnollinen kallio-/kraatteri-/vesimaisema pääaiheena. Ei tunnistettavia kasvoja, nimettyjä suojattuja teoksia, lisättyä tekstiä, logoa, vesileimaa tai kehystä; mahdollinen kaukainen tavallinen käyttöasutus sivuosassa. Karthalan kuvat näyttävät nimetyn kraatterin todellisen kuvauspäivän tilanteen, eivät AI:lla keksittyä geologiaa.",
+            "placeBoundary": "Kuvaajan Description nimeää Karthalan kraatterin; kuvaus 19.11.2018. Selite ei väitä veden katoamisen tarkkaa ajankohtaa tai yksilöi entistä järven kohtaa.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/cc-evidence/6e68da57641910ae-preview.jpg",
+            "pixelSHA256": "24550644cd83bd549bbce4254b89bfa226bee0edf967704ee3c2ff52c726c102",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/cc-evidence/6e68da57641910ae.html",
+            "sourceSHA256": "800d48d6c7cb6e0425345c1b52c1843e55657535bfb1ce2f8f1b263f6350158a",
+            "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/moroni/L2/owner.json",
+            "notAlreadyInPack": "rg täsmällisillä tiedostonimillä e08/js/packs: ei osumia",
+            "independentQA": "avoin"
+          },
+          "QA": {
+            "rows": [
+              [
+                "Description Overviewing to Karthala crater.jpg",
+                "English: Overviewing to Karthala crater"
+              ],
+              [
+                "Date",
+                "19 November 2018"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Rokaso"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 4.0"
+            ],
+            "pageDimensions": [
+              6547,
+              2444
+            ],
+            "actualDimensions": [
+              6547,
+              2444
+            ],
+            "pageSha256": "800d48d6c7cb6e0425345c1b52c1843e55657535bfb1ce2f8f1b263f6350158a",
+            "nativeSha256": "24550644cd83bd549bbce4254b89bfa226bee0edf967704ee3c2ff52c726c102",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Overviewing_to_Karthala_crater.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa-evidence/source-l2-6e68da576419.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/cc-evidence/6e68da57641910ae-preview.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa-evidence/source-l2-6e68da576419.json",
+            "author": "Rokaso",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename and original URL aliases",
+            "captionFi": "Karthalan kraatteri retkellä vuonna 2018.",
+            "sourceContentSHA256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1",
+            "currentContentExcerpt": "Karthalan kalderassa oli kraatterijärvi, joka katosi 2000-luvun purkauksen yhteydessä. Purkaus muutti kraatteria, ja järven paikalle jäi tummia kiviä, mahdollisesti jäähtynyttä laavaa tai romahtaneen kraatterin ainesta. Tapahtuma kertoo, ettei tulivuoren huippua voi ajatella kerran valmiiksi muotoutuneena paikkana. Sama vuori voi olla kaupungin taustalla sukupolvesta toiseen, mutta ylhäällä oleva maisema muuttuu purkausten mukana. Moronin läheinen luonnonmaamerkki on samalla jatkuvasti muokkautuva geologinen paikka.",
+            "rightsEvidence": "Luonnollinen tulivuori/kraatteri, ei kuvattua ihmisteosta; valokuvan tekijä ja kaupallinen CC BY-SA4.0 erikseen alkuperäisestä Commons Licensing/Author-osiosta."
+          },
+          "qaReason": "Aito laaja Karthalan kraatterin valokuva, alkuperäinen Description paikantaa kraatteriin. Luonnollinen kiviaines ja kuiva kraatterin pohja näkyvät; ei ihmisiä, lisättyjä merkintöjä tai suojattuja ihmisteoksia. Sopii Kraatterijärvi katosi -nostoon yleisenä myöhempänä kraatterikuvana. Kuva19.11.2018 ei todista kuvatun purkauksen hetkeä, järven katoamisen ajankohtaa tai yksittäisen kiven alkuperää; ei niitä captioniin päätellä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Karthalan kraatteri retkellä vuonna 2018.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa.json",
+        "fileSHA256": "8a88ce1d6f82a761fb504e85980e12f68dd33259da3b685261a5b022e4537f32",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "commonsFile": "Overviewing to Karthala crater.jpg",
+          "sha256": "24550644cd83bd549bbce4254b89bfa226bee0edf967704ee3c2ff52c726c102",
+          "verdict": "accepted",
+          "reason": "Aito laaja Karthalan kraatterin valokuva, alkuperäinen Description paikantaa kraatteriin. Luonnollinen kiviaines ja kuiva kraatterin pohja näkyvät; ei ihmisiä, lisättyjä merkintöjä tai suojattuja ihmisteoksia. Sopii Kraatterijärvi katosi -nostoon yleisenä myöhempänä kraatterikuvana. Kuva19.11.2018 ei todista kuvatun purkauksen hetkeä, järven katoamisen ajankohtaa tai yksittäisen kiven alkuperää; ei niitä captioniin päätellä.",
+          "required": true,
+          "reviewedAt": "2026-10-12T19:32:24.604669+00:00",
+          "evidence": {
+            "rows": [
+              [
+                "Description Overviewing to Karthala crater.jpg",
+                "English: Overviewing to Karthala crater"
+              ],
+              [
+                "Date",
+                "19 November 2018"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Rokaso"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 4.0"
+            ],
+            "pageDimensions": [
+              6547,
+              2444
+            ],
+            "actualDimensions": [
+              6547,
+              2444
+            ],
+            "pageSha256": "800d48d6c7cb6e0425345c1b52c1843e55657535bfb1ce2f8f1b263f6350158a",
+            "nativeSha256": "24550644cd83bd549bbce4254b89bfa226bee0edf967704ee3c2ff52c726c102",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Overviewing_to_Karthala_crater.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa-evidence/source-l2-6e68da576419.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/cc-evidence/6e68da57641910ae-preview.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa-evidence/source-l2-6e68da576419.json",
+            "author": "Rokaso",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename and original URL aliases",
+            "captionFi": "Karthalan kraatteri retkellä vuonna 2018.",
+            "sourceContentSHA256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1",
+            "currentContentExcerpt": "Karthalan kalderassa oli kraatterijärvi, joka katosi 2000-luvun purkauksen yhteydessä. Purkaus muutti kraatteria, ja järven paikalle jäi tummia kiviä, mahdollisesti jäähtynyttä laavaa tai romahtaneen kraatterin ainesta. Tapahtuma kertoo, ettei tulivuoren huippua voi ajatella kerran valmiiksi muotoutuneena paikkana. Sama vuori voi olla kaupungin taustalla sukupolvesta toiseen, mutta ylhäällä oleva maisema muuttuu purkausten mukana. Moronin läheinen luonnonmaamerkki on samalla jatkuvasti muokkautuva geologinen paikka.",
+            "rightsEvidence": "Luonnollinen tulivuori/kraatteri, ei kuvattua ihmisteosta; valokuvan tekijä ja kaupallinen CC BY-SA4.0 erikseen alkuperäisestä Commons Licensing/Author-osiosta."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa.json",
+            "sha256": "8a88ce1d6f82a761fb504e85980e12f68dd33259da3b685261a5b022e4537f32"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
+            "sha256": "c5ad4271318bb784242abb84f4e82b0221fcce48bfc462acd743006817e995bf"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "moroni",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "commonsFile": "Overviewing to Karthala crater.jpg",
+        "sha256": "24550644cd83bd549bbce4254b89bfa226bee0edf967704ee3c2ff52c726c102",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Overviewing_to_Karthala_crater.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/46/Overviewing_to_Karthala_crater.jpg",
+        "author": "Rokaso",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 6547,
+        "height": 2444,
+        "originalSHA256": "24550644cd83bd549bbce4254b89bfa226bee0edf967704ee3c2ff52c726c102",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/l2-24550644cd83bd549bbc.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/l2-24550644cd83bd549bbc.jpg",
+        "bytes": 2350767,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:32:56.035247+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Overviewing to Karthala crater.jpg",
+        "lahde": "Rokaso, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Karthalan kraatteri retkellä vuonna 2018.",
+        "lyhyt": "Karthalan kraatteri retkellä vuonna 2018."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Rokaso, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Karthalan kraatteri retkellä vuonna 2018.",
+        "lyhyt": "Karthalan kraatteri retkellä vuonna 2018.",
+        "tiedosto": "Overviewing to Karthala crater.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "targetAfterSHA256": "9271eec7a17ea1000eb3cf2c90b74c158dd7db2513dc05ab99a5404768d6f421",
+      "contextAfterSHA256": "9271eec7a17ea1000eb3cf2c90b74c158dd7db2513dc05ab99a5404768d6f421"
+    },
+    {
+      "era": "e08",
+      "city": "moroni",
+      "slot": "N1",
+      "type": "commons",
+      "assetID": "capital-cc-e08-moroni-n1-b36833eeb8fe3e61",
+      "galleryImageID": "capital-cc-e08-moroni-n1-b36833eeb8fe3e61",
+      "commonsFile": "Hiking to Karthala crater.jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Karthala\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Karthala",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/n1-b36833eeb8fe3e61d534.jpg",
+        "suora": true,
+        "lahde": "Rokaso, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Karthalan kraatteria kohti kuljetaan vuoriston kasvillisuuden läpi.",
+        "lyhyt": "Karthalan kraatteria kohti kuljetaan vuoriston kasvillisuuden läpi.",
+        "tiedosto": "Hiking to Karthala crater.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Rokaso, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Karthalan kraatteria kohti kuljetaan vuoriston kasvillisuuden läpi.",
+        "lyhyt": "Karthalan kraatteria kohti kuljetaan vuoriston kasvillisuuden läpi.",
+        "tiedosto": "Hiking to Karthala crater.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/n1-b36833eeb8fe3e61d534.jpg",
+        "suora": true,
+        "lahde": "Rokaso, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Karthalan kraatteria kohti kuljetaan vuoriston kasvillisuuden läpi.",
+        "lyhyt": "Karthalan kraatteria kohti kuljetaan vuoriston kasvillisuuden läpi.",
+        "tiedosto": "Hiking to Karthala crater.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b36833eeb8fe3e61d53408234054da6a69fd2c915853437095bc1057596160c8",
+      "exportSHA256": "b36833eeb8fe3e61d53408234054da6a69fd2c915853437095bc1057596160c8",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/n1-b36833eeb8fe3e61d534.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/n1-b36833eeb8fe3e61d534.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e08/moroni/e37745a8c944392a4b5b3302992fd313758a4dff1da1ef9fcf3888c6378380c4.jpg",
+      "dimensions": [
+        4928,
+        3264
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+      "sourceContentSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "9c41eff17dc8e13d497d93ba6653cc9a517b1ccceb58e5c3623193afce048789",
+        "semanticContextSHA256": "77800a9175fea6f3d378046f735f6c65bea7b9a3b6ba775e8815f67d4a5b7cb9",
+        "subjectTitle": "Karthala",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Rokaso",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Hiking_to_Karthala_crater.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Hiking_to_Karthala_crater.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Commonsin nimenomainen Author- ja Source-kenttä sekä kuvan Licensing-osio tarkistettu.",
+            "placeLayer": "English: Hiking to Karthala crater",
+            "workLayer": "Lähteen nimetty vaelluspaikka Karthala, luonnollinen kasvillisuus ja polku. Henkilö selin, kasvot eivät näy. Repun luonnollinen merkintä ei ole lisätty logo/mainos; ei keksittyä kraatterin profiilia tai suojattua rakennusta.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/cc-evidence/7edf89892bc14fc6-preview.jpg",
+            "pixelSHA256": "b36833eeb8fe3e61d53408234054da6a69fd2c915853437095bc1057596160c8",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/cc-evidence/7edf89892bc14fc6.html",
+            "reservation": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/moroni/N1/owner.json",
+            "independentQA": "avoin; ehdokas, ei lopullinen hyväksyntä tai julkaisu"
+          },
+          "QA": {
+            "rows": [
+              [
+                "Description Hiking to Karthala crater.jpg",
+                "English: Hiking to Karthala crater"
+              ],
+              [
+                "Date",
+                "19 November 2018"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Rokaso"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 4.0"
+            ],
+            "publicDomainTemplateText": [],
+            "pageDimensions": [
+              4928,
+              3264
+            ],
+            "actualDimensions": [
+              4928,
+              3264
+            ],
+            "pageSha256": "922d5832a2e4d61a642340e0f72ed9462072628e5154744e265d96b9d77f543e",
+            "nativeSha256": "b36833eeb8fe3e61d53408234054da6a69fd2c915853437095bc1057596160c8",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Hiking_to_Karthala_crater.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa-evidence/source-n1-7edf89892bc1.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/cc-evidence/7edf89892bc14fc6-preview.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa-evidence/source-n1-7edf89892bc1.json",
+            "author": "Rokaso",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "explicitPDRelease": null,
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "captionFi": "Karthalan kraatteria kohti kuljetaan vuoriston kasvillisuuden läpi.",
+            "sourceContentSHA256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1",
+            "targetParentExists": true,
+            "imageLeafMayBeEmpty": true,
+            "rightsScope": "Täsmäkuvan näkyvä pääaihe ja taustan osien arvio kuvattu reason-kentässä. Valokuvan lupa on erillinen; ei lupa irrottaa kuvan sivuosan rakennusta/taidetta omaksi kohdekuvaksi."
+          },
+          "qaReason": "Lähde nimeää Karthalan kraatterille suuntaavan vaelluksen. Alkuperäinen4928×3264 näyttää todellisen polun ja kasvillisuuden; edessä kulkeva henkilö kokonaan selin, kasvoista ei näy tunnistettavia piirteitä. Repun fyysinen pieni merkintä ei ole overlay/mainos. Ei rakennusta tai taideteosta. Kuvateksti kuvaa reittiä, ei väitä tässä näkyvän kraatterin profiilia. Karthala-kohde on edelleen sisällössä. Vuosi2018."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Karthalan kraatteria kohti kuljetaan vuoriston kasvillisuuden läpi.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa.json",
+        "fileSHA256": "8a88ce1d6f82a761fb504e85980e12f68dd33259da3b685261a5b022e4537f32",
+        "item": {
+          "slot": "N1",
+          "targetJsonPath": "$.nahtavyydet[\"Karthala\"].kuvat[0]",
+          "commonsFile": "Hiking to Karthala crater.jpg",
+          "sha256": "b36833eeb8fe3e61d53408234054da6a69fd2c915853437095bc1057596160c8",
+          "verdict": "accepted",
+          "reason": "Lähde nimeää Karthalan kraatterille suuntaavan vaelluksen. Alkuperäinen4928×3264 näyttää todellisen polun ja kasvillisuuden; edessä kulkeva henkilö kokonaan selin, kasvoista ei näy tunnistettavia piirteitä. Repun fyysinen pieni merkintä ei ole overlay/mainos. Ei rakennusta tai taideteosta. Kuvateksti kuvaa reittiä, ei väitä tässä näkyvän kraatterin profiilia. Karthala-kohde on edelleen sisällössä. Vuosi2018.",
+          "required": true,
+          "reviewedAt": "2026-10-12T19:19:54.340351+00:00",
+          "evidence": {
+            "rows": [
+              [
+                "Description Hiking to Karthala crater.jpg",
+                "English: Hiking to Karthala crater"
+              ],
+              [
+                "Date",
+                "19 November 2018"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "Rokaso"
+              ]
+            ],
+            "licenses": [
+              "CC BY-SA 4.0"
+            ],
+            "publicDomainTemplateText": [],
+            "pageDimensions": [
+              4928,
+              3264
+            ],
+            "actualDimensions": [
+              4928,
+              3264
+            ],
+            "pageSha256": "922d5832a2e4d61a642340e0f72ed9462072628e5154744e265d96b9d77f543e",
+            "nativeSha256": "b36833eeb8fe3e61d53408234054da6a69fd2c915853437095bc1057596160c8",
+            "cached": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Hiking_to_Karthala_crater.jpg",
+            "sourcePageEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa-evidence/source-n1-7edf89892bc1.html",
+            "viewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/cc-evidence/7edf89892bc14fc6-preview.jpg",
+            "localMatchesManifestSHA": true,
+            "personallyViewed": true,
+            "sourceMetadataProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa-evidence/source-n1-7edf89892bc1.json",
+            "author": "Rokaso",
+            "authorFieldVerified": true,
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "explicitPDRelease": null,
+            "existingGameUseHits": [],
+            "reuseSearchScope": "e04-e14 game JS, sisalto.json and rooli-asset-liite.json; filename/underscores/encoded name/original URL",
+            "captionFi": "Karthalan kraatteria kohti kuljetaan vuoriston kasvillisuuden läpi.",
+            "sourceContentSHA256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1",
+            "targetParentExists": true,
+            "imageLeafMayBeEmpty": true,
+            "rightsScope": "Täsmäkuvan näkyvä pääaihe ja taustan osien arvio kuvattu reason-kentässä. Valokuvan lupa on erillinen; ei lupa irrottaa kuvan sivuosan rakennusta/taidetta omaksi kohdekuvaksi."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa.json",
+            "sha256": "8a88ce1d6f82a761fb504e85980e12f68dd33259da3b685261a5b022e4537f32"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
+            "sha256": "c5ad4271318bb784242abb84f4e82b0221fcce48bfc462acd743006817e995bf"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "moroni",
+        "slot": "N1",
+        "targetJsonPath": "$.nahtavyydet[\"Karthala\"].kuvat[0]",
+        "commonsFile": "Hiking to Karthala crater.jpg",
+        "sha256": "b36833eeb8fe3e61d53408234054da6a69fd2c915853437095bc1057596160c8",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Hiking_to_Karthala_crater.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Hiking_to_Karthala_crater.jpg",
+        "author": "Rokaso",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 4928,
+        "height": 3264,
+        "originalSHA256": "b36833eeb8fe3e61d53408234054da6a69fd2c915853437095bc1057596160c8",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/n1-b36833eeb8fe3e61d534.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/n1-b36833eeb8fe3e61d534.jpg",
+        "bytes": 6684672,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:21:45.500746+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Hiking to Karthala crater.jpg",
+        "lahde": "Rokaso, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Karthalan kraatteria kohti kuljetaan vuoriston kasvillisuuden läpi.",
+        "lyhyt": "Karthalan kraatteria kohti kuljetaan vuoriston kasvillisuuden läpi."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Rokaso, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Karthalan kraatteria kohti kuljetaan vuoriston kasvillisuuden läpi.",
+        "lyhyt": "Karthalan kraatteria kohti kuljetaan vuoriston kasvillisuuden läpi.",
+        "tiedosto": "Hiking to Karthala crater.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "targetAfterSHA256": "9c41eff17dc8e13d497d93ba6653cc9a517b1ccceb58e5c3623193afce048789",
+      "contextAfterSHA256": "77800a9175fea6f3d378046f735f6c65bea7b9a3b6ba775e8815f67d4a5b7cb9"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

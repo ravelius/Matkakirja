@@ -1,0 +1,2299 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e08",
+  "city": "gaborone",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+  "assets": [
+    {
+      "era": "e08",
+      "city": "gaborone",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e08-gaborone-TRAVELER-illustration-v1-20261012",
+      "galleryImageID": "e08-gaborone-TRAVELER-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-TRAVELER-illustration-v1-20261012-b3f84524c17f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva riistapuiston eläinaiheesta.",
+        "lyhyt": "Havainnekuva riistapuiston eläinaiheesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-TRAVELER-illustration-v1-20261012-b3f84524c17f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva riistapuiston eläinaiheesta.",
+        "lyhyt": "Havainnekuva riistapuiston eläinaiheesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b3f84524c17f2415a6ccb0a0a98ec4256f891640a62916fa9654acf974618a35",
+      "exportSHA256": "4f644539f8bba76d0951211aff0c276d44b1082f3a706d65d53919f9f55ea175",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-TRAVELER-illustration-v1-20261012-b3f84524c17f.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-TRAVELER-illustration-v1-20261012-b3f84524c17f.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/gaborone/e08-gaborone-TRAVELER-illustration-v1-20261012-b3f84524c17f.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+      "sourceContentSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "9f80280e6d5c1346ce7dc9317c5080b0b586df47883554f856594e06b6d6a478",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic sourced natural/food/material subject or traditional functional object; no named protected artwork or fabricated city scene.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "visuallyReviewed": false,
+            "independentVisualReviewVerified": true,
+            "reviewBasis": "extra-QA-exact-native-SHA",
+            "extraIndependentReview": {
+              "reviewerGroup": "kuvitus-2",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa-evidence/extra-2ff2f79048380334c97284f363581c412a2bdc380a696cef09e4940910c61452.json",
+              "sourceSHA256": "2ff2f79048380334c97284f363581c412a2bdc380a696cef09e4940910c61452",
+              "assetID": "e08-gaborone-TRAVELER-illustration-v1-20261012",
+              "nativeSHA256": "b3f84524c17f2415a6ccb0a0a98ec4256f891640a62916fa9654acf974618a35",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Antiloopin yleinen havainnollistus vastaa oppaan eläinaihetta.",
+              "reviewedAt": "2026-10-12T19:06:16.846556+00:00",
+              "visualReviewEvidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/assets/e08-gaborone-TRAVELER-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "b3f84524c17f2415a6ccb0a0a98ec4256f891640a62916fa9654acf974618a35",
+                "nativeWidth": 1024,
+                "nativeHeight": 1536,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi impalatyyppinen antilooppi, kaksi sarvea ja korvaa, neljä jalkaa. Luonteva turkki ja lihasten muodot, ei ihmisiä tai tekstiä.",
+                "captionFi": "Havainnekuva riistapuiston eläinaiheesta.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+                "contentSha256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+                "targetCurrentlyPresent": true,
+                "targetText": "",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/faktapohja.md",
+                "factSheetSha256": "ae989c67f81a2aab6b338e994448beb014e20f166091be0a0e06ff45bf52703c",
+                "topicEvidence": "Oppaan luontojakso mainitsee antiloopit. Kuva ei ole todellinen Gaborone Game Reserve -havainto.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+                  "sourceContentSha256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+                  "targetText": "Gaboronen keskustaan voi tutustua Main Mallin kävelyalueelta käsin. Kansallismuseo ja kasvitieteellinen puutarha tuovat mukaan kulttuurin ja kasvit. Kgale Hill ja Gaborone Game Reserve ovat erillisiä luontoretkiä kaupungin tuntumassa. Kaupungissa liikutaan myös takseilla ja combi-minibusseilla, joiden reitti kannattaa varmistaa kuljettajalta. Kuuma kesä ja talven kylmät yöt vaikuttavat retkipäivän varusteisiin.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/faktapohja.md",
+                  "factSheetSha256": "ae989c67f81a2aab6b338e994448beb014e20f166091be0a0e06ff45bf52703c",
+                  "supportingContext": "Current travel panel and the same city's sourced flora, fauna, food or material topics.",
+                  "subjectBasis": "One male impala Aepyceros melampus with natural lyre-shaped ridged horns and correct anatomy, standing in anonymous southern African savanna grass. Real short tan fur and natural light; no named game reserve landscape, buildings or people.",
+                  "specificTopicText": "Gaborone Game Reserve sijaitsee kaupungin itäpuolella lähellä Notwanea. Sen maisemaan kuuluvat pensaikot, savanni ja kuivahko ruohosto, ja eläimistössä on muun muassa impaloja, kudu-antilooppeja ja seeproja. Vesipaikat houkuttelevat lintuja; sadekaudella muodostuu myös tilapäisiä lammikoita. Puistossa liikutaan sen omia teitä pitkin. Riistaretken ei siis tarvitse tarkoittaa matkaa Botswanan kaukaisille luontoalueille: pääkaupungin lähelläkin voi tarkastella eläimiä niiden ympäristössä."
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            },
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/assets/e08-gaborone-TRAVELER-illustration-v1-20261012/image.png",
+            "width": 1024,
+            "height": 1536,
+            "currentContentSHA256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+            "checkedAt": "2026-10-12T19:19:46.771076+00:00"
+          },
+          "qaReason": "Dokumentoitu lisätarkistajan arvio, exact assetID/nativeSHA tarkistettu itse; kuvaa en ole itse katsonut. Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Antiloopin yleinen havainnollistus vastaa oppaan eläinaihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva riistapuiston eläinaiheesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa.json",
+        "fileSHA256": "3d11089e79ddf657b8276dda6c7ea18cf51c9ba85ade9bb7c69b1b8815142286",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e08-gaborone-TRAVELER-illustration-v1-20261012",
+          "commonsFile": null,
+          "sha256": "b3f84524c17f2415a6ccb0a0a98ec4256f891640a62916fa9654acf974618a35",
+          "verdict": "accepted",
+          "reason": "Dokumentoitu lisätarkistajan arvio, exact assetID/nativeSHA tarkistettu itse; kuvaa en ole itse katsonut. Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Antiloopin yleinen havainnollistus vastaa oppaan eläinaihetta.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "visuallyReviewed": false,
+            "independentVisualReviewVerified": true,
+            "reviewBasis": "extra-QA-exact-native-SHA",
+            "extraIndependentReview": {
+              "reviewerGroup": "kuvitus-2",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa-evidence/extra-2ff2f79048380334c97284f363581c412a2bdc380a696cef09e4940910c61452.json",
+              "sourceSHA256": "2ff2f79048380334c97284f363581c412a2bdc380a696cef09e4940910c61452",
+              "assetID": "e08-gaborone-TRAVELER-illustration-v1-20261012",
+              "nativeSHA256": "b3f84524c17f2415a6ccb0a0a98ec4256f891640a62916fa9654acf974618a35",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Antiloopin yleinen havainnollistus vastaa oppaan eläinaihetta.",
+              "reviewedAt": "2026-10-12T19:06:16.846556+00:00",
+              "visualReviewEvidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/assets/e08-gaborone-TRAVELER-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "b3f84524c17f2415a6ccb0a0a98ec4256f891640a62916fa9654acf974618a35",
+                "nativeWidth": 1024,
+                "nativeHeight": 1536,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi impalatyyppinen antilooppi, kaksi sarvea ja korvaa, neljä jalkaa. Luonteva turkki ja lihasten muodot, ei ihmisiä tai tekstiä.",
+                "captionFi": "Havainnekuva riistapuiston eläinaiheesta.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+                "contentSha256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+                "targetCurrentlyPresent": true,
+                "targetText": "",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/faktapohja.md",
+                "factSheetSha256": "ae989c67f81a2aab6b338e994448beb014e20f166091be0a0e06ff45bf52703c",
+                "topicEvidence": "Oppaan luontojakso mainitsee antiloopit. Kuva ei ole todellinen Gaborone Game Reserve -havainto.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+                  "sourceContentSha256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+                  "targetText": "Gaboronen keskustaan voi tutustua Main Mallin kävelyalueelta käsin. Kansallismuseo ja kasvitieteellinen puutarha tuovat mukaan kulttuurin ja kasvit. Kgale Hill ja Gaborone Game Reserve ovat erillisiä luontoretkiä kaupungin tuntumassa. Kaupungissa liikutaan myös takseilla ja combi-minibusseilla, joiden reitti kannattaa varmistaa kuljettajalta. Kuuma kesä ja talven kylmät yöt vaikuttavat retkipäivän varusteisiin.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/faktapohja.md",
+                  "factSheetSha256": "ae989c67f81a2aab6b338e994448beb014e20f166091be0a0e06ff45bf52703c",
+                  "supportingContext": "Current travel panel and the same city's sourced flora, fauna, food or material topics.",
+                  "subjectBasis": "One male impala Aepyceros melampus with natural lyre-shaped ridged horns and correct anatomy, standing in anonymous southern African savanna grass. Real short tan fur and natural light; no named game reserve landscape, buildings or people.",
+                  "specificTopicText": "Gaborone Game Reserve sijaitsee kaupungin itäpuolella lähellä Notwanea. Sen maisemaan kuuluvat pensaikot, savanni ja kuivahko ruohosto, ja eläimistössä on muun muassa impaloja, kudu-antilooppeja ja seeproja. Vesipaikat houkuttelevat lintuja; sadekaudella muodostuu myös tilapäisiä lammikoita. Puistossa liikutaan sen omia teitä pitkin. Riistaretken ei siis tarvitse tarkoittaa matkaa Botswanan kaukaisille luontoalueille: pääkaupungin lähelläkin voi tarkastella eläimiä niiden ympäristössä."
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            },
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/assets/e08-gaborone-TRAVELER-illustration-v1-20261012/image.png",
+            "width": 1024,
+            "height": 1536,
+            "currentContentSHA256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+            "checkedAt": "2026-10-12T19:19:46.771076+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa.json",
+            "sha256": "3d11089e79ddf657b8276dda6c7ea18cf51c9ba85ade9bb7c69b1b8815142286"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/illustration-qa-extra.json",
+            "sha256": "2ff2f79048380334c97284f363581c412a2bdc380a696cef09e4940910c61452"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-TRAVELER-illustration-v1-20261012-b3f84524c17f.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-TRAVELER-illustration-v1-20261012-b3f84524c17f.png?t=4f644539f8bba76d",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-TRAVELER-illustration-v1-20261012-b3f84524c17f.png",
+        "sha256": "4f644539f8bba76d0951211aff0c276d44b1082f3a706d65d53919f9f55ea175",
+        "bytes": 2478442,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-gaborone-TRAVELER-illustration-v1-20261012",
+        "nativeSHA256": "b3f84524c17f2415a6ccb0a0a98ec4256f891640a62916fa9654acf974618a35",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/gaborone/e08-gaborone-TRAVELER-illustration-v1-20261012-b3f84524c17f.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "gaborone",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T19:06:31.144025+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/gaborone/e08-gaborone-TRAVELER-illustration-v1-20261012-b3f84524c17f.png",
+        "sha256": "4f644539f8bba76d0951211aff0c276d44b1082f3a706d65d53919f9f55ea175",
+        "bytes": 2478442,
+        "SHAReadAt": "2026-10-12T19:32:05.932697+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b3f84524c17f2415a6ccb0a0a98ec4256f891640a62916fa9654acf974618a35",
+        "rgbPixelSHA256": "72404d75a88d6ba9e8f61a4d42cfad9c27cdfc9fde034b0d1fe39ab180c2bdc6",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "9f80280e6d5c1346ce7dc9317c5080b0b586df47883554f856594e06b6d6a478"
+    },
+    {
+      "era": "e08",
+      "city": "gaborone",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e08-gaborone-O4-illustration-v1-20261012",
+      "galleryImageID": "e08-gaborone-O4-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-O4-illustration-v1-20261012-d805287a89c0.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Mitä täällä syödään.",
+        "lyhyt": "Havainnekuva: Mitä täällä syödään."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-O4-illustration-v1-20261012-d805287a89c0.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Mitä täällä syödään.",
+        "lyhyt": "Havainnekuva: Mitä täällä syödään."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "d805287a89c03aa307aa2ba67826f2b9f578f5ef183611660a6cfb690dbed70a",
+      "exportSHA256": "d22e524503e6aa2916ffec23f8265fad7074a6362c017c1876598f41f0088178",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-O4-illustration-v1-20261012-d805287a89c0.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-O4-illustration-v1-20261012-d805287a89c0.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/gaborone/e08-gaborone-O4-illustration-v1-20261012-d805287a89c0.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+      "sourceContentSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "04ed261874e499a607a7f7d3853cb87a5b1418512c31362ad3ce36754e21caff",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic natural subject, ordinary materials or unbranded objects; no named copyrighted building or contemporary artwork reproduced.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "visuallyReviewed": false,
+            "independentVisualReviewVerified": true,
+            "reviewBasis": "extra-QA-exact-native-SHA",
+            "extraIndependentReview": {
+              "reviewerGroup": "kuvitus-2",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa-evidence/extra-7e1b199af057466e79bac88a9b531398cb206721abdcd47730e8f4d92072d8d1.json",
+              "sourceSHA256": "7e1b199af057466e79bac88a9b531398cb206721abdcd47730e8f4d92072d8d1",
+              "assetID": "e08-gaborone-O4-illustration-v1-20261012",
+              "nativeSHA256": "d805287a89c03aa307aa2ba67826f2b9f578f5ef183611660a6cfb690dbed70a",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Säikeiksi hajotettu kypsä liha ja viljapuuro sopivat seswaa- ja bogobe-aiheeseen. Havainne-merkintä on selitteessä eikä ravintolaa nimetä.",
+              "reviewedAt": "2026-10-12T18:18:22.342758+00:00",
+              "visualReviewEvidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/assets/e08-gaborone-O4-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "d805287a89c03aa307aa2ba67826f2b9f578f5ef183611660a6cfb690dbed70a",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Lautasella säikeistä lihaa ja vaalea puuromainen lisuke. Epäsäännölliset lihakuidut ja puuron kostea rakeisuus, pehmeä valo; ei ihmisiä tai merkintöjä.",
+                "captionFi": "Havainnekuva: Mitä täällä syödään.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+                "contentSha256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+                "targetCurrentlyPresent": true,
+                "targetText": "Gaboronessa on sekä paikallista ruokaa että eri maiden keittiöitä tarjoavia ravintoloita. Botswanalaisen ruoan nimistä kannattaa tunnistaa seswaa: pitkään kypsennetty liha hajotetaan tai nuijitaan pieniksi säikeiksi. Bogobe on viljasta tehtyä puuroa, jonka raaka-aine voi olla esimerkiksi durra, hirssi tai maissi. Molemmat kuuluvat maan ruokaperinteeseen. Kysy päivän ruokalistaa, sillä pääkaupungin ateriat eivät rajoitu yhteen kansallisruokaan eikä tietyn annoksen saatavuus ole kaikkialla sama.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/faktapohja.md",
+                "factSheetSha256": "ae989c67f81a2aab6b338e994448beb014e20f166091be0a0e06ff45bf52703c",
+                "topicEvidence": "O4 kuvaa seswaan säikeistä lihaa ja bogobe-viljapuuroa.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+                  "sourceContentSha256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+                  "targetText": "Gaboronessa on sekä paikallista ruokaa että eri maiden keittiöitä tarjoavia ravintoloita. Botswanalaisen ruoan nimistä kannattaa tunnistaa seswaa: pitkään kypsennetty liha hajotetaan tai nuijitaan pieniksi säikeiksi. Bogobe on viljasta tehtyä puuroa, jonka raaka-aine voi olla esimerkiksi durra, hirssi tai maissi. Molemmat kuuluvat maan ruokaperinteeseen. Kysy päivän ruokalistaa, sillä pääkaupungin ateriat eivät rajoitu yhteen kansallisruokaan eikä tietyn annoksen saatavuus ole kaikkialla sama.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/faktapohja.md",
+                  "wiki": null,
+                  "factSheetSha256": "ae989c67f81a2aab6b338e994448beb014e20f166091be0a0e06ff45bf52703c",
+                  "supportingSourceUrls": [
+                    "https://en.wikivoyage.org/wiki/Gaborone"
+                  ],
+                  "factSheetBibliographyUrls": [
+                    "https://en.wikivoyage.org/wiki/Gaborone",
+                    "https://en.wikipedia.org/wiki/Botswana_cuisine"
+                  ]
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            },
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/assets/e08-gaborone-O4-illustration-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+            "checkedAt": "2026-10-12T18:22:40.302000+00:00"
+          },
+          "qaReason": "Dokumentoitu lisätarkistajan arvio, exact assetID/nativeSHA tarkistettu itse; kuvaa en ole itse katsonut. Säikeiksi hajotettu kypsä liha ja viljapuuro sopivat seswaa- ja bogobe-aiheeseen. Havainne-merkintä on selitteessä eikä ravintolaa nimetä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: Mitä täällä syödään.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa.json",
+        "fileSHA256": "3d11089e79ddf657b8276dda6c7ea18cf51c9ba85ade9bb7c69b1b8815142286",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e08-gaborone-O4-illustration-v1-20261012",
+          "commonsFile": null,
+          "sha256": "d805287a89c03aa307aa2ba67826f2b9f578f5ef183611660a6cfb690dbed70a",
+          "verdict": "accepted",
+          "reason": "Dokumentoitu lisätarkistajan arvio, exact assetID/nativeSHA tarkistettu itse; kuvaa en ole itse katsonut. Säikeiksi hajotettu kypsä liha ja viljapuuro sopivat seswaa- ja bogobe-aiheeseen. Havainne-merkintä on selitteessä eikä ravintolaa nimetä.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "visuallyReviewed": false,
+            "independentVisualReviewVerified": true,
+            "reviewBasis": "extra-QA-exact-native-SHA",
+            "extraIndependentReview": {
+              "reviewerGroup": "kuvitus-2",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa-evidence/extra-7e1b199af057466e79bac88a9b531398cb206721abdcd47730e8f4d92072d8d1.json",
+              "sourceSHA256": "7e1b199af057466e79bac88a9b531398cb206721abdcd47730e8f4d92072d8d1",
+              "assetID": "e08-gaborone-O4-illustration-v1-20261012",
+              "nativeSHA256": "d805287a89c03aa307aa2ba67826f2b9f578f5ef183611660a6cfb690dbed70a",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Säikeiksi hajotettu kypsä liha ja viljapuuro sopivat seswaa- ja bogobe-aiheeseen. Havainne-merkintä on selitteessä eikä ravintolaa nimetä.",
+              "reviewedAt": "2026-10-12T18:18:22.342758+00:00",
+              "visualReviewEvidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/assets/e08-gaborone-O4-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "d805287a89c03aa307aa2ba67826f2b9f578f5ef183611660a6cfb690dbed70a",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Lautasella säikeistä lihaa ja vaalea puuromainen lisuke. Epäsäännölliset lihakuidut ja puuron kostea rakeisuus, pehmeä valo; ei ihmisiä tai merkintöjä.",
+                "captionFi": "Havainnekuva: Mitä täällä syödään.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+                "contentSha256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+                "targetCurrentlyPresent": true,
+                "targetText": "Gaboronessa on sekä paikallista ruokaa että eri maiden keittiöitä tarjoavia ravintoloita. Botswanalaisen ruoan nimistä kannattaa tunnistaa seswaa: pitkään kypsennetty liha hajotetaan tai nuijitaan pieniksi säikeiksi. Bogobe on viljasta tehtyä puuroa, jonka raaka-aine voi olla esimerkiksi durra, hirssi tai maissi. Molemmat kuuluvat maan ruokaperinteeseen. Kysy päivän ruokalistaa, sillä pääkaupungin ateriat eivät rajoitu yhteen kansallisruokaan eikä tietyn annoksen saatavuus ole kaikkialla sama.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/faktapohja.md",
+                "factSheetSha256": "ae989c67f81a2aab6b338e994448beb014e20f166091be0a0e06ff45bf52703c",
+                "topicEvidence": "O4 kuvaa seswaan säikeistä lihaa ja bogobe-viljapuuroa.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+                  "sourceContentSha256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+                  "targetText": "Gaboronessa on sekä paikallista ruokaa että eri maiden keittiöitä tarjoavia ravintoloita. Botswanalaisen ruoan nimistä kannattaa tunnistaa seswaa: pitkään kypsennetty liha hajotetaan tai nuijitaan pieniksi säikeiksi. Bogobe on viljasta tehtyä puuroa, jonka raaka-aine voi olla esimerkiksi durra, hirssi tai maissi. Molemmat kuuluvat maan ruokaperinteeseen. Kysy päivän ruokalistaa, sillä pääkaupungin ateriat eivät rajoitu yhteen kansallisruokaan eikä tietyn annoksen saatavuus ole kaikkialla sama.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/faktapohja.md",
+                  "wiki": null,
+                  "factSheetSha256": "ae989c67f81a2aab6b338e994448beb014e20f166091be0a0e06ff45bf52703c",
+                  "supportingSourceUrls": [
+                    "https://en.wikivoyage.org/wiki/Gaborone"
+                  ],
+                  "factSheetBibliographyUrls": [
+                    "https://en.wikivoyage.org/wiki/Gaborone",
+                    "https://en.wikipedia.org/wiki/Botswana_cuisine"
+                  ]
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            },
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/assets/e08-gaborone-O4-illustration-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+            "checkedAt": "2026-10-12T18:22:40.302000+00:00"
+          },
+          "additionalIndependentReviews": [
+            {
+              "reviewerGroup": "kuvitus-2",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa-evidence/extra-7e1b199af057466e79bac88a9b531398cb206721abdcd47730e8f4d92072d8d1.json",
+              "sourceSHA256": "7e1b199af057466e79bac88a9b531398cb206721abdcd47730e8f4d92072d8d1",
+              "assetID": "e08-gaborone-O4-illustration-v1-20261012",
+              "nativeSHA256": "d805287a89c03aa307aa2ba67826f2b9f578f5ef183611660a6cfb690dbed70a",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Säikeiksi hajotettu kypsä liha ja viljapuuro sopivat seswaa- ja bogobe-aiheeseen. Havainne-merkintä on selitteessä eikä ravintolaa nimetä.",
+              "reviewedAt": "2026-10-12T18:18:22.342758+00:00",
+              "visualReviewEvidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/assets/e08-gaborone-O4-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "d805287a89c03aa307aa2ba67826f2b9f578f5ef183611660a6cfb690dbed70a",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Lautasella säikeistä lihaa ja vaalea puuromainen lisuke. Epäsäännölliset lihakuidut ja puuron kostea rakeisuus, pehmeä valo; ei ihmisiä tai merkintöjä.",
+                "captionFi": "Havainnekuva: Mitä täällä syödään.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+                "contentSha256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+                "targetCurrentlyPresent": true,
+                "targetText": "Gaboronessa on sekä paikallista ruokaa että eri maiden keittiöitä tarjoavia ravintoloita. Botswanalaisen ruoan nimistä kannattaa tunnistaa seswaa: pitkään kypsennetty liha hajotetaan tai nuijitaan pieniksi säikeiksi. Bogobe on viljasta tehtyä puuroa, jonka raaka-aine voi olla esimerkiksi durra, hirssi tai maissi. Molemmat kuuluvat maan ruokaperinteeseen. Kysy päivän ruokalistaa, sillä pääkaupungin ateriat eivät rajoitu yhteen kansallisruokaan eikä tietyn annoksen saatavuus ole kaikkialla sama.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/faktapohja.md",
+                "factSheetSha256": "ae989c67f81a2aab6b338e994448beb014e20f166091be0a0e06ff45bf52703c",
+                "topicEvidence": "O4 kuvaa seswaan säikeistä lihaa ja bogobe-viljapuuroa.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+                  "sourceContentSha256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+                  "targetText": "Gaboronessa on sekä paikallista ruokaa että eri maiden keittiöitä tarjoavia ravintoloita. Botswanalaisen ruoan nimistä kannattaa tunnistaa seswaa: pitkään kypsennetty liha hajotetaan tai nuijitaan pieniksi säikeiksi. Bogobe on viljasta tehtyä puuroa, jonka raaka-aine voi olla esimerkiksi durra, hirssi tai maissi. Molemmat kuuluvat maan ruokaperinteeseen. Kysy päivän ruokalistaa, sillä pääkaupungin ateriat eivät rajoitu yhteen kansallisruokaan eikä tietyn annoksen saatavuus ole kaikkialla sama.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/faktapohja.md",
+                  "wiki": null,
+                  "factSheetSha256": "ae989c67f81a2aab6b338e994448beb014e20f166091be0a0e06ff45bf52703c",
+                  "supportingSourceUrls": [
+                    "https://en.wikivoyage.org/wiki/Gaborone"
+                  ],
+                  "factSheetBibliographyUrls": [
+                    "https://en.wikivoyage.org/wiki/Gaborone",
+                    "https://en.wikipedia.org/wiki/Botswana_cuisine"
+                  ]
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            }
+          ]
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa.json",
+            "sha256": "3d11089e79ddf657b8276dda6c7ea18cf51c9ba85ade9bb7c69b1b8815142286"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/illustration-qa-extra.json",
+            "sha256": "2ff2f79048380334c97284f363581c412a2bdc380a696cef09e4940910c61452"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-O4-illustration-v1-20261012-d805287a89c0.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-O4-illustration-v1-20261012-d805287a89c0.png?t=d22e524503e6aa29",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/gaborone/e08-gaborone-O4-illustration-v1-20261012-d805287a89c0.png",
+        "sha256": "d22e524503e6aa2916ffec23f8265fad7074a6362c017c1876598f41f0088178",
+        "bytes": 2426745,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-gaborone-O4-illustration-v1-20261012",
+        "nativeSHA256": "d805287a89c03aa307aa2ba67826f2b9f578f5ef183611660a6cfb690dbed70a",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/gaborone/e08-gaborone-O4-illustration-v1-20261012-d805287a89c0.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "gaborone",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:19:22.668846+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/gaborone/e08-gaborone-O4-illustration-v1-20261012-d805287a89c0.png",
+        "sha256": "d22e524503e6aa2916ffec23f8265fad7074a6362c017c1876598f41f0088178",
+        "bytes": 2426745,
+        "SHAReadAt": "2026-10-12T18:29:51.817599+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "d805287a89c03aa307aa2ba67826f2b9f578f5ef183611660a6cfb690dbed70a",
+        "rgbPixelSHA256": "1d77bdf4993856c94fdee4361f5fb0842d9542b91478618122e6450ebe250736",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "04ed261874e499a607a7f7d3853cb87a5b1418512c31362ad3ce36754e21caff"
+    },
+    {
+      "era": "e08",
+      "city": "gaborone",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e08-gaborone-photo-357b78329f45872e",
+      "galleryImageID": "capital-cc-e08-gaborone-photo-357b78329f45872e",
+      "commonsFile": "Gaborone dam.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/photo-357b78329f45872e8936.jpg",
+        "suora": true,
+        "lahde": "Mothusi Sekhomba, Commons (CC BY-SA 4.0)",
+        "selite": "Gaboronen padon allas näkyy Kgale Hilliltä kaupungin eteläpuolella.",
+        "lyhyt": "Gaboronen padon allas näkyy Kgale Hilliltä kaupungin eteläpuolella.",
+        "tiedosto": "Gaborone dam.jpg",
+        "vuosi": "2020"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Mothusi Sekhomba, Commons (CC BY-SA 4.0)",
+        "selite": "Gaboronen padon allas näkyy Kgale Hilliltä kaupungin eteläpuolella.",
+        "lyhyt": "Gaboronen padon allas näkyy Kgale Hilliltä kaupungin eteläpuolella.",
+        "tiedosto": "Gaborone dam.jpg",
+        "vuosi": "2020"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/photo-357b78329f45872e8936.jpg",
+        "suora": true,
+        "lahde": "Mothusi Sekhomba, Commons (CC BY-SA 4.0)",
+        "selite": "Gaboronen padon allas näkyy Kgale Hilliltä kaupungin eteläpuolella.",
+        "lyhyt": "Gaboronen padon allas näkyy Kgale Hilliltä kaupungin eteläpuolella.",
+        "tiedosto": "Gaborone dam.jpg",
+        "vuosi": "2020"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "357b78329f45872e8936d05a8b6b07a853f22c8f0f13ff0602c37e40c77d2673",
+      "exportSHA256": "357b78329f45872e8936d05a8b6b07a853f22c8f0f13ff0602c37e40c77d2673",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/photo-357b78329f45872e8936.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/photo-357b78329f45872e8936.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/078f9f9e864ac298-preview.jpg",
+      "dimensions": [
+        4160,
+        3120
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+      "sourceContentSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "a7a16eed09b552d4c98fc98c58ea952e38603cfe2567cbd8e420a5d667c6aa30",
+        "semanticContextSHA256": "a7a16eed09b552d4c98fc98c58ea952e38603cfe2567cbd8e420a5d667c6aa30",
+        "subjectTitle": "gaborone — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Mothusi Sekhomba",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Gaborone_dam.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Gaborone_dam.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Tiedostosivun nimenomainen Author-kenttä, Source ja kaupalliseen käyttöön sallittu kuvalisenssi tarkistettu.",
+            "placeLayer": "English: The picture shows beautiful Gaborone dam captured from Kgale hill Igbo: Foto a na-egosi ọmarịcha mmiri mmiri Gaborone esetere n'ugwu Kgale This is an image with the theme \" Climate & Weather in Africa \" from: Botswana",
+            "workLayer": "Vesiallas, pensaikkoiset rannat ja mäet pääaiheena. Padon tekninen rakennelma tai nimetty arkkitehtuuriteos ei ole kuvassa toistettava pääaihe. Ei ihmisiä, lisättyä tekstiä, logoa, vesileimaa tai kehystä.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/078f9f9e864ac298-preview.jpg",
+            "pixelSHA256": "357b78329f45872e8936d05a8b6b07a853f22c8f0f13ff0602c37e40c77d2673",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/078f9f9e864ac298.html",
+            "sourceDateRaw": "31 October 2020",
+            "reservation": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/gaborone/PHOTO/owner.json",
+            "independentQA": "avoin; tämä on CC-ehdokas, ei hyväksytty kokonaisasset"
+          },
+          "QA": {
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa-evidence/abd2678861fb4f583a3383c3dd7bf15692ac12ad86c4480504278bfa835b23a5.html",
+            "sourceSnapshotSHA256": "abd2678861fb4f583a3383c3dd7bf15692ac12ad86c4480504278bfa835b23a5",
+            "author": "Mothusi Sekhomba",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "width": 4160,
+            "height": 3120,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/078f9f9e864ac298-preview.jpg",
+            "nativeSHA256": "357b78329f45872e8936d05a8b6b07a853f22c8f0f13ff0602c37e40c77d2673",
+            "profile": "sRGB IEC61966-2.1",
+            "nativeDimensionsMeasured": true,
+            "rightsLayer": "Vesiallas ja luonnonmaisema pääaihe; padon tekninen teos ei toistettava pääkohde",
+            "gameReuseVerified": true,
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Gaborone_dam.jpg",
+            "currentContentSHA256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+            "photoDate": "31 October 2020",
+            "captionFi": "Gaboronen padon allas näkyy Kgale Hilliltä kaupungin eteläpuolella.",
+            "checkedAt": "2026-10-12T18:38:21.232967+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "gameReuseRecheckedAt": "2026-10-12T19:22:26.061075+00:00",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Gaborone_dam.jpg",
+            "sourceTitlePersonallyRead": "Gaborone dam.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/0/02/Gaborone_dam.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          },
+          "qaReason": "Itse katsottu aito luonnonvesi-/maisemavalokuva Kgale Hillin suunnasta. Altaan muoto, rannat ja mäet erottuvat; etualan johdot ovat tavallisia käyttöobjekteja, eivät teospääaihe. Ei kasvoja, päälle lisättyä tekstiä, mainos-/logopääaihetta, vesileimaa tai toistettavaa nimettyä rakennusta/taideteosta. Source Description nimeää nimenomaisesti Gaborone damin ja Kgale hillin. Author Mothusi Sekhomba ja CC BY-SA4.0 luettu itse Source/Author/lisenssi-kentistä. Kuvaus2020 kirjataan, eikä nykyistä vedenkorkeutta väitetä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Gaboronen padon allas näkyy Kgale Hilliltä kaupungin eteläpuolella.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa.json",
+        "fileSHA256": "3d11089e79ddf657b8276dda6c7ea18cf51c9ba85ade9bb7c69b1b8815142286",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "assetID": null,
+          "commonsFile": "Gaborone dam.jpg",
+          "sha256": "357b78329f45872e8936d05a8b6b07a853f22c8f0f13ff0602c37e40c77d2673",
+          "verdict": "accepted",
+          "reason": "Itse katsottu aito luonnonvesi-/maisemavalokuva Kgale Hillin suunnasta. Altaan muoto, rannat ja mäet erottuvat; etualan johdot ovat tavallisia käyttöobjekteja, eivät teospääaihe. Ei kasvoja, päälle lisättyä tekstiä, mainos-/logopääaihetta, vesileimaa tai toistettavaa nimettyä rakennusta/taideteosta. Source Description nimeää nimenomaisesti Gaborone damin ja Kgale hillin. Author Mothusi Sekhomba ja CC BY-SA4.0 luettu itse Source/Author/lisenssi-kentistä. Kuvaus2020 kirjataan, eikä nykyistä vedenkorkeutta väitetä.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa-evidence/abd2678861fb4f583a3383c3dd7bf15692ac12ad86c4480504278bfa835b23a5.html",
+            "sourceSnapshotSHA256": "abd2678861fb4f583a3383c3dd7bf15692ac12ad86c4480504278bfa835b23a5",
+            "author": "Mothusi Sekhomba",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "width": 4160,
+            "height": 3120,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/078f9f9e864ac298-preview.jpg",
+            "nativeSHA256": "357b78329f45872e8936d05a8b6b07a853f22c8f0f13ff0602c37e40c77d2673",
+            "profile": "sRGB IEC61966-2.1",
+            "nativeDimensionsMeasured": true,
+            "rightsLayer": "Vesiallas ja luonnonmaisema pääaihe; padon tekninen teos ei toistettava pääkohde",
+            "gameReuseVerified": true,
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Gaborone_dam.jpg",
+            "currentContentSHA256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+            "photoDate": "31 October 2020",
+            "captionFi": "Gaboronen padon allas näkyy Kgale Hilliltä kaupungin eteläpuolella.",
+            "checkedAt": "2026-10-12T18:38:21.232967+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "gameReuseRecheckedAt": "2026-10-12T19:22:26.061075+00:00",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Gaborone_dam.jpg",
+            "sourceTitlePersonallyRead": "Gaborone dam.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/0/02/Gaborone_dam.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa.json",
+            "sha256": "3d11089e79ddf657b8276dda6c7ea18cf51c9ba85ade9bb7c69b1b8815142286"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/illustration-qa-extra.json",
+            "sha256": "2ff2f79048380334c97284f363581c412a2bdc380a696cef09e4940910c61452"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "gaborone",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Gaborone dam.jpg",
+        "sha256": "357b78329f45872e8936d05a8b6b07a853f22c8f0f13ff0602c37e40c77d2673",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Gaborone_dam.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Gaborone_dam.jpg",
+        "author": "Mothusi Sekhomba",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 4160,
+        "height": 3120,
+        "originalSHA256": "357b78329f45872e8936d05a8b6b07a853f22c8f0f13ff0602c37e40c77d2673",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/photo-357b78329f45872e8936.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/photo-357b78329f45872e8936.jpg",
+        "bytes": 674366,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:38:55.580208+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Gaborone dam.jpg",
+        "lahde": "Mothusi Sekhomba, Commons (CC BY-SA 4.0)",
+        "selite": "Gaboronen padon allas näkyy Kgale Hilliltä kaupungin eteläpuolella.",
+        "lyhyt": "Gaboronen padon allas näkyy Kgale Hilliltä kaupungin eteläpuolella.",
+        "vuosi": "2020"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Mothusi Sekhomba, Commons (CC BY-SA 4.0)",
+        "selite": "Gaboronen padon allas näkyy Kgale Hilliltä kaupungin eteläpuolella.",
+        "lyhyt": "Gaboronen padon allas näkyy Kgale Hilliltä kaupungin eteläpuolella.",
+        "tiedosto": "Gaborone dam.jpg",
+        "vuosi": "2020"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+      "targetAfterSHA256": "a7a16eed09b552d4c98fc98c58ea952e38603cfe2567cbd8e420a5d667c6aa30",
+      "contextAfterSHA256": "a7a16eed09b552d4c98fc98c58ea952e38603cfe2567cbd8e420a5d667c6aa30"
+    },
+    {
+      "era": "e08",
+      "city": "gaborone",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e08-gaborone-c1-c4d9990b796d0b08",
+      "galleryImageID": "capital-cc-e08-gaborone-c1-c4d9990b796d0b08",
+      "commonsFile": "Gaborone, Botswana desde el aire.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/c1-c4d9990b796d0b085b46.jpg",
+        "suora": true,
+        "lahde": "Shosholoza, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Gaboronen kortteleita ja katuverkkoa ilmasta nähtynä, 2011.",
+        "lyhyt": "Gaboronen kortteleita ja katuverkkoa ilmasta nähtynä, 2011.",
+        "tiedosto": "Gaborone, Botswana desde el aire.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Shosholoza, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Gaboronen kortteleita ja katuverkkoa ilmasta nähtynä, 2011.",
+        "lyhyt": "Gaboronen kortteleita ja katuverkkoa ilmasta nähtynä, 2011.",
+        "tiedosto": "Gaborone, Botswana desde el aire.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/c1-c4d9990b796d0b085b46.jpg",
+        "suora": true,
+        "lahde": "Shosholoza, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Gaboronen kortteleita ja katuverkkoa ilmasta nähtynä, 2011.",
+        "lyhyt": "Gaboronen kortteleita ja katuverkkoa ilmasta nähtynä, 2011.",
+        "tiedosto": "Gaborone, Botswana desde el aire.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c4d9990b796d0b085b46039fe5175846f7344d18f3148ba536867d2727c1681b",
+      "exportSHA256": "c4d9990b796d0b085b46039fe5175846f7344d18f3148ba536867d2727c1681b",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/c1-c4d9990b796d0b085b46.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/c1-c4d9990b796d0b085b46.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/e9e1144761b4629c-preview.jpg",
+      "dimensions": [
+        3648,
+        2736
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+      "sourceContentSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "aeb5b94092a76e0b1cd84c4688bc42e6a1a33161e9752140250f9c666810a1eb",
+        "semanticContextSHA256": "aeb5b94092a76e0b1cd84c4688bc42e6a1a33161e9752140250f9c666810a1eb",
+        "subjectTitle": "Gaborone",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Shosholoza",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Gaborone,_Botswana_desde_el_aire.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Gaborone%2C_Botswana_desde_el_aire.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Tiedostosivun nimenomainen Author, kuvan CC-lisenssi ja Source tarkistettu.",
+            "workLayer": "Laaja tavallisen asutuksen, teiden ja teollisuus-/varastokorttelien kokonaisuus. Yksittäisen suojatun rakennus-/taideteoksen yksityiskohtia ei luettavasti jäljennetä; ei kasvoja, muraaleja, lisättyä tekstiä, vesileimaa tai kehystä.",
+            "placeBoundary": "Kuvaajan oma Description nimeää Gaborone, Botswana from the air, 12.7.2011. Katuverkko ja eri korttelit erottuvat, mutta horisontissa ilmakuvalle tyypillistä utua.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/e9e1144761b4629c-preview.jpg",
+            "pixelSHA256": "c4d9990b796d0b085b46039fe5175846f7344d18f3148ba536867d2727c1681b",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/e9e1144761b4629c.html",
+            "sourceSHA256": "6fa28cb9ea90ab5e58d8eb8ad7f3dfc79de9bda5f43cc70eb53c161a7defd13e",
+            "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/gaborone/C1/owner.json",
+            "notAlreadyInPack": "rg täsmällisillä tiedostonimillä e08/js/packs: ei osumia",
+            "independentQA": "avoin"
+          },
+          "QA": {
+            "author": "Shosholoza",
+            "license": "CC BY-SA 3.0",
+            "width": 3648,
+            "height": 2736,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/e9e1144761b4629c-preview.jpg",
+            "nativeSHA256": "c4d9990b796d0b085b46039fe5175846f7344d18f3148ba536867d2727c1681b",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa-evidence/6fa28cb9ea90ab5e58d8eb8ad7f3dfc79de9bda5f43cc70eb53c161a7defd13e.html",
+            "sourceSnapshotSHA256": "6fa28cb9ea90ab5e58d8eb8ad7f3dfc79de9bda5f43cc70eb53c161a7defd13e",
+            "sourceRowsRead": {
+              "Description Gaborone, Botswana desde el aire.jpg": "Español: Gaborone, Botswana desde el aire English: Gaborone, Botswana from the air",
+              "Date": "12 July 2011",
+              "Source": "Own work",
+              "Author": "Shosholoza"
+            },
+            "licenseTemplatesRead": [
+              "CC BY-SA 3.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "3,648",
+              "2,736"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/e9e1144761b4629c-preview.jpg\n  pixelWidth: 3648\n  pixelHeight: 2736\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "sourceDateRaw": "12 July 2011",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma silmätarkistus: laaja todellinen kaupungin ilmakuva asuin-/käyttökortteleista ja katuverkosta, C1-kansi soveltuu. Ikkunan heijastusta ja horisontissa ilmakuvalle tyypillistä utua, mutta lähimmät korttelit/verkko erottuvat. Ei kasvoja, overlayta, vesileimaa tai yksittäistä nimettyä suojattua rakennusta/taideteosta pääaiheena. Description yksilöi Gaboronen ilmasta. Shosholoza/CC BY-SA3.0 alkuperäisestä Author/licensetpl-taulukosta; native3648×2736, kuvaus12.7.2011 kerrotaan.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Gaborone,_Botswana_desde_el_aire.jpg",
+            "currentContentSHA256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+            "photoDate": "12 July 2011",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Gaborone%2C_Botswana_desde_el_aire.jpg",
+            "captionFi": "Gaboronen kortteleita ja katuverkkoa ilmasta nähtynä, 2011.",
+            "checkedAt": "2026-10-12T19:31:08.494533+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "Gaborone, Botswana desde el aire.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/3/36/Gaborone%2C_Botswana_desde_el_aire.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          },
+          "qaReason": "Oma silmätarkistus: laaja todellinen kaupungin ilmakuva asuin-/käyttökortteleista ja katuverkosta, C1-kansi soveltuu. Ikkunan heijastusta ja horisontissa ilmakuvalle tyypillistä utua, mutta lähimmät korttelit/verkko erottuvat. Ei kasvoja, overlayta, vesileimaa tai yksittäistä nimettyä suojattua rakennusta/taideteosta pääaiheena. Description yksilöi Gaboronen ilmasta. Shosholoza/CC BY-SA3.0 alkuperäisestä Author/licensetpl-taulukosta; native3648×2736, kuvaus12.7.2011 kerrotaan."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Gaboronen kortteleita ja katuverkkoa ilmasta nähtynä, 2011.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa.json",
+        "fileSHA256": "3d11089e79ddf657b8276dda6c7ea18cf51c9ba85ade9bb7c69b1b8815142286",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "assetID": null,
+          "commonsFile": "Gaborone, Botswana desde el aire.jpg",
+          "sha256": "c4d9990b796d0b085b46039fe5175846f7344d18f3148ba536867d2727c1681b",
+          "verdict": "accepted",
+          "reason": "Oma silmätarkistus: laaja todellinen kaupungin ilmakuva asuin-/käyttökortteleista ja katuverkosta, C1-kansi soveltuu. Ikkunan heijastusta ja horisontissa ilmakuvalle tyypillistä utua, mutta lähimmät korttelit/verkko erottuvat. Ei kasvoja, overlayta, vesileimaa tai yksittäistä nimettyä suojattua rakennusta/taideteosta pääaiheena. Description yksilöi Gaboronen ilmasta. Shosholoza/CC BY-SA3.0 alkuperäisestä Author/licensetpl-taulukosta; native3648×2736, kuvaus12.7.2011 kerrotaan.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "author": "Shosholoza",
+            "license": "CC BY-SA 3.0",
+            "width": 3648,
+            "height": 2736,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/e9e1144761b4629c-preview.jpg",
+            "nativeSHA256": "c4d9990b796d0b085b46039fe5175846f7344d18f3148ba536867d2727c1681b",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa-evidence/6fa28cb9ea90ab5e58d8eb8ad7f3dfc79de9bda5f43cc70eb53c161a7defd13e.html",
+            "sourceSnapshotSHA256": "6fa28cb9ea90ab5e58d8eb8ad7f3dfc79de9bda5f43cc70eb53c161a7defd13e",
+            "sourceRowsRead": {
+              "Description Gaborone, Botswana desde el aire.jpg": "Español: Gaborone, Botswana desde el aire English: Gaborone, Botswana from the air",
+              "Date": "12 July 2011",
+              "Source": "Own work",
+              "Author": "Shosholoza"
+            },
+            "licenseTemplatesRead": [
+              "CC BY-SA 3.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "3,648",
+              "2,736"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/e9e1144761b4629c-preview.jpg\n  pixelWidth: 3648\n  pixelHeight: 2736\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "sourceDateRaw": "12 July 2011",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma silmätarkistus: laaja todellinen kaupungin ilmakuva asuin-/käyttökortteleista ja katuverkosta, C1-kansi soveltuu. Ikkunan heijastusta ja horisontissa ilmakuvalle tyypillistä utua, mutta lähimmät korttelit/verkko erottuvat. Ei kasvoja, overlayta, vesileimaa tai yksittäistä nimettyä suojattua rakennusta/taideteosta pääaiheena. Description yksilöi Gaboronen ilmasta. Shosholoza/CC BY-SA3.0 alkuperäisestä Author/licensetpl-taulukosta; native3648×2736, kuvaus12.7.2011 kerrotaan.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Gaborone,_Botswana_desde_el_aire.jpg",
+            "currentContentSHA256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+            "photoDate": "12 July 2011",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Gaborone%2C_Botswana_desde_el_aire.jpg",
+            "captionFi": "Gaboronen kortteleita ja katuverkkoa ilmasta nähtynä, 2011.",
+            "checkedAt": "2026-10-12T19:31:08.494533+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "Gaborone, Botswana desde el aire.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/3/36/Gaborone%2C_Botswana_desde_el_aire.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa.json",
+            "sha256": "3d11089e79ddf657b8276dda6c7ea18cf51c9ba85ade9bb7c69b1b8815142286"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/illustration-qa-extra.json",
+            "sha256": "2ff2f79048380334c97284f363581c412a2bdc380a696cef09e4940910c61452"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "gaborone",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Gaborone, Botswana desde el aire.jpg",
+        "sha256": "c4d9990b796d0b085b46039fe5175846f7344d18f3148ba536867d2727c1681b",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Gaborone,_Botswana_desde_el_aire.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Gaborone%2C_Botswana_desde_el_aire.jpg",
+        "author": "Shosholoza",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 3648,
+        "height": 2736,
+        "originalSHA256": "c4d9990b796d0b085b46039fe5175846f7344d18f3148ba536867d2727c1681b",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/c1-c4d9990b796d0b085b46.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/c1-c4d9990b796d0b085b46.jpg",
+        "bytes": 8323813,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:31:41.261624+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Gaborone, Botswana desde el aire.jpg",
+        "lahde": "Shosholoza, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Gaboronen kortteleita ja katuverkkoa ilmasta nähtynä, 2011.",
+        "lyhyt": "Gaboronen kortteleita ja katuverkkoa ilmasta nähtynä, 2011."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Shosholoza, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Gaboronen kortteleita ja katuverkkoa ilmasta nähtynä, 2011.",
+        "lyhyt": "Gaboronen kortteleita ja katuverkkoa ilmasta nähtynä, 2011.",
+        "tiedosto": "Gaborone, Botswana desde el aire.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+      "targetAfterSHA256": "aeb5b94092a76e0b1cd84c4688bc42e6a1a33161e9752140250f9c666810a1eb",
+      "contextAfterSHA256": "aeb5b94092a76e0b1cd84c4688bc42e6a1a33161e9752140250f9c666810a1eb"
+    },
+    {
+      "era": "e08",
+      "city": "gaborone",
+      "slot": "C2",
+      "type": "commons",
+      "assetID": "capital-cc-e08-gaborone-c2-caf762e27da06f5d",
+      "galleryImageID": "capital-cc-e08-gaborone-c2-caf762e27da06f5d",
+      "commonsFile": "Gaborone, Railway 20200329.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/c2-caf762e27da06f5d5ca8.jpg",
+        "suora": true,
+        "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Rautatie kaupungin eteläosassa, taustalla Kgale Hill, 2020.",
+        "lyhyt": "Rautatie kaupungin eteläosassa, taustalla Kgale Hill, 2020.",
+        "tiedosto": "Gaborone, Railway 20200329.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Rautatie kaupungin eteläosassa, taustalla Kgale Hill, 2020.",
+        "lyhyt": "Rautatie kaupungin eteläosassa, taustalla Kgale Hill, 2020.",
+        "tiedosto": "Gaborone, Railway 20200329.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/c2-caf762e27da06f5d5ca8.jpg",
+        "suora": true,
+        "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Rautatie kaupungin eteläosassa, taustalla Kgale Hill, 2020.",
+        "lyhyt": "Rautatie kaupungin eteläosassa, taustalla Kgale Hill, 2020.",
+        "tiedosto": "Gaborone, Railway 20200329.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "caf762e27da06f5d5ca8e25c4d605f166289cdfec54f228ce6d0e8b8790ae1ed",
+      "exportSHA256": "caf762e27da06f5d5ca8e25c4d605f166289cdfec54f228ce6d0e8b8790ae1ed",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/c2-caf762e27da06f5d5ca8.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/c2-caf762e27da06f5d5ca8.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/51607e7977269147-preview.jpg",
+      "dimensions": [
+        4029,
+        2266
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+      "sourceContentSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "7b601199501dbb4221b177a95bc9a1e970f4182ee4f1fcccc5f770d44afa65a3",
+        "semanticContextSHA256": "7b601199501dbb4221b177a95bc9a1e970f4182ee4f1fcccc5f770d44afa65a3",
+        "subjectTitle": "Gaborone",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "CNJerem",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Gaborone,_Railway_20200329.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Gaborone%2C_Railway_20200329.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Tiedostosivun nimenomainen Author, kuvan CC-lisenssi ja Source tarkistettu.",
+            "workLayer": "Toiminnallinen rautatie, luonnollinen kasvillisuus ja kukkulamaasto pääaiheina, kaukana tavalliset käyttö-/asuinrakennukset. Ei yksittäistä suojattua teosta pääaiheena, tunnistettavia kasvoja, lisättyä tekstiä, vesileimaa tai kehystä.",
+            "placeBoundary": "Kuvaajan oma Description: Railway in the south of Gaborone, with Kgale Hill in the right background; 29.3.2020. Laaja todellinen kaupungin eteläosan rata- ja reunavyöhyke; selite ei väitä ydinkeskustan panoraamaksi.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/51607e7977269147-preview.jpg",
+            "pixelSHA256": "caf762e27da06f5d5ca8e25c4d605f166289cdfec54f228ce6d0e8b8790ae1ed",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/51607e7977269147.html",
+            "sourceSHA256": "4cc7cae55993d6567cebbb1b8f4f8292d5b2d05f119f7f9b4196324f90047e9c",
+            "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/gaborone/C2/owner.json",
+            "notAlreadyInPack": "rg täsmällisillä tiedostonimillä e08/js/packs: ei osumia",
+            "independentQA": "avoin"
+          },
+          "QA": {
+            "author": "CNJerem",
+            "license": "CC BY 4.0",
+            "width": 4029,
+            "height": 2266,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/51607e7977269147-preview.jpg",
+            "nativeSHA256": "caf762e27da06f5d5ca8e25c4d605f166289cdfec54f228ce6d0e8b8790ae1ed",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa-evidence/4cc7cae55993d6567cebbb1b8f4f8292d5b2d05f119f7f9b4196324f90047e9c.html",
+            "sourceSnapshotSHA256": "4cc7cae55993d6567cebbb1b8f4f8292d5b2d05f119f7f9b4196324f90047e9c",
+            "sourceRowsRead": {
+              "Description Gaborone, Railway 20200329.jpg": "English: Railway in the south of Gaborone, with Kgale Hill in the right background",
+              "Date": "29 March 2020, 12:02:25",
+              "Source": "Own work",
+              "Author": "CNJerem"
+            },
+            "licenseTemplatesRead": [
+              "CC BY 4.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "4,029",
+              "2,266"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/51607e7977269147-preview.jpg\n  pixelWidth: 4029\n  pixelHeight: 2266\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "sourceDateRaw": "29 March 2020, 12:02:25",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma silmätarkistus: laaja aito kaupungin eteläosan rautatie- ja reunavyöhykkeen näkymä, luonnolliset puut ja Kgale Hill taustalla; todellinen paikan asettelu soveltuu C2-kanteen. Description nimeää Railway in the south of Gaborone ja Kgale Hillin. Tavanomainen rata ja kaukaiset osin peittyvät käyttö-/asuinrakennukset ympäristöä, ei erillistä suojattua pääteosta. Ei kasvoja, lisätekstiä, vesileimaa tai mainoskuvaa. CNJerem/CC BY4.0 luettu Author/licensetpl-riveistä, native4029×2266, kuvaus29.3.2020 kerrotaan.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Gaborone,_Railway_20200329.jpg",
+            "currentContentSHA256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+            "photoDate": "29 March 2020, 12:02:25",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Gaborone%2C_Railway_20200329.jpg",
+            "captionFi": "Rautatie kaupungin eteläosassa, taustalla Kgale Hill, 2020.",
+            "checkedAt": "2026-10-12T19:31:08.732243+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "Gaborone, Railway 20200329.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Gaborone%2C_Railway_20200329.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          },
+          "qaReason": "Oma silmätarkistus: laaja aito kaupungin eteläosan rautatie- ja reunavyöhykkeen näkymä, luonnolliset puut ja Kgale Hill taustalla; todellinen paikan asettelu soveltuu C2-kanteen. Description nimeää Railway in the south of Gaborone ja Kgale Hillin. Tavanomainen rata ja kaukaiset osin peittyvät käyttö-/asuinrakennukset ympäristöä, ei erillistä suojattua pääteosta. Ei kasvoja, lisätekstiä, vesileimaa tai mainoskuvaa. CNJerem/CC BY4.0 luettu Author/licensetpl-riveistä, native4029×2266, kuvaus29.3.2020 kerrotaan."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Rautatie kaupungin eteläosassa, taustalla Kgale Hill, 2020.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa.json",
+        "fileSHA256": "3d11089e79ddf657b8276dda6c7ea18cf51c9ba85ade9bb7c69b1b8815142286",
+        "item": {
+          "slot": "C2",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+          "assetID": null,
+          "commonsFile": "Gaborone, Railway 20200329.jpg",
+          "sha256": "caf762e27da06f5d5ca8e25c4d605f166289cdfec54f228ce6d0e8b8790ae1ed",
+          "verdict": "accepted",
+          "reason": "Oma silmätarkistus: laaja aito kaupungin eteläosan rautatie- ja reunavyöhykkeen näkymä, luonnolliset puut ja Kgale Hill taustalla; todellinen paikan asettelu soveltuu C2-kanteen. Description nimeää Railway in the south of Gaborone ja Kgale Hillin. Tavanomainen rata ja kaukaiset osin peittyvät käyttö-/asuinrakennukset ympäristöä, ei erillistä suojattua pääteosta. Ei kasvoja, lisätekstiä, vesileimaa tai mainoskuvaa. CNJerem/CC BY4.0 luettu Author/licensetpl-riveistä, native4029×2266, kuvaus29.3.2020 kerrotaan.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "author": "CNJerem",
+            "license": "CC BY 4.0",
+            "width": 4029,
+            "height": 2266,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/51607e7977269147-preview.jpg",
+            "nativeSHA256": "caf762e27da06f5d5ca8e25c4d605f166289cdfec54f228ce6d0e8b8790ae1ed",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa-evidence/4cc7cae55993d6567cebbb1b8f4f8292d5b2d05f119f7f9b4196324f90047e9c.html",
+            "sourceSnapshotSHA256": "4cc7cae55993d6567cebbb1b8f4f8292d5b2d05f119f7f9b4196324f90047e9c",
+            "sourceRowsRead": {
+              "Description Gaborone, Railway 20200329.jpg": "English: Railway in the south of Gaborone, with Kgale Hill in the right background",
+              "Date": "29 March 2020, 12:02:25",
+              "Source": "Own work",
+              "Author": "CNJerem"
+            },
+            "licenseTemplatesRead": [
+              "CC BY 4.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "4,029",
+              "2,266"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/51607e7977269147-preview.jpg\n  pixelWidth: 4029\n  pixelHeight: 2266\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "sourceDateRaw": "29 March 2020, 12:02:25",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma silmätarkistus: laaja aito kaupungin eteläosan rautatie- ja reunavyöhykkeen näkymä, luonnolliset puut ja Kgale Hill taustalla; todellinen paikan asettelu soveltuu C2-kanteen. Description nimeää Railway in the south of Gaborone ja Kgale Hillin. Tavanomainen rata ja kaukaiset osin peittyvät käyttö-/asuinrakennukset ympäristöä, ei erillistä suojattua pääteosta. Ei kasvoja, lisätekstiä, vesileimaa tai mainoskuvaa. CNJerem/CC BY4.0 luettu Author/licensetpl-riveistä, native4029×2266, kuvaus29.3.2020 kerrotaan.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Gaborone,_Railway_20200329.jpg",
+            "currentContentSHA256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+            "photoDate": "29 March 2020, 12:02:25",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Gaborone%2C_Railway_20200329.jpg",
+            "captionFi": "Rautatie kaupungin eteläosassa, taustalla Kgale Hill, 2020.",
+            "checkedAt": "2026-10-12T19:31:08.732243+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "Gaborone, Railway 20200329.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Gaborone%2C_Railway_20200329.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa.json",
+            "sha256": "3d11089e79ddf657b8276dda6c7ea18cf51c9ba85ade9bb7c69b1b8815142286"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/illustration-qa-extra.json",
+            "sha256": "2ff2f79048380334c97284f363581c412a2bdc380a696cef09e4940910c61452"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "gaborone",
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "Gaborone, Railway 20200329.jpg",
+        "sha256": "caf762e27da06f5d5ca8e25c4d605f166289cdfec54f228ce6d0e8b8790ae1ed",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Gaborone,_Railway_20200329.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Gaborone%2C_Railway_20200329.jpg",
+        "author": "CNJerem",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+        "width": 4029,
+        "height": 2266,
+        "originalSHA256": "caf762e27da06f5d5ca8e25c4d605f166289cdfec54f228ce6d0e8b8790ae1ed",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/c2-caf762e27da06f5d5ca8.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/c2-caf762e27da06f5d5ca8.jpg",
+        "bytes": 2710398,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:31:42.807253+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Gaborone, Railway 20200329.jpg",
+        "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Rautatie kaupungin eteläosassa, taustalla Kgale Hill, 2020.",
+        "lyhyt": "Rautatie kaupungin eteläosassa, taustalla Kgale Hill, 2020."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Rautatie kaupungin eteläosassa, taustalla Kgale Hill, 2020.",
+        "lyhyt": "Rautatie kaupungin eteläosassa, taustalla Kgale Hill, 2020.",
+        "tiedosto": "Gaborone, Railway 20200329.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+      "targetAfterSHA256": "7b601199501dbb4221b177a95bc9a1e970f4182ee4f1fcccc5f770d44afa65a3",
+      "contextAfterSHA256": "7b601199501dbb4221b177a95bc9a1e970f4182ee4f1fcccc5f770d44afa65a3"
+    },
+    {
+      "era": "e08",
+      "city": "gaborone",
+      "slot": "K3",
+      "type": "commons",
+      "assetID": "capital-cc-e08-gaborone-k3-8430b7a67475e31d",
+      "galleryImageID": "capital-cc-e08-gaborone-k3-8430b7a67475e31d",
+      "commonsFile": "Kgale Hill, view east 20200329.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/k3-8430b7a67475e31d3032.jpg",
+        "suora": true,
+        "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Kgale Hillin rinteeltä itään kohti Gaboronen tekojärveä, 2020.",
+        "lyhyt": "Kgale Hillin rinteeltä itään kohti Gaboronen tekojärveä, 2020.",
+        "tiedosto": "Kgale Hill, view east 20200329.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Kgale Hillin rinteeltä itään kohti Gaboronen tekojärveä, 2020.",
+        "lyhyt": "Kgale Hillin rinteeltä itään kohti Gaboronen tekojärveä, 2020.",
+        "tiedosto": "Kgale Hill, view east 20200329.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/k3-8430b7a67475e31d3032.jpg",
+        "suora": true,
+        "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Kgale Hillin rinteeltä itään kohti Gaboronen tekojärveä, 2020.",
+        "lyhyt": "Kgale Hillin rinteeltä itään kohti Gaboronen tekojärveä, 2020.",
+        "tiedosto": "Kgale Hill, view east 20200329.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "8430b7a67475e31d30326338806f80d7a4583f8172a35395c989c80e139ff90d",
+      "exportSHA256": "8430b7a67475e31d30326338806f80d7a4583f8172a35395c989c80e139ff90d",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/k3-8430b7a67475e31d3032.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/k3-8430b7a67475e31d3032.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/108246ff8d019247-preview.jpg",
+      "dimensions": [
+        4030,
+        2266
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+      "sourceContentSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "4720d5fafe7898f3ae5431d33a0c5a4ae9a0da72516be6b65563deeb3b52b753",
+        "semanticContextSHA256": "4720d5fafe7898f3ae5431d33a0c5a4ae9a0da72516be6b65563deeb3b52b753",
+        "subjectTitle": "Nukkuva jättiläinen",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "CNJerem",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Kgale_Hill,_view_east_20200329.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Kgale_Hill%2C_view_east_20200329.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Tiedostosivun Author, kuvan oma CC-lisenssi ja Source own work tarkistettu.",
+            "workLayer": "Luonnollinen kallio-/kraatteri-/vesimaisema pääaiheena. Ei tunnistettavia kasvoja, nimettyjä suojattuja teoksia, lisättyä tekstiä, logoa, vesileimaa tai kehystä; mahdollinen kaukainen tavallinen käyttöasutus sivuosassa. Karthalan kuvat näyttävät nimetyn kraatterin todellisen kuvauspäivän tilanteen, eivät AI:lla keksittyä geologiaa.",
+            "placeBoundary": "Valokuvaajan Description: view eastwards from a place below the summit of Kgale Hill, with Gaborone Dam in the background, 29.3.2020. Ei väitetä kuvauspaikaksi varsinaista huippua.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/108246ff8d019247-preview.jpg",
+            "pixelSHA256": "8430b7a67475e31d30326338806f80d7a4583f8172a35395c989c80e139ff90d",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/108246ff8d019247.html",
+            "sourceSHA256": "c427b36e08800b9aa3c9d8f6f8a4077b1dcaff35814040b1c583954f1b5badbb",
+            "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/gaborone/K3/owner.json",
+            "notAlreadyInPack": "rg täsmällisillä tiedostonimillä e08/js/packs: ei osumia",
+            "independentQA": "avoin"
+          },
+          "QA": {
+            "author": "CNJerem",
+            "license": "CC BY 4.0",
+            "width": 4030,
+            "height": 2266,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/108246ff8d019247-preview.jpg",
+            "nativeSHA256": "8430b7a67475e31d30326338806f80d7a4583f8172a35395c989c80e139ff90d",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa-evidence/c427b36e08800b9aa3c9d8f6f8a4077b1dcaff35814040b1c583954f1b5badbb.html",
+            "sourceSnapshotSHA256": "c427b36e08800b9aa3c9d8f6f8a4077b1dcaff35814040b1c583954f1b5badbb",
+            "sourceRowsRead": {
+              "Description Kgale Hill, view east 20200329.jpg": "English: View eastwards from a place below the summit of Kgale Hill, with Gaborone Dam in the background",
+              "Date": "29 March 2020, 09:28:08",
+              "Source": "Own work",
+              "Author": "CNJerem"
+            },
+            "licenseTemplatesRead": [
+              "CC BY 4.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "4,030",
+              "2,266"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/108246ff8d019247-preview.jpg\n  pixelWidth: 4030\n  pixelHeight: 2266\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "sourceDateRaw": "29 March 2020, 09:28:08",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma natiivin silmätarkistus: Kgale Hillin luonnollinen kalliorinne ja puu etualalla, järvi ja luontoympäristö laajana näkymänä. Description nimeää kuvauspaikan huipun alapuolella ja Gaborone Damin taustalla; selite sopii Kgale Hill -nostoon. Ei ihmisiä, tekstiä, vesileimaa tai suojattua teosta pääaiheena; kaukainen vähäinen tavallinen rakennusympäristö sivuseikka. CNJerem/CC BY4.0 alkuperäisestä Author/licensetpl-taulukosta, native4030×2266, kuvaus29.3.2020. Tuottajan rightsEvidence.workLayer-tekstin Karthala/kraatteri-maininta on tämän kuvan kohdalla kopiointivirhe, eikä sitä saa siirtää toimitusmetadataan; oman QA:n rajattu teoskerros ja Description koskevat Kgale Hilliä.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "currentTargetTitle": "Nukkuva jättiläinen / Kgale Hill",
+            "producerRightsEvidenceCorrection": "Poista Karthala/kraatteri-lauseet tämän Kgale Hill -kuvan metadataoikeuskerroksesta; lähde ei tue niitä.",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Kgale_Hill,_view_east_20200329.jpg",
+            "currentContentSHA256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+            "photoDate": "29 March 2020, 09:28:08",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Kgale_Hill%2C_view_east_20200329.jpg",
+            "captionFi": "Kgale Hillin rinteeltä itään kohti Gaboronen tekojärveä, 2020.",
+            "checkedAt": "2026-10-12T19:33:10.705176+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "Kgale Hill, view east 20200329.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/0/06/Kgale_Hill%2C_view_east_20200329.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          },
+          "qaReason": "Oma natiivin silmätarkistus: Kgale Hillin luonnollinen kalliorinne ja puu etualalla, järvi ja luontoympäristö laajana näkymänä. Description nimeää kuvauspaikan huipun alapuolella ja Gaborone Damin taustalla; selite sopii Kgale Hill -nostoon. Ei ihmisiä, tekstiä, vesileimaa tai suojattua teosta pääaiheena; kaukainen vähäinen tavallinen rakennusympäristö sivuseikka. CNJerem/CC BY4.0 alkuperäisestä Author/licensetpl-taulukosta, native4030×2266, kuvaus29.3.2020. Tuottajan rightsEvidence.workLayer-tekstin Karthala/kraatteri-maininta on tämän kuvan kohdalla kopiointivirhe, eikä sitä saa siirtää toimitusmetadataan; oman QA:n rajattu teoskerros ja Description koskevat Kgale Hilliä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kgale Hillin rinteeltä itään kohti Gaboronen tekojärveä, 2020.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa.json",
+        "fileSHA256": "3d11089e79ddf657b8276dda6c7ea18cf51c9ba85ade9bb7c69b1b8815142286",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": null,
+          "commonsFile": "Kgale Hill, view east 20200329.jpg",
+          "sha256": "8430b7a67475e31d30326338806f80d7a4583f8172a35395c989c80e139ff90d",
+          "verdict": "accepted",
+          "reason": "Oma natiivin silmätarkistus: Kgale Hillin luonnollinen kalliorinne ja puu etualalla, järvi ja luontoympäristö laajana näkymänä. Description nimeää kuvauspaikan huipun alapuolella ja Gaborone Damin taustalla; selite sopii Kgale Hill -nostoon. Ei ihmisiä, tekstiä, vesileimaa tai suojattua teosta pääaiheena; kaukainen vähäinen tavallinen rakennusympäristö sivuseikka. CNJerem/CC BY4.0 alkuperäisestä Author/licensetpl-taulukosta, native4030×2266, kuvaus29.3.2020. Tuottajan rightsEvidence.workLayer-tekstin Karthala/kraatteri-maininta on tämän kuvan kohdalla kopiointivirhe, eikä sitä saa siirtää toimitusmetadataan; oman QA:n rajattu teoskerros ja Description koskevat Kgale Hilliä.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "author": "CNJerem",
+            "license": "CC BY 4.0",
+            "width": 4030,
+            "height": 2266,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/108246ff8d019247-preview.jpg",
+            "nativeSHA256": "8430b7a67475e31d30326338806f80d7a4583f8172a35395c989c80e139ff90d",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa-evidence/c427b36e08800b9aa3c9d8f6f8a4077b1dcaff35814040b1c583954f1b5badbb.html",
+            "sourceSnapshotSHA256": "c427b36e08800b9aa3c9d8f6f8a4077b1dcaff35814040b1c583954f1b5badbb",
+            "sourceRowsRead": {
+              "Description Kgale Hill, view east 20200329.jpg": "English: View eastwards from a place below the summit of Kgale Hill, with Gaborone Dam in the background",
+              "Date": "29 March 2020, 09:28:08",
+              "Source": "Own work",
+              "Author": "CNJerem"
+            },
+            "licenseTemplatesRead": [
+              "CC BY 4.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "4,030",
+              "2,266"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/108246ff8d019247-preview.jpg\n  pixelWidth: 4030\n  pixelHeight: 2266\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "sourceDateRaw": "29 March 2020, 09:28:08",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma natiivin silmätarkistus: Kgale Hillin luonnollinen kalliorinne ja puu etualalla, järvi ja luontoympäristö laajana näkymänä. Description nimeää kuvauspaikan huipun alapuolella ja Gaborone Damin taustalla; selite sopii Kgale Hill -nostoon. Ei ihmisiä, tekstiä, vesileimaa tai suojattua teosta pääaiheena; kaukainen vähäinen tavallinen rakennusympäristö sivuseikka. CNJerem/CC BY4.0 alkuperäisestä Author/licensetpl-taulukosta, native4030×2266, kuvaus29.3.2020. Tuottajan rightsEvidence.workLayer-tekstin Karthala/kraatteri-maininta on tämän kuvan kohdalla kopiointivirhe, eikä sitä saa siirtää toimitusmetadataan; oman QA:n rajattu teoskerros ja Description koskevat Kgale Hilliä.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "currentTargetTitle": "Nukkuva jättiläinen / Kgale Hill",
+            "producerRightsEvidenceCorrection": "Poista Karthala/kraatteri-lauseet tämän Kgale Hill -kuvan metadataoikeuskerroksesta; lähde ei tue niitä.",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Kgale_Hill,_view_east_20200329.jpg",
+            "currentContentSHA256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+            "photoDate": "29 March 2020, 09:28:08",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Kgale_Hill%2C_view_east_20200329.jpg",
+            "captionFi": "Kgale Hillin rinteeltä itään kohti Gaboronen tekojärveä, 2020.",
+            "checkedAt": "2026-10-12T19:33:10.705176+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "Kgale Hill, view east 20200329.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/0/06/Kgale_Hill%2C_view_east_20200329.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa.json",
+            "sha256": "3d11089e79ddf657b8276dda6c7ea18cf51c9ba85ade9bb7c69b1b8815142286"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/illustration-qa-extra.json",
+            "sha256": "2ff2f79048380334c97284f363581c412a2bdc380a696cef09e4940910c61452"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "gaborone",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "commonsFile": "Kgale Hill, view east 20200329.jpg",
+        "sha256": "8430b7a67475e31d30326338806f80d7a4583f8172a35395c989c80e139ff90d",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Kgale_Hill,_view_east_20200329.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Kgale_Hill%2C_view_east_20200329.jpg",
+        "author": "CNJerem",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+        "width": 4030,
+        "height": 2266,
+        "originalSHA256": "8430b7a67475e31d30326338806f80d7a4583f8172a35395c989c80e139ff90d",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/k3-8430b7a67475e31d3032.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/k3-8430b7a67475e31d3032.jpg",
+        "bytes": 2195629,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:33:58.461475+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Kgale Hill, view east 20200329.jpg",
+        "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Kgale Hillin rinteeltä itään kohti Gaboronen tekojärveä, 2020.",
+        "lyhyt": "Kgale Hillin rinteeltä itään kohti Gaboronen tekojärveä, 2020."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Kgale Hillin rinteeltä itään kohti Gaboronen tekojärveä, 2020.",
+        "lyhyt": "Kgale Hillin rinteeltä itään kohti Gaboronen tekojärveä, 2020.",
+        "tiedosto": "Kgale Hill, view east 20200329.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+      "targetAfterSHA256": "4720d5fafe7898f3ae5431d33a0c5a4ae9a0da72516be6b65563deeb3b52b753",
+      "contextAfterSHA256": "4720d5fafe7898f3ae5431d33a0c5a4ae9a0da72516be6b65563deeb3b52b753"
+    },
+    {
+      "era": "e08",
+      "city": "gaborone",
+      "slot": "N2",
+      "type": "commons",
+      "assetID": "capital-cc-e08-gaborone-n2-0db9c6a73fcb7b06",
+      "galleryImageID": "capital-cc-e08-gaborone-n2-0db9c6a73fcb7b06",
+      "commonsFile": "Gaborone Dam 20200315a.jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Gaboronen pato\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Gaboronen pato",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/n2-0db9c6a73fcb7b064b1e.jpg",
+        "suora": true,
+        "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Gaboronen padon tekojärven rantaa, 2020.",
+        "lyhyt": "Gaboronen padon tekojärven rantaa, 2020.",
+        "tiedosto": "Gaborone Dam 20200315a.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Gaboronen padon tekojärven rantaa, 2020.",
+        "lyhyt": "Gaboronen padon tekojärven rantaa, 2020.",
+        "tiedosto": "Gaborone Dam 20200315a.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/n2-0db9c6a73fcb7b064b1e.jpg",
+        "suora": true,
+        "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Gaboronen padon tekojärven rantaa, 2020.",
+        "lyhyt": "Gaboronen padon tekojärven rantaa, 2020.",
+        "tiedosto": "Gaborone Dam 20200315a.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "0db9c6a73fcb7b064b1e713e37ac1a43ee60179c79b1ce36251abb07f5a902bd",
+      "exportSHA256": "0db9c6a73fcb7b064b1e713e37ac1a43ee60179c79b1ce36251abb07f5a902bd",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/n2-0db9c6a73fcb7b064b1e.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/n2-0db9c6a73fcb7b064b1e.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/e4631e843a676c88-preview.jpg",
+      "dimensions": [
+        4030,
+        2266
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+      "sourceContentSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "3154f4e46979c39a5643d1493d4dc619fc3fe363b8d0db35a80e8af5311e87ef",
+        "semanticContextSHA256": "1ba277a81c2212903067a3662c617165a0a1e767bf900fd7a614a1952ec0ac1e",
+        "subjectTitle": "Gaboronen pato",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "CNJerem",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Gaborone_Dam_20200315a.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Gaborone_Dam_20200315a.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Nimenomainen valokuvan tekijä ja kuvan lisenssi tarkistettu alkuperäisestä tiedostosivusta.",
+            "authorEvidence": "Author table",
+            "workLayer": "Luonnollinen vesi, kalliot ja rannan kasvillisuus pääaiheena. Etäisen horisontin pienet rakennusmuodot eivät esitä erillistä tunnistettavaa luovaa teosta. Ei kasvoja, lisättyä tekstiä, vesileimaa tai kehystä.",
+            "placeBoundary": "Kuvaajan oma Description nimeää Gaborone Dam, view north to Gaborone, 15.3.2020. Selite nimeää tekojärven rannan eikä padon seinää tai nykyistä vedenkorkeutta.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/e4631e843a676c88-preview.jpg",
+            "pixelSHA256": "0db9c6a73fcb7b064b1e713e37ac1a43ee60179c79b1ce36251abb07f5a902bd",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/e4631e843a676c88.html",
+            "sourceSHA256": "eb1ea15ab9a71b9882ee50e5454d4a891fe3155f3ec124746255ef405c10a0ba",
+            "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/gaborone/N2/owner.json",
+            "notAlreadyInPack": "rg täsmällisillä tiedostonimillä e08/js/packs: ei osumia",
+            "independentQA": "avoin"
+          },
+          "QA": {
+            "author": "CNJerem",
+            "license": "CC BY 4.0",
+            "width": 4030,
+            "height": 2266,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/e4631e843a676c88-preview.jpg",
+            "nativeSHA256": "0db9c6a73fcb7b064b1e713e37ac1a43ee60179c79b1ce36251abb07f5a902bd",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa-evidence/eb1ea15ab9a71b9882ee50e5454d4a891fe3155f3ec124746255ef405c10a0ba.html",
+            "sourceSnapshotSHA256": "eb1ea15ab9a71b9882ee50e5454d4a891fe3155f3ec124746255ef405c10a0ba",
+            "sourceRowsRead": {
+              "Description Gaborone Dam 20200315a.jpg": "English: South-East District, Gaborone Dam, view north to Gaborone",
+              "Date": "15 March 2020, 08:10:28",
+              "Source": "Own work",
+              "Author": "CNJerem"
+            },
+            "licenseTemplatesRead": [
+              "CC BY 4.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "4,030",
+              "2,266"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/e4631e843a676c88-preview.jpg\n  pixelWidth: 4030\n  pixelHeight: 2266\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "sourceDateRaw": "15 March 2020, 08:10:28",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma silmätarkistus: aito Gaboronen tekojärven vesipinta, kalliot ja rantakasvillisuus. Selite vastaa rantaa, ei väitä kuvaksi padon seinämästä. Kaukainen pieni rakennussiluetti on sivuseikka eikä nimetty arkkitehtuuri-/taideteospääaihe. Ei ihmisiä, lisätekstiä tai vesileimaa. CNJerem/CC BY4.0 Author/licensetpl ja lähteen Gaborone Dam, view north to Gaborone luettu. Natiivin todellinen4030×2266 ja SHA tarkistettu. Kuvaus15.3.2020, ei nykyvedenkorkeusväitettä.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Gaborone_Dam_20200315a.jpg",
+            "currentContentSHA256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+            "photoDate": "15 March 2020, 08:10:28",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Gaborone_Dam_20200315a.jpg",
+            "captionFi": "Gaboronen padon tekojärven rantaa, 2020.",
+            "checkedAt": "2026-10-12T19:25:03.730736+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "Gaborone Dam 20200315a.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Gaborone_Dam_20200315a.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          },
+          "qaReason": "Oma silmätarkistus: aito Gaboronen tekojärven vesipinta, kalliot ja rantakasvillisuus. Selite vastaa rantaa, ei väitä kuvaksi padon seinämästä. Kaukainen pieni rakennussiluetti on sivuseikka eikä nimetty arkkitehtuuri-/taideteospääaihe. Ei ihmisiä, lisätekstiä tai vesileimaa. CNJerem/CC BY4.0 Author/licensetpl ja lähteen Gaborone Dam, view north to Gaborone luettu. Natiivin todellinen4030×2266 ja SHA tarkistettu. Kuvaus15.3.2020, ei nykyvedenkorkeusväitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Gaboronen padon tekojärven rantaa, 2020.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa.json",
+        "fileSHA256": "3d11089e79ddf657b8276dda6c7ea18cf51c9ba85ade9bb7c69b1b8815142286",
+        "item": {
+          "slot": "N2",
+          "targetJsonPath": "$.nahtavyydet[\"Gaboronen pato\"].kuvat[0]",
+          "assetID": null,
+          "commonsFile": "Gaborone Dam 20200315a.jpg",
+          "sha256": "0db9c6a73fcb7b064b1e713e37ac1a43ee60179c79b1ce36251abb07f5a902bd",
+          "verdict": "accepted",
+          "reason": "Oma silmätarkistus: aito Gaboronen tekojärven vesipinta, kalliot ja rantakasvillisuus. Selite vastaa rantaa, ei väitä kuvaksi padon seinämästä. Kaukainen pieni rakennussiluetti on sivuseikka eikä nimetty arkkitehtuuri-/taideteospääaihe. Ei ihmisiä, lisätekstiä tai vesileimaa. CNJerem/CC BY4.0 Author/licensetpl ja lähteen Gaborone Dam, view north to Gaborone luettu. Natiivin todellinen4030×2266 ja SHA tarkistettu. Kuvaus15.3.2020, ei nykyvedenkorkeusväitettä.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "author": "CNJerem",
+            "license": "CC BY 4.0",
+            "width": 4030,
+            "height": 2266,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/e4631e843a676c88-preview.jpg",
+            "nativeSHA256": "0db9c6a73fcb7b064b1e713e37ac1a43ee60179c79b1ce36251abb07f5a902bd",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa-evidence/eb1ea15ab9a71b9882ee50e5454d4a891fe3155f3ec124746255ef405c10a0ba.html",
+            "sourceSnapshotSHA256": "eb1ea15ab9a71b9882ee50e5454d4a891fe3155f3ec124746255ef405c10a0ba",
+            "sourceRowsRead": {
+              "Description Gaborone Dam 20200315a.jpg": "English: South-East District, Gaborone Dam, view north to Gaborone",
+              "Date": "15 March 2020, 08:10:28",
+              "Source": "Own work",
+              "Author": "CNJerem"
+            },
+            "licenseTemplatesRead": [
+              "CC BY 4.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "4,030",
+              "2,266"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/e4631e843a676c88-preview.jpg\n  pixelWidth: 4030\n  pixelHeight: 2266\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "sourceDateRaw": "15 March 2020, 08:10:28",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma silmätarkistus: aito Gaboronen tekojärven vesipinta, kalliot ja rantakasvillisuus. Selite vastaa rantaa, ei väitä kuvaksi padon seinämästä. Kaukainen pieni rakennussiluetti on sivuseikka eikä nimetty arkkitehtuuri-/taideteospääaihe. Ei ihmisiä, lisätekstiä tai vesileimaa. CNJerem/CC BY4.0 Author/licensetpl ja lähteen Gaborone Dam, view north to Gaborone luettu. Natiivin todellinen4030×2266 ja SHA tarkistettu. Kuvaus15.3.2020, ei nykyvedenkorkeusväitettä.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Gaborone_Dam_20200315a.jpg",
+            "currentContentSHA256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+            "photoDate": "15 March 2020, 08:10:28",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Gaborone_Dam_20200315a.jpg",
+            "captionFi": "Gaboronen padon tekojärven rantaa, 2020.",
+            "checkedAt": "2026-10-12T19:25:03.730736+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "Gaborone Dam 20200315a.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Gaborone_Dam_20200315a.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa.json",
+            "sha256": "3d11089e79ddf657b8276dda6c7ea18cf51c9ba85ade9bb7c69b1b8815142286"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/illustration-qa-extra.json",
+            "sha256": "2ff2f79048380334c97284f363581c412a2bdc380a696cef09e4940910c61452"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "gaborone",
+        "slot": "N2",
+        "targetJsonPath": "$.nahtavyydet[\"Gaboronen pato\"].kuvat[0]",
+        "commonsFile": "Gaborone Dam 20200315a.jpg",
+        "sha256": "0db9c6a73fcb7b064b1e713e37ac1a43ee60179c79b1ce36251abb07f5a902bd",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Gaborone_Dam_20200315a.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Gaborone_Dam_20200315a.jpg",
+        "author": "CNJerem",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+        "width": 4030,
+        "height": 2266,
+        "originalSHA256": "0db9c6a73fcb7b064b1e713e37ac1a43ee60179c79b1ce36251abb07f5a902bd",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/n2-0db9c6a73fcb7b064b1e.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/n2-0db9c6a73fcb7b064b1e.jpg",
+        "bytes": 2180451,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:26:13.377136+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Gaborone Dam 20200315a.jpg",
+        "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Gaboronen padon tekojärven rantaa, 2020.",
+        "lyhyt": "Gaboronen padon tekojärven rantaa, 2020."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Gaboronen padon tekojärven rantaa, 2020.",
+        "lyhyt": "Gaboronen padon tekojärven rantaa, 2020.",
+        "tiedosto": "Gaborone Dam 20200315a.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+      "targetAfterSHA256": "3154f4e46979c39a5643d1493d4dc619fc3fe363b8d0db35a80e8af5311e87ef",
+      "contextAfterSHA256": "1ba277a81c2212903067a3662c617165a0a1e767bf900fd7a614a1952ec0ac1e"
+    },
+    {
+      "era": "e08",
+      "city": "gaborone",
+      "slot": "N1",
+      "type": "commons",
+      "assetID": "capital-cc-e08-gaborone-n1-faea6729f7782e22",
+      "galleryImageID": "capital-cc-e08-gaborone-n1-faea6729f7782e22",
+      "commonsFile": "Kgale Hill area, Walking Trail 20200329.jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Kgale Hill\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Kgale Hill",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/n1-faea6729f7782e220b27.jpg",
+        "suora": true,
+        "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Polku marulapuiden alla kohti Kgale Hilliä, 2020.",
+        "lyhyt": "Polku marulapuiden alla kohti Kgale Hilliä, 2020.",
+        "tiedosto": "Kgale Hill area, Walking Trail 20200329.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Polku marulapuiden alla kohti Kgale Hilliä, 2020.",
+        "lyhyt": "Polku marulapuiden alla kohti Kgale Hilliä, 2020.",
+        "tiedosto": "Kgale Hill area, Walking Trail 20200329.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/n1-faea6729f7782e220b27.jpg",
+        "suora": true,
+        "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Polku marulapuiden alla kohti Kgale Hilliä, 2020.",
+        "lyhyt": "Polku marulapuiden alla kohti Kgale Hilliä, 2020.",
+        "tiedosto": "Kgale Hill area, Walking Trail 20200329.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "faea6729f7782e220b27b896970550a77e8c24c1b022c70004a03376d3d522d9",
+      "exportSHA256": "faea6729f7782e220b27b896970550a77e8c24c1b022c70004a03376d3d522d9",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/n1-faea6729f7782e220b27.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/n1-faea6729f7782e220b27.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/6e3af7dac5d1ca83-preview.jpg",
+      "dimensions": [
+        4032,
+        3024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/gaborone/sisalto.json",
+      "sourceContentSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0709a0ea340561cc8e109e7e3e61b6230ec4997dc574fa67a9ec18e0a9871773",
+        "semanticContextSHA256": "cddb34bcf459cc9e4ba824e068aaad105acfed309c7be98132a3dbe7f5b1257c",
+        "subjectTitle": "Kgale Hill",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "CNJerem",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Kgale_Hill_area,_Walking_Trail_20200329.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Kgale_Hill_area%2C_Walking_Trail_20200329.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Nimenomainen valokuvan tekijä ja kuvan lisenssi tarkistettu alkuperäisestä tiedostosivusta.",
+            "authorEvidence": "Author table",
+            "workLayer": "Luonnollinen polku ja marulapuita. Ei kasvoja, rakennuksia, teoksia, lisättyä tekstiä, logoa, vesileimaa tai kehystä.",
+            "placeBoundary": "Kuvaajan oma Description: walking trail towards Kgale Hill; päivämäärä 29.3.2020. Ei väitetä huipun näkymäksi.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/6e3af7dac5d1ca83-preview.jpg",
+            "pixelSHA256": "faea6729f7782e220b27b896970550a77e8c24c1b022c70004a03376d3d522d9",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/6e3af7dac5d1ca83.html",
+            "sourceSHA256": "af2be6fdc905b679cfab615f03b6c37765396305e61fd61bd308756565997683",
+            "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/gaborone/N1/owner.json",
+            "notAlreadyInPack": "rg täsmällisillä tiedostonimillä e08/js/packs: ei osumia",
+            "independentQA": "avoin"
+          },
+          "QA": {
+            "author": "CNJerem",
+            "license": "CC BY 4.0",
+            "width": 4032,
+            "height": 3024,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/6e3af7dac5d1ca83-preview.jpg",
+            "nativeSHA256": "faea6729f7782e220b27b896970550a77e8c24c1b022c70004a03376d3d522d9",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa-evidence/af2be6fdc905b679cfab615f03b6c37765396305e61fd61bd308756565997683.html",
+            "sourceSnapshotSHA256": "af2be6fdc905b679cfab615f03b6c37765396305e61fd61bd308756565997683",
+            "sourceRowsRead": {
+              "Description Kgale Hill area, Walking Trail 20200329.jpg": "Afrikaans: Onder maroelabome op die wandelpad na Kgale-heuwel naby Gaborone English: Under marula trees, on the walking trail towards Kgale Hill",
+              "Date": "29 March 2020, 08:59:12",
+              "Source": "Own work",
+              "Author": "CNJerem"
+            },
+            "licenseTemplatesRead": [
+              "CC BY 4.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "4,032",
+              "3,024"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/6e3af7dac5d1ca83-preview.jpg\n  pixelWidth: 4032\n  pixelHeight: 3024\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "sourceDateRaw": "29 March 2020, 08:59:12",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma silmätarkistus: aito luonnonpolku puiden ja aluskasvillisuuden keskellä, ei rakennuksia, ihmisiä, taideteosta, lisätekstiä tai vesileimaa. Description sitoo polun kohti Kgale Hilliä Gaboronen lähellä ja nimeää marulapuut; selite ei väitä huipun näkymää. CNJerem/CC BY4.0 Author/licensetpl luettu alkuperäissivulta. Natiivin todellinen4032×3024 ja SHA tarkistettu, vaikka tiedoston nimessä on preview. Kuvaus29.3.2020.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Kgale_Hill_area,_Walking_Trail_20200329.jpg",
+            "currentContentSHA256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+            "photoDate": "29 March 2020, 08:59:12",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Kgale_Hill_area%2C_Walking_Trail_20200329.jpg",
+            "captionFi": "Polku marulapuiden alla kohti Kgale Hilliä, 2020.",
+            "checkedAt": "2026-10-12T19:25:02.268587+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "Kgale Hill area, Walking Trail 20200329.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Kgale_Hill_area%2C_Walking_Trail_20200329.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          },
+          "qaReason": "Oma silmätarkistus: aito luonnonpolku puiden ja aluskasvillisuuden keskellä, ei rakennuksia, ihmisiä, taideteosta, lisätekstiä tai vesileimaa. Description sitoo polun kohti Kgale Hilliä Gaboronen lähellä ja nimeää marulapuut; selite ei väitä huipun näkymää. CNJerem/CC BY4.0 Author/licensetpl luettu alkuperäissivulta. Natiivin todellinen4032×3024 ja SHA tarkistettu, vaikka tiedoston nimessä on preview. Kuvaus29.3.2020."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Polku marulapuiden alla kohti Kgale Hilliä, 2020.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa.json",
+        "fileSHA256": "3d11089e79ddf657b8276dda6c7ea18cf51c9ba85ade9bb7c69b1b8815142286",
+        "item": {
+          "slot": "N1",
+          "targetJsonPath": "$.nahtavyydet[\"Kgale Hill\"].kuvat[0]",
+          "assetID": null,
+          "commonsFile": "Kgale Hill area, Walking Trail 20200329.jpg",
+          "sha256": "faea6729f7782e220b27b896970550a77e8c24c1b022c70004a03376d3d522d9",
+          "verdict": "accepted",
+          "reason": "Oma silmätarkistus: aito luonnonpolku puiden ja aluskasvillisuuden keskellä, ei rakennuksia, ihmisiä, taideteosta, lisätekstiä tai vesileimaa. Description sitoo polun kohti Kgale Hilliä Gaboronen lähellä ja nimeää marulapuut; selite ei väitä huipun näkymää. CNJerem/CC BY4.0 Author/licensetpl luettu alkuperäissivulta. Natiivin todellinen4032×3024 ja SHA tarkistettu, vaikka tiedoston nimessä on preview. Kuvaus29.3.2020.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "author": "CNJerem",
+            "license": "CC BY 4.0",
+            "width": 4032,
+            "height": 3024,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/6e3af7dac5d1ca83-preview.jpg",
+            "nativeSHA256": "faea6729f7782e220b27b896970550a77e8c24c1b022c70004a03376d3d522d9",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa-evidence/af2be6fdc905b679cfab615f03b6c37765396305e61fd61bd308756565997683.html",
+            "sourceSnapshotSHA256": "af2be6fdc905b679cfab615f03b6c37765396305e61fd61bd308756565997683",
+            "sourceRowsRead": {
+              "Description Kgale Hill area, Walking Trail 20200329.jpg": "Afrikaans: Onder maroelabome op die wandelpad na Kgale-heuwel naby Gaborone English: Under marula trees, on the walking trail towards Kgale Hill",
+              "Date": "29 March 2020, 08:59:12",
+              "Source": "Own work",
+              "Author": "CNJerem"
+            },
+            "licenseTemplatesRead": [
+              "CC BY 4.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "4,032",
+              "3,024"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/cc-evidence/6e3af7dac5d1ca83-preview.jpg\n  pixelWidth: 4032\n  pixelHeight: 3024\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "sourceDateRaw": "29 March 2020, 08:59:12",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma silmätarkistus: aito luonnonpolku puiden ja aluskasvillisuuden keskellä, ei rakennuksia, ihmisiä, taideteosta, lisätekstiä tai vesileimaa. Description sitoo polun kohti Kgale Hilliä Gaboronen lähellä ja nimeää marulapuut; selite ei väitä huipun näkymää. CNJerem/CC BY4.0 Author/licensetpl luettu alkuperäissivulta. Natiivin todellinen4032×3024 ja SHA tarkistettu, vaikka tiedoston nimessä on preview. Kuvaus29.3.2020.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Kgale_Hill_area,_Walking_Trail_20200329.jpg",
+            "currentContentSHA256": "8e34c178ae22663901842ff49dc88bd0c001ba87ecbe2929f3ba9d0c1f5edf9e",
+            "photoDate": "29 March 2020, 08:59:12",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Kgale_Hill_area%2C_Walking_Trail_20200329.jpg",
+            "captionFi": "Polku marulapuiden alla kohti Kgale Hilliä, 2020.",
+            "checkedAt": "2026-10-12T19:25:02.268587+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "Kgale Hill area, Walking Trail 20200329.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Kgale_Hill_area%2C_Walking_Trail_20200329.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/qa.json",
+            "sha256": "3d11089e79ddf657b8276dda6c7ea18cf51c9ba85ade9bb7c69b1b8815142286"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/gaborone/illustration-qa-extra.json",
+            "sha256": "2ff2f79048380334c97284f363581c412a2bdc380a696cef09e4940910c61452"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "gaborone",
+        "slot": "N1",
+        "targetJsonPath": "$.nahtavyydet[\"Kgale Hill\"].kuvat[0]",
+        "commonsFile": "Kgale Hill area, Walking Trail 20200329.jpg",
+        "sha256": "faea6729f7782e220b27b896970550a77e8c24c1b022c70004a03376d3d522d9",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Kgale_Hill_area,_Walking_Trail_20200329.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Kgale_Hill_area%2C_Walking_Trail_20200329.jpg",
+        "author": "CNJerem",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+        "width": 4032,
+        "height": 3024,
+        "originalSHA256": "faea6729f7782e220b27b896970550a77e8c24c1b022c70004a03376d3d522d9",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/n1-faea6729f7782e220b27.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/n1-faea6729f7782e220b27.jpg",
+        "bytes": 10260470,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:26:11.450146+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Kgale Hill area, Walking Trail 20200329.jpg",
+        "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Polku marulapuiden alla kohti Kgale Hilliä, 2020.",
+        "lyhyt": "Polku marulapuiden alla kohti Kgale Hilliä, 2020."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "CNJerem, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Polku marulapuiden alla kohti Kgale Hilliä, 2020.",
+        "lyhyt": "Polku marulapuiden alla kohti Kgale Hilliä, 2020.",
+        "tiedosto": "Kgale Hill area, Walking Trail 20200329.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "1b9c7c6310c5176102953351373b02bbe7b2dc80c41176ac4a4983ce4ad9cf72",
+      "targetAfterSHA256": "0709a0ea340561cc8e109e7e3e61b6230ec4997dc574fa67a9ec18e0a9871773",
+      "contextAfterSHA256": "cddb34bcf459cc9e4ba824e068aaad105acfed309c7be98132a3dbe7f5b1257c"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

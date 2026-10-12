@@ -1,0 +1,2318 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e08",
+  "city": "victoria",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+  "assets": [
+    {
+      "era": "e08",
+      "city": "victoria",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e08-victoria-TRAVELER-illustration-v1-20261012",
+      "galleryImageID": "e08-victoria-TRAVELER-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-TRAVELER-illustration-v1-20261012-ef230781c539.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva merikookoksen siemenestä.",
+        "lyhyt": "Havainnekuva merikookoksen siemenestä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-TRAVELER-illustration-v1-20261012-ef230781c539.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva merikookoksen siemenestä.",
+        "lyhyt": "Havainnekuva merikookoksen siemenestä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ef230781c539527926fe5ada5d40be2926da8c15254ef57f3098d6ecd6354de3",
+      "exportSHA256": "7387dda5c1611d0c1f4b976cfab137a9bd4970b6ad13cfd0e66376aaf43a3303",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-TRAVELER-illustration-v1-20261012-ef230781c539.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-TRAVELER-illustration-v1-20261012-ef230781c539.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-TRAVELER-illustration-v1-20261012-ef230781c539.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+      "sourceContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "6ad39983b833ca715d839c05131462256ded3982c476b940053e4c95acef3521",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic sourced natural/food/material subject or traditional functional object; no named protected artwork or fabricated city scene.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-TRAVELER-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "ef230781c539527926fe5ada5d40be2926da8c15254ef57f3098d6ecd6354de3",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tumma kaksilohkoinen siemen karikkeen päällä, luontevasti vaihteleva kulunut kuori ja kuivat lehdet. Ei henkilöitä tai merkintöjä.",
+            "captionFi": "Havainnekuva merikookoksen siemenestä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "contentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+            "targetCurrentlyPresent": true,
+            "targetText": "",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+            "topicEvidence": "Oppaan puutarhajakso mainitsee coco de mer -palmut. Havainneselite ei nimeä todellista puutarhanäytettä.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+              "sourceContentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+              "targetText": "Aloita Victorian keskustan kävely Lorloz-kellotornin ympäristöstä. Yhdistä siihen Mont Fleurin kasvitieteellinen puutarha ja sen elävä kasvikokoelma. Torin kunnostukseen liittyy suunniteltu väliaikainen kaupankäyntipaikka, joten varmista myyjien nykyinen osoite. Museoiden käyntitilanne kannattaa tarkistaa ennen vierailua. Jätä ulkokierroksen järjestykseen vaihtovaraa päivän sään mukaan.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+              "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+              "supportingContext": "Current travel panel and the same city's sourced flora, fauna, food or material topics.",
+              "subjectBasis": "One naturally dark hard coco de mer Lodoicea maldivica two-lobed seed resting on leaf litter, framed vertically as a botanical still life. No sea-floating seed, humans, buildings or named botanical-garden specimen claim."
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Merikookoksen siemen sopii oppaan kasviaiheeseen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva merikookoksen siemenestä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
+        "fileSHA256": "f1e7e3456d14ace9360741fadeadb40c18bb4c501a6e15a96d9ce8a5c75e3cf0",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e08-victoria-TRAVELER-illustration-v1-20261012",
+          "sha256": "ef230781c539527926fe5ada5d40be2926da8c15254ef57f3098d6ecd6354de3",
+          "verdict": "accepted",
+          "reason": "Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Merikookoksen siemen sopii oppaan kasviaiheeseen.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-TRAVELER-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "ef230781c539527926fe5ada5d40be2926da8c15254ef57f3098d6ecd6354de3",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tumma kaksilohkoinen siemen karikkeen päällä, luontevasti vaihteleva kulunut kuori ja kuivat lehdet. Ei henkilöitä tai merkintöjä.",
+            "captionFi": "Havainnekuva merikookoksen siemenestä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "contentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+            "targetCurrentlyPresent": true,
+            "targetText": "",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+            "topicEvidence": "Oppaan puutarhajakso mainitsee coco de mer -palmut. Havainneselite ei nimeä todellista puutarhanäytettä.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+              "sourceContentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+              "targetText": "Aloita Victorian keskustan kävely Lorloz-kellotornin ympäristöstä. Yhdistä siihen Mont Fleurin kasvitieteellinen puutarha ja sen elävä kasvikokoelma. Torin kunnostukseen liittyy suunniteltu väliaikainen kaupankäyntipaikka, joten varmista myyjien nykyinen osoite. Museoiden käyntitilanne kannattaa tarkistaa ennen vierailua. Jätä ulkokierroksen järjestykseen vaihtovaraa päivän sään mukaan.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+              "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+              "supportingContext": "Current travel panel and the same city's sourced flora, fauna, food or material topics.",
+              "subjectBasis": "One naturally dark hard coco de mer Lodoicea maldivica two-lobed seed resting on leaf litter, framed vertically as a botanical still life. No sea-floating seed, humans, buildings or named botanical-garden specimen claim."
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T19:20:21.732522+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
+            "sha256": "8d60ed0a7fbc32d4fe333925a93dea448ad9775c402b14b1ba40cfc2e04a1eeb"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
+            "sha256": "f1e7e3456d14ace9360741fadeadb40c18bb4c501a6e15a96d9ce8a5c75e3cf0"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-TRAVELER-illustration-v1-20261012-ef230781c539.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-TRAVELER-illustration-v1-20261012-ef230781c539.png?t=7387dda5c1611d0c",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-TRAVELER-illustration-v1-20261012-ef230781c539.png",
+        "sha256": "7387dda5c1611d0c1f4b976cfab137a9bd4970b6ad13cfd0e66376aaf43a3303",
+        "bytes": 2978763,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-victoria-TRAVELER-illustration-v1-20261012",
+        "nativeSHA256": "ef230781c539527926fe5ada5d40be2926da8c15254ef57f3098d6ecd6354de3",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-TRAVELER-illustration-v1-20261012-ef230781c539.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "victoria",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T19:21:22.225017+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-TRAVELER-illustration-v1-20261012-ef230781c539.png",
+        "sha256": "7387dda5c1611d0c1f4b976cfab137a9bd4970b6ad13cfd0e66376aaf43a3303",
+        "bytes": 2978763,
+        "SHAReadAt": "2026-10-12T19:32:06.859757+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "ef230781c539527926fe5ada5d40be2926da8c15254ef57f3098d6ecd6354de3",
+        "rgbPixelSHA256": "579ea85db8a5bc6b17a636bbc1ad709a0e5d50c77c9e42207e16b0978117063c",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "6ad39983b833ca715d839c05131462256ded3982c476b940053e4c95acef3521"
+    },
+    {
+      "era": "e08",
+      "city": "victoria",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e08-victoria-L1-illustration-v1-20261012",
+      "galleryImageID": "e08-victoria-L1-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L1-illustration-v1-20261012-be63cf928c9d.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Siemen ei tule merenpohjasta.",
+        "lyhyt": "Havainnekuva: Siemen ei tule merenpohjasta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L1-illustration-v1-20261012-be63cf928c9d.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Siemen ei tule merenpohjasta.",
+        "lyhyt": "Havainnekuva: Siemen ei tule merenpohjasta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "be63cf928c9d6a63ecc1ac6b5fc6efd554f9a6f5f295cc72c9d2ca2090ee4b53",
+      "exportSHA256": "7563d70495265b5ac108eb7d20946f69c8488208bbfeda42f0770904846f26ec",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L1-illustration-v1-20261012-be63cf928c9d.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L1-illustration-v1-20261012-be63cf928c9d.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-L1-illustration-v1-20261012-be63cf928c9d.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+      "sourceContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "c3b0b62d6e4e9cc1c16ed55ffb2111c47de4fbeb9d440fdadc14e614cfcfa829",
+        "semanticContextSHA256": "c3b0b62d6e4e9cc1c16ed55ffb2111c47de4fbeb9d440fdadc14e614cfcfa829",
+        "subjectTitle": "Siemen ei tule merenpohjasta",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic natural subject, ordinary materials or unbranded objects; no named copyrighted building or contemporary artwork reproduced.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-L1-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "be63cf928c9d6a63ecc1ac6b5fc6efd554f9a6f5f295cc72c9d2ca2090ee4b53",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Suuri tumma kaksilohkoinen siemen kuivan karikkeen päällä. Kuoren kuluminen ja kuitusuunnat vaihtelevat, ei meressä kasvavaa puuta, tekstiä tai henkilöitä.",
+            "captionFi": "Havainnekuva: Siemen ei tule merenpohjasta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "contentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+            "targetCurrentlyPresent": true,
+            "targetText": "Coco de mer tarkoittaa merikookosta, mutta nimi johtaa harhaan. Palmun siemenet ajautuivat kaukaisille rannoille ennen kuin niiden lähtöpaikka tunnettiin, ja kasvin uskottiin jopa kasvavan meren pohjassa. Elinkelpoinen siemen on kuitenkin liian tiheä kelluakseen. Vasta tyhjentynyt tai pilaantunut kuori voi kulkeutua veden mukana. Luonnonvaraisena palmu kasvaa Praslinilla ja Curieusella; Victorian puutarhassa se on kasvatettu kasvi. Maailmalle matkannut siemen ei siis todista meressä kasvavasta puusta.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+            "topicEvidence": "L1 käsittelee coco de mer -siementä ja erottaa kasvatetun kasvin luonnonvaraisesta.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+              "sourceContentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+              "targetText": "Coco de mer tarkoittaa merikookosta, mutta nimi johtaa harhaan. Palmun siemenet ajautuivat kaukaisille rannoille ennen kuin niiden lähtöpaikka tunnettiin, ja kasvin uskottiin jopa kasvavan meren pohjassa. Elinkelpoinen siemen on kuitenkin liian tiheä kelluakseen. Vasta tyhjentynyt tai pilaantunut kuori voi kulkeutua veden mukana. Luonnonvaraisena palmu kasvaa Praslinilla ja Curieusella; Victorian puutarhassa se on kasvatettu kasvi. Maailmalle matkannut siemen ei siis todista meressä kasvavasta puusta.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+              "wiki": "Lodoicea",
+              "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+              "supportingSourceUrls": [
+                "https://en.wikipedia.org/wiki/Lodoicea"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Victoria_(Seychelles",
+                "https://en.wikipedia.org/wiki/Lodoicea",
+                "https://en.wikipedia.org/wiki/Aldabra_giant_tortoise"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Kaksilohkoinen merikookoksen siemen sopii kasviaiheeseen. Se on havainnekuva eikä todellinen Victorian puutarhan näyte tai luonnonvarainen löytö."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: Siemen ei tule merenpohjasta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
+        "fileSHA256": "f1e7e3456d14ace9360741fadeadb40c18bb4c501a6e15a96d9ce8a5c75e3cf0",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "e08-victoria-L1-illustration-v1-20261012",
+          "sha256": "be63cf928c9d6a63ecc1ac6b5fc6efd554f9a6f5f295cc72c9d2ca2090ee4b53",
+          "verdict": "accepted",
+          "reason": "Kaksilohkoinen merikookoksen siemen sopii kasviaiheeseen. Se on havainnekuva eikä todellinen Victorian puutarhan näyte tai luonnonvarainen löytö.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-L1-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "be63cf928c9d6a63ecc1ac6b5fc6efd554f9a6f5f295cc72c9d2ca2090ee4b53",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Suuri tumma kaksilohkoinen siemen kuivan karikkeen päällä. Kuoren kuluminen ja kuitusuunnat vaihtelevat, ei meressä kasvavaa puuta, tekstiä tai henkilöitä.",
+            "captionFi": "Havainnekuva: Siemen ei tule merenpohjasta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "contentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+            "targetCurrentlyPresent": true,
+            "targetText": "Coco de mer tarkoittaa merikookosta, mutta nimi johtaa harhaan. Palmun siemenet ajautuivat kaukaisille rannoille ennen kuin niiden lähtöpaikka tunnettiin, ja kasvin uskottiin jopa kasvavan meren pohjassa. Elinkelpoinen siemen on kuitenkin liian tiheä kelluakseen. Vasta tyhjentynyt tai pilaantunut kuori voi kulkeutua veden mukana. Luonnonvaraisena palmu kasvaa Praslinilla ja Curieusella; Victorian puutarhassa se on kasvatettu kasvi. Maailmalle matkannut siemen ei siis todista meressä kasvavasta puusta.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+            "topicEvidence": "L1 käsittelee coco de mer -siementä ja erottaa kasvatetun kasvin luonnonvaraisesta.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+              "sourceContentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+              "targetText": "Coco de mer tarkoittaa merikookosta, mutta nimi johtaa harhaan. Palmun siemenet ajautuivat kaukaisille rannoille ennen kuin niiden lähtöpaikka tunnettiin, ja kasvin uskottiin jopa kasvavan meren pohjassa. Elinkelpoinen siemen on kuitenkin liian tiheä kelluakseen. Vasta tyhjentynyt tai pilaantunut kuori voi kulkeutua veden mukana. Luonnonvaraisena palmu kasvaa Praslinilla ja Curieusella; Victorian puutarhassa se on kasvatettu kasvi. Maailmalle matkannut siemen ei siis todista meressä kasvavasta puusta.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+              "wiki": "Lodoicea",
+              "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+              "supportingSourceUrls": [
+                "https://en.wikipedia.org/wiki/Lodoicea"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Victoria_(Seychelles",
+                "https://en.wikipedia.org/wiki/Lodoicea",
+                "https://en.wikipedia.org/wiki/Aldabra_giant_tortoise"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:30:55.616318+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
+            "sha256": "8d60ed0a7fbc32d4fe333925a93dea448ad9775c402b14b1ba40cfc2e04a1eeb"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
+            "sha256": "f1e7e3456d14ace9360741fadeadb40c18bb4c501a6e15a96d9ce8a5c75e3cf0"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L1-illustration-v1-20261012-be63cf928c9d.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L1-illustration-v1-20261012-be63cf928c9d.png?t=7563d70495265b5a",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L1-illustration-v1-20261012-be63cf928c9d.png",
+        "sha256": "7563d70495265b5ac108eb7d20946f69c8488208bbfeda42f0770904846f26ec",
+        "bytes": 3080419,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-victoria-L1-illustration-v1-20261012",
+        "nativeSHA256": "be63cf928c9d6a63ecc1ac6b5fc6efd554f9a6f5f295cc72c9d2ca2090ee4b53",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-L1-illustration-v1-20261012-be63cf928c9d.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "victoria",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T18:31:10.215599+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-L1-illustration-v1-20261012-be63cf928c9d.png",
+        "sha256": "7563d70495265b5ac108eb7d20946f69c8488208bbfeda42f0770904846f26ec",
+        "bytes": 3080419,
+        "SHAReadAt": "2026-10-12T18:30:56.017852+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "be63cf928c9d6a63ecc1ac6b5fc6efd554f9a6f5f295cc72c9d2ca2090ee4b53",
+        "rgbPixelSHA256": "42afcd7b47c04fb7365f9b673f2fcb725d9847bcab87b6e8a28b972b0361e348",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "targetAfterSHA256": "c3b0b62d6e4e9cc1c16ed55ffb2111c47de4fbeb9d440fdadc14e614cfcfa829",
+      "contextAfterSHA256": "c3b0b62d6e4e9cc1c16ed55ffb2111c47de4fbeb9d440fdadc14e614cfcfa829"
+    },
+    {
+      "era": "e08",
+      "city": "victoria",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e08-victoria-L2-illustration-v1-20261012",
+      "galleryImageID": "e08-victoria-L2-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L2-illustration-v1-20261012-011b86511da8.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Palmu kerää sadetta suppilolla.",
+        "lyhyt": "Havainnekuva: Palmu kerää sadetta suppilolla."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L2-illustration-v1-20261012-011b86511da8.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Palmu kerää sadetta suppilolla.",
+        "lyhyt": "Havainnekuva: Palmu kerää sadetta suppilolla."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "011b86511da87c6e20ca1d873e1ab31f31f5b74d53ea5f053a828d40b48c485b",
+      "exportSHA256": "27150a8aa001ce0e912e6dd410c0e3391b3aaff4834e6d9e08745d9e38739737",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L2-illustration-v1-20261012-011b86511da8.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L2-illustration-v1-20261012-011b86511da8.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-L2-illustration-v1-20261012-011b86511da8.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+      "sourceContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "68b1e36a022117b6a4b95e6881b72c21208a47ce36a51edba1f74ef43403aa85",
+        "semanticContextSHA256": "68b1e36a022117b6a4b95e6881b72c21208a47ce36a51edba1f74ef43403aa85",
+        "subjectTitle": "Palmu kerää sadetta suppilolla",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic natural subject, ordinary materials or unbranded objects; no named copyrighted building or contemporary artwork reproduced.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-L2-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "011b86511da87c6e20ca1d873e1ab31f31f5b74d53ea5f053a828d40b48c485b",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Viuhkalehtinen palmu, säteittäiset lehtisuonet ja luontevasti kuluneet lehtireunat. Lehdet liittyvät ruoteihin ja runkoon uskottavasti; ei kuvitteellista vettä tai merkintöjä.",
+            "captionFi": "Havainnekuva: Palmu kerää sadetta suppilolla.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "contentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+            "targetCurrentlyPresent": true,
+            "targetText": "Coco de mer -palmun valtavat lehdet tekevät muutakin kuin varjostavat. Niiden muodostama suppilo kerää pienhiukkasia, kuten siitepölyä, jotka sade huuhtelee rungon tyvelle. Näin palmu saa ravinteita ja niiden hyöty ulottuu myös lähellä kasvaviin jälkeläisiin. Hede- ja emikukat kasvavat eri puissa, joten kaikki kookkaat palmut eivät kanna hedelmiä. Victorian puutarhassa voi tutustua molempiin. Kasvin näyttävä koko on vasta alku: lehtien toimintaa katsoessa huomaa myös sen tavan kerätä ympäristöstä ravintoa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+            "topicEvidence": "L2 kertoo coco de mer -palmun lehtien suppilomaisesta keräämisestä. Kuva havainnollistaa rakennetta, ei mitattua ravinnevirtausta.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+              "sourceContentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+              "targetText": "Coco de mer -palmun valtavat lehdet tekevät muutakin kuin varjostavat. Niiden muodostama suppilo kerää pienhiukkasia, kuten siitepölyä, jotka sade huuhtelee rungon tyvelle. Näin palmu saa ravinteita ja niiden hyöty ulottuu myös lähellä kasvaviin jälkeläisiin. Hede- ja emikukat kasvavat eri puissa, joten kaikki kookkaat palmut eivät kanna hedelmiä. Victorian puutarhassa voi tutustua molempiin. Kasvin näyttävä koko on vasta alku: lehtien toimintaa katsoessa huomaa myös sen tavan kerätä ympäristöstä ravintoa.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+              "wiki": "Lodoicea",
+              "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+              "supportingSourceUrls": [
+                "https://en.wikipedia.org/wiki/Lodoicea"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Victoria_(Seychelles",
+                "https://en.wikipedia.org/wiki/Lodoicea",
+                "https://en.wikipedia.org/wiki/Aldabra_giant_tortoise"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Suuret viuhkamaiset lehdet kohti rungon tyveä sopivat palmun lehtirakennetta käsittelevään havainnollistukseen. Kuva ei väitä tiettyä Victorian puutarhan yksilöä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: Palmu kerää sadetta suppilolla.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
+        "fileSHA256": "f1e7e3456d14ace9360741fadeadb40c18bb4c501a6e15a96d9ce8a5c75e3cf0",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e08-victoria-L2-illustration-v1-20261012",
+          "sha256": "011b86511da87c6e20ca1d873e1ab31f31f5b74d53ea5f053a828d40b48c485b",
+          "verdict": "accepted",
+          "reason": "Suuret viuhkamaiset lehdet kohti rungon tyveä sopivat palmun lehtirakennetta käsittelevään havainnollistukseen. Kuva ei väitä tiettyä Victorian puutarhan yksilöä.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-L2-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "011b86511da87c6e20ca1d873e1ab31f31f5b74d53ea5f053a828d40b48c485b",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Viuhkalehtinen palmu, säteittäiset lehtisuonet ja luontevasti kuluneet lehtireunat. Lehdet liittyvät ruoteihin ja runkoon uskottavasti; ei kuvitteellista vettä tai merkintöjä.",
+            "captionFi": "Havainnekuva: Palmu kerää sadetta suppilolla.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "contentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+            "targetCurrentlyPresent": true,
+            "targetText": "Coco de mer -palmun valtavat lehdet tekevät muutakin kuin varjostavat. Niiden muodostama suppilo kerää pienhiukkasia, kuten siitepölyä, jotka sade huuhtelee rungon tyvelle. Näin palmu saa ravinteita ja niiden hyöty ulottuu myös lähellä kasvaviin jälkeläisiin. Hede- ja emikukat kasvavat eri puissa, joten kaikki kookkaat palmut eivät kanna hedelmiä. Victorian puutarhassa voi tutustua molempiin. Kasvin näyttävä koko on vasta alku: lehtien toimintaa katsoessa huomaa myös sen tavan kerätä ympäristöstä ravintoa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+            "topicEvidence": "L2 kertoo coco de mer -palmun lehtien suppilomaisesta keräämisestä. Kuva havainnollistaa rakennetta, ei mitattua ravinnevirtausta.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+              "sourceContentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+              "targetText": "Coco de mer -palmun valtavat lehdet tekevät muutakin kuin varjostavat. Niiden muodostama suppilo kerää pienhiukkasia, kuten siitepölyä, jotka sade huuhtelee rungon tyvelle. Näin palmu saa ravinteita ja niiden hyöty ulottuu myös lähellä kasvaviin jälkeläisiin. Hede- ja emikukat kasvavat eri puissa, joten kaikki kookkaat palmut eivät kanna hedelmiä. Victorian puutarhassa voi tutustua molempiin. Kasvin näyttävä koko on vasta alku: lehtien toimintaa katsoessa huomaa myös sen tavan kerätä ympäristöstä ravintoa.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+              "wiki": "Lodoicea",
+              "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+              "supportingSourceUrls": [
+                "https://en.wikipedia.org/wiki/Lodoicea"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Victoria_(Seychelles",
+                "https://en.wikipedia.org/wiki/Lodoicea",
+                "https://en.wikipedia.org/wiki/Aldabra_giant_tortoise"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:35:54.982087+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
+            "sha256": "8d60ed0a7fbc32d4fe333925a93dea448ad9775c402b14b1ba40cfc2e04a1eeb"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
+            "sha256": "f1e7e3456d14ace9360741fadeadb40c18bb4c501a6e15a96d9ce8a5c75e3cf0"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L2-illustration-v1-20261012-011b86511da8.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L2-illustration-v1-20261012-011b86511da8.png?t=27150a8aa001ce0e",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L2-illustration-v1-20261012-011b86511da8.png",
+        "sha256": "27150a8aa001ce0e912e6dd410c0e3391b3aaff4834e6d9e08745d9e38739737",
+        "bytes": 3244430,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-victoria-L2-illustration-v1-20261012",
+        "nativeSHA256": "011b86511da87c6e20ca1d873e1ab31f31f5b74d53ea5f053a828d40b48c485b",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-L2-illustration-v1-20261012-011b86511da8.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "victoria",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T18:36:38.936604+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-L2-illustration-v1-20261012-011b86511da8.png",
+        "sha256": "27150a8aa001ce0e912e6dd410c0e3391b3aaff4834e6d9e08745d9e38739737",
+        "bytes": 3244430,
+        "SHAReadAt": "2026-10-12T18:36:33.548642+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "011b86511da87c6e20ca1d873e1ab31f31f5b74d53ea5f053a828d40b48c485b",
+        "rgbPixelSHA256": "e7d24e32164ae0c81b8d8ab0f00b2763c9a203c6735519c80caf300415021b5f",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "targetAfterSHA256": "68b1e36a022117b6a4b95e6881b72c21208a47ce36a51edba1f74ef43403aa85",
+      "contextAfterSHA256": "68b1e36a022117b6a4b95e6881b72c21208a47ce36a51edba1f74ef43403aa85"
+    },
+    {
+      "era": "e08",
+      "city": "victoria",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e08-victoria-L3-illustration-v1-20261012",
+      "galleryImageID": "e08-victoria-L3-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L3-illustration-v1-20261012-cfb0686b4c2d.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Pitkä kaula on työväline.",
+        "lyhyt": "Havainnekuva: Pitkä kaula on työväline."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L3-illustration-v1-20261012-cfb0686b4c2d.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Pitkä kaula on työväline.",
+        "lyhyt": "Havainnekuva: Pitkä kaula on työväline."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "cfb0686b4c2d9e1f33766ae4be46c95fa1fd58ab81cd305e198242c3d22f2cc1",
+      "exportSHA256": "f886d3a8edfc0e8fb9350312113b534e73f82eff2dcc8e9d7a1e90719223a646",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L3-illustration-v1-20261012-cfb0686b4c2d.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L3-illustration-v1-20261012-cfb0686b4c2d.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-L3-illustration-v1-20261012-cfb0686b4c2d.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+      "sourceContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "28338576ce94b44e652f5e8a68fecf3166db544f7bf04ce7bd6edd093a872773",
+        "semanticContextSHA256": "28338576ce94b44e652f5e8a68fecf3166db544f7bf04ce7bd6edd093a872773",
+        "subjectTitle": "Pitkä kaula on työväline",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic natural subject, ordinary materials or unbranded objects; no named copyrighted building or contemporary artwork reproduced.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-L3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "cfb0686b4c2d9e1f33766ae4be46c95fa1fd58ab81cd305e198242c3d22f2cc1",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi tumma jättiläiskilpikonna tavoittaa lehtiä pitkällä kaulalla. Kilven levyt, näkyvät jalat ja kaulan poimut uskottavia; pinnat vaihtelevat, ei merkintöjä.",
+            "captionFi": "Havainnekuva: Pitkä kaula on työväline.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "contentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+            "targetCurrentlyPresent": true,
+            "targetText": "Victorian kasvitieteellisessä puutarhassa elää Aldabran jättiläiskilpikonnia. Lajin luonnonvarainen pääkanta on Aldabran atollilla, joten puutarhan eläimet eivät kerro Mahén villistä kilpikonnakannasta. Eläimen pitkä kaula auttaa sitä tavoittamaan lehtiä ja oksia maanpinnan yläpuolelta. Se syö enimmäkseen kasveja, kuten ruohoa, lehtiä ja hedelmiä. Aamuisin eläimet laiduntavat, ja päivän kuumetessa ne hakeutuvat suojaan. Suuren kilven lisäksi kannattaa siis katsoa kaulaa: se on tärkeä osa eläimen ruokailua.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+            "topicEvidence": "L3 kertoo Aldabran jättiläiskilpikonnan pitkästä kaulasta ja kasvinsyönnistä.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+              "sourceContentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+              "targetText": "Victorian kasvitieteellisessä puutarhassa elää Aldabran jättiläiskilpikonnia. Lajin luonnonvarainen pääkanta on Aldabran atollilla, joten puutarhan eläimet eivät kerro Mahén villistä kilpikonnakannasta. Eläimen pitkä kaula auttaa sitä tavoittamaan lehtiä ja oksia maanpinnan yläpuolelta. Se syö enimmäkseen kasveja, kuten ruohoa, lehtiä ja hedelmiä. Aamuisin eläimet laiduntavat, ja päivän kuumetessa ne hakeutuvat suojaan. Suuren kilven lisäksi kannattaa siis katsoa kaulaa: se on tärkeä osa eläimen ruokailua.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+              "wiki": "Aldabra giant tortoise",
+              "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+              "supportingSourceUrls": [
+                "https://en.wikipedia.org/wiki/Aldabra_giant_tortoise"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Victoria_(Seychelles",
+                "https://en.wikipedia.org/wiki/Lodoicea",
+                "https://en.wikipedia.org/wiki/Aldabra_giant_tortoise"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Kaulaansa ojentava jättiläiskilpikonna vastaa tekstin ruokailuaihetta. Selite on havainnollistus eikä todellinen puutarhayksilön kuva."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: Pitkä kaula on työväline.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
+        "fileSHA256": "f1e7e3456d14ace9360741fadeadb40c18bb4c501a6e15a96d9ce8a5c75e3cf0",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e08-victoria-L3-illustration-v1-20261012",
+          "sha256": "cfb0686b4c2d9e1f33766ae4be46c95fa1fd58ab81cd305e198242c3d22f2cc1",
+          "verdict": "accepted",
+          "reason": "Kaulaansa ojentava jättiläiskilpikonna vastaa tekstin ruokailuaihetta. Selite on havainnollistus eikä todellinen puutarhayksilön kuva.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-L3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "cfb0686b4c2d9e1f33766ae4be46c95fa1fd58ab81cd305e198242c3d22f2cc1",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi tumma jättiläiskilpikonna tavoittaa lehtiä pitkällä kaulalla. Kilven levyt, näkyvät jalat ja kaulan poimut uskottavia; pinnat vaihtelevat, ei merkintöjä.",
+            "captionFi": "Havainnekuva: Pitkä kaula on työväline.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "contentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+            "targetCurrentlyPresent": true,
+            "targetText": "Victorian kasvitieteellisessä puutarhassa elää Aldabran jättiläiskilpikonnia. Lajin luonnonvarainen pääkanta on Aldabran atollilla, joten puutarhan eläimet eivät kerro Mahén villistä kilpikonnakannasta. Eläimen pitkä kaula auttaa sitä tavoittamaan lehtiä ja oksia maanpinnan yläpuolelta. Se syö enimmäkseen kasveja, kuten ruohoa, lehtiä ja hedelmiä. Aamuisin eläimet laiduntavat, ja päivän kuumetessa ne hakeutuvat suojaan. Suuren kilven lisäksi kannattaa siis katsoa kaulaa: se on tärkeä osa eläimen ruokailua.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+            "topicEvidence": "L3 kertoo Aldabran jättiläiskilpikonnan pitkästä kaulasta ja kasvinsyönnistä.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+              "sourceContentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+              "targetText": "Victorian kasvitieteellisessä puutarhassa elää Aldabran jättiläiskilpikonnia. Lajin luonnonvarainen pääkanta on Aldabran atollilla, joten puutarhan eläimet eivät kerro Mahén villistä kilpikonnakannasta. Eläimen pitkä kaula auttaa sitä tavoittamaan lehtiä ja oksia maanpinnan yläpuolelta. Se syö enimmäkseen kasveja, kuten ruohoa, lehtiä ja hedelmiä. Aamuisin eläimet laiduntavat, ja päivän kuumetessa ne hakeutuvat suojaan. Suuren kilven lisäksi kannattaa siis katsoa kaulaa: se on tärkeä osa eläimen ruokailua.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+              "wiki": "Aldabra giant tortoise",
+              "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+              "supportingSourceUrls": [
+                "https://en.wikipedia.org/wiki/Aldabra_giant_tortoise"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Victoria_(Seychelles",
+                "https://en.wikipedia.org/wiki/Lodoicea",
+                "https://en.wikipedia.org/wiki/Aldabra_giant_tortoise"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:36:25.476477+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
+            "sha256": "8d60ed0a7fbc32d4fe333925a93dea448ad9775c402b14b1ba40cfc2e04a1eeb"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
+            "sha256": "f1e7e3456d14ace9360741fadeadb40c18bb4c501a6e15a96d9ce8a5c75e3cf0"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L3-illustration-v1-20261012-cfb0686b4c2d.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L3-illustration-v1-20261012-cfb0686b4c2d.png?t=f886d3a8edfc0e8f",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L3-illustration-v1-20261012-cfb0686b4c2d.png",
+        "sha256": "f886d3a8edfc0e8fb9350312113b534e73f82eff2dcc8e9d7a1e90719223a646",
+        "bytes": 2933786,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-victoria-L3-illustration-v1-20261012",
+        "nativeSHA256": "cfb0686b4c2d9e1f33766ae4be46c95fa1fd58ab81cd305e198242c3d22f2cc1",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-L3-illustration-v1-20261012-cfb0686b4c2d.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "victoria",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T18:36:40.648435+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-L3-illustration-v1-20261012-cfb0686b4c2d.png",
+        "sha256": "f886d3a8edfc0e8fb9350312113b534e73f82eff2dcc8e9d7a1e90719223a646",
+        "bytes": 2933786,
+        "SHAReadAt": "2026-10-12T18:36:33.811282+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "cfb0686b4c2d9e1f33766ae4be46c95fa1fd58ab81cd305e198242c3d22f2cc1",
+        "rgbPixelSHA256": "b0cf8b1277951fb38346f6f731956404752a969694503df9b0b6effb7873b8eb",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "targetAfterSHA256": "28338576ce94b44e652f5e8a68fecf3166db544f7bf04ce7bd6edd093a872773",
+      "contextAfterSHA256": "28338576ce94b44e652f5e8a68fecf3166db544f7bf04ce7bd6edd093a872773"
+    },
+    {
+      "era": "e08",
+      "city": "victoria",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e08-victoria-L4-illustration-v1-20261012",
+      "galleryImageID": "e08-victoria-L4-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L4-illustration-v1-20261012-be1fb7d4f1a2.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Luonto tulee postin naapuriin.",
+        "lyhyt": "Havainnekuva: Luonto tulee postin naapuriin."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L4-illustration-v1-20261012-be1fb7d4f1a2.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Luonto tulee postin naapuriin.",
+        "lyhyt": "Havainnekuva: Luonto tulee postin naapuriin."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "be1fb7d4f1a2e8d8f594beed3d56b9c801b1343c22f4472e2cc513e237f82470",
+      "exportSHA256": "0b25e308d6d1c28df37e3fe88e3d5facb8db634b27b09b2f55c12282940a94bb",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L4-illustration-v1-20261012-be1fb7d4f1a2.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L4-illustration-v1-20261012-be1fb7d4f1a2.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-L4-illustration-v1-20261012-be1fb7d4f1a2.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+      "sourceContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "bdb73a5df7b8612bc97df964b16d57c7ada3d29eb6f30a0881cb5e51626ce205",
+        "semanticContextSHA256": "bdb73a5df7b8612bc97df964b16d57c7ada3d29eb6f30a0881cb5e51626ce205",
+        "subjectTitle": "Luonto tulee postin naapuriin",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic natural subject, ordinary materials or unbranded objects; no named copyrighted building or contemporary artwork reproduced.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-L4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "be1fb7d4f1a2e8d8f594beed3d56b9c801b1343c22f4472e2cc513e237f82470",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kuivattu kasvi paperilla, rakeinen kivinäyte ja suurennuslasi pöydällä. Luontevat murtopinnat ja kuivuneet lehdet; ei etikettejä, tekstiä tai henkilöitä.",
+            "captionFi": "Havainnekuva: Luonto tulee postin naapuriin.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "contentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+            "targetCurrentlyPresent": true,
+            "targetText": "Victorian luonnonhistoriallinen museo sijaitsee pääpostin vieressä. Näyttelyiden aiheita ovat kasvitiede, eläintiede, geologia ja antropologia eli ihmisen tutkimus. Saariston historiaa tarkastellaan siis kasvien ja eläinten lisäksi kivien sekä ihmisen kulttuurien kautta. Puutarhassa kokoelma kasvaa elävänä, museossa aiheita esitellään näyttelyissä. Nämä ovat kaksi erilaista tapaa tutustua samaan saaristoon. Pääkaupungin luontokierros voi alkaa puiston polulta ja jatkua kysymyksiin siitä, millainen paikka Seychellit on.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+            "topicEvidence": "L4 nimeää kasvitieteen ja geologian museon aiheiksi.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+              "sourceContentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+              "targetText": "Victorian luonnonhistoriallinen museo sijaitsee pääpostin vieressä. Näyttelyiden aiheita ovat kasvitiede, eläintiede, geologia ja antropologia eli ihmisen tutkimus. Saariston historiaa tarkastellaan siis kasvien ja eläinten lisäksi kivien sekä ihmisen kulttuurien kautta. Puutarhassa kokoelma kasvaa elävänä, museossa aiheita esitellään näyttelyissä. Nämä ovat kaksi erilaista tapaa tutustua samaan saaristoon. Pääkaupungin luontokierros voi alkaa puiston polulta ja jatkua kysymyksiin siitä, millainen paikka Seychellit on.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+              "wiki": "Seychelles Natural History Museum",
+              "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+              "supportingSourceUrls": [
+                "https://en.wikipedia.org/wiki/Seychelles_Natural_History_Museum"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Victoria_(Seychelles",
+                "https://en.wikipedia.org/wiki/Lodoicea",
+                "https://en.wikipedia.org/wiki/Aldabra_giant_tortoise"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Kasvi- ja kivinäytteet sopivat luonnonhistoriallisten aiheiden havainnollistukseen. Kuva ei esitä museon todellisia kokoelmaesineitä tai sisätilaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: Luonto tulee postin naapuriin.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
+        "fileSHA256": "f1e7e3456d14ace9360741fadeadb40c18bb4c501a6e15a96d9ce8a5c75e3cf0",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e08-victoria-L4-illustration-v1-20261012",
+          "sha256": "be1fb7d4f1a2e8d8f594beed3d56b9c801b1343c22f4472e2cc513e237f82470",
+          "verdict": "accepted",
+          "reason": "Kasvi- ja kivinäytteet sopivat luonnonhistoriallisten aiheiden havainnollistukseen. Kuva ei esitä museon todellisia kokoelmaesineitä tai sisätilaa.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/assets/e08-victoria-L4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "be1fb7d4f1a2e8d8f594beed3d56b9c801b1343c22f4472e2cc513e237f82470",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kuivattu kasvi paperilla, rakeinen kivinäyte ja suurennuslasi pöydällä. Luontevat murtopinnat ja kuivuneet lehdet; ei etikettejä, tekstiä tai henkilöitä.",
+            "captionFi": "Havainnekuva: Luonto tulee postin naapuriin.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "contentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+            "targetCurrentlyPresent": true,
+            "targetText": "Victorian luonnonhistoriallinen museo sijaitsee pääpostin vieressä. Näyttelyiden aiheita ovat kasvitiede, eläintiede, geologia ja antropologia eli ihmisen tutkimus. Saariston historiaa tarkastellaan siis kasvien ja eläinten lisäksi kivien sekä ihmisen kulttuurien kautta. Puutarhassa kokoelma kasvaa elävänä, museossa aiheita esitellään näyttelyissä. Nämä ovat kaksi erilaista tapaa tutustua samaan saaristoon. Pääkaupungin luontokierros voi alkaa puiston polulta ja jatkua kysymyksiin siitä, millainen paikka Seychellit on.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+            "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+            "topicEvidence": "L4 nimeää kasvitieteen ja geologian museon aiheiksi.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+              "sourceContentSha256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+              "targetText": "Victorian luonnonhistoriallinen museo sijaitsee pääpostin vieressä. Näyttelyiden aiheita ovat kasvitiede, eläintiede, geologia ja antropologia eli ihmisen tutkimus. Saariston historiaa tarkastellaan siis kasvien ja eläinten lisäksi kivien sekä ihmisen kulttuurien kautta. Puutarhassa kokoelma kasvaa elävänä, museossa aiheita esitellään näyttelyissä. Nämä ovat kaksi erilaista tapaa tutustua samaan saaristoon. Pääkaupungin luontokierros voi alkaa puiston polulta ja jatkua kysymyksiin siitä, millainen paikka Seychellit on.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/faktapohja.md",
+              "wiki": "Seychelles Natural History Museum",
+              "factSheetSha256": "ef0d4061cc02b40add81339e2a8760770e549bb027b061e2284dc52214bc76d6",
+              "supportingSourceUrls": [
+                "https://en.wikipedia.org/wiki/Seychelles_Natural_History_Museum"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Victoria_(Seychelles",
+                "https://en.wikipedia.org/wiki/Lodoicea",
+                "https://en.wikipedia.org/wiki/Aldabra_giant_tortoise"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:42:24.495534+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
+            "sha256": "8d60ed0a7fbc32d4fe333925a93dea448ad9775c402b14b1ba40cfc2e04a1eeb"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
+            "sha256": "f1e7e3456d14ace9360741fadeadb40c18bb4c501a6e15a96d9ce8a5c75e3cf0"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L4-illustration-v1-20261012-be1fb7d4f1a2.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L4-illustration-v1-20261012-be1fb7d4f1a2.png?t=0b25e308d6d1c28d",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/victoria/e08-victoria-L4-illustration-v1-20261012-be1fb7d4f1a2.png",
+        "sha256": "0b25e308d6d1c28df37e3fe88e3d5facb8db634b27b09b2f55c12282940a94bb",
+        "bytes": 2338088,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-victoria-L4-illustration-v1-20261012",
+        "nativeSHA256": "be1fb7d4f1a2e8d8f594beed3d56b9c801b1343c22f4472e2cc513e237f82470",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-L4-illustration-v1-20261012-be1fb7d4f1a2.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "victoria",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T18:42:42.892571+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/victoria/e08-victoria-L4-illustration-v1-20261012-be1fb7d4f1a2.png",
+        "sha256": "0b25e308d6d1c28df37e3fe88e3d5facb8db634b27b09b2f55c12282940a94bb",
+        "bytes": 2338088,
+        "SHAReadAt": "2026-10-12T18:42:38.713039+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "be1fb7d4f1a2e8d8f594beed3d56b9c801b1343c22f4472e2cc513e237f82470",
+        "rgbPixelSHA256": "46d70b3725c963776c625c502a3aba8227085c6549a80df214e69da647ac2eb8",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "targetAfterSHA256": "bdb73a5df7b8612bc97df964b16d57c7ada3d29eb6f30a0881cb5e51626ce205",
+      "contextAfterSHA256": "bdb73a5df7b8612bc97df964b16d57c7ada3d29eb6f30a0881cb5e51626ce205"
+    },
+    {
+      "era": "e08",
+      "city": "victoria",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e08-victoria-photo-0bc499a145e05f20",
+      "galleryImageID": "capital-cc-e08-victoria-photo-0bc499a145e05f20",
+      "commonsFile": "Sey Botanical Garden Entrance.JPG",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/victoria/photo-0bc499a145e05f20392f.jpg",
+        "suora": true,
+        "lahde": "Marek Gehrmann, Commons (CC BY-SA 3.0)",
+        "selite": "Mont Fleurin kasvitieteellinen puutarha sijaitsee Victorian kaupungissa Mahélla.",
+        "lyhyt": "Mont Fleurin kasvitieteellinen puutarha sijaitsee Victorian kaupungissa Mahélla.",
+        "tiedosto": "Sey Botanical Garden Entrance.JPG",
+        "vuosi": "2009"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Marek Gehrmann, Commons (CC BY-SA 3.0)",
+        "selite": "Mont Fleurin kasvitieteellinen puutarha sijaitsee Victorian kaupungissa Mahélla.",
+        "lyhyt": "Mont Fleurin kasvitieteellinen puutarha sijaitsee Victorian kaupungissa Mahélla.",
+        "tiedosto": "Sey Botanical Garden Entrance.JPG",
+        "vuosi": "2009"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/victoria/photo-0bc499a145e05f20392f.jpg",
+        "suora": true,
+        "lahde": "Marek Gehrmann, Commons (CC BY-SA 3.0)",
+        "selite": "Mont Fleurin kasvitieteellinen puutarha sijaitsee Victorian kaupungissa Mahélla.",
+        "lyhyt": "Mont Fleurin kasvitieteellinen puutarha sijaitsee Victorian kaupungissa Mahélla.",
+        "tiedosto": "Sey Botanical Garden Entrance.JPG",
+        "vuosi": "2009"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "0bc499a145e05f20392f53bef598b6a64ec33c50c7f2c97cf3955497a8b85de3",
+      "exportSHA256": "0bc499a145e05f20392f53bef598b6a64ec33c50c7f2c97cf3955497a8b85de3",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/victoria/photo-0bc499a145e05f20392f.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/victoria/photo-0bc499a145e05f20392f.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e08/victoria/15bb2f062b9ce1b472f398077193a22f0d9d9f196025d84423cacd90e3b4a5b4.jpg",
+      "dimensions": [
+        3000,
+        4000
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+      "sourceContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "012a89f340b4979f8f5c01be25ed2bfd5ea0611228bab6d4d6125c88dab7d0e1",
+        "semanticContextSHA256": "012a89f340b4979f8f5c01be25ed2bfd5ea0611228bab6d4d6125c88dab7d0e1",
+        "subjectTitle": "victoria — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Marek Gehrmann",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Sey_Botanical_Garden_Entrance.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Sey_Botanical_Garden_Entrance.JPG",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Tiedostosivun nimenomainen Author/Source ja kuvan Licensing-osio tarkistettu; ei uploaderista pääteltyä tekijää.",
+            "placeLayer": "English: Mont Fleuri Botanical Gardens Seychelles, Victoria: Entrance Deutsch: Mont Fleuri Botanical Gardens Seychelles, Victoria: Eingang",
+            "workLayer": "Tiedostosivun oma Description nimeää Mont Fleuri Botanical Gardens Seychelles, Victoria: Entrance. Kuvan pääaiheena puutarhan kasvillisuus ja polku; ei taideteosta tai yksilöityä arkkitehtuuria pääaiheena. Kauempana kävelevien henkilöiden kasvot ovat epäterävät eikä kasvonpiirteitä voi lukea; ei lisättyä tekstiä/vesileimaa/kehystä.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/b897a26a4e6a507b-preview.JPG",
+            "pixelSHA256": "0bc499a145e05f20392f53bef598b6a64ec33c50c7f2c97cf3955497a8b85de3",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/b897a26a4e6a507b.html",
+            "reservation": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/victoria/PHOTO/owner.json",
+            "freshnessBoundary": "Kuvauspäivä tallennettu. Ei väitettä tuoreesta TRAVELER/opaskuvasta; PHOTO-tuoreus ei ole automaattinen portti.",
+            "independentQA": "avoin; CC-search-ehdokas"
+          },
+          "QA": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-selection.json",
+            "candidateSnapshot": {
+              "commonsFile": "Sey Botanical Garden Entrance.JPG",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Sey_Botanical_Garden_Entrance.JPG",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Sey_Botanical_Garden_Entrance.JPG",
+              "author": "Marek Gehrmann",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "width": 3000,
+              "height": 4000,
+              "slot": "PHOTO",
+              "targetJsonPath": "$.valokuva",
+              "type": "commons",
+              "captureDate": "29 August 2009",
+              "captionFi": "Mont Fleurin kasvitieteellinen puutarha sijaitsee Victorian kaupungissa Mahélla.",
+              "reviewState": "candidate",
+              "rightsEvidence": {
+                "photoLayer": "Tiedostosivun nimenomainen Author/Source ja kuvan Licensing-osio tarkistettu; ei uploaderista pääteltyä tekijää.",
+                "placeLayer": "English: Mont Fleuri Botanical Gardens Seychelles, Victoria: Entrance Deutsch: Mont Fleuri Botanical Gardens Seychelles, Victoria: Eingang",
+                "workLayer": "Tiedostosivun oma Description nimeää Mont Fleuri Botanical Gardens Seychelles, Victoria: Entrance. Kuvan pääaiheena puutarhan kasvillisuus ja polku; ei taideteosta tai yksilöityä arkkitehtuuria pääaiheena. Kauempana kävelevien henkilöiden kasvot ovat epäterävät eikä kasvonpiirteitä voi lukea; ei lisättyä tekstiä/vesileimaa/kehystä.",
+                "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/b897a26a4e6a507b-preview.JPG",
+                "pixelSHA256": "0bc499a145e05f20392f53bef598b6a64ec33c50c7f2c97cf3955497a8b85de3",
+                "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/b897a26a4e6a507b.html",
+                "reservation": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/victoria/PHOTO/owner.json",
+                "freshnessBoundary": "Kuvauspäivä tallennettu. Ei väitettä tuoreesta TRAVELER/opaskuvasta; PHOTO-tuoreus ei ole automaattinen portti.",
+                "independentQA": "avoin; CC-search-ehdokas"
+              }
+            },
+            "candidateFingerprintSHA256": "2445f663da205ab993c96793a3357ac79fedf7730a3ed1c328482416e5190c4b",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "currentContentSHA256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin paikallisen alkuperäisen kokoiset pikselit sekä henkilöiden 1:1-tarkistusrajauksen. Pääaiheena palmut, kasvillisuus ja puutarhapolku. Etualan kaksi ihmistä ovat selin, kauempana polulla vain epäterävät pienet kasvomuodot. Tavallinen pieni rakennuksen reuna ja luonnollinen puutarhakyltti sivuosassa, ei erillistä taideteosta tai rakennuksen julkisivua pääaiheena. Luontopinnan lievä pehmeys ei estä aiheen lukemista.",
+            "reviewedAt": "2026-10-12T19:16:47.444819+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/b897a26a4e6a507b-preview.JPG",
+            "pixelSHA256": "0bc499a145e05f20392f53bef598b6a64ec33c50c7f2c97cf3955497a8b85de3",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/b897a26a4e6a507b.html",
+            "sourceMetadata": {
+              "author": [
+                "Marek Gehrmann"
+              ],
+              "licenses": [
+                "GFDL",
+                "CC BY-SA 3.0"
+              ],
+              "dimensions": [
+                3000,
+                4000
+              ],
+              "sourceSHA256": "d514d6d66fc46b105b3e3d2e7a14beff0b8d932b8a9a1fc290ef6870ec33a65c"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "//creativecommons.org/licenses/by-sa/2.5/deed.en",
+              "//creativecommons.org/licenses/by-sa/2.0/deed.en",
+              "//creativecommons.org/licenses/by-sa/1.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":500,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M9738554\",\"wgEditSubmitButtonLabelPublish\":true,\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects visible in this work\"},\"upwizPropertyPlaceholders\":",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"08e815f8-0f44-49ca-924c-ef11e8a22a18\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Sey_Botanical_Garden_Entrance.JPG\",\"wgTitle\":\"Sey Botanical Garden Entrance.JPG\",\"wgCurRevisionId\":1260485569,\"wgRevisionId\":1260485569,\"wgArticleId\":9738554,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"License migration redundant\",\"GFDL\",\"CC-BY-SA-3.0,2.5,2.0,1.0\",\"Self-published work\",\"Seychelles National Botanical Gardens\",\"Arecaceae in Seychelles\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Sey_Botanical_Garden_Entrance.JPG\",\"wgRelevantArticleId\":9738554,\"wgTempUserName\":null,\"wgIsProbablyEditable\":true,\"wgRelevantPageIsProbablyEditable\":true,",
+            "sourceAuthorExcerpt": "Author Marek Gehrmann Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following licenses: Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License , Version 1.2 or any later version published by the Free Software Foundation ; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included in the section entitled GNU Free Documentation License . http://www.gnu.org/copyleft/fdl.html GFDL GNU Free Documentation License true true This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported , 2.5 Generic , 2.0 Generic and 1.0 Generic license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, ",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 File usage on other wikis 7 Metadata Toggle the table of contents File : Sey Botanical Garden Entrance.JPG File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 500 × 667 pixels . Other resolutions: 250 × 333 pixels | 960 × 1,280 pixels | 1,920 × 2,560 pixels | 3,000 × 4,000 pixels . Original file (3,000 × 4,000 pixels, file size: 6.9 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents Summary [ edit ] Description Sey Botanical Garden Entrance.JPG English: Mont Fleuri Botanical Gardens Seychelles, Victoria: En",
+            "sourceCameralocationExcerpt": null,
+            "actualDimensions": [
+              3000,
+              4000
+            ],
+            "photographedAt": "2009-08-29",
+            "placeEvidence": "Commons Summary: Mont Fleuri Botanical Gardens Seychelles, Victoria: Entrance.",
+            "inspectionEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa-evidence/garden-people-inspection.png",
+            "inspectionCropNative": [
+              1060,
+              2630,
+              1540,
+              3060
+            ],
+            "sourceOriginalSizeVerified": true,
+            "photoNotTraveler": true
+          },
+          "qaReason": "Aito Mont Fleurin kasvitieteellisen puutarhan valokuva Victoriassa sopii PHOTO-paikkaan. Marek Gehrmann ja CC BY-SA 3.0 todennettu Commonsin Author- ja Licensing-kohdista. Tallennettu JPEG on alkuperäisen kokoinen 3000×4000, SHA varmennettu. Vuoden 2009 kuvaa ei väitetä tuoreeksi. Native-rajauksessa lähihenkilöt ovat selin ja etäiset kasvot epäteräviä ilman luettavia piirteitä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Mont Fleurin kasvitieteellinen puutarha sijaitsee Victorian kaupungissa Mahélla.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
+        "fileSHA256": "8d60ed0a7fbc32d4fe333925a93dea448ad9775c402b14b1ba40cfc2e04a1eeb",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Sey Botanical Garden Entrance.JPG",
+          "verdict": "accepted",
+          "reason": "Aito Mont Fleurin kasvitieteellisen puutarhan valokuva Victoriassa sopii PHOTO-paikkaan. Marek Gehrmann ja CC BY-SA 3.0 todennettu Commonsin Author- ja Licensing-kohdista. Tallennettu JPEG on alkuperäisen kokoinen 3000×4000, SHA varmennettu. Vuoden 2009 kuvaa ei väitetä tuoreeksi. Native-rajauksessa lähihenkilöt ovat selin ja etäiset kasvot epäteräviä ilman luettavia piirteitä.",
+          "evidence": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-selection.json",
+            "candidateSnapshot": {
+              "commonsFile": "Sey Botanical Garden Entrance.JPG",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Sey_Botanical_Garden_Entrance.JPG",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Sey_Botanical_Garden_Entrance.JPG",
+              "author": "Marek Gehrmann",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "width": 3000,
+              "height": 4000,
+              "slot": "PHOTO",
+              "targetJsonPath": "$.valokuva",
+              "type": "commons",
+              "captureDate": "29 August 2009",
+              "captionFi": "Mont Fleurin kasvitieteellinen puutarha sijaitsee Victorian kaupungissa Mahélla.",
+              "reviewState": "candidate",
+              "rightsEvidence": {
+                "photoLayer": "Tiedostosivun nimenomainen Author/Source ja kuvan Licensing-osio tarkistettu; ei uploaderista pääteltyä tekijää.",
+                "placeLayer": "English: Mont Fleuri Botanical Gardens Seychelles, Victoria: Entrance Deutsch: Mont Fleuri Botanical Gardens Seychelles, Victoria: Eingang",
+                "workLayer": "Tiedostosivun oma Description nimeää Mont Fleuri Botanical Gardens Seychelles, Victoria: Entrance. Kuvan pääaiheena puutarhan kasvillisuus ja polku; ei taideteosta tai yksilöityä arkkitehtuuria pääaiheena. Kauempana kävelevien henkilöiden kasvot ovat epäterävät eikä kasvonpiirteitä voi lukea; ei lisättyä tekstiä/vesileimaa/kehystä.",
+                "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/b897a26a4e6a507b-preview.JPG",
+                "pixelSHA256": "0bc499a145e05f20392f53bef598b6a64ec33c50c7f2c97cf3955497a8b85de3",
+                "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/b897a26a4e6a507b.html",
+                "reservation": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/victoria/PHOTO/owner.json",
+                "freshnessBoundary": "Kuvauspäivä tallennettu. Ei väitettä tuoreesta TRAVELER/opaskuvasta; PHOTO-tuoreus ei ole automaattinen portti.",
+                "independentQA": "avoin; CC-search-ehdokas"
+              }
+            },
+            "candidateFingerprintSHA256": "2445f663da205ab993c96793a3357ac79fedf7730a3ed1c328482416e5190c4b",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "currentContentSHA256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin paikallisen alkuperäisen kokoiset pikselit sekä henkilöiden 1:1-tarkistusrajauksen. Pääaiheena palmut, kasvillisuus ja puutarhapolku. Etualan kaksi ihmistä ovat selin, kauempana polulla vain epäterävät pienet kasvomuodot. Tavallinen pieni rakennuksen reuna ja luonnollinen puutarhakyltti sivuosassa, ei erillistä taideteosta tai rakennuksen julkisivua pääaiheena. Luontopinnan lievä pehmeys ei estä aiheen lukemista.",
+            "reviewedAt": "2026-10-12T19:16:47.444819+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/b897a26a4e6a507b-preview.JPG",
+            "pixelSHA256": "0bc499a145e05f20392f53bef598b6a64ec33c50c7f2c97cf3955497a8b85de3",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/b897a26a4e6a507b.html",
+            "sourceMetadata": {
+              "author": [
+                "Marek Gehrmann"
+              ],
+              "licenses": [
+                "GFDL",
+                "CC BY-SA 3.0"
+              ],
+              "dimensions": [
+                3000,
+                4000
+              ],
+              "sourceSHA256": "d514d6d66fc46b105b3e3d2e7a14beff0b8d932b8a9a1fc290ef6870ec33a65c"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "//creativecommons.org/licenses/by-sa/2.5/deed.en",
+              "//creativecommons.org/licenses/by-sa/2.0/deed.en",
+              "//creativecommons.org/licenses/by-sa/1.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":500,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M9738554\",\"wgEditSubmitButtonLabelPublish\":true,\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects visible in this work\"},\"upwizPropertyPlaceholders\":",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"08e815f8-0f44-49ca-924c-ef11e8a22a18\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Sey_Botanical_Garden_Entrance.JPG\",\"wgTitle\":\"Sey Botanical Garden Entrance.JPG\",\"wgCurRevisionId\":1260485569,\"wgRevisionId\":1260485569,\"wgArticleId\":9738554,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"License migration redundant\",\"GFDL\",\"CC-BY-SA-3.0,2.5,2.0,1.0\",\"Self-published work\",\"Seychelles National Botanical Gardens\",\"Arecaceae in Seychelles\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Sey_Botanical_Garden_Entrance.JPG\",\"wgRelevantArticleId\":9738554,\"wgTempUserName\":null,\"wgIsProbablyEditable\":true,\"wgRelevantPageIsProbablyEditable\":true,",
+            "sourceAuthorExcerpt": "Author Marek Gehrmann Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following licenses: Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License , Version 1.2 or any later version published by the Free Software Foundation ; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included in the section entitled GNU Free Documentation License . http://www.gnu.org/copyleft/fdl.html GFDL GNU Free Documentation License true true This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported , 2.5 Generic , 2.0 Generic and 1.0 Generic license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, ",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 File usage on other wikis 7 Metadata Toggle the table of contents File : Sey Botanical Garden Entrance.JPG File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 500 × 667 pixels . Other resolutions: 250 × 333 pixels | 960 × 1,280 pixels | 1,920 × 2,560 pixels | 3,000 × 4,000 pixels . Original file (3,000 × 4,000 pixels, file size: 6.9 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents Summary [ edit ] Description Sey Botanical Garden Entrance.JPG English: Mont Fleuri Botanical Gardens Seychelles, Victoria: En",
+            "sourceCameralocationExcerpt": null,
+            "actualDimensions": [
+              3000,
+              4000
+            ],
+            "photographedAt": "2009-08-29",
+            "placeEvidence": "Commons Summary: Mont Fleuri Botanical Gardens Seychelles, Victoria: Entrance.",
+            "inspectionEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa-evidence/garden-people-inspection.png",
+            "inspectionCropNative": [
+              1060,
+              2630,
+              1540,
+              3060
+            ],
+            "sourceOriginalSizeVerified": true,
+            "photoNotTraveler": true
+          },
+          "reviewedAt": "2026-10-12T19:16:47.487780+00:00",
+          "sha256": "0bc499a145e05f20392f53bef598b6a64ec33c50c7f2c97cf3955497a8b85de3"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
+            "sha256": "8d60ed0a7fbc32d4fe333925a93dea448ad9775c402b14b1ba40cfc2e04a1eeb"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
+            "sha256": "f1e7e3456d14ace9360741fadeadb40c18bb4c501a6e15a96d9ce8a5c75e3cf0"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "victoria",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Sey Botanical Garden Entrance.JPG",
+        "sha256": "0bc499a145e05f20392f53bef598b6a64ec33c50c7f2c97cf3955497a8b85de3",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Sey_Botanical_Garden_Entrance.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Sey_Botanical_Garden_Entrance.JPG",
+        "author": "Marek Gehrmann",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 3000,
+        "height": 4000,
+        "originalSHA256": "0bc499a145e05f20392f53bef598b6a64ec33c50c7f2c97cf3955497a8b85de3",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/victoria/photo-0bc499a145e05f20392f.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/victoria/photo-0bc499a145e05f20392f.jpg",
+        "bytes": 7231202,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:17:56.252984+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Sey Botanical Garden Entrance.JPG",
+        "lahde": "Marek Gehrmann, Commons (CC BY-SA 3.0)",
+        "selite": "Mont Fleurin kasvitieteellinen puutarha sijaitsee Victorian kaupungissa Mahélla.",
+        "lyhyt": "Mont Fleurin kasvitieteellinen puutarha sijaitsee Victorian kaupungissa Mahélla.",
+        "vuosi": "2009"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Marek Gehrmann, Commons (CC BY-SA 3.0)",
+        "selite": "Mont Fleurin kasvitieteellinen puutarha sijaitsee Victorian kaupungissa Mahélla.",
+        "lyhyt": "Mont Fleurin kasvitieteellinen puutarha sijaitsee Victorian kaupungissa Mahélla.",
+        "tiedosto": "Sey Botanical Garden Entrance.JPG",
+        "vuosi": "2009"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "targetAfterSHA256": "012a89f340b4979f8f5c01be25ed2bfd5ea0611228bab6d4d6125c88dab7d0e1",
+      "contextAfterSHA256": "012a89f340b4979f8f5c01be25ed2bfd5ea0611228bab6d4d6125c88dab7d0e1"
+    },
+    {
+      "era": "e08",
+      "city": "victoria",
+      "slot": "N1",
+      "type": "commons",
+      "assetID": "capital-cc-e08-victoria-n1-f1d3e9001b1b1e0e",
+      "galleryImageID": "capital-cc-e08-victoria-n1-f1d3e9001b1b1e0e",
+      "commonsFile": "Giant alocasia.jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Mont Fleurin kasvitieteellinen puutarha\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Mont Fleurin kasvitieteellinen puutarha",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/victoria/n1-f1d3e9001b1b1e0e69da.jpg",
+        "suora": true,
+        "lahde": "Anatoly Terentiev, Wikimedia Commons (PD)",
+        "selite": "Alokasia Mont Fleurin kasvitieteellisessä puutarhassa Victoriassa, 2007.",
+        "lyhyt": "Alokasia Mont Fleurin kasvitieteellisessä puutarhassa Victoriassa, 2007.",
+        "tiedosto": "Giant alocasia.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Anatoly Terentiev, Wikimedia Commons (PD)",
+        "selite": "Alokasia Mont Fleurin kasvitieteellisessä puutarhassa Victoriassa, 2007.",
+        "lyhyt": "Alokasia Mont Fleurin kasvitieteellisessä puutarhassa Victoriassa, 2007.",
+        "tiedosto": "Giant alocasia.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/victoria/n1-f1d3e9001b1b1e0e69da.jpg",
+        "suora": true,
+        "lahde": "Anatoly Terentiev, Wikimedia Commons (PD)",
+        "selite": "Alokasia Mont Fleurin kasvitieteellisessä puutarhassa Victoriassa, 2007.",
+        "lyhyt": "Alokasia Mont Fleurin kasvitieteellisessä puutarhassa Victoriassa, 2007.",
+        "tiedosto": "Giant alocasia.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "f1d3e9001b1b1e0e69da7f55d16cc466c6e3c00a19e16b8a419033545d200909",
+      "exportSHA256": "f1d3e9001b1b1e0e69da7f55d16cc466c6e3c00a19e16b8a419033545d200909",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/victoria/n1-f1d3e9001b1b1e0e69da.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/victoria/n1-f1d3e9001b1b1e0e69da.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e08/victoria/4d4acd04536ee4be5c7870182967462e317e3e4906081fb6e615943218275606.jpg",
+      "dimensions": [
+        2304,
+        3072
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+      "sourceContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "8424e377ba5e3716ec75f9010bacfd7f523c8d568e06a744ee1cea6d9d694daf",
+        "semanticContextSHA256": "b5964ebdccfe580673a5cfbfcddfeaf710713aeea5fe92934affe92620603137",
+        "subjectTitle": "Mont Fleurin kasvitieteellinen puutarha",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Anatoly Terentiev",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Giant_alocasia.jpg#Licensing",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Giant_alocasia.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Giant_alocasia.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Nimenomainen valokuvan tekijä ja kuvan lisenssi tarkistettu alkuperäisestä tiedostosivusta.",
+            "authorEvidence": "Description: Photo by Anatoly Terentiev; Original upload log explicitly links User:Ipaat to Anatoly Terentiev; PD-user licensing by author Ipaat",
+            "workLayer": "Luonnolliset kasvit ja puutarhan vesiallas; tavalliset tukitolpat eivät luova teos. Ei kasvoja, taideteoksia, lisättyä tekstiä, vesileimaa tai kehystä. Kasvun vuoden 2007 tila nimetään; ei tuoreusväitettä.",
+            "placeBoundary": "Kuvaajan alkuperäinen Description nimeää Botanic garden Mont Fleuri in Victoria on Mahé Island sekä Photo by Anatoly Terentiev, 13 April 2007.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/2bc4907c152b1499-preview.jpg",
+            "pixelSHA256": "f1d3e9001b1b1e0e69da7f55d16cc466c6e3c00a19e16b8a419033545d200909",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/2bc4907c152b1499.html",
+            "sourceSHA256": "7339e99fda4d89bfe7507502c1cd970532cb96ce7aedb5963d01ba278cc78d9e",
+            "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/victoria/N1/owner.json",
+            "notAlreadyInPack": "rg täsmällisillä tiedostonimillä e08/js/packs: ei osumia",
+            "independentQA": "avoin"
+          },
+          "QA": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-selection.json",
+            "candidateSnapshot": {
+              "commonsFile": "Giant alocasia.jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Giant_alocasia.jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Giant_alocasia.jpg",
+              "author": "Anatoly Terentiev",
+              "license": "Public domain",
+              "licenseUrl": "https://commons.wikimedia.org/wiki/File:Giant_alocasia.jpg#Licensing",
+              "width": 2304,
+              "height": 3072,
+              "slot": "N1",
+              "targetJsonPath": "$.nahtavyydet[\"Mont Fleurin kasvitieteellinen puutarha\"].kuvat[0]",
+              "type": "commons",
+              "captionFi": "Alokasia Mont Fleurin kasvitieteellisessä puutarhassa Victoriassa, 2007.",
+              "sourceDateRaw": "13 April 2007 (capture date in Description; 2 May 2007 is original upload)",
+              "reviewState": "candidate",
+              "rightsEvidence": {
+                "photoLayer": "Nimenomainen valokuvan tekijä ja kuvan lisenssi tarkistettu alkuperäisestä tiedostosivusta.",
+                "authorEvidence": "Description: Photo by Anatoly Terentiev; Original upload log explicitly links User:Ipaat to Anatoly Terentiev; PD-user licensing by author Ipaat",
+                "workLayer": "Luonnolliset kasvit ja puutarhan vesiallas; tavalliset tukitolpat eivät luova teos. Ei kasvoja, taideteoksia, lisättyä tekstiä, vesileimaa tai kehystä. Kasvun vuoden 2007 tila nimetään; ei tuoreusväitettä.",
+                "placeBoundary": "Kuvaajan alkuperäinen Description nimeää Botanic garden Mont Fleuri in Victoria on Mahé Island sekä Photo by Anatoly Terentiev, 13 April 2007.",
+                "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/2bc4907c152b1499-preview.jpg",
+                "pixelSHA256": "f1d3e9001b1b1e0e69da7f55d16cc466c6e3c00a19e16b8a419033545d200909",
+                "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/2bc4907c152b1499.html",
+                "sourceSHA256": "7339e99fda4d89bfe7507502c1cd970532cb96ce7aedb5963d01ba278cc78d9e",
+                "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/victoria/N1/owner.json",
+                "notAlreadyInPack": "rg täsmällisillä tiedostonimillä e08/js/packs: ei osumia",
+                "independentQA": "avoin"
+              }
+            },
+            "candidateFingerprintSHA256": "79d8fa2fe9815ced281a3402ca262e4681aa223ee62178b25bc1a98fc33c3131",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "currentContentSHA256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin paikallisen alkuperäisen kokoisen JPEGin. Pääaiheena alokasian suuret lehdet, luonnolliset varret, vesiallas ja lumpeet. Ei ihmisiä, kasvoja tai teospintoja. Altaan tavalliset tukipylväät ovat käyttöosia. Ei lisättyä tekstiä, logoja, vesileimaa tai kehystä. N1:n kuvateksti kuvaa todellista puutarhan vuoden 2007 kasvinäkymää eikä väitä nykyistä yksilöä.",
+            "reviewedAt": "2026-10-12T19:27:03.128386+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/2bc4907c152b1499-preview.jpg",
+            "pixelSHA256": "f1d3e9001b1b1e0e69da7f55d16cc466c6e3c00a19e16b8a419033545d200909",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/2bc4907c152b1499.html",
+            "sourceMetadata": {
+              "author": [
+                "Anatoly Terentiev"
+              ],
+              "licenses": [
+                "Public domain"
+              ],
+              "dimensions": [
+                2304,
+                3072
+              ],
+              "sourceSHA256": "7339e99fda4d89bfe7507502c1cd970532cb96ce7aedb5963d01ba278cc78d9e",
+              "authorFieldInterpretation": "Description explicitly credits photographer; original upload log links User:Ipaat to Anatoly Terentiev. Author table names original uploader, not independently inferred photographer."
+            },
+            "sourceLicenseLinks": [
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":1000,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M6681557\",\"wgEditSubmitButtonLabelPublish\":true,\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects visible in this work\"},\"upwizPropertyPlaceholders\"",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"72efd008-f7d7-4d42-b819-99a433c6c049\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Giant_alocasia.jpg\",\"wgTitle\":\"Giant alocasia.jpg\",\"wgCurRevisionId\":1272919245,\"wgRevisionId\":1272919245,\"wgArticleId\":6681557,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"PD-user\",\"Alocasia macrorrhizos\",\"Seychelles National Botanical Gardens\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Giant_alocasia.jpg\",\"wgRelevantArticleId\":6681557,\"wgTempUserName\":null,\"wgIsProbablyEditable\":true,\"wgRelevantPageIsProbablyEditable\":true,\"wgRestrictionEdit\":[],\"wgRestrictionMove\":[],\"wgRestrictionUpload\":[],\"wgNoticeProject\":\"commons\",\"wgConfirmEditCaptchaNee",
+            "sourceAuthorExcerpt": "Author Original uploader was Ipaat at en.wikipedia Permission ( Reusing this file ) Released into the public domain (by the author). Licensing [ edit ] Public domain Public domain false false This work has been released into the public domain by its author, Ipaat , at the English Wikipedia project . This applies worldwide. In case this is not legally possible: Ipaat grants anyone the right to use this work for any purpose , without any conditions, unless such conditions are required by law. Original upload log [ edit ] The original description page was here . All following user names refer to en.wikipedia. 2007-05-02 21:10 Ipaat 2304×3072× (7385355 bytes) Giant [[Alocasia]] in [[Botanic garden]] Motn Fleuri in [[Victoria|Victoria, Seychelles]] on [[Mahé|Mahé, Seychelles]] Island. Photo by [[User:Ipaat|Anatoly Terentiev]], 13 April 2007. File history Click on a date/time to view the file as it appeared at that time. Date/Time Thumbnail Dimensions User Comment current 18:56, 2 May 2009 2",
+            "sourceLicensingExcerpt": "Licensing 4 Original upload log 5 File history 6 File usage on Commons 7 File usage on other wikis 8 Metadata Toggle the table of contents File : Giant alocasia.jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 500 × 667 pixels . Other resolutions: 250 × 333 pixels | 960 × 1,280 pixels | 2,304 × 3,072 pixels . Original file (2,304 × 3,072 pixels, file size: 7.04 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents Summary [ edit ] Description Giant alocasia.jpg English: Giant Alocasia in Botanic garden Mont Fleuri in Victoria on Mahé Island. Photo by An",
+            "sourceCameralocationExcerpt": null,
+            "actualDimensions": [
+              2304,
+              3072
+            ],
+            "photographedAt": "2007-04-13",
+            "originalUploadDate": "2007-05-02",
+            "sourceDescriptionExact": "Giant Alocasia in Botanic garden Mont Fleuri in Victoria on Mahé Island. Photo by Anatoly Terentiev, 13 April 2007.",
+            "sourceOriginalUploadLogAuthorEvidence": "Photo by [[User:Ipaat|Anatoly Terentiev]], 13 April 2007.",
+            "sourcePublicDomainEvidence": "This work has been released into the public domain by its author, Ipaat, at the English Wikipedia project. This applies worldwide.",
+            "parsedAuthorRow": "Original uploader was Ipaat at en.wikipedia",
+            "creatorResolution": "Use named photographer Anatoly Terentiev from original Description and explicit User:Ipaat link, rather than guessing uploader credit."
+          },
+          "qaReason": "Aito alokasiakuva Mont Fleurin kasvitieteellisessä puutarhassa Victoriassa sopii N1-kuvapaikkaan. Kuvaaja Anatoly Terentiev on nimetty alkuperäisessä Descriptionissa ja upload-lokin User:Ipaat-linkissä; sama tekijä Ipaat on vapauttanut kuvan public domainiin. Kuvauspäivä 13.4.2007 erotettu latauspäivästä 2.5.2007. Alkuperäiset 2304×3072 pikselit, SHA ja ajantasainen puutarhakohde varmennettu."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Alokasia Mont Fleurin kasvitieteellisessä puutarhassa Victoriassa, 2007.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
+        "fileSHA256": "8d60ed0a7fbc32d4fe333925a93dea448ad9775c402b14b1ba40cfc2e04a1eeb",
+        "item": {
+          "slot": "N1",
+          "targetJsonPath": "$.nahtavyydet[\"Mont Fleurin kasvitieteellinen puutarha\"].kuvat[0]",
+          "commonsFile": "Giant alocasia.jpg",
+          "verdict": "accepted",
+          "reason": "Aito alokasiakuva Mont Fleurin kasvitieteellisessä puutarhassa Victoriassa sopii N1-kuvapaikkaan. Kuvaaja Anatoly Terentiev on nimetty alkuperäisessä Descriptionissa ja upload-lokin User:Ipaat-linkissä; sama tekijä Ipaat on vapauttanut kuvan public domainiin. Kuvauspäivä 13.4.2007 erotettu latauspäivästä 2.5.2007. Alkuperäiset 2304×3072 pikselit, SHA ja ajantasainen puutarhakohde varmennettu.",
+          "evidence": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-selection.json",
+            "candidateSnapshot": {
+              "commonsFile": "Giant alocasia.jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Giant_alocasia.jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Giant_alocasia.jpg",
+              "author": "Anatoly Terentiev",
+              "license": "Public domain",
+              "licenseUrl": "https://commons.wikimedia.org/wiki/File:Giant_alocasia.jpg#Licensing",
+              "width": 2304,
+              "height": 3072,
+              "slot": "N1",
+              "targetJsonPath": "$.nahtavyydet[\"Mont Fleurin kasvitieteellinen puutarha\"].kuvat[0]",
+              "type": "commons",
+              "captionFi": "Alokasia Mont Fleurin kasvitieteellisessä puutarhassa Victoriassa, 2007.",
+              "sourceDateRaw": "13 April 2007 (capture date in Description; 2 May 2007 is original upload)",
+              "reviewState": "candidate",
+              "rightsEvidence": {
+                "photoLayer": "Nimenomainen valokuvan tekijä ja kuvan lisenssi tarkistettu alkuperäisestä tiedostosivusta.",
+                "authorEvidence": "Description: Photo by Anatoly Terentiev; Original upload log explicitly links User:Ipaat to Anatoly Terentiev; PD-user licensing by author Ipaat",
+                "workLayer": "Luonnolliset kasvit ja puutarhan vesiallas; tavalliset tukitolpat eivät luova teos. Ei kasvoja, taideteoksia, lisättyä tekstiä, vesileimaa tai kehystä. Kasvun vuoden 2007 tila nimetään; ei tuoreusväitettä.",
+                "placeBoundary": "Kuvaajan alkuperäinen Description nimeää Botanic garden Mont Fleuri in Victoria on Mahé Island sekä Photo by Anatoly Terentiev, 13 April 2007.",
+                "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/2bc4907c152b1499-preview.jpg",
+                "pixelSHA256": "f1d3e9001b1b1e0e69da7f55d16cc466c6e3c00a19e16b8a419033545d200909",
+                "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/2bc4907c152b1499.html",
+                "sourceSHA256": "7339e99fda4d89bfe7507502c1cd970532cb96ce7aedb5963d01ba278cc78d9e",
+                "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/victoria/N1/owner.json",
+                "notAlreadyInPack": "rg täsmällisillä tiedostonimillä e08/js/packs: ei osumia",
+                "independentQA": "avoin"
+              }
+            },
+            "candidateFingerprintSHA256": "79d8fa2fe9815ced281a3402ca262e4681aa223ee62178b25bc1a98fc33c3131",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "currentContentSHA256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin paikallisen alkuperäisen kokoisen JPEGin. Pääaiheena alokasian suuret lehdet, luonnolliset varret, vesiallas ja lumpeet. Ei ihmisiä, kasvoja tai teospintoja. Altaan tavalliset tukipylväät ovat käyttöosia. Ei lisättyä tekstiä, logoja, vesileimaa tai kehystä. N1:n kuvateksti kuvaa todellista puutarhan vuoden 2007 kasvinäkymää eikä väitä nykyistä yksilöä.",
+            "reviewedAt": "2026-10-12T19:27:03.128386+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/2bc4907c152b1499-preview.jpg",
+            "pixelSHA256": "f1d3e9001b1b1e0e69da7f55d16cc466c6e3c00a19e16b8a419033545d200909",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/2bc4907c152b1499.html",
+            "sourceMetadata": {
+              "author": [
+                "Anatoly Terentiev"
+              ],
+              "licenses": [
+                "Public domain"
+              ],
+              "dimensions": [
+                2304,
+                3072
+              ],
+              "sourceSHA256": "7339e99fda4d89bfe7507502c1cd970532cb96ce7aedb5963d01ba278cc78d9e",
+              "authorFieldInterpretation": "Description explicitly credits photographer; original upload log links User:Ipaat to Anatoly Terentiev. Author table names original uploader, not independently inferred photographer."
+            },
+            "sourceLicenseLinks": [
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":1000,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M6681557\",\"wgEditSubmitButtonLabelPublish\":true,\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects visible in this work\"},\"upwizPropertyPlaceholders\"",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"72efd008-f7d7-4d42-b819-99a433c6c049\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Giant_alocasia.jpg\",\"wgTitle\":\"Giant alocasia.jpg\",\"wgCurRevisionId\":1272919245,\"wgRevisionId\":1272919245,\"wgArticleId\":6681557,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"PD-user\",\"Alocasia macrorrhizos\",\"Seychelles National Botanical Gardens\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Giant_alocasia.jpg\",\"wgRelevantArticleId\":6681557,\"wgTempUserName\":null,\"wgIsProbablyEditable\":true,\"wgRelevantPageIsProbablyEditable\":true,\"wgRestrictionEdit\":[],\"wgRestrictionMove\":[],\"wgRestrictionUpload\":[],\"wgNoticeProject\":\"commons\",\"wgConfirmEditCaptchaNee",
+            "sourceAuthorExcerpt": "Author Original uploader was Ipaat at en.wikipedia Permission ( Reusing this file ) Released into the public domain (by the author). Licensing [ edit ] Public domain Public domain false false This work has been released into the public domain by its author, Ipaat , at the English Wikipedia project . This applies worldwide. In case this is not legally possible: Ipaat grants anyone the right to use this work for any purpose , without any conditions, unless such conditions are required by law. Original upload log [ edit ] The original description page was here . All following user names refer to en.wikipedia. 2007-05-02 21:10 Ipaat 2304×3072× (7385355 bytes) Giant [[Alocasia]] in [[Botanic garden]] Motn Fleuri in [[Victoria|Victoria, Seychelles]] on [[Mahé|Mahé, Seychelles]] Island. Photo by [[User:Ipaat|Anatoly Terentiev]], 13 April 2007. File history Click on a date/time to view the file as it appeared at that time. Date/Time Thumbnail Dimensions User Comment current 18:56, 2 May 2009 2",
+            "sourceLicensingExcerpt": "Licensing 4 Original upload log 5 File history 6 File usage on Commons 7 File usage on other wikis 8 Metadata Toggle the table of contents File : Giant alocasia.jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 500 × 667 pixels . Other resolutions: 250 × 333 pixels | 960 × 1,280 pixels | 2,304 × 3,072 pixels . Original file (2,304 × 3,072 pixels, file size: 7.04 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents Summary [ edit ] Description Giant alocasia.jpg English: Giant Alocasia in Botanic garden Mont Fleuri in Victoria on Mahé Island. Photo by An",
+            "sourceCameralocationExcerpt": null,
+            "actualDimensions": [
+              2304,
+              3072
+            ],
+            "photographedAt": "2007-04-13",
+            "originalUploadDate": "2007-05-02",
+            "sourceDescriptionExact": "Giant Alocasia in Botanic garden Mont Fleuri in Victoria on Mahé Island. Photo by Anatoly Terentiev, 13 April 2007.",
+            "sourceOriginalUploadLogAuthorEvidence": "Photo by [[User:Ipaat|Anatoly Terentiev]], 13 April 2007.",
+            "sourcePublicDomainEvidence": "This work has been released into the public domain by its author, Ipaat, at the English Wikipedia project. This applies worldwide.",
+            "parsedAuthorRow": "Original uploader was Ipaat at en.wikipedia",
+            "creatorResolution": "Use named photographer Anatoly Terentiev from original Description and explicit User:Ipaat link, rather than guessing uploader credit."
+          },
+          "reviewedAt": "2026-10-12T19:27:03.199562+00:00",
+          "sha256": "f1d3e9001b1b1e0e69da7f55d16cc466c6e3c00a19e16b8a419033545d200909"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
+            "sha256": "8d60ed0a7fbc32d4fe333925a93dea448ad9775c402b14b1ba40cfc2e04a1eeb"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
+            "sha256": "f1e7e3456d14ace9360741fadeadb40c18bb4c501a6e15a96d9ce8a5c75e3cf0"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "victoria",
+        "slot": "N1",
+        "targetJsonPath": "$.nahtavyydet[\"Mont Fleurin kasvitieteellinen puutarha\"].kuvat[0]",
+        "commonsFile": "Giant alocasia.jpg",
+        "sha256": "f1d3e9001b1b1e0e69da7f55d16cc466c6e3c00a19e16b8a419033545d200909",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Giant_alocasia.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Giant_alocasia.jpg",
+        "author": "Anatoly Terentiev",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Giant_alocasia.jpg#Licensing",
+        "width": 2304,
+        "height": 3072,
+        "originalSHA256": "f1d3e9001b1b1e0e69da7f55d16cc466c6e3c00a19e16b8a419033545d200909",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/victoria/n1-f1d3e9001b1b1e0e69da.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/victoria/n1-f1d3e9001b1b1e0e69da.jpg",
+        "bytes": 7385355,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:27:17.251632+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Giant alocasia.jpg",
+        "lahde": "Anatoly Terentiev, Wikimedia Commons (PD)",
+        "selite": "Alokasia Mont Fleurin kasvitieteellisessä puutarhassa Victoriassa, 2007.",
+        "lyhyt": "Alokasia Mont Fleurin kasvitieteellisessä puutarhassa Victoriassa, 2007."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Anatoly Terentiev, Wikimedia Commons (PD)",
+        "selite": "Alokasia Mont Fleurin kasvitieteellisessä puutarhassa Victoriassa, 2007.",
+        "lyhyt": "Alokasia Mont Fleurin kasvitieteellisessä puutarhassa Victoriassa, 2007.",
+        "tiedosto": "Giant alocasia.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "targetAfterSHA256": "8424e377ba5e3716ec75f9010bacfd7f523c8d568e06a744ee1cea6d9d694daf",
+      "contextAfterSHA256": "b5964ebdccfe580673a5cfbfcddfeaf710713aeea5fe92934affe92620603137"
+    },
+    {
+      "era": "e08",
+      "city": "victoria",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e08-victoria-c1-948b9aae92fb23c7",
+      "galleryImageID": "capital-cc-e08-victoria-c1-948b9aae92fb23c7",
+      "commonsFile": "Ile de Mahe - Victoria (1).JPG",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/victoria/c1-948b9aae92fb23c77c9e.jpg",
+        "suora": true,
+        "lahde": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Victorian rannikon asutusta ja venesatamaa lentokoneesta nähtynä, 2015.",
+        "lyhyt": "Victorian rannikon asutusta ja venesatamaa lentokoneesta nähtynä, 2015.",
+        "tiedosto": "Ile de Mahe - Victoria (1).JPG"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Victorian rannikon asutusta ja venesatamaa lentokoneesta nähtynä, 2015.",
+        "lyhyt": "Victorian rannikon asutusta ja venesatamaa lentokoneesta nähtynä, 2015.",
+        "tiedosto": "Ile de Mahe - Victoria (1).JPG"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/victoria/c1-948b9aae92fb23c77c9e.jpg",
+        "suora": true,
+        "lahde": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Victorian rannikon asutusta ja venesatamaa lentokoneesta nähtynä, 2015.",
+        "lyhyt": "Victorian rannikon asutusta ja venesatamaa lentokoneesta nähtynä, 2015.",
+        "tiedosto": "Ile de Mahe - Victoria (1).JPG"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "948b9aae92fb23c77c9e4a7fdfbd20d24ccc4b6987506c53fbc27787e0b426f5",
+      "exportSHA256": "948b9aae92fb23c77c9e4a7fdfbd20d24ccc4b6987506c53fbc27787e0b426f5",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/victoria/c1-948b9aae92fb23c77c9e.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/victoria/c1-948b9aae92fb23c77c9e.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e08/victoria/4da519d4c121dad1d3dd28cd313dacebccf7f11fab5bb4582db8f9516edc3e01.jpg",
+      "dimensions": [
+        1600,
+        1201
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+      "sourceContentSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "6e43f16cdc76d86c6510b98d6954d19750179c1cf32824110d06715657fe1898",
+        "semanticContextSHA256": "6e43f16cdc76d86c6510b98d6954d19750179c1cf32824110d06715657fe1898",
+        "subjectTitle": "Victoria",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Remi Jouan",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Ile_de_Mahe_-_Victoria_(1).JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Ile_de_Mahe_-_Victoria_%281%29.JPG",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Tiedostosivun nimenomainen Author, Source ja kuvan oma kaupallinen CC/PD-lisenssi tarkistettu.",
+            "workLayer": "Laaja rannikon asutus- ja satamaympäristön kokonaisuus, luonnolliset metsäiset rinteet ja vesi. Rakennukset pieniä osia kaupungin aluekokonaisuudesta; ei yksittäistä nimettyä suojattua luovaa teosta pääaiheena. Ei kasvoja, lisättyä tekstiä, logoja, vesileimoja tai kehystä.",
+            "placeBoundary": "Kuvaajan Description: Victoria, Ile de Mahe vue d'avion, 21.2.2015. Todellinen laaja kaupunki-/rannikkoalueen asutuksen, tiestön ja vesialueiden asettelu, ei geneerinen Seychellien rantakuva. Ei väitetä kuvaa tuoreeksi.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/42b0bc015c379897-preview.JPG",
+            "pixelSHA256": "948b9aae92fb23c77c9e4a7fdfbd20d24ccc4b6987506c53fbc27787e0b426f5",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/42b0bc015c379897.html",
+            "sourceSHA256": "47393c528a74052e6acfd958785d1777ea71a301de3bf871bffddb3de3ffecd4",
+            "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/victoria/C1/owner.json",
+            "notAlreadyInPack": "Täsmällinen tiedostonimi, underscore-nimi ja originalUrl haettu e08/js/packs: ei osumia.",
+            "independentQA": "avoin",
+            "searchRound": 2
+          },
+          "QA": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-selection.json",
+            "candidateSnapshot": {
+              "commonsFile": "Ile de Mahe - Victoria (1).JPG",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Ile_de_Mahe_-_Victoria_(1).JPG",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Ile_de_Mahe_-_Victoria_%281%29.JPG",
+              "author": "Remi Jouan",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "width": 1600,
+              "height": 1201,
+              "slot": "C1",
+              "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+              "type": "commons",
+              "captionFi": "Victorian rannikon asutusta ja venesatamaa lentokoneesta nähtynä, 2015.",
+              "sourceDateRaw": "21 February 2015, 07:09:24",
+              "reviewState": "candidate",
+              "rightsEvidence": {
+                "photoLayer": "Tiedostosivun nimenomainen Author, Source ja kuvan oma kaupallinen CC/PD-lisenssi tarkistettu.",
+                "workLayer": "Laaja rannikon asutus- ja satamaympäristön kokonaisuus, luonnolliset metsäiset rinteet ja vesi. Rakennukset pieniä osia kaupungin aluekokonaisuudesta; ei yksittäistä nimettyä suojattua luovaa teosta pääaiheena. Ei kasvoja, lisättyä tekstiä, logoja, vesileimoja tai kehystä.",
+                "placeBoundary": "Kuvaajan Description: Victoria, Ile de Mahe vue d'avion, 21.2.2015. Todellinen laaja kaupunki-/rannikkoalueen asutuksen, tiestön ja vesialueiden asettelu, ei geneerinen Seychellien rantakuva. Ei väitetä kuvaa tuoreeksi.",
+                "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/42b0bc015c379897-preview.JPG",
+                "pixelSHA256": "948b9aae92fb23c77c9e4a7fdfbd20d24ccc4b6987506c53fbc27787e0b426f5",
+                "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/42b0bc015c379897.html",
+                "sourceSHA256": "47393c528a74052e6acfd958785d1777ea71a301de3bf871bffddb3de3ffecd4",
+                "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/victoria/C1/owner.json",
+                "notAlreadyInPack": "Täsmällinen tiedostonimi, underscore-nimi ja originalUrl haettu e08/js/packs: ei osumia.",
+                "independentQA": "avoin",
+                "searchRound": 2
+              }
+            },
+            "candidateFingerprintSHA256": "100d5b28edde97d5c53bf5c69b80eb48b125798a4f1cc57b89f6a6e810adfad7",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "currentContentSHA256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin paikalliset alkuperäiset 1600×1201 pikselit. Laaja todellinen rannikkoalue: rinteen lukuisat asuintalot, tiet, vesialueet, sillan/penkereen yhteys ja venesatamat erottuvat. Lentokoneen ikkunan läpi kuvattu näkymä on hieman utuinen ja pehmeä, mutta kaupunkiasettelu säilyy luettavana. Ei kasvoja, lisättyä tekstiä, logoa, kehystä tai vesileimaa. Rakennukset kuuluvat koko alueen asetteluun; yksittäistä julkisivua tai taideteosta ei esitetä pääaiheena.",
+            "reviewedAt": "2026-10-12T20:15:13.398287+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/42b0bc015c379897-preview.JPG",
+            "pixelSHA256": "948b9aae92fb23c77c9e4a7fdfbd20d24ccc4b6987506c53fbc27787e0b426f5",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/42b0bc015c379897.html",
+            "sourceMetadata": {
+              "author": [
+                "Remi Jouan"
+              ],
+              "licenses": [
+                "GFDL",
+                "CC BY-SA 3.0"
+              ],
+              "dimensions": [
+                1600,
+                1201
+              ],
+              "sourceSHA256": "47393c528a74052e6acfd958785d1777ea71a301de3bf871bffddb3de3ffecd4"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "//creativecommons.org/licenses/by-sa/2.5/deed.en",
+              "//creativecommons.org/licenses/by-sa/2.0/deed.en",
+              "//creativecommons.org/licenses/by-sa/1.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/licenses/by-sa/3.0/",
+              "https://creativecommons.org/licenses/by-sa/3.0/deed.fr",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":400,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M38847611\",\"wgEditSubmitButtonLabelPublish\":true,\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects visible in this work\"},\"upwizPropertyPlaceholders\"",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"74ea8a2d-9634-4838-98b6-a97242b86b9c\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Ile_de_Mahe_-_Victoria_(1).JPG\",\"wgTitle\":\"Ile de Mahe - Victoria (1).JPG\",\"wgCurRevisionId\":1135726370,\"wgRevisionId\":1135726370,\"wgArticleId\":38847611,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"License migration redundant\",\"GFDL\",\"CC-BY-SA-3.0,2.5,2.0,1.0\",\"Self-published work\",\"Photos by Rémi Jouan\",\"Aerial photographs of Victoria, Seychelles\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Ile_de_Mahe_-_Victoria_(1).JPG\",\"wgRelevantArticleId\":38847611,\"wgTempUserName\":null,\"wgIsProbablyEditable\":true,\"wgRelevantPageIsProbablyEditable\":true,\"wgRe",
+            "sourceAuthorExcerpt": "Author Remi Jouan Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following licenses: Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License , Version 1.2 or any later version published by the Free Software Foundation ; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included in the section entitled GNU Free Documentation License . http://www.gnu.org/copyleft/fdl.html GFDL GNU Free Documentation License true true This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported , 2.5 Generic , 2.0 Generic and 1.0 Generic license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but ",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 File usage on other wikis 7 Metadata Toggle the table of contents File : Ile de Mahe - Victoria (1).JPG File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 721 pixels . Other resolutions: 330 × 248 pixels | 1,280 × 961 pixels | 1,600 × 1,201 pixels . Original file (1,600 × 1,201 pixels, file size: 1.16 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents Summary [ edit ] Description Ile de Mahe - Victoria (1).JPG Victoria, Ile de Mahe vue d'avion Date 21 February 2015, 07:09:24 Source Photo taken by Rem",
+            "sourceCameralocationExcerpt": null,
+            "actualDimensions": [
+              1600,
+              1201
+            ],
+            "photographedAt": "2015-02-21",
+            "sourceDescriptionExact": "Victoria, Ile de Mahe vue d'avion",
+            "depictedWorkAssessment": "Kaupunkirakenteen laaja todellinen kokonaisnäkymä, tavallisen asutuksen ja satamaympäristön rakennukset pieninä kokonaisuuden osina. Ei erillistä nykytaidetta tai yhden luovan rakennuksen julkisivututkielmaa. Ei yleistä FOP-väitettä tai iästä pääteltyä PD:tä.",
+            "coverScope": "Coastal residential and marina layout viewed from a plane in 2015; no claim of present conditions or a particular city-centre landmark."
+          },
+          "qaReason": "Aito laaja Victorian rannikon asutuksen, tiestön ja venesataman ilmakuva sopii C1-kanteen. Kuvaajan Description Victoria, Ile de Mahe vue d’avion todistaa kaupungin; Remi Jouan ja CC BY-SA 3.0 varmennettu alkuperäissivulta. Alkuperäinen 1600×1201 täyttää CC-leveyden ja SHA täsmää. Vuoden 2015 selite ei väitä kuvaa tuoreeksi tai keskustan maamerkin lähikuvaksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Victorian rannikon asutusta ja venesatamaa lentokoneesta nähtynä, 2015.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
+        "fileSHA256": "8d60ed0a7fbc32d4fe333925a93dea448ad9775c402b14b1ba40cfc2e04a1eeb",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "Ile de Mahe - Victoria (1).JPG",
+          "verdict": "accepted",
+          "reason": "Aito laaja Victorian rannikon asutuksen, tiestön ja venesataman ilmakuva sopii C1-kanteen. Kuvaajan Description Victoria, Ile de Mahe vue d’avion todistaa kaupungin; Remi Jouan ja CC BY-SA 3.0 varmennettu alkuperäissivulta. Alkuperäinen 1600×1201 täyttää CC-leveyden ja SHA täsmää. Vuoden 2015 selite ei väitä kuvaa tuoreeksi tai keskustan maamerkin lähikuvaksi.",
+          "evidence": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-selection.json",
+            "candidateSnapshot": {
+              "commonsFile": "Ile de Mahe - Victoria (1).JPG",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Ile_de_Mahe_-_Victoria_(1).JPG",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Ile_de_Mahe_-_Victoria_%281%29.JPG",
+              "author": "Remi Jouan",
+              "license": "CC BY-SA 3.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "width": 1600,
+              "height": 1201,
+              "slot": "C1",
+              "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+              "type": "commons",
+              "captionFi": "Victorian rannikon asutusta ja venesatamaa lentokoneesta nähtynä, 2015.",
+              "sourceDateRaw": "21 February 2015, 07:09:24",
+              "reviewState": "candidate",
+              "rightsEvidence": {
+                "photoLayer": "Tiedostosivun nimenomainen Author, Source ja kuvan oma kaupallinen CC/PD-lisenssi tarkistettu.",
+                "workLayer": "Laaja rannikon asutus- ja satamaympäristön kokonaisuus, luonnolliset metsäiset rinteet ja vesi. Rakennukset pieniä osia kaupungin aluekokonaisuudesta; ei yksittäistä nimettyä suojattua luovaa teosta pääaiheena. Ei kasvoja, lisättyä tekstiä, logoja, vesileimoja tai kehystä.",
+                "placeBoundary": "Kuvaajan Description: Victoria, Ile de Mahe vue d'avion, 21.2.2015. Todellinen laaja kaupunki-/rannikkoalueen asutuksen, tiestön ja vesialueiden asettelu, ei geneerinen Seychellien rantakuva. Ei väitetä kuvaa tuoreeksi.",
+                "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/42b0bc015c379897-preview.JPG",
+                "pixelSHA256": "948b9aae92fb23c77c9e4a7fdfbd20d24ccc4b6987506c53fbc27787e0b426f5",
+                "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/42b0bc015c379897.html",
+                "sourceSHA256": "47393c528a74052e6acfd958785d1777ea71a301de3bf871bffddb3de3ffecd4",
+                "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/victoria/C1/owner.json",
+                "notAlreadyInPack": "Täsmällinen tiedostonimi, underscore-nimi ja originalUrl haettu e08/js/packs: ei osumia.",
+                "independentQA": "avoin",
+                "searchRound": 2
+              }
+            },
+            "candidateFingerprintSHA256": "100d5b28edde97d5c53bf5c69b80eb48b125798a4f1cc57b89f6a6e810adfad7",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/victoria/sisalto.json",
+            "currentContentSHA256": "98b4aa2bc73b65c8c9f7fb3b5cc737cb1420ba7114c5b4762a286d3734f16611",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin paikalliset alkuperäiset 1600×1201 pikselit. Laaja todellinen rannikkoalue: rinteen lukuisat asuintalot, tiet, vesialueet, sillan/penkereen yhteys ja venesatamat erottuvat. Lentokoneen ikkunan läpi kuvattu näkymä on hieman utuinen ja pehmeä, mutta kaupunkiasettelu säilyy luettavana. Ei kasvoja, lisättyä tekstiä, logoa, kehystä tai vesileimaa. Rakennukset kuuluvat koko alueen asetteluun; yksittäistä julkisivua tai taideteosta ei esitetä pääaiheena.",
+            "reviewedAt": "2026-10-12T20:15:13.398287+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/42b0bc015c379897-preview.JPG",
+            "pixelSHA256": "948b9aae92fb23c77c9e4a7fdfbd20d24ccc4b6987506c53fbc27787e0b426f5",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/cc-evidence/42b0bc015c379897.html",
+            "sourceMetadata": {
+              "author": [
+                "Remi Jouan"
+              ],
+              "licenses": [
+                "GFDL",
+                "CC BY-SA 3.0"
+              ],
+              "dimensions": [
+                1600,
+                1201
+              ],
+              "sourceSHA256": "47393c528a74052e6acfd958785d1777ea71a301de3bf871bffddb3de3ffecd4"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "//creativecommons.org/licenses/by-sa/2.5/deed.en",
+              "//creativecommons.org/licenses/by-sa/2.0/deed.en",
+              "//creativecommons.org/licenses/by-sa/1.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/licenses/by-sa/3.0/",
+              "https://creativecommons.org/licenses/by-sa/3.0/deed.fr",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":400,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M38847611\",\"wgEditSubmitButtonLabelPublish\":true,\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects visible in this work\"},\"upwizPropertyPlaceholders\"",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"74ea8a2d-9634-4838-98b6-a97242b86b9c\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Ile_de_Mahe_-_Victoria_(1).JPG\",\"wgTitle\":\"Ile de Mahe - Victoria (1).JPG\",\"wgCurRevisionId\":1135726370,\"wgRevisionId\":1135726370,\"wgArticleId\":38847611,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"License migration redundant\",\"GFDL\",\"CC-BY-SA-3.0,2.5,2.0,1.0\",\"Self-published work\",\"Photos by Rémi Jouan\",\"Aerial photographs of Victoria, Seychelles\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Ile_de_Mahe_-_Victoria_(1).JPG\",\"wgRelevantArticleId\":38847611,\"wgTempUserName\":null,\"wgIsProbablyEditable\":true,\"wgRelevantPageIsProbablyEditable\":true,\"wgRe",
+            "sourceAuthorExcerpt": "Author Remi Jouan Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following licenses: Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License , Version 1.2 or any later version published by the Free Software Foundation ; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included in the section entitled GNU Free Documentation License . http://www.gnu.org/copyleft/fdl.html GFDL GNU Free Documentation License true true This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported , 2.5 Generic , 2.0 Generic and 1.0 Generic license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but ",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 File usage on other wikis 7 Metadata Toggle the table of contents File : Ile de Mahe - Victoria (1).JPG File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 721 pixels . Other resolutions: 330 × 248 pixels | 1,280 × 961 pixels | 1,600 × 1,201 pixels . Original file (1,600 × 1,201 pixels, file size: 1.16 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents Summary [ edit ] Description Ile de Mahe - Victoria (1).JPG Victoria, Ile de Mahe vue d'avion Date 21 February 2015, 07:09:24 Source Photo taken by Rem",
+            "sourceCameralocationExcerpt": null,
+            "actualDimensions": [
+              1600,
+              1201
+            ],
+            "photographedAt": "2015-02-21",
+            "sourceDescriptionExact": "Victoria, Ile de Mahe vue d'avion",
+            "depictedWorkAssessment": "Kaupunkirakenteen laaja todellinen kokonaisnäkymä, tavallisen asutuksen ja satamaympäristön rakennukset pieninä kokonaisuuden osina. Ei erillistä nykytaidetta tai yhden luovan rakennuksen julkisivututkielmaa. Ei yleistä FOP-väitettä tai iästä pääteltyä PD:tä.",
+            "coverScope": "Coastal residential and marina layout viewed from a plane in 2015; no claim of present conditions or a particular city-centre landmark."
+          },
+          "reviewedAt": "2026-10-12T20:15:13.420130+00:00",
+          "sha256": "948b9aae92fb23c77c9e4a7fdfbd20d24ccc4b6987506c53fbc27787e0b426f5"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/qa.json",
+            "sha256": "8d60ed0a7fbc32d4fe333925a93dea448ad9775c402b14b1ba40cfc2e04a1eeb"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/victoria/illustration-qa-extra.json",
+            "sha256": "f1e7e3456d14ace9360741fadeadb40c18bb4c501a6e15a96d9ce8a5c75e3cf0"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "victoria",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Ile de Mahe - Victoria (1).JPG",
+        "sha256": "948b9aae92fb23c77c9e4a7fdfbd20d24ccc4b6987506c53fbc27787e0b426f5",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Ile_de_Mahe_-_Victoria_(1).JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Ile_de_Mahe_-_Victoria_%281%29.JPG",
+        "author": "Remi Jouan",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 1600,
+        "height": 1201,
+        "originalSHA256": "948b9aae92fb23c77c9e4a7fdfbd20d24ccc4b6987506c53fbc27787e0b426f5",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/victoria/c1-948b9aae92fb23c77c9e.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/victoria/c1-948b9aae92fb23c77c9e.jpg",
+        "bytes": 1215502,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:15:43.967319+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Ile de Mahe - Victoria (1).JPG",
+        "lahde": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Victorian rannikon asutusta ja venesatamaa lentokoneesta nähtynä, 2015.",
+        "lyhyt": "Victorian rannikon asutusta ja venesatamaa lentokoneesta nähtynä, 2015."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Victorian rannikon asutusta ja venesatamaa lentokoneesta nähtynä, 2015.",
+        "lyhyt": "Victorian rannikon asutusta ja venesatamaa lentokoneesta nähtynä, 2015.",
+        "tiedosto": "Ile de Mahe - Victoria (1).JPG"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f877a315a3aa5f955305cbe9c205b9b1f8a5eb313462bbceb36040a1f289dd60",
+      "targetAfterSHA256": "6e43f16cdc76d86c6510b98d6954d19750179c1cf32824110d06715657fe1898",
+      "contextAfterSHA256": "6e43f16cdc76d86c6510b98d6954d19750179c1cf32824110d06715657fe1898"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

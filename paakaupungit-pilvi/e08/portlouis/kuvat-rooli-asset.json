@@ -1,0 +1,1533 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e08",
+  "city": "portlouis",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "a2e3fbca99bc59b7d0f8a40bd976f84fd39ddd2f99d7c22c969e792d26f29007",
+  "assets": [
+    {
+      "era": "e08",
+      "city": "portlouis",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e08-portlouis-TRAVELER-illustration-v1-20261012",
+      "galleryImageID": "e08-portlouis-TRAVELER-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/portlouis/e08-portlouis-TRAVELER-illustration-v1-20261012-27043410aeb4.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva gâteaux piments -paistoksista.",
+        "lyhyt": "Havainnekuva gâteaux piments -paistoksista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/portlouis/e08-portlouis-TRAVELER-illustration-v1-20261012-27043410aeb4.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva gâteaux piments -paistoksista.",
+        "lyhyt": "Havainnekuva gâteaux piments -paistoksista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "27043410aeb4b5a4217f2e220b601c92ca87fb721f64aa1f2e552d117f6c3dc2",
+      "exportSHA256": "4eddaf852ea7529bdc3ad0e4b114c1f8fe57203fb86ce9e6793ccfccebf3cf83",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/portlouis/e08-portlouis-TRAVELER-illustration-v1-20261012-27043410aeb4.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/portlouis/e08-portlouis-TRAVELER-illustration-v1-20261012-27043410aeb4.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/portlouis/e08-portlouis-TRAVELER-illustration-v1-20261012-27043410aeb4.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/sisalto.json",
+      "sourceContentSHA256": "a2e3fbca99bc59b7d0f8a40bd976f84fd39ddd2f99d7c22c969e792d26f29007",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "11c0032129f3ded8274dbb460e12156dc557e1773338722bca0e6bd83922095a",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic sourced natural/food/material subject or traditional functional object; no named protected artwork or fabricated city scene.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/assets/e08-portlouis-TRAVELER-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "27043410aeb4b5a4217f2e220b601c92ca87fb721f64aa1f2e552d117f6c3dc2",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Lähikuva kullankeltaisista paistoksista epäsäännöllisine reunoineen ja chili-/yrttipaloineen. Luonteva rapea pinta; ei ihmisiä tai merkintöjä.",
+            "captionFi": "Havainnekuva gâteaux piments -paistoksista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/sisalto.json",
+            "contentSha256": "8db840a230652c0d34ff5b9fa560d75288529b6ede80a62850319a9df11dcf25",
+            "targetCurrentlyPresent": true,
+            "targetText": "",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/faktapohja.md",
+            "factSheetSha256": "26ad9e4dbddf7844ee2967707a938ff46f18253a57d811e9ac81d73f10756ae4",
+            "topicEvidence": "Oppaan ruokajakso mainitsee gâteaux piments -chilikakut. Kuva ei ole tietyn ruokapaikan annostodiste.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/sisalto.json",
+              "sourceContentSha256": "8db840a230652c0d34ff5b9fa560d75288529b6ede80a62850319a9df11dcf25",
+              "targetText": "Aloita Port Louisin kierros Caudan Waterfrontista ja yhdistä siihen vanhan keskustan kävely. Aapravasi Ghat avaa sopimustyöläisten historiaa, ja Blue Penny Museum kertoo merireiteistä sekä saaren kuvista. Keskustorin itäpuolella on Chinatownin kauppoja ja ravintoloita. Champ de Mars puolestaan johdattaa kaupungin urheiluhistoriaan. Keskustan vilkkaaseen liikenteeseen kannattaa varata aikaa.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/faktapohja.md",
+              "factSheetSha256": "26ad9e4dbddf7844ee2967707a938ff46f18253a57d811e9ac81d73f10756ae4",
+              "supportingContext": "Current travel panel and the same city's sourced flora, fauna, food or material topics.",
+              "subjectBasis": "A modest plain ceramic plate of golden rustic bean-and-chilli fritters illustrating gâteaux piments. Natural food texture, no identifiable restaurant, package, signage or people."
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Chilipaistosten havainnollistus sopii oppaan välipala-aiheeseen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva gâteaux piments -paistoksista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/illustration-qa-extra.json",
+        "fileSHA256": "6cdabb1aabb4895261e69ddaf8d001e3afdd93fdca78637209227b27557c982d",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e08-portlouis-TRAVELER-illustration-v1-20261012",
+          "sha256": "27043410aeb4b5a4217f2e220b601c92ca87fb721f64aa1f2e552d117f6c3dc2",
+          "verdict": "accepted",
+          "reason": "Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Chilipaistosten havainnollistus sopii oppaan välipala-aiheeseen.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/assets/e08-portlouis-TRAVELER-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "27043410aeb4b5a4217f2e220b601c92ca87fb721f64aa1f2e552d117f6c3dc2",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Lähikuva kullankeltaisista paistoksista epäsäännöllisine reunoineen ja chili-/yrttipaloineen. Luonteva rapea pinta; ei ihmisiä tai merkintöjä.",
+            "captionFi": "Havainnekuva gâteaux piments -paistoksista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/sisalto.json",
+            "contentSha256": "8db840a230652c0d34ff5b9fa560d75288529b6ede80a62850319a9df11dcf25",
+            "targetCurrentlyPresent": true,
+            "targetText": "",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/faktapohja.md",
+            "factSheetSha256": "26ad9e4dbddf7844ee2967707a938ff46f18253a57d811e9ac81d73f10756ae4",
+            "topicEvidence": "Oppaan ruokajakso mainitsee gâteaux piments -chilikakut. Kuva ei ole tietyn ruokapaikan annostodiste.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/sisalto.json",
+              "sourceContentSha256": "8db840a230652c0d34ff5b9fa560d75288529b6ede80a62850319a9df11dcf25",
+              "targetText": "Aloita Port Louisin kierros Caudan Waterfrontista ja yhdistä siihen vanhan keskustan kävely. Aapravasi Ghat avaa sopimustyöläisten historiaa, ja Blue Penny Museum kertoo merireiteistä sekä saaren kuvista. Keskustorin itäpuolella on Chinatownin kauppoja ja ravintoloita. Champ de Mars puolestaan johdattaa kaupungin urheiluhistoriaan. Keskustan vilkkaaseen liikenteeseen kannattaa varata aikaa.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/faktapohja.md",
+              "factSheetSha256": "26ad9e4dbddf7844ee2967707a938ff46f18253a57d811e9ac81d73f10756ae4",
+              "supportingContext": "Current travel panel and the same city's sourced flora, fauna, food or material topics.",
+              "subjectBasis": "A modest plain ceramic plate of golden rustic bean-and-chilli fritters illustrating gâteaux piments. Natural food texture, no identifiable restaurant, package, signage or people."
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T19:16:53.074032+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/qa.json",
+            "sha256": "9661d19b5cca71a884942d687f151aed015906473cd47574c726be0dfbce1a4c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/illustration-qa-extra.json",
+            "sha256": "6cdabb1aabb4895261e69ddaf8d001e3afdd93fdca78637209227b27557c982d"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/portlouis/e08-portlouis-TRAVELER-illustration-v1-20261012-27043410aeb4.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/portlouis/e08-portlouis-TRAVELER-illustration-v1-20261012-27043410aeb4.png?t=4eddaf852ea7529b",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/portlouis/e08-portlouis-TRAVELER-illustration-v1-20261012-27043410aeb4.png",
+        "sha256": "4eddaf852ea7529bdc3ad0e4b114c1f8fe57203fb86ce9e6793ccfccebf3cf83",
+        "bytes": 2426542,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-portlouis-TRAVELER-illustration-v1-20261012",
+        "nativeSHA256": "27043410aeb4b5a4217f2e220b601c92ca87fb721f64aa1f2e552d117f6c3dc2",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/portlouis/e08-portlouis-TRAVELER-illustration-v1-20261012-27043410aeb4.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "portlouis",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T19:17:40.659995+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/portlouis/e08-portlouis-TRAVELER-illustration-v1-20261012-27043410aeb4.png",
+        "sha256": "4eddaf852ea7529bdc3ad0e4b114c1f8fe57203fb86ce9e6793ccfccebf3cf83",
+        "bytes": 2426542,
+        "SHAReadAt": "2026-10-12T19:32:06.535800+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "27043410aeb4b5a4217f2e220b601c92ca87fb721f64aa1f2e552d117f6c3dc2",
+        "rgbPixelSHA256": "37916db5331ea122b2eb84e85fbcab41ab76f3b013b5cf7eb0cd1f486f4e8019",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a2e3fbca99bc59b7d0f8a40bd976f84fd39ddd2f99d7c22c969e792d26f29007",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "11c0032129f3ded8274dbb460e12156dc557e1773338722bca0e6bd83922095a"
+    },
+    {
+      "era": "e08",
+      "city": "portlouis",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e08-portlouis-O4-illustration-v1-20261012",
+      "galleryImageID": "e08-portlouis-O4-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/portlouis/e08-portlouis-O4-illustration-v1-20261012-6ac9c1b0f652.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Mitä täällä syödään.",
+        "lyhyt": "Havainnekuva: Mitä täällä syödään."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/portlouis/e08-portlouis-O4-illustration-v1-20261012-6ac9c1b0f652.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Mitä täällä syödään.",
+        "lyhyt": "Havainnekuva: Mitä täällä syödään."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "6ac9c1b0f652df3d84cecab0dfa93528d9acf7aaa042aa7597e7dde06de8910a",
+      "exportSHA256": "ad097bcc7dfa98a7912c9e655038ee39a507d9d133e7d7be0e1f647468a41080",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/portlouis/e08-portlouis-O4-illustration-v1-20261012-6ac9c1b0f652.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/portlouis/e08-portlouis-O4-illustration-v1-20261012-6ac9c1b0f652.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/portlouis/e08-portlouis-O4-illustration-v1-20261012-6ac9c1b0f652.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/sisalto.json",
+      "sourceContentSHA256": "a2e3fbca99bc59b7d0f8a40bd976f84fd39ddd2f99d7c22c969e792d26f29007",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "a6152e31bb2100b5d4d63a70f5e124034521792755c166dac089369ebee71fef",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic natural subject, ordinary materials or unbranded objects; no named copyrighted building or contemporary artwork reproduced.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/assets/e08-portlouis-O4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "6ac9c1b0f652df3d84cecab0dfa93528d9acf7aaa042aa7597e7dde06de8910a",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kullankeltaisia paistoksia, joissa epäsäännöllisiä vihreitä ja punaisia paloja, sekä chilejä. Uskottava rapea paistopinta ja luonnonvalo, ei tekstiä tai henkilöitä.",
+            "captionFi": "Havainnekuva: Mitä täällä syödään.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/sisalto.json",
+            "contentSha256": "8db840a230652c0d34ff5b9fa560d75288529b6ede80a62850319a9df11dcf25",
+            "targetCurrentlyPresent": true,
+            "targetText": "Port Louisin ruokakulttuurissa kohtaavat intialaiset, kiinalaiset ja kreoliperinteet. Pieneksi välipalaksi voi kokeilla samosaa tai gâteaux piments -chilikakkuja. Alouda on paikallinen kylmä maitopohjainen juoma. Chinatownissa on kiinalaisia ravintoloita, keskustorilla hedelmiä ja välipaloja ja Caudan Waterfrontissa ravintoloita sekä ruokatori. Yhteisöjen historia näkyy kaupungissa myös ruokapaikkojen kautta.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/faktapohja.md",
+            "factSheetSha256": "26ad9e4dbddf7844ee2967707a938ff46f18253a57d811e9ac81d73f10756ae4",
+            "topicEvidence": "O4 mainitsee gâteaux piments -chilikakut.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/sisalto.json",
+              "sourceContentSha256": "8db840a230652c0d34ff5b9fa560d75288529b6ede80a62850319a9df11dcf25",
+              "targetText": "Port Louisin ruokakulttuurissa kohtaavat intialaiset, kiinalaiset ja kreoliperinteet. Pieneksi välipalaksi voi kokeilla samosaa tai gâteaux piments -chilikakkuja. Alouda on paikallinen kylmä maitopohjainen juoma. Chinatownissa on kiinalaisia ravintoloita, keskustorilla hedelmiä ja välipaloja ja Caudan Waterfrontissa ravintoloita sekä ruokatori. Yhteisöjen historia näkyy kaupungissa myös ruokapaikkojen kautta.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/faktapohja.md",
+              "wiki": null,
+              "factSheetSha256": "26ad9e4dbddf7844ee2967707a938ff46f18253a57d811e9ac81d73f10756ae4",
+              "supportingSourceUrls": [
+                "https://en.wikivoyage.org/wiki/Port_Louis"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Port_Louis"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Pienet chilipaistokset sopivat gâteaux piments -välipalaan. Havainne-merkintä ei esitä annosta tietyn Port Louisin ruokapaikan kuvana."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: Mitä täällä syödään.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/illustration-qa-extra.json",
+        "fileSHA256": "6cdabb1aabb4895261e69ddaf8d001e3afdd93fdca78637209227b27557c982d",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e08-portlouis-O4-illustration-v1-20261012",
+          "sha256": "6ac9c1b0f652df3d84cecab0dfa93528d9acf7aaa042aa7597e7dde06de8910a",
+          "verdict": "accepted",
+          "reason": "Pienet chilipaistokset sopivat gâteaux piments -välipalaan. Havainne-merkintä ei esitä annosta tietyn Port Louisin ruokapaikan kuvana.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/assets/e08-portlouis-O4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "6ac9c1b0f652df3d84cecab0dfa93528d9acf7aaa042aa7597e7dde06de8910a",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kullankeltaisia paistoksia, joissa epäsäännöllisiä vihreitä ja punaisia paloja, sekä chilejä. Uskottava rapea paistopinta ja luonnonvalo, ei tekstiä tai henkilöitä.",
+            "captionFi": "Havainnekuva: Mitä täällä syödään.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/sisalto.json",
+            "contentSha256": "8db840a230652c0d34ff5b9fa560d75288529b6ede80a62850319a9df11dcf25",
+            "targetCurrentlyPresent": true,
+            "targetText": "Port Louisin ruokakulttuurissa kohtaavat intialaiset, kiinalaiset ja kreoliperinteet. Pieneksi välipalaksi voi kokeilla samosaa tai gâteaux piments -chilikakkuja. Alouda on paikallinen kylmä maitopohjainen juoma. Chinatownissa on kiinalaisia ravintoloita, keskustorilla hedelmiä ja välipaloja ja Caudan Waterfrontissa ravintoloita sekä ruokatori. Yhteisöjen historia näkyy kaupungissa myös ruokapaikkojen kautta.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/faktapohja.md",
+            "factSheetSha256": "26ad9e4dbddf7844ee2967707a938ff46f18253a57d811e9ac81d73f10756ae4",
+            "topicEvidence": "O4 mainitsee gâteaux piments -chilikakut.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/sisalto.json",
+              "sourceContentSha256": "8db840a230652c0d34ff5b9fa560d75288529b6ede80a62850319a9df11dcf25",
+              "targetText": "Port Louisin ruokakulttuurissa kohtaavat intialaiset, kiinalaiset ja kreoliperinteet. Pieneksi välipalaksi voi kokeilla samosaa tai gâteaux piments -chilikakkuja. Alouda on paikallinen kylmä maitopohjainen juoma. Chinatownissa on kiinalaisia ravintoloita, keskustorilla hedelmiä ja välipaloja ja Caudan Waterfrontissa ravintoloita sekä ruokatori. Yhteisöjen historia näkyy kaupungissa myös ruokapaikkojen kautta.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/faktapohja.md",
+              "wiki": null,
+              "factSheetSha256": "26ad9e4dbddf7844ee2967707a938ff46f18253a57d811e9ac81d73f10756ae4",
+              "supportingSourceUrls": [
+                "https://en.wikivoyage.org/wiki/Port_Louis"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Port_Louis"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:27:24.859213+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/qa.json",
+            "sha256": "9661d19b5cca71a884942d687f151aed015906473cd47574c726be0dfbce1a4c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/illustration-qa-extra.json",
+            "sha256": "6cdabb1aabb4895261e69ddaf8d001e3afdd93fdca78637209227b27557c982d"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/portlouis/e08-portlouis-O4-illustration-v1-20261012-6ac9c1b0f652.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/portlouis/e08-portlouis-O4-illustration-v1-20261012-6ac9c1b0f652.png?t=ad097bcc7dfa98a7",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/portlouis/e08-portlouis-O4-illustration-v1-20261012-6ac9c1b0f652.png",
+        "sha256": "ad097bcc7dfa98a7912c9e655038ee39a507d9d133e7d7be0e1f647468a41080",
+        "bytes": 2406353,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-portlouis-O4-illustration-v1-20261012",
+        "nativeSHA256": "6ac9c1b0f652df3d84cecab0dfa93528d9acf7aaa042aa7597e7dde06de8910a",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/portlouis/e08-portlouis-O4-illustration-v1-20261012-6ac9c1b0f652.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "portlouis",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:27:58.314349+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/portlouis/e08-portlouis-O4-illustration-v1-20261012-6ac9c1b0f652.png",
+        "sha256": "ad097bcc7dfa98a7912c9e655038ee39a507d9d133e7d7be0e1f647468a41080",
+        "bytes": 2406353,
+        "SHAReadAt": "2026-10-12T18:29:53.565611+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "6ac9c1b0f652df3d84cecab0dfa93528d9acf7aaa042aa7597e7dde06de8910a",
+        "rgbPixelSHA256": "a3ea2b81b59554d4b163c2f494986b2b4a03b1c5bc433753259e4773b662d028",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a2e3fbca99bc59b7d0f8a40bd976f84fd39ddd2f99d7c22c969e792d26f29007",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "a6152e31bb2100b5d4d63a70f5e124034521792755c166dac089369ebee71fef"
+    },
+    {
+      "era": "e08",
+      "city": "portlouis",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e08-portlouis-L4-illustration-v1-20261012",
+      "galleryImageID": "e08-portlouis-L4-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/portlouis/e08-portlouis-L4-illustration-v1-20261012-0c722df0111a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Kirjasto säilyttää muutakin kuin kirjoja.",
+        "lyhyt": "Havainnekuva: Kirjasto säilyttää muutakin kuin kirjoja."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/portlouis/e08-portlouis-L4-illustration-v1-20261012-0c722df0111a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Kirjasto säilyttää muutakin kuin kirjoja.",
+        "lyhyt": "Havainnekuva: Kirjasto säilyttää muutakin kuin kirjoja."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "0c722df0111a18c3e68a9caa5d0d00ddaa76f7ff877423e66dc0764d2659919f",
+      "exportSHA256": "a078544b93f3d0a0c8a1863727accb8b58c8a01fdd840dd6457ec305454e9ed0",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/portlouis/e08-portlouis-L4-illustration-v1-20261012-0c722df0111a.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/portlouis/e08-portlouis-L4-illustration-v1-20261012-0c722df0111a.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/portlouis/e08-portlouis-L4-illustration-v1-20261012-0c722df0111a.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/sisalto.json",
+      "sourceContentSHA256": "a2e3fbca99bc59b7d0f8a40bd976f84fd39ddd2f99d7c22c969e792d26f29007",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "8e1d7fe7568e44879064c389525c2ac5329d3813fa347883f4f11624508e83ef",
+        "semanticContextSHA256": "8e1d7fe7568e44879064c389525c2ac5329d3813fa347883f4f11624508e83ef",
+        "subjectTitle": "Kirjasto säilyttää muutakin kuin kirjoja",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic natural subject, ordinary materials or unbranded objects; no named copyrighted building or contemporary artwork reproduced.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/assets/e08-portlouis-L4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "0c722df0111a18c3e68a9caa5d0d00ddaa76f7ff877423e66dc0764d2659919f",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tekstittömiä kirjoja ja paperikansio, tallennekela rasiassa sekä irralliset käsineet. Luontevat paperi- ja metallipinnat; ei henkilöitä, kansitaidetta tai lisättyä tekstiä.",
+            "captionFi": "Havainnekuva: Kirjasto säilyttää muutakin kuin kirjoja.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/sisalto.json",
+            "contentSha256": "8db840a230652c0d34ff5b9fa560d75288529b6ede80a62850319a9df11dcf25",
+            "targetCurrentlyPresent": true,
+            "targetText": "Mauritiuksen kansalliskirjaston kokoelmiin kuuluu kirjojen lisäksi käsikirjoituksia, sanomalehtiä ja aikakauslehtiä. Se säilyttää myös nuotteja, valokuvia, karttoja, piirroksia sekä ääni- ja kuva-aineistoja. Port Louisin historiaa voi siis etsiä sekä luettavasta tekstistä että kuvasta ja äänestä. Kirjasto palvelee kaupungin asukkaita, mutta sen säilyttämät aineistot koskevat koko saarta. Muistin paikka ei tällöin ole yksi muistomerkki: se on monenlaisten dokumenttien kokoelma, jota voi tutkia eri kysymyksillä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/faktapohja.md",
+            "factSheetSha256": "26ad9e4dbddf7844ee2967707a938ff46f18253a57d811e9ac81d73f10756ae4",
+            "topicEvidence": "L4 kuvaa kirjoja, dokumentteja sekä ääni- ja kuva-aineistoja.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/sisalto.json",
+              "sourceContentSha256": "8db840a230652c0d34ff5b9fa560d75288529b6ede80a62850319a9df11dcf25",
+              "targetText": "Mauritiuksen kansalliskirjaston kokoelmiin kuuluu kirjojen lisäksi käsikirjoituksia, sanomalehtiä ja aikakauslehtiä. Se säilyttää myös nuotteja, valokuvia, karttoja, piirroksia sekä ääni- ja kuva-aineistoja. Port Louisin historiaa voi siis etsiä sekä luettavasta tekstistä että kuvasta ja äänestä. Kirjasto palvelee kaupungin asukkaita, mutta sen säilyttämät aineistot koskevat koko saarta. Muistin paikka ei tällöin ole yksi muistomerkki: se on monenlaisten dokumenttien kokoelma, jota voi tutkia eri kysymyksillä.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/faktapohja.md",
+              "wiki": "Port Louis",
+              "factSheetSha256": "26ad9e4dbddf7844ee2967707a938ff46f18253a57d811e9ac81d73f10756ae4",
+              "supportingSourceUrls": [
+                "https://en.wikipedia.org/wiki/Port_Louis"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Port_Louis"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Kirjat, paperiaineisto ja tallennekela havainnollistavat kokoelmien eri materiaaleja. Selite ei väitä näkymää kansalliskirjaston todelliseksi tilaksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: Kirjasto säilyttää muutakin kuin kirjoja.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/illustration-qa-extra.json",
+        "fileSHA256": "6cdabb1aabb4895261e69ddaf8d001e3afdd93fdca78637209227b27557c982d",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e08-portlouis-L4-illustration-v1-20261012",
+          "sha256": "0c722df0111a18c3e68a9caa5d0d00ddaa76f7ff877423e66dc0764d2659919f",
+          "verdict": "accepted",
+          "reason": "Kirjat, paperiaineisto ja tallennekela havainnollistavat kokoelmien eri materiaaleja. Selite ei väitä näkymää kansalliskirjaston todelliseksi tilaksi.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/assets/e08-portlouis-L4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "0c722df0111a18c3e68a9caa5d0d00ddaa76f7ff877423e66dc0764d2659919f",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tekstittömiä kirjoja ja paperikansio, tallennekela rasiassa sekä irralliset käsineet. Luontevat paperi- ja metallipinnat; ei henkilöitä, kansitaidetta tai lisättyä tekstiä.",
+            "captionFi": "Havainnekuva: Kirjasto säilyttää muutakin kuin kirjoja.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/sisalto.json",
+            "contentSha256": "8db840a230652c0d34ff5b9fa560d75288529b6ede80a62850319a9df11dcf25",
+            "targetCurrentlyPresent": true,
+            "targetText": "Mauritiuksen kansalliskirjaston kokoelmiin kuuluu kirjojen lisäksi käsikirjoituksia, sanomalehtiä ja aikakauslehtiä. Se säilyttää myös nuotteja, valokuvia, karttoja, piirroksia sekä ääni- ja kuva-aineistoja. Port Louisin historiaa voi siis etsiä sekä luettavasta tekstistä että kuvasta ja äänestä. Kirjasto palvelee kaupungin asukkaita, mutta sen säilyttämät aineistot koskevat koko saarta. Muistin paikka ei tällöin ole yksi muistomerkki: se on monenlaisten dokumenttien kokoelma, jota voi tutkia eri kysymyksillä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/faktapohja.md",
+            "factSheetSha256": "26ad9e4dbddf7844ee2967707a938ff46f18253a57d811e9ac81d73f10756ae4",
+            "topicEvidence": "L4 kuvaa kirjoja, dokumentteja sekä ääni- ja kuva-aineistoja.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/sisalto.json",
+              "sourceContentSha256": "8db840a230652c0d34ff5b9fa560d75288529b6ede80a62850319a9df11dcf25",
+              "targetText": "Mauritiuksen kansalliskirjaston kokoelmiin kuuluu kirjojen lisäksi käsikirjoituksia, sanomalehtiä ja aikakauslehtiä. Se säilyttää myös nuotteja, valokuvia, karttoja, piirroksia sekä ääni- ja kuva-aineistoja. Port Louisin historiaa voi siis etsiä sekä luettavasta tekstistä että kuvasta ja äänestä. Kirjasto palvelee kaupungin asukkaita, mutta sen säilyttämät aineistot koskevat koko saarta. Muistin paikka ei tällöin ole yksi muistomerkki: se on monenlaisten dokumenttien kokoelma, jota voi tutkia eri kysymyksillä.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/faktapohja.md",
+              "wiki": "Port Louis",
+              "factSheetSha256": "26ad9e4dbddf7844ee2967707a938ff46f18253a57d811e9ac81d73f10756ae4",
+              "supportingSourceUrls": [
+                "https://en.wikipedia.org/wiki/Port_Louis"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Port_Louis"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:30:18.327867+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/qa.json",
+            "sha256": "9661d19b5cca71a884942d687f151aed015906473cd47574c726be0dfbce1a4c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/illustration-qa-extra.json",
+            "sha256": "6cdabb1aabb4895261e69ddaf8d001e3afdd93fdca78637209227b27557c982d"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/portlouis/e08-portlouis-L4-illustration-v1-20261012-0c722df0111a.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/portlouis/e08-portlouis-L4-illustration-v1-20261012-0c722df0111a.png?t=a078544b93f3d0a0",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/portlouis/e08-portlouis-L4-illustration-v1-20261012-0c722df0111a.png",
+        "sha256": "a078544b93f3d0a0c8a1863727accb8b58c8a01fdd840dd6457ec305454e9ed0",
+        "bytes": 1998057,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-portlouis-L4-illustration-v1-20261012",
+        "nativeSHA256": "0c722df0111a18c3e68a9caa5d0d00ddaa76f7ff877423e66dc0764d2659919f",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/portlouis/e08-portlouis-L4-illustration-v1-20261012-0c722df0111a.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "portlouis",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T18:31:08.342805+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/portlouis/e08-portlouis-L4-illustration-v1-20261012-0c722df0111a.png",
+        "sha256": "a078544b93f3d0a0c8a1863727accb8b58c8a01fdd840dd6457ec305454e9ed0",
+        "bytes": 1998057,
+        "SHAReadAt": "2026-10-12T18:30:55.825563+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "0c722df0111a18c3e68a9caa5d0d00ddaa76f7ff877423e66dc0764d2659919f",
+        "rgbPixelSHA256": "745324ac5d310fb86ab5a6f26d3225b624d049eccc716bbc345504b1811b52b0",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a2e3fbca99bc59b7d0f8a40bd976f84fd39ddd2f99d7c22c969e792d26f29007",
+      "targetAfterSHA256": "8e1d7fe7568e44879064c389525c2ac5329d3813fa347883f4f11624508e83ef",
+      "contextAfterSHA256": "8e1d7fe7568e44879064c389525c2ac5329d3813fa347883f4f11624508e83ef"
+    },
+    {
+      "era": "e08",
+      "city": "portlouis",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e08-portlouis-photo-2a7ca8a38ce01da8",
+      "galleryImageID": "capital-cc-e08-portlouis-photo-2a7ca8a38ce01da8",
+      "commonsFile": "Port Louis, Mauritius, Bulk Sugar Terminal Quay.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/portlouis/photo-2a7ca8a38ce01da8f60d.jpg",
+        "suora": true,
+        "lahde": "Richard N Horne, Commons (CC BY 4.0)",
+        "selite": "Port Louis’n sataman Bulk Sugar Terminal -laituri, 2025.",
+        "lyhyt": "Port Louis’n sataman Bulk Sugar Terminal -laituri, 2025.",
+        "tiedosto": "Port Louis, Mauritius, Bulk Sugar Terminal Quay.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Richard N Horne, Commons (CC BY 4.0)",
+        "selite": "Port Louis’n sataman Bulk Sugar Terminal -laituri, 2025.",
+        "lyhyt": "Port Louis’n sataman Bulk Sugar Terminal -laituri, 2025.",
+        "tiedosto": "Port Louis, Mauritius, Bulk Sugar Terminal Quay.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/portlouis/photo-2a7ca8a38ce01da8f60d.jpg",
+        "suora": true,
+        "lahde": "Richard N Horne, Commons (CC BY 4.0)",
+        "selite": "Port Louis’n sataman Bulk Sugar Terminal -laituri, 2025.",
+        "lyhyt": "Port Louis’n sataman Bulk Sugar Terminal -laituri, 2025.",
+        "tiedosto": "Port Louis, Mauritius, Bulk Sugar Terminal Quay.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "2a7ca8a38ce01da8f60dd684ab447869584c522fcfbeabdd7aa0fcaac1e6dbc5",
+      "exportSHA256": "2a7ca8a38ce01da8f60dd684ab447869584c522fcfbeabdd7aa0fcaac1e6dbc5",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/portlouis/photo-2a7ca8a38ce01da8f60d.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/portlouis/photo-2a7ca8a38ce01da8f60d.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e08/portlouis/e4f47c75fc5a80e8b2ec5f9eeaf33de0d278e9a477f64e20fc7d71e4e6fc232c.jpg",
+      "dimensions": [
+        2444,
+        1833
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/sisalto.json",
+      "sourceContentSHA256": "a2e3fbca99bc59b7d0f8a40bd976f84fd39ddd2f99d7c22c969e792d26f29007",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "f4883ae7a144e9ebde555542362c740b0522a54f894bf6b35d70ac126fbc170f",
+        "semanticContextSHA256": "f4883ae7a144e9ebde555542362c740b0522a54f894bf6b35d70ac126fbc170f",
+        "subjectTitle": "portlouis — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Richard N Horne",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Port_Louis,_Mauritius,_Bulk_Sugar_Terminal_Quay.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Port_Louis%2C_Mauritius%2C_Bulk_Sugar_Terminal_Quay.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Lähdesivun nimenomainen Author ja Licensing tarkistettu; Source own work. Alkuperäinen kuva paikallisesti silmin katsottu.",
+            "workLayer": "Aito sataman käyttöympäristö: vesi, tavalliset alukset, kuljettimet ja toiminnalliset varasto- ja laiturirakenteet. Kuvassa ei tunnistettu yksilöllistä taideteosta tai nimettyä luovaa arkkitehtuurikohdetta. Alusten aidot merkinnät ovat ympäristön osa; kuva ei ole mainos tai pakkauskuva. Ei tunnistettavia kasvoja tai lisättyä tekstiä, vesileimaa, kehystä.",
+            "placeBoundary": "Kuvaajan oma Description nimeää Port Louis, Mauritius, Bulk Sugar Terminal Quay; päiväys 3.4.2025.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/cc-evidence/b1050323fa99b4ef-preview.jpg",
+            "pixelSHA256": "2a7ca8a38ce01da8f60dd684ab447869584c522fcfbeabdd7aa0fcaac1e6dbc5",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/cc-evidence/b1050323fa99b4ef.html",
+            "sourceSHA256": "674b865b51fcea34de36848ea929b845afc63c4f859436b0cb768d7a8910411f",
+            "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/portlouis/PHOTO/owner.json",
+            "notAlreadyInPack": "Tarkistus korjattu: väärä paakaupungit-pilvi/js/packs-polku ei ollut olemassa. rg täsmällisillä tiedostonimillä todellisesta e08/js/packs-kansiosta: ei osumia (exit 1).",
+            "independentQA": "avoin"
+          },
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Port_Louis,_Mauritius,_Bulk_Sugar_Terminal_Quay.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/cc-evidence/b1050323fa99b4ef.html",
+            "sourceSHA256": "674b865b51fcea34de36848ea929b845afc63c4f859436b0cb768d7a8910411f",
+            "directAuthors": [
+              "Richard N Horne"
+            ],
+            "directLicenses": [
+              "CC BY 4.0"
+            ],
+            "directRows": {
+              "Date": "3 April 2025, 06:10:09",
+              "Camera location": "20° 09′ 13.64″ S, 57° 29′ 34.54″ E"
+            },
+            "sourceOriginalDimensions": [
+              2444,
+              1833
+            ],
+            "localDimensions": [
+              2444,
+              1833
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/cc-evidence/b1050323fa99b4ef-preview.jpg",
+            "mediaSHA256": "2a7ca8a38ce01da8f60dd684ab447869584c522fcfbeabdd7aa0fcaac1e6dbc5",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+            "sourceDescriptions": [
+              "English: Port Louis, Mauritius, Bulk Sugar Terminal Quay",
+              "I, the copyright holder of this work, hereby publish it under the following license:"
+            ],
+            "fullImageViewed": true,
+            "fullNativeImageViewed": true,
+            "viewMethod": "view_image original; whole frame 2444x1833",
+            "personallyViewedByJob27": true,
+            "currentContentSHA256": "8db840a230652c0d34ff5b9fa560d75288529b6ede80a62850319a9df11dcf25",
+            "targetStillExists": true
+          },
+          "qaReason": "Oma alkuperäistiedoston koko kuvan katselu: Port Louis’n todellinen sataman vesi, työalukset, sokeriterminaalin tavalliset toiminnalliset kuljettimet, varastot ja laituri. Erillistä taide-/muistomerkkiteosta tai erityistä luovaa arkkitehtuuriteosta ei tunnistettu kuvassa; ei oleteta kaikkia tavallisia laitteita suojatuiksi teoksiksi. Paikka on kuvaajan omassa Description-kentässä ja kamerakoordinaateissa. Richard N Horne, CC BY 4.0, 2444×1833, 3.4.2025 ja paikallinen SHA tarkistettu alkuperäisestä HTML:stä/kuvatiedostosta. Ei kasvonpiirteitä, lisättyä tekstiä/vesileimaa/kehystä. Alusten fyysiset nimet ja rekisterimerkinnät ovat aidon satamakuvan osa; kuva ei ole mainos/pakkauskuva."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Port Louis’n sataman Bulk Sugar Terminal -laituri, 2025.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/qa.json",
+        "fileSHA256": "9661d19b5cca71a884942d687f151aed015906473cd47574c726be0dfbce1a4c",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "verdict": "accepted",
+          "reason": "Oma alkuperäistiedoston koko kuvan katselu: Port Louis’n todellinen sataman vesi, työalukset, sokeriterminaalin tavalliset toiminnalliset kuljettimet, varastot ja laituri. Erillistä taide-/muistomerkkiteosta tai erityistä luovaa arkkitehtuuriteosta ei tunnistettu kuvassa; ei oleteta kaikkia tavallisia laitteita suojatuiksi teoksiksi. Paikka on kuvaajan omassa Description-kentässä ja kamerakoordinaateissa. Richard N Horne, CC BY 4.0, 2444×1833, 3.4.2025 ja paikallinen SHA tarkistettu alkuperäisestä HTML:stä/kuvatiedostosta. Ei kasvonpiirteitä, lisättyä tekstiä/vesileimaa/kehystä. Alusten fyysiset nimet ja rekisterimerkinnät ovat aidon satamakuvan osa; kuva ei ole mainos/pakkauskuva.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Port_Louis,_Mauritius,_Bulk_Sugar_Terminal_Quay.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/cc-evidence/b1050323fa99b4ef.html",
+            "sourceSHA256": "674b865b51fcea34de36848ea929b845afc63c4f859436b0cb768d7a8910411f",
+            "directAuthors": [
+              "Richard N Horne"
+            ],
+            "directLicenses": [
+              "CC BY 4.0"
+            ],
+            "directRows": {
+              "Date": "3 April 2025, 06:10:09",
+              "Camera location": "20° 09′ 13.64″ S, 57° 29′ 34.54″ E"
+            },
+            "sourceOriginalDimensions": [
+              2444,
+              1833
+            ],
+            "localDimensions": [
+              2444,
+              1833
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/cc-evidence/b1050323fa99b4ef-preview.jpg",
+            "mediaSHA256": "2a7ca8a38ce01da8f60dd684ab447869584c522fcfbeabdd7aa0fcaac1e6dbc5",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+            "sourceDescriptions": [
+              "English: Port Louis, Mauritius, Bulk Sugar Terminal Quay",
+              "I, the copyright holder of this work, hereby publish it under the following license:"
+            ],
+            "fullImageViewed": true,
+            "fullNativeImageViewed": true,
+            "viewMethod": "view_image original; whole frame 2444x1833",
+            "personallyViewedByJob27": true,
+            "currentContentSHA256": "8db840a230652c0d34ff5b9fa560d75288529b6ede80a62850319a9df11dcf25",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T19:22:34.341503+00:00",
+          "commonsFile": "Port Louis, Mauritius, Bulk Sugar Terminal Quay.jpg",
+          "sha256": "2a7ca8a38ce01da8f60dd684ab447869584c522fcfbeabdd7aa0fcaac1e6dbc5"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/qa.json",
+            "sha256": "9661d19b5cca71a884942d687f151aed015906473cd47574c726be0dfbce1a4c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/illustration-qa-extra.json",
+            "sha256": "6cdabb1aabb4895261e69ddaf8d001e3afdd93fdca78637209227b27557c982d"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "portlouis",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Port Louis, Mauritius, Bulk Sugar Terminal Quay.jpg",
+        "sha256": "2a7ca8a38ce01da8f60dd684ab447869584c522fcfbeabdd7aa0fcaac1e6dbc5",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Port_Louis,_Mauritius,_Bulk_Sugar_Terminal_Quay.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Port_Louis%2C_Mauritius%2C_Bulk_Sugar_Terminal_Quay.jpg",
+        "author": "Richard N Horne",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+        "width": 2444,
+        "height": 1833,
+        "originalSHA256": "2a7ca8a38ce01da8f60dd684ab447869584c522fcfbeabdd7aa0fcaac1e6dbc5",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/portlouis/photo-2a7ca8a38ce01da8f60d.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/portlouis/photo-2a7ca8a38ce01da8f60d.jpg",
+        "bytes": 1058690,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:23:13.299243+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Port Louis, Mauritius, Bulk Sugar Terminal Quay.jpg",
+        "lahde": "Richard N Horne, Commons (CC BY 4.0)",
+        "selite": "Port Louis’n sataman Bulk Sugar Terminal -laituri, 2025.",
+        "lyhyt": "Port Louis’n sataman Bulk Sugar Terminal -laituri, 2025."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Richard N Horne, Commons (CC BY 4.0)",
+        "selite": "Port Louis’n sataman Bulk Sugar Terminal -laituri, 2025.",
+        "lyhyt": "Port Louis’n sataman Bulk Sugar Terminal -laituri, 2025.",
+        "tiedosto": "Port Louis, Mauritius, Bulk Sugar Terminal Quay.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a2e3fbca99bc59b7d0f8a40bd976f84fd39ddd2f99d7c22c969e792d26f29007",
+      "targetAfterSHA256": "f4883ae7a144e9ebde555542362c740b0522a54f894bf6b35d70ac126fbc170f",
+      "contextAfterSHA256": "f4883ae7a144e9ebde555542362c740b0522a54f894bf6b35d70ac126fbc170f"
+    },
+    {
+      "era": "e08",
+      "city": "portlouis",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e08-portlouis-c1-7f49fb1b68c72eb4",
+      "galleryImageID": "capital-cc-e08-portlouis-c1-7f49fb1b68c72eb4",
+      "commonsFile": "The Champ de Mars Racecourse.JPG",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/portlouis/c1-7f49fb1b68c72eb44046.jpg",
+        "suora": true,
+        "lahde": "Martin Falbisoner, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Champ de Marsin laukkarata ja Port Louis’n kaupunkimaisemaa, 2015.",
+        "lyhyt": "Champ de Marsin laukkarata ja Port Louis’n kaupunkimaisemaa, 2015.",
+        "tiedosto": "The Champ de Mars Racecourse.JPG"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Martin Falbisoner, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Champ de Marsin laukkarata ja Port Louis’n kaupunkimaisemaa, 2015.",
+        "lyhyt": "Champ de Marsin laukkarata ja Port Louis’n kaupunkimaisemaa, 2015.",
+        "tiedosto": "The Champ de Mars Racecourse.JPG"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/portlouis/c1-7f49fb1b68c72eb44046.jpg",
+        "suora": true,
+        "lahde": "Martin Falbisoner, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Champ de Marsin laukkarata ja Port Louis’n kaupunkimaisemaa, 2015.",
+        "lyhyt": "Champ de Marsin laukkarata ja Port Louis’n kaupunkimaisemaa, 2015.",
+        "tiedosto": "The Champ de Mars Racecourse.JPG"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "7f49fb1b68c72eb440460615d7982804cb0f5c183a0d05dc31aa6a24c781e887",
+      "exportSHA256": "7f49fb1b68c72eb440460615d7982804cb0f5c183a0d05dc31aa6a24c781e887",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/portlouis/c1-7f49fb1b68c72eb44046.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/portlouis/c1-7f49fb1b68c72eb44046.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e08/portlouis/a347639a152fdd69efca6ed43f4868e1d3232b9f017d4b9985761b9aebc291a3.jpg",
+      "dimensions": [
+        5601,
+        3389
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/sisalto.json",
+      "sourceContentSHA256": "a2e3fbca99bc59b7d0f8a40bd976f84fd39ddd2f99d7c22c969e792d26f29007",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "d6c2dd4cc77991d352d74e6f31f2d1c0cce6b2e0ac8621712faf54c030e3c129",
+        "semanticContextSHA256": "d6c2dd4cc77991d352d74e6f31f2d1c0cce6b2e0ac8621712faf54c030e3c129",
+        "subjectTitle": "Port Louis",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Martin Falbisoner",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:The_Champ_de_Mars_Racecourse.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ed/The_Champ_de_Mars_Racecourse.JPG",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Tiedostosivun Author, Source own work ja kuvan CC-lisenssi tarkistettu.",
+            "workLayer": "Pääaiheena laukkaradan toiminnallinen ovaali kenttä ja luonnollinen vuorenrinne, ympärillä kaupungin tavallinen asutus. Ei erillistä nimettyä nykytaideteosta tai tunnistettua suojattua luovaa rakennusta pääaiheena; ei kasvoja, muraaleja, lisättyä tekstiä, vesileimaa tai kehystä. Ei yleistä oikeusväitettä kaikesta Mauritiuksen arkkitehtuurista.",
+            "placeBoundary": "Kuvaajan oma Description: The Champ de Mars Racecourse in Port Louis, Mauritius; 9.9.2015. Aito laaja kaupungin näkymä, ei väitetä nykyhetken kuvaksi.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/cc-evidence/78c828afb67a78d5-preview.JPG",
+            "pixelSHA256": "7f49fb1b68c72eb440460615d7982804cb0f5c183a0d05dc31aa6a24c781e887",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/cc-evidence/78c828afb67a78d5.html",
+            "sourceSHA256": "18e6fdac53479ff21a5aafe24e255fdb3c0ca447042072336054aa41ad0645f9",
+            "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/portlouis/C1/owner.json",
+            "notAlreadyInPack": "rg täsmällisillä tiedostonimillä e08/js/packs: ei osumia",
+            "independentQA": "avoin"
+          },
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:The_Champ_de_Mars_Racecourse.JPG",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/cc-evidence/78c828afb67a78d5.html",
+            "sourceSHA256": "18e6fdac53479ff21a5aafe24e255fdb3c0ca447042072336054aa41ad0645f9",
+            "directAuthors": [
+              "Martin Falbisoner",
+              "Martin Falbisoner"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "9 September 2015, 14:46:14",
+              "Camera location": "20° 09′ 50.64″ S, 57° 30′ 37.5″ E"
+            },
+            "sourceOriginalDimensions": [
+              5601,
+              3389
+            ],
+            "localDimensions": [
+              5601,
+              3389
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/cc-evidence/78c828afb67a78d5-preview.JPG",
+            "mediaSHA256": "7f49fb1b68c72eb440460615d7982804cb0f5c183a0d05dc31aa6a24c781e887",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "sourceDescriptions": [
+              "English: The Champ de Mars Racecourse in Port Louis, Mauritius",
+              "Quality image This image has been assessed using the Quality image guidelines and is considered a Quality image .",
+              "I, the copyright holder of this work, hereby publish it under the following license:"
+            ],
+            "fullImageViewed": true,
+            "fullNativeImageViewed": false,
+            "viewMethod": "view_image high whole original",
+            "personallyViewedByJob27": true,
+            "currentContentSHA256": "8db840a230652c0d34ff5b9fa560d75288529b6ede80a62850319a9df11dcf25",
+            "targetStillExists": true
+          },
+          "qaReason": "Koko alkuperäisestä tiedostosta avattu kuva itse katsottu: aito laaja Champ de Marsin ovaalin laukkaradan, kaupunginosien ja luonnollisen vuorenrinteen kokonaisnäkymä. Todellinen kaupungin asettelu näkyy, joten sopii C1-kanteen. Radan kenttä/aidat ja taustalla tavalliset asuinkorttelit; erillistä yksilöityä luovaa teosta ei tunnistettu pääaiheena, ei blanket-oletusta kaikkien rakennusten PD-tilasta. Martin Falbisoner, CC BY-SA 4.0, 5601×3389, 9.9.2015, alkuperäisen Descriptionin Port Louis ja kamerakoordinaatit tarkistettu HTML:stä. SHA vastaa paikallista tiedostoa. Ei luettavia ihmiskasvoja, päälle lisättyä tekstiä, vesileimaa tai kehystä. Vuosi 2015 säilytettävä, ei nykykuva/1873-rekonstruktio."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Champ de Marsin laukkarata ja Port Louis’n kaupunkimaisemaa, 2015.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/qa.json",
+        "fileSHA256": "9661d19b5cca71a884942d687f151aed015906473cd47574c726be0dfbce1a4c",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "verdict": "accepted",
+          "reason": "Koko alkuperäisestä tiedostosta avattu kuva itse katsottu: aito laaja Champ de Marsin ovaalin laukkaradan, kaupunginosien ja luonnollisen vuorenrinteen kokonaisnäkymä. Todellinen kaupungin asettelu näkyy, joten sopii C1-kanteen. Radan kenttä/aidat ja taustalla tavalliset asuinkorttelit; erillistä yksilöityä luovaa teosta ei tunnistettu pääaiheena, ei blanket-oletusta kaikkien rakennusten PD-tilasta. Martin Falbisoner, CC BY-SA 4.0, 5601×3389, 9.9.2015, alkuperäisen Descriptionin Port Louis ja kamerakoordinaatit tarkistettu HTML:stä. SHA vastaa paikallista tiedostoa. Ei luettavia ihmiskasvoja, päälle lisättyä tekstiä, vesileimaa tai kehystä. Vuosi 2015 säilytettävä, ei nykykuva/1873-rekonstruktio.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:The_Champ_de_Mars_Racecourse.JPG",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/cc-evidence/78c828afb67a78d5.html",
+            "sourceSHA256": "18e6fdac53479ff21a5aafe24e255fdb3c0ca447042072336054aa41ad0645f9",
+            "directAuthors": [
+              "Martin Falbisoner",
+              "Martin Falbisoner"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "9 September 2015, 14:46:14",
+              "Camera location": "20° 09′ 50.64″ S, 57° 30′ 37.5″ E"
+            },
+            "sourceOriginalDimensions": [
+              5601,
+              3389
+            ],
+            "localDimensions": [
+              5601,
+              3389
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/cc-evidence/78c828afb67a78d5-preview.JPG",
+            "mediaSHA256": "7f49fb1b68c72eb440460615d7982804cb0f5c183a0d05dc31aa6a24c781e887",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "sourceDescriptions": [
+              "English: The Champ de Mars Racecourse in Port Louis, Mauritius",
+              "Quality image This image has been assessed using the Quality image guidelines and is considered a Quality image .",
+              "I, the copyright holder of this work, hereby publish it under the following license:"
+            ],
+            "fullImageViewed": true,
+            "fullNativeImageViewed": false,
+            "viewMethod": "view_image high whole original",
+            "personallyViewedByJob27": true,
+            "currentContentSHA256": "8db840a230652c0d34ff5b9fa560d75288529b6ede80a62850319a9df11dcf25",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T19:28:26.904834+00:00",
+          "commonsFile": "The Champ de Mars Racecourse.JPG",
+          "sha256": "7f49fb1b68c72eb440460615d7982804cb0f5c183a0d05dc31aa6a24c781e887"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/qa.json",
+            "sha256": "9661d19b5cca71a884942d687f151aed015906473cd47574c726be0dfbce1a4c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/illustration-qa-extra.json",
+            "sha256": "6cdabb1aabb4895261e69ddaf8d001e3afdd93fdca78637209227b27557c982d"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "portlouis",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "The Champ de Mars Racecourse.JPG",
+        "sha256": "7f49fb1b68c72eb440460615d7982804cb0f5c183a0d05dc31aa6a24c781e887",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:The_Champ_de_Mars_Racecourse.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ed/The_Champ_de_Mars_Racecourse.JPG",
+        "author": "Martin Falbisoner",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 5601,
+        "height": 3389,
+        "originalSHA256": "7f49fb1b68c72eb440460615d7982804cb0f5c183a0d05dc31aa6a24c781e887",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/portlouis/c1-7f49fb1b68c72eb44046.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/portlouis/c1-7f49fb1b68c72eb44046.jpg",
+        "bytes": 15406879,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:29:22.306081+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "The Champ de Mars Racecourse.JPG",
+        "lahde": "Martin Falbisoner, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Champ de Marsin laukkarata ja Port Louis’n kaupunkimaisemaa, 2015.",
+        "lyhyt": "Champ de Marsin laukkarata ja Port Louis’n kaupunkimaisemaa, 2015."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Martin Falbisoner, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Champ de Marsin laukkarata ja Port Louis’n kaupunkimaisemaa, 2015.",
+        "lyhyt": "Champ de Marsin laukkarata ja Port Louis’n kaupunkimaisemaa, 2015.",
+        "tiedosto": "The Champ de Mars Racecourse.JPG"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a2e3fbca99bc59b7d0f8a40bd976f84fd39ddd2f99d7c22c969e792d26f29007",
+      "targetAfterSHA256": "d6c2dd4cc77991d352d74e6f31f2d1c0cce6b2e0ac8621712faf54c030e3c129",
+      "contextAfterSHA256": "d6c2dd4cc77991d352d74e6f31f2d1c0cce6b2e0ac8621712faf54c030e3c129"
+    },
+    {
+      "era": "e08",
+      "city": "portlouis",
+      "slot": "N2",
+      "type": "commons",
+      "assetID": "capital-cc-e08-portlouis-n2-3c0384b2d923cd16",
+      "galleryImageID": "capital-cc-e08-portlouis-n2-3c0384b2d923cd16",
+      "commonsFile": "Pferderennbahn port Louis 2019-09-27.jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Champ de Marsin laukkarata\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Champ de Marsin laukkarata",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/portlouis/n2-3c0384b2d923cd16b408.jpg",
+        "suora": true,
+        "lahde": "Z thomas, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Champ de Marsin laukkarata Fort Adelaidelta nähtynä, 2019.",
+        "lyhyt": "Champ de Marsin laukkarata Fort Adelaidelta nähtynä, 2019.",
+        "tiedosto": "Pferderennbahn port Louis 2019-09-27.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Z thomas, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Champ de Marsin laukkarata Fort Adelaidelta nähtynä, 2019.",
+        "lyhyt": "Champ de Marsin laukkarata Fort Adelaidelta nähtynä, 2019.",
+        "tiedosto": "Pferderennbahn port Louis 2019-09-27.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/portlouis/n2-3c0384b2d923cd16b408.jpg",
+        "suora": true,
+        "lahde": "Z thomas, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Champ de Marsin laukkarata Fort Adelaidelta nähtynä, 2019.",
+        "lyhyt": "Champ de Marsin laukkarata Fort Adelaidelta nähtynä, 2019.",
+        "tiedosto": "Pferderennbahn port Louis 2019-09-27.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "3c0384b2d923cd16b4087e679f4889935ac41aab6105bbff032b090906876d7e",
+      "exportSHA256": "3c0384b2d923cd16b4087e679f4889935ac41aab6105bbff032b090906876d7e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/portlouis/n2-3c0384b2d923cd16b408.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/portlouis/n2-3c0384b2d923cd16b408.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e08/portlouis/7f6f689e4fd11dd16ba9f4403a443e3c5022f740b89a962031161f2e72cf2b19.jpg",
+      "dimensions": [
+        3648,
+        2736
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/portlouis/sisalto.json",
+      "sourceContentSHA256": "a2e3fbca99bc59b7d0f8a40bd976f84fd39ddd2f99d7c22c969e792d26f29007",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "2fde81a910779fec2ee64d71abcb0c7b3389525ba48fce3273f6b0a2414cfb34",
+        "semanticContextSHA256": "df4473dc150d74c9744cfe471474f4138ac10e077c3b3d20416702543117dc23",
+        "subjectTitle": "Champ de Marsin laukkarata",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Z thomas",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Pferderennbahn_port_Louis_2019-09-27.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Pferderennbahn_port_Louis_2019-09-27.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Tiedostosivun Author, Source own work ja kuvan CC-lisenssi tarkistettu.",
+            "workLayer": "Laaja laukkaradan ja luonnollisen vuorenrinteen näkymä, ympärillä asutuskokonaisuus. Ei yksittäistä tunnistettua suojattua teosta pääaiheena; luonnollinen etäinen taustakyltti sivuosassa ei tee kuvasta mainoskuvaa. Ei tunnistettavia kasvoja, lisättyä tekstiä, vesileimaa tai kehystä.",
+            "placeBoundary": "Kuvaajan oma Description: Pferderennbahn von Port Louis von Fort Adelaide aus gesehen; 27.9.2019. Sama nimetty kohde eri valokuvassa; ei saman tiedoston kierrätystä.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/cc-evidence/aad53717a83f20e7-preview.jpg",
+            "pixelSHA256": "3c0384b2d923cd16b4087e679f4889935ac41aab6105bbff032b090906876d7e",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/cc-evidence/aad53717a83f20e7.html",
+            "sourceSHA256": "13e31fae92669415d7898d104e623888a6f0b8f1c34537d2932a842588e00674",
+            "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/portlouis/N2/owner.json",
+            "notAlreadyInPack": "rg täsmällisillä tiedostonimillä e08/js/packs: ei osumia",
+            "independentQA": "avoin"
+          },
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Pferderennbahn_port_Louis_2019-09-27.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/cc-evidence/aad53717a83f20e7.html",
+            "sourceSHA256": "13e31fae92669415d7898d104e623888a6f0b8f1c34537d2932a842588e00674",
+            "directAuthors": [
+              "Z thomas"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "27.09.2019 (according to Exif data)",
+              "Camera location": "20° 09′ 49.66″ S, 57° 30′ 35.65″ E"
+            },
+            "sourceOriginalDimensions": [
+              3648,
+              2736
+            ],
+            "localDimensions": [
+              3648,
+              2736
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/cc-evidence/aad53717a83f20e7-preview.jpg",
+            "mediaSHA256": "3c0384b2d923cd16b4087e679f4889935ac41aab6105bbff032b090906876d7e",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "sourceDescriptions": [
+              "Deutsch: Pferderennbahn von Port Louis von Fort Adelaide aus gesehen",
+              "I, the copyright holder of this work, hereby publish it under the following license:"
+            ],
+            "fullImageViewed": true,
+            "fullNativeImageViewed": true,
+            "viewMethod": "view_image high and original whole 3648x2736",
+            "personallyViewedByJob27": true,
+            "currentContentSHA256": "8db840a230652c0d34ff5b9fa560d75288529b6ede80a62850319a9df11dcf25",
+            "targetStillExists": true
+          },
+          "qaReason": "Koko alkuperäistiedosto itse katsottu sekä laajana että native-näkymänä. Aito Champ de Marsin laukkarata Fort Adelaidelta: lähteen Description nimeää kohteen ja kuvauspisteen, N2:n ajantasainen kohde olemassa ja kuva vastaa sitä. Z thomas, CC BY-SA 4.0, 3648×2736, 27.9.2019 ja kamerakoordinaatit tarkistettu HTML:stä, SHA paikallisesta tiedostosta. Ei luettavia kasvonpiirteitä tai päälle lisättyä tekstiä/vesileimaa. Laaja rata/vuorenrinne/kaupunkikokonaisuus on aihe, ei yksittäinen nimetty moderni teos. Pieni fyysinen koruliikkeen mainoskyltti etualan kasvillisuuden lomassa on satunnainen maiseman sivuosa: ei kuvan päälle lisätty logo, ei kyltin/pakkauksen esittelykuva eikä sen kuvapintaa nosteta teospääaiheeksi. Vuosi 2019 selitteessä; samaa tiedostoa ei käytetä myös C1:ssä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Champ de Marsin laukkarata Fort Adelaidelta nähtynä, 2019.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/qa.json",
+        "fileSHA256": "9661d19b5cca71a884942d687f151aed015906473cd47574c726be0dfbce1a4c",
+        "item": {
+          "slot": "N2",
+          "targetJsonPath": "$.nahtavyydet[\"Champ de Marsin laukkarata\"].kuvat[0]",
+          "verdict": "accepted",
+          "reason": "Koko alkuperäistiedosto itse katsottu sekä laajana että native-näkymänä. Aito Champ de Marsin laukkarata Fort Adelaidelta: lähteen Description nimeää kohteen ja kuvauspisteen, N2:n ajantasainen kohde olemassa ja kuva vastaa sitä. Z thomas, CC BY-SA 4.0, 3648×2736, 27.9.2019 ja kamerakoordinaatit tarkistettu HTML:stä, SHA paikallisesta tiedostosta. Ei luettavia kasvonpiirteitä tai päälle lisättyä tekstiä/vesileimaa. Laaja rata/vuorenrinne/kaupunkikokonaisuus on aihe, ei yksittäinen nimetty moderni teos. Pieni fyysinen koruliikkeen mainoskyltti etualan kasvillisuuden lomassa on satunnainen maiseman sivuosa: ei kuvan päälle lisätty logo, ei kyltin/pakkauksen esittelykuva eikä sen kuvapintaa nosteta teospääaiheeksi. Vuosi 2019 selitteessä; samaa tiedostoa ei käytetä myös C1:ssä.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Pferderennbahn_port_Louis_2019-09-27.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/cc-evidence/aad53717a83f20e7.html",
+            "sourceSHA256": "13e31fae92669415d7898d104e623888a6f0b8f1c34537d2932a842588e00674",
+            "directAuthors": [
+              "Z thomas"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "27.09.2019 (according to Exif data)",
+              "Camera location": "20° 09′ 49.66″ S, 57° 30′ 35.65″ E"
+            },
+            "sourceOriginalDimensions": [
+              3648,
+              2736
+            ],
+            "localDimensions": [
+              3648,
+              2736
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/cc-evidence/aad53717a83f20e7-preview.jpg",
+            "mediaSHA256": "3c0384b2d923cd16b4087e679f4889935ac41aab6105bbff032b090906876d7e",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "sourceDescriptions": [
+              "Deutsch: Pferderennbahn von Port Louis von Fort Adelaide aus gesehen",
+              "I, the copyright holder of this work, hereby publish it under the following license:"
+            ],
+            "fullImageViewed": true,
+            "fullNativeImageViewed": true,
+            "viewMethod": "view_image high and original whole 3648x2736",
+            "personallyViewedByJob27": true,
+            "currentContentSHA256": "8db840a230652c0d34ff5b9fa560d75288529b6ede80a62850319a9df11dcf25",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T19:28:26.981240+00:00",
+          "commonsFile": "Pferderennbahn port Louis 2019-09-27.jpg",
+          "sha256": "3c0384b2d923cd16b4087e679f4889935ac41aab6105bbff032b090906876d7e"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/qa.json",
+            "sha256": "9661d19b5cca71a884942d687f151aed015906473cd47574c726be0dfbce1a4c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/portlouis/illustration-qa-extra.json",
+            "sha256": "6cdabb1aabb4895261e69ddaf8d001e3afdd93fdca78637209227b27557c982d"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "portlouis",
+        "slot": "N2",
+        "targetJsonPath": "$.nahtavyydet[\"Champ de Marsin laukkarata\"].kuvat[0]",
+        "commonsFile": "Pferderennbahn port Louis 2019-09-27.jpg",
+        "sha256": "3c0384b2d923cd16b4087e679f4889935ac41aab6105bbff032b090906876d7e",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Pferderennbahn_port_Louis_2019-09-27.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Pferderennbahn_port_Louis_2019-09-27.jpg",
+        "author": "Z thomas",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 3648,
+        "height": 2736,
+        "originalSHA256": "3c0384b2d923cd16b4087e679f4889935ac41aab6105bbff032b090906876d7e",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/portlouis/n2-3c0384b2d923cd16b408.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/portlouis/n2-3c0384b2d923cd16b408.jpg",
+        "bytes": 4008967,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:29:24.111068+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Pferderennbahn port Louis 2019-09-27.jpg",
+        "lahde": "Z thomas, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Champ de Marsin laukkarata Fort Adelaidelta nähtynä, 2019.",
+        "lyhyt": "Champ de Marsin laukkarata Fort Adelaidelta nähtynä, 2019."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Z thomas, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Champ de Marsin laukkarata Fort Adelaidelta nähtynä, 2019.",
+        "lyhyt": "Champ de Marsin laukkarata Fort Adelaidelta nähtynä, 2019.",
+        "tiedosto": "Pferderennbahn port Louis 2019-09-27.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a2e3fbca99bc59b7d0f8a40bd976f84fd39ddd2f99d7c22c969e792d26f29007",
+      "targetAfterSHA256": "2fde81a910779fec2ee64d71abcb0c7b3389525ba48fce3273f6b0a2414cfb34",
+      "contextAfterSHA256": "df4473dc150d74c9744cfe471474f4138ac10e077c3b3d20416702543117dc23"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

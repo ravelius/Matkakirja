@@ -1,0 +1,1843 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e08",
+  "city": "mbabane",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
+  "assets": [
+    {
+      "era": "e08",
+      "city": "mbabane",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e08-mbabane-TRAVELER-illustration-v1-20261012",
+      "galleryImageID": "e08-mbabane-TRAVELER-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-TRAVELER-illustration-v1-20261012-46192ae5c8c5.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva ylängön luontoretken eläinaiheesta.",
+        "lyhyt": "Havainnekuva ylängön luontoretken eläinaiheesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-TRAVELER-illustration-v1-20261012-46192ae5c8c5.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva ylängön luontoretken eläinaiheesta.",
+        "lyhyt": "Havainnekuva ylängön luontoretken eläinaiheesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "46192ae5c8c55dcae89647af9dae5e9af27d6be594d6bd1d0486b06607c3c63a",
+      "exportSHA256": "7a4eedf5129fbb63666c42cd0a02e3a80c2cb7b08638cd3cbaf2a9ea20c69e1d",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-TRAVELER-illustration-v1-20261012-46192ae5c8c5.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-TRAVELER-illustration-v1-20261012-46192ae5c8c5.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-TRAVELER-illustration-v1-20261012-46192ae5c8c5.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+      "sourceContentSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "32276d82a2ece9360f64d9ca08b436b8d041934ea89d726235de3b53e2e32193",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic sourced natural/food/material subject or traditional functional object; no named protected artwork or fabricated city scene.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/assets/e08-mbabane-TRAVELER-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "46192ae5c8c55dcae89647af9dae5e9af27d6be594d6bd1d0486b06607c3c63a",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi laiduntava seepra, neljä jalkaa, kaksi korvaa ja häntä. Raidat, harja ja ruohikko luontevia, ei ihmisiä, tekstiä tai tunnistettavaa maamerkkiä.",
+            "captionFi": "Havainnekuva ylängön luontoretken eläinaiheesta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+            "contentSha256": "46ee3992cfd7a435fef375bf3018c0bc3c88ef3aac4b86d71888b818cb2b3834",
+            "targetCurrentlyPresent": true,
+            "targetText": "",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
+            "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
+            "topicEvidence": "Malolotjan eläinaihe kuuluu kaupungin luontokokonaisuuteen. Kuva ei todista tiettyä retkipaikkaa tai havaintoa.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+              "sourceContentSha256": "46ee3992cfd7a435fef375bf3018c0bc3c88ef3aac4b86d71888b818cb2b3834",
+              "targetText": "Mbabanessa keskusta ja ylängön retkipaikat ovat eri kierroksia. Aloita Swazi Plazan ja Mbabane Mallin ympäriltä, ja varaa Sibeben tai Malolotjan luonnolle oma retkipäivä. Majoitusta on myös ympäröivillä rinteillä, joten selvitä sijainti ennen varausta. Matkalla tulee noudattaa erityistä varovaisuutta ja välttää suuria väkijoukkoja. Järjestä siirtymät päiväsaikaan, sillä pimeällä liikkumista ja ajamista tulee välttää.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
+              "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
+              "supportingContext": "Current travel panel and the same city's sourced flora, fauna, food or material topics.",
+              "subjectBasis": "One anatomically sound plains zebra quietly grazing in anonymous green southern African upland grass. Full animal or natural medium close-up, no named Sibebe or Malolotja landmark, no people or structures."
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Seepra sopii seudun luontoaiheeseen, ja selite on yleinen havainnollistus."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva ylängön luontoretken eläinaiheesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/illustration-qa-extra.json",
+        "fileSHA256": "99a6a9158f8bf5098eb47b80ede15ee5cc04577bd03608f1171384a5aaaf3e75",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e08-mbabane-TRAVELER-illustration-v1-20261012",
+          "sha256": "46192ae5c8c55dcae89647af9dae5e9af27d6be594d6bd1d0486b06607c3c63a",
+          "verdict": "accepted",
+          "reason": "Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Seepra sopii seudun luontoaiheeseen, ja selite on yleinen havainnollistus.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/assets/e08-mbabane-TRAVELER-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "46192ae5c8c55dcae89647af9dae5e9af27d6be594d6bd1d0486b06607c3c63a",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi laiduntava seepra, neljä jalkaa, kaksi korvaa ja häntä. Raidat, harja ja ruohikko luontevia, ei ihmisiä, tekstiä tai tunnistettavaa maamerkkiä.",
+            "captionFi": "Havainnekuva ylängön luontoretken eläinaiheesta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+            "contentSha256": "46ee3992cfd7a435fef375bf3018c0bc3c88ef3aac4b86d71888b818cb2b3834",
+            "targetCurrentlyPresent": true,
+            "targetText": "",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
+            "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
+            "topicEvidence": "Malolotjan eläinaihe kuuluu kaupungin luontokokonaisuuteen. Kuva ei todista tiettyä retkipaikkaa tai havaintoa.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+              "sourceContentSha256": "46ee3992cfd7a435fef375bf3018c0bc3c88ef3aac4b86d71888b818cb2b3834",
+              "targetText": "Mbabanessa keskusta ja ylängön retkipaikat ovat eri kierroksia. Aloita Swazi Plazan ja Mbabane Mallin ympäriltä, ja varaa Sibeben tai Malolotjan luonnolle oma retkipäivä. Majoitusta on myös ympäröivillä rinteillä, joten selvitä sijainti ennen varausta. Matkalla tulee noudattaa erityistä varovaisuutta ja välttää suuria väkijoukkoja. Järjestä siirtymät päiväsaikaan, sillä pimeällä liikkumista ja ajamista tulee välttää.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
+              "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
+              "supportingContext": "Current travel panel and the same city's sourced flora, fauna, food or material topics.",
+              "subjectBasis": "One anatomically sound plains zebra quietly grazing in anonymous green southern African upland grass. Full animal or natural medium close-up, no named Sibebe or Malolotja landmark, no people or structures."
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T19:03:15.189815+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/qa.json",
+            "sha256": "e959af27b806faf657b837f5bf114b3f23a79adbe8f47ec67c7912827c8c7c4c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/illustration-qa-extra.json",
+            "sha256": "99a6a9158f8bf5098eb47b80ede15ee5cc04577bd03608f1171384a5aaaf3e75"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-TRAVELER-illustration-v1-20261012-46192ae5c8c5.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-TRAVELER-illustration-v1-20261012-46192ae5c8c5.png?t=7a4eedf5129fbb63",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-TRAVELER-illustration-v1-20261012-46192ae5c8c5.png",
+        "sha256": "7a4eedf5129fbb63666c42cd0a02e3a80c2cb7b08638cd3cbaf2a9ea20c69e1d",
+        "bytes": 2695087,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-mbabane-TRAVELER-illustration-v1-20261012",
+        "nativeSHA256": "46192ae5c8c55dcae89647af9dae5e9af27d6be594d6bd1d0486b06607c3c63a",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-TRAVELER-illustration-v1-20261012-46192ae5c8c5.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "mbabane",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T19:03:28.879988+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-TRAVELER-illustration-v1-20261012-46192ae5c8c5.png",
+        "sha256": "7a4eedf5129fbb63666c42cd0a02e3a80c2cb7b08638cd3cbaf2a9ea20c69e1d",
+        "bytes": 2695087,
+        "SHAReadAt": "2026-10-12T19:03:36.610536+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "46192ae5c8c55dcae89647af9dae5e9af27d6be594d6bd1d0486b06607c3c63a",
+        "rgbPixelSHA256": "64de1d28d3d3e0271c526b28a299a21296a8fbfed59c018cea4d3e41ec87cf60",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "32276d82a2ece9360f64d9ca08b436b8d041934ea89d726235de3b53e2e32193"
+    },
+    {
+      "era": "e08",
+      "city": "mbabane",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e08-mbabane-O4-illustration-v1-20261012",
+      "galleryImageID": "e08-mbabane-O4-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-O4-illustration-v1-20261012-b6bf2b0b110f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Mitä täällä syödään.",
+        "lyhyt": "Havainnekuva: Mitä täällä syödään."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-O4-illustration-v1-20261012-b6bf2b0b110f.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Mitä täällä syödään.",
+        "lyhyt": "Havainnekuva: Mitä täällä syödään."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b6bf2b0b110f4448af16f9759d31120a144ffe94bf2efb4516198350c0c201a1",
+      "exportSHA256": "c6284a2afcbae9c959e5e738d5e9283528d6fb716d1bb67f36f8b25c0390a5c5",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-O4-illustration-v1-20261012-b6bf2b0b110f.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-O4-illustration-v1-20261012-b6bf2b0b110f.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-O4-illustration-v1-20261012-b6bf2b0b110f.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+      "sourceContentSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "324b6bf791eb72d813e10e3638a209f0e7e18c1ef24c8531d6ebcf7f760921e7",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic natural subject, ordinary materials or unbranded objects; no named copyrighted building or contemporary artwork reproduced.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/assets/e08-mbabane-O4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "b6bf2b0b110f4448af16f9759d31120a144ffe94bf2efb4516198350c0c201a1",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kypsiä bataatteja, joista yksi halkaistu, sekä valkoinen maitomainen lisuke kulhossa. Luontevat kuoret ja oranssi malto, ei merkintöjä tai henkilöitä.",
+            "captionFi": "Havainnekuva: Mitä täällä syödään.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+            "contentSha256": "46ee3992cfd7a435fef375bf3018c0bc3c88ef3aac4b86d71888b818cb2b3834",
+            "targetCurrentlyPresent": true,
+            "targetText": "Etsi paikallisia makuja ruokalistalta: bhatata tarkoittaa bataattia ja emasi hapanmaitoa. Ne ovat esimerkkejä swaziruokien tutuista raaka-aineista, joita voi maistaa matkan aikana. Mbabanen keskustassa on kahviloita, kansainvälistä ruokaa tarjoavia ravintoloita ja pikaruokapaikkoja. Jos haluat maistaa paikallista ruokaa, kysy tarjonnasta erikseen; ruokalista ei ole sama kaikkialla.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
+            "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
+            "topicEvidence": "O4 nimeää bhatatan bataatiksi ja emasin hapanmaidoksi.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+              "sourceContentSha256": "46ee3992cfd7a435fef375bf3018c0bc3c88ef3aac4b86d71888b818cb2b3834",
+              "targetText": "Etsi paikallisia makuja ruokalistalta: bhatata tarkoittaa bataattia ja emasi hapanmaitoa. Ne ovat esimerkkejä swaziruokien tutuista raaka-aineista, joita voi maistaa matkan aikana. Mbabanen keskustassa on kahviloita, kansainvälistä ruokaa tarjoavia ravintoloita ja pikaruokapaikkoja. Jos haluat maistaa paikallista ruokaa, kysy tarjonnasta erikseen; ruokalista ei ole sama kaikkialla.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
+              "wiki": null,
+              "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
+              "supportingSourceUrls": [
+                "https://en.wikivoyage.org/wiki/Mbabane"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Mbabane"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Bataatti ja hapanmaitoa havainnollistava valkoinen maitotuote vastaavat oppaan raaka-aineita. Yleinen annos ei ole nimetyn ravintolan kuva."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: Mitä täällä syödään.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/illustration-qa-extra.json",
+        "fileSHA256": "99a6a9158f8bf5098eb47b80ede15ee5cc04577bd03608f1171384a5aaaf3e75",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e08-mbabane-O4-illustration-v1-20261012",
+          "sha256": "b6bf2b0b110f4448af16f9759d31120a144ffe94bf2efb4516198350c0c201a1",
+          "verdict": "accepted",
+          "reason": "Bataatti ja hapanmaitoa havainnollistava valkoinen maitotuote vastaavat oppaan raaka-aineita. Yleinen annos ei ole nimetyn ravintolan kuva.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/assets/e08-mbabane-O4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "b6bf2b0b110f4448af16f9759d31120a144ffe94bf2efb4516198350c0c201a1",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kypsiä bataatteja, joista yksi halkaistu, sekä valkoinen maitomainen lisuke kulhossa. Luontevat kuoret ja oranssi malto, ei merkintöjä tai henkilöitä.",
+            "captionFi": "Havainnekuva: Mitä täällä syödään.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+            "contentSha256": "46ee3992cfd7a435fef375bf3018c0bc3c88ef3aac4b86d71888b818cb2b3834",
+            "targetCurrentlyPresent": true,
+            "targetText": "Etsi paikallisia makuja ruokalistalta: bhatata tarkoittaa bataattia ja emasi hapanmaitoa. Ne ovat esimerkkejä swaziruokien tutuista raaka-aineista, joita voi maistaa matkan aikana. Mbabanen keskustassa on kahviloita, kansainvälistä ruokaa tarjoavia ravintoloita ja pikaruokapaikkoja. Jos haluat maistaa paikallista ruokaa, kysy tarjonnasta erikseen; ruokalista ei ole sama kaikkialla.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
+            "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
+            "topicEvidence": "O4 nimeää bhatatan bataatiksi ja emasin hapanmaidoksi.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+              "sourceContentSha256": "46ee3992cfd7a435fef375bf3018c0bc3c88ef3aac4b86d71888b818cb2b3834",
+              "targetText": "Etsi paikallisia makuja ruokalistalta: bhatata tarkoittaa bataattia ja emasi hapanmaitoa. Ne ovat esimerkkejä swaziruokien tutuista raaka-aineista, joita voi maistaa matkan aikana. Mbabanen keskustassa on kahviloita, kansainvälistä ruokaa tarjoavia ravintoloita ja pikaruokapaikkoja. Jos haluat maistaa paikallista ruokaa, kysy tarjonnasta erikseen; ruokalista ei ole sama kaikkialla.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
+              "wiki": null,
+              "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
+              "supportingSourceUrls": [
+                "https://en.wikivoyage.org/wiki/Mbabane"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Mbabane"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:20:09.783418+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/qa.json",
+            "sha256": "e959af27b806faf657b837f5bf114b3f23a79adbe8f47ec67c7912827c8c7c4c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/illustration-qa-extra.json",
+            "sha256": "99a6a9158f8bf5098eb47b80ede15ee5cc04577bd03608f1171384a5aaaf3e75"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-O4-illustration-v1-20261012-b6bf2b0b110f.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-O4-illustration-v1-20261012-b6bf2b0b110f.png?t=c6284a2afcbae9c9",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-O4-illustration-v1-20261012-b6bf2b0b110f.png",
+        "sha256": "c6284a2afcbae9c959e5e738d5e9283528d6fb716d1bb67f36f8b25c0390a5c5",
+        "bytes": 2409676,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-mbabane-O4-illustration-v1-20261012",
+        "nativeSHA256": "b6bf2b0b110f4448af16f9759d31120a144ffe94bf2efb4516198350c0c201a1",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-O4-illustration-v1-20261012-b6bf2b0b110f.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "mbabane",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:22:51.765139+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-O4-illustration-v1-20261012-b6bf2b0b110f.png",
+        "sha256": "c6284a2afcbae9c959e5e738d5e9283528d6fb716d1bb67f36f8b25c0390a5c5",
+        "bytes": 2409676,
+        "SHAReadAt": "2026-10-12T18:29:53.019663+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b6bf2b0b110f4448af16f9759d31120a144ffe94bf2efb4516198350c0c201a1",
+        "rgbPixelSHA256": "173b588e26f2d7a380c5655c452e9d21087f7fdd99ac82957ae64e826927c4cb",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "324b6bf791eb72d813e10e3638a209f0e7e18c1ef24c8531d6ebcf7f760921e7"
+    },
+    {
+      "era": "e08",
+      "city": "mbabane",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e08-mbabane-L2-illustration-v1-20261012",
+      "galleryImageID": "e08-mbabane-L2-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L2-illustration-v1-20261012-7362194c5259.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Luonto jatkuu valtiorajan yli.",
+        "lyhyt": "Havainnekuva: Luonto jatkuu valtiorajan yli."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L2-illustration-v1-20261012-7362194c5259.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Luonto jatkuu valtiorajan yli.",
+        "lyhyt": "Havainnekuva: Luonto jatkuu valtiorajan yli."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "7362194c52591517e33c073b4eafe6701c0e41edd17a4aa0c6f9c9cc786f7a21",
+      "exportSHA256": "bc99a032a67c13dc3a3c2ca4f249be547b24af45737763e6ddf018f7842c5999",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L2-illustration-v1-20261012-7362194c5259.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L2-illustration-v1-20261012-7362194c5259.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-L2-illustration-v1-20261012-7362194c5259.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+      "sourceContentSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "c233c03a16e90bfe9e0879e902e61f9a1e7950b61364778da91906e61e485e94",
+        "semanticContextSHA256": "c233c03a16e90bfe9e0879e902e61f9a1e7950b61364778da91906e61e485e94",
+        "subjectTitle": "Luonto jatkuu valtiorajan yli",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic natural subject, ordinary materials or unbranded objects; no named copyrighted building or contemporary artwork reproduced.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/assets/e08-mbabane-L2-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "7362194c52591517e33c073b4eafe6701c0e41edd17a4aa0c6f9c9cc786f7a21",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kolme laiduntavaa seepraa ruohikossa. Etualan eläimellä neljä jalkaa, kaksi korvaa ja yksi häntä; raidat vaihtelevat luonnollisesti, ei ihmisiä tai tekstiä.",
+            "captionFi": "Havainnekuva: Luonto jatkuu valtiorajan yli.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+            "contentSha256": "46ee3992cfd7a435fef375bf3018c0bc3c88ef3aac4b86d71888b818cb2b3834",
+            "targetCurrentlyPresent": true,
+            "targetText": "Malolotjan suojelualueella Eswatinin luoteisosassa avoin ruohomaa vaihtuu jokivarsien pensaikkoon ja vuoristometsään. Alueella elää esimerkiksi seeproja ja antelooppeja, ja jokilaaksoihin kuuluu myös Malolotjan putous. Suojelualue liittyy Etelä-Afrikan Songimveloon rajat ylittävässä kokonaisuudessa. Valtiollinen kartta jakaa alueen, mutta luonnonsuojelu yhdistää sen osat. Mbabanesta Malolotjaan lähdetään omalle retkelle: kaupungin ulkopuolella maisemaa tutkitaan myös jalan, eikä kaikkialle kuljeta autolla.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
+            "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
+            "topicEvidence": "L2 nimeää seeprat alueen eläimiksi. Hyväksyntä koskee yleistä eläinhavainnollistusta, ei taustan paikantamista.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+              "sourceContentSha256": "46ee3992cfd7a435fef375bf3018c0bc3c88ef3aac4b86d71888b818cb2b3834",
+              "targetText": "Malolotjan suojelualueella Eswatinin luoteisosassa avoin ruohomaa vaihtuu jokivarsien pensaikkoon ja vuoristometsään. Alueella elää esimerkiksi seeproja ja antelooppeja, ja jokilaaksoihin kuuluu myös Malolotjan putous. Suojelualue liittyy Etelä-Afrikan Songimveloon rajat ylittävässä kokonaisuudessa. Valtiollinen kartta jakaa alueen, mutta luonnonsuojelu yhdistää sen osat. Mbabanesta Malolotjaan lähdetään omalle retkelle: kaupungin ulkopuolella maisemaa tutkitaan myös jalan, eikä kaikkialle kuljeta autolla.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
+              "wiki": "Malolotja_National_Park",
+              "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
+              "supportingSourceUrls": [
+                "https://en.wikipedia.org/wiki/Malolotja_National_Park"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Mbabane"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Seeprojen yleinen havainnollistus sopii tekstin eläinaiheeseen. Havainne-merkintä ei todista Malolotjan todellista maisemaa tai siellä tehtyä havaintoa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: Luonto jatkuu valtiorajan yli.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/illustration-qa-extra.json",
+        "fileSHA256": "99a6a9158f8bf5098eb47b80ede15ee5cc04577bd03608f1171384a5aaaf3e75",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e08-mbabane-L2-illustration-v1-20261012",
+          "sha256": "7362194c52591517e33c073b4eafe6701c0e41edd17a4aa0c6f9c9cc786f7a21",
+          "verdict": "accepted",
+          "reason": "Seeprojen yleinen havainnollistus sopii tekstin eläinaiheeseen. Havainne-merkintä ei todista Malolotjan todellista maisemaa tai siellä tehtyä havaintoa.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/assets/e08-mbabane-L2-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "7362194c52591517e33c073b4eafe6701c0e41edd17a4aa0c6f9c9cc786f7a21",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kolme laiduntavaa seepraa ruohikossa. Etualan eläimellä neljä jalkaa, kaksi korvaa ja yksi häntä; raidat vaihtelevat luonnollisesti, ei ihmisiä tai tekstiä.",
+            "captionFi": "Havainnekuva: Luonto jatkuu valtiorajan yli.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+            "contentSha256": "46ee3992cfd7a435fef375bf3018c0bc3c88ef3aac4b86d71888b818cb2b3834",
+            "targetCurrentlyPresent": true,
+            "targetText": "Malolotjan suojelualueella Eswatinin luoteisosassa avoin ruohomaa vaihtuu jokivarsien pensaikkoon ja vuoristometsään. Alueella elää esimerkiksi seeproja ja antelooppeja, ja jokilaaksoihin kuuluu myös Malolotjan putous. Suojelualue liittyy Etelä-Afrikan Songimveloon rajat ylittävässä kokonaisuudessa. Valtiollinen kartta jakaa alueen, mutta luonnonsuojelu yhdistää sen osat. Mbabanesta Malolotjaan lähdetään omalle retkelle: kaupungin ulkopuolella maisemaa tutkitaan myös jalan, eikä kaikkialle kuljeta autolla.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
+            "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
+            "topicEvidence": "L2 nimeää seeprat alueen eläimiksi. Hyväksyntä koskee yleistä eläinhavainnollistusta, ei taustan paikantamista.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+              "sourceContentSha256": "46ee3992cfd7a435fef375bf3018c0bc3c88ef3aac4b86d71888b818cb2b3834",
+              "targetText": "Malolotjan suojelualueella Eswatinin luoteisosassa avoin ruohomaa vaihtuu jokivarsien pensaikkoon ja vuoristometsään. Alueella elää esimerkiksi seeproja ja antelooppeja, ja jokilaaksoihin kuuluu myös Malolotjan putous. Suojelualue liittyy Etelä-Afrikan Songimveloon rajat ylittävässä kokonaisuudessa. Valtiollinen kartta jakaa alueen, mutta luonnonsuojelu yhdistää sen osat. Mbabanesta Malolotjaan lähdetään omalle retkelle: kaupungin ulkopuolella maisemaa tutkitaan myös jalan, eikä kaikkialle kuljeta autolla.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
+              "wiki": "Malolotja_National_Park",
+              "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
+              "supportingSourceUrls": [
+                "https://en.wikipedia.org/wiki/Malolotja_National_Park"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Mbabane"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:20:23.020806+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/qa.json",
+            "sha256": "e959af27b806faf657b837f5bf114b3f23a79adbe8f47ec67c7912827c8c7c4c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/illustration-qa-extra.json",
+            "sha256": "99a6a9158f8bf5098eb47b80ede15ee5cc04577bd03608f1171384a5aaaf3e75"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L2-illustration-v1-20261012-7362194c5259.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L2-illustration-v1-20261012-7362194c5259.png?t=bc99a032a67c13dc",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L2-illustration-v1-20261012-7362194c5259.png",
+        "sha256": "bc99a032a67c13dc3a3c2ca4f249be547b24af45737763e6ddf018f7842c5999",
+        "bytes": 2744377,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-mbabane-L2-illustration-v1-20261012",
+        "nativeSHA256": "7362194c52591517e33c073b4eafe6701c0e41edd17a4aa0c6f9c9cc786f7a21",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-L2-illustration-v1-20261012-7362194c5259.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "mbabane",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T18:22:53.241717+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-L2-illustration-v1-20261012-7362194c5259.png",
+        "sha256": "bc99a032a67c13dc3a3c2ca4f249be547b24af45737763e6ddf018f7842c5999",
+        "bytes": 2744377,
+        "SHAReadAt": "2026-10-12T18:29:53.128170+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "7362194c52591517e33c073b4eafe6701c0e41edd17a4aa0c6f9c9cc786f7a21",
+        "rgbPixelSHA256": "495cf28ae5f87c531a4765ec8045a10af310a8fa375666494fe193742a2da59b",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
+      "targetAfterSHA256": "c233c03a16e90bfe9e0879e902e61f9a1e7950b61364778da91906e61e485e94",
+      "contextAfterSHA256": "c233c03a16e90bfe9e0879e902e61f9a1e7950b61364778da91906e61e485e94"
+    },
+    {
+      "era": "e08",
+      "city": "mbabane",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e08-mbabane-L3-illustration-v1-20261012",
+      "galleryImageID": "e08-mbabane-L3-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L3-illustration-v1-20261012-a38e612b2469.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Malmi oli ensin väriä.",
+        "lyhyt": "Havainnekuva: Malmi oli ensin väriä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L3-illustration-v1-20261012-a38e612b2469.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Malmi oli ensin väriä.",
+        "lyhyt": "Havainnekuva: Malmi oli ensin väriä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "a38e612b2469ff18ee45176313bbf441cfcc144983c02e41651126bfd19cafa7",
+      "exportSHA256": "d119cf48033dc66eacc36219a26679446992945b7c9a8881501a9cf461c8dae9",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L3-illustration-v1-20261012-a38e612b2469.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L3-illustration-v1-20261012-a38e612b2469.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-L3-illustration-v1-20261012-a38e612b2469.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+      "sourceContentSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "6c6c3b2cfc66e16e3d7c6afa720b51ecc50742d413ce5168ba79b6800bb875c9",
+        "semanticContextSHA256": "6c6c3b2cfc66e16e3d7c6afa720b51ecc50742d413ce5168ba79b6800bb875c9",
+        "subjectTitle": "Malmi oli ensin väriä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic natural subject, ordinary materials or unbranded objects; no named copyrighted building or contemporary artwork reproduced.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/assets/e08-mbabane-L3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "a38e612b2469ff18ee45176313bbf441cfcc144983c02e41651126bfd19cafa7",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tumman metallinkiiltoinen punertava kivikappale ja epäsäännöllinen punaista jauhetta sisältävä kasa. Luonteva rakeisuus ja varjot; ei taideteosta, tekstiä tai henkilöitä.",
+            "captionFi": "Havainnekuva: Malmi oli ensin väriä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+            "contentSha256": "46ee3992cfd7a435fef375bf3018c0bc3c88ef3aac4b86d71888b818cb2b3834",
+            "targetCurrentlyPresent": true,
+            "targetText": "Ngwenyan rautamalmiesiintymä Mbabanen luoteispuolella kertoo, ettei malmia aina kaiveta metallin vuoksi. Hematiitista saatiin jo kivikaudella punaista okraa, jota käytettiin muun muassa kalliomaalauksissa. Esiintymästä hankittiin myös kiiltävää spekulariittia. Raudan sulattaminen ja myöhempi teollinen louhinta kuuluvat toisiin vaiheisiin. Samasta geologisesta paikasta tuli siis eri aikoina erilaisten aineiden lähde. Arkeologiset kaivutyökalut kertovat pigmentin hankkimisesta paljon ennen modernin kaivoksen koneita.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
+            "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
+            "topicEvidence": "L3 käsittelee hematiitista saatua punaista okraa ja malmin eri käyttötapoja.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+              "sourceContentSha256": "46ee3992cfd7a435fef375bf3018c0bc3c88ef3aac4b86d71888b818cb2b3834",
+              "targetText": "Ngwenyan rautamalmiesiintymä Mbabanen luoteispuolella kertoo, ettei malmia aina kaiveta metallin vuoksi. Hematiitista saatiin jo kivikaudella punaista okraa, jota käytettiin muun muassa kalliomaalauksissa. Esiintymästä hankittiin myös kiiltävää spekulariittia. Raudan sulattaminen ja myöhempi teollinen louhinta kuuluvat toisiin vaiheisiin. Samasta geologisesta paikasta tuli siis eri aikoina erilaisten aineiden lähde. Arkeologiset kaivutyökalut kertovat pigmentin hankkimisesta paljon ennen modernin kaivoksen koneita.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
+              "wiki": "Ngwenya_Mine",
+              "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
+              "supportingSourceUrls": [
+                "https://en.wikipedia.org/wiki/Ngwenya_Mine"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Mbabane"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Tumma rautamalmia havainnollistava kivi ja punainen pigmenttijauhe sopivat tekstiin. Selite ei nimeä näytettä aidoksi Ngwenyan esineeksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: Malmi oli ensin väriä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/illustration-qa-extra.json",
+        "fileSHA256": "99a6a9158f8bf5098eb47b80ede15ee5cc04577bd03608f1171384a5aaaf3e75",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e08-mbabane-L3-illustration-v1-20261012",
+          "sha256": "a38e612b2469ff18ee45176313bbf441cfcc144983c02e41651126bfd19cafa7",
+          "verdict": "accepted",
+          "reason": "Tumma rautamalmia havainnollistava kivi ja punainen pigmenttijauhe sopivat tekstiin. Selite ei nimeä näytettä aidoksi Ngwenyan esineeksi.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/assets/e08-mbabane-L3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "a38e612b2469ff18ee45176313bbf441cfcc144983c02e41651126bfd19cafa7",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tumman metallinkiiltoinen punertava kivikappale ja epäsäännöllinen punaista jauhetta sisältävä kasa. Luonteva rakeisuus ja varjot; ei taideteosta, tekstiä tai henkilöitä.",
+            "captionFi": "Havainnekuva: Malmi oli ensin väriä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+            "contentSha256": "46ee3992cfd7a435fef375bf3018c0bc3c88ef3aac4b86d71888b818cb2b3834",
+            "targetCurrentlyPresent": true,
+            "targetText": "Ngwenyan rautamalmiesiintymä Mbabanen luoteispuolella kertoo, ettei malmia aina kaiveta metallin vuoksi. Hematiitista saatiin jo kivikaudella punaista okraa, jota käytettiin muun muassa kalliomaalauksissa. Esiintymästä hankittiin myös kiiltävää spekulariittia. Raudan sulattaminen ja myöhempi teollinen louhinta kuuluvat toisiin vaiheisiin. Samasta geologisesta paikasta tuli siis eri aikoina erilaisten aineiden lähde. Arkeologiset kaivutyökalut kertovat pigmentin hankkimisesta paljon ennen modernin kaivoksen koneita.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
+            "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
+            "topicEvidence": "L3 käsittelee hematiitista saatua punaista okraa ja malmin eri käyttötapoja.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+              "sourceContentSha256": "46ee3992cfd7a435fef375bf3018c0bc3c88ef3aac4b86d71888b818cb2b3834",
+              "targetText": "Ngwenyan rautamalmiesiintymä Mbabanen luoteispuolella kertoo, ettei malmia aina kaiveta metallin vuoksi. Hematiitista saatiin jo kivikaudella punaista okraa, jota käytettiin muun muassa kalliomaalauksissa. Esiintymästä hankittiin myös kiiltävää spekulariittia. Raudan sulattaminen ja myöhempi teollinen louhinta kuuluvat toisiin vaiheisiin. Samasta geologisesta paikasta tuli siis eri aikoina erilaisten aineiden lähde. Arkeologiset kaivutyökalut kertovat pigmentin hankkimisesta paljon ennen modernin kaivoksen koneita.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/faktapohja.md",
+              "wiki": "Ngwenya_Mine",
+              "factSheetSha256": "a59647f1196470a86b53357933576b96e94bf832774719123911b33d72693fb3",
+              "supportingSourceUrls": [
+                "https://en.wikipedia.org/wiki/Ngwenya_Mine"
+              ],
+              "factSheetBibliographyUrls": [
+                "https://en.wikivoyage.org/wiki/Mbabane"
+              ]
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:20:34.401105+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/qa.json",
+            "sha256": "e959af27b806faf657b837f5bf114b3f23a79adbe8f47ec67c7912827c8c7c4c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/illustration-qa-extra.json",
+            "sha256": "99a6a9158f8bf5098eb47b80ede15ee5cc04577bd03608f1171384a5aaaf3e75"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L3-illustration-v1-20261012-a38e612b2469.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L3-illustration-v1-20261012-a38e612b2469.png?t=d119cf48033dc66e",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/mbabane/e08-mbabane-L3-illustration-v1-20261012-a38e612b2469.png",
+        "sha256": "d119cf48033dc66eacc36219a26679446992945b7c9a8881501a9cf461c8dae9",
+        "bytes": 2836992,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-mbabane-L3-illustration-v1-20261012",
+        "nativeSHA256": "a38e612b2469ff18ee45176313bbf441cfcc144983c02e41651126bfd19cafa7",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-L3-illustration-v1-20261012-a38e612b2469.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "mbabane",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T18:22:54.652392+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/mbabane/e08-mbabane-L3-illustration-v1-20261012-a38e612b2469.png",
+        "sha256": "d119cf48033dc66eacc36219a26679446992945b7c9a8881501a9cf461c8dae9",
+        "bytes": 2836992,
+        "SHAReadAt": "2026-10-12T18:29:53.235759+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "a38e612b2469ff18ee45176313bbf441cfcc144983c02e41651126bfd19cafa7",
+        "rgbPixelSHA256": "dac3b59eb18b537600af7a6efc476486e14af2f8bc9db5325039357c31db25b7",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
+      "targetAfterSHA256": "6c6c3b2cfc66e16e3d7c6afa720b51ecc50742d413ce5168ba79b6800bb875c9",
+      "contextAfterSHA256": "6c6c3b2cfc66e16e3d7c6afa720b51ecc50742d413ce5168ba79b6800bb875c9"
+    },
+    {
+      "era": "e08",
+      "city": "mbabane",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e08-mbabane-photo-4a257150d4b31ab4",
+      "galleryImageID": "capital-cc-e08-mbabane-photo-4a257150d4b31ab4",
+      "commonsFile": "Mbabane (6035476964).jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/photo-4a257150d4b31ab4a142.jpg",
+        "suora": true,
+        "lahde": "Athena Lao from Bulgaria, Commons (CC BY 2.0)",
+        "selite": "Mbabanen asutus levittäytyy Eswatinin ylänkömaisemaan.",
+        "lyhyt": "Mbabanen asutus levittäytyy Eswatinin ylänkömaisemaan.",
+        "tiedosto": "Mbabane (6035476964).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Athena Lao from Bulgaria, Commons (CC BY 2.0)",
+        "selite": "Mbabanen asutus levittäytyy Eswatinin ylänkömaisemaan.",
+        "lyhyt": "Mbabanen asutus levittäytyy Eswatinin ylänkömaisemaan.",
+        "tiedosto": "Mbabane (6035476964).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/photo-4a257150d4b31ab4a142.jpg",
+        "suora": true,
+        "lahde": "Athena Lao from Bulgaria, Commons (CC BY 2.0)",
+        "selite": "Mbabanen asutus levittäytyy Eswatinin ylänkömaisemaan.",
+        "lyhyt": "Mbabanen asutus levittäytyy Eswatinin ylänkömaisemaan.",
+        "tiedosto": "Mbabane (6035476964).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "4a257150d4b31ab4a142e358d9c05c09f12e938b1667f75aea205048f1b0cacb",
+      "exportSHA256": "4a257150d4b31ab4a142e358d9c05c09f12e938b1667f75aea205048f1b0cacb",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/photo-4a257150d4b31ab4a142.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/photo-4a257150d4b31ab4a142.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e08/mbabane/e1b71284997e71f70b8dc2603e697b5409ab4c96f9fb213150574c0caa95ba1f.jpg",
+      "dimensions": [
+        4000,
+        3000
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+      "sourceContentSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "69a01a2729c451400b6e0f154a12c98189e151fad5eb299a940c2ae7d41d2d43",
+        "semanticContextSHA256": "69a01a2729c451400b6e0f154a12c98189e151fad5eb299a940c2ae7d41d2d43",
+        "subjectTitle": "mbabane — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Athena Lao from Bulgaria",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Mbabane_(6035476964).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/74/Mbabane_%286035476964%29.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Tiedostosivun nimenomainen Author-kenttä, Source ja kaupalliseen käyttöön sallittu kuvalisenssi tarkistettu.",
+            "placeLayer": "IMG_3173",
+            "workLayer": "Laaja ylänkölaakson maisema puineen, hajanaiset talot kauempana. Ei yksittäistä nimettyä taideteosta tai selvästi yksilöityä modernin arkkitehtuurin pääaihetta; ei tunnistettavia kasvoja tai päälle lisättyä tekstiä/vesileimaa/kehystä. Ei rakennusten ikään perustuvaa yleistä vapautusväitettä.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/cc-evidence/993367f625fada19-preview.jpg",
+            "pixelSHA256": "4a257150d4b31ab4a142e358d9c05c09f12e938b1667f75aea205048f1b0cacb",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/cc-evidence/993367f625fada19.html",
+            "sourceDateRaw": "14 July 2011, 17:51",
+            "reservation": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/mbabane/PHOTO/owner.json",
+            "independentQA": "avoin; tämä on CC-ehdokas, ei hyväksytty kokonaisasset"
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/cc-evidence/993367f625fada19-preview.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              4000,
+              3000
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Mbabane_(6035476964).jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/993367f625fada19db487c128e87f4079de28dbcdc8437f6e62b45409ce6f473.body",
+            "sourceSHA256": "be36c79137e48bc2187081a2069cd86ba0acc455a03377f423c0aac4192f9c6c",
+            "authorsFromSource": [
+              "Athena Lao from Bulgaria"
+            ],
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+            "sourceFields": [
+              [
+                "Description Mbabane (6035476964).jpg",
+                "IMG_3173"
+              ],
+              [
+                "Date",
+                "14 July 2011, 17:51"
+              ],
+              [
+                "Source",
+                "IMG_3173"
+              ],
+              [
+                "Author",
+                "Athena Lao from Bulgaria"
+              ],
+              [
+                "Date and time of data generation",
+                "17:51, 14 July 2011"
+              ],
+              [
+                "Date and time of digitizing",
+                "17:51, 14 July 2011"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+            "currentContentSHA256": "46ee3992cfd7a435fef375bf3018c0bc3c88ef3aac4b86d71888b818cb2b3834",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": "rg exact/underscored/originalUrl/decoded URL in own era js: no hits",
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "reviewedCandidateRecordSHA256": "9eb8e9185732c8ba2a972034ef6e50762ff8ebbedef13924812672d8a4fd7423",
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.250479+00:00"
+          },
+          "qaReason": "Aito laaja ylänkömaisema, puut ja etäinen asutus; ei yksilöityä rakennusteosta pääaiheena eikä luettavia kasvoja/lisättyä tekstiä. Commonsin tiedostonimi Mbabane ja Geography of Mbabane sitovat kuvauspaikkaan; IMG_3173-rivi ei yksin selitä paikkaa. Yleinen kuvateksti vastaa näkymää. Vuosi 2011 kirjataan, ei tuoreusväitettä. Todellinen kuvaaja, kaupallinen CC-lisenssiversio ja alkuperäismitat varmennettu lähdesivusta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Mbabanen asutus levittäytyy Eswatinin ylänkömaisemaan.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/qa.json",
+        "fileSHA256": "e959af27b806faf657b837f5bf114b3f23a79adbe8f47ec67c7912827c8c7c4c",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Mbabane (6035476964).jpg",
+          "sha256": "4a257150d4b31ab4a142e358d9c05c09f12e938b1667f75aea205048f1b0cacb",
+          "verdict": "accepted",
+          "reason": "Aito laaja ylänkömaisema, puut ja etäinen asutus; ei yksilöityä rakennusteosta pääaiheena eikä luettavia kasvoja/lisättyä tekstiä. Commonsin tiedostonimi Mbabane ja Geography of Mbabane sitovat kuvauspaikkaan; IMG_3173-rivi ei yksin selitä paikkaa. Yleinen kuvateksti vastaa näkymää. Vuosi 2011 kirjataan, ei tuoreusväitettä. Todellinen kuvaaja, kaupallinen CC-lisenssiversio ja alkuperäismitat varmennettu lähdesivusta.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/cc-evidence/993367f625fada19-preview.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              4000,
+              3000
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Mbabane_(6035476964).jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/993367f625fada19db487c128e87f4079de28dbcdc8437f6e62b45409ce6f473.body",
+            "sourceSHA256": "be36c79137e48bc2187081a2069cd86ba0acc455a03377f423c0aac4192f9c6c",
+            "authorsFromSource": [
+              "Athena Lao from Bulgaria"
+            ],
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+            "sourceFields": [
+              [
+                "Description Mbabane (6035476964).jpg",
+                "IMG_3173"
+              ],
+              [
+                "Date",
+                "14 July 2011, 17:51"
+              ],
+              [
+                "Source",
+                "IMG_3173"
+              ],
+              [
+                "Author",
+                "Athena Lao from Bulgaria"
+              ],
+              [
+                "Date and time of data generation",
+                "17:51, 14 July 2011"
+              ],
+              [
+                "Date and time of digitizing",
+                "17:51, 14 July 2011"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+            "currentContentSHA256": "46ee3992cfd7a435fef375bf3018c0bc3c88ef3aac4b86d71888b818cb2b3834",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": "rg exact/underscored/originalUrl/decoded URL in own era js: no hits",
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "reviewedCandidateRecordSHA256": "9eb8e9185732c8ba2a972034ef6e50762ff8ebbedef13924812672d8a4fd7423",
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.250479+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/qa.json",
+            "sha256": "e959af27b806faf657b837f5bf114b3f23a79adbe8f47ec67c7912827c8c7c4c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/illustration-qa-extra.json",
+            "sha256": "99a6a9158f8bf5098eb47b80ede15ee5cc04577bd03608f1171384a5aaaf3e75"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "mbabane",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Mbabane (6035476964).jpg",
+        "sha256": "4a257150d4b31ab4a142e358d9c05c09f12e938b1667f75aea205048f1b0cacb",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Mbabane_(6035476964).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/74/Mbabane_%286035476964%29.jpg",
+        "author": "Athena Lao from Bulgaria",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/deed.en",
+        "width": 4000,
+        "height": 3000,
+        "originalSHA256": "4a257150d4b31ab4a142e358d9c05c09f12e938b1667f75aea205048f1b0cacb",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/photo-4a257150d4b31ab4a142.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/photo-4a257150d4b31ab4a142.jpg",
+        "bytes": 3192476,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:54:13.715647+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Mbabane (6035476964).jpg",
+        "lahde": "Athena Lao from Bulgaria, Commons (CC BY 2.0)",
+        "selite": "Mbabanen asutus levittäytyy Eswatinin ylänkömaisemaan.",
+        "lyhyt": "Mbabanen asutus levittäytyy Eswatinin ylänkömaisemaan."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Athena Lao from Bulgaria, Commons (CC BY 2.0)",
+        "selite": "Mbabanen asutus levittäytyy Eswatinin ylänkömaisemaan.",
+        "lyhyt": "Mbabanen asutus levittäytyy Eswatinin ylänkömaisemaan.",
+        "tiedosto": "Mbabane (6035476964).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
+      "targetAfterSHA256": "69a01a2729c451400b6e0f154a12c98189e151fad5eb299a940c2ae7d41d2d43",
+      "contextAfterSHA256": "69a01a2729c451400b6e0f154a12c98189e151fad5eb299a940c2ae7d41d2d43"
+    },
+    {
+      "era": "e08",
+      "city": "mbabane",
+      "slot": "N1",
+      "type": "commons",
+      "assetID": "capital-cc-e08-mbabane-n1-5ed9110863c5fa0c",
+      "galleryImageID": "capital-cc-e08-mbabane-n1-5ed9110863c5fa0c",
+      "commonsFile": "Granite monolith.jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Sibeben kallio\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Sibeben kallio",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/n1-5ed9110863c5fa0c06c5.jpg",
+        "suora": true,
+        "lahde": "theswazigirl, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Retkeilijöitä Sibeben graniittivuorella, 2012.",
+        "lyhyt": "Retkeilijöitä Sibeben graniittivuorella, 2012.",
+        "tiedosto": "Granite monolith.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "theswazigirl, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Retkeilijöitä Sibeben graniittivuorella, 2012.",
+        "lyhyt": "Retkeilijöitä Sibeben graniittivuorella, 2012.",
+        "tiedosto": "Granite monolith.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/n1-5ed9110863c5fa0c06c5.jpg",
+        "suora": true,
+        "lahde": "theswazigirl, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Retkeilijöitä Sibeben graniittivuorella, 2012.",
+        "lyhyt": "Retkeilijöitä Sibeben graniittivuorella, 2012.",
+        "tiedosto": "Granite monolith.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5ed9110863c5fa0c06c5c1e4a11c20e5bdd00850803eef54210788385af4a062",
+      "exportSHA256": "5ed9110863c5fa0c06c5c1e4a11c20e5bdd00850803eef54210788385af4a062",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/n1-5ed9110863c5fa0c06c5.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/n1-5ed9110863c5fa0c06c5.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e08/mbabane/beb391d2739444362915f8c56aeb73b2434a42f097dca08a2c8a3066b85a7c3a.jpg",
+      "dimensions": [
+        1498,
+        1005
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+      "sourceContentSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "5b191d54c68cce16691545b16d625a14feab12d09ab4bf675738bee0af2d8ee6",
+        "semanticContextSHA256": "1f4aeccdb60c855282455453dc375fcbbac7b0520834e625f31ffe3809c32ca1",
+        "subjectTitle": "Sibeben kallio",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "theswazigirl",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Granite_monolith.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Granite_monolith.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Tiedostosivun Author, Source own work ja kuvan CC-lisenssi tarkistettu.",
+            "workLayer": "Luonnollinen graniittivuori pääaiheena. Lähimmät retkeilijät selin, etäisten kasvot eivät erotu. Vaatteiden aidot kirjoitukset eivät päälle lisättyä tekstiä/mainoskuva. Ei rakennuksia, teoksia, vesileimaa tai kehyksiä.",
+            "placeBoundary": "Description nimeää Sibeben graniittivuoren Eswatinissa. sibebe-place.html sitoo sen Mbabanen lähistölle, 10 km kaupungista.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/cc-evidence/310877a982453f9a-preview.jpg",
+            "pixelSHA256": "5ed9110863c5fa0c06c5c1e4a11c20e5bdd00850803eef54210788385af4a062",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/cc-evidence/310877a982453f9a.html",
+            "sourceSHA256": "b3b6b889a2c3ef1758a2a918eb7a704b08f2c04f0d7f82d44b0813bc307a6e77",
+            "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/mbabane/N1/owner.json",
+            "notAlreadyInPack": "rg täsmällisillä tiedostonimillä e08/js/packs: ei osumia",
+            "independentQA": "avoin"
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/cc-evidence/310877a982453f9a-preview.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              1498,
+              1005
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Granite_monolith.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/310877a982453f9aa27747393b224edd63cf429fc7e6b084dd2ddc5b5a059974.body",
+            "sourceSHA256": "b3b6b889a2c3ef1758a2a918eb7a704b08f2c04f0d7f82d44b0813bc307a6e77",
+            "authorsFromSource": [
+              "theswazigirl"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "sourceFields": [
+              [
+                "Description Granite monolith.jpg",
+                "English: The runners/walkers going up Sibebe, a granite mountain in Swaziland."
+              ],
+              [
+                "Date",
+                "23 October 2012, 10:06:12"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "theswazigirl"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+            "currentContentSHA256": "46ee3992cfd7a435fef375bf3018c0bc3c88ef3aac4b86d71888b818cb2b3834",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": {
+              "status": "no hits",
+              "output": ""
+            },
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "placeSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/cc-evidence/sibebe-place.html",
+            "naturalMarkings": "Original clothing event print, no overlay or product-advertisement framing.",
+            "reviewedCandidateRecordSHA256": "71020a5a58f3437183a82ecceee7e8c81247e8052e57a5664c18b863b3fc866d"
+          },
+          "qaReason": "Aito Sibeben graniittivuoren ja retkeilijöiden valokuva katsottu alkuperäiskoossa1498×1005. Lähimmät ihmiset selin, etäisten kasvopiirteet eivät erotu. Luonnolliset tapahtumapaidat/merkinnät kuuluvat dokumentaariseen retkimaisemaan; kuva ei ole mainos-/pakkauskuva eikä sisältänyt lisättyä grafiikkaa, watermarkia tai kehystä. Description yksilöi Sibeben ja erillinen paikkalähde sitoo sen Mbabanen lähelle. Luonnonvuori, ruohomaa ja tavallinen polku pääaiheina, ei kuvattua taideteosta/rakennusta. Kuva sopii nykyisen N1-tekstin luonto- ja yhteisretkiaiheseen, mutta ei vuoden1873 dokumentiksi tai vuoden2026 reittilupaukseksi. theswazigirl/Own work/CC BY-SA3.0 ja23.10.2012 varmennettu. Kuvateksti pysyy yleisissä retkeilijöissä, ei arvaa tietyn vuosittaisen tapahtuman päivää."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Retkeilijöitä Sibeben graniittivuorella, 2012.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/qa.json",
+        "fileSHA256": "e959af27b806faf657b837f5bf114b3f23a79adbe8f47ec67c7912827c8c7c4c",
+        "item": {
+          "slot": "N1",
+          "targetJsonPath": "$.nahtavyydet[\"Sibeben kallio\"].kuvat[0]",
+          "commonsFile": "Granite monolith.jpg",
+          "sha256": "5ed9110863c5fa0c06c5c1e4a11c20e5bdd00850803eef54210788385af4a062",
+          "verdict": "accepted",
+          "reason": "Aito Sibeben graniittivuoren ja retkeilijöiden valokuva katsottu alkuperäiskoossa1498×1005. Lähimmät ihmiset selin, etäisten kasvopiirteet eivät erotu. Luonnolliset tapahtumapaidat/merkinnät kuuluvat dokumentaariseen retkimaisemaan; kuva ei ole mainos-/pakkauskuva eikä sisältänyt lisättyä grafiikkaa, watermarkia tai kehystä. Description yksilöi Sibeben ja erillinen paikkalähde sitoo sen Mbabanen lähelle. Luonnonvuori, ruohomaa ja tavallinen polku pääaiheina, ei kuvattua taideteosta/rakennusta. Kuva sopii nykyisen N1-tekstin luonto- ja yhteisretkiaiheseen, mutta ei vuoden1873 dokumentiksi tai vuoden2026 reittilupaukseksi. theswazigirl/Own work/CC BY-SA3.0 ja23.10.2012 varmennettu. Kuvateksti pysyy yleisissä retkeilijöissä, ei arvaa tietyn vuosittaisen tapahtuman päivää.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/cc-evidence/310877a982453f9a-preview.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              1498,
+              1005
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Granite_monolith.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/310877a982453f9aa27747393b224edd63cf429fc7e6b084dd2ddc5b5a059974.body",
+            "sourceSHA256": "b3b6b889a2c3ef1758a2a918eb7a704b08f2c04f0d7f82d44b0813bc307a6e77",
+            "authorsFromSource": [
+              "theswazigirl"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+            "sourceFields": [
+              [
+                "Description Granite monolith.jpg",
+                "English: The runners/walkers going up Sibebe, a granite mountain in Swaziland."
+              ],
+              [
+                "Date",
+                "23 October 2012, 10:06:12"
+              ],
+              [
+                "Source",
+                "Own work"
+              ],
+              [
+                "Author",
+                "theswazigirl"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+            "currentContentSHA256": "46ee3992cfd7a435fef375bf3018c0bc3c88ef3aac4b86d71888b818cb2b3834",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": {
+              "status": "no hits",
+              "output": ""
+            },
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "placeSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/cc-evidence/sibebe-place.html",
+            "naturalMarkings": "Original clothing event print, no overlay or product-advertisement framing.",
+            "reviewedCandidateRecordSHA256": "71020a5a58f3437183a82ecceee7e8c81247e8052e57a5664c18b863b3fc866d"
+          },
+          "reviewedAt": "2026-10-12T19:26:10.882018+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/qa.json",
+            "sha256": "e959af27b806faf657b837f5bf114b3f23a79adbe8f47ec67c7912827c8c7c4c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/illustration-qa-extra.json",
+            "sha256": "99a6a9158f8bf5098eb47b80ede15ee5cc04577bd03608f1171384a5aaaf3e75"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "mbabane",
+        "slot": "N1",
+        "targetJsonPath": "$.nahtavyydet[\"Sibeben kallio\"].kuvat[0]",
+        "commonsFile": "Granite monolith.jpg",
+        "sha256": "5ed9110863c5fa0c06c5c1e4a11c20e5bdd00850803eef54210788385af4a062",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Granite_monolith.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Granite_monolith.jpg",
+        "author": "theswazigirl",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "width": 1498,
+        "height": 1005,
+        "originalSHA256": "5ed9110863c5fa0c06c5c1e4a11c20e5bdd00850803eef54210788385af4a062",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/n1-5ed9110863c5fa0c06c5.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/n1-5ed9110863c5fa0c06c5.jpg",
+        "bytes": 384070,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:27:14.926309+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Granite monolith.jpg",
+        "lahde": "theswazigirl, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Retkeilijöitä Sibeben graniittivuorella, 2012.",
+        "lyhyt": "Retkeilijöitä Sibeben graniittivuorella, 2012."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "theswazigirl, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Retkeilijöitä Sibeben graniittivuorella, 2012.",
+        "lyhyt": "Retkeilijöitä Sibeben graniittivuorella, 2012.",
+        "tiedosto": "Granite monolith.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
+      "targetAfterSHA256": "5b191d54c68cce16691545b16d625a14feab12d09ab4bf675738bee0af2d8ee6",
+      "contextAfterSHA256": "1f4aeccdb60c855282455453dc375fcbbac7b0520834e625f31ffe3809c32ca1"
+    },
+    {
+      "era": "e08",
+      "city": "mbabane",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e08-mbabane-c1-6df3018135c8c917",
+      "galleryImageID": "capital-cc-e08-mbabane-c1-6df3018135c8c917",
+      "commonsFile": "Mbabane, Eswatini.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/c1-6df3018135c8c9179495.jpg",
+        "suora": true,
+        "lahde": "Axelspace Corporation, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Mbabanen kaupunki- ja jokilaaksoaluetta Hodoyoshi-1-satelliitista, 2017.",
+        "lyhyt": "Mbabanen kaupunki- ja jokilaaksoaluetta Hodoyoshi-1-satelliitista, 2017.",
+        "tiedosto": "Mbabane, Eswatini.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Axelspace Corporation, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Mbabanen kaupunki- ja jokilaaksoaluetta Hodoyoshi-1-satelliitista, 2017.",
+        "lyhyt": "Mbabanen kaupunki- ja jokilaaksoaluetta Hodoyoshi-1-satelliitista, 2017.",
+        "tiedosto": "Mbabane, Eswatini.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/c1-6df3018135c8c9179495.jpg",
+        "suora": true,
+        "lahde": "Axelspace Corporation, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Mbabanen kaupunki- ja jokilaaksoaluetta Hodoyoshi-1-satelliitista, 2017.",
+        "lyhyt": "Mbabanen kaupunki- ja jokilaaksoaluetta Hodoyoshi-1-satelliitista, 2017.",
+        "tiedosto": "Mbabane, Eswatini.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "6df3018135c8c917949548cda4c7ab0527ebb75e56933f21e993eb8f8ffde450",
+      "exportSHA256": "6df3018135c8c917949548cda4c7ab0527ebb75e56933f21e993eb8f8ffde450",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/c1-6df3018135c8c9179495.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/c1-6df3018135c8c9179495.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e08/mbabane/03c06bb87489f2b7157c8179f7b114cc718e9dad3e33a32a4da4a23a2de24782.jpg",
+      "dimensions": [
+        2048,
+        1280
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+      "sourceContentSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "a0f4c4b8c6d7c3fb39d3f69008f833c819d3f3ac54c2bc412af136bf47936bae",
+        "semanticContextSHA256": "a0f4c4b8c6d7c3fb39d3f69008f833c819d3f3ac54c2bc412af136bf47936bae",
+        "subjectTitle": "Mbabane",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Axelspace Corporation",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Mbabane,_Eswatini.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Mbabane%2C_Eswatini.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Commonsin Author Axelspace Corporation, kuvan Licensing CC BY-SA 4.0. Lisäksi itse alkuperäisessä JPEG-tiedostossa dc:creator Axelspace Corp., dc:rights Creative Commons Attribution-ShareAlike 4.0 International License ja xmpRights:WebStatement https://creativecommons.org/licenses/by-sa/4.0/; CreatorTool Axelspace RGB/NIR Standardization Software. Alkuperäisen yritys-URL:n 404 ei poista alkuperäistiedoston nimenomaista lisenssimerkintää. Fukumoto-uploaderia ei väitetä valokuvan tekijäksi.",
+            "workLayer": "Aito laaja satelliittihavainto kaupungin asutuksesta, tiestöstä, jokilaaksosta ja luonnollisesta ylängöstä. Yksittäisten rakennusten tai teosten luovia yksityiskohtia ei voi tunnistaa. Ei kasvoja, lisättyä tekstiä, kehystä, vesileimaa tai AI-paikkakuvitusta.",
+            "placeBoundary": "Commonsin tiedostosivu nimeää Mbabane, Eswatini as viewed by Hodoyoshi-1, päiväys 5.7.2017 ja koordinaatit -26.305448,31.136672. Alkuperäinen Axelspace-URL nimeää Mbabane-Eswatini. Pikseleissä sisämaan kaupunki-/jokilaakso, ei meri tai Belizen Blue Hole. XMP:n title-kentässä on ristiriitainen The Great Blue Hole, Belize; sitä ei käytetä paikkatodisteena. Muut nimetty lähde, koordinaatit ja näkyvä sisämaan aihe vastaavat Mbabanea.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/cc-evidence/34e94d8319c750b0-preview.jpg",
+            "pixelSHA256": "6df3018135c8c917949548cda4c7ab0527ebb75e56933f21e993eb8f8ffde450",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/cc-evidence/34e94d8319c750b0.html",
+            "sourceSHA256": "bf3cf4c204606d50c409d30b24db3922428daf62b26ec0740a4753a9bafb192c",
+            "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/mbabane/C1/owner.json",
+            "notAlreadyInPack": "Täsmällinen tiedostonimi, underscore-nimi ja originalUrl haettu e08/js/packs: ei osumia.",
+            "independentQA": "avoin",
+            "searchRound": 2,
+            "originalRightsXMP": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/cc-evidence/axelspace-original-rights.xmp",
+            "originalRightsXMPSHA256": "fd9336b4e0c5316fbd1f8a02ffcae42f60c95a868de139c0d1d643c68ab78378",
+            "authorAliasResolution": "Commonsin nimenomainen Author Axelspace Corporation; alkuperäisen EXIF/XMP Artist Axelspace Corp. ovat lähteessä saman yrityksen kaksi kirjoitusasua."
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/cc-evidence/34e94d8319c750b0-preview.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              2048,
+              1280
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Mbabane,_Eswatini.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/34e94d8319c750b0539a5dbc5e9b8af88b7ef6e44c9b7638a422870d428ec9d3.body",
+            "sourceSHA256": "bf3cf4c204606d50c409d30b24db3922428daf62b26ec0740a4753a9bafb192c",
+            "authorsFromSource": [
+              "Axelspace Corporation",
+              "Axelspace Corp."
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "sourceFields": [
+              [
+                "Description Mbabane, Eswatini.jpg",
+                "English: Mbabane, Eswatini, as viewed by Hodoyoshi-1 satellite."
+              ],
+              [
+                "Date",
+                "5 July 2017"
+              ],
+              [
+                "Source",
+                "https://www.axelspace.com/en/hodoyoshi-1-images/mbabane-eswatini_/"
+              ],
+              [
+                "Author",
+                "Axelspace Corporation"
+              ],
+              [
+                "Camera location",
+                "26° 18′ 19.61″ S, 31° 08′ 12.02″ E"
+              ],
+              [
+                "Author",
+                "Axelspace Corp."
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+            "currentContentSHA256": "46ee3992cfd7a435fef375bf3018c0bc3c88ef3aac4b86d71888b818cb2b3834",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": {
+              "status": "no hits",
+              "output": ""
+            },
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "embeddedXMPProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/qa-evidence/axelspace-native-xmp-check.json",
+            "placeTitleConflict": "XMP title The Great Blue Hole, Belize is inconsistent and not used; named original city URL, Commons description/coordinates and inland observed scene support Mbabane.",
+            "reviewedCandidateRecordSHA256": "639d0a55a25059636897d8ec8df98b585ff4d849098ac2c162d8d1e28ccdfbd3",
+            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/cc-selection.json"
+          },
+          "qaReason": "Aito laaja Hodoyoshi-1:n satelliittihavainto Mbabanen kaupunki-/jokilaaksoalueesta katsottu. Rinteet, asutus ja tiestö näyttävät todellisen maantieteellisen asettelun; ei yksilöityä rakennus-/taideteoksen pääaihetta tai kasvoja, lisättyä tekstiä, watermarkia tai kehystä. Kuvateksti nimeää satelliitin, ei tavallista katutason valokuvaa tai tuoretta2026 näkymää. Commonsin Description, yksilöllinen Axelspace Mbabane-Eswatini -lähdeURL ja koordinaatit -26.305448/31.136672 tukevat paikkaa; nähty sisämaan kaupunki-/laakso ei vastaa XMP:n ristiriitaista Great Blue Hole,Belize -titleä. Tämä title-virhe säilyy auditissa eikä sitä käytetä paikkatodisteena. Commonsin nimenomainen tekijä Axelspace Corporation ja alkuperäisessä katsotussa JPEG:ssä itse luettu dc:creator Axelspace Corp. sekä dc:rights/xmpRights CC BY-SA4.0 antavat erillisen täsmäkuvan lupaperusteen myös yrityksen lähdeURL:n404:n jälkeen. Ei uploaderista arvattua tekijää, koko yrityksen aineiston blanket-lupaa tai fiktiivistä AI-kaupunkikantta. Alkuperäismitat2048×1280 ja5.7.2017 varmennettu."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Mbabanen kaupunki- ja jokilaaksoaluetta Hodoyoshi-1-satelliitista, 2017.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/qa.json",
+        "fileSHA256": "e959af27b806faf657b837f5bf114b3f23a79adbe8f47ec67c7912827c8c7c4c",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "Mbabane, Eswatini.jpg",
+          "sha256": "6df3018135c8c917949548cda4c7ab0527ebb75e56933f21e993eb8f8ffde450",
+          "verdict": "accepted",
+          "reason": "Aito laaja Hodoyoshi-1:n satelliittihavainto Mbabanen kaupunki-/jokilaaksoalueesta katsottu. Rinteet, asutus ja tiestö näyttävät todellisen maantieteellisen asettelun; ei yksilöityä rakennus-/taideteoksen pääaihetta tai kasvoja, lisättyä tekstiä, watermarkia tai kehystä. Kuvateksti nimeää satelliitin, ei tavallista katutason valokuvaa tai tuoretta2026 näkymää. Commonsin Description, yksilöllinen Axelspace Mbabane-Eswatini -lähdeURL ja koordinaatit -26.305448/31.136672 tukevat paikkaa; nähty sisämaan kaupunki-/laakso ei vastaa XMP:n ristiriitaista Great Blue Hole,Belize -titleä. Tämä title-virhe säilyy auditissa eikä sitä käytetä paikkatodisteena. Commonsin nimenomainen tekijä Axelspace Corporation ja alkuperäisessä katsotussa JPEG:ssä itse luettu dc:creator Axelspace Corp. sekä dc:rights/xmpRights CC BY-SA4.0 antavat erillisen täsmäkuvan lupaperusteen myös yrityksen lähdeURL:n404:n jälkeen. Ei uploaderista arvattua tekijää, koko yrityksen aineiston blanket-lupaa tai fiktiivistä AI-kaupunkikantta. Alkuperäismitat2048×1280 ja5.7.2017 varmennettu.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/cc-evidence/34e94d8319c750b0-preview.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              2048,
+              1280
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Mbabane,_Eswatini.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/34e94d8319c750b0539a5dbc5e9b8af88b7ef6e44c9b7638a422870d428ec9d3.body",
+            "sourceSHA256": "bf3cf4c204606d50c409d30b24db3922428daf62b26ec0740a4753a9bafb192c",
+            "authorsFromSource": [
+              "Axelspace Corporation",
+              "Axelspace Corp."
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "sourceFields": [
+              [
+                "Description Mbabane, Eswatini.jpg",
+                "English: Mbabane, Eswatini, as viewed by Hodoyoshi-1 satellite."
+              ],
+              [
+                "Date",
+                "5 July 2017"
+              ],
+              [
+                "Source",
+                "https://www.axelspace.com/en/hodoyoshi-1-images/mbabane-eswatini_/"
+              ],
+              [
+                "Author",
+                "Axelspace Corporation"
+              ],
+              [
+                "Camera location",
+                "26° 18′ 19.61″ S, 31° 08′ 12.02″ E"
+              ],
+              [
+                "Author",
+                "Axelspace Corp."
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/mbabane/sisalto.json",
+            "currentContentSHA256": "46ee3992cfd7a435fef375bf3018c0bc3c88ef3aac4b86d71888b818cb2b3834",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": {
+              "status": "no hits",
+              "output": ""
+            },
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "embeddedXMPProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/qa-evidence/axelspace-native-xmp-check.json",
+            "placeTitleConflict": "XMP title The Great Blue Hole, Belize is inconsistent and not used; named original city URL, Commons description/coordinates and inland observed scene support Mbabane.",
+            "reviewedCandidateRecordSHA256": "639d0a55a25059636897d8ec8df98b585ff4d849098ac2c162d8d1e28ccdfbd3",
+            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/cc-selection.json"
+          },
+          "reviewedAt": "2026-10-12T20:08:28.159988+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/qa.json",
+            "sha256": "e959af27b806faf657b837f5bf114b3f23a79adbe8f47ec67c7912827c8c7c4c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/mbabane/illustration-qa-extra.json",
+            "sha256": "99a6a9158f8bf5098eb47b80ede15ee5cc04577bd03608f1171384a5aaaf3e75"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "mbabane",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Mbabane, Eswatini.jpg",
+        "sha256": "6df3018135c8c917949548cda4c7ab0527ebb75e56933f21e993eb8f8ffde450",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Mbabane,_Eswatini.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Mbabane%2C_Eswatini.jpg",
+        "author": "Axelspace Corporation",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 2048,
+        "height": 1280,
+        "originalSHA256": "6df3018135c8c917949548cda4c7ab0527ebb75e56933f21e993eb8f8ffde450",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/c1-6df3018135c8c9179495.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/c1-6df3018135c8c9179495.jpg",
+        "bytes": 1261800,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:09:08.775546+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Mbabane, Eswatini.jpg",
+        "lahde": "Axelspace Corporation, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Mbabanen kaupunki- ja jokilaaksoaluetta Hodoyoshi-1-satelliitista, 2017.",
+        "lyhyt": "Mbabanen kaupunki- ja jokilaaksoaluetta Hodoyoshi-1-satelliitista, 2017."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Axelspace Corporation, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Mbabanen kaupunki- ja jokilaaksoaluetta Hodoyoshi-1-satelliitista, 2017.",
+        "lyhyt": "Mbabanen kaupunki- ja jokilaaksoaluetta Hodoyoshi-1-satelliitista, 2017.",
+        "tiedosto": "Mbabane, Eswatini.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "7ec11728e15ba74a9c36aea0a2ee1d687632835d6fd8bacf4e19668f240b722b",
+      "targetAfterSHA256": "a0f4c4b8c6d7c3fb39d3f69008f833c819d3f3ac54c2bc412af136bf47936bae",
+      "contextAfterSHA256": "a0f4c4b8c6d7c3fb39d3f69008f833c819d3f3ac54c2bc412af136bf47936bae"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}

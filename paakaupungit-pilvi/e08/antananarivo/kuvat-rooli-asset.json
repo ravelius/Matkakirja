@@ -1,0 +1,2317 @@
+{
+  "schemaVersion": "capital-city-role-assets/v1",
+  "era": "e08",
+  "city": "antananarivo",
+  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "sourceContentAfterSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+  "assets": [
+    {
+      "era": "e08",
+      "city": "antananarivo",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e08-antananarivo-TRAVELER-illustration-v1-20261012",
+      "galleryImageID": "e08-antananarivo-TRAVELER-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-TRAVELER-illustration-v1-20261012-11bbb765553e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva puusta ja tiilestä rakennusmateriaaleina.",
+        "lyhyt": "Havainnekuva puusta ja tiilestä rakennusmateriaaleina."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-TRAVELER-illustration-v1-20261012-11bbb765553e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva puusta ja tiilestä rakennusmateriaaleina.",
+        "lyhyt": "Havainnekuva puusta ja tiilestä rakennusmateriaaleina."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "11bbb765553ec58842cbc042c96c0495e0c387e5deaff1256424c69fa1b09f3e",
+      "exportSHA256": "ebe21f4e3f0f1211edb3f55d4a928b417892a36da6ab05ece098dd0c1f51ad4b",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-TRAVELER-illustration-v1-20261012-11bbb765553e.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-TRAVELER-illustration-v1-20261012-11bbb765553e.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-TRAVELER-illustration-v1-20261012-11bbb765553e.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+      "sourceContentSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "478b7dfb2752c4d18172101af224b800522c562f78201aa146aa795bf8b91c77",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic sourced natural/food/material subject or traditional functional object; no named protected artwork or fabricated city scene.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-TRAVELER-illustration-v1-20261012/image.png",
+            "width": 1024,
+            "height": 1536,
+            "sha256": "11bbb765553ec58842cbc042c96c0495e0c387e5deaff1256424c69fa1b09f3e",
+            "nativeGeometry": {
+              "rawWidth": 1024,
+              "rawHeight": 1536,
+              "exifOrientation": 1,
+              "width": 1024,
+              "height": 1536
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/fcf39ee63ad5-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+              "sha256": "6eeb9bb10636c02adc036c87a5ab9d4f4cf8ff4c5f96d0ed71c88d047f9fe8b8",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-antananarivo-TRAVELER-illustration-v1-20261012",
+              "nativeSHA256": "11bbb765553ec58842cbc042c96c0495e0c387e5deaff1256424c69fa1b09f3e",
+              "verdict": "accepted",
+              "reason": "Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Puun ja tiilen materiaalikuva sopii oppaan rakennusaiheeseen ilman nimetyn talon jäljennöstä.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-TRAVELER-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "11bbb765553ec58842cbc042c96c0495e0c387e5deaff1256424c69fa1b09f3e",
+                "nativeWidth": 1024,
+                "nativeHeight": 1536,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kulunut puinen verantarakenne ja tiiliseinä lähikuvassa. Luontevat puunsyyt, saumat ja varjot; ei kaupunkipanoraamaa, tekstiä tai henkilöitä.",
+                "captionFi": "Havainnekuva puusta ja tiilestä rakennusmateriaaleina.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                "contentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                "targetCurrentlyPresent": true,
+                "targetText": "",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                "topicEvidence": "Oppaan vanhat asuinkorttelit -jakso nimeää tiilen ja verannat. Selite sanoo yleiset materiaalit.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                  "sourceContentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                  "targetText": "Antananarivoon saavutaan Ivaton lentoaseman kautta. Keskustaan siirtymiseen kannattaa varata aikaa ruuhkien vuoksi. Analakelyn ympäristössä voi kulkea kävellen, ja pidempiin matkoihin on takseja sekä paikallisbusseja. Rinteillä portaat ovat osa reittiä. Kaupunkipäivään sopivat kauppakorttelit, vanhat asuintalot ja Anosy-järven ympäristö.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                  "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                  "supportingContext": "Current travel panel and the same city's sourced flora, fauna, food or material topics.",
+                  "subjectBasis": "A vertical close material study of weathered ordinary veranda timber and red clay bricks; focus on natural wood and brick, no complete or recognizable house facade, named historic building, location or carved protected artwork."
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "b709a1b50cece9b3e9dfbc9bfb4ed4dbfbffb158393715f61ea5eac5ef65693a",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/extra-review-snapshots/6eeb9bb10636c02adc036c87a5ab9d4f4cf8ff4c5f96d0ed71c88d047f9fe8b8.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva puusta ja tiilestä rakennusmateriaaleina.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-2 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Puun ja tiilen materiaalikuva sopii oppaan rakennusaiheeseen ilman nimetyn talon jäljennöstä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva puusta ja tiilestä rakennusmateriaaleina.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa.json",
+        "fileSHA256": "81ec52251782f59efec0bca1659366fda16fb64ab9807263d870e3eb1fc30eda",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e08-antananarivo-TRAVELER-illustration-v1-20261012",
+          "sha256": "11bbb765553ec58842cbc042c96c0495e0c387e5deaff1256424c69fa1b09f3e",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-2 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Puun ja tiilen materiaalikuva sopii oppaan rakennusaiheeseen ilman nimetyn talon jäljennöstä.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-TRAVELER-illustration-v1-20261012/image.png",
+            "width": 1024,
+            "height": 1536,
+            "sha256": "11bbb765553ec58842cbc042c96c0495e0c387e5deaff1256424c69fa1b09f3e",
+            "nativeGeometry": {
+              "rawWidth": 1024,
+              "rawHeight": 1536,
+              "exifOrientation": 1,
+              "width": 1024,
+              "height": 1536
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/fcf39ee63ad5-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+              "sha256": "6eeb9bb10636c02adc036c87a5ab9d4f4cf8ff4c5f96d0ed71c88d047f9fe8b8",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-antananarivo-TRAVELER-illustration-v1-20261012",
+              "nativeSHA256": "11bbb765553ec58842cbc042c96c0495e0c387e5deaff1256424c69fa1b09f3e",
+              "verdict": "accepted",
+              "reason": "Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Puun ja tiilen materiaalikuva sopii oppaan rakennusaiheeseen ilman nimetyn talon jäljennöstä.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-TRAVELER-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "11bbb765553ec58842cbc042c96c0495e0c387e5deaff1256424c69fa1b09f3e",
+                "nativeWidth": 1024,
+                "nativeHeight": 1536,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kulunut puinen verantarakenne ja tiiliseinä lähikuvassa. Luontevat puunsyyt, saumat ja varjot; ei kaupunkipanoraamaa, tekstiä tai henkilöitä.",
+                "captionFi": "Havainnekuva puusta ja tiilestä rakennusmateriaaleina.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                "contentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                "targetCurrentlyPresent": true,
+                "targetText": "",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                "topicEvidence": "Oppaan vanhat asuinkorttelit -jakso nimeää tiilen ja verannat. Selite sanoo yleiset materiaalit.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                  "sourceContentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                  "targetText": "Antananarivoon saavutaan Ivaton lentoaseman kautta. Keskustaan siirtymiseen kannattaa varata aikaa ruuhkien vuoksi. Analakelyn ympäristössä voi kulkea kävellen, ja pidempiin matkoihin on takseja sekä paikallisbusseja. Rinteillä portaat ovat osa reittiä. Kaupunkipäivään sopivat kauppakorttelit, vanhat asuintalot ja Anosy-järven ympäristö.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                  "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                  "supportingContext": "Current travel panel and the same city's sourced flora, fauna, food or material topics.",
+                  "subjectBasis": "A vertical close material study of weathered ordinary veranda timber and red clay bricks; focus on natural wood and brick, no complete or recognizable house facade, named historic building, location or carved protected artwork."
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "b709a1b50cece9b3e9dfbc9bfb4ed4dbfbffb158393715f61ea5eac5ef65693a",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/extra-review-snapshots/6eeb9bb10636c02adc036c87a5ab9d4f4cf8ff4c5f96d0ed71c88d047f9fe8b8.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva puusta ja tiilestä rakennusmateriaaleina.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+              "sha256": "6eeb9bb10636c02adc036c87a5ab9d4f4cf8ff4c5f96d0ed71c88d047f9fe8b8",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-antananarivo-TRAVELER-illustration-v1-20261012",
+              "nativeSHA256": "11bbb765553ec58842cbc042c96c0495e0c387e5deaff1256424c69fa1b09f3e",
+              "verdict": "accepted",
+              "reason": "Natiivi pystykuva 1024×1536 (0,667) täyttää TRAVELER-vaatimuksen. Puun ja tiilen materiaalikuva sopii oppaan rakennusaiheeseen ilman nimetyn talon jäljennöstä.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-TRAVELER-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "11bbb765553ec58842cbc042c96c0495e0c387e5deaff1256424c69fa1b09f3e",
+                "nativeWidth": 1024,
+                "nativeHeight": 1536,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kulunut puinen verantarakenne ja tiiliseinä lähikuvassa. Luontevat puunsyyt, saumat ja varjot; ei kaupunkipanoraamaa, tekstiä tai henkilöitä.",
+                "captionFi": "Havainnekuva puusta ja tiilestä rakennusmateriaaleina.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                "contentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                "targetCurrentlyPresent": true,
+                "targetText": "",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                "topicEvidence": "Oppaan vanhat asuinkorttelit -jakso nimeää tiilen ja verannat. Selite sanoo yleiset materiaalit.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                  "sourceContentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                  "targetText": "Antananarivoon saavutaan Ivaton lentoaseman kautta. Keskustaan siirtymiseen kannattaa varata aikaa ruuhkien vuoksi. Analakelyn ympäristössä voi kulkea kävellen, ja pidempiin matkoihin on takseja sekä paikallisbusseja. Rinteillä portaat ovat osa reittiä. Kaupunkipäivään sopivat kauppakorttelit, vanhat asuintalot ja Anosy-järven ympäristö.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                  "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                  "supportingContext": "Current travel panel and the same city's sourced flora, fauna, food or material topics.",
+                  "subjectBasis": "A vertical close material study of weathered ordinary veranda timber and red clay bricks; focus on natural wood and brick, no complete or recognizable house facade, named historic building, location or carved protected artwork."
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "b709a1b50cece9b3e9dfbc9bfb4ed4dbfbffb158393715f61ea5eac5ef65693a",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/extra-review-snapshots/6eeb9bb10636c02adc036c87a5ab9d4f4cf8ff4c5f96d0ed71c88d047f9fe8b8.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T19:20:50.237593+00:00",
+          "contentSHA256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa.json",
+            "sha256": "81ec52251782f59efec0bca1659366fda16fb64ab9807263d870e3eb1fc30eda"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+            "sha256": "6eeb9bb10636c02adc036c87a5ab9d4f4cf8ff4c5f96d0ed71c88d047f9fe8b8"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-TRAVELER-illustration-v1-20261012-11bbb765553e.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-TRAVELER-illustration-v1-20261012-11bbb765553e.png?t=ebe21f4e3f0f1211",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-TRAVELER-illustration-v1-20261012-11bbb765553e.png",
+        "sha256": "ebe21f4e3f0f1211edb3f55d4a928b417892a36da6ab05ece098dd0c1f51ad4b",
+        "bytes": 2758490,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-antananarivo-TRAVELER-illustration-v1-20261012",
+        "nativeSHA256": "11bbb765553ec58842cbc042c96c0495e0c387e5deaff1256424c69fa1b09f3e",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-TRAVELER-illustration-v1-20261012-11bbb765553e.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "antananarivo",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T19:19:53.178580+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-TRAVELER-illustration-v1-20261012-11bbb765553e.png",
+        "sha256": "ebe21f4e3f0f1211edb3f55d4a928b417892a36da6ab05ece098dd0c1f51ad4b",
+        "bytes": 2758490,
+        "SHAReadAt": "2026-10-12T19:32:05.694555+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "11bbb765553ec58842cbc042c96c0495e0c387e5deaff1256424c69fa1b09f3e",
+        "rgbPixelSHA256": "324d399ef1389342fd65636688b61765918b0139e91b2f7743bbb7730ab9983a",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "478b7dfb2752c4d18172101af224b800522c562f78201aa146aa795bf8b91c77"
+    },
+    {
+      "era": "e08",
+      "city": "antananarivo",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e08-antananarivo-O4-illustration-v1-20261012",
+      "galleryImageID": "e08-antananarivo-O4-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O4-illustration-v1-20261012-5ddbd5d5bbe2.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Mitä täällä syödään.",
+        "lyhyt": "Havainnekuva: Mitä täällä syödään."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O4-illustration-v1-20261012-5ddbd5d5bbe2.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Mitä täällä syödään.",
+        "lyhyt": "Havainnekuva: Mitä täällä syödään."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5ddbd5d5bbe259eb13d40850d92e939d1d8d1802f268d20a0c7fb838ac556dc6",
+      "exportSHA256": "d9285a7954da1faba6deb349a889740e81427ef462447e77b9bd83c3b3d017ca",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O4-illustration-v1-20261012-5ddbd5d5bbe2.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O4-illustration-v1-20261012-5ddbd5d5bbe2.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-O4-illustration-v1-20261012-5ddbd5d5bbe2.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+      "sourceContentSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "c667d6de427e8553a93cb67bddee5bd53bb004b27433492c40b39d506dcc3ce0",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic natural subject, ordinary materials or unbranded objects; no named copyrighted building or contemporary artwork reproduced.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-O4-illustration-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "5ddbd5d5bbe259eb13d40850d92e939d1d8d1802f268d20a0c7fb838ac556dc6",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/7cac5c429088-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+              "sha256": "b5ecea25b9062e1bd296c7be331537bb5b4a6c8b2f777bd09fc647c10f466051",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-antananarivo-O4-illustration-v1-20261012",
+              "nativeSHA256": "5ddbd5d5bbe259eb13d40850d92e939d1d8d1802f268d20a0c7fb838ac556dc6",
+              "verdict": "accepted",
+              "reason": "Yleinen kasvisateria sopii oppaan kasvisruokavaihtoehtoon. Kuvateksti ei nimeä keksittyä malagassireseptiä tai ravintolaa.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-O4-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "5ddbd5d5bbe259eb13d40850d92e939d1d8d1802f268d20a0c7fb838ac556dc6",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kasviksia kastikkeessa ja viljamainen lisuke lautasella. Vaihtelevat kypsät ainekset ja luonnollinen valo; ei henkilöitä, tekstiä tai brändejä.",
+                "captionFi": "Havainnekuva: Mitä täällä syödään.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                "contentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                "targetCurrentlyPresent": true,
+                "targetText": "Antananarivossa voi etsiä malagassikeittiötä tai ranskalaisia vaikutteita yhdistelevän ravintolan. Matkaoppaassa on myös kasvisruokaa tarjoavia paikkoja, joten aterian ei tarvitse aina perustua lihaan. Isorakan taloja on muutettu ravintoloiksi ja majataloiksi; ruokailuun voi siten yhdistää tutustumisen asuinkortteliin. Juomavedeksi kannattaa valita pullotettu vesi.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                "topicEvidence": "O4 kertoo kasvisruokaa tarjoavista paikoista, ei tietystä ainoasta perinnereseptistä.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                  "sourceContentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                  "targetText": "Antananarivossa voi etsiä malagassikeittiötä tai ranskalaisia vaikutteita yhdistelevän ravintolan. Matkaoppaassa on myös kasvisruokaa tarjoavia paikkoja, joten aterian ei tarvitse aina perustua lihaan. Isorakan taloja on muutettu ravintoloiksi ja majataloiksi; ruokailuun voi siten yhdistää tutustumisen asuinkortteliin. Juomavedeksi kannattaa valita pullotettu vesi.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                  "wiki": null,
+                  "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                  "supportingSourceUrls": [
+                    "https://en.wikivoyage.org/wiki/Antananarivo"
+                  ],
+                  "factSheetBibliographyUrls": [
+                    "https://en.wikivoyage.org/wiki/Antananarivo"
+                  ]
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "5aa68d94a0a9d398462c012108794740b6770a28bfbeae38acb3fdb6cd053f99",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/extra-review-snapshots/b5ecea25b9062e1bd296c7be331537bb5b4a6c8b2f777bd09fc647c10f466051.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva: Mitä täällä syödään.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-2 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Yleinen kasvisateria sopii oppaan kasvisruokavaihtoehtoon. Kuvateksti ei nimeä keksittyä malagassireseptiä tai ravintolaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: Mitä täällä syödään.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa.json",
+        "fileSHA256": "81ec52251782f59efec0bca1659366fda16fb64ab9807263d870e3eb1fc30eda",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e08-antananarivo-O4-illustration-v1-20261012",
+          "sha256": "5ddbd5d5bbe259eb13d40850d92e939d1d8d1802f268d20a0c7fb838ac556dc6",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-2 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Yleinen kasvisateria sopii oppaan kasvisruokavaihtoehtoon. Kuvateksti ei nimeä keksittyä malagassireseptiä tai ravintolaa.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-O4-illustration-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "5ddbd5d5bbe259eb13d40850d92e939d1d8d1802f268d20a0c7fb838ac556dc6",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/7cac5c429088-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+              "sha256": "b5ecea25b9062e1bd296c7be331537bb5b4a6c8b2f777bd09fc647c10f466051",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-antananarivo-O4-illustration-v1-20261012",
+              "nativeSHA256": "5ddbd5d5bbe259eb13d40850d92e939d1d8d1802f268d20a0c7fb838ac556dc6",
+              "verdict": "accepted",
+              "reason": "Yleinen kasvisateria sopii oppaan kasvisruokavaihtoehtoon. Kuvateksti ei nimeä keksittyä malagassireseptiä tai ravintolaa.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-O4-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "5ddbd5d5bbe259eb13d40850d92e939d1d8d1802f268d20a0c7fb838ac556dc6",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kasviksia kastikkeessa ja viljamainen lisuke lautasella. Vaihtelevat kypsät ainekset ja luonnollinen valo; ei henkilöitä, tekstiä tai brändejä.",
+                "captionFi": "Havainnekuva: Mitä täällä syödään.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                "contentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                "targetCurrentlyPresent": true,
+                "targetText": "Antananarivossa voi etsiä malagassikeittiötä tai ranskalaisia vaikutteita yhdistelevän ravintolan. Matkaoppaassa on myös kasvisruokaa tarjoavia paikkoja, joten aterian ei tarvitse aina perustua lihaan. Isorakan taloja on muutettu ravintoloiksi ja majataloiksi; ruokailuun voi siten yhdistää tutustumisen asuinkortteliin. Juomavedeksi kannattaa valita pullotettu vesi.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                "topicEvidence": "O4 kertoo kasvisruokaa tarjoavista paikoista, ei tietystä ainoasta perinnereseptistä.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                  "sourceContentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                  "targetText": "Antananarivossa voi etsiä malagassikeittiötä tai ranskalaisia vaikutteita yhdistelevän ravintolan. Matkaoppaassa on myös kasvisruokaa tarjoavia paikkoja, joten aterian ei tarvitse aina perustua lihaan. Isorakan taloja on muutettu ravintoloiksi ja majataloiksi; ruokailuun voi siten yhdistää tutustumisen asuinkortteliin. Juomavedeksi kannattaa valita pullotettu vesi.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                  "wiki": null,
+                  "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                  "supportingSourceUrls": [
+                    "https://en.wikivoyage.org/wiki/Antananarivo"
+                  ],
+                  "factSheetBibliographyUrls": [
+                    "https://en.wikivoyage.org/wiki/Antananarivo"
+                  ]
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "5aa68d94a0a9d398462c012108794740b6770a28bfbeae38acb3fdb6cd053f99",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/extra-review-snapshots/b5ecea25b9062e1bd296c7be331537bb5b4a6c8b2f777bd09fc647c10f466051.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva: Mitä täällä syödään.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+              "sha256": "b5ecea25b9062e1bd296c7be331537bb5b4a6c8b2f777bd09fc647c10f466051",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-antananarivo-O4-illustration-v1-20261012",
+              "nativeSHA256": "5ddbd5d5bbe259eb13d40850d92e939d1d8d1802f268d20a0c7fb838ac556dc6",
+              "verdict": "accepted",
+              "reason": "Yleinen kasvisateria sopii oppaan kasvisruokavaihtoehtoon. Kuvateksti ei nimeä keksittyä malagassireseptiä tai ravintolaa.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-O4-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "5ddbd5d5bbe259eb13d40850d92e939d1d8d1802f268d20a0c7fb838ac556dc6",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kasviksia kastikkeessa ja viljamainen lisuke lautasella. Vaihtelevat kypsät ainekset ja luonnollinen valo; ei henkilöitä, tekstiä tai brändejä.",
+                "captionFi": "Havainnekuva: Mitä täällä syödään.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                "contentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                "targetCurrentlyPresent": true,
+                "targetText": "Antananarivossa voi etsiä malagassikeittiötä tai ranskalaisia vaikutteita yhdistelevän ravintolan. Matkaoppaassa on myös kasvisruokaa tarjoavia paikkoja, joten aterian ei tarvitse aina perustua lihaan. Isorakan taloja on muutettu ravintoloiksi ja majataloiksi; ruokailuun voi siten yhdistää tutustumisen asuinkortteliin. Juomavedeksi kannattaa valita pullotettu vesi.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                "topicEvidence": "O4 kertoo kasvisruokaa tarjoavista paikoista, ei tietystä ainoasta perinnereseptistä.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                  "sourceContentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                  "targetText": "Antananarivossa voi etsiä malagassikeittiötä tai ranskalaisia vaikutteita yhdistelevän ravintolan. Matkaoppaassa on myös kasvisruokaa tarjoavia paikkoja, joten aterian ei tarvitse aina perustua lihaan. Isorakan taloja on muutettu ravintoloiksi ja majataloiksi; ruokailuun voi siten yhdistää tutustumisen asuinkortteliin. Juomavedeksi kannattaa valita pullotettu vesi.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                  "wiki": null,
+                  "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                  "supportingSourceUrls": [
+                    "https://en.wikivoyage.org/wiki/Antananarivo"
+                  ],
+                  "factSheetBibliographyUrls": [
+                    "https://en.wikivoyage.org/wiki/Antananarivo"
+                  ]
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "5aa68d94a0a9d398462c012108794740b6770a28bfbeae38acb3fdb6cd053f99",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/extra-review-snapshots/b5ecea25b9062e1bd296c7be331537bb5b4a6c8b2f777bd09fc647c10f466051.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T18:49:57.711111+00:00",
+          "contentSHA256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa.json",
+            "sha256": "81ec52251782f59efec0bca1659366fda16fb64ab9807263d870e3eb1fc30eda"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+            "sha256": "6eeb9bb10636c02adc036c87a5ab9d4f4cf8ff4c5f96d0ed71c88d047f9fe8b8"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O4-illustration-v1-20261012-5ddbd5d5bbe2.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O4-illustration-v1-20261012-5ddbd5d5bbe2.png?t=d9285a7954da1fab",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O4-illustration-v1-20261012-5ddbd5d5bbe2.png",
+        "sha256": "d9285a7954da1faba6deb349a889740e81427ef462447e77b9bd83c3b3d017ca",
+        "bytes": 2376207,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-antananarivo-O4-illustration-v1-20261012",
+        "nativeSHA256": "5ddbd5d5bbe259eb13d40850d92e939d1d8d1802f268d20a0c7fb838ac556dc6",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-O4-illustration-v1-20261012-5ddbd5d5bbe2.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "antananarivo",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:50:21.899676+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-O4-illustration-v1-20261012-5ddbd5d5bbe2.png",
+        "sha256": "d9285a7954da1faba6deb349a889740e81427ef462447e77b9bd83c3b3d017ca",
+        "bytes": 2376207,
+        "SHAReadAt": "2026-10-12T19:03:35.342019+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "5ddbd5d5bbe259eb13d40850d92e939d1d8d1802f268d20a0c7fb838ac556dc6",
+        "rgbPixelSHA256": "74a818658176fbe6dbe852fe01d2c4f61ca566c97a7cf556f5d061eec259d5e0",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "c667d6de427e8553a93cb67bddee5bd53bb004b27433492c40b39d506dcc3ce0"
+    },
+    {
+      "era": "e08",
+      "city": "antananarivo",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e08-antananarivo-L1-illustration-v1-20261012",
+      "galleryImageID": "e08-antananarivo-L1-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L1-illustration-v1-20261012-ef177889303a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Kivi kuului aluksi vainajille.",
+        "lyhyt": "Havainnekuva: Kivi kuului aluksi vainajille."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L1-illustration-v1-20261012-ef177889303a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Kivi kuului aluksi vainajille.",
+        "lyhyt": "Havainnekuva: Kivi kuului aluksi vainajille."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ef177889303a2f224584d8575693659db72a6bb99f67b059927084d253ec563c",
+      "exportSHA256": "003d811b370358e3cbd28627212875391e7d150ec6e92c9383c9dc26cf3fe0df",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L1-illustration-v1-20261012-ef177889303a.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L1-illustration-v1-20261012-ef177889303a.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-L1-illustration-v1-20261012-ef177889303a.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+      "sourceContentSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "7680619c36cad7a005a93b2e61946f6c23877c2c1e4f26423789f0cd3cd3f7a1",
+        "semanticContextSHA256": "7680619c36cad7a005a93b2e61946f6c23877c2c1e4f26423789f0cd3cd3f7a1",
+        "subjectTitle": "Kivi kuului aluksi vainajille",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic natural subject, ordinary materials or unbranded objects; no named copyrighted building or contemporary artwork reproduced.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-L1-illustration-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "ef177889303a2f224584d8575693659db72a6bb99f67b059927084d253ec563c",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/029111579afb-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+              "sha256": "0500b7b304256259b44a8c3f96f61cba36a91349692c65dfeb2d01e0dc59fba6",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-antananarivo-L1-illustration-v1-20261012",
+              "nativeSHA256": "ef177889303a2f224584d8575693659db72a6bb99f67b059927084d253ec563c",
+              "verdict": "accepted",
+              "reason": "Puu, kuiva kasviaines ja kivet sopivat rakentamisen materiaalivaihdokseen. Kuva ei rekonstruoi hautakammiota tai historiallista taloa.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-L1-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "ef177889303a2f224584d8575693659db72a6bb99f67b059927084d253ec563c",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kulunut puupalkki, kuivia korsia ja erilaisia kiviä pöydällä. Luontevat syyt, särmät ja kuitupinnat, ei rakennusta, tekstiä tai henkilöitä.",
+                "captionFi": "Havainnekuva: Kivi kuului aluksi vainajille.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                "contentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                "targetCurrentlyPresent": true,
+                "targetText": "Vanhan Antananarivon taloissa käytettiin puuta, ruohoa ja ruokoa. Kivi taas kuului sukujen hautakammioihin: elävien ja vainajien rakennukset tehtiin eri aineista. Kyse ei ollut pelkästä materiaalin saatavuudesta, vaan siitä, millainen aine sopi kullekin rakennukselle. Kun rakentamisen rajoituksia lievennettiin 1800-luvun jälkipuoliskolla, kivi ja tiili yleistyivät myös asuintaloissa. Kaupungin tiiliset kodit kantavat siten rakennustavan muutosta, eivät vain yhden ajan muotia.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                "topicEvidence": "L1 vertailee puun, ruohon, ruo'on ja kiven käyttöä rakentamisessa.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                  "sourceContentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                  "targetText": "Vanhan Antananarivon taloissa käytettiin puuta, ruohoa ja ruokoa. Kivi taas kuului sukujen hautakammioihin: elävien ja vainajien rakennukset tehtiin eri aineista. Kyse ei ollut pelkästä materiaalin saatavuudesta, vaan siitä, millainen aine sopi kullekin rakennukselle. Kun rakentamisen rajoituksia lievennettiin 1800-luvun jälkipuoliskolla, kivi ja tiili yleistyivät myös asuintaloissa. Kaupungin tiiliset kodit kantavat siten rakennustavan muutosta, eivät vain yhden ajan muotia.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                  "wiki": "Antananarivo",
+                  "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                  "supportingSourceUrls": [
+                    "https://en.wikipedia.org/wiki/Antananarivo"
+                  ],
+                  "factSheetBibliographyUrls": [
+                    "https://en.wikivoyage.org/wiki/Antananarivo"
+                  ]
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "dff6ff6a0675b93db1d113d92347527149353c61d6720a46b654a9f3e7a95a1b",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/extra-review-snapshots/0500b7b304256259b44a8c3f96f61cba36a91349692c65dfeb2d01e0dc59fba6.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva: Kivi kuului aluksi vainajille.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-2 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Puu, kuiva kasviaines ja kivet sopivat rakentamisen materiaalivaihdokseen. Kuva ei rekonstruoi hautakammiota tai historiallista taloa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: Kivi kuului aluksi vainajille.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa.json",
+        "fileSHA256": "81ec52251782f59efec0bca1659366fda16fb64ab9807263d870e3eb1fc30eda",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "e08-antananarivo-L1-illustration-v1-20261012",
+          "sha256": "ef177889303a2f224584d8575693659db72a6bb99f67b059927084d253ec563c",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-2 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Puu, kuiva kasviaines ja kivet sopivat rakentamisen materiaalivaihdokseen. Kuva ei rekonstruoi hautakammiota tai historiallista taloa.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-L1-illustration-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "ef177889303a2f224584d8575693659db72a6bb99f67b059927084d253ec563c",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/029111579afb-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+              "sha256": "0500b7b304256259b44a8c3f96f61cba36a91349692c65dfeb2d01e0dc59fba6",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-antananarivo-L1-illustration-v1-20261012",
+              "nativeSHA256": "ef177889303a2f224584d8575693659db72a6bb99f67b059927084d253ec563c",
+              "verdict": "accepted",
+              "reason": "Puu, kuiva kasviaines ja kivet sopivat rakentamisen materiaalivaihdokseen. Kuva ei rekonstruoi hautakammiota tai historiallista taloa.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-L1-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "ef177889303a2f224584d8575693659db72a6bb99f67b059927084d253ec563c",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kulunut puupalkki, kuivia korsia ja erilaisia kiviä pöydällä. Luontevat syyt, särmät ja kuitupinnat, ei rakennusta, tekstiä tai henkilöitä.",
+                "captionFi": "Havainnekuva: Kivi kuului aluksi vainajille.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                "contentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                "targetCurrentlyPresent": true,
+                "targetText": "Vanhan Antananarivon taloissa käytettiin puuta, ruohoa ja ruokoa. Kivi taas kuului sukujen hautakammioihin: elävien ja vainajien rakennukset tehtiin eri aineista. Kyse ei ollut pelkästä materiaalin saatavuudesta, vaan siitä, millainen aine sopi kullekin rakennukselle. Kun rakentamisen rajoituksia lievennettiin 1800-luvun jälkipuoliskolla, kivi ja tiili yleistyivät myös asuintaloissa. Kaupungin tiiliset kodit kantavat siten rakennustavan muutosta, eivät vain yhden ajan muotia.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                "topicEvidence": "L1 vertailee puun, ruohon, ruo'on ja kiven käyttöä rakentamisessa.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                  "sourceContentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                  "targetText": "Vanhan Antananarivon taloissa käytettiin puuta, ruohoa ja ruokoa. Kivi taas kuului sukujen hautakammioihin: elävien ja vainajien rakennukset tehtiin eri aineista. Kyse ei ollut pelkästä materiaalin saatavuudesta, vaan siitä, millainen aine sopi kullekin rakennukselle. Kun rakentamisen rajoituksia lievennettiin 1800-luvun jälkipuoliskolla, kivi ja tiili yleistyivät myös asuintaloissa. Kaupungin tiiliset kodit kantavat siten rakennustavan muutosta, eivät vain yhden ajan muotia.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                  "wiki": "Antananarivo",
+                  "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                  "supportingSourceUrls": [
+                    "https://en.wikipedia.org/wiki/Antananarivo"
+                  ],
+                  "factSheetBibliographyUrls": [
+                    "https://en.wikivoyage.org/wiki/Antananarivo"
+                  ]
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "dff6ff6a0675b93db1d113d92347527149353c61d6720a46b654a9f3e7a95a1b",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/extra-review-snapshots/0500b7b304256259b44a8c3f96f61cba36a91349692c65dfeb2d01e0dc59fba6.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva: Kivi kuului aluksi vainajille.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+              "sha256": "0500b7b304256259b44a8c3f96f61cba36a91349692c65dfeb2d01e0dc59fba6",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-antananarivo-L1-illustration-v1-20261012",
+              "nativeSHA256": "ef177889303a2f224584d8575693659db72a6bb99f67b059927084d253ec563c",
+              "verdict": "accepted",
+              "reason": "Puu, kuiva kasviaines ja kivet sopivat rakentamisen materiaalivaihdokseen. Kuva ei rekonstruoi hautakammiota tai historiallista taloa.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-L1-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "ef177889303a2f224584d8575693659db72a6bb99f67b059927084d253ec563c",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kulunut puupalkki, kuivia korsia ja erilaisia kiviä pöydällä. Luontevat syyt, särmät ja kuitupinnat, ei rakennusta, tekstiä tai henkilöitä.",
+                "captionFi": "Havainnekuva: Kivi kuului aluksi vainajille.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                "contentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                "targetCurrentlyPresent": true,
+                "targetText": "Vanhan Antananarivon taloissa käytettiin puuta, ruohoa ja ruokoa. Kivi taas kuului sukujen hautakammioihin: elävien ja vainajien rakennukset tehtiin eri aineista. Kyse ei ollut pelkästä materiaalin saatavuudesta, vaan siitä, millainen aine sopi kullekin rakennukselle. Kun rakentamisen rajoituksia lievennettiin 1800-luvun jälkipuoliskolla, kivi ja tiili yleistyivät myös asuintaloissa. Kaupungin tiiliset kodit kantavat siten rakennustavan muutosta, eivät vain yhden ajan muotia.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                "topicEvidence": "L1 vertailee puun, ruohon, ruo'on ja kiven käyttöä rakentamisessa.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                  "sourceContentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                  "targetText": "Vanhan Antananarivon taloissa käytettiin puuta, ruohoa ja ruokoa. Kivi taas kuului sukujen hautakammioihin: elävien ja vainajien rakennukset tehtiin eri aineista. Kyse ei ollut pelkästä materiaalin saatavuudesta, vaan siitä, millainen aine sopi kullekin rakennukselle. Kun rakentamisen rajoituksia lievennettiin 1800-luvun jälkipuoliskolla, kivi ja tiili yleistyivät myös asuintaloissa. Kaupungin tiiliset kodit kantavat siten rakennustavan muutosta, eivät vain yhden ajan muotia.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                  "wiki": "Antananarivo",
+                  "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                  "supportingSourceUrls": [
+                    "https://en.wikipedia.org/wiki/Antananarivo"
+                  ],
+                  "factSheetBibliographyUrls": [
+                    "https://en.wikivoyage.org/wiki/Antananarivo"
+                  ]
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "dff6ff6a0675b93db1d113d92347527149353c61d6720a46b654a9f3e7a95a1b",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/extra-review-snapshots/0500b7b304256259b44a8c3f96f61cba36a91349692c65dfeb2d01e0dc59fba6.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T18:53:58.851852+00:00",
+          "contentSHA256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+          "targetSHA256": "7680619c36cad7a005a93b2e61946f6c23877c2c1e4f26423789f0cd3cd3f7a1"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa.json",
+            "sha256": "81ec52251782f59efec0bca1659366fda16fb64ab9807263d870e3eb1fc30eda"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+            "sha256": "6eeb9bb10636c02adc036c87a5ab9d4f4cf8ff4c5f96d0ed71c88d047f9fe8b8"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L1-illustration-v1-20261012-ef177889303a.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L1-illustration-v1-20261012-ef177889303a.png?t=003d811b370358e3",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L1-illustration-v1-20261012-ef177889303a.png",
+        "sha256": "003d811b370358e3cbd28627212875391e7d150ec6e92c9383c9dc26cf3fe0df",
+        "bytes": 2684696,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-antananarivo-L1-illustration-v1-20261012",
+        "nativeSHA256": "ef177889303a2f224584d8575693659db72a6bb99f67b059927084d253ec563c",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-L1-illustration-v1-20261012-ef177889303a.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "antananarivo",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T18:51:22.409573+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-L1-illustration-v1-20261012-ef177889303a.png",
+        "sha256": "003d811b370358e3cbd28627212875391e7d150ec6e92c9383c9dc26cf3fe0df",
+        "bytes": 2684696,
+        "SHAReadAt": "2026-10-12T19:03:35.521228+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "ef177889303a2f224584d8575693659db72a6bb99f67b059927084d253ec563c",
+        "rgbPixelSHA256": "9f9365b53e0c2321130ea61b9729d2685983933b3d23ef18b883453707249a35",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "targetAfterSHA256": "7680619c36cad7a005a93b2e61946f6c23877c2c1e4f26423789f0cd3cd3f7a1",
+      "contextAfterSHA256": "7680619c36cad7a005a93b2e61946f6c23877c2c1e4f26423789f0cd3cd3f7a1"
+    },
+    {
+      "era": "e08",
+      "city": "antananarivo",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e08-antananarivo-L2-illustration-v1-20261012",
+      "galleryImageID": "e08-antananarivo-L2-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L2-illustration-v1-20261012-7cee3eb10673.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Veranta kertoo vaikutteiden matkasta.",
+        "lyhyt": "Havainnekuva: Veranta kertoo vaikutteiden matkasta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L2-illustration-v1-20261012-7cee3eb10673.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Veranta kertoo vaikutteiden matkasta.",
+        "lyhyt": "Havainnekuva: Veranta kertoo vaikutteiden matkasta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "7cee3eb10673f799acb3e9d24657ab37bd429199b42f6be1ce5f333286689682",
+      "exportSHA256": "8a4a11e47b2992f2d7e63aa5cd2f39ae3b8f4ebfc6f3e47e0d13a401b8682b1d",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L2-illustration-v1-20261012-7cee3eb10673.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L2-illustration-v1-20261012-7cee3eb10673.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-L2-illustration-v1-20261012-7cee3eb10673.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+      "sourceContentSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "c3a0886069f4269e5fcc8d018da18d58f4a57dbe55c4737649511b2c95554dc3",
+        "semanticContextSHA256": "c3a0886069f4269e5fcc8d018da18d58f4a57dbe55c4737649511b2c95554dc3",
+        "subjectTitle": "Veranta kertoo vaikutteiden matkasta",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic natural subject, ordinary materials or unbranded objects; no named copyrighted building or contemporary artwork reproduced.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-L2-illustration-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "7cee3eb10673f799acb3e9d24657ab37bd429199b42f6be1ce5f333286689682",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/8601567f606d-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+              "sha256": "0500b7b304256259b44a8c3f96f61cba36a91349692c65dfeb2d01e0dc59fba6",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-antananarivo-L2-illustration-v1-20261012",
+              "nativeSHA256": "7cee3eb10673f799acb3e9d24657ab37bd429199b42f6be1ce5f333286689682",
+              "verdict": "accepted",
+              "reason": "Tiilen ja puurakenteen lähikuva havainnollistaa rakentamisen materiaaleja. Se ei väitä esittävänsä tiettyä trano gasy -taloa tai nimettyä rakennusta.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-L2-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "7cee3eb10673f799acb3e9d24657ab37bd429199b42f6be1ce5f333286689682",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tiiliseinä ja kulunut puinen pylväs, vinotuki ja lattiarakenne lähikuvassa. Puun syyt ja tiilen kuluminen luontevia; ei kaupunkinäkymää, henkilöitä tai tekstiä.",
+                "captionFi": "Havainnekuva: Veranta kertoo vaikutteiden matkasta.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                "contentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                "targetCurrentlyPresent": true,
+                "targetText": "Trano gasy tarkoittaa malagassitaloa, mutta sen historia ei mahdu yhden maan rajojen sisään. Antananarivon 1800-luvun tiilitaloissa yhdistyivät paikalliset, englantilaiset ja kreolilaiset rakennusvaikutteet. Tunnusomainen talo on kerroksellinen, ja sen edessä on puinen veranta. Lähetyssaarnaajien rakennuksista otettu malli levisi pääkaupungin asuintaloihin ja edelleen keskiylängölle. Omaleimainen kaupunkikuva syntyi siis myös lainattujen ideoiden muuttamisesta paikallisiksi.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                "topicEvidence": "L2 kertoo tiilitaloista ja puisesta verannasta. Hyväksyntä koskee yleistä materiaalihavainnollistusta.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                  "sourceContentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                  "targetText": "Trano gasy tarkoittaa malagassitaloa, mutta sen historia ei mahdu yhden maan rajojen sisään. Antananarivon 1800-luvun tiilitaloissa yhdistyivät paikalliset, englantilaiset ja kreolilaiset rakennusvaikutteet. Tunnusomainen talo on kerroksellinen, ja sen edessä on puinen veranta. Lähetyssaarnaajien rakennuksista otettu malli levisi pääkaupungin asuintaloihin ja edelleen keskiylängölle. Omaleimainen kaupunkikuva syntyi siis myös lainattujen ideoiden muuttamisesta paikallisiksi.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                  "wiki": "Antananarivo",
+                  "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                  "supportingSourceUrls": [
+                    "https://en.wikipedia.org/wiki/Antananarivo"
+                  ],
+                  "factSheetBibliographyUrls": [
+                    "https://en.wikivoyage.org/wiki/Antananarivo"
+                  ]
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "2fec817c404cb2a2badd03c15575c6467b3873f928cc64d596acad7c16fe72e5",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/extra-review-snapshots/0500b7b304256259b44a8c3f96f61cba36a91349692c65dfeb2d01e0dc59fba6.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva: Veranta kertoo vaikutteiden matkasta.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-2 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Tiilen ja puurakenteen lähikuva havainnollistaa rakentamisen materiaaleja. Se ei väitä esittävänsä tiettyä trano gasy -taloa tai nimettyä rakennusta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: Veranta kertoo vaikutteiden matkasta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa.json",
+        "fileSHA256": "81ec52251782f59efec0bca1659366fda16fb64ab9807263d870e3eb1fc30eda",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e08-antananarivo-L2-illustration-v1-20261012",
+          "sha256": "7cee3eb10673f799acb3e9d24657ab37bd429199b42f6be1ce5f333286689682",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-2 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Tiilen ja puurakenteen lähikuva havainnollistaa rakentamisen materiaaleja. Se ei väitä esittävänsä tiettyä trano gasy -taloa tai nimettyä rakennusta.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-L2-illustration-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "7cee3eb10673f799acb3e9d24657ab37bd429199b42f6be1ce5f333286689682",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/8601567f606d-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+              "sha256": "0500b7b304256259b44a8c3f96f61cba36a91349692c65dfeb2d01e0dc59fba6",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-antananarivo-L2-illustration-v1-20261012",
+              "nativeSHA256": "7cee3eb10673f799acb3e9d24657ab37bd429199b42f6be1ce5f333286689682",
+              "verdict": "accepted",
+              "reason": "Tiilen ja puurakenteen lähikuva havainnollistaa rakentamisen materiaaleja. Se ei väitä esittävänsä tiettyä trano gasy -taloa tai nimettyä rakennusta.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-L2-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "7cee3eb10673f799acb3e9d24657ab37bd429199b42f6be1ce5f333286689682",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tiiliseinä ja kulunut puinen pylväs, vinotuki ja lattiarakenne lähikuvassa. Puun syyt ja tiilen kuluminen luontevia; ei kaupunkinäkymää, henkilöitä tai tekstiä.",
+                "captionFi": "Havainnekuva: Veranta kertoo vaikutteiden matkasta.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                "contentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                "targetCurrentlyPresent": true,
+                "targetText": "Trano gasy tarkoittaa malagassitaloa, mutta sen historia ei mahdu yhden maan rajojen sisään. Antananarivon 1800-luvun tiilitaloissa yhdistyivät paikalliset, englantilaiset ja kreolilaiset rakennusvaikutteet. Tunnusomainen talo on kerroksellinen, ja sen edessä on puinen veranta. Lähetyssaarnaajien rakennuksista otettu malli levisi pääkaupungin asuintaloihin ja edelleen keskiylängölle. Omaleimainen kaupunkikuva syntyi siis myös lainattujen ideoiden muuttamisesta paikallisiksi.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                "topicEvidence": "L2 kertoo tiilitaloista ja puisesta verannasta. Hyväksyntä koskee yleistä materiaalihavainnollistusta.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                  "sourceContentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                  "targetText": "Trano gasy tarkoittaa malagassitaloa, mutta sen historia ei mahdu yhden maan rajojen sisään. Antananarivon 1800-luvun tiilitaloissa yhdistyivät paikalliset, englantilaiset ja kreolilaiset rakennusvaikutteet. Tunnusomainen talo on kerroksellinen, ja sen edessä on puinen veranta. Lähetyssaarnaajien rakennuksista otettu malli levisi pääkaupungin asuintaloihin ja edelleen keskiylängölle. Omaleimainen kaupunkikuva syntyi siis myös lainattujen ideoiden muuttamisesta paikallisiksi.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                  "wiki": "Antananarivo",
+                  "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                  "supportingSourceUrls": [
+                    "https://en.wikipedia.org/wiki/Antananarivo"
+                  ],
+                  "factSheetBibliographyUrls": [
+                    "https://en.wikivoyage.org/wiki/Antananarivo"
+                  ]
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "2fec817c404cb2a2badd03c15575c6467b3873f928cc64d596acad7c16fe72e5",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/extra-review-snapshots/0500b7b304256259b44a8c3f96f61cba36a91349692c65dfeb2d01e0dc59fba6.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva: Veranta kertoo vaikutteiden matkasta.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+              "sha256": "0500b7b304256259b44a8c3f96f61cba36a91349692c65dfeb2d01e0dc59fba6",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-antananarivo-L2-illustration-v1-20261012",
+              "nativeSHA256": "7cee3eb10673f799acb3e9d24657ab37bd429199b42f6be1ce5f333286689682",
+              "verdict": "accepted",
+              "reason": "Tiilen ja puurakenteen lähikuva havainnollistaa rakentamisen materiaaleja. Se ei väitä esittävänsä tiettyä trano gasy -taloa tai nimettyä rakennusta.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-L2-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "7cee3eb10673f799acb3e9d24657ab37bd429199b42f6be1ce5f333286689682",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tiiliseinä ja kulunut puinen pylväs, vinotuki ja lattiarakenne lähikuvassa. Puun syyt ja tiilen kuluminen luontevia; ei kaupunkinäkymää, henkilöitä tai tekstiä.",
+                "captionFi": "Havainnekuva: Veranta kertoo vaikutteiden matkasta.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                "contentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                "targetCurrentlyPresent": true,
+                "targetText": "Trano gasy tarkoittaa malagassitaloa, mutta sen historia ei mahdu yhden maan rajojen sisään. Antananarivon 1800-luvun tiilitaloissa yhdistyivät paikalliset, englantilaiset ja kreolilaiset rakennusvaikutteet. Tunnusomainen talo on kerroksellinen, ja sen edessä on puinen veranta. Lähetyssaarnaajien rakennuksista otettu malli levisi pääkaupungin asuintaloihin ja edelleen keskiylängölle. Omaleimainen kaupunkikuva syntyi siis myös lainattujen ideoiden muuttamisesta paikallisiksi.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                "topicEvidence": "L2 kertoo tiilitaloista ja puisesta verannasta. Hyväksyntä koskee yleistä materiaalihavainnollistusta.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                  "sourceContentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                  "targetText": "Trano gasy tarkoittaa malagassitaloa, mutta sen historia ei mahdu yhden maan rajojen sisään. Antananarivon 1800-luvun tiilitaloissa yhdistyivät paikalliset, englantilaiset ja kreolilaiset rakennusvaikutteet. Tunnusomainen talo on kerroksellinen, ja sen edessä on puinen veranta. Lähetyssaarnaajien rakennuksista otettu malli levisi pääkaupungin asuintaloihin ja edelleen keskiylängölle. Omaleimainen kaupunkikuva syntyi siis myös lainattujen ideoiden muuttamisesta paikallisiksi.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                  "wiki": "Antananarivo",
+                  "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                  "supportingSourceUrls": [
+                    "https://en.wikipedia.org/wiki/Antananarivo"
+                  ],
+                  "factSheetBibliographyUrls": [
+                    "https://en.wikivoyage.org/wiki/Antananarivo"
+                  ]
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "2fec817c404cb2a2badd03c15575c6467b3873f928cc64d596acad7c16fe72e5",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/extra-review-snapshots/0500b7b304256259b44a8c3f96f61cba36a91349692c65dfeb2d01e0dc59fba6.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T18:53:58.852022+00:00",
+          "contentSHA256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+          "targetSHA256": "c3a0886069f4269e5fcc8d018da18d58f4a57dbe55c4737649511b2c95554dc3"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa.json",
+            "sha256": "81ec52251782f59efec0bca1659366fda16fb64ab9807263d870e3eb1fc30eda"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+            "sha256": "6eeb9bb10636c02adc036c87a5ab9d4f4cf8ff4c5f96d0ed71c88d047f9fe8b8"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L2-illustration-v1-20261012-7cee3eb10673.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L2-illustration-v1-20261012-7cee3eb10673.png?t=8a4a11e47b2992f2",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L2-illustration-v1-20261012-7cee3eb10673.png",
+        "sha256": "8a4a11e47b2992f2d7e63aa5cd2f39ae3b8f4ebfc6f3e47e0d13a401b8682b1d",
+        "bytes": 3043408,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-antananarivo-L2-illustration-v1-20261012",
+        "nativeSHA256": "7cee3eb10673f799acb3e9d24657ab37bd429199b42f6be1ce5f333286689682",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-L2-illustration-v1-20261012-7cee3eb10673.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "antananarivo",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T18:51:24.189214+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-L2-illustration-v1-20261012-7cee3eb10673.png",
+        "sha256": "8a4a11e47b2992f2d7e63aa5cd2f39ae3b8f4ebfc6f3e47e0d13a401b8682b1d",
+        "bytes": 3043408,
+        "SHAReadAt": "2026-10-12T19:03:36.002742+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "7cee3eb10673f799acb3e9d24657ab37bd429199b42f6be1ce5f333286689682",
+        "rgbPixelSHA256": "c71fbb7ecd0dce8eb1e00921a464d1d6ae4072952ea78ece5a9b214a7dcf6528",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "targetAfterSHA256": "c3a0886069f4269e5fcc8d018da18d58f4a57dbe55c4737649511b2c95554dc3",
+      "contextAfterSHA256": "c3a0886069f4269e5fcc8d018da18d58f4a57dbe55c4737649511b2c95554dc3"
+    },
+    {
+      "era": "e08",
+      "city": "antananarivo",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e08-antananarivo-L4-illustration-v1-20261012",
+      "galleryImageID": "e08-antananarivo-L4-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L4-illustration-v1-20261012-324d681be439.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Koulut tulivat käsityöläisten mukana.",
+        "lyhyt": "Havainnekuva: Koulut tulivat käsityöläisten mukana."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L4-illustration-v1-20261012-324d681be439.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: Koulut tulivat käsityöläisten mukana.",
+        "lyhyt": "Havainnekuva: Koulut tulivat käsityöläisten mukana."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "324d681be4396b457370ff1bec0866b76d7d7ca94f3970e866a3cc49f74021a0",
+      "exportSHA256": "5771a6764debe7f69d007840d17487d07bc8d8962f365c4b7fe2ad0a3ef6868f",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L4-illustration-v1-20261012-324d681be439.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L4-illustration-v1-20261012-324d681be439.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-L4-illustration-v1-20261012-324d681be439.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+      "sourceContentSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "d72212096727b0711a2bfff0fc45307ad32ab8da07b9a3747dd6fa14adf044f6",
+        "semanticContextSHA256": "d72212096727b0711a2bfff0fc45307ad32ab8da07b9a3747dd6fa14adf044f6",
+        "subjectTitle": "Koulut tulivat käsityöläisten mukana",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Generic natural subject, ordinary materials or unbranded objects; no named copyrighted building or contemporary artwork reproduced.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-L4-illustration-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "324d681be4396b457370ff1bec0866b76d7d7ca94f3970e866a3cc49f74021a0",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/64ca69697f11-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+              "sha256": "0500b7b304256259b44a8c3f96f61cba36a91349692c65dfeb2d01e0dc59fba6",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-antananarivo-L4-illustration-v1-20261012",
+              "nativeSHA256": "324d681be4396b457370ff1bec0866b76d7d7ca94f3970e866a3cc49f74021a0",
+              "verdict": "accepted",
+              "reason": "Yleinen puutyöväline ja tekstittämätön kirja sopivat käsityön ja koulutuksen aiheeseen. Kuva ei rekonstruoi tiettyä historiallista luokkaa.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-L4-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "324d681be4396b457370ff1bec0866b76d7d7ca94f3970e866a3cc49f74021a0",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Käsihöylä, puulankkuja, lastuja ja tyhjäkantinen kirja penkillä. Luontevat lastut ja puupinnat, ei henkilöitä, tekstiä tai logoja.",
+                "captionFi": "Havainnekuva: Koulut tulivat käsityöläisten mukana.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                "contentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                "targetCurrentlyPresent": true,
+                "targetText": "Lontoon lähetysseuran tulijat eivät toimineet Antananarivossa vain uskonnon parissa. Heidän joukossaan oli käsityöläisiä, jotka osallistuivat teollisen valmistuksen ja rakennustekniikan kehittämiseen, ja kaupunkiin perustettiin julkisia kouluja. Myöhemmin 1800-luvulla koulutuksen laajentaminen toi lisää kouluja ja opettajankoulutusta. Kaupunkiin tuli myös lääketieteen opetusta. Pääkaupungin muutos näkyi siis tiiliseinien lisäksi siinä, missä ja millaisia taitoja saattoi opiskella.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                "topicEvidence": "L4 käsittelee käsityöläisten, rakennustekniikan ja koulutuksen yhteyttä.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                  "sourceContentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                  "targetText": "Lontoon lähetysseuran tulijat eivät toimineet Antananarivossa vain uskonnon parissa. Heidän joukossaan oli käsityöläisiä, jotka osallistuivat teollisen valmistuksen ja rakennustekniikan kehittämiseen, ja kaupunkiin perustettiin julkisia kouluja. Myöhemmin 1800-luvulla koulutuksen laajentaminen toi lisää kouluja ja opettajankoulutusta. Kaupunkiin tuli myös lääketieteen opetusta. Pääkaupungin muutos näkyi siis tiiliseinien lisäksi siinä, missä ja millaisia taitoja saattoi opiskella.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                  "wiki": "Antananarivo",
+                  "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                  "supportingSourceUrls": [
+                    "https://en.wikipedia.org/wiki/Antananarivo"
+                  ],
+                  "factSheetBibliographyUrls": [
+                    "https://en.wikivoyage.org/wiki/Antananarivo"
+                  ]
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "aa02871b5f85df0b61201bfa908e44d64f2c8f9cde16180c0758b278506decd1",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/extra-review-snapshots/0500b7b304256259b44a8c3f96f61cba36a91349692c65dfeb2d01e0dc59fba6.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva: Koulut tulivat käsityöläisten mukana.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-2 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Yleinen puutyöväline ja tekstittämätön kirja sopivat käsityön ja koulutuksen aiheeseen. Kuva ei rekonstruoi tiettyä historiallista luokkaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: Koulut tulivat käsityöläisten mukana.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa.json",
+        "fileSHA256": "81ec52251782f59efec0bca1659366fda16fb64ab9807263d870e3eb1fc30eda",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e08-antananarivo-L4-illustration-v1-20261012",
+          "sha256": "324d681be4396b457370ff1bec0866b76d7d7ca94f3970e866a3cc49f74021a0",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-2 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Yleinen puutyöväline ja tekstittämätön kirja sopivat käsityön ja koulutuksen aiheeseen. Kuva ei rekonstruoi tiettyä historiallista luokkaa.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-L4-illustration-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "324d681be4396b457370ff1bec0866b76d7d7ca94f3970e866a3cc49f74021a0",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/64ca69697f11-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+              "sha256": "0500b7b304256259b44a8c3f96f61cba36a91349692c65dfeb2d01e0dc59fba6",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-antananarivo-L4-illustration-v1-20261012",
+              "nativeSHA256": "324d681be4396b457370ff1bec0866b76d7d7ca94f3970e866a3cc49f74021a0",
+              "verdict": "accepted",
+              "reason": "Yleinen puutyöväline ja tekstittämätön kirja sopivat käsityön ja koulutuksen aiheeseen. Kuva ei rekonstruoi tiettyä historiallista luokkaa.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-L4-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "324d681be4396b457370ff1bec0866b76d7d7ca94f3970e866a3cc49f74021a0",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Käsihöylä, puulankkuja, lastuja ja tyhjäkantinen kirja penkillä. Luontevat lastut ja puupinnat, ei henkilöitä, tekstiä tai logoja.",
+                "captionFi": "Havainnekuva: Koulut tulivat käsityöläisten mukana.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                "contentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                "targetCurrentlyPresent": true,
+                "targetText": "Lontoon lähetysseuran tulijat eivät toimineet Antananarivossa vain uskonnon parissa. Heidän joukossaan oli käsityöläisiä, jotka osallistuivat teollisen valmistuksen ja rakennustekniikan kehittämiseen, ja kaupunkiin perustettiin julkisia kouluja. Myöhemmin 1800-luvulla koulutuksen laajentaminen toi lisää kouluja ja opettajankoulutusta. Kaupunkiin tuli myös lääketieteen opetusta. Pääkaupungin muutos näkyi siis tiiliseinien lisäksi siinä, missä ja millaisia taitoja saattoi opiskella.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                "topicEvidence": "L4 käsittelee käsityöläisten, rakennustekniikan ja koulutuksen yhteyttä.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                  "sourceContentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                  "targetText": "Lontoon lähetysseuran tulijat eivät toimineet Antananarivossa vain uskonnon parissa. Heidän joukossaan oli käsityöläisiä, jotka osallistuivat teollisen valmistuksen ja rakennustekniikan kehittämiseen, ja kaupunkiin perustettiin julkisia kouluja. Myöhemmin 1800-luvulla koulutuksen laajentaminen toi lisää kouluja ja opettajankoulutusta. Kaupunkiin tuli myös lääketieteen opetusta. Pääkaupungin muutos näkyi siis tiiliseinien lisäksi siinä, missä ja millaisia taitoja saattoi opiskella.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                  "wiki": "Antananarivo",
+                  "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                  "supportingSourceUrls": [
+                    "https://en.wikipedia.org/wiki/Antananarivo"
+                  ],
+                  "factSheetBibliographyUrls": [
+                    "https://en.wikivoyage.org/wiki/Antananarivo"
+                  ]
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "aa02871b5f85df0b61201bfa908e44d64f2c8f9cde16180c0758b278506decd1",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/extra-review-snapshots/0500b7b304256259b44a8c3f96f61cba36a91349692c65dfeb2d01e0dc59fba6.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva: Koulut tulivat käsityöläisten mukana.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+              "sha256": "0500b7b304256259b44a8c3f96f61cba36a91349692c65dfeb2d01e0dc59fba6",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-antananarivo-L4-illustration-v1-20261012",
+              "nativeSHA256": "324d681be4396b457370ff1bec0866b76d7d7ca94f3970e866a3cc49f74021a0",
+              "verdict": "accepted",
+              "reason": "Yleinen puutyöväline ja tekstittämätön kirja sopivat käsityön ja koulutuksen aiheeseen. Kuva ei rekonstruoi tiettyä historiallista luokkaa.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/assets/e08-antananarivo-L4-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "324d681be4396b457370ff1bec0866b76d7d7ca94f3970e866a3cc49f74021a0",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Käsihöylä, puulankkuja, lastuja ja tyhjäkantinen kirja penkillä. Luontevat lastut ja puupinnat, ei henkilöitä, tekstiä tai logoja.",
+                "captionFi": "Havainnekuva: Koulut tulivat käsityöläisten mukana.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                "contentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                "targetCurrentlyPresent": true,
+                "targetText": "Lontoon lähetysseuran tulijat eivät toimineet Antananarivossa vain uskonnon parissa. Heidän joukossaan oli käsityöläisiä, jotka osallistuivat teollisen valmistuksen ja rakennustekniikan kehittämiseen, ja kaupunkiin perustettiin julkisia kouluja. Myöhemmin 1800-luvulla koulutuksen laajentaminen toi lisää kouluja ja opettajankoulutusta. Kaupunkiin tuli myös lääketieteen opetusta. Pääkaupungin muutos näkyi siis tiiliseinien lisäksi siinä, missä ja millaisia taitoja saattoi opiskella.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                "topicEvidence": "L4 käsittelee käsityöläisten, rakennustekniikan ja koulutuksen yhteyttä.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+                  "sourceContentSha256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+                  "targetText": "Lontoon lähetysseuran tulijat eivät toimineet Antananarivossa vain uskonnon parissa. Heidän joukossaan oli käsityöläisiä, jotka osallistuivat teollisen valmistuksen ja rakennustekniikan kehittämiseen, ja kaupunkiin perustettiin julkisia kouluja. Myöhemmin 1800-luvulla koulutuksen laajentaminen toi lisää kouluja ja opettajankoulutusta. Kaupunkiin tuli myös lääketieteen opetusta. Pääkaupungin muutos näkyi siis tiiliseinien lisäksi siinä, missä ja millaisia taitoja saattoi opiskella.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/faktapohja.md",
+                  "wiki": "Antananarivo",
+                  "factSheetSha256": "cd24a15fb3aefce1cd60eb7c02da79b02a94309018c264a5b5ac43d369c2e493",
+                  "supportingSourceUrls": [
+                    "https://en.wikipedia.org/wiki/Antananarivo"
+                  ],
+                  "factSheetBibliographyUrls": [
+                    "https://en.wikivoyage.org/wiki/Antananarivo"
+                  ]
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "aa02871b5f85df0b61201bfa908e44d64f2c8f9cde16180c0758b278506decd1",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/extra-review-snapshots/0500b7b304256259b44a8c3f96f61cba36a91349692c65dfeb2d01e0dc59fba6.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T18:53:58.852036+00:00",
+          "contentSHA256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+          "targetSHA256": "d72212096727b0711a2bfff0fc45307ad32ab8da07b9a3747dd6fa14adf044f6"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa.json",
+            "sha256": "81ec52251782f59efec0bca1659366fda16fb64ab9807263d870e3eb1fc30eda"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+            "sha256": "6eeb9bb10636c02adc036c87a5ab9d4f4cf8ff4c5f96d0ed71c88d047f9fe8b8"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L4-illustration-v1-20261012-324d681be439.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L4-illustration-v1-20261012-324d681be439.png?t=5771a6764debe7f6",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L4-illustration-v1-20261012-324d681be439.png",
+        "sha256": "5771a6764debe7f69d007840d17487d07bc8d8962f365c4b7fe2ad0a3ef6868f",
+        "bytes": 2140901,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-antananarivo-L4-illustration-v1-20261012",
+        "nativeSHA256": "324d681be4396b457370ff1bec0866b76d7d7ca94f3970e866a3cc49f74021a0",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-L4-illustration-v1-20261012-324d681be439.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "antananarivo",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T18:53:52.476899+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/antananarivo/e08-antananarivo-L4-illustration-v1-20261012-324d681be439.png",
+        "sha256": "5771a6764debe7f69d007840d17487d07bc8d8962f365c4b7fe2ad0a3ef6868f",
+        "bytes": 2140901,
+        "SHAReadAt": "2026-10-12T19:03:36.145257+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "324d681be4396b457370ff1bec0866b76d7d7ca94f3970e866a3cc49f74021a0",
+        "rgbPixelSHA256": "90d446a49a74c2e765f20d0647f3bc847b00b81e8c62a5684ac48daf6234ebb1",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "targetAfterSHA256": "d72212096727b0711a2bfff0fc45307ad32ab8da07b9a3747dd6fa14adf044f6",
+      "contextAfterSHA256": "d72212096727b0711a2bfff0fc45307ad32ab8da07b9a3747dd6fa14adf044f6"
+    },
+    {
+      "era": "e08",
+      "city": "antananarivo",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e08-antananarivo-photo-16a8ea20880a8414",
+      "galleryImageID": "capital-cc-e08-antananarivo-photo-16a8ea20880a8414",
+      "commonsFile": "Ambanivohitra ao Antananarivo.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/photo-16a8ea20880a8414989e.jpg",
+        "suora": true,
+        "lahde": "Raveloaritiana Mamisoa, Commons (CC0)",
+        "selite": "Viljelyä ja maaseutuasutusta Antananarivon ympäristössä.",
+        "lyhyt": "Viljelyä ja maaseutuasutusta Antananarivon ympäristössä.",
+        "tiedosto": "Ambanivohitra ao Antananarivo.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Raveloaritiana Mamisoa, Commons (CC0)",
+        "selite": "Viljelyä ja maaseutuasutusta Antananarivon ympäristössä.",
+        "lyhyt": "Viljelyä ja maaseutuasutusta Antananarivon ympäristössä.",
+        "tiedosto": "Ambanivohitra ao Antananarivo.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/photo-16a8ea20880a8414989e.jpg",
+        "suora": true,
+        "lahde": "Raveloaritiana Mamisoa, Commons (CC0)",
+        "selite": "Viljelyä ja maaseutuasutusta Antananarivon ympäristössä.",
+        "lyhyt": "Viljelyä ja maaseutuasutusta Antananarivon ympäristössä.",
+        "tiedosto": "Ambanivohitra ao Antananarivo.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "16a8ea20880a8414989e7eb19eeaf2f3664d9d8411b5561da04f5fc9cecad035",
+      "exportSHA256": "16a8ea20880a8414989e7eb19eeaf2f3664d9d8411b5561da04f5fc9cecad035",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/photo-16a8ea20880a8414989e.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/photo-16a8ea20880a8414989e.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e08/antananarivo/a14031515db95b09f7c803ba381677bcb9d7ff49e98897abe60e8a6f30e4a24b.jpg",
+      "dimensions": [
+        2048,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+      "sourceContentSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "817b1bc59dc27a3934558b59b8f8be98e8722b86bf29bae9879055efd74cc052",
+        "semanticContextSHA256": "817b1bc59dc27a3934558b59b8f8be98e8722b86bf29bae9879055efd74cc052",
+        "subjectTitle": "antananarivo — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Raveloaritiana Mamisoa",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Ambanivohitra_ao_Antananarivo.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Ambanivohitra_ao_Antananarivo.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Commonsin nimenomainen Author- ja Source-kenttä sekä kuvan Licensing-osio tarkistettu.",
+            "placeLayer": "Français : Une campagne à Antananarivo, Madagascar",
+            "workLayer": "Alkuperäinen kuvaajan kuvaus: Une campagne à Antananarivo, Madagascar. Kuvateksti rajautuu maaseutumaisemaan, ei nimetyn kaupunginosan tai keskustan todistamiseen. Viljelymaisema pääaiheena, ei yksittäistä tunnistettua suojattua teosta.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/cc-evidence/6bc68675bc2b12b7-preview.jpg",
+            "pixelSHA256": "16a8ea20880a8414989e7eb19eeaf2f3664d9d8411b5561da04f5fc9cecad035",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/cc-evidence/6bc68675bc2b12b7.html",
+            "reservation": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/antananarivo/PHOTO/owner.json",
+            "independentQA": "avoin; ehdokas, ei lopullinen hyväksyntä tai julkaisu"
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/7deaabea0fcf-original.jpg",
+            "width": 2048,
+            "height": 1536,
+            "sha256": "16a8ea20880a8414989e7eb19eeaf2f3664d9d8411b5561da04f5fc9cecad035",
+            "nativeGeometry": {
+              "rawWidth": 2048,
+              "rawHeight": 1536,
+              "exifOrientation": 1,
+              "width": 2048,
+              "height": 1536
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Ambanivohitra_ao_Antananarivo.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/cc-source-snapshots/9f1d2f486642680a0bd10eb40bdbf8399b465c41e9608dbf63097d211d7d8a02.html",
+            "sourcePageSHA256": "9f1d2f486642680a0bd10eb40bdbf8399b465c41e9608dbf63097d211d7d8a02",
+            "sourceFields": {
+              "Date": "26 October 2025",
+              "Source": "Own work",
+              "Author": "Raveloaritiana Mamisoa"
+            },
+            "authors": [
+              "Raveloaritiana Mamisoa"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC0"
+            ],
+            "license": "CC0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/7deaabea0fcf-technical-source.json",
+            "sourceDescriptionExcerpt": "Summary [ edit ] Description Ambanivohitra ao Antananarivo.jpg Français : Une campagne à Antananarivo, Madagascar Date 26 October 2025 Source Own work Author Raveloaritiana Mamisoa Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 2048×1536 itse katsottu: viljelyalaa, maaseutuasutusta ja metsäistä mäkimaisemaa. Commonsin kuvaajan oma Description sitoo maaseutumaiseman Antananarivoon, Madagaskariin; kuvateksti rajataan Antananarivon ympäristöön eikä nimetä keskustaa/kaupunginosaa. Raveloaritiana Mamisoa on nimenomainen Author, oma työ ja CC0-vapautus lähdesivulla, päiväys 26.10.2025. Etäisten pienten ihmisten kasvonpiirteet eivät erotu. Rakennukset ovat maaseutuasutuksen kokonaisuutta, eivät yksittäinen luova teos pääaiheena. Ei lisättyä tekstiä, vesileimaa, mainoskuvaa tai kehystä. Värikylläisyys on voimakas mutta kohde ja yksityiskohdat erottuvat; PHOTO voi kuvata tähän paikkaan sidottua viljelymaisemaa.",
+            "workLayerAssessment": "Alkuperäinen 2048×1536 itse katsottu: viljelyalaa, maaseutuasutusta ja metsäistä mäkimaisemaa. Commonsin kuvaajan oma Description sitoo maaseutumaiseman Antananarivoon, Madagaskariin; kuvateksti rajataan Antananarivon ympäristöön eikä nimetä keskustaa/kaupunginosaa. Raveloaritiana Mamisoa on nimenomainen Author, oma työ ja CC0-vapautus lähdesivulla, päiväys 26.10.2025. Etäisten pienten ihmisten kasvonpiirteet eivät erotu. Rakennukset ovat maaseutuasutuksen kokonaisuutta, eivät yksittäinen luova teos pääaiheena. Ei lisättyä tekstiä, vesileimaa, mainoskuvaa tai kehystä. Värikylläisyys on voimakas mutta kohde ja yksityiskohdat erottuvat; PHOTO voi kuvata tähän paikkaan sidottua viljelymaisemaa.",
+            "placeEvidence": "Original photographer description: Une campagne à Antananarivo, Madagascar; no named neighborhood or central-city claim",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/6bc68675bc2b12b753798448b27803d1b065161f7ac77d0e745a6f4466753988.body",
+            "immutableSourceSnapshot": true
+          },
+          "qaReason": "Alkuperäinen 2048×1536 itse katsottu: viljelyalaa, maaseutuasutusta ja metsäistä mäkimaisemaa. Commonsin kuvaajan oma Description sitoo maaseutumaiseman Antananarivoon, Madagaskariin; kuvateksti rajataan Antananarivon ympäristöön eikä nimetä keskustaa/kaupunginosaa. Raveloaritiana Mamisoa on nimenomainen Author, oma työ ja CC0-vapautus lähdesivulla, päiväys 26.10.2025. Etäisten pienten ihmisten kasvonpiirteet eivät erotu. Rakennukset ovat maaseutuasutuksen kokonaisuutta, eivät yksittäinen luova teos pääaiheena. Ei lisättyä tekstiä, vesileimaa, mainoskuvaa tai kehystä. Värikylläisyys on voimakas mutta kohde ja yksityiskohdat erottuvat; PHOTO voi kuvata tähän paikkaan sidottua viljelymaisemaa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Viljelyä ja maaseutuasutusta Antananarivon ympäristössä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa.json",
+        "fileSHA256": "81ec52251782f59efec0bca1659366fda16fb64ab9807263d870e3eb1fc30eda",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Ambanivohitra ao Antananarivo.jpg",
+          "sha256": "16a8ea20880a8414989e7eb19eeaf2f3664d9d8411b5561da04f5fc9cecad035",
+          "nativeSHA256": "16a8ea20880a8414989e7eb19eeaf2f3664d9d8411b5561da04f5fc9cecad035",
+          "nativeOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/7deaabea0fcf-original.jpg",
+          "type": "commons",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen 2048×1536 itse katsottu: viljelyalaa, maaseutuasutusta ja metsäistä mäkimaisemaa. Commonsin kuvaajan oma Description sitoo maaseutumaiseman Antananarivoon, Madagaskariin; kuvateksti rajataan Antananarivon ympäristöön eikä nimetä keskustaa/kaupunginosaa. Raveloaritiana Mamisoa on nimenomainen Author, oma työ ja CC0-vapautus lähdesivulla, päiväys 26.10.2025. Etäisten pienten ihmisten kasvonpiirteet eivät erotu. Rakennukset ovat maaseutuasutuksen kokonaisuutta, eivät yksittäinen luova teos pääaiheena. Ei lisättyä tekstiä, vesileimaa, mainoskuvaa tai kehystä. Värikylläisyys on voimakas mutta kohde ja yksityiskohdat erottuvat; PHOTO voi kuvata tähän paikkaan sidottua viljelymaisemaa.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/7deaabea0fcf-original.jpg",
+            "width": 2048,
+            "height": 1536,
+            "sha256": "16a8ea20880a8414989e7eb19eeaf2f3664d9d8411b5561da04f5fc9cecad035",
+            "nativeGeometry": {
+              "rawWidth": 2048,
+              "rawHeight": 1536,
+              "exifOrientation": 1,
+              "width": 2048,
+              "height": 1536
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Ambanivohitra_ao_Antananarivo.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/cc-source-snapshots/9f1d2f486642680a0bd10eb40bdbf8399b465c41e9608dbf63097d211d7d8a02.html",
+            "sourcePageSHA256": "9f1d2f486642680a0bd10eb40bdbf8399b465c41e9608dbf63097d211d7d8a02",
+            "sourceFields": {
+              "Date": "26 October 2025",
+              "Source": "Own work",
+              "Author": "Raveloaritiana Mamisoa"
+            },
+            "authors": [
+              "Raveloaritiana Mamisoa"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC0"
+            ],
+            "license": "CC0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/7deaabea0fcf-technical-source.json",
+            "sourceDescriptionExcerpt": "Summary [ edit ] Description Ambanivohitra ao Antananarivo.jpg Français : Une campagne à Antananarivo, Madagascar Date 26 October 2025 Source Own work Author Raveloaritiana Mamisoa Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 2048×1536 itse katsottu: viljelyalaa, maaseutuasutusta ja metsäistä mäkimaisemaa. Commonsin kuvaajan oma Description sitoo maaseutumaiseman Antananarivoon, Madagaskariin; kuvateksti rajataan Antananarivon ympäristöön eikä nimetä keskustaa/kaupunginosaa. Raveloaritiana Mamisoa on nimenomainen Author, oma työ ja CC0-vapautus lähdesivulla, päiväys 26.10.2025. Etäisten pienten ihmisten kasvonpiirteet eivät erotu. Rakennukset ovat maaseutuasutuksen kokonaisuutta, eivät yksittäinen luova teos pääaiheena. Ei lisättyä tekstiä, vesileimaa, mainoskuvaa tai kehystä. Värikylläisyys on voimakas mutta kohde ja yksityiskohdat erottuvat; PHOTO voi kuvata tähän paikkaan sidottua viljelymaisemaa.",
+            "workLayerAssessment": "Alkuperäinen 2048×1536 itse katsottu: viljelyalaa, maaseutuasutusta ja metsäistä mäkimaisemaa. Commonsin kuvaajan oma Description sitoo maaseutumaiseman Antananarivoon, Madagaskariin; kuvateksti rajataan Antananarivon ympäristöön eikä nimetä keskustaa/kaupunginosaa. Raveloaritiana Mamisoa on nimenomainen Author, oma työ ja CC0-vapautus lähdesivulla, päiväys 26.10.2025. Etäisten pienten ihmisten kasvonpiirteet eivät erotu. Rakennukset ovat maaseutuasutuksen kokonaisuutta, eivät yksittäinen luova teos pääaiheena. Ei lisättyä tekstiä, vesileimaa, mainoskuvaa tai kehystä. Värikylläisyys on voimakas mutta kohde ja yksityiskohdat erottuvat; PHOTO voi kuvata tähän paikkaan sidottua viljelymaisemaa.",
+            "placeEvidence": "Original photographer description: Une campagne à Antananarivo, Madagascar; no named neighborhood or central-city claim",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/6bc68675bc2b12b753798448b27803d1b065161f7ac77d0e745a6f4466753988.body",
+            "immutableSourceSnapshot": true
+          },
+          "checkedAt": "2026-10-12T19:08:39.609048+00:00",
+          "contentSHA256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa.json",
+            "sha256": "81ec52251782f59efec0bca1659366fda16fb64ab9807263d870e3eb1fc30eda"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+            "sha256": "6eeb9bb10636c02adc036c87a5ab9d4f4cf8ff4c5f96d0ed71c88d047f9fe8b8"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "antananarivo",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Ambanivohitra ao Antananarivo.jpg",
+        "sha256": "16a8ea20880a8414989e7eb19eeaf2f3664d9d8411b5561da04f5fc9cecad035",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Ambanivohitra_ao_Antananarivo.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Ambanivohitra_ao_Antananarivo.jpg",
+        "author": "Raveloaritiana Mamisoa",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "width": 2048,
+        "height": 1536,
+        "originalSHA256": "16a8ea20880a8414989e7eb19eeaf2f3664d9d8411b5561da04f5fc9cecad035",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/photo-16a8ea20880a8414989e.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/photo-16a8ea20880a8414989e.jpg",
+        "bytes": 1526533,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:08:26.618398+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Ambanivohitra ao Antananarivo.jpg",
+        "lahde": "Raveloaritiana Mamisoa, Commons (CC0)",
+        "selite": "Viljelyä ja maaseutuasutusta Antananarivon ympäristössä.",
+        "lyhyt": "Viljelyä ja maaseutuasutusta Antananarivon ympäristössä."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Raveloaritiana Mamisoa, Commons (CC0)",
+        "selite": "Viljelyä ja maaseutuasutusta Antananarivon ympäristössä.",
+        "lyhyt": "Viljelyä ja maaseutuasutusta Antananarivon ympäristössä.",
+        "tiedosto": "Ambanivohitra ao Antananarivo.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "targetAfterSHA256": "817b1bc59dc27a3934558b59b8f8be98e8722b86bf29bae9879055efd74cc052",
+      "contextAfterSHA256": "817b1bc59dc27a3934558b59b8f8be98e8722b86bf29bae9879055efd74cc052"
+    },
+    {
+      "era": "e08",
+      "city": "antananarivo",
+      "slot": "N1",
+      "type": "commons",
+      "assetID": "capital-cc-e08-antananarivo-n1-339e419e9c7f59e3",
+      "galleryImageID": "capital-cc-e08-antananarivo-n1-339e419e9c7f59e3",
+      "commonsFile": "Lac anosy Antananarivo 2019-10-02 8.jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Anosy-järvi\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Anosy-järvi",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/n1-339e419e9c7f59e3e985.jpg",
+        "suora": true,
+        "lahde": "Z thomas, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Anosy-järven rantaa Antananarivossa, 2019.",
+        "lyhyt": "Anosy-järven rantaa Antananarivossa, 2019.",
+        "tiedosto": "Lac anosy Antananarivo 2019-10-02 8.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Z thomas, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Anosy-järven rantaa Antananarivossa, 2019.",
+        "lyhyt": "Anosy-järven rantaa Antananarivossa, 2019.",
+        "tiedosto": "Lac anosy Antananarivo 2019-10-02 8.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/n1-339e419e9c7f59e3e985.jpg",
+        "suora": true,
+        "lahde": "Z thomas, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Anosy-järven rantaa Antananarivossa, 2019.",
+        "lyhyt": "Anosy-järven rantaa Antananarivossa, 2019.",
+        "tiedosto": "Lac anosy Antananarivo 2019-10-02 8.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "339e419e9c7f59e3e985d682eb669d36a64e45336a190e872fff1d70cc905c87",
+      "exportSHA256": "339e419e9c7f59e3e985d682eb669d36a64e45336a190e872fff1d70cc905c87",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/n1-339e419e9c7f59e3e985.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/n1-339e419e9c7f59e3e985.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e08/antananarivo/475b2eb2694dbfb84af560dd315f07d4e1d2b0499a7f3b442da3544f2bd7e082.jpg",
+      "dimensions": [
+        3648,
+        2736
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
+      "sourceContentSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "49163db1c788a209883607c0ed4401632dbb2f22df6b0412f500ae5f2cb3fbd5",
+        "semanticContextSHA256": "a88ac8717e75369d72c94c5fb9c947a66ce3a7c09a4b5a66dea8e4601be3c0f3",
+        "subjectTitle": "Anosy-järvi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Z thomas",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Lac_anosy_Antananarivo_2019-10-02_8.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Lac_anosy_Antananarivo_2019-10-02_8.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLayer": "Lähdesivun nimenomainen Author ja Licensing tarkistettu; Source own work. Alkuperäinen kuva paikallisesti silmin katsottu.",
+            "workLayer": "Pääaiheena järven vesipinta ja puustoinen rantavyöhyke, taustalla tavallinen kaupungin asutus. Saaren muistomerkki ei ole kuvassa. Ei yksittäistä nimettyä suojattua teosta pääaiheena, tunnistettavia kasvoja, lisättyä tekstiä, vesileimaa tai kehystä; kaukaiset aidot kyltit ovat sivuosassa, kuva ei mainoskuva.",
+            "placeBoundary": "Kuvaajan oma Description: Lac Anosy in Antananarivo; päiväys 2.10.2019. Ei väitetä kuvassa olevan saaren muistomerkkiä.",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/cc-evidence/63596f48f92d5c38-preview.jpg",
+            "pixelSHA256": "339e419e9c7f59e3e985d682eb669d36a64e45336a190e872fff1d70cc905c87",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/cc-evidence/63596f48f92d5c38.html",
+            "sourceSHA256": "529c5d51a375a635d5290790e286819974eda426bf775d25ee47546ee44fc727",
+            "reservationRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e08/antananarivo/N1/owner.json",
+            "notAlreadyInPack": "Tarkistus korjattu: väärä paakaupungit-pilvi/js/packs-polku ei ollut olemassa. rg täsmällisillä tiedostonimillä todellisesta e08/js/packs-kansiosta: ei osumia (exit 1).",
+            "independentQA": "avoin"
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/4b2dc7612ba9-original.jpg",
+            "width": 3648,
+            "height": 2736,
+            "sha256": "339e419e9c7f59e3e985d682eb669d36a64e45336a190e872fff1d70cc905c87",
+            "nativeGeometry": {
+              "rawWidth": 3648,
+              "rawHeight": 2736,
+              "exifOrientation": 0,
+              "width": 3648,
+              "height": 2736
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Lac_anosy_Antananarivo_2019-10-02_8.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/cc-source-snapshots/529c5d51a375a635d5290790e286819974eda426bf775d25ee47546ee44fc727.html",
+            "sourcePageSHA256": "529c5d51a375a635d5290790e286819974eda426bf775d25ee47546ee44fc727",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/63596f48f92d5c380a259a5592cc99907942a9efa9b54455ed9d3e1afac059a2.body",
+            "sourceFields": {
+              "Date": "Taken on 2 October 2019 (according to Exif data)",
+              "Source": "Own work",
+              "Author": "Z thomas"
+            },
+            "authors": [
+              "Z thomas"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 4.0"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/4b2dc7612ba9-technical-source.json",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 3648×2736 itse katsottu. Anosy-järven vesi ja puustoinen ranta ovat pääaihe; saaren muistomerkkiä ei ole tässä kuvassa. Taustan talot, liikenne ja pienet etäiset kyltit ovat yleisen rantakaupunkinäkymän osia, eikä yksittäinen nimetty suojattu nykyteos ole pääaihe. Ihmiset ovat kaukana ilman luettavia kasvonpiirteitä; ei lisättyä tekstiä, vesileimaa tai kehystä, kuva ei mainos-/pakkausaihe. Z thomas on lähteen Author, CC BY-SA 4.0 ja 2.10.2019 varmistettu alkuperäiseltä Commons-sivulta. Description ja kamerakoordinaatit sitovat kuvan Lac Anosyyn Antananarivossa; caption rajautuu järven rantaan, ei muistomerkin ulkonäön todistamiseen.",
+            "workLayerAssessment": "Alkuperäinen 3648×2736 itse katsottu. Anosy-järven vesi ja puustoinen ranta ovat pääaihe; saaren muistomerkkiä ei ole tässä kuvassa. Taustan talot, liikenne ja pienet etäiset kyltit ovat yleisen rantakaupunkinäkymän osia, eikä yksittäinen nimetty suojattu nykyteos ole pääaihe. Ihmiset ovat kaukana ilman luettavia kasvonpiirteitä; ei lisättyä tekstiä, vesileimaa tai kehystä, kuva ei mainos-/pakkausaihe. Z thomas on lähteen Author, CC BY-SA 4.0 ja 2.10.2019 varmistettu alkuperäiseltä Commons-sivulta. Description ja kamerakoordinaatit sitovat kuvan Lac Anosyyn Antananarivossa; caption rajautuu järven rantaan, ei muistomerkin ulkonäön todistamiseen.",
+            "placeEvidence": {
+              "description": "Lac Anosy in Antananarivo",
+              "cameraLocation": "-18.915485; 47.521648"
+            }
+          },
+          "qaReason": "Alkuperäinen 3648×2736 itse katsottu. Anosy-järven vesi ja puustoinen ranta ovat pääaihe; saaren muistomerkkiä ei ole tässä kuvassa. Taustan talot, liikenne ja pienet etäiset kyltit ovat yleisen rantakaupunkinäkymän osia, eikä yksittäinen nimetty suojattu nykyteos ole pääaihe. Ihmiset ovat kaukana ilman luettavia kasvonpiirteitä; ei lisättyä tekstiä, vesileimaa tai kehystä, kuva ei mainos-/pakkausaihe. Z thomas on lähteen Author, CC BY-SA 4.0 ja 2.10.2019 varmistettu alkuperäiseltä Commons-sivulta. Description ja kamerakoordinaatit sitovat kuvan Lac Anosyyn Antananarivossa; caption rajautuu järven rantaan, ei muistomerkin ulkonäön todistamiseen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Anosy-järven rantaa Antananarivossa, 2019.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa.json",
+        "fileSHA256": "81ec52251782f59efec0bca1659366fda16fb64ab9807263d870e3eb1fc30eda",
+        "item": {
+          "slot": "N1",
+          "targetJsonPath": "$.nahtavyydet[\"Anosy-järvi\"].kuvat[0]",
+          "type": "commons",
+          "commonsFile": "Lac anosy Antananarivo 2019-10-02 8.jpg",
+          "sha256": "339e419e9c7f59e3e985d682eb669d36a64e45336a190e872fff1d70cc905c87",
+          "nativeSHA256": "339e419e9c7f59e3e985d682eb669d36a64e45336a190e872fff1d70cc905c87",
+          "nativeOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/4b2dc7612ba9-original.jpg",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen 3648×2736 itse katsottu. Anosy-järven vesi ja puustoinen ranta ovat pääaihe; saaren muistomerkkiä ei ole tässä kuvassa. Taustan talot, liikenne ja pienet etäiset kyltit ovat yleisen rantakaupunkinäkymän osia, eikä yksittäinen nimetty suojattu nykyteos ole pääaihe. Ihmiset ovat kaukana ilman luettavia kasvonpiirteitä; ei lisättyä tekstiä, vesileimaa tai kehystä, kuva ei mainos-/pakkausaihe. Z thomas on lähteen Author, CC BY-SA 4.0 ja 2.10.2019 varmistettu alkuperäiseltä Commons-sivulta. Description ja kamerakoordinaatit sitovat kuvan Lac Anosyyn Antananarivossa; caption rajautuu järven rantaan, ei muistomerkin ulkonäön todistamiseen.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/4b2dc7612ba9-original.jpg",
+            "width": 3648,
+            "height": 2736,
+            "sha256": "339e419e9c7f59e3e985d682eb669d36a64e45336a190e872fff1d70cc905c87",
+            "nativeGeometry": {
+              "rawWidth": 3648,
+              "rawHeight": 2736,
+              "exifOrientation": 0,
+              "width": 3648,
+              "height": 2736
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Lac_anosy_Antananarivo_2019-10-02_8.jpg",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/cc-source-snapshots/529c5d51a375a635d5290790e286819974eda426bf775d25ee47546ee44fc727.html",
+            "sourcePageSHA256": "529c5d51a375a635d5290790e286819974eda426bf775d25ee47546ee44fc727",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/63596f48f92d5c380a259a5592cc99907942a9efa9b54455ed9d3e1afac059a2.body",
+            "sourceFields": {
+              "Date": "Taken on 2 October 2019 (according to Exif data)",
+              "Source": "Own work",
+              "Author": "Z thomas"
+            },
+            "authors": [
+              "Z thomas"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 4.0"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa-evidence/4b2dc7612ba9-technical-source.json",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen 3648×2736 itse katsottu. Anosy-järven vesi ja puustoinen ranta ovat pääaihe; saaren muistomerkkiä ei ole tässä kuvassa. Taustan talot, liikenne ja pienet etäiset kyltit ovat yleisen rantakaupunkinäkymän osia, eikä yksittäinen nimetty suojattu nykyteos ole pääaihe. Ihmiset ovat kaukana ilman luettavia kasvonpiirteitä; ei lisättyä tekstiä, vesileimaa tai kehystä, kuva ei mainos-/pakkausaihe. Z thomas on lähteen Author, CC BY-SA 4.0 ja 2.10.2019 varmistettu alkuperäiseltä Commons-sivulta. Description ja kamerakoordinaatit sitovat kuvan Lac Anosyyn Antananarivossa; caption rajautuu järven rantaan, ei muistomerkin ulkonäön todistamiseen.",
+            "workLayerAssessment": "Alkuperäinen 3648×2736 itse katsottu. Anosy-järven vesi ja puustoinen ranta ovat pääaihe; saaren muistomerkkiä ei ole tässä kuvassa. Taustan talot, liikenne ja pienet etäiset kyltit ovat yleisen rantakaupunkinäkymän osia, eikä yksittäinen nimetty suojattu nykyteos ole pääaihe. Ihmiset ovat kaukana ilman luettavia kasvonpiirteitä; ei lisättyä tekstiä, vesileimaa tai kehystä, kuva ei mainos-/pakkausaihe. Z thomas on lähteen Author, CC BY-SA 4.0 ja 2.10.2019 varmistettu alkuperäiseltä Commons-sivulta. Description ja kamerakoordinaatit sitovat kuvan Lac Anosyyn Antananarivossa; caption rajautuu järven rantaan, ei muistomerkin ulkonäön todistamiseen.",
+            "placeEvidence": {
+              "description": "Lac Anosy in Antananarivo",
+              "cameraLocation": "-18.915485; 47.521648"
+            }
+          },
+          "checkedAt": "2026-10-12T19:22:51.863622+00:00",
+          "contentSHA256": "01343f480df04803c4b64e8d089032a93d41bdd430310fe8416f83b2179e4c92",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/qa.json",
+            "sha256": "81ec52251782f59efec0bca1659366fda16fb64ab9807263d870e3eb1fc30eda"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/antananarivo/illustration-qa-extra.json",
+            "sha256": "6eeb9bb10636c02adc036c87a5ab9d4f4cf8ff4c5f96d0ed71c88d047f9fe8b8"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e08",
+        "city": "antananarivo",
+        "slot": "N1",
+        "targetJsonPath": "$.nahtavyydet[\"Anosy-järvi\"].kuvat[0]",
+        "commonsFile": "Lac anosy Antananarivo 2019-10-02 8.jpg",
+        "sha256": "339e419e9c7f59e3e985d682eb669d36a64e45336a190e872fff1d70cc905c87",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Lac_anosy_Antananarivo_2019-10-02_8.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Lac_anosy_Antananarivo_2019-10-02_8.jpg",
+        "author": "Z thomas",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 3648,
+        "height": 2736,
+        "originalSHA256": "339e419e9c7f59e3e985d682eb669d36a64e45336a190e872fff1d70cc905c87",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/n1-339e419e9c7f59e3e985.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/n1-339e419e9c7f59e3e985.jpg",
+        "bytes": 3073417,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:24:58.581934+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Lac anosy Antananarivo 2019-10-02 8.jpg",
+        "lahde": "Z thomas, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Anosy-järven rantaa Antananarivossa, 2019.",
+        "lyhyt": "Anosy-järven rantaa Antananarivossa, 2019."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Z thomas, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Anosy-järven rantaa Antananarivossa, 2019.",
+        "lyhyt": "Anosy-järven rantaa Antananarivossa, 2019.",
+        "tiedosto": "Lac anosy Antananarivo 2019-10-02 8.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "b3232a08d75b78768d174ec399c70cb7e7504cfad30e5afac273341b25e97d2a",
+      "targetAfterSHA256": "49163db1c788a209883607c0ed4401632dbb2f22df6b0412f500ae5f2cb3fbd5",
+      "contextAfterSHA256": "a88ac8717e75369d72c94c5fb9c947a66ce3a7c09a4b5a66dea8e4601be3c0f3"
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": true,
+  "gameIntegrated": false
+}
