@@ -965,7 +965,7 @@ export const PAIKALLISAARTEET = {
   },
   MNE: {
     pieniAarre: {
-      name: 'Kori vranac-rypäleitä',
+      name: 'Terttu vranac-rypäleitä',
       fakta: 'Vranac on Montenegron istutetuin viinirypälelajike, ja sen tummat '
         + 'marjat poimitaan käsin yleensä syys–lokakuussa. Podgorican '
         + 'eteläpuolella Ćemovskon tasangolla on yli 2 000 hehtaarin '
