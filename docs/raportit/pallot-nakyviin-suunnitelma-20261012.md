@@ -86,7 +86,14 @@ Tarkistus 12.10.: natiivin ja workerin retkikunnan päätepisteet täsmäävät.
 
 ### Säännöt
 - Jokaisen opaskierroksen kohteen yllä leijuu ilmapallo (kohde-lista = kaupungin kierros, sama kuin metrokartassa). Pelaajat lentävät vapaasti ja keräävät pallot **missä järjestyksessä tahansa**. Kilpailu päättyy, kun kaikki on kerätty; kello käy aloitusmerkistä viimeiseen palloon.
-- **Keräys:** oma pallo (kaupunkikameran silmä, luku 4) tulee 60 metrin säteelle ilmapallosta (3D-etäisyys; ilmapallo leijuu 50 m kohteen katon yläpuolella). Kerätty pallo poksahtaa (olemassa oleva tehoste) ja katoaa vain keränneeltä; muiden pallot pysyvät.
+- **Omat pallot (omistaja 13.2x):** jokaisella pelaajalla on omat ilmapallonsa, ja keräys tapahtuu paikallisesti. Toisen keräämä pallo ei vie omaa palloa; huoneeseen menevät vain ajat (ja kerättyjen määrä nipun piirtoon, alla).
+- **Keräys:** oma pallo (kaupunkikameran silmä, luku 4) tulee 60 metrin säteelle ilmapallosta (3D-etäisyys; ilmapallo leijuu 50 m kohteen katon yläpuolella). Pallo irtoaa kohteesta ja lentää lyhyellä kaarella (noin 0,8 s) **korin reunaan pieneksi palloksi**; kohteessa sitä ei enää näy.
+- **Nippu (omistaja 13.2x):** kaikki kerätyt pallot sidotaan samaan kohtaan korin reunassa omien narujensa päähän. Narut tehdään Linssiseppä 2:n vaijerin köysikoodilla (10 segmentin köysi, Verlet ja pituusraja; ISS-raketti 0821f6c07). Pallot heiluvat korin liikkeen ja tuulen mukana (sama tuuli kuin `MuutPallot`illa) ja tönivät kevyesti toisiaan (pallojen välinen erotus). Nippu jää koriin kilpailun jälkeen siihen asti, kun kaupungista lähdetään.
+- **Nipun paikka ja koko (LS1):** pelaaja katsoo korista, joten nippu ei saa täyttää kuvaa (UI-peitto ≤ 45 % -linja): narujen kiinnityspiste
+  korin TAKAKULMAAN (näkyy, kun katsoo sivulle tai alas, kippi A:n peilikuvaveto), narut 1,2–1,8 m, pallot pieniä (Ø 0,35 m), nippu
+  enintään ~12 palloa tiiviinä rypäleenä. Piirto PalloKorin päällyskameralla korin tavoin (ei Googlen laattojen kanssa samassa syvyydessä).
+  Keräyslento 0,8 s kaarella kohteesta kiinnityspisteeseen kutistuen. LS2:n köysi sellaisenaan (12 × 10 segmenttiä on kevyt).
+- **Muiden nippu:** retkikuntalaisten pallot näkyvät toisille (luku 4), joten heidän nippunsa näkyy heidän korissaan (jäsenpallon kori, kauempaa vain < 400 m; LOD kuten luvussa 4). Sijaintiviestiin (luku 2) lisätään kerättyjen määrä `n` (kokonaisluku); nippu piirretään sen mukaan, keräys ei kulje verkon yli.
 - **Kilpailun aikana:** kierroksen kerronta ja kohdekortit ovat pois, ja kohteeseen lentäminen listan tai metrokartan kautta on pois päältä (vapaa lento ainoa liike). Metrokartta näyttää kerätyt kuitattuina (✓) ja jäljellä olevat.
 - **Keskeytys:** pelaaja voi lopettaa (ei tulosta); kierros jatkuu siitä, mihin se jäi ennen kilpailua.
 
@@ -133,7 +140,8 @@ Tarkistus 12.10.: natiivin ja workerin retkikunnan päätepisteet täsmäävät.
 |---|---|---|
 | Worker: kilpailun tila huoneessa, yhteislähtö, tulokset ja ennätykset, nopeustarkistus, testit | Pelikoodari | 0,5 pv |
 | Kilpailumoottori puhtaana C#:na (säännöt, kello, keräys, lähin pallo + hystereesi, palkinto, yksinpeli), Peli-testit | Pelikoodari | 1 pv |
-| Ilmapallot kohteiden yllä, poksahdus, korin kompassin kilpailutila, metrokartan kuittaus, listalennon esto, aloituspiste | Linssiseppä | 1,5 pv |
+| Ilmapallot kohteiden yllä, korin kompassin kilpailutila, metrokartan kuittaus, listalennon esto, aloituspiste | Linssiseppä | 1,5 pv |
+| Keräyslento korin reunaan, nippu LS2:n köysikoodilla (narut, heilunta tuulessa, pallojen erotus), muiden nippu viestin `n`:stä | Linssiseppä (köysi: LS2) | +0,5–1 pv |
 | Kutsu, lähtölaskenta ja tulostaulu olemassa olevilla pohjilla | Natiivi-UI | 0,5 pv |
 | Kahden simulaattorin kilpailutesti | Laitetestaaja | 0,5 pv |
-| **Yhteensä (luvun 5 lisäksi)** | | **noin 3,5–4 pv; juna 185 yhdessä pallojen kanssa tai 186** |
+| **Yhteensä (luvun 5 lisäksi)** | | **noin 4–5 pv (nippu +0,5–1 pv); juna 185 yhdessä pallojen kanssa tai 186** |
