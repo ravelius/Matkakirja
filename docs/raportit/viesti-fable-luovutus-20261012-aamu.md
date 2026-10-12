@@ -14,7 +14,7 @@ KUITATTU (lisäksi edellisen luovutuksen lista): MH-laiteluokkaportti a5cb1005a;
 TYÖN ALLA → kuittaus kun valmis:
 - LINNA: v48h 13/17 (16 korjattu). v48i (55/61: salin ala-oven holvi 2,2 → 2,45 m) linnahaarassa bf7abcc5d, botti ~05.15. v48j (86 muurikäytävän vanha seinä + MH v2 kaikille 11: kulmat, parrat, ripset, silmät, valkoiset hiukset, vesipoika, renki) → botti + MH-pelikuvat. Harjan piste 0 = botin raja (Siirtoseppä korjaa). Sitten LT:n 8. kierros (Laitetestaaja valmiina) → tunnus NS:lle.
 - NS: MH-materiaalikorjaus 64ec7994f (AlfaRaja + kaksipuolisuus; ilman sitä MH v2 ei näy) → Siirtoseppä yhdistää linnahaaraan ennen v48j:n käännöstä → MH-kuvasarja omistajalle aamulla.
-- LS1 saapumistarkkuus 3787c8935 + LS2 vesi v8 70cbd55f5 (Canal Saint-Martin jo poissa) + horisonttisävy → LS2:n syyajo A–D → kuittaus.
+- SAAPUMINEN: KUITATTU 05.4x yhdistelmä 150fbcd9f (bd90fa50e horisonttisävy + LS1 3787c8935 tarkkuusportti + LS2 70cbd55f5 vesi v8; syyajo A–D docs/raportit/kaappaukset/linssiseppa2-tuileries-abcd-20261012/ LS2:n checkoutissa). Jäljellä: République-kameran alla lataamaton laatta → LS2 laajentaa porttia alaspäin (LS1:n koodi) → kuvapari + SHA → kuittaus.
 - LS2: laukaisualustan maapinnat (nurmi, kallio, sora, betoni) + alustan rakennukset (betonikenttä, liekkikuilu, valomastot, huoltorakennus); KS:n z13-kehä _tyo/raketti-andoya-mapterhorn/z13-keha. Pulu: Codex-tilaus 8 kuvaa (posti/fable-codex-pulu-raketti-20261012.md, 99cac747d) → toimitus _tyo/codex-pulu-raketti-20261012/toimitus/ → LS2 kytkee (RakettiPulu v2 valmis) → pelikuvapari.
 - Pelikoodari + NUI: lautapelien OPASTETTU ENSIMMÄINEN PELI (Mylly + Tavli; logiikka 129a74d1e NUI:lla).
 - NUI: iPadin nimilistan koko (valittu ≥ 1,5× naapurit).
