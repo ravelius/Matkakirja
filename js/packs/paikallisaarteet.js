@@ -91,8 +91,9 @@ export const PAIKALLISAARTEET = {
     isoAarre: {
       name: 'Ivalojoen kultahippu',
       kuva: 'assets/aarteet/paikallis/fin-iso.jpg',
-      fakta: 'Ivalojoen kultaryntäys alkoi 1870, ja huippuvuonna 1871 joelta '
-        + 'huuhdottiin yli 50 kiloa kultaa.',
+      fakta: 'Kulta löytyi Ivalojoesta 1869, ja kruunu perusti joen rannalle '
+        + 'Kultalan aseman 1870. Suurimmat valtaukset tuottivat vain noin '
+        + 'kymmenen kiloa kultaa vuodessa.',
     },
   },
   SWE: {
