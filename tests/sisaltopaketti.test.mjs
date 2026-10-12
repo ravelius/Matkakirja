@@ -912,6 +912,7 @@ test('skeema 1.15: lehdet natiiville', async () => {
   const { MAA_KATEGORIAT } = await import('../js/packs/maa-kategoriat.js');
   const { KULTTUURI_PALKKIO } = await import('../js/packs/africa-kulttuuri.js');
   const { tulkitsePyramidi } = await import('../js/maakayrat.js');
+  const { kaupunkilehdenSivuNostoineen } = await import('../js/lehtinostot.js');
   const kokoelma = (n) => JSON.parse(tiedostot.get(`kokoelmat/${n}.json`));
   const media = new Map(JSON.parse(tiedostot.get('media.json')).viitteet.map((v) => [v.arvo, v]));
 
@@ -950,7 +951,9 @@ test('skeema 1.15: lehdet natiiville', async () => {
   for (const [id, lahteet] of Object.entries(KULTTUURI_KATEGORIAT)) {
     const a = kl.get(id);
     assert.equal(a.laji, 'lehti');
-    tarkistaAiheet(a.aiheet, lahteet, id);
+    // Kartalle siirtyneet jutut tulevat sivulle samalla reitillä kuin
+    // webissä (js/lehtinostot.js, omistaja 12.10.2026).
+    tarkistaAiheet(a.aiheet, lahteet.map((l) => kaupunkilehdenSivuNostoineen(id, l)), id);
     const kansi = lahteet.find((x) => x.id === 'kaupunki');
     assert.equal(a.kansi.kansikuvat.length, (kansi.kansikuvat ?? []).length, `${id}: kansikuvat`);
     a.kansi.kansikuvat.forEach((k, i) => tarkistaKuva(k, kansi.kansikuvat[i], `${id}/kansi/${i}`));
