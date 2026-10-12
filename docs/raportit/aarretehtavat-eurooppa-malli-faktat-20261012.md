@@ -74,7 +74,7 @@ Kirjoittajan huomiot: Brief mainitsi Hansakauppiaan hopeakätkön kellarin latti
 
 ## Bern
 
-Tarkistus: KORJAUKSIA (tehty): "Yksikään asiakirja" → "aikalaisasiakirja", Eigerin ensinousijat "kolme" (ei "ensimmäinen mies"), Tell-taru on Urin (Altdorf, Bürglen) taru, joten rivit sanovat "vuoristoon" eivätkä väitä jousta Grindelwaldista. **PT:n päätettävä:** vihjekaupunki Alpit/Grindelwald vai Altdorf (tarun paikka; ei kaupunkia pelissä)?
+Tarkistus: KORJAUKSIA (tehty): "Yksikään asiakirja" → "aikalaisasiakirja", Eigerin ensinousijat "kolme" (ei "ensimmäinen mies"), Tell-taru on Urin (Altdorf, Bürglen) taru, joten rivit sanovat "vuoristoon" eivätkä väitä jousta Grindelwaldista. PT päätti 12.10.: vihjekaupunki on Alpit (pelin alue), Grindelwaldia ei nimetä vihjeessä; rivi 3 sanoo vain "mene Alpeille".
 
 | Väite | Lähde 1 | Lähde 2 |
 |---|---|---|

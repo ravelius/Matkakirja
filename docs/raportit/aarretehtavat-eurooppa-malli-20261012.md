@@ -18,11 +18,11 @@ PT:n päätös 12.10.: mallierä viidelle kaupungille. Sisältö koneluettavana:
 | ITA | Caravaggion kadonnut maalaus | Sisilia (Palermo) | 3 |
 | FIN | Ivalojoen kultahippu | Lappi | 3 |
 | EST | Hansakauppiaan hopeakätkö | Tallinna | 2 |
-| CHE | Wilhelm Tellin varsijousi (taru) | Alpit (Grindelwald) | 3 |
+| CHE | Wilhelm Tellin varsijousi (taru) | Alpit | 3 |
 
 ## PT:lle päätettävää
 
-1. **Bern/CHE:** vihjekaupunki Alpit/Grindelwald (Tell-taru on Urin taru; rivit sanovat taru eivätkä väitä jousta Grindelwaldista) vai muu paikka?
+1. **Bern/CHE (PT päätti 12.10.):** vihjekaupunki Alpit, Grindelwaldia ei nimetä; rivit sanovat taru.
 2. **FIN-aarteen fakta on väärä** (`paikallisaarteet.js`: "huippuvuonna 1871 yli 50 kg"; lähteiden mukaan 10,4 kg): korjaus erillisenä PR:nä (tehty).
 3. **Praha:** saapumispiste siirretty Kultaiselle kujalle (50.0921, 14.4043).
 4. **Helsingin karttatehtävä:** kosketustoleranssi 70 px (1920 px leveässä kuvassa); Pelikoodari tarkistaa mittakaavan näytöllä.

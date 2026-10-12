@@ -1,7 +1,7 @@
 {
   "versio": 1,
   "laatija": "Sisältökirjuri 12.10.2026",
-  "huomio": "Aarretehtävien mallierä (PT:n hyväksymä 12.10.): Praha, Rooma, Helsinki, Tallinna, Bern. Faktat varmistettu kahdesta lähteestä ja tarkistettu itsenäisellä Sonnet-kierroksella (liite aarretehtavat-eurooppa-malli-faktat-20261012.md). Uudet lajit (valinta, kartta, etsi_kartalta) odottavat Pelikoodarin moottoria. Maan aarrevihjeet: maa_vihjeet (3 tehtävää/maa → kaupunki merkitään kartalle isoisän merkinnällä).",
+  "huomio": "Aarretehtävien mallierä (PT:n hyväksymä 12.10.): Praha, Rooma, Helsinki, Tallinna, Bern. Faktat varmistettu kahdesta lähteestä ja tarkistettu itsenäisellä Sonnet-kierroksella (liite aarretehtavat-eurooppa-malli-faktat-20261012.md). Uudet lajit (valinta, kartta, etsi_kartalta) odottavat Pelikoodarin moottoria. Maan aarrevihjeet: maa_vihjeet (3 tehtävää/maa → kaupunki merkitään kartalle isoisän merkinnällä). PT 12.10.: CHE-vihjekaupunki on Alpit (pelin alue), Grindelwaldia ei nimetä (Tell on Urin taru; rivit sanovat taru). Kenttä \"muistomerkki\": true merkitsee tehtävän kohteen, joka voi vaatia alueellisen piilotuksen (Italia/Kreikka); Rooman a-tehtävän Pantheon on merkitty.",
   "kaupungit": [
     {
       "versio": 1,
@@ -25,7 +25,8 @@
           "etaisyys_saapumispisteesta_m": 1160
         },
         "vihje_vaarin": "Ei se. Etsi puiden peittämä kukkula linnan lounaispuolelta: tornin teräsrunko on pienoismalli, ja esikuva on viisi kertaa korkeampi.",
-        "tiesitko": "Petřínin torni valmistui 1891. Tšekkiläiset turistit näkivät Eiffel-tornin Pariisissa ja halusivat Prahaan oman. Siinä on 299 askelmaa."
+        "tiesitko": "Petřínin torni valmistui 1891. Tšekkiläiset turistit näkivät Eiffel-tornin Pariisissa ja halusivat Prahaan oman. Siinä on 299 askelmaa.",
+        "muistomerkki": false
       },
       "b": {
         "tyyppi": "arvio",
@@ -41,7 +42,8 @@
           550
         ],
         "vihje_vaarin": "Kävelen sillan päästä päähän reilussa kuudessa minuutissa, ja minuutissa taittuu noin 80 metriä. Laske siitä.",
-        "tiesitko": "Kaarlensilta on noin 516 metriä pitkä, ja työ alkoi 1357. Tarun mukaan ensimmäinen kivi laskettiin 9.7. klo 5.31: luvut 1357-9-7-5-31 ovat palindromi."
+        "tiesitko": "Kaarlensilta on noin 516 metriä pitkä, ja työ alkoi 1357. Tarun mukaan ensimmäinen kivi laskettiin 9.7. klo 5.31: luvut 1357-9-7-5-31 ovat palindromi.",
+        "muistomerkki": false
       }
     },
     {
@@ -66,7 +68,8 @@
           "etaisyys_saapumispisteesta_m": 512
         },
         "vihje_vaarin": "Ei se. Kävele koilliseen: pylväikön takana odottaa pyöreä rakennus, jonka katossa on aukko taivaaseen.",
-        "tiesitko": "Pantheonin kupoli on noin 43 metriä leveä ja yhä maailman suurin raudoittamaton betonikupoli. Rakennus valmistui Hadrianuksen aikana, 120-luvulla."
+        "tiesitko": "Pantheonin kupoli on noin 43 metriä leveä ja yhä maailman suurin raudoittamaton betonikupoli. Rakennus valmistui Hadrianuksen aikana, 120-luvulla.",
+        "muistomerkki": true
       },
       "b": {
         "tyyppi": "aikajana",
@@ -86,7 +89,8 @@
           }
         ],
         "vihje_vaarin": "Muusikon korvalla: Colosseum on kaikkein vanhin, ja pääkaupunkiuutinen tuli vasta, kun Pietarinkirkko oli seissyt yli kaksisataa vuotta.",
-        "tiesitko": "Italian joukot astuivat Roomaan syyskuussa 1870, ja pääkaupungiksi Rooma tuli virallisesti 3. helmikuuta 1871."
+        "tiesitko": "Italian joukot astuivat Roomaan syyskuussa 1870, ja pääkaupungiksi Rooma tuli virallisesti 3. helmikuuta 1871.",
+        "muistomerkki": false
       }
     },
     {
@@ -111,7 +115,8 @@
           "etaisyys_saapumispisteesta_m": 380
         },
         "vihje_vaarin": "Ei se. Katso itään, Katajanokan kalliolle: siellä seisoo punatiilinen ortodoksinen kirkko, jonka kupolit hohtavat kultaa.",
-        "tiesitko": "Kirkko vihittiin käyttöön 25. lokakuuta 1868. Sen rakentamiseen käytettiin Ahvenanmaan Bomarsundin linnoituksen tiiliä."
+        "tiesitko": "Kirkko vihittiin käyttöön 25. lokakuuta 1868. Sen rakentamiseen käytettiin Ahvenanmaan Bomarsundin linnoituksen tiiliä.",
+        "muistomerkki": false
       },
       "b": {
         "tyyppi": "kartta",
@@ -130,7 +135,8 @@
         ],
         "toleranssi_px": 70,
         "vihje_vaarin": "Ei tuo. Tähtitorni on mäellä kaupungin eteläosassa, Eteläsataman länsipuolella; kartassa sen vieressä lukee Observatorium.",
-        "tiesitko": "Tähtitorni valmistui 1834 C. L. Engelin piirustuksin, ja se seisoo yhä Tähtitorninmäellä. Nykyään siellä on tähtitieteen kävijäkeskus."
+        "tiesitko": "Tähtitorni valmistui 1834 C. L. Engelin piirustuksin, ja se seisoo yhä Tähtitorninmäellä. Nykyään siellä on tähtitieteen kävijäkeskus.",
+        "muistomerkki": false
       }
     },
     {
@@ -155,7 +161,8 @@
           "etaisyys_saapumispisteesta_m": 511
         },
         "vihje_vaarin": "Ei se. Kävele torilta pohjoiseen ja katso ylös: etsimäsi kirkon torni nousee yli sadan metrin korkeuteen.",
-        "tiesitko": "Olevisten kirkon torni on noin 124 metriä korkea. Salama on iskenyt siihen noin kymmenen kertaa, viimeksi vuonna 1931."
+        "tiesitko": "Olevisten kirkon torni on noin 124 metriä korkea. Salama on iskenyt siihen noin kymmenen kertaa, viimeksi vuonna 1931.",
+        "muistomerkki": false
       },
       "b": {
         "tyyppi": "valinta",
@@ -173,7 +180,8 @@
           "teksti_lahde": "js/packs/fokusvirta-tallinna.js, kenttä matkakirja.teksti (sama teksti: assets/aikaleimat/puhe-fokus-matkakirja-tallinna.aikaleimat.json, kenttä teksti)"
         },
         "vihje_vaarin": "Kuuntele uudestaan heti alussa: se on makea, manteleista tehty herkku, josta apteekkari leikkasi isoisälle suuremman palan.",
-        "tiesitko": "Raatihuoneen vastapäinen Raeapteek on toiminut samassa paikassa 1400-luvulta ja myy yhä marsipaania."
+        "tiesitko": "Raatihuoneen vastapäinen Raeapteek on toiminut samassa paikassa 1400-luvulta ja myy yhä marsipaania.",
+        "muistomerkki": false
       }
     },
     {
@@ -198,7 +206,8 @@
           "etaisyys_saapumispisteesta_m": 710
         },
         "vihje_vaarin": "Ei se. Kävele kaupungin itäreunalle Nydeggin sillan tuntumaan: karhut asuvat joen rinteessä sillan vieressä.",
-        "tiesitko": "Tarun mukaan perustaja nimesi kaupungin metsästyksensä ensimmäisen saaliin, karhun, mukaan. Nimen alkuperää selitetään nykyään myös kelttiläisellä sanalla."
+        "tiesitko": "Tarun mukaan perustaja nimesi kaupungin metsästyksensä ensimmäisen saaliin, karhun, mukaan. Nimen alkuperää selitetään nykyään myös kelttiläisellä sanalla.",
+        "muistomerkki": false
       }
     }
   ],
@@ -243,7 +252,7 @@
       "vihjeet": [
         "Yksikään aikalaisasiakirja ei tunne miestä, joka ampui omenan poikansa päästä. Aarre on taru, ei löytö; etsi sitä sieltä, missä vuoret kohoavat korkeimmiksi.",
         "Taru sijoittaa varsijousimiehen Sveitsin vuoristoon. Eigerin huipulle nousivat ensimmäiset vasta 1858, ja siellä jäätiköt laskeutuvat laaksoihin.",
-        "Tellin jousesta ei tiedä kukaan, sillä Tell on taru. Jos aarretta etsii vuorilta, mene Grindelwaldiin, Eigerin ja Wetterhornin juurelle."
+        "Tellin jousesta ei tiedä kukaan, sillä Tell on taru. Jos aarretta etsii vuorilta, mene Alpeille."
       ]
     }
   ]
