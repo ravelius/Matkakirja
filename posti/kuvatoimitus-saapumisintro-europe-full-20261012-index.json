@@ -1,0 +1,39 @@
+{
+  "taskId": "all-missing-europe-arrival-intro-images-20261012",
+  "cities": {
+    "lisbon": {
+      "gameCityId": "lissabon",
+      "mediaSlug": "lisbon",
+      "acceptedAssets": 2,
+      "omittedItems": [
+        {
+          "id": "lisbon-8-alfama-tejo-1873-intro-v1",
+          "slot": 8,
+          "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/lisbon-8-alfama-tejo-1873-intro-v1.png",
+          "reason": "Historical image is visually nearly black and white but native RGB channels differ: max absolute R-G11, R-B7. Violates required pure neutral grayscale. Candidate preserved; no recolour or extra call.",
+          "rootReview": {
+            "sha256": "3e6b3b9efd3522bbb4c4f4c6383c7942d56cbf7baf36a9a754b5673eb74cf344",
+            "fullFrameInspected": true,
+            "nativeDetailsInspected": true,
+            "approvedForTechnicalDelivery": false,
+            "observations": "Entire native1536x1024 historical frame inspected and compared visually with retained slot5. Same elevated hillside direction over Alfama roofs toward broad Tagus, near roofs bottom/left and estuary beyond/right. Neutral black and white. Old irregular tile/plaster and small sailing craft, no modern coastal road, antennas, cruise terminal, bridge, opposite-shore towers or electric lights. No text,logos,numbers or artwork observed.",
+            "historicalPairSlot": 5,
+            "historicalSourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/sources-1873.json",
+            "limits": [
+              "Conservative illustrative1873 roofscape based on old quarter geography; individual anonymous facades are reconstructed, not a surveyed photograph."
+            ],
+            "reviewedAt": "2026-10-12T17:26:20.016873+00:00",
+            "strictNeutralBlackWhite": false,
+            "omissionReason": "Historical image is visually nearly black and white but native RGB channels differ: max absolute R-G11, R-B7. Violates required pure neutral grayscale. Candidate preserved; no recolour or extra call."
+          },
+          "generationCalls": 1
+        }
+      ],
+      "actualCalls": 4,
+      "manifestPath": "posti/kuvatoimitus-saapumisintro-lisbon-full-20261012.json",
+      "ownerAcceptance": false,
+      "gameIntegrated": false
+    }
+  },
+  "updatedAt": "2026-10-12T17:31:15.850139+00:00"
+}

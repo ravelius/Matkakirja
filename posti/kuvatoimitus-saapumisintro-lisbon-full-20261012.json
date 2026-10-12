@@ -1,0 +1,686 @@
+{
+  "cityName": "Lissabon",
+  "gameCityId": "lissabon",
+  "mediaSlug": "lisbon",
+  "assets": [
+    {
+      "id": "lisbon-6-santos-populares-intro-v1",
+      "slot": 6,
+      "cityName": "Lissabon",
+      "gameCityId": "lissabon",
+      "mediaSlug": "lisbon",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/lisbon-6-santos-populares-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/native/lisbon-6-santos-populares-intro-v1.png",
+      "sha256": "b8e58eecedb5b0be1962001bd3f7da2e0d14ea19a5ff63c82cde5b26bacc5c9c",
+      "bytes": 2134078,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "r2Key": "julisteet/saapumisintro/lisbon/20261012-full/lisbon-6-santos-populares-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012-full/lisbon-6-santos-populares-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja Lisbon arrival intro slot 6. Generate one completely new original photorealistic illustrative image, like a candid documentary photograph taken with a real full-frame camera. Landscape exactly 1536 x 1024, opaque RGB sRGB PNG. Natural restrained colour and credible single-camera geometry, natural irregular wear, individually varied roof tiles and foliage. No HDR, CGI, render, painting, cinematic grading, plastic skin or stamped/cloned textures. Absolutely no text, lettering, numbers, signage, logos, brands, brand patterns, watermarks, borders, frames, food, protected artwork or contemporary named designer architecture. Scene: modern Lisbon, a joyful June Santos Populares neighbourhood dance gathering in an ordinary small Alfama residential courtyard, old faded cream and ochre plaster, simple iron balconies, plain colourful paper streamers high overhead, late dusk with soft ambient warm bulbs. A fictional Portuguese adult woman aged around 27 with naturally textured skin, dark wavy hair, happy candid smile looking toward a friend beyond camera, is the single clear foreground person. Contemporary tasteful generic unbranded ivory linen blouse and dark simple sleeveless waistcoat; many other young adults behind, locally plausible Lisbon residents with varied natural appearances, relaxed joyful conversation and dancing. Composition: chest-up eye-level 50mm photograph with the lower image filled by overlapping adult torsos; every person is cropped above hips or their lower body fully hidden behind others. ALL FEET AND EVERY SHOE MUST BE COMPLETELY OUTSIDE FRAME OR OCCLUDED, including distant crowd. Visible background people are shoulders and heads only. No stage, no signs, no banners with writing, no food, no drinks, no children. Realistic anatomy and subtle natural shadows, lively but visually believable.",
+      "sources": [
+        {
+          "url": "https://www.visitlisboa.com/en/places/alfama",
+          "title": "Visit Lisboa – Alfama",
+          "readFacts": [
+            "Alfama is Lisbon oldest neighbourhood, cobbled steep lanes.",
+            "Santa Luzia viewpoint looks over Alfama and Tagus.",
+            "Street references in Alfama predate1873 (Cruzes da Sé1690, Beco Quebra-Costas1565)."
+          ]
+        },
+        {
+          "url": "https://www.e-cultura.pt/patrimonio_item/10245",
+          "title": "Centro Nacional de Cultura – Bairro de Alfama",
+          "readFacts": [
+            "Alfama on southern castle hillside preserves medieval Arab-influenced urban layout.",
+            "1755 earthquake little affected district; historic warehouses next to Tagus."
+          ]
+        },
+        {
+          "url": "https://servicos.infraestruturasdeportugal.pt/pt-pt/a-descobrir/obras-de-arte/ponte-25-de-abril/inauguracao",
+          "title": "Infraestruturas de Portugal – A Inauguração",
+          "readFacts": [
+            "25 de Abril bridge inaugurated6 August1966, exclude from1873."
+          ]
+        },
+        {
+          "url": "https://www.visitlisboa.com/en/events/lisbon-festivities-1",
+          "title": "Visit Lisboa – Lisbon Festivities",
+          "readFacts": [
+            "June celebrations with music, street entertainment and folk festivals in Alfama, Bica, Bairro Alto, Castelo and Mouraria."
+          ]
+        },
+        {
+          "url": "https://www.visitlisboa.com/en/places/bairro-alto",
+          "title": "Visit Lisboa – Bairro Alto",
+          "readFacts": [
+            "Bairro Alto is old traditional residential district and nightlife gathering area."
+          ]
+        }
+      ],
+      "caption": "Nuoria aikuisia Santos Populares -korttelijuhlassa Alfamassa Lissabonissa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "agentFullFrameViewed": true,
+          "agentNativeSizeViewed": true,
+          "noVisibleTextLogosBrands": true,
+          "photorealistic": true,
+          "naturalTextures": true,
+          "footwearExcluded": true,
+          "peoplePolicyPass": true,
+          "noFood": true,
+          "issues": [],
+          "rootReviewPending": true
+        },
+        "sessionOwner": {
+          "sha256": "b8e58eecedb5b0be1962001bd3f7da2e0d14ea19a5ff63c82cde5b26bacc5c9c",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Native1536x1024 entire frame and clothing/skin/background inspected. Believable joyful adult gathering in an old Lisbon lane, fictional foreground adult with natural skin and hair. Every body cut above footwear. Plain clothes or generic organic printed cloth without brand marks; no food, text, signage, logos, numbers or artworks observed. Warm practical lights and natural remaining dusk.",
+          "limits": [
+            "Illustrative festive atmosphere, not a documentary record of an actual person or dated event."
+          ],
+          "reviewedAt": "2026-10-12T17:23:19.202657+00:00"
+        }
+      },
+      "technicalExport": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/lisbon-6-santos-populares-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/native/lisbon-6-santos-populares-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "b8e58eecedb5b0be1962001bd3f7da2e0d14ea19a5ff63c82cde5b26bacc5c9c",
+        "bytes": 2134078,
+        "nativeSha256": "26ed5bfb4c187f27d9c5157c294dacb58fc1bb389b2261b0e2081310cd9513b2",
+        "decodedRGBSha256": "4b7908074c0b5c5350ebdfbeb58be28a9cfd75ecf0ec07ee523b9a610b9dc5b3",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:22:32.668605+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/lisbon/20261012-full/lisbon-6-santos-populares-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012-full/lisbon-6-santos-populares-intro-v1.png?t=b8e58eecedb5b0be",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012-full/lisbon-6-santos-populares-intro-v1.png",
+        "sha256": "b8e58eecedb5b0be1962001bd3f7da2e0d14ea19a5ff63c82cde5b26bacc5c9c",
+        "bytes": 2134078,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "b8e58eecedb5b0be1962001bd3f7da2e0d14ea19a5ff63c82cde5b26bacc5c9c",
+        "canonicalGetBytes": 2134078,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:27:44.637983+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "lisbon-7-bairro-alto-ilta-intro-v1",
+      "slot": 7,
+      "cityName": "Lissabon",
+      "gameCityId": "lissabon",
+      "mediaSlug": "lisbon",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/lisbon-7-bairro-alto-ilta-intro-v1.png",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/native/lisbon-7-bairro-alto-ilta-intro-v1.png",
+      "sha256": "556a4547d458393e9a16d1ec2629d9d07ae27e89ce197c5650ec52a1206fc0f3",
+      "bytes": 2623200,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "r2Key": "julisteet/saapumisintro/lisbon/20261012-full/lisbon-7-bairro-alto-ilta-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012-full/lisbon-7-bairro-alto-ilta-intro-v1.png",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja Lisbon arrival intro slot 7. Generate one completely new original photorealistic illustrative image, like a candid documentary photograph taken with a real full-frame camera. Landscape exactly 1536 x 1024, opaque RGB sRGB PNG. Natural restrained colour and credible single-camera geometry, natural irregular wear, individually varied roof tiles and foliage. No HDR, CGI, render, painting, cinematic grading, plastic skin or stamped/cloned textures. Absolutely no text, lettering, numbers, signage, logos, brands, brand patterns, watermarks, borders, frames, food, protected artwork or contemporary named designer architecture. Scene: present-day ordinary residential lane in Bairro Alto, Lisbon, after sunset at blue hour. Unlike a rooftop panorama, this is an intimate street-level night view down a gently sloping cobbled lane lined with old weathered cream and pale rose plaster three-storey homes and simple black iron balconies. A few small warm window lights and ordinary modest wall lanterns make soft pools on irregular limestone paving; subtle damp reflection after light rain, no heavy gloss. 35mm eye-level camera, horizontal composition with a slight bend in the lane and upper dark-blue sky. Two tiny people far away walking with their backs to the camera, faces not visible. Quiet lived-in atmosphere, no commercial storefronts, no tram, no recognisable monument, no graffiti, no advertising, no street names or house numbers.",
+      "sources": [
+        {
+          "url": "https://www.visitlisboa.com/en/places/alfama",
+          "title": "Visit Lisboa – Alfama",
+          "readFacts": [
+            "Alfama is Lisbon oldest neighbourhood, cobbled steep lanes.",
+            "Santa Luzia viewpoint looks over Alfama and Tagus.",
+            "Street references in Alfama predate1873 (Cruzes da Sé1690, Beco Quebra-Costas1565)."
+          ]
+        },
+        {
+          "url": "https://www.e-cultura.pt/patrimonio_item/10245",
+          "title": "Centro Nacional de Cultura – Bairro de Alfama",
+          "readFacts": [
+            "Alfama on southern castle hillside preserves medieval Arab-influenced urban layout.",
+            "1755 earthquake little affected district; historic warehouses next to Tagus."
+          ]
+        },
+        {
+          "url": "https://servicos.infraestruturasdeportugal.pt/pt-pt/a-descobrir/obras-de-arte/ponte-25-de-abril/inauguracao",
+          "title": "Infraestruturas de Portugal – A Inauguração",
+          "readFacts": [
+            "25 de Abril bridge inaugurated6 August1966, exclude from1873."
+          ]
+        },
+        {
+          "url": "https://www.visitlisboa.com/en/events/lisbon-festivities-1",
+          "title": "Visit Lisboa – Lisbon Festivities",
+          "readFacts": [
+            "June celebrations with music, street entertainment and folk festivals in Alfama, Bica, Bairro Alto, Castelo and Mouraria."
+          ]
+        },
+        {
+          "url": "https://www.visitlisboa.com/en/places/bairro-alto",
+          "title": "Visit Lisboa – Bairro Alto",
+          "readFacts": [
+            "Bairro Alto is old traditional residential district and nightlife gathering area."
+          ]
+        }
+      ],
+      "caption": "Bairro Alton asuinkuja lämpimässä iltavalossa Lissabonissa. Havainnekuva.",
+      "QA": {
+        "worker": {
+          "agentFullFrameViewed": true,
+          "agentNativeSizeViewed": true,
+          "noVisibleTextLogosBrands": true,
+          "photorealistic": true,
+          "naturalTextures": true,
+          "footwearExcluded": false,
+          "peoplePolicyPass": true,
+          "noFood": true,
+          "issues": [],
+          "rootReviewPending": true
+        },
+        "sessionOwner": {
+          "sha256": "556a4547d458393e9a16d1ec2629d9d07ae27e89ce197c5650ec52a1206fc0f3",
+          "fullFrameInspected": true,
+          "nativeDetailsInspected": true,
+          "approvedForTechnicalDelivery": true,
+          "observations": "Entire native1536x1024 frame inspected including door surrounds and distant buildings. Natural damp paving, worn residential plaster and warm practical lamps at dusk; two distant adults walking away. No visible lettering, number plaques, logos or protected art. Small dark wall attachments are hardware/shadow rather than textual plaques.",
+          "limits": [
+            "Generated illustrative view, not a surveyed topographic or architectural record."
+          ],
+          "reviewedAt": "2026-10-12T17:24:37.274620+00:00"
+        }
+      },
+      "technicalExport": {
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/lisbon-7-bairro-alto-ilta-intro-v1.png",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/native/lisbon-7-bairro-alto-ilta-intro-v1.png",
+        "nativeSize": [
+          1536,
+          1024
+        ],
+        "nativeMode": "RGB",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colorSpace": "sRGB",
+        "embeddedSRGBProfile": true,
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "sha256": "556a4547d458393e9a16d1ec2629d9d07ae27e89ce197c5650ec52a1206fc0f3",
+        "bytes": 2623200,
+        "nativeSha256": "1de49556f64defe4788730de0a867bc9d7374c912c577b849daee2d1e3f459b9",
+        "decodedRGBSha256": "d4c2513fb85d9b20b997a624a69aa1ec57d64e9a04abcfae191e9bf63e0cea7a",
+        "pixelChangesApplied": false,
+        "decodedRGBPixelsIdentical": true,
+        "resizeApplied": false,
+        "cropApplied": false,
+        "retouchApplied": false,
+        "metadataOnlyExport": true,
+        "exportedAt": "2026-10-12T17:23:41.728510+00:00"
+      },
+      "R2Proof": {
+        "r2Key": "julisteet/saapumisintro/lisbon/20261012-full/lisbon-7-bairro-alto-ilta-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012-full/lisbon-7-bairro-alto-ilta-intro-v1.png?t=556a4547d458393e",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012-full/lisbon-7-bairro-alto-ilta-intro-v1.png",
+        "sha256": "556a4547d458393e9a16d1ec2629d9d07ae27e89ce197c5650ec52a1206fc0f3",
+        "bytes": 2623200,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "canonicalGetHttp": 200,
+        "canonicalGetSha256": "556a4547d458393e9a16d1ec2629d9d07ae27e89ce197c5650ec52a1206fc0f3",
+        "canonicalGetBytes": 2623200,
+        "canonicalGetMime": "image/png",
+        "canonicalGetCors": "https://matkakirja.app",
+        "canonicalReadbackByteExact": true,
+        "verifiedAt": "2026-10-12T17:27:45.923042+00:00"
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "id": "lisbon-8-alfama-tejo-1873-intro-v1",
+      "slot": 8,
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/lisbon-8-alfama-tejo-1873-intro-v1.png",
+      "reason": "Historical image is visually nearly black and white but native RGB channels differ: max absolute R-G11, R-B7. Violates required pure neutral grayscale. Candidate preserved; no recolour or extra call.",
+      "rootReview": {
+        "sha256": "3e6b3b9efd3522bbb4c4f4c6383c7942d56cbf7baf36a9a754b5673eb74cf344",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForTechnicalDelivery": false,
+        "observations": "Entire native1536x1024 historical frame inspected and compared visually with retained slot5. Same elevated hillside direction over Alfama roofs toward broad Tagus, near roofs bottom/left and estuary beyond/right. Neutral black and white. Old irregular tile/plaster and small sailing craft, no modern coastal road, antennas, cruise terminal, bridge, opposite-shore towers or electric lights. No text,logos,numbers or artwork observed.",
+        "historicalPairSlot": 5,
+        "historicalSourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/sources-1873.json",
+        "limits": [
+          "Conservative illustrative1873 roofscape based on old quarter geography; individual anonymous facades are reconstructed, not a surveyed photograph."
+        ],
+        "reviewedAt": "2026-10-12T17:26:20.016873+00:00",
+        "strictNeutralBlackWhite": false,
+        "omissionReason": "Historical image is visually nearly black and white but native RGB channels differ: max absolute R-G11, R-B7. Violates required pure neutral grayscale. Candidate preserved; no recolour or extra call."
+      },
+      "generationCalls": 1
+    }
+  ],
+  "retainedExistingSlots": [
+    4,
+    5
+  ],
+  "status": "awaiting-root-review; slot8 technical-black-white-check-failed",
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "complete": true,
+  "technicalDeliveryComplete": false,
+  "existingDeliveredSlotsPreserved": [
+    {
+      "id": "lisbon-4-alfama-sample",
+      "fileName": "lisbon-4-alfama-sample.png",
+      "city": "Lissabon",
+      "cityId": "lisbon",
+      "country": "Portugali",
+      "character": "Alfaman kuja",
+      "caption": "Alfaman jyrkkä mukulakivikatu Lissabonissa. Havainnekuva.",
+      "moment": "Tekoälyllä tuotettu fotorealistinen havainnekuva; ei aito paikkavalokuva.",
+      "categoryId": "havainnekuvat-20261012",
+      "mediaSource": "local",
+      "publicUrl": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012/lisbon-4-alfama-sample.png",
+      "batchLabel": "Euroopan kaupunkinäytteet · 12.10.2026",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja European-city owner-review sample. Generate a completely new original present-day documentary photograph, visibly taken with a real full-frame camera, landscape 1536 x 1024 pixels, opaque RGB sRGB PNG. Natural restrained colours, believable single-camera perspective, ordinary candid travel photography rather than polished advertising. Every physical surface must have organic irregular detail: varied mortar and stones, subtle weathering, no engraved crescent marks, repeated embossed leaf patterns, tiling/cloned organic textures. No readable text, letters, numbers, signs, shop boards, logos, brands, watermarks, borders, frames or identifiable faces. Avoid named contemporary architecture, modern artworks, protected decorative panels, fake landmarks, impossible buildings, CGI/render appearance, painterly textures, excessive sharpness, HDR/teal-orange film grading. No reproduction of any existing reference photograph.\nScene: an ordinary steep, narrow, historic lane in Alfama, Lisbon, Portugal, warm cream and faded ochre plaster residential façades, occasional quiet iron balconies, old red clay rooftops partly visible, asymmetrical window spacing, uneven small pale limestone paving and a few worn steps. Primary subject: walking up the neighbourhood at pedestrian eye level. Composition: 35 mm lens, street vanishing into a gentle bend, meaningful full-frame architecture and paving detail, two very small distant people walking away, no front faces. Lighting: mild bright overcast daylight with a little diffuse warm sunlight on upper plaster; natural soft shadows. Plain residential doors and plain plaster walls rather than commercial storefronts; no decorative mural or painted lettering, no tram needed.",
+      "promptSource": "recorded",
+      "webReferenceImageCount": 0,
+      "webReferenceUrls": [
+        {
+          "label": "Visit Lisboa – Alfama",
+          "url": "https://www.visitlisboa.com/en/places/alfama"
+        }
+      ],
+      "initialWorkflowStatus": "pending",
+      "initialSuggestion": "",
+      "sourceManifestProof": {
+        "id": "lisbon-4-alfama-sample",
+        "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-havainnekuvat-kaupunkitausta-20261012/lisbon/manifest.json",
+        "sha256": "a6f5119ecc8bd0a25a388bd444593927f8eb9787c1432b80f76abe7ec98898cd",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-havainnekuvat-kaupunkitausta-20261012/lisbon/final/lisbon-4-alfama-sample.png",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012/lisbon-4-alfama-sample.png",
+        "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja European-city owner-review sample. Generate a completely new original present-day documentary photograph, visibly taken with a real full-frame camera, landscape 1536 x 1024 pixels, opaque RGB sRGB PNG. Natural restrained colours, believable single-camera perspective, ordinary candid travel photography rather than polished advertising. Every physical surface must have organic irregular detail: varied mortar and stones, subtle weathering, no engraved crescent marks, repeated embossed leaf patterns, tiling/cloned organic textures. No readable text, letters, numbers, signs, shop boards, logos, brands, watermarks, borders, frames or identifiable faces. Avoid named contemporary architecture, modern artworks, protected decorative panels, fake landmarks, impossible buildings, CGI/render appearance, painterly textures, excessive sharpness, HDR/teal-orange film grading. No reproduction of any existing reference photograph.\nScene: an ordinary steep, narrow, historic lane in Alfama, Lisbon, Portugal, warm cream and faded ochre plaster residential façades, occasional quiet iron balconies, old red clay rooftops partly visible, asymmetrical window spacing, uneven small pale limestone paving and a few worn steps. Primary subject: walking up the neighbourhood at pedestrian eye level. Composition: 35 mm lens, street vanishing into a gentle bend, meaningful full-frame architecture and paving detail, two very small distant people walking away, no front faces. Lighting: mild bright overcast daylight with a little diffuse warm sunlight on upper plaster; natural soft shadows. Plain residential doors and plain plaster walls rather than commercial storefronts; no decorative mural or painted lettering, no tram needed.",
+        "bytes": 2827772,
+        "verifiedAt": "2026-10-12T17:30:01.697718+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012/lisbon-4-alfama-sample.png",
+            "http": 200,
+            "sha256": "a6f5119ecc8bd0a25a388bd444593927f8eb9787c1432b80f76abe7ec98898cd",
+            "bytes": 2827772,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012/lisbon-4-alfama-sample.png?reuse-verify=a6f5119ecc8bd0a2-1791826201910979000",
+            "http": 200,
+            "sha256": "a6f5119ecc8bd0a25a388bd444593927f8eb9787c1432b80f76abe7ec98898cd",
+            "bytes": 2827772,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "lisbon-5-tejo-sample",
+      "fileName": "lisbon-5-tejo-sample.png",
+      "city": "Lissabon",
+      "cityId": "lisbon",
+      "country": "Portugali",
+      "character": "Alfaman katot ja Tejo",
+      "caption": "Alfaman vanhat katot ja Tejojoen leveä vesipinta Lissabonissa. Havainnekuva.",
+      "moment": "Tekoälyllä tuotettu fotorealistinen havainnekuva; ei aito paikkavalokuva.",
+      "categoryId": "havainnekuvat-20261012",
+      "mediaSource": "local",
+      "publicUrl": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012/lisbon-5-tejo-sample.png",
+      "batchLabel": "Euroopan kaupunkinäytteet · 12.10.2026",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja European-city owner-review sample. Generate a completely new original present-day documentary photograph, visibly taken with a real full-frame camera, landscape 1536 x 1024 pixels, opaque RGB sRGB PNG. Natural restrained colours, believable single-camera perspective, ordinary candid travel photography rather than polished advertising. Every physical surface must have organic irregular detail: varied mortar and stones, subtle weathering, no engraved crescent marks, repeated embossed leaf patterns, tiling/cloned organic textures. No readable text, letters, numbers, signs, shop boards, logos, brands, watermarks, borders, frames or identifiable faces. Avoid named contemporary architecture, modern artworks, protected decorative panels, fake landmarks, impossible buildings, CGI/render appearance, painterly textures, excessive sharpness, HDR/teal-orange film grading. No reproduction of any existing reference photograph.\nScene: a plausible ordinary elevated view over Alfama's residential rooftops toward the wide Tagus estuary in Lisbon, based on the view available from the Santa Luzia hillside. Primary subject: Lisbon old red-clay rooftops and the broad real-looking Tejo water beyond. Composition: camera held at pedestrian eye level on the hillside, 35 mm lens; lower foreground and left half show an irregular layered cluster of old cream and warm ochre plaster homes with red terracotta roofs descending naturally toward the historic waterfront; the right middle and distance open onto a broad calm estuary and faint opposite shore. Simple old quay edge may be distant, no modern cruise terminal, no bridge, no modern museum, no statue or decorative panels, no large church or invented monumental landmark. Take the photograph with no balcony railing, no pergola, no tile wall in frame. Subdued natural mid-morning daylight, light Atlantic haze, individually irregular roof tiles, physically plausible rooflines, non-repeating natural small water ripples, quiet candid city atmosphere.",
+      "promptSource": "recorded",
+      "webReferenceImageCount": 0,
+      "webReferenceUrls": [
+        {
+          "label": "Visit Lisboa – Miradouro de Santa Luzia",
+          "url": "https://www.visitlisboa.com/en/places/miradouro-de-santa-luzia"
+        },
+        {
+          "label": "Visit Lisboa – Alfama",
+          "url": "https://www.visitlisboa.com/en/places/alfama"
+        }
+      ],
+      "initialWorkflowStatus": "pending",
+      "initialSuggestion": "",
+      "sourceManifestProof": {
+        "id": "lisbon-5-tejo-sample",
+        "sourceManifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-havainnekuvat-kaupunkitausta-20261012/lisbon/manifest.json",
+        "sha256": "889fae9894940143fe8059f67f30a20f504767f22aa8099350f2a639aaf8b12b",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-havainnekuvat-kaupunkitausta-20261012/lisbon/final/lisbon-5-tejo-sample.png",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012/lisbon-5-tejo-sample.png",
+        "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja European-city owner-review sample. Generate a completely new original present-day documentary photograph, visibly taken with a real full-frame camera, landscape 1536 x 1024 pixels, opaque RGB sRGB PNG. Natural restrained colours, believable single-camera perspective, ordinary candid travel photography rather than polished advertising. Every physical surface must have organic irregular detail: varied mortar and stones, subtle weathering, no engraved crescent marks, repeated embossed leaf patterns, tiling/cloned organic textures. No readable text, letters, numbers, signs, shop boards, logos, brands, watermarks, borders, frames or identifiable faces. Avoid named contemporary architecture, modern artworks, protected decorative panels, fake landmarks, impossible buildings, CGI/render appearance, painterly textures, excessive sharpness, HDR/teal-orange film grading. No reproduction of any existing reference photograph.\nScene: a plausible ordinary elevated view over Alfama's residential rooftops toward the wide Tagus estuary in Lisbon, based on the view available from the Santa Luzia hillside. Primary subject: Lisbon old red-clay rooftops and the broad real-looking Tejo water beyond. Composition: camera held at pedestrian eye level on the hillside, 35 mm lens; lower foreground and left half show an irregular layered cluster of old cream and warm ochre plaster homes with red terracotta roofs descending naturally toward the historic waterfront; the right middle and distance open onto a broad calm estuary and faint opposite shore. Simple old quay edge may be distant, no modern cruise terminal, no bridge, no modern museum, no statue or decorative panels, no large church or invented monumental landmark. Take the photograph with no balcony railing, no pergola, no tile wall in frame. Subdued natural mid-morning daylight, light Atlantic haze, individually irregular roof tiles, physically plausible rooflines, non-repeating natural small water ripples, quiet candid city atmosphere.",
+        "bytes": 2564586,
+        "verifiedAt": "2026-10-12T17:30:02.397352+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012/lisbon-5-tejo-sample.png",
+            "http": 200,
+            "sha256": "889fae9894940143fe8059f67f30a20f504767f22aa8099350f2a639aaf8b12b",
+            "bytes": 2564586,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012/lisbon-5-tejo-sample.png?reuse-verify=889fae9894940143-1791826202613560000",
+            "http": 200,
+            "sha256": "889fae9894940143fe8059f67f30a20f504767f22aa8099350f2a639aaf8b12b",
+            "bytes": 2564586,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    }
+  ],
+  "gameIntegrated": false,
+  "published": false,
+  "verifiedAt": "2026-10-12T17:27:45.937090+00:00",
+  "rejectedCandidateHistory": [
+    {
+      "id": "lisbon-8-alfama-tejo-1873-intro-v1",
+      "slot": 8,
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/lisbon-8-alfama-tejo-1873-intro-v1.png",
+      "reason": "Historical image is visually nearly black and white but native RGB channels differ: max absolute R-G11, R-B7. Violates required pure neutral grayscale. Candidate preserved; no recolour or extra call.",
+      "rootReview": {
+        "sha256": "3e6b3b9efd3522bbb4c4f4c6383c7942d56cbf7baf36a9a754b5673eb74cf344",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForTechnicalDelivery": false,
+        "observations": "Entire native1536x1024 historical frame inspected and compared visually with retained slot5. Same elevated hillside direction over Alfama roofs toward broad Tagus, near roofs bottom/left and estuary beyond/right. Neutral black and white. Old irregular tile/plaster and small sailing craft, no modern coastal road, antennas, cruise terminal, bridge, opposite-shore towers or electric lights. No text,logos,numbers or artwork observed.",
+        "historicalPairSlot": 5,
+        "historicalSourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/sources-1873.json",
+        "limits": [
+          "Conservative illustrative1873 roofscape based on old quarter geography; individual anonymous facades are reconstructed, not a surveyed photograph."
+        ],
+        "reviewedAt": "2026-10-12T17:26:20.016873+00:00",
+        "strictNeutralBlackWhite": false,
+        "omissionReason": "Historical image is visually nearly black and white but native RGB channels differ: max absolute R-G11, R-B7. Violates required pure neutral grayscale. Candidate preserved; no recolour or extra call."
+      },
+      "generationCalls": 1
+    }
+  ],
+  "pendingQualityFixSlots": [
+    8
+  ],
+  "allRequestedSlotsDelivered": false,
+  "actualCalls": 4,
+  "deliveryQAEvidence": {
+    "mediaSlug": "lisbon",
+    "gameCityId": "lissabon",
+    "producerBriefRead": true,
+    "sourcesRead": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/owner-order.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/assignment.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/manifest.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/ready.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/brief.json",
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/sources-1873.json"
+    ],
+    "assets": [
+      {
+        "id": "lisbon-6-santos-populares-intro-v1",
+        "slot": 6,
+        "sha256": "b8e58eecedb5b0be1962001bd3f7da2e0d14ea19a5ff63c82cde5b26bacc5c9c",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Rintakehästä ylöspäin kuvattu fiktiivinen aikuinen, luonnollinen iho ja kasvojen rakenne sekä geneerinen pellavapusero ja liivi. Korttelijuhlan juhlakoristeet ja lämmin valaistus ovat uskottavat; ruokaa, näkyviä jalkineita, tekstiä tai brändejä ei havaittu.",
+        "observations": [
+          "Koko kehys sekä natiivirajaukset kasvoista, taustasta, vasemmanpuoleisesta kädestä ja oikeanpuoleisesta väkijoukosta tarkastettu.",
+          "Etualan ihon tekstuuri, hiukset, hampaat ja korva ovat anatomisesti uskottavat. Näkyvät kädet ovat osittain peittyviä mutta ilman selkeää rakennevirhettä.",
+          "Muiden aikuisten alavartalot jäävät kehyksen ulkopuolelle tai muiden taakse; ei ruokaa, juomia tai jalkineita.",
+          "Vaatteiden kuosit ovat geneerisiä; ei tunnistettavaa brändikuviota. Taustan pieni seinäkiinnike on epäterävä vaakamuoto ilman havaittavaa kirjoitusta.",
+          "Kasvit ovat syväterävyysalueen ulkopuolella luonnollisesti epäteräviä; kloonattua lehtileimaa tai muovista ihoa ei havaittu.",
+          "PNG RGB opaque1536x1024; embedded sRGB; Description/Source match required provenance; caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lisbon/crops/6-face.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lisbon/crops/6-people-hands.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lisbon/crops/6-background.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lisbon/crops/6-right-people.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lisbon/crops/6-wall-attachment.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2134078,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      },
+      {
+        "id": "lisbon-7-bairro-alto-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "556a4547d458393e9a16d1ec2629d9d07ae27e89ce197c5650ec52a1206fc0f3",
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "approvedForDelivery": true,
+        "reason": "Kujan perspektiivi, kuluneet rappaus- ja kivipinnat sekä lamppujen lämpimät heijastukset sopivat fyysisesti yhtenäiseen sinisen hetken valokuvaan. Kaksi kaukaista ihmistä näkyy selin; tekstiä, logoja tai tunnistettavia kasvoja ei havaittu.",
+        "observations": [
+          "Koko kehys sekä natiivirajaukset kasveista ja seinäpinnoista, oikean seinän ovista ja kaukaisista ihmisistä tarkastettu.",
+          "Ruukkupuiden ja köynnösten oksat ja lehdet vaihtelevat luonnollisesti; ei toistuvaa kaarnaleimaa, tasaisesti kopioituja lehtiä tai eläimiä kuvassa.",
+          "Kiveyksen saumat ja kuluma ovat epäsäännöllisiä; märän pinnan valot vastaavat läheisten lamppujen sijaintia.",
+          "Parvekkeiden, ovien ja ikkunoiden mittakaava ja kujan pakopiste ovat yhtenäiset. Oikean seinän vaalea paikka ei muodosta luettavaa kirjoitusta.",
+          "Kaksi ihmistä on pieniä, selin ja anatomisesti uskottavia; ei ruokaa, logoja, talonumeroita tai mainoskylttejä.",
+          "PNG RGB opaque1536x1024; embedded sRGB; Description/Source match required provenance; caption ends Havainnekuva."
+        ],
+        "nativeDetailCrops": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lisbon/crops/7-plants-plaster.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lisbon/crops/7-doors-wall.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/delivery/cities/lisbon/crops/7-distant-people.png"
+        ],
+        "technicalEvidence": {
+          "bytes": 2623200,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "opaque": true,
+          "profileDescription": "sRGB built-in",
+          "provenanceMetadataPass": true,
+          "captionPass": true
+        }
+      }
+    ],
+    "producerOmissionsReviewed": [
+      {
+        "id": "lisbon-8-alfama-tejo-1873-intro-v1",
+        "slot": 8,
+        "sha256": "3e6b3b9efd3522bbb4c4f4c6383c7942d56cbf7baf36a9a754b5673eb74cf344",
+        "producerReason": "Historical image is visually nearly black and white but native RGB channels differ: max absolute R-G11, R-B7. Violates required pure neutral grayscale. Candidate preserved; no recolour or extra call.",
+        "status": "pending-quality-fix",
+        "approvedForDelivery": false,
+        "fullFrameInspected": true,
+        "nativeDetailsInspected": true,
+        "reason": "Ensimmäisen1873-kandidaatin neutraali mustavalkoisuus ei täyty: alkuperäisistä RGB-tavuista max |R-G|=11, max |R-B|=7. Tuottajan kokonaan uusi tarpeellinen laatukorjaus on sallittu; tämä ei ole lopullinen slot8-poisjättö.",
+        "observations": [
+          "Koko kehys ja natiivirajaukset katoista sekä laitureista/purjeveneistä tarkastettu.",
+          "Näkymä on briefin mukaisesti korkealta vanhojen kattojen yli leveälle Tejolle; kattokerros alhaalla/vasemmalla ja vesi sen takana.",
+          "Period exclusions luettu. Siltaa, moderneja vastarannan tornitaloja, risteilyterminaalia, antenneja tai moottorialuksia ei havaittu.",
+          "Alkuperäistä rasteria ei korjattu. Uusi valittu slot8 pitää tarkastaa erikseen."
+        ]
+      }
+    ],
+    "ownerAcceptance": false,
+    "gameIntegrated": false,
+    "reviewedAt": "2026-10-12T17:30:44.139823+00:00",
+    "evidence": {
+      "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/manifest.json",
+      "manifestSHA256": "9fb4ac7d46dc8a6621ac12fa279692e6d48b2f87671eeb625f5636ace0ff8a3a",
+      "reviewedAssetIds": [
+        "lisbon-6-santos-populares-intro-v1",
+        "lisbon-7-bairro-alto-ilta-intro-v1"
+      ],
+      "reviewedOmissionIds": [
+        "lisbon-8-alfama-tejo-1873-intro-v1"
+      ],
+      "allCurrentManifestAssetsReviewed": true,
+      "rasterModificationApplied": false,
+      "limits": [
+        "Kuvallinen QA koskee vain nimettyjä SHA256-tavuja; R2-, Git- ja gallery-toimituksen varmennus kuuluu toimitussessiolle.",
+        "Vuoden1873 v1 on pending-quality-fix; mahdollinen v2 tarvitsee oman koko kehystä ja yksityiskohtia koskevan QA:n."
+      ]
+    }
+  },
+  "deliveryR2Proof": {
+    "mediaSlug": "lisbon",
+    "verifiedAt": "2026-10-12T17:31:10.858762+00:00",
+    "assets": [
+      {
+        "id": "lisbon-6-santos-populares-intro-v1",
+        "slot": 6,
+        "sha256": "b8e58eecedb5b0be1962001bd3f7da2e0d14ea19a5ff63c82cde5b26bacc5c9c",
+        "bytes": 2134078,
+        "verifiedAt": "2026-10-12T17:31:09.594394+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012-full/lisbon-6-santos-populares-intro-v1.png",
+            "http": 200,
+            "sha256": "b8e58eecedb5b0be1962001bd3f7da2e0d14ea19a5ff63c82cde5b26bacc5c9c",
+            "bytes": 2134078,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012-full/lisbon-6-santos-populares-intro-v1.png?delivery-verify=b8e58eecedb5b0be-1791826269594390000",
+            "http": 200,
+            "sha256": "b8e58eecedb5b0be1962001bd3f7da2e0d14ea19a5ff63c82cde5b26bacc5c9c",
+            "bytes": 2134078,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      },
+      {
+        "id": "lisbon-7-bairro-alto-ilta-intro-v1",
+        "slot": 7,
+        "sha256": "556a4547d458393e9a16d1ec2629d9d07ae27e89ce197c5650ec52a1206fc0f3",
+        "bytes": 2623200,
+        "verifiedAt": "2026-10-12T17:31:09.594521+00:00",
+        "reads": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012-full/lisbon-7-bairro-alto-ilta-intro-v1.png",
+            "http": 200,
+            "sha256": "556a4547d458393e9a16d1ec2629d9d07ae27e89ce197c5650ec52a1206fc0f3",
+            "bytes": 2623200,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/saapumisintro/lisbon/20261012-full/lisbon-7-bairro-alto-ilta-intro-v1.png?delivery-verify=556a4547d458393e-1791826269594519000",
+            "http": 200,
+            "sha256": "556a4547d458393e9a16d1ec2629d9d07ae27e89ce197c5650ec52a1206fc0f3",
+            "bytes": 2623200,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "requestOrigin": "https://matkakirja.app",
+            "byteExact": true
+          }
+        ]
+      }
+    ]
+  },
+  "sourceProducerManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-kaikki-20261012/west/lisbon/manifest.json",
+  "requestedNewSlots": [
+    6,
+    7,
+    8
+  ],
+  "slotRoles": {
+    "4": "arki ja ihmiset",
+    "5": "vesi tai luonto",
+    "6": "moderni paikallinen juhla tai tapahtuma; fiktiivinen aikuinen",
+    "7": "ilta ja valot",
+    "8": "vuosi 1873; neutraali mustavalkoinen; kuva 5/7:n sama katselusuunta"
+  },
+  "stages": {
+    "generated": null,
+    "NAS": 2,
+    "QA": 2,
+    "R2": 2,
+    "Git": "this handoff",
+    "gallery": "pending"
+  },
+  "ownerAcceptance": false,
+  "deliveredAt": "2026-10-12T17:31:15.849335+00:00"
+}
