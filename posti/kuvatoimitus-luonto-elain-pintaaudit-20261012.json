@@ -1,0 +1,88 @@
+{
+  "audit": "luonto-elain-pintaaudit-20261012",
+  "summary": {
+    "reviewComplete": true,
+    "dateWindow": "2026-10-09 through 2026-10-12",
+    "reviewedImages": 355,
+    "distinctAuditAgents": 5,
+    "currentCapitalCandidates": 342,
+    "otherRecentCandidatesIncludingOriginalConakry": 13,
+    "initialStatusCounts": {
+      "clear": 350,
+      "not_applicable": 3,
+      "suspect": 2
+    },
+    "confirmedTargetSurfaceDefects": 1,
+    "otherConfirmedTargetSurfaceDefects": 0,
+    "unresolvedSuspects": 0,
+    "wholeNewReplacementsGenerated": 1,
+    "replacementsR2AndMailboxVerified": 1,
+    "originalsPreserved": true,
+    "ownerAcceptanceVerified": false,
+    "gameIntegrated": false,
+    "published": false,
+    "updatedAt": "2026-10-12T09:00:16.714822+00:00"
+  },
+  "groups": [
+    {
+      "group": "europe-middle-east",
+      "reviewed": 78,
+      "counts": {
+        "clear": 78
+      }
+    },
+    {
+      "group": "africa",
+      "reviewed": 108,
+      "counts": {
+        "clear": 107,
+        "not_applicable": 1
+      }
+    },
+    {
+      "group": "asia",
+      "reviewed": 58,
+      "counts": {
+        "clear": 57,
+        "suspect": 1
+      }
+    },
+    {
+      "group": "oceania-misc",
+      "reviewed": 40,
+      "counts": {
+        "clear": 38,
+        "not_applicable": 2
+      }
+    },
+    {
+      "group": "americas",
+      "reviewed": 71,
+      "counts": {
+        "clear": 70,
+        "suspect": 1
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "imageID": "conakry-camayenne-havainne",
+      "action": "whole-new-v2-delivered-for-review",
+      "oldSHA256": "b306d76686c9816fc72400329515884dca114f633b1bb8478c86d542ad6f0d4d",
+      "newImageID": "conakry-camayenne-havainne-v2",
+      "newSHA256": "f38eb4774ce4866fb9e078a98ff00d0313aa7f7c247b1bc6d7951032dc43b96e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/conakry-camayenne-havainne-v2.png",
+      "mailboxCommit": "9a1c99f02b90949e63e6db3e9afc4fe35cca91a5"
+    },
+    {
+      "imageID": "biskek-2",
+      "action": "preserved-after-independent-second-opinion",
+      "confirmedSurfaceDefect": false,
+      "regenerationRecommended": false
+    }
+  ],
+  "scope": "Natural material surface repetition only; not factual or full-image acceptance.",
+  "replacementOwnerAcceptanceVerified": false,
+  "gameIntegrated": false,
+  "published": false
+}
