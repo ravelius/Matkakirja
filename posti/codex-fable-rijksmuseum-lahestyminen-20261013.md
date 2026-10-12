@@ -1,0 +1,11 @@
+# Rijksmuseumin lähestymiskuvat — kaksi yritystä, ei hyväksyttyä kuvatoimitusta
+
+13.10.2026 klo 00.18: Molemmat versiot tuotettiin sisäisellä ImageGenillä, yksi kutsu per versio (2 kutsua,2 palautunutta ehdokasta): pysty1024×1536 ja vaaka1536×1024. Molemmat hylättiin riippumattomassa QA:ssa ja rootin natiiviyksityiskohtien tarkistuksessa. Portin alkuperäisten kiviplakaattien pintaan syntyi selvä kirjoitusrivi: riville järjestettyjä kirjain-/Roomanumeroidenkaltaisia merkkejä. Vaadittu tekstittömyys ei täyty. Kokonaista sanaa/lukua ei voi varmasti transkriboida, mutta selvä merkkirivi ei kelpaa lukemattomaksi ornamentiksi.
+
+Suunta on oikea Museumpleinin eteläjulkisivu ja kuvat näyttävät valokuvilta. Pystyn4:3-keskileikkaus säilyttää keskiosan ja molemmat tornit; koko pystyn taivas/nurmi täyttyvät. Leikkausta ei käytetty hylkäyssyynä. Vaakaehdokkaan tarkka keskiosan ikkunajako poikkeaa historiallisesta viitteestä; tarkkaa geometriaa ei luvata.
+
+Tilaus rajaa yhden generoinnin per versio, ei lisävariantteja, ja määrää epäonnistuneen version poisjätön sekä syyn kirjaamisen. **R2:een ja peliin ei toimitettu hylättyjä kuvia (0/2).** Alkuperäiset ja paikalliset metadataPNG:t säilyvät NASin rijksmuseum-lahestyminen-20261013-kansiossa. Metadataan lisättiin vain sRGB-profiili, vaadittu Description/Source ja kuvateksti; RGB-pikselit ovat natiivin kanssa identtiset. Tarkat promptit, viitteet, native/exportSHA:t, mitat ja QA-polut ovat manifestissa `posti/kuvatoimitus-rijksmuseum-lahestyminen-20261013.json`.
+
+Viitteet: [Rlbberlin2023, CC0](https://commons.wikimedia.org/wiki/File:Rijksmuseum_Amsterdam_-_South_facade_-_Vermeer_exhibition.jpg), [Rijksmuseum Afdeling Beeld noin1910, CC0](https://commons.wikimedia.org/wiki/File:Zuidgevel_met_deel_van_het_Museumplein,_HA-0012557.jpg), [museon oma julkisivukuvaus](https://www.rijksmuseum.nl/en/visitor-information/inside-the-rijksmuseum/the-building-from-the-exterior). Ei StreetView-/3D-laattaviitteitä; nykykuvan mainoksia ja taideteosbanneria ei tarkoitettu jäljennettäväksi.
+
+Yhden yrityksen tuotantovaihe ja sallitut poisjätöt on käsitelty. Kahta kelvollista kuvaa ei väitetä toimitetuiksi. Mahdollinen uusi korjaus tarvitsee uuden ohjeen; tässä ei tehty retusointia, lisägenerointeja, main-mergeä, versionnostoa tai pelijulkaisua. Edeltävä kuvaketilaus92 on toimitettu64/64.

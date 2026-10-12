@@ -1,0 +1,225 @@
+{
+  "taskNumber": 93,
+  "taskId": "rijksmuseum-lahestyminen-20261012",
+  "deliveryDate": "20261013",
+  "sourcePath": "posti/fable-codex-rijksmuseo-lahestyminen-20261012.md",
+  "sourceCommit": "508c28a0cf107b655dcb9e18c8722c97e8ebd249",
+  "sourceBlob": "98dd85012a2b2dc007a8d32fe22c1930e41403d3",
+  "sourceReadInFull": true,
+  "requestedVersions": 2,
+  "generationRequestsIssued": 2,
+  "generationCallsCompleted": 2,
+  "returnedCandidateCount": 2,
+  "rejectedCandidateCount": 2,
+  "deliveredImageCount": 0,
+  "R2UploadedImages": 0,
+  "assets": [],
+  "omittedItems": [
+    {
+      "slot": "pysty",
+      "fileName": "rijksmuseum-lahestyminen-pysty.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "nativeSHA256": "ca1050326dd9ac3cfd7767f3524b59cced70125c03185b7b4ef9b08d4eed2b65",
+      "sha256": "f46e90a062bdc6c5fd588219805ae4a364c813f8b5c0afd7d9189aff3c894bad",
+      "callsIssued": 1,
+      "candidateReturned": true,
+      "generationPrompt": "Use case: photorealistic-natural. Create one entirely NEW, realistic camera-looking architectural arrival illustration of the ORIGINAL Pierre Cuypers Rijksmuseum building in Amsterdam seen from Museumplein, looking north at its SOUTH facade. This is a new photograph-like illustration, not a photograph and not an edit or copy of either reference. Reference1 is a contemporary CC0 close study of the SOUTH passage facade: use only historic architectural proportions, brick-and-pale-stone arrangement and the two square roofed towers. Completely omit its Vermeer banner, painting, signs, QR codes, poles and advertisements. Reference2 is a circa1910 CC0 Rijksmuseum archival wide view of the same south facade: use it to confirm the original facade hidden by the banner, the central window, archway, and historic relative tower and wing positions. Do NOT reproduce the old photographic border, old street, monochrome, vehicles or arrangement of people. Show only the old Cuypers building and its original decorative masonry, red brick, pale limestone/sandstone details, grey slate roofs, granite base, coherent Gothic/Renaissance window rhythms and the large central vaulted passage. Original ordinary windows are allowed; no modern glass pavilion, modern glass additions or broad invented glass facade. Exclude all flags, lettering, plaques with readable writing, I amsterdam letters, banners, posters, collection-art reproductions, signs, logos, watermarks, frame, new sculptures/installations, temporary huts, cranes, scaffolding, floodlight poles or modern extensions. Frame from a visitor's eye height about1.65metres on Museumplein, realistic near-level camera with restrained architecture perspective, no drone view and no fantasy buildings. Show natural lawn in foreground, modest leafy trees at far sides not blocking the central building, and an ordinary path suggesting approach to the historic passage. Prefer an empty, quiet foreground; if any people, only a few very small distant figures with unreadable faces. Bright but soft daytime light gently raking old brickwork, pale blue sky with thin cloud, true restrained warm brick colours, believable natural grass and foliage detail, irregular real-world wear, subtle camera texture. NoHDR, saturation boost, CGI/game render look, painterly finish, procedural embossed bark or repeating grass texture. No text or UI actually drawn. The SOUTH passage facade has two square towers with tall hipped slate roofs as in the inputs; do not invent the north facade or extra towers. Opaque sRGB PNG. Preserve honest geometry from the references; produce no more than one requested candidate.\nComposition: native PORTRAIT1024x1536 (2:3). Step back enough that the entire central passage structure and both square flanking towers fit within the central1024x768 landscape-crop-safe region around y384..1152, with a comfortable margin. Put the building mainly between roughlyy590and1110, including its foot and roof tips. Generous clear sky across the top quarter for future gameUI and natural lawn near the bottom; no cropping a tower. The subject should still feel grand through natural perspective and scale. Central focus, orderly real facade without decorative inventions.",
+      "references": [
+        {
+          "fileName": "Rijksmuseum_Amsterdam_-_South_facade_-_Vermeer_exhibition.jpg",
+          "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-20261013/references/Rijksmuseum_Amsterdam_-_South_facade_-_Vermeer_exhibition.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Rijksmuseum_Amsterdam_-_South_facade_-_Vermeer_exhibition.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Rijksmuseum_Amsterdam_-_South_facade_-_Vermeer_exhibition.jpg",
+          "author": "Rlbberlin",
+          "license": "CC0 1.0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "photoDate": "2023-05-01",
+          "dimensions": [
+            4000,
+            3000
+          ],
+          "exifOrientation": 3,
+          "sha256": "c731fba7dfe2eeeb4acec6b7199289a3a00a2046e5db293ff7e7efb0a1f1f900",
+          "referenceOnly": true,
+          "forArchitectureGeometryNotPhotoCopy": true
+        },
+        {
+          "fileName": "Zuidgevel_met_deel_van_het_Museumplein,_HA-0012557.jpg",
+          "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-20261013/references/Zuidgevel_met_deel_van_het_Museumplein,_HA-0012557.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Zuidgevel_met_deel_van_het_Museumplein%2C_HA-0012557.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Zuidgevel_met_deel_van_het_Museumplein%2C_HA-0012557.jpg",
+          "author": "Rijksmuseum Afdeling Beeld",
+          "license": "CC0 1.0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "photoDate": "circa1910",
+          "dimensions": [
+            2500,
+            1945
+          ],
+          "exifOrientation": 1,
+          "sha256": "f29c8b3d74b5deabd11277ccb875479a8b000de69bd5aed15d44f10b70485ce7",
+          "referenceOnly": true,
+          "forArchitectureGeometryNotPhotoCopy": true
+        }
+      ],
+      "technicalExportPixelsUnchanged": true,
+      "mode": "RGB",
+      "sRGB": true,
+      "opaque": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Rijksmuseum Amsterdamissa Museumpleinin puolelta. Havainnekuva.",
+      "rootQAVerdict": "rejected",
+      "independentQAVerdict": "rejected",
+      "reason": "Portin alkuperäisten kiviplakaattien pintaan syntyi selvä kirjoitusrivi: riville järjestettyjä kirjain-/Roomanumeroidenkaltaisia merkkejä. Vaadittu tekstittömyys ei täyty.",
+      "independentQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-20261013/pysty/independent-qa.json",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-20261013/pysty/native.png",
+      "finalCandidatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-20261013/pysty/rijksmuseum-lahestyminen-pysty.png",
+      "R2Uploaded": false,
+      "gameDelivered": false
+    },
+    {
+      "slot": "vaaka",
+      "fileName": "rijksmuseum-lahestyminen-vaaka.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "nativeSHA256": "3e3ce246e48abcd9c275fdc576995e74b077b08082cdcc22e5a7a49fd03c3dc1",
+      "sha256": "23b728dcf39005ced7661336ebafbb2b2b6134b1ab4d255aa2269a1836d60dc4",
+      "callsIssued": 1,
+      "candidateReturned": true,
+      "generationPrompt": "Use case: photorealistic-natural. Create one entirely NEW, realistic camera-looking architectural arrival illustration of the ORIGINAL Pierre Cuypers Rijksmuseum building in Amsterdam seen from Museumplein, looking north at its SOUTH facade. This is a new photograph-like illustration, not a photograph and not an edit or copy of either reference. Reference1 is a contemporary CC0 close study of the SOUTH passage facade: use only historic architectural proportions, brick-and-pale-stone arrangement and the two square roofed towers. Completely omit its Vermeer banner, painting, signs, QR codes, poles and advertisements. Reference2 is a circa1910 CC0 Rijksmuseum archival wide view of the same south facade: use it to confirm the original facade hidden by the banner, the central window, archway, and historic relative tower and wing positions. Do NOT reproduce the old photographic border, old street, monochrome, vehicles or arrangement of people. Show only the old Cuypers building and its original decorative masonry, red brick, pale limestone/sandstone details, grey slate roofs, granite base, coherent Gothic/Renaissance window rhythms and the large central vaulted passage. Original ordinary windows are allowed; no modern glass pavilion, modern glass additions or broad invented glass facade. Exclude all flags, lettering, plaques with readable writing, I amsterdam letters, banners, posters, collection-art reproductions, signs, logos, watermarks, frame, new sculptures/installations, temporary huts, cranes, scaffolding, floodlight poles or modern extensions. Frame from a visitor's eye height about1.65metres on Museumplein, realistic near-level camera with restrained architecture perspective, no drone view and no fantasy buildings. Show natural lawn in foreground, modest leafy trees at far sides not blocking the central building, and an ordinary path suggesting approach to the historic passage. Prefer an empty, quiet foreground; if any people, only a few very small distant figures with unreadable faces. Bright but soft daytime light gently raking old brickwork, pale blue sky with thin cloud, true restrained warm brick colours, believable natural grass and foliage detail, irregular real-world wear, subtle camera texture. NoHDR, saturation boost, CGI/game render look, painterly finish, procedural embossed bark or repeating grass texture. No text or UI actually drawn. The SOUTH passage facade has two square towers with tall hipped slate roofs as in the inputs; do not invent the north facade or extra towers. Opaque sRGB PNG. Preserve honest geometry from the references; produce no more than one requested candidate.\nComposition: native LANDSCAPE1536x1024 (3:2). Visitor eye-level from sufficiently far back on Museumplein. Show both central towers, passage and either the full connected historic south-facing wings or a complete coherent central section. The central building is clearly visible, with generous clear sky in the top quarter for futureUI, and a meaningful band of lawn/path in the foreground. No tall foreground object, no clipped roofs and no close people.",
+      "references": [
+        {
+          "fileName": "Rijksmuseum_Amsterdam_-_South_facade_-_Vermeer_exhibition.jpg",
+          "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-20261013/references/Rijksmuseum_Amsterdam_-_South_facade_-_Vermeer_exhibition.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Rijksmuseum_Amsterdam_-_South_facade_-_Vermeer_exhibition.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Rijksmuseum_Amsterdam_-_South_facade_-_Vermeer_exhibition.jpg",
+          "author": "Rlbberlin",
+          "license": "CC0 1.0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "photoDate": "2023-05-01",
+          "dimensions": [
+            4000,
+            3000
+          ],
+          "exifOrientation": 3,
+          "sha256": "c731fba7dfe2eeeb4acec6b7199289a3a00a2046e5db293ff7e7efb0a1f1f900",
+          "referenceOnly": true,
+          "forArchitectureGeometryNotPhotoCopy": true
+        },
+        {
+          "fileName": "Zuidgevel_met_deel_van_het_Museumplein,_HA-0012557.jpg",
+          "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-20261013/references/Zuidgevel_met_deel_van_het_Museumplein,_HA-0012557.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Zuidgevel_met_deel_van_het_Museumplein%2C_HA-0012557.jpg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Zuidgevel_met_deel_van_het_Museumplein%2C_HA-0012557.jpg",
+          "author": "Rijksmuseum Afdeling Beeld",
+          "license": "CC0 1.0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "photoDate": "circa1910",
+          "dimensions": [
+            2500,
+            1945
+          ],
+          "exifOrientation": 1,
+          "sha256": "f29c8b3d74b5deabd11277ccb875479a8b000de69bd5aed15d44f10b70485ce7",
+          "referenceOnly": true,
+          "forArchitectureGeometryNotPhotoCopy": true
+        }
+      ],
+      "technicalExportPixelsUnchanged": true,
+      "mode": "RGB",
+      "sRGB": true,
+      "opaque": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Rijksmuseum Amsterdamissa Museumpleinin puolelta. Havainnekuva.",
+      "rootQAVerdict": "rejected",
+      "independentQAVerdict": "rejected",
+      "reason": "Portin alkuperäisten kiviplakaattien pintaan syntyi selvä kirjoitusrivi: riville järjestettyjä kirjain-/Roomanumeroidenkaltaisia merkkejä. Vaadittu tekstittömyys ei täyty.",
+      "independentQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-20261013/vaaka/independent-qa.json",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-20261013/vaaka/native.png",
+      "finalCandidatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-20261013/vaaka/rijksmuseum-lahestyminen-vaaka.png",
+      "R2Uploaded": false,
+      "gameDelivered": false
+    }
+  ],
+  "omissionAllowedBySource": "Kaksi versiota (yksi generointi per versio, ei lisävariantteja; jos ei onnistu, jätä tekemättä ja kerro syy)",
+  "allReturnedImagesProcessed": true,
+  "productionComplete": true,
+  "productionActive": false,
+  "allRequestedImagesDelivered": false,
+  "personalOwnerApprovalRequired": false,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "R2RequestedPrefix": "julisteet/taidemuseo/rijksmuseum/20261013/",
+  "referenceRightsEvidence": {
+    "references": [
+      {
+        "fileName": "Rijksmuseum_Amsterdam_-_South_facade_-_Vermeer_exhibition.jpg",
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-20261013/references/Rijksmuseum_Amsterdam_-_South_facade_-_Vermeer_exhibition.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Rijksmuseum_Amsterdam_-_South_facade_-_Vermeer_exhibition.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Rijksmuseum_Amsterdam_-_South_facade_-_Vermeer_exhibition.jpg",
+        "author": "Rlbberlin",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "photoDate": "2023-05-01",
+        "dimensions": [
+          4000,
+          3000
+        ],
+        "exifOrientation": 3,
+        "sha256": "c731fba7dfe2eeeb4acec6b7199289a3a00a2046e5db293ff7e7efb0a1f1f900",
+        "referenceOnly": true,
+        "forArchitectureGeometryNotPhotoCopy": true
+      },
+      {
+        "fileName": "Zuidgevel_met_deel_van_het_Museumplein,_HA-0012557.jpg",
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-20261013/references/Zuidgevel_met_deel_van_het_Museumplein,_HA-0012557.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Zuidgevel_met_deel_van_het_Museumplein%2C_HA-0012557.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Zuidgevel_met_deel_van_het_Museumplein%2C_HA-0012557.jpg",
+        "author": "Rijksmuseum Afdeling Beeld",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "photoDate": "circa1910",
+        "dimensions": [
+          2500,
+          1945
+        ],
+        "exifOrientation": 1,
+        "sha256": "f29c8b3d74b5deabd11277ccb875479a8b000de69bd5aed15d44f10b70485ce7",
+        "referenceOnly": true,
+        "forArchitectureGeometryNotPhotoCopy": true
+      }
+    ],
+    "museumPrimarySource": "https://www.rijksmuseum.nl/en/visitor-information/inside-the-rijksmuseum/the-building-from-the-exterior",
+    "correctFacade": "Museumplein/south-facing; not Stadhouderskade/north"
+  },
+  "rootQA": {
+    "reviewedAt": "2026-10-12T21:18:58.421410+00:00",
+    "rootIndependentVisualReviewComplete": true,
+    "viewedWholeImagesAndNativePlaqueDetails": true,
+    "items": [
+      {
+        "slot": "pysty",
+        "sha256": "f46e90a062bdc6c5fd588219805ae4a364c813f8b5c0afd7d9189aff3c894bad",
+        "verdict": "rejected",
+        "reason": "Portin alkuperäisten kiviplakaattien pintaan syntyi selvä kirjoitusrivi: riville järjestettyjä kirjain-/Roomanumeroidenkaltaisia merkkejä. Vaadittu tekstittömyys ei täyty."
+      },
+      {
+        "slot": "vaaka",
+        "sha256": "23b728dcf39005ced7661336ebafbb2b2b6134b1ab4d255aa2269a1836d60dc4",
+        "verdict": "rejected",
+        "reason": "Portin alkuperäisten kiviplakaattien pintaan syntyi selvä kirjoitusrivi: riville järjestettyjä kirjain-/Roomanumeroidenkaltaisia merkkejä. Vaadittu tekstittömyys ei täyty."
+      }
+    ],
+    "portraitCropDecision": "Source only requires centre4:3 crop to retain building; this passes. Crop grass/UI margins were not a rejection condition.",
+    "noPixelEditsOrAdditionalGenerations": true
+  },
+  "updatedAt": "2026-10-12T21:18:58.421410+00:00"
+}
