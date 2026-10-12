@@ -13952,3 +13952,7 @@ Omistaja 12.10.2026 klo 10.3x, sanatarkasti: "tee siirtoprompti kun tämän tili
 ## UI-POHJAT: AARRETEHTÄVÄN ARVIOKORTIN SÄÄDINRIVI PERGAMENTILLA (12.10.2026 klo 10.33)
 
 Päätoimittaja 12.10.2026 klo 05.3x (UI-POHJAT, omistajan tarkennus 9.10. vastaava tilanne): aarretehtävien arviokortti VISA-nostossa käyttää säädinriviä (mk-saadinrivi); nimen ja arvon paperimuunnos laajennetaan olemassa olevasta päävalikon pergamenttisäännöstä (.mk-paavalikko--pergamentti → var(--map-ink-85)) valitsimeen .mk-nosto-visa .mk-saadinrivi__nimi/__arvo; ei uutta tyyliä (NUI:n kysymys, PT hyväksyi; omistajalle kerrottu jälkikäteen aamun yhteenvedossa 12.10. klo 09.5x).
+
+## KREIKKA: MUISTOMERKKIEN KUVAT PIILOON KREIKAN APP STORESSA (12.10.2026 klo 11.47)
+
+Omistaja 12.10.2026 klo 11.5x, sanatarkasti: "piilotetaan ne kreikan app storessa". Tausta: Sisältökirjurin selvitys (PR #4492, docs/raportit/kreikka-kulttuuriperintolaki-20261012.md, ei oikeudellinen neuvo): Kreikan laki 3028/2002 (nyk. 4858/2021 art. 46, päätös 436630/2023) vaatii ennakkoluvan ja maksun valtion muistomerkkien kuvaamiseen kaupalliseen levitykseen, myös video ja 3D. Linjaus Italian tapaan: Kreikan valtion muistomerkkien kuvat, havainnekuvat ja 3D-opas (Ateena ym.) piilotetaan vain Kreikan App Storessa (storefront GRC), muualla kaikki ennallaan. Kuumailmapallokierros tehdään Ateenan sijaan Prahaan (PT 11.5x). Toteutus: Sisältökirjuri listaa Kreikan muistomerkkisisällön, Natiiviseppä tekee App Storen maan tunnistuksen ja yleisen alueellisen piilotuksen (juna 184).
