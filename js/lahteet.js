@@ -515,6 +515,13 @@ export const LAHTEET = [
         huom: 'npm three 0.185.0, koottu tools/vie-three-vendor.mjs:llä. Ämpärissä '
           + 'vendor/three-gltf-r185.min.js ja vendor/three-LICENSE.txt.',
       },
+      {
+        nimi: 'MinimalChess (MinimalChessEngine) — shakin säännöt ja vastustajan tekoäly (natiivi)',
+        tekija: 'Thomas Jahn (lithander), github.com/lithander/MinimalChessEngine',
+        lisenssi: 'MIT',
+        huom: 'Tarkistettu 12.10.2026 repositorion LICENSE-tiedostosta (commit 0f31837). Natiivin '
+          + 'Peli/Pelit/MinimalChess/ ja LICENSE.txt kirjaston rinnalla; muutokset README.md:ssä.',
+      },
     ],
   },
   {
