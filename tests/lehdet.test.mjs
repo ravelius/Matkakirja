@@ -199,9 +199,11 @@ test('kulttuurivisan vastaus löytyy kaupungin omasta lähdejutusta', async () =
  * ja johdanto jäi lupaamaan valssia ja satuoopperaa, joita sivulla ei
  * enää ole. Loput 13 kirjoitettiin samalla mallilla 14.9.2026.
  *
- * Fablen päätös 14.9.2026: johdanto ohjaa lukijan kartalle — se on
- * uudistuksen koko idea. Tämä vartio pitää lupauksen voimassa: jos
- * johdanto sanoo "kartalla", jutut on oikeasti löydyttävä sieltä.
+ * Fablen päätös 14.9.2026: johdanto ohjasi lukijan kartalle. OMISTAJA
+ * PALAUTTI 12.10.2026 alkuperäiset johdannot (nostot takaisin aihesivulle
+ * natiivissa; ne löytyvät myös kartalta): tämä vartio vaatii nyt, että
+ * johdanto on alkuperäinen vanha virke, ja pitää edelleen voimassa, että
+ * johdannon lupaamat jutut ovat oikeasti kohdekartalla.
  *
  * LISTA ON TÄYSI: kaikki 14 tyhjentynyttä sivua ovat mukana. Lista
  * mitattiin koneellisesti vertaamalla eraa 5 edeltävää versiota
@@ -394,10 +396,11 @@ test('kartalle ohjaava johdanto pitää lupauksensa', async () => {
       `${missa}: sivulla on taas omia juttuja — johdanto kannattaa tarkistaa`);
     assert.ok(osasto.johdanto?.includes(vanhaVirke),
       `${missa}: johdannon vanha virke ei ole enää sanatarkasti tallella`);
-    assert.match(osasto.johdanto, /kartal/i,
-      `${missa}: tyhjentynyt sivu ei ohjaa lukijaa kartalle`);
-    assert.ok(osasto.johdanto.length > vanhaVirke.length,
-      `${missa}: johdantoon ei ole lisätty mitään vanhan virkkeen perään`);
+    // Omistaja 12.10.2026: johdannot on palautettu alkuperäisiksi (nostot
+    // näytetään sivulla ja löytyvät myös kartalta), joten kartalle ohjaavaa
+    // jatketta ei enää vaadita eikä sallita: johdanto on vanha virke.
+    assert.equal(osasto.johdanto.replace(/[.\s]+$/, ''), vanhaVirke.replace(/[.\s]+$/, ''),
+      `${missa}: johdanto ei ole alkuperäinen (vanha virke ilman lisäyksiä)`);
     assert.ok(kohdekartta.length + paakartta.length > 0,
       `${missa}: vartio ei nimeä yhtäkään juttua, jonka johdanto lupaa`);
 
