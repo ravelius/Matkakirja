@@ -66,3 +66,22 @@ Omistajan sanat sanatarkasti Codexille: *"ruokakuvat ovat edelleen päälle liim
 - **Ateena 6 / kahvila-leipomo:** tiski, jolla seesamilla ripotellut koulouri-kiehkurat korissa, bougatsa- ja makeisvitriini; lämmin sisävalo. Ei tavernanäkymää.
 
 Muu kuin ruoka (1873-kuvien mustavalkoisuus, kolme korvaavaa kuvaa Pariisi 4, Tukholma 4, Ateena 7) pysyy ennallaan. Kuvasuunnitelma `docs/raportit/saapumisintro-kuvasuunnitelma-20261012.md` (PR #4488) on päivitetty samalla säännöllä.
+
+---
+
+## KORJAUS 2: RUOKAKUVAT POIS INTROSTA, TILALLE JUHLA- JA TAPAHTUMAKUVA (omistaja 12.10. klo 17.4x) — KUMOAA 17.3x:n kahvila- ja myymäläsäännön
+
+Omistajan sanat sanatarkasti: *"ruokakuvat eivät toimi, jätetään ne pois introsta ja korvataan jollain muulla elämän makuisella kuvalla jossa on ilta ja ihmisiä juhlimassa. voi olla myös päivänäkymä missä joku iloinen tapahtuma ja paljon ihmisiä. joku ihminen saisi olla etualalla. pitää olla muodikkaat vaatteet ja nuoria ihmisiä. ihmiset vain sen näköisiä mitä kantaväestö on"*.
+
+**Toimenpide:**
+1. **Lopeta käynnissä oleva "Europe food backdrops" -erä** ja kaikki intron ruokakuvat (myös 16.5x:n ja 17.3x:n ruokaohjeet: tori, katukeittiö, keittiö, kahvila, leipomo, myymälä). Jo generoituja intron ruokakuvia ei toimiteta peliin.
+2. **Kaikkien kaupunkien introissa kuva 6 (ent. "paikallinen yksityiskohta / ruoka") korvataan elämän makuisella kuvalla**, joko (a) **ilta**, jossa nuoria ihmisiä juhlii, tai (b) **päivä**, jossa on iloinen tapahtuma ja paljon ihmisiä. Valitse kaupungille sopiva kumpi tahansa; eri kaupungeilla eri sommitelmat.
+3. **Kuvan säännöt:** **yksi ihminen etualalla** (puolikuva tai kolmasosakuva, luonnollinen ilme), ympärillä useita ihmisiä; **nuoria ihmisiä nykyajan muodikkaissa vaatteissa**; **ihmiset kyseisen kaupungin tyypillisen väestön näköisiä** (todenmukainen paikallinen väestö); keksityt henkilöt, ei kenenkään todellisen henkilön näköisiä; ei tekstiä, logoja, kylttejä eikä brändejä; fotorealistinen, luonnollinen valo; havainnekuva-merkintä ja ei suojattuja teoksia kuten ennen; VAIN EUROOPPA; ei väkivaltaa, ei alkoholin pääosaa (juhlinta voi olla musiikkia, tanssia, kevyitä juomia, nauru; 13+).
+4. **Kreikka/Ateena: yksikään muistomerkki ei saa näkyä** kuvassa, ei edes taustalla (ei Akropolista, Parthenonia, Lykavittos-näkymää jossa Akropolis erottuu). 1800-luvun kuvat pysyvät mustavalkoisina; tämä uusi kuva on nykyaikaa (värikuva).
+
+**Pilotin kolme ensin (vaihtavat edellä olevat ruokakuvaukset; sama generointiraja 9, kuvat 6 ovat näissä "elämän makuisia" eivätkä ruokaa):**
+- **Pariisi 6 / ilta Canal Saint-Martinin rannalla:** kesäilta, nuoria istuu kanavan rantakivetyksellä, soittimen musiikkia, lasit ja kevyet juomat, kuivat lyhdyt/valoköynnökset; **yksi nuori etualalla nauraen**; ei Eiffel-tornia eikä Notre-Damea taustalla.
+- **Tukholma 6 / kirsikankukkajuhla Kungsträdgårdenissa:** päivänvalossa kukkivat kirsikkapuut, paljon ihmisiä nurmella ja alueella, iloinen kevätjuhla; **yksi nuori etualalla** kukkaoksa kädessä tai kuvaamassa puhelimella; ei patsaita kuvassa.
+- **Ateena 6 / ilta Psyrrin kujien terasseilla:** valoköynnöksiä, nuoria ihmisiä pöydissä ja kadulla, iloinen kesäilta; **yksi nuori etualalla**; **ei Akropolista eikä muuta muistomerkkiä taustalla** (katu on rajattu kapeaksi, taivas ja rakennusten julkisivut vain; ei antiikin raunioita).
+
+Muu pysyy ennallaan (mustavalkoiset 1873-kuvat, kolme korvaavaa kuvaa Pariisi 4, Tukholma 4, Ateena 7). Generointimäärä pysyy enintään 9: ruokakuvien tilalle tulevat kolme uutta kuvaa 6 samoilla kolmella slotilla.
